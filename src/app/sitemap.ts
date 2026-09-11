@@ -7,8 +7,8 @@ import { getAllColumnPosts, getAliasSlugs, resolveSlug } from '@/lib/columns';
 import { collectColumnSitemapRecords } from '@/lib/column-locales';
 import { locales } from '@/lib/locales';
 import {
+  GUIDANCE_ALL_PAGE_KEYS,
   GUIDANCE_LOCALES_4,
-  GUIDANCE_PAGE_KEYS,
   buildGuidanceCoreLanguageAlternates,
   guidanceCanonicalUrl,
   guidancePageKeyFromSlugPath,
@@ -80,7 +80,10 @@ function isGuidanceLocaleHreflang(tag: string): boolean {
 function appendGuidanceLocaleSitemapEntries(pages: MetadataRoute.Sitemap): void {
   const siteUrl = getSiteUrl();
   for (const locale of GUIDANCE_LOCALES_4) {
-    for (const pageKey of GUIDANCE_PAGE_KEYS) {
+    // The ten core keys plus every guidance page key added afterwards. The
+    // extra keys' alternates stay inside the guidance four; that rule lives in
+    // `buildGuidanceCoreLanguageAlternates`, not here.
+    for (const pageKey of GUIDANCE_ALL_PAGE_KEYS) {
       pages.push({
         url: guidanceCanonicalUrl(locale, pageKey, siteUrl),
         priority: pageKey === 'home' ? 1 : 0.8,

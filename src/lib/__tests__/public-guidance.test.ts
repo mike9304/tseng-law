@@ -3,7 +3,9 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { locales, siteLocales } from '@/lib/locales';
 import {
+  GUIDANCE_ALL_PAGE_KEYS,
   GUIDANCE_CORE_ROUTE_KEYS,
+  GUIDANCE_EXTRA_PAGE_KEYS,
   GUIDANCE_LOCALES_4,
   GUIDANCE_PAGE_KEYS,
   PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT,
@@ -17,6 +19,7 @@ import {
   guidancePublicPath,
   hreflangTagForPublicLocale,
   isGuidanceCoreSlugPath,
+  isGuidanceExtraPageKey,
   isGuidanceLocale4,
   isPublicLocale8,
   publicDocumentLanguage,
@@ -119,10 +122,18 @@ describe('document language (html lang 8)', () => {
   });
 });
 
-describe('allowed 40 guidance route pairs', () => {
-  it('covers four locales × ten core pages', () => {
-    expect(ALLOWED_ROUTE_PAIRS).toHaveLength(40);
+describe('allowed 48 guidance route pairs', () => {
+  it('covers four locales × twelve routable pages', () => {
+    expect(ALLOWED_ROUTE_PAIRS).toHaveLength(48);
+    // The core ten never grow: the nav labels, the eight-language cluster and
+    // the translation-lane content module are all keyed off this list.
     expect(GUIDANCE_PAGE_KEYS).toHaveLength(10);
+    expect(GUIDANCE_EXTRA_PAGE_KEYS).toEqual(['company-setup', 'debt-collection']);
+    expect(GUIDANCE_ALL_PAGE_KEYS).toHaveLength(12);
+    expect(new Set(GUIDANCE_ALL_PAGE_KEYS).size).toBe(12);
+    expect(GUIDANCE_CORE_ROUTE_KEYS).toHaveLength(12);
+    expect(isGuidanceExtraPageKey('company-setup')).toBe(true);
+    expect(isGuidanceExtraPageKey('services')).toBe(false);
   });
 
   it.each(REWRITTEN_ROUTE_PAIRS)(
@@ -442,6 +453,78 @@ describe('core hreflang helper', () => {
       vi: 'https://tseng-law.com/vi/faq',
       'x-default': 'https://tseng-law.com/ko/faq',
     });
+  });
+
+  it('keeps a page outside the core ten inside the guidance four, with no x-default', () => {
+    for (const pageKey of GUIDANCE_EXTRA_PAGE_KEYS) {
+      const languages = buildGuidanceCoreLanguageAlternates(pageKey);
+      expect(languages).toEqual({
+        vi: `https://tseng-law.com/vi/${pageKey}`,
+        id: `https://tseng-law.com/id/${pageKey}`,
+        th: `https://tseng-law.com/th/${pageKey}`,
+        fil: `https://tseng-law.com/fil/${pageKey}`,
+      });
+      // No ko/zh-Hant/ja/en URL exists at this path, and an x-default pointing
+      // outside the cluster would not be reciprocal — so neither is claimed.
+      for (const tag of ['ko', 'zh-Hant', 'ja', 'en', 'x-default']) {
+        expect(languages, `${pageKey} must not claim ${tag}`).not.toHaveProperty(tag);
+      }
+    }
+  });
+
+  it('leaves the core ten on their eight-language cluster', () => {
+    for (const pageKey of GUIDANCE_PAGE_KEYS) {
+      const languages = buildGuidanceCoreLanguageAlternates(pageKey);
+      const tags = Object.keys(languages).filter((tag) => tag !== 'x-default');
+      // `faq` is English-noindex, so it publishes seven; the rest publish eight.
+      expect(tags, `${pageKey} cluster`).toHaveLength(pageKey === 'faq' ? 7 : 8);
+      expect(languages, `${pageKey} x-default`).toHaveProperty('x-default');
+      expect(languages.vi).toBe(`https://tseng-law.com${guidancePublicPath('vi', pageKey)}`);
+    }
+  });
+
+  it('routes and classifies the new keys without touching the core ten', () => {
+    for (const pageKey of GUIDANCE_EXTRA_PAGE_KEYS) {
+      expect(isGuidanceCoreSlugPath(pageKey)).toBe(true);
+      expect(guidancePageKeyFromSlugPath(pageKey)).toBe(pageKey);
+      expect(classifyGuidanceSlug([PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT, pageKey])).toEqual({
+        kind: 'page',
+        pageKey,
+      });
+      for (const locale of GUIDANCE_LOCALES_4) {
+        expect(guidancePublicPath(locale, pageKey)).toBe(`/${locale}/${pageKey}`);
+        expect(guidanceCanonicalUrl(locale, pageKey)).toBe(
+          `https://tseng-law.com/${locale}/${pageKey}`,
+        );
+        expect(resolveGuidanceMiddlewareRewrite(`/${locale}/${pageKey}`)).toEqual({
+          allowed: true,
+          internalPath: `/${locale}/${PUBLIC_GUIDANCE_INTERNAL_PAGE_SEGMENT}/${pageKey}`,
+        });
+      }
+      // The existing four publish no such path, so the middleware ignores it.
+      expect(resolveGuidanceMiddlewareRewrite(`/ko/${pageKey}`)).toBeNull();
+    }
+  });
+
+  it('never switches a new-key page into a locale that has no such URL', () => {
+    for (const pageKey of GUIDANCE_EXTRA_PAGE_KEYS) {
+      for (const target of ['ko', 'zh-hant', 'en', 'ja'] as const) {
+        expect(
+          resolvePublicLanguageSwitchTarget(`/vi/${pageKey}`, target),
+          `${pageKey} -> ${target}`,
+        ).toEqual({ status: 'available', href: `/${target}`, fallback: 'home' });
+      }
+      expect(resolvePublicLanguageSwitchTarget(`/vi/${pageKey}`, 'th')).toEqual({
+        status: 'available',
+        href: `/th/${pageKey}`,
+        fallback: 'exact',
+      });
+      expect(resolvePublicLanguageSwitchTarget(`/vi/${pageKey}`, 'vi')).toEqual({
+        status: 'available',
+        href: `/vi/${pageKey}`,
+        fallback: 'exact',
+      });
+    }
   });
 
   it('builds self-canonical URLs from the page key', () => {

@@ -22,6 +22,12 @@ export const PUBLIC_LOCALES_8 = [
 ] as const;
 export type PublicLocale8 = (typeof PUBLIC_LOCALES_8)[number];
 
+/**
+ * The original ten. This list stays exactly ten keys: the guidance nav, the
+ * eight-language hreflang cluster and the translation-lane content module
+ * (`international-guidance-content.ts`) are all keyed off it. Pages added
+ * later go in {@link GUIDANCE_EXTRA_PAGE_KEYS}.
+ */
 export const GUIDANCE_PAGE_KEYS = [
   'home',
   'services',
@@ -34,9 +40,35 @@ export const GUIDANCE_PAGE_KEYS = [
   'disclaimer',
   'columns',
 ] as const;
-export type GuidancePageKey = (typeof GUIDANCE_PAGE_KEYS)[number];
+export type GuidanceCorePageKey = (typeof GUIDANCE_PAGE_KEYS)[number];
 
-/** Exact core route keys. Home is the empty slug, never `home`. */
+/**
+ * Guidance pages outside the original ten.
+ *
+ * Three rules hold for every key on this list:
+ *   - its four bodies live in `src/data/international-guidance-extra.ts`,
+ *     because the translation lane owns `international-guidance-content.ts`;
+ *   - it never appears in the header nav or the footer columns, whose labels
+ *     come from that same translation-lane module;
+ *   - its hreflang cluster is the guidance four and nothing else — see
+ *     {@link buildGuidanceCoreLanguageAlternates}.
+ */
+export const GUIDANCE_EXTRA_PAGE_KEYS = ['company-setup', 'debt-collection'] as const;
+export type GuidanceExtraPageKey = (typeof GUIDANCE_EXTRA_PAGE_KEYS)[number];
+
+export type GuidancePageKey = GuidanceCorePageKey | GuidanceExtraPageKey;
+
+/** Every routable guidance page key, core first. */
+export const GUIDANCE_ALL_PAGE_KEYS = [
+  ...GUIDANCE_PAGE_KEYS,
+  ...GUIDANCE_EXTRA_PAGE_KEYS,
+] as const satisfies readonly GuidancePageKey[];
+
+export function isGuidanceExtraPageKey(value: string): value is GuidanceExtraPageKey {
+  return (GUIDANCE_EXTRA_PAGE_KEYS as readonly string[]).includes(value);
+}
+
+/** Exact routable slug keys. Home is the empty slug, never `home`. */
 export const GUIDANCE_CORE_ROUTE_KEYS = [
   '',
   'services',
@@ -48,6 +80,8 @@ export const GUIDANCE_CORE_ROUTE_KEYS = [
   'privacy',
   'disclaimer',
   'columns',
+  'company-setup',
+  'debt-collection',
 ] as const;
 export type GuidanceCoreRouteKey = (typeof GUIDANCE_CORE_ROUTE_KEYS)[number];
 
@@ -92,6 +126,8 @@ const PAGE_KEY_BY_ROUTE: Record<GuidanceCoreRouteKey, GuidancePageKey> = {
   privacy: 'privacy',
   disclaimer: 'disclaimer',
   columns: 'columns',
+  'company-setup': 'company-setup',
+  'debt-collection': 'debt-collection',
 };
 
 export function isGuidanceLocale4(value?: string | null): value is GuidanceLocale4 {
@@ -344,6 +380,13 @@ export function resolvePublicLanguageSwitchTarget(
     };
   }
 
+  // A guidance page outside the original ten has no ko/zh-hant/en/ja URL at the
+  // same path, so the switcher must not link one into existence. It degrades to
+  // the target language's home page, the same way a deep untranslated path does.
+  if (isGuidanceExtraPageKey(slugPath)) {
+    return { status: 'available', href: `/${targetLocale}`, fallback: 'home' };
+  }
+
   // The existing four keep the behaviour they already shipped: their targets are
   // resolved by `public-route-policy` and are labelled `exact` so the switcher
   // markup for ko/zh-hant/en/ja is unchanged.
@@ -368,9 +411,22 @@ export function buildGuidanceCoreLanguageAlternates(
   pageKey: GuidancePageKey,
   siteUrl: string = DEFAULT_SITE_URL,
 ): Record<string, string> {
+  const origin = siteUrl.replace(/\/+$/, '');
+
+  // Pages outside the original ten exist in the guidance four only. The cluster
+  // is therefore the four reciprocal vi/id/th/fil URLs and nothing else: no
+  // ko/zh-hant/en/ja alternate (no such URL exists) and no x-default either,
+  // because a non-reciprocal x-default would point outside its own cluster.
+  if (isGuidanceExtraPageKey(pageKey)) {
+    const extraLanguages: Record<string, string> = {};
+    for (const locale of GUIDANCE_LOCALES_4) {
+      extraLanguages[hreflangTagForPublicLocale(locale)] = `${origin}${guidancePublicPath(locale, pageKey)}`;
+    }
+    return extraLanguages;
+  }
+
   const path = guidanceCorePath(pageKey);
   const englishNoindex = isEnglishNoindexPath(path);
-  const origin = siteUrl.replace(/\/+$/, '');
   const locales = englishNoindex
     ? PUBLIC_LOCALES_8.filter((locale) => locale !== 'en')
     : PUBLIC_LOCALES_8;

@@ -7,7 +7,10 @@ import {
   GUIDANCE_PAGE_KEYS,
   guidancePublicPath,
   isGuidanceLocale4,
-  type GuidancePageKey,
+  // The chrome is keyed off the original ten only: `pack.nav` is a ten-key
+  // record owned by the translation lane, and guidance pages added afterwards
+  // are deliberately absent from the header and footer.
+  type GuidanceCorePageKey as GuidancePageKey,
   type PublicLocale8,
 } from '@/lib/public-guidance';
 

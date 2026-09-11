@@ -13,12 +13,13 @@ import { getLegacyPageMetadata, renderLegacyPage } from '../(legacy)';
 import { OPEN_GRAPH_LOCALE } from '@/lib/builder/seo/seo-model';
 import { isJaFullStaticPath, isJaUnsupportedPath, JA_SAFE_FALLBACK } from '@/lib/public-route-policy';
 import { buildLocalizedNotFoundMetadata } from '@/lib/not-found-copy';
-import GuidancePageBody from '@/components/GuidancePageBody';
+import GuidancePageBody, { GuidanceRelatedGuides } from '@/components/GuidancePageBody';
 import GuidanceHomeBody, {
   resolveGuidanceHomeColumns,
 } from '@/components/GuidanceHomeBody';
 import { getAllColumnPosts } from '@/lib/columns';
 import { guidanceContent } from '@/data/international-guidance-content';
+import { getGuidancePage } from '@/data/international-guidance-extra';
 import {
   buildGuidanceCoreLanguageAlternates,
   classifyGuidanceSlug,
@@ -68,7 +69,9 @@ function buildGuidancePageMetadata(locale: GuidanceLocale4, slug?: string[]): Me
     };
   }
 
-  const page = guidanceContent[locale].pages[classified.pageKey];
+  // Core page bodies live in the translation-lane content module; page keys
+  // added after the original ten live in `international-guidance-extra.ts`.
+  const page = getGuidancePage(locale, classified.pageKey);
   const siteUrl = getSiteUrl();
   // Same "<page> | <firm>" shape the four site locales publish. The guidance
   // titles carried the page name alone, so a search result showed no firm.
@@ -152,7 +155,15 @@ export default async function MainSiteCatchAllPage(
       const columns = resolveGuidanceHomeColumns(params.locale, (source) =>
         getAllColumnPosts(source),
       );
-      return <GuidanceHomeBody locale={params.locale} columns={columns} />;
+      // The related-guidance links are appended here rather than inside
+      // `GuidanceHomeBody`: the home body is composed entirely of
+      // translation-lane copy, and this block reads from the extra-page module.
+      return (
+        <>
+          <GuidanceHomeBody locale={params.locale} columns={columns} />
+          <GuidanceRelatedGuides locale={params.locale} pageKey="home" />
+        </>
+      );
     }
     return <GuidancePageBody locale={params.locale} pageKey={classified.pageKey} />;
   }

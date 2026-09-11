@@ -17,7 +17,9 @@ import {
   publicDocumentLanguage,
   type ExistingSiteLocale4,
   type GuidanceLocale4,
-  type GuidancePageKey,
+  // Core-key spec: every assertion below reads `pack.pages` and the
+  // eight-language hreflang cluster, both of which are the original ten.
+  type GuidanceCorePageKey as GuidancePageKey,
   type PublicLocale8,
 } from '@/lib/public-guidance';
 import { getSiteUrl } from '@/lib/seo';

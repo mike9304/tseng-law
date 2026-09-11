@@ -4,6 +4,8 @@ import path from 'node:path';
 import { getAllColumnPosts } from '@/lib/columns';
 import type { BuilderSitemapEntry } from '@/lib/builder/seo/sitemap-builder';
 import {
+  GUIDANCE_ALL_PAGE_KEYS,
+  GUIDANCE_EXTRA_PAGE_KEYS,
   GUIDANCE_LOCALES_4,
   GUIDANCE_PAGE_KEYS,
   buildGuidanceCoreLanguageAlternates,
@@ -128,11 +130,12 @@ describe('sitemap column lastModified', () => {
       // /korean-lawyer-in-taiwan, /ai-intake, /guides/taiwan-company-setup,
       // /columns archive, 17 JA column details, and all six JA service
       // details (+41). Builder fixtures still drop 9 EN-only noindex routes.
-      // Plus 40 new-four core URLs (4 locales × 10 dictionary pages), plus one
+      // Plus 48 new-four URLs (4 locales × 12 guidance pages: the ten
+      // dictionary pages, /company-setup and /debt-collection), plus one
       // URL per translated column file present in src/content/columns-{vi,id,th,fil}
       // (counted from disk so this assertion tracks the growing SEA corpus).
-      beforeFiltering: 211 + newFourTranslatedColumnCount,
-      afterFiltering: 202 + newFourTranslatedColumnCount,
+      beforeFiltering: 219 + newFourTranslatedColumnCount,
+      afterFiltering: 210 + newFourTranslatedColumnCount,
       removed: 9,
     });
 
@@ -434,6 +437,39 @@ describe('sitemap column lastModified', () => {
     }
   });
 
+  it('publishes the eight new-key URLs with a four-language reciprocal cluster', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+
+    const newKeyUrls = GUIDANCE_LOCALES_4.flatMap((locale) =>
+      GUIDANCE_EXTRA_PAGE_KEYS.map((pageKey) => guidancePublicPath(locale, pageKey)),
+    );
+    expect(newKeyUrls).toHaveLength(8);
+
+    for (const pageKey of GUIDANCE_EXTRA_PAGE_KEYS) {
+      const expected = buildGuidanceCoreLanguageAlternates(pageKey);
+      expect(Object.keys(expected)).toHaveLength(4);
+      expect(expected).not.toHaveProperty('x-default');
+
+      for (const locale of GUIDANCE_LOCALES_4) {
+        const url = `https://tseng-law.com${guidancePublicPath(locale, pageKey)}`;
+        const matches = entries.filter((entry) => entry.url === url);
+        expect(matches, url).toHaveLength(1);
+        expect(matches[0]?.priority, url).toBe(0.8);
+        expect(matches[0]?.alternates?.languages, url).toEqual(expected);
+      }
+    }
+
+    // The existing four publish no such path, so no such row may appear.
+    for (const locale of ['ko', 'zh-hant', 'en', 'ja'] as const) {
+      for (const pageKey of GUIDANCE_EXTRA_PAGE_KEYS) {
+        expect(entries.some((entry) => entry.url === `https://tseng-law.com/${locale}/${pageKey}`)).toBe(
+          false,
+        );
+      }
+    }
+  });
+
   it('does not invent vi/id/th/fil URLs or hreflang for deep articles or US landings', async () => {
     const { default: sitemap } = await import('../sitemap');
     const entries = await sitemap();
@@ -496,18 +532,19 @@ describe('sitemap column lastModified', () => {
     expect(usLanding?.alternates?.languages).not.toHaveProperty('fil');
   });
 
-  it('appends exactly 40 unique self-canonical new-four core URLs and retains non-core routes', async () => {
+  it('appends exactly 48 unique self-canonical new-four URLs and retains non-core routes', async () => {
     const { default: sitemap } = await import('../sitemap');
     const entries = await sitemap();
     const urls = entries.map((entry) => entry.url);
     const newUrls = GUIDANCE_LOCALES_4.flatMap((locale) =>
-      GUIDANCE_PAGE_KEYS.map((pageKey) => guidanceCanonicalUrl(locale, pageKey)),
+      GUIDANCE_ALL_PAGE_KEYS.map((pageKey) => guidanceCanonicalUrl(locale, pageKey)),
     );
 
     expect(GUIDANCE_LOCALES_4).toHaveLength(4);
     expect(GUIDANCE_PAGE_KEYS).toHaveLength(10);
-    expect(newUrls).toHaveLength(40);
-    expect(new Set(newUrls).size).toBe(40);
+    expect(GUIDANCE_ALL_PAGE_KEYS).toHaveLength(12);
+    expect(newUrls).toHaveLength(48);
+    expect(new Set(newUrls).size).toBe(48);
     expect(urls.some((url) => url.includes('__public-guidance'))).toBe(false);
 
     for (const url of newUrls) {

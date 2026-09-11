@@ -21,12 +21,12 @@ const BUILDER_ADMIN_SESSION_TTL_SECONDS = 12 * 60 * 60;
 /**
  * Edge middleware — two responsibilities:
  *
- *   1. Basic Auth guard for `/{locale}/admin-consultation` and
- *      `/{locale}/admin-builder`. Consultation admin stays on the
- *      legacy CMS_ADMIN_USERNAME / CMS_ADMIN_PASSWORD pair, while the
- *      builder also accepts optional BUILDER_BASIC_AUTH_USERS entries.
- *      Missing env means we fail closed with 503 so a mis-configured
- *      production deployment can't leak operator data.
+ *   1. Basic Auth guard for `/{locale}/admin-consultation`,
+ *      `/{locale}/admin-builder`, and `/{locale}/builder`. Consultation
+ *      admin stays on the legacy CMS_ADMIN_USERNAME / CMS_ADMIN_PASSWORD
+ *      pair, while the builder also accepts optional BUILDER_BASIC_AUTH_USERS
+ *      entries. Missing env means we fail closed with 503 so a
+ *      mis-configured production deployment can't leak operator data.
  *
  *   2. SEO maturity — applies site-level redirect rules on public
  *      paths. Rules are loaded from `@vercel/blob` with a short TTL
@@ -121,7 +121,7 @@ async function createBuilderAdminSessionToken(username: string): Promise<string>
 }
 
 const CONSULTATION_ADMIN_PATH_RE = /^\/(?:ko|zh-hant|en|ja)\/admin-consultation(?:\/|$)/;
-const BUILDER_ADMIN_PATH_RE = /^\/(?:ko|zh-hant|en|ja)\/admin-builder(?:\/|$)/;
+const BUILDER_ADMIN_PATH_RE = /^\/(?:ko|zh-hant|en|ja)\/(?:admin-builder|builder)(?:\/|$)/;
 
 function isObjectRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null;
@@ -314,6 +314,7 @@ export const config = {
   matcher: [
     '/:locale(ko|zh-hant|en|ja)/admin-consultation/:path*',
     '/:locale(ko|zh-hant|en|ja)/admin-builder/:path*',
+    '/:locale(ko|zh-hant|en|ja)/builder/:path*',
     '/:locale(vi|id|th|fil)',
     '/:locale(vi|id|th|fil)/:path*',
     '/((?!_next/static|_next/image|api/|favicon.ico|robots.txt|sitemap.xml|images/|fonts/|.*\\..*).*)',

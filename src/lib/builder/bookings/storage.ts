@@ -612,7 +612,7 @@ function seedStaff(timestamp: string): Staff[] {
   return [
     {
       staffId: 'staff-tseng',
-      name: { ko: '증위명 변호사', 'zh-hant': '曾偉銘 律師', en: 'Attorney Tseng Wei-Ming' },
+      name: { ko: '증준외', 'zh-hant': '曾雋崴', en: 'Wei Tseng' },
       title: { ko: '대표 변호사', 'zh-hant': '主持律師', en: 'Managing Attorney' },
       bio: {
         ko: '대만 법인 설립, 투자, 계약 및 분쟁 대응을 총괄합니다.',
@@ -620,28 +620,6 @@ function seedStaff(timestamp: string): Staff[] {
         en: 'Leads company setup, investment, contracts, and dispute strategy.',
       },
       email: 'wei@hoveringlaw.com.tw',
-      photo: '',
-      isActive: true,
-      createdAt: timestamp,
-      updatedAt: timestamp,
-    },
-    {
-      staffId: 'staff-lee',
-      name: { ko: '이정민 변호사', 'zh-hant': '李貞敏 律師', en: 'Attorney Lee Jung-Min' },
-      title: { ko: '기업/비자 담당', 'zh-hant': '企業與簽證顧問', en: 'Corporate and Visa Counsel' },
-      bio: createLocalizedText('기업 운영, 취업허가, 거류 및 계약 실무 상담을 담당합니다.'),
-      email: '',
-      photo: '',
-      isActive: true,
-      createdAt: timestamp,
-      updatedAt: timestamp,
-    },
-    {
-      staffId: 'staff-park',
-      name: { ko: '박서연 변호사', 'zh-hant': '朴書妍 律師', en: 'Attorney Park Seo-Yeon' },
-      title: { ko: '분쟁/가사 담당', 'zh-hant': '爭議與家事顧問', en: 'Disputes and Family Counsel' },
-      bio: createLocalizedText('분쟁, 교통사고, 상속 및 가사 사건의 초기 전략을 상담합니다.'),
-      email: '',
       photo: '',
       isActive: true,
       createdAt: timestamp,

@@ -10,6 +10,7 @@ export const dynamic = 'force-dynamic';
 
 const LOCALIZED_ADMIN_PATHS = siteLocales.flatMap((locale) => [
   `/${locale}/admin-builder`,
+  `/${locale}/builder`,
   `/${locale}/admin-consultation`,
 ]);
 
@@ -80,6 +81,7 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
   const disallow = [
     '/api/',
     '/admin-builder',
+    '/builder',
     '/admin-consultation',
     ...LOCALIZED_ADMIN_PATHS,
     ...noIndexPaths,

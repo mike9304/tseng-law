@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { mapPublicRateLimitDenial } from '@/lib/builder/security/public-rate-limit-response';
 import { getService, listStaff } from '@/lib/builder/bookings/storage';
+import type { Staff } from '@/lib/builder/bookings/types';
 import {
   getPublicBookingApiErrorPayload,
   type PublicBookingApiErrorCode,
@@ -10,6 +11,30 @@ import { normalizeLocale, type Locale } from '@/lib/locales';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+
+const PUBLIC_HIDDEN_STAFF_IDS = new Set(['staff-lee', 'staff-park']);
+const CANONICAL_STAFF_TSENG_NAME = {
+  ko: '증준외',
+  'zh-hant': '曾雋崴',
+  en: 'Wei Tseng',
+} as const;
+
+function toPublicStaff(member: Staff, locale: Locale): Staff & {
+  displayName: string;
+  displayTitle: string;
+  displayBio: string;
+} {
+  const name = member.staffId === 'staff-tseng'
+    ? { ...member.name, ...CANONICAL_STAFF_TSENG_NAME }
+    : member.name;
+  return {
+    ...member,
+    name,
+    displayName: name[locale] || name.ko,
+    displayTitle: member.title[locale] || member.title.ko,
+    displayBio: member.bio?.[locale] || member.bio?.ko || '',
+  };
+}
 
 function errorResponse(
   locale: Locale,
@@ -56,13 +81,9 @@ export async function GET(request: NextRequest) {
     const allowed = service?.staffIds?.length ? new Set(service.staffIds) : null;
     return NextResponse.json({
       staff: staff
+        .filter((member) => !PUBLIC_HIDDEN_STAFF_IDS.has(member.staffId))
         .filter((member) => !allowed || allowed.has(member.staffId))
-        .map((member) => ({
-          ...member,
-          displayName: member.name[locale] || member.name.ko,
-          displayTitle: member.title[locale] || member.title.ko,
-          displayBio: member.bio?.[locale] || member.bio?.ko || '',
-        })),
+        .map((member) => toPublicStaff(member, locale)),
     });
   } catch (error) {
     console.error('[booking/staff] GET failed:', error);

@@ -69,10 +69,16 @@ describe('robots route — main site resolver', () => {
     const rules = result.rules as { userAgent: string; allow: string; disallow: string[] };
     expect(rules.userAgent).toBe('*');
     expect(rules.allow).toBe('/');
-    expect(rules.disallow).toEqual(expect.arrayContaining(['/api/', '/admin-builder', '/admin-consultation']));
+    expect(rules.disallow).toEqual(expect.arrayContaining([
+      '/api/',
+      '/admin-builder',
+      '/builder',
+      '/admin-consultation',
+    ]));
     for (const locale of ['ko', 'zh-hant', 'en', 'ja']) {
       expect(rules.disallow).toEqual(expect.arrayContaining([
         `/${locale}/admin-builder`,
+        `/${locale}/builder`,
         `/${locale}/admin-consultation`,
       ]));
     }

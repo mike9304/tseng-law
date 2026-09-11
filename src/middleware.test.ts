@@ -113,6 +113,7 @@ describe('admin middleware auth split', () => {
     const expectedAdminMatchers = [
       '/:locale(ko|zh-hant|en|ja)/admin-consultation/:path*',
       '/:locale(ko|zh-hant|en|ja)/admin-builder/:path*',
+      '/:locale(ko|zh-hant|en|ja)/builder/:path*',
     ];
 
     expect(config.matcher).toEqual(expect.arrayContaining(expectedAdminMatchers));
@@ -191,6 +192,37 @@ describe('admin middleware auth split', () => {
     expect(response.status).toBe(401);
     expect(response.headers.get('www-authenticate')).toBe(
       'Basic realm="Hojeong consultation admin", charset="UTF-8"',
+    );
+  });
+
+  it.each(['/ko/builder', '/ko/builder/home'] as const)(
+    'challenges unauthenticated %s the same as admin-builder',
+    async (pathname) => {
+      const response = await middleware(adminRequest(pathname));
+
+      expect(response.status).toBe(401);
+      expect(response.headers.get('www-authenticate')).toBe(
+        'Basic realm="Hojeong builder admin", charset="UTF-8"',
+      );
+    },
+  );
+
+  it('sets a builder admin session cookie after successful /builder basic auth', async () => {
+    const response = await middleware(
+      adminRequest('/ko/builder/home', basic('admin', 'admin-pass')),
+    );
+
+    expect(response.status).toBe(200);
+    expect(response.headers.get('www-authenticate')).toBeNull();
+    expect(response.headers.get('set-cookie')).toContain('builder_admin_session=');
+  });
+
+  it('challenges unauthenticated dotted /builder subpaths', async () => {
+    const response = await middleware(adminRequest('/ko/builder/review.v2'));
+
+    expect(response.status).toBe(401);
+    expect(response.headers.get('www-authenticate')).toBe(
+      'Basic realm="Hojeong builder admin", charset="UTF-8"',
     );
   });
 });

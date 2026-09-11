@@ -207,13 +207,32 @@ describe('WO-1 trust, localization, and performance content contracts', () => {
     expect(layout).toContain('getLocaleFontClassName');
     expect(layout).toContain('className={fontClassName}');
     expect(layout).toMatch(/<html\s+lang=\{language\}\s+className=\{fontClassName\}/);
-    expect(css).toContain('var(--font-noto-sans-kr-loaded)');
-    expect(css).toContain('var(--font-noto-serif-kr-loaded)');
-    expect(css).toContain('var(--font-noto-sans-tc-loaded)');
-    expect(css).toContain('var(--font-noto-serif-tc-loaded)');
-    expect(css).not.toContain('var(--font-ibm-plex-sans-kr-loaded)');
-    expect(css).not.toContain('var(--font-cormorant-garamond-loaded)');
-    expect(css).not.toContain('var(--font-jetbrains-mono-loaded)');
+    // Every next/font reference must carry an inline fallback. A page that does
+    // not load that pair (guidance locales load only latin/Thai) otherwise makes
+    // the whole custom property guaranteed-invalid, which drops font-family to
+    // the Times initial — the vi/id/th/fil regression this pins against.
+    for (const token of [
+      '--font-noto-sans-kr-loaded',
+      '--font-noto-serif-kr-loaded',
+      '--font-noto-sans-tc-loaded',
+      '--font-noto-serif-tc-loaded',
+      '--font-noto-sans-jp-loaded',
+      '--font-noto-serif-jp-loaded',
+      '--font-noto-sans-latin-loaded',
+      '--font-noto-sans-thai-loaded',
+    ]) {
+      expect(css).toContain(`var(${token}`);
+      expect(css).not.toMatch(new RegExp(`var\\(${token}\\)`));
+    }
+    // Guidance locales must rebind --font-body to a stack they actually load.
+    for (const lang of ['vi', 'id', 'th', 'fil']) {
+      expect(css).toMatch(new RegExp(`html\\[lang='${lang}'\\]`));
+    }
+    expect(css).toContain('--font-body-latin:');
+    expect(css).toContain('--font-body-th:');
+    expect(css).not.toContain('var(--font-ibm-plex-sans-kr-loaded');
+    expect(css).not.toContain('var(--font-cormorant-garamond-loaded');
+    expect(css).not.toContain('var(--font-jetbrains-mono-loaded');
     // System mono stack (no next/font mono payload)
     expect(css).toMatch(/--font-mono:\s*ui-monospace/);
     // Closed serif allowlist present; broad h1,h2,h3 serif enforcement removed from late block

@@ -31,13 +31,18 @@ export function chromeSiteLocale(locale: PublicLocale8): SiteLocale {
   return isGuidanceLocale4(locale) ? 'en' : locale;
 }
 
+/**
+ * Mirrors the other four languages: contact is not a main-nav item there
+ * either (ko/en carry it in the utility row and the header CTA). Keeping it
+ * here made the guidance header both inconsistent and, for `fil`, wider than
+ * its grid track.
+ */
 const GUIDANCE_HEADER_NAV_KEYS: readonly GuidancePageKey[] = [
   'services',
   'lawyers',
   'pricing',
   'columns',
   'faq',
-  'contact',
 ];
 
 /** Four columns, matching the four the other languages publish. */

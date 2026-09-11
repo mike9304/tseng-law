@@ -161,14 +161,21 @@
 
   /* next/font CSS variables are applied on <html>; :root inherits them so
      semantic tokens resolve. Locale-gated pages only receive the active pair. */
-  --font-heading-ko: var(--font-noto-serif-kr-loaded), 'Nanum Myeongjo', Georgia, 'Times New Roman', serif;
-  --font-heading-zh: var(--font-noto-serif-tc-loaded), 'Noto Serif TC', 'Songti TC', Georgia, serif;
-  --font-heading-ja: var(--font-noto-serif-jp-loaded), 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+  /* Every next/font reference carries an inline fallback: a page that does not
+     load that pair must degrade to the rest of the stack, never to the
+     guaranteed-invalid value (which drops font-family to the Times initial). */
+  --font-heading-ko: var(--font-noto-serif-kr-loaded, 'Nanum Myeongjo'), 'Nanum Myeongjo', Georgia, 'Times New Roman', serif;
+  --font-heading-zh: var(--font-noto-serif-tc-loaded, 'Noto Serif TC'), 'Noto Serif TC', 'Songti TC', Georgia, serif;
+  --font-heading-ja: var(--font-noto-serif-jp-loaded, 'Yu Mincho'), 'Yu Mincho', 'Hiragino Mincho ProN', serif;
   /* EN display shares KR serif for visual cohesion (no Cormorant). */
   --font-heading-en: var(--font-heading-ko);
-  --font-body: var(--font-noto-sans-kr-loaded), 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-body-zh: var(--font-noto-sans-tc-loaded), 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', -apple-system, sans-serif;
-  --font-body-ja: var(--font-noto-sans-jp-loaded), 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif;
+  /* Guidance locales (vi/id/th/fil) load no serif pair — system serif only. */
+  --font-heading-latin: Georgia, 'Noto Serif', 'Times New Roman', serif;
+  --font-body: var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body-zh: var(--font-noto-sans-tc-loaded, 'PingFang TC'), 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', -apple-system, sans-serif;
+  --font-body-ja: var(--font-noto-sans-jp-loaded, 'Hiragino Kaku Gothic ProN'), 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif;
+  --font-body-latin: var(--font-noto-sans-latin-loaded, 'Noto Sans'), 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-body-th: var(--font-noto-sans-thai-loaded, 'Noto Sans Thai'), 'Noto Sans Thai', var(--font-noto-sans-latin-loaded, 'Noto Sans'), 'Leelawadee UI', 'Thonburi', sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
   --font-sans: var(--font-body);
   --font-display: var(--font-heading-ko);
@@ -194,6 +201,29 @@ html[lang='zh-hant'] {
   --font-sans: var(--font-body-zh);
   --font-display: var(--font-heading-zh);
   --font-display-en: var(--font-heading-zh);
+}
+
+/* Guidance locales load only the latin/Vietnamese Noto Sans (plus Noto Sans
+   Thai for th). Without these bindings --font-body resolves through the
+   unloaded KR variable and the whole declaration is dropped. */
+html[lang='vi'],
+html[lang='id'],
+html[lang='fil'] {
+  --font-body: var(--font-body-latin);
+  --font-sans: var(--font-body-latin);
+  --font-heading: var(--font-heading-latin);
+  --font-heading-ko: var(--font-heading-latin);
+  --font-display: var(--font-heading-latin);
+  --font-display-en: var(--font-heading-latin);
+}
+
+html[lang='th'] {
+  --font-body: var(--font-body-th);
+  --font-sans: var(--font-body-th);
+  --font-heading: var(--font-body-th);
+  --font-heading-ko: var(--font-body-th);
+  --font-display: var(--font-body-th);
+  --font-display-en: var(--font-body-th);
 }
 
 *,
@@ -562,6 +592,24 @@ li,
   --font-display: var(--font-heading-ja);
   --font-heading: var(--font-heading-ja);
   --font-heading-ko: var(--font-heading-ja);
+}
+
+.site[data-locale='vi'],
+.site[data-locale='id'],
+.site[data-locale='fil'] {
+  --font-body: var(--font-body-latin);
+  --font-sans: var(--font-body-latin);
+  --font-display: var(--font-heading-latin);
+  --font-heading: var(--font-heading-latin);
+  --font-heading-ko: var(--font-heading-latin);
+}
+
+.site[data-locale='th'] {
+  --font-body: var(--font-body-th);
+  --font-sans: var(--font-body-th);
+  --font-display: var(--font-body-th);
+  --font-heading: var(--font-body-th);
+  --font-heading-ko: var(--font-body-th);
 }
 
 html.has-cyber-cursor,
@@ -5757,6 +5805,61 @@ section.home-results-panel--editorial {
   margin-right: 0;
   flex-shrink: 0;
   justify-self: end;
+}
+
+/*
+ * Guidance locales (vi/id/th/fil) write far longer chrome labels than the
+ * CJK/EN four — `fil` worst of all ("Mga larangan ng serbisyo" alone is as
+ * wide as two Korean items). `.nav-link` is `white-space: nowrap` inside a
+ * `minmax(0, 1fr)` track, so the list cannot shrink: it overflows and paints
+ * over the search button and the CTA instead of reflowing. Tighten the
+ * desktop header for those four only; ko/zh-hant/en/ja keep their spacing.
+ */
+@media (min-width: 1025px) {
+  html[lang='vi'] .header-main-inner,
+  html[lang='id'] .header-main-inner,
+  html[lang='th'] .header-main-inner,
+  html[lang='fil'] .header-main-inner {
+    gap: clamp(0.5rem, 0.9vw, 1rem);
+  }
+
+  html[lang='vi'] .nav-list,
+  html[lang='id'] .nav-list,
+  html[lang='th'] .nav-list,
+  html[lang='fil'] .nav-list {
+    gap: 0;
+  }
+
+  /* Fixed, not vw-scaled: the header container is capped at --max-width, so
+     viewport-scaled padding only grows the list without growing its track. */
+  html[lang='vi'] .nav-link,
+  html[lang='id'] .nav-link,
+  html[lang='th'] .nav-link,
+  html[lang='fil'] .nav-link {
+    font-size: 0.9rem;
+    padding: 0 0.34rem;
+  }
+
+  /* Filipino is the longest of the four even after shortening its labels. */
+  html[lang='fil'] .nav-link {
+    font-size: 0.86rem;
+    padding: 0 0.28rem;
+  }
+
+  html[lang='vi'] .header-actions,
+  html[lang='id'] .header-actions,
+  html[lang='th'] .header-actions,
+  html[lang='fil'] .header-actions {
+    gap: 0.5rem;
+  }
+
+  html[lang='vi'] .nav-cta.button,
+  html[lang='id'] .nav-cta.button,
+  html[lang='th'] .nav-cta.button,
+  html[lang='fil'] .nav-cta.button {
+    padding: 0 0.75rem;
+    font-size: 0.8rem;
+  }
 }
 
 .header-search-btn {

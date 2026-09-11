@@ -586,6 +586,61 @@ describe('core hreflang helper', () => {
     }
   });
 
+  /**
+   * WO-B2B-R2 §1-1. The switcher implemented the guidance-page → intent-landing
+   * direction only, so a reader on the landing who picked one of the guidance
+   * four was dropped on that language's home page even though the cluster
+   * declares the two URLs alternates. Both directions now name the same pair.
+   */
+  it('switches an intent landing back to the guidance page in the new four', () => {
+    expect(resolvePublicLanguageSwitchTarget('/en/taiwan-company-setup-lawyer', 'vi')).toEqual({
+      status: 'available',
+      href: '/vi/company-setup',
+      fallback: 'exact',
+    });
+    expect(resolvePublicLanguageSwitchTarget('/ja/taiwan-litigation-lawyer', 'fil')).toEqual({
+      status: 'available',
+      href: '/fil/debt-collection',
+      fallback: 'exact',
+    });
+
+    for (const pageKey of GUIDANCE_EXTRA_PAGE_KEYS) {
+      const counterpart = GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS[pageKey];
+      for (const source of ['ko', 'zh-hant', 'en', 'ja'] as const) {
+        for (const target of GUIDANCE_LOCALES_4) {
+          const resolved = resolvePublicLanguageSwitchTarget(`/${source}${counterpart}`, target);
+          expect(resolved, `${source}${counterpart} -> ${target}`).toEqual({
+            status: 'available',
+            href: `/${target}/${pageKey}`,
+            fallback: 'exact',
+          });
+          expect(
+            buildGuidanceCoreLanguageAlternates(pageKey)[hreflangTagForPublicLocale(target)],
+            `${source}${counterpart} -> ${target} must match the hreflang cluster`,
+          ).toBe(`https://tseng-law.com/${target}/${pageKey}`);
+        }
+      }
+    }
+  });
+
+  /**
+   * The reverse lookup is keyed off the counterpart mapping, not off "any
+   * ko/zh-hant/en/ja landing", so a landing outside that mapping keeps the home
+   * fallback it already shipped.
+   */
+  it('leaves a landing outside the counterpart mapping on the home fallback', () => {
+    expect(resolvePublicLanguageSwitchTarget('/en/taiwan-lawyer', 'vi')).toEqual({
+      status: 'available',
+      href: '/vi',
+      fallback: 'home',
+    });
+    expect(resolvePublicLanguageSwitchTarget('/ko/taiwan-lawyer', 'th')).toEqual({
+      status: 'available',
+      href: '/th',
+      fallback: 'home',
+    });
+  });
+
   it('builds self-canonical URLs from the page key', () => {
     expect(guidanceCanonicalUrl('vi', 'home')).toBe('https://tseng-law.com/vi');
     expect(guidanceCanonicalUrl('th', 'columns')).toBe('https://tseng-law.com/th/columns');

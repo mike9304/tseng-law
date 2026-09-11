@@ -1,7 +1,12 @@
 import { existsSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { guidanceContent, type GuidanceLocale } from '@/data/international-guidance-content';
+import { intentPages } from '@/data/intent-pages';
+import {
+  guidanceContent,
+  type GuidanceLocale,
+  type GuidancePage,
+} from '@/data/international-guidance-content';
 import {
   GUIDANCE_EXTRA_ENGLISH_LANDING_PATHS,
   GUIDANCE_EXTRA_RELATED_COLUMN_SLUGS,
@@ -39,9 +44,8 @@ const pages = GUIDANCE_LOCALES_4.flatMap((locale) =>
   })),
 );
 
-/** Every string a page publishes, as one blob per page. */
-function pageText(locale: GuidanceLocale, pageKey: (typeof GUIDANCE_EXTRA_PAGE_KEYS)[number]): string {
-  const page = guidanceExtraContent[locale][pageKey];
+/** Every string a guidance page publishes, as one blob. */
+function guidancePageText(page: GuidancePage): string {
   return [
     page.eyebrow,
     page.title,
@@ -54,6 +58,11 @@ function pageText(locale: GuidanceLocale, pageKey: (typeof GUIDANCE_EXTRA_PAGE_K
     ]),
     ...(page.faqs ?? []).flatMap((faq) => [faq.question, faq.answer]),
   ].join('\n');
+}
+
+/** Every string a page publishes, as one blob per page. */
+function pageText(locale: GuidanceLocale, pageKey: (typeof GUIDANCE_EXTRA_PAGE_KEYS)[number]): string {
+  return guidancePageText(guidanceExtraContent[locale][pageKey]);
 }
 
 /**
@@ -143,6 +152,44 @@ const GUIDANCE_LANGUAGE_CONSULTATION_TOKENS: Record<
 };
 
 const ATTORNEY_REVIEW_MARKER = '[변호사 검수 필요]';
+
+/**
+ * Source trace, positive half (WO-B2B-R2 §1, review finding 12).
+ *
+ * Each locale's own `services` page already publishes the sentence that keeps
+ * company formation apart from residence and work authorization, and the
+ * company-setup page restates it word for word. The sentence therefore has to
+ * be findable on both sides: if the translation lane rewords the services copy,
+ * this fails instead of leaving the guidance page holding a proposition its
+ * source no longer makes.
+ */
+const SERVICES_INVESTMENT_SENTENCE: Record<GuidanceLocale, string> = {
+  vi: 'Việc thành lập công ty không tự động làm phát sinh tư cách cư trú (居留) hay giấy phép làm việc (工作許可)',
+  id: 'Pendirian perusahaan tidak dengan sendirinya menghasilkan izin tinggal (居留) atau izin kerja (工作許可)',
+  th: 'การจัดตั้งบริษัทไม่ได้ทำให้ได้สถานะการมีถิ่นที่อยู่ (居留) หรือใบอนุญาตทำงาน (工作許可) โดยอัตโนมัติ',
+  fil: 'Hindi awtomatikong nagbibigay ng karapatang manirahan (居留) o work permit (permit sa trabaho, 工作許可) ang pagtatatag ng kompanya',
+};
+
+/**
+ * Source trace, negative half.
+ *
+ * The English company-setup landing answers "how long does it take?" with a
+ * planning assumption of around three months. A processing time is exactly what
+ * these pages do not restate, so the period must not reappear in any of the
+ * four languages — the omission is deliberate, not an accident of translation.
+ */
+const EN_TIMELINE_TOKENS: Record<
+  GuidanceLocale,
+  ReadonlyArray<readonly [string, RegExp]>
+> = {
+  vi: [['ba tháng', /ba tháng/i]],
+  id: [['tiga bulan', /tiga bulan/i]],
+  th: [
+    ['สามเดือน', /สามเดือน/],
+    ['3 เดือน', /3\s*เดือน/],
+  ],
+  fil: [['tatlong buwan', /tatlong buwan/i]],
+};
 
 describe('guidanceExtraContent', () => {
   it('covers 4 locales x 2 page keys and leaves the core ten untouched', () => {
@@ -275,6 +322,39 @@ describe('guidanceExtraContent', () => {
         pageText(locale, pageKey),
         `${locale}/${pageKey} must name ${landing}`,
       ).toContain(landing);
+    }
+  });
+
+  it('restates the locale’s own services investment sentence on company-setup', () => {
+    for (const locale of GUIDANCE_LOCALES_4) {
+      const sentence = SERVICES_INVESTMENT_SENTENCE[locale];
+      expect(
+        guidancePageText(guidanceContent[locale].pages.services),
+        `${locale}/services no longer publishes the sentence company-setup restates`,
+      ).toContain(sentence);
+      expect(
+        pageText(locale, 'company-setup'),
+        `${locale}/company-setup must restate its services source verbatim`,
+      ).toContain(sentence);
+    }
+  });
+
+  it('leaves the English landing’s processing-time assumption behind', () => {
+    const enFaq = intentPages.en['taiwan-company-setup-lawyer'].faq
+      .map((faq) => `${faq.question}\n${faq.answer}`)
+      .join('\n');
+    // The negative check only means something while the English page still
+    // publishes the figure the four languages declined to carry over.
+    expect(enFaq, 'the EN landing no longer names a processing time').toContain('three months');
+
+    for (const { locale, pageKey } of pages) {
+      const text = pageText(locale, pageKey);
+      for (const [label, pattern] of EN_TIMELINE_TOKENS[locale]) {
+        expect(
+          pattern.test(text),
+          `${locale}/${pageKey} carries the EN processing time "${label}"`,
+        ).toBe(false);
+      }
     }
   });
 

@@ -234,9 +234,9 @@ export const guidanceExtraContent: Record<
           items: [
             'Tóm tắt ngắn: vấn đề hợp đồng hoặc khoản yêu cầu thanh toán, mối liên hệ với Đài Loan, mốc thời gian hoặc thời hạn nếu có, và cách liên hệ với quý vị',
             'Không bắt buộc: múi giờ hoặc khung giờ thuận tiện, và cách quý vị tìm thấy trang này',
-            'Chuẩn bị cho bước sau theo hướng dẫn của luật sư: bản mô tả diễn biến theo thời gian, hợp đồng, ghi nhận cuộc gọi hoặc tin nhắn trao đổi — chưa gửi bản gốc trong email đầu tiên',
-            'Chuẩn bị cho bước sau: thông tin định danh cá nhân hoặc thông tin công ty của đối tác, ở mức vụ việc cần đến',
-            'Chuẩn bị cho bước sau: ảnh, video, chứng từ thanh toán, tài liệu của cơ quan công an và mọi cuộc điều tra, vụ kiện hoặc thương lượng đang có; hồ sơ y tế hay sao kê ngân hàng chỉ gửi sau khi luật sư yêu cầu',
+            'Chuẩn bị cho bước sau theo hướng dẫn của luật sư: hợp đồng, hóa đơn và ghi nhận thư từ, cuộc gọi hoặc tin nhắn trao đổi — chưa gửi bản gốc trong email đầu tiên',
+            'Chuẩn bị cho bước sau: thông tin công ty của đối tác tại Đài Loan, ở mức vụ việc cần đến',
+            'Chuẩn bị cho bước sau: giấy ủy quyền, nếu giai đoạn đầu được xử lý từ xa; giấy tờ định danh có thể chờ đến khi luật sư yêu cầu',
           ],
         },
         {
@@ -330,7 +330,7 @@ export const guidanceExtraContent: Record<
         {
           heading: 'Isi pesan pertama Anda',
           paragraphs: [
-            'Peninjauan awal dapat dimulai dari luar Taiwan melalui surel atau pertemuan video; pengajuan berkas di Taiwan disusun setelah pertemuan pertama. Konsultasi dengan advokat dilayani dalam bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea, secara tatap muka maupun video.',
+            'Peninjauan awal dapat dimulai dari luar Taiwan melalui email atau pertemuan video; pengajuan berkas di Taiwan disusun setelah pertemuan pertama. Konsultasi dengan advokat dilayani dalam bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea, secara tatap muka maupun video.',
             'Versi bahasa Inggris untuk konsultasi: /en/taiwan-company-setup-lawyer',
             'Halaman ini tidak memuat angka. Lingkup pekerjaan ditetapkan lebih dulu, lalu besaran dan cara penghitungan biaya dipastikan bersama Anda sebelum pekerjaan dimulai; lihat /id/pricing.',
           ],
@@ -365,7 +365,7 @@ export const guidanceExtraContent: Record<
         {
           question: 'Bisakah peninjauan dimulai selagi induk perusahaan masih di luar Taiwan?',
           answer:
-            'Bisa. Peninjauan awal dapat dimulai melalui surel atau pertemuan video. Pengajuan berkas di Taiwan, urusan bank, dan langkah yang menuntut kehadiran langsung disusun setelah pertemuan pertama itu.',
+            'Bisa. Peninjauan awal dapat dimulai melalui email atau pertemuan video. Pengajuan berkas di Taiwan, urusan bank, dan langkah yang menuntut kehadiran langsung disusun setelah pertemuan pertama itu.',
         },
         {
           question: 'Apakah kantor mendampingi urusan izin tinggal setelah perusahaan berdiri?',
@@ -433,9 +433,9 @@ export const guidanceExtraContent: Record<
           items: [
             'Ringkasan singkat: persoalan perjanjian atau tagihannya, kaitannya dengan Taiwan, tanggal penting atau tenggat waktu bila ada, dan cara kami menghubungi Anda',
             'Tidak wajib: zona waktu atau waktu yang Anda kehendaki untuk dihubungi, dan dari mana Anda menemukan halaman ini',
-            'Siapkan untuk tahap berikutnya menurut arahan advokat: kronologi tertulis, perjanjian, serta catatan percakapan telepon atau pesan — jangan kirim dokumen asli pada pesan pertama',
-            'Siapkan untuk tahap berikutnya: keterangan identitas pribadi atau identitas perusahaan pihak lawan sejauh diperlukan perkara',
-            'Siapkan untuk tahap berikutnya: foto, video, bukti pembayaran, berkas kepolisian, serta penyidikan, perkara pengadilan, atau pembicaraan damai yang sedang berjalan; catatan medis atau rekening bank baru dikirim setelah diminta advokat',
+            'Siapkan untuk tahap berikutnya menurut arahan advokat: perjanjian, tagihan, serta catatan surat-menyurat, percakapan telepon, atau pesan — jangan kirim dokumen asli pada pesan pertama',
+            'Siapkan untuk tahap berikutnya: keterangan identitas perusahaan pihak lawan di Taiwan sejauh diperlukan perkara',
+            'Siapkan untuk tahap berikutnya: surat kuasa, bila tahap awal ditangani dari jarak jauh; nomor identitas dapat menunggu sampai advokat memintanya',
           ],
         },
         {
@@ -496,7 +496,7 @@ export const guidanceExtraContent: Record<
         'การเลือกรูปแบบนิติบุคคล การตรวจสอบการลงทุน การนำเงินลงทุนเข้าประเทศ การจดทะเบียน และสัญญาที่ใช้ในการดำเนินกิจการ ควรพิจารณาเป็นกระบวนการเดียวกันภายใต้กฎหมายไต้หวัน หน้านี้อธิบายทางเลือกระหว่างบริษัทย่อย สาขา และสำนักงานผู้แทน จากมุมมองของบริษัทแม่และนักลงทุนต่างชาติที่เข้ามาในไต้หวัน โดยไม่จำกัดเฉพาะประเทศใดประเทศหนึ่ง การให้คำปรึกษาดำเนินการเป็นภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี',
       sections: [
         {
-          heading: 'การเลือกรูปแบบนิติบุคคล บริษัทย่อย สาขา หรือสำนักงานผู้แทน',
+          heading: 'การเลือกรูปแบบนิติบุคคล: บริษัทย่อย สาขา หรือสำนักงานผู้แทน',
           paragraphs: [
             'การเลือกระหว่างบริษัทย่อย สาขา และสำนักงานผู้แทน ขึ้นอยู่กับโครงสร้างความรับผิด ประเด็นทางภาษี และแผนการขยายกิจการ บริษัทย่อยมักใช้กับการดำเนินกิจการที่เป็นอิสระในไต้หวัน ส่วนสาขาอาจเหมาะกับกรณีที่บริษัทแม่ควบคุมโดยตรง',
             'สำนักงานให้ความช่วยเหลือแก่นักลงทุนและบริษัทต่างชาติที่จัดตั้งหรือดำเนินกิจการในไต้หวัน ทั้งการเลือกรูปแบบนิติบุคคล การเตรียมและยื่นเอกสาร การนำเงินลงทุนเข้าประเทศ การดำเนินการกับธนาคาร การพิจารณาสถานประกอบการ และเงื่อนไขเฉพาะของแต่ละประเภทธุรกิจ',
@@ -519,7 +519,7 @@ export const guidanceExtraContent: Record<
           ],
         },
         {
-          heading: 'หลังการจดทะเบียน ธนาคาร ภาษีและบัญชี ถิ่นที่อยู่ เครื่องหมายการค้า และแรงงาน',
+          heading: 'หลังการจดทะเบียน: ธนาคาร ภาษีและบัญชี ถิ่นที่อยู่ เครื่องหมายการค้า และแรงงาน',
           paragraphs: [
             'ลำดับงานหลังการจดทะเบียนก็ควรวางไว้ตั้งแต่ต้น ทั้งการดำเนินการกับธนาคาร ความช่วยเหลือด้านภาษีและบัญชี ความช่วยเหลือเรื่องถิ่นที่อยู่ เครื่องหมายการค้า และเอกสารด้านแรงงาน โดยทั่วไปการจดทะเบียนบริษัทเพียงอย่างเดียวยังไม่เพียงพอ เพราะงานเหล่านี้ตามมาทันทีหลังจากนั้น',
             'หลังการจดทะเบียน สำนักงานสามารถช่วยดำเนินการเรื่องถิ่นที่อยู่ในไต้หวันที่เกี่ยวข้องกับบริษัทหรือกับการส่งบุคลากรเข้ามาทำงาน รวมทั้งช่วยดูแลเรื่องบัญชีและภาษีที่เกิดจากการจัดตั้งและการดำเนินกิจการในไต้หวัน',
@@ -552,7 +552,7 @@ export const guidanceExtraContent: Record<
       ],
       faqs: [
         {
-          question: 'ควรเลือกสาขาหรือบริษัทย่อย',
+          question: 'ควรเลือกสาขาหรือบริษัทย่อยหรือไม่',
           answer:
             'ขึ้นอยู่กับโครงสร้างความรับผิด ประเด็นทางภาษี และแผนการขยายกิจการ บริษัทย่อยมักใช้กับการดำเนินกิจการที่เป็นอิสระในไต้หวัน ส่วนสาขาอาจเหมาะกับกรณีที่บริษัทแม่ควบคุมโดยตรง',
         },
@@ -632,9 +632,9 @@ export const guidanceExtraContent: Record<
           items: [
             'สรุปเรื่องอย่างย่อ ประเด็นตามสัญญาหรือจำนวนที่เรียกร้อง ความเกี่ยวข้องกับไต้หวัน วันสำคัญหรือกำหนดเวลาหากมี และช่องทางติดต่อท่าน',
             'ไม่บังคับ เขตเวลาหรือช่วงเวลาที่สะดวกให้ติดต่อ และท่านพบหน้านี้ได้อย่างไร',
-            'เตรียมไว้สำหรับขั้นตอนถัดไปตามที่ทนายความแจ้ง ลำดับเหตุการณ์ที่เขียนไว้ สัญญา และบันทึกการโทรหรือข้อความที่ติดต่อกัน โดยยังไม่ต้องส่งต้นฉบับในอีเมลฉบับแรก',
-            'เตรียมไว้สำหรับขั้นตอนถัดไป ข้อมูลระบุตัวบุคคลหรือข้อมูลบริษัทของคู่กรณี เท่าที่เรื่องจำเป็นต้องใช้',
-            'เตรียมไว้สำหรับขั้นตอนถัดไป ภาพถ่าย วิดีโอ หลักฐานการชำระเงิน เอกสารของเจ้าพนักงานตำรวจ และการสอบสวน คดีในศาล หรือการเจรจาที่มีอยู่แล้ว ส่วนเวชระเบียนหรือรายการเดินบัญชีธนาคาร ให้ส่งหลังจากทนายความขอเท่านั้น',
+            'เตรียมไว้สำหรับขั้นตอนถัดไปตามที่ทนายความแจ้ง สัญญา ใบแจ้งหนี้ และบันทึกหนังสือโต้ตอบ การโทร หรือข้อความที่ติดต่อกัน โดยยังไม่ต้องส่งต้นฉบับในอีเมลฉบับแรก',
+            'เตรียมไว้สำหรับขั้นตอนถัดไป ข้อมูลบริษัทของคู่สัญญาในไต้หวัน เท่าที่เรื่องจำเป็นต้องใช้',
+            'เตรียมไว้สำหรับขั้นตอนถัดไป หนังสือมอบอำนาจ หากช่วงต้นของเรื่องดำเนินการจากระยะไกล ส่วนเลขประจำตัวต่าง ๆ รอจนกว่าทนายความจะขอก็ได้',
           ],
         },
         {
@@ -695,7 +695,7 @@ export const guidanceExtraContent: Record<
         'Ang pagpili ng anyo ng entidad, ang pagsusuri sa pamumuhunan, ang pagpapadala ng puhunan, ang pagpaparehistro, at ang mga kontrata sa pagpapatakbo ay mabuting tingnan bilang isang proseso sa ilalim ng batas ng Taiwan. Inilalahad ng pahinang ito ang pagpili sa pagitan ng subsidiary, sangay, at representative office mula sa pananaw ng dayuhang punong kompanya at mamumuhunang papasok sa Taiwan, at hindi ito nakatali sa iisang bansang pinagmulan. Isinasagawa ang konsultasyon sa abogado sa Ingles, Tsino, Hapon, at Koreano.',
       sections: [
         {
-          heading: 'Pagpili ng anyo ng entidad: subsidiary, sangay, o representative office',
+          heading: 'Pagpili ng anyo ng entidad: subsidiary (anak na kompanya), sangay, o representative office (opisina ng kinatawan)',
           paragraphs: [
             'Nakasalalay sa istruktura ng pananagutan, sa mga usapin sa buwis, at sa plano ng pagpapalawak ang pagpili sa pagitan ng subsidiary, sangay, at representative office. Karaniwang ginagamit ang subsidiary para sa nagsasariling operasyon sa Taiwan, samantalang maaaring bagay ang sangay kapag tuwirang kontrolado ito ng punong kompanya.',
             'Tumutulong ang tanggapan sa mga dayuhang mamumuhunan at kompanyang nagtatatag o nagpapatakbo ng negosyo sa Taiwan: pagpili ng anyo ng entidad, paghahanda at paghahain ng mga dokumento, pagpapadala ng puhunan, mga hakbang sa bangko, pagsusuri sa lugar ng negosyo, at ang mga kahingiang natatangi sa bawat uri ng industriya.',
@@ -729,7 +729,7 @@ export const guidanceExtraContent: Record<
           heading: 'Ang dapat nasa unang mensahe ninyo',
           paragraphs: [
             'Maaaring magsimula ang paunang pagsusuri mula sa labas ng Taiwan sa pamamagitan ng email o video; isinasaayos naman pagkatapos ng unang pag-uusap ang mga paghahaing gagawin sa Taiwan. Isinasagawa ang konsultasyon sa abogado sa Ingles, Tsino, Hapon, at Koreano, harapan man o sa video.',
-            'Bersiyong Ingles para sa konsultasyon: /en/taiwan-company-setup-lawyer',
+            'Bersyon sa Ingles para sa konsultasyon: /en/taiwan-company-setup-lawyer',
             'Walang bilang na nakasaad sa pahinang ito. Itinatakda muna ang saklaw ng trabaho, saka kinukumpirma kasama kayo ang halaga at ang paraan ng pagkuwenta bago magsimula ang trabaho; tingnan ang /fil/pricing.',
           ],
           items: [
@@ -811,7 +811,7 @@ export const guidanceExtraContent: Record<
           paragraphs: [
             'Maaaring magsimula mula sa malayo ang paunang pagsusuri kapag naisaayos na ang mahahalagang dokumento, ang pagkakasunod-sunod ng mga petsa, at ang istruktura ng pagbibigay ng awtoridad.',
             'Sa maraming usaping sibil, ang unang yugto — ang pagsusuri ng dokumento, ang sulat ng paniningil, at ang pakikipag-ugnayan para sa pag-aayos — ay maaaring hawakan mula sa malayo sa bisa ng isang power of attorney. Ang pangangailangang humarap sa korte ay nakasalalay sa uri at yugto ng proseso; nililinaw ito sa unang konsultasyon.',
-            'Isinasagawa ang konsultasyon sa abogado sa Ingles, Tsino, Hapon, at Koreano. Bersiyong Ingles para sa konsultasyon: /en/taiwan-litigation-lawyer',
+            'Isinasagawa ang konsultasyon sa abogado sa Ingles, Tsino, Hapon, at Koreano. Bersyon sa Ingles para sa konsultasyon: /en/taiwan-litigation-lawyer',
           ],
         },
         {
@@ -831,9 +831,9 @@ export const guidanceExtraContent: Record<
           items: [
             'Maikling buod: ang usapin sa kontrata o ang inihahabol, ang kaugnayan nito sa Taiwan, ang mahahalagang petsa o takdang panahon kung mayroon, at kung paano kayo maaabot',
             'Hindi kailangan: ang time zone o ang oras na nais ninyong makontak, at kung saan ninyo natagpuan ang pahinang ito',
-            'Ihanda para sa susunod na yugto ayon sa bilin ng abogado: ang nakasulat na pagkakasunod-sunod ng mga pangyayari, ang mga kontrata, at ang talaan ng tawag o chat — huwag ipadala ang orihinal sa unang mensahe',
-            'Ihanda para sa susunod na yugto: ang detalye ng pagkakakilanlan ng tao o kompanyang kabilang panig, hanggang sa kailangan ng usapin',
-            'Ihanda para sa susunod na yugto: mga larawan, video, resibo, materyales ng pulisya, at anumang imbestigasyon, kaso sa korte, o usapang pag-aayos na kasalukuyang umiiral; ang talaang medikal o talaan ng bangko ay ipapadala lamang kapag hiningi ng abogado',
+            'Ihanda para sa susunod na yugto ayon sa bilin ng abogado: ang mga kontrata, ang mga invoice, at ang talaan ng sulatan, tawag, o chat — huwag ipadala ang orihinal sa unang mensahe',
+            'Ihanda para sa susunod na yugto: ang detalye ng kompanyang kabilang panig sa Taiwan, hanggang sa kailangan ng usapin',
+            'Ihanda para sa susunod na yugto: ang power of attorney, kung mula sa malayo hahawakan ang unang yugto; ang mga sensitibong numero ng pagkakakilanlan ay maaaring hintayin hanggang hingin ng abogado',
           ],
         },
         {
@@ -954,7 +954,7 @@ export const guidanceExtraEnglishLandingLabel: Record<GuidanceLocale, string> = 
   vi: 'Bản tiếng Anh dành cho tư vấn',
   id: 'Versi bahasa Inggris untuk konsultasi',
   th: 'ฉบับภาษาอังกฤษสำหรับการปรึกษา',
-  fil: 'Bersiyong Ingles para sa konsultasyon',
+  fil: 'Bersyon sa Ingles para sa konsultasyon',
 };
 
 /**

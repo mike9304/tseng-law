@@ -205,7 +205,7 @@ export const guidanceAnswers: Record<
     },
     'company-setup': {
       answer:
-        'Pahina para sa mga dayuhang kompanya at mamumuhunang nagtatatag ng entidad sa Taiwan: ang pagpili ng subsidiary, sangay, o representative office, ang pagsusuri sa pamumuhunan, ang pagpapadala ng puhunan, ang pagpaparehistro, at pagkatapos ay ang bangko, ang buwis at akawnting, ang paninirahan, ang trademark, at ang paggawa. Hindi awtomatikong nagbibigay ng karapatang manirahan o permiso sa trabaho ang pagtatatag ng kompanya. Isinasagawa ang konsultasyon sa abogado sa Ingles, Tsino, Hapon, at Koreano.',
+        'Pahina para sa mga dayuhang kompanya at mamumuhunang nagtatatag ng entidad sa Taiwan: ang pagpili ng subsidiary (anak na kompanya), sangay, o representative office (opisina ng kinatawan), ang pagsusuri sa pamumuhunan, ang pagpapadala ng puhunan, ang pagpaparehistro, at pagkatapos ay ang bangko, ang buwis at akawnting, ang paninirahan, ang trademark, at ang paggawa. Hindi awtomatikong nagbibigay ng karapatang manirahan o permiso sa trabaho ang pagtatatag ng kompanya. Isinasagawa ang konsultasyon sa abogado sa Ingles, Tsino, Hapon, at Koreano.',
       sources: ['/fil/pricing', '/fil/contact'],
     },
     'debt-collection': {

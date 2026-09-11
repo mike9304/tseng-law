@@ -1,0 +1,33 @@
+WO-B2B-R2 — 독립 검토(docs/seo/sea-b2b-plan/reviews/S7-C-REVIEW.md, PASS·FIX 6·NOTE 6) 반영
+
+작업트리: /Users/son7/Projects/tseng-law-sea-b2b-20260911 (브랜치 seo/sea-b2b-20260911, HEAD fbdb5559). 밖 쓰기 금지. git add/commit/push 금지. build·next start·Playwright·전체 스위트 금지(§3 명령만).
+node: export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+먼저 리뷰 파일 전문을 읽는다. 아래 번호는 리뷰 §B의 # 와 같다.
+
+## 1. 반영 항목
+#1 언어 전환기 역방향: `src/lib/public-guidance.ts` `resolvePublicLanguageSwitchTarget` — 현재 ko/zh-hant/en/ja 랜딩(`/taiwan-company-setup-lawyer`·`/taiwan-litigation-lawyer`)에서 vi/id/th/fil로 전환 시 home 폴백. `isGuidanceLocale4(targetLocale)` 분기에서 home 폴백 전에 `guidanceExtraPageKeyFromSiteCounterpartPath(로케일 제거 경로)`를 호출해 있으면 `{ status:'available', href: guidancePublicPath(targetLocale, pageKey), fallback:'exact' }`. 테스트 추가: `resolvePublicLanguageSwitchTarget('/en/taiwan-company-setup-lawyer','vi')` → `/vi/company-setup`, `('/ja/taiwan-litigation-lawyer','fil')` → `/fil/debt-collection`, 그리고 `/en/taiwan-lawyer` → 여전히 home 폴백(회귀).
+#2 th 제목 콜론: `international-guidance-extra.ts` th company-setup 섹션 제목 두 곳 → `การเลือกรูปแบบนิติบุคคล: บริษัทย่อย สาขา หรือสำนักงานผู้แทน` / `หลังการจดทะเบียน: ธนาคาร ภาษีและบัญชี ถิ่นที่อยู่ เครื่องหมายการค้า และแรงงาน`.
+#3 th FAQ 질문 → `ควรเลือกสาขาหรือบริษัทย่อยหรือไม่` (이 페이지의 답은 그대로).
+#4 id `surel` → `email` (2곳, 코어 id 표기와 일치).
+#5 fil `Bersiyong Ingles para sa konsultasyon` → `Bersyon sa Ingles para sa konsultasyon` (본문 2곳 + `guidanceExtraEnglishLandingLabel.fil`).
+#6 fil 용어 gloss: 섹션 제목 `Pagpili ng anyo ng entidad: subsidiary (anak na kompanya), sangay, o representative office (opisina ng kinatawan)`; `international-guidance-answers.ts` fil company-setup 답변 블록의 같은 용어 묶음에도 동일 gloss(답변 블록 길이 규약 40~80단어 유지 — 초과하면 다른 어구를 줄여 맞춘다).
+#10 debt-collection 첫 이메일 준비 목록(4로케일): 소송 랜딩 전체 체크리스트 복제분 중 B2B 미수금 맥락에 맞지 않는 항목(경찰 자료·의료 기록·사진/영상)을 빼고 **계약·인보이스·서신/메시지 기록·거래 상대 회사 정보·위임장(원격 진행 시)** 로 정리. 문장은 EN 소송 랜딩 prepareChecklist·FAQ 8과 idealFor 5–6에서 이미 게재된 사실 범위 안에서만(새 절차 서술 금지). "의료 기록/은행 사본은 변호사 요청 후" 문장은 삭제하되 "민감 신분 정보는 변호사가 요청할 때까지 보류"(FAQ 8 기게재)로 대체.
+#11 `src/app/sitemap.ts` 83–85행 주석을 R1 상태(8언어+x-default=en, 규칙은 buildGuidanceCoreLanguageAlternates)로 갱신.
+#12 출처 추적 픽스처: `src/data/__tests__/international-guidance-extra.test.ts`에 (a) 각 로케일 company-setup 본문에 해당 로케일 services 투자 절의 '설립≠거류' 문장 핵심 어구(예 vi `居留`·`工作許可` 병기 문장)가 포함 (b) EN FAQ의 "three months"에 대응하는 기간 표현(vi `ba tháng`, id `tiga bulan`, th `สามเดือน`/`3 เดือน`, fil `tatlong buwan`)이 **없음**을 검사.
+#8은 총괄 결정(클러스터 유지) — 코드 변경 없음. #9는 유지.
+
+## 2. 수정 허용 파일
+src/lib/public-guidance.ts · src/lib/__tests__/public-guidance.test.ts · src/data/international-guidance-extra.ts · src/data/__tests__/international-guidance-extra.test.ts · src/data/international-guidance-answers.ts · src/lib/__tests__/international-guidance-answers.test.ts · src/app/sitemap.ts(주석만).
+금지: international-guidance-content.ts · intent-pages.ts · src/content/** · 컴포넌트 · docs/**.
+
+## 3. 검증(전부 실행·출력 그대로)
+cd /Users/son7/Projects/tseng-law-sea-b2b-20260911 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+git status --short && git diff --stat
+npm run typecheck 2>&1 | tail -2
+npx vitest run src/lib/__tests__/public-guidance.test.ts src/data/__tests__/international-guidance-extra.test.ts src/lib/__tests__/international-guidance-answers.test.ts src/app/__tests__/sitemap.test.ts src/lib/__tests__/seo-hreflang-locales.test.ts 2>&1 | tail -6
+npx eslint --max-warnings=0 --ext .ts,.tsx $(git diff --name-only | grep -E '^src/.*\.(ts|tsx)$') 2>&1 | tail -3
+grep -rn "\[변호사 검수 필요\]" src/data/international-guidance-extra.ts | wc -l   # 0
+grep -rnE "NT\\$|[0-9]{1,3},[0-9]{3}" src/data/international-guidance-extra.ts | wc -l   # 0
+grep -c "surel\|Bersiyong" src/data/international-guidance-extra.ts   # 0
+
+## 4. 보고: diff --stat · 명령 출력 · #10에서 삭제/대체한 문장 원문 목록(4로케일) · 미해결.

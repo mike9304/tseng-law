@@ -395,6 +395,22 @@ export function resolvePublicLanguageSwitchTarget(
       };
     }
 
+    // The reverse of the extra-key branch further down. The hreflang cluster
+    // declares the intent landing and the four guidance pages to be alternates
+    // of one another, so a reader on `/en/taiwan-company-setup-lawyer` who
+    // picks vi belongs on `/vi/company-setup`. Without this the landing
+    // resolves no guidance page key and falls through to the home page below,
+    // which leaves the cluster reciprocal in the tags and one-way in the chrome
+    // the reader actually clicks.
+    const counterpartPageKey = guidanceExtraPageKeyFromSiteCounterpartPath(pathWithoutLocale);
+    if (counterpartPageKey) {
+      return {
+        status: 'available',
+        href: guidancePublicPath(targetLocale, counterpartPageKey),
+        fallback: 'exact',
+      };
+    }
+
     return {
       status: 'available',
       href: guidancePublicPath(targetLocale, 'home'),

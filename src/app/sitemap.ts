@@ -80,8 +80,10 @@ function isGuidanceLocaleHreflang(tag: string): boolean {
 function appendGuidanceLocaleSitemapEntries(pages: MetadataRoute.Sitemap): void {
   const siteUrl = getSiteUrl();
   for (const locale of GUIDANCE_LOCALES_4) {
-    // The ten core keys plus every guidance page key added afterwards. The
-    // extra keys' alternates stay inside the guidance four; that rule lives in
+    // The ten core keys plus every guidance page key added afterwards. Both
+    // families publish an eight-language cluster with `x-default` on the
+    // English URL — for the extra keys the ko/zh-hant/en/ja half is the intent
+    // landing, not a `/{siteLocale}/<key>` path. That rule lives in
     // `buildGuidanceCoreLanguageAlternates`, not here.
     for (const pageKey of GUIDANCE_ALL_PAGE_KEYS) {
       pages.push({

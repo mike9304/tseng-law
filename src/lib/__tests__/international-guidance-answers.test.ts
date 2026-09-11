@@ -1,12 +1,13 @@
 import { describe, expect, it } from 'vitest';
 import { intentPageSlugs } from '@/data/intent-pages';
 import { guidanceAnswers } from '@/data/international-guidance-answers';
-import type { GuidancePageKey } from '@/data/international-guidance-content';
 import {
+  GUIDANCE_ALL_PAGE_KEYS,
   GUIDANCE_LOCALES_4,
   GUIDANCE_PAGE_KEYS,
   PUBLIC_LOCALES_8,
   guidancePublicPath,
+  type GuidancePageKey,
 } from '@/lib/public-guidance';
 
 /** Page keys that must carry an answer-first block. */
@@ -17,9 +18,11 @@ const ANSWER_PAGE_KEYS = [
   'pricing',
   'contact',
   'faq',
+  'company-setup',
+  'debt-collection',
 ] as const satisfies readonly GuidancePageKey[];
 
-/** Page keys that must not carry one. */
+/** Core page keys that must not carry one. */
 const NO_ANSWER_PAGE_KEYS = GUIDANCE_PAGE_KEYS.filter(
   (key) => !(ANSWER_PAGE_KEYS as readonly string[]).includes(key),
 );
@@ -125,7 +128,7 @@ const SERVICES_ACCEPTANCE_PATTERNS: Record<
 /** Every site-internal path an answer may cite. */
 const ALLOWED_SOURCES = new Set<string>([
   ...PUBLIC_LOCALES_8.flatMap((locale) =>
-    GUIDANCE_PAGE_KEYS.map((key) => guidancePublicPath(locale, key)),
+    GUIDANCE_ALL_PAGE_KEYS.map((key) => guidancePublicPath(locale, key)),
   ),
   ...intentPageSlugs.map((slug) => `/en/${slug}`),
 ]);
@@ -152,9 +155,9 @@ const entries = GUIDANCE_LOCALES_4.flatMap((locale) =>
 );
 
 describe('guidanceAnswers', () => {
-  it('covers 4 locales x 6 page keys', () => {
+  it('covers 4 locales x 8 page keys', () => {
     expect(GUIDANCE_LOCALES_4).toHaveLength(4);
-    expect(ANSWER_PAGE_KEYS).toHaveLength(6);
+    expect(ANSWER_PAGE_KEYS).toHaveLength(8);
 
     for (const locale of GUIDANCE_LOCALES_4) {
       expect(Object.keys(guidanceAnswers[locale]).sort()).toEqual(
@@ -249,13 +252,17 @@ describe('guidanceAnswers', () => {
     for (const { locale, key, entry } of entries) {
       const sources = entry?.sources ?? [];
       expect(sources.length, `${locale}/${key} source count`).toBeGreaterThanOrEqual(1);
-      expect(sources.length, `${locale}/${key} source count`).toBeLessThanOrEqual(2);
+      // `services` cites four: the two core siblings plus the two practice
+      // pages that have no nav entry. Every other entry stays at one or two.
+      expect(sources.length, `${locale}/${key} source count`).toBeLessThanOrEqual(
+        key === 'services' ? 4 : 2,
+      );
       expect(new Set(sources).size, `${locale}/${key} duplicate source`).toBe(sources.length);
 
       for (const href of sources) {
         expect(href.startsWith('/'), `${locale}/${key} source "${href}" must start with /`).toBe(true);
         expect(ALLOWED_SOURCES.has(href), `${locale}/${key} source "${href}" is not a known path`).toBe(true);
-        const isSameLocaleGuidance = GUIDANCE_PAGE_KEYS.some(
+        const isSameLocaleGuidance = GUIDANCE_ALL_PAGE_KEYS.some(
           (pageKey) => guidancePublicPath(locale, pageKey) === href,
         );
         const isEnglishLanding = intentPageSlugs.some((slug) => href === `/en/${slug}`);

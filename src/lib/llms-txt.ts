@@ -1,10 +1,11 @@
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
 import { guidanceContent } from '@/data/international-guidance-content';
+import { getGuidancePage } from '@/data/international-guidance-extra';
 import { getAllColumnPosts } from '@/lib/columns';
 import { siteLocales, type SiteLocale } from '@/lib/locales';
 import {
+  GUIDANCE_ALL_PAGE_KEYS,
   GUIDANCE_LOCALES_4,
-  GUIDANCE_PAGE_KEYS,
   PUBLIC_LANGUAGE_AUTONYMS,
   guidancePublicPath,
   type GuidanceLocale4,
@@ -523,8 +524,8 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
  * Per-locale llms.txt for the four guidance languages (vi / id / th / fil).
  *
  * Same shape as {@link buildLocaleLlmsTxt}: one H1, a one-line blockquote, the
- * notice block, then annotated file-list bullets — here the ten guidance core
- * pages, titled and annotated with the locale's own published copy. Consultation
+ * notice block, then annotated file-list bullets — here every routable guidance
+ * page, titled and annotated with the locale's own published copy. Consultation
  * languages are never widened: the notice block states in the page language that
  * consultations run only in English, Chinese, Japanese and Korean.
  */
@@ -535,8 +536,11 @@ export function buildGuidanceLlmsTxt(locale: GuidanceLocale4): string {
     throw new Error(`Missing required llms.txt guidance data: ${locale}`);
   }
 
-  const entries: LlmsEntry[] = GUIDANCE_PAGE_KEYS.map((pageKey) => {
-    const page = pack.pages[pageKey];
+  // Core keys come from the translation-lane content module; keys added after
+  // the original ten come from `international-guidance-extra.ts`. Both are
+  // resolved through one lookup so the catalog lists every routable page.
+  const entries: LlmsEntry[] = GUIDANCE_ALL_PAGE_KEYS.map((pageKey) => {
+    const page = getGuidancePage(locale, pageKey);
     if (!page?.title || !page?.description) {
       throw new Error(`Incomplete guidance page metadata for llms.txt: ${locale}/${pageKey}`);
     }
@@ -547,8 +551,10 @@ export function buildGuidanceLlmsTxt(locale: GuidanceLocale4): string {
     };
   });
 
-  if (entries.length !== GUIDANCE_PAGE_KEYS.length) {
-    throw new Error(`Guidance llms.txt requires all ${GUIDANCE_PAGE_KEYS.length} core pages: ${locale}`);
+  if (entries.length !== GUIDANCE_ALL_PAGE_KEYS.length) {
+    throw new Error(
+      `Guidance llms.txt requires all ${GUIDANCE_ALL_PAGE_KEYS.length} guidance pages: ${locale}`,
+    );
   }
 
   return finalizeLlmsTxt([

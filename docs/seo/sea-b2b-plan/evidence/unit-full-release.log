@@ -1,0 +1,2158 @@
+
+> sejong-law@0.1.0 test:unit
+> vitest run
+
+
+ RUN  v3.2.6 /Users/son7/Projects/tseng-law-sea-b2b-20260911
+
+qa_runtime_isolation_error: unsupported argument: --manifest
+ ✓ src/app/[locale]/columns/[slug]/__tests__/guidance-faq-inlanguage.test.tsx (4 tests) 54ms
+qa_runtime_isolation_error: refusing to remove a manifest owned by a different run
+ ✓ src/lib/builder/canvas/__tests__/home-zh-hant-desktop-parity.test.ts (57 tests) 1294ms
+qa_runtime_isolation_error: missing value for --server-pid
+qa_runtime_isolation_error: attestation response serverPid mismatch
+qa_runtime_isolation_error: attestation signature mismatch
+qa_runtime_isolation_error: attestation runId does not match starting manifest
+qa_runtime_isolation_error: QA_INTERNAL_ATTESTATION_NONCE must be "4fb1bb3f089d0b9e1ebe8b0dabbe8f3680048e2520b2dba3cec7bdcc1df06897" in QA
+ ✓ src/lib/builder/dev/__tests__/data-sdk.test.ts (6 tests) 2668ms
+   ✓ createDataSdk — happy path CRUD > lists collections and round-trips a record through create/get/update/delete  866ms
+   ✓ createDataSdk — typed query passthrough > applies filter + sort + pagination to the underlying store query  1514ms
+qa_runtime_isolation_error: manifest runtime environment key set is incomplete or unexpected
+ ✓ src/lib/builder/storage/__tests__/file-cas.test.ts (32 tests) 3889ms
+   ✓ FileCasStore > prevents ABA when an identical JSON value is deleted and recreated  443ms
+   ✓ FileCasStore > serializes competing stale-lock reclaimers without deleting the winner lock  300ms
+ ❯ src/lib/builder/security/__tests__/qa-runtime-attestation.test.ts (12 tests | 1 failed) 4127ms
+   × qa runtime attestation v3 > normalizes macOS-style ancestor aliases but rejects a symlink TMPDIR leaf 3ms
+     → QA runtime attestation: canonical runtime-data root must be an existing real directory.
+   ✓ qa runtime attestation v3 > derives only the fixed physical TMPDIR/repository/port manifest path 55ms
+   ✓ qa runtime attestation v3 > loads a valid ready manifest for a coordinator without using current cwd or runtime env 120ms
+   ✓ qa runtime attestation v3 > rejects loose permissions, symlink boundaries, and injected policy keys  373ms
+   ✓ qa runtime attestation v3 > rejects a forged root binding 79ms
+   ✓ qa runtime attestation v3 > rejects a forged cwd binding 144ms
+   ✓ qa runtime attestation v3 > rejects a forged runId binding 282ms
+   ✓ qa runtime attestation v3 > rejects a forged nonce binding 228ms
+   ✓ qa runtime attestation v3 > rejects a forged state binding  359ms
+   ✓ qa runtime attestation v3 > accepts valid starting and ready server states only with exact current bindings  608ms
+   ✓ qa runtime attestation v3 > caches ready validation only while every cheap in-memory binding remains exact  1485ms
+   ✓ qa runtime attestation v3 > uses the exact v3 HMAC domain and rejects any response tampering  390ms
+ ✓ src/app/api/consultation/international/__tests__/route.test.ts (25 tests) 1903ms
+qa_runtime_isolation_error: refusing to replace a manifest owned by a live launcher or server
+ ✓ tests/patch-zh-hero-2026-07-21.test.ts (7 tests) 1086ms
+   ✓ page and schema guards > runs a successful dry-run through the isolated local file backend without changing bytes  1077ms
+ ✓ src/components/__tests__/cinematic-media-assets.test.ts (50 tests) 1037ms
+ ✓ src/lib/builder/backups/__tests__/restore-engine.test.ts (24 tests) 5337ms
+   ✓ backup restore engine shared local writer boundary > holds unique canonical targets in bytewise order before the first write  1008ms
+   ✓ backup restore engine shared local writer boundary > does not deadlock when two OS processes restore reverse-ordered manifests  2545ms
+   ✓ backup restore engine shared local writer boundary > recovers an atomic restore killed after detach before a competitor installs  955ms
+ ✓ src/lib/builder/__tests__/assets-root-override.test.ts (11 tests) 1222ms
+qa_runtime_isolation_error: tmp-base must be a real directory, not a symlink
+qa_runtime_isolation_error: repository-root must be a real directory, not a symlink
+qa_runtime_isolation_error: dist-dir must be a real directory, not a symlink
+ ✓ src/lib/builder/site/__tests__/publish-revisions-root.test.ts (14 tests) 1320ms
+   ✓ builder revision filesystem root > isolates the same page id by site and blocks cross-site reads and rollback  324ms
+qa_runtime_isolation_error: isolated QA namespace contains a symlink: /private/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/qa-attested-contract-Ro5UQ7/tmp/tseng-qa-server-khIsPS/escape-to-canonical
+ ✓ src/lib/builder/__tests__/integration/wix-parity.smoke.test.ts (3 tests) 1078ms
+   ✓ Wix parity integration smoke > assigns A/B variants deterministically and the webhook signature verifies  980ms
+ ✓ src/lib/builder/site/__tests__/qa-server-isolation.test.ts (6 tests) 6291ms
+   ✓ attested QA server isolation contract > derives a fixed private manifest and leaves preflight in starting state  644ms
+   ✓ attested QA server isolation contract > promotes only a live, matching run with a valid HMAC attestation  1332ms
+   ✓ attested QA server isolation contract > keeps starting state after wrong HMAC, runId, or nonce policy  1616ms
+   ✓ attested QA server isolation contract > refuses live-owner replacement and permits only validated stale replacement  1400ms
+   ✓ attested QA server isolation contract > rejects symlinked tmp/repository roots and an isolated-root symlink escape  1298ms
+ ✓ src/lib/builder/__tests__/columns-backend.test.ts (12 tests) 795ms
+ ✓ src/lib/builder/canvas/__tests__/home-zh-hant-editor-read.test.ts (10 tests) 756ms
+   ✓ authored ZH home initial editor read > matches the published stock read with discovery flag true without saving  344ms
+ ✓ src/lib/builder/notifications/__tests__/notification-store-audience.test.ts (3 tests) 1337ms
+   ✓ notification audience authorization > lists only broadcast, exact-role, and exact-principal notifications  532ms
+   ✓ notification audience authorization > rejects cross-role mark and delete operations without changing the object  338ms
+   ✓ notification audience authorization > bulk marks only objects in the authenticated audience  467ms
+ ✓ src/lib/builder/storage/__tests__/safe-local-fs.test.ts (56 tests) 7084ms
+   ✓ safe local fs physical containment > stays fail-closed after SIGKILL between link and temp cleanup  320ms
+   ✓ safe local fs physical containment > preserves the complete new overwrite generation after SIGKILL post-rename fsync  350ms
+   ✓ safe local fs physical containment > fsyncs the containing directory after mkdir, installs, temp cleanup, and removal stages  404ms
+   ✓ safe local fs physical containment > derives committed marker names from the basename without rewriting an ancestor path  402ms
+ ✓ src/lib/builder/ops/__tests__/backup-restore-drill.test.ts (1 test) 820ms
+   ✓ ops backup restore drill > runs a non-destructive backup restore drill and persists the latest report  819ms
+ ✓ src/lib/builder/__tests__/billing-documents-bulk.test.ts (9 tests) 896ms
+ ✓ src/lib/builder/search/__tests__/column-012-native-search-sync.test.ts (1 test) 549ms
+   ✓ column 012 native search source path > includes real file-backed column 012 and keeps explicit future publishedAt scheduled  548ms
+ ✓ src/app/api/ai/mcp/__tests__/adversarial.test.ts (42 tests) 678ms
+   ✓ MCP /api/ai/mcp adversarial containment > accepts 32768 UTF-8 bytes and rejects 32769 including a multibyte boundary  396ms
+ ✓ src/lib/builder/site/__tests__/mobile-schema-migration.test.ts (39 tests) 8096ms
+   ✓ M07 mobile schema migration script > requires --apply, preserves an exact backup, and atomically replaces site.json  460ms
+   ✓ M07 mobile schema migration script > serializes a real lease writer behind the migration transaction without lost updates  1605ms
+   ✓ M07 mobile schema migration script > never follows a backups-directory swap to an external target during apply  397ms
+   ✓ M07 mobile schema migration script > aborts a runtime-data namespace swap before replacing the bound source  367ms
+   ✓ M07 mobile schema migration script > aborts when the source replacement inode changes before final replace  373ms
+   ✓ M07 mobile schema migration script > aborts when the source same-inode generation changes before final replace  379ms
+   ✓ M07 mobile schema migration script > aborts when the backup replacement inode changes before final replace  365ms
+   ✓ M07 mobile schema migration script > aborts when the backup same-inode generation changes before final replace  397ms
+   ✓ M07 mobile schema migration script > rejects an internal sandbox page for the canonical site during apply without changing bytes  323ms
+   ✓ M07 mobile schema migration script > leaves bytes and backup state untouched when transformed invariants fail: duplicate page id  302ms
+   ✓ M07 mobile schema migration script > leaves bytes and backup state untouched when transformed invariants fail: missing authored home  310ms
+   ✓ M07 mobile schema migration script > leaves bytes and backup state untouched when transformed invariants fail: unsafe page id  324ms
+ ✓ src/lib/consultation/__tests__/international-inquiry-store.test.ts (14 tests) 880ms
+ ✓ src/components/__tests__/ai-intake-discovery-ctas.test.tsx (38 tests) 581ms
+ ✓ src/lib/builder/experiments/__tests__/storage.test.ts (3 tests) 806ms
+   ✓ experiment metric CAS storage > persists every distinct concurrent metric increment without an RMW loss  417ms
+ ✓ src/data/__tests__/column-012-public-reference-sync.test.ts (16 tests) 830ms
+   ✓ column 012 public reference synchronization > publishes each canonical column URL once with the file-backed language alternates in the sitemap  428ms
+ ✓ src/lib/builder/ai-generator/__tests__/intake-versions-store.test.ts (17 tests) 455ms
+ ✓ src/lib/builder/members/__tests__/members-engine.test.ts (2 tests) 451ms
+ ✓ src/app/api/forms/__tests__/submit-route.test.ts (32 tests) 194ms
+stderr | src/app/api/reviews/__tests__/route.test.ts > /api/reviews file backend > fails closed without overwriting existing storage when reads fail
+[reviews] operation failed review_submission_failed SyntaxError
+
+ ✓ src/app/api/reviews/__tests__/route.test.ts (17 tests) 293ms
+ ✓ src/lib/ai-intake/__tests__/store.test.ts (24 tests) 448ms
+ ✓ src/data/__tests__/column-007-public-reference-sync.test.ts (13 tests) 824ms
+   ✓ column 007 public reference synchronization > publishes each canonical column URL once with the file-backed language alternates in the sitemap  422ms
+ ✓ src/lib/builder/__tests__/billing-documents.test.ts (15 tests) 2709ms
+   ✓ builder billing documents > saves automatic issuance policy and issues order and booking documents without duplicates  446ms
+   ✓ builder billing documents > serializes concurrent invoice number reservations  384ms
+stderr | src/lib/consultation/__tests__/engine.test.ts > consultation engine deterministic safety paths > low-confidence off-topic questions bypass the LLM in non-streaming mode
+[consultation] low confidence; LLM bypassed. {
+  sessionId: 'test-off-topic',
+  relevanceScore: 0,
+  queryWordHits: 0,
+  queryWordTotal: 0,
+  classification: 'general'
+}
+
+stderr | src/lib/consultation/__tests__/engine.test.ts > consultation engine deterministic safety paths > streaming metadata matches non-streaming safety metadata for off-topic questions
+[consultation] low confidence; LLM bypassed. {
+  sessionId: 'test-stream-off-topic',
+  relevanceScore: 0,
+  queryWordHits: 0,
+  queryWordTotal: 0,
+  classification: 'general'
+}
+
+stderr | src/lib/consultation/__tests__/engine.test.ts > consultation engine deterministic safety paths > PII is detected before provider calls
+[consultation] sensitive PII detected; LLM bypassed. {
+  piiHits: [ 'kr_rrn', 'pii_keyword', 'card_digits' ],
+  sessionId: 'test-pii'
+}
+
+stderr | src/lib/consultation/__tests__/engine.test.ts > consultation engine deterministic safety paths > ko sensitive-information guidance uses email only for initial handoff and requires a secure method for documents
+[consultation] sensitive PII detected; LLM bypassed. {
+  piiHits: [ 'kr_rrn', 'pii_keyword', 'card_digits' ],
+  sessionId: 'test-pii-email-only-ko'
+}
+
+stderr | src/lib/consultation/__tests__/engine.test.ts > consultation engine deterministic safety paths > zh-hant sensitive-information guidance uses email only for initial handoff and requires a secure method for documents
+[consultation] sensitive PII detected; LLM bypassed. {
+  piiHits: [ 'kr_rrn', 'pii_keyword', 'card_digits' ],
+  sessionId: 'test-pii-email-only-zh-hant'
+}
+
+stderr | src/lib/consultation/__tests__/engine.test.ts > consultation engine deterministic safety paths > en sensitive-information guidance uses email only for initial handoff and requires a secure method for documents
+[consultation] sensitive PII detected; LLM bypassed. { piiHits: [ 'kr_rrn' ], sessionId: 'test-pii-email-only-en' }
+
+stderr | src/lib/consultation/__tests__/engine.test.ts > consultation engine deterministic safety paths > prompt injection uses the bypass path without classifying as L4 emergency
+[consultation] prompt injection detected; LLM bypassed. { sessionId: 'test-injection', locale: 'ko' }
+
+stderr | src/lib/consultation/__tests__/engine.test.ts > consultation engine deterministic safety paths > Korean internal-rule extraction is handled as prompt injection, not emergency advice
+[consultation] prompt injection detected; LLM bypassed. { sessionId: 'test-internal-rules', locale: 'ko' }
+
+ ✓ src/lib/builder/site/__tests__/persistence.test.ts (151 tests) 8944ms
+   ✓ writeSiteDocument invariant boundary > rejects a stale merge that creates a duplicate route without changing valid bytes  502ms
+   ✓ writeSiteDocument invariant boundary > rejects a direct duplicate page create without changing valid bytes  559ms
+   ✓ writeSiteDocument invariant boundary > can create a second-locale home without invariant failures  469ms
+   ✓ writeSiteDocument invariant boundary > rejects unsafe and duplicate page ids at the final write boundary  306ms
+   ✓ strict mutation site identity boundary > rejects site writes, page creation, and canvas writes for undefined without changing canonical data  335ms
+   ✓ strict mutation site identity boundary > rejects site writes, page creation, and canvas writes for ../../x without changing canonical data  346ms
+   ✓ strict mutation site identity boundary > persists a safe custom site id inside an isolated root  361ms
+   ✓ strict mutation site identity boundary > blocks the seed publish helper before a canonical published write  335ms
+   ✓ strict mutation site identity boundary > keeps the seed publish helper available to an isolated customer site  581ms
+stderr | src/lib/consultation/__tests__/engine.test.ts > consultation engine deterministic safety paths > generic legal-terms translation requests are not treated as L4 emergencies
+[consultation] low confidence; LLM bypassed. {
+  sessionId: 'test-translation',
+  relevanceScore: 0,
+  queryWordHits: 0,
+  queryWordTotal: 0,
+  classification: 'general'
+}
+
+ ✓ src/lib/consultation/__tests__/engine.test.ts (22 tests) 279ms
+stderr | src/app/api/builder/site/pages/[pageId]/draft/__tests__/route.test.ts > /api/builder/site/pages/[pageId]/draft > rejects an unrepairable draft document instead of persisting a fallback
+[normalizeCanvasDocument] schema rejected and unrepairable {
+  totalIssues: 5,
+  sample: [
+    {
+      path: 'version',
+      code: 'invalid_value',
+      message: 'Invalid input: expected 1'
+    },
+    {
+      path: 'locale',
+      code: 'invalid_value',
+      message: 'Invalid option: expected one of "ko"|"zh-hant"|"en"'
+    },
+    {
+      path: 'updatedAt',
+      code: 'invalid_type',
+      message: 'Invalid input: expected string, received undefined'
+    }
+  ]
+}
+
+ ✓ src/app/api/builder/site/pages/[pageId]/draft/__tests__/route.test.ts (30 tests) 236ms
+ ✓ src/lib/builder/crm/__tests__/automation-engine.test.ts (8 tests) 535ms
+ ✓ src/lib/builder/ops/__tests__/dashboard.test.ts (4 tests) 522ms
+ ✓ src/lib/builder/commerce/__tests__/subscriptions-store.test.ts (19 tests) 699ms
+ ✓ src/lib/builder/commerce/__tests__/orders-engine.test.ts (18 tests) 1019ms
+ ✓ src/lib/builder/commerce/__tests__/payment-webhooks-engine.test.ts (6 tests) 534ms
+ ✓ src/lib/builder/ops/__tests__/health-collector.test.ts (5 tests | 1 skipped) 508ms
+ ✓ src/lib/builder/commerce/__tests__/notifications-engine.test.ts (4 tests) 448ms
+ ✓ src/lib/builder/bookings/__tests__/payment-intent-claim.test.ts (5 tests) 241ms
+ ✓ src/components/__tests__/column-content-consultation-links.test.tsx (10 tests) 81ms
+ ✓ src/lib/builder/branches/__tests__/branch-store.test.ts (6 tests | 1 skipped) 286ms
+ ✓ src/lib/builder/bookings/__tests__/storage-reminder-markers.test.ts (4 tests) 215ms
+ ✓ src/lib/builder/commerce/__tests__/manual-payments-reconcile.test.ts (13 tests | 2 skipped) 468ms
+ ✓ src/lib/builder/apps/__tests__/hooks-registry.test.ts (8 tests) 192ms
+ ✓ src/lib/builder/security/__tests__/user-role-store.test.ts (14 tests) 337ms
+ ✓ src/lib/builder/collab/__tests__/comments-store.test.ts (7 tests) 389ms
+ ✓ src/lib/builder/canvas/__tests__/home-zh-hant-tablet-fingerprint.test.ts (11 tests) 169ms
+ ✓ src/lib/ai-intake/__tests__/submit.test.ts (25 tests) 186ms
+ ✓ src/lib/metrics/__tests__/visit-store.test.ts (5 tests) 209ms
+ ✓ src/lib/builder/collab/__tests__/review-markers.test.ts (8 tests) 303ms
+ ✓ src/lib/__tests__/columns-en-content.test.ts (6 tests) 169ms
+ ✓ src/lib/builder/crm/__tests__/contact-store.test.ts (8 tests) 271ms
+ ✓ src/lib/builder/bookings/__tests__/notification-template-store.test.ts (13 tests) 208ms
+ ✓ src/lib/builder/crm/__tests__/campaign-queue.test.ts (7 tests) 263ms
+ ✓ src/lib/builder/canvas/__tests__/home-hero-media-image-migration.test.ts (3 tests) 139ms
+ ✓ src/lib/builder/ops/__tests__/dashboard-history.test.ts (1 test) 239ms
+ ✓ src/lib/builder/crm/__tests__/segments-store.test.ts (11 tests) 155ms
+ ✓ src/app/[locale]/__tests__/llms-discovery.test.tsx (45 tests) 193ms
+ ✓ src/lib/builder/dev/__tests__/function-invoker.test.ts (4 tests) 143ms
+ ✓ src/components/__tests__/corporate-advisory-paths.test.tsx (12 tests) 137ms
+ ✓ src/components/__tests__/intent-landing-ja-parity.test.tsx (9 tests) 117ms
+ ✓ src/lib/builder/branches/__tests__/approval-store.test.ts (6 tests) 196ms
+ ✓ src/data/__tests__/column-010-public-reference-sync.test.ts (9 tests) 117ms
+ ✓ src/lib/__tests__/ai-route-header-precedence.test.ts (15 tests) 111ms
+ ✓ src/lib/builder/notifications/__tests__/notification-store-cas.test.ts (5 tests) 121ms
+ ✓ src/lib/builder/canvas/__tests__/seed-home-layout.test.ts (20 tests) 126ms
+stdout | src/lib/builder/crm/__tests__/mailchimp-audience.test.ts > Mailchimp audience sync > dispatches enabled Mailchimp integrations through the audience sync adapter
+[crm/integrations] mailchimp audience sync {
+  integrationId: 'int_mailchimp',
+  contactEmail: 'Dispatch@Example.com',
+  kind: 'contact-created',
+  status: 'synced'
+}
+
+ ✓ src/lib/builder/crm/__tests__/mailchimp-audience.test.ts (4 tests) 90ms
+ ✓ src/data/__tests__/column-016-public-reference-sync.test.ts (6 tests) 108ms
+ ✓ src/components/__tests__/intent-contact-paths.test.tsx (8 tests) 116ms
+ ✓ src/lib/builder/audit/__tests__/readiness-manifest.test.ts (40 tests) 65ms
+ ✓ src/data/__tests__/column-014-public-reference-sync.test.ts (8 tests) 111ms
+ ✓ src/lib/builder/security/__tests__/review-tokens.test.ts (13 tests | 1 skipped) 136ms
+ ✓ src/app/[locale]/llms.txt/__tests__/route.test.ts (27 tests) 118ms
+ ✓ tests/scripts/clean-next-build.test.ts (3 tests) 187ms
+ ✓ src/lib/builder/marketing/__tests__/analytics-integrations.test.ts (2 tests) 110ms
+ ✓ src/lib/builder/publish-gate/__tests__/atomic-publish.test.ts (6 tests) 108ms
+ ✓ src/lib/builder/dev/__tests__/code-slots.test.ts (4 tests) 147ms
+ ✓ src/lib/builder/__tests__/cms-dynamic-item-scheduled-policy.test.ts (2 tests) 51ms
+ ✓ src/lib/builder/crm/__tests__/integrations-model.test.ts (1 test) 55ms
+ ✓ src/lib/builder/crm/__tests__/tracking-model.test.ts (11 tests) 155ms
+ ✓ src/lib/email/__tests__/send-consultation-email.test.ts (5 tests) 84ms
+ ✓ src/lib/builder/bookings/__tests__/billing-documents.test.ts (2 tests) 99ms
+ ✓ src/lib/builder/marketing/__tests__/subscriber-crm-link.test.ts (2 tests) 101ms
+ ✓ src/lib/builder/commerce/__tests__/products-engine.test.ts (4 tests) 90ms
+ ✓ src/lib/builder/dev/__tests__/secrets-store.test.ts (10 tests) 95ms
+ ✓ src/lib/builder/apps/__tests__/hook-retry-drain.test.ts (2 tests) 97ms
+ ✓ src/lib/builder/collab/__tests__/presence-cursors.test.ts (6 tests) 230ms
+ ✓ src/lib/builder/__tests__/dynamic-template-drafts.test.ts (6 tests) 57ms
+ ✓ src/lib/builder/collab/__tests__/canvas-mutex.test.ts (5 tests) 66ms
+ ✓ src/app/__tests__/sitemap.test.ts (31 tests) 12367ms
+   ✓ sitemap column lastModified > uses each column frontmatter lastmod and preserves distinct dates  486ms
+   ✓ sitemap column lastModified > excludes English-only noindex routes and removes their English hreflang  401ms
+   ✓ sitemap column lastModified > excludes builder-provided reviews pages in every locale and preserves other entries  386ms
+   ✓ sitemap column lastModified > publishes Japanese About exactly once with eight-language core alternates  369ms
+   ✓ sitemap column lastModified > publishes AI-intake in all four locales exactly once with four-language alternates  396ms
+   ✓ sitemap column lastModified > publishes Japanese services exactly once with eight-language core alternates  392ms
+   ✓ sitemap column lastModified > publishes only the approved Japanese service details with exact alternates  396ms
+   ✓ sitemap column lastModified > publishes Japanese pricing exactly once with eight-language core alternates  393ms
+   ✓ sitemap column lastModified > publishes Japanese contact exactly once with eight-language core alternates  393ms
+   ✓ sitemap column lastModified > publishes Japanese /lawyers exactly once with eight-language core alternates  372ms
+   ✓ sitemap column lastModified > publishes Japanese /lawyers/wei-tseng exactly once with four-language alternates  387ms
+   ✓ sitemap column lastModified > publishes Japanese  exactly once  394ms
+   ✓ sitemap column lastModified > publishes Japanese /faq exactly once  386ms
+   ✓ sitemap column lastModified > publishes Japanese /videos exactly once  375ms
+   ✓ sitemap column lastModified > publishes Japanese /privacy exactly once  387ms
+   ✓ sitemap column lastModified > publishes Japanese /disclaimer exactly once  386ms
+   ✓ sitemap column lastModified > publishes Japanese /accessibility exactly once  384ms
+   ✓ sitemap column lastModified > publishes Japanese /taiwan-lawyer exactly once  380ms
+   ✓ sitemap column lastModified > publishes Japanese /taiwan-company-setup-lawyer exactly once  402ms
+   ✓ sitemap column lastModified > publishes Japanese /taiwan-litigation-lawyer exactly once  403ms
+   ✓ sitemap column lastModified > publishes Japanese /korean-lawyer-in-taiwan exactly once  406ms
+   ✓ sitemap column lastModified > publishes Japanese /ai-intake exactly once  401ms
+   ✓ sitemap column lastModified > publishes Japanese /guides/taiwan-company-setup exactly once  416ms
+   ✓ sitemap column lastModified > strips the en alternate from the Japanese faq entry (English-noindex path)  377ms
+   ✓ sitemap column lastModified > keeps Japanese store/portfolio/events routes out of the sitemap  378ms
+   ✓ sitemap column lastModified > adds a reciprocal ja hreflang to every sibling of a published Japanese route  403ms
+   ✓ sitemap column lastModified > publishes eight reciprocal languages for home and contact core URLs  408ms
+   ✓ sitemap column lastModified > publishes seven FAQ languages excluding English  412ms
+   ✓ sitemap column lastModified > publishes the eight new-key URLs in an eight-language cluster with their intent landing  413ms
+   ✓ sitemap column lastModified > does not invent vi/id/th/fil URLs or hreflang for deep articles or US landings  438ms
+   ✓ sitemap column lastModified > appends exactly 48 unique self-canonical new-four URLs and retains non-core routes  445ms
+ ✓ src/lib/builder/canvas/__tests__/align-group-bounds.test.ts (3 tests) 42ms
+ ✓ src/lib/builder/canvas/__tests__/home-hero-search-migration.test.ts (7 tests) 57ms
+ ✓ src/lib/builder/canvas/__tests__/seed-composite-pages.test.ts (45 tests) 59ms
+ ✓ src/lib/__tests__/columns-en-family-007.test.ts (59 tests) 60ms
+ ✓ src/app/api/search/__tests__/route.test.ts (20 tests) 22ms
+ ✓ src/lib/builder/apps/__tests__/hook-runtime.test.ts (2 tests) 117ms
+ ✓ src/lib/builder/forms/__tests__/webhook-retry.test.ts (6 tests) 124ms
+ ✓ src/lib/builder/apps/__tests__/hook-deliveries.test.ts (1 test) 84ms
+ ✓ src/lib/builder/__tests__/cms-editable.test.ts (18 tests) 54ms
+ ✓ src/lib/builder/experiments/__tests__/metric-idempotency.test.ts (3 tests) 78ms
+ ✓ src/lib/builder/canvas/__tests__/home-locale-repair.test.ts (2 tests) 54ms
+ ✓ src/lib/builder/faq/__tests__/faq-engine.test.ts (4 tests) 136ms
+ ✓ src/lib/builder/events/__tests__/events-engine.test.ts (1 test) 74ms
+ ✓ src/data/__tests__/site-content-ja-services.test.ts (6 tests) 51ms
+ ✓ src/lib/builder/__tests__/cms-record-seo.test.ts (5 tests) 48ms
+ ✓ src/app/api/faq/__tests__/route.test.ts (2 tests) 43ms
+ ✓ src/lib/__tests__/columns-publication-date.test.ts (12 tests) 47ms
+ ✓ src/lib/builder/canvas/__tests__/home-draft-reseed.test.ts (15 tests) 51ms
+ ✓ src/lib/__tests__/columns-ja-content.test.ts (6 tests) 47ms
+ ✓ src/lib/builder/portfolio/__tests__/portfolio-engine.test.ts (1 test) 39ms
+ ✓ src/lib/builder/seo/__tests__/sitemap-builder.test.ts (5 tests) 34ms
+ ✓ src/lib/builder/ops/__tests__/cache-introspection.test.ts (2 tests) 117ms
+ ✓ src/lib/__tests__/guidance-jsonld.test.ts (56 tests) 54ms
+ ✓ src/lib/builder/canvas/__tests__/home-editor-layout-parity.test.ts (3 tests) 39ms
+ ✓ src/components/__tests__/guidance-home-design-parity.test.tsx (14 tests) 59ms
+ ✓ src/lib/builder/__tests__/dynamic-templates.test.ts (3 tests) 43ms
+ ✓ src/lib/__tests__/columns-ja-family-007.test.ts (26 tests) 36ms
+ ✓ src/lib/builder/canvas/__tests__/seed-home-zh-hant-parity.test.ts (3 tests) 40ms
+ ✓ src/lib/builder/errors/__tests__/storage.test.ts (3 tests) 103ms
+ ✓ src/lib/builder/__tests__/dynamic-template-block-publish.test.ts (4 tests) 38ms
+ ✓ src/components/__tests__/cinematic-opening.test.tsx (69 tests) 36ms
+ ✓ src/lib/builder/ops/__tests__/alert-report.test.ts (2 tests) 51ms
+ ✓ src/app/[locale]/(legacy)/__tests__/home-legacy-localization.test.tsx (18 tests) 37ms
+ ✓ src/lib/consultation/__tests__/log-storage.test.ts (1 test) 55ms
+ ✓ src/lib/builder/canvas/__tests__/seed-home-composite.test.ts (9 tests) 34ms
+ ✓ src/data/__tests__/service-details-ja-investment.test.ts (7 tests) 33ms
+ ✓ src/lib/__tests__/column-embeddings-content-sync.test.ts (10 tests) 30ms
+ ✓ src/lib/builder/bookings/__tests__/availability.test.ts (19 tests) 32ms
+ ✓ src/lib/__tests__/columns-en-labor-009.test.ts (5 tests) 26ms
+ ✓ src/components/__tests__/guidance-page-design-parity.test.tsx (2 tests) 34ms
+ ✓ src/lib/__tests__/columns-new-four-locales.test.ts (7 tests) 51ms
+ ✓ src/lib/builder/__tests__/dynamic-routes.test.ts (3 tests) 33ms
+ ✓ src/lib/builder/canvas/__tests__/home-insights-publication-order.test.ts (6 tests) 27ms
+ ✓ src/lib/builder/site/__tests__/persistence-multiprocess-cas.test.ts (4 tests) 13609ms
+   ✓ page canvas file CAS across OS processes > allows exactly one revision-8 winner in 25 updater-barrier races  8524ms
+   ✓ site document lease across OS processes > serializes stale site writers so concurrent page and navigation additions survive  1726ms
+   ✓ site document lease across OS processes > blocks a site reader across a cooperative restore detach instead of manufacturing a default  1551ms
+   ✓ site document lease across OS processes > preserves restored competitor data through a stale write started while site.json is detached  1808ms
+ ✓ src/lib/builder/ai-generator/__tests__/responsive-rules.test.ts (13 tests | 1 skipped) 13ms
+ ✓ src/lib/ai-intake/__tests__/origin.test.ts (9 tests) 25ms
+ ✓ src/app/[locale]/insights/__tests__/ja-redirects.test.ts (8 tests) 25ms
+ ✓ src/components/__tests__/columns-filter-recovery.test.tsx (17 tests) 27ms
+ ✓ src/lib/builder/canvas/__tests__/legal-responsive.test.ts (7 tests) 21ms
+ ✓ src/lib/builder/commerce/__tests__/public-demo-seed-status.test.ts (4 tests) 88ms
+ ✓ src/lib/__tests__/columns-zh-content.test.ts (5 tests) 21ms
+stderr | src/lib/builder/site/__tests__/published-decorative-video.test.ts > exact stock ZH decorative hero alternatives > renders all three actual stock images as decorative through the public page, retaining the original document
+Image with src "/_next/image?url=%2Fimages%2Fteam%2Ftseng-junwei%2Epng&w=640&q=75" is using a query string which is not configured in images.localPatterns. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-localpatterns
+
+ ✓ src/lib/builder/canvas/__tests__/legacy-columns-scaffold.test.ts (20 tests) 14ms
+ ✓ src/lib/consultation/__tests__/attorney-knowledge.test.ts (1 test) 39ms
+ ✓ src/components/__tests__/consultation-email-cta.test.tsx (10 tests) 25ms
+ ✓ src/components/__tests__/column-markdown-spacers.test.tsx (3 tests) 12ms
+ ✓ src/lib/__tests__/columns-en-traffic-003.test.ts (33 tests) 22ms
+ ✓ src/components/__tests__/public-module-landmarks.test.tsx (12 tests) 31ms
+ ✓ src/lib/builder/__tests__/cms.test.ts (2 tests) 23ms
+ ✓ src/lib/builder/commerce/__tests__/shipping-engine.test.ts (1 test) 31ms
+ ✓ src/lib/builder/site/__tests__/published-decorative-video.test.ts (53 tests) 408ms
+ ✓ src/lib/builder/canvas/__tests__/home-zh-hant-parity.test.ts (26 tests) 27ms
+ ✓ src/lib/builder/security/__tests__/resolve-permission.test.ts (6 tests) 111ms
+ ✓ src/lib/email/__tests__/international-inquiry-email.test.ts (5 tests) 19ms
+ ✓ src/components/__tests__/column-table-accessibility.test.tsx (6 tests) 19ms
+ ✓ src/lib/builder/seo/__tests__/record-jsonld.test.ts (15 tests) 19ms
+ ✓ src/lib/builder/sections/__tests__/normalize.test.ts (18 tests) 23ms
+ ✓ src/components/__tests__/ja-desktop-header.test.tsx (6 tests) 14ms
+ ✓ src/lib/builder/commerce/__tests__/tax-engine.test.ts (1 test) 27ms
+ ✓ src/app/llms.txt/__tests__/route.test.ts (9 tests) 19ms
+ ✓ src/lib/builder/search/__tests__/augment-static-docs.test.ts (6 tests) 14ms
+ ✓ src/components/__tests__/home-case-results-factual-copy.test.tsx (16 tests) 11ms
+ ✓ src/lib/builder/bookings/__tests__/types.test.ts (15 tests) 20ms
+ ✓ src/components/__tests__/footer-contact.test.tsx (12 tests) 16ms
+ ✓ src/app/__tests__/robots.test.ts (2 tests) 49ms
+ ✓ src/lib/builder/canvas/__tests__/decompose-about.test.ts (4 tests) 17ms
+ ✓ src/components/__tests__/header-consultation-contact-links.test.tsx (11 tests) 18ms
+ ✓ src/app/[locale]/search/__tests__/query-hardening.test.tsx (11 tests) 18ms
+ ✓ src/app/[locale]/(legacy)/__tests__/contact-ja.test.tsx (9 tests) 17ms
+ ✓ src/lib/__tests__/seo-faq-jsonld.test.ts (9 tests) 18ms
+ ✓ src/lib/builder/ai-generator/__tests__/canvas-import.test.ts (6 tests) 19ms
+ ✓ src/app/[locale]/search/__tests__/ja-page.test.tsx (8 tests) 17ms
+ ✓ src/components/__tests__/ja-footer.test.tsx (9 tests) 18ms
+ ✓ src/lib/__tests__/columns-ja-labor-009.test.ts (5 tests) 17ms
+ ✓ src/lib/builder/components/__tests__/member-account-widgets-localization.test.tsx (3 tests) 17ms
+ ✓ src/lib/builder/components/__tests__/data-widgets-localization.test.tsx (5 tests) 15ms
+ ✓ src/components/__tests__/ja-videos-components.test.tsx (7 tests) 14ms
+ ✓ src/lib/builder/storage/__tests__/blob-cas.test.ts (25 tests) 11ms
+ ✓ src/components/__tests__/home-stats-ssr.test.tsx (4 tests) 16ms
+ ✓ src/lib/builder/dev/__tests__/functions-model.test.ts (6 tests) 33ms
+ ✓ src/app/[locale]/(legacy)/__tests__/international-team.test.tsx (4 tests) 16ms
+ ✓ src/lib/builder/components/__tests__/product-gallery-localization.test.tsx (3 tests) 14ms
+ ✓ src/lib/builder/components/__tests__/event-portfolio-widget-localization.test.tsx (4 tests) 15ms
+ ✓ src/lib/builder/canvas/__tests__/decompose-services.test.ts (7 tests) 14ms
+ ✓ src/components/__tests__/ja-mobile-nav-drawer.test.tsx (6 tests) 12ms
+ ✓ src/components/__tests__/home-sections-remediation.test.tsx (4 tests) 12ms
+ ✓ src/lib/builder/audit/__tests__/store.test.ts (3 tests) 42ms
+ ✓ src/lib/ai-intake/__tests__/sensitive.test.ts (15 tests) 13ms
+ ✓ src/lib/__tests__/columns-ja-traffic-003.test.ts (33 tests) 16ms
+ ✓ src/lib/builder/templates/__tests__/qa-score.test.ts (4 tests) 15ms
+ ✓ src/lib/__tests__/international-guidance-answers.test.ts (8 tests) 14ms
+ ✓ src/__tests__/instrumentation-client.test.ts (1 test) 17ms
+ ✓ src/lib/builder/templates/__tests__/registry.test.ts (529 tests) 165ms
+ ✓ src/app/[locale]/korean-lawyer-in-taiwan/__tests__/content.test.ts (7 tests) 5ms
+ ✓ src/lib/builder/dev/__tests__/logs-store.test.ts (6 tests) 66ms
+ ✓ src/app/[locale]/search/__tests__/initial-state.test.tsx (4 tests) 14ms
+ ✓ src/lib/builder/bookings/__tests__/email-templates.test.ts (3 tests) 13ms
+ ✓ src/lib/__tests__/columns-en-investment-013.test.ts (11 tests) 12ms
+ ✓ src/lib/__tests__/columns-ja-investment-013.test.ts (9 tests) 6ms
+ ✓ src/components/__tests__/locale-flag-switcher.test.tsx (9 tests) 11ms
+ ✓ src/components/__tests__/insights-archive-image-fallback.test.tsx (8 tests) 9ms
+ ✓ src/lib/builder/migrations/__tests__/runner.test.ts (3 tests) 9ms
+ ✓ src/lib/builder/__tests__/cms-record-trash.test.ts (2 tests) 10ms
+ ✓ src/lib/builder/seo/__tests__/seo-model.test.ts (26 tests) 13ms
+ ✓ src/app/[locale]/ai-intake/__tests__/question-scope.test.ts (4 tests) 12ms
+ ✓ src/app/[locale]/(legacy)/__tests__/services-ja.test.tsx (6 tests) 10ms
+ ✓ src/lib/builder/canvas/__tests__/store-add-nodes.test.ts (2 tests) 3ms
+ ✓ src/lib/builder/canvas/__tests__/decompose-contact.test.ts (4 tests) 17ms
+ ✓ src/lib/builder/bookings/__tests__/analytics.test.ts (2 tests) 9ms
+ ✓ src/lib/builder/__tests__/cms-editable-custom-dynamic-item-redirect.test.ts (1 test) 9ms
+ ✓ src/lib/__tests__/columns-en-investment-005.test.ts (11 tests) 7ms
+ ✓ src/lib/ai-intake/__tests__/schemas.test.ts (8 tests) 10ms
+ ✓ src/lib/builder/__tests__/dataset-field-binding.test.ts (11 tests) 9ms
+ ✓ src/lib/builder/commerce/__tests__/multi-currency.test.ts (20 tests | 3 skipped) 11ms
+ ✓ src/lib/builder/canvas/__tests__/decompose-attorney-grid.test.ts (7 tests) 14ms
+ ✓ src/lib/builder/publish-gate/__tests__/checks.test.ts (6 tests) 17ms
+ ✓ src/components/__tests__/home-attorney-factual-copy.test.tsx (14 tests) 10ms
+ ✓ src/lib/__tests__/columns-zh-traffic-003.test.ts (30 tests) 11ms
+ ✓ src/lib/builder/search/__tests__/source-collector.test.ts (4 tests) 11ms
+ ✓ src/lib/builder/bookings/__tests__/analytics-funnel.test.ts (14 tests) 11ms
+ ✓ tests/patch-zh-hero-image-2026-07-22.test.ts (3 tests) 13ms
+ ❯ src/components/__tests__/ja-column-locale-integrity.test.tsx (7 tests | 1 failed) 23ms
+   ✓ Japanese column locale integrity > renders the Japanese attorney profile, public labels, and internal routes 5ms
+   ✓ Japanese column locale integrity > renders Japanese team data and attorney profile route on the home attorney split 1ms
+   ✓ Japanese column locale integrity > links the Japanese reviewed-by byline to the Japanese attorney profile 3ms
+   ✓ Japanese column locale integrity > emits Japanese Article, FAQ, and CollectionPage structured data 1ms
+   × Japanese column locale integrity > keeps public locale calls direct while preserving builder-only locale boundaries 13ms
+     → expected 'import type { CSSProperties } from \'…' to contain 'const faqJsonLd = showFaq ? buildFaqJ…'
+   ✓ Japanese column locale integrity > contains the exact public-safe Japanese guide labels and routes 0ms
+   ✓ Japanese column locale integrity > keeps the authority-card copy inside its desktop grid track 1ms
+ ✓ src/lib/builder/canvas/__tests__/decomposed-consultation-cta.test.ts (6 tests) 6ms
+ ✓ src/lib/builder/bookings/__tests__/dashboard-report.test.ts (2 tests) 9ms
+ ✓ src/lib/builder/__tests__/payment-analytics.test.ts (2 tests) 10ms
+ ✓ src/lib/builder/security/__tests__/rate-limit.test.ts (25 tests) 10ms
+ ✓ src/lib/__tests__/columns-ja-investment-004.test.ts (14 tests) 9ms
+ ✓ src/components/__tests__/verified-contact-channels.test.tsx (7 tests) 8ms
+ ✓ src/lib/builder/bookings/__tests__/notifications.test.ts (9 tests) 7ms
+ ✓ src/lib/__tests__/public-guidance.test.ts (82 tests) 11ms
+ ✓ src/lib/builder/ai-generator/__tests__/image-binary-validation.test.ts (56 tests) 11ms
+ ✓ src/lib/builder/canvas/__tests__/decompose-pricing-responsive.test.ts (6 tests) 10ms
+ ✓ src/data/__tests__/site-remediation-content.test.ts (23 tests) 11ms
+ ✓ src/app/[locale]/__tests__/public-module-ja-unavailable.test.tsx (10 tests) 9ms
+ ✓ src/lib/builder/seo/__tests__/overview-copy.test.ts (3 tests) 9ms
+ ✓ src/lib/__tests__/columns-ja-family-016.test.ts (17 tests) 10ms
+ ✓ src/components/__tests__/home-media-performance.test.tsx (10 tests) 9ms
+ ✓ src/lib/builder/__tests__/cms-collection-datasets.test.ts (10 tests) 8ms
+ ✓ src/components/__tests__/office-map-tabs-ja.test.tsx (9 tests) 9ms
+ ✓ src/app/[locale]/(legacy)/__tests__/lawyers-ja.test.tsx (6 tests) 9ms
+ ✓ src/components/builder/__tests__/AdminNavRail.test.tsx (23 tests | 1 skipped) 9ms
+ ✓ src/app/[locale]/(legacy)/__tests__/about-ja.test.tsx (6 tests) 10ms
+ ✓ src/app/[locale]/(legacy)/__tests__/reviews-ja.test.tsx (9 tests) 11ms
+ ✓ src/lib/builder/collab/__tests__/comments-threading.test.ts (14 tests) 8ms
+ ✓ src/components/__tests__/home-case-results-editorial.test.tsx (9 tests) 8ms
+ ✓ src/lib/builder/canvas/__tests__/pricing-cta-layout.test.ts (5 tests) 10ms
+ ✓ src/lib/ai-intake/__tests__/copy.test.ts (3 tests) 8ms
+ ✓ src/lib/builder/components/__tests__/marketing-widgets-localization.test.tsx (11 tests) 9ms
+ ✓ src/components/__tests__/heritage-modern-interlude.test.tsx (9 tests) 9ms
+ ✓ src/lib/builder/apps/__tests__/installed.test.ts (18 tests) 9ms
+ ✓ src/app/[locale]/ai-intake/__tests__/page.test.tsx (5 tests) 9ms
+ ✓ src/components/__tests__/hero-title-surface-preservation.test.tsx (3 tests) 7ms
+ ✓ src/lib/builder/bookings/__tests__/refund.test.ts (10 tests) 6ms
+ ✓ src/lib/builder/blog/__tests__/admin-model.test.ts (3 tests) 8ms
+ ✓ src/lib/builder/__tests__/cms-record-query.test.ts (4 tests) 9ms
+ ✓ src/components/__tests__/review-board-public-states.test.tsx (16 tests) 9ms
+ ✓ src/lib/builder/seo/__tests__/assistant-task-copy.test.ts (3 tests) 9ms
+ ✓ src/components/__tests__/site-remediation-a11y.test.tsx (8 tests) 8ms
+ ✓ src/lib/builder/publish-gate/__tests__/consultation-channel-checks.test.ts (19 tests) 9ms
+ ✓ src/app/[locale]/(legacy)/__tests__/pricing-ja.test.tsx (6 tests) 9ms
+ ✓ src/lib/builder/components/__tests__/container-gallery-inspector-localization.test.tsx (5 tests) 8ms
+ ✓ src/lib/builder/publish-gate/translation-release-approval-store.test.ts (1 test) 20ms
+ ✓ src/lib/builder/components/__tests__/utility-advanced-widgets-localization.test.tsx (7 tests) 7ms
+ ✓ src/lib/builder/bookings/__tests__/slot-lock.test.ts (6 tests) 6ms
+ ✓ src/components/__tests__/legal-page-reading-layout.test.tsx (4 tests) 8ms
+ ✓ src/lib/builder/components/__tests__/location-widgets-localization.test.tsx (5 tests) 8ms
+ ✓ src/lib/builder/bookings/__tests__/customer-portal.test.ts (2 tests) 8ms
+ ✓ src/app/[locale]/accessibility/__tests__/ja-page.test.tsx (6 tests) 7ms
+ ✓ src/components/__tests__/reveal-lifecycle.test.ts (14 tests) 8ms
+ ✓ src/lib/builder/security/__tests__/guard.test.ts (13 tests) 7ms
+ ✓ src/lib/builder/publish-gate/translation-release-approval-report.test.ts (2 tests) 8ms
+ ✓ src/lib/builder/marketing/__tests__/campaign-analytics.test.ts (1 test) 7ms
+ ✓ src/lib/builder/ai-generator/__tests__/content-generator.test.ts (14 tests) 8ms
+ ✓ src/lib/builder/components/__tests__/domain-card-widgets-localization.test.tsx (6 tests) 6ms
+ ✓ src/lib/builder/canvas/__tests__/store-transient.test.ts (29 tests) 9ms
+ ✓ src/components/__tests__/public-module-locale-switcher.test.tsx (11 tests) 8ms
+ ✓ src/lib/__tests__/columns-zh-investment-017.test.ts (12 tests) 8ms
+ ✓ src/data/__tests__/guidance-office-facts-sync.test.ts (13 tests) 3ms
+ ✓ src/lib/builder/components/__tests__/social-widgets-localization.test.tsx (10 tests) 7ms
+ ✓ src/app/[locale]/(legacy)/__tests__/lawyers-person-identity.test.tsx (4 tests) 8ms
+ ✓ src/lib/builder/components/__tests__/interactive-widgets-localization.test.tsx (6 tests) 7ms
+ ✓ src/lib/builder/components/__tests__/heading-inspector-localization.test.tsx (3 tests) 8ms
+ ✓ src/lib/ai-intake/mcp/__tests__/origin.test.ts (4 tests) 5ms
+ ✓ src/lib/builder/components/__tests__/navigation-decorative-localization.test.tsx (8 tests) 6ms
+ ✓ src/components/__tests__/home-official-portrait.test.tsx (6 tests) 7ms
+ ✓ src/lib/builder/canvas/__tests__/responsive-schema-lock.test.ts (4 tests) 6ms
+ ✓ src/lib/ai-intake/__tests__/submit-rate-limit.test.ts (7 tests) 7ms
+ ✓ src/lib/builder/components/__tests__/media-widgets-localization.test.tsx (8 tests) 6ms
+ ✓ src/lib/builder/security/__tests__/csrf.test.ts (15 tests) 6ms
+ ✓ src/lib/builder/__tests__/dynamic-record-redirect-lifecycle.test.ts (18 tests) 4ms
+ ✓ src/lib/ai-intake/__tests__/preview.test.ts (2 tests) 5ms
+ ✓ src/app/[locale]/(legacy)/__tests__/privacy-ja.test.tsx (7 tests) 6ms
+ ✓ src/data/__tests__/column-003-public-reference-sync.test.ts (2 tests) 3ms
+ ✓ src/data/__tests__/guidance-country-mentions.test.ts (19 tests) 221ms
+ ✓ src/lib/metrics/__tests__/classify-referrer.test.ts (29 tests) 3ms
+ ✓ src/lib/builder/components/__tests__/layout-navigation-widgets-localization.test.tsx (5 tests) 5ms
+ ✓ src/lib/builder/components/__tests__/visual-widgets-localization.test.tsx (4 tests) 6ms
+ ✓ src/lib/builder/__tests__/redirect-match.test.ts (5 tests) 2ms
+ ✓ src/lib/__tests__/columns-zh-labor-related-tails.test.ts (4 tests) 2ms
+ ✓ src/lib/builder/marketing/__tests__/dispatcher.test.ts (17 tests) 6ms
+ ✓ src/lib/builder/ai-generator/__tests__/orchestrator.test.ts (9 tests) 5ms
+ ✓ src/lib/__tests__/columns-zh-labor-014.test.ts (19 tests) 6ms
+ ✓ src/lib/builder/__tests__/redirects-concurrency.test.ts (5 tests) 4ms
+ ✓ src/app/[locale]/portfolio/__tests__/public-image-rendering.test.tsx (2 tests) 8ms
+ ✓ src/app/[locale]/(legacy)/__tests__/disclaimer-ja.test.tsx (7 tests) 6ms
+ ✓ src/components/__tests__/scroll-highlight-exact-text.test.tsx (5 tests) 5ms
+ ✓ src/lib/builder/components/__tests__/conversion-widgets-localization.test.tsx (6 tests) 6ms
+ ✓ src/lib/builder/canvas/__tests__/canonical-builder-attorney-identity.test.ts (2 tests) 2ms
+ ✓ src/lib/builder/security/__tests__/page-permission.test.ts (5 tests) 6ms
+ ✓ src/components/faq/__tests__/faq-public-explorer-ja.test.tsx (2 tests) 5ms
+ ✓ src/lib/builder/audit/__tests__/types.test.ts (17 tests) 5ms
+ ✓ src/lib/builder/columns/__tests__/auth.test.ts (5 tests) 6ms
+ ✓ src/lib/ai-intake/mcp/__tests__/containment.test.ts (4 tests) 5ms
+ ✓ src/lib/builder/bookings/__tests__/zoom-client.test.ts (9 tests) 5ms
+ ✓ src/lib/metrics/__tests__/visit-schema.test.ts (35 tests) 5ms
+ ✓ src/lib/builder/errors/__tests__/capture.test.ts (3 tests) 5ms
+ ✓ src/lib/builder/storage/__tests__/versioned-json-store.test.ts (13 tests) 4ms
+ ✓ src/lib/builder/components/__tests__/booking-widget-localization.test.tsx (4 tests) 5ms
+ ✓ src/lib/ai-intake/__tests__/token.test.ts (3 tests) 4ms
+ ✓ src/lib/consultation/admin/__tests__/auth.test.ts (4 tests) 4ms
+ ✓ src/lib/builder/components/__tests__/notification-bar-localization.test.tsx (5 tests) 5ms
+ ✓ src/lib/builder/canvas/__tests__/decompose-columns-responsive.test.ts (3 tests) 3ms
+ ✓ src/lib/__tests__/columns-zh-litigation-010.test.ts (12 tests) 4ms
+ ✓ src/data/__tests__/guidance-disclosure-parity.test.ts (4 tests) 6ms
+ ✓ src/lib/builder/canvas/__tests__/media-widgets.test.ts (1 test) 5ms
+ ✓ src/app/[locale]/__tests__/not-found-localization.test.tsx (12 tests) 5ms
+ ✓ src/app/api/builder/sites/[siteId]/dynamic-templates/[templateId]/publish/__tests__/route.test.ts (4 tests) 201ms
+ ✓ src/app/api/builder/ai-generator/versions/__tests__/route.test.ts (10 tests) 71ms
+ ✓ src/app/api/ai/mcp/__tests__/route.test.ts (18 tests) 101ms
+ ✓ src/lib/builder/seo/__tests__/live-route-defaults.test.ts (11 tests) 8ms
+ ✓ src/app/api/builder/ai-generator/image/__tests__/route.test.ts (46 tests) 133ms
+ ✓ src/lib/builder/workspace/__tests__/workspace-store.test.ts (9 tests) 237ms
+ ✓ src/app/api/builder/reviews/__tests__/route.test.ts (4 tests) 123ms
+ ✓ tests/builder-editor/wb-r07/support/__tests__/support-policy.test.ts (5 tests) 140ms
+ ✓ src/app/[locale]/services/[slug]/__tests__/ja-investment-page.test.tsx (10 tests) 144ms
+ ✓ src/app/api/builder/ai-generator/page-spec/__tests__/route.test.ts (11 tests) 78ms
+ ✓ src/app/api/builder/bookings/resources/__tests__/route.test.ts (3 tests) 52ms
+ ✓ src/app/api/marketing/subscribe/__tests__/route.test.ts (10 tests) 67ms
+ ✓ src/app/api/builder/site/lightboxes/__tests__/route.test.ts (6 tests) 76ms
+ ✓ src/app/api/builder/bookings/staff/__tests__/route.test.ts (3 tests) 47ms
+ ✓ src/components/builder/columns/__tests__/column-editor-ops.test.ts (15 tests) 106ms
+ ✓ src/lib/builder/workspace/__tests__/shared-assets.test.ts (5 tests) 70ms
+ ✓ src/app/api/builder/ai-generator/apply/__tests__/route.test.ts (8 tests) 95ms
+ ✓ src/app/api/builder/ai-generator/image/edit/__tests__/route.test.ts (59 tests) 92ms
+ ✓ src/app/api/builder/bookings/staff/[id]/__tests__/route.test.ts (5 tests) 55ms
+ ✓ src/app/api/builder/ai-generator/text/__tests__/route.test.ts (25 tests) 58ms
+ ✓ src/components/builder/canvas/hooks/__tests__/useSandboxSiteState.test.ts (63 tests) 66ms
+ ✓ src/app/api/builder/bookings/package-credits/[id]/__tests__/route.test.ts (5 tests) 51ms
+ ✓ src/app/api/builder/commerce/payment-webhooks/[provider]/__tests__/route.test.ts (5 tests) 50ms
+stderr | src/app/api/builder/bookings/waitlist/[id]/promote/__tests__/route.test.ts > /api/builder/bookings/waitlist/[id]/promote > keeps a promoted waitlist booking successful when confirmation rendering throws
+[builder/bookings/waitlist/promote] confirmation delivery failed
+
+ ✓ src/app/api/builder/bookings/waitlist/[id]/promote/__tests__/route.test.ts (13 tests) 51ms
+ ✓ src/app/api/builder/marketing/campaigns/[campaignId]/__tests__/route.test.ts (11 tests) 52ms
+ ✓ src/app/api/billing-documents/stripe-webhook/__tests__/route.test.ts (4 tests) 60ms
+ ✓ src/app/[locale]/services/[slug]/__tests__/en-international-copy.test.tsx (2 tests) 78ms
+ ✓ src/app/api/builder/bookings/services/__tests__/route.test.ts (3 tests) 67ms
+ ✓ src/app/api/builder/bookings/cancellation-policies/__tests__/route.test.ts (3 tests) 46ms
+stderr | src/lib/builder/components/composite/__tests__/zh-hant-home-published-headings.test.tsx > published home responsive headings > keeps an h1 in each CSS-swapped hero through the public renderer
+Image with src "/_next/image?url=%2Fimages%2Fteam%2Fwei-tseng-official%2Epng&w=640&q=75" is using a query string which is not configured in images.localPatterns. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-localpatterns
+
+ ✓ src/lib/builder/components/composite/__tests__/zh-hant-home-published-headings.test.tsx (7 tests) 94ms
+ ✓ src/app/api/builder/marketing/campaigns/__tests__/route.test.ts (8 tests) 52ms
+ ✓ src/app/api/builder/bookings/package-credits/__tests__/route.test.ts (4 tests) 59ms
+stderr | src/lib/builder/components/composite/__tests__/published-home-height-contract.test.tsx > published decomposed home height contract > keeps serialized zh-hant public main min-height at or under 7124 without dropping insights
+Image with src "/_next/image?url=%2Fimages%2Fteam%2Fwei-tseng-official%2Epng&w=640&q=75" is using a query string which is not configured in images.localPatterns. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-localpatterns
+
+ ✓ src/lib/builder/components/composite/__tests__/published-home-height-contract.test.tsx (2 tests) 100ms
+ ✓ src/app/api/builder/bookings/staff/[id]/availability/__tests__/route.test.ts (3 tests) 61ms
+ ✓ src/app/api/builder/ai-generator/code/__tests__/route.test.ts (23 tests) 76ms
+ ✓ src/app/api/builder/ai-generator/responsive/__tests__/route.test.ts (2 tests) 36ms
+ ✓ src/app/api/builder/bookings/waitlist/[id]/__tests__/route.test.ts (4 tests) 50ms
+ ✓ src/lib/builder/site/__tests__/scheduled-publish.test.ts (3 tests) 74ms
+ ✓ src/app/api/builder/bookings/cancellation-policies/[id]/__tests__/route.test.ts (5 tests) 48ms
+ ✓ src/components/builder/translations/__tests__/translation-batch-stream.test.ts (2 tests) 55ms
+ ✓ src/app/api/builder/bookings/calendar/__tests__/route.test.ts (1 test) 50ms
+ ✓ src/app/api/builder/bookings/[id]/documents/__tests__/route.test.ts (8 tests) 40ms
+ ✓ src/app/api/builder/marketing/campaigns/[campaignId]/send/__tests__/route.test.ts (9 tests) 35ms
+ ✓ src/app/api/builder/bookings/[id]/__tests__/route.test.ts (8 tests) 54ms
+stderr | src/app/api/builder/bookings/admin-create/__tests__/route.test.ts > /api/builder/bookings/admin-create > keeps an admin booking successful when confirmation rendering throws
+[builder/bookings/admin-create] confirmation delivery failed
+
+ ✓ src/app/api/builder/bookings/admin-create/__tests__/route.test.ts (9 tests) 54ms
+ ✓ src/app/api/builder/bookings/services/[id]/__tests__/route.test.ts (7 tests) 45ms
+ ✓ src/app/api/builder/ai-generator/style-score/__tests__/route.test.ts (2 tests) 60ms
+ ✓ src/app/api/builder/marketing/deliverability/__tests__/route.test.ts (4 tests) 41ms
+ ✓ src/app/api/builder/bookings/packages/[id]/__tests__/route.test.ts (5 tests) 61ms
+ ✓ src/app/api/builder/bookings/packages/__tests__/route.test.ts (3 tests) 50ms
+ ✓ src/app/api/builder/site/pages/decompose/route.test.ts (10 tests) 64ms
+ ✓ src/app/api/builder/ai-generator/__tests__/route.test.ts (6 tests) 43ms
+ ✓ src/app/api/metrics/collect/__tests__/route.test.ts (11 tests) 55ms
+ ✓ src/app/api/ai/openapi.json/__tests__/route.test.ts (2 tests) 17ms
+ ✓ src/app/api/consultation/submit/__tests__/route.test.ts (6 tests) 41ms
+ ✓ src/app/api/live-chat/send/__tests__/route.test.ts (6 tests) 41ms
+ ✓ src/app/api/builder/translations/providers/__tests__/route.test.ts (3 tests) 56ms
+ ✓ src/app/api/ai/intake/submit/__tests__/route.test.ts (6 tests) 69ms
+ ✓ src/app/api/builder/marketing/campaigns/[campaignId]/stats/__tests__/route.test.ts (5 tests) 31ms
+ ✓ src/app/api/builder/bookings/resources/[id]/__tests__/route.test.ts (5 tests) 52ms
+ ✓ src/app/api/builder/ai-generator/section/__tests__/route.test.ts (11 tests) 45ms
+ ✓ src/app/api/builder/bookings/analytics/__tests__/route.test.ts (6 tests) 29ms
+ ✓ src/app/api/builder/bookings/[id]/manual-payments/__tests__/route.test.ts (6 tests) 45ms
+ ✓ src/app/api/ai/intake/requirements/__tests__/route.test.ts (5 tests) 48ms
+ ✓ src/app/api/builder/site/lightboxes/[id]/__tests__/route.test.ts (6 tests) 41ms
+ ✓ src/app/api/forms/stripe-checkout/__tests__/route.test.ts (10 tests) 34ms
+ ✓ src/app/api/builder/publish/atomic/__tests__/route.test.ts (4 tests) 38ms
+ ✓ src/app/api/builder/site/header/draft/__tests__/route.test.ts (5 tests) 36ms
+ ✓ src/app/api/builder/site/navigation/__tests__/route.test.ts (5 tests) 54ms
+ ✓ src/app/api/cron/translation-provider-smoke/__tests__/route.test.ts (3 tests) 28ms
+ ✓ src/lib/builder/components/blogPostCard/__tests__/blog-post-card-copy.test.tsx (17 tests) 44ms
+ ✓ src/lib/builder/ops/__tests__/backups-store.test.ts (30 tests) 19897ms
+   ✓ ops backups store > copies a JSON file under runtime-data into the backups dir  481ms
+   ✓ ops backups store > restores an ok backup back to the source JSON path  528ms
+   ✓ ops backups store > refuses to restore when the backup payload checksum no longer matches  428ms
+   ✓ ops backups store > fails closed when an ok backup record has no checksum  494ms
+   ✓ ops backups store > binds backup validation to the same regular-file inode that is read  492ms
+   ✓ ops backups store > rejects an invalid canonical site backup ('duplicate page id') without changing a byte  467ms
+   ✓ ops backups store > rejects an invalid canonical site backup ('missing authored home page') without changing a byte  430ms
+   ✓ ops backups store > rejects an invalid canonical site backup ('unsafe page id') without changing a byte  500ms
+   ✓ ops backups store > rejects a canonical site backup whose embedded siteId does not match its directory  390ms
+   ✓ ops backups store > restores a valid canonical site atomically and reports the checksum of restored bytes  504ms
+   ✓ ops backups store > rolls back exact original bytes after a post-rename-read failure  575ms
+   ✓ ops backups store > rolls back exact original bytes after a post-rename-invariant failure  634ms
+   ✓ ops backups store > rolls back exact original bytes after a post-rename-checksum failure  647ms
+   ✓ ops backups store > reports a distinct fail-closed result if post-rename rollback itself fails  481ms
+   ✓ ops backups store > preserves a replacement-inode competitor at the final restore boundary  444ms
+   ✓ ops backups store > preserves same-inode competitor bytes at the final restore boundary  399ms
+   ✓ ops backups store > preserves a replacement-inode competitor that appears during rollback  486ms
+   ✓ ops backups store > preserves same-inode competitor bytes that appear during rollback  445ms
+   ✓ ops backups store > serializes index additions and deletions across OS processes without losing records  7838ms
+   ✓ ops backups store > recovers the previous index and removes lease residue after a writer is killed mid-replace  857ms
+   ✓ ops backups store > allows an internal fixture page in a custom isolated site restore  374ms
+   ✓ ops backups store > rejects a symlink source without overwriting its target  328ms
+ ✓ src/app/api/builder/site/pages/[pageId]/publish/route.test.ts (8 tests) 52ms
+ ✓ src/app/api/consultation/event/__tests__/route.test.ts (3 tests) 24ms
+ ✓ src/components/builder/canvas/__tests__/built-in-section-template-drop-schema.test.ts (1 test) 50ms
+ ✓ src/app/api/builder/live-chat/[conversationId]/send/__tests__/route.test.ts (6 tests) 52ms
+ ✓ src/app/api/builder/site/section-library/__tests__/route.test.ts (7 tests) 66ms
+ ✓ src/app/api/builder/site/footer/draft/__tests__/route.test.ts (5 tests) 32ms
+ ✓ src/app/api/live-chat/start/__tests__/route.test.ts (5 tests) 56ms
+ ✓ src/app/api/builder/bookings/calendar-sync/oauth-callback/__tests__/route.test.ts (8 tests) 23ms
+ ✓ src/app/api/forms/uploads/__tests__/route.test.ts (8 tests) 52ms
+ ✓ src/app/[locale]/services/[slug]/__tests__/ja-civil-page.test.tsx (3 tests) 47ms
+ ✓ src/app/api/builder/live-chat/[conversationId]/stream/__tests__/route.test.ts (3 tests) 59ms
+ ✓ src/app/api/consultation/chat/__tests__/route.test.ts (4 tests) 22ms
+ ✓ src/app/api/ai/intake/preview/__tests__/route.test.ts (2 tests) 33ms
+ ✓ src/app/api/builder/bookings/calendar-sync/connect/__tests__/route.test.ts (5 tests) 44ms
+ ✓ src/app/[locale]/services/[slug]/__tests__/ja-family-page.test.tsx (3 tests) 30ms
+ ✓ src/app/api/builder/bookings/email-templates/[type]/__tests__/route.test.ts (4 tests) 30ms
+ ✓ src/app/[locale]/services/[slug]/__tests__/ja-labor-page.test.tsx (3 tests) 33ms
+ ✓ src/app/api/cron/calendar-sync/__tests__/route.test.ts (10 tests) 20ms
+ ✓ src/app/api/consultation/data/delete/__tests__/route.test.ts (3 tests) 19ms
+ ✓ src/components/builder/canvas/__tests__/sandbox-editor-rail-smoothness.test.tsx (11 tests) 54ms
+ ✓ src/app/api/builder/site/settings/__tests__/route-site-routing.test.ts (2 tests) 9ms
+ ✓ src/lib/builder/canvas/__tests__/zh-hant-standalone-baseline.test.ts (17 tests) 30ms
+ ✓ src/app/api/builder/bookings/calendar-sync/sync-now/__tests__/route.test.ts (3 tests) 25ms
+ ✓ src/lib/builder/translations/providers/__tests__/smoke-history.test.ts (1 test) 20ms
+ ✓ src/app/api/builder/translations/providers/__tests__/route-smoke-history.test.ts (2 tests) 44ms
+ ✓ src/app/api/builder/bookings/calendar-sync/recurring-rrule/__tests__/route.test.ts (3 tests) 42ms
+ ✓ src/app/api/builder/site/translation-release-approvals/route.test.ts (9 tests) 17ms
+ ✓ src/app/api/builder/live-chat/[conversationId]/__tests__/route.test.ts (7 tests) 37ms
+ ✓ src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/__tests__/route.test.ts (3 tests) 34ms
+ ✓ src/app/api/consultation/feedback/__tests__/route.test.ts (3 tests) 26ms
+ ✓ src/app/api/consultation/knowledge/__tests__/route.test.ts (4 tests) 28ms
+ ✓ src/app/api/builder/site/lightboxes/[id]/draft/__tests__/route.test.ts (4 tests) 26ms
+ ✓ src/app/api/cron/metrics-rollup/__tests__/route.test.ts (7 tests) 18ms
+ ✓ src/app/[locale]/account/bookings/[bookingId]/documents/[documentId]/email/__tests__/route.test.ts (9 tests) 21ms
+ ✓ src/app/api/builder/bookings/notification-templates/__tests__/route.test.ts (4 tests) 24ms
+ ✓ src/components/builder/commerce/__tests__/public-commerce-images.test.tsx (2 tests) 17ms
+ ✓ src/components/builder/canvas/__tests__/ComponentLibraryPanelItem.test.tsx (8 tests) 22ms
+ ✓ src/app/api/marketing/track/__tests__/route.test.ts (7 tests) 29ms
+ ✓ src/components/builder/canvas/__tests__/canvas-selection-render-contract.test.ts (5 tests) 23ms
+ ✓ src/lib/builder/translations/providers/__tests__/scheduled-smoke.test.ts (1 test) 20ms
+ ✓ src/components/builder/marketing/__tests__/campaign-analytics-payload.test.ts (10 tests) 3ms
+ ✓ src/app/api/builder/crm/tracking/click/[token]/__tests__/route.test.ts (3 tests) 39ms
+ ✓ src/app/api/builder/bookings/notification-templates/[id]/__tests__/route.test.ts (4 tests) 25ms
+ ✓ src/components/builder/commerce/__tests__/OrderManagerClient.test.tsx (1 test) 19ms
+ ✓ src/app/api/marketing/cron/dispatch/__tests__/route.test.ts (3 tests) 23ms
+ ✓ src/app/api/builder/site/seo-bulk/__tests__/route.test.ts (4 tests) 16ms
+ ✓ src/app/api/builder/marketing/subscribers/import/__tests__/route.test.ts (5 tests) 14ms
+ ✓ src/app/api/forms/uploads/[locale]/[filename]/__tests__/route.test.ts (6 tests) 22ms
+ ✓ src/app/api/booking/sms-reminders/__tests__/route.test.ts (9 tests) 20ms
+ ✓ src/lib/builder/site/__tests__/legacy-contact-scaffold.test.tsx (2 tests) 35ms
+ ✓ src/app/api/marketing/unsubscribe/__tests__/route.test.ts (6 tests) 21ms
+ ✓ src/components/builder/canvas/__tests__/ComponentLibraryRestoreReview.test.tsx (2 tests) 23ms
+stderr | src/app/api/booking/book/__tests__/route.test.ts > /api/booking/book > keeps a persisted booking successful when confirmation rendering throws
+[booking/book] confirmation delivery failed
+
+ ✓ src/app/api/booking/book/__tests__/route.test.ts (39 tests) 20ms
+ ✓ src/app/api/builder/site/section-library/[sectionId]/__tests__/route.test.ts (8 tests) 31ms
+ ✓ src/app/api/builder/site/pages/[pageId]/seo-assistant/__tests__/route.test.ts (9 tests) 16ms
+ ✓ src/app/api/cron/app-hooks-retry/__tests__/route.test.ts (3 tests) 12ms
+ ✓ src/lib/builder/translations/__tests__/app-sources.test.ts (6 tests) 16ms
+ ✓ src/app/api/marketing/verify/__tests__/route.test.ts (6 tests) 21ms
+ ✓ src/lib/builder/components/form/__tests__/form-advanced-localization.test.tsx (6 tests) 16ms
+ ✓ src/components/builder/crm/__tests__/crm-admin-localization.test.tsx (5 tests) 15ms
+ ✓ src/components/builder/canvas/__tests__/draft-conflict-banner.test.tsx (1 test) 13ms
+ ✓ src/components/builder/canvas/__tests__/PublishModalCopy.test.ts (7 tests) 15ms
+ ✓ src/app/api/cron/scheduled-publish/__tests__/route.test.ts (3 tests) 11ms
+ ✓ src/app/api/live-chat/stream/__tests__/route.test.ts (4 tests) 14ms
+ ✓ src/lib/builder/site/__tests__/published-dynamic-list-runtime.test.ts (1 test) 18ms
+ ✓ src/components/builder/marketing/__tests__/CampaignEditorSidebar.test.tsx (1 test) 15ms
+ ✓ src/app/api/builder/blog/posts/__tests__/route.test.ts (6 tests) 15ms
+stderr | src/app/api/booking/payment-intent/__tests__/route.test.ts > /api/booking/payment-intent > returns localized invalid JSON errors
+[booking/payment-intent] POST JSON parse failed: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+
+ ✓ src/app/api/booking/payment-intent/__tests__/route.test.ts (26 tests) 14ms
+ ✓ src/app/api/builder/workspace/assets/__tests__/route.test.ts (8 tests) 11ms
+ ✓ src/app/api/builder/site/seo-overview/__tests__/route.test.ts (3 tests) 13ms
+ ✓ src/components/builder/canvas/__tests__/canvas-insights-render-contract.test.ts (2 tests) 14ms
+stderr | src/app/api/builder/experiments/[experimentId]/__tests__/route.test.ts > /api/builder/experiments/[experimentId] > returns localized invalid JSON errors for patch
+[builder/experiments/:id] PATCH JSON parse failed: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:4319:19)
+    at successSteps (node:internal/deps/undici/undici:6967:27)
+    at readAllBytes (node:internal/deps/undici/undici:5890:13)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+ ✓ src/app/api/builder/experiments/[experimentId]/__tests__/route.test.ts (7 tests) 11ms
+ ✓ src/app/api/builder/site/seo-settings/__tests__/route.test.ts (6 tests) 11ms
+stderr | src/app/api/builder/sites/[siteId]/pages/[pageKey]/datasets/__tests__/route.test.ts > /api/builder/sites/[siteId]/pages/[pageKey]/datasets > does not expose raw dataset read failures
+[builder-page-datasets:get] failed Error: dataset read secret leaked
+    at /Users/son7/Projects/tseng-law-sea-b2b-20260911/src/app/api/builder/sites/[siteId]/pages/[pageKey]/datasets/__tests__/route.test.ts:328:57
+    at file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+    at runSuite (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+
+ ✓ src/lib/builder/site/__tests__/published-insights-copy.test.tsx (2 tests) 22ms
+ ✓ src/app/api/builder/sites/[siteId]/pages/[pageKey]/datasets/__tests__/route.test.ts (10 tests) 11ms
+ ✓ src/components/builder/workspace/__tests__/AnalyticsPanel.test.tsx (1 test) 14ms
+ ✓ src/app/api/builder/site/settings/__tests__/route.test.ts (9 tests) 12ms
+ ✓ src/components/builder/canvas/__tests__/widget-preset-drop-schema.test.ts (2 tests) 19ms
+stderr | src/app/api/experiments/event/__tests__/route.test.ts > /api/experiments/event > returns localized invalid JSON errors
+[experiments/event] POST JSON parse failed: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:4319:19)
+    at successSteps (node:internal/deps/undici/undici:6967:27)
+    at readAllBytes (node:internal/deps/undici/undici:5890:13)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+ ✓ src/app/api/experiments/event/__tests__/route.test.ts (12 tests) 12ms
+ ✓ src/app/api/builder/sites/[siteId]/collections/[collectionId]/records/[recordId]/__tests__/route.test.ts (2 tests) 13ms
+ ✓ src/components/builder/ai-generator/__tests__/AiGeneratorWizard.provenance.test.ts (63 tests) 13ms
+ ✓ src/app/api/marketing/track/pixel/__tests__/route.test.ts (2 tests) 33ms
+ ✓ src/app/api/builder/collab/cursors/__tests__/route.test.ts (5 tests) 8ms
+ ✓ src/app/api/builder/notifications/__tests__/route.test.ts (25 tests) 11ms
+stderr | src/app/api/builder/columns/[slug]/__tests__/route.test.ts > /api/builder/columns/[slug] > returns localized stable-code JSON for malformed patch payloads
+[builder/columns/[slug]] PATCH JSON parse failed: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:4319:19)
+    at successSteps (node:internal/deps/undici/undici:6967:27)
+    at readAllBytes (node:internal/deps/undici/undici:5890:13)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+stderr | src/app/api/builder/columns/__tests__/route.test.ts > /api/builder/columns > returns localized stable-code JSON when the list load fails
+[builder/columns] GET failed: Error: raw column list failure
+    at /Users/son7/Projects/tseng-law-sea-b2b-20260911/src/app/api/builder/columns/__tests__/route.test.ts:100:43
+    at file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+    at runSuite (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+
+ ✓ src/app/api/builder/columns/[slug]/__tests__/route.test.ts (9 tests) 11ms
+stderr | src/app/api/builder/columns/__tests__/route.test.ts > /api/builder/columns > returns localized stable-code JSON for malformed create payloads
+[builder/columns] POST JSON parse failed: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:4319:19)
+    at successSteps (node:internal/deps/undici/undici:6967:27)
+    at readAllBytes (node:internal/deps/undici/undici:5890:13)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+stderr | src/app/api/builder/sites/[siteId]/pages/[pageKey]/__tests__/lifecycle-error-contract.test.ts > /api/builder/sites/[siteId]/pages/[pageKey] lifecycle error contracts > does not expose raw overview load failures
+[builder-page-overview] failed Error: overview storage secret leaked
+    at /Users/son7/Projects/tseng-law-sea-b2b-20260911/src/app/api/builder/sites/[siteId]/pages/[pageKey]/__tests__/lifecycle-error-contract.test.ts:206:65
+    at file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+    at runSuite (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+
+ ✓ src/app/api/builder/columns/__tests__/route.test.ts (5 tests) 10ms
+ ✓ src/app/api/builder/sites/[siteId]/pages/[pageKey]/__tests__/lifecycle-error-contract.test.ts (19 tests) 13ms
+ ✓ src/components/builder/canvas/__tests__/component-catalog-copy.test.ts (22 tests) 16ms
+ ✓ src/lib/builder/components/blogFeed/__tests__/blog-feed-localization.test.tsx (3 tests) 15ms
+ ✓ src/components/builder/canvas/__tests__/component-library-preview.test.ts (3 tests) 5ms
+ ✓ src/app/api/builder/commerce/checkout/__tests__/route.test.ts (7 tests) 12ms
+ ✓ src/app/api/builder/site/pages/[pageId]/route.test.ts (15 tests) 14ms
+ ✓ src/app/api/builder/crm/outbox/__tests__/route.test.ts (2 tests) 11ms
+stderr | src/app/api/builder/events/[eventId]/__tests__/route.test.ts > /api/builder/events/[eventId] > returns localized invalid JSON errors for patches
+[builder/events/:eventId] PATCH JSON parse failed: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:4319:19)
+    at successSteps (node:internal/deps/undici/undici:6967:27)
+    at readAllBytes (node:internal/deps/undici/undici:5890:13)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+ ✓ src/app/api/builder/events/[eventId]/__tests__/route.test.ts (10 tests) 10ms
+ ✓ src/components/builder/canvas/__tests__/component-library-review-diff.helpers.test.ts (2 tests) 5ms
+ ✓ src/components/builder/canvas/__tests__/legacy-zh-hero-buttons.test.tsx (4 tests) 9ms
+ ✓ src/app/api/cron/cms-dynamic-item-lifecycle-policies/__tests__/route.test.ts (2 tests) 28ms
+ ✓ src/app/api/builder/commerce/products/[productId]/__tests__/route.test.ts (14 tests) 11ms
+ ✓ src/app/[locale]/lawyers/[slug]/__tests__/ja-page.test.tsx (6 tests) 13ms
+ ✓ src/app/[locale]/guides/taiwan-company-setup/__tests__/table-accessibility.test.tsx (4 tests) 12ms
+ ✓ src/components/builder/canvas/__tests__/component-library-panel.helpers.test.ts (13 tests) 12ms
+stderr | src/app/api/builder/sites/[siteId]/pages/[pageKey]/datasets/seed/__tests__/route.test.ts > /api/builder/sites/[siteId]/pages/[pageKey]/datasets/seed > does not expose raw seed failures
+[builder-page-datasets:seed] failed Error: seed secret leaked
+    at /Users/son7/Projects/tseng-law-sea-b2b-20260911/src/app/api/builder/sites/[siteId]/pages/[pageKey]/datasets/seed/__tests__/route.test.ts:254:58
+    at file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+    at runSuite (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+
+ ✓ src/app/api/builder/sites/[siteId]/pages/[pageKey]/datasets/seed/__tests__/route.test.ts (7 tests) 9ms
+ ✓ src/lib/builder/components/composite/__tests__/composite-render-localization.test.tsx (10 tests) 15ms
+ ✓ src/app/api/builder/review-sessions/__tests__/route.test.ts (6 tests) 8ms
+ ✓ src/app/api/experiments/assign/__tests__/route.test.ts (12 tests) 14ms
+stderr | src/app/api/builder/events/__tests__/route.test.ts > /api/builder/events > returns localized invalid JSON errors
+[builder/events] POST JSON parse failed: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:4319:19)
+    at successSteps (node:internal/deps/undici/undici:6967:27)
+    at readAllBytes (node:internal/deps/undici/undici:5890:13)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+ ✓ src/app/api/builder/events/__tests__/route.test.ts (9 tests) 11ms
+ ✓ src/lib/builder/components/form/__tests__/form-inspector-localization.test.tsx (8 tests) 11ms
+ ✓ src/app/api/builder/site/pages/route.test.ts (17 tests) 11ms
+ ✓ src/app/api/booking/email-reminders/__tests__/route.test.ts (12 tests) 11ms
+stderr | src/app/api/builder/domains/__tests__/route.test.ts > /api/builder/domains > returns localized invalid JSON errors
+[builder/domains] POST JSON parse failed: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:4319:19)
+    at successSteps (node:internal/deps/undici/undici:6967:27)
+    at readAllBytes (node:internal/deps/undici/undici:5890:13)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+ ✓ src/app/api/members/login/__tests__/route.test.ts (11 tests) 11ms
+ ✓ src/app/api/builder/domains/__tests__/route.test.ts (7 tests) 10ms
+stderr | src/app/api/builder/webhooks/[id]/retry/__tests__/route.test.ts > /api/builder/webhooks/[id]/retry > returns localized invalid JSON errors
+[builder/webhooks/:id/retry] POST JSON parse failed: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:4319:19)
+    at successSteps (node:internal/deps/undici/undici:6967:27)
+    at readAllBytes (node:internal/deps/undici/undici:5890:13)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+ ✓ src/app/api/builder/webhooks/[id]/retry/__tests__/route.test.ts (6 tests) 8ms
+stderr | src/app/api/builder/webhooks/[id]/__tests__/route.test.ts > /api/builder/webhooks/[id] > returns localized invalid JSON errors for patch
+[builder/webhooks/:id] PATCH JSON parse failed: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:4319:19)
+    at successSteps (node:internal/deps/undici/undici:6967:27)
+    at readAllBytes (node:internal/deps/undici/undici:5890:13)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+stderr | src/app/api/builder/portfolio/__tests__/route.test.ts > /api/builder/portfolio > returns localized invalid JSON errors
+[builder/portfolio] POST JSON parse failed: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:4319:19)
+    at successSteps (node:internal/deps/undici/undici:6967:27)
+    at readAllBytes (node:internal/deps/undici/undici:5890:13)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+stderr | src/app/api/builder/webhooks/__tests__/route.test.ts > /api/builder/webhooks > returns localized invalid JSON errors
+[builder/webhooks] POST JSON parse failed: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:4319:19)
+    at successSteps (node:internal/deps/undici/undici:6967:27)
+    at readAllBytes (node:internal/deps/undici/undici:5890:13)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+ ✓ src/app/api/builder/portfolio/__tests__/route.test.ts (9 tests) 11ms
+ ✓ src/app/api/builder/webhooks/[id]/__tests__/route.test.ts (7 tests) 10ms
+ ✓ src/app/api/builder/webhooks/__tests__/route.test.ts (6 tests) 11ms
+ ✓ src/app/api/builder/commerce/orders/[orderId]/__tests__/route.test.ts (18 tests) 10ms
+ ✓ src/app/api/builder/site/publish-checks/route.test.ts (6 tests) 10ms
+ ✓ src/components/builder/canvas/__tests__/legacy-zh-home-page-context.test.tsx (3 tests) 14ms
+ ✓ src/app/api/builder/forms/submissions/__tests__/route.test.ts (4 tests) 6ms
+stderr | src/app/api/builder/experiments/__tests__/route.test.ts > /api/builder/experiments > returns localized invalid JSON errors
+[builder/experiments] POST JSON parse failed: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:4319:19)
+    at successSteps (node:internal/deps/undici/undici:6967:27)
+    at readAllBytes (node:internal/deps/undici/undici:5890:13)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+ ✓ src/app/api/builder/experiments/__tests__/route.test.ts (7 tests) 10ms
+ ✓ src/app/api/builder/services/[slug]/__tests__/route.test.ts (7 tests) 10ms
+ ✓ src/app/api/builder/home/__tests__/error-contract.test.ts (20 tests) 11ms
+ ✓ src/app/api/builder/site/pages/[pageId]/seo/__tests__/route.test.ts (8 tests) 10ms
+ ✓ src/app/api/forms/track/__tests__/route.test.ts (2 tests) 7ms
+ ✓ src/app/api/builder/apps/installations/[appId]/settings/__tests__/route.test.ts (4 tests) 6ms
+ ✓ src/app/api/builder/billing-documents/templates/__tests__/route.test.ts (3 tests) 7ms
+ ✓ src/app/api/builder/site/pages/[pageId]/revisions/route-site-routing.test.ts (7 tests) 10ms
+ ✓ src/lib/builder/translations/__tests__/rich-text-compact-colon-edit-store.test.ts (1 test) 3ms
+stderr | src/app/api/builder/portfolio/[projectId]/__tests__/route.test.ts > /api/builder/portfolio/[projectId] > returns localized invalid JSON errors for patches
+[builder/portfolio/:projectId] PATCH JSON parse failed: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:4319:19)
+    at successSteps (node:internal/deps/undici/undici:6967:27)
+    at readAllBytes (node:internal/deps/undici/undici:5890:13)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+stderr | src/app/api/builder/columns/[slug]/publish/__tests__/route.test.ts > /api/builder/columns/[slug]/publish > returns localized stable-code JSON when publish storage fails
+[columns] publish failed: Error: raw blob write failure
+    at /Users/son7/Projects/tseng-law-sea-b2b-20260911/src/app/api/builder/columns/[slug]/publish/__tests__/route.test.ts:111:52
+    at file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+    at runSuite (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+
+ ✓ src/app/api/builder/portfolio/[projectId]/__tests__/route.test.ts (10 tests) 10ms
+ ✓ src/app/api/builder/columns/[slug]/publish/__tests__/route.test.ts (5 tests) 10ms
+ ✓ src/app/api/builder/collab/comments/__tests__/route.test.ts (12 tests) 10ms
+ ✓ src/app/api/builder/apps/hooks/__tests__/route.test.ts (8 tests) 9ms
+ ✓ src/app/api/builder/billing-documents/bulk/__tests__/route.test.ts (6 tests) 9ms
+ ✓ src/app/api/builder/crm/automations/__tests__/route.test.ts (7 tests) 10ms
+stderr | src/app/api/builder/events/[eventId]/rsvp/__tests__/route.test.ts > /api/builder/events/[eventId]/rsvp > returns localized invalid JSON errors
+[builder/events/:eventId/rsvp] POST JSON parse failed: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:4319:19)
+    at successSteps (node:internal/deps/undici/undici:6967:27)
+    at readAllBytes (node:internal/deps/undici/undici:5890:13)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+ ✓ src/app/api/builder/events/[eventId]/rsvp/__tests__/route.test.ts (6 tests) 8ms
+ ✓ src/app/api/builder/site/pages/order/route.test.ts (6 tests) 12ms
+stderr | src/app/api/builder/sites/[siteId]/pages/[pageKey]/datasets/preview/__tests__/route.test.ts > /api/builder/sites/[siteId]/pages/[pageKey]/datasets/preview > does not expose raw preview failures
+[builder-page-datasets-preview:post] failed Error: preview secret leaked
+    at /Users/son7/Projects/tseng-law-sea-b2b-20260911/src/app/api/builder/sites/[siteId]/pages/[pageKey]/datasets/preview/__tests__/route.test.ts:220:57
+    at file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at runSuite (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+    at runSuite (file:///Users/son7/Projects/tseng-law-sea-seo-20260909/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+
+ ✓ src/app/api/builder/sites/[siteId]/pages/[pageKey]/datasets/preview/__tests__/route.test.ts (6 tests) 9ms
+ ✓ src/app/api/builder/translations/edit/__tests__/rich-text-integration.route.test.ts (9 tests) 9ms
+ ✓ src/app/api/members/bookings/__tests__/route.test.ts (3 tests) 6ms
+ ✓ src/app/api/builder/commerce/subscriptions/[id]/__tests__/route.test.ts (13 tests) 9ms
+ ✓ src/app/api/builder/review-sessions/[token]/__tests__/route.test.ts (3 tests) 5ms
+ ✓ src/app/api/builder/marketing/templates/__tests__/route.test.ts (5 tests) 8ms
+ ✓ src/app/api/builder/site/translation-release-approvals/assignment-report.route.test.ts (1 test) 10ms
+ ✓ src/app/api/builder/crm/integrations/[id]/route.test.ts (5 tests) 6ms
+ ✓ src/app/api/builder/commerce/subscriptions/__tests__/route.test.ts (8 tests) 10ms
+ ✓ src/app/api/builder/site/pages/[pageId]/scheduled-publish/route.test.ts (8 tests) 10ms
+ ✓ src/app/api/builder/apps/installations/[appId]/__tests__/route.test.ts (5 tests) 8ms
+ ✓ src/app/api/builder/dev/logs/__tests__/route.test.ts (6 tests) 9ms
+ ✓ src/app/api/builder/commerce/products/__tests__/route.test.ts (8 tests) 9ms
+ ✓ src/app/api/builder/marketing/subscribers/__tests__/route.test.ts (6 tests) 10ms
+ ✓ src/components/builder/canvas/__tests__/layout-widget-presets-schema.test.ts (2 tests) 6ms
+ ✓ src/app/api/builder/commerce/payment-intents/__tests__/route.test.ts (7 tests) 9ms
+ ✓ src/app/api/builder/members/[memberId]/__tests__/route.test.ts (13 tests) 10ms
+ ✓ src/app/api/builder/site/pages/[pageId]/move-from/route.test.ts (12 tests) 12ms
+ ✓ src/app/[locale]/services/[slug]/__tests__/ja-ip-page.test.tsx (3 tests) 10ms
+ ✓ src/app/api/builder/faq/__tests__/route.test.ts (9 tests) 9ms
+ ✓ src/app/api/builder/workspace/cms/__tests__/route.test.ts (8 tests) 17ms
+ ✓ src/app/[locale]/services/[slug]/__tests__/ja-criminal-page.test.tsx (3 tests) 9ms
+ ✓ src/middleware.test.ts (20 tests) 14ms
+ ✓ src/app/api/builder/billing-documents/templates/[id]/__tests__/route.test.ts (5 tests) 7ms
+ ✓ src/app/api/builder/faq/[faqId]/__tests__/route.test.ts (11 tests) 9ms
+ ✓ src/components/__tests__/column-markdown-ranges.test.tsx (2 tests) 9ms
+ ✓ src/app/api/builder/crm/automations/[id]/__tests__/route.test.ts (9 tests) 9ms
+ ✓ src/app/api/builder/marketing/templates/[templateId]/__tests__/route.test.ts (8 tests) 10ms
+ ✓ tests/builder-editor/wb-r07/support/__tests__/real-pointer.test.ts (26 tests) 10ms
+ ✓ src/app/api/builder/site/custom-code/__tests__/route.test.ts (6 tests) 10ms
+ ✓ src/app/api/builder/site/pages/[pageId]/seo/__tests__/route-site-routing.test.ts (2 tests) 8ms
+ ✓ src/app/api/builder/site/seo-checklist/__tests__/route.test.ts (7 tests) 10ms
+ ✓ src/lib/__tests__/columns-zh-investment-013.test.ts (11 tests) 7ms
+ ✓ src/app/api/builder/live-chat/__tests__/route.test.ts (2 tests) 20ms
+ ✓ src/lib/__tests__/columns-ja-investment-015.test.ts (10 tests) 9ms
+ ✓ src/components/builder/canvas/__tests__/design-pool-shells.test.ts (4 tests) 13ms
+ ✓ src/app/api/builder/commerce/shipping-rules/__tests__/route.test.ts (7 tests) 9ms
+ ✓ src/app/api/builder/collab/presence/__tests__/route.test.ts (5 tests) 8ms
+ ✓ src/lib/__tests__/columns-ja-investment-001.test.ts (11 tests) 8ms
+ ✓ src/app/api/builder/site/pages/[pageId]/scheduled-publish/route-site-routing.test.ts (3 tests) 9ms
+ ✓ src/app/api/builder/site/seed/route.test.ts (8 tests) 6ms
+ ✓ src/app/api/builder/billing-documents/[source]/[ownerId]/[documentId]/lifecycle/__tests__/route.test.ts (7 tests) 9ms
+ ✓ src/lib/__tests__/columns-en-litigation-010.test.ts (6 tests) 7ms
+ ✓ src/components/builder/canvas/__tests__/ComponentLibraryUpdateReview.test.tsx (1 test) 7ms
+ ✓ src/app/api/members/me/__tests__/route.test.ts (9 tests) 9ms
+ ✓ src/lib/__tests__/columns-zh-family-007.test.ts (24 tests) 7ms
+ ✓ src/lib/builder/site/__tests__/published-legal-responsive.test.ts (1 test) 6ms
+ ✓ src/app/api/builder/security/users/__tests__/route.test.ts (9 tests) 9ms
+ ✓ src/app/api/builder/workspace/members/[email]/__tests__/route.test.ts (10 tests) 8ms
+ ✓ src/app/api/members/signup/__tests__/route.test.ts (7 tests) 6ms
+ ✓ src/lib/__tests__/columns-en-family-016.test.ts (18 tests) 9ms
+ ✓ src/app/api/builder/members/__tests__/route.test.ts (10 tests) 9ms
+ ✓ src/app/api/builder/crm/integrations/__tests__/route.test.ts (7 tests) 11ms
+ ✓ src/components/builder/canvas/__tests__/component-library-field-remap.test.ts (4 tests) 6ms
+ ✓ src/app/api/booking/manage/[token]/__tests__/route.test.ts (12 tests) 9ms
+ ✓ src/app/api/builder/site/redirects/[id]/route.test.ts (7 tests) 6ms
+ ✓ src/app/api/builder/commerce/notifications/__tests__/route.test.ts (6 tests) 8ms
+ ✓ tests/builder-editor/wb-r07/support/__tests__/fixture-document.test.ts (3 tests) 5ms
+ ✓ src/app/api/builder/commerce/payment-webhooks/events/[eventId]/replay/__tests__/route.test.ts (3 tests) 6ms
+ ✓ src/components/builder/dev/__tests__/functions-disclosure.test.tsx (4 tests) 10ms
+ ✓ src/app/api/builder/bookings/email-templates/__tests__/route.test.ts (1 test) 16ms
+ ✓ src/app/api/builder/security/users/[username]/__tests__/route.test.ts (9 tests) 8ms
+ ✓ src/app/api/builder/commerce/orders/[orderId]/manual-payments/__tests__/route.test.ts (7 tests) 9ms
+ ✓ src/app/api/builder/billing-documents/[source]/[ownerId]/[documentId]/manual-payments/__tests__/route.test.ts (7 tests) 10ms
+ ✓ src/lib/__tests__/columns-ja-labor-014.test.ts (24 tests) 8ms
+ ✓ src/app/api/builder/site/pages/[pageId]/linked/route.test.ts (5 tests) 7ms
+ ✓ src/app/api/builder/site/pages/[pageId]/custom-code/__tests__/route.test.ts (5 tests) 10ms
+ ✓ src/lib/__tests__/columns-en-investment-004.test.ts (15 tests) 8ms
+ ✓ src/app/api/builder/billing-documents/[source]/[ownerId]/[documentId]/payment-link/__tests__/route.test.ts (7 tests) 9ms
+ ✓ src/app/api/builder/commerce/orders/[orderId]/refunds/__tests__/route.test.ts (7 tests) 8ms
+ ✓ src/app/api/builder/site/seo-preview/__tests__/route.test.ts (4 tests) 8ms
+ ✓ src/app/api/builder/collab/comments/[id]/__tests__/route.test.ts (5 tests) 6ms
+ ✓ src/app/api/builder/site/brand-kit/__tests__/route.test.ts (8 tests) 8ms
+ ✓ src/app/api/builder/lawyers/[slug]/__tests__/route.test.ts (2 tests) 8ms
+ ✓ src/lib/__tests__/columns-en-labor-014.test.ts (23 tests) 8ms
+ ✓ src/app/api/builder/commerce/tax-rules/__tests__/route.test.ts (7 tests) 13ms
+ ✓ src/app/api/builder/commerce/cart-recovery/__tests__/route.test.ts (6 tests) 8ms
+ ✓ src/app/api/builder/commerce/orders/[orderId]/documents/__tests__/route.test.ts (7 tests) 8ms
+ ✓ src/components/builder/canvas/__tests__/component-library-replace-flow.helpers.test.ts (1 test) 9ms
+ ✓ src/app/api/builder/workspace/sites/__tests__/route.test.ts (6 tests) 8ms
+ ✓ src/app/api/builder/site/pages/[pageId]/revisions/rollback/route-site-routing.test.ts (3 tests) 7ms
+ ✓ src/components/builder/canvas/__tests__/component-library-panel-payload.test.ts (6 tests) 8ms
+ ✓ src/app/api/builder/workspace/members/__tests__/route.test.ts (6 tests) 8ms
+ ✓ src/lib/__tests__/columns-ko-investment-002.test.ts (13 tests) 10ms
+ ✓ src/app/api/builder/billing-documents/[source]/[ownerId]/[documentId]/share-link/__tests__/route.test.ts (6 tests) 21ms
+ ✓ src/lib/builder/components/image/__tests__/image-published-fallback.test.ts (4 tests) 10ms
+ ✓ src/app/api/builder/translations/translate-batch/__tests__/route.test.ts (6 tests) 9ms
+ ✓ src/app/[locale]/account/bookings/[bookingId]/cancel/__tests__/route.test.ts (5 tests) 7ms
+ ✓ src/lib/builder/components/text/__tests__/text-inspector-localization.test.ts (4 tests) 8ms
+ ✓ src/app/api/builder/billing-documents/__tests__/route.test.ts (4 tests) 7ms
+ ✓ src/app/api/builder/workspace/account/__tests__/route.test.ts (5 tests) 9ms
+ ✓ src/app/api/builder/crm/segments/__tests__/route.test.ts (8 tests) 8ms
+ ✓ src/lib/__tests__/columns-zh-investment-011.test.ts (15 tests) 8ms
+ ✓ src/lib/builder/components/image/__tests__/image-edit-copy.test.ts (8 tests) 8ms
+ ✓ src/app/api/builder/crm/contacts/__tests__/route.test.ts (5 tests) 8ms
+ ✓ src/lib/__tests__/columns-zh-investment-002.test.ts (15 tests) 8ms
+ ✓ src/app/api/builder/apps/installations/__tests__/route.test.ts (4 tests) 6ms
+ ✓ src/components/__tests__/decorative-autoplay-video-responsive-poster-preload.test.tsx (2 tests) 5ms
+ ✓ src/app/api/builder/workspace/assets/[filename]/__tests__/route.test.ts (8 tests) 7ms
+ ✓ src/lib/__tests__/columns-ko-investment-017.test.ts (12 tests) 7ms
+ ✓ src/lib/builder/components/form/__tests__/form-field-inspector-localization.test.tsx (4 tests) 9ms
+ ✓ src/lib/__tests__/columns-en-investment-015.test.ts (11 tests) 8ms
+ ✓ src/lib/__tests__/columns-ko-investment-001.test.ts (9 tests) 7ms
+ ✓ src/lib/__tests__/columns-ko-investment-011.test.ts (14 tests) 8ms
+ ✓ src/app/[locale]/account/billing/documents/[documentId]/payment-link/__tests__/route.test.ts (8 tests) 9ms
+ ✓ src/lib/__tests__/columns-zh-investment-001.test.ts (12 tests) 11ms
+ ✓ src/lib/builder/site/__tests__/published-canvas.test.ts (6 tests) 10ms
+ ✓ src/app/api/builder/notifications/[id]/__tests__/route.test.ts (7 tests) 6ms
+ ✓ src/lib/builder/components/gallery/__tests__/gallery-render-localization.test.tsx (4 tests) 8ms
+ ✓ src/app/api/builder/apps/hooks/invoke/__tests__/route.test.ts (3 tests) 7ms
+ ✓ src/app/api/builder/domains/[domain]/verify/__tests__/route.test.ts (6 tests) 11ms
+ ✓ src/app/api/builder/billing-documents/webhooks/events/[eventId]/replay/__tests__/route.test.ts (3 tests) 5ms
+ ✓ src/app/api/builder/site/pages/[pageId]/revisions/route.test.ts (5 tests) 8ms
+ ✓ src/app/api/builder/site/translation-release-policy/route.test.ts (4 tests) 6ms
+ ✓ src/lib/__tests__/columns-zh-investment-005.test.ts (11 tests) 10ms
+ ✓ src/app/api/builder/collab/review-markers/__tests__/route.test.ts (5 tests) 8ms
+ ✓ src/app/api/builder/commerce/orders/__tests__/route.test.ts (4 tests) 7ms
+ ✓ src/app/api/members/logout/__tests__/route.test.ts (3 tests) 7ms
+ ✓ src/app/api/builder/apps/catalog/__tests__/route.test.ts (2 tests) 5ms
+ ✓ src/lib/builder/translations/providers/__tests__/router-batch.test.ts (4 tests) 10ms
+ ✓ src/lib/__tests__/columns-ko-family-007.test.ts (22 tests) 9ms
+ ✓ src/app/api/builder/apps/hooks/deliveries/__tests__/route.test.ts (3 tests) 7ms
+ ✓ src/app/[locale]/account/bookings/[bookingId]/reschedule/__tests__/route.test.ts (4 tests) 7ms
+ ✓ src/app/api/builder/site/pages/[pageId]/publish/translation-release-gate.route.test.ts (2 tests) 7ms
+ ✓ src/app/api/builder/site/redirects/route.test.ts (6 tests) 7ms
+ ✓ src/lib/__tests__/columns-zh-investment-015.test.ts (12 tests) 7ms
+ ✓ src/app/api/builder/domains/[domain]/__tests__/route.test.ts (5 tests) 6ms
+ ✓ src/app/api/builder/translations/translate-batch/stream/__tests__/openai-stream.route.test.ts (1 test) 7ms
+ ✓ src/components/builder/canvas/__tests__/SeoPanelLocalization.test.tsx (4 tests) 7ms
+ ✓ src/lib/__tests__/columns-ja-investment-017.test.ts (11 tests) 6ms
+ ✓ src/app/api/builder/translations/translate-batch/stream/__tests__/route.test.ts (4 tests) 7ms
+ ✓ src/app/api/builder/crm/contacts/[id]/__tests__/route.test.ts (5 tests) 8ms
+ ✓ src/app/api/builder/commerce/categories/__tests__/route.test.ts (4 tests) 7ms
+ ✓ src/app/api/builder/translations/__tests__/route.test.ts (6 tests) 7ms
+ ✓ src/app/api/builder/translations/translate/__tests__/route.test.ts (6 tests) 6ms
+ ✓ src/lib/builder/components/featuredPosts/__tests__/featured-posts-localization.test.tsx (7 tests) 10ms
+ ✓ src/lib/__tests__/columns-zh-family-016.test.ts (15 tests) 7ms
+ ✓ src/components/builder/canvas/__tests__/canvas-stage-nodes-geometry.test.ts (6 tests) 8ms
+ ✓ src/app/api/builder/site/pages/[pageId]/revisions/rollback/route.test.ts (5 tests) 6ms
+ ✓ src/components/builder/apps/__tests__/AppMarketClient.test.tsx (2 tests) 6ms
+ ✓ src/lib/builder/components/floatingChat/__tests__/floatingChat.test.tsx (6 tests) 6ms
+ ✓ src/app/api/builder/billing-documents/webhooks/__tests__/route.test.ts (3 tests) 6ms
+ ✓ src/lib/builder/site/__tests__/site-invariants.test.ts (23 tests) 6ms
+ ✓ src/lib/__tests__/columns-en-investment-001.test.ts (12 tests) 7ms
+ ✓ src/app/[locale]/guides/taiwan-company-setup/__tests__/content.test.ts (8 tests) 4ms
+ ✓ src/app/api/builder/experiments/[experimentId]/results/__tests__/route.test.ts (3 tests) 5ms
+ ✓ src/components/builder/canvas/__tests__/component-library-insert-flow.helpers.test.ts (1 test) 6ms
+ ✓ src/components/builder/canvas/__tests__/component-library-update-review.helpers.test.ts (2 tests) 5ms
+ ✓ src/app/api/builder/%5Fqa/attestation/__tests__/route.test.ts (8 tests) 6ms
+ ✓ src/lib/builder/webhooks/__tests__/url-guard.test.ts (44 tests) 6ms
+ ✓ src/lib/__tests__/columns-ja-investment-005.test.ts (10 tests) 6ms
+ ✓ src/app/api/builder/commerce/payment-webhooks/__tests__/route.test.ts (3 tests) 6ms
+ ✓ src/app/api/builder/site/audit/route.test.ts (5 tests) 6ms
+ ✓ src/app/api/builder/billing-documents/settings/__tests__/route.test.ts (4 tests) 10ms
+ ✓ src/app/api/builder/billing-documents/[source]/[ownerId]/[documentId]/download/__tests__/route.test.ts (4 tests) 6ms
+ ✓ src/components/__tests__/column-content-underline.test.tsx (1 test) 6ms
+ ✓ src/app/api/builder/blog/admin/__tests__/route.test.ts (4 tests) 6ms
+ ✓ src/app/api/builder/site/pages/[pageId]/draft/__tests__/route-site-routing.test.ts (2 tests) 6ms
+ ✓ src/lib/__tests__/columns-ja-investment-011.test.ts (12 tests) 6ms
+ ✓ src/app/api/booking/staff/__tests__/route.test.ts (4 tests) 6ms
+ ✓ src/app/api/builder/collab/review-markers/[id]/__tests__/route.test.ts (4 tests) 6ms
+ ✓ src/components/builder/canvas/__tests__/component-library-restore-review.helpers.test.ts (3 tests) 6ms
+ ✓ src/app/api/builder/dev/secrets/__tests__/route.test.ts (4 tests) 6ms
+ ✓ src/app/(builder)/[locale]/admin-builder/__tests__/sensitive-page-permission.test.tsx (7 tests) 8ms
+ ✓ src/app/api/builder/commerce/currency-settings/__tests__/route.test.ts (4 tests) 9ms
+ ✓ src/app/api/booking/availability/__tests__/route.test.ts (4 tests) 6ms
+ ✓ src/lib/__tests__/columns-ko-investment-004.test.ts (13 tests) 6ms
+ ✓ src/app/api/builder/translations/dashboard/__tests__/route.test.ts (3 tests) 5ms
+ ✓ src/app/api/booking/cancel/__tests__/route.test.ts (5 tests) 6ms
+ ✓ src/app/api/builder/translations/edit/__tests__/route.test.ts (5 tests) 7ms
+ ✓ src/lib/__tests__/columns-zh-investment-004.test.ts (14 tests) 6ms
+ ✓ src/lib/builder/translations/__tests__/rich-text-mark-spacing-edit-store.test.ts (9 tests) 5ms
+ ✓ src/components/__tests__/decorative-autoplay-video-controls.test.tsx (8 tests) 6ms
+ ✓ src/app/api/builder/ops/dashboard/route.test.ts (1 test) 6ms
+ ✓ src/data/__tests__/international-guidance-extra.test.ts (13 tests) 8ms
+ ✓ src/lib/builder/translations/__tests__/locale-media.test.ts (12 tests) 13ms
+ ✓ src/lib/__tests__/columns-ko-family-016.test.ts (15 tests) 6ms
+ ✓ src/components/builder/canvas/__tests__/context-menu-smoothness.test.ts (33 tests) 6ms
+ ✓ src/lib/__tests__/columns-ko-traffic-003.test.ts (26 tests) 7ms
+ ✓ src/lib/__tests__/columns-en-investment-011.test.ts (14 tests) 6ms
+ ✓ src/lib/builder/components/memberAccountSummary/__tests__/member-account-summary.test.tsx (3 tests) 7ms
+ ✓ src/lib/__tests__/columns-en-investment-002.test.ts (13 tests) 5ms
+ ✓ src/app/api/builder/site/translation-release-approvals/self-review.route.test.ts (1 test) 4ms
+ ✓ src/lib/__tests__/columns-ko-labor-014.test.ts (20 tests) 6ms
+ ✓ src/app/api/builder/crm/send-queue/__tests__/route.test.ts (3 tests) 9ms
+ ✓ src/data/__tests__/guidance-team-bios.test.ts (198 tests) 16ms
+ ✓ src/lib/builder/site/__tests__/admin-routing.test.ts (24 tests) 6ms
+ ✓ src/app/api/builder/apps/installations/[appId]/cms/collections/__tests__/route.test.ts (3 tests) 7ms
+ ✓ src/app/api/booking/services/__tests__/route.test.ts (4 tests) 6ms
+ ✓ src/app/api/booking/waitlist/__tests__/route.test.ts (2 tests) 6ms
+ ✓ src/lib/builder/translations/__tests__/dashboard-model.test.ts (6 tests) 7ms
+ ✓ src/components/builder/canvas/__tests__/inspector-controls-copy.test.ts (1 test) 2ms
+ ✓ src/app/api/builder/webhooks/[id]/deliveries/__tests__/route.test.ts (3 tests) 6ms
+ ✓ src/data/__tests__/legal-pages-ja.test.ts (5 tests) 4ms
+ ✓ src/app/api/booking/stripe-webhook/__tests__/route.test.ts (3 tests) 7ms
+ ✓ src/components/builder/canvas/__tests__/component-library-replace-selection.helpers.test.ts (2 tests) 5ms
+ ✓ src/lib/builder/site/__tests__/published-standard-page-css.test.ts (7 tests) 6ms
+ ✓ src/components/builder/canvas/__tests__/selection-overlay-copy.test.ts (3 tests) 5ms
+ ✓ src/lib/builder/components/button/__tests__/button-inspector-localization.test.tsx (4 tests) 6ms
+ ✓ src/app/api/builder/translations/publish-warnings/__tests__/route.test.ts (3 tests) 6ms
+ ✓ src/app/api/builder/site/publish-checks/role-approval.route.test.ts (1 test) 5ms
+ ✓ src/components/__tests__/floating-ai-chat-contact-panel.test.tsx (4 tests) 6ms
+ ✓ src/lib/builder/bookings/calendar-sync/__tests__/provider-mappers.test.ts (3 tests) 6ms
+ ✓ src/components/builder/canvas/__tests__/ComponentLibraryRemapReview.test.tsx (1 test) 4ms
+ ✓ src/app/api/builder/workspace/analytics/__tests__/route.test.ts (2 tests) 5ms
+ ✓ src/app/api/builder/publish/validate/route.test.ts (2 tests) 6ms
+ ✓ src/app/api/builder/assets/__tests__/route.test.ts (2 tests) 5ms
+ ✓ src/app/api/builder/apps/hooks/deliveries/[deliveryId]/retry/__tests__/route.test.ts (3 tests) 5ms
+ ✓ src/lib/builder/translations/providers/__tests__/router-batch-progress.test.ts (2 tests) 5ms
+ ✓ src/app/api/booking/book/__tests__/staff-pricing.test.ts (1 test) 5ms
+ ✓ src/components/builder/marketing/__tests__/CampaignsAdmin.test.ts (13 tests) 5ms
+ ✓ src/components/builder/canvas/__tests__/repeater-template-context.test.ts (1 test) 5ms
+ ✓ src/app/(builder)/[locale]/admin-builder/commerce/__tests__/page-deep-link-permission.test.tsx (3 tests) 6ms
+ ✓ src/lib/builder/translations/__tests__/rich-text-compact-pipe-edit-store.test.ts (1 test) 3ms
+ ✓ src/lib/__tests__/columns-ja-litigation-010.test.ts (10 tests) 5ms
+ ✓ src/app/(builder)/[locale]/admin-builder/__tests__/layout-permission.test.ts (2 tests) 5ms
+ ✓ src/components/builder/canvas/__tests__/preview-modal-copy.test.tsx (2 tests) 5ms
+ ✓ src/app/api/builder/dev/functions/__tests__/route.test.ts (2 tests) 5ms
+ ✓ src/lib/builder/translations/providers/__tests__/router.test.ts (17 tests) 5ms
+ ✓ src/app/api/builder/dev/sdk/__tests__/route.test.ts (2 tests) 5ms
+ ✓ src/data/__tests__/service-details-ja-criminal.test.ts (5 tests) 2ms
+ ✓ src/lib/builder/canvas/__tests__/text-widgets.test.ts (1 test) 9ms
+ ✓ src/components/builder/canvas/__tests__/repeater-template-nodes.test.ts (3 tests) 7ms
+ ✓ src/components/builder/canvas/__tests__/repeater-record-comparison.test.ts (2 tests) 5ms
+ ✓ src/lib/builder/components/blogArchive/__tests__/blog-archive-localization.test.tsx (3 tests) 5ms
+ ✓ src/lib/builder/components/siteSearch/__tests__/site-search.test.tsx (6 tests) 5ms
+ ✓ src/lib/builder/translations/__tests__/translations-api-copy.test.ts (1 test) 1ms
+ ✓ src/lib/builder/live-chat/__tests__/sse.test.ts (2 tests) 5ms
+ ✓ src/app/api/builder/site/redirects/public/route.test.ts (3 tests) 7ms
+ ✓ src/lib/builder/canvas/__tests__/upload-validation.test.ts (28 tests) 5ms
+ ✓ src/lib/builder/translations/__tests__/rich-text-compact-ampersand-edit-store.test.ts (1 test) 3ms
+ ✓ src/lib/builder/components/memberLogin/__tests__/member-login.test.tsx (4 tests) 5ms
+ ✓ src/lib/builder/site/__tests__/theme-effects.test.ts (14 tests) 4ms
+ ✓ src/lib/builder/audit/__tests__/production-stub-registry.test.ts (83 tests) 27396ms
+   ✓ production stub registry > does not let an identical second same-file occurrence inherit an existing registration  1102ms
+   ✓ production stub registry > finds unregistered production hits outside the former API and builder roots  386ms
+   ✓ production stub registry > orders scan hits deterministically by source path, line, and text  695ms
+   ✓ production stub registry > classifies meaningful mock and stub variants in runtime identifiers, properties, and strings  386ms
+   ✓ production stub registry > discovers split, renamed, degraded-success, and contingency bypasses without lexical prefiltering  405ms
+   ✓ production stub registry > exempts mock and stub spellings that exist only in TypeScript type space  366ms
+   ✓ production stub registry > exempts reviewed negative fake-language without hiding executable fake providers  454ms
+   ✓ production stub registry > uses parser-grade token ranges so a regex literal cannot hide a later stub  355ms
+   ✓ production stub registry > detects arbitrary fallbackFoo and usedFallback ok:true success shapes semantically  390ms
+   ✓ production stub registry > excludes test, generated, comment-only, and smoke-harness false positives deterministically  417ms
+   ✓ production stub registry > excludes only the exact non-operational legacy provenance label  394ms
+   ✓ production stub registry > scans a package start-reachable script even when its filename says smoke  424ms
+   ✓ production stub registry > keeps --dry-run filesystem-free even when an output directory is supplied  350ms
+   ✓ production stub registry > prints byte-identical deterministic output in --check mode  653ms
+   ✓ production stub registry > closes widget-demo copy/feed rows against current source via the shared demo disclosure  554ms
+   ✓ production stub registry > closes broad-event-widget-mock-copy because all three consumers anchor the shared disclosure  506ms
+   ✓ production stub registry > reopens broad-event-widget-mock-copy when 'event rsvp consumer' loses its event-copy import, mock value use, disclosure import, or disclosure render  354ms
+   ✓ production stub registry > absorbs the marketing email stub inventory into blocked registered rows with exact counts  504ms
+   ✓ production stub registry > leaves zero unmapped mock/stub occurrences in either marketing source file  7248ms
+   ✓ production stub registry > absorbs the guarded translation mock inventory into matched blocked registered rows  506ms
+   ✓ production stub registry > removes the three absorbed broad translation candidates and keeps the two required-open rows  513ms
+   ✓ production stub registry > leaves zero unmapped mock/stub occurrences across the three absorbed translation source files  7384ms
+   ✓ production stub registry > keeps broad-functions-node-stub-runtime open and mapped as non-rendered inventory  520ms
+ ✓ src/components/builder/canvas/__tests__/RepeaterTemplateCanvasHud.test.tsx (3 tests) 4ms
+ ✓ src/components/builder/canvas/__tests__/RepeaterTemplateChildBadge.test.tsx (8 tests) 5ms
+ ✓ src/lib/builder/canvas/__tests__/flow.test.ts (17 tests) 5ms
+ ✓ src/lib/builder/components/blogCategories/__tests__/blog-categories-localization.test.tsx (3 tests) 5ms
+ ✓ src/lib/builder/columns/__tests__/typography.test.ts (7 tests) 4ms
+ ✓ src/app/[locale]/account/__tests__/profile-image-rendering.test.tsx (1 test) 5ms
+ ✓ src/app/api/builder/sandbox/draft/__tests__/route.test.ts (2 tests) 5ms
+ ✓ src/lib/builder/__tests__/cms-slug-repair.test.ts (5 tests) 5ms
+ ✓ src/lib/builder/canvas/__tests__/gallery-widgets.test.ts (1 test) 4ms
+ ✓ src/app/[locale]/__tests__/catchall-not-found-metadata.test.ts (11 tests) 4ms
+ ✓ src/app/api/builder/ai-generator/brand-voice/__tests__/route.test.ts (2 tests) 6ms
+ ✓ src/components/builder/canvas/__tests__/canvas-interactions-preview.test.ts (42 tests) 5ms
+ ✓ src/components/builder/canvas/publish-conflict-actions.test.ts (2 tests) 5ms
+ ✓ src/lib/builder/forms/__tests__/uploads.test.ts (11 tests) 6ms
+ ✓ src/lib/builder/translations/__tests__/auto-translate.test.ts (4 tests) 4ms
+ ✓ src/lib/builder/commerce/__tests__/cart-shared.test.ts (4 tests) 3ms
+ ✓ src/lib/builder/components/__tests__/service-feature-card-localization.test.tsx (5 tests) 5ms
+ ✓ src/lib/builder/ai-generator/__tests__/theme-suggestions.test.ts (21 tests) 3ms
+ ✓ src/lib/__tests__/columns-ko-litigation-010.test.ts (11 tests) 5ms
+ ✓ src/lib/metrics/__tests__/intent-route-report.test.ts (13 tests) 4ms
+ ✓ tests/builder-editor/wb-r07/support/__tests__/journey-manifest.test.ts (15 tests) 5ms
+ ✓ src/components/__tests__/column-mobile-overflow.test.ts (3 tests) 4ms
+ ✓ src/lib/__tests__/columns-ja-traffic-012.test.ts (10 tests) 4ms
+ ✓ src/app/api/builder/ops/backups/route.test.ts (1 test) 4ms
+ ✓ src/lib/builder/__tests__/dynamic-item-pages-custom.test.ts (3 tests) 3ms
+ ✓ src/lib/builder/canvas/__tests__/locale-links.test.ts (1 test) 4ms
+ ✓ src/app/[locale]/admin-consultation/__tests__/page.test.ts (5 tests) 2ms
+ ✓ src/components/builder/editor/__tests__/style-tab-copy.test.ts (3 tests) 2ms
+ ✓ src/lib/consultation/admin/__tests__/ai-intake-metrics.test.ts (10 tests) 11ms
+ ✓ src/lib/builder/marketing/__tests__/email-provider.test.ts (5 tests) 5ms
+ ✓ src/components/members/__tests__/member-profile-image.test.tsx (1 test) 4ms
+ ✓ src/lib/builder/__tests__/cms-slug-pattern.test.ts (6 tests) 4ms
+ ✓ src/lib/builder/translations/__tests__/rich-text-list-edit-store.test.ts (3 tests) 4ms
+ ✓ src/components/builder/editor/__tests__/advanced-pickers-ssr.test.tsx (1 test) 5ms
+ ✓ src/lib/__tests__/columns-en-investment-017.test.ts (13 tests) 4ms
+ ✓ src/components/builder/workspace/__tests__/SitesPanel.test.tsx (1 test) 4ms
+ ✓ src/lib/builder/bookings/__tests__/discounts.test.ts (5 tests) 2ms
+ ✓ src/lib/__tests__/columns-ja-investment-002-intro-sync.test.ts (9 tests) 4ms
+ ✓ src/lib/builder/ai-generator/__tests__/code-assistant.test.ts (20 tests) 7ms
+ ✓ src/app/[locale]/videos/__tests__/page.test.tsx (5 tests) 5ms
+ ✓ src/lib/ai-intake/__tests__/auth.test.ts (9 tests) 4ms
+ ✓ src/lib/__tests__/canonical-attorney-seo-identity.test.ts (8 tests) 6ms
+ ✓ src/app/api/builder/ops/security/route.test.ts (1 test) 4ms
+ ✓ src/lib/builder/__tests__/service-area-source-overrides.test.ts (6 tests) 4ms
+ ✓ src/app/[locale]/faq/__tests__/ja-page.test.tsx (3 tests) 4ms
+ ✓ src/lib/builder/components/lottie/__tests__/lottie.test.ts (6 tests) 13ms
+ ✓ src/lib/builder/canvas/__tests__/decompose-reviews.test.ts (2 tests) 4ms
+ ✓ src/lib/consultation/__tests__/intake-language-contract.test.ts (10 tests) 4ms
+ ✓ src/lib/builder/__tests__/datasets.test.ts (9 tests) 4ms
+ ✓ src/components/__tests__/service-practice-icon.test.tsx (2 tests) 5ms
+ ✓ src/lib/__tests__/columns-ko-traffic-012.test.ts (10 tests) 3ms
+ ✓ src/app/api/builder/ops/backups/drill/route.test.ts (1 test) 4ms
+ ✓ src/lib/builder/__tests__/scene.test.ts (2 tests) 4ms
+ ✓ src/components/builder/cms/__tests__/RelationColumnPickerVirtualWindow.test.tsx (3 tests) 4ms
+ ✓ src/app/api/builder/ops/cache/route.test.ts (1 test) 4ms
+ ✓ src/components/builder/canvas/__tests__/insights-preview-cache.test.ts (3 tests) 2ms
+ ✓ src/components/builder/marketing/__tests__/TemplateEditor.test.tsx (1 test) 3ms
+ ✓ src/lib/__tests__/columns-ja-investment-002.test.ts (8 tests) 4ms
+ ✓ src/lib/builder/translations/__tests__/rich-text-block-edit-store.test.ts (4 tests) 4ms
+ ✓ src/lib/ai-intake/__tests__/canonical.test.ts (5 tests) 2ms
+ ✓ src/app/api/builder/ops/perf/route.test.ts (1 test) 4ms
+ ✓ src/lib/builder/components/blogRecentPosts/__tests__/blog-recent-posts-copy.test.tsx (2 tests) 4ms
+ ✓ src/lib/builder/seo/__tests__/defaults-copy.test.ts (3 tests) 2ms
+ ✓ src/lib/__tests__/global-seo-locale-integrity.test.ts (13 tests) 4ms
+ ✓ src/lib/builder/__tests__/cms-dynamic-item-route-policy.test.ts (3 tests) 3ms
+ ✓ src/components/builder/canvas/__tests__/image-edit-ai-response-contract.test.ts (79 tests) 4ms
+ ✓ src/lib/builder/__tests__/quick-jump.test.ts (8 tests) 4ms
+ ✓ src/lib/builder/__tests__/attorney-profile-source-overrides.test.ts (5 tests) 5ms
+ ✓ src/components/builder/canvas/__tests__/RepeaterTemplateChildBadgeGroupRename.test.tsx (1 test) 3ms
+ ✓ src/lib/builder/bookings/calendar-sync/__tests__/sync-connection.test.ts (3 tests) 3ms
+ ✓ src/app/api/builder/ops/health/route.test.ts (1 test) 4ms
+ ✓ src/lib/__tests__/multilingual-seo.test.ts (4 tests) 4ms
+ ✓ src/components/builder/marketing/__tests__/DeliverabilityPanel.test.tsx (1 test) 3ms
+ ✓ src/data/__tests__/home-stats-factual-claims.test.ts (16 tests) 4ms
+ ✓ src/components/builder/canvas/__tests__/canvas-interaction-lifecycle.test.ts (11 tests) 4ms
+ ✓ src/lib/builder/components/container/__tests__/published-main-demote.test.tsx (4 tests) 4ms
+ ✓ src/lib/builder/forms/__tests__/validation.test.ts (6 tests) 5ms
+ ✓ src/components/builder/canvas/__tests__/filter-panel-copy.test.tsx (1 test) 4ms
+ ✓ src/data/__tests__/canonical-attorney-identity.test.ts (6 tests) 4ms
+ ✓ src/lib/builder/errors/__tests__/sentry-adapter.test.ts (2 tests) 3ms
+ ✓ src/app/api/builder/ops/logs/route.test.ts (1 test) 4ms
+ ✓ src/lib/builder/experiments/__tests__/assign.test.ts (4 tests) 3ms
+ ✓ src/lib/__tests__/columns-ja-investment-002-capital-paragraph-sync.test.ts (11 tests) 4ms
+ ✓ src/lib/builder/translations/__tests__/rich-text-compact-semicolon-edit-store.test.ts (1 test) 4ms
+ ✓ src/lib/builder/commerce/__tests__/checkout-shared.test.ts (4 tests) 3ms
+ ✓ src/components/builder/__tests__/BuilderPagePublishReadiness.test.tsx (2 tests) 4ms
+ ✓ src/lib/builder/components/faqList/__tests__/faq-list-inspector-localization.test.tsx (2 tests) 4ms
+ ✓ src/lib/builder/bookings/calendar-sync/__tests__/sync-engine.test.ts (5 tests) 4ms
+ ✓ src/data/__tests__/team-members-ja.test.ts (6 tests) 5ms
+ ✓ src/components/__tests__/hero-search-contact-suggestions.test.tsx (8 tests) 3ms
+ ✓ src/components/members/__tests__/member-auth-login-only.test.tsx (4 tests) 3ms
+ ✓ src/lib/builder/site/__tests__/published-dynamic-item-seo.test.ts (3 tests) 2ms
+ ✓ src/lib/builder/commerce/__tests__/currency-shared.test.ts (2 tests) 2ms
+ ✓ src/lib/builder/ai-generator/__tests__/page-spec-builder.test.ts (15 tests | 1 skipped) 3ms
+ ✓ src/lib/builder/translations/__tests__/rich-text-split-compact-separator-edit-store.test.ts (2 tests) 4ms
+ ✓ src/app/(builder)/[locale]/builder/[pageKey]/datasets/__tests__/page.test.ts (1 test) 5ms
+ ✓ src/lib/builder/translations/__tests__/rich-text-compact-middle-dot-edit-store.test.ts (1 test) 3ms
+ ✓ src/lib/builder/site/__tests__/recent-colors.test.ts (4 tests) 3ms
+ ✓ src/lib/builder/commerce/__tests__/payment-providers.test.ts (3 tests) 3ms
+ ✓ src/lib/builder/translations/__tests__/edit-store.test.ts (15 tests) 4ms
+ ✓ src/lib/builder/components/blogAuthor/__tests__/blog-author-localization.test.tsx (3 tests) 4ms
+ ✓ src/components/builder/canvas/__tests__/canvas-interaction-smoothness.test.ts (19 tests) 4ms
+ ✓ src/data/__tests__/home-achievements-factual-claims.test.ts (24 tests) 4ms
+ ✓ src/lib/__tests__/public-intent-search.test.ts (4 tests) 4ms
+ ✓ src/lib/builder/components/anchorMenu/__tests__/anchor-menu-items.test.tsx (5 tests) 4ms
+ ✓ src/lib/consultation/__tests__/copy-email.test.ts (6 tests) 4ms
+ ✓ src/lib/builder/canvas/__tests__/verified-consultation-guide-channels.test.ts (5 tests) 4ms
+ ✓ src/app/__tests__/fonts.test.ts (9 tests) 4ms
+ ✓ src/lib/builder/__tests__/datasets-visitor-filters.test.ts (22 tests) 3ms
+ ✓ src/lib/__tests__/seo-hreflang-locales.test.ts (8 tests) 4ms
+ ✓ src/components/__tests__/hero-search-visible-anchor.test.ts (18 tests) 3ms
+ ✓ src/lib/consultation/__tests__/verified-contact-copy.test.ts (3 tests) 2ms
+ ✓ src/lib/builder/__tests__/persistence-backend.test.ts (2 tests) 5ms
+ ✓ src/components/builder/canvas/__tests__/ComponentLibraryRemapNotice.test.tsx (2 tests) 3ms
+ ✓ src/lib/builder/audit/__tests__/release-audit.test.ts (9 tests) 3ms
+ ✓ src/components/builder/canvas/__tests__/site-header-responsive-contract.test.ts (5 tests) 3ms
+ ✓ src/lib/ai-intake/__tests__/http.test.ts (7 tests) 3ms
+ ✓ src/components/builder/canvas/__tests__/draft-conflict-ui-contract.test.ts (2 tests) 2ms
+ ✓ src/lib/builder/canvas/__tests__/insights-compact-layout.test.ts (3 tests) 3ms
+ ✓ src/components/__tests__/year-end-event-popup-suppression.test.ts (10 tests) 3ms
+ ✓ src/lib/builder/canvas/__tests__/reference-guides.test.ts (25 tests) 3ms
+ ✓ src/data/__tests__/intent-pages-ja.test.ts (22 tests) 3ms
+ ✓ src/components/builder/dev/__tests__/code-assistant-copy.test.ts (3 tests) 1ms
+ ✓ src/components/builder/canvas/__tests__/ComponentLibraryPanelControls.test.tsx (1 test) 3ms
+ ✓ src/lib/__tests__/indexnow.test.ts (4 tests) 3ms
+ ✓ src/components/builder/canvas/__tests__/page-switcher-helpers.test.ts (8 tests) 3ms
+ ✓ src/lib/builder/translations/__tests__/rich-text-edit-store.test.ts (2 tests) 4ms
+ ✓ src/components/builder/canvas/__tests__/repeater-template-binding-locks.test.ts (1 test) 6ms
+ ✓ src/lib/builder/bookings/__tests__/manage-token.test.ts (6 tests) 3ms
+ ✓ src/lib/__tests__/columns-zh-traffic-012.test.ts (9 tests) 3ms
+ ✓ src/components/builder/editor/__tests__/theme-text-preset-picker.test.tsx (1 test) 3ms
+ ✓ src/lib/services/__tests__/international-public-copy.test.ts (5 tests) 3ms
+ ✓ src/components/builder/canvas/__tests__/RepeaterTemplateChildBadgeGroupedChipSelection.test.tsx (1 test) 3ms
+ ✓ src/lib/builder/marketing/__tests__/subscriber-consent.test.ts (3 tests) 3ms
+ ✓ src/components/builder/canvas/__tests__/canvas-node-render-styles.test.ts (17 tests) 3ms
+ ✓ src/components/builder/canvas/__tests__/RepeaterMultiRecordPreview.test.tsx (3 tests) 1ms
+ ✓ src/components/builder/notifications/__tests__/notification-inbox-copy.test.ts (1 test) 1ms
+ ✓ src/components/builder/canvas/__tests__/seo-panel-social-copy.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/search/__tests__/public-intent-docs.test.ts (4 tests) 3ms
+ ✓ src/lib/__tests__/columns-ja-investment-004-intro-sync.test.ts (7 tests) 4ms
+ ✓ src/lib/builder/translations/__tests__/rich-text-compact-plus-edit-store.test.ts (1 test) 4ms
+ ✓ src/lib/ai-intake/__tests__/phase2-adapter-boundary.test.ts (1 test) 3ms
+ ✓ src/lib/builder/rich-text/__tests__/render.test.tsx (2 tests) 3ms
+ ✓ src/data/__tests__/attorney-profiles-ja.test.ts (14 tests) 4ms
+ ✓ src/lib/builder/ai-generator/__tests__/section-builder.test.ts (8 tests) 3ms
+ ✓ src/lib/builder/bookings/__tests__/packages.test.ts (5 tests) 4ms
+ ✓ src/lib/builder/commerce/__tests__/tax-shared.test.ts (2 tests) 2ms
+ ✓ src/lib/builder/bookings/calendar-sync/__tests__/oauth-state.test.ts (14 tests) 3ms
+ ✓ src/lib/builder/site/__tests__/publish-consultation-channel-gate.test.ts (1 test) 2ms
+ ✓ src/lib/metrics/__tests__/enrich-events.test.ts (6 tests) 3ms
+ ✓ src/lib/__tests__/columns-en-massage-006-fines.test.ts (22 tests) 3ms
+ ✓ src/lib/builder/translations/__tests__/rich-text-compact-cross-edit-store.test.ts (1 test) 6ms
+ ✓ src/lib/builder/site/__tests__/component-design-presets.test.ts (4 tests) 4ms
+ ✓ src/components/builder/canvas/__tests__/template-thumbnail-renderer.test.tsx (2 tests) 4ms
+ ✓ src/lib/builder/canvas/__tests__/editor-prefs.test.ts (2 tests) 2ms
+ ✓ src/components/builder/canvas/__tests__/page-switcher-copy.test.ts (3 tests) 4ms
+ ✓ src/components/__tests__/header-resize-offset.test.ts (6 tests) 3ms
+ ✓ src/components/builder/editor/__tests__/background-editor-copy.test.ts (3 tests) 2ms
+ ✓ src/lib/builder/format/__tests__/datetime.test.ts (10 tests) 2ms
+ ✓ src/lib/__tests__/columns-ja-investment-001-precheck-caution-sync.test.ts (4 tests) 2ms
+ ✓ src/lib/builder/bookings/__tests__/pricing.test.ts (22 tests) 4ms
+ ✓ src/lib/builder/translations/__tests__/seo-projection.test.ts (4 tests) 2ms
+ ✓ src/lib/builder/sections/__tests__/thumbnail.test.ts (15 tests) 7ms
+ ✓ src/data/__tests__/faq-content-ja-factual-consistency.test.ts (6 tests) 3ms
+ ✓ src/lib/builder/ai-generator/__tests__/brand-voice.test.ts (15 tests | 2 skipped) 3ms
+ ✓ src/components/builder/canvas/__tests__/builder-faq-runtime-context.test.tsx (2 tests) 3ms
+ ✓ src/lib/builder/site/__tests__/legacy-zh-hant-home-offices.test.ts (6 tests) 6ms
+ ✓ src/lib/builder/workspace/__tests__/analytics-aggregate.test.ts (2 tests) 3ms
+ ✓ src/lib/__tests__/columns-faq.test.ts (8 tests) 2ms
+ ✓ src/components/builder/published/__tests__/site-header-nav.test.ts (5 tests) 3ms
+ ✓ src/lib/builder/commerce/__tests__/notifications-shared.test.ts (1 test) 2ms
+ ✓ src/lib/builder/commerce/__tests__/discounts-shared.test.ts (2 tests) 4ms
+ ✓ src/components/builder/canvas/__tests__/RepeaterTemplateChildBadgeUngroup.test.tsx (1 test) 3ms
+ ✓ src/lib/ai-intake/mcp/__tests__/pass-through-schema.test.ts (2 tests) 3ms
+ ✓ src/lib/__tests__/columns-ja-investment-001-subsidiary-paragraph-sync.test.ts (6 tests) 2ms
+ ✓ src/components/builder/canvas/__tests__/RepeaterTemplateChildFieldRail.test.tsx (1 test) 3ms
+ ✓ src/lib/builder/__tests__/code-block-component.test.ts (2 tests) 3ms
+ ✓ src/app/(builder)/[locale]/admin-builder/commerce/__tests__/page-permission-contract.test.ts (1 test) 3ms
+ ✓ src/lib/builder/canvas/__tests__/snap.test.ts (14 tests) 3ms
+ ✓ src/lib/builder/translations/__tests__/dashboard-query.test.ts (5 tests) 1ms
+ ✓ src/lib/builder/canvas/__tests__/shortcuts.test.ts (4 tests) 5ms
+ ✓ src/lib/__tests__/columns-ja-investment-011-pif-two-paragraph-sync.test.ts (6 tests) 4ms
+ ✓ src/lib/builder/ai-generator/__tests__/image-prompt-builder.test.ts (12 tests | 1 skipped) 3ms
+ ✓ src/components/builder/published/__tests__/overlayFocus.test.ts (4 tests) 3ms
+ ✓ src/lib/metrics/__tests__/visit-rollup.test.ts (8 tests) 3ms
+ ✓ src/lib/builder/site/__tests__/published-responsive-autofit.test.ts (6 tests) 8ms
+ ✓ src/lib/builder/canvas/__tests__/seed-locale-isolation.test.ts (1 test) 29575ms
+   ✓ seedSitePages locale isolation > seeds ko, zh-hant, and en homes into one isolated site without clobbering each other  29575ms
+ ✓ src/lib/builder/commerce/__tests__/shipping-rules-copy.test.ts (1 test) 1ms
+ ✓ src/components/builder/canvas/elements/__tests__/ButtonElement.test.tsx (1 test) 3ms
+ ✓ src/components/builder/editor/__tests__/asset-library-grid-copy.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/bookings/calendar-sync/__tests__/recurring-event-rrule.test.ts (21 tests) 3ms
+ ✓ src/lib/builder/site/__tests__/en-home-copy.test.ts (18 tests) 3ms
+ ✓ src/lib/builder/site/__tests__/responsive-stylesheet.test.ts (7 tests) 4ms
+ ✓ src/lib/builder/bookings/__tests__/bookings-copy.test.ts (17 tests) 3ms
+ ✓ src/lib/__tests__/columns-ja-investment-001-intro-sync.test.ts (6 tests) 3ms
+ ✓ src/lib/builder/canvas/__tests__/history.test.ts (4 tests) 3ms
+ ✓ src/lib/builder/bookings/calendar-sync/__tests__/encryption.test.ts (3 tests) 3ms
+ ✓ src/lib/builder/ops/__tests__/logs-aggregator.test.ts (1 test) 2ms
+ ✓ src/components/builder/canvas/__tests__/RepeaterTemplateChildBadgeGroupDuplicate.test.tsx (1 test) 3ms
+ ✓ src/lib/builder/commerce/__tests__/categories-api-copy.test.ts (1 test) 1ms
+ ✓ src/components/builder/__tests__/dynamic-preview-native-images.test.ts (4 tests) 3ms
+ ✓ src/lib/builder/components/siteSearch/__tests__/site-search-copy.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/live-chat/__tests__/admin-copy.test.ts (4 tests) 2ms
+ ✓ src/data/__tests__/service-details-ja-civil.test.ts (5 tests) 3ms
+ ✓ src/components/builder/canvas/__tests__/component-library-copy.test.ts (3 tests) 3ms
+ ✓ src/lib/builder/animations/__tests__/animation-render.test.ts (4 tests) 2ms
+ ✓ src/lib/builder/bookings/__tests__/booking-manage-copy.test.ts (1 test) 1ms
+ ✓ src/lib/builder/translations/providers/__tests__/diagnostics.test.ts (3 tests) 2ms
+ ✓ src/lib/__tests__/columns-ja-massage-006-shaving.test.ts (17 tests) 5ms
+ ✓ src/lib/__tests__/columns-ja-labor-014-intro-closing-sync.test.ts (9 tests) 3ms
+ ✓ src/lib/builder/canvas/__tests__/office-locations.test.ts (6 tests) 3ms
+ ✓ src/app/[locale]/__tests__/residual-consultation-cta.test.ts (8 tests) 2ms
+ ✓ src/lib/builder/seo/__tests__/validation-copy.test.ts (3 tests) 3ms
+ ✓ src/components/builder/canvas/__tests__/sandbox-editor-rail-copy.test.ts (3 tests) 2ms
+ ✓ src/lib/builder/marketing/__tests__/template-renderer.test.ts (7 tests) 3ms
+ ✓ src/components/builder/cms/__tests__/cms-dynamic-item-lifecycle-policy-presets.test.ts (8 tests) 2ms
+ ✓ src/data/__tests__/intent-pages-en.test.ts (10 tests) 3ms
+ ✓ src/lib/builder/publish-gate/__tests__/translation-checks.test.ts (3 tests) 4ms
+ ✓ src/lib/builder/site/__tests__/published-node-frame.test.ts (16 tests) 3ms
+ ✓ src/components/builder/canvas/__tests__/professional-builder-chrome.test.ts (3 tests) 3ms
+ ✓ src/lib/consultation/__tests__/public-contact.test.ts (3 tests) 2ms
+ ✓ src/lib/builder/translations/__tests__/rich-text-smart-quotes.test.ts (1 test) 2ms
+ ✓ src/lib/builder/site/__tests__/mobile-schema.test.ts (5 tests) 2ms
+ ✓ src/lib/builder/commerce/__tests__/checkout-api-copy.test.ts (1 test) 1ms
+ ✓ src/lib/builder/ai-generator/__tests__/text-assistant.test.ts (7 tests) 2ms
+ ✓ src/lib/builder/translations/__tests__/publish-warnings.test.ts (5 tests) 2ms
+ ✓ src/components/__tests__/decorative-video-server-copy.test.tsx (5 tests) 2ms
+ ✓ src/lib/builder/__tests__/dynamic-template-publish-coordinator.test.ts (2 tests) 3ms
+ ✓ src/lib/builder/site/__tests__/identity.test.ts (19 tests) 4ms
+ ✓ src/components/builder/editor/__tests__/editor-badge-render-contract.test.ts (5 tests) 16ms
+ ✓ src/components/builder/translations/__tests__/translation-editor-segment-review.test.ts (11 tests) 19ms
+ ✓ src/data/__tests__/firm-introduction-ja.test.ts (4 tests) 3ms
+ ✓ src/lib/metrics/client/__tests__/contact-intent.test.ts (19 tests) 2ms
+ ✓ src/lib/builder/__tests__/links.test.ts (17 tests) 2ms
+ ✓ src/data/__tests__/service-details-ja-ip.test.ts (7 tests) 2ms
+ ✓ src/data/__tests__/intent-pages-en-growth.test.ts (5 tests) 2ms
+ ✓ src/app/[locale]/login/__tests__/safe-next.test.ts (42 tests) 2ms
+ ✓ src/data/__tests__/contact-page-content-ja.test.ts (11 tests) 6ms
+ ✓ src/lib/builder/a11y/__tests__/a11y-checker-copy.test.ts (12 tests) 6ms
+ ✓ src/data/__tests__/service-details-ja-labor.test.ts (5 tests) 2ms
+ ✓ src/lib/builder/site/__tests__/cms-runtime.test.ts (5 tests) 3ms
+ ✓ src/components/builder/seo/__tests__/seo-dashboard-copy.test.ts (3 tests) 2ms
+ ✓ src/lib/builder/components/__tests__/public-widget-design.test.ts (4 tests) 3ms
+ ✓ src/data/__tests__/service-details-ja-family.test.ts (5 tests) 3ms
+ ✓ src/data/__tests__/international-guidance-privacy-disclosure.test.ts (7 tests) 2ms
+ ✓ src/lib/builder/site/__tests__/heuristic-defaults.test.ts (27 tests) 2ms
+ ✓ src/lib/insights/__tests__/archive-copy.test.ts (11 tests) 3ms
+ ✓ src/lib/builder/marketing/__tests__/marketing-api-copy.test.ts (3 tests) 1ms
+ ✓ src/lib/__tests__/localized-page-titles.test.ts (11 tests) 2ms
+ ✓ src/components/builder/cms/__tests__/cms-dynamic-linked-pages-model.test.ts (5 tests) 2ms
+ ✓ src/lib/builder/site/__tests__/page-resolution.test.ts (12 tests) 4ms
+ ✓ src/lib/builder/site/__tests__/standard-pages.test.ts (6 tests) 2ms
+ ✓ src/lib/builder/site/__tests__/custom-code.test.ts (10 tests) 2ms
+ ✓ src/components/builder/editor/__tests__/text-controls-copy.test.ts (1 test) 2ms
+ ✓ src/components/builder/canvas/__tests__/selected-site-routing-contract.test.ts (1 test) 2ms
+ ✓ src/lib/builder/templates/__tests__/filters.test.ts (5 tests) 2ms
+ ✓ src/components/builder/editor/__tests__/advanced-pickers-design.test.ts (4 tests) 3ms
+ ✓ src/components/builder/canvas/__tests__/canvas-shortcuts-copy.test.ts (4 tests) 4ms
+ ✓ src/lib/builder/__tests__/recent-nav.test.ts (4 tests) 2ms
+ ✓ src/lib/builder/experiments/__tests__/assignment-token.test.ts (4 tests) 4ms
+ ✓ src/components/builder/canvas/__tests__/sandbox-page-chrome-copy.test.ts (7 tests) 2ms
+ ✓ src/lib/builder/storage/__tests__/blob-env-guard.test.ts (5 tests) 2ms
+ ✓ src/lib/builder/canvas/__tests__/legacy-contact-scaffold.test.ts (17 tests) 2ms
+ ✓ src/components/__tests__/floating-ai-quick-replies-contact.test.ts (5 tests) 1ms
+ ✓ src/lib/builder/search/__tests__/search.test.ts (7 tests) 3ms
+ ✓ src/lib/builder/collab/__tests__/presence-store.test.ts (4 tests) 3ms
+ ✓ src/lib/builder/translations/__tests__/dashboard-coverage.test.ts (1 test) 2ms
+ ✓ src/components/__tests__/search-overlay-layering.test.ts (3 tests) 2ms
+ ✓ src/lib/__tests__/columns-ja-investment-001-faq3-direct-answer-sync.test.ts (4 tests) 2ms
+ ✓ src/lib/__tests__/columns-ja-investment-001-branch-sentence-sync.test.ts (4 tests) 2ms
+ ✓ src/lib/builder/__tests__/redirects-edge.test.ts (2 tests) 2ms
+ ✓ src/lib/builder/ai-generator/__tests__/designer-scoring.test.ts (2 tests) 2ms
+ ✓ src/data/__tests__/privacy-policy-operational-facts.test.ts (8 tests) 2ms
+ ✓ src/lib/builder/live-chat/__tests__/app-settings.test.ts (4 tests) 2ms
+ ✓ src/lib/ai-intake/__tests__/upstash.test.ts (8 tests) 2ms
+ ✓ src/lib/builder/security/__tests__/role-permissions.test.ts (10 tests) 3ms
+ ✓ src/lib/builder/ops/__tests__/logs-view.test.ts (3 tests) 2ms
+ ✓ src/lib/ai-intake/__tests__/discovery.test.ts (5 tests) 2ms
+ ✓ src/components/builder/canvas/__tests__/compact-builder-shell.test.ts (3 tests) 2ms
+ ✓ src/lib/builder/bookings/__tests__/calendar-invite.test.ts (1 test) 2ms
+ ✓ src/components/builder/cms/__tests__/cms-dynamic-item-route-mutation-config.test.ts (9 tests) 2ms
+ ✓ src/lib/builder/translations/__tests__/rich-text-symbol-separators.test.ts (5 tests) 2ms
+ ✓ src/lib/builder/columns/__tests__/merge-frontmatter.test.ts (5 tests) 2ms
+ ✓ src/lib/__tests__/local-business-signals.test.ts (3 tests) 2ms
+ ✓ src/components/builder/canvas/__tests__/canvas-stage-nodes-copy.test.ts (3 tests) 1ms
+ ✓ src/components/builder/canvas/__tests__/sandbox-inspector-panel-copy.test.ts (3 tests) 4ms
+ ✓ src/lib/builder/site/__tests__/navigation.test.ts (4 tests) 3ms
+ ✓ src/lib/builder/site/__tests__/localized-settings.test.ts (4 tests) 2ms
+ ✓ src/lib/__tests__/columns-zh-massage-006-wording.test.ts (11 tests) 2ms
+ ✓ src/data/__tests__/canonical-public-landing-identity.test.ts (2 tests) 2ms
+ ✓ src/lib/__tests__/seo-howto-jsonld.test.ts (5 tests) 2ms
+ ✓ src/components/builder/canvas/__tests__/inline-text-smoothness-close-controller.test.ts (4 tests) 2ms
+ ✓ src/lib/builder/security/__tests__/permissions.test.ts (9 tests) 2ms
+ ✓ src/components/builder/canvas/__tests__/sandbox-data-binding-panel-copy.test.ts (3 tests) 2ms
+ ✓ src/lib/builder/__tests__/dataset-binding-editor-model.test.ts (1 test) 2ms
+ ✓ src/components/builder/editor/__tests__/link-picker-copy.test.ts (2 tests) 2ms
+ ✓ src/components/__tests__/consultation-cta-accessibility.test.ts (8 tests) 2ms
+ ✓ src/data/__tests__/faq-divorce-legal-consistency.test.ts (4 tests) 1ms
+ ✓ src/components/builder/canvas/__tests__/canvas-feedback-geometry.test.ts (8 tests) 2ms
+ ✓ src/components/builder/canvas/__tests__/repeater-template-copy.test.ts (1 test) 2ms
+ ✓ src/lib/consultation/__tests__/public-contact-growth.test.ts (3 tests) 2ms
+ ✓ src/components/builder/published/__tests__/motion-timeline-runtime.test.ts (4 tests) 2ms
+ ✓ src/lib/builder/commerce/__tests__/shipping-shared.test.ts (2 tests) 2ms
+ ✓ src/components/faq/__tests__/faq-public-explorer-typography.test.ts (6 tests) 1ms
+ ✓ src/lib/builder/storage/__tests__/persistence-errors.test.ts (5 tests) 2ms
+ ✓ src/components/builder/canvas/__tests__/seo-panel-advanced-copy.test.ts (3 tests) 1ms
+ ✓ src/components/builder/canvas/__tests__/sandbox-inspector-layout-tab-copy.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/columns/__tests__/sanitize-body-html.test.ts (3 tests) 4ms
+ ✓ src/lib/metrics/client/__tests__/dwell-tracker.test.ts (10 tests) 2ms
+ ✓ src/lib/builder/canvas/__tests__/store-duplicate-refs.test.ts (1 test) 2ms
+ ✓ src/lib/builder/canvas/__tests__/repeater-quick-edit.test.ts (4 tests) 2ms
+ ✓ src/lib/builder/seo/__tests__/route-copy.test.ts (3 tests) 2ms
+ ✓ src/lib/builder/site/__tests__/runtime-items.test.ts (2 tests) 2ms
+ ✓ src/components/builder/editor/__tests__/color-picker-copy.test.ts (3 tests) 2ms
+ ✓ src/lib/builder/notifications/__tests__/notification-link.test.ts (20 tests) 2ms
+ ✓ src/app/[locale]/__tests__/canonical-public-route-identity.test.ts (2 tests) 3ms
+ ✓ src/lib/builder/live-chat/__tests__/widget-copy.test.ts (4 tests) 2ms
+ ✓ src/lib/builder/marketing/__tests__/marketing-click-signature.test.ts (3 tests) 3ms
+ ✓ src/lib/builder/translations/__tests__/rich-text-unicode-separator.test.ts (2 tests) 3ms
+ ✓ src/lib/builder/domains/__tests__/storage.test.ts (3 tests) 2ms
+ ✓ src/lib/builder/canvas/__tests__/clipboard-refs.test.ts (1 test) 2ms
+ ✓ src/lib/builder/marketing/__tests__/deliverability.test.ts (3 tests) 2ms
+ ✓ src/components/builder/canvas/__tests__/site-settings-copy.test.ts (3 tests) 2ms
+ ✓ src/lib/builder/search/__tests__/search-api-copy.test.ts (1 test) 2ms
+ ✓ src/components/builder/canvas/__tests__/responsive-ai-copy.test.ts (3 tests) 2ms
+ ✓ src/lib/builder/site/__tests__/contrast.test.ts (7 tests) 2ms
+ ✓ src/lib/builder/canvas/__tests__/document-diff-copy.test.ts (3 tests) 2ms
+ ✓ src/lib/builder/bookings/__tests__/availability-templates.test.ts (2 tests) 1ms
+ ✓ src/lib/builder/translations/providers/__tests__/smoke-summary.test.ts (4 tests) 2ms
+ ✓ src/lib/__tests__/public-route-policy-ja-investment.test.ts (16 tests) 2ms
+ ✓ src/lib/builder/__tests__/cms-route-actor.test.ts (3 tests) 2ms
+ ✓ src/components/builder/canvas/__tests__/navigation-copy.test.ts (3 tests) 1ms
+ ✓ src/components/builder/canvas/__tests__/element-comments-panel-copy.test.ts (4 tests) 2ms
+ ✓ src/lib/builder/site/__tests__/site-api-copy.test.ts (1 test) 2ms
+ ✓ src/lib/builder/columns/__tests__/public-post-filter.test.ts (4 tests) 1ms
+ ✓ src/components/builder/canvas/__tests__/active-canvas-locale-contract.test.ts (1 test) 2ms
+ ✓ src/lib/builder/bookings/__tests__/calendar-url.test.ts (2 tests) 2ms
+ ✓ src/components/builder/canvas/__tests__/seo-panel-hreflang-copy.test.ts (3 tests) 1ms
+ ✓ src/components/builder/canvas/__tests__/sandbox-top-bar-copy.test.ts (3 tests) 1ms
+ ✓ src/data/__tests__/ja-videos-copy.test.ts (3 tests) 2ms
+ ✓ src/components/builder/editor/__tests__/animations-tab-copy.test.ts (3 tests) 2ms
+ ✓ src/components/builder/editor/__tests__/motion-timeline-editor-copy.test.ts (3 tests) 12ms
+ ✓ src/components/builder/translations/__tests__/translation-editor-rich-text-review.test.ts (1 test) 1ms
+ ✓ src/lib/builder/site/__tests__/typography-scale.test.ts (3 tests) 3ms
+ ✓ src/lib/builder/backups/__tests__/registry.test.ts (3 tests) 7ms
+ ✓ src/lib/builder/translations/__tests__/locale-slug.test.ts (9 tests) 6ms
+ ✓ src/lib/builder/__tests__/cms-publish-readiness.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/services/__tests__/services-api-copy.test.ts (1 test) 1ms
+ ✓ src/components/builder/canvas/__tests__/canvas-context-menu-copy.test.ts (3 tests) 1ms
+ ✓ src/components/__tests__/service-detail-mobile-overflow.test.ts (1 test) 2ms
+ ✓ src/components/builder/canvas/__tests__/move-to-page-modal-copy.test.ts (4 tests) 2ms
+ ✓ src/components/builder/editor/__tests__/asset-library-modal-copy.test.ts (3 tests) 2ms
+ ✓ src/lib/builder/__tests__/billing-documents-copy.test.ts (1 test) 5ms
+ ✓ src/components/builder/canvas/__tests__/inline-text-smoothness-typography-escape.test.ts (6 tests) 6ms
+ ✓ src/lib/builder/__tests__/collection-focus.test.ts (3 tests) 1ms
+ ✓ src/components/__tests__/document-locale-sync.test.ts (4 tests) 2ms
+ ✓ src/data/__tests__/insights-archive-order.test.ts (3 tests) 2ms
+ ✓ src/lib/builder/seo/__tests__/validation.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/dev/__tests__/sdk-docs.test.ts (4 tests) 1ms
+ ✓ src/lib/builder/columns/__tests__/serialize-markdown.test.ts (2 tests) 4ms
+ ✓ src/lib/builder/__tests__/datasets-visitor-filters-custom-fields.test.ts (1 test) 3ms
+ ✓ src/lib/builder/site/__tests__/responsive-flow-section-minheight.test.ts (1 test) 2ms
+ ✓ src/lib/builder/commerce/__tests__/payment-webhooks-copy.test.ts (1 test) 1ms
+ ✓ src/app/(builder)/[locale]/builder/__tests__/page.test.ts (2 tests) 2ms
+ ✓ src/components/builder/canvas/__tests__/canvas-stage-geometry.test.ts (3 tests) 2ms
+ ✓ src/lib/builder/commerce/__tests__/orders-api-copy.test.ts (1 test) 1ms
+ ✓ src/lib/builder/portfolio/__tests__/portfolio-api-copy.test.ts (1 test) 1ms
+ ✓ src/lib/builder/faq/__tests__/faq-api-copy.test.ts (4 tests) 2ms
+ ✓ src/lib/builder/__tests__/cms-binding-request.test.ts (6 tests) 1ms
+ ✓ src/lib/builder/security/__tests__/review-sessions-api-copy.test.ts (4 tests) 2ms
+ ✓ src/lib/builder/__tests__/site-href.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/forms/__tests__/conditional.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/__tests__/cms-record-selection.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/security/__tests__/users-api-copy.test.ts (4 tests) 1ms
+ ✓ src/lib/builder/seo/__tests__/robots.test.ts (2 tests) 1ms
+ ✓ src/lib/builder/experiments/__tests__/stats.test.ts (4 tests) 1ms
+ ✓ src/lib/builder/canvas/__tests__/indexes.test.ts (2 tests) 1ms
+ ✓ src/lib/builder/notifications/__tests__/notifications-api-copy.test.ts (1 test) 1ms
+ ✓ src/components/__tests__/footer-link-policy.test.ts (1 test) 2ms
+ ✓ src/lib/builder/apps/__tests__/apps-api-copy.test.ts (1 test) 1ms
+ ✓ src/lib/builder/commerce/__tests__/subscriptions-api-copy.test.ts (1 test) 2ms
+ ✓ src/lib/__tests__/seo-verification.test.ts (2 tests) 1ms
+ ✓ src/lib/builder/canvas/__tests__/responsive-selectable.test.ts (1 test) 1ms
+ ✓ src/lib/builder/bookings/__tests__/seed-staff.test.ts (1 test) 1ms
+ ✓ src/lib/builder/site/__tests__/isolated-locale-home.test.ts (2 tests) 2ms
+ ✓ src/lib/builder/dev/__tests__/logs-export.test.ts (2 tests) 4ms
+ ✓ src/lib/builder/components/faqList/__tests__/faq-list-copy.test.ts (2 tests) 1ms
+ ✓ src/components/builder/canvas/__tests__/canvas-shell-copy.test.ts (1 test) 1ms
+ ✓ src/components/builder/editor/__tests__/asset-library-chrome-copy.test.ts (3 tests) 2ms
+ ✓ src/components/builder/canvas/__tests__/home-insights-card-format.test.ts (5 tests) 1ms
+ ✓ src/lib/builder/webhooks/__tests__/signature.test.ts (5 tests) 1ms
+ ✓ src/lib/builder/bookings/__tests__/reminders.test.ts (3 tests) 2ms
+ ✓ src/components/builder/columns/__tests__/column-preview-parity.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/translations/__tests__/query.test.ts (4 tests) 2ms
+ ✓ src/components/builder/canvas/__tests__/sandbox-layers-panel-copy.test.ts (3 tests) 2ms
+ ✓ src/components/builder/canvas/__tests__/ai-text-assistant-copy.test.ts (3 tests) 3ms
+ ✓ src/lib/builder/domains/__tests__/domains-api-copy.test.ts (1 test) 1ms
+ ✓ src/lib/builder/marketing/templates/__tests__/renderer.test.ts (5 tests) 1ms
+ ✓ src/lib/builder/__tests__/dynamic-record-redirect-custom-cms-page.test.ts (1 test) 1ms
+ ✓ src/components/builder/canvas/__tests__/ai-section-generator-copy.test.ts (3 tests) 9ms
+ ✓ src/components/builder/canvas/__tests__/seo-panel-assistant-copy.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/translations/__tests__/review-summary.test.ts (1 test) 3ms
+ ✓ src/components/builder/canvas/__tests__/seo-panel-copy.test.ts (3 tests) 4ms
+ ✓ src/lib/builder/site/__tests__/typography-resolve.test.ts (5 tests) 2ms
+ ✓ src/lib/builder/templates/_shared/__tests__/responsivize.test.ts (1 test) 1ms
+ ✓ src/lib/builder/translations/__tests__/auto-translate-rich-text.test.ts (1 test) 1ms
+ ✓ src/components/builder/columns/__tests__/column-editor-extensions.test.ts (1 test) 1ms
+ ✓ src/components/builder/canvas/__tests__/sandbox-status-bar-copy.test.ts (3 tests) 1ms
+ ✓ src/components/builder/canvas/__tests__/sandbox-inspector-office-quick-edit-copy.test.ts (3 tests) 1ms
+ ✓ src/components/builder/live-chat/__tests__/inbox-copy.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/site/__tests__/component-variants.test.ts (1 test) 1ms
+ ✓ src/components/builder/canvas/__tests__/canvas-move-bounds.test.ts (5 tests) 1ms
+ ✓ src/lib/builder/crm/__tests__/crm-api-copy.test.ts (1 test) 1ms
+ ✓ src/components/builder/canvas/__tests__/inline-text-editor-copy.test.ts (3 tests) 1ms
+ ✓ src/components/builder/sections/__tests__/saved-sections-panel-contract.test.ts (1 test) 1ms
+ ✓ src/components/builder/canvas/__tests__/seo-panel-basics-copy.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/site/__tests__/style-origin.test.ts (3 tests) 1ms
+ ✓ src/components/builder/cms/__tests__/cms-dynamic-item-policy-library.test.ts (1 test) 1ms
+ ✓ src/components/builder/canvas/__tests__/sandbox-a11y-panel-copy.test.ts (3 tests) 1ms
+ ✓ src/components/builder/canvas/__tests__/undo-stack-timeline-copy.test.ts (3 tests) 1ms
+ ✓ src/components/builder/canvas/__tests__/canvas-zoom-dock-copy.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/workspace/__tests__/shared-cms.test.ts (2 tests) 2ms
+ ✓ src/components/builder/canvas/__tests__/sandbox-inspector-repeater-quick-edit-copy.test.ts (3 tests) 1ms
+ ✓ src/components/builder/canvas/__tests__/sandbox-feedback-copy.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/commerce/__tests__/payment-intents-api-copy.test.ts (1 test) 1ms
+ ✓ src/components/builder/canvas/__tests__/canvas-stage-toolbar-copy.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/workspace/__tests__/workspace-api-copy.test.ts (1 test) 1ms
+ ✓ src/lib/builder/commerce/__tests__/products-api-copy.test.ts (1 test) 1ms
+ ✓ src/components/builder/canvas/__tests__/SandboxModalsRoot.helpers.test.ts (2 tests) 1ms
+ ✓ src/components/builder/canvas/__tests__/version-history-copy.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/members/__tests__/builder-members-api-copy.test.ts (1 test) 1ms
+ ✓ src/lib/builder/site/__tests__/team-breadcrumb-label.test.ts (3 tests) 2ms
+ ✓ src/lib/builder/columns/__tests__/preview-parity.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/experiments/__tests__/experiments-api-copy.test.ts (1 test) 1ms
+ ✓ src/lib/builder/site/__tests__/site-name.test.ts (4 tests) 1ms
+ ✓ src/lib/builder/events/__tests__/events-api-copy.test.ts (1 test) 1ms
+ ✓ src/components/builder/canvas/__tests__/canvas-home-stage-height-contract.test.ts (1 test) 1ms
+ ✓ src/lib/builder/commerce/__tests__/currency-settings-copy.test.ts (1 test) 1ms
+ ✓ src/components/__tests__/editor-outline-color.test.ts (1 test) 1ms
+ ✓ src/components/builder/editor/__tests__/content-tab-copy.test.ts (3 tests) 3ms
+ ✓ src/lib/builder/collab/__tests__/collab-api-copy.test.ts (1 test) 2ms
+ ✓ src/lib/builder/workspace/__tests__/shared-asset-usage.test.ts (1 test) 2ms
+ ✓ src/lib/builder/commerce/__tests__/notifications-api-copy.test.ts (1 test) 1ms
+ ✓ src/components/builder/cms/__tests__/cms-dynamic-item-policy-rollout.test.ts (1 test) 1ms
+ ✓ src/lib/builder/blog/__tests__/blog-api-copy.test.ts (1 test) 1ms
+ ✓ src/components/builder/canvas/__tests__/canvas-selection-helpers.test.ts (1 test) 1ms
+ ✓ src/lib/builder/commerce/__tests__/tax-rules-copy.test.ts (1 test) 2ms
+ ✓ src/lib/builder/webhooks/__tests__/webhooks-api-copy.test.ts (1 test) 1ms
+ ✓ src/components/builder/canvas/__tests__/inline-text-smoothness-entry-target.test.ts (4 tests) 2ms
+ ✓ src/lib/builder/members/__tests__/members-api-copy.test.ts (1 test) 1ms
+ ✓ src/lib/builder/commerce/__tests__/cart-recovery-api-copy.test.ts (1 test) 1ms
+ ✓ src/lib/builder/bookings/__tests__/stripe-verify.test.ts (3 tests) 1ms
+ ✓ src/lib/builder/columns/__tests__/columns-api-copy.test.ts (1 test) 1ms
+ ✓ src/components/builder/published/__tests__/published-site-header-copy.test.ts (2 tests) 1ms
+ ✓ src/components/builder/canvas/__tests__/site-settings-presets-copy.test.ts (2 tests) 2ms
+ ✓ src/lib/builder/seo/__tests__/structured-data.test.ts (1 test) 2ms
+ ✓ src/lib/builder/__tests__/hrefs.test.ts (1 test) 1ms
+ ✓ src/components/builder/canvas/__tests__/SelectedRepeaterTemplateChildControls.test.ts (2 tests) 1ms
+ ✓ src/lib/builder/canvas/__tests__/seed-composite-integration.test.ts (5 tests) 41394ms
+   ✓ seedSitePages end-to-end publishes live-reflecting standard page composites > seeds + publishes the about page as the live legacy composite  10929ms
+   ✓ seedSitePages end-to-end publishes live-reflecting standard page composites > seeds services with a live published composite and editable decomposed draft  9798ms
+   ✓ seedSitePages end-to-end publishes live-reflecting standard page composites > repairs a composite services draft back to the editable decomposed services draft  9227ms
+   ✓ seedSitePages end-to-end publishes live-reflecting standard page composites > repairs current-version decomposed standard pages back to live composites  6434ms
+   ✓ seedSitePages end-to-end publishes live-reflecting standard page composites > repairs current-version decomposed reviews pages to the live composite  4994ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/components/__tests__/ja-column-locale-integrity.test.tsx > Japanese column locale integrity > keeps public locale calls direct while preserving builder-only locale boundaries
+AssertionError: expected 'import type { CSSProperties } from \'…' to contain 'const faqJsonLd = showFaq ? buildFaqJ…'
+
+- Expected
++ Received
+
+- const faqJsonLd = showFaq ? buildFaqJsonLd(faqItems, locale) : null;
++ import type { CSSProperties } from 'react';
++ import type { Metadata } from 'next';
++ import { notFound } from 'next/navigation';
++ import Link from 'next/link';
++ import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
++ import { normalizeSiteLocale, type SiteLocale, toBuilderLocale } from '@/lib/locales';
++ import { getAttorneyProfilePath } from '@/data/attorney-profiles';
++ import { fileBackedColumnAlternateLocales, getAllColumnPosts, getColumnPost } from '@/lib/columns';
++ import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
++ import ColumnContent from '@/components/ColumnContent';
++ import JsonLd from '@/components/JsonLd';
++ import {
++   isBuilderDynamicTemplateBlockVisible,
++   readBuilderDynamicTemplatePublishedBlockVisibility,
++ } from '@/lib/builder/dynamic-template-drafts';
++ import {
++   CONSULTATION_EMAIL,
++   getConsultationPublicMailto,
++ } from '@/lib/consultation/public-contact';
++ import { resolveTypography } from '@/lib/builder/columns/typography';
++ import type { ColumnTypography } from '@/lib/builder/columns/types';
++ import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildFaqJsonLd, buildSeoMetadata } from '@/lib/seo';
++ import { isGuidanceLocale4 } from '@/lib/public-guidance';
++ import { guidancePublicPath } from '@/lib/public-guidance';
++ import { guidanceContent } from '@/data/international-guidance-content';
++
++ export const dynamic = 'force-dynamic';
++
++ const copy: Record<SiteLocale, {
++   backLabel: string;
++   attorneyHeading: string;
++   guideTitle: string;
++   consultationTitle: string;
++   consultationText: string;
++   consultationButton: string;
++   faqHeading: string;
++ }> = {
++   ko: {
++     backLabel: '← 칼럼 목록으로',
++     attorneyHeading: '이 글 검토 변호사',
++     guideTitle: '함께 보는 주제',
++     consultationTitle: '상담 예약',
++     consultationText: '대만 법률 관련 궁금한 점이 있으시면 언제든 문의해 주세요.',
++     consultationButton: '문의하기',
++     faqHeading: '자주 묻는 질문',
++   },
++   'zh-hant': {
++     backLabel: '← 返回專欄列表',
++     attorneyHeading: '審閱本文的律師',
++     guideTitle: '延伸主題',
++     consultationTitle: '預約諮詢',
++     consultationText: '如有任何台灣法律相關問題，歡迎隨時聯繫我們。',
++     consultationButton: '聯絡我們',
++     faqHeading: '常見問題',
++   },
++   en: {
++     backLabel: '← Back to columns',
++     attorneyHeading: 'Reviewing Attorney',
++     guideTitle: 'Related Topics',
++     consultationTitle: 'Book Consultation',
++     consultationText: 'If you have any questions about Taiwan law, feel free to contact us.',
++     consultationButton: 'Contact Us',
++     faqHeading: 'Frequently Asked Questions',
++   },
++   ja: {
++     backLabel: '← コラム一覧へ',
++     attorneyHeading: '本稿の監修弁護士',
++     guideTitle: '関連トピック',
++     consultationTitle: '相談予約',
++     consultationText: '台湾法務についてご不明点があれば、お気軽にお問い合わせください。',
++     consultationButton: 'お問い合わせ',
++     faqHeading: 'よくある質問',
++   },
++ };
++
++ export async function generateMetadata(props: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
++   const params = await props.params;
++
++   if (isGuidanceLocale4(params.locale)) {
++     const post = getColumnPost(params.slug, params.locale);
++     if (!post) return {};
++     return buildSeoMetadata({
++       locale: params.locale,
++       title: post.title,
++       description: post.summary,
++       path: `/columns/${post.slug}`,
++       keywords: [post.title, post.categoryLabel, 'Taiwan law'],
++       images: post.featuredImage,
++       type: 'article',
++       noindex: false,
++       alternateLocales: fileBackedColumnAlternateLocales(post.slug),
++     });
++   }
++
++   const locale = normalizeSiteLocale(params.locale);
++
++   // Try file-based first (fast, sync), then fall back to blob-aware reader.
++   // Japanese is file-backed only (no builder locale contract for ja).
++   let post = getColumnPost(params.slug, locale);
++   if (!post && locale !== 'ja') {
++     const allPosts = await getAllColumnPostsIncludingBlob(toBuilderLocale(locale));
++     post = allPosts.find((p) => p.slug === params.slug);
++   }
++
++   if (!post) {
++     return {};
++   }
++
++   return buildSeoMetadata({
++     locale,
++     title: post.title,
++     description: post.summary,
++     path: `/columns/${post.slug}`,
++     keywords: [
++       post.title,
++       post.categoryLabel,
++       locale === 'ko'
++         ? '대만 법률'
++         : locale === 'zh-hant'
++           ? '台灣法律'
++           : locale === 'ja'
++             ? '台湾法律'
++             : 'Taiwan law',
++     ],
++     images: post.featuredImage,
++     type: 'article',
++     noindex: false,
++     alternateLocales: fileBackedColumnAlternateLocales(post.slug),
++   });
++ }
++
++ export default async function ColumnDetailPage(props: { params: Promise<{ locale: string; slug: string }> }) {
++   const params = await props.params;
++   const rawLocale = params.locale;
++   const guidanceLocale = isGuidanceLocale4(rawLocale) ? rawLocale : null;
++   const locale: SiteLocale = guidanceLocale ? 'en' : normalizeSiteLocale(rawLocale);
++   const urlLocale = guidanceLocale ?? locale;
++
++   // Get all posts including Blob — single source of truth for content + prev/next
++   // Japanese + new four: file-backed only (no builder/Blob contract).
++   const allPosts =
++     locale === 'ja' || guidanceLocale
++       ? getAllColumnPosts(urlLocale)
++       : await getAllColumnPostsIncludingBlob(toBuilderLocale(locale));
++   const post = allPosts.find((p) => p.slug === params.slug);
++   if (!post) return notFound();
++
++   const currentIndex = allPosts.indexOf(post);
++   const prevPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
++   const nextPost = currentIndex >= 0 && currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
++
++   const t = copy[locale];
++   const authorName =
++     locale === 'ko'
++       ? '증준외 변호사'
++       : locale === 'zh-hant'
++         ? '曾雋崴律師'
++         : locale === 'ja'
++           ? '曾雋崴弁護士'
++           : 'Attorney Wei Tseng';
++   const authorProfilePath = getAttorneyProfilePath(locale);
++   const authorHref = guidanceLocale
++     ? guidancePublicPath(guidanceLocale, 'lawyers')
++     : authorProfilePath;
++   const guideLinks =
++     guidanceLocale
++       ? [
++           { href: guidancePublicPath(guidanceLocale, 'services'), label: guidanceContent[guidanceLocale].nav.services },
++           { href: guidancePublicPath(guidanceLocale, 'lawyers'), label: guidanceContent[guidanceLocale].nav.lawyers },
++         ]
++       : locale === 'ja'
++       ? post.category === 'formation'
++         ? [
++             { href: '/ja/services#investment', label: '台湾投資・会社設立' },
++             { href: '/ja/lawyers/wei-tseng', label: '曾雋崴弁護士' },
++           ]
++         : post.category === 'case'
++           ? [
++               { href: '/ja/services#civil', label: '台湾の民事紛争' },
++               { href: '/ja/lawyers/wei-tseng', label: '曾雋崴弁護士' },
++             ]
++           : [
++               { href: '/ja/services', label: '取扱業務' },
++               { href: '/ja/lawyers/wei-tseng', label: '曾雋崴弁護士' },
++             ]
++       : post.category === 'formation'
++         ? [
++             { href: `/${locale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립' : locale === 'zh-hant' ? '台灣公司設立' : 'Taiwan Company Setup' },
++             { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan Lawyer' },
++           ]
++         : post.category === 'case'
++           ? [
++               { href: `/${locale}/taiwan-litigation-lawyer`, label: locale === 'ko' ? '대만 소송' : locale === 'zh-hant' ? '台灣訴訟' : 'Taiwan Litigation' },
++               { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan Lawyer' },
++             ]
++           : [
++               { href: `/${locale}/taiwan-lawyer`, label: locale === 'ko' ? '대만 변호사' : locale === 'zh-hant' ? '台灣律師' : 'Taiwan Lawyer' },
++               { href: `/${locale}/taiwan-company-setup-lawyer`, label: locale === 'ko' ? '대만 회사설립' : locale === 'zh-hant' ? '台灣公司設立' : 'Taiwan Company Setup' },
++             ];
++
++   const prevLabel = locale === 'ko' ? '← 이전 칼럼' : locale === 'zh-hant' ? '← 上一篇' : locale === 'ja' ? '← 前のコラム' : '← Previous';
++   const nextLabel = locale === 'ko' ? '다음 칼럼 →' : locale === 'zh-hant' ? '下一篇 →' : locale === 'ja' ? '次のコラム →' : 'Next →';
++
++   // FAQ (FAQPage schema + plain-text "자주 묻는 질문" section). Only the two
++   // indexed, hand-authored locales (ko / zh-hant) carry an `faq` array; the
++   // en route overlays ko frontmatter onto translated copy, so we skip it there
++   // to avoid rendering Korean answers under an English heading.
++   const faqItems = post.faq ?? [];
++   // File-backed EN columns now carry translated FAQ; render for all locales with FAQ data.
++   const showFaq = faqItems.length > 0;
++   // `locale` is normalized to `en` on the guidance routes so the SiteLocale-keyed
++   // copy tables above resolve, which made `/vi/columns/*` publish an FAQPage
++   // declaring `inLanguage: "en"` over Vietnamese answers. `urlLocale` is the
++   // language actually on the page, the same value the Article node already uses.
++   const faqJsonLd = showFaq ? buildFaqJsonLd(faqItems, urlLocale) : null;
++
++   const templateVisibility = await readBuilderDynamicTemplatePublishedBlockVisibility(
++     'columns.item-template',
++     toBuilderLocale(locale)
++   );
++   const showHero = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.item.hero');
++   const showBody = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.item.body');
++   const showSeo = isBuilderDynamicTemplateBlockVisible(templateVisibility, 'columns.item.seo');
++
++   const typography = resolveTypography(
++     toBuilderLocale(locale),
++     (post.typography as ColumnTypography | undefined)
++       ?? (post.typographyPresetId
++         ? { presetId: post.typographyPresetId } as ColumnTypography
++         : undefined),
++   );
++
++   return (
++     <>
++       {showSeo ? (
++         <>
++           <JsonLd
++             data={buildBreadcrumbJsonLd(locale, [
++               { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home', path: `/${urlLocale}` },
++               { name: locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '專欄' : locale === 'ja' ? 'コラム' : 'Columns', path: `/${urlLocale}/columns` },
++               { name: post.title, path: `/${urlLocale}/columns/${post.slug}` },
++             ])}
++           />
++           <JsonLd
++             data={buildArticleJsonLd({
++               locale: urlLocale,
++               title: post.title,
++               description: post.summary,
++               path: `/${urlLocale}/columns/${post.slug}`,
++               image: post.featuredImage,
++               datePublished: post.publicationDate || post.date,
++               dateModified: post.date,
++               authorName,
++               authorUrl: authorHref,
++               authorSameAs: [
++                 'https://www.hoveringlaw.com.tw/en/wei.html',
++                 'https://www.wei-wei-lawyer.com/lawyertseng',
++                 'https://www.youtube.com/@weilawyer',
++                 'https://blog.naver.com/wei_lawyer/223461663913',
++               ],
++               authorAlternateNames: ['증준외', '曾雋崴', 'Wei Tseng'],
++               articleSection: post.categoryLabel,
++             })}
++           />
++         </>
++       ) : null}
++       {showSeo && faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
++       {showHero ? (
++         <section className="blog-hero" data-tone="dark">
++           <div className="blog-hero-bg">
++             {/* eslint-disable-next-line @next/next/no-img-element */}
++             <img src={post.featuredImage} alt={post.title} className="blog-hero-img" />
++             <div className="blog-hero-overlay" />
++           </div>
++           <div className="container blog-hero-inner">
++             <Link href={`/${urlLocale}/columns`} className="blog-back-link">{t.backLabel}</Link>
++             <span className="blog-category-badge">{post.categoryLabel}</span>
++             <h1 className="blog-hero-title">{post.title}</h1>
++             <div className="blog-meta">
++               <Link href={authorHref} className="link-underline">
++                 {authorName}
++               </Link>
++               <time>{post.dateDisplay || post.date}</time>
++               {post.readTime ? <span>{post.readTime}</span> : null}
++             </div>
++           </div>
++         </section>
++       ) : null}
++
++       {showBody ? (
++         <article className="blog-article">
++           <div className="container blog-container">
++             <div
++               className={`blog-body ${typography.className}`}
++               data-column-typography={typography.presetId}
++               style={typography.cssVars as CSSProperties}
++             >
++               <ColumnContent content={post.content} locale={locale} />
++               {showBody && showFaq ? (
++                 <section className="column-faq" aria-label={t.faqHeading}>
++                   <h2 className="blog-heading column-faq-heading">{t.faqHeading}</h2>
++                   <dl className="column-faq-list">
++                     {faqItems.map((item, index) => (
++                       <div className="column-faq-item" key={`${index}-${item.q}`}>
++                         <dt className="column-faq-question">{item.q}</dt>
++                         <dd className="column-faq-answer">{item.a}</dd>
++                       </div>
++                     ))}
++                   </dl>
++                 </section>
++               ) : null}
++             </div>
++             <aside className="blog-sidebar">
++               <div className="blog-sidebar-card">
++                 <h3 className="blog-sidebar-title">{t.consultationTitle}</h3>
++                 <p className="blog-sidebar-text">{t.consultationText}</p>
++                 <a
++                   href={getConsultationPublicMailto(locale)}
++                   className="button blog-sidebar-btn"
++                   aria-label={`${t.consultationTitle}: ${CONSULTATION_EMAIL}`}
++                 >
++                   {t.consultationButton}
++                 </a>
++               </div>
++               <div className="blog-sidebar-card blog-sidebar-card--attorney">
++                 <AttorneyAuthorityCard locale={locale} heading={t.attorneyHeading} />
++               </div>
++               <div className="blog-sidebar-card">
++                 <h3 className="blog-sidebar-title">{t.guideTitle}</h3>
++                 <ul className="blog-related-list">
++                   {guideLinks.map((item) => (
++                     <li key={item.href}>
++                       <Link href={item.href} className="blog-related-link">
++                         {item.label}
++                       </Link>
++                     </li>
++                   ))}
++                 </ul>
++               </div>
++             </aside>
++           </div>
++         </article>
++       ) : null}
++
++       {/* Prev / Next Navigation */}
++       {showBody && (prevPost || nextPost) && (
++         <nav className="container column-post-nav" style={{
++           display: 'flex',
++           justifyContent: 'space-between',
++           alignItems: 'stretch',
++           gap: '1rem',
++           padding: '2rem 1rem',
++           maxWidth: 900,
++           margin: '0 auto 2rem',
++         }}>
++           {prevPost ? (
++             <Link
++               href={`/${urlLocale}/columns/${prevPost.slug}`}
++               style={{
++                 flex: 1,
++                 padding: '1rem 1.25rem',
++                 borderRadius: 8,
++                 border: '1px solid #e5e7eb',
++                 textDecoration: 'none',
++                 color: '#1f2937',
++                 display: 'flex',
++                 flexDirection: 'column',
++                 gap: '0.25rem',
++                 transition: 'border-color 0.15s',
++               }}
++             >
++               <span style={{ fontSize: '0.8rem', color: '#6b7280' }}>{prevLabel}</span>
++               <span style={{ fontSize: '0.95rem', fontWeight: 600, lineHeight: 1.4 }}>{prevPost.title}</span>
++             </Link>
++           ) : <span style={{ flex: 1 }} />}
++           {nextPost ? (
++             <Link
++               href={`/${urlLocale}/columns/${nextPost.slug}`}
++               style={{
++                 flex: 1,
++                 padding: '1rem 1.25rem',
++                 borderRadius: 8,
++                 border: '1px solid #e5e7eb',
++                 textDecoration: 'none',
++                 color: '#1f2937',
++                 textAlign: 'right',
++                 display: 'flex',
++                 flexDirection: 'column',
++                 alignItems: 'flex-end',
++                 gap: '0.25rem',
++                 transition: 'border-color 0.15s',
++               }}
++             >
++               <span style={{ fontSize: '0.8rem', color: '#6b7280' }}>{nextLabel}</span>
++               <span style={{ fontSize: '0.95rem', fontWeight: 600, lineHeight: 1.4 }}>{nextPost.title}</span>
++             </Link>
++           ) : <span style={{ flex: 1 }} />}
++         </nav>
++       )}
++     </>
++   );
++ }
++
+
+ ❯ src/components/__tests__/ja-column-locale-integrity.test.tsx:151:26
+    149|     expect(detailSource).toContain('const authorProfilePath = getAttor…
+    150|     expect(detailSource).toContain('buildBreadcrumbJsonLd(locale,');
+    151|     expect(detailSource).toContain('const faqJsonLd = showFaq ? buildF…
+       |                          ^
+    152|     expect(detailSource).toContain('href={getConsultationPublicMailto(…
+    153|     expect(detailSource).toContain("locale === 'ja' ? 'ホーム' : 'Home'");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/lib/builder/security/__tests__/qa-runtime-attestation.test.ts > qa runtime attestation v3 > normalizes macOS-style ancestor aliases but rejects a symlink TMPDIR leaf
+Error: QA runtime attestation: canonical runtime-data root must be an existing real directory.
+ ❯ fail src/lib/builder/security/qa-runtime-attestation.ts:292:9
+    290| 
+    291| function fail(message: string): never {
+    292|   throw new Error(`QA runtime attestation: ${message}`);
+       |         ^
+    293| }
+    294| 
+ ❯ resolvePhysicalDirectory src/lib/builder/security/qa-runtime-attestation.ts:321:5
+ ❯ resolveRepositoryContext src/lib/builder/security/qa-runtime-attestation.ts:352:32
+ ❯ resolveQaIsolationManifestPath src/lib/builder/security/qa-runtime-attestation.ts:411:22
+ ❯ src/lib/builder/security/__tests__/qa-runtime-attestation.test.ts:271:28
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  2 failed | 1229 passed (1231)
+      Tests  2 failed | 10096 passed | 14 skipped (10112)
+   Start at  15:59:28
+   Duration  42.67s (transform 18.12s, setup 2.70s, collect 132.20s, tests 242.70s, environment 86ms, prepare 36.94s)
+
+unit exit=1

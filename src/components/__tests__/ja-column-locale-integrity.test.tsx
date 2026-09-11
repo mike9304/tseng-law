@@ -148,7 +148,11 @@ describe('Japanese column locale integrity', () => {
 
     expect(detailSource).toContain('const authorProfilePath = getAttorneyProfilePath(locale);');
     expect(detailSource).toContain('buildBreadcrumbJsonLd(locale,');
-    expect(detailSource).toContain('const faqJsonLd = showFaq ? buildFaqJsonLd(faqItems, locale) : null;');
+    // `urlLocale` is `guidanceLocale ?? locale`, so for ja it is still the
+    // direct public locale (never `toBuilderLocale`); the guidance four get
+    // their own language tag instead of the `en` normalisation.
+    expect(detailSource).toContain('const urlLocale = guidanceLocale ?? locale;');
+    expect(detailSource).toContain('const faqJsonLd = showFaq ? buildFaqJsonLd(faqItems, urlLocale) : null;');
     expect(detailSource).toContain('href={getConsultationPublicMailto(locale)}');
     expect(detailSource).toContain("locale === 'ja' ? 'ホーム' : 'Home'");
     expect(detailSource).not.toContain('const linkLocale');

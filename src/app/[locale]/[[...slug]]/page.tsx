@@ -13,18 +13,27 @@ import { getLegacyPageMetadata, renderLegacyPage } from '../(legacy)';
 import { OPEN_GRAPH_LOCALE } from '@/lib/builder/seo/seo-model';
 import { isJaFullStaticPath, isJaUnsupportedPath, JA_SAFE_FALLBACK } from '@/lib/public-route-policy';
 import { buildLocalizedNotFoundMetadata } from '@/lib/not-found-copy';
-import GuidancePageBody from '@/components/GuidancePageBody';
+import GuidancePageBody, {
+  GuidanceRelatedGuides,
+  type GuidanceRelatedColumn,
+} from '@/components/GuidancePageBody';
 import GuidanceHomeBody, {
   resolveGuidanceHomeColumns,
 } from '@/components/GuidanceHomeBody';
 import { getAllColumnPosts } from '@/lib/columns';
 import { guidanceContent } from '@/data/international-guidance-content';
 import {
+  GUIDANCE_EXTRA_RELATED_COLUMN_SLUGS,
+  getGuidancePage,
+} from '@/data/international-guidance-extra';
+import {
   buildGuidanceCoreLanguageAlternates,
   classifyGuidanceSlug,
   guidanceCanonicalUrl,
+  isGuidanceExtraPageKey,
   isGuidanceLocale4,
   type GuidanceLocale4,
+  type GuidancePageKey,
 } from '@/lib/public-guidance';
 import { getOpenGraphLocale, getOrganizationName, getSiteUrl } from '@/lib/seo';
 
@@ -57,6 +66,33 @@ function resolvePublicLocale(raw: string): SiteLocale {
   return normalizeSiteLocale(raw);
 }
 
+/**
+ * This locale's own columns on a hub page's subject, in the editorial order of
+ * {@link GUIDANCE_EXTRA_RELATED_COLUMN_SLUGS}.
+ *
+ * Titles come from each file's own frontmatter, so the list is in the reader's
+ * language without anything being translated here. A slug with no markdown file
+ * in this locale is dropped rather than linked: `/{locale}/columns/<slug>` 404s
+ * when the file is absent, and the block must not manufacture that URL.
+ */
+function resolveGuidanceRelatedColumns(
+  locale: GuidanceLocale4,
+  pageKey: GuidancePageKey,
+): GuidanceRelatedColumn[] {
+  if (!isGuidanceExtraPageKey(pageKey)) return [];
+
+  const slugs = GUIDANCE_EXTRA_RELATED_COLUMN_SLUGS[pageKey];
+  if (slugs.length === 0) return [];
+
+  const titleBySlug = new Map(
+    getAllColumnPosts(locale).map((post) => [post.slug, post.title]),
+  );
+  return slugs.flatMap((slug) => {
+    const title = titleBySlug.get(slug);
+    return title ? [{ href: `/${locale}/columns/${slug}`, title }] : [];
+  });
+}
+
 function buildGuidancePageMetadata(locale: GuidanceLocale4, slug?: string[]): Metadata {
   const classified = classifyGuidanceSlug(slug);
   if (classified.kind !== 'page') {
@@ -68,7 +104,9 @@ function buildGuidancePageMetadata(locale: GuidanceLocale4, slug?: string[]): Me
     };
   }
 
-  const page = guidanceContent[locale].pages[classified.pageKey];
+  // Core page bodies live in the translation-lane content module; page keys
+  // added after the original ten live in `international-guidance-extra.ts`.
+  const page = getGuidancePage(locale, classified.pageKey);
   const siteUrl = getSiteUrl();
   // Same "<page> | <firm>" shape the four site locales publish. The guidance
   // titles carried the page name alone, so a search result showed no firm.
@@ -152,9 +190,23 @@ export default async function MainSiteCatchAllPage(
       const columns = resolveGuidanceHomeColumns(params.locale, (source) =>
         getAllColumnPosts(source),
       );
-      return <GuidanceHomeBody locale={params.locale} columns={columns} />;
+      // The related-guidance links are appended here rather than inside
+      // `GuidanceHomeBody`: the home body is composed entirely of
+      // translation-lane copy, and this block reads from the extra-page module.
+      return (
+        <>
+          <GuidanceHomeBody locale={params.locale} columns={columns} />
+          <GuidanceRelatedGuides locale={params.locale} pageKey="home" />
+        </>
+      );
     }
-    return <GuidancePageBody locale={params.locale} pageKey={classified.pageKey} />;
+    return (
+      <GuidancePageBody
+        locale={params.locale}
+        pageKey={classified.pageKey}
+        relatedColumns={resolveGuidanceRelatedColumns(params.locale, classified.pageKey)}
+      />
+    );
   }
 
   const locale = resolvePublicLocale(params.locale);

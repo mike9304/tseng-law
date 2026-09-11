@@ -1,0 +1,48 @@
+WO-B2B-R1 — WO-B2B-1 후속(총괄 검수 결과 + 리서치 S7-R1 처방 P2·P4·P5·P8 반영)
+
+작업트리: /Users/son7/Projects/tseng-law-sea-b2b-20260911 (브랜치 seo/sea-b2b-20260911, HEAD 7f585835 = WO-B2B-1 커밋). 이 디렉터리 밖 쓰기 금지. git add/commit/push 금지. 전체 스위트·Playwright·build·next start 금지(§5 명령만).
+node: export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+배경 문서(읽기): docs/seo/sea-b2b-plan/SEA-B2B-PLAN-2026-09-11.md §2 D2·D3·D4·D5, docs/seo/sea-b2b-plan/research-seo-geo-2026-09-11.md §6 P2·P4·P5.
+
+## 1. 결함 — 마지막 FAQ 질문/답 불일치 (4로케일 × 2페이지 = 8건)
+`src/data/international-guidance-extra.ts` 각 페이지 마지막 faqs 항목: 답은 기존 거절 문장을 그대로 가져왔는데(예 vi "Không. Phần hướng dẫn này…") 질문을 "어떤 언어로 진행되나?"로 바꿔 놓아 "아니오."가 대답이 되지 않는다.
+수정: 질문도 `src/data/international-guidance-content.ts`의 **원문 질문을 그대로** 사용 — vi 408행 'Tôi có thể được tư vấn bằng tiếng Việt không?', id 881행 'Bisakah saya berkonsultasi dalam bahasa Indonesia?', th 1354행 'ปรึกษาเป็นภาษาไทยได้หรือไม่', fil 1827행 'Maaari ba ang konsultasyon sa Filipino?'. 답 문장은 지금처럼 원문 그대로 유지.
+테스트: `src/data/__tests__/international-guidance-extra.test.ts`에 "마지막 FAQ의 question·answer가 guidanceContent[l].pages.faq.faqs의 해당 항목과 정확히 일치" 검사 추가(문자열 하드코딩 대신 content 모듈에서 찾아 비교).
+
+## 2. company-setup 허브 — 기존 ① 칼럼 링크 (D2 / P4·P2)
+`/{l}/columns/` 에는 회사설립 현지어 장문 칼럼이 이미 있다(`src/content/columns-{vi,id,th,fil}/`). company-setup 페이지 하단(관련 안내 블록 위 또는 안에)에 "관련 글" 목록을 렌더:
+  슬러그 순서: taiwan-company-establishment-basics · taiwan-company-subsidiary-vs-branch · withdraw-capital-taiwan-company · taiwan-company-establishment-advanced-1 · taiwan-company-establishment-advanced-2 · taiwan-company-setup-pitch-location · taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide · taiwan-logistics-business-setup
+  - 제목은 해당 로케일 칼럼 frontmatter(`getAllColumnPosts(locale)` — ColumnContentLocale은 PublicLocale8 지원)에서 읽는다. 파일이 없는 슬러그는 렌더하지 않는다(존재하지 않는 URL 금지).
+  - 서버 컴포넌트 `src/app/[locale]/[[...slug]]/page.tsx`에서 조회해 `GuidancePageBody`에 prop(예 `relatedColumns: {href,title}[]`)으로 전달. 링크 경로는 `/{l}/columns/<slug>`.
+  - 블록 제목 4로케일(예 vi 'Bài viết liên quan', id 'Artikel terkait', th 'บทความที่เกี่ยวข้อง', fil 'Mga kaugnay na artikulo')은 extra 파일에 상수로.
+  - debt-collection에는 대응 칼럼이 없으므로 렌더하지 않음(빈 배열이면 null).
+  - `data-page-block="related-columns"` 속성.
+테스트: public-guidance 또는 extra 테스트에 슬러그 목록 상수 + "각 로케일 columns 디렉터리에 해당 파일 존재" 검사(fs 기반, ko 폴더가 아니라 4로케일 폴더 확인).
+
+## 3. hreflang 클러스터 — EN 인텐트 랜딩과 상호참조 (D3 / P5)
+현재 extra 키의 alternates는 vi/id/th/fil 4개만. 결정: **같은 인텐트의 8언어 클러스터로 묶고 x-default=en.**
+  a. `src/lib/public-guidance.ts` `buildGuidanceCoreLanguageAlternates(extraKey)` → vi/id/th/fil 4개 + ko/zh-hant/en/ja 4개(`/{l}` + 대응 랜딩 경로: company-setup→`/taiwan-company-setup-lawyer`, debt-collection→`/taiwan-litigation-lawyer`) + `x-default` = en 랜딩. 매핑 상수는 extra 파일의 `GUIDANCE_EXTRA_ENGLISH_LANDING_PATHS`를 site-locale 일반형으로 확장(예 `GUIDANCE_EXTRA_SITE_COUNTERPART_PATHS: Record<GuidanceExtraPageKey, string>` = '/taiwan-company-setup-lawyer' 등)해 public-guidance.ts가 import(순환 import 주의 — 매핑 상수를 public-guidance.ts 쪽에 두고 extra 파일이 참조하는 방향이 안전).
+  b. 상호성: `src/lib/seo.ts` `getLanguageAlternates(path, alternateLocales)` — path가 '/taiwan-company-setup-lawyer' 또는 '/taiwan-litigation-lawyer'이면 기존 결과(ko/zh-hant/en/ja + x-default)에 4 guidance alternate를 병합. 이로써 사이트맵 STATIC_PATHS 루프(ko/zh-hant/en)와 ja 엔트리(sitemap.ts 346·352행) 모두 8언어+x-default가 된다. 인텐트 랜딩 page.tsx의 metadata alternates가 이 함수를 쓰면 HTML head에도 나가는데, 현 라이브가 사이트맵 전용인지 확인만 하고 구현 방식은 바꾸지 않는다(중복 구현 금지 — 이미 head에 나가면 그대로, 안 나가면 추가하지 않음).
+  c. 언어 전환기 `resolvePublicLanguageSwitchTarget`: extra 페이지에서 ko/zh-hant/en/ja로 전환 시 home 폴백이 아니라 대응 랜딩(`/{target}/taiwan-company-setup-lawyer` 등)으로. 4 guidance 간 전환은 같은 extra 키 유지(현행).
+  테스트: public-guidance.test(extra alternates 9키: 8언어+x-default, x-default=en 랜딩) · sitemap.test(8 URL 각각의 alternates가 상호 포함 — vi/company-setup 엔트리에 en 랜딩, en 랜딩 엔트리에 vi/company-setup; ja 엔트리 포함) · seo 테스트가 있으면 getLanguageAlternates 케이스 추가.
+  주의: 코어 10키 클러스터·다른 STATIC_PATHS 동작 불변(회귀 테스트 통과가 증거).
+
+## 4. 4로케일 칼럼 FAQPage inLanguage 결함 (P8/G3)
+`src/app/[locale]/columns/[slug]/page.tsx` 211행 `buildFaqJsonLd(faqItems, locale)` — 안내 로케일(vi/id/th/fil) 칼럼에서 `locale`이 en으로 정규화되어 FAQPage inLanguage가 'en'으로 나간다(라이브 /vi/columns/... 실측). 수정: `guidanceLocale ?? locale`을 넘겨 inLanguage가 페이지 언어가 되게. `buildFaqJsonLd`의 locale 타입이 PublicSeoLocale이면 PublicLocale8까지 받도록 최소 확장(getLocaleLanguageTag도 동일). 다른 JSON-LD(Article 등)의 inLanguage도 같은 결함이면 같은 방식으로.
+테스트: 해당 페이지 또는 seo 유닛 테스트에 vi 케이스 1개.
+
+## 5. 수정 허용 파일
+src/data/international-guidance-extra.ts · src/data/__tests__/international-guidance-extra.test.ts · src/lib/public-guidance.ts · src/lib/__tests__/public-guidance.test.ts · src/lib/seo.ts · src/lib/__tests__/seo*.test.ts(기존/신규) · src/app/sitemap.ts(필요 시) · src/app/__tests__/sitemap.test.ts · src/app/[locale]/[[...slug]]/page.tsx · src/components/GuidancePageBody.tsx · src/app/[locale]/columns/[slug]/page.tsx · 그 페이지의 __tests__.
+금지: international-guidance-content.ts · intent-pages.ts · src/content/** · middleware · 네비 · docs/**.
+
+## 6. 검증 명령(전부 실행·출력 그대로 보고)
+cd /Users/son7/Projects/tseng-law-sea-b2b-20260911 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+git status --short && git diff --stat
+npm run typecheck 2>&1 | tail -3
+npx vitest run src/lib/__tests__/public-guidance.test.ts src/app/__tests__/sitemap.test.ts "src/app/[locale]/__tests__/llms-discovery.test.tsx" src/data/__tests__/international-guidance-extra.test.ts src/lib/__tests__/international-guidance-answers.test.ts src/lib/__tests__/seo-faq-jsonld.test.ts src/lib/__tests__/seo*.test.ts 2>&1 | tail -8
+npx eslint --max-warnings=0 --ext .ts,.tsx $(git diff --name-only | grep -E '^src/.*\.(ts|tsx)$') 2>&1 | tail -5
+grep -rn "\[변호사 검수 필요\]" src/data/international-guidance-extra.ts | wc -l   # 0
+grep -rnE "NT\\$|[0-9]{1,3},[0-9]{3}" src/data/international-guidance-extra.ts | wc -l   # 0
+
+## 7. 보고
+① diff --stat ② 명령 출력 ③ §3-b에서 확인한 "인텐트 랜딩 HTML head hreflang 유무"와 취한 조치 ④ 미해결·의문점. 추측 "완료" 금지.

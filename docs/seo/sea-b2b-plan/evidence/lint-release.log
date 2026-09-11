@@ -1,0 +1,5 @@
+
+> sejong-law@0.1.0 lint
+> eslint --max-warnings=0 --ext .js,.jsx,.ts,.tsx src
+
+lint exit=0

@@ -14,17 +14,27 @@ import SectionLabel from '@/components/SectionLabel';
 import {
   guidanceContent,
   type GuidanceLocale,
-  type GuidancePageKey,
 } from '@/data/international-guidance-content';
+import {
+  GUIDANCE_EXTRA_ENGLISH_LANDING_PATHS,
+  getGuidancePage,
+  guidanceExtraEnglishLandingLabel,
+  guidanceExtraLinkLabels,
+  guidanceExtraRelated,
+  guidanceExtraRelatedColumnsLabel,
+  guidanceExtraRelatedLabel,
+} from '@/data/international-guidance-extra';
 import { guidanceAnswers } from '@/data/international-guidance-answers';
 import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
 import {
   EXISTING_SITE_LOCALES_4,
-  GUIDANCE_PAGE_KEYS,
+  GUIDANCE_ALL_PAGE_KEYS,
   PUBLIC_LANGUAGE_AUTONYMS,
   guidanceCanonicalUrl,
   guidancePublicPath,
+  isGuidanceExtraPageKey,
   publicDocumentLanguage,
+  type GuidancePageKey,
 } from '@/lib/public-guidance';
 import {
   buildBreadcrumbJsonLd,
@@ -36,6 +46,12 @@ import {
   buildGuidancePersonJsonLd,
   buildGuidanceTeamCollectionPageJsonLd,
 } from '@/lib/guidance-structured-data';
+
+/** One `/{locale}/columns/<slug>` link, with the title from that file's own frontmatter. */
+export type GuidanceRelatedColumn = {
+  href: string;
+  title: string;
+};
 
 /**
  * Guidance pages rendered with the same layout primitives the other four
@@ -49,12 +65,21 @@ import {
 export default function GuidancePageBody({
   locale,
   pageKey,
+  relatedColumns = [],
 }: {
   locale: GuidanceLocale;
   pageKey: GuidancePageKey;
+  /**
+   * This locale's own long-form columns on the page's subject, already read off
+   * disk by the route so this component stays free of `fs`. Only the slugs with
+   * a markdown file in this language reach here, so no link can 404.
+   */
+  relatedColumns?: readonly GuidanceRelatedColumn[];
 }) {
   const pack = guidanceContent[locale];
-  const page = pack.pages[pageKey];
+  // Core page bodies live in the translation-lane content module; page keys
+  // added after the original ten live in `international-guidance-extra.ts`.
+  const page = getGuidancePage(locale, pageKey);
   const isContact = pageKey === 'contact';
   // Answer-first block: only the page keys present in `guidanceAnswers` get one
   // (services, about, lawyers, pricing, contact, faq). home, privacy,
@@ -125,12 +150,14 @@ export default function GuidancePageBody({
                   {answer.sources.length > 0 ? (
                     <ul className="contact-list">
                       {answer.sources.map((href) => {
-                        const sourceKey = GUIDANCE_PAGE_KEYS.find(
+                        const sourceKey = GUIDANCE_ALL_PAGE_KEYS.find(
                           (key) => guidancePublicPath(locale, key) === href,
                         );
                         return (
                           <li key={href}>
-                            <Link href={href}>{sourceKey ? pack.nav[sourceKey] : href}</Link>
+                            <Link href={href}>
+                              {sourceKey ? guidanceLinkLabel(locale, sourceKey) : href}
+                            </Link>
                           </li>
                         );
                       })}
@@ -218,6 +245,37 @@ export default function GuidancePageBody({
           </Reveal>
         ) : null}
 
+        {/* WO-B2B-R1 §2. The practice-specific hub pages sit on top of a corpus
+            of long-form columns this locale already publishes on the same
+            subject, with no route between the two. */}
+        {relatedColumns.length > 0 ? (
+          <Reveal>
+            <section
+              className="section section--light"
+              data-page-block="related-columns"
+            >
+              <div className="container">
+                <SectionLabel>{guidanceExtraRelatedColumnsLabel[locale]}</SectionLabel>
+                <nav aria-label={guidanceExtraRelatedColumnsLabel[locale]}>
+                  <ul className="contact-list">
+                    {relatedColumns.map((column) => (
+                      <li key={column.href}>
+                        <Link href={column.href}>{column.title}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              </div>
+            </section>
+          </Reveal>
+        ) : null}
+
+        {/* Internal route to the practice-specific guidance pages, which the
+            header nav cannot carry: its labels belong to the translation-lane
+            module and stay at ten keys. On those pages themselves the block
+            points back at the core pages and at the English landing. */}
+        <GuidanceRelatedGuides locale={locale} pageKey={pageKey} />
+
         {pageKey === 'columns' ? (
           <Reveal>
             <section
@@ -263,6 +321,74 @@ export default function GuidancePageBody({
 
       <GuidanceContactBand locale={locale} isContact={isContact} />
     </div>
+  );
+}
+
+/** Link label for any guidance page key, in the page's own language. */
+function guidanceLinkLabel(locale: GuidanceLocale, pageKey: GuidancePageKey): string {
+  return isGuidanceExtraPageKey(pageKey)
+    ? guidanceExtraLinkLabels[locale][pageKey]
+    : guidanceContent[locale].nav[pageKey];
+}
+
+/**
+ * Related-guidance links.
+ *
+ * The header nav is the translation lane's ten keys, so the guidance pages
+ * added afterwards would otherwise have no internal link at all. On the core
+ * pages listed in `guidanceExtraRelated` this renders the route into them; on
+ * those pages themselves it renders the route back out — the core pages a
+ * reader needs next, plus the English landing, which is where the consultation
+ * itself happens. Pages with neither relationship render nothing.
+ *
+ * Exported so the guidance home, which is served by `GuidanceHomeBody`, can
+ * carry the same block without that component having to know about page keys.
+ */
+export function GuidanceRelatedGuides({
+  locale,
+  pageKey,
+}: {
+  locale: GuidanceLocale;
+  pageKey: GuidancePageKey;
+}) {
+  const pack = guidanceContent[locale];
+  const heading = guidanceExtraRelatedLabel[locale];
+
+  const links = isGuidanceExtraPageKey(pageKey)
+    ? [
+        ...(['services', 'pricing', 'contact'] as const).map((key) => ({
+          href: guidancePublicPath(locale, key),
+          label: pack.nav[key],
+        })),
+        {
+          href: GUIDANCE_EXTRA_ENGLISH_LANDING_PATHS[pageKey],
+          label: guidanceExtraEnglishLandingLabel[locale],
+        },
+      ]
+    : (guidanceExtraRelated[pageKey] ?? []).map((key) => ({
+        href: guidancePublicPath(locale, key),
+        label: guidanceExtraLinkLabels[locale][key],
+      }));
+
+  if (links.length === 0) return null;
+
+  return (
+    <Reveal>
+      <section className="section section--light" data-page-block="related-guides">
+        <div className="container">
+          <SectionLabel>{heading}</SectionLabel>
+          <nav aria-label={heading}>
+            <ul className="contact-list">
+              {links.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href}>{link.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </Reveal>
   );
 }
 

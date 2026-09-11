@@ -208,7 +208,11 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
   const faqItems = post.faq ?? [];
   // File-backed EN columns now carry translated FAQ; render for all locales with FAQ data.
   const showFaq = faqItems.length > 0;
-  const faqJsonLd = showFaq ? buildFaqJsonLd(faqItems, locale) : null;
+  // `locale` is normalized to `en` on the guidance routes so the SiteLocale-keyed
+  // copy tables above resolve, which made `/vi/columns/*` publish an FAQPage
+  // declaring `inLanguage: "en"` over Vietnamese answers. `urlLocale` is the
+  // language actually on the page, the same value the Article node already uses.
+  const faqJsonLd = showFaq ? buildFaqJsonLd(faqItems, urlLocale) : null;
 
   const templateVisibility = await readBuilderDynamicTemplatePublishedBlockVisibility(
     'columns.item-template',

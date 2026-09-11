@@ -1,0 +1,21 @@
+200 http://localhost:4352/vi/company-setup related-columns=8 lastFAQ-original-q=4
+200 http://localhost:4352/id/company-setup related-columns=8 lastFAQ-original-q=4
+200 http://localhost:4352/th/company-setup related-columns=8 lastFAQ-original-q=4
+200 http://localhost:4352/fil/company-setup related-columns=8 lastFAQ-original-q=4
+200 http://localhost:4352/vi/debt-collection related-columns-block=0 (expect 0)
+200 http://localhost:4352/id/debt-collection related-columns-block=0 (expect 0)
+200 http://localhost:4352/th/debt-collection related-columns-block=0 (expect 0)
+200 http://localhost:4352/fil/debt-collection related-columns-block=0 (expect 0)
+--- vi column FAQPage inLanguage:
+"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Khi thành lập doanh nghiệp tại Đài Loan, công ty con, chi nhánh và văn phòng đại diện khác nhau như thế nào?","accep
+   3 "inLanguage":"vi"
+--- sitemap cluster:
+https://tseng-law.com/vi/company-setup alternates= 9 ['en', 'fil', 'id', 'ja', 'ko', 'th', 'vi', 'x-default', 'zh-Hant']
+https://tseng-law.com/en/taiwan-company-setup-lawyer alternates= 9 ['en', 'fil', 'id', 'ja', 'ko', 'th', 'vi', 'x-default', 'zh-Hant']
+https://tseng-law.com/ja/taiwan-litigation-lawyer alternates= 9 ['en', 'fil', 'id', 'ja', 'ko', 'th', 'vi', 'x-default', 'zh-Hant']
+https://tseng-law.com/fil/debt-collection alternates= 9 ['en', 'fil', 'id', 'ja', 'ko', 'th', 'vi', 'x-default', 'zh-Hant']
+--- switcher on vi/company-setup:
+href="/en/taiwan-company-setup-lawyer"
+href="/ja/taiwan-company-setup-lawyer"
+href="/ko/taiwan-company-setup-lawyer"
+href="/zh-hant/taiwan-company-setup-lawyer"

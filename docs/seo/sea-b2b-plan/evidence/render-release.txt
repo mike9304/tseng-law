@@ -1,0 +1,14 @@
+200 http://localhost:4352/vi/company-setup canonical=https://tseng-law.com/vi/company-setup    1 "@type":"BreadcrumbList"    1 "@type":"FAQPage"    1 "@type":"LegalService" 
+200 http://localhost:4352/vi/debt-collection canonical=https://tseng-law.com/vi/debt-collection    1 "@type":"BreadcrumbList"    1 "@type":"FAQPage"    1 "@type":"LegalService" 
+200 http://localhost:4352/id/company-setup canonical=https://tseng-law.com/id/company-setup    1 "@type":"BreadcrumbList"    1 "@type":"FAQPage"    1 "@type":"LegalService" 
+200 http://localhost:4352/id/debt-collection canonical=https://tseng-law.com/id/debt-collection    1 "@type":"BreadcrumbList"    1 "@type":"FAQPage"    1 "@type":"LegalService" 
+200 http://localhost:4352/th/company-setup canonical=https://tseng-law.com/th/company-setup    1 "@type":"BreadcrumbList"    1 "@type":"FAQPage"    1 "@type":"LegalService" 
+200 http://localhost:4352/th/debt-collection canonical=https://tseng-law.com/th/debt-collection    1 "@type":"BreadcrumbList"    1 "@type":"FAQPage"    1 "@type":"LegalService" 
+200 http://localhost:4352/fil/company-setup canonical=https://tseng-law.com/fil/company-setup    1 "@type":"BreadcrumbList"    1 "@type":"FAQPage"    1 "@type":"LegalService" 
+200 http://localhost:4352/fil/debt-collection canonical=https://tseng-law.com/fil/debt-collection    1 "@type":"BreadcrumbList"    1 "@type":"FAQPage"    1 "@type":"LegalService" 
+--- switcher reverse on /en/taiwan-company-setup-lawyer:
+href="/fil/company-setup" href="/id/company-setup" href="/th/company-setup" href="/vi/company-setup" 
+--- sitemap count new URLs:
+       8
+--- llms:
+2 2 2 2 

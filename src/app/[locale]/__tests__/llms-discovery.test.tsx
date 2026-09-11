@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it, vi } from 'vitest';
 import { guidanceContent } from '@/data/international-guidance-content';
+import { getGuidancePage } from '@/data/international-guidance-extra';
 import {
   GUIDANCE_LLMS_NOTICES,
   LOCALE_LLMS_TXT_MAX_BYTES,
@@ -12,6 +13,7 @@ import {
 } from '@/lib/llms-txt';
 import { siteLocales } from '@/lib/locales';
 import {
+  GUIDANCE_ALL_PAGE_KEYS,
   GUIDANCE_LOCALES_4,
   GUIDANCE_PAGE_KEYS,
   PUBLIC_LANGUAGE_AUTONYMS,
@@ -78,16 +80,17 @@ describe('locale llms.txt discovery link', () => {
 });
 
 describe('guidance locale llms.txt catalogs', () => {
-  it.each(GUIDANCE_LOCALES_4)('lists the ten %s guidance pages once each', (locale) => {
+  it.each(GUIDANCE_LOCALES_4)('lists the twelve %s guidance pages once each', (locale) => {
     const body = buildGuidanceLlmsTxt(locale);
     const bullets = body.split('\n').filter((line) => line.startsWith('- ['));
 
     expect(GUIDANCE_PAGE_KEYS).toHaveLength(10);
-    expect(bullets).toHaveLength(10);
+    expect(GUIDANCE_ALL_PAGE_KEYS).toHaveLength(12);
+    expect(bullets).toHaveLength(12);
 
-    for (const pageKey of GUIDANCE_PAGE_KEYS) {
+    for (const pageKey of GUIDANCE_ALL_PAGE_KEYS) {
       const url = `https://tseng-law.com${guidancePublicPath(locale, pageKey)}`;
-      const page = guidanceContent[locale].pages[pageKey];
+      const page = getGuidancePage(locale, pageKey);
       expect(bullets.filter((line) => line.includes(`](${url}):`))).toHaveLength(1);
       // Title and one-line annotation come from the page's own published copy.
       expect(body).toContain(`- [${page.title}](${url}): ${page.description}`);
@@ -165,14 +168,19 @@ describe('/[locale]/llms.txt route — guidance four', () => {
     expect(body).toBe(buildGuidanceLlmsTxt(locale));
   });
 
-  it.each(GUIDANCE_LOCALES_4)('lists the ten %s guidance URLs exactly once each', async (locale) => {
+  it.each(GUIDANCE_LOCALES_4)('lists the twelve %s guidance URLs exactly once each', async (locale) => {
     const body = await (await requestLlmsTxt(locale)).text();
-    const urls = GUIDANCE_PAGE_KEYS.map(
+    const urls = GUIDANCE_ALL_PAGE_KEYS.map(
       (pageKey) => `https://tseng-law.com${guidancePublicPath(locale, pageKey)}`,
     );
 
-    expect(urls).toHaveLength(10);
-    expect(new Set(urls).size).toBe(10);
+    expect(urls).toHaveLength(12);
+    expect(new Set(urls).size).toBe(12);
+    for (const pageKey of ['company-setup', 'debt-collection'] as const) {
+      expect(body, `${locale}/${pageKey}`).toContain(
+        `https://tseng-law.com${guidancePublicPath(locale, pageKey)}`,
+      );
+    }
     for (const url of urls) {
       expect(body.split(`](${url}):`).length - 1, url).toBe(1);
     }

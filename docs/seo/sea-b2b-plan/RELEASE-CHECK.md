@@ -24,3 +24,8 @@
 
 ## 배포 절차(사용자 승인 후)
 `git fetch origin && git rebase origin/main`(충돌 시 중단) → 게이트 재실행 → `git push origin seo/sea-b2b-20260911:main` → Vercel success → `node scripts/live-seo-scan.mjs --base=https://tseng-law.com` · `npm run verify:multilingual-live -- --base https://tseng-law.com` → 신규 8 URL curl 200 → IndexNow 8 URL(`scripts/indexnow-submit.mjs --urls ... --dry-run` 확인 후 실제) → GSC 색인 요청(U1: 신규 8 + ① 칼럼 68 + services 4).
+
+## 색인 타게팅 실행 킷 (U1·배포 후)
+- URL 목록 80건: `INDEX-REQUEST-URLS.txt` — 신규 8(company-setup·debt-collection ×4) + `/{l}/services` 4 + ① 현지어 칼럼 17×4=68(라이브 200 표본 확인 2026-09-11).
+- IndexNow(배포 후, 신규 8 URL이 200인 것을 curl로 확인한 뒤): `node scripts/indexnow-submit.mjs --urls "$(paste -sd, docs/seo/sea-b2b-plan/INDEX-REQUEST-URLS.txt)" --dry-run` → 확인 후 `--dry-run` 제거.
+- GSC(손빗·사용자): 사이트맵 재제출은 불필요(자동 갱신), URL 검사 → 색인 요청은 일 할당량 내 신규 8 → services 4 → 칼럼 68 순. 결과는 `docs/seo/metrics-log.md` SEA B2B 표 "색인 기존40 / ①칼럼68 / 신규8" 열에 기록.

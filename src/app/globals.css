@@ -10191,6 +10191,26 @@ html.js .reveal.is-visible .reveal-stagger > * {
   animation: quickMenuIn 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 @keyframes quickMenuIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
+/*
+ * Builder-decomposed hero (published zh-hant home) — the quick menu must not
+ * offset itself.
+ *
+ * `decompose-hero.ts` puts this nav in its own node at `y: 70` under the search
+ * wrap, so the builder emits an absolutely-positioned wrapper that already sits
+ * just below the search bar, and pins the nav inline to `position: relative`.
+ * Against a relative box `top: 100%` no longer means "directly below the bar" —
+ * it resolves against the wrapper's own height and shoves the menu down by a
+ * further 318px, out of the hero and on top of the section beneath it. Measured
+ * on the live zh-hant home: menu at 1045px where ko renders it at 739px.
+ *
+ * The wrapper carries the offset, so the nav contributes none. ko/en/ja render
+ * the native hero (`position: absolute`) and keep the rule above.
+ */
+.hero-quick-menu.builder-hero-quick-menu {
+  top: 0;
+  margin-top: 0;
+}
 .hero-quick-menu-item {
   display: flex; align-items: center; gap: 0.75rem; padding: 0.85rem 1.25rem;
   font-size: 0.9rem; font-weight: 500; color: var(--neutral-700); text-decoration: none;

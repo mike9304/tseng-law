@@ -199,6 +199,36 @@ const nextConfig = {
         destination: 'https://tseng-law.com/:path*',
         permanent: true
       },
+      {
+        source: '/zh',
+        destination: '/zh-hant',
+        permanent: true,
+      },
+      {
+        source: '/zh/:path*',
+        destination: '/zh-hant/:path*',
+        permanent: true,
+      },
+      {
+        source: '/zh-tw',
+        destination: '/zh-hant',
+        permanent: true,
+      },
+      {
+        source: '/zh-tw/:path*',
+        destination: '/zh-hant/:path*',
+        permanent: true,
+      },
+      {
+        source: '/jp',
+        destination: '/ja',
+        permanent: true,
+      },
+      {
+        source: '/jp/:path*',
+        destination: '/ja/:path*',
+        permanent: true,
+      },
       ...legacyColumnRedirects,
       ...legacyInsightsRedirects,
     ];

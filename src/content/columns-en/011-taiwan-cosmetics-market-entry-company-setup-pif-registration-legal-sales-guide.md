@@ -1,5 +1,6 @@
 ---
 title: "Entering Taiwan’s Cosmetics Market: Importer Selection, Product Registration, PIF Preparation and Retention, and Advertising Rules"
+seoTitle: "Taiwan Cosmetics Market Entry: Importer, Registration, and PIF"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide"
 lastmod: "2026-07-25"
 date_display: "February 4, 2026"

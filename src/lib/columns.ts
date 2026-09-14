@@ -147,6 +147,18 @@ export function resolveColumnSummary(rawSummary: unknown, content: string): stri
   return extractSummary(content);
 }
 
+/**
+ * Prefer an authored frontmatter `seoTitle` for <title> and og:title.
+ * Empty or non-string values fall back to the display/H1 title.
+ */
+export function resolveColumnSeoTitle(rawSeoTitle: unknown, fallbackTitle: string): string {
+  if (typeof rawSeoTitle === 'string') {
+    const trimmed = rawSeoTitle.trim();
+    if (trimmed) return trimmed;
+  }
+  return fallbackTitle;
+}
+
 function slugFromFilename(filename: string): string {
   return filename.replace(/\.md$/, '').replace(/^\d{3}-/, '');
 }
@@ -234,6 +246,7 @@ export function getAllColumnPosts(
       || parseColumnPublicationDate(fallbackDateDisplay);
     const fallbackReadTime = (data.read_time as string) || '';
     const fallbackSummary = resolveColumnSummary(data.summary, fixedContent);
+    const fallbackSeoTitle = resolveColumnSeoTitle(data.seoTitle, fallbackTitle);
     const faq = normalizeColumnFaq(data.faq);
 
     // When EN files live in columns-en/, frontmatter and body are already English.
@@ -244,6 +257,7 @@ export function getAllColumnPosts(
     let readTime = fallbackReadTime;
     const contentText = cleanContent;
     let summary = fallbackSummary;
+    let seoTitle = fallbackSeoTitle;
 
     if (publicationDate) {
       dateDisplay = formatColumnPublicationDate(publicationDate, locale, fallbackDateDisplay);
@@ -257,6 +271,7 @@ export function getAllColumnPosts(
       if (translatedPost) {
         title = translatedPost.title;
         summary = translatedPost.summary;
+        seoTitle = resolveColumnSeoTitle(data.seoTitle, title);
       }
       readTime = toEnglishReadTime(fallbackReadTime);
     }
@@ -277,6 +292,7 @@ export function getAllColumnPosts(
         featuredImage,
         content: contentText,
         summary,
+        seoTitle,
         ...(faq.length ? { faq } : {}),
       },
     };

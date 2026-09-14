@@ -1,5 +1,6 @@
 ---
 title: "Taiwan Logistics Businesses and Motor Freight Carrier Licensing: Formation, Acquisition, and Outsourcing"
+seoTitle: "Taiwan Logistics Business Setup: Motor Freight Carrier Licensing"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
 lastmod: "2026-07-25"
 date_display: "September 13, 2025"

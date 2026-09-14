@@ -9,7 +9,7 @@ import {
   type PublicLocale8,
 } from '@/lib/public-guidance';
 import { isEnglishNoindexPath, isGloballyNoindexPath } from '@/lib/seo-visibility';
-import { taiwanOfficeSeoRecords } from '@/data/office-locations';
+import { taiwanOfficeData, taiwanOfficeSeoRecords, type TaiwanOfficeId } from '@/data/office-locations';
 
 type ImageInput =
   | string
@@ -432,28 +432,39 @@ export function buildWebsiteJsonLd(
  * `taiwanOfficeSeoRecords`, which mirrors what `/{locale}/contact` already
  * shows; offices missing a phone or coordinates simply omit the property.
  */
-function buildTaiwanOfficePlaces() {
-  return taiwanOfficeSeoRecords.map((office) => ({
-    '@type': 'Place' as const,
-    '@id': `${ORGANIZATION_ID}-office-${office.id}`,
-    address: {
-      '@type': 'PostalAddress' as const,
-      streetAddress: office.address,
-      addressLocality: office.addressLocality,
-      postalCode: office.postalCode,
-      addressCountry: 'TW',
-    },
-    ...(office.telephone ? { telephone: office.telephone } : {}),
-    ...(office.geo
-      ? {
-          geo: {
-            '@type': 'GeoCoordinates' as const,
-            latitude: office.geo.latitude,
-            longitude: office.geo.longitude,
-          },
-        }
-      : {}),
-  }));
+const ENGLISH_OFFICE_LOCALITY: Record<TaiwanOfficeId, string> = {
+  taipei: 'Taipei City',
+  taichung: 'Taichung City',
+  kaohsiung: 'Kaohsiung City',
+  pingtung: 'Pingtung County',
+};
+
+function buildTaiwanOfficePlaces(locale: SiteLocale) {
+  const englishOffices = locale === 'en' ? taiwanOfficeData.en : null;
+  return taiwanOfficeSeoRecords.map((office) => {
+    const englishOffice = englishOffices?.find((item) => item.id === office.id);
+    return {
+      '@type': 'Place' as const,
+      '@id': `${ORGANIZATION_ID}-office-${office.id}`,
+      address: {
+        '@type': 'PostalAddress' as const,
+        streetAddress: englishOffice?.address ?? office.address,
+        addressLocality: locale === 'en' ? ENGLISH_OFFICE_LOCALITY[office.id] : office.addressLocality,
+        postalCode: office.postalCode,
+        addressCountry: 'TW',
+      },
+      ...(office.telephone ? { telephone: office.telephone } : {}),
+      ...(office.geo
+        ? {
+            geo: {
+              '@type': 'GeoCoordinates' as const,
+              latitude: office.geo.latitude,
+              longitude: office.geo.longitude,
+            },
+          }
+        : {}),
+    };
+  });
 }
 
 export function buildLegalServiceJsonLd(
@@ -507,7 +518,7 @@ export function buildLegalServiceJsonLd(
       addressLocality: 'Taipei City',
       addressCountry: 'TW',
     },
-    location: buildTaiwanOfficePlaces(),
+    location: buildTaiwanOfficePlaces(locale),
   };
 }
 

@@ -513,7 +513,11 @@ describe('sitemap column lastModified', () => {
     for (const url of newUrls) {
       const matches = entries.filter((entry) => entry.url === url);
       expect(matches).toHaveLength(1);
-      expect(matches[0]?.lastModified).toBeUndefined();
+      const lastmod = matches[0]?.lastModified;
+      const lastmodText = lastmod instanceof Date ? lastmod.toISOString() : String(lastmod);
+      expect(lastmodText).toMatch(
+        /^\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2}))?$/,
+      );
       const route = new URL(url);
       const locale = route.pathname.split('/').filter(Boolean)[0];
       expect(isPublicLocale8(locale)).toBe(true);

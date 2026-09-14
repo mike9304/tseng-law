@@ -145,7 +145,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     insights: {
       label: 'INSIGHTS',
       title: 'Columns',
-      description: 'Browse practical legal columns by category.'
+      description: 'Practical Taiwan law columns on company setup, litigation, labor, and family issues for overseas companies and individuals handling Taiwan legal matters.'
     },
     videos: {
       label: 'VIDEOS',

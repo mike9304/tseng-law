@@ -1,5 +1,6 @@
 ---
 title: "Taiwan Company Formation — Advanced Guide 3: Finding a Business Location"
+seoTitle: "Taiwan Company Formation Advanced Guide: Finding a Business Location"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
 lastmod: "2026-09-10"
 date_display: "September 13, 2025"

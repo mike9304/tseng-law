@@ -20,15 +20,15 @@ const featuredImage =
   '../images/003-taiwan-traffic-accident-procedure/featured-01.jpg';
 const incidentImage =
   '../images/003-taiwan-traffic-accident-procedure/img-01.jpg';
-const immutablePrefixBytes = 1_240;
+const immutablePrefixBytes = 1_317;
 const immutablePrefixSha256 =
-  '65323b2f92b6a863bfae879953da6629674997b05cc321fb2a7c82b183e89514';
-const immutableQ1ToQ5PrefixBytes = 8_678;
+  '836e362995ca801aaae3d4bd970262c4af76fb216273059c69df98498354265a';
+const immutableQ1ToQ5PrefixBytes = 8_755;
 const immutableQ1ToQ5PrefixSha256 =
-  '74a5509439824b38c2497dbc36bc2bf173a5f0cf2b75c6b73dc978cfd3532cbf';
-const immutableQ1ToQ10PrefixBytes = 14_829;
+  '58f9fc3052bcd946ea21bf3af1ad9772739cc1e3844cbe648dae7c63424c1c8f';
+const immutableQ1ToQ10PrefixBytes = 14_906;
 const immutableQ1ToQ10PrefixSha256 =
-  'c9e2dd130e8ba5b2bc81ef754aca8658bda76e0682e6ddcf6e178b7c25de00fd';
+  '4d6c701fce2c54bd35b8f84e3873063249730888afc5e77d7e55481f97172c02';
 const q11Marker =
   'Q11. What should you watch for when claiming loss from inability to work?';
 const q16Marker =
@@ -428,6 +428,7 @@ describe('English traffic column 003 — metadata and introduction localization 
   it('uses the exact contracted frontmatter and sole matching H1', () => {
     expect(parsed.data).toEqual({
       title,
+      seoTitle: 'Taiwan Traffic Accident Q&A: Fault, Settlement, and Compensation',
       url: sourceUrl,
       lastmod: '2026-09-10',
       date_display: 'September 13, 2025',
@@ -695,7 +696,7 @@ describe('English traffic column 003 — Q1–Q5 translation contract', () => {
 });
 
 describe('English traffic column 003 — Q6–Q10 translation contract', () => {
-  it('starts the exact five H2s at byte 8678 and places the source H3 after Q10 before Q11', () => {
+  it('starts the exact five H2s at byte 8755 and places the source H3 after Q10 before Q11', () => {
     expect(rawBytes.subarray(q6ByteIndex).toString('utf8')).toMatch(
       /^## Q6\. How is responsibility for the accident determined\?\n/,
     );
@@ -875,7 +876,7 @@ describe('English traffic column 003 — Q6–Q10 translation contract', () => {
 });
 
 describe('English traffic column 003 — Q11–Q15 translation contract', () => {
-  it('starts the exact five H2s at byte 14829 and places the source H3 after Q15 before Q16', () => {
+  it('starts the exact five H2s at byte 14906 and places the source H3 after Q15 before Q16', () => {
     expect(rawBytes.subarray(q11ByteIndex).toString('utf8')).toMatch(
       /^## Q11\. How should I prove temporary lost income during treatment and recovery\?\n/,
     );

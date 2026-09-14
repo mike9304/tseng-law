@@ -1,5 +1,6 @@
 ---
 title: "Taiwan Minimum Service Period Clauses: Validity, Training Costs, and Contractual Penalties"
+seoTitle: "Taiwan Minimum Service Period Clauses: Validity and Penalties"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-mandatory-employment-period"
 lastmod: "2026-07-25"
 date_display: "September 13, 2025"

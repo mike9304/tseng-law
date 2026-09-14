@@ -613,7 +613,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       slug: 'taiwan-litigation-lawyer',
       label: 'SEARCH GUIDE',
       title: 'Taiwan Litigation Lawyer for Contract Disputes & Civil Claims',
-      description: 'A practical guide for overseas companies and individuals looking for a Taiwan litigation lawyer for contract disputes, unpaid invoices, civil claims, criminal matters, and family disputes. Office consultations are available in English, Chinese, Korean, and Japanese.',
+      description: 'A Taiwan litigation lawyer guide for overseas companies and individuals covering contract disputes, unpaid invoices, civil claims, criminal and family matters.',
       keywords: ['Taiwan litigation lawyer', 'Taiwan civil litigation lawyer', 'Taiwan damages lawyer', 'Taiwan criminal lawyer', 'Wei Tseng attorney', 'sue a company in Taiwan', 'Taiwan debt recovery lawyer', 'Taiwan commercial dispute lawyer'],
       searchTerms: ['Taiwan litigation lawyer', 'Taiwan civil litigation lawyer', 'Taiwan damages lawyer', 'Taiwan debt recovery', 'sue a Taiwanese company'],
       heroPoints: [

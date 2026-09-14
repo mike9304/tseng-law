@@ -12,7 +12,7 @@
 - [x] 2026-09-09 S0-b 손빗 GSC 실측 → docs/seo/FROM-GROK-BOT-SEA-2026-09.md 커밋 b0a1b8e9 (6국 노출30·클릭2, 생성형AI 34/0, 4로케일 40URL 미등록)
 - [x] 2026-09-09 S0-c 방문 리포트 → evidence/visit-28d.md (실데이터 9/1~9/7만: 세션 58, SEA=SG 2·VN 1, AI 경유 1(chatgpt→/ko), GSC CSV 미병합)
 - [x] 2026-09-09 S0-d AI 인용 문항 세트 31행 → docs/seo/geo-sea-baseline-2026-09.md 커밋 05363645 (미결: 엔진 로그인 여부·원어민 검수)
-- [~] S0-e AI 인용 1차 실측: 워커 0건(6엔진 403, 551d2815) → 11:37 손빗 ASK → 11:4x 보류 → **11:5x 사용자 정정=완료(전부)**. 손빗이 GSC 문서 후 Perplexity+Google(+ChatGPT/Gemini)로 31문항 실측, 이 워크트리의 docs/seo/geo-sea-baseline-2026-09.md 에 직접 기록 예정. **그 파일은 손빗이 쓰는 동안 총괄이 건드리지 않는다.** 도착 후 diff 확인→커밋→[x]
+- [~] S0-e AI 인용 1차 실측(손빗 브라우저): **9/14 Perplexity 31/31 완료 Y9·N22**(en3·vi3·th2·fil1·id0, Y=S0-03/04/07/08/12/13/20/23/31), Google AIO=미실측(SERP CAPTCHA), ChatGPT 진행 중, Gemini/Claude/Grok 대기 → docs/seo/geo-sea-baseline-2026-09.md §2.6·§3, evidence/aicite-2026-09-14/README.md. ChatGPT 결과 도착 후 [x]
 - [x] 2026-09-09 S0-f metrics-log SEA 베이스라인 행 추가(b0a1b8e9). §C 베이스라인 기입. 12주 목표치는 색인 완료 후 W2에 정함(색인 0 상태에서 목표 수치 무의미)
 
 ### S1 인텐트 지도
@@ -72,6 +72,7 @@
 | 4로케일 URL 색인율 | 0/14 검사(26 미확인) | | |
 | 방문 SEA 세션 · AI 채널 세션 (28일) | 9/1~9/7: SEA 3(SG2·VN1) · AI 1 | | visit-28d |
 
+- 9/14 1x:xx 손빗 PP 실측 도착·커밋. 다음 = CG 결과 대기 → S0-e [x].
 - 9/14 10:4x 손빗 답: 실측 미착수였음 → 9/14부터 Perplexity+Google 우선 착수, W1(9/16) 전 일부 선반영 목표, 완료 시 같은 파일 §3에 기록. 총괄은 파일 변경 감시만. 업스트림 c0bf619b(29커밋, dba50dba가 안내 JSON-LD 패리티로 ld 3~4개로 확장) 라이브 계약 재확인 OK(availableLanguage 4개·summary·FAQPage·llms.txt 200). 브랜치는 origin/main 위로 리베이스(docs 1커밋만 미push).
 - 다른 세션 ASK(sea-form 실전송 4건)는 이 캠페인 관할 아님 — 무시.
 

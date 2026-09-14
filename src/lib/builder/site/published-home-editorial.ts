@@ -147,6 +147,11 @@ const JULY_NATURAL_FLOW_ROOT_SELECTORS = JULY_NATURAL_FLOW_SECTION_IDS
   .map((id) => `.builder-pub-main[data-home-editorial='july'] > .builder-pub-node[data-node-id='${id}']`)
   .join(',\n  ');
 
+// Actual Grok generic nested-zoom recipe, bound locally to admitted body roots.
+// The shared results composite stays the renderer; the hidden primitive is omitted.
+const JULY_READABLE_FLOW_ROOT_SELECTORS = `${JULY_NATURAL_FLOW_ROOT_SELECTORS},
+  .builder-pub-main[data-home-editorial='july'] > .builder-pub-node[data-anchor='mobile-parity-home-case-results']`;
+
 const JULY_PRIMARY_FLOW_ROOT_SELECTORS = JULY_PRIMARY_FLOW_SECTION_IDS
   .map((id) => `.builder-pub-main[data-home-editorial='july'] > .builder-pub-node[data-node-id='${id}']`)
   .join(',\n  ');
@@ -627,6 +632,106 @@ export const JULY_PUBLISHED_HOME_EDITORIAL_CSS = `
     margin-top: 8px !important;
     background: var(--gold) !important;
     border-color: var(--gold) !important;
+  }
+}
+/* Admitted July body: retain the fixed-stage overflow protection while
+   restoring the natural sections' intended role typography and control sizes.
+   These four pairs follow public-page.tsx's existing mid-band zoom steps. */
+@media (min-width: 1024px) and (max-width: 1087px) {
+  .builder-pub-main[data-home-editorial='july'] {
+    --july-stage-scale: 0.8;
+    --july-section-reciprocal: 1.25;
+  }
+}
+@media (min-width: 1088px) and (max-width: 1151px) {
+  .builder-pub-main[data-home-editorial='july'] {
+    --july-stage-scale: 0.85;
+    --july-section-reciprocal: 1.1764705882352942;
+  }
+}
+@media (min-width: 1152px) and (max-width: 1215px) {
+  .builder-pub-main[data-home-editorial='july'] {
+    --july-stage-scale: 0.9;
+    --july-section-reciprocal: 1.1111111111111112;
+  }
+}
+@media (min-width: 1216px) and (max-width: 1279px) {
+  .builder-pub-main[data-home-editorial='july'] {
+    --july-stage-scale: 0.95;
+    --july-section-reciprocal: 1.0526315789473684;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  ${JULY_READABLE_FLOW_ROOT_SELECTORS} {
+    zoom: var(--july-section-reciprocal);
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+/* Actual native B/C/D/E binding: constrain only admitted fixed wrappers. */
+@media (min-width:1024px) and (max-width:1279px) {
+.builder-pub-main[data-home-editorial='july'] > .builder-pub-node[data-node-id='home-faq-root'] [data-node-id^='home-faq-item-'][data-node-id$='-answer-wrap'],
+.builder-pub-main[data-home-editorial='july'] > .builder-pub-node[data-node-id='home-faq-root'] .faq-answer-wrap,
+.builder-pub-main[data-home-editorial='july'] > .builder-pub-node[data-node-id='home-faq-root'] .faq-answer { width:100% !important; max-width:100% !important; min-width:0 !important; box-sizing:border-box !important; }
+}
+/* Only fixed wrappers proven by fixture/source and initial native boxes.
+   Existing 7:5 grids, fonts, gaps, flex wrapping, and button preferred widths stay. */
+@media (min-width:1024px) and (max-width:1279px) {
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-contact-copy'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-contact-title'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-contact-description'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-contact-actions'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-contact-ai-guide-copy'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-0-card-title'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-0-card-address'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-1-card-title'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-1-card-address'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-2-card-title'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-2-card-address'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-3-card-title'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-3-card-address'] {
+ width:100% !important; max-width:100% !important; min-width:0 !important; box-sizing:border-box !important;
+}
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-contact-primary'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-contact-phone'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-contact-ai-guide'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-0-card-phone'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-0-card-fax'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-0-card-map-link'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-1-card-phone'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-1-card-fax'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-1-card-map-link'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-2-card-phone'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-2-card-fax'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-2-card-map-link'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-3-card-phone'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-3-card-fax'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-offices-layout-3-card-map-link'] {
+ max-width:100% !important; min-width:0 !important; box-sizing:border-box !important;
+}
+}
+/* Source-confirmed nine fixed wrappers only. No clipping/font/layout resets. */
+@media (min-width:1024px) and (max-width:1279px) {
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-insights-divider'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-attorney-label'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-attorney-title'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-attorney-detail-flow'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-attorney-cta'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-attorney-intro-1'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-attorney-intro-2'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-attorney-summary'],
+.builder-pub-main[data-home-editorial='july'] .builder-pub-node[data-node-id='home-attorney-contact-line'] {
+ width:100% !important; max-width:100% !important; min-width:0 !important;
+}
+}
+/* The office outer wrapper already owns its section separation (72px).
+   Remove only the two inner pads which duplicate that FAQ-to-office gap. */
+@media (min-width: 1024px) {
+  ${JULY_NODE('home-faq-root')} > #faq {
+    padding-bottom: 0 !important;
+  }
+  ${JULY_NODE('home-offices-root')} > #offices {
+    padding-top: 0 !important;
   }
 }
 /* Grok-authored media frame repair; locally scoped to admitted insights. */

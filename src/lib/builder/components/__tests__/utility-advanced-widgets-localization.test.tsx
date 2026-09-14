@@ -19,6 +19,8 @@ import {
   PARALLAX_BG_LEGACY_DEFAULTS,
 } from '../utility-advanced-widgets-copy';
 import videoEmbedComponent from '../videoEmbed';
+import VideoEmbedRender from '../videoEmbed/VideoEmbedRender';
+import { locales } from '@/lib/locales';
 
 const componentRoot = join(process.cwd(), 'src/lib/builder/components');
 
@@ -309,5 +311,62 @@ describe('utility advanced widget localization', () => {
     expect(css).toContain('.textarea');
     expect(css).toContain('.control:focus-visible');
     expect(css).toContain('.checkboxRow');
+  });
+});
+
+
+describe('video embed map-title classification', () => {
+  function node(provider: BuilderVideoEmbedCanvasNode['content']['provider'], src: string) {
+    return {
+      id: 'synthetic-embed', kind: 'video-embed',
+      content: { provider, src, autoplay: true, loop: true, muted: true, controls: false,
+        posterImage: 'https://example.invalid/poster.png' },
+    } as unknown as BuilderVideoEmbedCanvasNode;
+  }
+
+  it.each(locales.flatMap(locale => [
+    [locale, 'https://www.google.com/maps/embed?pb=synthetic'],
+    [locale, 'https://maps.google.com/maps?q=synthetic&output=embed'],
+  ] as const))('uses the existing %s map title for %s without changing the node or iframe URL', (locale, src) => {
+    const input = node('url', src);
+    const before = structuredClone(input);
+    const html = renderToStaticMarkup(<VideoEmbedRender node={input} locale={locale} />);
+    expect(html).toContain(`title="${locale === 'zh-hant' ? 'Google 地圖' : 'Google Maps'}"`);
+    expect(html).toContain(`src="${src.replace(/&/g, '&amp;')}"`);
+    expect(html).toContain('allow="autoplay; fullscreen; picture-in-picture; encrypted-media"');
+    expect(html).toContain('poster="https://example.invalid/poster.png"');
+    expect(input).toEqual(before);
+  });
+
+  it.each(locales)('retains the %s video title for videos and unrecognized map-looking URLs', (locale) => {
+    const cases = [
+      ['youtube', 'https://www.youtube.com/watch?v=abcdef12345', 'https://www.youtube.com/embed/abcdef12345?autoplay=1&loop=1&playlist=abcdef12345&mute=1&controls=0'],
+      ['vimeo', 'https://vimeo.com/123456', 'https://player.vimeo.com/video/123456?autoplay=1&loop=1&muted=1&controls=0'],
+      ['url', 'https://example.invalid/video', 'https://example.invalid/video'],
+      ['url', 'https://www.google.com.example.invalid/maps/embed', 'https://www.google.com.example.invalid/maps/embed'],
+      ['url', 'https://example.invalid/?next=https://www.google.com/maps/embed', 'https://example.invalid/?next=https://www.google.com/maps/embed'],
+      ['url', 'https://www.google.com/maps/search', 'https://www.google.com/maps/search'],
+      ['url', 'https://maps.google.com/maps', 'https://maps.google.com/maps'],
+    ] as const;
+    for (const [provider, src, resolved] of cases) {
+      const input = node(provider, src);
+      const before = structuredClone(input);
+      const html = renderToStaticMarkup(<VideoEmbedRender node={input} locale={locale} />);
+      expect(html).toContain(`title="${getUtilityAdvancedWidgetsCopy(locale).videoEmbed.runtime.iframeTitle}"`);
+      expect(html).toContain(`src="${resolved.replace(/&/g, '&amp;')}"`);
+      expect(input).toEqual(before);
+    }
+  });
+
+  it.each(locales)('preserves invalid direct-URL admission for %s', (locale) => {
+    for (const src of ['//www.google.com/maps/embed', 'javascript:alert(1)']) {
+      const input = node('url', src);
+      const before = structuredClone(input);
+      const html = renderToStaticMarkup(<VideoEmbedRender node={input} locale={locale} />);
+      expect(html).not.toContain('<iframe');
+      const copy = getUtilityAdvancedWidgetsCopy(locale).videoEmbed;
+      expect(html).toContain(copy.runtime.invalidUrl(copy.inspector.providers.url));
+      expect(input).toEqual(before);
+    }
   });
 });

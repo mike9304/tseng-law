@@ -420,6 +420,10 @@ export default function Header({ locale }: { locale: SiteLocale }) {
   });
   const headerRef = useRef<HTMLElement | null>(null);
   const mainNavRef = useRef<HTMLElement | null>(null);
+  const megaTriggerRowRef = useRef<HTMLDivElement | null>(null);
+  const megaPanelRef = useRef<HTMLDivElement | null>(null);
+  const focusExitFrameRef = useRef<number | null>(null);
+  const restoringMegaTriggerFocusRef = useRef(false);
   const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
   const closeTimeoutRef = useRef<number | null>(null);
   const mobileToggleRef = useRef<HTMLButtonElement | null>(null);
@@ -503,10 +507,123 @@ export default function Header({ locale }: { locale: SiteLocale }) {
     }
   }, []);
 
+  const cancelFocusExitCheck = useCallback(() => {
+    if (focusExitFrameRef.current !== null) {
+      window.cancelAnimationFrame(focusExitFrameRef.current);
+      focusExitFrameRef.current = null;
+    }
+  }, []);
+
   const closeMegaMenuNow = useCallback(() => {
+    cancelFocusExitCheck();
     clearCloseTimeout();
     setOpenMenu(null);
-  }, [clearCloseTimeout]);
+  }, [cancelFocusExitCheck, clearCloseTimeout]);
+
+  const containsMegaFocus = useCallback((target: EventTarget | null) =>
+    target instanceof Node && Boolean(megaTriggerRowRef.current?.contains(target) || megaPanelRef.current?.contains(target)), []);
+
+  const handleMegaFocus = useCallback(() => {
+    cancelFocusExitCheck();
+    clearCloseTimeout();
+  }, [cancelFocusExitCheck, clearCloseTimeout]);
+
+  // Generic Grok pointer provenance, locally bound to the existing row/panel.
+  // Escape restoration remains in the existing Header keydown handler.
+  useEffect(() => {
+    if (!openMenu) return;
+    let inRegionPointer = false;
+    // This Header close is idempotent; no external callback needs a once guard.
+    const dismiss = () => {
+      inRegionPointer = false;
+      closeMegaMenuNow();
+    };
+
+    let raf = 0;
+    const cancelPendingPointerEnd = () => {
+      window.cancelAnimationFrame(raf);
+      raf = 0;
+    };
+
+    const clearPointerIntent = () => {
+      cancelPendingPointerEnd();
+      inRegionPointer = false;
+    };
+
+    const inRegion = (node: EventTarget | null) =>
+      containsMegaFocus(node);
+
+    const endInRegionPointer = () => {
+      // Drop the flag after this frame so a focusout that still belongs to
+      // this gesture (relatedTarget === null) can see it. rAF is not a
+      // linger-timeout: keyboard / outside intent clears immediately, and
+      // the next genuine focus exit is unmasked even in this same frame.
+      cancelPendingPointerEnd();
+      raf = window.requestAnimationFrame(() => {
+        raf = 0;
+        inRegionPointer = false;
+      });
+    };
+
+    const onPointerDown = (event: PointerEvent) => {
+      cancelPendingPointerEnd();
+      if (inRegion(event.target)) {
+        inRegionPointer = true;
+        return;
+      }
+      inRegionPointer = false;
+      dismiss();
+    };
+
+    const onFocusOut = (event: FocusEvent) => {
+      if (!inRegion(event.target)) return;
+      if (inRegion(event.relatedTarget)) return;
+
+      // Click/tap on non-focusable interior: relatedTarget is null, but
+      // this is not a leave. Tab to chrome / other window: also null,
+      // with no in-region pointer → dismiss.
+      if (event.relatedTarget == null && inRegionPointer) return;
+
+      dismiss();
+    };
+
+    const onDocumentFocusIn = (event: FocusEvent) => {
+      if (inRegion(event.target)) return;
+      dismiss();
+    };
+
+    const onKeyDown = () => {
+      // Do not assume a frame has elapsed. Tab / Escape after pointerup
+      // in the same frame is keyboard intent, not an interior click.
+      clearPointerIntent();
+    };
+
+    // Capture so an interior stopPropagation cannot hide outside pointerdown
+    // or a region focusout. Containment always reads live region refs (portals
+    // / late-mounted panels). Do not snapshot nodes at effect start.
+    document.addEventListener("pointerdown", onPointerDown, true);
+    document.addEventListener("pointerup", endInRegionPointer, true);
+    document.addEventListener("pointercancel", endInRegionPointer, true);
+    document.addEventListener("focusout", onFocusOut, true);
+    document.addEventListener("focusin", onDocumentFocusIn);
+    document.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      cancelPendingPointerEnd();
+      document.removeEventListener("pointerdown", onPointerDown, true);
+      document.removeEventListener("pointerup", endInRegionPointer, true);
+      document.removeEventListener("pointercancel", endInRegionPointer, true);
+      document.removeEventListener("focusout", onFocusOut, true);
+      document.removeEventListener("focusin", onDocumentFocusIn);
+      document.removeEventListener("keydown", onKeyDown);
+      inRegionPointer = false;
+    };
+  }, [openMenu, closeMegaMenuNow, containsMegaFocus]);
+
+  useEffect(() => () => {
+    cancelFocusExitCheck();
+    clearCloseTimeout();
+  }, [cancelFocusExitCheck, clearCloseTimeout]);
 
   const scheduleCloseMegaMenu = useCallback(() => {
     clearCloseTimeout();
@@ -638,7 +755,18 @@ export default function Header({ locale }: { locale: SiteLocale }) {
   useEffect(() => {
     const onKeydown = (event: KeyboardEvent) => {
       if (event.key === 'Escape' && openMenu) {
+        const restoreTrigger = megaPanelRef.current?.contains(document.activeElement)
+          ? linkRefs.current[openMenu]
+          : null;
         closeMegaMenuNow();
+        if (restoreTrigger) {
+          restoringMegaTriggerFocusRef.current = true;
+          try {
+            restoreTrigger.focus({ preventScroll: true });
+          } finally {
+            restoringMegaTriggerFocusRef.current = false;
+          }
+        }
       }
     };
     window.addEventListener('keydown', onKeydown);
@@ -698,7 +826,12 @@ export default function Header({ locale }: { locale: SiteLocale }) {
       </div>
 
       <div className={`header-main ${styles.headerMain}`}>
-        <div className={`container header-main-inner ${styles.headerMainInner}`} data-header-content-fit-slot>
+        <div
+          ref={megaTriggerRowRef}
+          className={`container header-main-inner ${styles.headerMainInner}`}
+          data-header-content-fit-slot
+          onFocusCapture={handleMegaFocus}
+        >
           <div className={styles.contentFitProbe} data-header-content-fit-probe aria-hidden="true">
             <span className={styles.contentFitProbeLogo}>
               <span className={styles.contentFitProbeMark} />
@@ -786,7 +919,7 @@ export default function Header({ locale }: { locale: SiteLocale }) {
                       linkRefs.current[item.key] = element;
                     }}
                     onFocus={() => {
-                      if (!hasMegaPanel(item.key)) return;
+                      if (restoringMegaTriggerFocusRef.current || !hasMegaPanel(item.key)) return;
                       clearCloseTimeout();
                       moveIndicator(item.key, true);
                       setOpenMenu(item.key);
@@ -855,6 +988,7 @@ export default function Header({ locale }: { locale: SiteLocale }) {
       <div
         className={`mega-menu${openMenu ? ' open' : ''}`}
         id="megaMenu"
+        onFocusCapture={handleMegaFocus}
         aria-hidden={openMenu ? 'false' : 'true'}
         onMouseEnter={clearCloseTimeout}
         onMouseLeave={scheduleCloseMegaMenu}
@@ -863,8 +997,11 @@ export default function Header({ locale }: { locale: SiteLocale }) {
           <div
             key={panel.key}
             id={`mega-panel-${panel.key}`}
+            ref={openMenu === panel.key ? megaPanelRef : undefined}
             className={`mega-panel${openMenu === panel.key ? ' active' : ''}`}
             data-panel={panel.key}
+            aria-hidden={openMenu === panel.key ? undefined : true}
+            {...{ inert: openMenu !== panel.key }}
           >
             <div className="container">
               <div className="mega-layout">

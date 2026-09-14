@@ -3,6 +3,7 @@ import './column-typography.css';
 import './consultation-ai.css';
 import '@/lib/builder/components/_shared/widget-tokens.css';
 import '@/lib/builder/components/_shared/hover-states.css';
+import './[locale]/NotFound.module.css';
 import type { Metadata } from 'next';
 import { headers } from 'next/headers';
 import type { ReactNode } from 'react';

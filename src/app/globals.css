@@ -954,7 +954,7 @@ h1, h2, h3 {
   padding: 0.95rem 1.05rem;
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 16px;
-  background: linear-gradient(180deg, rgba(11, 24, 38, 0.16), rgba(11, 24, 38, 0.62));
+  background: rgba(0, 0, 0, 0.70);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: rgba(255, 250, 240, 0.94);
@@ -1626,7 +1626,7 @@ section.home-results-panel--editorial {
   background: var(--purple-bg);
   border-left: 3px solid var(--gold);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  color: var(--text-secondary);
+  color: #315e44;
   font-size: 0.95rem;
   line-height: 1.7;
   text-align: left; /* the pricing card centres its copy */
@@ -25588,6 +25588,9 @@ html[lang='zh-hant'],
 }
 
 .cinematic-opening__primary {
+  position: relative;
+  isolation: isolate;
+  z-index: 0;
   color: #f8fbfc;
   /* Keep the opening independent from deferred CJK webfonts so its logo and
      title paint immediately; the full editorial font system activates with
@@ -25600,6 +25603,16 @@ html[lang='zh-hant'],
   text-shadow:
     0 1px 2px rgba(7, 19, 27, 0.82),
     0 8px 28px rgba(7, 19, 27, 0.58);
+}
+
+.cinematic-opening__primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  inset-block: -0.15em;
+  z-index: -1;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.55);
 }
 
 html[lang='zh-Hant'] .cinematic-opening__primary,

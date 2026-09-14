@@ -167,6 +167,53 @@ import {
   type BuilderFaqItem,
 } from '@/lib/builder/faq/faq-engine';
 
+const JULY_OFFICE_CHILD_SPECS = [
+  { id: 'home-offices-label', kind: 'text' },
+  { id: 'home-offices-title', kind: 'text' },
+  { id: 'home-offices-tabs', kind: 'container' },
+  { id: 'home-offices-layout-0', kind: 'container' },
+  { id: 'home-offices-layout-1', kind: 'container' },
+  { id: 'home-offices-layout-2', kind: 'container' },
+  { id: 'home-offices-layout-3', kind: 'container' },
+] as const;
+
+// Keep authored nodes intact; mismatched child sets retain their existing order.
+function orderChildrenBySemanticSpec<T extends Pick<BuilderCanvasNode, 'id' | 'kind' | 'parentId'>>(
+  enabled: boolean,
+  expectedParentId: T['parentId'],
+  existing: readonly T[],
+  specs: readonly Pick<BuilderCanvasNode, 'id' | 'kind'>[],
+): readonly T[] {
+  if (!enabled) return existing;
+  if (existing.length !== specs.length) return existing;
+
+  const byId = new Map<string, T>();
+  for (const node of existing) {
+    if (byId.has(node.id)) return existing;
+    if (!Object.is(node.parentId, expectedParentId)) return existing;
+    byId.set(node.id, node);
+  }
+
+  const seen = new Set<string>();
+  const ordered: T[] = new Array(specs.length);
+  let alreadyInOrder = true;
+
+  for (let i = 0; i < specs.length; i++) {
+    const spec = specs[i]!;
+    if (seen.has(spec.id)) return existing;
+    seen.add(spec.id);
+
+    const node = byId.get(spec.id);
+    if (node === undefined) return existing;
+    if (node.kind !== spec.kind) return existing;
+
+    ordered[i] = node;
+    if (alreadyInOrder && existing[i] !== node) alreadyInOrder = false;
+  }
+
+  return alreadyInOrder ? existing : ordered;
+}
+
 interface ResolvedLightbox {
   meta: BuilderLightbox;
   canvas: BuilderCanvasDocument;
@@ -380,6 +427,41 @@ export interface ResolvedPublishedSitePage {
   faqCategories: BuilderFaqCategory[];
   faqItems: BuilderFaqItem[];
   dynamicItemRecordSlug?: string;
+}
+
+type PublicListStateCopy = {
+  empty: string;
+  noMatches: string;
+  clearFilters: string;
+};
+
+export function getPublicListStateCopy(locale: string): PublicListStateCopy {
+  const normalized = String(locale ?? '')
+    .trim()
+    .toLowerCase()
+    .replace(/_/g, '-');
+
+  if (normalized === 'ko' || normalized.startsWith('ko-')) {
+    return {
+      empty: '표시할 항목이 없습니다.',
+      noMatches: '현재 필터에 맞는 항목이 없습니다.',
+      clearFilters: '필터 지우기',
+    };
+  }
+
+  if (normalized === 'zh-hant' || normalized.startsWith('zh-hant-')) {
+    return {
+      empty: '沒有可顯示的項目。',
+      noMatches: '沒有符合目前篩選條件的項目。',
+      clearFilters: '清除篩選',
+    };
+  }
+
+  return {
+    empty: 'No items available.',
+    noMatches: 'No matching items.',
+    clearFilters: 'Clear filters',
+  };
 }
 
 type ParentLayoutMode = 'absolute' | 'flex' | 'grid';
@@ -863,9 +945,31 @@ export async function PublishedSitePageView({
     const component = getComponent(renderedNode.kind);
     const legacyZhFluidStyle = isHomePage ? getLegacyZhHantFluidContainerStyle(renderedNode, locale) : undefined;
     const decorativeVideo = resolvePublishedDecorativeVideo(renderedNode, locale);
-    const childNodes = (childrenMap[renderedNode.id] ?? [])
+    let childNodes: readonly BuilderCanvasNode[] = (childrenMap[renderedNode.id] ?? [])
       .map((childId) => nodesById.get(childId))
       .filter((child): child is BuilderCanvasNode => Boolean(child && child.visible !== false));
+    // The projected fourth office layout must follow the heading and tabs in DOM flow.
+    if (renderedNode.kind === 'container' && renderedNode.id === 'home-offices-container') {
+      childNodes = orderChildrenBySemanticSpec(
+        Boolean(julyPublishedHomeEditorial),
+        renderedNode.id,
+        childNodes,
+        JULY_OFFICE_CHILD_SPECS,
+      );
+    }
+    // Match July's visual office order in SSR without changing authored stacking data.
+    if (julyPublishedHomeEditorial && renderedNode.kind === 'container' && renderedNode.id === 'home-offices-tabs') {
+      const officeIds = ['home-offices-tab-0', 'home-offices-tab-1', 'home-offices-tab-2', 'home-offices-tab-3'];
+      const officeNodesById = new Map(childNodes.map((child) => [child.id, child]));
+      if (
+        childNodes.length === officeIds.length
+        && officeNodesById.size === officeIds.length
+        && childNodes.every((child) => child.kind === 'button' && child.parentId === renderedNode.id)
+        && officeIds.every((id) => officeNodesById.has(id))
+      ) {
+        childNodes = officeIds.map((id) => officeNodesById.get(id)!);
+      }
+    }
     const flowAsSection = isTopLevel && isTopLevelFlowSection(renderedNode);
     const parentUsesFlowLayout = parentLayoutMode === 'flex' || parentLayoutMode === 'grid';
     const useFlowWrapper = flowAsSection || parentUsesFlowLayout;
@@ -1018,7 +1122,7 @@ export async function PublishedSitePageView({
                   textAlign: 'center',
                 }}
                 >
-                  <span>{locale === 'ko' ? '현재 필터에 맞는 항목이 없습니다.' : 'No matching items.'}</span>
+                  <span>{getPublicListStateCopy(locale).noMatches}</span>
                   {dynamicListRuntime.filterSummary.length > 0 ? (
                     <div
                       style={{
@@ -1066,7 +1170,7 @@ export async function PublishedSitePageView({
                     fontWeight: 700,
                   }}
                 >
-                  {locale === 'ko' ? '필터 지우기' : 'Clear filters'}
+                  {getPublicListStateCopy(locale).clearFilters}
                 </a>
               </div>,
             ]
@@ -1092,7 +1196,7 @@ export async function PublishedSitePageView({
                   textAlign: 'center',
                 }}
               >
-                {locale === 'ko' ? '표시할 항목이 없습니다.' : 'No items available.'}
+                {getPublicListStateCopy(locale).empty}
               </div>,
             ]
         : childNodes.map((child) => renderPublishedNode(child, false, childParentLayoutMode, bindingContext));

@@ -143,6 +143,48 @@ describe('public module main landmarks', () => {
     expect(portfolioDetail).toContain(`href="/${locale}/portfolio"`);
   });
 
+  it.each([
+    ['ko', '무료'],
+    ['en', 'Free'],
+    ['zh-hant', '免費'],
+  ] as const)('localizes the %s free event price', async (locale, priceLabel) => {
+    findEventBySlug.mockResolvedValue(event(locale));
+    const html = renderPublic(await EventDetailPage({ params: Promise.resolve({ locale, slug: 'landmark-event' }) }), locale);
+    expect(html).toContain(`<strong>${priceLabel}</strong>`);
+    if (locale !== 'ko') expect(html).not.toContain('<strong>무료</strong>');
+  });
+
+  it.each([
+    ['ko', '신청'],
+    ['en', 'RSVP'],
+    ['zh-hant', '報名'],
+  ] as const)('localizes the %s registered count without changing its meaning', async (locale, registrationLabel) => {
+    findEventBySlug.mockResolvedValue({ ...event(locale), registeredCount: 3 });
+    const html = renderPublic(await EventDetailPage({ params: Promise.resolve({ locale, slug: 'landmark-event' }) }), locale);
+    expect(html).toContain(`<span>3/10 ${registrationLabel}</span>`);
+    expect(html).not.toContain(`<span>7/10 ${registrationLabel}</span>`);
+  });
+
+  it.each(locales)('preserves the existing %s paid event price', async (locale) => {
+    const paidEvent = { ...event(locale), ticketType: 'paid' as const, ticketPriceTwd: 15000 };
+    findEventBySlug.mockResolvedValue(paidEvent);
+    const html = renderPublic(await EventDetailPage({ params: Promise.resolve({ locale, slug: 'landmark-event' }) }), locale);
+    expect(html).toContain(`<strong>${paidEvent.ticketCurrency} ${paidEvent.ticketPriceTwd.toLocaleString()}</strong>`);
+  });
+
+  it('keeps Japanese event details unavailable before event lookup', async () => {
+    const html = renderPublic(await EventDetailPage({ params: Promise.resolve({ locale: 'ja' as Locale, slug: 'must-not-load' }) }), 'ja');
+    expect(html).toContain('data-public-unavailable="events"');
+    expect(html).toContain('イベントは日本語では公開していません');
+    expect(findEventBySlug).not.toHaveBeenCalled();
+  });
+
+  it.each(['missing', 'draft'] as const)('rejects a %s event before displaying its price', async (state) => {
+    findEventBySlug.mockResolvedValue(state === 'missing' ? null : { ...event('en'), status: 'draft' });
+    await expect(EventDetailPage({ params: Promise.resolve({ locale: 'en', slug: 'not-public' }) }))
+      .rejects.toMatchObject({ digest: 'NEXT_HTTP_ERROR_FALLBACK;404' });
+  });
+
   it.each([true, false])('preserves standalone billing and demotes localized billing (signedOut=%s)', async (signedOut) => {
     for (const locale of locales) {
       currentMember.mockResolvedValue(signedOut ? null : { email: 'member@example.test', locale });

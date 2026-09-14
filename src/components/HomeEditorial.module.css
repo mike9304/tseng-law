@@ -401,7 +401,8 @@
 }
 
 .searchBand :global(.hero-search-input)::placeholder {
-  color: var(--text-caption) !important;
+  color: #3f6b4d !important;
+  opacity: 1;
 }
 
 .searchBand :global(.hero-search-btn) {

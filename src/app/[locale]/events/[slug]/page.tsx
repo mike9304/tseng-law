@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import EventRsvpElement from '@/lib/builder/components/eventRsvp/Element';
+import { getEventWidgetsCopy } from '@/lib/builder/components/event-widgets-copy';
 import type { BuilderEventRsvpCanvasNode } from '@/lib/builder/canvas/types';
 import { findEventBySlug } from '@/lib/builder/events/events-engine';
 import { normalizeLocale, locales, type Locale } from '@/lib/locales';
@@ -92,9 +93,9 @@ export default async function EventDetailPage(props: { params: Promise<{ locale:
       <section className={`${styles.inner} ${styles.detail}`}>
         <article className={styles.detailCard}>
           <div className={styles.detailMeta}>
-            <strong>{event.ticketType === 'free' ? '무료' : `${event.ticketCurrency} ${event.ticketPriceTwd.toLocaleString()}`}</strong>
+            <strong>{event.ticketType === 'free' ? getEventWidgetsCopy(locale).free : `${event.ticketCurrency} ${event.ticketPriceTwd.toLocaleString()}`}</strong>
             {' · '}
-            <span>{event.registeredCount}/{event.capacity} RSVP</span>
+            <span>{event.registeredCount}/{event.capacity} {getEventWidgetsCopy(locale).rsvp}</span>
           </div>
           <div className={styles.detailBody}>{event.description}</div>
         </article>

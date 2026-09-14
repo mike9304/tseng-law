@@ -357,3 +357,154 @@ describe('published-only runtime presentation', () => {
     expect(html).toContain('data-presentation="editorial"');
   });
 });
+
+describe('published July office reading order', () => {
+  async function julyCanvas() {
+    return normalizeLegacyZhHantHomeRead(
+      normalizeCanvasDocument(structuredClone(savedJulyHome), 'zh-hant'),
+      'zh-hant',
+      true,
+    );
+  }
+
+  function nodeMarkup(html: string, id: string): string {
+    const cleaned = stripNonRenderedMarkup(html);
+    const start = cleaned.search(new RegExp(`<div\\b[^>]*\\bdata-node-id="${id}"[^>]*>`));
+    if (start < 0) throw new Error(`Missing published node ${id}`);
+    const tags = /<\/?div\b[^>]*>/g;
+    tags.lastIndex = start;
+    let depth = 0;
+    let tag: RegExpExecArray | null;
+    while ((tag = tags.exec(cleaned))) {
+      depth += tag[0].startsWith('</') ? -1 : 1;
+      if (depth === 0) return cleaned.slice(start, tags.lastIndex);
+    }
+    throw new Error(`Unclosed published node ${id}`);
+  }
+
+  function officeContainerIds(html: string): string[] {
+    const markup = nodeMarkup(html, 'home-offices-container');
+    const ids: string[] = [];
+    const tags = /<\/?div\b[^>]*>/g;
+    let depth = 0;
+    let tag: RegExpExecArray | null;
+    while ((tag = tags.exec(markup))) {
+      if (tag[0].startsWith('</')) {
+        depth -= 1;
+      } else {
+        // The published wrapper contains the container element at depth 2.
+        // Count only its direct node wrappers, never nested office card nodes.
+        if (depth === 2) {
+          const id = /\bdata-node-id="([^"]+)"/.exec(tag[0]);
+          if (id) ids.push(id[1]);
+        }
+        depth += 1;
+      }
+    }
+    return ids;
+  }
+
+  function officeIds(html: string): string[] {
+    return [...stripNonRenderedMarkup(html).matchAll(/\bdata-node-id="(home-offices-tab-\d+)"/g)]
+      .map((match) => match[1]);
+  }
+
+  it('puts stock desktop office buttons in visual reading order without changing identity or the mobile branch', async () => {
+    const canvas = await julyCanvas();
+    const before = structuredClone(canvas);
+    const html = renderToStaticMarkup(await PublishedSitePageView({ resolved: publishedHomeResolved('zh-hant', canvas) }));
+
+    expect(html).toContain('data-home-editorial="july"');
+    expect(officeContainerIds(html)).toEqual([
+      'home-offices-label', 'home-offices-title', 'home-offices-tabs',
+      'home-offices-layout-0', 'home-offices-layout-1', 'home-offices-layout-2', 'home-offices-layout-3',
+    ]);
+    expect(officeIds(html)).toEqual([
+      'home-offices-tab-0', 'home-offices-tab-1', 'home-offices-tab-2', 'home-offices-tab-3',
+    ]);
+    for (const [index, label] of ['台中', '高雄', '台北', '屏東'].entries()) {
+      const tab = nodeMarkup(html, `home-offices-tab-${index}`);
+      expect(visibleText(tab)).toContain(label);
+      expect(/<button\b[^>]*class="[^"]*\bactive\b/.test(tab)).toBe(index === 0);
+      const layoutOpeningTag = nodeMarkup(html, `home-offices-layout-${index}`).split('>')[0];
+      expect(/\bstyle="[^"]*display:none/.test(layoutOpeningTag)).toBe(index !== 0);
+    }
+    const mobile = canvas.nodes.find((node) => node.anchorName === 'mobile-parity-home-offices');
+    if (!mobile) throw new Error('Missing July mobile office composite');
+    const mobileTabs = [...nodeMarkup(html, mobile.id).matchAll(/<button\b([^>]*\brole="tab"[^>]*)>([\s\S]*?)<\/button>/g)];
+    expect(mobileTabs.map((match) => visibleText(match[2]).trim())).toEqual(['台北', '台中', '高雄', '屏東']);
+    expect(mobileTabs.filter((match) => match[1].includes('aria-selected="true"')).map((match) => visibleText(match[2]).trim()))
+      .toEqual(['台北']);
+    expect(canvas).toEqual(before);
+  });
+
+  it('preserves authored office order, label and initial selection outside July admission', async () => {
+    const canvas = await julyCanvas();
+    const first = canvas.nodes.find((node) => node.id === 'home-offices-tab-0');
+    const moved = canvas.nodes.find((node) => node.id === 'home-offices-tab-1');
+    const selected = canvas.nodes.find((node) => node.id === 'home-offices-tab-2');
+    if (first?.kind !== 'button' || moved?.kind !== 'button' || selected?.kind !== 'button') {
+      throw new Error('Missing original July office buttons');
+    }
+    first.content.className = 'tab-button';
+    moved.zIndex = -5;
+    moved.content.label = '作者自訂據點';
+    selected.content.className = 'tab-button active';
+    const before = structuredClone(canvas);
+    const html = renderToStaticMarkup(await PublishedSitePageView({ resolved: publishedHomeResolved('zh-hant', canvas) }));
+
+    expect(html).not.toContain('data-home-editorial="july"');
+    expect(officeContainerIds(html)).toEqual([
+      'home-offices-layout-3', 'home-offices-label', 'home-offices-title', 'home-offices-tabs',
+      'home-offices-layout-0', 'home-offices-layout-1', 'home-offices-layout-2',
+    ]);
+    expect(officeIds(html)).toEqual([
+      'home-offices-tab-1', 'home-offices-tab-3', 'home-offices-tab-0', 'home-offices-tab-2',
+    ]);
+    expect(visibleText(nodeMarkup(html, moved.id))).toContain('作者自訂據點');
+    expect(nodeMarkup(html, selected.id)).toMatch(/<button\b[^>]*class="[^"]*\bactive\b/);
+    expect(nodeMarkup(html, 'home-offices-layout-2').split('>')[0]).not.toMatch(/\bstyle="[^"]*display:none/);
+    expect(nodeMarkup(html, 'home-offices-layout-0').split('>')[0]).toMatch(/\bstyle="[^"]*display:none/);
+    expect(canvas).toEqual(before);
+  });
+
+  it('retains an unknown direct office child and authored stacking outside July admission', async () => {
+    const canvas = await julyCanvas();
+    const label = canvas.nodes.find((node) => node.id === 'home-offices-label');
+    if (label?.kind !== 'text') throw new Error('Missing original July office label');
+    canvas.nodes.push({
+      ...structuredClone(label),
+      id: 'authored-office-note',
+      zIndex: -2,
+      content: { ...structuredClone(label.content), text: '作者補充據點說明' },
+    });
+    const before = structuredClone(canvas);
+    const html = renderToStaticMarkup(await PublishedSitePageView({ resolved: publishedHomeResolved('zh-hant', canvas) }));
+
+    expect(html).not.toContain('data-home-editorial="july"');
+    expect(officeContainerIds(html)).toEqual([
+      'authored-office-note', 'home-offices-layout-3', 'home-offices-label', 'home-offices-title',
+      'home-offices-tabs', 'home-offices-layout-0', 'home-offices-layout-1', 'home-offices-layout-2',
+    ]);
+    expect(visibleText(nodeMarkup(html, 'authored-office-note'))).toContain('作者補充據點說明');
+    expect(canvas).toEqual(before);
+  });
+
+  it('retains an extra authored office child in its original order', async () => {
+    const canvas = await julyCanvas();
+    const tab = canvas.nodes.find((node) => node.id === 'home-offices-tab-1');
+    if (tab?.kind !== 'button') throw new Error('Missing original July office button');
+    canvas.nodes.push({ ...structuredClone(tab), id: 'authored-office-link', zIndex: -2 });
+    const before = structuredClone(canvas);
+    const html = renderToStaticMarkup(await PublishedSitePageView({ resolved: publishedHomeResolved('zh-hant', canvas) }));
+    const tabs = nodeMarkup(html, 'home-offices-tabs');
+
+    expect(html).not.toContain('data-home-editorial="july"');
+    expect(officeIds(html)).toEqual([
+      'home-offices-tab-3', 'home-offices-tab-0', 'home-offices-tab-1', 'home-offices-tab-2',
+    ]);
+    expect(tabs).toContain('data-node-id="authored-office-link"');
+    expect(tabs.indexOf('data-node-id="authored-office-link"')).toBeLessThan(tabs.indexOf('data-node-id="home-offices-tab-3"'));
+    expect(canvas).toEqual(before);
+  });
+});

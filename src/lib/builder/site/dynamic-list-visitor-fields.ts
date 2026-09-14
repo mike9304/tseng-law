@@ -1,3 +1,4 @@
+import { getListUiCopy } from '@/lib/builder/site/dynamic-list-ui-copy';
 import {
   getBuilderBindableTarget,
   type BuilderDatasetFieldDefinition,
@@ -48,9 +49,11 @@ const sortableCmsFieldTypes = new Set<BuilderCmsFieldType>([
 export function resolveDynamicListVisitorFieldState({
   dynamicList,
   site,
+  locale = 'en',
 }: {
   dynamicList: BuilderDynamicListPageMeta;
   site: Pick<BuilderSiteDocument, 'cmsCollections'>;
+  locale?: string;
 }): DynamicListVisitorFieldState {
   const customCollection = dynamicList.cmsCollectionId
     ? site.cmsCollections?.find((collection) => collection.collectionId === dynamicList.cmsCollectionId)
@@ -64,7 +67,7 @@ export function resolveDynamicListVisitorFieldState({
         sortFields,
         defaultLimit: dynamicList.limit,
       },
-      sortOptions: createSortOptions(sortFields),
+      sortOptions: createSortOptions(sortFields, locale),
     };
   }
 
@@ -75,7 +78,7 @@ export function resolveDynamicListVisitorFieldState({
       sortFields: target.sortFields,
       defaultLimit: dynamicList.limit ?? target.defaultLimit,
     },
-    sortOptions: createSortOptions(target.sortFields),
+    sortOptions: createSortOptions(target.sortFields, locale),
   };
 }
 
@@ -110,9 +113,10 @@ function toVisitorField(
 
 function createSortOptions(
   sortFields: readonly BuilderDatasetFieldDefinition[],
+  locale: string,
 ): DynamicListVisitorSortOption[] {
   return sortFields.flatMap((field) => ([
-    { fieldId: field.fieldId, direction: 'asc', label: `${field.label} ascending` },
-    { fieldId: field.fieldId, direction: 'desc', label: `${field.label} descending` },
+    { fieldId: field.fieldId, direction: 'asc', label: `${field.label} ${getListUiCopy(locale).ascending}` },
+    { fieldId: field.fieldId, direction: 'desc', label: `${field.label} ${getListUiCopy(locale).descending}` },
   ]));
 }

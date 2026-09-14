@@ -161,7 +161,7 @@ const eventWidgetsCopy: Record<Locale, EventWidgetsCopy> = {
     rsvpForm: {
       defaultTitle: EVENT_RSVP_LEGACY_DEFAULTS.title,
       defaultSuccessMessage: EVENT_RSVP_LEGACY_DEFAULTS.successMessage,
-      freeTicket: '무료 RSVP',
+      freeTicket: '무료 신청',
       paidTicket: (currency, price) => `${currency} ${price.toLocaleString()} · 결제 확인 대기`,
       seatsLeft: (remaining) => `${remaining}석 남음`,
       previewMessage: '미리보기에서는 신청이 저장되지 않습니다.',

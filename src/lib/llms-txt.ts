@@ -551,6 +551,33 @@ export function buildGuidanceLlmsTxt(locale: GuidanceLocale4): string {
     throw new Error(`Guidance llms.txt requires all ${GUIDANCE_PAGE_KEYS.length} core pages: ${locale}`);
   }
 
+  /*
+   * The seventeen translated columns belong in the discovery map too.
+   * Guidance locales publish the same seventeen the other four do — the live
+   * checker counts them as vi:17, id:17, th:17, fil:17 — but this catalog
+   * listed only the ten guidance pages, so sixty-eight real pages were absent
+   * from the surface AI clients read. Titles and summaries are the columns'
+   * own reviewed frontmatter; nothing is written here.
+   */
+  const columns = getAllColumnPosts(locale);
+  if (columns.length === 0) {
+    throw new Error(`Missing legal columns for guidance llms.txt locale: ${locale}`);
+  }
+  const columnEntries: LlmsEntry[] = columns.map((column) => {
+    if (!column.slug || !column.title || !column.summary) {
+      throw new Error(`Incomplete legal column metadata for guidance llms.txt: ${locale}`);
+    }
+    return {
+      title: column.title,
+      path: `/${locale}/columns/${column.slug}`,
+      annotation: column.summary,
+    };
+  });
+  const uniqueColumnUrls = new Set(columnEntries.map((entry) => buildCanonicalLlmsUrl(entry.path)));
+  if (uniqueColumnUrls.size !== columnEntries.length) {
+    throw new Error(`Duplicate legal column URL for guidance llms.txt locale: ${locale}`);
+  }
+
   return finalizeLlmsTxt([
     `# ${getOrganizationName('en')} — ${pack.languageName}`,
     '',
@@ -561,6 +588,9 @@ export function buildGuidanceLlmsTxt(locale: GuidanceLocale4): string {
     notices.discoveryNotice,
     notices.confidentialNotice,
     '',
-    ...renderSections([{ heading: pack.menuLabel, entries }]),
+    ...renderSections([
+      { heading: pack.menuLabel, entries },
+      { heading: pack.nav.columns, entries: columnEntries },
+    ]),
   ], LOCALE_LLMS_TXT_MAX_BYTES);
 }

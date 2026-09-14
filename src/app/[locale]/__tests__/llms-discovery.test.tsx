@@ -81,9 +81,13 @@ describe('guidance locale llms.txt catalogs', () => {
   it.each(GUIDANCE_LOCALES_4)('lists the ten %s guidance pages once each', (locale) => {
     const body = buildGuidanceLlmsTxt(locale);
     const bullets = body.split('\n').filter((line) => line.startsWith('- ['));
+    const columnBullets = bullets.filter((line) => line.includes(`/${locale}/columns/`));
 
     expect(GUIDANCE_PAGE_KEYS).toHaveLength(10);
-    expect(bullets).toHaveLength(10);
+    // The catalog is the ten guidance pages plus the seventeen translated
+    // columns; the guidance pages themselves must still appear exactly once.
+    expect(bullets).toHaveLength(10 + columnBullets.length);
+    expect(bullets.length - columnBullets.length).toBe(10);
 
     for (const pageKey of GUIDANCE_PAGE_KEYS) {
       const url = `https://tseng-law.com${guidancePublicPath(locale, pageKey)}`;

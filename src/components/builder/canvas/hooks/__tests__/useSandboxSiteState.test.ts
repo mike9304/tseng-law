@@ -2801,3 +2801,716 @@ describe('resolveMissingExpectedRevisionDraftSave', () => {
     });
   });
 });
+
+describe('useSandboxSiteState columns navigation PERF05', () => {
+  function columnsSummary(pageId = 'page-columns') {
+    return {
+      pageId,
+      slug: 'columns',
+      title: '호정칼럼',
+      path: '/ko/columns',
+    };
+  }
+
+  function pageIdFromDraftUrl(url: string): string | null {
+    const matched = String(url).match(/\/pages\/([^/?#]+)\/draft/);
+    return matched ? decodeURIComponent(matched[1]) : null;
+  }
+
+  function isSitePagesCollectionUrl(url: string): boolean {
+    const path = String(url).split('?')[0];
+    return path.endsWith('/api/builder/site/pages') || path.endsWith('/api/builder/site/pages/');
+  }
+
+  function baseColumnsProps(overrides: Partial<SandboxSiteStateProps> = {}): SandboxSiteStateProps {
+    const pageA = navigationDocument('01');
+    return {
+      initialDocument: pageA,
+      initialDraftMeta: { revision: 1, savedAt: pageA.updatedAt },
+      locale: 'ko',
+      siteId: 'navigation-test-site',
+      initialPageId: 'page-a',
+      currentSlug: 'page-a',
+      sitePages: [],
+      canvasDocument: pageA,
+      hasLocalHistory: false,
+      mutationBaseDocument: null,
+      replaceDocument: vi.fn(),
+      setDraftSaveState: vi.fn(),
+      pushToast: vi.fn(),
+      ...overrides,
+    };
+  }
+
+  function installColumnsFetch(options: {
+    events: string[];
+    listPagesByCount?: Record<number, Array<ReturnType<typeof columnsSummary>>>;
+    defaultListPages?: Array<ReturnType<typeof columnsSummary>>;
+    postStatus?: number;
+    postBody?: unknown;
+    postGate?: ReturnType<typeof deferred<void>>;
+    listGates?: Record<number, ReturnType<typeof deferred<void>>>;
+    draftGatesByCount?: Record<number, ReturnType<typeof deferred<void>>>;
+    draftGatesByPage?: Record<string, ReturnType<typeof deferred<void>>>;
+    draftStatusByCount?: Record<number, number>;
+    draftDocuments?: Record<string, BuilderCanvasDocument>;
+    putStatus?: number;
+    putGate?: ReturnType<typeof deferred<void>>;
+  }) {
+    let listCount = 0;
+    let draftGetCount = 0;
+    let putCount = 0;
+    const fetchMock = vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
+      const url = String(input);
+      const method = String(init?.method ?? 'GET').toUpperCase();
+      if (url.includes('/api/builder/blog/posts')) {
+        options.events.push('blog:GET');
+        return Response.json({ ok: true, total: 0, posts: [] });
+      }
+      if (url.includes('/api/builder/site/navigation?')) {
+        return Response.json({ navigation: [] });
+      }
+      if (url.includes('/api/builder/site/settings?')) {
+        return Response.json({ settings: {}, theme: DEFAULT_THEME });
+      }
+      const draftPageId = pageIdFromDraftUrl(url);
+      if (draftPageId) {
+        // Initial mount hydration is separate from the clicked target's
+        // deferred navigation/recovery phases.
+        if (method === 'GET' && draftPageId === 'page-a') {
+          const initial = navigationDocument('01');
+          return Response.json({
+            draft: { revision: 1, savedAt: initial.updatedAt },
+            document: initial,
+          });
+        }
+        if (method === 'PUT') {
+          putCount += 1;
+          options.events.push(`draft:PUT:${draftPageId}:${putCount}`);
+          if (options.putGate) await options.putGate.promise;
+          return new Response(JSON.stringify({
+            draft: { revision: 2, savedAt: '2026-07-13T00:02:00.000Z' },
+            document: options.draftDocuments?.[draftPageId] ?? navigationDocument('30'),
+          }), {
+            status: options.putStatus ?? 200,
+            headers: { 'Content-Type': 'application/json' },
+          });
+        }
+        draftGetCount += 1;
+        options.events.push(`draft:GET:${draftPageId}:${draftGetCount}`);
+        const countGate = options.draftGatesByCount?.[draftGetCount];
+        if (countGate) await countGate.promise;
+        const pageGate = options.draftGatesByPage?.[draftPageId];
+        if (pageGate) await pageGate.promise;
+        const status = options.draftStatusByCount?.[draftGetCount] ?? 200;
+        if (status === 404) return new Response('', { status: 404 });
+        return Response.json({
+          draft: { revision: 1, savedAt: '2026-07-13T00:00:30.000Z' },
+          document: options.draftDocuments?.[draftPageId] ?? navigationDocument('30'),
+        });
+      }
+      if (isSitePagesCollectionUrl(url)) {
+        if (method === 'POST') {
+          options.events.push('pages:POST');
+          if (options.postGate) await options.postGate.promise;
+          return new Response(JSON.stringify(options.postBody ?? {}),
+            {
+              status: options.postStatus ?? 200,
+              headers: { 'Content-Type': 'application/json' },
+            });
+        }
+        listCount += 1;
+        options.events.push(`pages:GET:${listCount}`);
+        const listGate = options.listGates?.[listCount];
+        if (listGate) await listGate.promise;
+        const pages = options.listPagesByCount?.[listCount] ?? options.defaultListPages ?? [];
+        return Response.json({ pages });
+      }
+      return Response.json({
+        ok: true,
+        pages: [],
+        document: navigationDocument('01'),
+        draft: { revision: 1, savedAt: '2026-07-13T00:00:01.000Z' },
+      });
+    });
+    vi.stubGlobal('fetch', fetchMock);
+    return { fetchMock };
+  }
+
+  async function drainColumnsTest(
+    renderer: Awaited<ReturnType<typeof renderSandboxSiteState>>,
+    gates: Array<ReturnType<typeof deferred<void>> | undefined>,
+  ) {
+    for (const gate of gates) gate?.resolve();
+    await Promise.resolve();
+    await Promise.resolve();
+    await renderer.unmount();
+  }
+
+  it('selects a full-page create result before the second list GET',
+    async () => {
+      const events: string[] = [];
+      const secondListGate = deferred<void>();
+      const columnsDoc = navigationDocument('30');
+      installColumnsFetch({
+        events,
+        listPagesByCount: {
+          1: [],
+          2: [columnsSummary()],
+        },
+        postBody: {
+          success: true,
+          pageId: 'page-columns',
+          page: columnsSummary(),
+        },
+        listGates: { 2: secondListGate },
+        draftDocuments: { 'page-columns': columnsDoc },
+      });
+      const replaceDocument = vi.fn();
+      const renderer = await renderSandboxSiteState(baseColumnsProps({ replaceDocument }));
+      await renderer.flush();
+      events.length = 0;
+      const openPagesDrawer = vi.fn();
+      let opened!: Promise<boolean>;
+      let selectionCompleted = false;
+      try {
+        await act(async () => {
+          opened = renderer.result.handleOpenColumnsPage(openPagesDrawer);
+          void opened.then((result) => { selectionCompleted = result; }).catch(() => {});
+        });
+        await renderer.flush();
+        expect(events.indexOf('pages:POST')).toBeGreaterThan(events.indexOf('pages:GET:1'));
+        expect(events.findIndex((event) => event.startsWith('draft:GET:page-columns'))).toBeGreaterThan(
+          events.indexOf('pages:POST'),
+        );
+        expect(events.indexOf('pages:GET:2')).toBeGreaterThan(
+          events.findIndex((event) => event.startsWith('draft:GET:page-columns')),
+        );
+        expect(renderer.result.activePageId).toBe('page-columns');
+        expect(renderer.result.sitePagesState.some((page) => page.slug === 'columns')).toBe(false);
+        expect(selectionCompleted).toBe(true);
+        expect(renderer.result.columnsPageLookupPending).toBe(false);
+        expect(openPagesDrawer).not.toHaveBeenCalled();
+        secondListGate.resolve();
+        await renderer.flush();
+        expect(await opened).toBe(true);
+        expect(renderer.result.sitePagesState.some((page) => page.pageId === 'page-columns')).toBe(true);
+      } finally {
+        await drainColumnsTest(renderer, [secondListGate]);
+      }
+    });
+
+  it('returns composed pending immediately for an existing columns target',
+    async () => {
+      const events: string[] = [];
+      const draftGate = deferred<void>();
+      installColumnsFetch({
+        events,
+        draftGatesByCount: { 1: draftGate },
+        draftDocuments: { 'page-columns': navigationDocument('30') },
+      });
+      const renderer = await renderSandboxSiteState(baseColumnsProps({
+        sitePages: [columnsSummary()],
+        currentSlug: 'page-a',
+      }));
+      await renderer.flush();
+      events.length = 0;
+      try {
+        await act(async () => {
+          void renderer.result.handleOpenColumnsPage(vi.fn());
+        });
+        expect(renderer.result.columnsPageLookupPending).toBe(true);
+        expect(renderer.result.columnsPage?.pageId).toBe('page-columns');
+        expect(events.some((event) => event === 'pages:POST')).toBe(false);
+        expect(events.some((event) => event.startsWith('pages:GET'))).toBe(false);
+      } finally {
+        await drainColumnsTest(renderer, [draftGate]);
+      }
+    });
+
+  it('ignores a rapid duplicate click so only one operation runs',
+    async () => {
+      const events: string[] = [];
+      const draftGate = deferred<void>();
+      const { fetchMock } = installColumnsFetch({
+        events,
+        draftGatesByCount: { 1: draftGate },
+        draftDocuments: { 'page-columns': navigationDocument('30') },
+      });
+      const renderer = await renderSandboxSiteState(baseColumnsProps({
+        sitePages: [columnsSummary()],
+      }));
+      await renderer.flush();
+      events.length = 0;
+      const openPagesDrawer = vi.fn();
+      let first!: Promise<boolean>;
+      let second!: Promise<boolean>;
+      try {
+        await act(async () => {
+          first = renderer.result.handleOpenColumnsPage(openPagesDrawer);
+          second = renderer.result.handleOpenColumnsPage(openPagesDrawer);
+        });
+        expect(await second).toBe(false);
+        draftGate.resolve();
+        await renderer.flush();
+        expect(await first).toBe(true);
+        expect(
+          fetchMock.mock.calls.filter(([input, init]) => (
+            pageIdFromDraftUrl(String(input)) === 'page-columns'
+            && String(init?.method ?? 'GET').toUpperCase() === 'GET'
+          )).length,
+        ).toBe(1);
+        expect(events.filter((event) => event === 'pages:POST')).toEqual([]);
+      } finally {
+        await drainColumnsTest(renderer, [draftGate]);
+      }
+    });
+
+  it('keeps id-only create on the original list-first path',
+    async () => {
+      const events: string[] = [];
+      const draftGate = deferred<void>();
+      installColumnsFetch({
+        events,
+        listPagesByCount: {
+          1: [],
+          2: [columnsSummary()],
+        },
+        postStatus: 200,
+        postBody: { success: true, pageId: 'page-columns' },
+        draftGatesByCount: { 1: draftGate },
+        draftDocuments: { 'page-columns': navigationDocument('30') },
+      });
+      const renderer = await renderSandboxSiteState(baseColumnsProps());
+      await renderer.flush();
+      events.length = 0;
+      try {
+        await act(async () => {
+          void renderer.result.handleOpenColumnsPage(vi.fn());
+        });
+        await renderer.flush();
+        expect(events.filter((event) => event.startsWith('pages:') || event.startsWith('draft:GET'))).toEqual([
+          'pages:GET:1',
+          'pages:POST',
+          'pages:GET:2',
+          'draft:GET:page-columns:1',
+        ]);
+        expect(renderer.result.sitePagesState.find((page) => page.slug === 'columns')?.pageId).toBe('page-columns');
+        expect(renderer.result.activePageId).toBe('page-a');
+        draftGate.resolve();
+        await renderer.flush();
+        expect(renderer.result.activePageId).toBe('page-columns');
+      } finally {
+        await drainColumnsTest(renderer, [draftGate]);
+      }
+    });
+
+  it('keeps conflict 409 create on the original list-first path',
+    async () => {
+      const events: string[] = [];
+      const draftGate = deferred<void>();
+      installColumnsFetch({
+        events,
+        listPagesByCount: {
+          1: [],
+          2: [columnsSummary()],
+        },
+        postStatus: 409,
+        postBody: { error: 'conflict', pageId: 'page-columns' },
+        draftGatesByCount: { 1: draftGate },
+        draftDocuments: { 'page-columns': navigationDocument('30') },
+      });
+      const renderer = await renderSandboxSiteState(baseColumnsProps());
+      await renderer.flush();
+      events.length = 0;
+      try {
+        await act(async () => {
+          void renderer.result.handleOpenColumnsPage(vi.fn());
+        });
+        await renderer.flush();
+        expect(events.filter((event) => event.startsWith('pages:') || event.startsWith('draft:GET'))).toEqual([
+          'pages:GET:1',
+          'pages:POST',
+          'pages:GET:2',
+          'draft:GET:page-columns:1',
+        ]);
+        expect(renderer.result.activePageId).toBe('page-a');
+        draftGate.resolve();
+        await renderer.flush();
+        expect(renderer.result.activePageId).toBe('page-columns');
+      } finally {
+        await drainColumnsTest(renderer, [draftGate]);
+      }
+    });
+
+  it('does not POST or extra GET when the columns target is already known',
+    async () => {
+      const events: string[] = [];
+      installColumnsFetch({
+        events,
+        draftDocuments: { 'page-columns': navigationDocument('30') },
+      });
+      const renderer = await renderSandboxSiteState(baseColumnsProps({
+        sitePages: [columnsSummary()],
+      }));
+      await renderer.flush();
+      events.length = 0;
+      try {
+        await act(async () => {
+          await renderer.result.handleOpenColumnsPage(vi.fn());
+        });
+        await renderer.flush();
+        expect(events.filter((event) => event === 'pages:POST' || event.startsWith('pages:GET'))).toEqual([]);
+        expect(events.filter((event) => event.startsWith('draft:GET:page-columns'))).toHaveLength(1);
+        expect(renderer.result.activePageId).toBe('page-columns');
+      } finally {
+        await drainColumnsTest(renderer, []);
+      }
+    });
+
+  it('restores a missing 404 columns draft and does not restore a non-404 miss',
+    async () => {
+      const events404: string[] = [];
+      const recoveryToast = vi.fn();
+      installColumnsFetch({
+        events: events404,
+        draftStatusByCount: { 1: 404, 2: 404 },
+        draftDocuments: { 'page-columns': navigationDocument('30') },
+      });
+      const renderer404 = await renderSandboxSiteState(baseColumnsProps({
+        sitePages: [columnsSummary()],
+        pushToast: recoveryToast,
+      }));
+      await renderer404.flush();
+      events404.length = 0;
+      try {
+        await act(async () => {
+          await renderer404.result.handleOpenColumnsPage(vi.fn());
+        });
+        await renderer404.flush();
+        expect(events404.filter((event) => event.startsWith('draft:GET:page-columns'))).toEqual([
+          'draft:GET:page-columns:1',
+          'draft:GET:page-columns:2',
+          'draft:GET:page-columns:3',
+        ]);
+        expect(events404.some((event) => event.startsWith('draft:PUT:page-columns'))).toBe(true);
+        expect(renderer404.result.activePageId).toBe('page-columns');
+        expect(recoveryToast).toHaveBeenCalledWith(
+          '칼럼 페이지 draft를 복구했습니다.',
+          'success',
+        );
+      } finally {
+        await drainColumnsTest(renderer404, []);
+      }
+
+      const eventsPresent: string[] = [];
+      installColumnsFetch({
+        events: eventsPresent,
+        draftStatusByCount: { 1: 404, 2: 200 },
+        draftDocuments: { 'page-columns': navigationDocument('30') },
+      });
+      const rendererPresent = await renderSandboxSiteState(baseColumnsProps({
+        sitePages: [columnsSummary()],
+        pushToast: vi.fn(),
+        replaceDocument: vi.fn(),
+      }));
+      await rendererPresent.flush();
+      eventsPresent.length = 0;
+      try {
+        await act(async () => {
+          await rendererPresent.result.handleOpenColumnsPage(vi.fn());
+        });
+        await rendererPresent.flush();
+        expect(eventsPresent.filter((event) => event.startsWith('draft:GET:page-columns'))).toEqual([
+          'draft:GET:page-columns:1',
+          'draft:GET:page-columns:2',
+        ]);
+        // Saving page-a is required before navigation; only a target restore
+        // must be absent when its existence probe did not return 404.
+        expect(eventsPresent.some((event) => event.startsWith('draft:PUT:page-columns:'))).toBe(false);
+        expect(rendererPresent.result.activePageId).toBe('page-a');
+      } finally {
+        await drainColumnsTest(rendererPresent, []);
+      }
+    });
+
+  it('preserves blocked and superseded columns navigation behavior',
+    async () => {
+      const blockedEvents: string[] = [];
+      const pageA = navigationDocument('01');
+      const dirtyPageA = { ...pageA, updatedAt: '2026-07-13T00:01:01.000Z' };
+      const pushToast = vi.fn();
+      installColumnsFetch({
+        events: blockedEvents,
+        putStatus: 500,
+        draftDocuments: { 'page-columns': navigationDocument('30') },
+      });
+      const blockedProps = baseColumnsProps({
+        sitePages: [columnsSummary()],
+        pushToast,
+        canvasDocument: pageA,
+      });
+      const blockedRenderer = await renderSandboxSiteState(blockedProps);
+      await blockedRenderer.flush();
+      try {
+        await blockedRenderer.rerender({
+          ...blockedProps,
+          canvasDocument: dirtyPageA,
+          hasLocalHistory: true,
+        });
+        blockedEvents.length = 0;
+        await act(async () => {
+          await blockedRenderer.result.handleOpenColumnsPage(vi.fn());
+        });
+        await blockedRenderer.flush();
+        expect(blockedRenderer.result.activePageId).toBe('page-a');
+        expect(
+          pushToast.mock.calls.some((call) => call[0] === '현재 페이지 초안을 저장하지 못해 페이지 전환을 멈췄습니다.'
+            || call[0] === '네트워크 오류, 다시 시도해주세요'),
+        ).toBe(true);
+      } finally {
+        await drainColumnsTest(blockedRenderer, []);
+      }
+
+      const supersededEvents: string[] = [];
+      const columnsDraftGate = deferred<void>();
+      const pageB = navigationDocument('02');
+      installColumnsFetch({
+        events: supersededEvents,
+        draftGatesByPage: { 'page-columns': columnsDraftGate },
+        draftDocuments: {
+          'page-columns': navigationDocument('30'),
+          'page-b': pageB,
+        },
+      });
+      const supersededRenderer = await renderSandboxSiteState(baseColumnsProps({
+        sitePages: [columnsSummary(), { pageId: 'page-b', slug: 'page-b', title: 'B', path: '/ko/page-b' }],
+      }));
+      await supersededRenderer.flush();
+      supersededEvents.length = 0;
+      try {
+        await act(async () => {
+          void supersededRenderer.result.handleOpenColumnsPage(vi.fn());
+        });
+        await act(async () => {
+          void supersededRenderer.result.handleSelectPage('page-b', 'page-b');
+        });
+        columnsDraftGate.resolve();
+        await supersededRenderer.flush();
+        expect(supersededRenderer.result.activePageId).toBe('page-b');
+      } finally {
+        await drainColumnsTest(supersededRenderer, [columnsDraftGate]);
+      }
+    });
+
+  it('does not select after unmount and does not let an old finally clear a new owner pending',
+    async () => {
+      const unmountEvents: string[] = [];
+      const unmountDraftGate = deferred<void>();
+      const replaceDocument = vi.fn();
+      installColumnsFetch({
+        events: unmountEvents,
+        draftGatesByCount: { 1: unmountDraftGate },
+        draftDocuments: { 'page-columns': navigationDocument('30') },
+      });
+      const unmountRenderer = await renderSandboxSiteState(baseColumnsProps({
+        sitePages: [columnsSummary()],
+        replaceDocument,
+      }));
+      await unmountRenderer.flush();
+      replaceDocument.mockClear();
+      try {
+        await act(async () => {
+          void unmountRenderer.result.handleOpenColumnsPage(vi.fn());
+        });
+        await unmountRenderer.unmount();
+        unmountDraftGate.resolve();
+        await Promise.resolve();
+        await Promise.resolve();
+        expect(replaceDocument).not.toHaveBeenCalled();
+      } finally {
+        unmountDraftGate.resolve();
+      }
+
+      const ownerEvents: string[] = [];
+      const siteADraftGate = deferred<void>();
+      const siteBDraftGate = deferred<void>();
+      installColumnsFetch({
+        events: ownerEvents,
+        draftGatesByCount: { 1: siteADraftGate, 2: siteBDraftGate },
+        draftDocuments: { 'page-columns': navigationDocument('30') },
+      });
+      const replaceB = vi.fn();
+      const pushToast = vi.fn();
+      const siteAProps = baseColumnsProps({
+        sitePages: [columnsSummary()],
+        replaceDocument: replaceB,
+        pushToast,
+      });
+      const ownerRenderer = await renderSandboxSiteState(siteAProps);
+      await ownerRenderer.flush();
+      try {
+        await act(async () => {
+          void ownerRenderer.result.handleOpenColumnsPage(vi.fn());
+        });
+        expect(ownerRenderer.result.columnsPageLookupPending).toBe(true);
+        await ownerRenderer.rerender({
+          ...siteAProps,
+          siteId: 'site-b',
+          initialPageId: 'page-b',
+          currentSlug: 'page-b',
+          sitePages: [columnsSummary()],
+        });
+        await ownerRenderer.flush();
+        expect(ownerRenderer.result.columnsPageLookupPending).toBe(false);
+        replaceB.mockClear();
+        await act(async () => {
+          void ownerRenderer.result.handleOpenColumnsPage(vi.fn());
+        });
+        expect(ownerRenderer.result.columnsPageLookupPending).toBe(true);
+        siteADraftGate.resolve();
+        await ownerRenderer.flush();
+        expect(ownerRenderer.result.columnsPageLookupPending).toBe(true);
+        expect(ownerRenderer.result.activePageId).not.toBe('page-columns');
+        expect(replaceB).not.toHaveBeenCalled();
+        siteBDraftGate.resolve();
+        await ownerRenderer.flush();
+        expect(ownerRenderer.result.activePageId).toBe('page-columns');
+      } finally {
+        await drainColumnsTest(ownerRenderer, [siteADraftGate, siteBDraftGate]);
+      }
+
+      const localeEvents: string[] = [];
+      const localeADraftGate = deferred<void>();
+      const localeBDraftGate = deferred<void>();
+      installColumnsFetch({
+        events: localeEvents,
+        draftGatesByCount: { 1: localeADraftGate, 2: localeBDraftGate },
+        draftDocuments: { 'page-columns': navigationDocument('30') },
+      });
+      const localeReplace = vi.fn();
+      const localeProps = baseColumnsProps({
+        sitePages: [columnsSummary()],
+        replaceDocument: localeReplace,
+      });
+      const localeRenderer = await renderSandboxSiteState(localeProps);
+      await localeRenderer.flush();
+      try {
+        await act(async () => {
+          void localeRenderer.result.handleOpenColumnsPage(vi.fn());
+        });
+        expect(localeRenderer.result.columnsPageLookupPending).toBe(true);
+        await localeRenderer.rerender({
+          ...localeProps,
+          locale: 'en',
+          sitePages: [columnsSummary()],
+        });
+        await localeRenderer.flush();
+        expect(localeRenderer.result.columnsPageLookupPending).toBe(false);
+        localeReplace.mockClear();
+        await act(async () => {
+          void localeRenderer.result.handleOpenColumnsPage(vi.fn());
+        });
+        expect(localeRenderer.result.columnsPageLookupPending).toBe(true);
+        localeADraftGate.resolve();
+        await localeRenderer.flush();
+        expect(localeRenderer.result.columnsPageLookupPending).toBe(true);
+        localeBDraftGate.resolve();
+        await localeRenderer.flush();
+      } finally {
+        await drainColumnsTest(localeRenderer, [localeADraftGate, localeBDraftGate]);
+      }
+    });
+
+  it('uses the active manual locale while the original locale prop is unchanged', async () => {
+    const events: string[] = [];
+    const columnsGate = deferred<void>();
+    const pageEn = navigationDocument('en-page', 'en');
+    installColumnsFetch({
+      events,
+      defaultListPages: [columnsSummary()],
+      draftGatesByPage: { 'page-columns': columnsGate },
+      draftDocuments: { 'page-en': pageEn, 'page-columns': navigationDocument('columns-en', 'en') },
+    });
+    const props = baseColumnsProps();
+    const renderer = await renderSandboxSiteState(props);
+    let navigation: Promise<boolean> | undefined;
+    try {
+      await act(async () => { await renderer.result.handleLocaleChange('en', 'page-en'); });
+      await renderer.flush();
+      expect(renderer.result.activeCanvasLocale).toBe('en');
+      await renderer.rerender({ ...props, canvasDocument: pageEn });
+      events.length = 0;
+      await act(async () => {
+        navigation = renderer.result.handleOpenColumnsPage(vi.fn());
+      });
+      expect(renderer.result.columnsPageLookupPending).toBe(true);
+      expect(events.some((event) => event.startsWith('draft:GET:page-columns:'))).toBe(true);
+      columnsGate.resolve();
+      await act(async () => { await expect(navigation).resolves.toBe(true); });
+      expect(renderer.result.activeCanvasLocale).toBe('en');
+      expect(renderer.result.activePageId).toBe('page-columns');
+    } finally {
+      columnsGate.resolve();
+      if (navigation) await navigation;
+      await renderer.unmount();
+    }
+  });
+
+  it('does not create after an initial lookup resolves after unmount', async () => {
+    const events: string[] = [];
+    const listGate = deferred<void>();
+    const { fetchMock } = installColumnsFetch({ events, listGates: { 1: listGate } });
+    const toast = vi.fn();
+    const renderer = await renderSandboxSiteState(baseColumnsProps({ pushToast: toast }));
+    let navigation: Promise<boolean> | undefined;
+    let unmounted = false;
+    try {
+      await act(async () => { navigation = renderer.result.handleOpenColumnsPage(vi.fn()); });
+      expect(events).toContain('pages:GET:1');
+      await renderer.unmount();
+      unmounted = true;
+      // The harness restores globals on unmount. Keep this request observer
+      // installed while the old operation settles, then restore it ourselves.
+      installMinimalReactDom();
+      vi.stubGlobal('fetch', fetchMock);
+      listGate.resolve();
+      await expect(navigation).resolves.toBe(false);
+      expect(events).not.toContain('pages:POST');
+      expect(toast).not.toHaveBeenCalled();
+    } finally {
+      listGate.resolve();
+      if (navigation) await navigation;
+      if (!unmounted) await renderer.unmount();
+      vi.unstubAllGlobals();
+    }
+  });
+
+  it.each(['site', 'locale'] as const)(
+    'does not create from an invalidated initial lookup after a %s change',
+    async (change) => {
+      const events: string[] = [];
+      const listGate = deferred<void>();
+      installColumnsFetch({ events, listGates: { 1: listGate } });
+      const props = baseColumnsProps();
+      const renderer = await renderSandboxSiteState(props);
+      let navigation: Promise<boolean> | undefined;
+      try {
+        await act(async () => { navigation = renderer.result.handleOpenColumnsPage(vi.fn()); });
+        expect(events).toContain('pages:GET:1');
+        await renderer.rerender(change === 'site'
+          ? { ...props, siteId: 'site-b' }
+          : { ...props, locale: 'en', initialDocument: navigationDocument('new-en', 'en') });
+        await renderer.flush();
+        listGate.resolve();
+        await act(async () => { await expect(navigation).resolves.toBe(false); });
+        expect(events).not.toContain('pages:POST');
+      } finally {
+        listGate.resolve();
+        if (navigation) await navigation;
+        await renderer.unmount();
+      }
+    },
+  );
+
+});

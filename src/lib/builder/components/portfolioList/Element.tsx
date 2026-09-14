@@ -45,9 +45,15 @@ export default function PortfolioListElement({ node, mode = 'edit', locale }: Po
     if (c.featuredOnly) params.set('featured', 'true');
 
     fetch(`/api/builder/portfolio?${params.toString()}`)
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) throw new Error('Portfolio request failed');
+        return response.json();
+      })
       .then((json) => {
-        if (!cancelled && json?.ok && Array.isArray(json.projects)) setProjects(json.projects as PortfolioProject[]);
+        if (json?.ok !== true || !Array.isArray(json.projects)) {
+          throw new Error('Invalid portfolio response');
+        }
+        if (!cancelled) setProjects(json.projects as PortfolioProject[]);
       })
       .catch(() => {
         if (!cancelled) setFailed(true);

@@ -1,3 +1,4 @@
+import { requireBuilderPagePermission } from '@/lib/builder/security/page-permission';
 import type { Metadata } from 'next';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import {
@@ -26,6 +27,7 @@ export default async function FormSubmissionsPage(
     searchParams?: Promise<{ formId?: string }>;
   }
 ) {
+  await requireBuilderPagePermission('manage-forms');
   const searchParams = await props.searchParams;
   const params = await props.params;
   normalizeLocale(params.locale);

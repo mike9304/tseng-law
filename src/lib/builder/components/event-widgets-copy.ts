@@ -22,6 +22,7 @@ export interface EventWidgetsCopy {
     seatsLeft: (remaining: number) => string;
     previewMessage: string;
     saveError: string;
+    loadError: string;
     noEvents: string;
     name: string;
     email: string;
@@ -166,6 +167,7 @@ const eventWidgetsCopy: Record<Locale, EventWidgetsCopy> = {
       seatsLeft: (remaining) => `${remaining}석 남음`,
       previewMessage: '미리보기에서는 신청이 저장되지 않습니다.',
       saveError: '신청을 저장하지 못했습니다.',
+    loadError: '이벤트를 불러오지 못했습니다.',
       noEvents: '신청 가능한 이벤트가 없습니다.',
       name: '이름',
       email: '이메일',
@@ -298,6 +300,7 @@ const eventWidgetsCopy: Record<Locale, EventWidgetsCopy> = {
       seatsLeft: (remaining) => `剩餘 ${remaining} 個名額`,
       previewMessage: '預覽模式不會儲存報名。',
       saveError: '無法儲存報名。',
+    loadError: '無法載入活動。',
       noEvents: '目前沒有可報名的活動。',
       name: '姓名',
       email: '電子郵件',
@@ -430,6 +433,7 @@ const eventWidgetsCopy: Record<Locale, EventWidgetsCopy> = {
       seatsLeft: (remaining) => `${remaining} seats left`,
       previewMessage: 'RSVPs are not saved in preview.',
       saveError: 'Unable to save RSVP.',
+    loadError: 'Unable to load the event.',
       noEvents: 'No RSVP-enabled events are available.',
       name: 'Name',
       email: 'Email',

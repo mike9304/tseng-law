@@ -60,6 +60,7 @@ export type SandboxEditorWorkspaceProps = {
   onApplyComponentDesignPreset: (presetKey: ComponentDesignPresetKey) => void;
   onSetActiveDrawer: (panel: SandboxDrawerPanel | null) => void;
   onSelectPage: (pageId: string, nextSlug?: string) => boolean | void | Promise<boolean | void>;
+  onPagesRefreshRequest?: (origin: { siteId: string; locale: string }) => unknown;
   onPagesChange: (pages: Array<{ pageId: string; slug: string; isHomePage?: boolean }>) => void;
   onMissingPageHandled?: () => void;
   onNavigationChange: (items: BuilderNavItem[]) => void;

@@ -5,6 +5,7 @@ import type { Locale } from '@/lib/locales';
 import type { FormSubmission } from '@/lib/builder/forms/form-engine';
 import SubmissionDetailModal from './SubmissionDetailModal';
 import { getFormsCopy } from './forms-copy';
+import { serializeSubmissionsCsv } from './submissionsCsv';
 
 export default function SubmissionsListView({
   formIds,
@@ -48,18 +49,7 @@ export default function SubmissionsListView({
   }
 
   function exportCsv() {
-    const keys = Array.from(new Set(filtered.flatMap((submission) => Object.keys(submission.data))));
-    const rows = [
-      ['submissionId', 'formId', 'submittedAt', 'read', ...keys],
-      ...filtered.map((submission) => [
-        submission.submissionId,
-        submission.formId,
-        submission.submittedAt,
-        submission.read ? 'read' : 'unread',
-        ...keys.map((key) => String(submission.data[key] ?? '')),
-      ]),
-    ];
-    const csv = rows.map((row) => row.map(csvCell).join(',')).join('\n');
+    const csv = serializeSubmissionsCsv(filtered);
     const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
     const link = document.createElement('a');
     link.href = url;
@@ -178,10 +168,6 @@ function formatDate(value: string): string {
   } catch {
     return value;
   }
-}
-
-function csvCell(value: string): string {
-  return `"${value.replace(/"/g, '""')}"`;
 }
 
 const panelStyle: React.CSSProperties = {

@@ -15,6 +15,7 @@ import {
 } from '@/lib/builder/bookings/packages';
 import { bookingServicePriceSnapshot } from '@/lib/builder/bookings/pricing';
 import { maybeCreateBookingZoomLink } from '@/lib/builder/bookings/zoom-handoff';
+import { deleteZoomMeeting } from '@/lib/builder/bookings/zoom-client';
 import { runBookingBillingAutomation } from '@/lib/builder/billing-document-automation';
 import { sendBookingConfirmation } from '@/lib/builder/bookings/notifications';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
@@ -104,6 +105,10 @@ vi.mock('@/lib/builder/bookings/pricing', () => ({
 
 vi.mock('@/lib/builder/bookings/zoom-handoff', () => ({
   maybeCreateBookingZoomLink: vi.fn(async () => null),
+}));
+
+vi.mock('@/lib/builder/bookings/zoom-client', () => ({
+  deleteZoomMeeting: vi.fn(async () => undefined),
 }));
 
 const freeService: BookingService = {
@@ -202,6 +207,7 @@ const redeemPackageCreditForBookingMock = vi.mocked(redeemPackageCreditForBookin
 const restorePackageCreditForBookingMock = vi.mocked(restorePackageCreditForBooking);
 const bookingServicePriceSnapshotMock = vi.mocked(bookingServicePriceSnapshot);
 const maybeCreateBookingZoomLinkMock = vi.mocked(maybeCreateBookingZoomLink);
+const deleteZoomMeetingMock = vi.mocked(deleteZoomMeeting);
 const validateSessionMock = vi.mocked(validateSession);
 
 function bookingBody(overrides: Record<string, unknown> = {}): Record<string, unknown> {
@@ -298,6 +304,7 @@ describe('/api/booking/book', () => {
       payLater: false,
     });
     maybeCreateBookingZoomLinkMock.mockResolvedValue(null);
+    deleteZoomMeetingMock.mockResolvedValue(undefined as never);
     validateSessionMock.mockResolvedValue(null);
   });
 
@@ -1195,5 +1202,119 @@ describe('/api/booking/book', () => {
     }));
     expect(releaseSlotLockMock).toHaveBeenCalledTimes(1);
     warn.mockRestore();
+  });
+
+  it('T1 deletes the Zoom meeting when persist fails after Zoom create', async () => {
+    const warn = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    const zoomService: BookingService = { ...paidService, meetingMode: 'zoom' };
+    getServiceMock.mockResolvedValueOnce(zoomService as never);
+    bookingServicePriceSnapshotMock.mockReturnValueOnce({
+      paymentRequired: true,
+      totalAmount: 120000,
+      currency: 'KRW',
+      amountDueNow: 50000,
+      depositAmount: 50000,
+      balanceDueAfterOnlinePayment: 70000,
+      isDeposit: true,
+      payLater: false,
+    });
+    fetchPaymentIntentStatusMock.mockResolvedValueOnce({
+      id: 'pi_zoom_rollback',
+      status: 'succeeded',
+      amount: 50000,
+      currency: 'krw',
+      metadata: { serviceId: 'svc-1', staffId: 'staff-1' },
+    });
+    claimBookingPaymentIntentMock.mockResolvedValueOnce({ claimed: true, idempotent: false });
+    maybeCreateBookingZoomLinkMock.mockResolvedValueOnce({
+      meetingLink: 'https://zoom.example.test/j/999',
+      officeTimezone: 'Asia/Seoul',
+      meetingId: '999',
+    } as never);
+    saveBookingMock.mockRejectedValueOnce(new Error('storage failed'));
+
+    const response = await POST(request(
+      'locale=en',
+      localizedBookingBody('en', { paymentIntentId: 'pi_zoom_rollback' }),
+    ));
+
+    expect(response.status).toBe(500);
+    expect(deleteZoomMeetingMock).toHaveBeenCalledTimes(1);
+    expect(deleteZoomMeetingMock).toHaveBeenCalledWith('999');
+    expect(releaseBookingPaymentIntentClaimMock).toHaveBeenCalledWith('pi_zoom_rollback', 'bk-1');
+    warn.mockRestore();
+  });
+
+  it('T2 persist-fail still returns 500 when Zoom delete rejects', async () => {
+    const warn = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    const zoomService: BookingService = { ...paidService, meetingMode: 'zoom' };
+    getServiceMock.mockResolvedValueOnce(zoomService as never);
+    bookingServicePriceSnapshotMock.mockReturnValueOnce({
+      paymentRequired: true,
+      totalAmount: 120000,
+      currency: 'KRW',
+      amountDueNow: 50000,
+      depositAmount: 50000,
+      balanceDueAfterOnlinePayment: 70000,
+      isDeposit: true,
+      payLater: false,
+    });
+    fetchPaymentIntentStatusMock.mockResolvedValueOnce({
+      id: 'pi_zoom_delete_fail',
+      status: 'succeeded',
+      amount: 50000,
+      currency: 'krw',
+      metadata: { serviceId: 'svc-1', staffId: 'staff-1' },
+    });
+    claimBookingPaymentIntentMock.mockResolvedValueOnce({ claimed: true, idempotent: false });
+    maybeCreateBookingZoomLinkMock.mockResolvedValueOnce({
+      meetingLink: 'https://zoom.example.test/j/888',
+      officeTimezone: 'Asia/Seoul',
+      meetingId: '888',
+    } as never);
+    deleteZoomMeetingMock.mockRejectedValueOnce(new Error('zoom delete down'));
+    saveBookingMock.mockRejectedValueOnce(new Error('storage failed'));
+
+    const response = await POST(request(
+      'locale=en',
+      localizedBookingBody('en', { paymentIntentId: 'pi_zoom_delete_fail' }),
+    ));
+
+    expect(response.status).toBe(500);
+    expect(deleteZoomMeetingMock).toHaveBeenCalledTimes(1);
+    expect(releaseBookingPaymentIntentClaimMock).toHaveBeenCalledWith('pi_zoom_delete_fail', 'bk-1');
+    warn.mockRestore();
+  });
+
+  it('T3 persist-fail does not delete Zoom for in-person services', async () => {
+    const warn = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    getServiceMock.mockResolvedValueOnce({ ...freeService, meetingMode: 'in-person' } as never);
+    saveBookingMock.mockRejectedValueOnce(new Error('storage failed'));
+
+    const response = await POST(request('locale=en', localizedBookingBody('en')));
+
+    expect(response.status).toBe(500);
+    expect(deleteZoomMeetingMock).not.toHaveBeenCalled();
+    warn.mockRestore();
+  });
+
+  it('T4 success path with Zoom does not delete and keeps meetingLink', async () => {
+    const zoomService: BookingService = { ...freeService, meetingMode: 'zoom' };
+    getServiceMock.mockResolvedValueOnce(zoomService as never);
+    maybeCreateBookingZoomLinkMock.mockResolvedValueOnce({
+      meetingLink: 'https://zoom.example.test/j/777',
+      officeTimezone: 'Asia/Seoul',
+      meetingId: '777',
+    } as never);
+
+    const response = await POST(request('locale=en', localizedBookingBody('en')));
+    const payload = await response.json();
+
+    expect(response.status).toBe(201);
+    expect(deleteZoomMeetingMock).not.toHaveBeenCalled();
+    expect(payload.booking.meetingLink).toBe('https://zoom.example.test/j/777');
+    expect(saveBookingMock.mock.calls[0]?.[0]).toEqual(
+      expect.objectContaining({ meetingLink: 'https://zoom.example.test/j/777' }),
+    );
   });
 });

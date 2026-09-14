@@ -79,6 +79,7 @@ export default function SandboxEditorWorkspace({
   onApplyComponentDesignPreset,
   onSetActiveDrawer,
   onSelectPage,
+  onPagesRefreshRequest,
   onPagesChange,
   onMissingPageHandled,
   onNavigationChange,
@@ -155,6 +156,7 @@ export default function SandboxEditorWorkspace({
         onOpenHistory={onOpenHistory}
         onApplyComponentDesignPreset={onApplyComponentDesignPreset}
         onSelectPage={onSelectPage}
+        onPagesRefreshRequest={onPagesRefreshRequest}
         onPagesChange={onPagesChange}
         onMissingPageHandled={onMissingPageHandled}
         onNavigationChange={onNavigationChange}

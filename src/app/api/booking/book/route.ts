@@ -30,6 +30,7 @@ import {
 } from '@/lib/builder/bookings/packages';
 import { bookingServicePriceSnapshot } from '@/lib/builder/bookings/pricing';
 import { maybeCreateBookingZoomLink } from '@/lib/builder/bookings/zoom-handoff';
+import { deleteZoomMeeting } from '@/lib/builder/bookings/zoom-client';
 import {
   getPublicBookingApiErrorPayload,
   type PublicBookingApiErrorCode,
@@ -259,6 +260,7 @@ export async function POST(request: NextRequest) {
     let booking: Booking | null = null;
     let claimedPaymentIntent: { paymentIntentId: string; bookingId: string } | null = null;
     let bookingPersisted = false;
+    let zoomMeetingId: string | null = null;
     try {
       const available = await isSlotAvailable(slotKey);
       if (!available) {
@@ -288,6 +290,7 @@ export async function POST(request: NextRequest) {
         customerName: parsed.data.customer.name,
         customerEmail: parsed.data.customer.email,
       });
+      zoomMeetingId = zoom?.meetingId ?? null;
       const packageRedemption = packageCreditAvailable
         ? await redeemPackageCreditForBooking({
             bookingId,
@@ -353,6 +356,16 @@ export async function POST(request: NextRequest) {
           await restorePackageCreditForBooking(booking).catch((restoreError) => {
             console.error('[booking/book] package credit restore after save failure failed:', restoreError);
           });
+        }
+        if (zoomMeetingId) {
+          try {
+            await deleteZoomMeeting(zoomMeetingId);
+          } catch (zoomError) {
+            console.error(
+              '[booking/book] zoom meeting delete after save failure failed:',
+              zoomError instanceof Error ? zoomError.message : String(zoomError),
+            );
+          }
         }
         throw error;
       }

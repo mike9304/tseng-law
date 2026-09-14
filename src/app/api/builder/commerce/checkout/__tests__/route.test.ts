@@ -356,4 +356,53 @@ describe('builder commerce checkout API', () => {
     expect(queueOrderCreatedNotificationsMock).not.toHaveBeenCalled();
     expect(markRecoveryCartsConvertedMock).not.toHaveBeenCalled();
   });
+  describe('aggregate inventory before checkout effects', () => {
+    const tracked = { trackInventory: true, quantity: 1, lowStockThreshold: 0, allowBackorder: false };
+    const variant = (variantId: string, inventory: unknown = tracked) => ({
+      variantId, title: variantId, sku: variantId, priceCents: 12000, status: 'active', optionValues: {}, inventory,
+    });
+    const row = (itemId: string, variantId?: string) => ({ ...cart.items[0], itemId, variantId });
+    const cases = [
+      { name: 'same supplied IDs exceeding product stock', items: [row('same'), row('same')], variants: [], inventory: tracked, status: 400 },
+      { name: 'different supplied IDs exceeding product stock', items: [row('one'), row('two')], variants: [], inventory: tracked, status: 400 },
+      { name: 'same variant stock shared across rows', items: [row('one', 'a'), row('two', 'a')], variants: [variant('a')], inventory: tracked, status: 400 },
+      // Defensive route fallback: normal loadProduct materializes variant inventory.
+      { name: 'missing variant inventories share product fallback', items: [row('one', 'a'), row('two', 'b')], variants: [variant('a', null), variant('b', null)], inventory: tracked, status: 400 },
+      { name: 'base row and missing variant inventory share product fallback', items: [row('one'), row('two', 'a')], variants: [variant('a', null)], inventory: tracked, status: 400 },
+      { name: 'independent variant inventories stay independent', items: [row('one', 'a'), row('two', 'b')], variants: [variant('a'), variant('b')], inventory: tracked, status: 200 },
+      { name: 'single legitimate item', items: [row('one')], variants: [], inventory: tracked, status: 200 },
+      { name: 'within-stock duplicates preserve both rows', items: [row('one'), row('two')], variants: [], inventory: { ...tracked, quantity: 2 }, status: 200 },
+      { name: 'untracked stock permits duplicates', items: [row('one'), row('two')], variants: [], inventory: { ...tracked, trackInventory: false }, status: 200 },
+      { name: 'backorder permits duplicates beyond stock', items: [row('one'), row('two')], variants: [], inventory: { ...tracked, allowBackorder: true }, status: 200 },
+      { name: 'missing variant remains rejected', items: [row('one', 'missing')], variants: [], inventory: tracked, status: 400 },
+    ];
+    it.each(cases)('$name', async ({ items, variants, inventory, status }) => {
+      loadProductMock.mockResolvedValue({ ...product, variants, inventory } as never);
+      const response = await POST(postRequest('', { ...validPayload, cart: { ...cart, items } }));
+      expect(response.status).toBe(status);
+      const body = await response.json();
+      if (status === 400) {
+        expect(body).toMatchObject({ ok: false, errorCode: 'checkout_validation_error' });
+        expect(createCommercePaymentIntentMock).not.toHaveBeenCalled();
+        expect(createOrderMock).not.toHaveBeenCalled();
+        expect(runOrderBillingAutomationMock).not.toHaveBeenCalled();
+        expect(queueOrderCreatedNotificationsMock).not.toHaveBeenCalled();
+        expect(markRecoveryCartsConvertedMock).not.toHaveBeenCalled();
+      } else {
+        expect(createOrderMock).toHaveBeenCalledTimes(1);
+        const submitted = createOrderMock.mock.calls[0][0].lineItems;
+        expect(submitted).toHaveLength(items.length);
+        expect(submitted.map((item) => item.quantity)).toEqual(items.map((item) => item.quantity));
+        expect(submitted.map((item) => item.variantId)).toEqual(items.map((item) => item.variantId));
+        expect(body.checkout.lineItems).toEqual(submitted);
+      }
+    });
+    it('does not combine stock from different products with the same supplied itemId', async () => {
+      loadProductMock.mockImplementation(async (id) => ({ ...product, productId: id, inventory: tracked }) as never);
+      const response = await POST(postRequest('', { ...validPayload, cart: { ...cart, items: [row('same'), { ...row('same'), productId: 'product-2' }] } }));
+      expect(response.status).toBe(200);
+      expect(createOrderMock.mock.calls[0][0].lineItems.map((item) => item.productId)).toEqual(['product-1', 'product-2']);
+    });
+  });
+
 });

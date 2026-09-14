@@ -9,6 +9,7 @@ import {
 import {
   deleteEvent,
   loadEvent,
+  normalizeEvent,
   saveEvent,
   validateEvent,
 } from '@/lib/builder/events/events-engine';
@@ -101,11 +102,12 @@ export async function PATCH(request: NextRequest, props: { params: Promise<{ eve
     }
 
     const patch = patchSchema.parse(body);
-    const saved = await saveEvent({ ...event, ...patch });
-    const errors = validateEvent(saved);
+    const candidate = normalizeEvent({ ...event, ...patch });
+    const errors = validateEvent(candidate);
     if (errors.length > 0) {
       return errorResponse(locale, 'validation_error', 400);
     }
+    const saved = await saveEvent(candidate);
     return NextResponse.json({ ok: true, event: saved });
   } catch (error) {
     if (error instanceof ZodError) return validationErrorResponse(locale, error);

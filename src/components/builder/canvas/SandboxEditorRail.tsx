@@ -117,6 +117,7 @@ type SandboxEditorRailProps = {
   onOpenHistory: () => void;
   onApplyComponentDesignPreset: (presetKey: ComponentDesignPresetKey) => void;
   onSelectPage: (pageId: string, nextSlug?: string) => boolean | void | Promise<boolean | void>;
+  onPagesRefreshRequest?: (origin: { siteId: string; locale: string }) => unknown;
   onPagesChange: (pages: BuilderPageSummary[]) => void;
   onMissingPageHandled?: () => void;
   onNavigationChange: (items: BuilderNavItem[]) => void;
@@ -270,6 +271,7 @@ export default function SandboxEditorRail({
   onOpenHistory,
   onApplyComponentDesignPreset,
   onSelectPage,
+  onPagesRefreshRequest,
   onPagesChange,
   onMissingPageHandled,
   onNavigationChange,
@@ -323,8 +325,9 @@ export default function SandboxEditorRail({
         ? copy.design.partialSystemFit
         : copy.design.systemUpdateNeeded;
   const selectPageAndClose = (pageId: string, nextSlug?: string) => {
-    void Promise.resolve(onSelectPage(pageId, nextSlug)).then((loaded) => {
+    return Promise.resolve(onSelectPage(pageId, nextSlug)).then((loaded) => {
       if (loaded !== false) onCloseDrawer();
+      return loaded;
     });
   };
   const openPageTemplateGallery = (query?: string) => {
@@ -441,9 +444,10 @@ export default function SandboxEditorRail({
           aria-label={copy.rail.columns}
           data-builder-rail-item="columns"
           title={copy.columns.description}
+          disabled={columnsPageLookupPending}
         >
           <span className={styles.railButtonIcon} aria-hidden="true"><RailIcon name="columns" /></span>
-          <span className={styles.railButtonLabel}>{copy.rail.columns}</span>
+          <span className={styles.railButtonLabel}>{columnsPageLookupPending ? copy.columns.pageLookupPending : copy.rail.columns}</span>
         </button>
         <a
           className={styles.railButton}
@@ -506,6 +510,7 @@ export default function SandboxEditorRail({
               templateGalleryRequestId={pageTemplateGalleryRequest.id}
               missingPageHref={missingPageHref}
               onSelectPage={selectPageAndClose}
+              onPagesRefreshRequest={onPagesRefreshRequest}
               onPagesChange={onPagesChange}
               onMissingPageHandled={onMissingPageHandled}
               onToast={onToast}

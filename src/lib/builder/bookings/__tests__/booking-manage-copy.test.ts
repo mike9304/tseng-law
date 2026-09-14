@@ -18,5 +18,9 @@ describe('booking manage-link copy helpers', () => {
       errorCode: 'staff_unavailable',
     });
     expect(english.error).not.toMatch(/[\u1100-\u11FF\u3130-\u318F\uAC00-\uD7A3\u4E00-\u9FFF]/);
+    expect(getBookingManageApiErrorPayload('en', 'refund_failed')).toEqual({
+      error: 'We could not confirm the refund status or booking cancellation. Please contact us for help.',
+      errorCode: 'refund_failed',
+    });
   });
 });

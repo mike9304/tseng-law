@@ -119,6 +119,7 @@ async function reconcileCheckoutCart(
 ): Promise<{ cart: CommerceCartState; errors: string[] }> {
   const errors: string[] = [];
   const items: CommerceCartItem[] = [];
+  const requestedStock = new Map<string, number>();
 
   for (const item of cart.items) {
     const product = await loadProduct(item.productId);
@@ -150,6 +151,18 @@ async function reconcileCheckoutCart(
     if (item.quantity > maxQuantity) {
       errors.push(`quantity_unavailable:${item.itemId}`);
       continue;
+    }
+
+    if (inventory?.trackInventory && !inventory.allowBackorder) {
+      // The fallback inventory belongs to the product, not to each variant.
+      // Tuple encoding avoids collisions from client-controlled item IDs.
+      const stockKey = JSON.stringify([product.productId, variant?.inventory ? variant.variantId : null]);
+      const requestedQuantity = (requestedStock.get(stockKey) ?? 0) + item.quantity;
+      requestedStock.set(stockKey, requestedQuantity);
+      if (requestedQuantity > maxQuantity) {
+        errors.push(`quantity_unavailable:${item.itemId}`);
+        continue;
+      }
     }
 
     const media = activeMedia(product, variant);

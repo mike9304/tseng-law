@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
-import { createZoomMeeting } from '../zoom-client';
+import { createZoomMeeting, deleteZoomMeeting } from '../zoom-client';
 
 const meetingArgs = {
   topic: 'Initial consultation',
@@ -146,5 +146,56 @@ describe('createZoomMeeting', () => {
 
     expect(result).toEqual({ ok: false, reason: 'network' });
     expect(JSON.stringify(result)).not.toContain('secret');
+  });
+});
+
+describe('deleteZoomMeeting', () => {
+  it('T5 with credentials DELETEs the meeting using the same auth as create', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('ZOOM_ACCOUNT_ID', 'account');
+    vi.stubEnv('ZOOM_CLIENT_ID', 'client');
+    vi.stubEnv('ZOOM_CLIENT_SECRET', 'secret');
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ access_token: 'provider-token' }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(null, { status: 204 }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await deleteZoomMeeting('123');
+
+    const deleteCall = fetchMock.mock.calls.find((call) =>
+      String(call[0]) === 'https://api.zoom.us/v2/meetings/123',
+    );
+    expect(deleteCall).toBeDefined();
+    expect(deleteCall?.[1]).toEqual(expect.objectContaining({
+      method: 'DELETE',
+      headers: expect.objectContaining({ Authorization: 'Bearer provider-token' }),
+    }));
+  });
+
+  it('T6 without credentials does not fetch', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('ZOOM_ACCOUNT_ID', '');
+    vi.stubEnv('ZOOM_CLIENT_ID', '');
+    vi.stubEnv('ZOOM_CLIENT_SECRET', '');
+    const fetchMock = vi.fn();
+    vi.stubGlobal('fetch', fetchMock);
+
+    await expect(deleteZoomMeeting('123')).resolves.toBeUndefined();
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  it('T7 non-2xx response rejects', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('ZOOM_ACCOUNT_ID', 'account');
+    vi.stubEnv('ZOOM_CLIENT_ID', 'client');
+    vi.stubEnv('ZOOM_CLIENT_SECRET', 'secret');
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ access_token: 'provider-token' }), { status: 200 }))
+      .mockResolvedValueOnce(new Response('nope', { status: 404 }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await expect(deleteZoomMeeting('123')).rejects.toThrow();
   });
 });

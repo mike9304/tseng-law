@@ -83,6 +83,27 @@ async function loadMockConfig(): Promise<ZoomMockConfig | null> {
   return null;
 }
 
+export async function deleteZoomMeeting(meetingId: string): Promise<void> {
+  const credentials = loadCredentials();
+  if (!credentials) return;
+
+  const token = await fetchAccessToken(credentials);
+  if (!token) {
+    throw new Error('zoom delete token');
+  }
+
+  const res = await fetch(
+    `https://api.zoom.us/v2/meetings/${encodeURIComponent(meetingId)}`,
+    {
+      method: 'DELETE',
+      headers: { Authorization: `Bearer ${token}` },
+    },
+  );
+  if (!res.ok) {
+    throw new Error('zoom delete meeting');
+  }
+}
+
 export async function createZoomMeeting(args: ZoomCreateMeetingArgs): Promise<ZoomCreateMeetingResult> {
   const mock = await loadMockConfig();
   if (mock?.meetingLinkBase) {

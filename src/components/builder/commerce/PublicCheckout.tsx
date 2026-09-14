@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FormEvent, useEffect, useMemo, useState } from 'react';
+import { FormEvent, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { Locale } from '@/lib/locales';
 import {
   commerceCartStorageKey,
@@ -70,6 +70,9 @@ type CheckoutCopy = {
   paymentStatus: string;
   clear: string;
   error: string;
+  unknown: string;
+  newOrder: string;
+  storageWarning: string;
   currencyPolicy: string;
   conversionPolicy: string;
   conversionDisabled: string;
@@ -117,6 +120,9 @@ const copy: Record<Locale, CheckoutCopy> = {
     paymentStatus: '결제 상태',
     clear: '장바구니가 비워졌습니다.',
     error: '체크아웃 정보를 확인해 주세요.',
+    unknown: '주문 처리 결과를 확인할 수 없습니다. 이전 주문이 이미 생성되었을 수 있습니다. 새 주문을 시작하면 중복 주문이 생길 수 있습니다. 새로고침해도 이전 주문이 취소되지는 않습니다.',
+    newOrder: '중복 가능성을 이해하고 새 주문 시작',
+    storageWarning: '주문은 확인되었지만 브라우저 저장에 실패했습니다. 주문 번호를 보관해 주세요. 저장된 장바구니가 남아 있을 수 있습니다.',
     currencyPolicy: '현재 체크아웃 통화는 {currency}입니다. 변환 없이 다른 통화 상품을 섞어 결제할 수 없습니다.',
     conversionPolicy: '기준 통화는 {base}입니다. 환율 변환은 {mode} 상태이며 주문 금액은 장바구니 통화로 확정됩니다.',
     conversionDisabled: '비활성',
@@ -162,6 +168,9 @@ const copy: Record<Locale, CheckoutCopy> = {
     paymentStatus: '付款狀態',
     clear: '購物車已清空。',
     error: '請檢查結帳資訊。',
+    unknown: '無法確認訂單處理結果。先前的訂單可能已建立。開始新訂單可能造成重複訂單。重新整理不會取消先前的訂單。',
+    newOrder: '了解重複風險，開始新訂單',
+    storageWarning: '訂單已確認，但瀏覽器儲存失敗。請保留訂單編號。儲存的購物車可能仍然存在。',
     currencyPolicy: '目前結帳幣別為 {currency}。未經轉換不能混合不同幣別商品。',
     conversionPolicy: '基準幣別為 {base}。匯率轉換目前為{mode}狀態，訂單金額仍以購物車幣別結算。',
     conversionDisabled: '停用',
@@ -207,6 +216,9 @@ const copy: Record<Locale, CheckoutCopy> = {
     paymentStatus: 'Payment status',
     clear: 'Cart cleared.',
     error: 'Check the checkout details.',
+    unknown: 'The order outcome could not be confirmed. The previous order may already exist. Starting a new order may create a duplicate. Reloading does not cancel the previous order.',
+    newOrder: 'I understand the duplicate risk; start a new order',
+    storageWarning: 'The order is confirmed, but browser storage failed. Keep the order number. The saved cart may still remain.',
     currencyPolicy: 'This checkout is in {currency}. Products in another currency cannot be mixed without conversion.',
     conversionPolicy: 'Base currency is {base}. Conversion is {mode}; orders still settle in the cart currency.',
     conversionDisabled: 'disabled',
@@ -254,6 +266,28 @@ const defaultAddress: CommerceCheckoutAddress = {
   addressLine2: '',
 };
 
+type CheckoutReceipt = Pick<CommerceCheckoutConfirmation, 'orderId' | 'confirmationNumber' | 'locale' | 'currency'> & {
+  totals: { grandTotalCents: number };
+  payment: { status: string };
+};
+
+function isCheckoutReceipt(value: unknown, locale: Locale, currency: CommerceCurrency): value is CheckoutReceipt {
+  if (!value || typeof value !== 'object') return false;
+  const receipt = value as Partial<CheckoutReceipt>;
+  return typeof receipt.orderId === 'string' && receipt.orderId.trim().length > 0
+    && typeof receipt.confirmationNumber === 'string' && receipt.confirmationNumber.trim().length > 0
+    && receipt.locale === locale && receipt.currency === currency
+    && Number.isSafeInteger(receipt.totals?.grandTotalCents) && Number(receipt.totals?.grandTotalCents) >= 0
+    && typeof receipt.payment?.status === 'string' && receipt.payment.status.trim().length > 0;
+}
+
+// Only explicit route branches known to run before checkout effects are retryable.
+function isPreEffectRejection(status: number, code: unknown): boolean {
+  return (status === 400 && code === 'checkout_validation_error')
+    || (status === 429 && code === 'too_many_requests')
+    || (status === 503 && code === 'payment_provider_not_configured');
+}
+
 export default function PublicCheckout({ locale }: { locale: Locale }) {
   const t = copy[locale];
   const [cart, setCart] = useState<CommerceCartState>(() => makeEmptyCart(locale, 'TWD'));
@@ -264,17 +298,38 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
   const [paymentAdapter, setPaymentAdapter] = useState<CommerceCheckoutPaymentAdapter>('manual-invoice');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
-  const [confirmation, setConfirmation] = useState<CommerceCheckoutConfirmation | null>(null);
+  const [unknownOutcome, setUnknownOutcome] = useState(false);
+  const [storageFailed, setStorageFailed] = useState(false);
+  const phase = useRef<'idle' | 'pending' | 'unknown' | 'confirmed'>('idle');
+  const [taskEpoch, setTaskEpoch] = useState(0);
+  const sessionToken = useMemo(() => Symbol(`checkout-session:${locale}:${taskEpoch}`), [locale, taskEpoch]);
+  const owner = useRef<{ active: boolean; generation: number; token: symbol | null; locale: Locale | null }>({ active: false, generation: 0, token: null, locale: null });
+  const [confirmation, setConfirmation] = useState<CheckoutReceipt | null>(null);
   const [taxRules, setTaxRules] = useState<CommerceTaxRule[] | undefined>(undefined);
   const [shippingRules, setShippingRules] = useState<CommerceShippingRule[] | undefined>(undefined);
   const [currencySettings, setCurrencySettings] = useState<CommerceCurrencySettings>(DEFAULT_COMMERCE_CURRENCY_SETTINGS);
   const [recoveryState, setRecoveryState] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
 
-  useEffect(() => {
-    const nextCart = parseStoredCart(locale);
-    setCart(nextCart);
+  useLayoutEffect(() => {
+    const changedLocale = owner.current.locale !== locale;
+    owner.current = { active: true, generation: owner.current.generation + 1, token: sessionToken, locale };
+    if (phase.current === 'pending') phase.current = 'unknown';
+    if (phase.current === 'unknown') {
+      setUnknownOutcome(true);
+    } else if (changedLocale) {
+      phase.current = 'idle';
+      setCart(parseStoredCart(locale));
+      setConfirmation(null);
+    }
+    setIsSubmitting(false);
     setHydrated(true);
-  }, [locale]);
+    return () => {
+      if (owner.current.token !== sessionToken) return;
+      owner.current.active = false;
+      owner.current.generation += 1;
+      if (phase.current === 'pending') phase.current = 'unknown';
+    };
+  }, [locale, sessionToken]);
 
   useEffect(() => {
     let cancelled = false;
@@ -327,14 +382,18 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
   );
 
   function updateCustomer(field: keyof CommerceCheckoutCustomer, value: string) {
+    if (phase.current === 'pending') return;
     setCustomer((current) => ({ ...current, [field]: value }));
   }
 
   function updateAddress(field: keyof CommerceCheckoutAddress, value: string) {
+    if (phase.current === 'pending') return;
     setAddress((current) => ({ ...current, [field]: value }));
   }
 
   async function captureRecovery(email: string) {
+    if (!owner.current.active || owner.current.token !== sessionToken || owner.current.locale !== locale || phase.current !== 'idle') return;
+    const generation = owner.current.generation;
     const normalizedEmail = email.trim();
     if (cart.items.length === 0 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail)) return;
     setRecoveryState('saving');
@@ -349,51 +408,58 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
         recoveryUrl: `/${locale}/store/checkout`,
       }),
     }).catch(() => null);
-    setRecoveryState(response?.ok ? 'saved' : 'error');
+    if (owner.current.active && owner.current.generation === generation && owner.current.token === sessionToken && owner.current.locale === locale) {
+      setRecoveryState(response?.ok ? 'saved' : 'error');
+    }
+  }
+
+  function startNewOrder() {
+    if (!owner.current.active || owner.current.token !== sessionToken || owner.current.locale !== locale || phase.current !== 'unknown') return;
+    owner.current.active = false;
+    owner.current.generation += 1;
+    setTaskEpoch((current) => current + 1);
+    phase.current = 'idle';
+    setUnknownOutcome(false);
+    setError('');
+    setIsSubmitting(false);
+    if (cart.locale !== locale) setCart(parseStoredCart(locale));
   }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (cart.items.length === 0 || isSubmitting) return;
+    if (!owner.current.active || owner.current.token !== sessionToken || owner.current.locale !== locale || cart.items.length === 0 || cart.locale !== locale || phase.current !== 'idle') return;
+    phase.current = 'pending';
+    const generation = owner.current.generation;
+    const ownsRequest = () => owner.current.active && owner.current.generation === generation && owner.current.token === sessionToken && owner.current.locale === locale;
     setIsSubmitting(true);
     setError('');
-
     const response = await fetch(`/api/builder/commerce/checkout?locale=${encodeURIComponent(locale)}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        locale,
-        cart,
-        customer,
-        shippingAddress: address,
-        shippingMethod: normalizedShippingMethod,
-        paymentAdapter: normalizedPaymentAdapter,
-      }),
+      body: JSON.stringify({ locale, cart, customer, shippingAddress: address, shippingMethod: normalizedShippingMethod, paymentAdapter: normalizedPaymentAdapter }),
     }).catch(() => null);
-    const payload = await response?.json().catch(() => null) as {
-      ok?: boolean;
-      checkout?: CommerceCheckoutConfirmation;
-      errors?: string[];
-    } | null;
-
-    if (!response?.ok) {
-      setError(payload?.errors?.includes('cart_mixed_currency') || payload?.errors?.includes('currency_unsupported')
-        ? t.currencyError
-        : t.error);
+    const payload: unknown = await response?.json().catch(() => null);
+    if (!ownsRequest()) return;
+    const result = payload && typeof payload === 'object' ? payload as { ok?: unknown; checkout?: unknown; errorCode?: unknown; errors?: unknown } : null;
+    if (response?.ok && result?.ok === true && isCheckoutReceipt(result.checkout, locale, cart.currency)) {
+      phase.current = 'confirmed';
+      setConfirmation(result.checkout);
+      setCart(makeEmptyCart(locale, result.checkout.currency));
       setIsSubmitting(false);
+      // Local persistence is optional; it cannot reverse an acknowledged order.
+      let failed = false;
+      try { window.localStorage.setItem(commerceCheckoutConfirmationStorageKey(locale), JSON.stringify(result.checkout)); } catch { failed = true; }
+      try { window.localStorage.removeItem(commerceCartStorageKey(locale)); } catch { failed = true; }
+      setStorageFailed(failed);
       return;
     }
-
-    if (!payload?.ok || !payload.checkout) {
-      setError(t.error);
-      setIsSubmitting(false);
-      return;
+    if (response && result?.ok === false && isPreEffectRejection(response.status, result.errorCode)) {
+      phase.current = 'idle';
+      setError(Array.isArray(result.errors) && (result.errors.includes('cart_mixed_currency') || result.errors.includes('currency_unsupported')) ? t.currencyError : t.error);
+    } else {
+      phase.current = 'unknown';
+      setUnknownOutcome(true);
     }
-
-    window.localStorage.setItem(commerceCheckoutConfirmationStorageKey(locale), JSON.stringify(payload.checkout));
-    window.localStorage.removeItem(commerceCartStorageKey(locale));
-    setCart(makeEmptyCart(locale, payload.checkout.currency));
-    setConfirmation(payload.checkout);
     setIsSubmitting(false);
   }
 
@@ -420,7 +486,7 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
               <dd data-commerce-checkout-payment-status>{confirmation.payment.status}</dd>
             </div>
           </dl>
-          <p className={styles.clearNotice}>{t.clear}</p>
+          <p className={styles.clearNotice} data-commerce-checkout-storage-warning={storageFailed ? 'true' : undefined}>{storageFailed ? t.storageWarning : t.clear}</p>
           <Link href={`/${locale}/store`} className={styles.primaryLink}>{t.back}</Link>
         </section>
       </section>
@@ -442,6 +508,12 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
           <p>{t.description}</p>
         </header>
 
+        {unknownOutcome ? (
+          <section role="alert" data-commerce-checkout-unknown>
+            <p>{t.unknown}</p>
+            <button type="button" data-commerce-checkout-new-order onClick={startNewOrder}>{t.newOrder}</button>
+          </section>
+        ) : null}
         {hydrated && cart.items.length === 0 ? (
           <section className={styles.empty} data-commerce-checkout-empty>
             <p>{t.empty}</p>
@@ -456,6 +528,7 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
                   <label>
                     <span>{t.name}</span>
                     <input
+                      disabled={isSubmitting}
                       value={customer.name}
                       required
                       data-commerce-checkout-name
@@ -465,6 +538,7 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
                   <label>
                     <span>{t.email}</span>
                     <input
+                      disabled={isSubmitting}
                       value={customer.email}
                       required
                       type="email"
@@ -476,6 +550,7 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
                   <label>
                     <span>{t.phone}</span>
                     <input
+                      disabled={isSubmitting}
                       value={customer.phone ?? ''}
                       data-commerce-checkout-phone
                       onChange={(event) => updateCustomer('phone', event.target.value)}
@@ -490,6 +565,7 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
                   <label>
                     <span>{t.country}</span>
                     <input
+                      disabled={isSubmitting}
                       value={address.country}
                       required
                       maxLength={2}
@@ -500,6 +576,7 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
                   <label>
                     <span>{t.region}</span>
                     <input
+                      disabled={isSubmitting}
                       value={address.region}
                       required
                       data-commerce-checkout-region
@@ -509,6 +586,7 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
                   <label>
                     <span>{t.city}</span>
                     <input
+                      disabled={isSubmitting}
                       value={address.city}
                       required
                       data-commerce-checkout-city
@@ -518,6 +596,7 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
                   <label>
                     <span>{t.postalCode}</span>
                     <input
+                      disabled={isSubmitting}
                       value={address.postalCode}
                       required
                       data-commerce-checkout-postal-code
@@ -527,6 +606,7 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
                   <label className={styles.wideField}>
                     <span>{t.addressLine1}</span>
                     <input
+                      disabled={isSubmitting}
                       value={address.addressLine1}
                       required
                       data-commerce-checkout-address-1
@@ -536,6 +616,7 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
                   <label className={styles.wideField}>
                     <span>{t.addressLine2}</span>
                     <input
+                      disabled={isSubmitting}
                       value={address.addressLine2 ?? ''}
                       data-commerce-checkout-address-2
                       onChange={(event) => updateAddress('addressLine2', event.target.value)}
@@ -544,9 +625,10 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
                   <label className={styles.wideField}>
                     <span>{t.method}</span>
                     <select
+                      disabled={isSubmitting}
                       value={shippingMethod}
                       data-commerce-checkout-shipping-method
-                      onChange={(event) => setShippingMethod(normalizeCheckoutShippingMethod(event.target.value))}
+                      onChange={(event) => { if (phase.current !== 'pending') setShippingMethod(normalizeCheckoutShippingMethod(event.target.value)); }}
                     >
                       <option value="digital">{t.digital}</option>
                       <option value="standard">{t.standard}</option>
@@ -563,9 +645,10 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
                 <label className={styles.wideField}>
                   <span>{t.adapter}</span>
                   <select
+                      disabled={isSubmitting}
                     value={paymentAdapter}
                     data-commerce-checkout-payment-adapter
-                    onChange={(event) => setPaymentAdapter(normalizeCheckoutPaymentAdapter(event.target.value))}
+                    onChange={(event) => { if (phase.current !== 'pending') setPaymentAdapter(normalizeCheckoutPaymentAdapter(event.target.value)); }}
                   >
                     <option value="manual-invoice">{t.manualInvoice}</option>
                     <option value="sandbox-card">{t.sandboxCard}</option>
@@ -640,7 +723,7 @@ export default function PublicCheckout({ locale }: { locale: Locale }) {
                 </div>
               </dl>
               {error ? <p className={styles.error} data-commerce-checkout-error>{error}</p> : null}
-              <button type="submit" disabled={isSubmitting || cart.items.length === 0} data-commerce-checkout-submit>
+              <button type="submit" disabled={isSubmitting || unknownOutcome || cart.items.length === 0} data-commerce-checkout-submit>
                 {isSubmitting ? t.processing : t.submit}
               </button>
             </aside>

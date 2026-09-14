@@ -1,3 +1,4 @@
+import { requireBuilderPagePermission } from '@/lib/builder/security/page-permission';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { locales, normalizeLocale, type Locale } from '@/lib/locales';
@@ -36,6 +37,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
 }
 
 export default async function WebhookDetailPage(props: { params: Promise<{ locale: string; webhookId: string }> }) {
+  await requireBuilderPagePermission('settings');
   const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const subscription = await getSubscription(params.webhookId);

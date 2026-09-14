@@ -416,6 +416,7 @@ export default function SandboxPage({
     handleDownloadDraftConflictRecovery,
     handleUseServerDraftAfterConflict,
     handleSelectPage,
+    handlePagesRefreshRequest,
     refreshColumnsPageIfNeeded,
   } = useSandboxSiteState({
     initialDocument,
@@ -1146,6 +1147,7 @@ export default function SandboxPage({
           onApplyComponentDesignPreset={handleApplyComponentDesignPreset}
           onSetActiveDrawer={setActiveDrawer}
           onSelectPage={handleSelectPage}
+          onPagesRefreshRequest={handlePagesRefreshRequest}
           onPagesChange={handlePagesChange}
           onMissingPageHandled={() => setMissingPageHref(null)}
           onNavigationChange={setNavItemsState}

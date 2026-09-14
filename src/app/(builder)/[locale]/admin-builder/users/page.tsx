@@ -1,3 +1,4 @@
+import { requireBuilderPagePermission } from '@/lib/builder/security/page-permission';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import UsersAdmin from '@/components/builder/users/UsersAdmin';
@@ -28,20 +29,12 @@ export async function generateMetadata(props: { params: Promise<{ locale: Locale
   });
 }
 
-/**
- * Owner-only admin surface. We can't read the basic-auth username from
- * a server component request directly without middleware glue, so we
- * gate by checking the seeded owner record exists and rely on the
- * route APIs to re-enforce `manage-roles` on every mutation. To make
- * the page itself less footgun-y when a non-owner clicks through, the
- * client UI hides the destructive controls when the resolved role is
- * not 'owner' (passed via initial server prop).
- */
 export default async function BuilderUsersAdminPage(
   props: {
     params: Promise<{ locale: Locale }>;
   }
 ) {
+  const actor = await requireBuilderPagePermission('manage-roles');
   const params = await props.params;
   const locale = normalizeLocale(params.locale);
 
@@ -53,10 +46,7 @@ export default async function BuilderUsersAdminPage(
   }
 
   const matrix = rolePermissionMatrix(BUILDER_PERMISSIONS);
-  const presumedOwner = users.find((u) => u.role === 'owner');
-  const initialActorRole = presumedOwner
-    ? await resolveUserRole(presumedOwner.username)
-    : 'owner';
+  const initialActorRole = await resolveUserRole(actor.username);
 
   return (
     <UsersAdmin

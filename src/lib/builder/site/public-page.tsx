@@ -431,10 +431,16 @@ export async function resolvePublishedSitePage(
 
   const allLightboxes = (site.lightboxes ?? []).filter((lb) => lb.locale === locale);
   const lightboxes: ResolvedLightbox[] = [];
-  for (const meta of allLightboxes) {
-    const lbCanvas = await readLightboxCanvas(DEFAULT_BUILDER_SITE_ID, meta.id);
-    if (lbCanvas) {
-      lightboxes.push({ meta, canvas: lbCanvas });
+  for (let offset = 0; offset < allLightboxes.length; offset += 4) {
+    const batch = allLightboxes.slice(offset, offset + 4);
+    const canvases = await Promise.all(
+      batch.map((meta) => readLightboxCanvas(DEFAULT_BUILDER_SITE_ID, meta.id)),
+    );
+    for (const [index, meta] of batch.entries()) {
+      const lbCanvas = canvases[index];
+      if (lbCanvas) {
+        lightboxes.push({ meta, canvas: lbCanvas });
+      }
     }
   }
 

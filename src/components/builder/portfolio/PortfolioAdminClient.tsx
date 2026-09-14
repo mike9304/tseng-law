@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Locale } from '@/lib/locales';
 import type { PortfolioProject } from '@/lib/builder/portfolio/portfolio-shared';
 import styles from './PortfolioAdmin.module.css';
@@ -137,6 +137,31 @@ const copy: Record<Locale, {
   },
 };
 
+const recoveryCopy: Record<Locale, { unknown: string; listFailed: string; retry: string }> = {
+  ko: { unknown: '서버 처리 결과를 확인해야 합니다. 입력은 보존했습니다. 목록을 확인한 뒤 기존 프로젝트를 선택하거나 새 프로젝트를 시작하세요. 새 작업을 시작해도 이전 처리가 취소되거나 실패한 것으로 확인되는 것은 아닙니다.', listFailed: '목록을 새로 불러오지 못했습니다. 확인된 저장 또는 삭제 결과는 유지됩니다.', retry: '목록 다시 불러오기' },
+  'zh-hant': { unknown: '請確認伺服器的處理結果。輸入已保留。檢查列表後，請選擇既有專案或明確開始新專案。開始新工作不代表先前處理已取消或失敗。', listFailed: '無法重新載入列表。已確認的儲存或刪除結果仍保留。', retry: '重新載入列表' },
+  en: { unknown: 'Confirm the server processing result. Your input is preserved. Check the list, then select an existing project or deliberately start a new project. Starting a new task does not confirm that the earlier operation was cancelled or failed.', listFailed: 'Unable to refresh the list. Any acknowledged save or deletion remains confirmed.', retry: 'Refresh list' },
+};
+
+// Validate fields consumed by draftFromProject before acknowledging the response.
+function isProjectResult(value: unknown): value is PortfolioProject {
+  if (!value || typeof value !== 'object') return false;
+  const p = value as Record<string, unknown>;
+  return ['projectId', 'slug', 'title', 'summary', 'description', 'body', 'category', 'completedAt', 'createdAt', 'updatedAt']
+    .every((key) => typeof p[key] === 'string') && Boolean(p.projectId)
+    && ['ko', 'zh-hant', 'en'].includes(String(p.locale))
+    && ['draft', 'published', 'archived'].includes(String(p.status))
+    && typeof p.featured === 'boolean' && typeof p.order === 'number' && Number.isFinite(p.order)
+    && ['client', 'coverImageUrl'].every((key) => p[key] === undefined || typeof p[key] === 'string')
+    && Array.isArray(p.tags) && p.tags.every((tag) => typeof tag === 'string')
+    && Array.isArray(p.gallery) && p.gallery.every((image: unknown) => {
+      if (!image || typeof image !== 'object') return false;
+      const item = image as Record<string, unknown>;
+      return ['imageId', 'url', 'alt'].every((key) => typeof item[key] === 'string')
+        && (item.caption === undefined || typeof item.caption === 'string');
+    });
+}
+
 interface PortfolioAdminClientProps {
   locale: Locale;
   siteTitle: string;
@@ -262,6 +287,25 @@ export default function PortfolioAdminClient({
   const [draft, setDraft] = useState<Draft>(() => newDraft(categories[0]?.id ?? 'company-setup'));
   const [notice, setNotice] = useState('');
   const [busy, setBusy] = useState(false);
+  const [uncertain, setUncertain] = useState(false);
+  const [listFailed, setListFailed] = useState(false);
+  const active = useRef(false);
+  const unresolved = useRef(false);
+  const alive = useRef(true);
+  const recovery = recoveryCopy[locale];
+  useEffect(() => {
+    alive.current = true;
+    return () => { alive.current = false; };
+  }, []);
+
+  function startTask(next: Draft) {
+    if (active.current || !alive.current) return;
+    unresolved.current = false;
+    setUncertain(false);
+    setNotice('');
+    setDraft(next);
+  }
+
 
   const filtered = useMemo(() => projects.filter((project) => (
     (status === 'all' || project.status === status)
@@ -276,58 +320,67 @@ export default function PortfolioAdminClient({
   }), [projects]);
 
   async function refresh() {
-    const response = await fetch(`/api/builder/portfolio?locale=${locale}&scope=all&status=all&sort=order-asc`, {
-      cache: 'no-store',
-    });
-    const payload = await response.json() as { ok?: boolean; projects?: PortfolioProject[] };
-    if (payload.ok && Array.isArray(payload.projects)) setProjects(payload.projects);
-  }
-
-  async function saveDraft() {
-    setBusy(true);
-    setNotice(text.notices.saving);
     try {
-      const body = payloadFromDraft(locale, draft);
-      const params = new URLSearchParams({ locale });
-      const response = await fetch(
-        draft.projectId
-          ? `/api/builder/portfolio/${encodeURIComponent(draft.projectId)}?${params.toString()}`
-          : `/api/builder/portfolio?${params.toString()}`,
-        {
-          method: draft.projectId ? 'PATCH' : 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(body),
-        },
-      );
-      const payload = await response.json().catch(() => ({})) as { ok?: boolean; project?: PortfolioProject; error?: string };
-      if (!response.ok || !payload.ok || !payload.project) {
-        setNotice(payload.error ?? text.notices.saveFailed);
-        return;
+      const response = await fetch(`/api/builder/portfolio?locale=${locale}&scope=all&status=all&sort=order-asc`, { cache: 'no-store' });
+      if (!response.ok) throw new Error('List request failed');
+      const payload = await response.json();
+      if (payload?.ok !== true || !Array.isArray(payload.projects) || !payload.projects.every(isProjectResult)) {
+        throw new Error('Invalid list response');
       }
-      setDraft(draftFromProject(payload.project));
-      await refresh();
-      setNotice(text.notices.saved);
-    } finally {
-      setBusy(false);
+      if (alive.current) { setProjects(payload.projects); setListFailed(false); }
+    } catch {
+      if (alive.current) setListFailed(true);
     }
   }
 
-  async function removeProject(projectId: string) {
-    setBusy(true);
-    setNotice(text.notices.deleting);
+  async function retryList() {
+    if (active.current || !alive.current) return;
+    active.current = true; setBusy(true);
+    try { await refresh(); }
+    finally { active.current = false; if (alive.current) setBusy(false); }
+  }
+
+  async function mutate(projectId?: string) {
+    if (active.current || unresolved.current || !alive.current) return;
+    active.current = true;
+    setBusy(true); setNotice(projectId ? text.notices.deleting : text.notices.saving);
+    let reportedError = '';
     try {
       const params = new URLSearchParams({ locale });
-      const response = await fetch(`/api/builder/portfolio/${encodeURIComponent(projectId)}?${params.toString()}`, { method: 'DELETE' });
-      if (!response.ok) {
-        const payload = await response.json().catch(() => ({})) as { error?: string };
-        setNotice(payload.error ?? text.notices.deleteFailed);
-        return;
+      const id = projectId ?? draft.projectId;
+      const response = await fetch(
+        id ? `/api/builder/portfolio/${encodeURIComponent(id)}?${params}` : `/api/builder/portfolio?${params}`,
+        projectId ? { method: 'DELETE' } : {
+          method: draft.projectId ? 'PATCH' : 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payloadFromDraft(locale, draft)),
+        },
+      );
+      const payload = await response.json();
+      if (typeof payload?.error === 'string') reportedError = payload.error;
+      if (!response.ok || payload?.ok !== true || (!projectId && (!isProjectResult(payload.project)
+        || payload.project.locale !== locale || (draft.projectId && payload.project.projectId !== draft.projectId)))) {
+        throw new Error('Unconfirmed mutation');
+      }
+      if (!alive.current) return;
+      if (projectId) {
+        setProjects((current) => current.filter((item) => item.projectId !== projectId));
+        if (draft.projectId === projectId) setDraft(newDraft(categories[0]?.id ?? 'company-setup'));
+        setNotice(text.notices.deleted);
+      } else {
+        const saved: PortfolioProject = payload.project;
+        setDraft(draftFromProject(saved));
+        setProjects((current) => [saved, ...current.filter((item) => item.projectId !== saved.projectId)]);
+        setNotice(text.notices.saved);
       }
       await refresh();
-      if (draft.projectId === projectId) setDraft(newDraft(categories[0]?.id ?? 'company-setup'));
-      setNotice(text.notices.deleted);
+    } catch {
+      if (alive.current) {
+        unresolved.current = true; setUncertain(true); setNotice(reportedError);
+      }
     } finally {
-      setBusy(false);
+      active.current = false;
+      if (alive.current) setBusy(false);
     }
   }
 
@@ -348,40 +401,43 @@ export default function PortfolioAdminClient({
       </header>
 
       <section className={styles.shell}>
-        <form className={styles.form} onSubmit={(event) => { event.preventDefault(); void saveDraft(); }}>
+        <form className={styles.form} onSubmit={(event) => { event.preventDefault(); void mutate(); }}>
           <div className={styles.formHeader}>
             <h2>{draft.projectId ? text.editTitle : text.newTitle}</h2>
-            <button type="button" data-portfolio-admin-new-draft="true" onClick={() => setDraft(newDraft(categories[0]?.id ?? 'company-setup'))}>{text.newButton}</button>
+            <button type="button" data-portfolio-admin-new-draft="true" disabled={busy} onClick={() => startTask(newDraft(categories[0]?.id ?? 'company-setup'))}>{text.newButton}</button>
           </div>
-          <label><span>{text.titleLabel}</span><input value={draft.title} onChange={(event) => setDraft({ ...draft, title: event.target.value })} required /></label>
-          <label><span>{text.slugLabel}</span><input value={draft.slug} onChange={(event) => setDraft({ ...draft, slug: event.target.value })} placeholder={text.slugPlaceholder} /></label>
-          <label><span>{text.summaryLabel}</span><textarea value={draft.summary} onChange={(event) => setDraft({ ...draft, summary: event.target.value })} rows={3} required /></label>
-          <label><span>{text.descriptionLabel}</span><textarea value={draft.description} onChange={(event) => setDraft({ ...draft, description: event.target.value })} rows={4} /></label>
-          <label><span>{text.bodyLabel}</span><textarea value={draft.body} onChange={(event) => setDraft({ ...draft, body: event.target.value })} rows={6} /></label>
+          <label><span>{text.titleLabel}</span><input disabled={busy} value={draft.title} onChange={(event) => setDraft({ ...draft, title: event.target.value })} required /></label>
+          <label><span>{text.slugLabel}</span><input disabled={busy} value={draft.slug} onChange={(event) => setDraft({ ...draft, slug: event.target.value })} placeholder={text.slugPlaceholder} /></label>
+          <label><span>{text.summaryLabel}</span><textarea disabled={busy} value={draft.summary} onChange={(event) => setDraft({ ...draft, summary: event.target.value })} rows={3} required /></label>
+          <label><span>{text.descriptionLabel}</span><textarea disabled={busy} value={draft.description} onChange={(event) => setDraft({ ...draft, description: event.target.value })} rows={4} /></label>
+          <label><span>{text.bodyLabel}</span><textarea disabled={busy} value={draft.body} onChange={(event) => setDraft({ ...draft, body: event.target.value })} rows={6} /></label>
           <div className={styles.grid2}>
-            <label><span>{text.categoryLabel}</span><select value={draft.category} onChange={(event) => setDraft({ ...draft, category: event.target.value })}>{categories.map((item) => <option key={item.id} value={item.id}>{item.name[locale]}</option>)}</select></label>
-            <label><span>{text.completedAtLabel}</span><input type="date" value={draft.completedAt} onChange={(event) => setDraft({ ...draft, completedAt: event.target.value })} required /></label>
-            <label><span>{text.statusLabel}</span><select value={draft.status} onChange={(event) => setDraft({ ...draft, status: event.target.value as PortfolioProject['status'] })}><option value="published">{text.statusOptions.published}</option><option value="draft">{text.statusOptions.draft}</option><option value="archived">{text.statusOptions.archived}</option></select></label>
-            <label><span>{text.orderLabel}</span><input type="number" value={draft.order} onChange={(event) => setDraft({ ...draft, order: Number(event.target.value) })} /></label>
+            <label><span>{text.categoryLabel}</span><select disabled={busy} value={draft.category} onChange={(event) => setDraft({ ...draft, category: event.target.value })}>{categories.map((item) => <option key={item.id} value={item.id}>{item.name[locale]}</option>)}</select></label>
+            <label><span>{text.completedAtLabel}</span><input disabled={busy} type="date" value={draft.completedAt} onChange={(event) => setDraft({ ...draft, completedAt: event.target.value })} required /></label>
+            <label><span>{text.statusLabel}</span><select disabled={busy} value={draft.status} onChange={(event) => setDraft({ ...draft, status: event.target.value as PortfolioProject['status'] })}><option value="published">{text.statusOptions.published}</option><option value="draft">{text.statusOptions.draft}</option><option value="archived">{text.statusOptions.archived}</option></select></label>
+            <label><span>{text.orderLabel}</span><input disabled={busy} type="number" value={draft.order} onChange={(event) => setDraft({ ...draft, order: Number(event.target.value) })} /></label>
           </div>
-          <label><span>{text.clientLabel}</span><input value={draft.client} onChange={(event) => setDraft({ ...draft, client: event.target.value })} /></label>
-          <label><span>{text.tagsLabel}</span><input value={draft.tags} onChange={(event) => setDraft({ ...draft, tags: event.target.value })} placeholder={locale === 'ko' ? '쉼표로 구분' : locale === 'zh-hant' ? '以逗號分隔' : 'Comma-separated'} /></label>
-          <label><span>{text.coverLabel}</span><input value={draft.coverImageUrl} onChange={(event) => setDraft({ ...draft, coverImageUrl: event.target.value })} /></label>
-          <label><span>{text.galleryLabel}</span><textarea value={draft.galleryText} onChange={(event) => setDraft({ ...draft, galleryText: event.target.value })} rows={5} placeholder={text.galleryPlaceholder} /></label>
-          <label className={styles.checkbox}><input type="checkbox" checked={draft.featured} onChange={(event) => setDraft({ ...draft, featured: event.target.checked })} /><span>{text.featuredLabel}</span></label>
-          <button className={styles.primary} type="submit" disabled={busy}>{draft.projectId ? locale === 'ko' ? '변경 저장' : locale === 'zh-hant' ? '儲存變更' : 'Save changes' : text.saveButton}</button>
+          <label><span>{text.clientLabel}</span><input disabled={busy} value={draft.client} onChange={(event) => setDraft({ ...draft, client: event.target.value })} /></label>
+          <label><span>{text.tagsLabel}</span><input disabled={busy} value={draft.tags} onChange={(event) => setDraft({ ...draft, tags: event.target.value })} placeholder={locale === 'ko' ? '쉼표로 구분' : locale === 'zh-hant' ? '以逗號分隔' : 'Comma-separated'} /></label>
+          <label><span>{text.coverLabel}</span><input disabled={busy} value={draft.coverImageUrl} onChange={(event) => setDraft({ ...draft, coverImageUrl: event.target.value })} /></label>
+          <label><span>{text.galleryLabel}</span><textarea disabled={busy} value={draft.galleryText} onChange={(event) => setDraft({ ...draft, galleryText: event.target.value })} rows={5} placeholder={text.galleryPlaceholder} /></label>
+          <label className={styles.checkbox}><input disabled={busy} type="checkbox" checked={draft.featured} onChange={(event) => setDraft({ ...draft, featured: event.target.checked })} /><span>{text.featuredLabel}</span></label>
+          <button className={styles.primary} type="submit" disabled={busy || uncertain}>{draft.projectId ? locale === 'ko' ? '변경 저장' : locale === 'zh-hant' ? '儲存變更' : 'Save changes' : text.saveButton}</button>
           {notice ? <p className={styles.notice} role="status">{notice}</p> : null}
+          {uncertain ? <p className={styles.notice} role="status">{recovery.unknown}</p> : null}
+          {listFailed ? <p className={styles.notice} role="status">{recovery.listFailed}</p> : null}
+          {uncertain || listFailed ? <button type="button" data-portfolio-refresh="true" disabled={busy} onClick={() => void retryList()}>{recovery.retry}</button> : null}
         </form>
 
         <section className={styles.listPanel} aria-label={locale === 'ko' ? '포트폴리오 프로젝트' : locale === 'zh-hant' ? '作品集專案' : 'Portfolio projects'}>
           <div className={styles.toolbar}>
-            <select value={status} onChange={(event) => setStatus(event.target.value as typeof status)}>
+            <select disabled={busy} value={status} onChange={(event) => setStatus(event.target.value as typeof status)}>
               <option value="all">{text.statusOptions.all}</option>
               <option value="published">{text.statusOptions.published}</option>
               <option value="draft">{text.statusOptions.draft}</option>
               <option value="archived">{text.statusOptions.archived}</option>
             </select>
-            <select value={category} onChange={(event) => setCategory(event.target.value)}>
+            <select disabled={busy} value={category} onChange={(event) => setCategory(event.target.value)}>
               <option value="all">{text.categoryOptions.all}</option>
               {categories.map((item) => <option key={item.id} value={item.id}>{item.name[locale]}</option>)}
             </select>
@@ -403,8 +459,8 @@ export default function PortfolioAdminClient({
                     <strong>{project.title}</strong>
                     <p>{project.summary}</p>
                     <div className={styles.cardActions}>
-                      <button type="button" onClick={() => setDraft(draftFromProject(project))}>{text.editButton}</button>
-                      <button type="button" onClick={() => void removeProject(project.projectId)} disabled={busy}>{text.deleteButton}</button>
+                      <button type="button" disabled={busy} onClick={() => startTask(draftFromProject(project))}>{text.editButton}</button>
+                      <button type="button" onClick={() => void mutate(project.projectId)} disabled={busy || uncertain}>{text.deleteButton}</button>
                     </div>
                   </div>
                 </article>

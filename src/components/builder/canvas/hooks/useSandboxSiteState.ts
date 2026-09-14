@@ -11,6 +11,11 @@ import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/
 import { resolveBuilderSiteSettings } from '@/lib/builder/site/localized-settings';
 import { DEFAULT_THEME, type BuilderNavItem, type BuilderSiteSettings, type BuilderTheme } from '@/lib/builder/site/types';
 import type { Locale } from '@/lib/locales';
+import {
+  createCreatePageRefreshCanApply,
+  type CreatePageFollowUpScope,
+  type CreatePageRefreshCanApply,
+} from '@/components/builder/canvas/create-page-follow-up';
 
 const AUTOSAVE_DEBOUNCE_MS = 1000;
 const NETWORK_ERROR_MESSAGE = '네트워크 오류, 다시 시도해주세요';
@@ -799,6 +804,7 @@ export function useSandboxSiteState({
   const pendingExternalTransitionRef = useRef<ExternalPropTransition | null>(null);
   const enqueuedExternalTransitionIdsRef = useRef(new Set<number>());
   const mountedRef = useRef(true);
+  const latestCommittedSiteIdRef = useRef(siteId);
   const appliedPropDocumentRef = useRef<BuilderCanvasDocument | null>(null);
   const appliedPropDraftMetaRef = useRef<DraftMeta | null | undefined>(undefined);
   const [syncedUpdatedAt, setSyncedUpdatedAtState] = useState(initialDocument.updatedAt);
@@ -834,6 +840,15 @@ export function useSandboxSiteState({
     error: null,
   });
   const [columnsPageLookupPending, setColumnsPageLookupPending] = useState(false);
+  const [columnsPageClickPending, setColumnsPageClickPending] = useState(false);
+  const columnsPageInputLocaleRef = useRef(locale);
+  const columnsPageClickOperationRef = useRef<{
+    id: number;
+    siteId: string;
+    locale: Locale;
+    inputLocale: Locale;
+  } | null>(null);
+  const nextColumnsPageClickOperationIdRef = useRef(0);
   const [currentSlugState, setCurrentSlugStateValue] = useState(currentSlug ?? '');
   const currentSlugStateRef = useRef(currentSlug ?? '');
   const setCurrentSlugState = useCallback((nextSlug: string) => {
@@ -851,6 +866,26 @@ export function useSandboxSiteState({
     () => shouldOfferDecomposeCurrentPage(canvasDocument ?? initialDocument, currentSlugState),
     [canvasDocument, currentSlugState, initialDocument],
   );
+
+  useLayoutEffect(() => {
+    latestCommittedSiteIdRef.current = siteId;
+  }, [siteId]);
+
+  useLayoutEffect(() => {
+    columnsPageInputLocaleRef.current = locale;
+    const currentOperation = columnsPageClickOperationRef.current;
+    if (
+      currentOperation
+      && (
+        currentOperation.siteId !== siteId
+        || currentOperation.locale !== activeCanvasLocale
+        || currentOperation.inputLocale !== locale
+      )
+    ) {
+      columnsPageClickOperationRef.current = null;
+      setColumnsPageClickPending(false);
+    }
+  }, [activeCanvasLocale, locale, siteId]);
 
   useEffect(() => {
     const enqueuedExternalTransitionIds = enqueuedExternalTransitionIdsRef.current;
@@ -873,6 +908,7 @@ export function useSandboxSiteState({
       appliedPropDocumentRef.current = null;
       appliedPropDraftMetaRef.current = undefined;
       activeScopeController.invalidate();
+      columnsPageClickOperationRef.current = null;
     };
   }, [activeScopeController]);
 
@@ -1901,17 +1937,36 @@ export function useSandboxSiteState({
     if (active) setCurrentSlugState(active.slug);
   }, [activeScopeController, setCurrentSlugState]);
 
-  const refreshSitePages = useCallback(async () => {
+  const refreshSitePages = useCallback(async (canApply?: CreatePageRefreshCanApply) => {
+    if (canApply && !canApply()) return [];
     const requestScope = activeScopeController.current();
     const response = await fetch(`/api/builder/site/pages?${siteScopedQuery(requestScope.locale, siteId)}`, { credentials: 'same-origin' });
     if (!response.ok) throw new Error(`Failed to load pages: ${response.status}`);
+    if (canApply && !canApply()) return [];
     if (!activeScopeController.isCurrent(requestScope)) return [];
     const payload = (await response.json()) as { pages?: BuilderPageSummary[] };
+    if (canApply && !canApply()) return [];
     if (!activeScopeController.isCurrent(requestScope)) return [];
     const pages = Array.isArray(payload.pages) ? payload.pages : [];
     handlePagesChange(pages);
     return pages;
   }, [activeScopeController, handlePagesChange, siteId]);
+
+  const handlePagesRefreshRequest = useCallback((origin: CreatePageFollowUpScope) => {
+    if (origin.siteId !== siteId) return;
+    const canApply = createCreatePageRefreshCanApply(origin, () => ({
+      siteId: latestCommittedSiteIdRef.current,
+      locale: activeScopeController.current().locale,
+      mounted: mountedRef.current,
+    }));
+    if (!canApply()) return;
+    return Promise.resolve()
+      .then(() => refreshSitePages(canApply))
+      .catch(() => {
+        if (!canApply()) return;
+        pushToast(NETWORK_ERROR_MESSAGE, 'error', { ttlMs: 8000 });
+      });
+  }, [activeScopeController, pushToast, refreshSitePages, siteId]);
 
   const handleHeaderNavigate = useCallback((href: string) => {
     const navigationLocale = activeScopeController.current().locale;
@@ -2026,7 +2081,11 @@ export function useSandboxSiteState({
     return response.ok && activeScopeController.isCurrent(requestScope);
   }, [activeScopeController, siteId]);
 
-  const createColumnsBuilderPage = useCallback(async (): Promise<BuilderPageSummary | null> => {
+  const createColumnsBuilderPage = useCallback(async (canApplyClick: () => boolean): Promise<{
+    page: BuilderPageSummary | null;
+    fastPath: boolean;
+  } | null> => {
+    if (!canApplyClick()) return null;
     const requestScope = activeScopeController.current();
     const response = await fetch(`/api/builder/site/pages?${siteScopedQuery(requestScope.locale, siteId)}`, {
       method: 'POST',
@@ -2042,8 +2101,9 @@ export function useSandboxSiteState({
         dynamicListLimit: 6,
       }),
     });
+    if (!canApplyClick()) return null;
     const data = (await response.json().catch(() => ({}))) as CreatePageResponseBody;
-    if (!activeScopeController.isCurrent(requestScope)) return null;
+    if (!canApplyClick() || !activeScopeController.isCurrent(requestScope)) return null;
     if (!response.ok && response.status !== 409) {
       pushToast(data.message || data.error || '칼럼 페이지를 생성하지 못했습니다.', 'error', {
         ttlMs: 8000,
@@ -2051,7 +2111,28 @@ export function useSandboxSiteState({
       return null;
     }
 
-    const pages = await refreshSitePages();
+    const canApplyCreatedPage = () => (
+      canApplyClick()
+      && mountedRef.current
+      && latestCommittedSiteIdRef.current === siteId
+      && activeScopeController.isCurrent(requestScope)
+    );
+    const fullPage = response.ok
+      && data.page
+      && typeof data.page.pageId === 'string'
+      && data.page.pageId
+      && typeof data.page.slug === 'string'
+      && data.page.slug
+      ? data.page
+      : null;
+    if (fullPage) {
+      if (!canApplyCreatedPage()) return null;
+      updateColumnsNavigationPageId(fullPage.pageId);
+      return { page: fullPage, fastPath: true };
+    }
+
+    const pages = await refreshSitePages(canApplyCreatedPage);
+    if (!canApplyCreatedPage()) return null;
     const createdPageId = data.pageId ?? data.page?.pageId ?? null;
     const targetPage = pages.find((page) => (
       (createdPageId && page.pageId === createdPageId) || page.slug === 'columns'
@@ -2059,7 +2140,7 @@ export function useSandboxSiteState({
     if (targetPage?.pageId) {
       updateColumnsNavigationPageId(targetPage.pageId);
     }
-    return targetPage;
+    return { page: targetPage, fastPath: false };
   }, [activeScopeController, pushToast, refreshSitePages, siteId, updateColumnsNavigationPageId]);
 
   const refreshColumnsPageIfNeeded = useCallback(() => {
@@ -2073,56 +2154,118 @@ export function useSandboxSiteState({
   }, [columnsPage, columnsPageLookupPending, pushToast, refreshSitePages]);
 
   const handleOpenColumnsPage = useCallback(async (openPagesDrawer: () => void) => {
+    if (
+      !mountedRef.current
+      || latestCommittedSiteIdRef.current !== siteId
+      || columnsPageInputLocaleRef.current !== locale
+    ) return false;
+    const clickLocale = activeScopeController.current().locale;
+    const previousOperation = columnsPageClickOperationRef.current;
+    if (previousOperation?.siteId === siteId && previousOperation.locale === clickLocale) return false;
     if (draftConflictRef.current) {
       pushToast(PAGE_SWITCH_SAVE_BLOCKED_MESSAGE, 'error', { ttlMs: 8000 });
       return false;
     }
-    let targetPage = columnsPage;
-    if (!targetPage) {
-      setColumnsPageLookupPending(true);
-      try {
-        const pages = await refreshSitePages();
-        targetPage = pages.find((page) => page.slug === 'columns') ?? null;
-        if (!targetPage) {
-          targetPage = await createColumnsBuilderPage();
+    const operation = {
+      id: nextColumnsPageClickOperationIdRef.current + 1,
+      siteId,
+      locale: clickLocale,
+      inputLocale: locale,
+    };
+    nextColumnsPageClickOperationIdRef.current = operation.id;
+    columnsPageClickOperationRef.current = operation;
+    setColumnsPageClickPending(true);
+    const isCurrentColumnsClick = () => (
+      mountedRef.current
+      && columnsPageClickOperationRef.current?.id === operation.id
+      && latestCommittedSiteIdRef.current === operation.siteId
+      && activeScopeController.current().locale === operation.locale
+      && columnsPageInputLocaleRef.current === operation.inputLocale
+    );
+    let createdFastPath = false;
+    try {
+      let targetPage = columnsPage;
+      if (!targetPage) {
+        try {
+          const pages = await refreshSitePages(isCurrentColumnsClick);
+          if (!isCurrentColumnsClick()) return false;
+          targetPage = pages.find((page) => page.slug === 'columns') ?? null;
+          if (!targetPage) {
+            const created = await createColumnsBuilderPage(isCurrentColumnsClick);
+            if (!isCurrentColumnsClick()) return false;
+            targetPage = created?.page ?? null;
+            createdFastPath = created?.fastPath === true;
+          }
+        } catch {
+          if (!isCurrentColumnsClick()) return false;
+          pushToast(NETWORK_ERROR_MESSAGE, 'error', {
+            ttlMs: 8000,
+          });
         }
-      } catch {
-        pushToast(NETWORK_ERROR_MESSAGE, 'error', {
-          ttlMs: 8000,
-        });
-      } finally {
-        setColumnsPageLookupPending(false);
       }
-    }
 
-    if (targetPage) {
-      updateColumnsNavigationPageId(targetPage.pageId);
-      const opened = await handleSelectPage(targetPage.pageId, targetPage.slug);
-      if (opened) return true;
-      try {
-        const restored = await restoreColumnsDraftIfMissing(targetPage.pageId);
-        if (restored) {
-          pushToast('칼럼 페이지 draft를 복구했습니다.', 'success');
-          return await handleSelectPage(targetPage.pageId, targetPage.slug);
+      if (!isCurrentColumnsClick()) return false;
+
+      const settleCreatedColumnsList = () => {
+        if (!createdFastPath || !isCurrentColumnsClick()) return;
+        try {
+          const refreshPromise = handlePagesRefreshRequest({
+            siteId: operation.siteId,
+            locale: operation.locale,
+          });
+          if (refreshPromise) void refreshPromise.catch(() => {});
+        } catch {
+          // Parent refresh already toasts; never reopen the pages drawer.
         }
-      } catch {
-        pushToast(NETWORK_ERROR_MESSAGE, 'error', {
-          ttlMs: 8000,
-        });
+      };
+
+      if (targetPage) {
+        updateColumnsNavigationPageId(targetPage.pageId);
+        const opened = await handleSelectPage(targetPage.pageId, targetPage.slug);
+        if (!isCurrentColumnsClick()) return false;
+        if (opened) {
+          settleCreatedColumnsList();
+          return true;
+        }
+        try {
+          const restored = await restoreColumnsDraftIfMissing(targetPage.pageId);
+          if (!isCurrentColumnsClick()) return false;
+          if (restored) {
+            pushToast('칼럼 페이지 draft를 복구했습니다.', 'success');
+            const recovered = await handleSelectPage(targetPage.pageId, targetPage.slug);
+            settleCreatedColumnsList();
+            return recovered;
+          }
+        } catch {
+          if (!isCurrentColumnsClick()) return false;
+          pushToast(NETWORK_ERROR_MESSAGE, 'error', {
+            ttlMs: 8000,
+          });
+        }
+        settleCreatedColumnsList();
+        return false;
       }
+
+      openPagesDrawer();
+      pushToast('Columns page not found. Open Pages to create or restore it.', 'error');
       return false;
+    } finally {
+      if (columnsPageClickOperationRef.current?.id === operation.id) {
+        columnsPageClickOperationRef.current = null;
+        if (mountedRef.current) setColumnsPageClickPending(false);
+      }
     }
-
-    openPagesDrawer();
-    pushToast('Columns page not found. Open Pages to create or restore it.', 'error');
-    return false;
   }, [
+    activeScopeController,
     columnsPage,
     createColumnsBuilderPage,
+    handlePagesRefreshRequest,
     handleSelectPage,
+    locale,
     pushToast,
     refreshSitePages,
     restoreColumnsDraftIfMissing,
+    siteId,
     updateColumnsNavigationPageId,
   ]);
 
@@ -2332,7 +2475,12 @@ export function useSandboxSiteState({
     canDecomposeCurrentPage,
     columnPostsSummary,
     columnsPage,
-    columnsPageLookupPending,
+    columnsPageLookupPending: columnsPageLookupPending || (
+      columnsPageClickPending
+      && columnsPageClickOperationRef.current?.siteId === siteId
+      && columnsPageClickOperationRef.current?.locale === activeCanvasLocale
+      && columnsPageClickOperationRef.current?.inputLocale === locale
+    ),
     currentSlugState,
     draftConflict,
     draftMeta,
@@ -2359,6 +2507,7 @@ export function useSandboxSiteState({
     handleDownloadDraftConflictRecovery,
     handleUseServerDraftAfterConflict,
     handleSelectPage,
+    handlePagesRefreshRequest,
     refreshColumnsPageIfNeeded,
   };
 }

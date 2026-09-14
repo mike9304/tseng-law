@@ -38,6 +38,7 @@ function isPublic(page: BuilderPageMeta): boolean {
   if (page.noIndex) return false;
   if (page.seo?.noIndex) return false;
   if (page.password) return false;
+  if (page.memberAccess?.requireLogin) return false;
   if (isInternalSandboxPage(page)) return false;
   return true;
 }

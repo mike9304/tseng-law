@@ -6,9 +6,8 @@ import SmartLink from '@/components/SmartLink';
 import { pageCopy } from '@/data/page-copy';
 import { siteContent } from '@/data/site-content';
 import { buildSeoMetadata } from '@/lib/seo';
-import { loadSearchIndex } from '@/lib/builder/search/index-storage';
-import { buildSearchIndex } from '@/lib/builder/search/index-builder';
-import { collectAllSearchDocs } from '@/lib/builder/search/source-collector';
+import { loadFreshSearchIndex } from '@/lib/builder/search/index-runtime';
+import { retainPublicPageHits } from '@/lib/builder/search/public-eligibility';
 import { runSearchQuery } from '@/lib/builder/search/query-engine';
 import { augmentStaticDocs } from '@/lib/builder/search/augment-static-docs';
 import { getPublicIntentSearchDocs } from '@/lib/builder/search/public-intent-docs';
@@ -71,10 +70,6 @@ function resultKindLabel(kind: SearchDocKind, locale: SiteLocale): string {
   return searchKindLabel(kind, locale);
 }
 
-async function loadNativeSearchIndex() {
-  return (await loadSearchIndex()) ?? buildSearchIndex(await collectAllSearchDocs('default'));
-}
-
 export default async function SearchPage(
   props: {
     params: Promise<{ locale: SiteLocale }>;
@@ -103,19 +98,22 @@ export default async function SearchPage(
       : locale === 'ja'
         ? 'キーワードを入力するか、下のおすすめのテーマを選んでください。'
         : 'Enter a keyword or choose a suggested topic below.';
-  const nativeIndex = await loadNativeSearchIndex();
+  const nativeIndex = (await loadFreshSearchIndex()).index;
   const index = augmentStaticDocs(nativeIndex, locale, getPublicIntentSearchDocs(locale));
   const kindCounts = countPublicSearchDocsByKind(index.byLocale[locale] ?? []);
   const visibleKindIds = visiblePublicSearchKindIds(kindCounts);
   const activeKind = SEARCH_TAB_KIND[requestedTab] ?? 'all';
   const hits = query
-    ? runSearchQuery({
-        index,
-        query,
+    ? await retainPublicPageHits(
+        runSearchQuery({
+          index,
+          query,
+          locale,
+          limit: 50,
+          kinds: activeKind === 'all' ? undefined : [activeKind],
+        }),
         locale,
-        limit: 50,
-        kinds: activeKind === 'all' ? undefined : [activeKind],
-      })
+      )
     : [];
 
   const results = hits.slice(0, 12);

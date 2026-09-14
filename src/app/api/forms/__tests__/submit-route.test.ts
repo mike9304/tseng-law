@@ -1,3 +1,8 @@
+/**
+ * Tag map: checkRateLimit → 'duplicate' (FN-04 only).
+ * FN-06 sequential spies wrap reserve/save/confirm; consume still runs via
+ * checkRateLimit on the ok path but is not pushed onto that callOrder.
+ */
 import { NextRequest } from 'next/server';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { recordFailedWebhook } from '@/lib/builder/forms/webhook-retry';
@@ -6,7 +11,14 @@ import {
   saveFormUpload,
   verifyFormUploadSignature,
 } from '@/lib/builder/forms/uploads';
-import { checkRateLimit } from '@/lib/builder/security/rate-limit';
+import {
+  checkRateLimit,
+  confirmRateLimit,
+  releaseRateLimit,
+  reserveRateLimit,
+  resetRateLimitStore,
+} from '@/lib/builder/security/rate-limit';
+import type { FormSchema } from '@/lib/builder/forms/form-engine';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 
 vi.mock('@/lib/builder/forms/form-engine', async () => {
@@ -48,9 +60,18 @@ vi.mock('@/lib/builder/forms/webhook-retry', () => ({
   recordFailedWebhook: vi.fn(async () => undefined),
 }));
 
-vi.mock('@/lib/builder/security/rate-limit', () => ({
-  checkRateLimit: vi.fn(async () => ({ allowed: true, remaining: 4, retryAfterMs: 0 })),
-}));
+vi.mock('@/lib/builder/security/rate-limit', async () => {
+  const actual = await vi.importActual<typeof import('@/lib/builder/security/rate-limit')>(
+    '@/lib/builder/security/rate-limit',
+  );
+  return {
+    ...actual,
+    checkRateLimit: vi.fn(async () => ({ allowed: true, remaining: 4, retryAfterMs: 0 })),
+    reserveRateLimit: vi.fn(actual.reserveRateLimit),
+    confirmRateLimit: vi.fn(actual.confirmRateLimit),
+    releaseRateLimit: vi.fn(actual.releaseRateLimit),
+  };
+});
 
 vi.mock('@/lib/builder/cms-editable', async () => {
   const actual = await vi.importActual<typeof import('@/lib/builder/cms-editable')>(
@@ -66,6 +87,7 @@ vi.mock('@/lib/builder/cms-editable', async () => {
 describe('/api/forms/submit', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    resetRateLimitStore();
     vi.mocked(checkRateLimit).mockResolvedValue({ allowed: true, remaining: 4, retryAfterMs: 0 });
     vi.mocked(verifyFormUploadSignature).mockReturnValue(true);
     vi.mocked(readFormUpload).mockImplementation(async ({ filename }) => {
@@ -920,6 +942,37 @@ describe('/api/forms/submit', () => {
     expect(fetchMock).not.toHaveBeenCalled();
   });
 
+  it('returns 500 and skips delivery when storage persist fails', async () => {
+    vi.stubEnv('RESEND_API_KEY', 'test-only-key');
+    const engine = await import('@/lib/builder/forms/form-engine');
+    vi.mocked(engine.loadFormSchema).mockResolvedValue({
+      formId: 'lead-form',
+      name: 'Lead form',
+      fields: [{ id: 'email', type: 'email', label: 'Email', required: true }],
+      submitLabel: 'Submit',
+      successMessage: 'ok',
+      errorMessage: 'err',
+      notifyEmail: 'office@example.test',
+      createdAt: '2026-05-11T00:00:00Z',
+      updatedAt: '2026-05-11T00:00:00Z',
+    });
+    vi.mocked(engine.saveSubmission).mockRejectedValue(new Error('blob down'));
+    const fetchMock = vi.fn();
+    vi.stubGlobal('fetch', fetchMock);
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    const route = await import('../submit/route');
+    const response = await route.POST(makeRequest({
+      formId: 'lead-form',
+      fields: { email: 'client@example.test' },
+    }));
+
+    expect(response.status).toBe(500);
+    expect(await response.json()).toEqual({ error: '접수 저장 중 오류가 발생했습니다.' });
+    expect(fetchMock).not.toHaveBeenCalled();
+    expect(emitEvent).not.toHaveBeenCalled();
+    consoleError.mockRestore();
+  });
+
   it('does not infer auto-reply recipients from text fields whose ids contain email', async () => {
     vi.stubEnv('RESEND_API_KEY', 'test-only-key');
     const engine = await import('@/lib/builder/forms/form-engine');
@@ -1051,6 +1104,61 @@ describe('/api/forms/submit', () => {
     expect(engine.saveSubmission).not.toHaveBeenCalled();
   });
 
+  it('allows an identical retry after persist failure without 409', async () => {
+    const callOrder: string[] = [];
+    let duplicateConsumed = false;
+    vi.mocked(checkRateLimit).mockImplementation(async (key) => {
+      if (String(key).startsWith('forms-duplicate:')) {
+        callOrder.push('duplicate');
+        if (duplicateConsumed) {
+          return { allowed: false, remaining: 0, retryAfterMs: 5000 };
+        }
+        duplicateConsumed = true;
+        return { allowed: true, remaining: 0, retryAfterMs: 0 };
+      }
+      return { allowed: true, remaining: 4, retryAfterMs: 0 };
+    });
+    const engine = await import('@/lib/builder/forms/form-engine');
+    vi.mocked(engine.loadFormSchema).mockResolvedValue({
+      formId: 'lead-form',
+      name: 'Lead form',
+      fields: [{ id: 'email', type: 'email', label: 'Email', required: true }],
+      submitLabel: 'Submit',
+      successMessage: 'ok',
+      errorMessage: 'err',
+      antiSpam: {
+        duplicateWindowMs: 60_000,
+        duplicateFields: ['email'],
+      },
+      createdAt: '2026-05-11T00:00:00Z',
+      updatedAt: '2026-05-11T00:00:00Z',
+    });
+    vi.mocked(engine.saveSubmission).mockImplementation(async () => {
+      callOrder.push('save');
+      if (callOrder.filter((step) => step === 'save').length === 1) {
+        throw new Error('blob down');
+      }
+    });
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    const route = await import('../submit/route');
+    const body = {
+      formId: 'lead-form',
+      fields: { email: 'client@example.test' },
+    };
+
+    const first = await route.POST(makeRequest(body));
+    expect(first.status).toBe(500);
+    const second = await route.POST(makeRequest(body));
+    expect(second.status).toBe(200);
+    expect(engine.saveSubmission).toHaveBeenCalledTimes(2);
+    expect(callOrder).toEqual(['save', 'save', 'duplicate']);
+    const duplicateCalls = vi.mocked(checkRateLimit).mock.calls.filter(
+      ([key]) => String(key).startsWith('forms-duplicate:'),
+    );
+    expect(duplicateCalls).toHaveLength(1);
+    consoleError.mockRestore();
+  });
+
   it('rejects duplicate submissions using configured form fields', async () => {
     vi.mocked(checkRateLimit)
       .mockResolvedValueOnce({ allowed: true, remaining: 4, retryAfterMs: 0 })
@@ -1084,7 +1192,7 @@ describe('/api/forms/submit', () => {
     expect(response.status).toBe(409);
     expect(response.headers.get('retry-after')).toBe('5');
     expect(payload.error).toContain('이미 접수된 내용');
-    expect(engine.saveSubmission).not.toHaveBeenCalled();
+    expect(engine.saveSubmission).toHaveBeenCalledTimes(1);
     expect(checkRateLimit).toHaveBeenNthCalledWith(
       2,
       expect.stringMatching(/^forms-duplicate:lead-form:/),
@@ -1236,6 +1344,99 @@ describe('/api/forms/submit', () => {
       expect.any(Error),
     );
     consoleError.mockRestore();
+  });
+});
+
+describe('/api/forms/submit FN-06 pin current duplicate storage', () => {
+  const duplicateSchema = {
+    formId: 'lead-form',
+    name: 'Lead form',
+    fields: [{ id: 'email', type: 'email' as const, label: 'Email', required: true }],
+    submitLabel: 'Submit',
+    successMessage: 'ok',
+    errorMessage: 'err',
+    antiSpam: {
+      duplicateWindowMs: 60_000,
+      duplicateFields: ['email'],
+    },
+    createdAt: '2026-05-11T00:00:00Z',
+    updatedAt: '2026-05-11T00:00:00Z',
+  } satisfies FormSchema;
+
+  beforeEach(() => {
+    resetRateLimitStore();
+    vi.mocked(checkRateLimit).mockResolvedValue({ allowed: true, remaining: 4, retryAfterMs: 0 });
+  });
+
+  it('persists two rows on sequential duplicate after 200', async () => {
+    const store: Array<{ submissionId: string; data: Record<string, unknown> }> = [];
+    const callOrder: string[] = [];
+    const actual = await vi.importActual<typeof import('@/lib/builder/security/rate-limit')>(
+      '@/lib/builder/security/rate-limit',
+    );
+    // checkRateLimit (consume) is intentionally not wrapped here; it is covered by FN-04.
+    vi.mocked(reserveRateLimit).mockImplementation(async (key, maxRequests, windowMs) => {
+      callOrder.push('reserve');
+      return actual.reserveRateLimit(key, maxRequests, windowMs);
+    });
+    vi.mocked(confirmRateLimit).mockImplementation(async (token) => {
+      callOrder.push('confirm');
+      return actual.confirmRateLimit(token);
+    });
+    vi.mocked(checkRateLimit).mockImplementation(async (key, maxRequests, windowMs) => {
+      if (String(key).startsWith('forms-duplicate:')) {
+        return actual.checkRateLimit(key, maxRequests, windowMs);
+      }
+      return { allowed: true, remaining: 4, retryAfterMs: 0 };
+    });
+    const engine = await import('@/lib/builder/forms/form-engine');
+    vi.mocked(engine.loadFormSchema).mockResolvedValue(duplicateSchema);
+    vi.mocked(engine.saveSubmission).mockImplementation(async (submission) => {
+      callOrder.push('save');
+      store.push({ submissionId: submission.submissionId, data: { ...submission.data } });
+    });
+    const route = await import('../submit/route');
+    const body = { formId: 'lead-form', fields: { email: 'client@example.test' } };
+
+    const first = await route.POST(makeRequest(body));
+    const second = await route.POST(makeRequest(body));
+
+    expect(first.status).toBe(200);
+    expect(second.status).toBe(409);
+    expect(store).toHaveLength(1);
+    expect(callOrder).toEqual(['reserve', 'save', 'confirm', 'reserve']);
+  });
+
+  it('rejects the second concurrent identical submit at reserve before save', async () => {
+    const store: unknown[] = [];
+    const actual = await vi.importActual<typeof import('@/lib/builder/security/rate-limit')>(
+      '@/lib/builder/security/rate-limit',
+    );
+    vi.mocked(reserveRateLimit).mockImplementation(actual.reserveRateLimit);
+    vi.mocked(confirmRateLimit).mockImplementation(actual.confirmRateLimit);
+    vi.mocked(releaseRateLimit).mockImplementation(actual.releaseRateLimit);
+    vi.mocked(checkRateLimit).mockImplementation(async (key, maxRequests, windowMs) => {
+      if (String(key).startsWith('forms-duplicate:')) {
+        return actual.checkRateLimit(key, maxRequests, windowMs);
+      }
+      return { allowed: true, remaining: 4, retryAfterMs: 0 };
+    });
+    const engine = await import('@/lib/builder/forms/form-engine');
+    vi.mocked(engine.loadFormSchema).mockResolvedValue(duplicateSchema);
+    vi.mocked(engine.saveSubmission).mockReset();
+    vi.mocked(engine.saveSubmission).mockImplementation(async (submission) => {
+      store.push(submission.submissionId);
+    });
+    const route = await import('../submit/route');
+    const body = { formId: 'lead-form', fields: { email: 'client@example.test' } };
+    const [left, right] = await Promise.all([
+      route.POST(makeRequest(body)),
+      route.POST(makeRequest(body)),
+    ]);
+    const statuses = [left.status, right.status].sort((a, b) => a - b);
+    expect(store).toHaveLength(1);
+    expect(engine.saveSubmission).toHaveBeenCalledTimes(1);
+    expect(statuses).toEqual([200, 409]);
   });
 });
 

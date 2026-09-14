@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useLayoutEffect, useMemo, useRef } from 'react';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import type { PublishCheckSuite } from '@/lib/builder/publish-gate/gate-runner';
 import type { TranslationSiteReviewInput } from '@/lib/builder/publish-gate/translation-policy-review';
@@ -19,6 +19,7 @@ interface UsePublishActionsParams {
   readonly document: BuilderCanvasDocument | null;
   readonly draftMeta?: DraftMeta | null;
   readonly locale: string;
+  readonly open: boolean;
   readonly siteId: string;
   readonly onDraftSaved?: (draftMeta: DraftMeta, document?: BuilderCanvasDocument) => void;
   readonly onToast?: (message: string, tone: ToastTone) => void;
@@ -48,6 +49,7 @@ export function usePublishActions({
   document,
   draftMeta,
   locale,
+  open,
   siteId,
   onDraftSaved,
   onToast,
@@ -58,8 +60,52 @@ export function usePublishActions({
   setSuite,
 }: UsePublishActionsParams): {
   readonly handlePublish: () => Promise<void>;
+  readonly invalidatePublish: () => void;
 } {
-  const saveDraftForPublish = useCallback(async (): Promise<DraftSaveResult> => {
+  const ownerRef = useRef({
+    mounted: false,
+    open,
+    siteId,
+    locale,
+    activePageId,
+  });
+  const generationRef = useRef(0);
+  const nextOperationRef = useRef(0);
+  const pendingOperationRef = useRef<{ generation: number; operation: number } | null>(null);
+  const openSessionRef = useRef(false);
+  const ownerSessionToken = useMemo(
+    () => ({ activePageId, locale, open, siteId }),
+    [activePageId, locale, open, siteId],
+  );
+  const committedOwnerSessionTokenRef = useRef<typeof ownerSessionToken | null>(null);
+
+  const invalidatePublish = useCallback(() => {
+    generationRef.current += 1;
+    openSessionRef.current = false;
+  }, []);
+
+  useLayoutEffect(() => {
+    ownerRef.current = {
+      mounted: true,
+      open,
+      siteId,
+      locale,
+      activePageId,
+    };
+    committedOwnerSessionTokenRef.current = ownerSessionToken;
+    if (open) {
+      openSessionRef.current = true;
+    }
+    return () => {
+      ownerRef.current = {
+        ...ownerRef.current,
+        mounted: false,
+      };
+      invalidatePublish();
+    };
+  }, [activePageId, invalidatePublish, locale, open, ownerSessionToken, siteId]);
+
+  const saveDraftForPublish = useCallback(async (isCurrent: () => boolean): Promise<DraftSaveResult> => {
     if (!document || !activePageId) return { ok: false, message: copy.draftMissingPageMessage };
     const saveResponse = await fetch(
       `/api/builder/site/pages/${activePageId}/draft?${new URLSearchParams({ locale, siteId }).toString()}`,
@@ -70,11 +116,13 @@ export function usePublishActions({
         body: JSON.stringify({ siteId, expectedRevision: draftMeta?.revision, document }),
       },
     );
+    if (!isCurrent()) return { ok: false, message: copy.draftSaveError };
     if (!saveResponse.ok) {
       const errData = (await saveResponse.json().catch(() => ({}))) as {
         readonly error?: string;
         readonly errorCode?: string;
       };
+      if (!isCurrent()) return { ok: false, message: copy.draftSaveError };
       return {
         ok: false,
         message: (errData.errorCode ?? errData.error) === 'draft_conflict'
@@ -86,9 +134,11 @@ export function usePublishActions({
       readonly draft?: DraftMeta;
       readonly document?: BuilderCanvasDocument;
     };
+    if (!isCurrent()) return { ok: false, message: copy.draftSaveError };
     if (saveData.draft) {
       onDraftSaved?.(saveData.draft, saveData.document);
     }
+    if (!isCurrent()) return { ok: false, message: copy.draftSaveError };
     return {
       ok: true,
       expectedDraftRevision: saveData.draft?.revision ?? draftMeta?.revision,
@@ -97,12 +147,47 @@ export function usePublishActions({
 
   const handlePublish = useCallback(async () => {
     if (!canSubmitPublish || !document) return;
-    setPublishState('publishing');
-    setPublishError(null);
+    if (
+      !open
+      || !openSessionRef.current
+      || !ownerRef.current.mounted
+      || !ownerRef.current.open
+      || ownerRef.current.siteId !== siteId
+      || ownerRef.current.locale !== locale
+      || ownerRef.current.activePageId !== activePageId
+      || committedOwnerSessionTokenRef.current !== ownerSessionToken
+    ) {
+      return;
+    }
+
+    const generation = generationRef.current;
+    const pending = pendingOperationRef.current;
+    if (pending && pending.generation === generation) return;
+
+    const operation = ++nextOperationRef.current;
+    pendingOperationRef.current = { generation, operation };
+
+    const isCurrent = () => (
+      open
+      && ownerRef.current.mounted
+      && ownerRef.current.open
+      && ownerRef.current.siteId === siteId
+      && ownerRef.current.locale === locale
+      && ownerRef.current.activePageId === activePageId
+      && generationRef.current === generation
+      && pendingOperationRef.current?.operation === operation
+      && committedOwnerSessionTokenRef.current === ownerSessionToken
+    );
 
     try {
+      if (!isCurrent()) return;
+
+      setPublishState('publishing');
+      setPublishError(null);
+
       if (activePageId) {
-        const draftSave = await saveDraftForPublish();
+        const draftSave = await saveDraftForPublish(isCurrent);
+        if (!isCurrent()) return;
         if (!draftSave.ok) {
           setPublishState('error');
           setPublishError(draftSave.message);
@@ -124,8 +209,11 @@ export function usePublishActions({
           },
         );
 
+        if (!isCurrent()) return;
+
         if (!publishResponse.ok) {
           const errData = (await publishResponse.json().catch(() => ({}))) as PublishErrorBody;
+          if (!isCurrent()) return;
           let message = errData.errors?.join(', ') || errData.errorMessage || errData.error || copy.publishErrorDefault;
           if (
             errData.errorCode === 'translation_release_policy_blocked'
@@ -149,6 +237,7 @@ export function usePublishActions({
         }
 
         const result = (await publishResponse.json()) as { readonly ok: boolean; readonly slug?: string };
+        if (!isCurrent()) return;
         setPublishState('success');
         setPublishedSlug(buildSitePagePath(locale, result.slug ?? ''));
         onToast?.(copy.toastPublishSuccess, 'success');
@@ -161,6 +250,7 @@ export function usePublishActions({
         credentials: 'same-origin',
         body: JSON.stringify({ document }),
       });
+      if (!isCurrent()) return;
       if (!response.ok) {
         setPublishState('error');
         setPublishError(copy.publishSandboxSaveError);
@@ -169,9 +259,14 @@ export function usePublishActions({
       setPublishState('success');
       setPublishedSlug('/p/sandbox');
     } catch {
+      if (!isCurrent()) return;
       onToast?.(copy.toastPublishNetworkError, 'error');
       setPublishState('error');
       setPublishError(copy.publishNetworkError);
+    } finally {
+      if (pendingOperationRef.current?.operation === operation) {
+        pendingOperationRef.current = null;
+      }
     }
   }, [
     activePageId,
@@ -180,6 +275,8 @@ export function usePublishActions({
     document,
     locale,
     onToast,
+    open,
+    ownerSessionToken,
     saveDraftForPublish,
     setPublishedSlug,
     setPublishError,
@@ -189,5 +286,5 @@ export function usePublishActions({
     translationSiteReview,
   ]);
 
-  return { handlePublish };
+  return { handlePublish, invalidatePublish };
 }

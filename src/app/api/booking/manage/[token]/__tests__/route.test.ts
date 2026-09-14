@@ -5,8 +5,14 @@ import { isSlotAvailable } from '@/lib/builder/bookings/availability';
 import { verifyBookingManageToken } from '@/lib/builder/bookings/manage-token';
 import { getBooking, getService, getStaff, hasDurableBookingStorage, saveBooking } from '@/lib/builder/bookings/storage';
 import { sendBookingCancellation } from '@/lib/builder/bookings/notifications';
-import { evaluateBookingSelfServicePolicy, type BookingSelfServicePolicy } from '@/lib/builder/bookings/refund';
-import { acquireSlotLock, releaseSlotLock } from '@/lib/builder/bookings/slot-lock';
+import {
+  computeRefundForCancel,
+  evaluateBookingSelfServicePolicy,
+  type BookingSelfServicePolicy,
+} from '@/lib/builder/bookings/refund';
+import { acquireSlotLock, releaseSlotLock, renewSlotLock } from '@/lib/builder/bookings/slot-lock';
+import { restorePackageCreditForBooking } from '@/lib/builder/bookings/packages';
+import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 import type { Booking, BookingService, Staff } from '@/lib/builder/bookings/types';
 import { GET, PATCH } from '../route';
 
@@ -36,19 +42,25 @@ vi.mock('@/lib/builder/bookings/storage', () => ({
   })),
 }));
 
-vi.mock('@/lib/builder/bookings/refund', () => ({
-  applyRefundOutcome: vi.fn((booking) => ({
-    ...booking,
-    status: 'cancelled',
-    cancelledAt: '2026-06-03T00:00:00.000Z',
-  })),
-  computeRefundForCancel: vi.fn(async () => ({
-    decision: 'none',
-    hoursUntilStart: 12,
-    refundResult: null,
-  })),
-  evaluateBookingSelfServicePolicy: vi.fn(),
-}));
+vi.mock('@/lib/builder/bookings/refund', async () => {
+  const actual = await vi.importActual<typeof import('@/lib/builder/bookings/refund')>(
+    '@/lib/builder/bookings/refund',
+  );
+  return {
+    ...actual,
+    applyRefundOutcome: vi.fn((booking) => ({
+      ...booking,
+      status: 'cancelled',
+      cancelledAt: '2026-06-03T00:00:00.000Z',
+    })),
+    computeRefundForCancel: vi.fn(async () => ({
+      decision: 'none',
+      hoursUntilStart: 12,
+      refundResult: null,
+    })),
+    evaluateBookingSelfServicePolicy: vi.fn(),
+  };
+});
 
 vi.mock('@/lib/builder/bookings/notifications', () => ({
   sendBookingCancellation: vi.fn(async () => ({ ok: true, provider: 'resend', id: 'email-1' })),
@@ -156,6 +168,7 @@ const isSlotAvailableMock = vi.mocked(isSlotAvailable);
 const evaluateBookingSelfServicePolicyMock = vi.mocked(evaluateBookingSelfServicePolicy);
 const acquireSlotLockMock = vi.mocked(acquireSlotLock);
 const releaseSlotLockMock = vi.mocked(releaseSlotLock);
+const renewSlotLockMock = vi.mocked(renewSlotLock);
 const sendBookingCancellationMock = vi.mocked(sendBookingCancellation);
 
 describe('/api/booking/manage/[token]', () => {
@@ -348,5 +361,88 @@ describe('/api/booking/manage/[token]', () => {
       errorCode: 'staff_unavailable',
     });
     expect(releaseSlotLockMock).toHaveBeenCalled();
+  });
+
+  it('does not persist cancellation when refund returns ok:false', async () => {
+    vi.mocked(computeRefundForCancel).mockResolvedValueOnce({
+      decision: 'full',
+      hoursUntilStart: 48,
+      refundResult: { ok: false, error: 'Stripe 402' },
+      refundAmountCents: 50000,
+    });
+
+    const response = await PATCH(request('PATCH', '', { action: 'cancel' }), context);
+    const payload = await response.json();
+    const body = JSON.stringify(payload);
+
+    expect(response.status).toBe(502);
+    expect(payload.errorCode).toBe('refund_failed');
+    expect(payload.error).toBe('환불 상태나 예약 취소를 확인할 수 없습니다. 도움이 필요하시면 문의해 주세요.');
+    expect(payload).not.toHaveProperty('refundResult');
+    expect(body).not.toContain('Stripe 402');
+    expect(saveBooking).not.toHaveBeenCalled();
+    expect(restorePackageCreditForBooking).not.toHaveBeenCalled();
+    expect(emitEvent).not.toHaveBeenCalled();
+    expect(sendBookingCancellationMock).not.toHaveBeenCalled();
+    expect(releaseSlotLockMock).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not persist cancellation when refund computation throws', async () => {
+    const warn = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    vi.mocked(computeRefundForCancel).mockRejectedValueOnce(new Error('stripe network'));
+
+    const response = await PATCH(request('PATCH', '', { action: 'cancel' }), context);
+    const payload = await response.json();
+    const body = JSON.stringify(payload);
+
+    expect(response.status).toBe(502);
+    expect(payload.errorCode).toBe('refund_failed');
+    expect(payload.error).toBe('환불 상태나 예약 취소를 확인할 수 없습니다. 도움이 필요하시면 문의해 주세요.');
+    expect(payload).not.toHaveProperty('refundResult');
+    expect(body).not.toContain('stripe network');
+    expect(saveBooking).not.toHaveBeenCalled();
+    expect(restorePackageCreditForBooking).not.toHaveBeenCalled();
+    expect(emitEvent).not.toHaveBeenCalled();
+    expect(sendBookingCancellationMock).not.toHaveBeenCalled();
+    expect(releaseSlotLockMock).toHaveBeenCalledTimes(1);
+    warn.mockRestore();
+  });
+
+  it('returns 503 when refund succeeded but slot lock renew fails before persist', async () => {
+    vi.mocked(computeRefundForCancel).mockResolvedValueOnce({
+      decision: 'full',
+      hoursUntilStart: 48,
+      refundResult: { ok: true, refundId: 're_1' },
+      refundAmountCents: 50000,
+    });
+    renewSlotLockMock.mockResolvedValueOnce(null);
+
+    const response = await PATCH(request('PATCH', '', { action: 'cancel' }), context);
+    const payload = await response.json();
+
+    expect(response.status).toBe(503);
+    expect(payload.errorCode).toBe('booking_storage_unavailable');
+    expect(restorePackageCreditForBooking).toHaveBeenCalledTimes(1);
+    expect(saveBooking).not.toHaveBeenCalled();
+    expect(sendBookingCancellationMock).not.toHaveBeenCalled();
+    expect(emitEvent).not.toHaveBeenCalled();
+    expect(releaseSlotLockMock).toHaveBeenCalledTimes(1);
+  });
+
+  it('rejects when refund succeeded but persist throws', async () => {
+    vi.mocked(computeRefundForCancel).mockResolvedValueOnce({
+      decision: 'full',
+      hoursUntilStart: 48,
+      refundResult: { ok: true, refundId: 're_1' },
+      refundAmountCents: 50000,
+    });
+    vi.mocked(saveBooking).mockRejectedValueOnce(new Error('blob down'));
+
+    await expect(PATCH(request('PATCH', '', { action: 'cancel' }), context)).rejects.toThrow('blob down');
+    expect(restorePackageCreditForBooking).toHaveBeenCalledTimes(1);
+    expect(saveBooking).toHaveBeenCalledTimes(1);
+    expect(sendBookingCancellationMock).not.toHaveBeenCalled();
+    expect(emitEvent).not.toHaveBeenCalled();
+    expect(releaseSlotLockMock).toHaveBeenCalledTimes(1);
   });
 });

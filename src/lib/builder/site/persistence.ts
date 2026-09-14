@@ -1241,6 +1241,8 @@ export async function deletePage(siteId: string, pageId: string, locale: Locale)
   site.navigation = removeNavigationItemsForPage(site.navigation, pageId);
   site.updatedAt = new Date().toISOString();
   await writeSiteDocument(site, { deletePageIds: [pageId] });
+  await deletePageCanvasRecord(mutationSiteId, pageId, 'draft');
+  await deletePageCanvasRecord(mutationSiteId, pageId, 'published');
 }
 
 function pageLocaleProjectionKey(page: BuilderPageMeta, locale: Locale): string {

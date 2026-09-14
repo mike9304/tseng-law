@@ -15,6 +15,11 @@ import {
 } from './PageSwitcher.helpers';
 import { getPageSwitcherCopy, type PageSwitcherCopy } from './page-switcher-copy';
 import {
+  createCreatePageRefreshCanApply,
+  runCreatePageFollowUp,
+  runSilentGuardedRequestApply,
+} from './create-page-follow-up';
+import {
   addButtonStyle,
   clipboardPillStyle,
   columnsQuickActionsStyle,
@@ -698,6 +703,7 @@ export default function PageSwitcher({
   missingPageHref,
   onSelectPage,
   onPagesChange,
+  onPagesRefreshRequest,
   onMissingPageHandled,
   onToast,
 }: {
@@ -709,8 +715,9 @@ export default function PageSwitcher({
   templateGalleryInitialSearch?: string;
   templateGalleryRequestId?: number;
   missingPageHref?: string | null;
-  onSelectPage: (pageId: string, nextSlug?: string) => void;
+  onSelectPage: (pageId: string, nextSlug?: string) => boolean | void | Promise<boolean | void>;
   onPagesChange?: (pages: PageMeta[]) => void;
+  onPagesRefreshRequest?: (origin: { siteId: string; locale: Locale }) => unknown;
   onMissingPageHandled?: () => void;
   onToast?: (message: string, tone: 'success' | 'error') => void;
 }) {
@@ -778,6 +785,18 @@ export default function PageSwitcher({
     () => (missingPageSlug ? copy.missingPageTitleForSlug(missingPageSlug) : null),
     [copy, missingPageSlug],
   );
+
+  const ownerRef = useRef<{ siteId: string; locale: Locale; mounted: boolean }>({
+    siteId,
+    locale,
+    mounted: false,
+  });
+  useLayoutEffect(() => {
+    ownerRef.current = { siteId, locale, mounted: true };
+    return () => {
+      ownerRef.current = { siteId, locale, mounted: false };
+    };
+  }, [siteId, locale]);
 
   const fetchPages = useCallback(async (): Promise<PageMeta[]> => {
     try {
@@ -958,9 +977,11 @@ export default function PageSwitcher({
 
   const handleCreatePage = async () => {
     if (creating) return;
+    const origin = { siteId, locale };
     const slug = slugInput.trim().replace(/^\/+|\/+$/g, '') || `page-${Date.now().toString(36)}`;
     setCreating(true);
     setErrorMessage(null);
+    let creatingReleased = false;
     try {
       const response = await fetch(`/api/builder/site/pages?${siteScopedQuery(locale, siteId)}`, {
         method: 'POST',
@@ -983,12 +1004,40 @@ export default function PageSwitcher({
           setShowSlugPrompt(true);
           return;
         }
-        await fetchPages();
-        setShowSlugPrompt(false);
-        clearPendingTemplate();
-        setSlugInput('');
-        setAddToNavigation(true);
-        onSelectPage(nextPageId, data.page?.slug);
+        const handle = runCreatePageFollowUp(data, nextPageId, {
+          origin,
+          fetchPages,
+          resetChild: () => {
+            setShowSlugPrompt(false);
+            clearPendingTemplate();
+            setSlugInput('');
+            setAddToNavigation(true);
+          },
+          setCreating: (nextCreating) => {
+            if (!nextCreating) creatingReleased = true;
+            setCreating(nextCreating);
+          },
+          selectPage: onSelectPage,
+          refreshParentPages: onPagesRefreshRequest
+            ? () => onPagesRefreshRequest(origin)
+            : undefined,
+          convergeOwnPages: () =>
+            runSilentGuardedRequestApply<{ pages: PageMeta[] }>(
+              createCreatePageRefreshCanApply(origin, () => ownerRef.current),
+              () =>
+                fetch(`/api/builder/site/pages?${siteScopedQuery(locale, siteId)}`, {
+                  credentials: 'same-origin',
+                }),
+              (data) => setPages(data.pages),
+              (data) => onPagesChange?.(data.pages),
+            ),
+        });
+        if (handle.creatingHandled) creatingReleased = true;
+        if (handle.creatingHandled) {
+          void handle.background.catch(() => {});
+        } else {
+          await handle.background;
+        }
       } else {
         setErrorMessage(await readPageResponseError(response, copy.createPageError));
         setShowSlugPrompt(true);
@@ -997,7 +1046,7 @@ export default function PageSwitcher({
       setErrorMessage(copy.createPageError);
       setShowSlugPrompt(true);
     } finally {
-      setCreating(false);
+      if (!creatingReleased) setCreating(false);
     }
   };
 

@@ -354,7 +354,14 @@ export async function loginMember(email: string, password: string): Promise<Memb
   await writeJson(sessionBlobPath(session.sessionId), sessionFilePath(session.sessionId), session);
 
   member.lastLoginAt = new Date().toISOString();
-  await saveMember(member);
+  try {
+    await saveMember(member);
+  } catch (error) {
+    console.error(
+      '[members-engine] lastLoginAt persist failed:',
+      error instanceof Error ? error.message : String(error),
+    );
+  }
 
   return session;
 }

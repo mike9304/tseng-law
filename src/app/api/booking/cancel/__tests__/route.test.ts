@@ -2,8 +2,10 @@ import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { getBooking, hasDurableBookingStorage, saveBooking } from '@/lib/builder/bookings/storage';
 import { sendBookingCancellation } from '@/lib/builder/bookings/notifications';
-import { acquireSlotLock } from '@/lib/builder/bookings/slot-lock';
+import { acquireSlotLock, releaseSlotLock, renewSlotLock } from '@/lib/builder/bookings/slot-lock';
 import { computeRefundForCancel } from '@/lib/builder/bookings/refund';
+import { restorePackageCreditForBooking } from '@/lib/builder/bookings/packages';
+import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
 import type { Booking } from '@/lib/builder/bookings/types';
 import { POST } from '../route';
 
@@ -33,16 +35,22 @@ vi.mock('@/lib/builder/bookings/storage', () => ({
   saveBooking: vi.fn(async () => undefined),
 }));
 
-vi.mock('@/lib/builder/bookings/refund', () => ({
-  evaluateBookingSelfServicePolicy: vi.fn(async () => ({ canCancel: true })),
-  computeRefundForCancel: vi.fn(async () => ({
-    decision: 'none',
-    refundResult: null,
-    refundAmountCents: 0,
-    hoursUntilStart: 12,
-  })),
-  applyRefundOutcome: vi.fn((value) => ({ ...value, status: 'cancelled', cancelledAt: '2026-05-02T00:00:00.000Z' })),
-}));
+vi.mock('@/lib/builder/bookings/refund', async () => {
+  const actual = await vi.importActual<typeof import('@/lib/builder/bookings/refund')>(
+    '@/lib/builder/bookings/refund',
+  );
+  return {
+    ...actual,
+    evaluateBookingSelfServicePolicy: vi.fn(async () => ({ canCancel: true })),
+    computeRefundForCancel: vi.fn(async () => ({
+      decision: 'none',
+      refundResult: null,
+      refundAmountCents: 0,
+      hoursUntilStart: 12,
+    })),
+    applyRefundOutcome: vi.fn((value) => ({ ...value, status: 'cancelled', cancelledAt: '2026-05-02T00:00:00.000Z' })),
+  };
+});
 
 vi.mock('@/lib/builder/bookings/notifications', () => ({
   sendBookingCancellation: vi.fn(async () => ({ ok: true, provider: 'resend', id: 'email-1' })),
@@ -82,6 +90,13 @@ describe('/api/booking/cancel', () => {
     vi.mocked(hasDurableBookingStorage).mockReturnValue(true);
     vi.mocked(acquireSlotLock).mockResolvedValue({ ownerToken: 'test-lease', keys: [], expiresAt: 9_999_999 });
     vi.mocked(getBooking).mockResolvedValue(booking);
+    vi.mocked(saveBooking).mockResolvedValue(undefined);
+    vi.mocked(computeRefundForCancel).mockResolvedValue({
+      decision: 'none',
+      refundResult: null,
+      refundAmountCents: 0,
+      hoursUntilStart: 12,
+    });
   });
 
   it('keeps the persisted cancellation successful when the email provider reports failure', async () => {
@@ -151,5 +166,91 @@ describe('/api/booking/cancel', () => {
     expect([first.status, second.status].sort()).toEqual([200, 409]);
     expect(computeRefundForCancel).toHaveBeenCalledTimes(1);
     expect(saveBooking).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not persist cancellation when refund returns ok:false', async () => {
+    vi.mocked(computeRefundForCancel).mockResolvedValueOnce({
+      decision: 'full',
+      refundResult: { ok: false, error: 'Stripe 402' },
+      refundAmountCents: 50000,
+      hoursUntilStart: 48,
+    });
+
+    const response = await POST(request());
+    const payload = await response.json();
+    const body = JSON.stringify(payload);
+
+    expect(response.status).toBe(502);
+    expect(payload.errorCode).toBe('booking_refund_failed');
+    expect(payload.error).toBe('We could not confirm the refund status or booking cancellation. Please contact us for help.');
+    expect(payload).not.toHaveProperty('refundResult');
+    expect(body).not.toContain('Stripe 402');
+    expect(saveBooking).not.toHaveBeenCalled();
+    expect(restorePackageCreditForBooking).not.toHaveBeenCalled();
+    expect(emitEvent).not.toHaveBeenCalled();
+    expect(sendBookingCancellation).not.toHaveBeenCalled();
+    expect(releaseSlotLock).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not persist cancellation when refund computation throws', async () => {
+    const warn = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    vi.mocked(computeRefundForCancel).mockRejectedValueOnce(new Error('stripe network'));
+
+    const response = await POST(request());
+    const payload = await response.json();
+    const body = JSON.stringify(payload);
+
+    expect(response.status).toBe(502);
+    expect(payload.errorCode).toBe('booking_refund_failed');
+    expect(payload.error).toBe('We could not confirm the refund status or booking cancellation. Please contact us for help.');
+    expect(payload).not.toHaveProperty('refundResult');
+    expect(body).not.toContain('stripe network');
+    expect(saveBooking).not.toHaveBeenCalled();
+    expect(restorePackageCreditForBooking).not.toHaveBeenCalled();
+    expect(emitEvent).not.toHaveBeenCalled();
+    expect(sendBookingCancellation).not.toHaveBeenCalled();
+    expect(releaseSlotLock).toHaveBeenCalledTimes(1);
+    warn.mockRestore();
+  });
+
+  it('returns 503 when refund succeeded but slot lock renew fails before persist', async () => {
+    vi.mocked(computeRefundForCancel).mockResolvedValueOnce({
+      decision: 'full',
+      refundResult: { ok: true, refundId: 're_1' },
+      refundAmountCents: 50000,
+      hoursUntilStart: 48,
+    });
+    vi.mocked(renewSlotLock).mockResolvedValueOnce(null);
+
+    const response = await POST(request());
+    const payload = await response.json();
+
+    expect(response.status).toBe(503);
+    expect(payload.errorCode).toBe('booking_storage_unavailable');
+    expect(restorePackageCreditForBooking).toHaveBeenCalledTimes(1);
+    expect(saveBooking).not.toHaveBeenCalled();
+    expect(sendBookingCancellation).not.toHaveBeenCalled();
+    expect(emitEvent).not.toHaveBeenCalled();
+    expect(releaseSlotLock).toHaveBeenCalledTimes(1);
+  });
+
+  it('rejects when refund succeeded but persist throws', async () => {
+    const warn = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    vi.mocked(computeRefundForCancel).mockResolvedValueOnce({
+      decision: 'full',
+      refundResult: { ok: true, refundId: 're_1' },
+      refundAmountCents: 50000,
+      hoursUntilStart: 48,
+    });
+    vi.mocked(saveBooking).mockRejectedValueOnce(new Error('blob down'));
+
+    await expect(POST(request())).rejects.toThrow('blob down');
+    expect(computeRefundForCancel).toHaveBeenCalledTimes(1);
+    expect(restorePackageCreditForBooking).toHaveBeenCalledTimes(1);
+    expect(saveBooking).toHaveBeenCalledTimes(1);
+    expect(sendBookingCancellation).not.toHaveBeenCalled();
+    expect(emitEvent).not.toHaveBeenCalled();
+    expect(releaseSlotLock).toHaveBeenCalledTimes(1);
+    warn.mockRestore();
   });
 });

@@ -8,24 +8,17 @@ import {
   type PublicSearchApiErrorCode,
 } from '@/lib/builder/search/search-api-copy';
 import { runSearchQuery } from '@/lib/builder/search/query-engine';
-import {
-  appendQueryLog,
-  loadSearchIndex,
-  saveSearchIndex,
-} from '@/lib/builder/search/index-storage';
-import { buildSearchIndex } from '@/lib/builder/search/index-builder';
-import { collectAllSearchDocs } from '@/lib/builder/search/source-collector';
+import { appendQueryLog } from '@/lib/builder/search/index-storage';
+import { loadFreshSearchIndex } from '@/lib/builder/search/index-runtime';
+import { retainPublicPageHits } from '@/lib/builder/search/public-eligibility';
 import { augmentStaticDocs } from '@/lib/builder/search/augment-static-docs';
 import { getPublicIntentSearchDocs } from '@/lib/builder/search/public-intent-docs';
-import { SEARCH_DOC_KINDS, type SearchDocKind, type SearchIndex } from '@/lib/builder/search/types';
+import { SEARCH_DOC_KINDS, type SearchDocKind } from '@/lib/builder/search/types';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-const SEARCH_INDEX_FRESHNESS_MS = 5 * 60 * 1000;
 const MAX_SEARCH_QUERY_LENGTH = 200;
-
-let searchIndexRefreshPromise: Promise<SearchIndex> | null = null;
 
 function normalizeSearchQuery(value: string): string {
   return Array.from(value.trim()).slice(0, MAX_SEARCH_QUERY_LENGTH).join('');
@@ -59,32 +52,6 @@ function userAgentDigest(request: NextRequest): string {
   return crypto.createHash('sha256').update(ua).digest('hex').slice(0, 16);
 }
 
-function isFreshSearchIndex(builtAt: unknown): boolean {
-  if (typeof builtAt !== 'string') return false;
-  const builtAtMs = Date.parse(builtAt);
-  const ageMs = Date.now() - builtAtMs;
-  return Number.isFinite(builtAtMs) && ageMs >= 0 && ageMs <= SEARCH_INDEX_FRESHNESS_MS;
-}
-
-async function rebuildSearchIndex(): Promise<SearchIndex> {
-  const index = buildSearchIndex(await collectAllSearchDocs('default'));
-  try {
-    await saveSearchIndex(index);
-  } catch (error) {
-    console.error('[public/search] index save failed:', error);
-  }
-  return index;
-}
-
-function refreshSearchIndex(): Promise<SearchIndex> {
-  if (!searchIndexRefreshPromise) {
-    searchIndexRefreshPromise = rebuildSearchIndex().finally(() => {
-      searchIndexRefreshPromise = null;
-    });
-  }
-  return searchIndexRefreshPromise;
-}
-
 export async function GET(request: NextRequest) {
   const query = normalizeSearchQuery(request.nextUrl.searchParams.get('q') ?? '');
   const localeParam = request.nextUrl.searchParams.get('locale') ?? 'ko';
@@ -105,15 +72,12 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ ok: true, query, hits: [], total: 0 });
   }
 
-  let storedIndex: Awaited<ReturnType<typeof loadSearchIndex>>;
-  let index: NonNullable<typeof storedIndex>;
+  let storedIndex: Awaited<ReturnType<typeof loadFreshSearchIndex>>['storedIndex'];
+  let index: Awaited<ReturnType<typeof loadFreshSearchIndex>>['index'];
   try {
-    storedIndex = await loadSearchIndex();
-    if (storedIndex && isFreshSearchIndex(storedIndex.builtAt)) {
-      index = storedIndex;
-    } else {
-      index = await refreshSearchIndex();
-    }
+    const loaded = await loadFreshSearchIndex();
+    storedIndex = loaded.storedIndex;
+    index = loaded.index;
   } catch (error) {
     console.error('[public/search] index load failed:', error);
     return errorResponse(locale, 'search_index_failed', 500);
@@ -127,13 +91,16 @@ export async function GET(request: NextRequest) {
   let hits: ReturnType<typeof runSearchQuery>;
   try {
     const indexForQuery = augmentStaticDocs(index, locale, getPublicIntentSearchDocs(locale));
-    hits = runSearchQuery({
-      index: indexForQuery,
-      query,
+    hits = await retainPublicPageHits(
+      runSearchQuery({
+        index: indexForQuery,
+        query,
+        locale,
+        limit,
+        kinds: kinds.length > 0 ? kinds : undefined,
+      }),
       locale,
-      limit,
-      kinds: kinds.length > 0 ? kinds : undefined,
-    });
+    );
   } catch (error) {
     console.error('[public/search] query failed:', error);
     return errorResponse(locale, 'search_query_failed', 500);

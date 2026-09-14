@@ -1,5 +1,6 @@
 import {
   chmodSync,
+  lstatSync,
   mkdirSync,
   mkdtempSync,
   readFileSync,
@@ -265,33 +266,43 @@ function applyRuntime(fixture: Fixture): void {
 describe.sequential('qa runtime attestation v3', () => {
   it('normalizes macOS-style ancestor aliases but rejects a symlink TMPDIR leaf', () => {
     restoreProcess();
-    const fixture = makeFixture();
-    const physicalTmp = realpathSync(fixture.tmpDir);
-    const logicalTmp = process.platform === 'darwin' && physicalTmp.startsWith('/private/')
-      ? physicalTmp.slice('/private'.length)
-      : physicalTmp;
+    const root = realpathSync(mkdtempSync(path.join(os.tmpdir(), 'qa-runtime-attestation-alias-')));
+    fixtureRoots.add(root);
+
+    const repositoryRoot = path.join(root, 'repository');
+    mkdirSync(path.join(repositoryRoot, 'runtime-data'), { recursive: true });
+    mkdirSync(path.join(repositoryRoot, 'data', 'audit'), { recursive: true });
+
+    const physicalTmp = path.join(root, 'private', 'var', 'tmp');
+    mkdirSync(physicalTmp, { recursive: true });
+    symlinkSync('private/var', path.join(root, 'var'));
+    const logicalTmp = path.join(root, 'var', 'tmp');
+    expect(lstatSync(path.join(root, 'var')).isSymbolicLink()).toBe(true);
+    expect(lstatSync(logicalTmp).isSymbolicLink()).toBe(false);
+    expect(lstatSync(logicalTmp).isDirectory()).toBe(true);
+    expect(logicalTmp).not.toBe(physicalTmp);
+    expect(realpathSync(logicalTmp)).toBe(physicalTmp);
+
     process.env.TMPDIR = logicalTmp;
     const fromLogicalTmp = resolveQaIsolationManifestPath({
-      repositoryRoot: fixture.repositoryRoot,
+      repositoryRoot,
       baseUrl: 'http://127.0.0.1:4173',
     });
     const fromPhysicalOverride = resolveQaIsolationManifestPath({
-      repositoryRoot: fixture.repositoryRoot,
+      repositoryRoot,
       baseUrl: 'http://127.0.0.1:4173',
       tmpDir: physicalTmp,
     });
     expect(fromLogicalTmp).toBe(fromPhysicalOverride);
     expect(fromLogicalTmp.startsWith(path.join(physicalTmp, 'tseng-law-qa'))).toBe(true);
 
-    const symlinkContainer = realpathSync(mkdtempSync(path.join(os.tmpdir(), 'qa-tmp-leaf-')));
-    fixtureRoots.add(symlinkContainer);
-    const target = path.join(symlinkContainer, 'target');
-    const symlink = path.join(symlinkContainer, 'tmp-link');
+    const target = path.join(root, 'symlink-target');
+    const symlink = path.join(root, 'tmp-link');
     mkdirSync(target);
     symlinkSync(target, symlink);
     process.env.TMPDIR = symlink;
     expect(() => resolveQaIsolationManifestPath({
-      repositoryRoot: fixture.repositoryRoot,
+      repositoryRoot,
       baseUrl: 'http://127.0.0.1:4173',
     })).toThrow(/TMPDIR must be a real directory, not a symlink/u);
   });

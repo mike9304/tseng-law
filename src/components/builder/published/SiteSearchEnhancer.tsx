@@ -40,6 +40,16 @@ export default function SiteSearchEnhancer() {
       let timer: ReturnType<typeof setTimeout> | null = null;
       let abortController: AbortController | null = null;
       let activeIndex = -1;
+      let generation = 0;
+      let alive = true;
+
+      function invalidateQuery(): void {
+        generation += 1;
+        if (timer) clearTimeout(timer);
+        timer = null;
+        abortController?.abort();
+        abortController = null;
+      }
 
       function getHits(): HTMLAnchorElement[] {
         return Array.from(resultsBox.querySelectorAll<HTMLAnchorElement>('.builder-site-search-hit'));
@@ -94,11 +104,12 @@ export default function SiteSearchEnhancer() {
         resultsBox.appendChild(status);
       }
 
-      async function runQuery(value: string): Promise<void> {
-        if (!inline) return;
-        if (abortController) abortController.abort();
+      async function runQuery(value: string, queryGeneration: number): Promise<void> {
+        if (!inline || !alive || queryGeneration !== generation) return;
         const controller = new AbortController();
         abortController = controller;
+        const isCurrent = () => alive && generation === queryGeneration
+          && abortController === controller && !controller.signal.aborted;
         if (!value.trim()) {
           resultsBox.innerHTML = '';
           hideResults();
@@ -110,7 +121,9 @@ export default function SiteSearchEnhancer() {
           setBusy(true);
           showStatus(locale.startsWith('zh') ? '搜尋中...' : locale.startsWith('en') ? 'Searching...' : '검색 중...');
           const res = await fetch(`/api/search?${params.toString()}`, { signal: controller.signal });
+          if (!isCurrent()) return;
           const payload = (await res.json().catch(() => ({}))) as { hits?: SearchHit[]; error?: string };
+          if (!isCurrent()) return;
           if (!res.ok) {
             showStatus(payload.error || (locale.startsWith('zh') ? '搜尋暫時無法使用' : locale.startsWith('en') ? 'Search is temporarily unavailable' : '검색을 일시적으로 사용할 수 없습니다.'));
             return;
@@ -146,22 +159,32 @@ export default function SiteSearchEnhancer() {
           });
         } catch (err) {
           // AbortError is normal; ignore.
-          if ((err as { name?: string } | null)?.name !== 'AbortError') {
+          if (isCurrent() && (err as { name?: string } | null)?.name !== 'AbortError') {
             showStatus(locale.startsWith('zh') ? '搜尋暫時無法使用' : locale.startsWith('en') ? 'Search is temporarily unavailable' : '검색을 일시적으로 사용할 수 없습니다.');
           }
         } finally {
-          if (!controller.signal.aborted) setBusy(false);
+          if (isCurrent()) setBusy(false);
         }
       }
 
       const handler = (): void => {
-        if (timer) clearTimeout(timer);
-        timer = setTimeout(() => runQuery(input.value), 200);
+        if (!inline || !alive) return;
+        invalidateQuery();
+        resultsBox.innerHTML = '';
+        hideResults();
+        const value = input.value;
+        if (!value.trim()) return;
+        const queryGeneration = generation;
+        timer = setTimeout(() => {
+          timer = null;
+          void runQuery(value, queryGeneration);
+        }, 200);
       };
       const keydownHandler = (event: KeyboardEvent): void => {
         if (!inline) return;
         const hits = getHits();
         if (event.key === 'Escape') {
+          invalidateQuery();
           if (!resultsBox.hidden) {
             event.preventDefault();
             hideResults();
@@ -204,8 +227,8 @@ export default function SiteSearchEnhancer() {
         input.removeEventListener('input', handler);
         input.removeEventListener('keydown', keydownHandler);
         resultsBox.removeEventListener('keydown', keydownHandler);
-        if (timer) clearTimeout(timer);
-        if (abortController) abortController.abort();
+        alive = false;
+        invalidateQuery();
       });
     }
     return () => {

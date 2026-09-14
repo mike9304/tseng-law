@@ -84,15 +84,6 @@ export default function PublishModal({
     void loadPublishDiff();
   }, [open, runChecks, loadPublishDiff, resetPublishChecks, resetPublishDiff]);
 
-  useScheduledPublishLoader({
-    activePageId,
-    locale,
-    siteId,
-    open,
-    setScheduledAtInput,
-    setScheduledJob,
-  });
-
   const grouped = groupPublishCheckResults(suite);
   const preflightItems = useMemo(() => buildPreflightItems(suite, locale as Locale), [suite, locale]);
   const { canSubmitPublish, hasWarningsOnly } = buildPublishSubmitState({
@@ -107,16 +98,9 @@ export default function PublishModal({
     translationSiteWarningsAcknowledged,
   );
 
-  const handleFix = useCallback(
-    (nodeId: string) => {
-      setSelectedNodeId(nodeId);
-      onClose();
-    },
-    [setSelectedNodeId, onClose],
-  );
-
   const {
     handlePublish,
+    invalidatePublish,
   } = usePublishActions({
     activePageId,
     canSubmitPublish,
@@ -124,6 +108,7 @@ export default function PublishModal({
     document,
     draftMeta,
     locale,
+    open,
     siteId,
     onDraftSaved,
     onToast,
@@ -133,9 +118,12 @@ export default function PublishModal({
     setPublishState,
     setSuite,
   });
+
   const {
     handleSchedulePublish,
     handleCancelScheduledPublish,
+    invalidateScheduledActions,
+    captureScheduledRead,
   } = useScheduledPublishActions({
     activePageId,
     canSubmitPublish,
@@ -143,6 +131,7 @@ export default function PublishModal({
     document,
     draftMeta,
     locale,
+    open,
     siteId,
     onDraftSaved,
     onToast,
@@ -157,12 +146,35 @@ export default function PublishModal({
     setSchedulePending,
   });
 
+  const handleClose = useCallback(() => {
+    invalidatePublish();
+    invalidateScheduledActions();
+    onClose();
+  }, [invalidatePublish, invalidateScheduledActions, onClose]);
+
+  const handleFix = useCallback(
+    (nodeId: string) => {
+      setSelectedNodeId(nodeId);
+      handleClose();
+    },
+    [handleClose, setSelectedNodeId],
+  );
+  useScheduledPublishLoader({
+    activePageId,
+    locale,
+    siteId,
+    open,
+    captureScheduledRead,
+    setScheduledAtInput,
+    setScheduledJob,
+  });
+
   if (!open) return null;
 
   return (
     <ModalShell
       open={open}
-      onClose={onClose}
+      onClose={handleClose}
       title={copy.title}
       subtitle={activePageId ? copy.subtitle(draftMeta?.revision ?? 0) : undefined}
       size="lg"
@@ -254,7 +266,7 @@ export default function PublishModal({
         copy={copy}
         hasWarningsOnly={hasWarningsOnly}
         handlePublish={() => void handlePublish()}
-        onClose={onClose}
+        onClose={handleClose}
         overrideWarnings={overrideWarnings}
         publishState={publishState}
         setOverrideWarnings={setOverrideWarnings}

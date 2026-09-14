@@ -65,7 +65,7 @@ describe('collectBuilderSitemapEntriesForLocale — main site resolver', () => {
     expect(readSiteDocumentMock.mock.calls[0][0]).toBe(DEFAULT_BUILDER_SITE_ID);
   });
 
-  it('emits entries only for public pages and skips noIndex/password/unpublished/cross-locale', async () => {
+  it('emits entries only for public pages and skips noIndex/password/memberAccess/unpublished/cross-locale', async () => {
     const doc = createDefaultSiteDocument('ko', DEFAULT_BUILDER_SITE_ID);
     const home = doc.pages[0];
     home.isHomePage = true;
@@ -98,6 +98,13 @@ describe('collectBuilderSitemapEntriesForLocale — main site resolver', () => {
       password: 'hunter2',
     });
 
+    const memberOnlyPage = makePage({
+      pageId: 'p-member-only',
+      slug: 'members-only',
+      locale: 'ko',
+      memberAccess: { requireLogin: true },
+    });
+
     const unpublishedPage = makePage({
       pageId: 'p-draft',
       slug: 'draft',
@@ -117,6 +124,7 @@ describe('collectBuilderSitemapEntriesForLocale — main site resolver', () => {
       noIndexPage,
       seoNoIndexPage,
       passwordPage,
+      memberOnlyPage,
       unpublishedPage,
       otherLocalePage,
     ];
@@ -132,6 +140,7 @@ describe('collectBuilderSitemapEntriesForLocale — main site resolver', () => {
     expect(urls).toEqual(
       [`${SITE_URL}/ko`, `${SITE_URL}/ko/about`].sort(),
     );
+    expect(urls).not.toContain(`${SITE_URL}/ko/members-only`);
 
     const homeEntry = entries.find((e) => e.url === `${SITE_URL}/ko`);
     expect(homeEntry).toBeDefined();

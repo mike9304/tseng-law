@@ -54,6 +54,17 @@ function errorResponse(
   );
 }
 
+function storedSiteDocumentErrorResponse(
+  locale: ReturnType<typeof normalizeLocale>,
+  fallback: 'draft_load_failed' | 'draft_save_failed',
+  error: unknown,
+): NextResponse {
+  if (error instanceof SyntaxError) {
+    return errorResponse(locale, 'invalid_json', 400);
+  }
+  return errorResponse(locale, fallback, 500);
+}
+
 function draftWriteErrorCode(message: string): BuilderSiteApiErrorCode {
   return message === 'expected_revision_required'
     ? 'draft_expected_revision_required'
@@ -137,7 +148,10 @@ async function localeMismatchResponse(
   const site = await readSiteDocument(siteId, locale);
   const page = site.pages.find((candidate) => candidate.pageId === pageId);
   onPageRead?.(page?.isHomePage === true || page?.slug === '');
-  if (!page || canProjectPageToLocale(page, site.pages, locale)) return null;
+  if (!page) {
+    return errorResponse(locale, 'page_not_found', 404);
+  }
+  if (canProjectPageToLocale(page, site.pages, locale)) return null;
   return NextResponse.json(
     {
       ok: false,
@@ -160,8 +174,8 @@ export async function GET(request: NextRequest, props: { params: Promise<{ pageI
   let isHomePage = false;
   try {
     mismatch = await localeMismatchResponse(params.pageId, locale, siteId, (value) => { isHomePage = value; });
-  } catch {
-    return errorResponse(locale, 'draft_load_failed', 500);
+  } catch (error) {
+    return storedSiteDocumentErrorResponse(locale, 'draft_load_failed', error);
   }
   if (mismatch) return mismatch;
 
@@ -210,8 +224,8 @@ export async function PUT(request: NextRequest, props: { params: Promise<{ pageI
   let mismatch: NextResponse | null = null;
   try {
     mismatch = await localeMismatchResponse(params.pageId, locale, siteId);
-  } catch {
-    return errorResponse(locale, 'draft_save_failed', 500);
+  } catch (error) {
+    return storedSiteDocumentErrorResponse(locale, 'draft_save_failed', error);
   }
   if (mismatch) return mismatch;
   const expectedRevision =

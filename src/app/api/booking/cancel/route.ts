@@ -10,7 +10,12 @@ import {
   saveBooking,
 } from '@/lib/builder/bookings/storage';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
-import { applyRefundOutcome, computeRefundForCancel, evaluateBookingSelfServicePolicy } from '@/lib/builder/bookings/refund';
+import {
+  applyRefundOutcome,
+  computeRefundForCancel,
+  evaluateBookingSelfServicePolicy,
+  refundAllowsCancelPersist,
+} from '@/lib/builder/bookings/refund';
 import { sendBookingCancellation } from '@/lib/builder/bookings/notifications';
 import { restorePackageCreditForBooking } from '@/lib/builder/bookings/packages';
 import { verifyBookingManageToken } from '@/lib/builder/bookings/manage-token';
@@ -30,9 +35,10 @@ export const dynamic = 'force-dynamic';
  *   2. Validates the booking exists and is not already cancelled.
  *   3. If the service had a cancellation policy and `paymentStatus === 'paid'`,
  *      computes hours until start and decides full/partial/none refund.
- *   4. For real refund (Stripe), calls /v1/refunds when STRIPE_SECRET_KEY is set
- *      (best-effort; failure does not block the cancellation row).
- *   5. Marks booking as cancelled with cancelledAt + cancellationReason.
+ *   4. For real refund (Stripe), calls /v1/refunds when STRIPE_SECRET_KEY is set.
+ *      Refund failure (or throw) returns 502 and does not persist cancellation.
+ *   5. Marks booking as cancelled with cancelledAt + cancellationReason only when
+ *      refund is not due or Stripe refund succeeded.
  */
 
 const payloadSchema = z.object({
@@ -123,7 +129,26 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const outcome = await computeRefundForCancel(latestBooking, service ?? undefined);
+    let outcome;
+    try {
+      outcome = await computeRefundForCancel(latestBooking, service ?? undefined);
+    } catch (error) {
+      console.error('[booking/cancel] refund computation failed:', error instanceof Error ? error.message : String(error));
+      return NextResponse.json(
+        { error: 'We could not confirm the refund status or booking cancellation. Please contact us for help.', errorCode: 'booking_refund_failed' },
+        { status: 502 },
+      );
+    }
+    if (!refundAllowsCancelPersist(outcome)) {
+      return NextResponse.json(
+        {
+          error: 'We could not confirm the refund status or booking cancellation. Please contact us for help.',
+          errorCode: 'booking_refund_failed',
+        },
+        { status: 502 },
+      );
+    }
+    // TODO FN19-H2: external refund may already have succeeded; renewSlotLock/saveBooking can still fail. restorePackageCreditForBooking runs before persist (ordering risk). Durable refund-id ledger is out of scope.
     const updated = await restorePackageCreditForBooking(applyRefundOutcome(latestBooking, outcome, parsed.data.reason));
     if (!await renewSlotLock(slotLease)) {
       return NextResponse.json(

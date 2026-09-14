@@ -7,12 +7,20 @@ import {
   getConversionWidgetsCopy,
   localizedContactFormSubmitLabel,
 } from '../conversion-widgets-copy';
+import { getContactFormLocalCopy } from './contact-form-copy';
+import {
+  isDefaultConsultationAction,
+  isMissingRequiredConsultationFields,
+} from './submit-adapter';
 
 export default function ContactFormInspector({ node, locale = 'ko', onUpdate, disabled = false }: BuilderComponentInspectorProps) {
   const formNode = node as BuilderContactFormCanvasNode;
   const fields = formNode.content.fields ?? [];
   const copy = getConversionWidgetsCopy(locale).contactForm;
+  const local = getContactFormLocalCopy(locale);
   const submitLabel = localizedContactFormSubmitLabel(formNode.content.submitLabel, copy.defaultSubmitLabel);
+  const showConfigNotice = isDefaultConsultationAction(formNode.content.action ?? CONTACT_FORM_LEGACY_DEFAULTS.action)
+    && isMissingRequiredConsultationFields(fields);
 
   const toggleField = (key: string) => {
     const next = fields.includes(key) ? fields.filter((f) => f !== key) : [...fields, key];
@@ -53,6 +61,11 @@ export default function ContactFormInspector({ node, locale = 'ko', onUpdate, di
         <input type="text" value={formNode.content.action} disabled={disabled} className={styles.control}
           placeholder={CONTACT_FORM_LEGACY_DEFAULTS.action} onChange={(e) => onUpdate({ action: e.target.value })} />
       </label>
+      {showConfigNotice && (
+        <p className={styles.notice} data-contact-form-config-notice="true">
+          {local.inspectorMisconfigured}
+        </p>
+      )}
     </div>
   );
 }

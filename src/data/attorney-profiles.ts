@@ -230,6 +230,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       internalLinks: [
         { label: 'Taiwan Lawyer Guide', href: '/en/taiwan-lawyer' },
         { label: 'Taiwan Company Setup Lawyer Guide', href: '/en/taiwan-company-setup-lawyer' },
+        { label: 'Taiwan Litigation Lawyer Guide', href: '/en/taiwan-litigation-lawyer' },
         { label: 'Taiwan Company Setup Service', href: '/en/services/investment' },
         { label: 'Civil Litigation Service', href: '/en/services/civil' },
         { label: 'Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages', href: '/en/columns/taiwan-gym-injury-lawsuit' },

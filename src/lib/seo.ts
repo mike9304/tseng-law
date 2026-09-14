@@ -8,8 +8,8 @@ import {
   type PublicDocumentLanguage,
   type PublicLocale8,
 } from '@/lib/public-guidance';
-import { isEnglishNoindexPath } from '@/lib/seo-visibility';
-import { taiwanOfficeSeoRecords } from '@/data/office-locations';
+import { isEnglishNoindexPath, isGloballyNoindexPath } from '@/lib/seo-visibility';
+import { taiwanOfficeData, taiwanOfficeSeoRecords, type TaiwanOfficeId } from '@/data/office-locations';
 
 type ImageInput =
   | string
@@ -30,6 +30,7 @@ type SeoMetadataInput = {
   keywords?: string[];
   images?: ImageInput | ImageInput[];
   noindex?: boolean;
+  follow?: boolean;
   type?: 'website' | 'article';
   alternateLocales?: readonly PublicSeoLocale[];
 };
@@ -257,6 +258,13 @@ export function getLanguageAlternates(
     return buildGuidanceCoreLanguageAlternates(pageKey, getSiteUrl());
   }
 
+  // Globally noindex utility routes must not join any hreflang cluster,
+  // including x-default. Mirrors the FAQ English-noindex filter, but every
+  // locale of /reviews and /search is noindex.
+  if (isGloballyNoindexPath(path)) {
+    return {};
+  }
+
   // English-noindex non-core routes (e.g. /store) must never emit an `en`
   // alternate, no matter which alternateLocales the caller passed — including
   // via x-default, which falls back to the default locale on those routes.
@@ -279,6 +287,7 @@ export function buildSeoMetadata({
   keywords = [],
   images,
   noindex = false,
+  follow,
   type = 'website',
   alternateLocales = siteLocales,
 }: SeoMetadataInput): Metadata {
@@ -287,6 +296,8 @@ export function buildSeoMetadata({
   const canonicalUrl = buildAbsoluteUrl(canonicalPath);
   const socialImages = normalizeImages(images);
   const pageTitle = stripOrganizationNameSuffix(title);
+  const languages = getLanguageAlternates(path, alternateLocales);
+  const shouldFollow = follow ?? !noindex;
 
   return {
     metadataBase: new URL(getSiteUrl()),
@@ -300,7 +311,7 @@ export function buildSeoMetadata({
     },
     alternates: {
       canonical: canonicalUrl,
-      languages: getLanguageAlternates(path, alternateLocales),
+      ...(Object.keys(languages).length > 0 ? { languages } : {}),
     },
     openGraph: {
       title,
@@ -320,18 +331,18 @@ export function buildSeoMetadata({
     robots: noindex
       ? {
           index: false,
-          follow: false,
+          follow: shouldFollow,
           googleBot: {
             index: false,
-            follow: false,
+            follow: shouldFollow,
           },
         }
       : {
           index: true,
-          follow: true,
+          follow: shouldFollow,
           googleBot: {
             index: true,
-            follow: true,
+            follow: shouldFollow,
             'max-image-preview': 'large',
             'max-snippet': -1,
             'max-video-preview': -1,
@@ -421,28 +432,39 @@ export function buildWebsiteJsonLd(
  * `taiwanOfficeSeoRecords`, which mirrors what `/{locale}/contact` already
  * shows; offices missing a phone or coordinates simply omit the property.
  */
-function buildTaiwanOfficePlaces() {
-  return taiwanOfficeSeoRecords.map((office) => ({
-    '@type': 'Place' as const,
-    '@id': `${ORGANIZATION_ID}-office-${office.id}`,
-    address: {
-      '@type': 'PostalAddress' as const,
-      streetAddress: office.address,
-      addressLocality: office.addressLocality,
-      postalCode: office.postalCode,
-      addressCountry: 'TW',
-    },
-    ...(office.telephone ? { telephone: office.telephone } : {}),
-    ...(office.geo
-      ? {
-          geo: {
-            '@type': 'GeoCoordinates' as const,
-            latitude: office.geo.latitude,
-            longitude: office.geo.longitude,
-          },
-        }
-      : {}),
-  }));
+const ENGLISH_OFFICE_LOCALITY: Record<TaiwanOfficeId, string> = {
+  taipei: 'Taipei City',
+  taichung: 'Taichung City',
+  kaohsiung: 'Kaohsiung City',
+  pingtung: 'Pingtung County',
+};
+
+function buildTaiwanOfficePlaces(locale: SiteLocale) {
+  const englishOffices = locale === 'en' ? taiwanOfficeData.en : null;
+  return taiwanOfficeSeoRecords.map((office) => {
+    const englishOffice = englishOffices?.find((item) => item.id === office.id);
+    return {
+      '@type': 'Place' as const,
+      '@id': `${ORGANIZATION_ID}-office-${office.id}`,
+      address: {
+        '@type': 'PostalAddress' as const,
+        streetAddress: englishOffice?.address ?? office.address,
+        addressLocality: locale === 'en' ? ENGLISH_OFFICE_LOCALITY[office.id] : office.addressLocality,
+        postalCode: office.postalCode,
+        addressCountry: 'TW',
+      },
+      ...(office.telephone ? { telephone: office.telephone } : {}),
+      ...(office.geo
+        ? {
+            geo: {
+              '@type': 'GeoCoordinates' as const,
+              latitude: office.geo.latitude,
+              longitude: office.geo.longitude,
+            },
+          }
+        : {}),
+    };
+  });
 }
 
 export function buildLegalServiceJsonLd(
@@ -496,7 +518,7 @@ export function buildLegalServiceJsonLd(
       addressLocality: 'Taipei City',
       addressCountry: 'TW',
     },
-    location: buildTaiwanOfficePlaces(),
+    location: buildTaiwanOfficePlaces(locale),
   };
 }
 

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { buildSeoMetadata, getLanguageAlternates } from '@/lib/seo';
-import { isEnglishNoindexPath } from '@/lib/seo-visibility';
+import { isEnglishNoindexPath, isGloballyNoindexPath } from '@/lib/seo-visibility';
 
 describe('hreflang locale coverage (WO#3)', () => {
   it('includes ja in default language alternates for a static page (about)', () => {
@@ -59,5 +59,34 @@ describe('hreflang locale coverage (WO#3)', () => {
 
     const about = getLanguageAlternates('/about');
     expect(about).toHaveProperty('en');
+  });
+
+  it('omits hreflang and x-default for globally noindex reviews and search', () => {
+    expect(isGloballyNoindexPath('/reviews')).toBe(true);
+    expect(isGloballyNoindexPath('/search')).toBe(true);
+    expect(isGloballyNoindexPath('/faq')).toBe(false);
+    expect(getLanguageAlternates('/reviews')).toEqual({});
+    expect(getLanguageAlternates('/search')).toEqual({});
+    expect(getLanguageAlternates('/reviews', ['ko', 'zh-hant', 'en', 'ja'])).toEqual({});
+
+    const reviews = buildSeoMetadata({
+      locale: 'en',
+      title: 'Client Reviews',
+      description: 'Reviews',
+      path: '/reviews',
+      noindex: true,
+    });
+    const search = buildSeoMetadata({
+      locale: 'ko',
+      title: '검색',
+      description: '검색',
+      path: '/search',
+      noindex: true,
+    });
+
+    expect(reviews.alternates?.languages).toBeUndefined();
+    expect(search.alternates?.languages).toBeUndefined();
+    expect(reviews.alternates?.canonical).toBe('https://tseng-law.com/en/reviews');
+    expect(search.alternates?.canonical).toBe('https://tseng-law.com/ko/search');
   });
 });

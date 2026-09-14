@@ -72,6 +72,8 @@ describe('English litigation column 010 — gym injury damages', () => {
       categories: ['Case Study Analysis'],
       featured_image:
         '../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg',
+      summary:
+        'After a gym injury in Taiwan, consider litigation deadlines, evidence preservation, and damages. Gym liability insurance does not end a compensation dispute.',
     });
     expect(
       Array.from(parsed.content.matchAll(/^# (.+)$/gm), (match) => match[1]),

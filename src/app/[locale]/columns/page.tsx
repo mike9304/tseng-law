@@ -29,6 +29,7 @@ import {
 } from '@/lib/seo';
 import { normalizeSiteLocale, type SiteLocale } from '@/lib/locales';
 import GuidancePageBody from '@/components/GuidancePageBody';
+import EnAcquisitionGuideLinks from '@/components/EnAcquisitionGuideLinks';
 import { OriginalLanguageColumnsSection } from '@/components/InternationalGuidance';
 import { guidanceContent } from '@/data/international-guidance-content';
 import {
@@ -240,7 +241,12 @@ export default async function ColumnsPage(
       },
     });
 
-    return <PublishedSitePageView resolved={publishedPage} searchParams={searchParams} />;
+    return (
+      <>
+        <PublishedSitePageView resolved={publishedPage} searchParams={searchParams} />
+        <EnAcquisitionGuideLinks locale={locale} />
+      </>
+    );
   }
 
   const copy = pageCopy[locale].insights;
@@ -293,6 +299,7 @@ export default async function ColumnsPage(
         <PageHeader locale={locale} label={headerLabel[locale]} title={copy.title} description={copy.description} />
       ) : null}
       {showRepeater ? <ColumnsGrid locale={locale} posts={posts} initialFilters={toColumnGridFilters(searchParams)} /> : null}
+      <EnAcquisitionGuideLinks locale={locale} />
     </>
   );
 }

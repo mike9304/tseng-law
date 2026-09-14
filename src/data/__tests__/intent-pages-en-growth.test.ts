@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { EN_HOME_HERO_SUBTITLE } from '../en-service-scope';
 import { getIntentPage, intentPageSlugs, intentPages } from '../intent-pages';
 
 const KOREAN_LITIGATION_COLUMNS = [
@@ -36,7 +37,9 @@ describe('EN intent pages growth copy', () => {
       litigation: intentPages.en['taiwan-litigation-lawyer'],
     });
 
-    expect(blob).toMatch(/English-speaking attorneys/i);
+    expect(blob).not.toMatch(/English-speaking attorneys/i);
+    expect(blob).toMatch(/English, Chinese, Korean, and Japanese/);
+    expect(blob).toMatch(/Attorney Wei Tseng works with clients directly in Korean, Chinese, and Japanese/);
     expect(blob).toMatch(/residence-permit assistance/i);
     expect(blob).toMatch(/tax-accounting assistance/i);
     expect(blob).not.toMatch(/tax-accounting coordination/i);
@@ -87,6 +90,13 @@ describe('EN intent pages growth copy', () => {
     expect(blob).toMatch(/reference/i);
     expect(blob).not.toMatch(/https:\/\//);
     expect(page!.serviceSlugs).toEqual(['investment', 'ip', 'labor']);
+  });
+
+  it('states office consultation languages without claiming plural English-speaking attorneys', () => {
+    expect(EN_HOME_HERO_SUBTITLE).not.toMatch(/English-speaking attorneys/i);
+    expect(EN_HOME_HERO_SUBTITLE).not.toMatch(/\battorneys\b/i);
+    expect(EN_HOME_HERO_SUBTITLE).toMatch(/English, Chinese, Korean, and Japanese/);
+    expect(EN_HOME_HERO_SUBTITLE).toMatch(/Attorney Wei Tseng works with clients directly in Korean, Chinese, and Japanese/);
   });
 
   it('exposes the existing EN intent slugs without inventing routes', () => {

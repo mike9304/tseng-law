@@ -19,6 +19,12 @@ import {
 import { buildAbsoluteUrl, getLanguageAlternates, getLocalizedPath, getSiteUrl } from '@/lib/seo';
 import { isEnglishNoindexPath } from '@/lib/seo-visibility';
 import { collectAllBuilderSitemapEntries } from '@/lib/builder/seo/sitemap-builder';
+import {
+  createSitemapLastmodResolver,
+  guidancePageKeyToStaticPath,
+  inferSitemapLastmod,
+  type SitemapLastmodResolver,
+} from './sitemap-lastmod';
 
 export const dynamic = 'force-dynamic';
 
@@ -77,12 +83,16 @@ function isGuidanceLocaleHreflang(tag: string): boolean {
   return lower === 'vi' || lower === 'id' || lower === 'th' || lower === 'fil';
 }
 
-function appendGuidanceLocaleSitemapEntries(pages: MetadataRoute.Sitemap): void {
+function appendGuidanceLocaleSitemapEntries(
+  pages: MetadataRoute.Sitemap,
+  lastmod: SitemapLastmodResolver,
+): void {
   const siteUrl = getSiteUrl();
   for (const locale of GUIDANCE_LOCALES_4) {
     for (const pageKey of GUIDANCE_PAGE_KEYS) {
       pages.push({
         url: guidanceCanonicalUrl(locale, pageKey, siteUrl),
+        lastModified: lastmod.forPath(guidancePageKeyToStaticPath(pageKey)),
         priority: pageKey === 'home' ? 1 : 0.8,
         alternates: {
           languages: buildGuidanceCoreLanguageAlternates(pageKey, siteUrl),
@@ -230,6 +240,8 @@ function addReciprocalJapaneseAlternates(
   });
 }
 
+let activeSitemapLastmod: SitemapLastmodResolver | undefined;
+
 function createEntry(
   locale: PublicLocale8,
   path: string,
@@ -237,11 +249,15 @@ function createEntry(
     lastModified?: string | Date;
     priority?: number;
     alternateLocales?: readonly PublicLocale8[];
+    lastmod?: SitemapLastmodResolver;
   }
 ): MetadataRoute.Sitemap[number] {
+  const resolver = options?.lastmod ?? activeSitemapLastmod;
+  const inferred = resolver ? inferSitemapLastmod(path, resolver) : undefined;
+  const lastModified = options?.lastModified ?? inferred;
   return {
     url: buildAbsoluteUrl(getLocalizedPath(locale, path)),
-    ...(options?.lastModified == null ? {} : { lastModified: options.lastModified }),
+    ...(lastModified == null ? {} : { lastModified }),
     priority: options?.priority ?? 0.8,
     alternates: {
       languages: getLanguageAlternates(path, options?.alternateLocales ?? locales),
@@ -251,6 +267,8 @@ function createEntry(
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pages: MetadataRoute.Sitemap = [];
+  const lastmod = createSitemapLastmodResolver();
+  activeSitemapLastmod = lastmod;
   const serviceAreaRecords = await readServiceAreaSourceRecords(DEFAULT_BUILDER_SITE_ID, 'ko');
   const attorneyRecords = await readAttorneyProfileSourceRecords(DEFAULT_BUILDER_SITE_ID, 'ko');
 
@@ -259,6 +277,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       pages.push(
         createEntry(locale, path, {
           priority: path === '' ? 1 : 0.8,
+          lastmod,
         })
       );
     }
@@ -450,7 +469,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Actual new-four core URLs only. Dictionary page identities — never the
   // internal rewrite keys, and never invented article translations.
-  appendGuidanceLocaleSitemapEntries(pages);
+  appendGuidanceLocaleSitemapEntries(pages, lastmod);
 
   // SEO maturity — append builder-published pages. Failures here must
   // never block the rest of the sitemap from rendering, so swallow + log

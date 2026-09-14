@@ -55,6 +55,7 @@ describe('English investment column 015 — Taipei business-location inquiry', (
   it('publishes the corrected canonical metadata without invented FAQ entries', () => {
     expect(parsed.data).toEqual({
       title,
+      seoTitle: 'Taiwan Company Formation Advanced Guide: Finding a Business Location',
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location',
       lastmod: '2026-09-10',
       date_display: 'September 13, 2025',
@@ -62,6 +63,8 @@ describe('English investment column 015 — Taipei business-location inquiry', (
       categories: ['Taiwan Company Formation'],
       featured_image:
         '../images/015-taiwan-company-setup-pitch-location/featured-01.jpg',
+      summary:
+        'Company setup in Taipei requires checking whether the address may be used for the business. Restaurants often need a Business Location Prior Inquiry first.',
     });
     expect(parsed.data.faq).toBeUndefined();
     expect(post).toMatchObject({

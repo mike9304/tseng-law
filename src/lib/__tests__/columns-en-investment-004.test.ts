@@ -113,12 +113,15 @@ describe('English investment column 004 — subsidiary versus branch', () => {
   it('publishes the complete exact frontmatter and canonical post contract', () => {
     expect(parsed.data).toEqual({
       title,
+      seoTitle: 'Taiwan Subsidiary vs Branch: Key Differences for Market Entry',
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-company-subsidiary-vs-branch',
       lastmod: '2026-07-25',
       date_display: 'September 13, 2025',
       read_time: '28 min read',
       categories: ['Taiwan Company Formation'],
       featured_image: featuredImage,
+      summary:
+        'A Taiwan subsidiary is a separate legal entity, but a branch is part of the foreign head office. Contracts, liability, tax, and profit remittance differ.',
       faq,
     });
     expect(

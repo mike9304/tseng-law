@@ -1,5 +1,6 @@
 ---
 title: "Taiwan Company Formation: Capital Remittance, Banking, and Foreign Hiring"
+seoTitle: "Taiwan Company Formation: Capital Remittance, Banking, and Hiring"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2"
 lastmod: "2026-09-10"
 date_display: "September 13, 2025"
@@ -7,6 +8,7 @@ read_time: "3 min read"
 categories:
   - "Taiwan Company Formation"
 featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg"
+summary: "Company setup in Taiwan involves capital remittance, converting a preparatory bank account, and separate work-permit rules for hiring foreign managers."
 ---
 
 # Taiwan Company Formation: Capital Remittance, Banking, and Foreign Hiring

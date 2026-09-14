@@ -68,6 +68,7 @@ describe('English labor column 009 mirror', () => {
   it('freezes the complete frontmatter, sole synchronized H1, images, and link URLs', () => {
     expect(enParsed.data).toEqual({
       title: EXPECTED_EN_TITLE,
+      seoTitle: 'Taiwan Severance After Voluntary Resignation: Legal Exceptions',
       url: 'https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외',
       lastmod: '2026-09-10',
       date_display: 'September 13, 2025',
@@ -75,6 +76,8 @@ describe('English labor column 009 mirror', () => {
       categories: ['Taiwan Legal Information'],
       featured_image:
         '../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg',
+      summary:
+        'Voluntary resignation in Taiwan usually yields no severance. Labor Standards Act Article 14 exceptions can still require payment, with a 30-day deadline.',
     });
 
     expect(enParsed.content.match(/^# .+$/gm)).toEqual([

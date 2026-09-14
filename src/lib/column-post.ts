@@ -23,6 +23,8 @@ export interface ColumnPost {
   featuredImage: string;
   content: string;
   summary: string;
+  /** Optional shorter title for <title>/og:title. Display/H1 title stays `title`. */
+  seoTitle?: string;
   faq?: ColumnFaqItem[];
   /** Allowlisted body typography preset id (e.g. ko-body-readable). */
   typographyPresetId?: string;

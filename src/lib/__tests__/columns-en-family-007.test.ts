@@ -204,7 +204,7 @@ const frozenSection1OnwardSha256 =
   'b64f3368517a247872fe3f0d3cd7f0a60eeb52843c12bf5ee3b2cf985546d4dd';
 const frozenVisibleWordCount = 5_827;
 const frozenSourceSha256 =
-  '8f312555bfcad70766e9c82c5c7a594a2c09bc9cdf2ca27105394c5280321a94';
+  '2bcf4d310bf8f14105d353556d80ec30a3d01cf304429352ae71f9b61a671bca';
 
 function countOccurrences(value: string, needle: string) {
   return value.split(needle).length - 1;
@@ -255,6 +255,8 @@ describe('English family column 007 — Taiwan divorce procedure Q&A', () => {
       read_time: '30 min read',
       categories: ['Taiwan Legal Information'],
       featured_image: featuredImage,
+      summary:
+        'A Taiwan divorce may use mutual consent, mediation, or litigation. Household registration, property division, and parental rights remain separate issues.',
       faq,
     });
     expect(parsed.data.faq).toHaveLength(6);

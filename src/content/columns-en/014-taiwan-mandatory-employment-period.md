@@ -1,5 +1,6 @@
 ---
 title: "Taiwan Minimum Service Period Clauses: Validity, Training Costs, and Contractual Penalties"
+seoTitle: "Taiwan Minimum Service Period Clauses: Validity and Penalties"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-mandatory-employment-period"
 lastmod: "2026-07-25"
 date_display: "September 13, 2025"
@@ -7,6 +8,7 @@ read_time: "19 min read"
 categories:
   - "Taiwan Legal Information"
 featured_image: "../images/014-taiwan-mandatory-employment-period/featured-01.jpg"
+summary: "A Taiwan minimum service period clause is not automatically valid. It needs funded professional training or reasonable compensation, plus a statutory review."
 faq:
   - q: "Is a minimum-service-period clause in a Taiwan employment contract automatically void?"
     a: "No. Under Article 15-1 of Taiwan's Labor Standards Act, a minimum-service-period clause may satisfy the statutory requirements if the employer either provides professional skills training and bears the cost or provides reasonable compensation in return for the worker's commitment to the minimum service period. Both requirements need not be met, but even where one is met, the clause must not exceed a reasonable scope in light of all the circumstances, including the duration and cost of the training, the possibility of replacing the worker, and the amount and scope of the compensation."

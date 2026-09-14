@@ -7,6 +7,7 @@ read_time: "30 min read"
 categories:
   - "Taiwan Legal Information"
 featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+summary: "A Taiwan divorce may use mutual consent, mediation, or litigation. Household registration, property division, and parental rights remain separate issues."
 faq:
   - q: "Does signing a divorce agreement make a mutual-consent divorce in Taiwan immediately effective?"
     a: "Under Civil Code Article 1050, the parties must agree to divorce in writing, at least two witnesses must sign after confirming both parties’ genuine intent to divorce, and the divorce must be registered with the household-registration authority. A signed agreement alone does not complete the divorce. Where foreign elements are involved, the parties must separately check the applicable law, document authentication and translation requirements, and any registration required in another country or region."

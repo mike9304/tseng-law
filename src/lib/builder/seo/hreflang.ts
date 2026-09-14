@@ -12,7 +12,7 @@ import { defaultLocale, locales, siteLocales, type Locale, type SiteLocale } fro
 import type { BuilderPageMeta } from '@/lib/builder/site/types';
 import { buildSitePageAbsoluteUrl } from '@/lib/builder/site/paths';
 import { resolveLocaleSlug } from '@/lib/builder/translations/locale-slug';
-import { isEnglishNoindexPath } from '@/lib/seo-visibility';
+import { isEnglishNoindexPath, isGloballyNoindexPath } from '@/lib/seo-visibility';
 import { HREFLANG_X_DEFAULT_LOCALE } from '@/lib/seo';
 
 export interface HreflangAlternate {
@@ -155,10 +155,16 @@ export function buildHreflangAlternates(
   }
 
   const staticSlug = page.slug ?? '';
+  const indexabilityPath = staticSlug ? `/${staticSlug}` : '/';
+  // Globally noindex routes (/reviews, /search) must not emit a cluster or
+  // x-default pointing at a noindex URL. Sitemap already omits these paths.
+  if (isGloballyNoindexPath(indexabilityPath)) {
+    return [];
+  }
   // English-noindex routes (e.g. /faq) must never advertise an `en`
   // alternate — the /en/<slug> page is noindex. Mirrors the rule in
   // src/lib/seo.ts getLanguageAlternates (x-default prefers en when available).
-  const stripEnglish = isEnglishNoindexPath(`/${staticSlug}`);
+  const stripEnglish = isEnglishNoindexPath(indexabilityPath);
   if (PUBLIC_MULTILOCALE_ROUTE_SLUGS.has(staticSlug)) {
     // Iterate the public site locales (incl. ja) — /ja/<slug> is served 200
     // by the same static/legacy fallback as the other locales, so builder

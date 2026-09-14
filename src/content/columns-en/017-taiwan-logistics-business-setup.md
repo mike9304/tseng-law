@@ -1,5 +1,6 @@
 ---
 title: "Taiwan Logistics Businesses and Motor Freight Carrier Licensing: Formation, Acquisition, and Outsourcing"
+seoTitle: "Taiwan Logistics Business Setup: Motor Freight Carrier Licensing"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
 lastmod: "2026-07-25"
 date_display: "September 13, 2025"
@@ -7,6 +8,7 @@ read_time: "12 min read"
 categories:
   - "Taiwan Company Formation"
 featured_image: "../images/017-taiwan-logistics-business-setup/featured-01.jpg"
+summary: "A Taiwan logistics business is not always a licensed motor freight carrier. New formation, acquisition, and outsourcing follow different licensing rules."
 faq:
   - q: "Does every logistics-related business in Taiwan need a motor freight carrier license (汽車貨運業)?"
     a: "Not necessarily. “Logistics” is a broad business term, so a company’s name or registered business activities do not by themselves determine whether a license is required. A company may fall within Taiwan’s regulated motor freight carrier category if it transports other parties’ goods by motor vehicle for compensation. Warehousing, packing, systems operations, shipping one’s own goods, and freight forwarding or other transportation-intermediary services require a fact-specific analysis of the contracts, transportation responsibility, compensation structure, and actual vehicle operations."

@@ -1,5 +1,6 @@
 ---
 title: "Taiwan Traffic Accident Q&A: Scene Safety, Fault, Settlement, and Compensation"
+seoTitle: "Taiwan Traffic Accident Q&A: Fault, Settlement, and Compensation"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
 date_display: "September 13, 2025"
@@ -7,6 +8,7 @@ read_time: "8 min read"
 categories:
   - "Taiwan Legal Information"
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
+summary: "After a Taiwan traffic accident, first secure the scene, report, and preserve evidence. Then review fault, claim deadlines, settlement, and compensation."
 ---
 
 # Taiwan Traffic Accident Q&A: Scene Safety, Fault, Settlement, and Compensation

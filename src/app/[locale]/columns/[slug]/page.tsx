@@ -82,7 +82,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
     if (!post) return {};
     return buildSeoMetadata({
       locale: params.locale,
-      title: post.title,
+      title: post.seoTitle || post.title,
       description: post.summary,
       path: `/columns/${post.slug}`,
       keywords: [post.title, post.categoryLabel, 'Taiwan law'],
@@ -109,7 +109,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
 
   return buildSeoMetadata({
     locale,
-    title: post.title,
+    title: post.seoTitle || post.title,
     description: post.summary,
     path: `/columns/${post.slug}`,
     keywords: [

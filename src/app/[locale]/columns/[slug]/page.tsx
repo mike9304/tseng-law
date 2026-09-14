@@ -149,7 +149,24 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
   const prevPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
   const nextPost = currentIndex >= 0 && currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
 
-  const t = copy[locale];
+  /*
+   * Guidance locales render this shell with `locale` coerced to 'en' above, so
+   * every label came out English under a Vietnamese/Thai/Indonesian/Filipino
+   * article — "Back to columns", "Contact Us", "Frequently Asked Questions".
+   * The content pack already publishes reviewed wording for three of the seven,
+   * so use those. The remaining four (attorneyHeading, guideTitle,
+   * consultationTitle, consultationText) have no equivalent in the pack and are
+   * left in English rather than invented here — they need the translation lane.
+   */
+  const guidancePack = guidanceLocale ? guidanceContent[guidanceLocale] : null;
+  const t = guidancePack
+    ? {
+        ...copy.en,
+        backLabel: `← ${guidancePack.nav.columns}`,
+        faqHeading: guidancePack.nav.faq,
+        consultationButton: guidancePack.contactCta,
+      }
+    : copy[locale];
   const authorName =
     locale === 'ko'
       ? '증준외 변호사'

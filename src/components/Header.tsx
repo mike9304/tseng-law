@@ -8,6 +8,7 @@ import { toBuilderLocale } from '@/lib/locales';
 import { isGuidanceLocale4, type PublicLocale8 } from '@/lib/public-guidance';
 import {
   chromeSiteLocale,
+  guidanceChromeLabels,
   guidanceHeaderNavItems,
   guidanceSearchLink,
   guidanceUtilityLinks,
@@ -316,11 +317,18 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
     if (!headerRef.current) return;
     return installPublicHeaderOffset(headerRef.current);
   }, []);
-  const menuLabel = locale === 'ko' ? '메뉴' : locale === 'zh-hant' ? '選單' : locale === 'ja' ? 'メニュー' : 'Menu';
+  // vi/id/th/fil publish their own skip-link and menu labels; the ko/zh/ja
+  // ladder below would otherwise drop them to English.
+  const guidanceLabels = guidanceChromeLabels(locale);
+  const menuLabel = guidanceLabels
+    ? guidanceLabels.menuLabel
+    : locale === 'ko' ? '메뉴' : locale === 'zh-hant' ? '選單' : locale === 'ja' ? 'メニュー' : 'Menu';
   const openMenuLabel = locale === 'ko' ? '메뉴 열기' : locale === 'zh-hant' ? '開啟選單' : locale === 'ja' ? 'メニューを開く' : 'Open menu';
   const closeMenuLabel = locale === 'ko' ? '메뉴 닫기' : locale === 'zh-hant' ? '關閉選單' : locale === 'ja' ? 'メニューを閉じる' : 'Close menu';
   const searchLabel = locale === 'ko' ? '검색 열기' : locale === 'zh-hant' ? '開啟搜尋' : locale === 'ja' ? '検索を開く' : 'Open search';
-  const skipLabel = locale === 'ko' ? '본문 바로가기' : locale === 'zh-hant' ? '跳到主要內容' : locale === 'ja' ? '本文へ' : 'Skip to main content';
+  const skipLabel = guidanceLabels
+    ? guidanceLabels.skipLink
+    : locale === 'ko' ? '본문 바로가기' : locale === 'zh-hant' ? '跳到主要內容' : locale === 'ja' ? '本文へ' : 'Skip to main content';
   const homeLabel = locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home';
   const mainNavLabel = locale === 'ko' ? '주요 메뉴' : locale === 'zh-hant' ? '主要選單' : locale === 'ja' ? 'メインメニュー' : 'Main';
   const memberLabels =

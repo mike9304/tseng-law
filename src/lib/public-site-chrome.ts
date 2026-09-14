@@ -103,6 +103,23 @@ export function guidanceHeaderNavItems(
   }));
 }
 
+/**
+ * Chrome labels a guidance locale already publishes but the header was not
+ * reading. `Header.tsx` branches on ko/zh-hant/ja and falls through to English
+ * for everything else, so vi/id/th/fil shipped an English skip link and menu
+ * label even though both strings are translated in the content pack — the
+ * landmark list a screen reader announces was in the wrong language on the
+ * pages whose whole purpose is to serve readers who cannot read the others.
+ * No new sentences: these are the pack's own strings.
+ */
+export function guidanceChromeLabels(
+  locale: PublicLocale8,
+): { skipLink: string; menuLabel: string } | null {
+  if (!isGuidanceLocale4(locale)) return null;
+  const pack = guidanceContent[locale];
+  return { skipLink: pack.skipLink, menuLabel: pack.menuLabel };
+}
+
 /** Header utility links for a guidance locale (same count as the old four). */
 export function guidanceUtilityLinks(
   locale: PublicLocale8,

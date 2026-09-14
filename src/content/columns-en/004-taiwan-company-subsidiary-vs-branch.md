@@ -7,6 +7,7 @@ read_time: "28 min read"
 categories:
   - "Taiwan Company Formation"
 featured_image: "../images/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg"
+summary: "A Taiwan subsidiary is a separate legal entity, but a branch is part of the foreign head office. Contracts, liability, tax, and profit remittance differ."
 faq:
   - q: "Can Taiwanese individuals or Taiwan entities participate as shareholders in a Taiwan branch?"
     a: "A branch is part of a foreign company and therefore has no shareholders of its own. To invest jointly with a third party in a Taiwan business, the parties should consider options such as forming a Taiwan subsidiary and determining its shareholder structure. Liability, voting rights, financing, licenses and permits, and tax treatment must be assessed in light of the investment relationship and business plan."

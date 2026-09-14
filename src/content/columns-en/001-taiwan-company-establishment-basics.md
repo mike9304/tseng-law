@@ -7,6 +7,7 @@ read_time: "15 min read"
 categories:
   - "Taiwan Company Formation"
 featured_image: "../images/001-taiwan-company-establishment-basics/featured-01.jpg"
+summary: "Foreign companies and individuals may enter Taiwan through a subsidiary, branch, or representative office. Company setup does not grant a work permit or ARC."
 faq:
   - q: "What is the difference between a subsidiary, branch, and representative office when establishing a business in Taiwan?"
     a: "A Taiwan subsidiary (limited company or company limited by shares) is a separate legal entity under Taiwan law. A Taiwan branch of a foreign company is not a separate legal entity; it operates in Taiwan as part of the foreign company. A representative office may not conduct profit-making business in Taiwan; its activities are limited to liaison work and legal acts on behalf of the foreign company. Liability, tax treatment, licensing requirements, and eligibility for government procurement must be evaluated based on the chosen structure and the circumstances."

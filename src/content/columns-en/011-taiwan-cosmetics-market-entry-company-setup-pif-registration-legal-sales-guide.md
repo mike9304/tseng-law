@@ -7,6 +7,7 @@ read_time: "13 min read"
 categories:
   - "Taiwan Company Formation"
 featured_image: "../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg"
+summary: "Foreign cosmetics brands entering Taiwan must choose an importer, complete product registration, and keep a PIF. Company setup alone does not complete them."
 faq:
   - q: "Does a foreign cosmetics brand have to establish a subsidiary or branch to sell products in Taiwan?"
     a: "No. A Taiwan importer—including one that also serves as the distributor—may handle importation and sales. If the brand operates directly in Taiwan, a Taiwan subsidiary and a Taiwan branch of a foreign company differ in their formation and registration, liability, and tax structures. The time required for foreign-investment approval and company or branch registration also varies according to the particular matter and whether supplemental documents are requested. The brand should first choose its business model and identify the entity that will assume the legal responsibilities of the cosmetics manufacturer or importer."

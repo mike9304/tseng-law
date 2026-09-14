@@ -134,6 +134,19 @@ function extractSummary(content: string): string {
   return text.length > 150 ? text.slice(0, 150) + '...' : text;
 }
 
+/**
+ * Prefer an authored frontmatter `summary` string for meta description,
+ * Article JSON-LD, and llms.txt annotations. Empty or non-string values
+ * fall back to the first-paragraph extract.
+ */
+export function resolveColumnSummary(rawSummary: unknown, content: string): string {
+  if (typeof rawSummary === 'string') {
+    const trimmed = rawSummary.trim();
+    if (trimmed) return trimmed;
+  }
+  return extractSummary(content);
+}
+
 function slugFromFilename(filename: string): string {
   return filename.replace(/\.md$/, '').replace(/^\d{3}-/, '');
 }
@@ -220,7 +233,7 @@ export function getAllColumnPosts(
     const publicationDate = parseColumnPublicationDate(data.published as string)
       || parseColumnPublicationDate(fallbackDateDisplay);
     const fallbackReadTime = (data.read_time as string) || '';
-    const fallbackSummary = extractSummary(fixedContent);
+    const fallbackSummary = resolveColumnSummary(data.summary, fixedContent);
     const faq = normalizeColumnFaq(data.faq);
 
     // When EN files live in columns-en/, frontmatter and body are already English.

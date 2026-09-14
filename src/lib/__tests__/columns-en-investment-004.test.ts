@@ -119,6 +119,8 @@ describe('English investment column 004 — subsidiary versus branch', () => {
       read_time: '28 min read',
       categories: ['Taiwan Company Formation'],
       featured_image: featuredImage,
+      summary:
+        'A Taiwan subsidiary is a separate legal entity, but a branch is part of the foreign head office. Contracts, liability, tax, and profit remittance differ.',
       faq,
     });
     expect(

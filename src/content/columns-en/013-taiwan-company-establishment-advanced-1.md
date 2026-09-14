@@ -7,6 +7,7 @@ read_time: "4 min read"
 categories:
   - "Taiwan Company Formation"
 featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg"
+summary: "Taiwan company formation needs an investment-plan review, a registered office, and a bank account. A work permit and residence certificate come later."
 ---
 
 # Taiwan Company Formation — Advanced Guide 1

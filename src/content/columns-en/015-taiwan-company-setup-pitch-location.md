@@ -7,6 +7,7 @@ read_time: "3 min read"
 categories:
   - "Taiwan Company Formation"
 featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.jpg"
+summary: "Company setup in Taipei requires checking whether the address may be used for the business. Restaurants often need a Business Location Prior Inquiry first."
 ---
 
 # Taiwan Company Formation — Advanced Guide 3: Finding a Business Location

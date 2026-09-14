@@ -7,6 +7,7 @@ read_time: "22 min read"
 categories:
   - "Taiwan Company Formation"
 featured_image: "../images/002-withdraw-capital-taiwan-company/featured-01.png"
+summary: "Paid-in capital becomes company property in a Taiwan company account. Closing, capital reduction, and suspension each follow different asset procedures."
 faq:
   - q: "Must a Taiwan company be dissolved and liquidated before its funds can be returned to shareholders?"
     a: "To close a company permanently, as a general rule, the company registers its dissolution, completes liquidation, settles its debts and taxes, and then distributes the remaining residual assets to its shareholders. If the company will continue operating while returning capital contributions, it should consider a lawful procedure appropriate to its company form, such as a capital reduction. Ordinary business expenses, dividends, and repayment of loans actually owed by the company each require a separate legal and tax basis and procedure."

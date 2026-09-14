@@ -31,6 +31,7 @@ import type { Locale, SiteLocale } from '@/lib/locales';
 import type { ColumnPost } from '@/lib/columns';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 import InternationalInquiryForm from '@/components/InternationalInquiryForm';
+import EnAcquisitionGuideLinks from '@/components/EnAcquisitionGuideLinks';
 
 type ColumnsSearchParams = Record<string, string | string[] | undefined>;
 
@@ -77,6 +78,7 @@ export function ServicesLegacyPageBody({
       {showHero ? (
         <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
       ) : null}
+      <EnAcquisitionGuideLinks locale={locale} />
       {showRepeater ? <ServicesBento locale={locale} showHeader={!showHero} /> : null}
     </>
   );

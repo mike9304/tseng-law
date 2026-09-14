@@ -8,7 +8,7 @@ import OrnamentDivider from '@/components/OrnamentDivider';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
 import CorporateAdvisorySection from '@/components/CorporateAdvisorySection';
 import { CORPORATE_ADVISORY_ANCHOR, getCorporateAdvisory } from '@/data/corporate-advisory';
-import { getIntentPage, type IntentPageSlug } from '@/data/intent-pages';
+import { getIntentPage, getIntentTopFaqs, type IntentPageSlug } from '@/data/intent-pages';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
 import { getColumnPost } from '@/lib/columns';
 import type { SiteLocale } from '@/lib/locales';
@@ -385,6 +385,7 @@ export default function IntentLandingPage({
   }
 
   const l = labels[locale];
+  const topFaqs = getIntentTopFaqs(page);
   const ai = getAiIntakeDiscovery(locale);
   const services = page.serviceSlugs
     .map((item) => {
@@ -536,6 +537,23 @@ export default function IntentLandingPage({
           </aside>
         </div>
       </section>
+
+      {topFaqs.length > 0 ? (
+        <section className="section section--light">
+          <div className="container">
+            <article className="intent-panel">
+              <dl className="intent-article-list">
+                {topFaqs.map((item) => (
+                  <div key={item.question}>
+                    <dt className="profile-card-title">{item.question}</dt>
+                    <dd>{item.answer}</dd>
+                  </div>
+                ))}
+              </dl>
+            </article>
+          </div>
+        </section>
+      ) : null}
 
       {slug === 'taiwan-lawyer' && (locale === 'en' || locale === 'ja') ? (
         <CorporateAdvisorySection locale={locale} />

@@ -10,6 +10,7 @@ import FAQAccordion from '@/components/FAQAccordion';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 import HomeContactCta from '@/components/HomeContactCta';
 import TaiwanHeritageInterlude from '@/components/TaiwanHeritageInterlude';
+import EnAcquisitionGuideLinks from '@/components/EnAcquisitionGuideLinks';
 import Reveal from '@/components/Reveal';
 import type { FAQItem } from '@/data/faq-content';
 import { faqContent } from '@/data/faq-content';
@@ -72,6 +73,11 @@ export function LegacyHomePageBody({
   return (
     <>
       <HeroSearch locale={locale} />
+      {locale === 'en' ? (
+        <Reveal>
+          <EnAcquisitionGuideLinks locale={locale} />
+        </Reveal>
+      ) : null}
       <Reveal>
         <InsightsArchiveSection locale={locale} posts={posts} />
       </Reveal>

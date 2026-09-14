@@ -9,6 +9,8 @@ export const intentPageSlugs = [
 
 export type IntentPageSlug = (typeof intentPageSlugs)[number];
 
+export const DEFAULT_INTENT_TOP_FAQ_IDS = ['faq-0', 'faq-1', 'faq-2'] as const;
+
 export type IntentPageContent = {
   slug: IntentPageSlug;
   label: string;
@@ -25,6 +27,8 @@ export type IntentPageContent = {
   serviceSlugs: string[];
   columnSlugs: string[];
   faq: FAQItem[];
+  /** FAQ entries shown above Related Services. `faq-N` selects `faq[N]`. */
+  topFaqIds?: readonly string[];
 };
 
 export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageContent>> = {
@@ -472,6 +476,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       ],
       serviceSlugs: ['investment', 'civil', 'family'],
       columnSlugs: ['taiwan-company-establishment-basics', 'taiwan-gym-injury-lawsuit', 'taiwan-divorce-lawsuit-qna'],
+      topFaqIds: DEFAULT_INTENT_TOP_FAQ_IDS,
       faq: [
         {
           question: 'What should I check first when looking for a Taiwan lawyer?',
@@ -566,6 +571,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
         'taiwan-logistics-business-setup',
       ],
+      topFaqIds: DEFAULT_INTENT_TOP_FAQ_IDS,
       faq: [
         {
           question: 'How long does Taiwan company setup usually take?',
@@ -656,6 +662,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         'taiwan-divorce-lawsuit-qna',
         'taiwan-inheritance-custody-analysis',
       ],
+      topFaqIds: DEFAULT_INTENT_TOP_FAQ_IDS,
       faq: [
         {
           question: 'Can a Taiwan litigation matter start while I am still overseas?',
@@ -900,4 +907,28 @@ export function getIntentPage(locale: SiteLocale, slug: string): IntentPageConte
   }
 
   return intentPages[locale][slug as IntentPageSlug];
+}
+
+export function getIntentTopFaqs(page: IntentPageContent): FAQItem[] {
+  const ids = page.topFaqIds;
+  if (!ids?.length) {
+    return [];
+  }
+  const selected: FAQItem[] = [];
+
+  for (const id of ids) {
+    if (selected.length >= 3) {
+      break;
+    }
+    const indexed = /^faq-(\d+)$/.exec(id);
+    if (!indexed) {
+      continue;
+    }
+    const item = page.faq[Number(indexed[1])];
+    if (item) {
+      selected.push(item);
+    }
+  }
+
+  return selected;
 }

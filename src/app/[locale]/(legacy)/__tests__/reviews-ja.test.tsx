@@ -33,7 +33,7 @@ const japaneseKeywords = [
 const disclosure = '掲載内容は投稿者個人の感想です。内容確認は行いますが、投稿者の本人確認または当事務所との利用関係を保証するものではなく、同様の結果を保証するものでもありません。';
 
 describe('Japanese reviews integration', () => {
-  it('publishes exact Japanese noindex metadata with four-language alternates', () => {
+  it('publishes exact Japanese noindex metadata without a hreflang cluster', () => {
     const metadata = getReviewsLegacyMetadata('ja');
 
     expect(pageCopy.ja.reviews).toEqual(japaneseHero);
@@ -48,13 +48,7 @@ describe('Japanese reviews integration', () => {
       url: `${SITE_URL}/ja/reviews`,
       locale: 'ja_JP',
     });
-    expect(metadata.alternates?.languages).toEqual({
-      ko: `${SITE_URL}/ko/reviews`,
-      'zh-Hant': `${SITE_URL}/zh-hant/reviews`,
-      en: `${SITE_URL}/en/reviews`,
-      ja: `${SITE_URL}/ja/reviews`,
-      'x-default': `${SITE_URL}/en/reviews`,
-    });
+    expect(metadata.alternates?.languages).toBeUndefined();
     expect(metadata.robots).toMatchObject({
       index: false,
       follow: false,
@@ -211,13 +205,7 @@ describe('Japanese reviews integration', () => {
     expect(metadata.title).toBe(title);
     expect(metadata.keywords).toEqual(keywords);
     expect(metadata.alternates?.canonical).toBe(`${SITE_URL}/${locale}/reviews`);
-    expect(metadata.alternates?.languages).toEqual({
-      ko: `${SITE_URL}/ko/reviews`,
-      'zh-Hant': `${SITE_URL}/zh-hant/reviews`,
-      en: `${SITE_URL}/en/reviews`,
-      ja: `${SITE_URL}/ja/reviews`,
-      'x-default': `${SITE_URL}/en/reviews`,
-    });
+    expect(metadata.alternates?.languages).toBeUndefined();
     expect(html).toContain(formTitle);
     expect(html).toContain(service);
     expect(html).not.toContain(disclosure);

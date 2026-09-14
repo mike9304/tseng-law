@@ -37,3 +37,8 @@ export function isEnglishNoindexPath(
     || path === '/store'
     || /^\/store\/(?:categories|products)\/[^/]+$/.test(path);
 }
+
+/** Paths whose public metadata is noindex in every locale. */
+export function isGloballyNoindexPath(path: string): boolean {
+  return path === '/reviews' || path === '/search';
+}

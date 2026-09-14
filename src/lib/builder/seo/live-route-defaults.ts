@@ -19,9 +19,9 @@ const HOME_SEO_COPY = {
       '昊鼎國際法律事務所提供台灣公司設立、投資法務、民刑事訴訟與跨境法律顧問服務，支援韓文、中文與英文溝通。',
   },
   en: {
-    title: 'Taiwan Lawyer, Litigation & Company Setup',
+    title: 'Taiwan Law Firm in Taipei — English Consultations',
     description:
-      'English-speaking Taiwan lawyer for expats and foreigners in Taiwan: company setup, litigation, and investment counsel in Taipei.',
+      'A Taipei law firm for Taiwan-law matters serving overseas companies and individuals, with English consultations for international business and disputes.',
   },
 } as const satisfies Record<Locale, LiveRouteSeoDefault>;
 

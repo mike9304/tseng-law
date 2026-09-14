@@ -429,7 +429,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       searchTerms: ['Taiwan lawyer', 'Wei Tseng attorney', 'Taiwan lawyer for overseas clients', 'English speaking lawyer Taipei'],
       heroPoints: [
         'This page connects overseas and international clients to Taiwan legal support for company setup, investment, and disputes.',
-        'English-speaking attorneys are available for consultation, in person or by video. Japanese, Korean, and Chinese are also available.',
+        'The firm provides consultations in English, Chinese, Korean, and Japanese, in person or by video. Attorney Wei Tseng works with clients directly in Korean, Chinese, and Japanese.',
         'The firm assists with Taiwan company formation, litigation across practice areas, residence-permit procedures, and tax-accounting assistance.',
         'Initial fact review, document analysis, procedure planning, and dispute handling can be assessed in one flow.',
         'You can review Attorney Wei Tseng’s profile, columns, and public channels from the same entry point.',
@@ -522,7 +522,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       heroPoints: [
         'Entity choice, investment approval, capital remittance, registration, and operating contracts should be reviewed as one Taiwan-law process.',
         'The guide explains subsidiary, branch, and representative-office choices from the perspective of overseas parents and investors entering Taiwan — not limited to one home country.',
-        'English-speaking attorneys are available for consultation, in person or by video. Initial review can start remotely.',
+        'The firm provides consultations in English, Chinese, Korean, and Japanese, in person or by video. Attorney Wei Tseng works with clients directly in Korean, Chinese, and Japanese. Initial review can start remotely.',
         'After registration, the firm can assist with residence-permit procedures and tax-accounting assistance for the Taiwan operation.',
         'Official government pages are linked as reference destinations; they do not decide eligibility on their own.',
       ],
@@ -585,7 +585,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: 'Can company setup review start while the parent is still outside Taiwan?',
           answer:
-            'Yes. English-speaking attorneys can begin an initial review by email or video. Local filings, bank work, and in-person steps are mapped after that first consultation. Current consultation structure is on the Service Fees page.',
+            'Yes. Initial review can begin by email or video. Local filings, bank work, and in-person steps are mapped after that first consultation. Current consultation structure is on the Service Fees page.',
         },
         {
           question: 'Do you assist with residence permits after company setup?',
@@ -607,12 +607,12 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       slug: 'taiwan-litigation-lawyer',
       label: 'SEARCH GUIDE',
       title: 'Taiwan Litigation Lawyer for Contract Disputes & Civil Claims',
-      description: 'A practical guide for overseas companies and individuals looking for a Taiwan litigation lawyer for contract disputes, unpaid invoices, civil claims, criminal matters, and family disputes. English-speaking attorneys are available.',
+      description: 'A practical guide for overseas companies and individuals looking for a Taiwan litigation lawyer for contract disputes, unpaid invoices, civil claims, criminal matters, and family disputes. Office consultations are available in English, Chinese, Korean, and Japanese.',
       keywords: ['Taiwan litigation lawyer', 'Taiwan civil litigation lawyer', 'Taiwan damages lawyer', 'Taiwan criminal lawyer', 'Wei Tseng attorney', 'sue a company in Taiwan', 'Taiwan debt recovery lawyer', 'Taiwan commercial dispute lawyer'],
       searchTerms: ['Taiwan litigation lawyer', 'Taiwan civil litigation lawyer', 'Taiwan damages lawyer', 'Taiwan debt recovery', 'sue a Taiwanese company'],
       heroPoints: [
         'We handle Taiwan contract disputes and unpaid invoices, as well as civil claims, criminal matters, and family disputes according to the case.',
-        'English-speaking attorneys are available for consultation, in person or by video. Early review can start from outside Taiwan.',
+        'The firm provides consultations in English, Chinese, Korean, and Japanese, in person or by video. Attorney Wei Tseng works with clients directly in Korean, Chinese, and Japanese. Early review can start from outside Taiwan.',
         'Foreign-national matters often require combined review of evidence, translation, service, deadlines, and immigration-related issues.',
         'Attorney Wei Tseng’s related case references and columns are linked directly for context.',
       ],

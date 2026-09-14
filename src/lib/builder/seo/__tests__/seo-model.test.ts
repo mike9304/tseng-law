@@ -353,6 +353,28 @@ describe('builder SEO model', () => {
     expect(alternates.find((a) => a.hreflang === 'x-default')?.href).toBe('https://example.com/ko/faq');
   });
 
+  it('omits hreflang and x-default for globally noindex reviews pages', () => {
+    const reviewsKo = page({
+      pageId: 'reviews-ko',
+      slug: 'reviews',
+      locale: 'ko',
+      linkedPageIds: { en: 'reviews-en' },
+    });
+    const reviewsEn = page({
+      pageId: 'reviews-en',
+      slug: 'reviews',
+      locale: 'en',
+      title: { ko: '후기', en: 'Reviews', 'zh-hant': '評價' },
+    });
+
+    const alternates = buildHreflangAlternates(reviewsKo, 'https://example.com', [reviewsKo, reviewsEn]);
+    expect(alternates).toEqual([]);
+
+    const seo = buildPageSeo(reviewsEn, 'https://example.com', 'en', [reviewsKo, reviewsEn]);
+    expect(seo.noIndex).toBe(true);
+    expect(seo.hreflang).toEqual([]);
+  });
+
   it('advertises static-fallback locales for a standard-slug page without translations', () => {
     // A builder page whose slug is a legacy-fallback slug (e.g. services)
     // is reachable at /<locale>/services for every supported locale via the

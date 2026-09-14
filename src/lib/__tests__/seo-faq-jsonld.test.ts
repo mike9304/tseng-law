@@ -1,5 +1,9 @@
+import { Children, isValidElement } from 'react';
 import { describe, expect, it } from 'vitest';
+import { HomeLegacyPage } from '@/app/[locale]/(legacy)/home-legacy';
+import { faqContent } from '@/data/faq-content';
 import { buildFaqJsonLd } from '@/lib/seo';
+import type { SiteLocale } from '@/lib/locales';
 
 describe('buildFaqJsonLd', () => {
   it('returns null for an empty list', () => {
@@ -72,4 +76,32 @@ describe('buildFaqJsonLd', () => {
     const node = buildFaqJsonLd([{ q: '問題', a: '回答' }], 'zh-hant');
     expect(node!.inLanguage).toBe('zh-Hant');
   });
+});
+
+describe('home visible FAQ JSON-LD (P1-7)', () => {
+  it.each(['en', 'ko', 'zh-hant', 'ja'] as const satisfies readonly SiteLocale[])(
+    'emits FAQPage Question.name values identical to the visible %s home FAQ questions',
+    (locale) => {
+      const page = HomeLegacyPage({ locale });
+      const faqNode = Children.toArray(page.props.children).find((child) => {
+        if (!isValidElement<{ data?: Record<string, unknown> }>(child)) return false;
+        return child.props.data?.['@type'] === 'FAQPage';
+      });
+
+      expect(faqNode).toBeDefined();
+      if (!isValidElement<{ data: Record<string, unknown> }>(faqNode)) {
+        throw new Error(`${locale} home FAQPage JSON-LD was not rendered`);
+      }
+
+      const visibleQuestions = faqContent[locale].map((item) => item.question);
+      const mainEntity = faqNode.props.data.mainEntity as Array<{ name?: string }>;
+      expect(mainEntity.map((entity) => entity.name)).toEqual(visibleQuestions);
+
+      const expected = buildFaqJsonLd(
+        faqContent[locale].map((item) => ({ q: item.question, a: item.answer })),
+        locale,
+      );
+      expect(faqNode.props.data).toEqual(expected);
+    },
+  );
 });

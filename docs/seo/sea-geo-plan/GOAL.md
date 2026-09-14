@@ -72,7 +72,7 @@
 | 4로케일 URL 색인율 | 0/14 검사(26 미확인) | | |
 | 방문 SEA 세션 · AI 채널 세션 (28일) | 9/1~9/7: SEA 3(SG2·VN1) · AI 1 | | visit-28d |
 
-- 9/14 10:3x: 손빗 AI 인용 실측 5일째 미도착 → 상태 확인 ASK(aicite-status) 발송. 업스트림 c0bf619b(29커밋, dba50dba가 안내 JSON-LD 패리티로 ld 3~4개로 확장) 라이브 계약 재확인 OK(availableLanguage 4개·summary·FAQPage·llms.txt 200). 브랜치는 origin/main 위로 리베이스(docs 1커밋만 미push).
+- 9/14 10:4x 손빗 답: 실측 미착수였음 → 9/14부터 Perplexity+Google 우선 착수, W1(9/16) 전 일부 선반영 목표, 완료 시 같은 파일 §3에 기록. 총괄은 파일 변경 감시만. 업스트림 c0bf619b(29커밋, dba50dba가 안내 JSON-LD 패리티로 ld 3~4개로 확장) 라이브 계약 재확인 OK(availableLanguage 4개·summary·FAQPage·llms.txt 200). 브랜치는 origin/main 위로 리베이스(docs 1커밋만 미push).
 - 다른 세션 ASK(sea-form 실전송 4건)는 이 캠페인 관할 아님 — 무시.
 
 ## D. 세션 로그

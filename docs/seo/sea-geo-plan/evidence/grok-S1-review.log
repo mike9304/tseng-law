@@ -1,0 +1,24 @@
+[WO-S1-review 시작 Wed Sep  9 11:53:41 KST 2026]
+원본은 그대로 두고 `docs/seo/sea-intent-map-2026-09.REVIEW.md`만 작성했습니다.
+
+**총평 FAIL · FAIL 건수 5** (4만 PASS).
+
+핵심 반려 이유:
+
+1. **출처** — 본문 “70~82% 이주노동자”가 같은 표의 PH 86.0%와 안 맞음. 직업 세목 숫자는 출처 표 “쓴 값” 밖. TH ③ “산재 노출 업종 집중”은 미확인을 A급처럼 씀.
+2. **현지어** — TH ④ `สิทธิเลี้ยงดูบุตร`는 양육비라 영어 열의 custody와 다른 개념. 나머지는 대체로 자연스럽고 교정문을 리뷰에 적음.
+3. **URL** — 적어 넣은 `/vi|id|th|fil/services`, EN 랜딩·칼럼·`/en/services/labor`는 코드 규칙상 실존. 다만 MY·SG ②를 `없음`으로 둔 것은 기존 `/en/taiwan-company-setup-lawyer` 거류 FAQ와 모순.
+4. **언어 계약** — vi/id/th/fil 상담·통역 암시 0.
+5. **광고** — 승소율·보장은 없으나 69행 “6국 **최고**”가 금지 토큰.
+6. **중복** — C1–C5 초안이 `/services` 투자 절·EN 설립 랜딩과 거의 같고, H셀(ARC·노동허가 **갱신**)은 안 덮음.
+
+---
+
+(1) 변경 파일: `docs/seo/sea-intent-map-2026-09.REVIEW.md` (신규). 원본·금지 파일 미변경.
+
+(2) 실행한 명령: 없음 (WO: Bash 없이 Read/Grep만). 테스트·build·HTTP fetch 없음.
+
+(3) 1 FAIL · 2 FAIL · 3 FAIL · 4 PASS · 5 FAIL · 6 FAIL
+
+(4) 못 한 것: S1/S2/S3 원표 칸값, 라이브 HTTP, JSON-LD `availableLanguage` 실값, 원어민 검수. 원본 수정도 하지 않음.
+=== WO-S1-review 종료 code=0 Wed Sep  9 12:01:10 KST 2026 ===

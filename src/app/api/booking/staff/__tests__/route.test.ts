@@ -101,6 +101,58 @@ describe('/api/booking/staff', () => {
     expect(listStaffMock).not.toHaveBeenCalled();
   });
 
+  it('hides seed fake lawyers and canonicalizes staff-tseng names', async () => {
+    listStaffMock.mockResolvedValue([
+      {
+        staffId: 'staff-lee',
+        name: { ko: '이정민 변호사', 'zh-hant': '李貞敏 律師', en: 'Attorney Lee Jung-Min' },
+        title: { ko: '기업/비자 담당', 'zh-hant': '企業與簽證顧問', en: 'Corporate and Visa Counsel' },
+        isActive: true,
+        createdAt: '2026-06-03T00:00:00.000Z',
+        updatedAt: '2026-06-03T00:00:00.000Z',
+      },
+      {
+        staffId: 'staff-park',
+        name: { ko: '박서연 변호사', 'zh-hant': '朴書妍 律師', en: 'Attorney Park Seo-Yeon' },
+        title: { ko: '분쟁/가사 담당', 'zh-hant': '爭議與家事顧問', en: 'Disputes and Family Counsel' },
+        isActive: true,
+        createdAt: '2026-06-03T00:00:00.000Z',
+        updatedAt: '2026-06-03T00:00:00.000Z',
+      },
+      {
+        staffId: 'staff-tseng',
+        name: { ko: '증위명 변호사', 'zh-hant': '曾偉銘 律師', en: 'Attorney Tseng Wei-Ming' },
+        title: { ko: '대표 변호사', 'zh-hant': '主持律師', en: 'Managing Attorney' },
+        bio: { ko: '소개', 'zh-hant': '介紹', en: 'Bio' },
+        isActive: true,
+        createdAt: '2026-06-03T00:00:00.000Z',
+        updatedAt: '2026-06-03T00:00:00.000Z',
+      },
+    ] as never);
+    getServiceMock.mockResolvedValue({
+      ...service,
+      staffIds: ['staff-tseng', 'staff-lee', 'staff-park'],
+    } as never);
+
+    const response = await GET(request('serviceId=svc-1&locale=ko'));
+    const payload = await response.json() as {
+      staff: Array<{ staffId: string; name: Record<string, string>; displayName: string }>;
+    };
+
+    expect(response.status).toBe(200);
+    expect(payload.staff.map((member) => member.staffId)).toEqual(['staff-tseng']);
+    expect(payload.staff[0]?.displayName).toBe('증준외');
+    expect(payload.staff[0]?.name).toEqual({
+      ko: '증준외',
+      'zh-hant': '曾雋崴',
+      en: 'Wei Tseng',
+    });
+    expect(JSON.stringify(payload)).not.toContain('이정민');
+    expect(JSON.stringify(payload)).not.toContain('박서연');
+    expect(JSON.stringify(payload)).not.toContain('증위명');
+    expect(JSON.stringify(payload)).not.toContain('曾偉銘');
+  });
+
   it('returns localized list failures without leaking exception details', async () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     listStaffMock.mockRejectedValueOnce(new Error('booking staff secret leaked'));

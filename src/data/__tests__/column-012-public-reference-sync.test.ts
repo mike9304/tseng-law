@@ -14,6 +14,11 @@ import { filterSearchIndex, getSearchIndex } from '@/lib/search';
 import { buildArticleJsonLd } from '@/lib/seo';
 import type { BuilderSitemapEntry } from '@/lib/builder/seo/sitemap-builder';
 import { generateMetadata } from '@/app/[locale]/columns/[slug]/page';
+import {
+  absentOptionalColumnLocales,
+  buildExpectedColumnAlternates,
+  presentOptionalColumnLocales,
+} from './column-alternate-expectations';
 
 const slug = 'taiwan-overtaking-accident-liability';
 const aliasSlug = 'overtaking-accident';
@@ -127,13 +132,14 @@ const articlePaths = {
   ja: 'src/content/columns-ja/012-taiwan-overtaking-accident-liability.md',
 } as const;
 
-const expectedCanonicalAlternates = {
-  ko: `${siteUrl}/ko/columns/${slug}`,
-  'zh-Hant': `${siteUrl}/zh-hant/columns/${slug}`,
-  en: `${siteUrl}/en/columns/${slug}`,
-  ja: `${siteUrl}/ja/columns/${slug}`,
-  'x-default': `${siteUrl}/en/columns/${slug}`,
-} as const;
+/**
+ * Derived, never frozen: the base four plus every vi/id/th/fil translation file
+ * that currently exists on disk. New translation files must extend this set
+ * rather than break the suite; missing ones must emit no alternate at all.
+ */
+const expectedCanonicalAlternates = buildExpectedColumnAlternates(siteUrl, slug);
+const presentOptionalLocales = presentOptionalColumnLocales(slug);
+const absentOptionalLocales = absentOptionalColumnLocales(slug);
 
 const expectedCivilColumnSlugs = [
   'taiwan-gym-injury-lawsuit',
@@ -149,10 +155,10 @@ const expectedCivilTitles = {
 } as const;
 
 const expectedCivilIntros = {
-  ko: '법무법인 호정은 계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 157만 TWD 손해배상 판결을 이끌어낸 실적이 있으며, 외국인 의뢰인의 대만 소송 절차를 한국어로 밀착 지원합니다.',
+  ko: '법무법인 호정은 계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 157만 TWD 손해배상 판결을 이끌어낸 실적이 있으며, 한국어로 한국 의뢰인을 밀착 지원하고 외국인 의뢰인의 대만 소송 절차는 사무소 상담 언어(한국어·중국어·일본어·영어)로 지원합니다.',
   'zh-hant':
-    '昊鼎處理契約爭議、損害賠償及消費者權益等民事案件，曾代理韓國留學生健身房受傷案，於一審獲判新臺幣157萬元賠償，並以中韓雙語支援外國當事人在台灣的訴訟程序。',
-  en: 'We handle civil disputes including breach of contract, tort, and consumer claims. In a Korean student gym injury case, we obtained a TWD 1.57 million first-instance damages award and provide multilingual support throughout Taiwan litigation.',
+    '昊鼎處理契約爭議、損害賠償及消費者權益等民事案件，曾代理韓國留學生健身房受傷案，於一審獲判新臺幣157萬元賠償，並以事務所諮詢語言（中文、韓文、日文、英文）支援外國當事人在台灣的訴訟程序。',
+  en: 'We handle civil disputes including breach of contract, tort, and consumer claims. In a Korean student gym injury case, we obtained a TWD 1.57 million first-instance damages award, and the firm supports foreign clients in Taiwan litigation with consultations in English, Chinese, Korean, and Japanese.',
 } as const;
 
 const expectedCivilKeyPoints = {
@@ -223,10 +229,10 @@ const expectedHomeFeaturedIds = [
   'company-advanced-2',
 ];
 const expectedOtherPostsSha256 = {
-  ko: 'fc42b51d1ecbf394dd7e7ee86334374b011be378f0c583f821f6a33b0fb12f85',
+  ko: '018a04ac98b64e0747323875fb4d99c55e8a068fe2166eaf1d4ee646d46d4840',
   'zh-hant':
-    'cbd3cf753735844ce84c66fb403885d8e7af6a7279ac1bc06a294ea6248cf9ea',
-  en: 'c71c5448518e86fab5b7518678202fc402175f8496450c082996f5652c4204f7',
+    'e7bfc81d5e3381a1b6986ab129f433e8b70d8d80b49577fc5f59fb7ecf363031',
+  en: 'dbad0d2163251eb43d265786d52417524e6c6607528e7e8f2e1e0ef158c77e79',
 } as const;
 
 function getRelatedColumn(locale: (typeof siteLocales)[number]) {
@@ -354,7 +360,7 @@ describe('column 012 public reference synchronization', () => {
     }
   });
 
-  it('publishes each canonical column URL once with four-language alternates in the sitemap', async () => {
+  it('publishes each canonical column URL once with the file-backed language alternates in the sitemap', async () => {
     const { default: sitemap } = await import('@/app/sitemap');
     const entries = await sitemap();
     const pathSuffix = `/columns/${slug}`;
@@ -365,6 +371,18 @@ describe('column 012 public reference synchronization', () => {
       );
       expect(matches, locale).toHaveLength(1);
       expect(matches[0]?.alternates?.languages).toEqual(expectedCanonicalAlternates);
+
+      const languages: Record<string, unknown> = { ...(matches[0]?.alternates?.languages ?? {}) };
+      for (const optionalLocale of presentOptionalLocales) {
+        expect(languages[optionalLocale], `${locale} -> ${optionalLocale}`).toBe(
+          `${siteUrl}/${optionalLocale}/columns/${slug}`,
+        );
+      }
+      for (const optionalLocale of absentOptionalLocales) {
+        expect(Object.keys(languages), `${locale} -> ${optionalLocale}`).not.toContain(
+          optionalLocale,
+        );
+      }
     }
 
     expect(
@@ -372,7 +390,7 @@ describe('column 012 public reference synchronization', () => {
     ).toBe(false);
   });
 
-  it('emits exact generateMetadata title, canonical, and four-language alternates for all locales', async () => {
+  it('emits exact generateMetadata title, canonical, and file-backed language alternates for all locales', async () => {
     for (const locale of siteLocales) {
       const metadata = await generateMetadata({
         params: Promise.resolve({ locale, slug }),
@@ -383,6 +401,18 @@ describe('column 012 public reference synchronization', () => {
         `${siteUrl}/${locale}/columns/${slug}`,
       );
       expect(metadata.alternates?.languages, locale).toEqual(expectedCanonicalAlternates);
+
+      const languages: Record<string, unknown> = { ...(metadata.alternates?.languages ?? {}) };
+      for (const optionalLocale of presentOptionalLocales) {
+        expect(languages[optionalLocale], `${locale} -> ${optionalLocale}`).toBe(
+          `${siteUrl}/${optionalLocale}/columns/${slug}`,
+        );
+      }
+      for (const optionalLocale of absentOptionalLocales) {
+        expect(Object.keys(languages), `${locale} -> ${optionalLocale}`).not.toContain(
+          optionalLocale,
+        );
+      }
     }
 
     for (const locale of siteLocales) {
@@ -397,6 +427,20 @@ describe('column 012 public reference synchronization', () => {
       expect(aliasMetadata.alternates?.languages, locale).toEqual(
         expectedCanonicalAlternates,
       );
+
+      const aliasLanguages: Record<string, unknown> = {
+        ...(aliasMetadata.alternates?.languages ?? {}),
+      };
+      for (const optionalLocale of presentOptionalLocales) {
+        expect(aliasLanguages[optionalLocale], `${locale} -> ${optionalLocale}`).toBe(
+          `${siteUrl}/${optionalLocale}/columns/${slug}`,
+        );
+      }
+      for (const optionalLocale of absentOptionalLocales) {
+        expect(Object.keys(aliasLanguages), `${locale} -> ${optionalLocale}`).not.toContain(
+          optionalLocale,
+        );
+      }
     }
   });
 

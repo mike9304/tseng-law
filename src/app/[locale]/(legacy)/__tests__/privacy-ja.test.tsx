@@ -37,6 +37,10 @@ describe('Japanese privacy integration', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/privacy`,
       en: `${SITE_URL}/en/privacy`,
       ja: `${SITE_URL}/ja/privacy`,
+      vi: `${SITE_URL}/vi/privacy`,
+      id: `${SITE_URL}/id/privacy`,
+      th: `${SITE_URL}/th/privacy`,
+      fil: `${SITE_URL}/fil/privacy`,
       'x-default': `${SITE_URL}/en/privacy`,
     });
   });
@@ -82,13 +86,13 @@ describe('Japanese privacy integration', () => {
     expect(html).not.toContain('href="/ja/columns"');
     expect(html).toContain(`${SITE_URL}/ja`);
     expect(html).toContain('wei@hoveringlaw.com.tw');
-    expect(html).toContain('標準で90日間の保管基準');
+    expect(html).toContain('90日間の保管基準');
     expect(html).toContain('Vercel');
     expect(html).toContain('OpenAI');
-    expect(html).toContain('SMTP');
-    expect(html).toContain('実際のSMTP事業者名は運営者による確認が必要です');
+    expect(html).toContain('当事務所が利用するメールサービスの経路で送信されます');
     expect(html).toContain('旅券番号、身分証番号、銀行口座情報');
-    expect(html).toContain('事故対応責任者、通知基準および連絡網は運営者による確認が必要です');
+    expect(html).toContain('法令に従って必要な通知を実施します');
+    expect(html).not.toMatch(/運営者による確認|確認が必要|SMTP/);
 
     for (const fallback of [
       'Privacy Policy',
@@ -129,9 +133,12 @@ describe('Japanese privacy integration', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/privacy`,
       en: `${SITE_URL}/en/privacy`,
       ja: `${SITE_URL}/ja/privacy`,
+      vi: `${SITE_URL}/vi/privacy`,
+      id: `${SITE_URL}/id/privacy`,
+      th: `${SITE_URL}/th/privacy`,
+      fil: `${SITE_URL}/fil/privacy`,
       'x-default': `${SITE_URL}/en/privacy`,
     });
-    // WO#3: /ja/privacy is a live Japanese page, so ja must be advertised.
     expect(metadata.alternates?.languages).toHaveProperty('ja', `${SITE_URL}/ja/privacy`);
   });
 

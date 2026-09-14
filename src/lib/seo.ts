@@ -1,8 +1,15 @@
 import type { Metadata } from 'next';
 import { CONSULTATION_EMAIL } from '@/lib/consultation/public-contact';
 import type { Locale, SiteLocale } from '@/lib/locales';
-import { defaultLocale, siteLocales } from '@/lib/locales';
+import { defaultLocale, siteLocales, isSiteLocale } from '@/lib/locales';
+import {
+  buildGuidanceCoreLanguageAlternates,
+  guidancePageKeyFromSlugPath,
+  type PublicDocumentLanguage,
+  type PublicLocale8,
+} from '@/lib/public-guidance';
 import { isEnglishNoindexPath } from '@/lib/seo-visibility';
+import { taiwanOfficeSeoRecords } from '@/data/office-locations';
 
 type ImageInput =
   | string
@@ -13,8 +20,10 @@ type ImageInput =
       alt?: string;
     };
 
+type PublicSeoLocale = Locale | SiteLocale | PublicLocale8;
+
 type SeoMetadataInput = {
-  locale: Locale | SiteLocale;
+  locale: PublicSeoLocale;
   title: string;
   description: string;
   path?: string;
@@ -22,7 +31,7 @@ type SeoMetadataInput = {
   images?: ImageInput | ImageInput[];
   noindex?: boolean;
   type?: 'website' | 'article';
-  alternateLocales?: readonly (Locale | SiteLocale)[];
+  alternateLocales?: readonly PublicSeoLocale[];
 };
 
 type BreadcrumbItem = {
@@ -31,7 +40,7 @@ type BreadcrumbItem = {
 };
 
 type ArticleJsonLdInput = {
-  locale: SiteLocale;
+  locale: PublicSeoLocale;
   title: string;
   description: string;
   path: string;
@@ -46,7 +55,14 @@ type ArticleJsonLdInput = {
 };
 
 type PersonProfileJsonLdInput = {
-  locale: SiteLocale;
+  /**
+   * Page locale. Widened from `SiteLocale` to `PublicSeoLocale` for WO-O28 so
+   * the guidance surface (vi/id/th/fil) can emit the same Person node. The
+   * locale is only read through {@link getOrganizationName} and
+   * {@link getLocalizedPath}, both of which already accept eight locales, so
+   * the four site locales keep byte-identical output.
+   */
+  locale: PublicSeoLocale;
   path: string;
   /**
    * Optional explicit `@id` for the Person node. Pass `ATTORNEY_PERSON_ID` to
@@ -67,7 +83,7 @@ type PersonProfileJsonLdInput = {
 };
 
 type CollectionPageJsonLdInput = {
-  locale: SiteLocale;
+  locale: PublicSeoLocale;
   path: string;
   name: string;
   description?: string;
@@ -123,6 +139,31 @@ const openGraphLocale: Record<SiteLocale, string> = {
   ja: 'ja_JP',
 };
 
+const guidanceOpenGraphLocale: Record<string, string> = {
+  vi: 'vi_VN',
+  id: 'id_ID',
+  th: 'th_TH',
+  fil: 'fil_PH',
+};
+
+function chromeSiteLocale(locale: PublicSeoLocale): SiteLocale {
+  return isSiteLocale(locale) ? locale : 'en';
+}
+
+function openGraphLocaleFor(locale: PublicSeoLocale): string {
+  if (isSiteLocale(locale)) return openGraphLocale[locale];
+  return guidanceOpenGraphLocale[locale] ?? openGraphLocale.en;
+}
+
+/**
+ * WO-O29 C. `og:locale` for any of the eight public locales. The four guidance
+ * routes build their metadata by hand and emitted no `openGraph` block at all,
+ * so vi/id/th/fil published no `og:locale` while ko/zh-hant/en/ja did.
+ */
+export function getOpenGraphLocale(locale: PublicSeoLocale): string {
+  return openGraphLocaleFor(locale);
+}
+
 const organizationLanguageTags = ['ko', 'zh-Hant', 'en', 'ja'];
 const organizationAddress: Record<SiteLocale, string> = {
   ko: '타이베이시 다퉁구 청더로 1단 35호 7층의2',
@@ -162,12 +203,12 @@ export function getSearchEngineVerification(): Metadata['verification'] | undefi
   };
 }
 
-export function getLocaleLanguageTag(locale: Locale | SiteLocale): string {
+export function getLocaleLanguageTag(locale: PublicSeoLocale): string {
   if (locale === 'zh-hant') return 'zh-Hant';
   return locale;
 }
 
-export function getLocalizedPath(locale: Locale | SiteLocale, path = ''): string {
+export function getLocalizedPath(locale: PublicSeoLocale, path = ''): string {
   if (!path || path === '/') {
     return `/${locale}`;
   }
@@ -197,13 +238,28 @@ function normalizeImages(images?: ImageInput | ImageInput[]) {
   });
 }
 
+function seoPathToSlugPath(path = ''): string {
+  if (!path || path === '/') return '';
+  return path.replace(/^\/+|\/+$/g, '');
+}
+
+/**
+ * Legacy hreflang helper. The actual eight-language cluster is reserved for
+ * the ten published core paths; untranslated details, US landings, account,
+ * store, and other real surfaces keep the caller-specified availability set.
+ */
 export function getLanguageAlternates(
   path = '',
-  alternateLocales: readonly (Locale | SiteLocale)[] = siteLocales,
+  alternateLocales: readonly PublicSeoLocale[] = siteLocales,
 ): Record<string, string> {
-  // English-noindex routes (e.g. /faq) must never emit an `en` alternate,
-  // no matter which alternateLocales the caller passed — including via
-  // x-default, which falls back to the default locale on those routes.
+  const pageKey = guidancePageKeyFromSlugPath(seoPathToSlugPath(path));
+  if (pageKey) {
+    return buildGuidanceCoreLanguageAlternates(pageKey, getSiteUrl());
+  }
+
+  // English-noindex non-core routes (e.g. /store) must never emit an `en`
+  // alternate, no matter which alternateLocales the caller passed — including
+  // via x-default, which falls back to the default locale on those routes.
   const englishNoindex = isEnglishNoindexPath(path);
   const effectiveLocales = englishNoindex
     ? alternateLocales.filter((locale) => getLocaleLanguageTag(locale).toLowerCase() !== 'en')
@@ -226,6 +282,7 @@ export function buildSeoMetadata({
   type = 'website',
   alternateLocales = siteLocales,
 }: SeoMetadataInput): Metadata {
+  const chromeLocale = chromeSiteLocale(locale);
   const canonicalPath = getLocalizedPath(locale, path);
   const canonicalUrl = buildAbsoluteUrl(canonicalPath);
   const socialImages = normalizeImages(images);
@@ -235,7 +292,7 @@ export function buildSeoMetadata({
     metadataBase: new URL(getSiteUrl()),
     // The locale layout owns the localized `%s | Brand` template. Keeping the
     // page portion here prevents Next from applying a second brand suffix.
-    title: pageTitle || { absolute: getOrganizationName(locale) },
+    title: pageTitle || { absolute: getOrganizationName(chromeLocale) },
     description,
     keywords,
     other: {
@@ -249,8 +306,8 @@ export function buildSeoMetadata({
       title,
       description,
       url: canonicalUrl,
-      siteName: organizationName[locale],
-      locale: openGraphLocale[locale],
+      siteName: organizationName[chromeLocale],
+      locale: openGraphLocaleFor(locale),
       type,
       images: socialImages,
     },
@@ -283,7 +340,12 @@ export function buildSeoMetadata({
   };
 }
 
-export function buildBreadcrumbJsonLd(locale: SiteLocale, items: BreadcrumbItem[]) {
+/**
+ * `locale` is not read: breadcrumb names and paths are passed in already
+ * localized. The parameter type was widened to {@link PublicSeoLocale} for
+ * WO-O28 so guidance-locale callers stop having to pass a false `'en'`.
+ */
+export function buildBreadcrumbJsonLd(locale: PublicSeoLocale, items: BreadcrumbItem[]) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -296,7 +358,22 @@ export function buildBreadcrumbJsonLd(locale: SiteLocale, items: BreadcrumbItem[
   };
 }
 
-export function buildWebsiteJsonLd(locale: SiteLocale) {
+/**
+ * `WebSite` (with its publisher `Organization` and the logo `ImageObject`).
+ *
+ * WO-O28 widened `locale` to {@link PublicSeoLocale} and added
+ * `includeSearchAction`. Both are additive: `getOrganizationName` and
+ * `getLocaleLanguageTag` already accept eight locales and are the identity on
+ * the four site locales, and the option defaults to `true`, so every existing
+ * caller keeps byte-identical output. The guidance surface passes `false`
+ * because vi/id/th/fil publish no `/search` route — advertising a
+ * `SearchAction` that 404s would be a false capability claim.
+ */
+export function buildWebsiteJsonLd(
+  locale: PublicSeoLocale,
+  options?: { includeSearchAction?: boolean },
+) {
+  const includeSearchAction = options?.includeSearchAction ?? true;
   const websiteUrl = buildAbsoluteUrl(getLocalizedPath(locale));
   const localizedOrganizationName = getOrganizationName(locale);
   const localizedAlternateNames = organizationAlternateNames.filter(
@@ -323,12 +400,49 @@ export function buildWebsiteJsonLd(locale: SiteLocale) {
       },
       sameAs: ['https://www.youtube.com/@weilawyer', 'https://blog.naver.com/wei_lawyer/223461663913', 'https://www.threads.com/@lawyer.wei'],
     },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${buildAbsoluteUrl(getLocalizedPath(locale, '/search'))}?q={search_term_string}`,
-      'query-input': 'required name=search_term_string',
-    },
+    ...(includeSearchAction
+      ? {
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: `${buildAbsoluteUrl(getLocalizedPath(locale, '/search'))}?q={search_term_string}`,
+            'query-input': 'required name=search_term_string',
+          },
+        }
+      : {}),
   };
+}
+
+/**
+ * The four Taiwan offices as `Place` nodes.
+ *
+ * Without these the only phone number the site exposes to a crawler is the
+ * Korean mobile on the contact page, so a Taiwan law firm publishes no Taiwan
+ * telephone, no branch address and no coordinates. Every value comes from
+ * `taiwanOfficeSeoRecords`, which mirrors what `/{locale}/contact` already
+ * shows; offices missing a phone or coordinates simply omit the property.
+ */
+function buildTaiwanOfficePlaces() {
+  return taiwanOfficeSeoRecords.map((office) => ({
+    '@type': 'Place' as const,
+    '@id': `${ORGANIZATION_ID}-office-${office.id}`,
+    address: {
+      '@type': 'PostalAddress' as const,
+      streetAddress: office.address,
+      addressLocality: office.addressLocality,
+      postalCode: office.postalCode,
+      addressCountry: 'TW',
+    },
+    ...(office.telephone ? { telephone: office.telephone } : {}),
+    ...(office.geo
+      ? {
+          geo: {
+            '@type': 'GeoCoordinates' as const,
+            latitude: office.geo.latitude,
+            longitude: office.geo.longitude,
+          },
+        }
+      : {}),
+  }));
 }
 
 export function buildLegalServiceJsonLd(
@@ -382,6 +496,7 @@ export function buildLegalServiceJsonLd(
       addressLocality: 'Taipei City',
       addressCountry: 'TW',
     },
+    location: buildTaiwanOfficePlaces(),
   };
 }
 
@@ -420,7 +535,7 @@ export function buildArticleJsonLd({
     },
     publisher: {
       '@type': 'Organization',
-      name: organizationName[locale],
+      name: organizationName[chromeSiteLocale(locale)],
       logo: {
         '@type': 'ImageObject',
         url: buildAbsoluteUrl(LOGO_IMAGE),
@@ -463,7 +578,7 @@ export function buildPersonJsonLd({
     worksFor: {
       '@type': 'Organization',
       '@id': ORGANIZATION_ID,
-      name: organizationName[locale],
+      name: getOrganizationName(locale),
       url: buildAbsoluteUrl(getLocalizedPath(locale)),
     },
     alumniOf: alumniOf?.map((school) => ({
@@ -517,7 +632,7 @@ export function buildProfilePageJsonLd({
       worksFor: {
         '@type': 'Organization',
         '@id': ORGANIZATION_ID,
-        name: organizationName[locale],
+        name: getOrganizationName(locale),
         url: buildAbsoluteUrl(getLocalizedPath(locale)),
       },
       alumniOf: alumniOf?.map((school) => ({
@@ -555,8 +670,8 @@ export function buildCollectionPageJsonLd({
   };
 }
 
-export function getOrganizationName(locale: Locale | SiteLocale): string {
-  return organizationName[locale];
+export function getOrganizationName(locale: PublicSeoLocale): string {
+  return organizationName[chromeSiteLocale(locale)];
 }
 
 /**
@@ -590,7 +705,7 @@ export function stripOrganizationNameSuffix(title: string): string {
 
 export function buildLocalizedPageTitle(
   title: string,
-  locale: Locale | SiteLocale,
+  locale: PublicSeoLocale,
 ): string {
   const brand = getOrganizationName(locale);
   const pageTitle = stripOrganizationNameSuffix(title);
@@ -606,7 +721,7 @@ export function buildLocalizedPageTitle(
  * Returns `null` when there are no valid items so callers can skip injecting
  * an empty FAQPage block (Google rich-result eligibility requires ≥1 Q/A).
  */
-export function buildFaqJsonLd(items: FaqJsonLdItem[], locale?: SiteLocale) {
+export function buildFaqJsonLd(items: FaqJsonLdItem[], locale?: PublicSeoLocale) {
   const valid = (Array.isArray(items) ? items : [])
     .filter((item): item is FaqJsonLdItem => Boolean(item && item.q && item.a))
     .map((item) => ({ q: String(item.q), a: String(item.a) }));
@@ -688,4 +803,117 @@ export function buildHowToJsonLd({ name, description, steps, totalTime, locale }
   }
 
   return node;
+}
+
+/**
+ * Consultation languages the firm actually works in. The vi/id/th/fil guidance
+ * pages are *page* languages only, so this list is fixed and must never grow to
+ * include a guidance locale: `availableLanguage` is read by answer engines as a
+ * promise that the firm can be consulted in that language.
+ */
+export const GUIDANCE_CONSULTATION_LANGUAGES = ['en', 'zh-Hant', 'ja', 'ko'] as const;
+
+type GuidanceFaqItem = {
+  question: string;
+  answer: string;
+};
+
+type GuidanceLegalServiceInput = {
+  /** BCP-47 tag of the page the node is emitted on (vi / id / th / fil). */
+  inLanguage: PublicDocumentLanguage;
+  /** Absolute canonical URL of the guidance page. */
+  url: string;
+  description?: string;
+  /**
+   * Absolute URL of this locale's own contact page. When given, the node
+   * carries the same `ContactPoint` the four site locales emit through
+   * {@link buildLegalServiceJsonLd}, pointed at the guidance contact route.
+   */
+  contactUrl?: string;
+};
+
+/**
+ * `FAQPage` JSON-LD for a guidance page. Reuses {@link buildFaqJsonLd} so the
+ * Question/Answer shape stays identical to the column pages; only the
+ * `{ question, answer }` field names and the wider `inLanguage` set differ
+ * (guidance locales are outside `SiteLocale`).
+ *
+ * Text is passed through verbatim — never summarised — so the JSON-LD and the
+ * visible answer are the same sentences.
+ */
+export function buildGuidanceFaqJsonLd(
+  items: readonly GuidanceFaqItem[] | undefined,
+  inLanguage: PublicDocumentLanguage,
+) {
+  const source = Array.isArray(items) ? items : [];
+  const node = buildFaqJsonLd(
+    source.map((item) => ({ q: item?.question, a: item?.answer })) as FaqJsonLdItem[],
+  );
+  if (!node) return null;
+
+  node.inLanguage = inLanguage;
+  return node;
+}
+
+/**
+ * `LegalService` JSON-LD for a guidance page. It reuses the existing
+ * organization `@id` and {@link ATTORNEY_PERSON_ID} rather than minting a new
+ * entity, so the eight-language surface stays one firm and one attorney.
+ *
+ * `availableLanguage` is pinned to {@link GUIDANCE_CONSULTATION_LANGUAGES};
+ * `inLanguage` (the language of the page itself) is the only place a guidance
+ * locale may appear.
+ */
+export function buildGuidanceLegalServiceJsonLd({
+  inLanguage,
+  url,
+  description,
+  contactUrl,
+}: GuidanceLegalServiceInput) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LegalService',
+    '@id': ORGANIZATION_ID,
+    name: getOrganizationName('en'),
+    ...(description ? { description } : {}),
+    url,
+    inLanguage,
+    email: CONSULTATION_EMAIL,
+    availableLanguage: [...GUIDANCE_CONSULTATION_LANGUAGES],
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        email: CONSULTATION_EMAIL,
+        // The four consultation languages, never the page language: this is a
+        // promise about how the firm can be reached, not about the document.
+        availableLanguage: [...GUIDANCE_CONSULTATION_LANGUAGES],
+        ...(contactUrl ? { url: contactUrl } : {}),
+      },
+    ],
+    provider: {
+      '@type': 'Person',
+      '@id': ATTORNEY_PERSON_ID,
+    },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: organizationAddress.en,
+      addressLocality: 'Taipei City',
+      addressCountry: 'TW',
+    },
+  };
+}
+
+/**
+ * Site-wide `WebSite` node for a guidance locale (vi/id/th/fil).
+ *
+ * The four site locales get this from `[locale]/layout.tsx`; the guidance
+ * branch of that layout emitted nothing, which is why `WebSite`,
+ * `Organization` and the logo `ImageObject` were missing from every guidance
+ * page. The only deliberate difference from the four site locales is the
+ * omitted `SearchAction`: the guidance surface publishes ten pages and no
+ * `/search` route.
+ */
+export function buildGuidanceWebsiteJsonLd(locale: PublicLocale8) {
+  return buildWebsiteJsonLd(locale, { includeSearchAction: false });
 }

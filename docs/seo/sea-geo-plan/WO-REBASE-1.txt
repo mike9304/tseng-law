@@ -1,0 +1,20 @@
+# WO-REBASE-1 — 배포 라인을 origin/main(c6d85c54)에 리베이스 + 답변 블록/JSON-LD를 새 렌더 경로로 이식 (Opus 5)
+
+## 공통 규칙
+작업트리 ~/Projects/tseng-law-sea-seo-20260909 (브랜치 seo/sea-geo-20260909) 만. 백업 태그 `sea-geo-pre-rebase-20260909` 존재 — 문제 시 `git reset --hard sea-geo-pre-rebase-20260909`. push·force push 금지. 이 WO 에서만 `git rebase --continue`가 만드는 커밋은 허용(새 커밋 추가 금지). 전체 스위트·playwright·build 금지. 언어 계약(availableLanguage 4개)·번역 레인 파일(international-guidance-content.ts·src/content/**) 수정 금지.
+
+## 상황
+origin/main 에 번역 레인 커밋 7개(350287e7 디자인 패리티 등)가 들어와 `src/components/InternationalGuidance.tsx`가 58줄 래퍼로 바뀌고 실제 렌더는 신규 `src/components/GuidancePageBody.tsx`(189줄)로 이동. 내 브랜치 커밋 1d5577ca(답변 블록)·a506a7c1·99fde7eb(FAQPage/LegalService JSON-LD)·b1002186·915614df 가 그 파일들을 수정함 → 충돌.
+
+## 절차
+1. `git fetch origin && git rebase origin/main`. 충돌 커밋마다:
+   - `InternationalGuidance.tsx` / `.module.css`: **origin/main 쪽(theirs=업스트림) 구조를 채택**하고, 내 변경(답변 블록 `<section aria-label="summary">` + `guidanceAnswers` 조회, FAQPage/LegalService `JsonLd` 2개)은 **GuidancePageBody.tsx**의 대응 위치(본문 최상단 / 컴포넌트 루트)로 이식. `.answerBlock` 스타일은 GuidancePageBody가 쓰는 CSS 모듈에 클래스 1개로 추가.
+   - 나머지 파일(seo.ts·llms-txt.ts·public-guidance.ts·middleware.ts·route.ts·테스트)은 양쪽 변경을 모두 살린다.
+   - 각 충돌 해결 후 `git add` → `git rebase --continue`.
+2. 리베이스 완료 후: `npx tsc --noEmit -p tsconfig.json` 0오류, `npx vitest run src/lib/__tests__/international-guidance-answers.test.ts src/lib/__tests__/guidance-jsonld.test.ts src/lib/__tests__/public-guidance.test.ts 'src/app/[locale]/__tests__/llms-discovery.test.tsx' 'src/app/[locale]/llms.txt/__tests__/route.test.ts' src/middleware.test.ts src/lib/__tests__/multilingual-seo.test.ts` 통과. guidance-jsonld 테스트가 InternationalGuidance 를 렌더해 JSON-LD 를 찾는다면 GuidancePageBody(또는 그것을 포함하는 상위)로 대상 갱신.
+3. 답변 블록·JSON-LD가 실제 렌더 트리에 있는지 코드 리딩으로 확인(`[[...slug]]/page.tsx` → 어떤 컴포넌트 → GuidancePageBody). 번역 레인의 새 FAQAccordion 이 faqs 를 렌더한다면 FAQPage JSON-LD 는 그대로 두되 텍스트 중복 렌더는 만들지 않는다.
+
+## 완료 기준
+1. `git log --oneline origin/main..HEAD` 가 내 커밋만(25개 내외) 포함, `git status` clean
+2. tsc 0, 지정 vitest 전부 통과(출력)
+3. 보고: 충돌 파일별 해결 요약, 이식 위치(파일:줄), 실행 명령·출력, 미해결

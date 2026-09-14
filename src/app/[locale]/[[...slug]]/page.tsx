@@ -13,6 +13,20 @@ import { getLegacyPageMetadata, renderLegacyPage } from '../(legacy)';
 import { OPEN_GRAPH_LOCALE } from '@/lib/builder/seo/seo-model';
 import { isJaFullStaticPath, isJaUnsupportedPath, JA_SAFE_FALLBACK } from '@/lib/public-route-policy';
 import { buildLocalizedNotFoundMetadata } from '@/lib/not-found-copy';
+import GuidancePageBody from '@/components/GuidancePageBody';
+import GuidanceHomeBody, {
+  resolveGuidanceHomeColumns,
+} from '@/components/GuidanceHomeBody';
+import { getAllColumnPosts } from '@/lib/columns';
+import { guidanceContent } from '@/data/international-guidance-content';
+import {
+  buildGuidanceCoreLanguageAlternates,
+  classifyGuidanceSlug,
+  guidanceCanonicalUrl,
+  isGuidanceLocale4,
+  type GuidanceLocale4,
+} from '@/lib/public-guidance';
+import { getOpenGraphLocale, getOrganizationName, getSiteUrl } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
@@ -43,12 +57,56 @@ function resolvePublicLocale(raw: string): SiteLocale {
   return normalizeSiteLocale(raw);
 }
 
+function buildGuidancePageMetadata(locale: GuidanceLocale4, slug?: string[]): Metadata {
+  const classified = classifyGuidanceSlug(slug);
+  if (classified.kind !== 'page') {
+    const pack = guidanceContent[locale];
+    return {
+      title: { absolute: `${pack.notFoundTitle} | ${getOrganizationName('en')}` },
+      description: pack.notFoundText,
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const page = guidanceContent[locale].pages[classified.pageKey];
+  const siteUrl = getSiteUrl();
+  // Same "<page> | <firm>" shape the four site locales publish. The guidance
+  // titles carried the page name alone, so a search result showed no firm.
+  const brandName = getOrganizationName('en');
+  const canonicalUrl = guidanceCanonicalUrl(locale, classified.pageKey, siteUrl);
+  return {
+    title: { absolute: `${page.title} | ${brandName}` },
+    description: page.description,
+    alternates: {
+      canonical: canonicalUrl,
+      languages: buildGuidanceCoreLanguageAlternates(classified.pageKey, siteUrl),
+    },
+    // WO-O29 C: ko/zh-hant/en/ja publish `og:locale`; these ten guidance pages
+    // published no Open Graph block at all. `og:locale:alternate` stays absent
+    // because the four site locales emit none either.
+    openGraph: {
+      title: `${page.title} | ${brandName}`,
+      description: page.description,
+      url: canonicalUrl,
+      siteName: brandName,
+      locale: getOpenGraphLocale(locale),
+      type: 'website',
+    },
+    robots: { index: true, follow: true },
+  };
+}
+
 export async function generateMetadata(
   props: {
     params: Promise<{ locale: string; slug?: string[] }>;
   }
 ): Promise<Metadata> {
   const params = await props.params;
+
+  if (isGuidanceLocale4(params.locale)) {
+    return buildGuidancePageMetadata(params.locale, params.slug);
+  }
+
   const locale = resolvePublicLocale(params.locale);
   const slugPath = resolveSlugPath(params.slug);
 
@@ -80,6 +138,25 @@ export default async function MainSiteCatchAllPage(
 ) {
   const searchParams = await props.searchParams;
   const params = await props.params;
+
+  if (isGuidanceLocale4(params.locale)) {
+    const classified = classifyGuidanceSlug(params.slug);
+    if (classified.kind !== 'page') {
+      notFound();
+    }
+    if (classified.pageKey === 'home') {
+      // Same section sequence as the English home. Columns come from the
+      // locale's own files when the translation pipeline has written any, and
+      // otherwise from the first source language that has files, always behind
+      // an explicit "original language" badge.
+      const columns = resolveGuidanceHomeColumns(params.locale, (source) =>
+        getAllColumnPosts(source),
+      );
+      return <GuidanceHomeBody locale={params.locale} columns={columns} />;
+    }
+    return <GuidancePageBody locale={params.locale} pageKey={classified.pageKey} />;
+  }
+
   const locale = resolvePublicLocale(params.locale);
   const slugPath = resolveSlugPath(params.slug);
 

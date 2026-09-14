@@ -131,7 +131,7 @@ The treaty’s reduced rates do not apply automatically merely because the treat
 - [Taiwan MOEA Administration of Commerce — Company and Business Registration](https://gcis.nat.gov.tw/mainNew/English/index.jsp)
 - [Taiwan Workforce Development Agency — Work Permit Manual for Managers of Foreign-Invested Businesses](https://ws.wda.gov.tw/Download.ashx?n=VGhlIERpcmVjdG9yIG9yIE1hbmFnZXIgb2YgYW4gQXBwcm92ZWQgQnVzaW5lc3MgSW52ZXN0ZWQgb3IgRXN0YWJsaXNoZWQgYnkgT3ZlcnNlYXMgQ2hpbmVzZSBvciBGb3JlaWduZXIocykoU09QIE1hbnVhbCkucGRm&u=LzAwMS9VcGxvYWQvMzIxL3JlbGZpbGUvMC8yNTE1LzUzMWMyZTM0LTI1NmYtNGI5MC1iMzAzLTEzNWI4MTQxYTk5MC5wZGY%3D)
 - [Taiwan Ministry of Finance — Taiwan–Korea Income Tax Agreement](https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10)
-- [Taiwan Laws & Regulations Database — General Business Tax Rate](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10&pcode=G0340080)
+- [Taiwan Laws & Regulations Database — General Business Tax Rate](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Taiwan Tax Portal — Business Tax Filing Cycle](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/business-tax/collection-prcedure/oVL9pwM)
 - [Taiwan Tax Portal — Profit-Seeking Enterprise Income Tax Rate](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR)
 - [Taiwan Tax Portal — Taxation of Dividends Paid to Foreign Nationals](https://www.etax.nat.gov.tw/etwmain/alien-tax-service/alien-tax-faq/KK9Y76o)

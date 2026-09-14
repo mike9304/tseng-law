@@ -173,3 +173,34 @@ test('next config scopes hardened production and private-route headers', async (
     assert.equal(headers.get('X-Robots-Tag'), 'noindex, noarchive');
   }
 });
+
+test('next config aliases /zh /zh-tw /jp onto canonical locales', async () => {
+  const config = await loadConfig('production', 'locale-aliases');
+  const redirects = await config.redirects();
+
+  const expected = [
+    { source: '/zh', destination: '/zh-hant' },
+    { source: '/zh/:path*', destination: '/zh-hant/:path*' },
+    { source: '/zh-tw', destination: '/zh-hant' },
+    { source: '/zh-tw/:path*', destination: '/zh-hant/:path*' },
+    { source: '/jp', destination: '/ja' },
+    { source: '/jp/:path*', destination: '/ja/:path*' },
+  ];
+
+  for (const rule of expected) {
+    assert.ok(
+      redirects.some(
+        (entry) =>
+          entry.source === rule.source
+          && entry.destination === rule.destination
+          && entry.permanent === true,
+      ),
+      `missing ${rule.source} -> ${rule.destination}`,
+    );
+  }
+
+  assert.ok(
+    !redirects.some((entry) => entry.source === '/zh-hant/:path*'),
+    '/zh/:path* must not swallow /zh-hant',
+  );
+});

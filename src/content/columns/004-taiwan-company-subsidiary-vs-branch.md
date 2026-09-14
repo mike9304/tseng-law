@@ -172,7 +172,7 @@ faq:
 ## 공식 자료
 
 - [대만 법무부 법령정보 — 회사법](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
-- [대만 법무부 법령정보 — 영업세법 제10조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10&pcode=G0340080)
+- [대만 법무부 법령정보 — 영업세법 제10조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [대만 법무부 법령정보 — 소득세법](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [대만 재정부 — 국외 주주 배당 원천징수 안내](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [대만 재정부 — 외국회사 지점이익 관련 해석](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)

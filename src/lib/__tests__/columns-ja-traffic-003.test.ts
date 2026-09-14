@@ -13,13 +13,13 @@ const raw = rawBytes.toString('utf8');
 
 const immutablePrefixBytes = 1_170;
 const immutablePrefixSha256 =
-  '52de958b4ea59b3f08f8356fcabfaf26c6fbee8797e5d22965c755a51f6b24c4';
-const immutableQ1ToQ5PrefixBytes = 9_395;
+  '610fbbf7637c8769266cea2f2f079da83bb7531ab32f4a955db855c9e4038930';
+const immutableQ1ToQ5PrefixBytes = 9_479;
 const immutableQ1ToQ5PrefixSha256 =
-  '9c659d769f16b2a9ee4c6999026b42066bc0d427f1fafdc748b239397a6bfd05';
-const immutableQ1ToQ10PrefixBytes = 15_831;
+  '3862249125d730ab1529ef1939c4f125d54ed014d69b8f3d08948d535e6831e3';
+const immutableQ1ToQ10PrefixBytes = 15_915;
 const immutableQ1ToQ10PrefixSha256 =
-  '1ab7292fc9b4ab2e982f986cfd6f1f805ac4a48321e17afa1ca27857c4d70f3d';
+  '8b20eb9ceb67b1a6c55dd4ac3ec20b5d51a6b827a39c9e4b36f3953ba378506a';
 const q6ByteIndex = immutableQ1ToQ5PrefixBytes;
 const q11ByteIndex = immutableQ1ToQ10PrefixBytes;
 const q16Marker =
@@ -43,9 +43,9 @@ const staleFooterLocaleTargets = [
   '/ko/korean-lawyer-in-taiwan',
   '/ko/taiwan-lawyer',
 ] as const;
-const immutableQ16ToQ20TailBytes = 4_777;
+const immutableQ16ToQ20TailBytes = 4_880;
 const immutableQ16ToQ20TailSha256 =
-  '83ef077faac615bee01ca9c8bb1055866d5aaa7cb50b988d704756fc0974b6f6';
+  'aec018156e3c2e4aa00b961a0b37596c12bfc8a12e6f44f4419b37ddcc71ac2b';
 const localizedPrefixBytes = rawBytes.subarray(0, immutablePrefixBytes);
 const localizedPrefix = localizedPrefixBytes.toString('utf8');
 const parsedPrefix = matter(localizedPrefix);
@@ -438,7 +438,7 @@ describe('Japanese traffic column 003 — metadata and introduction localization
     expect(parsedPrefix.data).toEqual({
       title: expectedTitle,
       url: sourceUrl,
-      lastmod: '2026-07-26',
+      lastmod: '2026-09-10',
       date_display: '2025年9月13日',
       read_time: '約8分',
       categories: ['台湾法律情報'],

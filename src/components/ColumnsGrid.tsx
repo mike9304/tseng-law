@@ -4,7 +4,8 @@ import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
-import type { SiteLocale } from '@/lib/locales';
+import type { PublicLocale8 } from '@/lib/public-guidance';
+import { isExistingSiteLocale4 } from '@/lib/public-guidance';
 
 const searchCopy = {
   ko: {
@@ -123,11 +124,12 @@ export default function ColumnsGrid({
   posts,
   initialFilters = {},
 }: {
-  locale: SiteLocale;
+  locale: PublicLocale8;
   posts: ColumnListItem[];
   initialFilters?: ColumnsGridFilters;
 }) {
-  const labels = categoryLabels[locale];
+  const uiLocale = isExistingSiteLocale4(locale) ? locale : 'en';
+  const labels = categoryLabels[uiLocale];
   const byline =
     locale === 'ko'
       ? '증준외 변호사 검토'
@@ -149,7 +151,7 @@ export default function ColumnsGrid({
     : requestedCategory ? null : 'all';
   const [searchInput, setSearchInput] = useState(requestedQuery);
   const [appliedQuery, setAppliedQuery] = useState(requestedQuery);
-  const searchLabels = searchCopy[locale];
+  const searchLabels = searchCopy[uiLocale];
 
   useEffect(() => {
     setSearchInput(requestedQuery);

@@ -1,0 +1,15 @@
+# WO-S2b-R2 — /vi|id|th|fil/llms.txt 실제 서빙 블로커 2건 (Opus 5, 소형)
+
+## 공통 규칙
+작업트리 ~/Projects/tseng-law-sea-seo-20260909 만. 다른 워커가 src/data/intent-pages.ts·src/app/[locale]/taiwan-work-permit-renewal-lawyer/**·src/app/sitemap.ts 편집 중 — 건드리지 말 것. 커밋·빌드·전체 스위트 금지.
+
+## 목표 (WO-S2b-R1 보고의 블로커 A·B)
+A. `src/lib/public-guidance.ts` `resolveGuidanceMiddlewareRewrite`: 안내 로케일 경로에서 마지막 세그먼트가 `llms.txt`이면 rewrite 하지 않고 통과(allowed, internalPath 원경로). 다른 파일형 경로(점 포함)는 이번에 손대지 않는다 — llms.txt 한정. `src/middleware.ts` matcher는 가능하면 그대로 두고, 함수 쪽에서 처리.
+B. `src/app/[locale]/llms.txt/route.ts` `generateStaticParams()`에 GUIDANCE_LOCALES_4 추가(8로케일). `src/app/[locale]/llms.txt/__tests__/route.test.ts`의 "statically enumerates only the four public locales" 단언을 8로케일로 갱신.
+C. `src/lib/__tests__/public-guidance.test.ts`에 케이스: `/vi/llms.txt` → rewrite 안 함(allowed true, 원경로), `/vi/services` → 기존 동작 유지.
+## 허용 파일
+src/lib/public-guidance.ts, src/lib/__tests__/public-guidance.test.ts, src/app/[locale]/llms.txt/route.ts, src/app/[locale]/llms.txt/__tests__/route.test.ts, (필요 시에만) src/middleware.ts
+## 완료 기준
+1. npx vitest run src/lib/__tests__/public-guidance.test.ts 'src/app/[locale]/llms.txt/__tests__/route.test.ts' 'src/app/[locale]/__tests__/llms-discovery.test.tsx' 통과(출력)
+2. 프로브: resolveGuidanceMiddlewareRewrite('/vi/llms.txt') 결과를 보고에 첨부(allowed true)
+3. 허용 파일 밖 변경 0, 보고 형식

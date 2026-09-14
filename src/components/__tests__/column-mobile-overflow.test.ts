@@ -80,8 +80,8 @@ describe('public column mobile overflow contract', () => {
 
   test('keeps locale-aware prev and next links inside the scoped navigation', () => {
     expect(columnPage).toContain('<nav className="container column-post-nav"');
-    expect(columnPage).toContain('href={`/${locale}/columns/${prevPost.slug}`}');
-    expect(columnPage).toContain('href={`/${locale}/columns/${nextPost.slug}`}');
+    expect(columnPage).toContain('href={`/${urlLocale}/columns/${prevPost.slug}`}');
+    expect(columnPage).toContain('href={`/${urlLocale}/columns/${nextPost.slug}`}');
 
     const mediaBlocks = extractBlocks(css, '@media (max-width: 900px)');
     const targetBlocks = mediaBlocks.filter(({ block }) => block.includes('.blog-container'));

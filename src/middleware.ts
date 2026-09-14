@@ -3,6 +3,7 @@ import {
   findMatchingRedirect,
   loadActiveRedirects,
 } from '@/lib/builder/seo/redirects-edge';
+import { resolveGuidanceMiddlewareRewrite } from '@/lib/public-guidance';
 
 type BasicCredential = {
   readonly username: string;
@@ -20,12 +21,12 @@ const BUILDER_ADMIN_SESSION_TTL_SECONDS = 12 * 60 * 60;
 /**
  * Edge middleware — two responsibilities:
  *
- *   1. Basic Auth guard for `/{locale}/admin-consultation` and
- *      `/{locale}/admin-builder`. Consultation admin stays on the
- *      legacy CMS_ADMIN_USERNAME / CMS_ADMIN_PASSWORD pair, while the
- *      builder also accepts optional BUILDER_BASIC_AUTH_USERS entries.
- *      Missing env means we fail closed with 503 so a mis-configured
- *      production deployment can't leak operator data.
+ *   1. Basic Auth guard for `/{locale}/admin-consultation`,
+ *      `/{locale}/admin-builder`, and `/{locale}/builder`. Consultation
+ *      admin stays on the legacy CMS_ADMIN_USERNAME / CMS_ADMIN_PASSWORD
+ *      pair, while the builder also accepts optional BUILDER_BASIC_AUTH_USERS
+ *      entries. Missing env means we fail closed with 503 so a
+ *      mis-configured production deployment can't leak operator data.
  *
  *   2. SEO maturity — applies site-level redirect rules on public
  *      paths. Rules are loaded from `@vercel/blob` with a short TTL
@@ -120,7 +121,7 @@ async function createBuilderAdminSessionToken(username: string): Promise<string>
 }
 
 const CONSULTATION_ADMIN_PATH_RE = /^\/(?:ko|zh-hant|en|ja)\/admin-consultation(?:\/|$)/;
-const BUILDER_ADMIN_PATH_RE = /^\/(?:ko|zh-hant|en|ja)\/admin-builder(?:\/|$)/;
+const BUILDER_ADMIN_PATH_RE = /^\/(?:ko|zh-hant|en|ja)\/(?:admin-builder|builder)(?:\/|$)/;
 
 function isObjectRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null;
@@ -275,6 +276,24 @@ export async function middleware(request: NextRequest) {
     });
   }
 
+  // New guidance four: rewrite onto the locale catch-all before SEO redirect
+  // rules can remap into KO, and before sibling file routes (store, columns
+  // detail, services/[slug], …) that normalize unknown locales into KO.
+  // A resolution whose target is the incoming path (`/{vi|id|th|fil}/llms.txt`,
+  // served by its own route handler) is a pass-through: continue without a
+  // rewrite, while still skipping the redirect lookup below.
+  const guidanceRewrite = resolveGuidanceMiddlewareRewrite(pathname);
+  if (guidanceRewrite) {
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set('x-tseng-pathname', pathname);
+    if (guidanceRewrite.internalPath === pathname.replace(/\/+$/, '')) {
+      return NextResponse.next({ request: { headers: requestHeaders } });
+    }
+    const url = request.nextUrl.clone();
+    url.pathname = guidanceRewrite.internalPath;
+    return NextResponse.rewrite(url, { request: { headers: requestHeaders } });
+  }
+
   // Public path — try a redirect lookup. If anything blows up, fall
   // through to NextResponse.next() so the site keeps working.
   try {
@@ -295,6 +314,9 @@ export const config = {
   matcher: [
     '/:locale(ko|zh-hant|en|ja)/admin-consultation/:path*',
     '/:locale(ko|zh-hant|en|ja)/admin-builder/:path*',
+    '/:locale(ko|zh-hant|en|ja)/builder/:path*',
+    '/:locale(vi|id|th|fil)',
+    '/:locale(vi|id|th|fil)/:path*',
     '/((?!_next/static|_next/image|api/|favicon.ico|robots.txt|sitemap.xml|images/|fonts/|.*\\..*).*)',
   ],
 };

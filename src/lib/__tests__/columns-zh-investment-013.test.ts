@@ -77,7 +77,7 @@ describe('Traditional Chinese investment column 013 — company-setup practice Q
     expect(parsed.data).toMatchObject({
       title,
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-1',
-      lastmod: '2026-07-27',
+      lastmod: '2026-09-10',
       date_display: '2025年9月13日',
       read_time: '8分鐘閱讀',
       categories: ['台灣公司設立'],
@@ -89,7 +89,7 @@ describe('Traditional Chinese investment column 013 — company-setup practice Q
     expect(post).toMatchObject({
       slug: 'taiwan-company-establishment-advanced-1',
       title,
-      date: '2026-07-27',
+      date: '2026-09-10',
       dateDisplay: '2025年9月13日',
       readTime: '8分鐘閱讀',
       categoryLabel: '公司設立',

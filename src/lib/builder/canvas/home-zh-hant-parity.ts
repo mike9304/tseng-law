@@ -301,33 +301,41 @@ function restoreKnownDesktopProjection(
   return same(document.nodes, expected.nodes) ? restored : null;
 }
 
-// Exact historical/approved copy pairs, not a content exclusion from the hash.
+// Exact historical/approved copy groups, not a content exclusion from the hash.
+// before = July stock; priorAfter = already-saved v5 approved group; after = current approved source.
+const STOCK_LANGUAGE_GROUPS = ['before', 'priorAfter', 'after'] as const;
+type StockLanguageGroup = (typeof STOCK_LANGUAGE_GROUPS)[number];
+type StockLanguageTarget = 'before' | 'after';
+
 const STOCK_LANGUAGE_TEXT = {
   'home-stats-description': {
     before: '「昊」代表廣闊視野，「鼎」代表穩健基礎。憑藉韓語與日語溝通能力，從投資、公司設立到訴訟提供一站式法律支援。',
-    after: '依官方律師簡介整理：4個台灣辦公據點、中文／韓文／日文／英文4種業務溝通語言、7項主要執業領域，以及TOPIK 6級與JLPT N1兩項最高級別語言資格。',
+    priorAfter: '依官方律師簡介整理：4個台灣辦公據點、中文／韓文／日文／英文4種業務溝通語言、7項主要執業領域，以及TOPIK 6級與JLPT N1兩項最高級別語言資格。',
+    after: '事務所提供中文／韓文／日文／英文4種語言的台灣法律諮詢。並依官方律師簡介整理：4個台灣辦公據點、7項主要執業領域，以及TOPIK 6級與JLPT N1兩項最高級別語言資格。',
   },
-  'home-stats-number-1': { before: '3', after: '4' },
+  'home-stats-number-1': { before: '3', priorAfter: '4', after: '4' },
   'home-attorney-intro-1': {
     before: '專精企業與個人案件，提供韓文與日文法律溝通。',
+    priorAfter: '專精企業與個人案件。事務所可提供韓文、中文、日文、英文法律溝通。',
     after: '專精企業與個人案件。事務所可提供韓文、中文、日文、英文法律溝通。',
   },
   'home-faq-item-11-answer': {
     before: '可選擇面談（台北事務所）或視訊諮詢（Zoom/Google Meet）。韓語與中文皆可諮詢，須事先預約，以一小時為單位。若事先提供相關資料，可獲得更具體的建議。',
+    priorAfter: '可選擇面談（台北事務所）或視訊諮詢（Zoom/Google Meet）。韓語、中文、日語、英語皆可諮詢，須事先預約，以一小時為單位。若事先提供相關資料，可獲得更具體的建議。',
     after: '可選擇面談（台北事務所）或視訊諮詢（Zoom/Google Meet）。韓語、中文、日語、英語皆可諮詢，須事先預約，以一小時為單位。若事先提供相關資料，可獲得更具體的建議。',
   },
 } as const;
 
 function rewriteKnownStockLanguageCopy(
   document: BuilderCanvasDocument,
-  version: 'before' | 'after',
+  version: StockLanguageTarget,
 ): BuilderCanvasDocument | null {
-  const matches = (candidate: 'before' | 'after') => Object.entries(STOCK_LANGUAGE_TEXT).every(([id, copy]) => (
+  const matches = (candidate: StockLanguageGroup) => Object.entries(STOCK_LANGUAGE_TEXT).every(([id, copy]) => (
     textOf(document.nodes.find((node) => node.id === id)) === copy[candidate]
   ));
   if (matches(version)) return document;
   // A mixed group can be an author's partial edit; only complete known groups qualify.
-  if (!matches(version === 'before' ? 'after' : 'before')) return null;
+  if (!STOCK_LANGUAGE_GROUPS.some((candidate) => candidate !== version && matches(candidate))) return null;
   return {
     ...document,
     nodes: document.nodes.map((node) => {
@@ -355,6 +363,35 @@ export async function normalizeLegacyZhHantHomeRead(
   return same(projected.nodes, normalized.nodes) ? normalized : projected;
 }
 
+const ZINDEX_INSERTION_IDS = ['home-hero-email-consultation-link', 'home-attorney-detail-flow'] as const;
+const KNOWN_INSERTED_GROUP_ID = 'home-attorney-detail-flow';
+
+/** Comparison-only: save compaction reindexes zIndex and fills the inserted group defaults. Actual nodes stay unchanged. */
+function nodesForJulyFingerprint(nodes: BuilderCanvasNode[]): BuilderCanvasNode[] {
+  const insertions = ZINDEX_INSERTION_IDS
+    .map((id) => nodes.findIndex((node) => node.id === id))
+    .filter((index) => index >= 0)
+    .sort((left, right) => left - right);
+  const sequential = insertions.length === ZINDEX_INSERTION_IDS.length
+    && nodes.every((node, index) => node.zIndex === index);
+  return nodes.map((node, index) => {
+    const zIndex = sequential
+      ? index - insertions.filter((position) => position < index).length
+      : node.zIndex;
+    if (node.id !== KNOWN_INSERTED_GROUP_ID || node.kind !== 'container') {
+      return zIndex === node.zIndex ? node : { ...node, zIndex };
+    }
+    const content = { ...node.content };
+    if (content.activeIndex === 0) delete content.activeIndex;
+    if (content.sticky === false) delete content.sticky;
+    if (zIndex === node.zIndex && content.activeIndex === node.content.activeIndex
+      && content.sticky === node.content.sticky) {
+      return node;
+    }
+    return { ...node, zIndex, content };
+  });
+}
+
 /** Exact public July dual-tree only. Any authored node/content/style/viewport edit opts out. */
 export async function hasLegacyJulyZhHantHomeDualTree(
   document: BuilderCanvasDocument,
@@ -366,7 +403,7 @@ export async function hasLegacyJulyZhHantHomeDualTree(
   const stockDocument = desktop && rewriteKnownStockLanguageCopy(desktop, 'before');
   if (!stockDocument) return false;
   const value = comparable({ locale: stockDocument.locale, stageWidth: stockDocument.stageWidth,
-    stageHeight: stockDocument.stageHeight, nodes: stockDocument.nodes });
+    stageHeight: stockDocument.stageHeight, nodes: nodesForJulyFingerprint(stockDocument.nodes) });
   const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(JSON.stringify(value)));
   const fingerprint = Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, '0')).join('');
   return fingerprint === '8f75a13335144f4c9a7ac8dc0dbb1e93173eee5bc075318bde75406d86437a3f';

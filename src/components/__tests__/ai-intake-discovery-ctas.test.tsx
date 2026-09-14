@@ -226,25 +226,167 @@ function expectJsonLdInvariant(enabledHtml: string, disabledHtml: string): void 
   expect(enabled).toEqual(disabled);
 }
 
-function hasEmptyLiveStatus(html: string): boolean {
-  const roleIdx = html.indexOf('role="status"');
-  if (roleIdx === -1) {
-    return false;
-  }
-  const pStart = html.lastIndexOf('<p', roleIdx);
-  const pEnd = html.indexOf('</p>', roleIdx);
-  const openEnd = html.indexOf('>', roleIdx);
-  if (pStart === -1 || pEnd === -1 || openEnd === -1 || openEnd > pEnd) {
-    return false;
-  }
-  const inner = html.slice(openEnd + 1, pEnd).trim();
-  const open = html.slice(pStart, openEnd + 1);
+type StatusParagraph = {
+  open: string;
+  inner: string;
+};
+
+const STATUS_TAGS = ['div', 'p'] as const;
+
+function isTagNameBoundary(character: string | undefined): boolean {
   return (
-    inner === '' &&
-    open.includes('role="status"') &&
-    open.includes('aria-live="polite"') &&
-    open.includes('aria-atomic="true"')
+    character === undefined
+    || character === ' '
+    || character === '\n'
+    || character === '\t'
+    || character === '\r'
+    || character === '/'
+    || character === '>'
   );
+}
+
+function tagNameAt(html: string, start: number): string | null {
+  if (html[start] !== '<') {
+    return null;
+  }
+  let index = start + 1;
+  if (html[index] === '/') {
+    return null;
+  }
+  let name = '';
+  while (index < html.length) {
+    const character = html[index];
+    if (
+      (character >= 'a' && character <= 'z')
+      || (character >= 'A' && character <= 'Z')
+    ) {
+      name += character.toLowerCase();
+      index += 1;
+      continue;
+    }
+    break;
+  }
+  return name || null;
+}
+
+function indexOfOpenTag(html: string, tagName: string, from: number): number {
+  const token = `<${tagName}`;
+  let index = from;
+  while (index < html.length) {
+    const start = html.indexOf(token, index);
+    if (start === -1) {
+      return -1;
+    }
+    if (isTagNameBoundary(html[start + token.length])) {
+      return start;
+    }
+    index = start + token.length;
+  }
+  return -1;
+}
+
+function findMatchingClose(html: string, openStart: number, tagName: string): number {
+  const openEnd = html.indexOf('>', openStart);
+  if (openEnd === -1) {
+    return -1;
+  }
+  const closeToken = `</${tagName}>`;
+  let depth = 1;
+  let index = openEnd + 1;
+  while (index < html.length && depth > 0) {
+    const nextOpen = indexOfOpenTag(html, tagName, index);
+    const nextClose = html.indexOf(closeToken, index);
+    if (nextClose === -1) {
+      return -1;
+    }
+    if (nextOpen !== -1 && nextOpen < nextClose) {
+      depth += 1;
+      index = nextOpen + 1;
+      continue;
+    }
+    depth -= 1;
+    if (depth === 0) {
+      return nextClose;
+    }
+    index = nextClose + closeToken.length;
+  }
+  return -1;
+}
+
+function statusParagraphs(html: string): StatusParagraph[] {
+  const paragraphs: StatusParagraph[] = [];
+  let from = 0;
+  while (from < html.length) {
+    const roleIdx = html.indexOf('role="status"', from);
+    if (roleIdx === -1) {
+      break;
+    }
+    const tagStart = html.lastIndexOf('<', roleIdx);
+    const tag = tagNameAt(html, tagStart);
+    const openEnd = tagStart === -1 ? -1 : html.indexOf('>', tagStart);
+    if (
+      tagStart === -1
+      || !tag
+      || !(STATUS_TAGS as readonly string[]).includes(tag)
+      || openEnd === -1
+      || openEnd < roleIdx
+    ) {
+      from = roleIdx + 13;
+      continue;
+    }
+    const closeStart = findMatchingClose(html, tagStart, tag);
+    if (closeStart === -1) {
+      from = roleIdx + 13;
+      continue;
+    }
+    paragraphs.push({
+      open: html.slice(tagStart, openEnd + 1),
+      inner: html.slice(openEnd + 1, closeStart).trim(),
+    });
+    from = closeStart + tag.length + 3;
+  }
+  return paragraphs;
+}
+
+function isEmptyPoliteLiveStatus(paragraph: StatusParagraph | undefined): boolean {
+  if (!paragraph) {
+    return false;
+  }
+  return (
+    paragraph.inner === '' &&
+    paragraph.open.includes('role="status"') &&
+    paragraph.open.includes('aria-live="polite"') &&
+    paragraph.open.includes('aria-atomic="true"')
+  );
+}
+
+function hasEmptyLiveStatus(html: string): boolean {
+  return isEmptyPoliteLiveStatus(statusParagraphs(html)[0]);
+}
+
+function emailCopyStatusParagraph(html: string): StatusParagraph | undefined {
+  return statusParagraphs(html).find((paragraph) =>
+    paragraph.open.includes('contact-email-actions__status'),
+  );
+}
+
+function inquiryFormStatusParagraph(html: string): StatusParagraph | undefined {
+  return statusParagraphs(html).find((paragraph) =>
+    paragraph.open.includes('tabindex="-1"'),
+  );
+}
+
+function expectEmailCopyAndInquiryFormStatuses(html: string): void {
+  const emailStatus = emailCopyStatusParagraph(html);
+  const formStatus = inquiryFormStatusParagraph(html);
+
+  expect(countNeedle(html, 'role="status"')).toBe(2);
+  expect(countNeedle(html, 'contact-email-actions__status')).toBe(1);
+  expect(emailStatus).toBeDefined();
+  expect(formStatus).toBeDefined();
+  expect(emailStatus).not.toEqual(formStatus);
+  expect(isEmptyPoliteLiveStatus(emailStatus)).toBe(true);
+  expect(isEmptyPoliteLiveStatus(formStatus)).toBe(true);
 }
 
 function builderSection(sectionKey: 'contact.hero' | 'contact.contact-blocks'): BuilderSectionNode {
@@ -450,8 +592,7 @@ describe('AI-intake discovery CTAs', () => {
       expect(countNeedle(html, 'class="contact-email-actions"')).toBe(1);
       expect(originalEmailAiGrid(html)).not.toContain(officialLabel);
       expect(countNeedle(html, copyLabel)).toBe(2);
-      expect(countNeedle(html, 'role="status"')).toBe(1);
-      expect(hasEmptyLiveStatus(html)).toBe(true);
+      expectEmailCopyAndInquiryFormStatuses(html);
       expect(html).toContain(getSensitiveInformationWarning(locale));
       expect(html).toContain('data-builder-surface-key="cta-link"');
       expect(html).toContain(`href="${escapedMailto(locale)}"`);
@@ -476,8 +617,7 @@ describe('AI-intake discovery CTAs', () => {
 
       expect(countNeedle(html, officialLabel)).toBe(1);
       expect(countNeedle(html, copyLabel)).toBe(2);
-      expect(countNeedle(html, 'role="status"')).toBe(1);
-      expect(hasEmptyLiveStatus(html)).toBe(true);
+      expectEmailCopyAndInquiryFormStatuses(html);
       expect(html).toContain(`href="${escapedMailto(locale)}"`);
 
       if (mode.enabled) {

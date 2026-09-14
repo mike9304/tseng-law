@@ -53,7 +53,7 @@ const answerParagraphs = [
     'Some banks may impose additional requirements, such as requiring the account to have been in use for at least six months after the company was established.',
   ],
   [
-    'A. No restriction applies to the first employee: Manager of a General Overseas Chinese or Foreign Invested Business (一般僑外投資事業主管工作).',
+    "A. First employee: Manager of a General Overseas Chinese or Foreign Invested Business (一般僑外投資事業主管工作). The \"specialized or technical work\" criteria in B below do not apply, but the eligibility requirements (such as being a manager (經理人) of a company in which overseas-Chinese or foreign investors hold more than one third) and the employer's capital and turnover requirements (Review Standards Articles 38 and 39) still apply.",
     'B. Restrictions apply from the second employee onward: when employing more than one foreign national, the employee\'s relevant education and work experience, the average-salary requirement, and the company\'s capital and revenue requirements are handled in accordance with the standards for "specialized or technical work" (專門性或技術性工作).',
     'See the Taiwan Ministry of Labor website: <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>',
   ],
@@ -113,7 +113,7 @@ describe('English investment column 005 — faithful Korean-source translation',
     expect(parsed.data).toMatchObject({
       title,
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2',
-      lastmod: '2026-07-27',
+      lastmod: '2026-09-10',
       date_display: 'September 13, 2025',
       read_time: '3 min read',
       categories: ['Taiwan Company Formation'],
@@ -124,7 +124,7 @@ describe('English investment column 005 — faithful Korean-source translation',
     expect(post).toMatchObject({
       slug: 'taiwan-company-establishment-advanced-2',
       title,
-      date: '2026-07-27',
+      date: '2026-09-10',
       dateDisplay: 'September 13, 2025',
       readTime: '3 min read',
       categoryLabel: 'Company Setup',
@@ -210,7 +210,7 @@ describe('English investment column 005 — faithful Korean-source translation',
 
   it('restores the source distinction between the first and later foreign employees', () => {
     const required = [
-      'No restriction applies to the first employee',
+      "First employee: Manager of a General Overseas Chinese or Foreign Invested Business (一般僑外投資事業主管工作). The \"specialized or technical work\" criteria in B below do not apply, but the eligibility requirements (such as being a manager (經理人) of a company in which overseas-Chinese or foreign investors hold more than one third) and the employer's capital and turnover requirements (Review Standards Articles 38 and 39) still apply.",
       '一般僑外投資事業主管工作',
       'Restrictions apply from the second employee onward',
       "employee's relevant education and work experience",
@@ -246,7 +246,7 @@ describe('English investment column 005 — faithful Korean-source translation',
     expect(raw).not.toContain('曾俊瑋');
 
     const withoutAllowedHan = raw.replace(
-      /曾雋崴|薪資所得的扣繳憑單影本|股息和紅利的扣繳憑單影本|一般僑外投資事業主管工作|專門性或技術性工作/g,
+      /曾雋崴|薪資所得的扣繳憑單影本|股息和紅利的扣繳憑單影本|一般僑外投資事業主管工作|專門性或技術性工作|經理人/g,
       '',
     );
     expect(withoutAllowedHan).not.toMatch(
@@ -260,7 +260,7 @@ describe('English investment column 005 — faithful Korean-source translation',
     const visibleWordCount = countVisibleEnglishWords(parsed.content);
     const calculatedMinutes = Math.ceil(visibleWordCount / 200);
 
-    expect(visibleWordCount).toBe(546);
+    expect(visibleWordCount).toBe(591);
     expect(calculatedMinutes).toBe(3);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);

@@ -1,7 +1,7 @@
 ---
 title: "従業員が自発的に退職しても退職金を受け取れる例外"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
-lastmod: "2025-09-13"
+lastmod: "2026-09-10"
 date_display: "2025年9月13日"
 read_time: "約2分"
 categories:
@@ -19,7 +19,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 特に従業員が自ら退職する場合、
 
-退職金を受け取ることはできず、
+退職金を受け取ることはできず（労働基準法〈勞動基準法〉第18条）、
 
 これは韓国とは異なります。
 
@@ -29,7 +29,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-次のような特殊な状況では、労働者が自ら退職した場合でも、雇用主は労働者に退職金を支払わなければなりません（労働基準法〈勞動基準法〉第14条、第18条）：
+次のような特殊な状況では、労働者が自ら退職した場合でも、雇用主は労働者に退職金を支払わなければなりません（労働基準法〈勞動基準法〉第14条、同条による第17条の準用）：
 
 1. 雇用主が労働契約の締結時に虚偽の意思表示をし、労働者がそれを誤信したために損害を受けるおそれがある場合
 
@@ -65,7 +65,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 その事由を知った日から**30日**以内に、
 
-または損害が生じたことを知った日から**30日**以内に労働契約を終了しなければならないと定めています。
+または（第6号の場合）損害が生じたことを知った日から**30日**以内に労働契約を終了しなければならないと定めています。
 
 したがって労働者は、これらの期限を正確に把握しておく必要があります。
 

@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import type { SiteLocale } from '@/lib/locales';
+import { chromeSiteLocale } from '@/lib/public-site-chrome';
+import type { PublicLocale8 } from '@/lib/public-guidance';
 import type { FAQItem } from '@/data/faq-content';
 import SectionLabel from '@/components/SectionLabel';
 import { homeFaqTextSurfaceIds } from '@/lib/builder/registry';
@@ -25,16 +27,23 @@ export default function FAQAccordion({
   items,
   id,
   sectionClassName,
-  tone = 'light'
+  tone = 'light',
+  headingLabel,
+  headingTitle
 }: {
-  locale: SiteLocale;
+  locale: PublicLocale8;
   items: FAQItem[];
   id?: string;
   sectionClassName?: string;
   tone?: 'light' | 'dark';
+  /** Overrides the built-in heading pair (used by locales outside `SiteLocale`). */
+  headingLabel?: string;
+  headingTitle?: string;
 }) {
   const [openIndex, setOpenIndex] = useState<number>(-1);
-  const { label: sectionLabel, title: sectionTitle } = faqHeadings[locale];
+  const defaults = faqHeadings[chromeSiteLocale(locale)];
+  const sectionLabel = headingLabel ?? defaults.label;
+  const sectionTitle = headingTitle ?? defaults.title;
   const sectionClass = sectionClassName ?? 'section';
 
   return (

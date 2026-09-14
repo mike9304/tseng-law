@@ -61,7 +61,7 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
     expect(parsed.data).toMatchObject({
       title,
       url: 'https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2',
-      lastmod: '2026-07-27',
+      lastmod: '2026-09-10',
       date_display: '2025年9月13日',
       read_time: '10分鐘閱讀',
       categories: ['台灣公司設立'],
@@ -72,7 +72,7 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
     expect(post).toMatchObject({
       slug: 'taiwan-company-establishment-advanced-2',
       title,
-      date: '2026-07-27',
+      date: '2026-09-10',
       dateDisplay: '2025年9月13日',
       readTime: '10分鐘閱讀',
       categoryLabel: '公司設立',
@@ -176,7 +176,7 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
 
   it('locks the first-employee rule and second-employee managerial thresholds', () => {
     const required = [
-      '就「一般僑外投資事業主管工作」而言，第一位員工不受限制',
+      '就「一般僑外投資事業主管工作」而言，第一位員工不適用下述「專門性或技術性工作」之標準',
       '自第二位員工起有限制',
       '並不會僅因具有外國國籍，就產生不受限制的聘僱名額',
       '台灣法所稱的公司或分公司「經理人」',
@@ -272,7 +272,7 @@ describe('Traditional Chinese investment column 005 — corrected capital, banki
       parsed.content.match(/\p{Script=Han}/gu)?.length ?? 0;
     const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-    expect(visibleHanCount).toBe(3_628);
+    expect(visibleHanCount).toBe(3_692);
     expect(calculatedMinutes).toBe(10);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

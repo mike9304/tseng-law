@@ -1,0 +1,8 @@
+# WO-O28 existing-4 (ko/zh-hant/en/ja) JSON-LD byte invariance
+# 40 pages, every <script type=application/ld+json> block captured verbatim in document order
+
+0dae1644d5fc66ec9621e911244d9e0b502af4774e1dd49fdd4c0f5a45af41be  evidence/o28-existing4-jsonld-before.txt
+0dae1644d5fc66ec9621e911244d9e0b502af4774e1dd49fdd4c0f5a45af41be  evidence/o28-existing4-jsonld-after.txt
+
+diff exit:
+0 (0 = identical)

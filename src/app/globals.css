@@ -161,14 +161,21 @@
 
   /* next/font CSS variables are applied on <html>; :root inherits them so
      semantic tokens resolve. Locale-gated pages only receive the active pair. */
-  --font-heading-ko: var(--font-noto-serif-kr-loaded), 'Nanum Myeongjo', Georgia, 'Times New Roman', serif;
-  --font-heading-zh: var(--font-noto-serif-tc-loaded), 'Noto Serif TC', 'Songti TC', Georgia, serif;
-  --font-heading-ja: var(--font-noto-serif-jp-loaded), 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+  /* Every next/font reference carries an inline fallback: a page that does not
+     load that pair must degrade to the rest of the stack, never to the
+     guaranteed-invalid value (which drops font-family to the Times initial). */
+  --font-heading-ko: var(--font-noto-serif-kr-loaded, 'Nanum Myeongjo'), 'Nanum Myeongjo', Georgia, 'Times New Roman', serif;
+  --font-heading-zh: var(--font-noto-serif-tc-loaded, 'Noto Serif TC'), 'Noto Serif TC', 'Songti TC', Georgia, serif;
+  --font-heading-ja: var(--font-noto-serif-jp-loaded, 'Yu Mincho'), 'Yu Mincho', 'Hiragino Mincho ProN', serif;
   /* EN display shares KR serif for visual cohesion (no Cormorant). */
   --font-heading-en: var(--font-heading-ko);
-  --font-body: var(--font-noto-sans-kr-loaded), 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-body-zh: var(--font-noto-sans-tc-loaded), 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', -apple-system, sans-serif;
-  --font-body-ja: var(--font-noto-sans-jp-loaded), 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif;
+  /* Guidance locales (vi/id/th/fil) load no serif pair — system serif only. */
+  --font-heading-latin: Georgia, 'Noto Serif', 'Times New Roman', serif;
+  --font-body: var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body-zh: var(--font-noto-sans-tc-loaded, 'PingFang TC'), 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', -apple-system, sans-serif;
+  --font-body-ja: var(--font-noto-sans-jp-loaded, 'Hiragino Kaku Gothic ProN'), 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif;
+  --font-body-latin: var(--font-noto-sans-latin-loaded, 'Noto Sans'), 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-body-th: var(--font-noto-sans-thai-loaded, 'Noto Sans Thai'), 'Noto Sans Thai', var(--font-noto-sans-latin-loaded, 'Noto Sans'), 'Leelawadee UI', 'Thonburi', sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
   --font-sans: var(--font-body);
   --font-display: var(--font-heading-ko);
@@ -194,6 +201,29 @@ html[lang='zh-hant'] {
   --font-sans: var(--font-body-zh);
   --font-display: var(--font-heading-zh);
   --font-display-en: var(--font-heading-zh);
+}
+
+/* Guidance locales load only the latin/Vietnamese Noto Sans (plus Noto Sans
+   Thai for th). Without these bindings --font-body resolves through the
+   unloaded KR variable and the whole declaration is dropped. */
+html[lang='vi'],
+html[lang='id'],
+html[lang='fil'] {
+  --font-body: var(--font-body-latin);
+  --font-sans: var(--font-body-latin);
+  --font-heading: var(--font-heading-latin);
+  --font-heading-ko: var(--font-heading-latin);
+  --font-display: var(--font-heading-latin);
+  --font-display-en: var(--font-heading-latin);
+}
+
+html[lang='th'] {
+  --font-body: var(--font-body-th);
+  --font-sans: var(--font-body-th);
+  --font-heading: var(--font-body-th);
+  --font-heading-ko: var(--font-body-th);
+  --font-display: var(--font-body-th);
+  --font-display-en: var(--font-body-th);
 }
 
 *,
@@ -562,6 +592,24 @@ li,
   --font-display: var(--font-heading-ja);
   --font-heading: var(--font-heading-ja);
   --font-heading-ko: var(--font-heading-ja);
+}
+
+.site[data-locale='vi'],
+.site[data-locale='id'],
+.site[data-locale='fil'] {
+  --font-body: var(--font-body-latin);
+  --font-sans: var(--font-body-latin);
+  --font-display: var(--font-heading-latin);
+  --font-heading: var(--font-heading-latin);
+  --font-heading-ko: var(--font-heading-latin);
+}
+
+.site[data-locale='th'] {
+  --font-body: var(--font-body-th);
+  --font-sans: var(--font-body-th);
+  --font-display: var(--font-body-th);
+  --font-heading: var(--font-body-th);
+  --font-heading-ko: var(--font-body-th);
 }
 
 html.has-cyber-cursor,
@@ -3843,6 +3891,26 @@ section.home-results-panel--editorial {
   min-width: 0;
 }
 
+/* O16: the guidance home marks source-language columns. The badge sits in the
+   corner opposite the category badge so neither overlay is covered; compact
+   list rows use the inline tag below instead of a second overlay. */
+.insights-category-badge--language {
+  left: auto;
+  right: 1rem;
+  max-width: calc(100% - 2rem);
+  text-align: right;
+}
+
+.insights-language-tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted, #5b6b62);
+  border: 1px solid currentColor;
+  border-radius: var(--radius-xs);
+  padding: 0.1rem 0.42rem;
+}
+
 .insights-category-badge--compact {
   top: auto;
   left: 0.75rem;
@@ -5403,7 +5471,19 @@ section.home-results-panel--editorial {
   background: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid rgba(148, 163, 184, 0.14);
   position: relative;
-  z-index: 2;
+  /* Language-dropdown stacking (single source of truth).
+     `.header-utility` is a stacking context, so the open language menu can
+     never escape it — `.menu { z-index: 90 }` only orders siblings inside this
+     bar. With the historic `z-index: 2` the whole bar painted under
+     `.header-main` (z-index 5), so the dropdown ended up behind `.nav-cta` /
+     logo / search and its lower options were unclickable. Found twice: on the
+     old four locales once the switcher sat far enough right (G21), and on the
+     guidance four, where there are no member links to push it left (O14).
+     Lifting the bar to 6 unconditionally fixes both; it is preferred over a
+     `:has(details[open])` variant because the two bars never overlap (layout is
+     unchanged either way) and this needs no `:has()` support. `.utility-lang`
+     must also stay `overflow: visible` for the menu to leave the pill. */
+  z-index: 6;
   backdrop-filter: blur(16px);
 }
 
@@ -5477,7 +5557,7 @@ section.home-results-panel--editorial {
   border: 1px solid rgba(148, 163, 184, 0.22);
   border-radius: 999px;
   background: rgba(248, 250, 252, 0.94);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .locale-flag-switcher-link {
@@ -5725,6 +5805,61 @@ section.home-results-panel--editorial {
   margin-right: 0;
   flex-shrink: 0;
   justify-self: end;
+}
+
+/*
+ * Guidance locales (vi/id/th/fil) write far longer chrome labels than the
+ * CJK/EN four — `fil` worst of all ("Mga larangan ng serbisyo" alone is as
+ * wide as two Korean items). `.nav-link` is `white-space: nowrap` inside a
+ * `minmax(0, 1fr)` track, so the list cannot shrink: it overflows and paints
+ * over the search button and the CTA instead of reflowing. Tighten the
+ * desktop header for those four only; ko/zh-hant/en/ja keep their spacing.
+ */
+@media (min-width: 1025px) {
+  html[lang='vi'] .header-main-inner,
+  html[lang='id'] .header-main-inner,
+  html[lang='th'] .header-main-inner,
+  html[lang='fil'] .header-main-inner {
+    gap: clamp(0.5rem, 0.9vw, 1rem);
+  }
+
+  html[lang='vi'] .nav-list,
+  html[lang='id'] .nav-list,
+  html[lang='th'] .nav-list,
+  html[lang='fil'] .nav-list {
+    gap: 0;
+  }
+
+  /* Fixed, not vw-scaled: the header container is capped at --max-width, so
+     viewport-scaled padding only grows the list without growing its track. */
+  html[lang='vi'] .nav-link,
+  html[lang='id'] .nav-link,
+  html[lang='th'] .nav-link,
+  html[lang='fil'] .nav-link {
+    font-size: 0.9rem;
+    padding: 0 0.34rem;
+  }
+
+  /* Filipino is the longest of the four even after shortening its labels. */
+  html[lang='fil'] .nav-link {
+    font-size: 0.86rem;
+    padding: 0 0.28rem;
+  }
+
+  html[lang='vi'] .header-actions,
+  html[lang='id'] .header-actions,
+  html[lang='th'] .header-actions,
+  html[lang='fil'] .header-actions {
+    gap: 0.5rem;
+  }
+
+  html[lang='vi'] .nav-cta.button,
+  html[lang='id'] .nav-cta.button,
+  html[lang='th'] .nav-cta.button,
+  html[lang='fil'] .nav-cta.button {
+    padding: 0 0.75rem;
+    font-size: 0.8rem;
+  }
 }
 
 .header-search-btn {
@@ -6365,6 +6500,7 @@ section.home-results-panel--editorial {
 #public-mobile-nav-drawer .locale-flag-switcher--mobile {
   min-width: 0;
   max-width: 100%;
+  width: 100%;
   flex-wrap: wrap;
 }
 
@@ -6422,6 +6558,8 @@ section.home-results-panel--editorial {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.55rem;
+  position: relative;
+  z-index: 2;
 }
 
 .locale-flag-switcher--mobile {
@@ -10053,6 +10191,26 @@ html.js .reveal.is-visible .reveal-stagger > * {
   animation: quickMenuIn 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 @keyframes quickMenuIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
+/*
+ * Builder-decomposed hero (published zh-hant home) — the quick menu must not
+ * offset itself.
+ *
+ * `decompose-hero.ts` puts this nav in its own node at `y: 70` under the search
+ * wrap, so the builder emits an absolutely-positioned wrapper that already sits
+ * just below the search bar, and pins the nav inline to `position: relative`.
+ * Against a relative box `top: 100%` no longer means "directly below the bar" —
+ * it resolves against the wrapper's own height and shoves the menu down by a
+ * further 318px, out of the hero and on top of the section beneath it. Measured
+ * on the live zh-hant home: menu at 1045px where ko renders it at 739px.
+ *
+ * The wrapper carries the offset, so the nav contributes none. ko/en/ja render
+ * the native hero (`position: absolute`) and keep the rule above.
+ */
+.hero-quick-menu.builder-hero-quick-menu {
+  top: 0;
+  margin-top: 0;
+}
 .hero-quick-menu-item {
   display: flex; align-items: center; gap: 0.75rem; padding: 0.85rem 1.25rem;
   font-size: 0.9rem; font-weight: 500; color: var(--neutral-700); text-decoration: none;
@@ -25861,4 +26019,28 @@ html[data-cinematic-intro-visible='true']
     object-position: 57% center;
   }
 
+}
+
+/* S2a: answer-first summary block at the top of a vi/id/th/fil guidance page
+   body (`GuidancePageBody`). One class, scoped to the block; the paragraph and
+   the source links reuse the shared `.section-lede` / `.contact-list` styles.
+   Replaces the `.answerBlock` rule that lived in `InternationalGuidance.module.css`
+   before the guidance shell was removed — that component no longer renders pages. */
+.guidance-answer {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--gold-dim);
+  border-radius: 10px;
+  background: var(--white);
+}
+
+.guidance-answer > :first-child {
+  margin-top: 0;
+}
+
+.guidance-answer > :last-child {
+  margin-bottom: 0;
 }

@@ -48,8 +48,8 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
       },
       {
         id: 'cosmetics-market-entry',
-        title: '대만 화장품 시장 진출: 법인 설립부터 PIF 등록까지',
-        summary: '진출 모델 선택, PIF 등록, 광고 규제까지 화장품 판매 핵심 리스크를 정리했습니다.',
+        title: '대만 화장품 시장 진출: 법인 설립부터 제품등록·PIF 작성·보관까지',
+        summary: '진출 모델 선택, 제품등록과 PIF 작성·보관, 광고 규제까지 화장품 판매 핵심 리스크를 정리했습니다.',
         href: '/ko/insights/cosmetics-market-entry',
         category: 'formation',
         date: '2026.02.04',
@@ -235,8 +235,8 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
       },
       {
         id: 'cosmetics-market-entry',
-        title: '台灣化妝品市場進入：公司設立到 PIF 登錄',
-        summary: '整理市場進入模式、PIF 文件要求與廣告法規風險。',
+        title: '台灣化妝品市場進入：公司設立到產品登錄與 PIF 建立、保存',
+        summary: '整理市場進入模式、產品登錄與 PIF 文件要求，以及廣告法規風險。',
         href: '/zh-hant/insights/cosmetics-market-entry',
         category: 'formation',
         date: '2026.02.04',
@@ -407,8 +407,8 @@ const englishPostCopy: Record<string, { title: string; summary: string; keywords
     keywords: ['gym injury', 'damages', 'claim deadlines', 'evidence preservation', 'insurance']
   },
   'cosmetics-market-entry': {
-    title: 'Taiwan Cosmetics Market Entry: From Incorporation to PIF Registration',
-    summary: 'A practical guide to market-entry model selection, PIF filings, and advertising compliance.',
+    title: 'Taiwan Cosmetics Market Entry: From Incorporation to Product Registration and PIF Retention',
+    summary: 'A practical guide to market-entry model selection, TFDA product registration, PIF preparation and retention, and advertising compliance.',
     keywords: ['cosmetics', 'PIF', 'TFDA', 'company setup']
   },
   'company-advanced-2': {

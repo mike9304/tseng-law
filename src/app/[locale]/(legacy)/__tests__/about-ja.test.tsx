@@ -31,13 +31,17 @@ describe('Japanese About integration', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/about`,
       en: `${SITE_URL}/en/about`,
       ja: `${SITE_URL}/ja/about`,
+      vi: `${SITE_URL}/vi/about`,
+      id: `${SITE_URL}/id/about`,
+      th: `${SITE_URL}/th/about`,
+      fil: `${SITE_URL}/fil/about`,
       'x-default': `${SITE_URL}/en/about`,
     });
     expect(metadata.keywords).toEqual([
       '昊鼎国際法律事務所',
       '曾雋崴弁護士',
       '台湾弁護士',
-      '韓国・台湾業務チーム',
+      '昊鼎日本語チーム',
     ]);
   });
 
@@ -107,16 +111,26 @@ describe('Japanese About integration', () => {
   });
 
   it.each([
-    ['ko', '호정 소개', '호정의 스토리와 한국 업무팀 구성원을 확인할 수 있습니다.'],
-    ['zh-hant', '昊鼎介紹', '查看昊鼎團隊背景與韓國業務團隊成員。'],
-    ['en', 'About Hovering', 'Learn about our international Taiwan practice and meet the team.'],
+    ['ko', '호정 소개', '호정의 스토리와 호정 대만·한국 팀 구성원을 확인할 수 있습니다.'],
+    ['zh-hant', '昊鼎介紹', '查看昊鼎團隊背景與昊鼎韓國台灣團隊成員。'],
+    ['en', 'About Hovering', 'Learn about Hovering\'s background and meet the Hovering English Team.'],
   ] as const)('preserves representative %s About metadata', (locale, title, description) => {
     const metadata = getAboutLegacyMetadata(locale);
 
     expect(metadata.title).toBe(title);
     expect(metadata.description).toBe(description);
     expect(metadata.alternates?.canonical).toBe(`${SITE_URL}/${locale}/about`);
-    // WO#3: /ja/about is a live Japanese page, so ja must be advertised.
+    expect(metadata.alternates?.languages).toEqual({
+      ko: `${SITE_URL}/ko/about`,
+      'zh-Hant': `${SITE_URL}/zh-hant/about`,
+      en: `${SITE_URL}/en/about`,
+      ja: `${SITE_URL}/ja/about`,
+      vi: `${SITE_URL}/vi/about`,
+      id: `${SITE_URL}/id/about`,
+      th: `${SITE_URL}/th/about`,
+      fil: `${SITE_URL}/fil/about`,
+      'x-default': `${SITE_URL}/en/about`,
+    });
     expect(metadata.alternates?.languages).toHaveProperty('ja', `${SITE_URL}/ja/about`);
   });
 });

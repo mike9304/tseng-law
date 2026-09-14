@@ -1,7 +1,7 @@
 ---
 title: "직원이 자발적으로 퇴사해도 퇴직금을 받을 수 있는 예외"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
-lastmod: "2025-09-13"
+lastmod: "2026-09-10"
 date_display: "2025년 9월 13일"
 read_time: "2분 분량"
 categories:
@@ -13,13 +13,13 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![대표 이미지](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-이전에 말씀드렸듯이 대만에서는 직원이 퇴직금을 받기가 쉽지 않습니다.
+이전에 말씀드렸듯이 대만에서는 직원이 퇴직금(資遣費)을 받기가 쉽지 않습니다.
 
 ​
 
 특히 직원이 자발적으로 퇴사할 경우,
 
-퇴직금을 받을 수 없는데,
+퇴직금(資遣費)을 받을 수 없는데(노동기준법 제18조),
 
 이는 한국과는 다릅니다.
 
@@ -29,7 +29,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-다음과 같은 특수한 상황에서는 근로자가 자발적으로 퇴사하더라도 고용주는 근로자에게 퇴직금을 지급해야 합니다(노동기준법 제14조, 제18조):
+다음과 같은 특수한 상황에서는 근로자가 자발적으로 퇴사하더라도 고용주는 근로자에게 퇴직금을 지급해야 합니다(노동기준법 제14조, 같은 조가 제17조를 준용):
 
 1. 고용주가 근로계약 체결 시 허위로 의사표시를 하여 근로자가 잘못 믿게 되어 손해를 입을 우려가 있는 경우
 
@@ -65,7 +65,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 해당 상황을 알게 된 날로부터 **30일** 이내에,
 
-또는 손해 결과를 알게 된 날로부터 **30일** 이내에 노동계약을 종료해야 한다고 규정하고 있습니다.
+또는 (제6호의 경우) 손해 결과를 알게 된 날로부터 **30일** 이내에 노동계약을 종료해야 한다고 규정하고 있습니다.
 
 따라서 근로자는 시간을 잘 파악해야 합니다.
 

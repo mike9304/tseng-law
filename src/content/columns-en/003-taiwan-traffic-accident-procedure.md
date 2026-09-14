@@ -1,7 +1,7 @@
 ---
 title: "Taiwan Traffic Accident Q&A: Scene Safety, Fault, Settlement, and Compensation"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
-lastmod: "2026-07-26"
+lastmod: "2026-09-10"
 date_display: "September 13, 2025"
 read_time: "8 min read"
 categories:
@@ -41,7 +41,7 @@ Criminal Code Article 284 defines negligent injury and negligent serious injury,
 
 Under Civil Code Article 197, a civil damages claim is generally subject to a period of two years from knowledge of the damage and the person liable, and ten years from the tort. Whether particular facts interrupt or otherwise affect a limitation period must be assessed separately.
 
-Under Criminal Procedure Code Articles 487 and 488, a crime victim may file an attached civil action while the criminal case is pending, no later than the close of second-instance oral argument. This route usually provides a filing-fee advantage, but it does not guarantee a cost-free result. Under Article 503, if the criminal case is dismissed and the matter is transferred to a civil court at the plaintiff's request, costs may be payable. Article 504 also governs aspects of transfer and procedure.
+Under Criminal Procedure Code Articles 487 and 488, a crime victim may file an attached civil action while the criminal case is pending, no later than the close of second-instance oral argument, except that it may not be filed after the close of first-instance oral argument and before an appeal is lodged. This route usually provides a filing-fee advantage, but it does not guarantee a cost-free result. Under Article 503, if the criminal case is dismissed and the matter is transferred to a civil court at the plaintiff's request, costs may be payable. Article 504 also governs aspects of transfer and procedure.
 
 The appropriate route depends on interruption of the limitation period, the defendants, evidence, insurance, and venue. There is no universally best route for every case.
 
@@ -212,7 +212,7 @@ Q17. What criminal liability does an at-fault party face for negligent injury in
 
 Courts currently generally impose about 3 months’ imprisonment for negligent injury.
 
-If the sentence is converted to a fine, the conversion rate is TWD 1,000 per day; for a 3-month sentence, the fine is 3 × 30 × TWD 1,000 = TWD 90,000.
+If the sentence is converted to a fine, Criminal Code Article 41, paragraph 1 sets the rate at TWD 1,000, 2,000, or 3,000 per day; at TWD 1,000 per day, a 3-month sentence converts to 3 × 30 × TWD 1,000 = TWD 90,000.
 
 Negligent serious injury generally results in about 4 months’ imprisonment, while negligent death generally results in about 6 months’ imprisonment.
 

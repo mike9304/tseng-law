@@ -4,9 +4,16 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } fr
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import type { SiteLocale } from '@/lib/locales';
 import { toBuilderLocale } from '@/lib/locales';
-import { siteContent } from '@/data/site-content';
+import { isGuidanceLocale4, type PublicLocale8 } from '@/lib/public-guidance';
+import {
+  chromeSiteLocale,
+  guidanceChromeLabels,
+  guidanceHeaderNavItems,
+  guidanceSearchLink,
+  guidanceUtilityLinks,
+  publicSiteContent,
+} from '@/lib/public-site-chrome';
 import LocaleFlagSwitcher from '@/components/LocaleFlagSwitcher';
 import SearchOverlay from '@/components/SearchOverlay';
 import MobileNavDrawer from '@/components/MobileNavDrawer';
@@ -220,7 +227,10 @@ export function installPublicHeaderContentFit(header: HTMLElement): () => void {
   };
 }
 
-function buildMainNavItems(locale: SiteLocale): MainNavItem[] {
+function buildMainNavItems(locale: PublicLocale8): MainNavItem[] {
+  if (isGuidanceLocale4(locale)) {
+    return guidanceHeaderNavItems(locale);
+  }
   if (locale === 'ja') {
     return [
       { key: 'services', label: '取扱業務', href: '/ja/services' },
@@ -263,7 +273,10 @@ function buildMainNavItems(locale: SiteLocale): MainNavItem[] {
   ];
 }
 
-function buildMegaPanels(locale: SiteLocale): MegaPanel[] {
+function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
+  // Guidance locales publish exactly ten core pages; there is no deeper tree to
+  // reveal, so the mega menu stays empty (the nav links navigate directly).
+  if (isGuidanceLocale4(locale)) return [];
   if (locale === 'ja') {
     return [
       {
@@ -398,8 +411,11 @@ function buildMegaPanels(locale: SiteLocale): MegaPanel[] {
   ];
 }
 
-export default function Header({ locale }: { locale: SiteLocale }) {
-  const content = siteContent[locale];
+export default function Header({ locale }: { locale: PublicLocale8 }) {
+  const content = publicSiteContent(locale);
+  const isGuidance = isGuidanceLocale4(locale);
+  const chromeLocale = chromeSiteLocale(locale);
+  const guidanceSearch = guidanceSearchLink(locale);
   const brandText =
     locale === 'ko'
       ? '법무법인 호정'
@@ -447,10 +463,22 @@ export default function Header({ locale }: { locale: SiteLocale }) {
       cleanupFit();
     };
   }, [locale]);
-  const openMenuLabel = locale === 'ko' ? '메뉴 열기' : locale === 'zh-hant' ? '開啟選單' : locale === 'ja' ? 'メニューを開く' : 'Open menu';
-  const closeMenuLabel = locale === 'ko' ? '메뉴 닫기' : locale === 'zh-hant' ? '關閉選單' : locale === 'ja' ? 'メニューを閉じる' : 'Close menu';
+  // vi/id/th/fil publish their own skip-link and menu labels; the ko/zh/ja
+  // ladder below would otherwise drop them to English.
+  const guidanceLabels = guidanceChromeLabels(locale);
+  const menuLabel = guidanceLabels
+    ? guidanceLabels.menuLabel
+    : locale === 'ko' ? '메뉴' : locale === 'zh-hant' ? '選單' : locale === 'ja' ? 'メニュー' : 'Menu';
+  const openMenuLabel = guidanceLabels
+    ? menuLabel
+    : locale === 'ko' ? '메뉴 열기' : locale === 'zh-hant' ? '開啟選單' : locale === 'ja' ? 'メニューを開く' : 'Open menu';
+  const closeMenuLabel = guidanceLabels
+    ? menuLabel
+    : locale === 'ko' ? '메뉴 닫기' : locale === 'zh-hant' ? '關閉選單' : locale === 'ja' ? 'メニューを閉じる' : 'Close menu';
   const searchLabel = locale === 'ko' ? '검색 열기' : locale === 'zh-hant' ? '開啟搜尋' : locale === 'ja' ? '検索を開く' : 'Open search';
-  const skipLabel = locale === 'ko' ? '본문 바로가기' : locale === 'zh-hant' ? '跳到主要內容' : locale === 'ja' ? '本文へ' : 'Skip to main content';
+  const skipLabel = guidanceLabels
+    ? guidanceLabels.skipLink
+    : locale === 'ko' ? '본문 바로가기' : locale === 'zh-hant' ? '跳到主要內容' : locale === 'ja' ? '本文へ' : 'Skip to main content';
   const homeLabel = locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home';
   const mainNavLabel = locale === 'ko' ? '주요 메뉴' : locale === 'zh-hant' ? '主要選單' : locale === 'ja' ? 'メインメニュー' : 'Main menu';
   const memberLabels =
@@ -461,8 +489,9 @@ export default function Header({ locale }: { locale: SiteLocale }) {
         : locale === 'ja'
           ? { login: 'ログイン', account: 'アカウント', premium: 'プレミアム', logout: 'ログアウト' }
         : { login: 'Log in', account: 'My account', premium: 'Premium', logout: 'Log out' };
-  const utilityLinks =
-    locale === 'ko'
+  const utilityLinks = isGuidance
+    ? guidanceUtilityLinks(locale)
+    : locale === 'ko'
       ? [
           { label: '연락처', href: '/ko/contact' },
           { label: '오시는 길', href: '/ko/contact#offices' }
@@ -705,7 +734,7 @@ export default function Header({ locale }: { locale: SiteLocale }) {
   }, [closeMegaMenuNow, drawerOpen, searchOpen]);
 
   useEffect(() => {
-    if (locale === 'ja') {
+    if (locale === 'ja' || isGuidanceLocale4(locale)) {
       setMemberNav({ status: 'signed-out' });
       return;
     }
@@ -797,7 +826,7 @@ export default function Header({ locale }: { locale: SiteLocale }) {
                 {item.label}
               </Link>
             ))}
-            {locale !== 'ja' ? (
+            {locale !== 'ja' && !isGuidance ? (
               <div className="utility-member-nav" data-member-nav-state={memberNav.status}>
                 {memberNav.status === 'signed-in' ? (
                   <>
@@ -942,8 +971,12 @@ export default function Header({ locale }: { locale: SiteLocale }) {
           </nav>
 
           <div className={`header-actions ${styles.headerActions}`}>
-            {locale === 'ja' ? (
-              <Link className="header-search-btn" href={`/${locale}/search`} aria-label={searchLabel}>
+            {locale === 'ja' || isGuidance ? (
+              <Link
+                className="header-search-btn"
+                href={guidanceSearch ? guidanceSearch.href : `/${locale}/search`}
+                aria-label={guidanceSearch ? guidanceSearch.label : searchLabel}
+              >
                 <svg className="header-search-icon" viewBox="0 0 24 24" aria-hidden>
                   <circle cx="11" cy="11" r="7.2" />
                   <line x1="16.5" y1="16.5" x2="21" y2="21" />
@@ -1024,8 +1057,8 @@ export default function Header({ locale }: { locale: SiteLocale }) {
 
       <div className={`mega-overlay${openMenu ? ' visible' : ''}`} id="megaOverlay" onClick={closeMegaMenuNow} />
 
-      {locale !== 'ja' ? (
-        <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} locale={toBuilderLocale(locale)} />
+      {locale !== 'ja' && !isGuidance ? (
+        <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} locale={toBuilderLocale(chromeLocale)} />
       ) : null}
       <MobileNavDrawer
         open={drawerOpen}

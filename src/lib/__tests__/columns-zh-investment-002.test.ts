@@ -21,7 +21,7 @@ const exitFaqAnswer =
 const resolutionFaqAnswer =
   '有限公司解散，須經股東表決權三分之二以上同意。股份有限公司原則上須有代表已發行股份總數三分之二以上之股東出席，並經出席股東表決權過半數同意。公開發行公司未達前述出席門檻時，得由代表已發行股份總數過半數之股東出席，並經出席股東表決權三分之二以上同意。章程得訂定更高門檻。解散登記應於解散後十五日內申請。';
 const suspensionFaqAnswer =
-  '公司停業一個月以上者，應於停業前或停業日起十五日內申請停業登記，每次停業期間最長不得超過一年。但停業年度仍須辦理年度所得稅結算申報，並非所有稅務申報一律免除。仍應依稅目、持有資產、員工及其他具體情形，分別確認相關義務。';
+  '公司停業一個月以上者，應於停業前或停業日起十五日內申請停業登記（但已依加值型及非加值型營業稅法規定申報核備者，不在此限——公司登記辦法第3條第1項但書），每次停業期間最長不得超過一年。但停業年度仍須辦理年度所得稅結算申報，並非所有稅務申報一律免除。仍應依稅目、持有資產、員工及其他具體情形，分別確認相關義務。';
 const article9Paragraph =
   '台灣《公司法》第9條規定，公司應收之股款，若股東未實際繳納而以申請文件表明收足，或股東雖已繳納但在登記後將股款發還股東或任由股東收回，公司負責人可能面臨五年以下有期徒刑、拘役，或科或併科新臺幣50萬元以上250萬元以下罰金。這項規定並非處罰所有正常、合法的公司資金運用。';
 const article90Paragraph =
@@ -71,7 +71,7 @@ describe('Traditional Chinese investment column 002 — company exit and capital
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company',
     );
-    expect(parsed.data.lastmod).toBe('2026-07-25');
+    expect(parsed.data.lastmod).toBe('2026-09-10');
     expect(parsed.data.date_display).toBe('2025年9月13日');
     expect(parsed.data.read_time).toBe('15分鐘閱讀');
     expect(parsed.data.categories).toEqual(['台灣公司設立']);
@@ -84,7 +84,7 @@ describe('Traditional Chinese investment column 002 — company exit and capital
 
     expect(post?.slug).toBe('withdraw-capital-taiwan-company');
     expect(post?.title).toBe(title);
-    expect(post?.date).toBe('2026-07-25');
+    expect(post?.date).toBe('2026-09-10');
     expect(post?.dateDisplay).toBe('2025年9月13日');
     expect(post?.readTime).toBe('15分鐘閱讀');
     expect(post?.category).toBe('formation');
@@ -356,7 +356,7 @@ describe('Traditional Chinese investment column 002 — company exit and capital
     const calculatedMinutes = Math.ceil(hanCount / 400);
 
     expect(hanCount).toBeGreaterThanOrEqual(4_000);
-    expect(hanCount).toBe(5_940);
+    expect(hanCount).toBe(5_978);
     expect(calculatedMinutes).toBe(15);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
     expect(post?.readTime).toBe(`${calculatedMinutes}分鐘閱讀`);

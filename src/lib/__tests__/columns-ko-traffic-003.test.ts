@@ -27,12 +27,12 @@ const incidentAlt =
 const q6Marker = 'Q6. 사고 책임은 어떻게 인정되나요?';
 const q11Marker = 'Q11. 치료·회복 기간의 일실수입은 어떻게 입증하나요?';
 const q16Marker = 'Q16. 사고 발생 후 보험사에게 모든 것을 맡길 수 있나요?';
-const immutablePrefixBytes = 14_761;
+const immutablePrefixBytes = 14_845;
 const immutablePrefixSha256 =
-  'e6e8739f6b29cbec19966b3080aa667d6b84cf2c13b970d7595a5bee08ed35ca';
-const immutableTailBytes = 4_480;
+  '37dd01e457fd89a550986a8d0948c20943099cb398e5d63ec908c9f5d84a931b';
+const immutableTailBytes = 4_580;
 const immutableTailSha256 =
-  'b4ed102801368beb117b2f25b6ab6ead8de52d224165b0367e4dd200a426840a';
+  '6d32c9ea4ca3e3a33b776c3bc859c921e2955316c724ef49e61d24be101277a9';
 
 const sourceTargets = [
   'https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012',
@@ -205,7 +205,7 @@ describe('Korean traffic column 003 — Q1–Q5 rewrite boundary', () => {
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-07-26',
+      lastmod: '2026-09-10',
       date_display: '2025년 9월 13일',
       read_time: '8분 분량',
       categories: ['대만 법률정보'],

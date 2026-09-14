@@ -1,7 +1,7 @@
 ---
 title: "員工自願離職也能領資遣費的例外情形"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
-lastmod: "2026-07-27"
+lastmod: "2026-09-10"
 date_display: "2025年9月13日"
 read_time: "2分鐘閱讀"
 categories:
@@ -19,7 +19,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 尤其是員工自願離職的情況下，
 
-無法領取資遣費，
+無法領取資遣費（勞動基準法第18條），
 
 這和韓國不同。
 
@@ -29,7 +29,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-在以下特殊情況中，即使勞工自願離職，雇主仍須支付資遣費（勞動基準法第14條、第18條）：
+在以下特殊情況中，即使勞工自願離職，雇主仍須支付資遣費（勞動基準法第14條，同條準用第17條）：
 
 1. 雇主於訂立勞動契約時為虛偽之意思表示，使勞工誤信而有受損害之虞者
 
@@ -65,7 +65,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 須自知悉該情形之日起**30日**內，
 
-或自知悉損害結果之日起**30日**內終止勞動契約。
+或（第6款情形）自知悉損害結果之日起**30日**內終止勞動契約。
 
 因此勞工必須掌握好時間。
 

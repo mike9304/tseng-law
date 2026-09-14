@@ -14,6 +14,10 @@ import {
 } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
 import { ARCHIVE_INTRO_COPY } from '@/lib/insights/archive-copy';
+import {
+  INSIGHTS_IMAGE_FALLBACK,
+  resolveInsightsImageSrc,
+} from '@/components/insights-image';
 
 interface ArchivePost {
   slug: string;
@@ -26,21 +30,7 @@ interface ArchivePost {
   summary: string;
 }
 
-/**
- * A real, tracked editorial image with a Taiwan-law visual language. It is used
- * for incomplete legacy records instead of exposing a generic placeholder in
- * the published archive.
- */
-export const INSIGHTS_IMAGE_FALLBACK =
-  '/images/blog/016-taiwan-inheritance-custody-analysis/featured-generic.webp';
-
-export function resolveInsightsImageSrc(src?: string | null): string {
-  const normalized = src?.trim() ?? '';
-  if (!normalized || /(?:^|\/)placeholder(?:[-./]|$)/i.test(normalized)) {
-    return INSIGHTS_IMAGE_FALLBACK;
-  }
-  return normalized;
-}
+export { INSIGHTS_IMAGE_FALLBACK, resolveInsightsImageSrc } from '@/components/insights-image';
 
 function parseInsightsDateValue(source: string): number {
   const parts = source.match(/(\d{4})\D+(\d{1,2})\D+(\d{1,2})/);

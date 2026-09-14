@@ -8,12 +8,21 @@ import ContactBlocks from '@/components/ContactBlocks';
 import ContactEmailActions from '@/components/ContactEmailActions';
 import HeroSearch from '@/components/HeroSearch';
 import HomeContactCta from '@/components/HomeContactCta';
+import BuilderContactSectionSurface from '@/components/builder/BuilderContactSectionSurface';
 import { ContactLegacyPageBody } from '@/app/[locale]/(legacy)/legacy-page-bodies';
+import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
 import { createContactDecomposedNodes } from '@/lib/builder/canvas/decompose-contact';
 import { createHeroDecomposedNodes } from '@/lib/builder/canvas/decompose-hero';
 import { decomposeContactCta } from '@/lib/builder/decompose/contact-cta';
 import { decomposeHero } from '@/lib/builder/decompose/hero';
+import {
+  builderContactSectionKeys,
+  type BuilderContactSectionKey,
+  type BuilderSectionNode,
+} from '@/lib/builder/types';
+import { PUBLIC_INQUIRY_LOCALES } from '@/lib/consultation/intake-language-contract';
 import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
+import { locales, siteLocales } from '@/lib/locales';
 
 const EMAIL = 'wei@hoveringlaw.com.tw';
 const STALE_KO_SHORT_SUBJECT = ['subject=상담', '%20문의드립니다'].join('');
@@ -154,6 +163,11 @@ describe('consultation email CTAs', () => {
     expect(koreanActions).toContain(
       '초기 문의에는 사건 개요와 연락처만 보내 주세요. 민감정보는 제외해 주세요.',
     );
+    expect(koreanActions).toContain(internationalInquiryCopy.ko.consultationNotice);
+    expect(koreanActions).toContain(internationalInquiryCopy.ko.methodConfirmationNotice);
+    expect(koreanActions).not.toContain(
+      '당사무소에서는 한국어·일본어·영어로 소통하실 수 있습니다.',
+    );
   });
 
   it('keeps the about official email card and the contact-page warning below compact first-viewport actions', () => {
@@ -190,5 +204,107 @@ describe('consultation email CTAs', () => {
       expect(source).not.toContain(STALE_KO_SHORT_SUBJECT);
       expect(source).not.toContain(STALE_KO_SHORT_SUBJECT_ENCODED);
     }
+  });
+
+  it('keeps the eight-locale inquiry copy contract and intake axes on four contact locales', () => {
+    expect(PUBLIC_INQUIRY_LOCALES).toEqual([
+      'ko',
+      'zh-hant',
+      'en',
+      'ja',
+      'vi',
+      'id',
+      'th',
+      'fil',
+    ]);
+
+    for (const locale of PUBLIC_INQUIRY_LOCALES) {
+      expect(internationalInquiryCopy[locale].consultationNotice.length).toBeGreaterThan(0);
+      expect(internationalInquiryCopy[locale].methodConfirmationNotice.length).toBeGreaterThan(0);
+    }
+
+    for (const locale of siteLocales) {
+      const html = renderToStaticMarkup(createElement(ContactLegacyPageBody, { locale }));
+      const copy = internationalInquiryCopy[locale];
+      const formIndex = html.indexOf('<form');
+      const headingEnd = html.indexOf('</h1>');
+
+      expect(html.split('<form').length - 1).toBe(1);
+      expect(formIndex).toBeGreaterThan(headingEnd);
+      expect(formIndex).toBeGreaterThan(html.indexOf('contact-email-actions'));
+      expect(html).toContain(copy.heading);
+      expect(html).toContain(copy.consultationNotice);
+      expect(html).toContain('name="originalLanguage"');
+      expect(html).toContain('name="preferredConsultationLanguage"');
+      expect(html).toContain('name="originalText"');
+      expect(html).toContain('needs-method-confirmation');
+    }
+  });
+
+  it('places a single inquiry form after the CMS contact header, not inside the heading or later sections', () => {
+    const header = { label: 'Contact', title: 'Contact', description: 'Contact' };
+
+    function contactSection(sectionKey: BuilderContactSectionKey): BuilderSectionNode {
+      return {
+        id: sectionKey,
+        type: 'section',
+        name: sectionKey,
+        sectionKey,
+      };
+    }
+
+    for (const locale of locales) {
+      const rendered = Object.fromEntries(
+        builderContactSectionKeys.map((sectionKey) => [
+          sectionKey,
+          renderToStaticMarkup(
+            createElement(BuilderContactSectionSurface, {
+              locale,
+              section: contactSection(sectionKey),
+              header,
+            }),
+          ),
+        ]),
+      ) as Record<BuilderContactSectionKey, string>;
+
+      expect(rendered['contact.hero'].split('<form').length - 1).toBe(1);
+      expect(rendered['contact.hero'].indexOf('<form')).toBeGreaterThan(
+        rendered['contact.hero'].indexOf('</h1>'),
+      );
+      expect(rendered['contact.consultation-guide']).not.toContain('<form');
+      expect(rendered['contact.contact-blocks']).not.toContain('<form');
+      expect(rendered['contact.offices']).not.toContain('<form');
+      expect(rendered['contact.hero']).toContain(internationalInquiryCopy[locale].heading);
+      expect(rendered['contact.hero']).toContain('name="originalLanguage"');
+      expect(rendered['contact.hero']).toContain('name="preferredConsultationLanguage"');
+      expect(rendered['contact.hero']).toContain('name="originalText"');
+    }
+  });
+
+  it('replaces the stale three-language email note while keeping original inquiry prep clauses', () => {
+    const english = renderToStaticMarkup(createElement(ContactEmailActions, { locale: 'en' }));
+    const japanese = renderToStaticMarkup(createElement(ContactEmailActions, { locale: 'ja' }));
+    const chinese = renderToStaticMarkup(
+      createElement(ContactEmailActions, { locale: 'zh-hant' }),
+    );
+
+    expect(english).toContain(
+      'For an initial inquiry, send a brief overview of the issue, the Taiwan connection, any deadline, and how we can reach you. Time zone and how you found us are optional. Please exclude sensitive information.',
+    );
+    expect(english).toContain(internationalInquiryCopy.en.consultationNotice);
+    expect(english).toContain(internationalInquiryCopy.en.methodConfirmationNotice);
+    expect(english).not.toContain('English-speaking attorneys are available.');
+
+    expect(japanese).toContain(
+      '初回のお問い合わせでは、案件の概要と連絡先のみをお送りください。機微情報は記載しないでください。',
+    );
+    expect(japanese).toContain(internationalInquiryCopy.ja.consultationNotice);
+    expect(japanese).not.toContain(
+      '当事務所では日本語・英語・韓国語でご連絡いただけます。',
+    );
+
+    expect(chinese).toContain('初次詢問請只提供案件概要與聯絡方式，請勿附上敏感資訊。');
+    expect(chinese).toContain(internationalInquiryCopy['zh-hant'].consultationNotice);
+    expect(chinese).not.toContain('您可以使用韓語、日語或英語與本事務所溝通。');
   });
 });

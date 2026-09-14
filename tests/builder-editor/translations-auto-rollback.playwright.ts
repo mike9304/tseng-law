@@ -5,6 +5,7 @@ import {
   type BuilderCanvasDocument,
 } from '@/lib/builder/canvas/types';
 import { readSiteDocument, writeSiteDocument } from '@/lib/builder/site/persistence';
+import { ensureAuthoredLocaleHome } from './helpers/translations-rich-text';
 
 const SITE_ID = 'default';
 const SOURCE_LOCALE = 'ko';
@@ -93,6 +94,7 @@ async function createBuilderPage(
   document: BuilderCanvasDocument,
   scope: string,
 ): Promise<string> {
+  await ensureAuthoredLocaleHome(request, locale);
   const response = await request.post('/api/builder/site/pages', {
     headers: mutationHeaders(scope),
     data: { locale, slug, title, document },

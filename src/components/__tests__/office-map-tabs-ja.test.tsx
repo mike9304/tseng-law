@@ -5,10 +5,13 @@ import { describe, expect, it } from 'vitest';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 import type { SiteLocale } from '@/lib/locales';
 
-const componentSource = readFileSync(
-  path.join(process.cwd(), 'src/components/OfficeMapTabs.tsx'),
-  'utf8',
-);
+// The office records live in `src/data/office-locations.ts`; the tabs
+// component renders them. Both files are read so the source-level contracts
+// below keep applying to the implementation as a whole.
+const componentSource = [
+  readFileSync(path.join(process.cwd(), 'src/components/OfficeMapTabs.tsx'), 'utf8'),
+  readFileSync(path.join(process.cwd(), 'src/data/office-locations.ts'), 'utf8'),
+].join('\n');
 
 function render(locale: SiteLocale): string {
   return renderToStaticMarkup(<OfficeMapTabs locale={locale} />);

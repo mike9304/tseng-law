@@ -1,7 +1,7 @@
 ---
 title: "대만 회사설립 -심화편-3 영업 장소 찾기"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
-lastmod: "2025-09-13"
+lastmod: "2026-09-10"
 date_display: "2025년 9월 13일"
 read_time: "2분 분량"
 categories:
@@ -59,11 +59,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 따라서 실제로는 회사 등록 시 모든 업종을 조회할 필요는 없습니다.
 
-"[타이페이시 영업장소 조회 서비스 운영 지침](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) "(臺北市營業場所協助查詢服務作業須知)에 따르면,
+"[타이페이시 영업장소 조회 서비스 운영 지침](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) "(臺北市營業場所協助查詢服務作業須知)과 타이페이시의 현행 안내에 따르면,
 
-"자발적 조회 대상 업종"(主動查詢之營業項目)에 해당하는 업종인 경우에만 **반드시** 조회한 후,
+2023년 1월 1일부터 회사·상업(지점(分公司)·분지기구(分支機構) 포함)의 설립, 소재지 이전, 영업항목 추가 등기를 신청할 때에는 업종을 가리지 않고 영업장소 사전 조회 결과를 **반드시** 등기 신청에 첨부해야 합니다.
 
-법인 등록 시 그 조회 결과를 타이페이시 정부에 함께 제출해야 합니다.
+아래 "자발적 조회 대상 업종"(主動查詢之營業項目) 목록은, 등기 신청서에 그 업종이 있는데 첨부한 조회 결과에는 빠져 있을 때 상업처가 등기 심사 중 직권으로 추가 조회하는(隨案主動查詢) 대상이며, 이 목록에 없는 업종이라고 조회가 면제되는 것은 아닙니다.
 
 음식점 영업이 불가능한 곳에서 개업하면 나중에 관할 기관의 벌금을 받을 수도 있습니다.
 

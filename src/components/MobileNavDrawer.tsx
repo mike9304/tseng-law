@@ -4,8 +4,8 @@ import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { siteContent } from '@/data/site-content';
-import type { SiteLocale } from '@/lib/locales';
+import { isGuidanceLocale4, type PublicLocale8 } from '@/lib/public-guidance';
+import { publicSiteContent } from '@/lib/public-site-chrome';
 import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
 import LocaleFlagSwitcher from '@/components/LocaleFlagSwitcher';
 import styles from './PublicChrome.module.css';
@@ -34,7 +34,7 @@ export default function MobileNavDrawer({
 }: {
   open: boolean;
   onClose: () => void;
-  locale: SiteLocale;
+  locale: PublicLocale8;
   onSearch: () => void;
   memberNav?: MemberNavState;
   memberLabels?: MemberLabels;
@@ -44,7 +44,8 @@ export default function MobileNavDrawer({
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const panelRef = useRef<HTMLDivElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
-  const content = siteContent[locale];
+  const content = publicSiteContent(locale);
+  const isGuidance = isGuidanceLocale4(locale);
   const pathname = usePathname();
   const current = pathname ?? '';
 
@@ -185,7 +186,7 @@ export default function MobileNavDrawer({
           </button>
         </div>
         <div className="drawer-utilities">
-          {locale === 'ja' ? (
+          {isGuidance ? null : locale === 'ja' ? (
             <Link
               className="chip"
               href={`/${locale}/search`}
@@ -214,6 +215,7 @@ export default function MobileNavDrawer({
           ))}
         </nav>
         <div className="drawer-footer">
+          {isGuidance ? null : (
           <div className="utility-member-nav drawer-member-nav" data-member-nav-state={memberState.status}>
             {memberState.status === 'signed-in' ? (
               <>
@@ -242,6 +244,7 @@ export default function MobileNavDrawer({
               </Link>
             )}
           </div>
+          )}
           <Link href={content.nav.cta.href} className="button" onClick={onClose}>
             {content.nav.cta.label}
           </Link>

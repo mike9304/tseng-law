@@ -41,6 +41,8 @@ import {
 } from '@/lib/builder/site/published-home-editorial';
 import { hasLegacyColumnsScaffold } from '@/lib/builder/canvas/legacy-columns-scaffold';
 import { projectPublishedHomeInsightsArchiveIntro } from '@/lib/insights/archive-copy';
+import { projectPublishedEnHomeCopy } from '@/lib/builder/site/en-home-copy';
+import { projectTeamBreadcrumbLabel } from '@/lib/builder/site/team-breadcrumb-label';
 import {
   computeTopLevelFlowSectionMetrics,
   compareTopLevelStacking,
@@ -66,7 +68,7 @@ import {
   resolveBackgroundStyle,
   resolveThemeColor,
 } from '@/lib/builder/site/theme';
-import { buildPageSeo } from '@/lib/builder/seo/seo-model';
+import { buildPageSeo, normalizeCanonicalUrl } from '@/lib/builder/seo/seo-model';
 import {
   isPublishedDynamicItemRecordRoutable,
   resolvePublishedDynamicItemRecordJsonLd,
@@ -98,6 +100,11 @@ import {
   getSiteUrl,
   stripOrganizationNameSuffix,
 } from '@/lib/seo';
+import {
+  buildGuidanceCoreLanguageAlternates,
+  guidancePageKeyFromSlugPath,
+} from '@/lib/public-guidance';
+import { isEnglishNoindexPath } from '@/lib/seo-visibility';
 import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/builder/site/paths';
 import { resolveBuilderSiteSettings } from '@/lib/builder/site/localized-settings';
 import { filterNavigationForLocale } from '@/lib/builder/site/navigation';
@@ -655,6 +662,40 @@ export async function buildPublishedSitePageMetadata(
   for (const alt of seoData.hreflang) {
     languages[alt.hreflang] = alt.href;
   }
+
+  const indexabilityPath = resolved.slugPath ? `/${resolved.slugPath}` : '/';
+  const englishNoindex = locale === 'en' && isEnglishNoindexPath(indexabilityPath);
+  if (englishNoindex) {
+    seoData.noIndex = true;
+  }
+
+  const corePageKey = guidancePageKeyFromSlugPath(resolved.slugPath);
+  const defaultCanonical = resolveAbsoluteSeoUrl(
+    siteUrl,
+    resolved.slugPath ? `/${locale}/${resolved.slugPath}` : `/${locale}`,
+  );
+  const hasCustomCanonical = Boolean(seoData.canonical)
+    && normalizeCanonicalUrl(resolveAbsoluteSeoUrl(siteUrl, seoData.canonical))
+      !== normalizeCanonicalUrl(defaultCanonical);
+  const isDynamicRecord = Boolean(resolved.dynamicItemRecordSlug);
+  const shouldMergeGuidanceAlternates = Boolean(corePageKey)
+    && !isDynamicRecord
+    && !seoData.noIndex
+    && !hasCustomCanonical;
+
+  if (shouldMergeGuidanceAlternates && corePageKey) {
+    const guidanceLanguages = buildGuidanceCoreLanguageAlternates(corePageKey, siteUrl);
+    for (const key of Object.keys(languages)) {
+      delete languages[key];
+    }
+    Object.assign(languages, guidanceLanguages);
+  } else if (englishNoindex) {
+    delete languages.en;
+    if (languages.ko) {
+      languages['x-default'] = languages.ko;
+    }
+  }
+
   const otherMeta: Record<string, string> = {};
   for (const tag of seoData.additionalMetaTags) {
     const name = tag.name.trim();
@@ -829,7 +870,7 @@ export async function PublishedSitePageView({
           url: `${siteUrl}/${locale}`,
         },
         {
-          name: resolved.pageMeta.title?.[locale] || slugPath || site.name || 'Page',
+          name: projectTeamBreadcrumbLabel(locale, slugPath, resolved.pageMeta.title?.[locale] || slugPath || site.name || 'Page'),
           url: `${siteUrl}${pagePath}`,
         },
       ])
@@ -934,13 +975,17 @@ export async function PublishedSitePageView({
   ): JSX.Element {
     const decorativeAltNode = projectPublishedStockZhHeroDecorativeAlt(node, legacyZhTabletParity);
     const localeProjectedNode = projectImageNodeForLocale(decorativeAltNode, locale);
-    const renderedNode = projectPublishedHomeInsightsArchiveIntro(
-      projectPublishedHomeCaseResultsPoster(
-        projectPublishedHomeHeroPoster(
-          applyBuilderDatasetBindingToNode(localeProjectedNode, bindingContext),
+    const renderedNode = projectPublishedEnHomeCopy(
+      projectPublishedHomeInsightsArchiveIntro(
+        projectPublishedHomeCaseResultsPoster(
+          projectPublishedHomeHeroPoster(
+            applyBuilderDatasetBindingToNode(localeProjectedNode, bindingContext),
+          ),
         ),
+        slugPath,
       ),
       slugPath,
+      locale,
     );
     const component = getComponent(renderedNode.kind);
     const legacyZhFluidStyle = isHomePage ? getLegacyZhHantFluidContainerStyle(renderedNode, locale) : undefined;

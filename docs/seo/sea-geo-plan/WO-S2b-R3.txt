@@ -1,0 +1,9 @@
+# WO-S2b-R3 — 안내 홈(GuidanceHomeBody)에 LegalService JSON-LD (Opus 5, 소형)
+## 공통 규칙
+작업트리 ~/Projects/tseng-law-sea-seo-20260909 만. 커밋·빌드·전체 스위트 금지. 허용 파일: src/components/GuidanceHomeBody.tsx, src/components/__tests__/guidance-home-design-parity.test.tsx(케이스 추가만), src/lib/__tests__/guidance-jsonld.test.ts(케이스 추가). availableLanguage 는 GUIDANCE_CONSULTATION_LANGUAGES(4개) 고정.
+## 목표
+GuidancePageBody.tsx(50~72행)가 하는 것과 같은 방식으로 GuidanceHomeBody 루트에 `buildGuidanceLegalServiceJsonLd(locale,'home',…)` JsonLd 1개 추가(FAQPage는 홈에 faqs 없으면 생략). 홈 디자인 패리티 테스트가 깨지지 않게 JsonLd는 첫 자식으로.
+## 완료 기준
+1. npx vitest run src/components/__tests__/guidance-home-design-parity.test.tsx src/lib/__tests__/guidance-jsonld.test.ts 통과(출력, 홈 4로케일 LegalService 1개·availableLanguage 4개 단언 추가)
+2. npx tsc --noEmit 0
+3. 보고 형식

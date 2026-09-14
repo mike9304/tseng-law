@@ -22,20 +22,20 @@ const incidentImage =
   '../images/003-taiwan-traffic-accident-procedure/img-01.jpg';
 const immutablePrefixBytes = 1_075;
 const immutablePrefixSha256 =
-  '8d75e7d46d3e958d227128ddbdf4a3544a53488204ca7d0d06d73f49e8e0b955';
-const immutableQ1ToQ5PrefixBytes = 8_401;
+  '9c5b624af50937e7f232d5c757d5f6d98e32e3d2edd7395e118f72c869b7e06b';
+const immutableQ1ToQ5PrefixBytes = 8_513;
 const immutableQ1ToQ5PrefixSha256 =
-  '0a90b01893062d07035f76017950ffd56300dbe3d29b0c780363a3c46488bbc7';
-const immutableQ1ToQ10PrefixBytes = 14_552;
+  '5ab865ecb2b5039ff7910c8fee5f4612eed124b9226d6cf8bce79cba2ec8ade4';
+const immutableQ1ToQ10PrefixBytes = 14_664;
 const immutableQ1ToQ10PrefixSha256 =
-  '32a958120c193085db4c996da0dc5f0c0d0df4395e57a27f69d48f8e8b962c93';
+  'c140af500c41486af21147855e57e532a49e3fc97861a6b4d74c930befa7efb8';
 const q11Marker =
   'Q11. What should you watch for when claiming loss from inability to work?';
 const q16Marker =
   'Q16. After an accident, can you leave everything to the insurance company?';
-const immutableQ16ToQ20TailBytes = 4_003;
+const immutableQ16ToQ20TailBytes = 4_069;
 const immutableQ16ToQ20TailSha256 =
-  '0aab3103ff486fc20104b5bea13d55d5a9a93c4e3bfc6891d09432ba7317a5e1';
+  '4f5d1617165c0c1977e96a76cabb532a9d1b7089af16978305711fe6d8f098be';
 const closingNarrativeMarker =
   'Having handled many traffic-accident cases, I want to emphasize one important point.';
 const approvedClosingRemorseSentence =
@@ -429,7 +429,7 @@ describe('English traffic column 003 — metadata and introduction localization 
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-07-26',
+      lastmod: '2026-09-10',
       date_display: 'September 13, 2025',
       read_time: '8 min read',
       categories: ['Taiwan Legal Information'],

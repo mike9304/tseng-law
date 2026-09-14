@@ -140,7 +140,7 @@ describe('Korean family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-07-25',
+      lastmod: '2026-09-10',
       date_display: '2025년 9월 13일',
       read_time: '18분 분량',
       categories: ['대만 법률정보'],
@@ -151,7 +151,7 @@ describe('Korean family column 007 — Taiwan divorce procedure Q&A', () => {
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-07-25',
+      date: '2026-09-10',
       dateDisplay: '2025년 9월 13일',
       readTime: '18분 분량',
       category: 'legal',
@@ -478,7 +478,7 @@ describe('Korean family column 007 — Taiwan divorce procedure Q&A', () => {
   it('separates Articles 1056 and 1057, child support, property, cohabitation, and third-party claims', () => {
     const section = sectionBody(parsed.content, headings[6]);
     const requiredPhrases = [
-      '민법 제1056조의 손해배상은 재판상 이혼에서 책임 있는 상대방을 상대로 한 재산상 손해와 법정 요건을 갖춘 비재산상 손해를 구분하여 검토하는 권리입니다.',
+      '민법 제1056조의 손해배상은 재판상 이혼에서 책임 있는 상대방을 상대로 한 재산상 손해와 법정 요건(같은 조 제2항 단서: 청구인 자신에게 과실이 없을 것)을 갖춘 비재산상 손해를 구분하여 검토하는 권리입니다.',
       '민법 제1057조의 이혼 후 배우자 부양은 재판상 이혼으로 과실 없는 배우자가 생활의 곤궁에 빠진 경우를 전제로 합니다.',
       '미성년 자녀에 대한 부양은 부모와 자녀 사이의 권리·의무이고, 제1057조의 전 배우자 사이 부양과 다릅니다.',
       '제1030조의1 잔여재산 차액분배도 혼인재산제의 정산이며 손해배상이나 부양을 대신하지 않습니다.',
@@ -611,7 +611,7 @@ describe('Korean family column 007 — Taiwan divorce procedure Q&A', () => {
 
     expect(visibleEojeolCount).toBeGreaterThanOrEqual(2_300);
     expect(visibleEojeolCount).toBeLessThanOrEqual(3_600);
-    expect(visibleEojeolCount).toBe(3_086);
+    expect(visibleEojeolCount).toBe(3_094);
     expect(calculatedMinutes).toBe(18);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes}분 분량`);
     expect(post?.readTime).toBe(`${calculatedMinutes}분 분량`);

@@ -16,14 +16,14 @@ const targets = [
     slug: 'taiwan-labor-severance-law',
     filename: '008-taiwan-labor-severance-law.md',
     finalBodyParagraph: '大家在台灣也要保護好自己的權益。',
-    visibleHanCount: 1_566,
-    readTime: '4分鐘閱讀',
+    visibleHanCount: 1_621,
+    readTime: '5分鐘閱讀',
   },
   {
     slug: 'taiwan-voluntary-resignation-severance',
     filename: '009-taiwan-voluntary-resignation-severance.md',
     finalBodyParagraph: '大多數情況下，事先做好準備的一方才能保障自己的權利。',
-    visibleHanCount: 625,
+    visibleHanCount: 640,
     readTime: '2分鐘閱讀',
   },
 ];
@@ -66,13 +66,13 @@ describe('Traditional Chinese labor columns 008 and 009 — related tails', () =
         parsed.content.match(/\p{Script=Han}/gu)?.length ?? 0;
       const calculatedMinutes = Math.ceil(visibleHanCount / 400);
 
-      expect(parsed.data.lastmod).toBe('2026-07-27');
+      expect(parsed.data.lastmod).toBe('2026-09-10');
       expect(visibleHanCount).toBe(target.visibleHanCount);
       expect(parsed.data.read_time).toBe(target.readTime);
       expect(parsed.data.read_time).toBe(`${calculatedMinutes}分鐘閱讀`);
       expect(post).toMatchObject({
         slug: target.slug,
-        date: '2026-07-27',
+        date: '2026-09-10',
         readTime: target.readTime,
       });
     });

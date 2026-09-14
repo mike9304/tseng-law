@@ -2,14 +2,14 @@
 
 import { usePathname } from 'next/navigation';
 import type { ReactNode } from 'react';
-import type { SiteLocale } from '@/lib/locales';
+import { type PublicLocale8 } from '@/lib/public-guidance';
 import CinematicOpening from '@/components/CinematicOpening';
 
 export const CINEMATIC_CHROME_ATTRIBUTE = 'data-cinematic-chrome';
 
 export function isCinematicHomepagePath(
   pathname: string | null,
-  locale: SiteLocale,
+  locale: PublicLocale8,
 ): boolean {
   if (!pathname) return false;
   const localeRoot = `/${locale}`;
@@ -25,7 +25,7 @@ export default function CinematicRouteShell({
   eventPopup,
   children,
 }: {
-  locale: SiteLocale;
+  locale: PublicLocale8;
   header: ReactNode;
   footer: ReactNode;
   quickContact?: ReactNode;
@@ -34,6 +34,9 @@ export default function CinematicRouteShell({
   children: ReactNode;
 }) {
   const pathname = usePathname();
+  // WO-O22 B: CINEMATIC_OPENING_COPY now covers all eight public languages, so
+  // vi/id/th/fil play the same opening as ko/zh-hant/en/ja instead of dropping
+  // straight onto the hero.
   const showCinematicOpening = isCinematicHomepagePath(pathname, locale);
 
   return (

@@ -1,0 +1,26 @@
+rebased a92e4898 base=ad2da25a 13:11:22
+200 http://localhost:4351/vi ld=0 summary=0 faq=0 hreflang=9 canonical=https://tseng-law.com/vi 
+200 http://localhost:4351/vi/services ld=1 summary=1 faq=0 hreflang=9 canonical=https://tseng-law.com/vi/services "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/vi/faq ld=2 summary=1 faq=1 hreflang=8 canonical=https://tseng-law.com/vi/faq "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/vi/contact ld=1 summary=1 faq=0 hreflang=9 canonical=https://tseng-law.com/vi/contact "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/vi/pricing ld=1 summary=1 faq=0 hreflang=9 canonical=https://tseng-law.com/vi/pricing "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/id ld=0 summary=0 faq=0 hreflang=9 canonical=https://tseng-law.com/id 
+200 http://localhost:4351/id/services ld=1 summary=1 faq=0 hreflang=9 canonical=https://tseng-law.com/id/services "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/id/faq ld=2 summary=1 faq=1 hreflang=8 canonical=https://tseng-law.com/id/faq "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/id/contact ld=1 summary=1 faq=0 hreflang=9 canonical=https://tseng-law.com/id/contact "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/id/pricing ld=1 summary=1 faq=0 hreflang=9 canonical=https://tseng-law.com/id/pricing "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/th ld=0 summary=0 faq=0 hreflang=9 canonical=https://tseng-law.com/th 
+200 http://localhost:4351/th/services ld=1 summary=1 faq=0 hreflang=9 canonical=https://tseng-law.com/th/services "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/th/faq ld=2 summary=1 faq=1 hreflang=8 canonical=https://tseng-law.com/th/faq "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/th/contact ld=1 summary=1 faq=0 hreflang=9 canonical=https://tseng-law.com/th/contact "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/th/pricing ld=1 summary=1 faq=0 hreflang=9 canonical=https://tseng-law.com/th/pricing "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/fil ld=0 summary=0 faq=0 hreflang=9 canonical=https://tseng-law.com/fil 
+200 http://localhost:4351/fil/services ld=1 summary=1 faq=0 hreflang=9 canonical=https://tseng-law.com/fil/services "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/fil/faq ld=2 summary=1 faq=1 hreflang=8 canonical=https://tseng-law.com/fil/faq "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/fil/contact ld=1 summary=1 faq=0 hreflang=9 canonical=https://tseng-law.com/fil/contact "availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4351/fil/pricing ld=1 summary=1 faq=0 hreflang=9 canonical=https://tseng-law.com/fil/pricing "availableLanguage":["en","zh-Hant","ja","ko"]
+200 /vi/llms.txt urls=10
+200 /id/llms.txt urls=10
+200 /th/llms.txt urls=10
+200 /fil/llms.txt urls=10
+root catalogs=8 BAD=0

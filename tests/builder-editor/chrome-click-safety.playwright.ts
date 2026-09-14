@@ -846,14 +846,19 @@ test.describe('/ko/admin-builder public chrome click safety', () => {
 
       await page.setViewportSize({ width: 1280, height: 900 });
       await openBuilder(page, '/ko/admin-builder?tabletMobileMenuRenameControl=1');
-      await page.locator('[data-builder-topbar-viewport="tablet"]').click();
-      await expect(page.locator('[data-builder-topbar-viewport="tablet"]')).toHaveAttribute('aria-pressed', 'true');
+      const secondaryCluster = page.locator('[data-builder-topbar-secondary-cluster="true"]');
+      const secondarySummary = secondaryCluster.locator('summary');
+      await secondarySummary.click();
+      const tabletViewport = page.locator('[data-builder-topbar-viewport="tablet"]');
+      await tabletViewport.click();
+      await expect(tabletViewport).toHaveAttribute('aria-pressed', 'true');
       await expect.poll(async () => (
         page.locator('[class*="globalHeaderRegion"]').first().evaluate((element) => Math.round(element.getBoundingClientRect().width))
       ), { timeout: 5_000 }).toBe(768);
       await expectCompactHeader(page);
       await expect(page.locator('.builder-site-header').first()).toHaveAttribute('data-builder-mobile-header', 'true');
 
+      await secondarySummary.click();
       await page.locator('.builder-site-header .mobile-toggle').first().click();
       const mobileDrawer = page.locator('.builder-site-header .site-mobile-nav-drawer.open').first();
       await expect(mobileDrawer).toBeVisible();

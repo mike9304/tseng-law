@@ -195,12 +195,15 @@ describe('Japanese services-list copy', () => {
       '涵蓋在台投資、訴訟與法律顧問全流程。',
     );
     expect(siteContent.en.services.description).toBe(
-      'Structured support for investment, litigation, and advisory matters in Taiwan.',
+      'Taiwan company formation, litigation, residence permits, and tax and accounting support.',
     );
     expect(siteContent.ko.services.items[0]?.description).toContain(
       '한국 기업의 대만 진출',
     );
     expect(siteContent['zh-hant'].services.items[0]?.description).toContain(
+      '全程協助外國投資人（包含韓國企業）在台落地',
+    );
+    expect(siteContent['zh-hant'].services.items[0]?.description).not.toContain(
       '全程協助韓國企業落地台灣',
     );
     expect(siteContent.en.services.items[0]?.description).toBe(

@@ -1,13 +1,13 @@
 import type { ReactNode } from 'react';
 import SectionLabel from '@/components/SectionLabel';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import type { SiteLocale } from '@/lib/locales';
+import type { PublicLocale8 } from '@/lib/public-guidance';
 import styles from './PublicChrome.module.css';
 
 const JA_PROTECTED_TERM = '弁護士';
 const EN_PROTECTED_TERM = 'Korea-Taiwan';
 
-function renderProtectedTitle(locale: SiteLocale, title: string) {
+function renderProtectedTitle(locale: PublicLocale8, title: string) {
   const token =
     locale === 'ja' ? JA_PROTECTED_TERM : locale === 'en' ? EN_PROTECTED_TERM : null;
   if (!token || !title.includes(token)) {
@@ -39,7 +39,7 @@ export default function PageHeader({
   description,
   children
 }: {
-  locale: SiteLocale;
+  locale: PublicLocale8;
   label: string;
   title: string;
   description?: string;

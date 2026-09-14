@@ -131,7 +131,10 @@ describe('public column mobile overflow contract', () => {
         return false;
       }
       const [localeSpan, slugSpan] = expr.templateSpans;
-      if (!ts.isIdentifier(localeSpan.expression) || localeSpan.expression.text !== 'locale') {
+      if (
+        !ts.isIdentifier(localeSpan.expression) ||
+        (localeSpan.expression.text !== 'locale' && localeSpan.expression.text !== 'urlLocale')
+      ) {
         return false;
       }
       if (localeSpan.literal.text !== '/columns/') {
@@ -163,6 +166,9 @@ describe('public column mobile overflow contract', () => {
     visitLinks(nav);
     expect(hrefInits.some((init) => isLocaleColumnSlugHref(init, 'prevPost'))).toBe(true);
     expect(hrefInits.some((init) => isLocaleColumnSlugHref(init, 'nextPost'))).toBe(true);
+    expect(columnPage).toContain('container column-post-nav');
+    expect(columnPage).toContain('href={`/${urlLocale}/columns/${prevPost.slug}`}');
+    expect(columnPage).toContain('href={`/${urlLocale}/columns/${nextPost.slug}`}');
 
     const mediaBlocks = extractBlocks(css, '@media (max-width: 900px)');
     const targetBlocks = mediaBlocks.filter(({ block }) => block.includes('.blog-container'));

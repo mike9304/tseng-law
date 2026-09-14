@@ -46,6 +46,29 @@ export function mutationHeaders(scope: string): Record<string, string> {
   return { 'x-forwarded-for': `pw-${safeScope}` };
 }
 
+const seededLocaleHomesByRequest = new WeakMap<APIRequestContext, Set<string>>();
+
+/**
+ * Opening /<locale>/admin-builder seeds that locale's authored home.
+ * POST /api/builder/site/pages for a second locale otherwise 409s with
+ * AUTHORED_HOME_MISSING. Idempotent when the home is already present.
+ */
+export async function ensureAuthoredLocaleHome(
+  request: APIRequestContext,
+  locale: string,
+): Promise<void> {
+  let seeded = seededLocaleHomesByRequest.get(request);
+  if (!seeded) {
+    seeded = new Set();
+    seededLocaleHomesByRequest.set(request, seeded);
+  }
+  if (seeded.has(locale)) return;
+
+  const response = await request.get(`/${locale}/admin-builder`, { timeout: 90_000 });
+  expect(response.status(), `ensure authored home for ${locale}`).toBe(200);
+  seeded.add(locale);
+}
+
 export interface LinkedRichTextPages {
   readonly headers: Record<string, string>;
   readonly sourcePageId: string;
@@ -199,6 +222,7 @@ export async function createBuilderPage(
   document: BuilderCanvasDocument,
   scope: string,
 ): Promise<string> {
+  await ensureAuthoredLocaleHome(request, locale);
   const response = await request.post('/api/builder/site/pages', {
     headers: mutationHeaders(scope),
     data: { locale, slug, title, document },

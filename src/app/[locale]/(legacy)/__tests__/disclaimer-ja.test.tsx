@@ -41,6 +41,10 @@ describe('Japanese disclaimer integration', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/disclaimer`,
       en: `${SITE_URL}/en/disclaimer`,
       ja: `${SITE_URL}/ja/disclaimer`,
+      vi: `${SITE_URL}/vi/disclaimer`,
+      id: `${SITE_URL}/id/disclaimer`,
+      th: `${SITE_URL}/th/disclaimer`,
+      fil: `${SITE_URL}/fil/disclaimer`,
       'x-default': `${SITE_URL}/en/disclaimer`,
     });
   });
@@ -118,9 +122,12 @@ describe('Japanese disclaimer integration', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/disclaimer`,
       en: `${SITE_URL}/en/disclaimer`,
       ja: `${SITE_URL}/ja/disclaimer`,
+      vi: `${SITE_URL}/vi/disclaimer`,
+      id: `${SITE_URL}/id/disclaimer`,
+      th: `${SITE_URL}/th/disclaimer`,
+      fil: `${SITE_URL}/fil/disclaimer`,
       'x-default': `${SITE_URL}/en/disclaimer`,
     });
-    // WO#3: /ja/disclaimer is a live Japanese page, so ja must be advertised.
     expect(metadata.alternates?.languages).toHaveProperty('ja', `${SITE_URL}/ja/disclaimer`);
   });
 

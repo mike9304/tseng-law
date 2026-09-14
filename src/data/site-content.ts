@@ -101,6 +101,12 @@ export type SiteContent = {
     cta: NavItem;
     searchLabel: string;
     languageLabel: string;
+    mega: {
+      services: { description: string; viewAllLabel: string };
+      insights: { description: string; viewAllLabel: string };
+      videos: { description: string; viewAllLabel: string };
+      about: { description: string; viewAllLabel: string };
+    };
   };
   hero: {
     label: string;
@@ -303,7 +309,25 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       },
       cta: { label: '이메일 상담 신청', href: consultationMailto.ko },
       searchLabel: '검색',
-      languageLabel: '언어'
+      languageLabel: '언어',
+      mega: {
+        services: {
+          description: '대만 투자, 회사 설립, 소송 등 주요 업무 분야를 안내합니다.',
+          viewAllLabel: '전체 보기',
+        },
+        insights: {
+          description: '대만 법률 정보를 정리한 칼럼을 모았습니다.',
+          viewAllLabel: '전체 보기',
+        },
+        videos: {
+          description: '유튜브와 블로그에서 대만 법률 정보를 확인할 수 있습니다.',
+          viewAllLabel: '전체 보기',
+        },
+        about: {
+          description: '법인 소개, 변호사, 오시는 길을 안내합니다.',
+          viewAllLabel: '전체 보기',
+        },
+      },
     },
     hero: {
       label: 'TAIWAN LEGAL',
@@ -1049,7 +1073,25 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       },
       cta: { label: '電子郵件諮詢', href: consultationMailto['zh-hant'] },
       searchLabel: '搜尋',
-      languageLabel: '語言'
+      languageLabel: '語言',
+      mega: {
+        services: {
+          description: '在台投資、公司設立、訴訟等主要服務領域。',
+          viewAllLabel: '查看全部',
+        },
+        insights: {
+          description: '彙整台灣法律資訊的專欄文章。',
+          viewAllLabel: '查看全部',
+        },
+        videos: {
+          description: '可在 YouTube 與部落格查看台灣法律資訊。',
+          viewAllLabel: '查看全部',
+        },
+        about: {
+          description: '介紹事務所、律師與據點資訊。',
+          viewAllLabel: '查看全部',
+        },
+      },
     },
     hero: {
       label: 'TAIWAN LEGAL',
@@ -1807,7 +1849,25 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       },
       cta: { label: 'Email Consultation', href: consultationMailto.en },
       searchLabel: 'Search',
-      languageLabel: 'Language'
+      languageLabel: 'Language',
+      mega: {
+        services: {
+          description: 'Taiwan investment, company setup, litigation, and related practice areas.',
+          viewAllLabel: 'View all',
+        },
+        insights: {
+          description: 'Legal writing on Taiwan company setup, disputes, and related topics.',
+          viewAllLabel: 'View all',
+        },
+        videos: {
+          description: 'Taiwan legal topics on the firm YouTube channel and blog.',
+          viewAllLabel: 'View all',
+        },
+        about: {
+          description: 'Firm overview, the international team, and office locations.',
+          viewAllLabel: 'View all',
+        },
+      },
     },
     hero: {
       ...base.hero,
@@ -2565,7 +2625,25 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       },
       cta: { label: 'メールで相談', href: consultationMailto.ja },
       searchLabel: '検索',
-      languageLabel: '言語'
+      languageLabel: '言語',
+      mega: {
+        services: {
+          description: '台湾での投資・会社設立・訴訟など、主な取扱業務をご案内します。',
+          viewAllLabel: 'すべて見る',
+        },
+        insights: {
+          description: '台湾法に関する解説コラムをまとめています。',
+          viewAllLabel: 'すべて見る',
+        },
+        videos: {
+          description: 'YouTubeとブログで台湾の法律情報をご覧いただけます。',
+          viewAllLabel: 'すべて見る',
+        },
+        about: {
+          description: '事務所の概要、担当チーム、アクセスをご案内します。',
+          viewAllLabel: 'すべて見る',
+        },
+      },
     },
     hero: {
       ...base.hero,

@@ -176,7 +176,8 @@
 }
 
 .brandWord,
-.brandUnit {
+.brandUnit,
+.brandLine {
   white-space: nowrap;
 }
 
@@ -285,6 +286,36 @@
 .header :global(.mega-title) {
   font-family: var(--font-display);
   color: #16382d;
+}
+
+.header :global(.mega-intro) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.header :global(.mega-description) {
+  margin: 0;
+  max-width: 28ch;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #3d4a43;
+}
+
+.header :global(.mega-view-all) {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 650;
+  color: #16382d;
+  text-decoration: none;
+}
+
+.header :global(.mega-view-all:hover),
+.header :global(.mega-view-all:focus-visible) {
+  text-decoration: underline;
 }
 
 .header :global(.mega-links) a {
@@ -520,6 +551,22 @@
   }
 }
 
+@media (max-width: 420px) {
+  .header:global(.header)[data-public-site-header] > .headerMain:global(.header-main) .brandTextEn:global(.logo-kr) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    font-size: 0.9375rem;
+    letter-spacing: -0.015em;
+    line-height: 1.15;
+  }
+
+  .header:global(.header)[data-public-site-header] > .headerMain:global(.header-main) .brandLine {
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 359px) {
   .header:global(.header)[data-public-site-header] > .headerMain:global(.header-main) .headerMainInner:global(.header-main-inner) {
     display: flex;
@@ -544,6 +591,12 @@
   .header .brandTextEn .brandWord {
     white-space: normal;
     overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .header .brandTextEn .brandLine {
+    white-space: nowrap;
+    overflow-wrap: normal;
     word-break: normal;
   }
 }

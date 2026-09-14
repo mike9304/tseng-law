@@ -172,7 +172,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'This page is written in English as general guidance. It is not advice on your specific matter.',
     consultationNotice:
-      'Consultations are handled in four languages: English, Chinese, Japanese, and Korean.',
+      'Consultations are handled in four languages: English, Chinese, Korean, and Japanese.',
     methodConfirmationNotice:
       'If none of those four languages works for you, choose “Contact method needs to be confirmed”. We will reply to confirm how we can communicate; service in any other language is not guaranteed.',
     preparationNotice:

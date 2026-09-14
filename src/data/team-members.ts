@@ -201,7 +201,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
     title: TEAM_NAME_BY_LOCALE['en'],
     description: 'Profiles of our lawyers, paralegal, operations manager, and accounting partner.',
     story: [
-      'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for international clients, with English, Japanese, Korean, and Chinese available.',
+      'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for international clients, with English, Chinese, Korean, and Japanese available.',
       'By combining legal, accounting, tax, and operational workflows, we provide consistent strategy from initial review through dispute handling.'
     ],
     members: [
@@ -214,7 +214,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/wei-tseng-official.png',
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
-          'The firm supports Taiwan corporate and individual matters in English, Japanese, Korean, and Chinese.',
+          'The firm supports Taiwan corporate and individual matters in English, Chinese, Korean, and Japanese.',
           'Represented a Korean student in a gym injury case and obtained a TWD 1.57M first-instance damages ruling.'
         ],
         education: [

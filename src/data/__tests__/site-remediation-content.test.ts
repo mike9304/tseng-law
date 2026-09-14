@@ -125,9 +125,9 @@ describe('WO-1 trust, localization, and performance content contracts', () => {
     expect(insightsArchive.en.posts.every((post) => post.keywords.every((keyword) => !korean.test(keyword)))).toBe(true);
   });
 
-  it('1-3 states English, Korean, Chinese, and Japanese as available consultation languages', () => {
+  it('1-3 states English, Chinese, Korean, and Japanese as available consultation languages', () => {
     const consultation = faqContent.en.find((item) => item.question === 'How are consultations conducted?');
-    expect(consultation?.answer).toContain('English, Korean, Chinese, and Japanese');
+    expect(consultation?.answer).toContain('English, Chinese, Korean, and Japanese');
     expect(consultation?.answer).toContain('brief summary');
     expect(consultation?.answer).not.toContain('Sending relevant documents in advance');
   });

@@ -171,11 +171,9 @@ export default function MobileNavDrawer({
             </span>
             {locale === 'en' ? (
               <span className={`logo-kr ${styles.brandText} ${styles.brandTextEn}`}>
-                <span className={styles.brandWord}>Hovering</span>
+                <span className={styles.brandLine}>Hovering International</span>
                 {' '}
-                <span className={styles.brandWord}>International</span>
-                {' '}
-                <span className={styles.brandUnit}>Law Firm</span>
+                <span className={styles.brandLine}>Law Firm</span>
               </span>
             ) : (
               <span className={`logo-kr ${styles.brandText}`}>{brandText}</span>

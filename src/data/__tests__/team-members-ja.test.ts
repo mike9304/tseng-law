@@ -128,7 +128,7 @@ describe('Japanese team content', () => {
       education: ['東海大學法律學系學士'],
     });
     expect(teamContent.en.story[0]).toBe(
-      'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for international clients, with English, Japanese, Korean, and Chinese available.',
+      'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for international clients, with English, Chinese, Korean, and Japanese available.',
     );
   });
 });

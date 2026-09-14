@@ -68,7 +68,7 @@ describe('corporate advisory discovery paths', () => {
       'We advise overseas businesses on Taiwan-related contract review, commercial legal risk, and employment matters.',
     );
     expect(section).toContain('Tell us whether you need help with a particular matter or ongoing legal advice.');
-    expect(section).toContain('English, Japanese, Korean, and Chinese');
+    expect(section).toContain('English, Chinese, Korean, and Japanese');
     expect(section).toContain(`href="/en/pricing"`);
     expect(section).toContain(`href="/en/services/labor"`);
     expect(section).toContain(`href="/en/services/ip"`);

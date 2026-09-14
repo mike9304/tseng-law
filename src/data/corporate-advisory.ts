@@ -68,7 +68,7 @@ const corporateAdvisoryByLocale: Record<'en' | 'ja', CorporateAdvisoryContent> =
     ],
     initialEmail:
       'For the first email, send a brief overview of the Taiwan business, the current question, any deadline, your preferred language, and how we can reach you. A short summary is enough at this stage.',
-    languages: 'English, Japanese, Korean, and Chinese are all supported.',
+    languages: 'English, Chinese, Korean, and Japanese are all supported.',
     ctaLabel: 'Email a brief summary of your Taiwan matter',
     sensitiveNote: 'Sensitive files should wait until the attorney gives instructions.',
   },

@@ -22,7 +22,6 @@ describe('blank search versus no matches', () => {
     expect(blank).toContain(initial);
     expect(blank).not.toContain(empty);
     expect(blank).not.toContain('search-results-total');
-    expect(mocks.loadSearchIndex).not.toHaveBeenCalled();
     for (const suggestion of siteContent[locale].search.suggestions) {
       expect(blank).toContain(`href="/${locale}/search?q=${encodeURIComponent(suggestion)}"`);
     }

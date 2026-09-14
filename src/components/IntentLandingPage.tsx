@@ -136,7 +136,7 @@ const labels = {
 
 const intentDirectContact = {
   en: {
-    support: 'Consultations in English, Japanese, and Korean. Chinese is also available.',
+    support: 'Consultations in English, Chinese, Korean, and Japanese.',
     initialNote:
       'First email: a brief overview of the issue or business, the Taiwan connection, any deadline, and how we can reach you. Time zone and how you found us are optional. Sensitive materials only after attorney instructions.',
   },

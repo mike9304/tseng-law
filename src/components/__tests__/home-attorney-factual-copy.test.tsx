@@ -98,7 +98,7 @@ describe('homepage attorney factual summary', () => {
     );
     expect(html).toContain('Attorney Wei Tseng, Taiwan Legal Partner for International Clients');
     expect(html).toContain(
-      'The firm supports Taiwan corporate and individual matters in English, Japanese, Korean, and Chinese.',
+      'The firm supports Taiwan corporate and individual matters in English, Chinese, Korean, and Japanese.',
     );
     expect(html).toContain('Represented a Korean student in a gym injury case');
     expect(html).not.toContain('Taiwan Legal Partner for Korean Clients');
@@ -112,7 +112,7 @@ describe('homepage attorney factual summary', () => {
     expect(introNode).toMatchObject({
       kind: 'text',
       content: {
-        text: 'The firm supports Taiwan corporate and individual matters in English, Japanese, Korean, and Chinese.',
+        text: 'The firm supports Taiwan corporate and individual matters in English, Chinese, Korean, and Japanese.',
       },
     });
   });

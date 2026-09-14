@@ -35,8 +35,35 @@ type MegaLink = {
 type MegaPanel = {
   key: string;
   title: string;
+  description: string;
+  viewAll?: MegaLink;
   links: MegaLink[];
 };
+
+type MegaIntroKey = 'services' | 'insights' | 'videos' | 'about';
+
+function megaIndexHref(locale: PublicLocale8, key: string): string {
+  if (key === 'insights') return `/${locale}/columns`;
+  if (key === 'about') return `/${locale}/about`;
+  if (key === 'directions') return `/${locale}/contact#offices`;
+  return `/${locale}/${key}`;
+}
+
+function withMegaIntro(
+  locale: PublicLocale8,
+  panel: { key: string; title: string; links: MegaLink[] },
+): MegaPanel {
+  const intro = isGuidanceLocale4(locale)
+    ? undefined
+    : publicSiteContent(locale).nav.mega[panel.key as MegaIntroKey];
+  const indexHref = megaIndexHref(locale, panel.key);
+  const hasViewAll = panel.links.some((link) => link.href === indexHref);
+  return {
+    ...panel,
+    description: intro?.description ?? '',
+    viewAll: intro && !hasViewAll ? { label: intro.viewAllLabel, href: indexHref } : undefined,
+  };
+}
 
 type MainNavItem = {
   key: string;
@@ -279,7 +306,7 @@ function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
   if (isGuidanceLocale4(locale)) return [];
   if (locale === 'ja') {
     return [
-      {
+      withMegaIntro(locale, {
         key: 'services',
         title: '取扱業務',
         links: [
@@ -291,19 +318,19 @@ function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
           { label: '知財・金融紛争', href: '/ja/services/ip' },
           { label: 'すべて見る', href: '/ja/services' },
         ],
-      },
-      {
+      }),
+      withMegaIntro(locale, {
         key: 'insights',
         title: 'コラム',
         links: [
           { label: '全コラムを見る', href: '/ja/columns' },
         ],
-      },
+      }),
     ];
   }
   if (locale === 'ko') {
     return [
-      {
+      withMegaIntro(locale, {
         key: 'services',
         title: '업무분야',
         links: [
@@ -315,8 +342,8 @@ function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
           { label: '지적재산·금융분쟁', href: '/ko/services/ip' },
           { label: '전체 보기', href: '/ko/services' }
         ]
-      },
-      {
+      }),
+      withMegaIntro(locale, {
         key: 'videos',
         title: '미디어센터',
         links: [
@@ -324,8 +351,8 @@ function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
           { label: '네이버 블로그', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
           { label: '영상/채널 페이지', href: '/ko/videos' }
         ]
-      },
-      {
+      }),
+      withMegaIntro(locale, {
         key: 'about',
         title: '법인소개',
         links: [
@@ -334,13 +361,13 @@ function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
           { label: '오시는 길', href: '/ko/contact#offices' },
           { label: '문의하기', href: getConsultationPublicMailto('ko') }
         ]
-      }
+      })
     ];
   }
 
   if (locale === 'zh-hant') {
     return [
-      {
+      withMegaIntro(locale, {
         key: 'services',
         title: '服務領域',
         links: [
@@ -352,8 +379,8 @@ function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
           { label: '智慧財產·金融爭議', href: '/zh-hant/services/ip' },
           { label: '查看全部', href: '/zh-hant/services' }
         ]
-      },
-      {
+      }),
+      withMegaIntro(locale, {
         key: 'videos',
         title: '媒體中心',
         links: [
@@ -361,8 +388,8 @@ function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
           { label: 'Naver 部落格', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
           { label: '影音頁面', href: '/zh-hant/videos' }
         ]
-      },
-      {
+      }),
+      withMegaIntro(locale, {
         key: 'about',
         title: '事務所介紹',
         links: [
@@ -371,12 +398,12 @@ function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
           { label: '據點資訊', href: '/zh-hant/contact#offices' },
           { label: '聯絡我們', href: getConsultationPublicMailto('zh-hant') }
         ]
-      }
+      })
     ];
   }
 
   return [
-    {
+    withMegaIntro(locale, {
       key: 'services',
       title: 'Services',
       links: [
@@ -388,8 +415,8 @@ function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
         { label: 'IP & Financial Disputes', href: '/en/services/ip' },
         { label: 'View All', href: '/en/services' }
       ]
-    },
-    {
+    }),
+    withMegaIntro(locale, {
       key: 'videos',
       title: 'Media Center',
       links: [
@@ -397,8 +424,8 @@ function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
         { label: 'Naver Blog', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
         { label: 'Videos / Channels', href: '/en/videos' }
       ]
-    },
-    {
+    }),
+    withMegaIntro(locale, {
       key: 'about',
       title: 'About',
       links: [
@@ -407,7 +434,7 @@ function buildMegaPanels(locale: PublicLocale8): MegaPanel[] {
         { label: 'Office Locations', href: '/en/contact#offices' },
         { label: 'Contact Us', href: getConsultationPublicMailto('en') }
       ]
-    }
+    })
   ];
 }
 
@@ -866,11 +893,9 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
               <span className={styles.contentFitProbeMark} />
               {locale === 'en' ? (
                 <span className={styles.contentFitProbeBrand}>
-                  <span className={styles.brandWord}>Hovering</span>
+                  <span className={styles.brandLine}>Hovering International</span>
                   {' '}
-                  <span className={styles.brandWord}>International</span>
-                  {' '}
-                  <span className={styles.brandUnit}>Law Firm</span>
+                  <span className={styles.brandLine}>Law Firm</span>
                 </span>
               ) : (
                 <span className={styles.contentFitProbeBrand}>{brandText}</span>
@@ -892,11 +917,9 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
             </span>
             {locale === 'en' ? (
               <span className={`logo-kr ${styles.brandText} ${styles.brandTextEn}`}>
-                <span className={styles.brandWord}>Hovering</span>
+                <span className={styles.brandLine}>Hovering International</span>
                 {' '}
-                <span className={styles.brandWord}>International</span>
-                {' '}
-                <span className={styles.brandUnit}>Law Firm</span>
+                <span className={styles.brandLine}>Law Firm</span>
               </span>
             ) : (
               <span className={`logo-kr ${styles.brandText}`}>{brandText}</span>
@@ -1038,7 +1061,17 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
           >
             <div className="container">
               <div className="mega-layout">
-                <h2 className="mega-title">{panel.title}</h2>
+                <div className="mega-intro">
+                  <h2 className="mega-title">{panel.title}</h2>
+                  {panel.description ? <p className="mega-description">{panel.description}</p> : null}
+                  {panel.viewAll ? (
+                    <span onClick={closeMegaMenuNow}>
+                      <SmartLink className="mega-view-all" href={panel.viewAll.href}>
+                        {panel.viewAll.label}
+                      </SmartLink>
+                    </span>
+                  ) : null}
+                </div>
                 <ul className="mega-links" onClick={closeMegaMenuNow}>
                   {panel.links.map((link) => (
                     <li key={`${panel.key}-${link.href}`}>

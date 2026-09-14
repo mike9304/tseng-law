@@ -85,6 +85,11 @@ export interface GuidanceHomeCopy {
   videoReplayLabel: string;
 }
 
+export type GuidanceMegaIntro = {
+  description: string;
+  viewAllLabel: string;
+};
+
 export interface GuidanceLocaleContent {
   languageName: string;
   nav: Record<GuidancePageKey, string>;
@@ -93,6 +98,13 @@ export interface GuidanceLocaleContent {
   skipLink: string;
   menuLabel: string;
   languageLabel: string;
+  mega: {
+    services: GuidanceMegaIntro;
+    columns: GuidanceMegaIntro;
+    lawyers: GuidanceMegaIntro;
+    pricing: GuidanceMegaIntro;
+    faq: GuidanceMegaIntro;
+  };
   notFoundTitle: string;
   notFoundText: string;
   backHomeLabel: string;
@@ -122,6 +134,28 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
     skipLink: 'Bỏ qua phần điều hướng, đến nội dung chính',
     menuLabel: 'Danh mục trang',
     languageLabel: 'Ngôn ngữ hiển thị',
+    mega: {
+      services: {
+        description: 'Văn phòng hỗ trợ những nhóm công việc chính theo pháp luật Đài Loan.',
+        viewAllLabel: 'Xem tất cả',
+      },
+      columns: {
+        description: 'Các bài viết giải thích chủ đề pháp luật Đài Loan thường gặp.',
+        viewAllLabel: 'Xem tất cả',
+      },
+      lawyers: {
+        description: 'Giới thiệu luật sư phụ trách và cách liên hệ với văn phòng.',
+        viewAllLabel: 'Xem tất cả',
+      },
+      pricing: {
+        description: 'Phạm vi công việc và cách trao đổi về chi phí được nêu tại trang này.',
+        viewAllLabel: 'Xem tất cả',
+      },
+      faq: {
+        description: 'Những câu hỏi thường gặp về công việc của văn phòng tại Đài Loan.',
+        viewAllLabel: 'Xem tất cả',
+      },
+    },
     notFoundTitle: 'Không tìm thấy trang',
     notFoundText:
       'Trang quý vị tìm không tồn tại hoặc đã chuyển sang địa chỉ khác. Quý vị có thể quay lại trang chủ tiếng Việt để xem các mục hướng dẫn hiện có.',
@@ -595,6 +629,28 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
     skipLink: 'Lewati navigasi, langsung ke isi utama',
     menuLabel: 'Daftar halaman',
     languageLabel: 'Bahasa tampilan',
+    mega: {
+      services: {
+        description: 'Kantor menangani kelompok pekerjaan utama menurut hukum Taiwan.',
+        viewAllLabel: 'Lihat semua',
+      },
+      columns: {
+        description: 'Artikel yang menjelaskan topik hukum Taiwan yang sering muncul.',
+        viewAllLabel: 'Lihat semua',
+      },
+      lawyers: {
+        description: 'Pengantar tentang advokat yang menangani perkara dan cara menghubungi kantor.',
+        viewAllLabel: 'Lihat semua',
+      },
+      pricing: {
+        description: 'Halaman ini menjelaskan lingkup pekerjaan dan cara menanyakan biaya.',
+        viewAllLabel: 'Lihat semua',
+      },
+      faq: {
+        description: 'Pertanyaan yang sering diajukan tentang pekerjaan kantor di Taiwan.',
+        viewAllLabel: 'Lihat semua',
+      },
+    },
     notFoundTitle: 'Halaman tidak ditemukan',
     notFoundText:
       'Halaman yang Anda cari tidak ada atau sudah dipindahkan ke alamat lain. Anda dapat kembali ke beranda berbahasa Indonesia untuk melihat panduan yang tersedia.',
@@ -1068,6 +1124,28 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
     skipLink: 'ข้ามเมนู ไปยังเนื้อหาหลัก',
     menuLabel: 'รายการหน้า',
     languageLabel: 'ภาษาที่แสดง',
+    mega: {
+      services: {
+        description: 'สำนักงานรับงานหลักตามกฎหมายไต้หวันตามกลุ่มงานที่ระบุไว้',
+        viewAllLabel: 'ดูทั้งหมด',
+      },
+      columns: {
+        description: 'บทความอธิบายหัวข้อกฎหมายไต้หวันที่พบบ่อย',
+        viewAllLabel: 'ดูทั้งหมด',
+      },
+      lawyers: {
+        description: 'แนะนำทนายความผู้รับผิดชอบและช่องทางติดต่อสำนักงาน',
+        viewAllLabel: 'ดูทั้งหมด',
+      },
+      pricing: {
+        description: 'หน้านี้อธิบายขอบเขตงานและวิธีสอบถามค่าใช้จ่าย',
+        viewAllLabel: 'ดูทั้งหมด',
+      },
+      faq: {
+        description: 'คำถามที่พบบ่อยเกี่ยวกับงานของสำนักงานในไต้หวัน',
+        viewAllLabel: 'ดูทั้งหมด',
+      },
+    },
     notFoundTitle: 'ไม่พบหน้าที่ต้องการ',
     notFoundText:
       'หน้าที่ท่านกำลังค้นหาไม่มีอยู่ หรือถูกย้ายไปยังที่อยู่อื่นแล้ว ท่านสามารถกลับไปยังหน้าแรกภาษาไทยเพื่อดูหัวข้อแนะนำที่มีอยู่ในขณะนี้',
@@ -1541,6 +1619,28 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
     skipLink: 'Laktawan ang menu, dumiretso sa pangunahing nilalaman',
     menuLabel: 'Menu ng mga pahina',
     languageLabel: 'Wika ng pahina',
+    mega: {
+      services: {
+        description: 'Tinutulungan ng tanggapan ang mga pangunahing uri ng gawain sa ilalim ng batas ng Taiwan.',
+        viewAllLabel: 'Tingnan lahat',
+      },
+      columns: {
+        description: 'Mga artikulo na nagpapaliwanag ng madalas na paksa sa batas ng Taiwan.',
+        viewAllLabel: 'Tingnan lahat',
+      },
+      lawyers: {
+        description: 'Pagpapakilala sa mga abogado at sa paraan ng pagkontak sa tanggapan.',
+        viewAllLabel: 'Tingnan lahat',
+      },
+      pricing: {
+        description: 'Ipinapaliwanag ng pahinang ito ang saklaw ng gawain at kung paano itanong ang bayarin.',
+        viewAllLabel: 'Tingnan lahat',
+      },
+      faq: {
+        description: 'Mga madalas itanong tungkol sa gawain ng tanggapan sa Taiwan.',
+        viewAllLabel: 'Tingnan lahat',
+      },
+    },
     notFoundTitle: 'Hindi natagpuan ang pahina',
     notFoundText:
       'Wala ang pahinang hinahanap ninyo, o inilipat na ito sa ibang address. Maaari kayong bumalik sa unang pahina sa Filipino upang makita ang mga gabay na nandito.',

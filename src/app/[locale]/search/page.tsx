@@ -13,6 +13,7 @@ import { runSearchQuery } from '@/lib/builder/search/query-engine';
 import { augmentStaticDocs } from '@/lib/builder/search/augment-static-docs';
 import { getPublicIntentSearchDocs } from '@/lib/builder/search/public-intent-docs';
 import type { SearchDocKind } from '@/lib/builder/search/types';
+import { countPublicSearchDocsByKind, visiblePublicSearchKindIds } from './visible-search-kinds';
 import styles from './SearchPage.module.css';
 
 export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
@@ -87,7 +88,6 @@ export default async function SearchPage(
   const content = siteContent[locale];
   const query = normalizeSearchQuery(searchParams.q ?? '');
   const requestedTab = searchParams.kinds?.split(',')[0]?.trim() || searchParams.tab || 'all';
-  const activeKind = SEARCH_TAB_KIND[requestedTab] ?? 'all';
   const suggestedLabel = locale === 'ko' ? '추천' : locale === 'zh-hant' ? '建議' : locale === 'ja' ? 'おすすめ' : 'Suggested';
   const emptyLabel = locale === 'ko'
     ? '검색 결과가 없습니다.'
@@ -103,11 +103,12 @@ export default async function SearchPage(
       : locale === 'ja'
         ? 'キーワードを入力するか、下のおすすめのテーマを選んでください。'
         : 'Enter a keyword or choose a suggested topic below.';
-  const nativeIndex = query ? await loadNativeSearchIndex() : null;
-  const index = nativeIndex
-    ? augmentStaticDocs(nativeIndex, locale, getPublicIntentSearchDocs(locale))
-    : null;
-  const hits = query && index
+  const nativeIndex = await loadNativeSearchIndex();
+  const index = augmentStaticDocs(nativeIndex, locale, getPublicIntentSearchDocs(locale));
+  const kindCounts = countPublicSearchDocsByKind(index.byLocale[locale] ?? []);
+  const visibleKindIds = visiblePublicSearchKindIds(kindCounts);
+  const activeKind = SEARCH_TAB_KIND[requestedTab] ?? 'all';
+  const hits = query
     ? runSearchQuery({
         index,
         query,
@@ -125,13 +126,10 @@ export default async function SearchPage(
       : locale === 'ja'
         ? `全 ${hits.length} 件`
         : `Total ${hits.length}`;
-  const tabs: Array<{ id: SearchDocKind | 'all'; label: string }> = [
-    { id: 'all', label: searchKindLabel('all', locale) },
-    { id: 'page', label: searchKindLabel('page', locale) },
-    { id: 'blog', label: searchKindLabel('blog', locale) },
-    { id: 'faq', label: searchKindLabel('faq', locale) },
-    { id: 'portfolio', label: searchKindLabel('portfolio', locale) },
-  ];
+  const tabs: Array<{ id: SearchDocKind | 'all'; label: string }> = visibleKindIds.map((id) => ({
+    id,
+    label: searchKindLabel(id, locale),
+  }));
 
   return (
     <>

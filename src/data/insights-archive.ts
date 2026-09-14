@@ -512,7 +512,7 @@ function buildEnglishInsights(base: InsightsArchive): InsightsArchive {
   return {
     ...base,
     label: 'INSIGHTS',
-    title: 'Columns',
+    title: 'Insights',
     description: 'Practical legal insights on Taiwan incorporation, legal information, and litigation cases.',
     categories: {
       formation: 'Company Setup',

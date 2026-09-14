@@ -451,7 +451,7 @@ export const CINEMATIC_OPENING_COPY: Record<
     scroll: 'Scroll to continue',
     skip: 'Skip intro',
     mediaAlt: 'Bright aerial flight over Taiwan’s Central Mountain Range and sea of clouds',
-    service: 'Taiwan legal support · English, Japanese & Korean',
+    service: 'Taiwan legal support · English, Chinese, Korean, and Japanese',
     contact: 'Contact the firm',
   },
   ja: {

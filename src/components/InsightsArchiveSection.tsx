@@ -123,7 +123,7 @@ const copyByLocale = {
   },
   en: {
     label: 'INSIGHTS',
-    title: 'Column Archive',
+    title: 'Insights',
     description: ARCHIVE_INTRO_COPY.en,
     readMore: 'Read more',
     dateFallback: 'Date pending',

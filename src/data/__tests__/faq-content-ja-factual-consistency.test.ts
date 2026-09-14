@@ -78,7 +78,7 @@ const untouchedLocaleHashes = {
 } as const;
 
 const reviewedEnglishFaqBaselineHash =
-  'c01869d85d5b09340cb3d201ffc3ea04efb39b7089c85d267d607156cc42c38b';
+  '5845e1a1559277a154f6b344e23656b3f1eb3a50e2541182d0b3d3a841302c21';
 
 const forbiddenRegressions = [
   '①投資許可の申請 → ②会社名',
@@ -125,7 +125,7 @@ describe('Japanese public FAQ factual consistency', () => {
   it('adds English to the public EN consultation FAQ without dropping appointment format', () => {
     const consultation = faqContent.en.find((item) => item.question === 'How are consultations conducted?');
 
-    expect(consultation?.answer).toContain('English, Korean, Chinese, and Japanese');
+    expect(consultation?.answer).toContain('English, Chinese, Korean, and Japanese');
     expect(consultation?.answer).toContain('Appointments are required and scheduled in one-hour units');
     expect(consultation?.answer).toContain('brief summary');
     expect(consultation?.answer).not.toContain('Sending relevant documents in advance');

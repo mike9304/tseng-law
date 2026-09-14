@@ -39,7 +39,7 @@ describe('intent landing EN/JA contact paths', () => {
       expect(header).toContain('Email about your Taiwan matter');
       expect(header).toContain('href="/en/pricing"');
       expect(header).toContain('Fees and scope');
-      expect(header).toContain('Consultations in English, Japanese, and Korean');
+      expect(header).toContain('Consultations in English, Chinese, Korean, and Japanese');
       expect(header).toContain('brief overview');
       expect(header).toContain('Sensitive materials only after attorney instructions');
       expect(header).not.toContain('intent-chip');

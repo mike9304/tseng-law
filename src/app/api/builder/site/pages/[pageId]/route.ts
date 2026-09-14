@@ -18,6 +18,7 @@ import {
 } from '@/lib/builder/site/site-api-copy';
 import { resolveBuilderSiteIdForMutationFromRequest } from '@/lib/builder/site/admin-routing';
 import { SiteInvariantError, type SiteInvariantIssue } from '@/lib/builder/site/site-invariants';
+import { rebuildSearchIndexBestEffort } from '@/lib/builder/search/index-runtime';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -299,6 +300,8 @@ export async function PATCH(request: NextRequest, props: { params: Promise<{ pag
 
     await writeSiteDocument(site);
 
+    void rebuildSearchIndexBestEffort();
+
     return NextResponse.json({
       ok: true,
       page,
@@ -343,6 +346,7 @@ export async function DELETE(request: NextRequest, props: { params: Promise<{ pa
     }
 
     await deletePage(siteId, params.pageId, locale);
+    void rebuildSearchIndexBestEffort();
     return NextResponse.json({ ok: true });
   } catch (error) {
     if (error instanceof SiteInvariantError) {

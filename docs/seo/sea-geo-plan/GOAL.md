@@ -72,9 +72,13 @@
 | 4로케일 URL 색인율 | 0/14 검사(26 미확인) | | |
 | 방문 SEA 세션 · AI 채널 세션 (28일) | 9/1~9/7: SEA 3(SG2·VN1) · AI 1 | | visit-28d |
 
+- 9/14 10:3x: 손빗 AI 인용 실측 5일째 미도착 → 상태 확인 ASK(aicite-status) 발송. 업스트림 c0bf619b(29커밋, dba50dba가 안내 JSON-LD 패리티로 ld 3~4개로 확장) 라이브 계약 재확인 OK(availableLanguage 4개·summary·FAQPage·llms.txt 200). 브랜치는 origin/main 위로 리베이스(docs 1커밋만 미push).
+- 다른 세션 ASK(sea-form 실전송 4건)는 이 캠페인 관할 아님 — 무시.
+
 ## D. 세션 로그
 - 2026-09-09 · Fable 5.1 · PROMPT v2·GOAL·RUNBOOK·WO 작성(Documents).
 - 2026-09-09 11:25 · Fable 5.1 · /goal 가동. S0-a 완료, S0-b ASK 발송(승인), S0-c 완료, S0-d 커밋 05363645, S0-e 실측 0건→사용자 보류 종결, S5 커밋 551d2815, S1 Opus 진행 중.
+- 2026-09-14 10:3x · Fable 5.1 · /goal active 재가동, 상태 점검·리베이스, 손빗 실측 상태 ASK. W1은 9/16.
 - 2026-09-09 15:0x · 사용자(손빗 중계) · 배포 승인 → 손빗 push → Vercel 라이브 3799c41d.
 - 2026-09-09 12:4x · 사용자(손빗 중계) · 권위 등재 발송 보류, 재질문 금지.
 - 2026-09-09 12:3x · 사용자(손빗 중계 정정) · 색인 요청 둘 다 승인, 손빗 실행.

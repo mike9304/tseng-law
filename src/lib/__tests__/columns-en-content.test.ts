@@ -411,4 +411,27 @@ describe('English full column corpus', () => {
       expect(raw).not.toContain(claim);
     }
   });
+
+  it('uses a single question mark on the labor-severance title and no doubled punctuation in EN titles', () => {
+    const exactTitle = 'Taiwan Labor Law: Is Severance Pay Hard to Get in Taiwan?';
+    const severancePath = path.join(enDir, '008-taiwan-labor-severance-law.md');
+    const raw = fs.readFileSync(severancePath, 'utf8');
+    const post = getColumnPost('taiwan-labor-severance-law', 'en');
+
+    expect(raw.match(/^title:\s*"([^"]+)"$/m)?.[1]).toBe(exactTitle);
+    expect(raw.match(/^#\s.+$/gm)).toEqual([`# ${exactTitle}`]);
+    expect(post?.title).toBe(exactTitle);
+    expect(raw).not.toContain('Taiwan??');
+    expect(post?.title).not.toMatch(/\?\?|\!\!/);
+
+    const enFiles = fs.readdirSync(enDir).filter((name) => name.endsWith('.md'));
+    const doubledPunctuation = /\?\?|\!\!/;
+    for (const file of enFiles) {
+      const text = fs.readFileSync(path.join(enDir, file), 'utf8');
+      const title = text.match(/^title:\s*"([^"]+)"$/m)?.[1] ?? '';
+      const heading = text.match(/^#\s+(.+)$/m)?.[1] ?? '';
+      expect(title, `${file} frontmatter title`).not.toMatch(doubledPunctuation);
+      expect(heading, `${file} H1`).not.toMatch(doubledPunctuation);
+    }
+  });
 });

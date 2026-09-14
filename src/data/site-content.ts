@@ -1750,9 +1750,9 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         { label: 'Services', href: '/en/services' },
         { label: 'Our Team', href: '/en/lawyers' },
         { label: 'Pricing', href: '/en/pricing' },
-        { label: 'Columns', href: '/en/columns' },
+        { label: 'Insights', href: '/en/columns' },
         { label: 'Media Center', href: '/en/videos' },
-        { label: 'Directions', href: '/en/contact#offices' }
+        { label: 'Locations', href: '/en/contact#offices' }
       ],
       servicesMenu: {
         ...base.nav.servicesMenu,
@@ -1775,7 +1775,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           },
           {
             title: 'Multilingual Communication',
-            description: 'We provide clear legal communication in English, Chinese, Japanese, and Korean.',
+            description: 'We provide clear legal communication in English, Chinese, Korean, and Japanese.',
             href: '/en/about'
           }
         ],
@@ -1783,9 +1783,9 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       },
       insightsMenu: {
         ...base.nav.insightsMenu,
-        label: 'Columns',
+        label: 'Insights',
         categories: [
-          { label: 'Columns', href: '/en/columns' },
+          { label: 'Insights', href: '/en/columns' },
           { label: 'YouTube Channel', href: '/en/videos' },
           { label: 'FAQ', href: '/en/faq' },
           { label: 'Service Guide', href: '/en/services' },
@@ -1798,12 +1798,12 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
             href: '/en/videos'
           },
           {
-            title: 'Blog & Columns',
+            title: 'Blog & Insights',
             description: 'Browse legal insights and case-focused explanations.',
             href: '/en/columns'
           }
         ],
-        topics: ['Columns', 'WEI Lawyer', 'Taiwan Law', 'Consultation Process']
+        topics: ['Insights', 'WEI Lawyer', 'Taiwan Law', 'Consultation Process']
       },
       cta: { label: 'Email Consultation', href: consultationMailto.en },
       searchLabel: 'Search',
@@ -1828,13 +1828,13 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       quickLinks: [
         { label: 'Services', href: '/en/services' },
         { label: 'International Team', href: '/en/lawyers' },
-        { label: 'Columns', href: '/en/columns' },
+        { label: 'Insights', href: '/en/columns' },
         { label: 'Videos', href: '/en/videos' },
         { label: 'FAQ', href: '/en/faq' }
       ],
       secondaryLinks: [
         { label: 'Email Consultation', href: consultationMailto.en },
-        { label: 'View Columns', href: '/en/columns' }
+        { label: 'View Insights', href: '/en/columns' }
       ]
     },
     heroHighlights: {
@@ -2438,7 +2438,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
     },
     footer: {
       ...base.footer,
-      note: 'Taiwan legal support for cross-border advisory work and disputes in English, Chinese, Japanese, and Korean.',
+      note: 'Taiwan legal support for cross-border advisory work and disputes in English, Chinese, Korean, and Japanese.',
       columns: [
         {
           title: 'Firm',
@@ -2459,7 +2459,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         {
           title: 'Resources',
           links: [
-            { label: 'Columns', href: '/en/columns' },
+            { label: 'Insights', href: '/en/columns' },
             { label: 'Videos', href: '/en/videos' },
             { label: 'Questions', href: '/en/faq' }
           ]
@@ -2483,7 +2483,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       placeholder: 'How can we help you?',
       tabs: [
         { id: 'services', label: 'Services' },
-        { id: 'insights', label: 'Columns' },
+        { id: 'insights', label: 'Insights' },
         { id: 'videos', label: 'Videos' },
         { id: 'faq', label: 'FAQ' }
       ],

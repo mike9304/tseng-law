@@ -20,6 +20,10 @@ export type AttorneyProfile = {
   role: string;
   title: string;
   description: string;
+  /** Visible page H1. SEO `<title>` stays on `title`. */
+  heading?: string;
+  /** Visible page lede. Meta description and Person JSON-LD stay on `description`. */
+  lede?: string;
   email: string;
   image: string;
   summary: string[];
@@ -198,6 +202,9 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       alternateNames: ['Wei Tseng', '증준외', '曾雋崴'],
       role: 'Taiwan Attorney · Managing Attorney',
       title: 'Wei Tseng Taiwan Attorney Profile',
+      heading: 'Wei Tseng',
+      lede:
+        'Taiwan attorney advising overseas companies and individuals on company setup, investment, litigation, residence, and IP matters.',
       description:
         'A dedicated profile for Wei Tseng, a Taiwan attorney focusing on company setup, investment, litigation, visa, and IP support for Korean and international clients. The firm provides consultations in English, Chinese, Korean, and Japanese.',
       email: CONSULTATION_EMAIL,

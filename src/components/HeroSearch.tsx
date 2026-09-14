@@ -38,7 +38,7 @@ export const heroQuickMenus = {
   ],
   en: [
     { label: 'Services', href: '/en/services' },
-    { label: 'Columns', href: '/en/columns' },
+    { label: 'Insights', href: '/en/columns' },
     { label: 'International Team', href: '/en/lawyers' },
     { label: 'FAQ', href: '/en/faq' },
     { label: 'Videos / Channel', href: '/en/videos' },
@@ -57,7 +57,7 @@ export const heroQuickMenus = {
 const columnCtaLabels: Record<SiteLocale, string> = {
   ko: '호정칼럼 보기',
   'zh-hant': '查看專欄內容',
-  en: 'View Columns',
+  en: 'View Insights',
   ja: 'コラムを見る',
 };
 

@@ -76,7 +76,7 @@ const guideCopy = {
         items: [
           'You can reach us through email.',
           'We offer in-person meetings in Taipei and video consultations via Zoom or Google Meet.',
-          'Initial consultation coordination is handled in Korean, Chinese, English, and Japanese.',
+          'You can communicate with our firm in English, Chinese, Korean, and Japanese.',
         ],
       },
       {

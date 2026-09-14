@@ -28,7 +28,7 @@ describe('consultation email and four-office content contracts', () => {
     ],
     en: [
       { label: 'Email Consultation', href: consultationMailto.en },
-      { label: 'View Columns', href: '/en/columns' },
+      { label: 'View Insights', href: '/en/columns' },
     ],
     ja: [
       { label: 'メールで相談', href: consultationMailto.ja },
@@ -380,7 +380,7 @@ describe('WO-1b team, navigation, office, and floating-chat contracts', () => {
   it('1b-7 replaces only the primary Reviews link with localized directions', () => {
     expect(siteContent.ko.nav.primary.at(-1)).toEqual({ label: '오시는길', href: '/ko/contact#offices' });
     expect(siteContent['zh-hant'].nav.primary.at(-1)).toEqual({ label: '交通位置', href: '/zh-hant/contact#offices' });
-    expect(siteContent.en.nav.primary.at(-1)).toEqual({ label: 'Directions', href: '/en/contact#offices' });
+    expect(siteContent.en.nav.primary.at(-1)).toEqual({ label: 'Locations', href: '/en/contact#offices' });
   });
 
   it('1b-8 defaults the AI FAB off and clamps the preserved panel to the viewport', () => {

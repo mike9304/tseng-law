@@ -66,7 +66,7 @@ function toColumnGridFilters(searchParams?: ColumnsSearchParams) {
 const headerLabel: Record<SiteLocale, string> = {
   ko: '칼럼',
   'zh-hant': '專欄',
-  en: 'COLUMNS',
+  en: 'INSIGHTS',
   ja: 'コラム',
 };
 

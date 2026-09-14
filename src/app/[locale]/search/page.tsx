@@ -61,7 +61,7 @@ function normalizeSearchQuery(value: string): string {
 function searchKindLabel(kind: SearchDocKind | 'all', locale: SiteLocale): string {
   if (kind === 'all') return locale === 'ko' ? '전체' : locale === 'zh-hant' ? '全部' : locale === 'ja' ? 'すべて' : 'All';
   if (kind === 'page') return locale === 'ko' ? '페이지' : locale === 'zh-hant' ? '頁面' : locale === 'ja' ? 'ページ' : 'Pages';
-  if (kind === 'blog') return locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '洞見' : locale === 'ja' ? 'コラム' : 'Columns';
+  if (kind === 'blog') return locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '洞見' : locale === 'ja' ? 'コラム' : 'Insights';
   if (kind === 'faq') return locale === 'ko' ? '자주 묻는 질문' : locale === 'zh-hant' ? '常見問題' : locale === 'ja' ? 'よくある質問' : 'FAQ';
   return locale === 'ko' ? '포트폴리오' : locale === 'zh-hant' ? '作品集' : locale === 'ja' ? 'ポートフォリオ' : 'Portfolio';
 }

@@ -267,9 +267,9 @@ function buildMainNavItems(locale: PublicLocale8): MainNavItem[] {
     { key: 'services', label: 'Services', href: '/en/services' },
     { key: 'lawyers', label: 'Our Team', href: '/en/lawyers' },
     { key: 'pricing', label: 'Pricing', href: '/en/pricing' },
-    { key: 'insights', label: 'Columns', href: '/en/columns' },
+    { key: 'insights', label: 'Insights', href: '/en/columns' },
     { key: 'videos', label: 'Media Center', href: '/en/videos' },
-    { key: 'directions', label: 'Directions', href: '/en/contact#offices' }
+    { key: 'directions', label: 'Locations', href: '/en/contact#offices' }
   ];
 }
 

@@ -1,5 +1,5 @@
 ---
-title: "Taiwan Labor Law: Is Severance Pay Hard to Get in Taiwan??"
+title: "Taiwan Labor Law: Is Severance Pay Hard to Get in Taiwan?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
 lastmod: "2026-09-10"
 date_display: "September 13, 2025"
@@ -16,7 +16,7 @@ faq:
     a: "For each full year of service, the employer must pay severance equal to 0.5 months of the employee’s average wages, up to a maximum of six months’ wages. This is the formula for years of service governed by Article 12 of the Labor Pension Act; for years of service governed by Article 17 of the Labor Standards Act, severance is one month of average wages per full year with no cap."
 ---
 
-# Taiwan Labor Law: Is Severance Pay Hard to Get in Taiwan??
+# Taiwan Labor Law: Is Severance Pay Hard to Get in Taiwan?
 
 ![Featured image](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 

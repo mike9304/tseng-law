@@ -156,7 +156,7 @@ const pricingData: Record<SiteLocale, PricingContent> = {
         unit: '/ 1 hour',
         details: [
           'In-person or video consultation',
-          'Available in English, Korean, Chinese & Japanese',
+          'Available in English, Chinese, Korean, and Japanese',
           'Legal issue analysis & guidance',
           'Appointment required'
         ]

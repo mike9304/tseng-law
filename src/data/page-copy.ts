@@ -134,7 +134,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     services: {
       label: 'SERVICES',
-      title: 'Practice Areas',
+      title: 'Services',
       description: 'Structured legal services for investment, disputes, and advisory matters in Taiwan.'
     },
     lawyers: {
@@ -144,7 +144,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     insights: {
       label: 'INSIGHTS',
-      title: 'Columns',
+      title: 'Insights',
       description: 'Browse practical legal columns by category.'
     },
     videos: {

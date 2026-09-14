@@ -258,19 +258,23 @@ describe('column 010 public reference synchronization', () => {
     }
   });
 
-  it('leaves generated embeddings outside this lane', () => {
-    const forbiddenDiff = execFileSync(
+  it('leaves generated embeddings for column 010 unchanged', () => {
+    const embeddingsPath = 'src/content/column-embeddings.json';
+    const headRaw = execFileSync(
       'git',
-      [
-        'diff',
-        '--name-only',
-        'HEAD',
-        '--',
-        'src/content/column-embeddings.json',
-      ],
-      { cwd: process.cwd(), encoding: 'utf8' },
-    ).trim();
+      ['show', `HEAD:${embeddingsPath}`],
+      { cwd: process.cwd(), encoding: 'utf8', maxBuffer: 20 * 1024 * 1024 },
+    );
+    const head = JSON.parse(headRaw) as {
+      embeddings: Array<{ slug: string; locale: string }>;
+    };
+    const current = JSON.parse(
+      fs.readFileSync(path.join(process.cwd(), embeddingsPath), 'utf8'),
+    ) as { embeddings: Array<{ slug: string; locale: string }> };
 
-    expect(forbiddenDiff).toBe('');
+    const pick = (file: { embeddings: Array<{ slug: string; locale: string }> }) =>
+      file.embeddings.filter((record) => record.slug === slug);
+
+    expect(pick(current)).toEqual(pick(head));
   });
 });

@@ -55,7 +55,7 @@ const copy: Record<SiteLocale, {
     faqHeading: '常見問題',
   },
   en: {
-    backLabel: '← Back to columns',
+    backLabel: '← Back to Insights',
     attorneyHeading: 'Reviewing Attorney',
     guideTitle: 'Related Topics',
     consultationTitle: 'Book Consultation',
@@ -153,7 +153,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
   /*
    * Guidance locales render this shell with `locale` coerced to 'en' above, so
    * every label came out English under a Vietnamese/Thai/Indonesian/Filipino
-   * article — "Back to columns", "Contact Us", "Frequently Asked Questions".
+   * article — "Back to Insights", "Contact Us", "Frequently Asked Questions".
    * The content pack already publishes reviewed wording for three of the seven,
    * so use those. The remaining four (attorneyHeading, guideTitle,
    * consultationTitle, consultationText) have no equivalent in the pack and are
@@ -251,7 +251,7 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
           <JsonLd
             data={buildBreadcrumbJsonLd(locale, [
               { name: locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home', path: `/${urlLocale}` },
-              { name: locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '專欄' : locale === 'ja' ? 'コラム' : 'Columns', path: `/${urlLocale}/columns` },
+              { name: locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '專欄' : locale === 'ja' ? 'コラム' : 'Insights', path: `/${urlLocale}/columns` },
               { name: post.title, path: `/${urlLocale}/columns/${post.slug}` },
             ])}
           />

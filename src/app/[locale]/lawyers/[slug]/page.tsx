@@ -247,9 +247,9 @@ export default async function LawyerProfilePage(
       {showHero ? (
         <PageHeader
           locale={locale}
-          label={labels.pageLabel}
-          title={profile.title}
-          description={profile.description}
+          label={locale === 'en' ? profile.role : labels.pageLabel}
+          title={profile.heading ?? profile.title}
+          description={profile.lede ?? profile.description}
         />
       ) : null}
 

@@ -98,7 +98,7 @@ const copy: Record<SiteLocale, {
     emptyMsg: 'Columns for this practice area are being prepared.',
     reviewLead: 'This page is reviewed by ',
     reviewTail: ' and connects related columns with the consultation flow.',
-    breadcrumbServices: 'Practice Areas',
+    breadcrumbServices: 'Services',
   },
   ja: {
     backLabel: '← サービス一覧へ',

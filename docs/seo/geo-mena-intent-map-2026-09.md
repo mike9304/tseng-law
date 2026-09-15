@@ -1,5 +1,7 @@
 # MENA 7국 × 6의도 인텐트 지도 — 2026-09 (M1)
 
+> **시점 주의(총괄, 2026-09-16 03:3x):** 이 문서의 「`ar`는 코드 어디에도 로케일로 존재하지 않는다」(§1-4·§4.1)는 작성 시점(02:5x) 기준이다. 플립 커밋 befed217 이후 `ar`는 GUIDANCE_LOCALES/PUBLIC_LOCALES에 등록됐고 /ar 안내 10페이지가 렌더된다. §3.1-1의 "M1-a 선행 필요" 전제는 해소됨.
+
 작성: 2026-09-16 · 워크오더 `docs/seo/mena-plan/WO-M1-INTENT.txt` · 작업트리 `tseng-law-mena-20260916`
 목적: AE·SA·QA·KW·BH·OM·EG 사용자가 대만 법률 문제를 검색·질의할 때의 의도를 42셀로 고정하고, 각 셀에 **실존하는** 대응 URL과 **A/B 출처가 붙은** 우선순위를 붙인다.
 
@@ -9,7 +11,7 @@
 2. 따라서 **"사람이 대만 안에 있어야 성립하는 의도"(④ 비자·거류·취업 / ⑤ 상속·가족 / ⑥ 형사·사고)에는 A급 규모 근거로 H를 줄 수 없다.** 이 세 의도에서 H는 埃及 ④ 한 셀뿐이며, 그 H도 "7국 범위 안에서의 상대 1위(체류 277·學生 44·外籍配偶 47, 전부 S1·S2)"라는 뜻이지 절대 규모가 크다는 뜻이 아니다.
 3. **순위를 세울 수 있는 유일한 축은 B급 무역이다.** 2025년 대만의 **해당국向 수출**은 AE 15.85억 → SA 약 9.35억 → EG 3억1,186만 → KW 1억3,266만 → QA 약 6,800만 → BH 3,325만 미국달러 순이고 **OM은 외교부 페이지가 품목만 싣고 금액을 싣지 않아 미확인**이다(S3). 반대 방향(대만의 수입)은 SA 약 73.26억 · QA 약 55.57억 · AE 45.04억으로 훨씬 크지만 **원유·LNG 중심의 에너지 조달**이라 민간 법률수요의 대리지표로 쓰지 않았다(S3 각국 `主要輸出項目`). H 7셀 중 6셀(AE ①②③ · SA ①②③)은 이 수출 순위 1·2위에만 부여했다.
 4. **아랍어 표면은 42셀 전부 0이다.** `ar`는 코드 어디에도 로케일로 존재하지 않는다 — `src/lib/public-guidance.ts` 13–23 `PUBLIC_LOCALES_8`(ko·zh-hant·en·ja·vi·id·th·fil), `src/middleware.ts` 318–319 matcher `(vi|id|th|fil)`. 따라서 §2 `현재 대응 URL` 열에 적힌 URL은 **전부 영어 표면**이며, 아랍어 사용자가 자기 질문 언어로 읽을 수 있는 페이지는 이 문서 작성 시점에 **한 장도 없다**.
-5. `현재 대응 URL`이 **"없음"인 셀은 10개**다 — ② 중재·외국판정 집행을 대표 질문으로 둔 3셀(AE·SA·QA)과 ④ 비자·거류·취업 7셀 전부다. 앞의 3셀은 `grep -rli "arbitrat" src/` = **0건**, `grep -rl "仲裁" src/` = **0건**이라는 사실이 근거고, 뒤의 7셀은 비자·거류를 **주제로 하는 전용 페이지**가 `intentPageSlugs`·`GUIDANCE_CORE_ROUTE_KEYS`·`STATIC_PATHS` 어디에도 없다는 사실이 근거다(§4.7).
+5. `현재 대응 URL`이 **"없음"인 셀은 9개**다 — ② 중재·외국판정 집행을 대표 질문으로 둔 3셀(AE·SA·QA)과 ④ 비자·거류·취업 6셀(SA·QA·KW·BH·OM·EG)이다. 앞의 3셀은 `grep -rli "arbitrat" src/` = **0건**, `grep -rl "仲裁" src/` = **0건**이라는 사실이 근거고, 뒤의 6셀은 비자·거류를 **주제로 하는 전용 페이지**가 `intentPageSlugs`·`GUIDANCE_CORE_ROUTE_KEYS`·`STATIC_PATHS` 어디에도 없다는 사실이 근거다(§4.7). **AE ④는 R1에서 "없음"에서 뺐다** — 그 셀의 둘째 질문에 `/en/taiwan-company-setup-lawyer`의 hero·FAQ가 실제로 답하므로 「표 읽는 규칙」상 "없음"이 아니다(§9).
 6. **"없음 + H"는 3셀**(AE ② · SA ② · EG ④)이고 여기서 신규 페이지 후보 **4개**가 나온다(§3). **E등급(추정) 근거로 H를 준 셀은 0이다** — H 7셀의 근거는 전부 A(S1·S2) 또는 B(S3)다.
 
 ### 이 문서가 주장하지 않는 것
@@ -40,7 +42,7 @@
 | AE | ① 회사설립·투자 | كيف أؤسس شركة في تايوان وأنا في الإمارات وما المستندات المطلوبة؟ / ما الفرق بين الشركة التابعة والفرع عند دخول السوق التايواني؟ | How do I set up a company in Taiwan from the UAE and what documents are required? / Subsidiary or branch — which is used to enter the Taiwanese market? | 구글 95.8% · Bing 2.37%(S5, 2026-08) · AI 미확인 | https://tseng-law.com/en/taiwan-company-setup-lawyer | H | 2025년 대만→UAE 수출 15.85억 미국달러로 7국 1위(S3) · 我 駐杜拜臺北商務辦事處 소재(S3·S4) · 아랍어 표면 0 |
 | AE | ② 소송·계약분쟁 | عقدنا مع شركة تايوانية ينص على التحكيم في دبي، فكيف ننفذ حكم التحكيم في تايوان؟ / هل تعترف المحاكم التايوانية بأحكام التحكيم الأجنبية؟ | Our contract with a Taiwanese company provides for arbitration in Dubai — how is the award enforced in Taiwan? / Do Taiwanese courts recognise foreign arbitral awards? | 구글 95.8% · Bing 2.37%(S5) · AI 미확인 | 없음 | H | 수출 1위(S3)의 계약 분쟁인데 **중재·외국판정 집행 문서가 사이트 전체에 0건**(S6: `grep -rli "arbitrat" src/`=0, `仲裁`=0) |
 | AE | ③ 미수금·채권회수 | شركة تايوانية لم تسدد الفواتير المستحقة، كيف أحصل على مستحقاتي؟ / ما خطوات تحصيل الدين التجاري من شركة في تايوان؟ | A Taiwanese company has not paid the outstanding invoices — how do I recover the amount? / What are the steps to collect a commercial debt from a company in Taiwan? | 구글 95.8% · Bing 2.37%(S5) · AI 미확인 | https://tseng-law.com/en/taiwan-litigation-lawyer | H | 수출 1위(S3) · EN 랜딩 FAQ가 미수금·계약위반을 직접 다룸(S6: `intent-pages.ts` 630·687) · 아랍어 표면 0 |
-| AE | ④ 비자·거류·취업 | ما شروط الحصول على تصريح إقامة في تايوان بعد تأسيس شركة؟ / هل تسجيل الشركة في تايوان يمنح الإقامة تلقائيا؟ | What are the requirements for a Taiwan residence permit after setting up a company? / Does registering a company in Taiwan automatically grant residence? | 구글 95.8% · Bing 2.37%(S5) · AI 미확인 | 없음 | M | 직접 모수는 대만 내 UAE 국적 거류자 **1명**(S1)뿐 — M은 ①(B급 무역)에서 파생한 가설이지 A급 체류 근거가 아니다 · 비자·거류 전용 페이지 0(§4.7) |
+| AE | ④ 비자·거류·취업 | ما شروط الحصول على تصريح إقامة في تايوان بعد تأسيس شركة؟ / هل تسجيل الشركة في تايوان يمنح الإقامة تلقائيا؟ | What are the requirements for a Taiwan residence permit after setting up a company? / Does registering a company in Taiwan automatically grant residence? | 구글 95.8% · Bing 2.37%(S5) · AI 미확인 | https://tseng-law.com/en/taiwan-company-setup-lawyer | M | **전용 페이지 없음, 설립 랜딩 FAQ 부분 대응** — 둘째 질문(등기만으로 거류가 되는가)에 hero·FAQ가 직접 답한다(S6: `intent-pages.ts` 531 · 587–589 · 597–599). 첫째 질문(설립 후 거류 요건 전반)은 부분만 대응 · 직접 모수는 대만 내 UAE 국적 거류자 **1명**(S1)뿐 — M은 ①(B급 무역)에서 파생한 가설이지 A급 체류 근거가 아니다 · 비자·거류 **전용** 페이지 0(§4.7) |
 | AE | ⑤ 상속·가족 | كيف توزع تركة شخص توفي وله أموال أو أسهم في تايوان؟ / هل تعترف تايوان بوصية محررة خارجها؟ | How is the estate of a person who died leaving assets or shares in Taiwan distributed? / Does Taiwan recognise a will made abroad? | 구글 95.8% · Bing 2.37%(S5) · AI 미확인 | https://tseng-law.com/en/columns/taiwan-inheritance-custody-analysis | L | 대만 내 UAE 국적 거류 1명(S1), 외국인 배우자는 원표 국적 항목 없음(S2 미확인) · 해외 유언·외국판결 승인은 EN 칼럼 §8이 이미 다룸 |
 | AE | ⑥ 형사·사고 | ماذا أفعل إذا استدعتني الشرطة في تايوان؟ / ما حقوق الأجنبي أثناء التحقيق في تايوان؟ | What should I do if the police in Taiwan summon me? / What rights does a foreign national have during questioning in Taiwan? | 구글 95.8% · Bing 2.37%(S5) · AI 미확인 | https://tseng-law.com/en/services/criminal | L | 대만 내 UAE 국적 거류 1명(S1) · 국적별 사건 발생 통계 미확인 · (범위 안내) |
 | SA | ① 회사설립·투자 | ما إجراءات تأسيس شركة في تايوان لمستثمر سعودي وكم تستغرق؟ / هل يحتاج المستثمر الأجنبي إلى موافقة استثمار قبل التسجيل في تايوان؟ | What is the procedure and timeline for a Saudi investor to set up a company in Taiwan? / Does a foreign investor need investment approval before company registration in Taiwan? | 구글 95.76% · Bing 2.82%(S5, 2026-08) · AI 미확인 | https://tseng-law.com/en/taiwan-company-setup-lawyer | H | 2025년 대만→사우디 수출 약 9.35억 미국달러로 7국 2위(S3) · 我 駐沙烏地阿拉伯王國臺北經濟文化代表處 + 吉達분처(S3·S4) · 아랍어 표면 0 |
@@ -50,7 +52,7 @@
 | SA | ⑤ 상속·가족 | ما إجراءات نقل ملكية عقار أو حصة شركة في تايوان إلى الورثة؟ / ما المستندات المطلوبة لإثبات صفة الوارث أمام الجهات التايوانية؟ | What is the procedure to transfer Taiwanese property or a company share to the heirs? / What documents prove heirship before Taiwanese authorities? | 구글 95.76% · Bing 2.82%(S5) · AI 미확인 | https://tseng-law.com/en/columns/taiwan-inheritance-custody-analysis | L | 대만 내 사우디 국적 거류 5명·외국인 배우자 3명(S1·S2) · 해외 유언·상속 절차는 EN 칼럼 §2·§8이 이미 다룸 |
 | SA | ⑥ 형사·사고 | هل أحتاج محاميا عند التحقيق في مطار أو جمارك تايوان؟ / ما إجراءات الإفراج بكفالة في تايوان؟ | Do I need a lawyer when questioned at a Taiwanese airport or by customs? / What is the bail procedure in Taiwan? | 구글 95.76% · Bing 2.82%(S5) · AI 미확인 | https://tseng-law.com/en/services/criminal | L | 대만 내 사우디 국적 거류 5명(S1) · 국적별 사건 발생 통계 미확인 · (범위 안내) |
 | QA | ① 회사설립·투자 | هل يمكن لشركة قطرية فتح فرع لها في تايوان؟ / ما الحد الأدنى لرأس المال لتأسيس شركة في تايوان؟ | Can a Qatari company open a branch in Taiwan? / What is the minimum capital to establish a company in Taiwan? | 구글 95.63% · Bing 3.28%(S5, 2026-08) · AI 미확인 | https://tseng-law.com/en/taiwan-company-setup-lawyer | M | 2025년 대만→카타르 수출 약 6,800만 미국달러로 7국 5위(S3) — 수입 약 55.57억은 LNG 조달이라 대리지표로 쓰지 않음 · 아랍어 표면 0 |
-| QA | ② 소송·계약분쟁 | ما المحكمة المختصة في نزاع تجاري مع شركة تايوانية إذا لم يحدد العقد؟ / كيف ينفذ حكم التحكيم الدولي في تايوان؟ | Which court has jurisdiction over a commercial dispute with a Taiwanese company when the contract is silent? / How is an international arbitral award enforced in Taiwan? | 구글 95.63% · Bing 3.28%(S5) · AI 미확인 | 없음 | M | 중재·국제재판관할 문서 0건(S6)이나 수출 규모가 5위(S3)라 H를 주지 않음 |
+| QA | ② 소송·계약분쟁 | ما المحكمة المختصة في نزاع تجاري مع شركة تايوانية إذا لم يحدد العقد؟ / كيف يمكن تنفيذ حكم التحكيم الدولي في تايوان؟ | Which court has jurisdiction over a commercial dispute with a Taiwanese company when the contract is silent? / How is an international arbitral award enforced in Taiwan? | 구글 95.63% · Bing 3.28%(S5) · AI 미확인 | 없음 | M | 중재·국제재판관할 문서 0건(S6)이나 수출 규모가 5위(S3)라 H를 주지 않음 |
 | QA | ③ 미수금·채권회수 | ما مدة التقادم للمطالبة بدين تجاري في تايوان؟ / هل خطاب الإنذار القانوني خطوة ضرورية قبل رفع الدعوى في تايوان؟ | What is the limitation period for a commercial debt claim in Taiwan? / Is a formal demand letter a necessary step before filing suit in Taiwan? | 구글 95.63% · Bing 3.28%(S5) · AI 미확인 | https://tseng-law.com/en/taiwan-litigation-lawyer | M | 수출 5위(S3) · EN 랜딩 FAQ가 미수금과 소 제기 전 사전 통지·합의 단계를 다룸(S6: `intent-pages.ts` 687) · 아랍어 표면 0 |
 | QA | ④ 비자·거류·취업 | أين أقدم طلب تأشيرة تايوان وأنا في قطر؟ / ما الفرق بين تأشيرة الزيارة وتصريح الإقامة في تايوان؟ | Where do I apply for a Taiwan visa from Qatar? / What is the difference between a visitor visa and a residence permit in Taiwan? | 구글 95.63% · Bing 3.28%(S5) · AI 미확인 | 없음 | L | 我 공관이 카타르에 없고 駐沙烏地阿拉伯代表處가 兼轄(S3·S4)이라 질문 자체는 실재하나, 대만 내 카타르 국적 거류 통계는 **원표 국적 항목 없음 → 미확인**(S1)이므로 규모로 올리지 않음 |
 | QA | ⑤ 상속·가족 | هل يعترف القانون التايواني بالطلاق الصادر خارج تايوان؟ / ما القانون الواجب التطبيق على الميراث إذا كان المتوفى أجنبيا؟ | Does Taiwanese law recognise a divorce granted outside Taiwan? / Which law applies to succession when the deceased was a foreign national? | 구글 95.63% · Bing 3.28%(S5) · AI 미확인 | https://tseng-law.com/en/columns/taiwan-divorce-lawsuit-qna | L | 체류·외국인 배우자 모두 원표 국적 항목 없음(S1·S2 미확인) · 외국 이혼 승인·준거법은 EN 칼럼이 이미 다룸 |
@@ -59,7 +61,7 @@
 | KW | ② 소송·계약분쟁 | هل يمكن مقاضاة شركة تايوانية دون السفر إلى تايوان؟ / ما خيارات تسوية النزاع التجاري مع طرف تايواني قبل التقاضي؟ | Can a Taiwanese company be sued without travelling to Taiwan? / What settlement options exist before litigating a commercial dispute with a Taiwanese party? | 구글 95.22% · Bing 3.64%(S5) · AI 미확인 | https://tseng-law.com/en/taiwan-litigation-lawyer | M | 이 대표 질문(원격 진행·사전 합의)은 EN 랜딩 FAQ가 직접 답함(S6: `intent-pages.ts` 683·687) · 수출 4위(S3) |
 | KW | ③ 미수금·채권회수 | كيف أتحقق من ملاءة شركة تايوانية قبل التقاضي؟ / ما تكلفة تحصيل الدين من شركة تايوانية مقارنة بقيمة المطالبة؟ | How do I check whether a Taiwanese company can actually pay before litigating? / How does the cost of recovering a debt in Taiwan compare with the claim value? | 구글 95.22% · Bing 3.64%(S5) · AI 미확인 | https://tseng-law.com/en/taiwan-litigation-lawyer | M | 수출 4위(S3) · 회수 실익 판단은 EN 랜딩 FAQ가 다룸(S6) · 아랍어 표면 0 |
 | KW | ④ 비자·거류·취업 | ما أنواع تأشيرات تايوان ومدة كل منها؟ / هل يمكن تحويل تأشيرة الزيارة إلى إقامة داخل تايوان؟ | What types of Taiwan visas exist and how long is each valid? / Can a visitor visa be converted into residence inside Taiwan? | 구글 95.22% · Bing 3.64%(S5) · AI 미확인 | 없음 | L | 대만 내 쿠웨이트 국적 거류 통계는 **원표 국적 항목 없음 → 미확인**(S1) · 비자·거류 전용 페이지 0(§4.7) |
-| KW | ⑤ 상속·가족 | ما حقوق الزوج الأجنبي في الميراث بتايوان؟ / هل يجب تصديق وثيقة الزواج الأجنبية لاستخدامها في تايوان؟ | What are a foreign spouse's inheritance rights in Taiwan? / Must a foreign marriage certificate be legalised for use in Taiwan? | 구글 95.22% · Bing 3.64%(S5) · AI 미확인 | https://tseng-law.com/en/columns/taiwan-divorce-lawsuit-qna | L | 체류·외국인 배우자 모두 미확인(S1·S2) · 외국 혼인문서 인증은 EN 칼럼이 이미 다룸 |
+| KW | ⑤ 상속·가족 | ما حقوق الزوج أو الزوجة الأجنبية في الميراث بتايوان؟ / هل يجب تصديق وثيقة الزواج الأجنبية لاستخدامها في تايوان؟ | What are a foreign spouse's inheritance rights in Taiwan? / Must a foreign marriage certificate be legalised for use in Taiwan? | 구글 95.22% · Bing 3.64%(S5) · AI 미확인 | https://tseng-law.com/en/columns/taiwan-divorce-lawsuit-qna | L | 체류·외국인 배우자 모두 미확인(S1·S2) · 외국 혼인문서 인증은 EN 칼럼이 이미 다룸 |
 | KW | ⑥ 형사·사고 | ما عقوبة مخالفة أنظمة التصدير أو الجمارك في تايوان؟ / كيف أوكل محاميا في تايوان وأنا خارجها في قضية جنائية؟ | What penalties apply for breaching Taiwanese export or customs rules? / How do I instruct a lawyer in Taiwan from abroad in a criminal matter? | 구글 95.22% · Bing 3.64%(S5) · AI 미확인 | https://tseng-law.com/en/services/criminal | L | 체류 미확인(S1) · 수출관리·관세 형사 주제 전용 문서는 없고 (범위 안내)만 존재 |
 | BH | ① 회사설립·투자 | كيف تسجل شركة بحرينية شركة تابعة في تايوان؟ / ما تكلفة ومدة تأسيس شركة في تايوان؟ | How does a Bahraini company register a subsidiary in Taiwan? / What does Taiwan company setup cost and how long does it take? | 구글 97.33% · Bing 2.05%(S5, 2026-08) · AI 미확인 | https://tseng-law.com/en/taiwan-company-setup-lawyer | L | 2025년 대만→바레인 수출 3,325만 미국달러로 7국 최소 구간(S3) · 대만 내 바레인 국적 거류 3명(S1) · 아랍어 표면 0 |
 | BH | ② 소송·계약분쟁 | كم تستغرق الدعوى التجارية أمام المحاكم التايوانية؟ / ما القانون الواجب التطبيق على عقد مع شركة تايوانية؟ | How long does a commercial case take in the Taiwanese courts? / Which law governs a contract with a Taiwanese company? | 구글 97.33% · Bing 2.05%(S5) · AI 미확인 | https://tseng-law.com/en/taiwan-litigation-lawyer | L | 수출 규모가 7국 최소 구간(S3) · 소요기간·준거법 질문은 EN 랜딩이 다루는 범위 안 |
@@ -76,15 +78,15 @@
 | EG | ① 회사설립·투자 | كيف أسجل شركة في تايوان وأنا مقيم في مصر؟ / ما المستندات المصرية المطلوبة وهل تحتاج تصديقا لاستخدامها في تايوان؟ | How do I register a company in Taiwan while resident in Egypt? / Which Egyptian documents are needed and do they require legalisation for use in Taiwan? | 구글 95.37% · Bing 3.29%(S5, 2026-08) · AI 미확인 | https://tseng-law.com/en/taiwan-company-setup-lawyer | M | 2025년 대만→이집트 수출 3억1,186만 미국달러로 7국 3위(S3)이면서 대만 내 체류 277명으로 7국 1위(S1) — 두 근거가 겹치는 유일한 국가 · 我 공관 없음, 駐約旦代表處 兼轄(S3) · 아랍어 표면 0 |
 | EG | ② 소송·계약분쟁 | كيف أقاضي شركة تايوانية بسبب بضاعة مخالفة للمواصفات؟ / هل يعتد بالمراسلات والبريد الإلكتروني كدليل أمام المحاكم التايوانية؟ | How do I sue a Taiwanese company over goods that do not meet specification? / Are emails and correspondence accepted as evidence in Taiwanese courts? | 구글 95.37% · Bing 3.29%(S5) · AI 미확인 | https://tseng-law.com/en/taiwan-litigation-lawyer | M | 수출 3위(S3) · 계약·이메일 등 증거 기준 검토는 EN 랜딩 FAQ가 다룸(S6: `intent-pages.ts` 687) |
 | EG | ③ 미수금·채권회수 | شركة تايوانية لم تسدد قيمة الشحنة، ماذا أفعل قانونيا؟ / هل يمكن توكيل محام في تايوان لتحصيل الدين نيابة عني؟ | A Taiwanese company has not paid for the shipment — what can I do legally? / Can I appoint a lawyer in Taiwan to pursue the debt on my behalf? | 구글 95.37% · Bing 3.29%(S5) · AI 미확인 | https://tseng-law.com/en/taiwan-litigation-lawyer | M | 수출 3위(S3) · 위임장 기반 원격 진행은 EN 랜딩 FAQ가 직접 답함(S6: `intent-pages.ts` 683) |
-| EG | ④ 비자·거류·취업 | أين أقدم طلب تأشيرة تايوان من مصر ولا توجد بعثة تايوانية فيها؟ / ما شروط تأشيرة الدراسة في تايوان والعمل أثناء الدراسة؟ | Where do I apply for a Taiwan visa from Egypt when there is no Taiwanese mission there? / What are the requirements for a Taiwan student visa and for working while studying? | 구글 95.37% · Bing 3.29%(S5) · AI 미확인 | 없음 | H | 대만 내 이집트 국적 거류 277명(7국 1위)이고 그중 學生 44·未滿15歲 52·商務人員 30(S1), 외국인 배우자 47(S2) — 7국에서 A급 모수가 유일하게 확인되는 셀 · 我 공관 없음, 駐約旦代表處 兼轄(S3)이라 신청 창구 질문이 실재 · 비자·거류 전용 페이지 0(§4.7) |
-| EG | ⑤ 상속·가족 | الزواج من مواطنة تايوانية، ما إجراءات التسجيل والحضانة بعد الطلاق؟ / هل يعتد بحكم حضانة أجنبي أمام المحاكم التايوانية؟ | Marriage to a Taiwanese national — what are the registration steps and custody rules after divorce? / Is a foreign custody judgment given effect by Taiwanese courts? | 구글 95.37% · Bing 3.29%(S5) · AI 미확인 | https://tseng-law.com/en/columns/taiwan-divorce-lawsuit-qna | M | 이집트 국적 외국인 배우자 47명(7국 1위)·未滿15歲 아동 52명(S1·S2) · 외국 양육권 판결 승인은 EN 칼럼 §8이 이미 다룸 |
+| EG | ④ 비자·거류·취업 | أين أقدم طلب تأشيرة تايوان من مصر في غياب بعثة تايوانية؟ / ما شروط تأشيرة الدراسة في تايوان والعمل أثناء الدراسة؟ | Where do I apply for a Taiwan visa from Egypt when there is no Taiwanese mission there? / What are the requirements for a Taiwan student visa and for working while studying? | 구글 95.37% · Bing 3.29%(S5) · AI 미확인 | 없음 | H | 대만 내 이집트 국적 거류 277명(7국 1위)이고 그중 學生 44·未滿15歲 52·商務人員 30(S1), 외국인 배우자 47(S2) — 7국에서 A급 모수가 유일하게 확인되는 셀 · 我 공관 없음, 駐約旦代表處 兼轄(S3)이라 신청 창구 질문이 실재 · 비자·거류 전용 페이지 0(§4.7) |
+| EG | ⑤ 상속·가족 | الزواج من مواطن أو مواطنة تايوانية، ما إجراءات التسجيل والحضانة بعد الطلاق؟ / هل يعتد بحكم حضانة أجنبي أمام المحاكم التايوانية؟ | Marriage to a Taiwanese national — what are the registration steps and custody rules after divorce? / Is a foreign custody judgment given effect by Taiwanese courts? | 구글 95.37% · Bing 3.29%(S5) · AI 미확인 | https://tseng-law.com/en/columns/taiwan-divorce-lawsuit-qna | M | 이집트 국적 외국인 배우자 47명(7국 1위)·未滿15歲 아동 52명(S1·S2) · 외국 양육권 판결 승인은 EN 칼럼 §8이 이미 다룸 |
 | EG | ⑥ 형사·사고 | أوقفتني الشرطة في تايوان بسبب نزاع عمل، ماذا أفعل؟ / هل يؤثر البلاغ الجنائي على تصريح الإقامة في تايوان؟ | The police in Taiwan stopped me over a workplace dispute — what should I do? / Does a criminal complaint affect a Taiwan residence permit? | 구글 95.37% · Bing 3.29%(S5) · AI 미확인 | https://tseng-law.com/en/services/criminal | M | 대만 내 이집트 국적 거류 277명 중 其他(有業者) 101·家務 8(S1) · 국적별 사건 발생 통계는 미확인이라 규모 이상으로 올리지 않음 · (범위 안내) |
 
 ### 2.1 셀 수 검증
 
 - 총 42셀 = 7국 × 6의도. 검증 명령: `grep -c "^| \(AE\|SA\|QA\|KW\|BH\|OM\|EG\) " docs/seo/geo-mena-intent-map-2026-09.md` → **42**.
 - 우선순위 분포: **H 7** (AE ①②③ · SA ①②③ · EG ④) / **M 13** (QA ①②③ · KW ①②③ · EG ①②③⑤⑥ · AE ④ · SA ④) / **L 22**.
-- `현재 대응 URL` = "없음" **10셀**: AE ② · SA ② · QA ② · AE ④ · SA ④ · QA ④ · KW ④ · BH ④ · OM ④ · EG ④.
+- `현재 대응 URL` = "없음" **9셀**: AE ② · SA ② · QA ② · SA ④ · QA ④ · KW ④ · BH ④ · OM ④ · EG ④. (AE ④는 R1에서 설립 랜딩으로 교체 — §9)
 - **"없음 + H" 3셀**: AE ② · SA ② · EG ④ → §3.
 
 ### 2.2 국가별 근거 요약표
@@ -106,18 +108,20 @@
 
 ## 3. "없음 + H" 셀 → 신규 페이지 후보
 
-후보 규칙: §2에서 `현재 대응 URL` = "없음"이면서 `우선순위` = H인 셀만 후보로 만든다. 해당 셀은 **AE ② · SA ② · EG ④** 3개이고, 주제는 두 덩어리(중재·외국판정 집행 / 비자·거류)다. 로케일은 각각 en과 ar 두 벌을 제안한다 → **후보 4개**.
+후보 규칙: §2에서 `현재 대응 URL` = "없음"이면서 `우선순위` = H인 셀만 후보로 만든다. 해당 셀은 **AE ② · SA ② · EG ④** 3개이고, 주제는 두 덩어리(중재·외국판정 집행 / 비자 신청 창구·학생 신분)다. 로케일은 각각 en과 ar 두 벌을 제안한다 → **후보 4개**.
 
 **언어 계약 원칙(착수 조건):** 아래 초안 어디에도 아랍어 상담·통역 제공, 회신 시간, 예약, 비용 금액, 결과 보장을 적지 않았다. 각 초안에는 **상담 언어가 English / Chinese / Japanese / Korean 넷뿐**이라는 기존 문장을 그대로 넣는다(`src/data/intent-pages.ts` 436·530·621). M1-b(WO-M3-AR-CONTENT)에서 이 문장을 약화·삭제하지 않는 것이 후보 착수의 전제다.
 
 | # | 슬러그 | 로케일 | 커버 셀 | 1줄 답변 초안 | 근거 |
 |---|---|---|---|---|---|
 | C1 | `/taiwan-arbitration-award-enforcement-lawyer` | en (기존 4벌 계약상 ko·zh-hant·ja도 동시 작성, §3.1-3) | AE ②(H) · SA ②(H) — 부수적으로 QA ②(M) | "If your contract with a Taiwanese counterparty has an arbitration clause, whether the award or judgment can be given effect in Taiwan is reviewed separately from the merits of the dispute. **[변호사 검수 필요]** The firm provides consultations in English, Chinese, Korean, and Japanese, in person or by video." | 대만→AE 수출 15.85억·→SA 약 9.35억 미국달러(S3, 7국 1·2위) · 사이트 전체 중재·외국판정 집행 문서 0건(S6: `grep -rli "arbitrat" src/`=0, `grep -rl "仲裁" src/`=0) |
-| C2 | 안내 코어 키 확장 필요 — 잠정 `arbitration`(경로는 `/ar/<key>`) | ar | AE ②(H) · SA ②(H) · QA ②(M) | "إذا كان عقدك مع طرف تايواني يتضمن شرط تحكيم، فإن الاعتراف بالحكم وتنفيذه في تايوان يخضع لفحص منفصل عن موضوع النزاع. **[변호사 검수 필요]** لغات الاستشارة: الإنجليزية والصينية واليابانية والكورية فقط." | C1과 동일 · `ar` 표면 0(§1-4)이라 아랍어 질문자에게 답하는 페이지가 현재 없음 |
-| C3 | `/taiwan-visa-residence-lawyer` | en (동상) | EG ④(H) — 부수적으로 AE ④·SA ④(M) | "Taiwan residence and work status are applied for separately from company registration, and the application channel depends on which overseas mission covers your country. **[변호사 검수 필요]** The firm provides consultations in English, Chinese, Korean, and Japanese, in person or by video." | 대만 내 이집트 국적 거류 277·學生 44·外籍配偶 47(S1·S2, 7국 1위) · 이집트에 我 공관 없음, 駐約旦代表處 兼轄(S3·S4) · 비자·거류 전용 페이지 0(§4.7) |
-| C4 | 안내 코어 키 확장 필요 — 잠정 `visa-residence`(경로는 `/ar/<key>`) | ar | EG ④(H) | "الإقامة وتصريح العمل في تايوان يقدَّم لهما طلب منفصل عن تسجيل الشركة، وجهة تقديم الطلب تتبع البعثة التي تشمل بلدك. **[변호사 검수 필요]** لغات الاستشارة: الإنجليزية والصينية واليابانية والكورية فقط." | C3과 동일 · `ar` 표면 0 |
+| C2 | 안내 코어 키 확장 필요 — 잠정 `arbitration`(경로는 `/ar/<key>`) | ar | AE ②(H) · SA ②(H) · QA ②(M) | "إذا كان عقدك مع طرف تايواني يتضمن شرط تحكيم، فإن الاعتراف بحكم التحكيم وتنفيذه في تايوان يخضع لفحص منفصل عن موضوع النزاع. **[변호사 검수 필요]** لغات الاستشارة: الإنجليزية والصينية واليابانية والكورية فقط." | C1과 동일 · `ar` 표면 0(§1-4)이라 아랍어 질문자에게 답하는 페이지가 현재 없음 |
+| C3 | `/taiwan-visa-residence-lawyer` | en (동상) | EG ④(H) — 부수적으로 SA ④(M, 신청 창구 질문에 한해) | "Where Taiwan has no office in your country, a visa or student-visa application is filed with the overseas mission that covers it — for Egypt, the Taipei Economic and Cultural Office in Jordan — and permission to work while studying is applied for separately from the student visa itself. **[변호사 검수 필요]** The firm provides consultations in English, Chinese, Korean, and Japanese, in person or by video." | 대만 내 이집트 국적 거류 277·學生 44·外籍配偶 47(S1·S2, 7국 1위) · 이집트에 我 공관 없음, 駐約旦代表處 兼轄(S3·S4) · 비자·거류 전용 페이지 0(§4.7). **설립≠거류 명제는 본문에 다시 쓰지 않는다** — `/en/taiwan-company-setup-lawyer`의 hero·FAQ가 이미 답하므로(S6: `intent-pages.ts` 531·587–589·597–599) 링크로만 처리한다 |
+| C4 | 안내 코어 키 확장 필요 — 잠정 `visa-residence`(경로는 `/ar/<key>`) | ar | EG ④(H) | "إذا لم تكن هناك بعثة تايوانية في بلدك، فإن طلب التأشيرة أو تأشيرة الدراسة يقدَّم إلى البعثة التي تشمل بلدك — ومصر تشملها البعثة التايوانية في الأردن — كما أن العمل أثناء الدراسة يُطلب له إذن منفصل عن تأشيرة الدراسة نفسها. **[변호사 검수 필요]** لغات الاستشارة: الإنجليزية والصينية واليابانية والكورية فقط." | C3과 동일 · `ar` 표면 0 |
 
-**`[변호사 검수 필요]` 마커의 뜻:** 위 네 초안은 사이트에 현재 게재되지 않은 법률 서술(중재판정의 승인·집행이 본안과 별개라는 점, 거류·취업 자격 신청이 회사 등기와 별개라는 점)을 담는다. 이 문서는 그 명제의 근거 조문을 제시하지 않으며, 본문 단계에서 근거 확인과 변호사 검수를 거치기 전에는 발행하지 않는다.
+**C3·C4 주제 경계(R1에서 고정):** 두 초안의 주제는 **무공관국의 신청 창구(駐約旦代表處 兼轄)와 학생 신분·학업 중 취업**이다. 「거류·취업은 회사 등기와 별개」라는 명제는 `/en/taiwan-company-setup-lawyer`가 이미 싣고 있으므로(S6: `intent-pages.ts` 531 hero·587–589·597–599 FAQ) 본문에서 다시 서술하지 않고 링크로만 처리한다 — 초판이 그 명제를 후보의 1줄 답변으로 썼던 것이 기존 페이지 복제였고(동남아 레인이 `sea-intent-map-2026-09.md` 107·113에서 같은 이유로 재정의했다), R1이 그 수정이다. 슬러그 `/taiwan-visa-residence-lawyer`는 유지하되, **제목·intro에 "overseas mission / student status"를 명시**해 동남아 레인 후보 `/taiwan-work-permit-renewal-lawyer`(이주노동자 갱신, `sea-intent-map-2026-09.md` 113)와 본문이 섞이지 않게 한다. 커버 셀에서 **AE ④는 뺐다**(설립 랜딩 FAQ가 부분 대응하므로 더는 공백이 아니다, §9). SA ④는 신청 창구 질문("사우디에서 어디에 신청하는가")에 한해 부수 커버로 남긴다.
+
+**`[변호사 검수 필요]` 마커의 뜻:** 위 네 초안은 사이트에 현재 게재되지 않은 법률 서술(중재판정의 승인·집행이 본안과 별개라는 점, 무공관국의 신청 창구가 兼轄 공관이라는 점, 학업 중 취업이 학생 비자와 별개의 허가라는 점)을 담는다. 이 문서는 그 명제의 근거 조문을 제시하지 않으며, 본문 단계에서 근거 확인과 변호사 검수를 거치기 전에는 발행하지 않는다.
 
 ### 3.1 후보를 그대로 만들 수 없게 만드는 코드 제약
 
@@ -192,7 +196,7 @@
 | 이슬람법(샤리아) 관련 서술이 있다 | **없음 (0)** | `grep -rli "sharia\|islamic\|伊斯蘭" src/` → 0건 |
 | 할랄 관련 서술이 있다 | **없음 (0)** | `grep -rli "halal\|清真" src/` → 0건 |
 
-따라서 ④ 7셀의 "없음"이 주장하는 것은 **"비자·거류를 주제로 하는 전용 페이지 0"**이지 "거류를 언급하는 문장 0"이 아니다. 두 번째 명제는 거짓이며(위 표 5행), §2 ④ 셀의 `이유` 열도 "전용 페이지 0"으로만 썼다.
+따라서 ④ 6셀(AE ④ 제외, §9)의 "없음"이 주장하는 것은 **"비자·거류를 주제로 하는 전용 페이지 0"**이지 "거류를 언급하는 문장 0"이 아니다. 두 번째 명제는 거짓이며(위 표 5행), §2 ④ 셀의 `이유` 열도 "전용 페이지 0"으로만 썼다.
 
 ## 5. 출처 표
 
@@ -257,8 +261,38 @@
 **새 법률 주장**
 
 - §1·§2·§4·§5의 법적 서술은 전부 사이트에 이미 게재된 문장 또는 A/B급 통계에서 왔다.
-- §3의 C1~C4 초안 4건은 **사이트에 없는 새 법률 서술**(중재판정의 승인·집행이 본안과 별개라는 점, 거류·취업 자격 신청이 회사 등기와 별개라는 점)을 담는다. 네 초안 전부에 **`[변호사 검수 필요]` 마커를 붙였다.** 이 문서는 그 명제의 근거 법령을 제시하지 않으며, 본문 단계의 근거 확인과 변호사 검수 전에는 발행하지 않는다.
+- §3의 C1~C4 초안 4건은 **사이트에 없는 새 법률 서술**(중재판정의 승인·집행이 본안과 별개라는 점, 무공관국의 신청 창구가 兼轄 공관이라는 점, 학업 중 취업이 학생 비자와 별개의 허가라는 점)을 담는다. 네 초안 전부에 **`[변호사 검수 필요]` 마커를 붙였다.** 이 문서는 그 명제의 근거 법령을 제시하지 않으며, 본문 단계의 근거 확인과 변호사 검수 전에는 발행하지 않는다.
 
 ## 8. 변경 이력
 
 - 2026-09-16 — 최초 작성(WO-M1-INTENT). 42셀, H 7 / M 13 / L 22, "없음" 10셀, 신규 페이지 후보 4개, 출처 6건(A 2 · B 2 · C 1 · 척도 외 1), 미확인 8항목.
+- 2026-09-16 (R1) — WO-M1-R1. 독립 검토(`docs/seo/geo-mena-intent-map-2026-09.REVIEW.md`)의 **FAIL 2건**(항목 3 AE ④ 거짓 "없음" · 항목 6 C3·C4 기존 페이지 복제) 반영과 REVIEW §2 아랍어 교정문 반영. 42셀·H 7 / M 13 / L 22·출처 6건은 그대로, **"없음" 10셀 → 9셀**, 후보 수 4개 그대로(주제만 재정의). 항목별 내역은 §9.
+
+## 9. R1 수정 이력
+
+WO `docs/seo/mena-plan/WO-M1-R1.txt` · 근거 `docs/seo/geo-mena-intent-map-2026-09.REVIEW.md`(Grok 4.6, 2026-09-16, **FAIL 2건**). 줄 번호는 **수정 후** 이 파일 기준이다.
+
+| 항목 | 줄 | 수정 |
+|---|---|---|
+| REVIEW 항목 3 (FAIL) — AE ④ 거짓 "없음" | 43 | `현재 대응 URL` **"없음" → `https://tseng-law.com/en/taiwan-company-setup-lawyer`**. 이유 열에 「전용 페이지 없음, 설립 랜딩 FAQ 부분 대응」 + 근거 줄(`intent-pages.ts` 531 hero · 587–589 · 597–599 FAQ) 추가. 우선순위 M은 유지 |
+| 〃 — §1 요약 동기화 | 12 | 「"없음"인 셀은 10개 … ④ 7셀 전부」 → **9개 … ④ 6셀(SA·QA·KW·BH·OM·EG)**, AE ④를 뺀 이유 1문장 추가 |
+| 〃 — §2.1 목록 동기화 | 87 | 「"없음" **10셀**: … AE ④ …」 → **9셀** 목록에서 AE ④ 삭제 |
+| 〃 — §4.7 후속 문장 동기화 | 197 | 「④ 7셀의 "없음"」 → 「**④ 6셀(AE ④ 제외, §9)**의 "없음"」 |
+| REVIEW 항목 6 (FAIL) — C3 기존 페이지 복제 | 117 | 1줄 답변에서 **설립≠거류 명제 삭제**(= `intent-pages.ts` 531·587–589·597–599과 동일 명제), EG ④의 진짜 공백(무공관국 신청 창구 = 駐約旦代表處 兼轄 · 학생 비자 · 학업 중 취업 별도 허가)으로 **재정의**. 커버 셀에서 **AE ④ 제거**, SA ④는 창구 질문 한정 부수 커버로 유지. 근거 열에 「설립≠거류는 링크로만 처리」 명시. 슬러그 `/taiwan-visa-residence-lawyer` 유지 |
+| 〃 — C4(아랍어) 동일 재정의 | 118 | 아랍어 1줄 답변을 C3과 같은 주제(무공관국 창구·학생 비자·학업 중 취업)로 교체. 상담 언어 문장 `لغات الاستشارة: الإنجليزية والصينية واليابانية والكورية فقط.`는 그대로 유지 |
+| 〃 — 주제 경계 고정 | 120 | **C3·C4 주제 경계** 문단 신설 — 복제 명제는 링크 처리, 제목·intro에 "overseas mission / student status" 명시, 동남아 후보 `/taiwan-work-permit-renewal-lawyer`와 본문 분리, AE ④ 커버 제거 사유 |
+| 〃 — §3 도입부 | 109 | 후보 주제 덩어리 「중재·외국판정 집행 / **비자·거류**」 → 「… / **비자 신청 창구·학생 신분**」 |
+| 〃 — 새 법률 서술 목록(§3 마커 뜻 · §7) | 122 · 262 | 「거류·취업 자격 신청이 회사 등기와 별개라는 점」 → 「**무공관국의 신청 창구가 兼轄 공관이라는 점, 학업 중 취업이 학생 비자와 별개의 허가라는 점**」. `[변호사 검수 필요]` 마커는 4개 초안 전부 유지 |
+| REVIEW 항목 2 (PASS·필수 교정) — EG ⑤ 성별 | 80 | `الزواج من مواطنة تايوانية` → **`الزواج من مواطن أو مواطنة تايوانية`** (영어 열 "Taiwanese national"과 성별 일치) |
+| REVIEW 항목 2 (권고 교정문) — QA ② | 53 | `كيف ينفذ حكم التحكيم الدولي…` → **`كيف يمكن تنفيذ حكم التحكيم الدولي…`** |
+| REVIEW 항목 2 (권고 교정문) — KW ⑤ | 62 | `ما حقوق الزوج الأجنبي…` → **`ما حقوق الزوج أو الزوجة الأجنبية…`** |
+| REVIEW 항목 2 (권고 교정문) — EG ④ | 79 | `…من مصر ولا توجد بعثة تايوانية فيها؟` → **`…من مصر في غياب بعثة تايوانية؟`** |
+| REVIEW 항목 2 (권고 교정문) — C2 초안 | 116 | `فإن الاعتراف بالحكم وتنفيذه` → **`فإن الاعتراف بحكم التحكيم وتنفيذه`** |
+| 변경 이력 | 267 | §8에 R1 줄 추가 |
+
+### 9.1 R1에서 손대지 않은 것 (이유 포함)
+
+- **REVIEW 항목 1·4·5·7(PASS)** — 손대지 않았다. S3 URL 축약 복원(REVIEW §1 권고)은 WO 범위 밖이라 M1 작성 레인에 남긴다.
+- **SA ④의 `없음`** — REVIEW §3(b)가 「부분 대응이나 **별도 FAIL로 쌓지 않음**」이라고 판정했고 WO가 AE ④만 지정했으므로 유지했다. 후속 레인의 판단 대상이다.
+- **SA ② 아랍어(중재판정 vs 외국판결)** — REVIEW §2가 두 선택지를 제시한 **선택 항목**이라 WO 규칙(§ "유지/선택 항목은 손대지 않되")대로 두었다.
+- **§1-4 · §4.1의 `ar` 로케일 서술** — REVIEW §3이 「현재 트리에서 거짓이나 **수정안일 뿐, `ar` 표면 0을 FAIL로 뒤집지 않는다**」고 못 박았고 WO 지정 항목이 아니라 유지했다. **다만 R1 시점 재확인 결과 드리프트는 REVIEW가 본 것보다 더 커졌다** — `src/lib/public-guidance.ts` 14 `GUIDANCE_LOCALES_4`에 `'ar'`가 들어갔고(이름과 달리 5개), 31행 `PUBLIC_LOCALES_8`에도 `'ar'`가 있으며, 45행 `ROUTED_ONLY_LOCALES`는 빈 배열로 바뀌었다. 즉 §1-4의 「`ar`는 코드 어디에도 로케일로 존재하지 않는다」와 §4.1의 「`grep -rn "'ar'" …` → 출력 0줄」은 **현재 트리에서 거짓**이다. 이 문단들의 갱신은 별도 워크오더가 필요하다.

@@ -28,6 +28,26 @@ describe('hero quick menu under the builder-decomposed hero', () => {
     expect(variant![1]).not.toMatch(/top:\s*100%/);
   });
 
+  it('lays the editorial-home menu out in a zero-height third track under the bar', () => {
+    const editorial = readFileSync(
+      path.join(process.cwd(), 'src/components/HomeEditorial.module.css'),
+      'utf8',
+    );
+    // Live before this: zh-hant/en/ja 12px under the bar, ko 8px. `top: 100%`
+    // resolves 4px tall inside the grid, so the menu is placed in flow instead.
+    expect(editorial).toMatch(/\.searchDropdown:global\(\.hero-search-dropdown-wrap\) \{[^}]*grid-template-rows:\s*auto auto 0;/);
+    const rule = editorial.match(
+      /\.searchDropdown:global\(\.hero-search-dropdown-wrap\) :global\(\.hero-quick-menu\) \{([^}]*)\}/,
+    );
+    expect(rule).not.toBeNull();
+    for (const decl of ['position:\\s*relative', 'top:\\s*auto', 'grid-column:\\s*1', 'grid-row:\\s*3', 'align-self:\\s*start', 'margin-top:\\s*0\\.5rem']) {
+      expect(rule![1], decl).toMatch(new RegExp(decl + '\\s*;'));
+    }
+    // The bar keeps row 2 / column 1 and the arrow row 2 / column 2.
+    expect(editorial).toMatch(/\.searchBar:global\(\.hero-search-bar\) \{[^}]*grid-column:\s*1;[^}]*grid-row:\s*2;/);
+    expect(editorial).toMatch(/\.scrollArrow:global\(\.hero-scroll-arrow\) \{[^}]*grid-column:\s*2;[^}]*grid-row:\s*2;/);
+  });
+
   it('still emits the builder class the override hangs on', () => {
     const decompose = readFileSync(
       path.join(process.cwd(), 'src/lib/builder/canvas/decompose-hero.ts'),

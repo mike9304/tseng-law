@@ -348,13 +348,35 @@
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 640px) 44px;
-  grid-template-rows: auto auto;
+  /* label · search bar · zero-height track that hosts the overlay quick menu */
+  grid-template-rows: auto auto 0;
   column-gap: 16px;
   align-items: center;
   justify-content: start;
   min-width: 0;
   max-width: calc(640px + 16px + 44px);
   width: 100%;
+}
+
+/*
+ * The quick menu is `position: absolute; top: 100%` in globals.css. Inside this
+ * grid that anchor is unreliable: even pinned to the search bar's cell, the
+ * browser resolves 100% four pixels taller than the row, so live zh-hant/en/ja
+ * rendered the menu 12px under the bar where the plain ko home renders 8px.
+ * Lay it out in normal flow instead: a zero-height third track directly under
+ * the bar's row. The menu overflows that track (no layout space taken — wrap
+ * height and the section below are unchanged) and its offset is the plain
+ * 0.5rem margin the base rule already intends. Measured: 8.00px, width = bar.
+ */
+.searchDropdown:global(.hero-search-dropdown-wrap) :global(.hero-quick-menu) {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  grid-column: 1;
+  grid-row: 3;
+  align-self: start;
+  margin-top: 0.5rem;
 }
 
 .searchLabel {

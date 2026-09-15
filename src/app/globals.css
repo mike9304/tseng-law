@@ -176,6 +176,7 @@
   --font-body-ja: var(--font-noto-sans-jp-loaded, 'Hiragino Kaku Gothic ProN'), 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif;
   --font-body-latin: var(--font-noto-sans-latin-loaded, 'Noto Sans'), 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   --font-body-th: var(--font-noto-sans-thai-loaded, 'Noto Sans Thai'), 'Noto Sans Thai', var(--font-noto-sans-latin-loaded, 'Noto Sans'), 'Leelawadee UI', 'Thonburi', sans-serif;
+  --font-body-ar: var(--font-noto-sans-arabic-loaded, 'Noto Sans Arabic'), 'Noto Sans Arabic', var(--font-noto-sans-latin-loaded, 'Noto Sans'), 'Segoe UI', Tahoma, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
   --font-sans: var(--font-body);
   --font-display: var(--font-heading-ko);
@@ -215,6 +216,16 @@ html[lang='fil'] {
   --font-heading-ko: var(--font-heading-latin);
   --font-display: var(--font-heading-latin);
   --font-display-en: var(--font-heading-latin);
+}
+
+/* Arabic: Noto Sans Arabic for body and headings (no Arabic serif pair is loaded). */
+html[lang='ar'] {
+  --font-body: var(--font-body-ar);
+  --font-sans: var(--font-body-ar);
+  --font-heading: var(--font-body-ar);
+  --font-heading-ko: var(--font-body-ar);
+  --font-display: var(--font-body-ar);
+  --font-display-en: var(--font-body-ar);
 }
 
 html[lang='th'] {
@@ -602,6 +613,14 @@ li,
   --font-display: var(--font-heading-latin);
   --font-heading: var(--font-heading-latin);
   --font-heading-ko: var(--font-heading-latin);
+}
+
+.site[data-locale='ar'] {
+  --font-body: var(--font-body-ar);
+  --font-sans: var(--font-body-ar);
+  --font-display: var(--font-body-ar);
+  --font-heading: var(--font-body-ar);
+  --font-heading-ko: var(--font-body-ar);
 }
 
 .site[data-locale='th'] {
@@ -26070,4 +26089,323 @@ html[data-cinematic-intro-visible='true']
 
 .guidance-answer > :last-child {
   margin-bottom: 0;
+}
+
+
+/* =====================================================================
+   RTL — html[dir='rtl'] (Arabic). Generated mirrors of every physical
+   left/right declaration in the public chrome and guidance scopes above.
+   Flex/grid flow mirrors on its own under dir=rtl; only explicit margins,
+   paddings, text-align, one-sided absolute offsets, corner radii and
+   translateX need these. Regenerate rather than hand-edit (see WO-M2).
+   ===================================================================== */
+
+html[dir='rtl'] .skip-link {
+  left: auto;
+  right: -999px;
+}
+
+html[dir='rtl'] .skip-link:focus {
+  left: auto;
+  right: var(--page-gutter);
+}
+
+html[dir='rtl'] .page-header::after {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .link-underline::after {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .card::before {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .card::after {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .pricing-card-icon::after {
+  right: auto;
+  left: 8px;
+  border-right: none;
+  border-left: 1px solid rgba(181, 140, 66, 0.48);
+}
+
+html[dir='rtl'] .pricing-card-details {
+  text-align: right;
+}
+
+html[dir='rtl'] .pricing-card-details li {
+  padding-left: 0;
+  padding-right: 1.1rem;
+}
+
+html[dir='rtl'] .pricing-card-details li::before {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .services-bento > .container > .services-card-grid + p:not([class]),
+html[dir='rtl'] .pricing-card > p:not([class]) {
+  border-left: none;
+  border-right: 3px solid var(--gold);
+  text-align: right;
+}
+
+html[dir='rtl'] .review-card-date {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir='rtl'] .hero-search-bar.overlap {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+html[dir='rtl'] .hero-search-btn {
+  border-left: none;
+  border-right: 1px solid rgba(233, 242, 234, 0.16);
+}
+
+html[dir='rtl'] .svc-col-badge {
+  left: auto;
+  right: 1rem;
+}
+
+html[dir='rtl'] .insights-featured::after {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .insights-category-badge {
+  left: auto;
+  right: 1rem;
+}
+
+html[dir='rtl'] .insights-category-badge--language {
+  text-align: left;
+}
+
+html[dir='rtl'] .insights-category-badge--compact {
+  left: auto;
+  right: 0.75rem;
+}
+
+html[dir='rtl'] .attorney-list {
+  padding-left: 0;
+  padding-right: 1.1rem;
+}
+
+html[dir='rtl'] .office-label {
+  margin-right: 0;
+  margin-left: 1.2rem;
+}
+
+html[dir='rtl'] .office-link + .office-link::before {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .header {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .utility-lang {
+  margin-left: 0;
+  margin-right: 0.25rem;
+}
+
+html[dir='rtl'] .header[data-public-site-header] > .header-main .header-actions {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+html[dir='rtl'] .header-actions {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+html[dir='rtl'] .mega-menu {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .mega-panel {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .mega-links a:hover,
+html[dir='rtl'] .mega-links a:focus-visible {
+  padding-left: 0;
+  padding-right: 0.75rem;
+}
+
+html[dir='rtl'] .mega-links a:hover .mega-chevron,
+html[dir='rtl'] .mega-links a:focus-visible .mega-chevron {
+  transform: translateX(-3px);
+}
+
+html[dir='rtl'] .site-mobile-nav-panel {
+  border-left: none;
+  border-right: 1px solid var(--border-light);
+  transform: translateX(-24px);
+}
+
+html[dir='rtl'] .site-mobile-nav-drawer.open .site-mobile-nav-panel {
+  transform: translateX(-0);
+}
+
+html[dir='rtl'] .site-mobile-nav-list ul {
+  border-left: none;
+  border-right: 2px solid var(--border-light);
+}
+
+html[dir='rtl'] .legal-card-list li {
+  padding-left: 0;
+  padding-right: 1.1rem;
+}
+
+html[dir='rtl'] .legal-card-list li::before {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .office-map-fallback::after {
+  left: auto;
+  right: 54%;
+}
+
+html[dir='rtl'] .messenger-header {
+  text-align: right;
+}
+
+html[dir='rtl'] .messenger-card--email .messenger-card-arrow {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir='rtl'] .messenger-card:hover .messenger-card-arrow {
+  transform: translateX(-4px);
+}
+
+html[dir='rtl'] .faq-question button,
+html[dir='rtl'] .faq-question[role='button'] {
+  text-align: right;
+}
+
+html[dir='rtl'] .year-end-popup-pill {
+  text-align: right;
+}
+
+html[dir='rtl'] .year-end-popup-pill-close {
+  border-left: none;
+  border-right: 1px solid var(--border-light);
+}
+
+html[dir='rtl'] .quick-contact {
+  right: auto;
+  left: var(--right-rail-offset);
+}
+
+html[dir='rtl'] .quick-contact-panel {
+  right: auto;
+  left: 0;
+  border-top-left-radius: var(--radius-sm);
+  border-top-right-radius: 0;
+}
+
+html[dir='rtl'] .quick-contact-action-btn {
+  text-align: right;
+}
+
+html[dir='rtl'] .floating-ai-chat-chip {
+  text-align: right;
+}
+
+html[dir='rtl'] .floating-ai-chat-chip:hover {
+  transform: translateX(-2px);
+}
+
+html[dir='rtl'] .floating-ai-chat-cta-card {
+  text-align: right;
+}
+
+html[dir='rtl'] .header-actions {
+  margin-right: 0;
+  margin-left: calc(-1 * var(--right-rail-offset) + 12px);
+}
+
+html[dir='rtl'] .quick-contact {
+  right: auto;
+  left: max(1rem, env(safe-area-inset-right));
+}
+
+html[dir='rtl'] .footer-copyright-row {
+  padding-right: 0;
+  padding-left: 3.75rem;
+}
+
+html[dir='rtl'] .hero-search-bar.overlap {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+html[dir='rtl'] .studio-section-card::after {
+  right: auto;
+  left: 0.9rem;
+}
+
+html[dir='rtl'] .studio-section-card-order {
+  margin-right: 0;
+  margin-left: 0.55rem;
+}
+
+html[dir='rtl'] .studio-live-block-badge {
+  right: auto;
+  left: 0.6rem;
+}
+
+html[dir='rtl'] .studio-live-page > .studio-section-card::after {
+  right: auto;
+  left: 1.1rem;
+}
+
+html[dir='rtl'] .studio-direct-edit-chip {
+  text-align: right;
+}
+
+html[dir='rtl'] .contact-studio-inline-list {
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+html[dir='rtl'] .lawyers-studio-overview-card {
+  text-align: right;
+}
+
+html[dir='rtl'] .media-library-card {
+  text-align: right;
+}
+
+html[dir='rtl'] .wix-section-nav-item {
+  text-align: right;
+}
+
+html[dir='rtl'] .faq-question button,
+html[dir='rtl'] .faq-question[role='button'] {
+  padding-right: 0;
+  padding-left: 3.75rem;
+}
+
+html[dir='rtl'] .guidance-answer {
+  border-left: none;
+  border-right: 3px solid var(--gold-dim);
 }

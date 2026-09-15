@@ -15,6 +15,7 @@ import {
   isGuidanceCoreSlugPath,
   isPublicLocale8,
   type PublicLocale8,
+  isGuidanceRoutedLocale,
 } from '@/lib/public-guidance';
 import { buildAbsoluteUrl, getLanguageAlternates, getLocalizedPath, getSiteUrl } from '@/lib/seo';
 import { isEnglishNoindexPath } from '@/lib/seo-visibility';
@@ -79,8 +80,9 @@ function sitemapSlugPath(path: string): string {
 }
 
 function isGuidanceLocaleHreflang(tag: string): boolean {
-  const lower = tag.toLowerCase();
-  return lower === 'vi' || lower === 'id' || lower === 'th' || lower === 'fil';
+  // Routing-tier predicate so `ar` is recognised as guidance-shaped as soon as
+  // it is routed; its URLs still only appear once they are actually published.
+  return isGuidanceRoutedLocale(tag.toLowerCase());
 }
 
 function appendGuidanceLocaleSitemapEntries(

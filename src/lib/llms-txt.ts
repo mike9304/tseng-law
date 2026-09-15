@@ -351,8 +351,12 @@ export function buildRootLlmsTxt(): string {
     annotation: `Public ${GUIDANCE_CATALOG_LANGUAGE_NAMES[locale]}-language guidance catalog. Consultations are conducted only in English, Chinese, Japanese, and Korean.`,
   }));
 
-  if (localeEntries.length !== 4 || guidanceEntries.length !== 4) {
-    throw new Error('Root llms.txt requires exactly four site locale catalogs and four guidance catalogs');
+  // Derived, not literal: the guidance set grows (ar is next) and a hard-coded
+  // "4" here would silently throw the whole root manifest the day it does.
+  if (localeEntries.length !== siteLocales.length || guidanceEntries.length !== GUIDANCE_LOCALES_4.length) {
+    throw new Error(
+      `Root llms.txt requires ${siteLocales.length} site locale catalogs and ${GUIDANCE_LOCALES_4.length} guidance catalogs`,
+    );
   }
 
   const sections: LlmsSection[] = [

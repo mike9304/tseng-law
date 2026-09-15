@@ -9,7 +9,7 @@ import { headers } from 'next/headers';
 import type { ReactNode } from 'react';
 import { getSearchEngineVerification, getSiteUrl } from '@/lib/seo';
 import { getLocaleFontClassName, type DocumentLanguage } from './fonts';
-import { resolvePublicDocumentLanguage } from '@/lib/public-guidance';
+import { isRtlDocumentLanguage, resolvePublicDocumentLanguage } from '@/lib/public-guidance';
 
 const searchEngineVerification = getSearchEngineVerification();
 
@@ -60,9 +60,12 @@ export default async function RootLayout({
   const isLocaleHome = /^\/(?:ko|zh-hant|en|ja)\/?$/i.test(pathname ?? '');
   // next/font variables must live on <html> so :root semantic tokens resolve.
   const fontClassName = getLocaleFontClassName(language);
+  // Arabic is the first right-to-left public language. `dir` must sit on <html>
+  // so every block, flex row and text run in the document inherits it.
+  const direction = isRtlDocumentLanguage(language) ? 'rtl' : 'ltr';
 
   return (
-    <html lang={language} className={fontClassName} suppressHydrationWarning>
+    <html lang={language} dir={direction} className={fontClassName} suppressHydrationWarning>
       <head>
         {isLocaleHome ? (
           <link

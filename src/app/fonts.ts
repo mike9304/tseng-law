@@ -1,5 +1,6 @@
 import {
   Noto_Sans,
+  Noto_Sans_Arabic,
   Noto_Sans_KR,
   Noto_Sans_JP,
   Noto_Sans_TC,
@@ -19,7 +20,9 @@ import {
  * - serif 500/600/700 (closed display allowlist; no light faces)
  *
  * Guidance locales (vi/id/th/fil) add self-hosted Noto Sans Thai and
- * latin/Vietnamese Noto Sans. No extra runtime font CDN.
+ * latin/Vietnamese Noto Sans; Arabic (ar, right-to-left) adds Noto Sans
+ * Arabic paired with the same latin face for Latin names and numerals.
+ * No extra runtime font CDN.
  */
 
 const sansKorean = Noto_Sans_KR({
@@ -71,6 +74,14 @@ const sansThai = Noto_Sans_Thai({
   variable: '--font-noto-sans-thai-loaded',
 });
 
+const sansArabic = Noto_Sans_Arabic({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-arabic-loaded',
+  subsets: ['arabic'],
+});
+
 const sansLatin = Noto_Sans({
   display: 'swap',
   preload: false,
@@ -79,7 +90,7 @@ const sansLatin = Noto_Sans({
   subsets: ['latin', 'latin-ext', 'vietnamese'],
 });
 
-export type DocumentLanguage = 'ko' | 'zh-Hant' | 'en' | 'ja' | 'vi' | 'id' | 'th' | 'fil';
+export type DocumentLanguage = 'ko' | 'zh-Hant' | 'en' | 'ja' | 'vi' | 'id' | 'th' | 'fil' | 'ar';
 
 const koreanFontClassName = [sansKorean.variable, serifKorean.variable].join(' ');
 const traditionalChineseFontClassName = [
@@ -88,6 +99,7 @@ const traditionalChineseFontClassName = [
 ].join(' ');
 const japaneseFontClassName = [sansJapanese.variable, serifJapanese.variable].join(' ');
 const thaiFontClassName = [sansThai.variable, sansLatin.variable].join(' ');
+const arabicFontClassName = [sansArabic.variable, sansLatin.variable].join(' ');
 const latinExtendedFontClassName = sansLatin.variable;
 
 /**
@@ -105,6 +117,9 @@ export function getLocaleFontClassName(language: DocumentLanguage): string {
   if (language === 'th') {
     return thaiFontClassName;
   }
+  if (language === 'ar') {
+    return arabicFontClassName;
+  }
   if (language === 'vi' || language === 'id' || language === 'fil') {
     return latinExtendedFontClassName;
   }
@@ -120,6 +135,7 @@ export function getManagedLocaleFontClassNames(): string[] {
         traditionalChineseFontClassName,
         japaneseFontClassName,
         thaiFontClassName,
+        arabicFontClassName,
         latinExtendedFontClassName,
       ].flatMap((className) => className.split(/\s+/).filter(Boolean)),
     ),

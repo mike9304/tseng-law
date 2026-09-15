@@ -13,6 +13,7 @@ const fontLoaders = vi.hoisted(() => {
     Noto_Sans_JP: createFontLoader(),
     Noto_Sans_TC: createFontLoader(),
     Noto_Sans_Thai: createFontLoader(),
+    Noto_Sans_Arabic: createFontLoader(),
     Noto_Sans: createFontLoader(),
     Noto_Serif_KR: createFontLoader(),
     Noto_Serif_JP: createFontLoader(),
@@ -54,7 +55,7 @@ describe('locale font configuration', () => {
     expect(getLocaleFontClassName('ja')).not.toContain('-tc-loaded');
   });
 
-  it('includes all three pairs in the managed set so locale transitions remove stale font classes', () => {
+  it('includes every locale pair (four pairs plus Thai, Arabic and latin) in the managed set so locale transitions remove stale font classes', () => {
     const managed = getManagedLocaleFontClassNames();
     expect(managed).toEqual(expect.arrayContaining([
       '--font-noto-sans-kr-loaded',
@@ -64,8 +65,8 @@ describe('locale font configuration', () => {
       '--font-noto-sans-jp-loaded',
       '--font-noto-serif-jp-loaded',
     ]));
-    expect(managed).toHaveLength(8);
-    expect(new Set(managed).size).toBe(8);
+    expect(managed).toHaveLength(9);
+    expect(new Set(managed).size).toBe(9);
     for (const locale of ['ko', 'en', 'zh-Hant', 'ja'] as const) {
       for (const fontClass of getLocaleFontClassName(locale).split(' ')) {
         expect(managed).toContain(fontClass);
@@ -108,5 +109,22 @@ describe('locale font configuration', () => {
         expect(managed).toContain(fontClass);
       }
     }
+  });
+
+  it('requests Noto Sans Arabic for the Arabic document language and pairs it with the latin face', () => {
+    expect(fontLoaders.Noto_Sans_Arabic).toHaveBeenCalledOnce();
+    expect(fontLoaders.Noto_Sans_Arabic).toHaveBeenCalledWith({
+      display: 'swap',
+      preload: false,
+      variable: '--font-noto-sans-arabic-loaded',
+      weight: 'variable',
+      subsets: ['arabic'],
+    });
+    const classes = getLocaleFontClassName('ar').split(' ');
+    expect(classes).toContain('--font-noto-sans-arabic-loaded');
+    expect(classes).toContain('--font-noto-sans-latin-loaded');
+    // Arabic must not fall through to the Korean pair.
+    expect(classes).not.toContain('--font-noto-sans-kr-loaded');
+    for (const fontClass of classes) expect(getManagedLocaleFontClassNames()).toContain(fontClass);
   });
 });

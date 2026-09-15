@@ -85,19 +85,43 @@ function getColumnsDir(locale: ColumnContentLocale, options?: ColumnLoadOptions)
   return COLUMNS_DIR;
 }
 
+/**
+ * Frontmatter `categories` phrases of the translated columns, exactly as the
+ * translation lane wrote them (vi/id/th/fil: 8 formation · 8 legal · 1 case,
+ * mirroring en). Before these were known here every guidance-language column
+ * fell through to `legal`, so the live vi/id/th/fil homes showed company-setup
+ * articles under "Legal Information". Arabic uses the reviewed ar terms.
+ */
+const FORMATION_CATEGORY_PHRASES = [
+  '법인설립',
+  '公司設立',
+  '台湾会社設立',
+  'Thành lập công ty', // vi
+  'Pendirian Perusahaan', // id
+  'การจัดตั้งบริษัท', // th
+  'Pagtatatag ng Kompanya', // fil
+  'تأسيس الشركات', // ar
+];
+const CASE_CATEGORY_PHRASES = [
+  '소송사례',
+  '訴訟案例',
+  '訴訟事例',
+  'Phân tích vụ án', // vi
+  'Analisis Kasus', // id
+  'การวิเคราะห์คดี', // th
+  'Pagsusuri ng Kaso', // fil
+  'دراسات قضايا', // ar
+];
+
 function categoryFromString(cat: string): ColumnCategory {
   if (
-    cat.includes('법인설립')
-    || cat.includes('公司設立')
-    || cat.includes('台湾会社設立')
+    FORMATION_CATEGORY_PHRASES.some((phrase) => cat.includes(phrase))
     || /company setup|company formation|incorporation/i.test(cat)
   ) {
     return 'formation';
   }
   if (
-    cat.includes('소송사례')
-    || cat.includes('訴訟案例')
-    || cat.includes('訴訟事例')
+    CASE_CATEGORY_PHRASES.some((phrase) => cat.includes(phrase))
     || /case study|litigation case|lawsuit case/i.test(cat)
   ) {
     return 'case';

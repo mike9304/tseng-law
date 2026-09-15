@@ -1,0 +1,18 @@
+# WO-M3-AR-CONTENT — `ar` 안내 콘텐츠 블록 (Opus 5)
+
+## 공통 규칙
+작업트리 ~/Projects/tseng-law-mena-20260916 만. 커밋·빌드·전체 스위트 금지. 병렬 세션이 라우팅(public-guidance.ts·middleware·layout·sitemap·llms-txt.ts·seo.ts·fonts·globals.css·테스트)을 다른 브랜치에서 작업 중 — **그 파일들은 절대 수정 금지**(tsc 오류가 나면 파일:줄과 필요한 변경을 보고에만 적는다).
+언어 계약: ar은 안내 언어. 본문·FAQ·답변 어디에도 아랍어 상담·통역 가능 암시 0. 상담 언어 문장은 아랍어로 "الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية" 의미로 통일. 광고 규정: 승소율·보장·최고/유일 0. 사실: 기존 안내 본문(en 우선, vi 대조)의 **기게재 사실만** — 새 법률 주장 0 → 마커 불필요. 숫자·통계 신규 0. 보고 형식(변경 파일·명령+출력·PASS/FAIL·미해결).
+
+## 참고
+docs/seo/mena-plan/AR-LOCALE-INVENTORY.md §2(데이터 팩 행)·§5. 로케일 블록 구조는 international-guidance-content.ts `:117`(vi) `:612`(id) 등 참고, 페이지키 10(home·services·about·lawyers·pricing·contact·faq·privacy·disclaimer·columns), FAQ 8문항.
+
+## 구현(허용 파일)
+1. `src/data/international-guidance-content.ts`: `GuidanceLocale`에 `'ar'` 추가(이 파일에 정의돼 있을 때만), `guidanceContent.ar` 블록 전체(10키·nav 라벨·footer·8 FAQ 등 다른 로케일과 동일 필드 집합). 아랍어는 MSA(현대 표준 아랍어), 법률·행정 용어는 걸프·이집트 공통 표기 우선. 기관명은 원어 병기(예: 台灣經濟部 → وزارة الاقتصاد التايوانية (MOEA)). 숫자는 서양 아라비아 숫자(0-9) 그대로. 상담 언어 4개 문장 각 페이지 계약대로.
+2. 부수 팩(인벤토리 §2가 `Record<GuidanceLocale,…>`로 지목한 것 중 **src/data/ 아래** 파일만): offices ×2·team ×4·`international-inquiry-copy.ts` 에 ar 값 추가 — 기존 vi 값을 사실 그대로 아랍어로. (inquiry-copy에 zh-hant가 빠진 이유는 조사만, 손대지 않음)
+3. `src/data/international-guidance-answers.ts`: ar 답변 6키(services·about·lawyers·pricing·contact·faq) 40~80단어(아랍어 공백 분리), sources 규칙 동일, 금지 패턴에 아랍어 언어명(العربية) + 상담 동사 결합 추가.
+4. 테스트(허용: `src/lib/__tests__/international-guidance-answers.test.ts`, 신규 `src/lib/__tests__/guidance-ar-content.test.ts`): ar 10키 존재·FAQ 8·필드 집합이 vi와 동일·금지 패턴 0·상담언어 4개 문장 존재·마커 0·서양 숫자만.
+## 완료 기준
+1. `npx vitest run src/lib/__tests__/guidance-ar-content.test.ts src/lib/__tests__/international-guidance-answers.test.ts` 통과(출력)
+2. `npx tsc --noEmit` — 허용 파일 밖에서 나는 오류는 목록으로 보고(수정 금지), 허용 파일 내 오류 0
+3. 보고에 ar/services 답변 원문 + 상담 언어 문장 원문 첨부, 미해결(원어민 검수 미실시 등) 명시

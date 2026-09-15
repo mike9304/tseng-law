@@ -10,16 +10,16 @@
 ### M1 ar 로케일
 - [x] 2026-09-16 M1-a 라우팅·RTL·폰트·hreflang(son7-b9 a3b0db44, 2단 등록) → merge 1035b851. [~] 03:3x 플립 WO-M3B-FLIP Opus 진행 중(잔여 문장 5·데이터 테스트 2·로케일 상수·테스트 카운트): `ar`를 안내 로케일에 추가(GUIDANCE_LOCALES_5), 라우팅·middleware·hreflang(ar)·sitemap·llms.txt·언어 스위처·RTL(`dir="rtl"` html/layout + 필요한 CSS 논리속성) — 콘텐츠는 임시 en 폴백 없이 M1-b와 동시 커밋
 - [x] 2026-09-16 03:2x M1-b ar 콘텐츠(10키·FAQ 8·offices·team·inquiry-copy·answers 6, 마커 0, 상담언어 문장 단일) → 32516589 (vitest 19). 인벤토리 #40 zh-hant 오류 정정: src/data/international-guidance-content.ts 의 ar 블록(10 페이지키·faqs) — vi/en 안내 본문의 **기게재 사실만** 아랍어로(신규 법률 주장 0 → 마커 불필요), 상담 언어 4개 문장, 아랍권 독자 적응(호칭·기관명), 숫자·날짜 서식
-- [ ] M1-c WO-M3-review(Grok): 아랍어 자연스러움·MSA 일관·RTL 표기·언어 계약·광고 규정
-- [ ] M1-d 총괄 게이트(typecheck·vitest·build·렌더 ar 10URL·dir=rtl·JSON-LD availableLanguage 4개) → 커밋
+- [x] 2026-09-16 M1-c Grok 검토 PASS 4/FAIL 2 → R1 927e28cb: 아랍어 자연스러움·MSA 일관·RTL 표기·언어 계약·광고 규정
+- [x] 2026-09-16 M1-d 게이트: son7-b9 unit 10808·/ar 30뷰 RTL 실측 PASS(938e86b0 merge a78cf9b0) + 총괄 tsc·build·렌더 5URL(evidence/render-mena-rc.txt)
 ### M2 SEO/GEO
-- [ ] M2-a 답변형 블록·FAQPage·LegalService JSON-LD·llms.txt ar (SEA S2 구조 재사용, answers ar 추가)
+- [x] 2026-09-16 M2-a 답변 6·JSON-LD(availableLanguage 4)·/ar/llms.txt·hreflang·sitemap (플립 befed217로 자동 적용, 렌더 확인)
 - [x] 2026-09-16 M2-b AI cite 문항 18(son7-db 1d7ec950, merge 71c4fca4; 실측 0=배포 후 손빗)
 - [x] 2026-09-16 M2-c 색인·콘솔 계획(son7-db b2c4f636, M2c-INDEXING-PLAN.md, 손빗 ASK 초안 2; 실행은 배포 후 손빗)
 ### M3 폼·계약
-- [ ] M3-a contact 폼 ar: 제출 언어 안내·"연락 방법 확인 필요" 옵션·intake-language-contract에 ar 안내 로케일 등록·테스트
+- [x] 2026-09-16 M3-a inquiry-copy ar + PUBLIC_INQUIRY_LOCALES ar(CONSULTATION_LANGUAGES 불변), intake 테스트 그린(플립 커밋)
 ### M4 배포·측정
-- [ ] M4-a RELEASE-CHECK-MENA.md → 배포 ASK(사용자)
+- [~] M4-a RELEASE-CHECK-MENA.md(6f9f1984, 갱신) → 배포 ASK 발송(아래 §B)
 - [ ] M4-b 베이스라인 docs/seo/geo-mena-baseline-2026-09.md(GSC MENA 7국 28일·생성형AI·색인) 손빗 ASK
 - [x] 2026-09-16 M4-c phase 2 언어 후보(son7-db 11d53415, M4c-PHASE2-LANGS.md: ur/tr/fa/he, 결정은 사용자)
 

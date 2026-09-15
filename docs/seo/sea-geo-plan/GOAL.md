@@ -44,13 +44,14 @@
 - [x] 2026-09-09 S5-c **보류 종결(사용자 스킵 12:4x, 재질문 금지)**: 상위 10 발송·문의 전부 안 함. 후보·문안은 docs/marketing/SEA-AUTHORITY-CANDIDATES-2026-09.md 에 보관, 사용자가 원할 때 직접 사용
 
 ### S6 측정 루프 (매주 화)
-- [ ] W1 09-16 · [ ] W2 09-23 · [ ] W3 09-30 · [ ] W4 10-07 · [ ] W5 10-14 · [ ] W6 10-21 · [ ] W7 10-28 · [ ] W8 11-04 · [ ] W9 11-11 · [ ] W10 11-18 · [ ] W11 11-25 · [ ] 판정 12-02
+- [x] 2026-09-16 W1 (GSC 7일 노출 82·클릭 2·생성형AI 120·URL검사 14/16 Indexed, 방문 SG 10·AI 3; metrics-log 행) · [ ] W2 09-23 · [ ] W3 09-30 · [ ] W4 10-07 · [ ] W5 10-14 · [ ] W6 10-21 · [ ] W7 10-28 · [ ] W8 11-04 · [ ] W9 11-11 · [ ] W10 11-18 · [ ] W11 11-25 · [ ] 판정 12-02
   각 주: 손빗 GSC(국가별 7일·생성형AI) ASK + 방문 7일 리포트 → metrics-log 1행 + 반증 조건 점검 + 다음 WO 결정
 
 ### 배포
 - [x] 2026-09-09 15:07 **배포 완료**: 사용자 승인(ASK-1316) → Claude push 차단 → 손빗이 push(97c33510..3799c41d FF) → Vercel success(Bod7Ygt3…) → 라이브 검증 evidence/s4-live-curl.txt(4로케일 llms.txt 200·JSON-LD availableLanguage 4개·summary 블록·FAQPage) + s4-live-multilingual.log(overall PASS 400/0)
 
 ## B. 미결·ASK 대기 (승계자는 여기부터)
+- W1 판독(9/16): 베이스라인(28일 노출 30·생성형AI 34) 대비 7일만에 노출 82·생성형AI 120 — 색인 진입 직후 효과로 보이나 1주 데이터라 판정 보류. 반증 조건 3(색인<50%)은 URL 검사 14/16으로 해소 추세, 색인됨 목록 0은 리포트 지연 의심 → W2에서 재확인. 방문 9/15분은 11:30 롤업 후 W2 때 합산.
 - S0-e: 손빗 AI 인용 실측 예정(S0-b 직후). geo-sea-baseline-2026-09.md 는 손빗 소유 중 — 쓰기 금지.
 - S1-b: Grok 검토 중. S1-c 판정 시 주의: C2~C5(/vi|id|th|fil/work-permit)는 international-guidance-content.ts(번역 레인 파일)에 본문이 필요 → 하드룰 4 충돌. 대안=별도 데이터 파일+코어 키 확장, 또는 번역 레인 요청. C1(EN 랜딩)은 intent-pages.ts 4로케일 동시 작성 필요.
 - 15:08: **배포 라이브(3799c41d)**. 잔여=S0-e 손빗 AI 인용 실측, S6 W1(9/16), S4-d(9/23). Claude Code 세션은 git push 권한 분류기 차단 → push는 손빗/사용자.

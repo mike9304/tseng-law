@@ -3,8 +3,8 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import {
   GUIDANCE_LOCALES_4,
+  PUBLIC_LANGUAGE_AUTONYMS,
   PUBLIC_LOCALES_8,
-  ROUTED_ONLY_LANGUAGE_AUTONYMS,
   ROUTED_ONLY_LOCALES,
   ROUTED_PUBLIC_LOCALES,
   RTL_PUBLIC_LOCALES,
@@ -26,30 +26,32 @@ import { getSynchronizedDocumentLocaleState } from '@/components/DocumentLocaleS
 const read = (rel: string) => readFileSync(path.join(process.cwd(), rel), 'utf8');
 
 /**
- * WO-M2 — `ar` (Arabic, right-to-left) is registered in the *routing tier*
- * before its content pack exists: middleware, `<html lang dir>`, fonts and the
- * SEO predicates know it, while every `Record<PublicLocale8, …>` content map
- * stays typed on the eight shipped languages. The Arabic pack (M3) flips `ar`
- * into PUBLIC_LOCALES_8 / GUIDANCE_LOCALES_4 in one change; until then nothing
- * advertises `/ar`.
+ * WO-M2 registered `ar` (Arabic, right-to-left) in a *routing tier* ahead of
+ * its content pack: middleware, `<html lang dir>`, fonts and the SEO
+ * predicates knew it while every `Record<PublicLocale8, …>` content map stayed
+ * typed on the eight shipped languages. WO-M3B landed the Arabic pack and
+ * flipped `ar` into PUBLIC_LOCALES_8 / GUIDANCE_LOCALES_4, so the routing tier
+ * is empty again and `/ar` is advertised like any other guidance language.
+ * Everything below the first case is the routing behaviour that must survive
+ * the flip unchanged.
  */
 describe('ar routing tier', () => {
-  it('routes ar without widening the content tier', () => {
-    expect(ROUTED_ONLY_LOCALES).toEqual(['ar']);
-    expect(ROUTED_PUBLIC_LOCALES).toEqual([...PUBLIC_LOCALES_8, 'ar']);
+  it('has flipped ar into the content tier and emptied the routing-only tier', () => {
+    expect(ROUTED_ONLY_LOCALES).toEqual([]);
+    expect(ROUTED_PUBLIC_LOCALES).toEqual([...PUBLIC_LOCALES_8]);
     expect(RTL_PUBLIC_LOCALES).toEqual(['ar']);
-    // Content tier unchanged until the Arabic pack lands.
-    expect(PUBLIC_LOCALES_8).not.toContain('ar');
-    expect(GUIDANCE_LOCALES_4).not.toContain('ar');
-    expect(isPublicLocale8('ar')).toBe(false);
-    expect(isGuidanceLocale4('ar')).toBe(false);
-    // Routing tier knows it.
-    expect(isRoutedOnlyLocale('ar')).toBe(true);
+    // Content tier now carries ar.
+    expect(PUBLIC_LOCALES_8).toContain('ar');
+    expect(GUIDANCE_LOCALES_4).toContain('ar');
+    expect(isPublicLocale8('ar')).toBe(true);
+    expect(isGuidanceLocale4('ar')).toBe(true);
+    // Nothing is routed-only any more.
+    expect(isRoutedOnlyLocale('ar')).toBe(false);
     expect(isRoutedPublicLocale('ar')).toBe(true);
     expect(isGuidanceRoutedLocale('ar')).toBe(true);
     for (const locale of GUIDANCE_LOCALES_4) expect(isGuidanceRoutedLocale(locale)).toBe(true);
     expect(isGuidanceRoutedLocale('en')).toBe(false);
-    expect(ROUTED_ONLY_LANGUAGE_AUTONYMS.ar).toBe('العربية');
+    expect(PUBLIC_LANGUAGE_AUTONYMS.ar).toBe('العربية');
   });
 
   it('resolves /ar paths to the Arabic document language and right-to-left', () => {
@@ -66,9 +68,9 @@ describe('ar routing tier', () => {
     expect(resolvePublicDocumentLanguage('/xx/anything')).toBe('ko');
   });
 
-  it('strips the /ar prefix and parses it as a routed locale', () => {
+  it('strips the /ar prefix and parses it as a public locale', () => {
     expect(parseRoutedLocaleFromPathname('/ar/contact')).toBe('ar');
-    expect(parsePublicLocaleFromPathname('/ar/contact')).toBeNull();
+    expect(parsePublicLocaleFromPathname('/ar/contact')).toBe('ar');
     expect(stripPublicLocaleFromPath('/ar/contact')).toBe('/contact');
     expect(stripPublicLocaleFromPath('/ar')).toBe('/');
   });

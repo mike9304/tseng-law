@@ -32,7 +32,7 @@ import { NATIONALITY_LANGUAGE_NAMES, blankRegexes } from './check-column-transla
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
-/** Guidance data modules whose vi/id/th/fil blocks are reader-facing copy. */
+/** Guidance data modules whose vi/id/th/fil/ar blocks are reader-facing copy. */
 export const GUIDANCE_DATA_FILES = [
   'src/data/international-guidance-content.ts',
   'src/data/international-guidance-answers.ts',
@@ -44,7 +44,7 @@ export const GUIDANCE_DATA_FILES = [
   'src/data/international-guidance-offices.ts',
 ];
 
-export const GUIDANCE_LOCALES = ['vi', 'id', 'th', 'fil'];
+export const GUIDANCE_LOCALES = ['vi', 'id', 'th', 'fil', 'ar'];
 
 /**
  * Country tokens that must not appear in guidance copy.
@@ -138,7 +138,7 @@ export const GUIDANCE_ALLOWED_CONTEXTS = [
   {
     id: 'locale-key',
     reason: 'object key / locale identifier, not reader-facing prose',
-    test: (entry) => /^(?:vi|id|th|fil|en|ja|ko|zh-hant)$/.test(entry.key ?? ''),
+    test: (entry) => /^(?:vi|id|th|fil|ar|en|ja|ko|zh-hant)$/.test(entry.key ?? ''),
   },
   {
     id: 'language-field',
@@ -159,7 +159,7 @@ export function extractLocaleBlocks(text) {
   for (let i = 0; i < lines.length; i += 1) {
     const line = lines[i];
     if (!current) {
-      const open = /^ {2}'?(vi|id|th|fil)'?: \{\s*$/.exec(line);
+      const open = /^ {2}'?(vi|id|th|fil|ar)'?: \{\s*$/.exec(line);
       if (open) current = { locale: open[1], startLine: i + 1, lines: [] };
       continue;
     }

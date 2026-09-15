@@ -1,5 +1,9 @@
+import fs from 'node:fs';
+import path from 'node:path';
+
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
 import { guidanceContent } from '@/data/international-guidance-content';
+import { COLUMN_CONTENT_DIR_BY_LOCALE } from '@/lib/column-locales';
 import { getAllColumnPosts } from '@/lib/columns';
 import { siteLocales, type SiteLocale } from '@/lib/locales';
 import {
@@ -325,17 +329,23 @@ function finalizeLlmsTxt(lines: readonly string[], maxBytes: number): string {
 }
 
 /**
- * Root-file annotations for the four guidance-language catalogs.
+ * Root-file annotations for the guidance-language catalogs.
  *
- * The guidance four are a reading surface only: every line restates, in the
- * root file's own English, that consultations run in English, Chinese,
- * Japanese and Korean. Never widen this to imply vi/id/th/fil consultation.
+ * The guidance languages are a reading surface only: every line restates, in
+ * the root file's own English, that consultations run in English, Chinese,
+ * Japanese and Korean. Never widen this to imply vi/id/th/fil/ar consultation.
+ *
+ * These are English exonyms on purpose — the root `llms.txt` is written in
+ * English, so the annotation reads "Public Arabic-language guidance catalog".
+ * The autonym (`العربية`) belongs to `PUBLIC_LANGUAGE_AUTONYMS`, which supplies
+ * the entry title on the line above.
  */
 const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
   vi: 'Vietnamese',
   id: 'Indonesian',
   th: 'Thai',
   fil: 'Filipino',
+  ar: 'Arabic',
 };
 
 export function buildRootLlmsTxt(): string {
@@ -483,10 +493,11 @@ type GuidanceLlmsNotices = {
 };
 
 /**
- * Notice lines for the four guidance locales, in the page's own language.
+ * Notice lines for the guidance locales, in the page's own language.
  * `consultationNotice` and `confidentialNotice` are verbatim sentences already
  * published in `guidanceContent`; only `discoveryNotice` (which describes this
- * file itself) is new, and it mirrors the existing four-locale wording.
+ * file itself) is new, and it mirrors the existing wording of the other
+ * guidance locales.
  */
 export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices> = {
   vi: {
@@ -521,10 +532,23 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     confidentialNotice:
       'Dahil iniingatan ang orihinal na teksto, huwag munang isulat ang mga bagay na hindi pa kailangan sa unang yugto, gaya ng numero ng pasaporte, numero ng ID, o detalye ng bank account.',
   },
+  ar: {
+    // Verbatim from the published `faq` answer to "is the session held in the
+    // language of this page?", minus its leading "لا. " — the same clause the
+    // other guidance locales quote.
+    consultationNotice:
+      'هذه الصفحة الإرشادية مكتوبة بالعربية. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية، ولا نلتزم بتوفير ترجمة فورية.',
+    discoveryNotice:
+      'ملف llms.txt هذا ليس إلا خريطة للاستدلال على الصفحات العامة؛ وهو لا يَعِد بترتيب في نتائج البحث ولا باعتماد ولا بترشيح من الذكاء الاصطناعي ولا بظهور مضمون.',
+    // The published privacy-page sentence, with its leading connective dropped
+    // so the line stands alone; the proposition is unchanged.
+    confidentialNotice:
+      'لأن النص الأصلي محفوظ، يُرجى عدم كتابة معلومات لا حاجة إليها في المرحلة الأولى، مثل رقم جواز السفر أو رقم الهوية أو بيانات الحساب المصرفي.',
+  },
 };
 
 /**
- * Per-locale llms.txt for the four guidance languages (vi / id / th / fil).
+ * Per-locale llms.txt for the guidance languages (vi / id / th / fil / ar).
  *
  * Same shape as {@link buildLocaleLlmsTxt}: one H1, a one-line blockquote, the
  * notice block, then annotated file-list bullets — here the ten guidance core
@@ -562,9 +586,18 @@ export function buildGuidanceLlmsTxt(locale: GuidanceLocale4): string {
    * listed only the ten guidance pages, so sixty-eight real pages were absent
    * from the surface AI clients read. Titles and summaries are the columns'
    * own reviewed frontmatter; nothing is written here.
+   *
+   * A guidance locale whose translations have not been written yet has no
+   * `src/content/columns-<locale>` directory at all — `getColumnsDir` returns
+   * null for guidance locales instead of throwing, and `ar` shipped in exactly
+   * that state (WO-M3B; the Arabic column pipeline is phase 2). Its catalog is
+   * the ten core pages and nothing else. The loud failure is kept for the case
+   * that actually loses published pages: a directory that exists but yields no
+   * post.
    */
   const columns = getAllColumnPosts(locale);
-  if (columns.length === 0) {
+  const columnsDir = path.join(process.cwd(), COLUMN_CONTENT_DIR_BY_LOCALE[locale]);
+  if (columns.length === 0 && fs.existsSync(columnsDir)) {
     throw new Error(`Missing legal columns for guidance llms.txt locale: ${locale}`);
   }
   const columnEntries: LlmsEntry[] = columns.map((column) => {
@@ -594,7 +627,9 @@ export function buildGuidanceLlmsTxt(locale: GuidanceLocale4): string {
     '',
     ...renderSections([
       { heading: pack.menuLabel, entries },
-      { heading: pack.nav.columns, entries: columnEntries },
+      ...(columnEntries.length > 0
+        ? [{ heading: pack.nav.columns, entries: columnEntries }]
+        : []),
     ]),
   ], LOCALE_LLMS_TXT_MAX_BYTES);
 }

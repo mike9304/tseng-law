@@ -59,6 +59,7 @@ describe('new-four column directory mapping', () => {
       id: 'src/content/columns-id',
       th: 'src/content/columns-th',
       fil: 'src/content/columns-fil',
+      ar: 'src/content/columns-ar',
     });
     expect(OPTIONAL_COLUMN_LOCALES).toEqual(GUIDANCE_LOCALES_4);
     expect(COLUMN_CONTENT_DIR_BY_LOCALE.vi).not.toBe(COLUMN_CONTENT_DIR_BY_LOCALE.ko);
@@ -117,11 +118,17 @@ describe('new-four column loader (temp dir, no repo fixtures)', () => {
 });
 
 describe('new-four column hreflang + sitemap include/exclude', () => {
-  it('omits vi/id/th/fil from detail alternates when those translations are absent', () => {
+  it('omits the guidance locales from detail alternates when those translations are absent', () => {
     const missing = path.join(os.tmpdir(), 'g19-columns-missing-does-not-exist');
     const locales = getColumnAlternateLocales(GYM_SLUG, {
       hasTranslation: (locale, slug) => {
-        if (locale === 'vi' || locale === 'id' || locale === 'th' || locale === 'fil') {
+        if (
+          locale === 'vi'
+          || locale === 'id'
+          || locale === 'th'
+          || locale === 'fil'
+          || locale === 'ar'
+        ) {
           return hasColumnTranslation(locale, slug, { columnsDir: missing });
         }
         return true;
@@ -141,14 +148,15 @@ describe('new-four column hreflang + sitemap include/exclude', () => {
     expect(languages).not.toHaveProperty('id');
     expect(languages).not.toHaveProperty('th');
     expect(languages).not.toHaveProperty('fil');
+    expect(languages).not.toHaveProperty('ar');
   });
 
-  it('includes a new-four locale in hreflang and sitemap records only when a file exists', () => {
+  it('includes a guidance locale in hreflang and sitemap records only when a file exists', () => {
     const present = makeTempColumnsDir({ [GYM_FILENAME]: MINIMAL_VI_COLUMN });
     const locales = getColumnAlternateLocales(GYM_SLUG, {
       hasTranslation: (locale, slug) => {
         if (locale === 'vi') return hasColumnTranslation('vi', slug, { columnsDir: present });
-        if (locale === 'id' || locale === 'th' || locale === 'fil') return false;
+        if (locale === 'id' || locale === 'th' || locale === 'fil' || locale === 'ar') return false;
         return true;
       },
     });
@@ -166,7 +174,7 @@ describe('new-four column hreflang + sitemap include/exclude', () => {
             date: post.date,
           }));
         }
-        if (locale === 'id' || locale === 'th' || locale === 'fil') return [];
+        if (locale === 'id' || locale === 'th' || locale === 'fil' || locale === 'ar') return [];
         return [{ slug: GYM_SLUG, date: '2026-07-25' }];
       },
     });

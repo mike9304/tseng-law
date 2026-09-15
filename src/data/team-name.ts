@@ -9,9 +9,10 @@ import type { PublicLocale8 } from '@/lib/public-guidance';
  *              style used by `昊鼎國際團隊` (firm prefix, no separators)
  *   en       — English-language team
  *   ja       — Japanese-language team
- *   vi/id/th/fil — the international team. The guidance packs never translate
- *              `Hovering International Law Firm`, so the team name stays in the
- *              same untranslated brand form for those four languages too.
+ *   vi/id/th/fil/ar — the international team. The guidance packs never
+ *              translate `Hovering International Law Firm`, so the team name
+ *              stays in the same untranslated brand form for those guidance
+ *              languages too, Arabic included.
  *
  * Single source of truth: `teamContent` (team section heading) and
  * `pageCopy.lawyers` (page heading, breadcrumb label via
@@ -27,4 +28,5 @@ export const TEAM_NAME_BY_LOCALE: Record<PublicLocale8, string> = {
   id: 'Hovering International Team',
   th: 'Hovering International Team',
   fil: 'Hovering International Team',
+  ar: 'Hovering International Team',
 };

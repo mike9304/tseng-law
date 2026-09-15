@@ -22,10 +22,12 @@ const contentLanguage: Record<PublicLocale8, string> = {
   id: 'id',
   th: 'th',
   fil: 'fil',
+  ar: 'ar',
 };
 
 // `dynamicParams = false`, so every locale that GET can answer must be listed
-// here: the existing four plus the guidance four (vi/id/th/fil).
+// here: the existing four site locales plus every guidance locale
+// (vi/id/th/fil/ar), derived from GUIDANCE_LOCALES_4 so the set cannot drift.
 export function generateStaticParams() {
   return [...siteLocales, ...GUIDANCE_LOCALES_4].map((locale) => ({ locale }));
 }

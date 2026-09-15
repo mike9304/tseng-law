@@ -35,7 +35,7 @@ import {
 } from '@/data/international-guidance-offices';
 import { taiwanOfficeData } from '@/data/office-locations';
 
-const LOCALES: GuidanceLocale[] = ['vi', 'id', 'th', 'fil'];
+const LOCALES: GuidanceLocale[] = ['vi', 'id', 'th', 'fil', 'ar'];
 
 /**
  * The office register. `office-locations.ts` is the canonical record every
@@ -82,7 +82,7 @@ function namedCities(text: string, cities: string[]): string[] {
  * Client countries the Wei Tseng sentences name, per language.
  *
  * The one table this file does write down, because no data module holds the
- * country vocabulary of the four guidance languages. It maps a country to the
+ * country vocabulary of the guidance languages. It maps a country to the
  * word each language uses for it, so the assertion compares country sets and
  * not spellings: Tagalog says "Koreano"/"Hapon" in the bio and "Korea"/"Japan"
  * elsewhere, and both must resolve to the same two countries.
@@ -92,6 +92,7 @@ const CLIENT_COUNTRY_TERMS: Record<GuidanceLocale, Record<string, string[]>> = {
   id: { Korea: ['Korea'], Japan: ['Jepang'] },
   th: { Korea: ['เกาหลี'], Japan: ['ญี่ปุ่น'] },
   fil: { Korea: ['Korea'], Japan: ['Hapon', 'Japan'] },
+  ar: { Korea: ['كوريا'], Japan: ['اليابان', 'يابان'] },
 };
 
 /** The attorney's Chinese name; how the same sentence is found in both modules. */

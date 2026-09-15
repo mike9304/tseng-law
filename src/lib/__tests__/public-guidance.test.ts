@@ -46,8 +46,8 @@ describe('public eight-locale helper isolation', () => {
   it('does not widen Locale3 or SiteLocale4', () => {
     expect(locales).toEqual(['ko', 'zh-hant', 'en']);
     expect(siteLocales).toEqual(['ko', 'zh-hant', 'en', 'ja']);
-    expect(PUBLIC_LOCALES_8).toHaveLength(8);
-    expect(GUIDANCE_LOCALES_4).toEqual(['vi', 'id', 'th', 'fil']);
+    expect(PUBLIC_LOCALES_8).toHaveLength(9);
+    expect(GUIDANCE_LOCALES_4).toEqual(['vi', 'id', 'th', 'fil', 'ar']);
   });
 
   it('keeps helper free of CMS / builder-locale fallback', () => {
@@ -59,7 +59,7 @@ describe('public eight-locale helper isolation', () => {
     expect(source).not.toContain('resolvePublishedSitePage');
   });
 
-  it('exposes eight autonyms without flags or nationality labels', () => {
+  it('exposes nine autonyms without flags or nationality labels', () => {
     expect(PUBLIC_LANGUAGE_AUTONYMS).toEqual({
       ko: '한국어',
       'zh-hant': '繁體中文',
@@ -69,11 +69,12 @@ describe('public eight-locale helper isolation', () => {
       id: 'Bahasa Indonesia',
       th: 'ไทย',
       fil: 'Filipino',
+      ar: 'العربية',
     });
     const autonyms = Object.values(PUBLIC_LANGUAGE_AUTONYMS);
-    expect(autonyms).toHaveLength(8);
-    expect(new Set(autonyms).size).toBe(8);
-    expect(autonyms.join('')).not.toMatch(/🇰🇷|🇯🇵|🇹🇼|🇺🇸|🇻🇳|🇮🇩|🇹🇭|🇵🇭/);
+    expect(autonyms).toHaveLength(9);
+    expect(new Set(autonyms).size).toBe(9);
+    expect(autonyms.join('')).not.toMatch(/🇰🇷|🇯🇵|🇹🇼|🇺🇸|🇻🇳|🇮🇩|🇹🇭|🇵🇭|🇸🇦|🇦🇪/);
 
     const countryQualificationLabels = [
       '대한민국',
@@ -119,9 +120,9 @@ describe('document language (html lang 8)', () => {
   });
 });
 
-describe('allowed 40 guidance route pairs', () => {
-  it('covers four locales × ten core pages', () => {
-    expect(ALLOWED_ROUTE_PAIRS).toHaveLength(40);
+describe('allowed 50 guidance route pairs', () => {
+  it('covers five locales × ten core pages', () => {
+    expect(ALLOWED_ROUTE_PAIRS).toHaveLength(50);
     expect(GUIDANCE_PAGE_KEYS).toHaveLength(10);
   });
 
@@ -451,10 +452,12 @@ describe('core hreflang helper', () => {
 });
 
 describe('type guards', () => {
-  it('distinguishes guidance four from public eight', () => {
+  it('distinguishes the guidance languages from the public set', () => {
     expect(isGuidanceLocale4('vi')).toBe(true);
+    expect(isGuidanceLocale4('ar')).toBe(true);
     expect(isGuidanceLocale4('ko')).toBe(false);
     expect(isPublicLocale8('fil')).toBe(true);
+    expect(isPublicLocale8('ar')).toBe(true);
     expect(isPublicLocale8('fr')).toBe(false);
     const keys: GuidancePageKey[] = [...GUIDANCE_PAGE_KEYS];
     expect(keys).toContain('home');

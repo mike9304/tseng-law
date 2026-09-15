@@ -19,8 +19,8 @@ const REPO_ROOT = resolve(SCRIPT_DIR, '..');
 
 /**
  * From src/lib/public-guidance.ts `PUBLIC_LOCALES_8` and src/middleware.ts
- * matcher `ko|zh-hant|en|ja` + `vi|id|th|fil`. Plain Node cannot import those
- * TypeScript modules without tsx, so the same values are inlined here.
+ * matcher `ko|zh-hant|en|ja` + `vi|id|th|fil|ar`. Plain Node cannot import
+ * those TypeScript modules without tsx, so the same values are inlined here.
  */
 export const PUBLIC_LOCALES_8 = Object.freeze([
   'ko',
@@ -31,10 +31,11 @@ export const PUBLIC_LOCALES_8 = Object.freeze([
   'id',
   'th',
   'fil',
+  'ar',
 ]);
 
-/** New guidance four — src/lib/public-guidance.ts `GUIDANCE_LOCALES_4`. */
-export const GUIDANCE_LOCALES_4 = Object.freeze(['vi', 'id', 'th', 'fil']);
+/** Guidance languages — src/lib/public-guidance.ts `GUIDANCE_LOCALES_4`. */
+export const GUIDANCE_LOCALES_4 = Object.freeze(['vi', 'id', 'th', 'fil', 'ar']);
 
 /**
  * Core routes from src/lib/public-guidance.ts `GUIDANCE_PAGE_KEYS` /
@@ -434,7 +435,7 @@ export async function runMultilingualLiveCheck({
   const checks = {
     a_sitemap: emptyCheck('a', 'sitemap loc HEAD/GET'),
     b_core_pages: emptyCheck('b', 'core pages 200 + html lang'),
-    c_hreflang: emptyCheck('c', 'hreflang 8 locales + x-default'),
+    c_hreflang: emptyCheck('c', `hreflang ${PUBLIC_LOCALES_8.length} locales + x-default`),
     d_consultation_notice: emptyCheck('d', 'consultation language notice'),
     e_privacy_memo: emptyCheck('e', 'privacy internal-memo phrases'),
     f_translated_columns: emptyCheck('f', 'translated columns 200 + hreflang'),

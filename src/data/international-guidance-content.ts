@@ -15,7 +15,7 @@
  * `SiteLocale` union is still four languages, and this content must not widen it.
  */
 
-import { ID_PRIVACY_POLICY_LABEL } from '@/data/guidance-privacy-label';
+import { AR_PRIVACY_POLICY_LABEL, ID_PRIVACY_POLICY_LABEL } from '@/data/guidance-privacy-label';
 
 export type GuidanceLocale = 'vi' | 'id' | 'th' | 'fil' | 'ar';
 
@@ -2104,7 +2104,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       pricing: 'النطاق والأتعاب',
       contact: 'التواصل',
       faq: 'الأسئلة الشائعة',
-      privacy: 'الخصوصية',
+      privacy: AR_PRIVACY_POLICY_LABEL,
       disclaimer: 'إخلاء المسؤولية',
       columns: 'المقالات',
     },

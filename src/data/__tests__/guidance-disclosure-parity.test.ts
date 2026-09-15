@@ -36,7 +36,7 @@ import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
  * present in all four, so "all four dropped it" cannot pass as parity alone.
  */
 
-const LOCALES = ['vi', 'id', 'th', 'fil'] as const satisfies readonly GuidanceLocale[];
+const LOCALES = ['vi', 'id', 'th', 'fil', 'ar'] as const satisfies readonly GuidanceLocale[];
 
 /** Per-locale marker for one disclosure element. */
 type ElementMarkers = Record<GuidanceLocale, RegExp>;
@@ -55,6 +55,7 @@ const ELEMENTS = {
     id: /memungkinkan/i,
     th: /เป็นไปได้/,
     fil: /posible/i,
+    ar: /طريقة ممكنة/,
   },
   /** Support in a language outside the four consultation languages is not guaranteed. */
   'no-other-language-guarantee': {
@@ -62,6 +63,7 @@ const ELEMENTS = {
     id: /bahasa lain/i,
     th: /ภาษาอื่น/,
     fil: /(ibang|alinmang) wika/i,
+    ar: /لغة أخرى/,
   },
   /** No reply time is promised. */
   'no-reply-time-promise': {
@@ -69,6 +71,7 @@ const ELEMENTS = {
     id: /waktu balasan/i,
     th: /ระยะเวลา(ในการ)?ตอบกลับ/,
     fil: /panahon ng pagsagot/i,
+    ar: /مدة للرد/,
   },
   /** The confirmation step is a step, not a promise. */
   'confirmation-is-not-a-promise': {
@@ -76,6 +79,7 @@ const ELEMENTS = {
     id: /bukan janji\./i,
     th: /ไม่ใช่คำมั่น/,
     fil: /hindi pangako/i,
+    ar: /لا وعد/,
   },
   /** No interpreter is arranged. */
   'no-interpreter-promise': {
@@ -83,6 +87,7 @@ const ELEMENTS = {
     id: /penerjemah/i,
     th: /ล่าม/,
     fil: /interpreter/i,
+    ar: /ترجمة فورية/,
   },
   /** Not every matter can be accepted. */
   'not-every-matter-accepted': {
@@ -90,6 +95,7 @@ const ELEMENTS = {
     id: /setiap perkara/i,
     th: /ได้ทุกเรื่อง/,
     fil: /bawat usapin/i,
+    ar: /قبول كل قضية/,
   },
   /** No outcome is promised. */
   'no-outcome-promise': {
@@ -97,6 +103,7 @@ const ELEMENTS = {
     id: /hasil/i,
     th: /รับประกันผล/,
     fil: /resulta/i,
+    ar: /التزام ب(?:ال)?نتيجة/,
   },
   /** A certain answer needs one of the four consultation languages. */
   'four-consultation-languages': {
@@ -104,6 +111,7 @@ const ELEMENTS = {
     id: /empat bahasa konsultasi/i,
     th: /4 ภาษาที่ใช้ให้คำปรึกษา/,
     fil: /apat na wika ng konsultasyon/i,
+    ar: /اللغات الأربع/,
   },
   /** This page is not the consultation step. */
   'not-the-consultation-step': {
@@ -111,6 +119,7 @@ const ELEMENTS = {
     id: /tahap konsultasi/i,
     th: /ขั้นตอนการให้คำปรึกษา/,
     fil: /hakbang ng konsultasyon/i,
+    ar: /خطوة استشارة/,
   },
   /** A sent message is not legal advice. */
   'not-legal-advice': {
@@ -118,6 +127,7 @@ const ELEMENTS = {
     id: /nasihat hukum/i,
     th: /ความเห็นทางกฎหมาย/,
     fil: /legal na payo/i,
+    ar: /رأيًا قانوني/,
   },
   /** A sent message is not a confirmed appointment. */
   'not-an-appointment': {
@@ -125,6 +135,7 @@ const ELEMENTS = {
     id: /janji temu/i,
     th: /การนัดหมาย/,
     fil: /appointment/i,
+    ar: /موعد|مواعيد/,
   },
   /** Sending a message forms no attorney–client relationship. */
   'no-attorney-client-relationship': {
@@ -132,6 +143,7 @@ const ELEMENTS = {
     id: /hubungan antara advokat/i,
     th: /ความสัมพันธ์ระหว่างทนายความ/,
     fil: /ugnayan ng abogado/i,
+    ar: /علاقة بين المحامي/,
   },
   /** Written text is never machine-translated for the reader. */
   'no-automatic-translation': {
@@ -139,6 +151,7 @@ const ELEMENTS = {
     id: /diterjemahkan secara otomatis/i,
     th: /แปลโดยอัตโนมัติ/,
     fil: /awtomatikong isinasalin/i,
+    ar: /ترجمة آلية/,
   },
   /** The family group is named as covering marriage matters. */
   'marriage-in-family-group': {
@@ -146,6 +159,7 @@ const ELEMENTS = {
     id: /perkawinan/i,
     th: /การสมรส/,
     fil: /pag-aasawa/i,
+    ar: /الزواج/,
   },
   /** Meeting the attorney may be a paid service. */
   'consultation-may-be-paid': {
@@ -153,6 +167,7 @@ const ELEMENTS = {
     id: /berbayar/i,
     th: /บริการที่มีค่าใช้จ่าย/,
     fil: /bayad na serbisyo/i,
+    ar: /خدمة بمقابل/,
   },
 } as const satisfies Record<string, ElementMarkers>;
 

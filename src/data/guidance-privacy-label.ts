@@ -12,6 +12,18 @@
  * pulled into client components on every public page, so it must not reach the
  * much larger `international-guidance-content.ts` to read this string.
  *
- * Indonesian only. No other locale's label is defined or changed here.
+ * Indonesian and Arabic only. No other locale's label is defined or changed
+ * here.
  */
 export const ID_PRIVACY_POLICY_LABEL = 'Kebijakan privasi';
+
+/**
+ * Single source for the Arabic name of the privacy-policy page.
+ *
+ * Same reason as the Indonesian label above: the Arabic guidance navigation
+ * (`guidanceContent.ar.nav.privacy`) and the inquiry form's consent line
+ * (`internationalInquiryCopy.ar.privacyLinkLabel`) point at the same page and
+ * used to name it two different ways (`الخصوصية` vs `سياسة الخصوصية`), so the
+ * page name is defined once here and imported by both.
+ */
+export const AR_PRIVACY_POLICY_LABEL = 'سياسة الخصوصية';

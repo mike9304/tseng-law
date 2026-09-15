@@ -10,7 +10,7 @@
  * `SiteLocale` union is still four languages, and this copy must not widen it.
  */
 
-import { ID_PRIVACY_POLICY_LABEL } from '@/data/guidance-privacy-label';
+import { AR_PRIVACY_POLICY_LABEL, ID_PRIVACY_POLICY_LABEL } from '@/data/guidance-privacy-label';
 
 export type InquiryCopyLocale =
   | 'ko'
@@ -498,7 +498,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     emailLabel: 'البريد الإلكتروني',
     consentLabel:
       'اطّلعتُ على سياسة الخصوصية وأوافق على إرسال هذا الطلب.',
-    privacyLinkLabel: 'سياسة الخصوصية',
+    privacyLinkLabel: AR_PRIVACY_POLICY_LABEL,
     requiredMessage: 'هذا الحقل مطلوب.',
     invalidEmailMessage: 'يُرجى إدخال عنوان بريد إلكتروني صحيح.',
     tooLongMessage: 'النص طويل جدًا. يُرجى اختصاره ثم إعادة الإرسال.',

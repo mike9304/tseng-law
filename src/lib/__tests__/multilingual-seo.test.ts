@@ -6,7 +6,7 @@ import {
 } from '@/lib/public-guidance';
 
 describe('multilingual SEO language alternates', () => {
-  it('uses the actual eight-language cluster on every core path', () => {
+  it('uses the actual nine-language cluster on every core path', () => {
     for (const pageKey of GUIDANCE_PAGE_KEYS) {
       const path = pageKey === 'home' ? '' : `/${pageKey}`;
       const expected = buildGuidanceCoreLanguageAlternates(pageKey);
@@ -14,11 +14,11 @@ describe('multilingual SEO language alternates', () => {
       expect(getLanguageAlternates(path, ['ko'])).toEqual(expected);
 
       if (pageKey === 'faq') {
-        expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(7);
+        expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(8);
         expect(expected).not.toHaveProperty('en');
         expect(expected['x-default']).toBe('https://tseng-law.com/ko/faq');
       } else {
-        expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(8);
+        expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(9);
         expect(expected).toMatchObject({
           ko: `https://tseng-law.com/ko${path}`,
           'zh-Hant': `https://tseng-law.com/zh-hant${path}`,
@@ -28,6 +28,7 @@ describe('multilingual SEO language alternates', () => {
           id: `https://tseng-law.com/id${path}`,
           th: `https://tseng-law.com/th${path}`,
           fil: `https://tseng-law.com/fil${path}`,
+          ar: `https://tseng-law.com/ar${path}`,
           'x-default': `https://tseng-law.com/en${path}`,
         });
         expect(expected).not.toHaveProperty('zh-hant');
@@ -35,7 +36,7 @@ describe('multilingual SEO language alternates', () => {
     }
   });
 
-  it('keeps eight-language home and contact metadata reciprocal, including JA', () => {
+  it('keeps nine-language home and contact metadata reciprocal, including JA', () => {
     const home = buildSeoMetadata({
       locale: 'ko',
       title: '홈',
@@ -53,7 +54,7 @@ describe('multilingual SEO language alternates', () => {
     expect(contact.alternates?.languages).toEqual(buildGuidanceCoreLanguageAlternates('contact'));
   });
 
-  it('does not invent eight-language alternates for deep articles, US landings, or service details', () => {
+  it('does not invent guidance-language alternates for deep articles, US landings, or service details', () => {
     const article = getLanguageAlternates('/columns/taiwan-investment', ['ko', 'zh-hant', 'en', 'ja']);
     const usLanding = getLanguageAlternates('/taiwan-lawyer');
     const serviceDetail = getLanguageAlternates('/services/investment', ['ko', 'zh-hant', 'en', 'ja']);
@@ -64,6 +65,7 @@ describe('multilingual SEO language alternates', () => {
       expect(languages).not.toHaveProperty('id');
       expect(languages).not.toHaveProperty('th');
       expect(languages).not.toHaveProperty('fil');
+      expect(languages).not.toHaveProperty('ar');
     }
 
     expect(article).toEqual({

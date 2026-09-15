@@ -134,11 +134,12 @@ describe('guidance locale llms.txt catalogs', () => {
     },
   );
 
-  it('writes a distinct notice set for each of the four guidance languages', () => {
+  it('writes a distinct notice set for each guidance language', () => {
     const notices = GUIDANCE_LOCALES_4.flatMap((locale) =>
       Object.values(GUIDANCE_LLMS_NOTICES[locale]),
     );
-    expect(notices).toHaveLength(12);
+    // Five guidance languages × three notice lines.
+    expect(notices).toHaveLength(15);
     expect(new Set(notices).size).toBe(notices.length);
   });
 
@@ -156,7 +157,7 @@ function requestLlmsTxt(locale: string) {
   });
 }
 
-describe('/[locale]/llms.txt route — guidance four', () => {
+describe('/[locale]/llms.txt route — guidance locales', () => {
   it.each(GUIDANCE_LOCALES_4)('serves the %s guidance catalog as plain UTF-8 text', async (locale) => {
     const response = await requestLlmsTxt(locale);
     const body = await response.text();
@@ -219,7 +220,7 @@ describe('root llms.txt guidance catalog links', () => {
     ]);
   });
 
-  it('lists four site-locale catalogs and four guidance catalogs', () => {
+  it('lists four site-locale catalogs and five guidance catalogs', () => {
     const body = buildRootLlmsTxt();
     const catalogUrls = Array.from(
       body.matchAll(/\]\((https:\/\/tseng-law\.com\/[a-z-]+\/llms\.txt)\):/gu),
@@ -230,7 +231,7 @@ describe('root llms.txt guidance catalog links', () => {
       ...siteLocales.map((locale) => `https://tseng-law.com/${locale}/llms.txt`),
       ...GUIDANCE_LOCALES_4.map((locale) => `https://tseng-law.com/${locale}/llms.txt`),
     ]);
-    expect(catalogUrls).toHaveLength(8);
+    expect(catalogUrls).toHaveLength(9);
   });
 
   it('labels each guidance catalog in its own language without widening consultation languages', () => {

@@ -410,10 +410,11 @@ export function hasPositiveIntersection(entry: IntersectionObserverEntry): boole
 }
 
 /**
- * WO-O22 B: the opening now plays in all eight public languages. The existing
- * four entries are unchanged byte for byte; the new four are translations of
- * the English brand copy above (firm name, tagline and UI affordances only —
- * no figure, credential or track record is introduced here).
+ * WO-O22 B: the opening plays in every public language. The original four
+ * entries are unchanged byte for byte; the guidance-language entries
+ * (vi/id/th/fil, and `ar` from WO-M3B) are translations of the English brand
+ * copy above (firm name, tagline and UI affordances only — no figure,
+ * credential or track record is introduced here).
  */
 export const CINEMATIC_OPENING_COPY: Record<
   PublicLocale8,
@@ -502,6 +503,16 @@ export const CINEMATIC_OPENING_COPY: Record<
       'Maliwanag na aerial na kuha sa natural na liwanag, lumilipad sa ibabaw ng Central Mountain Range ng Taiwan at dagat ng mga ulap',
     service: 'Legal na suporta sa Taiwan · Ingles, Hapon at Koreano',
     contact: 'Makipag-ugnayan sa firm',
+  },
+  ar: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'محامون في تايوان',
+    scroll: 'مرّر للأسفل للمتابعة',
+    skip: 'تخطّي المقدمة',
+    mediaAlt:
+      'لقطة جوية في ضوء طبيعي ساطع، تحلّق فوق سلسلة الجبال الوسطى في تايوان وبحر السحب',
+    service: 'الدعم القانوني في تايوان · بالإنجليزية والصينية واليابانية والكورية',
+    contact: 'التواصل مع المكتب',
   },
 };
 

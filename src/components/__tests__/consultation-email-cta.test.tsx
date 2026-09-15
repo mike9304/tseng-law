@@ -206,7 +206,7 @@ describe('consultation email CTAs', () => {
     }
   });
 
-  it('keeps the eight-locale inquiry copy contract and intake axes on four contact locales', () => {
+  it('keeps the nine-locale inquiry copy contract and intake axes on four contact locales', () => {
     expect(PUBLIC_INQUIRY_LOCALES).toEqual([
       'ko',
       'zh-hant',
@@ -216,6 +216,7 @@ describe('consultation email CTAs', () => {
       'id',
       'th',
       'fil',
+      'ar',
     ]);
 
     for (const locale of PUBLIC_INQUIRY_LOCALES) {

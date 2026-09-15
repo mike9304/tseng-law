@@ -29,7 +29,7 @@ describe('public module locale family switching', () => {
     navigationState.pathname = '/ko/services';
   });
 
-  it('keeps the eight autonym order without country codes', () => {
+  it('keeps the nine autonym order without country codes', () => {
     expect(LOCALE_FLAG_OPTIONS.map((option) => option.locale)).toEqual([
       'ko',
       'zh-hant',
@@ -39,6 +39,7 @@ describe('public module locale family switching', () => {
       'id',
       'th',
       'fil',
+      'ar',
     ]);
     expect(LOCALE_FLAG_OPTIONS.map((option) => option.label)).toEqual([
       PUBLIC_LANGUAGE_AUTONYMS.ko,
@@ -49,6 +50,7 @@ describe('public module locale family switching', () => {
       PUBLIC_LANGUAGE_AUTONYMS.id,
       PUBLIC_LANGUAGE_AUTONYMS.th,
       PUBLIC_LANGUAGE_AUTONYMS.fil,
+      PUBLIC_LANGUAGE_AUTONYMS.ar,
     ]);
   });
 
@@ -167,11 +169,12 @@ describe('public module locale family switching', () => {
     expect(html).not.toContain('/zh-hant/store/products/taiwan-startup-guide');
     expect(html).not.toContain('href="/vi/store');
     expect(html).not.toContain('href="/vi/store/products/taiwan-startup-guide');
-    // WO-O22 A: no option is disabled any more — vi/id/th/fil stay clickable and
-    // are flagged as fallbacks so the label can explain where they land.
+    // WO-O22 A: no option is disabled any more — the guidance languages stay
+    // clickable and are flagged as fallbacks so the label can explain where they
+    // land. WO-M3B added `ar` to that set, so five options fall back to home.
     expect(html).not.toContain('aria-disabled');
     expect(links.filter((link) => link.includes('data-locale-switch-fallback="home"'))).toHaveLength(
-      4,
+      5,
     );
     expect(links.some((link) => link.includes('href="/vi"'))).toBe(true);
   });

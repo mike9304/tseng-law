@@ -2,7 +2,7 @@
  * Shared hreflang expectation derivation for the column reference-sync suites.
  *
  * The public four (ko/zh-hant/en/ja) are always file-backed, so they stay exact.
- * The G19 new four (vi/id/th/fil) are optional and file-present only: a newly
+ * The guidance languages (vi/id/th/fil/ar) are optional and file-present only: a newly
  * landed `src/content/columns-<locale>/NNN-<slug>.md` legitimately adds an
  * alternate. Freezing "four-language alternates" in each test therefore breaks
  * as translations land, so the expected set is read off disk instead.
@@ -30,6 +30,7 @@ const HREFLANG_TAG_BY_LOCALE: Record<PublicLocale8, string> = {
   id: 'id',
   th: 'th',
   fil: 'fil',
+  ar: 'ar',
 };
 
 /** Mirrors `slugFromFilename` in src/lib/columns.ts (`NNN-<slug>.md`). */

@@ -27,7 +27,7 @@ export const DECORATIVE_VIDEO_CONTROL_LABELS = {
     play: '動画を再生',
     replay: '動画をもう一度再生',
   },
-  // WO-O22 B: the new four reuse the labels their guidance pack already ships
+  // WO-O22 B: the guidance languages reuse the labels their pack already ships
   // (`guidanceContent[locale].home.video*Label`), so the cinematic opening's
   // video controls are announced in the page language without new copy.
   vi: {
@@ -49,5 +49,10 @@ export const DECORATIVE_VIDEO_CONTROL_LABELS = {
     pause: 'I-pause ang video',
     play: 'I-play ang video',
     replay: 'I-play muli ang video',
+  },
+  ar: {
+    pause: 'إيقاف الفيديو مؤقتًا',
+    play: 'تشغيل الفيديو',
+    replay: 'إعادة تشغيل الفيديو',
   },
 } as const satisfies Record<PublicLocale8, DecorativeVideoControlLabels>;

@@ -934,6 +934,7 @@ test.describe('O29 og:locale across the eight public locales', () => {
     id: 'id_ID',
     th: 'th_TH',
     fil: 'fil_PH',
+    ar: 'ar_AR',
   };
 
   for (const locale of PUBLIC_LOCALES_8) {

@@ -15,6 +15,7 @@ const PENDING_CONFIRMATION: Record<(typeof GUIDANCE_LOCALES_4)[number], RegExp> 
   id: /menunggu konfirmasi|rincian itu belum dikonfirmasi/i,
   th: /รอการยืนยัน|ยังไม่ได้รับการยืนยัน/,
   fil: /hinihintay pang kumpirmahin|hindi pa nakukumpirma ang mga detalye/i,
+  ar: /في انتظار .{0,20}تأكيد|بانتظار تأكيد المكتب|لم يتأكّد المكتب بعد/,
 };
 
 const GENERIC_PENDING = /pending confirmation|operator confirmation|confirmed by the operator/i;
@@ -73,6 +74,12 @@ describe('international guidance privacy pages', () => {
       heading: 'Saan nakaimbak ang impormasyon at ang mga tagapaglaan ng serbisyo',
       hosting: /Naka-host sa Vercel ang website na ito/,
       deletion: /binubura ang impormasyon nang walang pagkaantala/,
+    },
+    {
+      locale: 'ar',
+      heading: 'مكان تخزين البيانات ومقدّمو الخدمات',
+      hosting: /هذا الموقع مستضاف على Vercel/,
+      deletion: /تُحذَف المعلومات دون تأخير/,
     },
   ] as const)('states hosting, storage location and deletion in plain policy language in $locale', ({ locale, heading, hosting, deletion }) => {
     const section = guidanceContent[locale].pages.privacy.sections.at(-1);

@@ -5,11 +5,20 @@ import { jaLanguageSwitchTarget, restrictedPublicFamilyListPath } from '@/lib/pu
 export const EXISTING_SITE_LOCALES_4 = ['ko', 'zh-hant', 'en', 'ja'] as const;
 export type ExistingSiteLocale4 = (typeof EXISTING_SITE_LOCALES_4)[number];
 
-/** New guidance four. Independent of Locale / SiteLocale. Never normalized into KO. */
-export const GUIDANCE_LOCALES_4 = ['vi', 'id', 'th', 'fil'] as const;
+/**
+ * Guidance-language surface. Independent of Locale / SiteLocale. Never
+ * normalized into KO. The `_4` suffix is historical — the set grew to five
+ * when the Arabic pack landed (WO-M3B) and the name was kept so the flip
+ * touched the locale data instead of every import in the repo.
+ */
+export const GUIDANCE_LOCALES_4 = ['vi', 'id', 'th', 'fil', 'ar'] as const;
 export type GuidanceLocale4 = (typeof GUIDANCE_LOCALES_4)[number];
 
-/** Public eight-language surface. Do not fold this into `siteLocales`. */
+/**
+ * Public language surface. Do not fold this into `siteLocales`. The `_8`
+ * suffix is historical (see {@link GUIDANCE_LOCALES_4}); the set is nine since
+ * `ar` moved out of the routing tier.
+ */
 export const PUBLIC_LOCALES_8 = [
   'ko',
   'zh-hant',
@@ -19,19 +28,21 @@ export const PUBLIC_LOCALES_8 = [
   'id',
   'th',
   'fil',
+  'ar',
 ] as const;
 export type PublicLocale8 = (typeof PUBLIC_LOCALES_8)[number];
 
 /**
  * Routing tier for locales that are *registered* before their content pack
- * exists. `ar` (Arabic, right-to-left) is routed — middleware, `<html lang
- * dir>`, fonts — from this list, while every `Record<PublicLocale8, …>` content
- * map stays typed on the eight above. When the Arabic pack lands, `ar` moves
- * into `PUBLIC_LOCALES_8`/`GUIDANCE_LOCALES_4` and this list collapses back
- * onto them; until then nothing advertises `/ar` (hreflang, sitemap, switcher,
- * llms.txt) because those surfaces are gated on the content tier.
+ * exists. `ar` (Arabic, right-to-left) used to live here while every
+ * `Record<PublicLocale8, …>` content map stayed typed on the eight shipped
+ * languages. WO-M3B landed the Arabic pack and moved `ar` into
+ * `PUBLIC_LOCALES_8`/`GUIDANCE_LOCALES_4`, so the tier is empty again: the
+ * routed set and the public set are now the same set. The names are kept so a
+ * future language can be routed before its content lands without re-deriving
+ * the predicates.
  */
-export const ROUTED_ONLY_LOCALES = ['ar'] as const;
+export const ROUTED_ONLY_LOCALES = [] as const;
 export type RoutedOnlyLocale = (typeof ROUTED_ONLY_LOCALES)[number];
 export const ROUTED_PUBLIC_LOCALES = [...PUBLIC_LOCALES_8, ...ROUTED_ONLY_LOCALES] as const;
 export type RoutedPublicLocale = (typeof ROUTED_PUBLIC_LOCALES)[number];
@@ -84,6 +95,7 @@ export const PUBLIC_LANGUAGE_AUTONYMS: Record<PublicLocale8, string> = {
   id: 'Bahasa Indonesia',
   th: 'ไทย',
   fil: 'Filipino',
+  ar: 'العربية',
 };
 
 export type PublicDocumentLanguage =
@@ -96,11 +108,6 @@ export type PublicDocumentLanguage =
   | 'th'
   | 'fil'
   | 'ar';
-
-/** Autonyms for routed-only locales; the eight live in PUBLIC_LANGUAGE_AUTONYMS. */
-export const ROUTED_ONLY_LANGUAGE_AUTONYMS: Record<RoutedOnlyLocale, string> = {
-  ar: 'العربية',
-};
 
 const DEFAULT_SITE_URL = 'https://tseng-law.com';
 const PUBLIC_LOCALE_PATH_RE = /^\/(ko|zh-hant|en|ja|vi|id|th|fil|ar)(?=\/|$)/i;
@@ -118,7 +125,9 @@ const PAGE_KEY_BY_ROUTE: Record<GuidanceCoreRouteKey, GuidancePageKey> = {
 };
 
 export function isGuidanceLocale4(value?: string | null): value is GuidanceLocale4 {
-  return value === 'vi' || value === 'id' || value === 'th' || value === 'fil';
+  return (
+    value === 'vi' || value === 'id' || value === 'th' || value === 'fil' || value === 'ar'
+  );
 }
 
 export function isPublicLocale8(value?: string | null): value is PublicLocale8 {
@@ -132,7 +141,7 @@ export function isPublicLocale8(value?: string | null): value is PublicLocale8 {
 }
 
 export function isRoutedOnlyLocale(value?: string | null): value is RoutedOnlyLocale {
-  return value === 'ar';
+  return (ROUTED_ONLY_LOCALES as readonly string[]).includes(value ?? '');
 }
 
 /** Every locale the middleware and root layout route, content pack or not. */

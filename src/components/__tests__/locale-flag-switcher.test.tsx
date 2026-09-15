@@ -56,7 +56,7 @@ describe('LocaleFlagSwitcher', () => {
     navigationState.pathname = '/ko/services';
   });
 
-  it('renders the eight autonyms without national flags or country labels', () => {
+  it('renders the nine autonyms without national flags or country labels', () => {
     expect(LOCALE_FLAG_OPTIONS.map((option) => [option.locale, option.label])).toEqual([
       ['ko', '한국어'],
       ['zh-hant', '繁體中文'],
@@ -66,6 +66,7 @@ describe('LocaleFlagSwitcher', () => {
       ['id', 'Bahasa Indonesia'],
       ['th', 'ไทย'],
       ['fil', 'Filipino'],
+      ['ar', 'العربية'],
     ]);
     expect(LOCALE_FLAG_OPTIONS.map((option) => option.locale)).toEqual([...PUBLIC_LOCALES_8]);
 
@@ -91,6 +92,7 @@ describe('LocaleFlagSwitcher', () => {
       { href: '/id/services', label: 'Bahasa Indonesia' },
       { href: '/th/services', label: 'ไทย' },
       { href: '/fil/services', label: 'Filipino' },
+      { href: '/ar/services', label: 'العربية' },
     ];
 
     expect(links).toHaveLength(expected.length);
@@ -214,14 +216,14 @@ describe('LocaleFlagSwitcher', () => {
       (element) => element.props['data-locale-switch-fallback'] === 'columns-list',
     );
 
-    expect(fallbackLinks).toHaveLength(4);
+    expect(fallbackLinks).toHaveLength(5);
     fallbackLinks.forEach((element) => {
       expect(element.props['aria-disabled']).toBeUndefined();
-      expect(element.props.href).toMatch(/^\/(vi|id|th|fil)\/columns$/);
+      expect(element.props.href).toMatch(/^\/(vi|id|th|fil|ar)\/columns$/);
       element.props.onClick?.();
     });
-    expect(onLocaleSelect.mock.calls.map(([target]) => target)).toEqual(['vi', 'id', 'th', 'fil']);
-    expect(renderedLinks('ko').some((link) => /href="\/(vi|id|th|fil)\/columns\//.test(link))).toBe(
+    expect(onLocaleSelect.mock.calls.map(([target]) => target)).toEqual(['vi', 'id', 'th', 'fil', 'ar']);
+    expect(renderedLinks('ko').some((link) => /href="\/(vi|id|th|fil|ar)\/columns\//.test(link))).toBe(
       false,
     );
   });

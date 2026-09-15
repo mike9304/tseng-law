@@ -270,4 +270,107 @@ describe('guidanceContent.ar', () => {
       }
     }
   });
+
+  /**
+   * WO-M3-R1 / M3-REVIEW item 1 — the columns page may not say Arabic
+   * articles are listed on it.
+   *
+   * `src/content/columns-ar/` holds zero files: the Arabic column set is
+   * phase 2, and `src/lib/columns.ts` returns `null` (an empty list) for a
+   * guidance locale whose directory does not exist. The `ar` page copy had
+   * been carried over from `vi`, where `src/content/columns-vi/` really does
+   * hold articles, so the Arabic page asserted a list it cannot render — and
+   * `src/lib/llms-txt.ts` republishes `page.description` into `/ar/llms.txt`,
+   * so the same claim travelled to the machine-readable surface. The home
+   * badge (`home.columnsOriginalLanguageNote`) already states the truth, and
+   * the page must not contradict it.
+   */
+  it('never says Arabic articles are listed on the columns page', () => {
+    const columnsStrings = collectStrings(
+      ar.pages.columns,
+      'guidanceContent.ar.pages.columns',
+    );
+    expect(columnsStrings.length).toBeGreaterThan(0);
+
+    /** Every shape the retracted "they are listed here" claim took. */
+    const EXISTENCE_CLAIM_PATTERNS: ReadonlyArray<readonly [string, RegExp]> = [
+      ['مدرجة في هذه الصفحة', /مدرجة\s+في\s+هذه\s+الصفحة/],
+      ['مدرجة على حدة', /مدرجة\s+على\s+حدة/],
+      ['المقالات المتاحة بالعربية', /المقالات\s+المتاحة\s+بالعربية/],
+      ['مقالات بالعربية تشرح', /مقالات\s+بالعربية\s+تشرح/],
+    ];
+
+    for (const [path, value] of columnsStrings) {
+      for (const [label, pattern] of EXISTENCE_CLAIM_PATTERNS) {
+        expect(
+          pattern.test(value),
+          `${path} claims Arabic articles are on this page ("${label}"): ${value}`,
+        ).toBe(false);
+      }
+    }
+
+    // The page states the absence outright, in the body and in the meta text.
+    const columnsText = columnsStrings.map(([, value]) => value).join(' ');
+    expect(columnsText).toContain('وليست في هذه الصفحة مقالات بالعربية');
+    expect(ar.pages.columns.intro).toContain('ولا تضمّ هذه الصفحة مقالات بالعربية بعد');
+
+    // …and it does not contradict the home badge, which says the same thing.
+    expect(ar.home.columnsOriginalLanguageNote).toContain('ليس لها نسخة عربية');
+  });
+
+  /**
+   * WO-M3-R1 / M3-REVIEW item 2 — one gender per person.
+   *
+   * Arabic marks gender on the verb and on the job-title noun, so a
+   * translated biography has to choose. `chang-fangyu` had been written both
+   * ways at once: a feminine bio (`مساعدة قانونية متمرّسة` … `أمضت` …
+   * `أعمالها` … `تدعم`) above a masculine role label and a masculine
+   * `وظيفة مساعد قانوني أول` inside the same sentence.
+   *
+   * No source locale states this member's gender — `teamContent.en` 'A
+   * veteran paralegal…', ko, zh-hant, ja and the `vi` guidance bio are all
+   * gender-neutral, and `attorney-profiles.ts` does not carry the member at
+   * all. So the Arabic mentions use the generic job title
+   * (`مساعد قانوني` / `مساعد قانوني أول`) and nominal phrasing instead of
+   * person-agreeing verbs. This test pins that: it fails if either gender's
+   * person-marked forms come back.
+   */
+  it('gives the Chang Fang-Yu title and biography a single, consistent gender', () => {
+    const bio = guidanceTeamBios.ar['chang-fangyu'];
+    const mentions: Labelled[] = [
+      [
+        'guidanceTeamCopy.ar.roles.chang-fangyu',
+        guidanceTeamCopy.ar.roles['chang-fangyu'],
+      ],
+      ...collectStrings(bio, 'guidanceTeamBios.ar.chang-fangyu'),
+    ];
+    expect(mentions.length).toBeGreaterThan(1);
+
+    /** Person-marked forms; either set appearing means the copy picked a gender. */
+    const GENDERED_PERSON_FORMS: ReadonlyArray<readonly [string, RegExp]> = [
+      ['مساعدة قانونية (feminine job title)', /مساعدة\s+قانونية/],
+      ['متمرّسة (feminine adjective)', /متمرّسة/],
+      ['متمرّس (masculine adjective)', /متمرّس(?!ة)/],
+      ['أمضت / أمضى (person verb)', /أمض(?:ت|ى)/],
+      ['أعمالها / أعماله (possessive)', /أعماله[اَ]?/],
+      ['تدعم / يدعم التقاضي (person verb)', /[تي]دعم\s+التقاضي/],
+    ];
+
+    for (const [path, value] of mentions) {
+      for (const [label, pattern] of GENDERED_PERSON_FORMS) {
+        expect(
+          pattern.test(value),
+          `${path} marks gender on the person with ${label}: ${value}`,
+        ).toBe(false);
+      }
+    }
+
+    // The one generic job title is used for the label and both prior posts.
+    expect(guidanceTeamCopy.ar.roles['chang-fangyu']).toContain('مساعد قانوني');
+    expect(bio.experience).toHaveLength(2);
+    for (const line of bio.experience) {
+      expect(line).toContain('مساعد قانوني أول');
+    }
+    expect(bio.intro.join(' ')).toContain('وظيفة مساعد قانوني أول');
+  });
 });

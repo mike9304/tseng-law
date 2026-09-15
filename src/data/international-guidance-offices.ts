@@ -148,7 +148,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     koreaOfficeTitle: 'مكتب كوريا',
     koreaAddressCardLabel: 'عنوان مكتب كوريا',
     koreaMapLinkLabel: 'عرض على Naver Map',
-    reviewCountWord: 'تقييم',
+    reviewCountWord: 'تقييمات',
     phoneLabel: 'الهاتف',
     faxLabel: 'الفاكس',
     mapLinkLabel: 'عرض على الخريطة',

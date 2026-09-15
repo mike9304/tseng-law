@@ -132,13 +132,17 @@ function categoryFromString(cat: string): ColumnCategory {
 /**
  * Column category badge for the guidance languages.
  *
- * Arabic labels come from the reviewed `ar` guidance vocabulary (WO-M3 review,
- * 2026-09-16) and match the terms used in the `ar` guidance pages. The other
- * four still fall back to the English badge — a known leak the translation
- * lane owns; add each language here as its reviewed terms arrive, nothing is
- * invented in this file.
+ * vi/id/th/fil reuse — verbatim — the `categories` phrase the translation lane
+ * already wrote into every column's frontmatter (reviewed copy, 8/8/1 per
+ * language, mirroring en). Arabic labels come from the reviewed `ar` guidance
+ * vocabulary (WO-M3 review, 2026-09-16). Nothing here is invented; the
+ * accompanying test cross-checks each label against the frontmatter on disk.
  */
 const GUIDANCE_COLUMN_CATEGORY_LABELS: Partial<Record<GuidanceLocale4, Record<ColumnCategory, string>>> = {
+  vi: { formation: 'Thành lập công ty tại Đài Loan', legal: 'Thông tin pháp luật Đài Loan', case: 'Phân tích vụ án tố tụng' },
+  id: { formation: 'Pendirian Perusahaan di Taiwan', legal: 'Informasi Hukum Taiwan', case: 'Analisis Kasus Litigasi' },
+  th: { formation: 'การจัดตั้งบริษัทในไต้หวัน', legal: 'ข้อมูลกฎหมายไต้หวัน', case: 'การวิเคราะห์คดีตัวอย่าง' },
+  fil: { formation: 'Pagtatatag ng Kompanya sa Taiwan', legal: 'Impormasyong Legal sa Taiwan', case: 'Pagsusuri ng Kaso sa Paglilitis' },
   ar: { formation: 'تأسيس الشركات', legal: 'معلومات قانونية', case: 'دراسات قضايا' },
 };
 const ENGLISH_COLUMN_CATEGORY_LABELS: Record<ColumnCategory, string> = {

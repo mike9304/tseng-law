@@ -45,6 +45,7 @@ describe('Japanese disclaimer integration', () => {
       id: `${SITE_URL}/id/disclaimer`,
       th: `${SITE_URL}/th/disclaimer`,
       fil: `${SITE_URL}/fil/disclaimer`,
+      ar: `${SITE_URL}/ar/disclaimer`,
       'x-default': `${SITE_URL}/en/disclaimer`,
     });
   });
@@ -126,6 +127,7 @@ describe('Japanese disclaimer integration', () => {
       id: `${SITE_URL}/id/disclaimer`,
       th: `${SITE_URL}/th/disclaimer`,
       fil: `${SITE_URL}/fil/disclaimer`,
+      ar: `${SITE_URL}/ar/disclaimer`,
       'x-default': `${SITE_URL}/en/disclaimer`,
     });
     expect(metadata.alternates?.languages).toHaveProperty('ja', `${SITE_URL}/ja/disclaimer`);

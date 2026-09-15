@@ -33,6 +33,10 @@
 - MENA는 SEA와 달리 대만 내 체류 모수가 거의 없음 → 타깃은 **대만과 거래·투자하는 걸프 기업(AE·SA)**과 **이집트 체류자**. 콘텐츠 우선은 ① 회사설립·투자 ② 계약분쟁·**중재·외국판정 집행**(사이트 공백) ③ 미수금.
 - ar 안내 10페이지는 기본이고, 신규 페이지 후보(중재·집행 en/ar, 비자 en/ar)는 마커 초안 → 변호사 검수.
 
+## B2. RC2 대기(배포 후 merge)
+- son7-b9 mena/ar-routing-20260916: 2d435998 뱃지 ar 라벨·guidanceColumnCategoryLabel 리졸버(vi/id/th/fil 영어 폴백 테스트 핀), 7a23c160 **SEA 카테고리 붕괴 수정**(vi/id/th/fil 칼럼 17편이 categoryFromString 미인식으로 전부 legal → frontmatter 문구 정규화·파리티 테스트, unit 10818). 결정: RC(76360346) 동결, ar 배포 후 RC2로 merge→게이트→ASK. vi/id/th/fil 뱃지 라벨은 frontmatter 문구 재사용.
+- 초안 브랜치 mena/ar-drafts-20260916: WO-M5 중재·집행 랜딩 EN+ar(마커) Opus 진행 중(03:5x). main 금지, 변호사 검수 후.
+
 ## B. 미결·ASK
 - 배포·유료광고·외부 등재 = ASK. 코드·기획·초안은 진행.
 - SEA W1 측정과 병행: SEA 대기 프로세스는 유지, 상태는 OUT에.

@@ -8,20 +8,20 @@
 - [x] 2026-09-16 03:0x M0-a 인벤토리 89행 → AR-LOCALE-INVENTORY.md (RTL 0·좌우 하드코딩 388·함정 5: middleware matcher/llms 4-guard/sitemap 리터럴/fonts/og:locale 폴백·넓히면 안 되는 계약 2). 원 항목: WO-M0-INVENTORY(Opus, 읽기 전용): vi/id/th/fil 추가 시 건드린 모든 지점 목록(GUIDANCE_LOCALES_4 참조 19파일 + 로케일 계약·middleware matcher·sitemap·llms·hreflang·언어 스위처·contact 폼·intake 계약·테스트·playwright·verify-multilingual-live·RTL 부재 지점) → docs/seo/mena-plan/AR-LOCALE-INVENTORY.md
 - [x] 2026-09-16 03:00 M0-b 인텐트 42셀 → docs/seo/geo-mena-intent-map-2026-09.md 27dd6cc8 (H7: AE①②③·SA①②③·EG④, 체류 A급 극소·무역 B급 순위, 중재·집행 문서 0건 공백, 후보 4=중재/집행·비자 en/ar). Grok 검토 WO-M1-review 진행 중(03:00). 원 항목: WO-M1-INTENT(Opus, 리서치): MENA 7국 × 의도(회사설립·투자 / 소송·계약분쟁 / 미수금 / 비자·거류 / 상속·가족 / 형사) 질문 문장(아랍어+영어), 검색 표면, A~E 근거(대만-MENA 교역·체류 통계 공식 출처), 대응 URL → docs/seo/geo-mena-intent-map-2026-09.md
 ### M1 ar 로케일
-- [~] M1-a WO-M2 라우팅·RTL = son7-b9 브랜치 mena/ar-routing-20260916 진행 중. 원 항목: WO-M2-AR-ROUTING(Opus): `ar`를 안내 로케일에 추가(GUIDANCE_LOCALES_5), 라우팅·middleware·hreflang(ar)·sitemap·llms.txt·언어 스위처·RTL(`dir="rtl"` html/layout + 필요한 CSS 논리속성) — 콘텐츠는 임시 en 폴백 없이 M1-b와 동시 커밋
-- [~] 02:5x M1-b WO-M3-AR-CONTENT Opus 진행 중(content ar 블록 +499줄·offices·team 편집 중). 원 항목: WO-M3-AR-CONTENT(Opus): src/data/international-guidance-content.ts 의 ar 블록(10 페이지키·faqs) — vi/en 안내 본문의 **기게재 사실만** 아랍어로(신규 법률 주장 0 → 마커 불필요), 상담 언어 4개 문장, 아랍권 독자 적응(호칭·기관명), 숫자·날짜 서식
+- [x] 2026-09-16 M1-a 라우팅·RTL·폰트·hreflang(son7-b9 a3b0db44, 2단 등록) → merge 1035b851. [~] 03:3x 플립 WO-M3B-FLIP Opus 진행 중(잔여 문장 5·데이터 테스트 2·로케일 상수·테스트 카운트): `ar`를 안내 로케일에 추가(GUIDANCE_LOCALES_5), 라우팅·middleware·hreflang(ar)·sitemap·llms.txt·언어 스위처·RTL(`dir="rtl"` html/layout + 필요한 CSS 논리속성) — 콘텐츠는 임시 en 폴백 없이 M1-b와 동시 커밋
+- [x] 2026-09-16 03:2x M1-b ar 콘텐츠(10키·FAQ 8·offices·team·inquiry-copy·answers 6, 마커 0, 상담언어 문장 단일) → 32516589 (vitest 19). 인벤토리 #40 zh-hant 오류 정정: src/data/international-guidance-content.ts 의 ar 블록(10 페이지키·faqs) — vi/en 안내 본문의 **기게재 사실만** 아랍어로(신규 법률 주장 0 → 마커 불필요), 상담 언어 4개 문장, 아랍권 독자 적응(호칭·기관명), 숫자·날짜 서식
 - [ ] M1-c WO-M3-review(Grok): 아랍어 자연스러움·MSA 일관·RTL 표기·언어 계약·광고 규정
 - [ ] M1-d 총괄 게이트(typecheck·vitest·build·렌더 ar 10URL·dir=rtl·JSON-LD availableLanguage 4개) → 커밋
 ### M2 SEO/GEO
 - [ ] M2-a 답변형 블록·FAQPage·LegalService JSON-LD·llms.txt ar (SEA S2 구조 재사용, answers ar 추가)
-- [ ] M2-b AI cite 문항 세트 ar/en × 6주제 → docs/seo/geo-mena-baseline-2026-09.md (실측은 손빗 브라우저)
-- [ ] M2-c 색인 계획: GSC 국가 필터(ae/sa/qa/kw/bh/om/eg)·Bing WMT(중동은 Bing 점유 높음 — 근거 등급 표기)·IndexNow → 손빗 ASK 초안
+- [x] 2026-09-16 M2-b AI cite 문항 18(son7-db 1d7ec950, merge 71c4fca4; 실측 0=배포 후 손빗)
+- [x] 2026-09-16 M2-c 색인·콘솔 계획(son7-db b2c4f636, M2c-INDEXING-PLAN.md, 손빗 ASK 초안 2; 실행은 배포 후 손빗)
 ### M3 폼·계약
 - [ ] M3-a contact 폼 ar: 제출 언어 안내·"연락 방법 확인 필요" 옵션·intake-language-contract에 ar 안내 로케일 등록·테스트
 ### M4 배포·측정
 - [ ] M4-a RELEASE-CHECK-MENA.md → 배포 ASK(사용자)
 - [ ] M4-b 베이스라인 docs/seo/geo-mena-baseline-2026-09.md(GSC MENA 7국 28일·생성형AI·색인) 손빗 ASK
-- [ ] M4-c phase 2 후보(tr/fa/he) 제안 1쪽
+- [x] 2026-09-16 M4-c phase 2 언어 후보(son7-db 11d53415, M4c-PHASE2-LANGS.md: ur/tr/fa/he, 결정은 사용자)
 
 ## B0. 세션 분담(02:5x 합의)
 - son7-51(소유): M0·M1(Opus 실행 중)·M3 ar 콘텐츠·Grok 검토·통합 merge·배포 ASK. 파일: international-guidance-content.ts·international-guidance-answers.ts·intent 문서.

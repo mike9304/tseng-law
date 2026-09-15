@@ -6,10 +6,10 @@
 ## A. 보드
 ### M0 기반
 - [x] 2026-09-16 03:0x M0-a 인벤토리 89행 → AR-LOCALE-INVENTORY.md (RTL 0·좌우 하드코딩 388·함정 5: middleware matcher/llms 4-guard/sitemap 리터럴/fonts/og:locale 폴백·넓히면 안 되는 계약 2). 원 항목: WO-M0-INVENTORY(Opus, 읽기 전용): vi/id/th/fil 추가 시 건드린 모든 지점 목록(GUIDANCE_LOCALES_4 참조 19파일 + 로케일 계약·middleware matcher·sitemap·llms·hreflang·언어 스위처·contact 폼·intake 계약·테스트·playwright·verify-multilingual-live·RTL 부재 지점) → docs/seo/mena-plan/AR-LOCALE-INVENTORY.md
-- [ ] M0-b WO-M1-INTENT(Opus, 리서치): MENA 7국 × 의도(회사설립·투자 / 소송·계약분쟁 / 미수금 / 비자·거류 / 상속·가족 / 형사) 질문 문장(아랍어+영어), 검색 표면, A~E 근거(대만-MENA 교역·체류 통계 공식 출처), 대응 URL → docs/seo/geo-mena-intent-map-2026-09.md
+- [x] 2026-09-16 03:00 M0-b 인텐트 42셀 → docs/seo/geo-mena-intent-map-2026-09.md 27dd6cc8 (H7: AE①②③·SA①②③·EG④, 체류 A급 극소·무역 B급 순위, 중재·집행 문서 0건 공백, 후보 4=중재/집행·비자 en/ar). Grok 검토 WO-M1-review 진행 중(03:00). 원 항목: WO-M1-INTENT(Opus, 리서치): MENA 7국 × 의도(회사설립·투자 / 소송·계약분쟁 / 미수금 / 비자·거류 / 상속·가족 / 형사) 질문 문장(아랍어+영어), 검색 표면, A~E 근거(대만-MENA 교역·체류 통계 공식 출처), 대응 URL → docs/seo/geo-mena-intent-map-2026-09.md
 ### M1 ar 로케일
-- [ ] M1-a WO-M2-AR-ROUTING(Opus): `ar`를 안내 로케일에 추가(GUIDANCE_LOCALES_5), 라우팅·middleware·hreflang(ar)·sitemap·llms.txt·언어 스위처·RTL(`dir="rtl"` html/layout + 필요한 CSS 논리속성) — 콘텐츠는 임시 en 폴백 없이 M1-b와 동시 커밋
-- [ ] M1-b WO-M3-AR-CONTENT(Opus): src/data/international-guidance-content.ts 의 ar 블록(10 페이지키·faqs) — vi/en 안내 본문의 **기게재 사실만** 아랍어로(신규 법률 주장 0 → 마커 불필요), 상담 언어 4개 문장, 아랍권 독자 적응(호칭·기관명), 숫자·날짜 서식
+- [~] M1-a WO-M2 라우팅·RTL = son7-b9 브랜치 mena/ar-routing-20260916 진행 중. 원 항목: WO-M2-AR-ROUTING(Opus): `ar`를 안내 로케일에 추가(GUIDANCE_LOCALES_5), 라우팅·middleware·hreflang(ar)·sitemap·llms.txt·언어 스위처·RTL(`dir="rtl"` html/layout + 필요한 CSS 논리속성) — 콘텐츠는 임시 en 폴백 없이 M1-b와 동시 커밋
+- [~] 02:5x M1-b WO-M3-AR-CONTENT Opus 진행 중(content ar 블록 +499줄·offices·team 편집 중). 원 항목: WO-M3-AR-CONTENT(Opus): src/data/international-guidance-content.ts 의 ar 블록(10 페이지키·faqs) — vi/en 안내 본문의 **기게재 사실만** 아랍어로(신규 법률 주장 0 → 마커 불필요), 상담 언어 4개 문장, 아랍권 독자 적응(호칭·기관명), 숫자·날짜 서식
 - [ ] M1-c WO-M3-review(Grok): 아랍어 자연스러움·MSA 일관·RTL 표기·언어 계약·광고 규정
 - [ ] M1-d 총괄 게이트(typecheck·vitest·build·렌더 ar 10URL·dir=rtl·JSON-LD availableLanguage 4개) → 커밋
 ### M2 SEO/GEO
@@ -28,6 +28,10 @@
 - son7-b9: M2 라우팅·RTL·아랍 폰트·hreflang/sitemap/llms/seo.ts·middleware·layout/chrome/스위처·테스트 — 브랜치 mena/ar-routing-20260916, 워크트리 ~/Projects/tseng-law-mena-routing-20260916.
 - son7-db: M2-b AI cite 문항(geo-mena-baseline-2026-09.md)·M2-c 색인 계획(M2c-INDEXING-PLAN.md)·M4-c phase 2 언어(M4c-PHASE2-LANGS.md) — 브랜치 mena/ar-content-20260916, src 무변경.
 - 통합: 소유 브랜치가 두 브랜치 merge → 게이트 → RELEASE-CHECK-MENA → 사용자 ASK.
+
+## B1. 전략 메모(M1 결과)
+- MENA는 SEA와 달리 대만 내 체류 모수가 거의 없음 → 타깃은 **대만과 거래·투자하는 걸프 기업(AE·SA)**과 **이집트 체류자**. 콘텐츠 우선은 ① 회사설립·투자 ② 계약분쟁·**중재·외국판정 집행**(사이트 공백) ③ 미수금.
+- ar 안내 10페이지는 기본이고, 신규 페이지 후보(중재·집행 en/ar, 비자 en/ar)는 마커 초안 → 변호사 검수.
 
 ## B. 미결·ASK
 - 배포·유료광고·외부 등재 = ASK. 코드·기획·초안은 진행.

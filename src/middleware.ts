@@ -315,8 +315,8 @@ export const config = {
     '/:locale(ko|zh-hant|en|ja)/admin-consultation/:path*',
     '/:locale(ko|zh-hant|en|ja)/admin-builder/:path*',
     '/:locale(ko|zh-hant|en|ja)/builder/:path*',
-    '/:locale(vi|id|th|fil)',
-    '/:locale(vi|id|th|fil)/:path*',
+    '/:locale(vi|id|th|fil|ar)',
+    '/:locale(vi|id|th|fil|ar)/:path*',
     '/((?!_next/static|_next/image|api/|favicon.ico|robots.txt|sitemap.xml|images/|fonts/|.*\\..*).*)',
   ],
 };

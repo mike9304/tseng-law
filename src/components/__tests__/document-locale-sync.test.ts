@@ -17,6 +17,7 @@ describe('DocumentLocaleSync', () => {
       ),
     ).toEqual({
       language: 'zh-Hant',
+      direction: 'ltr',
       className: `theme-light ${tcPair}`,
     });
   });
@@ -40,11 +41,13 @@ describe('DocumentLocaleSync', () => {
     const japanese = getSynchronizedDocumentLocaleState(
       `theme-light ${krPair} ${tcPair}`, 'ja', jpPair, managedFontClassNames,
     );
-    expect(japanese).toEqual({ language: 'ja', className: `theme-light ${jpPair}` });
+    expect(japanese).toEqual({ language: 'ja',
+      direction: 'ltr', className: `theme-light ${jpPair}` });
 
     const korean = getSynchronizedDocumentLocaleState(
       japanese.className, 'ko', krPair, managedFontClassNames,
     );
-    expect(korean).toEqual({ language: 'ko', className: `theme-light ${krPair}` });
+    expect(korean).toEqual({ language: 'ko',
+      direction: 'ltr', className: `theme-light ${krPair}` });
   });
 });

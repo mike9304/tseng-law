@@ -152,3 +152,10 @@
 .root:global(.footer-locale-switch) .option {
   min-height: 44px;
 }
+
+
+/* RTL (html[dir='rtl'], Arabic) — generated mirrors, see WO-M2. */
+html[dir='rtl'] .menu {
+  right: auto;
+  left: 0;
+}

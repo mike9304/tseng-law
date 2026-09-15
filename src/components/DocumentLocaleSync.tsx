@@ -2,9 +2,14 @@
 
 import { useEffect } from 'react';
 import type { DocumentLanguage } from '@/app/fonts';
+import { isRtlDocumentLanguage } from '@/lib/public-guidance';
+
+export type DocumentDirection = 'ltr' | 'rtl';
 
 type DocumentLocaleState = {
   language: DocumentLanguage;
+  /** `<html dir>`: right-to-left for Arabic, left-to-right for every other language. */
+  direction: DocumentDirection;
   className: string;
 };
 
@@ -35,6 +40,7 @@ export function getSynchronizedDocumentLocaleState(
 
   return {
     language,
+    direction: isRtlDocumentLanguage(language) ? 'rtl' : 'ltr',
     className: Array.from(nextClasses).join(' '),
   };
 }
@@ -54,6 +60,9 @@ export default function DocumentLocaleSync({
     );
 
     root.lang = nextState.language;
+    // Client-side locale switches must move `dir` with `lang`, or a visitor
+    // leaving /ar for /vi would keep a right-to-left document.
+    root.dir = nextState.direction;
     root.className = nextState.className;
   }, [fontClassName, language, managedFontClassNames]);
 

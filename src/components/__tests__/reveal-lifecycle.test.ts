@@ -15,6 +15,7 @@ vi.mock('next/font/google', () => {
     Noto_Sans_JP: font,
     Noto_Sans_TC: font,
     Noto_Sans_Thai: font,
+    Noto_Sans_Arabic: font,
     Noto_Sans: font,
     Noto_Serif_KR: font,
     Noto_Serif_JP: font,
@@ -329,7 +330,7 @@ describe('Reveal no-JavaScript server-rendered root layout', () => {
 });
 
 describe('guidance font payload for eight document languages', () => {
-  it('keeps the original six loaders and adds Thai/latin managed classes', () => {
+  it('keeps the original six loaders and adds Thai/latin/Arabic managed classes', () => {
     const managed = getManagedLocaleFontClassNames();
     expect(managed).toEqual(expect.arrayContaining([
       '--font-noto-sans-kr-loaded',
@@ -340,8 +341,9 @@ describe('guidance font payload for eight document languages', () => {
       '--font-noto-serif-jp-loaded',
       '--font-noto-sans-thai-loaded',
       '--font-noto-sans-latin-loaded',
+      '--font-noto-sans-arabic-loaded',
     ]));
-    expect(managed).toHaveLength(8);
+    expect(managed).toHaveLength(9);
 
     const documentLanguages = ['ko', 'zh-Hant', 'en', 'ja', 'vi', 'id', 'th', 'fil'] as const;
     expect(documentLanguages).toHaveLength(8);

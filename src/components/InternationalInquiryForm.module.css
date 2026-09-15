@@ -351,3 +351,20 @@
     animation: none !important;
   }
 }
+
+
+/* RTL (html[dir='rtl'], Arabic) — generated mirrors, see WO-M2. */
+html[dir='rtl'] .error {
+  border-left: none;
+  border-right: 3px solid #8b1e1e;
+}
+
+html[dir='rtl'] .statusSuccess {
+  border-left: none;
+  border-right: 4px solid var(--text-link, #234d3c);
+}
+
+html[dir='rtl'] .statusFailure {
+  border-left: none;
+  border-right: 4px solid #8b1e1e;
+}

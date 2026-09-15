@@ -206,7 +206,7 @@ describe('WO-1 trust, localization, and performance content contracts', () => {
     expect(fonts).not.toContain('JetBrains_Mono');
     expect(layout).toContain('getLocaleFontClassName');
     expect(layout).toContain('className={fontClassName}');
-    expect(layout).toMatch(/<html\s+lang=\{language\}\s+className=\{fontClassName\}/);
+    expect(layout).toMatch(/<html\s+lang=\{language\}\s+dir=\{direction\}\s+className=\{fontClassName\}/);
     // Every next/font reference must carry an inline fallback. A page that does
     // not load that pair (guidance locales load only latin/Thai) otherwise makes
     // the whole custom property guaranteed-invalid, which drops font-family to

@@ -22,6 +22,23 @@ export const PUBLIC_LOCALES_8 = [
 ] as const;
 export type PublicLocale8 = (typeof PUBLIC_LOCALES_8)[number];
 
+/**
+ * Routing tier for locales that are *registered* before their content pack
+ * exists. `ar` (Arabic, right-to-left) is routed — middleware, `<html lang
+ * dir>`, fonts — from this list, while every `Record<PublicLocale8, …>` content
+ * map stays typed on the eight above. When the Arabic pack lands, `ar` moves
+ * into `PUBLIC_LOCALES_8`/`GUIDANCE_LOCALES_4` and this list collapses back
+ * onto them; until then nothing advertises `/ar` (hreflang, sitemap, switcher,
+ * llms.txt) because those surfaces are gated on the content tier.
+ */
+export const ROUTED_ONLY_LOCALES = ['ar'] as const;
+export type RoutedOnlyLocale = (typeof ROUTED_ONLY_LOCALES)[number];
+export const ROUTED_PUBLIC_LOCALES = [...PUBLIC_LOCALES_8, ...ROUTED_ONLY_LOCALES] as const;
+export type RoutedPublicLocale = (typeof ROUTED_PUBLIC_LOCALES)[number];
+
+/** Right-to-left public languages. Drives `<html dir>` and RTL CSS. */
+export const RTL_PUBLIC_LOCALES = ['ar'] as const;
+
 export const GUIDANCE_PAGE_KEYS = [
   'home',
   'services',
@@ -77,10 +94,16 @@ export type PublicDocumentLanguage =
   | 'vi'
   | 'id'
   | 'th'
-  | 'fil';
+  | 'fil'
+  | 'ar';
+
+/** Autonyms for routed-only locales; the eight live in PUBLIC_LANGUAGE_AUTONYMS. */
+export const ROUTED_ONLY_LANGUAGE_AUTONYMS: Record<RoutedOnlyLocale, string> = {
+  ar: 'العربية',
+};
 
 const DEFAULT_SITE_URL = 'https://tseng-law.com';
-const PUBLIC_LOCALE_PATH_RE = /^\/(ko|zh-hant|en|ja|vi|id|th|fil)(?=\/|$)/i;
+const PUBLIC_LOCALE_PATH_RE = /^\/(ko|zh-hant|en|ja|vi|id|th|fil|ar)(?=\/|$)/i;
 const PAGE_KEY_BY_ROUTE: Record<GuidanceCoreRouteKey, GuidancePageKey> = {
   '': 'home',
   services: 'services',
@@ -108,17 +131,39 @@ export function isPublicLocale8(value?: string | null): value is PublicLocale8 {
   );
 }
 
+export function isRoutedOnlyLocale(value?: string | null): value is RoutedOnlyLocale {
+  return value === 'ar';
+}
+
+/** Every locale the middleware and root layout route, content pack or not. */
+export function isRoutedPublicLocale(value?: string | null): value is RoutedPublicLocale {
+  return isPublicLocale8(value) || isRoutedOnlyLocale(value);
+}
+
+/** Guidance-shaped routing (rewrite onto the guidance catch-all) for the four plus `ar`. */
+export function isGuidanceRoutedLocale(value?: string | null): value is GuidanceLocale4 | RoutedOnlyLocale {
+  return isGuidanceLocale4(value) || isRoutedOnlyLocale(value);
+}
+
+export function isRtlPublicLocale(value?: string | null): boolean {
+  return (RTL_PUBLIC_LOCALES as readonly string[]).includes(value ?? '');
+}
+
+export function isRtlDocumentLanguage(language: PublicDocumentLanguage): boolean {
+  return language === 'ar';
+}
+
 export function isExistingSiteLocale4(value?: string | null): value is ExistingSiteLocale4 {
   return value === 'ko' || value === 'zh-hant' || value === 'en' || value === 'ja';
 }
 
-export function publicDocumentLanguage(locale: PublicLocale8): PublicDocumentLanguage {
+export function publicDocumentLanguage(locale: RoutedPublicLocale): PublicDocumentLanguage {
   return locale === 'zh-hant' ? 'zh-Hant' : locale;
 }
 
 export function resolvePublicDocumentLanguage(pathname: string | null | undefined): PublicDocumentLanguage {
   const locale = pathname?.split('/').filter(Boolean)[0]?.toLowerCase();
-  if (isPublicLocale8(locale)) {
+  if (isRoutedPublicLocale(locale)) {
     return publicDocumentLanguage(locale);
   }
   return 'ko';
@@ -134,6 +179,12 @@ export function normalizePublicPathname(pathname: string): string {
 export function parsePublicLocaleFromPathname(pathname: string): PublicLocale8 | null {
   const first = normalizePublicPathname(pathname).split('/').filter(Boolean)[0]?.toLowerCase();
   return isPublicLocale8(first) ? first : null;
+}
+
+/** Like {@link parsePublicLocaleFromPathname} but also recognises routed-only locales. */
+export function parseRoutedLocaleFromPathname(pathname: string): RoutedPublicLocale | null {
+  const first = normalizePublicPathname(pathname).split('/').filter(Boolean)[0]?.toLowerCase();
+  return isRoutedPublicLocale(first) ? first : null;
 }
 
 export function stripPublicLocaleFromPath(pathname: string): string {
@@ -205,8 +256,8 @@ const GUIDANCE_PASSTHROUGH_FILES: readonly string[] = ['llms.txt'];
 
 export function resolveGuidanceMiddlewareRewrite(pathname: string): GuidanceMiddlewareRewrite | null {
   const normalized = normalizePublicPathname(pathname);
-  const locale = parsePublicLocaleFromPathname(normalized);
-  if (!locale || !isGuidanceLocale4(locale)) return null;
+  const locale = parseRoutedLocaleFromPathname(normalized);
+  if (!locale || !isGuidanceRoutedLocale(locale)) return null;
 
   const rest = stripPublicLocaleFromPath(normalized);
   const slugPath = rest === '/' ? '' : rest.replace(/^\//, '');

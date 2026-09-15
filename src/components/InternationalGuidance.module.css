@@ -52,3 +52,10 @@
   margin-top: 0.35rem;
   overflow-wrap: anywhere;
 }
+
+
+/* RTL (html[dir='rtl'], Arabic) — generated mirrors, see WO-M2. */
+html[dir='rtl'] .items {
+  padding-left: 0;
+  padding-right: 1.15rem;
+}

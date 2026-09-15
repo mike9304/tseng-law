@@ -7,6 +7,7 @@ import {
   PUBLIC_LOCALES_8,
   isGuidanceLocale4,
   isPublicLocale8,
+  type GuidanceLocale4,
   type PublicLocale8,
 } from './public-guidance';
 import { insightsArchive } from '../data/insights-archive';
@@ -104,10 +105,31 @@ function categoryFromString(cat: string): ColumnCategory {
   return 'legal';
 }
 
+/**
+ * Column category badge for the guidance languages.
+ *
+ * Arabic labels come from the reviewed `ar` guidance vocabulary (WO-M3 review,
+ * 2026-09-16) and match the terms used in the `ar` guidance pages. The other
+ * four still fall back to the English badge — a known leak the translation
+ * lane owns; add each language here as its reviewed terms arrive, nothing is
+ * invented in this file.
+ */
+const GUIDANCE_COLUMN_CATEGORY_LABELS: Partial<Record<GuidanceLocale4, Record<ColumnCategory, string>>> = {
+  ar: { formation: 'تأسيس الشركات', legal: 'معلومات قانونية', case: 'دراسات قضايا' },
+};
+const ENGLISH_COLUMN_CATEGORY_LABELS: Record<ColumnCategory, string> = {
+  formation: 'Company Setup',
+  legal: 'Legal Information',
+  case: 'Case Study',
+};
+
+export function guidanceColumnCategoryLabel(cat: ColumnCategory, locale: GuidanceLocale4): string {
+  return (GUIDANCE_COLUMN_CATEGORY_LABELS[locale] ?? ENGLISH_COLUMN_CATEGORY_LABELS)[cat];
+}
+
 function categoryLabelFn(cat: ColumnCategory, locale: ColumnContentLocale): string {
   if (isGuidanceLocale4(locale)) {
-    const map: Record<ColumnCategory, string> = { formation: 'Company Setup', legal: 'Legal Information', case: 'Case Study' };
-    return map[cat];
+    return guidanceColumnCategoryLabel(cat, locale);
   }
   if (locale === 'zh-hant') {
     const map: Record<ColumnCategory, string> = { formation: '公司設立', legal: '法律資訊', case: '訴訟案例' };

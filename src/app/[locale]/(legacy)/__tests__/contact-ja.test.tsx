@@ -44,6 +44,7 @@ describe('Japanese contact route integration', () => {
       id: `${SITE_URL}/id/contact`,
       th: `${SITE_URL}/th/contact`,
       fil: `${SITE_URL}/fil/contact`,
+      ar: `${SITE_URL}/ar/contact`,
       'x-default': `${SITE_URL}/en/contact`,
     });
     expect(metadata.keywords).toEqual([
@@ -195,6 +196,7 @@ describe('Japanese contact route integration', () => {
         id: `${SITE_URL}/id/contact`,
         th: `${SITE_URL}/th/contact`,
         fil: `${SITE_URL}/fil/contact`,
+        ar: `${SITE_URL}/ar/contact`,
         'x-default': `${SITE_URL}/en/contact`,
       });
       expect(dispatchedPage.type).toBe(ContactLegacyPage);

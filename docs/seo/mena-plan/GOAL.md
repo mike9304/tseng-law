@@ -23,9 +23,15 @@
 - [ ] M4-b 베이스라인 docs/seo/geo-mena-baseline-2026-09.md(GSC MENA 7국 28일·생성형AI·색인) 손빗 ASK
 - [ ] M4-c phase 2 후보(tr/fa/he) 제안 1쪽
 
+## B0. 세션 분담(02:5x 합의)
+- son7-51(소유): M0·M1(Opus 실행 중)·M3 ar 콘텐츠·Grok 검토·통합 merge·배포 ASK. 파일: international-guidance-content.ts·international-guidance-answers.ts·intent 문서.
+- son7-b9: M2 라우팅·RTL·아랍 폰트·hreflang/sitemap/llms/seo.ts·middleware·layout/chrome/스위처·테스트 — 브랜치 mena/ar-routing-20260916, 워크트리 ~/Projects/tseng-law-mena-routing-20260916.
+- son7-db: M2-b AI cite 문항(geo-mena-baseline-2026-09.md)·M2-c 색인 계획(M2c-INDEXING-PLAN.md)·M4-c phase 2 언어(M4c-PHASE2-LANGS.md) — 브랜치 mena/ar-content-20260916, src 무변경.
+- 통합: 소유 브랜치가 두 브랜치 merge → 게이트 → RELEASE-CHECK-MENA → 사용자 ASK.
+
 ## B. 미결·ASK
 - 배포·유료광고·외부 등재 = ASK. 코드·기획·초안은 진행.
 - SEA W1 측정과 병행: SEA 대기 프로세스는 유지, 상태는 OUT에.
 
 ## C. 로그
-- 2026-09-16 02:3x · Fable 5.1 · 워크트리 생성, M0-a·M0-b 발주.
+- 2026-09-16 02:3x · Fable 5.1 · 워크트리 생성, M0-a·M0-b 발주. 02:5x son7-b9/son7-db와 분담 합의. 자동 로케일 의견 OUT 발송.

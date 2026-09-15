@@ -1,13 +1,37 @@
 import { describe, expect, it } from 'vitest';
 import { intentPageSlugs } from '@/data/intent-pages';
 import { guidanceAnswers } from '@/data/international-guidance-answers';
-import type { GuidancePageKey } from '@/data/international-guidance-content';
-import {
-  GUIDANCE_LOCALES_4,
-  GUIDANCE_PAGE_KEYS,
-  PUBLIC_LOCALES_8,
-  guidancePublicPath,
-} from '@/lib/public-guidance';
+import type {
+  GuidanceLocale,
+  GuidancePageKey,
+} from '@/data/international-guidance-content';
+import { GUIDANCE_PAGE_KEYS } from '@/lib/public-guidance';
+
+/**
+ * The guidance locales this suite covers.
+ *
+ * Declared here instead of read from `GUIDANCE_LOCALES` in
+ * `@/lib/public-guidance`: the routing constants are landed on a separate
+ * branch while `ar` is added, so this file must not depend on the count or the
+ * name that constant currently carries. The first assertion below pins this
+ * list to the key set of `guidanceAnswers`, so a locale can never be added to
+ * the data without being covered here.
+ */
+const GUIDANCE_LOCALES = [
+  'vi',
+  'id',
+  'th',
+  'fil',
+  'ar',
+] as const satisfies readonly GuidanceLocale[];
+
+/**
+ * Local copy of `guidancePublicPath` for the same reason: it is typed over the
+ * public-locale union, which does not list `ar` on this branch yet.
+ */
+function guidancePathFor(locale: GuidanceLocale, pageKey: GuidancePageKey): string {
+  return pageKey === 'home' ? `/${locale}` : `/${locale}/${pageKey}`;
+}
 
 /** Page keys that must carry an answer-first block. */
 const ANSWER_PAGE_KEYS = [
@@ -38,6 +62,7 @@ const CONSULTATION_LANGUAGE_TERMS: Record<string, readonly string[]> = {
   id: ['Inggris', 'Tionghoa', 'Jepang', 'Korea'],
   th: ['ภาษาอังกฤษ', 'ภาษาจีน', 'ภาษาญี่ปุ่น', 'ภาษาเกาหลี'],
   fil: ['Ingles', 'Tsino', 'Hapon', 'Koreano'],
+  ar: ['بالإنجليزية', 'الصينية', 'اليابانية', 'الكورية'],
 };
 
 /**
@@ -56,6 +81,8 @@ const GUIDANCE_LANGUAGE_TOKENS: ReadonlyArray<readonly [string, RegExp]> = [
   ['tiếng Việt', /tiếng Việt/i],
   ['bahasa Indonesia', /bahasa Indonesia/i],
   ['ภาษาไทย', /ภาษาไทย/],
+  ['Arabic', /\bArabic\b/i],
+  ['عربي', /عربي/],
 ];
 
 /**
@@ -82,6 +109,10 @@ const FORBIDDEN_COMBINATIONS: ReadonlyArray<readonly [string, RegExp, RegExp]> =
   ['Filipino + konsultasyon', /\bFilipino\b/i, /konsultasyon/i],
   ['Tagalog + consultation', /\bTagalog\b/i, /\bconsultation\b/i],
   ['Tagalog + konsultasyon', /\bTagalog\b/i, /konsultasyon/i],
+  ['Arabic + consultation', /\bArabic\b/i, /\bconsultation\b/i],
+  ['Arabic + استشارة', /\bArabic\b/i, /استشار/],
+  ['عربي + استشارة', /عربي/, /استشار/],
+  ['عربي + ترجمة فورية', /عربي/, /ترجمة فورية/],
 ];
 
 /**
@@ -98,6 +129,7 @@ const SERVICES_SCOPE_TERMS: Record<string, readonly [string, RegExp]> = {
   id: ['lingkup', /lingkup/i],
   th: ['ขอบเขต', /ขอบเขต/],
   fil: ['saklaw', /saklaw/i],
+  ar: ['نطاق كل قضية', /نطاق كل قضية/],
 };
 
 const SERVICES_ACCEPTANCE_PATTERNS: Record<
@@ -120,12 +152,16 @@ const SERVICES_ACCEPTANCE_PATTERNS: Record<
     ['pagtanggap', /pagtanggap/i],
     ['napagpapasyahan', /napagpapasyahan/i],
   ],
+  ar: [
+    ['قبول قضية بعينها', /قبول قضية بعينها/],
+    ['فيتقرّر', /يتقرّر/],
+  ],
 };
 
 /** Every site-internal path an answer may cite. */
 const ALLOWED_SOURCES = new Set<string>([
-  ...PUBLIC_LOCALES_8.flatMap((locale) =>
-    GUIDANCE_PAGE_KEYS.map((key) => guidancePublicPath(locale, key)),
+  ...GUIDANCE_LOCALES.flatMap((locale) =>
+    GUIDANCE_PAGE_KEYS.map((key) => guidancePathFor(locale, key)),
   ),
   ...intentPageSlugs.map((slug) => `/en/${slug}`),
 ]);
@@ -143,7 +179,7 @@ function wordCount(text: string): number {
   return text.trim().split(/\s+/).filter(Boolean).length;
 }
 
-const entries = GUIDANCE_LOCALES_4.flatMap((locale) =>
+const entries = GUIDANCE_LOCALES.flatMap((locale) =>
   ANSWER_PAGE_KEYS.map((key) => ({
     locale,
     key,
@@ -152,11 +188,12 @@ const entries = GUIDANCE_LOCALES_4.flatMap((locale) =>
 );
 
 describe('guidanceAnswers', () => {
-  it('covers 4 locales x 6 page keys', () => {
-    expect(GUIDANCE_LOCALES_4).toHaveLength(4);
+  it('covers 5 locales x 6 page keys', () => {
+    expect(GUIDANCE_LOCALES).toHaveLength(5);
     expect(ANSWER_PAGE_KEYS).toHaveLength(6);
+    expect(Object.keys(guidanceAnswers).sort()).toEqual([...GUIDANCE_LOCALES].sort());
 
-    for (const locale of GUIDANCE_LOCALES_4) {
+    for (const locale of GUIDANCE_LOCALES) {
       expect(Object.keys(guidanceAnswers[locale]).sort()).toEqual(
         [...ANSWER_PAGE_KEYS].sort(),
       );
@@ -170,7 +207,7 @@ describe('guidanceAnswers', () => {
 
   it('renders nothing for home, privacy, disclaimer and columns', () => {
     expect(NO_ANSWER_PAGE_KEYS).toEqual(['home', 'privacy', 'disclaimer', 'columns']);
-    for (const locale of GUIDANCE_LOCALES_4) {
+    for (const locale of GUIDANCE_LOCALES) {
       for (const key of NO_ANSWER_PAGE_KEYS) {
         expect(guidanceAnswers[locale][key], `${locale}/${key} must have no answer`).toBeUndefined();
       }
@@ -193,7 +230,7 @@ describe('guidanceAnswers', () => {
   });
 
   it('answers services with its own scope sentence, not the FAQ acceptance sentence', () => {
-    for (const locale of GUIDANCE_LOCALES_4) {
+    for (const locale of GUIDANCE_LOCALES) {
       const answer = guidanceAnswers[locale].services?.answer ?? '';
       expect(answer.length, `${locale}/services answer missing`).toBeGreaterThan(0);
 
@@ -256,7 +293,7 @@ describe('guidanceAnswers', () => {
         expect(href.startsWith('/'), `${locale}/${key} source "${href}" must start with /`).toBe(true);
         expect(ALLOWED_SOURCES.has(href), `${locale}/${key} source "${href}" is not a known path`).toBe(true);
         const isSameLocaleGuidance = GUIDANCE_PAGE_KEYS.some(
-          (pageKey) => guidancePublicPath(locale, pageKey) === href,
+          (pageKey) => guidancePathFor(locale, pageKey) === href,
         );
         const isEnglishLanding = intentPageSlugs.some((slug) => href === `/en/${slug}`);
         expect(
@@ -264,7 +301,7 @@ describe('guidanceAnswers', () => {
           `${locale}/${key} source "${href}" is neither a same-locale guidance page nor an /en landing`,
         ).toBe(true);
         expect(href, `${locale}/${key} must not cite itself`).not.toBe(
-          guidancePublicPath(locale, key),
+          guidancePathFor(locale, key),
         );
       }
     }

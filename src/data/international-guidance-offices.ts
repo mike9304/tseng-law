@@ -2,7 +2,7 @@ import type { GuidanceLocale } from '@/data/international-guidance-content';
 
 /**
  * Display copy for the office band rendered on the guidance-locale `contact`
- * page (vi/id/th/fil).
+ * page (vi/id/th/fil/ar).
  *
  * Same rule as `international-guidance-team.ts`: display strings only. The
  * addresses, phone numbers, fax numbers, map links and photographs are read
@@ -139,6 +139,31 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
       pingtung: 'Pingtung',
     },
   },
+  ar: {
+    label: 'OFFICES',
+    title: 'المكاتب',
+    description: 'عناوين مكاتب Hovering International Law Firm في تايوان.',
+    officeLabel: 'مكتب',
+    mapPreviewLabel: 'معاينة الخريطة',
+    koreaOfficeTitle: 'مكتب كوريا',
+    koreaAddressCardLabel: 'عنوان مكتب كوريا',
+    koreaMapLinkLabel: 'عرض على Naver Map',
+    reviewCountWord: 'تقييم',
+    phoneLabel: 'الهاتف',
+    faxLabel: 'الفاكس',
+    mapLinkLabel: 'عرض على الخريطة',
+    photoAlts: [
+      'غرفة استقبال مكتب تايبيه، Hovering International Law Firm',
+      'غرفة عمل المحامين في مكتب تايبيه، Hovering International Law Firm',
+      'قاعة الاجتماعات في مكتب تايبيه، Hovering International Law Firm',
+    ],
+    officeTitles: {
+      taipei: 'تايبيه',
+      taichung: 'تايتشونغ',
+      kaohsiung: 'كاوهسيونغ',
+      pingtung: 'بينغتونغ',
+    },
+  },
 };
 
 /**
@@ -207,5 +232,16 @@ export const guidanceFooterCopy: Record<GuidanceLocale, GuidanceFooterCopy> = {
     copyEmailLabel: 'Kopyahin ang email address',
     emailCopiedMessage: 'Nakopya ang email address.',
     officialConsultationEmailLabel: 'Opisyal na email para sa konsultasyon',
+  },
+  ar: {
+    officeLabel: 'المكاتب',
+    officeQuickLinksLabel: 'روابط سريعة إلى مواقع المكاتب',
+    followLabel: 'تابعنا',
+    blogLabel: 'المدونة',
+    websiteLabel: 'الموقع الرسمي',
+    sitemapLabel: 'خريطة الموقع',
+    copyEmailLabel: 'نسخ عنوان البريد الإلكتروني',
+    emailCopiedMessage: 'تم نسخ عنوان البريد الإلكتروني.',
+    officialConsultationEmailLabel: 'البريد الإلكتروني الرسمي للاستشارات',
   },
 };

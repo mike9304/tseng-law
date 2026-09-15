@@ -1,5 +1,5 @@
 /**
- * Answer-first summary blocks for the four guidance languages.
+ * Answer-first summary blocks for the five guidance languages.
  *
  * These blocks exist so that a generative engine quoting one of the guidance
  * pages quotes a short, self-contained, accurate paragraph instead of stitching
@@ -11,8 +11,8 @@
  * written in the guidance language, but a consultation with an attorney is held
  * only in English, Chinese, Japanese and Korean. No answer below names the
  * guidance language at all, so no sentence can be read as an offer of a
- * consultation, interpreting, or support in Vietnamese, Indonesian, Thai or
- * Filipino.
+ * consultation, interpreting, or support in Vietnamese, Indonesian, Thai,
+ * Filipino or Arabic.
  *
  * The content module (`international-guidance-content.ts`) is intentionally not
  * touched by this file: only its two types are imported.
@@ -166,6 +166,38 @@ export const guidanceAnswers: Record<
       answer:
         'Sinasagot ng bahaging ito ang mga madalas itanong sa antas ng pangkalahatang impormasyon: ang anim na pangkat ng usapin, ang paghahanda bago makipag-ugnayan, ang pagtatakda ng bayarin, at ang kahulugan ng pagpapadala ng mensahe. Ang naipadalang mensahe ay naghihintay pa ng pagsusuri ng abogado; hindi ito legal na payo, hindi ito appointment, at hindi ito bumubuo ng ugnayan ng abogado at kliyente. Isinasagawa ang konsultasyon sa abogado sa Ingles, Tsino, Hapon, at Koreano.',
       sources: ['/fil/contact', '/fil/services'],
+    },
+  },
+  ar: {
+    services: {
+      answer:
+        'يتولّى المكتب ست مجموعات من القضايا وفق القانون التايواني: الاستثمار وتأسيس الشركات في تايوان، والمنازعات المدنية ودعاوى التعويض، وقضايا الزواج والأسرة والميراث، ومنازعات العمل، والقضايا الجزائية، والملكية الفكرية. ويُؤكَّد نطاق كل قضية على حدة بعد مراجعة المحامي لما ترسله. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+      sources: ['/ar/faq', '/ar/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm مكتب محاماة في تايوان، تأسّس عام 2016 على يد محامين من خرّيجي الجامعة الوطنية التايوانية (國立臺灣大學)، وله مكاتب في تايبيه وكاوهسيونغ وتايتشونغ وبينغتونغ. ومنذ عام 2020 يضم قسمًا للمحاسبة، ويتولّى مكتب تايتشونغ الأعمال المتصلة بكوريا واليابان. ولا يقدّم المكتب أي التزام بالنتيجة. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+      sources: ['/ar/lawyers', '/ar/services'],
+    },
+    lawyers: {
+      answer:
+        'تعرض هذه الصفحة ملفات المحامين ومديري الأعمال والمحاسب الشريك في Hovering. والمحامي Wei Tseng (曾雋崴) محامٍ مؤهَّل لمزاولة المهنة في تايوان والمحامي المدير في المكتب، ويعمل مع العملاء من كوريا واليابان وسائر العملاء الدوليين. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+      sources: ['/ar/about', '/ar/contact'],
+    },
+    pricing: {
+      answer:
+        'لا تنشر هذه الصفحة قائمة أسعار. يُحدَّد نطاق العمل أولًا من الملخّص الذي ترسله، ثم تُؤكَّد معك الأتعاب وطريقة احتسابها قبل بدء العمل. وقد تكون الجلسة مع المحامي خدمة بمقابل، وقد تنشأ إلى جانب أتعاب المحاماة مبالغ تُدفَع للمحكمة أو لجهة حكومية. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+      sources: ['/ar/contact', '/ar/faq'],
+    },
+    contact: {
+      answer:
+        'أرسل ملخّصك عبر نموذج التواصل: ما الذي حدث، وما المساعدة التي تحتاج إليها، وما صلة القضية بتايوان، والمواعيد إن كنت تعرفها. ولا حاجة في المرحلة الأولى إلى إرسال وثائق الهوية أو ملف الأدلة كاملًا. ولا يلتزم المكتب بمدة للرد، ولا يؤكّد المواعيد عبر هذه الصفحة. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+      sources: ['/ar/faq', '/ar/pricing'],
+    },
+    faq: {
+      answer:
+        'يجيب قسم الأسئلة الشائعة على مستوى المعلومات العامة: مجموعات العمل الست، وكيفية تحضير الملخّص، وطريقة تحديد التكلفة، ومعنى إرسال الطلب. والطلب المُرسَل ينتظر مراجعة المحامي؛ فهو ليس رأيًا قانونيًا، وليس موعدًا مؤكّدًا، ولا يُنشئ علاقة بين المحامي والموكّل. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+      sources: ['/ar/contact', '/ar/services'],
     },
   },
 };

@@ -1,5 +1,5 @@
 /**
- * Guidance-route inquiry copy for the eight public languages.
+ * Guidance-route inquiry copy for the nine public languages.
  *
  * Guidance is published in the page language; actual consultations are handled
  * only in English, Chinese, Japanese and Korean. Every locale below is written
@@ -20,7 +20,8 @@ export type InquiryCopyLocale =
   | 'vi'
   | 'id'
   | 'th'
-  | 'fil';
+  | 'fil'
+  | 'ar';
 
 export interface InternationalInquiryCopy {
   /** The page language is guidance only. */
@@ -463,6 +464,56 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ko: 'Koreano (한국어)',
       'needs-method-confirmation':
         'Wala sa apat na wika — kailangang kumpirmahin ang paraan ng pakikipag-ugnayan',
+    },
+  },
+  ar: {
+    guidanceNotice:
+      'هذه الصفحة مكتوبة بالعربية بوصفها إرشادًا عامًا. وهي ليست رأيًا قانونيًا في قضيتك بعينها.',
+    consultationNotice:
+      'الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+    methodConfirmationNotice:
+      'إذا لم تكن تستخدم أيًّا من هذه اللغات الأربع، فاختر «يلزم تأكيد طريقة التواصل». يؤكّد المكتب طريقة التواصل برسالة رد عند وجود طريقة ممكنة؛ ولا يضمن تقديم الخدمة بأي لغة أخرى، ولا يلتزم بمدة للرد.',
+    preparationNotice:
+      'يمكنك كتابة ملخّص قضيتك بلغتك. ويُحفَظ النص الأصلي كما كتبته ولا يُترجَم ترجمة آلية.',
+    heading: 'إرسال طلب استشارة',
+    intro:
+      'يُرجى وصف قضيتك باختصار. يراجع المحامي المحتوى ثم يوضّح الخطوة التالية.',
+    submitLabel: 'إرسال الطلب',
+    submittingLabel: 'جارٍ الإرسال…',
+    successMessage:
+      'وصلنا طلبك وهو بانتظار المراجعة. وهذا لا يعني أن الجلسة قد تمّت أو أن الموعد قد تأكّد.',
+    savedNotificationPendingMessage:
+      'حُفِظ طلبك، غير أن إشعار المكتب لم يتأكّد بعد. ولم يُفقَد ما كتبته. وإذا لم يصلك رد، فيمكنك أيضًا المراسلة على عنوان البريد الإلكتروني المذكور في صفحة التواصل.',
+    receiptIdLabel: 'رقم الاستلام',
+    failureMessage:
+      'تعذّر إرسال طلبك. يُرجى المحاولة مرة أخرى، أو الإرسال إلى عنوان البريد الإلكتروني المذكور في صفحة التواصل.',
+    originalLanguageLabel: 'اللغة التي تكتب بها',
+    originalLanguagePlaceholder:
+      'مثال: العربية أو الفرنسية أو الفارسية أو التركية أو لغة أخرى',
+    preferredConsultationLanguageLabel: 'اللغة التي تفضّلها للاستشارة',
+    originalTextLabel: 'ملخّص القضية (بلغتك)',
+    originalTextPlaceholder:
+      'اذكر ما الذي حدث، وما المساعدة التي تحتاج إليها، والموعد النهائي إن وُجد. ويُرجى عدم كتابة رقم جواز السفر أو رقم الهوية أو بيانات الحساب المصرفي.',
+    nameLabel: 'الاسم',
+    emailLabel: 'البريد الإلكتروني',
+    consentLabel:
+      'اطّلعتُ على سياسة الخصوصية وأوافق على إرسال هذا الطلب.',
+    privacyLinkLabel: 'سياسة الخصوصية',
+    requiredMessage: 'هذا الحقل مطلوب.',
+    invalidEmailMessage: 'يُرجى إدخال عنوان بريد إلكتروني صحيح.',
+    tooLongMessage: 'النص طويل جدًا. يُرجى اختصاره ثم إعادة الإرسال.',
+    sourceLanguageNotice:
+      'هذا المقال متاح بـ{language} فقط، والرابط يفتح الصفحة الأصلية بتلك اللغة.',
+    unavailableTranslationNotice:
+      'هذا العنصر غير مترجَم بعد إلى لغة هذه الصفحة. اضغط الرابط الذي يذكر اللغة الأصلية لقراءة النص الأصلي.',
+    unavailableLanguageNotice: 'هذه الصفحة غير متاحة بـ{language}.',
+    languageOptions: {
+      en: 'الإنجليزية (English)',
+      'zh-hant': 'الصينية (中文)',
+      ja: 'اليابانية (日本語)',
+      ko: 'الكورية (한국어)',
+      'needs-method-confirmation':
+        'لا أستطيع استخدام أي من اللغات الأربع — يلزم تأكيد طريقة التواصل',
     },
   },
 };

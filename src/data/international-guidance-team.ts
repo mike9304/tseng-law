@@ -3,7 +3,7 @@ import type { GuidanceLocale } from '@/data/international-guidance-content';
 
 /**
  * Display copy AND localized biographies for the team roster rendered on the
- * guidance-locale `lawyers` and `about` pages (vi/id/th/fil).
+ * guidance-locale `lawyers` and `about` pages (vi/id/th/fil/ar).
  *
  * WHY THIS FILE NOW CARRIES BIOGRAPHY SENTENCES (WO-O33)
  * -----------------------------------------------------
@@ -236,6 +236,34 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'huang-shengping': 'Kasosyong akawntant (Partner CPA)',
     },
   },
+  ar: {
+    label: 'OUR TEAM',
+    title: 'فريق Hovering الدولي',
+    description:
+      'ملفات المحامين ومديري الأعمال والمحاسب الشريك في Hovering.',
+    representativeTitle: 'المحامي المدير',
+    teamTitle: 'المحامون والموظفون',
+    partnerTitle: 'المحاسب الشريك',
+    introLabel: 'تعريف',
+    educationLabel: 'التعليم',
+    experienceLabel: 'الخبرة',
+    photoAltPrefix: 'صورة',
+    workingLanguagesLabel: 'لغات العمل',
+    fullProfileLabel: 'الملف الكامل (English)',
+    keyFactsHeading: 'المحامي Wei Tseng — معلومات أساسية',
+    qualificationLabel: 'المؤهل وجهة العمل',
+    qualificationSentence:
+      '{name} محامٍ مؤهَّل لمزاولة المهنة في تايوان والمحامي المدير في {firm}.',
+    practiceLabel: 'المجالات الرئيسية',
+    consultationLanguagesLabel: 'لغات الاستشارة',
+    roles: {
+      'tseng-junwei': 'المحامي المدير في تايوان (Managing Attorney)',
+      'chang-rongxuan': 'محامٍ في تايوان (Taiwan Attorney)',
+      'chang-fangyu': 'مساعد قانوني (Paralegal)',
+      'son-jungmin': 'مدير عمليات كوريا (Korea Operations Manager)',
+      'huang-shengping': 'محاسب قانوني شريك (Partner CPA)',
+    },
+  },
 };
 
 /**
@@ -252,6 +280,7 @@ export const guidanceLanguageNames: Record<GuidanceLocale, Record<string, string
   id: { Korean: 'bahasa Korea', Chinese: 'bahasa Tionghoa', Japanese: 'bahasa Jepang' },
   th: { Korean: 'ภาษาเกาหลี', Chinese: 'ภาษาจีน', Japanese: 'ภาษาญี่ปุ่น' },
   fil: { Korean: 'Koreano', Chinese: 'Tsino', Japanese: 'Hapon' },
+  ar: { Korean: 'الكورية', Chinese: 'الصينية', Japanese: 'اليابانية' },
 };
 
 /**
@@ -306,6 +335,14 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Visa and residency': 'Visa at paninirahan',
     'Family and labor disputes': 'Alitan sa pamilya at paggawa',
   },
+  ar: {
+    'Taiwan company setup': 'تأسيس الشركات في تايوان',
+    'Taiwan investment counsel': 'الاستشارات القانونية للاستثمار في تايوان',
+    'Civil litigation and damages': 'التقاضي المدني ودعاوى التعويض',
+    'Trademark and patent filings': 'تسجيل العلامات التجارية وبراءات الاختراع',
+    'Visa and residency': 'التأشيرات والإقامة',
+    'Family and labor disputes': 'منازعات الأسرة والعمل',
+  },
 };
 
 /** One member's biography, line for line with `teamContent.en`. */
@@ -358,7 +395,7 @@ export const GUIDANCE_BIO_CODE_EXPANSIONS: Readonly<Record<string, string>> = {
 };
 
 /**
- * Biographies for the four guidance languages, one entry per member id and one
+ * Biographies for the five guidance languages, one entry per member id and one
  * line per canonical line.
  */
 export const guidanceTeamBios: Record<
@@ -597,6 +634,65 @@ export const guidanceTeamBios: Record<
       education: [
         'Masterado (M.A.) sa Akawnting, National Chengchi University',
         'Batsilyer (B.A.) sa Akawnting, National Chengchi University',
+      ],
+      experience: ['Chinshin CPA Firm'],
+    },
+  },
+  ar: {
+    'tseng-junwei': {
+      intro: [
+        'يتولّى المكتب قضايا الشركات والأفراد في تايوان، ويعمل بالإنجليزية واليابانية والكورية والصينية.',
+        'مثَّل طالبًا كوريًا في دعوى تعويض عن إصابة في ناد رياضي، وصدر حكم ابتدائي بالتعويض بمبلغ TWD 1.57M.',
+      ],
+      education: [
+        'ماجستير (M.S.)، Institute of Finance, National Taiwan University',
+        'بكالوريوس (B.A.) بتخصص مزدوج في القانون والتمويل، National Chengchi University',
+        'طالب تبادل في Kobe University و Waseda University',
+      ],
+      experience: [
+        'Trend Law Office',
+        'Hovering International Law Firm',
+        'Legal Aid Foundation, Taichung Branch',
+      ],
+    },
+    'chang-rongxuan': {
+      intro: [
+        'عمل سابقًا في Ministry of Education, Legal Affairs Division، وركّز على المنازعات الإدارية والمدنية.',
+        'لديه خبرة في القضايا المتعلقة بالجامعات وبحقوق أعضاء هيئة التدريس وبالتظلمات الإدارية.',
+      ],
+      education: ['بكالوريوس في القانون (LL.B.)، National Chung Hsing University'],
+      experience: [
+        'Ministry of Education, Legal Affairs Division',
+        'محامٍ، Hovering International Law Firm',
+      ],
+    },
+    'chang-fangyu': {
+      intro: [
+        'مساعدة قانونية متمرّسة أمضت سنوات في وظيفة مساعد قانوني أول في عدة مكاتب محاماة، وتشمل أعمالها دعم التقاضي والشؤون القانونية للشركات وقضايا الاستثمار الأجنبي.',
+        'تدعم التقاضي وتأسيس الشركات وإجراءات الموافقة على الاستثمار الأجنبي وطلبات التراخيص والتواصل بين كوريا وتايوان.',
+      ],
+      education: ['بكالوريوس في القانون (LL.B.)، Tunghai University'],
+      experience: [
+        'مساعدة قانونية أولى، Boyin Law Firm',
+        'مساعدة قانونية أولى، Muyang International Law Firm',
+      ],
+    },
+    'son-jungmin': {
+      intro: [
+        'ينسّق مواعيد الجلسات والتواصل للعملاء من كوريا.',
+        'يدعم التواصل بين الفرق عبر أنظمة التوثيق وسير العمل، انطلاقًا من خلفية في علوم الحاسب.',
+      ],
+      education: ['بكالوريوس (B.S.) في علوم الحاسب، National Cheng Kung University'],
+      experience: ['قسم الأعمال الكورية، Hovering International Law Firm'],
+    },
+    'huang-shengping': {
+      intro: [
+        'أنهى برنامجَي البكالوريوس والماجستير في المحاسبة في National Chengchi University، ويدير حاليًا مكتب محاسبة.',
+        'يدعم التحليل المتكامل للمخاطر القانونية والضريبية والمالية للعملاء من الشركات.',
+      ],
+      education: [
+        'ماجستير (M.A.) في المحاسبة، National Chengchi University',
+        'بكالوريوس (B.A.) في المحاسبة، National Chengchi University',
       ],
       experience: ['Chinshin CPA Firm'],
     },

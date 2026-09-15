@@ -5,7 +5,7 @@
 
 ## A. 보드
 ### M0 기반
-- [ ] M0-a WO-M0-INVENTORY(Opus, 읽기 전용): vi/id/th/fil 추가 시 건드린 모든 지점 목록(GUIDANCE_LOCALES_4 참조 19파일 + 로케일 계약·middleware matcher·sitemap·llms·hreflang·언어 스위처·contact 폼·intake 계약·테스트·playwright·verify-multilingual-live·RTL 부재 지점) → docs/seo/mena-plan/AR-LOCALE-INVENTORY.md
+- [x] 2026-09-16 03:0x M0-a 인벤토리 89행 → AR-LOCALE-INVENTORY.md (RTL 0·좌우 하드코딩 388·함정 5: middleware matcher/llms 4-guard/sitemap 리터럴/fonts/og:locale 폴백·넓히면 안 되는 계약 2). 원 항목: WO-M0-INVENTORY(Opus, 읽기 전용): vi/id/th/fil 추가 시 건드린 모든 지점 목록(GUIDANCE_LOCALES_4 참조 19파일 + 로케일 계약·middleware matcher·sitemap·llms·hreflang·언어 스위처·contact 폼·intake 계약·테스트·playwright·verify-multilingual-live·RTL 부재 지점) → docs/seo/mena-plan/AR-LOCALE-INVENTORY.md
 - [ ] M0-b WO-M1-INTENT(Opus, 리서치): MENA 7국 × 의도(회사설립·투자 / 소송·계약분쟁 / 미수금 / 비자·거류 / 상속·가족 / 형사) 질문 문장(아랍어+영어), 검색 표면, A~E 근거(대만-MENA 교역·체류 통계 공식 출처), 대응 URL → docs/seo/geo-mena-intent-map-2026-09.md
 ### M1 ar 로케일
 - [ ] M1-a WO-M2-AR-ROUTING(Opus): `ar`를 안내 로케일에 추가(GUIDANCE_LOCALES_5), 라우팅·middleware·hreflang(ar)·sitemap·llms.txt·언어 스위처·RTL(`dir="rtl"` html/layout + 필요한 CSS 논리속성) — 콘텐츠는 임시 en 폴백 없이 M1-b와 동시 커밋

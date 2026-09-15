@@ -1,0 +1,15 @@
+
+> sejong-law@0.1.0 verify:multilingual-live
+> node scripts/verify-multilingual-live.mjs --base https://tseng-law.com
+
+multilingual live check  base=https://tseng-law.com
+overall PASS  pass=400  fail=0
+
+item  name                               result  pass  fail  notes                    
+----  ----                               ------  ----  ----  -----                    
+a     sitemap loc HEAD/GET               PASS    214   0     locs=213                 
+b     core pages 200 + html lang         PASS    80    0     —                        
+c     hreflang 8 locales + x-default     PASS    80    0     —                        
+d     consultation language notice       PASS    8     0     —                        
+e     privacy internal-memo phrases      PASS    8     0     —                        
+f     translated columns 200 + hreflang  PASS    10    0     disk=vi:2,id:2,th:1,fil:1

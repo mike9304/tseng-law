@@ -1,4 +1,4 @@
-import { existsSync } from 'node:fs';
+import { existsSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { getAllColumnPosts } from '@/lib/columns';
@@ -31,13 +31,20 @@ describe('column category parity with English', () => {
     const hasFiles = existsSync(dir);
     (hasFiles ? it : it.skip)(`${locale}: every column keeps its English category`, () => {
       const posts = getAllColumnPosts(locale);
-      expect(posts.length).toBe(17);
+      // A locale may ship in batches (ar phase 2 starts with 5 files); every
+      // markdown file on disk must still parse into a post.
+      const fileCount = readdirSync(dir).filter((file) => file.endsWith('.md')).length;
+      expect(posts.length).toBe(fileCount);
+      expect(posts.length).toBeGreaterThan(0);
       const mismatches = posts
         .filter((post) => english.get(post.slug) !== post.category)
         .map((post) => `${post.slug}: ${post.category} (en: ${english.get(post.slug)})`);
       expect(mismatches).toEqual([]);
-      // Not everything may collapse to one bucket again.
-      expect(new Set(posts.map((post) => post.category)).size).toBe(3);
+      // Not everything may collapse to one bucket again: a full set must show
+      // all three buckets, a partial batch every bucket its English sources use.
+      const expected = new Set(posts.map((post) => english.get(post.slug)));
+      expect(new Set(posts.map((post) => post.category))).toEqual(expected);
+      if (posts.length === 17) expect(expected.size).toBe(3);
     });
   }
 });

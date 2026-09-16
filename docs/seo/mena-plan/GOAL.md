@@ -19,8 +19,8 @@
 ### M3 폼·계약
 - [x] 2026-09-16 M3-a inquiry-copy ar + PUBLIC_INQUIRY_LOCALES ar(CONSULTATION_LANGUAGES 불변), intake 테스트 그린(플립 커밋)
 ### M4 배포·측정
-- [~] M4-a RELEASE-CHECK-MENA.md(6f9f1984, 갱신) → 배포 ASK 발송(아래 §B)
-- [ ] M4-b 베이스라인 docs/seo/geo-mena-baseline-2026-09.md(GSC MENA 7국 28일·생성형AI·색인) 손빗 ASK
+- [x] 2026-09-16 10:57 M4-a **배포 완료**: 사용자 직접 승인("배포 진행해") → push 8b23eb18..76360346 FF → Vercel success 11:00 → 라이브 6URL(lang=ar dir=rtl·availableLanguage 4·summary·hreflang ar·마커 0)·/ar/llms.txt 10·루트 카탈로그 9·sitemap /ar 10·verify:multilingual-live **PASS 558/0** → evidence/live-ar-76360346.txt, live-multilingual-76360346.log
+- [~] M4-b 손빗: GSC 사이트맵·IndexNow /ar 10URL·MENA 7국 GSC 베이스라인(M2c-INDEXING-PLAN 초안) — 배포 통지 OUT 발송 11:0x. SERP 재측정(X6R 스크립트)은 son7-b9
 - [x] 2026-09-16 M4-c phase 2 언어 후보(son7-db 11d53415, M4c-PHASE2-LANGS.md: ur/tr/fa/he, 결정은 사용자)
 
 ## B0. 세션 분담(02:5x 합의)

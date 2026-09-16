@@ -241,6 +241,9 @@ export function semiconductorDraftBodyWithoutLeadingTitle(
   if (record.bodyMarkdown.startsWith(heading)) {
     return record.bodyMarkdown.slice(heading.length).replace(/^\n+/, '');
   }
+  if (record.kind === 'service') {
+    return record.bodyMarkdown.replace(/^# .+\n+/, '');
+  }
   return record.bodyMarkdown;
 }
 

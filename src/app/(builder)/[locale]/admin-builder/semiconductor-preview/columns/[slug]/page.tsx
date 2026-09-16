@@ -6,9 +6,12 @@ import { getSemiconductorDraftBySlug } from '@/lib/semiconductor-drafts';
 export const dynamic = 'force-dynamic';
 
 export async function generateMetadata(props: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await props.params;
+  const { locale, slug } = await props.params;
+  if (locale !== 'ko') {
+    return { title: 'Not found', robots: { index: false, follow: false } };
+  }
   const record = getSemiconductorDraftBySlug(slug);
   if (!record || record.kind !== 'article') {
     return { title: 'Not found', robots: { index: false, follow: false } };
@@ -20,9 +23,10 @@ export async function generateMetadata(props: {
 }
 
 export default async function SemiconductorAdminColumnPreviewPage(props: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await props.params;
+  const { locale, slug } = await props.params;
+  if (locale !== 'ko') notFound();
   const record = getSemiconductorDraftBySlug(slug);
   if (!record || record.kind !== 'article') notFound();
   return <SemiconductorColumnPreview record={record} admin />;

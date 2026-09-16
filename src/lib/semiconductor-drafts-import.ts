@@ -130,15 +130,3 @@ export async function importSemiconductorColumnDrafts(): Promise<{
   }
   return { imported };
 }
-
-async function main() {
-  const result = await importSemiconductorColumnDrafts();
-  process.stdout.write(`${JSON.stringify(result, null, 2)}\n`);
-}
-
-if (process.argv[1] && /semiconductor-drafts-import/.test(process.argv[1])) {
-  main().catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
-}

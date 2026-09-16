@@ -26,7 +26,7 @@
 | semi-ko-002 | `02_…md` | `taiwan-semiconductor-unpaid-invoices` draft |
 | semi-ko-003 | `03_…md` | `taiwan-semiconductor-supply-contract-checklist` draft |
 
-재실행: `npx vite-node --root . --config vitest.config.ts src/lib/semiconductor-drafts-import.ts`
+재실행: `npx vite-node --root . --config vitest.config.ts scripts/import-semiconductor-drafts.ts`
 
 ## 실행한 검증
 

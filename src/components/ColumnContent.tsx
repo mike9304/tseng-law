@@ -91,6 +91,13 @@ export function resolveColumnMarkdownLinkHref(
   return getConsultationPublicMailto(locale);
 }
 
+const FOOTNOTE_LABELS: Record<SiteLocale, string> = {
+  ko: '각주',
+  'zh-hant': '註腳',
+  en: 'Footnotes',
+  ja: '脚注',
+};
+
 export default function ColumnContent({
   content,
   locale,
@@ -102,6 +109,11 @@ export default function ColumnContent({
     <div className="column-markdown" data-column-content="markdown">
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkUnderline]}
+        remarkRehypeOptions={
+          locale
+            ? { footnoteLabel: FOOTNOTE_LABELS[locale] }
+            : undefined
+        }
         components={{
           img: ({ src, alt }) => {
             if (!src) return null;

@@ -726,7 +726,6 @@ export default function CinematicOpening({
           mobileMp4Src={CINEMATIC_OPENING_MEDIA.mobile.mp4}
           alt={copy.mediaAlt}
           sizes="100vw"
-          eagerVideoMount
           deferVideoUntilPosterPaint
           priority
           rootMargin="0px"

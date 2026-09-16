@@ -1,0 +1,11 @@
+# WO-M8-review-R2 — columns-ar 배치1 R1·R2 후 재검토(이전 docs/seo/reviews/M8-COLUMNS-AR-REVIEW.md 의 FAIL 항목이 해소됐는지 항목별 확인 + 새 FAIL만 보고; summary·서명은 프런트매터 동형 계약상 미채택으로 PASS 처리) (Grok 4.6, 읽기+REVIEW 파일만)
+## 대상 (워크트리 ~/Projects/tseng-law-mena-20260916)
+src/content/columns-ar/{015,011,008,012,007}-*.md. 대조 원문 = 같은 슬러그의 src/content/columns-en/ 및 src/content/columns/(ko). 산출 docs/seo/reviews/M8-COLUMNS-AR-REVIEW-R2.md 하나. 원본 수정 금지. Bash 금지.
+## 항목 (파일별 PASS/FAIL + 줄 + 수정안)
+1. **사실 일치**: 원문에 없는 법률 주장·숫자·사례 추가 0, 원문 핵심 사실 누락 0(조문 번호·기관명·절차 순서). 한자 병기 유지 여부.
+2. **MSA 품질**: 파일당 8문장 이상 샘플 — 문법·철자·hamza·타 마르부타, 법률 용어(예: 遣散費 → 해당 아랍어 용어 일관성, 過失 비율, 監護權), 걸프·이집트 독자 모두 자연스러운지. 교정문.
+3. **언어 계약**: 아랍어 상담·통역 제공 암시 0(칼럼 말미 CTA 포함), 상담 언어 4개 문장이 있으면 정확.
+4. **광고 규정**: 승소율·보장·최고/유일·결과 예측 0. 사례 서술이 "당사 승소" 식으로 과장되지 않았는지.
+5. **frontmatter**: title·description·categories(RC2 라벨 3종 중 하나)·date_display 숫자형·faq 구조가 en과 대응하는지, 슬러그 원문 유지.
+6. **세무 결정 준수**: 營所稅·원천·협정 숫자 0(배치1은 세율 없는 편만 선정됨 — 실제로 0인지 확인), 邵允平 0.
+마지막 줄: 총평 PASS/FAIL 과 파일별 FAIL 수.

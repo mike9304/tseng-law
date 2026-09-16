@@ -1,0 +1,4 @@
+RC5 render 15:16:04 72546fa7
+/ar/columns 200 cards=17
+004 200 arabic=55073 inLang=1 dir=1 marker=0
+ar/llms columns=17

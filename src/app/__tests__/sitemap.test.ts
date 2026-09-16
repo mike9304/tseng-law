@@ -103,12 +103,12 @@ describe('sitemap column lastModified', () => {
     }).toEqual({
       // Base includes EN file-backed columns + JA home, /about, /services,
       // /pricing, /contact, /lawyers, /lawyers/wei-tseng, /faq, /videos,
-      // /privacy, /disclaimer, /accessibility, three JA intent pages,
+      // /privacy, /disclaimer, /accessibility, four JA intent pages,
       // /korean-lawyer-in-taiwan, /guides/taiwan-company-setup,
       // /columns archive, 17 JA column details, and all six JA service
-      // details (+41). Builder fixtures still drop 9 EN-only noindex routes.
-      beforeFiltering: 167,
-      afterFiltering: 158,
+      // details (+42). Builder fixtures still drop 9 EN-only noindex routes.
+      beforeFiltering: 171,
+      afterFiltering: 162,
       removed: 9,
     });
 
@@ -291,6 +291,7 @@ describe('sitemap column lastModified', () => {
     '/taiwan-lawyer',
     '/taiwan-company-setup-lawyer',
     '/taiwan-litigation-lawyer',
+    '/taiwan-semiconductor-supplier-legal',
     '/korean-lawyer-in-taiwan',
     '/guides/taiwan-company-setup',
   ])('publishes Japanese %s exactly once', async (path) => {

@@ -5,6 +5,7 @@ export const intentPageSlugs = [
   'taiwan-lawyer',
   'taiwan-company-setup-lawyer',
   'taiwan-litigation-lawyer',
+  'taiwan-semiconductor-supplier-legal',
 ] as const;
 
 export type IntentPageSlug = (typeof intentPageSlugs)[number];
@@ -105,7 +106,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       idealFor: [
         '한국 본사 기준으로 대만 법인 구조를 결정해야 하는 경우',
         '지사와 자회사 중 어느 형태가 맞는지 비교가 필요한 경우',
-        '화장품·물류 등 업종별 인허가를 병행해야 하는 경우',
+        '화장품·물류·반도체 소재·장비 등 업종별 인허가를 병행해야 하는 경우',
         '설립 이후 비자, 상표, 근로계약까지 같이 검토하고 싶은 경우',
       ],
       reviewPoints: [
@@ -128,7 +129,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       cautionPoints: [
         '업종 코드와 실제 사업 내용이 다르면 허가 단계에서 지연될 수 있습니다.',
         '은행 계좌 개설은 설립 완료와 별개로 시간이 더 걸릴 수 있습니다.',
-        '화장품·물류·식품·플랫폼 업종은 추가 규제가 붙을 수 있습니다.',
+        '화장품·물류·식품·플랫폼·반도체 소재·장비 업종은 추가 규제가 붙을 수 있습니다.',
         '비자와 노동계약을 나중에 따로 보면 일정이 늘어집니다.',
       ],
       serviceSlugs: ['investment', 'ip', 'labor'],
@@ -222,6 +223,88 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         },
       ],
     },
+    'taiwan-semiconductor-supplier-legal': {
+      slug: 'taiwan-semiconductor-supplier-legal',
+      label: '검색 가이드',
+      title: '대만 반도체 소재·장비 공급사 법무 | 법인설립·계약·고용·미수금',
+      description:
+        '한국 반도체 소재·장비 공급사가 대만에서 법인설립, 공급 계약, 고용, 미수금을 검토할 때 확인하는 변호사 상담 안내입니다. 상담은 4개 언어, 시간당 NT$3,000입니다.',
+      keywords: [
+        '대만 반도체 소재 장비',
+        '대만 반도체 공급사 법무',
+        '대만 법인설립',
+        '대만 공급 계약',
+        '대만 미수금',
+      ],
+      searchTerms: [
+        '대만 반도체 소재 장비 법무',
+        '대만 반도체 공급사 법인설립',
+        '대만 장비 공급사 계약',
+      ],
+      heroPoints: [
+        '한국 반도체 소재·장비 중소기업이 대만에서 자회사·지사·연락사무소를 비교하고, 설립 이후 계약·고용까지 이어서 볼 수 있습니다.',
+        '법인등기만으로 영업·계약·고용이 끝나지 않습니다. 설립과 운영을 한 흐름으로 정리합니다.',
+        '상담은 4개 언어로 가능하며, 일반 법률상담은 시간당 NT$3,000입니다. 설립은 흔히 약 3개월을 기준으로 잡습니다.',
+      ],
+      idealFor: [
+        '한국 소재·장비 공급사가 대만 거래처 대응을 위해 현지 법인을 검토하는 경우',
+        '자회사·지사·연락사무소 중 어떤 형태가 공급·설치·유지보수 모델에 맞는지 비교가 필요한 경우',
+        '대만 바이어·대리점과의 공급 계약, 대금, 하자 책임을 먼저 정리하고 싶은 경우',
+        '현지 채용과 미수금 회수를 설립 일정과 같이 보고 싶은 경우',
+      ],
+      reviewPoints: [
+        '설립 일정은 투자 승인, 자본금 송금, 업종 표기에 따라 달라지며, 흔히 약 3개월을 계획합니다.',
+        '법인등기와 실제 공급 계약·설치 일정은 별개입니다.',
+        '고용 계약과 현장 인력을 나중에 붙이면 운영 시작이 밀립니다.',
+        '미수금은 계약서, 납품·검수 기록, 청구서가 있어야 검토가 됩니다.',
+      ],
+      processFlow: [
+        '공급 모델(직접 판매, 대리점, 설치·유지보수)과 대만 내 필요 기능을 기준으로 자회사·지사·연락사무소를 비교합니다.',
+        '주주 구조, 자본금, 영업 주소, 예상 일정을 정리해 설립 전제조건을 확정합니다.',
+        '등기 이후 계약, 고용, 대금 회수 흐름을 같은 일정표에 올립니다.',
+      ],
+      prepareChecklist: [
+        '한국 본사 등기서류, 주주·대표자 정보',
+        '공급 품목(소재·장비), 거래 상대, 기존 견적·계약',
+        '예상 자본금, 송금 계획, 대만 인력 필요 여부',
+        '미수금이 있으면 청구서, 납품 기록, 상대방 회사 정보',
+      ],
+      cautionPoints: [
+        '회사설립만 마치고 공급 계약·고용 조건을 나중에 보면 운영 시작이 늦어집니다.',
+        '업종 코드와 실제 공급·설치 범위가 다르면 후속 절차가 막힐 수 있습니다.',
+        '연락사무소는 영업 활동 범위가 제한되는 경우가 많습니다.',
+        '미수금 대응은 초기에 증거를 모으지 않으면 시간이 더 걸립니다.',
+      ],
+      serviceSlugs: ['investment', 'civil', 'labor', 'ip'],
+      columnSlugs: [
+        'taiwan-company-establishment-basics',
+        'taiwan-company-subsidiary-vs-branch',
+        'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
+        'taiwan-logistics-business-setup',
+      ],
+      faq: [
+        {
+          question: '대만 회사설립은 보통 얼마나 걸리나요?',
+          answer:
+            '일반적으로 약 3개월 전후를 예상하지만, 투자 승인 대상 여부, 자본금 송금 시점, 업종 표기에 따라 달라질 수 있습니다.',
+        },
+        {
+          question: '자회사, 지사, 연락사무소 중 어떤 형태를 쓰나요?',
+          answer:
+            '책임 구조, 세무, 현지에서 할 업무 범위에 따라 달라집니다. 독립 운영과 계약을 현지에서 맺으려면 자회사를, 본사 직결이면 지사를, 연락·조사 기능이면 연락사무소를 검토하는 경우가 많습니다.',
+        },
+        {
+          question: '회사설립만 마치면 공급과 고용도 끝나는 건가요?',
+          answer:
+            '그렇지 않습니다. 법인등기는 시작점이고, 공급 계약, 근로계약, 미수금 대응은 별도로 설계해야 합니다.',
+        },
+        {
+          question: '상담 언어와 상담료는 어떻게 되나요?',
+          answer:
+            '상담은 4개 언어로 가능하며, 일반 법률상담은 대면 또는 화상으로 시간당 NT$3,000입니다. 사건 수임 비용은 자료를 확인한 뒤 별도로 안내합니다.',
+        },
+      ],
+    },
   },
   'zh-hant': {
     'taiwan-lawyer': {
@@ -300,7 +383,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       idealFor: [
         '需要依韓國總公司結構規劃台灣法人型態的人',
         '正在比較分公司與子公司差異的人',
-        '需同時處理化妝品、物流等特定產業許可的人',
+        '需同時處理化妝品、物流、半導體材料與設備等特定產業許可的人',
         '希望設立後把簽證、商標、勞動契約一起規劃的人',
       ],
       reviewPoints: [
@@ -323,7 +406,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       cautionPoints: [
         '若行業別和實際營運內容不一致，後續許可可能被卡住。',
         '銀行開戶常與公司設立完成時間不同步，需預留時間。',
-        '化妝品、物流、食品、平台等產業常有附加規範。',
+        '化妝品、物流、食品、平台、半導體材料與設備等產業常有附加規範。',
         '若把簽證與勞動安排延後處理，整體上線時間會被拉長。',
       ],
       serviceSlugs: ['investment', 'ip', 'labor'],
@@ -414,6 +497,88 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
           question: '訴訟前也能幫忙評估是否適合和解嗎？',
           answer:
             '可以，但是否適合和解仍需先看損害範圍、責任比例與目前證據狀態。',
+        },
+      ],
+    },
+    'taiwan-semiconductor-supplier-legal': {
+      slug: 'taiwan-semiconductor-supplier-legal',
+      label: '搜尋指南',
+      title: '台灣半導體材料與設備供應商法務 | 公司設立、契約、勞務、欠款追索',
+      description:
+        '供海外半導體材料與設備供應商整理在台公司設立、供應契約、勞務與欠款追索時需先確認的範圍。諮詢提供四種語言，一般法律諮詢每小時 NT$3,000。',
+      keywords: [
+        '台灣半導體材料設備',
+        '台灣半導體供應商法務',
+        '台灣公司設立',
+        '台灣供應契約',
+        '台灣欠款追索',
+      ],
+      searchTerms: [
+        '台灣半導體材料設備法務',
+        '台灣半導體供應商公司設立',
+        '台灣設備供應商契約',
+      ],
+      heroPoints: [
+        '海外半導體材料與設備供應商可比較台灣子公司、分公司與聯絡處，並把設立後的契約與雇用接續規劃。',
+        '完成公司登記並不代表營運、契約或雇用已經就緒。設立與營運應分開檢視。',
+        '諮詢提供四種語言，一般法律諮詢每小時 NT$3,000，可面談或視訊。公司設立常以約 3 個月為規劃基準。',
+      ],
+      idealFor: [
+        '外國投資人需要在台灣設立據點，以便銷售、安裝或維修材料與設備',
+        '正在比較子公司、分公司與聯絡處，哪一種較符合供應與售後模式',
+        '希望先整理對台灣買方或代理商的供應契約、付款條件與瑕疵責任',
+        '需要把在地雇用與欠款追索，和設立時程一起規劃',
+      ],
+      reviewPoints: [
+        '設立時程會受投資審查、資本匯入與營業項目影響，實務上常以約 3 個月規劃。',
+        '公司登記與實際供貨、安裝契約是不同工作。',
+        '若把勞動契約留到人員已到位才處理，上線時間通常會延後。',
+        '欠款追索需要契約、交貨或驗收紀錄、以及請款資料才能判斷。',
+      ],
+      processFlow: [
+        '先依直銷、代理、安裝或售後等供應模式，比較子公司、分公司與聯絡處。',
+        '確認股東結構、資本額、營業地址與申請順序後，再啟動設立。',
+        '登記完成後，把契約、雇用文件與收款流程排進同一份時程。',
+      ],
+      prepareChecklist: [
+        '海外母公司登記文件、股權結構、負責人資料',
+        '材料或設備範圍、交易對象、既有報價或契約',
+        '預計資本額、匯款安排、是否聘用台灣人員',
+        '若已有欠款：發票、交貨紀錄、對方公司資料',
+      ],
+      cautionPoints: [
+        '只完成公司設立、卻把供應契約與雇用條件往後延，營運開始時間通常會拉長。',
+        '登記的營業項目若與實際供應或安裝內容不符，後續流程可能受阻。',
+        '聯絡處能從事的商業活動範圍通常較有限。',
+        '若未先整理交貨與驗收資料，欠款追索會更費時。',
+      ],
+      serviceSlugs: ['investment', 'civil', 'labor', 'ip'],
+      columnSlugs: [
+        'taiwan-company-establishment-basics',
+        'taiwan-company-subsidiary-vs-branch',
+        'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
+        'taiwan-logistics-business-setup',
+      ],
+      faq: [
+        {
+          question: '台灣公司設立通常需要多久？',
+          answer:
+            '一般約 3 個月左右，但仍需視投資審查、資本匯入時間與營業項目而定。',
+        },
+        {
+          question: '子公司、分公司與聯絡處，通常怎麼選？',
+          answer:
+            '取決於責任結構、稅務，以及在台灣實際要做的業務範圍。若要獨立簽約與營運，常考慮子公司；若要維持母公司直接延伸，則可能考慮分公司；若主要是聯絡與調查，則可能考慮聯絡處。',
+        },
+        {
+          question: '只完成公司登記，供應與雇用就結束了嗎？',
+          answer:
+            '不會。公司登記只是起點，供應契約、勞動契約與欠款追索仍需另外規劃。',
+        },
+        {
+          question: '諮詢語言與費用如何計算？',
+          answer:
+            '諮詢提供四種語言。一般法律諮詢每小時 NT$3,000，可面談或視訊。案件費用會在檢視資料後另行說明。',
         },
       ],
     },
@@ -508,7 +673,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       idealFor: [
         'Businesses deciding which Taiwan entity structure fits the overseas parent',
         'Teams comparing branch versus subsidiary setup',
-        'Companies entering regulated sectors such as cosmetics or logistics',
+        'Companies entering regulated sectors such as cosmetics, logistics, or semiconductor materials and equipment',
         'Clients who want setup, visas, trademarks, and employment issues reviewed together',
       ],
       reviewPoints: [
@@ -531,7 +696,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       cautionPoints: [
         'If the industry code does not match the real business model, permit work may stall later.',
         'Bank account opening often takes longer than clients expect, even after registration is done.',
-        'Cosmetics, logistics, food, platform, and similar sectors may require additional approvals.',
+        'Cosmetics, logistics, food, platform, semiconductor materials and equipment, and similar sectors may require additional approvals.',
         'If visas and labor structuring are treated as an afterthought, the launch timeline usually slips.',
       ],
       serviceSlugs: ['investment', 'ip', 'labor'],
@@ -643,6 +808,88 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         },
       ],
     },
+    'taiwan-semiconductor-supplier-legal': {
+      slug: 'taiwan-semiconductor-supplier-legal',
+      label: 'SEARCH GUIDE',
+      title: 'Taiwan Legal Support for Overseas Semiconductor Materials and Equipment Suppliers',
+      description:
+        'Legal support in Taiwan for overseas semiconductor materials and equipment suppliers, covering company setup, supply contracts, employment, and unpaid invoices. Consultations are NT$3,000 per hour and available in four languages.',
+      keywords: [
+        'Taiwan semiconductor supplier legal',
+        'semiconductor materials equipment Taiwan',
+        'Taiwan company setup',
+        'Taiwan supply contract',
+        'Taiwan unpaid invoices',
+      ],
+      searchTerms: [
+        'Taiwan semiconductor materials equipment legal',
+        'semiconductor supplier company setup Taiwan',
+        'Taiwan equipment supplier contracts',
+      ],
+      heroPoints: [
+        'Overseas semiconductor materials and equipment suppliers can compare a Taiwan subsidiary, branch, or representative office, then map contracts and hiring onto the same plan.',
+        'Incorporation is not the same as operating: supply contracts, employment, and collections still need their own review.',
+        'Consultations are available in four languages, in person or by video, at NT$3,000 per hour. Company setup is often planned around three months.',
+      ],
+      idealFor: [
+        'Overseas materials or equipment suppliers that need a Taiwan presence to sell, install, or service locally',
+        'Teams comparing subsidiary, branch, and representative-office structures for a supply model',
+        'Companies that want supply contracts, payment terms, and warranty allocation reviewed before launch',
+        'Clients who need local hiring or unpaid-invoice follow-up handled with the setup work',
+      ],
+      reviewPoints: [
+        'Setup timing depends on investment review, capital remittance, and the stated business scope; a common planning assumption is around three months.',
+        'Company registration does not by itself complete operating contracts or employment arrangements.',
+        'Employment terms should be designed with the launch timeline, not after staff are already on site.',
+        'Unpaid invoices are reviewed from the contract, delivery or acceptance records, and the demand history.',
+      ],
+      processFlow: [
+        'Start from the supply model—direct sales, distributor, installation, or after-sales—and compare subsidiary, branch, and representative office.',
+        'Confirm shareholders, capital, business address, and the filing sequence before incorporation work begins.',
+        'After registration, line up contracts, employment documents, and collections on the same calendar.',
+      ],
+      prepareChecklist: [
+        'Overseas parent-company registry documents, shareholder structure, and director details',
+        'Product or equipment scope, counterparties, and existing quotations or contracts',
+        'Expected capital amount, remittance plan, and whether Taiwan staff will be hired',
+        'For unpaid invoices: invoices, delivery records, and counterparty company details',
+      ],
+      cautionPoints: [
+        'Treating incorporation as the finish line usually delays contracts and hiring.',
+        'If the registered business scope does not match actual supply or installation work, later steps can stall.',
+        'A representative office often cannot carry on full commercial activity.',
+        'Collections take longer when delivery and acceptance records were never organized.',
+      ],
+      serviceSlugs: ['investment', 'civil', 'labor', 'ip'],
+      columnSlugs: [
+        'taiwan-company-establishment-basics',
+        'taiwan-company-subsidiary-vs-branch',
+        'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
+        'taiwan-logistics-business-setup',
+      ],
+      faq: [
+        {
+          question: 'How long does Taiwan company setup usually take?',
+          answer:
+            'A common planning assumption is around three months, but the timeline depends on investment review, capital timing, and the stated business scope.',
+        },
+        {
+          question: 'Which structure is used: subsidiary, branch, or representative office?',
+          answer:
+            'It depends on liability, tax, and the work that must be done in Taiwan. Subsidiaries are common for independent local contracting, branches can fit direct parent-company operations, and representative offices are usually limited to liaison functions.',
+        },
+        {
+          question: 'Is company registration enough to start supplying and hiring?',
+          answer:
+            'Usually not. Incorporation is the starting point; supply contracts, employment documents, and unpaid-invoice follow-up still need a separate plan.',
+        },
+        {
+          question: 'What does a consultation cost, and which languages are available?',
+          answer:
+            'A general legal consultation is NT$3,000 per hour, in person or by video, and is available in four languages. Case fees are quoted after the documents are reviewed.',
+        },
+      ],
+    },
   },
   ja: {
     'taiwan-lawyer': {
@@ -718,7 +965,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       idealFor: [
         '日本本社基準で台湾法人の構造を決める必要がある場合',
         '支店と子会社のどちらの形態が適切か比較が必要な場合',
-        '化粧品・物流など業種別の許認可を並行する必要がある場合',
+        '化粧品・物流・半導体素材・装置など業種別の許認可を並行する必要がある場合',
         '設立後のビザ、商標、労働契約まであわせて検討したい場合',
       ],
       reviewPoints: [
@@ -741,7 +988,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       cautionPoints: [
         '業種コードと実際の事業内容が異なると許可段階で遅れることがあります。',
         '銀行口座の開設は設立完了とは別にさらに時間がかかることがあります。',
-        '化粧品・物流・食品・プラットフォーム業種は追加規制が付くことがあります。',
+        '化粧品・物流・食品・プラットフォーム・半導体素材・装置業種は追加規制が付くことがあります。',
         'ビザと労働契約を後で別に検討するとスケジュールが長くなります。',
       ],
       serviceSlugs: ['investment', 'ip', 'labor'],
@@ -840,6 +1087,88 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: '台湾の取引先からの未払い・契約違反にはどう対応しますか？',
           answer: '契約書・請求書・やり取りをもとに責任と回収可能額を検討し、交渉による和解、民事訴訟、強制執行の選択肢を比較してご提案します。',
+        },
+      ],
+    },
+    'taiwan-semiconductor-supplier-legal': {
+      slug: 'taiwan-semiconductor-supplier-legal',
+      label: '検索ガイド',
+      title: '台湾の半導体素材・装置サプライヤー法務 | 会社設立・契約・労務・売掛',
+      description:
+        '日本の半導体素材・装置サプライヤーが台湾で会社を設立し、供給契約・労務・売掛を進める際の確認事項をまとめた案内です。相談は4言語、1時間NT$3,000です。',
+      keywords: [
+        '台湾 半導体 素材 装置',
+        '台湾 半導体 サプライヤー 法務',
+        '台湾会社設立',
+        '台湾 供給契約',
+        '台湾 売掛',
+      ],
+      searchTerms: [
+        '台湾 半導体素材 装置 法務',
+        '台湾 半導体サプライヤー 会社設立',
+        '台湾 装置サプライヤー 契約',
+      ],
+      heroPoints: [
+        '日本の半導体素材・装置サプライヤーが、台湾の子会社・支店・駐在員事務所を比較し、設立後の契約と雇用まで同じ流れで検討できます。',
+        '会社設立は営業・契約・雇用の完了ではありません。設立と運営を分けて整理します。',
+        '相談は4言語に対応し、一般法律相談は1時間NT$3,000です。設立はおおむね3か月を目安にします。',
+      ],
+      idealFor: [
+        '日本企業が台湾の取引先対応のため、現地法人の要否を検討している場合',
+        '子会社・支店・駐在員事務所のどれが供給・据付・保守モデルに合うか比較が必要な場合',
+        '台湾の買い手や代理店との供給契約、代金、瑕疵責任を先に整理したい場合',
+        '現地雇用と売掛対応を設立スケジュールとあわせて見たい場合',
+      ],
+      reviewPoints: [
+        '設立の期間は投資承認、資本金送金、業種の記載によって変わり、実務上は約3か月を目安にします。',
+        '法人登記と実際の供給契約・据付スケジュールは別の作業です。',
+        '労働契約と現場人員を後回しにすると、稼働開始が遅れます。',
+        '売掛の検討には契約書、納品・検収記録、請求書が必要です。',
+      ],
+      processFlow: [
+        '直接販売、代理店、据付・保守などの供給モデルを基準に、子会社・支店・駐在員事務所を比較します。',
+        '株主構成、資本金、営業住所、申請順を整理して設立の前提条件を確定します。',
+        '登記後の契約、雇用、代金回収の流れを同じスケジュールに載せます。',
+      ],
+      prepareChecklist: [
+        '日本本社の登記書類、株主構成、代表者情報',
+        '供給品目（素材・装置）、取引先、既存の見積・契約',
+        '予定資本金、送金計画、台湾での人材採用の有無',
+        '売掛がある場合は請求書、納品記録、相手方の会社情報',
+      ],
+      cautionPoints: [
+        '会社設立だけ先に終え、供給契約と雇用条件を後回しにすると稼働開始が遅くなります。',
+        '業種コードと実際の供給・据付範囲が異なると、後続手続きが止まることがあります。',
+        '駐在員事務所は営業活動の範囲が限られる場合が多いです。',
+        '納品と検収の記録を早めに集めないと、売掛対応に時間がかかります。',
+      ],
+      serviceSlugs: ['investment', 'civil', 'labor', 'ip'],
+      columnSlugs: [
+        'taiwan-company-establishment-basics',
+        'taiwan-company-subsidiary-vs-branch',
+        'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
+        'taiwan-logistics-business-setup',
+      ],
+      faq: [
+        {
+          question: '台湾の会社設立は通常どのくらいかかりますか？',
+          answer:
+            '一般的に約3ヶ月前後を見込みますが、投資承認の対象かどうか、資本金送金の時期、業種の記載によって変わることがあります。',
+        },
+        {
+          question: '子会社、支店、駐在員事務所のどれを使いますか？',
+          answer:
+            '責任構造、税務、台湾で行う業務の範囲によって異なります。独立して契約・運営する場合は子会社を、本社直結なら支店を、連絡・調査が中心なら駐在員事務所を検討するケースが多いです。',
+        },
+        {
+          question: '会社設立だけ依頼すれば供給と雇用も終わりますか？',
+          answer:
+            'そうではありません。法人登記は出発点であり、供給契約、労働契約、売掛対応は別に設計する必要があります。',
+        },
+        {
+          question: '相談の言語と相談料はどうなりますか？',
+          answer:
+            '相談は4言語に対応し、一般法律相談は対面またはビデオで1時間NT$3,000です。案件の費用は資料を確認したうえで別途ご案内します。',
         },
       ],
     },

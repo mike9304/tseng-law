@@ -247,6 +247,44 @@ const relatedResources: Record<
       },
     },
   ],
+  'taiwan-semiconductor-supplier-legal': [
+    {
+      href: 'lawyers/wei-tseng',
+      label: {
+        ko: '증준외 변호사 프로필',
+        'zh-hant': '曾雋崴律師簡介',
+        en: 'Attorney Wei Tseng profile',
+        ja: '曾雋崴弁護士のプロフィール',
+      },
+    },
+    {
+      href: 'taiwan-company-setup-lawyer',
+      label: {
+        ko: '대만 법인설립·회사설립 변호사 안내',
+        'zh-hant': '台灣公司設立律師指南',
+        en: 'Taiwan company setup lawyer guide',
+        ja: '台湾会社設立弁護士ガイド',
+      },
+    },
+    {
+      href: 'taiwan-litigation-lawyer',
+      label: {
+        ko: '대만 소송 변호사 안내',
+        'zh-hant': '台灣訴訟律師指南',
+        en: 'Taiwan litigation lawyer guide',
+        ja: '台湾訴訟弁護士ガイド',
+      },
+    },
+    {
+      href: 'guides/taiwan-company-setup',
+      label: {
+        ko: '대만 회사설립 종합 가이드',
+        'zh-hant': '台灣公司設立完整指南',
+        en: 'Complete Taiwan company setup guide',
+        ja: '台湾会社設立 総合ガイド',
+      },
+    },
+  ],
 };
 
 export default function IntentLandingPage({

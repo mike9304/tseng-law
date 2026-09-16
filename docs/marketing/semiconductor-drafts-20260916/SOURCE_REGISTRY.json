@@ -1,0 +1,903 @@
+{
+  "scope": "Official sources cited in the three manuscripts; not a copied source archive or live uptime report.",
+  "unique_source_urls": 57,
+  "sources": [
+    {
+      "url": "https://academy.iccwbo.org/incoterms/article/incoterms-2020-new-rules-old-problems/",
+      "link_labels": [
+        "Incoterms® 2020: new rules, old problems"
+      ],
+      "used_in": [
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S001",
+      "host": "academy.iccwbo.org",
+      "source_type": "official_guidance_or_rule_authority_explanation"
+    },
+    {
+      "url": "https://gcis.nat.gov.tw/F/t70047_p",
+      "link_labels": [
+        "외국회사 지사 등록 서식 및 첨부서류 안내"
+      ],
+      "used_in": [
+        "semi-ko-001"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S002",
+      "host": "gcis.nat.gov.tw",
+      "source_type": "official_guidance_or_rule_authority_explanation"
+    },
+    {
+      "url": "https://law.moea.gov.tw/LawContent.aspx?id=FL011292",
+      "link_labels": [
+        "경제부 회사법 원문"
+      ],
+      "used_in": [
+        "semi-ko-001"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S003",
+      "host": "law.moea.gov.tw",
+      "source_type": "official_statute"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0040002",
+      "link_labels": [
+        "외국인투자조례"
+      ],
+      "used_in": [
+        "semi-ko-001"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S004",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "외국인투자조례",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=1&pcode=J0080001",
+      "link_labels": [
+        "제1조"
+      ],
+      "used_in": [
+        "semi-ko-001"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S005",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "회사법",
+      "article": "1",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=103&pcode=B0000001",
+      "link_labels": [
+        "제103조"
+      ],
+      "used_in": [
+        "semi-ko-001"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S006",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "103",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=127&pcode=B0000001",
+      "link_labels": [
+        "제127조 제8호"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S007",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "127",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=128&pcode=B0000001",
+      "link_labels": [
+        "제128조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S008",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "128",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=129&pcode=B0000001",
+      "link_labels": [
+        "제129조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S009",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "129",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=130&pcode=B0000001",
+      "link_labels": [
+        "제130조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S010",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "130",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=144&pcode=B0000001",
+      "link_labels": [
+        "제144조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S011",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "144",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=153&pcode=B0000001",
+      "link_labels": [
+        "제153조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S012",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "153",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=2&pcode=J0080001",
+      "link_labels": [
+        "제2조"
+      ],
+      "used_in": [
+        "semi-ko-001"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S013",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "회사법",
+      "article": "2",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=20&pcode=B0000007",
+      "link_labels": [
+        "제20조"
+      ],
+      "used_in": [
+        "semi-ko-002",
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S014",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "섭외민사법률적용법",
+      "article": "20",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001",
+      "link_labels": [
+        "제216조"
+      ],
+      "used_in": [
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S015",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "216",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=222&pcode=B0000001",
+      "link_labels": [
+        "제222조"
+      ],
+      "used_in": [
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S016",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "222",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=227&pcode=B0000001",
+      "link_labels": [
+        "제227조"
+      ],
+      "used_in": [
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S017",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "227",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=247-1&pcode=B0000001",
+      "link_labels": [
+        "제247조의1"
+      ],
+      "used_in": [
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S018",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "247-1",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=252&pcode=B0000001",
+      "link_labels": [
+        "제252조"
+      ],
+      "used_in": [
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S019",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "252",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=264&pcode=B0000001",
+      "link_labels": [
+        "제264조"
+      ],
+      "used_in": [
+        "semi-ko-002",
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S020",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "264",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=3&pcode=J0080001",
+      "link_labels": [
+        "제3조"
+      ],
+      "used_in": [
+        "semi-ko-001"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S021",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "회사법",
+      "article": "3",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=334&pcode=B0000001",
+      "link_labels": [
+        "제334조"
+      ],
+      "used_in": [
+        "semi-ko-002",
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S022",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "334",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=335&pcode=B0000001",
+      "link_labels": [
+        "제335조"
+      ],
+      "used_in": [
+        "semi-ko-002",
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S023",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "335",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=354&pcode=B0000001",
+      "link_labels": [
+        "제354조"
+      ],
+      "used_in": [
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S024",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "354",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=356&pcode=B0000001",
+      "link_labels": [
+        "제356조"
+      ],
+      "used_in": [
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S025",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "356",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=357&pcode=B0000001",
+      "link_labels": [
+        "제357조"
+      ],
+      "used_in": [
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S026",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "357",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=359&pcode=B0000001",
+      "link_labels": [
+        "제359조"
+      ],
+      "used_in": [
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S027",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "359",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=360&pcode=B0000001",
+      "link_labels": [
+        "제360조"
+      ],
+      "used_in": [
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S028",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "360",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=364&pcode=B0000001",
+      "link_labels": [
+        "제364조"
+      ],
+      "used_in": [
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S029",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "364",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=365&pcode=B0000001",
+      "link_labels": [
+        "제365조"
+      ],
+      "used_in": [
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S030",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "365",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=366&pcode=B0000001",
+      "link_labels": [
+        "제366조"
+      ],
+      "used_in": [
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S031",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "366",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=368&pcode=B0010001",
+      "link_labels": [
+        "제368조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S032",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민사소송법",
+      "article": "368",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=371&pcode=J0080001",
+      "link_labels": [
+        "제371조"
+      ],
+      "used_in": [
+        "semi-ko-001"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S033",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "회사법",
+      "article": "371",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=373&pcode=B0000001",
+      "link_labels": [
+        "제373조"
+      ],
+      "used_in": [
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S034",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "373",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=386&pcode=J0080001",
+      "link_labels": [
+        "제386조"
+      ],
+      "used_in": [
+        "semi-ko-001"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S035",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "회사법",
+      "article": "386",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=4&pcode=B0010004",
+      "link_labels": [
+        "제4조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S036",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "강제집행법",
+      "article": "4",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=4&pcode=J0080001",
+      "link_labels": [
+        "제4조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S037",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "회사법",
+      "article": "4",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=4-1&pcode=B0010004",
+      "link_labels": [
+        "제4조의1"
+      ],
+      "used_in": [
+        "semi-ko-002",
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S038",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "강제집행법",
+      "article": "4-1",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=402&pcode=B0010001",
+      "link_labels": [
+        "제402조"
+      ],
+      "used_in": [
+        "semi-ko-002",
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S039",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민사소송법",
+      "article": "402",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=43&pcode=N0090001",
+      "link_labels": [
+        "제43조"
+      ],
+      "used_in": [
+        "semi-ko-001"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S040",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "취업서비스법",
+      "article": "43",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=490&pcode=B0000001",
+      "link_labels": [
+        "제490조"
+      ],
+      "used_in": [
+        "semi-ko-002",
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S041",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민법",
+      "article": "490",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=508&pcode=B0010001",
+      "link_labels": [
+        "제508조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S042",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민사소송법",
+      "article": "508",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=509&pcode=B0010001",
+      "link_labels": [
+        "제509조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S043",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민사소송법",
+      "article": "509",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=511&pcode=B0010001",
+      "link_labels": [
+        "제511조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S044",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민사소송법",
+      "article": "511",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=516&pcode=B0010001",
+      "link_labels": [
+        "제516조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S045",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민사소송법",
+      "article": "516",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=519&pcode=B0010001",
+      "link_labels": [
+        "제519조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S046",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민사소송법",
+      "article": "519",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=521&pcode=B0010001",
+      "link_labels": [
+        "제521조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S047",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민사소송법",
+      "article": "521",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=522&pcode=B0010001",
+      "link_labels": [
+        "제522조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S048",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민사소송법",
+      "article": "522",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=523&pcode=B0010001",
+      "link_labels": [
+        "제523조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S049",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민사소송법",
+      "article": "523",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=526&pcode=B0010001",
+      "link_labels": [
+        "제526조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S050",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민사소송법",
+      "article": "526",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=531&pcode=B0010001",
+      "link_labels": [
+        "제531조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S051",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민사소송법",
+      "article": "531",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=96&pcode=B0010001",
+      "link_labels": [
+        "제96조"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S052",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "민사소송법",
+      "article": "96",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=99&pcode=J0080001",
+      "link_labels": [
+        "제99조"
+      ],
+      "used_in": [
+        "semi-ko-001"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S053",
+      "host": "law.moj.gov.tw",
+      "source_type": "official_statute",
+      "law_name_ko": "회사법",
+      "article": "99",
+      "source_consolidation_cutoff": "2026-09-04"
+    },
+    {
+      "url": "https://www.judicial.gov.tw/tw/cp-1654-2724-b486e-1.html",
+      "link_labels": [
+        "지급명령 효력 안내"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S054",
+      "host": "www.judicial.gov.tw",
+      "source_type": "official_guidance_or_rule_authority_explanation"
+    },
+    {
+      "url": "https://www.judicial.gov.tw/tw/cp-1693-941725-89986-1.html",
+      "link_labels": [
+        "대만 타이베이 지방법원의 가압류 심사 관련 설명"
+      ],
+      "used_in": [
+        "semi-ko-002"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S055",
+      "host": "www.judicial.gov.tw",
+      "source_type": "official_guidance_or_rule_authority_explanation"
+    },
+    {
+      "url": "https://www.moea.gov.tw/Mns/dir/Investment/DirApply.aspx?kind=A&menu_id=42814",
+      "link_labels": [
+        "외국인 투자 신청 절차 안내"
+      ],
+      "used_in": [
+        "semi-ko-001"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S056",
+      "host": "www.moea.gov.tw",
+      "source_type": "official_guidance_or_rule_authority_explanation"
+    },
+    {
+      "url": "https://www.trade.gov/know-your-incoterms",
+      "link_labels": [
+        "Know Your Incoterms"
+      ],
+      "used_in": [
+        "semi-ko-003"
+      ],
+      "source_checked_at": "2026-09-16",
+      "source_id": "S057",
+      "host": "www.trade.gov",
+      "source_type": "official_guidance_or_rule_authority_explanation"
+    }
+  ]
+}

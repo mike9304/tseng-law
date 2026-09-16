@@ -9177,6 +9177,37 @@ a.floating-ai-chat-contact-item:hover strong {
 .column-table-wrap th { background: rgba(22,58,95,0.05); padding: 0.6rem 1rem; text-align: left; font-weight: 600; }
 .column-table-wrap td { padding: 0.6rem 1rem; border-top: 1px solid var(--neutral-100); }
 
+.semi-draft-page { background: var(--surface, #fff); }
+.semi-draft-reading {
+  max-width: 48rem;
+}
+.semi-draft-banner {
+  margin: 0 0 1.75rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--neutral-200);
+  border-radius: 12px;
+  background: rgba(22, 58, 95, 0.04);
+  color: var(--neutral-800, #1f2933);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+.semi-draft-banner-kicker {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.semi-draft-banner p { margin: 0.25rem 0 0; }
+.semi-draft-page .button--outline.svc-sidebar-btn {
+  margin-top: 0.65rem;
+  justify-content: center;
+  width: 100%;
+}
+@media (max-width: 720px) {
+  .semi-draft-reading { max-width: 100%; }
+}
+
 /* ===== BUTTON OUTLINE VARIANT ===== */
 .button--outline {
   display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.5rem;

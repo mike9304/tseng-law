@@ -1,0 +1,54 @@
+{
+  "package_id": "tseng-law-semiconductor-2026-09-16",
+  "public_publication": false,
+  "notes": "suggested_route is the package proposal. Public routes 404 until lawyer review and owner publish. Preview is local (design-preview) or admin-auth (admin-builder).",
+  "items": [
+    {
+      "id": "semi-service-ko",
+      "title": "반도체 기업 법무",
+      "suggested_route": "/ko/services/semiconductor-companies",
+      "public_route_status": "404_not_registered",
+      "preview_path": "/ko/design-preview/semiconductor",
+      "admin_preview_path": "/ko/admin-builder/semiconductor-preview",
+      "source_file": "src/content/semiconductor-drafts/00_semiconductor_service_page.ko.md",
+      "cms_draft_id": null,
+      "review_status": "NEEDS_LAWYER_REVIEW"
+    },
+    {
+      "id": "semi-ko-001",
+      "title": "반도체 부품회사의 대만 진출: 현지 법인·지사·대리점 중 무엇을 검토해야 할까?",
+      "suggested_route": "/ko/columns/taiwan-semiconductor-market-entry",
+      "public_route_status": "404_not_registered",
+      "preview_path": "/ko/design-preview/semiconductor/columns/taiwan-semiconductor-market-entry",
+      "admin_preview_path": "/ko/admin-builder/semiconductor-preview/columns/taiwan-semiconductor-market-entry",
+      "source_file": "src/content/semiconductor-drafts/01_taiwan_semiconductor_market_entry.ko.md",
+      "cms_draft_id": "taiwan-semiconductor-market-entry",
+      "cms_draft_path": "runtime-data/consultation-columns/ko/taiwan-semiconductor-market-entry.json",
+      "review_status": "NEEDS_LAWYER_REVIEW"
+    },
+    {
+      "id": "semi-ko-002",
+      "title": "대만 거래처가 반도체 부품대금을 지급하지 않을 때: 해외 기업의 상담 준비와 대응",
+      "suggested_route": "/ko/columns/taiwan-semiconductor-unpaid-invoices",
+      "public_route_status": "404_not_registered",
+      "preview_path": "/ko/design-preview/semiconductor/columns/taiwan-semiconductor-unpaid-invoices",
+      "admin_preview_path": "/ko/admin-builder/semiconductor-preview/columns/taiwan-semiconductor-unpaid-invoices",
+      "source_file": "src/content/semiconductor-drafts/02_taiwan_semiconductor_unpaid_invoices.ko.md",
+      "cms_draft_id": "taiwan-semiconductor-unpaid-invoices",
+      "cms_draft_path": "runtime-data/consultation-columns/ko/taiwan-semiconductor-unpaid-invoices.json",
+      "review_status": "NEEDS_LAWYER_REVIEW"
+    },
+    {
+      "id": "semi-ko-003",
+      "title": "대만 반도체 부품 공급계약: 검수·대금지급·하자책임 체크리스트",
+      "suggested_route": "/ko/columns/taiwan-semiconductor-supply-contract-checklist",
+      "public_route_status": "404_not_registered",
+      "preview_path": "/ko/design-preview/semiconductor/columns/taiwan-semiconductor-supply-contract-checklist",
+      "admin_preview_path": "/ko/admin-builder/semiconductor-preview/columns/taiwan-semiconductor-supply-contract-checklist",
+      "source_file": "src/content/semiconductor-drafts/03_taiwan_semiconductor_supply_contract.ko.md",
+      "cms_draft_id": "taiwan-semiconductor-supply-contract-checklist",
+      "cms_draft_path": "runtime-data/consultation-columns/ko/taiwan-semiconductor-supply-contract-checklist.json",
+      "review_status": "NEEDS_LAWYER_REVIEW"
+    }
+  ]
+}

@@ -24,7 +24,7 @@ const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 export const repoRoot = resolve(scriptDirectory, '..');
 export const DEFAULT_SOURCE_DIR = join(repoRoot, 'src/content/columns');
 
-export const GUIDANCE_LANGS = ['vi', 'id', 'th', 'fil'];
+export const GUIDANCE_LANGS = ['vi', 'id', 'th', 'fil', 'ar'];
 export const HANZI_MIN = 5;
 export const ENGLISH_WORD_MIN = 12;
 export const ENGLISH_STOPWORD_MIN = 3;
@@ -90,6 +90,16 @@ export const FORBIDDEN_PHRASES = {
     { id: 'fil-always-on', re: /24\s*\/\s*7\s+consult/i, note: '즉시/상시 상담' },
     { id: 'fil-free-consult', re: /libreng\s+konsultasyon|free\s+consultation/i, note: '비용 보장(무료 상담)' },
   ],
+  ar: [
+    { id: 'ar-consult-lang', re: /(?:و)?(?:نقدم|تتوفر|توفر)\s+(?:ال)?استشار[ةا]ت?\s+(?:باللغة\s+)?العربية|(?:و)?استشارة\s+بالعربية/u, note: 'ar 상담 가능' },
+    { id: 'ar-interpreter', re: /(?:و)?(?:نوفر|يتوفر|لدينا)\s+(?:ال)?مترجم|(?:و)?خدمة\s+الترجمة\s+(?:الفورية|متاحة)/u, note: '통역 제공' },
+    { id: 'ar-immediate', re: /(?:و)?رد\s+فوري|(?:و)?نرد\s+(?:فورًا|فوراً|خلال\s+دقائق)/u, note: '즉시 응답' },
+    { id: 'ar-success-rate', re: /(?:و)?نسبة\s+(?:النجاح|الفوز|الربح)|(?:و)?معدل\s+(?:النجاح|الفوز)/u, note: '성공률' },
+    { id: 'ar-win-100', re: /100\s*%\s*(?:فوز|نجاح)/u, note: '성공률 100%' },
+    { id: 'ar-cost-guarantee', re: /(?:و)?نضمن\s+(?:الفوز|النتيجة|النتائج|التكلفة)|(?:و)?ضمان\s+(?:الفوز|النتيجة|التكلفة)/u, note: '비용/결과 보장' },
+    { id: 'ar-always-on', re: /24\s*\/\s*7|(?:و)?على\s+مدار\s+الساعة/u, note: '즉시/상시 상담' },
+    { id: 'ar-free-consult', re: /(?:و)?استشارة\s+مجانية|(?:و)?مجان[اً]?\s+(?:ال)?استشارة/u, note: '비용 보장(무료 상담)' },
+  ],
 };
 
 /** Locale-prefix swaps that are allowed; everything else must stay byte-identical to source href. */
@@ -125,6 +135,29 @@ export const NATIONALITY_TERMS = {
   id: ['kewarganegaraan Indonesia', 'Indonesia', 'WNI'],
   th: ['สัญชาติไทย', 'คนไทย', 'ไทย'],
   fil: ['pagkamamamayang Pilipino', 'Pilipinas', 'Pilipino', 'Filipino'],
+  ar: [
+    'الجنسية الكورية',
+    'كوريا الجنوبية',
+    'كوريا',
+    'الكوريون',
+    'الكوريين',
+    'فيتنام',
+    'إندونيسيا',
+    'تايلاند',
+    'الفلبين',
+    'اليابان',
+    'الصين',
+    'الولايات المتحدة',
+    'أمريكا',
+    'السعودية',
+    'الإمارات',
+    'مصر',
+    'قطر',
+    'الكويت',
+    'البحرين',
+    'عُمان',
+    'عمان',
+  ],
 };
 
 export const NATIONALITY_LANGUAGE_NAMES = {
@@ -132,6 +165,7 @@ export const NATIONALITY_LANGUAGE_NAMES = {
   id: [/bahasa\s*indonesia/gi],
   th: [/ภาษาไทย/gu],
   fil: [/wikang\s+filipino/gi, /\bsa\s+filipino\b/gi, /filipino\s+language/gi],
+  ar: [/اللغة\s*العربية/gu, /بالعربية/gu, /اللغة\s*الكورية/gu, /بالكورية/gu],
 };
 
 export const SOURCE_LANGUAGE_NAME_RE = /한국어|베트남어|인도네시아어|태국어|필리핀어|영어|일본어|중국어|타이완어|대만어/g;
@@ -1258,6 +1292,7 @@ const LANGID_SCRIPTS = [
   { id: 'thai', lang: 'th', re: /[\u0E00-\u0E7F]/u, label: '태국 문자' },
   { id: 'hangul', lang: 'ko', re: /[\uAC00-\uD7A3]/u, label: '한글' },
   { id: 'kana', lang: 'ja', re: /[\u3040-\u30FF]/u, label: '가나' },
+  { id: 'arabic', lang: 'ar', re: /[؀-ۿݐ-ݿ]/u, label: '아랍 문자' },
 ];
 
 // 베트남어 고유 결합 문자(다른 라틴 로케일에 나타나면 혼입)

@@ -11,6 +11,7 @@ import {
   findCurrencyHits,
   findLangidHits,
   FORBIDDEN_PHRASES,
+  GUIDANCE_LANGS,
   checkPair,
   main,
 } from './check-column-translation.mjs';
@@ -134,7 +135,7 @@ function runCli(args, cwd) {
 }
 
 test('forbidden phrase tables have 5–10 patterns per guidance language', () => {
-  for (const lang of ['vi', 'id', 'th', 'fil']) {
+  for (const lang of GUIDANCE_LANGS) {
     const count = FORBIDDEN_PHRASES[lang].length;
     assert.ok(count >= 5 && count <= 10, `${lang} has ${count} patterns`);
   }
@@ -316,6 +317,38 @@ test('forbidden vi interpreter FAILs with line', () => {
   });
   assert.equal(statuses(result).forbidden, 'FAIL');
   assert.match(result.checks.find((check) => check.id === 'forbidden').details.join('\n'), /vi-interpreter/);
+});
+
+test('forbidden ar success-rate FAILs with line', () => {
+  const body = targetDoc({ lang: 'ar' }).split(/^---$/m).slice(2).join('---').replace(
+    'Doan mo dau voi 資遣 解僱 員工 年資 勞動.',
+    'فقرة 資遣 解僱 員工 年資 勞動. نسبة النجاح في القضايا.',
+  );
+  const result = checkPair({
+    sourceRaw: sourceDoc(),
+    targetRaw: targetDoc({ lang: 'ar', body }),
+    sourcePath: 'src.md',
+    targetPath: 'ar.md',
+    lang: 'ar',
+  });
+  assert.equal(statuses(result).forbidden, 'FAIL');
+  assert.match(result.checks.find((check) => check.id === 'forbidden').details.join('\n'), /ar-success-rate/);
+});
+
+test('forbidden ar free-consult FAILs', () => {
+  const body = targetDoc({ lang: 'ar' }).split(/^---$/m).slice(2).join('---').replace(
+    'Doan mo dau voi 資遣 解僱 員工 年資 勞動.',
+    'فقرة 資遣 解僱 員工 年資 勞動. استشارة مجانية متاحة.',
+  );
+  const result = checkPair({
+    sourceRaw: sourceDoc(),
+    targetRaw: targetDoc({ lang: 'ar', body }),
+    sourcePath: 'src.md',
+    targetPath: 'ar.md',
+    lang: 'ar',
+  });
+  assert.equal(statuses(result).forbidden, 'FAIL');
+  assert.match(result.checks.find((check) => check.id === 'forbidden').details.join('\n'), /ar-free-consult/);
 });
 
 test('fil leftover English is WARN only and does not fail the pair', () => {
@@ -880,6 +913,12 @@ test('langid: 베트남어 고유 결합 문자가 다른 라틴 로케일에 �
   const hits = findLangidHits('Pesangon diberikan berdasarkan thời hạn kerja', 1, 'id');
   assert.equal(hits.length, 1);
   assert.equal(hits[0].script, 'vi');
+});
+
+test('Arabic script inside a vi body FAILs langid', () => {
+  const hits = findLangidHits('Công ty استشارة tại Đài Loan', 1, 'vi');
+  assert.equal(hits.length, 1);
+  assert.equal(hits[0].script, 'arabic');
 });
 
 

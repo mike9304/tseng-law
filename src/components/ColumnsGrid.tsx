@@ -4,8 +4,12 @@ import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
-import type { PublicLocale8 } from '@/lib/public-guidance';
-import { isExistingSiteLocale4 } from '@/lib/public-guidance';
+import {
+  isExistingSiteLocale4,
+  isGuidanceLocale4,
+  type GuidanceLocale4,
+  type PublicLocale8,
+} from '@/lib/public-guidance';
 import styles from './ColumnsGrid.module.css';
 
 const searchCopy = {
@@ -103,6 +107,81 @@ const categoryLabels = {
   ja: { all: 'すべて', formation: '台湾会社設立', legal: '台湾法律情報', case: '訴訟事例分析' },
 } as const;
 
+/**
+ * "All" word already present in reviewed `viewAllLabel` copy
+ * (`src/data/international-guidance-content.ts`: vi 'Xem tất cả', id 'Lihat semua',
+ * th 'ดูทั้งหมด', fil 'Tingnan lahat', ar 'عرض الكل'). This client file cannot
+ * import `guidanceColumnCategoryLabel` from `src/lib/columns.ts` (`fs`).
+ */
+const GUIDANCE_FILTER_ALL_LABEL: Record<GuidanceLocale4, string> = {
+  vi: 'Tất cả',
+  id: 'Semua',
+  th: 'ทั้งหมด',
+  fil: 'Lahat',
+  ar: 'الكل',
+};
+
+/** Same strings `guidanceColumnCategoryLabel` returns in `src/lib/columns.ts`. */
+const GUIDANCE_FILTER_CATEGORY_LABEL: Record<GuidanceLocale4, Record<ColumnCategory, string>> = {
+  vi: {
+    formation: 'Thành lập công ty tại Đài Loan',
+    legal: 'Thông tin pháp luật Đài Loan',
+    case: 'Phân tích vụ án tố tụng',
+  },
+  id: {
+    formation: 'Pendirian Perusahaan di Taiwan',
+    legal: 'Informasi Hukum Taiwan',
+    case: 'Analisis Kasus Litigasi',
+  },
+  th: {
+    formation: 'การจัดตั้งบริษัทในไต้หวัน',
+    legal: 'ข้อมูลกฎหมายไต้หวัน',
+    case: 'การวิเคราะห์คดีตัวอย่าง',
+  },
+  fil: {
+    formation: 'Pagtatatag ng Kompanya sa Taiwan',
+    legal: 'Impormasyong Legal sa Taiwan',
+    case: 'Pagsusuri ng Kaso sa Paglilitis',
+  },
+  ar: {
+    formation: 'تأسيس الشركات',
+    legal: 'معلومات قانونية',
+    case: 'دراسات قضايا',
+  },
+};
+
+/** Reviewed `home.columnsReadMoreLabel` — same CTA GuidanceHomeBody already uses. */
+const GUIDANCE_CARD_READ_MORE_LABEL: Record<GuidanceLocale4, string> = {
+  vi: 'Đọc tiếp',
+  id: 'Baca selengkapnya',
+  th: 'อ่านต่อ',
+  fil: 'Basahin pa',
+  ar: 'متابعة القراءة',
+};
+
+function categoryFilterLabels(locale: PublicLocale8) {
+  if (isGuidanceLocale4(locale)) {
+    return {
+      all: GUIDANCE_FILTER_ALL_LABEL[locale],
+      ...GUIDANCE_FILTER_CATEGORY_LABEL[locale],
+    };
+  }
+  return categoryLabels[locale];
+}
+
+function columnCardCtaLabel(locale: PublicLocale8): string {
+  if (isGuidanceLocale4(locale)) {
+    return `${GUIDANCE_CARD_READ_MORE_LABEL[locale]} →`;
+  }
+  return locale === 'ko'
+    ? '칼럼 보기 →'
+    : locale === 'zh-hant'
+      ? '查看專欄 →'
+      : locale === 'ja'
+        ? 'コラムを読む →'
+        : 'Open column →';
+}
+
 function normalizeFilterValue(value: string | string[] | null | undefined): string {
   return Array.isArray(value) ? value[0] ?? '' : value ?? '';
 }
@@ -130,7 +209,7 @@ export default function ColumnsGrid({
   initialFilters?: ColumnsGridFilters;
 }) {
   const uiLocale = isExistingSiteLocale4(locale) ? locale : 'en';
-  const labels = categoryLabels[uiLocale];
+  const labels = categoryFilterLabels(locale);
   const byline =
     locale === 'ko'
       ? '증준외 변호사 검토'
@@ -329,7 +408,7 @@ export default function ColumnsGrid({
                 <h3 className="columns-card-title">{post.title}</h3>
                 <p className="columns-card-summary">{post.summary}</p>
                 <span className="columns-card-linkhint">
-                  {locale === 'ko' ? '칼럼 보기 →' : locale === 'zh-hant' ? '查看專欄 →' : locale === 'ja' ? 'コラムを読む →' : 'Open column →'}
+                  {columnCardCtaLabel(locale)}
                 </span>
               </div>
             </Link>

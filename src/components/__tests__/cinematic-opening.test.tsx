@@ -375,7 +375,7 @@ describe('cinematic opening content and semantics', () => {
     expect(source).toContain(
       'controlLabels={DECORATIVE_VIDEO_CONTROL_LABELS[locale]}',
     );
-    expect(source).toContain('eagerVideoMount');
+    expect(source).not.toContain('eagerVideoMount');
     expect(source).toContain('deferVideoUntilPosterPaint');
     expect(source).toContain('<DecorativeAutoplayVideo');
     expect(globalCss).toContain('content-visibility: hidden');

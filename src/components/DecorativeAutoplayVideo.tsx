@@ -130,14 +130,13 @@ export function shouldMountDecorativeVideo({
   eagerVideoMount,
   idleReady,
   nearViewport,
-  inViewport,
   waitForPosterPaint = false,
 }: {
   enabled: boolean;
   eagerVideoMount: boolean;
   idleReady: boolean;
   nearViewport: boolean;
-  inViewport: boolean;
+  inViewport?: boolean;
   waitForPosterPaint?: boolean;
 }): boolean {
   return (
@@ -145,7 +144,7 @@ export function shouldMountDecorativeVideo({
     && !waitForPosterPaint
     && (
       eagerVideoMount
-      || (nearViewport && (idleReady || inViewport))
+      || (nearViewport && idleReady)
     )
   );
 }

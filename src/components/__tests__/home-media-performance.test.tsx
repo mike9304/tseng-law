@@ -154,7 +154,7 @@ describe('home media loading', () => {
       idleReady: false,
       nearViewport: true,
       inViewport: true,
-    })).toBe(true);
+    })).toBe(false);
     expect(shouldMountDecorativeVideo({
       enabled: true,
       eagerVideoMount: false,

@@ -568,6 +568,13 @@ const WORD_NUMERAL_FIXTURES = {
     missing: ['과태료 4만 신타이완달러와 조문 12.', 'Tanging artikulo 12 na lang.'],
     altered: ['과태료 4만 신타이완달러.', 'Multa na 50,000 TWD.'],
   },
+  ar: {
+    word: ['기한은 15일이고 의결은 3분의 2이며 근속은 1년이다.', 'المدة خمسة عشر يوما، والنصاب ثلثان، ومدة الخدمة سنة كاملة.'],
+    scale: ['배상액 157만 대만달러.', 'تعويض 1.57 مليون دولار تايواني.'],
+    approx: ['한 번에 10여 개의 업종.', 'نحو عشرة أنواع من الأنشطة.'],
+    missing: ['과태료 4만 신타이완달러와 조문 12.', 'لم يبق إلا المادة 12.'],
+    altered: ['과태료 4만 신타이완달러.', 'غرامة 50,000 TWD.'],
+  },
 };
 
 function numbersCheck(lang, sourceTail, targetTail) {
@@ -585,7 +592,7 @@ function numbersCheck(lang, sourceTail, targetTail) {
   });
 }
 
-for (const lang of ['vi', 'id', 'th', 'fil']) {
+for (const lang of ['vi', 'id', 'th', 'fil', 'ar']) {
   const fx = WORD_NUMERAL_FIXTURES[lang];
 
   test(`numbers: ${lang} word numerals PASS`, () => {
@@ -669,6 +676,33 @@ test('numbers: fil "isang"/"isa" do not excuse a genuinely dropped number', () =
   assert.match(details, /\b3\b/);
 });
 
+test('numbers: ar word-form طرف ثالث / سنة كاملة / شهر واحد PASS', () => {
+  const result = numbersCheck(
+    'ar',
+    '제3자와 계약하면 기간은 1년 또는 1개월이다.',
+    'إذا تعاقد مع طرف ثالث فالمدة سنة كاملة أو شهر واحد.',
+  );
+  assert.equal(
+    statuses(result).numbers,
+    'PASS',
+    JSON.stringify(result.checks.find((c) => c.id === 'numbers'), null, 2),
+  );
+  assert.equal(result.ok, true);
+});
+
+test('numbers: ar true omission of 5 FAILs', () => {
+  const result = numbersCheck(
+    'ar',
+    '기한은 5년이다.',
+    'المدة غير محددة دون ذكر العدد.',
+  );
+  assert.equal(result.ok, false);
+  assert.equal(statuses(result).numbers, 'FAIL');
+  const details = result.checks.find((check) => check.id === 'numbers').details.join('\n');
+  assert.match(details, /missing from translation/);
+  assert.match(details, /\b5\b/);
+});
+
 test('numbers: unknown numeral spelling WARNs 수사 미해석', () => {
   const result = numbersCheck(
     'id',
@@ -721,9 +755,19 @@ const ORDINAL_FIXTURES = {
       'Maaaring tumulong ang ibang tao na hindi partido.',
     ],
   },
+  ar: {
+    match: [
+      '제3자와 대만 사업에 공동 출자하려면 제2항과 제4호를 확인한다.',
+      'للمساهمة مع طرف ثالث في أعمال تايوان يلزم التحقق من الفقرة الثانية والبند الرابع.',
+    ],
+    unknown: [
+      '제3자와 대만 사업에 공동 출자하려면 검토가 필요하다.',
+      'للمساهمة مع طرف أجنبي يلزم إجراء دراسة.',
+    ],
+  },
 };
 
-for (const lang of ['vi', 'id', 'th', 'fil']) {
+for (const lang of ['vi', 'id', 'th', 'fil', 'ar']) {
   const fx = ORDINAL_FIXTURES[lang];
 
   test(`numbers: ${lang} ordinal/article wording PASS`, () => {

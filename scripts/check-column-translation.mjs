@@ -184,6 +184,7 @@ export const NUMBER_THOUSAND_STYLE = {
   id: 'dot',
   th: 'comma',
   fil: 'comma',
+  ar: 'comma',
 };
 
 /**
@@ -218,6 +219,7 @@ export const NUMBER_LANG_EXCEPTIONS = {
   id: [],
   th: [],
   fil: [],
+  ar: [],
 };
 
 /** Thai พ.ศ. year minus this offset is Gregorian. ค.ศ. is already Gregorian. */
@@ -258,6 +260,13 @@ export const MAGNITUDE_WORDS = {
     { word: 'libo', factor: 1_000 },
     { word: 'daan', factor: 100 },
   ],
+  ar: [
+    { word: 'مليار', factor: 1_000_000_000 },
+    { word: 'مليون', factor: 1_000_000 },
+    { word: 'ألف', factor: 1_000 },
+    { word: 'مئة', factor: 100 },
+    { word: 'مائة', factor: 100 },
+  ],
 };
 
 /** Approximation markers: do not emit a number; the adjacent numeral still does. */
@@ -278,6 +287,7 @@ export const UNPARSED_NUMERAL_HINTS = {
   id: /(?:[A-Za-z0-9]{2,})\s+(?:juta|miliar|ribu|ratus)\b|\b(?:belas|puluh|pertiga|perempat)\b/gi,
   th: /(?:[A-Za-z0-9]+)\s*(?:ล้าน|แสน|หมื่น|พัน|ร้อย)(?![\u0E00-\u0E7F])/gu,
   fil: /(?:[A-Za-z0-9]{2,})\s+milyon(?:g)?\b|\b(?:bilyon|katlo|labing-?\w+)\b/gi,
+  ar: /(?:[\p{L}0-9]{2,})\s+(?:مليون|مليار|ألف|مئة|مائة)(?![\p{L}\p{M}])/gu,
 };
 
 function pushPhrase(entries, phrase, values) {
@@ -301,7 +311,18 @@ function compilePhrases(entries) {
     seen.add(entry.phrase);
     const escaped = entry.phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+');
     const thai = /[\u0E00-\u0E7F]/.test(entry.phrase);
-    const re = thai ? new RegExp(escaped, 'gu') : new RegExp(`\\b${escaped}\\b`, 'giu');
+    const arabic = /[\u0600-\u06FF]/.test(entry.phrase);
+    let re;
+    if (thai) {
+      re = new RegExp(escaped, 'gu');
+    } else if (arabic) {
+      // JS \b is ASCII-only. Bound Arabic spellings by a letter/mark edge
+      // (space, punctuation, start/end) so عشر does not fire inside عشرون
+      // and ربع does not fire inside أربعة.
+      re = new RegExp(`(?<![\\p{L}\\p{M}])${escaped}(?![\\p{L}\\p{M}])`, 'gu');
+    } else {
+      re = new RegExp(`\\b${escaped}\\b`, 'giu');
+    }
     out.push({ phrase: entry.phrase, values: entry.values, re });
   }
   return out;
@@ -526,11 +547,105 @@ function buildFilLexicon() {
   return compilePhrases(entries);
 }
 
+function pushAr(entries, phrase, values) {
+  pushPhrase(entries, phrase, values);
+  const trimmed = String(phrase).normalize('NFC').trim();
+  if (trimmed && !trimmed.startsWith('ال')) {
+    pushPhrase(entries, `ال${trimmed}`, values);
+  }
+}
+
+function buildArLexicon() {
+  const entries = [];
+  const units = [
+    'سنة', 'سنوات', 'عام', 'أعوام', 'شهرا', 'شهر', 'أشهر', 'شهور',
+    'يوما', 'يوم', 'أيام', 'أسبوعا', 'أسبوع', 'أسابيع',
+    'مرة', 'مرات', 'ساعة', 'ساعات', 'شخص', 'أشخاص',
+  ];
+  const scales = [
+    ['مليار', 1_000_000_000],
+    ['مليون', 1_000_000],
+    ['آلاف', 1_000],
+    ['ألف', 1_000],
+    ['مئة', 100],
+    ['مائة', 100],
+  ];
+  const atoms = [
+    ['صفر', 0],
+    ['واحد', 1], ['واحدة', 1], ['أحد', 1], ['إحدى', 1],
+    ['اثنان', 2], ['اثنين', 2], ['اثنتان', 2], ['اثنتين', 2], ['اثنا', 2], ['اثني', 2],
+    ['ثلاث', 3], ['ثلاثة', 3],
+    ['أربع', 4], ['أربعة', 4],
+    ['خمس', 5], ['خمسة', 5],
+    ['ست', 6], ['ستة', 6],
+    ['سبع', 7], ['سبعة', 7],
+    ['ثمان', 8], ['ثماني', 8], ['ثمانية', 8],
+    ['تسع', 9], ['تسعة', 9],
+    ['عشر', 10], ['عشرة', 10],
+  ];
+  pushAr(entries, 'ثلاثة أرباع', [3, 4]);
+  pushAr(entries, 'ثلثان', [2, 3]);
+  pushAr(entries, 'ثلثين', [2, 3]);
+  pushAr(entries, 'نصف', [1, 2]);
+  pushAr(entries, 'ثلث', [1, 3]);
+  pushAr(entries, 'ربع', [1, 4]);
+  const teens = [
+    ['أحد عشر', 11], ['إحدى عشرة', 11],
+    ['اثنا عشر', 12], ['اثني عشر', 12], ['اثنتا عشرة', 12], ['اثنتي عشرة', 12],
+    ['ثلاثة عشر', 13], ['ثلاث عشرة', 13],
+    ['أربعة عشر', 14], ['أربع عشرة', 14],
+    ['خمسة عشر', 15], ['خمس عشرة', 15],
+    ['ستة عشر', 16], ['ست عشرة', 16],
+    ['سبعة عشر', 17], ['سبع عشرة', 17],
+    ['ثمانية عشر', 18], ['ثماني عشرة', 18], ['ثمان عشرة', 18],
+    ['تسعة عشر', 19], ['تسع عشرة', 19],
+  ];
+  for (const [phrase, value] of teens) pushAr(entries, phrase, [value]);
+  const tens = [
+    ['عشرون', 20], ['عشرين', 20],
+    ['ثلاثون', 30], ['ثلاثين', 30],
+    ['أربعون', 40], ['أربعين', 40],
+    ['خمسون', 50], ['خمسين', 50],
+    ['ستون', 60], ['ستين', 60],
+    ['سبعون', 70], ['سبعين', 70],
+    ['ثمانون', 80], ['ثمانين', 80],
+    ['تسعون', 90], ['تسعين', 90],
+  ];
+  const ones = atoms.filter(([, value]) => value >= 1 && value <= 9);
+  for (const [t, tv] of tens) {
+    pushAr(entries, t, [tv]);
+    for (const [o, ov] of ones) {
+      pushAr(entries, `${o} و${t}`, [tv + ov]);
+      pushAr(entries, `${o} و ${t}`, [tv + ov]);
+    }
+  }
+  pushAr(entries, 'سنة كاملة', [1]);
+  pushAr(entries, 'عام كامل', [1]);
+  pushPhrase(entries, 'السنة الكاملة', [1]);
+  pushPhrase(entries, 'العام الكامل', [1]);
+  pushAr(entries, 'شهر كامل', [1]);
+  pushAr(entries, 'يوم كامل', [1]);
+  for (const [atom, value] of atoms) {
+    if (value >= 1) {
+      for (const [scale, factor] of scales) pushAr(entries, `${atom} ${scale}`, [value * factor]);
+    }
+    if (value === 1) {
+      for (const unit of units) {
+        pushAr(entries, `${atom} ${unit}`, [value]);
+        pushAr(entries, `${unit} ${atom}`, [value]);
+      }
+    }
+    if (value >= 2) pushAr(entries, atom, [value]);
+  }
+  return compilePhrases(entries);
+}
+
 export const WORD_NUMERAL_LEXICONS = {
   vi: buildViLexicon(),
   id: buildIdLexicon(),
   th: buildThLexicon(),
   fil: buildFilLexicon(),
+  ar: buildArLexicon(),
 };
 
 export function lexiconEntryCount(lang) {
@@ -934,10 +1049,12 @@ function magnitudePattern(lang) {
     .map((item) => item.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
     .join('|');
   const thai = lang === 'th';
-  const unit = thai ? `(?:${body})` : `(?:${body})\\b`;
+  const arabic = lang === 'ar';
+  const unit = thai || arabic ? `(?:${body})` : `(?:${body})\\b`;
   const coeff = '(\\d{1,3}(?:[.,]\\d{3})+|\\d+[.,]\\d{1,2}|\\d+)';
+  const trailing = arabic ? '(?![\\p{L}\\p{M}])' : '';
   return {
-    re: new RegExp(`${coeff}\\s*${unit}`, thai ? 'gu' : 'giu'),
+    re: new RegExp(`${coeff}\\s*${unit}${trailing}`, thai || arabic ? 'gu' : 'giu'),
     factors: new Map(words.map((item) => [item.word.toLowerCase(), item.factor])),
   };
 }
@@ -1423,6 +1540,18 @@ const ORDINAL_WORD_N = {
     ikalawa: 2, pangalawa: 2, second: 2,
     ikatlo: 3, ikatlong: 3, third: 3,
   },
+  ar: {
+    الأول: 1, الأولى: 1, أول: 1, أولى: 1,
+    الثاني: 2, الثانية: 2, ثاني: 2, ثانية: 2,
+    الثالث: 3, الثالثة: 3, ثالث: 3, ثالثة: 3,
+    الرابع: 4, الرابعة: 4, رابع: 4, رابعة: 4,
+    الخامس: 5, الخامسة: 5, خامس: 5, خامسة: 5,
+    السادس: 6, السادسة: 6, سادس: 6, سادسة: 6,
+    السابع: 7, السابعة: 7, سابع: 7, سابعة: 7,
+    الثامن: 8, الثامنة: 8, ثامن: 8, ثامنة: 8,
+    التاسع: 9, التاسعة: 9, تاسع: 9, تاسعة: 9,
+    العاشر: 10, العاشرة: 10, عاشر: 10, عاشرة: 10,
+  },
 };
 
 function ordinalWordN(lang, word) {
@@ -1540,6 +1669,23 @@ function targetOrdinalSpecs(lang) {
       { kind: 'perday', n: 1, re: /bawat\s+araw|kada\s+araw|per\s+day|araw\s+kada/gi },
       { kind: 'type', re: /(?:isang\s+)?\b(unang|ikalawang|ikatlong)\s+uri\b/gi, nFrom: (match) => ordinalWordN('fil', match[1]) },
     ],
+    ar: (() => {
+      const keys = Object.keys(ORDINAL_WORD_N.ar)
+        .sort((a, b) => b.length - a.length)
+        .map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+        .join('|');
+      const nFrom = (match) => ordinalWordN('ar', match[1]);
+      return [
+        { kind: 'party', re: new RegExp(`(?:ال)?(?:أطراف|طرف)\\s+(${keys}|\\d+)`, 'gu'), nFrom },
+        { kind: 'country', re: new RegExp(`(?:ال)?(?:دول(?:ة)?|بلدان|بلاد|بلد)\\s+(${keys}|\\d+)`, 'gu'), nFrom },
+        { kind: 'instance', n: 1, re: /(?:ال)?محكمة\s+(?:ال)?ابتدائي(?:ة)?|الدرجة\s+(?:ال)?أول[ىي]|أول\s+درجة/gu },
+        { kind: 'instance', n: 2, re: /(?:ال)?استئناف|الدرجة\s+(?:ال)?ثاني(?:ة)?/gu },
+        { kind: 'paragraph', re: new RegExp(`(?:ال)?فقرة\\s+(${keys}|\\d+)`, 'gu'), nFrom },
+        { kind: 'item', re: new RegExp(`(?:ال)?بند\\s+(${keys}|\\d+)`, 'gu'), nFrom },
+        { kind: 'type', re: new RegExp(`(?:ال)?(?:نوع|فئة|صنف)\\s+(${keys}|\\d+)`, 'gu'), nFrom },
+        { kind: 'perday', n: 1, re: /لكل\s+يوم|في\s+(?:ال)?يوم|يومي[اً]?/gu },
+      ];
+    })(),
   };
   return tables[lang] ?? [];
 }

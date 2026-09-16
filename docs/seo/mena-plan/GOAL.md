@@ -38,7 +38,7 @@
 - 초안 브랜치 mena/ar-drafts-20260916 **8b9e7c4c**: 중재·집행 EN 랜딩 4로케일 + /ar/arbitration-enforcement(EXTRA 키 2단 구조), 마커 43. son7-b9 라우팅 독립 검수 PASS(214건, 미발행 로케일 unavailable·sitemap ar만·코어 10 불변). x-default는 2언어 이상 시점에 규칙 결정. ② 단계(ASK-3)에서 vi/id/th/fil 본문 추가 후 변호사 검수. `visa-residence`는 본문 생길 때 EXTRA_PAGE_KEYS/LOCALES 2줄.
 
 ## B9. 004 사용자 결정(2026-09-16 14:4x, 터미널 직접 "004도 배포 진행해")
-- 004(세무 중심 편) 보류 해제 → 판정 A와 동일 원칙(ko 원문 기게재 사실 축자, 신설 0)으로 아랍어판 생성 → Grok 검토 → RC5 → 배포(승인 선행 접수, 게이트는 동일).
+- 004(세무 중심 편) 보류 해제 → 판정 A와 동일 원칙(ko 원문 기게재 사실 축자, 신설 0)으로 아랍어판 생성 → **사용자 추가 지시(14:5x) "004 오면 바로 배포해"** → 게이트(체커·tsc·build·렌더) 통과 즉시 push, Grok 검토는 사후(FAIL 시 R1 후속 배포).
 
 ## B8. RC4 배포 완료(2026-09-16 14:31)
 - 사용자 승인(손빗 중계 ASK-1415) → push e285ae0f..9e9928d8 FF → Vercel success 14:31 → 라이브 /ar/columns 16카드·영어 뱃지 0, 001 아랍어 렌더·마커 0, 라이브 서수 잔재 0, /ar/llms.txt 칼럼 16. **columns-ar 16/17 라이브(004 보류)**.

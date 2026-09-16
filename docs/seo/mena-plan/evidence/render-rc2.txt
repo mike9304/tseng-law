@@ -1,0 +1,3 @@
+vi home badges: 0 english-fallback;    6 Thành lập công ty tại Đài Loan 
+ar home badges: 2 english-fallback;   10 تأسيس الشركات 
+id home badges: 0 english-fallback; 

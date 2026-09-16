@@ -37,6 +37,11 @@
 - son7-b9 mena/ar-routing-20260916: 2d435998 뱃지 ar 라벨·guidanceColumnCategoryLabel 리졸버(vi/id/th/fil 영어 폴백 테스트 핀), 7a23c160 **SEA 카테고리 붕괴 수정**(vi/id/th/fil 칼럼 17편이 categoryFromString 미인식으로 전부 legal → frontmatter 문구 정규화·파리티 테스트, unit 10818). 결정: RC(76360346) 동결, ar 배포 후 RC2로 merge→게이트→ASK. vi/id/th/fil 뱃지 라벨은 frontmatter 문구 재사용.
 - 초안 브랜치 mena/ar-drafts-20260916 **8b9e7c4c**: 중재·집행 EN 랜딩 4로케일 + /ar/arbitration-enforcement(EXTRA 키 2단 구조), 마커 43. son7-b9 라우팅 독립 검수 PASS(214건, 미발행 로케일 unavailable·sitemap ar만·코어 10 불변). x-default는 2언어 이상 시점에 규칙 결정. ② 단계(ASK-3)에서 vi/id/th/fil 본문 추가 후 변호사 검수. `visa-residence`는 본문 생길 때 EXTRA_PAGE_KEYS/LOCALES 2줄.
 
+## B3. 확장(X1) 사용자 결정(9/16 09:5x, 손빗 중계) — 전 레인 공통 제약
+- **신규 안내 로케일 신설 금지**(ms/my 등). 말레이시아·유사 권역은 기존 zh-hant·en 칼럼·의도 페이지 강화로만. 상담 언어 EN/ZH/JA/KO 유지. 재질문 금지.
+- **간체(zh-hans) 영구 제외** — 착수·보류·리스크 페이지 어떤 형태로도 추가 금지. 재질문 금지.
+- phase 2 언어(M4c-PHASE2-LANGS: ur/tr/fa/he)도 위 결정에 따라 로케일 신설 대상 아님 — 문서 보관만.
+
 ## B. 미결·ASK
 - 배포·유료광고·외부 등재 = ASK. 코드·기획·초안은 진행.
 - SEA W1 측정과 병행: SEA 대기 프로세스는 유지, 상태는 OUT에.

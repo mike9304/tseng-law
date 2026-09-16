@@ -33,9 +33,34 @@
 - MENA는 SEA와 달리 대만 내 체류 모수가 거의 없음 → 타깃은 **대만과 거래·투자하는 걸프 기업(AE·SA)**과 **이집트 체류자**. 콘텐츠 우선은 ① 회사설립·투자 ② 계약분쟁·**중재·외국판정 집행**(사이트 공백) ③ 미수금.
 - ar 안내 10페이지는 기본이고, 신규 페이지 후보(중재·집행 en/ar, 비자 en/ar)는 마커 초안 → 변호사 검수.
 
+## B2. RC2 대기(배포 후 merge)
+- son7-b9 mena/ar-routing-20260916: 2d435998 뱃지 ar 라벨·guidanceColumnCategoryLabel 리졸버(vi/id/th/fil 영어 폴백 테스트 핀), 7a23c160 **SEA 카테고리 붕괴 수정**(vi/id/th/fil 칼럼 17편이 categoryFromString 미인식으로 전부 legal → frontmatter 문구 정규화·파리티 테스트, unit 10818). 결정: RC(76360346) 동결, ar 배포 후 RC2로 merge→게이트→ASK. vi/id/th/fil 뱃지 라벨은 frontmatter 문구 재사용.
+- 초안 브랜치 mena/ar-drafts-20260916 **8b9e7c4c**: 중재·집행 EN 랜딩 4로케일 + /ar/arbitration-enforcement(EXTRA 키 2단 구조), 마커 43. son7-b9 라우팅 독립 검수 PASS(214건, 미발행 로케일 unavailable·sitemap ar만·코어 10 불변). x-default는 2언어 이상 시점에 규칙 결정. ② 단계(ASK-3)에서 vi/id/th/fil 본문 추가 후 변호사 검수. `visa-residence`는 본문 생길 때 EXTRA_PAGE_KEYS/LOCALES 2줄.
+
+## B4. MENA SERP 베이스라인(배포 전, son7-b9 X6R, 2026-09-16)
+- 출처 ~/Projects/tseng-law-sea-state/expansion/MENA-SERP-BASELINE-2026-09.md. DDG kl=xa-ar 12질의: 아랍어 6질의 상위10에 대만 로펌 아랍어 페이지 0·tseng 0(GTranslate 디렉터리·걸프 로펌이 점유) / 영어 6질의 tseng-law.com/en Q7 1위·Q8 4위·Q9 1위·Q10 2위. Google gl=ae 9셀 tseng 0(이후 CAPTCHA), Bing 미측정. wei-wei/hovering 전 셀 미노출.
+- 릴리스 노트 문구: "아랍어 의도 질의 6종에서 대만 로펌 1차 아랍어 콘텐츠 경쟁 0 — /ar 배포는 공백 첫 진입, 배포 후 동일 스크립트(ddg_collect.py·pw_serp.js) 재측정".
+- phase 2 후보(기록만): /ar/guides/taiwan-company-setup(EN 가이드 MSA), 외국인 투자자 법인세 ar 페이지 — 세무 숫자 비게재 결정과 충돌하지 않는 범위에서만.
+
+## B3. 확장(X1) 사용자 결정(9/16 09:5x, 손빗 중계) — 전 레인 공통 제약
+- **신규 안내 로케일 신설 금지**(ms/my 등). 말레이시아·유사 권역은 기존 zh-hant·en 칼럼·의도 페이지 강화로만. 상담 언어 EN/ZH/JA/KO 유지. 재질문 금지.
+- **간체(zh-hans) 영구 제외** — 착수·보류·리스크 페이지 어떤 형태로도 추가 금지. 재질문 금지.
+- phase 2 언어(M4c-PHASE2-LANGS: ur/tr/fa/he)도 위 결정에 따라 로케일 신설 대상 아님 — 문서 보관만.
+
 ## B. 미결·ASK
 - 배포·유료광고·외부 등재 = ASK. 코드·기획·초안은 진행.
 - SEA W1 측정과 병행: SEA 대기 프로세스는 유지, 상태는 OUT에.
 
 ## C. 로그
 - 2026-09-16 02:3x · Fable 5.1 · 워크트리 생성, M0-a·M0-b 발주. 02:5x son7-b9/son7-db와 분담 합의. 자동 로케일 의견 OUT 발송.
+
+### M6 세무·회계 축 + 형사·민사 보강 (son7-b9 WO-X2 §7.1 이관, 2026-09-16 09:xx)
+- [ ] 2026-09-16 X2 리서치(Grok) MENA-TAX-LITIGATION-INTENT-2026-09.md: ⑦ DTA는 SA만 있음(발효 2021-11-01, law.moj.gov.tw Y0040302). AE·QA·KW·BH·OM·EG는 條約協定名稱 기준 없음. MOF 36개 명단 페이지 미확인.
+- [ ] X2 후속(제안, 미착수): `/en/taiwan-litigation-lawyer` FAQ + `/ar/services` 민사 절에 仲裁法 제47조·민소 제402조 축자 보강(G8·G9). 신규 키 C1/C2는 소유 파일 충돌 피해서 별도 데이터 파일 검토.
+- [ ] X2 후속(제안, 미착수): `/en/services/criminal` + `/ar/services` 형사 절에 刑訴 71-1·93·95·99·110·251 축자. 아랍어 통역 제공 문장 금지. 영사 통보(G5)는 조문 미확인 → 침묵.
+- [ ] X2 ASK 대기: 회계 파트너 실체(邵允平 Hovering Accounting Office vs 黃勝平 勤信) · 21%/12.5%/「DTA 없음」 공개 여부 변호사 검수.
+- **사용자 결정(9/16 09:2x, 손빗 중계)**: 회계 파트너 공개 연결은 **黃勝平(勤信)만**. 邵允平(호정회계)은 문구·연결에 넣지 않음. 재질문 금지. (X2 ASK-1 종결)
+- **사용자 결정(9/16 09:3x)**: 세무 숫자(營所稅 20%·원천 21%·DTA 12.5%)·「DTA 없음」 부정 사실은 ar/EN 안내에 넣지 않음. 현행 「세무·회계 지원」 문구만. 재질문 금지. (ASK-2 종결 → ⑦ 세무·회계 축은 문구 신설 없음, 리서치 문서 보관만; ASK-3 형사·민사 보강 범위 대기)
+- **사용자 결정(9/16 09:4x, ASK-3)**: ① EN 소송 FAQ + /ar/services 형사·민사 절 보강 **먼저** ② 이어서 C1/C2(중재판정 집행 등) 신규 안내 키 — **전 안내 로케일(vi/id/th/fil/ar) 본문 필요**, 새 법률 문장은 변호사 검수 게이트. 재질문 금지. → 실행: X7 검수본(sea-state/expansion/EN-AR-LITIGATION-FAQ-DRAFT-2026-09.reviewed.md) → WO-M7 840b7bed → R1 9d3802be → **R2 ff1e11d8 게이트 PASS**(son7-b9: unit 10912, build, /ar/services 카드 정상화, /ar/faq 14문항 렌더). 초안 브랜치 잔존 = ja 한글 게이트 1건(의도). **변호사 검수 묶음**: EN FAQ 7문항(21문장)·형사 keyPoints 5·ar FAQ 신규 6문항(문장 9+스템 6)·services 안내 문장 2(마커 없음)·중재 랜딩 43 → 검수 후 마커 제거 → RC3. 기존 초안 8b9e7c4c(ar 단독 arbitration-enforcement)는 ②에 맞춰 vi/id/th/fil 본문 추가 필요(번역 레인 협의) — 보류.
+- 판정(총괄): ar about 2283행 "2020년 Hovering Accounting Office 설립" 문장은 ko/en/ja/vi/id/th/fil 기게재 약력의 미러이며 인명 없음 → 결정 범위(신규 파트너 문구·연결) 밖, 유지. 신규 세무 문구·링크를 만들 때만 黃勝平 기준.
+- 이 항목의 본문 배선(ar services 형사·민사 절 조문 축자, EN 소송/형사 FAQ)은 X2 ASK 3건 답 이후, 전부 [변호사 검수 필요] 마커·초안 브랜치. 세무 문구는 현행 '지원/회계 파트너' 범위 고정.

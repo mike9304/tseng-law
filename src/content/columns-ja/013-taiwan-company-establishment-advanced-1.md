@@ -120,6 +120,5 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 ---
 
 > 関連記事:
-> - [台湾会社設立の総合ガイド―手続・費用・法人形態の総まとめ](/ko/guides/taiwan-company-setup)
-> - [韓国語対応可能な台湾の弁護士](/ko/korean-lawyer-in-taiwan)
-> - [台湾法人設立・会社設立の弁護士案内](/ko/taiwan-company-setup-lawyer)
+> - [台湾会社設立の総合ガイド―手続・費用・法人形態の総まとめ](/ja/guides/taiwan-company-setup)
+> - [台湾法人設立・会社設立の弁護士案内](/ja/taiwan-company-setup-lawyer)

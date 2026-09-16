@@ -72,6 +72,5 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 ---
 
 > 関連記事：
-> - [台湾会社設立総合ガイド―手続・費用・法人形態を徹底解説](/ko/guides/taiwan-company-setup)
-> - [韓国語対応可能な台湾の弁護士](/ko/korean-lawyer-in-taiwan)
-> - [台湾法人設立・会社設立に関する弁護士のご案内](/ko/taiwan-company-setup-lawyer)
+> - [台湾会社設立総合ガイド―手続・費用・法人形態を徹底解説](/ja/guides/taiwan-company-setup)
+> - [台湾法人設立・会社設立に関する弁護士のご案内](/ja/taiwan-company-setup-lawyer)

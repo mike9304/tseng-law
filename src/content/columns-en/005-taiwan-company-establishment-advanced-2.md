@@ -66,6 +66,5 @@ Please contact us at any time if you have additional questions.
 ---
 
 > Read more:
-> - [Comprehensive Guide to Taiwan Company Formation — Procedures, Costs, and Entity Types](/ko/guides/taiwan-company-setup)
-> - [Korean-Speaking Attorney in Taiwan](/ko/korean-lawyer-in-taiwan)
-> - [Taiwan Company Formation Attorney](/ko/taiwan-company-setup-lawyer)
+> - [Comprehensive Guide to Taiwan Company Formation — Procedures, Costs, and Entity Types](/en/guides/taiwan-company-setup)
+> - [Taiwan Company Formation Attorney](/en/taiwan-company-setup-lawyer)

@@ -96,6 +96,5 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 ---
 
 > 関連記事:
-> - [台湾訴訟弁護士のご案内](/ko/taiwan-litigation-lawyer)
-> - [韓国語対応の台湾弁護士](/ko/korean-lawyer-in-taiwan)
-> - [取扱分野 — 労働](/ko/services/labor)
+> - [台湾訴訟弁護士のご案内](/ja/taiwan-litigation-lawyer)
+> - [取扱分野 — 労働](/ja/services/labor)

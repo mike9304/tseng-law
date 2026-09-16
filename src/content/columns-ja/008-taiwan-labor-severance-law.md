@@ -227,6 +227,5 @@ B氏が自発的に退職したのではないことを証明できました。
 ---
 
 > 関連記事:
-> - [台湾訴訟弁護士案内](/ko/taiwan-litigation-lawyer)
-> - [韓国語対応の台湾弁護士](/ko/korean-lawyer-in-taiwan)
-> - [取扱分野 — 労働](/ko/services/labor)
+> - [台湾訴訟弁護士案内](/ja/taiwan-litigation-lawyer)
+> - [取扱分野 — 労働](/ja/services/labor)

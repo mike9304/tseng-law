@@ -157,13 +157,19 @@ describe('English investment column 005 — faithful Korean-source translation',
     }
   });
 
-  it('mirrors the Korean source image and link targets exactly', () => {
+  it('keeps source images and same-locale internal links', () => {
     expect(extractImageTargets(parsed.content)).toEqual(
       extractImageTargets(sourceParsed.content),
     );
-    expect(extractLinkTargets(parsed.content)).toEqual(
-      extractLinkTargets(sourceParsed.content),
+    const enLinks = extractLinkTargets(parsed.content);
+    const koLinks = extractLinkTargets(sourceParsed.content);
+    expect(enLinks.filter((target) => !target.startsWith('/'))).toEqual(
+      koLinks.filter((target) => !target.startsWith('/')),
     );
+    expect(enLinks.filter((target) => target.startsWith('/'))).toEqual([
+      '/en/guides/taiwan-company-setup',
+      '/en/taiwan-company-setup-lawyer',
+    ]);
   });
 
   it('restores the Korean-source capital-remittance requirements without additions', () => {
@@ -260,7 +266,7 @@ describe('English investment column 005 — faithful Korean-source translation',
     const visibleWordCount = countVisibleEnglishWords(parsed.content);
     const calculatedMinutes = Math.ceil(visibleWordCount / 200);
 
-    expect(visibleWordCount).toBe(546);
+    expect(visibleWordCount).toBe(567);
     expect(calculatedMinutes).toBe(3);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);

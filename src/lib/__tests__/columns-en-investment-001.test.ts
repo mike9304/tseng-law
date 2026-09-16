@@ -348,12 +348,12 @@ describe('English investment column 001 — company-formation basics', () => {
     ).toEqual(imagePaths);
     expect(parsed.content.indexOf(imagePaths[0])).toBeLessThan(
       parsed.content.indexOf(
-        'The ways in which Korean companies and sole proprietors enter the Taiwan market',
+        'The ways in which overseas companies and sole proprietors enter the Taiwan market',
       ),
     );
     expect(parsed.content.indexOf(imagePaths[1])).toBeLessThan(
       parsed.content.indexOf(
-        'The ways in which Korean companies and sole proprietors enter the Taiwan market',
+        'The ways in which overseas companies and sole proprietors enter the Taiwan market',
       ),
     );
     expect(parsed.content.indexOf(imagePaths[2])).toBeGreaterThan(

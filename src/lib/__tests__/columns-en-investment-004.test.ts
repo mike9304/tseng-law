@@ -379,7 +379,7 @@ describe('English investment column 004 — subsidiary versus branch', () => {
     const calculatedMinutes = Math.ceil(visibleWords / 200);
 
     expect(visibleWords).toBeGreaterThanOrEqual(1_800);
-    expect(visibleWords).toBe(5_493);
+    expect(visibleWords).toBe(5_505);
     expect(calculatedMinutes).toBe(28);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);

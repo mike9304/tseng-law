@@ -142,9 +142,8 @@ describe('Japanese investment column 013 — Korean-source mirror', () => {
 
     expect(links).toEqual([
       'https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8',
-      '/ko/guides/taiwan-company-setup',
-      '/ko/korean-lawyer-in-taiwan',
-      '/ko/taiwan-company-setup-lawyer',
+      '/ja/guides/taiwan-company-setup',
+      '/ja/taiwan-company-setup-lawyer',
     ]);
     expect(raw).not.toContain('曾俊瑋');
 
@@ -200,8 +199,8 @@ describe('Japanese investment column 013 — Korean-source mirror', () => {
     ).length;
     const calculatedMinutes = Math.ceil(visibleJapaneseCount / 500);
 
-    expect(visibleJapaneseCount).toBe(1_700);
-    expect(visibleKanaCount).toBe(894);
+    expect(visibleJapaneseCount).toBe(1_686);
+    expect(visibleKanaCount).toBe(892);
     expect(calculatedMinutes).toBe(4);
     expect(parsed.data.read_time).toBe(`約${calculatedMinutes}分`);
     expect(post?.readTime).toBe(`約${calculatedMinutes}分`);

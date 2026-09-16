@@ -26,7 +26,7 @@ describe('Japanese firm introduction content', () => {
     expect(japanese.paragraphs[2]).toMatch(/2017年.*屏東オフィス.*農業者団体/);
     expect(japanese.paragraphs[3]).toMatch(/2020年.*公認会計士.*昊鼎会計士事務所.*会計・税務/);
     expect(japanese.paragraphs[4]).toMatch(/2024年.*法律・会計・税務・人事管理.*ワンストップ/);
-    expect(japanese.paragraphs[5]).toMatch(/2024年.*曾雋崴弁護士.*韓国.*日本.*会社設立.*ビザ申請.*商標・特許/);
+    expect(japanese.paragraphs[5]).toMatch(/2024年.*曾雋崴弁護士.*日本.*韓国.*会社設立.*ビザ申請.*商標・特許/);
     expect(japanese.paragraphs[6]).toMatch(
       /社会貢献.*公益性の高い案件.*法律扶助案件.*無償.*法律相談/,
     );

@@ -11,7 +11,7 @@ const sourceBytes = fs.readFileSync(columnPath);
 
 const immutablePrefixLength = 11_876;
 const immutablePrefixSha256 =
-  '3a2a9a1ef97d7873d69e8365cedde47527b6618da563cd68b10714df29bee56c';
+  '77255c9f470d6c9e6e6d0183cbd10943afe8208c3cf1676cd3667869232f9465';
 const immutableTailMarker = Buffer.from(
   '\n\n### 検査、是正、行政上の措置',
   'utf8',

@@ -249,18 +249,18 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       ],
       idealFor: [
         '한국 소재·장비 공급사가 대만 거래처 대응을 위해 현지 법인을 검토하는 경우',
-        '자회사·지사·연락사무소 중 어떤 형태가 공급·설치·유지보수 모델에 맞는지 비교가 필요한 경우',
-        '대만 바이어·대리점과의 공급 계약, 대금, 하자 책임을 먼저 정리하고 싶은 경우',
+        '자회사·지사·연락사무소 중 어느 형태가 맞는지 비교가 필요한 경우',
+        '대만 바이어·대리점과의 공급 계약, 대금, 미수금을 먼저 정리하고 싶은 경우',
         '현지 채용과 미수금 회수를 설립 일정과 같이 보고 싶은 경우',
       ],
       reviewPoints: [
         '설립 일정은 투자 승인, 자본금 송금, 업종 표기에 따라 달라지며, 흔히 약 3개월을 계획합니다.',
-        '법인등기와 실제 공급 계약·설치 일정은 별개입니다.',
+        '법인등기와 실제 공급 계약 일정은 별개입니다.',
         '고용 계약과 현장 인력을 나중에 붙이면 운영 시작이 밀립니다.',
         '미수금은 계약서, 납품·검수 기록, 청구서가 있어야 검토가 됩니다.',
       ],
       processFlow: [
-        '공급 모델(직접 판매, 대리점, 설치·유지보수)과 대만 내 필요 기능을 기준으로 자회사·지사·연락사무소를 비교합니다.',
+        '진출 목적과 매출 구조를 기준으로 자회사·지사·연락사무소 중 어떤 형태가 맞는지 먼저 비교합니다.',
         '주주 구조, 자본금, 영업 주소, 예상 일정을 정리해 설립 전제조건을 확정합니다.',
         '등기 이후 계약, 고용, 대금 회수 흐름을 같은 일정표에 올립니다.',
       ],
@@ -272,8 +272,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       ],
       cautionPoints: [
         '회사설립만 마치고 공급 계약·고용 조건을 나중에 보면 운영 시작이 늦어집니다.',
-        '업종 코드와 실제 공급·설치 범위가 다르면 후속 절차가 막힐 수 있습니다.',
-        '연락사무소는 영업 활동 범위가 제한되는 경우가 많습니다.',
+        '업종 코드와 실제 사업 내용이 다르면 후속 절차가 막힐 수 있습니다.',
+        '은행 계좌 개설은 설립 완료와 별개로 시간이 더 걸릴 수 있습니다.',
         '미수금 대응은 초기에 증거를 모으지 않으면 시간이 더 걸립니다.',
       ],
       serviceSlugs: ['investment', 'civil', 'labor', 'ip'],
@@ -536,19 +536,19 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         '欠款追索先看契約、發票與交貨紀錄，再比較協商、民事訴訟與強制執行。',
       ],
       idealFor: [
-        '外國投資人需要在台灣設立據點，以便銷售、安裝或維修材料與設備',
-        '正在比較子公司、分公司與聯絡處，哪一種較符合供應與售後模式',
-        '希望先整理對台灣買方或代理商的供應契約、付款條件與瑕疵責任',
+        '外國投資人需要在台灣設立據點，以便在當地簽約或營運',
+        '正在比較子公司、分公司與聯絡處，哪一種較符合母公司商業目的',
+        '希望先整理對台灣買方或代理商的供應契約與付款條件',
         '需要把在地雇用與欠款追索，和設立時程一起規劃',
       ],
       reviewPoints: [
         '設立時程會受投資審查、資本匯入與營業項目影響，實務上常以約 3 個月規劃。',
-        '公司登記與實際供貨、安裝契約是不同工作。',
+        '公司登記與實際供貨契約是不同工作。',
         '若把勞動契約留到人員已到位才處理，上線時間通常會延後。',
         '欠款追索需要契約、交貨或驗收紀錄、以及請款資料才能判斷。',
       ],
       processFlow: [
-        '先依直銷、代理、安裝或售後等供應模式，比較子公司、分公司與聯絡處。',
+        '先依進入台灣市場的目的與營收結構，比較子公司、分公司與聯絡處。',
         '確認股東結構、資本額、營業地址與申請順序後，再啟動設立。',
         '登記完成後，把契約、雇用文件與收款流程排進同一份時程。',
       ],
@@ -560,8 +560,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       ],
       cautionPoints: [
         '只完成公司設立、卻把供應契約與雇用條件往後延，營運開始時間通常會拉長。',
-        '登記的營業項目若與實際供應或安裝內容不符，後續流程可能受阻。',
-        '聯絡處能從事的商業活動範圍通常較有限。',
+        '若行業別和實際營運內容不一致，後續流程可能受阻。',
+        '銀行開戶常與公司設立完成時間不同步，需預留時間。',
         '若未先整理交貨與驗收資料，欠款追索會更費時。',
       ],
       serviceSlugs: ['investment', 'civil', 'labor', 'ip'],
@@ -855,9 +855,9 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         'Unpaid invoices are reviewed from the contract, invoices, and delivery records, then compared against negotiation, a civil action, and enforcement.',
       ],
       idealFor: [
-        'Overseas materials or equipment suppliers that need a Taiwan presence to sell, install, or service locally',
-        'Teams comparing subsidiary, branch, and representative-office structures for a supply model',
-        'Companies that want supply contracts, payment terms, and warranty allocation reviewed before launch',
+        'Overseas materials or equipment suppliers that need a Taiwan subsidiary, branch, or representative office in order to operate or contract locally',
+        'Teams comparing subsidiary, branch, and representative-office structures against the parent’s commercial goal',
+        'Companies that want supply contracts, payment terms, and unpaid invoices reviewed before launch',
         'Clients who need local hiring or unpaid-invoice follow-up handled with the setup work',
       ],
       reviewPoints: [
@@ -867,9 +867,9 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         'Unpaid invoices are reviewed from the contract, delivery or acceptance records, and the demand history.',
       ],
       processFlow: [
-        'Start from the supply model—direct sales, distributor, installation, or after-sales—and compare subsidiary, branch, and representative office.',
+        'Compare subsidiary, branch, and representative-office structures based on the commercial goal and revenue flow of the overseas parent or investor.',
         'Confirm shareholders, capital, business address, and the filing sequence before incorporation work begins.',
-        'After registration, line up contracts, employment documents, and collections on the same calendar.',
+        'After registration, schedule contracts, employment documents, and collections on the same calendar.',
       ],
       prepareChecklist: [
         'Overseas parent-company registry documents, shareholder structure, and director details',
@@ -878,9 +878,9 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         'For unpaid invoices: invoices, delivery records, and counterparty company details',
       ],
       cautionPoints: [
-        'Treating incorporation as the finish line usually delays contracts and hiring.',
-        'If the registered business scope does not match actual supply or installation work, later steps can stall.',
-        'A representative office often cannot carry on full commercial activity.',
+        'Treating incorporation as the end of the work usually delays contracts and hiring.',
+        'If the registered business scope does not match the actual operating model, later steps can stall.',
+        'Bank account opening often takes longer than clients expect, even after registration is done.',
         'Collections take longer when delivery and acceptance records were never organized.',
       ],
       serviceSlugs: ['investment', 'civil', 'labor', 'ip'],
@@ -899,7 +899,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: 'Which structure is used: subsidiary, branch, or representative office?',
           answer:
-            'It depends on liability, tax, and the work that must be done in Taiwan. Subsidiaries are common for independent local contracting, branches can fit direct parent-company operations, and representative offices are usually limited to liaison functions.',
+            'It depends on liability, tax, and the work that must be done in Taiwan. Subsidiaries are common for independent local contracting, branches can fit direct parent-company operations, and a representative office is a third published option reviewed against the commercial goal.',
         },
         {
           question: 'Is company registration enough to start supplying and hiring?',
@@ -1149,18 +1149,18 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       ],
       idealFor: [
         '日本企業が台湾の取引先対応のため、現地法人の要否を検討している場合',
-        '子会社・支店・駐在員事務所のどれが供給・据付・保守モデルに合うか比較が必要な場合',
-        '台湾の買い手や代理店との供給契約、代金、瑕疵責任を先に整理したい場合',
+        '子会社・支店・駐在員事務所のどれが適切か比較が必要な場合',
+        '台湾の買い手や代理店との供給契約、代金を先に整理したい場合',
         '現地雇用と売掛対応を設立スケジュールとあわせて見たい場合',
       ],
       reviewPoints: [
         '設立の期間は投資承認、資本金送金、業種の記載によって変わり、実務上は約3か月を目安にします。',
-        '法人登記と実際の供給契約・据付スケジュールは別の作業です。',
+        '法人登記と実際の供給契約スケジュールは別の作業です。',
         '労働契約と現場人員を後回しにすると、稼働開始が遅れます。',
         '売掛の検討には契約書、納品・検収記録、請求書が必要です。',
       ],
       processFlow: [
-        '直接販売、代理店、据付・保守などの供給モデルを基準に、子会社・支店・駐在員事務所を比較します。',
+        '進出目的と売上構造を基準に、子会社・支店・駐在員事務所のどの形態が適切か先に比較します。',
         '株主構成、資本金、営業住所、申請順を整理して設立の前提条件を確定します。',
         '登記後の契約、雇用、代金回収の流れを同じスケジュールに載せます。',
       ],
@@ -1172,8 +1172,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       ],
       cautionPoints: [
         '会社設立だけ先に終え、供給契約と雇用条件を後回しにすると稼働開始が遅くなります。',
-        '業種コードと実際の供給・据付範囲が異なると、後続手続きが止まることがあります。',
-        '駐在員事務所は営業活動の範囲が限られる場合が多いです。',
+        '業種コードと実際の事業内容が異なると、後続手続きが止まることがあります。',
+        '銀行口座の開設は設立完了とは別にさらに時間がかかることがあります。',
         '納品と検収の記録を早めに集めないと、売掛対応に時間がかかります。',
       ],
       serviceSlugs: ['investment', 'civil', 'labor', 'ip'],

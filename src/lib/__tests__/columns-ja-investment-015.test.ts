@@ -89,9 +89,14 @@ describe('Japanese investment column 015 — faithful Korean-source mirror', () 
   });
 
   it('matches the Korean source block structure and body-title placement', () => {
-    expect(structuralSignature(jaParsed.content)).toEqual(
-      structuralSignature(koParsed.content),
-    );
+    const jaSignature = structuralSignature(jaParsed.content);
+    const koSignature = structuralSignature(koParsed.content);
+    expect(
+      jaSignature.filter((token) => token !== 'quoted-list-item'),
+    ).toEqual(koSignature.filter((token) => token !== 'quoted-list-item'));
+    expect(
+      jaSignature.filter((token) => token === 'quoted-list-item'),
+    ).toHaveLength(2);
     expect(jaParsed.content).toContain(
       `# ${jaParsed.data.title as string}\n`,
     );
@@ -163,9 +168,8 @@ describe('Japanese investment column 015 — faithful Korean-source mirror', () 
     expect(extractNonImageTargets(jaParsed.content)).toEqual([
       'https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice',
       'https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687',
-      '/ko/guides/taiwan-company-setup',
-      '/ko/korean-lawyer-in-taiwan',
-      '/ko/taiwan-company-setup-lawyer',
+      '/ja/guides/taiwan-company-setup',
+      '/ja/taiwan-company-setup-lawyer',
     ]);
   });
 
@@ -174,9 +178,8 @@ describe('Japanese investment column 015 — faithful Korean-source mirror', () 
       '以上、ご不明な点がありましたら、いつでも台湾の弁護士にお問い合わせください。',
       '行政機関の規則は頻繁に変更される可能性があるため、会社登記の前に最新の規定をご確認ください。',
       '> 関連記事：',
-      '[台湾会社設立総合ガイド―手続・費用・法人形態を徹底解説](/ko/guides/taiwan-company-setup)',
-      '[韓国語対応可能な台湾の弁護士](/ko/korean-lawyer-in-taiwan)',
-      '[台湾法人設立・会社設立に関する弁護士のご案内](/ko/taiwan-company-setup-lawyer)',
+      '[台湾会社設立総合ガイド―手続・費用・法人形態を徹底解説](/ja/guides/taiwan-company-setup)',
+      '[台湾法人設立・会社設立に関する弁護士のご案内](/ja/taiwan-company-setup-lawyer)',
     ];
 
     for (const phrase of requiredPhrases) {
@@ -203,7 +206,7 @@ describe('Japanese investment column 015 — faithful Korean-source mirror', () 
       'https://www.gov.taipei/',
       'https://gcis.nat.gov.tw/',
       'https://www.fda.gov.tw/',
-      '/ja/',
+      '/ko/',
     ];
 
     for (const forbidden of forbiddenLiterals) {
@@ -237,7 +240,7 @@ describe('Japanese investment column 015 — faithful Korean-source mirror', () 
     expect(post?.content).not.toMatch(/[\uac00-\ud7af]/);
     expect(jaRaw).not.toContain('曾俊瑋');
     expect(jaRaw.match(kana)?.length ?? 0).toBeGreaterThan(400);
-    expect(visibleJapaneseCount).toBe(990);
+    expect(visibleJapaneseCount).toBe(976);
     expect(jaParsed.data.read_time).toBe(`約${calculatedMinutes}分`);
   });
 

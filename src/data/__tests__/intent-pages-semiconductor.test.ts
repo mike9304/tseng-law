@@ -91,4 +91,30 @@ describe('semiconductor supplier intent page', () => {
       expect(serialized.toLowerCase()).not.toContain(token.toLowerCase());
     }
   });
+
+  it.each(siteLocales)(
+    'does not invent installation, warranty, or representative-office trading limits in %s copy',
+    (locale) => {
+      const serialized = JSON.stringify(getIntentPage(locale, slug));
+      const unpublishedClaims = [
+        'direct sales, distributor, installation',
+        'sell, install, or service',
+        'warranty allocation',
+        'after-sales',
+        'representative office often cannot',
+        '설치·유지보수',
+        '하자 책임',
+        '연락사무소는 영업 활동 범위가 제한',
+        '据付',
+        '瑕疵責任',
+        '駐在員事務所は営業活動の範囲が限られる',
+        '安裝或售後',
+        '聯絡處能從事的商業活動範圍通常較有限',
+      ];
+
+      for (const token of unpublishedClaims) {
+        expect(serialized).not.toContain(token);
+      }
+    },
+  );
 });

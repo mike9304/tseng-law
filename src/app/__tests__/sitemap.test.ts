@@ -1,10 +1,16 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { getAllColumnPosts } from '@/lib/columns';
+import type { AttorneyProfileSourceRecord } from '@/lib/builder/lawyers/source';
+import type { ServiceAreaSourceRecord } from '@/lib/builder/services/source';
 import type { BuilderSitemapEntry } from '@/lib/builder/seo/sitemap-builder';
 
 const sourceMocks = vi.hoisted(() => ({
-  readAttorneyProfileSourceRecords: vi.fn(async () => []),
-  readServiceAreaSourceRecords: vi.fn(async () => []),
+  readAttorneyProfileSourceRecords: vi.fn<
+    (...args: unknown[]) => Promise<AttorneyProfileSourceRecord[]>
+  >(async () => []),
+  readServiceAreaSourceRecords: vi.fn<
+    (...args: unknown[]) => Promise<ServiceAreaSourceRecord[]>
+  >(async () => []),
   collectAllBuilderSitemapEntries: vi.fn<() => Promise<BuilderSitemapEntry[]>>(
     async () => [],
   ),
@@ -306,6 +312,31 @@ describe('sitemap column lastModified', () => {
     expect(japaneseEntries[0]?.alternates?.languages).toHaveProperty('x-default');
   });
 
+  it('publishes the semiconductor hub four times with the five-key hreflang cluster', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const path = '/taiwan-semiconductor-supplier-legal';
+    const languages = {
+      ko: `https://tseng-law.com/ko${path}`,
+      'zh-Hant': `https://tseng-law.com/zh-hant${path}`,
+      en: `https://tseng-law.com/en${path}`,
+      ja: `https://tseng-law.com/ja${path}`,
+      'x-default': `https://tseng-law.com/en${path}`,
+    };
+    const pageUrls = [
+      languages.ko,
+      languages['zh-Hant'],
+      languages.en,
+      languages.ja,
+    ];
+
+    for (const url of pageUrls) {
+      const found = entries.filter((entry) => entry.url === url);
+      expect(found).toHaveLength(1);
+      expect(found[0]?.alternates?.languages).toEqual(languages);
+    }
+  });
+
   it('strips the en alternate from the Japanese faq entry (English-noindex path)', async () => {
     const { default: sitemap } = await import('../sitemap');
     const entries = await sitemap();
@@ -334,10 +365,10 @@ describe('sitemap column lastModified', () => {
 
   it('emits lastmod on EN/JA public static, attorney, and service routes without changing KO/ZH static', async () => {
     sourceMocks.readAttorneyProfileSourceRecords.mockImplementationOnce(async () => [
-      { slug: 'wei-tseng' },
+      { slug: 'wei-tseng' } as AttorneyProfileSourceRecord,
     ]);
     sourceMocks.readServiceAreaSourceRecords.mockImplementationOnce(async () => [
-      { slug: 'investment' },
+      { slug: 'investment' } as ServiceAreaSourceRecord,
     ]);
 
     const { default: sitemap } = await import('../sitemap');

@@ -370,7 +370,7 @@ describe('English investment column 011 — Taiwan cosmetics market entry', () =
     const visibleWordCount = countVisibleEnglishWords(parsed.content);
     const minutes = Math.ceil(visibleWordCount / 200);
 
-    expect(visibleWordCount).toBe(2_478);
+    expect(visibleWordCount).toBe(2_481);
     expect(visibleWordCount).toBeGreaterThanOrEqual(1_800);
     expect(minutes).toBe(13);
     expect(parsed.data.read_time).toBe(`${minutes} min read`);

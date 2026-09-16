@@ -62,10 +62,11 @@ describe('semiconductor supplier intent page', () => {
     expect(serialized).toContain(semiconductorTokenByLocale[locale]);
   });
 
-  it('keeps English copy free of Korea/Hangul', () => {
+  it('keeps English copy free of Korea-as-audience residue and Hangul', () => {
     const serialized = JSON.stringify(getIntentPage('en', slug));
 
-    expect(serialized).not.toMatch(/Korea|Korean|[\uac00-\ud7a3]/i);
+    expect(serialized).not.toMatch(/[\uac00-\ud7a3]/);
+    expect(serialized).not.toMatch(/Korean clients|based in Korea|Korean HQ|Korea–Taiwan/i);
   });
 
   it('keeps Japanese copy free of Hangul and /ko/ links', () => {

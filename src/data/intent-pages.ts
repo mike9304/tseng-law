@@ -106,7 +106,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       idealFor: [
         '한국 본사 기준으로 대만 법인 구조를 결정해야 하는 경우',
         '지사와 자회사 중 어느 형태가 맞는지 비교가 필요한 경우',
-        '화장품·물류·반도체 소재·장비 등 업종별 인허가를 병행해야 하는 경우',
+        '화장품·물류 등 업종별 인허가를 병행해야 하는 경우',
         '설립 이후 비자, 상표, 근로계약까지 같이 검토하고 싶은 경우',
       ],
       reviewPoints: [
@@ -129,7 +129,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       cautionPoints: [
         '업종 코드와 실제 사업 내용이 다르면 허가 단계에서 지연될 수 있습니다.',
         '은행 계좌 개설은 설립 완료와 별개로 시간이 더 걸릴 수 있습니다.',
-        '화장품·물류·식품·플랫폼·반도체 소재·장비 업종은 추가 규제가 붙을 수 있습니다.',
+        '화장품·물류·식품·플랫폼 업종은 추가 규제가 붙을 수 있습니다.',
         '비자와 노동계약을 나중에 따로 보면 일정이 늘어집니다.',
       ],
       serviceSlugs: ['investment', 'ip', 'labor'],
@@ -228,7 +228,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       label: '검색 가이드',
       title: '대만 반도체 소재·장비 공급사 법무 | 법인설립·계약·고용·미수금',
       description:
-        '한국 반도체 소재·장비 공급사가 대만에서 법인설립, 공급 계약, 고용, 미수금을 검토할 때 확인하는 변호사 상담 안내입니다. 상담은 4개 언어, 시간당 NT$3,000입니다.',
+        '한국 반도체 소재·장비 공급사가 대만에서 법인설립, 공급 계약, 고용, 미수금을 검토할 때 확인하는 변호사 상담 안내입니다. 상담은 영어·중국어·한국어·일본어, 시간당 NT$3,000입니다.',
       keywords: [
         '대만 반도체 소재 장비',
         '대만 반도체 공급사 법무',
@@ -244,7 +244,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       heroPoints: [
         '한국 반도체 소재·장비 중소기업이 대만에서 자회사·지사·연락사무소를 비교하고, 설립 이후 계약·고용까지 이어서 볼 수 있습니다.',
         '법인등기만으로 영업·계약·고용이 끝나지 않습니다. 설립과 운영을 한 흐름으로 정리합니다.',
-        '상담은 4개 언어로 가능하며, 일반 법률상담은 시간당 NT$3,000입니다. 설립은 흔히 약 3개월을 기준으로 잡습니다.',
+        '상담은 영어·중국어·한국어·일본어로 가능하며, 일반 법률상담은 시간당 NT$3,000입니다. 설립은 흔히 약 3개월을 기준으로 잡습니다.',
+        '미수금은 계약서·청구서·납품 기록을 먼저 보고, 협상·민사·집행 선택지를 비교합니다.',
       ],
       idealFor: [
         '한국 소재·장비 공급사가 대만 거래처 대응을 위해 현지 법인을 검토하는 경우',
@@ -301,7 +302,17 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: '상담 언어와 상담료는 어떻게 되나요?',
           answer:
-            '상담은 4개 언어로 가능하며, 일반 법률상담은 대면 또는 화상으로 시간당 NT$3,000입니다. 사건 수임 비용은 자료를 확인한 뒤 별도로 안내합니다.',
+            '상담은 영어·중국어·한국어·일본어로 가능하며, 일반 법률상담은 대면 또는 화상으로 시간당 NT$3,000입니다. 사건 수임 비용은 자료를 확인한 뒤 별도로 안내합니다.',
+        },
+        {
+          question: '회사설립 비용은 어디서 확인하나요?',
+          answer:
+            '서비스 요금 페이지에 현재 상담·회사설립 비용 구조가 있습니다. 일반 법률상담은 시간당 NT$3,000이며, 통상적인 대만 회사설립은 NT$50,000부터입니다.',
+        },
+        {
+          question: '대만 거래처의 미수금이나 계약 위반은 어떻게 다루나요?',
+          answer:
+            '계약서, 청구서, 주고받은 기록을 기준으로 책임과 회수 가능 금액을 본 뒤, 협상, 민사소송, 강제집행 선택지를 비교해 안내합니다.',
         },
       ],
     },
@@ -383,7 +394,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       idealFor: [
         '需要依韓國總公司結構規劃台灣法人型態的人',
         '正在比較分公司與子公司差異的人',
-        '需同時處理化妝品、物流、半導體材料與設備等特定產業許可的人',
+        '需同時處理化妝品、物流等特定產業許可的人',
         '希望設立後把簽證、商標、勞動契約一起規劃的人',
       ],
       reviewPoints: [
@@ -406,7 +417,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       cautionPoints: [
         '若行業別和實際營運內容不一致，後續許可可能被卡住。',
         '銀行開戶常與公司設立完成時間不同步，需預留時間。',
-        '化妝品、物流、食品、平台、半導體材料與設備等產業常有附加規範。',
+        '化妝品、物流、食品、平台等產業常有附加規範。',
         '若把簽證與勞動安排延後處理，整體上線時間會被拉長。',
       ],
       serviceSlugs: ['investment', 'ip', 'labor'],
@@ -505,7 +516,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       label: '搜尋指南',
       title: '台灣半導體材料與設備供應商法務 | 公司設立、契約、勞務、欠款追索',
       description:
-        '供海外半導體材料與設備供應商整理在台公司設立、供應契約、勞務與欠款追索時需先確認的範圍。諮詢提供四種語言，一般法律諮詢每小時 NT$3,000。',
+        '供海外半導體材料與設備供應商整理在台公司設立、供應契約、勞務與欠款追索時需先確認的範圍。諮詢提供英語、中文、韓語、日語，一般法律諮詢每小時 NT$3,000。',
       keywords: [
         '台灣半導體材料設備',
         '台灣半導體供應商法務',
@@ -521,7 +532,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       heroPoints: [
         '海外半導體材料與設備供應商可比較台灣子公司、分公司與聯絡處，並把設立後的契約與雇用接續規劃。',
         '完成公司登記並不代表營運、契約或雇用已經就緒。設立與營運應分開檢視。',
-        '諮詢提供四種語言，一般法律諮詢每小時 NT$3,000，可面談或視訊。公司設立常以約 3 個月為規劃基準。',
+        '諮詢提供英語、中文、韓語、日語，一般法律諮詢每小時 NT$3,000，可面談或視訊。公司設立常以約 3 個月為規劃基準。',
+        '欠款追索先看契約、發票與交貨紀錄，再比較協商、民事訴訟與強制執行。',
       ],
       idealFor: [
         '外國投資人需要在台灣設立據點，以便銷售、安裝或維修材料與設備',
@@ -578,7 +590,17 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: '諮詢語言與費用如何計算？',
           answer:
-            '諮詢提供四種語言。一般法律諮詢每小時 NT$3,000，可面談或視訊。案件費用會在檢視資料後另行說明。',
+            '諮詢提供英語、中文、韓語、日語。一般法律諮詢每小時 NT$3,000，可面談或視訊。案件費用會在檢視資料後另行說明。',
+        },
+        {
+          question: '公司設立費用在哪裡看？',
+          answer:
+            '服務費用頁面列出目前的諮詢與公司設立費用結構。一般法律諮詢每小時 NT$3,000；通常案件的台灣公司設立自 NT$50,000 起。',
+        },
+        {
+          question: '台灣交易對象未付款或違約時怎麼處理？',
+          answer:
+            '會先依契約、發票與往來紀錄判斷責任與可追索金額，再比較協商、民事訴訟與強制執行後提出建議。',
         },
       ],
     },
@@ -673,7 +695,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       idealFor: [
         'Businesses deciding which Taiwan entity structure fits the overseas parent',
         'Teams comparing branch versus subsidiary setup',
-        'Companies entering regulated sectors such as cosmetics, logistics, or semiconductor materials and equipment',
+        'Companies entering regulated sectors such as cosmetics or logistics',
         'Clients who want setup, visas, trademarks, and employment issues reviewed together',
       ],
       reviewPoints: [
@@ -696,7 +718,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       cautionPoints: [
         'If the industry code does not match the real business model, permit work may stall later.',
         'Bank account opening often takes longer than clients expect, even after registration is done.',
-        'Cosmetics, logistics, food, platform, semiconductor materials and equipment, and similar sectors may require additional approvals.',
+        'Cosmetics, logistics, food, platform, and similar sectors may require additional approvals.',
         'If visas and labor structuring are treated as an afterthought, the launch timeline usually slips.',
       ],
       serviceSlugs: ['investment', 'ip', 'labor'],
@@ -813,7 +835,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       label: 'SEARCH GUIDE',
       title: 'Taiwan Legal Support for Overseas Semiconductor Materials and Equipment Suppliers',
       description:
-        'Legal support in Taiwan for overseas semiconductor materials and equipment suppliers, covering company setup, supply contracts, employment, and unpaid invoices. Consultations are NT$3,000 per hour and available in four languages.',
+        'Legal support in Taiwan for overseas semiconductor materials and equipment suppliers, covering company setup, supply contracts, employment, and unpaid invoices. Consultations are NT$3,000 per hour in English, Chinese, Korean, and Japanese.',
       keywords: [
         'Taiwan semiconductor supplier legal',
         'semiconductor materials equipment Taiwan',
@@ -829,7 +851,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       heroPoints: [
         'Overseas semiconductor materials and equipment suppliers can compare a Taiwan subsidiary, branch, or representative office, then map contracts and hiring onto the same plan.',
         'Incorporation is not the same as operating: supply contracts, employment, and collections still need their own review.',
-        'Consultations are available in four languages, in person or by video, at NT$3,000 per hour. Company setup is often planned around three months.',
+        'Consultations are available in English, Chinese, Korean, and Japanese, in person or by video, at NT$3,000 per hour. Company setup is often planned around three months.',
+        'Unpaid invoices are reviewed from the contract, invoices, and delivery records, then compared against negotiation, a civil action, and enforcement.',
       ],
       idealFor: [
         'Overseas materials or equipment suppliers that need a Taiwan presence to sell, install, or service locally',
@@ -886,7 +909,17 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: 'What does a consultation cost, and which languages are available?',
           answer:
-            'A general legal consultation is NT$3,000 per hour, in person or by video, and is available in four languages. Case fees are quoted after the documents are reviewed.',
+            'A general legal consultation is NT$3,000 per hour, in person or by video, in English, Chinese, Korean, and Japanese. Case fees are quoted after the documents are reviewed.',
+        },
+        {
+          question: 'Where can I see current company-setup fees?',
+          answer:
+            'See the Service Fees page for the current consultation and company-setup fee structure. A general legal consultation is NT$3,000 per hour. Taiwan company setup starts from NT$50,000 for standard cases.',
+        },
+        {
+          question: 'How do you handle unpaid invoices or contract breaches by a Taiwanese counterparty?',
+          answer:
+            'We start from the contract, invoices, and correspondence to assess liability and the recoverable amount, then compare a negotiated settlement, civil action, and enforcement options before recommending a path.',
         },
       ],
     },
@@ -965,7 +998,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       idealFor: [
         '日本本社基準で台湾法人の構造を決める必要がある場合',
         '支店と子会社のどちらの形態が適切か比較が必要な場合',
-        '化粧品・物流・半導体素材・装置など業種別の許認可を並行する必要がある場合',
+        '化粧品・物流など業種別の許認可を並行する必要がある場合',
         '設立後のビザ、商標、労働契約まであわせて検討したい場合',
       ],
       reviewPoints: [
@@ -988,7 +1021,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       cautionPoints: [
         '業種コードと実際の事業内容が異なると許可段階で遅れることがあります。',
         '銀行口座の開設は設立完了とは別にさらに時間がかかることがあります。',
-        '化粧品・物流・食品・プラットフォーム・半導体素材・装置業種は追加規制が付くことがあります。',
+        '化粧品・物流・食品・プラットフォーム業種は追加規制が付くことがあります。',
         'ビザと労働契約を後で別に検討するとスケジュールが長くなります。',
       ],
       serviceSlugs: ['investment', 'ip', 'labor'],
@@ -1095,7 +1128,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       label: '検索ガイド',
       title: '台湾の半導体素材・装置サプライヤー法務 | 会社設立・契約・労務・売掛',
       description:
-        '日本の半導体素材・装置サプライヤーが台湾で会社を設立し、供給契約・労務・売掛を進める際の確認事項をまとめた案内です。相談は4言語、1時間NT$3,000です。',
+        '日本の半導体素材・装置サプライヤーが台湾で会社を設立し、供給契約・労務・売掛を進める際の確認事項をまとめた案内です。相談は英語・中国語・韓国語・日本語、1時間NT$3,000です。',
       keywords: [
         '台湾 半導体 素材 装置',
         '台湾 半導体 サプライヤー 法務',
@@ -1111,7 +1144,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
       heroPoints: [
         '日本の半導体素材・装置サプライヤーが、台湾の子会社・支店・駐在員事務所を比較し、設立後の契約と雇用まで同じ流れで検討できます。',
         '会社設立は営業・契約・雇用の完了ではありません。設立と運営を分けて整理します。',
-        '相談は4言語に対応し、一般法律相談は1時間NT$3,000です。設立はおおむね3か月を目安にします。',
+        '相談は英語・中国語・韓国語・日本語に対応し、一般法律相談は1時間NT$3,000です。設立はおおむね3か月を目安にします。',
+        '売掛は契約書・請求書・納品記録を先に確認し、交渉・民事・強制執行の選択肢を比較します。',
       ],
       idealFor: [
         '日本企業が台湾の取引先対応のため、現地法人の要否を検討している場合',
@@ -1168,7 +1202,17 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         {
           question: '相談の言語と相談料はどうなりますか？',
           answer:
-            '相談は4言語に対応し、一般法律相談は対面またはビデオで1時間NT$3,000です。案件の費用は資料を確認したうえで別途ご案内します。',
+            '相談は英語・中国語・韓国語・日本語に対応し、一般法律相談は対面またはビデオで1時間NT$3,000です。案件の費用は資料を確認したうえで別途ご案内します。',
+        },
+        {
+          question: '会社設立の費用はどこで確認できますか？',
+          answer:
+            'サービス料金ページに現在の相談・会社設立費用の構成があります。一般法律相談は1時間NT$3,000、通常の台湾会社設立はNT$50,000からです。',
+        },
+        {
+          question: '台湾の取引先からの未払い・契約違反にはどう対応しますか？',
+          answer:
+            '契約書・請求書・やり取りをもとに責任と回収可能額を検討し、交渉による和解、民事訴訟、強制執行の選択肢を比較してご提案します。',
         },
       ],
     },

@@ -12,7 +12,7 @@
  * here is a deliberate act, not an accident.
  */
 
-export type ColumnTranslationLang = 'vi' | 'id' | 'th' | 'fil';
+export type ColumnTranslationLang = 'vi' | 'id' | 'th' | 'fil' | 'ar';
 
 export type EnglishSentenceHit = {
   text: string;

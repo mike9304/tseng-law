@@ -272,50 +272,85 @@ describe('guidanceContent.ar', () => {
   });
 
   /**
-   * WO-M3-R1 / M3-REVIEW item 1 — the columns page may not say Arabic
-   * articles are listed on it.
+   * WO-M8 (supersedes WO-M3-R1 / M3-REVIEW item 1) — the columns page may no
+   * longer deny that Arabic articles exist.
    *
-   * `src/content/columns-ar/` holds zero files: the Arabic column set is
-   * phase 2, and `src/lib/columns.ts` returns `null` (an empty list) for a
-   * guidance locale whose directory does not exist. The `ar` page copy had
-   * been carried over from `vi`, where `src/content/columns-vi/` really does
-   * hold articles, so the Arabic page asserted a list it cannot render — and
-   * `src/lib/llms-txt.ts` republishes `page.description` into `/ar/llms.txt`,
-   * so the same claim travelled to the machine-readable surface. The home
-   * badge (`home.columnsOriginalLanguageNote`) already states the truth, and
-   * the page must not contradict it.
+   * History: `src/content/columns-ar/` once held zero files, so the `ar` copy
+   * inherited from `vi` asserted a list the route could not render, and R1
+   * rewrote description / intro / section 0 into an outright denial. The
+   * directory now holds translated Arabic columns, `src/lib/columns.ts`
+   * returns them, and `/ar/columns` renders them through `ColumnsGrid` above
+   * the original-language block that carries the untranslated remainder. The
+   * denial is therefore the false statement — and `src/lib/llms-txt.ts`
+   * republishes `page.description` into `/ar/llms.txt`, so it would travel to
+   * the machine-readable surface as well.
+   *
+   * The page copy now has to carry the `vi` shape: some articles are on this
+   * page in Arabic, the rest open in their source language. Nothing here
+   * promises a count or a date — the Arabic version of an article is said to
+   * be listed "when it is available", never "soon" or "all seventeen".
    */
-  it('never says Arabic articles are listed on the columns page', () => {
+  it('says some Arabic articles are on the columns page and the rest open in their source language', () => {
     const columnsStrings = collectStrings(
       ar.pages.columns,
       'guidanceContent.ar.pages.columns',
     );
     expect(columnsStrings.length).toBeGreaterThan(0);
 
-    /** Every shape the retracted "they are listed here" claim took. */
-    const EXISTENCE_CLAIM_PATTERNS: ReadonlyArray<readonly [string, RegExp]> = [
-      ['مدرجة في هذه الصفحة', /مدرجة\s+في\s+هذه\s+الصفحة/],
-      ['مدرجة على حدة', /مدرجة\s+على\s+حدة/],
-      ['المقالات المتاحة بالعربية', /المقالات\s+المتاحة\s+بالعربية/],
-      ['مقالات بالعربية تشرح', /مقالات\s+بالعربية\s+تشرح/],
+    /** Every shape the retracted "there are none here" denial took. */
+    const ABSENCE_CLAIM_PATTERNS: ReadonlyArray<readonly [string, RegExp]> = [
+      ['ليست في هذه الصفحة مقالات بالعربية', /ليست\s+في\s+هذه\s+الصفحة\s+مقالات\s+بالعربية/],
+      ['لا تضمّ هذه الصفحة مقالات بالعربية', /لا\s+تضمّ?\s+هذه\s+الصفحة\s+مقالات\s+بالعربية/],
+      ['لا تُدرَج في هذه الصفحة نسخة عربية', /لا\s+تُدرَج\s+في\s+هذه\s+الصفحة\s+نسخة\s+عربية/],
+      ['بلا مقالات بالعربية بعد', /مقالات\s+بالعربية\s+بعد/],
     ];
 
-    for (const [path, value] of columnsStrings) {
-      for (const [label, pattern] of EXISTENCE_CLAIM_PATTERNS) {
+    const allArStrings: Labelled[] = [
+      ...columnsStrings,
+      [
+        'guidanceContent.ar.home.columnsOriginalLanguageNote',
+        ar.home.columnsOriginalLanguageNote,
+      ],
+    ];
+
+    for (const [path, value] of allArStrings) {
+      for (const [label, pattern] of ABSENCE_CLAIM_PATTERNS) {
         expect(
           pattern.test(value),
-          `${path} claims Arabic articles are on this page ("${label}"): ${value}`,
+          `${path} denies that Arabic articles exist ("${label}"): ${value}`,
         ).toBe(false);
       }
     }
 
-    // The page states the absence outright, in the body and in the meta text.
+    // The page says the Arabic ones are on it, in the body and in the meta text.
     const columnsText = columnsStrings.map(([, value]) => value).join(' ');
-    expect(columnsText).toContain('وليست في هذه الصفحة مقالات بالعربية');
-    expect(ar.pages.columns.intro).toContain('ولا تضمّ هذه الصفحة مقالات بالعربية بعد');
+    expect(columnsText).toContain('المقالات المتاحة بالعربية');
+    expect(ar.pages.columns.description).toContain('بعضها منشور بالعربية على هذه الصفحة');
+    expect(ar.pages.columns.intro).toContain('المقالات المتاحة بالعربية مدرجة في هذه الصفحة');
 
-    // …and it does not contradict the home badge, which says the same thing.
-    expect(ar.home.columnsOriginalLanguageNote).toContain('ليس لها نسخة عربية');
+    // …and it says the remainder opens in its own source language.
+    expect(ar.pages.columns.description).toContain('بلغتها الأصلية');
+    expect(ar.pages.columns.intro).toContain('بإحدى اللغات الأصلية');
+
+    // The home badge agrees: some are in Arabic, the listed ones are not.
+    expect(ar.home.columnsOriginalLanguageNote).toContain('بعض المقالات متاحة بالعربية');
+    expect(ar.home.columnsOriginalLanguageNote).toContain('بلغته الأصلية');
+
+    // No count and no delivery date anywhere in the columns copy or the badge.
+    const NO_PROMISE_PATTERNS: ReadonlyArray<readonly [string, RegExp]> = [
+      ['a digit (count or date)', /\d/],
+      ['قريبًا (soon)', /قريب/],
+      ['جميع المقالات بالعربية', /جميع\s+المقالات\s+بالعربية/],
+      ['كل المقالات بالعربية', /كل\s+المقالات\s+بالعربية/],
+    ];
+    for (const [path, value] of allArStrings) {
+      for (const [label, pattern] of NO_PROMISE_PATTERNS) {
+        expect(
+          pattern.test(value),
+          `${path} promises a count or a date ("${label}"): ${value}`,
+        ).toBe(false);
+      }
+    }
   });
 
   /**

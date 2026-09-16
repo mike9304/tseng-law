@@ -20,7 +20,7 @@ faq:
 
 ![Cosmetics documentation and regulatory review required to enter Taiwan’s market](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg)
 
-A foreign cosmetics brand seeking to distribute products in Taiwan must decide who will handle importation, when product registration will be completed, who will manage the Product Information File (PIF) and where it will be retained, and how labeling and advertising will be reviewed. Korean brands may either use a local importer or operate directly in Taiwan, so forming a company alone does not complete the preparations required for sale.
+A foreign cosmetics brand seeking to distribute products in Taiwan must decide who will handle importation, when product registration will be completed, who will manage the Product Information File (PIF) and where it will be retained, and how labeling and advertising will be reviewed. A brand from another country may either use a local importer or operate directly in Taiwan, so forming a company alone does not complete the preparations required for sale.
 
 The applicable obligations may vary according to the product type and manufacturing site, the actual import structure, the distribution method, and the content of the advertising. This article distinguishes among the market-entry structure and the entity bearing statutory responsibility, TFDA product registration, PIF preparation, updating, and retention, labeling and advertising, and inspections and corrective measures. Before setting an actual supply schedule, the latest laws and guidance from the competent authorities should be rechecked for each product.
 

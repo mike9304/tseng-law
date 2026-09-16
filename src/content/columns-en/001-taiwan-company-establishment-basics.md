@@ -22,7 +22,7 @@ faq:
 
 ![](../images/001-taiwan-company-establishment-basics/img-01.jpg)
 
-The ways in which Korean companies and sole proprietors enter the Taiwan market vary with the nature of their business, including manufacturing, distribution, information and communications technology, and professional services. Even when the common goal is to start a business in Taiwan, the legal arrangements that must be prepared will differ depending on whom the business contracts with, through which entity it earns revenue, and who performs the work locally.
+The ways in which overseas companies and sole proprietors enter the Taiwan market vary with the nature of their business, including manufacturing, distribution, information and communications technology, and professional services. Even when the common goal is to start a business in Taiwan, the legal arrangements that must be prepared will differ depending on whom the business contracts with, through which entity it earns revenue, and who performs the work locally.
 
 Company formation, foreign-investment review, bank accounts, taxation, business premises, work permits, and residence procedures are interconnected, but they are not the same process. Completing company registration does not mean that investment-fund verification or every industry-specific license has been completed, nor does it allow a shareholder or manager to begin working in Taiwan immediately.
 

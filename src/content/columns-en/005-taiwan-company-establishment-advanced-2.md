@@ -17,7 +17,7 @@ If you have read [Taiwan Company Formation — Basics](https://www.wei-wei-lawye
 
 ![](../images/005-taiwan-company-establishment-advanced-2/img-01.jpg)
 
-The Q&A below, prepared by Wei Tseng (曾雋崴), Taiwan Attorney, may also be helpful to those considering establishing a company in Taiwan.
+The Q&A below, prepared by Wei Tseng (曾雋崴), Taiwan Attorney, may also be helpful to those considering establishing a company in Taiwan. Questions 1 and the Korean foreign-exchange notes are a **Korea-origin example**; investors from other countries must confirm remittance and reporting rules in their home country.
 
 **1. What should I keep in mind when remitting capital from Korea to a Taiwan company's preparatory account?**
 

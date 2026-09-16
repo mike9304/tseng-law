@@ -37,6 +37,11 @@
 - son7-b9 mena/ar-routing-20260916: 2d435998 뱃지 ar 라벨·guidanceColumnCategoryLabel 리졸버(vi/id/th/fil 영어 폴백 테스트 핀), 7a23c160 **SEA 카테고리 붕괴 수정**(vi/id/th/fil 칼럼 17편이 categoryFromString 미인식으로 전부 legal → frontmatter 문구 정규화·파리티 테스트, unit 10818). 결정: RC(76360346) 동결, ar 배포 후 RC2로 merge→게이트→ASK. vi/id/th/fil 뱃지 라벨은 frontmatter 문구 재사용.
 - 초안 브랜치 mena/ar-drafts-20260916 **8b9e7c4c**: 중재·집행 EN 랜딩 4로케일 + /ar/arbitration-enforcement(EXTRA 키 2단 구조), 마커 43. son7-b9 라우팅 독립 검수 PASS(214건, 미발행 로케일 unavailable·sitemap ar만·코어 10 불변). x-default는 2언어 이상 시점에 규칙 결정. ② 단계(ASK-3)에서 vi/id/th/fil 본문 추가 후 변호사 검수. `visa-residence`는 본문 생길 때 EXTRA_PAGE_KEYS/LOCALES 2줄.
 
+## B4. MENA SERP 베이스라인(배포 전, son7-b9 X6R, 2026-09-16)
+- 출처 ~/Projects/tseng-law-sea-state/expansion/MENA-SERP-BASELINE-2026-09.md. DDG kl=xa-ar 12질의: 아랍어 6질의 상위10에 대만 로펌 아랍어 페이지 0·tseng 0(GTranslate 디렉터리·걸프 로펌이 점유) / 영어 6질의 tseng-law.com/en Q7 1위·Q8 4위·Q9 1위·Q10 2위. Google gl=ae 9셀 tseng 0(이후 CAPTCHA), Bing 미측정. wei-wei/hovering 전 셀 미노출.
+- 릴리스 노트 문구: "아랍어 의도 질의 6종에서 대만 로펌 1차 아랍어 콘텐츠 경쟁 0 — /ar 배포는 공백 첫 진입, 배포 후 동일 스크립트(ddg_collect.py·pw_serp.js) 재측정".
+- phase 2 후보(기록만): /ar/guides/taiwan-company-setup(EN 가이드 MSA), 외국인 투자자 법인세 ar 페이지 — 세무 숫자 비게재 결정과 충돌하지 않는 범위에서만.
+
 ## B3. 확장(X1) 사용자 결정(9/16 09:5x, 손빗 중계) — 전 레인 공통 제약
 - **신규 안내 로케일 신설 금지**(ms/my 등). 말레이시아·유사 권역은 기존 zh-hant·en 칼럼·의도 페이지 강화로만. 상담 언어 EN/ZH/JA/KO 유지. 재질문 금지.
 - **간체(zh-hans) 영구 제외** — 착수·보류·리스크 페이지 어떤 형태로도 추가 금지. 재질문 금지.

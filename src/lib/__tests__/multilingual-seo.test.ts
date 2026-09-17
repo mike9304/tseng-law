@@ -14,11 +14,11 @@ describe('multilingual SEO language alternates', () => {
       expect(getLanguageAlternates(path, ['ko'])).toEqual(expected);
 
       if (pageKey === 'faq') {
-        expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(8);
+        expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(10);
         expect(expected).not.toHaveProperty('en');
         expect(expected['x-default']).toBe('https://tseng-law.com/ko/faq');
       } else {
-        expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(9);
+        expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(11);
         expect(expected).toMatchObject({
           ko: `https://tseng-law.com/ko${path}`,
           'zh-Hant': `https://tseng-law.com/zh-hant${path}`,
@@ -29,6 +29,8 @@ describe('multilingual SEO language alternates', () => {
           th: `https://tseng-law.com/th${path}`,
           fil: `https://tseng-law.com/fil${path}`,
           ar: `https://tseng-law.com/ar${path}`,
+          de: `https://tseng-law.com/de${path}`,
+          es: `https://tseng-law.com/es${path}`,
           'x-default': `https://tseng-law.com/en${path}`,
         });
         expect(expected).not.toHaveProperty('zh-hant');

@@ -14,7 +14,7 @@ const canonicalImage = '/images/team/wei-tseng-official.png';
 const canonicalProfileUrl = 'https://www.wei-wei-lawyer.com/lawyertseng';
 const legacyProfileUrl = 'https://www.wei-wei-lawyer.com/about-8';
 const officialPortraitHash =
-  '51101195cf46edf4292c61651a52b5d549aa45f8198e1c198012a51d87a8d568';
+  '1ad67d7b87354b22e4c85475188941a571902d90590dd074132a1126cbc9d116';
 
 const profiles = [
   attorneyProfiles.ko[primaryAttorneySlug],

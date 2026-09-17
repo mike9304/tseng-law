@@ -217,6 +217,8 @@ describe('consultation email CTAs', () => {
       'th',
       'fil',
       'ar',
+      'de',
+      'es',
     ]);
 
     for (const locale of PUBLIC_INQUIRY_LOCALES) {

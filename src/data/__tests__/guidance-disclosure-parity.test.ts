@@ -36,7 +36,7 @@ import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
  * present in all four, so "all four dropped it" cannot pass as parity alone.
  */
 
-const LOCALES = ['vi', 'id', 'th', 'fil', 'ar'] as const satisfies readonly GuidanceLocale[];
+const LOCALES = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es'] as const satisfies readonly GuidanceLocale[];
 
 /** Per-locale marker for one disclosure element. */
 type ElementMarkers = Record<GuidanceLocale, RegExp>;
@@ -56,6 +56,8 @@ const ELEMENTS = {
     th: /เป็นไปได้/,
     fil: /posible/i,
     ar: /طريقة ممكنة/,
+    de: /gangbare/,
+    es: /forma posible|vía posible/,
   },
   /** Support in a language outside the four consultation languages is not guaranteed. */
   'no-other-language-guarantee': {
@@ -64,6 +66,8 @@ const ELEMENTS = {
     th: /ภาษาอื่น/,
     fil: /(ibang|alinmang) wika/i,
     ar: /لغة أخرى/,
+    de: /anderen Sprache/,
+    es: /otro idioma/,
   },
   /** No reply time is promised. */
   'no-reply-time-promise': {
@@ -72,6 +76,8 @@ const ELEMENTS = {
     th: /ระยะเวลา(ในการ)?ตอบกลับ/,
     fil: /panahon ng pagsagot/i,
     ar: /مدة للرد/,
+    de: /Antwortfrist/,
+    es: /plazo de respuesta/,
   },
   /** The confirmation step is a step, not a promise. */
   'confirmation-is-not-a-promise': {
@@ -80,6 +86,8 @@ const ELEMENTS = {
     th: /ไม่ใช่คำมั่น/,
     fil: /hindi pangako/i,
     ar: /لا وعد/,
+    de: /kein Versprechen/,
+    es: /no es una promesa/,
   },
   /** No interpreter is arranged. */
   'no-interpreter-promise': {
@@ -88,6 +96,8 @@ const ELEMENTS = {
     th: /ล่าม/,
     fil: /interpreter/i,
     ar: /ترجمة فورية/,
+    de: /Dolmetscher/,
+    es: /intérprete/,
   },
   /** Not every matter can be accepted. */
   'not-every-matter-accepted': {
@@ -96,6 +106,8 @@ const ELEMENTS = {
     th: /ได้ทุกเรื่อง/,
     fil: /bawat usapin/i,
     ar: /قبول كل قضية/,
+    de: /jede Sache/,
+    es: /todos los asuntos/,
   },
   /** No outcome is promised. */
   'no-outcome-promise': {
@@ -104,6 +116,8 @@ const ELEMENTS = {
     th: /รับประกันผล/,
     fil: /resulta/i,
     ar: /التزام ب(?:ال)?نتيجة/,
+    de: /Ergebnis/,
+    es: /resultado/,
   },
   /** A certain answer needs one of the four consultation languages. */
   'four-consultation-languages': {
@@ -112,6 +126,8 @@ const ELEMENTS = {
     th: /4 ภาษาที่ใช้ให้คำปรึกษา/,
     fil: /apat na wika ng konsultasyon/i,
     ar: /اللغات الأربع/,
+    de: /vier Beratungssprachen/,
+    es: /cuatro idiomas de consulta/,
   },
   /** This page is not the consultation step. */
   'not-the-consultation-step': {
@@ -120,6 +136,8 @@ const ELEMENTS = {
     th: /ขั้นตอนการให้คำปรึกษา/,
     fil: /hakbang ng konsultasyon/i,
     ar: /خطوة استشارة/,
+    de: /Beratungsschritt/,
+    es: /paso de consulta/,
   },
   /** A sent message is not legal advice. */
   'not-legal-advice': {
@@ -128,6 +146,8 @@ const ELEMENTS = {
     th: /ความเห็นทางกฎหมาย/,
     fil: /legal na payo/i,
     ar: /رأيًا قانوني/,
+    de: /keine Rechtsberatung/,
+    es: /asesoramiento jurídico/,
   },
   /** A sent message is not a confirmed appointment. */
   'not-an-appointment': {
@@ -136,6 +156,8 @@ const ELEMENTS = {
     th: /การนัดหมาย/,
     fil: /appointment/i,
     ar: /موعد|مواعيد/,
+    de: /Termin/,
+    es: /cita/,
   },
   /** Sending a message forms no attorney–client relationship. */
   'no-attorney-client-relationship': {
@@ -144,6 +166,8 @@ const ELEMENTS = {
     th: /ความสัมพันธ์ระหว่างทนายความ/,
     fil: /ugnayan ng abogado/i,
     ar: /علاقة بين المحامي/,
+    de: /Mandatsverhältnis/,
+    es: /relación entre abogado/,
   },
   /** Written text is never machine-translated for the reader. */
   'no-automatic-translation': {
@@ -152,6 +176,8 @@ const ELEMENTS = {
     th: /แปลโดยอัตโนมัติ/,
     fil: /awtomatikong isinasalin/i,
     ar: /ترجمة آلية/,
+    de: /nicht automatisch übersetzt/,
+    es: /traduce de forma automática|traducción automática/,
   },
   /** The family group is named as covering marriage matters. */
   'marriage-in-family-group': {
@@ -160,6 +186,8 @@ const ELEMENTS = {
     th: /การสมรส/,
     fil: /pag-aasawa/i,
     ar: /الزواج/,
+    de: /Ehe/,
+    es: /matrimonio/i,
   },
   /** Meeting the attorney may be a paid service. */
   'consultation-may-be-paid': {
@@ -168,6 +196,8 @@ const ELEMENTS = {
     th: /บริการที่มีค่าใช้จ่าย/,
     fil: /bayad na serbisyo/i,
     ar: /خدمة بمقابل/,
+    de: /entgeltlich/,
+    es: /servicio de pago/,
   },
 } as const satisfies Record<string, ElementMarkers>;
 

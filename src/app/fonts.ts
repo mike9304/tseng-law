@@ -90,7 +90,18 @@ const sansLatin = Noto_Sans({
   subsets: ['latin', 'latin-ext', 'vietnamese'],
 });
 
-export type DocumentLanguage = 'ko' | 'zh-Hant' | 'en' | 'ja' | 'vi' | 'id' | 'th' | 'fil' | 'ar';
+export type DocumentLanguage =
+  | 'ko'
+  | 'zh-Hant'
+  | 'en'
+  | 'ja'
+  | 'vi'
+  | 'id'
+  | 'th'
+  | 'fil'
+  | 'ar'
+  | 'de'
+  | 'es';
 
 const koreanFontClassName = [sansKorean.variable, serifKorean.variable].join(' ');
 const traditionalChineseFontClassName = [
@@ -120,7 +131,7 @@ export function getLocaleFontClassName(language: DocumentLanguage): string {
   if (language === 'ar') {
     return arabicFontClassName;
   }
-  if (language === 'vi' || language === 'id' || language === 'fil') {
+  if (language === 'vi' || language === 'id' || language === 'fil' || language === 'de' || language === 'es') {
     return latinExtendedFontClassName;
   }
   // Korean and English retain their existing shared pair.

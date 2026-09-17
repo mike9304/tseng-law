@@ -23,6 +23,8 @@ const contentLanguage: Record<PublicLocale8, string> = {
   th: 'th',
   fil: 'fil',
   ar: 'ar',
+  de: 'de',
+  es: 'es',
 };
 
 // `dynamicParams = false`, so every locale that GET can answer must be listed

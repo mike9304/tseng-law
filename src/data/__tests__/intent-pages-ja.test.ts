@@ -32,13 +32,13 @@ describe('Japanese intent landing pages', () => {
 
     expect(ja?.serviceSlugs).toEqual(ko?.serviceSlugs);
     if (slug === 'taiwan-semiconductor-supplier-legal') {
-      // 한국어 반도체 페이지만 관련 칼럼을 설립·채용 주제로 다시 골랐다(화장품·물류 제외).
-      // 일본어 카피는 이번 재작성 범위 밖이라 기존 칼럼 구성을 그대로 둔다.
+      // ko↔ja 칼럼 미러의 반도체 예외 분기는 유지한다. 일본어 카피도 재작성 범위에
+      // 들어왔고 columns-ja에 설립·채용 4 slug가 있어, 화장품·물류 대신 그 4편을 고정한다.
       expect(ja?.columnSlugs).toEqual([
         'taiwan-company-establishment-basics',
         'taiwan-company-subsidiary-vs-branch',
-        'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
-        'taiwan-logistics-business-setup',
+        'taiwan-labor-severance-law',
+        'taiwan-mandatory-employment-period',
       ]);
     } else {
       expect(ja?.columnSlugs).toEqual(ko?.columnSlugs);

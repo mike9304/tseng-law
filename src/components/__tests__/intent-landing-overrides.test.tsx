@@ -4,6 +4,7 @@ import { describe, expect, it } from 'vitest';
 import IntentLandingPage from '@/components/IntentLandingPage';
 import { getIntentPage, intentPageSlugs, type IntentPageSlug } from '@/data/intent-pages';
 import { getServiceArea } from '@/data/service-details';
+import { getJapaneseServiceDetail } from '@/data/service-details-ja';
 import type { SiteLocale } from '@/lib/locales';
 
 const semiconductorSlug = 'taiwan-semiconductor-supplier-legal' as const;
@@ -69,15 +70,47 @@ describe('intent landing page-level overrides', () => {
   );
 
   it.each(['zh-hant', 'en', 'ja'] as const)(
-    'leaves the %s semiconductor render on the shared locale strings',
+    'renders the semiconductor %s overrides instead of the shared strings',
     (locale) => {
       const html = renderLanding(locale, semiconductorSlug);
       const page = getIntentPage(locale, semiconductorSlug)!;
 
-      expect(page.attorneyHeadingOverride).toBeUndefined();
-      expect(page.ctaTextOverride).toBeUndefined();
-      expect(page.serviceBlurbs).toBeUndefined();
+      expect(page.attorneyHeadingOverride).toBeDefined();
+      expect(page.ctaTextOverride).toBeDefined();
+      expect(page.serviceBlurbs).toBeDefined();
       expect(html).toContain(page.title);
+      expect(html).toContain(page.attorneyHeadingOverride!);
+      expect(html).toContain(page.ctaTextOverride!);
+      expect(html).not.toContain(page.seoTitle!);
+
+      for (const [serviceSlug, blurb] of Object.entries(page.serviceBlurbs ?? {})) {
+        expect(html).toContain(blurb);
+        const shared =
+          locale === 'ja'
+            ? (getJapaneseServiceDetail(serviceSlug)?.intro ?? '')
+            : (getServiceArea(serviceSlug)?.intro[locale] ?? '');
+        expect(shared).not.toBe('');
+        expect(html).not.toContain(shared.slice(0, 40));
+      }
+
+      expect(html).toContain(`/${locale}/columns/taiwan-labor-severance-law`);
+      expect(html).toContain(`/${locale}/columns/taiwan-mandatory-employment-period`);
+      expect(html).not.toContain(`/${locale}/columns/taiwan-logistics-business-setup`);
+      expect(html).not.toContain(
+        `/${locale}/columns/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide`,
+      );
+    },
+  );
+
+  it.each(['zh-hant', 'en', 'ja'] as const)(
+    'leaves the other %s intent pages on the shared locale strings',
+    (locale) => {
+      for (const otherSlug of intentPageSlugs.filter((item) => item !== semiconductorSlug)) {
+        const page = getIntentPage(locale, otherSlug)!;
+        expect(page.attorneyHeadingOverride).toBeUndefined();
+        expect(page.ctaTextOverride).toBeUndefined();
+        expect(page.serviceBlurbs).toBeUndefined();
+      }
     },
   );
 });

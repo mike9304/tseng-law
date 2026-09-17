@@ -558,9 +558,10 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     'taiwan-semiconductor-supplier-legal': {
       slug: 'taiwan-semiconductor-supplier-legal',
       label: '搜尋指南',
-      title: '台灣半導體材料與設備供應商法務 | 公司設立、契約、勞務、欠款追索',
+      title: '海外半導體材料與設備供應商的台灣法務說明',
+      seoTitle: '台灣半導體材料與設備供應商法務 | 公司設立、契約、勞動、欠款追索',
       description:
-        '供海外半導體材料與設備供應商整理在台公司設立、供應契約、勞務與欠款追索時需先確認的範圍。諮詢提供英語、中文、韓語、日語，一般法律諮詢每小時 NT$3,000。',
+        '寫給向台灣晶圓廠、封裝測試廠供貨的海外半導體材料與設備供應商：在台據點、供應契約、技術人員停留、帳款回收要怎麼準備。諮詢提供英語、中文、韓語、日語。',
       keywords: [
         '台灣半導體材料設備',
         '台灣半導體供應商法務',
@@ -573,78 +574,106 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         '台灣半導體供應商公司設立',
         '台灣設備供應商契約',
       ],
+      attorneyHeadingOverride: '處理半導體供應商案件的台灣律師',
+      ctaTextOverride:
+        '是否真的需要在台公司、還是只調整契約即可，要看客戶要求和交易規模、以及後續量的規劃，答案並不相同。請把報價單、供應契約、以及客戶寄來的供應商登錄文件寄給我們，曾雋崴律師會先幫您整理方向。',
       heroPoints: [
-        '海外半導體材料與設備供應商可比較台灣子公司、分公司與聯絡處，並把設立後的契約與雇用接續規劃。',
-        '完成公司登記並不代表營運、契約或雇用已經就緒。設立與營運應分開檢視。',
-        '諮詢提供英語、中文、韓語、日語，一般法律諮詢每小時 NT$3,000，可面談或視訊。公司設立常以約 3 個月為規劃基準。',
-        '欠款追索先看契約、發票與交貨紀錄，再比較協商、民事訴訟與強制執行。',
+        // REVIEW: 변호사 검수 필요 — 거래처의 벤더 등록 요구를 법인 없이 충족할 수 있는지에 대한 판단이 걸린 문장
+        '台灣晶圓廠或 OSAT（後段封裝測試）要求供應商登錄時，有時會一併要求設立在地公司。我們會依對方寄來的表格，確認這是不是真正需要法人的條件，或是分公司、既有代理商結構也能繼續供貨。',
+        // REVIEW: 변호사 검수 필요 — 품질보증·납기 지연·리콜 비용 분담 조항의 검토 범위를 언급
+        '材料多半是定期交貨，設備則常接到安裝與現場對應，契約裡要看的條款因此不同。品質保證範圍、交期延誤時怎麼處理、召回費用由誰負擔，我們會依契約文字本身逐項核對。',
+        // REVIEW: 변호사 검수 필요 — 기술자 체류 절차와 법인 형태 선택의 연계를 서술
+        '若因設備安裝或產線對應，海外技術人員會反覆入境，設立階段就會一併檢視該準備哪一種公司型態與停留程序。',
       ],
       idealFor: [
-        '外國投資人需要在台灣設立據點，以便在當地簽約或營運',
-        '正在比較子公司、分公司與聯絡處，哪一種較符合母公司商業目的',
-        '希望先整理對台灣買方或代理商的供應契約與付款條件',
-        '需要把在地雇用與欠款追索，和設立時程一起規劃',
+        // REVIEW: 변호사 검수 필요 — 벤더 등록 요건과 현지 법인 필요 여부의 연결
+        '台灣晶圓廠、OSAT 或零件廠要求供應商登錄，需要判斷是否必須設立在地公司',
+        '過去經台灣代理商出貨，現在要改與終端客戶直接簽約',
+        '設備安裝與定期點檢，讓海外技術人員必須反覆進入台灣',
+        // REVIEW: 변호사 검수 필요 — 근로계약 조건 설계를 언급
+        '第一次聘僱在地維修人力，需要確認勞動契約條件怎麼定',
+        '交貨與驗收都結束了，帳款卻好幾個月沒進來',
       ],
       reviewPoints: [
-        '設立時程會受投資審查、資本匯入與營業項目影響，實務上常以約 3 個月規劃。',
-        '公司登記與實際供貨契約是不同工作。',
-        '若把勞動契約留到人員已到位才處理，上線時間通常會延後。',
-        '欠款追索需要契約、交貨或驗收紀錄、以及請款資料才能判斷。',
+        // REVIEW: 변호사 검수 필요 — 벤더 등록 요구의 성격에 따라 필요한 조직 형태가 달라진다는 서술
+        '客戶的供應商登錄要求究竟指什麼，每份表格都不一樣。把採購寄來的表格和郵件一起看會比較快。',
+        // REVIEW: 변호사 검수 필요 — 검수·인수 시점이 대금 청구와 하자 대응에 미치는 영향을 서술
+        '設備供應會因驗收標準和點交時點設在哪裡，而改變請款與瑕疵處理的順序，所以會先從契約文字看起。',
+        // REVIEW: 변호사 검수 필요 — 기술자 체류와 현지 채용 일정의 연계를 서술
+        '海外技術人員的停留準備與在地聘僱，必須和設立時程對在一起，才能看出實際能支援產線的時間。',
       ],
       processFlow: [
-        '先依進入台灣市場的目的與營收結構，比較子公司、分公司與聯絡處。',
-        '確認股東結構、資本額、營業地址與申請順序後，再啟動設立。',
-        '登記完成後，把契約、雇用文件與收款流程排進同一份時程。',
+        // REVIEW: 변호사 검수 필요 — 현지 법인 없이 납품 가능한 구조인지 확인한다는 서술
+        '先讀客戶寄來的供應商登錄表格與採購條件，確認有沒有可能在沒有台灣公司的情況下繼續供貨。',
+        '若需要設立，再以稅務處理、簽約主體、在地聘僱計畫三個標準，比較子公司、分公司與辦事處。',
+        '以預定完成登記的日期往回推，把供應契約簽署、技術人員出差、在地員工到職排成同一張時程表。',
       ],
       prepareChecklist: [
-        '海外母公司登記文件、股權結構、負責人資料',
-        '材料或設備範圍、交易對象、既有報價或契約',
-        '預計資本額、匯款安排、是否聘用台灣人員',
-        '若已有欠款：發票、交貨紀錄、對方公司資料',
+        '客戶寄來的供應商登錄表格、採購條件、近期報價單與訂單',
+        '目前使用的供應契約、NDA、代理商契約（母公司語文本與英文本）',
+        '將派遣來台的技術人員人數與停留期間，以及預計在台聘僱的人數',
+        '若有帳款遲延：發票、交貨與驗收紀錄、催款郵件、對方公司的登記資料',
       ],
       cautionPoints: [
-        '只完成公司設立、卻把供應契約與雇用條件往後延，營運開始時間通常會拉長。',
-        '若行業別和實際營運內容不一致，後續流程可能受阻。',
-        '銀行開戶常與公司設立完成時間不同步，需預留時間。',
-        '若未先整理交貨與驗收資料，欠款追索會更費時。',
+        '為了趕上供應商登錄截止日而先決定公司型態，後來常會和稅務或聘僱計畫衝突，再改一次。',
+        // REVIEW: 변호사 검수 필요 — 해외 모회사 양식 계약서를 번역만 해서 쓸 때의 위험을 서술
+        '只把海外母公司範本翻譯後直接使用，品質保證範圍或交期延誤條款可能對不上台灣客戶的採購條件。',
+        '銀行開戶往往在登記完成後還要再花時間，第一筆貨款入帳也可能往後延。',
+        // REVIEW: 변호사 검수 필요 — 기술자 출장·체류 준비 일정에 관한 서술
+        '很晚才發現技術人員會頻繁出差，停留準備就會變得很趕。',
       ],
       serviceSlugs: ['investment', 'civil', 'labor', 'ip'],
+      serviceBlurbs: {
+        investment:
+          '若要與台灣晶圓廠、封裝廠直接簽約，我們會確認子公司、分公司、辦事處哪一種較合適，以及投審會與登記時程如何安排。',
+        civil:
+          '貨已交完但帳款未進，或交期、驗收發生爭議時，從協商到訴訟都會處理。',
+        // REVIEW: 변호사 검수 필요 — 근로계약서와 계약 종료 조건 검토를 언급
+        labor:
+          '在台灣聘僱維修或技術人員時，會檢視勞動契約與契約結束條件該如何整理。',
+        ip: '若已有品牌或專利，會先確認是否已在台灣註冊。',
+      },
       columnSlugs: [
         'taiwan-company-establishment-basics',
         'taiwan-company-subsidiary-vs-branch',
-        'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
-        'taiwan-logistics-business-setup',
+        'taiwan-labor-severance-law',
+        'taiwan-mandatory-employment-period',
       ],
       faq: [
         {
-          question: '台灣公司設立通常需要多久？',
+          question: '客戶供應商登錄要求設立在地公司，分公司可以嗎？',
+          // REVIEW: 변호사 검수 필요 — 벤더 등록 요건을 지사가 충족하는지에 대한 검토 절차 서술
           answer:
-            '一般約 3 個月左右，但仍需視投資審查、資本匯入時間與營業項目而定。',
+            '要看個案。我們會先確認供應商登錄表格要的是台灣統一編號、在台灣開立的發票，還是在地承辦人力。接著再把子公司與分公司在稅務、簽約主體、聘僱範圍上的差異攤開，一起看哪一種能對上那項要求。',
         },
         {
-          question: '子公司、分公司與聯絡處，通常怎麼選？',
+          question: '設備安裝技術人員只作短期停留時，要準備什麼？',
+          // REVIEW: 변호사 검수 필요 — 체류 자격·절차 준비를 언급(구체 요건은 단정하지 않음)
           answer:
-            '取決於責任結構、稅務，以及在台灣實際要做的業務範圍。若要獨立簽約與營運，常考慮子公司；若要維持母公司直接延伸，則可能考慮分公司；若主要是聯絡與調查，則可能考慮聯絡處。',
+            '停留多久、在現場做哪些工作、薪資從哪裡發，會讓該走的程序不一樣。請先整理出差行程、現場工作範圍、契約相對人是誰，我們再確認該走哪些步驟。',
         },
         {
-          question: '只完成公司登記，供應與雇用就結束了嗎？',
+          question: '海外母公司原本使用的 NDA、供應契約，可以直接拿來用嗎？',
+          // REVIEW: 변호사 검수 필요 — 준거법·분쟁해결·품질보증·리콜 비용 조항 검토를 언급
           answer:
-            '不會。公司登記只是起點，供應契約、勞動契約與欠款追索仍需另外規劃。',
+            '直接使用前，會把準據法與爭議解決、品質保證範圍、交期延誤與召回費用分擔、技術資料提供範圍，和客戶採購條件對在一起看。請把母公司範本和客戶寄來的採購條件一併提供，我們會標出哪裡需要改。',
         },
         {
-          question: '諮詢語言與費用如何計算？',
+          question: '從台灣代理商轉成與客戶直接簽約時，要先看什麼？',
+          // REVIEW: 변호사 검수 필요 — 기존 대리점 계약의 기간·해지·독점 조항 검토를 언급
           answer:
-            '諮詢提供英語、中文、韓語、日語。一般法律諮詢每小時 NT$3,000，可面談或視訊。案件費用會在檢視資料後另行說明。',
+            '會先確認現有代理商契約的期間、終止條件、是否獨家，再整理改成直接契約後，在台灣由誰開立發票、誰負責維修。會看代理商契約和近期交易紀錄來排順序。',
         },
         {
-          question: '公司設立費用在哪裡看？',
+          question: '設立期間和費用大概怎麼抓？',
           answer:
-            '服務費用頁面列出目前的諮詢與公司設立費用結構。一般法律諮詢每小時 NT$3,000；通常案件的台灣公司設立自 NT$50,000 起。',
+            '台灣公司設立實務上常以約 3 個月為規劃基準，但仍視是否屬投審會審查、資金匯入時點、營業項目記載而異。通常的台灣公司設立自 NT$50,000 起，一般法律諮詢為面談或視訊每小時 NT$3,000。案件委任費用會在檢視資料後另行說明。',
         },
         {
-          question: '台灣交易對象未付款或違約時怎麼處理？',
+          question: '貨已交完，帳款一直沒進來，怎麼辦？',
+          // REVIEW: 변호사 검수 필요 — 회수 경로(협상·민사·집행) 비교를 언급
           answer:
-            '會先依契約、發票與往來紀錄判斷責任與可追索金額，再比較協商、民事訴訟與強制執行後提出建議。',
+            '會先確認積欠金額與經過時間、對方公司目前狀況、契約的管轄與準據法條款。再比較以通知、協商收斂，或走到民事程序與強制執行，把選項說明清楚。',
         },
       ],
     },
@@ -877,9 +906,10 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     'taiwan-semiconductor-supplier-legal': {
       slug: 'taiwan-semiconductor-supplier-legal',
       label: 'SEARCH GUIDE',
-      title: 'Taiwan Legal Support for Overseas Semiconductor Materials and Equipment Suppliers',
+      title: 'Legal guidance for overseas semiconductor materials and equipment suppliers in Taiwan',
+      seoTitle: 'Taiwan Legal Support for Overseas Semiconductor Materials and Equipment Suppliers',
       description:
-        'Legal support in Taiwan for overseas semiconductor materials and equipment suppliers, covering company setup, supply contracts, employment, and unpaid invoices. Consultations are NT$3,000 per hour in English, Chinese, Korean, and Japanese.',
+        'A briefing for overseas semiconductor materials and equipment suppliers that sell into Taiwan fabs and packaging houses: local entity choice, supply contracts, technician stays, and collections. Consultations are in English, Chinese, Korean, and Japanese.',
       keywords: [
         'Taiwan semiconductor supplier legal',
         'semiconductor materials equipment Taiwan',
@@ -892,78 +922,106 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         'semiconductor supplier company setup Taiwan',
         'Taiwan equipment supplier contracts',
       ],
+      attorneyHeadingOverride: 'Taiwan attorney for semiconductor supplier matters',
+      ctaTextOverride:
+        'Whether you actually need a Taiwan entity, or whether a contract review is enough, depends on what the customer is asking for, the size of the account, and the volume you expect next. Send the quotation, the supply agreement, and the vendor pack the customer sent, and Attorney Wei Tseng will outline a direction first.',
       heroPoints: [
-        'Overseas semiconductor materials and equipment suppliers can compare a Taiwan subsidiary, branch, or representative office, then map contracts and hiring onto the same plan.',
-        'Incorporation is not the same as operating: supply contracts, employment, and collections still need their own review.',
-        'Consultations are available in English, Chinese, Korean, and Japanese, in person or by video, at NT$3,000 per hour. Company setup is often planned around three months.',
-        'Unpaid invoices are reviewed from the contract, invoices, and delivery records, then compared against negotiation, a civil action, and enforcement.',
+        // REVIEW: 변호사 검수 필요 — 거래처의 벤더 등록 요구를 법인 없이 충족할 수 있는지에 대한 판단이 걸린 문장
+        'Taiwan fabs and OSAT (backend packaging and test) houses sometimes ask for vendor registration together with a local entity. We sit with the forms they sent and check whether that is a genuine entity requirement, or whether supply can continue through a branch or the current distributor.',
+        // REVIEW: 변호사 검수 필요 — 품질보증·납기 지연·리콜 비용 분담 조항의 검토 범위를 언급
+        'Materials usually move on a repeating delivery cycle; equipment often includes tool set-up and on-site response, so the clauses that matter are not the same. We read the warranty scope, late-delivery handling, and who bears recall costs from the contract wording itself.',
+        // REVIEW: 변호사 검수 필요 — 기술자 체류 절차와 법인 형태 선택의 연계를 서술
+        'If home-country technicians will keep flying in for equipment set-up or line support, we review which entity form and stay procedure to prepare while the company is still being formed.',
       ],
       idealFor: [
-        'Overseas materials or equipment suppliers that need a Taiwan subsidiary, branch, or representative office in order to operate or contract locally',
-        'Teams comparing subsidiary, branch, and representative-office structures against the parent’s commercial goal',
-        'Companies that want supply contracts, payment terms, and unpaid invoices reviewed before launch',
-        'Clients who need local hiring or unpaid-invoice follow-up handled with the setup work',
+        // REVIEW: 변호사 검수 필요 — 벤더 등록 요건과 현지 법인 필요 여부의 연결
+        'A Taiwan fab, OSAT, or parts maker has asked for vendor registration and you need to decide whether a local entity is required',
+        'You have been shipping through a Taiwan distributor and now want a direct contract with the end customer',
+        'Equipment set-up and scheduled maintenance mean home-country technicians will enter Taiwan repeatedly',
+        // REVIEW: 변호사 검수 필요 — 근로계약 조건 설계를 언급
+        'You are hiring local field-service staff for the first time and need the employment terms checked',
+        'Delivery and acceptance are done, but payment has not arrived for months',
       ],
       reviewPoints: [
-        'Setup timing depends on investment review, capital remittance, and the stated business scope; a common planning assumption is around three months.',
-        'Company registration does not by itself complete operating contracts or employment arrangements.',
-        'Employment terms should be designed with the launch timeline, not after staff are already on site.',
-        'Unpaid invoices are reviewed from the contract, delivery or acceptance records, and the demand history.',
+        // REVIEW: 변호사 검수 필요 — 벤더 등록 요구의 성격에 따라 필요한 조직 형태가 달라진다는 서술
+        'What vendor registration actually requires differs from form to form. It is faster to read the pack and the emails from purchasing together.',
+        // REVIEW: 변호사 검수 필요 — 검수·인수 시점이 대금 청구와 하자 대응에 미치는 영향을 서술
+        'On equipment supply, where you put the inspection standard and the acceptance date changes the order of invoicing and defect response, so we start from the contract wording.',
+        // REVIEW: 변호사 검수 필요 — 기술자 체류와 현지 채용 일정의 연계를 서술
+        'Home-country technician stays and local hiring have to be lined up with the incorporation calendar, or the date you can actually cover the line will slip.',
       ],
       processFlow: [
-        'Compare subsidiary, branch, and representative-office structures based on the commercial goal and revenue flow of the overseas parent or investor.',
-        'Confirm shareholders, capital, business address, and the filing sequence before incorporation work begins.',
-        'After registration, schedule contracts, employment documents, and collections on the same calendar.',
+        // REVIEW: 변호사 검수 필요 — 현지 법인 없이 납품 가능한 구조인지 확인한다는 서술
+        'We first read the vendor-registration pack and purchasing terms the customer sent, and check whether supply can proceed without a Taiwan entity.',
+        'If an entity is needed, we compare a subsidiary, a branch, and a representative office on tax treatment, who signs the contract, and the local hiring plan.',
+        'Working back from the expected registration date, we put contract signing, technician travel, and local hiring on one calendar.',
       ],
       prepareChecklist: [
-        'Overseas parent-company registry documents, shareholder structure, and director details',
-        'Product or equipment scope, counterparties, and existing quotations or contracts',
-        'Expected capital amount, remittance plan, and whether Taiwan staff will be hired',
-        'For unpaid invoices: invoices, delivery records, and counterparty company details',
+        'The vendor-registration pack, purchasing terms, and recent quotations and purchase orders from the customer',
+        'The supply agreement, NDA, and distributor agreement you currently use (home-country original and English)',
+        'How many technicians will travel, for how long, and how many people you plan to hire in Taiwan',
+        'If invoices are overdue: the invoices, delivery and acceptance records, demand emails, and the counterparty company registry details',
       ],
       cautionPoints: [
-        'Treating incorporation as the end of the work usually delays contracts and hiring.',
-        'If the registered business scope does not match the actual operating model, later steps can stall.',
-        'Bank account opening often takes longer than clients expect, even after registration is done.',
-        'Collections take longer when delivery and acceptance records were never organized.',
+        'If you lock the entity form just to hit a vendor-registration deadline, it often collides later with tax or hiring plans and has to be unwound.',
+        // REVIEW: 변호사 검수 필요 — 본사 소재국 양식 계약서를 번역만 해서 쓸 때의 위험을 서술
+        'Translating a home-country template and using it as-is can leave the warranty scope or late-delivery clauses out of step with the Taiwan customer purchasing terms.',
+        'Opening a bank account takes extra time after registration is done, and the first payment can land later than planned.',
+        // REVIEW: 변호사 검수 필요 — 기술자 출장·체류 준비 일정에 관한 서술
+        'If you only notice late that technician travel will be frequent, stay preparations get squeezed.',
       ],
       serviceSlugs: ['investment', 'civil', 'labor', 'ip'],
+      serviceBlurbs: {
+        investment:
+          'To contract with a Taiwan fab or packaging house, we check which of a subsidiary, branch, or representative office fits, and how investment approval and registration timing run.',
+        civil:
+          'When delivery is done but payment has not arrived, or a dispute opens over timing and inspection, we handle the matter from negotiation through a civil action.',
+        // REVIEW: 변호사 검수 필요 — 근로계약서와 계약 종료 조건 검토를 언급
+        labor:
+          'When you hire field-service or technical staff in Taiwan, we review how to set the employment contract and the terms on which it can end.',
+        ip: 'If you hold a brand or patents, we start by checking whether they are registered in Taiwan.',
+      },
       columnSlugs: [
         'taiwan-company-establishment-basics',
         'taiwan-company-subsidiary-vs-branch',
-        'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
-        'taiwan-logistics-business-setup',
+        'taiwan-labor-severance-law',
+        'taiwan-mandatory-employment-period',
       ],
       faq: [
         {
-          question: 'How long does Taiwan company setup usually take?',
+          question: 'The customer wants a local entity for vendor registration. Will a branch do?',
+          // REVIEW: 변호사 검수 필요 — 벤더 등록 요건을 지사가 충족하는지에 대한 검토 절차 서술
           answer:
-            'A common planning assumption is around three months, but the timeline depends on investment review, capital timing, and the stated business scope.',
+            'It depends on the file. We first check whether the vendor pack is asking for a Taiwan business registration number, invoices issued in Taiwan, or staff on the ground. We then put a subsidiary and a branch side by side on tax, contracting party, and hiring scope, and look with you at which one meets that request.',
         },
         {
-          question: 'Which structure is used: subsidiary, branch, or representative office?',
+          question: 'What should we prepare when equipment technicians will stay only a short time?',
+          // REVIEW: 변호사 검수 필요 — 체류 자격·절차 준비를 언급(구체 요건은 단정하지 않음)
           answer:
-            'It depends on liability, tax, and the work that must be done in Taiwan. Subsidiaries are common for independent local contracting, branches can fit direct parent-company operations, and a representative office is a third published option reviewed against the commercial goal.',
+            'The procedure to prepare changes with the length of stay, the work they will do on site, and where payroll is paid. Share the travel dates, the scope of work on the floor, and who the contracting party is, and we will confirm which steps to take.',
         },
         {
-          question: 'Is company registration enough to start supplying and hiring?',
+          question: 'Can we keep using our home-country NDA and supply agreement as they are?',
+          // REVIEW: 변호사 검수 필요 — 준거법·분쟁해결·품질보증·리콜 비용 조항 검토를 언급
           answer:
-            'Usually not. Incorporation is the starting point; supply contracts, employment documents, and unpaid-invoice follow-up still need a separate plan.',
+            'Before you do, we line up governing law and dispute resolution, warranty scope, late delivery and recall-cost sharing, and the range of technical data you must hand over, against the customer purchasing terms. Send the headquarters template and the purchasing terms they sent, and we will mark what needs to change.',
         },
         {
-          question: 'What does a consultation cost, and which languages are available?',
+          question: 'What do you look at when we move from a distributor to a direct contract?',
+          // REVIEW: 변호사 검수 필요 — 기존 대리점 계약의 기간·해지·독점 조항 검토를 언급
           answer:
-            'A general legal consultation is NT$3,000 per hour, in person or by video, in English, Chinese, Korean, and Japanese. Case fees are quoted after the documents are reviewed.',
+            'We first check the term, termination, and exclusivity of the current distributor agreement, then sort out who will issue invoices in Taiwan and who will cover field service after the switch. We set the sequence from the distributor contract and the recent trading history.',
         },
         {
-          question: 'Where can I see current company-setup fees?',
+          question: 'What timeline and cost should we plan for company setup?',
           answer:
-            'See the Service Fees page for the current consultation and company-setup fee structure. A general legal consultation is NT$3,000 per hour. Taiwan company setup starts from NT$50,000 for standard cases.',
+            'Taiwan company setup is commonly planned around three months, but it moves with whether investment review applies, when capital is remitted, and how the business scope is stated. A standard Taiwan company setup starts from NT$50,000, and a general legal consultation is NT$3,000 per hour in person or by video. Engagement fees for a matter are quoted separately after we have seen the documents.',
         },
         {
-          question: 'How do you handle unpaid invoices or contract breaches by a Taiwanese counterparty?',
+          question: 'Delivery is finished, but payment keeps slipping. What happens next?',
+          // REVIEW: 변호사 검수 필요 — 회수 경로(협상·민사·집행) 비교를 언급
           answer:
-            'We start from the contract, invoices, and correspondence to assess liability and the recoverable amount, then compare a negotiated settlement, civil action, and enforcement options before recommending a path.',
+            'We first confirm the amount and how long it has been overdue, the current state of the counterparty, and the jurisdiction and governing-law clauses in the contract. We then compare whether to close it by notice and negotiation, or to go through a civil action and enforcement, and walk you through the options.',
         },
       ],
     },
@@ -1170,9 +1228,10 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     'taiwan-semiconductor-supplier-legal': {
       slug: 'taiwan-semiconductor-supplier-legal',
       label: '検索ガイド',
-      title: '台湾の半導体素材・装置サプライヤー法務 | 会社設立・契約・労務・売掛',
+      title: '台湾の半導体材料・装置サプライヤー向け法務案内',
+      seoTitle: '台湾の半導体素材・装置サプライヤー法務 | 会社設立・契約・労務・売掛',
       description:
-        '日本の半導体素材・装置サプライヤーが台湾で会社を設立し、供給契約・労務・売掛を進める際の確認事項をまとめた案内です。相談は英語・中国語・韓国語・日本語、1時間NT$3,000です。',
+        '台湾のファブやパッケージング先へ材料・装置を納入する日本のサプライヤーが、現地法人、供給契約、技術者の滞在、代金回収をどう準備するかを整理した案内です。相談は英語・中国語・韓国語・日本語で行います。',
       keywords: [
         '台湾 半導体 素材 装置',
         '台湾 半導体 サプライヤー 法務',
@@ -1185,78 +1244,106 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         '台湾 半導体サプライヤー 会社設立',
         '台湾 装置サプライヤー 契約',
       ],
+      attorneyHeadingOverride: '半導体サプライヤーの案件を担当する台湾弁護士',
+      ctaTextOverride:
+        '現地法人が本当に必要か、契約書の手直しだけで足りるかは、取引先の要望と取引規模、今後の数量計画によって異なります。見積書、供給契約書、取引先から届いた提出書類をお送りいただければ、曾雋崴台湾弁護士が先に方針を整理いたします。',
       heroPoints: [
-        '日本の半導体素材・装置サプライヤーが、台湾の子会社・支店・駐在員事務所を比較し、設立後の契約と雇用まで同じ流れで検討できます。',
-        '会社設立は営業・契約・雇用の完了ではありません。設立と運営を分けて整理します。',
-        '相談は英語・中国語・韓国語・日本語に対応し、一般法律相談は1時間NT$3,000です。設立はおおむね3か月を目安にします。',
-        '売掛は契約書・請求書・納品記録を先に確認し、交渉・民事・強制執行の選択肢を比較します。',
+        // REVIEW: 변호사 검수 필요 — 거래처의 벤더 등록 요구를 법인 없이 충족할 수 있는지에 대한 판단이 걸린 문장
+        '台湾のファブやOSAT（後工程のパッケージング・テスト）がベンダー登録とあわせて現地法人を求めることがあります。法人が実際に必要な求めなのか、支店や既存の代理店のまま納入が続くのかを、先方から届いた書式を手元に置き確認します。',
+        // REVIEW: 변호사 검수 필요 — 품질보증·납기 지연·리콜 비용 분담 조항의 검토 범위를 언급
+        '材料は定期納入、装置は設置と現場対応まで続くことが多いため、契約書で見る条項が変わります。品質保証の範囲、納期が遅れたときの処理、リコール時の費用負担を、契約書の文言どおりに確認します。',
+        // REVIEW: 변호사 검수 필요 — 기술자 체류 절차와 법인 형태 선택의 연계를 서술
+        '装置の設置やライン対応で日本の技術者が頻繁に出入りする場合は、どの法人形態と滞在手続を準備するかを設立の段階で一緒に検討します。',
       ],
       idealFor: [
-        '日本企業が台湾の取引先対応のため、現地法人の要否を検討している場合',
-        '子会社・支店・駐在員事務所のどれが適切か比較が必要な場合',
-        '台湾の買い手や代理店との供給契約、代金を先に整理したい場合',
-        '現地雇用と売掛対応を設立スケジュールとあわせて見たい場合',
+        // REVIEW: 변호사 검수 필요 — 벤더 등록 요건과 현지 법인 필요 여부의 연결
+        '台湾のファブ・OSAT・部品メーカーがベンダー登録を求め、現地法人が必要かを判断しなければならない場合',
+        'これまで台湾の代理店経由で納入していた取引を、最終顧客との直接契約に切り替えたい場合',
+        '装置の設置と定期点検のため、日本の技術者が繰り返し台湾に入る場合',
+        // REVIEW: 변호사 검수 필요 — 근로계약 조건 설계를 언급
+        '現地の保守担当を初めて雇用し、労働契約の条件をどう定めるか確認が必要な場合',
+        '納入と検収は終わっているのに、代金が何か月も入ってこない場合',
       ],
       reviewPoints: [
-        '設立の期間は投資承認、資本金送金、業種の記載によって変わり、実務上は約3か月を目安にします。',
-        '法人登記と実際の供給契約スケジュールは別の作業です。',
-        '労働契約と現場人員を後回しにすると、稼働開始が遅れます。',
-        '売掛の検討には契約書、納品・検収記録、請求書が必要です。',
+        // REVIEW: 변호사 검수 필요 — 벤더 등록 요구의 성격에 따라 필요한 조직 형태가 달라진다는 서술
+        '取引先のベンダー登録の求めが何を指すかは書式ごとに違います。購買担当から届いた書式とメールを一緒に見る方が早いです。',
+        // REVIEW: 변호사 검수 필요 — 검수·인수 시점이 대금 청구와 하자 대응에 미치는 영향을 서술
+        '装置の供給では、検収基準と引渡し時点をどこに置くかで請求と不具合対応の順序が変わるため、契約書の文言から確認します。',
+        // REVIEW: 변호사 검수 필요 — 기술자 체류와 현지 채용 일정의 연계를 서술
+        '日本の技術者の滞在準備と現地採用は、設立日程と重ねて見ないと、実際にいつからライン対応できるかが見えてきません。',
       ],
       processFlow: [
-        '進出目的と売上構造を基準に、子会社・支店・駐在員事務所のどの形態が適切か先に比較します。',
-        '株主構成、資本金、営業住所、申請順を整理して設立の前提条件を確定します。',
-        '登記後の契約、雇用、代金回収の流れを同じスケジュールに載せます。',
+        // REVIEW: 변호사 검수 필요 — 현지 법인 없이 납품 가능한 구조인지 확인한다는 서술
+        '取引先から届いたベンダー登録の書式と購買条件を先に読み、現地法人なしでも納入を続けられるかを確認します。',
+        '法人が必要であれば、子会社・支店・駐在員事務所を、税務、契約の締結主体、現地採用計画の三つの基準で比較します。',
+        '登記完了の予定日を起点に、供給契約の署名、技術者の出張、現地社員の採用時期を逆算し、一つの日程表に合わせます。',
       ],
       prepareChecklist: [
-        '日本本社の登記書類、株主構成、代表者情報',
-        '供給品目（素材・装置）、取引先、既存の見積・契約',
-        '予定資本金、送金計画、台湾での人材採用の有無',
-        '売掛がある場合は請求書、納品記録、相手方の会社情報',
+        '取引先から届いたベンダー登録の書式、購買条件書、直近の見積書と発注書',
+        '現在使っている供給契約書・NDA・代理店契約書（日本語版と英語版の両方）',
+        '台湾に送る技術者の人数と滞在期間、現地で採用する人数の計画',
+        '代金が滞っている件があれば、請求書、納入・検収記録、督促メール、相手会社の登記情報',
       ],
       cautionPoints: [
-        '会社設立だけ先に終え、供給契約と雇用条件を後回しにすると稼働開始が遅くなります。',
-        '業種コードと実際の事業内容が異なると、後続手続きが止まることがあります。',
-        '銀行口座の開設は設立完了とは別にさらに時間がかかることがあります。',
-        '納品と検収の記録を早めに集めないと、売掛対応に時間がかかります。',
+        'ベンダー登録の締切に間に合わせようと法人形態を先に決めてしまうと、後から税務や採用計画と食い違い、作り直すことがあります。',
+        // REVIEW: 변호사 검수 필요 — 일본 본사 양식 계약서를 번역만 해서 쓸 때의 위험을 서술
+        '日本本社の書式を翻訳しただけで使うと、品質保証の範囲や納期遅延の処理が、台湾の取引先の購買条件と噛み合わないことがあります。',
+        '銀行口座の開設は登記完了とは別に時間がかかり、最初の入金日程が後ろにずれることもあります。',
+        // REVIEW: 변호사 검수 필요 — 기술자 출장·체류 준비 일정에 관한 서술
+        '技術者の出張が増えることに遅く気づくと、滞在の準備期間が足りなくなります。',
       ],
       serviceSlugs: ['investment', 'civil', 'labor', 'ip'],
+      serviceBlurbs: {
+        investment:
+          '台湾のファブ・パッケージング先と直接契約するには、子会社・支店・駐在員事務所のどれが合うか、投資承認と登記の日程がどう組まれるかを確認します。',
+        civil:
+          '納入は終わっているのに代金が入らないとき、納期や検収を巡って争いになったときは、交渉から訴訟まで対応します。',
+        // REVIEW: 변호사 검수 필요 — 근로계약서와 계약 종료 조건 검토를 언급
+        labor:
+          '台湾で保守・技術の人材を雇用するとき、労働契約書と契約終了の条件をどう整理するかを検討します。',
+        ip: 'ブランドや特許をお持ちであれば、台湾での登録の有無から確認いたします。',
+      },
       columnSlugs: [
         'taiwan-company-establishment-basics',
         'taiwan-company-subsidiary-vs-branch',
-        'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
-        'taiwan-logistics-business-setup',
+        'taiwan-labor-severance-law',
+        'taiwan-mandatory-employment-period',
       ],
       faq: [
         {
-          question: '台湾の会社設立は通常どのくらいかかりますか？',
+          question: '取引先がベンダー登録に現地法人を求めています。支店でも足りますか？',
+          // REVIEW: 변호사 검수 필요 — 벤더 등록 요건을 지사가 충족하는지에 대한 검토 절차 서술
           answer:
-            '一般的に約3ヶ月前後を見込みますが、投資承認の対象かどうか、資本金送金の時期、業種の記載によって変わることがあります。',
+            '事案ごとに異なります。ベンダー登録の書式が求めているのが台湾の事業者登録番号なのか、台湾で発行される請求書なのか、現地の担当者なのかを先に確認します。そのうえで子会社と支店が税務、契約の締結主体、採用の範囲でどう違うかを並べ、どちらがその求めを満たすかを一緒に見ます。',
         },
         {
-          question: '子会社、支店、駐在員事務所のどれを使いますか？',
+          question: '装置の設置技術者が短期間滞在するとき、何を準備しますか？',
+          // REVIEW: 변호사 검수 필요 — 체류 자격·절차 준비를 언급(구체 요건은 단정하지 않음)
           answer:
-            '責任構造、税務、台湾で行う業務の範囲によって異なります。独立して契約・運営する場合は子会社を、本社直結なら支店を、連絡・調査が中心なら駐在員事務所を検討するケースが多いです。',
+            '滞在期間、現地で行う業務の内容、給与をどこから支払うかによって、準備する手続が変わります。出張日程、現場で担う作業範囲、契約の相手方が誰かを整理していただければ、どの手続を踏むべきか確認いたします。',
         },
         {
-          question: '会社設立だけ依頼すれば供給と雇用も終わりますか？',
+          question: '日本で使っていたNDA・供給契約書をそのまま使ってもよいですか？',
+          // REVIEW: 변호사 검수 필요 — 준거법·분쟁해결·품질보증·리콜 비용 조항 검토를 언급
           answer:
-            'そうではありません。法人登記は出発点であり、供給契約、労働契約、売掛対応は別に設計する必要があります。',
+            'そのまま使う前に、準拠法と紛争解決条項、品質保証の範囲、納期遅延とリコール費用の分担、技術資料の提供範囲を、取引先の購買条件と並べて見ます。本社書式と先方から届いた購買条件を一緒にいただければ、どこを直すべきかお示しします。',
         },
         {
-          question: '相談の言語と相談料はどうなりますか？',
+          question: '台湾の代理店経由だった数量を直接契約に切り替えるとき、何を見ますか？',
+          // REVIEW: 변호사 검수 필요 — 기존 대리점 계약의 기간·해지·독점 조항 검토를 언급
           answer:
-            '相談は英語・中国語・韓国語・日本語に対応し、一般法律相談は対面またはビデオで1時間NT$3,000です。案件の費用は資料を確認したうえで別途ご案内します。',
+            '既存の代理店契約の期間、解除条件、独占の有無を先に確認し、直接契約に変えたときに台湾で誰が請求書を発行し、保守を担うかを整理します。代理店契約書と直近の取引経緯を見ながら順序を決めます。',
         },
         {
-          question: '会社設立の費用はどこで確認できますか？',
+          question: '設立の期間と費用はどの程度で見ますか？',
           answer:
-            'サービス料金ページに現在の相談・会社設立費用の構成があります。一般法律相談は1時間NT$3,000、通常の台湾会社設立はNT$50,000からです。',
+            '台湾の会社設立はよく約3か月を目安にしますが、投資承認の対象かどうか、資本金の送金時期、業種の記載によって変わります。通常の台湾会社設立はNT$50,000から、一般法律相談は対面またはビデオで1時間NT$3,000です。事件の委任費用は資料を確認したうえで別途ご案内します。',
         },
         {
-          question: '台湾の取引先からの未払い・契約違反にはどう対応しますか？',
+          question: '納入は終わっているのに代金が入りません。どうしますか？',
+          // REVIEW: 변호사 검수 필요 — 회수 경로(협상·민사·집행) 비교를 언급
           answer:
-            '契約書・請求書・やり取りをもとに責任と回収可能額を検討し、交渉による和解、民事訴訟、強制執行の選択肢を比較してご提案します。',
+            '滞っている金額と経過期間、相手会社の現在の状態、契約書の管轄と準拠法の条項を先に確認します。そのうえで通知と交渉で収めるか、民事手続と強制執行まで進むか、選択肢を比較してご案内します。',
         },
       ],
     },

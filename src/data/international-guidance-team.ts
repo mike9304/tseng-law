@@ -241,7 +241,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     title: 'فريق Hovering الدولي',
     description:
       'ملفات المحامين ومديري الأعمال والمحاسب الشريك في Hovering.',
-    representativeTitle: 'المحامي المدير',
+    representativeTitle: 'المحامية المديرة',
     teamTitle: 'المحامون والموظفون',
     partnerTitle: 'المحاسب الشريك',
     introLabel: 'تعريف',
@@ -250,14 +250,14 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     photoAltPrefix: 'صورة',
     workingLanguagesLabel: 'لغات العمل',
     fullProfileLabel: 'الملف الكامل (English)',
-    keyFactsHeading: 'المحامي Wei Tseng — معلومات أساسية',
+    keyFactsHeading: 'المحامية Wei Tseng — معلومات أساسية',
     qualificationLabel: 'المؤهل وجهة العمل',
     qualificationSentence:
-      '{name} محامٍ مؤهَّل لمزاولة المهنة في تايوان والمحامي المدير في {firm}.',
+      '{name} محامية مؤهَّلة لمزاولة المهنة في تايوان والمحامية المديرة في {firm}.',
     practiceLabel: 'المجالات الرئيسية',
     consultationLanguagesLabel: 'لغات الاستشارة',
     roles: {
-      'tseng-junwei': 'المحامي المدير في تايوان (Managing Attorney)',
+      'tseng-junwei': 'المحامية المديرة في تايوان (Managing Attorney)',
       'chang-rongxuan': 'محامٍ في تايوان (Taiwan Attorney)',
       'chang-fangyu': 'مساعد قانوني (Paralegal)',
       'son-jungmin': 'مدير عمليات كوريا (Korea Operations Manager)',
@@ -716,7 +716,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'يتولّى المكتب قضايا الشركات والأفراد في تايوان، ويعمل بالإنجليزية واليابانية والكورية والصينية.',
-        'مثَّل طالبًا كوريًا في دعوى تعويض عن إصابة في ناد رياضي، وصدر حكم ابتدائي بالتعويض بمبلغ TWD 1.57M.',
+        'مثَّلت طالبًا كوريًا في دعوى تعويض عن إصابة في ناد رياضي، وصدر حكم ابتدائي بالتعويض بمبلغ TWD 1.57M.',
       ],
       education: [
         'ماجستير (M.S.)، Institute of Finance, National Taiwan University',

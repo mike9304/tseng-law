@@ -183,7 +183,16 @@ const nextConfig = {
       },
     ]);
 
+    const semiconductorBoardRedirects = locales.flatMap((locale) => [
+      {
+        source: `/${locale}/services/semiconductor-companies`,
+        destination: `/${locale}/semiconductor`,
+        permanent: true,
+      },
+    ]);
+
     return [
+      ...semiconductorBoardRedirects,
       {
         source: '/',
         destination: '/ko',

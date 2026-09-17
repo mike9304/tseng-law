@@ -139,8 +139,9 @@ describe('sitemap column lastModified', () => {
       // src/content/columns-{vi,id,th,fil,ar,de,es} (counted from disk so this
       // assertion tracks the growing corpus).
       // Semiconductor hub adds 4 URLs (ko/zh-hant/en STATIC_PATHS + ja entry).
-      beforeFiltering: 249 + guidanceTranslatedColumnCount,
-      afterFiltering: 240 + guidanceTranslatedColumnCount,
+      // Public semiconductor guide board adds 4 more URLs.
+      beforeFiltering: 253 + guidanceTranslatedColumnCount,
+      afterFiltering: 244 + guidanceTranslatedColumnCount,
       removed: 9,
     });
 
@@ -343,6 +344,7 @@ describe('sitemap column lastModified', () => {
     '/taiwan-company-setup-lawyer',
     '/taiwan-litigation-lawyer',
     '/taiwan-semiconductor-supplier-legal',
+    '/semiconductor',
     '/korean-lawyer-in-taiwan',
     '/ai-intake',
     '/guides/taiwan-company-setup',

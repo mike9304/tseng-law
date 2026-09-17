@@ -43,6 +43,7 @@ const STATIC_PATHS = [
   '/taiwan-company-setup-lawyer',
   '/taiwan-litigation-lawyer',
   '/taiwan-semiconductor-supplier-legal',
+  '/semiconductor',
   '/guides/taiwan-company-setup',
   '/korean-lawyer-in-taiwan',
   '/ai-intake',
@@ -375,6 +376,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   );
   pages.push(
     createEntry('ja', '/taiwan-semiconductor-supplier-legal', {
+      priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  pages.push(
+    createEntry('ja', '/semiconductor', {
       priority: 0.8,
       alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
     }),

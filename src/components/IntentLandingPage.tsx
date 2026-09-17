@@ -271,6 +271,15 @@ const relatedResources: Record<
   ],
   'taiwan-semiconductor-supplier-legal': [
     {
+      href: 'semiconductor',
+      label: {
+        ko: '반도체 기업 실무가이드',
+        'zh-hant': '半導體企業實務指南',
+        en: 'Semiconductor practice guide',
+        ja: '半導体企業実務ガイド',
+      },
+    },
+    {
       href: 'lawyers/wei-tseng',
       label: {
         ko: '증준외 변호사 프로필',

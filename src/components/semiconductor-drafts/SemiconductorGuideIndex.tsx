@@ -79,7 +79,7 @@ export default function SemiconductorGuideIndex({
             <ul className="svc-keypoints-list">
               {EXISTING_PUBLIC_RELATED_LINKS.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="link-underline">{link.label}</a>
+                  <Link href={link.href} className="link-underline">{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -91,7 +91,7 @@ export default function SemiconductorGuideIndex({
               <p className="svc-sidebar-text">
                 초기 문의에는 회사명, 본사 소재국, 상대방 회사명, 문의 유형, 비기밀 개요, 희망 상담 언어만 적어 주세요. 기밀자료는 이해충돌 확인 후 별도 전달합니다.
               </p>
-              <a href="/ko/contact" className="button svc-sidebar-btn">공식 문의 페이지</a>
+              <Link href="/ko/contact" className="button svc-sidebar-btn">공식 문의 페이지</Link>
               <a
                 href={semiconductorInquiryMailto('taiwan-entry')}
                 className="button--outline svc-sidebar-btn"

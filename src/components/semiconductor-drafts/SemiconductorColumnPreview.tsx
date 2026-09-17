@@ -73,7 +73,7 @@ export default function SemiconductorColumnPreview({
               <ul className="svc-related-list">
                 {EXISTING_PUBLIC_RELATED_LINKS.map((link) => (
                   <li key={link.href}>
-                    <a href={link.href} className="svc-related-link">{link.label}</a>
+                    <Link href={link.href} className="svc-related-link">{link.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -83,7 +83,7 @@ export default function SemiconductorColumnPreview({
               <p className="svc-sidebar-text">
                 문의가 곧 수임은 아닙니다. 초기 메일에는 민감정보를 넣지 마세요.
               </p>
-              <a href="/ko/contact" className="button svc-sidebar-btn">공식 문의 페이지</a>
+              <Link href="/ko/contact" className="button svc-sidebar-btn">공식 문의 페이지</Link>
               <a
                 href={semiconductorInquiryMailto(inquiryKind)}
                 className="button--outline svc-sidebar-btn"

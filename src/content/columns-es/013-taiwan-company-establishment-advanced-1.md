@@ -129,5 +129,5 @@ Antes de firmar el contrato, confírmelo de antemano.
 
 > Véase también:
 > - [Guía general de constitución de sociedades en Taiwán — trámites, costes y formas jurídicas](/ko/guides/taiwan-company-setup)
-> - [Abogado en Taiwán que puede atender en coreano](/ko/korean-lawyer-in-taiwan)
+> - [Abogada en Taiwán que puede atender en coreano](/ko/korean-lawyer-in-taiwan)
 > - [Guía del abogado de constitución de personas jurídicas y sociedades en Taiwán](/ko/taiwan-company-setup-lawyer)

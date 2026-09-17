@@ -97,5 +97,5 @@ In den meisten Fällen wird die Seite geschützt, die sich vorher vorbereitet ha
 
 > Siehe auch:
 > - [Leitfaden zum Prozessanwalt in Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Taiwanesischer Anwalt mit Koreanischkenntnissen](/ko/korean-lawyer-in-taiwan)
+> - [Taiwanesische Anwältin mit Koreanischkenntnissen](/ko/korean-lawyer-in-taiwan)
 > - [Tätigkeitsfelder — Arbeit](/ko/services/labor)

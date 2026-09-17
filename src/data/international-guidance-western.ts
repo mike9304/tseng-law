@@ -63,7 +63,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
       ', wie Sie eine Zusammenfassung formulieren, die eine Anwältin oder ein Anwalt prüft.',
     columnsViewAllLabel: 'Alle Beiträge ansehen',
     columnsReadMoreLabel: 'Weiterlesen',
-    columnsReviewLabel: 'Geprüft von Rechtsanwalt Wei Tseng',
+    columnsReviewLabel: 'Geprüft von Rechtsanwältin Wei Tseng',
     columnsOriginalLanguageBadge: 'Originalsprache',
     columnsOriginalLanguageNote:
       'Die folgenden Beiträge liegen noch nicht auf Deutsch vor. Die Liste bleibt in der Originalsprache und öffnet die jeweilige Sprachseite; der Inhalt wird nicht automatisch übersetzt.',
@@ -196,7 +196,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Arbeit mit ausländischen Beteiligten',
           paragraphs: [
-            'Die grenzüberschreitende Arbeit umfasst Gesellschaftsgründung, Visa, Marken- und Patentanmeldungen, rechtliche Risikoprüfung und steuerliche Beratung von Unternehmen. Das Büro Taichung bearbeitet insbesondere Bausachen, geistiges Eigentum und Angelegenheiten mit Bezug zu Korea und Japan. Rechtsanwalt Wei Tseng (曾雋崴) begleitet Mandanten aus Korea, Japan und andere internationale Mandanten in den genannten Gruppen.',
+            'Die grenzüberschreitende Arbeit umfasst Gesellschaftsgründung, Visa, Marken- und Patentanmeldungen, rechtliche Risikoprüfung und steuerliche Beratung von Unternehmen. Das Büro Taichung bearbeitet insbesondere Bausachen, geistiges Eigentum und Angelegenheiten mit Bezug zu Korea und Japan. Rechtsanwältin Wei Tseng (曾雋崴) begleitet Mandanten aus Korea, Japan und andere internationale Mandanten in den genannten Gruppen.',
             'Ob wir eine Sache übernehmen können, hängt vom Inhalt und von der Sprache der Kommunikation ab. Fällt Ihr Anliegen in die genannten Gruppen und kann es in einer der vier Beratungssprachen besprochen werden, können Sie eine Zusammenfassung zur Prüfung senden.',
           ],
         },
@@ -552,7 +552,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
       ' explica cómo redactar un resumen que un abogado revisará.',
     columnsViewAllLabel: 'Ver todos los artículos',
     columnsReadMoreLabel: 'Seguir leyendo',
-    columnsReviewLabel: 'Revisado por el abogado Wei Tseng',
+    columnsReviewLabel: 'Revisado por la abogada Wei Tseng',
     columnsOriginalLanguageBadge: 'Idioma original',
     columnsOriginalLanguageNote:
       'Los artículos siguientes aún no están en español. Esta lista permanece en el idioma original y abre esa página; el contenido no se traduce de forma automática.',
@@ -685,7 +685,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Trabajo con partes extranjeras',
           paragraphs: [
-            'El trabajo transfronterizo cubre constitución de sociedades, visados, registro de marcas y patentes, evaluación de riesgos jurídicos y asesoramiento fiscal empresarial. La oficina de Taichung atiende en particular construcción, propiedad intelectual y asuntos relacionados con Corea y Japón. El abogado Wei Tseng (曾雋崴) acompaña a clientes de Corea, de Japón y a otros clientes internacionales en los grupos anteriores.',
+            'El trabajo transfronterizo cubre constitución de sociedades, visados, registro de marcas y patentes, evaluación de riesgos jurídicos y asesoramiento fiscal empresarial. La oficina de Taichung atiende en particular construcción, propiedad intelectual y asuntos relacionados con Corea y Japón. La abogada Wei Tseng (曾雋崴) acompaña a clientes de Corea, de Japón y a otros clientes internacionales en los grupos anteriores.',
             'Si podemos o no atender un asunto depende de su contenido y del idioma de la comunicación. Si su asunto entra en los grupos anteriores y puede hablarse en uno de los cuatro idiomas de consulta, puede enviar un resumen para que un abogado lo revise.',
           ],
         },

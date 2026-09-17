@@ -147,4 +147,4 @@ Cuanto más se prolongue el estado de suspensión, más puede complicarse el pro
 
 Este artículo es información jurídica general y material educativo sobre el cierre de sociedades en Taiwán y el trato del patrimonio social; no es un dictamen jurídico sobre un asunto concreto y no garantiza un resultado. Como el procedimiento adecuado de disolución, liquidación, reducción de capital o suspensión y las declaraciones fiscales pueden variar según la forma social, los estatutos, la situación financiera, los acreedores, la inversión extranjera y cada operación, el asunto debe confirmarse por separado antes de adoptar una resolución o de mover fondos.
 
-**Abogado Wei Tseng (曾雋崴)**
+**Abogada Wei Tseng (曾雋崴)**

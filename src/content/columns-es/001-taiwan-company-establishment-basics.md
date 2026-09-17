@@ -138,8 +138,8 @@ El tipo limitado según el acuerdo no se aplica de forma automática por el mero
 - [Guía de residencia permanente de la Administración de Inmigración del Ministerio del Interior de Taiwán (內政部移民署)](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Guía de consulta previa del local de negocio de la ciudad de Taipéi](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-El ámbito de trabajo relacionado puede consultarse en [Servicios de inversión y constitución de sociedades en Taiwán](/ko/services#investment), y la experiencia y los idiomas del abogado responsable, en [Perfil del abogado Wei Tseng](/ko/lawyers/wei-tseng). Para consultas sobre un asunto concreto, utilice [Contacto](/es/contact).
+El ámbito de trabajo relacionado puede consultarse en [Servicios de inversión y constitución de sociedades en Taiwán](/ko/services#investment), y la experiencia y los idiomas de la abogada responsable, en [Perfil de la abogada Wei Tseng](/ko/lawyers/wei-tseng). Para consultas sobre un asunto concreto, utilice [Contacto](/es/contact).
 
 Este artículo es información jurídica general con fines educativos sobre la constitución de sociedades en Taiwán y el régimen conexo; no es asesoramiento para un caso concreto y no garantiza un resultado. Como los trámites necesarios y el resultado pueden variar según la estructura de inversión, el sector, la nacionalidad y el estatuto de estancia del solicitante, y la práctica más reciente de la autoridad competente, confirme las fuentes oficiales actualizadas y las circunstancias del asunto antes de ejecutar una inversión, un contrato o una contratación.
 
-**Abogado Wei Tseng (曾雋崴)**
+**Abogada Wei Tseng (曾雋崴)**

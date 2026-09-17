@@ -151,4 +151,4 @@ En las páginas oficiales de normativa deben confirmarse la fecha de reforma y l
 
 Este artículo es un material de propósito educativo para explicar de forma general el régimen de sucesión, el régimen patrimonial conyugal, la patria potestad y la tutela de menores en Taiwán; no es asesoramiento jurídico para un asunto concreto de sucesión o de familia. La ley aplicable, el procedimiento y el resultado pueden variar según el círculo de herederos, el testamento, el patrimonio y las deudas, el régimen matrimonial, las resoluciones judiciales existentes y los elementos internacionales. Antes de calcular plazos como la repudiación o la declaración tributaria, o de disponer del patrimonio, conviene confirmar las fuentes oficiales más recientes y las circunstancias individuales.
 
-**Wei Tseng (曾雋崴), abogado de Taiwán**
+**Wei Tseng (曾雋崴), abogada de Taiwán**

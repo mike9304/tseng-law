@@ -192,4 +192,4 @@ Die endgültige Wahl ist sicherer zu prüfen, wenn Fachleute in Taiwan und am Si
 
 Dieser Beitrag ist allgemeines Informationsmaterial zu Bildungszwecken über die Unterschiede zwischen taiwanischer Tochtergesellschaft und Zweigniederlassung einer ausländischen Gesellschaft; er ist keine Rechts- oder Steuerberatung in einem konkreten Fall und sichert kein bestimmtes Ergebnis zu. Anwendbare Vorschriften und steuerliche Behandlung können je nach Sitz von Investorin oder Investor und Hauptniederlassung, Geschäftsinhalt, Geschäften und Mittelfluss, Abkommensvoraussetzungen und der neuesten Praxis der zuständigen Behörde abweichen; vor Durchführung von Gründung, Investition, Vertrag, Dividende oder Überweisung sind die neuesten amtlichen Quellen und die eigenen Umstände zu prüfen.
 
-**Rechtsanwalt Wei Tseng (曾雋崴)**
+**Rechtsanwältin Wei Tseng (曾雋崴)**

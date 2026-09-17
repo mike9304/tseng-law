@@ -111,7 +111,7 @@ Kapag sinuri ang paghahanda sa pagbebenta sa Taiwan ayon sa sumusunod na pagkaka
 5. Suriin ang label, ang pahina ng pagbebenta, ang advertising at ang post ng pakikipagtulungan batay sa pamantayan ng kabuuang presentasyon.
 6. Patakbuhin ang procedure sa pagtugon sa inspeksiyon at sa hiling na pagwawasto, sa reklamo at impormasyon sa kaligtasan, at sa kinakailangang kasunod na hakbang.
 
-Ang batayang istruktura ng kompanya at ng branch ay makikita sa [Mga Batayan sa Pagtatatag ng Kompanya sa Taiwan](/fil/columns/taiwan-company-establishment-basics), ang saklaw ng kaugnay na suporta ay sa [Serbisyo sa Pamumuhunan at Pagtatatag ng Kompanya sa Taiwan](/ko/services#investment), at ang impormasyon tungkol sa abogadong nangangasiwa ay sa [Profile ni Abogado Wei Tseng](/ko/lawyers/wei-tseng).
+Ang batayang istruktura ng kompanya at ng branch ay makikita sa [Mga Batayan sa Pagtatatag ng Kompanya sa Taiwan](/fil/columns/taiwan-company-establishment-basics), ang saklaw ng kaugnay na suporta ay sa [Serbisyo sa Pamumuhunan at Pagtatatag ng Kompanya sa Taiwan](/ko/services#investment), at ang impormasyon tungkol sa abogadang nangangasiwa ay sa [Profile ni Abogada Wei Tseng](/ko/lawyers/wei-tseng).
 
 ### Opisyal na Materyal
 
@@ -131,4 +131,4 @@ Ang batayang istruktura ng kompanya at ng branch ay makikita sa [Mga Batayan sa 
 
 Ang artikulong ito ay materyal na pang-edukasyon na naglalayong ipaliwanag sa pangkalahatan ang mga sistemang kaugnay ng pagpasok sa merkado ng kosmetiko sa Taiwan; hindi ito legal na opinyon hinggil sa isang tiyak na produkto o advertising, at hindi rin nito ginagarantiyahan ang pahintulot, ang rehistro, ang posibilidad ng pagbebenta o ang tagal ng pagproseso. Mangyaring tiyakin sa bawat indibidwal na kaso ang anyo ng pagpasok sa merkado, ang materyal ng produkto, ang nilalaman ng pagmamarka at advertising, at ang pinakabagong praktika ng ahensiyang may hurisdiksiyon.
 
-**Abogado Wei Tseng (曾雋崴)**
+**Abogada Wei Tseng (曾雋崴)**

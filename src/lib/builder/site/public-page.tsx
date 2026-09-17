@@ -18,8 +18,31 @@ import type {
   BuilderImageCanvasNode,
 } from '@/lib/builder/canvas/types';
 import { isContainerLikeKind, isTextShapedKind } from '@/lib/builder/canvas/types';
+import {
+  legacyContactScaffoldRole,
+  matchLegacyContactScaffold,
+} from '@/lib/builder/canvas/legacy-contact-scaffold';
 import { buildPublishedResponsiveStylesheet } from '@/lib/builder/site/responsive-stylesheet';
+import {
+  LEGACY_EDITORIAL_COMPOSITE_LAYOUT_CSS,
+  matchLegacyEditorialCompositeLayout,
+} from '@/lib/builder/site/legacy-editorial-composite-layout';
 import { projectLegacyZhHantHomeOffices } from '@/lib/builder/site/legacy-zh-hant-home-offices';
+import { getLegacyZhHantFluidContainerStyle, hasLegacyJulyZhHantHomeDualTree, normalizeLegacyZhHantHomeRead } from '@/lib/builder/canvas/home-zh-hant-parity';
+import homeEditorialStyles from '@/components/HomeEditorial.module.css';
+import {
+  CURRENT9_PUBLISHED_HOME_EDITORIAL_CSS,
+  JULY_PUBLISHED_HOME_EDITORIAL_CSS,
+  deriveJulyHeroEditorialPresentation,
+  isSafeNormalizedDocumentEnvelope,
+  matchCurrent9PublishedHomeEditorial,
+  publishedHomeEditorialCompositeProps,
+  reorderCurrent9PublishedHomeNodes,
+} from '@/lib/builder/site/published-home-editorial';
+import { hasLegacyColumnsScaffold } from '@/lib/builder/canvas/legacy-columns-scaffold';
+import { projectPublishedHomeInsightsArchiveIntro } from '@/lib/insights/archive-copy';
+import { projectPublishedEnHomeCopy } from '@/lib/builder/site/en-home-copy';
+import { projectTeamBreadcrumbLabel } from '@/lib/builder/site/team-breadcrumb-label';
 import {
   computeTopLevelFlowSectionMetrics,
   compareTopLevelStacking,
@@ -45,7 +68,7 @@ import {
   resolveBackgroundStyle,
   resolveThemeColor,
 } from '@/lib/builder/site/theme';
-import { buildPageSeo } from '@/lib/builder/seo/seo-model';
+import { buildPageSeo, normalizeCanonicalUrl } from '@/lib/builder/seo/seo-model';
 import {
   isPublishedDynamicItemRecordRoutable,
   resolvePublishedDynamicItemRecordJsonLd,
@@ -77,6 +100,11 @@ import {
   getSiteUrl,
   stripOrganizationNameSuffix,
 } from '@/lib/seo';
+import {
+  buildGuidanceCoreLanguageAlternates,
+  guidancePageKeyFromSlugPath,
+} from '@/lib/public-guidance';
+import { isEnglishNoindexPath } from '@/lib/seo-visibility';
 import { buildSitePagePath, comparableSitePath, normalizeSiteHref } from '@/lib/builder/site/paths';
 import { resolveBuilderSiteSettings } from '@/lib/builder/site/localized-settings';
 import { filterNavigationForLocale } from '@/lib/builder/site/navigation';
@@ -105,10 +133,10 @@ import AppRuntimeLoader from '@/components/builder/published/AppRuntimeLoader';
 import ExperimentVariantSwap from '@/components/builder/published/ExperimentVariantSwap';
 import LiveChatWidget from '@/components/builder/published/LiveChatWidget';
 import {
-  DECORATIVE_VIDEO_CONTROL_LABELS,
   DecorativeAutoplayVideo,
   type DecorativeAutoplayVideoProps,
 } from '@/components/DecorativeAutoplayVideo';
+import { DECORATIVE_VIDEO_CONTROL_LABELS } from '@/components/decorative-video-controls';
 import TaiwanHeritageInterlude, {
   resolveHeritageInterludeInsertionNodeId,
 } from '@/components/TaiwanHeritageInterlude';
@@ -145,6 +173,53 @@ import {
   type BuilderFaqCategory,
   type BuilderFaqItem,
 } from '@/lib/builder/faq/faq-engine';
+
+const JULY_OFFICE_CHILD_SPECS = [
+  { id: 'home-offices-label', kind: 'text' },
+  { id: 'home-offices-title', kind: 'text' },
+  { id: 'home-offices-tabs', kind: 'container' },
+  { id: 'home-offices-layout-0', kind: 'container' },
+  { id: 'home-offices-layout-1', kind: 'container' },
+  { id: 'home-offices-layout-2', kind: 'container' },
+  { id: 'home-offices-layout-3', kind: 'container' },
+] as const;
+
+// Keep authored nodes intact; mismatched child sets retain their existing order.
+function orderChildrenBySemanticSpec<T extends Pick<BuilderCanvasNode, 'id' | 'kind' | 'parentId'>>(
+  enabled: boolean,
+  expectedParentId: T['parentId'],
+  existing: readonly T[],
+  specs: readonly Pick<BuilderCanvasNode, 'id' | 'kind'>[],
+): readonly T[] {
+  if (!enabled) return existing;
+  if (existing.length !== specs.length) return existing;
+
+  const byId = new Map<string, T>();
+  for (const node of existing) {
+    if (byId.has(node.id)) return existing;
+    if (!Object.is(node.parentId, expectedParentId)) return existing;
+    byId.set(node.id, node);
+  }
+
+  const seen = new Set<string>();
+  const ordered: T[] = new Array(specs.length);
+  let alreadyInOrder = true;
+
+  for (let i = 0; i < specs.length; i++) {
+    const spec = specs[i]!;
+    if (seen.has(spec.id)) return existing;
+    seen.add(spec.id);
+
+    const node = byId.get(spec.id);
+    if (node === undefined) return existing;
+    if (node.kind !== spec.kind) return existing;
+
+    ordered[i] = node;
+    if (alreadyInOrder && existing[i] !== node) alreadyInOrder = false;
+  }
+
+  return alreadyInOrder ? existing : ordered;
+}
 
 interface ResolvedLightbox {
   meta: BuilderLightbox;
@@ -198,6 +273,31 @@ function hasBehaviorNeutralDecorativeImageContract(
     && (node.animation?.hover === undefined || node.animation.hover.preset === 'none')
     && node.dataBinding === undefined
   );
+}
+
+const LEGACY_ZH_DECORATIVE_HERO_SOURCES: Readonly<Record<string, string>> = {
+  'home-hero-media-image': '/images/hero-bg-01.webp',
+  'home-hero-media-image-2': '/images/hero-bg-02.webp',
+  'home-hero-media-image-3': '/images/hero-bg-03.webp',
+};
+
+/** Render-only semantics for the fingerprinted stock background, including inactive slides. */
+export function projectPublishedStockZhHeroDecorativeAlt(
+  node: BuilderCanvasNode,
+  exactStockHome: boolean,
+): BuilderCanvasNode {
+  if (
+    !exactStockHome
+    || node.kind !== 'image'
+    || node.parentId !== 'home-hero-media'
+    || LEGACY_ZH_DECORATIVE_HERO_SOURCES[node.id] !== node.content.src
+    || node.content.alt !== '台北101夜景城市天際線'
+    || !hasBehaviorNeutralDecorativeImageContract(node)
+  ) return node;
+
+  // Empty image alt preserves the video's accessible playback control; hiding
+  // its wrapper would hide that control too. Keep every media/layout field.
+  return { ...node, content: { ...node.content, alt: '' } };
 }
 
 export function resolvePublishedDecorativeVideo(
@@ -336,6 +436,41 @@ export interface ResolvedPublishedSitePage {
   dynamicItemRecordSlug?: string;
 }
 
+type PublicListStateCopy = {
+  empty: string;
+  noMatches: string;
+  clearFilters: string;
+};
+
+export function getPublicListStateCopy(locale: string): PublicListStateCopy {
+  const normalized = String(locale ?? '')
+    .trim()
+    .toLowerCase()
+    .replace(/_/g, '-');
+
+  if (normalized === 'ko' || normalized.startsWith('ko-')) {
+    return {
+      empty: '표시할 항목이 없습니다.',
+      noMatches: '현재 필터에 맞는 항목이 없습니다.',
+      clearFilters: '필터 지우기',
+    };
+  }
+
+  if (normalized === 'zh-hant' || normalized.startsWith('zh-hant-')) {
+    return {
+      empty: '沒有可顯示的項目。',
+      noMatches: '沒有符合目前篩選條件的項目。',
+      clearFilters: '清除篩選',
+    };
+  }
+
+  return {
+    empty: 'No items available.',
+    noMatches: 'No matching items.',
+    clearFilters: 'Clear filters',
+  };
+}
+
 type ParentLayoutMode = 'absolute' | 'flex' | 'grid';
 type ResolvedDarkModeConfig = Required<NonNullable<BuilderSiteDocument['darkMode']>>;
 
@@ -399,10 +534,16 @@ export async function resolvePublishedSitePage(
 
   const allLightboxes = (site.lightboxes ?? []).filter((lb) => lb.locale === locale);
   const lightboxes: ResolvedLightbox[] = [];
-  for (const meta of allLightboxes) {
-    const lbCanvas = await readLightboxCanvas(DEFAULT_BUILDER_SITE_ID, meta.id);
-    if (lbCanvas) {
-      lightboxes.push({ meta, canvas: lbCanvas });
+  for (let offset = 0; offset < allLightboxes.length; offset += 4) {
+    const batch = allLightboxes.slice(offset, offset + 4);
+    const canvases = await Promise.all(
+      batch.map((meta) => readLightboxCanvas(DEFAULT_BUILDER_SITE_ID, meta.id)),
+    );
+    for (const [index, meta] of batch.entries()) {
+      const lbCanvas = canvases[index];
+      if (lbCanvas) {
+        lightboxes.push({ meta, canvas: lbCanvas });
+      }
     }
   }
 
@@ -527,6 +668,40 @@ export async function buildPublishedSitePageMetadata(
   for (const alt of seoData.hreflang) {
     languages[alt.hreflang] = alt.href;
   }
+
+  const indexabilityPath = resolved.slugPath ? `/${resolved.slugPath}` : '/';
+  const englishNoindex = locale === 'en' && isEnglishNoindexPath(indexabilityPath);
+  if (englishNoindex) {
+    seoData.noIndex = true;
+  }
+
+  const corePageKey = guidancePageKeyFromSlugPath(resolved.slugPath);
+  const defaultCanonical = resolveAbsoluteSeoUrl(
+    siteUrl,
+    resolved.slugPath ? `/${locale}/${resolved.slugPath}` : `/${locale}`,
+  );
+  const hasCustomCanonical = Boolean(seoData.canonical)
+    && normalizeCanonicalUrl(resolveAbsoluteSeoUrl(siteUrl, seoData.canonical))
+      !== normalizeCanonicalUrl(defaultCanonical);
+  const isDynamicRecord = Boolean(resolved.dynamicItemRecordSlug);
+  const shouldMergeGuidanceAlternates = Boolean(corePageKey)
+    && !isDynamicRecord
+    && !seoData.noIndex
+    && !hasCustomCanonical;
+
+  if (shouldMergeGuidanceAlternates && corePageKey) {
+    const guidanceLanguages = buildGuidanceCoreLanguageAlternates(corePageKey, siteUrl);
+    for (const key of Object.keys(languages)) {
+      delete languages[key];
+    }
+    Object.assign(languages, guidanceLanguages);
+  } else if (englishNoindex) {
+    delete languages.en;
+    if (languages.ko) {
+      languages['x-default'] = languages.ko;
+    }
+  }
+
   const otherMeta: Record<string, string> = {};
   for (const tag of seoData.additionalMetaTags) {
     const name = tag.name.trim();
@@ -650,9 +825,30 @@ export async function PublishedSitePageView({
   // (no automatic dark derivation), so they only need to be declared once on
   // :root and cascade into both themes.
   const customColorCssVars = buildCustomColorCssVars(settings?.brand?.customColors);
-  const publishedNodes = projectLegacyZhHantHomeOffices(canvas.nodes, locale, isHomePage);
+  const normalizedHomeCanvas = await normalizeLegacyZhHantHomeRead(canvas, locale, isHomePage);
+  const current9PublishedHomeEditorial = matchCurrent9PublishedHomeEditorial({
+    document: canvas,
+    locale,
+    slugPath,
+  });
+  const julyEnvelopeOk = isSafeNormalizedDocumentEnvelope(normalizedHomeCanvas);
+  const legacyZhTabletParity = julyEnvelopeOk
+    ? await hasLegacyJulyZhHantHomeDualTree(normalizedHomeCanvas, locale, isHomePage)
+    : false;
+  const julyPublishedHomeEditorial =
+    !current9PublishedHomeEditorial && slugPath === '' && legacyZhTabletParity
+      ? deriveJulyHeroEditorialPresentation(normalizedHomeCanvas, locale)
+      : null;
+  const publishedNodes = projectLegacyZhHantHomeOffices(normalizedHomeCanvas.nodes, locale, isHomePage);
   const visibleNodes = publishedNodes.filter((node) => node.visible !== false);
   const responsiveStylesheet = buildPublishedResponsiveStylesheet(publishedNodes);
+  const legacyContactScaffold =
+    slugPath === 'contact' ? matchLegacyContactScaffold(canvas.nodes) : null;
+  const legacyEditorialCompositeLayout = matchLegacyEditorialCompositeLayout(
+    canvas,
+    locale,
+    slugPath,
+  );
   const childrenMap = buildChildrenMap(visibleNodes);
   const nodesById = new Map(publishedNodes.map((node) => [node.id, node]));
   const siteUrl = getSiteUrl();
@@ -680,7 +876,7 @@ export async function PublishedSitePageView({
           url: `${siteUrl}/${locale}`,
         },
         {
-          name: resolved.pageMeta.title?.[locale] || slugPath || site.name || 'Page',
+          name: projectTeamBreadcrumbLabel(locale, slugPath, resolved.pageMeta.title?.[locale] || slugPath || site.name || 'Page'),
           url: `${siteUrl}${pagePath}`,
         },
       ])
@@ -718,10 +914,12 @@ export async function PublishedSitePageView({
   // min-height (observed on home-services-root / home-faq-root). Scoped to
   // desktop (min-width:1024) so the responsive tablet/mobile stylesheet
   // (narrower breakpoints) still overrides on smaller viewports.
-  const desktopFlowSectionMinHeightCss = [...flowSectionMetrics.entries()]
-    .filter(([, metric]) => Boolean(metric) && metric.minHeight > 0)
-    .map(([id, metric]) => `[data-node-id="${id}"]{min-height:${metric.minHeight}px !important}`)
-    .join('\n');
+  const desktopFlowSectionMinHeightCss = current9PublishedHomeEditorial
+    ? ''
+    : [...flowSectionMetrics.entries()]
+      .filter(([, metric]) => Boolean(metric) && metric.minHeight > 0)
+      .map(([id, metric]) => `[data-node-id="${id}"]{min-height:${metric.minHeight}px !important}`)
+      .join('\n');
 
   // Render composites first (they participate in document flow with
   // computed margin-top), then absolute non-composites on top. Without
@@ -731,7 +929,10 @@ export async function PublishedSitePageView({
   // when z-indexes match. The comparator is shared with the editor stage
   // (CanvasStageNodes) via flow.compareTopLevelStacking so the two cannot
   // drift apart.
-  const renderedTopLevelNodes = [...topLevelNodes].sort(compareTopLevelStacking);
+  const stackedTopLevelNodes = [...topLevelNodes].sort(compareTopLevelStacking);
+  const renderedTopLevelNodes = current9PublishedHomeEditorial
+    ? reorderCurrent9PublishedHomeNodes(stackedTopLevelNodes)
+    : stackedTopLevelNodes;
   const heritageInterludeInsertionNodeId =
     resolveHeritageInterludeInsertionNodeId(
       isHomePage,
@@ -778,20 +979,53 @@ export async function PublishedSitePageView({
     parentLayoutMode?: ParentLayoutMode,
     bindingContext: BuilderDatasetFieldBindingContext = datasetBindingContext,
   ): JSX.Element {
-    const localeProjectedNode = projectImageNodeForLocale(node, locale);
-    const renderedNode = projectPublishedHomeCaseResultsPoster(
-      projectPublishedHomeHeroPoster(
-        applyBuilderDatasetBindingToNode(localeProjectedNode, bindingContext),
+    const decorativeAltNode = projectPublishedStockZhHeroDecorativeAlt(node, legacyZhTabletParity);
+    const localeProjectedNode = projectImageNodeForLocale(decorativeAltNode, locale);
+    const renderedNode = projectPublishedEnHomeCopy(
+      projectPublishedHomeInsightsArchiveIntro(
+        projectPublishedHomeCaseResultsPoster(
+          projectPublishedHomeHeroPoster(
+            applyBuilderDatasetBindingToNode(localeProjectedNode, bindingContext),
+          ),
+        ),
+        slugPath,
       ),
+      slugPath,
+      locale,
     );
     const component = getComponent(renderedNode.kind);
+    const legacyZhFluidStyle = isHomePage ? getLegacyZhHantFluidContainerStyle(renderedNode, locale) : undefined;
     const decorativeVideo = resolvePublishedDecorativeVideo(renderedNode, locale);
-    const childNodes = (childrenMap[renderedNode.id] ?? [])
+    let childNodes: readonly BuilderCanvasNode[] = (childrenMap[renderedNode.id] ?? [])
       .map((childId) => nodesById.get(childId))
       .filter((child): child is BuilderCanvasNode => Boolean(child && child.visible !== false));
+    // The projected fourth office layout must follow the heading and tabs in DOM flow.
+    if (renderedNode.kind === 'container' && renderedNode.id === 'home-offices-container') {
+      childNodes = orderChildrenBySemanticSpec(
+        Boolean(julyPublishedHomeEditorial),
+        renderedNode.id,
+        childNodes,
+        JULY_OFFICE_CHILD_SPECS,
+      );
+    }
+    // Match July's visual office order in SSR without changing authored stacking data.
+    if (julyPublishedHomeEditorial && renderedNode.kind === 'container' && renderedNode.id === 'home-offices-tabs') {
+      const officeIds = ['home-offices-tab-0', 'home-offices-tab-1', 'home-offices-tab-2', 'home-offices-tab-3'];
+      const officeNodesById = new Map(childNodes.map((child) => [child.id, child]));
+      if (
+        childNodes.length === officeIds.length
+        && officeNodesById.size === officeIds.length
+        && childNodes.every((child) => child.kind === 'button' && child.parentId === renderedNode.id)
+        && officeIds.every((id) => officeNodesById.has(id))
+      ) {
+        childNodes = officeIds.map((id) => officeNodesById.get(id)!);
+      }
+    }
     const flowAsSection = isTopLevel && isTopLevelFlowSection(renderedNode);
     const parentUsesFlowLayout = parentLayoutMode === 'flex' || parentLayoutMode === 'grid';
     const useFlowWrapper = flowAsSection || parentUsesFlowLayout;
+    const scaffoldRole = legacyContactScaffoldRole(legacyContactScaffold, renderedNode.id);
+    const useLegacyContactScaffold = scaffoldRole != null;
     const childParentLayoutMode: ParentLayoutMode | undefined =
       isContainerLikeKind(renderedNode.kind)
         ? ((renderedNode.content as { layoutMode?: ParentLayoutMode }).layoutMode ?? 'absolute')
@@ -872,6 +1106,10 @@ export async function PublishedSitePageView({
         faqCategories: resolved.faqCategories,
         faqItems: resolved.faqItems,
         searchParams,
+        ...publishedHomeEditorialCompositeProps(renderedNode, {
+          current9: Boolean(current9PublishedHomeEditorial),
+          july: julyPublishedHomeEditorial,
+        }),
       }
       : {};
     const renderedChildren = isRepeaterTemplate && repeaterRecordCount > 0
@@ -935,7 +1173,7 @@ export async function PublishedSitePageView({
                   textAlign: 'center',
                 }}
                 >
-                  <span>{locale === 'ko' ? '현재 필터에 맞는 항목이 없습니다.' : 'No matching items.'}</span>
+                  <span>{getPublicListStateCopy(locale).noMatches}</span>
                   {dynamicListRuntime.filterSummary.length > 0 ? (
                     <div
                       style={{
@@ -983,7 +1221,7 @@ export async function PublishedSitePageView({
                     fontWeight: 700,
                   }}
                 >
-                  {locale === 'ko' ? '필터 지우기' : 'Clear filters'}
+                  {getPublicListStateCopy(locale).clearFilters}
                 </a>
               </div>,
             ]
@@ -1009,7 +1247,7 @@ export async function PublishedSitePageView({
                   textAlign: 'center',
                 }}
               >
-                {locale === 'ko' ? '표시할 항목이 없습니다.' : 'No items available.'}
+                {getPublicListStateCopy(locale).empty}
               </div>,
             ]
         : childNodes.map((child) => renderPublishedNode(child, false, childParentLayoutMode, bindingContext));
@@ -1020,8 +1258,10 @@ export async function PublishedSitePageView({
         id={renderedNode.anchorName ? renderedNode.anchorName : undefined}
         className="builder-pub-node"
         data-node-id={renderedNode.id}
+        data-builder-zh-fluid-container={legacyZhFluidStyle ? 'true' : undefined}
         data-parent-node-id={renderedNode.parentId}
         data-builder-flow-section={flowAsSection ? 'true' : undefined}
+        data-builder-legacy-contact-scaffold={scaffoldRole}
         data-builder-sticky={useSticky ? 'true' : undefined}
         data-builder-section-template={sectionTemplate?.id}
         data-section-variant={sectionTemplate?.variant}
@@ -1040,25 +1280,31 @@ export async function PublishedSitePageView({
         role={lightboxTarget ? 'button' : undefined}
         tabIndex={lightboxTarget ? 0 : undefined}
         style={{
-          position: useSticky ? 'sticky' : useFlowWrapper ? 'relative' : 'absolute',
-          left: useSticky || useFlowWrapper ? undefined : renderedNode.rect.x,
+          position: useLegacyContactScaffold
+            ? 'relative'
+            : useSticky ? 'sticky' : useFlowWrapper ? 'relative' : 'absolute',
+          left: useLegacyContactScaffold || useSticky || useFlowWrapper ? undefined : renderedNode.rect.x,
           top: useSticky
             ? (stickyConfig?.from !== 'bottom' ? (stickyConfig?.offset ?? 0) : undefined)
-            : useFlowWrapper ? undefined : renderedNode.rect.y,
+            : useLegacyContactScaffold || useFlowWrapper ? undefined : renderedNode.rect.y,
           bottom: useSticky && stickyConfig?.from === 'bottom' ? (stickyConfig?.offset ?? 0) : undefined,
           width: flowAsSection ? '100%' : renderedNode.rect.width,
-          height: flowAsSection
+          height: useLegacyContactScaffold || flowAsSection
             ? 'auto'
             : isTextShapedKind(renderedNode.kind)
               ? 'auto'
               : renderedNode.rect.height,
           // Use the designer's rect.height as a floor for flow composites and
           // text-shaped widgets; content can grow without clipping.
-          minHeight: flowAsSection
-            ? (flowSectionMetric?.minHeight ?? renderedNode.rect.height)
-            : isTextShapedKind(renderedNode.kind)
+          minHeight: current9PublishedHomeEditorial && flowAsSection
+            ? undefined
+            : useLegacyContactScaffold
               ? renderedNode.rect.height
-              : undefined,
+              : flowAsSection
+                ? (flowSectionMetric?.minHeight ?? renderedNode.rect.height)
+                : isTextShapedKind(renderedNode.kind)
+                  ? renderedNode.rect.height
+                  : undefined,
           // Always emit marginTop (even 0) for flow composites so the CSS
           // fallback at globals.css:19245 never silently injects a clamp gap
           // when the designer intended adjacent sections.
@@ -1095,6 +1341,8 @@ export async function PublishedSitePageView({
           ['--builder-hover-box-shadow' as string]: hoverBoxShadow,
           ['--builder-hover-transform' as string]: hoverTransform,
           ...animationStyle,
+          ['--builder-zh-fluid-left' as string]: legacyZhFluidStyle?.left,
+          ['--builder-zh-fluid-width' as string]: legacyZhFluidStyle?.width,
         }}
       >
         {appRuntime && !canRenderAppWidget ? (
@@ -1220,6 +1468,12 @@ export async function PublishedSitePageView({
         }
         .builder-pub-node[data-anchor^='mobile-parity-home-'] {
           display: none !important;
+        }
+        @media (min-width: 1280px) {
+          .builder-pub-node[data-builder-zh-fluid-container='true'] {
+            left: var(--builder-zh-fluid-left) !important;
+            width: var(--builder-zh-fluid-width) !important;
+          }
         }
         .builder-pub-node[data-builder-hover='true']:hover {
           background: var(--builder-hover-background) !important;
@@ -2120,9 +2374,45 @@ export async function PublishedSitePageView({
           mobileHamburger={headerFooterConfig.mobileHamburger}
         />
       ) : null}
+      {current9PublishedHomeEditorial ? (
+        <style data-home-editorial="current9" dangerouslySetInnerHTML={{ __html: CURRENT9_PUBLISHED_HOME_EDITORIAL_CSS }} />
+      ) : null}
+      {julyPublishedHomeEditorial ? (
+        <style data-home-editorial="july" dangerouslySetInnerHTML={{ __html: JULY_PUBLISHED_HOME_EDITORIAL_CSS }} />
+      ) : null}
+      {legacyZhTabletParity ? <style data-builder-zh-tablet-parity="true" dangerouslySetInnerHTML={{ __html: `
+        @media (min-width: 769px) and (max-width: 1023px) {
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] {
+            zoom: 1 !important; width: 100% !important; max-width: 100% !important; min-height: 0 !important;
+          }
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-anchor^='mobile-parity-home-'] {
+            display: block !important; width: 100% !important; max-width: 100% !important;
+            height: auto !important; min-height: 0 !important; margin: 0 !important;
+          }
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] .hero-scroll-arrow {
+            pointer-events: auto;
+          }
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-hero-root'],
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-insights-root'],
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-services-root'],
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-attorney-root'],
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-case-results-root'],
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-stats-root'],
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-faq-root'],
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-offices-root'],
+          .builder-pub-main[data-builder-zh-tablet-parity='true'] > .builder-pub-node[data-node-id='home-contact-root'] { display: none !important; }
+        }
+      ` }} /> : null}
+      {legacyEditorialCompositeLayout ? (
+        <style data-builder-legacy-editorial-composite="true" dangerouslySetInnerHTML={{ __html: LEGACY_EDITORIAL_COMPOSITE_LAYOUT_CSS }} />
+      ) : null}
       <div
-        className="builder-pub-main"
+        className={['builder-pub-main', current9PublishedHomeEditorial ? homeEditorialStyles.root : undefined].filter(Boolean).join(' ')}
+        data-builder-zh-tablet-parity={legacyZhTabletParity ? 'true' : undefined}
+        data-builder-legacy-columns-flow={hasLegacyColumnsScaffold(canvas, locale, slugPath) ? 'true' : undefined}
+        data-builder-legacy-editorial-composite={legacyEditorialCompositeLayout ? 'true' : undefined}
         data-builder-chrome={useBuilderChrome ? 'true' : 'false'}
+        data-home-editorial={current9PublishedHomeEditorial ? 'current9' : julyPublishedHomeEditorial ? 'july' : undefined}
         style={{
           // Canvas stage width is 1280 (see canvas/responsive.ts).
           // Published main used to be 1200, so any widget the designer
@@ -2131,7 +2421,7 @@ export async function PublishedSitePageView({
           maxWidth: hasTopLevelComposite ? undefined : 1280,
           margin: '0 auto',
           position: 'relative',
-          minHeight: Math.max(publishedContentHeight, 720),
+          minHeight: current9PublishedHomeEditorial || legacyEditorialCompositeLayout ? undefined : Math.max(publishedContentHeight, 720),
           // Light mode: inherit color/background/font from body so the
           // public green theme (globals.css) is used, not the builder's
           // blue/gray fallback vars. Dark mode overrides these via the

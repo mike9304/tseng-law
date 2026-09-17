@@ -1,0 +1,181 @@
+{
+  "ok": true,
+  "requirementsVersion": "ai-intake-requirements-v3",
+  "locale": "zh-hant",
+  "categories": [
+    {
+      "value": "company_setup",
+      "label": "公司設立・投資",
+      "description": "台灣公司設立、投資、分公司或子公司的初步詢問"
+    },
+    {
+      "value": "traffic_accident",
+      "label": "車禍・損害賠償",
+      "description": "交通事故、損害賠償、保險的初步詢問"
+    },
+    {
+      "value": "criminal_investigation",
+      "label": "警察・檢察・拘提應對",
+      "description": "調查、檢察、逮捕或羈押的初步詢問"
+    },
+    {
+      "value": "labor",
+      "label": "勞動・資遣・離職",
+      "description": "勞動契約、退休金、解僱的初步詢問"
+    },
+    {
+      "value": "divorce_family",
+      "label": "離婚・親權・家事",
+      "description": "離婚、親權、家事的初步詢問"
+    },
+    {
+      "value": "inheritance",
+      "label": "繼承・遺囑",
+      "description": "繼承、遺囑的初步詢問"
+    },
+    {
+      "value": "logistics",
+      "label": "物流業・運輸業",
+      "description": "物流或運輸業法規的初步詢問"
+    },
+    {
+      "value": "cosmetics",
+      "label": "化妝品進入市場・登錄",
+      "description": "化妝品進口、登錄或標示的初步詢問"
+    },
+    {
+      "value": "general",
+      "label": "一般詢問",
+      "description": "不屬於上述分類的台灣法律或企業業務初步詢問"
+    }
+  ],
+  "fields": {
+    "required": [
+      {
+        "name": "name",
+        "required": true,
+        "description": "姓名",
+        "maxLength": 120
+      },
+      {
+        "name": "email",
+        "required": true,
+        "description": "電子郵件",
+        "maxLength": 254
+      },
+      {
+        "name": "summary",
+        "required": true,
+        "description": "案件或業務概要",
+        "maxLength": 4000
+      },
+      {
+        "name": "locale",
+        "required": true,
+        "description": "語言"
+      },
+      {
+        "name": "idempotencyKey",
+        "required": true,
+        "description": "冪等鍵"
+      }
+    ],
+    "optional": [
+      {
+        "name": "category",
+        "required": false,
+        "description": "諮詢類型"
+      },
+      {
+        "name": "phoneOrMessenger",
+        "required": false,
+        "description": "電話或即時通訊",
+        "maxLength": 120
+      },
+      {
+        "name": "urgency",
+        "required": false,
+        "description": "急迫程度或期限",
+        "maxLength": 80
+      },
+      {
+        "name": "preferredContact",
+        "required": false,
+        "description": "偏好聯絡方式",
+        "maxLength": 80
+      },
+      {
+        "name": "companyOrOrganization",
+        "required": false,
+        "description": "公司名稱或所屬",
+        "maxLength": 200
+      },
+      {
+        "name": "countryOrResidence",
+        "required": false,
+        "description": "國家或居住地",
+        "maxLength": 120
+      },
+      {
+        "name": "preferredTime",
+        "required": false,
+        "description": "希望聯絡時段",
+        "maxLength": 200
+      },
+      {
+        "name": "documentsAvailable",
+        "required": false,
+        "description": "目前持有的資料種類",
+        "maxLength": 1000
+      },
+      {
+        "name": "confirmationToken",
+        "required": false,
+        "description": "確認權杖 (submit only)"
+      },
+      {
+        "name": "privacyConsent",
+        "required": false,
+        "description": "個人資料處理同意 (submit only; must be true)"
+      },
+      {
+        "name": "userApprovedExactPreview",
+        "required": false,
+        "description": "精確預覽核准 (submit only; must be true; auditable attestation, not cryptographic proof)"
+      }
+    ]
+  },
+  "questions": [
+    "請提供您的姓名，以及（如適用）公司或所屬單位。",
+    "請提供可回覆的電子郵件。電話或即時通訊為選填。",
+    "請選擇諮詢類型：公司設立、車禍、刑事調查、勞動、離婚家事、繼承、物流、化妝品或一般詢問。",
+    "請簡短說明關鍵事實與目前時程。初次受理不需要證據全文。",
+    "如有期限或急迫性請說明。我們不保證回覆時間。",
+    "為日後利益衝突檢查，可把相對人或相關當事人的姓名（僅姓名）寫在概要（summary）。請勿提供身分識別號碼；本受付也不要求提供。",
+    "請說明目前居住國家或地區。",
+    "請說明偏好語言、聯絡方式與時段。",
+    "請只列出目前持有的文件種類（例如契約、照片、判決）。請勿傳送內容、附件或檔案網址。",
+    "請勿提供身分證字號、護照號碼、銀行或信用卡資料。",
+    "請只簡短說明目前勞動關係狀態（在職、資遣通知、離職）。"
+  ],
+  "sensitiveData": {
+    "prohibitedKinds": [
+      "kr_resident_registration",
+      "tw_national_id",
+      "payment_card",
+      "iban",
+      "bank_account",
+      "passport",
+      "identity_number"
+    ],
+    "warning": "初次聯絡時，請僅提供案件或業務概要及聯絡方式。請勿透過電子郵件或一般諮詢表單傳送身分證字號、護照號碼、銀行帳戶資料或證件正本等敏感資訊；請待承辦律師另行指示後，再以安全方式提供。"
+  },
+  "notices": {
+    "privacy": "此次受理會為諮詢檢閱處理姓名、聯絡方式與案件概要。詳情請見公開隱私權政策。請勿在初次受理中提供身分識別號碼、金融或護照資料。",
+    "aiLimit": "AI 不能提供法律意見，且可能有誤。此流程只會草擬諮詢郵件，並在使用者確認後才寄到事務所信箱。",
+    "noRepresentation": "此次受理不成立律師與委託人關係，也不保證保密、回覆時間或法律結果。個案判斷需由律師檢視。",
+    "emergency": "如有急迫危險、逮捕或醫療緊急情況，請改聯絡當地緊急救援或執法機關，不要依賴這封郵件。本說明不提供特定管轄區電話號碼。"
+  },
+  "confirmationInstruction": "下列主旨與本文就是伺服器將寄到事務所諮詢信箱的內容。請先完整顯示給使用者確認，只有在使用者明確同意寄出該內容後，才可用相同欄位、相同 idempotencyKey、confirmationToken、userApprovedExactPreview=true 以及 privacyConsent=true 呼叫 POST /api/ai/intake/submit。",
+  "privacyUrl": "https://tseng-law.com/zh-hant/privacy"
+}

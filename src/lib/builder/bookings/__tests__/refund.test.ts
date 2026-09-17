@@ -11,7 +11,12 @@ vi.mock('@/lib/builder/bookings/storage', () => ({
   getCancellationPolicy: vi.fn(async (policyId: string) => fixtures.policies[policyId] ?? null),
 }));
 
-import { applyRefundOutcome, computeRefundForCancel, evaluateBookingSelfServicePolicy } from '@/lib/builder/bookings/refund';
+import {
+  applyRefundOutcome,
+  computeRefundForCancel,
+  evaluateBookingSelfServicePolicy,
+  refundAllowsCancelPersist,
+} from '@/lib/builder/bookings/refund';
 
 function booking(startAt: string): Booking {
   return {
@@ -25,6 +30,7 @@ function booking(startAt: string): Booking {
     source: 'web',
     paymentStatus: 'paid',
     paymentIntentId: 'pi_refund_test',
+    paymentCurrency: 'TWD',
     reminders: [],
     createdAt: '2026-05-01T00:00:00.000Z',
     updatedAt: '2026-05-01T00:00:00.000Z',
@@ -78,6 +84,10 @@ function policy(overrides: Partial<BookingCancellationPolicy> = {}): BookingCanc
   };
 }
 
+function stripeSuccess(id = 're_verified', amount = 5000) {
+  return { id, object: 'refund', status: 'succeeded', amount, currency: 'twd', payment_intent: 'pi_refund_test' };
+}
+
 describe('booking refund policy', () => {
   beforeEach(() => {
     fixtures.service = service();
@@ -125,7 +135,7 @@ describe('booking refund policy', () => {
       const body = init?.body?.toString() ?? '';
       expect(body).toContain('payment_intent=pi_refund_test');
       expect(body).toContain('amount=5000');
-      return new Response(JSON.stringify({ id: 're_full' }), { status: 200 });
+      return new Response(JSON.stringify(stripeSuccess('re_full', 5000)), { status: 200 });
     });
     vi.stubGlobal('fetch', fetchMock);
 
@@ -145,7 +155,7 @@ describe('booking refund policy', () => {
       const body = init?.body?.toString() ?? '';
       expect(body).toContain('payment_intent=pi_refund_test');
       expect(body).toContain('amount=2500');
-      return new Response(JSON.stringify({ id: 're_partial' }), { status: 200 });
+      return new Response(JSON.stringify(stripeSuccess('re_partial', 2500)), { status: 200 });
     });
     vi.stubGlobal('fetch', fetchMock);
 
@@ -167,7 +177,7 @@ describe('booking refund policy', () => {
       const idempotencyKey = headers.get('Idempotency-Key');
       expect(idempotencyKey).toMatch(/^booking-refund-v1:[a-f0-9]{64}$/);
       idempotencyKeys.push(idempotencyKey ?? '');
-      return new Response(JSON.stringify({ id: `re_${idempotencyKeys.length}` }), { status: 200 });
+      return new Response(JSON.stringify(stripeSuccess(`re_${idempotencyKeys.length}`, Number(new URLSearchParams(init?.body?.toString()).get('amount')))), { status: 200 });
     });
     vi.stubGlobal('fetch', fetchMock);
 
@@ -191,7 +201,7 @@ describe('booking refund policy', () => {
       const body = new URLSearchParams(String(init?.body ?? ''));
       expect(body.get('payment_intent')).toBe('pi_refund_test');
       expect(body.get('amount')).toBe('1500');
-      return new Response(JSON.stringify({ id: 're_deposit_full' }), { status: 200 });
+      return new Response(JSON.stringify(stripeSuccess('re_deposit_full', 1500)), { status: 200 });
     });
     vi.stubGlobal('fetch', fetchMock);
     const depositBooking = {
@@ -218,7 +228,7 @@ describe('booking refund policy', () => {
       const body = init?.body?.toString() ?? '';
       expect(body).toContain('payment_intent=pi_refund_test');
       expect(body).toContain('amount=4500');
-      return new Response(JSON.stringify({ id: 're_fee' }), { status: 200 });
+      return new Response(JSON.stringify(stripeSuccess('re_fee', 4500)), { status: 200 });
     });
     vi.stubGlobal('fetch', fetchMock);
 
@@ -305,4 +315,108 @@ describe('booking refund policy', () => {
     });
     expect(policy.cancelBlockedReason).toContain('no longer active');
   });
+
+  it('allows cancel persist only when refund is not due or Stripe refund succeeded', () => {
+    expect(refundAllowsCancelPersist({
+      decision: 'none',
+      hoursUntilStart: 12,
+      refundResult: null,
+    })).toBe(true);
+    expect(refundAllowsCancelPersist({
+      decision: 'full',
+      hoursUntilStart: 48,
+      refundResult: { ok: true, refundId: 're_1' },
+      refundAmountCents: 1000,
+    })).toBe(true);
+    expect(refundAllowsCancelPersist({
+      decision: 'full',
+      hoursUntilStart: 48,
+      refundResult: { ok: false, error: 'Stripe 402' },
+      refundAmountCents: 1000,
+    })).toBe(false);
+  });
+  it.each([
+    ['pending', { ...stripeSuccess(), status: 'pending' }],
+    ['requires action', { ...stripeSuccess(), status: 'requires_action' }],
+    ['failed', { ...stripeSuccess(), status: 'failed' }],
+    ['canceled', { ...stripeSuccess(), status: 'canceled' }],
+    ['null status', { ...stripeSuccess(), status: null }],
+    ['missing status', { ...stripeSuccess(), status: undefined }],
+    ['unknown status', { ...stripeSuccess(), status: 'new_status' }],
+    ['id only', { id: 're_unverified' }],
+    ['empty id', { ...stripeSuccess(), id: ' ' }],
+    ['wrong object', { ...stripeSuccess(), object: 'payment_intent' }],
+    ['null', null], ['array', [stripeSuccess()]], ['string', 'refund'],
+    ['amount mismatch', { ...stripeSuccess(), amount: 4999 }],
+    ['amount string', { ...stripeSuccess(), amount: '5000' }],
+    ['amount fractional', { ...stripeSuccess(), amount: 5000.5 }],
+    ['amount missing', { ...stripeSuccess(), amount: undefined }],
+    ['currency mismatch', { ...stripeSuccess(), currency: 'usd' }],
+    ['currency missing', { ...stripeSuccess(), currency: undefined }],
+    ['currency uppercase', { ...stripeSuccess(), currency: 'TWD' }],
+    ['target mismatch', { ...stripeSuccess(), payment_intent: 'pi_other' }],
+    ['target null', { ...stripeSuccess(), payment_intent: null }],
+    ['target missing', { ...stripeSuccess(), payment_intent: undefined }],
+    ['target expanded mismatch', { ...stripeSuccess(), payment_intent: { id: 'pi_other' } }],
+    ['target malformed', { ...stripeSuccess(), payment_intent: { id: 1 } }],
+  ])('does not confirm a 2xx %s refund', async (_name, payload) => {
+    const fetchMock = vi.fn(async () => new Response(JSON.stringify(payload), { status: 200 }));
+    vi.stubGlobal('fetch', fetchMock);
+    const original = booking('2026-05-14T00:00:00.000Z');
+    const outcome = await computeRefundForCancel(original, currentService());
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(outcome.refundResult?.ok).toBe(false);
+    expect(refundAllowsCancelPersist(outcome)).toBe(false);
+    expect(applyRefundOutcome(original, outcome, undefined).paymentStatus).toBe('paid');
+  });
+
+  it('accepts a matching expanded payment intent and recorded currency despite catalog change', async () => {
+    const fetchMock = vi.fn(async () => new Response(JSON.stringify({ ...stripeSuccess(), payment_intent: { id: 'pi_refund_test', object: 'payment_intent' } }), { status: 200 }));
+    vi.stubGlobal('fetch', fetchMock);
+    const outcome = await computeRefundForCancel(booking('2026-05-14T00:00:00.000Z'), { ...currentService(), priceCurrency: 'USD' });
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(outcome.refundResult?.ok).toBe(true);
+    expect(refundAllowsCancelPersist(outcome)).toBe(true);
+  });
+
+  it.each([
+    ['missing booked currency', { paymentCurrency: undefined }],
+    ['invalid booked currency', { paymentCurrency: 'XXX' }],
+    ['nonstring booked currency', { paymentCurrency: 123 }],
+    ['missing target', { paymentIntentId: undefined }],
+    ['blank target', { paymentIntentId: '  ' }],
+    ['nonstring target', { paymentIntentId: 123 }],
+    ['unsafe computed amount', { onlinePaidAmount: Number.MAX_SAFE_INTEGER + 1 }],
+    ['nonfinite computed amount', { onlinePaidAmount: Infinity }],
+    ['zero computed amount', { onlinePaidAmount: 0, paymentAmount: 0 }],
+  ])('blocks %s before dispatch', async (_name, overrides) => {
+    const fetchMock = vi.fn(async () => new Response(JSON.stringify(stripeSuccess()), { status: 200 }));
+    vi.stubGlobal('fetch', fetchMock);
+    const original = Object.assign(booking('2026-05-14T00:00:00.000Z'), overrides);
+    const outcome = await computeRefundForCancel(original, currentService());
+    expect(fetchMock).not.toHaveBeenCalled();
+    expect(outcome.refundResult?.ok).toBe(false);
+    expect(refundAllowsCancelPersist(outcome)).toBe(false);
+  });
+
+  it.each(['invalid-json', 'http500', 'network'])('does not retry %s or confirm success', async (failure) => {
+    const fetchMock = vi.fn(async () => {
+      if (failure === 'network') throw new Error('synthetic connection loss');
+      return new Response(failure === 'invalid-json' ? '{' : '{}', { status: failure === 'http500' ? 500 : 200 });
+    });
+    vi.stubGlobal('fetch', fetchMock);
+    const outcome = await computeRefundForCancel(booking('2026-05-14T00:00:00.000Z'), currentService());
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(outcome.refundResult?.ok).toBe(false);
+    expect(refundAllowsCancelPersist(outcome)).toBe(false);
+  });
+
+  it('does not dispatch without provider configuration', async () => {
+    vi.stubEnv('STRIPE_SECRET_KEY', '');
+    const fetchMock = vi.fn(); vi.stubGlobal('fetch', fetchMock);
+    const outcome = await computeRefundForCancel(booking('2026-05-14T00:00:00.000Z'), currentService());
+    expect(fetchMock).not.toHaveBeenCalled();
+    expect(outcome.refundResult?.ok).toBe(false);
+  });
+
 });

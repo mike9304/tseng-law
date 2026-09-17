@@ -17,7 +17,8 @@ vi.mock('@/lib/builder/security/guard', () => ({
   guardMutation: vi.fn(async () => ({ username: 'admin' })),
 }));
 
-vi.mock('@/lib/builder/events/events-engine', () => ({
+vi.mock('@/lib/builder/events/events-engine', async () => ({
+  normalizeEvent: (await vi.importActual<typeof import('@/lib/builder/events/events-engine')>('@/lib/builder/events/events-engine')).normalizeEvent,
   deleteEvent: vi.fn(),
   loadEvent: vi.fn(),
   saveEvent: vi.fn(),
@@ -171,6 +172,7 @@ describe('/api/builder/events/[eventId]', () => {
       errorCode: 'validation_error',
     });
     expect(JSON.stringify(payload)).not.toContain('제목을 입력하세요.');
+    expect(saveEventMock).not.toHaveBeenCalled();
   });
 
   it('updates an event while preserving success response shape', async () => {

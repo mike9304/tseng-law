@@ -14,7 +14,8 @@ type ConsultationLogEventType = 'chat' | 'submit_success' | 'submit_failed' | 'f
  * Ordered funnel stages covering the full consultation journey.
  * Used for conversion rate measurement across UI + server events.
  * Keep this list exhaustive and immutable — add new stages by appending,
- * never by reordering or renaming existing ones.
+ * never by reordering or renaming existing ones. AI intake stages are
+ * appended for shared redaction/audit vocabulary; they are not client-emitted.
  */
 export type ConsultationFunnelStage =
   // Client-side (UI events, sent via /api/consultation/event)
@@ -42,7 +43,11 @@ export type ConsultationFunnelStage =
   | 'submit_rate_limited'
   | 'submit_email_sent'
   | 'submit_email_failed'
-  | 'submit_duplicate';
+  | 'submit_duplicate'
+  | 'ai_intake_submit_sent'
+  | 'ai_intake_submit_duplicate'
+  | 'ai_intake_submit_failed_unknown'
+  | 'ai_intake_submit_rejected';
 
 type ConsultationLogRecord = {
   timestamp: string;

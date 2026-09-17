@@ -4,6 +4,13 @@ import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import type { Locale } from '@/lib/locales';
 import type { FormSubmission } from '@/lib/builder/forms/form-engine';
+import {
+  countUnread,
+  deriveCategories,
+  filterSubmissions,
+  formatDate,
+  truncate,
+} from '@/lib/builder/forms/submission-derive';
 import { safeHref } from '@/lib/builder/links';
 import { getFormsCopy } from './forms-copy';
 
@@ -29,52 +36,21 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId, l
   const [readFilter, setReadFilter] = useState<ReadFilter>('all');
 
   // Unique categories from all submissions
-  const categories = useMemo(() => {
-    const cats = new Set<string>();
-    for (const sub of submissions) {
-      const cat = String(sub.data?.category || '');
-      if (cat && cat !== '-') cats.add(cat);
-    }
-    return Array.from(cats).sort();
-  }, [submissions]);
+  const categories = useMemo(() => deriveCategories(submissions), [submissions]);
 
   // Filtered submissions
-  const filteredSubmissions = useMemo(() => {
-    const now = Date.now();
-    const query = searchQuery.toLowerCase().trim();
+  const filteredSubmissions = useMemo(
+    () =>
+      filterSubmissions(submissions, {
+        search: searchQuery,
+        categoryFilter,
+        dateRange,
+        readFilter,
+      }),
+    [submissions, searchQuery, categoryFilter, dateRange, readFilter],
+  );
 
-    return submissions.filter((sub) => {
-      // Search filter: name, email, message
-      if (query) {
-        const name = String(sub.data?.name || '').toLowerCase();
-        const email = String(sub.data?.email || '').toLowerCase();
-        const message = String(sub.data?.message || '').toLowerCase();
-        if (!name.includes(query) && !email.includes(query) && !message.includes(query)) {
-          return false;
-        }
-      }
-
-      // Category filter
-      if (categoryFilter !== 'all') {
-        if (String(sub.data?.category || '') !== categoryFilter) return false;
-      }
-
-      // Date range filter
-      if (dateRange !== 'all') {
-        const submittedAt = new Date(sub.submittedAt).getTime();
-        const days = dateRange === '7d' ? 7 : 30;
-        if (now - submittedAt > days * 24 * 60 * 60 * 1000) return false;
-      }
-
-      // Read/unread filter
-      if (readFilter === 'read' && !sub.read) return false;
-      if (readFilter === 'unread' && sub.read) return false;
-
-      return true;
-    });
-  }, [submissions, searchQuery, categoryFilter, dateRange, readFilter]);
-
-  const unreadCount = submissions.filter((s) => !s.read).length;
+  const unreadCount = countUnread(submissions);
 
   async function markAsRead(submission: FormSubmission) {
     setLoading(true);
@@ -109,25 +85,6 @@ export default function FormSubmissionsDashboard({ initialSubmissions, formId, l
       /* swallow */
     } finally {
       setLoading(false);
-    }
-  }
-
-  function truncate(text: string, maxLen: number): string {
-    if (!text) return '';
-    return text.length > maxLen ? text.slice(0, maxLen) + '...' : text;
-  }
-
-  function formatDate(iso: string): string {
-    try {
-      return new Date(iso).toLocaleString('ko-KR', {
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit',
-        hour: '2-digit',
-        minute: '2-digit',
-      });
-    } catch {
-      return iso;
     }
   }
 

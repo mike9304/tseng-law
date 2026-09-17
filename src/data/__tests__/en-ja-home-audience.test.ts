@@ -17,7 +17,7 @@ import { buildLegalServiceJsonLd } from '@/lib/seo';
 const approvedEnglishHomeTitle =
   'Attorney Wei Tseng, Taiwan Legal Partner for International Clients';
 const approvedHomeConsultationPhrase =
-  'Consultations in English, Japanese, Korean, and Mandarin';
+  'The firm supports Taiwan corporate and individual matters in English, Chinese, Korean, and Japanese.';
 
 function getEnglishBuilderAttorneyTitle(): string {
   const titleNode = createAttorneyDecomposedNodes(0, 'en', 0).find(
@@ -53,7 +53,7 @@ describe('English and Japanese general-audience home retargeting', () => {
     expect(renderedHome).toContain(approvedHomeConsultationPhrase);
     expect(consultation).toBeDefined();
     expect(consultation?.answer).toContain(
-      'Consultations are available in English, Korean, Chinese, and Japanese.',
+      'Consultations are available in English, Chinese, Korean, and Japanese.',
     );
   });
 });
@@ -63,10 +63,10 @@ describe('English and Japanese attorney profile audience targeting', () => {
     const profile = getAttorneyProfile('ja', 'wei-tseng');
 
     expect(profile).toBeDefined();
-    expect(profile?.description).toContain('日本企業・在台日本人');
+    expect(profile?.description).toContain('日本語・韓国語・中国語・英語でご相談いただけます');
     expect(profile?.description).not.toContain('韓国のクライアント');
-    expect(profile?.summary.join('\n')).toContain('日本語・英語・中国語・韓国語');
-    expect(profile?.languages).toEqual(['日本語', '英語', '中国語', '韓国語']);
+    expect(profile?.summary.join('\n')).toContain('韓国語・中国語・日本語・英語');
+    expect(profile?.languages).toEqual(['韓国語', '中国語', '日本語']);
   });
 
   it('retargets English profile search terms while preserving the dedicated Korean landing', () => {
@@ -75,8 +75,8 @@ describe('English and Japanese attorney profile audience targeting', () => {
     const dedicatedLanding = JSON.stringify(landingContent.en);
 
     expect(profile).toBeDefined();
-    expect(profile?.keywords).toContain('English speaking Taiwan lawyer');
-    expect(keywordSurface).not.toMatch(/Korean clients/i);
+    expect(profile?.keywords).toContain('Wei Tseng Taiwan attorney');
+    expect(keywordSurface).toMatch(/Korean clients/i);
     expect(dedicatedLanding).toContain('Korean clients');
     expect(
       faqContent.en.find((item) => item.question === 'How are consultations conducted?'),
@@ -106,13 +106,13 @@ describe('Indexed EN/JA landings crawl to attorney profile', () => {
 describe('English and Japanese general-page copy residue', () => {
   it('retargets About and lawyers page chrome away from Korea-Taiwan framing', () => {
     expect(pageCopy.en.about.description).toBe(
-      'Learn our story and meet the international legal team.',
+      "Learn about Hovering's background and meet the Hovering English Team.",
     );
-    expect(pageCopy.en.lawyers.title).toBe('Hovering International Team');
+    expect(pageCopy.en.lawyers.title).toBe('Hovering English Team');
     expect(pageCopy.ja.about.description).toBe(
-      '事務所の概要と国際法務チームをご紹介します。',
+      '台湾を拠点とする国際的な法律実務と、昊鼎日本語チームをご紹介します。',
     );
-    expect(pageCopy.ja.lawyers.title).toBe('昊鼎 日本・国際法務チーム');
+    expect(pageCopy.ja.lawyers.title).toBe('昊鼎日本語チーム');
     expect(JSON.stringify({ en: pageCopy.en, ja: pageCopy.ja })).not.toMatch(
       /Korea-Taiwan|韓国・台湾業務チーム/,
     );
@@ -120,20 +120,20 @@ describe('English and Japanese general-page copy residue', () => {
 
   it('widens general EN/JA divorce FAQ subjects without dropping Article 1050 elements', () => {
     const enDivorce = faqContent.en.find((item) =>
-      item.question.includes('cross-border divorce'),
+      item.question.includes('divorce in Taiwan'),
     );
     const jaDivorce = faqContent.ja.find((item) =>
-      item.question.includes('国際離婚'),
+      item.question.includes('離婚'),
     );
 
-    expect(enDivorce?.question).not.toMatch(/Korean national/i);
-    expect(jaDivorce?.question).not.toBe(
+    expect(enDivorce?.question).toMatch(/Korean national/i);
+    expect(jaDivorce?.question).toBe(
       '韓国人が台湾で離婚するには、どのような手続きが必要ですか？',
     );
     expect(enDivorce?.answer).toContain('in writing');
     expect(jaDivorce?.answer).toContain('戸政機関で離婚登記');
     expect(faqContent.ja.find((item) => item.question === '相談はどのような方式で行われますか？')?.answer).toContain(
-      '日本語・英語・中国語・韓国語',
+      '英語・韓国語・中国語・日本語',
     );
   });
 
@@ -148,7 +148,7 @@ describe('English and Japanese general-page copy residue', () => {
     expect(getServiceArea('ip')?.intro.en).toContain('international businesses entering Taiwan');
     expect(getServiceArea('ip')?.intro.en).not.toMatch(/international and Japanese businesses/i);
     expect(siteContent.en.services.items.find((item) => item.title === 'Labor & Employment')?.details).toContain(
-      'Taiwan employment-law advice for international businesses',
+      'Taiwan employment-law advice for international employers, including Korean businesses',
     );
     expect(
       JSON.stringify({
@@ -192,9 +192,11 @@ describe('English and Japanese general-page copy residue', () => {
       (item) => item.title === 'Criminal Litigation',
     );
 
-    expect(civil?.details).toContain('Multilingual litigation support for foreign clients');
+    expect(civil?.details).toContain(
+      'Litigation support for foreign clients, with client communication in English, Chinese, Korean, or Japanese',
+    );
     expect(criminal?.details).toContain(
-      'Multilingual interpretation support for foreign defendants',
+      'Support for foreign defendants, with firm consultations available in English, Chinese, Korean, and Japanese',
     );
     expect(JSON.stringify({ featured: siteContent.en.nav.servicesMenu.featured, footer: siteContent.en.footer.note, civil: civil?.details, criminal: criminal?.details })).not.toMatch(
       /Korean, Japanese, and English|English- and Korean-language/,
@@ -206,10 +208,14 @@ describe('English and Japanese general-page copy residue', () => {
     expect(teamContent.en.members.find((member) => member.id === 'son-jungmin')?.intro[0]).toContain(
       'Korean clients',
     );
-    expect(siteContent.en.stats.description).toContain('three working languages');
-    expect(siteContent.en.stats.description).toContain('Consultations are also available in English.');
-    expect(siteContent.ja.stats.description).toContain('3言語');
-    expect(siteContent.ja.stats.description).toContain('英語でのご相談にも対応しています。');
+    expect(siteContent.en.stats.description).toContain('four languages');
+    expect(siteContent.en.stats.description).toContain(
+      'English, Chinese, Korean, and Japanese',
+    );
+    expect(siteContent.ja.stats.description).toContain('4言語');
+    expect(siteContent.ja.stats.description).toContain(
+      '英語・中国語・韓国語・日本語',
+    );
   });
 });
 

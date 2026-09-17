@@ -1,0 +1,156 @@
+[
+  {
+    "locale": "ko",
+    "nodes": [
+      {
+        "id": "columns-page-root",
+        "kind": "container",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 2660
+        },
+        "style": {
+          "backgroundColor": "transparent",
+          "borderColor": "#cbd5e1",
+          "borderStyle": "solid",
+          "borderWidth": 0,
+          "borderRadius": 0,
+          "shadowX": 0,
+          "shadowY": 0,
+          "shadowBlur": 0,
+          "shadowSpread": 0,
+          "shadowColor": "rgba(15, 23, 42, 0.16)",
+          "opacity": 100
+        },
+        "zIndex": 0,
+        "rotation": 0,
+        "locked": false,
+        "visible": true,
+        "content": {
+          "label": "legacy-page-columns page root",
+          "background": "#ffffff",
+          "borderColor": "transparent",
+          "borderStyle": "solid",
+          "borderWidth": 0,
+          "borderRadius": 0,
+          "padding": 0,
+          "layoutMode": "absolute",
+          "as": "main"
+        }
+      },
+      {
+        "id": "columns-page-root-composite",
+        "kind": "composite",
+        "parentId": "columns-page-root",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 2660
+        },
+        "style": {
+          "backgroundColor": "transparent",
+          "borderColor": "#cbd5e1",
+          "borderStyle": "solid",
+          "borderWidth": 0,
+          "borderRadius": 0,
+          "shadowX": 0,
+          "shadowY": 0,
+          "shadowBlur": 0,
+          "shadowSpread": 0,
+          "shadowColor": "rgba(15, 23, 42, 0.16)",
+          "opacity": 100
+        },
+        "zIndex": 1,
+        "rotation": 0,
+        "locked": false,
+        "visible": true,
+        "content": {
+          "componentKey": "legacy-page-columns",
+          "config": {
+            "locale": "ko"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "locale": "zh-hant",
+    "nodes": [
+      {
+        "id": "columns-page-root",
+        "kind": "container",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 2660
+        },
+        "style": {
+          "backgroundColor": "transparent",
+          "borderColor": "#cbd5e1",
+          "borderStyle": "solid",
+          "borderWidth": 0,
+          "borderRadius": 0,
+          "shadowX": 0,
+          "shadowY": 0,
+          "shadowBlur": 0,
+          "shadowSpread": 0,
+          "shadowColor": "rgba(15, 23, 42, 0.16)",
+          "opacity": 100
+        },
+        "zIndex": 0,
+        "rotation": 0,
+        "locked": false,
+        "visible": true,
+        "content": {
+          "label": "legacy-page-columns page root",
+          "background": "#ffffff",
+          "borderColor": "transparent",
+          "borderStyle": "solid",
+          "borderWidth": 0,
+          "borderRadius": 0,
+          "padding": 0,
+          "layoutMode": "absolute",
+          "as": "main"
+        }
+      },
+      {
+        "id": "columns-page-root-composite",
+        "kind": "composite",
+        "parentId": "columns-page-root",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 2660
+        },
+        "style": {
+          "backgroundColor": "transparent",
+          "borderColor": "#cbd5e1",
+          "borderStyle": "solid",
+          "borderWidth": 0,
+          "borderRadius": 0,
+          "shadowX": 0,
+          "shadowY": 0,
+          "shadowBlur": 0,
+          "shadowSpread": 0,
+          "shadowColor": "rgba(15, 23, 42, 0.16)",
+          "opacity": 100
+        },
+        "zIndex": 1,
+        "rotation": 0,
+        "locked": false,
+        "visible": true,
+        "content": {
+          "componentKey": "legacy-page-columns",
+          "config": {
+            "locale": "zh-hant"
+          }
+        }
+      }
+    ]
+  }
+]

@@ -34,7 +34,7 @@ export const sectionLabelsByLocale: Record<Locale, Record<HomeSectionId, string>
   },
   en: {
     hero: 'Home',
-    insights: 'Columns',
+    insights: 'Insights',
     practice: 'Services',
     about: 'Lawyers',
     results: 'Cases',

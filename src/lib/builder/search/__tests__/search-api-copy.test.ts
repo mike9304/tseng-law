@@ -15,5 +15,21 @@ describe('public search API copy', () => {
       error: 'Unable to complete the search.',
       errorCode: 'search_query_failed',
     });
+    expect(getPublicSearchApiErrorPayload('ja', 'too_many_requests')).toEqual({
+      error: '検索リクエストが多すぎます。しばらくしてからもう一度お試しください。',
+      errorCode: 'too_many_requests',
+    });
+    expect(getPublicSearchApiErrorPayload('ja', 'rate_limit_unavailable')).toEqual({
+      error: '検索保護システムを一時的に利用できません。しばらくしてからもう一度お試しください。',
+      errorCode: 'rate_limit_unavailable',
+    });
+    expect(getPublicSearchApiErrorPayload('ja', 'search_index_failed')).toEqual({
+      error: '検索インデックスを読み込めませんでした。',
+      errorCode: 'search_index_failed',
+    });
+    expect(getPublicSearchApiErrorPayload('ja', 'search_query_failed')).toEqual({
+      error: '検索を完了できませんでした。',
+      errorCode: 'search_query_failed',
+    });
   });
 });

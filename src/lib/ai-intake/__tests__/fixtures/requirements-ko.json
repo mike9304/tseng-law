@@ -1,0 +1,181 @@
+{
+  "ok": true,
+  "requirementsVersion": "ai-intake-requirements-v3",
+  "locale": "ko",
+  "categories": [
+    {
+      "value": "company_setup",
+      "label": "회사설립·투자",
+      "description": "대만 회사 설립, 투자, 지점·자회사 관련 초기 문의"
+    },
+    {
+      "value": "traffic_accident",
+      "label": "교통사고·손해배상",
+      "description": "교통사고, 손해배상, 보험 관련 초기 문의"
+    },
+    {
+      "value": "criminal_investigation",
+      "label": "경찰·검찰·체포 대응",
+      "description": "수사, 검찰, 체포·구속 관련 초기 문의"
+    },
+    {
+      "value": "labor",
+      "label": "노동·퇴직금·해고",
+      "description": "근로계약, 퇴직금, 해고 관련 초기 문의"
+    },
+    {
+      "value": "divorce_family",
+      "label": "이혼·친권·가사",
+      "description": "이혼, 친권, 가사 관련 초기 문의"
+    },
+    {
+      "value": "inheritance",
+      "label": "상속·유언",
+      "description": "상속, 유언, 유류분 관련 초기 문의"
+    },
+    {
+      "value": "logistics",
+      "label": "물류업·운송업",
+      "description": "물류·운송업 규제 관련 초기 문의"
+    },
+    {
+      "value": "cosmetics",
+      "label": "화장품 진출·등록",
+      "description": "화장품 수입·등록·표시 관련 초기 문의"
+    },
+    {
+      "value": "general",
+      "label": "일반 문의",
+      "description": "위 분류에 해당하지 않는 대만 법률·기업 업무 초기 문의"
+    }
+  ],
+  "fields": {
+    "required": [
+      {
+        "name": "name",
+        "required": true,
+        "description": "이름",
+        "maxLength": 120
+      },
+      {
+        "name": "email",
+        "required": true,
+        "description": "이메일",
+        "maxLength": 254
+      },
+      {
+        "name": "summary",
+        "required": true,
+        "description": "사건 또는 업무 개요",
+        "maxLength": 4000
+      },
+      {
+        "name": "locale",
+        "required": true,
+        "description": "언어"
+      },
+      {
+        "name": "idempotencyKey",
+        "required": true,
+        "description": "멱등 키"
+      }
+    ],
+    "optional": [
+      {
+        "name": "category",
+        "required": false,
+        "description": "문의 유형"
+      },
+      {
+        "name": "phoneOrMessenger",
+        "required": false,
+        "description": "전화 또는 메신저",
+        "maxLength": 120
+      },
+      {
+        "name": "urgency",
+        "required": false,
+        "description": "긴급도 또는 기한",
+        "maxLength": 80
+      },
+      {
+        "name": "preferredContact",
+        "required": false,
+        "description": "선호 연락 방식",
+        "maxLength": 80
+      },
+      {
+        "name": "companyOrOrganization",
+        "required": false,
+        "description": "회사명 또는 소속",
+        "maxLength": 200
+      },
+      {
+        "name": "countryOrResidence",
+        "required": false,
+        "description": "국가 또는 거주지",
+        "maxLength": 120
+      },
+      {
+        "name": "preferredTime",
+        "required": false,
+        "description": "선호 연락 시간대",
+        "maxLength": 200
+      },
+      {
+        "name": "documentsAvailable",
+        "required": false,
+        "description": "보유 자료 종류",
+        "maxLength": 1000
+      },
+      {
+        "name": "confirmationToken",
+        "required": false,
+        "description": "확인 토큰 (submit only)"
+      },
+      {
+        "name": "privacyConsent",
+        "required": false,
+        "description": "개인정보 처리 동의 (submit only; must be true)"
+      },
+      {
+        "name": "userApprovedExactPreview",
+        "required": false,
+        "description": "정확한 미리보기 승인 (submit only; must be true; auditable attestation, not cryptographic proof)"
+      }
+    ]
+  },
+  "questions": [
+    "성함과, 해당되면 회사 또는 소속을 알려 주세요.",
+    "회신 받을 이메일 주소를 알려 주세요. 전화나 메신저가 있으면 선택 사항으로 남겨 주세요.",
+    "문의 유형을 선택해 주세요. 회사설립, 교통사고, 수사, 노동, 이혼·가사, 상속, 물류, 화장품, 일반 문의 중 하나입니다.",
+    "핵심 사실과 지금까지의 일정을 짧게 적어 주세요. 초기 접수에는 자세한 증거 내용이 필요하지 않습니다.",
+    "급한 기한이나 긴급도가 있으면 알려 주세요. 보장된 회신 시간은 없습니다.",
+    "나중에 이해충돌 확인을 위해, 상대방·관련 당사자 이름은 사건 개요(summary)에만 선택적으로 적어 주세요. 식별번호는 요청하지 않으며 보내지도 마세요.",
+    "현재 거주 국가 또는 지역을 알려 주세요.",
+    "선호하는 언어, 연락 방식, 시간대를 알려 주세요.",
+    "계약서, 사진, 판결문처럼 가지고 있는 자료의 종류만 적어 주세요. 내용, 첨부파일, URL 업로드는 보내지 마세요.",
+    "주민등록번호, 여권번호, 은행·카드 번호, 신분증 원본은 절대 입력하지 마세요.",
+    "근로 관계의 현재 상태(재직, 해고 통지, 퇴직)만 짧게 적어 주세요."
+  ],
+  "sensitiveData": {
+    "prohibitedKinds": [
+      "kr_resident_registration",
+      "tw_national_id",
+      "payment_card",
+      "iban",
+      "bank_account",
+      "passport",
+      "identity_number"
+    ],
+    "warning": "초기 문의에는 사건 또는 업무의 개요와 연락처만 보내주시기 바랍니다. 주민등록번호, 여권번호, 계좌번호, 신분증 원본 등 민감정보는 이메일이나 일반 문의 폼으로 보내지 마시고, 담당 변호사의 별도 안내 후 안전한 방식으로 제출해 주세요."
+  },
+  "notices": {
+    "privacy": "이 접수는 상담 검토를 위해 이름, 연락처, 사건 개요를 처리합니다. 자세한 내용은 공개 개인정보 처리방침을 확인하세요. 민감식별정보·금융·여권 정보는 초기 접수에 포함하지 마세요.",
+    "aiLimit": "AI는 법률 자문을 하지 않으며 틀릴 수 있습니다. 이 흐름은 상담 이메일 초안을 만들고, 사용자 확인 후에만 사무소 수신함으로 보냅니다.",
+    "noRepresentation": "이 접수는 변호사-의뢰인 관계를 만들지 않고, 비밀유지·회신 기한·법적 결과를 보장하지 않습니다. 개별 사건의 판단은 변호사 검토가 필요합니다.",
+    "emergency": "급박한 위험, 체포, 의료 위급 상황이라면 이 이메일 대신 현지 긴급 구조·수사 기관에 연락하세요. 이 안내는 관할별 전화번호를 제공하지 않습니다."
+  },
+  "confirmationInstruction": "아래 제목과 본문은 서버가 법률사무소 상담 수신함으로 보낼 내용과 완전히 같습니다. 사용자에게 이 제목과 본문을 그대로 보여 주고, 사용자가 이 내용 발송을 명시한 뒤에만 동일한 필드, 동일한 idempotencyKey, confirmationToken, userApprovedExactPreview=true, privacyConsent=true 로 POST /api/ai/intake/submit 을 호출하세요.",
+  "privacyUrl": "https://tseng-law.com/ko/privacy"
+}

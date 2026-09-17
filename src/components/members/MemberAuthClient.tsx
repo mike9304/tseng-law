@@ -82,7 +82,7 @@ export default function MemberAuthClient({ locale, nextPath }: MemberAuthClientP
   }
 
   return (
-    <main
+    <section
       className={styles.authPage}
       data-member-login-page="true"
       data-public-signup-enabled="false"
@@ -108,6 +108,6 @@ export default function MemberAuthClient({ locale, nextPath }: MemberAuthClientP
           {message ? <p className={styles.error} role="alert">{message}</p> : null}
         </form>
       </section>
-    </main>
+    </section>
   );
 }

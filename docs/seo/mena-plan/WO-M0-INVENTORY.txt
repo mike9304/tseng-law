@@ -1,0 +1,24 @@
+# WO-M0-INVENTORY — `ar` 안내 로케일 추가 지점 인벤토리 (Opus 5, 읽기 전용)
+
+## 공통 규칙
+작업트리 ~/Projects/tseng-law-mena-20260916 만. 코드 수정 금지(문서 1개만 생성). 커밋·빌드·전체 스위트 금지. 추측 금지 — 파일:줄 근거.
+
+## 목표
+vi/id/th/fil(안내 4로케일)이 추가될 때 건드린 모든 지점을 찾아, `ar`(아랍어, RTL) 안내 로케일을 같은 패턴으로 추가할 때 수정해야 할 파일·줄·변경 내용을 표로 만든다. 산출 docs/seo/mena-plan/AR-LOCALE-INVENTORY.md.
+
+## 조사 범위
+1. `grep -rn "GUIDANCE_LOCALES_4\|PublicLocale8\|PUBLIC_LOCALES_8\|isPublicLocale8\|'fil'" src scripts tests` 전부. 각 파일에서 ar 추가 시 필요한 변경(상수·타입·매퍼·hreflang 태그·언어명 라벨·테스트 카운트).
+2. `src/middleware.ts` matcher(`(vi|id|th|fil)`), `src/lib/public-guidance.ts` 전체(로케일 배열·BCP47 태그·x-default·언어 스위처·pack), `src/data/international-guidance-content.ts` 구조(GuidanceLocale 타입·GuidanceLocaleContent 필드 목록·페이지키 10·faqs 수), `src/lib/consultation/intake-language-contract.ts`, `src/lib/consultation/public-contact*`, contact 폼 컴포넌트(InternationalInquiryForm)·API 스키마(zod locale enum).
+3. SEO: `src/app/sitemap.ts`, `src/lib/llms-txt.ts`(GUIDANCE_LLMS_NOTICES·buildGuidanceLlmsTxt), `src/lib/seo.ts`(GUIDANCE_CONSULTATION_LANGUAGES·publicDocumentLanguage·hreflangTagForPublicLocale), `src/lib/guidance-structured-data.ts`, `src/data/international-guidance-answers.ts`(테스트의 로케일 집합), robots.
+4. 렌더/디자인: `src/app/[locale]/layout.tsx`(html lang·dir 설정 여부), `GuidancePageBody.tsx`·`GuidanceHomeBody.tsx`·Header/Footer/MobileNavDrawer/PublicLanguageSwitcher 의 8언어 라벨 맵, `public-site-chrome.ts`, 폰트(동남아 4언어 Times 폰트 커밋 3f0c5e1f 참고 — 아랍어 폰트 필요 여부), **RTL 지원 현황**(dir 속성·CSS 논리속성 사용 여부·`text-align:left` 하드코딩 수·margin-left/right 하드코딩 수 — `grep -c` 로 globals.css 집계).
+5. 테스트: vitest 중 로케일 8개를 단언하는 파일 목록과 단언 위치(카운트 갱신 필요), playwright `tests/builder-editor/international-guidance.playwright.ts`, `scripts/verify-multilingual-live.mjs`(로케일 목록·기대 8언어 6/6 등), `scripts/check-column-translation.mjs`.
+6. 칼럼: `src/content/columns-{vi,id,th,fil}` 존재 여부와 렌더 인프라(81a4cfe1)가 로케일 목록을 어디서 읽는지 — ar 칼럼은 phase 2이므로 "파일 없으면 노출 안 됨" 동작 확인만.
+
+## 산출 형식
+- §1 요약(10줄): 변경 파일 수, 핵심 리스크(RTL·폰트·테스트 카운트·middleware).
+- §2 표: 파일 | 줄 | 현재 코드(짧게) | ar 추가 시 변경 | 위험도(H/M/L) | 담당 WO(M2 라우팅 / M3 콘텐츠 / M2-SEO / M3-폼).
+- §3 RTL 실태: dir 설정 현황, 하드코딩 좌우 속성 개수(파일별), 최소 대응안(html dir=rtl + 논리속성 치환 범위 추정).
+- §4 테스트 갱신 목록.
+- §5 미확인 항목.
+## 완료 기준
+표 30행 이상 또는 실제 지점 전부(적으면 "전부"임을 grep 결과로 증명), RTL 실태 수치 포함, 보고(변경 파일=문서 1개·실행한 grep·미확인).

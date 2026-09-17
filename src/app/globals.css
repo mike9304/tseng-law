@@ -48,6 +48,11 @@
   --text-body: #355145;
   --text-secondary: #5f7869;
   --text-caption: #86968b;
+  /* WI-5: AA-safe colour for 12–13px meta text (dates, read-time, breadcrumb,
+     kickers). #556b5c measures 5.76:1 on --white, 5.48:1 on --off-white,
+     5.42:1 on --gray-50, 5.16:1 on --cream (WCAG 2.x, ≥ 4.5:1 everywhere).
+     --gray-400 / --text-caption stay for borders, dividers and decoration. */
+  --text-meta: #556b5c;
   --text-link: #234d3c;
   --text-link-hover: #35634d;
 
@@ -156,16 +161,37 @@
 
   /* next/font CSS variables are applied on <html>; :root inherits them so
      semantic tokens resolve. Locale-gated pages only receive the active pair. */
-  --font-heading-ko: var(--font-noto-serif-kr-loaded), 'Nanum Myeongjo', Georgia, 'Times New Roman', serif;
-  --font-heading-zh: var(--font-noto-serif-tc-loaded), 'Noto Serif TC', 'Songti TC', Georgia, serif;
+  /* Every next/font reference carries an inline fallback: a page that does not
+     load that pair must degrade to the rest of the stack, never to the
+     guaranteed-invalid value (which drops font-family to the Times initial). */
+  --font-heading-ko: var(--font-noto-serif-kr-loaded, 'Nanum Myeongjo'), 'Nanum Myeongjo', Georgia, 'Times New Roman', serif;
+  --font-heading-zh: var(--font-noto-serif-tc-loaded, 'Noto Serif TC'), 'Noto Serif TC', 'Songti TC', Georgia, serif;
+  --font-heading-ja: var(--font-noto-serif-jp-loaded, 'Yu Mincho'), 'Yu Mincho', 'Hiragino Mincho ProN', serif;
   /* EN display shares KR serif for visual cohesion (no Cormorant). */
   --font-heading-en: var(--font-heading-ko);
-  --font-body: var(--font-noto-sans-kr-loaded), 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-body-zh: var(--font-noto-sans-tc-loaded), 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', -apple-system, sans-serif;
+  /* Guidance locales (vi/id/th/fil) load no serif pair — system serif only. */
+  --font-heading-latin: Georgia, 'Noto Serif', 'Times New Roman', serif;
+  --font-body: var(--font-noto-sans-kr-loaded, 'Apple SD Gothic Neo'), 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body-zh: var(--font-noto-sans-tc-loaded, 'PingFang TC'), 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', -apple-system, sans-serif;
+  --font-body-ja: var(--font-noto-sans-jp-loaded, 'Hiragino Kaku Gothic ProN'), 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif;
+  --font-body-latin: var(--font-noto-sans-latin-loaded, 'Noto Sans'), 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-body-th: var(--font-noto-sans-thai-loaded, 'Noto Sans Thai'), 'Noto Sans Thai', var(--font-noto-sans-latin-loaded, 'Noto Sans'), 'Leelawadee UI', 'Thonburi', sans-serif;
+  --font-body-ar: var(--font-noto-sans-arabic-loaded, 'Noto Sans Arabic'), 'Noto Sans Arabic', var(--font-noto-sans-latin-loaded, 'Noto Sans'), 'Segoe UI', Tahoma, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
   --font-sans: var(--font-body);
   --font-display: var(--font-heading-ko);
   --font-display-en: var(--font-heading-en);
+}
+
+/* Japanese pages receive only the JP pair, including legacy display roles
+   that still reference the Korean-named compatibility token. */
+html[lang='ja'] {
+  --font-body: var(--font-body-ja);
+  --font-sans: var(--font-body-ja);
+  --font-heading: var(--font-heading-ja);
+  --font-display: var(--font-heading-ja);
+  --font-heading-ko: var(--font-heading-ja);
+  --font-display-en: var(--font-heading-ja);
 }
 
 /* ZH pages load only TC next/font variables — rebind body/display to TC stacks. */
@@ -176,6 +202,39 @@ html[lang='zh-hant'] {
   --font-sans: var(--font-body-zh);
   --font-display: var(--font-heading-zh);
   --font-display-en: var(--font-heading-zh);
+}
+
+/* Guidance locales load only the latin/Vietnamese Noto Sans (plus Noto Sans
+   Thai for th). Without these bindings --font-body resolves through the
+   unloaded KR variable and the whole declaration is dropped. */
+html[lang='vi'],
+html[lang='id'],
+html[lang='fil'] {
+  --font-body: var(--font-body-latin);
+  --font-sans: var(--font-body-latin);
+  --font-heading: var(--font-heading-latin);
+  --font-heading-ko: var(--font-heading-latin);
+  --font-display: var(--font-heading-latin);
+  --font-display-en: var(--font-heading-latin);
+}
+
+/* Arabic: Noto Sans Arabic for body and headings (no Arabic serif pair is loaded). */
+html[lang='ar'] {
+  --font-body: var(--font-body-ar);
+  --font-sans: var(--font-body-ar);
+  --font-heading: var(--font-body-ar);
+  --font-heading-ko: var(--font-body-ar);
+  --font-display: var(--font-body-ar);
+  --font-display-en: var(--font-body-ar);
+}
+
+html[lang='th'] {
+  --font-body: var(--font-body-th);
+  --font-sans: var(--font-body-th);
+  --font-heading: var(--font-body-th);
+  --font-heading-ko: var(--font-body-th);
+  --font-display: var(--font-body-th);
+  --font-display-en: var(--font-body-th);
 }
 
 *,
@@ -283,9 +342,31 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  word-break: keep-all;
   overflow-wrap: break-word;
   scroll-behavior: smooth;
+}
+
+/* WI-1 (2026-09-06): `word-break: keep-all` is a Korean-only typesetting rule
+   (never split an 어절). Japanese / Traditional Chinese have no inter-word
+   spaces, so keep-all turns every clause into one unbreakable token and the
+   text wraps only at punctuation. English needs nothing beyond the default.
+   Scope keep-all to ko here and per-element below; ja / zh-Hant get
+   `word-break: normal; line-break: strict` in the locale block near the end
+   of this file (after the mobile/desktop CJK overrides). */
+html[lang='ko'],
+.site[data-locale='ko'] {
+  word-break: keep-all;
+}
+
+/* R4 (2026-09-07): English pages carry inline CJK terms — "(營業場所預先
+   查詢)" in the EN columns — which `normal` splits mid-word. keep-all only
+   affects CJK runs (Latin still breaks at spaces); overflow-wrap: anywhere is
+   the safety net for a long CJK run in a narrow box. ja / zh-Hant keep
+   `word-break: normal; line-break: strict` (WI-1 block near the end). */
+html[lang='en'],
+.site[data-locale='en'] {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 body {
@@ -308,6 +389,9 @@ a {
 
 p {
   margin: 0;
+}
+
+:where(html[lang='ko']) p {
   word-break: keep-all;
 }
 
@@ -365,8 +449,11 @@ h6 {
   letter-spacing: -0.02em;
   margin: 0;
   line-height: 1.18;
-  word-break: keep-all;
   text-wrap: balance;
+}
+
+:where(html[lang='ko']) :is(h1, h2, h3, h4, h5, h6) {
+  word-break: keep-all;
 }
 
 p,
@@ -508,6 +595,40 @@ li,
   --font-sans: var(--font-body-zh);
   --font-display: var(--font-heading-zh);
   --font-heading: var(--font-heading-zh);
+}
+
+.site[data-locale='ja'] {
+  --font-body: var(--font-body-ja);
+  --font-sans: var(--font-body-ja);
+  --font-display: var(--font-heading-ja);
+  --font-heading: var(--font-heading-ja);
+  --font-heading-ko: var(--font-heading-ja);
+}
+
+.site[data-locale='vi'],
+.site[data-locale='id'],
+.site[data-locale='fil'] {
+  --font-body: var(--font-body-latin);
+  --font-sans: var(--font-body-latin);
+  --font-display: var(--font-heading-latin);
+  --font-heading: var(--font-heading-latin);
+  --font-heading-ko: var(--font-heading-latin);
+}
+
+.site[data-locale='ar'] {
+  --font-body: var(--font-body-ar);
+  --font-sans: var(--font-body-ar);
+  --font-display: var(--font-body-ar);
+  --font-heading: var(--font-body-ar);
+  --font-heading-ko: var(--font-body-ar);
+}
+
+.site[data-locale='th'] {
+  --font-body: var(--font-body-th);
+  --font-sans: var(--font-body-th);
+  --font-display: var(--font-body-th);
+  --font-heading: var(--font-body-th);
+  --font-heading-ko: var(--font-body-th);
 }
 
 html.has-cyber-cursor,
@@ -688,7 +809,7 @@ h1, h2, h3 {
   align-items: center;
   gap: 0.55rem;
   font-size: 0.82rem;
-  color: var(--text-caption);
+  color: var(--text-meta);
   margin-bottom: var(--space-4);
 }
 
@@ -836,6 +957,28 @@ h1, h2, h3 {
     linear-gradient(145deg, rgba(18, 50, 79, 0.18), rgba(181, 140, 66, 0.24));
 }
 
+/* Only the profile-linked stock home portrait uses its source ratio.
+   Custom home media and every other team portrait keep their own rules. */
+#about.split-section [data-home-stock-portrait='true'] {
+  align-self: center;
+  min-width: 0;
+  min-height: 0;
+  width: min(100%, 34rem);
+  max-width: 34rem;
+  height: auto;
+  max-height: none;
+  aspect-ratio: 773 / 865;
+  margin-inline: auto;
+}
+
+#about.split-section [data-home-stock-portrait='true'] img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center top;
+  transform: none;
+}
+
 .split-image--portrait::before,
 .authority-card-photo::before,
 .media-hub-photo::before,
@@ -878,7 +1021,7 @@ h1, h2, h3 {
   padding: 0.95rem 1.05rem;
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 16px;
-  background: linear-gradient(180deg, rgba(11, 24, 38, 0.16), rgba(11, 24, 38, 0.62));
+  background: rgba(0, 0, 0, 0.70);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: rgba(255, 250, 240, 0.94);
@@ -926,7 +1069,7 @@ h1, h2, h3 {
   border: 1px solid rgba(214, 196, 169, 0.24);
   background:
     radial-gradient(circle at top right, rgba(181, 140, 66, 0.14), transparent 22%),
-    linear-gradient(135deg, #071224 0%, #0a1630 48%, #0c1832 100%);
+    linear-gradient(135deg, var(--purple-dark) 0%, var(--dark-bg) 48%, var(--purple) 100%); /* WI-2: forest plate */
 }
 
 /* Editorial split (composite HomeCaseResultsSplit): image left, ink copy right */
@@ -935,7 +1078,7 @@ h1, h2, h3 {
   min-height: 786px;
   grid-template-columns: minmax(0, 52fr) minmax(0, 48fr);
   border: 1px solid rgba(214, 196, 169, 0.24);
-  background: #071224;
+  background: var(--purple-dark); /* WI-2 */
 }
 
 /* Beat later equal-specificity `.section { padding: clamp(...) }` (and mobile
@@ -970,7 +1113,7 @@ section.home-results-panel--editorial {
 .home-results-panel--editorial .home-results-content {
   max-width: none;
   justify-content: center;
-  background: #071224;
+  background: var(--purple-dark); /* WI-2 */
 }
 
 .home-results-content {
@@ -982,7 +1125,25 @@ section.home-results-panel--editorial {
 }
 
 .home-results-title {
-  max-width: 14ch;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.home-results-title:lang(ko) {
+  word-break: keep-all;
+}
+
+.home-results-title:lang(en) {
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.home-results-title:lang(ja),
+.home-results-title:lang(zh) {
+  word-break: normal;
+  overflow-wrap: anywhere;
 }
 
 .home-results-text {
@@ -1001,6 +1162,9 @@ section.home-results-panel--editorial {
   line-height: 1.35;
   color: var(--text-heading);
   margin: 0 0 1.25rem;
+}
+
+:where(html[lang='ko']) .split-title {
   word-break: keep-all;
 }
 
@@ -1017,6 +1181,9 @@ section.home-results-panel--editorial {
   line-height: 1.8;
   color: var(--text-secondary);
   max-width: 540px;
+}
+
+:where(html[lang='ko']) .split-text {
   word-break: keep-all;
 }
 
@@ -1082,12 +1249,18 @@ section.home-results-panel--editorial {
   transform: translate(-50%, -50%);
 }
 
+/* WI-6 (2026-09-07) / R2: `.link-underline` is also the class on card
+   titles, stat/achievement links and arrow CTAs ("Read more →"), which keep
+   the original hover-only ::after bar. The rest-state underline therefore
+   lives only in the content-context rules below, never here. */
 .link-underline {
   position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
   color: inherit;
+  text-decoration: none;
+  transition: color 160ms ease;
 }
 
 .link-underline::after {
@@ -1106,11 +1279,97 @@ section.home-results-panel--editorial {
 .link-underline:hover,
 .link-underline:focus-visible {
   color: var(--text-link-hover);
+  text-decoration-color: currentColor;
 }
 
 .link-underline:hover::after,
 .link-underline:focus-visible::after {
   transform: scaleX(1);
+}
+
+/* Content contexts (article body, attorney profile / media-hub channel
+   lists, service-detail sidebar channel list, video CTA, contact inquiry
+   lists and the contact email card): brand-coloured, wrapping inline links
+   with a rest-state underline (R2: the only place it is applied). The
+   animated ::after bar is dropped there in favour of the native underline so
+   multi-line links wrap normally. `.video-feature` never existed in markup —
+   the featured video CTA is the direct `a.link-underline` child of the
+   `.video-grid` card. */
+.column-markdown a.link-underline,
+.profile-link-list a,
+.media-hub-card a.link-underline,
+.authority-link-list a.link-underline,
+.svc-review-note a.link-underline,
+.video-grid > .card > a.link-underline,
+.contact-list a.link-underline,
+.contact-grid .card-copy > a.link-underline,
+.column-content a.link-underline,
+.blog-body a.link-underline {
+  display: inline;
+  color: var(--purple);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: color-mix(in srgb, var(--purple) 45%, transparent);
+  transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+
+.column-markdown a.link-underline:hover,
+.column-markdown a.link-underline:focus-visible,
+.profile-link-list a:hover,
+.profile-link-list a:focus-visible,
+.media-hub-card a.link-underline:hover,
+.media-hub-card a.link-underline:focus-visible,
+.authority-link-list a.link-underline:hover,
+.authority-link-list a.link-underline:focus-visible,
+.svc-review-note a.link-underline:hover,
+.svc-review-note a.link-underline:focus-visible,
+.video-grid > .card > a.link-underline:hover,
+.video-grid > .card > a.link-underline:focus-visible,
+.contact-list a.link-underline:hover,
+.contact-list a.link-underline:focus-visible,
+.contact-grid .card-copy > a.link-underline:hover,
+.contact-grid .card-copy > a.link-underline:focus-visible,
+.column-content a.link-underline:hover,
+.column-content a.link-underline:focus-visible,
+.blog-body a.link-underline:hover,
+.blog-body a.link-underline:focus-visible {
+  color: var(--purple-dark);
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 2px;
+}
+
+.column-markdown a.link-underline::after,
+.profile-link-list a::after,
+.media-hub-card a.link-underline::after,
+.authority-link-list a.link-underline::after,
+.svc-review-note a.link-underline::after,
+.video-grid > .card > a.link-underline::after,
+.contact-list a.link-underline::after,
+.contact-grid .card-copy > a.link-underline::after,
+.column-content a.link-underline::after,
+.blog-body a.link-underline::after {
+  display: none;
+}
+
+/* External links inside content get a small north-east arrow cue. The
+   markdown renderer opens every link in a new tab, so key on an absolute
+   http(s) href as well to keep the cue off relative internal / mailto links. */
+.column-markdown a[target='_blank'][href^='http']:not(.button)::after,
+.profile-link-list a[target='_blank'][href^='http']:not(.button)::after,
+.media-hub-card a[target='_blank'][href^='http']:not(.button)::after,
+.contact-list a[target='_blank'][href^='http']:not(.button)::after,
+.column-content a[target='_blank'][href^='http']:not(.button)::after {
+  content: ' \2197';
+  display: inline;
+  position: static;
+  width: auto;
+  height: auto;
+  background: none;
+  transform: none;
+  font-size: 0.8em;
+  text-decoration: none;
+  opacity: 0.85;
 }
 
 .button {
@@ -1255,6 +1514,8 @@ section.home-results-panel--editorial {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0;
+  max-width: 100%;
   text-align: center;
   padding: var(--space-6) var(--space-5);
   overflow: hidden;
@@ -1336,6 +1597,19 @@ section.home-results-panel--editorial {
   font-weight: 700;
   color: var(--text-heading);
   margin-bottom: var(--space-4);
+  line-height: 1.5;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 640px) {
+  .pricing-card-title {
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .pricing-card-price {
@@ -1389,13 +1663,64 @@ section.home-results-panel--editorial {
 }
 
 .pricing-card-note {
-  font-size: 0.78rem;
-  color: var(--gold-dim);
+  font-size: 0.9rem;
+  color: var(--text-body);
   background: rgba(181, 140, 66, 0.08);
   border-radius: var(--radius-sm);
   padding: var(--space-2) var(--space-3);
-  line-height: 1.5;
+  line-height: 1.6;
   margin-top: auto;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+:lang(ja) .pricing-card :where(h3, p, li),
+:lang(zh-Hant) .pricing-card :where(h3, p, li) {
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+/* WI-10 (2026-09-07): CorporateAdvisoryLink renders a bare
+   <p><a class="link-underline">headline</a> — summary</p> after the services
+   grid and inside the retainer pricing card. Its markup is owned by another
+   lane, so the callout is hooked from the parents: it is the only class-less
+   <p> in either container. */
+.services-bento > .container > .services-card-grid + p:not([class]),
+.pricing-card > p:not([class]) {
+  margin: 1.5rem 0 0;
+  padding: 1rem 1.25rem;
+  background: var(--purple-bg);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  color: #315e44;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: left; /* the pricing card centres its copy */
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.services-bento > .container > .services-card-grid + p:not([class]) {
+  /* R5: span the full 1200px grid like the cards above it (72ch read as a
+     ~600px orphan under the grid). */
+  max-width: none;
+  width: 100%;
+}
+
+.services-bento > .container > .services-card-grid + p:not([class]) > a.link-underline,
+.pricing-card > p:not([class]) > a.link-underline {
+  display: inline;
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.services-bento > .container > .services-card-grid + p:not([class]) > a.link-underline:hover,
+.services-bento > .container > .services-card-grid + p:not([class]) > a.link-underline:focus-visible,
+.pricing-card > p:not([class]) > a.link-underline:hover,
+.pricing-card > p:not([class]) > a.link-underline:focus-visible {
+  color: var(--purple-dark);
 }
 
 .pricing-disclaimer {
@@ -1407,9 +1732,10 @@ section.home-results-panel--editorial {
 }
 
 .pricing-disclaimer p {
-  font-size: 0.82rem;
-  color: var(--text-secondary);
+  font-size: 0.9rem;
+  color: var(--text-body);
   line-height: 1.7;
+  overflow-wrap: anywhere;
 }
 
 .pricing-cta {
@@ -1760,6 +2086,22 @@ section.home-results-panel--editorial {
   max-width: min(640px, 62vw);
 }
 
+/* Public hero: empty overlay/copy boxes pass hits through to the video control. */
+.site .home-hero-overlay,
+.site [data-node-id='home-hero-overlay'] {
+  pointer-events: none;
+}
+
+.site .hero .hero-inner,
+.site .hero .hero-copy {
+  pointer-events: none;
+}
+
+.site .hero .hero-inner > *:not(.hero-copy),
+.site .hero .hero-copy > * {
+  pointer-events: auto;
+}
+
 .hero .section-label {
   justify-content: flex-start;
   color: rgba(233, 242, 234, 0.84);
@@ -1769,7 +2111,7 @@ section.home-results-panel--editorial {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(135deg, #071224 0%, #123b63 100%);
+  background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple) 100%); /* WI-2 */
   background-position: center;
   background-size: cover;
 }
@@ -1795,6 +2137,11 @@ section.home-results-panel--editorial {
   width: 100% !important;
   min-width: 100% !important;
   left: 0 !important;
+}
+
+/* Video host must stack above sibling seed images (inline z 2 vs 3/4) inside .hero-media. */
+.site .hero .hero-media .builder-pub-node[data-node-id='home-hero-media-image']:has(> .decorative-autoplay-video) {
+  z-index: 5 !important;
 }
 
 .hero-brain-layer {
@@ -1870,6 +2217,18 @@ section.home-results-panel--editorial {
   pointer-events: none;
 }
 
+.decorative-autoplay-video > picture:has(> img[data-nimg='fill']) {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.site .builder-pub-node .decorative-autoplay-video > picture > img[data-nimg='fill'] {
+  position: absolute !important;
+  inset: 0;
+  height: 100% !important;
+}
+
 .decorative-autoplay-video__poster,
 .decorative-autoplay-video__video {
   position: absolute;
@@ -1918,7 +2277,7 @@ section.home-results-panel--editorial {
   background: rgba(7, 19, 27, 0.72);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   font: inherit;
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   font-weight: 650;
   line-height: 1.2;
   text-align: left;
@@ -1929,6 +2288,12 @@ section.home-results-panel--editorial {
     color 180ms ease,
     border-color 180ms ease,
     background 180ms ease;
+}
+
+/* Measured public header: keep hero video controls below it. */
+.site[data-public-header-measured] .hero-media-video-shell > .decorative-autoplay-video__control,
+.site[data-public-header-measured] [data-node-id='home-hero-media-image'] .decorative-autoplay-video > .decorative-autoplay-video__control {
+  top: calc(var(--header-offset-desktop) + max(0.875rem, env(safe-area-inset-top)));
 }
 
 .decorative-autoplay-video__control:hover {
@@ -1981,7 +2346,7 @@ section.home-results-panel--editorial {
 .hero-title {
   font-size: clamp(2rem, 4.2vw, 3.3rem);
   line-height: 1.16;
-  font-weight: 400;
+  font-weight: 600; /* WI-9: unified across locales (variable Noto Serif covers 600) */
   margin: 0 0 var(--space-4);
   color: rgba(247, 252, 247, 0.96);
   text-shadow:
@@ -2022,7 +2387,7 @@ section.home-results-panel--editorial {
 .caption {
   font-size: 0.8125rem;
   line-height: 1.5;
-  color: var(--text-caption);
+  color: var(--text-meta);
 }
 
 .hero-typing {
@@ -2069,7 +2434,7 @@ section.home-results-panel--editorial {
 }
 
 .search-input::placeholder {
-  color: var(--text-caption);
+  color: var(--text-meta);
 }
 
 .search-input:focus {
@@ -2090,7 +2455,7 @@ section.home-results-panel--editorial {
 }
 
 .input::placeholder {
-  color: var(--text-caption);
+  color: var(--text-meta);
 }
 
 .input:hover {
@@ -2129,8 +2494,8 @@ section.home-results-panel--editorial {
 
 .hero-search-wrapper {
   position: absolute;
-  left: var(--page-gutter);
-  right: calc(var(--right-rail-size) + var(--edge-safe-right));
+  left: 0;
+  right: 0;
   bottom: 0;
   z-index: 40;
   transform: translateY(50%);
@@ -2139,9 +2504,9 @@ section.home-results-panel--editorial {
 .hero-search-wrapper .container {
   display: flex;
   justify-content: flex-start;
-  margin: 0;
-  max-width: none;
-  width: 100%;
+  width: min(var(--max-width), calc(100% - (var(--page-gutter) * 2)));
+  max-width: var(--max-width);
+  margin-inline: auto;
   padding-inline: 0;
 }
 
@@ -2155,8 +2520,8 @@ section.home-results-panel--editorial {
   background: linear-gradient(90deg, rgba(15, 41, 30, 0.94) 0%, rgba(28, 62, 47, 0.9) 100%);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 18px 34px rgba(11, 24, 17, 0.28);
-  border: 1px solid rgba(205, 221, 211, 0.16);
+  box-shadow: 0 6px 16px rgba(28, 62, 47, 0.12);
+  border: 1px solid rgba(205, 221, 211, 0.28);
   border-radius: 24px;
   padding: 0;
 }
@@ -2164,7 +2529,7 @@ section.home-results-panel--editorial {
 .hero-search-bar.overlap:focus-within {
   background: linear-gradient(90deg, rgba(15, 41, 30, 0.98) 0%, rgba(28, 62, 47, 0.94) 100%);
   border-color: rgba(233, 242, 234, 0.3);
-  box-shadow: 0 22px 36px rgba(11, 24, 17, 0.32);
+  box-shadow: 0 8px 18px rgba(28, 62, 47, 0.14);
 }
 
 .hero-search-input {
@@ -2269,10 +2634,10 @@ section.home-results-panel--editorial {
 }
 
 .hero-highlight-meta {
-  font-size: 0.7rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: var(--text-caption);
+  color: var(--text-meta);
   font-weight: 600;
 }
 
@@ -2458,7 +2823,7 @@ section.home-results-panel--editorial {
 }
 
 .stat-number {
-  font-family: var(--font-mono);
+  font-family: var(--font-body); /* WI-5: no monospace for numerals */
   font-variant-numeric: tabular-nums;
   font-size: clamp(1.45rem, 1vw + 1rem, 2.35rem);
   line-height: 1.2;
@@ -2468,9 +2833,9 @@ section.home-results-panel--editorial {
 .counter,
 .year,
 .phone-number {
-  font-family: var(--font-mono);
+  font-family: var(--font-body); /* WI-5: no monospace for numerals / phone numbers */
   font-variant-numeric: tabular-nums;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .stat-label {
@@ -2531,27 +2896,27 @@ section.home-results-panel--editorial {
   box-shadow: 0 8px 32px rgba(0,0,0,0.07);
 }
 
-/* Home `#practice` only: quieter surfaces for code-native practice icons */
-#practice .services-detail-card {
+/* `#practice` / `.services-bento`: quieter surfaces for code-native practice icons */
+:is(#practice, .services-bento) .services-detail-card {
   border-radius: 4px;
   box-shadow: none;
   transition: border-color 0.2s ease, background 0.2s ease;
 }
-#practice .services-detail-card:hover {
+:is(#practice, .services-bento) .services-detail-card:hover {
   background: rgba(22, 58, 95, 0.03);
   border-color: var(--gray-300);
   box-shadow: none;
 }
-#practice .services-detail-card.is-open {
+:is(#practice, .services-bento) .services-detail-card.is-open {
   border-color: var(--purple-border);
   background: var(--off-white);
   box-shadow: none;
 }
-#practice .services-detail-toggle:focus-visible {
+:is(#practice, .services-bento) .services-detail-toggle:focus-visible {
   outline: 2px solid var(--purple);
   outline-offset: 2px;
 }
-#practice .service-icon {
+:is(#practice, .services-bento) .service-icon {
   width: 46px;
   height: 46px;
   min-width: 40px;
@@ -2561,14 +2926,14 @@ section.home-results-panel--editorial {
   transform: none;
   transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
-#practice .services-detail-card:hover .service-icon,
-#practice .services-detail-card:focus-within .service-icon {
+:is(#practice, .services-bento) .services-detail-card:hover .service-icon,
+:is(#practice, .services-bento) .services-detail-card:focus-within .service-icon {
   border-color: var(--purple-border);
   background: var(--purple-bg);
   color: var(--gold);
   transform: none;
 }
-#practice .services-detail-more:hover {
+:is(#practice, .services-bento) .services-detail-more:hover {
   transform: none;
 }
 
@@ -2619,7 +2984,7 @@ section.home-results-panel--editorial {
   border-top: 1px solid var(--border-light); padding-top: 1rem; margin-top: 0.5rem;
 }
 .services-detail-columns-label {
-  font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
   color: var(--accent); display: block; margin-bottom: 0.5rem;
 }
 .services-detail-columns-list {
@@ -2740,6 +3105,12 @@ section.home-results-panel--editorial {
 .svc-col-card:hover .svc-col-card-media img {
   transform: scale(1.04);
 }
+.svc-col-card-media--preserve-text img {
+  object-fit: contain;
+}
+.svc-col-card:hover .svc-col-card-media--preserve-text img {
+  transform: none;
+}
 .svc-col-card-overlay {
   position: absolute;
   inset: 0;
@@ -2751,7 +3122,7 @@ section.home-results-panel--editorial {
   display: inline-block; width: fit-content;
   padding: 0.2rem 0.6rem; border-radius: 999px;
   background: rgba(255,255,255,0.9); color: var(--accent);
-  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.02em;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.02em;
   position: absolute;
   left: 1rem;
   bottom: 1rem;
@@ -2769,7 +3140,7 @@ section.home-results-panel--editorial {
   padding: 0 1.4rem;
 }
 .svc-col-card-meta {
-  display: flex; gap: 0.8rem; font-size: 0.75rem; color: var(--text-caption);
+  display: flex; gap: 0.8rem; font-size: 0.75rem; color: var(--text-meta);
   padding: 0 1.4rem;
 }
 .svc-col-card-link {
@@ -2836,7 +3207,7 @@ section.home-results-panel--editorial {
 }
 
 .authority-card-eyebrow {
-  font-size: 0.74rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent);
@@ -2852,14 +3223,16 @@ section.home-results-panel--editorial {
 
 .authority-card-top {
   display: grid;
-  grid-template-columns: 112px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
   margin-top: 1rem;
 }
 
 .authority-card-photo {
   position: relative;
-  min-height: 132px;
+  width: min(100%, 12rem);
+  aspect-ratio: 4 / 3;
+  min-height: 0;
   border-radius: 14px;
   overflow: hidden;
   background: linear-gradient(145deg, rgba(18, 50, 79, 0.22), rgba(181, 140, 66, 0.24));
@@ -2957,8 +3330,6 @@ section.home-results-panel--editorial {
 @media (max-width: 640px) {
   .svc-hero { padding: 5.5rem 0 2.5rem; }
   .svc-numbers-grid { grid-template-columns: repeat(2, 1fr); }
-  .authority-card-top { grid-template-columns: 1fr; }
-  .authority-card-photo { min-height: 220px; }
 }
 
 .service-icon {
@@ -3260,7 +3631,7 @@ section.home-results-panel--editorial {
   display: flex;
   justify-content: space-between;
   font-size: 0.82rem;
-  color: var(--text-caption);
+  color: var(--text-meta);
 }
 
 .feature-title,
@@ -3297,7 +3668,7 @@ section.home-results-panel--editorial {
 
 .major-meta {
   font-size: 0.82rem;
-  color: var(--text-caption);
+  color: var(--text-meta);
   margin-bottom: var(--space-2);
 }
 
@@ -3385,7 +3756,7 @@ section.home-results-panel--editorial {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #fff;
@@ -3410,9 +3781,10 @@ section.home-results-panel--editorial {
 
 .insights-date,
 .insights-readtime {
-  font-family: var(--font-mono);
+  font-family: var(--font-body); /* WI-5: no monospace for dates */
+  font-variant-numeric: tabular-nums;
   font-size: 0.75rem;
-  color: var(--text-secondary);
+  color: var(--text-meta);
 }
 
 .insights-featured-title {
@@ -3538,11 +3910,31 @@ section.home-results-panel--editorial {
   min-width: 0;
 }
 
+/* O16: the guidance home marks source-language columns. The badge sits in the
+   corner opposite the category badge so neither overlay is covered; compact
+   list rows use the inline tag below instead of a second overlay. */
+.insights-category-badge--language {
+  left: auto;
+  right: 1rem;
+  max-width: calc(100% - 2rem);
+  text-align: right;
+}
+
+.insights-language-tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted, #5b6b62);
+  border: 1px solid currentColor;
+  border-radius: var(--radius-xs);
+  padding: 0.1rem 0.42rem;
+}
+
 .insights-category-badge--compact {
   top: auto;
   left: 0.75rem;
   bottom: 0.75rem;
-  font-size: 0.66rem;
+  font-size: 0.75rem; /* WI-5: 12px floor (was 10.56px) */
   padding: 0.24rem 0.56rem;
 }
 
@@ -3621,7 +4013,7 @@ section.home-results-panel--editorial {
 .video-item-meta,
 .search-results-total,
 .search-result-meta {
-  color: var(--text-caption);
+  color: var(--text-meta);
   font-size: 0.82rem;
 }
 
@@ -3634,7 +4026,7 @@ section.home-results-panel--editorial {
   border: 1px solid var(--border-light);
   border-radius: 999px;
   background: var(--gray-50);
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   color: var(--text-secondary);
 }
 
@@ -4015,11 +4407,17 @@ section.home-results-panel--editorial {
 }
 
 .firm-intro-logo-wrap {
+  display: inline-flex;
+  max-width: 100%;
   margin-bottom: 1.1rem;
+  padding: 0.75rem 1rem;
+  background: #18372b;
 }
 
 .firm-intro-logo {
   width: min(320px, 100%);
+  max-width: 100%;
+  min-width: 0;
   height: auto;
   display: block;
 }
@@ -4052,7 +4450,7 @@ section.home-results-panel--editorial {
 .firm-intro-source {
   margin: 1rem 0 0;
   font-size: 0.8rem;
-  color: var(--text-caption);
+  color: var(--text-meta);
 }
 
 .firm-intro-source a {
@@ -4178,7 +4576,8 @@ section.home-results-panel--editorial {
 
 /* Lead (대표 변호사) card */
 .attorney-card--lead {
-  display: grid; grid-template-columns: 340px 1fr; gap: 2rem;
+  display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 2rem;
+  min-width: 0;
   border: 1px solid var(--border-light); border-radius: 16px; overflow: hidden; background: #fff;
   box-shadow: 0 4px 24px rgba(0,0,0,0.06);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(245, 240, 233, 0.96));
@@ -4186,11 +4585,13 @@ section.home-results-panel--editorial {
 .attorney-card-photo--lead {
   position: relative; width: 100%; min-height: 440px; background: #f4f1ea;
   background: linear-gradient(145deg, rgba(18, 50, 79, 0.22), rgba(181, 140, 66, 0.24));
+  overflow: hidden;
 }
 
 /* Sub (소속/협력) card */
 .attorney-card--sub {
-  display: grid; grid-template-columns: 180px 1fr; gap: 1.25rem;
+  display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 1.25rem;
+  min-width: 0;
   border: 1px solid var(--border-light); border-radius: 12px; overflow: hidden; background: #fff;
   box-shadow: 0 2px 12px rgba(0,0,0,0.04);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 244, 238, 0.96));
@@ -4203,16 +4604,26 @@ section.home-results-panel--editorial {
 }
 
 .attorney-staff-grid {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem;
+  min-width: 0;
 }
 
-.attorney-card-info { padding: 1.5rem; }
+.attorney-card-info { padding: 1.5rem; min-width: 0; max-width: 100%; }
+.attorney-card-info :where(h3, p, li, a) {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+:lang(ja) .attorney-card-info :where(h3, p, li, a),
+:lang(zh-Hant) .attorney-card-info :where(h3, p, li, a) {
+  word-break: normal;
+}
 .attorney-card-name { margin: 0; font-size: 1.15rem; color: var(--text-strong); }
 .attorney-card-name--lead { font-size: 1.5rem; }
 .attorney-card-role { margin: 0.3rem 0 0; font-weight: 600; color: var(--accent); font-size: 0.95rem; }
 .attorney-card-email { font-size: 0.85rem; color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }
 .attorney-card-section { margin-top: 0.85rem; }
-.attorney-card-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.3rem; }
+.attorney-card-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.3rem; }
 .attorney-card-source { margin-top: 0.75rem; font-size: 0.75rem; color: var(--text-muted); }
 .attorney-card-cta { margin-top: 0.75rem; }
 .attorney-card-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
@@ -4357,7 +4768,7 @@ section.home-results-panel--editorial {
 }
 
 @media (max-width: 1024px) {
-  .attorney-card--lead { grid-template-columns: 260px 1fr; }
+  .attorney-card--lead { grid-template-columns: 260px minmax(0, 1fr); }
   .attorney-staff-grid { grid-template-columns: 1fr; }
   .profile-hero-card { grid-template-columns: 280px minmax(0, 1fr); }
   .media-hub-profile { grid-template-columns: 220px minmax(0, 1fr); }
@@ -4436,7 +4847,7 @@ section.home-results-panel--editorial {
 }
 
 .warning-label {
-  font-size: 0.73rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--text-secondary);
@@ -4463,6 +4874,11 @@ section.home-results-panel--editorial {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+}
+
+#contact .home-contact-actions .button {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .home-contact-cta .button.secondary {
@@ -4493,6 +4909,67 @@ section.home-results-panel--editorial {
   background: rgba(233, 242, 234, 0.12);
   color: #fff;
   box-shadow: none;
+}
+
+/* WI-8: home closing CONTACT band — one filled primary action, quieter
+   ghost/secondary siblings, and breathing room before the fine print.
+   Markup (HomeContactCta.tsx + builder decompose-contact) renders the first
+   action as `.button.ghost`; builder-published pages reuse these classes, so
+   both the direct-child and the ghost-class hooks are covered. */
+.home-contact-cta .home-contact-actions {
+  gap: 0.75rem 0.9rem;
+  align-items: center;
+}
+
+/* Inverted primary: the band itself is forest (#0c1c14→#12291d), so a
+   `--purple` fill measured ~1.2:1 against it and read as a third outline
+   button. Off-white fill + forest text keeps the brand colour on the label
+   and gives the only clearly "filled" action in the row. */
+.home-contact-cta .home-contact-actions > .button:first-child,
+.home-contact-cta .button.ghost {
+  background: var(--off-white);
+  border-color: var(--off-white);
+  color: var(--purple);
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+.home-contact-cta .home-contact-actions > .button:first-child:hover,
+.home-contact-cta .home-contact-actions > .button:first-child:focus-visible,
+.home-contact-cta .button.ghost:hover,
+.home-contact-cta .button.ghost:focus-visible {
+  background: #fff;
+  border-color: #fff;
+  color: var(--purple-dark);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.34);
+}
+
+.home-contact-cta .home-contact-actions > .button:not(:first-child),
+.home-contact-cta .button.secondary {
+  background: transparent;
+  border-color: rgba(233, 242, 234, 0.36);
+  color: rgba(255, 255, 255, 0.92);
+  box-shadow: none;
+}
+
+.home-contact-cta .home-contact-actions > .button:not(:first-child):hover,
+.home-contact-cta .home-contact-actions > .button:not(:first-child):focus-visible,
+.home-contact-cta .button.secondary:hover,
+.home-contact-cta .button.secondary:focus-visible {
+  background: rgba(233, 242, 234, 0.1);
+  border-color: rgba(255, 255, 255, 0.85);
+  color: #fff;
+}
+
+/* Fine print / AI-intake supporting copy sits under the button row. */
+.home-contact-cta .home-contact-actions + .section-lede,
+.home-contact-cta .home-contact-actions ~ p {
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+  max-width: 62ch;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: rgba(233, 242, 234, 0.72);
 }
 
 .footer {
@@ -4581,11 +5058,15 @@ section.home-results-panel--editorial {
   color: var(--accent-gold);
 }
 
+/* WI-3 (2026-09-07): footer re-skin on the mist/forest token system.
+   The skyline raster is an opaque near-white PNG-style webp; blending it in
+   multiply mode dissolves that white rectangle into the tinted band so the
+   image no longer reads as a seam above the footer. */
 .footer-skyline {
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(180deg, #f4f7f1 0%, #e7ede3 100%);
-  border-top: 1px solid #d8e1d5;
+  background: linear-gradient(180deg, var(--off-white) 0%, var(--warm-bg) 100%);
+  border-top: 1px solid var(--border-light);
   min-height: clamp(120px, 16vw, 220px);
   display: flex;
   align-items: flex-end;
@@ -4606,16 +5087,17 @@ section.home-results-panel--editorial {
   display: block;
   filter: grayscale(45%) saturate(0.78) contrast(1.02) brightness(0.98);
   opacity: 0.95;
+  mix-blend-mode: multiply;
 }
 
 .site-footer {
-  background: #efe6d8;
-  color: #504030;
-  border-top: 1px solid #dccfbc;
+  background: var(--warm-bg-alt);
+  color: var(--text-body);
+  border-top: 1px solid var(--warm-border);
 }
 
 .footer-offices {
-  border-bottom: 1px solid rgba(88, 72, 52, 0.17);
+  border-bottom: 1px solid var(--warm-border);
 }
 
 .footer-offices .container {
@@ -4627,14 +5109,17 @@ section.home-results-panel--editorial {
 }
 
 .footer-main {
-  border-bottom: 1px solid rgba(88, 72, 52, 0.14);
+  border-bottom: 1px solid var(--warm-border);
 }
 
+/* Brand block owns its own column; the four link columns share one row on
+   desktop (>1024px). Tablet collapses to a 2-column wrap, phone to one. */
 .footer-main-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(280px, 1.4fr) repeat(4, minmax(0, 1fr));
   gap: clamp(1.4rem, 2.2vw, 2.2rem);
   padding: 1.95rem 0 1.75rem;
+  align-items: start;
 }
 
 .footer-main-intro {
@@ -4649,13 +5134,13 @@ section.home-results-panel--editorial {
   font-size: clamp(1.08rem, 0.65vw + 0.96rem, 1.34rem);
   font-weight: 600;
   letter-spacing: -0.03em;
-  color: #2c2115;
+  color: var(--purple-dark);
 }
 
 .footer-main-note {
   margin: 0;
   font-size: 0.95rem;
-  color: rgba(70, 57, 40, 0.84);
+  color: var(--text-body);
   line-height: 1.82;
   letter-spacing: -0.015em;
 }
@@ -4668,7 +5153,7 @@ section.home-results-panel--editorial {
 
 .footer-consultation-email-label {
   margin: 0;
-  color: #382b1d;
+  color: var(--purple-dark);
   font-size: 0.82rem;
   font-weight: 600;
 }
@@ -4681,18 +5166,18 @@ section.home-results-panel--editorial {
 }
 
 .footer-consultation-email-link {
-  color: #123b63;
+  color: var(--purple); /* WI-2 */
   font-size: 0.92rem;
   font-weight: 650;
   overflow-wrap: anywhere;
   text-decoration: underline;
-  text-decoration-color: rgba(18, 59, 99, 0.4);
+  text-decoration-color: var(--purple-light);
   text-underline-offset: 0.22em;
 }
 
 .footer-consultation-email-link:hover,
 .footer-consultation-email-link:focus-visible {
-  color: #0b2c4b;
+  color: var(--purple-dark);
   text-decoration-color: currentColor;
 }
 
@@ -4703,10 +5188,10 @@ section.home-results-panel--editorial {
   gap: 0.35rem;
   min-height: 44px;
   padding: 0.4rem 0.7rem;
-  border: 1px solid rgba(18, 59, 99, 0.32);
+  border: 1px solid var(--purple-border);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.32);
-  color: #123b63;
+  background: var(--white);
+  color: var(--purple);
   cursor: pointer;
   font: inherit;
   font-size: 0.78rem;
@@ -4719,9 +5204,9 @@ section.home-results-panel--editorial {
 
 .footer-consultation-email-copy:hover,
 .footer-consultation-email-copy:focus-visible {
-  border-color: rgba(18, 59, 99, 0.62);
-  background: rgba(255, 255, 255, 0.58);
-  color: #0b2c4b;
+  border-color: var(--purple);
+  background: var(--purple-bg);
+  color: var(--purple-dark);
 }
 
 .footer-consultation-email-status {
@@ -4736,9 +5221,15 @@ section.home-results-panel--editorial {
   border: 0;
 }
 
+/* Flex column (not grid): a stretched grid item would distribute the row's
+   spare height between the title and list tracks and push the first link
+   ~100px below its title. */
 .footer-link-column {
-  display: grid;
-  gap: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  min-width: 0;
 }
 
 .footer-link-title {
@@ -4746,7 +5237,7 @@ section.home-results-panel--editorial {
   font-size: 0.93rem;
   font-weight: 600;
   letter-spacing: -0.015em;
-  color: #382b1d;
+  color: var(--purple-dark);
 }
 
 .footer-link-list {
@@ -4757,14 +5248,16 @@ section.home-results-panel--editorial {
 .footer-link-list a {
   font-size: 0.94rem;
   line-height: 1.65;
-  color: rgba(70, 57, 40, 0.8);
+  color: var(--text-body);
   text-decoration: none;
   transition: color 180ms ease;
 }
 
 .footer-link-list a:hover,
 .footer-link-list a:focus-visible {
-  color: #2a2012;
+  color: var(--purple);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .office-links {
@@ -4780,7 +5273,7 @@ section.home-results-panel--editorial {
   font-weight: 600;
   font-size: 0.84rem;
   letter-spacing: -0.01em;
-  color: #3f3324;
+  color: var(--purple-dark);
   margin-right: 1.2rem;
   white-space: nowrap;
 }
@@ -4790,7 +5283,7 @@ section.home-results-panel--editorial {
   align-content: center;
   gap: 0.22rem;
   font-size: 0.92rem;
-  color: rgba(76, 62, 44, 0.8);
+  color: var(--text-body);
   text-decoration: none;
   padding: 0.5rem 0.95rem;
   white-space: nowrap;
@@ -4799,21 +5292,23 @@ section.home-results-panel--editorial {
 }
 
 .office-link-name {
-  color: #3f3324;
+  color: var(--text-heading);
   font-weight: 650;
 }
 
 .office-link-address {
-  color: #665642;
-  font-size: 0.72rem;
+  color: var(--text-meta);
+  font-size: 0.75rem; /* WI-5: 12px floor */
   line-height: 1.45;
   overflow-wrap: anywhere;
   white-space: normal;
 }
 
-.office-link:hover,
-.office-link:focus-visible {
-  color: #2a2012;
+.office-link:hover .office-link-name,
+.office-link:focus-visible .office-link-name {
+  color: var(--purple);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .office-link + .office-link::before {
@@ -4824,7 +5319,7 @@ section.home-results-panel--editorial {
   transform: translateY(-50%);
   width: 1px;
   height: 12px;
-  background: rgba(88, 72, 52, 0.18);
+  background: var(--warm-border);
 }
 
 .footer-bottom-bar {
@@ -4844,38 +5339,41 @@ section.home-results-panel--editorial {
   align-items: center;
   gap: 1.2rem;
   flex-wrap: wrap;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .footer-legal-links a {
   font-size: 0.84rem;
   letter-spacing: -0.005em;
-  color: #4c3e2c;
+  color: var(--text-meta); /* 4.83:1 on --warm-bg-alt */
   text-decoration: none;
   transition: color 180ms ease;
 }
 
 .footer-legal-links a:hover,
 .footer-legal-links a:focus-visible {
-  color: #2a2012;
+  color: var(--purple);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .footer-locale-switch {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  margin-left: 0.8rem;
+  flex-wrap: wrap;
+  gap: 1rem 0.6rem;
+  max-width: 100%;
 }
 
-/* 44×44 tap targets without changing the visual size: grow the hit area
-   with padding and cancel the layout shift with matching negative margins
-   (43×16 links → 45×44 clickable). */
+/* Reserve the full tap target in flow so wrapped rows cannot overlap. */
 .footer-locale-switch .locale-flag-switcher-link {
   padding: 14px 2px;
-  margin: -14px -2px;
+  margin: 0 -2px;
 }
 
 .footer-locale-switch a[aria-current='page'] {
-  color: #2a2012;
+  color: var(--purple-dark);
   font-weight: 700;
 }
 
@@ -4888,7 +5386,7 @@ section.home-results-panel--editorial {
 .social-label {
   font-size: 0.84rem;
   letter-spacing: -0.005em;
-  color: #594a38;
+  color: var(--text-meta);
 }
 
 [data-locale='ko'] .footer-link-title,
@@ -4924,30 +5422,36 @@ section.home-results-panel--editorial {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 44px; /* WI-3: 44px tap target */
+  height: 44px;
   border-radius: 999px;
-  border: 1px solid rgba(88, 72, 52, 0.24);
-  color: rgba(76, 62, 44, 0.82);
+  border: 1px solid var(--warm-border);
+  background: var(--white);
+  color: var(--purple);
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.8rem;
-  transition: all 180ms ease;
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+}
+
+.social-icon svg {
+  width: 18px;
+  height: 18px;
 }
 
 .social-icon:hover,
 .social-icon:focus-visible {
-  border-color: rgba(70, 55, 36, 0.5);
-  color: #2a2012;
-  background: rgba(140, 112, 76, 0.08);
+  border-color: var(--purple);
+  color: var(--purple-dark);
+  background: var(--purple-bg);
 }
 
 .footer-copyright-row {
   font-size: 0.75rem;
-  color: #62533f;
+  color: var(--text-meta);
   margin: 1rem 0 0;
   padding-top: 1rem;
-  border-top: 1px solid rgba(88, 72, 52, 0.16);
+  border-top: 1px solid var(--warm-border);
 }
 
 .header {
@@ -4986,7 +5490,19 @@ section.home-results-panel--editorial {
   background: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid rgba(148, 163, 184, 0.14);
   position: relative;
-  z-index: 2;
+  /* Language-dropdown stacking (single source of truth).
+     `.header-utility` is a stacking context, so the open language menu can
+     never escape it — `.menu { z-index: 90 }` only orders siblings inside this
+     bar. With the historic `z-index: 2` the whole bar painted under
+     `.header-main` (z-index 5), so the dropdown ended up behind `.nav-cta` /
+     logo / search and its lower options were unclickable. Found twice: on the
+     old four locales once the switcher sat far enough right (G21), and on the
+     guidance four, where there are no member links to push it left (O14).
+     Lifting the bar to 6 unconditionally fixes both; it is preferred over a
+     `:has(details[open])` variant because the two bars never overlap (layout is
+     unchanged either way) and this needs no `:has()` support. `.utility-lang`
+     must also stay `overflow: visible` for the menu to leave the pill. */
+  z-index: 6;
   backdrop-filter: blur(16px);
 }
 
@@ -5060,7 +5576,7 @@ section.home-results-panel--editorial {
   border: 1px solid rgba(148, 163, 184, 0.22);
   border-radius: 999px;
   background: rgba(248, 250, 252, 0.94);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .locale-flag-switcher-link {
@@ -5124,6 +5640,41 @@ section.home-results-panel--editorial {
 
 .header.scrolled .header-main-inner {
   min-height: 72px;
+}
+
+/* Native public chrome reflows with enlarged text; CMS headers retain their own grid. */
+@media (max-width: 1024px) {
+  .header[data-public-site-header] > .header-main .header-main-inner {
+    display: flex;
+    flex-wrap: wrap;
+    padding-block: 0.4rem;
+    row-gap: 0.35rem;
+  }
+
+  .header[data-public-site-header] > .header-main .header-logo {
+    flex: 1 1 8.5rem;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .header[data-public-site-header] > .header-main .logo-kr {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .header[data-public-site-header] > .header-main .header-actions {
+    flex: 0 0 auto;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .site[data-public-header-measured] > main {
+    padding-top: var(--header-offset-desktop);
+  }
+
+  .site[data-public-header-measured] > main .hero {
+    margin-top: calc(var(--header-offset-desktop) * -1);
+  }
 }
 
 .header-logo {
@@ -5275,27 +5826,80 @@ section.home-results-panel--editorial {
   justify-self: end;
 }
 
+/*
+ * Guidance locales (vi/id/th/fil) write far longer chrome labels than the
+ * CJK/EN four — `fil` worst of all ("Mga larangan ng serbisyo" alone is as
+ * wide as two Korean items). `.nav-link` is `white-space: nowrap` inside a
+ * `minmax(0, 1fr)` track, so the list cannot shrink: it overflows and paints
+ * over the search button and the CTA instead of reflowing. Tighten the
+ * desktop header for those four only; ko/zh-hant/en/ja keep their spacing.
+ */
+@media (min-width: 1025px) {
+  html[lang='vi'] .header-main-inner,
+  html[lang='id'] .header-main-inner,
+  html[lang='th'] .header-main-inner,
+  html[lang='fil'] .header-main-inner {
+    gap: clamp(0.5rem, 0.9vw, 1rem);
+  }
+
+  html[lang='vi'] .nav-list,
+  html[lang='id'] .nav-list,
+  html[lang='th'] .nav-list,
+  html[lang='fil'] .nav-list {
+    gap: 0;
+  }
+
+  /* Fixed, not vw-scaled: the header container is capped at --max-width, so
+     viewport-scaled padding only grows the list without growing its track. */
+  html[lang='vi'] .nav-link,
+  html[lang='id'] .nav-link,
+  html[lang='th'] .nav-link,
+  html[lang='fil'] .nav-link {
+    font-size: 0.9rem;
+    padding: 0 0.34rem;
+  }
+
+  /* Filipino is the longest of the four even after shortening its labels. */
+  html[lang='fil'] .nav-link {
+    font-size: 0.86rem;
+    padding: 0 0.28rem;
+  }
+
+  html[lang='vi'] .header-actions,
+  html[lang='id'] .header-actions,
+  html[lang='th'] .header-actions,
+  html[lang='fil'] .header-actions {
+    gap: 0.5rem;
+  }
+
+  html[lang='vi'] .nav-cta.button,
+  html[lang='id'] .nav-cta.button,
+  html[lang='th'] .nav-cta.button,
+  html[lang='fil'] .nav-cta.button {
+    padding: 0 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
 .header-search-btn {
-  width: 56px;
-  height: 56px;
-  min-height: 56px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(148, 163, 184, 0.22);
-  border-radius: 18px;
+  border-radius: 4px;
   background: rgba(248, 250, 252, 0.96);
   color: #334155;
   cursor: pointer;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.88),
-    0 8px 20px rgba(15, 23, 42, 0.08);
+  box-shadow: none;
+  transform: none;
   transition:
     color 180ms ease,
     background 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease,
-    transform 180ms ease;
+    border-color 180ms ease;
 }
 
 .header-search-icon {
@@ -5313,20 +5917,42 @@ section.home-results-panel--editorial {
   color: var(--purple);
   background: #fff;
   border-color: rgba(109, 43, 97, 0.22);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.94),
-    0 12px 24px rgba(15, 23, 42, 0.12);
-  transform: translateY(-1px);
+  box-shadow: none;
+  transform: none;
 }
 
 .nav-cta.button {
   display: inline-flex;
   align-items: center;
-  min-height: 38px;
+  justify-content: center;
+  min-height: 44px;
   padding: 0 1rem;
-  border-radius: 3px;
+  border-radius: 4px;
   font-size: 0.85rem;
   white-space: nowrap;
+  background: var(--purple); /* WI-2: single primary (= .hero-cta-primary) */
+  color: #f4f8f1;
+  border: 1px solid var(--purple);
+  box-shadow: none;
+  transform: none;
+}
+
+.nav-cta.button:hover,
+.nav-cta.button:focus-visible {
+  background: var(--purple-dark);
+  border-color: var(--purple-dark);
+  color: #fff;
+  box-shadow: none;
+  transform: none;
+}
+
+.header .mobile-toggle {
+  min-width: 44px;
+  min-height: 44px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: none;
+  transform: none;
 }
 
 .header.transparent .header-search-btn {
@@ -5857,6 +6483,50 @@ section.home-results-panel--editorial {
   z-index: 100;
 }
 
+/* Native drawer remains reachable when labels or system text grow. */
+#public-mobile-nav-drawer {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+#public-mobile-nav-drawer .drawer-panel {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+#public-mobile-nav-drawer .drawer-header {
+  min-width: 0;
+  align-items: flex-start;
+}
+
+#public-mobile-nav-drawer .drawer-brand {
+  flex: 1 1 0;
+  width: auto;
+  min-width: 0;
+}
+
+#public-mobile-nav-drawer .drawer-brand .logo-kr {
+  display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+#public-mobile-nav-drawer .drawer-header > button {
+  flex: 0 0 auto;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+#public-mobile-nav-drawer .locale-flag-switcher--mobile {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#public-mobile-nav-drawer .locale-flag-switcher--mobile .locale-flag-switcher-link {
+  flex: 1 0 auto;
+}
+
 .drawer[data-open='true'] {
   opacity: 1;
   pointer-events: auto;
@@ -5907,6 +6577,8 @@ section.home-results-panel--editorial {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.55rem;
+  position: relative;
+  z-index: 2;
 }
 
 .locale-flag-switcher--mobile {
@@ -6106,12 +6778,78 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   margin: 0.5rem 0 1rem;
 }
 
+/* Search results only: caption token on small text is 3.11:1 on white. */
+.search-results-section .search-results-total,
+.search-results-section .list-meta {
+  color: var(--text-secondary);
+}
+
 .search-results-suggested {
   margin-top: 2rem;
 }
 
 .contact-grid {
   margin-bottom: 2rem;
+}
+
+.contact-email-actions {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0.85rem 0 0;
+  max-width: 36rem;
+}
+
+.contact-email-actions__label {
+  margin: 0;
+  color: var(--text-body);
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+}
+
+.contact-email-actions__address {
+  margin: 0;
+  color: var(--text-heading);
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  user-select: all;
+  -webkit-user-select: all;
+}
+
+.contact-email-actions__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem 0.7rem;
+}
+
+.contact-email-actions .button {
+  min-width: 44px;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 0.55rem 0.95rem;
+  white-space: normal;
+  text-align: center;
+}
+
+.contact-email-actions__note {
+  /* R3/R7: always its own row under the two buttons — with short zh / ko
+     button labels a 12.5rem flex basis squeezed it beside them as a cramped
+     three-line column. */
+  margin: 0.25rem 0 0;
+  flex: 1 1 100%;
+  color: var(--text-body);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.contact-email-actions__status {
+  margin: 0;
+  min-height: 1.2em;
+  color: var(--text-body);
+  font-size: 0.82rem;
 }
 
 .contact-label-spaced {
@@ -6190,6 +6928,11 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   line-height: 1.68;
 }
 
+.contact-list a[href^='mailto:'] {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
 .office-tabs {
   display: flex;
   flex-wrap: wrap;
@@ -6204,6 +6947,10 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   min-width: 44px;
   min-height: 44px;
   padding: 0.55rem 0.25rem;
+}
+
+#offices .office-tabs .tab-button {
+  overflow-wrap: anywhere;
 }
 
 .office-tabs .tab-button::after {
@@ -6284,7 +7031,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 
 .office-map-fallback-kicker {
   color: var(--purple);
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   font-weight: 800;
 }
 
@@ -6326,6 +7073,57 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   width: 100%;
   padding: clamp(1.4rem, 3vw, 2.25rem);
   background: rgba(255, 255, 255, 0.96);
+}
+
+#offices .office-map-wrap:not(.office-map-wrap--address) {
+  display: grid;
+}
+
+#offices .office-map-wrap > iframe {
+  grid-area: 1 / 1;
+}
+
+#offices .office-map-fallback {
+  position: relative;
+  inset: auto;
+  grid-area: 1 / 1;
+  min-width: 0;
+}
+
+#offices .office-map-wrap--address,
+#offices .office-map-fallback-panel {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+#offices .office-address-card,
+#offices .office-map-fallback-panel {
+  min-width: 0;
+  max-width: 100%;
+}
+
+#offices .office-map-fallback-panel {
+  overflow-wrap: anywhere;
+}
+
+#offices .office-map-fallback-link {
+  min-width: 44px;
+  min-height: 44px;
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  #offices .office-map-fallback,
+  #offices .office-map-fallback-panel {
+    padding: 16px;
+  }
+
+  #offices .office-map-wrap--address {
+    padding: 20px;
+  }
+
+  #offices .office-address-card .office-map-fallback-panel {
+    padding: 22.4px;
+  }
 }
 
 .office-card {
@@ -6400,6 +7198,14 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   overflow: hidden;
   border: 1px solid var(--border-light);
   background: var(--gray-100);
+}
+
+/* Keep Next Image fill inside the existing office frame when a published
+   page's responsive image reset requests intrinsic height. */
+.site .office-gallery-item > img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
 }
 
 .office-korea {
@@ -6486,6 +7292,63 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 
 .messenger-card--line .messenger-card-desc {
   color: rgba(255, 255, 255, 0.85);
+}
+
+/* WI-4 (2026-09-07): the primary email card had no surface of its own —
+   only --kakao / --line carried background + border, so the email variant
+   rendered as floating text. Give it a card surface on the brand tokens. */
+.messenger-card--email {
+  grid-column: 1 / -1; /* single card: line up with the features panel below */
+  background: var(--white);
+  border: 1px solid var(--purple-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  color: var(--text-heading);
+  box-shadow: var(--shadow-sm);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.messenger-card--email .messenger-card-platform {
+  color: var(--text-meta);
+  opacity: 1;
+}
+
+.messenger-card--email .messenger-card-desc {
+  color: var(--purple);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.messenger-card--email .messenger-card-arrow {
+  margin-left: auto;
+  align-self: center;
+  color: var(--purple);
+  opacity: 0.75;
+}
+
+.messenger-card--email:hover,
+.messenger-card--email:focus-visible {
+  border-color: var(--purple);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Contact-page card buttons (copy email / AI intake guide): the default
+   secondary gradient is nearly invisible on a white card, so use the forest
+   outline treatment here. */
+.contact-grid .card .button.secondary {
+  background: var(--white);
+  border-color: var(--purple);
+  color: var(--purple);
+}
+
+.contact-grid .card .button.secondary:hover,
+.contact-grid .card .button.secondary:focus-visible {
+  background: var(--purple-bg);
+  border-color: var(--purple-dark);
+  color: var(--purple-dark);
 }
 
 .messenger-card-icon {
@@ -6636,9 +7499,21 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   min-height: 44px;
 }
 
-.faq-question button > span:first-child,
-.faq-question[role='button'] > span:first-child {
+:where(html[lang='ko']) .faq-question button > span:first-child,
+:where(html[lang='ko']) .faq-question[role='button'] > span:first-child {
   word-break: keep-all;
+}
+
+/* Keep home FAQ controls inside narrow viewports when text is enlarged. */
+#faq .faq-list { grid-template-columns: minmax(0, 1fr); }
+#faq .faq-item { min-width: 0; }
+
+:lang(ko) #faq .faq-question button > span:first-child,
+:lang(ko) #faq .faq-question[role='button'] > span:first-child,
+:lang(en) #faq .faq-question button > span:first-child,
+:lang(en) #faq .faq-question[role='button'] > span:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 /* On narrow phones the Korean-oriented `keep-all` prevents Traditional
@@ -6844,7 +7719,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 .year-end-popup-pill span {
   flex: 0 0 auto;
   color: var(--gold-dim);
-  font-size: 0.7rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   font-weight: 800;
 }
 
@@ -6876,7 +7751,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   background: linear-gradient(135deg, var(--gold) 0%, #d4ab5a 100%);
   color: #fff;
   border: none;
-  font-size: 0.7rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   font-weight: 800;
   letter-spacing: 0.1em;
   box-shadow: 0 2px 8px rgba(181, 140, 66, 0.3);
@@ -7040,7 +7915,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
   justify-content: center;
   background: linear-gradient(135deg, var(--gold), #d4ab5a);
   color: #fff;
-  font-size: 0.7rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   font-weight: 700;
 }
 
@@ -7079,7 +7954,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 .year-end-popup-link {
   border: none;
   background: transparent;
-  color: var(--text-caption);
+  color: var(--text-meta);
   font-size: 0.84rem;
   cursor: pointer;
   text-decoration: underline;
@@ -7265,7 +8140,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 }
 
 .quick-contact-list a span {
-  color: var(--text-caption);
+  color: var(--text-meta);
   font-size: 0.75rem;
 }
 
@@ -7296,7 +8171,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 }
 
 .quick-contact-action-btn span {
-  color: var(--text-caption);
+  color: var(--text-meta);
   font-size: 0.75rem;
 }
 
@@ -7413,7 +8288,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 }
 
 .floating-ai-chat-title span {
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   color: rgba(255, 255, 255, 0.72);
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -7475,7 +8350,7 @@ body:has(.search-overlay[data-open='true']) .floating-ai-chat {
 
 .floating-ai-chat-contact-item span {
   color: var(--text-secondary);
-  font-size: 0.62rem;
+  font-size: 0.75rem; /* WI-5: 12px floor (was 9.92px) */
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 600;
@@ -7653,7 +8528,7 @@ a.floating-ai-chat-contact-item:hover strong {
 }
 
 .floating-ai-chat-cta-card span {
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   color: rgba(255, 255, 255, 0.78);
 }
 
@@ -7718,7 +8593,7 @@ a.floating-ai-chat-contact-item:hover strong {
   display: flex;
   align-items: flex-start;
   gap: 0.45rem;
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   color: var(--text-secondary);
   line-height: 1.5;
   cursor: pointer;
@@ -7729,7 +8604,7 @@ a.floating-ai-chat-contact-item:hover strong {
 }
 
 .floating-ai-chat-error {
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   color: #b91c1c;
   margin: 0;
 }
@@ -7763,7 +8638,7 @@ a.floating-ai-chat-contact-item:hover strong {
   color: var(--accent-purple);
   border-radius: 4px;
   padding: 0 0.7rem;
-  font-size: 0.7rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
@@ -7825,13 +8700,16 @@ a.floating-ai-chat-contact-item:hover strong {
 }
 
 .scroll-top {
+  /* WI-2/WI-12: brand token, 44px target, fixed with zero layout footprint */
   position: fixed;
   right: var(--right-rail-offset);
   bottom: clamp(1rem, 2vw, 2rem);
   width: 44px;
   height: 44px;
+  margin: 0;
   border: none;
-  background: rgba(13, 24, 39, 0.88);
+  border-radius: 4px;
+  background: var(--purple);
   color: #fff;
   font-size: 1.1rem;
   display: inline-flex;
@@ -7854,7 +8732,7 @@ a.floating-ai-chat-contact-item:hover strong {
 
 .scroll-top:hover,
 .scroll-top:focus-visible {
-  background: var(--purple);
+  background: var(--purple-dark);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -8008,35 +8886,45 @@ a.floating-ai-chat-contact-item:hover strong {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translate3d(0, 10px, 0);
-  pointer-events: none;
   transition:
     opacity 420ms cubic-bezier(0.16, 1, 0.3, 1),
     transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.reveal.is-visible {
+/* WI-13: progressive enhancement — the hidden pre-reveal pose is gated on
+   `html.js`, which the root layout sets with a synchronous inline script
+   before first paint. Without JS (or before it runs, in reader modes, in
+   print) content ships visible in the SSR HTML. */
+html.js .reveal {
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+  pointer-events: none;
+}
+
+html.js .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
 
 .reveal-stagger > * {
-  opacity: 0;
-  transform: translate3d(0, 14px, 0);
   transition:
     opacity 380ms cubic-bezier(0.16, 1, 0.3, 1),
     transform 380ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.reveal-stagger.visible > *,
-.reveal-stagger.is-visible > * {
+html.js .reveal-stagger > * {
+  opacity: 0;
+  transform: translate3d(0, 14px, 0);
+}
+
+html.js .reveal-stagger.visible > *,
+html.js .reveal-stagger.is-visible > * {
   opacity: 1;
   transform: translateY(0);
 }
 
-.reveal.is-visible .reveal-stagger > * {
+html.js .reveal.is-visible .reveal-stagger > * {
   opacity: 1;
   transform: translateY(0);
 }
@@ -8084,6 +8972,16 @@ a.floating-ai-chat-contact-item:hover strong {
     transform: none;
     pointer-events: auto;
     transition: none;
+  }
+}
+
+@media print {
+  .reveal,
+  .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    transition: none !important;
   }
 }
 
@@ -8145,31 +9043,46 @@ a.floating-ai-chat-contact-item:hover strong {
   }
 
   .header-actions {
-    margin-right: calc(var(--right-rail-offset) * -1);
+    margin-right: calc(-1 * var(--right-rail-offset) + 12px);
     gap: 0.4rem;
     align-items: center;
   }
 
   .header-search-btn {
-    width: 54px;
-    min-height: 54px;
-    height: 54px;
-    border: none;
-    border-left: 1px solid var(--warm-border);
-    border-radius: 0;
-    background: var(--warm-text-dark);
-    color: rgba(255, 255, 255, 0.92);
+    width: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    height: 44px;
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 4px;
+    background: rgba(248, 250, 252, 0.96);
+    color: #334155;
   }
 
   .header-search-btn:hover,
   .header-search-btn:focus-visible {
-    background: var(--warm-text);
-    color: #fff;
+    background: #fff;
+    color: var(--purple);
+    border-color: rgba(109, 43, 97, 0.22);
+    box-shadow: none;
+    transform: none;
   }
 
   .footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
+  }
+
+  /* WI-3: tablet — brand block spans the full first row, link columns wrap
+     two per row beneath it. */
+  .footer-main-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.75rem 2rem;
+  }
+
+  .footer-main-intro {
+    grid-column: 1 / -1;
+    max-width: 40rem;
   }
 
   .section-dots {
@@ -8284,8 +9197,10 @@ a.floating-ai-chat-contact-item:hover strong {
     scroll-margin-top: 88px;
   }
 
-  .site:has(.quick-contact) main,
-  .site:has(.scroll-top[data-visible='true']) main {
+  /* WI-12: the back-to-top button is position:fixed and must not change
+     document height when it appears — only the (persistent) quick-contact
+     stack reserves space below <main>. */
+  .site:has(.quick-contact) main {
     padding-bottom: calc(7rem + env(safe-area-inset-bottom));
   }
 
@@ -8295,8 +9210,13 @@ a.floating-ai-chat-contact-item:hover strong {
   }
 
   .scroll-top {
-    right: max(1.3rem, env(safe-area-inset-right));
+    right: max(1rem, env(safe-area-inset-right));
     bottom: calc(1rem + env(safe-area-inset-bottom));
+  }
+
+  /* Keep the last footer line clear of the fixed back-to-top button. */
+  .footer-copyright-row {
+    padding-right: 3.75rem;
   }
 
   .floating-ai-chat {
@@ -8339,6 +9259,10 @@ a.floating-ai-chat-contact-item:hover strong {
     left: 0.85rem;
     right: 0.85rem;
     margin-top: 0;
+  }
+
+  .hero-search-wrapper .container {
+    width: 100%;
   }
 
   .hero-search-bar.overlap {
@@ -8407,8 +9331,10 @@ a.floating-ai-chat-contact-item:hover strong {
     align-items: flex-start;
   }
 
+  /* WI-3: keep the two-column link wrap from the 1024px block; the single
+     column only starts at 640px. */
   .footer-main-grid {
-    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .office-links {
@@ -8478,6 +9404,12 @@ a.floating-ai-chat-contact-item:hover strong {
     grid-template-columns: 1fr;
   }
 
+  /* WI-3: phone — single footer column. */
+  .footer-main-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
   .header-main .logo-mark {
     /* The brand mark is a square seal; keep the box square (matching the 34px
        height above) so it renders full-size and flush to the wordmark rather
@@ -8521,11 +9453,15 @@ a.floating-ai-chat-contact-item:hover strong {
   }
 
   .office-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.55rem;
   }
 
   .office-tabs .tab-button {
-    flex: 1 1 calc(33.333% - 0.55rem);
+    width: 100%;
+    min-width: 44px;
+    min-height: 44px;
     padding-inline: 0.45rem;
   }
 
@@ -8565,6 +9501,37 @@ a.floating-ai-chat-contact-item:hover strong {
   }
 }
 
+/* WI-12: mobile tap targets (≤640px) — footer legal links, drawer utility
+   chips (the desktop utility bar is display:none below 1024px, the drawer
+   chips are its mobile counterpart) and FAQ toggles reach a 44px hit area
+   without touching desktop density. */
+@media (max-width: 640px) {
+  .footer-legal-links {
+    gap: 0.25rem 1rem;
+  }
+
+  .footer-legal-links a,
+  .footer-legal-links .footer-locale-switch {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .drawer-utilities .chip {
+    min-height: 44px;
+  }
+
+  .drawer-member-nav a,
+  .drawer-member-nav button {
+    min-height: 44px;
+  }
+
+  .faq-question button,
+  .faq-question[role='button'] {
+    min-height: 48px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-brain-canvas {
     opacity: 0.34;
@@ -8588,6 +9555,7 @@ a.floating-ai-chat-contact-item:hover strong {
     animation-iteration-count: 1 !important;
   }
 
+  html.js .reveal,
   .reveal {
     opacity: 1;
     transform: none;
@@ -8595,6 +9563,7 @@ a.floating-ai-chat-contact-item:hover strong {
     transition: none;
   }
 
+  html.js .reveal-stagger > *,
   .reveal-stagger > * {
     opacity: 1;
     transform: none;
@@ -8642,26 +9611,40 @@ a.floating-ai-chat-contact-item:hover strong {
 }
 
 .blog-back-link {
-  display: inline-block;
-  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 6px;
+  background: rgba(10, 18, 32, 0.65);
+  color: #fff;
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.03em;
+  line-height: 1.5;
   text-decoration: none;
   margin-right: 0.75rem;
   margin-bottom: 1.2rem;
-  transition: opacity 0.2s;
+  transition: background-color 0.2s, border-color 0.2s;
 }
 
 .blog-back-link:hover {
-  opacity: 0.75;
+  background: rgba(10, 18, 32, 0.85);
+  border-color: #fff;
+}
+
+.blog-back-link:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
 }
 
 .blog-category-badge {
   display: inline-block;
   background: var(--wine);
   color: #fff;
-  font-size: 0.72rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -8879,6 +9862,48 @@ a.floating-ai-chat-contact-item:hover strong {
 .columns-filter-btn.active {
   background: var(--primary); color: #fff; border-color: var(--primary); box-shadow: 0 2px 8px rgba(22,58,95,0.15);
 }
+/* Exact source-verified two-node KO/ZH columns scaffold only; source sets the marker. */
+@media (min-width: 1024px) {
+  .site .builder-pub-main[data-builder-legacy-columns-flow='true'] {
+    min-height: 0 !important;
+  }
+  .site .builder-pub-main[data-builder-legacy-columns-flow='true'] > .builder-pub-node[data-node-id='columns-page-root'],
+  .site .builder-pub-main[data-builder-legacy-columns-flow='true'] .builder-pub-node[data-node-id='columns-page-root-composite'] {
+    position: relative !important;
+    height: auto !important;
+  }
+  .site .builder-pub-main[data-builder-legacy-columns-flow='true'] > .builder-pub-node[data-node-id='columns-page-root'] > .builder-layout-absolute {
+    height: auto !important;
+  }
+}
+
+/* Exact projected July ZH search wrapper: use the same gutter as its hero copy. */
+@media (min-width: 1024px) {
+  .site .builder-pub-main .builder-pub-node[data-node-id='home-hero-search-wrapper'][data-builder-zh-fluid-container='true'] {
+    left: var(--builder-zh-fluid-left) !important;
+    width: var(--builder-zh-fluid-width) !important;
+  }
+}
+
+/* Exact July ZH stock home only: contain canvas layers below the site chrome
+   and let the approved language summary use its existing section container. */
+@media (min-width: 1024px) {
+  .builder-pub-main[data-builder-zh-tablet-parity='true'] {
+    isolation: isolate;
+  }
+
+  .builder-pub-main[data-builder-zh-tablet-parity='true'] [data-node-id='home-stats-description'] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .builder-pub-main[data-builder-zh-tablet-parity='true'] [data-node-id='home-stats-description'] p {
+    width: 100% !important;
+    max-width: none !important;
+    text-wrap: wrap !important;
+  }
+}
+
 .columns-grid {
   position: relative;
   z-index: 0;
@@ -8920,18 +9945,19 @@ a.floating-ai-chat-contact-item:hover strong {
 .columns-card-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
 .columns-card-meta { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.75rem; }
 .columns-category-badge {
-  display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.7rem;
+  display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.75rem; /* WI-5: 12px floor */
   font-weight: 600; background: rgba(181,140,66,0.12); color: var(--accent);
 }
 .columns-category-badge--image {
   background: rgba(255, 255, 255, 0.9);
   color: var(--accent);
 }
-.columns-date { font-size: 0.75rem; color: var(--neutral-400); }
+.columns-date { font-size: 0.75rem; color: var(--text-meta); font-variant-numeric: tabular-nums; }
 .columns-card-datechip {
-  font-size: 0.74rem;
+  font-size: 0.75rem; /* WI-5: 12px floor */
   color: rgba(255, 255, 255, 0.92);
-  font-family: var(--font-mono);
+  font-family: var(--font-body); /* WI-5: no monospace for dates */
+  font-variant-numeric: tabular-nums;
   /* White text on a transparent chip was invisible over bright cover images
      (measured contrast 1.17). Give it the same dark translucent fill family
      as the image overlay so the date stays readable on any cover. */
@@ -8950,14 +9976,15 @@ a.floating-ai-chat-contact-item:hover strong {
 }
 .columns-card-title {
   font-size: 1rem; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem;
-  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 .columns-card:hover .columns-card-title { color: var(--accent); }
 .columns-card-summary {
   font-size: 0.85rem; color: var(--neutral-500); line-height: 1.6;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; flex: 1;
 }
-.columns-readtime { font-size: 0.75rem; color: var(--neutral-400); margin-top: 0.75rem; }
+.columns-readtime { font-size: 0.75rem; color: var(--text-meta); margin-top: 0.75rem; }
 .columns-card-linkhint {
   display: inline-flex;
   width: fit-content;
@@ -8966,7 +9993,46 @@ a.floating-ai-chat-contact-item:hover strong {
   font-size: 0.82rem;
   font-weight: 600;
 }
-.columns-empty { text-align: center; padding: 4rem 0; color: var(--neutral-400); }
+.columns-empty { text-align: center; padding: 4rem 0; color: var(--text-body); }
+
+.columns-grid .columns-card-summary {
+  flex: 0 0 auto;
+  max-height: 3.2em;
+}
+.columns-grid .columns-card-linkhint {
+  margin-top: auto;
+  padding-top: 0.9rem;
+}
+.columns-filter-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.columns-active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1rem;
+  list-style: none;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  font-size: 0.85rem;
+  color: var(--neutral-600);
+}
+.columns-active-filters li {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.columns-filter-reset {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  max-width: 100%;
+  font-size: 0.875rem;
+  overflow-wrap: anywhere;
+}
 
 .columns-search {
   display: flex;
@@ -9122,6 +10188,12 @@ a.floating-ai-chat-contact-item:hover strong {
   position: relative;
   width: min(760px, 100%);
 }
+
+@media (max-width: 768px) {
+  .site .builder-pub-node[data-node-id='home-hero']:has(> div > #hero .hero-quick-menu) {
+    overflow: visible !important;
+  }
+}
 .hero-quick-menu {
   position: absolute;
   left: 0;
@@ -9138,6 +10210,26 @@ a.floating-ai-chat-contact-item:hover strong {
   animation: quickMenuIn 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 @keyframes quickMenuIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
+/*
+ * Builder-decomposed hero (published zh-hant home) — the quick menu must not
+ * offset itself.
+ *
+ * `decompose-hero.ts` puts this nav in its own node at `y: 70` under the search
+ * wrap, so the builder emits an absolutely-positioned wrapper that already sits
+ * just below the search bar, and pins the nav inline to `position: relative`.
+ * Against a relative box `top: 100%` no longer means "directly below the bar" —
+ * it resolves against the wrapper's own height and shoves the menu down by a
+ * further 318px, out of the hero and on top of the section beneath it. Measured
+ * on the live zh-hant home: menu at 1045px where ko renders it at 739px.
+ *
+ * The wrapper carries the offset, so the nav contributes none. ko/en/ja render
+ * the native hero (`position: absolute`) and keep the rule above.
+ */
+.hero-quick-menu.builder-hero-quick-menu {
+  top: 0;
+  margin-top: 0;
+}
 .hero-quick-menu-item {
   display: flex; align-items: center; gap: 0.75rem; padding: 0.85rem 1.25rem;
   font-size: 0.9rem; font-weight: 500; color: var(--neutral-700); text-decoration: none;
@@ -9169,13 +10261,106 @@ a.floating-ai-chat-contact-item:hover strong {
 .column-markdown { line-height: 1.8; }
 .column-markdown .blog-paragraph { margin-bottom: 1.2rem; }
 .column-markdown .blog-heading { margin-top: 2.5rem; margin-bottom: 1rem; }
+/* Article FAQ, heading hierarchy and inline reading flow. */
+.column-faq-list { margin: 0; }
+.column-faq-list > div + div { margin-top: 1.25rem; }
+.column-faq-question { font-weight: 600; }
+.column-faq-answer { margin: 0.5rem 0 0; }
+.column-markdown h3.blog-heading {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 2rem;
+}
+.column-markdown blockquote { margin-inline: 0; }
+.column-markdown blockquote ul { padding-inline-start: 1.25rem; }
 .column-img-wrap { display: block; margin: 1.5rem 0; }
 .column-table-wrap {
-  overflow-x: auto; margin: 1.5rem 0; border-radius: 8px; border: 1px solid var(--neutral-200);
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  border: 1px solid var(--neutral-200);
+  max-width: 100%;
+  min-width: 0;
+}
+.column-table-wrap:focus-visible {
+  outline: 3px solid #87aa9d;
+  outline-offset: 2px;
+}
+.column-table-scroll-hint {
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--text-meta);
+  background: var(--purple-bg);
+  border-bottom: 1px solid var(--neutral-200);
 }
 .column-table-wrap table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-.column-table-wrap th { background: rgba(22,58,95,0.05); padding: 0.6rem 1rem; text-align: left; font-weight: 600; }
-.column-table-wrap td { padding: 0.6rem 1rem; border-top: 1px solid var(--neutral-100); }
+.column-table-wrap th,
+.column-table-wrap td {
+  min-width: 9rem;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+.column-table-wrap th { background: var(--purple-bg); color: var(--text-heading); padding: 0.6rem 0.8rem; text-align: left; font-weight: 600; }
+.column-table-wrap td { padding: 0.6rem 0.8rem; border-top: 1px solid var(--neutral-100); }
+
+/* WI-7 (2026-09-07): article hierarchy. H2 and H3 both rendered at 20px
+   before; the body keeps the typography-preset size (17px default) instead
+   of the older 0.98rem override. Heading font-family stays with the
+   sans allowlist rule + column presets further down. */
+.blog-body h2.blog-heading {
+  font-size: 1.55rem;
+  line-height: 1.3;
+  margin: 2.5rem 0 1rem;
+}
+.blog-body h3.blog-heading {
+  font-size: 1.2rem;
+  line-height: 1.35;
+  margin: 2rem 0 0.75rem;
+}
+.column-markdown h4 {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin: 1.5rem 0 0.5rem;
+}
+.column-markdown > h2.blog-heading:first-child,
+.column-markdown > h3.blog-heading:first-child {
+  margin-top: 0;
+}
+.column-markdown .blog-paragraph {
+  font-size: inherit;
+}
+.column-markdown ul,
+.column-markdown ol {
+  margin: 0 0 1.25rem;
+  padding-inline-start: 1.4rem;
+}
+.column-markdown li + li {
+  margin-top: 0.35rem;
+}
+.column-markdown li > ul,
+.column-markdown li > ol {
+  margin: 0.35rem 0 0;
+}
+.column-markdown blockquote {
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem;
+  border-left: 3px solid var(--gold);
+  background: var(--off-white);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--text-body);
+}
+.column-markdown blockquote > :last-child {
+  margin-bottom: 0;
+}
+.column-markdown hr {
+  border: 0;
+  border-top: 1px solid var(--border-light);
+  margin: 2rem 0;
+}
 
 .semi-draft-page { background: var(--surface, #fff); }
 .semi-draft-reading {
@@ -13913,7 +15098,7 @@ a.floating-ai-chat-contact-item:hover strong {
 
 .builder-shell-button:hover:not(:disabled) {
   border-color: rgba(45, 92, 72, 0.32);
-  color: #123b63;
+  color: var(--purple);
 }
 
 .builder-shell-button:disabled {
@@ -18326,14 +19511,14 @@ button.builder-canvas-coach-pill {
     0 12px 36px rgba(0, 0, 0, 0.36);
 }
 
-:root[data-locale='en'] .hero-title,
+.site[data-locale='en'] .hero-title,
 html[lang='en'] .hero-title {
   font-family: var(--font-heading-en);
   font-weight: 600;
   letter-spacing: 0;
 }
 
-:root[data-locale='zh-hant'] .hero-title,
+.site[data-locale='zh-hant'] .hero-title,
 html[lang='zh-hant'] .hero-title,
 html[lang='zh-Hant'] .hero-title {
   font-family: var(--font-heading-zh);
@@ -18369,7 +19554,7 @@ html[lang='zh-Hant'] .hero-title {
   border-radius: 4px;
   border: 1px solid rgba(229, 223, 197, 0.22);
   background: rgba(8, 22, 14, 0.82);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.32);
+  box-shadow: 0 6px 16px rgba(28, 62, 47, 0.12);
 }
 
 .hero-search-bar.overlap:focus-within {
@@ -18378,6 +19563,7 @@ html[lang='zh-Hant'] .hero-title {
 }
 
 .hero-search-input {
+  min-width: 0;
   min-height: 56px;
   font-size: clamp(0.98rem, 1.1vw, 1.05rem);
 }
@@ -18566,10 +19752,10 @@ html[lang='en'] .hero-title,
 html[lang='en'] .page-header-title,
 html[lang='en'] h1.blog-hero-title,
 html[lang='en'] h1.svc-hero-title,
-:root[data-locale='en'] .hero-title,
-:root[data-locale='en'] .page-header-title,
-:root[data-locale='en'] h1.blog-hero-title,
-:root[data-locale='en'] h1.svc-hero-title,
+.site[data-locale='en'] .hero-title,
+.site[data-locale='en'] .page-header-title,
+.site[data-locale='en'] h1.blog-hero-title,
+.site[data-locale='en'] h1.svc-hero-title,
 .site[data-locale='en'] .hero-title,
 .site[data-locale='en'] .page-header-title,
 .site[data-locale='en'] h1.blog-hero-title,
@@ -18585,10 +19771,10 @@ html[lang='zh-hant'] h1.blog-hero-title,
 html[lang='zh-Hant'] h1.blog-hero-title,
 html[lang='zh-hant'] h1.svc-hero-title,
 html[lang='zh-Hant'] h1.svc-hero-title,
-:root[data-locale='zh-hant'] .hero-title,
-:root[data-locale='zh-hant'] .page-header-title,
-:root[data-locale='zh-hant'] h1.blog-hero-title,
-:root[data-locale='zh-hant'] h1.svc-hero-title,
+.site[data-locale='zh-hant'] .hero-title,
+.site[data-locale='zh-hant'] .page-header-title,
+.site[data-locale='zh-hant'] h1.blog-hero-title,
+.site[data-locale='zh-hant'] h1.svc-hero-title,
 .site[data-locale='zh-hant'] .hero-title,
 .site[data-locale='zh-hant'] .page-header-title,
 .site[data-locale='zh-hant'] h1.blog-hero-title,
@@ -18621,6 +19807,52 @@ html[lang='zh-Hant'] h1.svc-hero-title,
   opacity: 1;
 }
 
+.page-header.page-header--compact {
+  padding-top: clamp(2rem, 3.3vw, 3rem);
+  padding-bottom: clamp(1.75rem, 2.8vw, 2.5rem);
+}
+
+.page-header.page-header--with-content {
+  padding-top: clamp(2.75rem, 4vw, 3rem);
+  padding-bottom: clamp(2.75rem, 4vw, 3rem);
+}
+
+.page-header.page-header--compact h1 {
+  margin-top: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-header.page-header--with-content h1 {
+  margin-top: 0.45rem;
+  margin-bottom: 0.7rem;
+}
+
+.page-header.page-header--compact .breadcrumb {
+  margin-bottom: 0.55rem;
+}
+
+.page-header.page-header--compact .section-lede {
+  margin-bottom: 0;
+}
+
+.page-header.page-header--with-content .section-lede {
+  margin-bottom: 1rem;
+}
+
+.page-header + .services-bento,
+.page-header + .pricing-section,
+.page-header + .reveal > .consultation-guide-section {
+  padding-top: 48px;
+}
+
+@media (max-width: 640px) {
+  .page-header + .services-bento,
+  .page-header + .pricing-section,
+  .page-header + .reveal > .consultation-guide-section {
+    padding-top: 40px;
+  }
+}
+
 /* Closed serif allowlist entry: page H1 */
 .page-header-title {
   font-family: var(--font-display, var(--font-heading-ko));
@@ -18628,6 +19860,7 @@ html[lang='zh-Hant'] h1.svc-hero-title,
   font-weight: 600;
   letter-spacing: 0;
   color: var(--ink-deep);
+  text-shadow: none;
 }
 
 h1.blog-hero-title {
@@ -18721,7 +19954,7 @@ h1.svc-hero-title {
 /* Tablet portrait + small tablet (<=900) */
 @media (max-width: 900px) {
   .attorney-card--lead {
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: 240px minmax(0, 1fr);
     gap: 1.5rem;
   }
   .attorney-card-photo--lead {
@@ -18807,8 +20040,7 @@ h1.svc-hero-title {
     transform: none;
   }
 
-  /* Authority + media hub photos */
-  .authority-card-photo,
+  /* Media hub photos */
   .media-hub-photo {
     aspect-ratio: 3 / 4;
     min-height: 0;
@@ -21888,14 +23120,34 @@ body:has([data-builder-published-page='true']) {
    ──────────────────────────────────────────────── */
 
 .hero-title {
-  font-weight: 500;
+  /* WI-9: one weight for ko/en/ja/zh-hant (was 500 here, 600 for en only). */
+  font-weight: 600;
   letter-spacing: 0;
   font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
   text-wrap: balance;
 }
 
+/* R1 (2026-09-07): the legibility shadow belongs only to titles set over dark
+   media heroes (home `section.hero[data-tone='dark']`). PageHeader reuses
+   `.hero-title` for the dark-serif H1 on light mist bands, where the blur
+   read as a muddy halo — so the shadow is scoped here and the page-header
+   title is reset explicitly (this block wins over the earlier .hero-title
+   rules by source order). */
+.hero .hero-title,
+[data-tone='dark'] .hero-title {
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.55),
+    0 10px 30px rgba(0, 0, 0, 0.32);
+}
+
+.page-header .hero-title,
+.page-header-title {
+  text-shadow: none;
+}
+
 .hero-subtitle {
   line-height: 1.7;
+  color: #f0f4ec;
   letter-spacing: 0;
   font-feature-settings: 'kern' 1, 'liga' 1;
   text-wrap: pretty;
@@ -23542,7 +24794,9 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
 
 /* ---------------------------------------------------------------------------
  * ja / zh-Hant mobile word-break fix
- * The global `word-break: keep-all` rules above are correct for Korean but
+ * (History: the `word-break: keep-all` rules above were global until WI-1
+ * scoped them to ko; this block is kept as a belt-and-braces mobile override.)
+ * keep-all is correct for Korean but
  * wrong for Japanese and Traditional Chinese: those scripts have no spaces,
  * so an entire sentence becomes one unbreakable token and its min-content
  * width blows out grid tracks past the 390px viewport (horizontal overflow,
@@ -23717,6 +24971,109 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
   min-width: 0;
 }
 
+/* ---------------------------------------------------------------------------
+ * WI-1 (2026-09-06): ja / zh-Hant typesetting at every viewport
+ * keep-all is now Korean-only (see the html[lang='ko'] rules near the top),
+ * so Japanese and Traditional Chinese inherit normal CJK breaking again.
+ * Declare it explicitly on body-text elements so nothing upstream can leak
+ * keep-all back in, add strict kinsoku (`line-break: strict`) and let long
+ * Latin tokens / URLs wrap anywhere. Japanese headings use phrase-aware
+ * breaking (`word-break: auto-phrase`, Chrome 119+) behind a @supports guard;
+ * the fallback stays `normal`. Placed after the mobile/desktop CJK overrides
+ * above so it wins at equal specificity.
+ * ------------------------------------------------------------------------- */
+html[lang='ja'],
+html[lang='zh-Hant'],
+html[lang='zh-hant'],
+.site[data-locale='ja'],
+.site[data-locale='zh-hant'] {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+:where(html[lang='ja'], html[lang='zh-Hant'], html[lang='zh-hant'], .site[data-locale='ja'], .site[data-locale='zh-hant'])
+  :is(p, li, dd, dt, td, th, blockquote, figcaption, summary, .card-text, .card-desc, .split-text, .hero-subtitle, .section-lead, .columns-card-summary, .insights-list-summary, .builder-pub-node) {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+:where(html[lang='ja'], html[lang='zh-Hant'], html[lang='zh-hant'], .site[data-locale='ja'], .site[data-locale='zh-hant'])
+  :is(h1, h2, h3, h4, h5, h6, .hero-title, .split-title, .section-title, .card-title) {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+@supports (word-break: auto-phrase) {
+  :where(html[lang='ja'], .site[data-locale='ja'])
+    :is(h1, h2, h3, h4, h5, h6, .hero-title, .split-title, .section-title, .card-title) {
+    word-break: auto-phrase;
+  }
+}
+
+/* R4 (2026-09-07): ja / zh-Hant two-line headings and card titles break more
+   evenly with `text-wrap: balance` (h1–h6 already carry it globally; this
+   extends it to the card-title roles that are not heading elements). */
+:where(html[lang='ja'], html[lang='zh-Hant'], html[lang='zh-hant'], .site[data-locale='ja'], .site[data-locale='zh-hant'])
+  :is(h1, h2, h3, .hero-title, .page-header-title, .card-title, .split-title, .section-title,
+      .insights-featured-title, .insights-list-title, .columns-card-title, .video-feature-title,
+      .video-item-title, .profile-card-title, .svc-sidebar-title, .svc-col-title, .panel-title) {
+  text-wrap: balance;
+}
+
+/* R4 (mobile review): long-form article H2/H3 must NOT balance — at 390px it
+   left ~130px free on line 1 while splitting CJK compounds (ja 台湾子会社設/立,
+   zh 設立台灣子/公司). `pretty` only protects orphans; ja headings keep
+   `auto-phrase` from the @supports block above. */
+@supports (text-wrap: pretty) {
+  .blog-body :is(h2, h3, h4).blog-heading,
+  .column-markdown :is(h2, h3, h4),
+  .column-content :is(h2, h3, h4),
+  .svc-keypoints-title,
+  .column-faq-question {
+    text-wrap: pretty;
+  }
+}
+
+@media (max-width: 640px) {
+  /* R4: smaller mobile article headings so fewer wrap at all. */
+  .blog-body h2.blog-heading {
+    font-size: 1.35rem;
+  }
+  .blog-body h3.blog-heading {
+    font-size: 1.15rem;
+  }
+
+  /* R6: the fixed 44px `.scroll-top` (right 16px / bottom 16px) sat over the
+     right-aligned FAQ +/- toggles; keep the toggle column left of it. The
+     button also hides itself while the footer is in view (ScrollTopButton). */
+  .faq-question button,
+  .faq-question[role='button'] {
+    padding-right: 3.75rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * WI-14 (2026-09-06): eyebrow / kicker / badge tracking on CJK locales
+ * `letter-spacing: 0.12em` + uppercase is a Latin small-caps idiom; applied
+ * to Hangul / Kana / Hanzi runs it reads as scattered glyphs. On ko / ja /
+ * zh-hant pages cap the tracking of the label families at 0.04em. Latin
+ * eyebrows on those pages may stay uppercase — only the tracking changes.
+ * ------------------------------------------------------------------------- */
+:where(html[lang='ko'], html[lang='ja'], html[lang='zh-Hant'], html[lang='zh-hant'],
+       .site[data-locale='ko'], .site[data-locale='ja'], .site[data-locale='zh-hant'])
+  :is(.section-label, .hero .section-label, .hero-highlight-meta, .services-detail-columns-label,
+      .authority-card-eyebrow, .authority-card-label, .insights-category-badge, .insights-page-indicator,
+      .attorney-card-label, .warning-label, .year-end-popup-badge, .blog-category-badge,
+      .svc-col-badge, .columns-category-badge, .home-results-label, .review-label,
+      .review-summary-label, .stat-label, .media-stat-label, .attorney-group-badge,
+      .office-label, .messenger-card-label, .contact-label-spaced, .office-map-fallback-kicker,
+      .consultation-ai-badge, .floating-ai-chat-title span, .floating-ai-chat-contact-item span) {
+  letter-spacing: 0.04em;
+}
+
 /* ==========================================================================
    HOME REMEDIATION — Taipei media, compact editorial flow, non-blocking event
    Scope these overrides to the public home components so legacy/admin builder
@@ -23727,9 +25084,10 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
 /* Keep a lightweight resilient fallback when image playback is unavailable.
    The overlay remains darkest at the copy edge. */
 .hero-media {
+  /* WI-2: forest scrim over a neutral plate (navy retired) */
   background:
-    linear-gradient(135deg, rgba(18, 59, 99, 0.46), rgba(52, 72, 87, 0.16)),
-    #81939d;
+    linear-gradient(135deg, rgba(22, 56, 45, 0.46), rgba(56, 77, 63, 0.16)),
+    var(--gray-500);
   background-position: center 48%;
 }
 
@@ -23737,11 +25095,21 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
   background:
     linear-gradient(
       90deg,
-      rgba(5, 18, 35, 0.72) 0%,
-      rgba(7, 25, 46, 0.54) 34%,
-      rgba(8, 28, 50, 0.2) 62%,
-      rgba(8, 28, 50, 0.04) 100%
+      rgba(8, 22, 16, 0.80) 0%,
+      rgba(13, 34, 26, 0.68) 38%,
+      rgba(13, 34, 26, 0.40) 64%,
+      rgba(13, 34, 26, 0.14) 100%
     );
+}
+
+@media (max-width: 640px) {
+  .hero::before {
+    background: linear-gradient(
+      90deg,
+      rgba(8, 22, 16, 0.74),
+      rgba(13, 34, 26, 0.62)
+    );
+  }
 }
 
 .hero::after {
@@ -23781,23 +25149,24 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
 }
 
 .hero-cta-primary {
+  /* WI-2: one primary — same token as the header CTA (.nav-cta.button) */
   color: #fff;
-  background: #123b63;
-  border: 1px solid #123b63;
-  box-shadow: 0 10px 24px rgba(4, 18, 34, 0.24);
+  background: var(--purple);
+  border: 1px solid var(--purple);
+  box-shadow: 0 10px 24px rgba(6, 18, 12, 0.24);
 }
 
 .hero-cta-primary:hover,
 .hero-cta-primary:focus-visible {
   color: #fff;
-  background: #0d2f50;
-  border-color: #dce8f2;
-  box-shadow: 0 12px 28px rgba(4, 18, 34, 0.3);
+  background: var(--purple-dark);
+  border-color: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 12px 28px rgba(6, 18, 12, 0.3);
 }
 
 .hero-cta-secondary {
   color: #fff;
-  background: rgba(7, 25, 46, 0.2);
+  background: rgba(13, 34, 26, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.82);
   box-shadow: none;
 }
@@ -23874,7 +25243,7 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
   margin-block: 1.25rem 2rem;
 }
 
-#practice .services-detail-list.services-card-grid {
+:is(#practice, .services-bento) .services-detail-list.services-card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
@@ -23882,18 +25251,18 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
   margin-top: 0;
 }
 
-#practice .services-card-grid-item,
-#practice .services-card {
+:is(#practice, .services-bento) .services-card-grid-item,
+:is(#practice, .services-bento) .services-card {
   min-width: 0;
   height: 100%;
 }
 
-#practice .services-card {
+:is(#practice, .services-bento) .services-card {
   display: flex;
   flex-direction: column;
   padding: 1.35rem;
   background: rgba(255, 255, 255, 0.94);
-  border: 1px solid rgba(18, 59, 99, 0.14);
+  border: 1px solid rgba(22, 56, 45, 0.14); /* WI-2 */
   border-radius: 8px;
   overflow: visible;
   transition:
@@ -23903,27 +25272,27 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
     background 200ms ease;
 }
 
-#practice .services-card:hover,
-#practice .services-card:focus-within {
+:is(#practice, .services-bento) .services-card:hover,
+:is(#practice, .services-bento) .services-card:focus-within {
   transform: translateY(-4px);
   background: #fff;
-  border-color: rgba(18, 59, 99, 0.3);
-  box-shadow: 0 14px 30px rgba(7, 25, 46, 0.1);
+  border-color: rgba(22, 56, 45, 0.3);
+  box-shadow: 0 14px 30px rgba(12, 24, 17, 0.1);
 }
 
-#practice .services-card-header {
+:is(#practice, .services-bento) .services-card-header {
   display: grid;
   grid-template-columns: 46px minmax(0, 1fr);
   align-items: center;
   gap: 0.85rem;
 }
 
-#practice .services-detail-title {
+:is(#practice, .services-bento) .services-detail-title {
   font-size: clamp(1.02rem, 0.35vw + 0.95rem, 1.18rem);
   line-height: 1.4;
 }
 
-#practice .services-card-body {
+:is(#practice, .services-bento) .services-card-body {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -23932,7 +25301,7 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
   padding: 0;
 }
 
-#practice .services-card-summary {
+:is(#practice, .services-bento) .services-card-summary {
   display: -webkit-box;
   min-height: calc(1.65em * 2);
   margin: 1rem 0 1.15rem;
@@ -23944,23 +25313,31 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
   -webkit-line-clamp: 2;
 }
 
-#practice .services-card-link {
+:is(#practice, .services-bento) .services-card-link {
   align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   margin-top: auto;
   padding: 0;
   border-radius: 0;
   background: transparent;
-  color: #123b63;
+  color: var(--purple); /* WI-2 */
   font-size: 0.86rem;
   font-weight: 700;
 }
 
-#practice .services-card-link:hover,
-#practice .services-card-link:focus-visible {
-  color: #0d2f50;
+:is(#practice, .services-bento) .services-card-link:hover,
+:is(#practice, .services-bento) .services-card-link:focus-visible {
+  color: var(--purple-dark);
   background: transparent;
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+:is(#practice, .services-bento) .services-card-link:focus-visible {
+  outline: 2px solid var(--purple);
+  outline-offset: 2px;
 }
 
 /* Ensure the new courthouse plate fills the intended 52/48 split and the
@@ -23974,16 +25351,16 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
   position: relative;
   min-height: 100%;
   background:
-    linear-gradient(135deg, rgba(18, 59, 99, 0.26), rgba(7, 18, 36, 0.08)),
-    #d7dde2;
+    linear-gradient(135deg, rgba(22, 56, 45, 0.26), rgba(13, 34, 26, 0.08)),
+    var(--gray-200); /* WI-2 */
 }
 
 .home-results-media-fallback {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(120deg, rgba(18, 59, 99, 0.3), rgba(7, 18, 36, 0.08)),
-    #d7dde2;
+    linear-gradient(120deg, rgba(22, 56, 45, 0.3), rgba(13, 34, 26, 0.08)),
+    var(--gray-200); /* WI-2 */
 }
 
 .home-results-panel--editorial .home-results-media-img {
@@ -24125,7 +25502,7 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
 }
 
 @media (max-width: 1024px) {
-  #practice .services-detail-list.services-card-grid {
+  :is(#practice, .services-bento) .services-detail-list.services-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -24288,11 +25665,11 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
 }
 
 @media (max-width: 640px) {
-  #practice .services-detail-list.services-card-grid {
+  :is(#practice, .services-bento) .services-detail-list.services-card-grid {
     grid-template-columns: 1fr;
   }
 
-  #practice .services-card {
+  :is(#practice, .services-bento) .services-card {
     padding: 1.15rem;
   }
 
@@ -24320,8 +25697,8 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
     transition: none;
   }
 
-  #practice .services-card:hover,
-  #practice .services-card:focus-within {
+  :is(#practice, .services-bento) .services-card:hover,
+  :is(#practice, .services-bento) .services-card:focus-within {
     transform: none;
   }
 
@@ -24419,6 +25796,9 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
 }
 
 .cinematic-opening__primary {
+  position: relative;
+  isolation: isolate;
+  z-index: 0;
   color: #f8fbfc;
   /* Keep the opening independent from deferred CJK webfonts so its logo and
      title paint immediately; the full editorial font system activates with
@@ -24431,6 +25811,16 @@ html[data-builder-editor-theme='dark'] .builder-pub-node {
   text-shadow:
     0 1px 2px rgba(7, 19, 27, 0.82),
     0 8px 28px rgba(7, 19, 27, 0.58);
+}
+
+.cinematic-opening__primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  inset-block: -0.15em;
+  z-index: -1;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.55);
 }
 
 html[lang='zh-Hant'] .cinematic-opening__primary,
@@ -24448,7 +25838,10 @@ html[lang='en'] .cinematic-opening__primary {
 
 .cinematic-opening__secondary {
   margin-top: 1rem;
-  color: #f1d8a6;
+  color: #f7ebcd;
+  padding: 0.2rem 0.55rem;
+  background: rgba(7, 25, 40, 0.72);
+  border-radius: 2px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: clamp(0.68rem, 1.15vw, 0.9rem);
   font-weight: 500;
@@ -24457,6 +25850,55 @@ html[lang='en'] .cinematic-opening__primary {
   text-shadow:
     0 1px 2px rgba(7, 19, 27, 0.9),
     0 4px 16px rgba(7, 19, 27, 0.62);
+}
+
+.cinematic-opening__info {
+  margin-top: 1rem;
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  width: min(100%, 22.5rem);
+  padding: 0.7rem 0.85rem 0.8rem;
+  border: 1px solid rgba(232, 227, 216, 0.4);
+  background: rgba(7, 19, 27, 0.82);
+  backdrop-filter: blur(8px);
+}
+
+.cinematic-opening__service {
+  margin: 0;
+  color: #f8fbfc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: clamp(0.72rem, 1.5vw, 0.88rem);
+  font-weight: 500;
+  line-height: 1.4;
+  text-wrap: pretty;
+  text-shadow: 0 1px 2px rgba(7, 19, 27, 0.9);
+}
+
+.cinematic-opening__contact {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.9rem;
+  color: #f5e8ca;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.cinematic-opening__contact:hover {
+  color: #fff8e8;
+}
+
+.cinematic-opening__contact:focus-visible {
+  outline: 3px solid #87aa9d;
+  outline-offset: 4px;
 }
 
 .cinematic-opening__scroll {
@@ -24505,6 +25947,12 @@ html[lang='en'] .cinematic-opening__primary {
   width: 100%;
   height: 0;
   scroll-margin-top: 0;
+}
+
+/* The content sentinel receives focus after the cinematic handoff (tabindex="-1");
+   it is a zero-height box, so never draw a focus ring across the page. (WI-11) */
+.site main #cinematic-home-content:focus {
+  outline: none;
 }
 
 .site[data-cinematic-home='true'][data-cinematic-intro-visible='false']
@@ -24570,10 +26018,27 @@ html[data-cinematic-intro-visible='true']
     white-space: nowrap;
   }
 
+  .cinematic-opening__info {
+    width: min(calc(100vw - 2.5rem), 20rem);
+    margin-top: 0.7rem;
+    padding: 0.55rem 0.7rem 0.65rem;
+  }
+
+  .cinematic-opening__service {
+    font-size: 0.72rem;
+  }
+
   .cinematic-opening__scroll {
     right: 50%;
     transform: translateX(50%);
     white-space: nowrap;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .cinematic-opening__info {
+    width: min(100%, 21rem);
+    margin-top: 0.85rem;
   }
 }
 
@@ -24631,4 +26096,347 @@ html[data-cinematic-intro-visible='true']
     object-position: 57% center;
   }
 
+}
+
+/* S2a: answer-first summary block at the top of a vi/id/th/fil guidance page
+   body (`GuidancePageBody`). One class, scoped to the block; the paragraph and
+   the source links reuse the shared `.section-lede` / `.contact-list` styles.
+   Replaces the `.answerBlock` rule that lived in `InternationalGuidance.module.css`
+   before the guidance shell was removed — that component no longer renders pages. */
+.guidance-answer {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--gold-dim);
+  border-radius: 10px;
+  background: var(--white);
+}
+
+.guidance-answer > :first-child {
+  margin-top: 0;
+}
+
+.guidance-answer > :last-child {
+  margin-bottom: 0;
+}
+
+
+/* =====================================================================
+   RTL — html[dir='rtl'] (Arabic). Generated mirrors of every physical
+   left/right declaration in the public chrome and guidance scopes above.
+   Flex/grid flow mirrors on its own under dir=rtl; only explicit margins,
+   paddings, text-align, one-sided absolute offsets, corner radii and
+   translateX need these. Regenerate rather than hand-edit (see WO-M2).
+   ===================================================================== */
+
+html[dir='rtl'] .skip-link {
+  left: auto;
+  right: -999px;
+}
+
+html[dir='rtl'] .skip-link:focus {
+  left: auto;
+  right: var(--page-gutter);
+}
+
+html[dir='rtl'] .page-header::after {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .link-underline::after {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .card::before {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .card::after {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .pricing-card-icon::after {
+  right: auto;
+  left: 8px;
+  border-right: none;
+  border-left: 1px solid rgba(181, 140, 66, 0.48);
+}
+
+html[dir='rtl'] .pricing-card-details {
+  text-align: right;
+}
+
+html[dir='rtl'] .pricing-card-details li {
+  padding-left: 0;
+  padding-right: 1.1rem;
+}
+
+html[dir='rtl'] .pricing-card-details li::before {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .services-bento > .container > .services-card-grid + p:not([class]),
+html[dir='rtl'] .pricing-card > p:not([class]) {
+  border-left: none;
+  border-right: 3px solid var(--gold);
+  text-align: right;
+}
+
+html[dir='rtl'] .review-card-date {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir='rtl'] .hero-search-bar.overlap {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+html[dir='rtl'] .hero-search-btn {
+  border-left: none;
+  border-right: 1px solid rgba(233, 242, 234, 0.16);
+}
+
+html[dir='rtl'] .svc-col-badge {
+  left: auto;
+  right: 1rem;
+}
+
+html[dir='rtl'] .insights-featured::after {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .insights-category-badge {
+  left: auto;
+  right: 1rem;
+}
+
+html[dir='rtl'] .insights-category-badge--language {
+  text-align: left;
+}
+
+html[dir='rtl'] .insights-category-badge--compact {
+  left: auto;
+  right: 0.75rem;
+}
+
+html[dir='rtl'] .attorney-list {
+  padding-left: 0;
+  padding-right: 1.1rem;
+}
+
+html[dir='rtl'] .office-label {
+  margin-right: 0;
+  margin-left: 1.2rem;
+}
+
+html[dir='rtl'] .office-link + .office-link::before {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .header {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .utility-lang {
+  margin-left: 0;
+  margin-right: 0.25rem;
+}
+
+html[dir='rtl'] .header[data-public-site-header] > .header-main .header-actions {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+html[dir='rtl'] .header-actions {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+html[dir='rtl'] .mega-menu {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .mega-panel {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .mega-links a:hover,
+html[dir='rtl'] .mega-links a:focus-visible {
+  padding-left: 0;
+  padding-right: 0.75rem;
+}
+
+html[dir='rtl'] .mega-links a:hover .mega-chevron,
+html[dir='rtl'] .mega-links a:focus-visible .mega-chevron {
+  transform: translateX(-3px);
+}
+
+html[dir='rtl'] .site-mobile-nav-panel {
+  border-left: none;
+  border-right: 1px solid var(--border-light);
+  transform: translateX(-24px);
+}
+
+html[dir='rtl'] .site-mobile-nav-drawer.open .site-mobile-nav-panel {
+  transform: translateX(-0);
+}
+
+html[dir='rtl'] .site-mobile-nav-list ul {
+  border-left: none;
+  border-right: 2px solid var(--border-light);
+}
+
+html[dir='rtl'] .legal-card-list li {
+  padding-left: 0;
+  padding-right: 1.1rem;
+}
+
+html[dir='rtl'] .legal-card-list li::before {
+  left: auto;
+  right: 0;
+}
+
+html[dir='rtl'] .office-map-fallback::after {
+  left: auto;
+  right: 54%;
+}
+
+html[dir='rtl'] .messenger-header {
+  text-align: right;
+}
+
+html[dir='rtl'] .messenger-card--email .messenger-card-arrow {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir='rtl'] .messenger-card:hover .messenger-card-arrow {
+  transform: translateX(-4px);
+}
+
+html[dir='rtl'] .faq-question button,
+html[dir='rtl'] .faq-question[role='button'] {
+  text-align: right;
+}
+
+html[dir='rtl'] .year-end-popup-pill {
+  text-align: right;
+}
+
+html[dir='rtl'] .year-end-popup-pill-close {
+  border-left: none;
+  border-right: 1px solid var(--border-light);
+}
+
+html[dir='rtl'] .quick-contact {
+  right: auto;
+  left: var(--right-rail-offset);
+}
+
+html[dir='rtl'] .quick-contact-panel {
+  right: auto;
+  left: 0;
+  border-top-left-radius: var(--radius-sm);
+  border-top-right-radius: 0;
+}
+
+html[dir='rtl'] .quick-contact-action-btn {
+  text-align: right;
+}
+
+html[dir='rtl'] .floating-ai-chat-chip {
+  text-align: right;
+}
+
+html[dir='rtl'] .floating-ai-chat-chip:hover {
+  transform: translateX(-2px);
+}
+
+html[dir='rtl'] .floating-ai-chat-cta-card {
+  text-align: right;
+}
+
+html[dir='rtl'] .header-actions {
+  margin-right: 0;
+  margin-left: calc(-1 * var(--right-rail-offset) + 12px);
+}
+
+html[dir='rtl'] .quick-contact {
+  right: auto;
+  left: max(1rem, env(safe-area-inset-right));
+}
+
+html[dir='rtl'] .footer-copyright-row {
+  padding-right: 0;
+  padding-left: 3.75rem;
+}
+
+html[dir='rtl'] .hero-search-bar.overlap {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+html[dir='rtl'] .studio-section-card::after {
+  right: auto;
+  left: 0.9rem;
+}
+
+html[dir='rtl'] .studio-section-card-order {
+  margin-right: 0;
+  margin-left: 0.55rem;
+}
+
+html[dir='rtl'] .studio-live-block-badge {
+  right: auto;
+  left: 0.6rem;
+}
+
+html[dir='rtl'] .studio-live-page > .studio-section-card::after {
+  right: auto;
+  left: 1.1rem;
+}
+
+html[dir='rtl'] .studio-direct-edit-chip {
+  text-align: right;
+}
+
+html[dir='rtl'] .contact-studio-inline-list {
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+html[dir='rtl'] .lawyers-studio-overview-card {
+  text-align: right;
+}
+
+html[dir='rtl'] .media-library-card {
+  text-align: right;
+}
+
+html[dir='rtl'] .wix-section-nav-item {
+  text-align: right;
+}
+
+html[dir='rtl'] .faq-question button,
+html[dir='rtl'] .faq-question[role='button'] {
+  padding-right: 0;
+  padding-left: 3.75rem;
+}
+
+html[dir='rtl'] .guidance-answer {
+  border-left: none;
+  border-right: 3px solid var(--gold-dim);
 }

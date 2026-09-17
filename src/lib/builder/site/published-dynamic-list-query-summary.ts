@@ -1,3 +1,4 @@
+import { getListUiCopy } from '@/lib/builder/site/dynamic-list-ui-copy';
 import {
   parseVisitorDatasetQuery,
   type VisitorDatasetQuery,
@@ -16,17 +17,20 @@ export function summarizeVisitorQueryItems({
   currentPerPage,
   query,
   searchParams,
+  locale = 'en',
 }: {
   readonly basePath: string;
   readonly currentPerPage?: number;
   readonly query: ReturnType<typeof parseVisitorDatasetQuery>;
   readonly searchParams: SearchParams | undefined;
+  readonly locale?: string;
 }): PublishedDynamicListVisitorSummaryItem[] {
+  const copy = getListUiCopy(locale);
   const items: PublishedDynamicListVisitorSummaryItem[] = [];
   const searchTerm = normalizeVisitorSearchTerm(query.q);
   if (searchTerm) {
     items.push({
-      label: `search ${searchTerm}`,
+      label: `${copy.searchSummary} ${searchTerm}`,
       href: buildVisitorSummaryHref({
         basePath,
         currentPerPage,
@@ -42,7 +46,7 @@ export function summarizeVisitorQueryItems({
     const operator = query.filterOp?.[fieldId];
     const opValue = Array.isArray(operator) ? operator[0] : operator;
     items.push({
-      label: `${fieldId} ${opValue === 'equals' ? '=' : 'contains'} ${filterValue}`,
+      label: `${fieldId} ${opValue === 'equals' ? '=' : copy.contains} ${filterValue}`,
       href: buildVisitorSummaryHref({
         basePath,
         currentPerPage,
@@ -54,7 +58,7 @@ export function summarizeVisitorQueryItems({
   }
   for (const token of normalizeSortTokens(query.sort)) {
     items.push({
-      label: `sort ${token}`,
+      label: `${copy.sortSummary} ${token}`,
       href: buildVisitorSummaryHref({
         basePath,
         currentPerPage,

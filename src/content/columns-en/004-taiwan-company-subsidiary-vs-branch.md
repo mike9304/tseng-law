@@ -1,5 +1,6 @@
 ---
 title: "Entering the Taiwan Market: Key Differences Between a Subsidiary and a Branch"
+seoTitle: "Taiwan Subsidiary vs Branch: Key Differences for Market Entry"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-subsidiary-vs-branch"
 lastmod: "2026-07-25"
 date_display: "September 13, 2025"
@@ -7,6 +8,7 @@ read_time: "28 min read"
 categories:
   - "Taiwan Company Formation"
 featured_image: "../images/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg"
+summary: "A Taiwan subsidiary is a separate legal entity, but a branch is part of the foreign head office. Contracts, liability, tax, and profit remittance differ."
 faq:
   - q: "Can Taiwanese individuals or Taiwan entities participate as shareholders in a Taiwan branch?"
     a: "A branch is part of a foreign company and therefore has no shareholders of its own. To invest jointly with a third party in a Taiwan business, the parties should consider options such as forming a Taiwan subsidiary and determining its shareholder structure. Liability, voting rights, financing, licenses and permits, and tax treatment must be assessed in light of the investment relationship and business plan."
@@ -172,7 +174,7 @@ The safest approach is for professionals in Taiwan and the jurisdiction of the h
 ## Official Sources
 
 - [Laws & Regulations Database — Company Act](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
-- [Laws & Regulations Database — Article 10 of the Value-Added and Non-Value-Added Business Tax Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10&pcode=G0340080)
+- [Laws & Regulations Database — Article 10 of the Value-Added and Non-Value-Added Business Tax Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Laws & Regulations Database — Income Tax Act](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [Ministry of Finance eTax Portal — Withholding on Profit Income](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [Ministry of Finance Laws and Regulations Database — Taxation of Profits of a Taiwan Branch of a Foreign Company](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)

@@ -1,0 +1,8 @@
+200 http://localhost:4352/ar lang=lang="ar" dir=dir="rtl" ld=3 al="availableLanguage":["en","zh-Hant","ja","ko"] summary=0 hreflang_ar=1 arabic=10855
+200 http://localhost:4352/ar/services lang=lang="ar" dir=dir="rtl" ld=3 al="availableLanguage":["en","zh-Hant","ja","ko"] summary=1 hreflang_ar=1 arabic=12460
+200 http://localhost:4352/ar/faq lang=lang="ar" dir=dir="rtl" ld=4 al="availableLanguage":["en","zh-Hant","ja","ko"] summary=1 hreflang_ar=1 arabic=10287
+200 http://localhost:4352/ar/contact lang=lang="ar" dir=dir="rtl" ld=3 al="availableLanguage":["en","zh-Hant","ja","ko"] summary=1 hreflang_ar=1 arabic=7958
+200 http://localhost:4352/ar/pricing lang=lang="ar" dir=dir="rtl" ld=3 al="availableLanguage":["en","zh-Hant","ja","ko"] summary=1 hreflang_ar=1 arabic=6846
+ar/llms.txt 200 urls=10
+root catalogs=9
+sitemap ar=99

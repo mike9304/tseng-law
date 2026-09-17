@@ -20,22 +20,22 @@ const featuredImage =
   '../images/003-taiwan-traffic-accident-procedure/featured-01.jpg';
 const incidentImage =
   '../images/003-taiwan-traffic-accident-procedure/img-01.jpg';
-const immutablePrefixBytes = 1_075;
+const immutablePrefixBytes = 1_317;
 const immutablePrefixSha256 =
-  '8d75e7d46d3e958d227128ddbdf4a3544a53488204ca7d0d06d73f49e8e0b955';
-const immutableQ1ToQ5PrefixBytes = 8_401;
+  '836e362995ca801aaae3d4bd970262c4af76fb216273059c69df98498354265a';
+const immutableQ1ToQ5PrefixBytes = 8_755;
 const immutableQ1ToQ5PrefixSha256 =
-  '0a90b01893062d07035f76017950ffd56300dbe3d29b0c780363a3c46488bbc7';
-const immutableQ1ToQ10PrefixBytes = 14_552;
+  '58f9fc3052bcd946ea21bf3af1ad9772739cc1e3844cbe648dae7c63424c1c8f';
+const immutableQ1ToQ10PrefixBytes = 14_906;
 const immutableQ1ToQ10PrefixSha256 =
-  '32a958120c193085db4c996da0dc5f0c0d0df4395e57a27f69d48f8e8b962c93';
+  '4d6c701fce2c54bd35b8f84e3873063249730888afc5e77d7e55481f97172c02';
 const q11Marker =
   'Q11. What should you watch for when claiming loss from inability to work?';
 const q16Marker =
   'Q16. After an accident, can you leave everything to the insurance company?';
-const immutableQ16ToQ20TailBytes = 4_003;
+const immutableQ16ToQ20TailBytes = 4_069;
 const immutableQ16ToQ20TailSha256 =
-  '0aab3103ff486fc20104b5bea13d55d5a9a93c4e3bfc6891d09432ba7317a5e1';
+  '4f5d1617165c0c1977e96a76cabb532a9d1b7089af16978305711fe6d8f098be';
 const closingNarrativeMarker =
   'Having handled many traffic-accident cases, I want to emphasize one important point.';
 const approvedClosingRemorseSentence =
@@ -428,12 +428,15 @@ describe('English traffic column 003 — metadata and introduction localization 
   it('uses the exact contracted frontmatter and sole matching H1', () => {
     expect(parsed.data).toEqual({
       title,
+      seoTitle: 'Taiwan Traffic Accident Q&A: Fault, Settlement, and Compensation',
       url: sourceUrl,
-      lastmod: '2026-07-26',
+      lastmod: '2026-09-10',
       date_display: 'September 13, 2025',
       read_time: '8 min read',
       categories: ['Taiwan Legal Information'],
       featured_image: featuredImage,
+      summary:
+        'After a Taiwan traffic accident, first secure the scene, report, and preserve evidence. Then review fault, claim deadlines, settlement, and compensation.',
     });
     expect(
       Array.from(bodyPrefix.matchAll(/^# (.+)$/gm), (match) => match[1]),
@@ -693,7 +696,7 @@ describe('English traffic column 003 — Q1–Q5 translation contract', () => {
 });
 
 describe('English traffic column 003 — Q6–Q10 translation contract', () => {
-  it('starts the exact five H2s at byte 8316 and places the source H3 after Q10 before Q11', () => {
+  it('starts the exact five H2s at byte 8755 and places the source H3 after Q10 before Q11', () => {
     expect(rawBytes.subarray(q6ByteIndex).toString('utf8')).toMatch(
       /^## Q6\. How is responsibility for the accident determined\?\n/,
     );
@@ -873,7 +876,7 @@ describe('English traffic column 003 — Q6–Q10 translation contract', () => {
 });
 
 describe('English traffic column 003 — Q11–Q15 translation contract', () => {
-  it('starts the exact five H2s at byte 14392 and places the source H3 after Q15 before Q16', () => {
+  it('starts the exact five H2s at byte 14906 and places the source H3 after Q15 before Q16', () => {
     expect(rawBytes.subarray(q11ByteIndex).toString('utf8')).toMatch(
       /^## Q11\. How should I prove temporary lost income during treatment and recovery\?\n/,
     );

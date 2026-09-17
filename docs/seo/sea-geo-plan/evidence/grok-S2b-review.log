@@ -1,0 +1,26 @@
+[WO-S2b-review 시작 Wed Sep  9 12:34:48 KST 2026]
+독립 검토를 마쳤습니다. 대상 원본은 읽기만 했고, `docs/seo/reviews/S2b-REVIEW.md`만 새로 썼습니다.
+
+`availableLanguage`는 `en` / `zh-Hant` / `ja` / `ko` 네 개뿐입니다. FAQPage는 content faqs를 필드명만 바꿔 그대로 넣고, 새 `@id`는 없으며, llms.txt 한 줄 설명은 게재된 `page.description` 재사용입니다. JSON-LD는 `JsonLd`의 `</script>` 이스케이프를 탑니다.
+
+### (1) 변경 파일 목록
+- `docs/seo/reviews/S2b-REVIEW.md` (신규)
+- `llms-txt.ts` / `seo.ts` / `InternationalGuidance.tsx` 및 content·intent·columns **미수정**
+
+### (2) 실행한 명령과 마지막 출력 3줄
+WO-S2b-review: **Bash 금지.** 명령을 실행하지 않았다.  
+지정 vitest **미실행** — 통과 여부를 이 검토에서 주장하지 않는다.
+
+### (3) 완료 기준 항목별 PASS/FAIL
+1. availableLanguage에 vi/id/th/fil 또는 언어명 없음 — **PASS**
+2. FAQPage Question/Answer가 faqs와 글자 그대로 같음 — **PASS** (코드 경로)
+3. 새 @id 생성 없음 — **PASS**
+4. llms.txt 4로케일 설명문 자연 + 추천·보장 뉘앙스 0 — **PASS**
+5. `</script>` 이스케이프 안전 — **PASS** (코드 리딩)
+
+### (4) 미해결·못 한 것
+- vitest를 돌리지 못했다.
+- `/th/faq` HTML과 llms.txt HTTP GET을 하지 못했다. 리뷰의 JSON 예시는 빌더 경로로 재구성한 것이다.
+
+**총평 PASS** (FAIL 0건 / 항목 5)
+=== WO-S2b-review 종료 code=0 Wed Sep  9 12:40:42 KST 2026 ===

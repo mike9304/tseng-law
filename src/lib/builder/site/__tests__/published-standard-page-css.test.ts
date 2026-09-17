@@ -26,6 +26,10 @@ describe('published standard page CSS guards', () => {
     const globals = read('src/app/globals.css');
     const publishedPage = read('src/lib/builder/site/public-page.tsx');
 
+    expect(globals).toContain('.page-header + .services-bento,');
+    expect(globals).toContain('.page-header + .pricing-section,');
+    expect(globals).toContain('.page-header + .reveal > .consultation-guide-section {');
+    expect(globals).toContain('padding-top: 48px;');
     expect(globals).toContain('.hero + .reveal > .section {');
     expect(globals).toContain('padding-top: clamp(3.2rem, 7.2vw, 5rem);');
     expect(globals).toContain('padding-top: clamp(2.8rem, 8vw, 4rem);');
@@ -81,7 +85,7 @@ describe('published standard page CSS guards', () => {
 
     // The published renderer wrapper must not be a nested <main>.
     expect(publishedPage).not.toMatch(/<main\s+className="builder-pub-main"/);
-    expect(publishedPage).toContain('<div\n        className="builder-pub-main"');
+    expect(publishedPage).toContain("<div\n        className={['builder-pub-main'");
 
     // Node-level as:"main" containers are demoted to <div> at render time
     // (published mode only — editor canvas keeps the authored tag).

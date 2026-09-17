@@ -17,7 +17,7 @@ const exitFaqAnswer =
 const resolutionFaqAnswer =
   '有限公司の解散には株主の議決権の3分の2以上の同意が必要です。股份有限公司では、原則として発行済株式総数の3分の2以上を代表する株主が出席し、出席株主の議決権の過半数で決議します。公開発行会社で前記の出席数に達しない場合は、発行済株式総数の過半数を代表する株主が出席し、出席株主の議決権の3分の2以上で決議できます。定款により、より高い要件が定められている場合があります。解散登記は解散後15日以内に申請します。';
 const suspensionFaqAnswer =
-  '1か月以上休業する会社は、休業前または休業開始後15日以内に休業登記を申請し、1回の休業期間は最長1年です。ただし、休業した年度も年度の所得税申告が必要であり、税務申告が一律に不要になるわけではありません。税目、保有資産、従業員その他の事情に応じた義務を個別に確認してください。';
+  '1か月以上休業する会社は、休業前または休業開始後15日以内に休業登記を申請し（ただし、すでに営業税法に基づき税務機関に休業を申告・核備している場合は、この登記は不要です――会社登記弁法第3条第1項但書）、1回の休業期間は最長1年です。ただし、休業した年度も年度の所得税申告が必要であり、税務申告が一律に不要になるわけではありません。税目、保有資産、従業員その他の事情に応じた義務を個別に確認してください。';
 const article9Paragraph =
   '会社法（公司法）第9条は、会社が受け取るべき払込金（股款）について、実際には払い込まれていないのに全額払込済みと表示した場合、または登記後に払込金を株主へ返還し、もしくは株主による回収を許した場合について、5年以下の有期刑、拘留または50万以上250万新台湾ドル以下の罰金を定めています。通常の適法な会社資金の使用一般を処罰する規定ではありません。';
 const article90Paragraph =
@@ -37,7 +37,7 @@ describe('Japanese investment column 002 — company exit and capital return', (
     expect(parsed.data.url).toBe(
       'https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company',
     );
-    expect(parsed.data.lastmod).toBe('2026-07-25');
+    expect(parsed.data.lastmod).toBe('2026-09-10');
     expect(parsed.data.date_display).toBe('2025年9月13日');
     expect(parsed.data.read_time).toBe('約14分');
     expect(parsed.data.faq).toEqual([
@@ -57,7 +57,7 @@ describe('Japanese investment column 002 — company exit and capital return', (
 
     expect(post?.slug).toBe('withdraw-capital-taiwan-company');
     expect(post?.title).toBe(parsed.data.title);
-    expect(post?.date).toBe('2026-07-25');
+    expect(post?.date).toBe('2026-09-10');
     expect(post?.dateDisplay).toBe('2025年9月13日');
     expect(post?.readTime).toBe('約14分');
     expect(post?.faq).toEqual(parsed.data.faq);
@@ -283,7 +283,7 @@ describe('Japanese investment column 002 — company exit and capital return', (
 
     const suspensionPhrases = [
       // 休業登記15日、1回の休業期間は最長1年、休業年度の所得税決算申告
-      '1か月以上休業する会社は、休業前または休業開始日から15日以内に休業登記を申請しなければならず、1回の休業期間は1年を超えることはできません。',
+      '1か月以上休業する会社は、休業前または休業開始日から15日以内に休業登記を申請しなければならず（ただし、すでに営業税法に基づき税務機関に休業を申告・核備している場合は、この登記は不要です――会社登記弁法第3条第1項但書）、1回の休業期間は1年を超えることはできません。',
       'ただし、休業した年度も年度の所得税決算申告義務があるため、税務申告が一律に免除されるわけではありません。',
       // 法人格の維持、権利・義務の一括整理ではない、開始日・終了予定日、会社登記と営業税
       '休業は、会社が一定期間営業を停止しつつ法人格を維持する選択です。',

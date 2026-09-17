@@ -111,8 +111,9 @@
 .relatedLink {
   color: var(--navy);
   font-weight: 600;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
 }
 
 .relatedLink:hover {
@@ -178,12 +179,31 @@
   margin: 0 0 0.6rem;
 }
 
+.cta .ctaTitle {
+  color: #fff;
+}
+
 .ctaText {
   font-size: 0.96rem;
   line-height: 1.7;
   opacity: 0.9;
   margin: 0 auto 1.2rem;
   max-width: 560px;
+}
+
+.ctaGloss {
+  max-width: 620px;
+  margin: 0 auto 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  opacity: 0.82;
+}
+
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
 }
 
 .ctaButton {
@@ -201,8 +221,40 @@
   filter: brightness(1.05);
 }
 
+.ctaSecondaryButton {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ctaSecondaryButton:hover,
+.ctaSecondaryButton:focus-visible {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
 @media (max-width: 720px) {
   .body {
     padding: 1.75rem 1.25rem;
+  }
+
+  .cta {
+    padding: 1.5rem 1rem;
+  }
+
+  .ctaButton {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.75rem 0.8rem;
+    border-radius: 4px;
+    line-height: 1.5;
+    text-wrap: balance;
   }
 }

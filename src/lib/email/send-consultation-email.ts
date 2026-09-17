@@ -6,6 +6,7 @@ import {
   getConsultationCopy,
   getConsultationRiskLabel,
 } from '@/lib/consultation/copy';
+import type { InternationalInquiryRecord } from '@/lib/consultation/international-inquiry-store';
 import type {
   ConsultationCategory,
   ConsultationCollectedFields,
@@ -13,12 +14,16 @@ import type {
   ConsultationTranscriptMessage,
 } from '@/lib/consultation/types';
 
-const SMTP_HOST = process.env.SMTP_HOST || 'smtp.gmail.com';
-const SMTP_PORT = Number(process.env.SMTP_PORT || '587');
-const SMTP_USER = process.env.SMTP_USER || '';
-const SMTP_PASS = process.env.SMTP_PASS || '';
-const NOTIFY_EMAIL = process.env.CONSULTATION_NOTIFY_EMAIL || process.env.NOTIFY_EMAIL || 'wei@hoveringlaw.com.tw';
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function resolveSmtpRuntime() {
+  const host = process.env.SMTP_HOST || 'smtp.gmail.com';
+  const port = Number(process.env.SMTP_PORT || '587');
+  const user = process.env.SMTP_USER || '';
+  const pass = process.env.SMTP_PASS || '';
+  const notify = process.env.CONSULTATION_NOTIFY_EMAIL || process.env.NOTIFY_EMAIL || 'wei@hoveringlaw.com.tw';
+  return { host, port, user, pass, notify };
+}
 
 export interface ConsultationEmailPayload {
   locale: Locale;
@@ -54,27 +59,28 @@ function isSafeEmailHeader(value: string | undefined): value is string {
 }
 
 function officialReplyEmail(): string {
-  return NOTIFY_EMAIL.split(',').map((email) => email.trim()).find(isSafeEmailHeader)
+  return resolveSmtpRuntime().notify.split(',').map((email) => email.trim()).find(isSafeEmailHeader)
     || 'wei@hoveringlaw.com.tw';
 }
 
 function createTransporter() {
-  if (!SMTP_HOST?.trim() || !SMTP_PORT || !SMTP_USER?.trim() || !SMTP_PASS?.trim()) {
+  const smtp = resolveSmtpRuntime();
+  if (!smtp.host.trim() || !smtp.port || !smtp.user.trim() || !smtp.pass.trim()) {
     throw new Error(
       'SMTP is not fully configured. Check SMTP_HOST, SMTP_PORT, SMTP_USER, and SMTP_PASS.',
     );
   }
-  const emails = NOTIFY_EMAIL?.split(',').map((e) => e.trim()).filter(Boolean) ?? [];
+  const emails = smtp.notify.split(',').map((e) => e.trim()).filter(Boolean);
   if (!emails.length || emails.some((e) => !isSafeEmailHeader(e))) {
     throw new Error('CONSULTATION_NOTIFY_EMAIL / NOTIFY_EMAIL is missing or invalid.');
   }
 
   return nodemailer.createTransport({
-    host: SMTP_HOST,
-    port: SMTP_PORT,
-    secure: SMTP_PORT === 465,
-    requireTLS: SMTP_PORT !== 465, // enforce STARTTLS on port 587
-    auth: { user: SMTP_USER, pass: SMTP_PASS },
+    host: smtp.host,
+    port: smtp.port,
+    secure: smtp.port === 465,
+    requireTLS: smtp.port !== 465, // enforce STARTTLS on port 587
+    auth: { user: smtp.user, pass: smtp.pass },
     connectionTimeout: 10_000,
     greetingTimeout: 10_000,
     socketTimeout: 15_000,
@@ -84,6 +90,16 @@ function createTransporter() {
 const MAX_RETRIES = 3;
 const RETRY_BASE_MS = 1000;
 
+async function sendMailOnce(
+  transporter: nodemailer.Transporter,
+  mailOptions: nodemailer.SendMailOptions,
+): Promise<void> {
+  const result = await transporter.sendMail(mailOptions);
+  if (!result.messageId) {
+    throw new Error('SMTP returned no messageId');
+  }
+}
+
 async function sendMailWithRetry(
   transporter: nodemailer.Transporter,
   mailOptions: nodemailer.SendMailOptions,
@@ -91,15 +107,12 @@ async function sendMailWithRetry(
   let lastError: unknown;
   for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
     try {
-      const result = await transporter.sendMail(mailOptions);
-      if (!result.messageId) {
-        throw new Error('SMTP returned no messageId');
-      }
+      await sendMailOnce(transporter, mailOptions);
       return;
     } catch (error) {
       lastError = error;
       if (attempt < MAX_RETRIES - 1) {
-        const delay = RETRY_BASE_MS * Math.pow(2, attempt);
+        const delay = process.env.NODE_ENV === 'test' ? 0 : RETRY_BASE_MS * Math.pow(2, attempt);
         await new Promise((resolve) => setTimeout(resolve, delay));
       }
     }
@@ -122,9 +135,10 @@ export async function sendConsultationEmail(payload: ConsultationEmailPayload): 
   const collected = payload.collectedFields;
   const hasContact = [collected.email, collected.phoneOrMessenger].filter(Boolean);
 
+  const smtp = resolveSmtpRuntime();
   await sendMailWithRetry(transporter, {
-    from: `"호정 AI Intake" <${SMTP_USER}>`,
-    to: NOTIFY_EMAIL,
+    from: `"호정 AI Intake" <${smtp.user}>`,
+    to: smtp.notify,
     replyTo: isSafeEmailHeader(collected.email) ? collected.email : officialReplyEmail(),
     subject: `[호정 AI상담] ${categoryLabel} / ${riskLabel} / ${intakeId}`,
     html: `
@@ -224,6 +238,84 @@ export async function sendConsultationEmail(payload: ConsultationEmailPayload): 
   return { intakeId };
 }
 
+export class PreparedAiIntakeMailConfigError extends Error {
+  readonly code = 'mail_config';
+  constructor() {
+    super('ai_intake_mail_config');
+    this.name = 'PreparedAiIntakeMailConfigError';
+  }
+}
+
+export interface PreparedAiIntakeEmailPayload {
+  intakeId: string;
+  subject: string;
+  textBody: string;
+  replyTo: string;
+}
+
+function htmlFromCanonicalText(textBody: string): string {
+  return `<pre style="font-family:Arial,sans-serif;white-space:pre-wrap;margin:0;">${escapeHtml(textBody)}</pre>`;
+}
+
+export function assertConsultationSmtpReady(): void {
+  try {
+    createTransporter();
+  } catch {
+    throw new PreparedAiIntakeMailConfigError();
+  }
+}
+
+export type PreparedAiIntakeSend = () => Promise<{ intakeId: string }>;
+
+/**
+ * Validate the exact AI-intake payload and create the transporter before any
+ * durable claim. The returned closure performs the single SMTP attempt.
+ */
+export function prepareAiIntakeMailSend(payload: PreparedAiIntakeEmailPayload): PreparedAiIntakeSend {
+  if (!payload.intakeId || /[\r\n]/.test(payload.intakeId) || payload.intakeId.length > 32) {
+    throw new Error('invalid_prepared_intake_id');
+  }
+  if (!payload.subject || /[\r\n]/.test(payload.subject) || payload.subject.length > 200) {
+    throw new Error('invalid_prepared_subject');
+  }
+  if (!payload.textBody || payload.textBody.length > 12_000) {
+    throw new Error('invalid_prepared_body');
+  }
+
+  let transporter: ReturnType<typeof createTransporter>;
+  try {
+    transporter = createTransporter();
+  } catch {
+    throw new PreparedAiIntakeMailConfigError();
+  }
+
+  const smtp = resolveSmtpRuntime();
+  const mailOptions: nodemailer.SendMailOptions = {
+    from: `"호정 AI Intake" <${smtp.user}>`,
+    to: smtp.notify,
+    replyTo: isSafeEmailHeader(payload.replyTo) ? payload.replyTo : officialReplyEmail(),
+    subject: payload.subject,
+    text: payload.textBody,
+    html: htmlFromCanonicalText(payload.textBody),
+  };
+
+  return async () => {
+    await sendMailOnce(transporter, mailOptions);
+    return { intakeId: payload.intakeId };
+  };
+}
+
+/**
+ * Send a server-prepared AI intake message. From/To remain server-owned.
+ * The SMTP subject and text are exactly the canonical preview content.
+ * HTML is a strictly escaped presentation of that same text.
+ */
+export async function sendPreparedAiIntakeEmail(
+  payload: PreparedAiIntakeEmailPayload,
+): Promise<{ intakeId: string }> {
+  return prepareAiIntakeMailSend(payload)();
+}
+
 export interface NegativeFeedbackAlertPayload {
   locale: Locale;
   sessionId: string;
@@ -261,10 +353,11 @@ export async function sendNegativeFeedbackAlert(
     ? getConsultationRiskLabel(payload.locale, payload.riskLevel)
     : '-';
 
+  const smtp = resolveSmtpRuntime();
   await sendMailWithRetry(transporter, {
-    from: `"호정 AI Intake" <${SMTP_USER}>`,
-    to: NOTIFY_EMAIL,
-    replyTo: NOTIFY_EMAIL,
+    from: `"호정 AI Intake" <${smtp.user}>`,
+    to: smtp.notify,
+    replyTo: smtp.notify,
     subject: `[호정 AI상담 👎] ${categoryLabel} / ${riskLabel} — 변호사 재검토 필요`,
     html: `
       <div style="font-family:Arial,sans-serif;max-width:680px;margin:0 auto;padding:24px;color:#1f2937;">
@@ -317,4 +410,104 @@ export async function sendNegativeFeedbackAlert(
       </div>
     `,
   });
+}
+
+export class InternationalInquiryMailConfigError extends Error {
+  readonly code = 'mail_config';
+  constructor() {
+    super('international_inquiry_mail_config');
+    this.name = 'InternationalInquiryMailConfigError';
+  }
+}
+
+const INTERNATIONAL_INQUIRY_SUBJECT_PREFIX = '[Hovering international inquiry]';
+
+function assertSmtpDelivery(result: {
+  messageId?: unknown;
+  accepted?: unknown;
+  rejected?: unknown;
+}): void {
+  if (typeof result.messageId !== 'string' || result.messageId.length === 0) {
+    throw new Error('SMTP returned no messageId');
+  }
+  const accepted = result.accepted;
+  const rejected = result.rejected;
+  if (
+    Array.isArray(accepted)
+    && accepted.length === 0
+    && Array.isArray(rejected)
+    && rejected.length > 0
+  ) {
+    throw new Error('SMTP rejected recipients');
+  }
+}
+
+function internationalInquiryText(record: InternationalInquiryRecord): string {
+  const payload = record.payload;
+  return [
+    'International inquiry',
+    '',
+    `Intake ID: ${record.intakeId}`,
+    `Received at: ${record.receivedAt}`,
+    `Name: ${payload.name}`,
+    `Email: ${payload.email}`,
+    `UI locale: ${payload.uiLocale}`,
+    `Original language: ${payload.originalLanguage}`,
+    `Preferred consultation language: ${payload.preferredConsultationLanguage}`,
+    '',
+    'Original text:',
+    payload.originalText,
+  ].join('\n');
+}
+
+function internationalInquiryHtml(record: InternationalInquiryRecord): string {
+  const payload = record.payload;
+  const row = (label: string, value: string) => (
+    `<tr><td style="padding:10px 12px;background:#f4f7fb;font-weight:700;width:220px;">${escapeHtml(label)}</td><td style="padding:10px 12px;">${escapeHtml(value)}</td></tr>`
+  );
+  return `
+      <div style="font-family:Arial,sans-serif;max-width:760px;margin:0 auto;padding:24px;color:#1f2937;">
+        <h2 style="margin:0 0 16px;font-size:22px;color:#123b63;">International inquiry</h2>
+        <table style="width:100%;border-collapse:collapse;border:1px solid #d6e0eb;margin-bottom:20px;">
+          <tbody>
+            ${row('Intake ID', record.intakeId)}
+            ${row('Received at', record.receivedAt)}
+            ${row('Name', payload.name)}
+            ${row('Email', payload.email)}
+            ${row('UI locale', payload.uiLocale)}
+            ${row('Original language', payload.originalLanguage)}
+            ${row('Preferred consultation language', payload.preferredConsultationLanguage)}
+          </tbody>
+        </table>
+        <h3 style="margin:20px 0 8px;font-size:16px;color:#123b63;">Original text</h3>
+        <pre style="white-space:pre-wrap;border:1px solid #d6e0eb;background:#ffffff;padding:14px;line-height:1.65;margin:0;">${escapeHtml(payload.originalText)}</pre>
+      </div>
+    `;
+}
+
+export async function sendInternationalInquiryNotification(
+  record: InternationalInquiryRecord,
+): Promise<void> {
+  let transporter: ReturnType<typeof createTransporter>;
+  try {
+    transporter = createTransporter();
+  } catch {
+    throw new InternationalInquiryMailConfigError();
+  }
+
+  const subject = `${INTERNATIONAL_INQUIRY_SUBJECT_PREFIX} ${record.intakeId}`;
+  if (/[\r\n]/.test(subject) || /[\r\n]/.test(record.intakeId)) {
+    throw new Error('invalid_international_inquiry_subject');
+  }
+
+  const smtp = resolveSmtpRuntime();
+  const result = await transporter.sendMail({
+    from: `"Hovering International Inquiry" <${smtp.user}>`,
+    to: smtp.notify,
+    replyTo: isSafeEmailHeader(record.payload.email) ? record.payload.email : officialReplyEmail(),
+    subject,
+    text: internationalInquiryText(record),
+    html: internationalInquiryHtml(record),
+  });
+  assertSmtpDelivery(result);
 }

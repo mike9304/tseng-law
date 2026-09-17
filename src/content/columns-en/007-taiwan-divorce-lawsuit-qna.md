@@ -1,12 +1,13 @@
 ---
 title: "Taiwan Divorce Q&A: Mediation, Litigation, Property, and Children"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-divorce-lawsuit-qna"
-lastmod: "2026-07-25"
+lastmod: "2026-09-10"
 date_display: "September 13, 2025"
 read_time: "30 min read"
 categories:
   - "Taiwan Legal Information"
 featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
+summary: "A Taiwan divorce may use mutual consent, mediation, or litigation. Household registration, property division, and parental rights remain separate issues."
 faq:
   - q: "Does signing a divorce agreement make a mutual-consent divorce in Taiwan immediately effective?"
     a: "Under Civil Code Article 1050, the parties must agree to divorce in writing, at least two witnesses must sign after confirming both parties’ genuine intent to divorce, and the divorce must be registered with the household-registration authority. A signed agreement alone does not complete the divorce. Where foreign elements are involved, the parties must separately check the applicable law, document authentication and translation requirements, and any registration required in another country or region."
@@ -193,7 +194,7 @@ No. A claim for distribution of the residual-property difference under Civil Cod
 
 ### Article 1056, Article 1057, and child support
 
-**Article 1056** provides, in cases of judicial divorce, for claims against the other spouse responsible for the divorce, distinguishing pecuniary damages from non-pecuniary damages that are available only when separate statutory conditions are met. The conduct giving rise to liability, the resulting harm, causation, and the separate requirements for non-pecuniary damages must each be supported by evidence. The mere existence of facts concerning the breakdown of the marriage neither fixes a particular amount nor substitutes for a separate property claim.
+**Article 1056** provides, in cases of judicial divorce, for claims against the other spouse responsible for the divorce, distinguishing pecuniary damages from non-pecuniary damages that are available only when separate statutory conditions are met (paragraph 2 proviso: the claimant must be without fault). The conduct giving rise to liability, the resulting harm, causation, and the separate requirements for non-pecuniary damages must each be supported by evidence. The mere existence of facts concerning the breakdown of the marriage neither fixes a particular amount nor substitutes for a separate property claim.
 
 **Article 1057** concerns post-divorce support when a spouse without fault falls into financial hardship because of a judicial divorce. The analysis must first confirm that the divorce was judicial rather than by mutual consent, that the claimant was without fault, and that the divorce actually caused the financial hardship. The scope of support must then be assessed from concrete evidence, including the claimant’s needs and financial resources. It is not residual-property distribution, child support, or a fixed penalty attached to every finding of fault.
 

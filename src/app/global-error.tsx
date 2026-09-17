@@ -27,6 +27,14 @@ const copyByLocale = {
     home: 'Return home',
     locale: 'en',
   },
+  ja: {
+    brand: '昊鼎国際法律事務所',
+    title: 'ページを表示できません',
+    description: '一時的なエラーのため、このページを表示できません。もう一度お試しいただくか、ホームに戻ってください。',
+    retry: '再試行',
+    home: 'ホームに戻る',
+    locale: 'ja',
+  },
 } as const;
 
 type ErrorLocale = keyof typeof copyByLocale;
@@ -36,7 +44,7 @@ export default function GlobalError({ reset }: { error: Error & { digest?: strin
 
   useEffect(() => {
     const pathLocale = window.location.pathname.split('/').filter(Boolean)[0];
-    setLocale(pathLocale === 'zh-hant' || pathLocale === 'en' ? pathLocale : 'ko');
+    setLocale(pathLocale === 'zh-hant' || pathLocale === 'en' || pathLocale === 'ja' ? pathLocale : 'ko');
   }, []);
 
   const copy = copyByLocale[locale];

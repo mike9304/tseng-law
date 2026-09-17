@@ -71,12 +71,12 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     {
       question: '상담은 어떤 방식으로 진행되나요?',
       answer:
-        '대면 상담(타이베이 사무소) 또는 화상 상담(Zoom/Google Meet)이 가능합니다. 한국어·중국어·일본어 모두 상담 가능하며, 사전 예약 후 1시간 단위로 진행됩니다. 상담 전 관련 자료를 미리 보내주시면 더 구체적인 답변이 가능합니다.'
+        '대면 상담(타이베이 사무소) 또는 화상 상담(Zoom/Google Meet)이 가능합니다. 한국어·중국어·일본어·영어 모두 상담 가능하며, 사전 예약 후 1시간 단위로 진행됩니다. 상담 전 관련 자료를 미리 보내주시면 더 구체적인 답변이 가능합니다.'
     },
     {
       question: '물류업·화장품 등 특수 업종도 법인설립이 가능한가요?',
       answer:
-        '가능합니다. 다만 물류업은 운송업 허가, 화장품은 PIF(제품정보파일) 등록 및 FDA 신고 등 업종별 추가 인허가가 필요합니다. 업종별 규제를 사전에 파악하고 설립 절차와 병행하여 진행해야 시간과 비용을 절약할 수 있습니다.'
+        '가능합니다. 다만 물류업은 운송업 허가 등 업종별 추가 인허가가 필요합니다. 공장등록 면제 제조장소에서 생산한 고형 수제비누를 제외하고, 법령상 대상인 화장품 제조·수입업자는 대상 제품의 제품등록(產品登錄)을 별도로 완료하고, 제품정보파일(PIF)을 작성·갱신하여 제품에 표시된 주소에 보관하고 검사에 대비해야 합니다. PIF 자체는 당국에 등록하지 않습니다. 업종별 규제를 사전에 파악하고 설립 절차와 병행하여 진행해야 시간과 비용을 절약할 수 있습니다.'
     }
   ],
   'zh-hant': [
@@ -144,12 +144,12 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     {
       question: '諮詢方式如何進行？',
       answer:
-        '可選擇面談（台北事務所）或視訊諮詢（Zoom/Google Meet）。韓語、中文、日語皆可諮詢，須事先預約，以一小時為單位。若事先提供相關資料，可獲得更具體的建議。'
+        '可選擇面談（台北事務所）或視訊諮詢（Zoom/Google Meet）。韓語、中文、日語、英語皆可諮詢，須事先預約，以一小時為單位。若事先提供相關資料，可獲得更具體的建議。'
     },
     {
       question: '物流業、化妝品等特殊產業也能設立公司嗎？',
       answer:
-        '可以，但物流業需取得運輸許可，化妝品須完成 PIF（產品資訊檔案）登錄及 FDA 備查等產業別額外許可。事前掌握產業法規並與設立程序同步進行，可節省時間與成本。'
+        '可以，但物流業需取得運輸許可等產業別額外許可。除免辦理工廠登記之製造場所生產之固態手工香皂外，法定範圍內之化粧品製造或輸入業者應就適用產品另行完成產品登錄，並建立、更新產品資訊檔案（PIF），存放於標示地址以供查核；PIF本身無須向主管機關登錄。事前掌握產業法規並與設立程序同步進行，可節省時間與成本。'
     }
   ],
   en: [
@@ -198,9 +198,9 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     },
     // ── Family / Divorce ──
     {
-      question: 'What procedures does a cross-border divorce in Taiwan require?',
+      question: 'What procedures does a Korean national need for divorce in Taiwan?',
       answer:
-        'Divorce in Taiwan is either (1) by mutual consent, which must be in writing, signed by at least two witnesses, and registered with the household administration authority, or (2) judicial divorce (mediation then litigation). International divorce involving Taiwan, including Japan–Taiwan or Korea–Taiwan cases, involves complex issues of applicable law, jurisdiction, property division, and custody, so consulting a lawyer familiar with the relevant legal systems is essential.'
+        'Divorce in Taiwan is either (1) by mutual consent, which must be in writing, signed by at least two witnesses, and registered with the household administration authority, or (2) judicial divorce (mediation then litigation). International divorce between Korea and Taiwan involves complex issues of applicable law, jurisdiction, property division, and custody, so consulting a lawyer familiar with both legal systems is essential.'
     },
     {
       question: 'How is child custody determined in Taiwan?',
@@ -217,12 +217,12 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     {
       question: 'How are consultations conducted?',
       answer:
-        'We offer in-person consultations (Taipei office) or video consultations (Zoom/Google Meet). Consultations are available in English, Korean, Chinese, and Japanese. Appointments are required and scheduled in one-hour units. Sending relevant documents in advance allows for more detailed advice.'
+        'We offer in-person consultations (Taipei office) or video consultations (Zoom/Google Meet). Consultations are available in English, Chinese, Korean, and Japanese. Appointments are required and scheduled in one-hour units. Start with a brief summary of the matter; other documents can follow after attorney instructions.'
     },
     {
       question: 'Can you help with company setup for specialized industries like logistics or cosmetics?',
       answer:
-        'Yes, but additional industry-specific permits are required—transport permits for logistics, PIF (Product Information File) registration and FDA notification for cosmetics, etc. Understanding industry regulations beforehand and processing them alongside incorporation saves time and cost.'
+        'Yes, but additional industry-specific permits are required—transport permits for logistics, for example. Except for solid handmade soap produced at a facility exempt from factory registration, covered manufacturers or importers must separately complete product notification (產品登錄) for applicable products and establish, update and retain a Product Information File (PIF) at the labelled address for inspection; the PIF itself is not filed with the authority. Understanding industry regulations beforehand and processing them alongside incorporation saves time and cost.'
     }
   ],
   ja: [
@@ -271,9 +271,9 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     },
     // ── 家事・離婚 ──
     {
-      question: '日本や韓国など、台湾とつながる国際離婚では、どのような手続きが必要ですか？',
+      question: '韓国人が台湾で離婚するには、どのような手続きが必要ですか？',
       answer:
-        '台湾法が適用される合意離婚は、書面で行い、2名以上の証人が署名し、戸政機関で離婚登記をする必要があります。裁判による離婚は、原則として裁判前に家事調停を経ます。日本・台湾間や韓国・台湾間などの国際離婚では、台湾で手続できるか、どの法が適用されるか、関係する地域での届出・承認、財産分与、未成年の子の親権・扶養を個別に確認してください。'
+        '台湾法が適用される合意離婚は、書面で行い、2名以上の証人が署名し、戸政機関で離婚登記をする必要があります。裁判による離婚は、原則として裁判前に家事調停を経ます。韓国・台湾間の国際離婚では、台湾で手続できるか、どの法が適用されるか、両地域での届出・承認、財産分与、未成年の子の親権・扶養を個別に確認してください。'
     },
     {
       question: '台湾で未成年の子の親権・監護はどのように決まりますか？',
@@ -290,7 +290,7 @@ export const faqContent: Record<SiteLocale, FAQItem[]> = {
     {
       question: '相談はどのような方式で行われますか？',
       answer:
-        '台北事務所での対面相談またはビデオ通話による相談に対応しており、日本語・英語・中国語・韓国語で相談できます。一般法律相談は事前予約制で、現在の料金案内では1時間単位です。まずお問い合わせページから案件の概要と主な資料を送り、日程、相談方法、担当言語および費用をご確認ください。連絡はメールから行えます。'
+        '台北事務所での対面相談またはビデオ通話による相談に対応しており、英語・韓国語・中国語・日本語で相談できます。一般法律相談は事前予約制で、現在の料金案内では1時間単位です。まずは案件の簡潔な概要をお送りください。その他の資料は弁護士の案内後にご提出ください。連絡はメールから行えます。'
     },
     {
       question: '物流・化粧品などの規制業種でも台湾で会社を設立できますか？',

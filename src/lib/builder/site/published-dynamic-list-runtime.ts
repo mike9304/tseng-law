@@ -120,7 +120,7 @@ export function resolvePublishedDynamicListRuntime({
 
   const visitorSearchTerm = normalizeVisitorSearchTerm(visitorQuery.q);
   const binding = getBuilderPageDatasetBinding(datasetDocument, dynamicList.targetId);
-  const visitorFields = resolveDynamicListVisitorFieldState({ dynamicList, site });
+  const visitorFields = resolveDynamicListVisitorFieldState({ dynamicList, site, locale });
   const visitorPatch = binding
     ? composeVisitorDatasetPatch({
         targetId: dynamicList.targetId,
@@ -168,6 +168,7 @@ export function resolvePublishedDynamicListRuntime({
   const slice = pagination ? sliceVisitorRecords(searchRecords, pagination) : null;
   const filterSummary = summarizeVisitorQueryItems({
     basePath: pagePath,
+    locale,
     currentPerPage: pagination?.perPage,
     query: visitorQuery,
     searchParams,

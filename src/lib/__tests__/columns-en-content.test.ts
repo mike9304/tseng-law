@@ -97,11 +97,11 @@ describe('English full column corpus', () => {
     expect(raw.match(/^title:\s*"([^"]+)"$/m)?.[1]).toBe(exactTitle);
     expect(raw.match(/^#\s.+$/gm)).toEqual([`# ${exactTitle}`]);
     expect(post!.title).toBe(exactTitle);
-    expect(raw.match(/^lastmod:\s*"([^"]+)"$/m)?.[1]).toBe('2026-07-26');
+    expect(raw.match(/^lastmod:\s*"([^"]+)"$/m)?.[1]).toBe('2026-09-10');
     expect(raw.match(/^date_display:\s*"([^"]+)"$/m)?.[1]).toBe(
       'September 13, 2025',
     );
-    expect(post!.date).toBe('2026-07-26');
+    expect(post!.date).toBe('2026-09-10');
     expect(post!.dateDisplay).toBe('September 13, 2025');
 
     const loadedPublicContent = `${post!.title}\n${post!.content}`;
@@ -117,7 +117,7 @@ describe('English full column corpus', () => {
     const sourceUrl =
       'https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability';
     const officialRegulationsUrl =
-      'https://laws.gov.taipei/Law/LawSearch/LawArticleContent/FL012455';
+      'https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101';
     const supplementaryUrl = 'https://gonews.com.tw/car/daily/21934/';
     const featuredImage =
       '../images/012-taiwan-overtaking-accident-liability/featured-01.jpg';
@@ -409,6 +409,29 @@ describe('English full column corpus', () => {
     ];
     for (const claim of forbiddenClaims) {
       expect(raw).not.toContain(claim);
+    }
+  });
+
+  it('uses a single question mark on the labor-severance title and no doubled punctuation in EN titles', () => {
+    const exactTitle = 'Taiwan Labor Law: Is Severance Pay Hard to Get in Taiwan?';
+    const severancePath = path.join(enDir, '008-taiwan-labor-severance-law.md');
+    const raw = fs.readFileSync(severancePath, 'utf8');
+    const post = getColumnPost('taiwan-labor-severance-law', 'en');
+
+    expect(raw.match(/^title:\s*"([^"]+)"$/m)?.[1]).toBe(exactTitle);
+    expect(raw.match(/^#\s.+$/gm)).toEqual([`# ${exactTitle}`]);
+    expect(post?.title).toBe(exactTitle);
+    expect(raw).not.toContain('Taiwan??');
+    expect(post?.title).not.toMatch(/\?\?|\!\!/);
+
+    const enFiles = fs.readdirSync(enDir).filter((name) => name.endsWith('.md'));
+    const doubledPunctuation = /\?\?|\!\!/;
+    for (const file of enFiles) {
+      const text = fs.readFileSync(path.join(enDir, file), 'utf8');
+      const title = text.match(/^title:\s*"([^"]+)"$/m)?.[1] ?? '';
+      const heading = text.match(/^#\s+(.+)$/m)?.[1] ?? '';
+      expect(title, `${file} frontmatter title`).not.toMatch(doubledPunctuation);
+      expect(heading, `${file} H1`).not.toMatch(doubledPunctuation);
     }
   });
 });

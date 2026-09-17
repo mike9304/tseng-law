@@ -5,7 +5,12 @@ import {
   checkDraftSaveRateLimit,
   checkMutationRateLimit,
   checkPublishRateLimit,
+  checkRateLimit,
   hashRateLimitKey,
+  peekRateLimit,
+  releaseRateLimit,
+  reserveRateLimit,
+  confirmRateLimit,
   resetRateLimitStore,
 } from '@/lib/builder/security/rate-limit';
 
@@ -89,6 +94,31 @@ describe('builder rate limit', () => {
     if (ORIGINAL_BLOB_TOKEN) process.env.BLOB_READ_WRITE_TOKEN = ORIGINAL_BLOB_TOKEN;
     else delete process.env.BLOB_READ_WRITE_TOKEN;
     vi.restoreAllMocks();
+  });
+
+  it('reserve is exclusive and release allows a retry', async () => {
+    const first = await reserveRateLimit('forms-duplicate:atomic', 1, 60_000);
+    const second = await reserveRateLimit('forms-duplicate:atomic', 1, 60_000);
+    expect(first.allowed).toBe(true);
+    expect(first.token).toBeDefined();
+    expect(second.allowed).toBe(false);
+    await releaseRateLimit('forms-duplicate:atomic');
+    const retry = await reserveRateLimit('forms-duplicate:atomic', 1, 60_000);
+    expect(retry.allowed).toBe(true);
+    await confirmRateLimit(retry.token!);
+    expect((await checkRateLimit('forms-duplicate:atomic', 1, 60_000)).allowed).toBe(true);
+    expect((await reserveRateLimit('forms-duplicate:atomic', 1, 60_000)).allowed).toBe(false);
+  });
+
+  it('peek does not consume and release undoes a consume', async () => {
+    const firstPeek = await peekRateLimit('forms-duplicate:test', 1, 60_000);
+    const secondPeek = await peekRateLimit('forms-duplicate:test', 1, 60_000);
+    expect(firstPeek.allowed).toBe(true);
+    expect(secondPeek.allowed).toBe(true);
+    expect((await checkRateLimit('forms-duplicate:test', 1, 60_000)).allowed).toBe(true);
+    expect((await peekRateLimit('forms-duplicate:test', 1, 60_000)).allowed).toBe(false);
+    await releaseRateLimit('forms-duplicate:test');
+    expect((await peekRateLimit('forms-duplicate:test', 1, 60_000)).allowed).toBe(true);
   });
 
   it('uses the bounded in-memory fallback outside production when Upstash is not configured', async () => {

@@ -15,16 +15,27 @@ type DraftCanvasNode = {
   readonly serialized: string;
 };
 
+const SITE_ID = 'pw-add-panel-section-template-drag';
+
 function mutationHeaders(scope: string): Record<string, string> {
   const safeScope = scope.replace(/[^a-z0-9-]/gi, '-').slice(-48) || 'section-template-drag';
   return { 'x-forwarded-for': `pw-${safeScope}` };
 }
 
+function isolatedSiteQuery(): string {
+  return new URLSearchParams({ locale: 'ko', siteId: SITE_ID }).toString();
+}
+
+function isolatedEditorPath(pageId: string, extra: Record<string, string>): string {
+  return `/ko/admin-builder?${new URLSearchParams({ pageId, siteId: SITE_ID, ...extra }).toString()}`;
+}
+
 async function createBuilderPage(request: APIRequestContext, slug: string, title: string): Promise<string> {
-  const response = await request.post('/api/builder/site/pages', {
-    data: { locale: 'ko', slug, title, blank: true },
+  const response = await request.post(`/api/builder/site/pages?${isolatedSiteQuery()}`, {
+    data: { locale: 'ko', slug, title, blank: true, siteId: SITE_ID },
     headers: mutationHeaders(slug),
   });
+
   expect(response.status()).toBe(200);
   const payload = (await response.json()) as { success?: boolean; pageId?: string; error?: string };
   expect(payload.success, payload.error).toBe(true);
@@ -35,7 +46,7 @@ async function createBuilderPage(request: APIRequestContext, slug: string, title
 }
 
 async function draftDocumentText(page: Page, pageId: string): Promise<string> {
-  const response = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`, {
+  const response = await page.request.get(`/api/builder/site/pages/${pageId}/draft?${isolatedSiteQuery()}`, {
     headers: mutationHeaders(pageId),
     failOnStatusCode: false,
   });
@@ -49,7 +60,7 @@ async function draftRootRectForText(
   pageId: string,
   text: string,
 ): Promise<DraftCanvasRect | null> {
-  const response = await page.request.get(`/api/builder/site/pages/${pageId}/draft?locale=ko`, {
+  const response = await page.request.get(`/api/builder/site/pages/${pageId}/draft?${isolatedSiteQuery()}`, {
     headers: mutationHeaders(pageId),
     failOnStatusCode: false,
   });
@@ -170,7 +181,7 @@ test.describe('/ko/admin-builder Add panel built-in section template drag/drop',
       pageId = await createBuilderPage(page.request, slug, `Section Drag ${token}`);
       const createdPageId = pageId;
       await page.setExtraHTTPHeaders(mutationHeaders(slug));
-      await openBuilder(page, `/ko/admin-builder?pageId=${encodeURIComponent(createdPageId)}&sectionDrag=${token}`);
+      await openBuilder(page, isolatedEditorPath(createdPageId, { sectionDrag: token }));
       await page.keyboard.press('Escape');
 
       const drawer = await openCatalogDrawer(page);
@@ -191,12 +202,12 @@ test.describe('/ko/admin-builder Add panel built-in section template drag/drop',
       }, { timeout: 30_000 }).toBeLessThanOrEqual(2);
       await expect.poll(async () => draftDocumentText(page, createdPageId), { timeout: 30_000 }).toContain(insertedTitle);
 
-      await openBuilder(page, `/ko/admin-builder?pageId=${encodeURIComponent(createdPageId)}&sectionDragReload=${token}`);
+      await openBuilder(page, isolatedEditorPath(createdPageId, { sectionDragReload: token }));
       await expect(page.locator('[data-node-id^="heading-"]').filter({ hasText: insertedTitle }).first()).toBeVisible();
       await expect(page.getByText('포함 범위와 제외 범위를 명확히 합니다.').first()).toBeVisible();
     } finally {
       if (pageId) {
-        await page.request.delete(`/api/builder/site/pages/${pageId}?locale=ko`, {
+        await page.request.delete(`/api/builder/site/pages/${pageId}?${isolatedSiteQuery()}`, {
           failOnStatusCode: false,
           headers: mutationHeaders(slug),
         });

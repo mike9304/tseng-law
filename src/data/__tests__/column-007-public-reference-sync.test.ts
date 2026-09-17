@@ -13,6 +13,11 @@ import { filterSearchIndex, getSearchIndex } from '@/lib/search';
 import { buildArticleJsonLd, buildFaqJsonLd } from '@/lib/seo';
 import type { BuilderSitemapEntry } from '@/lib/builder/seo/sitemap-builder';
 import { generateMetadata } from '@/app/[locale]/columns/[slug]/page';
+import {
+  absentOptionalColumnLocales,
+  buildExpectedColumnAlternates,
+  presentOptionalColumnLocales,
+} from './column-alternate-expectations';
 
 const slug = 'taiwan-divorce-lawsuit-qna';
 const aliasSlug = 'divorce-qna';
@@ -146,7 +151,7 @@ const expectedFamilyIntros = {
   ko: '한국-대만 국제결혼 증가에 따라 이혼·친권·상속 관련 분쟁이 늘고 있습니다. 법무법인 호정은 대만 가사소송법과 국제사법을 함께 검토하여, 한국인 의뢰인에게 최적의 전략을 제공합니다.',
   'zh-hant':
     '因應韓台跨國婚姻增加，協助協議離婚、調解離婚、裁判離婚程序，以及法定繼承順位與剩餘財產分配請求。',
-  en: 'Cross-border marriages involving Taiwan have increased, and disputes on divorce, custody, and inheritance are growing. We combine Taiwan family procedure and private international law analysis to build practical strategies for international clients.',
+  en: 'As Korea-Taiwan marriages increase, disputes on divorce, custody, and inheritance are growing. We combine Taiwan family procedure and private international law analysis to build practical strategies for cross-border clients.',
 } as const;
 
 const expectedFaqQuestions = {
@@ -198,13 +203,14 @@ const articlePaths = {
   ja: 'src/content/columns-ja/007-taiwan-divorce-lawsuit-qna.md',
 } as const;
 
-const expectedCanonicalAlternates = {
-  ko: `${siteUrl}/ko/columns/${slug}`,
-  'zh-Hant': `${siteUrl}/zh-hant/columns/${slug}`,
-  en: `${siteUrl}/en/columns/${slug}`,
-  ja: `${siteUrl}/ja/columns/${slug}`,
-  'x-default': `${siteUrl}/en/columns/${slug}`,
-} as const;
+/**
+ * Derived, never frozen: the base four plus every vi/id/th/fil translation file
+ * that currently exists on disk. New translation files must extend this set
+ * rather than break the suite; missing ones must emit no alternate at all.
+ */
+const expectedCanonicalAlternates = buildExpectedColumnAlternates(siteUrl, slug);
+const presentOptionalLocales = presentOptionalColumnLocales(slug);
+const absentOptionalLocales = absentOptionalColumnLocales(slug);
 
 const stalePublicCopy = [
   '이혼 조정·소송 Q&A',
@@ -348,7 +354,7 @@ describe('column 007 public reference synchronization', () => {
     }
   });
 
-  it('publishes each canonical column URL once with four-language alternates in the sitemap', async () => {
+  it('publishes each canonical column URL once with the file-backed language alternates in the sitemap', async () => {
     const { default: sitemap } = await import('@/app/sitemap');
     const entries = await sitemap();
     const pathSuffix = `/columns/${slug}`;
@@ -359,6 +365,18 @@ describe('column 007 public reference synchronization', () => {
       );
       expect(matches, locale).toHaveLength(1);
       expect(matches[0]?.alternates?.languages).toEqual(expectedCanonicalAlternates);
+
+      const languages: Record<string, unknown> = { ...(matches[0]?.alternates?.languages ?? {}) };
+      for (const optionalLocale of presentOptionalLocales) {
+        expect(languages[optionalLocale], `${locale} -> ${optionalLocale}`).toBe(
+          `${siteUrl}/${optionalLocale}/columns/${slug}`,
+        );
+      }
+      for (const optionalLocale of absentOptionalLocales) {
+        expect(Object.keys(languages), `${locale} -> ${optionalLocale}`).not.toContain(
+          optionalLocale,
+        );
+      }
     }
 
     expect(
@@ -366,7 +384,7 @@ describe('column 007 public reference synchronization', () => {
     ).toBe(false);
   });
 
-  it('emits exact generateMetadata title, canonical, and four-language alternates for all locales', async () => {
+  it('emits exact generateMetadata title, canonical, and file-backed language alternates for all locales', async () => {
     for (const locale of siteLocales) {
       const metadata = await generateMetadata({
         params: Promise.resolve({ locale, slug }),
@@ -377,6 +395,18 @@ describe('column 007 public reference synchronization', () => {
         `${siteUrl}/${locale}/columns/${slug}`,
       );
       expect(metadata.alternates?.languages, locale).toEqual(expectedCanonicalAlternates);
+
+      const languages: Record<string, unknown> = { ...(metadata.alternates?.languages ?? {}) };
+      for (const optionalLocale of presentOptionalLocales) {
+        expect(languages[optionalLocale], `${locale} -> ${optionalLocale}`).toBe(
+          `${siteUrl}/${optionalLocale}/columns/${slug}`,
+        );
+      }
+      for (const optionalLocale of absentOptionalLocales) {
+        expect(Object.keys(languages), `${locale} -> ${optionalLocale}`).not.toContain(
+          optionalLocale,
+        );
+      }
     }
 
     for (const locale of siteLocales) {
@@ -391,6 +421,20 @@ describe('column 007 public reference synchronization', () => {
       expect(aliasMetadata.alternates?.languages, locale).toEqual(
         expectedCanonicalAlternates,
       );
+
+      const aliasLanguages: Record<string, unknown> = {
+        ...(aliasMetadata.alternates?.languages ?? {}),
+      };
+      for (const optionalLocale of presentOptionalLocales) {
+        expect(aliasLanguages[optionalLocale], `${locale} -> ${optionalLocale}`).toBe(
+          `${siteUrl}/${optionalLocale}/columns/${slug}`,
+        );
+      }
+      for (const optionalLocale of absentOptionalLocales) {
+        expect(Object.keys(aliasLanguages), `${locale} -> ${optionalLocale}`).not.toContain(
+          optionalLocale,
+        );
+      }
     }
   });
 

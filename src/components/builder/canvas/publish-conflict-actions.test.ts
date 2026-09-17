@@ -1,4 +1,13 @@
-import { afterEach, describe, expect, it, vi } from 'vitest';
+import {
+  act,
+  createElement,
+  useState,
+  type Dispatch,
+  type SetStateAction,
+} from 'react';
+import { flushSync } from 'react-dom';
+import { createRoot, type Root } from 'react-dom/client';
+import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
 import type { PublishCheckSuite } from '@/lib/builder/publish-gate/gate-runner';
 import { getPublishModalCopy } from './publish-copy';
@@ -11,14 +20,6 @@ import type {
 import { usePublishActions } from './usePublishActions';
 import { useScheduledPublishActions } from './useScheduledPublishActions';
 
-vi.mock('react', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('react')>();
-  return {
-    ...actual,
-    useCallback: <T>(callback: T): T => callback,
-  };
-});
-
 const document: BuilderCanvasDocument = {
   version: 1,
   locale: 'en',
@@ -30,6 +31,157 @@ const document: BuilderCanvasDocument = {
 };
 
 const copy = getPublishModalCopy('en');
+
+type PublishActionsFixture = Parameters<typeof usePublishActions>[0] & { open: boolean };
+
+const XHTML_NS = 'http://www.w3.org/1999/xhtml';
+const liveRoots = new Set<Root>();
+const livePromises = new Set<Promise<unknown>>();
+
+function trackPromise<T>(promise: Promise<T>): Promise<T> {
+  livePromises.add(promise);
+  void promise.finally(() => {
+    livePromises.delete(promise);
+  });
+  return promise;
+}
+
+function ensureDomStub(): { container: object } {
+  const g = globalThis as typeof globalThis & {
+    Node?: unknown;
+    HTMLElement?: new (tag?: string) => {
+      nodeType: number;
+      nodeName: string;
+      tagName: string;
+      namespaceURI: string;
+      ownerDocument: unknown;
+      addEventListener: () => void;
+      removeEventListener: () => void;
+      appendChild: <T>(child: T) => T;
+      removeChild: <T>(child: T) => T;
+    };
+    HTMLIFrameElement?: unknown;
+    document?: unknown;
+    window?: typeof globalThis;
+    IS_REACT_ACT_ENVIRONMENT?: boolean;
+  };
+
+  if (!g.HTMLElement || !g.document) {
+    class Node {
+      addEventListener() {}
+      removeEventListener() {}
+      appendChild<T>(child: T): T {
+        return child;
+      }
+      removeChild<T>(child: T): T {
+        return child;
+      }
+    }
+    class HTMLElement extends Node {
+      nodeType = 1;
+      nodeName: string;
+      tagName: string;
+      namespaceURI = XHTML_NS;
+      ownerDocument: unknown = null;
+      constructor(tag = 'DIV') {
+        super();
+        const name = tag.toUpperCase();
+        this.nodeName = name;
+        this.tagName = name;
+      }
+    }
+    class HTMLIFrameElement extends HTMLElement {
+      constructor() {
+        super('IFRAME');
+      }
+    }
+    const documentElement = new HTMLElement('HTML');
+    const ownerDocument = {
+      nodeType: 9,
+      nodeName: '#document',
+      documentElement,
+      activeElement: null,
+      defaultView: globalThis,
+      addEventListener() {},
+      removeEventListener() {},
+      createElement(tag: string) {
+        const el = tag.toLowerCase() === 'iframe'
+          ? new HTMLIFrameElement()
+          : new HTMLElement(tag);
+        el.ownerDocument = ownerDocument;
+        return el;
+      },
+      createElementNS(_ns: string, tag: string) {
+        return ownerDocument.createElement(tag);
+      },
+    };
+    documentElement.ownerDocument = ownerDocument;
+    vi.stubGlobal('Node', Node);
+    vi.stubGlobal('HTMLElement', HTMLElement);
+    vi.stubGlobal('HTMLIFrameElement', HTMLIFrameElement);
+    vi.stubGlobal('document', ownerDocument);
+    vi.stubGlobal('window', globalThis);
+    vi.stubGlobal('IS_REACT_ACT_ENVIRONMENT', true);
+  }
+
+  const container = new g.HTMLElement!('DIV');
+  container.ownerDocument = g.document;
+  return { container };
+}
+
+async function mountHook<P extends object, R>(
+  hook: (props: P) => R,
+  initialProps: P,
+): Promise<{
+  getResult: () => R;
+  rerender: (patch: Partial<P>) => Promise<void>;
+  setPropsSync: (patch: Partial<P>) => void;
+  unmount: () => Promise<void>;
+}> {
+  const { container } = ensureDomStub();
+  let bag: { result: R; setProps: Dispatch<SetStateAction<P>> } | undefined;
+  const root = createRoot(container as unknown as Element);
+  liveRoots.add(root);
+
+  function Harness(): null {
+    const [props, setProps] = useState(initialProps);
+    bag = { result: hook(props), setProps };
+    return null;
+  }
+
+  await act(async () => {
+    root.render(createElement(Harness));
+  });
+  if (!bag) throw new Error('HookHarness did not mount');
+
+  return {
+    getResult: () => {
+      if (!bag) throw new Error('HookHarness unmounted');
+      return bag.result;
+    },
+    rerender: async (patch) => {
+      await act(async () => {
+        bag!.setProps((prev) => ({ ...prev, ...patch }));
+      });
+    },
+    setPropsSync: (patch) => {
+      flushSync(() => {
+        bag!.setProps((prev) => ({ ...prev, ...patch }));
+      });
+    },
+    unmount: async () => {
+      if (!liveRoots.has(root)) return;
+      await act(async () => {
+        root.unmount();
+      });
+      liveRoots.delete(root);
+    },
+  };
+}
+
+beforeAll(() => {
+  ensureDomStub();
+});
 
 function draftConflictResponse(): Response {
   return new Response(JSON.stringify({
@@ -76,7 +228,15 @@ function assertOnlyStableConflictMessage(
   expect(serializedUi).not.toContain('hostile');
 }
 
-afterEach(() => {
+afterEach(async () => {
+  await act(async () => {
+    for (const root of [...liveRoots]) {
+      root.unmount();
+    }
+    liveRoots.clear();
+  });
+  await Promise.allSettled([...livePromises]);
+  livePromises.clear();
   vi.unstubAllGlobals();
 });
 
@@ -94,7 +254,7 @@ describe('publish conflict actions', () => {
     const setPublishState = vi.fn<(state: PublishState) => void>();
     const setSuite = vi.fn<(suite: PublishCheckSuite | null) => void>();
 
-    const { handlePublish } = usePublishActions({
+    const fixture: PublishActionsFixture = {
       activePageId: 'page-1',
       canSubmitPublish: true,
       copy,
@@ -104,6 +264,7 @@ describe('publish conflict actions', () => {
         savedAt: '2026-07-13T00:00:00.000Z',
       },
       locale: 'en',
+      open: true,
       siteId: 'site-1',
       onDraftSaved,
       onToast,
@@ -111,9 +272,12 @@ describe('publish conflict actions', () => {
       setPublishedSlug,
       setPublishState,
       setSuite,
-    });
+    };
+    const host = await mountHook(usePublishActions, fixture);
 
-    await handlePublish();
+    await act(async () => {
+      await trackPromise(host.getResult().handlePublish());
+    });
 
     const requestedUrls = fetchMock.mock.calls.map(([input]) => String(input));
     expect(requestedUrls).toHaveLength(1);
@@ -150,8 +314,9 @@ describe('publish conflict actions', () => {
     const setScheduledJob = vi.fn<(job: ScheduledPublishJob | null) => void>();
     const setSchedulePending = vi.fn<(pending: boolean) => void>();
 
-    const { handleSchedulePublish } = useScheduledPublishActions({
+    const host = await mountHook(useScheduledPublishActions, {
       activePageId: 'page-1',
+      open: true,
       canSubmitPublish: true,
       copy,
       document,
@@ -173,7 +338,15 @@ describe('publish conflict actions', () => {
       setSchedulePending,
     });
 
-    await handleSchedulePublish();
+    // The committed scheduled-owner mount clears prior session UI. Observe only
+    // the attempted draft save below; retain every conflict assertion unchanged.
+    setScheduledJob.mockClear();
+    setSchedulePending.mockClear();
+    setScheduleCancelPending.mockClear();
+
+    await act(async () => {
+      await trackPromise(host.getResult().handleSchedulePublish());
+    });
 
     const requestedUrls = fetchMock.mock.calls.map(([input]) => String(input));
     expect(requestedUrls).toHaveLength(1);

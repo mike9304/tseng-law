@@ -1,4 +1,5 @@
 import type { BuilderButtonCanvasNode } from '@/lib/builder/canvas/types';
+import { getLegacyZhHantHeroButtonIcon } from '@/lib/builder/canvas/home-zh-hant-parity';
 import { linkValueFromLegacy, sanitizeLinkValue } from '@/lib/builder/links';
 import type { Locale } from '@/lib/locales';
 import { getButtonInspectorCopy, localizedButtonLabel } from '@/lib/builder/components/button/button-copy';
@@ -27,6 +28,7 @@ export default function ButtonElement({
   const href = link?.href ?? '';
   const lightboxSlug = href.startsWith('lightbox:') ? href.slice('lightbox:'.length).trim() : '';
   const interactive = mode === 'published';
+  const legacyHeroIcon = getLegacyZhHantHeroButtonIcon(node, locale);
 
   if (className) {
     const Tag = (as ?? (href ? 'a' : 'button')) as keyof JSX.IntrinsicElements;
@@ -57,10 +59,25 @@ export default function ButtonElement({
     }
     if (!interactive) {
       (props.style as React.CSSProperties).pointerEvents = 'none';
+    } else if (legacyHeroIcon === 'scroll') {
+      // The legacy global <=1024 rule disabled this still-visible control.
+      (props.style as React.CSSProperties).pointerEvents = 'auto';
+    }
+    if (legacyHeroIcon) {
+      props['aria-label'] = node.content.ariaLabel ?? (legacyHeroIcon === 'search' ? '搜尋' : '向下滾動');
     }
     return (
       <Tag {...(props as Record<string, never>)}>
-        {buttonLabel}
+        {legacyHeroIcon === 'search' ? (
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        ) : legacyHeroIcon === 'scroll' ? (
+          <svg viewBox="0 0 28 28" aria-hidden="true" focusable="false">
+            <polyline points="6,10 14,18 22,10" />
+          </svg>
+        ) : buttonLabel}
       </Tag>
     );
   }

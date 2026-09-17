@@ -10,6 +10,7 @@ interface UseScheduledPublishLoaderParams {
   readonly locale: string;
   readonly siteId: string;
   readonly open: boolean;
+  readonly captureScheduledRead: () => (() => boolean) | null;
   readonly setScheduledAtInput: (value: string) => void;
   readonly setScheduledJob: (job: ScheduledPublishJob | null) => void;
 }
@@ -47,12 +48,15 @@ export function useScheduledPublishLoader({
   locale,
   siteId,
   open,
+  captureScheduledRead,
   setScheduledAtInput,
   setScheduledJob,
 }: UseScheduledPublishLoaderParams): void {
   useEffect(() => {
     if (!open || !activePageId) return;
 
+    const isCurrent = captureScheduledRead();
+    if (!isCurrent) return;
     let cancelled = false;
     setScheduledAtInput(defaultScheduleInput());
 
@@ -65,9 +69,9 @@ export function useScheduledPublishLoader({
         if (!response.ok) return;
 
         const data = parseScheduledPublishPayload(await response.json());
-        if (!cancelled && data?.ok && data.job) {
+        if (!cancelled && isCurrent?.() && data?.ok && data.job !== undefined) {
           setScheduledJob(data.job);
-          setScheduledAtInput(formatScheduleInput(data.job.scheduledAt));
+          setScheduledAtInput(data.job ? formatScheduleInput(data.job.scheduledAt) : defaultScheduleInput());
         }
       } catch (error) {
         if (!(error instanceof Error)) throw error;
@@ -78,5 +82,5 @@ export function useScheduledPublishLoader({
     return () => {
       cancelled = true;
     };
-  }, [open, activePageId, locale, setScheduledAtInput, setScheduledJob, siteId]);
+  }, [open, activePageId, captureScheduledRead, locale, setScheduledAtInput, setScheduledJob, siteId]);
 }

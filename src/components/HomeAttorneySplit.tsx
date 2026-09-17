@@ -22,7 +22,7 @@ const copyByLocale = {
   },
   'zh-hant': {
     label: 'ABOUT',
-    title: '曾雋崴律師，專注服務韓國客戶的台灣法律夥伴',
+    title: '曾雋崴律師，在地與跨境客戶的台灣法律夥伴',
     description:
       '曾雋崴律師具備韓語、日語、中文溝通能力，協助投資、公司設立與訴訟策略整合。',
     summary:
@@ -42,26 +42,52 @@ const copyByLocale = {
     label: 'ABOUT',
     title: '曾雋崴弁護士 — 日本語で相談できる台湾法務パートナー',
     description:
-      '曾雋崴弁護士は日本語・英語・韓国語・中国語でのコミュニケーションを強みに、投資・会社設立・訴訟まで一貫した戦略を提供します。',
+      '曾雋崴弁護士は日本語・韓国語・中国語でのコミュニケーションを強みに、投資・会社設立・訴訟まで一貫した戦略を提供します。',
     summary:
       '裁判所での訴訟実務と企業の法律顧問としての経験を有し、SBSニュースに法律上の意見・解説を提供するとともに、WEI Lawyerを通じて法律情報を継続的に発信しています。',
     cta: '弁護士プロフィールを見る',
   },
 } as const;
 
-export default function HomeAttorneySplit({ locale }: { locale: SiteLocale }) {
+function protectAboutHeadingUnit(title: string, unit: string) {
+  const index = title.indexOf(unit);
+  if (index < 0) return title;
+  return (
+    <>
+      {title.slice(0, index)}
+      <span style={{ whiteSpace: 'nowrap' }}>{unit}</span>
+      {title.slice(index + unit.length)}
+    </>
+  );
+}
+
+export default function HomeAttorneySplit({
+  locale,
+  presentation,
+}: {
+  locale: SiteLocale;
+  presentation?: 'editorial';
+}) {
   const copy = copyByLocale[locale];
   const profilePath = getAttorneyProfilePath(locale);
   const lead = teamContent[locale].members[0];
+  const useLargeOfficialPortrait =
+    lead.id === 'tseng-junwei' && lead.photo === '/images/team/wei-tseng-official.png';
+  // Original image linked by the attorney's official personal profile.
+  const portrait = useLargeOfficialPortrait ? '/images/team/tseng-junwei.png' : lead.photo;
 
   return (
     <section className="section section--gray split-section split--img-left" id="about" data-tone="light">
-      <div className="split-image split-image--portrait" data-builder-node-key="media">
+      <div
+        className="split-image split-image--portrait"
+        data-builder-node-key="media"
+        data-home-stock-portrait={useLargeOfficialPortrait ? 'true' : undefined}
+      >
         <Image
-          src={lead.photo}
+          src={portrait}
           alt={`${lead.name} ${lead.role}`}
-          width={1200}
-          height={900}
+          width={useLargeOfficialPortrait ? 773 : 1200}
+          height={useLargeOfficialPortrait ? 865 : 900}
           loading="lazy"
           sizes="(max-width: 900px) 100vw, 50vw"
           className="person-photo"
@@ -77,7 +103,13 @@ export default function HomeAttorneySplit({ locale }: { locale: SiteLocale }) {
           <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[0]}>{copy.label}</SurfaceText>
         </div>
         <h2 className="split-title" data-builder-surface-key={homeAttorneyTextSurfaceIds[1]}>
-          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[1]}>{copy.title}</SurfaceText>
+          <SurfaceText surfaceKey={homeAttorneyTextSurfaceIds[1]}>
+            {presentation === 'editorial' && locale === 'ja'
+              ? protectAboutHeadingUnit(copy.title, '相談')
+              : presentation === 'editorial' && locale === 'zh-hant'
+                ? protectAboutHeadingUnit(copy.title, '韓國')
+                : copy.title}
+          </SurfaceText>
         </h2>
         <div className="split-divider" />
         <p className="split-text" data-builder-surface-key={homeAttorneyTextSurfaceIds[2]}>

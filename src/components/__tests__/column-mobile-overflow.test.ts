@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, test } from 'vitest';
+import * as ts from 'typescript';
 
 const css = readFileSync(path.join(process.cwd(), 'src/app/globals.css'), 'utf8');
 const columnPage = readFileSync(
@@ -79,9 +80,95 @@ describe('public column mobile overflow contract', () => {
   });
 
   test('keeps locale-aware prev and next links inside the scoped navigation', () => {
-    expect(columnPage).toContain('<nav className="container column-post-nav"');
-    expect(columnPage).toContain('href={`/${locale}/columns/${prevPost.slug}`}');
-    expect(columnPage).toContain('href={`/${locale}/columns/${nextPost.slug}`}');
+    const sourceFile = ts.createSourceFile(
+      'column-detail-page.tsx',
+      columnPage,
+      ts.ScriptTarget.Latest,
+      true,
+      ts.ScriptKind.TSX,
+    );
+
+    const classTokensOf = (attr: ts.JsxAttribute): string[] => {
+      const tokens: string[] = [];
+      const take = (node: ts.Node) => {
+        if (ts.isStringLiteral(node) || ts.isNoSubstitutionTemplateLiteral(node)) {
+          tokens.push(...node.text.split(/\s+/).filter(Boolean));
+        } else if (ts.isTemplateHead(node) || ts.isTemplateMiddle(node) || ts.isTemplateTail(node)) {
+          tokens.push(...node.text.split(/\s+/).filter(Boolean));
+        }
+        ts.forEachChild(node, take);
+      };
+      take(attr);
+      return tokens;
+    };
+
+    const scopedNavs: ts.JsxElement[] = [];
+    const visitNav = (node: ts.Node) => {
+      if (ts.isJsxElement(node) && node.openingElement.tagName.getText() === 'nav') {
+        const classNameAttr = node.openingElement.attributes.properties.find(
+          (p): p is ts.JsxAttribute => ts.isJsxAttribute(p) && p.name.getText() === 'className',
+        );
+        const tokens = classNameAttr ? classTokensOf(classNameAttr) : [];
+        if (tokens.includes('container') && tokens.includes('column-post-nav')) {
+          scopedNavs.push(node);
+        }
+      }
+      ts.forEachChild(node, visitNav);
+    };
+    visitNav(sourceFile);
+    expect(scopedNavs).toHaveLength(1);
+    const nav = scopedNavs[0]!;
+
+    const isLocaleColumnSlugHref = (
+      initializer: ts.JsxAttribute['initializer'],
+      postIdent: 'prevPost' | 'nextPost',
+    ): boolean => {
+      if (!initializer || !ts.isJsxExpression(initializer) || !initializer.expression) {
+        return false;
+      }
+      const expr = initializer.expression;
+      if (!ts.isTemplateExpression(expr) || expr.head.text !== '/' || expr.templateSpans.length !== 2) {
+        return false;
+      }
+      const [localeSpan, slugSpan] = expr.templateSpans;
+      if (
+        !ts.isIdentifier(localeSpan.expression) ||
+        (localeSpan.expression.text !== 'locale' && localeSpan.expression.text !== 'urlLocale')
+      ) {
+        return false;
+      }
+      if (localeSpan.literal.text !== '/columns/') {
+        return false;
+      }
+      const access = slugSpan.expression;
+      return (
+        ts.isPropertyAccessExpression(access) &&
+        ts.isIdentifier(access.expression) &&
+        access.expression.text === postIdent &&
+        access.name.text === 'slug' &&
+        slugSpan.literal.text === ''
+      );
+    };
+
+    const hrefInits: Array<ts.JsxAttribute['initializer']> = [];
+    const visitLinks = (node: ts.Node) => {
+      if (
+        (ts.isJsxOpeningElement(node) || ts.isJsxSelfClosingElement(node)) &&
+        node.tagName.getText() === 'Link'
+      ) {
+        const hrefAttr = node.attributes.properties.find(
+          (p): p is ts.JsxAttribute => ts.isJsxAttribute(p) && p.name.getText() === 'href',
+        );
+        hrefInits.push(hrefAttr?.initializer);
+      }
+      ts.forEachChild(node, visitLinks);
+    };
+    visitLinks(nav);
+    expect(hrefInits.some((init) => isLocaleColumnSlugHref(init, 'prevPost'))).toBe(true);
+    expect(hrefInits.some((init) => isLocaleColumnSlugHref(init, 'nextPost'))).toBe(true);
+    expect(columnPage).toContain('container column-post-nav');
+    expect(columnPage).toContain('href={`/${urlLocale}/columns/${prevPost.slug}`}');
+    expect(columnPage).toContain('href={`/${urlLocale}/columns/${nextPost.slug}`}');
 
     const mediaBlocks = extractBlocks(css, '@media (max-width: 900px)');
     const targetBlocks = mediaBlocks.filter(({ block }) => block.includes('.blog-container'));

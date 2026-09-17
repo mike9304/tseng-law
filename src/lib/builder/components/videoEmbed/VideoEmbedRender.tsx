@@ -3,6 +3,7 @@
 import type { BuilderVideoEmbedCanvasNode } from '@/lib/builder/canvas/types';
 import type { Locale } from '@/lib/locales';
 import { getUtilityAdvancedWidgetsCopy } from '../utility-advanced-widgets-copy';
+import { getLocationWidgetsCopy } from '../location-widgets-copy';
 import styles from './VideoEmbed.module.css';
 
 interface VideoEmbedFlags {
@@ -83,6 +84,16 @@ function resolveEmbedUrl(
   return isSafeUrl(src) ? src : null;
 }
 
+function isKnownMapEmbed(embedUrl: string): boolean {
+  try {
+    const url = new URL(embedUrl);
+    return (url.hostname === 'www.google.com' && url.pathname === '/maps/embed')
+      || (url.hostname === 'maps.google.com' && url.pathname === '/maps' && url.searchParams.get('output') === 'embed');
+  } catch {
+    return false;
+  }
+}
+
 export default function VideoEmbedRender({
   node,
   locale = 'ko',
@@ -124,7 +135,9 @@ export default function VideoEmbedRender({
     >
       <iframe
         src={embedUrl}
-        title={copy.runtime.iframeTitle}
+        title={provider === 'url' && isKnownMapEmbed(embedUrl)
+          ? getLocationWidgetsCopy(locale).map.iframeTitle
+          : copy.runtime.iframeTitle}
         className={styles.iframe}
         allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
         {...(posterImage ? { poster: posterImage } : {})}

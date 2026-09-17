@@ -112,7 +112,7 @@ describe('event and portfolio widget localization', () => {
     expect(emptyHtml).toContain('目前沒有可顯示的活動。');
   });
 
-  it('renders localized event RSVP chrome in zh-hant', () => {
+  it('renders localized event RSVP chrome in Korean and zh-hant', () => {
     const EventRsvp = eventRsvpComponent.Render as React.ComponentType<{
       node: BuilderEventRsvpCanvasNode;
       locale?: 'ko' | 'zh-hant' | 'en';
@@ -141,6 +141,10 @@ describe('event and portfolio widget localization', () => {
     expect(editHtml).toContain('送出報名');
     expect(editHtml).not.toContain('이벤트 신청');
     expect(editHtml).not.toContain('대만 법률 세미나');
+
+    const koreanHtml = renderToStaticMarkup(<EventRsvp node={node} locale="ko" mode="edit" />);
+    expect(koreanHtml).toContain('무료 신청');
+    expect(koreanHtml).not.toContain('무료 RSVP');
 
     const emptyHtml = renderToStaticMarkup(<EventRsvp node={node} locale="zh-hant" mode="published" />);
     expect(emptyHtml).toContain('目前沒有可報名的活動。');

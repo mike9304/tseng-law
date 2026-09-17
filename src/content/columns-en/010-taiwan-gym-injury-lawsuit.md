@@ -7,6 +7,7 @@ read_time: "10 min read"
 categories:
   - "Case Study Analysis"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
+summary: "After a gym injury in Taiwan, consider litigation deadlines, evidence preservation, and damages. Gym liability insurance does not end a compensation dispute."
 ---
 
 # Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages

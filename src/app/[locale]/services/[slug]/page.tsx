@@ -13,6 +13,7 @@ import {
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
 import { getJapaneseServiceDetail } from '@/data/service-details-ja';
 import { getServiceArea } from '@/data/service-details';
+import { projectInternationalPublicCopy } from '@/lib/services/international-public-copy';
 import { getColumnPost } from '@/lib/columns';
 import JsonLd from '@/components/JsonLd';
 import {
@@ -29,6 +30,8 @@ import {
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
 import { buildBreadcrumbJsonLd, buildLegalServiceJsonLd, buildPersonJsonLd, buildSeoMetadata } from '@/lib/seo';
+import styles from './ServiceDetail.module.css';
+import { protectJapaneseHeadingUnits } from '@/lib/services/japanese-heading-units';
 
 export const dynamic = 'force-dynamic';
 
@@ -90,12 +93,12 @@ const copy: Record<SiteLocale, {
     columnsLabel: 'Related Columns — Learn More',
     readMore: 'Read full article →',
     contactLabel: 'Book Consultation',
-    contactDesc: 'If you have any questions about this practice area, please contact us anytime.',
+    contactDesc: `Email a brief summary of your question to ${CONSULTATION_EMAIL}. Sensitive files should follow after attorney instructions.`,
     contactBtn: 'Contact Us',
     emptyMsg: 'Columns for this practice area are being prepared.',
     reviewLead: 'This page is reviewed by ',
     reviewTail: ' and connects related columns with the consultation flow.',
-    breadcrumbServices: 'Practice Areas',
+    breadcrumbServices: 'Services',
   },
   ja: {
     backLabel: '← サービス一覧へ',
@@ -104,7 +107,7 @@ const copy: Record<SiteLocale, {
     columnsLabel: '関連コラム — 詳しく見る',
     readMore: '記事を読む →',
     contactLabel: '法律相談',
-    contactDesc: 'この分野に関するご相談は、お問い合わせフォームからお申し込みください。',
+    contactDesc: `${CONSULTATION_EMAIL} へ、ご相談内容の簡潔な概要をメールでお送りください。機微情報は弁護士の指示後にご提出ください。`,
     contactBtn: 'お問い合わせ',
     emptyMsg: 'この分野の関連コラムを準備中です。',
     reviewLead: 'このページは',
@@ -161,14 +164,14 @@ async function getServiceRecord(
     return null;
   }
 
-  return {
+  return projectInternationalPublicCopy(locale, {
     slug: area.slug,
     title: area.title[locale],
     subtitle: area.subtitle[locale],
     intro: area.intro[locale],
     keyPoints: area.keyPoints[locale],
     columnSlugs: area.columnSlugs,
-  };
+  });
 }
 
 export async function generateStaticParams() {
@@ -297,19 +300,19 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
         </>
       ) : null}
       {showHero ? (
-        <section className="svc-hero" data-tone="dark">
-          <div className="container svc-hero-inner">
+        <section className={`svc-hero ${styles.hero}`} data-tone="dark">
+          <div className={`container svc-hero-inner ${styles.heroInner}`}>
             <Link href={`/${locale}/services`} className="svc-back-link">{t.backLabel}</Link>
-            <h1 className="svc-hero-title">{area.title}</h1>
+            <h1 className="svc-hero-title">{locale === 'ja' ? protectJapaneseHeadingUnits(area.title) : area.title}</h1>
             <p className="svc-hero-subtitle">{area.subtitle}</p>
           </div>
         </section>
       ) : null}
 
       {showBody ? (
-        <article className="svc-article">
-          <div className="container svc-container">
-            <div className="svc-body">
+        <article className={`svc-article ${styles.root}`}>
+          <div className={`container svc-container ${styles.layout}`}>
+            <div className={`svc-body ${styles.body}`}>
               <p className="svc-intro">{area.intro}</p>
               {attorney ? (
                 <p className="svc-review-note">
@@ -335,14 +338,16 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
               {columns.length > 0 && (
                 <div className="svc-columns-section">
                   <h2 className="svc-columns-heading">{t.columnsLabel}</h2>
-                  <div className="svc-columns-grid">
+                  <div className={`svc-columns-grid ${styles.columnsGrid}`}>
                     {columns.map((col) => (
                       <Link
                         key={col.slug}
                         href={`/${locale}/columns/${col.slug}`}
-                        className="svc-col-card"
+                        className={`svc-col-card ${styles.colCard}`}
                       >
-                        <div className="svc-col-card-media">
+                        <div className={col.slug === 'taiwan-gym-injury-lawsuit'
+                          ? 'svc-col-card-media svc-col-card-media--preserve-text'
+                          : 'svc-col-card-media'}>
                           <Image src={col.featuredImage} alt={col.title} width={640} height={360} />
                           <div className="svc-col-card-overlay" />
                           <span className="svc-col-badge">{col.categoryLabel}</span>
@@ -365,7 +370,18 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
               )}
             </div>
 
-            <aside className="svc-sidebar">
+            <aside className={`svc-sidebar ${styles.sidebar}`}>
+              <div className={`svc-sidebar-card ${styles.contactCard}`}>
+                <h3 className="svc-sidebar-title">{t.contactLabel}</h3>
+                <p className="svc-sidebar-text">{t.contactDesc}</p>
+                <a
+                  href={getConsultationPublicMailto(locale)}
+                  className="button svc-sidebar-btn"
+                  aria-label={`${t.contactLabel}: ${CONSULTATION_EMAIL}`}
+                >
+                  {t.contactBtn}
+                </a>
+              </div>
               <div className="svc-sidebar-card svc-sidebar-card--attorney">
                 <AttorneyAuthorityCard locale={locale} heading={t.attorneyHeading} />
               </div>
@@ -383,17 +399,6 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
                   </ul>
                 </div>
               )}
-              <div className="svc-sidebar-card">
-                <h3 className="svc-sidebar-title">{t.contactLabel}</h3>
-                <p className="svc-sidebar-text">{t.contactDesc}</p>
-                <a
-                  href={getConsultationPublicMailto(locale)}
-                  className="button svc-sidebar-btn"
-                  aria-label={`${t.contactLabel}: ${CONSULTATION_EMAIL}`}
-                >
-                  {t.contactBtn}
-                </a>
-              </div>
             </aside>
           </div>
         </article>

@@ -90,6 +90,7 @@ read_time: "19 min read"
 categories:
   - "Taiwan Legal Information"
 featured_image: "../images/016-taiwan-inheritance-custody-analysis/featured-generic.webp"
+summary: "Taiwan inheritance, residual-property claims, and parental rights over a minor are separate processes after death. Cross-border families should not merge them."
 faq:
   - q: "If there is no will and the only heirs are a surviving spouse and two children, how are the intestate shares calculated?"
     a: "Under Articles 1138 and 1144 of Taiwan’s Civil Code, the surviving spouse inherits concurrently with the heirs in the applicable statutory rank, and descendants are first in the statutory order. If the only relevant heirs are a surviving spouse and two children, there is no valid will, and no waiver, disqualification, succession by representation, or other material fact changes the result, each would ordinarily receive a one-third share. This is a hypothetical illustration, not a conclusion about any actual estate."
@@ -137,6 +138,8 @@ describe('English family column 016 — anonymized inheritance and parental-righ
       read_time: '19 min read',
       categories: ['Taiwan Legal Information'],
       featured_image: featuredImage,
+      summary:
+        'Taiwan inheritance, residual-property claims, and parental rights over a minor are separate processes after death. Cross-border families should not merge them.',
       faq,
     });
     expect(parsed.data.faq).toHaveLength(4);
@@ -410,7 +413,7 @@ describe('English family column 016 — anonymized inheritance and parental-righ
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);
     expect(sourceSha256).toBe(
-      '4eba0a2d7d1f20abb1ce635a179c67975a452e5ba0472997f399ad2ab182b226',
+      '9825b684462af5c2c0d3c6263bd07277d6134ddac25be5b65e5f9eb163b55ad6',
     );
   });
 

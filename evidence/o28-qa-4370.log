@@ -1,0 +1,10 @@
+QA isolated runtime root (kept for forensics): /private/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/tseng-qa-server-VvO4XU
+QA isolation manifest: /private/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/tseng-law-qa/a1517bc6040d4ee2/port-4370.json
+   ▲ Next.js 15.5.21
+   - Local:        http://127.0.0.1:4370
+   - Network:      http://127.0.0.1:4370
+
+ ✓ Starting...
+ ✓ Ready in 193ms
+QA server attestation PASS: manifest promoted to ready
+QA isolation teardown PASS: canonical runtime/audit checksums unchanged

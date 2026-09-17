@@ -1,3 +1,7 @@
+import { headers } from 'next/headers';
+import { NextRequest, NextResponse } from 'next/server';
+import { notFound } from 'next/navigation';
+import { guardBuilderReadWithPermission } from '@/lib/builder/security/guard';
 import type { Metadata } from 'next';
 import EventsAdminClient from '@/components/builder/events/EventsAdminClient';
 import { listEvents } from '@/lib/builder/events/events-engine';
@@ -22,6 +26,12 @@ export async function generateMetadata(props: { params: Promise<{ locale: Locale
 }
 
 export default async function BuilderEventsAdminPage(props: { params: Promise<{ locale: Locale }> }) {
+  const request = new NextRequest('http://builder.internal/admin-builder', {
+    headers: new Headers(await headers()),
+  });
+  const access = await guardBuilderReadWithPermission(request, 'edit-pages');
+  if (access instanceof NextResponse) notFound();
+
   const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const events = (await listEvents()).filter((event) => event.locale === locale);

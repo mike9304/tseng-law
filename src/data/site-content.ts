@@ -2,6 +2,10 @@ import {
   getConsultationPublicEmail,
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
+import {
+  EN_HOME_HERO_SUBTITLE,
+  EN_HOME_SERVICES_DESCRIPTION,
+} from '@/data/en-service-scope';
 
 export type NavItem = {
   label: string;
@@ -97,6 +101,12 @@ export type SiteContent = {
     cta: NavItem;
     searchLabel: string;
     languageLabel: string;
+    mega: {
+      services: { description: string; viewAllLabel: string };
+      insights: { description: string; viewAllLabel: string };
+      videos: { description: string; viewAllLabel: string };
+      about: { description: string; viewAllLabel: string };
+    };
   };
   hero: {
     label: string;
@@ -237,7 +247,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
   ko: {
     meta: {
       title: '법무법인 호정 (昊鼎國際法律事務所)',
-      description: '대만 법률을 한국어로 명확하게 안내합니다. 한국어·일본어 상담 가능.'
+      description: '대만 법률을 한국어로 명확하게 안내합니다. 한국어·중국어·일본어·영어 상담 가능.'
     },
     nav: {
       primary: [
@@ -267,8 +277,8 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             href: '/ko/services'
           },
           {
-            title: '한국어·일본어 커뮤니케이션',
-            description: '한국어 및 일본어로 명확한 법률 설명을 제공합니다.',
+            title: '한국어·중국어·일본어·영어 커뮤니케이션',
+            description: '한국어·중국어·일본어·영어로 명확한 법률 설명을 제공합니다.',
             href: '/ko/about'
           }
         ],
@@ -299,17 +309,35 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       },
       cta: { label: '이메일 상담 신청', href: consultationMailto.ko },
       searchLabel: '검색',
-      languageLabel: '언어'
+      languageLabel: '언어',
+      mega: {
+        services: {
+          description: '대만 투자, 회사 설립, 소송 등 주요 업무 분야를 안내합니다.',
+          viewAllLabel: '전체 보기',
+        },
+        insights: {
+          description: '대만 법률 정보를 정리한 칼럼을 모았습니다.',
+          viewAllLabel: '전체 보기',
+        },
+        videos: {
+          description: '유튜브와 블로그에서 대만 법률 정보를 확인할 수 있습니다.',
+          viewAllLabel: '전체 보기',
+        },
+        about: {
+          description: '법인 소개, 변호사, 오시는 길을 안내합니다.',
+          viewAllLabel: '전체 보기',
+        },
+      },
     },
     hero: {
       label: 'TAIWAN LEGAL',
       title: '대만 법률을 한국어로 명확하게.',
       subtitle:
-        '한국어, 일본어 소통에 능통한 전문가들이 복잡한 대만 법률 문제를 명확하게 안내해드립니다.',
+        '한국어·중국어·일본어·영어로 소통하며 복잡한 대만 법률 문제를 명확하게 안내해드립니다.',
       typingPhrases: [
         '대만 투자, 법인설립의 시작',
         '대만 소송, 승소의 경험',
-        '대만 유일의 한국어 법률서비스',
+        '한국어로 상담 가능한 대만 법률서비스',
         '한국 기업의 대만 진출 파트너'
       ],
       searchPlaceholder: '어떻게 도와드릴까요?',
@@ -420,19 +448,20 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       label: 'ABOUT',
       title: '공식 프로필로 확인하는 국제 업무 기반',
       description:
-        '대만 4개 사무소와 중국어·한국어·일본어 실무 대응, 7개 주요 업무 분야, TOPIK 6급·JLPT N1 자격을 기준으로 정리했습니다.',
+        '당사무소는 한국어·중국어·일본어·영어 4개 언어로 대만 법률 상담을 제공합니다. 공식 변호사 프로필을 기준으로 대만 4개 사무소, 7개 주요 업무 분야, TOPIK 6급·JLPT N1 두 개의 최상위급 어학 자격을 정리했습니다.',
       highlightWords: [
         '대만 4개 사무소',
         '중국어',
         '한국어',
         '일본어',
+        '영어',
         '7개 주요 업무 분야',
         'TOPIK 6급',
         'JLPT N1'
       ],
       items: [
         { target: 4, label: '대만 사무소' },
-        { target: 3, label: '실무 대응 언어' },
+        { target: 4, label: '실무 대응 언어' },
         { target: 7, label: '주요 업무 분야' },
         { target: 2, label: '최상위급 어학 자격' }
       ]
@@ -579,14 +608,14 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         },
         {
           title: '민사소송·손해배상',
-          description: '계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 157만 대만달러 손해배상 판결을 이끌어낸 실적이 있으며, 외국인 의뢰인의 대만 소송 절차를 한국어로 밀착 지원합니다.',
+          description: '계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 157만 대만달러 손해배상 판결을 이끌어낸 실적이 있으며, 한국어로 한국 의뢰인을 밀착 지원하고 외국인 의뢰인의 대만 소송 절차는 사무소 상담 언어(한국어·중국어·일본어·영어)로 지원합니다.',
           href: '/ko/services#civil',
           details: [
             '손해배상 청구 소송 (인신사고·재산피해)',
             '계약 불이행·상사 분쟁 대응',
             '소비자 피해 구제 및 기업 상대 소송',
             '교통사고 과실 비율 분석 및 배상 청구',
-            '외국인 의뢰인 대상 한국어 소송 지원',
+            '외국인 의뢰인 소송 지원 (사무소 상담 언어: 한국어·중국어·일본어·영어)',
           ],
           relatedColumns: [
             { title: '대만 헬스장 부상 손해배상: 1심 사례·청구기한·증거·배상항목', slug: 'taiwan-gym-injury-lawsuit' },
@@ -634,7 +663,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             '형사 수사 단계 변호인 접견·자문',
             '피해자 대리 및 고소·고발 절차',
             '규제 위반 형사 리스크 사전 점검',
-            '외국인 피의자 한국어 통역 지원 소송',
+            '외국인 피의자·피고인 상담 대응 (사무소 상담 언어: 한국어·중국어·일본어·영어)',
           ]
         },
         {
@@ -928,7 +957,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       description: '사업·소송·법인설립 문의를 유형별로 빠르게 연결해드립니다.'
     },
     footer: {
-      note: '한국어·일본어 소통을 바탕으로 대만 전역의 자문과 분쟁 업무를 맡고 있습니다.',
+      note: '한국어·중국어·일본어·영어 소통을 바탕으로 대만 전역의 자문과 분쟁 업무를 맡고 있습니다.',
       columns: [
         {
           title: '사무소',
@@ -983,7 +1012,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
   'zh-hant': {
     meta: {
       title: '昊鼎國際法律事務所',
-      description: '深耕韓國、日本企業來台投資與訴訟需求，提供在地化台灣法律專業協助。'
+      description: '提供台灣在地與跨境法律服務，並具備協助韓國、日本企業來台投資與訴訟的實務經驗。'
     },
     nav: {
       primary: [
@@ -1014,7 +1043,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
           },
           {
             title: '跨境法律溝通',
-            description: '以韓語、日語及中文提供清楚的法律說明。',
+            description: '以韓語、日語、英語及中文提供清楚的法律說明。',
             href: '/zh-hant/about'
           }
         ],
@@ -1045,7 +1074,25 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       },
       cta: { label: '電子郵件諮詢', href: consultationMailto['zh-hant'] },
       searchLabel: '搜尋',
-      languageLabel: '語言'
+      languageLabel: '語言',
+      mega: {
+        services: {
+          description: '在台投資、公司設立、訴訟等主要服務領域。',
+          viewAllLabel: '查看全部',
+        },
+        insights: {
+          description: '彙整台灣法律資訊的專欄文章。',
+          viewAllLabel: '查看全部',
+        },
+        videos: {
+          description: '可在 YouTube 與部落格查看台灣法律資訊。',
+          viewAllLabel: '查看全部',
+        },
+        about: {
+          description: '介紹事務所、律師與據點資訊。',
+          viewAllLabel: '查看全部',
+        },
+      },
     },
     hero: {
       label: 'TAIWAN LEGAL',
@@ -1165,19 +1212,20 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       label: 'ABOUT',
       title: '從官方資料看跨境服務基礎',
       description:
-        '依官方律師簡介整理：4個台灣辦公據點、中文／韓文／日文3種業務溝通語言、7項主要執業領域，以及TOPIK 6級與JLPT N1兩項最高級別語言資格。',
+        '事務所提供中文／韓文／日文／英文4種語言的台灣法律諮詢。並依官方律師簡介整理：4個台灣辦公據點、7項主要執業領域，以及TOPIK 6級與JLPT N1兩項最高級別語言資格。',
       highlightWords: [
         '4個台灣辦公據點',
         '中文',
         '韓文',
         '日文',
+        '英文',
         '7項主要執業領域',
         'TOPIK 6級',
         'JLPT N1'
       ],
       items: [
         { target: 4, label: '台灣辦公據點' },
-        { target: 3, label: '業務溝通語言' },
+        { target: 4, label: '業務溝通語言' },
         { target: 7, label: '主要執業領域' },
         { target: 2, label: '最高級別語言資格' }
       ]
@@ -1301,7 +1349,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       items: [
         {
           title: '投資·公司設立',
-          description: '從公司型態選擇（子公司、分公司、有限公司）到投審會審查、資本匯入、銀行開戶、營業場所確認，全程協助韓國企業落地台灣。涵蓋化妝品 PIF 登錄、物流業運輸執照等特殊行業許可，以及解散清算程序。',
+          description: '從公司型態選擇（子公司、分公司、有限公司）到投審會審查、資本匯入、銀行開戶、營業場所確認，全程協助外國投資人（包含韓國企業）在台落地。涵蓋化妝品產品登錄與PIF建立、保存，物流業運輸執照等特殊行業許可，以及解散清算程序。',
           href: '/zh-hant/services#investment',
           details: [
             '公司型態比較：子公司、分公司、有限公司',
@@ -1324,14 +1372,14 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         },
         {
           title: '民事訴訟·損害賠償',
-          description: '處理契約糾紛、損害賠償、消費者權益等民事案件。曾代理韓國留學生健身房受傷案，於一審獲判新台幣 157 萬元賠償。以中韓雙語全程支援外國當事人之台灣訴訟程序。',
+          description: '處理契約糾紛、損害賠償、消費者權益等民事案件。曾代理韓國留學生健身房受傷案，於一審獲判新台幣 157 萬元賠償。以事務所諮詢語言（中文、韓文、日文、英文）全程支援外國當事人之台灣訴訟程序。',
           href: '/zh-hant/services#civil',
           details: [
             '人身傷害與財產損害賠償訴訟',
             '契約違約與商務糾紛應對',
             '消費者保護與企業訴訟',
             '交通事故過失比例分析與求償',
-            '外國當事人韓語訴訟支援',
+            '外國當事人訴訟支援（事務所諮詢語言：中文、韓文、日文、英文）',
           ],
           relatedColumns: [
             { title: '台灣健身房受傷求償：一審案例、期限、證據與賠償項目', slug: 'taiwan-gym-injury-lawsuit' },
@@ -1341,7 +1389,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
         },
         {
           title: '家事訴訟',
-          description: '處理離婚、財產分配、親權、繼承等家事案件。因應韓台跨國婚姻增加，協助協議離婚程序、法院調解與裁判離婚，外籍配偶戶籍登記問題，以及法定繼承順位與剩餘財產分配請求。',
+          description: '處理離婚、財產分配、親權、繼承等家事案件。因應跨國婚姻增加，協助協議離婚程序、法院調解與裁判離婚，外籍配偶戶籍登記問題，以及法定繼承順位與剩餘財產分配請求。',
           href: '/zh-hant/services#family',
           details: [
             '協議離婚：二位證人及戶政登記',
@@ -1363,7 +1411,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             '依新舊制年資分段計算資遣費並檢視法定上限',
             '勞工依第14條終止契約：法定事由、期間限制與資遣費',
             '最低服務年限約定：擇一法定基礎、合理範圍、費用返還及責任歸屬審查',
-            '韓國企業在台僱用相關勞動法諮詢',
+            '在台外國企業（含韓國企業）僱用相關勞動法諮詢',
           ],
           relatedColumns: [
             { title: '台灣資遣費制度比較', slug: 'taiwan-labor-severance-law' },
@@ -1379,7 +1427,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
             '偵查階段律師接見與諮詢',
             '被害人代理與告訴程序',
             '法規違反刑事風險預檢',
-            '外籍被告韓語口譯訴訟支援',
+            '外籍被告與被害人諮詢對應（事務所諮詢語言：中文、韓文、日文、英文）',
           ]
         },
         {
@@ -1397,7 +1445,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
     },
     homeAttorney: {
       label: 'ABOUT',
-      title: '曾雋崴律師，韓國、台灣跨境法律的實務夥伴',
+      title: '曾雋崴律師，台灣在地與跨境法律的實務夥伴',
       summary: '具備法院訴訟實務與企業法律顧問經驗，曾為 SBS 新聞提供法律意見與解說，並持續透過 WEI Lawyer 發布法律資訊。',
       ctaLabel: '查看律師簡介'
     },
@@ -1678,7 +1726,7 @@ const baseSiteContent: Record<'ko' | 'zh-hant', SiteContent> = {
       description: '依案件類型安排投資、訴訟與公司設立諮詢流程。'
     },
     footer: {
-      note: '深耕韓國、日本跨境法律事務，承辦台灣各地的法律顧問與爭議案件。',
+      note: '承辦台灣各地的法律顧問與爭議案件，並具備韓國、日本跨境案件的實務經驗。',
       columns: [
         {
           title: '事務所',
@@ -1744,11 +1792,11 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       ...base.nav,
       primary: [
         { label: 'Services', href: '/en/services' },
-        { label: 'Lawyers', href: '/en/lawyers' },
+        { label: 'Our Team', href: '/en/lawyers' },
         { label: 'Pricing', href: '/en/pricing' },
-        { label: 'Columns', href: '/en/columns' },
+        { label: 'Insights', href: '/en/columns' },
         { label: 'Media Center', href: '/en/videos' },
-        { label: 'Directions', href: '/en/contact#offices' }
+        { label: 'Locations', href: '/en/contact#offices' }
       ],
       servicesMenu: {
         ...base.nav.servicesMenu,
@@ -1779,9 +1827,9 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       },
       insightsMenu: {
         ...base.nav.insightsMenu,
-        label: 'Columns',
+        label: 'Insights',
         categories: [
-          { label: 'Columns', href: '/en/columns' },
+          { label: 'Insights', href: '/en/columns' },
           { label: 'YouTube Channel', href: '/en/videos' },
           { label: 'FAQ', href: '/en/faq' },
           { label: 'Service Guide', href: '/en/services' },
@@ -1794,23 +1842,40 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
             href: '/en/videos'
           },
           {
-            title: 'Blog & Columns',
+            title: 'Blog & Insights',
             description: 'Browse legal insights and case-focused explanations.',
             href: '/en/columns'
           }
         ],
-        topics: ['Columns', 'WEI Lawyer', 'Taiwan Law', 'Consultation Process']
+        topics: ['Insights', 'WEI Lawyer', 'Taiwan Law', 'Consultation Process']
       },
       cta: { label: 'Email Consultation', href: consultationMailto.en },
       searchLabel: 'Search',
-      languageLabel: 'Language'
+      languageLabel: 'Language',
+      mega: {
+        services: {
+          description: 'Taiwan investment, company setup, litigation, and related practice areas.',
+          viewAllLabel: 'View all',
+        },
+        insights: {
+          description: 'Legal writing on Taiwan company setup, disputes, and related topics.',
+          viewAllLabel: 'View all',
+        },
+        videos: {
+          description: 'Taiwan legal topics on the firm YouTube channel and blog.',
+          viewAllLabel: 'View all',
+        },
+        about: {
+          description: 'Firm overview, the international team, and office locations.',
+          viewAllLabel: 'View all',
+        },
+      },
     },
     hero: {
       ...base.hero,
       label: 'TAIWAN LEGAL',
       title: 'Taiwan Law, Clearly Explained.',
-      subtitle:
-        'Our multilingual legal team provides practical guidance for Taiwan investment, disputes, and cross-border matters.',
+      subtitle: EN_HOME_HERO_SUBTITLE,
       typingPhrases: [
         'Start Your Taiwan Expansion with Confidence',
         'Practical Litigation Experience in Taiwan',
@@ -1824,14 +1889,14 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       quickLinksLabel: 'Quick Links',
       quickLinks: [
         { label: 'Services', href: '/en/services' },
-        { label: 'Lawyers', href: '/en/lawyers' },
-        { label: 'Columns', href: '/en/columns' },
+        { label: 'International Team', href: '/en/lawyers' },
+        { label: 'Insights', href: '/en/columns' },
         { label: 'Videos', href: '/en/videos' },
         { label: 'FAQ', href: '/en/faq' }
       ],
       secondaryLinks: [
         { label: 'Email Consultation', href: consultationMailto.en },
-        { label: 'View Columns', href: '/en/columns' }
+        { label: 'View Insights', href: '/en/columns' }
       ]
     },
     heroHighlights: {
@@ -1928,10 +1993,11 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       label: 'ABOUT',
       title: 'Cross-Border Practice at a Glance',
       description:
-        'Based on the official attorney profile: four Taiwan offices, three working languages—Chinese, Korean, and Japanese—seven principal practice areas, and two top-level language qualifications, TOPIK Level 6 and JLPT N1. Consultations are also available in English.',
+        'The firm provides Taiwan legal services in four languages: English, Chinese, Korean, and Japanese. Based on the official attorney profile: four Taiwan offices, seven principal practice areas, and two top-level language qualifications, TOPIK Level 6 and JLPT N1.',
       highlightWords: [
         'four Taiwan offices',
-        'three working languages',
+        'four languages',
+        'English',
         'Chinese',
         'Korean',
         'Japanese',
@@ -1941,7 +2007,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       ],
       items: [
         { target: 4, label: 'Taiwan Offices' },
-        { target: 3, label: 'Working Languages' },
+        { target: 4, label: 'Working Languages' },
         { target: 7, label: 'Principal Practice Areas' },
         { target: 2, label: 'Top-Level Language Qualifications' }
       ]
@@ -2064,7 +2130,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       ...base.services,
       label: 'SERVICES',
       title: 'Main Services',
-      description: 'Structured support for investment, litigation, and advisory matters in Taiwan.',
+      description: EN_HOME_SERVICES_DESCRIPTION,
       items: [
         {
           title: 'Investment & Incorporation',
@@ -2098,7 +2164,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
             'Breach-of-contract and commercial dispute representation',
             'Consumer remedies and litigation against businesses',
             'Fault analysis and compensation claims after traffic accidents',
-            'Multilingual litigation support for foreign clients'
+            'Litigation support for foreign clients, with client communication in English, Chinese, Korean, or Japanese'
           ],
           relatedColumns: [
             { title: 'Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages', slug: 'taiwan-gym-injury-lawsuit' },
@@ -2124,13 +2190,13 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         },
         {
           title: 'Labor & Employment',
-          description: 'Advice on dismissal, severance, and employment-contract disputes in Taiwan. We separate the legal ground for termination from notice, severance, and time limits; calculate new- and old-system service separately; and assess worker-initiated termination, the statutory basis and reasonableness of minimum-service-period clauses, repayment, and attribution from the governing contract and evidence.',
+          description: 'Professional legal support for dismissal, severance, and employment-contract disputes in Taiwan, including questions that arise from minimum-service commitments.',
           href: '/en/services#labor',
           details: [
             'Severance calculations under Taiwan’s new and old systems',
             'Worker-initiated termination under Article 14: statutory grounds, time limits, and severance',
             'Minimum-service-period clauses: alternative statutory bases, reasonable scope, repayment, and attribution',
-            'Taiwan employment-law advice for international businesses'
+            'Taiwan employment-law advice for international employers, including Korean businesses'
           ],
           relatedColumns: [
             { title: 'Taiwan Severance Law', slug: 'taiwan-labor-severance-law' },
@@ -2146,7 +2212,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
             'Counsel and representation during criminal investigations',
             'Victim representation and criminal complaint procedures',
             'Advance assessment of regulatory and criminal exposure',
-            'Multilingual interpretation support for foreign defendants'
+            'Support for foreign defendants, with firm consultations available in English, Chinese, Korean, and Japanese'
           ]
         },
         {
@@ -2440,7 +2506,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
           title: 'Firm',
           links: [
             { label: 'About', href: '/en/about' },
-            { label: 'Lawyers', href: '/en/lawyers' },
+            { label: 'International Team', href: '/en/lawyers' },
             { label: 'Email Consultation', href: consultationMailto.en }
           ]
         },
@@ -2455,7 +2521,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
         {
           title: 'Resources',
           links: [
-            { label: 'Columns', href: '/en/columns' },
+            { label: 'Insights', href: '/en/columns' },
             { label: 'Videos', href: '/en/videos' },
             { label: 'Questions', href: '/en/faq' }
           ]
@@ -2481,7 +2547,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
       placeholder: 'How can we help you?',
       tabs: [
         { id: 'services', label: 'Services' },
-        { id: 'insights', label: 'Columns' },
+        { id: 'insights', label: 'Insights' },
         { id: 'videos', label: 'Videos' },
         { id: 'faq', label: 'FAQ' }
       ],
@@ -2504,7 +2570,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       ...base.nav,
       primary: [
         { label: '取扱業務', href: '/ja/services' },
-        { label: '弁護士紹介', href: '/ja/lawyers' },
+        { label: '日本チーム', href: '/ja/lawyers' },
         { label: '費用案内', href: '/ja/pricing' },
         { label: 'コラム', href: '/ja/columns' },
         { label: 'メディアセンター', href: '/ja/videos' },
@@ -2563,7 +2629,25 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       },
       cta: { label: 'メールで相談', href: consultationMailto.ja },
       searchLabel: '検索',
-      languageLabel: '言語'
+      languageLabel: '言語',
+      mega: {
+        services: {
+          description: '台湾での投資・会社設立・訴訟など、主な取扱業務をご案内します。',
+          viewAllLabel: 'すべて見る',
+        },
+        insights: {
+          description: '台湾法に関する解説コラムをまとめています。',
+          viewAllLabel: 'すべて見る',
+        },
+        videos: {
+          description: 'YouTubeとブログで台湾の法律情報をご覧いただけます。',
+          viewAllLabel: 'すべて見る',
+        },
+        about: {
+          description: '事務所の概要、担当チーム、アクセスをご案内します。',
+          viewAllLabel: 'すべて見る',
+        },
+      },
     },
     hero: {
       ...base.hero,
@@ -2584,7 +2668,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       quickLinksLabel: 'クイックリンク',
       quickLinks: [
         { label: '取扱業務', href: '/ja/services' },
-        { label: '弁護士', href: '/ja/lawyers' },
+        { label: '日本チーム', href: '/ja/lawyers' },
         { label: 'コラム', href: '/ja/columns' },
         { label: '動画', href: '/ja/videos' },
         { label: 'FAQ', href: '/ja/faq' }
@@ -2688,9 +2772,11 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       label: 'ABOUT',
       title: '公式プロフィールで見る国際業務の基盤',
       description:
-        '公式弁護士プロフィールに基づき、台湾4拠点、中国語・韓国語・日本語の3言語、7つの主要取扱分野、TOPIK 6級・JLPT N1の2つの最上位級資格をまとめています。英語でのご相談にも対応しています。',
+        '当事務所では英語・中国語・韓国語・日本語の4言語で台湾の法律相談に対応しています。公式弁護士プロフィールに基づき、台湾4拠点、7つの主要取扱分野、TOPIK 6級・JLPT N1の2つの最上位級資格をまとめています。',
       highlightWords: [
         '台湾4拠点',
+        '4言語',
+        '英語',
         '中国語',
         '韓国語',
         '日本語',
@@ -2700,7 +2786,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
       ],
       items: [
         { target: 4, label: '台湾の事務所' },
-        { target: 3, label: '業務対応言語' },
+        { target: 4, label: '業務対応言語' },
         { target: 7, label: '主要取扱分野' },
         { target: 2, label: '最上位級の語学資格' }
       ]
@@ -3201,7 +3287,7 @@ function buildJapaneseSiteContent(base: SiteContent): SiteContent {
           title: '事務所',
           links: [
             { label: '事務所紹介', href: '/ja/about' },
-            { label: '弁護士', href: '/ja/lawyers' },
+            { label: '日本チーム', href: '/ja/lawyers' },
             { label: 'メールで相談', href: consultationMailto.ja }
           ]
         },

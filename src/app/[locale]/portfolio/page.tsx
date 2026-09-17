@@ -12,6 +12,7 @@ import {
 } from '@/lib/builder/portfolio/portfolio-engine';
 import { normalizeLocale, locales, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
+import PublicUnavailableState, { publicUnavailableMetadata } from '@/components/PublicUnavailableState';
 import styles from './PortfolioPublic.module.css';
 
 export const dynamic = 'force-dynamic';
@@ -45,6 +46,9 @@ const copy: Record<Locale, { title: string; description: string; eyebrow: string
 
 export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const params = await props.params;
+  if ((params.locale as string) === 'ja') {
+    return publicUnavailableMetadata('ja', 'portfolio');
+  }
   const locale = normalizeLocale(params.locale);
   return buildSeoMetadata({
     locale,
@@ -62,8 +66,11 @@ export default async function PortfolioPage(
     searchParams?: Promise<{ category?: string }>;
   }
 ) {
-  const searchParams = await props.searchParams;
   const params = await props.params;
+  if ((params.locale as string) === 'ja') {
+    return <PublicUnavailableState locale="ja" kind="portfolio" />;
+  }
+  const searchParams = await props.searchParams;
   const locale = normalizeLocale(params.locale);
   const activeCategory = searchParams?.category?.trim() || '';
   const projects = sortProjects(
@@ -75,7 +82,7 @@ export default async function PortfolioPage(
   );
 
   return (
-    <main className={styles.page} data-public-portfolio-page="true">
+    <section className={styles.page} data-public-portfolio-page="true">
       <section className={styles.hero}>
         <div className={styles.inner}>
           <p className={styles.eyebrow} data-public-portfolio-eyebrow="true">
@@ -136,6 +143,6 @@ export default async function PortfolioPage(
           </section>
         )}
       </div>
-    </main>
+    </section>
   );
 }

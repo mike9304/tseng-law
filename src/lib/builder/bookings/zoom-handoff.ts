@@ -13,7 +13,7 @@ export async function maybeCreateBookingZoomLink(args: {
   customerName: string;
   customerEmail?: string;
   timezone?: string;
-}): Promise<{ meetingLink?: string; officeTimezone: string } | null> {
+}): Promise<{ meetingLink?: string; officeTimezone: string; meetingId: string | null } | null> {
   if (!meetingModeRequiresZoom(args.service.meetingMode)) return null;
 
   const availability: StaffAvailability | null = args.timezone
@@ -29,6 +29,6 @@ export async function maybeCreateBookingZoomLink(args: {
     customerEmail: args.customerEmail,
   });
   return meeting.ok
-    ? { meetingLink: meeting.meetingLink, officeTimezone }
-    : { officeTimezone };
+    ? { meetingLink: meeting.meetingLink, officeTimezone, meetingId: meeting.meetingId }
+    : { officeTimezone, meetingId: null };
 }

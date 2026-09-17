@@ -6,11 +6,14 @@ import SmartLink from '@/components/SmartLink';
 import { pageCopy } from '@/data/page-copy';
 import { siteContent } from '@/data/site-content';
 import { buildSeoMetadata } from '@/lib/seo';
-import { loadSearchIndex } from '@/lib/builder/search/index-storage';
-import { buildSearchIndex } from '@/lib/builder/search/index-builder';
-import { collectAllSearchDocs } from '@/lib/builder/search/source-collector';
+import { loadFreshSearchIndex } from '@/lib/builder/search/index-runtime';
+import { retainPublicPageHits } from '@/lib/builder/search/public-eligibility';
 import { runSearchQuery } from '@/lib/builder/search/query-engine';
+import { augmentStaticDocs } from '@/lib/builder/search/augment-static-docs';
+import { getPublicIntentSearchDocs } from '@/lib/builder/search/public-intent-docs';
 import type { SearchDocKind } from '@/lib/builder/search/types';
+import { countPublicSearchDocsByKind, visiblePublicSearchKindIds } from './visible-search-kinds';
+import styles from './SearchPage.module.css';
 
 export async function generateMetadata(props: { params: Promise<{ locale: SiteLocale }> }): Promise<Metadata> {
   const params = await props.params;
@@ -58,17 +61,13 @@ function normalizeSearchQuery(value: string): string {
 function searchKindLabel(kind: SearchDocKind | 'all', locale: SiteLocale): string {
   if (kind === 'all') return locale === 'ko' ? '전체' : locale === 'zh-hant' ? '全部' : locale === 'ja' ? 'すべて' : 'All';
   if (kind === 'page') return locale === 'ko' ? '페이지' : locale === 'zh-hant' ? '頁面' : locale === 'ja' ? 'ページ' : 'Pages';
-  if (kind === 'blog') return locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '洞見' : locale === 'ja' ? 'コラム' : 'Columns';
+  if (kind === 'blog') return locale === 'ko' ? '칼럼' : locale === 'zh-hant' ? '洞見' : locale === 'ja' ? 'コラム' : 'Insights';
   if (kind === 'faq') return locale === 'ko' ? '자주 묻는 질문' : locale === 'zh-hant' ? '常見問題' : locale === 'ja' ? 'よくある質問' : 'FAQ';
   return locale === 'ko' ? '포트폴리오' : locale === 'zh-hant' ? '作品集' : locale === 'ja' ? 'ポートフォリオ' : 'Portfolio';
 }
 
 function resultKindLabel(kind: SearchDocKind, locale: SiteLocale): string {
   return searchKindLabel(kind, locale);
-}
-
-async function loadNativeSearchIndex() {
-  return (await loadSearchIndex()) ?? buildSearchIndex(await collectAllSearchDocs('default'));
 }
 
 export default async function SearchPage(
@@ -84,7 +83,6 @@ export default async function SearchPage(
   const content = siteContent[locale];
   const query = normalizeSearchQuery(searchParams.q ?? '');
   const requestedTab = searchParams.kinds?.split(',')[0]?.trim() || searchParams.tab || 'all';
-  const activeKind = SEARCH_TAB_KIND[requestedTab] ?? 'all';
   const suggestedLabel = locale === 'ko' ? '추천' : locale === 'zh-hant' ? '建議' : locale === 'ja' ? 'おすすめ' : 'Suggested';
   const emptyLabel = locale === 'ko'
     ? '검색 결과가 없습니다.'
@@ -93,15 +91,29 @@ export default async function SearchPage(
       : locale === 'ja'
         ? '検索結果が見つかりませんでした。'
         : 'No search results found.';
-  const index = await loadNativeSearchIndex();
+  const initialLabel = locale === 'ko'
+    ? '검색어를 입력하거나 아래 추천 주제를 선택해 주세요.'
+    : locale === 'zh-hant'
+      ? '請輸入關鍵字，或選擇下方的建議主題。'
+      : locale === 'ja'
+        ? 'キーワードを入力するか、下のおすすめのテーマを選んでください。'
+        : 'Enter a keyword or choose a suggested topic below.';
+  const nativeIndex = (await loadFreshSearchIndex()).index;
+  const index = augmentStaticDocs(nativeIndex, locale, getPublicIntentSearchDocs(locale));
+  const kindCounts = countPublicSearchDocsByKind(index.byLocale[locale] ?? []);
+  const visibleKindIds = visiblePublicSearchKindIds(kindCounts);
+  const activeKind = SEARCH_TAB_KIND[requestedTab] ?? 'all';
   const hits = query
-    ? runSearchQuery({
-        index,
-        query,
+    ? await retainPublicPageHits(
+        runSearchQuery({
+          index,
+          query,
+          locale,
+          limit: 50,
+          kinds: activeKind === 'all' ? undefined : [activeKind],
+        }),
         locale,
-        limit: 50,
-        kinds: activeKind === 'all' ? undefined : [activeKind],
-      })
+      )
     : [];
 
   const results = hits.slice(0, 12);
@@ -112,18 +124,15 @@ export default async function SearchPage(
       : locale === 'ja'
         ? `全 ${hits.length} 件`
         : `Total ${hits.length}`;
-  const tabs: Array<{ id: SearchDocKind | 'all'; label: string }> = [
-    { id: 'all', label: searchKindLabel('all', locale) },
-    { id: 'page', label: searchKindLabel('page', locale) },
-    { id: 'blog', label: searchKindLabel('blog', locale) },
-    { id: 'faq', label: searchKindLabel('faq', locale) },
-    { id: 'portfolio', label: searchKindLabel('portfolio', locale) },
-  ];
+  const tabs: Array<{ id: SearchDocKind | 'all'; label: string }> = visibleKindIds.map((id) => ({
+    id,
+    label: searchKindLabel(id, locale),
+  }));
 
   return (
     <>
       <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description}>
-        <form className="search-bar" action={`/${locale}/search`} method="get">
+        <form className={`search-bar ${styles.searchBar}`} action={`/${locale}/search`} method="get">
           <input
             className="search-input"
             type="search"
@@ -139,7 +148,7 @@ export default async function SearchPage(
           </button>
         </form>
       </PageHeader>
-      <section className="section search-results-section">
+      <section className={`section search-results-section ${styles.results}`}>
         <div className="container">
           <div className="search-tabs">
             {tabs.map((tab) => (
@@ -152,9 +161,11 @@ export default async function SearchPage(
               </Link>
             ))}
           </div>
-          <div className="search-results-total">{totalLabel}</div>
+          {query && <div className="search-results-total">{totalLabel}</div>}
           <div className="list-rows">
-            {results.length ? (
+            {!query ? (
+              <p className="search-empty" data-search-initial="true">{initialLabel}</p>
+            ) : results.length ? (
               results.map((hit) => (
                 <div key={hit.doc.id} className="list-row">
                   <div className="list-meta">{resultKindLabel(hit.doc.kind, locale)}</div>

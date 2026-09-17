@@ -1,0 +1,12 @@
+# WO-M3-review — ar 안내 콘텐츠 독립 검토 (Grok 4.6, 읽기+REVIEW 파일만)
+## 대상 (워크트리 ~/Projects/tseng-law-mena-20260916)
+src/data/international-guidance-content.ts 의 `ar` 블록(guidanceContent.ar: nav·home·pages 10키·faqs 8), src/data/international-guidance-answers.ts 의 ar 6답변, src/data/international-guidance-offices.ts·international-guidance-team.ts·international-inquiry-copy.ts 의 ar 값, src/lib/llms-txt.ts GUIDANCE_LLMS_NOTICES.ar. 대조 원본 = 같은 파일들의 en·vi 블록.
+산출: docs/seo/reviews/M3-REVIEW.md 하나. 원본 수정 금지. Bash 금지(읽기·grep만).
+## 항목 (PASS/FAIL + 파일:줄 + 수정안)
+1. **사실 일치**: ar 문장이 en/vi 원문에 없는 사실·법률 주장·숫자를 추가했는가(추가 0이어야 함). 누락된 핵심 사실(상담 언어 4개·수임료 비공표·이메일·사무소 주소·개인정보 보관)은 없는가.
+2. **MSA 품질**: 12문장 이상 샘플 — 문법·철자·hamza·타 마르부타·이중 표기, 걸프·이집트 독자 모두에게 자연스러운지, 법률·행정 용어(تأسيس شركة·تحكيم·تنفيذ الأحكام·تصريح إقامة·وزارة) 정확성. 교정문 제시.
+3. **언어 계약**: 아랍어 상담·통역 가능 암시 0. 상담 언어 4개 문장 존재 위치 확인. 언어명 `العربية/عربي`와 상담 어휘가 한 문장에 결합해 오해를 낳는 곳.
+4. **광고 규정**: 승소율·보장·최고/유일·과장 표현 0.
+5. **RTL·서식**: 서양 숫자·괄호·구두점 방향, 라틴 고유명(Hovering, MOEA, ARC 등)의 병기 방식 일관성.
+6. **문화 적응**: 호칭·인사·기관 표기가 아랍권 독자에게 적절한지, 부적절한 지역 특정(예: 특정 국가 관습 전제) 없는지.
+마지막 줄: 총평 PASS/FAIL 과 FAIL 건수.

@@ -1,0 +1,26 @@
+# WO-M3B-FLIP — ar 잔여 문장 + 로케일 플립(콘텐츠 계층에 ar 등록) (Opus 5)
+
+## 공통 규칙
+작업트리 ~/Projects/tseng-law-mena-20260916 만(브랜치 mena/ar-guidance-20260916, 라우팅 merge 완료 1035b851). 커밋·build·playwright·전체 스위트 금지(지정 vitest만). 언어 계약: ar 안내 언어, 상담·availableLanguage 4개(EN/ZH-Hant/JA/KO) **불변** — seo.ts GUIDANCE_CONSULTATION_LANGUAGES·intake-language-contract.ts CONSULTATION_LANGUAGES·guidance-home-design-parity toHaveLength(4)는 건드리지 않는다. 광고 규정. 새 법률 주장 0. 보고 형식(변경 파일·명령+출력·PASS/FAIL·미해결).
+
+## 배경
+docs/seo/mena-plan/AR-LOCALE-INVENTORY.md(§2·§4; 단 #40 "inquiry-copy zh-hant 없음"은 오류—무시) + son7-b9 설계: `ar`는 현재 ROUTED_ONLY_LOCALES(라우팅 계층)에만 있고 콘텐츠 계층(GUIDANCE_LOCALES_4/PUBLIC_LOCALES_8)에는 없음. 이 WO가 **플립 1커밋 분량**을 만든다(커밋은 총괄).
+
+## 1. 잔여 아랍어 문장(MSA, 상담 언어 4개 계약)
+- `src/lib/llms-txt.ts` GUIDANCE_LLMS_NOTICES.ar (consultationNotice/discoveryNotice/confidentialNotice — vi 문장을 사실 그대로 아랍어로), GUIDANCE_CATALOG_LANGUAGE_NAMES.ar='العربية'
+- `src/lib/team-name.ts` TEAM_NAME_BY_LOCALE.ar (en 팀명 "English Team" 유지 결정(9/15)과 같은 방식 — 안내 로케일 vi 값의 패턴을 따름)
+- decorative-video-controls ar 라벨 3개, guidance-privacy-label ar 라벨
+- `src/lib/consultation/intake-language-contract.ts` PUBLIC_INQUIRY_LOCALES 에 'ar' (CONSULTATION_LANGUAGES 불변)
+- `src/data/__tests__/guidance-disclosure-parity.test.ts` ElementMarkers 15 테이블에 ar 정규식(콘텐츠 실제 문구 기준), `src/data/__tests__/guidance-office-facts-sync.test.ts` CLIENT_COUNTRY_TERMS.ar
+## 2. 플립(인벤토리 §2 H/M 행 전부)
+- `src/lib/public-guidance.ts`: GUIDANCE_LOCALES_4 → ar 포함(이름은 유지하거나 GUIDANCE_LOCALES 로 개명 시 참조 전부 갱신), PUBLIC_LOCALES_8 → ar 포함, isGuidanceLocale4, PUBLIC_LANGUAGE_AUTONYMS.ar='العربية', ROUTED_ONLY_LOCALES=[] (ROUTED_ONLY_LANGUAGE_AUTONYMS 정리), hreflang 태그 'ar', x-default 규칙 동일(en)
+- `src/lib/seo.ts` PublicSeoLocale·publicDocumentLanguage('ar')·guidanceOpenGraphLocale.ar='ar_AR' (Record<string> 조용한 폴백 함정 — 명시 키 필수)
+- `src/lib/column-locales.ts` COLUMN_CONTENT_DIR_BY_LOCALE.ar='src/content/columns-ar' (디렉터리 없어도 columns.ts가 null 반환함을 테스트로 단언)
+- `src/app/[locale]/llms.txt/route.ts` contentLanguage.ar='ar', `src/app/sitemap.ts` 로케일 리터럴(:83), `src/middleware.ts` matcher에 ar(라우팅 브랜치가 이미 넣었으면 확인만), `src/app/fonts.ts` ar 분기(라우팅 브랜치 확인), `src/lib/llms-txt.ts:354` length 가드 4→5(또는 상수 참조)
+- `scripts/verify-multilingual-live.mjs`·`scripts/check-guidance-country-mentions.mjs` 로케일 목록에 ar
+- 8로케일 단언 테스트(인벤토리 §4, 약 31파일): 카운트 8→9·목록에 ar. 단 toHaveLength(4)(상담 언어)는 제외.
+## 완료 기준
+1. `npx tsc --noEmit` 0
+2. `npm run lint` 0
+3. vitest: src/lib/__tests__/public-guidance.test.ts · guidance-ar-content · international-guidance-answers · guidance-jsonld · multilingual-seo · src/app/__tests__/sitemap.test.ts · 'src/app/[locale]/__tests__/llms-discovery.test.tsx' · 'src/app/[locale]/llms.txt/__tests__/route.test.ts' · src/middleware.test.ts · src/data/__tests__/guidance-disclosure-parity.test.ts · guidance-office-facts-sync · guidance-team-bios · src/components/__tests__/guidance-page-design-parity.test.tsx · guidance-home-design-parity.test.tsx 전부 통과(출력)
+4. 보고: 변경 파일 전체 목록, 갱신한 테스트 파일 수, GUIDANCE_CONSULTATION_LANGUAGES/CONSULTATION_LANGUAGES 무변경 grep 증거, 미해결

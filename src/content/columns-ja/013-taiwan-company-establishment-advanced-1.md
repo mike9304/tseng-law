@@ -1,7 +1,7 @@
 ---
 title: "台湾会社設立―応用編―1"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-1"
-lastmod: "2026-07-24"
+lastmod: "2026-09-10"
 date_display: "2025年9月13日"
 read_time: "約4分"
 categories:
@@ -49,7 +49,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 投資計画書の作成と会社の登記住所探しを同時に進めることです。
 
-投資審議司は、投資承認後1年以内に資本金を送金するよう定めているため、
+外国人投資条例（外國人投資條例）第9条により、承認された出資は主務機関が定めた期限（核定期限）内に全額到達しなければならず、その期限は個別の承認文書で確認する必要があります（実務上は1年前後と定められることが多いです）。
 
 会社の所在地を見つけて賃貸借契約を締結した後、
 
@@ -120,5 +120,6 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 ---
 
 > 関連記事:
-> - [台湾会社設立の総合ガイド―手続・費用・法人形態の総まとめ](/ja/guides/taiwan-company-setup)
-> - [台湾法人設立・会社設立の弁護士案内](/ja/taiwan-company-setup-lawyer)
+> - [台湾会社設立の総合ガイド―手続・費用・法人形態の総まとめ](/ko/guides/taiwan-company-setup)
+> - [韓国語対応可能な台湾の弁護士](/ko/korean-lawyer-in-taiwan)
+> - [台湾法人設立・会社設立の弁護士案内](/ko/taiwan-company-setup-lawyer)

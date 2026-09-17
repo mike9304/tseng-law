@@ -1,5 +1,6 @@
 ---
 title: "Setting Up a Company in Taiwan: Subsidiaries, Branches, Representative Offices, Procedures, and Work Permits"
+seoTitle: "Setting Up a Company in Taiwan: Subsidiaries, Branches, Work Permits"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-basics"
 lastmod: "2026-07-25"
 date_display: "September 13, 2025"
@@ -7,6 +8,7 @@ read_time: "15 min read"
 categories:
   - "Taiwan Company Formation"
 featured_image: "../images/001-taiwan-company-establishment-basics/featured-01.jpg"
+summary: "Foreign companies and individuals may enter Taiwan through a subsidiary, branch, or representative office. Company setup does not grant a work permit or ARC."
 faq:
   - q: "What is the difference between a subsidiary, branch, and representative office when establishing a business in Taiwan?"
     a: "A Taiwan subsidiary (limited company or company limited by shares) is a separate legal entity under Taiwan law. A Taiwan branch of a foreign company is not a separate legal entity; it operates in Taiwan as part of the foreign company. A representative office may not conduct profit-making business in Taiwan; its activities are limited to liaison work and legal acts on behalf of the foreign company. Liability, tax treatment, licensing requirements, and eligibility for government procurement must be evaluated based on the chosen structure and the circumstances."
@@ -131,7 +133,7 @@ The treaty’s reduced rates do not apply automatically merely because the treat
 - [Taiwan MOEA Administration of Commerce — Company and Business Registration](https://gcis.nat.gov.tw/mainNew/English/index.jsp)
 - [Taiwan Workforce Development Agency — Work Permit Manual for Managers of Foreign-Invested Businesses](https://ws.wda.gov.tw/Download.ashx?n=VGhlIERpcmVjdG9yIG9yIE1hbmFnZXIgb2YgYW4gQXBwcm92ZWQgQnVzaW5lc3MgSW52ZXN0ZWQgb3IgRXN0YWJsaXNoZWQgYnkgT3ZlcnNlYXMgQ2hpbmVzZSBvciBGb3JlaWduZXIocykoU09QIE1hbnVhbCkucGRm&u=LzAwMS9VcGxvYWQvMzIxL3JlbGZpbGUvMC8yNTE1LzUzMWMyZTM0LTI1NmYtNGI5MC1iMzAzLTEzNWI4MTQxYTk5MC5wZGY%3D)
 - [Taiwan Ministry of Finance — Taiwan–Korea Income Tax Agreement](https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10)
-- [Taiwan Laws & Regulations Database — General Business Tax Rate](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10&pcode=G0340080)
+- [Taiwan Laws & Regulations Database — General Business Tax Rate](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Taiwan Tax Portal — Business Tax Filing Cycle](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/business-tax/collection-prcedure/oVL9pwM)
 - [Taiwan Tax Portal — Profit-Seeking Enterprise Income Tax Rate](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR)
 - [Taiwan Tax Portal — Taxation of Dividends Paid to Foreign Nationals](https://www.etax.nat.gov.tw/etwmain/alien-tax-service/alien-tax-faq/KK9Y76o)

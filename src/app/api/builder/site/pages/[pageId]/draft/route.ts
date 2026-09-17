@@ -11,6 +11,8 @@ import { normalizeCanvasDocument, normalizeCanvasDocumentForSave } from '@/lib/b
 import { repairHomeCanvasLocale } from '@/lib/builder/canvas/home-locale-repair';
 import { upgradeHomeEditorLayoutParity } from '@/lib/builder/canvas/home-editor-layout-parity';
 import { upgradeHomeHeroSearchForm } from '@/lib/builder/canvas/home-hero-search-migration';
+import { normalizeLegacyZhHantHome, normalizeLegacyZhHantHomeRead } from '@/lib/builder/canvas/home-zh-hant-parity';
+import { USER_DRAFT_UPDATED_BY } from '@/lib/builder/canvas/home-draft-reseed';
 import { emitEditorPageSaveHook } from '@/lib/builder/apps/lifecycle-emitters';
 import type { PageCanvasRecord } from '@/lib/builder/site/types';
 import { PageCanvasCasConflictError } from '@/lib/builder/site/page-canvas-versioned-store';
@@ -50,6 +52,17 @@ function errorResponse(
     { ok: false, ...getBuilderSiteApiErrorPayload(locale, errorCode), ...extra },
     { status },
   );
+}
+
+function storedSiteDocumentErrorResponse(
+  locale: ReturnType<typeof normalizeLocale>,
+  fallback: 'draft_load_failed' | 'draft_save_failed',
+  error: unknown,
+): NextResponse {
+  if (error instanceof SyntaxError) {
+    return errorResponse(locale, 'invalid_json', 400);
+  }
+  return errorResponse(locale, fallback, 500);
 }
 
 function draftWriteErrorCode(message: string): BuilderSiteApiErrorCode {
@@ -114,11 +127,14 @@ function isHomeCanvasDocument(document: BuilderCanvasDocument): boolean {
 // geometry without mutating record-level `updatedAt`/`updatedBy`, so a stored
 // `updatedBy=admin` draft is never implicitly rewritten (data-loss safety —
 // `canPersistHomeDraftRenderMigration` only governs persistence, not reads).
-function prepareDraftDocument(document: BuilderCanvasDocument, locale: ReturnType<typeof normalizeLocale>): BuilderCanvasDocument {
-  if (isHomeCanvasDocument(document)) {
+function prepareDraftDocument(document: BuilderCanvasDocument, locale: ReturnType<typeof normalizeLocale>, isHomePage: boolean, recordUpdatedBy?: string): BuilderCanvasDocument {
+  if (isHomePage && isHomeCanvasDocument(document)) {
+    if (locale === 'zh-hant' && recordUpdatedBy === USER_DRAFT_UPDATED_BY) {
+      return normalizeLegacyZhHantHome(document, locale, true);
+    }
     const repaired = repairHomeCanvasLocale({ ...document, locale }, locale);
     const layoutRepaired = upgradeHomeEditorLayoutParity(repaired, locale, { stampMetadata: false });
-    return upgradeHomeHeroSearchForm(layoutRepaired, locale, { stampMetadata: false });
+    return normalizeLegacyZhHantHome(upgradeHomeHeroSearchForm(layoutRepaired, locale, { stampMetadata: false }), locale, true);
   }
   return normalizeCanvasDocument(document, locale);
 }
@@ -127,10 +143,15 @@ async function localeMismatchResponse(
   pageId: string,
   locale: ReturnType<typeof normalizeLocale>,
   siteId: string,
+  onPageRead?: (isHomePage: boolean) => void,
 ): Promise<NextResponse | null> {
   const site = await readSiteDocument(siteId, locale);
   const page = site.pages.find((candidate) => candidate.pageId === pageId);
-  if (!page || canProjectPageToLocale(page, site.pages, locale)) return null;
+  onPageRead?.(page?.isHomePage === true || page?.slug === '');
+  if (!page) {
+    return errorResponse(locale, 'page_not_found', 404);
+  }
+  if (canProjectPageToLocale(page, site.pages, locale)) return null;
   return NextResponse.json(
     {
       ok: false,
@@ -150,10 +171,11 @@ export async function GET(request: NextRequest, props: { params: Promise<{ pageI
   const locale = normalizeLocale(request.nextUrl.searchParams.get('locale') || 'ko');
   const siteId = resolveBuilderSiteIdFromRequest(request);
   let mismatch: NextResponse | null = null;
+  let isHomePage = false;
   try {
-    mismatch = await localeMismatchResponse(params.pageId, locale, siteId);
-  } catch {
-    return errorResponse(locale, 'draft_load_failed', 500);
+    mismatch = await localeMismatchResponse(params.pageId, locale, siteId, (value) => { isHomePage = value; });
+  } catch (error) {
+    return storedSiteDocumentErrorResponse(locale, 'draft_load_failed', error);
   }
   if (mismatch) return mismatch;
 
@@ -170,7 +192,9 @@ export async function GET(request: NextRequest, props: { params: Promise<{ pageI
     return errorResponse(locale, 'draft_not_found', 404);
   }
 
-  const document = prepareDraftDocument(state.record.document, locale);
+  const document = await normalizeLegacyZhHantHomeRead(
+    prepareDraftDocument(state.record.document, locale, isHomePage, state.record.updatedBy), locale, isHomePage,
+  );
 
   return NextResponse.json({
     ok: true,
@@ -200,8 +224,8 @@ export async function PUT(request: NextRequest, props: { params: Promise<{ pageI
   let mismatch: NextResponse | null = null;
   try {
     mismatch = await localeMismatchResponse(params.pageId, locale, siteId);
-  } catch {
-    return errorResponse(locale, 'draft_save_failed', 500);
+  } catch (error) {
+    return storedSiteDocumentErrorResponse(locale, 'draft_save_failed', error);
   }
   if (mismatch) return mismatch;
   const expectedRevision =

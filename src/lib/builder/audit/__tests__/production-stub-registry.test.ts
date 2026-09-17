@@ -1181,8 +1181,8 @@ describe('production stub registry', () => {
       anchorIndex: 2,
       renderGuardIndex: 2,
       mockValueGuardIndex: 5,
-      mockValueUsage: 'isBuilder ? [copy.mockEvents.rsvp] : []',
-      mockValueMutation: 'isBuilder ? [] : []',
+      mockValueUsage: "isBuilder && !eventId && (load.status === 'loading' || load.status === 'error')\n      ? copy.mockEvents.rsvp",
+      mockValueMutation: "isBuilder && !eventId && (load.status === 'loading' || load.status === 'error')\n      ? null",
     },
   ];
 

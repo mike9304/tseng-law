@@ -37,6 +37,64 @@ describe('/api/metrics/collect', () => {
     expect(saveVisitEventBatch).toHaveBeenCalledWith([event]);
   });
 
+  it('enriches and saves a valid contact_intent batch', async () => {
+    const contactEvent = {
+      v: 1,
+      sid: 'visitor_123',
+      ts: '2026-09-01T01:00:00.000Z',
+      type: 'contact_intent',
+      action: 'email_compose',
+      path: '/ko/contact',
+      locale: 'ko',
+    };
+    const { POST } = await import('../route');
+    const response = await POST(
+      request(JSON.stringify({ events: [contactEvent] }), { 'x-vercel-ip-country': 'US' }),
+    );
+    expect(response.status).toBe(204);
+    expect(enrichEvents).toHaveBeenCalledWith(
+      [contactEvent],
+      expect.objectContaining({ country: 'US', now: expect.any(Date) }),
+    );
+    expect(saveVisitEventBatch).toHaveBeenCalledWith([contactEvent]);
+  });
+
+  it('rejects a contact_intent payload that includes mailbox fields', async () => {
+    const { POST } = await import('../route');
+    const response = await POST(request(JSON.stringify({
+      events: [{
+        v: 1,
+        sid: 'visitor_123',
+        ts: '2026-09-01T01:00:00.000Z',
+        type: 'contact_intent',
+        action: 'email_compose',
+        path: '/ko/contact',
+        locale: 'ko',
+        href: 'mailto:wei@hoveringlaw.com.tw',
+      }],
+    })));
+    expect(response.status).toBe(400);
+    expect(saveVisitEventBatch).not.toHaveBeenCalled();
+    expect(enrichEvents).not.toHaveBeenCalled();
+  });
+
+  it('rejects a contact_intent path with a query string', async () => {
+    const { POST } = await import('../route');
+    const response = await POST(request(JSON.stringify({
+      events: [{
+        v: 1,
+        sid: 'visitor_123',
+        ts: '2026-09-01T01:00:00.000Z',
+        type: 'contact_intent',
+        action: 'email_compose',
+        path: '/ko/contact?subject=secret',
+        locale: 'ko',
+      }],
+    })));
+    expect(response.status).toBe(400);
+    expect(saveVisitEventBatch).not.toHaveBeenCalled();
+  });
+
   it('rejects more than 25 events', async () => {
     const { POST } = await import('../route');
     const response = await POST(request(JSON.stringify({ events: Array.from({ length: 26 }, () => event) })));

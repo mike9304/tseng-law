@@ -1,4 +1,5 @@
 import type { SiteLocale } from '@/lib/locales';
+import { TEAM_NAME_BY_LOCALE } from '@/data/team-name';
 
 type PageSectionCopy = {
   label: string;
@@ -25,7 +26,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
       label: 'ABOUT',
       title: '호정 소개',
       description:
-        '호정의 스토리와 한국 업무팀 구성원을 확인할 수 있습니다.'
+        `호정의 이야기와 ${TEAM_NAME_BY_LOCALE['ko']} 구성원을 소개합니다.`
     },
     services: {
       label: 'SERVICES',
@@ -34,7 +35,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     lawyers: {
       label: 'OUR TEAM',
-      title: '호정 한국·대만 업무팀',
+      title: TEAM_NAME_BY_LOCALE['ko'],
       description: '변호사·사무장·회계사의 이력과 실무 분야를 확인합니다.'
     },
     insights: {
@@ -77,7 +78,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     about: {
       label: 'ABOUT',
       title: '昊鼎介紹',
-      description: '查看昊鼎團隊背景與韓國業務團隊成員。'
+      description: `認識昊鼎的團隊背景與${TEAM_NAME_BY_LOCALE['zh-hant']}成員。`
     },
     services: {
       label: 'SERVICES',
@@ -86,12 +87,12 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     lawyers: {
       label: 'OUR TEAM',
-      title: '昊鼎 韓國·台灣 業務團隊',
-      description: '查看律師、韓國事務長與會計師的完整資料。'
+      title: TEAM_NAME_BY_LOCALE['zh-hant'],
+      description: '查看律師、法務專員、事務長與會計師的完整資料。'
     },
     insights: {
       label: 'INSIGHTS',
-      title: '洞見',
+      title: '專欄',
       description: '依分類整理昊鼎專欄文章，快速查看重點主題。'
     },
     videos: {
@@ -129,26 +130,26 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     about: {
       label: 'ABOUT',
       title: 'About Hovering',
-      description: 'Learn our story and meet the international legal team.'
+      description: `Learn about Hovering's background and meet the ${TEAM_NAME_BY_LOCALE['en']}.`
     },
     services: {
       label: 'SERVICES',
-      title: 'Practice Areas',
+      title: 'Services',
       description: 'Structured legal services for investment, disputes, and advisory matters in Taiwan.'
     },
     lawyers: {
       label: 'OUR TEAM',
-      title: 'Hovering International Team',
+      title: TEAM_NAME_BY_LOCALE['en'],
       description: 'View profiles of our lawyers, operations manager, and accounting partner.'
     },
     insights: {
       label: 'INSIGHTS',
-      title: 'Columns',
-      description: 'Browse practical legal columns by category.'
+      title: 'Insights',
+      description: 'Practical Taiwan law columns on company setup, litigation, labor, and family issues for overseas companies and individuals handling Taiwan legal matters.'
     },
     videos: {
       label: 'VIDEOS',
-      title: 'Attorney Wei Tseng Media / Channels',
+      title: 'Attorney Wei Tseng: Media & Channels',
       description: 'Review Attorney Wei Tseng’s official profile, YouTube channel, blog, and external references in one place.'
     },
     faq: {
@@ -181,7 +182,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     about: {
       label: 'ABOUT',
       title: '昊鼎について',
-      description: '事務所の概要と国際法務チームをご紹介します。'
+      description: `台湾を拠点とする国際的な法律実務と、${TEAM_NAME_BY_LOCALE['ja']}をご紹介します。`
     },
     services: {
       label: 'SERVICES',
@@ -190,7 +191,7 @@ export const pageCopy: Record<SiteLocale, PageCopy> = {
     },
     lawyers: {
       label: 'OUR TEAM',
-      title: '昊鼎 日本・国際法務チーム',
+      title: TEAM_NAME_BY_LOCALE['ja'],
       description: '弁護士・事務長・会計士の経歴と専門分野をご確認ください。'
     },
     insights: {

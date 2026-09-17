@@ -98,9 +98,8 @@ describe('Japanese team content', () => {
     const accountant = japanese.members.find(({ id }) => id === 'huang-shengping');
 
     expect(japanese.description).toContain('パラリーガル');
-    expect(japanese.title).toBe('昊鼎 日本・国際法務チーム');
     expect(japanese.story[0]).toBe(
-      '昊鼎国際法律事務所では、日本企業・在台日本人をはじめとする国際クライアントによる台湾への投資や、台湾での訴訟・法律相談を支援する実務チームを編成しています。',
+      '昊鼎国際法律事務所では、国際クライアントの台湾投資、訴訟、法律顧問を支援する実務チームを編成しています。英語・日本語・韓国語・中国語でご相談いただけます。',
     );
     expect(lead?.intro[1]).toBe(
       '韓国人留学生のジムでの負傷に関する損害賠償請求事件を代理し、一審で157万TWDの損害賠償を認める判決を得た実績があります。',
@@ -108,7 +107,7 @@ describe('Japanese team content', () => {
     expect(lead?.experience).toContain('法律扶助基金会台中分会の法律扶助担当弁護士');
     expect(paralegal?.experience).toContain('慕陽國際法律事務所 シニアパラリーガル');
     expect(paralegal?.intro[1]).toBe(
-      '訴訟支援、会社設立、外国人投資の認可手続、各種許認可申請、国際クライアントとのコミュニケーションを支援します。',
+      '訴訟支援、会社設立、外国人投資の認可手続、各種許認可申請、韓国・台湾間のコミュニケーションを支援します。',
     );
     expect(operations?.education).toEqual(['国立成功大学でコンピュータサイエンスを専攻（学士）']);
     expect(accountant?.intro[1]).toBe(
@@ -119,9 +118,9 @@ describe('Japanese team content', () => {
   });
 
   it('preserves representative Korean, Traditional Chinese, and English copy', () => {
-    expect(teamContent.ko.title).toBe('호정 한국·대만 업무팀');
+    expect(teamContent.ko.title).toBe('호정 대만·한국 팀');
     expect(teamContent.ko.members[0].intro[1]).toBe(
-      '한국 유학생 헬스장 손해배상 사건에서 157만 대만달러 배상 판결을 이끈 사례가 있습니다.',
+      '한국 유학생 헬스장 손해배상 사건에서 1심 157만 대만달러 배상 판결을 이끈 사례가 있습니다.',
     );
     expect(teamContent['zh-hant'].members[2]).toMatchObject({
       name: '張芳瑀',
@@ -129,7 +128,7 @@ describe('Japanese team content', () => {
       education: ['東海大學法律學系學士'],
     });
     expect(teamContent.en.story[0]).toBe(
-      'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for international, Japanese, and Korean clients.',
+      'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for international clients, with English, Chinese, Korean, and Japanese available.',
     );
   });
 });

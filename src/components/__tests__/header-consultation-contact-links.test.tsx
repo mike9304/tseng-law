@@ -40,7 +40,7 @@ describe('Header consultation and contact links', () => {
     ['ko', '연락처', '/ko/contact'],
     ['zh-hant', '聯絡方式', '/zh-hant/contact'],
     ['ja', '連絡先', '/ja/contact'],
-    ['en', 'Contact information', '/en/contact'],
+    ['en', 'Contact', '/en/contact'],
   ] as const)(
     'keeps the %s contact-information link on the internal contact page',
     (locale, label, href) => {

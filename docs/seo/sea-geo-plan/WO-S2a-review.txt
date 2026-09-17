@@ -1,0 +1,17 @@
+# WO-S2a-review — 답변형 블록 독립 검토 (Grok 4.6, 읽기+REVIEW 파일만)
+
+## 공통 규칙 (위반 시 반려)
+- 작업트리: ~/Projects/tseng-law-sea-seo-20260909 에서만 읽고 쓴다. 다른 워크트리·main 작업트리 접근 금지. 인박스·타 세션 확인 불필요(단일 작성자 보장).
+- 실행 금지: 전체 테스트 스위트, playwright, npm run build, 커밋, push. 지정된 vitest 파일 1~2개만 실행.
+- 변경 금지 파일: src/data/international-guidance-content.ts, src/data/intent-pages.ts 의 기존 본문·기존 키, src/content/columns*/**, 팀·수임료·연락처·사례 데이터. (신규 키 추가만 WO가 허용한 경우 가능)
+- 언어 계약: vi/id/th/fil 은 안내 언어. 해당 언어로 상담·통역 가능을 암시하는 문구·메타·JSON-LD availableLanguage 금지. 상담 언어 표기는 "English / Chinese / Japanese / Korean" 만.
+- 광고 규정: 승소율·성공 보장·최고/유일 표현 금지.
+- 사실: 사이트에 이미 게재된 사실만 사용. 새 법률 주장은 문장 앞에 [변호사 검수 필요] 마커. 숫자·통계는 출처 URL+조회일+등급(A 공식통계/B 정부·협회/C 업계리서치/D 언론/E 추정) 없으면 "미확인".
+- 보고 형식(마지막에 반드시): (1) 변경 파일 목록 (2) 실행한 명령과 마지막 출력 3줄 (3) 완료 기준 항목별 PASS/FAIL (4) 미해결·못 한 것 — 못 한 것은 못 했다고 쓴다. 완료 기준을 느슨하게 바꾸지 않는다.
+
+## 대상
+src/data/international-guidance-answers.ts, src/components/InternationalGuidance.tsx 의 변경. 산출 docs/seo/reviews/S2a-REVIEW.md 하나. 원본 수정 금지, Bash 금지.
+## 항목 (PASS/FAIL + 근거 + 수정안)
+1. 24개 답변이 각 언어로 자연스럽고 페이지 본문 사실과 일치(international-guidance-content.ts 대조, 불일치 줄번호)
+2. 언어 계약 위반 0  3. 광고 규정 위반 0  4. sources 링크 실존  5. 답변 없을 때 렌더 영향 0(코드 리딩)
+마지막 줄 총평 PASS/FAIL.

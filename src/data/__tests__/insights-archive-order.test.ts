@@ -13,4 +13,10 @@ describe('insights archive publication order', () => {
       expect(getFeaturedInsights(locale)[0]?.id).toBe('cosmetics-market-entry');
     },
   );
+
+  it('labels the English archive Insights to match the nav', () => {
+    expect(insightsArchive.en.title).toBe('Insights');
+    expect(insightsArchive.en.title).not.toBe('Columns');
+  });
 });
+

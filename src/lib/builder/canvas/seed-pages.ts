@@ -64,7 +64,7 @@ import {
 import {
   createHomeContainerNode,
 } from './decompose-home-shared';
-import { estimateTextHeight } from './decompose-page-shared';
+import { estimateTextHeight, estimateTextWidth } from './decompose-page-shared';
 import { getOfficesResponsiveOverride } from './decompose-offices';
 
 const STAGE_WIDTH = 1280;
@@ -754,6 +754,16 @@ function getPricingCardIndex(node: BuilderCanvasNode): number {
   return match ? Number(match[1]) : Number.POSITIVE_INFINITY;
 }
 
+function measurePricingCtaButtonWidth(label: string, maxWidth: number): number {
+  return Math.min(maxWidth, Math.max(220, estimateTextWidth(label, 14.4) + 46));
+}
+
+function pricingCtaNoteHeight(note: BuilderCanvasNode, width: number): number {
+  const fontSize = note.kind === 'text' ? note.content.fontSize ?? 17.28 : 17.28;
+  const lineHeight = note.kind === 'text' ? note.content.lineHeight ?? 1.82 : 1.82;
+  return estimateTextHeight(getNodeText(note), width, fontSize, lineHeight);
+}
+
 function repairPricingMobileLayout(nodesById: Map<string, BuilderCanvasNode>): void {
   const root = nodesById.get('page-pricing-section-root');
   const container = nodesById.get('page-pricing-section-container');
@@ -823,11 +833,34 @@ function repairPricingMobileLayout(nodesById: Map<string, BuilderCanvasNode>): v
   setMobileRect(disclaimerWrap, { x: 0, y: disclaimerY, width: mobileWidth(container), height: 67 });
 
   const ctaY = disclaimerY + 99;
-  setMobileRect(ctaWrap, { x: 1.5, y: ctaY, width: 340, height: 47 });
+  const ctaNote = nodesById.get('page-pricing-cta-note');
+  const ctaButton = nodesById.get('page-pricing-cta');
+  const wrapWidth = 340;
+  if (ctaNote) {
+    const buttonHeight = Math.max(1, Math.round(ctaButton?.rect.height ?? 47));
+    const buttonWidth = measurePricingCtaButtonWidth(
+      getContentString(ctaButton, 'label'),
+      Math.min(340, wrapWidth),
+    );
+    const buttonX = Math.round((wrapWidth - buttonWidth) / 2);
+    setMobileRect(ctaButton, { x: buttonX, y: 0, width: buttonWidth, height: buttonHeight });
 
-  const containerHeight = ctaY + 47 + 48;
-  setMobileRect(container, { x: 0, y: 0, height: containerHeight });
-  setMobileRect(root, { height: mobileY(container) + containerHeight });
+    const noteY = buttonHeight + 10;
+    const noteHeight = pricingCtaNoteHeight(ctaNote, wrapWidth);
+    setMobileRect(ctaNote, { x: 0, y: noteY, width: wrapWidth, height: noteHeight });
+
+    const wrapHeight = Math.max(47, noteY + noteHeight);
+    setMobileRect(ctaWrap, { x: 1.5, y: ctaY, width: wrapWidth, height: wrapHeight });
+    const containerHeight = Math.max(ctaY + 47 + 48, ctaY + wrapHeight + 48);
+    setMobileRect(container, { x: 0, y: 0, height: containerHeight });
+    setMobileRect(root, { height: mobileY(container) + containerHeight });
+  } else {
+    setMobileRect(ctaWrap, { x: 1.5, y: ctaY, width: 340, height: 47 });
+
+    const containerHeight = ctaY + 47 + 48;
+    setMobileRect(container, { x: 0, y: 0, height: containerHeight });
+    setMobileRect(root, { height: mobileY(container) + containerHeight });
+  }
 }
 
 function repairPricingTabletLayout(nodesById: Map<string, BuilderCanvasNode>): void {
@@ -868,7 +901,27 @@ function repairPricingTabletLayout(nodesById: Map<string, BuilderCanvasNode>): v
   setTabletRect(disclaimerWrap, { x: 0, y: disclaimerY, width: tabletWidth(container) });
 
   const ctaY = disclaimerY + tabletHeight(disclaimerWrap) + 28;
-  setTabletRect(ctaWrap, { x: 24, y: ctaY, width: Math.max(1, tabletWidth(container) - 48) });
+  const ctaNote = nodesById.get('page-pricing-cta-note');
+  const ctaButton = nodesById.get('page-pricing-cta');
+  const wrapWidth = Math.max(1, tabletWidth(container) - 48);
+  if (ctaNote) {
+    const buttonHeight = Math.max(1, tabletHeight(ctaButton));
+    const buttonWidth = measurePricingCtaButtonWidth(
+      getContentString(ctaButton, 'label'),
+      Math.min(340, wrapWidth),
+    );
+    const buttonX = Math.round((wrapWidth - buttonWidth) / 2);
+    setTabletRect(ctaButton, { x: buttonX, y: 0, width: buttonWidth, height: buttonHeight });
+
+    const noteY = buttonHeight + 10;
+    const noteHeight = pricingCtaNoteHeight(ctaNote, wrapWidth);
+    setTabletRect(ctaNote, { x: 0, y: noteY, width: wrapWidth, height: noteHeight });
+
+    const wrapHeight = Math.max(buttonHeight, noteY + noteHeight);
+    setTabletRect(ctaWrap, { x: 24, y: ctaY, width: wrapWidth, height: wrapHeight });
+  } else {
+    setTabletRect(ctaWrap, { x: 24, y: ctaY, width: Math.max(1, tabletWidth(container) - 48) });
+  }
 
   const containerHeight = ctaY + tabletHeight(ctaWrap) + 32;
   setTabletRect(container, { height: containerHeight });
@@ -1638,8 +1691,33 @@ function applyZhHantPricingDesktopBaseline(document: BuilderCanvasDocument): Bui
   setDesktopRect(nodesById, 'page-pricing-grid', { y: 67, height: 457 });
   setDesktopRect(nodesById, 'page-pricing-disclaimer-wrap', { x: 0, y: 524, width: 1178, height: 22 });
   setDesktopRect(nodesById, 'page-pricing-disclaimer', { width: 1178, height: 22 });
-  setDesktopRect(nodesById, 'page-pricing-cta-wrap', { x: 0, y: 547, width: 1178, height: 47 });
-  setDesktopRect(nodesById, 'page-pricing-cta', { x: 540, y: 0, width: 97, height: 47 });
+  const ctaNote = nodesById.get('page-pricing-cta-note');
+  const ctaButton = nodesById.get('page-pricing-cta');
+  if (ctaNote) {
+    const wrapWidth = 1178;
+    const buttonHeight = 47;
+    const buttonWidth = measurePricingCtaButtonWidth(getContentString(ctaButton, 'label'), wrapWidth);
+    const buttonX = Math.round((wrapWidth - buttonWidth) / 2);
+    const noteY = buttonHeight + 10;
+    const noteHeight = pricingCtaNoteHeight(ctaNote, wrapWidth);
+    const wrapHeight = noteY + noteHeight;
+    setDesktopRect(nodesById, 'page-pricing-cta-wrap', { x: 0, y: 547, width: wrapWidth, height: wrapHeight });
+    setDesktopRect(nodesById, 'page-pricing-cta', { x: buttonX, y: 0, width: buttonWidth, height: buttonHeight });
+    setDesktopRect(nodesById, 'page-pricing-cta-note', { x: 0, y: noteY, width: wrapWidth, height: noteHeight });
+
+    const wrapBottom = 547 + wrapHeight;
+    const containerHeight = Math.max(594, wrapBottom);
+    if (containerHeight > 594) {
+      setDesktopRect(nodesById, 'page-pricing-section-container', { y: 141, height: containerHeight });
+    }
+    const rootNeeded = 141 + containerHeight;
+    if (rootNeeded > 875) {
+      setDesktopRect(nodesById, 'page-pricing-section-root', { height: rootNeeded });
+    }
+  } else {
+    setDesktopRect(nodesById, 'page-pricing-cta-wrap', { x: 0, y: 547, width: 1178, height: 47 });
+    setDesktopRect(nodesById, 'page-pricing-cta', { x: 540, y: 0, width: 97, height: 47 });
+  }
 
   const cardX = [0, 301, 601, 901] as const;
   const titleRect = [

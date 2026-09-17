@@ -21,7 +21,12 @@ import {
 } from '@/lib/builder/forms/uploads';
 import { recordFailedWebhook } from '@/lib/builder/forms/webhook-retry';
 import { emitEvent } from '@/lib/builder/webhooks/dispatcher';
-import { checkRateLimit } from '@/lib/builder/security/rate-limit';
+import {
+  checkRateLimit,
+  confirmRateLimit,
+  releaseRateLimit,
+  reserveRateLimit,
+} from '@/lib/builder/security/rate-limit';
 import { validateCsrf } from '@/lib/builder/security/csrf';
 import { reasonUrlUnsafe } from '@/lib/builder/webhooks/url-guard';
 import { isLinkSafe } from '@/lib/builder/links';
@@ -688,10 +693,10 @@ function antiSpamResponse(
   return null;
 }
 
-async function duplicateSubmissionResponse(
+function duplicateLimitSpec(
   schema: FormSchema,
   fields: Record<string, string>,
-): Promise<NextResponse | null> {
+): { key: string; windowMs: number } | null {
   const duplicateWindowMs = schema?.antiSpam?.duplicateWindowMs;
   const duplicateFields = schema?.antiSpam?.duplicateFields?.filter(Boolean) ?? [];
   if (!duplicateWindowMs || duplicateWindowMs <= 0 || duplicateFields.length === 0) {
@@ -704,18 +709,18 @@ async function duplicateSubmissionResponse(
     .update(duplicateFields.map((fieldId) => `${fieldId}:${fields[fieldId]?.trim() ?? ''}`).join('\n'))
     .digest('hex')
     .slice(0, 40);
-  const duplicate = await checkRateLimit(
-    `forms-duplicate:${schema.formId}:${fingerprint}`,
-    1,
-    duplicateWindowMs,
-  );
-  if (duplicate.allowed) return null;
+  return {
+    key: `forms-duplicate:${schema.formId}:${fingerprint}`,
+    windowMs: duplicateWindowMs,
+  };
+}
 
+function duplicateConflictResponse(retryAfterMs: number): NextResponse {
   return NextResponse.json(
     { error: '이미 접수된 내용입니다. 잠시 후 다시 시도해 주세요.' },
     {
       status: 409,
-      headers: { 'Retry-After': String(Math.ceil(duplicate.retryAfterMs / 1000)) },
+      headers: { 'Retry-After': String(Math.max(1, Math.ceil(retryAfterMs / 1000))) },
     },
   );
 }
@@ -819,8 +824,16 @@ export async function POST(request: NextRequest) {
       { status: 400 },
     );
   }
-  const duplicateResponse = await duplicateSubmissionResponse(schema, fields);
-  if (duplicateResponse) return duplicateResponse;
+
+  const duplicateSpec = duplicateLimitSpec(schema, fields);
+  let reservation: Awaited<ReturnType<typeof reserveRateLimit>>['token'];
+  if (duplicateSpec) {
+    const reserved = await reserveRateLimit(duplicateSpec.key, 1, duplicateSpec.windowMs);
+    if (!reserved.allowed || !reserved.token) {
+      return duplicateConflictResponse(reserved.retryAfterMs);
+    }
+    reservation = reserved.token;
+  }
 
   const submissionId = makeSubmissionId();
   const submission: FormSubmission = {
@@ -835,12 +848,24 @@ export async function POST(request: NextRequest) {
     read: false,
   };
 
-  // Storage (best-effort; if Blob isn't configured, log and continue)
   try {
     await saveSubmission(submission);
   } catch (err) {
+    if (reservation) await releaseRateLimit(reservation.key);
     console.error('[forms/submit] storage save failed:', err);
-    // Don't fail the request — fall through and try email/webhook.
+    return NextResponse.json(
+      { error: '접수 저장 중 오류가 발생했습니다.' },
+      { status: 500 },
+    );
+  }
+  if (reservation) {
+    const consumed = await checkRateLimit(
+      reservation.key,
+      reservation.maxRequests,
+      reservation.windowMs,
+    );
+    await confirmRateLimit(reservation);
+    if (!consumed.allowed) return duplicateConflictResponse(consumed.retryAfterMs);
   }
   let cmsRecordId: string | null = null;
   try {

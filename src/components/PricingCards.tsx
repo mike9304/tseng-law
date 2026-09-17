@@ -1,9 +1,11 @@
 import type { SiteLocale } from '@/lib/locales';
+import CorporateAdvisoryLink from '@/components/CorporateAdvisoryLink';
 import PricingIcon, { type PricingIconName } from '@/components/PricingIcon';
 import {
   getConsultationCtaLabel,
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
+import styles from './PricingCards.module.css';
 
 type PricingItem = {
   icon: PricingIconName;
@@ -20,6 +22,7 @@ type PricingContent = {
   items: PricingItem[];
   disclaimer: string;
   ctaLabel: string;
+  ctaNote: string;
 };
 
 const pricingData: Record<SiteLocale, PricingContent> = {
@@ -80,7 +83,8 @@ const pricingData: Record<SiteLocale, PricingContent> = {
     ],
     disclaimer:
       '상기 비용은 기본 기준이며, 사건의 특성·복합성·긴급도에 따라 변동될 수 있습니다. 정확한 비용은 초기 상담 후 서면 견적으로 안내드립니다.',
-    ctaLabel: '상담 예약하기'
+    ctaLabel: '이메일로 상담 일정 문의',
+    ctaNote: '상담 일정은 이메일로 협의한 뒤 확정됩니다.',
   },
   'zh-hant': {
     currency: 'NTD (新台幣)',
@@ -139,7 +143,8 @@ const pricingData: Record<SiteLocale, PricingContent> = {
     ],
     disclaimer:
       '以上費用為基本標準，依案件特性、複雜度及急迫程度可能有所調整。確切費用於初次諮詢後以書面報價方式提供。',
-    ctaLabel: '預約諮詢'
+    ctaLabel: '以電子郵件洽詢諮詢時間',
+    ctaNote: '諮詢時間將於電子郵件協調後確認。',
   },
   en: {
     currency: 'NTD (New Taiwan Dollar)',
@@ -151,7 +156,7 @@ const pricingData: Record<SiteLocale, PricingContent> = {
         unit: '/ 1 hour',
         details: [
           'In-person or video consultation',
-          'Available in English, Korean, Chinese & Japanese',
+          'Available in English, Chinese, Korean, and Japanese',
           'Legal issue analysis & guidance',
           'Appointment required'
         ]
@@ -198,7 +203,8 @@ const pricingData: Record<SiteLocale, PricingContent> = {
     ],
     disclaimer:
       'Fees above are baseline standards and may vary based on case characteristics, complexity, and urgency. Exact fees will be provided in writing after the initial consultation.',
-    ctaLabel: 'Book a Consultation'
+    ctaLabel: 'Email to arrange a consultation',
+    ctaNote: 'Your consultation time is confirmed after arranging it by email.',
   },
   ja: {
     currency: 'NTD（ニュー台湾ドル）',
@@ -259,15 +265,16 @@ const pricingData: Record<SiteLocale, PricingContent> = {
     ],
     disclaimer:
       '上記の費用は基本的な目安であり、案件の性質、複雑性、緊急性により変動する場合があります。正確な費用は、初回相談後に書面によるお見積りでご案内します。',
-    ctaLabel: '法律相談を申し込む'
-  }
+    ctaLabel: 'メールで相談日程を問い合わせる',
+    ctaNote: '相談日時はメールで調整した後に確定します。',
+  },
 };
 
 export default function PricingCards({ locale }: { locale: SiteLocale }) {
   const data = pricingData[locale];
 
   return (
-    <section className="section pricing-section">
+    <section className={`section pricing-section ${styles.root}`}>
       <div className="container">
         <p className="pricing-currency">{data.currency}</p>
 
@@ -288,6 +295,7 @@ export default function PricingCards({ locale }: { locale: SiteLocale }) {
                 ))}
               </ul>
               {item.note && <p className="pricing-card-note">{item.note}</p>}
+              {item.icon === 'retainer' ? <CorporateAdvisoryLink locale={locale} /> : null}
             </div>
           ))}
         </div>
@@ -304,6 +312,9 @@ export default function PricingCards({ locale }: { locale: SiteLocale }) {
           >
             {data.ctaLabel}
           </a>
+          <div className="pricing-disclaimer">
+            <p>{data.ctaNote}</p>
+          </div>
         </div>
       </div>
     </section>

@@ -4,11 +4,15 @@ import { getMemberPortalEmails } from '@/lib/builder/members/members-engine';
 import { listCustomerBillingDocuments } from '@/lib/builder/billing-customer-portal';
 import { BillingPortalView } from '@/components/members/BillingPortalView';
 import { normalizeLocale, type Locale } from '@/lib/locales';
+import PublicUnavailableState, { publicUnavailableMetadata } from '@/components/PublicUnavailableState';
 
 export const dynamic = 'force-dynamic';
 
 export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const params = await props.params;
+  if ((params.locale as string) === 'ja') {
+    return publicUnavailableMetadata('ja', 'billing');
+  }
   const locale = normalizeLocale(params.locale);
   const title = locale === 'ko' ? '청구서 포털' : locale === 'zh-hant' ? '帳單入口' : 'Billing portal';
   return {
@@ -23,11 +27,15 @@ export default async function LocalizedCustomerBillingPortalPage(
   }
 ): Promise<JSX.Element> {
   const params = await props.params;
+  if ((params.locale as string) === 'ja') {
+    return <PublicUnavailableState locale="ja" kind="billing" />;
+  }
   const locale = normalizeLocale(params.locale);
   const member = await getCurrentSiteMember();
   if (!member) {
     return (
       <BillingPortalView
+        as="section"
         locale={locale}
         signedOut
         signInHref={`/${locale}/login?next=${encodeURIComponent(`/${locale}/account/billing`)}`}
@@ -37,5 +45,5 @@ export default async function LocalizedCustomerBillingPortalPage(
   }
 
   const documents = await listCustomerBillingDocuments(member.email, { locale }, getMemberPortalEmails(member));
-  return <BillingPortalView locale={locale} memberEmail={member.email} documents={documents} />;
+  return <BillingPortalView as="section" locale={locale} memberEmail={member.email} documents={documents} />;
 }

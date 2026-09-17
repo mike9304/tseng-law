@@ -1,18 +1,21 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   useCallback,
   useEffect,
+  useLayoutEffect,
   useRef,
   useState,
   type MouseEvent,
   type ReactNode,
 } from 'react';
-import type { SiteLocale } from '@/lib/locales';
+import type { PublicLocale8 } from '@/lib/public-guidance';
 import DecorativeAutoplayVideo, {
   DECORATIVE_VIDEO_CONTROL_LABELS,
 } from '@/components/DecorativeAutoplayVideo';
+import styles from './CinematicOpening.module.css';
 
 export const CINEMATIC_OPENING_MEDIA = {
   desktop: {
@@ -42,6 +45,95 @@ const CINEMATIC_HOME_HERO_SELECTORS = [
   '[data-node-id="home-hero-root"]',
   '[data-node-id="home-hero"]',
 ] as const;
+const CINEMATIC_SITE_SELECTOR = '[data-cinematic-home]';
+
+/* WI-11: the opening plays at most once per browser session. The marker is
+   written after the opening completes; `?intro=1` forces a replay for QA. */
+export const CINEMATIC_OPENING_SEEN_STORAGE_KEY = 'hojeong.cinematic.seen';
+export const CINEMATIC_OPENING_FORCE_QUERY_PARAM = 'intro';
+
+export type CinematicOpeningStartState = 'opening' | 'completed';
+
+type SeenStorage = Pick<Storage, 'getItem'>;
+
+export function shouldForceCinematicOpening(search: string): boolean {
+  try {
+    return new URLSearchParams(search).get(CINEMATIC_OPENING_FORCE_QUERY_PARAM) === '1';
+  } catch {
+    return false;
+  }
+}
+
+export function hasSeenCinematicOpening(
+  storage: SeenStorage | null | undefined,
+): boolean {
+  try {
+    return storage?.getItem(CINEMATIC_OPENING_SEEN_STORAGE_KEY) === '1';
+  } catch {
+    return false;
+  }
+}
+
+export function resolveCinematicOpeningStartState({
+  search,
+  storage,
+}: {
+  search: string;
+  storage: SeenStorage | null | undefined;
+}): CinematicOpeningStartState {
+  if (shouldForceCinematicOpening(search)) return 'opening';
+  return hasSeenCinematicOpening(storage) ? 'completed' : 'opening';
+}
+
+export function markCinematicOpeningSeen(
+  storage: Pick<Storage, 'setItem'> | null | undefined,
+): void {
+  try {
+    storage?.setItem(CINEMATIC_OPENING_SEEN_STORAGE_KEY, '1');
+  } catch {
+    // Storage can be unavailable (private mode, quota, disabled cookies).
+  }
+}
+
+function readSessionStorage(): Storage | null {
+  try {
+    return window.sessionStorage;
+  } catch {
+    return null;
+  }
+}
+
+/* Runs while the HTML is still being parsed, before the opening markup exists,
+   so a returning visitor never paints the opening (no flash) and no React
+   state is involved. It flips the same `.site` / `<html>` dataset flag that
+   `setIntroVisible(false)` writes after a completed opening, which globals.css
+   already maps to "opening hidden, header + main shown". The hydrated shell
+   carries `suppressHydrationWarning` for this attribute; React never patches
+   attribute differences during hydration, so the DOM value survives. */
+export const CINEMATIC_OPENING_PRE_HYDRATION_SCRIPT = [
+  '(function(){try{',
+  `if(new URLSearchParams(location.search).get(${JSON.stringify(
+    CINEMATIC_OPENING_FORCE_QUERY_PARAM,
+  )})==='1')return;`,
+  `if(sessionStorage.getItem(${JSON.stringify(
+    CINEMATIC_OPENING_SEEN_STORAGE_KEY,
+  )})!=='1')return;`,
+  'var s=document.currentScript;',
+  `var site=s&&s.parentElement&&s.parentElement.closest(${JSON.stringify(
+    CINEMATIC_SITE_SELECTOR,
+  )});`,
+  'if(!site)return;',
+  "site.setAttribute('data-cinematic-intro-visible','false');",
+  "document.documentElement.setAttribute('data-cinematic-intro-visible','false');",
+  '}catch(_){}})();',
+].join('');
+
+// The session gate must flip before the first client paint (hard load: after
+// hydration; client navigation: right after the section is inserted). On the
+// server there is nothing to flip, so fall back to a no-op passive effect and
+// avoid react-dom/server's useLayoutEffect warning.
+const useBrowserLayoutEffect =
+  typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
 interface CinematicOpeningInputHost {
   readonly innerHeight: number;
@@ -144,7 +236,7 @@ export function bindCinematicOpeningInputHandlers({
     target instanceof Element
     && Boolean(
       target.closest(
-        'input, textarea, select, button, [contenteditable=""], [contenteditable="true"], [role="textbox"]',
+        'input, textarea, select, button:not([data-skip="true"]), [contenteditable=""], [contenteditable="true"], [role="textbox"]',
       ),
     )
   ),
@@ -317,38 +409,110 @@ export function hasPositiveIntersection(entry: IntersectionObserverEntry): boole
   );
 }
 
+/**
+ * WO-O22 B: the opening plays in every public language. The original four
+ * entries are unchanged byte for byte; the guidance-language entries
+ * (vi/id/th/fil, and `ar` from WO-M3B) are translations of the English brand
+ * copy above (firm name, tagline and UI affordances only — no figure,
+ * credential or track record is introduced here).
+ */
 export const CINEMATIC_OPENING_COPY: Record<
-  SiteLocale,
+  PublicLocale8,
   {
     primary: string;
     secondary: string;
     scroll: string;
+    skip: string;
     mediaAlt: string;
+    service: string;
+    contact: string;
   }
 > = {
   ko: {
     primary: '법무법인 호정',
     secondary: 'HOVERING INTERNATIONAL LAW FIRM',
     scroll: '본문으로 스크롤',
+    skip: '건너뛰기',
     mediaAlt: '밝은 자연광 아래 대만 중앙산맥과 운해 위를 비행하는 항공 전경',
+    service: '대만 법률 상담 · 한국어·일본어·영어 소통',
+    contact: '상담 연락처',
   },
   'zh-hant': {
     primary: '昊鼎國際法律事務所',
     secondary: 'HOVERING INTERNATIONAL LAW FIRM',
     scroll: '向下捲動',
+    skip: '略過',
     mediaAlt: '明亮自然光下飛越臺灣中央山脈與雲海的空中景觀',
+    service: '台灣法律諮詢 · 韓語、日語、英語溝通',
+    contact: '諮詢聯絡方式',
   },
   en: {
     primary: 'HOVERING INTERNATIONAL LAW FIRM',
     secondary: 'ATTORNEYS AT LAW IN TAIWAN',
     scroll: 'Scroll to continue',
+    skip: 'Skip intro',
     mediaAlt: 'Bright aerial flight over Taiwan’s Central Mountain Range and sea of clouds',
+    service: 'Taiwan legal support · English, Chinese, Korean, and Japanese',
+    contact: 'Contact the firm',
   },
   ja: {
     primary: '昊鼎国際法律事務所',
     secondary: 'HOVERING INTERNATIONAL LAW FIRM',
     scroll: '下にスクロール',
+    skip: 'スキップ',
     mediaAlt: '明るい自然光の中、台湾中央山脈と雲海の上空を飛ぶ空撮風景',
+    service: '台湾の法律相談 · 日本語・英語・韓国語で対応',
+    contact: '相談窓口',
+  },
+  vi: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'VĂN PHÒNG LUẬT SƯ TẠI ĐÀI LOAN',
+    scroll: 'Cuộn xuống',
+    skip: 'Bỏ qua phần mở đầu',
+    mediaAlt:
+      'Cảnh quay trên không dưới ánh sáng tự nhiên, bay qua dãy Trung Ương Sơn Mạch và biển mây của Đài Loan',
+    service: 'Hỗ trợ pháp lý tại Đài Loan · Tiếng Anh, tiếng Nhật và tiếng Hàn',
+    contact: 'Liên hệ văn phòng',
+  },
+  id: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'KANTOR HUKUM DI TAIWAN',
+    scroll: 'Gulir ke bawah',
+    skip: 'Lewati intro',
+    mediaAlt:
+      'Rekaman udara dalam cahaya alami yang terang, melintasi Pegunungan Tengah Taiwan dan lautan awan',
+    service: 'Dukungan hukum Taiwan · Bahasa Inggris, Jepang, dan Korea',
+    contact: 'Hubungi kantor kami',
+  },
+  th: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'สำนักงานกฎหมายในไต้หวัน',
+    scroll: 'เลื่อนลง',
+    skip: 'ข้ามบทนำ',
+    mediaAlt:
+      'ภาพมุมสูงใต้แสงธรรมชาติที่สว่าง บินเหนือเทือกเขาตอนกลางของไต้หวันและทะเลหมอก',
+    service: 'บริการทางกฎหมายในไต้หวัน · ภาษาอังกฤษ ญี่ปุ่น และเกาหลี',
+    contact: 'ติดต่อสำนักงาน',
+  },
+  fil: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'MGA ABOGADO SA TAIWAN',
+    scroll: 'Mag-scroll pababa',
+    skip: 'Laktawan ang intro',
+    mediaAlt:
+      'Maliwanag na aerial na kuha sa natural na liwanag, lumilipad sa ibabaw ng Central Mountain Range ng Taiwan at dagat ng mga ulap',
+    service: 'Legal na suporta sa Taiwan · Ingles, Hapon at Koreano',
+    contact: 'Makipag-ugnayan sa firm',
+  },
+  ar: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'محامون في تايوان',
+    scroll: 'مرّر للأسفل للمتابعة',
+    skip: 'تخطّي المقدمة',
+    mediaAlt:
+      'لقطة جوية في ضوء طبيعي ساطع، تحلّق فوق سلسلة الجبال الوسطى في تايوان وبحر السحب',
+    service: 'الدعم القانوني في تايوان · بالإنجليزية والصينية واليابانية والكورية',
+    contact: 'التواصل مع المكتب',
   },
 };
 
@@ -356,14 +520,20 @@ export default function CinematicOpening({
   locale,
   deferredContent,
 }: {
-  locale: SiteLocale;
+  locale: PublicLocale8;
   deferredContent?: ReactNode;
 }) {
   const sectionRef = useRef<HTMLElement>(null);
+  const skipButtonRef = useRef<HTMLButtonElement>(null);
   const siteRef = useRef<HTMLElement | null>(null);
   const transitionLockedRef = useRef(false);
   const transitionCleanupRef = useRef<(() => void) | null>(null);
+  // Decided synchronously on mount (before paint); effects that belong to a
+  // playing opening read the ref because the first commit's passive effects
+  // run before the state update below re-renders.
+  const startStateRef = useRef<CinematicOpeningStartState>('opening');
   const [introVisible, setIntroVisibleState] = useState(true);
+  const [phase, setPhase] = useState<CinematicOpeningStartState>('opening');
   const copy = CINEMATIC_OPENING_COPY[locale];
 
   const setIntroVisible = useCallback((visible: boolean) => {
@@ -392,6 +562,16 @@ export default function CinematicOpening({
     transitionLockedRef.current = true;
 
     setIntroVisible(false);
+    markCinematicOpeningSeen(readSessionStorage());
+    // The opening is display:none from here on. Focus that was inside it (the
+    // skip control receives focus on mount) would silently drop to <body>;
+    // hand it to the content sentinel at the top of <main> instead so the
+    // next Tab lands on the first real page control.
+    const activeElement = document.activeElement;
+    const section = sectionRef.current;
+    if (activeElement && section?.contains(activeElement)) {
+      target.focus({ preventScroll: true });
+    }
     const settleFrame = window.requestAnimationFrame(() => {
       window.scrollTo({ top: 0, behavior: 'auto' });
     });
@@ -414,21 +594,53 @@ export default function CinematicOpening({
     return true;
   }, [releaseTransitionLock, setIntroVisible]);
 
-  useEffect(() => {
+  // Session gate. Runs before the first client paint: a returning visitor
+  // (or a client-side navigation back to the home) gets the completed state
+  // immediately and the opening subtree is unmounted, while a first visit (or
+  // `?intro=1`) keeps the opening and moves focus to the skip control so
+  // keyboard and assistive-technology users meet the exit first.
+  useBrowserLayoutEffect(() => {
     const section = sectionRef.current;
-    const site = section?.closest<HTMLElement>('[data-cinematic-home]');
+    siteRef.current = section?.closest<HTMLElement>(CINEMATIC_SITE_SELECTOR) ?? null;
+
+    const startState = resolveCinematicOpeningStartState({
+      search: window.location.search,
+      storage: readSessionStorage(),
+    });
+    startStateRef.current = startState;
+
+    if (startState === 'completed') {
+      setIntroVisible(false);
+      setPhase('completed');
+      return;
+    }
+
+    const activeElement = document.activeElement;
+    if (!activeElement || activeElement === document.body) {
+      skipButtonRef.current?.focus({ preventScroll: true });
+    }
+  }, [setIntroVisible]);
+
+  useEffect(() => {
+    const site = siteRef.current;
+    return () => {
+      if (site) delete site.dataset.cinematicIntroVisible;
+      delete document.documentElement.dataset.cinematicIntroVisible;
+      siteRef.current = null;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (phase !== 'opening' || startStateRef.current !== 'opening') return;
+    const section = sectionRef.current;
+    const site = siteRef.current;
     if (!section || !site) return;
 
-    siteRef.current = site;
     setIntroVisible(true);
 
     if (typeof IntersectionObserver === 'undefined') {
       setIntroVisible(false);
-      return () => {
-        delete site.dataset.cinematicIntroVisible;
-        delete document.documentElement.dataset.cinematicIntroVisible;
-        siteRef.current = null;
-      };
+      return;
     }
 
     const observer = new IntersectionObserver(
@@ -439,13 +651,11 @@ export default function CinematicOpening({
 
     return () => {
       observer.disconnect();
-      delete site.dataset.cinematicIntroVisible;
-      delete document.documentElement.dataset.cinematicIntroVisible;
-      siteRef.current = null;
     };
-  }, [setIntroVisible]);
+  }, [phase, setIntroVisible]);
 
   useEffect(() => {
+    if (phase !== 'opening' || startStateRef.current !== 'opening') return;
     const section = sectionRef.current;
     if (!section) return;
 
@@ -469,7 +679,7 @@ export default function CinematicOpening({
       cleanupInputHandlers();
       releaseTransitionLock();
     };
-  }, [releaseTransitionLock, transitionToContent]);
+  }, [phase, releaseTransitionLock, transitionToContent]);
 
   const handleScrollClick = (event: MouseEvent<HTMLAnchorElement>) => {
     if (
@@ -486,8 +696,19 @@ export default function CinematicOpening({
     if (transitionToContent()) event.preventDefault();
   };
 
+  const handleSkipClick = () => {
+    transitionToContent();
+  };
+
+  if (phase === 'completed') {
+    return <>{deferredContent}</>;
+  }
+
   return (
     <>
+      <script
+        dangerouslySetInnerHTML={{ __html: CINEMATIC_OPENING_PRE_HYDRATION_SCRIPT }}
+      />
       <section
         ref={sectionRef}
         className="cinematic-opening"
@@ -505,7 +726,6 @@ export default function CinematicOpening({
           mobileMp4Src={CINEMATIC_OPENING_MEDIA.mobile.mp4}
           alt={copy.mediaAlt}
           sizes="100vw"
-          eagerVideoMount
           deferVideoUntilPosterPaint
           priority
           rootMargin="0px"
@@ -527,7 +747,22 @@ export default function CinematicOpening({
           />
           <p className="cinematic-opening__primary">{copy.primary}</p>
           <p className="cinematic-opening__secondary">{copy.secondary}</p>
+          <div className="cinematic-opening__info">
+            <p className="cinematic-opening__service">{copy.service}</p>
+            <Link className="cinematic-opening__contact" href={`/${locale}/contact`}>
+              {copy.contact}
+            </Link>
+          </div>
         </div>
+        <button
+          ref={skipButtonRef}
+          type="button"
+          className={`cinematic-opening__skip ${styles.skip}`}
+          data-skip="true"
+          onClick={handleSkipClick}
+        >
+          {copy.skip}
+        </button>
         <a
           className="cinematic-opening__scroll"
           href="#cinematic-home-content"

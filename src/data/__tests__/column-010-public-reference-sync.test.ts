@@ -64,16 +64,16 @@ const expectedArchiveRecords = {
 } as const;
 
 const expectedCivilIntros = {
-  ko: '법무법인 호정은 계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 157만 TWD 손해배상 판결을 이끌어낸 실적이 있으며, 외국인 의뢰인의 대만 소송 절차를 한국어로 밀착 지원합니다.',
+  ko: '법무법인 호정은 계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 157만 TWD 손해배상 판결을 이끌어낸 실적이 있으며, 한국어로 한국 의뢰인을 밀착 지원하고 외국인 의뢰인의 대만 소송 절차는 사무소 상담 언어(한국어·중국어·일본어·영어)로 지원합니다.',
   'zh-hant':
-    '昊鼎處理契約爭議、損害賠償及消費者權益等民事案件，曾代理韓國留學生健身房受傷案，於一審獲判新臺幣157萬元賠償，並以中韓雙語支援外國當事人在台灣的訴訟程序。',
-  en: 'We handle civil disputes including breach of contract, tort, and consumer claims. In a Korean student gym injury case, we obtained a TWD 1.57 million first-instance damages award and provide multilingual support throughout Taiwan litigation.',
+    '昊鼎處理契約爭議、損害賠償及消費者權益等民事案件，曾代理韓國留學生健身房受傷案，於一審獲判新臺幣157萬元賠償，並以事務所諮詢語言（中文、韓文、日文、英文）支援外國當事人在台灣的訴訟程序。',
+  en: 'We handle civil disputes including breach of contract, tort, and consumer claims. In a Korean student gym injury case, we obtained a TWD 1.57 million first-instance damages award, and the firm supports foreign clients in Taiwan litigation with consultations in English, Chinese, Korean, and Japanese.',
 } as const;
 
 const expectedSiteCivilDescriptions = {
-  ko: '계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 157만 대만달러 손해배상 판결을 이끌어낸 실적이 있으며, 외국인 의뢰인의 대만 소송 절차를 한국어로 밀착 지원합니다.',
+  ko: '계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 157만 대만달러 손해배상 판결을 이끌어낸 실적이 있으며, 한국어로 한국 의뢰인을 밀착 지원하고 외국인 의뢰인의 대만 소송 절차는 사무소 상담 언어(한국어·중국어·일본어·영어)로 지원합니다.',
   'zh-hant':
-    '處理契約糾紛、損害賠償、消費者權益等民事案件。曾代理韓國留學生健身房受傷案，於一審獲判新台幣 157 萬元賠償。以中韓雙語全程支援外國當事人之台灣訴訟程序。',
+    '處理契約糾紛、損害賠償、消費者權益等民事案件。曾代理韓國留學生健身房受傷案，於一審獲判新台幣 157 萬元賠償。以事務所諮詢語言（中文、韓文、日文、英文）全程支援外國當事人之台灣訴訟程序。',
 } as const;
 
 const expectedCivilKeyPoints = {
@@ -258,20 +258,23 @@ describe('column 010 public reference synchronization', () => {
     }
   });
 
-  it('leaves search implementation and generated embeddings outside this lane', () => {
-    const forbiddenDiff = execFileSync(
+  it('leaves generated embeddings for column 010 unchanged', () => {
+    const embeddingsPath = 'src/content/column-embeddings.json';
+    const headRaw = execFileSync(
       'git',
-      [
-        'diff',
-        '--name-only',
-        'HEAD',
-        '--',
-        'src/lib/search.ts',
-        'src/content/column-embeddings.json',
-      ],
-      { cwd: process.cwd(), encoding: 'utf8' },
-    ).trim();
+      ['show', `HEAD:${embeddingsPath}`],
+      { cwd: process.cwd(), encoding: 'utf8', maxBuffer: 20 * 1024 * 1024 },
+    );
+    const head = JSON.parse(headRaw) as {
+      embeddings: Array<{ slug: string; locale: string }>;
+    };
+    const current = JSON.parse(
+      fs.readFileSync(path.join(process.cwd(), embeddingsPath), 'utf8'),
+    ) as { embeddings: Array<{ slug: string; locale: string }> };
 
-    expect(forbiddenDiff).toBe('');
+    const pick = (file: { embeddings: Array<{ slug: string; locale: string }> }) =>
+      file.embeddings.filter((record) => record.slug === slug);
+
+    expect(pick(current)).toEqual(pick(head));
   });
 });

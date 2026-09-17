@@ -2,6 +2,14 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import type { Locale, SiteLocale } from './locales';
+import { COLUMN_CONTENT_DIR_BY_LOCALE, getColumnAlternateLocales } from './column-locales';
+import {
+  PUBLIC_LOCALES_8,
+  isGuidanceLocale4,
+  isPublicLocale8,
+  type GuidanceLocale4,
+  type PublicLocale8,
+} from './public-guidance';
 import { insightsArchive } from '../data/insights-archive';
 import {
   formatColumnPublicationDate,
@@ -48,46 +56,72 @@ export function normalizeColumnFaq(raw: unknown): ColumnFaqItem[] {
     .filter((item): item is ColumnFaqItem => item !== null);
 }
 
-const COLUMNS_DIR = path.join(process.cwd(), 'src/content/columns');
-const COLUMNS_ZH_DIR = path.join(process.cwd(), 'src/content/columns-zh');
-const COLUMNS_EN_DIR = path.join(process.cwd(), 'src/content/columns-en');
-const COLUMNS_JA_DIR = path.join(process.cwd(), 'src/content/columns-ja');
+export type ColumnContentLocale = Locale | SiteLocale | PublicLocale8;
 
-function getColumnsDir(locale: Locale | SiteLocale): string {
-  if (locale === 'zh-hant') {
-    if (!fs.existsSync(COLUMNS_ZH_DIR)) {
-      throw new Error('Missing Chinese column directory: src/content/columns-zh');
-    }
-    return COLUMNS_ZH_DIR;
+export type ColumnLoadOptions = {
+  /** Absolute markdown directory. Test hook — production omits this. */
+  columnsDir?: string;
+  cwd?: string;
+};
+
+const COLUMNS_DIR = path.join(process.cwd(), 'src/content/columns');
+
+function getColumnsDir(locale: ColumnContentLocale, options?: ColumnLoadOptions): string | null {
+  if (options?.columnsDir) {
+    return fs.existsSync(options.columnsDir) ? options.columnsDir : null;
   }
-  if (locale === 'en') {
-    if (!fs.existsSync(COLUMNS_EN_DIR)) {
-      throw new Error('Missing English column directory: src/content/columns-en');
+
+  if (isPublicLocale8(locale)) {
+    const dir = path.join(options?.cwd ?? process.cwd(), COLUMN_CONTENT_DIR_BY_LOCALE[locale]);
+    if (isGuidanceLocale4(locale)) {
+      return fs.existsSync(dir) ? dir : null;
     }
-    return COLUMNS_EN_DIR;
-  }
-  if (locale === 'ja') {
-    if (!fs.existsSync(COLUMNS_JA_DIR)) {
-      throw new Error('Missing Japanese column directory: src/content/columns-ja');
+    if (!fs.existsSync(dir)) {
+      throw new Error(`Missing column directory: ${COLUMN_CONTENT_DIR_BY_LOCALE[locale]}`);
     }
-    return COLUMNS_JA_DIR;
+    return dir;
   }
+
   return COLUMNS_DIR;
 }
 
+/**
+ * Frontmatter `categories` phrases of the translated columns, exactly as the
+ * translation lane wrote them (vi/id/th/fil: 8 formation · 8 legal · 1 case,
+ * mirroring en). Before these were known here every guidance-language column
+ * fell through to `legal`, so the live vi/id/th/fil homes showed company-setup
+ * articles under "Legal Information". Arabic uses the reviewed ar terms.
+ */
+const FORMATION_CATEGORY_PHRASES = [
+  '법인설립',
+  '公司設立',
+  '台湾会社設立',
+  'Thành lập công ty', // vi
+  'Pendirian Perusahaan', // id
+  'การจัดตั้งบริษัท', // th
+  'Pagtatatag ng Kompanya', // fil
+  'تأسيس الشركات', // ar
+];
+const CASE_CATEGORY_PHRASES = [
+  '소송사례',
+  '訴訟案例',
+  '訴訟事例',
+  'Phân tích vụ án', // vi
+  'Analisis Kasus', // id
+  'การวิเคราะห์คดี', // th
+  'Pagsusuri ng Kaso', // fil
+  'دراسات قضايا', // ar
+];
+
 function categoryFromString(cat: string): ColumnCategory {
   if (
-    cat.includes('법인설립')
-    || cat.includes('公司設立')
-    || cat.includes('台湾会社設立')
+    FORMATION_CATEGORY_PHRASES.some((phrase) => cat.includes(phrase))
     || /company setup|company formation|incorporation/i.test(cat)
   ) {
     return 'formation';
   }
   if (
-    cat.includes('소송사례')
-    || cat.includes('訴訟案例')
-    || cat.includes('訴訟事例')
+    CASE_CATEGORY_PHRASES.some((phrase) => cat.includes(phrase))
     || /case study|litigation case|lawsuit case/i.test(cat)
   ) {
     return 'case';
@@ -95,7 +129,36 @@ function categoryFromString(cat: string): ColumnCategory {
   return 'legal';
 }
 
-function categoryLabelFn(cat: ColumnCategory, locale: Locale | SiteLocale): string {
+/**
+ * Column category badge for the guidance languages.
+ *
+ * vi/id/th/fil reuse — verbatim — the `categories` phrase the translation lane
+ * already wrote into every column's frontmatter (reviewed copy, 8/8/1 per
+ * language, mirroring en). Arabic labels come from the reviewed `ar` guidance
+ * vocabulary (WO-M3 review, 2026-09-16). Nothing here is invented; the
+ * accompanying test cross-checks each label against the frontmatter on disk.
+ */
+const GUIDANCE_COLUMN_CATEGORY_LABELS: Partial<Record<GuidanceLocale4, Record<ColumnCategory, string>>> = {
+  vi: { formation: 'Thành lập công ty tại Đài Loan', legal: 'Thông tin pháp luật Đài Loan', case: 'Phân tích vụ án tố tụng' },
+  id: { formation: 'Pendirian Perusahaan di Taiwan', legal: 'Informasi Hukum Taiwan', case: 'Analisis Kasus Litigasi' },
+  th: { formation: 'การจัดตั้งบริษัทในไต้หวัน', legal: 'ข้อมูลกฎหมายไต้หวัน', case: 'การวิเคราะห์คดีตัวอย่าง' },
+  fil: { formation: 'Pagtatatag ng Kompanya sa Taiwan', legal: 'Impormasyong Legal sa Taiwan', case: 'Pagsusuri ng Kaso sa Paglilitis' },
+  ar: { formation: 'تأسيس الشركات', legal: 'معلومات قانونية', case: 'دراسات قضايا' },
+};
+const ENGLISH_COLUMN_CATEGORY_LABELS: Record<ColumnCategory, string> = {
+  formation: 'Company Setup',
+  legal: 'Legal Information',
+  case: 'Case Study',
+};
+
+export function guidanceColumnCategoryLabel(cat: ColumnCategory, locale: GuidanceLocale4): string {
+  return (GUIDANCE_COLUMN_CATEGORY_LABELS[locale] ?? ENGLISH_COLUMN_CATEGORY_LABELS)[cat];
+}
+
+function categoryLabelFn(cat: ColumnCategory, locale: ColumnContentLocale): string {
+  if (isGuidanceLocale4(locale)) {
+    return guidanceColumnCategoryLabel(cat, locale);
+  }
   if (locale === 'zh-hant') {
     const map: Record<ColumnCategory, string> = { formation: '公司設立', legal: '法律資訊', case: '訴訟案例' };
     return map[cat];
@@ -119,6 +182,31 @@ function extractSummary(content: string): string {
   });
   const text = lines.slice(0, 3).join(' ').replace(/\*\*/g, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').trim();
   return text.length > 150 ? text.slice(0, 150) + '...' : text;
+}
+
+/**
+ * Prefer an authored frontmatter `summary` string for meta description,
+ * Article JSON-LD, and llms.txt annotations. Empty or non-string values
+ * fall back to the first-paragraph extract.
+ */
+export function resolveColumnSummary(rawSummary: unknown, content: string): string {
+  if (typeof rawSummary === 'string') {
+    const trimmed = rawSummary.trim();
+    if (trimmed) return trimmed;
+  }
+  return extractSummary(content);
+}
+
+/**
+ * Prefer an authored frontmatter `seoTitle` for <title> and og:title.
+ * Empty or non-string values fall back to the display/H1 title.
+ */
+export function resolveColumnSeoTitle(rawSeoTitle: unknown, fallbackTitle: string): string {
+  if (typeof rawSeoTitle === 'string') {
+    const trimmed = rawSeoTitle.trim();
+    if (trimmed) return trimmed;
+  }
+  return fallbackTitle;
 }
 
 function slugFromFilename(filename: string): string {
@@ -181,8 +269,12 @@ export function getAliasSlugs(): string[] {
   return Object.keys(SLUG_ALIASES);
 }
 
-export function getAllColumnPosts(locale: Locale | SiteLocale = 'ko'): ColumnPost[] {
-  const dir = getColumnsDir(locale);
+export function getAllColumnPosts(
+  locale: ColumnContentLocale = 'ko',
+  options?: ColumnLoadOptions,
+): ColumnPost[] {
+  const dir = getColumnsDir(locale, options);
+  if (!dir) return [];
   const files = fs.readdirSync(dir)
     .filter((f) => f.endsWith('.md'))
     .sort((a, b) => a.localeCompare(b, 'en'));
@@ -203,7 +295,8 @@ export function getAllColumnPosts(locale: Locale | SiteLocale = 'ko'): ColumnPos
     const publicationDate = parseColumnPublicationDate(data.published as string)
       || parseColumnPublicationDate(fallbackDateDisplay);
     const fallbackReadTime = (data.read_time as string) || '';
-    const fallbackSummary = extractSummary(fixedContent);
+    const fallbackSummary = resolveColumnSummary(data.summary, fixedContent);
+    const fallbackSeoTitle = resolveColumnSeoTitle(data.seoTitle, fallbackTitle);
     const faq = normalizeColumnFaq(data.faq);
 
     // When EN files live in columns-en/, frontmatter and body are already English.
@@ -214,6 +307,7 @@ export function getAllColumnPosts(locale: Locale | SiteLocale = 'ko'): ColumnPos
     let readTime = fallbackReadTime;
     const contentText = cleanContent;
     let summary = fallbackSummary;
+    let seoTitle = fallbackSeoTitle;
 
     if (publicationDate) {
       dateDisplay = formatColumnPublicationDate(publicationDate, locale, fallbackDateDisplay);
@@ -227,6 +321,7 @@ export function getAllColumnPosts(locale: Locale | SiteLocale = 'ko'): ColumnPos
       if (translatedPost) {
         title = translatedPost.title;
         summary = translatedPost.summary;
+        seoTitle = resolveColumnSeoTitle(data.seoTitle, title);
       }
       readTime = toEnglishReadTime(fallbackReadTime);
     }
@@ -247,6 +342,7 @@ export function getAllColumnPosts(locale: Locale | SiteLocale = 'ko'): ColumnPos
         featuredImage,
         content: contentText,
         summary,
+        seoTitle,
         ...(faq.length ? { faq } : {}),
       },
     };
@@ -257,15 +353,46 @@ export function getAllColumnPosts(locale: Locale | SiteLocale = 'ko'): ColumnPos
   );
 }
 
-export function getColumnPost(slug: string, locale: Locale | SiteLocale = 'ko'): ColumnPost | undefined {
+export function getColumnPost(
+  slug: string,
+  locale: ColumnContentLocale = 'ko',
+  options?: ColumnLoadOptions,
+): ColumnPost | undefined {
   const realSlug = resolveSlug(slug);
-  return getAllColumnPosts(locale).find((p) => p.slug === realSlug);
+  return getAllColumnPosts(locale, options).find((p) => p.slug === realSlug);
+}
+
+export function hasColumnTranslation(
+  locale: ColumnContentLocale,
+  slug: string,
+  options?: ColumnLoadOptions,
+): boolean {
+  return Boolean(getColumnPost(slug, locale, options));
 }
 
 export function getColumnSlugs(): string[] {
   return getAllColumnPosts('ko').map((p) => p.slug);
 }
 
-export function getFeaturedColumns(count = 6, locale: Locale | SiteLocale = 'ko'): ColumnPost[] {
+/**
+ * WO-O22 A: on-disk column slugs per public locale, for the language switcher.
+ * Server-only (reads `src/content/columns-*`); the public locale layout hands
+ * the result to `PublicColumnSlugsProvider` so a client switcher can link the
+ * same article in another language without ever guessing a 404 URL.
+ */
+export function publicColumnSlugsByLocale(): Record<PublicLocale8, string[]> {
+  return Object.fromEntries(
+    PUBLIC_LOCALES_8.map((locale) => [locale, getAllColumnPosts(locale).map((post) => post.slug)]),
+  ) as Record<PublicLocale8, string[]>;
+}
+
+export function getFeaturedColumns(count = 6, locale: ColumnContentLocale = 'ko'): ColumnPost[] {
   return getAllColumnPosts(locale).slice(0, count);
+}
+
+export function fileBackedColumnAlternateLocales(slug: string): PublicLocale8[] {
+  const realSlug = resolveSlug(slug);
+  return getColumnAlternateLocales(realSlug, {
+    hasTranslation: (locale, value) => hasColumnTranslation(locale, value),
+  });
 }

@@ -15,6 +15,7 @@ import {
 } from '@/lib/builder/seo/validation';
 import { resolveLocaleSeo } from '@/lib/builder/translations/seo-projection';
 import { getSiteUrl } from '@/lib/seo';
+import { rebuildSearchIndexBestEffort } from '@/lib/builder/search/index-runtime';
 import {
   resolveBuilderSiteIdForMutationFromRequest,
   resolveBuilderSiteIdFromRequest,
@@ -197,6 +198,8 @@ export async function PATCH(request: NextRequest, props: { params: Promise<{ pag
     );
 
     await writeSiteDocument(site);
+
+    void rebuildSearchIndexBestEffort();
 
     return NextResponse.json({
       ok: true,

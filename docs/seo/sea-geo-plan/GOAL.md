@@ -1,0 +1,89 @@
+# GOAL — tseng-law.com 동남아 SEO·GEO (무인 지속 정본, 레포 내)
+
+총괄 승계 순서: Claude Code Fable 5.1 → (토큰 소진) Cursor Fable 5 `claude-fable-5-thinking-high` (RUNBOOK §7) → (불가 시) Opus 5.
+총괄 이력: 2026-09-09 Fable 5.1(계획·가동). ← 승계자는 `총괄: <모델> <YYYY-MM-DD HH:MM>` 한 줄 추가.
+정본: `PROMPT.md` · `RUNBOOK.md` · `WO-*.txt` · `evidence/`. 작업트리 `~/Projects/tseng-law-sea-seo-20260909` 브랜치 `seo/sea-geo-20260909`.
+판정일: 2026-12-02. 주간 루프: 매주 화(S6).
+
+## A. 진행 보드 — 완료 시 `[x] <날짜> <증거>`. 위에서부터 순서대로.
+
+### S0 베이스라인
+- [x] 2026-09-09 S0-a 워크트리 생성 (6022bdcc, seo/sea-geo-20260909)
+- [x] 2026-09-09 S0-b 손빗 GSC 실측 → docs/seo/FROM-GROK-BOT-SEA-2026-09.md 커밋 b0a1b8e9 (6국 노출30·클릭2, 생성형AI 34/0, 4로케일 40URL 미등록)
+- [x] 2026-09-09 S0-c 방문 리포트 → evidence/visit-28d.md (실데이터 9/1~9/7만: 세션 58, SEA=SG 2·VN 1, AI 경유 1(chatgpt→/ko), GSC CSV 미병합)
+- [x] 2026-09-09 S0-d AI 인용 문항 세트 31행 → docs/seo/geo-sea-baseline-2026-09.md 커밋 05363645 (미결: 엔진 로그인 여부·원어민 검수)
+- [x] 2026-09-14 S0-e AI 인용 베이스라인 확정(손빗 브라우저, 파일 대조 완료): **Perplexity 31/31 Y9·N22 · ChatGPT 31/31 Y1(S0-17)·N30 · Gemini 31/31 Y0·N31**. 미실측: Google AIO(SERP CAPTCHA)·Claude/Grok(미시도) → docs/seo/geo-sea-baseline-2026-09.md §2.6·§3, evidence/aicite-2026-09-14/. (14:09 손빗 지연 반영으로 불일치 해소; 상단 요약 4행의 'CG 대기' 문구만 낡음)
+- [x] 2026-09-09 S0-f metrics-log SEA 베이스라인 행 추가(b0a1b8e9). §C 베이스라인 기입. 12주 목표치는 색인 완료 후 W2에 정함(색인 0 상태에서 목표 수치 무의미)
+
+### S1 인텐트 지도
+- [x] 2026-09-09 S1-a 42셀·H9/M19/L14·후보 C1~C5 → docs/seo/sea-intent-map-2026-09.md 커밋 3077b6ae (미결: MY/SG ①⑤ 근거 미확인, C2~C5는 guidance 코어 키 확장 필요 §3.1)
+- [x] 2026-09-09 S1-b Grok FAIL 5(716002c7) → R1 Opus 전부 반영 커밋 c8512969 (미결: 원표 칸값·원어민 미검수, C1~C5 마커 7)
+- [x] 2026-09-09 S1-c 판정: C1(EN 갱신 랜딩)=WO-S3-C1 발주(336bf0ee). C2~C5(vi/id/th/fil work-permit-renewal)=코어 키 확장 필요 → S2b 커밋 후 WO-S3-GUIDANCE-KEY(구조+별도 데이터 파일 4언어) 1건으로
+
+### S2 GEO 구조 (S2a ∥ S2b 병렬 가능)
+- [x] 2026-09-09 S2a-1 Opus 구현 → vitest 7/7
+- [x] 2026-09-09 S2a-2 Grok FAIL 1(services FAQ 문장 혼입, docs/seo/reviews/S2a-REVIEW.md) → WO-S2a-R1 Opus 반영 커밋 a506a7c1 (vitest 8/8, 미결: vi/about 밀도 보강은 길이 상한으로 보류)
+- [x] 2026-09-09 S2a-3 게이트(typecheck·vitest 75·build·렌더 8URL evidence/render-S2a.txt·계약 grep) → 커밋 1d5577ca (Grok 검토 FAIL 시 R1 후속 커밋)
+- [x] 2026-09-09 S2b-1 Opus 구현 → vitest 60·tsc 0 → 커밋 99fde7eb (llms.txt 라우트 배선은 WO-S2b-R1 진행 중 12:3x)
+- [x] 2026-09-09 S2b-2 Grok 검토 PASS 5/5 → docs/seo/reviews/S2b-REVIEW.md
+- [x] 2026-09-09 S2b-3 통합 게이트: typecheck·build(8 llms.txt prerender)·렌더 16URL(LegalService availableLanguage 4개 고정, faq FAQPage 8문항 파싱, hreflang 18, canonical self)·/vi|id|th|fil/llms.txt 200 text/plain·루트 카탈로그 8 → evidence/render-S2-integrated.txt. 커밋 915614df(R2)+b1002186(R1)+99fde7eb
+
+### S3 신규 인텐트 페이지 (S1-c 결과 수만큼)
+- [x] 2026-09-09 S3-C1-1 EN 갱신 랜딩 4로케일 초안 → drafts 0ff814e6 · [x] S3-C1-2 Grok 통합검토(S3-REVIEW, FAIL 3) · [x] S3-C1-3 R1 반영 drafts 7f87e3a9(마커 44, 수치 0, 내부링크 4) — **초안 보관, main 금지**
+- [x] 2026-09-09 S3-KEY-1 안내 4언어 work-permit-renewal(C2~C5) → drafts 11ce641d · [x] S3-KEY-2 Grok 검토 · [x] S3-KEY-3 R1(x-default 제거·현지어 교정·인바운드 링크) drafts 7f87e3a9 — **초안 보관, main 금지**
+
+### S4 색인
+- [x] 2026-09-09 S4-a 로컬 40URL 실측 BAD 0/40(200·canonical self·hreflang 9·x-default en) → evidence/s4-local-hreflang.txt
+- [x] 2026-09-09 S4-b verify:multilingual-live PASS 400/0 · live-seo-scan 28URL 중 2건(/ko·/zh-hant 홈 'body too short') = 빌더 캔버스 홈의 스캐너 휴리스틱 오탐(600KB/2.2MB·title·h1 정상, 이 배포 diff는 ko/zh-hant 홈 미접촉) → evidence/s4-live-seo.log. 추적 항목으로만 유지
+- [x] 2026-09-09 S4-c 손빗 실행: IndexNow 40URL 200, sitemap Success(재제출 불필요), Request Indexing 8 요청/3 거부(홈)/3 오류/2 미시도(할당량) → evidence/s4-indexing.md. 잔여 7URL·거부 사유는 S4-d에서
+- [ ] S4-d 2026-09-23 손빗 ASK: 40URL 색인 상태 + 거부 3홈 사유(URL 검사) + 잔여 7URL 재요청
+
+### S5 권위
+- [x] 2026-09-09 S5-a Grok 후보 40건·6국 → docs/marketing/SEA-AUTHORITY-CANDIDATES-2026-09.md
+- [x] 2026-09-09 S5-b 검수(유료·交流協会 제외, 광고·계약 grep 0, 발송 0) → 커밋 551d2815
+- [x] 2026-09-09 S5-c **보류 종결(사용자 스킵 12:4x, 재질문 금지)**: 상위 10 발송·문의 전부 안 함. 후보·문안은 docs/marketing/SEA-AUTHORITY-CANDIDATES-2026-09.md 에 보관, 사용자가 원할 때 직접 사용
+
+### S6 측정 루프 (매주 화)
+- [x] 2026-09-16 W1 (GSC 7일 노출 82·클릭 2·생성형AI 120·URL검사 14/16 Indexed, 방문 SG 10·AI 3; metrics-log 행) · [ ] W2 09-23 · [ ] W3 09-30 · [ ] W4 10-07 · [ ] W5 10-14 · [ ] W6 10-21 · [ ] W7 10-28 · [ ] W8 11-04 · [ ] W9 11-11 · [ ] W10 11-18 · [ ] W11 11-25 · [ ] 판정 12-02
+  각 주: 손빗 GSC(국가별 7일·생성형AI) ASK + 방문 7일 리포트 → metrics-log 1행 + 반증 조건 점검 + 다음 WO 결정
+
+### 배포
+- [x] 2026-09-09 15:07 **배포 완료**: 사용자 승인(ASK-1316) → Claude push 차단 → 손빗이 push(97c33510..3799c41d FF) → Vercel success(Bod7Ygt3…) → 라이브 검증 evidence/s4-live-curl.txt(4로케일 llms.txt 200·JSON-LD availableLanguage 4개·summary 블록·FAQPage) + s4-live-multilingual.log(overall PASS 400/0)
+
+## B. 미결·ASK 대기 (승계자는 여기부터)
+- W1 판독(9/16): 베이스라인(28일 노출 30·생성형AI 34) 대비 7일만에 노출 82·생성형AI 120 — 색인 진입 직후 효과로 보이나 1주 데이터라 판정 보류. 반증 조건 3(색인<50%)은 URL 검사 14/16으로 해소 추세, 색인됨 목록 0은 리포트 지연 의심 → W2에서 재확인. 방문 9/15분은 11:30 롤업 후 W2 때 합산.
+- S0-e: 손빗 AI 인용 실측 예정(S0-b 직후). geo-sea-baseline-2026-09.md 는 손빗 소유 중 — 쓰기 금지.
+- S1-b: Grok 검토 중. S1-c 판정 시 주의: C2~C5(/vi|id|th|fil/work-permit)는 international-guidance-content.ts(번역 레인 파일)에 본문이 필요 → 하드룰 4 충돌. 대안=별도 데이터 파일+코어 키 확장, 또는 번역 레인 요청. C1(EN 랜딩)은 intent-pages.ts 4로케일 동시 작성 필요.
+- 15:08: **배포 라이브(3799c41d)**. 잔여=S0-e 손빗 AI 인용 실측, S6 W1(9/16), S4-d(9/23). Claude Code 세션은 git push 권한 분류기 차단 → push는 손빗/사용자.
+- 13:3x: S3 스트림 종결(초안 브랜치 seo/sea-s3-drafts-20260909 HEAD 7f87e3a9, 워크트리 ~/Projects/tseng-law-sea-s3-drafts-20260909). 배포 ASK 답 대기. 손빗 AI 인용 실측(S0-e) 대기.
+- **S3 초안 인수 조건**(사용자·변호사): ① 변호사가 마커 96건(C1 44·C2~C5 52) 검수 ② 마커 제거 ③ 테스트 4파일 갱신(intent 수 4→5 ×3, intent-pages-ja 한글 게이트) ④ 배포 라인 위로 리베이스(WO-REBASE-1 방식) ⑤ 배포 ASK.
+- 주의: drafts 브랜치는 구 베이스(6022bdcc 계열) 기반. 배포 라인 병합 시 리베이스 필요(WO-REBASE-1 방식 재사용).
+- drafts 브랜치 커밋: 0ff814e6(C1)·9f466e7b·11ce641d(C2~C5)·1ac3467f. 배포 라인과 별도. 병합 조건은 변호사 검수·마커 제거·테스트 3개 갱신.
+- drafts 브랜치 0ff814e6 인수 조건: 변호사 검수 후 마커 제거 → 테스트 3개(intent-pages-en-growth 슬러그 수·public-intent-docs 카운트·intent-pages-ja 한글금지) 갱신 → 배포 라인 병합. 셋 다 끝나면 통합 게이트(build+렌더) 1회 → 커밋 → Grok 검토 S2b·S3-C1 발주 → WO-S3-GUIDANCE-KEY.
+- 손빗 AI 인용 실측 진행 중(geo-sea-baseline-2026-09.md 쓰기 금지).
+- S5-c: 발송 승인 ASK 미발송(S0-b 정리 후).
+- Documents 폴더 TCC 차단(11:4x~): 구 정본 접근 불가. 이 폴더가 정본.
+
+## C. 목표 수치 (S0-f 후 기입)
+| 지표 | 베이스라인(날짜) | 12주 목표 | 출처 |
+|---|---|---|---|
+| GSC SEA 6국 노출/28일 | 30 (2026-09-09) | W2에 확정 | FROM-GROK-BOT-SEA |
+| GSC SEA 6국 클릭/28일 | 2 (SG, zh-hant 가이드) | | |
+| GSC 생성형AI 노출/28일 | 34 / 클릭 0 | | |
+| 4로케일 URL 색인율 | 0/14 검사(26 미확인) | | |
+| 방문 SEA 세션 · AI 채널 세션 (28일) | 9/1~9/7: SEA 3(SG2·VN1) · AI 1 | | visit-28d |
+
+- 9/14 14:1x 손빗 CG 보고와 파일 불일치 적발 → 재요청 → 14:09 반영 확인 → S0-e [x]. W1 준비물(ASK-S6-W1-TEMPLATE.md·W1-RUN.sh) 커밋. 남은 보드 항목 = S0-e 7행·S6 W1(9/16)·S4-d(9/23). 남은 보드 항목 = S6 W1(9/16)·S4-d(9/23)뿐. Gemini 등 추가 결과는 오면 추기.
+- 9/14 10:4x 손빗 답: 실측 미착수였음 → 9/14부터 Perplexity+Google 우선 착수, W1(9/16) 전 일부 선반영 목표, 완료 시 같은 파일 §3에 기록. 총괄은 파일 변경 감시만. 업스트림 c0bf619b(29커밋, dba50dba가 안내 JSON-LD 패리티로 ld 3~4개로 확장) 라이브 계약 재확인 OK(availableLanguage 4개·summary·FAQPage·llms.txt 200). 브랜치는 origin/main 위로 리베이스(docs 1커밋만 미push).
+- 다른 세션 ASK(sea-form 실전송 4건)는 이 캠페인 관할 아님 — 무시.
+
+## D. 세션 로그
+- 2026-09-09 · Fable 5.1 · PROMPT v2·GOAL·RUNBOOK·WO 작성(Documents).
+- 2026-09-09 11:25 · Fable 5.1 · /goal 가동. S0-a 완료, S0-b ASK 발송(승인), S0-c 완료, S0-d 커밋 05363645, S0-e 실측 0건→사용자 보류 종결, S5 커밋 551d2815, S1 Opus 진행 중.
+- 2026-09-14 10:3x · Fable 5.1 · /goal active 재가동, 상태 점검·리베이스, 손빗 실측 상태 ASK. W1은 9/16.
+- 2026-09-09 15:0x · 사용자(손빗 중계) · 배포 승인 → 손빗 push → Vercel 라이브 3799c41d.
+- 2026-09-09 12:4x · 사용자(손빗 중계) · 권위 등재 발송 보류, 재질문 금지.
+- 2026-09-09 12:3x · 사용자(손빗 중계 정정) · 색인 요청 둘 다 승인, 손빗 실행.
+- 2026-09-09 12:2x · 사용자(손빗 중계) · 색인 요청 보류(→13:0x 철회).
+- 2026-09-09 11:5x · 사용자(손빗 중계 정정) · AI 인용 실측 승인(전부), 손빗 실행.
+- 2026-09-09 11:5x · Fable 5.1 · Documents TCC 차단 → 정본을 레포 docs/seo/sea-geo-plan/ 으로 이전·재생성.

@@ -1,10 +1,21 @@
+import type { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import type { SiteLocale } from '@/lib/locales';
-import { siteContent } from '@/data/site-content';
+import { isGuidanceLocale4, type PublicLocale8 } from '@/lib/public-guidance';
+import {
+  guidanceFooterCopy,
+  guidanceOfficeCopy,
+  type GuidanceOfficeId,
+} from '@/data/international-guidance-offices';
+import {
+  chromeSiteLocale,
+  guidanceLegalLinks,
+  publicSiteContent,
+} from '@/lib/public-site-chrome';
 import { getPublishedBaseFooterColumns } from '@/components/footer-link-policy';
 import LocaleFlagSwitcher from '@/components/LocaleFlagSwitcher';
 import FooterEmailCopyButton from '@/components/FooterEmailCopyButton';
+import styles from './PublicChrome.module.css';
 import {
   CONSULTATION_EMAIL,
   getConsultationCtaLabel,
@@ -22,14 +33,58 @@ export type FooterLinkColumn = {
   readonly links: readonly FooterLink[];
 };
 
+const OFFICE_NUMERIC_UNIT = /\d+(?:樓之\d+|F-\d+|[號号樓])/g;
+
+function renderOfficeAddress(address: string): ReactNode {
+  const pattern = new RegExp(OFFICE_NUMERIC_UNIT.source, 'g');
+  const nodes: ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  while ((match = pattern.exec(address)) !== null) {
+    if (match.index > lastIndex) {
+      nodes.push(address.slice(lastIndex, match.index));
+    }
+    nodes.push(
+      <span className={styles.officeNumeric} key={`office-numeric-${match.index}`}>
+        {match[0]}
+      </span>,
+    );
+    lastIndex = match.index + match[0].length;
+  }
+  if (lastIndex === 0) {
+    return address;
+  }
+  if (lastIndex < address.length) {
+    nodes.push(address.slice(lastIndex));
+  }
+  return nodes;
+}
+
+function renderConsultationEmail(email: string): ReactNode {
+  const atIndex = email.indexOf('@');
+  if (atIndex === -1) {
+    return email;
+  }
+
+  return (
+    <>
+      {email.slice(0, atIndex + 1)}
+      <wbr />
+      {email.slice(atIndex + 1)}
+    </>
+  );
+}
+
 export default function Footer({
   locale,
   extraColumns = [],
 }: {
-  locale: SiteLocale;
+  locale: PublicLocale8;
   extraColumns?: readonly FooterLinkColumn[];
 }) {
-  const footerContent = siteContent[locale].footer;
+  const content = publicSiteContent(locale);
+  const chromeLocale = chromeSiteLocale(locale);
+  const footerContent = content.footer;
   const publishedBaseColumns = getPublishedBaseFooterColumns(footerContent.columns);
   const brandName =
     locale === 'ko'
@@ -39,25 +94,43 @@ export default function Footer({
         : locale === 'ja'
           ? '昊鼎国際法律事務所'
           : 'Hovering International Law Firm';
+  // Guidance locales share the English chrome structure, so without these
+  // overrides the footer kept six English labels on a fully localized page.
+  const guidanceFooter = isGuidanceLocale4(locale) ? guidanceFooterCopy[locale] : null;
+  const guidanceOffices = isGuidanceLocale4(locale) ? guidanceOfficeCopy[locale] : null;
   const officeLabel =
-    locale === 'ko' ? '사무소' : locale === 'zh-hant' ? '據點' : locale === 'ja' ? '事務所' : 'Offices';
+    guidanceFooter?.officeLabel ??
+    (locale === 'ko' ? '사무소' : locale === 'zh-hant' ? '據點' : locale === 'ja' ? '事務所' : 'Offices');
   const officeQuickLinksLabel =
-    locale === 'ko'
+    guidanceFooter?.officeQuickLinksLabel ??
+    (locale === 'ko'
       ? '사무소 위치 바로가기'
       : locale === 'zh-hant'
         ? '事務所據點快速連結'
         : locale === 'ja'
           ? '事務所所在地へのクイックリンク'
-          : 'Quick links to office locations';
-  const offices = siteContent[locale].contact.locations.map((office) => ({
-    label: office.title,
+          : 'Quick links to office locations');
+  // Office order in `contact.locations` is taipei / taichung / kaohsiung /
+  // pingtung, the same order `guidanceOfficeCopy.officeTitles` declares.
+  const guidanceOfficeOrder: readonly GuidanceOfficeId[] = [
+    'taipei',
+    'taichung',
+    'kaohsiung',
+    'pingtung',
+  ];
+  const offices = content.contact.locations.map((office, index) => ({
+    label:
+      guidanceOffices && guidanceOfficeOrder[index]
+        ? guidanceOffices.officeTitles[guidanceOfficeOrder[index]]
+        : office.title,
     address: office.details[0],
     href: `/${locale}/contact#offices`,
   }));
-  const consultationMailto = getConsultationPublicMailto(locale);
-  const consultationCtaLabel = getConsultationCtaLabel(locale);
-  const legalLinks =
-    locale === 'ko'
+  const consultationMailto = getConsultationPublicMailto(chromeLocale);
+  const consultationCtaLabel = getConsultationCtaLabel(chromeLocale);
+  const legalLinks = isGuidanceLocale4(locale)
+    ? guidanceLegalLinks(locale)
+    : locale === 'ko'
       ? [
           { label: '개인정보처리방침', href: '/ko/privacy' },
           { label: '면책 고지', href: '/ko/disclaimer' },
@@ -91,11 +164,17 @@ export default function Footer({
         ? { blog: '部落格', youtube: 'YouTube', website: '官方網站' }
         : locale === 'ja'
           ? { blog: 'ブログ', youtube: 'YouTube', website: '公式サイト' }
+        : guidanceFooter
+          ? {
+              blog: guidanceFooter.blogLabel,
+              youtube: 'YouTube',
+              website: guidanceFooter.websiteLabel,
+            }
         : { blog: 'Blog', youtube: 'YouTube', website: 'Website' };
 
   return (
     <>
-      <section className="footer-skyline" aria-hidden>
+      <section className={`footer-skyline ${styles.skyline}`} aria-hidden>
         <div className="skyline-image">
           <Image
             src="/images/footer-ground-skyline-v2.webp"
@@ -108,7 +187,7 @@ export default function Footer({
           />
         </div>
       </section>
-      <footer className="site-footer">
+      <footer className={`site-footer ${styles.footer}`}>
         <div className="footer-offices">
           <div className="container">
             <nav className="office-links" aria-label={officeQuickLinksLabel}>
@@ -116,7 +195,7 @@ export default function Footer({
               {offices.map((office) => (
                 <Link key={office.label} href={office.href} className="office-link">
                   <span className="office-link-name">{office.label}</span>
-                  <span className="office-link-address">{office.address}</span>
+                  <span className="office-link-address">{renderOfficeAddress(office.address)}</span>
                 </Link>
               ))}
             </nav>
@@ -129,7 +208,8 @@ export default function Footer({
               <p className="footer-main-note">{footerContent.note}</p>
               <div className="footer-consultation-email">
                 <p className="footer-consultation-email-label">
-                  {getOfficialConsultationEmailLabel(locale)}
+                  {guidanceFooter?.officialConsultationEmailLabel
+                    ?? getOfficialConsultationEmailLabel(chromeLocale)}
                 </p>
                 <div className="footer-consultation-email-actions">
                   <a
@@ -137,9 +217,13 @@ export default function Footer({
                     href={consultationMailto}
                     aria-label={`${consultationCtaLabel}: ${CONSULTATION_EMAIL}`}
                   >
-                    {CONSULTATION_EMAIL}
+                    {renderConsultationEmail(CONSULTATION_EMAIL)}
                   </a>
-                  <FooterEmailCopyButton locale={locale} />
+                  <FooterEmailCopyButton
+                    locale={chromeLocale}
+                    copyLabel={guidanceFooter?.copyEmailLabel}
+                    copiedMessage={guidanceFooter?.emailCopiedMessage}
+                  />
                 </div>
               </div>
             </div>
@@ -174,21 +258,21 @@ export default function Footer({
               <LocaleFlagSwitcher locale={locale} className="footer-locale-switch" />
             </div>
             <div className="footer-social">
-              <span className="social-label">{locale === 'ko' ? '팔로우' : locale === 'zh-hant' ? '追蹤我們' : locale === 'ja' ? 'フォロー' : 'Follow'}</span>
+              <span className="social-label">{guidanceFooter?.followLabel ?? (locale === 'ko' ? '팔로우' : locale === 'zh-hant' ? '追蹤我們' : locale === 'ja' ? 'フォロー' : 'Follow')}</span>
               <div className="social-icons">
-                <a className="social-icon" href="https://blog.naver.com/wei_lawyer/223461663913" aria-label={socialLabels.blog} target="_blank" rel="noopener noreferrer">
+                <a className="social-icon" href="https://blog.naver.com/wei_lawyer/223461663913" aria-label={socialLabels.blog} title={socialLabels.blog} target="_blank" rel="noopener noreferrer">
                   <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <path d="M14 2.5l3.5 3.5L7 16.5l-4.5 1 1-4.5L14 2.5z" />
                     <path d="M12 5l3 3" />
                   </svg>
                 </a>
-                <a className="social-icon" href="https://www.youtube.com/@weilawyer" aria-label={socialLabels.youtube} target="_blank" rel="noopener noreferrer">
+                <a className="social-icon" href="https://www.youtube.com/@weilawyer" aria-label={socialLabels.youtube} title={socialLabels.youtube} target="_blank" rel="noopener noreferrer">
                   <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <rect x="2" y="4" width="16" height="12" rx="3" />
                     <polygon points="8,7.5 13,10 8,12.5" fill="currentColor" stroke="none" />
                   </svg>
                 </a>
-                <a className="social-icon" href="https://tseng-law.com/" aria-label={socialLabels.website} target="_blank" rel="noopener noreferrer">
+                <a className="social-icon" href="https://tseng-law.com/" aria-label={socialLabels.website} title={socialLabels.website} target="_blank" rel="noopener noreferrer">
                   <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                     <circle cx="10" cy="10" r="8" />
                     <ellipse cx="10" cy="10" rx="3.5" ry="8" />

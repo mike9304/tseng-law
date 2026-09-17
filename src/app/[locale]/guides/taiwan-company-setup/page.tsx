@@ -45,6 +45,12 @@ export default async function TaiwanCompanySetupGuidePage(props: { params: Promi
   const homeLabel = locale === 'ko' ? '홈' : locale === 'zh-hant' ? '首頁' : locale === 'ja' ? 'ホーム' : 'Home';
   const servicesLabel = locale === 'ko' ? '업무분야' : locale === 'zh-hant' ? '服務' : locale === 'ja' ? '取扱業務' : 'Services';
   const summaryHeading = locale === 'ko' ? '핵심 요약' : locale === 'zh-hant' ? '核心摘要' : locale === 'ja' ? '要点まとめ' : 'Key Summary';
+  const tableScrollHint = {
+    ko: '표를 좌우로 스크롤하여 모든 항목을 확인하세요.',
+    en: 'Scroll horizontally to view all table columns.',
+    ja: '表を左右にスクロールして、すべての項目をご確認ください。',
+    'zh-hant': '左右捲動表格，查看所有欄位。',
+  }[locale];
   const disclaimerNote =
     locale === 'ko'
       ? '※ 본 페이지의 수치·요건은 당사 공개 칼럼에서 발췌한 일반 정보이며 사안별로 달라질 수 있습니다.'
@@ -103,22 +109,23 @@ export default async function TaiwanCompanySetupGuidePage(props: { params: Promi
             </section>
 
             <section className={styles.section}>
-              <h2 className={styles.heading}>{c.comparisonHeading}</h2>
+              <h2 className={styles.heading} id="guide-comparison-heading">{c.comparisonHeading}</h2>
               <p className={styles.intro}>{c.comparisonIntro}</p>
               {/* Source refs: columns 001, 004 — tax rate comparison */}
-              <div className={styles.tableWrap}>
+              <p className={styles.tableHint} id="guide-comparison-scroll-hint">{tableScrollHint}</p>
+              <div className={styles.tableWrap} role="region" tabIndex={0} aria-labelledby="guide-comparison-heading" aria-describedby="guide-comparison-scroll-hint">
                 <table className={styles.table}>
                   <thead>
                     <tr>
                       {c.comparisonColumns.map((col, index) => (
-                        <th key={index}>{col}</th>
+                        <th key={index} scope="col">{col}</th>
                       ))}
                     </tr>
                   </thead>
                   <tbody>
                     {c.comparisonRows.map((row, index) => (
                       <tr key={index}>
-                        <td>{row.form}</td>
+                        <th scope="row">{row.form}</th>
                         {row.values.map((value, vIndex) => (
                           <td key={vIndex}>{value}</td>
                         ))}
@@ -130,22 +137,23 @@ export default async function TaiwanCompanySetupGuidePage(props: { params: Promi
             </section>
 
             <section className={styles.section}>
-              <h2 className={styles.heading}>{c.costHeading}</h2>
+              <h2 className={styles.heading} id="guide-cost-heading">{c.costHeading}</h2>
               <p className={styles.intro}>{c.costIntro}</p>
               {/* Source refs: columns 001, 004, 013 — cost/timeline/DTA notes */}
-              <div className={styles.tableWrap}>
+              <p className={styles.tableHint} id="guide-cost-scroll-hint">{tableScrollHint}</p>
+              <div className={styles.tableWrap} role="region" tabIndex={0} aria-labelledby="guide-cost-heading" aria-describedby="guide-cost-scroll-hint">
                 <table className={styles.table}>
                   <thead>
                     <tr>
                       {c.costColumns.map((col, index) => (
-                        <th key={index}>{col}</th>
+                        <th key={index} scope="col">{col}</th>
                       ))}
                     </tr>
                   </thead>
                   <tbody>
                     {c.costRows.map((row, index) => (
                       <tr key={index}>
-                        <td>{row.item}</td>
+                        <th scope="row">{row.item}</th>
                         {row.values.map((value, vIndex) => (
                           <td key={vIndex}>{value}</td>
                         ))}

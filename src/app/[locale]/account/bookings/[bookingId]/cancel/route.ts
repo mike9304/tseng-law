@@ -4,7 +4,12 @@ import { validateCsrf } from '@/lib/builder/security/csrf';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { getCurrentSiteMember } from '@/lib/builder/members/current-member';
 import { getMemberPortalEmails } from '@/lib/builder/members/members-engine';
-import { applyRefundOutcome, computeRefundForCancel, evaluateBookingSelfServicePolicy } from '@/lib/builder/bookings/refund';
+import {
+  applyRefundOutcome,
+  computeRefundForCancel,
+  evaluateBookingSelfServicePolicy,
+  refundAllowsCancelPersist,
+} from '@/lib/builder/bookings/refund';
 import { listBookings, getService, getStaff, saveBooking } from '@/lib/builder/bookings/storage';
 import { sendBookingCancellation } from '@/lib/builder/bookings/notifications';
 import { restorePackageCreditForBooking } from '@/lib/builder/bookings/packages';
@@ -73,7 +78,26 @@ export async function POST(
     );
   }
 
-  const outcome = await computeRefundForCancel(booking, service);
+  let outcome;
+  try {
+    outcome = await computeRefundForCancel(booking, service);
+  } catch (error) {
+    console.error('[member-booking-cancel] refund computation failed:', error instanceof Error ? error.message : String(error));
+    return NextResponse.json(
+      { error: 'We could not confirm the refund status or booking cancellation. Please contact us for help.', errorCode: 'booking_refund_failed' },
+      { status: 502 },
+    );
+  }
+  if (!refundAllowsCancelPersist(outcome)) {
+    return NextResponse.json(
+      {
+        error: 'We could not confirm the refund status or booking cancellation. Please contact us for help.',
+        errorCode: 'booking_refund_failed',
+      },
+      { status: 502 },
+    );
+  }
+  // TODO FN19-H2: external refund may already have succeeded; saveBooking can still fail. restorePackageCreditForBooking runs before persist (ordering risk). Durable refund-id ledger is out of scope.
   const cancelled = await restorePackageCreditForBooking(applyRefundOutcome(booking, outcome, parsed.data.reason));
   const latest = (await listBookings({ includeCancelled: true }))
     .find((item) => item.bookingId === params.bookingId);

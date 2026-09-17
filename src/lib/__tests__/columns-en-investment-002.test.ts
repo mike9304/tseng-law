@@ -27,7 +27,7 @@ const exitFaqAnswer =
 const resolutionFaqAnswer =
   'A limited company requires the approval of shareholders holding at least two-thirds of the voting rights. A company limited by shares, as a general rule, requires the attendance of shareholders representing at least two-thirds of all issued shares and a resolution approved by a majority of the voting rights represented by the attending shareholders. If a company that has made a public offering of shares does not meet that attendance requirement, it may adopt the resolution with shareholders representing a majority of all issued shares in attendance and at least two-thirds of the voting rights represented by the attending shareholders in favor. The articles of incorporation may impose higher requirements. An application for dissolution registration must be filed within 15 days after dissolution.';
 const suspensionFaqAnswer =
-  'A company suspending business for at least one month must apply for business-suspension registration before the suspension or within 15 days after the suspension begins, and each suspension period may not exceed one year. However, the company must still file its annual income tax return for a year in which it suspends business, so suspension does not categorically exempt it from tax filings. Its obligations must be checked individually based on the types of tax involved, the assets it holds, its employees, and other circumstances.';
+  'A company suspending business for at least one month must apply for business-suspension registration before the suspension or within 15 days after the suspension begins (unless the suspension has already been reported to and recorded by the tax authority under the Business Tax Act — proviso to Article 3, paragraph 1 of the Regulations Governing Company Registration), and each suspension period may not exceed one year. However, the company must still file its annual income tax return for a year in which it suspends business, so suspension does not categorically exempt it from tax filings. Its obligations must be checked individually based on the types of tax involved, the assets it holds, its employees, and other circumstances.';
 
 const faq = [
   {
@@ -104,7 +104,7 @@ describe('English investment column 002 — closing a Taiwan company', () => {
   it('publishes the exact metadata, H1, images, and three contracted FAQs', () => {
     expect(parsed.data.title).toBe(title);
     expect(parsed.data.url).toBe(sourceUrl);
-    expect(parsed.data.lastmod).toBe('2026-07-25');
+    expect(parsed.data.lastmod).toBe('2026-09-10');
     expect(parsed.data.date_display).toBe('September 13, 2025');
     expect(parsed.data.categories).toEqual(['Taiwan Company Formation']);
     expect(parsed.data.featured_image).toBe(featuredImage);
@@ -117,7 +117,7 @@ describe('English investment column 002 — closing a Taiwan company', () => {
     expect(post).toBeTruthy();
     expect(post?.slug).toBe('withdraw-capital-taiwan-company');
     expect(post?.title).toBe(title);
-    expect(post?.date).toBe('2026-07-25');
+    expect(post?.date).toBe('2026-09-10');
     expect(post?.dateDisplay).toBe('September 13, 2025');
     expect(post?.category).toBe('formation');
     expect(post?.categoryLabel).toBe('Company Setup');
@@ -324,7 +324,7 @@ describe('English investment column 002 — closing a Taiwan company', () => {
     const visibleWords = countVisibleEnglishWords(parsed.content);
     const calculatedMinutes = Math.ceil(visibleWords / 200);
 
-    expect(visibleWords).toBe(4_290);
+    expect(visibleWords).toBe(4_321);
     expect(visibleWords).toBeGreaterThanOrEqual(1_800);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);

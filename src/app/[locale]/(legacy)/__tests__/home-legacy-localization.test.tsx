@@ -24,7 +24,7 @@ const locales = ['ko', 'zh-hant', 'en', 'ja'] as const satisfies readonly SiteLo
 const heroLabels = {
   ko: { cta: '호정칼럼 보기', scroll: '아래로 스크롤' },
   'zh-hant': { cta: '查看專欄內容', scroll: '向下滾動' },
-  en: { cta: 'View Columns', scroll: 'Scroll down' },
+  en: { cta: 'View Insights', scroll: 'Scroll down' },
   ja: { cta: 'コラムを見る', scroll: '下へスクロール' },
 } as const;
 
@@ -169,6 +169,7 @@ describe('legacy home four-locale localization', () => {
 
     for (const fallback of [
       'View Columns',
+      'View Insights',
       'Scroll down',
       'Talk to us now about your Taiwan legal issue.',
       'Office Locations',

@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { formatDateTimeInTimezone } from '@/lib/builder/bookings/timezone';
 import { normalizeLocale, type Locale } from '@/lib/locales';
 import styles from './BookingsAdmin.module.css';
@@ -41,6 +41,7 @@ type ManageCopy = {
   title: string;
   loading: string;
   invalidLink: string;
+  loadFailed: string;
   time: string;
   timezone: string;
   staff: string;
@@ -81,6 +82,7 @@ const COPY: Record<Locale, ManageCopy> = {
     eyebrow: '예약',
     title: '예약 관리',
     loading: '예약을 불러오는 중...',
+    loadFailed: '연결 문제로 예약 정보를 불러오지 못했습니다. 네트워크를 확인한 뒤 페이지를 새로고침해 다시 시도해 주세요.',
     invalidLink: '이 예약 링크는 유효하지 않거나 만료되었습니다.',
     time: '시간',
     timezone: '시간대',
@@ -120,6 +122,7 @@ const COPY: Record<Locale, ManageCopy> = {
     eyebrow: '預約',
     title: '管理預約',
     loading: '正在載入預約...',
+    loadFailed: '因連線問題無法載入預約資料。請檢查網路後重新整理頁面再試一次。',
     invalidLink: '此預約連結無效或已過期。',
     time: '時間',
     timezone: '時區',
@@ -159,6 +162,7 @@ const COPY: Record<Locale, ManageCopy> = {
     eyebrow: 'Bookings',
     title: 'Manage your consultation',
     loading: 'Loading booking...',
+    loadFailed: 'Couldn’t load this appointment because of a connection problem. Check your network and refresh the page to try again.',
     invalidLink: 'This booking link is invalid or expired.',
     time: 'Time',
     timezone: 'Timezone',
@@ -255,21 +259,54 @@ export default function BookingManageClient({ token, locale: rawLocale = 'en' }:
   const [error, setError] = useState('');
   const [saving, setSaving] = useState(false);
 
+  const refreshGeneration = useRef(0);
+  const refreshController = useRef<AbortController | null>(null);
+  const mounted = useRef(false);
+
+  const cancelRefresh = useCallback(() => {
+    refreshGeneration.current++;
+    refreshController.current?.abort();
+    refreshController.current = null;
+  }, []);
+
   const refresh = useCallback(async () => {
+    if (!mounted.current) return;
+    cancelRefresh();
+    const generation = refreshGeneration.current;
+    const controller = new AbortController();
+    refreshController.current = controller;
     setError('');
-    const response = await fetch(`/api/booking/manage/${encodeURIComponent(token)}`, { credentials: 'same-origin' });
-    if (!response.ok) {
-      setError(labels.invalidLink);
-      return;
+    try {
+      const response = await fetch(`/api/booking/manage/${encodeURIComponent(token)}`, {
+        credentials: 'same-origin',
+        signal: controller.signal,
+      });
+      if (generation !== refreshGeneration.current) return;
+      if (!response.ok) {
+        setError(labels.invalidLink);
+        return;
+      }
+      const data = (await response.json()) as ManagePayload;
+      if (generation !== refreshGeneration.current) return;
+      const nextStartAt = toLocalInputValue(data.booking.startAt);
+      setPayload(data);
+      setStartAt(nextStartAt);
+    } catch {
+      if (generation === refreshGeneration.current) setError(labels.loadFailed);
+    } finally {
+      if (generation === refreshGeneration.current) refreshController.current = null;
     }
-    const data = (await response.json()) as ManagePayload;
-    setPayload(data);
-    setStartAt(toLocalInputValue(data.booking.startAt));
-  }, [labels.invalidLink, token]);
+  }, [cancelRefresh, labels.invalidLink, labels.loadFailed, token]);
 
   useEffect(() => {
+    mounted.current = true;
+    setPayload(null);
     void refresh();
-  }, [refresh]);
+    return () => {
+      mounted.current = false;
+      cancelRefresh();
+    };
+  }, [cancelRefresh, refresh]);
 
   const updateBooking = async (body: Record<string, unknown>, successMessage: string) => {
     setSaving(true);

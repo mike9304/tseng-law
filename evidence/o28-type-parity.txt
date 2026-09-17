@@ -1,0 +1,17 @@
+PASS /vi(home)  types=CollegeOrUniversity ContactPoint ImageObject LegalService Organization Person PostalAddress WebSite
+PASS /vi/services  types=BreadcrumbList ContactPoint ImageObject LegalService ListItem Organization Person PostalAddress WebSite
+      extra(superset)=BreadcrumbList ListItem
+PASS /vi/about  types=BreadcrumbList CollectionPage CollegeOrUniversity ContactPoint ImageObject ItemList LegalService ListItem Organization Person PostalAddress WebSite
+      extra(superset)=BreadcrumbList CollectionPage CollegeOrUniversity ItemList ListItem
+PASS /vi/lawyers  types=BreadcrumbList CollectionPage CollegeOrUniversity ContactPoint ImageObject ItemList LegalService ListItem Organization Person PostalAddress WebSite
+PASS /vi/pricing  types=BreadcrumbList ContactPoint ImageObject LegalService ListItem Organization Person PostalAddress WebSite
+      extra(superset)=BreadcrumbList ListItem
+PASS /vi/contact  types=BreadcrumbList ContactPoint ImageObject LegalService ListItem Organization Person PostalAddress WebSite
+      extra(superset)=BreadcrumbList ListItem
+PASS /vi/faq  types=Answer BreadcrumbList ContactPoint FAQPage ImageObject LegalService ListItem Organization Person PostalAddress Question WebSite
+      extra(superset)=BreadcrumbList ListItem
+PASS /vi/privacy  types=BreadcrumbList ContactPoint ImageObject LegalService ListItem Organization Person PostalAddress WebSite
+PASS /vi/disclaimer  types=BreadcrumbList ContactPoint ImageObject LegalService ListItem Organization Person PostalAddress WebSite
+PASS /vi/columns  types=BreadcrumbList CollectionPage ContactPoint ImageObject ItemList LegalService ListItem Organization Person PostalAddress WebSite
+
+OVERALL: PASS (all 40 guidance pages ⊇ en minus SearchAction)

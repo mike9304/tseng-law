@@ -1,0 +1,6 @@
+RC3 render 12:38:06 c17237a5
+200 /ar/columns cards=11 EN-badge=0 filters=4 dir=1
+200 /ar/columns/taiwan-labor-severance-law arabic=15944 inLang=2 hreflang_ar=1 marker=0
+200 /ar/columns/taiwan-traffic-accident-procedure arabic=31357 inLang=2 hreflang_ar=1 marker=0
+vi/columns filters:    1 Tất cả 
+ar/llms columns=11

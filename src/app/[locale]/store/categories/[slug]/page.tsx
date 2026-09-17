@@ -8,6 +8,7 @@ import {
 } from '@/lib/builder/commerce/products-engine';
 import { normalizeLocale, locales, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
+import PublicUnavailableState, { publicUnavailableMetadata } from '@/components/PublicUnavailableState';
 import PublicStorefront from '@/components/builder/commerce/PublicStorefront';
 
 export const dynamic = 'force-dynamic';
@@ -18,6 +19,9 @@ export async function generateMetadata(
   }
 ): Promise<Metadata> {
   const params = await props.params;
+  if ((params.locale as string) === 'ja') {
+    return publicUnavailableMetadata('ja', 'store');
+  }
   const locale = normalizeLocale(params.locale);
   const category = await findProductCategoryBySlug(locale, params.slug);
   if (!category) {
@@ -47,6 +51,9 @@ export default async function StoreCategoryPage(
   }
 ) {
   const params = await props.params;
+  if ((params.locale as string) === 'ja') {
+    return <PublicUnavailableState locale="ja" kind="store" />;
+  }
   const locale = normalizeLocale(params.locale);
   const category = await findProductCategoryBySlug(locale, params.slug);
   if (!category) return notFound();

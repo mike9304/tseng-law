@@ -1,0 +1,18 @@
+LIVE 2026-09-09 15:08:17 deploy=3799c41d
+200 /vi/llms.txt urls=10
+200 /id/llms.txt urls=10
+200 /th/llms.txt urls=10
+200 /fil/llms.txt urls=10
+root catalogs=8
+200 https://tseng-law.com/vi ld=1 summary=0 faq=0 "availableLanguage":["en","zh-Hant","ja","ko"]
+200 https://tseng-law.com/vi/services ld=1 summary=1 faq=0 "availableLanguage":["en","zh-Hant","ja","ko"]
+200 https://tseng-law.com/vi/faq ld=2 summary=1 faq=1 "availableLanguage":["en","zh-Hant","ja","ko"]
+200 https://tseng-law.com/id ld=1 summary=0 faq=0 "availableLanguage":["en","zh-Hant","ja","ko"]
+200 https://tseng-law.com/id/services ld=1 summary=1 faq=0 "availableLanguage":["en","zh-Hant","ja","ko"]
+200 https://tseng-law.com/id/faq ld=2 summary=1 faq=1 "availableLanguage":["en","zh-Hant","ja","ko"]
+200 https://tseng-law.com/th ld=1 summary=0 faq=0 "availableLanguage":["en","zh-Hant","ja","ko"]
+200 https://tseng-law.com/th/services ld=1 summary=1 faq=0 "availableLanguage":["en","zh-Hant","ja","ko"]
+200 https://tseng-law.com/th/faq ld=2 summary=1 faq=1 "availableLanguage":["en","zh-Hant","ja","ko"]
+200 https://tseng-law.com/fil ld=1 summary=0 faq=0 "availableLanguage":["en","zh-Hant","ja","ko"]
+200 https://tseng-law.com/fil/services ld=1 summary=1 faq=0 "availableLanguage":["en","zh-Hant","ja","ko"]
+200 https://tseng-law.com/fil/faq ld=2 summary=1 faq=1 "availableLanguage":["en","zh-Hant","ja","ko"]

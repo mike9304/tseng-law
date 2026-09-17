@@ -3,36 +3,43 @@
 
 .root {
   display: grid;
-  width: min(1120px, calc(100% - 40px));
-  margin: 0 auto 72px;
+  width: min(var(--max-width, 1200px), calc(100% - 2 * var(--page-gutter, 20px)));
+  margin: 40px auto 72px;
   gap: 18px;
   font-family: var(--font-sans, var(--font-body));
   color: var(--text-primary);
+  min-width: 0;
 }
 
 .controls {
   display: grid;
-  grid-template-columns: minmax(260px, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(0, auto);
   gap: 12px;
   align-items: end;
+  max-width: 680px;
+  width: 100%;
+  justify-self: start;
+  min-width: 0;
 }
 
 .searchLabel {
   display: grid;
   gap: 8px;
   color: var(--text-secondary);
-  font-size: 0.875rem; /* 14px */
+  font-size: 1rem;
   font-weight: 600;
   font-family: inherit;
+  min-width: 0;
 }
 
 .searchLabel input {
   width: 100%;
   min-width: 0;
   min-height: 48px;
+  height: auto;
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-xs, 4px);
-  padding: 0 14px;
+  padding: 12px 14px;
   color: var(--text-primary);
   background: var(--bg-white, var(--white, #fff));
   font-family: inherit;
@@ -50,38 +57,50 @@
   display: inline-flex;
   min-height: 48px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-xs, 4px);
-  padding: 0 14px;
+  padding: 12px 14px;
   background: var(--bg-off-white, var(--off-white));
   color: var(--text-secondary);
-  font-size: 0.875rem; /* 14px */
+  font-size: 1rem;
   font-weight: 600;
   font-family: inherit;
-  white-space: nowrap;
+  white-space: normal;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .categoryRail {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  max-width: 680px;
+  width: 100%;
+  justify-self: start;
+  min-width: 0;
 }
 
 .category,
 .categoryActive,
 .clear {
   display: inline-flex;
-  min-height: 40px;
+  min-height: 48px;
+  min-width: 48px;
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-xs, 4px);
-  padding: 0 12px;
+  padding: 12px 16px;
   cursor: pointer;
   font-family: inherit;
-  font-size: 0.875rem; /* 14px */
+  font-size: 1rem;
   font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
   text-decoration: none;
+  white-space: normal;
+  height: auto;
+  overflow-wrap: anywhere;
   transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
 }
 
@@ -97,14 +116,14 @@
 }
 
 .categoryActive {
-  border: 1px solid var(--purple);
-  background: var(--purple);
+  border: 1px solid #16382d;
+  background: #16382d;
   color: #fff;
 }
 
 .categoryActive:hover {
-  border-color: var(--purple-dark);
-  background: var(--purple-dark);
+  border-color: #16382d;
+  background: #16382d;
   color: #fff;
 }
 
@@ -115,8 +134,8 @@
 }
 
 .clear:hover {
-  border-color: var(--purple);
-  color: var(--purple-dark);
+  border-color: #16382d;
+  color: #16382d;
 }
 
 .category:focus-visible,
@@ -127,15 +146,20 @@
 }
 
 .list {
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-xs, 4px);
-  background: var(--bg-white, var(--white, #fff));
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   box-shadow: none;
-  overflow: hidden;
+  overflow: visible;
+  max-width: 680px;
+  width: 100%;
+  justify-self: start;
+  min-width: 0;
 }
 
 .item {
   position: relative;
+  min-width: 0;
 }
 
 /* Explicit heading wrapper — replaces inline font: inherit shorthand */
@@ -153,38 +177,46 @@
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 16px;
   align-items: center;
-  min-height: 64px;
+  min-height: 48px;
+  min-width: 0;
+  height: auto;
   border: 0;
-  background: var(--bg-white, var(--white, #fff));
-  color: var(--text-primary);
+  background: transparent;
+  color: #1c241f;
   cursor: pointer;
   font-family: inherit;
   font-size: 1.0625rem; /* 17px desktop */
   font-weight: 600;
   line-height: 1.5;
-  padding: 16px 18px;
+  padding: 16px 0;
   text-align: left;
+  white-space: normal;
   word-break: keep-all;
-  overflow-wrap: normal;
+  overflow-wrap: anywhere;
+}
+
+.question span {
+  min-width: 0;
+  overflow-wrap: inherit;
 }
 
 .question:hover {
   background: var(--bg-off-white, var(--off-white));
-  color: var(--purple-dark);
+  color: #16382d;
 }
 
 .question:focus-visible {
   outline: 2px solid var(--purple);
   outline-offset: 2px;
   background: var(--bg-off-white, var(--off-white));
-  color: var(--purple-dark);
+  color: #16382d;
 }
 
 .question small {
   display: block;
   margin-bottom: 4px;
-  color: var(--text-secondary);
-  font-size: 0.8125rem; /* 13px */
+  color: #725f38;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0;
   line-height: 1.4;
@@ -198,21 +230,24 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-xs, 4px);
-  border: 1px solid var(--border-light);
+  border: 1px solid #d7e0d8;
   background: var(--bg-off-white, var(--off-white));
-  color: var(--purple);
+  color: #16382d;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1;
+  transform: none;
 }
 
 .panel {
-  padding: 0 18px 18px;
-  color: var(--text-body);
+  padding: 0 0 18px;
+  color: #3d4740;
   font-size: 1.0625rem; /* 17px desktop */
   font-weight: 500;
   line-height: 1.7;
   font-family: inherit;
+  overflow-wrap: anywhere;
+  min-width: 0;
 }
 
 .panel p {
@@ -222,35 +257,77 @@
   font-weight: inherit;
   line-height: inherit;
   font-family: inherit;
+  overflow-wrap: anywhere;
+  min-width: 0;
 }
 
 .divider {
   display: block;
   height: 1px;
-  margin: 0 18px;
-  background: var(--border-light);
+  margin: 0;
+  background: #d7e0d8;
 }
 
 .empty {
   display: grid;
-  min-height: 160px;
-  place-items: center;
-  border: 1px dashed var(--border-medium);
-  border-radius: var(--radius-xs, 4px);
+  justify-items: start;
+  align-items: start;
+  padding: 24px 0;
+  border: 0;
+  border-top: 1px solid #d7e0d8;
+  border-radius: 0;
   color: var(--text-secondary);
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 500;
   font-family: inherit;
+  max-width: 680px;
+  width: 100%;
+  justify-self: start;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+:global(:lang(en)) .controls,
+:global(:lang(en)) .categoryRail,
+:global(:lang(en)) .list,
+:global(:lang(en)) .empty {
+  max-width: 760px;
+}
+
+:global(:lang(en)) .question,
+:global(:lang(en)) .panel,
+:global(:lang(en)) .panel p {
+  word-break: normal;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+:global(:lang(ko)) .panel,
+:global(:lang(ko)) .panel p {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+:global(:lang(ja)) .question,
+:global(:lang(zh-Hant)) .question,
+:global(:lang(ja)) .panel,
+:global(:lang(zh-Hant)) .panel,
+:global(:lang(ja)) .panel p,
+:global(:lang(zh-Hant)) .panel p {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+  min-width: 0;
 }
 
 @media (max-width: 680px) {
   .root {
-    width: min(100% - 32px, 1120px);
-    margin-bottom: 56px;
+    width: min(var(--max-width, 1200px), calc(100% - 2 * var(--page-gutter, 20px)));
+    margin: 32px auto 56px;
   }
 
   .controls {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .count {
@@ -258,28 +335,33 @@
   }
 
   .question {
-    min-height: 58px;
-    padding: 14px;
+    min-height: 48px;
+    padding: 14px 0;
     font-size: 1rem; /* 16px mobile */
     font-weight: 600;
   }
 
   .panel {
-    padding: 0 14px 16px;
+    padding: 0 0 16px;
     font-size: 1rem; /* 16px mobile */
     font-weight: 500;
     line-height: 1.7;
   }
 }
 
-/* ja / zh-Hant mobile word-break fix: keep-all (correct for Korean) makes a
-   space-less CJK sentence one unbreakable token that overflows narrow phones.
-   Scoped to <=768px + locale so desktop and ko/en parity is untouched. */
-@media (max-width: 768px) {
-  :global(:lang(ja)) .question,
-  :global(:lang(zh-Hant)) .question {
-    word-break: normal;
-    overflow-wrap: anywhere;
-    min-width: 0;
+@media (prefers-reduced-motion: reduce) {
+  .category,
+  .categoryActive,
+  .clear,
+  .question {
+    transition: none;
+  }
+}
+
+/* R6 (2026-09-07): keep the +/- toggle column left of the fixed 44px
+   back-to-top button (right 16px / bottom 16px) on phones. */
+@media (max-width: 640px) {
+  .question {
+    padding-right: 3.75rem;
   }
 }

@@ -11,7 +11,7 @@ const HOME_SEO_COPY = {
   ko: {
     title: '대만 변호사·회사설립·소송',
     description:
-      '대만 회사설립, 대만 소송, 대만 투자 법률 자문을 한국어와 일본어로 안내하는 법무법인 호정 공식 사이트입니다.',
+      '대만 회사설립, 대만 소송, 대만 투자 법률 자문을 한국어·일본어·영어로 안내하는 법무법인 호정 공식 사이트입니다.',
   },
   'zh-hant': {
     title: '台灣律師・台灣訴訟・台灣公司設立',
@@ -19,9 +19,9 @@ const HOME_SEO_COPY = {
       '昊鼎國際法律事務所提供台灣公司設立、投資法務、民刑事訴訟與跨境法律顧問服務，支援韓文、中文與英文溝通。',
   },
   en: {
-    title: 'Taipei Law Firm for Expats and Cross-Border Matters',
+    title: 'Taiwan Law Firm in Taipei — English Consultations',
     description:
-      'English-speaking Taiwan lawyer for expats and foreigners in Taiwan: company setup, litigation, and investment counsel in Taipei.',
+      'A Taipei law firm for Taiwan-law matters serving overseas companies and individuals, with English consultations for international business and disputes.',
   },
 } as const satisfies Record<Locale, LiveRouteSeoDefault>;
 

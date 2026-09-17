@@ -1,0 +1,441 @@
+.root:global(.section),
+.root:global(.section.section--light) {
+  background: var(--bg-white, #fff);
+  padding: 3rem 0 4.5rem;
+}
+
+.container {
+  min-width: 0;
+}
+
+.root :global(.container) {
+  min-width: 0;
+}
+
+.heroCard,
+.heroPhoto,
+.heroBody,
+.entityCard,
+.proofGrid,
+.proofCard,
+.cardGrid,
+.infoCard {
+  min-width: 0;
+}
+
+.root :global(.profile-hero-card),
+.heroCard:global(.profile-hero-card) {
+  display: grid;
+  grid-template-columns: minmax(0, min(20rem, 42%)) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+  padding: 0 0 1.5rem;
+  border: none;
+  border-bottom: 1px solid var(--warm-border, var(--border-light, var(--gray-200)));
+  border-radius: 0;
+  background: var(--bg-white, #fff);
+  box-shadow: none;
+}
+
+.root :global(.profile-hero-photo),
+.heroPhoto:global(.profile-hero-photo) {
+  position: relative;
+  width: 100%;
+  max-width: 20rem;
+  aspect-ratio: 309 / 459;
+  min-height: 0;
+  height: auto;
+  justify-self: start;
+  align-self: start;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--cream, #eef4ee);
+  box-shadow: none;
+}
+
+.root :global(.profile-hero-photo)::before,
+.root :global(.profile-hero-photo)::after,
+.heroPhoto:global(.profile-hero-photo)::before,
+.heroPhoto:global(.profile-hero-photo)::after {
+  content: none;
+  display: none;
+  background: none;
+  border: none;
+}
+
+.root :global(.person-photo),
+.root :global(.profile-hero-photo img) {
+  width: 100%;
+  height: 100%;
+  filter: none;
+  transform: none;
+}
+
+.root :global(.profile-hero-body),
+.heroBody:global(.profile-hero-body) {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-start;
+  min-width: 0;
+}
+
+.root :global(.section-label) {
+  margin: 0;
+  color: var(--gold-dim, #725f38);
+  font-family: var(--font-sans, var(--font-body));
+  font-size: 0.75rem;
+  line-height: 1.333;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+:global(html[lang='en']) .root :global(.section-label),
+:global(:root[data-locale='en']) .root :global(.section-label),
+:global(.site[data-locale='en']) .root :global(.section-label) {
+  text-transform: uppercase;
+}
+
+.root :global(.section-title.profile-hero-title) {
+  margin: 0;
+  font-family: var(--font-sans, var(--font-body));
+  font-size: 1.625rem;
+  line-height: 1.308;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--ink-deep, var(--text-heading));
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.root :global(.profile-hero-role) {
+  margin: 0;
+  color: var(--gold-dim, #725f38);
+  font-family: var(--font-sans, var(--font-body));
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.root :global(.attorney-card-email) {
+  color: var(--primary);
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.root :global(.attorney-card-email:focus-visible),
+.root :global(.profile-link-list a:focus-visible),
+.root :global(.profile-link-list .link-underline:focus-visible),
+.root :global(a.button.profile-hero-cta:focus-visible) {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.root :global(.profile-summary-list) {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  min-width: 0;
+}
+
+.root :global(.profile-hero-body .split-text) {
+  margin: 0;
+  max-width: none;
+  font-size: 1rem;
+  line-height: 1.625;
+  color: var(--text-body);
+  overflow-wrap: anywhere;
+}
+
+.root :global(.profile-chip-group) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0;
+}
+
+.root :global(.profile-chip) {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--warm-border, var(--border-light, var(--gray-200)));
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text-body);
+  font-family: var(--font-sans, var(--font-body));
+  font-size: 0.8125rem;
+  font-weight: 600;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  box-shadow: none;
+}
+
+.root :global(.profile-chip--entity) {
+  background: #fff;
+  border-color: var(--warm-border, var(--border-light, var(--gray-200)));
+  color: var(--text-body);
+}
+
+.root :global(a.button.profile-hero-cta) {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 3rem;
+  height: auto;
+  margin-top: 0;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: #fff;
+  font-family: var(--font-sans, var(--font-body));
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: 0;
+  white-space: normal;
+  text-align: center;
+  box-shadow: none;
+}
+
+.root :global(a.button.profile-hero-cta:hover) {
+  background: var(--purple-light, #2d5c48);
+  border-color: var(--purple-light, #2d5c48);
+  color: #fff;
+}
+
+.root :global(a.button.profile-hero-cta:active) {
+  background: var(--purple-dark, #0d221a);
+  border-color: var(--purple-dark, #0d221a);
+}
+
+.root :global(.profile-entity-card),
+.entityCard:global(.profile-entity-card) {
+  margin-top: 1.5rem;
+  padding: 1.5rem 0 0;
+  border: none;
+  border-top: 1px solid var(--warm-border, var(--border-light, var(--gray-200)));
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.root :global(.profile-proof-grid),
+.proofGrid:global(.profile-proof-grid),
+.root :global(.profile-card-grid),
+.cardGrid:global(.profile-card-grid) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  align-items: start;
+}
+
+.root :global(.profile-proof-card),
+.proofCard:global(.profile-proof-card),
+.root :global(.profile-info-card),
+.infoCard:global(.profile-info-card) {
+  padding: 1.25rem 1.35rem;
+  border: 1px solid var(--warm-border, var(--border-light, var(--gray-200)));
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: none;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 0;
+  height: auto;
+  align-self: start;
+  overflow-wrap: anywhere;
+}
+
+.root :global(.profile-proof-text) {
+  margin: 0;
+  color: var(--text-body);
+  font-size: 1rem;
+  line-height: 1.625;
+  overflow-wrap: anywhere;
+}
+
+.root :global(.profile-card-title) {
+  margin: 0 0 1rem;
+  font-family: var(--font-sans, var(--font-body));
+  font-size: 1.125rem;
+  line-height: 1.444;
+  font-weight: 700;
+  color: var(--ink-deep, var(--text-heading));
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.root :global(.attorney-list) {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.root :global(.profile-link-list) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.root :global(.profile-link-list .link-underline) {
+  display: inline;
+  max-width: 100%;
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.root :global(.profile-link-list .link-underline:hover),
+.root :global(.profile-link-list .link-underline:focus-visible) {
+  color: var(--purple-light, #2d5c48);
+}
+
+:global(html[lang='ko']) .root,
+:global(:root[data-locale='ko']) .root,
+:global(.site[data-locale='ko']) .root {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+:global(html[lang='ja']) .root,
+:global(:root[data-locale='ja']) .root,
+:global(.site[data-locale='ja']) .root,
+:global(html[lang='zh-hant']) .root,
+:global(html[lang='zh-Hant']) .root,
+:global(:root[data-locale='zh-hant']) .root,
+:global(.site[data-locale='zh-hant']) .root {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+:global(html[lang='ja']) .root :global(.split-text),
+:global(html[lang='zh-hant']) .root :global(.split-text),
+:global(html[lang='zh-Hant']) .root :global(.split-text) {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 768px) {
+  .root :global(.section-title.profile-hero-title) {
+    font-size: 2.125rem;
+    line-height: 1.235;
+  }
+
+  .root :global(.profile-hero-body .split-text),
+  .root :global(.profile-proof-text),
+  .root :global(.attorney-list) {
+    font-size: 1.0625rem;
+    line-height: 1.647;
+  }
+
+  .root :global(.profile-card-title) {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .root :global(.profile-proof-grid),
+  .proofGrid:global(.profile-proof-grid),
+  .root :global(.profile-card-grid),
+  .cardGrid:global(.profile-card-grid) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .root :global(.profile-hero-card),
+  .heroCard:global(.profile-hero-card) {
+    grid-template-columns: minmax(0, min(20rem, 42%)) minmax(0, 1fr);
+  }
+
+  .root :global(.person-photo),
+  .root :global(.profile-hero-photo img) {
+    filter: none;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .root:global(.section),
+  .root:global(.section.section--light) {
+    padding: 2.5rem 0 3.5rem;
+  }
+
+  .root :global(.profile-hero-card),
+  .heroCard:global(.profile-hero-card) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    padding: 0 0 1.5rem;
+  }
+
+  .root :global(.profile-hero-photo),
+  .heroPhoto:global(.profile-hero-photo) {
+    width: min(20rem, 100%);
+    max-width: 20rem;
+    min-height: 0;
+    aspect-ratio: 309 / 459;
+    margin: 0;
+  }
+
+  .root :global(.profile-hero-photo img),
+  .root :global(.person-photo) {
+    filter: none;
+    transform: none;
+  }
+
+  .root :global(.profile-proof-grid),
+  .proofGrid:global(.profile-proof-grid),
+  .root :global(.profile-card-grid),
+  .cardGrid:global(.profile-card-grid) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .root :global(a.button.profile-hero-cta) {
+    min-height: 3.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .root :global(.profile-hero-card),
+  .heroCard:global(.profile-hero-card) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .root :global(.profile-hero-body),
+  .heroBody:global(.profile-hero-body),
+  .root :global(.profile-summary-list) {
+    min-width: 0;
+  }
+
+  .root :global(.profile-hero-photo),
+  .heroPhoto:global(.profile-hero-photo) {
+    width: min(20rem, 100%);
+    max-width: 20rem;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .root :global(.profile-hero-photo),
+  .heroPhoto:global(.profile-hero-photo) {
+    aspect-ratio: 309 / 459;
+    max-width: 20rem;
+    width: min(20rem, 100%);
+  }
+}

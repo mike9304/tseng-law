@@ -416,6 +416,7 @@ export default function SandboxPage({
     handleDownloadDraftConflictRecovery,
     handleUseServerDraftAfterConflict,
     handleSelectPage,
+    handlePagesRefreshRequest,
     refreshColumnsPageIfNeeded,
   } = useSandboxSiteState({
     initialDocument,
@@ -1099,6 +1100,7 @@ export default function SandboxPage({
         ) : null}
 
         <SandboxEditorWorkspace
+          isHomePage={sitePagesState.some((page) => page.pageId === activePageId && (page.isHomePage === true || page.slug === ''))}
           locale={activeCanvasLocale}
           siteId={siteId}
           activeDrawer={activeDrawer}
@@ -1145,6 +1147,7 @@ export default function SandboxPage({
           onApplyComponentDesignPreset={handleApplyComponentDesignPreset}
           onSetActiveDrawer={setActiveDrawer}
           onSelectPage={handleSelectPage}
+          onPagesRefreshRequest={handlePagesRefreshRequest}
           onPagesChange={handlePagesChange}
           onMissingPageHandled={() => setMissingPageHref(null)}
           onNavigationChange={setNavItemsState}

@@ -1,7 +1,12 @@
 import {
+  Noto_Sans,
+  Noto_Sans_Arabic,
   Noto_Sans_KR,
+  Noto_Sans_JP,
   Noto_Sans_TC,
+  Noto_Sans_Thai,
   Noto_Serif_KR,
+  Noto_Serif_JP,
   Noto_Serif_TC,
 } from 'next/font/google';
 
@@ -13,6 +18,11 @@ import {
  * Variable Noto files cover the public CSS weight matrix:
  * - sans 400/500/600/700 (body, UI, H2/H3, buttons; no public 300)
  * - serif 500/600/700 (closed display allowlist; no light faces)
+ *
+ * Guidance locales (vi/id/th/fil) add self-hosted Noto Sans Thai and
+ * latin/Vietnamese Noto Sans; Arabic (ar, right-to-left) adds Noto Sans
+ * Arabic paired with the same latin face for Latin names and numerals.
+ * No extra runtime font CDN.
  */
 
 const sansKorean = Noto_Sans_KR({
@@ -43,13 +53,54 @@ const serifTraditionalChinese = Noto_Serif_TC({
   variable: '--font-noto-serif-tc-loaded',
 });
 
-export type DocumentLanguage = 'ko' | 'zh-Hant' | 'en' | 'ja';
+const sansJapanese = Noto_Sans_JP({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-jp-loaded',
+});
+
+const serifJapanese = Noto_Serif_JP({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-serif-jp-loaded',
+});
+
+const sansThai = Noto_Sans_Thai({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-thai-loaded',
+});
+
+const sansArabic = Noto_Sans_Arabic({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-arabic-loaded',
+  subsets: ['arabic'],
+});
+
+const sansLatin = Noto_Sans({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-latin-loaded',
+  subsets: ['latin', 'latin-ext', 'vietnamese'],
+});
+
+export type DocumentLanguage = 'ko' | 'zh-Hant' | 'en' | 'ja' | 'vi' | 'id' | 'th' | 'fil' | 'ar';
 
 const koreanFontClassName = [sansKorean.variable, serifKorean.variable].join(' ');
 const traditionalChineseFontClassName = [
   sansTraditionalChinese.variable,
   serifTraditionalChinese.variable,
 ].join(' ');
+const japaneseFontClassName = [sansJapanese.variable, serifJapanese.variable].join(' ');
+const thaiFontClassName = [sansThai.variable, sansLatin.variable].join(' ');
+const arabicFontClassName = [sansArabic.variable, sansLatin.variable].join(' ');
+const latinExtendedFontClassName = sansLatin.variable;
 
 /**
  * CSS-variable class names for the active locale pair.
@@ -60,16 +111,33 @@ export function getLocaleFontClassName(language: DocumentLanguage): string {
   if (language === 'zh-Hant') {
     return traditionalChineseFontClassName;
   }
-  // ko + en + ja → KR pair (CJK coverage sufficient for JA launch; dedicated JP faces later)
+  if (language === 'ja') {
+    return japaneseFontClassName;
+  }
+  if (language === 'th') {
+    return thaiFontClassName;
+  }
+  if (language === 'ar') {
+    return arabicFontClassName;
+  }
+  if (language === 'vi' || language === 'id' || language === 'fil') {
+    return latinExtendedFontClassName;
+  }
+  // Korean and English retain their existing shared pair.
   return koreanFontClassName;
 }
 
 export function getManagedLocaleFontClassNames(): string[] {
   return Array.from(
     new Set(
-      [koreanFontClassName, traditionalChineseFontClassName].flatMap((className) =>
-        className.split(/\s+/).filter(Boolean),
-      ),
+      [
+        koreanFontClassName,
+        traditionalChineseFontClassName,
+        japaneseFontClassName,
+        thaiFontClassName,
+        arabicFontClassName,
+        latinExtendedFontClassName,
+      ].flatMap((className) => className.split(/\s+/).filter(Boolean)),
     ),
   );
 }

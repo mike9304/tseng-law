@@ -7,10 +7,6 @@ const authHeader = `Basic ${Buffer.from(
 
 const LOCALES = ['ko', 'zh-hant'] as const;
 
-function escapeRegExp(value: string): string {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
 for (const locale of LOCALES) {
   const copy = getEventsCopy(locale);
 
@@ -18,7 +14,11 @@ for (const locale of LOCALES) {
     await page.setExtraHTTPHeaders({ Authorization: authHeader });
     await page.goto(`/${locale}/admin-builder/events`, { waitUntil: 'domcontentloaded' });
 
-    await expect(page).toHaveTitle(new RegExp(`^${escapeRegExp(copy.title)} \\| 법무법인 호정$`));
+    // Exact title, no brand suffix: f93807c1 removed the root layout's
+    // `%s | 법무법인 호정` template (src/app/layout.tsx now sets a plain
+    // string title), and the (builder) route group declares no title
+    // template of its own, so buildSeoMetadata's bare page title renders as-is.
+    await expect(page).toHaveTitle(copy.title);
     await expect(page.getByRole('heading', { name: copy.heading, exact: true })).toBeVisible();
     await expect(page.getByRole('link', { name: copy.publicLink, exact: true })).toBeVisible();
     await expect(page.getByRole('heading', { name: copy.createHeading, exact: true })).toBeVisible();

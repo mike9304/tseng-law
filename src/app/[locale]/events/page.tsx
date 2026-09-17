@@ -10,6 +10,7 @@ import {
 } from '@/lib/builder/events/events-engine';
 import { normalizeLocale, locales, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
+import PublicUnavailableState, { publicUnavailableMetadata } from '@/components/PublicUnavailableState';
 import styles from './EventsPublic.module.css';
 
 export const dynamic = 'force-dynamic';
@@ -37,6 +38,9 @@ const copy: Record<Locale, { title: string; description: string; eyebrow: string
 
 export async function generateMetadata(props: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const params = await props.params;
+  if ((params.locale as string) === 'ja') {
+    return publicUnavailableMetadata('ja', 'events');
+  }
   const locale = normalizeLocale(params.locale);
   return buildSeoMetadata({
     locale,
@@ -54,6 +58,9 @@ function categoryLabel(category: string, locale: Locale): string {
 
 export default async function EventsPage(props: { params: Promise<{ locale: Locale }> }) {
   const params = await props.params;
+  if ((params.locale as string) === 'ja') {
+    return <PublicUnavailableState locale="ja" kind="events" />;
+  }
   const locale = normalizeLocale(params.locale);
   const events = sortEvents(
     filterEventsByTime(
@@ -64,7 +71,7 @@ export default async function EventsPage(props: { params: Promise<{ locale: Loca
   );
 
   return (
-    <main className={styles.page} data-public-events-page="true">
+    <section className={styles.page} data-public-events-page="true">
       <section className={styles.hero}>
         <div className={styles.inner}>
           <p className={styles.eyebrow}>{copy[locale].eyebrow}</p>
@@ -87,6 +94,6 @@ export default async function EventsPage(props: { params: Promise<{ locale: Loca
           ))}
         </section>
       )}
-    </main>
+    </section>
   );
 }

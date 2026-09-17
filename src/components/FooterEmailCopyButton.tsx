@@ -25,18 +25,35 @@ function copyEmailAddress(email: string): boolean | Promise<void> {
   return copied;
 }
 
-export async function copyFooterEmailAndGetNotice(locale: SiteLocale): Promise<string> {
+export async function copyFooterEmailAndGetNotice(
+  locale: SiteLocale,
+  copiedMessage?: string,
+): Promise<string> {
   try {
     const copied = await copyEmailAddress(CONSULTATION_EMAIL);
-    return copied === false ? '' : getEmailCopiedMessage(locale);
+    if (copied === false) return '';
+    return copiedMessage ?? getEmailCopiedMessage(locale);
   } catch {
     return '';
   }
 }
 
-export default function FooterEmailCopyButton({ locale }: { locale: SiteLocale }) {
+/**
+ * `copyLabel` / `copiedMessage` are supplied for the four guidance locales,
+ * whose chrome falls back to the English site content. Without them the button
+ * read "Copy email address" on an otherwise fully localized footer.
+ */
+export default function FooterEmailCopyButton({
+  locale,
+  copyLabel: copyLabelOverride,
+  copiedMessage,
+}: {
+  locale: SiteLocale;
+  copyLabel?: string;
+  copiedMessage?: string;
+}) {
   const [copyNotice, setCopyNotice] = useState('');
-  const copyLabel = getCopyEmailLabel(locale);
+  const copyLabel = copyLabelOverride ?? getCopyEmailLabel(locale);
 
   return (
     <>
@@ -44,7 +61,7 @@ export default function FooterEmailCopyButton({ locale }: { locale: SiteLocale }
         type="button"
         className="footer-consultation-email-copy"
         onClick={() => {
-          void copyFooterEmailAndGetNotice(locale).then(setCopyNotice);
+          void copyFooterEmailAndGetNotice(locale, copiedMessage).then(setCopyNotice);
         }}
         aria-label={copyLabel}
       >

@@ -2,10 +2,13 @@
 
 import { useState } from 'react';
 import type { SiteLocale } from '@/lib/locales';
+import { chromeSiteLocale } from '@/lib/public-site-chrome';
+import type { PublicLocale8 } from '@/lib/public-guidance';
 import type { FAQItem } from '@/data/faq-content';
 import SectionLabel from '@/components/SectionLabel';
 import { homeFaqTextSurfaceIds } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
+import styles from './FAQAccordion.module.css';
 
 const parentheticalParticlePattern = /\)([은는이가을를과와])/g;
 
@@ -25,20 +28,27 @@ export default function FAQAccordion({
   items,
   id,
   sectionClassName,
-  tone = 'light'
+  tone = 'light',
+  headingLabel,
+  headingTitle
 }: {
-  locale: SiteLocale;
+  locale: PublicLocale8;
   items: FAQItem[];
   id?: string;
   sectionClassName?: string;
   tone?: 'light' | 'dark';
+  /** Overrides the built-in heading pair (used by locales outside `SiteLocale`). */
+  headingLabel?: string;
+  headingTitle?: string;
 }) {
   const [openIndex, setOpenIndex] = useState<number>(-1);
-  const { label: sectionLabel, title: sectionTitle } = faqHeadings[locale];
+  const defaults = faqHeadings[chromeSiteLocale(locale)];
+  const sectionLabel = headingLabel ?? defaults.label;
+  const sectionTitle = headingTitle ?? defaults.title;
   const sectionClass = sectionClassName ?? 'section';
 
   return (
-    <section className={sectionClass} id={id} data-tone={tone}>
+    <section className={`${sectionClass} ${styles.root}`} id={id} data-tone={tone}>
       <div className="container">
         <SectionLabel data-builder-surface-key={homeFaqTextSurfaceIds[0]}>
           <SurfaceText surfaceKey={homeFaqTextSurfaceIds[0]}>{sectionLabel}</SurfaceText>
@@ -63,8 +73,8 @@ export default function FAQAccordion({
                     onClick={() => setOpenIndex(isOpen ? -1 : index)}
                   >
                     <span>{formatFaqQuestion(item.question)}</span>
-                    <span className="faq-arrow" aria-hidden>
-                      ▸
+                    <span className={`faq-arrow ${styles.indicator}`} aria-hidden>
+                      {isOpen ? '-' : '+'}
                     </span>
                   </button>
                 </h3>

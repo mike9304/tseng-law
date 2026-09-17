@@ -24,19 +24,53 @@ function renderHeader(locale: SiteLocale): string {
   return renderToStaticMarkup(<Header locale={locale} />);
 }
 
+const EXPECTED_AUTONYMS = [
+  '한국어',
+  '繁體中文',
+  'English',
+  '日本語',
+  'Tiếng Việt',
+  'Bahasa Indonesia',
+  'ไทย',
+  'Filipino',
+] as const;
+
+const EXPECTED_LANGUAGE_HREFS = [
+  '/ko/columns',
+  '/zh-hant/columns',
+  '/en/columns',
+  '/ja/columns',
+  '/vi/columns',
+  '/id/columns',
+  '/th/columns',
+  '/fil/columns',
+] as const;
+
 describe('Japanese desktop header', () => {
   it('renders Japanese branding, home and utility links, and the shared flag switcher', () => {
     const html = renderHeader('ja');
 
-    expect(html).toMatch(/class="header-logo"[^>]*href="\/ja"/);
+    expect(html).toMatch(/class="(?:[^" ]+ )*header-logo(?: [^" ]+)*"[^>]*href="\/ja"/);
     expect(html).toContain('昊鼎国際法律事務所');
     expect(html).toContain('aria-label="補助メニュー"');
     expect(html).toContain('href="/ja/contact">連絡先</a>');
     expect(html).toContain('href="/ja/contact#offices">アクセス</a>');
-    expect(html).toContain('🇰🇷');
-    expect(html).toContain('🇯🇵');
-    expect(html).toContain('🇹🇼');
-    expect(html).toContain('🇺🇸');
+    expect(html).toContain('<details');
+    expect(html).toContain('aria-label="言語選択"');
+    for (const autonym of EXPECTED_AUTONYMS) {
+      expect(html).toContain(autonym);
+    }
+    for (const href of EXPECTED_LANGUAGE_HREFS) {
+      expect(html).toContain(`href="${href}"`);
+    }
+    expect(html).not.toContain('🇰🇷');
+    expect(html).not.toContain('🇯🇵');
+    expect(html).not.toContain('🇹🇼');
+    expect(html).not.toContain('🇺🇸');
+    expect(html).not.toContain('>KR</span>');
+    expect(html).not.toContain('>JP</span>');
+    expect(html).not.toContain('>TW</span>');
+    expect(html).not.toContain('>EN</span>');
   });
 
   it('renders a Japanese header search link to /ja/search but still omits member UI and the search overlay', () => {
@@ -52,8 +86,10 @@ describe('Japanese desktop header', () => {
     expect(headerSource).toMatch(
       /if \(locale === 'ja'\) \{[\s\S]*?return;[\s\S]*?fetch\(`\/api\/members\/me\?locale=\$\{locale\}`/,
     );
+    // O14: the guidance four also render this header and have no search index,
+    // so the overlay guard now excludes them as well. JA still never gets it.
     expect(headerSource).toContain(
-      "{locale !== 'ja' ? (\n        <SearchOverlay",
+      "{locale !== 'ja' && !isGuidance ? (\n        <SearchOverlay",
     );
   });
 

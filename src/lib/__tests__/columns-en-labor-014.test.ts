@@ -121,12 +121,15 @@ describe("English labor column 014 — minimum-service-period clauses", () => {
   it("publishes the exact complete frontmatter and four ordered FAQs", () => {
     expect(parsed.data).toEqual({
       title,
+      seoTitle: "Taiwan Minimum Service Period Clauses: Validity and Penalties",
       url: sourceUrl,
       lastmod: "2026-07-25",
       date_display: "September 13, 2025",
       read_time: "19 min read",
       categories: ["Taiwan Legal Information"],
       featured_image: featuredImage,
+      summary:
+        'A Taiwan minimum service period clause is not automatically valid. It needs funded professional training or reasonable compensation, plus a statutory review.',
       faq,
     });
     expect(parsed.data.faq).toHaveLength(4);

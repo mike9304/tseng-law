@@ -1,0 +1,181 @@
+{
+  "ok": true,
+  "requirementsVersion": "ai-intake-requirements-v3",
+  "locale": "ja",
+  "categories": [
+    {
+      "value": "company_setup",
+      "label": "会社設立・投資",
+      "description": "台湾での会社設立、投資、支店・子会社に関する初期相談"
+    },
+    {
+      "value": "traffic_accident",
+      "label": "交通事故・損害賠償",
+      "description": "交通事故、損害賠償、保険に関する初期相談"
+    },
+    {
+      "value": "criminal_investigation",
+      "label": "警察・検察・身柄拘束",
+      "description": "捜査、検察、逮捕・勾留に関する初期相談"
+    },
+    {
+      "value": "labor",
+      "label": "労働・退職金・解雇",
+      "description": "労働契約、退職金、解雇に関する初期相談"
+    },
+    {
+      "value": "divorce_family",
+      "label": "離婚・親権・家事",
+      "description": "離婚、親権、家事に関する初期相談"
+    },
+    {
+      "value": "inheritance",
+      "label": "相続・遺言",
+      "description": "相続、遺言に関する初期相談"
+    },
+    {
+      "value": "logistics",
+      "label": "物流・運送",
+      "description": "物流・運送業の規制に関する初期相談"
+    },
+    {
+      "value": "cosmetics",
+      "label": "化粧品の市場参入・登録",
+      "description": "化粧品の輸入、登録、表示に関する初期相談"
+    },
+    {
+      "value": "general",
+      "label": "一般のご相談",
+      "description": "他の分類に当てはまらない台湾の法律・企業業務の初期相談"
+    }
+  ],
+  "fields": {
+    "required": [
+      {
+        "name": "name",
+        "required": true,
+        "description": "お名前",
+        "maxLength": 120
+      },
+      {
+        "name": "email",
+        "required": true,
+        "description": "メールアドレス",
+        "maxLength": 254
+      },
+      {
+        "name": "summary",
+        "required": true,
+        "description": "案件または業務の概要",
+        "maxLength": 4000
+      },
+      {
+        "name": "locale",
+        "required": true,
+        "description": "言語"
+      },
+      {
+        "name": "idempotencyKey",
+        "required": true,
+        "description": "冪等キー"
+      }
+    ],
+    "optional": [
+      {
+        "name": "category",
+        "required": false,
+        "description": "ご相談分野"
+      },
+      {
+        "name": "phoneOrMessenger",
+        "required": false,
+        "description": "電話またはメッセンジャー",
+        "maxLength": 120
+      },
+      {
+        "name": "urgency",
+        "required": false,
+        "description": "緊急度または期限",
+        "maxLength": 80
+      },
+      {
+        "name": "preferredContact",
+        "required": false,
+        "description": "希望する連絡方法",
+        "maxLength": 80
+      },
+      {
+        "name": "companyOrOrganization",
+        "required": false,
+        "description": "会社名または所属",
+        "maxLength": 200
+      },
+      {
+        "name": "countryOrResidence",
+        "required": false,
+        "description": "国または居住地",
+        "maxLength": 120
+      },
+      {
+        "name": "preferredTime",
+        "required": false,
+        "description": "希望する連絡時間帯",
+        "maxLength": 200
+      },
+      {
+        "name": "documentsAvailable",
+        "required": false,
+        "description": "お手元の資料の種類",
+        "maxLength": 1000
+      },
+      {
+        "name": "confirmationToken",
+        "required": false,
+        "description": "確認トークン (submit only)"
+      },
+      {
+        "name": "privacyConsent",
+        "required": false,
+        "description": "個人情報の取扱いに関する同意 (submit only; must be true)"
+      },
+      {
+        "name": "userApprovedExactPreview",
+        "required": false,
+        "description": "正確なプレビューの承認 (submit only; must be true; auditable attestation, not cryptographic proof)"
+      }
+    ]
+  },
+  "questions": [
+    "お名前と、該当する場合は会社名または所属を教えてください。",
+    "返信先のメールアドレスを教えてください。電話やメッセンジャーは任意です。",
+    "ご相談分野を選んでください。会社設立、交通事故、捜査、労働、離婚・家事、相続、物流、化粧品、一般相談のいずれかです。",
+    "重要な事実とこれまでの経緯を短く書いてください。初期受付に証拠の全文は不要です。",
+    "期限や緊急度があれば教えてください。回答時間の保証はありません。",
+    "後日の利益相反確認のため、相手方や関係者の氏名だけを概要（summary）に任意で書いてください。識別番号は送らないでください。本受付は識別番号を求めません。",
+    "現在の居住国または地域を教えてください。",
+    "希望する言語、連絡方法、時間帯を教えてください。",
+    "契約書、写真、判決など、お手元の資料の種類だけを書いてください。内容、添付、ファイルURLは送らないでください。",
+    "旅券番号、身分証番号、銀行口座、カード情報は入力しないでください。",
+    "現在の雇用関係（在職、解雇通知、退職）だけを短く書いてください。"
+  ],
+  "sensitiveData": {
+    "prohibitedKinds": [
+      "kr_resident_registration",
+      "tw_national_id",
+      "payment_card",
+      "iban",
+      "bank_account",
+      "passport",
+      "identity_number"
+    ],
+    "warning": "初回のお問い合わせでは、案件または業務の概要と連絡先のみをお送りください。旅券番号、身分証番号、銀行口座情報、身分証明書の原本などの機微情報は、メールや一般のお問い合わせフォームでは送信せず、担当弁護士からの案内後に安全な方法でご提出ください。"
+  },
+  "notices": {
+    "privacy": "この受付は、相談検討のために氏名、連絡先、案件概要を取り扱います。詳細は公開プライバシー方針を確認してください。初期受付に識別番号、金融情報、旅券情報を含めないでください。",
+    "aiLimit": "AIは法律助言を行わず、誤る場合があります。この流れは相談メール案を作成し、利用者がその内容を確認したあとでのみ事務所の受信箱へ送ります。",
+    "noRepresentation": "この受付は弁護士と依頼者の関係を成立させず、秘密保持、回答期限、法律上の結果を保証しません。個別事案の判断には弁護士の検討が必要です。",
+    "emergency": "急迫した危険、逮捕、医療上の緊急事態がある場合は、このメールではなく現地の緊急機関または当局に連絡してください。この案内は管轄ごとの電話番号を示しません。"
+  },
+  "confirmationInstruction": "以下の件名と本文は、サーバーが法律事務所の相談受信箱へ送る内容と完全に同一です。利用者にこの件名と本文をそのまま提示し、利用者がその内容の送信を明示的に確認したあとでのみ、同じ欄、同じ idempotencyKey、confirmationToken、userApprovedExactPreview=true、privacyConsent=true で POST /api/ai/intake/submit を呼び出してください。",
+  "privacyUrl": "https://tseng-law.com/ja/privacy"
+}

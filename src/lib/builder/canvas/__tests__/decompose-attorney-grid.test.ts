@@ -12,36 +12,36 @@ describe('createAttorneyProfileSectionNodes', () => {
     const document = STANDARD_PAGE_DECOMPOSERS.lawyers('ko');
     const nodesById = new Map(document.nodes.map((node) => [node.id, node]));
 
-    expect(document.stageHeight).toBe(3143);
+    expect(document.stageHeight).toBe(3167); // +24: zh-hant intro-2에 "於一審"(1심) 사실 교정 추가로 텍스트 행 증가 (O6/O7)
     // 148 decomposed nodes + the 2 standalone publish-parity overlays (desktop/mobile)
     expect(document.nodes).toHaveLength(150);
     expect(nodesById.get('page-lawyers-attorney-root')?.rect).toMatchObject({
       y: 428,
       width: 1280,
-      height: 2697,
+      height: 2721, // +24 (stageHeight 3167 참조)
     });
     expect(nodesById.get('page-lawyers-attorney-container')?.rect).toMatchObject({
       x: 51,
       y: 88,
       width: 1178,
-      height: 2584,
+      height: 2610,
     });
     expect(nodesById.get('page-lawyers-lead-wrap')?.rect).toMatchObject({
       y: 278,
-      height: 643,
+      height: 669,
     });
     expect(nodesById.get('page-lawyers-lead-card')?.rect).toMatchObject({
       y: 48,
       width: 1178,
-      height: 549,
+      height: 575, // +26: ko intro-1 "중국어·" 추가로 806px 열에서 1행→2행 (27→53)
     });
     expect(nodesById.get('page-lawyers-lead-card-info')?.rect).toMatchObject({
       x: 372,
       width: 806,
-      height: 549,
+      height: 575, // 리드 카드와 동일 (info 열이 카드 높이를 결정)
     });
     expect(nodesById.get('page-lawyers-staff-wrap')?.rect).toMatchObject({
-      y: 963,
+      y: 989, // +26: 리드 카드 성장분 하류 이동
       height: 1037,
     });
     expect(nodesById.get('page-lawyers-staff-grid')?.rect).toMatchObject({
@@ -66,7 +66,7 @@ describe('createAttorneyProfileSectionNodes', () => {
       height: 438,
     });
     expect(nodesById.get('page-lawyers-partner-wrap')?.rect).toMatchObject({
-      y: 2076,
+      y: 2102, // +26: 리드 카드 성장분 하류 이동
       height: 503,
     });
     expect(nodesById.get('page-lawyers-partner-card')?.rect).toMatchObject({

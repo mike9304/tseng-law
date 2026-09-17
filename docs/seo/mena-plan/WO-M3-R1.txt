@@ -1,0 +1,10 @@
+# WO-M3-R1 — ar 콘텐츠 반려 수정 (Opus 5, 소형)
+## 공통 규칙
+작업트리 ~/Projects/tseng-law-mena-20260916 만. 허용 파일: src/data/international-guidance-content.ts(ar 블록만), src/data/international-guidance-team.ts(ar 블록만), src/lib/__tests__/guidance-ar-content.test.ts. 커밋·빌드·전체 스위트 금지. 언어 계약·광고 규정 동일. 새 법률 주장 0.
+## 목표: docs/seo/reviews/M3-REVIEW.md FAIL 2건 반영
+1. §1 columns 페이지(content 2563·2565·2571 등 REVIEW가 짚은 전부): "아랍어 기사가 이 페이지에 있다"는 문장을 사실에 맞게 — 아랍어 칼럼은 아직 없고(columns-ar 부재, phase 2), 다른 언어(영어·중국어·일본어·한국어 등) 칼럼을 원문 언어로 읽을 수 있으며 아랍어판은 준비되는 대로 여기에 실린다는 의미로 재작성. 홈의 칼럼 관련 문장(REVIEW가 짚었으면)도 동일. 다른 안내 로케일 문장은 건드리지 않음.
+2. §2 Chang Fang-Yu 성별 이중 표기(team 262·670·671): 먼저 ko/zh-hant/ja/en/vi 원문(team-members.ts·attorney-profiles·international-guidance-team.ts vi 블록)에서 성별 단서를 찾는다. 단서가 있으면 그 성으로 통일. 없으면 성 중립 구문(직함 명사형·수동태, 예: "شغل/شغلت" 대신 명사구)으로 통일하고 보고에 "성별 미확인·중립 처리" 명시. 같은 문제가 다른 팀원에게 있으면 함께.
+3. REVIEW §2의 MSA 교정 권고문(있으면) 반영. §3~§6 PASS 항목은 손대지 않음.
+4. 테스트: guidance-ar-content.test.ts에 "columns 페이지 ar 문장에 '기사가 있다' 단정 표현 부재(예: مدرجة في هذه الصفحة 없음)" 1케이스, 팀 약력 성 일관성은 REVIEW 지적 3줄이 같은 성/중립인지 1케이스.
+## 완료 기준
+npx vitest run src/lib/__tests__/guidance-ar-content.test.ts src/data/__tests__/guidance-team-bios.test.ts src/data/__tests__/guidance-disclosure-parity.test.ts 통과(출력) · npx tsc --noEmit 0 · 보고에 변경 문장 전/후·성별 판단 근거·미해결

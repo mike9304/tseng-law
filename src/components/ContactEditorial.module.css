@@ -1,0 +1,407 @@
+.blocks {
+  color: #1c241f;
+  min-width: 0;
+}
+
+:global(.section).blocks {
+  padding-block-start: 48px;
+}
+
+.blocks :global(.container) {
+  min-width: 0;
+}
+
+.blocks :global(.section-label),
+.blocks :global(.contact-label-spaced) {
+  color: #725f38;
+  max-width: 680px;
+}
+
+.blocks :global(.section-title),
+.blocks :global(.section-lede) {
+  max-width: 680px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.blocks :global(.section-title) {
+  color: #1c241f;
+}
+
+.blocks :global(.section-lede) {
+  color: #3d4740;
+}
+
+.blocks :global(.grid-bento.contact-grid),
+.blocks :global(.contact-grid) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+  min-width: 0;
+}
+
+.blocks :global(.card) {
+  min-width: 0;
+  height: auto;
+  margin: 0;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #d7e0d8;
+  border-radius: 12px;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.blocks :global(.card-title) {
+  margin: 0 0 12px;
+  color: #1c241f;
+  overflow-wrap: anywhere;
+}
+
+.blocks :global(.card-copy) {
+  margin: 0 0 16px;
+  color: #3d4740;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.blocks :global(.contact-list) {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: 0;
+}
+
+.blocks :global(.contact-list) li {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: #3d4740;
+}
+
+.blocks :global(.link-underline),
+.blocks :global(.card) :global(a):not(:global(.button)) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  max-width: 100%;
+  color: #16382d;
+  overflow-wrap: anywhere;
+}
+
+.blocks :global(.button) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 48px;
+  min-width: 48px;
+  height: auto;
+  max-width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #16382d;
+  border-radius: 4px;
+  background: #16382d;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.blocks :global(.button.secondary) {
+  background: transparent;
+  color: #16382d;
+}
+
+.blocks :global(.button):focus-visible,
+.blocks :global(.link-underline):focus-visible,
+.blocks :global(a):focus-visible {
+  outline: 2px solid #16382d;
+  outline-offset: 2px;
+}
+
+.blocks :global(.card) :global([role='status']) {
+  min-height: 1.5em;
+  margin: 12px 0 0;
+  color: #3d4740;
+}
+
+.emailActions {
+  display: grid;
+  gap: 16px;
+  max-width: 680px;
+  width: 100%;
+  min-width: 0;
+  color: #1c241f;
+}
+
+.emailActions :global(.contact-email-actions__label) {
+  margin: 0;
+  color: #725f38;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.emailActions :global(.contact-email-actions__address) {
+  margin: 0;
+  color: #1c241f;
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.emailActions :global(.contact-email-actions__row) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 20px;
+  align-items: start;
+  min-width: 0;
+}
+
+.emailActions :global(.contact-email-actions__row) :global(.button) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 48px;
+  min-width: 48px;
+  height: auto;
+  max-width: 100%;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.emailActions :global(.contact-email-actions__row) :global(a.button) {
+  background: #16382d;
+  border: 1px solid #16382d;
+  color: #fff;
+}
+
+.emailActions :global(.contact-email-actions__row) :global(.button.secondary) {
+  background: transparent;
+  border: 1px solid #16382d;
+  color: #16382d;
+}
+
+.emailActions :global(.contact-email-actions__row) :global(.button):focus-visible {
+  outline: 2px solid #16382d;
+  outline-offset: 2px;
+}
+
+.emailActions :global(.contact-email-actions__note) {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin: 0;
+  color: #3d4740;
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.emailActions :global(.contact-email-actions__status) {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  min-height: 0;
+  color: #3d4740;
+  overflow-wrap: anywhere;
+}
+
+.blocks :global(.card) .emailActions :global(.contact-email-actions__status) {
+  min-height: 0;
+  margin: 0;
+  color: #3d4740;
+}
+
+.emailActions :global(.contact-email-actions__status:empty),
+.emailActions :global(.contact-email-actions__status:not(.contact-email-actions__status--success):not(.contact-email-actions__status--error)),
+.blocks :global(.card) .emailActions :global(.contact-email-actions__status:empty),
+.blocks :global(.card) .emailActions :global(.contact-email-actions__status:not(.contact-email-actions__status--success):not(.contact-email-actions__status--error)) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.emailActions :global(.contact-email-actions__status--success),
+.blocks :global(.card) .emailActions :global(.contact-email-actions__status--success) {
+  color: #16382d;
+  font-weight: 600;
+}
+
+.emailActions :global(.contact-email-actions__status--error),
+.blocks :global(.card) .emailActions :global(.contact-email-actions__status--error) {
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border: 1px solid #a33b2b;
+  border-left-width: 4px;
+  border-radius: 4px;
+  background: #f8efed;
+  color: #7a2e22;
+  font-weight: 600;
+}
+
+.homeCta {
+  color: #f3f6f3;
+  min-width: 0;
+}
+
+.homeCta :global(.container) {
+  min-width: 0;
+}
+
+.homeCta :global(.section-label) {
+  color: #d9c48a;
+  max-width: 680px;
+}
+
+.homeCta :global(.section-title),
+.homeCta :global(.section-lede),
+.homeCta :global([data-builder-node-key='copy']),
+.homeCta :global(.home-contact-actions) {
+  max-width: 680px;
+  width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.homeCta :global(.section-title) {
+  color: #f3f6f3;
+}
+
+.homeCta :global(.section-lede) {
+  color: #d7e0d8;
+}
+
+.homeCta :global(.home-contact-actions) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 20px;
+  align-items: start;
+}
+
+.homeCta :global(.home-contact-actions) :global(.button) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 48px;
+  min-width: 48px;
+  height: auto;
+  max-width: 100%;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.homeCta :global(.button.ghost) {
+  background: #fff;
+  color: #16382d;
+  border: 1px solid #16382d;
+}
+
+.homeCta :global(.button.secondary) {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.homeCta :global(.button):focus-visible,
+.homeCta :global(a):focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+:global(:lang(en)) .blocks :global(.section-label),
+:global(:lang(en)) .blocks :global(.contact-label-spaced),
+:global(:lang(en)) .blocks :global(.section-title),
+:global(:lang(en)) .blocks :global(.section-lede),
+:global(:lang(en)) .emailActions,
+:global(:lang(en)) .homeCta :global(.section-label),
+:global(:lang(en)) .homeCta :global(.section-title),
+:global(:lang(en)) .homeCta :global(.section-lede),
+:global(:lang(en)) .homeCta :global([data-builder-node-key='copy']),
+:global(:lang(en)) .homeCta :global(.home-contact-actions) {
+  max-width: 760px;
+}
+
+:global(:lang(ko)) .blocks,
+:global(:lang(ko)) .emailActions,
+:global(:lang(ko)) .homeCta {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+:global(:lang(ja)) .blocks,
+:global(:lang(zh-Hant)) .blocks,
+:global(:lang(ja)) .emailActions,
+:global(:lang(zh-Hant)) .emailActions,
+:global(:lang(ja)) .homeCta,
+:global(:lang(zh-Hant)) .homeCta {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+:global(:lang(en)) .blocks,
+:global(:lang(en)) .emailActions,
+:global(:lang(en)) .homeCta {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+  .blocks :global(.grid-bento.contact-grid),
+  .blocks :global(.contact-grid) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .emailActions :global(.contact-email-actions__row) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  :global(.section).blocks {
+    padding-block-start: 40px;
+  }
+
+  .blocks :global(.button):not(:global(.secondary)),
+  .emailActions :global(.contact-email-actions__row) :global(a.button),
+  .homeCta :global(.button.ghost) {
+    min-height: 52px;
+  }
+
+  .blocks :global(.card) {
+    padding: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blocks :global(.button),
+  .emailActions :global(.button),
+  .homeCta :global(.button) {
+    transition: none;
+  }
+}

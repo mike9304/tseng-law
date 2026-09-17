@@ -1,0 +1,61 @@
+/*
+ * Styles for the only surviving export of `InternationalGuidance.tsx`, the
+ * "read the original-language columns" block.
+ *
+ * The guidance shell rules (its own header/brand/nav/language block, main,
+ * footer, hero typography) and the `local()` @font-face fallbacks were removed
+ * with the shell itself: guidance locales now render inside the shared site
+ * chrome, and their fonts come from `src/app/fonts.ts` (self-hosted Noto Sans
+ * Thai / Latin), not from this module.
+ */
+
+.section,
+.sourceList {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.sectionHeading {
+  margin: 0;
+  color: var(--text-heading);
+  font-weight: 700;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  font-size: clamp(1.15rem, 3.6vw, 1.45rem);
+}
+
+.items {
+  margin: 0.75rem 0 0;
+  padding-left: 1.15rem;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.items li {
+  margin: 0.35rem 0;
+  overflow-wrap: anywhere;
+}
+
+.sourceItem + .sourceItem {
+  margin-top: 1.75rem;
+}
+
+.sourceList {
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sourceLink {
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 0.35rem;
+  overflow-wrap: anywhere;
+}
+
+
+/* RTL (html[dir='rtl'], Arabic) — generated mirrors, see WO-M2. */
+html[dir='rtl'] .items {
+  padding-left: 0;
+  padding-right: 1.15rem;
+}

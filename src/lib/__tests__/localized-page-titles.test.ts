@@ -67,12 +67,16 @@ describe('localized page titles', () => {
     );
   });
 
-  it('keeps the English homepage title at firm level instead of the Taiwan-lawyer intent phrase', () => {
+  it('uses brand-and-scope English homepage title after templating', () => {
     const metadata = getHomeLegacyMetadata('en');
-    expect(metadata.title).toBe('Taipei Law Firm for Expats and Cross-Border Matters');
-    expect(String(metadata.title)).not.toMatch(/Taiwan Lawyer/i);
+    expect(metadata.title).toBe('Taiwan Law Firm in Taipei — English Consultations');
     expect(buildLocalizedPageTitle(String(metadata.title), 'en')).toBe(
-      'Taipei Law Firm for Expats and Cross-Border Matters | Hovering International Law Firm',
+      'Taiwan Law Firm in Taipei — English Consultations | Hovering International Law Firm',
     );
+    expect(String(metadata.title)).not.toMatch(/taiwan lawyer/i);
+    expect(String(metadata.title)).not.toMatch(/company setup lawyer/i);
+    expect(String(metadata.title)).not.toMatch(/litigation lawyer/i);
+    expect(metadata.description).toMatch(/overseas|international/i);
+    expect(metadata.description).not.toMatch(/expats and foreigners in Taiwan/i);
   });
 });

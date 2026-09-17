@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, type MutableRefObject, type RefObject } from 'react';
+import { useEffect, useRef, type MutableRefObject, type RefObject } from 'react';
 
 const FOCUSABLE_SELECTOR = [
   'button:not([disabled])',
@@ -84,14 +84,29 @@ export function restoreOverlayScrollSnapshots(snapshots: readonly ScrollSnapshot
   }
 }
 
-export function scheduleOverlayScrollRestore(snapshots: readonly ScrollSnapshot[]): void {
-  restoreOverlayScrollSnapshots(snapshots);
-  window.setTimeout(() => restoreOverlayScrollSnapshots(snapshots), 0);
-  window.setTimeout(() => restoreOverlayScrollSnapshots(snapshots), 50);
-  window.setTimeout(() => restoreOverlayScrollSnapshots(snapshots), 150);
-  window.requestAnimationFrame(() => {
+let scheduledOverlayScrollRestoreEpoch = 0;
+
+export function cancelScheduledOverlayScrollRestores(): void {
+  scheduledOverlayScrollRestoreEpoch += 1;
+}
+
+export function scheduleOverlayScrollRestore(
+  snapshots: readonly ScrollSnapshot[],
+  shouldRestore?: () => boolean,
+): void {
+  const epoch = scheduledOverlayScrollRestoreEpoch;
+  const restore = () => {
+    if (epoch !== scheduledOverlayScrollRestoreEpoch) return;
+    if (shouldRestore && !shouldRestore()) return;
     restoreOverlayScrollSnapshots(snapshots);
-    window.requestAnimationFrame(() => restoreOverlayScrollSnapshots(snapshots));
+  };
+  restore();
+  window.setTimeout(restore, 0);
+  window.setTimeout(restore, 50);
+  window.setTimeout(restore, 150);
+  window.requestAnimationFrame(() => {
+    restore();
+    window.requestAnimationFrame(restore);
   });
 }
 
@@ -109,25 +124,37 @@ export function usePublishedOverlayFocus({
   overlayRef,
   initialFocusRef,
   openerRef,
+  skipRestoreRef,
 }: {
   open: boolean;
   overlayRef: RefObject<HTMLElement | null>;
   initialFocusRef: RefObject<HTMLElement | null>;
   openerRef: MutableRefObject<HTMLElement | null>;
+  skipRestoreRef?: MutableRefObject<boolean>;
 }) {
+  const openingGenerationRef = useRef(0);
   useEffect(() => {
     if (!open) return undefined;
     const overlay = overlayRef.current;
     if (!overlay) return undefined;
 
+    const openingGeneration = ++openingGenerationRef.current;
+    const isCurrentOpening = () => openingGeneration === openingGenerationRef.current;
     const scrollSnapshots = captureOverlayScrollSnapshots(openerRef.current);
-    const restoreCapturedScroll = () => restoreOverlayScrollSnapshots(scrollSnapshots);
+    const allowRestore = () => (
+      isCurrentOpening() &&
+      skipRestoreRef?.current !== true
+    );
+    const restoreCapturedScroll = () => {
+      if (!allowRestore()) return;
+      restoreOverlayScrollSnapshots(scrollSnapshots);
+    };
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
 
     const focusFirst = () => {
       (initialFocusRef.current ?? getFocusableElements(overlay)[0] ?? overlay).focus({ preventScroll: true });
-      scheduleOverlayScrollRestore(scrollSnapshots);
+      scheduleOverlayScrollRestore(scrollSnapshots, allowRestore);
     };
 
     const focusFrame = window.requestAnimationFrame(focusFirst);
@@ -164,15 +191,31 @@ export function usePublishedOverlayFocus({
       overlay.removeEventListener('keydown', handleKeyDown, true);
       document.removeEventListener('focusin', handleFocusIn);
       document.body.style.overflow = previousOverflow;
+      if (!allowRestore()) {
+        cancelScheduledOverlayScrollRestores();
+        openerRef.current = null;
+        return;
+      }
       restoreCapturedScroll();
       const opener = openerRef.current;
       openerRef.current = null;
+      const epoch = scheduledOverlayScrollRestoreEpoch;
       window.setTimeout(() => {
+        if (
+          epoch !== scheduledOverlayScrollRestoreEpoch ||
+          !isCurrentOpening()
+        ) {
+          return;
+        }
+        if (!allowRestore()) {
+          cancelScheduledOverlayScrollRestores();
+          return;
+        }
         if (opener?.isConnected) {
           opener.focus({ preventScroll: true });
         }
-        scheduleOverlayScrollRestore(scrollSnapshots);
+        scheduleOverlayScrollRestore(scrollSnapshots, allowRestore);
       }, 0);
     };
-  }, [initialFocusRef, openerRef, open, overlayRef]);
+  }, [initialFocusRef, openerRef, open, overlayRef, skipRestoreRef]);
 }

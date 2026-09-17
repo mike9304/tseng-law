@@ -46,6 +46,11 @@ describe('Japanese services-list integration', () => {
       'zh-Hant': `${SITE_URL}/zh-hant/services`,
       en: `${SITE_URL}/en/services`,
       ja: `${SITE_URL}/ja/services`,
+      vi: `${SITE_URL}/vi/services`,
+      id: `${SITE_URL}/id/services`,
+      th: `${SITE_URL}/th/services`,
+      fil: `${SITE_URL}/fil/services`,
+      ar: `${SITE_URL}/ar/services`,
       'x-default': `${SITE_URL}/en/services`,
     });
     expect(metadata.keywords).toEqual([
@@ -90,7 +95,12 @@ describe('Japanese services-list integration', () => {
 
     expect(html).toContain(pageCopy.ja.services.title);
     expect(html).toContain(pageCopy.ja.services.description);
-    expect(html).toContain(siteContent.ja.services.description);
+    expect(html).not.toContain(siteContent.ja.services.description);
+    expect(html).toContain(`aria-label="${siteContent.ja.services.title}"`);
+    expect(html.match(/<h1/g) ?? []).toHaveLength(1);
+    expect(html.match(/<h2 class="services-detail-title"/g) ?? []).toHaveLength(6);
+    expect(html).not.toContain('<h3');
+    expect(html.match(/section-lede/g) ?? []).toHaveLength(1);
     expect(html.match(/class="services-detail-card services-card"/g) ?? []).toHaveLength(6);
 
     const japaneseServiceCopy = siteContent.ja.services.items
@@ -145,6 +155,7 @@ describe('Japanese services-list integration', () => {
 
       expect(html).toContain(detailLabel);
       expect(html).toContain(`href="${detailHref}"`);
+      expect(html).toContain('data-presentation="editorial"');
     },
   );
 });

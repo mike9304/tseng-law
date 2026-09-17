@@ -98,14 +98,14 @@ describe('WO-I18N-P02 Japanese videos components', () => {
     ].map((file) => readFileSync(path.join(process.cwd(), file), 'utf8'));
 
     expect(japaneseHome).toContain('曾雋崴弁護士 — 日本語で相談できる台湾法務パートナー');
-    expect(traditionalChineseHome).toContain('曾雋崴律師，專注服務韓國客戶的台灣法律夥伴');
+    expect(traditionalChineseHome).toContain('曾雋崴律師，在地與跨境客戶的台灣法律夥伴');
     expect(JSON.stringify(siteContent)).not.toContain('曾俊瑋');
     expect(JSON.stringify(pageCopy)).not.toContain('曾俊瑋');
     for (const source of publicCopySources) {
       expect(source).not.toContain('曾俊瑋');
     }
     expect(pageCopy.ko.videos.title).toBe('증준외 변호사 미디어·채널');
-    expect(pageCopy.en.videos.title).toBe('Attorney Wei Tseng Media / Channels');
+    expect(pageCopy.en.videos.title).toBe('Attorney Wei Tseng: Media & Channels');
   });
 
   it('keeps established builder locales assignable to both public components', () => {

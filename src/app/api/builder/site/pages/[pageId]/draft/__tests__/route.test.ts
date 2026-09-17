@@ -1,10 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
 import { emitEditorPageSaveHook } from '@/lib/builder/apps/lifecycle-emitters';
 import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
-import { createDefaultCanvasNodeStyle } from '@/lib/builder/canvas/types';
+import { createDefaultCanvasNodeStyle, normalizeCanvasDocument } from '@/lib/builder/canvas/types';
 import { createHomePageCanvasDocumentDecomposed } from '@/lib/builder/canvas/seed-home';
+import { legacyZhHomeFixture } from '@/lib/builder/canvas/__tests__/fixtures/legacy-zh-home';
+import savedHome from '@/lib/builder/canvas/__tests__/fixtures/legacy-zh-home-july.json';
+import { normalizeLegacyZhHantHomeRead } from '@/lib/builder/canvas/home-zh-hant-parity';
 import { HERO_SEARCH_WRAPPER_Y } from '@/lib/builder/canvas/decompose-hero';
 import {
   canProjectPageToLocale,
@@ -14,6 +17,8 @@ import {
 } from '@/lib/builder/site/persistence';
 import { PageCanvasCasConflictError } from '@/lib/builder/site/page-canvas-versioned-store';
 import type { BuilderCanvasDocument } from '@/lib/builder/canvas/types';
+
+afterEach(() => vi.unstubAllEnvs());
 
 vi.mock('@/lib/builder/security/guard', () => ({
   guardBuilderReadWithPermission: vi.fn(async () => ({
@@ -185,8 +190,8 @@ function recordState(document: BuilderCanvasDocument) {
   };
 }
 
-function getRequest(pageId: string) {
-  return new NextRequest(`https://law.example.test/api/builder/site/pages/${pageId}/draft?locale=ko`);
+function getRequest(pageId: string, locale = 'ko') {
+  return new NextRequest(`https://law.example.test/api/builder/site/pages/${pageId}/draft?locale=${locale}`);
 }
 
 function putRequest(pageId: string, body: unknown, locale = 'ko') {
@@ -310,6 +315,8 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
   });
 
   it('preserves saved home node order and z-indexes when loading drafts', async () => {
+    const site = await readSiteDocument('default', 'ko');
+    site.pages[0] = { ...site.pages[0], slug: '', isHomePage: true };
     vi.mocked(readPageCanvasRecordState).mockResolvedValue(recordState(makeHomeDocument()));
 
     const route = await import('../route');
@@ -338,6 +345,8 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
   });
 
   it('repairs legacy ko hero-search geometry through the read-only GET path without mutating metadata', async () => {
+    const site = await readSiteDocument('default', 'ko');
+    site.pages[0] = { ...site.pages[0], slug: '', isHomePage: true };
     // Stored draft mirrors the pre-migration raw shape: hero-search wrapper at
     // x0/y618/width1280 and a zh-hant-sized container (width1151).
     const fixture = createHomePageCanvasDocumentDecomposed('ko');
@@ -370,6 +379,68 @@ describe('/api/builder/site/pages/[pageId]/draft', () => {
     // Read-only normalization must not rewrite record-level metadata.
     expect(payload.document.updatedAt).toBe(storedUpdatedAt);
     expect(payload.document.updatedBy).toBe(storedUpdatedBy);
+    expect(updatePageCanvasRecord).not.toHaveBeenCalled();
+  });
+
+  it.each([false, true])('uses actual home metadata (%s) for copied stock ZH trees', async (isHomePage) => {
+    const site = await readSiteDocument('default', 'ko');
+    site.pages[0] = { ...site.pages[0], slug: isHomePage ? '' : 'copied-home', locale: 'zh-hant', isHomePage };
+    const fixture = normalizeCanvasDocument(legacyZhHomeFixture(), 'zh-hant');
+    const stored = recordState(fixture);
+    stored.record.updatedBy = 'admin';
+    vi.mocked(readPageCanvasRecordState).mockResolvedValue(stored);
+    const { GET } = await import('../route');
+    const response = await GET(getRequest('page-published-only', 'zh-hant'), {
+      params: Promise.resolve({ pageId: 'page-published-only' }),
+    });
+    const { document } = await response.json();
+    expect(document.nodes.some((node: { id: string }) => node.id === 'home-hero-email-consultation-link')).toBe(isHomePage);
+    if (!isHomePage) expect(document).toEqual(fixture);
+    expect(document.updatedAt).toBe(fixture.updatedAt);
+    expect(document.updatedBy).toBe(fixture.updatedBy);
+    expect(updatePageCanvasRecord).not.toHaveBeenCalled();
+  });
+
+  it.each(['true', 'false'])('returns the same 424-node read projection with discovery flag %s without writing', async (flag) => {
+    vi.stubEnv('NEXT_PUBLIC_AI_INTAKE_DISCOVERY_ENABLED', flag);
+    const site = await readSiteDocument('default', 'ko');
+    site.pages[0] = { ...site.pages[0], slug: '', locale: 'zh-hant', isHomePage: true };
+    const fixture = normalizeCanvasDocument(structuredClone(savedHome), 'zh-hant');
+    const original = structuredClone(fixture); const stored = recordState(fixture);
+    stored.record.updatedBy = 'admin';
+    vi.mocked(readPageCanvasRecordState).mockResolvedValue(stored);
+    const { GET } = await import('../route');
+    const response = await GET(getRequest('page-published-only', 'zh-hant'), {
+      params: Promise.resolve({ pageId: 'page-published-only' }),
+    });
+    const { document } = await response.json();
+    expect(document.nodes).toHaveLength(424);
+    expect(document).toEqual(JSON.parse(JSON.stringify(await normalizeLegacyZhHantHomeRead(fixture, 'zh-hant', true))));
+    expect(document.nodes.find((node: { id: string }) => node.id === 'home-contact-ai-guide').visible).toBe(flag === 'true');
+    expect(fixture).toEqual(original);
+    expect(updatePageCanvasRecord).not.toHaveBeenCalled();
+  });
+
+  it('preserves authored ZH text and metadata even with a wrong-locale sentinel in the same document', async () => {
+    const site = await readSiteDocument('default', 'ko');
+    site.pages[0] = { ...site.pages[0], slug: '', locale: 'zh-hant', isHomePage: true };
+    const fixture = createHomePageCanvasDocumentDecomposed('zh-hant');
+    fixture.updatedAt = '2026-07-28T00:00:00.000Z';
+    fixture.updatedBy = 'author-kept-marker';
+    const title = fixture.nodes.find((node) => node.id === 'home-hero-title')!;
+    const sentinel = fixture.nodes.find((node) => node.id === 'home-insights-title')!;
+    const ko = createHomePageCanvasDocumentDecomposed('ko').nodes.find((node) => node.id === sentinel.id)!;
+    if (title.kind !== 'text' || sentinel.kind !== 'text' || ko.kind !== 'text') throw new Error('text expected');
+    title.content.text = '作者自訂且必須保留的標題';
+    sentinel.content.text = ko.content.text;
+    const stored = recordState(fixture);
+    stored.record.updatedBy = 'admin';
+    vi.mocked(readPageCanvasRecordState).mockResolvedValue(stored);
+    const { GET } = await import('../route');
+    const response = await GET(getRequest('page-published-only', 'zh-hant'), {
+      params: Promise.resolve({ pageId: 'page-published-only' }),
+    });
+    expect((await response.json()).document).toEqual(fixture);
     expect(updatePageCanvasRecord).not.toHaveBeenCalled();
   });
 

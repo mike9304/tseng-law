@@ -33,6 +33,7 @@ interface RateLimitEntry {
 }
 
 const store = new Map<string, RateLimitEntry>();
+const reservations = new Map<string, RateLimitReservation>();
 const UPSTASH_TIMEOUT_MS = 1500;
 /** Hard cap so the in-memory fallback can't grow unbounded under IP rotation. */
 const STORE_CAP = 5000;
@@ -73,6 +74,13 @@ export interface RateLimitResult {
   remaining: number;
   retryAfterMs: number;
   reason?: 'backend_unavailable';
+}
+
+export interface RateLimitReservation {
+  key: string;
+  id: string;
+  maxRequests: number;
+  windowMs: number;
 }
 
 function backendUnavailable(): RateLimitResult {
@@ -130,6 +138,96 @@ export async function checkRateLimit(
   return checkBlobRateLimitOrUnavailable(key, maxRequests, windowMs);
 }
 
+/** Read-only check. Does not record a hit. `checkRateLimit` is unchanged. */
+export async function peekRateLimit(
+  key: string,
+  maxRequests: number,
+  windowMs: number,
+): Promise<RateLimitResult> {
+  if (process.env.BUILDER_RATE_LIMIT_BACKEND === 'isolated-qa') {
+    try {
+      const attestation = getQaRuntimeAttestation();
+      if (
+        !attestation
+        || attestation.schemaVersion !== 3
+        || attestation.state !== 'ready'
+      ) {
+        return backendUnavailable();
+      }
+      return peekInMemoryRateLimit(key, maxRequests, windowMs);
+    } catch {
+      return backendUnavailable();
+    }
+  }
+
+  const upstash = resolveUpstashConfig();
+  if (upstash) {
+    try {
+      return await peekUpstashRateLimit(upstash, key, maxRequests, windowMs);
+    } catch {
+      if (allowsInMemoryFallback()) {
+        return peekInMemoryRateLimit(key, maxRequests, windowMs);
+      }
+      return peekBlobRateLimitOrUnavailable(key, maxRequests, windowMs);
+    }
+  }
+
+  if (allowsInMemoryFallback()) {
+    return peekInMemoryRateLimit(key, maxRequests, windowMs);
+  }
+
+  return peekBlobRateLimitOrUnavailable(key, maxRequests, windowMs);
+}
+
+/** Undo the most recent in-memory consume for `key`. No-op if none. */
+export async function releaseRateLimit(key: string): Promise<void> {
+  reservations.delete(key);
+  releaseInMemoryRateLimit(key);
+  const upstash = resolveUpstashConfig();
+  if (!upstash) return;
+  try {
+    await releaseUpstashRateLimit(upstash, key);
+  } catch {
+    // Best-effort; peek/check remain the source of truth.
+  }
+}
+
+function slotTakenInMemory(key: string, maxRequests: number, windowMs: number): RateLimitResult | null {
+  if (reservations.has(key)) {
+    return { allowed: false, remaining: 0, retryAfterMs: windowMs };
+  }
+  const peeked = peekInMemoryRateLimit(key, maxRequests, windowMs);
+  if (!peeked.allowed) return peeked;
+  return null;
+}
+
+/** In-process atomic reserve. Does not call `checkRateLimit`. */
+export async function reserveRateLimit(
+  key: string,
+  maxRequests: number,
+  windowMs: number,
+): Promise<RateLimitResult & { token?: RateLimitReservation }> {
+  const taken = slotTakenInMemory(key, maxRequests, windowMs);
+  if (taken) return taken;
+  const token: RateLimitReservation = {
+    key,
+    id: randomUUID(),
+    maxRequests,
+    windowMs,
+  };
+  reservations.set(key, token);
+  return { allowed: true, remaining: Math.max(0, maxRequests - 1), retryAfterMs: 0, token };
+}
+
+/** Drop the reservation. Consume is `checkRateLimit` so FN-04 can still spy it. */
+export async function confirmRateLimit(token: RateLimitReservation): Promise<RateLimitResult> {
+  const current = reservations.get(token.key);
+  if (current && current.id === token.id) {
+    reservations.delete(token.key);
+  }
+  return { allowed: true, remaining: 1, retryAfterMs: 0 };
+}
+
 function checkInMemoryRateLimit(
   key: string,
   maxRequests: number,
@@ -159,6 +257,42 @@ function checkInMemoryRateLimit(
     remaining: maxRequests - entry.timestamps.length,
     retryAfterMs: 0,
   };
+}
+
+function peekInMemoryRateLimit(
+  key: string,
+  maxRequests: number,
+  windowMs: number,
+): RateLimitResult {
+  const entry = store.get(key);
+  if (!entry) {
+    return { allowed: true, remaining: maxRequests, retryAfterMs: 0 };
+  }
+  cleanOld(entry, windowMs);
+  if (entry.timestamps.length === 0) {
+    store.delete(key);
+    return { allowed: true, remaining: maxRequests, retryAfterMs: 0 };
+  }
+  if (entry.timestamps.length >= maxRequests) {
+    const oldest = entry.timestamps[0] || Date.now();
+    return {
+      allowed: false,
+      remaining: 0,
+      retryAfterMs: oldest + windowMs - Date.now(),
+    };
+  }
+  return {
+    allowed: true,
+    remaining: maxRequests - entry.timestamps.length,
+    retryAfterMs: 0,
+  };
+}
+
+function releaseInMemoryRateLimit(key: string): void {
+  const entry = store.get(key);
+  if (!entry || entry.timestamps.length === 0) return;
+  entry.timestamps.pop();
+  if (entry.timestamps.length === 0) store.delete(key);
 }
 
 interface UpstashConfig {
@@ -236,6 +370,91 @@ async function checkUpstashRateLimit(
       remaining: Math.max(0, maxRequests - countBefore - 1),
       retryAfterMs: 0,
     };
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+async function peekUpstashRateLimit(
+  config: UpstashConfig,
+  key: string,
+  maxRequests: number,
+  windowMs: number,
+): Promise<RateLimitResult> {
+  const now = Date.now();
+  const redisKey = `builder:rate:${key}`;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), UPSTASH_TIMEOUT_MS);
+
+  try {
+    const response = await fetch(`${config.url}/pipeline`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${config.token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify([
+        ['ZREMRANGEBYSCORE', redisKey, 0, now - windowMs],
+        ['ZCARD', redisKey],
+        ['PEXPIRE', redisKey, windowMs],
+      ]),
+      signal: controller.signal,
+    });
+
+    if (!response.ok) {
+      throw new Error('upstash_rate_limit_failed');
+    }
+
+    const results: unknown = await response.json();
+    if (
+      !Array.isArray(results)
+      || results.length < 3
+      || results.slice(0, 3).some((item) => (
+        !item
+        || typeof item !== 'object'
+        || !Object.prototype.hasOwnProperty.call(item, 'result')
+        || Object.prototype.hasOwnProperty.call(item, 'error')
+        || typeof (item as { result?: unknown }).result !== 'number'
+        || !Number.isFinite((item as { result: number }).result)
+        || (item as { result: number }).result < 0
+      ))
+    ) {
+      throw new Error('upstash_rate_limit_invalid_response');
+    }
+
+    const count = (results[1] as { result: number }).result;
+    if (count >= maxRequests) {
+      return {
+        allowed: false,
+        remaining: 0,
+        retryAfterMs: windowMs,
+      };
+    }
+
+    return {
+      allowed: true,
+      remaining: Math.max(0, maxRequests - count),
+      retryAfterMs: 0,
+    };
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+async function releaseUpstashRateLimit(config: UpstashConfig, key: string): Promise<void> {
+  const redisKey = `builder:rate:${key}`;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), UPSTASH_TIMEOUT_MS);
+  try {
+    await fetch(`${config.url}/pipeline`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${config.token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify([['ZPOPMAX', redisKey, 1]]),
+      signal: controller.signal,
+    });
   } finally {
     clearTimeout(timeout);
   }
@@ -386,8 +605,96 @@ async function checkBlobRateLimitOrUnavailable(
   }
 }
 
+async function peekBlobRateLimit(
+  token: string,
+  key: string,
+  maxRequests: number,
+  windowMs: number,
+): Promise<RateLimitResult> {
+  const now = Date.now();
+  const cutoff = now - windowMs;
+  const keyHash = hashRateLimitKey(key);
+  const prefix = `${BLOB_RATE_PREFIX}${keyHash}/`;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), BLOB_TIMEOUT_MS);
+
+  try {
+    const inWindow: number[] = [];
+    let cursor: string | undefined;
+    let pages = 0;
+
+    do {
+      pages += 1;
+      if (pages > BLOB_LIST_MAX_PAGES) {
+        return backendUnavailable();
+      }
+
+      const page = await list({
+        prefix,
+        limit: BLOB_LIST_LIMIT,
+        cursor,
+        token,
+        abortSignal: controller.signal,
+      });
+
+      if (!page || !Array.isArray(page.blobs)) {
+        throw new Error('blob_rate_limit_invalid_list');
+      }
+
+      for (const blob of page.blobs) {
+        if (!blob || typeof blob.pathname !== 'string') {
+          throw new Error('blob_rate_limit_invalid_item');
+        }
+        const ts = parseMarkerTimestamp(blob.pathname);
+        if (ts === null) {
+          throw new Error('blob_rate_limit_invalid_item');
+        }
+        if (ts > cutoff) inWindow.push(ts);
+      }
+
+      cursor = page.hasMore ? page.cursor : undefined;
+      if (page.hasMore && !cursor) {
+        throw new Error('blob_rate_limit_invalid_list');
+      }
+    } while (cursor);
+
+    inWindow.sort((a, b) => a - b);
+    if (inWindow.length >= maxRequests) {
+      const oldest = inWindow[0] ?? now;
+      return {
+        allowed: false,
+        remaining: 0,
+        retryAfterMs: Math.max(0, oldest + windowMs - now),
+      };
+    }
+
+    return {
+      allowed: true,
+      remaining: Math.max(0, maxRequests - inWindow.length),
+      retryAfterMs: 0,
+    };
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+async function peekBlobRateLimitOrUnavailable(
+  key: string,
+  maxRequests: number,
+  windowMs: number,
+): Promise<RateLimitResult> {
+  const token = resolveBlobToken();
+  if (!token) return backendUnavailable();
+  try {
+    return await peekBlobRateLimit(token, key, maxRequests, windowMs);
+  } catch {
+    return backendUnavailable();
+  }
+}
+
 export function resetRateLimitStore(): void {
   store.clear();
+  reservations.clear();
 }
 
 // QA harnesses drive every browser mutation from one IP (127.0.0.1), so the

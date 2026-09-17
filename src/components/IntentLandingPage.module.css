@@ -1,0 +1,355 @@
+.root {
+  min-width: 0;
+}
+
+.root:global(.section):global(.section--light),
+.root:global(.section):global(.section--gray) {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .root:global(.section):global(.section--light),
+  .root:global(.section):global(.section--gray) {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
+
+.root :global(.container) {
+  min-width: 0;
+}
+
+.root :global(.section-title),
+.root :global(.section-lede) {
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.root :global(.section-title) {
+  text-wrap: balance;
+}
+
+.root :global(.profile-card-title) {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.625;
+  font-weight: 700;
+  color: var(--text-heading);
+  text-align: left;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+@media (min-width: 768px) {
+  .root :global(.profile-card-title) {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+}
+
+.root :global(.intent-article-list) {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--text-body);
+  font-size: 1rem;
+  line-height: 1.625;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 768px) {
+  .root :global(.intent-article-list) {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+}
+
+.layout:global(.intent-layout) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .layout:global(.intent-layout) {
+    grid-template-columns: minmax(0, 1fr) minmax(17.5rem, 20rem);
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+  }
+}
+
+.main:global(.intent-main) {
+  display: grid;
+  gap: 2.5rem;
+  min-width: 0;
+  max-width: 42.5rem;
+}
+
+.mainWide:global(.intent-main) {
+  max-width: 47.5rem;
+}
+
+.subgrid:global(.intent-subgrid) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem;
+  min-width: 0;
+}
+
+.sidebar:global(.intent-sidebar) {
+  position: static;
+  top: auto;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .sidebar:global(.intent-sidebar) {
+    position: sticky;
+    top: 7rem;
+    align-self: start;
+    width: 100%;
+    max-width: 20rem;
+  }
+}
+
+.panel:global(.intent-panel) {
+  min-width: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  text-align: left;
+}
+
+.triple:global(.intent-triple-grid) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .triple:global(.intent-triple-grid) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .triple:global(.intent-triple-grid) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.triple :global(.contact-email-actions__note) {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.625;
+  color: var(--text-body);
+}
+
+.columnsGrid:global(.svc-columns-grid) {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.columnsGrid :global(.svc-col-card) {
+  min-width: 0;
+  border: 1px solid var(--warm-border, var(--border-light));
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.columnsGrid :global(.svc-col-card-title) {
+  font-size: 1.125rem;
+  line-height: 1.625;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.columnsGrid :global(.svc-col-card-summary) {
+  display: block;
+  max-height: none;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+  font-size: 1rem;
+  line-height: 1.625;
+  color: var(--text-body);
+  overflow-wrap: anywhere;
+}
+
+.columnsGrid :global(.svc-col-card-link) {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.serviceCard:global(.legal-card) {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: visible;
+  background: #fff;
+  border: 1px solid var(--warm-border, var(--border-light));
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.serviceCard :global(.card-title) {
+  font-size: 1.125rem;
+  line-height: 1.625;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.serviceCard :global(.legal-card-copy) {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.serviceCard :global(.legal-card-copy) > a {
+  margin-top: auto;
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.resources:global(.intent-panel) {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.resources a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
+
+.ctaCard:global(.intent-cta-card) {
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--warm-border, var(--border-light));
+  border-radius: 12px;
+  background: var(--off-white, #f7faf6);
+  box-shadow: none;
+  text-align: left;
+}
+
+.ctaCard :global(.section-label),
+.ctaCard :global(.section-title),
+.ctaCard :global(.section-lede),
+.ctaCard :global(.contact-email-actions__note) {
+  text-align: left;
+  max-width: 42.5rem;
+}
+
+.ctaCard :global(.section-title) {
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.ctaCard :global(.section-lede) {
+  font-size: 1rem;
+  line-height: 1.625;
+  color: var(--text-body);
+}
+
+.ctaActions:global(.intent-cta-actions) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  align-items: stretch;
+}
+
+.ctaActions :global(a.button) {
+  min-height: 3rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 700;
+  white-space: normal;
+  text-wrap: balance;
+}
+
+.ctaActions :global(a.button):not(:global(.button--outline)) {
+  background: var(--primary);
+  color: #fff;
+}
+
+.ctaActions :global(.button--outline) {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.ctaActions :global(a.button):focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  .ctaCard:global(.intent-cta-card) {
+    padding: 1.5rem 1rem;
+  }
+
+  .ctaActions:global(.intent-cta-actions) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ctaActions > a {
+    width: 100%;
+    min-width: 0;
+    min-height: 3.25rem;
+    padding: 0.85rem 1rem;
+    border-radius: 4px;
+    white-space: normal;
+    line-height: 1.5;
+    text-wrap: balance;
+  }
+}
+
+:global(:lang(ko)) .root :where(h2, h3, p, li, a),
+:global(:lang(ko)) .serviceCard :where(h3, p, a),
+:global(:lang(ko)) .ctaCard :where(h2, p, a) {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+:global(:lang(ja)) .root :where(h2, h3, p, li, a),
+:global(:lang(zh-Hant)) .root :where(h2, h3, p, li, a),
+:global(:lang(zh-hant)) .root :where(h2, h3, p, li, a),
+:global(:lang(ja)) .serviceCard :where(h3, p, a),
+:global(:lang(zh-Hant)) .serviceCard :where(h3, p, a),
+:global(:lang(zh-hant)) .serviceCard :where(h3, p, a),
+:global(:lang(ja)) .ctaCard :where(h2, p, a),
+:global(:lang(zh-Hant)) .ctaCard :where(h2, p, a),
+:global(:lang(zh-hant)) .ctaCard :where(h2, p, a) {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+:global(:lang(en)) .ctaCard :global(.section-lede) {
+  max-width: 47.5rem;
+}

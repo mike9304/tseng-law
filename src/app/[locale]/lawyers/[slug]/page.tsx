@@ -35,6 +35,7 @@ import {
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
 import { buildBreadcrumbJsonLd, buildProfilePageJsonLd, buildSeoMetadata } from '@/lib/seo';
+import styles from './LawyerProfile.module.css';
 
 export const dynamic = 'force-dynamic';
 
@@ -246,18 +247,18 @@ export default async function LawyerProfilePage(
       {showHero ? (
         <PageHeader
           locale={locale}
-          label={labels.pageLabel}
-          title={profile.title}
-          description={profile.description}
+          label={locale === 'en' ? profile.role : labels.pageLabel}
+          title={profile.heading ?? profile.title}
+          description={profile.lede ?? profile.description}
         />
       ) : null}
 
       {showBody ? (
         <>
-          <section className="section section--light">
-            <div className="container">
-              <div className="profile-hero-card">
-                <div className="profile-hero-photo">
+          <section className={`section section--light ${styles.root}`}>
+            <div className={`container ${styles.container}`}>
+              <div className={`profile-hero-card ${styles.heroCard}`}>
+                <div className={`profile-hero-photo ${styles.heroPhoto}`}>
                   <Image
                     src={profile.image}
                     alt={profile.imageAltText}
@@ -270,7 +271,7 @@ export default async function LawyerProfilePage(
                     }}
                   />
                 </div>
-                <div className="profile-hero-body">
+                <div className={`profile-hero-body ${styles.heroBody}`}>
                   <div className="section-label">{labels.facts}</div>
                   <h2 className="section-title profile-hero-title">{profile.name}</h2>
                   <p className="profile-hero-role">{profile.role}</p>
@@ -297,7 +298,7 @@ export default async function LawyerProfilePage(
                 </div>
               </div>
 
-              <article className="profile-entity-card">
+              <article className={`profile-entity-card ${styles.entityCard}`}>
                 <div className="section-label">{labels.searchTerms}</div>
                 <div className="profile-chip-group">
                   {profile.searchTerms.map((term) => (
@@ -308,16 +309,16 @@ export default async function LawyerProfilePage(
                 </div>
               </article>
 
-              <div className="profile-proof-grid">
+              <div className={`profile-proof-grid ${styles.proofGrid}`}>
                 {profile.proofPoints.map((item) => (
-                  <article key={item} className="profile-proof-card">
+                  <article key={item} className={`profile-proof-card ${styles.proofCard}`}>
                     <p className="profile-proof-text">{item}</p>
                   </article>
                 ))}
               </div>
 
-              <div className="profile-card-grid">
-                <article className="profile-info-card">
+              <div className={`profile-card-grid ${styles.cardGrid}`}>
+                <article className={`profile-info-card ${styles.infoCard}`}>
                   <h3 className="profile-card-title">{labels.facts}</h3>
                   <ul className="attorney-list">
                     {profile.practiceAreas.map((item) => (
@@ -326,7 +327,7 @@ export default async function LawyerProfilePage(
                   </ul>
                 </article>
 
-                <article className="profile-info-card">
+                <article className={`profile-info-card ${styles.infoCard}`}>
                   <h3 className="profile-card-title">{labels.matters}</h3>
                   <ul className="attorney-list">
                     {profile.notableMatters.map((item) => (
@@ -335,7 +336,7 @@ export default async function LawyerProfilePage(
                   </ul>
                 </article>
 
-                <article className="profile-info-card">
+                <article className={`profile-info-card ${styles.infoCard}`}>
                   <h3 className="profile-card-title">{labels.internalLinks}</h3>
                   <ul className="profile-link-list">
                     {profile.internalLinks.map((item) => (
@@ -348,7 +349,7 @@ export default async function LawyerProfilePage(
                   </ul>
                 </article>
 
-                <article className="profile-info-card">
+                <article className={`profile-info-card ${styles.infoCard}`}>
                   <h3 className="profile-card-title">{labels.externalProfiles}</h3>
                   <ul className="profile-link-list">
                     {profile.externalProfiles.map((item) => (
@@ -362,8 +363,8 @@ export default async function LawyerProfilePage(
                 </article>
               </div>
 
-              <div className="profile-card-grid">
-                <article className="profile-info-card">
+              <div className={`profile-card-grid ${styles.cardGrid}`}>
+                <article className={`profile-info-card ${styles.infoCard}`}>
                   <h3 className="profile-card-title">{labels.education}</h3>
                   <ul className="attorney-list">
                     {profile.education.map((item) => (
@@ -372,7 +373,7 @@ export default async function LawyerProfilePage(
                   </ul>
                 </article>
 
-                <article className="profile-info-card">
+                <article className={`profile-info-card ${styles.infoCard}`}>
                   <h3 className="profile-card-title">{labels.experience}</h3>
                   <ul className="attorney-list">
                     {profile.experience.map((item) => (

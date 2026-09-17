@@ -46,9 +46,9 @@ const expectedJapaneseFaq = [
       '施設が提供するサービスが合理的に期待される安全性を欠き、その欠陥または管理上の過失によって負傷・損害が生じた場合、消費者保護法や民法に基づく賠償請求を検討できます。責任の成否は、安全性の欠如・過失、因果関係、損害の立証などにより決まります。CCTV、現場写真、診断書、領収書、利用規約、当日の連絡記録を早めに保全してください。',
   },
   {
-    question: '日本や韓国など、台湾とつながる国際離婚では、どのような手続きが必要ですか？',
+    question: '韓国人が台湾で離婚するには、どのような手続きが必要ですか？',
     answer:
-      '台湾法が適用される合意離婚は、書面で行い、2名以上の証人が署名し、戸政機関で離婚登記をする必要があります。裁判による離婚は、原則として裁判前に家事調停を経ます。日本・台湾間や韓国・台湾間などの国際離婚では、台湾で手続できるか、どの法が適用されるか、関係する地域での届出・承認、財産分与、未成年の子の親権・扶養を個別に確認してください。',
+      '台湾法が適用される合意離婚は、書面で行い、2名以上の証人が署名し、戸政機関で離婚登記をする必要があります。裁判による離婚は、原則として裁判前に家事調停を経ます。韓国・台湾間の国際離婚では、台湾で手続できるか、どの法が適用されるか、両地域での届出・承認、財産分与、未成年の子の親権・扶養を個別に確認してください。',
   },
   {
     question: '台湾で未成年の子の親権・監護はどのように決まりますか？',
@@ -63,7 +63,7 @@ const expectedJapaneseFaq = [
   {
     question: '相談はどのような方式で行われますか？',
     answer:
-      '台北事務所での対面相談またはビデオ通話による相談に対応しており、日本語・英語・中国語・韓国語で相談できます。一般法律相談は事前予約制で、現在の料金案内では1時間単位です。まずお問い合わせページから案件の概要と主な資料を送り、日程、相談方法、担当言語および費用をご確認ください。連絡はメールから行えます。',
+      '台北事務所での対面相談またはビデオ通話による相談に対応しており、英語・韓国語・中国語・日本語で相談できます。一般法律相談は事前予約制で、現在の料金案内では1時間単位です。まずは案件の簡潔な概要をお送りください。その他の資料は弁護士の案内後にご提出ください。連絡はメールから行えます。',
   },
   {
     question: '物流・化粧品などの規制業種でも台湾で会社を設立できますか？',
@@ -73,10 +73,12 @@ const expectedJapaneseFaq = [
 ] as const;
 
 const untouchedLocaleHashes = {
-  ko: '2dc44723fac9451b002a0e04564453951cd508581fb375806277ecd6f8016c93',
-  'zh-hant': '01fe893af3d34bc3e2edcd1ac94ec903df2c29a715f8e11825dfcba47175dd4f',
-  en: 'e750202fd6044f06711281ad3cbe4baee5a30ef65152318742760e5947a823ee',
+  ko: '398347fb5e2c2246704d93f79a299389aa1e4423ffd0ce7edfe363cceee80d3c',
+  'zh-hant': 'd67670885cc5b0777b6f89db7737388d3b2df3ccc8e73492befbb68aef62aec3',
 } as const;
+
+const reviewedEnglishFaqBaselineHash =
+  '5845e1a1559277a154f6b344e23656b3f1eb3a50e2541182d0b3d3a841302c21';
 
 const forbiddenRegressions = [
   '①投資許可の申請 → ②会社名',
@@ -102,7 +104,7 @@ describe('Japanese public FAQ factual consistency', () => {
     expect(faqContent.ja).toEqual(expectedJapaneseFaq);
   });
 
-  it('keeps the Korean, Traditional Chinese, and English FAQ data byte-stable', () => {
+  it('keeps the Korean and Traditional Chinese FAQ data byte-stable', () => {
     for (const [locale, expectedHash] of Object.entries(untouchedLocaleHashes)) {
       const digest = createHash('sha256')
         .update(JSON.stringify(faqContent[locale as keyof typeof untouchedLocaleHashes]))
@@ -110,6 +112,23 @@ describe('Japanese public FAQ factual consistency', () => {
 
       expect(digest, `${locale} FAQ content changed`).toBe(expectedHash);
     }
+  });
+
+  it('keeps the reviewed English FAQ baseline byte-stable', () => {
+    const digest = createHash('sha256')
+      .update(JSON.stringify(faqContent.en))
+      .digest('hex');
+
+    expect(digest, 'reviewed English FAQ baseline changed').toBe(reviewedEnglishFaqBaselineHash);
+  });
+
+  it('adds English to the public EN consultation FAQ without dropping appointment format', () => {
+    const consultation = faqContent.en.find((item) => item.question === 'How are consultations conducted?');
+
+    expect(consultation?.answer).toContain('English, Chinese, Korean, and Japanese');
+    expect(consultation?.answer).toContain('Appointments are required and scheduled in one-hour units');
+    expect(consultation?.answer).toContain('brief summary');
+    expect(consultation?.answer).not.toContain('Sending relevant documents in advance');
   });
 
   it('preserves the required legal and regulatory distinctions', () => {

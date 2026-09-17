@@ -18,12 +18,12 @@ export const serviceAreas: ServiceArea[] = [
     subtitle: {
       ko: '한국 기업의 대만 진출을 위한 법인 설립 전 과정 지원',
       'zh-hant': '協助韓國企業在台落地的全流程法律服務',
-      en: 'End-to-end legal support for international companies expanding into Taiwan'
+      en: 'Legal support for overseas companies and investors entering or operating in Taiwan'
     },
     intro: {
       ko: '법무법인 호정은 한국 기업의 대만 시장 진출을 위해 법인 형태 선택부터 투자심의위원회 승인, 자본금 송금, 은행 계좌 개설, 영업장소 확보, 업종별 인허가까지 전 과정을 한국어로 밀착 지원합니다.',
       'zh-hant': '昊鼎國際法律事務所協助韓國企業選擇公司型態、投審會審查、資本匯入、銀行開戶、營業場所確認及特殊行業許可，提供韓語全程對接服務。',
-      en: 'Hovering supports overseas companies and investors entering or operating in Taiwan, including entity structuring, investment approval, registration, capital remittance, banking, and permitted-business review.'
+      en: 'Hovering supports overseas companies and investors entering or operating in Taiwan, including entity structuring, investment approval, registration, capital remittance, banking, and permitted-business review. We also assist with the tax and accounting matters that arise from establishing and operating a Taiwan company, coordinating with external accountants where needed.'
     },
     keyPoints: {
       ko: [
@@ -32,7 +32,7 @@ export const serviceAreas: ServiceArea[] = [
         '1인 주주 기준 취업허가 최소 자본금은 50만 TWD(약 2,000만 원)이며, 취업허가 유지를 위해 연 매출 300만 TWD 이상이 필요합니다.',
         '자본금 송금은 투자자 본인이 직접 한국 은행을 방문해야 하며(인터넷뱅킹·대리 불가), 해외직접투자신고도 동시에 필요합니다.',
         '영업장소는 타이베이시 "영업장소 사전 조회 시스템"으로 업종 적합성을 반드시 사전 확인해야 합니다.',
-        '화장품 판매 시 PIF(Product Information File) 등록이 필수이며, 광고 위반 시 최대 500만 TWD 벌금이 부과됩니다.',
+        '공장등록 면제 제조장소에서 생산한 고형 수제비누를 제외하고, 법령상 대상인 화장품 제조·수입업자는 대상 제품의 제품등록(產品登錄)을 별도로 완료하고, 제품정보파일(PIF)을 작성·갱신하여 제품에 표시된 주소에 보관하고 검사에 대비해야 합니다. PIF 자체는 당국에 등록하지 않습니다. 광고 위반 시 최대 500만 TWD 벌금이 부과됩니다.',
         '물류업 면허 취득에는 자본금 2,500만 TWD, 신차 화물차 20대 등의 요건이 있으며, 기존 회사 인수나 업무위탁도 대안입니다.',
         '법인을 더 이상 운영하지 않을 때는 반드시 해산·청산 절차를 거쳐야 하며, 자본금 무단 인출 시 최대 5년 징역에 처해질 수 있습니다.',
       ],
@@ -42,19 +42,17 @@ export const serviceAreas: ServiceArea[] = [
         '單一股東取得工作許可之最低資本額為50萬TWD，維持工作許可須年營收達300萬TWD以上。',
         '資本匯入須由投資人親赴韓國銀行臨櫃辦理，同時須申報海外直接投資。',
         '營業場所須透過台北市「營業場所預查系統」確認業種適合性。',
-        '化妝品銷售須完成PIF登記，廣告違規最高罰500萬TWD。',
+        '除免辦理工廠登記之製造場所生產之固態手工香皂外，法定範圍內之化粧品製造或輸入業者應就適用產品另行完成產品登錄，並建立、更新產品資訊檔案（PIF），存放於標示地址以供查核；PIF本身無須向主管機關登錄。廣告違規最高罰500萬TWD。',
         '物流業執照門檻包含資本額2,500萬TWD及20輛新車等要件。',
         '停止營運時須經解散清算程序，違法抽逃資金最高處5年有期徒刑。',
       ],
       en: [
-        'Entity options include subsidiary, branch, and representative office, with different implications for tax, liability, and operations.',
-        'Typical setup includes around 10 steps over roughly 3 months: name reservation, POA notarization, investment review filing, banking, capital remittance, company registration, and tax registration.',
-        'For a single shareholder work permit case, practical minimum capital is often TWD 500,000, and maintaining work authorization may require annual revenue over TWD 3M.',
+        'Entity choice among a Taiwan subsidiary, a branch of the overseas parent, or a representative office affects legal personality and responsibility.',
+        'The filing sequence and timing depend on the chosen entity, the investor, the industry, the banks involved, and the documents available; they are not a single fixed process.',
+        'Work permission and residency are separate from company formation, and the applicable criteria are case-specific.',
         'Capital-remittance requirements depend on the origin country and the Taiwan banks involved; they should be checked before funds are transferred.',
-        'Business address compliance should be checked in advance through local zoning and use regulations.',
-        'For cosmetics sales, PIF registration is mandatory, and advertising violations can trigger fines up to TWD 5M.',
-        'Logistics licensing may require TWD 25M capital and vehicle requirements; acquisition or outsourcing can be alternatives.',
-        'When closing operations, dissolution and liquidation are mandatory. Illegal capital withdrawal can lead to serious criminal penalties.'
+        'The business address and industry permits should be reviewed separately from the incorporation filing.',
+        'Company closure and any distribution of remaining assets require a review of debts, taxes, and the applicable procedure.',
       ]
     },
     columnSlugs: [
@@ -77,9 +75,9 @@ export const serviceAreas: ServiceArea[] = [
       en: 'Comprehensive support for contract disputes, damages claims, and accident litigation'
     },
     intro: {
-      ko: '법무법인 호정은 계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 157만 TWD 손해배상 판결을 이끌어낸 실적이 있으며, 외국인 의뢰인의 대만 소송 절차를 한국어로 밀착 지원합니다.',
-      'zh-hant': '昊鼎處理契約爭議、損害賠償及消費者權益等民事案件，曾代理韓國留學生健身房受傷案，於一審獲判新臺幣157萬元賠償，並以中韓雙語支援外國當事人在台灣的訴訟程序。',
-      en: 'We handle civil disputes including breach of contract, tort, and consumer claims. In a Korean student gym injury case, we obtained a TWD 1.57 million first-instance damages award and provide multilingual support throughout Taiwan litigation.'
+      ko: '법무법인 호정은 계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 157만 TWD 손해배상 판결을 이끌어낸 실적이 있으며, 한국어로 한국 의뢰인을 밀착 지원하고 외국인 의뢰인의 대만 소송 절차는 사무소 상담 언어(한국어·중국어·일본어·영어)로 지원합니다.',
+      'zh-hant': '昊鼎處理契約爭議、損害賠償及消費者權益等民事案件，曾代理韓國留學生健身房受傷案，於一審獲判新臺幣157萬元賠償，並以事務所諮詢語言（中文、韓文、日文、英文）支援外國當事人在台灣的訴訟程序。',
+      en: 'We handle civil disputes including breach of contract, tort, and consumer claims. In a Korean student gym injury case, we obtained a TWD 1.57 million first-instance damages award, and the firm supports foreign clients in Taiwan litigation with consultations in English, Chinese, Korean, and Japanese.'
     },
     keyPoints: {
       ko: [
@@ -125,7 +123,7 @@ export const serviceAreas: ServiceArea[] = [
     intro: {
       ko: '한국-대만 국제결혼 증가에 따라 이혼·친권·상속 관련 분쟁이 늘고 있습니다. 법무법인 호정은 대만 가사소송법과 국제사법을 함께 검토하여, 한국인 의뢰인에게 최적의 전략을 제공합니다.',
       'zh-hant': '因應韓台跨國婚姻增加，協助協議離婚、調解離婚、裁判離婚程序，以及法定繼承順位與剩餘財產分配請求。',
-      en: 'Cross-border marriages involving Taiwan have increased, and disputes on divorce, custody, and inheritance are growing. We combine Taiwan family procedure and private international law analysis to build practical strategies for international clients.'
+      en: 'As Korea-Taiwan marriages increase, disputes on divorce, custody, and inheritance are growing. We combine Taiwan family procedure and private international law analysis to build practical strategies for cross-border clients.'
     },
     keyPoints: {
       ko: [

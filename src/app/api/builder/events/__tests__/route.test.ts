@@ -16,7 +16,8 @@ vi.mock('@/lib/builder/security/guard', () => ({
   guardMutation: vi.fn(async () => ({ username: 'admin' })),
 }));
 
-vi.mock('@/lib/builder/events/events-engine', () => ({
+vi.mock('@/lib/builder/events/events-engine', async () => ({
+  normalizeEvent: (await vi.importActual<typeof import('@/lib/builder/events/events-engine')>('@/lib/builder/events/events-engine')).normalizeEvent,
   createEvent: vi.fn(),
   filterEventsByCategory: vi.fn((events) => events),
   filterEventsByLocale: vi.fn((events, locale) => events.filter((event: { locale: string }) => event.locale === locale)),
@@ -223,6 +224,7 @@ describe('/api/builder/events', () => {
       errorCode: 'validation_error',
     });
     expect(JSON.stringify(payload)).not.toContain('제목을 입력하세요.');
+    expect(createEventMock).not.toHaveBeenCalled();
   });
 
   it('returns localized create failures without leaking exception details', async () => {

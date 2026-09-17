@@ -9,12 +9,20 @@ function renderLanding(locale: SiteLocale, slug: (typeof intentPageSlugs)[number
   return renderToStaticMarkup(<IntentLandingPage locale={locale} slug={slug} />);
 }
 
+function htmlEscape(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 describe('Japanese intent landing render parity', () => {
   it.each(intentPageSlugs)('renders the full landing structure for /ja/%s', (slug) => {
     const html = renderLanding('ja', slug);
     const page = getIntentPage('ja', slug);
 
-    expect(html).toContain(page?.title ?? '');
+    expect(html).toContain(htmlEscape(page?.title ?? ''));
     // Related services/columns/pricing CTA sections render with /ja paths.
     expect(html).toContain('/ja/services/');
     expect(html).toContain('/ja/columns/');
@@ -42,7 +50,7 @@ describe('Japanese intent landing render parity', () => {
     const html = renderLanding(locale, 'taiwan-lawyer');
     const page = getIntentPage(locale, 'taiwan-lawyer');
 
-    expect(html).toContain(page?.title ?? '');
+    expect(html).toContain(htmlEscape(page?.title ?? ''));
     expect(html).toContain(`/${locale}/columns/`);
     expect(html).toContain(`/${locale}/services/`);
     expect(html).toContain('"@type":"FAQPage"');

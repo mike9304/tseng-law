@@ -175,12 +175,44 @@ function stripeRefundIdempotencyKey(
   return `booking-refund-v1:${digest}`;
 }
 
+function recordedRefundCurrency(value: unknown): string | null {
+  // Only the currency recorded with the booking can verify the original charge.
+  if (typeof value !== 'string' || !['KRW', 'USD', 'TWD', 'JPY', 'EUR'].includes(value)) return null;
+  return value.toLowerCase();
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+function isVerifiedStripeRefund(
+  data: unknown,
+  paymentIntentId: string,
+  amountCents: number,
+  currency: string,
+): data is Record<string, unknown> & { id: string } {
+  if (!isRecord(data)) return false;
+  const target = isRecord(data.payment_intent) ? data.payment_intent.id : data.payment_intent;
+  return data.object === 'refund'
+    && typeof data.id === 'string' && data.id.trim().length > 0
+    && data.status === 'succeeded'
+    && Number.isSafeInteger(data.amount) && data.amount === amountCents
+    && data.currency === currency
+    && typeof target === 'string' && target === paymentIntentId;
+}
+
 async function attemptStripeRefund(
   bookingId: string,
   paymentIntentId: string,
   amountCents: number,
   decision: RefundDecision,
+  recordedCurrency: unknown,
 ): Promise<RefundOutcome['refundResult']> {
+  const currency = recordedRefundCurrency(recordedCurrency);
+  if (!currency || !Number.isSafeInteger(amountCents) || amountCents <= 0
+    || typeof paymentIntentId !== 'string' || paymentIntentId.trim().length === 0) {
+    return { ok: false, error: 'Refund payment details could not be verified.' };
+  }
   const key = process.env.STRIPE_SECRET_KEY ?? '';
   if (!key) return { ok: false, error: 'STRIPE_SECRET_KEY unset' };
   try {
@@ -197,11 +229,20 @@ async function attemptStripeRefund(
       body: body.toString(),
     });
     if (!res.ok) return { ok: false, error: `Stripe ${res.status}` };
-    const data = (await res.json()) as { id?: string };
+    const data: unknown = await res.json();
+    if (!isVerifiedStripeRefund(data, paymentIntentId, amountCents, currency)) {
+      // Unverified does not mean no external effect; do not retry automatically.
+      return { ok: false, error: 'Refund completion could not be verified.' };
+    }
     return { ok: true, refundId: data.id };
   } catch (err) {
     return { ok: false, error: err instanceof Error ? err.message : String(err) };
   }
+}
+
+/** Persist a cancellation only when no refund is due, or Stripe refund succeeded. */
+export function refundAllowsCancelPersist(outcome: RefundOutcome): boolean {
+  return outcome.decision === 'none' || outcome.refundResult?.ok === true;
 }
 
 export async function computeRefundForCancel(booking: Booking, service?: BookingService): Promise<RefundOutcome> {
@@ -212,15 +253,16 @@ export async function computeRefundForCancel(booking: Booking, service?: Booking
   const refundAmountCents = refundAmountForDecision(booking, resolvedService, policy, decision);
   let partialAmountCents: number | undefined;
   let refundResult: RefundOutcome['refundResult'] = null;
-  if (decision !== 'none' && refundAmountCents > 0 && booking.paymentIntentId) {
-    if (decision === 'partial') {
+  if (decision !== 'none') {
+    if (decision === 'partial' && refundAmountCents > 0) {
       partialAmountCents = refundAmountCents;
     }
     refundResult = await attemptStripeRefund(
       booking.bookingId,
-      booking.paymentIntentId,
+      booking.paymentIntentId ?? '',
       refundAmountCents,
       decision,
+      booking.paymentCurrency,
     );
   }
 

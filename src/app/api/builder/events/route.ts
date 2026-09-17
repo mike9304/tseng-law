@@ -14,6 +14,7 @@ import {
   filterEventsByStatus,
   filterEventsByTime,
   listEvents,
+  normalizeEvent,
   searchEvents,
   sortEvents,
   validateEvent,
@@ -135,11 +136,12 @@ export async function POST(request: NextRequest) {
 
   try {
     const input = eventInputSchema.parse(body);
-    const event = await createEvent(input);
-    const errors = validateEvent(event);
+    const candidate = normalizeEvent(input);
+    const errors = validateEvent(candidate);
     if (errors.length > 0) {
       return errorResponse(input.locale, 'validation_error', 400);
     }
+    const event = await createEvent(candidate);
     return NextResponse.json({ ok: true, event }, { status: 201 });
   } catch (error) {
     if (error instanceof ZodError) return validationErrorResponse(errorLocale, error);

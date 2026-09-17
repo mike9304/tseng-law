@@ -4,10 +4,28 @@ import { DEFAULT_BUILDER_SITE_ID } from '@/lib/builder/constants';
 import { readAttorneyProfileSourceRecords } from '@/lib/builder/lawyers/source';
 import { readServiceAreaSourceRecords } from '@/lib/builder/services/source';
 import { getAllColumnPosts, getAliasSlugs, resolveSlug } from '@/lib/columns';
-import { locales, siteLocales } from '@/lib/locales';
-import { buildAbsoluteUrl, getLanguageAlternates, getLocalizedPath } from '@/lib/seo';
+import { collectColumnSitemapRecords } from '@/lib/column-locales';
+import { locales } from '@/lib/locales';
+import {
+  GUIDANCE_LOCALES_4,
+  GUIDANCE_PAGE_KEYS,
+  buildGuidanceCoreLanguageAlternates,
+  guidanceCanonicalUrl,
+  guidancePageKeyFromSlugPath,
+  isGuidanceCoreSlugPath,
+  isPublicLocale8,
+  type PublicLocale8,
+  isGuidanceRoutedLocale,
+} from '@/lib/public-guidance';
+import { buildAbsoluteUrl, getLanguageAlternates, getLocalizedPath, getSiteUrl } from '@/lib/seo';
 import { isEnglishNoindexPath } from '@/lib/seo-visibility';
 import { collectAllBuilderSitemapEntries } from '@/lib/builder/seo/sitemap-builder';
+import {
+  createSitemapLastmodResolver,
+  guidancePageKeyToStaticPath,
+  inferSitemapLastmod,
+  type SitemapLastmodResolver,
+} from './sitemap-lastmod';
 
 export const dynamic = 'force-dynamic';
 
@@ -27,27 +45,14 @@ const STATIC_PATHS = [
   '/taiwan-semiconductor-supplier-legal',
   '/guides/taiwan-company-setup',
   '/korean-lawyer-in-taiwan',
+  '/ai-intake',
   '/privacy',
   '/disclaimer',
   '/accessibility',
 ] as const;
 
-/**
- * Content-updated date for EN/JA static, attorney, and service routes.
- * Matches the 2026-09-06 EN/JA retarget commits. Not request time —
- * this sitemap is force-dynamic and a rolling lastmod would be untrustworthy.
- * KO/ZH static entries stay without this so builder lastmod wins on dedup.
- */
-const EN_JA_PUBLIC_LASTMOD = '2026-09-06';
-
-function defaultLastModifiedForLocale(
-  locale: (typeof siteLocales)[number],
-): string | undefined {
-  return locale === 'en' || locale === 'ja' ? EN_JA_PUBLIC_LASTMOD : undefined;
-}
-
 type LocalizedSitemapRoute = {
-  locale: (typeof siteLocales)[number];
+  locale: PublicLocale8;
   path: string;
 };
 
@@ -60,7 +65,7 @@ function getLocalizedSitemapRoute(url: string): LocalizedSitemapRoute | null {
   }
 
   const [locale, ...segments] = pathname.split('/').filter(Boolean);
-  if (locale !== 'ko' && locale !== 'zh-hant' && locale !== 'en' && locale !== 'ja') {
+  if (!isPublicLocale8(locale)) {
     return null;
   }
 
@@ -68,6 +73,86 @@ function getLocalizedSitemapRoute(url: string): LocalizedSitemapRoute | null {
     locale,
     path: segments.length === 0 ? '' : `/${segments.join('/')}`,
   };
+}
+
+function sitemapSlugPath(path: string): string {
+  if (!path || path === '/') return '';
+  return path.replace(/^\//, '');
+}
+
+function isGuidanceLocaleHreflang(tag: string): boolean {
+  // Routing-tier predicate so `ar` is recognised as guidance-shaped as soon as
+  // it is routed; its URLs still only appear once they are actually published.
+  return isGuidanceRoutedLocale(tag.toLowerCase());
+}
+
+function appendGuidanceLocaleSitemapEntries(
+  pages: MetadataRoute.Sitemap,
+  lastmod: SitemapLastmodResolver,
+): void {
+  const siteUrl = getSiteUrl();
+  for (const locale of GUIDANCE_LOCALES_4) {
+    for (const pageKey of GUIDANCE_PAGE_KEYS) {
+      pages.push({
+        url: guidanceCanonicalUrl(locale, pageKey, siteUrl),
+        lastModified: lastmod.forPath(guidancePageKeyToStaticPath(pageKey)),
+        priority: pageKey === 'home' ? 1 : 0.8,
+        alternates: {
+          languages: buildGuidanceCoreLanguageAlternates(pageKey, siteUrl),
+        },
+      });
+    }
+  }
+}
+
+/**
+ * Core pages advertise the actual eight-language cluster only when that URL
+ * exists and is still indexable. Non-core entries keep the existing four-language
+ * set (and prior JA/indexability filters) and only drop untrue vi/id/th/fil.
+ */
+function reconcileGuidanceLanguageAlternates(
+  entries: MetadataRoute.Sitemap,
+): MetadataRoute.Sitemap {
+  const publishedUrls = new Set(entries.map((entry) => entry.url));
+  const siteUrl = getSiteUrl();
+
+  return entries.map((entry) => {
+    const route = getLocalizedSitemapRoute(entry.url);
+    const slugPath = route ? sitemapSlugPath(route.path) : null;
+    const isCore = slugPath !== null && isGuidanceCoreSlugPath(slugPath);
+    const existingLanguages = entry.alternates?.languages ?? {};
+    const nextLanguages: Record<string, string> = {};
+
+    for (const [tag, url] of Object.entries(existingLanguages)) {
+      if (typeof url !== 'string') continue;
+      if (isGuidanceLocaleHreflang(tag) && !publishedUrls.has(url)) continue;
+      if (isCore && !publishedUrls.has(url)) continue;
+      nextLanguages[tag] = url;
+    }
+
+    if (isCore && slugPath !== null) {
+      const pageKey = guidancePageKeyFromSlugPath(slugPath);
+      if (pageKey) {
+        for (const [tag, url] of Object.entries(buildGuidanceCoreLanguageAlternates(pageKey, siteUrl))) {
+          if (typeof url === 'string' && publishedUrls.has(url)) {
+            nextLanguages[tag] = url;
+          }
+        }
+      }
+    }
+
+    if (!entry.alternates && Object.keys(nextLanguages).length === 0) {
+      return entry;
+    }
+
+    return {
+      ...entry,
+      alternates: {
+        ...entry.alternates,
+        languages: nextLanguages,
+      },
+    };
+  });
 }
 
 /**
@@ -158,16 +243,21 @@ function addReciprocalJapaneseAlternates(
   });
 }
 
+let activeSitemapLastmod: SitemapLastmodResolver | undefined;
+
 function createEntry(
-  locale: (typeof siteLocales)[number],
+  locale: PublicLocale8,
   path: string,
   options?: {
     lastModified?: string | Date;
     priority?: number;
-    alternateLocales?: readonly (typeof siteLocales)[number][];
+    alternateLocales?: readonly PublicLocale8[];
+    lastmod?: SitemapLastmodResolver;
   }
 ): MetadataRoute.Sitemap[number] {
-  const lastModified = options?.lastModified ?? defaultLastModifiedForLocale(locale);
+  const resolver = options?.lastmod ?? activeSitemapLastmod;
+  const inferred = resolver ? inferSitemapLastmod(path, resolver) : undefined;
+  const lastModified = options?.lastModified ?? inferred;
   return {
     url: buildAbsoluteUrl(getLocalizedPath(locale, path)),
     ...(lastModified == null ? {} : { lastModified }),
@@ -180,7 +270,8 @@ function createEntry(
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pages: MetadataRoute.Sitemap = [];
-  const columns = getAllColumnPosts('ko');
+  const lastmod = createSitemapLastmodResolver();
+  activeSitemapLastmod = lastmod;
   const serviceAreaRecords = await readServiceAreaSourceRecords(DEFAULT_BUILDER_SITE_ID, 'ko');
   const attorneyRecords = await readAttorneyProfileSourceRecords(DEFAULT_BUILDER_SITE_ID, 'ko');
 
@@ -189,6 +280,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       pages.push(
         createEntry(locale, path, {
           priority: path === '' ? 1 : 0.8,
+          lastmod,
         })
       );
     }
@@ -208,16 +300,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         })
       );
     }
+  }
 
-    for (const post of columns) {
-      pages.push(
-        createEntry(locale, `/columns/${post.slug}`, {
-          lastModified: post.date || undefined,
-          priority: 0.68,
-          alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
-        })
-      );
-    }
+  const columnRecords = collectColumnSitemapRecords({
+    postsForLocale: (locale) =>
+      getAllColumnPosts(locale).map((post) => ({ slug: post.slug, date: post.date })),
+  });
+  for (const record of columnRecords) {
+    pages.push(
+      createEntry(record.locale, record.path, {
+        lastModified: record.lastModified || undefined,
+        priority: 0.68,
+        alternateLocales: record.alternateLocales,
+      }),
+    );
   }
 
   // Japanese public static and file-backed surfaces.
@@ -285,6 +381,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   );
   pages.push(
     createEntry('ja', '/korean-lawyer-in-taiwan', {
+      priority: 0.8,
+      alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
+    }),
+  );
+  pages.push(
+    createEntry('ja', '/ai-intake', {
       priority: 0.8,
       alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
     }),
@@ -373,15 +475,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
     }),
   );
-  for (const post of columns) {
-    pages.push(
-      createEntry('ja', `/columns/${post.slug}`, {
-        lastModified: post.date || undefined,
-        priority: 0.68,
-        alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
-      }),
-    );
-  }
+
+  // Actual new-four core URLs only. Dictionary page identities — never the
+  // internal rewrite keys, and never invented article translations.
+  appendGuidanceLocaleSitemapEntries(pages, lastmod);
 
   // SEO maturity — append builder-published pages. Failures here must
   // never block the rest of the sitemap from rendering, so swallow + log
@@ -420,7 +517,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     if (takeNew) byUrl.set(entry.url, entry);
   }
 
-  return applyLocaleIndexabilityRules(
-    addReciprocalJapaneseAlternates([...byUrl.values()]),
+  return reconcileGuidanceLanguageAlternates(
+    applyLocaleIndexabilityRules(
+      addReciprocalJapaneseAlternates([...byUrl.values()]),
+    ),
   );
 }

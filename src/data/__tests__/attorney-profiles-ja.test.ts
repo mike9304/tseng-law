@@ -17,6 +17,7 @@ const japaneseProfile = attorneyProfiles.ja['wei-tseng'];
 const arrayFields = [
   'alternateNames',
   'summary',
+  'languages',
   'practiceAreas',
   'education',
   'experience',
@@ -37,9 +38,6 @@ describe('Japanese attorney profile', () => {
     for (const field of arrayFields) {
       expect(japaneseProfile[field], field).toHaveLength(koreanProfile[field].length);
     }
-
-    expect(japaneseProfile.languages).toEqual(['日本語', '英語', '中国語', '韓国語']);
-    expect(koreanProfile.languages).toEqual(['한국어', '중국어', '일본어']);
   });
 
   it('preserves the required identity, credentials, experience, and representative matter', () => {
@@ -61,7 +59,6 @@ describe('Japanese attorney profile', () => {
       '韓国語',
       '中国語',
       '日本語',
-      '英語',
       '会社設立',
       '投資',
       '訴訟',

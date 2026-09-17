@@ -4,7 +4,13 @@ import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
-import type { SiteLocale } from '@/lib/locales';
+import {
+  isExistingSiteLocale4,
+  isGuidanceLocale4,
+  type GuidanceLocale4,
+  type PublicLocale8,
+} from '@/lib/public-guidance';
+import styles from './ColumnsGrid.module.css';
 
 const searchCopy = {
   ko: {
@@ -13,6 +19,14 @@ const searchCopy = {
     submit: '검색',
     clear: '검색 지우기',
     resultCount: (n: number) => `${n}개 결과`,
+    reset: '필터 초기화 · 모든 칼럼 보기',
+    category: '카테고리',
+    author: '작성자',
+    year: '연도',
+    month: '월',
+    query: '검색어',
+    noMatches: '선택한 조건에 맞는 칼럼이 없습니다. 필터를 초기화하면 모든 칼럼을 볼 수 있습니다.',
+    noPosts: '아직 게시된 칼럼이 없습니다.',
   },
   'zh-hant': {
     label: '搜尋專欄',
@@ -20,6 +34,14 @@ const searchCopy = {
     submit: '搜尋',
     clear: '清除搜尋',
     resultCount: (n: number) => `${n} 篇結果`,
+    reset: '清除篩選 · 查看所有專欄',
+    category: '分類',
+    author: '作者',
+    year: '年份',
+    month: '月份',
+    query: '關鍵字',
+    noMatches: '沒有符合目前條件的專欄。清除篩選即可查看所有專欄。',
+    noPosts: '目前尚無已發布的專欄。',
   },
   en: {
     label: 'Search columns',
@@ -27,6 +49,14 @@ const searchCopy = {
     submit: 'Search',
     clear: 'Clear search',
     resultCount: (n: number) => `${n} result${n === 1 ? '' : 's'}`,
+    reset: 'Clear filters · View all columns',
+    category: 'Category',
+    author: 'Author',
+    year: 'Year',
+    month: 'Month',
+    query: 'Search',
+    noMatches: 'No columns match the selected filters. Clear filters to view all columns.',
+    noPosts: 'No columns have been published yet.',
   },
   ja: {
     label: 'コラム検索',
@@ -34,6 +64,14 @@ const searchCopy = {
     submit: '検索',
     clear: '検索をクリア',
     resultCount: (n: number) => `${n}件`,
+    reset: '絞り込みを解除 · すべてのコラムを見る',
+    category: 'カテゴリー',
+    author: '著者',
+    year: '年',
+    month: '月',
+    query: '検索語',
+    noMatches: '選択した条件に一致するコラムはありません。絞り込みを解除すると、すべてのコラムをご覧いただけます。',
+    noPosts: '公開済みのコラムはまだありません。',
   },
 } as const;
 
@@ -69,6 +107,81 @@ const categoryLabels = {
   ja: { all: 'すべて', formation: '台湾会社設立', legal: '台湾法律情報', case: '訴訟事例分析' },
 } as const;
 
+/**
+ * "All" word already present in reviewed `viewAllLabel` copy
+ * (`src/data/international-guidance-content.ts`: vi 'Xem tất cả', id 'Lihat semua',
+ * th 'ดูทั้งหมด', fil 'Tingnan lahat', ar 'عرض الكل'). This client file cannot
+ * import `guidanceColumnCategoryLabel` from `src/lib/columns.ts` (`fs`).
+ */
+const GUIDANCE_FILTER_ALL_LABEL: Record<GuidanceLocale4, string> = {
+  vi: 'Tất cả',
+  id: 'Semua',
+  th: 'ทั้งหมด',
+  fil: 'Lahat',
+  ar: 'الكل',
+};
+
+/** Same strings `guidanceColumnCategoryLabel` returns in `src/lib/columns.ts`. */
+const GUIDANCE_FILTER_CATEGORY_LABEL: Record<GuidanceLocale4, Record<ColumnCategory, string>> = {
+  vi: {
+    formation: 'Thành lập công ty tại Đài Loan',
+    legal: 'Thông tin pháp luật Đài Loan',
+    case: 'Phân tích vụ án tố tụng',
+  },
+  id: {
+    formation: 'Pendirian Perusahaan di Taiwan',
+    legal: 'Informasi Hukum Taiwan',
+    case: 'Analisis Kasus Litigasi',
+  },
+  th: {
+    formation: 'การจัดตั้งบริษัทในไต้หวัน',
+    legal: 'ข้อมูลกฎหมายไต้หวัน',
+    case: 'การวิเคราะห์คดีตัวอย่าง',
+  },
+  fil: {
+    formation: 'Pagtatatag ng Kompanya sa Taiwan',
+    legal: 'Impormasyong Legal sa Taiwan',
+    case: 'Pagsusuri ng Kaso sa Paglilitis',
+  },
+  ar: {
+    formation: 'تأسيس الشركات',
+    legal: 'معلومات قانونية',
+    case: 'دراسات قضايا',
+  },
+};
+
+/** Reviewed `home.columnsReadMoreLabel` — same CTA GuidanceHomeBody already uses. */
+const GUIDANCE_CARD_READ_MORE_LABEL: Record<GuidanceLocale4, string> = {
+  vi: 'Đọc tiếp',
+  id: 'Baca selengkapnya',
+  th: 'อ่านต่อ',
+  fil: 'Basahin pa',
+  ar: 'متابعة القراءة',
+};
+
+function categoryFilterLabels(locale: PublicLocale8) {
+  if (isGuidanceLocale4(locale)) {
+    return {
+      all: GUIDANCE_FILTER_ALL_LABEL[locale],
+      ...GUIDANCE_FILTER_CATEGORY_LABEL[locale],
+    };
+  }
+  return categoryLabels[locale];
+}
+
+function columnCardCtaLabel(locale: PublicLocale8): string {
+  if (isGuidanceLocale4(locale)) {
+    return `${GUIDANCE_CARD_READ_MORE_LABEL[locale]} →`;
+  }
+  return locale === 'ko'
+    ? '칼럼 보기 →'
+    : locale === 'zh-hant'
+      ? '查看專欄 →'
+      : locale === 'ja'
+        ? 'コラムを読む →'
+        : 'Open column →';
+}
+
 function normalizeFilterValue(value: string | string[] | null | undefined): string {
   return Array.isArray(value) ? value[0] ?? '' : value ?? '';
 }
@@ -91,11 +204,12 @@ export default function ColumnsGrid({
   posts,
   initialFilters = {},
 }: {
-  locale: SiteLocale;
+  locale: PublicLocale8;
   posts: ColumnListItem[];
   initialFilters?: ColumnsGridFilters;
 }) {
-  const labels = categoryLabels[locale];
+  const uiLocale = isExistingSiteLocale4(locale) ? locale : 'en';
+  const labels = categoryFilterLabels(locale);
   const byline =
     locale === 'ko'
       ? '증준외 변호사 검토'
@@ -112,29 +226,24 @@ export default function ColumnsGrid({
   const requestedQuery = normalizeFilterValue(searchParams ? searchParams.get('q') : initialFilters.q);
   const requestedYear = normalizeFilterValue(searchParams ? searchParams.get('year') : initialFilters.year);
   const requestedMonth = normalizeFilterValue(searchParams ? searchParams.get('month') : initialFilters.month);
-  const initialActive = requestedCategory === 'formation' || requestedCategory === 'legal' || requestedCategory === 'case'
+  const active = requestedCategory === 'formation' || requestedCategory === 'legal' || requestedCategory === 'case'
     ? requestedCategory
-    : 'all';
-  const [active, setActive] = useState<ColumnCategory | 'all'>(initialActive);
+    : requestedCategory ? null : 'all';
   const [searchInput, setSearchInput] = useState(requestedQuery);
   const [appliedQuery, setAppliedQuery] = useState(requestedQuery);
-  const searchLabels = searchCopy[locale];
+  const searchLabels = searchCopy[uiLocale];
 
   useEffect(() => {
     setSearchInput(requestedQuery);
     setAppliedQuery(requestedQuery);
   }, [requestedQuery]);
 
-  useEffect(() => {
-    if (requestedCategory === 'formation' || requestedCategory === 'legal' || requestedCategory === 'case') {
-      setActive(requestedCategory);
-      return;
-    }
-    if (requestedCategory) setActive('all');
-  }, [requestedCategory]);
-
   const updateUrlSearchParams = (mutate: (next: URLSearchParams) => void, navigation: 'push' | 'replace' = 'replace') => {
-    const next = new URLSearchParams(searchParams?.toString() ?? '');
+    // Consecutive filter clicks can precede the next router render. Start from
+    // the current URL so a newly submitted query is not lost to a stale hook.
+    const next = new URLSearchParams(
+      typeof window !== 'undefined' ? window.location.search : searchParams?.toString() ?? '',
+    );
     mutate(next);
     const target = pathname ? `${pathname}${next.toString() ? `?${next.toString()}` : ''}` : '';
     if (typeof window !== 'undefined') {
@@ -160,7 +269,7 @@ export default function ColumnsGrid({
       posts.filter((post) => {
         const categoryMatches = requestedCategory
           ? post.blogCategory === requestedCategory || post.category === requestedCategory
-          : active === 'all' || post.category === active;
+          : true;
         if (!categoryMatches) return false;
         if (requestedAuthor && post.authorName !== requestedAuthor) return false;
         if (requestedYear && !post.date.startsWith(requestedYear)) return false;
@@ -170,7 +279,7 @@ export default function ColumnsGrid({
         }
         return postMatchesQuery(post, appliedQuery);
       }),
-    [active, appliedQuery, posts, requestedAuthor, requestedCategory, requestedMonth, requestedYear],
+    [appliedQuery, posts, requestedAuthor, requestedCategory, requestedMonth, requestedYear],
   );
 
   const cats: { id: ColumnCategory | 'all'; label: string }[] = [
@@ -179,9 +288,17 @@ export default function ColumnsGrid({
     { id: 'legal', label: labels.legal },
     { id: 'case', label: labels.case },
   ];
+  const activeFilters = [
+    { key: 'category', label: searchLabels.category, value: requestedCategory ? (active ? labels[active] : requestedCategory) : '' },
+    { key: 'author', label: searchLabels.author, value: requestedAuthor },
+    { key: 'year', label: searchLabels.year, value: requestedYear },
+    { key: 'month', label: searchLabels.month, value: requestedMonth },
+    { key: 'query', label: searchLabels.query, value: appliedQuery },
+  ].filter((filter) => filter.value);
+  const hasActiveFilters = activeFilters.length > 0;
 
   return (
-    <section className="section section--light">
+    <section className={`section section--light ${styles.root}`}>
       <div className="container">
         <form
           className="columns-search"
@@ -222,23 +339,50 @@ export default function ColumnsGrid({
               </button>
             ) : null}
           </div>
-          {appliedQuery ? (
+        </form>
+        <div className="columns-filter-summary">
+          <div role="status" aria-live="polite" aria-atomic="true">
             <p className="columns-search-status" data-columns-search-results={filtered.length}>
               {searchLabels.resultCount(filtered.length)}
             </p>
+            {hasActiveFilters ? (
+              <ul className="columns-active-filters">
+                {activeFilters.map((filter) => (
+                  <li key={filter.key}>
+                    <span>{filter.label}: </span>{filter.value}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </div>
+          {hasActiveFilters ? (
+            <Link
+              href={`/${locale}/columns`}
+              className="columns-filter-reset link-underline"
+              data-columns-filter-reset="true"
+              onNavigate={() => {
+                // Reset can precede the submitted query's router hook commit.
+                setSearchInput('');
+                setAppliedQuery('');
+              }}
+            >
+              {searchLabels.reset}
+            </Link>
           ) : null}
-        </form>
+        </div>
         <div className="columns-filters">
           {cats.map((cat) => (
             <button
               key={cat.id}
+              type="button"
+              aria-pressed={active === cat.id}
               onClick={() => {
-                setActive(cat.id);
                 updateUrlSearchParams((next) => {
+                  if (cat.id === 'all') next.delete('category');
+                  else next.set('category', cat.id);
                   next.delete('page');
                 });
               }}
-              disabled={Boolean(requestedCategory || requestedAuthor || appliedQuery || requestedYear || requestedMonth)}
               className={`columns-filter-btn ${active === cat.id ? 'active' : ''}`}
             >
               {cat.label}
@@ -264,7 +408,7 @@ export default function ColumnsGrid({
                 <h3 className="columns-card-title">{post.title}</h3>
                 <p className="columns-card-summary">{post.summary}</p>
                 <span className="columns-card-linkhint">
-                  {locale === 'ko' ? '칼럼 보기 →' : locale === 'zh-hant' ? '查看專欄 →' : locale === 'ja' ? 'コラムを読む →' : 'Open column →'}
+                  {columnCardCtaLabel(locale)}
                 </span>
               </div>
             </Link>
@@ -272,21 +416,7 @@ export default function ColumnsGrid({
         </div>
         {filtered.length === 0 && (
           <p className="columns-empty">
-            {appliedQuery
-              ? locale === 'ko'
-                ? '검색 결과가 없습니다.'
-                : locale === 'zh-hant'
-                  ? '沒有符合的搜尋結果。'
-                  : locale === 'ja'
-                    ? '検索結果がありません。'
-                    : 'No results match your search.'
-              : locale === 'ko'
-                ? '해당 카테고리의 글이 없습니다.'
-                : locale === 'zh-hant'
-                  ? '此分類尚無文章。'
-                  : locale === 'ja'
-                    ? 'このカテゴリーにはまだ記事がありません。'
-                    : 'No posts in this category yet.'}
+            {hasActiveFilters ? searchLabels.noMatches : searchLabels.noPosts}
           </p>
         )}
       </div>

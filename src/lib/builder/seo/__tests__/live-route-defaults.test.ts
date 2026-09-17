@@ -9,6 +9,7 @@ import {
   type BuilderSiteDocument,
 } from '@/lib/builder/site/types';
 import { buildHreflangAlternates } from '@/lib/builder/seo/hreflang';
+import { resolveLiveRouteSeoDefault } from '@/lib/builder/seo/live-route-defaults';
 import { buildPageSeo } from '@/lib/builder/seo/seo-model';
 import { buildPublishedSitePageMetadata } from '@/lib/builder/site/public-page';
 import {
@@ -135,7 +136,7 @@ describe('live route SEO defaults', () => {
 
     expect(seo.title).toBe('대만 변호사·회사설립·소송');
     expect(seo.description).toBe(
-      '대만 회사설립, 대만 소송, 대만 투자 법률 자문을 한국어와 일본어로 안내하는 법무법인 호정 공식 사이트입니다.',
+      '대만 회사설립, 대만 소송, 대만 투자 법률 자문을 한국어·일본어·영어로 안내하는 법무법인 호정 공식 사이트입니다.',
     );
     expect(seo.ogTitle).toBe(seo.title);
     expect(seo.ogDescription).toBe(seo.description);
@@ -217,7 +218,7 @@ describe('live route SEO defaults', () => {
 
   it.each([
     ['zh-hant', '台灣律師・台灣訴訟・台灣公司設立 | 昊鼎國際法律事務所'],
-    ['en', 'Taipei Law Firm for Expats and Cross-Border Matters | Hovering International Law Firm'],
+    ['en', 'Taiwan Law Firm in Taipei — English Consultations | Hovering International Law Firm'],
   ] as const)('keeps the %s homepage title on its localized brand pattern', (locale, expected) => {
     const home = makePage({
       pageId: `home-${locale}`,
@@ -279,5 +280,36 @@ describe('live route SEO defaults', () => {
     expect(alternates.find((entry) => entry.hreflang === 'x-default')?.href).toBe(
       'https://tseng-law.com/en/videos',
     );
+  });
+
+  it('keeps English home title off the three landing primary keywords', () => {
+    const home = resolveLiveRouteSeoDefault('en', '');
+    expect(home?.title).toBe('Taiwan Law Firm in Taipei — English Consultations');
+    expect(home?.title).not.toMatch(/taiwan lawyer/i);
+    expect(home?.title).not.toMatch(/company setup lawyer/i);
+    expect(home?.title).not.toMatch(/litigation lawyer/i);
+  });
+
+  it('frames the English home description for overseas readers in 150–160 characters', () => {
+    const home = resolveLiveRouteSeoDefault('en', '');
+    const description = home?.description ?? '';
+    expect(description.length).toBeGreaterThanOrEqual(150);
+    expect(description.length).toBeLessThanOrEqual(160);
+    expect(description.endsWith('.')).toBe(true);
+    expect(description).toMatch(/overseas|international/i);
+    expect(description).not.toMatch(/expats and foreigners in Taiwan/i);
+  });
+
+  it('does not change Korean or Traditional Chinese home SEO copy', () => {
+    expect(resolveLiveRouteSeoDefault('ko', '')).toEqual({
+      title: '대만 변호사·회사설립·소송',
+      description:
+        '대만 회사설립, 대만 소송, 대만 투자 법률 자문을 한국어·일본어·영어로 안내하는 법무법인 호정 공식 사이트입니다.',
+    });
+    expect(resolveLiveRouteSeoDefault('zh-hant', '')).toEqual({
+      title: '台灣律師・台灣訴訟・台灣公司設立',
+      description:
+        '昊鼎國際法律事務所提供台灣公司設立、投資法務、民刑事訴訟與跨境法律顧問服務，支援韓文、中文與英文溝通。',
+    });
   });
 });

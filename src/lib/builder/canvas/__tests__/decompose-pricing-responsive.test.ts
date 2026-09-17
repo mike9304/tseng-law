@@ -106,12 +106,16 @@ describe('pricing page responsive decomposition', () => {
 
     expect(doc.stageHeight).toBe(1450);
     expect(nodes.get('page-pricing-section-root')?.rect).toMatchObject({ y: 428, width: 1280, height: 875 });
-    expect(nodes.get('page-pricing-section-container')?.rect).toMatchObject({ x: 51, y: 141, width: 1178, height: 594 });
+    expect(nodes.get('page-pricing-section-container')?.rect).toMatchObject({ x: 51, y: 141, width: 1178, height: 636 });
     expect(nodes.get('page-pricing-currency')?.rect).toMatchObject({ x: 0, y: 0, width: 1178, height: 23 });
     expect(nodes.get('page-pricing-grid')?.rect).toMatchObject({ y: 67, width: 1178, height: 457 });
     expect(nodes.get('page-pricing-disclaimer-wrap')?.rect).toMatchObject({ x: 0, y: 524, width: 1178, height: 22 });
-    expect(nodes.get('page-pricing-cta-wrap')?.rect).toMatchObject({ x: 0, y: 547, width: 1178, height: 47 });
-    expect(nodes.get('page-pricing-cta')?.rect).toMatchObject({ x: 540, y: 0, width: 97, height: 47 });
+    expect(nodes.get('page-pricing-cta-wrap')?.rect).toMatchObject({ x: 0, y: 547, width: 1178, height: 89 });
+    expect(nodes.get('page-pricing-cta')?.rect).toMatchObject({ x: 479, y: 0, width: 220, height: 47 });
+    expect(nodes.get('page-pricing-cta-note')?.rect).toMatchObject({ x: 0, y: 57, width: 1178, height: 32 });
+    expect(nodes.get('page-pricing-cta-note')?.rect.y).toBeGreaterThan(
+      (nodes.get('page-pricing-cta')?.rect.y ?? 0) + (nodes.get('page-pricing-cta')?.rect.height ?? 0),
+    );
 
     for (let index = 0; index < 4; index += 1) {
       expect(nodes.get(`page-pricing-card-${index}`)?.rect).toMatchObject({ y: 0, width: 276, height: 457 });

@@ -72,7 +72,7 @@ export default function PublicStorefront({
     return (primaryCategoryKey && categoryNameByKey.get(primaryCategoryKey)) || copy[locale].collectionFallback;
   };
   return (
-    <main
+    <section
       className={styles.page}
       data-commerce-storefront
       data-commerce-category-route={activeCategory?.slug ?? 'all'}
@@ -150,6 +150,6 @@ export default function PublicStorefront({
           </section>
         )}
       </div>
-    </main>
+    </section>
   );
 }

@@ -2,6 +2,7 @@
 
 import PageHeader from '@/components/PageHeader';
 import ContactBlocks from '@/components/ContactBlocks';
+import ContactEmailActions from '@/components/ContactEmailActions';
 import AttorneyProfileSection from '@/components/AttorneyProfileSection';
 import FirmIntroductionSection from '@/components/FirmIntroductionSection';
 import ConsultationGuideSection from '@/components/ConsultationGuideSection';
@@ -29,6 +30,8 @@ import {
 import type { Locale, SiteLocale } from '@/lib/locales';
 import type { ColumnPost } from '@/lib/columns';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
+import InternationalInquiryForm from '@/components/InternationalInquiryForm';
+import EnAcquisitionGuideLinks from '@/components/EnAcquisitionGuideLinks';
 
 type ColumnsSearchParams = Record<string, string | string[] | undefined>;
 
@@ -75,7 +78,10 @@ export function ServicesLegacyPageBody({
       {showHero ? (
         <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
       ) : null}
-      {showRepeater ? <ServicesBento locale={locale} /> : null}
+      <EnAcquisitionGuideLinks locale={locale} />
+      {showRepeater ? (
+        <ServicesBento locale={locale} showHeader={!showHero} presentation="editorial" />
+      ) : null}
     </>
   );
 }
@@ -84,10 +90,17 @@ export function ContactLegacyPageBody({ locale }: { locale: SiteLocale }) {
   const copy = pageCopy[locale].contact;
   return (
     <>
-      <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description} />
+      <PageHeader locale={locale} label={copy.label} title={copy.title} description={copy.description}>
+        <ContactEmailActions locale={locale} />
+      </PageHeader>
+      <section className="section">
+        <div className="container">
+          <InternationalInquiryForm locale={locale} />
+        </div>
+      </section>
       <ConsultationGuideSection locale={locale} />
       <MessengerChatSection locale={locale} />
-      <ContactBlocks locale={locale} showMainHeader={false} />
+      <ContactBlocks locale={locale} showMainHeader={false} showEmailActions={false} />
       <OfficeMapTabs locale={locale} />
     </>
   );
@@ -216,7 +229,7 @@ export function LawyersLegacyPageBody({
                   locale,
                   path: `/${locale}/lawyers/${profile.slug}`,
                   // One canonical Person node across ko/zh-hant/ja lawyers pages.
-                  id: ATTORNEY_PERSON_ID,
+                  id: locale === 'en' ? undefined : ATTORNEY_PERSON_ID,
                   name: profile.name,
                   alternateName: profile.alternateNames,
                   description: profile.description,

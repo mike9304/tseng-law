@@ -31,7 +31,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
   ko: {
     metaTitle: '한국어 가능한 대만 변호사 (타이베이)',
     description:
-      '법무법인 호정(Hovering International Law Firm)은 타이베이 소재 대만 로펌으로, 대만 변호사 증준외가 한국어·중국어·일본어로 상담합니다. 대만 회사설립·민형사 소송·투자 자문을 다룹니다.',
+      '법무법인 호정(Hovering International Law Firm)은 타이베이 소재 대만 로펌으로, 대만 변호사 증준외가 한국어·중국어·일본어·영어로 상담합니다. 대만 회사설립·민형사 소송·투자 자문을 다룹니다.',
     keywords: [
       '한국어 가능한 대만 변호사',
       '대만 변호사',
@@ -43,7 +43,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
     heroLabel: 'KOREAN-SPEAKING TAIWAN LAWYER',
     title: '한국어 가능한 대만 변호사 — 법무법인 호정',
     lead: [
-      '법무법인 호정(Hovering International Law Firm)은 타이베이에 소재한 대만 로펌으로, 대만 변호사 증준외가 한국어·중국어·일본어로 상담합니다.',
+      '법무법인 호정(Hovering International Law Firm)은 타이베이에 소재한 대만 로펌으로, 대만 변호사 증준외가 한국어·중국어·일본어·영어로 상담합니다.',
       '대만 회사설립, 민사·형사 소송, 투자 자문을 다루며, 한국 기업과 개인의 대만 법률 문제를 한국어 소통으로 안내합니다.',
       '초기 상담에서 사실관계 정리, 관할·절차 설계, 문서 검토, 소송 대응까지 한 흐름으로 검토합니다.',
     ],
@@ -88,8 +88,8 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
         a: '증준외 대만 변호사에게 이메일(wei@hoveringlaw.com.tw)로 문의해 주시면, 사건 내용을 검토한 뒤 상담 흐름을 안내해 드립니다.',
       },
       {
-        q: '중국어·일본어 상담도 가능한가요?',
-        a: '네. 증준외 대만 변호사는 한국어 외에 중국어(번체)·일본어로도 상담이 가능하며, 다국어 계약·서류 검토도 지원합니다.',
+        q: '중국어·일본어·영어 상담도 가능한가요?',
+        a: '네. 증준외 대만 변호사는 한국어 외에 중국어·일본어·영어로도 상담이 가능하며, 다국어 계약·서류 검토도 지원합니다.',
       },
     ],
     relatedHeading: '관련 안내',
@@ -108,7 +108,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
   'zh-hant': {
     metaTitle: '會說韓文的台灣律師（台北）',
     description:
-      '昊鼎國際法律事務所（Hovering International Law Firm）為台北的台灣律師事務所，曾雋崴律師可以韓語、中文、日語提供諮詢，承辦台灣公司設立、民刑事案件與投資顧問。',
+      '昊鼎國際法律事務所（Hovering International Law Firm）為台北的台灣律師事務所，曾雋崴律師可以韓語、中文、日語、英語提供諮詢，承辦台灣公司設立、民刑事案件與投資顧問。',
     keywords: [
       '會說韓文的台灣律師',
       '台灣律師',
@@ -120,7 +120,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
     heroLabel: 'KOREAN-SPEAKING TAIWAN LAWYER',
     title: '會說韓文的台灣律師 — 昊鼎國際法律事務所',
     lead: [
-      '昊鼎國際法律事務所（Hovering International Law Firm）為台北的台灣律師事務所，曾雋崴律師可以韓語、中文、日語提供諮詢。',
+      '昊鼎國際法律事務所（Hovering International Law Firm）為台北的台灣律師事務所，曾雋崴律師可以韓語、中文、日語、英語提供諮詢。',
       '承辦台灣公司設立、民刑事訴訟、投資顧問，以韓語溝通協助韓國企業與個人處理台灣法律問題。',
       '從初步諮詢的事實整理、管轄與流程設計、文件審閱到訴訟因應，提供完整的一條龍服務。',
     ],
@@ -165,8 +165,8 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
         a: '請寄信至 wei@hoveringlaw.com.tw 諮詢曾雋崴律師；我們確認案件內容後，將說明後續諮詢流程。',
       },
       {
-        q: '也可以用中文或日語諮詢嗎？',
-        a: '可以。曾雋崴律師除韓語外，亦可以中文（繁體）及日語諮詢，並支援多語合約與文件審閱。',
+        q: '也可以用中文、日語或英語諮詢嗎？',
+        a: '可以。曾雋崴律師除韓語外，亦可以中文、日語及英語諮詢，並支援多語合約與文件審閱。',
       },
     ],
     relatedHeading: '相關指南',
@@ -242,8 +242,8 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
         a: 'Request a consultation with Attorney Tseng by email at wei@hoveringlaw.com.tw. After reviewing the matter, we will explain the consultation process.',
       },
       {
-        q: 'Can I also consult in Chinese or Japanese?',
-        a: 'Yes. In addition to Korean, Attorney Wei Tseng consults in Chinese (Traditional) and Japanese, and supports multilingual contract and document review.',
+        q: 'Can I also consult in English, Chinese, or Japanese?',
+        a: 'Yes. In addition to Korean, Attorney Wei Tseng consults in English, Chinese, and Japanese, and supports multilingual contract and document review.',
       },
     ],
     relatedHeading: 'Related Guides',
@@ -262,7 +262,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
   ja: {
     metaTitle: '韓国語対応の台湾弁護士（台北）',
     description:
-      '昊鼎国際法律事務所（Hovering International Law Firm）は台北所在の台湾法律事務所で、台湾弁護士の曾雋崴が韓国語・中国語・日本語でご相談を承ります。台湾会社設立・民事刑事訴訟・投資顧問を取り扱います。',
+      '昊鼎国際法律事務所（Hovering International Law Firm）は台北所在の台湾法律事務所で、台湾弁護士の曾雋崴が韓国語・中国語・日本語・英語でご相談を承ります。台湾会社設立・民事刑事訴訟・投資顧問を取り扱います。',
     keywords: [
       '韓国語対応の台湾弁護士',
       '台湾弁護士',
@@ -274,7 +274,7 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
     heroLabel: 'KOREAN-SPEAKING TAIWAN LAWYER',
     title: '韓国語対応の台湾弁護士 — 昊鼎国際法律事務所',
     lead: [
-      '昊鼎国際法律事務所（Hovering International Law Firm）は台北に所在する台湾法律事務所で、台湾弁護士の曾雋崴が韓国語・中国語・日本語でご相談を承ります。',
+      '昊鼎国際法律事務所（Hovering International Law Firm）は台北に所在する台湾法律事務所で、台湾弁護士の曾雋崴が韓国語・中国語・日本語・英語でご相談を承ります。',
       '台湾会社設立、民事・刑事訴訟、投資顧問を取り扱い、韓国企業と個人の台湾法律問題を韓国語でのコミュニケーションでご案内します。',
       '初回相談で事実関係の整理、管轄・手続きの設計、文書レビュー、訴訟対応まで一つの流れで検討します。',
     ],
@@ -319,8 +319,8 @@ export const landingContent: Record<SiteLocale, LandingContent> = {
         a: '曾雋崴台湾弁護士宛てにメール（wei@hoveringlaw.com.tw）でお問い合わせください。案件内容を確認後、ご相談の流れをご案内します。',
       },
       {
-        q: '中国語・日本語での相談も可能ですか？',
-        a: 'はい。曾雋崴台湾弁護士は韓国語のほか、中国語（繁体字）・日本語でもご相談が可能で、多言語の契約書・書類レビューもサポートします。',
+        q: '中国語・日本語・英語での相談も可能ですか？',
+        a: 'はい。曾雋崴台湾弁護士は韓国語のほか、中国語・日本語・英語でもご相談が可能で、多言語の契約書・書類レビューもサポートします。',
       },
     ],
     relatedHeading: '関連案内',

@@ -7,6 +7,7 @@ read_time: "4 min read"
 categories:
   - "Taiwan Legal Information"
 featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
+summary: "Taiwan once limited massage work to people with visual impairments until a constitutional ruling. Report sexual harassment if it occurs during a massage."
 ---
 
 # Taiwan Massage: History and Legal Information

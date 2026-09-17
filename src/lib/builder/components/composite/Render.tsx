@@ -202,6 +202,9 @@ export default function CompositeRender({
   faqItems,
   searchParams,
   mode = 'edit',
+  homeEditorialPresentation,
+  publishedSurfaceOverrides,
+  publishedHeroQuickMenus,
 }: {
   node: BuilderCompositeCanvasNode;
   datasetPreviewTargets?: DatasetPreviewTargets;
@@ -210,6 +213,9 @@ export default function CompositeRender({
   faqItems?: BuilderFaqItem[];
   searchParams?: Record<string, string | string[] | undefined>;
   mode?: 'edit' | 'preview' | 'published';
+  homeEditorialPresentation?: 'editorial';
+  publishedSurfaceOverrides?: Record<string, string>;
+  publishedHeroQuickMenus?: ReadonlyArray<{ label: string; href: string }>;
 }) {
   const { componentKey, config } = node.content;
   const locale = resolveLocale(config);
@@ -217,6 +223,7 @@ export default function CompositeRender({
   const effectiveDatasetPreviewTargets = datasetPreviewTargets ?? contextDatasetPreviewTargets;
   const interactive = mode !== 'edit';
   const fallbackCopy = compositeFallbackCopy(locale);
+  const publishEditorial = mode === 'published' && homeEditorialPresentation === 'editorial';
 
   const body = (() => {
     switch (componentKey) {
@@ -225,15 +232,21 @@ export default function CompositeRender({
           <HeroSearch
             locale={locale}
             scrollHref={mode === 'edit' ? `/${locale}#insights` : undefined}
-            headingLevel={
-              mode === 'published' && node.anchorName === 'mobile-parity-home-hero'
-                ? 2
-                : 1
-            }
+            // The granular desktop hero is display:none while this mobile
+            // variant is visible. Each responsive variant needs its own H1.
+            headingLevel={1}
+            presentation={publishEditorial ? 'editorial' : undefined}
+            quickMenus={publishedHeroQuickMenus}
           />
         );
       case 'services-bento':
-        return <ServicesBento locale={locale} id="practice" />;
+        return (
+          <ServicesBento
+            locale={locale}
+            id="practice"
+            presentation={publishEditorial ? 'editorial' : undefined}
+          />
+        );
       case 'home-contact-cta':
         return <HomeContactCta locale={locale} />;
       case 'insights-archive': {
@@ -245,10 +258,21 @@ export default function CompositeRender({
             </div>
           );
         }
-        return <InsightsArchiveSection locale={locale} posts={posts} />;
+        return (
+          <InsightsArchiveSection
+            locale={locale}
+            posts={posts}
+            presentation={publishEditorial ? 'editorial' : undefined}
+          />
+        );
       }
       case 'home-attorney':
-        return <HomeAttorneySplit locale={locale} />;
+        return (
+          <HomeAttorneySplit
+            locale={locale}
+            presentation={publishEditorial ? 'editorial' : undefined}
+          />
+        );
       case 'home-case-results':
         return <HomeCaseResultsSplit locale={locale} />;
       case 'home-stats':
@@ -268,6 +292,7 @@ export default function CompositeRender({
             locale={locale}
             id="offices"
             sectionClassName="section section--light"
+            presentation={publishEditorial ? 'editorial' : undefined}
           />
         );
       case 'legacy-page-about':
@@ -332,13 +357,17 @@ export default function CompositeRender({
 
   const wrapperStyle: React.CSSProperties = {
     width: '100%',
-    minHeight: '100%',
+    minHeight: publishEditorial ? 0 : '100%',
     overflow: 'visible',
     position: 'relative',
   };
 
-  const overrides =
+  const configOverrides =
     (config?.overrides as Record<string, string> | undefined) ?? {};
+  const overrides = {
+    ...(publishedSurfaceOverrides ?? {}),
+    ...configOverrides,
+  };
   const selectedNodeId = useBuilderCanvasStore((s) => s.selectedNodeId);
   const selectedSurfaceKey = useBuilderCanvasStore((s) => s.selectedSurfaceKey);
   const setSelectedSurfaceKey = useBuilderCanvasStore((s) => s.setSelectedSurfaceKey);

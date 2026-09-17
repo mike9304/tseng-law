@@ -3,6 +3,8 @@ import type { Locale } from '@/lib/locales';
 import PageHeader from '@/components/PageHeader';
 import ConsultationGuideSection from '@/components/ConsultationGuideSection';
 import ContactBlocks from '@/components/ContactBlocks';
+import ContactEmailActions from '@/components/ContactEmailActions';
+import InternationalInquiryForm from '@/components/InternationalInquiryForm';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 import BuilderSectionFrame from '@/components/builder/BuilderSectionFrame';
 
@@ -46,18 +48,34 @@ function renderContactSectionSurface({
   switch (section.sectionKey) {
     case 'contact.hero':
       return (
-        <PageHeader
-          key={section.id}
-          locale={locale}
-          label={header.label}
-          title={header.title}
-          description={header.description}
-        />
+        <>
+          <PageHeader
+            key={section.id}
+            locale={locale}
+            label={header.label}
+            title={header.title}
+            description={header.description}
+          >
+            <ContactEmailActions locale={locale} />
+          </PageHeader>
+          <section className="section">
+            <div className="container">
+              <InternationalInquiryForm locale={locale} />
+            </div>
+          </section>
+        </>
       );
     case 'contact.consultation-guide':
       return <ConsultationGuideSection key={section.id} locale={locale} />;
     case 'contact.contact-blocks':
-      return <ContactBlocks key={section.id} locale={locale} showMainHeader={false} />;
+      return (
+        <ContactBlocks
+          key={section.id}
+          locale={locale}
+          showMainHeader={false}
+          showEmailActions={false}
+        />
+      );
     case 'contact.offices':
       return (
         <OfficeMapTabs

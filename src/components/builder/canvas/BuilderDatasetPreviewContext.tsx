@@ -9,6 +9,7 @@ const BuilderDatasetPreviewContext = createContext<readonly BuilderDataBindingPr
 const BuilderColumnPostsContext = createContext<ColumnPost[]>([]);
 const BuilderFaqCategoriesContext = createContext<BuilderFaqCategory[]>([]);
 const BuilderFaqItemsContext = createContext<BuilderFaqItem[]>([]);
+const BuilderPageIsHomeContext = createContext(false);
 
 export function BuilderDatasetPreviewProvider({
   children,
@@ -16,19 +17,21 @@ export function BuilderDatasetPreviewProvider({
   faqCategories,
   faqItems,
   targets,
+  isHomePage = false,
 }: {
   children: ReactNode;
   columnPosts?: ColumnPost[];
   faqCategories?: BuilderFaqCategory[];
   faqItems?: BuilderFaqItem[];
   targets?: readonly BuilderDataBindingPreviewTarget[];
+  isHomePage?: boolean;
 }) {
   return (
     <BuilderDatasetPreviewContext.Provider value={targets ?? []}>
       <BuilderColumnPostsContext.Provider value={columnPosts ?? []}>
         <BuilderFaqCategoriesContext.Provider value={faqCategories ?? []}>
           <BuilderFaqItemsContext.Provider value={faqItems ?? []}>
-            {children}
+            <BuilderPageIsHomeContext.Provider value={isHomePage}>{children}</BuilderPageIsHomeContext.Provider>
           </BuilderFaqItemsContext.Provider>
         </BuilderFaqCategoriesContext.Provider>
       </BuilderColumnPostsContext.Provider>
@@ -38,6 +41,10 @@ export function BuilderDatasetPreviewProvider({
 
 export function useBuilderDatasetPreviewTargets(): readonly BuilderDataBindingPreviewTarget[] {
   return useContext(BuilderDatasetPreviewContext);
+}
+
+export function useBuilderPageIsHome(): boolean {
+  return useContext(BuilderPageIsHomeContext);
 }
 
 export function useBuilderColumnPosts(): ColumnPost[] {

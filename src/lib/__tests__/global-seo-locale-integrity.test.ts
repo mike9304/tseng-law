@@ -11,14 +11,20 @@ vi.mock('next/font/google', () => {
   });
   return {
     Noto_Sans_KR: font,
+    Noto_Sans_JP: font,
     Noto_Sans_TC: font,
+    Noto_Sans_Thai: font,
+    Noto_Sans_Arabic: font,
+    Noto_Sans: font,
     Noto_Serif_KR: font,
+    Noto_Serif_JP: font,
     Noto_Serif_TC: font,
   };
 });
 import { siteContent } from '@/data/site-content';
 import type { SiteLocale } from '@/lib/locales';
 import { buildLegalServiceJsonLd, buildWebsiteJsonLd } from '@/lib/seo';
+import { getLocaleFontClassName, getManagedLocaleFontClassNames } from '@/app/fonts';
 
 const localeExpectations: Record<
   SiteLocale,
@@ -119,5 +125,31 @@ describe.each(Object.entries(localeExpectations) as Array<
     });
     expect(payload).not.toHaveProperty('availableLanguage');
     expect(payload).not.toHaveProperty('inLanguage');
+  });
+});
+
+describe('guidance font payload for eight document languages', () => {
+  it('keeps the original six loaders and adds Thai/latin/Arabic managed classes', () => {
+    const managed = getManagedLocaleFontClassNames();
+    expect(managed).toEqual(expect.arrayContaining([
+      '--font-noto-sans-kr-loaded',
+      '--font-noto-serif-kr-loaded',
+      '--font-noto-sans-tc-loaded',
+      '--font-noto-serif-tc-loaded',
+      '--font-noto-sans-jp-loaded',
+      '--font-noto-serif-jp-loaded',
+      '--font-noto-sans-thai-loaded',
+      '--font-noto-sans-latin-loaded',
+      '--font-noto-sans-arabic-loaded',
+    ]));
+    expect(managed).toHaveLength(9);
+
+    const documentLanguages = ['ko', 'zh-Hant', 'en', 'ja', 'vi', 'id', 'th', 'fil'] as const;
+    expect(documentLanguages).toHaveLength(8);
+    for (const language of documentLanguages) {
+      for (const fontClass of getLocaleFontClassName(language).split(' ').filter(Boolean)) {
+        expect(managed).toContain(fontClass);
+      }
+    }
   });
 });

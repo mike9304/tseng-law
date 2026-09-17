@@ -1,3 +1,4 @@
+import { getListUiCopy } from '@/lib/builder/site/dynamic-list-ui-copy';
 import type {
   BuilderPageDatasetFilter,
   BuilderPageDatasetSort,
@@ -87,6 +88,7 @@ export function DynamicListVisitorControls({
   visitorFilters: readonly BuilderPageDatasetFilter[];
   visitorFilterSummary: readonly DynamicListVisitorSummaryItem[];
 }) {
+  const copy = getListUiCopy(locale);
   const clearSortHref = `${basePath}${buildVisitorQueryString({
     filters: [...visitorFilters],
     search: searchTerm,
@@ -104,20 +106,20 @@ export function DynamicListVisitorControls({
   return (
     <>
       <form
-        aria-label="Dynamic list visitor search"
+        aria-label={copy.searchFormLabel}
         data-builder-dynamic-list-search="true"
         method="get"
         action={basePath}
         className={styles.toolbar}
       >
-        <strong className={styles.strongLabel}>Search</strong>
+        <strong className={styles.strongLabel}>{copy.search}</strong>
         <label className={styles.searchLabel}>
           <input
             type="search"
             name="q"
             defaultValue={searchTerm}
-            aria-label="Search records"
-            placeholder={locale === 'ko' ? '기록 검색' : 'Search records'}
+            aria-label={copy.searchRecords}
+            placeholder={copy.searchRecords}
             className={styles.searchInput}
           />
         </label>
@@ -125,23 +127,23 @@ export function DynamicListVisitorControls({
           <input key={`${name}-${index}`} type="hidden" name={name} value={value} />
         ))}
         <button type="submit" className={styles.secondaryButton}>
-          Search
+          {copy.search}
         </button>
         {searchTerm ? (
           <a href={clearSearchHref} className={styles.secondaryLink}>
-            Clear search
+            {copy.clearSearch}
           </a>
         ) : null}
       </form>
       {sortOptions.length > 0 ? (
         <div
-          aria-label="Dynamic list sort"
+          aria-label={copy.sortLabel}
           data-builder-dynamic-list-sort="true"
           className={`${styles.toolbar} ${styles.compactToolbar}`}
         >
-          <strong className={styles.strongLabel}>Sort by</strong>
+          <strong className={styles.strongLabel}>{copy.sortBy}</strong>
           <a href={clearSortHref} className={styles.compactLink}>
-            Default order
+            {copy.defaultOrder}
           </a>
           {sortOptions.map((option) => {
             const activeSort = sortQuery[0];
@@ -173,23 +175,23 @@ export function DynamicListVisitorControls({
       ) : null}
       {visitorFilterSummary.length > 0 ? (
         <div
-          aria-label="Dynamic list visitor filters"
+          aria-label={copy.filtersLabel}
           data-builder-dynamic-list-visitor-filters="true"
           className={`${styles.toolbar} ${styles.compactToolbar}`}
         >
-          <strong className={styles.strongLabel}>Active filters</strong>
+          <strong className={styles.strongLabel}>{copy.activeFilters}</strong>
           {visitorFilterSummary.map((summary) => (
             <a key={summary.label} href={summary.href} className={styles.filterChip}>
               {summary.label}
             </a>
           ))}
           <a href={basePath} className={styles.compactLink}>
-            Clear filters
+            {copy.clearFilters}
           </a>
         </div>
       ) : null}
       <nav
-        aria-label="Dynamic list pagination"
+        aria-label={copy.paginationLabel}
         data-builder-dynamic-list-pagination="true"
         className={`${styles.toolbar} ${styles.compactToolbar}`}
       >
@@ -197,7 +199,7 @@ export function DynamicListVisitorControls({
           {pagination.page} / {slice.totalPages}
         </span>
         <span className={styles.paginationSummary}>
-          Showing {slice.items.length} of {totalRecordCount} items
+          {copy.showing(slice.items.length, totalRecordCount)}
         </span>
         {slice.hasPrev ? (
           <a
@@ -209,7 +211,7 @@ export function DynamicListVisitorControls({
             })}
             className={styles.secondaryLink}
           >
-            Previous
+            {copy.previous}
           </a>
         ) : null}
         {slice.hasNext ? (
@@ -222,7 +224,7 @@ export function DynamicListVisitorControls({
             })}
             className={styles.primaryLink}
           >
-            Next
+            {copy.next}
           </a>
         ) : null}
       </nav>

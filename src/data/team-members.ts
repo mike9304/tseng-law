@@ -1,4 +1,5 @@
 import type { SiteLocale } from '@/lib/locales';
+import { TEAM_NAME_BY_LOCALE } from '@/data/team-name';
 
 export type TeamMember = {
   id: string;
@@ -24,9 +25,9 @@ export type TeamContent = {
 export const teamContent: Record<SiteLocale, TeamContent> = {
   ko: {
     label: 'OUR TEAM',
-    title: '호정 한국·대만 업무팀',
+    title: TEAM_NAME_BY_LOCALE['ko'],
     description:
-      '법무법인 호정의 변호사·사무장·회계사 프로필입니다.',
+      '변호사·법무전문원·사무장·협력 회계사를 소개합니다.',
     story: [
       '법무법인 호정은 한국·일본 고객의 대만 투자, 소송, 법률 자문을 지원하는 통합 실무팀을 운영합니다.',
       '법률, 회계, 세무 및 행정 실무를 연결해 사건 초기 검토부터 분쟁 대응까지 일관된 전략을 제공합니다.',
@@ -41,8 +42,8 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/wei-tseng-official.png',
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
-          '기업·개인 사건을 폭넓게 수행하며, 한국어·일본어 상담이 가능합니다.',
-          '한국 유학생 헬스장 손해배상 사건에서 157만 대만달러 배상 판결을 이끈 사례가 있습니다.',
+          '기업·개인 사건을 폭넓게 수행합니다. 당사무소에서는 한국어·중국어·일본어·영어로 상담하실 수 있습니다.',
+          '한국 유학생 헬스장 손해배상 사건에서 1심 157만 대만달러 배상 판결을 이끈 사례가 있습니다.',
         ],
         education: [
           '국립 타이완 대학교 재무금융연구소 석사',
@@ -111,10 +112,10 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
   },
   'zh-hant': {
     label: 'OUR TEAM',
-    title: '昊鼎 韓國·台灣 業務團隊',
+    title: TEAM_NAME_BY_LOCALE['zh-hant'],
     description: '昊鼎國際法律事務所律師、事務長及會計師簡介。',
     story: [
-      '昊鼎提供韓文、日文溝通的在台法律服務，涵蓋公司設立、訴訟與合規顧問。',
+      '昊鼎提供中文、韓文、日文及英文溝通的在台法律服務，涵蓋公司設立、訴訟與合規顧問。',
       '團隊整合法律、會計與行政實務，可在同一流程處理跨領域問題。',
     ],
     members: [
@@ -127,8 +128,8 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/wei-tseng-official.png',
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
-          '專精企業與個人案件，提供韓文與日文法律溝通。',
-          '曾代理韓國留學生健身傷害求償案，獲判新台幣 157 萬元。',
+          '專精企業與個人案件。事務所可提供韓文、中文、日文、英文法律溝通。',
+          '曾代理韓國留學生健身傷害求償案，於一審獲判新台幣 157 萬元。',
         ],
         education: [
           '國立臺灣大學財務金融研究所碩士',
@@ -197,10 +198,10 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
   },
   en: {
     label: 'OUR TEAM',
-    title: 'Hovering International Legal Team',
-    description: 'Profiles of Hovering lawyers, operations manager, and accounting partner.',
+    title: TEAM_NAME_BY_LOCALE['en'],
+    description: 'Profiles of our lawyers, paralegal, operations manager, and accounting partner.',
     story: [
-      'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for international, Japanese, and Korean clients.',
+      'Hovering runs an integrated practice team supporting Taiwan investment, litigation, and legal advisory for international clients, with English, Chinese, Korean, and Japanese available.',
       'By combining legal, accounting, tax, and operational workflows, we provide consistent strategy from initial review through dispute handling.'
     ],
     members: [
@@ -213,8 +214,8 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/wei-tseng-official.png',
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
-          'Handles a wide range of corporate and individual matters. Consultations in English, Japanese, Korean, and Mandarin are available for Taiwan investment, incorporation, and litigation strategy.',
-          'Represented a Korean student in a gym injury case and obtained a TWD 1.57M damages ruling.'
+          'The firm supports Taiwan corporate and individual matters in English, Chinese, Korean, and Japanese.',
+          'Represented a Korean student in a gym injury case and obtained a TWD 1.57M first-instance damages ruling.'
         ],
         education: [
           'M.S., Institute of Finance, National Taiwan University',
@@ -246,7 +247,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         sourceUrl: 'https://www.wei-wei-lawyer.com/paralegalchang',
         intro: [
           'A veteran paralegal with many years of experience as a senior paralegal at several law firms, covering litigation support, corporate legal affairs, and foreign investment matters.',
-          'Supports litigation, company formation, foreign investment approvals, permit applications, and cross-border communications.'
+          'Supports litigation, company formation, foreign investment approvals, permit applications, and Korea-Taiwan communications.'
         ],
         education: ['LL.B., Tunghai University'],
         experience: ['Senior Paralegal, Boyin Law Firm', 'Senior Paralegal, Muyang International Law Firm']
@@ -283,10 +284,10 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
   },
   ja: {
     label: 'チーム紹介',
-    title: '昊鼎 日本・国際法務チーム',
+    title: TEAM_NAME_BY_LOCALE['ja'],
     description: '昊鼎国際法律事務所の弁護士、パラリーガル、事務長、提携会計士をご紹介します。',
     story: [
-      '昊鼎国際法律事務所では、日本企業・在台日本人をはじめとする国際クライアントによる台湾への投資や、台湾での訴訟・法律相談を支援する実務チームを編成しています。',
+      '昊鼎国際法律事務所では、国際クライアントの台湾投資、訴訟、法律顧問を支援する実務チームを編成しています。英語・日本語・韓国語・中国語でご相談いただけます。',
       '法律・会計・税務・行政の各実務を連携させ、案件の初期検討から紛争対応まで、一貫した方針でサポートします。',
     ],
     members: [
@@ -299,7 +300,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         photo: '/images/team/wei-tseng-official.png',
         sourceUrl: 'https://www.wei-wei-lawyer.com/lawyertseng',
         intro: [
-          '企業・個人の幅広い案件を担当し、日本語・英語・韓国語・中国語でのご相談に対応しています。',
+          '企業・個人の幅広い案件を担当しています。当事務所では日本語・英語・韓国語・中国語でご相談いただけます。',
           '韓国人留学生のジムでの負傷に関する損害賠償請求事件を代理し、一審で157万TWDの損害賠償を認める判決を得た実績があります。',
         ],
         education: [
@@ -332,7 +333,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
         sourceUrl: 'https://www.wei-wei-lawyer.com/paralegalchang',
         intro: [
           '複数の法律事務所で長年にわたりシニアパラリーガルを務め、訴訟支援、企業法務、外国人投資関連業務など、幅広い法律実務の経験を積んでいます。',
-          '訴訟支援、会社設立、外国人投資の認可手続、各種許認可申請、国際クライアントとのコミュニケーションを支援します。',
+          '訴訟支援、会社設立、外国人投資の認可手続、各種許認可申請、韓国・台湾間のコミュニケーションを支援します。',
         ],
         education: ['東海大学法律学科 学士号取得'],
         experience: ['博胤法律事務所 シニアパラリーガル', '慕陽國際法律事務所 シニアパラリーガル'],

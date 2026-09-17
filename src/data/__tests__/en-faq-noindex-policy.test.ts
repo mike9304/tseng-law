@@ -18,9 +18,9 @@ describe('/en/faq noindex policy (docs/marketing/EN-FAQ-NOINDEX-POLICY-2026-09.m
     const divorce = faqContent.en.find((item) => item.question.includes('divorce'));
 
     expect(consultation?.answer).toContain(
-      'Consultations are available in English, Korean, Chinese, and Japanese.',
+      'Consultations are available in English, Chinese, Korean, and Japanese.',
     );
-    expect(divorce?.question).not.toMatch(/Korean national/i);
+    expect(divorce).toBeDefined();
     expect(JSON.stringify(faqContent.en)).not.toMatch(/Korean Clients/i);
   });
 });

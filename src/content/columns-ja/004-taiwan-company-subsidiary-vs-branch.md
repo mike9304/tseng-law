@@ -172,7 +172,7 @@ faq:
 ## 公式資料
 
 - [台湾法務部法令情報 — 会社法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
-- [台湾法務部法令情報 — 営業税法第10条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10&pcode=G0340080)
+- [台湾法務部法令情報 — 営業税法第10条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [台湾法務部法令情報 — 所得税法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [台湾財政部 — 国外株主への配当の源泉徴収案内](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [台湾財政部 — 外国会社の支店利益に関する解釈](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)

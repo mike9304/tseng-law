@@ -18,16 +18,21 @@ function buildAbsoluteUrl(siteUrl: string, path: string): string {
   return `${base}${cleaned}`;
 }
 
+const FIRM_CONSULTATION_LANGUAGES = [
+  'English',
+  'Chinese',
+  'Japanese',
+  'Korean',
+] as const;
+
+/** Firm consultation languages for CMS LegalService records. Person uses attorneyProfiles. */
 function languageList(locale: Locale): string[] {
-  switch (locale) {
-    case 'ko':
-      return ['Korean', 'Chinese', 'English'];
-    case 'zh-hant':
-      return ['Chinese', 'Korean', 'English'];
-    case 'en':
-    default:
-      return ['English', 'Korean', 'Chinese'];
-  }
+  const preferred =
+    locale === 'ko' ? 'Korean' : locale === 'zh-hant' ? 'Chinese' : 'English';
+  return [
+    preferred,
+    ...FIRM_CONSULTATION_LANGUAGES.filter((language) => language !== preferred),
+  ];
 }
 
 /**
@@ -94,7 +99,7 @@ export function buildBuilderRecordJsonLd({
         image: profile.image,
         email: profile.email,
         url: buildAbsoluteUrl(siteUrl, `/${locale}/lawyers/${profile.slug}`),
-        knowsLanguage: languageList(locale),
+        knowsLanguage: profile.languages,
         knowsAbout: profile.keywords,
         worksFor: {
           '@type': 'LegalService',

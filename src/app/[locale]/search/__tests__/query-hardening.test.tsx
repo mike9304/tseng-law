@@ -76,4 +76,47 @@ describe('/search query hardening', () => {
 
     expect(html).toContain(`aria-label="${label}"`);
   });
+
+  it('passes the stored KO index through without rewriting it', async () => {
+    await renderSearch('검색', 'ko');
+
+    expect(mocks.runSearchQuery).toHaveBeenCalledTimes(1);
+    expect(mocks.runSearchQuery.mock.calls[0][0].index).toBe(emptyIndex);
+  });
+
+  it('augments EN and JA indexes with public intent pages before querying', async () => {
+    await renderSearch('setup', 'en');
+    const enArgs = mocks.runSearchQuery.mock.calls[0][0];
+    expect(enArgs.index).not.toBe(emptyIndex);
+    expect(enArgs.index.builtAt).toBe(emptyIndex.builtAt);
+    expect(
+      enArgs.index.byLocale.en.some((doc: { url: string }) => doc.url === '/en/taiwan-company-setup-lawyer'),
+    ).toBe(true);
+    expect(
+      enArgs.index.byLocale.en.some((doc: { url: string }) => doc.url === '/en/taiwan-lawyer#corporate-advisory'),
+    ).toBe(true);
+
+    mocks.runSearchQuery.mockClear();
+    await renderSearch('会社設立', 'ja');
+    const jaArgs = mocks.runSearchQuery.mock.calls[0][0];
+    expect(jaArgs.locale).toBe('ja');
+    expect(jaArgs.index.builtAt).toBe(emptyIndex.builtAt);
+    expect(
+      jaArgs.index.byLocale.ja.some((doc: { url: string }) => doc.url === '/ja/taiwan-lawyer#corporate-advisory'),
+    ).toBe(true);
+  });
+
+  it('forwards kinds=blog so static intent pages can be excluded', async () => {
+    const html = renderToStaticMarkup(
+      await SearchPage({
+        params: Promise.resolve({ locale: 'en' }),
+        searchParams: Promise.resolve({ q: 'setup', kinds: 'blog' }),
+      }),
+    );
+
+    expect(mocks.runSearchQuery).toHaveBeenCalledWith(
+      expect.objectContaining({ kinds: ['blog'], query: 'setup', locale: 'en' }),
+    );
+    expect(html).toContain('maxLength="200"');
+  });
 });

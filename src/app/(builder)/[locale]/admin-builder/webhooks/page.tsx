@@ -1,3 +1,4 @@
+import { requireBuilderPagePermission } from '@/lib/builder/security/page-permission';
 import type { Metadata } from 'next';
 import { locales, normalizeLocale, type Locale } from '@/lib/locales';
 import { buildSeoMetadata } from '@/lib/seo';
@@ -41,6 +42,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
 }
 
 export default async function WebhooksPage(props: { params: Promise<{ locale: string }> }) {
+  await requireBuilderPagePermission('settings');
   const params = await props.params;
   const locale = normalizeLocale(params.locale);
   const text = COPY[locale];

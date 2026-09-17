@@ -20,6 +20,10 @@ export type AttorneyProfile = {
   role: string;
   title: string;
   description: string;
+  /** Visible page H1. SEO `<title>` stays on `title`. */
+  heading?: string;
+  /** Visible page lede. Meta description and Person JSON-LD stay on `description`. */
+  lede?: string;
   email: string;
   image: string;
   summary: string[];
@@ -57,12 +61,12 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       role: '대만 변호사 · 대표 변호사',
       title: '증준외 대만변호사 프로필',
       description:
-        '한국 고객의 대만 회사설립, 투자, 소송, 비자, 상표·특허, 법률자문을 지원하는 증준외 대만변호사의 경력과 대표 사례를 정리한 프로필 페이지입니다.',
+        '한국 고객의 대만 회사설립, 투자, 소송, 비자, 상표·특허, 법률자문을 지원하는 증준외 대만변호사의 경력과 대표 사례를 정리한 프로필 페이지입니다. 당사무소에서는 한국어·중국어·일본어·영어로 상담하실 수 있습니다.',
       email: CONSULTATION_EMAIL,
       image: '/images/team/wei-tseng-official.png',
       summary: [
         '증준외 변호사는 한국·일본 고객의 대만 투자, 회사설립, 소송, 지식재산, 비자 및 리스크 검토 업무를 수행합니다.',
-        '한국어·중국어·일본어 커뮤니케이션을 바탕으로 초기 상담부터 실행 및 분쟁 대응까지 한 흐름으로 지원합니다.',
+        '당사무소는 한국어·중국어·일본어·영어로 상담을 제공하며, 초기 상담부터 실행 및 분쟁 대응까지 한 흐름으로 지원합니다.',
         '한국 유학생 헬스장 손해배상 사건에서 157만 TWD 1심 판결을 이끈 대표 사례가 있으며, WEI Lawyer 채널과 외부 매체를 통해 대만 법률을 설명하고 있습니다.',
       ],
       languages: ['한국어', '중국어', '일본어'],
@@ -96,7 +100,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       keywords: ['증준외 변호사', '증준외 대만변호사', '대만변호사', '한국어 가능한 대만 변호사', '대만 회사설립 변호사', '대만 소송 변호사'],
       searchTerms: ['증준외 대만변호사', '대만변호사 증준외', '한국어 가능한 대만변호사', '대만 회사설립 변호사 증준외'],
       proofPoints: [
-        '한국어·중국어·일본어 상담이 가능한 대만 변호사로, 한국 고객 사건을 직접 소통합니다.',
+        '증준외 변호사는 한국어·중국어·일본어로 한국 고객 사건을 직접 소통하며, 당사무소 상담은 한국어·중국어·일본어·영어로 가능합니다.',
         '대만 회사설립, 투자, 비자, 소송, 상표·특허까지 한국 고객의 실제 실행 흐름을 함께 설계합니다.',
         '한국 유학생 헬스장 손해배상 사건에서 157만 TWD 1심 판결을 이끈 공개 사례가 있습니다.',
         '호정 공식 프로필, 개인 사이트, YouTube, Naver Blog 등 외부 채널에서 동일 인물 정보가 확인됩니다.',
@@ -110,7 +114,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         {
           question: '증준외 변호사와 한국어로 상담할 수 있나요?',
           answer:
-            '가능합니다. 한국어, 중국어, 일본어로 사실관계와 서류 흐름을 정리할 수 있어 한국 고객이 대만 절차를 이해하기 쉽게 상담을 진행할 수 있습니다.',
+            '가능합니다. 증준외 변호사는 한국어·중국어·일본어로 사실관계와 서류 흐름을 직접 정리하며, 당사무소 상담은 한국어·중국어·일본어·영어로 진행할 수 있습니다. 한국 고객이 대만 절차를 이해하기 쉽도록 안내합니다.',
         },
         {
           question: '증준외 변호사 상담은 어떻게 시작하나요?',
@@ -128,12 +132,12 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       role: '台灣律師 · 代表律師',
       title: '曾雋崴台灣律師簡介',
       description:
-        '整理曾雋崴台灣律師的學經歷、主要服務領域與代表案件，聚焦韓國客戶在台公司設立、投資、訴訟、簽證與智慧財產等法律需求。',
+        '整理曾雋崴台灣律師的學經歷、主要服務領域與代表案件，涵蓋在台公司設立、投資、訴訟、簽證與智慧財產等法律需求。事務所可提供韓文、中文、日文、英文諮詢。',
       email: CONSULTATION_EMAIL,
       image: '/images/team/wei-tseng-official.png',
       summary: [
         '曾雋崴律師長期協助韓國、日本客戶處理在台投資、公司設立、訴訟、智慧財產、簽證與法律風險評估。',
-        '可提供韓文、中文、日文溝通，將諮詢、申請與爭議處理整合為同一策略流程。',
+        '事務所可提供韓文、中文、日文、英文溝通，將諮詢、申請與爭議處理整合為同一策略流程。',
         '曾代理韓國留學生健身房受傷損害賠償案件，取得 157 萬 TWD 一審判決，並持續透過 WEI Lawyer 與外部媒體說明台灣法律議題。',
       ],
       languages: ['韓文', '中文', '日文'],
@@ -167,7 +171,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       keywords: ['曾雋崴 律師', '曾雋崴台灣律師', '台灣律師', '韓文 台灣律師', '台灣公司設立 律師', '台灣訴訟 律師'],
       searchTerms: ['曾雋崴台灣律師', '曾雋崴 律師', '韓文 台灣律師', '台灣公司設立 律師 曾雋崴'],
       proofPoints: [
-        '可用韓文、中文、日文直接對接韓國客戶與台灣在地程序。',
+        '曾雋崴律師可用韓文、中文、日文直接對接韓國客戶與台灣在地程序，事務所諮詢另可使用英文。',
         '處理台灣公司設立、投資、訴訟、簽證與智慧財產等跨境法律需求。',
         '曾代理韓國留學生健身房受傷求償案件，取得 157 萬 TWD 一審判決。',
         '昊鼎官方頁面、個人網站、YouTube 與 Naver Blog 都可交叉驗證律師資訊。',
@@ -176,12 +180,12 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         {
           question: '曾雋崴律師主要處理哪些案件？',
           answer:
-            '以韓國客戶常見的台灣公司設立、投資法律顧問、民事訴訟與損害賠償、商標專利、簽證居留、家事與勞動爭議為核心。',
+            '以台灣公司設立、投資法律顧問、民事訴訟與損害賠償、商標專利、簽證居留、家事與勞動爭議為核心。',
         },
         {
           question: '可以用韓文與曾雋崴律師諮詢嗎？',
           answer:
-            '可以。曾雋崴律師可用韓文、中文、日文協助整理事實、文件與程序安排，讓韓國客戶更容易理解台灣法律流程。',
+            '可以。曾雋崴律師可用韓文、中文、日文協助整理事實、文件與程序安排；事務所另可提供英文諮詢，讓韓國客戶更容易理解台灣法律流程。',
         },
         {
           question: '如何開始與曾雋崴律師的諮詢？',
@@ -198,16 +202,19 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       alternateNames: ['Wei Tseng', '증준외', '曾雋崴'],
       role: 'Taiwan Attorney · Managing Attorney',
       title: 'Wei Tseng Taiwan Attorney Profile',
+      heading: 'Wei Tseng',
+      lede:
+        'Taiwan attorney advising overseas companies and individuals on company setup, investment, litigation, residence, and IP matters.',
       description:
-        'A dedicated profile for Wei Tseng, a Taiwan attorney focusing on company setup, investment, litigation, visa, and IP support for international, Japanese, and Korean clients.',
+        'A dedicated profile for Wei Tseng, a Taiwan attorney focusing on company setup, investment, litigation, visa, and IP support for Korean and international clients. The firm provides consultations in English, Chinese, Korean, and Japanese.',
       email: CONSULTATION_EMAIL,
       image: '/images/team/wei-tseng-official.png',
       summary: [
-        'Attorney Wei Tseng advises English-speaking, Korean, and Japanese clients on Taiwan company setup, investment, litigation, intellectual property, visas, and legal risk review.',
-        'Attorney Wei Tseng consults in English, Korean, Chinese, and Japanese to connect initial consultation, filings, execution, and dispute response into one strategy.',
+        'Attorney Wei Tseng advises Korean, Japanese, and other international clients on Taiwan company setup, investment, litigation, intellectual property, visas, and legal risk review.',
+        'Attorney Wei Tseng works with clients directly in Korean, Chinese, and Japanese, and the firm arranges consultations in English, Chinese, Korean, or Japanese according to the matter, connecting initial consultation, filings, execution, and dispute response into one strategy.',
         'Representative work includes a TWD 1.57M first-instance damages ruling in a Korean student gym injury case, alongside continuous legal publishing through WEI Lawyer and external media appearances.',
       ],
-      languages: ['English', 'Korean', 'Chinese', 'Japanese'],
+      languages: ['Korean', 'Chinese', 'Japanese'],
       practiceAreas: ['Taiwan company setup', 'Taiwan investment counsel', 'Civil litigation and damages', 'Trademark and patent filings', 'Visa and residency', 'Family and labor disputes'],
       education: [
         'M.S., Institute of Finance, National Taiwan University',
@@ -217,12 +224,13 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       experience: ['Trend Law Office', 'Hovering International Law Firm', 'Legal Aid Foundation, Taichung Branch'],
       notableMatters: [
         'Obtained a TWD 1.57M first-instance damages ruling in a Korean student gym injury case',
-        'Supports Japanese and Korean businesses with Taiwan company setup, investment, visa, and operating-risk matters',
+        'Supports Korean businesses with Taiwan company setup, investment, visa, and operating-risk matters',
         'Advises on trademark, patent, contract review, and cross-border civil, family, and labor disputes',
       ],
       internalLinks: [
         { label: 'Taiwan Lawyer Guide', href: '/en/taiwan-lawyer' },
         { label: 'Taiwan Company Setup Lawyer Guide', href: '/en/taiwan-company-setup-lawyer' },
+        { label: 'Taiwan Litigation Lawyer Guide', href: '/en/taiwan-litigation-lawyer' },
         { label: 'Taiwan Company Setup Service', href: '/en/services/investment' },
         { label: 'Civil Litigation Service', href: '/en/services/civil' },
         { label: 'Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages', href: '/en/columns/taiwan-gym-injury-lawsuit' },
@@ -235,24 +243,24 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         { label: 'Naver Blog', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
       ],
       sameAs: commonSameAs,
-      keywords: ['Wei Tseng attorney', 'Wei Tseng Taiwan attorney', 'English speaking Taiwan lawyer', 'Taiwan attorney profile', 'Taiwan company setup lawyer', 'Taiwan litigation attorney'],
-      searchTerms: ['Wei Tseng Taiwan attorney', 'Attorney Wei Tseng', 'English speaking Taiwan lawyer', 'Wei Tseng company setup lawyer'],
+      keywords: ['Wei Tseng attorney', 'Wei Tseng Taiwan attorney', 'Taiwan lawyer for Korean clients', 'Taiwan attorney profile', 'Taiwan company setup lawyer', 'Taiwan litigation attorney'],
+      searchTerms: ['Wei Tseng Taiwan attorney', 'Attorney Wei Tseng', 'Taiwan lawyer for Korean clients', 'Wei Tseng company setup lawyer'],
       proofPoints: [
-        'Wei Tseng consults in English, Korean, Chinese, and Japanese for cross-border client matters.',
-        'Her practice covers Taiwan company setup, investment, litigation, visas, and trademark or patent filings.',
+        'Wei Tseng works with clients directly in Korean, Chinese, and Japanese, and the firm arranges consultations in English, Chinese, Korean, or Japanese according to the matter.',
+        'Attorney Wei Tseng\'s practice covers Taiwan company setup, investment, litigation, visas, and trademark or patent filings.',
         'A public representative case includes a TWD 1.57M first-instance damages ruling in a Korean student gym injury dispute.',
-        'Her identity is corroborated across the Hovering profile, personal site, YouTube channel, and Naver Blog.',
+        'Attorney Wei Tseng\'s identity is corroborated across the Hovering profile, personal site, YouTube channel, and Naver Blog.',
       ],
       faq: [
         {
           question: 'What matters does Attorney Wei Tseng typically handle?',
           answer:
-            'She focuses on Taiwan company setup, investment legal advisory, civil litigation and damages, trademarks and patents, visas and residency, and cross-border family or labor disputes for international, Japanese, and Korean clients.',
+            'Attorney Wei Tseng focuses on Taiwan company setup, investment legal advisory, civil litigation and damages, trademarks and patents, visas and residency, and cross-border family or labor disputes for Korean and international clients.',
         },
         {
-          question: 'Can English-speaking or Korean-speaking clients consult directly with Attorney Wei Tseng?',
+          question: 'Which languages are available for a consultation on a Taiwan-law matter?',
           answer:
-            'Yes. English-speaking and Korean-speaking clients can start by sharing the core facts and documents, and the consultation can proceed in English, Korean, Chinese, or Japanese depending on the matter.',
+            'The firm provides consultations in English, Chinese, Korean, and Japanese, and arranges the working language according to the matter. Attorney Wei Tseng works with clients directly in Korean, Chinese, and Japanese. Clients can start by sharing the core facts and the main documents.',
         },
         {
           question: 'How should a client start a consultation with Attorney Wei Tseng?',
@@ -270,15 +278,15 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       role: '台湾弁護士・代表弁護士',
       title: '曾雋崴台湾弁護士プロフィール',
       description:
-        '日本企業・在台日本人をはじめとする国際クライアントの台湾での会社設立、投資、訴訟、ビザ、商標・特許、法律顧問業務を支援する曾雋崴台湾弁護士の経歴と代表事例をまとめたプロフィールです。',
+        '台湾での会社設立、投資、訴訟、ビザ、商標・特許、法律顧問業務を支援する曾雋崴台湾弁護士の経歴と代表事例をまとめたプロフィールです。当事務所では日本語・韓国語・中国語・英語でご相談いただけます。',
       email: CONSULTATION_EMAIL,
       image: '/images/team/wei-tseng-official.png',
       summary: [
-        '曾雋崴弁護士は、日本企業・在台日本人をはじめとする国際クライアントによる台湾での投資、会社設立、訴訟、知的財産、ビザおよび法的リスクの検討を支援しています。',
-        '日本語・英語・中国語・韓国語でのコミュニケーションを通じて、初回相談から各種手続の遂行、紛争対応まで一貫してサポートします。',
+        '曾雋崴弁護士は、韓国・日本のクライアントによる台湾での投資、会社設立、訴訟、知的財産、ビザおよび法的リスクの検討を支援しています。',
+        '当事務所は韓国語・中国語・日本語・英語でのご相談に対応し、初回相談から各種手続の遂行、紛争対応まで一貫してサポートします。',
         '韓国人留学生のジム負傷損害賠償事件で157万TWDの損害賠償を認める一審判決を獲得した代表事例があり、WEI Lawyerチャンネルや外部メディアを通じて台湾法を解説しています。',
       ],
-      languages: ['日本語', '英語', '中国語', '韓国語'],
+      languages: ['韓国語', '中国語', '日本語'],
       practiceAreas: ['台湾での会社設立', '台湾投資に関する法務顧問', '民事訴訟・損害賠償', '商標・特許', 'ビザ・在留', '家事・労働紛争'],
       education: [
         '国立台湾大学財務金融研究所 修士号取得',
@@ -288,7 +296,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
       experience: ['趨勢法律事務所', '昊鼎国際法律事務所', '法律扶助基金会台中分会の扶助弁護士'],
       notableMatters: [
         '韓国人留学生のジム負傷事件で157万TWDの損害賠償を認める一審判決を獲得',
-        '日本企業および韓国企業による台湾での会社設立、投資、ビザおよび事業運営リスクの検討を支援',
+        '韓国企業による台湾での会社設立、投資、ビザおよび事業運営リスクの検討を支援',
         '商標・特許の出願、企業契約の審査、民事・家事・労働紛争に関する助言',
       ],
       internalLinks: [
@@ -306,11 +314,11 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         { label: 'Naver Blog', href: 'https://blog.naver.com/wei_lawyer/223461663913' },
       ],
       sameAs: commonSameAs,
-      keywords: ['曾雋崴弁護士', '曾雋崴台湾弁護士', '日本語対応の台湾弁護士', '台北の法律事務所', '台湾会社設立弁護士', '台湾訴訟弁護士'],
-      searchTerms: ['曾雋崴台湾弁護士', '日本語対応の台湾弁護士', '台北の法律事務所', '台湾会社設立弁護士 曾雋崴'],
+      keywords: ['曾雋崴弁護士', '曾雋崴台湾弁護士', '日本語対応の台湾弁護士', '韓国語対応の台湾弁護士', '台湾会社設立弁護士', '台湾訴訟弁護士'],
+      searchTerms: ['曾雋崴台湾弁護士', '日本語対応の台湾弁護士', '韓国語対応の台湾弁護士', '台湾会社設立弁護士 曾雋崴'],
       proofPoints: [
-        '日本語・英語・中国語・韓国語で相談できる台湾弁護士として、日本企業・在台日本人をはじめとする国際クライアントと直接コミュニケーションを行います。',
-        '台湾での会社設立、投資、ビザ、訴訟、商標・特許まで、日本語で相談したいクライアントに必要な手続の流れを一緒に設計します。',
+        '当事務所では、日本語・韓国語・中国語・英語で台湾法に関するご相談に対応しています。',
+        '台湾での会社設立、投資、ビザ、訴訟、商標・特許について、ご相談内容に応じた手続の流れを一緒に整理します。',
         '韓国人留学生のジム負傷損害賠償事件で157万TWDの損害賠償を認める一審判決を獲得した公開事例があります。',
         '昊鼎の公式プロフィール、個人サイト、YouTube、Naver Blogなどの外部チャンネルで同一人物の情報を確認できます。',
       ],
@@ -318,7 +326,7 @@ export const attorneyProfiles: Record<SiteLocale, Record<AttorneyProfileSlug, At
         {
           question: '曾雋崴弁護士は主にどのような案件を扱っていますか？',
           answer:
-            '台湾での会社設立、台湾投資に関する法務顧問、民事訴訟・損害賠償、商標・特許、ビザ・在留、家事・労働紛争など、日本企業・在台日本人をはじめとする国際クライアントから相談の多い台湾法の問題を中心に対応しています。',
+            '台湾での会社設立、台湾投資に関する法務顧問、民事訴訟・損害賠償、商標・特許、ビザ・在留、家事・労働紛争など、台湾法に関するご相談に対応しています。',
         },
         {
           question: '曾雋崴弁護士に日本語で台湾法の相談はできますか？',

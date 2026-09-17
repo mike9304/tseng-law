@@ -10,11 +10,14 @@ import FAQAccordion from '@/components/FAQAccordion';
 import OfficeMapTabs from '@/components/OfficeMapTabs';
 import HomeContactCta from '@/components/HomeContactCta';
 import TaiwanHeritageInterlude from '@/components/TaiwanHeritageInterlude';
+import EnAcquisitionGuideLinks from '@/components/EnAcquisitionGuideLinks';
 import Reveal from '@/components/Reveal';
+import homeEditorialStyles from '@/components/HomeEditorial.module.css';
 import type { FAQItem } from '@/data/faq-content';
 import { faqContent } from '@/data/faq-content';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
-import { buildPersonJsonLd, buildSeoMetadata } from '@/lib/seo';
+import { resolveLiveRouteSeoDefault } from '@/lib/builder/seo/live-route-defaults';
+import { buildFaqJsonLd, buildPersonJsonLd, buildSeoMetadata } from '@/lib/seo';
 import type { SiteLocale } from '@/lib/locales';
 import { getAllColumnPosts, type ColumnPost } from '@/lib/columns';
 
@@ -24,7 +27,7 @@ const homeSeoCopy: Record<SiteLocale, { title: string; description: string; keyw
   ko: {
     title: '대만 변호사·회사설립·소송',
     description:
-      '대만 회사설립, 대만 소송, 대만 투자 법률 자문을 한국어와 일본어로 안내하는 법무법인 호정 공식 사이트입니다.',
+      '대만 회사설립, 대만 소송, 대만 투자 법률 자문을 한국어·일본어·영어로 안내하는 법무법인 호정 공식 사이트입니다.',
     keywords: ['대만 변호사', '대만 소송', '대만 회사설립', '대만 법인설립', '대만 투자 법률'],
   },
   'zh-hant': {
@@ -34,9 +37,9 @@ const homeSeoCopy: Record<SiteLocale, { title: string; description: string; keyw
     keywords: ['台灣律師', '台灣訴訟', '台灣公司設立', '韓國企業台灣投資', '跨境法律顧問'],
   },
   en: {
-    title: 'Taipei Law Firm for Expats and Cross-Border Matters',
+    title: 'Taiwan Law Firm in Taipei — English Consultations',
     description:
-      'English-speaking Taiwan lawyer for expats and foreigners in Taiwan: company setup, litigation, and investment counsel in Taipei.',
+      'A Taipei law firm for Taiwan-law matters serving overseas companies and individuals, with English consultations for international business and disputes.',
     keywords: ['English-speaking lawyer Taiwan', 'expat lawyer Taiwan', 'foreigners in Taiwan lawyer', 'Taiwan lawyer', 'Taiwan litigation', 'Taiwan company setup'],
   },
   ja: {
@@ -49,10 +52,11 @@ const homeSeoCopy: Record<SiteLocale, { title: string; description: string; keyw
 
 export function getHomeLegacyMetadata(locale: SiteLocale): Metadata {
   const seo = homeSeoCopy[locale];
+  const live = locale === 'ja' ? undefined : resolveLiveRouteSeoDefault(locale, '');
   return buildSeoMetadata({
     locale,
-    title: seo.title,
-    description: seo.description,
+    title: live?.title ?? seo.title,
+    description: live?.description ?? seo.description,
     keywords: seo.keywords,
     alternateLocales: ['ko', 'zh-hant', 'en', 'ja'],
   });
@@ -68,34 +72,39 @@ export function LegacyHomePageBody({
   faqItems: FAQItem[];
 }) {
   return (
-    <>
-      <HeroSearch locale={locale} />
+    <div className={homeEditorialStyles.root}>
+      <HeroSearch locale={locale} presentation="editorial" />
+      {locale === 'en' ? (
+        <Reveal>
+          <EnAcquisitionGuideLinks locale={locale} />
+        </Reveal>
+      ) : null}
       <Reveal>
-        <InsightsArchiveSection locale={locale} posts={posts} />
-      </Reveal>
-      <Reveal>
-        <ServicesBento locale={locale} id="practice" variant="default" />
+        <ServicesBento locale={locale} id="practice" variant="default" presentation="editorial" />
       </Reveal>
       <TaiwanHeritageInterlude locale={locale} />
       <Reveal>
-        <HomeAttorneySplit locale={locale} />
+        <HomeAttorneySplit locale={locale} presentation="editorial" />
       </Reveal>
       <Reveal>
-        <HomeCaseResultsSplit locale={locale} />
+        <HomeCaseResultsSplit locale={locale} presentation="editorial" />
       </Reveal>
       <Reveal>
         <HomeStatsSection locale={locale} />
       </Reveal>
       <Reveal>
+        <InsightsArchiveSection locale={locale} posts={posts} presentation="editorial" />
+      </Reveal>
+      <Reveal>
         <FAQAccordion locale={locale} items={faqItems} id="faq" sectionClassName="section section--gray" />
       </Reveal>
       <Reveal>
-        <OfficeMapTabs locale={locale} id="offices" sectionClassName="section section--light" />
+        <OfficeMapTabs locale={locale} id="offices" sectionClassName="section section--light" presentation="editorial" />
       </Reveal>
       <Reveal>
         <HomeContactCta locale={locale} />
       </Reveal>
-    </>
+    </div>
   );
 }
 
@@ -123,6 +132,10 @@ export function HomeLegacyPage({ locale }: { locale: SiteLocale }) {
   const faqItems = faqContent[locale] ?? faqContent.en;
   const allPosts = resolveLegacyHomeInsightPosts(locale);
   const profile = getAttorneyProfile(locale, primaryAttorneySlug);
+  const faqJsonLd = buildFaqJsonLd(
+    faqItems.map((item) => ({ q: item.question, a: item.answer })),
+    locale,
+  );
 
   return (
     <>
@@ -144,6 +157,7 @@ export function HomeLegacyPage({ locale }: { locale: SiteLocale }) {
           })}
         />
       ) : null}
+      {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <LegacyHomePageBody locale={locale} posts={allPosts} faqItems={faqItems} />
     </>
   );

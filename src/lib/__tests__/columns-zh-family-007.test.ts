@@ -111,16 +111,16 @@ const exactEnding = `- ${internalLinks[2]}
 ${disclaimer}
 
 ${author}`;
-const frozenVisibleHanCount = 7_633;
+const frozenVisibleHanCount = 7_649;
 const frozenSourceSha256 =
-  '12044fea84bbe0baad4a68dc09fd2e4b1db8330e452f2f59bd0afe9069b20ebb';
+  'b47187e98a544678f82ac82a6eeff00860c1df1199333984e94d2f39015481d3';
 const frozenSection4TailSha256 =
   'a507e018ed271a5caf2483f5c8880d836f485789c693a0fbdc9c35418f2f645d';
 const frozenSection5OnwardSha256 =
-  '17da582a83bf992ba7bb2fe873d88e121ddbdc4db0a1442b14c6cc3377ffdf57';
-const frozenSection8AgreementPrefixLength = 16_802;
+  '8004be5e2ae0fd8d95a727c384fa4101cec1957fef6dfa06f57e531b874ea3ed';
+const frozenSection8AgreementPrefixLength = 16_860;
 const frozenSection8AgreementPrefixSha256 =
-  'e7359292fcc310f81aea42eed0072cc8236a1756705e54981fb62cf902e0d1b5';
+  'e6f13969b4ab04d31100ccad5d51ae5fbe6a8d7aaf306dbe9c973dc3101ef7f9';
 const frozenSection8AgreementTailLength = 1_043;
 const frozenSection8AgreementTailSha256 =
   'eac23054c07aed295e4d21a8a81852629a16d2100a24a0200ad4af9446e42668';
@@ -164,7 +164,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     expect(parsed.data).toEqual({
       title,
       url: sourceUrl,
-      lastmod: '2026-07-25',
+      lastmod: '2026-09-10',
       date_display: '2025年9月13日',
       read_time: '20分鐘閱讀',
       categories: ['台灣法律資訊'],
@@ -175,7 +175,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
     expect(post).toMatchObject({
       slug: canonicalSlug,
       title,
-      date: '2026-07-25',
+      date: '2026-09-10',
       dateDisplay: '2025年9月13日',
       readTime: '20分鐘閱讀',
       category: 'legal',
@@ -526,7 +526,7 @@ describe('Traditional Chinese family column 007 — Taiwan divorce procedure Q&A
   it('separates Articles 1056 and 1057, child support, property, cohabitation, and third-party claims', () => {
     const section = sectionBody(parsed.content, headings[6]);
     const requiredPhrases = [
-      '民法第1056條之損害賠償，係於裁判離婚時，就有責他方所生財產上損害，以及符合法定要件之非財產上損害，分別審酌之請求。',
+      '民法第1056條之損害賠償，係於裁判離婚時，就有責他方所生財產上損害，以及符合法定要件（同條第2項但書：以受害人無過失者為限）之非財產上損害，分別審酌之請求。',
       '民法第1057條之離婚後贍養費，以因裁判離婚致無過失配偶陷於生活困難為前提。',
       '未成年子女之扶養，係父母與子女間之權利義務，與第1057條前配偶間之贍養不同。',
       '第1030條之1剩餘財產差額分配則屬夫妻財產制之結算，不能代替損害賠償或贍養。',

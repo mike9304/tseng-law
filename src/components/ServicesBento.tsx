@@ -1,12 +1,15 @@
 import Link from 'next/link';
 import type { SiteLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
+import { EN_HOME_SERVICES_ASSISTANCE } from '@/data/en-service-scope';
 import { getServiceSlugs } from '@/data/service-details';
+import CorporateAdvisoryLink from '@/components/CorporateAdvisoryLink';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import ServicePracticeIcon from '@/components/ServicePracticeIcon';
 import { homeServicesTextSurfaceIds } from '@/lib/builder/registry';
 import { SurfaceText } from '@/lib/builder/surface-context';
+import styles from './HomeEditorial.module.css';
 
 function compactServiceSummary(description: string, maxLength = 120): string {
   const text = description.replace(/\s+/g, ' ').trim();
@@ -26,15 +29,21 @@ export default function ServicesBento({
   locale,
   id,
   variant = 'alt',
-  tone = 'light'
+  tone = 'light',
+  showHeader = true,
+  presentation,
 }: {
   locale: SiteLocale;
   id?: string;
   variant?: 'default' | 'alt';
   tone?: 'light' | 'dark';
+  showHeader?: boolean;
+  presentation?: 'editorial';
 }) {
   const { services } = siteContent[locale];
+  const editorial = presentation === 'editorial';
   const sectionClass = variant === 'alt' ? 'section section--gray alt' : 'section section--light';
+  const HeadingTag: 'h2' | 'h3' = showHeader ? 'h3' : 'h2';
   const detailLabel = locale === 'ko'
     ? '자세히 보기 →'
     : locale === 'zh-hant'
@@ -51,18 +60,28 @@ export default function ServicesBento({
   });
 
   return (
-    <section className={sectionClass} id={id} data-tone={tone}>
+    <section
+      className={`${sectionClass} services-bento${editorial ? ` ${styles.servicesEditorial}` : ''}`}
+      id={id}
+      data-tone={tone}
+      data-presentation={editorial ? 'editorial' : undefined}
+      aria-label={showHeader ? undefined : services.title}
+    >
       <div className="container">
-        <SectionLabel data-builder-surface-key={homeServicesTextSurfaceIds[0]}>
-          <SurfaceText surfaceKey={homeServicesTextSurfaceIds[0]}>{services.label}</SurfaceText>
-        </SectionLabel>
-        <h2 className="section-title" data-builder-surface-key={homeServicesTextSurfaceIds[1]}>
-          <SurfaceText surfaceKey={homeServicesTextSurfaceIds[1]}>{services.title}</SurfaceText>
-        </h2>
-        <p className="section-lede" data-builder-surface-key={homeServicesTextSurfaceIds[2]}>
-          <SurfaceText surfaceKey={homeServicesTextSurfaceIds[2]}>{services.description}</SurfaceText>
-        </p>
-        <OrnamentDivider />
+        {showHeader ? (
+          <>
+            <SectionLabel data-builder-surface-key={homeServicesTextSurfaceIds[0]}>
+              <SurfaceText surfaceKey={homeServicesTextSurfaceIds[0]}>{services.label}</SurfaceText>
+            </SectionLabel>
+            <h2 className="section-title" data-builder-surface-key={homeServicesTextSurfaceIds[1]}>
+              <SurfaceText surfaceKey={homeServicesTextSurfaceIds[1]}>{services.title}</SurfaceText>
+            </h2>
+            <p className="section-lede" data-builder-surface-key={homeServicesTextSurfaceIds[2]}>
+              <SurfaceText surfaceKey={homeServicesTextSurfaceIds[2]}>{services.description}</SurfaceText>
+            </p>
+            <OrnamentDivider />
+          </>
+        ) : null}
         <div className="services-detail-list services-card-grid">
           {services.items.map((item, index) => {
             const anchor = item.href.split('#')[1];
@@ -80,11 +99,11 @@ export default function ServicesBento({
                     <span className="service-icon" aria-hidden>
                       <ServicePracticeIcon index={index} />
                     </span>
-                    <h3 className="services-detail-title">{item.title}</h3>
+                    <HeadingTag className="services-detail-title">{item.title}</HeadingTag>
                   </div>
                   <div className="services-detail-body services-card-body">
                     <p className="services-detail-desc services-card-summary">
-                      {compactServiceSummary(item.description)}
+                      {editorial ? item.description : compactServiceSummary(item.description)}
                     </p>
                     {serviceSlugs[index] && (
                       <Link
@@ -101,6 +120,16 @@ export default function ServicesBento({
             );
           })}
         </div>
+        {locale === 'en' ? (
+          <p>
+            {EN_HOME_SERVICES_ASSISTANCE.beforeContact}
+            <Link href={`/${locale}/contact`}>
+              {EN_HOME_SERVICES_ASSISTANCE.contactLabel}
+            </Link>
+            {EN_HOME_SERVICES_ASSISTANCE.afterContact}
+          </p>
+        ) : null}
+        <CorporateAdvisoryLink locale={locale} />
       </div>
     </section>
   );

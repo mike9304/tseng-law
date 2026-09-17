@@ -50,6 +50,13 @@ const sensitiveRouteSources = [
 const nextConfig = {
   distDir,
   reactStrictMode: true,
+  // Column markdown is resolved through a locale→directory map (src/lib/column-locales.ts),
+  // so Vercel's file tracing can no longer see the directories statically. Without this,
+  // production lambdas lack src/content/columns-* and en/ja/zh-hant home + /columns 500
+  // (2026-09-09 outage after 81a4cfe1). Keep every column locale directory bundled.
+  outputFileTracingIncludes: {
+    '/**': ['./src/content/columns*/**/*'],
+  },
   webpack(config, { dev }) {
     if (dev) {
       config.watchOptions = {
@@ -134,6 +141,16 @@ const nextConfig = {
           { key: 'X-Robots-Tag', value: 'noindex, noarchive' },
         ],
       })),
+      // Next retains configured headers over route Response headers, so these
+      // two routes need their existing no-referrer contract applied last.
+      {
+        source: '/api/ai/mcp',
+        headers: [{ key: 'Referrer-Policy', value: 'no-referrer' }],
+      },
+      {
+        source: '/api/ai/openapi.json',
+        headers: [{ key: 'Referrer-Policy', value: 'no-referrer' }],
+      },
     ];
   },
   async redirects() {
@@ -181,6 +198,36 @@ const nextConfig = {
         ],
         destination: 'https://tseng-law.com/:path*',
         permanent: true
+      },
+      {
+        source: '/zh',
+        destination: '/zh-hant',
+        permanent: true,
+      },
+      {
+        source: '/zh/:path*',
+        destination: '/zh-hant/:path*',
+        permanent: true,
+      },
+      {
+        source: '/zh-tw',
+        destination: '/zh-hant',
+        permanent: true,
+      },
+      {
+        source: '/zh-tw/:path*',
+        destination: '/zh-hant/:path*',
+        permanent: true,
+      },
+      {
+        source: '/jp',
+        destination: '/ja',
+        permanent: true,
+      },
+      {
+        source: '/jp/:path*',
+        destination: '/ja/:path*',
+        permanent: true,
       },
       ...legacyColumnRedirects,
       ...legacyInsightsRedirects,

@@ -23,8 +23,8 @@ const jaParsed = matter(jaRaw);
 const EXPECTED_JA_TITLE = '従業員が自発的に退職しても退職金を受け取れる例外';
 const EXPECTED_KO_TITLE = '직원이 자발적으로 퇴사해도 퇴직금을 받을 수 있는 예외';
 const EXPECTED_JA_BODY_SHA256 =
-  '9ac7bdfb406ef60dae041cb6e31a22b711bfbbf455ff89f160a2c3873f0dae64';
-const EXPECTED_VISIBLE_CHARACTER_COUNT = 1116;
+  '5adfa30b808a3e11e296ff6fba92fee4936d6e20503c6f916e0491b76ef40833';
+const EXPECTED_VISIBLE_CHARACTER_COUNT = 1162;
 
 function extractVisibleText(markdown: string): string {
   return markdown
@@ -60,7 +60,7 @@ describe('Japanese labor column 009 mirror', () => {
     expect(jaParsed.data).toEqual({
       title: EXPECTED_JA_TITLE,
       url: 'https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외',
-      lastmod: '2025-09-13',
+      lastmod: '2026-09-10',
       date_display: '2025年9月13日',
       read_time: '約2分',
       categories: ['台湾法律情報'],
@@ -75,10 +75,11 @@ describe('Japanese labor column 009 mirror', () => {
       '../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg',
     ]);
     expect(
-      Array.from(jaParsed.content.matchAll(/]\((\/ja\/[^)]+)\)/g), (match) => match[1]),
+      Array.from(jaParsed.content.matchAll(/]\((\/ko\/[^)]+)\)/g), (match) => match[1]),
     ).toEqual([
-      '/ja/taiwan-litigation-lawyer',
-      '/ja/services/labor',
+      '/ko/taiwan-litigation-lawyer',
+      '/ko/korean-lawyer-in-taiwan',
+      '/ko/services/labor',
     ]);
   });
 

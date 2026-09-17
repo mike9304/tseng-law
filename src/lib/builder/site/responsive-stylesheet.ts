@@ -4,6 +4,11 @@ import type {
   ResponsiveOverride,
 } from '@/lib/builder/canvas/types';
 import { isContainerLikeKind } from '@/lib/builder/canvas/types';
+import {
+  legacyContactScaffoldRole,
+  matchLegacyContactScaffold,
+  type LegacyContactScaffoldIds,
+} from '@/lib/builder/canvas/legacy-contact-scaffold';
 import { computeTopLevelFlowSectionMetrics, isTopLevelFlowSection } from '@/lib/builder/canvas/flow';
 import { parentUsesFlowLayout } from '@/lib/builder/canvas/tree';
 import {
@@ -36,28 +41,39 @@ function buildResponsiveOverrideRule(
   node: BuilderCanvasNode,
   override: ResponsiveOverride,
   inFlowContext = false,
+  scaffold: LegacyContactScaffoldIds | null = null,
 ): string {
   if (!override) return '';
   const declarations: string[] = [];
   const isFlowSection = isTopLevelFlowSection(node);
+  const isLegacyContactScaffold = legacyContactScaffoldRole(scaffold, node.id) != null;
   if (override.rect) {
     const r = override.rect;
-    // M177: For nodes inside flex/grid containers, skip left/top entirely.
-    // Their positioning is driven by flow (flex/grid + DOM order), not absolute rect coords.
-    // Responsive overrides for x/y would incorrectly offset the element even when position:relative.
-    // Width/height overrides remain valid and useful for sizing flex items.
-    if (!inFlowContext && !isFlowSection) {
-      if (isTopLevelPageRoot(node)) {
-        declarations.push('position: relative');
-      } else {
-        declarations.push(`position: ${node.sticky ? 'sticky' : 'absolute'}`);
-        if (r.x !== undefined) declarations.push(`left: ${r.x}px`);
-        if (r.y !== undefined) declarations.push(`top: ${r.y}px`);
+    if (isLegacyContactScaffold) {
+      declarations.push('position: relative');
+      if (r.width !== undefined) declarations.push(`width: ${r.width}px`);
+      declarations.push('height: auto');
+      if (r.height !== undefined) {
+        declarations.push(`min-height: ${r.height}px`);
       }
-    }
-    if (r.width !== undefined) declarations.push(`width: ${r.width}px`);
-    if (r.height !== undefined) {
-      declarations.push(`${isFlowSection ? 'min-height' : 'height'}: ${r.height}px`);
+    } else {
+      // M177: For nodes inside flex/grid containers, skip left/top entirely.
+      // Their positioning is driven by flow (flex/grid + DOM order), not absolute rect coords.
+      // Responsive overrides for x/y would incorrectly offset the element even when position:relative.
+      // Width/height overrides remain valid and useful for sizing flex items.
+      if (!inFlowContext && !isFlowSection) {
+        if (isTopLevelPageRoot(node)) {
+          declarations.push('position: relative');
+        } else {
+          declarations.push(`position: ${node.sticky ? 'sticky' : 'absolute'}`);
+          if (r.x !== undefined) declarations.push(`left: ${r.x}px`);
+          if (r.y !== undefined) declarations.push(`top: ${r.y}px`);
+        }
+      }
+      if (r.width !== undefined) declarations.push(`width: ${r.width}px`);
+      if (r.height !== undefined) {
+        declarations.push(`${isFlowSection ? 'min-height' : 'height'}: ${r.height}px`);
+      }
     }
   }
   if (override.hidden) {
@@ -157,6 +173,7 @@ function buildTopLevelFlowSectionStylesheetForViewport(
 export function buildResponsiveStylesheet(nodes: BuilderCanvasNode[]): string {
   const tabletRules: string[] = [];
   const mobileRules: string[] = [];
+  const scaffold = matchLegacyContactScaffold(nodes);
 
   // Build lookup for efficient parent layout checks (M177 responsive-in-flow)
   const nodesById = new Map(nodes.map((n) => [n.id, n]));
@@ -168,7 +185,7 @@ export function buildResponsiveStylesheet(nodes: BuilderCanvasNode[]): string {
     const inFlowContext = parentUsesFlowLayout(node, nodesById);
 
     if (responsive.tablet) {
-      const rule = buildResponsiveOverrideRule(node, responsive.tablet, inFlowContext);
+      const rule = buildResponsiveOverrideRule(node, responsive.tablet, inFlowContext, scaffold);
       if (rule) tabletRules.push(rule);
     }
 
@@ -184,7 +201,7 @@ export function buildResponsiveStylesheet(nodes: BuilderCanvasNode[]): string {
       if (merged.rect && Object.keys(merged.rect).length === 0) {
         merged.rect = undefined;
       }
-      const rule = buildResponsiveOverrideRule(node, merged, inFlowContext);
+      const rule = buildResponsiveOverrideRule(node, merged, inFlowContext, scaffold);
       if (rule) mobileRules.push(rule);
     }
   }

@@ -1,0 +1,17 @@
+# WO-S2b-R1 — llms.txt 4로케일 라우트 배선 (Opus 5, 소형)
+
+## 공통 규칙
+작업트리 ~/Projects/tseng-law-sea-seo-20260909 만. 다른 워커가 src/data/intent-pages.ts·src/app/[locale]/taiwan-work-permit-renewal-lawyer/**·src/app/sitemap.ts·src/data/international-guidance-answers.ts 를 편집 중 — 건드리지 말 것. 커밋·빌드·전체 스위트 금지. 언어 계약(availableLanguage/상담언어 4개) 동일.
+
+## 목표
+커밋에 들어간 `buildGuidanceLlmsTxt(locale)`(src/lib/llms-txt.ts)가 실제 URL로 서빙되게 한다.
+1. `src/app/[locale]/llms.txt/route.ts`: locale이 GUIDANCE_LOCALES_4(vi/id/th/fil)면 `buildGuidanceLlmsTxt(locale)`를 text/plain; charset=utf-8 로 반환. 기존 4로케일 동작·헤더(캐시 등)는 그대로.
+2. 루트 `/llms.txt`(src/lib/llms-txt.ts 루트 빌더): 8KB 상한을 지키며 안내 4로케일 카탈로그 링크 4줄만 추가(예: `- /vi/llms.txt — Tiếng Việt (guidance)`). 기존 "로케일 카탈로그 정확히 4개" 테스트가 있으면 그 단언을 "사이트 로케일 4 + 안내 로케일 4"로 갱신하되 8KB 단언 유지.
+3. robots.ts가 llms.txt 경로를 명시 허용/차단하고 있으면 4로케일도 같은 규칙 적용(없으면 손대지 않음).
+## 허용 파일
+src/app/[locale]/llms.txt/route.ts, src/lib/llms-txt.ts(루트 빌더 부분), src/app/robots.ts(조건부), src/app/[locale]/__tests__/llms-discovery.test.tsx, src/app/__tests__/robots.test.ts(조건부)
+## 테스트(지정 파일만)
+- route GET /vi/llms.txt → 200, text/plain, 본문에 /vi/ URL 10개; /xx/llms.txt(비허용 로케일) → 기존 동작(404) 유지
+- 루트 llms.txt 8KB 이하, 안내 카탈로그 4줄 존재
+## 완료 기준
+1. npx vitest run 'src/app/[locale]/__tests__/llms-discovery.test.tsx' src/app/__tests__/robots.test.ts 통과(출력) 2. 허용 파일 밖 변경 0 3. 보고 형식(변경 파일·명령·PASS/FAIL·미해결)

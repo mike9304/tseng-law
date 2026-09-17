@@ -6,17 +6,22 @@ import PageHeader from '@/components/PageHeader';
 import SectionLabel from '@/components/SectionLabel';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import AttorneyAuthorityCard from '@/components/AttorneyAuthorityCard';
-import { getIntentPage, type IntentPageSlug } from '@/data/intent-pages';
+import CorporateAdvisorySection from '@/components/CorporateAdvisorySection';
+import { CORPORATE_ADVISORY_ANCHOR, getCorporateAdvisory } from '@/data/corporate-advisory';
+import { getIntentPage, getIntentTopFaqs, type IntentPageSlug } from '@/data/intent-pages';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
 import { getColumnPost } from '@/lib/columns';
 import type { SiteLocale } from '@/lib/locales';
 import { getServiceArea } from '@/data/service-details';
 import { getJapaneseServiceDetail } from '@/data/service-details-ja';
+import styles from './IntentLandingPage.module.css';
 import { buildBreadcrumbJsonLd, buildCollectionPageJsonLd, buildPersonJsonLd } from '@/lib/seo';
 import {
   getConsultationCtaLabel,
   getConsultationPublicMailto,
+  getSensitiveInformationWarning,
 } from '@/lib/consultation/public-contact';
+import { getAiIntakeDiscovery } from '@/lib/ai-intake/discovery';
 
 function summarize(text: string, maxLength = 180) {
   return text.length > maxLength ? `${text.slice(0, maxLength - 1).trimEnd()}…` : text;
@@ -83,7 +88,7 @@ const labels = {
     detailLabel: 'PROCESS',
     detailTitle: 'Workflow and Preparation',
     process: 'Consultation flow',
-    prepare: 'Materials to prepare',
+    prepare: 'Initial summary and documents to organize later',
     caution: 'Points that are often missed',
     servicesLabel: 'RELATED SERVICES',
     servicesTitle: 'Related Services',
@@ -96,10 +101,10 @@ const labels = {
     attorneyHeading: 'Lead attorney most relevant to this search',
     ctaLabel: 'NEXT STEP',
     ctaTitle: 'If you want the direction clarified quickly',
-    ctaText: 'Company setup, investment, litigation, and family disputes all need different early-stage structuring. Send the core materials first and we can route the matter into the right consultation flow.',
-    contact: 'Book Consultation',
+    ctaText: 'Company setup, litigation, residence-permit assistance, and tax-accounting assistance are reviewed as Taiwan-law matters. Email a brief initial summary of the issue, the Taiwan connection, any deadline, and how we can reach you. Other documents can follow after attorney instructions. Use Fees and scope for the current consultation structure.',
+    contact: 'Email about your Taiwan matter',
     profile: 'View Wei Tseng Profile',
-    pricing: 'View Pricing',
+    pricing: 'Fees and scope',
   },
   ja: {
     terms: '関連検索キーワード',
@@ -109,7 +114,7 @@ const labels = {
     detailLabel: '手続きの流れ',
     detailTitle: '進め方と準備資料',
     process: '相談・手続きの進め方',
-    prepare: '事前に準備するとよい資料',
+    prepare: '初回の概要と、後ほど整理する資料',
     caution: '見落としやすいポイント',
     servicesLabel: '関連サービス',
     servicesTitle: '関連サービス',
@@ -122,12 +127,29 @@ const labels = {
     attorneyHeading: 'この検索テーマに最も近い担当台湾弁護士',
     ctaLabel: '次のステップ',
     ctaTitle: '案件に合った方向性をすぐ整理したい場合',
-    ctaText: '会社設立、投資、訴訟、家族間の紛争など、性質の異なる案件は初期の組み立て方が異なります。資料をお送りいただければ、曾雋崴台湾弁護士につながる相談の流れをまずご案内します。',
-    contact: '相談のお問い合わせ',
+    ctaText: '会社設立、投資、訴訟、家族間の紛争など、性質の異なる案件は初期の組み立て方が異なります。まずは案件の簡潔な概要、期限、連絡先をメールでお送りください。その他の資料は弁護士の案内後にご提出ください。',
+    contact: '台湾の法律問題をメールで相談',
     profile: '曾雋崴台湾弁護士のプロフィールを見る',
-    pricing: '費用案内を見る',
+    pricing: '費用・対応範囲',
   },
 } as const;
+
+const intentDirectContact = {
+  en: {
+    support: 'Consultations in English, Chinese, Korean, and Japanese.',
+    initialNote:
+      'First email: a brief overview of the issue or business, the Taiwan connection, any deadline, and how we can reach you. Time zone and how you found us are optional. Sensitive materials only after attorney instructions.',
+  },
+  ja: {
+    support: '英語・日本語・韓国語でご相談いただけます。中国語での相談にも対応しています。',
+    initialNote:
+      '初回メールでは、争点または事業の簡潔な概要、期限、連絡先のみをお送りください。機微情報は弁護士の指示後に提出してください。',
+  },
+} as const;
+
+function isDirectContactLocale(locale: SiteLocale): locale is 'en' | 'ja' {
+  return locale === 'en' || locale === 'ja';
+}
 
 const relatedResources: Record<
   IntentPageSlug,
@@ -287,6 +309,135 @@ const relatedResources: Record<
   ],
 };
 
+const advisoryResource: {
+  href: string;
+  label: Record<SiteLocale, string>;
+} = {
+  href: `taiwan-lawyer#${CORPORATE_ADVISORY_ANCHOR}`,
+  label: {
+    ko: '대만 기업 법무 자문',
+    'zh-hant': '台灣企業法務顧問',
+    en: 'Taiwan corporate legal advisory',
+    ja: '台湾の企業法務・法律顧問',
+  },
+};
+
+function relatedResourceByHref(
+  slug: IntentPageSlug,
+  href: string,
+) {
+  return relatedResources[slug].find((item) => item.href === href);
+}
+
+const enAssistanceResources: Array<{ href: string; label: Record<SiteLocale, string> }> = [
+  {
+    href: 'services/investment',
+    label: {
+      ko: 'Company formation and tax-accounting assistance',
+      'zh-hant': 'Company formation and tax-accounting assistance',
+      en: 'Company formation and tax-accounting assistance',
+      ja: 'Company formation and tax-accounting assistance',
+    },
+  },
+  {
+    href: 'contact',
+    label: {
+      ko: 'Residence-permit assistance',
+      'zh-hant': 'Residence-permit assistance',
+      en: 'Residence-permit assistance',
+      ja: 'Residence-permit assistance',
+    },
+  },
+];
+
+const enOfficialReferences: Array<{ href: string; label: Record<SiteLocale, string> }> = [
+  {
+    href: 'https://investtaiwan.nat.gov.tw/showPageengInvestmentStatus01?lang=eng&menuNum=7&search=InvestmentStatus01',
+    label: {
+      ko: 'Invest Taiwan — official investment information (reference)',
+      'zh-hant': 'Invest Taiwan — official investment information (reference)',
+      en: 'Invest Taiwan — official investment information (reference)',
+      ja: 'Invest Taiwan — official investment information (reference)',
+    },
+  },
+  {
+    href: 'https://www.immigration.gov.tw/5475/5478/141465/141469/',
+    label: {
+      ko: 'National Immigration Agency — residence information (reference)',
+      'zh-hant': 'National Immigration Agency — residence information (reference)',
+      en: 'National Immigration Agency — residence information (reference)',
+      ja: 'National Immigration Agency — residence information (reference)',
+    },
+  },
+  {
+    href: 'https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax',
+    label: {
+      ko: 'Ministry of Finance eTax — profit-seeking enterprise income tax Q&A (reference)',
+      'zh-hant': 'Ministry of Finance eTax — profit-seeking enterprise income tax Q&A (reference)',
+      en: 'Ministry of Finance eTax — profit-seeking enterprise income tax Q&A (reference)',
+      ja: 'Ministry of Finance eTax — profit-seeking enterprise income tax Q&A (reference)',
+    },
+  },
+];
+
+function isExternalHref(href: string) {
+  return href.startsWith('https://') || href.startsWith('http://');
+}
+
+function resourceHref(locale: SiteLocale, href: string) {
+  return isExternalHref(href) ? href : `/${locale}/${href}`;
+}
+
+function relatedResourcesFor(locale: SiteLocale, slug: IntentPageSlug) {
+  const base = relatedResources[slug];
+  const advisory = getCorporateAdvisory(locale) ? advisoryResource : null;
+
+  if (slug === 'taiwan-semiconductor-supplier-legal') {
+    return advisory ? [...base, advisory] : base;
+  }
+
+  if (locale === 'en') {
+    const assistance =
+      slug === 'taiwan-litigation-lawyer' ? [] : enAssistanceResources;
+    const official =
+      slug === 'taiwan-litigation-lawyer' ? [] : enOfficialReferences;
+
+    if (slug === 'taiwan-lawyer') {
+      return [
+        relatedResourceByHref(slug, 'taiwan-company-setup-lawyer'),
+        relatedResourceByHref(slug, 'taiwan-litigation-lawyer'),
+        advisory,
+        relatedResourceByHref(slug, 'guides/taiwan-company-setup'),
+        ...assistance,
+        ...official,
+        relatedResourceByHref(slug, 'korean-lawyer-in-taiwan'),
+      ].filter((item): item is NonNullable<typeof item> => item != null);
+    }
+    if (slug === 'taiwan-company-setup-lawyer') {
+      return [
+        relatedResourceByHref(slug, 'guides/taiwan-company-setup'),
+        relatedResourceByHref(slug, 'taiwan-lawyer'),
+        advisory,
+        ...assistance,
+        ...official,
+        relatedResourceByHref(slug, 'korean-lawyer-in-taiwan'),
+      ].filter((item): item is NonNullable<typeof item> => item != null);
+    }
+    return [
+      relatedResourceByHref(slug, 'taiwan-lawyer'),
+      advisory,
+      ...assistance,
+      relatedResourceByHref(slug, 'korean-lawyer-in-taiwan'),
+    ].filter((item): item is NonNullable<typeof item> => item != null);
+  }
+
+  if (advisory) {
+    return [...base, advisory];
+  }
+
+  return base;
+}
+
 export default function IntentLandingPage({
   locale,
   slug,
@@ -305,6 +456,8 @@ export default function IntentLandingPage({
   const l = labels[locale];
   const attorneyHeading = page.attorneyHeadingOverride ?? l.attorneyHeading;
   const ctaText = page.ctaTextOverride ?? l.ctaText;
+  const topFaqs = getIntentTopFaqs(page);
+  const ai = getAiIntakeDiscovery(locale);
   const services = page.serviceSlugs
     .map((item) => {
       const area = getServiceArea(item);
@@ -395,19 +548,34 @@ export default function IntentLandingPage({
       <JsonLd data={faqSchema} />
 
       <PageHeader locale={locale} label={page.label} title={page.title} description={page.description}>
-        <div className="intent-chip-wrap" aria-label={l.terms}>
-          {page.searchTerms.map((term) => (
-            <span key={term} className="intent-chip">
-              {term}
-            </span>
-          ))}
-        </div>
+        {isDirectContactLocale(locale) ? (
+          <div className="contact-email-actions">
+            <p className="contact-email-actions__label">{intentDirectContact[locale].support}</p>
+            <div className="contact-email-actions__row">
+              <a href={getConsultationPublicMailto(locale)} className="button">
+                {l.contact}
+              </a>
+              <Link href={`/${locale}/pricing`} className="button button--outline">
+                {l.pricing}
+              </Link>
+            </div>
+            <p className="contact-email-actions__note">{intentDirectContact[locale].initialNote}</p>
+          </div>
+        ) : (
+          <div className="intent-chip-wrap" aria-label={l.terms}>
+            {page.searchTerms.map((term) => (
+              <span key={term} className="intent-chip">
+                {term}
+              </span>
+            ))}
+          </div>
+        )}
       </PageHeader>
 
-      <section className="section section--light">
-        <div className="container intent-layout">
-          <div className="intent-main">
-            <article className="intent-panel">
+      <section className={`section section--light ${styles.root}`}>
+        <div className={`container intent-layout ${styles.layout}`}>
+          <div className={`intent-main ${styles.main}${locale === 'en' ? ` ${styles.mainWide}` : ''}`}>
+            <article className={`intent-panel ${styles.panel}`}>
               <h2 className="profile-card-title">{l.overview}</h2>
               <ul className="intent-article-list">
                 {page.heroPoints.map((item) => (
@@ -416,8 +584,8 @@ export default function IntentLandingPage({
               </ul>
             </article>
 
-            <div className="intent-subgrid">
-              <article className="intent-panel">
+            <div className={`intent-subgrid ${styles.subgrid}`}>
+              <article className={`intent-panel ${styles.panel}`}>
                 <h2 className="profile-card-title">{l.fit}</h2>
                 <ul className="intent-article-list">
                   {page.idealFor.map((item) => (
@@ -426,7 +594,7 @@ export default function IntentLandingPage({
                 </ul>
               </article>
 
-              <article className="intent-panel">
+              <article className={`intent-panel ${styles.panel}`}>
                 <h2 className="profile-card-title">{l.points}</h2>
                 <ul className="intent-article-list">
                   {page.reviewPoints.map((item) => (
@@ -437,19 +605,40 @@ export default function IntentLandingPage({
             </div>
           </div>
 
-          <aside className="intent-sidebar">
+          <aside className={`intent-sidebar ${styles.sidebar}`}>
             <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />
           </aside>
         </div>
       </section>
 
-      <section className="section section--gray">
+      {topFaqs.length > 0 ? (
+        <section className="section section--light">
+          <div className="container">
+            <article className="intent-panel">
+              <dl className="intent-article-list">
+                {topFaqs.map((item) => (
+                  <div key={item.question}>
+                    <dt className="profile-card-title">{item.question}</dt>
+                    <dd>{item.answer}</dd>
+                  </div>
+                ))}
+              </dl>
+            </article>
+          </div>
+        </section>
+      ) : null}
+
+      {slug === 'taiwan-lawyer' && (locale === 'en' || locale === 'ja') ? (
+        <CorporateAdvisorySection locale={locale} />
+      ) : null}
+
+      <section className={`section section--gray ${styles.root}`}>
         <div className="container">
           <SectionLabel>{l.detailLabel}</SectionLabel>
           <h2 className="section-title">{l.detailTitle}</h2>
           <OrnamentDivider />
-          <div className="intent-triple-grid">
-            <article className="intent-panel">
+          <div className={`intent-triple-grid ${styles.triple}`}>
+            <article className={`intent-panel ${styles.panel}`}>
               <h3 className="profile-card-title">{l.process}</h3>
               <ul className="intent-article-list">
                 {page.processFlow.map((item) => (
@@ -458,16 +647,19 @@ export default function IntentLandingPage({
               </ul>
             </article>
 
-            <article className="intent-panel">
+            <article className={`intent-panel ${styles.panel}`}>
               <h3 className="profile-card-title">{l.prepare}</h3>
               <ul className="intent-article-list">
                 {page.prepareChecklist.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
+              {isDirectContactLocale(locale) ? (
+                <p className="contact-email-actions__note">{getSensitiveInformationWarning(locale)}</p>
+              ) : null}
             </article>
 
-            <article className="intent-panel">
+            <article className={`intent-panel ${styles.panel}`}>
               <h3 className="profile-card-title">{l.caution}</h3>
               <ul className="intent-article-list">
                 {page.cautionPoints.map((item) => (
@@ -479,14 +671,14 @@ export default function IntentLandingPage({
         </div>
       </section>
 
-      <section className="section section--gray">
+      <section className={`section section--gray ${styles.root}`}>
         <div className="container">
           <SectionLabel>{l.servicesLabel}</SectionLabel>
           <h2 className="section-title">{l.servicesTitle}</h2>
           <OrnamentDivider />
           <div className="grid-bento contact-grid">
             {services.map((service) => (
-              <article key={service.slug} className="card legal-card">
+              <article key={service.slug} className={`card legal-card ${styles.serviceCard}`}>
                 <h3 className="card-title">{service.title}</h3>
                 <div className="legal-card-copy">
                   <p>{summarize(service.intro)}</p>
@@ -501,12 +693,12 @@ export default function IntentLandingPage({
       </section>
 
       {columns.length > 0 ? (
-        <section className="section section--light">
+        <section className={`section section--light ${styles.root}`}>
           <div className="container">
             <SectionLabel>{l.columnsLabel}</SectionLabel>
             <h2 className="section-title">{l.columnsTitle}</h2>
             <OrnamentDivider />
-            <div className="svc-columns-grid">
+            <div className={`svc-columns-grid ${styles.columnsGrid}`}>
               {columns.map((column) => (
                 <Link key={column.slug} href={`/${locale}/columns/${column.slug}`} className="svc-col-card">
                   <div className="svc-col-card-media">
@@ -528,20 +720,30 @@ export default function IntentLandingPage({
         </section>
       ) : null}
 
-      <section className="section section--light">
+      <section className={`section section--light ${styles.root}`}>
         <div className="container">
           <SectionLabel>{l.resourcesLabel}</SectionLabel>
           <h2 className="section-title">{l.resourcesTitle}</h2>
           <OrnamentDivider />
-          <article className="intent-panel">
+          <article className={`intent-panel ${styles.resources}`}>
             <ul className="intent-article-list">
-              {relatedResources[slug].map((item) => (
-                <li key={item.href}>
-                  <Link href={`/${locale}/${item.href}`} className="link-underline">
-                    {item.label[locale]}
-                  </Link>
-                </li>
-              ))}
+              {relatedResourcesFor(locale, slug).map((item) => {
+                const href = resourceHref(locale, item.href);
+                const label = item.label[locale];
+                return (
+                  <li key={item.href}>
+                    {isExternalHref(item.href) ? (
+                      <a href={href} className="link-underline" target="_blank" rel="noopener noreferrer">
+                        {label}
+                      </a>
+                    ) : (
+                      <Link href={href} className="link-underline">
+                        {label}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </article>
         </div>
@@ -549,13 +751,14 @@ export default function IntentLandingPage({
 
       <FAQAccordion locale={locale} items={page.faq} sectionClassName="section section--gray" />
 
-      <section className="section section--light">
+      <section className={`section section--light ${styles.root}`}>
         <div className="container">
-          <div className="intent-cta-card">
+          <div className={`intent-cta-card ${styles.ctaCard}`}>
             <SectionLabel>{l.ctaLabel}</SectionLabel>
             <h2 className="section-title">{l.ctaTitle}</h2>
             <p className="section-lede">{ctaText}</p>
-            <div className="intent-cta-actions">
+            {ai.enabled ? <p className="section-lede">{ai.supportingCopy}</p> : null}
+            <div className={`intent-cta-actions ${styles.ctaActions}`}>
               <a
                 href={getConsultationPublicMailto(locale)}
                 className="button"
@@ -563,6 +766,16 @@ export default function IntentLandingPage({
               >
                 {l.contact}
               </a>
+              {ai.enabled ? (
+                <Link
+                  href={ai.href}
+                  className="button button--outline"
+                  data-cta="intent-ai-intake-entry"
+                  data-cta-dest="ai-intake"
+                >
+                  {ai.label}
+                </Link>
+              ) : null}
               <Link href={`/${locale}/pricing`} className="button button--outline">
                 {l.pricing}
               </Link>
@@ -572,6 +785,9 @@ export default function IntentLandingPage({
                 </Link>
               ) : null}
             </div>
+            {isDirectContactLocale(locale) ? (
+              <p className="contact-email-actions__note">{intentDirectContact[locale].initialNote}</p>
+            ) : null}
           </div>
         </div>
       </section>

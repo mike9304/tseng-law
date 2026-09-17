@@ -1,0 +1,31 @@
+# WO-S3-taiwan-work-permit-renewal-lawyer — 신규 인텐트 페이지 초안 (Opus 5) — 총괄이 <…> 채워 발주
+
+## 공통 규칙 (위반 시 반려)
+- 작업트리: ~/Projects/tseng-law-sea-seo-20260909 에서만 읽고 쓴다. 다른 워크트리·main 작업트리 접근 금지. 인박스·타 세션 확인 불필요(단일 작성자 보장).
+- 실행 금지: 전체 테스트 스위트, playwright, npm run build, 커밋, push. 지정된 vitest 파일 1~2개만 실행.
+- 변경 금지 파일: src/data/international-guidance-content.ts, src/data/intent-pages.ts 의 기존 본문·기존 키, src/content/columns*/**, 팀·수임료·연락처·사례 데이터. (신규 키 추가만 WO가 허용한 경우 가능)
+- 언어 계약: vi/id/th/fil 은 안내 언어. 해당 언어로 상담·통역 가능을 암시하는 문구·메타·JSON-LD availableLanguage 금지. 상담 언어 표기는 "English / Chinese / Japanese / Korean" 만.
+- 광고 규정: 승소율·성공 보장·최고/유일 표현 금지.
+- 사실: 사이트에 이미 게재된 사실만 사용. 새 법률 주장은 문장 앞에 [변호사 검수 필요] 마커. 숫자·통계는 출처 URL+조회일+등급(A 공식통계/B 정부·협회/C 업계리서치/D 언론/E 추정) 없으면 "미확인".
+- 보고 형식(마지막에 반드시): (1) 변경 파일 목록 (2) 실행한 명령과 마지막 출력 3줄 (3) 완료 기준 항목별 PASS/FAIL (4) 미해결·못 한 것 — 못 한 것은 못 했다고 쓴다. 완료 기준을 느슨하게 바꾸지 않는다.
+
+## 목표
+S1 "없음+H" 셀 1개에 대한 안내 페이지 1개. 로케일 en (+ko·zh-hant·ja 동시, intent-pages 타입 계약), 슬러그 taiwan-work-permit-renewal-lawyer, 의도 ② 취업·거류 갱신(노동허가·ARC 갱신, 고용주·직종 변경). 안내 언어 계약 준수(상담은 EN/ZH/JA/KO).
+## 구현
+- src/data/intent-pages.ts 기존 키·본문 변경 금지. 신규 키 taiwan-work-permit-renewal-lawyer 추가(기존 타입 준수). 본문은 이번 WO의 en 1개만, 다른 로케일은 기존 en 폴백 규칙.
+- 라우트: src/app/[locale]/taiwan-company-setup-lawyer/page.tsx 를 복제해 src/app/[locale]/taiwan-work-permit-renewal-lawyer/page.tsx. generateMetadata·JSON-LD·hreflang 기존 패턴 그대로.
+- 본문 구조: 직접 답변(40~80단어) → 누가 해당되나 → 절차(기게재 사실만) → 비용은 /pricing 링크(숫자 금지) → FAQ 3~5 → 상담 언어 안내 → CTA(/contact).
+- 국가별 적응: VN·ID·TH·PH 출신 영어 독자 독자에게 익숙한 용어·기관명. 새 법률 주장 앞 [변호사 검수 필요].
+- sitemap.ts 신규 슬러그 포함 확인·필요 시 등록(+테스트).
+## 허용 파일
+src/data/intent-pages.ts(신규 키만), src/app/[locale]/taiwan-work-permit-renewal-lawyer/page.tsx(신규), src/app/sitemap.ts(+테스트), src/lib/__tests__/intent-taiwan-work-permit-renewal-lawyer.test.ts(신규)
+## 완료 기준
+1. 신규 테스트(본문 존재·단어수·금지어 0·FAQ 개수·sitemap 포함) 통과 출력 2. [변호사 검수 필요] 마커 개수 보고 3. 허용 파일 밖 변경 0
+
+## C1 전용 추가 지시
+- 초안 근거: docs/seo/sea-intent-map-2026-09.md §3 C1 행과 §3.1 제약 3(4로케일 동시 작성·STATIC_PATHS·라우트). 1줄 초안의 명제("노동허가와 ARC 갱신은 별개 신청, 고용주·직종 변경은 추가 신청")는 사이트에 없는 새 법률 서술이므로 해당 문장마다 `[변호사 검수 필요]` 마커.
+- 4로케일 본문: en을 주로 쓰고 ko·zh-hant·ja는 en의 충실한 번역(내용 동일, 각 언어 자연스럽게). 기존 `intent-pages.ts`의 `taiwan-company-setup-lawyer` 항목 구조(hero·sections·faq·cta 필드)를 그대로 따른다.
+- 설립≠거류 명제는 본문에 다시 쓰지 말고 `/en/taiwan-company-setup-lawyer` 링크 1개로 대체.
+- 상담 언어 문장: "Consultations are conducted in English, Chinese, Japanese or Korean." 4로케일 각 언어로.
+- 라우트 파일은 `src/app/[locale]/taiwan-company-setup-lawyer/page.tsx`를 복제하고 슬러그만 교체. `src/lib/public-route-policy.ts`·`src/lib/metrics/intent-route-report.ts`에 슬러그 목록이 있으면 추가(있는 경우에만, 각 파일의 기존 패턴대로).
+- 테스트 신규 `src/lib/__tests__/intent-taiwan-work-permit-renewal-lawyer.test.ts`: 4로케일 존재, 각 로케일 hero 답변 40~80단어(ja·zh-hant는 문자수 80~240), FAQ 3~5, 금지어 0(승소율/guarantee/保證/最高/唯一), sitemap.ts 출력에 4로케일 URL 포함, 마커 개수 ≥1 을 단언(마커가 있어야 main 금지 게이트가 작동).

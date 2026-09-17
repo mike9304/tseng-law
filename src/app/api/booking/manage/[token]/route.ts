@@ -24,6 +24,7 @@ import {
   applyRefundOutcome,
   computeRefundForCancel,
   evaluateBookingSelfServicePolicy,
+  refundAllowsCancelPersist,
   type BookingSelfServicePolicy,
 } from '@/lib/builder/bookings/refund';
 import { sendBookingCancellation } from '@/lib/builder/bookings/notifications';
@@ -194,7 +195,17 @@ export async function PATCH(request: NextRequest, props: { params: Promise<{ tok
       // Apply the cancellation policy + Stripe refund so customer-link
       // cancellations don't bypass the refund math that /api/booking/cancel
       // enforces for admin/web flows.
-      const outcome = await computeRefundForCancel(latestBooking, latestService ?? undefined);
+      let outcome;
+      try {
+        outcome = await computeRefundForCancel(latestBooking, latestService ?? undefined);
+      } catch (error) {
+        console.error('[booking/manage] refund computation failed:', error instanceof Error ? error.message : String(error));
+        return manageErrorResponse(locale, 'refund_failed', 502);
+      }
+      if (!refundAllowsCancelPersist(outcome)) {
+        return manageErrorResponse(locale, 'refund_failed', 502);
+      }
+      // TODO FN19-H2: external refund may already have succeeded; renewSlotLock/saveBooking can still fail. restorePackageCreditForBooking runs before persist (ordering risk). Durable refund-id ledger is out of scope.
       const cancelled = await restorePackageCreditForBooking(applyRefundOutcome(latestBooking, outcome, parsed.data.reason));
       const updated = timestamped(cancelled, latestBooking.createdAt);
       if (!await renewSlotLock(cancellationLease)) {
@@ -245,7 +256,6 @@ export async function PATCH(request: NextRequest, props: { params: Promise<{ tok
     }, { status: 409 });
   }
   const resourceIds = result.service.requiredResourceIds ?? [];
-  const endAt = addBookingDuration(parsed.data.startAt, result.service.durationMinutes);
   const slotKey = {
     serviceId: result.booking.serviceId,
     staffId: nextStaffId,
@@ -259,36 +269,65 @@ export async function PATCH(request: NextRequest, props: { params: Promise<{ tok
   }
 
   try {
+    // A prior mutation may finish after the initial read but before this lease.
+    const latest = await resolveBooking(params.token, fallbackLocale);
+    if ('error' in latest && latest.error) return latest.error;
+    if (!latest.booking || !latest.service) {
+      return manageErrorResponse(fallbackLocale, 'booking_not_manageable', 404);
+    }
+    const currentLocale = latest.booking.customer.locale;
+    if (latest.booking.status === 'cancelled') {
+      return manageErrorResponse(currentLocale, 'booking_already_cancelled', 409);
+    }
+    const currentResourceIds = latest.service.requiredResourceIds ?? [];
+    const lockedResources = new Set(resourceIds);
+    if (latest.booking.serviceId !== slotKey.serviceId
+      || (parsed.data.staffId || latest.booking.staffId) !== slotKey.staffId
+      || new Set(currentResourceIds).size !== lockedResources.size
+      || currentResourceIds.some((id) => !lockedResources.has(id))) {
+      return manageErrorResponse(currentLocale, 'slot_lock_conflict', 409);
+    }
+    const currentPolicy = localizePolicyReasons(
+      await evaluateBookingSelfServicePolicy(latest.booking, latest.service),
+      currentLocale,
+    );
+    if (!currentPolicy.canReschedule) {
+      return NextResponse.json({
+        ...getBookingManageApiErrorPayload(currentLocale, 'reschedule_unavailable'),
+        policy: currentPolicy,
+      }, { status: 409 });
+    }
+    const endAt = addBookingDuration(parsed.data.startAt, latest.service.durationMinutes);
     const available = await isSlotAvailable({
       ...slotKey,
-      excludeBookingId: result.booking.bookingId,
+      excludeBookingId: latest.booking.bookingId,
     });
-    if (!available) return manageErrorResponse(locale, 'slot_unavailable', 409);
+    if (!available) return manageErrorResponse(currentLocale, 'slot_unavailable', 409);
 
     const nextStaff = await getStaff(nextStaffId);
-    if (!nextStaff || !nextStaff.isActive) return manageErrorResponse(locale, 'staff_unavailable', 404);
+    if (!nextStaff || !nextStaff.isActive) return manageErrorResponse(currentLocale, 'staff_unavailable', 404);
 
     if (!await renewSlotLock(slotLease)) {
-      return manageErrorResponse(locale, 'booking_storage_unavailable', 503);
+      return manageErrorResponse(currentLocale, 'booking_storage_unavailable', 503);
     }
     const zoom = await maybeCreateBookingZoomLink({
-      service: result.service,
+      service: latest.service,
       staffId: nextStaff.staffId,
       startTimeISO: parsed.data.startAt,
-      customerName: result.booking.customer.name,
-      customerEmail: result.booking.customer.email,
+      customerName: latest.booking.customer.name,
+      customerEmail: latest.booking.customer.email,
     });
 
     const updated = timestamped({
-      ...result.booking,
+      ...latest.booking,
       staffId: nextStaffId,
       startAt: parsed.data.startAt,
       endAt,
-      resourceIds,
-      ...(zoom?.meetingLink ? { meetingLink: zoom.meetingLink } : result.booking.meetingLink ? { meetingLink: result.booking.meetingLink } : {}),
-    }, result.booking.createdAt);
+      resourceIds: currentResourceIds,
+      ...(zoom?.meetingLink ? { meetingLink: zoom.meetingLink } : latest.booking.meetingLink ? { meetingLink: latest.booking.meetingLink } : {}),
+    }, latest.booking.createdAt);
     if (!await renewSlotLock(slotLease)) {
-      return manageErrorResponse(locale, 'booking_storage_unavailable', 503);
+      return manageErrorResponse(currentLocale, 'booking_storage_unavailable', 503);
     }
     await saveBooking(updated);
     emitEvent('booking.rescheduled', {

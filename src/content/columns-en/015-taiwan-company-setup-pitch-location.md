@@ -1,12 +1,14 @@
 ---
 title: "Taiwan Company Formation — Advanced Guide 3: Finding a Business Location"
+seoTitle: "Taiwan Company Formation Advanced Guide: Finding a Business Location"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
-lastmod: "2026-07-27"
+lastmod: "2026-09-10"
 date_display: "September 13, 2025"
 read_time: "3 min read"
 categories:
   - "Taiwan Company Formation"
 featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.jpg"
+summary: "Company setup in Taipei requires checking whether the address may be used for the business. Restaurants often need a Business Location Prior Inquiry first."
 ---
 
 # Taiwan Company Formation — Advanced Guide 3: Finding a Business Location
@@ -53,11 +55,11 @@ However, companies commonly register multiple business items and may seek to reg
 
 In practice, therefore, it is not necessary to conduct an inquiry for every business item when registering a company.
 
-Under the "[Taipei City Business Location Assisted Inquiry Service Operating Guidelines](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)" (臺北市營業場所協助查詢服務作業須知),
+Under the "[Taipei City Business Location Assisted Inquiry Service Operating Guidelines](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)" (臺北市營業場所協助查詢服務作業須知) and the city's current notice,
 
-an inquiry is **mandatory** only for a business item classified as a "business item subject to proactive inquiry" (主動查詢之營業項目),
+since January 1, 2023 an application to register the establishment, relocation, or addition of business items of a company or business (including branches and sub-branch offices) **must** attach the business-location pre-inquiry result, whatever the business item.
 
-and the inquiry result must be submitted to the Taipei City Government together with the company registration application.
+The list of "business items subject to proactive inquiry" (主動查詢之營業項目) below covers the items the Department of Commerce queries on its own initiative during registration review (隨案主動查詢) when the application names such an item but the attached inquiry result omits it; an item absent from this list is not exempt from the inquiry.
 
 If a restaurant opens at a location where restaurant operations are not permitted, the competent authority may later impose a fine.
 

@@ -1,0 +1,11 @@
+LIVE 2026-09-16 11:00:54 deploy=76360346
+200 https://tseng-law.com/ar lang=lang="ar" dir=dir="rtl" ld=3 al="availableLanguage":["en","zh-Hant","ja","ko"] summary=0 hreflang_ar=1 arabic=10873 marker=0
+200 https://tseng-law.com/ar/services lang=lang="ar" dir=dir="rtl" ld=3 al="availableLanguage":["en","zh-Hant","ja","ko"] summary=1 hreflang_ar=1 arabic=12460 marker=0
+200 https://tseng-law.com/ar/faq lang=lang="ar" dir=dir="rtl" ld=4 al="availableLanguage":["en","zh-Hant","ja","ko"] summary=1 hreflang_ar=1 arabic=10287 marker=0
+200 https://tseng-law.com/ar/contact lang=lang="ar" dir=dir="rtl" ld=3 al="availableLanguage":["en","zh-Hant","ja","ko"] summary=1 hreflang_ar=1 arabic=7960 marker=0
+200 https://tseng-law.com/ar/pricing lang=lang="ar" dir=dir="rtl" ld=3 al="availableLanguage":["en","zh-Hant","ja","ko"] summary=1 hreflang_ar=1 arabic=6846 marker=0
+200 https://tseng-law.com/ar/about lang=lang="ar" dir=dir="rtl" ld=5 al="availableLanguage":["en","zh-Hant","ja","ko"] summary=1 hreflang_ar=1 arabic=11064 marker=0
+ar/llms.txt 200 urls=10
+root catalogs=9
+sitemap /ar entries=10
+vi/services still ok: 1

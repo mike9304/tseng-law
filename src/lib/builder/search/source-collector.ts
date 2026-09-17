@@ -13,6 +13,7 @@ import { resolveLocaleSeo } from '@/lib/builder/translations/seo-projection';
 import { resolveLocaleSlug } from '@/lib/builder/translations/locale-slug';
 import { isInternalSandboxPage } from '@/lib/builder/site/internal-pages';
 import { getAllColumnPosts } from '@/lib/columns';
+import { isPubliclySearchablePage } from './public-eligibility';
 import type { SearchDoc } from './types';
 
 /**
@@ -53,7 +54,7 @@ async function collectPageDocsForLocale(siteId: string, locale: Locale): Promise
   const pages = await listPages(siteId, locale);
   const docs: SearchDoc[] = [];
   for (const page of pages) {
-    if (page.noIndex || page.seo?.noIndex) continue;
+    if (!isPubliclySearchablePage(page)) continue;
     if (isInternalSandboxPage(page)) continue;
     const canvas = await readPageCanvas(siteId, page.pageId, 'published');
     const body = canvas ? extractTextFromDocument(canvas.nodes) : '';

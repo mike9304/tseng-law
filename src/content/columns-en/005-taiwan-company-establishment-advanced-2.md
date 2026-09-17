@@ -1,12 +1,14 @@
 ---
 title: "Taiwan Company Formation: Capital Remittance, Banking, and Foreign Hiring"
+seoTitle: "Taiwan Company Formation: Capital Remittance, Banking, and Hiring"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2"
-lastmod: "2026-07-27"
+lastmod: "2026-09-10"
 date_display: "September 13, 2025"
 read_time: "3 min read"
 categories:
   - "Taiwan Company Formation"
 featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg"
+summary: "Company setup in Taiwan involves capital remittance, converting a preparatory bank account, and separate work-permit rules for hiring foreign managers."
 ---
 
 # Taiwan Company Formation: Capital Remittance, Banking, and Foreign Hiring
@@ -17,7 +19,7 @@ If you have read [Taiwan Company Formation — Basics](https://www.wei-wei-lawye
 
 ![](../images/005-taiwan-company-establishment-advanced-2/img-01.jpg)
 
-The Q&A below, prepared by Wei Tseng (曾雋崴), Taiwan Attorney, may also be helpful to those considering establishing a company in Taiwan. Questions 1 and the Korean foreign-exchange notes are a **Korea-origin example**; investors from other countries must confirm remittance and reporting rules in their home country.
+The Q&A below, prepared by Wei Tseng (曾雋崴), Taiwan Attorney, may also be helpful to those considering establishing a company in Taiwan.
 
 **1. What should I keep in mind when remitting capital from Korea to a Taiwan company's preparatory account?**
 
@@ -55,7 +57,7 @@ Some banks may impose additional requirements, such as requiring the account to 
 
 **5. Can the company employ Korean nationals?**
 
-A. No restriction applies to the first employee: Manager of a General Overseas Chinese or Foreign Invested Business (一般僑外投資事業主管工作).
+A. First employee: Manager of a General Overseas Chinese or Foreign Invested Business (一般僑外投資事業主管工作). The "specialized or technical work" criteria in B below do not apply, but the eligibility requirements (such as being a manager (經理人) of a company in which overseas-Chinese or foreign investors hold more than one third) and the employer's capital and turnover requirements (Review Standards Articles 38 and 39) still apply.
 
 B. Restrictions apply from the second employee onward: when employing more than one foreign national, the employee's relevant education and work experience, the average-salary requirement, and the company's capital and revenue requirements are handled in accordance with the standards for "specialized or technical work" (專門性或技術性工作).
 
@@ -66,5 +68,6 @@ Please contact us at any time if you have additional questions.
 ---
 
 > Read more:
-> - [Comprehensive Guide to Taiwan Company Formation — Procedures, Costs, and Entity Types](/en/guides/taiwan-company-setup)
-> - [Taiwan Company Formation Attorney](/en/taiwan-company-setup-lawyer)
+> - [Comprehensive Guide to Taiwan Company Formation — Procedures, Costs, and Entity Types](/ko/guides/taiwan-company-setup)
+> - [Korean-Speaking Attorney in Taiwan](/ko/korean-lawyer-in-taiwan)
+> - [Taiwan Company Formation Attorney](/ko/taiwan-company-setup-lawyer)

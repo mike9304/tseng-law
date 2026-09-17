@@ -202,10 +202,6 @@ function readLegacyColumnDocument(locale: Locale, slug: string): ColumnDocument 
   return legacy ? legacyPostToColumnDocument({ ...legacy, locale }) : null;
 }
 
-function listLegacyColumnSlugs(locale: Locale): string[] {
-  return getAllColumnPosts(locale).map((post) => post.slug);
-}
-
 async function readBlobColumn(locale: Locale, slug: string, variant: ColumnVariant): Promise<ColumnDocument | null> {
   try {
     const result = await get(buildColumnPathname(locale, slug, variant), {
@@ -381,8 +377,29 @@ export async function readColumnBundle(locale: Locale, slug: string): Promise<Co
 export async function listColumnBundles(locale: Locale): Promise<ColumnDocumentBundle[]> {
   const backend = getColumnBackend();
   const storedSlugs = backend === 'blob' ? await listBlobSlugs(locale) : await listLocalSlugs(locale);
-  const slugs = unique([...storedSlugs, ...listLegacyColumnSlugs(locale)]);
-  const bundles = await Promise.all(slugs.map((slug) => readColumnBundle(locale, slug)));
+  const legacyPosts = getAllColumnPosts(locale);
+  const legacyBySlug = new Map<string, ColumnPost>();
+  for (const post of legacyPosts) {
+    // Match the standalone fallback's Array.find: the first duplicate wins.
+    if (!legacyBySlug.has(post.slug)) legacyBySlug.set(post.slug, post);
+  }
+  const slugs = unique([...storedSlugs, ...legacyPosts.map((post) => post.slug)]);
+  const bundles = await Promise.all(slugs.map(async (slug): Promise<ColumnDocumentBundle> => {
+    const bundleBackend = getColumnBackend();
+    const readStored = (variant: ColumnVariant) => getColumnBackend() === 'blob'
+      ? readBlobColumn(locale, slug, variant)
+      : readLocalColumn(locale, slug, variant);
+    const [draft, storedPublished] = await Promise.all([
+      readStored('draft'),
+      readStored('published'),
+    ]);
+    const legacyPost = legacyBySlug.get(slug);
+    // This invocation owns the index; direct read APIs retain their fresh fallback.
+    const published = storedPublished ?? (legacyPost
+      ? legacyPostToColumnDocument({ ...legacyPost, locale })
+      : null);
+    return { slug, locale, draft, published, preferred: draft ?? published, backend: bundleBackend };
+  }));
   return bundles
     .filter((bundle) => bundle.preferred)
     .sort((a, b) => (b.preferred?.updatedAt ?? '').localeCompare(a.preferred?.updatedAt ?? ''));

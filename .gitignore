@@ -61,3 +61,6 @@ tmp/
 # visit-metrics local data (traffic data stays out of the public repo)
 /metrics-local/
 .data/
+
+# symlink as well as directory
+node_modules

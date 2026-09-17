@@ -145,6 +145,8 @@ const guidanceOpenGraphLocale: Record<string, string> = {
   id: 'id_ID',
   th: 'th_TH',
   fil: 'fil_PH',
+  de: 'de_DE',
+  es: 'es_ES',
   // Arabic has no single-country default on the site; `ar_AR` is the
   // Open Graph locale for the language itself.
   ar: 'ar_AR',

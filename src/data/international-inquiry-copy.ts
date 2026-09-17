@@ -21,7 +21,9 @@ export type InquiryCopyLocale =
   | 'id'
   | 'th'
   | 'fil'
-  | 'ar';
+  | 'ar'
+  | 'de'
+  | 'es';
 
 export interface InternationalInquiryCopy {
   /** The page language is guidance only. */
@@ -514,6 +516,106 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ko: 'الكورية (한국어)',
       'needs-method-confirmation':
         'لا أستطيع استخدام أي من اللغات الأربع — يلزم تأكيد طريقة التواصل',
+    },
+  },
+  de: {
+    guidanceNotice:
+      'Diese Seite ist auf Deutsch als allgemeine Orientierung geschrieben, nicht als Rechtsberatung für Ihren eigenen Fall.',
+    consultationNotice:
+      'Die Beratung erfolgt in vier Sprachen: Englisch, Chinesisch (中文), Japanisch und Koreanisch.',
+    methodConfirmationNotice:
+      'Wenn Sie keine der vier Sprachen nutzen können, wählen Sie „Kommunikationsweise muss bestätigt werden“. Wir antworten, um eine gangbare Kommunikationsweise zu prüfen, wenn eine solche besteht; eine Leistung in einer anderen Sprache wird nicht gewährleistet und eine Antwortfrist nicht zugesagt.',
+    preparationNotice:
+      'Sie dürfen die Zusammenfassung in Ihrer eigenen Sprache schreiben. Der Originaltext wird so gespeichert, wie Sie ihn geschrieben haben, und nicht automatisch übersetzt.',
+    heading: 'Beratungsanfrage senden',
+    intro:
+      'Beschreiben Sie Ihren Fall kurz. Eine Anwältin oder ein Anwalt prüft den Inhalt, bevor der nächste Schritt besprochen wird.',
+    submitLabel: 'Anfrage senden',
+    submittingLabel: 'Wird gesendet…',
+    successMessage:
+      'Wir haben Ihre Anfrage erhalten; sie wartet auf Prüfung. Das bedeutet nicht, dass die Beratung stattgefunden hat oder ein Termin bestätigt ist.',
+    savedNotificationPendingMessage:
+      'Ihre Anfrage ist gespeichert, die Benachrichtigung an die Kanzlei ist aber noch nicht bestätigt. Was Sie geschrieben haben, geht nicht verloren. Wenn Sie keine Antwort erhalten, können Sie auch an die E-Mail-Adresse auf der Kontaktseite schreiben.',
+    receiptIdLabel: 'Empfangsnummer',
+    failureMessage:
+      'Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie an die E-Mail-Adresse auf der Kontaktseite.',
+    originalLanguageLabel: 'Sprache, in der Sie schreiben',
+    originalLanguagePlaceholder:
+      'Zum Beispiel Deutsch, Spanisch, Französisch oder eine andere Sprache',
+    preferredConsultationLanguageLabel: 'Sprache, die Sie für die Beratung wünschen',
+    originalTextLabel: 'Kurzdarstellung des Falls (in Ihrer Sprache)',
+    originalTextPlaceholder:
+      'Nennen Sie, was geschehen ist, welche Hilfe Sie brauchen und die Frist, falls eine besteht. Bitte keine Passnummer, Ausweisnummer oder Kontodaten angeben.',
+    nameLabel: 'Name',
+    emailLabel: 'E-Mail',
+    consentLabel:
+      'Ich habe die Datenschutzerklärung gelesen und stimme dem Senden dieser Anfrage zu.',
+    privacyLinkLabel: 'Datenschutz',
+    requiredMessage: 'Dieses Feld ist erforderlich.',
+    invalidEmailMessage: 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
+    tooLongMessage: 'Der Text ist zu lang. Bitte kürzen Sie ihn und senden Sie erneut.',
+    sourceLanguageNotice:
+      'Dieser Beitrag ist nur auf {language} veröffentlicht; der Link öffnet die Originalseite.',
+    unavailableTranslationNotice:
+      'Dieser Punkt liegt in der Sprache dieser Seite noch nicht vor. Ein Link mit der Originalsprache öffnet den Originaltext.',
+    unavailableLanguageNotice: 'Diese Seite wird nicht auf {language} angeboten.',
+    languageOptions: {
+      en: 'Englisch (English)',
+      'zh-hant': 'Chinesisch (中文)',
+      ja: 'Japanisch (日本語)',
+      ko: 'Koreanisch (한국어)',
+      'needs-method-confirmation':
+        'Keine der vier Sprachen ist nutzbar — Kommunikationsweise muss bestätigt werden',
+    },
+  },
+  es: {
+    guidanceNotice:
+      'Esta página está escrita en español como orientación general, no como asesoramiento jurídico para su propio caso.',
+    consultationNotice:
+      'La consulta se realiza en cuatro idiomas: inglés, chino (中文), japonés y coreano.',
+    methodConfirmationNotice:
+      'Si no puede usar ninguno de esos cuatro idiomas, elija «Hace falta confirmar la forma de comunicarse». Responderemos para comprobar una vía posible de comunicación cuando exista una forma posible; no se garantiza el servicio en otro idioma y no se promete un plazo de respuesta.',
+    preparationNotice:
+      'Puede escribir el resumen de su asunto en su propio idioma. El texto original se guarda tal como lo escribe y no se traduce de forma automática.',
+    heading: 'Enviar una solicitud de consulta',
+    intro:
+      'Describa su asunto de forma breve. Un abogado revisa el contenido antes de hablar del siguiente paso.',
+    submitLabel: 'Enviar la solicitud',
+    submittingLabel: 'Enviando…',
+    successMessage:
+      'Hemos recibido su solicitud y espera revisión. Esto no significa que la consulta haya tenido lugar ni que se haya confirmado una cita.',
+    savedNotificationPendingMessage:
+      'Su solicitud está guardada, pero el aviso al despacho aún no está confirmado. Lo que escribió no se pierde. Si no recibe respuesta, también puede escribir a la dirección de correo de la página de contacto.',
+    receiptIdLabel: 'Número de recepción',
+    failureMessage:
+      'No se pudo enviar su solicitud. Inténtelo de nuevo o escriba a la dirección de correo de la página de contacto.',
+    originalLanguageLabel: 'Idioma en que escribe',
+    originalLanguagePlaceholder:
+      'Por ejemplo: español, alemán, francés u otro idioma',
+    preferredConsultationLanguageLabel: 'Idioma que prefiere para la consulta',
+    originalTextLabel: 'Resumen del asunto (en su idioma)',
+    originalTextPlaceholder:
+      'Indique qué ocurrió, qué ayuda necesita y el plazo si existe. No escriba número de pasaporte, número de identidad ni datos de una cuenta bancaria.',
+    nameLabel: 'Nombre',
+    emailLabel: 'Correo electrónico',
+    consentLabel:
+      'He leído la política de privacidad y acepto enviar esta solicitud.',
+    privacyLinkLabel: 'Privacidad',
+    requiredMessage: 'Este campo es obligatorio.',
+    invalidEmailMessage: 'Introduzca una dirección de correo válida.',
+    tooLongMessage: 'El texto es demasiado largo. Acórtelo y vuelva a enviarlo.',
+    sourceLanguageNotice:
+      'Este artículo solo está publicado en {language}, y el enlace abre esa página original.',
+    unavailableTranslationNotice:
+      'Este elemento aún no está traducido al idioma de esta página. Un enlace que indica el idioma original abre el texto original.',
+    unavailableLanguageNotice: 'Esta página no se ofrece en {language}.',
+    languageOptions: {
+      en: 'Inglés (English)',
+      'zh-hant': 'Chino (中文)',
+      ja: 'Japonés (日本語)',
+      ko: 'Coreano (한국어)',
+      'needs-method-confirmation':
+        'No puedo usar ninguno de los cuatro idiomas — hace falta confirmar la forma de comunicarse',
     },
   },
 };

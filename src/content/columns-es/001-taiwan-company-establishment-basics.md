@@ -1,0 +1,145 @@
+---
+title: "Fundamentos de la constitución de sociedades en Taiwán: filial, sucursal, oficina de representación, procedimiento y permiso de trabajo"
+url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-basics"
+lastmod: "2026-07-25"
+date_display: "13 de septiembre de 2025"
+read_time: "12 min de lectura"
+categories:
+  - "Constitución de sociedades en Taiwán"
+featured_image: "../images/001-taiwan-company-establishment-basics/featured-01.jpg"
+faq:
+  - q: "Al constituir una sociedad en Taiwán, ¿en qué se diferencian la filial, la sucursal y la oficina de representación?"
+    a: "La filial taiwanesa (sociedad de responsabilidad limitada (有限公司) o sociedad anónima (股份有限公司)) es una persona jurídica independiente según el Derecho de Taiwán. La sucursal (分公司) en Taiwán de una sociedad extranjera no tiene personalidad jurídica propia y opera en Taiwán como parte de esa sociedad extranjera. La oficina de representación (代表人辦事處) no es un establecimiento que realice actividades lucrativas, y su ámbito de actuación se limita a actos jurídicos y labores de enlace en interés de la sociedad extranjera. La responsabilidad, la fiscalidad, las autorizaciones y la aptitud para participar en la contratación pública (政府採購) deben confirmarse según la forma organizativa y las circunstancias de cada asunto."
+  - q: "¿Constitución de la sociedad implica obtener permiso de trabajo o residencia en Taiwán?"
+    a: "La sola constitución de la sociedad no otorga por sí misma un permiso de trabajo (工作許可) ni un estatuto de residencia. El extranjero que gestione o administre una sociedad en Taiwán debe cumplir los requisitos del permiso de trabajo relativos al cargo, a la relación de aportación de capital, al historial empresarial del empleador y a extremos análogos; una vez obtenido el permiso, aún debe solicitar por separado la Tarjeta de Residencia de Extranjero (外僑居留證, ARC) acorde con el propósito de su estancia."
+  - q: "¿Se exige un capital mínimo para obtener el permiso de trabajo y la tarjeta de residencia?"
+    a: "No existe un capital mínimo legal de aplicación uniforme para la constitución de la sociedad en sí. No obstante, el capital mínimo por sector, la razonabilidad del plan de negocio, la revisión bancaria y los requisitos del empleador según las normas del permiso de trabajo deben comprobarse por separado. El permiso de trabajo para el responsable de nacionalidad extranjera de una empresa de inversión de chinos de ultramar o de extranjeros (僑外投資事業主管工作許可) se dirige, entre otros, al responsable de gestión (經理人) de una sociedad en la que el total de acciones o aportaciones poseídas por chinos de ultramar (華僑) o extranjeros exceda de un tercio del total de acciones emitidas o del capital total, al responsable de gestión de la sucursal taiwanesa de una sociedad extranjera y al representante de una oficina de representación. Entre ellos, si el empleador, sociedad o sucursal, lleva constituido menos de 1 año, en principio debe cumplirse uno de los siguientes: capital desembolsado o fondos de explotación en Taiwán (在臺營運資金) de al menos 500.000 dólares de Taiwán (新臺幣, TWD), cifra de negocios de al menos TWD 3.000.000, historial de exportación e importación de al menos 500.000 dólares de Estados Unidos, o comisiones de agencia de al menos 200.000 dólares de Estados Unidos. Si lleva constituido 1 año o más, en principio debe cumplirse uno de los siguientes, calculado sobre el último año o sobre la media de los últimos 3 años en Taiwán: cifra de negocios de al menos TWD 3.000.000, historial de exportación e importación de al menos 500.000 dólares de Estados Unidos, o comisiones de agencia de al menos 200.000 dólares de Estados Unidos. La oficina de representación constituida hace 1 año o más debe acreditar un historial de actividad en Taiwán (si lleva menos de 1 año, queda exenta). Si existe una contribución real al desarrollo económico de Taiwán o circunstancias especiales, sigue abierta la posibilidad de un reconocimiento especial."
+---
+
+# Fundamentos de la constitución de sociedades en Taiwán: filial, sucursal, oficina de representación, procedimiento y permiso de trabajo
+
+![Imagen principal](../images/001-taiwan-company-establishment-basics/featured-01.jpg)
+
+![](../images/001-taiwan-company-establishment-basics/img-01.jpg)
+
+Las formas en que las empresas extranjeras y los empresarios individuales entran en el mercado de Taiwán varían según el contenido de la actividad, como la fabricación, la distribución, las tecnologías de la información y las comunicaciones o los servicios profesionales. Sin embargo, aunque el objetivo sea el mismo —iniciar un negocio en Taiwán—, las relaciones jurídicas que debe preparar cambian según con quién y qué contratos celebre, a través de qué organización obtenga ingresos y quién desempeñe el trabajo sobre el terreno.
+
+En particular, la constitución de sociedades, la inversión extranjera, las cuentas bancarias, la fiscalidad, el local de negocio, el permiso de trabajo y el procedimiento de residencia están interrelacionados, pero no son el mismo procedimiento. Haber concluido el registro mercantil no significa que la revisión de los fondos de inversión o las autorizaciones sectoriales hayan terminado por completo, ni que el accionista o el responsable de gestión pueda trabajar de inmediato en Taiwán.
+
+Por ello, es más seguro examinar desde el principio, de forma conjunta, el modelo de negocio, el domicilio del inversor y de la sede, las operaciones previstas, el flujo de fondos, la asignación de personal y el local de negocio. Este artículo distingue primero las formas de presencia en Taiwán y, a continuación, explica el flujo general de constitución de una filial, las comprobaciones previas sobre el sector y el local, las cuestiones de trabajo, residencia y capital para extranjeros, y los impuestos principales.
+
+## 1. Formas de presencia en Taiwán: filial, sucursal y oficina de representación
+
+La filial taiwanesa (sociedad de responsabilidad limitada (有限公司) o sociedad anónima (股份有限公司)) es una persona jurídica independiente según el Derecho de Taiwán. La sucursal (分公司) en Taiwán de una sociedad extranjera no tiene personalidad jurídica propia y opera en Taiwán como parte de esa sociedad extranjera. La oficina de representación (代表人辦事處) no es un establecimiento que realice actividades lucrativas, y su ámbito de actuación se limita a actos jurídicos y labores de enlace en interés de la sociedad extranjera. La responsabilidad, la fiscalidad, las autorizaciones y la aptitud para participar en la contratación pública (政府採購) deben confirmarse según la forma organizativa y las circunstancias de cada asunto.
+
+La filial taiwanesa (有限公司·股份有限公司) es una persona jurídica independiente, distinta de la sede, que celebra contratos a su propio nombre y es titular de derechos y obligaciones. La elección entre sociedad de responsabilidad limitada y sociedad anónima debe hacerse considerando la estructura de participaciones o acciones, la composición de los órganos, el modo de adoptar decisiones y el plan de financiación. El hecho de ser una persona jurídica independiente no implica que toda responsabilidad quede siempre limitada a la filial, de modo que también deben examinarse las relaciones concretas, como garantías, colaterales, contratos con la sociedad matriz y la responsabilidad de los administradores (董事).
+
+La sucursal taiwanesa de una sociedad extranjera es la organización mediante la cual la sede extranjera opera en Taiwán. La sucursal no es una organización con accionistas (股東) propios y, al no ser una persona jurídica distinta sino parte de la sede, la sede asume las deudas y responsabilidades de la sucursal. Los movimientos de fondos o el envío de beneficios entre la sede y la sucursal taiwanesa, su contabilidad y su trato fiscal no deben darse por iguales a la estructura de dividendos (股利) de una filial.
+
+La oficina de representación es un punto de apoyo que actúa dentro del ámbito permitido, como investigación de mercado, enlace, apoyo a negociaciones o actos jurídicos en interés de la sociedad extranjera. No puede realizar actividades de negocio como la venta o la prestación de servicios en Taiwán. Si el trabajo real se amplía a la captación de pedidos, el cobro de contraprestaciones o la prestación reiterada de servicios, no debe detenerse en la denominación de oficina de representación, sino revisar de nuevo si se necesita una filial o una sucursal.
+
+En definitiva, al comparar formas organizativas no basta con el alcance de la responsabilidad: deben considerarse también la estructura de capital, el reparto y el envío de beneficios, la fiscalidad, las autorizaciones sectoriales, las relaciones laborales y los requisitos de participación en la contratación pública. Si una licitación o una autorización concreta exige una persona jurídica taiwanesa, un capital, un historial o un registro determinados, no concluya la aptitud para participar solo por el nombre de la forma organizativa, y confirme la normativa y el anuncio aplicables.
+
+El Acuerdo de Impuesto sobre la Renta (所得稅協定) entre Taiwán y Corea entró en vigor el 27 de diciembre de 2023 y se aplica desde el 1 de enero de 2024. Si se cumplen los requisitos de aplicación del acuerdo, el tipo máximo en el Estado de la fuente sobre dividendos, intereses y cánones es, en cada caso, del 10 %. Los beneficios empresariales se gravan, en principio, en el lado de la residencia, salvo, entre otros supuestos, cuando exista un establecimiento permanente (常設機構, PE) según el acuerdo en el territorio de la otra parte; no obstante, debe confirmarse primero la forma real de ejecución del negocio.
+
+El establecimiento permanente según el acuerdo puede incluir instalaciones fijas como un lugar de dirección, una sucursal o una oficina; una obra que exceda de 6 meses; la prestación de servicios que, de forma acumulada, exceda de 183 días en un período de 12 meses; y un agente que ejerza de forma reiterada la facultad de concluir contratos. Estos cuatro tipos tienen condiciones de aplicación distintas y, si existe un lugar fijo o actividad de agente, el examen es necesario con independencia del número de días de servicios. Por tanto, no debe juzgarse la existencia de un establecimiento permanente ni la tributación de los beneficios empresariales a partir de un solo número, los 183 días.
+
+![](../images/001-taiwan-company-establishment-basics/img-02.jpg)
+
+## 2. Principales trámites de constitución de una filial taiwanesa
+
+La constitución de una filial taiwanesa suele comenzar por el examen previo del nombre en chino y de los ramos de actividad (公司名稱及所營事業預查), y continuar con la revisión de la inversión extranjera, la apertura de cuenta y la transferencia de fondos, la determinación del importe de la inversión (投資額審定), el registro de constitución (公司設立登記) y el registro fiscal (稅籍登記). La lista siguiente es un panorama para comprender el flujo general y no significa un orden ni un plazo fijos aplicables por igual en todos los casos.
+
+1. Examen previo del nombre en chino de la sociedad y de los ramos de actividad
+
+2. Notarización o legalización de documentos extranjeros, como el poder (委任書), y, si procede, autenticación por una misión de Taiwán en el exterior (駐外館處驗證)
+
+3. Solicitud de inversión ante el Departamento de Revisión de Inversiones del Ministerio de Economía (經濟部投資審議司) (cuando corresponda)
+
+4. Apertura de la cuenta de la oficina preparatoria de la sociedad (公司籌備處帳戶)
+
+5. Transferencia de los fondos de inversión desde el exterior
+
+6. Determinación del importe de la inversión
+
+7. Registro de constitución de la sociedad
+
+8. Registro fiscal
+
+9. Conversión de la cuenta preparatoria en cuenta ordinaria
+
+10. Trámites adicionales de exportación e importación, autorizaciones sectoriales, permiso de trabajo y residencia (cuando corresponda)
+
+El examen previo del nombre en chino y de los ramos de actividad es la etapa en la que se confirman, antes del registro, la denominación que se utilizará y el negocio previsto. Superar ese examen no significa que ya se haya obtenido la autorización específica que el sector pueda exigir, ni que pueda operarse de inmediato en el local previsto. Si se requiere una solicitud de inversión extranjera, el inversor, el importe, el objeto de la aportación y el plan de negocio deben coincidir con los materiales de revisión.
+
+Los documentos otorgados en el extranjero, como el poder, el certificado de existencia de la persona jurídica (法人存續證明) y los que acreditan la facultad de representación, pueden requerir notarización, legalización o autenticación por una misión de Taiwán en el exterior, según el lugar de expedición y la naturaleza del documento. También debe comprobarse que la traducción y la mención del firmante autorizado y de la denominación social coincidan con la solicitud. Como los documentos a preparar pueden variar según la nacionalidad del inversor y según se trate de una persona física o jurídica, es más eficiente ordenar los plazos de validez y la vía de autenticación antes de obtenerlos.
+
+En la etapa de apertura de la cuenta preparatoria y de transferencia de los fondos de inversión, el banco puede verificar al titular real (實質受益人) y el origen de los fondos como parte de la identificación del cliente. Si el ordenante, el propósito de la transferencia, el contenido de la aprobación de inversión y la cuenta de ingreso no coinciden, puede ser necesaria una explicación o una corrección adicionales. Tras la transferencia se determina el importe realmente invertido, se continúa con el registro de constitución y el registro fiscal, y se convierte la cuenta preparatoria en cuenta ordinaria conforme al procedimiento bancario.
+
+El orden, la necesidad y la duración de los trámites varían según la forma organizativa, el importe invertido, el sector, el contenido de la revisión, el avance del procedimiento bancario y si hay correcciones. También hay trámites que se realizan después de constituir la sociedad, como el registro de exportación e importación, las autorizaciones relativas a fábrica, producto o sector profesional, y las solicitudes de permiso de trabajo y de residencia de extranjeros. Al fijar la fecha de firma de un contrato o la de inicio de actividad, no debe considerarse solo el registro mercantil, sino también el momento en que queden concluidos esos trámites posteriores.
+
+![](../images/001-taiwan-company-establishment-basics/img-03.jpg)
+
+## 3. Comprobación previa del sector y del local de negocio
+
+La inversión extranjera es posible en muchos sectores, pero los sectores prohibidos o restringidos, las cualificaciones profesionales, las limitaciones del local y las autorizaciones sectoriales deben comprobarse por separado. En ámbitos como los dispositivos médicos, las bebidas alcohólicas, los viajes, la construcción o los servicios profesionales, en los que puede plantearse una autorización, un registro o una cualificación de la autoridad de supervisión, las normas aplicables deben examinarse a partir de los productos y servicios que realmente se prestarán y de la estructura de las operaciones.
+
+El hecho de que un ramo de actividad pueda inscribirse en el registro mercantil no significa por sí solo que esa actividad pueda iniciarse de inmediato. El examen previo del nombre y de los ramos, el registro de constitución, el registro fiscal y las autorizaciones sectoriales tienen cada uno un propósito distinto. Si el modo de operación cambia —venta en línea frente a tienda física, importación frente a distribución interior, servicio directo frente a intermediación—, también pueden cambiar los registros y las responsabilidades necesarias.
+
+El domicilio social no es un mero lugar de recepción de correo, sino la base del registro, de la fiscalidad y de la actividad real. Antes de firmar el contrato de arrendamiento (租賃契約), debe confirmar, respecto de la dirección prevista y de los ramos de actividad, la clasificación de uso del suelo (土地使用分區), la normativa de edificación (建築管理), las condiciones del arrendamiento y la idoneidad para el registro fiscal. Si el uso del edificio o el reglamento de administración no se ajustan al negocio real, o si no se obtiene el consentimiento necesario del arrendador, puede verse obligado a cambiar de local o a seguir trámites adicionales incluso después del registro.
+
+La ciudad de Taipéi opera un sistema de consulta previa del local de negocio (營業場所預先查詢) para los registros de sociedades y de comercio incluidos en su ámbito. Sin embargo, el resultado de esa consulta no implica por sí solo el cumplimiento de otras autorizaciones ni de los requisitos de las normas profesionales. Si el domicilio se sitúa en otra localidad, confirme los trámites del gobierno local y de la autoridad competente, y conviene dejar por escrito la idoneidad del local antes de firmar un arrendamiento de larga duración o de invertir en instalaciones.
+
+## 4. Permiso de trabajo, residencia y capital
+
+El solicitante de la constitución, el accionista de la sociedad, quien realmente desempeña el trabajo en Taiwán y el solicitante de residencia pueden coincidir, pero en Derecho deben distinguirse. Ello se debe a que la aprobación de la inversión examina la entrada de capital, el permiso de trabajo (工作許可) examina el desempeño de trabajo por un extranjero, y la Tarjeta de Residencia de Extranjero (外僑居留證, ARC) examina el propósito y la duración de la estancia.
+
+### Constitución de la sociedad, permiso de trabajo y residencia
+
+La sola constitución de la sociedad no otorga por sí misma un permiso de trabajo ni un estatuto de residencia. El extranjero que gestione o administre una sociedad en Taiwán debe cumplir los requisitos del permiso de trabajo relativos al cargo, a la relación de aportación de capital, al historial empresarial del empleador y a extremos análogos; una vez obtenido el permiso, aún debe solicitar por separado la tarjeta de residencia acorde con el propósito de su estancia.
+
+También los estudiantes pueden solicitar inversión y constitución de sociedad. Sin embargo, el hecho de haberse convertido en inversor o accionista no significa que el estatuto de estancia actual permita trabajar o dirigir una sociedad en Taiwán. Si realmente celebra contratos, dirige a empleados o asume la gestión cotidiana, debe confirmar el destinatario y los requisitos del permiso de trabajo antes de iniciar el trabajo.
+
+En la revisión del permiso de trabajo pueden comprobarse de forma conjunta el cargo y las cualificaciones del solicitante, el papel que desempeñará en la sociedad, la relación de inversión, el historial empresarial del empleador y los documentos presentados. Aunque se haya obtenido el permiso de trabajo, la tarjeta de residencia se solicita por separado según el propósito de la estancia, y el plazo de vigencia y los requisitos de renovación de cada autorización deben confirmarse con arreglo a la resolución correspondiente y a la normativa vigente en ese momento.
+
+### Capital social y permiso de trabajo del responsable de gestión de nacionalidad extranjera
+
+No existe un capital mínimo (最低資本額) legal de aplicación uniforme para la constitución de la sociedad en sí. No obstante, el capital mínimo por sector, la razonabilidad del plan de negocio, la revisión bancaria y los requisitos del empleador según las normas del permiso de trabajo deben comprobarse por separado. El permiso de trabajo para el responsable de nacionalidad extranjera de una empresa de inversión de chinos de ultramar o de extranjeros (僑外投資事業主管工作許可) se dirige, entre otros, al responsable de gestión (經理人) de una sociedad en la que el total de acciones o aportaciones poseídas por chinos de ultramar (華僑) o extranjeros exceda de un tercio del total de acciones emitidas o del capital total, al responsable de gestión de la sucursal taiwanesa de una sociedad extranjera y al representante de una oficina de representación. Entre ellos, si el empleador, sociedad o sucursal, lleva constituido menos de 1 año, en principio debe cumplirse uno de los siguientes: capital desembolsado o fondos de explotación en Taiwán (在臺營運資金) de al menos 500.000 dólares de Taiwán (新臺幣, TWD), cifra de negocios de al menos TWD 3.000.000, historial de exportación e importación de al menos 500.000 dólares de Estados Unidos, o comisiones de agencia de al menos 200.000 dólares de Estados Unidos. Si lleva constituido 1 año o más, en principio debe cumplirse uno de los siguientes, calculado sobre el último año o sobre la media de los últimos 3 años en Taiwán: cifra de negocios de al menos TWD 3.000.000, historial de exportación e importación de al menos 500.000 dólares de Estados Unidos, o comisiones de agencia de al menos 200.000 dólares de Estados Unidos. La oficina de representación constituida hace 1 año o más debe acreditar un historial de actividad en Taiwán (si lleva menos de 1 año, queda exenta). Si existe una contribución real al desarrollo económico de Taiwán o circunstancias especiales, sigue abierta la posibilidad de un reconocimiento especial.
+
+Las cifras anteriores no son un capital mínimo de aplicación general a la constitución de sociedades, sino requisitos del empleador para el permiso de trabajo del responsable de gestión de nacionalidad extranjera. Las leyes sectoriales pueden exigir un capital o un depósito de garantía propios, y el banco puede revisar de forma independiente el plan de negocio y el riesgo de las operaciones. Además, aunque se cumplan esos umbrales, el permiso de trabajo no se expide de forma automática. También se examinan otros requisitos, como el cargo real del solicitante, su experiencia y los documentos presentados.
+
+El cónyuge y los hijos menores del extranjero que haya obtenido una tarjeta de residencia fundada en un permiso de trabajo o autorización análoga pueden solicitar por separado la residencia por vínculo familiar (依親居留) si reúnen los requisitos. Pueden ser necesarios documentos que acrediten el matrimonio o la filiación, la manutención y el propósito de la estancia, y el estatuto de residencia de la familia no se otorga de forma automática.
+
+Para solicitar la residencia permanente (永久居留), el extranjero ordinario debe, en principio, reunir requisitos como haber residido de forma lícita en Taiwán durante 5 años consecutivos y permanecer al menos 183 días cada año. A los profesionales extranjeros (外國專業人才) y figuras análogas puede aplicárseles otro criterio de cómputo, y también se examinan otros requisitos legales, como la conducta, el patrimonio y las aptitudes. Los períodos de estancia excluidos del cómputo de la residencia permanente y los requisitos en el momento de la solicitud deben confirmarse de forma individual, y el mero hecho de haber poseído un permiso de trabajo o una tarjeta de residencia durante 5 años no implica el reconocimiento automático de la residencia permanente.
+
+![](../images/001-taiwan-company-establishment-basics/img-04.jpg)
+
+## 5. Impuestos y el Acuerdo de Impuesto sobre la Renta entre Taiwán y Corea
+
+El tipo general del impuesto sobre las ventas (營業稅, análogo al IVA) en Taiwán es del 5 % y la declaración se presenta, por lo general, cada 2 meses. El tipo general del impuesto sobre la renta de las empresas lucrativas (營利事業所得稅) es del 20 %, pero la tributación real varía según la renta gravable y las normas aplicables. El tipo de retención según el Derecho interno de Taiwán sobre los dividendos pagados a no residentes es del 21 %. A los dividendos que cumplan los requisitos y el procedimiento de aplicación del Acuerdo de Impuesto sobre la Renta entre Taiwán y Corea se aplica el tipo máximo del 10 %. La declaración y la retención concretas deben tramitarse confirmando la distinción de residencia, el beneficiario efectivo (受益所有人), el tipo de renta y los documentos de aplicación del acuerdo.
+
+Como el impuesto sobre las ventas y el impuesto sobre la renta de las empresas lucrativas difieren en el objeto y en el modo de declaración, debe distinguirse el impuesto que recae sobre las ventas del que recae sobre la renta gravable. Al pagar dividendos, intereses, cánones o contraprestaciones de servicios a un accionista en el exterior o a una sociedad vinculada, debe examinarse de antemano la naturaleza del pago y la posición del perceptor, las normas internas de retención y la posible aplicación del acuerdo de impuesto sobre la renta.
+
+El Acuerdo de Impuesto sobre la Renta entre Taiwán y Corea, que como se ha indicado solo se aplica a los casos que reúnen sus requisitos, entró en vigor el 27 de diciembre de 2023 y se aplica desde el 1 de enero de 2024, y a los intereses y cánones que reúnan los requisitos también se aplica el tipo máximo en el Estado de la fuente del 10 %. Al examinar la potestad tributaria sobre los beneficios empresariales deben revisarse los cuatro tipos de establecimiento permanente ya descritos. No basta el número de días de prestación de servicios: deben confirmarse también las instalaciones fijas, la duración de la obra, la facultad del agente de concluir contratos y su actividad real.
+
+El tipo limitado según el acuerdo no se aplica de forma automática por el mero hecho de que el acuerdo exista. Debe confirmar si el contribuyente es residente según el acuerdo y si es el beneficiario efectivo, el carácter jurídico de la renta, y el certificado de residencia (居住者證明) y los documentos de solicitud que deban presentarse. Gestione de modo que la estructura de la operación, el contrato, la factura, el trabajo real y el flujo de pagos coincidan, y revise por separado los plazos de declaración y la conservación de justificantes.
+
+## Fuentes oficiales
+
+- [Texto en inglés de la normativa del Ministerio de Economía de Taiwán sobre inversión extranjera](https://law.moea.gov.tw/EngLawContent.aspx?id=10484&lan=E)
+- [Guía de asuntos de inversión del Ministerio de Economía de Taiwán](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42885)
+- [Guía de registro de sociedades y de comercio de la Administración de Desarrollo Comercial del Ministerio de Economía de Taiwán](https://gcis.nat.gov.tw/mainNew/English/index.jsp)
+- [Manual de trabajo para el permiso de trabajo del responsable de gestión de una empresa de inversión de chinos de ultramar o de extranjeros](https://ws.wda.gov.tw/Download.ashx?n=VGhlIERpcmVjdG9yIG9yIE1hbmFnZXIgb2YgYW4gQXBwcm92ZWQgQnVzaW5lc3MgSW52ZXN0ZWQgb3IgRXN0YWJsaXNoZWQgYnkgT3ZlcnNlYXMgQ2hpbmVzZSBvciBGb3JlaWduZXIocykoU09QIE1hbnVhbCkucGRm&u=LzAwMS9VcGxvYWQvMzIxL3JlbGZpbGUvMC8yNTE1LzUzMWMyZTM0LTI1NmYtNGI5MC1iMzAzLTEzNWI4MTQxYTk5MC5wZGY%3D)
+- [Guía del Ministerio de Finanzas de Taiwán sobre el Acuerdo de Impuesto sobre la Renta entre Taiwán y Corea](https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10)
+- [Normativa relativa al tipo de retención sobre dividendos de no residentes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
+- [Guía del ciclo de declaración del impuesto sobre las ventas de Taiwán](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/business-tax/collection-prcedure/oVL9pwM)
+- [Guía del tipo del impuesto sobre la renta de las empresas lucrativas de Taiwán](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR)
+- [Guía de tributación de la renta de dividendos de extranjeros](https://www.etax.nat.gov.tw/etwmain/alien-tax-service/alien-tax-faq/KK9Y76o)
+- [Guía de residencia permanente de la Administración de Inmigración del Ministerio del Interior de Taiwán (內政部移民署)](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
+- [Guía de consulta previa del local de negocio de la ciudad de Taipéi](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
+
+El ámbito de trabajo relacionado puede consultarse en [Servicios de inversión y constitución de sociedades en Taiwán](/ko/services#investment), y la experiencia y los idiomas del abogado responsable, en [Perfil del abogado Wei Tseng](/ko/lawyers/wei-tseng). Para consultas sobre un asunto concreto, utilice [Contacto](/es/contact).
+
+Este artículo es información jurídica general con fines educativos sobre la constitución de sociedades en Taiwán y el régimen conexo; no es asesoramiento para un caso concreto y no garantiza un resultado. Como los trámites necesarios y el resultado pueden variar según la estructura de inversión, el sector, la nacionalidad y el estatuto de estancia del solicitante, y la práctica más reciente de la autoridad competente, confirme las fuentes oficiales actualizadas y las circunstancias del asunto antes de ejecutar una inversión, un contrato o una contratación.
+
+**Abogado Wei Tseng (曾雋崴)**

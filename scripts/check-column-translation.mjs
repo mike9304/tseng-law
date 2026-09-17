@@ -24,7 +24,7 @@ const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 export const repoRoot = resolve(scriptDirectory, '..');
 export const DEFAULT_SOURCE_DIR = join(repoRoot, 'src/content/columns');
 
-export const GUIDANCE_LANGS = ['vi', 'id', 'th', 'fil', 'ar'];
+export const GUIDANCE_LANGS = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es'];
 export const HANZI_MIN = 5;
 export const ENGLISH_WORD_MIN = 12;
 export const ENGLISH_STOPWORD_MIN = 3;
@@ -100,6 +100,26 @@ export const FORBIDDEN_PHRASES = {
     { id: 'ar-always-on', re: /24\s*\/\s*7|(?:و)?على\s+مدار\s+الساعة/u, note: '즉시/상시 상담' },
     { id: 'ar-free-consult', re: /(?:و)?استشارة\s+مجانية|(?:و)?مجان[اً]?\s+(?:ال)?استشارة/u, note: '비용 보장(무료 상담)' },
   ],
+  de: [
+    { id: 'de-consult-lang', re: /Beratung auf Deutsch|deutschsprachige Beratung|Beratung in deutscher Sprache/i, note: 'de 상담 가능' },
+    { id: 'de-interpreter', re: /Dolmetscher (wird |werden )?gestellt|wir stellen (einen )?Dolmetscher|Dolmetscherservice/i, note: '통역 제공' },
+    { id: 'de-immediate', re: /sofortige Antwort|Antwort innerhalb von Minuten|umgehend Antwort/i, note: '즉시 응답' },
+    { id: 'de-success-rate', re: /Erfolgsquote|Gewinnquote|Erfolgsrate/i, note: '성공률' },
+    { id: 'de-win-100', re: /100\s*%\s*(Erfolg|Gewinn)|Gewinn\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'de-cost-guarantee', re: /Kosten.?garantie|Ergebnisgarantie|wir garantieren (das Ergebnis|die Kosten)/i, note: '비용/결과 보장' },
+    { id: 'de-always-on', re: /Beratung\s*24\s*\/\s*7/i, note: '즉시/상시 상담' },
+    { id: 'de-free-consult', re: /kostenlose Beratung|Beratung kostenlos|gratis Beratung/i, note: '비용 보장(무료 상담)' },
+  ],
+  es: [
+    { id: 'es-consult-lang', re: /consulta en español|asesoramiento en español|abogados que hablan español/i, note: 'es 상담 가능' },
+    { id: 'es-interpreter', re: /ponemos intérprete|intérprete disponible|servicio de intérprete/i, note: '통역 제공' },
+    { id: 'es-immediate', re: /respuesta inmediata|respuesta en minutos|respondemos al instante/i, note: '즉시 응답' },
+    { id: 'es-success-rate', re: /tasa de éxito|tasa de ganancia|porcentaje de éxito/i, note: '성공률' },
+    { id: 'es-win-100', re: /100\s*%\s*(de )?(éxito|ganancia)|éxito\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'es-cost-guarantee', re: /garantía de (coste|costo|resultado)|garantizamos el resultado/i, note: '비용/결과 보장' },
+    { id: 'es-always-on', re: /consulta\s*24\s*\/\s*7/i, note: '즉시/상시 상담' },
+    { id: 'es-free-consult', re: /consulta gratuita|asesoramiento gratuito/i, note: '비용 보장(무료 상담)' },
+  ],
 };
 
 /** Locale-prefix swaps that are allowed; everything else must stay byte-identical to source href. */
@@ -158,6 +178,8 @@ export const NATIONALITY_TERMS = {
     'عُمان',
     'عمان',
   ],
+  de: ['Deutschland', 'deutsche Staatsangehörigkeit', 'deutscher Staatsangehöriger', 'deutsche Unternehmen'],
+  es: ['España', 'nacionalidad española', 'empresas españolas', 'españoles'],
 };
 
 export const NATIONALITY_LANGUAGE_NAMES = {
@@ -166,6 +188,8 @@ export const NATIONALITY_LANGUAGE_NAMES = {
   th: [/ภาษาไทย/gu],
   fil: [/wikang\s+filipino/gi, /\bsa\s+filipino\b/gi, /filipino\s+language/gi],
   ar: [/اللغة\s*العربية/gu, /بالعربية/gu, /اللغة\s*الكورية/gu, /بالكورية/gu],
+  de: [/auf Deutsch/gi, /deutsche Sprache/gi, /in deutscher Sprache/gi],
+  es: [/en español/gi, /idioma español/gi, /lengua española/gi],
 };
 
 export const SOURCE_LANGUAGE_NAME_RE = /한국어|베트남어|인도네시아어|태국어|필리핀어|영어|일본어|중국어|타이완어|대만어/g;
@@ -185,6 +209,8 @@ export const NUMBER_THOUSAND_STYLE = {
   th: 'comma',
   fil: 'comma',
   ar: 'comma',
+  de: 'dot',
+  es: 'dot',
 };
 
 /**
@@ -220,6 +246,8 @@ export const NUMBER_LANG_EXCEPTIONS = {
   th: [],
   fil: [],
   ar: [],
+  de: [],
+  es: [],
 };
 
 /** Thai พ.ศ. year minus this offset is Gregorian. ค.ศ. is already Gregorian. */
@@ -267,6 +295,20 @@ export const MAGNITUDE_WORDS = {
     { word: 'مئة', factor: 100 },
     { word: 'مائة', factor: 100 },
   ],
+  de: [
+    { word: 'milliarden', factor: 1_000_000_000 },
+    { word: 'milliarde', factor: 1_000_000_000 },
+    { word: 'millionen', factor: 1_000_000 },
+    { word: 'million', factor: 1_000_000 },
+    { word: 'tausend', factor: 1_000 },
+  ],
+  es: [
+    { word: 'mil millones', factor: 1_000_000_000 },
+    { word: 'millones', factor: 1_000_000 },
+    { word: 'millón', factor: 1_000_000 },
+    { word: 'millon', factor: 1_000_000 },
+    { word: 'mil', factor: 1_000 },
+  ],
 };
 
 /** Approximation markers: do not emit a number; the adjacent numeral still does. */
@@ -276,6 +318,8 @@ export const APPROX_MARKERS = {
   id: ['sekitar', 'kira-kira', 'kurang lebih', 'hampir'],
   th: ['ประมาณ', 'ราว', 'ประมาณว่า'],
   fil: ['humigit-kumulang', 'halos', 'mga'],
+  de: ['etwa', 'rund', 'ungefähr', 'circa', 'zirka'],
+  es: ['aproximadamente', 'cerca de', 'unos', 'unas'],
 };
 
 /**
@@ -288,6 +332,8 @@ export const UNPARSED_NUMERAL_HINTS = {
   th: /(?:[A-Za-z0-9]+)\s*(?:ล้าน|แสน|หมื่น|พัน|ร้อย)(?![\u0E00-\u0E7F])/gu,
   fil: /(?:[A-Za-z0-9]{2,})\s+milyon(?:g)?\b|\b(?:bilyon|katlo|labing-?\w+)\b/gi,
   ar: /(?:[\p{L}0-9]{2,})\s+(?:مليون|مليار|ألف|مئة|مائة)(?![\p{L}\p{M}])/gu,
+  de: /(?:[A-Za-z0-9]{2,})\s+(?:Million(?:en)?|Milliarde(?:n)?|Tausend)\b/gi,
+  es: /(?:[A-Za-z0-9]{2,})\s+(?:millones|millón|millon)\b/gi,
 };
 
 function pushPhrase(entries, phrase, values) {
@@ -647,12 +693,98 @@ function buildArLexicon() {
   return compilePhrases(entries);
 }
 
+function buildDeLexicon() {
+  const entries = [];
+  const units = ['Jahr', 'Jahre', 'Monat', 'Monate', 'Tag', 'Tage', 'Woche', 'Wochen', 'Mal', 'Person', 'Personen'];
+  const scales = [['Milliarde', 1_000_000_000], ['Milliarden', 1_000_000_000], ['Million', 1_000_000], ['Millionen', 1_000_000], ['Tausend', 1_000]];
+  const atoms = [
+    ['null', 0], ['eins', 1], ['ein', 1], ['eine', 1], ['einem', 1], ['einen', 1],
+    ['zwei', 2], ['drei', 3], ['vier', 4], ['fünf', 5], ['sechs', 6],
+    ['sieben', 7], ['acht', 8], ['neun', 9], ['zehn', 10],
+  ];
+  pushPhrase(entries, 'zwei Drittel', [2, 3]);
+  pushPhrase(entries, 'ein Drittel', [1, 3]);
+  pushPhrase(entries, 'die Hälfte', [1, 2]);
+  const teens = [
+    ['elf', 11], ['zwölf', 12], ['dreizehn', 13], ['vierzehn', 14], ['fünfzehn', 15],
+    ['sechzehn', 16], ['siebzehn', 17], ['achtzehn', 18], ['neunzehn', 19],
+  ];
+  for (const [phrase, n] of teens) pushPhrase(entries, phrase, [n]);
+  const tens = [
+    ['zwanzig', 20], ['dreißig', 30], ['vierzig', 40], ['fünfzig', 50],
+    ['sechzig', 60], ['siebzig', 70], ['achtzig', 80], ['neunzig', 90],
+  ];
+  const ones = atoms.filter(([, v]) => v >= 1 && v <= 9);
+  for (const [t, tv] of tens) {
+    pushPhrase(entries, t, [tv]);
+    for (const [o, ov] of ones) pushPhrase(entries, `${tv === 20 || tv >= 30 ? `${o}und${t}` : `${t} ${o}`}`, [tv + ov]);
+  }
+  pushPhrase(entries, 'ein Jahr', [1]);
+  pushPhrase(entries, 'einem Jahr', [1]);
+  pushPhrase(entries, 'einen Monat', [1]);
+  pushPhrase(entries, 'einem Monat', [1]);
+  pushPhrase(entries, 'einen Tag', [1]);
+  pushPhrase(entries, 'einem Tag', [1]);
+  for (const [atom, value] of atoms) {
+    if (value >= 1) {
+      for (const [scale, factor] of scales) pushPhrase(entries, `${atom} ${scale}`, [value * factor]);
+    }
+    if (value === 1) {
+      for (const unit of units) pushPhrase(entries, `${atom} ${unit}`, [value]);
+    }
+    if (value >= 2) pushPhrase(entries, atom, [value]);
+  }
+  return compilePhrases(entries);
+}
+
+function buildEsLexicon() {
+  const entries = [];
+  const units = ['año', 'años', 'mes', 'meses', 'día', 'días', 'semana', 'semanas', 'vez', 'veces', 'persona', 'personas'];
+  const scales = [['mil millones', 1_000_000_000], ['millón', 1_000_000], ['millones', 1_000_000], ['mil', 1_000]];
+  const atoms = [
+    ['cero', 0], ['uno', 1], ['una', 1], ['un', 1], ['dos', 2], ['tres', 3],
+    ['cuatro', 4], ['cinco', 5], ['seis', 6], ['siete', 7], ['ocho', 8], ['nueve', 9], ['diez', 10],
+  ];
+  pushPhrase(entries, 'dos tercios', [2, 3]);
+  pushPhrase(entries, 'un tercio', [1, 3]);
+  pushPhrase(entries, 'la mitad', [1, 2]);
+  const teens = [
+    ['once', 11], ['doce', 12], ['trece', 13], ['catorce', 14], ['quince', 15],
+    ['dieciséis', 16], ['diecisiete', 17], ['dieciocho', 18], ['diecinueve', 19],
+  ];
+  for (const [phrase, n] of teens) pushPhrase(entries, phrase, [n]);
+  const tens = [
+    ['veinte', 20], ['treinta', 30], ['cuarenta', 40], ['cincuenta', 50],
+    ['sesenta', 60], ['setenta', 70], ['ochenta', 80], ['noventa', 90],
+  ];
+  const ones = atoms.filter(([, v]) => v >= 1 && v <= 9);
+  for (const [t, tv] of tens) {
+    pushPhrase(entries, t, [tv]);
+    for (const [o, ov] of ones) pushPhrase(entries, `${t} y ${o}`, [tv + ov]);
+  }
+  pushPhrase(entries, 'un año', [1]);
+  pushPhrase(entries, 'un mes', [1]);
+  pushPhrase(entries, 'un día', [1]);
+  for (const [atom, value] of atoms) {
+    if (value >= 1) {
+      for (const [scale, factor] of scales) pushPhrase(entries, `${atom} ${scale}`, [value * factor]);
+    }
+    if (value === 1) {
+      for (const unit of units) pushPhrase(entries, `${atom} ${unit}`, [value]);
+    }
+    if (value >= 2) pushPhrase(entries, atom, [value]);
+  }
+  return compilePhrases(entries);
+}
+
 export const WORD_NUMERAL_LEXICONS = {
   vi: buildViLexicon(),
   id: buildIdLexicon(),
   th: buildThLexicon(),
   fil: buildFilLexicon(),
   ar: buildArLexicon(),
+  de: buildDeLexicon(),
+  es: buildEsLexicon(),
 };
 
 export function lexiconEntryCount(lang) {
@@ -665,18 +797,18 @@ export function lexiconEntryCount(lang) {
  * localized (`2025년 9월 13일` / `13 September 2025` / `13 กันยายน ค.ศ. 2025`).
  */
 export const DATE_MONTH_NAMES = {
-  january: 1, jan: 1, januari: 1, enero: 1, 'มกราคม': 1, 'ม.ค.': 1,
-  february: 2, feb: 2, februari: 2, pebrero: 2, 'กุมภาพันธ์': 2, 'ก.พ.': 2,
-  march: 3, mar: 3, maret: 3, marso: 3, 'มีนาคม': 3, 'มี.ค.': 3,
+  january: 1, jan: 1, januari: 1, enero: 1, januar: 1, 'มกราคม': 1, 'ม.ค.': 1,
+  february: 2, feb: 2, februari: 2, pebrero: 2, februar: 2, febrero: 2, 'กุมภาพันธ์': 2, 'ก.พ.': 2,
+  march: 3, mar: 3, maret: 3, marso: 3, 'märz': 3, marzo: 3, 'มีนาคม': 3, 'มี.ค.': 3,
   april: 4, apr: 4, abril: 4, 'เมษายน': 4, 'เม.ย.': 4,
-  may: 5, mei: 5, mayo: 5, 'พฤษภาคม': 5, 'พ.ค.': 5,
-  june: 6, jun: 6, juni: 6, hunyo: 6, 'มิถุนายน': 6, 'มิ.ย.': 6,
-  july: 7, jul: 7, juli: 7, hulyo: 7, 'กรกฎาคม': 7, 'ก.ค.': 7,
+  may: 5, mei: 5, mayo: 5, mai: 5, 'พฤษภาคม': 5, 'พ.ค.': 5,
+  june: 6, jun: 6, juni: 6, hunyo: 6, junio: 6, 'มิถุนายน': 6, 'มิ.ย.': 6,
+  july: 7, jul: 7, juli: 7, hulyo: 7, julio: 7, 'กรกฎาคม': 7, 'ก.ค.': 7,
   august: 8, aug: 8, agustus: 8, agosto: 8, 'สิงหาคม': 8, 'ส.ค.': 8,
-  september: 9, sept: 9, sep: 9, setyembre: 9, 'กันยายน': 9, 'ก.ย.': 9,
-  october: 10, oct: 10, oktober: 10, oktubre: 10, 'ตุลาคม': 10, 'ต.ค.': 10,
-  november: 11, nov: 11, nobyembre: 11, 'พฤศจิกายน': 11, 'พ.ย.': 11,
-  december: 12, dec: 12, desember: 12, disyembre: 12, 'ธันวาคม': 12, 'ธ.ค.': 12,
+  september: 9, sept: 9, sep: 9, setyembre: 9, septiembre: 9, setiembre: 9, 'กันยายน': 9, 'ก.ย.': 9,
+  october: 10, oct: 10, oktober: 10, oktubre: 10, octubre: 10, 'ตุลาคม': 10, 'ต.ค.': 10,
+  november: 11, nov: 11, nobyembre: 11, noviembre: 11, 'พฤศจิกายน': 11, 'พ.ย.': 11,
+  december: 12, dec: 12, desember: 12, disyembre: 12, dezember: 12, diciembre: 12, 'ธันวาคม': 12, 'ธ.ค.': 12,
 };
 
 export function parseArgs(argv) {
@@ -971,7 +1103,14 @@ function stripStructuralNoise(text) {
   s = s.replace(/(?<!!)\[([^\]]*)\]\([^)]+\)/g, '$1');
   s = s.replace(/\bhttps?:\/\/[^\s)]+/gi, ' ');
   s = s.replace(/\bwww\.[^\s)]+/gi, ' ');
-  s = s.replace(/(^|\n)[ \t]*\d+\.[ \t]+/g, '$1');
+  // Do not treat German "13. September 2025" (date_display at line start) as a
+  // markdown ordered-list marker. List items still lose their "1. " prefix
+  // because the following token is not a month name.
+  const monthAlt = Object.keys(DATE_MONTH_NAMES)
+    .sort((a, b) => b.length - a.length)
+    .map((name) => name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+    .join('|');
+  s = s.replace(new RegExp(`(^|\\n)[ \\t]*\\d+\\.[ \\t]+(?!(?:${monthAlt}))`, 'giu'), '$1');
   return s;
 }
 
@@ -1143,6 +1282,20 @@ export function analyzeNumbers(text, lang = 'ko') {
     let year = Number.parseInt(groups[2], 10);
     if (/พ\.ศ\./.test(match) || year >= 2400) year -= THAI_BUDDHIST_ERA_OFFSET;
     consumeValues(match, offset, [Number.parseInt(groups[0], 10), monthN, year]);
+  });
+
+  // de: 13. September 2025
+  s = blankReplace(s, new RegExp(`(${day})\\.\\s+(${month})\\s+((?:19|20)\\d{2})`, 'giu'), (match, groups, offset) => {
+    const monthN = monthNumber(groups[1]);
+    if (!monthN) return false;
+    consumeValues(match, offset, [Number.parseInt(groups[0], 10), monthN, Number.parseInt(groups[2], 10)]);
+  });
+
+  // es: 13 de septiembre de 2025
+  s = blankReplace(s, new RegExp(`(${day})\\s+de\\s+(${month})\\s+de\\s+((?:19|20)\\d{2})`, 'giu'), (match, groups, offset) => {
+    const monthN = monthNumber(groups[1]);
+    if (!monthN) return false;
+    consumeValues(match, offset, [Number.parseInt(groups[0], 10), monthN, Number.parseInt(groups[2], 10)]);
   });
 
   s = blankReplace(s, new RegExp(`(${month})\\.?\\s+(${day})(?:,)?\\s+((?:19|20)\\d{2})`, 'giu'), (match, groups, offset) => {
@@ -1547,6 +1700,20 @@ const ORDINAL_WORD_N = {
     ikalawa: 2, pangalawa: 2, second: 2,
     ikatlo: 3, ikatlong: 3, third: 3,
   },
+  de: {
+    erste: 1, erster: 1, ersten: 1, erstes: 1, erstem: 1,
+    zweite: 2, zweiter: 2, zweiten: 2, zweites: 2, zweitem: 2,
+    dritte: 3, dritter: 3, dritten: 3, drittes: 3, drittem: 3,
+    vierte: 4, vierter: 4, vierten: 4, viertes: 4,
+    fünfte: 5, fünfter: 5, fünften: 5,
+  },
+  es: {
+    primera: 1, primer: 1, primero: 1,
+    segunda: 2, segundo: 2,
+    tercera: 3, tercero: 3, tercer: 3,
+    cuarta: 4, cuarto: 4,
+    quinta: 5, quinto: 5,
+  },
   ar: {
     الأول: 1, الأولى: 1, أول: 1, أولى: 1,
     الثاني: 2, الثانية: 2, ثاني: 2, ثانية: 2,
@@ -1675,6 +1842,28 @@ function targetOrdinalSpecs(lang) {
       { kind: 'paragraph', n: 2, re: /(?:isang\s+)?talata\s+ikalawa/gi },
       { kind: 'perday', n: 1, re: /bawat\s+araw|kada\s+araw|per\s+day|araw\s+kada/gi },
       { kind: 'type', re: /(?:isang\s+)?\b(unang|ikalawang|ikatlong)\s+uri\b/gi, nFrom: (match) => ordinalWordN('fil', match[1]) },
+    ],
+    de: [
+      { kind: 'instance', n: 1, re: /erstinstanzlich|erste[nrs]?\s+Instanz|Gericht\s+erster\s+Instanz/gi },
+      { kind: 'instance', n: 2, re: /zweitinstanzlich|zweite[nrs]?\s+Instanz|Gericht\s+zweiter\s+Instanz/gi },
+      { kind: 'party', n: 3, re: /(?:einem\s+|einer\s+|eines\s+|ein\s+|den\s+|der\s+|die\s+)?Dritt(?:e[rn]?|partei)|dritte[nrs]?\s+Partei/gi },
+      { kind: 'country', n: 3, re: /Drittstaat(?:en)?|Drittland|dritte[nrs]?\s+(?:Staat|Land)/gi },
+      { kind: 'type', n: 2, re: /Type\s*II\b|zweiter\s+Art|zweiten\s+Art/gi },
+      { kind: 'paragraph', re: /Absatz\s+(erste[nrs]?|zweite[nrs]?|dritte[nrs]?|vierte[nrs]?|\d+)/gi, nFrom: (match) => ordinalWordN('de', match[1]) },
+      { kind: 'item', re: /(?:Ziffer|Nummer)\s+(erste[nrs]?|zweite[nrs]?|dritte[nrs]?|vierte[nrs]?|\d+)/gi, nFrom: (match) => ordinalWordN('de', match[1]) },
+      { kind: 'type', re: /(?:Art|Typ|Gattung)\s+(erste[nrs]?|zweite[nrs]?|dritte[nrs]?|vierte[nrs]?|\d+)/gi, nFrom: (match) => ordinalWordN('de', match[1]) },
+      { kind: 'perday', n: 1, re: /pro\s+Tag|je\s+Tag|pro\s+Tagessatz/gi },
+    ],
+    es: [
+      { kind: 'instance', n: 1, re: /primera\s+instancia/gi },
+      { kind: 'instance', n: 2, re: /segunda\s+instancia/gi },
+      { kind: 'party', n: 3, re: /(?:un\s+|una\s+)?tercer(?:o|a)(?:\s+(?:partido|parte))?/gi },
+      { kind: 'country', n: 3, re: /tercer(?:o)?\s+pa[ií]s/gi },
+      { kind: 'type', n: 2, re: /tipo\s*II\b|segunda\s+clase|tipo\s+segundo/gi },
+      { kind: 'paragraph', re: /(?:p[aá]rrafo|apartado)\s+(primero|primera|segundo|segunda|tercero|tercera|cuarto|cuarta|\d+)/gi, nFrom: (match) => ordinalWordN('es', match[1]) },
+      { kind: 'item', re: /(?:inciso|numeral)\s+(primero|primera|segundo|segunda|tercero|tercera|cuarto|cuarta|\d+)/gi, nFrom: (match) => ordinalWordN('es', match[1]) },
+      { kind: 'type', re: /tipo\s+(primero|primera|segundo|segunda|tercero|tercera|cuarto|cuarta|\d+)/gi, nFrom: (match) => ordinalWordN('es', match[1]) },
+      { kind: 'perday', n: 1, re: /por\s+d[ií]a|al\s+d[ií]a/gi },
     ],
     ar: (() => {
       const keys = Object.keys(ORDINAL_WORD_N.ar)

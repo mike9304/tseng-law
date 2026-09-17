@@ -23,6 +23,8 @@ const GUIDANCE_LOCALES = [
   'th',
   'fil',
   'ar',
+  'de',
+  'es',
 ] as const satisfies readonly GuidanceLocale[];
 
 /**
@@ -63,6 +65,8 @@ const CONSULTATION_LANGUAGE_TERMS: Record<string, readonly string[]> = {
   th: ['ภาษาอังกฤษ', 'ภาษาจีน', 'ภาษาญี่ปุ่น', 'ภาษาเกาหลี'],
   fil: ['Ingles', 'Tsino', 'Hapon', 'Koreano'],
   ar: ['بالإنجليزية', 'الصينية', 'اليابانية', 'الكورية'],
+  de: ['Englisch', 'Chinesisch', 'Japanisch', 'Koreanisch'],
+  es: ['inglés', 'chino', 'japonés', 'coreano'],
 };
 
 /**
@@ -83,6 +87,11 @@ const GUIDANCE_LANGUAGE_TOKENS: ReadonlyArray<readonly [string, RegExp]> = [
   ['ภาษาไทย', /ภาษาไทย/],
   ['Arabic', /\bArabic\b/i],
   ['عربي', /عربي/],
+  ['German', /\bGerman\b/i],
+  ['Deutsch', /\bDeutsch\b/],
+  ['Spanish', /\bSpanish\b/i],
+  ['Español', /\bEspañol\b/],
+  ['español', /\bespañol\b/],
 ];
 
 /**
@@ -113,6 +122,10 @@ const FORBIDDEN_COMBINATIONS: ReadonlyArray<readonly [string, RegExp, RegExp]> =
   ['Arabic + استشارة', /\bArabic\b/i, /استشار/],
   ['عربي + استشارة', /عربي/, /استشار/],
   ['عربي + ترجمة فورية', /عربي/, /ترجمة فورية/],
+  ['Deutsch + Beratung', /\bDeutsch\b/, /Beratung/],
+  ['German + consultation', /\bGerman\b/i, /\bconsultation\b/i],
+  ['español + consulta', /\bespañol\b/i, /consulta/i],
+  ['Spanish + consultation', /\bSpanish\b/i, /\bconsultation\b/i],
 ];
 
 /**
@@ -130,6 +143,8 @@ const SERVICES_SCOPE_TERMS: Record<string, readonly [string, RegExp]> = {
   th: ['ขอบเขต', /ขอบเขต/],
   fil: ['saklaw', /saklaw/i],
   ar: ['نطاق كل قضية', /نطاق كل قضية/],
+  de: ['Umfang', /Umfang/],
+  es: ['alcance', /alcance/i],
 };
 
 const SERVICES_ACCEPTANCE_PATTERNS: Record<
@@ -155,6 +170,14 @@ const SERVICES_ACCEPTANCE_PATTERNS: Record<
   ar: [
     ['قبول قضية بعينها', /قبول قضية بعينها/],
     ['فيتقرّر', /يتقرّر/],
+  ],
+  de: [
+    ['ob eine Sache angenommen', /ob eine Sache angenommen/i],
+    ['entscheidet sich nach Prüfung', /entscheidet sich nach Prüfung/i],
+  ],
+  es: [
+    ['si un asunto se acepta', /si un asunto se acepta/i],
+    ['se decide después de revisar', /se decide después de revisar/i],
   ],
 };
 
@@ -188,8 +211,8 @@ const entries = GUIDANCE_LOCALES.flatMap((locale) =>
 );
 
 describe('guidanceAnswers', () => {
-  it('covers 5 locales x 6 page keys', () => {
-    expect(GUIDANCE_LOCALES).toHaveLength(5);
+  it('covers 7 locales x 6 page keys', () => {
+    expect(GUIDANCE_LOCALES).toHaveLength(7);
     expect(ANSWER_PAGE_KEYS).toHaveLength(6);
     expect(Object.keys(guidanceAnswers).sort()).toEqual([...GUIDANCE_LOCALES].sort());
 

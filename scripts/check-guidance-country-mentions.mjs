@@ -35,6 +35,7 @@ const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..
 /** Guidance data modules whose vi/id/th/fil/ar blocks are reader-facing copy. */
 export const GUIDANCE_DATA_FILES = [
   'src/data/international-guidance-content.ts',
+  'src/data/international-guidance-western.ts',
   'src/data/international-guidance-answers.ts',
   'src/data/international-guidance-team.ts',
   'src/data/international-inquiry-copy.ts',
@@ -44,7 +45,7 @@ export const GUIDANCE_DATA_FILES = [
   'src/data/international-guidance-offices.ts',
 ];
 
-export const GUIDANCE_LOCALES = ['vi', 'id', 'th', 'fil', 'ar'];
+export const GUIDANCE_LOCALES = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es'];
 
 /**
  * Country tokens that must not appear in guidance copy.
@@ -156,16 +157,36 @@ export function extractLocaleBlocks(text) {
   const lines = text.split('\n');
   const blocks = [];
   let current = null;
+  let closeAtColumnZero = false;
   for (let i = 0; i < lines.length; i += 1) {
     const line = lines[i];
     if (!current) {
-      const open = /^ {2}'?(vi|id|th|fil|ar)'?: \{\s*$/.exec(line);
-      if (open) current = { locale: open[1], startLine: i + 1, lines: [] };
+      const open = /^ {2}'?(vi|id|th|fil|ar|de|es)'?: \{\s*$/.exec(line);
+      if (open) {
+        current = { locale: open[1], startLine: i + 1, lines: [] };
+        closeAtColumnZero = false;
+        continue;
+      }
+      const western = /^export const (german|spanish)GuidanceContent\b/.exec(line);
+      if (western) {
+        current = {
+          locale: western[1] === 'german' ? 'de' : 'es',
+          startLine: i + 1,
+          lines: [],
+        };
+        closeAtColumnZero = true;
+        continue;
+      }
+      const shorthand = /^ {2}'?(de|es)'?: [A-Za-z]/.exec(line);
+      if (shorthand) {
+        blocks.push({ locale: shorthand[1], startLine: i + 1, lines: [] });
+      }
       continue;
     }
-    if (/^ {2}\},?\s*$/.test(line)) {
+    if (closeAtColumnZero ? /^};\s*$/.test(line) : /^ {2}\},?\s*$/.test(line)) {
       blocks.push(current);
       current = null;
+      closeAtColumnZero = false;
       continue;
     }
     current.lines.push({ line: i + 1, text: line });

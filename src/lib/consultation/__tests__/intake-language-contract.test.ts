@@ -30,7 +30,7 @@ describe('intake language contract',
         const uiLocales: readonly InquiryLocale[] = PUBLIC_INQUIRY_LOCALES;
         const consultationLanguages: readonly ConsultationLanguage[] = CONSULTATION_LANGUAGES;
 
-        expect(uiLocales).toEqual(['ko', 'zh-hant', 'en', 'ja', 'vi', 'id', 'th', 'fil', 'ar']);
+        expect(uiLocales).toEqual(['ko', 'zh-hant', 'en', 'ja', 'vi', 'id', 'th', 'fil', 'ar', 'de', 'es']);
         expect(consultationLanguages).toEqual(['en', 'zh-hant', 'ja', 'ko']);
         expect(PREFERRED_CONSULTATION_CHOICES).toHaveLength(5);
       });

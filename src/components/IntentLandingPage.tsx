@@ -303,19 +303,23 @@ export default function IntentLandingPage({
   }
 
   const l = labels[locale];
+  const attorneyHeading = page.attorneyHeadingOverride ?? l.attorneyHeading;
+  const ctaText = page.ctaTextOverride ?? l.ctaText;
   const services = page.serviceSlugs
     .map((item) => {
       const area = getServiceArea(item);
       if (!area) {
         return null;
       }
+      // 페이지별 블러브가 있으면 공용 서비스 소개 대신 그 문구를 쓴다.
+      const blurb = page.serviceBlurbs?.[area.slug];
       if (locale === 'ja') {
         const approved = getJapaneseServiceDetail(area.slug);
         return approved
-          ? { slug: area.slug, title: approved.title, intro: approved.intro }
+          ? { slug: area.slug, title: approved.title, intro: blurb ?? approved.intro }
           : null;
       }
-      return { slug: area.slug, title: area.title[locale], intro: area.intro[locale] };
+      return { slug: area.slug, title: area.title[locale], intro: blurb ?? area.intro[locale] };
     })
     .filter((item): item is NonNullable<typeof item> => item != null);
   const columns = page.columnSlugs.map((item) => getColumnPost(item, locale)).filter((item): item is NonNullable<typeof item> => item != null);
@@ -434,7 +438,7 @@ export default function IntentLandingPage({
           </div>
 
           <aside className="intent-sidebar">
-            <AttorneyAuthorityCard locale={locale} heading={l.attorneyHeading} />
+            <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />
           </aside>
         </div>
       </section>
@@ -550,7 +554,7 @@ export default function IntentLandingPage({
           <div className="intent-cta-card">
             <SectionLabel>{l.ctaLabel}</SectionLabel>
             <h2 className="section-title">{l.ctaTitle}</h2>
-            <p className="section-lede">{l.ctaText}</p>
+            <p className="section-lede">{ctaText}</p>
             <div className="intent-cta-actions">
               <a
                 href={getConsultationPublicMailto(locale)}

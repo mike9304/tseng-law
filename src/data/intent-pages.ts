@@ -990,7 +990,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         // REVIEW: 변호사 검수 필요 — 품질보증·납기 지연·리콜 비용 분담 조항의 검토 범위를 언급
         'Materials usually move on a repeating delivery cycle; equipment often includes tool set-up and on-site response, so the clauses that matter are not the same. We read the warranty scope, late-delivery handling, and who bears recall costs from the contract wording itself.',
         // REVIEW: 변호사 검수 필요 — 기술자 체류 절차와 법인 형태 선택의 연계를 서술
-        'If home-country technicians will keep flying in for equipment set-up or line support, we review which entity form and stay procedure to prepare while the company is still being formed.',
+        'If home-country technicians will keep flying in for equipment set-up or on-site production support, we review which entity form and stay procedure to prepare while the company is still being formed.',
       ],
       idealFor: [
         // REVIEW: 변호사 검수 필요 — 벤더 등록 요건과 현지 법인 필요 여부의 연결
@@ -1007,7 +1007,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
         // REVIEW: 변호사 검수 필요 — 검수·인수 시점이 대금 청구와 하자 대응에 미치는 영향을 서술
         'On equipment supply, where you put the inspection standard and the acceptance date changes the order of invoicing and defect response, so we start from the contract wording.',
         // REVIEW: 변호사 검수 필요 — 기술자 체류와 현지 채용 일정의 연계를 서술
-        'Home-country technician stays and local hiring have to be lined up with the incorporation calendar, or the date you can actually cover the line will slip.',
+        'Home-country technician stays and local hiring have to be lined up with the incorporation calendar, or the date you can actually staff the production floor will slip.',
       ],
       processFlow: [
         // REVIEW: 변호사 검수 필요 — 현지 법인 없이 납품 가능한 구조인지 확인한다는 서술
@@ -1063,7 +1063,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
           question: 'Can we keep using our home-country NDA and supply agreement as they are?',
           // REVIEW: 변호사 검수 필요 — 준거법·분쟁해결·품질보증·리콜 비용 조항 검토를 언급
           answer:
-            'Before you do, we line up governing law and dispute resolution, warranty scope, late delivery and recall-cost sharing, and the range of technical data you must hand over, against the customer purchasing terms. Send the headquarters template and the purchasing terms they sent, and we will mark what needs to change.',
+            'Before you do, we check governing law and dispute resolution, warranty scope, late delivery and recall-cost sharing, and the range of technical data you must hand over, against the customer purchasing terms. Send the headquarters template and the purchasing terms they sent, and we will mark what needs to change.',
         },
         {
           question: 'What do you look at when we move from a distributor to a direct contract?',

@@ -59,7 +59,7 @@ Als Ergänzung können Sie die [Abbildung zu Überholvorschriften und -verfahren
 
 > Siehe auch:
 > - [Leitfaden zum Prozessanwalt in Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Taiwanesischer Anwalt mit Koreanischkenntnissen](/ko/korean-lawyer-in-taiwan)
+> - [Taiwanesische Anwältin mit Koreanischkenntnissen](/ko/korean-lawyer-in-taiwan)
 > - [Verfahren bei Verkehrsunfällen in Taiwan](/de/columns/taiwan-traffic-accident-procedure)
 
 Dieser Beitrag ist allgemeine Rechtsinformation zur Überholregelung und zur Haftungsbeurteilung von Unfällen in Taiwan, keine Rechtsberatung für einen Einzelfall und keine Garantie für ein bestimmtes Ergebnis. Die tatsächliche Haftung kann je nach Unfallort, Fahrzeugbewegung, Geschwindigkeit, Signalen, Beweisen, Gutachten (鑑定) und dem neuesten Gesetzesstand abweichen; konkrete Fälle sind anhand der einschlägigen Unterlagen gesondert zu prüfen.

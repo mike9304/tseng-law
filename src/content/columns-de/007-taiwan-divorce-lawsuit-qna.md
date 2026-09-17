@@ -196,4 +196,4 @@ Die folgenden Primärquellen (1. Stufe) sind Ausgangspunkt zur Prüfung der Rech
 
 Dieser Beitrag ist Bildungsmaterial zur allgemeinen Erläuterung der Institute Scheidung, internationale Familiensachen, Ehevermögen und minderjährige Kinder in Taiwan und keine Rechtsberatung für einen Einzelfall. Verfahren und Ergebnis können nach Zuständigkeit, Kollisionsrecht, Anerkennung ausländischer Entscheidungen, Ehe- und Personenstandsstand, Güterstand, bestehender Vereinbarung oder Entscheidung zum Kind, Sachverhalt und Beweisen sowie den neuesten amtlichen Vorschriften abweichen. Fristen für Eintragung, Rechtsmittel, Anspruch und Vollstreckung sind vor dem Handeln anhand des genauen Fristbeginns jedes Rechts und Verfahrens einzeln zu prüfen.
 
-**Rechtsanwalt Wei Tseng (曾雋崴)**
+**Rechtsanwältin Wei Tseng (曾雋崴)**

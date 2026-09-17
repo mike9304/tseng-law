@@ -129,5 +129,5 @@ pumirma ng kontrata sa upa, tiyakin po ninyo ito nang maaga.
 
 > Tingnan din:
 > - [Komprehensibong Gabay sa Pagtatatag ng Kompanya sa Taiwan — Mga Hakbang, Gastos at Anyo ng Korporasyon](/ko/guides/taiwan-company-setup)
-> - [Abogado sa Taiwan na Marunong ng Koreano](/ko/korean-lawyer-in-taiwan)
+> - [Abogada sa Taiwan na Marunong ng Koreano](/ko/korean-lawyer-in-taiwan)
 > - [Gabay sa Abogado para sa Pagtatatag ng Kompanya at Korporasyon sa Taiwan](/ko/taiwan-company-setup-lawyer)

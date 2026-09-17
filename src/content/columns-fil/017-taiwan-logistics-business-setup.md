@@ -141,11 +141,11 @@ Sa pagtatrabaho nang walang pahintulot ay maaaring ipataw ang administrative fin
 ## Kaugnay na Gabay
 
 - [Mga serbisyo sa pamumuhunan at pagtatatag ng kompanya sa Taiwan](/ko/services#investment)
-- [Profile ni Abogado Wei Tseng](/ko/lawyers/wei-tseng)
+- [Profile ni Abogada Wei Tseng](/ko/lawyers/wei-tseng)
 - [Konsultasyon at katanungan](/fil/contact)
 
 ---
 
 Ang artikulong ito ay materyal na pang-edukasyon na naglalayong ipaliwanag ang pangkalahatang sistemang legal, at hindi ito legal na payo para sa isang tiyak na usapin. Maaaring magbago ang pamantayan ng lisensiya, ang mga pormularyo ng aplikasyon at ang gawi ng ahensiyang may hurisdiksiyon, kaya bago isagawa ang pamumuhunan o ang kontrata, mangyaring tiyakin ninyo ang pinakabagong opisyal na materyal at ang inyong indibidwal na kalagayan.
 
-**Abogado Wei Tseng (曾雋崴)**
+**Abogada Wei Tseng (曾雋崴)**

@@ -191,4 +191,4 @@ Beim zeitlichen Ordnen der Unterlagen sollten Vertragsschlussdatum, Schulungsbeg
 
 Dieser Beitrag ist Bildungsmaterial zur allgemeinen Erläuterung der Vereinbarung über eine Mindestbeschäftigungsdauer, der Erstattung von Schulungskosten und vorleistenden Zahlungen sowie der Kündigungsankündigung in Taiwan und keine Rechtsberatung für einzelne Arbeitssachen. Wirksamkeit der Vereinbarung und Haftungsumfang können nach Vertragstyp und Klausel, tatsächlicher Schulung und Kosten, Zweck und Mitteilung der Gegenleistung, Beschäftigungsdauer, Beendigungsursache und Beweisen abweichen. Vor Rücktrittserklärung, Gehaltsabzug, Rückzahlungsvereinbarung oder Streitbearbeitung prüfen Sie bitte die neuesten amtlichen Unterlagen und die Umstände des Einzelfalls.
 
-**Rechtsanwalt Wei Tseng (曾雋崴)**
+**Rechtsanwältin Wei Tseng (曾雋崴)**

@@ -115,5 +115,5 @@ Una caída en el suelo de un establecimiento, un daño a la salud por alimentos 
 
 > Véase también:
 > - [Guía del abogado litigante en Taiwán](/ko/taiwan-litigation-lawyer)
-> - [Abogado de Taiwán que habla coreano](/ko/korean-lawyer-in-taiwan)
+> - [Abogada de Taiwán que habla coreano](/ko/korean-lawyer-in-taiwan)
 > - [Guía para buscar abogado en Taiwán](/ko/taiwan-lawyer)

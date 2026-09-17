@@ -191,4 +191,4 @@ Al ordenar los datos en orden temporal, conviene indicar juntos la fecha de cele
 
 Este artículo es un material de propósito educativo para explicar de forma general el pacto de período mínimo de trabajo en Taiwán, la devolución del gasto de formación y de la prestación anticipada y el preaviso de dimisión; no es asesoramiento jurídico para un asunto laboral concreto. La validez del pacto y el alcance de la responsabilidad pueden variar según el tipo y el tenor del contrato, la formación y el coste reales, la finalidad de la compensación y su comunicación, el período de trabajo, la causa de extinción y las pruebas. Antes de formular la dimisión, de aceptar un descuento salarial, de pactar una devolución o de responder a un litigio, conviene confirmar las fuentes oficiales más recientes y las circunstancias individuales.
 
-**Wei Tseng (曾雋崴), abogado de Taiwán**
+**Wei Tseng (曾雋崴), abogada de Taiwán**

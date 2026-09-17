@@ -1661,7 +1661,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         ' kung paano isulat ang buod na susuriin ng abogado.',
       columnsViewAllLabel: 'Tingnan ang lahat ng artikulo',
       columnsReadMoreLabel: 'Basahin pa',
-      columnsReviewLabel: 'Sinuri ni Abogado Wei Tseng',
+      columnsReviewLabel: 'Sinuri ni Abogada Wei Tseng',
       columnsOriginalLanguageBadge: 'Orihinal na wika (original language)',
       columnsOriginalLanguageNote:
         'Wala pang bersyong Filipino ng mga artikulo sa ibaba. Nananatili sa orihinal na wika ang listahan at bubukas ito sa pahina sa wikang iyon; hindi ito awtomatikong isinasalin.',
@@ -1795,7 +1795,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Gawaing may kaugnayan sa ibang bansa',
             paragraphs: [
-              'Kabilang sa gawain naming may kaugnayan sa ibang bansa ang pagtatatag ng kompanya, aplikasyon sa visa, pagpaparehistro ng marka ng kalakal at patente, pagtaya ng panganib na legal, at konsultasyon sa buwis ng kompanya. Natatanging hinahawakan ng tanggapan sa Taichung ang mga usapin ng konstruksiyon, intelektuwal na ari-arian, at ang mga may kaugnayan sa Korea at Japan. Si Abogado Wei Tseng (曾雋崴) naman ang tumutulong sa mga kliyenteng Koreano, Hapon, at sa iba pang internasyonal na kliyente sa mga pangkat ng gawaing nabanggit.',
+              'Kabilang sa gawain naming may kaugnayan sa ibang bansa ang pagtatatag ng kompanya, aplikasyon sa visa, pagpaparehistro ng marka ng kalakal at patente, pagtaya ng panganib na legal, at konsultasyon sa buwis ng kompanya. Natatanging hinahawakan ng tanggapan sa Taichung ang mga usapin ng konstruksiyon, intelektuwal na ari-arian, at ang mga may kaugnayan sa Korea at Japan. Si Abogada Wei Tseng (曾雋崴) naman ang tumutulong sa mga kliyenteng Koreano, Hapon, at sa iba pang internasyonal na kliyente sa mga pangkat ng gawaing nabanggit.',
               'Nakadepende sa nilalaman ng usapin at sa wikang gagamitin kung matatanggap namin ito. Kung kabilang ang usapin ninyo sa mga pangkat ng gawain sa itaas at maipapaliwanag ito sa isa sa apat na wika ng konsultasyon, maaari ninyong ipadala ang buod nito upang suriin ng abogado.',
             ],
           },

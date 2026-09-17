@@ -20,7 +20,7 @@ faq:
 
 ![Larawang pantampok](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Magandang araw, ako si Wei Tseng (曾雋崴), abogado sa Taiwan.
+Magandang araw, ako si Wei Tseng (曾雋崴), abogada sa Taiwan.
 
 Ngayon ay nais kong talakayin sa inyo ang separation pay (資遣費) sa Taiwan.
 
@@ -228,5 +228,5 @@ Kayo rin ay dapat magtanggol sa sarili ninyong karapatan dito sa Taiwan.
 
 > Iba pang babasahin:
 > - [Gabay sa Abogado para sa Paglilitis sa Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Abogadong Taiwanese na Nakakapagsalita ng Koreano](/ko/korean-lawyer-in-taiwan)
+> - [Abogadang Taiwanese na Nakakapagsalita ng Koreano](/ko/korean-lawyer-in-taiwan)
 > - [Larangan ng Serbisyo — Paggawa](/ko/services/labor)

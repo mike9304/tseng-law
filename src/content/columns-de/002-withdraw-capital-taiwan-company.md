@@ -147,4 +147,4 @@ Je länger die Betriebsruhe dauert, desto verwickelter kann das spätere Beendig
 
 Dieser Beitrag ist allgemeine Rechtsinformation und Bildungsmaterial zur Beendigung einer taiwanischen Gesellschaft und zur Behandlung des Gesellschaftsvermögens; er ist keine Rechtsmeinung zu einem bestimmten Sachverhalt. Das passende Verfahren von Auflösung, Abwicklung, Kapitalherabsetzung und Betriebsruhe sowie die Steuererklärung können je nach Gesellschaftsform, Satzung, Vermögenslage, Gläubigerinnen und Gläubigern, ausländischer Investition und dem einzelnen Geschäft abweichen; vor dem tatsächlichen Beschluss oder der Mittelbewegung ist der betreffende Sachverhalt gesondert zu prüfen.
 
-**Rechtsanwalt Wei Tseng (曾雋崴)**
+**Rechtsanwältin Wei Tseng (曾雋崴)**

@@ -363,11 +363,11 @@ Wenn Sie weitere Fragen haben, hinterlassen Sie bitte einen Kommentar.
 
 ​
 
-Ich war WEI, taiwanesischer Anwalt (曾雋崴).
+Ich war WEI, taiwanesische Anwältin (曾雋崴).
 
 ---
 
 > Siehe auch:
 > - [Leitfaden zum Prozessanwalt in Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Taiwanesischer Anwalt mit Koreanischkenntnissen](/ko/korean-lawyer-in-taiwan)
+> - [Taiwanesische Anwältin mit Koreanischkenntnissen](/ko/korean-lawyer-in-taiwan)
 > - [Leitfaden zur Anwaltssuche in Taiwan](/ko/taiwan-lawyer)

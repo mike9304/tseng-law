@@ -20,7 +20,7 @@ faq:
 
 ![Titelbild](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Guten Tag, ich bin Wei Tseng (曾雋崴), taiwanesischer Anwalt.
+Guten Tag, ich bin Wei Tseng (曾雋崴), taiwanesische Anwältin.
 
 Heute möchte ich mit Ihnen über die Abfindung (資遣費) in Taiwan sprechen.
 
@@ -228,5 +228,5 @@ Auch Sie müssen in Taiwan Ihre Rechte schützen.
 
 > Siehe auch:
 > - [Leitfaden zum Prozessanwalt in Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Taiwanesischer Anwalt mit Koreanischkenntnissen](/ko/korean-lawyer-in-taiwan)
+> - [Taiwanesische Anwältin mit Koreanischkenntnissen](/ko/korean-lawyer-in-taiwan)
 > - [Tätigkeitsfelder — Arbeit](/ko/services/labor)

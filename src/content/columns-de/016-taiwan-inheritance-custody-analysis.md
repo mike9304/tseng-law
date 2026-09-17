@@ -151,4 +151,4 @@ Auf den amtlichen Gesetzesseiten sind Änderungs- und Inkrafttretensdatum der Vo
 
 Dieser Beitrag ist Bildungsmaterial zur allgemeinen Erläuterung der Institute Erbrecht, Ehegüterstand, elterliche Sorge und Minderjährigenvormundschaft in Taiwan und keine Rechtsberatung für einzelne Erb- oder Familiensachen. Anwendbares Recht, Verfahren und Ergebnis können nach Kreis der Erben, Testament, Vermögen und Schulden, Güterstand, bestehenden Gerichtsentscheidungen und internationalen Elementen abweichen. Bevor Sie Fristen wie Ausschlagung oder Steuererklärung berechnen oder Vermögen verfügen, prüfen Sie bitte die neuesten amtlichen Unterlagen und die Umstände des Einzelfalls.
 
-**Rechtsanwalt Wei Tseng (曾雋崴)**
+**Rechtsanwältin Wei Tseng (曾雋崴)**

@@ -97,5 +97,5 @@ En la mayoría de los casos, quien se ha preparado de antemano ve protegidos sus
 
 > Véase también:
 > - [Guía del abogado litigante en Taiwán](/ko/taiwan-litigation-lawyer)
-> - [Abogado de Taiwán que habla coreano](/ko/korean-lawyer-in-taiwan)
+> - [Abogada de Taiwán que habla coreano](/ko/korean-lawyer-in-taiwan)
 > - [Áreas de práctica — trabajo](/ko/services/labor)

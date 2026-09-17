@@ -20,7 +20,7 @@ faq:
 
 ![Imagen principal](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Hola, soy Wei Tseng (曾雋崴), abogado de Taiwán.
+Hola, soy Wei Tseng (曾雋崴), abogada de Taiwán.
 
 Hoy quiero hablar con ustedes de la indemnización por despido (資遣費) en Taiwán.
 
@@ -172,7 +172,7 @@ grabó todo el proceso con el teléfono móvil
 
 y pudo probar que B no había dimitido de forma voluntaria.
 
-Por ello, con la ayuda posterior de un abogado,
+Por ello, con la ayuda posterior de una abogada,
 
 pudo percibir una indemnización por despido elevada,
 
@@ -228,5 +228,5 @@ Ustedes también deben proteger sus derechos en Taiwán.
 
 > Véase también:
 > - [Guía del abogado litigante en Taiwán](/ko/taiwan-litigation-lawyer)
-> - [Abogado de Taiwán que habla coreano](/ko/korean-lawyer-in-taiwan)
+> - [Abogada de Taiwán que habla coreano](/ko/korean-lawyer-in-taiwan)
 > - [Áreas de práctica — trabajo](/ko/services/labor)

@@ -115,5 +115,5 @@ Maaari ding maging pangunahing usapin ang tungkulin sa kaligtasan, ang ugnayang 
 
 > Iba pang babasahin:
 > - [Gabay sa Abogado para sa Paglilitis sa Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Abogadong Taiwanese na Nakakapagsalita ng Koreano](/ko/korean-lawyer-in-taiwan)
+> - [Abogadang Taiwanese na Nakakapagsalita ng Koreano](/ko/korean-lawyer-in-taiwan)
 > - [Gabay sa Paghahanap ng Abogado sa Taiwan](/ko/taiwan-lawyer)

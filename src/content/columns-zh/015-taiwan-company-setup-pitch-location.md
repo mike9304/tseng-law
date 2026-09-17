@@ -92,7 +92,7 @@ faq:
 
 此外，查詢後若地址、使用樓層、使用範圍、營業項目或建物狀態有所變更，未必能沿用已取得的結果。應使申請內容與實際使用一致，發生變更時，向台北市及相關主管機關確認是否需要重新查詢或辦理其他程序。
 
-預先查詢、公司及商業登記、稅籍相關程序、行業別許可、裝修與消防、衛生準備，各有不同的目的和審查範圍。請一併參考[台灣投資及公司設立服務](/zh-hant/services#investment)與[台灣公司設立進階篇1](/zh-hant/columns/taiwan-company-establishment-advanced-1)，將物件簽約至開始營業的流程分階段整理。
+預先查詢、公司及商業登記、稅籍相關程序、行業別許可、裝修與消防、衛生準備，各有不同的目的和審查範圍。請一併參考[台灣投資及公司設立服務](/zh-hant/services/investment)與[台灣公司設立進階篇1](/zh-hant/columns/taiwan-company-establishment-advanced-1)，將物件簽約至開始營業的流程分階段整理。
 
 ## 5. 預先查詢的處理時間與結果有效期間是多久？
 
@@ -117,7 +117,7 @@ faq:
 
 ## 相關服務
 
-- [台灣投資及公司設立服務](/zh-hant/services#investment)
+- [台灣投資及公司設立服務](/zh-hant/services/investment)
 - [台灣公司設立進階篇1](/zh-hant/columns/taiwan-company-establishment-advanced-1)
 - [聯絡我們](/zh-hant/contact)
 

@@ -21,7 +21,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ​
 
-以下のQ&Aも、台湾での会社設立を検討されている方のご参考になれば幸いです。
+以下のQ&Aも、台湾での会社設立を検討されている方のご参考になれば幸いです。問1など韓国からの送金・韓国外国為替の説明は**韓国を本国とする例**です。他国の投資家は本国の送金・届出ルールを別途確認してください。
 
 ​
 
@@ -82,6 +82,6 @@ B. 2人目以降の従業員には制限あり：1名を超えて雇用する場
 ---
 
 > 関連情報:
-> - [台湾投資・会社設立サービス](/ja/services#investment)
+> - [台湾投資・会社設立サービス](/ja/services/investment)
 > - [台湾会社設立の応用編1](/ja/columns/taiwan-company-establishment-advanced-1)
 > - [お問い合わせ](/ja/contact)

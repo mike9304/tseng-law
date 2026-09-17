@@ -254,7 +254,7 @@ describe('Japanese investment column 017 — logistics and motor freight', () =>
       (match) => match[0],
     );
     expect(internalLinks).toEqual([
-      '[台湾投資・会社設立サービス](/ja/services#investment)',
+      '[台湾投資・会社設立サービス](/ja/services/investment)',
       '[曾雋崴弁護士のプロフィール](/ja/lawyers/wei-tseng)',
       '[お問い合わせ](/ja/contact)',
     ]);

@@ -253,7 +253,7 @@ describe('Korean investment column 011 — cosmetics registration, PIF, and adve
     );
     expect(internalLinks).toEqual([
       '[대만 회사 설립 기초](/ko/columns/taiwan-company-establishment-basics)',
-      '[대만 투자·회사설립 서비스](/ko/services#investment)',
+      '[대만 투자·회사설립 서비스](/ko/services/investment)',
       '[증준외 변호사 프로필](/ko/lawyers/wei-tseng)',
     ]);
   });

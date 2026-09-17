@@ -288,7 +288,7 @@ const officialSourceLinks = [
   '- [Invest Taiwan — 外国会社支店の投資・登記手続](https://investtaiwan.nat.gov.tw/showPageengInvestmentStatus01?lang=eng&menuNum=7&search=InvestmentStatus01)',
 ];
 const relatedGuideLinks = [
-  '- [台湾投資・会社設立サービス](/ja/services#investment)',
+  '- [台湾投資・会社設立サービス](/ja/services/investment)',
   '- [台湾会社設立の基礎](/ja/columns/taiwan-company-establishment-basics)',
   '- [お問い合わせ](/ja/contact)',
 ];
@@ -725,7 +725,7 @@ describe('Japanese investment column 004 — subsidiary versus branch', () => {
       expect(raw).toContain(imagePath);
     }
 
-    expect(raw).toContain('[台湾投資・会社設立サービス](/ja/services#investment)');
+    expect(raw).toContain('[台湾投資・会社設立サービス](/ja/services/investment)');
     expect(raw).toContain(
       '[台湾会社設立の基礎](/ja/columns/taiwan-company-establishment-basics)',
     );

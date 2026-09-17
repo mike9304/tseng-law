@@ -10,7 +10,7 @@ featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 summary: "Taiwan pays severance on economic dismissal, not after voluntary resignation or most disciplinary dismissals. Amounts follow pension or labor-act service years."
 faq:
   - q: "In Taiwan, does an employee who resigns voluntarily receive severance pay?"
-    a: "No. Unlike Korea, Taiwan requires a company to pay severance only when the company dismisses the employee. If the employee resigns voluntarily, the company does not need to pay severance."
+    a: "No. Unlike some jurisdictions, for example Korea, Taiwan requires a company to pay severance only when the company dismisses the employee. If the employee resigns voluntarily, the company does not need to pay severance."
   - q: "Does the company still have to pay severance in a disciplinary dismissal?"
     a: "No. If the employee commits an unlawful act, violates company rules, or is absent from work without justification for three consecutive days (Labor Standards Act Article 12), the company may dismiss the employee without prior notice and need not pay severance. By contrast, an economic dismissal under Article 11 requires prior notice and payment of severance."
   - q: "How is Taiwan severance pay calculated?"
@@ -27,9 +27,7 @@ Today, I would like to explain severance pay in Taiwan.
 
 ![](../images/008-taiwan-labor-severance-law/img-01.jpg)
 
-Many of you may already be familiar with how severance works in Korea.
-
-In Korea, a company must pay severance when an employee leaves.
+By way of comparison with some other jurisdictions — Korea is one labeled example — a company there must generally pay severance when an employee leaves.
 
 Taiwan, however, is different:
 

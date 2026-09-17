@@ -66,9 +66,10 @@ describe('footer social localization', () => {
     const expectedTopics = [
       { label: '台湾弁護士（日本語相談）', href: '/ja/taiwan-lawyer' },
       { label: '台湾会社設立の弁護士', href: '/ja/taiwan-company-setup-lawyer' },
+      { label: '台湾の半導体材料・装置サプライヤー法務', href: '/ja/taiwan-semiconductor-supplier-legal' },
+      { label: '日本語対応の台湾弁護士', href: '/ja/lawyers/wei-tseng' },
       { label: '台湾訴訟の弁護士', href: '/ja/taiwan-litigation-lawyer' },
       { label: '台湾会社設立ガイド', href: '/ja/guides/taiwan-company-setup' },
-      { label: '日本語対応の台湾弁護士', href: '/ja/lawyers/wei-tseng' },
     ];
     const popularTopics = siteContent.ja.footer.columns.find(
       (column) => column.title === '人気トピック',
@@ -114,8 +115,8 @@ describe('footer social localization', () => {
     });
 
     // Base footer columns render at most BASE_FOOTER_LINK_LIMIT links, so the
-    // entries after the three JA landings stay in content but are not rendered.
-    ['/ja/guides/taiwan-company-setup', '/ja/lawyers/wei-tseng'].forEach((href) => {
+    // entries after the first three popular topics stay in content but are not rendered.
+    ['/ja/taiwan-litigation-lawyer', '/ja/guides/taiwan-company-setup'].forEach((href) => {
       expect(html).not.toContain(`href="${href}"`);
     });
 

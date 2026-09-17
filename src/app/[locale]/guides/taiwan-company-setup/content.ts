@@ -331,7 +331,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       },
       {
         name: 'Incorporation registration (capital remittance, audit, registration)',
-        text: 'Open a preparatory bank account, remit the capital, pass a capital audit, then file incorporation with the Ministry of Economic Affairs. Remitting from a Korean bank requires in-person transfer by the investor and an overseas direct investment report.',
+        text: 'Open a preparatory bank account, remit the capital, pass a capital audit, then file incorporation with the Ministry of Economic Affairs. Remittance rules depend on the investor’s home country; from Korea, banks generally require an in-person transfer and an overseas direct-investment report.',
       },
       {
         name: 'Tax registration',
@@ -352,7 +352,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       { form: 'Corporate income tax', values: ['20%', '20%', 'N/A'] },
       { form: 'Dividend withholding (foreign)', values: ['21%', 'None', 'N/A'] },
       { form: 'Undistributed-earnings tax', values: ['5%', 'None', 'N/A'] },
-      { form: 'Joint venture (others as shareholders)', values: ['Allowed', 'Not allowed (Korean HQ 100%)', 'Not allowed'] },
+      { form: 'Joint venture (others as shareholders)', values: ['Allowed', 'Not allowed (a branch has no shareholders)', 'Not allowed'] },
       { form: 'Listing in Taiwan', values: ['Allowed (Co., Ltd.)', 'Not allowed', 'Not allowed'] },
       { form: 'R&D tax credit', values: ['Up to 30%', 'None', 'None'] },
     ],
@@ -367,7 +367,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       { item: 'Work permit / residence card duration', values: ['About 1 month'] },
       { item: 'Business tax (VAT)', values: ['5% (filed every 2 months)'] },
       { item: 'Corporate income tax', values: ['20% (annual)'] },
-      { item: 'Korea–Taiwan double-taxation agreement', values: ['Effective 2023-12-02. Business profits tax-exempt without a fixed PE; dividend cap rate 10%'] },
+      { item: 'Korea–Taiwan tax treaty (Korean parents; other countries differ)', values: ['Effective 2023-12-02 for qualifying Korean residents. Dividend cap rate 10% if treaty requirements are met; it does not apply automatically. Other countries have different treaties.'] },
     ],
     faqHeading: 'Frequently Asked Questions',
     faq: [
@@ -396,7 +396,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     relatedColumns: relatedColumnsEn,
     relatedResourcesHeading: 'Related Guides',
     relatedResources: [
-      { href: 'korean-lawyer-in-taiwan', label: 'Korean-speaking Taiwan lawyer' },
+      { href: 'lawyers/wei-tseng', label: 'Attorney Wei Tseng profile' },
       { href: 'taiwan-company-setup-lawyer', label: 'Taiwan company setup lawyer guide' },
       { href: 'taiwan-lawyer', label: 'Taiwan lawyer search guide' },
       { href: 'services/investment', label: 'Taiwan investment and company setup services' },
@@ -441,7 +441,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       },
       {
         name: '設立登記（資本金送金・監査・法人登記）',
-        text: '会社の準備口座を開設して資本金を送金し、資本金監査を経て経済部に法人登記を完了します。韓国の銀行から送金する場合は本人が直接訪問して送金する必要があり、海外直接投資の申告が必要です。',
+        text: '会社の準備口座を開設して資本金を送金し、資本金監査を経て経済部に法人登記を完了します。送金手続は投資者の本国によって異なります。韓国の銀行から送金する場合は本人が直接訪問して送金する必要があり、海外直接投資の申告が必要です。',
       },
       {
         name: '税務登記',
@@ -462,7 +462,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       { form: '法人税', values: ['20%', '20%', '該当なし'] },
       { form: '配当金の外国人所得税', values: ['21%', 'なし', '該当なし'] },
       { form: '未処分利益留保金税', values: ['5%', 'なし', '該当なし'] },
-      { form: '合弁（第三者の持分参加）', values: ['可能', '不可（韓国親会社100%）', '不可'] },
+      { form: '合弁（第三者の持分参加）', values: ['可能', '不可（支店に株主はいない）', '不可'] },
       { form: '台湾での上場', values: ['可能（株式会社）', '不可', '不可'] },
       { form: 'R&D税額控除', values: ['最大30%', 'なし', 'なし'] },
     ],
@@ -477,7 +477,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       { item: '就労許可証・居留証にかかる期間', values: ['約1ヶ月'] },
       { item: '営業税', values: ['5%（2ヶ月ごとに申告）'] },
       { item: '法人税', values: ['20%（年間）'] },
-      { item: '韓国・台湾二重課税協定', values: ['2023.12.2発効。固定事業場がなければ営業利益は免税、配当金の上限税率10%'] },
+      { item: '韓国・台湾租税条約（韓国親会社の例。他国は別条約）', values: ['適格な韓国居住者について2023.12.2発効。条約要件を満たせば配当の上限税率10%。自動適用ではない。他国は別条約。'] },
     ],
     faqHeading: 'よくある質問',
     faq: [
@@ -510,7 +510,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     relatedColumns: relatedColumnsJa,
     relatedResourcesHeading: '関連案内',
     relatedResources: [
-      { href: 'korean-lawyer-in-taiwan', label: '韓国語対応の台湾弁護士' },
+      { href: 'lawyers/wei-tseng', label: '曾雋崴弁護士のプロフィール' },
       { href: 'taiwan-company-setup-lawyer', label: '台湾法人設立・会社設立弁護士のご案内' },
       { href: 'taiwan-lawyer', label: '台湾弁護士検索ガイド' },
       { href: 'services/investment', label: '台湾投資・会社設立関連サービス' },

@@ -157,12 +157,12 @@ const relatedResources: Record<
 > = {
   'taiwan-lawyer': [
     {
-      href: 'korean-lawyer-in-taiwan',
+      href: 'lawyers/wei-tseng',
       label: {
-        ko: '한국어 가능한 대만 변호사',
-        'zh-hant': '可使用韓語溝通的台灣律師',
-        en: 'Korean-speaking Taiwan lawyer',
-        ja: '韓国語対応可能な台湾弁護士',
+        ko: '증준외 변호사 프로필',
+        'zh-hant': '曾雋崴律師簡介',
+        en: 'Attorney Wei Tseng profile',
+        ja: '曾雋崴弁護士のプロフィール',
       },
     },
     {
@@ -192,8 +192,26 @@ const relatedResources: Record<
         ja: '台湾会社設立 総合ガイド',
       },
     },
+    {
+      href: 'korean-lawyer-in-taiwan',
+      label: {
+        ko: '한국어 가능한 대만 변호사',
+        'zh-hant': '可使用韓語溝通的台灣律師',
+        en: 'Korean-speaking Taiwan lawyer',
+        ja: '韓国語対応可能な台湾弁護士',
+      },
+    },
   ],
   'taiwan-company-setup-lawyer': [
+    {
+      href: 'lawyers/wei-tseng',
+      label: {
+        ko: '증준외 변호사 프로필',
+        'zh-hant': '曾雋崴律師簡介',
+        en: 'Attorney Wei Tseng profile',
+        ja: '曾雋崴弁護士のプロフィール',
+      },
+    },
     {
       href: 'guides/taiwan-company-setup',
       label: {
@@ -224,12 +242,12 @@ const relatedResources: Record<
   ],
   'taiwan-litigation-lawyer': [
     {
-      href: 'korean-lawyer-in-taiwan',
+      href: 'lawyers/wei-tseng',
       label: {
-        ko: '한국어 가능한 대만 변호사',
-        'zh-hant': '可使用韓語溝通的台灣律師',
-        en: 'Korean-speaking Taiwan lawyer',
-        ja: '韓国語対応可能な台湾弁護士',
+        ko: '증준외 변호사 프로필',
+        'zh-hant': '曾雋崴律師簡介',
+        en: 'Attorney Wei Tseng profile',
+        ja: '曾雋崴弁護士のプロフィール',
       },
     },
     {
@@ -239,6 +257,53 @@ const relatedResources: Record<
         'zh-hant': '台灣律師搜尋指南',
         en: 'Taiwan lawyer search guide',
         ja: '台湾弁護士の探し方ガイド',
+      },
+    },
+    {
+      href: 'korean-lawyer-in-taiwan',
+      label: {
+        ko: '한국어 가능한 대만 변호사',
+        'zh-hant': '可使用韓語溝通的台灣律師',
+        en: 'Korean-speaking Taiwan lawyer',
+        ja: '韓国語対応可能な台湾弁護士',
+      },
+    },
+  ],
+  'taiwan-semiconductor-supplier-legal': [
+    {
+      href: 'lawyers/wei-tseng',
+      label: {
+        ko: '증준외 변호사 프로필',
+        'zh-hant': '曾雋崴律師簡介',
+        en: 'Attorney Wei Tseng profile',
+        ja: '曾雋崴弁護士のプロフィール',
+      },
+    },
+    {
+      href: 'taiwan-company-setup-lawyer',
+      label: {
+        ko: '대만 법인설립·회사설립 변호사 안내',
+        'zh-hant': '台灣公司設立律師指南',
+        en: 'Taiwan company setup lawyer guide',
+        ja: '台湾会社設立弁護士ガイド',
+      },
+    },
+    {
+      href: 'taiwan-litigation-lawyer',
+      label: {
+        ko: '대만 소송 변호사 안내',
+        'zh-hant': '台灣訴訟律師指南',
+        en: 'Taiwan litigation lawyer guide',
+        ja: '台湾訴訟弁護士ガイド',
+      },
+    },
+    {
+      href: 'guides/taiwan-company-setup',
+      label: {
+        ko: '대만 회사설립 종합 가이드',
+        'zh-hant': '台灣公司設立完整指南',
+        en: 'Complete Taiwan company setup guide',
+        ja: '台湾会社設立 総合ガイド',
       },
     },
   ],
@@ -327,6 +392,10 @@ function relatedResourcesFor(locale: SiteLocale, slug: IntentPageSlug) {
   const base = relatedResources[slug];
   const advisory = getCorporateAdvisory(locale) ? advisoryResource : null;
 
+  if (slug === 'taiwan-semiconductor-supplier-legal') {
+    return advisory ? [...base, advisory] : base;
+  }
+
   if (locale === 'en') {
     const assistance =
       slug === 'taiwan-litigation-lawyer' ? [] : enAssistanceResources;
@@ -385,6 +454,8 @@ export default function IntentLandingPage({
   }
 
   const l = labels[locale];
+  const attorneyHeading = page.attorneyHeadingOverride ?? l.attorneyHeading;
+  const ctaText = page.ctaTextOverride ?? l.ctaText;
   const topFaqs = getIntentTopFaqs(page);
   const ai = getAiIntakeDiscovery(locale);
   const services = page.serviceSlugs
@@ -393,13 +464,15 @@ export default function IntentLandingPage({
       if (!area) {
         return null;
       }
+      // 페이지별 블러브가 있으면 공용 서비스 소개 대신 그 문구를 쓴다.
+      const blurb = page.serviceBlurbs?.[area.slug];
       if (locale === 'ja') {
         const approved = getJapaneseServiceDetail(area.slug);
         return approved
-          ? { slug: area.slug, title: approved.title, intro: approved.intro }
+          ? { slug: area.slug, title: approved.title, intro: blurb ?? approved.intro }
           : null;
       }
-      return { slug: area.slug, title: area.title[locale], intro: area.intro[locale] };
+      return { slug: area.slug, title: area.title[locale], intro: blurb ?? area.intro[locale] };
     })
     .filter((item): item is NonNullable<typeof item> => item != null);
   const columns = page.columnSlugs.map((item) => getColumnPost(item, locale)).filter((item): item is NonNullable<typeof item> => item != null);
@@ -533,7 +606,7 @@ export default function IntentLandingPage({
           </div>
 
           <aside className={`intent-sidebar ${styles.sidebar}`}>
-            <AttorneyAuthorityCard locale={locale} heading={l.attorneyHeading} />
+            <AttorneyAuthorityCard locale={locale} heading={attorneyHeading} />
           </aside>
         </div>
       </section>
@@ -683,7 +756,7 @@ export default function IntentLandingPage({
           <div className={`intent-cta-card ${styles.ctaCard}`}>
             <SectionLabel>{l.ctaLabel}</SectionLabel>
             <h2 className="section-title">{l.ctaTitle}</h2>
-            <p className="section-lede">{l.ctaText}</p>
+            <p className="section-lede">{ctaText}</p>
             {ai.enabled ? <p className="section-lede">{ai.supportingCopy}</p> : null}
             <div className={`intent-cta-actions ${styles.ctaActions}`}>
               <a

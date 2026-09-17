@@ -111,7 +111,7 @@ PIF 제도는 제품군별로 단계적으로 적용되어 왔습니다. 2026년
 5. 라벨, 판매 페이지, 광고와 협업 게시물을 전체 표현 기준으로 검토합니다.
 6. 검사와 시정요구, 불만·안전정보 및 필요한 후속조치에 대응할 절차를 운영합니다.
 
-회사와 지점의 기본 구조는 [대만 회사 설립 기초](/ko/columns/taiwan-company-establishment-basics), 관련 지원 범위는 [대만 투자·회사설립 서비스](/ko/services#investment), 담당 변호사 정보는 [증준외 변호사 프로필](/ko/lawyers/wei-tseng)에서 확인할 수 있습니다.
+회사와 지점의 기본 구조는 [대만 회사 설립 기초](/ko/columns/taiwan-company-establishment-basics), 관련 지원 범위는 [대만 투자·회사설립 서비스](/ko/services/investment), 담당 변호사 정보는 [증준외 변호사 프로필](/ko/lawyers/wei-tseng)에서 확인할 수 있습니다.
 
 ### 공식 자료
 

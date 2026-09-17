@@ -247,7 +247,7 @@ describe('augmentStaticDocs', () => {
     expect(result.byLocale.ko).toBe(legacy.byLocale.ko);
     expect(result.invertedByLocale.ko).toBe(legacy.invertedByLocale.ko);
     expect(result.byLocale.en).toBe(legacy.byLocale.en);
-    expect(result.byLocale.ja).toHaveLength(4);
+    expect(result.byLocale.ja).toHaveLength(5);
     expect(
       runSearchQuery({ index: result, query: '会社設立', locale: 'ja' }).some(
         (hit) => hit.doc.url === '/ja/taiwan-company-setup-lawyer',

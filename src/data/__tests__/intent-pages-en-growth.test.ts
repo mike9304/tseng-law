@@ -104,6 +104,7 @@ describe('EN intent pages growth copy', () => {
       'taiwan-lawyer',
       'taiwan-company-setup-lawyer',
       'taiwan-litigation-lawyer',
+      'taiwan-semiconductor-supplier-legal',
     ]);
     for (const slug of intentPageSlugs) {
       expect(getIntentPage('en', slug)?.slug).toBe(slug);

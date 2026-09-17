@@ -265,7 +265,7 @@ describe('Korean investment column 017 — logistics and motor freight', () => {
       (match) => match[0],
     );
     expect(internalLinks).toEqual([
-      '[대만 투자·회사설립 서비스](/ko/services#investment)',
+      '[대만 투자·회사설립 서비스](/ko/services/investment)',
       '[증준외 변호사 프로필](/ko/lawyers/wei-tseng)',
       '[상담 문의](/ko/contact)',
     ]);

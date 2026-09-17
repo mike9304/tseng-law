@@ -24,7 +24,7 @@ faq:
 
 ![](../images/001-taiwan-company-establishment-basics/img-01.jpg)
 
-The ways in which Korean companies and sole proprietors enter the Taiwan market vary with the nature of their business, including manufacturing, distribution, information and communications technology, and professional services. Even when the common goal is to start a business in Taiwan, the legal arrangements that must be prepared will differ depending on whom the business contracts with, through which entity it earns revenue, and who performs the work locally.
+The ways in which overseas companies and sole proprietors enter the Taiwan market vary with the nature of their business, including manufacturing, distribution, information and communications technology, and professional services. Even when the common goal is to start a business in Taiwan, the legal arrangements that must be prepared will differ depending on whom the business contracts with, through which entity it earns revenue, and who performs the work locally.
 
 Company formation, foreign-investment review, bank accounts, taxation, business premises, work permits, and residence procedures are interconnected, but they are not the same process. Completing company registration does not mean that investment-fund verification or every industry-specific license has been completed, nor does it allow a shareholder or manager to begin working in Taiwan immediately.
 
@@ -140,7 +140,7 @@ The treaty’s reduced rates do not apply automatically merely because the treat
 - [Taiwan National Immigration Agency — Permanent Residence Guidance](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Taipei City — Advance Inquiry for Business Premises](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-[Taiwan Investment and Company Formation Services](/en/services#investment) describes the scope of our related services, and [Wei Tseng’s Profile](/en/lawyers/wei-tseng) provides information about the responsible attorney’s experience and languages. For advice on a specific matter, please use [Contact Our Office](/en/contact).
+[Taiwan Investment and Company Formation Services](/en/services/investment) describes the scope of our related services, and [Wei Tseng’s Profile](/en/lawyers/wei-tseng) provides information about the responsible attorney’s experience and languages. For advice on a specific matter, please use [Contact Our Office](/en/contact).
 
 This article is an educational resource providing a general overview of Taiwan company formation and related rules, and it is not legal or tax advice for any specific matter. Because the required procedures and outcomes may vary with the investment structure, industry, the applicant’s nationality and immigration status, and current agency practice, confirm the latest official sources and the circumstances of the individual matter before investing, entering into a contract, or employing personnel.
 

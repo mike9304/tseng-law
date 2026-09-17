@@ -1,6 +1,13 @@
 import { describe, expect, it } from 'vitest';
 
-import { getIntentPage, intentPageSlugs } from '@/data/intent-pages';
+import { landingContent } from '@/app/[locale]/korean-lawyer-in-taiwan/content';
+import { getIntentPage, intentPageSlugs, type IntentPageSlug } from '@/data/intent-pages';
+
+const generalEnglishIntentPageSlugs: IntentPageSlug[] = [
+  'taiwan-lawyer',
+  'taiwan-company-setup-lawyer',
+  'taiwan-litigation-lawyer',
+];
 
 describe('English intent pages audience', () => {
   it('retargets the general page to overseas clients and English consultation', () => {
@@ -38,7 +45,7 @@ describe('English intent pages audience', () => {
     expect(page?.faq[0]?.question).not.toMatch(/Korea/i);
   });
 
-  it.each(intentPageSlugs)('separates a brief first email from later documents on %s', (slug) => {
+  it.each(generalEnglishIntentPageSlugs)('separates a brief first email from later documents on %s', (slug) => {
     const page = getIntentPage('en', slug);
 
     expect(page?.prepareChecklist[0]).toMatch(/Brief initial summary/i);
@@ -71,5 +78,15 @@ describe('English intent pages audience', () => {
     expect(getIntentPage('zh-hant', 'taiwan-litigation-lawyer')?.title).toBe(
       '台灣訴訟律師指南',
     );
+  });
+});
+
+describe('dedicated English Korean-lawyer landing', () => {
+  it('remains explicitly targeted to Korean-speaking clients', () => {
+    const serialized = JSON.stringify(landingContent.en);
+
+    expect(landingContent.en.metaTitle).toContain('Korean-Speaking Taiwan Lawyer');
+    expect(serialized).toContain('Korean clients');
+    expect(serialized).toContain('consult in Korean');
   });
 });

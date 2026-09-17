@@ -87,7 +87,7 @@ describe('/ja/search localization', () => {
     // Japanese title, search UI, and total count.
     expect(html).toContain('検索結果');
     expect(html).toContain('どのようにお手伝いできますか？');
-    expect(html).toContain('全 5 件');
+    expect(html).toContain('全 6 件');
     expect(html).toContain('すべて');
     expect(html).toContain('コラム');
     expect(html).toContain('おすすめ');
@@ -98,6 +98,7 @@ describe('/ja/search localization', () => {
     expect(html).toMatch(/href="\/ja\/taiwan-lawyer"/);
     expect(html).toContain('href="/ja/taiwan-lawyer#corporate-advisory"');
     expect(html).toContain('href="/ja/taiwan-litigation-lawyer"');
+    expect(html).toContain('href="/ja/taiwan-semiconductor-supplier-legal"');
     // No Korean UI copy leaks onto the ja surface.
     expect(html).not.toContain('총 1건');
     expect(html).not.toContain('어떻게 도와드릴까요?');
@@ -136,12 +137,13 @@ describe('/ja/search localization', () => {
 
     const html = await renderSearch('en', 'company');
     expect(html).toContain('Search Results');
-    expect(html).toContain('Total 5');
+    expect(html).toContain('Total 6');
     expect(html).toContain('href="/en/columns/company-setup"');
     expect(html).toContain('href="/en/taiwan-company-setup-lawyer"');
     expect(html).toMatch(/href="\/en\/taiwan-lawyer"/);
     expect(html).toContain('href="/en/taiwan-lawyer#corporate-advisory"');
     expect(html).toContain('href="/en/taiwan-litigation-lawyer"');
+    expect(html).toContain('href="/en/taiwan-semiconductor-supplier-legal"');
   });
 
   it('excludes static intent pages from JA kinds=blog while keeping noindex metadata', async () => {

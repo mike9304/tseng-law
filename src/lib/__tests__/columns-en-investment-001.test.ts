@@ -74,12 +74,12 @@ const imagePaths = [
 ];
 
 const internalLinks = [
-  '[Taiwan Investment and Company Formation Services](/en/services#investment)',
+  '[Taiwan Investment and Company Formation Services](/en/services/investment)',
   '[Wei Tseng’s Profile](/en/lawyers/wei-tseng)',
   '[Contact Our Office](/en/contact)',
 ];
 const relatedServicesParagraph =
-  '[Taiwan Investment and Company Formation Services](/en/services#investment) describes the scope of our related services, and [Wei Tseng’s Profile](/en/lawyers/wei-tseng) provides information about the responsible attorney’s experience and languages. For advice on a specific matter, please use [Contact Our Office](/en/contact).';
+  '[Taiwan Investment and Company Formation Services](/en/services/investment) describes the scope of our related services, and [Wei Tseng’s Profile](/en/lawyers/wei-tseng) provides information about the responsible attorney’s experience and languages. For advice on a specific matter, please use [Contact Our Office](/en/contact).';
 
 const taxParagraph =
   'Taiwan’s general business tax rate is 5%, and returns are generally filed every two months. The general profit-seeking enterprise income tax rate is 20%, although actual liability depends on taxable income and the applicable rules. Under Taiwan domestic law, dividends paid to a nonresident are generally subject to withholding at 21%. Dividends that qualify for the Taiwan–Korea Income Tax Agreement are subject to a maximum source-country rate of 10%. The applicable filing and withholding treatment depends on the taxpayer’s residence status, beneficial ownership, the character of the income, and the documents required to claim treaty benefits.';
@@ -348,12 +348,12 @@ describe('English investment column 001 — company-formation basics', () => {
     ).toEqual(imagePaths);
     expect(parsed.content.indexOf(imagePaths[0])).toBeLessThan(
       parsed.content.indexOf(
-        'The ways in which Korean companies and sole proprietors enter the Taiwan market',
+        'The ways in which overseas companies and sole proprietors enter the Taiwan market',
       ),
     );
     expect(parsed.content.indexOf(imagePaths[1])).toBeLessThan(
       parsed.content.indexOf(
-        'The ways in which Korean companies and sole proprietors enter the Taiwan market',
+        'The ways in which overseas companies and sole proprietors enter the Taiwan market',
       ),
     );
     expect(parsed.content.indexOf(imagePaths[2])).toBeGreaterThan(

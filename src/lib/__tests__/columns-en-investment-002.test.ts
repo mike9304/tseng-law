@@ -68,7 +68,7 @@ const officialLinks = [
   '[Taiwan Ministry of Economic Affairs Guidance on the Business-Suspension Filing Deadline](https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=659&method=faqDetlDetl)',
 ];
 const internalLinks = [
-  '[Taiwan Investment and Company Formation Services](/en/services#investment)',
+  '[Taiwan Investment and Company Formation Services](/en/services/investment)',
   '[Taiwan Company Formation Basics](/en/columns/taiwan-company-establishment-basics)',
   '[Contact Our Office](/en/contact)',
 ];

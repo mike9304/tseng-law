@@ -42,6 +42,13 @@ describe('guidance column category badge', () => {
   for (const locale of GUIDANCE_LOCALES_4.filter((l) => l !== 'ar')) {
     it(`${locale}: every label is a phrase the translation lane wrote in the column frontmatter`, () => {
       const phrases = frontmatterCategoryPhrases(locale);
+      if (phrases.size === 0) {
+        expect(
+          existsSync(path.join(process.cwd(), COLUMN_CONTENT_DIR_BY_LOCALE[locale])),
+          `${locale} has no column files yet; skip frontmatter phrase lock`,
+        ).toBe(false);
+        return;
+      }
       expect(phrases.size, `${locale} frontmatter phrases`).toBe(3);
       for (const category of CATEGORIES) {
         const label = guidanceColumnCategoryLabel(category, locale);

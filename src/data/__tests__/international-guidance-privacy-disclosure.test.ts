@@ -16,6 +16,8 @@ const PENDING_CONFIRMATION: Record<(typeof GUIDANCE_LOCALES_4)[number], RegExp> 
   th: /รอการยืนยัน|ยังไม่ได้รับการยืนยัน/,
   fil: /hinihintay pang kumpirmahin|hindi pa nakukumpirma ang mga detalye/i,
   ar: /في انتظار .{0,20}تأكيد|بانتظار تأكيد المكتب|لم يتأكّد المكتب بعد/,
+  de: /steht noch aus|ausstehende Bestätigung|noch nicht bestätigt durch die Kanzlei/,
+  es: /pendiente de confirmación|aún no confirmad/,
 };
 
 const GENERIC_PENDING = /pending confirmation|operator confirmation|confirmed by the operator/i;

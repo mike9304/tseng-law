@@ -101,9 +101,11 @@ describe('locale font configuration', () => {
     expect(getLocaleFontClassName('vi')).toBe('--font-noto-sans-latin-loaded');
     expect(getLocaleFontClassName('id')).toBe('--font-noto-sans-latin-loaded');
     expect(getLocaleFontClassName('fil')).toBe('--font-noto-sans-latin-loaded');
+    expect(getLocaleFontClassName('de')).toBe('--font-noto-sans-latin-loaded');
+    expect(getLocaleFontClassName('es')).toBe('--font-noto-sans-latin-loaded');
 
-    const documentLanguages = ['ko', 'zh-Hant', 'en', 'ja', 'vi', 'id', 'th', 'fil'] as const;
-    expect(documentLanguages).toHaveLength(8);
+    const documentLanguages = ['ko', 'zh-Hant', 'en', 'ja', 'vi', 'id', 'th', 'fil', 'de', 'es'] as const;
+    expect(documentLanguages).toHaveLength(10);
     for (const language of documentLanguages) {
       for (const fontClass of getLocaleFontClassName(language).split(' ').filter(Boolean)) {
         expect(managed).toContain(fontClass);

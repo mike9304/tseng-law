@@ -14,7 +14,8 @@ import { GUIDANCE_LOCALES_4 } from '@/lib/public-guidance';
  * 17 columns in each guidance language collapsed to `legal` and the live
  * vi/id/th/fil homes showed company-setup articles as "Legal Information".
  * This pins slug-by-slug parity with English for every guidance language that
- * has column files (ar is phase 2: no directory, nothing to compare yet).
+ * has column files. de/es use Gesellschaftsgründung / Fallanalyse and
+ * Constitución de sociedades / Análisis de casos.
  */
 describe('column category parity with English', () => {
   const english = new Map(getAllColumnPosts('en').map((post) => [post.slug, post.category]));

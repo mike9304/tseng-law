@@ -16,6 +16,8 @@ export const COLUMN_CONTENT_DIR_BY_LOCALE: Record<PublicLocale8, string> = {
   th: 'src/content/columns-th',
   fil: 'src/content/columns-fil',
   ar: 'src/content/columns-ar',
+  de: 'src/content/columns-de',
+  es: 'src/content/columns-es',
 };
 
 export const OPTIONAL_COLUMN_LOCALES = GUIDANCE_LOCALES_4;

@@ -55,4 +55,14 @@ export const DECORATIVE_VIDEO_CONTROL_LABELS = {
     play: 'تشغيل الفيديو',
     replay: 'إعادة تشغيل الفيديو',
   },
+  de: {
+    pause: 'Video anhalten',
+    play: 'Video abspielen',
+    replay: 'Video erneut abspielen',
+  },
+  es: {
+    pause: 'Pausar el vídeo',
+    play: 'Reproducir el vídeo',
+    replay: 'Volver a reproducir el vídeo',
+  },
 } as const satisfies Record<PublicLocale8, DecorativeVideoControlLabels>;

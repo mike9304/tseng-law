@@ -263,11 +263,12 @@ function assertHreflangContract(
 
   if (pageKey === 'faq') {
     expect(byTag.has('en'), `${locale} faq must omit en hreflang`).toBe(false);
-    expect(actualTags, `${locale} faq hreflang is 7 locales + x-default`).toHaveLength(8);
   } else {
     expect(byTag.has('en'), `${locale} ${pageKey} must include en hreflang`).toBe(true);
-    expect(actualTags, `${locale} ${pageKey} hreflang is 8 locales + x-default`).toHaveLength(9);
   }
+  expect(actualTags, `${locale} ${pageKey} hreflang matches the published cluster`).toHaveLength(
+    expectedTags.length,
+  );
 }
 
 async function assertTranslatedColumnsIndex(
@@ -935,6 +936,8 @@ test.describe('O29 og:locale across the eight public locales', () => {
     th: 'th_TH',
     fil: 'fil_PH',
     ar: 'ar_AR',
+    de: 'de_DE',
+    es: 'es_ES',
   };
 
   for (const locale of PUBLIC_LOCALES_8) {

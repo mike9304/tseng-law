@@ -37,6 +37,10 @@
 - son7-b9 mena/ar-routing-20260916: 2d435998 뱃지 ar 라벨·guidanceColumnCategoryLabel 리졸버(vi/id/th/fil 영어 폴백 테스트 핀), 7a23c160 **SEA 카테고리 붕괴 수정**(vi/id/th/fil 칼럼 17편이 categoryFromString 미인식으로 전부 legal → frontmatter 문구 정규화·파리티 테스트, unit 10818). 결정: RC(76360346) 동결, ar 배포 후 RC2로 merge→게이트→ASK. vi/id/th/fil 뱃지 라벨은 frontmatter 문구 재사용.
 - 초안 브랜치 mena/ar-drafts-20260916 **8b9e7c4c**: 중재·집행 EN 랜딩 4로케일 + /ar/arbitration-enforcement(EXTRA 키 2단 구조), 마커 43. son7-b9 라우팅 독립 검수 PASS(214건, 미발행 로케일 unavailable·sitemap ar만·코어 10 불변). x-default는 2언어 이상 시점에 규칙 결정. ② 단계(ASK-3)에서 vi/id/th/fil 본문 추가 후 변호사 검수. `visa-residence`는 본문 생길 때 EXTRA_PAGE_KEYS/LOCALES 2줄.
 
+## B13. 알려진 도구 결함(2026-09-17, son7-db 보고)
+- scripts/verify-multilingual-live.mjs 가 PUBLIC_LOCALES_8(8개)만 순회해 de/es 홈·연락처·칼럼을 "not 200"으로 오판(실제 200). 이 스크립트 PASS 수치(558 등)는 de/es 추가(5f116286) 이전 기준. 수정은 공유 스크립트라 소유 레인 합의 후 별건 — 그 전까지 de/es 라이브 확인은 curl 직접.
+- main 기준 SHA: c4270097(반도체 공급사 랜딩, ar 여성형 정정 포함).
+
 ## B12. 曾雋崴 변호사 여성형 정정 배포(2026-09-17 16:00, main 375e0b58)
 - 사용자 확정(ASK-152000): Wei Tseng 여성. ar 안내 팩·답변·칼럼 17편 22줄 المحامية·여성 동사/형용사(5e57692b). son7-db가 de/es/fil 선행 정정(766363b3, 010 의뢰인 bio 남성 복원 포함) → 그 위 FF → 사용자 터미널 직접 "배포 진행해" → push → Vercel success 16:00 → 라이브 /ar/lawyers·about·칼럼 2편 여성형·"المحامي Wei" 0, /de·/es lawyers 여성형 확인.
 - 교훈: 인물 성별은 안내 팩 정본이라도 사용자 확인 전 통일 지시 금지(de/es R1·R4에서 남성형 통일을 지시한 것은 오류).

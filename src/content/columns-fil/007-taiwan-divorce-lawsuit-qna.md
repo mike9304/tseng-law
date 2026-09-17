@@ -196,4 +196,4 @@ Ang sumusunod na pangunahing sanggunian ay ang panimulang punto sa pagtiyak sa l
 
 Ang artikulong ito ay materyal na pang-edukasyon na naglalayong ipaliwanag sa pangkalahatan ang sistema ng diborsiyo, ng usaping pampamilyang may dayuhang elemento, ng ari-arian ng mag-asawa at ng menor de edad na anak sa Taiwan, at hindi ito legal na payo para sa isang partikular na kaso. Maaaring magbago ang proseso at ang resulta ayon sa hurisdiksiyon, sa governing law, sa pagkilala sa dayuhang hatol, sa katayuan ng kasal at ng household registration, sa property regime, sa umiiral nang kasunduan o hatol tungkol sa anak, sa mga katotohanan at ebidensiya, at sa pinakabagong opisyal na tuntunin. Bago kumilos, mangyaring tiyakin nang isa-isa ang taning sa rehistro, sa pag-apela, sa paggamit ng claim at sa pagpapatupad batay sa tumpak na simula ng pagbibilang ng bawat karapatan at proseso.
 
-**Abogado Wei Tseng (曾雋崴)**
+**Abogada Wei Tseng (曾雋崴)**

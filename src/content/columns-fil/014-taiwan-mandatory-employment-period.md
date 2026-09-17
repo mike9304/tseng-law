@@ -191,4 +191,4 @@ Sa pag-aayos ng mga dokumento ayon sa panahon, mabuting sabay na ipakita ang pet
 
 Materyal na pang-edukasyon ang artikulong ito upang pangkalahatang ipaliwanag ang minimum service period clause sa Taiwan, ang pagsasauli ng training costs at ng paunang bayad, at ang paunang abiso ng pagbibitiw; hindi ito legal na payo para sa indibidwal na kasong panggawa. Maaaring mag-iba ang bisa ng kasunduan at ang saklaw ng pananagutan depende sa uri at pananalita ng kontrata, sa aktuwal na pagsasanay at gastos, sa layunin at pagpapaalam ng kompensasyon, sa tagal ng paglilingkod, at sa sanhi at ebidensiya ng pagtatapos. Bago maglahad ng intensiyong magbitiw, bago kumaltas sa sahod, bago pumasok sa kasunduan ng pagsasauli o bago tumugon sa alitan, tiyakin ninyo ang pinakabagong opisyal na sanggunian at ang inyong indibidwal na kalagayan.
 
-**Abogado Wei Tseng (曾雋崴)**
+**Abogada Wei Tseng (曾雋崴)**

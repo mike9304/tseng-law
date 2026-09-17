@@ -83,5 +83,5 @@ Wenn Sie weitere Fragen haben, können Sie uns kontaktieren.
 
 > Siehe auch:
 > - [Gesamtleitfaden zur Gesellschaftsgründung in Taiwan — Verfahren, Kosten und Gesellschaftsformen](/ko/guides/taiwan-company-setup)
-> - [Taiwanische Anwältin oder taiwanischer Anwalt mit Koreanischkenntnissen](/ko/korean-lawyer-in-taiwan)
+> - [Taiwanische Anwältin mit Koreanischkenntnissen](/ko/korean-lawyer-in-taiwan)
 > - [Hinweis zur Anwaltschaft für juristische Personen und Gesellschaftsgründung in Taiwan](/ko/taiwan-company-setup-lawyer)

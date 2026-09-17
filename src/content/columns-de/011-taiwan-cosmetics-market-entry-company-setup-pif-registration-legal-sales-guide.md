@@ -111,7 +111,7 @@ Die Verkaufsvorbereitung in Taiwan in der folgenden Reihenfolge zu prüfen, verm
 5. Prüfen Sie Etikett, Verkaufsseite, Werbung und Kooperationsbeiträge nach dem Maßstab des gesamten Ausdrucks.
 6. Führen Sie Verfahren zur Reaktion auf Prüfung und Abhilfeaufforderung, Beschwerden, Sicherheitsinformationen und erforderliche Folgemaßnahmen.
 
-Die Grundstruktur von Gesellschaft und Zweigniederlassung können Sie unter [Grundlagen der Gesellschaftsgründung in Taiwan](/de/columns/taiwan-company-establishment-basics) einsehen, den einschlägigen Unterstützungsrahmen unter [Dienstleistungen zu Investition und Gesellschaftsgründung in Taiwan](/ko/services#investment), Angaben zur zuständigen Anwältin oder zum zuständigen Anwalt unter [Profil des Rechtsanwalts Wei Tseng](/ko/lawyers/wei-tseng).
+Die Grundstruktur von Gesellschaft und Zweigniederlassung können Sie unter [Grundlagen der Gesellschaftsgründung in Taiwan](/de/columns/taiwan-company-establishment-basics) einsehen, den einschlägigen Unterstützungsrahmen unter [Dienstleistungen zu Investition und Gesellschaftsgründung in Taiwan](/ko/services#investment), Angaben zur zuständigen Anwältin unter [Profil der Rechtsanwältin Wei Tseng](/ko/lawyers/wei-tseng).
 
 ### Amtliche Quellen
 
@@ -131,4 +131,4 @@ Die Grundstruktur von Gesellschaft und Zweigniederlassung können Sie unter [Gru
 
 Dieser Beitrag ist allgemeines Informationsmaterial zu Bildungszwecken über die Regelungen des Markteintritts in den taiwanischen Kosmetikmarkt; er ist keine Rechtsmeinung zu einem einzelnen Produkt oder einer einzelnen Werbung und sichert weder Genehmigung oder Registrierung noch Verkaufsmöglichkeit oder Bearbeitungsdauer zu. Eintrittsform, Produktunterlagen, Inhalt von Kennzeichnung und Werbung sowie die neueste Praxis der zuständigen Behörde sind im Einzelfall zu prüfen.
 
-**Rechtsanwalt Wei Tseng (曾雋崴)**
+**Rechtsanwältin Wei Tseng (曾雋崴)**

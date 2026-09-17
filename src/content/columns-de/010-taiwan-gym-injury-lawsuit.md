@@ -115,5 +115,5 @@ Auch Stürze auf dem Fußboden einer Betriebsstätte, Gesundheitsschäden durch 
 
 > Siehe auch:
 > - [Leitfaden zum Prozessanwalt in Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Taiwanesischer Anwalt mit Koreanischkenntnissen](/ko/korean-lawyer-in-taiwan)
+> - [Taiwanesische Anwältin mit Koreanischkenntnissen](/ko/korean-lawyer-in-taiwan)
 > - [Leitfaden zur Anwaltssuche in Taiwan](/ko/taiwan-lawyer)

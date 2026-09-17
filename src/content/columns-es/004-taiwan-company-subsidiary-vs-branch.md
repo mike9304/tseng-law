@@ -192,4 +192,4 @@ La elección final es más segura si la examinan especialistas de Taiwán y del 
 
 Este artículo es material educativo destinado a explicar las diferencias generales entre la filial taiwanesa y la sucursal de una sociedad extranjera; no es asesoramiento jurídico ni fiscal para un caso concreto y no garantiza un resultado. Como las normas aplicables y el trato fiscal pueden variar según el domicilio del inversor y de la sede, el contenido del negocio, las operaciones y el flujo de fondos, los requisitos de aplicación del acuerdo y la práctica más reciente de la autoridad competente, confirme las fuentes oficiales actualizadas y las circunstancias del asunto antes de ejecutar una constitución, una inversión, un contrato, un dividendo o un envío de fondos.
 
-**Abogado Wei Tseng (曾雋崴)**
+**Abogada Wei Tseng (曾雋崴)**

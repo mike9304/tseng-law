@@ -196,4 +196,4 @@ Las fuentes primarias siguientes son el punto de partida para confirmar la estru
 
 Este artículo es un material de propósito educativo para explicar de forma general el divorcio, la familia internacional, el patrimonio conyugal y el régimen del menor en Taiwán; no es asesoramiento jurídico para un asunto concreto. El procedimiento y el resultado pueden variar según la competencia, la ley aplicable, el reconocimiento de sentencias extranjeras, el estado del matrimonio y del registro civil, el régimen patrimonial, los acuerdos o resoluciones existentes sobre el hijo, los hechos y las pruebas y la normativa oficial más reciente. Los plazos de inscripción, impugnación, reclamación y ejecución deben confirmarse de forma individual, antes de actuar, con el dies a quo exacto de cada derecho y de cada procedimiento.
 
-**Wei Tseng (曾雋崴), abogado de Taiwán**
+**Wei Tseng (曾雋崴), abogada de Taiwán**

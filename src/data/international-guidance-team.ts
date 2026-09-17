@@ -213,7 +213,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     title: 'Pandaigdigang koponan ng Hovering',
     description:
       'Mga profile ng mga abogado, tagapamahala ng operasyon, at kasosyong akawntant ng Hovering.',
-    representativeTitle: 'Namamahalang abogado',
+    representativeTitle: 'Namamahalang abogada',
     teamTitle: 'Mga abogado at kawani',
     partnerTitle: 'Kasosyong akawntant',
     introLabel: 'Panimula',
@@ -222,14 +222,14 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     photoAltPrefix: 'Larawan',
     workingLanguagesLabel: 'Mga wikang ginagamit sa trabaho',
     fullProfileLabel: 'Buong profile (English)',
-    keyFactsHeading: 'Abogadong Wei Tseng — Mahahalagang impormasyon',
+    keyFactsHeading: 'Abogadang Wei Tseng — Mahahalagang impormasyon',
     qualificationLabel: 'Kwalipikasyon at tanggapan',
     qualificationSentence:
-      'Si {name} ay abogadong kwalipikado sa Taiwan at ang namamahalang abogado ng {firm}.',
+      'Si {name} ay abogadang kwalipikado sa Taiwan at ang namamahalang abogada ng {firm}.',
     practiceLabel: 'Pangunahing larangan',
     consultationLanguagesLabel: 'Wika ng konsultasyon',
     roles: {
-      'tseng-junwei': 'Namamahalang abogado sa Taiwan (Managing Attorney)',
+      'tseng-junwei': 'Namamahalang abogada sa Taiwan (Managing Attorney)',
       'chang-rongxuan': 'Abogado sa Taiwan (Taiwan Attorney)',
       'chang-fangyu': 'Paralegal',
       'son-jungmin': 'Tagapamahala ng operasyong Korea (Korea Operations Manager)',
@@ -241,7 +241,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     title: 'فريق Hovering الدولي',
     description:
       'ملفات المحامين ومديري الأعمال والمحاسب الشريك في Hovering.',
-    representativeTitle: 'المحامي المدير',
+    representativeTitle: 'المحامية المديرة',
     teamTitle: 'المحامون والموظفون',
     partnerTitle: 'المحاسب الشريك',
     introLabel: 'تعريف',
@@ -250,14 +250,14 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     photoAltPrefix: 'صورة',
     workingLanguagesLabel: 'لغات العمل',
     fullProfileLabel: 'الملف الكامل (English)',
-    keyFactsHeading: 'المحامي Wei Tseng — معلومات أساسية',
+    keyFactsHeading: 'المحامية Wei Tseng — معلومات أساسية',
     qualificationLabel: 'المؤهل وجهة العمل',
     qualificationSentence:
-      '{name} محامٍ مؤهَّل لمزاولة المهنة في تايوان والمحامي المدير في {firm}.',
+      '{name} محامية مؤهَّلة لمزاولة المهنة في تايوان والمحامية المديرة في {firm}.',
     practiceLabel: 'المجالات الرئيسية',
     consultationLanguagesLabel: 'لغات الاستشارة',
     roles: {
-      'tseng-junwei': 'المحامي المدير في تايوان (Managing Attorney)',
+      'tseng-junwei': 'المحامية المديرة في تايوان (Managing Attorney)',
       'chang-rongxuan': 'محامٍ في تايوان (Taiwan Attorney)',
       'chang-fangyu': 'مساعد قانوني (Paralegal)',
       'son-jungmin': 'مدير عمليات كوريا (Korea Operations Manager)',
@@ -269,7 +269,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     title: 'Internationales Team von Hovering',
     description:
       'Profile der Anwältinnen und Anwälte, der Betriebsleitung und der Partner-Wirtschaftsprüfung von Hovering.',
-    representativeTitle: 'Geschäftsführende Anwältin / geschäftsführender Anwalt',
+    representativeTitle: 'Geschäftsführende Anwältin',
     teamTitle: 'Anwältinnen, Anwälte und Mitarbeitende',
     partnerTitle: 'Partner-Wirtschaftsprüfung',
     introLabel: 'Vorstellung',
@@ -278,14 +278,14 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     photoAltPrefix: 'Foto',
     workingLanguagesLabel: 'Arbeitssprachen',
     fullProfileLabel: 'Vollständiges Profil (English)',
-    keyFactsHeading: 'Rechtsanwalt Wei Tseng — Wesentliche Angaben',
+    keyFactsHeading: 'Rechtsanwältin Wei Tseng — Wesentliche Angaben',
     qualificationLabel: 'Qualifikation und Kanzlei',
     qualificationSentence:
-      '{name} ist in Taiwan zur anwaltlichen Tätigkeit zugelassen und geschäftsführender Anwalt von {firm}.',
+      '{name} ist in Taiwan zur anwaltlichen Tätigkeit zugelassen und geschäftsführende Anwältin von {firm}.',
     practiceLabel: 'Schwerpunkte',
     consultationLanguagesLabel: 'Beratungssprachen',
     roles: {
-      'tseng-junwei': 'Geschäftsführender Anwalt in Taiwan (Managing Attorney)',
+      'tseng-junwei': 'Geschäftsführende Anwältin in Taiwan (Managing Attorney)',
       'chang-rongxuan': 'Anwalt in Taiwan (Taiwan Attorney)',
       'chang-fangyu': 'Paralegal',
       'son-jungmin': 'Betriebsleitung Korea (Korea Operations Manager)',
@@ -297,7 +297,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     title: 'Equipo internacional de Hovering',
     description:
       'Perfiles de los abogados, de la dirección de operaciones y del contador asociado de Hovering.',
-    representativeTitle: 'Abogado director',
+    representativeTitle: 'Abogada directora',
     teamTitle: 'Abogados y personal',
     partnerTitle: 'Contador asociado',
     introLabel: 'Presentación',
@@ -306,14 +306,14 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     photoAltPrefix: 'Foto',
     workingLanguagesLabel: 'Idiomas de trabajo',
     fullProfileLabel: 'Perfil completo (English)',
-    keyFactsHeading: 'Abogado Wei Tseng — Datos esenciales',
+    keyFactsHeading: 'Abogada Wei Tseng — Datos esenciales',
     qualificationLabel: 'Cualificación y despacho',
     qualificationSentence:
-      '{name} es abogado habilitado para ejercer en Taiwán y el abogado director de {firm}.',
+      '{name} es abogada habilitada para ejercer en Taiwán y la abogada directora de {firm}.',
     practiceLabel: 'Áreas principales',
     consultationLanguagesLabel: 'Idiomas de consulta',
     roles: {
-      'tseng-junwei': 'Abogado director en Taiwán (Managing Attorney)',
+      'tseng-junwei': 'Abogada directora en Taiwán (Managing Attorney)',
       'chang-rongxuan': 'Abogado en Taiwán (Taiwan Attorney)',
       'chang-fangyu': 'Paralegal',
       'son-jungmin': 'Dirección de operaciones de Corea (Korea Operations Manager)',
@@ -716,7 +716,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'يتولّى المكتب قضايا الشركات والأفراد في تايوان، ويعمل بالإنجليزية واليابانية والكورية والصينية.',
-        'مثَّل طالبًا كوريًا في دعوى تعويض عن إصابة في ناد رياضي، وصدر حكم ابتدائي بالتعويض بمبلغ TWD 1.57M.',
+        'مثَّلت طالبًا كوريًا في دعوى تعويض عن إصابة في ناد رياضي، وصدر حكم ابتدائي بالتعويض بمبلغ TWD 1.57M.',
       ],
       education: [
         'ماجستير (M.S.)، Institute of Finance, National Taiwan University',
@@ -775,7 +775,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Die Kanzlei bearbeitet Unternehmens- und Individualangelegenheiten in Taiwan auf Englisch, Japanisch, Koreanisch und Chinesisch.',
-        'Sie vertrat eine koreanische Studentin in einem Schadensersatzverfahren wegen einer Verletzung im Fitnessstudio und erwirkte ein erstinstanzliches Urteil über TWD 1.57M.',
+        'Sie vertrat einen koreanischen Studenten in einem Schadensersatzverfahren wegen einer Verletzung im Fitnessstudio und erwirkte ein erstinstanzliches Urteil über TWD 1.57M.',
       ],
       education: [
         'Magister (M.S.), Institute of Finance, National Taiwan University',
@@ -834,7 +834,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'El despacho atiende asuntos de empresas y de particulares en Taiwán en inglés, japonés, coreano y chino.',
-        'Representó a una estudiante coreana en una reclamación de daños por una lesión en un gimnasio y obtuvo una sentencia de primera instancia de TWD 1.57M.',
+        'Representó a un estudiante coreano en una reclamación de daños por una lesión en un gimnasio y obtuvo una sentencia de primera instancia de TWD 1.57M.',
       ],
       education: [
         'Máster (M.S.), Institute of Finance, National Taiwan University',

@@ -1,0 +1,5 @@
+200 /ar/lawyers ar_f=18 ar_m_wei=0 de_f=0 es_f=0
+200 /ar/columns/taiwan-labor-severance-law ar_f=10 ar_m_wei=0 de_f=0 es_f=0
+200 /de/lawyers ar_f=0 ar_m_wei=0 de_f=4 es_f=0
+200 /es/lawyers ar_f=0 ar_m_wei=0 de_f=0 es_f=8
+200 /fil/lawyers ar_f=0 ar_m_wei=0 de_f=0 es_f=18

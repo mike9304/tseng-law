@@ -149,7 +149,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Inilalahad ng pahinang ito ang mga profile ng mga abogado, tagapamahala ng operasyon, at kasosyong akawntant ng Hovering. Si Wei Tseng (曾雋崴) ay abogadong kwalipikadong magpraktis sa Taiwan at ang namamahalang abogado ng tanggapan, na gumagawa para sa mga kliyenteng Koreano, Hapon, at iba pang dayuhang kliyente. Isinasagawa ang konsultasyon sa tanggapan sa apat na wika: Ingles, Tsino, Hapon, at Koreano.',
+        'Inilalahad ng pahinang ito ang mga profile ng mga abogado, tagapamahala ng operasyon, at kasosyong akawntant ng Hovering. Si Wei Tseng (曾雋崴) ay abogadang kwalipikadong magpraktis sa Taiwan at ang namamahalang abogada ng tanggapan, na gumagawa para sa mga kliyenteng Koreano, Hapon, at iba pang dayuhang kliyente. Isinasagawa ang konsultasyon sa tanggapan sa apat na wika: Ingles, Tsino, Hapon, at Koreano.',
       sources: ['/fil/about', '/fil/contact'],
     },
     pricing: {
@@ -181,7 +181,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'تعرض هذه الصفحة ملفات المحامين ومديري الأعمال والمحاسب الشريك في Hovering. والمحامي Wei Tseng (曾雋崴) محامٍ مؤهَّل لمزاولة المهنة في تايوان والمحامي المدير في المكتب، ويعمل مع العملاء من كوريا واليابان وسائر العملاء الدوليين. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+        'تعرض هذه الصفحة ملفات المحامين ومديري الأعمال والمحاسب الشريك في Hovering. والمحامية Wei Tseng (曾雋崴) محامية مؤهَّلة لمزاولة المهنة في تايوان والمحامية المديرة في المكتب، وتعمل مع العملاء من كوريا واليابان وسائر العملاء الدوليين. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
       sources: ['/ar/about', '/ar/contact'],
     },
     pricing: {
@@ -213,7 +213,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Diese Seite zeigt die Profile der Anwältinnen und Anwälte, der Betriebsleitung und der Partner-Wirtschaftsprüfung von Hovering. Rechtsanwalt Wei Tseng (曾雋崴) ist in Taiwan zur anwaltlichen Tätigkeit zugelassen und geschäftsführender Anwalt der Kanzlei; er arbeitet mit Mandanten aus Korea, Japan und anderen internationalen Mandanten. Die Beratung erfolgt nur auf Englisch, Chinesisch, Japanisch und Koreanisch.',
+        'Diese Seite zeigt die Profile der Anwältinnen und Anwälte, der Betriebsleitung und der Partner-Wirtschaftsprüfung von Hovering. Rechtsanwältin Wei Tseng (曾雋崴) ist in Taiwan zur anwaltlichen Tätigkeit zugelassen und geschäftsführende Anwältin der Kanzlei; sie arbeitet mit Mandanten aus Korea, Japan und anderen internationalen Mandanten. Die Beratung erfolgt nur auf Englisch, Chinesisch, Japanisch und Koreanisch.',
       sources: ['/de/about', '/de/contact'],
     },
     pricing: {
@@ -245,7 +245,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Esta página muestra los perfiles de los abogados, de la dirección de operaciones y del contador asociado de Hovering. El abogado Wei Tseng (曾雋崴) está habilitado para ejercer en Taiwán y es el abogado director del despacho; trabaja con clientes de Corea, de Japón y con otros clientes internacionales. La consulta se realiza en inglés, chino, japonés y coreano.',
+        'Esta página muestra los perfiles de los abogados, de la dirección de operaciones y del contador asociado de Hovering. La abogada Wei Tseng (曾雋崴) está habilitada para ejercer en Taiwán y es la abogada directora del despacho; trabaja con clientes de Corea, de Japón y con otros clientes internacionales. La consulta se realiza en inglés, chino, japonés y coreano.',
       sources: ['/es/about', '/es/contact'],
     },
     pricing: {

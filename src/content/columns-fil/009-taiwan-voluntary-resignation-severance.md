@@ -97,5 +97,5 @@ Sa karamihan ng pagkakataon, ang panig na naunang naghanda ang siyang napoprotek
 
 > Iba pang babasahin:
 > - [Gabay sa Abogado para sa Paglilitis sa Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Abogadong Taiwanese na Nakakapagsalita ng Koreano](/ko/korean-lawyer-in-taiwan)
+> - [Abogadang Taiwanese na Nakakapagsalita ng Koreano](/ko/korean-lawyer-in-taiwan)
 > - [Larangan ng Serbisyo — Paggawa](/ko/services/labor)

@@ -141,11 +141,11 @@ Al trabajo sin permiso pueden aplicarse multa administrativa y orden de salida d
 ## Guías relacionadas
 
 - [Servicios de inversión y constitución de sociedades en Taiwán](/ko/services#investment)
-- [Perfil del abogado Wei Tseng](/ko/lawyers/wei-tseng)
+- [Perfil de la abogada Wei Tseng](/ko/lawyers/wei-tseng)
 - [Contacto](/es/contact)
 
 ---
 
 Este artículo es material educativo destinado a explicar de forma general el régimen jurídico, y no es asesoramiento para un caso concreto. Como los criterios de autorización, los formularios de solicitud y la práctica de la autoridad competente pueden cambiar, confirme las fuentes oficiales actualizadas y las circunstancias del asunto antes de ejecutar una inversión o un contrato.
 
-**Abogado Wei Tseng (曾雋崴)**
+**Abogada Wei Tseng (曾雋崴)**

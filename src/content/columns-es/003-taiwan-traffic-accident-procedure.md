@@ -363,11 +363,11 @@ Si tiene otras preguntas, déjelas en los comentarios.
 
 ​
 
-Wei Tseng (曾雋崴), abogado de Taiwán.
+Wei Tseng (曾雋崴), abogada de Taiwán.
 
 ---
 
 > Véase también:
 > - [Guía del abogado litigante en Taiwán](/ko/taiwan-litigation-lawyer)
-> - [Abogado de Taiwán que habla coreano](/ko/korean-lawyer-in-taiwan)
+> - [Abogada de Taiwán que habla coreano](/ko/korean-lawyer-in-taiwan)
 > - [Guía para buscar abogado en Taiwán](/ko/taiwan-lawyer)

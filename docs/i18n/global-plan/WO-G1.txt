@@ -1,0 +1,62 @@
+WO-G1 — 테슬라식 "지구본 → 지역·언어 선택" 오버레이 (tseng-law.com 헤더, 전 로케일)
+
+작업트리: /Users/son7/Projects/tseng-law-global-picker-20260918 (브랜치 i18n/global-picker-20260918, base origin/main 4152e1c6). 이 디렉터리 밖 쓰기 금지. git add/commit/push 금지. build·next start·Playwright·전체 스위트 금지(§6 명령만).
+node: export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH  (node_modules는 심링크 — 그대로 사용, npm install 금지)
+
+## 1. 목표
+tesla.com 헤더의 지구본 아이콘 → "Select Your Region" 화면과 같은 UX. 헤더 유틸리티의 현재 `LocaleFlagSwitcher` 드롭다운(`src/components/Header.tsx` 879행 `className="utility-lang"`)을 **지구본 아이콘 버튼**으로 교체하고, 클릭 시 전면 오버레이(테슬라처럼 어두운 배경 위 흰 패널, 또는 사이트 톤에 맞는 흰 전면)에서 지역별로 묶인 언어 목록을 보여준다. 푸터의 `LocaleFlagSwitcher`는 **건드리지 않는다**.
+
+## 2. 데이터 — 단일 레지스트리 (새 언어는 여기 1항목 추가로 끝나야 함)
+신규 `src/lib/public-language-registry.ts`:
+```ts
+export type LanguageRegion = 'asia-pacific' | 'middle-east' | 'europe' | 'americas';
+export interface PublicLanguageEntry {
+  locale: PublicLocale8;          // 기존 타입 재사용
+  autonym: string;                // PUBLIC_LANGUAGE_AUTONYMS[locale] 와 동일 문자열 (테스트로 일치 강제)
+  englishName: string;            // 'Korean', 'Traditional Chinese', ...
+  region: LanguageRegion;
+  /** 언어가 대표하는 지역/국가 표기(자국어). 테슬라의 국가명 자리. 예: '대한민국', '台灣', 'Việt Nam', 'الشرق الأوسط' */
+  regionLabel: string;
+  rtl?: boolean;                  // ar
+}
+export const PUBLIC_LANGUAGE_REGISTRY: readonly PublicLanguageEntry[]   // 11개 전부
+export const LANGUAGE_REGION_ORDER: readonly LanguageRegion[]           // asia-pacific, middle-east, europe, americas
+export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion, string>>  // 지역 제목 11언어 (예 ko '아시아·태평양', en 'Asia Pacific', de 'Asien-Pazifik', ar 'آسيا والمحيط الهادئ')
+export const LANGUAGE_PICKER_COPY: Record<PublicLocale8, { open: string; title: string; close: string; current: string }>
+  // open='지역 및 언어 선택'(aria-label), title='지역과 언어를 선택하세요', close='닫기', current='현재 언어' — 11언어 자연스러운 격식체. 안내 로케일 문구는 각 팩의 톤(vi quý vị, de Sie, es usted 등)과 일치.
+```
+배치: ko·zh-hant·ja → asia-pacific(regionLabel 대한민국/台灣/日本), vi·id·th·fil → asia-pacific(Việt Nam/Indonesia/ประเทศไทย/Pilipinas), ar → middle-east(regionLabel '' 또는 지역 총칭 — 국가 특정 금지, 자국어 총칭 사용), de·es → europe(Deutschland·Österreich·Schweiz 식의 열거는 하지 말고 언어권 총칭 'Deutschsprachiger Raum' / 'Español'는 europe에 두되 regionLabel 'España y América Latina'), en → americas? **아니오** — en은 글로벌 기본이므로 별도 첫 그룹 없이 'europe'과 'americas' 양쪽에 중복 노출하지 말고 **americas 그룹에 1회**(regionLabel 'Global / English'). 규칙: 한 언어 = 한 그룹 1회.
+지역 그룹에 항목이 0이면 그 그룹은 렌더하지 않는다.
+
+## 3. 컴포넌트 — 신규 `src/components/GlobalLanguagePicker.tsx` (+ `.module.css`)
+- 트리거: `<button type="button" aria-haspopup="dialog" aria-expanded aria-label={copy.open}>` 지구본 SVG(24px, 헤더 검색 아이콘과 같은 선 굵기·색; 기존 `header-search-icon` 스타일 참고) + 데스크톱에서는 옆에 현재 언어 자국어 짧은 표기(예 '한국어')를 보이고 모바일(≤768px)에서는 아이콘만.
+- 오버레이: `createPortal(document.body)`, `role="dialog" aria-modal="true" aria-labelledby`, 배경 클릭·Esc·닫기 버튼으로 닫힘, 열릴 때 첫 포커스는 닫기 버튼 또는 현재 언어 항목, 닫히면 트리거로 포커스 복귀, 포커스 트랩(Tab 순환), body scroll lock. `SearchOverlay.tsx`의 패턴(useEffect·Escape·createPortal)을 참고해 같은 방식으로.
+- 레이아웃: 상단 제목(copy.title) + 닫기(X). 본문은 지역별 컬럼(데스크톱 4열 그리드 / 태블릿 2열 / 모바일 1열 아코디언 아님, 단순 세로 나열). 각 지역 헤딩(h2) 아래 언어 리스트: 각 항목 = `<a href>` 두 줄(1행 autonym 굵게, 2행 regionLabel 작게). 현재 언어 항목은 `aria-current="true"` + 체크 표시 + copy.current 시각적 배지.
+- href: 기존 `resolvePublicLanguageSwitchTarget(pathname, targetLocale, options)`를 **그대로** 사용(LocaleFlagSwitcher.tsx 60~95행이 options를 어떻게 만드는지 복제 — `usePublicColumnSlugs`, `jaLanguageSwitchTarget`, `restrictedPublicFamilyListPath`). fallback이 'home' 등 정확 페이지가 아니면 항목 아래에 기존 `fallbackLanguageNotice(locale, target)` 문구를 작은 글씨로 표시(LocaleFlagSwitcher가 export하는 함수 재사용 — export 안 돼 있으면 export만 추가).
+- RTL: ar에서 열면 패널 `dir="rtl"`. 폰트: 각 항목 텍스트는 해당 언어 자국어이므로 `lang={entry.locale === 'zh-hant' ? 'zh-Hant' : entry.locale}` 속성을 각 `<a>`에 부여(폰트 폴백·hyphenation 위함).
+- 애니메이션: 페이드+살짝 위로(200ms), `prefers-reduced-motion`이면 없음.
+- 스타일은 module.css. 사이트 기존 토큰(색·서체) 사용, 새 색 하드코딩 최소. 다크 배경 rgba 오버레이 + 흰 패널(최대폭 1200px, 라운드 8~12px, 패딩 32~48px, 모바일은 전면).
+
+## 4. 헤더 배선 — `src/components/Header.tsx`
+- 879행 `<LocaleFlagSwitcher locale={locale} className="utility-lang" />`를 `<GlobalLanguagePicker locale={locale} className="utility-lang" />`로 교체. import 갱신. 다른 부분 변경 금지.
+- 모바일 드로어(`MobileNavDrawer.tsx`)에 언어 항목이 있으면 그대로 두고, 없으면 드로어 하단에 같은 지구본 버튼 1개 추가(드로어를 닫고 오버레이를 연다). 드로어 파일 수정이 필요한지 먼저 읽고 판단·보고.
+- `.utility-lang` 관련 CSS(`src/app/globals.css` 5489~5540 부근)가 드롭다운 전용이면 새 버튼에 맞게 **최소** 조정(globals.css는 해당 블록만). `header-content-fit.test.ts`·`header-resize-offset.test.ts`가 유틸리티 폭을 검사하면 통과하도록.
+
+## 5. 테스트 (vitest, 신규 + 갱신)
+- `src/lib/__tests__/public-language-registry.test.ts`: 11개 전부 존재·중복 0·autonym===PUBLIC_LANGUAGE_AUTONYMS·모든 locale에 LANGUAGE_REGION_LABELS/LANGUAGE_PICKER_COPY 키 완비·빈 문자열 0·ar rtl true·각 항목 region이 ORDER에 포함.
+- `src/components/__tests__/global-language-picker.test.tsx`: (a) 트리거 렌더 aria-label=copy.open (b) 클릭 후 dialog 존재·aria-modal·제목 (c) 11개 링크 존재, 현재 로케일 aria-current (d) href가 resolvePublicLanguageSwitchTarget 결과와 일치(ko 홈 → /en, /vi/services 등 표본 3) (e) Esc로 닫힘·포커스 복귀 (f) ar에서 dir=rtl (g) 그룹 헤딩이 현재 로케일 언어로 표기. 기존 `locale-flag-switcher.test.tsx`·`public-module-locale-switcher.test.tsx`가 Header 안의 switcher를 기대하면 그 기대만 Picker로 갱신(푸터 기대는 유지).
+- 광고·계약 grep: 새 카피에 상담 언어 암시·승소율·최고 표현 0.
+
+## 6. 허용 파일
+src/lib/public-language-registry.ts(신규) · src/components/GlobalLanguagePicker.tsx(신규) · src/components/GlobalLanguagePicker.module.css(신규) · src/components/Header.tsx(879행 교체+import) · src/components/MobileNavDrawer.tsx(필요 시 최소) · src/components/LocaleFlagSwitcher.tsx(export 추가만) · src/app/globals.css(.utility-lang 블록만) · 위 테스트 파일들 + 기존 header/switcher 테스트 갱신.
+금지: 데이터 팩(international-guidance-*.ts·intent-pages·site-content)·content/**·public-guidance.ts·locales.ts·Footer.tsx·라우팅·docs/**.
+
+## 7. 검증(전부 실행·출력 그대로 보고)
+cd /Users/son7/Projects/tseng-law-global-picker-20260918 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+git status --short && git diff --stat
+npm run typecheck 2>&1 | tail -2
+npx vitest run src/lib/__tests__/public-language-registry.test.ts src/components/__tests__/global-language-picker.test.tsx src/components/__tests__/locale-flag-switcher.test.tsx src/components/__tests__/public-module-locale-switcher.test.tsx src/components/__tests__/header-content-fit.test.ts src/components/__tests__/header-resize-offset.test.ts src/components/__tests__/ja-desktop-header.test.tsx src/components/__tests__/header-guidance-menu-label.test.tsx 2>&1 | tail -8
+npx eslint --max-warnings=0 --ext .ts,.tsx $(git diff --name-only | grep -E '^src/.*\.(ts|tsx)$') src/lib/public-language-registry.ts src/components/GlobalLanguagePicker.tsx 2>&1 | tail -3
+
+## 8. 보고
+① diff --stat ② 명령 출력 ③ 모바일 드로어 처리 판단 ④ 11언어 카피 표(open/title/close/current + 지역 4 제목) ⑤ 미해결. 추측 "완료" 금지.

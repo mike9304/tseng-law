@@ -1,0 +1,24 @@
+WO-G2-1-R1 — fr/pt 독립 검토(docs/i18n/global-plan/reviews/G2-1-FR-PT-REVIEW.md, PASS·FIX 16·NOTE 8) 반영
+
+작업트리: /Users/son7/Projects/tseng-law-global-picker-20260918. 밖 쓰기 금지. git add/commit/push 금지. build·next start·Playwright·전체 스위트·npm install 금지(§3 명령만). 리뷰 파일 §B 전문을 읽고 **FIX 16건 전부**를 리뷰의 "proposed corrected string"대로 적용한다. NOTE 8건은 리뷰가 문구를 제시한 것만 적용, 판단 사항은 보고서에 남긴다.
+
+## 1. 핵심 항목(요약 — 원문은 리뷰)
+#1 프랑스어 고정 공백: `?` `!` `:` `;` 앞과 `«`뒤/`»`앞에 U+00A0(또는 U+202F for ?!;:) — fr 문자열 전체(western 팩·answers·team·inquiry-copy·llms-txt·registry copy). 테스트: fr 텍스트에 ` ?`/` :`(일반 공백) 0 단언 추가.
+#2~#9 프랑스어 문법·어휘: étrangers 일치, `accompagnons à l'enquête`→`intervenons au stade de l'enquête`, `sur votre lieu`→`là où vous vous trouvez`, `à soi seul`→`à lui seul`, `Relu par`→`Révisé par`, answers 280 동사 반복, team 1008 `sur la base de l'informatique`→전공 배경 표현, team 996 `chargé`→성중립(`chargé·e` 대신 `responsable de`).
+#10~#15 포르투갈어: `trato dos dados`→`tratamento dos dados`+"보증" 의미 복원, `não pomos`→`não disponibilizamos`, `ser falado`→`ser tratado/abordado`(3곳), 1783 비문 재작성(독일어 원문 의미: "사안의 수임 여부는 내용 검토 후 결정"), `não se oferece em`→`não está disponível em`, answers 6키에 배타 한정어 `apenas` 추가.
+#16 `guidance-fr-pt-content.test.ts` fr 블록의 독일어 정규식 → 프랑스어(`consultation en français|interprète|francophone`), de/es 테스트와 동일 커버리지(두 번째 금지 표현·언어 FAQ 부정 답 단언).
+#17 `scripts/check-column-translation.mjs`: `buildFrLexicon()`·`buildPtLexicon()`(수사 0~20·백·천, 국적어) 추가 — de/es 어휘집 구조 복제. `check-column-translation.test.mjs`에 fr/pt 케이스.
+
+## 2. 허용 파일: src/data/international-guidance-western.ts(fr/pt 블록만) · international-guidance-answers.ts(fr/pt) · international-guidance-team.ts(fr/pt) · international-inquiry-copy.ts(fr/pt) · src/lib/llms-txt.ts(fr/pt notice) · src/lib/public-language-registry.ts(fr/pt copy만) · src/lib/__tests__/guidance-fr-pt-content.test.ts · scripts/check-column-translation.mjs · scripts/check-column-translation.test.mjs. 금지: 다른 로케일 문자열, docs/**.
+
+## 3. 검증(전부 실행·출력 그대로)
+cd /Users/son7/Projects/tseng-law-global-picker-20260918 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+git status --short && git diff --stat | tail -3
+npm run typecheck 2>&1 | tail -2
+npx vitest run src/lib/__tests__/guidance-fr-pt-content.test.ts src/lib/__tests__/guidance-fr-pt-routing.test.ts src/lib/__tests__/international-guidance-answers.test.ts src/data/__tests__ src/lib/__tests__/public-language-registry.test.ts 2>&1 | tail -6
+node --test scripts/check-column-translation.test.mjs 2>&1 | tail -4
+npx eslint --max-warnings=0 --ext .ts,.tsx $(git diff --name-only | grep -E '^src/.*\.(ts|tsx)$') 2>&1 | tail -3
+python3 -c "import re,io;s=open('src/data/international-guidance-western.ts',encoding='utf-8').read();fr=s[s.find('frenchGuidanceContent'):s.find('portugueseGuidanceContent')];print('fr plain-space-before-punct:',len(re.findall(r'[^\u00a0\u202f] [?!:;]',fr)))"   # 0
+grep -c "ser falad\|não pomos\|trato dos dados\|não se oferece" src/data/international-guidance-western.ts src/data/international-inquiry-copy.ts   # 0 0
+
+## 4. 보고: diff --stat · 명령 출력 · 적용한 FIX 번호 목록(16개 전부) · NOTE 처리 · 미해결.

@@ -1,0 +1,43 @@
+WO-G2-1 — 안내 로케일 2개 추가: fr(프랑스어) · pt(포르투갈어) — de/es(커밋 5f116286) 선례 완전 복제
+
+작업트리: /Users/son7/Projects/tseng-law-global-picker-20260918 (브랜치 i18n/global-picker-20260918). 밖 쓰기 금지. git add/commit/push 금지. build·next start·Playwright·전체 스위트 금지(§6 명령만).
+node: export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH (npm install 금지)
+**선행 학습(필수)**: `git show 5f116286 --stat` 와 그 커밋의 비-칼럼 diff(`git show 5f116286 -- src/ scripts/ | less`)를 읽고, de/es가 만진 **모든** 파일에 fr/pt를 같은 방식으로 추가한다. 칼럼 md(`src/content/columns-*`)는 이 WO 범위 밖(후속 WO-G2-1C).
+
+## 1. 제품 잠금
+- `fr`/`pt` = 공개 **안내** 로케일(페이지 언어). 상담 언어 아님. 빌더 Locale·`siteLocales` 확대 금지. 프랑스어·포르투갈어 상담 가능·통역·즉시응답·성공률·비용/결과 보장·24/7·무료 상담 주장 금지.
+- 격식: fr `vous`, pt(유럽 포르투갈어 기준, 브라질 독자도 읽히게 중립 어휘) `o senhor/a senhora` 또는 3인칭 정중체 — de `Sie`/es `usted` 선례와 동일 수준.
+- 대표 변호사 曾雋崴(Wei Tseng)는 **여성** — fr `l'avocate Wei Tseng`, pt `a advogada Wei Tseng`, 대명사·형용사 여성형(커밋 766363b3의 de/es 정정 참조).
+- 본문은 de 팩(`germanGuidanceContent`)·es 팩을 **의미 단위로 번역**한다(새 사실·새 법률 주장 추가 금지, 문장 삭제 금지). 사무소 사실(사무소 4곳·설립 2016·대만대·언어 4개)은 de 팩 그대로.
+- 언어 FAQ(각 팩 faq 페이지의 "이 언어로 상담 가능한가?") 답은 **"아니오 — 영어·중국어(中文)·일본어·한국어만"** 구조 유지.
+- 카테고리 정본(`src/lib/columns.ts`): fr { formation: 'Création de société à Taïwan', legal: 'Informations juridiques sur Taïwan', case: 'Analyse de cas' } · pt { formation: 'Constituição de sociedades em Taiwan', legal: 'Informações jurídicas sobre Taiwan', case: 'Análise de casos' }.
+- 지명 표기: fr `Taïwan`, pt `Taiwan`. 사무소명은 'Hovering International Law Firm' 그대로.
+
+## 2. 변경 목록 (de/es 선례와 1:1)
+a. `src/lib/public-guidance.ts`: `GUIDANCE_LOCALES_4`·`PUBLIC_LOCALES_8`·`PUBLIC_LANGUAGE_AUTONYMS`(fr 'Français', pt 'Português')·`PublicDocumentLanguage`·`PUBLIC_LOCALE_PATH_RE`·`isGuidanceLocale4` + 주석의 언어 나열 갱신. `hreflangTagForPublicLocale` fr→'fr', pt→'pt'.
+b. `src/data/international-guidance-western.ts`: `frenchGuidanceContent`, `portugueseGuidanceContent` (GuidanceLocaleContent 전체 — nav·contactCta·footerNotice·skipLink·menuLabel·languageLabel·mega 5·notFound·home·pages 10(faqs 포함)). `international-guidance-content.ts`: import·`GuidanceLocale` 타입·`guidanceContent` 맵·헤더 주석.
+c. `src/data/international-guidance-answers.ts`(fr/pt 답변 블록 6키, 40~80단어), `international-guidance-offices.ts`, `international-guidance-team.ts`, `international-inquiry-copy.ts`, `team-name.ts`, `guidance-privacy-label.ts`(있으면).
+d. `src/app/fonts.ts`(Latin 폰트 매핑 de/es와 동일), `src/lib/seo.ts`(og locale fr_FR·pt_PT + DocumentLanguage), `src/lib/columns.ts`(카테고리 + 프리픽스 목록), `src/lib/column-locales.ts`(`fr: 'src/content/columns-fr'`, `pt: 'src/content/columns-pt'` — 폴더는 **빈 폴더 + .gitkeep** 생성, 칼럼 md는 후속), `src/lib/consultation/intake-language-contract.ts`(fr 'French', pt 'Portuguese'), `src/lib/llms-txt.ts`(GUIDANCE_LLMS_NOTICES fr/pt 3문장 + 카탈로그 언어명), `src/app/[locale]/llms.txt/route.ts`(정적 파라미터), `src/components/CinematicOpening.tsx`·`ColumnsGrid.tsx`·`decorative-video-controls.ts` 카피.
+e. 2026-09-11 이후 추가된 `Record<PublicLocale8, …>`/`Record<GuidanceLocale…>` 맵이 있으면 전부 채운다: `rg -n "Record<PublicLocale8|Record<GuidanceLocale" src -g '!**/__tests__/**'` 결과 12파일 전수 확인. WO-G1이 만든 `src/lib/public-language-registry.ts`(존재 시): fr·pt 항목(region 'europe', regionLabel fr 'France et pays francophones' / pt 'Portugal e Brasil'), `LANGUAGE_REGION_LABELS`·`LANGUAGE_PICKER_COPY` fr/pt 키.
+f. 스크립트: `scripts/check-column-translation.mjs`·`check-guidance-country-mentions.mjs`·`verify-multilingual-live.mjs`에 de/es가 들어간 자리마다 fr/pt(칼럼 폴더가 비어 있어도 체커가 깨지지 않게 — 빈 폴더는 "번역 없음"으로 통과해야 함; 깨지면 최소 수정·보고).
+g. 테스트: de/es 커밋이 갱신한 테스트 파일 전부(`(legacy)/__tests__/*-ja.test.tsx` 7, llms-discovery, fonts, sitemap, columns-grid-guidance-labels, consultation-email-cta, locale-flag-switcher, public-module-locale-switcher, reveal-lifecycle, column-category-parity, columns-new-four-locales, multilingual-seo, public-guidance, guidance-country-mentions, guidance-disclosure-parity, guidance-office-facts-sync, international-guidance-privacy-disclosure, international-guidance-answers, global-seo-locale-integrity, site-invariants, intake-language-contract, international/route.test, column-alternate-expectations) — 로케일 수·목록 기대치 갱신. 신규 `src/lib/__tests__/guidance-fr-pt-content.test.ts`·`guidance-fr-pt-routing.test.ts`(de/es 테스트 복제: 팩 완비·금지 토큰 0·여성형·언어 FAQ 부정 답·라우팅/hreflang/sitemap 20 URL·llms.txt).
+- 금지 토큰(테스트로 강제): fr `taux de réussite|garanti|garantie de résultat|meilleur|unique|24h/24|gratuit|consultation en français|interprète`, pt `taxa de sucesso|garantido|garantia de resultado|melhor|único|24 horas|gratuito|consulta em português|intérprete` — 단 언어 FAQ의 부정 답 안에서 "consultation en français"류가 질문에 등장하는 것은 허용(de/es 테스트가 처리한 방식 복제).
+
+## 3. 사이트맵·hreflang·색인
+안내 10페이지 × 2로케일 = 20 URL이 사이트맵에 자동 추가되고 기존 안내 클러스터(hreflang)에 합류하는지 `src/app/__tests__/sitemap.test.ts` 기대치(개수·alternates 키 수)를 갱신해 검증. x-default=en 불변.
+
+## 4. 허용 파일
+§2에 열거한 파일 + 신규 테스트 2 + `src/content/columns-fr/.gitkeep`·`columns-pt/.gitkeep`. 금지: 기존 로케일 팩 본문 변경(vi/id/th/fil/ar/de/es 문장 수정 금지 — 맵 항목 추가만), intent-pages.ts, site-content.ts, Header/Footer 구조, docs/**.
+
+## 5. 검증(전부 실행·출력 그대로)
+cd /Users/son7/Projects/tseng-law-global-picker-20260918 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+git status --short && git diff --stat | tail -3
+npm run typecheck 2>&1 | tail -2
+npx vitest run src/lib/__tests__/guidance-fr-pt-content.test.ts src/lib/__tests__/guidance-fr-pt-routing.test.ts src/lib/__tests__/guidance-de-es-content.test.ts src/lib/__tests__/public-guidance.test.ts src/app/__tests__/sitemap.test.ts "src/app/[locale]/__tests__/llms-discovery.test.tsx" src/lib/__tests__/international-guidance-answers.test.ts src/lib/__tests__/global-seo-locale-integrity.test.ts src/data/__tests__ src/lib/consultation/__tests__/intake-language-contract.test.ts src/app/__tests__/fonts.test.ts 2>&1 | tail -8
+npx eslint --max-warnings=0 --ext .ts,.tsx $(git diff --name-only | grep -E '^src/.*\.(ts|tsx)$') 2>&1 | tail -3
+node scripts/check-guidance-country-mentions.mjs 2>&1 | tail -3
+grep -c "avocate Wei Tseng\|l'avocate" src/data/international-guidance-western.ts; grep -c "advogada" src/data/international-guidance-western.ts
+grep -rn "\[변호사 검수 필요\]" src/data/international-guidance-western.ts | wc -l   # 0
+
+## 6. 보고
+① diff --stat ② 명령 출력 ③ de/es 대비 누락·추가한 파일 목록과 이유 ④ fr/pt 언어 FAQ 문답 원문 ⑤ 미해결. 추측 "완료" 금지.

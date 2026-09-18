@@ -48,6 +48,17 @@ describe('company-setup Korea–Taiwan tax agreement dates', () => {
     ).toBe(true);
   });
 
+  it.each(LOCALES)('states the 2024-01-01 application start wherever %s mentions the agreement', (locale) => {
+    const text = guideText(locale);
+    if (!TREATY_MENTION.test(text)) {
+      return;
+    }
+    expect(
+      APPLIES_FROM.some((date) => text.includes(date)),
+      `${locale} guide mentions the agreement but not its 2024-01-01 application start`,
+    ).toBe(true);
+  });
+
   it.each(LOCALES)('keeps both dates in the %s treaty cost row when that row carries a date', (locale) => {
     const row = treatyCostRow(locale);
     // A locale may point at its country-specific section instead of printing the

@@ -143,7 +143,9 @@ describe('guides/taiwan-company-setup content', () => {
       const whole = step + countrySpecific + JSON.stringify(guideContent[locale].costRows);
       expect(korea.test(whole), `${locale} keeps the Korea remittance exception`).toBe(true);
       expect(
-        /does not apply automatically|not a worldwide|自動適用ではない|韓国関連|韓国に関する例外|に限り/.test(whole),
+        locale === 'en'
+          ? /does not apply automatically|not a worldwide/.test(whole)
+          : /自動適用ではない|韓国関連|韓国に関する例外|韓国[^。]{0,40}に限り/.test(whole),
         `${locale} keeps the "not a worldwide rule" qualifier on the Korea tax agreement`,
       ).toBe(true);
     }

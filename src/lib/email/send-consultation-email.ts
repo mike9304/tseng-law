@@ -6,6 +6,7 @@ import {
   getConsultationCopy,
   getConsultationRiskLabel,
 } from '@/lib/consultation/copy';
+import { renderConsultationAcknowledgement } from '@/lib/email/consultation-acknowledgement';
 import type { InternationalInquiryRecord } from '@/lib/consultation/international-inquiry-store';
 import type {
   ConsultationCategory,
@@ -236,6 +237,47 @@ export async function sendConsultationEmail(payload: ConsultationEmailPayload): 
   });
 
   return { intakeId };
+}
+
+export interface ConsultationAcknowledgementSendInput {
+  readonly locale: Locale;
+  readonly to: string;
+  readonly intakeId: string;
+  readonly classification?: ConsultationCategory;
+}
+
+/**
+ * F0 — acknowledgement to the person who submitted the enquiry.
+ *
+ * Transactional: no advertisement, no response-time promise. Callers treat this
+ * as best-effort; a failure here must never change the intake result, because
+ * the office copy has already been delivered by `sendConsultationEmail`.
+ * Returns true when the acknowledgement was accepted by SMTP.
+ */
+export async function sendConsultationAcknowledgement(
+  input: ConsultationAcknowledgementSendInput,
+): Promise<boolean> {
+  if (!isSafeEmailHeader(input.to)) return false;
+
+  const rendered = renderConsultationAcknowledgement({
+    locale: input.locale,
+    intakeId: input.intakeId,
+    categoryLabel: input.classification
+      ? getConsultationCategoryLabel(input.locale, input.classification)
+      : undefined,
+  });
+
+  const transporter = createTransporter();
+  const smtp = resolveSmtpRuntime();
+  await sendMailWithRetry(transporter, {
+    from: `"법무법인 호정" <${smtp.user}>`,
+    to: input.to,
+    replyTo: officialReplyEmail(),
+    subject: rendered.subject,
+    text: rendered.text,
+    html: rendered.html,
+  });
+  return true;
 }
 
 export class PreparedAiIntakeMailConfigError extends Error {

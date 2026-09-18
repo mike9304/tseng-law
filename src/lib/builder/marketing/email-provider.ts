@@ -9,6 +9,11 @@ export interface MarketingEmailArgs {
   readonly subject: string;
   readonly html: string;
   readonly text: string;
+  /**
+   * Extra RFC 5322 headers. Used for List-Unsubscribe and
+   * List-Unsubscribe-Post (one-click), which Gmail requires from bulk senders.
+   */
+  readonly headers?: Readonly<Record<string, string>>;
 }
 
 export type MarketingEmailSendResult =
@@ -151,6 +156,7 @@ async function sendResendEmail(
         subject: args.subject,
         html: args.html,
         text: args.text,
+        ...(args.headers && Object.keys(args.headers).length ? { headers: args.headers } : {}),
       }),
     });
     if (!response.ok) {
@@ -192,6 +198,7 @@ async function sendMailchimpTransactionalEmail(
           html: args.html,
           text: args.text,
           to: [{ email: args.to, type: 'to' }],
+          ...(args.headers && Object.keys(args.headers).length ? { headers: args.headers } : {}),
         },
       }),
     });

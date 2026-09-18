@@ -203,6 +203,7 @@ async function sendCampaignBatchInner(args: {
       subject: rendered.subject,
       html: rendered.html,
       text: rendered.text,
+      headers: rendered.headers,
     });
     if (sent.ok) {
       await saveRecipient({

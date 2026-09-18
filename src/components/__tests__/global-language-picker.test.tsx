@@ -137,7 +137,9 @@ describe('GlobalLanguagePicker', () => {
     expect(source).toContain('usePublishedOverlayFocus');
     expect(source).toContain('initialFocusRef: closeButtonRef');
     expect(source).toContain('openerRef');
-    expect(source).toContain('resolvePublishedOverlayOpener(triggerRef.current)');
+    expect(source).toContain('resolvePublishedOverlayOpener(trigger)');
+    expect(source).toContain('triggerRef.current?.focus()');
+    expect(source).toContain('onBeforeOpen');
     expect(source).toContain("document.addEventListener('keydown', handler, true)");
   });
 
@@ -150,12 +152,25 @@ describe('GlobalLanguagePicker', () => {
   it('renders region headings in the current locale', () => {
     const ko = renderView('ko', { open: true, pathname: '/ko' });
     for (const group of groupedPublicLanguages('ko')) {
-      expect(ko).toContain(`>${group.heading}</h2>`);
+      expect(ko).toContain(`>${group.heading}</h3>`);
     }
 
     const en = renderView('en', { open: true, pathname: '/en' });
     for (const group of groupedPublicLanguages('en')) {
-      expect(en).toContain(`>${group.heading}</h2>`);
+      expect(en).toContain(`>${group.heading}</h3>`);
+    }
+  });
+
+  it('uses h2 for the dialog title and h3 for regions, and does not render h1', () => {
+    const html = renderView('en', { open: true, pathname: '/en' });
+    const copy = LANGUAGE_PICKER_COPY.en;
+    const groups = groupedPublicLanguages('en');
+
+    expect(html).toMatch(new RegExp(`<h2[^>]*>${copy.title}</h2>`));
+    expect(html).not.toMatch(/<h1\b/);
+    expect(html.match(/<h3\b/g)).toHaveLength(groups.length);
+    for (const group of groups) {
+      expect(html).toMatch(new RegExp(`<h3[^>]*>${group.heading}</h3>`));
     }
   });
 });

@@ -40,6 +40,14 @@
   .currentLabel {
     display: none;
   }
+
+  .root:global(.global-language-picker--mobile) .currentLabel {
+    display: inline;
+  }
+}
+
+.root:global(.global-language-picker--mobile) .trigger {
+  min-height: 44px;
 }
 
 .overlay {
@@ -197,16 +205,19 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .regions {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .overlay {
     padding: 0;
     place-items: stretch;
+    width: 100vw;
+    height: 100dvh;
+    inset: 0;
   }
 
   .panel {
@@ -215,6 +226,10 @@
     max-height: none;
     border-radius: 0;
     padding: 32px 24px 48px;
+  }
+
+  .regions {
+    grid-template-columns: 1fr;
   }
 }
 

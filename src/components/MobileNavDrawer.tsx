@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { isGuidanceLocale4, type PublicLocale8 } from '@/lib/public-guidance';
 import { publicSiteContent } from '@/lib/public-site-chrome';
 import type { PublicSiteMember } from '@/lib/builder/members/members-engine';
-import LocaleFlagSwitcher from '@/components/LocaleFlagSwitcher';
+import GlobalLanguagePicker from '@/components/GlobalLanguagePicker';
 import styles from './PublicChrome.module.css';
 
 type MemberNavState = {
@@ -44,6 +44,7 @@ export default function MobileNavDrawer({
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const panelRef = useRef<HTMLDivElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const [languagePickerOpen, setLanguagePickerOpen] = useState(false);
   const content = publicSiteContent(locale);
   const isGuidance = isGuidanceLocale4(locale);
   const pathname = usePathname();
@@ -111,7 +112,11 @@ export default function MobileNavDrawer({
     };
   }, [open, onClose]);
 
-  if (!open) return null;
+  useEffect(() => {
+    if (open) setLanguagePickerOpen(false);
+  }, [open]);
+
+  if (!open && !languagePickerOpen) return null;
 
   const closeLabel =
     locale === 'ko' ? '닫기' : locale === 'zh-hant' ? '關閉' : locale === 'ja' ? '閉じる' : 'Close';
@@ -157,11 +162,13 @@ export default function MobileNavDrawer({
       className={`drawer ${styles.drawer}`}
       id="public-mobile-nav-drawer"
       data-open={open}
-      role="dialog"
-      aria-modal="true"
-      aria-label={drawerLabel}
+      hidden={!open}
+      role={open ? 'dialog' : undefined}
+      aria-modal={open ? 'true' : undefined}
+      aria-hidden={open ? undefined : true}
+      aria-label={open ? drawerLabel : undefined}
       ref={dialogRef}
-      onClick={onClose}
+      onClick={open ? onClose : undefined}
     >
       <div className={`drawer-panel ${styles.drawerPanel}`} ref={panelRef} onClick={(event) => event.stopPropagation()}>
         <div className="drawer-header">
@@ -198,11 +205,13 @@ export default function MobileNavDrawer({
               {content.nav.searchLabel}
             </button>
           )}
-          <LocaleFlagSwitcher
+          <GlobalLanguagePicker
             locale={locale}
-            className="locale-flag-switcher--mobile"
-            linkClassName="chip"
-            onLocaleSelect={onClose}
+            className="global-language-picker--mobile"
+            onBeforeOpen={() => {
+              setLanguagePickerOpen(true);
+              onClose();
+            }}
           />
         </div>
         <nav className="drawer-nav" aria-label={navLabel}>

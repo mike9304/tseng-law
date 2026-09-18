@@ -12,6 +12,8 @@ vi.mock('next/navigation', () => ({
 import MobileNavDrawer from '@/components/MobileNavDrawer';
 import { siteContent } from '@/data/site-content';
 import { getConsultationPublicMailto } from '@/lib/consultation/public-contact';
+import { LANGUAGE_PICKER_COPY } from '@/lib/public-language-registry';
+import { PUBLIC_LANGUAGE_AUTONYMS } from '@/lib/public-guidance';
 import type { SiteLocale } from '@/lib/locales';
 
 function renderedMailto(locale: SiteLocale): string {
@@ -36,36 +38,15 @@ function renderDrawer(
   );
 }
 
-const EXPECTED_AUTONYMS = [
-  '한국어',
-  '繁體中文',
-  'English',
-  '日本語',
-  'Tiếng Việt',
-  'Bahasa Indonesia',
-  'ไทย',
-  'Filipino',
-] as const;
-
-const EXPECTED_LANGUAGE_HREFS = [
-  '/ko/columns',
-  '/zh-hant/columns',
-  '/en/columns',
-  '/ja/columns',
-  '/vi/columns',
-  '/id/columns',
-  '/th/columns',
-  '/fil/columns',
-] as const;
-
-function expectEightAutonymLanguageDetails(html: string): void {
-  expect(html).toContain('<details');
-  for (const autonym of EXPECTED_AUTONYMS) {
-    expect(html).toContain(autonym);
-  }
-  for (const href of EXPECTED_LANGUAGE_HREFS) {
-    expect(html).toContain(`href="${href}"`);
-  }
+function expectGlobeLanguageTrigger(html: string, locale: SiteLocale): void {
+  expect(html).toContain('aria-haspopup="dialog"');
+  expect(html).toContain(`aria-label="${LANGUAGE_PICKER_COPY[locale].open}"`);
+  expect(html).toContain(PUBLIC_LANGUAGE_AUTONYMS[locale]);
+  expect(html).toContain('global-language-picker--mobile');
+  expect(html).not.toContain('<details');
+  expect(html).not.toContain('aria-label="言語選択"');
+  expect(html).not.toContain('aria-label="언어 선택"');
+  expect(html).not.toContain('locale-flag-switcher--mobile');
   expect(html).not.toContain('🇰🇷');
   expect(html).not.toContain('🇯🇵');
   expect(html).not.toContain('🇹🇼');
@@ -77,7 +58,7 @@ function expectEightAutonymLanguageDetails(html: string): void {
 }
 
 describe('Japanese mobile navigation drawer', () => {
-  it('renders Japanese dialog, navigation, firm copy, primary links, CTA, and flag switcher', () => {
+  it('renders Japanese dialog, navigation, firm copy, primary links, CTA, and globe language picker', () => {
     const html = renderDrawer('ja');
 
     expect(html).toContain('role="dialog"');
@@ -95,8 +76,7 @@ describe('Japanese mobile navigation drawer', () => {
     expect(html).toContain(siteContent.ja.nav.cta.label);
     expect(html).not.toContain('href="tel:');
     expect(html).not.toMatch(/kakao|line\.me|lin\.ee/i);
-    expect(html).toContain('aria-label="言語選択"');
-    expectEightAutonymLanguageDetails(html);
+    expectGlobeLanguageTrigger(html, 'ja');
   });
 
   it('renders the Japanese search chip link and member login link for signed-out visitors', () => {
@@ -153,7 +133,7 @@ describe('Japanese mobile navigation drawer', () => {
       brand: 'Hovering International Law Firm',
     },
   ] as const)(
-    'retains existing $locale drawer copy, search, member login, CTA, and flag switcher',
+    'retains existing $locale drawer copy, search, member login, CTA, and globe language picker',
     ({ locale, close, drawer, nav, brand }) => {
       const html = renderDrawer(locale);
       const content = siteContent[locale];
@@ -170,7 +150,7 @@ describe('Japanese mobile navigation drawer', () => {
       expect(html).toContain(`href="${renderedMailto(locale)}"`);
       expect(html).not.toContain('href="tel:');
       expect(html).not.toMatch(/kakao|line\.me|lin\.ee/i);
-      expectEightAutonymLanguageDetails(html);
+      expectGlobeLanguageTrigger(html, locale);
     },
   );
 });

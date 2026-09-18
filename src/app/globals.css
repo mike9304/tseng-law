@@ -6590,6 +6590,10 @@ section.home-results-panel--editorial {
   z-index: 2;
 }
 
+.drawer-utilities .global-language-picker--mobile {
+  min-width: 0;
+}
+
 .locale-flag-switcher--mobile {
   /* Keep the four flag chips on a single row as one unit: with wrap enabled
      the row broke mid-group (search chip straddling two rows, EN orphaned on

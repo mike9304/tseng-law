@@ -1,0 +1,66 @@
+[WO-G1-R1 시작 Fri Sep 18 15:38:28 KST 2026]
+WO-G1-R1 is implemented in this workspace only. No git add/commit/push, no build, no Playwright run.
+
+**① H1:** Dialog title is `h2`, region titles are `h3`. Classes unchanged.
+
+**② Mobile globe:** Drawer `LocaleFlagSwitcher` is `GlobalLanguagePicker` (globe + current language). `onBeforeOpen` closes the drawer first, then the overlay opens. Overlay at ≤1024px is 100vw/100dvh, 1 region column, close target 44px. Footer switcher untouched.
+
+**③ Focus:** Trigger is captured as opener on open; close paths (Esc, backdrop, close button, language link) call `triggerRef.current?.focus()`.
+
+---
+
+## §5 report
+
+### `git diff --stat`
+
+```
+ M src/app/globals.css
+ M src/components/GlobalLanguagePicker.module.css
+ M src/components/GlobalLanguagePicker.tsx
+ M src/components/MobileNavDrawer.tsx
+ M src/components/__tests__/global-language-picker.test.tsx
+ M src/components/__tests__/ja-mobile-nav-drawer.test.tsx
+?? docs/i18n/global-plan/evidence/grok-G1-R1.log
+?? docs/i18n/global-plan/evidence/picker-vi-390-notrigger.png
+?? tests/builder-editor/global-language-picker.playwright.ts
+---DIFFSTAT---
+ src/app/globals.css                                |  4 ++
+ src/components/GlobalLanguagePicker.module.css     | 19 ++++++-
+ src/components/GlobalLanguagePicker.tsx            | 60 +++++++++++++++++-----
+ src/components/MobileNavDrawer.tsx                 | 31 +++++++----
+ .../__tests__/global-language-picker.test.tsx      | 21 ++++++--
+ .../__tests__/ja-mobile-nav-drawer.test.tsx        | 50 ++++++------------
+ 6 files changed, 120 insertions(+), 65 deletions(-)
+```
+
+### Command outputs
+
+`npm run typecheck 2>&1 | tail -2` (exit 0):
+```
+Generating route types...
+✓ Route types generated successfully
+```
+
+`npx vitest run … | tail -6` (exit 0):
+```
+ Test Files  5 passed (5)
+      Tests  38 passed (38)
+   Start at  15:50:36
+   Duration  447ms (transform 314ms, setup 48ms, collect 916ms, tests 50ms, environment 0ms, prepare 213ms)
+```
+
+`npx eslint --max-warnings=0 --ext .ts,.tsx $(git diff --name-only | grep -E '^(src|tests)/.*\.(ts|tsx)$') tests/builder-editor/global-language-picker.playwright.ts 2>&1 | tail -3` (exit 0): empty stdout.
+
+`grep -n "<h1" src/components/GlobalLanguagePicker.tsx | wc -l`:
+```
+       0
+```
+
+### ③ 원인
+
+`usePublishedOverlayFocus`는 opener를 open 이후 effect에서 잡고 복귀는 cleanup의 `setTimeout(0)`이라, Esc 직후 `activeElement`가 트리거가 되지 않았다.
+
+### 미해결
+
+Playwright 스펙은 추가만 했고 실행하지 않음(총괄). 실브라우저/dev server 미검증. 푸터 `LocaleFlagSwitcher`는 의도적으로 그대로.
+=== WO-G1-R1 종료 code=0 Fri Sep 18 15:51:30 KST 2026 ===

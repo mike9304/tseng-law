@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useId, useRef, useState } from 'react';
+import { useCallback, useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -29,6 +29,7 @@ import styles from './GlobalLanguagePicker.module.css';
 export type GlobalLanguagePickerProps = {
   locale: PublicLocale8;
   className?: string;
+  onBeforeOpen?: () => void;
 };
 
 export function closeLanguagePickerOnEscape(
@@ -67,6 +68,7 @@ export function GlobalLanguagePickerView({
   open,
   onOpen,
   onClose,
+  onBeforeOpen,
 }: GlobalLanguagePickerProps & {
   pathname: string;
   columnSlugsByLocale?: PublicColumnSlugsByLocale | null;
@@ -86,12 +88,42 @@ export function GlobalLanguagePickerView({
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
   const triggerRef = useRef<HTMLButtonElement | null>(null);
   const openerRef = useRef<HTMLElement | null>(null);
+  const wasOpenRef = useRef(false);
   const rootClassName = [styles.root, className].filter(Boolean).join(' ');
 
-  useEffect(() => {
-    if (!open) return;
-    openerRef.current = resolvePublishedOverlayOpener(triggerRef.current);
-  }, [open]);
+  const captureTriggerAsOpener = useCallback(() => {
+    const trigger = triggerRef.current;
+    openerRef.current = resolvePublishedOverlayOpener(trigger) ?? trigger;
+  }, []);
+
+  const restoreTriggerFocus = useCallback(() => {
+    triggerRef.current?.focus();
+  }, []);
+
+  const handleClose = useCallback(() => {
+    onClose();
+    restoreTriggerFocus();
+    if (typeof window !== 'undefined') {
+      window.setTimeout(restoreTriggerFocus, 0);
+    }
+  }, [onClose, restoreTriggerFocus]);
+
+  const handleOpen = useCallback(() => {
+    captureTriggerAsOpener();
+    onBeforeOpen?.();
+    onOpen();
+  }, [captureTriggerAsOpener, onBeforeOpen, onOpen]);
+
+  useLayoutEffect(() => {
+    if (open) {
+      captureTriggerAsOpener();
+      wasOpenRef.current = true;
+      return;
+    }
+    if (!wasOpenRef.current) return;
+    wasOpenRef.current = false;
+    restoreTriggerFocus();
+  }, [captureTriggerAsOpener, open, restoreTriggerFocus]);
 
   usePublishedOverlayFocus({
     open,
@@ -102,9 +134,9 @@ export function GlobalLanguagePickerView({
 
   const handleOverlayKeyDown = useCallback(
     (event: { key: string; preventDefault: () => void; stopPropagation: () => void }) => {
-      closeLanguagePickerOnEscape(event, onClose);
+      closeLanguagePickerOnEscape(event, handleClose);
     },
-    [onClose],
+    [handleClose],
   );
 
   useEffect(() => {
@@ -123,7 +155,7 @@ export function GlobalLanguagePickerView({
       role="dialog"
       aria-modal="true"
       aria-labelledby={titleId}
-      onClick={onClose}
+      onClick={handleClose}
       onKeyDown={handleOverlayKeyDown}
     >
       <div
@@ -132,14 +164,14 @@ export function GlobalLanguagePickerView({
         onClick={(event) => event.stopPropagation()}
       >
         <div className={styles.header}>
-          <h1 className={styles.title} id={titleId}>
+          <h2 className={styles.title} id={titleId}>
             {copy.title}
-          </h1>
+          </h2>
           <button
             ref={closeButtonRef}
             className={styles.close}
             type="button"
-            onClick={onClose}
+            onClick={handleClose}
             aria-label={copy.close}
           >
             ×
@@ -148,7 +180,7 @@ export function GlobalLanguagePickerView({
         <div className={styles.regions}>
           {groups.map((group) => (
             <section key={group.region}>
-              <h2 className={styles.regionTitle}>{group.heading}</h2>
+              <h3 className={styles.regionTitle}>{group.heading}</h3>
               <ul className={styles.list}>
                 {group.entries.map((entry) => {
                   const switchTarget = resolvePublicLanguageSwitchTarget(
@@ -171,7 +203,7 @@ export function GlobalLanguagePickerView({
                         aria-current={isCurrent ? true : undefined}
                         aria-label={notice ? `${entry.autonym}. ${notice}` : undefined}
                         title={notice}
-                        onClick={onClose}
+                        onClick={handleClose}
                       >
                         <span className={styles.autonym}>
                           {isCurrent ? <CheckIcon /> : null}
@@ -204,7 +236,7 @@ export function GlobalLanguagePickerView({
           aria-haspopup="dialog"
           aria-expanded={open}
           aria-label={copy.open}
-          onClick={open ? onClose : onOpen}
+          onClick={open ? handleClose : handleOpen}
         >
           <GlobeIcon />
           <span className={styles.currentLabel}>{currentAutonym}</span>

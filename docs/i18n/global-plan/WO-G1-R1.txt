@@ -1,0 +1,27 @@
+WO-G1-R1 — 지구본 선택기 검수 반려 3건 (총괄 실브라우저 QA: docs/i18n/global-plan/evidence/qa-picker-script.mjs 결과)
+
+작업트리: /Users/son7/Projects/tseng-law-global-picker-20260918 (HEAD 8c365373 = WO-G1 커밋). 밖 쓰기 금지. git add/commit/push 금지. build·next start·전체 스위트 금지(§4 명령만).
+node: export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+## 1. 결함
+① **문서 H1 중복**: `GlobalLanguagePicker.tsx` 다이얼로그 제목이 `<h1>` → 페이지 H1과 중복(SEO 게이트 H1=1 규칙, `live-seo-scan`이 검사). `<h2>`로, 지역 제목은 `<h3>`로. 스타일 클래스는 그대로.
+② **모바일(≤1024px) 지구본 없음**: 헤더 유틸리티가 숨겨져 `MobileNavDrawer.tsx`의 구 `LocaleFlagSwitcher` 드롭다운만 남는다. 드로어의 `drawer-utilities` 안 `LocaleFlagSwitcher`를 `GlobalLanguagePicker`로 교체(지구본 + 현재 언어 표기). 트리거 클릭 시 **드로어를 먼저 닫고**(기존 `onLocaleSelect={onClose}` 의도 계승) 오버레이를 연다 — Picker에 `onBeforeOpen?: () => void` prop 추가. 모바일 오버레이는 전면(100vw/100dvh), 지역 1열, 닫기 버튼 44px 터치 타깃. 푸터 `LocaleFlagSwitcher`는 여전히 불변.
+③ **Esc 닫힘 후 포커스가 트리거로 복귀하지 않음**(QA `focusReturned:false`, 3로케일 전부). `usePublishedOverlayFocus`의 openerRef 해석이 트리거를 잡지 못하는 듯 — 원인 확인 후 수정(닫힘 시 `triggerRef.current?.focus()` 보장). 배경 클릭·닫기 버튼·링크 클릭(라우팅) 경로도 동일.
+
+## 2. 테스트
+- `global-language-picker.test.tsx`: 제목 태그가 h2, 지역 h3, 문서 내 h1 미포함 검사 추가. 드로어 렌더 테스트(있으면 `mobile-nav-drawer*.test`)에 지구본 트리거 존재 기대.
+- 신규 Playwright 스펙 `tests/builder-editor/global-language-picker.playwright.ts`(`international-guidance.playwright.ts` 스타일 참고, 실행은 총괄이 함): 1440 en/ar — 트리거 클릭 → dialog 11링크·aria-current·h1 개수 1 유지·Esc → dialog 0·activeElement가 트리거; 390 vi — 모바일 토글 → 드로어 지구본 클릭 → dialog 전면·닫기 버튼 bounding ≥44px.
+
+## 3. 허용 파일
+src/components/GlobalLanguagePicker.tsx · GlobalLanguagePicker.module.css · src/components/MobileNavDrawer.tsx(스위처 교체 부분만) · 관련 CSS(드로어 유틸리티 블록 최소) · src/components/__tests__/global-language-picker.test.tsx · 드로어 테스트(있으면) · tests/builder-editor/global-language-picker.playwright.ts(신규).
+금지: Header.tsx(추가 변경 불필요) · Footer · 레지스트리 데이터 · public-guidance.ts · docs/**.
+
+## 4. 검증(전부 실행·출력 그대로)
+cd /Users/son7/Projects/tseng-law-global-picker-20260918 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+git status --short && git diff --stat
+npm run typecheck 2>&1 | tail -2
+npx vitest run src/components/__tests__/global-language-picker.test.tsx src/lib/__tests__/public-language-registry.test.ts src/components/__tests__/ja-desktop-header.test.tsx src/components/__tests__/header-content-fit.test.ts $(ls src/components/__tests__/*drawer*.test.* 2>/dev/null) 2>&1 | tail -6
+npx eslint --max-warnings=0 --ext .ts,.tsx $(git diff --name-only | grep -E '^(src|tests)/.*\.(ts|tsx)$') tests/builder-editor/global-language-picker.playwright.ts 2>&1 | tail -3
+grep -n "<h1" src/components/GlobalLanguagePicker.tsx | wc -l   # 0
+
+## 5. 보고: diff --stat · 명령 출력 · ③ 원인 1줄 · 미해결.

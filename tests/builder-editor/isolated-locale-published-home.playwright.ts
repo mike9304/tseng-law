@@ -7,7 +7,7 @@ const PUBLIC_LOCALES = ['ko', 'zh-hant', 'en', 'ja'] as const satisfies readonly
 const EXPECTED_H1: Record<SiteLocale, string> = {
   ko: '대만 법률을 한국어로 명확하게.',
   'zh-hant': '台灣法律，清楚說明。',
-  en: 'Taiwan Law, Clearly Explained.',
+  en: 'Taiwan Legal Support for International Businesses and Individuals',
   ja: '台湾法を、分かりやすく。',
 };
 

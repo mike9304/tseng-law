@@ -32,6 +32,18 @@ export type GuideContent = {
   ctaTitle: string;
   ctaText: string;
   ctaButton: string;
+  lawyerLink?: { href: string; label: string };
+  planHeading?: string;
+  planIntro?: string;
+  planQuestions?: string[];
+  prepareHeading?: string;
+  prepareIntro?: string;
+  prepareItems?: string[];
+  separateReviewHeading?: string;
+  separateReviewItems?: Array<{ title: string; text: string }>;
+  countrySpecificHeading?: string;
+  countrySpecificIntro?: string;
+  countrySpecificItems?: Array<{ title: string; text: string }>;
 };
 
 const relatedColumnsKo = [
@@ -97,6 +109,20 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       '회사 설립에 약 3개월, 설립 후 취업허가증·거류증 취득에 약 1개월이 소요되는 것이 일반적입니다.',
       '핵심 절차는 투자심의위원회(투심회) 투자 승인 → 사명 예심·위임장 공증 → 설립 등기 → 세무 등기 → 은행 정식 계좌 개설의 흐름으로 진행됩니다.',
     ],
+    planHeading: '사업 계획부터 정리하기',
+    planIntro:
+      '대만 법인설립 정보는 형태 선택·준비자료·검토 질문을 정리하기 위한 안내입니다. 실제 수임·상담 절차는 아래 의뢰 페이지에서 확인하세요.',
+    planQuestions: [
+      '대만에서 할 활동은 판매, 계약, 제조, 연락 업무 중 무엇인가요?',
+      '투자자 또는 한국 본사는 어디이며, 자금은 어느 나라에서 송금하나요?',
+      '대만에서 계약을 체결하고 매출을 받을 주체는 누구인가요?',
+      '직원이 대만에서 근무하며 취업허가나 거류가 필요한가요?',
+      '이미 정해 둔 주소, 업종, 일정이 있나요?',
+    ],
+    lawyerLink: {
+      href: '/ko/taiwan-company-setup-lawyer',
+      label: '대만 회사설립 법률 상담 문의',
+    },
     procedureHeading: '대만 법인설립 절차 (5단계)',
     procedureIntro:
       '아래 5단계는 대만 법인설립의 핵심 흐름을 정리한 것입니다. 각 단계의 세부 서류와 일정은 사안에 따라 달라질 수 있습니다.',
@@ -147,7 +173,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       { item: '취업허가증·거류증 소요 기간', values: ['약 1개월'] },
       { item: '영업세', values: ['5% (2개월마다 신고)'] },
       { item: '법인세', values: ['20% (연간)'] },
-      { item: '한국-대만 이중과세 약정', values: ['2023.12.2 발효. 고정 사업장이 아니면 영업이익 면세, 배당금 상한세율 10%'] },
+      { item: '한국-대만 이중과세 약정', values: ['2023.12.27 발효, 2024.1.1 적용. 고정 사업장이 아니면 영업이익 면세, 배당금 상한세율 10%'] },
     ],
     faqHeading: '자주 묻는 질문',
     faq: [
@@ -194,7 +220,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     title: '台灣公司設立完整指南',
     metaTitle: '台灣公司設立流程·費用總整理 (2026) | 昊鼎國際法律事務所',
     description:
-      '以韓語整理台灣公司設立流程（投審會核准→公司名稱預查→設立登記→稅籍登記→銀行開戶）、主體比較（子公司·分公司·辦事處）、費用與時間、常見問題的完整指南。',
+      '以中文整理台灣公司設立流程（投審會核准→公司名稱預查→設立登記→稅籍登記→銀行開戶）、主體比較（子公司·分公司·辦事處）、費用與時間、常見問題。本頁同時說明台灣本地企業與外國投資人應分開檢視的事項。',
     keywords: [
       '台灣公司設立',
       '台灣公司設立流程',
@@ -208,6 +234,29 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       '台灣公司設立本身沒有最低資本額限制，一元新台幣亦可設立；但代表人需要工作許可與居留證時，單一股東須至少投資新台幣50萬元。',
       '公司設立約需3個月，設立後申請工作許可與居留證約需1個月，為一般情形。',
       '核心流程為：投資審議委員會（投審會）投資核准 → 公司名稱預查與授權書公證 → 設立登記 → 稅籍登記 → 銀行正式帳戶開立。',
+    ],
+    planHeading: '先整理事業計畫',
+    planIntro:
+      '本頁是資訊指南，協助台灣本地企業與外國投資人分別確認型態選擇、準備資料與審查問題。實際委任與諮詢流程請見法律諮詢頁。',
+    planQuestions: [
+      '在台灣實際進行的活動是銷售、締約、製造、聯絡，或混合型？',
+      '出資或控制台灣據點的是台灣本地股東，還是外國投資人？資金預計從哪一國匯入？',
+      '誰在台灣簽約並收取營收？',
+      '是否有人員在台灣工作，是否需要工作許可或居留？',
+      '是否已有預定地址、業種或時程？',
+    ],
+    lawyerLink: {
+      href: '/zh-hant/taiwan-company-setup-lawyer',
+      label: '台灣公司設立法律諮詢',
+    },
+    countrySpecificHeading: '國家或投資人身分別注意事項',
+    countrySpecificIntro:
+      '下列說明只適用標題所指的國家或身分，不是每一位中文讀者的預設規則。',
+    countrySpecificItems: [
+      {
+        title: '韓國：匯款與海外直接投資申報',
+        text: '若資金由韓國銀行匯出，公開專欄記載本人臨櫃匯款與海外直接投資申報，常是韓國投資人需要另行確認的事項。這不是所有外國投資人的共通匯款規則。',
+      },
     ],
     procedureHeading: '台灣公司設立流程（5階段）',
     procedureIntro:
@@ -223,7 +272,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       },
       {
         name: '設立登記（資本匯入·查核·公司登記）',
-        text: '開立公司籌備帳戶並匯入資本額，經資本額查核後向經濟部辦理公司登記。自韓國銀行匯款須由本人親自辦理並完成海外直接投資申報。',
+        text: '開立公司籌備帳戶並匯入資本額，經資本額查核後向經濟部辦理公司登記。匯款地國與往來銀行的手續應在資金移動前個別確認；韓國銀行匯款的臨櫃與申報要求見後述國家注意事項。',
       },
       {
         name: '稅籍登記',
@@ -244,7 +293,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       { form: '營利事業所得稅', values: ['20%', '20%', '不適用'] },
       { form: '股利外國人就源扣繳', values: ['21%', '無', '不適用'] },
       { form: '未分配盈餘稅', values: ['5%', '無', '不適用'] },
-      { form: '合資（他人參股）', values: ['可以', '不可（韓國母公司100%）', '不可'] },
+      { form: '合資（他人參股）', values: ['可以', '不可（外國總公司100%）', '不可'] },
       { form: '在台上市', values: ['可以（股份有限公司）', '不可', '不可'] },
       { form: '研發投資抵減', values: ['最高30%', '無', '無'] },
     ],
@@ -259,7 +308,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       { item: '工作許可·居留證所需時間', values: ['約1個月'] },
       { item: '營業稅', values: ['5%（每2個月申報）'] },
       { item: '營利事業所得稅', values: ['20%（每年）'] },
-      { item: '韓台避免雙重課稅協定', values: ['2023.12.2生效。非固定營業場所營業利潤免稅，股利上限稅率10%'] },
+      { item: '韓台避免雙重課稅協定', values: ['2023.12.27生效、2024.1.1適用。非固定營業場所營業利潤免稅，股利上限稅率10%'] },
     ],
     faqHeading: '常見問題',
     faq: [
@@ -299,10 +348,10 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     ctaButton: '聯絡諮詢',
   },
   en: {
-    title: 'Complete Guide to Setting Up a Company in Taiwan',
-    metaTitle: 'Taiwan Company Setup: Process, Cost & Timeline (2026) | Hovering International Law Firm',
+    title: 'How to Set Up a Company in Taiwan: A Guide for Overseas Businesses',
+    metaTitle: 'How to Set Up a Company in Taiwan | Foreign Business Guide',
     description:
-      'A complete English guide to setting up a company in Taiwan: Investment Commission approval, name pre-check, company & tax registration, bank account opening, entity comparison (subsidiary, branch, liaison office), cost and timeline, and FAQs.',
+      'Understand the decisions, documents and legal checks involved in planning a Taiwan company, branch or representative office.',
     keywords: [
       'Taiwan company setup',
       'Taiwan company registration',
@@ -311,15 +360,25 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       'Taiwan Investment Commission',
       'set up company in Taiwan cost',
     ],
-    heroLabel: 'COMPLETE GUIDE',
+    heroLabel: 'INFORMATION GUIDE',
     summary: [
-      'Taiwan company formation has no statutory minimum capital — even 1 TWD is possible — but a representative who needs a work permit and residence card must invest at least TWD 500,000 as a sole shareholder.',
-      'Company setup typically takes about 3 months, with an additional month for the work permit and residence card after incorporation.',
-      'The core flow is: Investment Commission approval → company name pre-check and power of attorney notarization → incorporation registration → tax registration → formal bank account opening.',
+      'This guide is for overseas companies and investors who need to understand Taiwan company, branch, and representative-office options before asking the firm to handle a filing.',
+      'The right structure depends on who will invest, who will contract in Taiwan, and what the local team will actually do. Those facts are not the same for every nationality.',
+      'Company registration, foreign-investment review, banking, tax, permits, hiring, and residence are related but separate reviews. Completing one step does not finish the others.',
     ],
-    procedureHeading: 'Taiwan Company Setup Process (5 Steps)',
+    planHeading: 'Start with Your Business Plan',
+    planIntro:
+      'Planning a Taiwan business starts with understanding how it will operate, who will invest, and what the local team will do. The questions below are a preparation aid, not a legal test that every investor must pass in the same way.',
+    planQuestions: [
+      'What activity will take place in Taiwan: sales, contracting, manufacturing, liaison, or a mix?',
+      'Who will own or control the Taiwan presence, and from which country are funds expected to come?',
+      'Who will sign contracts and receive revenue in Taiwan?',
+      'Will staff work in Taiwan, and will any of them need work permission or residence?',
+      'Is there a preferred address, industry, or timeline already in view?',
+    ],
+    procedureHeading: 'Understand the Formation Process',
     procedureIntro:
-      'The five steps below summarize the core flow of setting up a company in Taiwan. Detailed documents and timelines vary by case.',
+      'The outline below is a conditional overview of tasks that often arise when a foreign investor forms a Taiwan company. It is not a single sequence, duration, or document list that applies to every structure or nationality.',
     steps: [
       {
         name: 'Investment Commission (投審會) approval',
@@ -331,7 +390,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       },
       {
         name: 'Incorporation registration (capital remittance, audit, registration)',
-        text: 'Open a preparatory bank account, remit the capital, pass a capital audit, then file incorporation with the Ministry of Economic Affairs. Remitting from a Korean bank requires in-person transfer by the investor and an overseas direct investment report.',
+        text: 'Open a preparatory bank account, remit the capital, pass a capital audit, then file incorporation with the Ministry of Economic Affairs. How funds may be remitted depends on the investor’s bank and home-country rules; those rules should be checked before money is moved.',
       },
       {
         name: 'Tax registration',
@@ -342,9 +401,9 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
         text: 'Once incorporation documents are issued, the responsible person converts the preparatory account into a formal account at the bank. Anti-money-laundering rules make account opening strict; banks review lease agreements and conduct site visits.',
       },
     ],
-    comparisonHeading: 'Entity Comparison (Subsidiary, Branch, Liaison Office)',
+    comparisonHeading: 'Compare a Company, Branch and Representative Office',
     comparisonIntro:
-      'Taiwan entry takes three main forms: subsidiary (company limited by shares / limited company), branch, and liaison office. Tax exposure, legal liability, and listing eligibility differ.',
+      'Taiwan entry is often compared across a company (limited company or company limited by shares), a branch of the foreign company, and a representative office. Tax exposure, legal personality, and permitted activity differ, and the comparison below is a starting map rather than advice for a specific investor.',
     comparisonColumns: ['Item', 'Subsidiary (Co., Ltd. / Ltd.)', 'Branch', 'Liaison Office'],
     comparisonRows: [
       { form: 'Legal personality', values: ['Yes (independent entity)', 'No (business capacity only)', 'No'] },
@@ -352,13 +411,13 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       { form: 'Corporate income tax', values: ['20%', '20%', 'N/A'] },
       { form: 'Dividend withholding (foreign)', values: ['21%', 'None', 'N/A'] },
       { form: 'Undistributed-earnings tax', values: ['5%', 'None', 'N/A'] },
-      { form: 'Joint venture (others as shareholders)', values: ['Allowed', 'Not allowed (Korean HQ 100%)', 'Not allowed'] },
+      { form: 'Joint venture (others as shareholders)', values: ['Allowed', 'Not allowed (foreign head office 100%)', 'Not allowed'] },
       { form: 'Listing in Taiwan', values: ['Allowed (Co., Ltd.)', 'Not allowed', 'Not allowed'] },
       { form: 'R&D tax credit', values: ['Up to 30%', 'None', 'None'] },
     ],
-    costHeading: 'Cost and Timeline Summary',
+    costHeading: 'Figures already published in our columns',
     costIntro:
-      'The figures below summarize the general requirements, tax rates, and timelines published in our columns. Actual costs vary by industry, capital, and professional fees.',
+      'The figures below are restated from existing public columns as general information. They are not a quote, a guaranteed timeline, or a rule that applies to every investor or nationality. Attorney review is required before relying on any figure for a specific plan.',
     costColumns: ['Item', 'Detail'],
     costRows: [
       { item: 'Minimum capital (formation itself)', values: ['No statutory minimum (1 TWD possible)'] },
@@ -367,29 +426,66 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       { item: 'Work permit / residence card duration', values: ['About 1 month'] },
       { item: 'Business tax (VAT)', values: ['5% (filed every 2 months)'] },
       { item: 'Corporate income tax', values: ['20% (annual)'] },
-      { item: 'Korea–Taiwan double-taxation agreement', values: ['Effective 2023-12-02. Business profits tax-exempt without a fixed PE; dividend cap rate 10%'] },
+      { item: 'Korea-specific tax agreement', values: ['See the country-specific section below. The Taiwan–Korea income tax agreement is not a worldwide investor rule.'] },
     ],
-    faqHeading: 'Frequently Asked Questions',
+    prepareHeading: 'Prepare the Information and Documents',
+    prepareIntro:
+      'The items below help an overseas team brief the firm. They are not a complete statutory list, and originals or sensitive identity and banking files should wait for later instructions.',
+    prepareItems: [
+      'A short description of the planned Taiwan activity and who will own or control it',
+      'The investor’s country of organisation and any existing group structure',
+      'Whether a Taiwan address, industry, or hiring plan is already in view',
+      'Any deadline already driving the project',
+    ],
+    separateReviewHeading: 'Review Banking, Permits and Staffing Separately',
+    separateReviewItems: [
+      {
+        title: 'Banking',
+        text: 'Opening or converting a company account is a bank process. It is not completed by company registration alone, and the documents a bank asks for can differ from the company-registry file.',
+      },
+      {
+        title: 'Permits and the business activity',
+        text: 'The registered business item and the premises should be checked against the activity you actually intend to carry on. Some industries need a separate licence.',
+      },
+      {
+        title: 'Staffing and residence',
+        text: 'Work permission and residence are separate from forming a company. Whether a manager or investor can work in Taiwan depends on the role and the applicable criteria, not on registration by itself.',
+      },
+    ],
+    countrySpecificHeading: 'Country-Specific Considerations',
+    countrySpecificIntro:
+      'The notes below apply only to the country named in the heading. They are not restated as rules for every overseas investor.',
+    countrySpecificItems: [
+      {
+        title: 'Korea: remittance and outbound-investment reporting',
+        text: 'Where funds would be remitted from a Korean bank, existing public columns describe in-person remittance and outbound direct-investment reporting as issues that Korean investors often have to check. That description is Korea-specific and is not a worldwide remittance rule.',
+      },
+      {
+        title: 'Korea: Taiwan–Korea income tax agreement',
+        text: 'Existing public columns record that the Taiwan–Korea Income Tax Agreement entered into force on 27 December 2023 and applies from 1 January 2024, and discuss PE analysis and a 10% maximum source-country rate for qualifying dividends, interest, and royalties. Those treaty points apply only when the agreement’s conditions are met for a Korean-related fact pattern. Other nationalities require a separate review.',
+      },
+    ],
+    faqHeading: 'Questions from Overseas Businesses',
     faq: [
       {
-        q: 'Is there a minimum capital to set up a company in Taiwan?',
-        a: 'Company formation itself has no minimum capital requirement — even 1 TWD is possible. However, if the representative needs a work permit and residence card, a sole shareholder must invest at least TWD 500,000 (about TWD 170,000 with a Taiwanese partner), and the company’s annual revenue must exceed TWD 3,000,000.',
+        q: 'How should we compare a company, a branch, and a representative office?',
+        a: 'Compare who will contract, who will bear liabilities, what activity is actually planned, and how profits would be taken out. The table on this page is a starting map. It is not a recommendation of one form for every investor.',
       },
       {
-        q: 'Can setting up a company lead to a Taiwan residence card?',
-        a: 'Yes. When the investor must manage and operate the company in Taiwan, they may apply to the Ministry of Labor for a foreign work permit, then to the immigration agency for a residence card. Work permits are granted for 1–3 years, matching the residence card validity.',
+        q: 'What should an overseas head office organise before the first discussion?',
+        a: 'A short outline of the planned Taiwan activity, the investor or parent, any deadline, and the preferred contact language is usually enough to start. Identity documents and bank records can wait until the firm asks for them.',
       },
       {
-        q: 'What is the tax difference between a subsidiary and a branch?',
-        a: 'Both pay 5% business tax and 20% corporate income tax. A subsidiary adds 21% foreign-shareholder withholding on distributed dividends and a 5% undistributed-earnings tax if profits are retained. A branch remits profits to the head office with no extra tax and no undistributed-earnings tax.',
+        q: 'Why review the business activity and address separately from company registration?',
+        a: 'Name reservation or company registration does not, by itself, confirm that the intended activity may be carried on at the intended premises. Industry permits and address rules are separate checks.',
       },
       {
-        q: 'Is bank account opening really difficult?',
-        a: 'Anti-money-laundering rules have made Taiwan banks stricter about opening accounts. Most banks review the lease and conduct a site visit to the registered address. Without a residence card, you can obtain a "Unified Number Basic Data Form" from the immigration agency to open an account.',
+        q: 'When should banking, hiring, and residence be reviewed?',
+        a: 'They should be reviewed as their own topics, not assumed to finish on the same day as company registration. The sequence depends on the structure, the bank, and whether anyone will work in Taiwan.',
       },
       {
-        q: 'How long does setup usually take?',
-        a: 'Company formation typically takes about 3 months, plus about one more month for the work permit and residence card. It is safest to set the lease start date for your premises as late as possible.',
+        q: 'What should we send when contacting the firm?',
+        a: 'Send a brief business outline, the Taiwan connection, and any deadline. Do not attach passports, account numbers, or other sensitive files in the first email.',
       },
     ],
     relatedHeading: 'Related Columns',
@@ -397,14 +493,18 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     relatedResourcesHeading: 'Related Guides',
     relatedResources: [
       { href: 'korean-lawyer-in-taiwan', label: 'Korean-speaking Taiwan lawyer' },
-      { href: 'taiwan-company-setup-lawyer', label: 'Taiwan company setup lawyer guide' },
+      { href: 'taiwan-company-setup-lawyer', label: 'Discuss Your Taiwan Company Setup' },
       { href: 'taiwan-lawyer', label: 'Taiwan lawyer search guide' },
       { href: 'services/investment', label: 'Taiwan investment and company setup services' },
     ],
-    ctaTitle: 'Clarify the right setup structure for your case',
+    ctaTitle: 'Discuss Your Taiwan Business Plan',
     ctaText:
-      'The choice between a subsidiary, branch, and liaison office depends on industry, capital, and whether you need a residence card. Share your materials and we will arrange a consultation flow with Attorney Wei Tseng.',
-    ctaButton: 'Book Consultation',
+      'If you already know the business plan you want reviewed, continue to the company-formation legal-services page. Attorney Wei Tseng reviews the first enquiry; it is not a retainer.',
+    ctaButton: 'Discuss Your Taiwan Company Setup',
+    lawyerLink: {
+      href: '/en/taiwan-company-setup-lawyer',
+      label: 'Discuss Your Taiwan Company Setup',
+    },
   },
   ja: {
     title: '台湾法人設立（会社設立）総合ガイド',
@@ -427,6 +527,32 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       '会社設立に約3ヶ月、設立後の就労許可証・居留証の取得に約1ヶ月かかるのが一般的です。',
       '核心手続きは、投資審議委員会（投審会）の投資承認 → 社名予備審査・委任状公証 → 設立登記 → 税務登記 → 銀行正式口座開設の流れで進みます。',
     ],
+    planHeading: '事業計画から整理する',
+    planIntro:
+      'このページは、進出形態、準備資料、手続の確認事項を理解するための情報ガイドです。委任や相談の進め方は、会社設立の法律相談ページで別途案内します。',
+    planQuestions: [
+      '台湾で行う活動は、販売、契約、製造、連絡業務、またはその組合せか。',
+      '出資者または親会社はどこにあり、資金はどの国・地域から送金する見込みか。',
+      '台湾で契約を締結し、売上を受け取る主体は誰か。',
+      '台湾で勤務する人員はいるか。就業許可や居留が必要か。',
+      '既に予定している住所、業種、期限はあるか。',
+    ],
+    lawyerLink: {
+      href: '/ja/taiwan-company-setup-lawyer',
+      label: '台湾の会社設立・進出に関する法律相談',
+    },
+    countrySpecificHeading: '国・地域別の例外',
+    countrySpecificIntro: '以下は見出しに示した国に関する説明です。',
+    countrySpecificItems: [
+      {
+        title: '韓国：送金と海外直接投資申告',
+        text: '資金を韓国の銀行から送金する場合、公開コラムでは本人の窓口手続と海外直接投資申告が問題になり得ると説明しています。これは韓国に関する例外であり、日本を含む他の国の送金規則に置き換えたものではありません。',
+      },
+      {
+        title: '韓国：台湾・韓国所得税協定',
+        text: '台湾・韓国所得税協定は2023年12月27日に発効し、2024年1月1日から適用されています。配当・利子・使用料の源泉地国上限税率10％や恒久的施設の検討は、協定の要件を満たす韓国関連の事実関係に限ります。',
+      },
+    ],
     procedureHeading: '台湾法人設立の手続き（5段階）',
     procedureIntro:
       '以下の5段階は台湾法人設立の核心的な流れをまとめたものです。各段階の詳細書類とスケジュールは案件によって異なる場合があります。',
@@ -441,7 +567,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       },
       {
         name: '設立登記（資本金送金・監査・法人登記）',
-        text: '会社の準備口座を開設して資本金を送金し、資本金監査を経て経済部に法人登記を完了します。韓国の銀行から送金する場合は本人が直接訪問して送金する必要があり、海外直接投資の申告が必要です。',
+        text: '会社の準備口座を開設して資本金を送金し、資本金監査を経て経済部に法人登記を完了します。送金元の国・地域の手続と利用銀行の取扱いは、資金を動かす前に個別に確認します。韓国の銀行から送金する場合の本人来店や海外直接投資申告は、後述の国別例外を参照してください。',
       },
       {
         name: '税務登記',
@@ -462,7 +588,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       { form: '法人税', values: ['20%', '20%', '該当なし'] },
       { form: '配当金の外国人所得税', values: ['21%', 'なし', '該当なし'] },
       { form: '未処分利益留保金税', values: ['5%', 'なし', '該当なし'] },
-      { form: '合弁（第三者の持分参加）', values: ['可能', '不可（韓国親会社100%）', '不可'] },
+      { form: '合弁（第三者の持分参加）', values: ['可能', '不可（外国本店100%）', '不可'] },
       { form: '台湾での上場', values: ['可能（株式会社）', '不可', '不可'] },
       { form: 'R&D税額控除', values: ['最大30%', 'なし', 'なし'] },
     ],
@@ -477,7 +603,6 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       { item: '就労許可証・居留証にかかる期間', values: ['約1ヶ月'] },
       { item: '営業税', values: ['5%（2ヶ月ごとに申告）'] },
       { item: '法人税', values: ['20%（年間）'] },
-      { item: '韓国・台湾二重課税協定', values: ['2023.12.2発効。固定事業場がなければ営業利益は免税、配当金の上限税率10%'] },
     ],
     faqHeading: 'よくある質問',
     faq: [

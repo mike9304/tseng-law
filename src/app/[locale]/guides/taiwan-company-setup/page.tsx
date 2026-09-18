@@ -94,6 +94,22 @@ export default async function TaiwanCompanySetupGuidePage(props: { params: Promi
               <p className={styles.intro} style={{ marginTop: '1rem' }}>{disclaimerNote}</p>
             </section>
 
+            {c.planHeading ? (
+              <section className={styles.section}>
+                <h2 className={styles.heading}>{c.planHeading}</h2>
+                {c.planIntro ? <p className={styles.intro}>{c.planIntro}</p> : null}
+                {c.planQuestions ? (
+                  <ul className={styles.summary}>
+                    {c.planQuestions.map((item) => (
+                      <li className={styles.summaryItem} key={item}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </section>
+            ) : null}
+
             <section className={styles.section}>
               <h2 className={styles.heading}>{c.procedureHeading}</h2>
               <p className={styles.intro}>{c.procedureIntro}</p>
@@ -135,6 +151,47 @@ export default async function TaiwanCompanySetupGuidePage(props: { params: Promi
                 </table>
               </div>
             </section>
+
+            {c.prepareHeading ? (
+              <section className={styles.section}>
+                <h2 className={styles.heading}>{c.prepareHeading}</h2>
+                {c.prepareIntro ? <p className={styles.intro}>{c.prepareIntro}</p> : null}
+                {c.prepareItems ? (
+                  <ul className={styles.summary}>
+                    {c.prepareItems.map((item) => (
+                      <li className={styles.summaryItem} key={item}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </section>
+            ) : null}
+
+            {c.separateReviewHeading ? (
+              <section className={styles.section}>
+                <h2 className={styles.heading}>{c.separateReviewHeading}</h2>
+                {c.separateReviewItems?.map((item) => (
+                  <div key={item.title}>
+                    <h3 className={styles.stepName}>{item.title}</h3>
+                    <p className={styles.intro}>{item.text}</p>
+                  </div>
+                ))}
+              </section>
+            ) : null}
+
+            {c.countrySpecificHeading ? (
+              <section className={styles.section}>
+                <h2 className={styles.heading}>{c.countrySpecificHeading}</h2>
+                {c.countrySpecificIntro ? <p className={styles.intro}>{c.countrySpecificIntro}</p> : null}
+                {c.countrySpecificItems?.map((item) => (
+                  <div key={item.title}>
+                    <h3 className={styles.stepName}>{item.title}</h3>
+                    <p className={styles.intro}>{item.text}</p>
+                  </div>
+                ))}
+              </section>
+            ) : null}
 
             <section className={styles.section}>
               <h2 className={styles.heading} id="guide-cost-heading">{c.costHeading}</h2>
@@ -205,13 +262,30 @@ export default async function TaiwanCompanySetupGuidePage(props: { params: Promi
             <div className={styles.cta}>
               <h2 className={styles.ctaTitle}>{c.ctaTitle}</h2>
               <p className={styles.ctaText}>{c.ctaText}</p>
-              <a
-                href={getConsultationPublicMailto(locale)}
-                className={styles.ctaButton}
-                aria-label={`${c.ctaTitle}: ${CONSULTATION_EMAIL}`}
-              >
-                {c.ctaButton}
-              </a>
+              {c.lawyerLink ? (
+                <p>
+                  <Link href={c.lawyerLink.href} className={styles.ctaButton}>
+                    {c.lawyerLink.label}
+                  </Link>
+                </p>
+              ) : (
+                <a
+                  href={getConsultationPublicMailto(locale)}
+                  className={styles.ctaButton}
+                  aria-label={`${c.ctaTitle}: ${CONSULTATION_EMAIL}`}
+                >
+                  {c.ctaButton}
+                </a>
+              )}
+              {c.lawyerLink ? (
+                <a
+                  href={getConsultationPublicMailto(locale)}
+                  className={styles.relatedLink}
+                  aria-label={`Email ${CONSULTATION_EMAIL}`}
+                >
+                  {`Email ${CONSULTATION_EMAIL}`}
+                </a>
+              ) : null}
             </div>
           </article>
         </div>

@@ -18,7 +18,7 @@ import {
   isGuidanceRoutedLocale,
 } from '@/lib/public-guidance';
 import { buildAbsoluteUrl, getLanguageAlternates, getLocalizedPath, getSiteUrl } from '@/lib/seo';
-import { isEnglishNoindexPath } from '@/lib/seo-visibility';
+import { isEnglishNoindexPath, isGloballyNoindexPath } from '@/lib/seo-visibility';
 import { collectAllBuilderSitemapEntries } from '@/lib/builder/seo/sitemap-builder';
 import {
   createSitemapLastmodResolver,
@@ -181,7 +181,7 @@ function applyLocaleIndexabilityRules(
 ): MetadataRoute.Sitemap {
   return entries.flatMap((entry) => {
     const route = getLocalizedSitemapRoute(entry.url);
-    if (route?.path === '/reviews') {
+    if (route && isGloballyNoindexPath(route.path)) {
       return [];
     }
 

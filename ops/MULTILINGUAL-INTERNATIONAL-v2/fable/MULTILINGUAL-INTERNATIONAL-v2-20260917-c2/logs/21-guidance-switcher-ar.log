@@ -1,0 +1,44 @@
+=== guidance destinations: H1/H2 and setup/legal keywords ===
+vi /services 200 h1=['Các lĩnh vực mà văn phòng nhận xử lý'] kw[thành lập công ty]=1 h2=['Tranh chấp lao động và việc làm', 'Vụ việc hình sự', 'Sở hữu trí tuệ', 'Phạm vi và cách xác nhận', 'Gửi yêu cầu tư vấn']
+vi /faq 200 h1=['Câu hỏi thường gặp'] kw[pháp lý]=4 h2=[]
+id /services 200 h1=['Bidang perkara yang kami tangani'] kw[pendirian perusahaan]=4 h2=['Sengketa ketenagakerjaan dan hubungan kerja', 'Perkara pidana', 'Kekayaan intelektual', 'Lingkup dan cara memastikannya', 'Kirim permintaan konsultasi']
+id /faq 200 h1=['Pertanyaan yang sering diajukan'] kw[hukum]=5 h2=[]
+th /services 200 h1=['ประเภทเรื่องที่สำนักงานรับดำเนินการ'] kw[จัดตั้งบริษัท]=4 h2=['ข้อพิพาทแรงงานและการจ้างงาน', 'คดีอาญา', 'ทรัพย์สินทางปัญญา', 'ขอบเขตและการยืนยัน', 'ส่งเรื่องเพื่อขอคำปรึกษา']
+th /faq 200 h1=['คำถามที่พบบ่อย'] kw[กฎหมาย]=5 h2=[]
+fil /services 200 h1=['Mga usaping hinahawakan ng tanggapan'] kw[kumpanya]=0 h2=['Alitan sa paggawa at empleo', 'Usaping kriminal', 'Intelektuwal na ari-arian', 'Saklaw at kung paano ito kinukumpirma', 'Ipadala ang katanungan']
+fil /faq 200 h1=['Mga madalas itanong'] kw[legal]=4 h2=[]
+ar /services 200 h1=['المجالات التي يقبلها المكتب'] kw[تأسيس]=7 h2=['منازعات العمل والتوظيف', 'القضايا الجزائية', 'الملكية الفكرية', 'النطاق وكيفية تأكيده', 'إرسال طلب استشارة']
+ar /faq 200 h1=['الأسئلة الشائعة'] kw[قانون]=5 h2=[]
+=== guidance homes: consultation-language notice text near contact ===
+vi: English 日本語 Tiếng Việt Bahasa Indonesia ไทย Filipino العربية Hovering International Law Firm Lĩnh vực dịch vụ Luật sư Phạm vi và chi phí Bài viết Câu hỏi thường gặp Gử
+   forbidden-promise hits: []
+id: English 日本語 Tiếng Việt Bahasa Indonesia ไทย Filipino العربية Hovering International Law Firm Bidang layanan Advokat Lingkup dan biaya Artikel Pertanyaan umum Kirim per
+   forbidden-promise hits: []
+th: English 日本語 Tiếng Việt Bahasa Indonesia ไทย Filipino العربية Hovering International Law Firm งานที่รับดำเนินการ ทนายความ ขอบเขตและค่าใช้จ่าย บทความ คำถามที่พบบ่อย ส่งเ
+   forbidden-promise hits: []
+fil: English 日本語 Tiếng Việt Bahasa Indonesia ไทย Filipino العربية Hovering International Law Firm Mga serbisyo Mga abogado Saklaw at bayarin Mga artikulo Madalas itanong Ip
+   forbidden-promise hits: []
+ar: English 日本語 Tiếng Việt Bahasa Indonesia ไทย Filipino العربية Hovering International Law Firm مجالات الخدمات المحامون النطاق والأتعاب المقالات الأسئلة الشائعة إرسال طلب
+   forbidden-promise hits: []
+=== language switcher targets on P07 pages ===
+ja: switcher-like hrefs=[('/ar', 200), ('/en/taiwan-debt-recovery-lawyer', 200), ('/fil', 200), ('/id', 200), ('/ja', 200), ('/ja/taiwan-debt-recovery-lawyer', 200), ('/ko/taiwan-debt-recovery-lawyer', 200), ('/th', 200), ('/vi', 200), ('/zh-hant/taiwan-debt-recovery-lawyer', 200)]
+ko: switcher-like hrefs=[('/ar', 200), ('/en/taiwan-debt-recovery-lawyer', 200), ('/fil', 200), ('/id', 200), ('/ko', 200), ('/ko/taiwan-debt-recovery-lawyer', 200), ('/th', 200), ('/vi', 200), ('/zh-hant/taiwan-debt-recovery-lawyer', 200)]
+zh-hant: switcher-like hrefs=[('/ar', 200), ('/en/taiwan-debt-recovery-lawyer', 200), ('/fil', 200), ('/id', 200), ('/ko/taiwan-debt-recovery-lawyer', 200), ('/th', 200), ('/vi', 200), ('/zh-hant', 200), ('/zh-hant/taiwan-debt-recovery-lawyer', 200)]
+en: switcher-like hrefs=[('/ar', 200), ('/en', 200), ('/en/taiwan-debt-recovery-lawyer', 200), ('/fil', 200), ('/id', 200), ('/ko/taiwan-debt-recovery-lawyer', 200), ('/th', 200), ('/vi', 200), ('/zh-hant/taiwan-debt-recovery-lawyer', 200)]
+=== AR home: direction and email/phone isolation ===
+  iso= False | Law Firm في تايوان، وبلغات الاستشارة، وبكيفية بدء التواصل.","url":"https://tseng-law.com/ar","inLanguage":"ar","email":"wei@hoveringlaw.com.tw","availableLanguage":["en","zh-Hant","ja","ko"],"contactPoi
+  iso= False | nt":[{"@type":"ContactPoint","contactType":"customer service","email":"wei@hoveringlaw.com.tw","availableLanguage":["en","zh-Hant","ja","ko"],"url":"http
+  iso= False | /tseng-law.com/en/lawyers/wei-tseng","image":"https://tseng-law.com/images/team/wei-tseng-official.png","email":"mailto:wei@hoveringlaw.com.tw","jobTitle":"المحامي المدير في تايوان (Managing Attorney)",
+  iso= False | ntact-actions"><a class="button ghost" href="/ar/contact">إرسال طلب استشارة</a><a class="button secondary" href="mailto:wei@hoveringlaw.com.tw">wei@hoveringlaw.com.tw</a></div></div></section></div></di
+  iso= False | سمي للاستشارات</p><div class="footer-consultation-email-actions"><a class="footer-consultation-email-link" href="mailto:wei@hoveringlaw.com.tw?subject=%5Btseng-law.com%20Consultation%5D%20Taiwan%20Legal
+  iso= False | cure%20method%20after%20receiving%20instructions.%0A%0AThank%20you." aria-label="Email Attorney Tseng for Consultation: wei@hoveringlaw.com.tw">wei@<wbr/>hoveringlaw.com.tw</a><button type="button" clas
+  iso= False | a9\",\"__variable_dabcea\"]},\"$1a\",\"$58\",1]\n5e:D\"$5f\"\n81:T422,"])</script><script>self.__next_f.push([1,"mailto:wei@hoveringlaw.com.tw?subject=%5Btseng-law.com%20Consultation%5D%20Taiwan%20Legal
+  iso= False | className\":\"footer-consultation-email-link\",\"href\":\"$81\",\"aria-label\":\"Email Attorney Tseng for Consultation: wei@hoveringlaw.com.tw\",\"children\":\"$L82\"},\"$5f\",\"$80\",1],\"$L83\"]},\"$5
+  iso= False | تايوان، وبلغات الاستشارة، وبكيفية بدء التواصل.\",\"url\":\"https://tseng-law.com/ar\",\"inLanguage\":\"ar\",\"email\":\"wei@hoveringlaw.com.tw\",\"availableLanguage\":[\"en\",\"zh-Hant\",\"ja\",\"ko\"],
+  iso= False | \"contactPoint\":[{\"@type\":\"ContactPoint\",\"contactType\":\"customer service\",\"email\":\"wei@hoveringlaw.com.tw\",\"availableLanguage\":[\"en\",\"zh-Hant\",\"ja\",\"ko\"],
+  iso= False | aw.com/en/lawyers/wei-tseng\",\"image\":\"https://tseng-law.com/images/team/wei-tseng-official.png\",\"email\":\"mailto:wei@hoveringlaw.com.tw\",\"jobTitle\":\"المحامي المدير في تايوان (Managing Attorne
+  iso= False | ، وبكيفية بدء التواصل.\\\",\\\"url\\\":\\\"https://tseng-law.com/ar\\\",\\\"inLanguage\\\":\\\"ar\\\",\\\"email\\\":\\\"wei@hoveringlaw.com.tw\\\",\\\"availableLanguage\\\":[\\\"en\\\",\\\"zh-Hant\\\",\
+  iso= False | \\"contactPoint\\\":[{\\\"@type\\\":\\\"ContactPoint\\\",\\\"contactType\\\":\\\"customer service\\\",\\\"email\\\":\\\"wei@hoveringlaw.com.tw\\\",\\\"availableLanguage\\\":[\\\"en\\\",\\\"zh-Hant\\\",\
+  iso= False | aw.com/en/lawyers/wei-tseng\",\"image\":\"https://tseng-law.com/images/team/wei-tseng-official.png\",\"email\":\"mailto:wei@hoveringlaw.com.tw\",\"jobTitle\":\"المحامي المدير في تايوان (Managing Attorne
+  iso= False | n\":\"إرسال طلب استشارة\"},\"$1e5\",\"$1ef\",1],[\"$\",\"a\",null,{\"className\":\"button secondary\",\"href\":\"mailto:wei@hoveringlaw.com.tw\",\"children\":\"wei@hoveringlaw.com.tw\"},\"$1e5\",\"$1f0\
+  total ltr-isolation attributes on page: 0

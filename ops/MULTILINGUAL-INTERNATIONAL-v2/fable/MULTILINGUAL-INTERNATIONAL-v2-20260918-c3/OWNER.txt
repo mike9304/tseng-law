@@ -1,0 +1,4 @@
+owner: son7-a0 (Claude Opus 5, Fable 5.1 substitute)
+claimed_at: 2026-09-18 01:56:11 +0900
+note: son7-db (01:55:05 claim, withdrawn) and son7-51 both deferred to son7-a0 as c2 reviewer
+other sessions: do not write here

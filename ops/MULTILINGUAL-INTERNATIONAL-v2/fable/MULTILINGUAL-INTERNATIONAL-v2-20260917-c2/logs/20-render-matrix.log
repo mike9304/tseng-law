@@ -1,0 +1,52 @@
+=== HOMES ===
+en       200 lang=en dir=ltr navs=2 links=[('/en/taiwan-company-setup-lawyer', 'Set Up a Company in Taiwan'), ('/en/taiwan-litigation-lawyer', 'Resolve a Dispute in Taiwan'), ('/en/guides/taiwan-company-setup', 'Read the Company Setup Guide')] targets=[('/en/taiwan-company-setup-lawyer', 200), ('/en/taiwan-litigation-lawyer', 200), ('/en/guides/taiwan-company-setup', 200)]
+ja       200 lang=ja dir=ltr navs=2 links=[('/ja/taiwan-company-setup-lawyer', '台湾での会社設立を相談する'), ('/ja/taiwan-litigation-lawyer', '台湾でのトラブルを相談する'), ('/ja/guides/taiwan-company-setup', '台湾会社設立ガイドを読む')] targets=[('/ja/taiwan-company-setup-lawyer', 200), ('/ja/taiwan-litigation-lawyer', 200), ('/ja/guides/taiwan-company-setup', 200)]
+ko       200 lang=ko dir=ltr navs=2 links=[('/ko/taiwan-company-setup-lawyer', '대만 회사설립 상담하기'), ('/ko/taiwan-litigation-lawyer', '대만 분쟁 상담하기'), ('/ko/guides/taiwan-company-setup', '대만 회사설립 가이드 읽기')] targets=[('/ko/taiwan-company-setup-lawyer', 200), ('/ko/taiwan-litigation-lawyer', 200), ('/ko/guides/taiwan-company-setup', 200)]
+zh-hant  200 lang=zh-Hant dir=ltr navs=2 links=[('/zh-hant/taiwan-company-setup-lawyer', '諮詢台灣公司設立'), ('/zh-hant/taiwan-litigation-lawyer', '諮詢台灣商業爭議'), ('/zh-hant/guides/taiwan-company-setup', '閱讀台灣公司設立指南')] targets=[('/zh-hant/taiwan-company-setup-lawyer', 200), ('/zh-hant/taiwan-litigation-lawyer', 200), ('/zh-hant/guides/taiwan-company-setup', 200)]
+vi       200 lang=vi dir=ltr navs=2 links=[('/vi/services', 'Thông tin thành lập công ty tại Đài Loan'), ('/vi/faq', 'Thông tin về vấn đề pháp lý tại Đài Loan')] targets=[('/vi/services', 200), ('/vi/faq', 200)]
+id       200 lang=id dir=ltr navs=2 links=[('/id/services', 'Informasi pendirian perusahaan di Taiwan'), ('/id/faq', 'Informasi masalah hukum di Taiwan')] targets=[('/id/services', 200), ('/id/faq', 200)]
+th       200 lang=th dir=ltr navs=2 links=[('/th/services', 'ข้อมูลการจัดตั้งบริษัทในไต้หวัน'), ('/th/faq', 'ข้อมูลปัญหาทางกฎหมายในไต้หวัน')] targets=[('/th/services', 200), ('/th/faq', 200)]
+fil      200 lang=fil dir=ltr navs=2 links=[('/fil/services', 'Impormasyon sa pagtatayo ng kumpanya sa Taiwan'), ('/fil/faq', 'Impormasyon sa usaping legal sa Taiwan')] targets=[('/fil/services', 200), ('/fil/faq', 200)]
+ar       200 lang=ar dir=rtl navs=2 links=[('/ar/services', 'معلومات تأسيس شركة في تايوان'), ('/ar/faq', 'معلومات عن مسألة قانونية في تايوان')] targets=[('/ar/services', 200), ('/ar/faq', 200)]
+de       404 lang=None dir=None navs=0 links=[] targets=[]
+es       404 lang=None dir=None navs=0 links=[] targets=[]
+=== P07 debt page ===
+en       200 robots=noindex, nofollow canonical=https://tseng-law.com/en/taiwan-debt-recovery-lawyer hreflang=[] h1=['Taiwan Debt Recovery and Commercial Disputes for Overseas Businesses'] h2count=14 mailto=5 draftNoteVisible=True
+         h2: ['Services', 'Media Center', 'About', 'Situation-specific starting points', 'Unpaid Invoices and Outstanding Payments', 'Advance Payments and Undelivered Goods', 'Defective Goods, Inspection and Acceptance Disputes', 'Delayed Performance and Contract Disagreements', 'When the Taiwan Counterparty Stops Responding', 'Documents to Organise Before Seeking Advice', 'Discussing Options, Costs and Practical Recoverability', 'Working with the Firm from Overseas']
+ja       200 robots=noindex, nofollow canonical=https://tseng-law.com/ja/taiwan-debt-recovery-lawyer hreflang=[] h1=['台湾企業との取引トラブル・売掛金回収の相談'] h2count=13 mailto=4 draftNoteVisible=True
+         h2: ['取扱業務', 'コラム', '状況別の出発点', '未払い・売掛金の未回収', '前払い後の未納品', '不良品・検収をめぐる争い', '納期遅延・契約条件の争い', '取引先からの連絡途絶', '相談前に整理するとよい資料', '交渉・費用・回収可能性の検討', '海外からのご相談', '請求を始める前の質問']
+ko       200 robots=noindex, nofollow canonical=https://tseng-law.com/ko/taiwan-debt-recovery-lawyer hreflang=[] h1=['대만 기업 거래 분쟁·미수금 상담'] h2count=14 mailto=5 draftNoteVisible=True
+         h2: ['업무분야', '미디어센터', '법인소개', '상황별 출발점', '미지급·미수금', '선금 후 미납품', '불량품·검수 다툼', '납기 지연·계약 조건 다툼', '거래처 연락 단절', '상담 전에 정리하면 좋은 자료', '협상·비용·회수 가능성 검토', '해외에서의 상담']
+zh-hant  200 robots=noindex, nofollow canonical=https://tseng-law.com/zh-hant/taiwan-debt-recovery-lawyer hreflang=[] h1=['台灣企業交易糾紛與應收帳款諮詢'] h2count=14 mailto=5 draftNoteVisible=True
+         h2: ['服務領域', '媒體中心', '事務所介紹', '依情況出發', '未付款與應收帳款', '預付款後未交貨', '瑕疵與驗收爭議', '交期遲延與契約條件爭議', '相對人停止聯絡', '諮詢前可整理的資料', '協商、費用與可回收性的討論', '從海外聯繫本所']
+vi       404
+id       404
+th       404
+fil      404
+ar       404
+de       404
+es       404
+=== P01 guide / P02 lawyer / P06 civil / P04 investment / P05 litigation (core) ===
+en       guides/taiwan-company-setup    200 title='How to Set Up a Company in Taiwan | Foreign Business Guide | Hovering ' canonical=g-law.com/en/guides/taiwan-company-setup hreflang=5 robots=index, follow
+en       taiwan-company-setup-lawyer    200 title='Taiwan Company Setup Lawyer for Overseas Businesses | Hovering Interna' canonical=g-law.com/en/taiwan-company-setup-lawyer hreflang=5 robots=index, follow
+en       services/civil                 200 title='Civil Litigation & Damages | Hovering International Law Firm' canonical=https://tseng-law.com/en/services/civil hreflang=5 robots=index, follow commercialBlock=True debtLink=True
+en       services/investment            200 title='Investment & Company Setup | Hovering International Law Firm' canonical=s://tseng-law.com/en/services/investment hreflang=5 robots=index, follow lawyerLink=True guideLink=True
+en       taiwan-litigation-lawyer       200 title='Taiwan Litigation Lawyer for Contract Disputes & Civil Claims | Hoveri' canonical=seng-law.com/en/taiwan-litigation-lawyer hreflang=5 robots=index, follow debtLink=True
+ja       guides/taiwan-company-setup    200 title='台湾法人設立・会社設立の手続き・費用まとめ (2026) | 昊鼎国際法律事務所' canonical=g-law.com/ja/guides/taiwan-company-setup hreflang=5 robots=index, follow
+ja       taiwan-company-setup-lawyer    200 title='台湾会社設立・法人設立の弁護士｜手続き・費用・期間 | 昊鼎国際法律事務所' canonical=g-law.com/ja/taiwan-company-setup-lawyer hreflang=5 robots=index, follow
+ja       services/civil                 200 title='台湾の民事訴訟・損害賠償 | 昊鼎国際法律事務所' canonical=https://tseng-law.com/ja/services/civil hreflang=5 robots=index, follow commercialBlock=True debtLink=True
+ja       services/investment            200 title='台湾投資・会社設立 | 昊鼎国際法律事務所' canonical=s://tseng-law.com/ja/services/investment hreflang=5 robots=index, follow lawyerLink=True guideLink=True
+ja       taiwan-litigation-lawyer       200 title='台湾訴訟弁護士｜民事・労働・家事 日本語対応 | 昊鼎国際法律事務所' canonical=seng-law.com/ja/taiwan-litigation-lawyer hreflang=5 robots=index, follow debtLink=False
+ko       guides/taiwan-company-setup    200 title='대만 법인설립·회사설립 절차·비용 총정리 (2026) | 법무법인 호정' canonical=g-law.com/ko/guides/taiwan-company-setup hreflang=5 robots=index, follow
+ko       taiwan-company-setup-lawyer    200 title='대만 법인설립·회사설립 변호사 | 절차·비용·기간 | 법무법인 호정' canonical=g-law.com/ko/taiwan-company-setup-lawyer hreflang=5 robots=index, follow
+ko       services/civil                 200 title='민사소송·손해배상 | 법무법인 호정' canonical=https://tseng-law.com/ko/services/civil hreflang=5 robots=index, follow commercialBlock=True debtLink=True
+ko       services/investment            200 title='투자·법인설립 | 법무법인 호정' canonical=s://tseng-law.com/ko/services/investment hreflang=5 robots=index, follow lawyerLink=True guideLink=True
+ko       taiwan-litigation-lawyer       200 title='대만 소송 변호사 | 민사·형사·노동 한국어 대응 | 법무법인 호정' canonical=seng-law.com/ko/taiwan-litigation-lawyer hreflang=5 robots=index, follow debtLink=False
+zh-hant  guides/taiwan-company-setup    200 title='台灣公司設立流程·費用總整理 (2026) | 昊鼎國際法律事務所' canonical=.com/zh-hant/guides/taiwan-company-setup hreflang=5 robots=index, follow
+zh-hant  taiwan-company-setup-lawyer    200 title='台灣公司設立律師指南 | 昊鼎國際法律事務所' canonical=.com/zh-hant/taiwan-company-setup-lawyer hreflang=5 robots=index, follow
+zh-hant  services/civil                 200 title='民事訴訟·損害賠償 | 昊鼎國際法律事務所' canonical=s://tseng-law.com/zh-hant/services/civil hreflang=5 robots=index, follow commercialBlock=True debtLink=True
+zh-hant  services/investment            200 title='投資·公司設立 | 昊鼎國際法律事務所' canonical=seng-law.com/zh-hant/services/investment hreflang=5 robots=index, follow lawyerLink=True guideLink=True
+zh-hant  taiwan-litigation-lawyer       200 title='台灣訴訟律師指南 | 昊鼎國際法律事務所' canonical=law.com/zh-hant/taiwan-litigation-lawyer hreflang=5 robots=index, follow debtLink=False
+=== sitemap / llms ===
+sitemap 200 debt entries 0 loc count 302
+llms 200 debt entries 0

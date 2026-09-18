@@ -15,6 +15,7 @@ import type { PublicLocale8 } from '@/lib/public-guidance';
 import DecorativeAutoplayVideo, {
   DECORATIVE_VIDEO_CONTROL_LABELS,
 } from '@/components/DecorativeAutoplayVideo';
+import LocaleHomePathNav from '@/components/LocaleHomePathNav';
 import styles from './CinematicOpening.module.css';
 
 export const CINEMATIC_OPENING_MEDIA = {
@@ -747,6 +748,7 @@ export default function CinematicOpening({
           />
           <p className="cinematic-opening__primary">{copy.primary}</p>
           <p className="cinematic-opening__secondary">{copy.secondary}</p>
+          <LocaleHomePathNav locale={locale} tone="light" />
           <div className="cinematic-opening__info">
             <p className="cinematic-opening__service">{copy.service}</p>
             <Link className="cinematic-opening__contact" href={`/${locale}/contact`}>

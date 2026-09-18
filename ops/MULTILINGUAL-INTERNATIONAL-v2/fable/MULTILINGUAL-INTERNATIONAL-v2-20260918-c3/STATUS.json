@@ -1,0 +1,111 @@
+{
+  "schema_version": "MULTILINGUAL-INTERNATIONAL-v2",
+  "artifact_type": "INDEPENDENT_VALIDATION_STATUS",
+  "candidate_id": "MULTILINGUAL-INTERNATIONAL-v2-20260918-c3",
+  "worktree": "/Users/son7/Projects/tseng-law-en-international-20260917",
+  "git_head": "90352b029bfd5419c093a899d4bdeff49e5eb089",
+  "origin_main_at_review": "c4270097",
+  "independent_validation": {
+    "status": "CHANGES_REQUIRED",
+    "reviewer": "Claude Opus 5 (claude-opus-5[1m]), session son7-a0 — Fable 5.1 substitute; same reviewer as c2",
+    "candidate_hash": {
+      "manifest_entries": 93,
+      "match_start": 93,
+      "match_end": 93,
+      "self_hash_listed": false,
+      "snapshot_start_equals_end": true
+    },
+    "commands": {
+      "tsc": "exit 0",
+      "eslint_changed_src": "exit 0",
+      "guard_and_v2_tests_7_files": "65/65 passed",
+      "test_unit_full": "1 failed / 10856 passed / 14 skipped",
+      "build": "NOT_TESTED"
+    },
+    "c2_resolution": {
+      "V2-01": "RESOLVED",
+      "V2-02": "RESOLVED (derived P2: C3-03, C3-04)",
+      "V2-03": "RESOLVED",
+      "V2-04": "RESOLVED (style P2: C3-05)",
+      "V2-05": "RESOLVED",
+      "V2-06": "PARTIAL -> C3-02",
+      "V2-07": "RESOLVED",
+      "V2-08": "RESOLVED (out-of-scope title change caused C3-01)",
+      "V2-09": "RESOLVED",
+      "V2-10": "RESOLVED",
+      "V2-11": "RESOLVED",
+      "V2-12": "OPEN P2 publication-blocking",
+      "V2-13": "OPEN P2",
+      "V2-14": "OPEN P2 (not re-rendered)",
+      "V2-15": "RESOLVED",
+      "V2-16": "TRACKED (needs lawyer review)",
+      "V2-17": "DEFERRED pre-deploy per WO"
+    },
+    "defects": [
+      {
+        "id": "C3-01",
+        "severity": "P1",
+        "where": "src/data/intent-pages.ts:234; src/data/__tests__/intent-pages-en-growth.test.ts:17",
+        "summary": "new unit regression: zh-hant taiwan-lawyer title changed; pin passes at HEAD and c2"
+      },
+      {
+        "id": "C3-02",
+        "severity": "P1-evidence",
+        "where": "ops/MULTILINGUAL-INTERNATIONAL-v2/",
+        "summary": "BASELINE/TERMS/CONTENT-DIFF/LOCALE-SEO-MAP/RUNBOOK/logs/screens absent; QA-BY-LOCALE stale c2; manifest includes 44 c2 review artifacts"
+      },
+      {
+        "id": "C3-03",
+        "severity": "P2-claim",
+        "where": "src/app/[locale]/guides/taiwan-company-setup/content.ts:502",
+        "summary": "new responder claim 'Attorney Wei Tseng reviews the first enquiry' written to satisfy identity test; not in claim register"
+      },
+      {
+        "id": "C3-04",
+        "severity": "P2-test-quality",
+        "where": "src/components/__tests__/en-acquisition-guide-links.test.tsx:104-105",
+        "summary": "guard assertions removed without positive replacement ('void locale')"
+      },
+      {
+        "id": "C3-05",
+        "severity": "P2-native-review",
+        "where": "src/content/columns-ja/001-taiwan-company-establishment-basics.md:43,119,123",
+        "summary": "Korea-only label inserted as terse standalone clause"
+      }
+    ],
+    "verification_side_effect": {
+      "what": "next dev with NEXT_DIST_DIR auto-edited tracked tsconfig.json and next-env.d.ts",
+      "remediation": "server stopped; both restored to HEAD content via git show; build dir removed; diff clean; snapshots equal",
+      "files_were_clean_at_start": true
+    },
+    "evidence": [
+      "FABLE-REPORT.md",
+      "OWNER.txt",
+      "SNAPSHOT-start.sha256",
+      "SNAPSHOT-end.sha256",
+      "logs/00-timeline.log",
+      "logs/manifest-check-start.txt",
+      "logs/manifest-check-end.txt",
+      "logs/10-tsc.log",
+      "logs/11-eslint.log",
+      "logs/12-vitest-guards.log",
+      "logs/13-test-unit-full.log",
+      "logs/14-vitest-growth-HEAD-baseline.log",
+      "logs/20-next-dev-3046.log",
+      "logs/21-regression-sweep.log",
+      "logs/30-pw-p05-p07.json",
+      "screens/"
+    ]
+  },
+  "human_linguistic_review": "PENDING",
+  "legal_review": "PENDING",
+  "publication_approval": "PENDING",
+  "publish_authorized": false,
+  "deployed": false,
+  "performance": {
+    "organic_search": "NOT_MEASURED",
+    "ai_visibility": "NOT_MEASURED",
+    "inquiries": "NOT_MEASURED",
+    "retainers": "NOT_MEASURED"
+  }
+}

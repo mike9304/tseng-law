@@ -1,0 +1,60 @@
+{
+  "schema_version": "MULTILINGUAL-INTERNATIONAL-v2",
+  "artifact_type": "INDEPENDENT_VALIDATION_STATUS",
+  "candidate_id": "MULTILINGUAL-INTERNATIONAL-v2-20260918-c4",
+  "git_head": "90352b029bfd5419c093a899d4bdeff49e5eb089",
+  "origin_main_at_review": "c4270097",
+  "independent_validation": {
+    "status": "PASS_TECHNICAL_CONTENT",
+    "reviewer": "Claude Opus 5 (claude-opus-5[1m]), session son7-a0 — same reviewer as c2/c3",
+    "candidate_hash": {
+      "manifest_entries": 80,
+      "match_start": 80,
+      "match_end": 80,
+      "fable_paths_in_manifest": 0,
+      "self_hash_listed": false,
+      "snapshot_start_equals_end": true
+    },
+    "commands": {
+      "tsc": "exit 0",
+      "vitest_growth_and_guards": "74/74 passed",
+      "test_unit_full": "10857 passed / 0 failed / 14 skipped",
+      "build": "exit 0"
+    },
+    "wo_items": {
+      "C3-01": "RESOLVED (intent-pages.ts:234 台灣律師指南; growth pin 6/6)",
+      "C3-02": "RESOLVED (BASELINE/TERMS/CONTENT-DIFF/LOCALE-SEO-MAP/RUNBOOK + logs + 22 screens; QA id c4; manifest excludes fable/)"
+    },
+    "open_p2": [
+      "V2-12 review badge + P07 draft notice (must clear before publication)",
+      "V2-13 untranslated-locale switch notice",
+      "V2-14 JA 1440 contrast",
+      "C3-03 EN guide responder claim (in claim register, lawyer to confirm)",
+      "C3-04 guard test positive assertion",
+      "C3-05 JA label style (native review)",
+      "V2-16 ZH investment client-segment claim (lawyer to confirm)"
+    ],
+    "not_included_pre_deploy": [
+      "V2-17 rebase onto origin/main c4270097 then re-verify",
+      "attorney review",
+      "owner publication approval",
+      "native-speaker review"
+    ],
+    "post_verdict_addendum": {
+      "live_treaty_fix": "origin/main 0aa3743c corrected the guide treaty row in all four locales (2023-12-27 / 2024-01-01) with MOF source comment and a regression test; verdict unchanged",
+      "integration_conflict_predicted": "main guard src/app/[locale]/guides/__tests__/company-setup-treaty-date.test.ts requires a treaty cost row with both dates in ko/zh-hant/en/ja; candidate removed the JA row (moved to countrySpecificItems) and rewrote the EN row without dates -> expected to fail for ja/en after V2-17 rebase [inference, confirm by running after rebase]",
+      "origin_main_baseline_red": "8 files / 15 tests fail at 4152e1c6 (independently reproduced here; also reported by son7-db from a clean checkout). Candidate at 90352b02 is unaffected (10857 passing), but main must be green before a post-rebase \"no new failures\" judgement"
+    }
+  },
+  "human_linguistic_review": "PENDING",
+  "legal_review": "PENDING",
+  "publication_approval": "PENDING",
+  "publish_authorized": false,
+  "deployed": false,
+  "performance": {
+    "organic_search": "NOT_MEASURED",
+    "ai_visibility": "NOT_MEASURED",
+    "inquiries": "NOT_MEASURED",
+    "retainers": "NOT_MEASURED"
+  }
+}

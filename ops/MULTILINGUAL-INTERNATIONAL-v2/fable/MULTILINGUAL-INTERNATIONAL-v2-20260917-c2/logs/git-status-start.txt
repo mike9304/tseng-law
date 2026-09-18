@@ -1,0 +1,35 @@
+ M src/app/[locale]/(legacy)/home-legacy.tsx
+ M src/app/[locale]/guides/taiwan-company-setup/content.ts
+ M src/app/[locale]/guides/taiwan-company-setup/page.tsx
+ M src/app/[locale]/services/[slug]/page.tsx
+ M src/app/globals.css
+ M src/app/sitemap.ts
+ M src/components/CinematicOpening.tsx
+ M src/components/GuidanceHomeBody.tsx
+ M src/components/HeroSearch.tsx
+ M src/components/IntentLandingPage.tsx
+ M src/content/columns-en/001-taiwan-company-establishment-basics.md
+ M src/content/columns-ja/001-taiwan-company-establishment-basics.md
+ M src/data/en-service-scope.ts
+ M src/data/intent-pages.ts
+ M src/data/service-details.ts
+ M src/data/site-content.ts
+ M src/lib/__tests__/columns-en-investment-001.test.ts
+ M src/lib/__tests__/localized-page-titles.test.ts
+ M src/lib/__tests__/seo-hreflang-locales.test.ts
+ M src/lib/builder/seo/__tests__/live-route-defaults.test.ts
+ M src/lib/builder/seo/live-route-defaults.ts
+ M src/lib/builder/site/en-home-copy.ts
+ M src/lib/seo-visibility.ts
+ M tests/builder-editor/isolated-locale-published-home.playwright.ts
+?? docs/seo/reviews/EN-INTERNATIONAL-v1-FABLE51-WO-20260917.md
+?? ops/
+?? scripts/capture-en-international-screens.mjs
+?? src/app/[locale]/taiwan-debt-recovery-lawyer/
+?? src/components/CivilCommercialBlock.tsx
+?? src/components/EnHomePathNav.tsx
+?? src/components/LocaleHomePathNav.tsx
+?? src/components/__tests__/en-international-v1.test.tsx
+?? src/components/__tests__/multilingual-international-v2.test.tsx
+?? src/data/en-international-paths.ts
+?? src/data/multilingual-international-v2.ts

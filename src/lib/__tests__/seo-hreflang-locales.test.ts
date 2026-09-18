@@ -64,6 +64,7 @@ describe('hreflang locale coverage (WO#3)', () => {
   it('omits hreflang and x-default for globally noindex reviews and search', () => {
     expect(isGloballyNoindexPath('/reviews')).toBe(true);
     expect(isGloballyNoindexPath('/search')).toBe(true);
+    expect(isGloballyNoindexPath('/taiwan-debt-recovery-lawyer')).toBe(true);
     expect(isGloballyNoindexPath('/faq')).toBe(false);
     expect(getLanguageAlternates('/reviews')).toEqual({});
     expect(getLanguageAlternates('/search')).toEqual({});

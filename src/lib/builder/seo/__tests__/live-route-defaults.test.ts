@@ -218,7 +218,7 @@ describe('live route SEO defaults', () => {
 
   it.each([
     ['zh-hant', '台灣律師・台灣訴訟・台灣公司設立 | 昊鼎國際法律事務所'],
-    ['en', 'Taiwan Law Firm in Taipei — English Consultations | Hovering International Law Firm'],
+    ['en', 'Taiwan Legal Services for International Clients | Hovering International Law Firm'],
   ] as const)('keeps the %s homepage title on its localized brand pattern', (locale, expected) => {
     const home = makePage({
       pageId: `home-${locale}`,
@@ -284,7 +284,7 @@ describe('live route SEO defaults', () => {
 
   it('keeps English home title off the three landing primary keywords', () => {
     const home = resolveLiveRouteSeoDefault('en', '');
-    expect(home?.title).toBe('Taiwan Law Firm in Taipei — English Consultations');
+    expect(home?.title).toBe('Taiwan Legal Services for International Clients');
     expect(home?.title).not.toMatch(/taiwan lawyer/i);
     expect(home?.title).not.toMatch(/company setup lawyer/i);
     expect(home?.title).not.toMatch(/litigation lawyer/i);

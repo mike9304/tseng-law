@@ -1,0 +1,16 @@
+
+ RUN  v3.2.6 /Users/son7/Projects/tseng-law-en-international-20260917
+
+ ✓ src/app/[locale]/__tests__/canonical-public-route-identity.test.ts (2 tests) 2ms
+ ✓ src/data/__tests__/intent-pages-ja.test.ts (22 tests) 3ms
+ ✓ src/app/[locale]/taiwan-debt-recovery-lawyer/__tests__/page.test.tsx (3 tests) 6ms
+ ✓ src/components/__tests__/en-international-v1.test.tsx (4 tests) 8ms
+ ✓ src/components/__tests__/intent-contact-paths.test.tsx (8 tests) 123ms
+ ✓ src/components/__tests__/multilingual-international-v2.test.tsx (14 tests) 27ms
+ ✓ src/components/__tests__/en-acquisition-guide-links.test.tsx (12 tests) 40ms
+
+ Test Files  7 passed (7)
+      Tests  65 passed (65)
+   Start at  01:56:44
+   Duration  10.50s (transform 2.00s, setup 68ms, collect 11.96s, tests 210ms, environment 0ms, prepare 328ms)
+

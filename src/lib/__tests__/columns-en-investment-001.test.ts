@@ -348,12 +348,12 @@ describe('English investment column 001 — company-formation basics', () => {
     ).toEqual(imagePaths);
     expect(parsed.content.indexOf(imagePaths[0])).toBeLessThan(
       parsed.content.indexOf(
-        'The ways in which Korean companies and sole proprietors enter the Taiwan market',
+        'The ways in which overseas companies and sole proprietors enter the Taiwan market',
       ),
     );
     expect(parsed.content.indexOf(imagePaths[1])).toBeLessThan(
       parsed.content.indexOf(
-        'The ways in which Korean companies and sole proprietors enter the Taiwan market',
+        'The ways in which overseas companies and sole proprietors enter the Taiwan market',
       ),
     );
     expect(parsed.content.indexOf(imagePaths[2])).toBeGreaterThan(
@@ -398,7 +398,7 @@ describe('English investment column 001 — company-formation basics', () => {
     const visibleWords = countVisibleEnglishWords(parsed.content);
     const calculatedMinutes = Math.ceil(visibleWords / 200);
 
-    expect(visibleWords).toBe(2_903);
+    expect(visibleWords).toBe(2_948);
     expect(visibleWords).toBeGreaterThan(2_000);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);

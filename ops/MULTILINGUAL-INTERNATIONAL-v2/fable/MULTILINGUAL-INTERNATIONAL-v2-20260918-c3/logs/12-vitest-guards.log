@@ -1,0 +1,13 @@
+cmd: vitest run c2 regression guard files + v2/en/P07
+Thu Sep 17 16:56:43 UTC 2026
+exit=0
+Thu Sep 17 16:56:55 UTC 2026
+ ✓ src/app/[locale]/__tests__/canonical-public-route-identity.test.ts (2 tests) 2ms
+ ✓ src/data/__tests__/intent-pages-ja.test.ts (22 tests) 3ms
+ ✓ src/app/[locale]/taiwan-debt-recovery-lawyer/__tests__/page.test.tsx (3 tests) 6ms
+ ✓ src/components/__tests__/en-international-v1.test.tsx (4 tests) 8ms
+ ✓ src/components/__tests__/intent-contact-paths.test.tsx (8 tests) 123ms
+ ✓ src/components/__tests__/multilingual-international-v2.test.tsx (14 tests) 27ms
+ ✓ src/components/__tests__/en-acquisition-guide-links.test.tsx (12 tests) 40ms
+ Test Files  7 passed (7)
+      Tests  65 passed (65)

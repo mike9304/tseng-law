@@ -1,0 +1,13 @@
+cmd: vitest growth + guards + v2
+Fri Sep 18 06:30:39 UTC 2026
+ ✓ src/data/__tests__/intent-pages-en.test.ts (10 tests) 3ms
+ ✓ src/app/[locale]/__tests__/canonical-public-route-identity.test.ts (2 tests) 3ms
+ ✓ src/data/__tests__/intent-pages-en-growth.test.ts (6 tests) 2ms
+ ✓ src/data/__tests__/intent-pages-ja.test.ts (22 tests) 3ms
+ ✓ src/components/__tests__/multilingual-international-v2.test.tsx (14 tests) 23ms
+ ✓ src/components/__tests__/intent-contact-paths.test.tsx (8 tests) 134ms
+ ✓ src/components/__tests__/en-acquisition-guide-links.test.tsx (12 tests) 37ms
+ Test Files  7 passed (7)
+      Tests  74 passed (74)
+exit=
+Fri Sep 18 06:30:42 UTC 2026

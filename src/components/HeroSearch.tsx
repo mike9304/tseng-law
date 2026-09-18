@@ -17,6 +17,7 @@ import {
   getConsultationCtaLabel,
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
+import LocaleHomePathNav from '@/components/LocaleHomePathNav';
 import styles from './HomeEditorial.module.css';
 
 export const heroQuickMenus = {
@@ -247,6 +248,7 @@ export default function HeroSearch({
                 <strong>{lead.name}</strong> · {lead.role}
               </Link>
             ) : null}
+            <LocaleHomePathNav locale={locale} tone="light" />
             <div className="hero-links-minimal hero-cta-actions">
               <a
                 href={getConsultationPublicMailto(locale)}
@@ -303,6 +305,7 @@ export default function HeroSearch({
           <p className="hero-subtitle" data-builder-surface-key={homeHeroTextSurfaceIds[2]}>
             <SurfaceText surfaceKey={homeHeroTextSurfaceIds[2]}>{hero.subtitle}</SurfaceText>
           </p>
+          <LocaleHomePathNav locale={locale} tone="dark" />
           <div className="hero-links-minimal hero-cta-actions">
             <a
               href={getConsultationPublicMailto(locale)}

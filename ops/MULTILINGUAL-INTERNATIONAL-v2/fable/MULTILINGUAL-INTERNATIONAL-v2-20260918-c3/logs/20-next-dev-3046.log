@@ -1,0 +1,592 @@
+   ▲ Next.js 15.5.21
+   - Local:        http://127.0.0.1:3046
+   - Network:      http://127.0.0.1:3046
+
+ ✓ Starting...
+
+   We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+   The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+   	- include was updated to add '.next-m-fable-c3/types/**/*.ts'
+
+ ✓ Compiled /instrumentation in 157ms (21 modules)
+ ✓ Ready in 1359ms
+ ✓ Compiled /middleware in 189ms (165 modules)
+ ○ Compiling /api/builder/site/redirects/public ...
+ ✓ Compiled /api/builder/site/redirects/public in 804ms (655 modules)
+ GET /api/builder/site/redirects/public?locale=ko 200 in 986ms
+ ○ Compiling /[locale]/[[...slug]] ...
+ ⚠ ./src/components/ContactEditorial.module.css.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./src/components/ContactEditorial.module.css
+./src/components/ContactEditorial.module.css
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/lib/builder/components/composite/Render.tsx
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|javascript/auto|/Users/son7/Projects/tseng-law-en-international-20260917/node_modules/next/dist/build/webpack/loaders/next-flight-css-loader.js??ruleSet[1].rules[14].oneOf[5].use[0]!/Users/son7/Projects/tseng-law-en-international-20260917/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[1]!/Users/son7/Projects/tseng-law-en-international-20260917/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!/Users/son7/Projects/tseng-law-en-international-20260917/src/components/ContactEditorial.module.css|rsc': No serializer registered for Warning
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> Array { 1 items } -> webpack/lib/ModuleWarning -> Warning
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|javascript/auto|/Users/son7/Projects/tseng-law-en-international-20260917/node_modules/next/dist/build/webpack/loaders/next-flight-css-loader.js??ruleSet[1].rules[14].oneOf[5].use[0]!/Users/son7/Projects/tseng-law-en-international-20260917/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[1]!/Users/son7/Projects/tseng-law-en-international-20260917/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!/Users/son7/Projects/tseng-law-en-international-20260917/src/components/ContactEditorial.module.css|ssr': No serializer registered for Warning
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> Array { 1 items } -> webpack/lib/ModuleWarning -> Warning
+ GET /en 200 in 7100ms
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/Users/son7/Projects/tseng-law-en-international-20260917/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!/Users/son7/Projects/tseng-law-en-international-20260917/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!/Users/son7/Projects/tseng-law-en-international-20260917/src/components/ContactEditorial.module.css': No serializer registered for Warning
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> Array { 1 items } -> webpack/lib/ModuleWarning -> Warning
+ GET /api/builder/site/redirects/public?locale=ko 200 in 58ms
+ ⚠ ./src/components/ContactEditorial.module.css.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./src/components/ContactEditorial.module.css
+./src/components/ContactEditorial.module.css
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/lib/builder/components/composite/Render.tsx
+ ⚠ ./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/ContactBlocks.tsx
+./src/app/[locale]/(legacy)/legacy-page-bodies.tsx
+ GET /en/taiwan-litigation-lawyer 200 in 2318ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 94ms
+ ⚠ ./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/ContactBlocks.tsx
+./src/app/[locale]/(legacy)/legacy-page-bodies.tsx
+ ⚠ ./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/ContactBlocks.tsx
+./src/app/[locale]/(legacy)/legacy-page-bodies.tsx
+ GET /en/taiwan-debt-recovery-lawyer 200 in 692ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 78ms
+ ⚠ ./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/ContactBlocks.tsx
+./src/app/[locale]/(legacy)/legacy-page-bodies.tsx
+ ⚠ ./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/ContactBlocks.tsx
+./src/app/[locale]/(legacy)/legacy-page-bodies.tsx
+ GET /en/services/civil 200 in 961ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 28ms
+ GET /ja/taiwan-litigation-lawyer 200 in 142ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 22ms
+ GET /ja/taiwan-debt-recovery-lawyer 200 in 115ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 27ms
+ GET /ja/services/civil 200 in 127ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 25ms
+ GET /ko/taiwan-litigation-lawyer 200 in 133ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 24ms
+ GET /ko/taiwan-debt-recovery-lawyer 200 in 109ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 24ms
+ GET /ko/services/civil 200 in 146ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 25ms
+ GET /zh-hant/taiwan-litigation-lawyer 200 in 139ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 24ms
+ GET /zh-hant/taiwan-debt-recovery-lawyer 200 in 110ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 24ms
+ GET /zh-hant/services/civil 200 in 140ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 28ms
+ GET /en/taiwan-litigation-lawyer 200 in 144ms
+ ⚠ ./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/ContactBlocks.tsx
+./src/app/[locale]/(legacy)/legacy-page-bodies.tsx
+ ⚠ ./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/ContactBlocks.tsx
+./src/app/[locale]/(legacy)/legacy-page-bodies.tsx
+ GET /api/members/me?locale=en 200 in 1044ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 73ms
+ GET /en/taiwan-debt-recovery-lawyer 200 in 112ms
+ GET /api/members/me?locale=en 200 in 28ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 23ms
+ GET /en/services/civil 200 in 133ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 27ms
+ GET /en/taiwan-litigation-lawyer 200 in 277ms
+ GET /api/members/me?locale=en 200 in 23ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 23ms
+ GET /en/taiwan-debt-recovery-lawyer 200 in 33ms
+ GET /api/members/me?locale=en 200 in 25ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 23ms
+ GET /en/services/civil 200 in 67ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 22ms
+ GET /ja/taiwan-litigation-lawyer 200 in 144ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 32ms
+ GET /ja/taiwan-debt-recovery-lawyer 200 in 36ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 28ms
+ GET /ja/services/civil 200 in 54ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 29ms
+ GET /ja/taiwan-litigation-lawyer 200 in 140ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 26ms
+ GET /ja/taiwan-debt-recovery-lawyer 200 in 36ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 30ms
+ GET /ja/services/civil 200 in 52ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 29ms
+ GET /ko/taiwan-litigation-lawyer 200 in 145ms
+ GET /api/members/me?locale=ko 200 in 22ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 26ms
+ GET /ko/taiwan-debt-recovery-lawyer 200 in 34ms
+ GET /api/members/me?locale=ko 200 in 27ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 22ms
+ GET /ko/services/civil 200 in 66ms
+ GET /api/members/me?locale=ko 200 in 22ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 22ms
+ GET /ko/taiwan-litigation-lawyer 200 in 148ms
+ GET /api/members/me?locale=ko 200 in 22ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 30ms
+ GET /ko/taiwan-debt-recovery-lawyer 200 in 37ms
+ GET /api/members/me?locale=ko 200 in 24ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 30ms
+ GET /ko/services/civil 200 in 61ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 30ms
+ GET /zh-hant/taiwan-litigation-lawyer 200 in 210ms
+ GET /api/members/me?locale=zh-hant 200 in 23ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 30ms
+ GET /zh-hant/taiwan-debt-recovery-lawyer 200 in 35ms
+ GET /api/members/me?locale=zh-hant 200 in 23ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 23ms
+ GET /zh-hant/services/civil 200 in 59ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 22ms
+ GET /zh-hant/taiwan-litigation-lawyer 200 in 140ms
+ GET /api/members/me?locale=zh-hant 200 in 24ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 27ms
+ GET /zh-hant/taiwan-debt-recovery-lawyer 200 in 40ms
+ GET /api/members/me?locale=zh-hant 200 in 25ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 25ms
+ GET /zh-hant/services/civil 200 in 63ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 29ms
+ GET /en 200 in 378ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 29ms
+ GET /en/taiwan-debt-recovery-lawyer 200 in 141ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 23ms
+ GET /ja 200 in 137ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 24ms
+ GET /ja/taiwan-debt-recovery-lawyer 200 in 104ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 22ms
+ GET /ko 200 in 146ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 23ms
+ GET /ko/taiwan-debt-recovery-lawyer 200 in 110ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 27ms
+ GET /zh-hant 200 in 143ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 24ms
+ GET /zh-hant/taiwan-debt-recovery-lawyer 200 in 112ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 26ms
+ GET /vi/__public-guidance 200 in 162ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 24ms
+ GET /vi/__public-guidance-unavailable/taiwan-debt-recovery-lawyer 404 in 85ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 24ms
+ GET /id/__public-guidance 200 in 118ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 25ms
+ GET /id/__public-guidance-unavailable/taiwan-debt-recovery-lawyer 404 in 87ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 28ms
+ GET /th/__public-guidance 200 in 127ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 23ms
+ GET /th/__public-guidance-unavailable/taiwan-debt-recovery-lawyer 404 in 87ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 28ms
+ GET /fil/__public-guidance 200 in 124ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 25ms
+ GET /fil/__public-guidance-unavailable/taiwan-debt-recovery-lawyer 404 in 97ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 24ms
+ GET /ar/__public-guidance 200 in 126ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 24ms
+ GET /ar/__public-guidance-unavailable/taiwan-debt-recovery-lawyer 404 in 87ms
+ ⚠ ./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/ContactBlocks.tsx
+./src/app/[locale]/(legacy)/legacy-page-bodies.tsx
+ ⚠ ./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/ContactBlocks.tsx
+./src/app/[locale]/(legacy)/legacy-page-bodies.tsx
+ GET /sitemap.xml 200 in 1227ms
+ ⚠ ./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/ContactBlocks.tsx
+./src/app/[locale]/(legacy)/legacy-page-bodies.tsx
+ ⚠ ./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/ContactBlocks.tsx
+./src/app/[locale]/(legacy)/legacy-page-bodies.tsx
+ GET /llms.txt 200 in 280ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 82ms
+ GET /ja/taiwan-debt-recovery-lawyer 200 in 269ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 66ms
+ GET /zh-hant/taiwan-debt-recovery-lawyer 200 in 142ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 25ms
+ GET /ko/taiwan-debt-recovery-lawyer 200 in 105ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 21ms
+ GET /en/taiwan-debt-recovery-lawyer 200 in 108ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 72ms
+ ⚠ ./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/ContactBlocks.tsx
+./src/app/[locale]/(legacy)/legacy-page-bodies.tsx
+ ⚠ ./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/ContactBlocks.tsx
+./src/app/[locale]/(legacy)/legacy-page-bodies.tsx
+ GET /ja/columns/taiwan-company-establishment-basics 200 in 1971ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 27ms
+ ⚠ ./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/ContactBlocks.tsx
+./src/app/[locale]/(legacy)/legacy-page-bodies.tsx
+ ⚠ ./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/ContactBlocks.tsx
+./src/app/[locale]/(legacy)/legacy-page-bodies.tsx
+ GET /ko/guides/taiwan-company-setup 200 in 903ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 82ms
+ GET /zh-hant/guides/taiwan-company-setup 200 in 119ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 24ms
+ GET /ko/guides/taiwan-company-setup 200 in 110ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 23ms
+ GET /zh-hant/guides/taiwan-company-setup 200 in 115ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 24ms
+ ⚠ ./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/ContactBlocks.tsx
+./src/app/[locale]/(legacy)/legacy-page-bodies.tsx
+ ⚠ ./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/HomeContactCta.tsx
+./src/app/[locale]/(legacy)/home-legacy.tsx
+./src/app/[locale]/(legacy)/index.tsx
+./src/app/[locale]/[[...slug]]/page.tsx
+
+./src/components/ContactEditorial.module.css
+Warning
+
+(298:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/ContactEditorial.module.css
+./src/components/ContactBlocks.tsx
+./src/app/[locale]/(legacy)/legacy-page-bodies.tsx
+ GET /zh-hant/taiwan-lawyer 200 in 865ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 70ms
+ GET /en/guides/taiwan-company-setup 200 in 125ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 27ms
+ GET /vi/__public-guidance 200 in 362ms
+ GET /api/builder/site/redirects/public?locale=ko 200 in 24ms
+ GET /vi/__public-guidance 200 in 136ms
+[?25h

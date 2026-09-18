@@ -1,0 +1,7 @@
+cmd: npx tsc -p tsconfig.json --noEmit --incremental false
+Thu Sep 17 11:03:44 UTC 2026
+src/app/[locale]/taiwan-debt-recovery-lawyer/content.ts(644,3): error TS2322: Type '{ documentsListLabel: string; questionsListLabel: string; metaTitle: "Taiwan Debt Recovery and Supplier Disputes"; title: "Taiwan Debt Recovery and Commercial Disputes for Overseas Businesses"; ... 21 more ...; litigationLinkLabel: "Back to Taiwan litigation guidance"; }' is not assignable to type 'DebtRecoveryCopy'.
+  Types of property 'keywords' are incompatible.
+    The type 'readonly ["Taiwan debt recovery lawyer", "Taiwan unpaid invoice", "Taiwan supplier dispute", "Taiwan commercial dispute"]' is 'readonly' and cannot be assigned to the mutable type 'string[]'.
+exit=2
+Thu Sep 17 11:04:16 UTC 2026

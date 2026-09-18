@@ -1,0 +1,11 @@
+
+ RUN  v3.2.6 /Users/son7/Projects/tseng-law-en-international-20260917
+
+····························································································
+
+ Test Files  10 passed (10)
+      Tests  92 passed (92)
+   Start at  15:25:39
+   Duration  2.24s (transform 1.73s, setup 117ms, collect 3.64s, tests 205ms, environment 1ms, prepare 376ms)
+
+vitest_exit=0

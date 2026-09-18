@@ -140,6 +140,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     costIntro:
       '아래 수치는 당사 칼럼에 공개된 일반 요건·세율·기간을 정리한 것입니다. 실제 비용은 업종·자본금·대행 수수료에 따라 다릅니다.',
     costColumns: ['항목', '내용'],
+    // 출처: MOF 영문 안내(2026-09-18 확인) — 2023-12-27 발효, 2024-01-01 적용. https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10
     costRows: [
       { item: '최소 자본금(설립 자체)', values: ['법정 최소 없음 (1대만 달러 가능)'] },
       { item: '취업허가증·거류증용 자본금', values: ['단일 주주 최소 50만 대만 달러 (대만 파트너 있으면 약 17만 대만 달러)'] },
@@ -147,7 +148,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       { item: '취업허가증·거류증 소요 기간', values: ['약 1개월'] },
       { item: '영업세', values: ['5% (2개월마다 신고)'] },
       { item: '법인세', values: ['20% (연간)'] },
-      { item: '한국-대만 이중과세 약정', values: ['2023.12.2 발효. 고정 사업장이 아니면 영업이익 면세, 배당금 상한세율 10%'] },
+      { item: '한국-대만 이중과세 약정', values: ['2023.12.27 발효, 2024.1.1부터 적용. 고정 사업장이 아니면 영업이익 면세, 배당금 상한세율 10%'] },
     ],
     faqHeading: '자주 묻는 질문',
     faq: [
@@ -252,6 +253,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     costIntro:
       '以下數值為本所專欄公開之一般要件、稅率與時程整理。實際費用因行業、資本額與代辦費用而異。',
     costColumns: ['項目', '內容'],
+    // 출처: MOF 영문 안내(2026-09-18 확인) — 2023-12-27 발효, 2024-01-01 적용. https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10
     costRows: [
       { item: '最低資本額（設立本身）', values: ['無法定最低（1元新台幣亦可）'] },
       { item: '工作許可·居留證所需資本額', values: ['單一股東至少新台幣50萬元（有台灣合夥人則約17萬元）'] },
@@ -259,7 +261,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       { item: '工作許可·居留證所需時間', values: ['約1個月'] },
       { item: '營業稅', values: ['5%（每2個月申報）'] },
       { item: '營利事業所得稅', values: ['20%（每年）'] },
-      { item: '韓台避免雙重課稅協定', values: ['2023.12.2生效。非固定營業場所營業利潤免稅，股利上限稅率10%'] },
+      { item: '韓台避免雙重課稅協定', values: ['2023.12.27生效，自2024.1.1起適用。非固定營業場所營業利潤免稅，股利上限稅率10%'] },
     ],
     faqHeading: '常見問題',
     faq: [
@@ -360,6 +362,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     costIntro:
       'The figures below summarize the general requirements, tax rates, and timelines published in our columns. Actual costs vary by industry, capital, and professional fees.',
     costColumns: ['Item', 'Detail'],
+    // 출처: MOF 영문 안내(2026-09-18 확인) — 2023-12-27 발효, 2024-01-01 적용. https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10
     costRows: [
       { item: 'Minimum capital (formation itself)', values: ['No statutory minimum (1 TWD possible)'] },
       { item: 'Capital for work permit / residence card', values: ['Sole shareholder at least TWD 500,000 (about TWD 170,000 with a Taiwanese partner)'] },
@@ -367,7 +370,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       { item: 'Work permit / residence card duration', values: ['About 1 month'] },
       { item: 'Business tax (VAT)', values: ['5% (filed every 2 months)'] },
       { item: 'Corporate income tax', values: ['20% (annual)'] },
-      { item: 'Korea–Taiwan tax treaty (Korean parents; other countries differ)', values: ['Effective 2023-12-02 for qualifying Korean residents. Dividend cap rate 10% if treaty requirements are met; it does not apply automatically. Other countries have different treaties.'] },
+      { item: 'Korea–Taiwan tax treaty (Korean parents; other countries differ)', values: ['In force 2023-12-27 and effective from 2024-01-01 for qualifying Korean residents. Dividend cap rate 10% if treaty requirements are met; it does not apply automatically. Other countries have different treaties.'] },
     ],
     faqHeading: 'Frequently Asked Questions',
     faq: [
@@ -470,6 +473,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
     costIntro:
       '以下の数値は当事務所のコラムに公開された一般的な要件・税率・期間をまとめたものです。実際の費用は業種・資本金・代行手数料によって異なります。',
     costColumns: ['項目', '内容'],
+    // 출처: MOF 영문 안내(2026-09-18 확인) — 2023-12-27 발효, 2024-01-01 적용. https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10
     costRows: [
       { item: '最低資本金（設立自体）', values: ['法定最低額なし（1台湾ドルでも可能）'] },
       { item: '就労許可証・居留証用の資本金', values: ['単一株主で最低50万台湾ドル（台湾パートナーがいる場合は約17万台湾ドル）'] },
@@ -477,7 +481,7 @@ export const guideContent: Record<SiteLocale, GuideContent> = {
       { item: '就労許可証・居留証にかかる期間', values: ['約1ヶ月'] },
       { item: '営業税', values: ['5%（2ヶ月ごとに申告）'] },
       { item: '法人税', values: ['20%（年間）'] },
-      { item: '韓国・台湾租税条約（韓国親会社の例。他国は別条約）', values: ['適格な韓国居住者について2023.12.2発効。条約要件を満たせば配当の上限税率10%。自動適用ではない。他国は別条約。'] },
+      { item: '韓国・台湾租税条約（韓国親会社の例。他国は別条約）', values: ['適格な韓国居住者について2023.12.27発効、2024.1.1から適用。条約要件を満たせば配当の上限税率10%。自動適用ではない。他国は別条約。'] },
     ],
     faqHeading: 'よくある質問',
     faq: [

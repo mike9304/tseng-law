@@ -111,7 +111,7 @@ Persiapan penjualan di Taiwan yang diperiksa dengan urutan berikut dapat mengura
 5. Meninjau label, halaman penjualan, iklan, dan unggahan kerja sama dengan standar keseluruhan penyajian.
 6. Menjalankan prosedur untuk menangani pemeriksaan dan permintaan perbaikan, keluhan, informasi keamanan, serta tindak lanjut yang diperlukan.
 
-Struktur dasar perusahaan dan kantor cabang dapat dilihat pada [Dasar pendirian perusahaan di Taiwan](/id/columns/taiwan-company-establishment-basics), ruang lingkup dukungan terkait pada [Layanan investasi dan pendirian perusahaan di Taiwan](/ko/services#investment), dan keterangan mengenai pengacara yang menangani pada [Profil Pengacara Wei Tseng](/ko/lawyers/wei-tseng).
+Struktur dasar perusahaan dan kantor cabang dapat dilihat pada [Dasar pendirian perusahaan di Taiwan](/id/columns/taiwan-company-establishment-basics), ruang lingkup dukungan terkait pada [Layanan investasi dan pendirian perusahaan di Taiwan](/ko/services/investment), dan keterangan mengenai pengacara yang menangani pada [Profil Pengacara Wei Tseng](/ko/lawyers/wei-tseng).
 
 ### Sumber Resmi
 

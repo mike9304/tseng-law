@@ -111,7 +111,7 @@ La preparación de la venta en Taiwán, si se comprueba en el orden siguiente, p
 5. Revisar la etiqueta, la página de venta, la publicidad y las publicaciones de colaboración con el criterio del conjunto de la presentación.
 6. Operar el procedimiento para atender inspecciones y requerimientos de corrección, reclamaciones, información de seguridad y el seguimiento necesario.
 
-La estructura básica de la sociedad y de la sucursal puede verse en [Fundamentos de la constitución de sociedades en Taiwán](/es/columns/taiwan-company-establishment-basics), el ámbito de apoyo relacionado en [Servicios de inversión y constitución de sociedades en Taiwán](/ko/services#investment), y la información de la abogada responsable en [Perfil de la abogada Wei Tseng](/ko/lawyers/wei-tseng).
+La estructura básica de la sociedad y de la sucursal puede verse en [Fundamentos de la constitución de sociedades en Taiwán](/es/columns/taiwan-company-establishment-basics), el ámbito de apoyo relacionado en [Servicios de inversión y constitución de sociedades en Taiwán](/ko/services/investment), y la información de la abogada responsable en [Perfil de la abogada Wei Tseng](/ko/lawyers/wei-tseng).
 
 ### Fuentes oficiales
 

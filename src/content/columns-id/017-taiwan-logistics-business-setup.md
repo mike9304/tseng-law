@@ -140,7 +140,7 @@ Bekerja tanpa izin dapat dikenai denda administratif dan perintah meninggalkan T
 
 ## Panduan Terkait
 
-- [Layanan investasi dan pendirian perusahaan di Taiwan](/ko/services#investment)
+- [Layanan investasi dan pendirian perusahaan di Taiwan](/ko/services/investment)
 - [Profil Pengacara Wei Tseng](/ko/lawyers/wei-tseng)
 - [Hubungi kami](/id/contact)
 

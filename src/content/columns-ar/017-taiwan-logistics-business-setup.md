@@ -140,7 +140,7 @@ faq:
 
 ## إرشاد ذو صلة
 
-- [خدمات الاستثمار وتأسيس الشركات في تايوان](/ko/services#investment)
+- [خدمات الاستثمار وتأسيس الشركات في تايوان](/ko/services/investment)
 - [ملف المحامية Wei Tseng](/ko/lawyers/wei-tseng)
 - [طلب الاستشارة](/ar/contact)
 

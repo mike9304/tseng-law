@@ -184,7 +184,7 @@ La elección final es más segura si la examinan especialistas de Taiwán y del 
 
 ## Guías relacionadas
 
-- [Servicios de inversión y constitución de sociedades en Taiwán](/ko/services#investment)
+- [Servicios de inversión y constitución de sociedades en Taiwán](/ko/services/investment)
 - [Fundamentos de la constitución de sociedades en Taiwán](/es/columns/taiwan-company-establishment-basics)
 - [Contacto](/es/contact)
 

@@ -3,10 +3,18 @@ import type { Subscriber, SubscriberMarketingConsent } from './subscriber-types'
 
 export const DOUBLE_OPT_IN_TOKEN_TTL_MS = 7 * 24 * 60 * 60 * 1000;
 
+/**
+ * Consent sentence stored on the subscriber record.
+ *
+ * It states what is sent, how often, and how to stop, because the record has
+ * to show what the person actually agreed to (정보통신망법 §50 / 特定電子メール法
+ * 第三条②). The sign-up widget shows this same sentence as its checkbox label
+ * (`src/data/newsletter-signup-copy.ts`), so display and record cannot drift.
+ */
 export const DEFAULT_MARKETING_CONSENT_TEXT = {
-  ko: '마케팅 뉴스레터 및 법률 업데이트 수신에 동의합니다.',
-  'zh-hant': '我同意接收行銷電子報與法律更新。',
-  en: 'I agree to receive marketing newsletters and legal updates.',
+  ko: '법무법인 호정의 대만 법률·제도 안내 뉴스레터(월 1~2회)를 이메일로 받는 것에 동의합니다. 언제든 메일 하단 링크로 수신을 거부할 수 있습니다.',
+  'zh-hant': '我同意收到昊鼎國際法律事務所的台灣法律與制度電子報（每月 1～2 封）。我可隨時透過郵件底部連結取消訂閱。',
+  en: "I agree to receive Hovering International Law Firm's newsletter on Taiwan law and procedures (1–2 emails per month). I can unsubscribe at any time via the link in each email.",
 } as const satisfies Record<Locale, string>;
 
 export type MarketingConsentRecordInput = {

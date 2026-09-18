@@ -1,5 +1,6 @@
 import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { DEFAULT_MARKETING_CONSENT_TEXT } from '@/lib/builder/marketing/subscriber-consent';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import {
   getSubscriberByEmail,
@@ -94,7 +95,8 @@ describe('/api/marketing/subscribe', () => {
           preferredLocale: 'ko',
           ipAddress: '127.0.0.10',
           userAgent: 'vitest-browser',
-          text: '마케팅 뉴스레터 및 법률 업데이트 수신에 동의합니다.',
+          // The server-side sentence wins; the attacker-supplied copy above is ignored.
+          text: DEFAULT_MARKETING_CONSENT_TEXT.ko,
         }),
         doubleOptInTokenCreatedAt: expect.any(String),
         doubleOptInTokenExpiresAt: expect.any(String),

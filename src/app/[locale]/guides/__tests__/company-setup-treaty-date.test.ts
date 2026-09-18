@@ -18,7 +18,7 @@ const WRONG_TREATY_DATE = /2023[.\-]12[.\-]0?2(?![0-9])|2023年12月2日(?!\d)/;
 const IN_FORCE = ['2023.12.27', '2023-12-27', '2023年12月27日'];
 const APPLIES_FROM = ['2024.1.1', '2024-01-01', '2024年1月1日'];
 const TREATY_MENTION =
-  /이중과세|雙重課稅|租稅協定|所得稅協定|tax treaty|租税条約|所得税協定|ADTA/;
+  /이중과세|조세협정|조세조약|雙重課稅|租稅協定|所得稅協定|双重課税|租税条約|所得税協定|tax treaty|tax agreement|income tax agreement|double taxation|ADTA/i;
 
 const LOCALES = ['ko', 'zh-hant', 'en', 'ja'] as const;
 type GuideLocale = (typeof LOCALES)[number];

@@ -33,4 +33,8 @@ export const TEAM_NAME_BY_LOCALE: Record<PublicLocale8, string> = {
   es: 'Hovering International Team',
   fr: 'Hovering International Team',
   pt: 'Hovering International Team',
+  'zh-hans': 'Hovering International Team',
+  ms: 'Hovering International Team',
+  ru: 'Hovering International Team',
+  tr: 'Hovering International Team',
 };

@@ -123,6 +123,10 @@ const GUIDANCE_FILTER_ALL_LABEL: Record<GuidanceLocale4, string> = {
   es: 'Todo',
   fr: 'Tout',
   pt: 'Tudo',
+  'zh-hans': '全部',
+  ms: 'Semua',
+  ru: 'Все',
+  tr: 'Tümü',
 };
 
 /** Same strings `guidanceColumnCategoryLabel` returns in `src/lib/columns.ts`. */
@@ -172,6 +176,26 @@ const GUIDANCE_FILTER_CATEGORY_LABEL: Record<GuidanceLocale4, Record<ColumnCateg
     legal: 'Informações jurídicas sobre Taiwan',
     case: 'Análise de casos',
   },
+  'zh-hans': {
+    formation: '在台湾设立公司',
+    legal: '台湾法律资讯',
+    case: '案例分析',
+  },
+  ms: {
+    formation: 'Penubuhan syarikat di Taiwan',
+    legal: 'Maklumat undang-undang Taiwan',
+    case: 'Analisis kes',
+  },
+  ru: {
+    formation: 'Учреждение компании на Тайване',
+    legal: 'Правовая информация о Тайване',
+    case: 'Анализ дел',
+  },
+  tr: {
+    formation: "Tayvan'da şirket kuruluşu",
+    legal: 'Tayvan hukuku bilgileri',
+    case: 'Vaka analizi',
+  },
 };
 
 /** Reviewed `home.columnsReadMoreLabel` — same CTA GuidanceHomeBody already uses. */
@@ -185,6 +209,10 @@ const GUIDANCE_CARD_READ_MORE_LABEL: Record<GuidanceLocale4, string> = {
   es: 'Seguir leyendo',
   fr: 'Lire la suite',
   pt: 'Continuar a ler',
+  'zh-hans': '继续阅读',
+  ms: 'Baca selanjutnya',
+  ru: 'Читать далее',
+  tr: 'Devamını oku',
 };
 
 function categoryFilterLabels(locale: PublicLocale8) {

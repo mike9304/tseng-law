@@ -36,7 +36,7 @@ import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
  * present in all four, so "all four dropped it" cannot pass as parity alone.
  */
 
-const LOCALES = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt'] as const satisfies readonly GuidanceLocale[];
+const LOCALES = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr'] as const satisfies readonly GuidanceLocale[];
 
 /** Per-locale marker for one disclosure element. */
 type ElementMarkers = Record<GuidanceLocale, RegExp>;
@@ -60,6 +60,10 @@ const ELEMENTS = {
     es: /forma posible|vía posible/,
     fr: /manière possible/,
     pt: /forma possível/,
+    'zh-hans': /可行/,
+    ms: /yang boleh digunakan/,
+    ru: /возможн/,
+    tr: /Kullanılabilir/,
   },
   /** Support in a language outside the four consultation languages is not guaranteed. */
   'no-other-language-guarantee': {
@@ -72,6 +76,10 @@ const ELEMENTS = {
     es: /otro idioma/,
     fr: /autre langue/,
     pt: /outra língua/,
+    'zh-hans': /其他语言/,
+    ms: /bahasa lain/,
+    ru: /друг(?:ом|ого) язык/,
+    tr: /başka dil/,
   },
   /** No reply time is promised. */
   'no-reply-time-promise': {
@@ -84,6 +92,10 @@ const ELEMENTS = {
     es: /plazo de respuesta/,
     fr: /délai de réponse/,
     pt: /prazo de resposta/,
+    'zh-hans': /回复时限/,
+    ms: /tempoh jawapan/,
+    ru: /срок[а]? ответа/,
+    tr: /[Yy]anıt süresi/,
   },
   /** The confirmation step is a step, not a promise. */
   'confirmation-is-not-a-promise': {
@@ -96,6 +108,10 @@ const ELEMENTS = {
     es: /no es una promesa/,
     fr: /non une promesse/,
     pt: /não é uma promessa/,
+    'zh-hans': /不是承诺/,
+    ms: /bukan janji/,
+    ru: /не обещание/,
+    tr: /vaat değil/,
   },
   /** No interpreter is arranged. */
   'no-interpreter-promise': {
@@ -108,6 +124,10 @@ const ELEMENTS = {
     es: /intérprete/,
     fr: /interprétation/,
     pt: /interpretação/,
+    'zh-hans': /口译/,
+    ms: /jurubahasa/,
+    ru: /переводчик/,
+    tr: /tercüman/i,
   },
   /** Not every matter can be accepted. */
   'not-every-matter-accepted': {
@@ -120,6 +140,10 @@ const ELEMENTS = {
     es: /todos los asuntos/,
     fr: /toutes les affaires/,
     pt: /todos os assuntos/,
+    'zh-hans': /每一件事项/,
+    ms: /setiap hal/,
+    ru: /каждое дело/,
+    tr: /her işi/,
   },
   /** No outcome is promised. */
   'no-outcome-promise': {
@@ -132,6 +156,10 @@ const ELEMENTS = {
     es: /resultado/,
     fr: /résultat/,
     pt: /resultado/,
+    'zh-hans': /结果/,
+    ms: /hasil/,
+    ru: /результат/,
+    tr: /sonuç/,
   },
   /** A certain answer needs one of the four consultation languages. */
   'four-consultation-languages': {
@@ -144,6 +172,10 @@ const ELEMENTS = {
     es: /cuatro idiomas de consulta/,
     fr: /quatre langues de consultation/,
     pt: /quatro línguas de consulta/,
+    'zh-hans': /四种咨询语言/,
+    ms: /empat bahasa perundingan/,
+    ru: /четырёх язык/,
+    tr: /dört görüşme dil/,
   },
   /** This page is not the consultation step. */
   'not-the-consultation-step': {
@@ -156,6 +188,10 @@ const ELEMENTS = {
     es: /paso de consulta/,
     fr: /étape de consultation/,
     pt: /passo de consulta/,
+    'zh-hans': /咨询步骤/,
+    ms: /langkah perundingan/,
+    ru: /шагом консультации/,
+    tr: /görüşme adımı/,
   },
   /** A sent message is not legal advice. */
   'not-legal-advice': {
@@ -168,6 +204,10 @@ const ELEMENTS = {
     es: /asesoramiento jurídico/,
     fr: /avis juridique/,
     pt: /parecer jurídico/,
+    'zh-hans': /法律意见/,
+    ms: /nasihat undang-undang/,
+    ru: /юридическ/,
+    tr: /hukuki görüş/,
   },
   /** A sent message is not a confirmed appointment. */
   'not-an-appointment': {
@@ -180,6 +220,10 @@ const ELEMENTS = {
     es: /cita/,
     fr: /rendez-vous/,
     pt: /marcação/,
+    'zh-hans': /预约/,
+    ms: /janji temu/,
+    ru: /запись/,
+    tr: /randevu/,
   },
   /** Sending a message forms no attorney–client relationship. */
   'no-attorney-client-relationship': {
@@ -192,6 +236,10 @@ const ELEMENTS = {
     es: /relación entre abogado/,
     fr: /relation entre avocate ou avocat/,
     pt: /relação entre advogada ou advogado/,
+    'zh-hans': /律师与委托人关系/,
+    ms: /hubungan antara peguam/,
+    ru: /отношений между адвокатом/,
+    tr: /avukat ile müvekkil/,
   },
   /** Written text is never machine-translated for the reader. */
   'no-automatic-translation': {
@@ -204,6 +252,10 @@ const ELEMENTS = {
     es: /traduce de forma automática|traducción automática/,
     fr: /traduit automatiquement/,
     pt: /traduz de forma automática|traduzido de forma automática/,
+    'zh-hans': /自动翻译/,
+    ms: /secara automatik/,
+    ru: /автоматически не переводится/,
+    tr: /kendiliğinden çevril/,
   },
   /** The family group is named as covering marriage matters. */
   'marriage-in-family-group': {
@@ -216,6 +268,10 @@ const ELEMENTS = {
     es: /matrimonio/i,
     fr: /mariage/i,
     pt: /casamento/i,
+    'zh-hans': /婚姻/,
+    ms: /perkahwinan/i,
+    ru: /брак/i,
+    tr: /evlilik/i,
   },
   /** Meeting the attorney may be a paid service. */
   'consultation-may-be-paid': {
@@ -228,6 +284,10 @@ const ELEMENTS = {
     es: /servicio de pago/,
     fr: /prestation payante/,
     pt: /serviço pago/,
+    'zh-hans': /有偿/,
+    ms: /berbayar/,
+    ru: /возмездн/,
+    tr: /ücretli/,
   },
 } as const satisfies Record<string, ElementMarkers>;
 
@@ -489,7 +549,9 @@ describe('guidance disclosure elements are the same set in all four languages', 
     const answerGlossesOf = (locale: GuidanceLocale, key: GuidancePageKey) =>
       glossesIn(guidanceAnswers[locale][key]?.answer ?? '');
 
-    const [reference, ...others] = LOCALES;
+    // zh-hans is written in Chinese characters, so CJK runs are body text, not
+    // Taiwan-term glosses the way they are in the other guidance languages.
+    const [reference, ...others] = LOCALES.filter((locale) => locale !== 'zh-hans');
     for (const key of Object.keys(guidanceContent[reference].pages) as GuidancePageKey[]) {
       for (const locale of others) {
         expect(

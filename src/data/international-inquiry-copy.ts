@@ -25,7 +25,11 @@ export type InquiryCopyLocale =
   | 'de'
   | 'es'
   | 'fr'
-  | 'pt';
+  | 'pt'
+  | 'zh-hans'
+  | 'ms'
+  | 'ru'
+  | 'tr';
 
 export interface InternationalInquiryCopy {
   /** The page language is guidance only. */
@@ -718,6 +722,206 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ko: 'Coreano (한국어)',
       'needs-method-confirmation':
         'Não posso usar nenhuma das quatro línguas — é preciso confirmar a forma de comunicar',
+    },
+  },
+  'zh-hans': {
+    guidanceNotice:
+      '本页面以简体中文撰写，作为一般说明，不是针对您本人案件的法律意见。',
+    consultationNotice:
+      '咨询以四种语言进行：英语、中文（中文）、日语和韩语。',
+    methodConfirmationNotice:
+      '若您无法使用这四种语言中的任何一种，请选择「沟通方式须待确认」。我们会回复，以审视是否存在可行的沟通方式；不以其他语言提供服务，也不承诺回复时限。',
+    preparationNotice:
+      '您可以用自己的语言撰写案情摘要。原文会按您写下的内容保存，不会被自动翻译。',
+    heading: '提交咨询请求',
+    intro:
+      '请简要说明您的事项。律师会先审阅内容，再讨论下一步。',
+    submitLabel: '发送请求',
+    submittingLabel: '正在发送…',
+    successMessage:
+      '我们已收到您的请求，正在等待审阅。这并不表示咨询已经进行，也不表示预约已经确认。',
+    savedNotificationPendingMessage:
+      '您的请求已保存，但事务所尚未确认通知。您写下的内容没有丢失。若未收到回复，也可以写信至联系页的电子邮件地址。',
+    receiptIdLabel: '收件编号',
+    failureMessage:
+      '您的请求未能发送。请再试一次，或写信至联系页的电子邮件地址。',
+    originalLanguageLabel: '您书写所用的语言',
+    originalLanguagePlaceholder:
+      '例如：简体中文、英语、日语或其他语言',
+    preferredConsultationLanguageLabel: '您希望用于咨询的语言',
+    originalTextLabel: '事项的简短说明（用您的语言）',
+    originalTextPlaceholder:
+      '请说明发生了什么、您需要何种协助，以及期限（若有）。请勿写下护照号码、身份证件号码或银行账户资料。',
+    nameLabel: '姓名',
+    emailLabel: '电子邮件',
+    consentLabel:
+      '我已阅读隐私页面，并同意发送此请求。',
+    privacyLinkLabel: '隐私',
+    requiredMessage: '此栏为必填。',
+    invalidEmailMessage: '请填写有效的电子邮件地址。',
+    tooLongMessage: '文本过长。请缩短后再发送。',
+    sourceLanguageNotice:
+      '此文章仅以{language}发布，链接会打开该原文页面。',
+    unavailableTranslationNotice:
+      '此项目尚无本页语言的版本。标明原文语言的链接会打开原文。',
+    unavailableLanguageNotice: '本页不以{language}提供。',
+    languageOptions: {
+      en: '英语 (English)',
+      'zh-hant': '中文 (中文)',
+      ja: '日语 (日本語)',
+      ko: '韩语 (한국어)',
+      'needs-method-confirmation':
+        '四种语言都无法使用 — 沟通方式须待确认',
+    },
+  },
+  ms: {
+    guidanceNotice:
+      'Halaman ini ditulis dalam bahasa Melayu sebagai maklumat am, bukan sebagai nasihat undang-undang bagi kes anda sendiri.',
+    consultationNotice:
+      'Perundingan dijalankan dalam empat bahasa: Inggeris, Cina (中文), Jepun dan Korea.',
+    methodConfirmationNotice:
+      'Jika anda tidak dapat menggunakan mana-mana daripada empat bahasa itu, pilih “Cara berkomunikasi mesti disahkan”. Kami menjawab untuk meneliti cara berkomunikasi yang boleh digunakan jika ada cara yang boleh digunakan; perkhidmatan dalam bahasa lain tidak dijanjikan dan tempoh jawapan tidak dijanjikan.',
+    preparationNotice:
+      'anda boleh menulis ringkasan hal anda dalam bahasa anda sendiri. Teks asal disimpan sebagaimana anda menulisnya dan tidak diterjemah secara automatik.',
+    heading: 'Hantar permintaan perundingan',
+    intro:
+      'Terangkan hal anda secara ringkas. Seorang peguam menyemak kandungan sebelum langkah seterusnya dibincangkan.',
+    submitLabel: 'Hantar permintaan',
+    submittingLabel: 'Sedang dihantar…',
+    successMessage:
+      'Kami telah menerima permintaan anda; ia menunggu semakan. Ini tidak bermakna perundingan telah berlaku atau janji temu telah disahkan.',
+    savedNotificationPendingMessage:
+      'Permintaan anda disimpan, tetapi pemberitahuan kepada firma belum disahkan. Apa yang anda tulis tidak hilang. Jika anda tidak menerima jawapan, anda juga boleh menulis ke alamat e-mel halaman hubungan.',
+    receiptIdLabel: 'Nombor penerimaan',
+    failureMessage:
+      'Permintaan anda tidak dapat dihantar. Sila cuba lagi atau tulis ke alamat e-mel halaman hubungan.',
+    originalLanguageLabel: 'Bahasa yang anda gunakan untuk menulis',
+    originalLanguagePlaceholder:
+      'Contoh: bahasa Melayu, Inggeris, Cina atau bahasa lain',
+    preferredConsultationLanguageLabel: 'Bahasa yang anda inginkan untuk perundingan',
+    originalTextLabel: 'Ringkasan ringkas hal (dalam bahasa anda)',
+    originalTextPlaceholder:
+      'Nyatakan apa yang berlaku, bantuan yang anda perlukan dan tempoh jika ada. Jangan tulis nombor pasport, nombor pengenalan atau data akaun bank.',
+    nameLabel: 'Nama',
+    emailLabel: 'E-mel',
+    consentLabel:
+      'Saya telah membaca halaman privasi dan bersetuju menghantar permintaan ini.',
+    privacyLinkLabel: 'Privasi',
+    requiredMessage: 'Medan ini wajib diisi.',
+    invalidEmailMessage: 'Sila masukkan alamat e-mel yang sah.',
+    tooLongMessage: 'Teks terlalu panjang. Pendekkan dan hantar semula.',
+    sourceLanguageNotice:
+      'Rencana ini hanya diterbitkan dalam {language}, dan pautan membuka halaman asal itu.',
+    unavailableTranslationNotice:
+      'Unsur ini belum diterjemah ke bahasa halaman ini. Pautan yang menyatakan bahasa asal membuka teks asal.',
+    unavailableLanguageNotice: 'Halaman ini tidak ditawarkan dalam {language}.',
+    languageOptions: {
+      en: 'Inggeris (English)',
+      'zh-hant': 'Cina (中文)',
+      ja: 'Jepun (日本語)',
+      ko: 'Korea (한국어)',
+      'needs-method-confirmation':
+        'Saya tidak dapat menggunakan mana-mana daripada empat bahasa — cara berkomunikasi mesti disahkan',
+    },
+  },
+  ru: {
+    guidanceNotice:
+      'Эта страница написана на русском языке как общие сведения, а не как юридическая консультация по Вашему делу.',
+    consultationNotice:
+      'Консультация проводится на четырёх языках: английском, китайском (中文), японском и корейском.',
+    methodConfirmationNotice:
+      'Если Вы не можете пользоваться ни одним из четырёх языков, выберите «Способ связи должен быть подтверждён». Мы отвечаем, чтобы рассмотреть возможный способ связи, если такой способ есть; услуга на другом языке не обеспечивается, и срок ответа не обещается.',
+    preparationNotice:
+      'Вы можете написать краткое изложение дела на своём языке. Исходный текст сохраняется так, как Вы его написали, и автоматически не переводится.',
+    heading: 'Отправить запрос на консультацию',
+    intro:
+      'Кратко опишите Ваше дело. Адвокат рассматривает содержание до того, как обсуждается следующий шаг.',
+    submitLabel: 'Отправить запрос',
+    submittingLabel: 'Отправка…',
+    successMessage:
+      'Мы получили Ваш запрос; он ожидает рассмотрения. Это не означает, что консультация состоялась или что запись подтверждена.',
+    savedNotificationPendingMessage:
+      'Ваш запрос сохранён, но уведомление фирме ещё не подтверждено. Написанное Вами не теряется. Если ответа нет, Вы можете также написать на адрес электронной почты страницы контактов.',
+    receiptIdLabel: 'Номер получения',
+    failureMessage:
+      'Ваш запрос не удалось отправить. Повторите попытку или напишите на адрес электронной почты страницы контактов.',
+    originalLanguageLabel: 'Язык, на котором Вы пишете',
+    originalLanguagePlaceholder:
+      'Например: русский, английский, китайский или другой язык',
+    preferredConsultationLanguageLabel: 'Язык, который Вы хотите для консультации',
+    originalTextLabel: 'Краткое изложение дела (на Вашем языке)',
+    originalTextPlaceholder:
+      'Укажите, что произошло, какая помощь нужна и срок, если он есть. Не пишите номер паспорта, номер удостоверения или данные счёта.',
+    nameLabel: 'Имя',
+    emailLabel: 'Электронная почта',
+    consentLabel:
+      'Я прочитал(а) страницу о конфиденциальности и соглашаюсь отправить этот запрос.',
+    privacyLinkLabel: 'Конфиденциальность',
+    requiredMessage: 'Это поле обязательно.',
+    invalidEmailMessage: 'Укажите действительный адрес электронной почты.',
+    tooLongMessage: 'Текст слишком длинный. Сократите его и отправьте снова.',
+    sourceLanguageNotice:
+      'Этот материал опубликован только на языке {language}; ссылка открывает исходную страницу.',
+    unavailableTranslationNotice:
+      'Этот элемент ещё не переведён на язык этой страницы. Ссылка, указывающая язык оригинала, открывает исходный текст.',
+    unavailableLanguageNotice: 'Эта страница не предлагается на языке {language}.',
+    languageOptions: {
+      en: 'Английский (English)',
+      'zh-hant': 'Китайский (中文)',
+      ja: 'Японский (日本語)',
+      ko: 'Корейский (한국어)',
+      'needs-method-confirmation':
+        'Ни один из четырёх языков недоступен — способ связи должен быть подтверждён',
+    },
+  },
+  tr: {
+    guidanceNotice:
+      'Bu sayfa genel bilgi olarak Türkçe yazılmıştır; sizin dosyanız için hukuki görüş değildir.',
+    consultationNotice:
+      'Görüşme dört dilde yapılır: İngilizce, Çince (中文), Japonca ve Korece.',
+    methodConfirmationNotice:
+      'Dört dilden hiçbirini kullanamıyorsanız «İletişim yolunun doğrulanması gerekir» seçeneğini seçin. Kullanılabilir bir yol varsa, o yolu incelemek için yanıtlarız; başka dilde hizmet sağlanmaz ve yanıt süresi vaat edilmez.',
+    preparationNotice:
+      'İşinizin özetini kendi dilinizde yazabilirsiniz. Özgün metin yazdığınız gibi saklanır ve kendiliğinden çevrilmez.',
+    heading: 'Görüşme talebi gönderin',
+    intro:
+      'İşinizi kısaca anlatın. Bir avukat, sonraki adım konuşulmadan önce içeriği inceler.',
+    submitLabel: 'Talebi gönderin',
+    submittingLabel: 'Gönderiliyor…',
+    successMessage:
+      'Talebinizi aldık; inceleme bekliyor. Bu, görüşmenin yapıldığı veya bir randevunun doğrulandığı anlamına gelmez.',
+    savedNotificationPendingMessage:
+      'Talebiniz saklandı, ancak büroya bildirim henüz doğrulanmadı. Yazdıklarınız kaybolmaz. Yanıt almazsanız iletişim sayfasındaki e-posta adresine de yazabilirsiniz.',
+    receiptIdLabel: 'Alındı numarası',
+    failureMessage:
+      'Talebiniz gönderilemedi. Yeniden deneyin veya iletişim sayfasındaki e-posta adresine yazın.',
+    originalLanguageLabel: 'Yazdığınız dil',
+    originalLanguagePlaceholder:
+      'Örneğin: Türkçe, İngilizce, Çince veya başka bir dil',
+    preferredConsultationLanguageLabel: 'Görüşme için istediğiniz dil',
+    originalTextLabel: 'İşin kısa özeti (kendi dilinizde)',
+    originalTextPlaceholder:
+      'Ne olduğunu, ne yardıma gereksinim duyduğunuzu ve varsa süreyi belirtin. Pasaport numarası, kimlik numarası veya hesap bilgisi yazmayın.',
+    nameLabel: 'Ad',
+    emailLabel: 'E-posta',
+    consentLabel:
+      'Gizlilik sayfasını okudum ve bu talebin gönderilmesini kabul ediyorum.',
+    privacyLinkLabel: 'Gizlilik',
+    requiredMessage: 'Bu alan zorunludur.',
+    invalidEmailMessage: 'Geçerli bir e-posta adresi girin.',
+    tooLongMessage: 'Metin çok uzun. Kısaltıp yeniden gönderin.',
+    sourceLanguageNotice:
+      'Bu yazı yalnızca {language} dilinde yayımlanmıştır ve bağlantı o özgün sayfayı açar.',
+    unavailableTranslationNotice:
+      'Bu öğe henüz bu sayfanın diline çevrilmemiştir. Özgün dili belirten bir bağlantı özgün metni açar.',
+    unavailableLanguageNotice: 'Bu sayfa {language} dilinde sunulmaz.',
+    languageOptions: {
+      en: 'İngilizce (English)',
+      'zh-hant': 'Çince (中文)',
+      ja: 'Japonca (日本語)',
+      ko: 'Korece (한국어)',
+      'needs-method-confirmation':
+        'Dört dilden hiçbirini kullanamıyorum — iletişim yolunun doğrulanması gerekir',
     },
   },
 };

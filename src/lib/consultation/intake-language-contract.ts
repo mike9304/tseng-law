@@ -15,6 +15,10 @@ export const PUBLIC_INQUIRY_LOCALES = [
   'es',
   'fr',
   'pt',
+  'zh-hans',
+  'ms',
+  'ru',
+  'tr',
 ] as const;
 
 export const CONSULTATION_LANGUAGES = ['en', 'zh-hant', 'ja', 'ko'] as const;

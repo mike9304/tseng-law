@@ -224,14 +224,14 @@ describe('LocaleFlagSwitcher', () => {
       (element) => element.props['data-locale-switch-fallback'] === 'columns-list',
     );
 
-    expect(fallbackLinks).toHaveLength(9);
+    expect(fallbackLinks).toHaveLength(13);
     fallbackLinks.forEach((element) => {
       expect(element.props['aria-disabled']).toBeUndefined();
-      expect(element.props.href).toMatch(/^\/(vi|id|th|fil|ar|de|es|fr|pt)\/columns$/);
+      expect(element.props.href).toMatch(/^\/(vi|id|th|fil|ar|de|es|fr|pt|zh-hans|ms|ru|tr)\/columns$/);
       element.props.onClick?.();
     });
-    expect(onLocaleSelect.mock.calls.map(([target]) => target)).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt']);
-    expect(renderedLinks('ko').some((link) => /href="\/(vi|id|th|fil|ar|de|es|fr|pt)\/columns\//.test(link))).toBe(
+    expect(onLocaleSelect.mock.calls.map(([target]) => target)).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr']);
+    expect(renderedLinks('ko').some((link) => /href="\/(vi|id|th|fil|ar|de|es|fr|pt|zh-hans|ms|ru|tr)\/columns\//.test(link))).toBe(
       false,
     );
   });

@@ -15,6 +15,7 @@ vi.mock('next/navigation', () => ({
 
 const GUIDANCE_CONTENT_SRC = path.join(process.cwd(), 'src/data/international-guidance-content.ts');
 const GUIDANCE_WESTERN_SRC = path.join(process.cwd(), 'src/data/international-guidance-western.ts');
+const GUIDANCE_ASIA_SRC = path.join(process.cwd(), 'src/data/international-guidance-asia.ts');
 
 /**
  * Filter "All" word taken from reviewed `viewAllLabel` already in
@@ -35,6 +36,10 @@ const GUIDANCE_ALL_LABEL: Record<GuidanceLocale4, string> = {
   es: 'Todo',
   fr: 'Tout',
   pt: 'Tudo',
+  'zh-hans': '全部',
+  ms: 'Semua',
+  ru: 'Все',
+  tr: 'Tümü',
 };
 
 const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
@@ -47,6 +52,10 @@ const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
   es: "viewAllLabel: 'Ver todo'",
   fr: "viewAllLabel: 'Tout afficher'",
   pt: "viewAllLabel: 'Ver tudo'",
+  'zh-hans': "viewAllLabel: '查看全部'",
+  ms: "viewAllLabel: 'Lihat semua'",
+  ru: "viewAllLabel: 'Показать все'",
+  tr: "viewAllLabel: 'Tümünü göster'",
 };
 
 const ENGLISH_FILTER_LABELS = ['All', 'Company Setup', 'Legal Info', 'Case Studies'] as const;
@@ -101,7 +110,7 @@ function filterButtonLabels(html: string): string[] {
 
 describe('ColumnsGrid guidance filter and card CTA labels', () => {
   it('pins All labels to reviewed viewAllLabel vocabulary already in the guidance content file', () => {
-    const src = `${readFileSync(GUIDANCE_CONTENT_SRC, 'utf8')}\n${readFileSync(GUIDANCE_WESTERN_SRC, 'utf8')}`;
+    const src = `${readFileSync(GUIDANCE_CONTENT_SRC, 'utf8')}\n${readFileSync(GUIDANCE_WESTERN_SRC, 'utf8')}\n${readFileSync(GUIDANCE_ASIA_SRC, 'utf8')}`;
     for (const locale of GUIDANCE_LOCALES_4) {
       expect(src, locale).toContain(VIEW_ALL_LABEL_EVIDENCE[locale]);
       const viewAllValue = VIEW_ALL_LABEL_EVIDENCE[locale].match(/'([^']+)'/)?.[1] ?? '';

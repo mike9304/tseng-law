@@ -14,11 +14,13 @@ vi.mock('next/font/google', () => {
     Noto_Sans_KR: font,
     Noto_Sans_JP: font,
     Noto_Sans_TC: font,
+    Noto_Sans_SC: font,
     Noto_Sans_Thai: font,
     Noto_Sans_Arabic: font,
     Noto_Sans: font,
     Noto_Serif_KR: font,
     Noto_Serif_JP: font,
+    Noto_Serif_SC: font,
     Noto_Serif_TC: font,
   };
 });
@@ -343,10 +345,10 @@ describe('guidance font payload for eight document languages', () => {
       '--font-noto-sans-latin-loaded',
       '--font-noto-sans-arabic-loaded',
     ]));
-    expect(managed).toHaveLength(9);
+    expect(managed).toHaveLength(11);
 
-    const documentLanguages = ['ko', 'zh-Hant', 'en', 'ja', 'vi', 'id', 'th', 'fil', 'de', 'es', 'fr', 'pt'] as const;
-    expect(documentLanguages).toHaveLength(12);
+    const documentLanguages = ['ko', 'zh-Hant', 'en', 'ja', 'vi', 'id', 'th', 'fil', 'de', 'es', 'fr', 'pt', 'zh-Hans', 'ms', 'ru', 'tr'] as const;
+    expect(documentLanguages).toHaveLength(16);
     for (const language of documentLanguages) {
       for (const fontClass of getLocaleFontClassName(language).split(' ').filter(Boolean)) {
         expect(managed).toContain(fontClass);

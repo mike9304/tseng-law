@@ -12,11 +12,13 @@ const fontLoaders = vi.hoisted(() => {
     Noto_Sans_KR: createFontLoader(),
     Noto_Sans_JP: createFontLoader(),
     Noto_Sans_TC: createFontLoader(),
+    Noto_Sans_SC: createFontLoader(),
     Noto_Sans_Thai: createFontLoader(),
     Noto_Sans_Arabic: createFontLoader(),
     Noto_Sans: createFontLoader(),
     Noto_Serif_KR: createFontLoader(),
     Noto_Serif_JP: createFontLoader(),
+    Noto_Serif_SC: createFontLoader(),
     Noto_Serif_TC: createFontLoader(),
   };
 });
@@ -31,6 +33,8 @@ describe('locale font configuration', () => {
     ['Noto_Serif_KR', '--font-noto-serif-kr-loaded'],
     ['Noto_Sans_TC', '--font-noto-sans-tc-loaded'],
     ['Noto_Serif_TC', '--font-noto-serif-tc-loaded'],
+    ['Noto_Sans_SC', '--font-noto-sans-sc-loaded'],
+    ['Noto_Serif_SC', '--font-noto-serif-sc-loaded'],
     ['Noto_Sans_JP', '--font-noto-sans-jp-loaded'],
     ['Noto_Serif_JP', '--font-noto-serif-jp-loaded'],
   ] as const)('requests the variable %s font payload', (fontName, variable) => {
@@ -48,6 +52,7 @@ describe('locale font configuration', () => {
     expect(getLocaleFontClassName('en')).toContain('--font-noto-serif-kr-loaded');
     expect(getLocaleFontClassName('ja')).toBe('--font-noto-sans-jp-loaded --font-noto-serif-jp-loaded');
     expect(getLocaleFontClassName('zh-Hant')).toContain('--font-noto-serif-tc-loaded');
+    expect(getLocaleFontClassName('zh-Hans')).toContain('--font-noto-serif-sc-loaded');
     for (const locale of ['ko', 'en', 'zh-Hant'] as const) {
       expect(getLocaleFontClassName(locale)).not.toContain('-jp-loaded');
     }
@@ -62,11 +67,13 @@ describe('locale font configuration', () => {
       '--font-noto-serif-kr-loaded',
       '--font-noto-sans-tc-loaded',
       '--font-noto-serif-tc-loaded',
+      '--font-noto-sans-sc-loaded',
+      '--font-noto-serif-sc-loaded',
       '--font-noto-sans-jp-loaded',
       '--font-noto-serif-jp-loaded',
     ]));
-    expect(managed).toHaveLength(9);
-    expect(new Set(managed).size).toBe(9);
+    expect(managed).toHaveLength(11);
+    expect(new Set(managed).size).toBe(11);
     for (const locale of ['ko', 'en', 'zh-Hant', 'ja'] as const) {
       for (const fontClass of getLocaleFontClassName(locale).split(' ')) {
         expect(managed).toContain(fontClass);
@@ -88,7 +95,7 @@ describe('locale font configuration', () => {
       preload: false,
       variable: '--font-noto-sans-latin-loaded',
       weight: 'variable',
-      subsets: ['latin', 'latin-ext', 'vietnamese'],
+      subsets: ['latin', 'latin-ext', 'vietnamese', 'cyrillic'],
     });
 
     const managed = getManagedLocaleFontClassNames();
@@ -105,9 +112,14 @@ describe('locale font configuration', () => {
     expect(getLocaleFontClassName('es')).toBe('--font-noto-sans-latin-loaded');
     expect(getLocaleFontClassName('fr')).toBe('--font-noto-sans-latin-loaded');
     expect(getLocaleFontClassName('pt')).toBe('--font-noto-sans-latin-loaded');
+    expect(getLocaleFontClassName('ms')).toBe('--font-noto-sans-latin-loaded');
+    expect(getLocaleFontClassName('ru')).toBe('--font-noto-sans-latin-loaded');
+    expect(getLocaleFontClassName('tr')).toBe('--font-noto-sans-latin-loaded');
+    expect(getLocaleFontClassName('zh-Hans')).toContain('--font-noto-sans-sc-loaded');
+    expect(getLocaleFontClassName('zh-Hans')).toContain('--font-noto-serif-sc-loaded');
 
-    const documentLanguages = ['ko', 'zh-Hant', 'en', 'ja', 'vi', 'id', 'th', 'fil', 'de', 'es', 'fr', 'pt'] as const;
-    expect(documentLanguages).toHaveLength(12);
+    const documentLanguages = ['ko', 'zh-Hant', 'en', 'ja', 'vi', 'id', 'th', 'fil', 'de', 'es', 'fr', 'pt', 'zh-Hans', 'ms', 'ru', 'tr'] as const;
+    expect(documentLanguages).toHaveLength(16);
     for (const language of documentLanguages) {
       for (const fontClass of getLocaleFontClassName(language).split(' ').filter(Boolean)) {
         expect(managed).toContain(fontClass);

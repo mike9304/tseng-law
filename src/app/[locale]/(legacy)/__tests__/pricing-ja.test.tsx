@@ -41,6 +41,10 @@ describe('Japanese pricing integration', () => {
       es: `${SITE_URL}/es/pricing`,
       fr: `${SITE_URL}/fr/pricing`,
       pt: `${SITE_URL}/pt/pricing`,
+      'zh-Hans': `${SITE_URL}/zh-hans/pricing`,
+      ms: `${SITE_URL}/ms/pricing`,
+      ru: `${SITE_URL}/ru/pricing`,
+      tr: `${SITE_URL}/tr/pricing`,
       'x-default': `${SITE_URL}/en/pricing`,
     });
     expect(metadata.keywords).toEqual([

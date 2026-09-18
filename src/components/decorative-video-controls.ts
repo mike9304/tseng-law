@@ -75,4 +75,24 @@ export const DECORATIVE_VIDEO_CONTROL_LABELS = {
     play: 'Reproduzir o vídeo',
     replay: 'Voltar a reproduzir o vídeo',
   },
+  'zh-hans': {
+    pause: '暂停影片',
+    play: '播放影片',
+    replay: '重新播放影片',
+  },
+  ms: {
+    pause: 'Jeda video',
+    play: 'Mainkan video',
+    replay: 'Mainkan semula video',
+  },
+  ru: {
+    pause: 'Приостановить видео',
+    play: 'Воспроизвести видео',
+    replay: 'Воспроизвести видео снова',
+  },
+  tr: {
+    pause: 'Videoyu duraklat',
+    play: 'Videoyu oynat',
+    replay: 'Videoyu yeniden oynat',
+  },
 } as const satisfies Record<PublicLocale8, DecorativeVideoControlLabels>;

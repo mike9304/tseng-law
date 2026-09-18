@@ -1,0 +1,107 @@
+[WO-G2-2 시작 Fri Sep 18 17:12:31 KST 2026]
+WO-G2-2 is implemented in this workspace only. No git add/commit/push.
+
+## diff --stat
+
+51 tracked files, **2530 insertions / 80 deletions**, plus 7 untracked source files (asia pack, two tests, four `.gitkeep`s).
+
+```
+51 files changed, 2530 insertions(+), 80 deletions(-)
+```
+
+Untracked (non-docs):
+
+- `src/data/international-guidance-asia.ts`
+- `src/lib/__tests__/guidance-zh-hans-ms-ru-tr-content.test.ts`
+- `src/lib/__tests__/guidance-zh-hans-ms-ru-tr-routing.test.ts`
+- `src/content/columns-{zh-hans,ms,ru,tr}/.gitkeep`
+
+## §5 command outputs (raw)
+
+**`git status --short | wc -l && git diff --stat | tail -1`**
+```
+      59
+ 51 files changed, 2530 insertions(+), 80 deletions(-)
+```
+(`wc -l` is 59 because two pre-existing untracked `docs/i18n/global-plan/**` files were left untouched; WO forbids `docs/**`.)
+
+**`npm run typecheck 2>&1 | tail -2`**
+```
+Generating route types...
+✓ Route types generated successfully
+```
+(`tsc --noEmit` printed nothing; the command exited 0.)
+
+**`npx vitest run … 2>&1 | tail -8`**
+```
+   ✓ sitemap column lastModified > does not invent vi/id/th/fil URLs or hreflang for deep articles or US landings  772ms
+   ✓ sitemap column lastModified > appends exactly 130 unique self-canonical guidance core URLs and retains non-core routes  772ms
+
+ Test Files  17 passed (17)
+      Tests  491 passed (491)
+   Start at  17:57:40
+   Duration  26.78s (transform 981ms, setup 165ms, collect 3.46s, tests 27.45s, environment 1ms, prepare 733ms)
+```
+
+**`npx eslint --max-warnings=0 --ext .ts,.tsx $(git diff --name-only | grep -E '^src/.*\.(ts|tsx)$') $(git ls-files --others --exclude-standard | grep -E '^src/.*\.(ts|tsx)$') 2>&1 | tail -3`**
+
+(empty stdout; exit 0)
+
+**`node scripts/check-guidance-country-mentions.mjs 2>&1 | tail -2`**
+```
+  ALLOW src/data/international-inquiry-copy.ts:450 [fil] Thai — field whose value is a list of language names
+PASS guidance-country-mentions: 0 violations
+```
+
+**`grep -c "中国台湾\|台湾省\|大陆" src/data/international-guidance-asia.ts`**
+```
+0
+```
+
+**`grep -rn "\[변호사 검수 필요\]" src/data/international-guidance-asia.ts src/data/international-guidance-western.ts | wc -l`**
+```
+       0
+```
+
+## Language FAQ (published copy)
+
+**zh-hans**  
+Q: 可以用中文咨询吗？  
+A: 可以。律师咨询以英语、中文、日语和韩语进行。本页面以简体中文撰写，咨询时使用的中文包括普通话与书面中文。本页不承诺口译。书面翻译是另一回事：您写下的原文会按原样保存，不会被自动翻译。
+
+**ms**  
+Q: Bolehkah saya berunding dalam bahasa Melayu?  
+A: Tidak. Maklumat ini ditulis dalam bahasa Melayu, tetapi perundingan dengan peguam hanya dijalankan dalam bahasa Inggeris, Cina (中文), Jepun dan Korea. Kami juga tidak menjanjikan jurubahasa. Terjemahan bertulis ialah perkara lain: teks asal yang anda tulis disimpan sebagaimana adanya dan tidak diterjemah secara automatik.
+
+**ru**  
+Q: Возможна ли консультация на русском языке?  
+A: Нет. Эти сведения написаны на русском языке, но консультация с адвокатом проводится только на английском, китайском (中文), японском и корейском языках. Мы также не обещаем переводчика. Письменный перевод — другое: исходный текст, который Вы пишете, сохраняется как есть и автоматически не переводится.
+
+**tr**  
+Q: Türkçe danışma mümkün mü?  
+A: Hayır. Bu bilgiler Türkçe yazılmıştır; ancak avukatla görüşme yalnızca İngilizce, Çince (中文), Japonca ve Korece yapılır. Tercüman da vaat etmeyiz. Yazılı çeviri başka bir şeydir: yazdığınız özgün metin olduğu gibi saklanır ve kendiliğinden çevrilmez.
+
+`GUIDANCE_CONSULTATION_LANGUAGE_LOCALES = ['zh-hans']` is the only consultation-language exception; ms/ru/tr stay negative.
+
+## fr/pt (`04677e16`) vs this change
+
+**Added on purpose**
+
+- `international-guidance-asia.ts` for zh-hans/ms (WO: ru/tr stay in `western.ts`)
+- `guidance-zh-hans-ms-ru-tr-{content,routing}.test.ts`
+- four empty column dirs + `.gitkeep`
+- `Noto_Sans_SC` / `Noto_Serif_SC`, latin Noto `cyrillic` subset, `html lang` / hreflang `zh-Hans`, og `zh_SG` / `ms_MY` / `ru_RU` / `tr_TR`
+- registry entries on the current schema (`englishName`, `region`, no `regionLabel`/`rtl`; zh-hans/ms `asia-pacific`, ru/tr `europe`)
+
+**Not copied, with reason**
+
+- `docs/**` — WO forbids it
+- `src/app/api/consultation/international/__tests__/route.test.ts` — already keyed off `PUBLIC_INQUIRY_LOCALES` and rejects `it`
+- `column-category-parity` / `guidance-column-category-label` — already skip dirs with no `.md`
+- `public-language-registry.test.ts` length/region lists — already driven by `PUBLIC_LOCALES_8` after G1-R2
+
+## Unresolved
+
+- No commit (WO). Column markdown is still empty by design.
+- `git status --short | wc -l` includes two leftover untracked docs files from before this WO.
+=== WO-G2-2 종료 code=0 Fri Sep 18 17:59:00 KST 2026 ===

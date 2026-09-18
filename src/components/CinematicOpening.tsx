@@ -554,6 +554,45 @@ export const CINEMATIC_OPENING_COPY: Record<
     service: 'Orientação jurídica sobre Taiwan · inglês, chinês, japonês e coreano',
     contact: 'Contactar o escritório',
   },
+  'zh-hans': {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: '台湾律师',
+    scroll: '继续向下',
+    skip: '跳过片头',
+    mediaAlt: '自然光下台湾中央山脉与云海的航拍画面',
+    service: '台湾法律说明 · 英语、中文、日语和韩语',
+    contact: '联系事务所',
+  },
+  ms: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'PEGUAM DI TAIWAN',
+    scroll: 'Teruskan ke bawah',
+    skip: 'Langkau pengenalan',
+    mediaAlt:
+      'Gambar udara dalam cahaya semula jadi di atas Banjaran Pusat Taiwan dan lautan awan',
+    service: 'Maklumat undang-undang Taiwan · Inggeris, Cina, Jepun dan Korea',
+    contact: 'Hubungi firma',
+  },
+  ru: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'АДВОКАТЫ НА ТАЙВАНЕ',
+    scroll: 'Продолжить вниз',
+    skip: 'Пропустить вступление',
+    mediaAlt:
+      'Аэросъёмка при естественном свете над Центральным горным хребтом Тайваня и морем облаков',
+    service: 'Правовые сведения о Тайване · английский, китайский, японский и корейский',
+    contact: 'Связаться с фирмой',
+  },
+  tr: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: "TAYVAN'DA AVUKATLAR",
+    scroll: 'Aşağı devam edin',
+    skip: 'Girişi atla',
+    mediaAlt:
+      'Doğal ışıkta Tayvan Orta Sıradağları ve bir bulut denizi üzerinde hava görüntüsü',
+    service: 'Tayvan hukuku bilgileri · İngilizce, Çince, Japonca ve Korece',
+    contact: 'Ofisle iletişime geçin',
+  },
 };
 
 export default function CinematicOpening({

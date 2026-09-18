@@ -105,6 +105,10 @@ const FORMATION_CATEGORY_PHRASES = [
   'Constitución de sociedades', // es
   'Création de société à Taïwan', // fr
   'Constituição de sociedades em Taiwan', // pt
+  '公司登记', // zh-hans (Taiwan term, simplified)
+  'Penubuhan syarikat di Taiwan', // ms
+  'Учреждение компании на Тайване', // ru
+  "Tayvan'da şirket kuruluşu", // tr
 ];
 const CASE_CATEGORY_PHRASES = [
   '소송사례',
@@ -119,6 +123,10 @@ const CASE_CATEGORY_PHRASES = [
   'Análisis de casos', // es
   'Analyse de cas', // fr
   'Análise de casos', // pt
+  '案例分析', // zh-hans
+  'Analisis kes', // ms
+  'Анализ дел', // ru
+  'Vaka analizi', // tr
 ];
 
 function categoryFromString(cat: string): ColumnCategory {
@@ -156,6 +164,10 @@ const GUIDANCE_COLUMN_CATEGORY_LABELS: Partial<Record<GuidanceLocale4, Record<Co
   es: { formation: 'Constitución de sociedades en Taiwán', legal: 'Información jurídica de Taiwán', case: 'Análisis de casos' },
   fr: { formation: 'Création de société à Taïwan', legal: 'Informations juridiques sur Taïwan', case: 'Analyse de cas' },
   pt: { formation: 'Constituição de sociedades em Taiwan', legal: 'Informações jurídicas sobre Taiwan', case: 'Análise de casos' },
+  'zh-hans': { formation: '在台湾设立公司', legal: '台湾法律资讯', case: '案例分析' },
+  ms: { formation: 'Penubuhan syarikat di Taiwan', legal: 'Maklumat undang-undang Taiwan', case: 'Analisis kes' },
+  ru: { formation: 'Учреждение компании на Тайване', legal: 'Правовая информация о Тайване', case: 'Анализ дел' },
+  tr: { formation: "Tayvan'da şirket kuruluşu", legal: 'Tayvan hukuku bilgileri', case: 'Vaka analizi' },
 };
 const ENGLISH_COLUMN_CATEGORY_LABELS: Record<ColumnCategory, string> = {
   formation: 'Company Setup',

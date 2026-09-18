@@ -8,17 +8,41 @@ export type ExistingSiteLocale4 = (typeof EXISTING_SITE_LOCALES_4)[number];
 /**
  * Guidance-language surface. Independent of Locale / SiteLocale. Never
  * normalized into KO. The `_4` suffix is historical — the set grew past four
- * (Arabic, then German and Spanish, then French and Portuguese) and the name
- * was kept so the flip touched the locale data instead of every import in the
- * repo.
+ * (Arabic, then German and Spanish, then French and Portuguese, then
+ * Simplified Chinese, Malay, Russian and Turkish) and the name was kept so
+ * the flip touched the locale data instead of every import in the repo.
  */
-export const GUIDANCE_LOCALES_4 = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt'] as const;
+export const GUIDANCE_LOCALES_4 = [
+  'vi',
+  'id',
+  'th',
+  'fil',
+  'ar',
+  'de',
+  'es',
+  'fr',
+  'pt',
+  'zh-hans',
+  'ms',
+  'ru',
+  'tr',
+] as const;
 export type GuidanceLocale4 = (typeof GUIDANCE_LOCALES_4)[number];
 
 /**
+ * Guidance locales whose page language overlaps a consultation language.
+ * Only Simplified Chinese (`zh-hans`) sits in this set: 中文 is one of the
+ * four attorney languages. Other guidance locales remain page languages only.
+ */
+export const GUIDANCE_CONSULTATION_LANGUAGE_LOCALES = ['zh-hans'] as const;
+export type GuidanceConsultationLanguageLocale =
+  (typeof GUIDANCE_CONSULTATION_LANGUAGE_LOCALES)[number];
+
+/**
  * Public language surface. Do not fold this into `siteLocales`. The `_8`
- * suffix is historical (see {@link GUIDANCE_LOCALES_4}); the set is thirteen
- * since French and Portuguese joined the guidance tier after German and Spanish.
+ * suffix is historical (see {@link GUIDANCE_LOCALES_4}); the set is seventeen
+ * since Simplified Chinese, Malay, Russian and Turkish joined the guidance
+ * tier after French and Portuguese.
  */
 export const PUBLIC_LOCALES_8 = [
   'ko',
@@ -34,6 +58,10 @@ export const PUBLIC_LOCALES_8 = [
   'es',
   'fr',
   'pt',
+  'zh-hans',
+  'ms',
+  'ru',
+  'tr',
 ] as const;
 export type PublicLocale8 = (typeof PUBLIC_LOCALES_8)[number];
 
@@ -105,6 +133,10 @@ export const PUBLIC_LANGUAGE_AUTONYMS: Record<PublicLocale8, string> = {
   es: 'Español',
   fr: 'Français',
   pt: 'Português',
+  'zh-hans': '简体中文',
+  ms: 'Bahasa Melayu',
+  ru: 'Русский',
+  tr: 'Türkçe',
 };
 
 export type PublicDocumentLanguage =
@@ -120,10 +152,14 @@ export type PublicDocumentLanguage =
   | 'de'
   | 'es'
   | 'fr'
-  | 'pt';
+  | 'pt'
+  | 'zh-Hans'
+  | 'ms'
+  | 'ru'
+  | 'tr';
 
 const DEFAULT_SITE_URL = 'https://tseng-law.com';
-const PUBLIC_LOCALE_PATH_RE = /^\/(ko|zh-hant|en|ja|vi|id|th|fil|ar|de|es|fr|pt)(?=\/|$)/i;
+const PUBLIC_LOCALE_PATH_RE = /^\/(ko|zh-hant|zh-hans|en|ja|vi|id|th|fil|ar|de|es|fr|pt|ms|ru|tr)(?=\/|$)/i;
 const PAGE_KEY_BY_ROUTE: Record<GuidanceCoreRouteKey, GuidancePageKey> = {
   '': 'home',
   services: 'services',
@@ -148,7 +184,17 @@ export function isGuidanceLocale4(value?: string | null): value is GuidanceLocal
     || value === 'es'
     || value === 'fr'
     || value === 'pt'
+    || value === 'zh-hans'
+    || value === 'ms'
+    || value === 'ru'
+    || value === 'tr'
   );
+}
+
+export function isGuidanceConsultationLanguageLocale(
+  value?: string | null,
+): value is GuidanceConsultationLanguageLocale {
+  return (GUIDANCE_CONSULTATION_LANGUAGE_LOCALES as readonly string[]).includes(value ?? '');
 }
 
 export function isPublicLocale8(value?: string | null): value is PublicLocale8 {
@@ -188,7 +234,9 @@ export function isExistingSiteLocale4(value?: string | null): value is ExistingS
 }
 
 export function publicDocumentLanguage(locale: RoutedPublicLocale): PublicDocumentLanguage {
-  return locale === 'zh-hant' ? 'zh-Hant' : locale;
+  if (locale === 'zh-hant') return 'zh-Hant';
+  if (locale === 'zh-hans') return 'zh-Hans';
+  return locale;
 }
 
 export function resolvePublicDocumentLanguage(pathname: string | null | undefined): PublicDocumentLanguage {
@@ -442,7 +490,9 @@ export function resolvePublicLanguageSwitchTarget(
 }
 
 export function hreflangTagForPublicLocale(locale: PublicLocale8): string {
-  return locale === 'zh-hant' ? 'zh-Hant' : locale;
+  if (locale === 'zh-hant') return 'zh-Hant';
+  if (locale === 'zh-hans') return 'zh-Hans';
+  return locale;
 }
 
 export function buildGuidanceCoreLanguageAlternates(

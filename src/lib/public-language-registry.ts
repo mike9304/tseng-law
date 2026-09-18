@@ -99,6 +99,30 @@ export const PUBLIC_LANGUAGE_REGISTRY: readonly PublicLanguageEntry[] = [
     englishName: 'Portuguese',
     region: 'europe',
   },
+  {
+    locale: 'zh-hans',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS['zh-hans'],
+    englishName: 'Simplified Chinese',
+    region: 'asia-pacific',
+  },
+  {
+    locale: 'ms',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.ms,
+    englishName: 'Malay',
+    region: 'asia-pacific',
+  },
+  {
+    locale: 'ru',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.ru,
+    englishName: 'Russian',
+    region: 'europe',
+  },
+  {
+    locale: 'tr',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.tr,
+    englishName: 'Turkish',
+    region: 'europe',
+  },
 ];
 
 export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion, string>> = {
@@ -193,6 +217,34 @@ export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion
     europe: 'Europa',
     americas: 'Américas',
   },
+  'zh-hans': {
+    global: '全球',
+    'asia-pacific': '亚太地区',
+    'middle-east': '中东',
+    europe: '欧洲',
+    americas: '美洲',
+  },
+  ms: {
+    global: 'Global',
+    'asia-pacific': 'Asia Pasifik',
+    'middle-east': 'Timur Tengah',
+    europe: 'Eropah',
+    americas: 'Amerika',
+  },
+  ru: {
+    global: 'Глобально',
+    'asia-pacific': 'Азиатско-Тихоокеанский регион',
+    'middle-east': 'Ближний Восток',
+    europe: 'Европа',
+    americas: 'Америка',
+  },
+  tr: {
+    global: 'Küresel',
+    'asia-pacific': 'Asya-Pasifik',
+    'middle-east': 'Ortadoğu',
+    europe: 'Avrupa',
+    americas: 'Amerika',
+  },
 };
 
 export const LANGUAGE_PICKER_COPY: Record<
@@ -276,6 +328,30 @@ export const LANGUAGE_PICKER_COPY: Record<
     title: 'Escolha a sua região e a sua língua',
     close: 'Fechar',
     current: 'Língua atual',
+  },
+  'zh-hans': {
+    open: '选择地区与语言',
+    title: '请选择您的地区与语言',
+    close: '关闭',
+    current: '目前语言',
+  },
+  ms: {
+    open: 'Pilih wilayah dan bahasa',
+    title: 'Sila pilih wilayah dan bahasa anda',
+    close: 'Tutup',
+    current: 'Bahasa semasa',
+  },
+  ru: {
+    open: 'Выбрать регион и язык',
+    title: 'Выберите регион и язык',
+    close: 'Закрыть',
+    current: 'Текущий язык',
+  },
+  tr: {
+    open: 'Bölge ve dil seçin',
+    title: 'Lütfen bölgenizi ve dilinizi seçin',
+    close: 'Kapat',
+    current: 'Geçerli dil',
   },
 };
 

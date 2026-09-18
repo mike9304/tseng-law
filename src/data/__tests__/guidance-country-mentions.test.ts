@@ -58,10 +58,14 @@ describe('guidance data country-name gate', () => {
     // locales, in the same order: a missing or reordered block would mean a
     // locale whose copy the country gate never reads.
     for (const entry of result.scannedFiles) {
-      const cycle = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt'] as const;
+      const cycle = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr'] as const;
       expect(entry.locales.length, `${entry.file} locale blocks`).toBeGreaterThan(0);
       if (entry.file.endsWith('international-guidance-western.ts')) {
-        expect(entry.locales, `${entry.file} locale blocks`).toEqual(['de', 'es', 'fr', 'pt']);
+        expect(entry.locales, `${entry.file} locale blocks`).toEqual(['de', 'es', 'fr', 'pt', 'ru', 'tr']);
+        continue;
+      }
+      if (entry.file.endsWith('international-guidance-asia.ts')) {
+        expect(entry.locales, `${entry.file} locale blocks`).toEqual(['zh-hans', 'ms']);
         continue;
       }
       expect(entry.locales.length % cycle.length, `${entry.file} partial locale record`).toBe(0);

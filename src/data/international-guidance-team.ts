@@ -376,6 +376,118 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'huang-shengping': 'Contabilista associado (Partner CPA)',
     },
   },
+  'zh-hans': {
+    label: 'OUR TEAM',
+    title: 'Hovering 国际团队',
+    description:
+      'Hovering 律师、运营主管与合作会计师的简介。',
+    representativeTitle: '主持律师',
+    teamTitle: '律师与同事',
+    partnerTitle: '合作会计师',
+    introLabel: '简介',
+    educationLabel: '学历',
+    experienceLabel: '经历',
+    photoAltPrefix: '照片',
+    workingLanguagesLabel: '工作语言',
+    fullProfileLabel: '完整简介 (English)',
+    keyFactsHeading: '律师曾雋崴 — 要点',
+    qualificationLabel: '资格与事务所',
+    qualificationSentence:
+      '{name} 具有台湾执业资格，为 {firm} 的主持律师。',
+    practiceLabel: '主要领域',
+    consultationLanguagesLabel: '咨询语言',
+    roles: {
+      'tseng-junwei': '台湾主持律师 (Managing Attorney)',
+      'chang-rongxuan': '台湾律师 (Taiwan Attorney)',
+      'chang-fangyu': '律师助理',
+      'son-jungmin': '韩国运营主管 (Korea Operations Manager)',
+      'huang-shengping': '合作会计师 (Partner CPA)',
+    },
+  },
+  ms: {
+    label: 'OUR TEAM',
+    title: 'Pasukan antarabangsa Hovering',
+    description:
+      'Profil peguam, pengurusan operasi dan perakaunan rakan kongsi Hovering.',
+    representativeTitle: 'Peguam pengarah',
+    teamTitle: 'Peguam dan rakan sekerja',
+    partnerTitle: 'Perakaunan rakan kongsi',
+    introLabel: 'Pengenalan',
+    educationLabel: 'Pendidikan',
+    experienceLabel: 'Pengalaman',
+    photoAltPrefix: 'Foto',
+    workingLanguagesLabel: 'Bahasa kerja',
+    fullProfileLabel: 'Profil penuh (English)',
+    keyFactsHeading: 'Peguam Wei Tseng — Petunjuk utama',
+    qualificationLabel: 'Kelayakan dan firma',
+    qualificationSentence:
+      '{name} ialah peguam yang layak beramal di Taiwan dan peguam pengarah {firm}.',
+    practiceLabel: 'Bidang utama',
+    consultationLanguagesLabel: 'Bahasa perundingan',
+    roles: {
+      'tseng-junwei': 'Peguam pengarah di Taiwan (Managing Attorney)',
+      'chang-rongxuan': 'Peguam di Taiwan (Taiwan Attorney)',
+      'chang-fangyu': 'Paralegal',
+      'son-jungmin': 'Pengurusan operasi Korea (Korea Operations Manager)',
+      'huang-shengping': 'Perakaunan rakan kongsi (Partner CPA)',
+    },
+  },
+  ru: {
+    label: 'OUR TEAM',
+    title: 'Международная команда Hovering',
+    description:
+      'Профили адвокатов, руководства по операциям и партнёрской бухгалтерии Hovering.',
+    representativeTitle: 'Руководящий адвокат',
+    teamTitle: 'Адвокаты и сотрудники',
+    partnerTitle: 'Партнёрская бухгалтерия',
+    introLabel: 'Представление',
+    educationLabel: 'Образование',
+    experienceLabel: 'Опыт',
+    photoAltPrefix: 'Фото',
+    workingLanguagesLabel: 'Рабочие языки',
+    fullProfileLabel: 'Полный профиль (English)',
+    keyFactsHeading: 'Адвокат Вэй Цзэн — Основные сведения',
+    qualificationLabel: 'Квалификация и фирма',
+    qualificationSentence:
+      '{name} уполномочена практиковать на Тайване и является руководящим адвокатом {firm}.',
+    practiceLabel: 'Основные направления',
+    consultationLanguagesLabel: 'Языки консультации',
+    roles: {
+      'tseng-junwei': 'Руководящий адвокат на Тайване (Managing Attorney)',
+      'chang-rongxuan': 'Адвокат на Тайване (Taiwan Attorney)',
+      'chang-fangyu': 'Помощник адвоката',
+      'son-jungmin': 'Руководство операциями Кореи (Korea Operations Manager)',
+      'huang-shengping': 'Партнёр-бухгалтер (Partner CPA)',
+    },
+  },
+  tr: {
+    label: 'OUR TEAM',
+    title: 'Hovering uluslararası ekibi',
+    description:
+      'Hovering avukatlarının, operasyon yönetiminin ve ortak muhasebenin profilleri.',
+    representativeTitle: 'Yönetici avukat',
+    teamTitle: 'Avukatlar ve çalışanlar',
+    partnerTitle: 'Ortak muhasebe',
+    introLabel: 'Tanıtım',
+    educationLabel: 'Eğitim',
+    experienceLabel: 'Deneyim',
+    photoAltPrefix: 'Fotoğraf',
+    workingLanguagesLabel: 'Çalışma dilleri',
+    fullProfileLabel: 'Tam profil (English)',
+    keyFactsHeading: 'Avukat Wei Tseng — Temel bilgiler',
+    qualificationLabel: 'Yetki ve büro',
+    qualificationSentence:
+      '{name}, Tayvan’da meslek yürütmeye yetkilidir ve {firm} yönetici avukatıdır.',
+    practiceLabel: 'Başlıca alanlar',
+    consultationLanguagesLabel: 'Görüşme dilleri',
+    roles: {
+      'tseng-junwei': 'Tayvan’da yönetici avukat (Managing Attorney)',
+      'chang-rongxuan': 'Tayvan avukatı (Taiwan Attorney)',
+      'chang-fangyu': 'Paralegal',
+      'son-jungmin': 'Kore operasyon yönetimi (Korea Operations Manager)',
+      'huang-shengping': 'Ortak muhasebeci (Partner CPA)',
+    },
+  },
 };
 
 /**
@@ -397,6 +509,10 @@ export const guidanceLanguageNames: Record<GuidanceLocale, Record<string, string
   es: { Korean: 'coreano', Chinese: 'chino', Japanese: 'japonés' },
   fr: { Korean: 'coréen', Chinese: 'chinois', Japanese: 'japonais' },
   pt: { Korean: 'coreano', Chinese: 'chinês', Japanese: 'japonês' },
+  'zh-hans': { Korean: '韩语', Chinese: '中文', Japanese: '日语' },
+  ms: { Korean: 'bahasa Korea', Chinese: 'bahasa Cina', Japanese: 'bahasa Jepun' },
+  ru: { Korean: 'корейский', Chinese: 'китайский', Japanese: 'японский' },
+  tr: { Korean: 'Korece', Chinese: 'Çince', Japanese: 'Japonca' },
 };
 
 /**
@@ -490,6 +606,38 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Trademark and patent filings': 'Apresentação de marcas e patentes',
     'Visa and residency': 'Visto e residência',
     'Family and labor disputes': 'Conflitos de família e laborais',
+  },
+  'zh-hans': {
+    'Taiwan company setup': '在台湾设立公司',
+    'Taiwan investment counsel': '台湾投资法律咨询',
+    'Civil litigation and damages': '民事诉讼与损害赔偿',
+    'Trademark and patent filings': '商标与专利申请',
+    'Visa and residency': '签证与居留',
+    'Family and labor disputes': '家事与劳动争议',
+  },
+  ms: {
+    'Taiwan company setup': 'Penubuhan syarikat di Taiwan',
+    'Taiwan investment counsel': 'Nasihat undang-undang pelaburan di Taiwan',
+    'Civil litigation and damages': 'Litigasi sivil dan ganti rugi',
+    'Trademark and patent filings': 'Pemfailan cap dagangan dan paten',
+    'Visa and residency': 'Visa dan residensi',
+    'Family and labor disputes': 'Pertikaian keluarga dan buruh',
+  },
+  ru: {
+    'Taiwan company setup': 'Учреждение компании на Тайване',
+    'Taiwan investment counsel': 'Правовая консультация по инвестициям на Тайване',
+    'Civil litigation and damages': 'Гражданские дела и возмещение вреда',
+    'Trademark and patent filings': 'Подача заявок на товарные знаки и патенты',
+    'Visa and residency': 'Виза и пребывание',
+    'Family and labor disputes': 'Семейные и трудовые споры',
+  },
+  tr: {
+    'Taiwan company setup': "Tayvan'da şirket kuruluşu",
+    'Taiwan investment counsel': 'Tayvan yatırımı için hukuki danışmanlık',
+    'Civil litigation and damages': 'Hukuk davaları ve tazminat',
+    'Trademark and patent filings': 'Marka ve patent başvuruları',
+    'Visa and residency': 'Vize ve oturma',
+    'Family and labor disputes': 'Aile ve iş uyuşmazlıkları',
   },
 };
 
@@ -1077,6 +1225,242 @@ export const guidanceTeamBios: Record<
       education: [
         'Mestrado (M.A.) em Contabilidade, National Chengchi University',
         'Licenciatura (B.A.) em Contabilidade, National Chengchi University',
+      ],
+      experience: ['Chinshin CPA Firm'],
+    },
+  },
+  'zh-hans': {
+    'tseng-junwei': {
+      intro: [
+        '事务所在台湾以英语、日语、韩语和中文处理企业与个人事项。',
+        '曾代理一名韩国学生因健身房受伤提出的损害赔偿，并取得新台币 157 万元的一审判决。',
+      ],
+      education: [
+        '硕士（M.S.），Institute of Finance, National Taiwan University',
+        '学士（B.A.），政治大学法律与金融双主修',
+        '神户大学与早稻田大学交换学生',
+      ],
+      experience: [
+        'Trend Law Office',
+        'Hovering International Law Firm',
+        'Legal Aid Foundation, Taichung Branch',
+      ],
+    },
+    'chang-rongxuan': {
+      intro: [
+        '此前任职于教育部法制单位，侧重行政与民事事项。',
+        '具有高校、教师权利与行政救济方面的经验。',
+      ],
+      education: ['法学学士（LL.B.），National Chung Hsing University'],
+      experience: [
+        'Ministry of Education, Legal Affairs Division',
+        '律师，Hovering International Law Firm',
+      ],
+    },
+    'chang-fangyu': {
+      intro: [
+        '律师助理，多年在多家事务所担任资深律师助理，负责诉讼支持、公司法与外资。',
+        '协助程序、公司设立、外资核准、证照申请以及韩国与台湾之间的往来。',
+      ],
+      education: ['法学学士（LL.B.），Tunghai University'],
+      experience: [
+        'Senior Paralegal, Boyin Law Firm',
+        'Senior Paralegal, Muyang International Law Firm',
+      ],
+    },
+    'son-jungmin': {
+      intro: [
+        '协调韩国委托人的咨询行程与沟通。',
+        '以信息科学为背景，通过文件系统与工作流程支持部门之间的往来。',
+      ],
+      education: ['学士（B.S.）信息科学，National Cheng Kung University'],
+      experience: ['韩国运营部门，Hovering International Law Firm'],
+    },
+    'huang-shengping': {
+      intro: [
+        '完成政治大学会计学学士与硕士课程，目前主持一家会计师事务所。',
+        '协助企业客户进行法律、税务与财务风险的综合分析。',
+      ],
+      education: [
+        '硕士（M.A.）会计，National Chengchi University',
+        '学士（B.A.）会计，National Chengchi University',
+      ],
+      experience: ['Chinshin CPA Firm'],
+    },
+  },
+  ms: {
+    'tseng-junwei': {
+      intro: [
+        'Firma mengendalikan hal syarikat dan individu di Taiwan dalam bahasa Inggeris, Jepun, Korea dan Cina.',
+        'Mewakili seorang pelajar Korea dalam tuntutan ganti rugi kerana kecederaan di gimnasium dan memperoleh penghakiman peringkat pertama sebanyak TWD 1.57M.',
+      ],
+      education: [
+        'Sarjana (M.S.), Institute of Finance, National Taiwan University',
+        'Ijazah (B.A.) dengan pengajian berganda undang-undang dan kewangan, National Chengchi University',
+        'Pelajar pertukaran di Kobe University dan Waseda University',
+      ],
+      experience: [
+        'Trend Law Office',
+        'Hovering International Law Firm',
+        'Legal Aid Foundation, Taichung Branch',
+      ],
+    },
+    'chang-rongxuan': {
+      intro: [
+        'Sebelum ini di Ministry of Education, Legal Affairs Division, dengan tumpuan pada hal pentadbiran dan sivil.',
+        'Pengalaman dalam hal universiti, hak tenaga pengajar dan rayuan pentadbiran.',
+      ],
+      education: ['Ijazah Undang-undang (LL.B.), National Chung Hsing University'],
+      experience: [
+        'Ministry of Education, Legal Affairs Division',
+        'Peguam, Hovering International Law Firm',
+      ],
+    },
+    'chang-fangyu': {
+      intro: [
+        'Paralegal dengan bertahun-tahun sebagai paralegal kanan di beberapa firma, bertanggungjawab atas sokongan prosedur, undang-undang syarikat dan pelaburan asing.',
+        'Sokongan bagi prosedur, penubuhan syarikat, kelulusan pelaburan asing, permohonan lesen dan pertukaran antara Korea dan Taiwan.',
+      ],
+      education: ['Ijazah Undang-undang (LL.B.), Tunghai University'],
+      experience: [
+        'Senior Paralegal, Boyin Law Firm',
+        'Senior Paralegal, Muyang International Law Firm',
+      ],
+    },
+    'son-jungmin': {
+      intro: [
+        'Menyelaras janji temu perundingan dan komunikasi untuk klien dari Korea.',
+        'Menyokong pertukaran antara pasukan melalui sistem dokumen dan aliran kerja, berasaskan sains komputer.',
+      ],
+      education: ['Ijazah (B.S.) sains komputer, National Cheng Kung University'],
+      experience: ['Bahagian operasi Korea, Hovering International Law Firm'],
+    },
+    'huang-shengping': {
+      intro: [
+        'Telah menamatkan program ijazah dan sarjana perakaunan di National Chengchi University dan kini mengetuai sebuah firma perakaunan.',
+        'Menyokong analisis bersepadu risiko undang-undang, cukai dan kewangan untuk klien syarikat.',
+      ],
+      education: [
+        'Sarjana (M.A.) perakaunan, National Chengchi University',
+        'Ijazah (B.A.) perakaunan, National Chengchi University',
+      ],
+      experience: ['Chinshin CPA Firm'],
+    },
+  },
+  ru: {
+    'tseng-junwei': {
+      intro: [
+        'Фирма ведёт дела компаний и частных лиц на Тайване на английском, японском, корейском и китайском языках.',
+        'Она представляла корейского студента в требовании о возмещении вреда из-за травмы в спортивном зале и добилась решения первой инстанции на TWD 1.57M.',
+      ],
+      education: [
+        'Магистр (M.S.), Institute of Finance, National Taiwan University',
+        'Бакалавр (B.A.) с двойным обучением по праву и финансам, National Chengchi University',
+        'Студентка по обмену в Kobe University и Waseda University',
+      ],
+      experience: [
+        'Trend Law Office',
+        'Hovering International Law Firm',
+        'Legal Aid Foundation, Taichung Branch',
+      ],
+    },
+    'chang-rongxuan': {
+      intro: [
+        'Ранее в Ministry of Education, Legal Affairs Division, с упором на административные и гражданские дела.',
+        'Опыт в делах вузов, правах преподавателей и административных жалобах.',
+      ],
+      education: ['Бакалавр права (LL.B.), National Chung Hsing University'],
+      experience: [
+        'Ministry of Education, Legal Affairs Division',
+        'Адвокат, Hovering International Law Firm',
+      ],
+    },
+    'chang-fangyu': {
+      intro: [
+        'Помощник адвоката с многолетней работой старшим помощником в нескольких фирмах, отвечает за процессуальную поддержку, корпоративное право и иностранные инвестиции.',
+        'Поддержка процедур, учреждения компаний, разрешений на иностранные инвестиции, заявок на лицензии и обмена между Кореей и Тайванем.',
+      ],
+      education: ['Бакалавр права (LL.B.), Tunghai University'],
+      experience: [
+        'Senior Paralegal, Boyin Law Firm',
+        'Senior Paralegal, Muyang International Law Firm',
+      ],
+    },
+    'son-jungmin': {
+      intro: [
+        'Координирует записи на консультацию и общение для доверителей из Кореи.',
+        'Поддерживает обмен между подразделениями через системы документов и рабочие процессы, на основе информатики.',
+      ],
+      education: ['Бакалавр (B.S.) информатики, National Cheng Kung University'],
+      experience: ['Направление операций Кореи, Hovering International Law Firm'],
+    },
+    'huang-shengping': {
+      intro: [
+        'Завершил программы бакалавриата и магистратуры по бухгалтерскому учёту в National Chengchi University и в настоящее время руководит бухгалтерской фирмой.',
+        'Поддерживает комплексный анализ правовых, налоговых и финансовых рисков для корпоративных клиентов.',
+      ],
+      education: [
+        'Магистр (M.A.) бухгалтерского учёта, National Chengchi University',
+        'Бакалавр (B.A.) бухгалтерского учёта, National Chengchi University',
+      ],
+      experience: ['Chinshin CPA Firm'],
+    },
+  },
+  tr: {
+    'tseng-junwei': {
+      intro: [
+        'Büro, Tayvan’da şirket ve kişi işlerini İngilizce, Japonca, Korece ve Çince yürütür.',
+        'Spor salonunda yaralanma nedeniyle bir Koreli öğrenciyi tazminat isteminde temsil etti ve TWD 1.57M tutarında ilk derece kararı aldı.',
+      ],
+      education: [
+        'Yüksek lisans (M.S.), Institute of Finance, National Taiwan University',
+        'Lisans (B.A.), National Chengchi University’de hukuk ve finans çift programı',
+        'Kobe University ve Waseda University’de değişim öğrencisi',
+      ],
+      experience: [
+        'Trend Law Office',
+        'Hovering International Law Firm',
+        'Legal Aid Foundation, Taichung Branch',
+      ],
+    },
+    'chang-rongxuan': {
+      intro: [
+        'Daha önce Ministry of Education, Legal Affairs Division’da, idare ve hukuk işlerine odaklanarak çalıştı.',
+        'Üniversiteler, öğretim elemanı hakları ve idari başvurular konusunda deneyimi vardır.',
+      ],
+      education: ['Hukuk lisansı (LL.B.), National Chung Hsing University'],
+      experience: [
+        'Ministry of Education, Legal Affairs Division',
+        'Avukat, Hovering International Law Firm',
+      ],
+    },
+    'chang-fangyu': {
+      intro: [
+        'Birden fazla büroda kıdemli paralegal olarak uzun yıllar çalışmış, usul desteği, şirket hukuku ve yabancı yatırımından sorumlu paralegal.',
+        'Usullere, şirket kuruluşuna, yabancı yatırım onaylarına, ruhsat başvurularına ve Kore ile Tayvan arasındaki alışverişe destek verir.',
+      ],
+      education: ['Hukuk lisansı (LL.B.), Tunghai University'],
+      experience: [
+        'Senior Paralegal, Boyin Law Firm',
+        'Senior Paralegal, Muyang International Law Firm',
+      ],
+    },
+    'son-jungmin': {
+      intro: [
+        'Kore’den gelen müvekkiller için görüşme randevularını ve iletişimi koordine eder.',
+        'Bilgisayar bilimine dayalı olarak, belge sistemleri ve iş akışları üzerinden ekipler arası alışverişi destekler.',
+      ],
+      education: ['Lisans (B.S.) bilgisayar bilimi, National Cheng Kung University'],
+      experience: ['Kore operasyonları alanı, Hovering International Law Firm'],
+    },
+    'huang-shengping': {
+      intro: [
+        'National Chengchi University’de muhasebe lisans ve yüksek lisans programlarını tamamladı ve şu anda bir muhasebe bürosu yönetmektedir.',
+        'Kurumsal müvekkiller için hukuki, vergi ve mali risklerin bütünleşik analizini destekler.',
+      ],
+      education: [
+        'Yüksek lisans (M.A.) muhasebe, National Chengchi University',
+        'Lisans (B.A.) muhasebe, National Chengchi University',
       ],
       experience: ['Chinshin CPA Firm'],
     },

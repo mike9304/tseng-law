@@ -27,6 +27,10 @@ const GUIDANCE_LOCALES = [
   'es',
   'fr',
   'pt',
+  'zh-hans',
+  'ms',
+  'ru',
+  'tr',
 ] as const satisfies readonly GuidanceLocale[];
 
 /**
@@ -56,6 +60,8 @@ const MIN_WORDS = 40;
 const MAX_WORDS = 80;
 const MIN_THAI_CHARS = 120;
 const MAX_THAI_CHARS = 400;
+const MIN_ZH_HANS_CHARS = 70;
+const MAX_ZH_HANS_CHARS = 400;
 
 /**
  * The four consultation languages, written the way each guidance language
@@ -71,6 +77,10 @@ const CONSULTATION_LANGUAGE_TERMS: Record<string, readonly string[]> = {
   es: ['inglés', 'chino', 'japonés', 'coreano'],
   fr: ['anglais', 'chinois', 'japonais', 'coréen'],
   pt: ['inglês', 'chinês', 'japonês', 'coreano'],
+  'zh-hans': ['英语', '中文', '日语', '韩语'],
+  ms: ['Inggeris', 'Cina', 'Jepun', 'Korea'],
+  ru: ['английском', 'китайском', 'японском', 'корейском'],
+  tr: ['İngilizce', 'Çince', 'Japonca', 'Korece'],
 };
 
 /**
@@ -102,6 +112,15 @@ const GUIDANCE_LANGUAGE_TOKENS: ReadonlyArray<readonly [string, RegExp]> = [
   ['Portuguese', /\bPortuguese\b/i],
   ['Português', /\bPortuguês\b/],
   ['português', /\bportuguês\b/],
+  ['Simplified Chinese', /Simplified Chinese/i],
+  ['简体中文', /简体中文/],
+  ['Malay', /\bMalay\b/i],
+  ['Bahasa Melayu', /Bahasa Melayu/i],
+  ['Russian', /\bRussian\b/i],
+  ['Русский', /Русский/],
+  ['русском', /русском/],
+  ['Turkish', /\bTurkish\b/i],
+  ['Türkçe', /Türkçe/],
 ];
 
 /**
@@ -140,6 +159,10 @@ const FORBIDDEN_COMBINATIONS: ReadonlyArray<readonly [string, RegExp, RegExp]> =
   ['French + consultation', /\bFrench\b/i, /\bconsultation\b/i],
   ['português + consulta', /\bportuguês\b/i, /consulta/i],
   ['Portuguese + consultation', /\bPortuguese\b/i, /\bconsultation\b/i],
+  ['Bahasa Melayu + perundingan', /Bahasa Melayu/i, /perundingan/i],
+  ['русском + консультац', /русском/, /консультац/],
+  ['Türkçe + danışma', /Türkçe/, /danışma|görüşme/],
+  ['简体中文 + 咨询', /简体中文/, /咨询/],
 ];
 
 /**
@@ -161,6 +184,10 @@ const SERVICES_SCOPE_TERMS: Record<string, readonly [string, RegExp]> = {
   es: ['alcance', /alcance/i],
   fr: ['étendue', /étendue/i],
   pt: ['âmbito', /âmbito/i],
+  'zh-hans': ['另行确认', /另行确认/],
+  ms: ['skop', /skop/i],
+  ru: ['Объём', /Объём/],
+  tr: ['kapsamı', /kapsamı/],
 };
 
 const SERVICES_ACCEPTANCE_PATTERNS: Record<
@@ -203,6 +230,22 @@ const SERVICES_ACCEPTANCE_PATTERNS: Record<
     ['se um assunto se aceita', /se um assunto se aceita/i],
     ['decide-se depois de rever', /decide-se depois de rever/i],
   ],
+  'zh-hans': [
+    ['不是法律意见', /不是法律意见/],
+    ['不是已确认的预约', /不是已确认的预约/],
+  ],
+  ms: [
+    ['bukan nasihat undang-undang', /bukan nasihat undang-undang/i],
+    ['bukan janji temu', /bukan janji temu/i],
+  ],
+  ru: [
+    ['не юридическая консультация', /не юридическая консультация/],
+    ['не подтверждённая запись', /не подтверждённая запись/],
+  ],
+  tr: [
+    ['hukuki görüş değildir', /hukuki görüş değildir/i],
+    ['doğrulanmış randevu değildir', /doğrulanmış randevu değildir/i],
+  ],
 };
 
 /** Every site-internal path an answer may cite. */
@@ -218,7 +261,7 @@ const ALLOWED_SOURCES = new Set<string>([
  * as a single sentence — a stricter check than splitting would give.
  */
 function sentencesOf(locale: string, text: string): string[] {
-  if (locale === 'th') return [text];
+  if (locale === 'th' || locale === 'zh-hans') return [text];
   return text.split(/(?<=[.!?])\s+/).filter((part) => part.trim().length > 0);
 }
 
@@ -235,8 +278,8 @@ const entries = GUIDANCE_LOCALES.flatMap((locale) =>
 );
 
 describe('guidanceAnswers', () => {
-  it('covers 9 locales x 6 page keys', () => {
-    expect(GUIDANCE_LOCALES).toHaveLength(9);
+  it('covers 13 locales x 6 page keys', () => {
+    expect(GUIDANCE_LOCALES).toHaveLength(13);
     expect(ANSWER_PAGE_KEYS).toHaveLength(6);
     expect(Object.keys(guidanceAnswers).sort()).toEqual([...GUIDANCE_LOCALES].sort());
 
@@ -268,6 +311,10 @@ describe('guidanceAnswers', () => {
         const chars = [...answer].length;
         expect(chars, `${locale}/${key} chars=${chars}`).toBeGreaterThanOrEqual(MIN_THAI_CHARS);
         expect(chars, `${locale}/${key} chars=${chars}`).toBeLessThanOrEqual(MAX_THAI_CHARS);
+      } else if (locale === 'zh-hans') {
+        const chars = [...answer].length;
+        expect(chars, `${locale}/${key} chars=${chars}`).toBeGreaterThanOrEqual(MIN_ZH_HANS_CHARS);
+        expect(chars, `${locale}/${key} chars=${chars}`).toBeLessThanOrEqual(MAX_ZH_HANS_CHARS);
       } else {
         const words = wordCount(answer);
         expect(words, `${locale}/${key} words=${words}`).toBeGreaterThanOrEqual(MIN_WORDS);

@@ -20,6 +20,10 @@ const PENDING_CONFIRMATION: Record<(typeof GUIDANCE_LOCALES_4)[number], RegExp> 
   es: /pendiente de confirmación|aún no confirmad/,
   fr: /en attente de confirmation|pas encore confirmé par le cabinet/,
   pt: /pendente de confirmação|ainda não confirmad/,
+  'zh-hans': /待事务所确认|尚待办公室确认|细节仍待确认/,
+  ms: /menunggu pengesahan pejabat|butiran itu belum disahkan oleh pejabat/,
+  ru: /ожидает подтверждения бюро|ещё не подтверждено бюро/,
+  tr: /büro onayı bekleniyor|büro henüz doğrulamamış/,
 };
 
 const GENERIC_PENDING = /pending confirmation|operator confirmation|confirmed by the operator/i;

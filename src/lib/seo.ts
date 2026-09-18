@@ -149,6 +149,10 @@ const guidanceOpenGraphLocale: Record<string, string> = {
   es: 'es_ES',
   fr: 'fr_FR',
   pt: 'pt_PT',
+  'zh-hans': 'zh_SG',
+  ms: 'ms_MY',
+  ru: 'ru_RU',
+  tr: 'tr_TR',
   // Arabic has no single-country default on the site; `ar_AR` is the
   // Open Graph locale for the language itself.
   ar: 'ar_AR',

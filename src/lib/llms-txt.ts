@@ -350,6 +350,10 @@ const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
   es: 'Spanish',
   fr: 'French',
   pt: 'Portuguese',
+  'zh-hans': 'Simplified Chinese',
+  ms: 'Malay',
+  ru: 'Russian',
+  tr: 'Turkish',
 };
 
 export function buildRootLlmsTxt(): string {
@@ -580,6 +584,38 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
       'O ficheiro llms.txt é apenas um mapa para localizar páginas públicas; não promete posição em motores de busca, apoio, recomendação por inteligência artificial nem visibilidade.',
     confidentialNotice:
       'Como o texto original se guarda, não escreva nesta primeira fase dados que ainda não fazem falta, como o número de passaporte, o número de identidade ou dados de uma conta bancária.',
+  },
+  'zh-hans': {
+    consultationNotice:
+      '律师咨询以英语、中文、日语和韩语进行。本页面以简体中文撰写，咨询时使用的中文包括普通话与书面中文。',
+    discoveryNotice:
+      '本 llms.txt 文件只是公开页面的检索地图；它不承诺搜索排名、背书、人工智能推荐或展示。',
+    confidentialNotice:
+      '因为原文会被保存，初期请不要写下尚不需要的内容，例如护照号码、身份证号或账户资料。',
+  },
+  ms: {
+    consultationNotice:
+      'Maklumat ini ditulis dalam bahasa Melayu, tetapi perundingan dengan peguam hanya dijalankan dalam bahasa Inggeris, Cina (中文), Jepun dan Korea.',
+    discoveryNotice:
+      'Fail llms.txt ini hanyalah peta untuk mencari halaman awam; ia tidak menjanjikan kedudukan carian, sokongan, cadangan AI atau paparan.',
+    confidentialNotice:
+      'Kerana teks asal disimpan, pada peringkat awal jangan tulis apa yang belum diperlukan, misalnya nombor pasport, nombor pengenalan atau data akaun.',
+  },
+  ru: {
+    consultationNotice:
+      'Эти сведения написаны на русском языке, но консультация с адвокатом проводится только на английском, китайском (中文), японском и корейском языках.',
+    discoveryNotice:
+      'Файл llms.txt — лишь карта для поиска открытых страниц; он не обещает места в поиске, поддержки, рекомендации искусственного интеллекта или показа.',
+    confidentialNotice:
+      'Поскольку исходный текст сохраняется, на первом этапе не пишите то, что ещё не нужно: номер паспорта, номер удостоверения или данные счёта.',
+  },
+  tr: {
+    consultationNotice:
+      'Bu bilgiler Türkçe yazılmıştır; ancak avukatla görüşme yalnızca İngilizce, Çince (中文), Japonca ve Korece yapılır.',
+    discoveryNotice:
+      'llms.txt dosyası yalnızca kamuya açık sayfaları bulmak için bir haritadır; arama sırası, destek, yapay zekâ önerisi veya görünürlük vaat etmez.',
+    confidentialNotice:
+      'Özgün metin saklandığı için ilk aşamada henüz gerekmeyen şeyleri yazmayın; örneğin pasaport numarası, kimlik numarası veya hesap bilgileri.',
   },
 };
 

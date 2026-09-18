@@ -29,7 +29,7 @@ describe('public module locale family switching', () => {
     navigationState.pathname = '/ko/services';
   });
 
-  it('keeps the thirteen autonym order without country codes', () => {
+  it('keeps the seventeen autonym order without country codes', () => {
     expect(LOCALE_FLAG_OPTIONS.map((option) => option.locale)).toEqual([
       'ko',
       'zh-hant',
@@ -44,6 +44,10 @@ describe('public module locale family switching', () => {
       'es',
       'fr',
       'pt',
+      'zh-hans',
+      'ms',
+      'ru',
+      'tr',
     ]);
     expect(LOCALE_FLAG_OPTIONS.map((option) => option.label)).toEqual([
       PUBLIC_LANGUAGE_AUTONYMS.ko,
@@ -59,6 +63,10 @@ describe('public module locale family switching', () => {
       PUBLIC_LANGUAGE_AUTONYMS.es,
       PUBLIC_LANGUAGE_AUTONYMS.fr,
       PUBLIC_LANGUAGE_AUTONYMS.pt,
+      PUBLIC_LANGUAGE_AUTONYMS['zh-hans'],
+      PUBLIC_LANGUAGE_AUTONYMS.ms,
+      PUBLIC_LANGUAGE_AUTONYMS.ru,
+      PUBLIC_LANGUAGE_AUTONYMS.tr,
     ]);
   });
 

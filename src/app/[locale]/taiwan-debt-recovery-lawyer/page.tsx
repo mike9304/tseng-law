@@ -8,7 +8,6 @@ import {
 } from '@/lib/consultation/public-contact';
 import { isSiteLocale, type SiteLocale } from '@/lib/locales';
 import { buildBreadcrumbJsonLd, buildFaqJsonLd, buildSeoMetadata } from '@/lib/seo';
-import { ML_INTERNATIONAL_REVIEW } from '@/data/multilingual-international-v2';
 import { DEBT_RECOVERY_SLUG, debtRecoveryByLocale } from './content';
 import styles from '../guides/taiwan-company-setup/guide.module.css';
 
@@ -71,11 +70,7 @@ export default async function TaiwanDebtRecoveryLawyerPage(props: {
       />
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
 
-      <section
-        className={styles.page}
-        data-en-international-review={ML_INTERNATIONAL_REVIEW.review_status}
-        data-ml-international-review={ML_INTERNATIONAL_REVIEW.review_status}
-      >
+      <section className={styles.page}>
         <div className={styles.hero}>
           <span className={styles.label}>{c.heroLabel}</span>
           <h1 className={styles.title}>{c.title}</h1>

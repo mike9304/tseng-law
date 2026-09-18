@@ -1,11 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import {
-  CORE_HOME_PATHS,
-  GUIDANCE_HOME_PATHS,
-  ML_INTERNATIONAL_REVIEW,
-} from '@/data/multilingual-international-v2';
+import { CORE_HOME_PATHS, GUIDANCE_HOME_PATHS } from '@/data/multilingual-international-v2';
 import { isGuidanceLocale4, type PublicLocale8 } from '@/lib/public-guidance';
 import { isSiteLocale } from '@/lib/locales';
 
@@ -22,7 +18,6 @@ export default function LocaleHomePathNav({
       <nav
         className={`en-home-paths locale-home-paths en-home-paths--${tone}`}
         aria-label={paths.ariaLabel}
-        data-ml-international-review={ML_INTERNATIONAL_REVIEW.review_status}
       >
         <Link
           href={paths.setup.href}
@@ -49,7 +44,6 @@ export default function LocaleHomePathNav({
     <nav
       className={`en-home-paths locale-home-paths en-home-paths--${tone}`}
       aria-label={paths.ariaLabel}
-      data-ml-international-review={ML_INTERNATIONAL_REVIEW.review_status}
     >
       <Link
         href={paths.companySetup.href}

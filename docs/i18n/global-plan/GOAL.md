@@ -12,12 +12,12 @@
 
 ## A. 진행 보드
 ### G1 지구본 언어 선택기 (테슬라 "Select Your Region" 패턴)
-- [ ] G1-1 WO-G1 Grok 구현: 헤더 지구본 버튼(전 로케일·데스크톱/모바일) → 전면 오버레이, 지역(아시아·태평양 / 중동 / 유럽 / 아메리카) 그룹, 언어 자국어 표기 + 지역명, 현재 언어 표시, Esc/포커스 트랩/aria-modal, 기존 `resolvePublicLanguageSwitchTarget` 폴백 재사용, 레지스트리 1곳(`PUBLIC_LANGUAGE_REGISTRY`)에 항목 추가만으로 새 언어 노출
-- [ ] G1-2 게이트(diff 범위·typecheck·vitest·build·렌더 11로케일·a11y) → 커밋
-- [ ] G1-3 독립 검토(Opus) → R1
+- [x] 2026-09-18 G1-1 WO-G1 Grok 구현 → 8c365373 (evidence/grok-G1.log): 헤더 지구본 버튼(전 로케일·데스크톱/모바일) → 전면 오버레이, 지역(아시아·태평양 / 중동 / 유럽 / 아메리카) 그룹, 언어 자국어 표기 + 지역명, 현재 언어 표시, Esc/포커스 트랩/aria-modal, 기존 `resolvePublicLanguageSwitchTarget` 폴백 재사용, 레지스트리 1곳(`PUBLIC_LANGUAGE_REGISTRY`)에 항목 추가만으로 새 언어 노출
+- [x] 2026-09-18 G1-2 게이트 + 브라우저 QA(Playwright chromium: en/ko/ar 1440·vi/ko 390) → R1(h1→h2, 드로어 지구본, 포커스 복귀) d7aa7622
+- [~] G1-3 독립 검토(Opus, 진행 중 15:5x) → FAIL 시 R2
 ### G2 언어 확장 (배치당 WO 1건, 안내 로케일 메커니즘, 기게재 안내 팩 번역만 — 새 법률 주장 0)
 우선순위(대만 로펌 시장 연관 + 테슬라 로케일 교집합): 배치1 **zh-hans(간체)·fr·pt** · 배치2 **ms·ru·tr** · 배치3 **it·nl·pl** · 배치4 **hi·sv·da·nb·fi** · 배치5 **cs·hu·ro·el·he(RTL)·uk**
-- [ ] G2-1 배치1 팩(WO-G2-1) → 게이트 → 검토 → 커밋
+- [~] G2-1 WO-G2-1 fr·pt Grok 진행 중(15:5x, evidence/grok-G2-1.log). zh-hans는 별도 WO(중국어 상담 가능 → 언어 FAQ 예외)
 - [ ] G2-2~5 후속 배치
 - [ ] G2-C 칼럼 17편 번역은 배치별 후속 WO(안내 팩 먼저, 칼럼은 별도)
 ### G3 릴리스
@@ -30,3 +30,4 @@
 
 ## C. 세션 로그
 - 2026-09-18 15:0x · Fable 5.1 · 워크트리 생성, GOAL·WO-G1 작성, Grok 발주.
+- 2026-09-18 15:5x · Fable 5.1 · G1 커밋 8c365373·R1 d7aa7622(브라우저 QA 통과). WO-G2-1(fr·pt) Grok 발주, G1 Opus 검토 병행.

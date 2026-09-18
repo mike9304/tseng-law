@@ -40,7 +40,9 @@ function renderDrawer(
 
 function expectGlobeLanguageTrigger(html: string, locale: SiteLocale): void {
   expect(html).toContain('aria-haspopup="dialog"');
-  expect(html).toContain(`aria-label="${LANGUAGE_PICKER_COPY[locale].open}"`);
+  expect(html).toContain(
+    `aria-label="${LANGUAGE_PICKER_COPY[locale].open}: ${PUBLIC_LANGUAGE_AUTONYMS[locale]}"`,
+  );
   expect(html).toContain(PUBLIC_LANGUAGE_AUTONYMS[locale]);
   expect(html).toContain('global-language-picker--mobile');
   expect(html).not.toContain('<details');

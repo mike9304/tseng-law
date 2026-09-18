@@ -1,6 +1,7 @@
 import { expect, test, type Page } from '@playwright/test';
-import { PUBLIC_LOCALES_8, type PublicLocale8 } from '@/lib/public-guidance';
+import { PUBLIC_LANGUAGE_AUTONYMS, PUBLIC_LOCALES_8, type PublicLocale8 } from '@/lib/public-guidance';
 import { LANGUAGE_PICKER_COPY } from '@/lib/public-language-registry';
+import { listColumnSlugsFromFs } from './column-corpus';
 
 const DESKTOP = { width: 1440, height: 1000 } as const;
 const MOBILE = { width: 390, height: 844 } as const;
@@ -26,7 +27,10 @@ async function openDesktopPicker(page: Page, locale: PublicLocale8) {
     .filter({ hasText: new RegExp('.') })
     .first();
   await expect(trigger).toBeVisible();
-  await expect(trigger).toHaveAttribute('aria-label', LANGUAGE_PICKER_COPY[locale].open);
+  await expect(trigger).toHaveAttribute(
+    'aria-label',
+    `${LANGUAGE_PICKER_COPY[locale].open}: ${PUBLIC_LANGUAGE_AUTONYMS[locale]}`,
+  );
   await trigger.click();
   return trigger;
 }
@@ -48,8 +52,8 @@ test.describe('global language picker public chrome', () => {
       const dialog = languageDialog(page);
       await expect(dialog).toBeVisible();
       await expect(dialog.locator('a[href]')).toHaveCount(PUBLIC_LOCALES_8.length);
-      await expect(dialog.locator('a[aria-current="true"]')).toHaveCount(1);
-      await expect(dialog.locator('a[aria-current="true"]')).toHaveAttribute(
+      await expect(dialog.locator('a[aria-current="page"]')).toHaveCount(1);
+      await expect(dialog.locator('a[aria-current="page"]')).toHaveAttribute(
         'href',
         new RegExp(`^/${locale}(/|$)`),
       );
@@ -84,12 +88,18 @@ test.describe('global language picker public chrome', () => {
     await expect(drawer).toBeVisible();
     const globe = drawer.locator('button[aria-haspopup="dialog"]');
     await expect(globe).toHaveCount(1);
-    await expect(globe).toHaveAttribute('aria-label', LANGUAGE_PICKER_COPY.vi.open);
+    await expect(globe).toHaveAttribute(
+      'aria-label',
+      `${LANGUAGE_PICKER_COPY.vi.open}: ${PUBLIC_LANGUAGE_AUTONYMS.vi}`,
+    );
     await globe.click();
 
     const dialog = languageDialog(page);
     await expect(dialog).toBeVisible();
     await expect(drawer).toBeHidden();
+    expect(
+      await page.evaluate(() => getComputedStyle(document.body).overflow),
+    ).toBe('hidden');
 
     const dialogBox = await dialog.boundingBox();
     expect(dialogBox, 'fullscreen overlay box').toBeTruthy();
@@ -101,5 +111,56 @@ test.describe('global language picker public chrome', () => {
     const closeBox = await close.boundingBox();
     expect(closeBox?.width ?? 0).toBeGreaterThanOrEqual(44);
     expect(closeBox?.height ?? 0).toBeGreaterThanOrEqual(44);
+
+    await page.keyboard.press('Escape');
+    await expect(languageDialog(page)).toHaveCount(0);
+    await expect.poll(async () =>
+      page.evaluate(() => {
+        const active = document.activeElement;
+        return active instanceof HTMLElement ? active.className : '';
+      }),
+    ).toMatch(/mobile-toggle/);
+    await expect(toggle).toBeFocused();
+  });
+
+  test('WO-O22 A: language options from JA public pages never 404', async ({ page }) => {
+    await page.setViewportSize(DESKTOP);
+    const sampleSlug = listColumnSlugsFromFs('vi')[0];
+    expect(sampleSlug, 'a vi-translated slug').toBeTruthy();
+
+    const paths = [
+      `/ja/columns/${sampleSlug}`,
+      '/ja/videos',
+      '/ja/korean-lawyer-in-taiwan',
+      '/ja',
+      '/ja/columns',
+    ];
+
+    for (const path of paths) {
+      const response = await page.goto(path, { waitUntil: 'domcontentloaded' });
+      expect(response?.status(), path).toBe(200);
+      await dismissCinematic(page);
+
+      await openDesktopPicker(page, 'ja');
+      const dialog = languageDialog(page);
+      await expect(dialog).toBeVisible();
+      const options = dialog.locator('a[href]');
+      await expect(options, `${path} picker option count`).toHaveCount(PUBLIC_LOCALES_8.length);
+
+      const hrefs = await options.evaluateAll((nodes) =>
+        nodes.map((node) => node.getAttribute('href') ?? ''),
+      );
+      expect(hrefs.filter(Boolean), `${path} every option is a link`).toHaveLength(
+        PUBLIC_LOCALES_8.length,
+      );
+
+      for (const href of hrefs) {
+        const probe = await page.request.get(href);
+        expect(probe.status(), `${path} -> ${href}`).toBe(200);
+      }
+
+      await page.keyboard.press('Escape');
+      await expect(languageDialog(page)).toHaveCount(0);
+    }
   });
 });

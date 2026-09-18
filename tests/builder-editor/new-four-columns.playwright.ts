@@ -1,6 +1,6 @@
 import { expect, test, type Page } from '@playwright/test';
 import { guidanceContent } from '@/data/international-guidance-content';
-import { publicDocumentLanguage } from '@/lib/public-guidance';
+import { publicDocumentLanguage, PUBLIC_LOCALES_8 } from '@/lib/public-guidance';
 import { listColumnSlugsFromFs } from './column-corpus';
 
 /**
@@ -24,6 +24,13 @@ async function readHreflang(page: Page): Promise<Array<{ hreflang: string; href:
   );
 }
 
+async function dismissCinematic(page: import('@playwright/test').Page): Promise<void> {
+  const cinematicScroll = page.locator('a.cinematic-opening__scroll').first();
+  if (await cinematicScroll.isVisible().catch(() => false)) {
+    await cinematicScroll.click();
+  }
+}
+
 test.describe('new-four columns with translations', () => {
   test('WO-G23: /vi/columns is ColumnsGrid plus original-language section', async ({ page }) => {
     const pack = guidanceContent[LOCALE];
@@ -42,7 +49,7 @@ test.describe('new-four columns with translations', () => {
       page.locator('[data-columns-original-language="true"] a[href*="/ko/columns/"]'),
     ).toHaveCount(koSlugs.filter((slug) => !translatedSlugs.includes(slug)).length);
     await expect(
-      page.locator('header[data-public-site-header] .header-utility .locale-flag-switcher'),
+      page.locator('header[data-public-site-header] .header-utility button[aria-haspopup="dialog"]'),
     ).toHaveCount(1);
   });
 
@@ -56,6 +63,7 @@ test.describe('new-four columns with translations', () => {
       const path = `/${LOCALE}/columns/${slug}`;
       const response = await page.goto(path, { waitUntil: 'domcontentloaded' });
       expect(response?.status(), path).toBe(200);
+      await dismissCinematic(page);
       await expect(page.locator('html')).toHaveAttribute('lang', publicDocumentLanguage(LOCALE));
       const alternates = await readHreflang(page);
       const tags = new Set(alternates.map((item) => item.hreflang));
@@ -120,17 +128,24 @@ test.describe('new-four columns with translations', () => {
     for (const path of paths) {
       const response = await page.goto(path, { waitUntil: 'domcontentloaded' });
       expect(response?.status(), path).toBe(200);
+      await dismissCinematic(page);
 
-      const switcher = page
-        .locator('header[data-public-site-header] .locale-flag-switcher')
+      const trigger = page
+        .locator('header[data-public-site-header] .header-utility button[aria-haspopup="dialog"]')
         .first();
-      const options = switcher.locator('.locale-flag-switcher-link');
-      await expect(options, `${path} switcher option count`).toHaveCount(8);
+      await expect(trigger).toBeVisible();
+      await trigger.click();
+      const dialog = page.locator('[role="dialog"][aria-modal="true"][aria-labelledby]');
+      await expect(dialog).toBeVisible();
+      const options = dialog.locator('a[href]');
+      await expect(options, `${path} switcher option count`).toHaveCount(PUBLIC_LOCALES_8.length);
 
       const hrefs = await options.evaluateAll((nodes) =>
         nodes.map((node) => node.getAttribute('href') ?? ''),
       );
-      expect(hrefs.filter(Boolean), `${path} every option is a link`).toHaveLength(8);
+      expect(hrefs.filter(Boolean), `${path} every option is a link`).toHaveLength(
+        PUBLIC_LOCALES_8.length,
+      );
       for (const locale of ['vi', 'id', 'th', 'fil'] as const) {
         expect(
           hrefs.some((href) => href === `/${locale}` || href.startsWith(`/${locale}/`)),
@@ -143,6 +158,9 @@ test.describe('new-four columns with translations', () => {
         const probe = await page.request.get(href);
         expect(probe.status(), `${path} -> ${href}`).toBe(200);
       }
+
+      await page.keyboard.press('Escape');
+      await expect(dialog).toHaveCount(0);
     }
   });
 
@@ -153,11 +171,17 @@ test.describe('new-four columns with translations', () => {
     });
     expect(response?.status()).toBe(200);
 
+    const trigger = page
+      .locator('header[data-public-site-header] .header-utility button[aria-haspopup="dialog"]')
+      .first();
+    await expect(trigger).toBeVisible();
+    await trigger.click();
+    const dialog = page.locator('[role="dialog"][aria-modal="true"][aria-labelledby]');
+    await expect(dialog).toBeVisible();
+
     for (const locale of ['vi', 'id', 'th', 'fil'] as const) {
       await expect(
-        page.locator(
-          `header[data-public-site-header] .locale-flag-switcher a[href="/${locale}/columns/${sampleSlug}"]`,
-        ),
+        dialog.locator(`a[href="/${locale}/columns/${sampleSlug}"]`),
         `${locale} same-slug switcher link`,
       ).toHaveCount(1);
     }

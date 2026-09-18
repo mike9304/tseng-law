@@ -1,0 +1,113 @@
+[WO-G1-R2 시작 Fri Sep 18 16:35:10 KST 2026]
+WO-G1-R2 is implemented on this worktree. D1/D2 and review items #1–#14 and #17–#19 are in the allowed files. No git add/commit/push, no build, no Playwright run.
+
+## git diff --stat
+
+```
+ src/app/globals.css                                | 42 +--------
+ src/components/GlobalLanguagePicker.module.css     | 16 +---
+ src/components/GlobalLanguagePicker.tsx            | 83 +++++++++++++-----
+ src/components/MobileNavDrawer.tsx                 | 12 ++-
+ .../__tests__/global-language-picker.test.tsx      | 99 +++++++++++++---------
+ .../__tests__/ja-desktop-header.test.tsx           |  4 +-
+ .../__tests__/ja-mobile-nav-drawer.test.tsx        |  4 +-
+ src/lib/__tests__/public-language-registry.test.ts | 50 +++++++----
+ src/lib/public-language-registry.ts                | 53 +++++-------
+ .../global-language-picker.playwright.ts           | 71 ++++++++++++++--
+ .../international-guidance.playwright.ts           | 51 ++++++-----
+ .../locale-flag-switcher-visibility.playwright.ts  | 61 +++++++------
+ .../builder-editor/new-four-columns.playwright.ts  | 35 +++++---
+ 13 files changed, 350 insertions(+), 231 deletions(-)
+```
+
+Extra file vs the allowed list: `src/components/__tests__/ja-desktop-header.test.tsx` (aria-label assertion only). #6 changed the trigger name to `` `${copy.open}: ${autonym}` ``, and §4 runs this file, so the one assertion was updated. `Header.tsx` was not touched.
+
+## §4 command outputs
+
+```
+===== git status --short =====
+ M src/app/globals.css
+ M src/components/GlobalLanguagePicker.module.css
+ M src/components/GlobalLanguagePicker.tsx
+ M src/components/MobileNavDrawer.tsx
+ M src/components/__tests__/global-language-picker.test.tsx
+ M src/components/__tests__/ja-desktop-header.test.tsx
+ M src/components/__tests__/ja-mobile-nav-drawer.test.tsx
+ M src/lib/__tests__/public-language-registry.test.ts
+ M src/lib/public-language-registry.ts
+ M tests/builder-editor/global-language-picker.playwright.ts
+ M tests/builder-editor/international-guidance.playwright.ts
+ M tests/builder-editor/locale-flag-switcher-visibility.playwright.ts
+ M tests/builder-editor/new-four-columns.playwright.ts
+?? docs/i18n/global-plan/WO-G2-2.txt
+?? docs/i18n/global-plan/evidence/grok-G1-R2.log
+```
+
+```
+===== git diff --stat | tail -3 =====
+ .../locale-flag-switcher-visibility.playwright.ts  | 61 +++++++------
+ .../builder-editor/new-four-columns.playwright.ts  | 35 +++++---
+ 13 files changed, 350 insertions(+), 231 deletions(-)
+```
+
+```
+===== npm run typecheck 2>&1 | tail -2 =====
+Generating route types...
+✓ Route types generated successfully
+```
+
+(`tsc` emitted no lines after typegen; a prior un-tailed `npm run typecheck` exited 0.)
+
+```
+===== vitest | tail -6 =====
+
+ Test Files  1 failed | 5 passed (6)
+      Tests  1 failed | 48 passed (49)
+   Start at  16:50:47
+   Duration  431ms (transform 315ms, setup 34ms, collect 964ms, tests 71ms, environment 0ms, prepare 182ms)
+```
+
+The remaining failure is `locale-flag-switcher.test.tsx` (“renders the nine autonyms…”): hardcoded 11-locale `LOCALE_FLAG_OPTIONS` vs 13 with `fr`/`pt`. Pre-existing G2 work; that file is outside the allowed set.
+
+Picker/registry/header/drawer/fit tests: **48 passed**.
+
+```
+===== eslint --max-warnings=0 … | tail -3 =====
+(empty)
+eslint_exit:0
+```
+
+```
+===== grep -c "regionLabel" … =====
+src/lib/public-language-registry.ts:0
+src/components/GlobalLanguagePicker.tsx:0
+```
+
+```
+===== grep -c aria-current true … =====
+0
+```
+
+## #7 test environment
+
+`jsdom`: absent. `happy-dom`: absent. `@testing-library/react`: absent. `@testing-library/dom` is installed but unused without a DOM env.
+
+Max without adding packages: `renderToStaticMarkup` plus `closeLanguagePickerOnEscape` → `onClose`. The `readFileSync` source-string test is gone. Tab-wrap / live `document.body.style.overflow` were not unit-tested; overflow/focus-return are asserted in the 390 Playwright spec (not executed here).
+
+## #14 approach
+
+`html { scrollbar-gutter: stable; }` in `globals.css`. `header-content-fit` still passed (14/14), so the lock-time `padding-right` fallback was not used.
+
+## Also done (for the report)
+
+- **D1/D2:** `global` first; `en` only there; `americas` empty and skipped; `regionLabel`/`rtl` removed; second line is `englishName`.
+- **#13:** 768px `.currentLabel { display: none }` removed. Drawer still shows the autonym — intentional deviation from original WO-G1 §3 “mobile icon-only”.
+- **#19:** ko title `지역과 언어를 선택해 주세요`; vi `Vui lòng chọn khu vực và ngôn ngữ của quý vị`.
+
+## Unresolved
+
+1. **`locale-flag-switcher.test.tsx` still red** (1 test): hardcoded 11 locales, `fr`/`pt` not listed. File not in the allowed set.
+2. **Playwright not run** (WO forbid). Specs were rewritten to `button[aria-haspopup="dialog"]` + `[role="dialog"] a[href]`; 404 probe lives in `global-language-picker.playwright.ts` and `new-four-columns.playwright.ts`.
+3. **#7:** no jsdom behavior coverage for focus trap or overflow.
+4. Untracked `docs/i18n/global-plan/WO-G2-2.txt` and `docs/i18n/global-plan/evidence/grok-G1-R2.log` were not created or edited here.
+=== WO-G1-R2 종료 code=0 Fri Sep 18 16:51:12 KST 2026 ===

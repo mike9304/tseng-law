@@ -1,0 +1,41 @@
+WO-G2-2 — 안내 로케일 4개 추가: zh-hans(简体中文) · ms(Bahasa Melayu) · ru(Русский) · tr(Türkçe) — fr/pt(커밋 04677e16) 선례 복제
+
+작업트리: /Users/son7/Projects/tseng-law-global-picker-20260918. 밖 쓰기 금지. git add/commit/push 금지. build·next start·Playwright·전체 스위트·npm install 금지(§6 명령만).
+node: export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+**선행 학습(필수)**: `git show 04677e16 --stat` 및 그 diff — fr/pt가 만진 **모든** 파일(팩·맵·폰트·og·llms·체커·테스트·레지스트리)에 4로케일을 같은 방식으로 추가. 칼럼 md는 범위 밖(빈 폴더 + .gitkeep).
+**주의**: 이 WO 직전에 WO-G1-R2가 `public-language-registry.ts`를 바꿨을 수 있음(지역 `global` 그룹 추가, `regionLabel` 삭제 → `englishName` 표기, `rtl` 필드 삭제). 현재 파일 상태를 읽고 그 스키마에 맞춘다.
+
+## 1. 공통 제품 잠금 (ms·ru·tr)
+- 공개 **안내** 로케일. 상담 언어 아님 → 해당 언어 상담·통역·즉시응답·성공률·비용/결과 보장·24/7·무료 상담 주장 금지. 언어 FAQ 답 "아니오 — 영어·중국어(中文)·일본어·한국어만".
+- 격식: ms `anda`(소문자 관습) 정중체 / ru `Вы`(대문자) 정중체 / tr `siz` 정중체. 대표 변호사 曾雋崴(Wei Tseng) 여성 — ru 여성형(адвокат Вэй Цзэн — 명사는 남성형 직함이 표준이나 동사·형용사·대명사는 여성형 «она»), tr 성 중립, ms 성 중립(peguam).
+- 본문은 de 팩(`germanGuidanceContent`) 의미 단위 번역(새 사실 금지·문장 삭제 금지). 사무소 사실 동일.
+- 카테고리(`src/lib/columns.ts`): ms { formation: 'Penubuhan syarikat di Taiwan', legal: 'Maklumat undang-undang Taiwan', case: 'Analisis kes' } · ru { formation: 'Учреждение компании на Тайване', legal: 'Правовая информация о Тайване', case: 'Анализ дел' } · tr { formation: "Tayvan'da şirket kuruluşu", legal: 'Tayvan hukuku bilgileri', case: 'Vaka analizi' }.
+- 지명: ms 'Taiwan', ru 'Тайвань', tr 'Tayvan'. 사무소명 'Hovering International Law Firm' 그대로.
+- og:locale ms_MY · ru_RU · tr_TR. hreflang 'ms' 'ru' 'tr'. autonym 'Bahasa Melayu' · 'Русский' · 'Türkçe'. 레지스트리 region: ms asia-pacific, ru europe, tr europe (englishName Malay · Russian · Turkish).
+- 폰트: ru는 Cyrillic — `src/app/fonts.ts`의 latin Noto Sans에 `subsets`에 'cyrillic' 추가(기존 로더 확장, 새 로더 최소). tr latin-ext 확인(ş ğ ı İ). ms latin.
+
+## 2. zh-hans 특별 규칙
+- 코드 `zh-hans`. autonym '简体中文', englishName 'Simplified Chinese', region asia-pacific. hreflang **'zh-Hans'**(`hreflangTagForPublicLocale`·`publicDocumentLanguage`·`PublicDocumentLanguage` 타입에 'zh-Hans' 추가), og:locale **zh_SG**(간체 독자 1차 시장이 싱가포르·말레이시아 화인 — 자사 GSC 실측), `<html lang="zh-Hans">`.
+- **중국어 상담은 실제로 가능**(사이트 상담 언어 4개에 中文 포함). 따라서 zh-hans 언어 FAQ는 **긍정**: 질문 '可以用中文咨询吗？' 답 '可以。律师咨询以英语、中文、日语和韩语进行。本页面以简体中文撰写，咨询时使用的中文包括普通话与书面中文。' 수준으로 — 통역·응답시간·예약 약속은 여전히 금지. **다른 로케일용 "부정 답" 테스트가 zh-hans에 적용되지 않도록** 테스트에 예외 명시(`GUIDANCE_CONSULTATION_LANGUAGE_LOCALES` 같은 상수로 zh-hans만 예외 처리; 하드코딩 if 금지).
+- 번역 원본: **zh-hant 사이트가 아니라 de 팩 구조**를 따르되, 용어는 대만 법률 용어의 간체 표기(公司登記→公司登记, 投資審議→投资审议, 居留證→居留证 등). 대륙식 법률 용어(营业执照·工商局 등)로 바꾸지 말 것 — 대만 절차이므로 대만 용어 간체화. 표점은 간체 관례(“” 대신 “”/‘’ 그대로, 句号 。).
+- 폰트: `Noto_Sans_SC`·`Noto_Serif_SC` 로더 추가(TC 로더와 동일 패턴), CSS 변수 `--font-noto-sans-sc-loaded` 등, `fonts.test.ts` 갱신.
+- 정치적 표기 금지: '中国台湾'·'台湾省'·'大陆' 류 사용 금지. '台湾'만. 국가 열거 시 ISO 명칭 사용.
+- 언어 전환기·hreflang에서 zh-hant↔zh-hans는 서로 alternate(둘 다 같은 클러스터, 기존 로직으로 자동).
+
+## 3. 변경 목록
+fr/pt 커밋 04677e16의 파일 전부 + `Record<PublicLocale8|GuidanceLocale…>` 12파일 전수(`rg -n "Record<PublicLocale8|Record<GuidanceLocale" src -g '!**/__tests__/**'`). 팩 파일: `src/data/international-guidance-western.ts`에 ru·tr, 신규 `src/data/international-guidance-asia.ts`에 zh-hans·ms(`GuidanceLocaleContent` import 방식 동일). `international-guidance-content.ts` import·타입·맵. 테스트: 기존 로케일 수 기대치 전부 갱신 + 신규 `guidance-zh-hans-ms-ru-tr-content.test.ts`·`-routing.test.ts`(fr/pt 테스트 복제; zh-hans 언어 FAQ 긍정 예외, 금지 토큰 — zh-hans '胜诉率|保证|最佳|唯一|免费咨询|24小时', ms 'kadar kejayaan|dijamin|terbaik|satu-satunya|percuma|24 jam|perundingan dalam Bahasa Melayu', ru 'процент выигранных|гарантируем|лучший|единственный|бесплатн|круглосуточно|консультация на русском', tr 'başarı oranı|garanti|en iyi|tek|ücretsiz danışma|7/24|Türkçe danışma' — 언어 FAQ 질문 내 등장은 허용).
+`scripts/check-guidance-country-mentions.mjs`: zh-hans 팩의 '台湾'은 지명 허용 목록에.
+
+## 4. 허용 파일: §3 열거 + 신규 `src/content/columns-{zh-hans,ms,ru,tr}/.gitkeep`. 금지: 기존 팩 본문 수정, intent-pages, site-content, Header/Footer, docs/**.
+
+## 5. 검증(전부 실행·출력 그대로)
+cd /Users/son7/Projects/tseng-law-global-picker-20260918 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+git status --short | wc -l && git diff --stat | tail -1
+npm run typecheck 2>&1 | tail -2
+npx vitest run src/lib/__tests__/guidance-zh-hans-ms-ru-tr-content.test.ts src/lib/__tests__/guidance-zh-hans-ms-ru-tr-routing.test.ts src/lib/__tests__/guidance-fr-pt-content.test.ts src/lib/__tests__/guidance-de-es-content.test.ts src/lib/__tests__/public-guidance.test.ts src/lib/__tests__/public-language-registry.test.ts src/app/__tests__/sitemap.test.ts src/app/__tests__/fonts.test.ts "src/app/[locale]/__tests__/llms-discovery.test.tsx" src/lib/__tests__/international-guidance-answers.test.ts src/lib/__tests__/global-seo-locale-integrity.test.ts src/data/__tests__/guidance-country-mentions.test.ts src/data/__tests__/guidance-disclosure-parity.test.ts src/data/__tests__/guidance-office-facts-sync.test.ts src/data/__tests__/international-guidance-privacy-disclosure.test.ts src/lib/consultation/__tests__/intake-language-contract.test.ts src/components/__tests__/global-language-picker.test.tsx 2>&1 | tail -8
+npx eslint --max-warnings=0 --ext .ts,.tsx $(git diff --name-only | grep -E '^src/.*\.(ts|tsx)$') $(git ls-files --others --exclude-standard | grep -E '^src/.*\.(ts|tsx)$') 2>&1 | tail -3
+node scripts/check-guidance-country-mentions.mjs 2>&1 | tail -2
+grep -c "中国台湾\|台湾省\|大陆" src/data/international-guidance-asia.ts   # 0
+grep -rn "\[변호사 검수 필요\]" src/data/international-guidance-asia.ts src/data/international-guidance-western.ts | wc -l   # 0
+
+## 6. 보고: diff --stat · 명령 출력 · 4로케일 언어 FAQ 문답 원문 · fr/pt 대비 추가·누락 파일과 이유 · 미해결.

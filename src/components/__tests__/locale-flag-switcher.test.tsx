@@ -56,7 +56,7 @@ describe('LocaleFlagSwitcher', () => {
     navigationState.pathname = '/ko/services';
   });
 
-  it('renders the nine autonyms without national flags or country labels', () => {
+  it('renders every public autonym without national flags or country labels', () => {
     expect(LOCALE_FLAG_OPTIONS.map((option) => [option.locale, option.label])).toEqual([
       ['ko', '한국어'],
       ['zh-hant', '繁體中文'],
@@ -69,6 +69,8 @@ describe('LocaleFlagSwitcher', () => {
       ['ar', 'العربية'],
       ['de', 'Deutsch'],
       ['es', 'Español'],
+      ['fr', 'Français'],
+      ['pt', 'Português'],
     ]);
     expect(LOCALE_FLAG_OPTIONS.map((option) => option.locale)).toEqual([...PUBLIC_LOCALES_8]);
 
@@ -97,6 +99,8 @@ describe('LocaleFlagSwitcher', () => {
       { href: '/ar/services', label: 'العربية' },
       { href: '/de/services', label: 'Deutsch' },
       { href: '/es/services', label: 'Español' },
+      { href: '/fr/services', label: 'Français' },
+      { href: '/pt/services', label: 'Português' },
     ];
 
     expect(links).toHaveLength(expected.length);

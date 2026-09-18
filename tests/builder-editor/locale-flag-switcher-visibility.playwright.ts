@@ -24,11 +24,14 @@ async function dismissCinematic(page: Page): Promise<void> {
   });
 }
 
+function languageDialog(page: Page): Locator {
+  return page.locator('[role="dialog"][aria-modal="true"][aria-labelledby]');
+}
+
 /**
  * O14 folded the guidance locales into the shared site chrome, so /vi is driven
- * through the very same header switcher as /ko — there is no guidance-only
- * dropdown to target any more. The page-level duplicate that used to live in
- * `InternationalGuidance` was removed with it.
+ * through the same header picker as /ko. Open via the dialog trigger and read
+ * `[role="dialog"] a[href]`.
  */
 async function openLocaleFlagSwitcher(
   page: Page,
@@ -42,24 +45,28 @@ async function openLocaleFlagSwitcher(
     await toggle.click();
     const drawer = page.locator('#public-mobile-nav-drawer');
     await expect(drawer).toBeVisible();
-    const switcher = drawer.locator('.locale-flag-switcher');
-    const details = switcher.locator('details');
-    await expect(details).toBeVisible();
-    if ((await details.getAttribute('open')) === null) {
-      await details.locator('summary').click();
-    }
-    await expect(details).toHaveAttribute('open', '');
-    return switcher;
+    const trigger = drawer.locator('button[aria-haspopup="dialog"]');
+    await expect(trigger).toBeVisible();
+    await trigger.click();
+  } else {
+    const trigger = page
+      .locator('header[data-public-site-header] .header-utility button[aria-haspopup="dialog"]')
+      .first();
+    await expect(trigger).toBeVisible();
+    await trigger.click();
   }
 
-  const switcher = page.locator('header[data-public-site-header] .locale-flag-switcher').first();
-  const details = switcher.locator('details');
-  await expect(details).toBeVisible();
-  if ((await details.getAttribute('open')) === null) {
-    await details.locator('summary').click();
-  }
-  await expect(details).toHaveAttribute('open', '');
-  return switcher;
+  const dialog = languageDialog(page);
+  await expect(dialog).toBeVisible();
+  // The panel slides in over 200ms (translateY 10px → 0); measure the settled box.
+  await dialog.evaluate((element) =>
+    Promise.all(
+      [element, ...Array.from(element.querySelectorAll('*'))]
+        .flatMap((node) => node.getAnimations({ subtree: false }))
+        .map((animation) => animation.finished.catch(() => undefined)),
+    ),
+  );
+  return dialog;
 }
 
 test.describe('locale flag switcher visibility', () => {
@@ -73,22 +80,22 @@ test.describe('locale flag switcher visibility', () => {
         expect(response?.ok(), `/${locale} status`).toBeTruthy();
         await page.waitForLoadState('load');
 
-        const switcher = await openLocaleFlagSwitcher(page, viewport.width);
-        const options = switcher.locator('.locale-flag-switcher-link');
+        const dialog = await openLocaleFlagSwitcher(page, viewport.width);
+        const options = dialog.locator('a[href]');
         await expect(options).toHaveCount(PUBLIC_LOCALES_8.length);
 
-        const menu = switcher.locator('ul');
-        const menuBox = await menu.boundingBox();
-        expect(menuBox, 'open menu box').toBeTruthy();
-        expect(menuBox!.x).toBeGreaterThanOrEqual(-1);
-        expect(menuBox!.y).toBeGreaterThanOrEqual(-1);
-        expect(menuBox!.x + menuBox!.width).toBeLessThanOrEqual(viewport.width + 1);
-        expect(menuBox!.y + menuBox!.height).toBeLessThanOrEqual(viewport.height + 1);
+        const dialogBox = await dialog.boundingBox();
+        expect(dialogBox, 'open dialog box').toBeTruthy();
+        expect(dialogBox!.x).toBeGreaterThanOrEqual(-1);
+        expect(dialogBox!.y).toBeGreaterThanOrEqual(-1);
+        expect(dialogBox!.x + dialogBox!.width).toBeLessThanOrEqual(viewport.width + 1);
+        expect(dialogBox!.y + dialogBox!.height).toBeLessThanOrEqual(viewport.height + 1);
 
-        for (const [index, optionLocale] of PUBLIC_LOCALES_8.entries()) {
-          const option = options.nth(index);
+        for (const optionLocale of PUBLIC_LOCALES_8) {
+          const option = options.filter({ hasText: PUBLIC_LANGUAGE_AUTONYMS[optionLocale] });
+          await expect(option).toHaveCount(1);
+          await option.scrollIntoViewIfNeeded();
           await expect(option).toBeVisible();
-          await expect(option).toContainText(PUBLIC_LANGUAGE_AUTONYMS[optionLocale]);
 
           const coversSelf = await option.evaluate((element) => {
             const rect = element.getBoundingClientRect();

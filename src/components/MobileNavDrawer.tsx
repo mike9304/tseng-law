@@ -53,13 +53,13 @@ export default function MobileNavDrawer({
   useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden';
-    } else {
+    } else if (!languagePickerOpen) {
       document.body.style.overflow = '';
     }
     return () => {
       document.body.style.overflow = '';
     };
-  }, [open]);
+  }, [open, languagePickerOpen]);
 
   useEffect(() => {
     if (!open) return;
@@ -212,6 +212,14 @@ export default function MobileNavDrawer({
               setLanguagePickerOpen(true);
               onClose();
             }}
+            onClosed={() => setLanguagePickerOpen(false)}
+            returnFocusTo={() =>
+              typeof document === 'undefined'
+                ? null
+                : document.querySelector<HTMLElement>(
+                    'header[data-public-site-header] button.mobile-toggle',
+                  )
+            }
           />
         </div>
         <nav className="drawer-nav" aria-label={navLabel}>

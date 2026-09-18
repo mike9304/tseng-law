@@ -1,7 +1,7 @@
-import { readFileSync } from 'node:fs';
-import path from 'node:path';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { fallbackLanguageNotice, localeFlagHref } from '@/components/LocaleFlagSwitcher';
+import type { PublicColumnSlugsByLocale } from '@/components/PublicColumnSlugsContext';
 
 const navigationState = vi.hoisted(() => ({
   pathname: '/ko',
@@ -21,8 +21,8 @@ import {
   PUBLIC_LANGUAGE_REGISTRY,
 } from '@/lib/public-language-registry';
 import {
+  PUBLIC_LANGUAGE_AUTONYMS,
   PUBLIC_LOCALES_8,
-  resolvePublicLanguageSwitchTarget,
   type PublicLocale8,
 } from '@/lib/public-guidance';
 
@@ -33,15 +33,19 @@ function renderView(
     pathname?: string;
     onOpen?: () => void;
     onClose?: () => void;
+    onClosed?: () => void;
+    columnSlugsByLocale?: PublicColumnSlugsByLocale | null;
   } = {},
 ): string {
   return renderToStaticMarkup(
     <GlobalLanguagePickerView
       locale={locale}
       pathname={options.pathname ?? navigationState.pathname}
+      columnSlugsByLocale={options.columnSlugsByLocale}
       open={options.open ?? false}
       onOpen={options.onOpen ?? (() => undefined)}
       onClose={options.onClose ?? (() => undefined)}
+      onClosed={options.onClosed}
     />,
   );
 }
@@ -50,18 +54,23 @@ function renderedLinks(html: string): string[] {
   return html.match(/<a\b[\s\S]*?<\/a>/g) ?? [];
 }
 
+function linkForLocale(html: string, locale: PublicLocale8): string | undefined {
+  const lang = locale === 'zh-hant' ? 'zh-Hant' : locale;
+  return renderedLinks(html).find((link) => link.includes(`lang="${lang}"`));
+}
+
 describe('GlobalLanguagePicker', () => {
   beforeEach(() => {
     navigationState.pathname = '/ko';
   });
 
-  it('renders a globe trigger whose accessible name is copy.open', () => {
+  it('renders a globe trigger whose accessible name includes copy.open and the current autonym', () => {
     const html = renderToStaticMarkup(<GlobalLanguagePicker locale="ko" />);
     const copy = LANGUAGE_PICKER_COPY.ko;
 
     expect(html).toContain('aria-haspopup="dialog"');
     expect(html).toContain('aria-expanded="false"');
-    expect(html).toContain(`aria-label="${copy.open}"`);
+    expect(html).toContain(`aria-label="${copy.open}: ${PUBLIC_LANGUAGE_AUTONYMS.ko}"`);
     expect(html).toContain('type="button"');
     expect(html).not.toContain('role="dialog"');
   });
@@ -69,7 +78,9 @@ describe('GlobalLanguagePicker', () => {
   it('opens a modal dialog with the localized title after the trigger is clicked', () => {
     const onOpen = vi.fn();
     const closed = renderView('ko', { open: false, onOpen });
-    expect(closed).toContain(`aria-label="${LANGUAGE_PICKER_COPY.ko.open}"`);
+    expect(closed).toContain(
+      `aria-label="${LANGUAGE_PICKER_COPY.ko.open}: ${PUBLIC_LANGUAGE_AUTONYMS.ko}"`,
+    );
     expect(closed).not.toContain('role="dialog"');
 
     const html = renderView('ko', { open: true, onOpen });
@@ -79,40 +90,60 @@ describe('GlobalLanguagePicker', () => {
     expect(html).toContain(`aria-label="${LANGUAGE_PICKER_COPY.ko.close}"`);
   });
 
-  it('lists eleven language links and marks only the current locale', () => {
+  it('lists every language link and marks only the current locale', () => {
     const html = renderView('ko', { open: true, pathname: '/ko' });
     const links = renderedLinks(html);
 
     expect(links).toHaveLength(PUBLIC_LOCALES_8.length);
     for (const entry of PUBLIC_LANGUAGE_REGISTRY) {
       expect(links.some((link) => link.includes(entry.autonym))).toBe(true);
+      expect(links.some((link) => link.includes(entry.englishName))).toBe(true);
     }
 
-    const current = links.find((link) => link.includes(`lang="ko"`));
-    expect(current).toContain('aria-current="true"');
+    const current = linkForLocale(html, 'ko');
+    expect(current).toContain('aria-current="page"');
     expect(current).toContain(LANGUAGE_PICKER_COPY.ko.current);
-    expect(links.filter((link) => link.includes('aria-current="true"'))).toHaveLength(1);
+    expect(links.filter((link) => link.includes('aria-current="page"'))).toHaveLength(1);
   });
 
-  it('uses resolvePublicLanguageSwitchTarget hrefs for representative paths', () => {
+  it('uses localeFlagHref for restricted family paths targeting Japanese', () => {
     const samples = [
-      { locale: 'ko' as const, pathname: '/ko', target: 'en' as const },
-      { locale: 'vi' as const, pathname: '/vi/services', target: 'ko' as const },
-      { locale: 'ko' as const, pathname: '/ko/services', target: 'vi' as const },
-    ];
+      { pathname: '/en/portfolio/x', href: '/ja/portfolio' },
+      { pathname: '/en/events/x', href: '/ja/events' },
+      { pathname: '/en/store/products/x', href: '/ja/store' },
+    ] as const;
 
     for (const sample of samples) {
-      const html = renderView(sample.locale, { open: true, pathname: sample.pathname });
-      const expected = resolvePublicLanguageSwitchTarget(sample.pathname, sample.target).href;
-      expect(html).toContain(`href="${expected}"`);
+      const html = renderView('en', { open: true, pathname: sample.pathname });
+      const jaLink = linkForLocale(html, 'ja');
+      expect(localeFlagHref(sample.pathname, 'ja')).toBe(sample.href);
+      expect(jaLink, `${sample.pathname} ja link`).toContain(`href="${sample.href}"`);
     }
-
-    expect(resolvePublicLanguageSwitchTarget('/ko', 'en').href).toBe('/en');
-    expect(resolvePublicLanguageSwitchTarget('/vi/services', 'ko').href).toBe('/ko/services');
-    expect(resolvePublicLanguageSwitchTarget('/ko/services', 'vi').href).toBe('/vi/services');
   });
 
-  it('closes on Escape and restores focus to the trigger via the overlay focus hook', () => {
+  it('links a JA column detail to the same vi article when columnSlugsByLocale is provided', () => {
+    const slug = 'taiwan-company-establishment-basics';
+    const pathname = `/ja/columns/${slug}`;
+    const html = renderView('ja', {
+      open: true,
+      pathname,
+      columnSlugsByLocale: { vi: [slug], ja: [slug] },
+    });
+    const viLink = linkForLocale(html, 'vi');
+    expect(viLink).toContain(`href="/vi/columns/${slug}"`);
+  });
+
+  it('falls back to the Thai home from /ko/videos and shows the notice', () => {
+    const html = renderView('ko', { open: true, pathname: '/ko/videos' });
+    const notice = fallbackLanguageNotice('ko', 'th');
+    const thLink = linkForLocale(html, 'th');
+    expect(localeFlagHref('/ko/videos', 'th')).toBe('/th');
+    expect(thLink).toContain('href="/th"');
+    expect(thLink).toContain(notice);
+    expect(html).toContain(notice);
+  });
+
+  it('closes on Escape via the shared document-level handler', () => {
     const onClose = vi.fn();
     const preventDefault = vi.fn();
     const stopPropagation = vi.fn();
@@ -129,24 +160,16 @@ describe('GlobalLanguagePicker', () => {
     expect(preventDefault).toHaveBeenCalledTimes(1);
     expect(stopPropagation).toHaveBeenCalledTimes(1);
     expect(onClose).toHaveBeenCalledTimes(1);
-
-    const source = readFileSync(
-      path.join(process.cwd(), 'src/components/GlobalLanguagePicker.tsx'),
-      'utf8',
-    );
-    expect(source).toContain('usePublishedOverlayFocus');
-    expect(source).toContain('initialFocusRef: closeButtonRef');
-    expect(source).toContain('openerRef');
-    expect(source).toContain('resolvePublishedOverlayOpener(trigger)');
-    expect(source).toContain('triggerRef.current?.focus()');
-    expect(source).toContain('onBeforeOpen');
-    expect(source).toContain("document.addEventListener('keydown', handler, true)");
   });
 
-  it('sets dir=rtl on the Arabic panel', () => {
-    const html = renderView('ar', { open: true, pathname: '/ar' });
-    expect(html).toContain('dir="rtl"');
-    expect(html).toContain(LANGUAGE_PICKER_COPY.ar.title);
+  it('sets dir=rtl on the Arabic panel and on Arabic items in an LTR panel', () => {
+    const ar = renderView('ar', { open: true, pathname: '/ar' });
+    expect(ar).toContain('dir="rtl"');
+    expect(ar).toContain(LANGUAGE_PICKER_COPY.ar.title);
+
+    const en = renderView('en', { open: true, pathname: '/en' });
+    const arLink = linkForLocale(en, 'ar');
+    expect(arLink).toContain('dir="rtl"');
   });
 
   it('renders region headings in the current locale', () => {

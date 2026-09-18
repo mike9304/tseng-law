@@ -3,19 +3,17 @@ import {
   type PublicLocale8,
 } from '@/lib/public-guidance';
 
-export type LanguageRegion = 'asia-pacific' | 'middle-east' | 'europe' | 'americas';
+export type LanguageRegion = 'global' | 'asia-pacific' | 'middle-east' | 'europe' | 'americas';
 
 export interface PublicLanguageEntry {
   locale: PublicLocale8;
   autonym: string;
   englishName: string;
   region: LanguageRegion;
-  /** Native-script region/country label in Tesla's country-name slot. */
-  regionLabel: string;
-  rtl?: boolean;
 }
 
 export const LANGUAGE_REGION_ORDER: readonly LanguageRegion[] = [
+  'global',
   'asia-pacific',
   'middle-east',
   'europe',
@@ -24,173 +22,172 @@ export const LANGUAGE_REGION_ORDER: readonly LanguageRegion[] = [
 
 export const PUBLIC_LANGUAGE_REGISTRY: readonly PublicLanguageEntry[] = [
   {
+    locale: 'en',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.en,
+    englishName: 'English',
+    region: 'global',
+  },
+  {
     locale: 'ko',
     autonym: PUBLIC_LANGUAGE_AUTONYMS.ko,
     englishName: 'Korean',
     region: 'asia-pacific',
-    regionLabel: '대한민국',
   },
   {
     locale: 'zh-hant',
     autonym: PUBLIC_LANGUAGE_AUTONYMS['zh-hant'],
     englishName: 'Traditional Chinese',
     region: 'asia-pacific',
-    regionLabel: '台灣',
   },
   {
     locale: 'ja',
     autonym: PUBLIC_LANGUAGE_AUTONYMS.ja,
     englishName: 'Japanese',
     region: 'asia-pacific',
-    regionLabel: '日本',
   },
   {
     locale: 'vi',
     autonym: PUBLIC_LANGUAGE_AUTONYMS.vi,
     englishName: 'Vietnamese',
     region: 'asia-pacific',
-    regionLabel: 'Việt Nam',
   },
   {
     locale: 'id',
     autonym: PUBLIC_LANGUAGE_AUTONYMS.id,
     englishName: 'Indonesian',
     region: 'asia-pacific',
-    regionLabel: 'Indonesia',
   },
   {
     locale: 'th',
     autonym: PUBLIC_LANGUAGE_AUTONYMS.th,
     englishName: 'Thai',
     region: 'asia-pacific',
-    regionLabel: 'ประเทศไทย',
   },
   {
     locale: 'fil',
     autonym: PUBLIC_LANGUAGE_AUTONYMS.fil,
     englishName: 'Filipino',
     region: 'asia-pacific',
-    regionLabel: 'Pilipinas',
   },
   {
     locale: 'ar',
     autonym: PUBLIC_LANGUAGE_AUTONYMS.ar,
     englishName: 'Arabic',
     region: 'middle-east',
-    regionLabel: 'الشرق الأوسط',
-    rtl: true,
   },
   {
     locale: 'de',
     autonym: PUBLIC_LANGUAGE_AUTONYMS.de,
     englishName: 'German',
     region: 'europe',
-    regionLabel: 'Deutschsprachiger Raum',
   },
   {
     locale: 'es',
     autonym: PUBLIC_LANGUAGE_AUTONYMS.es,
     englishName: 'Spanish',
     region: 'europe',
-    regionLabel: 'España y América Latina',
   },
   {
     locale: 'fr',
     autonym: PUBLIC_LANGUAGE_AUTONYMS.fr,
     englishName: 'French',
     region: 'europe',
-    regionLabel: 'France et pays francophones',
   },
   {
     locale: 'pt',
     autonym: PUBLIC_LANGUAGE_AUTONYMS.pt,
     englishName: 'Portuguese',
     region: 'europe',
-    regionLabel: 'Portugal e Brasil',
-  },
-  {
-    locale: 'en',
-    autonym: PUBLIC_LANGUAGE_AUTONYMS.en,
-    englishName: 'English',
-    region: 'americas',
-    regionLabel: 'Global / English',
   },
 ];
 
 export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion, string>> = {
   ko: {
+    global: '글로벌',
     'asia-pacific': '아시아·태평양',
     'middle-east': '중동',
     europe: '유럽',
     americas: '아메리카',
   },
   'zh-hant': {
+    global: '全球',
     'asia-pacific': '亞太地區',
     'middle-east': '中東',
     europe: '歐洲',
     americas: '美洲',
   },
   en: {
+    global: 'Global',
     'asia-pacific': 'Asia Pacific',
     'middle-east': 'Middle East',
     europe: 'Europe',
     americas: 'Americas',
   },
   ja: {
+    global: 'グローバル',
     'asia-pacific': 'アジア太平洋',
     'middle-east': '中東',
     europe: 'ヨーロッパ',
     americas: 'アメリカ大陸',
   },
   vi: {
+    global: 'Toàn cầu',
     'asia-pacific': 'Châu Á – Thái Bình Dương',
     'middle-east': 'Trung Đông',
     europe: 'Châu Âu',
     americas: 'Châu Mỹ',
   },
   id: {
+    global: 'Global',
     'asia-pacific': 'Asia Pasifik',
     'middle-east': 'Timur Tengah',
     europe: 'Eropa',
     americas: 'Amerika',
   },
   th: {
+    global: 'ทั่วโลก',
     'asia-pacific': 'เอเชียแปซิฟิก',
     'middle-east': 'ตะวันออกกลาง',
     europe: 'ยุโรป',
     americas: 'ทวีปอเมริกา',
   },
   fil: {
+    global: 'Global',
     'asia-pacific': 'Asya Pasipiko',
     'middle-east': 'Gitnang Silangan',
     europe: 'Europa',
     americas: 'Amerika',
   },
   ar: {
+    global: 'عالمي',
     'asia-pacific': 'آسيا والمحيط الهادئ',
     'middle-east': 'الشرق الأوسط',
     europe: 'أوروبا',
     americas: 'الأمريكتان',
   },
   de: {
+    global: 'Global',
     'asia-pacific': 'Asien-Pazifik',
     'middle-east': 'Naher Osten',
     europe: 'Europa',
     americas: 'Amerika',
   },
   es: {
+    global: 'Global',
     'asia-pacific': 'Asia-Pacífico',
     'middle-east': 'Oriente Medio',
     europe: 'Europa',
     americas: 'América',
   },
   fr: {
+    global: 'International',
     'asia-pacific': 'Asie-Pacifique',
     'middle-east': 'Moyen-Orient',
     europe: 'Europe',
     americas: 'Amériques',
   },
   pt: {
+    global: 'Global',
     'asia-pacific': 'Ásia-Pacífico',
     'middle-east': 'Médio Oriente',
     europe: 'Europa',
@@ -204,7 +201,7 @@ export const LANGUAGE_PICKER_COPY: Record<
 > = {
   ko: {
     open: '지역 및 언어 선택',
-    title: '지역과 언어를 선택하세요',
+    title: '지역과 언어를 선택해 주세요',
     close: '닫기',
     current: '현재 언어',
   },
@@ -228,7 +225,7 @@ export const LANGUAGE_PICKER_COPY: Record<
   },
   vi: {
     open: 'Chọn khu vực và ngôn ngữ',
-    title: 'Quý vị hãy chọn khu vực và ngôn ngữ',
+    title: 'Vui lòng chọn khu vực và ngôn ngữ của quý vị',
     close: 'Đóng',
     current: 'Ngôn ngữ hiện tại',
   },
@@ -281,10 +278,6 @@ export const LANGUAGE_PICKER_COPY: Record<
     current: 'Língua atual',
   },
 };
-
-export function publicLanguageHtmlLang(locale: PublicLocale8): string {
-  return locale === 'zh-hant' ? 'zh-Hant' : locale;
-}
 
 export function groupedPublicLanguages(uiLocale: PublicLocale8): ReadonlyArray<{
   region: LanguageRegion;

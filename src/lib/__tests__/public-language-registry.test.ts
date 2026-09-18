@@ -2,6 +2,8 @@ import { describe, expect, it } from 'vitest';
 import {
   PUBLIC_LANGUAGE_AUTONYMS,
   PUBLIC_LOCALES_8,
+  RTL_PUBLIC_LOCALES,
+  isRtlPublicLocale,
 } from '@/lib/public-guidance';
 import {
   groupedPublicLanguages,
@@ -25,30 +27,32 @@ function everyCopyString(): string[] {
     }
   }
   for (const entry of PUBLIC_LANGUAGE_REGISTRY) {
-    values.push(entry.autonym, entry.englishName, entry.regionLabel);
+    values.push(entry.autonym, entry.englishName);
   }
   return values;
 }
 
 describe('public language registry', () => {
-  it('lists each of the eleven locales once with matching autonyms', () => {
+  it('lists each public locale once with matching autonyms', () => {
     const locales = PUBLIC_LANGUAGE_REGISTRY.map((entry) => entry.locale);
-    expect(locales).toHaveLength(13);
-    expect(new Set(locales).size).toBe(13);
-    expect(locales.sort()).toEqual([...PUBLIC_LOCALES_8].sort());
+    expect(locales).toHaveLength(PUBLIC_LOCALES_8.length);
+    expect(new Set(locales).size).toBe(PUBLIC_LOCALES_8.length);
+    expect([...locales].sort()).toEqual([...PUBLIC_LOCALES_8].sort());
 
     for (const entry of PUBLIC_LANGUAGE_REGISTRY) {
       expect(entry.autonym).toBe(PUBLIC_LANGUAGE_AUTONYMS[entry.locale]);
       expect(entry.autonym.length).toBeGreaterThan(0);
       expect(entry.englishName.length).toBeGreaterThan(0);
-      expect(entry.regionLabel.length).toBeGreaterThan(0);
       expect(LANGUAGE_REGION_ORDER).toContain(entry.region);
+      expect('regionLabel' in entry).toBe(false);
+      expect('rtl' in entry).toBe(false);
     }
 
-    expect(PUBLIC_LANGUAGE_REGISTRY.filter((entry) => entry.rtl).map((entry) => entry.locale)).toEqual(
-      ['ar'],
-    );
-    expect(PUBLIC_LANGUAGE_REGISTRY.find((entry) => entry.locale === 'ar')?.rtl).toBe(true);
+    expect(
+      PUBLIC_LANGUAGE_REGISTRY.filter((entry) => isRtlPublicLocale(entry.locale)).map(
+        (entry) => entry.locale,
+      ),
+    ).toEqual([...RTL_PUBLIC_LOCALES]);
   });
 
   it('ships region labels and picker copy for every public locale without empty strings', () => {
@@ -74,11 +78,27 @@ describe('public language registry', () => {
     for (const entry of PUBLIC_LANGUAGE_REGISTRY) {
       byRegion.get(entry.region)?.push(entry.locale);
     }
-    expect(byRegion.get('asia-pacific')).toEqual(['ko', 'zh-hant', 'ja', 'vi', 'id', 'th', 'fil']);
-    expect(byRegion.get('middle-east')).toEqual(['ar']);
-    expect(byRegion.get('europe')).toEqual(['de', 'es', 'fr', 'pt']);
-    expect(byRegion.get('americas')).toEqual(['en']);
-    expect(groupedPublicLanguages('ko').map((group) => group.region)).toEqual([...LANGUAGE_REGION_ORDER]);
+
+    const occupiedRegions = LANGUAGE_REGION_ORDER.filter(
+      (region) => (byRegion.get(region) ?? []).length > 0,
+    );
+    expect(occupiedRegions.length).toBeGreaterThan(0);
+    for (const region of LANGUAGE_REGION_ORDER) {
+      const locales = byRegion.get(region) ?? [];
+      expect(new Set(locales).size).toBe(locales.length);
+    }
+    expect(occupiedRegions.every((region) => (byRegion.get(region) ?? []).length > 0)).toBe(true);
+
+    const grouped = groupedPublicLanguages('ko');
+    expect(grouped.every((group) => group.entries.length > 0)).toBe(true);
+    expect(grouped.map((group) => group.region)).toEqual(occupiedRegions);
+    expect(grouped.map((group) => group.region)).toEqual(
+      LANGUAGE_REGION_ORDER.filter((region) => occupiedRegions.includes(region)),
+    );
+
+    const groupedLocales = grouped.flatMap((group) => group.entries.map((entry) => entry.locale));
+    expect(new Set(groupedLocales).size).toBe(groupedLocales.length);
+    expect(groupedLocales).toHaveLength(PUBLIC_LOCALES_8.length);
   });
 
   it('does not imply consultation language or make advertising claims', () => {

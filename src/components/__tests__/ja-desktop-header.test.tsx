@@ -36,7 +36,9 @@ describe('Japanese desktop header', () => {
     expect(html).toContain('href="/ja/contact">連絡先</a>');
     expect(html).toContain('href="/ja/contact#offices">アクセス</a>');
     expect(html).toContain('aria-haspopup="dialog"');
-    expect(html).toContain(`aria-label="${LANGUAGE_PICKER_COPY.ja.open}"`);
+    expect(html).toContain(
+      `aria-label="${LANGUAGE_PICKER_COPY.ja.open}: ${PUBLIC_LANGUAGE_AUTONYMS.ja}"`,
+    );
     expect(html).toContain(PUBLIC_LANGUAGE_AUTONYMS.ja);
     expect(html).not.toContain('<details');
     expect(html).not.toContain('aria-label="言語選択"');

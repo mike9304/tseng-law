@@ -5,6 +5,8 @@ import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
+  isRtlPublicLocale,
+  publicDocumentLanguage,
   resolvePublicLanguageSwitchTarget,
   type PublicLanguageSwitchOptions,
   type PublicLocale8,
@@ -13,9 +15,8 @@ import {
   groupedPublicLanguages,
   LANGUAGE_PICKER_COPY,
   PUBLIC_LANGUAGE_REGISTRY,
-  publicLanguageHtmlLang,
 } from '@/lib/public-language-registry';
-import { fallbackLanguageNotice } from '@/components/LocaleFlagSwitcher';
+import { fallbackLanguageNotice, localeFlagHref } from '@/components/LocaleFlagSwitcher';
 import {
   usePublicColumnSlugs,
   type PublicColumnSlugsByLocale,
@@ -30,6 +31,8 @@ export type GlobalLanguagePickerProps = {
   locale: PublicLocale8;
   className?: string;
   onBeforeOpen?: () => void;
+  onClosed?: () => void;
+  returnFocusTo?: () => HTMLElement | null;
 };
 
 export function closeLanguagePickerOnEscape(
@@ -40,6 +43,19 @@ export function closeLanguagePickerOnEscape(
   event.preventDefault();
   event.stopPropagation();
   onClose();
+}
+
+function dismissOpenSearchOverlay(): void {
+  if (typeof document === 'undefined') return;
+  document.querySelector<HTMLElement>('.search-overlay[data-open="true"]')?.click();
+}
+
+function resolvePickerInertRoot(): HTMLElement | null {
+  if (typeof document === 'undefined') return null;
+  const nextRoot = document.getElementById('__next');
+  if (nextRoot instanceof HTMLElement) return nextRoot;
+  const siteRoot = document.querySelector('.site');
+  return siteRoot instanceof HTMLElement ? siteRoot : null;
 }
 
 function GlobeIcon() {
@@ -69,6 +85,8 @@ export function GlobalLanguagePickerView({
   onOpen,
   onClose,
   onBeforeOpen,
+  onClosed,
+  returnFocusTo,
 }: GlobalLanguagePickerProps & {
   pathname: string;
   columnSlugsByLocale?: PublicColumnSlugsByLocale | null;
@@ -92,23 +110,35 @@ export function GlobalLanguagePickerView({
   const rootClassName = [styles.root, className].filter(Boolean).join(' ');
 
   const captureTriggerAsOpener = useCallback(() => {
+    const custom = returnFocusTo?.();
+    if (custom) {
+      openerRef.current = custom;
+      return;
+    }
     const trigger = triggerRef.current;
     openerRef.current = resolvePublishedOverlayOpener(trigger) ?? trigger;
-  }, []);
+  }, [returnFocusTo]);
 
   const restoreTriggerFocus = useCallback(() => {
+    const custom = returnFocusTo?.();
+    if (custom) {
+      custom.focus();
+      return;
+    }
     triggerRef.current?.focus();
-  }, []);
+  }, [returnFocusTo]);
 
   const handleClose = useCallback(() => {
     onClose();
     restoreTriggerFocus();
+    onClosed?.();
     if (typeof window !== 'undefined') {
       window.setTimeout(restoreTriggerFocus, 0);
     }
-  }, [onClose, restoreTriggerFocus]);
+  }, [onClose, onClosed, restoreTriggerFocus]);
 
   const handleOpen = useCallback(() => {
+    dismissOpenSearchOverlay();
     captureTriggerAsOpener();
     onBeforeOpen?.();
     onOpen();
@@ -148,20 +178,31 @@ export function GlobalLanguagePickerView({
     return () => document.removeEventListener('keydown', handler, true);
   }, [handleOverlayKeyDown, open]);
 
+  useEffect(() => {
+    if (!open) return;
+    const root = resolvePickerInertRoot();
+    if (!root) return;
+    const hadInert = root.hasAttribute('inert');
+    root.setAttribute('inert', '');
+    return () => {
+      if (hadInert) {
+        root.setAttribute('inert', '');
+        return;
+      }
+      root.removeAttribute('inert');
+    };
+  }, [open]);
+
   const overlay = open ? (
-    <div
-      ref={overlayRef}
-      className={styles.overlay}
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby={titleId}
-      onClick={handleClose}
-      onKeyDown={handleOverlayKeyDown}
-    >
+    <div ref={overlayRef} className={styles.overlay} onClick={handleClose}>
       <div
         className={styles.panel}
-        dir={locale === 'ar' ? 'rtl' : undefined}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={titleId}
+        dir={isRtlPublicLocale(locale) ? 'rtl' : undefined}
         onClick={(event) => event.stopPropagation()}
+        onKeyDown={handleOverlayKeyDown}
       >
         <div className={styles.header}>
           <h2 className={styles.title} id={titleId}>
@@ -188,6 +229,7 @@ export function GlobalLanguagePickerView({
                     entry.locale,
                     switchOptions,
                   );
+                  const href = localeFlagHref(pathname, entry.locale, switchOptions);
                   const isCurrent = locale === entry.locale;
                   const isFallback = switchTarget.fallback !== 'exact';
                   const notice = isFallback
@@ -197,10 +239,11 @@ export function GlobalLanguagePickerView({
                   return (
                     <li key={entry.locale}>
                       <Link
-                        href={switchTarget.href}
+                        href={href}
                         className={styles.item}
-                        lang={publicLanguageHtmlLang(entry.locale)}
-                        aria-current={isCurrent ? true : undefined}
+                        lang={publicDocumentLanguage(entry.locale)}
+                        dir={isRtlPublicLocale(entry.locale) ? 'rtl' : undefined}
+                        aria-current={isCurrent ? 'page' : undefined}
                         aria-label={notice ? `${entry.autonym}. ${notice}` : undefined}
                         title={notice}
                         onClick={handleClose}
@@ -212,7 +255,7 @@ export function GlobalLanguagePickerView({
                             <span className={styles.badge}>{copy.current}</span>
                           ) : null}
                         </span>
-                        <span className={styles.regionLabel}>{entry.regionLabel}</span>
+                        <span className={styles.englishName}>{entry.englishName}</span>
                         {notice ? <span className={styles.notice}>{notice}</span> : null}
                       </Link>
                     </li>
@@ -235,7 +278,7 @@ export function GlobalLanguagePickerView({
           type="button"
           aria-haspopup="dialog"
           aria-expanded={open}
-          aria-label={copy.open}
+          aria-label={`${copy.open}: ${currentAutonym}`}
           onClick={open ? handleClose : handleOpen}
         >
           <GlobeIcon />

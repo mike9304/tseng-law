@@ -12,7 +12,6 @@ import {
   buildGuidanceCoreLanguageAlternates,
   guidanceCanonicalUrl,
   guidancePublicPath,
-  isExistingSiteLocale4,
   isGuidanceLocale4,
   publicDocumentLanguage,
   type ExistingSiteLocale4,
@@ -148,18 +147,17 @@ async function openHeaderLanguageSwitcher(
   locale: PublicLocale8,
   viewportWidth: number,
 ): Promise<Locator> {
-  // The site header owns the switcher for all eight locales now; the page body
-  // must never render a second one (the removed in-component guidance dropdown).
+  // The site header owns the picker for all public locales; the page body
+  // must never render a second language control (the removed in-component
+  // guidance dropdown).
   await expect(
-    page.locator('header[data-public-site-header] .header-utility .locale-flag-switcher'),
-    `${locale} @${viewportWidth} header switcher count`,
+    page.locator('header[data-public-site-header] .header-utility button[aria-haspopup="dialog"]'),
+    `${locale} @${viewportWidth} header picker trigger count`,
   ).toHaveCount(1);
   await expect(
     page.locator('[data-guidance-shell="true"] .locale-flag-switcher'),
     `${locale} @${viewportWidth} duplicate switcher in page body`,
   ).toHaveCount(0);
-
-  let switcher: Locator;
 
   if (viewportWidth <= MOBILE.width) {
     const toggle = old4Header(page).locator('button.mobile-toggle');
@@ -167,35 +165,34 @@ async function openHeaderLanguageSwitcher(
     await toggle.click();
     const drawer = page.locator('#public-mobile-nav-drawer');
     await expect(drawer).toBeVisible();
-    switcher = drawer.locator('.locale-flag-switcher');
-    await expect(switcher, `${locale} @${viewportWidth} drawer switcher count`).toHaveCount(1);
+    const trigger = drawer.locator('button[aria-haspopup="dialog"]');
+    await expect(trigger, `${locale} @${viewportWidth} drawer picker trigger`).toHaveCount(1);
+    await trigger.click();
   } else {
-    switcher = old4Header(page).locator('.locale-flag-switcher').first();
+    const trigger = old4Header(page)
+      .locator('.header-utility button[aria-haspopup="dialog"]')
+      .first();
+    await expect(trigger).toBeVisible();
+    await trigger.click();
   }
 
-  const details = switcher.locator('details');
-  await expect(details).toBeVisible();
-  if ((await details.getAttribute('open')) === null) {
-    await details.locator('summary').click();
-  }
-  await expect(details).toHaveAttribute('open', '');
+  const dialog = page.locator('[role="dialog"][aria-modal="true"][aria-labelledby]');
+  await expect(dialog).toBeVisible();
   await expect(
-    switcher.getByRole('link', { name: PUBLIC_LANGUAGE_AUTONYMS[locale], exact: true }),
+    dialog.getByRole('link', { name: PUBLIC_LANGUAGE_AUTONYMS[locale] }).first(),
   ).toBeVisible();
-  await expect(switcher.locator('.locale-flag-switcher-flag')).toHaveCount(0);
-  // G21 contract kept: the open menu offers all eight languages, and every one
-  // of them is actually visible (not painted behind the header CTA).
-  const options = switcher.locator('.locale-flag-switcher-link');
+  // G21 contract kept: the open dialog offers every public language.
+  const options = dialog.locator('a[href]');
   await expect(options, `${locale} @${viewportWidth} language options`).toHaveCount(
     PUBLIC_LOCALES_8.length,
   );
-  for (const [index, optionLocale] of PUBLIC_LOCALES_8.entries()) {
+  for (const optionLocale of PUBLIC_LOCALES_8) {
     await expect(
-      options.nth(index),
+      options.filter({ hasText: PUBLIC_LANGUAGE_AUTONYMS[optionLocale] }),
       `${locale} @${viewportWidth} option ${optionLocale}`,
-    ).toBeVisible();
+    ).toHaveCount(1);
   }
-  return switcher;
+  return dialog;
 }
 
 async function clickLanguage(
@@ -210,7 +207,7 @@ async function clickLanguage(
     currentLocale,
     viewportWidth,
   );
-  await switcher.getByRole('link', { name: autonym, exact: true }).click();
+  await switcher.getByRole('link', { name: autonym }).click();
 }
 
 async function clickMenuToContact(
@@ -234,7 +231,7 @@ async function clickMenuToContact(
     .click();
 }
 
-async function clickBrandHome(page: Page, locale: PublicLocale8): Promise<void> {
+async function clickBrandHome(page: Page, _locale: PublicLocale8): Promise<void> {
   await old4Header(page).locator('a.header-logo').click();
 }
 

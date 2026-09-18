@@ -37,6 +37,12 @@
 - son7-b9 mena/ar-routing-20260916: 2d435998 뱃지 ar 라벨·guidanceColumnCategoryLabel 리졸버(vi/id/th/fil 영어 폴백 테스트 핀), 7a23c160 **SEA 카테고리 붕괴 수정**(vi/id/th/fil 칼럼 17편이 categoryFromString 미인식으로 전부 legal → frontmatter 문구 정규화·파리티 테스트, unit 10818). 결정: RC(76360346) 동결, ar 배포 후 RC2로 merge→게이트→ASK. vi/id/th/fil 뱃지 라벨은 frontmatter 문구 재사용.
 - 초안 브랜치 mena/ar-drafts-20260916 **8b9e7c4c**: 중재·집행 EN 랜딩 4로케일 + /ar/arbitration-enforcement(EXTRA 키 2단 구조), 마커 43. son7-b9 라우팅 독립 검수 PASS(214건, 미발행 로케일 unavailable·sitemap ar만·코어 10 불변). x-default는 2언어 이상 시점에 규칙 결정. ② 단계(ASK-3)에서 vi/id/th/fil 본문 추가 후 변호사 검수. `visa-residence`는 본문 생길 때 EXTRA_PAGE_KEYS/LOCALES 2줄.
 
+## B14. main 기준선 적색 수용(2026-09-18, 사용자 스킵)
+- ASK-claude-20260918-semiconductor-018 사용자 스킵 = 결정 아님. 018 공개 유지/철회·홈 대표글 순서 **어느 쪽으로도 바꾸지 말 것**, 기대값·임베딩·푸시를 이 결정에 묶지 말 것, **재질문 금지**.
+- 결과: origin/main vitest 15건(칼럼 17→18 고정값·홈 featured·llms 17 핀·018 초안 가드 2건)과 안내 5로케일 체커 17/18(018 numbers)이 **상시 적색**.
+- 이 레인 배포 게이트 기준: "전체 그린"이 아니라 **기준선 대비 신규 실패 0**. 기준선 목록 = column-category-parity:24·48 / insights-archive-order:9·13 / llms.txt route:270-271(vi·id·th·fil) / semiconductor-drafts:83 / semiconductor-drafts-import / embeddings-content-sync / public-intent-search / home-insights-publication-order / de·vi·id·th·fil 018 numbers. 커밋 전후 같은 집합인지 확인하고, 새 실패가 있으면 그것만 차단 사유.
+- 링크 패리티(35파일)는 이 기준으로 통과해 fdde5c4b로 라이브 반영됨.
+
 ## B13. 알려진 도구 결함(2026-09-17, son7-db 보고)
 - scripts/verify-multilingual-live.mjs 가 PUBLIC_LOCALES_8(8개)만 순회해 de/es 홈·연락처·칼럼을 "not 200"으로 오판(실제 200). 이 스크립트 PASS 수치(558 등)는 de/es 추가(5f116286) 이전 기준. 수정은 공유 스크립트라 소유 레인 합의 후 별건 — 그 전까지 de/es 라이브 확인은 curl 직접.
 - main 기준 SHA: c4270097(반도체 공급사 랜딩, ar 여성형 정정 포함).

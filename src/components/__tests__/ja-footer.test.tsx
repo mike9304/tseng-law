@@ -67,6 +67,7 @@ describe('footer social localization', () => {
       { label: '台湾弁護士（日本語相談）', href: '/ja/taiwan-lawyer' },
       { label: '台湾会社設立の弁護士', href: '/ja/taiwan-company-setup-lawyer' },
       { label: '台湾の半導体材料・装置サプライヤー法務', href: '/ja/taiwan-semiconductor-supplier-legal' },
+      { label: '半導体企業実務ガイド', href: '/ja/semiconductor' },
       { label: '日本語対応の台湾弁護士', href: '/ja/lawyers/wei-tseng' },
       { label: '台湾訴訟の弁護士', href: '/ja/taiwan-litigation-lawyer' },
       { label: '台湾会社設立ガイド', href: '/ja/guides/taiwan-company-setup' },

@@ -117,7 +117,7 @@ describe('English column corpus summaries', () => {
   const files = fs.readdirSync(enDir).filter((name) => name.endsWith('.md')).sort();
 
   it('gives every EN column a 150–160 character authored summary without Korean-company framing or an ellipsis', () => {
-    expect(files).toHaveLength(17);
+    expect(files).toHaveLength(18);
 
     for (const file of files) {
       const raw = fs.readFileSync(path.join(enDir, file), 'utf8');
@@ -139,7 +139,7 @@ describe('English column corpus summaries', () => {
 
   it('reuses those summaries in EN meta description, Article JSON-LD, and llms.txt annotations', () => {
     const posts = getAllColumnPosts('en');
-    expect(posts).toHaveLength(17);
+    expect(posts).toHaveLength(18);
     const llms = buildLocaleLlmsTxt('en');
 
     for (const post of posts) {

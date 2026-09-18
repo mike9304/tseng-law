@@ -111,9 +111,7 @@ describe('builder column storage backend', () => {
       const posts = await getAllColumnPostsIncludingBlob('ko');
       const post = posts.find((item) => item.slug === 'taiwan-logistics-business-setup');
 
-      expect(posts[0]?.slug).toBe(
-        'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
-      );
+      expect(posts[0]?.slug).toBe('taiwan-semiconductor-market-entry');
       expect(post?.dateDisplay).toBe('2025년 9월 13일');
       expect(post?.publicationDate).toBe('2025-09-13');
       expect(post?.readTime).toBe('9분 분량');
@@ -137,14 +135,16 @@ describe('builder column storage backend', () => {
 
         const posts = await getAllColumnPostsIncludingBlob(locale);
 
-        expect(posts).toHaveLength(17);
-        expect(posts[0]?.slug).toBe(
+        expect(posts).toHaveLength(18);
+        expect(posts[0]?.slug).toBe('taiwan-semiconductor-market-entry');
+        expect(posts[0]?.publicationDate).toBe('2026-09-17');
+        expect(posts[1]?.slug).toBe(
           'taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide',
         );
-        expect(posts[0]?.publicationDate).toBe('2026-02-04');
-        expect(posts[1]?.slug).toBe('taiwan-company-establishment-basics');
+        expect(posts[1]?.publicationDate).toBe('2026-02-04');
+        expect(posts[2]?.slug).toBe('taiwan-company-establishment-basics');
         expect(posts.at(-1)?.slug).toBe('taiwan-logistics-business-setup');
-        expect(posts.slice(1).every((post) => post.publicationDate === '2025-09-13')).toBe(true);
+        expect(posts.slice(2).every((post) => post.publicationDate === '2025-09-13')).toBe(true);
       } finally {
         await rm(root, { recursive: true, force: true });
       }

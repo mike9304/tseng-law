@@ -203,8 +203,9 @@ const stalePublicCopy = [
   "['traffic accident', 'overtaking', 'fault allocation']",
 ] as const;
 
-const expectedPostCount = 17;
+const expectedPostCount = 18;
 const expectedOrderedPostIds = [
+  'semiconductor-market-entry',
   'gym-injury-lawsuit',
   'cosmetics-market-entry',
   'company-advanced-2',
@@ -224,15 +225,15 @@ const expectedOrderedPostIds = [
   'traffic-accident-procedure',
 ];
 const expectedHomeFeaturedIds = [
+  'semiconductor-market-entry',
   'gym-injury-lawsuit',
   'cosmetics-market-entry',
-  'company-advanced-2',
 ];
 const expectedOtherPostsSha256 = {
-  ko: '018a04ac98b64e0747323875fb4d99c55e8a068fe2166eaf1d4ee646d46d4840',
+  ko: '3de8b200827c3e956e861843a89abdc6cf8fa43d0df3541afd717724e57fa548',
   'zh-hant':
-    'e7bfc81d5e3381a1b6986ab129f433e8b70d8d80b49577fc5f59fb7ecf363031',
-  en: 'dbad0d2163251eb43d265786d52417524e6c6607528e7e8f2e1e0ef158c77e79',
+    'fc533cbf51c647ea851018f0e1bf8137c4cbb8208977291a79b53f05206124e1',
+  en: '0acec06a17b31de792af5dd9ef033f3ac0845c10746d5a778a6596a332e320e4',
 } as const;
 
 function getRelatedColumn(locale: (typeof siteLocales)[number]) {

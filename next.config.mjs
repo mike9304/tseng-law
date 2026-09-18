@@ -24,6 +24,7 @@ const legacyColumnAliases = {
   'mandatory-employment': 'taiwan-mandatory-employment-period',
   'labor-severance': 'taiwan-labor-severance-law',
   'traffic-accident-procedure': 'taiwan-traffic-accident-procedure',
+  'semiconductor-market-entry': 'taiwan-semiconductor-market-entry',
 };
 
 const sensitiveRouteSources = [
@@ -182,7 +183,16 @@ const nextConfig = {
       },
     ]);
 
+    const semiconductorBoardRedirects = locales.flatMap((locale) => [
+      {
+        source: `/${locale}/services/semiconductor-companies`,
+        destination: `/${locale}/semiconductor`,
+        permanent: true,
+      },
+    ]);
+
     return [
+      ...semiconductorBoardRedirects,
       {
         source: '/',
         destination: '/ko',

@@ -132,15 +132,16 @@ describe('sitemap column lastModified', () => {
       // /pricing, /contact, /lawyers, /lawyers/wei-tseng, /faq, /videos,
       // /privacy, /disclaimer, /accessibility, four JA intent pages,
       // /korean-lawyer-in-taiwan, /ai-intake, /guides/taiwan-company-setup,
-      // /columns archive, 17 JA column details, and all six JA service
+      // /columns archive, 18 JA column details, and all six JA service
       // details (+41). Builder fixtures still drop 9 EN-only noindex routes.
       // Plus 70 guidance core URLs (7 locales × 10 dictionary pages), plus one
       // URL per translated column file present in
       // src/content/columns-{vi,id,th,fil,ar,de,es} (counted from disk so this
       // assertion tracks the growing corpus).
       // Semiconductor hub adds 4 URLs (ko/zh-hant/en STATIC_PATHS + ja entry).
-      beforeFiltering: 245 + guidanceTranslatedColumnCount,
-      afterFiltering: 236 + guidanceTranslatedColumnCount,
+      // Public semiconductor guide board adds 4 more URLs.
+      beforeFiltering: 253 + guidanceTranslatedColumnCount,
+      afterFiltering: 244 + guidanceTranslatedColumnCount,
       removed: 9,
     });
 
@@ -343,6 +344,7 @@ describe('sitemap column lastModified', () => {
     '/taiwan-company-setup-lawyer',
     '/taiwan-litigation-lawyer',
     '/taiwan-semiconductor-supplier-legal',
+    '/semiconductor',
     '/korean-lawyer-in-taiwan',
     '/ai-intake',
     '/guides/taiwan-company-setup',

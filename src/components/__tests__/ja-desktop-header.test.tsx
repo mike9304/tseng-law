@@ -12,6 +12,8 @@ vi.mock('next/navigation', () => ({
 }));
 
 import Header from '@/components/Header';
+import { LANGUAGE_PICKER_COPY } from '@/lib/public-language-registry';
+import { PUBLIC_LANGUAGE_AUTONYMS } from '@/lib/public-guidance';
 import type { SiteLocale } from '@/lib/locales';
 
 const headerSource = readFileSync(
@@ -24,30 +26,8 @@ function renderHeader(locale: SiteLocale): string {
   return renderToStaticMarkup(<Header locale={locale} />);
 }
 
-const EXPECTED_AUTONYMS = [
-  '한국어',
-  '繁體中文',
-  'English',
-  '日本語',
-  'Tiếng Việt',
-  'Bahasa Indonesia',
-  'ไทย',
-  'Filipino',
-] as const;
-
-const EXPECTED_LANGUAGE_HREFS = [
-  '/ko/columns',
-  '/zh-hant/columns',
-  '/en/columns',
-  '/ja/columns',
-  '/vi/columns',
-  '/id/columns',
-  '/th/columns',
-  '/fil/columns',
-] as const;
-
 describe('Japanese desktop header', () => {
-  it('renders Japanese branding, home and utility links, and the shared flag switcher', () => {
+  it('renders Japanese branding, home and utility links, and the global language picker', () => {
     const html = renderHeader('ja');
 
     expect(html).toMatch(/class="(?:[^" ]+ )*header-logo(?: [^" ]+)*"[^>]*href="\/ja"/);
@@ -55,14 +35,12 @@ describe('Japanese desktop header', () => {
     expect(html).toContain('aria-label="補助メニュー"');
     expect(html).toContain('href="/ja/contact">連絡先</a>');
     expect(html).toContain('href="/ja/contact#offices">アクセス</a>');
-    expect(html).toContain('<details');
-    expect(html).toContain('aria-label="言語選択"');
-    for (const autonym of EXPECTED_AUTONYMS) {
-      expect(html).toContain(autonym);
-    }
-    for (const href of EXPECTED_LANGUAGE_HREFS) {
-      expect(html).toContain(`href="${href}"`);
-    }
+    expect(html).toContain('aria-haspopup="dialog"');
+    expect(html).toContain(`aria-label="${LANGUAGE_PICKER_COPY.ja.open}"`);
+    expect(html).toContain(PUBLIC_LANGUAGE_AUTONYMS.ja);
+    expect(html).not.toContain('<details');
+    expect(html).not.toContain('aria-label="言語選択"');
+    expect(html).not.toContain('href="/vi/columns"');
     expect(html).not.toContain('🇰🇷');
     expect(html).not.toContain('🇯🇵');
     expect(html).not.toContain('🇹🇼');

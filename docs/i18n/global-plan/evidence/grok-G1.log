@@ -1,0 +1,80 @@
+[WO-G1 시작 Fri Sep 18 15:05:56 KST 2026]
+[WO-G1 재시작 Fri Sep 18 15:13:31 KST 2026]
+[WO-G1 시작(툴 bg) Fri Sep 18 15:15:55 KST 2026]
+WO-G1 executed inside this workspace only. Header utility now opens a globe overlay picker; footer switcher is unchanged.
+
+## ① diff --stat
+
+```
+ M src/app/globals.css
+ M src/components/Header.tsx
+ M src/components/__tests__/ja-desktop-header.test.tsx
+?? docs/i18n/global-plan/evidence/
+?? src/components/GlobalLanguagePicker.module.css
+?? src/components/GlobalLanguagePicker.tsx
+?? src/components/__tests__/global-language-picker.test.tsx
+?? src/lib/__tests__/public-language-registry.test.ts
+?? src/lib/public-language-registry.ts
+ src/app/globals.css                                | 15 ++++++--
+ src/components/Header.tsx                          |  4 +--
+ .../__tests__/ja-desktop-header.test.tsx           | 40 +++++-----------------
+ 3 files changed, 23 insertions(+), 36 deletions(-)
+```
+
+`docs/i18n/global-plan/evidence/` was already untracked before this work. No git add/commit/push.
+
+## ② 명령 출력
+
+`git status --short && git diff --stat` — above.
+
+`npm run typecheck 2>&1 | tail -2` (exit 0):
+
+```
+Generating route types...
+✓ Route types generated successfully
+```
+
+`tsc` emitted no diagnostics (silent success after typegen).
+
+`npx vitest run … 2>&1 | tail -8` (exit 0):
+
+```
+ ✓ src/components/__tests__/ja-desktop-header.test.tsx (6 tests) 16ms
+
+ Test Files  8 passed (8)
+      Tests  58 passed (58)
+   Start at  15:29:08
+   Duration  482ms (transform 447ms, setup 98ms, collect 1.63s, tests 66ms, environment 1ms, prepare 363ms)
+```
+
+`npx eslint --max-warnings=0 --ext .ts,.tsx $(git diff --name-only | grep -E '^src/.*\.(ts|tsx)$') src/lib/public-language-registry.ts src/components/GlobalLanguagePicker.tsx 2>&1 | tail -3` (exit 0): empty stdout.
+
+## ③ 모바일 드로어 처리 판단
+
+`MobileNavDrawer.tsx` already has a language control (`LocaleFlagSwitcher` in `drawer-utilities`, with `onLocaleSelect={onClose}`). Per WO (“있으면 그대로 두고”), the drawer was **not** modified and no second globe button was added. Desktop header utility is hidden at `max-width: 1024px`, so mobile still uses that existing dropdown.
+
+## ④ 11언어 카피
+
+| locale | open | title | close | current | asia-pacific | middle-east | europe | americas |
+|---|---|---|---|---|---|---|---|---|
+| ko | 지역 및 언어 선택 | 지역과 언어를 선택하세요 | 닫기 | 현재 언어 | 아시아·태평양 | 중동 | 유럽 | 아메리카 |
+| zh-hant | 選擇地區與語言 | 請選擇您的地區與語言 | 關閉 | 目前語言 | 亞太地區 | 中東 | 歐洲 | 美洲 |
+| en | Select region and language | Select your region and language | Close | Current language | Asia Pacific | Middle East | Europe | Americas |
+| ja | 地域と言語を選択 | 地域と言語を選択してください | 閉じる | 現在の言語 | アジア太平洋 | 中東 | ヨーロッパ | アメリカ大陸 |
+| vi | Chọn khu vực và ngôn ngữ | Quý vị hãy chọn khu vực và ngôn ngữ | Đóng | Ngôn ngữ hiện tại | Châu Á – Thái Bình Dương | Trung Đông | Châu Âu | Châu Mỹ |
+| id | Pilih wilayah dan bahasa | Silakan pilih wilayah dan bahasa | Tutup | Bahasa saat ini | Asia Pasifik | Timur Tengah | Eropa | Amerika |
+| th | เลือกภูมิภาคและภาษา | กรุณาเลือกภูมิภาคและภาษา | ปิด | ภาษาปัจจุบัน | เอเชียแปซิฟิก | ตะวันออกกลาง | ยุโรป | ทวีปอเมริกา |
+| fil | Pumili ng rehiyon at wika | Mangyaring pumili ng rehiyon at wika | Isara | Kasalukuyang wika | Asya Pasipiko | Gitnang Silangan | Europa | Amerika |
+| ar | اختيار المنطقة واللغة | يرجى اختيار منطقتكم ولغتكم | إغلاق | اللغة الحالية | آسيا والمحيط الهادئ | الشرق الأوسط | أوروبا | الأمريكتان |
+| de | Region und Sprache wählen | Bitte wählen Sie Ihre Region und Sprache | Schließen | Aktuelle Sprache | Asien-Pazifik | Naher Osten | Europa | Amerika |
+| es | Seleccionar región e idioma | Seleccione su región e idioma | Cerrar | Idioma actual | Asia-Pacífico | Oriente Medio | Europa | América |
+
+Groups: AP `ko zh-hant ja vi id th fil` · ME `ar` (`الشرق الأوسط`, no country) · EU `de es` · AM `en` (`Global / English`) once.
+
+## ⑤ 미해결
+
+- Browser overlay (click / Esc / focus / RTL layout) was not exercised: WO forbids Playwright, `next start`, and build.
+- Esc/focus unit coverage is the exported Escape helper plus `usePublishedOverlayFocus` source wiring. This repo’s vitest environment is `node`, not jsdom, so a live Tab-trap/focus-return cycle was not run.
+- `LocaleFlagSwitcher.tsx` was not edited: `fallbackLanguageNotice` was already exported.
+- Visual Tesla parity (overlay chrome, 24px globe in the 28px utility bar) is unconfirmed in a browser.
+=== WO-G1 종료 code=0 Fri Sep 18 15:30:07 KST 2026 ===

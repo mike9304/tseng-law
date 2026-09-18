@@ -14,7 +14,7 @@ import {
   guidanceUtilityLinks,
   publicSiteContent,
 } from '@/lib/public-site-chrome';
-import LocaleFlagSwitcher from '@/components/LocaleFlagSwitcher';
+import GlobalLanguagePicker from '@/components/GlobalLanguagePicker';
 import SearchOverlay from '@/components/SearchOverlay';
 import MobileNavDrawer from '@/components/MobileNavDrawer';
 import SmartLink from '@/components/SmartLink';
@@ -876,7 +876,7 @@ export default function Header({ locale }: { locale: PublicLocale8 }) {
                 )}
               </div>
             ) : null}
-            <LocaleFlagSwitcher locale={locale} className="utility-lang" />
+            <GlobalLanguagePicker locale={locale} className="utility-lang" />
           </nav>
         </div>
       </div>

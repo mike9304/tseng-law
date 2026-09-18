@@ -5529,7 +5529,9 @@ section.home-results-panel--editorial {
 .utility-nav > * > a,
 .utility-nav > * > button,
 .utility-nav .utility-lang > a,
-.utility-nav .utility-lang > * > a {
+.utility-nav .utility-lang > button,
+.utility-nav .utility-lang > * > a,
+.utility-nav .utility-lang > * > button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -5557,8 +5559,12 @@ section.home-results-panel--editorial {
 .utility-nav > * > button:focus-visible,
 .utility-nav .utility-lang > a:hover,
 .utility-nav .utility-lang > a:focus-visible,
+.utility-nav .utility-lang > button:hover,
+.utility-nav .utility-lang > button:focus-visible,
 .utility-nav .utility-lang > * > a:hover,
-.utility-nav .utility-lang > * > a:focus-visible {
+.utility-nav .utility-lang > * > a:focus-visible,
+.utility-nav .utility-lang > * > button:hover,
+.utility-nav .utility-lang > * > button:focus-visible {
   background: rgba(226, 232, 240, 0.58);
   color: var(--text-heading);
 }
@@ -5613,8 +5619,11 @@ section.home-results-panel--editorial {
 
 .header.transparent .utility-nav > a,
 .header.transparent .utility-nav > * > a,
+.header.transparent .utility-nav > * > button,
 .header.transparent .utility-nav .utility-lang > a,
-.header.transparent .utility-nav .utility-lang > * > a {
+.header.transparent .utility-nav .utility-lang > button,
+.header.transparent .utility-nav .utility-lang > * > a,
+.header.transparent .utility-nav .utility-lang > * > button {
   color: #526176;
 }
 

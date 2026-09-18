@@ -62,6 +62,8 @@ describe('new-four column directory mapping', () => {
       ar: 'src/content/columns-ar',
       de: 'src/content/columns-de',
       es: 'src/content/columns-es',
+      fr: 'src/content/columns-fr',
+      pt: 'src/content/columns-pt',
     });
     expect(OPTIONAL_COLUMN_LOCALES).toEqual(GUIDANCE_LOCALES_4);
     expect(COLUMN_CONTENT_DIR_BY_LOCALE.vi).not.toBe(COLUMN_CONTENT_DIR_BY_LOCALE.ko);
@@ -132,6 +134,8 @@ describe('new-four column hreflang + sitemap include/exclude', () => {
           || locale === 'ar'
           || locale === 'de'
           || locale === 'es'
+          || locale === 'fr'
+          || locale === 'pt'
         ) {
           return hasColumnTranslation(locale, slug, { columnsDir: missing });
         }
@@ -155,6 +159,8 @@ describe('new-four column hreflang + sitemap include/exclude', () => {
     expect(languages).not.toHaveProperty('ar');
     expect(languages).not.toHaveProperty('de');
     expect(languages).not.toHaveProperty('es');
+    expect(languages).not.toHaveProperty('fr');
+    expect(languages).not.toHaveProperty('pt');
   });
 
   it('includes a guidance locale in hreflang and sitemap records only when a file exists', () => {
@@ -162,7 +168,7 @@ describe('new-four column hreflang + sitemap include/exclude', () => {
     const locales = getColumnAlternateLocales(GYM_SLUG, {
       hasTranslation: (locale, slug) => {
         if (locale === 'vi') return hasColumnTranslation('vi', slug, { columnsDir: present });
-        if (locale === 'id' || locale === 'th' || locale === 'fil' || locale === 'ar' || locale === 'de' || locale === 'es') return false;
+        if (locale === 'id' || locale === 'th' || locale === 'fil' || locale === 'ar' || locale === 'de' || locale === 'es' || locale === 'fr' || locale === 'pt') return false;
         return true;
       },
     });
@@ -180,7 +186,7 @@ describe('new-four column hreflang + sitemap include/exclude', () => {
             date: post.date,
           }));
         }
-        if (locale === 'id' || locale === 'th' || locale === 'fil' || locale === 'ar' || locale === 'de' || locale === 'es') return [];
+        if (locale === 'id' || locale === 'th' || locale === 'fil' || locale === 'ar' || locale === 'de' || locale === 'es' || locale === 'fr' || locale === 'pt') return [];
         return [{ slug: GYM_SLUG, date: '2026-07-25' }];
       },
     });

@@ -36,7 +36,7 @@ import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
  * present in all four, so "all four dropped it" cannot pass as parity alone.
  */
 
-const LOCALES = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es'] as const satisfies readonly GuidanceLocale[];
+const LOCALES = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt'] as const satisfies readonly GuidanceLocale[];
 
 /** Per-locale marker for one disclosure element. */
 type ElementMarkers = Record<GuidanceLocale, RegExp>;
@@ -58,6 +58,8 @@ const ELEMENTS = {
     ar: /طريقة ممكنة/,
     de: /gangbare/,
     es: /forma posible|vía posible/,
+    fr: /manière possible/,
+    pt: /forma possível/,
   },
   /** Support in a language outside the four consultation languages is not guaranteed. */
   'no-other-language-guarantee': {
@@ -68,6 +70,8 @@ const ELEMENTS = {
     ar: /لغة أخرى/,
     de: /anderen Sprache/,
     es: /otro idioma/,
+    fr: /autre langue/,
+    pt: /outra língua/,
   },
   /** No reply time is promised. */
   'no-reply-time-promise': {
@@ -78,6 +82,8 @@ const ELEMENTS = {
     ar: /مدة للرد/,
     de: /Antwortfrist/,
     es: /plazo de respuesta/,
+    fr: /délai de réponse/,
+    pt: /prazo de resposta/,
   },
   /** The confirmation step is a step, not a promise. */
   'confirmation-is-not-a-promise': {
@@ -88,6 +94,8 @@ const ELEMENTS = {
     ar: /لا وعد/,
     de: /kein Versprechen/,
     es: /no es una promesa/,
+    fr: /non une promesse/,
+    pt: /não é uma promessa/,
   },
   /** No interpreter is arranged. */
   'no-interpreter-promise': {
@@ -98,6 +106,8 @@ const ELEMENTS = {
     ar: /ترجمة فورية/,
     de: /Dolmetscher/,
     es: /intérprete/,
+    fr: /interprétation/,
+    pt: /interpretação/,
   },
   /** Not every matter can be accepted. */
   'not-every-matter-accepted': {
@@ -108,6 +118,8 @@ const ELEMENTS = {
     ar: /قبول كل قضية/,
     de: /jede Sache/,
     es: /todos los asuntos/,
+    fr: /toutes les affaires/,
+    pt: /todos os assuntos/,
   },
   /** No outcome is promised. */
   'no-outcome-promise': {
@@ -118,6 +130,8 @@ const ELEMENTS = {
     ar: /التزام ب(?:ال)?نتيجة/,
     de: /Ergebnis/,
     es: /resultado/,
+    fr: /résultat/,
+    pt: /resultado/,
   },
   /** A certain answer needs one of the four consultation languages. */
   'four-consultation-languages': {
@@ -128,6 +142,8 @@ const ELEMENTS = {
     ar: /اللغات الأربع/,
     de: /vier Beratungssprachen/,
     es: /cuatro idiomas de consulta/,
+    fr: /quatre langues de consultation/,
+    pt: /quatro línguas de consulta/,
   },
   /** This page is not the consultation step. */
   'not-the-consultation-step': {
@@ -138,6 +154,8 @@ const ELEMENTS = {
     ar: /خطوة استشارة/,
     de: /Beratungsschritt/,
     es: /paso de consulta/,
+    fr: /étape de consultation/,
+    pt: /passo de consulta/,
   },
   /** A sent message is not legal advice. */
   'not-legal-advice': {
@@ -148,6 +166,8 @@ const ELEMENTS = {
     ar: /رأيًا قانوني/,
     de: /keine Rechtsberatung/,
     es: /asesoramiento jurídico/,
+    fr: /avis juridique/,
+    pt: /parecer jurídico/,
   },
   /** A sent message is not a confirmed appointment. */
   'not-an-appointment': {
@@ -158,6 +178,8 @@ const ELEMENTS = {
     ar: /موعد|مواعيد/,
     de: /Termin/,
     es: /cita/,
+    fr: /rendez-vous/,
+    pt: /marcação/,
   },
   /** Sending a message forms no attorney–client relationship. */
   'no-attorney-client-relationship': {
@@ -168,6 +190,8 @@ const ELEMENTS = {
     ar: /علاقة بين المحامي/,
     de: /Mandatsverhältnis/,
     es: /relación entre abogado/,
+    fr: /relation entre avocate ou avocat/,
+    pt: /relação entre advogada ou advogado/,
   },
   /** Written text is never machine-translated for the reader. */
   'no-automatic-translation': {
@@ -178,6 +202,8 @@ const ELEMENTS = {
     ar: /ترجمة آلية/,
     de: /nicht automatisch übersetzt/,
     es: /traduce de forma automática|traducción automática/,
+    fr: /traduit automatiquement/,
+    pt: /traduz de forma automática|traduzido de forma automática/,
   },
   /** The family group is named as covering marriage matters. */
   'marriage-in-family-group': {
@@ -188,6 +214,8 @@ const ELEMENTS = {
     ar: /الزواج/,
     de: /Ehe/,
     es: /matrimonio/i,
+    fr: /mariage/i,
+    pt: /casamento/i,
   },
   /** Meeting the attorney may be a paid service. */
   'consultation-may-be-paid': {
@@ -198,6 +226,8 @@ const ELEMENTS = {
     ar: /خدمة بمقابل/,
     de: /entgeltlich/,
     es: /servicio de pago/,
+    fr: /prestation payante/,
+    pt: /serviço pago/,
   },
 } as const satisfies Record<string, ElementMarkers>;
 

@@ -46,8 +46,8 @@ describe('public eight-locale helper isolation', () => {
   it('does not widen Locale3 or SiteLocale4', () => {
     expect(locales).toEqual(['ko', 'zh-hant', 'en']);
     expect(siteLocales).toEqual(['ko', 'zh-hant', 'en', 'ja']);
-    expect(PUBLIC_LOCALES_8).toHaveLength(11);
-    expect(GUIDANCE_LOCALES_4).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es']);
+    expect(PUBLIC_LOCALES_8).toHaveLength(13);
+    expect(GUIDANCE_LOCALES_4).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt']);
   });
 
   it('keeps helper free of CMS / builder-locale fallback', () => {
@@ -59,7 +59,7 @@ describe('public eight-locale helper isolation', () => {
     expect(source).not.toContain('resolvePublishedSitePage');
   });
 
-  it('exposes nine autonyms without flags or nationality labels', () => {
+  it('exposes thirteen autonyms without flags or nationality labels', () => {
     expect(PUBLIC_LANGUAGE_AUTONYMS).toEqual({
       ko: '한국어',
       'zh-hant': '繁體中文',
@@ -72,10 +72,12 @@ describe('public eight-locale helper isolation', () => {
       ar: 'العربية',
       de: 'Deutsch',
       es: 'Español',
+      fr: 'Français',
+      pt: 'Português',
     });
     const autonyms = Object.values(PUBLIC_LANGUAGE_AUTONYMS);
-    expect(autonyms).toHaveLength(11);
-    expect(new Set(autonyms).size).toBe(11);
+    expect(autonyms).toHaveLength(13);
+    expect(new Set(autonyms).size).toBe(13);
     expect(autonyms.join('')).not.toMatch(/🇰🇷|🇯🇵|🇹🇼|🇺🇸|🇻🇳|🇮🇩|🇹🇭|🇵🇭|🇸🇦|🇦🇪/);
 
     const countryQualificationLabels = [
@@ -122,9 +124,9 @@ describe('document language (html lang 8)', () => {
   });
 });
 
-describe('allowed 70 guidance route pairs', () => {
-  it('covers seven locales × ten core pages', () => {
-    expect(ALLOWED_ROUTE_PAIRS).toHaveLength(70);
+describe('allowed 90 guidance route pairs', () => {
+  it('covers nine locales × ten core pages', () => {
+    expect(ALLOWED_ROUTE_PAIRS).toHaveLength(90);
     expect(GUIDANCE_PAGE_KEYS).toHaveLength(10);
   });
 
@@ -430,6 +432,11 @@ describe('core hreflang helper', () => {
       id: 'https://tseng-law.com/id/about',
       th: 'https://tseng-law.com/th/about',
       fil: 'https://tseng-law.com/fil/about',
+      ar: 'https://tseng-law.com/ar/about',
+      de: 'https://tseng-law.com/de/about',
+      es: 'https://tseng-law.com/es/about',
+      fr: 'https://tseng-law.com/fr/about',
+      pt: 'https://tseng-law.com/pt/about',
       'x-default': 'https://tseng-law.com/en/about',
     });
     expect(hreflangTagForPublicLocale('zh-hant')).toBe('zh-Hant');
@@ -460,7 +467,11 @@ describe('type guards', () => {
     expect(isGuidanceLocale4('ko')).toBe(false);
     expect(isPublicLocale8('fil')).toBe(true);
     expect(isPublicLocale8('ar')).toBe(true);
-    expect(isPublicLocale8('fr')).toBe(false);
+    expect(isGuidanceLocale4('fr')).toBe(true);
+    expect(isGuidanceLocale4('pt')).toBe(true);
+    expect(isPublicLocale8('fr')).toBe(true);
+    expect(isPublicLocale8('pt')).toBe(true);
+    expect(isPublicLocale8('it')).toBe(false);
     const keys: GuidancePageKey[] = [...GUIDANCE_PAGE_KEYS];
     expect(keys).toContain('home');
     expect(guidancePageKeyFromSlugPath('')).toBe('home');

@@ -25,6 +25,8 @@ const GUIDANCE_LOCALES = [
   'ar',
   'de',
   'es',
+  'fr',
+  'pt',
 ] as const satisfies readonly GuidanceLocale[];
 
 /**
@@ -67,6 +69,8 @@ const CONSULTATION_LANGUAGE_TERMS: Record<string, readonly string[]> = {
   ar: ['بالإنجليزية', 'الصينية', 'اليابانية', 'الكورية'],
   de: ['Englisch', 'Chinesisch', 'Japanisch', 'Koreanisch'],
   es: ['inglés', 'chino', 'japonés', 'coreano'],
+  fr: ['anglais', 'chinois', 'japonais', 'coréen'],
+  pt: ['inglês', 'chinês', 'japonês', 'coreano'],
 };
 
 /**
@@ -92,6 +96,12 @@ const GUIDANCE_LANGUAGE_TOKENS: ReadonlyArray<readonly [string, RegExp]> = [
   ['Spanish', /\bSpanish\b/i],
   ['Español', /\bEspañol\b/],
   ['español', /\bespañol\b/],
+  ['French', /\bFrench\b/i],
+  ['Français', /\bFrançais\b/],
+  ['français', /\bfrançais\b/],
+  ['Portuguese', /\bPortuguese\b/i],
+  ['Português', /\bPortuguês\b/],
+  ['português', /\bportuguês\b/],
 ];
 
 /**
@@ -126,6 +136,10 @@ const FORBIDDEN_COMBINATIONS: ReadonlyArray<readonly [string, RegExp, RegExp]> =
   ['German + consultation', /\bGerman\b/i, /\bconsultation\b/i],
   ['español + consulta', /\bespañol\b/i, /consulta/i],
   ['Spanish + consultation', /\bSpanish\b/i, /\bconsultation\b/i],
+  ['français + consultation', /\bfrançais\b/i, /consultation/i],
+  ['French + consultation', /\bFrench\b/i, /\bconsultation\b/i],
+  ['português + consulta', /\bportuguês\b/i, /consulta/i],
+  ['Portuguese + consultation', /\bPortuguese\b/i, /\bconsultation\b/i],
 ];
 
 /**
@@ -145,6 +159,8 @@ const SERVICES_SCOPE_TERMS: Record<string, readonly [string, RegExp]> = {
   ar: ['نطاق كل قضية', /نطاق كل قضية/],
   de: ['Umfang', /Umfang/],
   es: ['alcance', /alcance/i],
+  fr: ['étendue', /étendue/i],
+  pt: ['âmbito', /âmbito/i],
 };
 
 const SERVICES_ACCEPTANCE_PATTERNS: Record<
@@ -179,6 +195,14 @@ const SERVICES_ACCEPTANCE_PATTERNS: Record<
     ['si un asunto se acepta', /si un asunto se acepta/i],
     ['se decide después de revisar', /se decide después de revisar/i],
   ],
+  fr: [
+    ["acceptation d'une affaire", /acceptation d'une affaire/i],
+    ['se décide après', /se décide après/i],
+  ],
+  pt: [
+    ['se um assunto se aceita', /se um assunto se aceita/i],
+    ['decide-se depois de rever', /decide-se depois de rever/i],
+  ],
 };
 
 /** Every site-internal path an answer may cite. */
@@ -211,8 +235,8 @@ const entries = GUIDANCE_LOCALES.flatMap((locale) =>
 );
 
 describe('guidanceAnswers', () => {
-  it('covers 7 locales x 6 page keys', () => {
-    expect(GUIDANCE_LOCALES).toHaveLength(7);
+  it('covers 9 locales x 6 page keys', () => {
+    expect(GUIDANCE_LOCALES).toHaveLength(9);
     expect(ANSWER_PAGE_KEYS).toHaveLength(6);
     expect(Object.keys(guidanceAnswers).sort()).toEqual([...GUIDANCE_LOCALES].sort());
 

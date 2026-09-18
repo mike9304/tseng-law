@@ -24,7 +24,7 @@ const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 export const repoRoot = resolve(scriptDirectory, '..');
 export const DEFAULT_SOURCE_DIR = join(repoRoot, 'src/content/columns');
 
-export const GUIDANCE_LANGS = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es'];
+export const GUIDANCE_LANGS = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt'];
 export const HANZI_MIN = 5;
 export const ENGLISH_WORD_MIN = 12;
 export const ENGLISH_STOPWORD_MIN = 3;
@@ -120,6 +120,26 @@ export const FORBIDDEN_PHRASES = {
     { id: 'es-always-on', re: /consulta\s*24\s*\/\s*7/i, note: '즉시/상시 상담' },
     { id: 'es-free-consult', re: /consulta gratuita|asesoramiento gratuito/i, note: '비용 보장(무료 상담)' },
   ],
+  fr: [
+    { id: 'fr-consult-lang', re: /consultation en français|conseil en français|avocats? francophones/i, note: 'fr 상담 가능' },
+    { id: 'fr-interpreter', re: /interprète (est |sont )?fourni|nous fournissons un interprète|service d.interprète/i, note: '통역 제공' },
+    { id: 'fr-immediate', re: /réponse immédiate|réponse en quelques minutes|nous répondons aussitôt/i, note: '즉시 응답' },
+    { id: 'fr-success-rate', re: /taux de réussite|taux de succès|pourcentage de réussite/i, note: '성공률' },
+    { id: 'fr-win-100', re: /100\s*%\s*(de )?réussite|réussite\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'fr-cost-guarantee', re: /garantie de (coût|résultat)|nous garantissons le résultat/i, note: '비용/결과 보장' },
+    { id: 'fr-always-on', re: /consultation\s*24\s*h?\s*\/\s*24|24h\/24/i, note: '즉시/상시 상담' },
+    { id: 'fr-free-consult', re: /consultation gratuite|conseil gratuit/i, note: '비용 보장(무료 상담)' },
+  ],
+  pt: [
+    { id: 'pt-consult-lang', re: /consulta em português|assessoria em português|advogados que falam português/i, note: 'pt 상담 가능' },
+    { id: 'pt-interpreter', re: /pomos intérprete|intérprete disponível|serviço de intérprete/i, note: '통역 제공' },
+    { id: 'pt-immediate', re: /resposta imediata|resposta em minutos|respondemos de imediato/i, note: '즉시 응답' },
+    { id: 'pt-success-rate', re: /taxa de sucesso|taxa de êxito|percentagem de sucesso/i, note: '성공률' },
+    { id: 'pt-win-100', re: /100\s*%\s*(de )?(sucesso|êxito)|sucesso\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'pt-cost-guarantee', re: /garantia de (custo|resultado)|garantimos o resultado/i, note: '비용/결과 보장' },
+    { id: 'pt-always-on', re: /consulta\s*24\s*horas|24\s*horas/i, note: '즉시/상시 상담' },
+    { id: 'pt-free-consult', re: /consulta gratuita|assessoria gratuita/i, note: '비용 보장(무료 상담)' },
+  ],
 };
 
 /** Locale-prefix swaps that are allowed; everything else must stay byte-identical to source href. */
@@ -180,6 +200,8 @@ export const NATIONALITY_TERMS = {
   ],
   de: ['Deutschland', 'deutsche Staatsangehörigkeit', 'deutscher Staatsangehöriger', 'deutsche Unternehmen'],
   es: ['España', 'nacionalidad española', 'empresas españolas', 'españoles'],
+  fr: ['France', 'nationalité française', 'entreprises françaises', 'Français'],
+  pt: ['Portugal', 'nacionalidade portuguesa', 'empresas portuguesas', 'portugueses', 'Brasil', 'brasileiros'],
 };
 
 export const NATIONALITY_LANGUAGE_NAMES = {
@@ -190,6 +212,8 @@ export const NATIONALITY_LANGUAGE_NAMES = {
   ar: [/اللغة\s*العربية/gu, /بالعربية/gu, /اللغة\s*الكورية/gu, /بالكورية/gu],
   de: [/auf Deutsch/gi, /deutsche Sprache/gi, /in deutscher Sprache/gi],
   es: [/en español/gi, /idioma español/gi, /lengua española/gi],
+  fr: [/en français/gi, /langue française/gi, /en langue française/gi],
+  pt: [/em português/gi, /língua portuguesa/gi, /idioma português/gi],
 };
 
 export const SOURCE_LANGUAGE_NAME_RE = /한국어|베트남어|인도네시아어|태국어|필리핀어|영어|일본어|중국어|타이완어|대만어/g;
@@ -211,6 +235,8 @@ export const NUMBER_THOUSAND_STYLE = {
   ar: 'comma',
   de: 'dot',
   es: 'dot',
+  fr: 'dot',
+  pt: 'dot',
 };
 
 /**
@@ -248,6 +274,8 @@ export const NUMBER_LANG_EXCEPTIONS = {
   ar: [],
   de: [],
   es: [],
+  fr: [],
+  pt: [],
 };
 
 /** Thai พ.ศ. year minus this offset is Gregorian. ค.ศ. is already Gregorian. */
@@ -309,6 +337,21 @@ export const MAGNITUDE_WORDS = {
     { word: 'millon', factor: 1_000_000 },
     { word: 'mil', factor: 1_000 },
   ],
+  fr: [
+    { word: 'milliards', factor: 1_000_000_000 },
+    { word: 'milliard', factor: 1_000_000_000 },
+    { word: 'millions', factor: 1_000_000 },
+    { word: 'million', factor: 1_000_000 },
+    { word: 'mille', factor: 1_000 },
+  ],
+  pt: [
+    { word: 'mil milhões', factor: 1_000_000_000 },
+    { word: 'milhoes', factor: 1_000_000 },
+    { word: 'milhões', factor: 1_000_000 },
+    { word: 'milhão', factor: 1_000_000 },
+    { word: 'milhao', factor: 1_000_000 },
+    { word: 'mil', factor: 1_000 },
+  ],
 };
 
 /** Approximation markers: do not emit a number; the adjacent numeral still does. */
@@ -320,6 +363,8 @@ export const APPROX_MARKERS = {
   fil: ['humigit-kumulang', 'halos', 'mga'],
   de: ['etwa', 'rund', 'ungefähr', 'circa', 'zirka'],
   es: ['aproximadamente', 'cerca de', 'unos', 'unas'],
+  fr: ['environ', 'près de', 'quelque', 'approximativement'],
+  pt: ['aproximadamente', 'cerca de', 'uns', 'umas'],
 };
 
 /**
@@ -334,6 +379,8 @@ export const UNPARSED_NUMERAL_HINTS = {
   ar: /(?:[\p{L}0-9]{2,})\s+(?:مليون|مليار|ألف|مئة|مائة)(?![\p{L}\p{M}])/gu,
   de: /(?:[A-Za-z0-9]{2,})\s+(?:Million(?:en)?|Milliarde(?:n)?|Tausend)\b/gi,
   es: /(?:[A-Za-z0-9]{2,})\s+(?:millones|millón|millon)\b/gi,
+  fr: /(?:[A-Za-z0-9]{2,})\s+(?:million(?:s)?|milliard(?:s)?|mille)\b/gi,
+  pt: /(?:[A-Za-z0-9]{2,})\s+(?:milh[oõ]es|milh[aã]o|mil)\b/gi,
 };
 
 function pushPhrase(entries, phrase, values) {
@@ -785,6 +832,8 @@ export const WORD_NUMERAL_LEXICONS = {
   ar: buildArLexicon(),
   de: buildDeLexicon(),
   es: buildEsLexicon(),
+  fr: compilePhrases([]),
+  pt: compilePhrases([]),
 };
 
 export function lexiconEntryCount(lang) {
@@ -797,18 +846,18 @@ export function lexiconEntryCount(lang) {
  * localized (`2025년 9월 13일` / `13 September 2025` / `13 กันยายน ค.ศ. 2025`).
  */
 export const DATE_MONTH_NAMES = {
-  january: 1, jan: 1, januari: 1, enero: 1, januar: 1, 'มกราคม': 1, 'ม.ค.': 1,
-  february: 2, feb: 2, februari: 2, pebrero: 2, februar: 2, febrero: 2, 'กุมภาพันธ์': 2, 'ก.พ.': 2,
-  march: 3, mar: 3, maret: 3, marso: 3, 'märz': 3, marzo: 3, 'มีนาคม': 3, 'มี.ค.': 3,
-  april: 4, apr: 4, abril: 4, 'เมษายน': 4, 'เม.ย.': 4,
-  may: 5, mei: 5, mayo: 5, mai: 5, 'พฤษภาคม': 5, 'พ.ค.': 5,
-  june: 6, jun: 6, juni: 6, hunyo: 6, junio: 6, 'มิถุนายน': 6, 'มิ.ย.': 6,
-  july: 7, jul: 7, juli: 7, hulyo: 7, julio: 7, 'กรกฎาคม': 7, 'ก.ค.': 7,
-  august: 8, aug: 8, agustus: 8, agosto: 8, 'สิงหาคม': 8, 'ส.ค.': 8,
-  september: 9, sept: 9, sep: 9, setyembre: 9, septiembre: 9, setiembre: 9, 'กันยายน': 9, 'ก.ย.': 9,
-  october: 10, oct: 10, oktober: 10, oktubre: 10, octubre: 10, 'ตุลาคม': 10, 'ต.ค.': 10,
-  november: 11, nov: 11, nobyembre: 11, noviembre: 11, 'พฤศจิกายน': 11, 'พ.ย.': 11,
-  december: 12, dec: 12, desember: 12, disyembre: 12, dezember: 12, diciembre: 12, 'ธันวาคม': 12, 'ธ.ค.': 12,
+  january: 1, jan: 1, januari: 1, enero: 1, januar: 1, janeiro: 1, janvier: 1, 'มกราคม': 1, 'ม.ค.': 1,
+  february: 2, feb: 2, februari: 2, pebrero: 2, februar: 2, febrero: 2, fevereiro: 2, février: 2, fevrier: 2, 'กุมภาพันธ์': 2, 'ก.พ.': 2,
+  march: 3, mar: 3, maret: 3, marso: 3, 'märz': 3, marzo: 3, março: 3, 'มีนาคม': 3, 'มี.ค.': 3,
+  april: 4, apr: 4, abril: 4, avril: 4, 'เมษายน': 4, 'เม.ย.': 4,
+  may: 5, mei: 5, mayo: 5, mai: 5, maio: 5, 'พฤษภาคม': 5, 'พ.ค.': 5,
+  june: 6, jun: 6, juni: 6, hunyo: 6, junio: 6, junho: 6, juin: 6, 'มิถุนายน': 6, 'มิ.ย.': 6,
+  july: 7, jul: 7, juli: 7, hulyo: 7, julio: 7, julho: 7, juillet: 7, 'กรกฎาคม': 7, 'ก.ค.': 7,
+  august: 8, aug: 8, agustus: 8, agosto: 8, août: 8, aout: 8, 'สิงหาคม': 8, 'ส.ค.': 8,
+  september: 9, sept: 9, sep: 9, setyembre: 9, septiembre: 9, setiembre: 9, setembro: 9, septembre: 9, 'กันยายน': 9, 'ก.ย.': 9,
+  october: 10, oct: 10, oktober: 10, oktubre: 10, octubre: 10, outubro: 10, octobre: 10, 'ตุลาคม': 10, 'ต.ค.': 10,
+  november: 11, nov: 11, nobyembre: 11, noviembre: 11, novembro: 11, novembre: 11, 'พฤศจิกายน': 11, 'พ.ย.': 11,
+  december: 12, dec: 12, desember: 12, disyembre: 12, dezember: 12, diciembre: 12, dezembro: 12, décembre: 12, decembre: 12, 'ธันวาคม': 12, 'ธ.ค.': 12,
 };
 
 export function parseArgs(argv) {
@@ -1714,6 +1763,18 @@ const ORDINAL_WORD_N = {
     cuarta: 4, cuarto: 4,
     quinta: 5, quinto: 5,
   },
+  fr: {
+    premier: 1, première: 1, premiere: 1,
+    deuxième: 2, deuxieme: 2, second: 2, seconde: 2,
+    troisième: 3, troisieme: 3,
+    quatrième: 4, quatrieme: 4,
+  },
+  pt: {
+    primeiro: 1, primeira: 1,
+    segundo: 2, segunda: 2,
+    terceiro: 3, terceira: 3,
+    quarto: 4, quarta: 4,
+  },
   ar: {
     الأول: 1, الأولى: 1, أول: 1, أولى: 1,
     الثاني: 2, الثانية: 2, ثاني: 2, ثانية: 2,
@@ -1864,6 +1925,28 @@ function targetOrdinalSpecs(lang) {
       { kind: 'item', re: /(?:inciso|numeral)\s+(primero|primera|segundo|segunda|tercero|tercera|cuarto|cuarta|\d+)/gi, nFrom: (match) => ordinalWordN('es', match[1]) },
       { kind: 'type', re: /tipo\s+(primero|primera|segundo|segunda|tercero|tercera|cuarto|cuarta|\d+)/gi, nFrom: (match) => ordinalWordN('es', match[1]) },
       { kind: 'perday', n: 1, re: /por\s+d[ií]a|al\s+d[ií]a/gi },
+    ],
+    fr: [
+      { kind: 'instance', n: 1, re: /premi[eè]re\s+instance/gi },
+      { kind: 'instance', n: 2, re: /deuxi[eè]me\s+instance|seconde\s+instance/gi },
+      { kind: 'party', n: 3, re: /(?:un\s+|une\s+)?tiers|troisi[eè]me\s+partie/gi },
+      { kind: 'country', n: 3, re: /pays\s+tiers|troisi[eè]me\s+pays/gi },
+      { kind: 'type', n: 2, re: /type\s*II\b|deuxi[eè]me\s+type/gi },
+      { kind: 'paragraph', re: /(?:alinéa|paragraphe)\s+(premier|première|deuxi[eè]me|troisi[eè]me|quatri[eè]me|\d+)/gi, nFrom: (match) => ordinalWordN('fr', match[1]) },
+      { kind: 'item', re: /(?:article|numéro)\s+(premier|première|deuxi[eè]me|troisi[eè]me|quatri[eè]me|\d+)/gi, nFrom: (match) => ordinalWordN('fr', match[1]) },
+      { kind: 'type', re: /type\s+(premier|première|deuxi[eè]me|troisi[eè]me|quatri[eè]me|\d+)/gi, nFrom: (match) => ordinalWordN('fr', match[1]) },
+      { kind: 'perday', n: 1, re: /par\s+jour|chaque\s+jour/gi },
+    ],
+    pt: [
+      { kind: 'instance', n: 1, re: /primeira\s+instância/gi },
+      { kind: 'instance', n: 2, re: /segunda\s+instância/gi },
+      { kind: 'party', n: 3, re: /(?:um\s+|uma\s+)?terceir(?:o|a)(?:\s+(?:partido|parte))?/gi },
+      { kind: 'country', n: 3, re: /terceir(?:o)?\s+pa[ií]s/gi },
+      { kind: 'type', n: 2, re: /tipo\s*II\b|segundo\s+tipo/gi },
+      { kind: 'paragraph', re: /(?:parágrafo|alínea)\s+(primeiro|primeira|segundo|segunda|terceiro|terceira|quarto|quarta|\d+)/gi, nFrom: (match) => ordinalWordN('pt', match[1]) },
+      { kind: 'item', re: /(?:inciso|número)\s+(primeiro|primeira|segundo|segunda|terceiro|terceira|quarto|quarta|\d+)/gi, nFrom: (match) => ordinalWordN('pt', match[1]) },
+      { kind: 'type', re: /tipo\s+(primeiro|primeira|segundo|segunda|terceiro|terceira|quarto|quarta|\d+)/gi, nFrom: (match) => ordinalWordN('pt', match[1]) },
+      { kind: 'perday', n: 1, re: /por\s+dia|ao\s+dia/gi },
     ],
     ar: (() => {
       const keys = Object.keys(ORDINAL_WORD_N.ar)

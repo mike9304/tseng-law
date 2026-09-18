@@ -33,6 +33,8 @@ const HREFLANG_TAG_BY_LOCALE: Record<PublicLocale8, string> = {
   ar: 'ar',
   de: 'de',
   es: 'es',
+  fr: 'fr',
+  pt: 'pt',
 };
 
 /** Mirrors `slugFromFilename` in src/lib/columns.ts (`NNN-<slug>.md`). */

@@ -1,0 +1,41 @@
+WO-G1-R2 — 독립 검토(docs/i18n/global-plan/reviews/G1-REVIEW.md, FAIL: BLOCK 1·FIX 7·NOTE 9) 반영 + 총괄 디자인 결정 2건
+
+작업트리: /Users/son7/Projects/tseng-law-global-picker-20260918. 밖 쓰기 금지. git add/commit/push 금지. build·next start·Playwright 실행·전체 스위트·npm install 금지(§4 명령만). 리뷰 파일 전문을 먼저 읽는다(번호는 리뷰 §B와 동일). fr/pt 로케일이 이미 레지스트리에 들어와 있으면(WO-G2-1 결과) 13로케일 기준으로 작업.
+
+## 1. 총괄 결정 (리뷰 #15·#16)
+D1. 지역 그룹에 **`global`을 추가하고 맨 앞**에 둔다(`LANGUAGE_REGION_ORDER = ['global','asia-pacific','middle-east','europe','americas']`). `en`은 global 1회. americas 그룹이 비면 렌더 안 함(기존 규칙). `LANGUAGE_REGION_LABELS`에 global 제목 전 로케일(ko '글로벌', en 'Global', zh-hant '全球', ja 'グローバル', vi 'Toàn cầu', id 'Global', th 'ทั่วโลก', fil 'Global', ar 'عالمي', de 'Global', es 'Global', fr 'International', pt 'Global').
+D2. 두 번째 줄은 **국가명이 아니라 그 언어의 영어 이름**(`englishName`: Korean · Traditional Chinese · Japanese · Vietnamese · Indonesian · Thai · Filipino · Arabic · German · Spanish · French · Portuguese · English). `regionLabel` 필드는 **삭제**(국가·시장 주장 제거, ar 중복 표기 해소). 컴포넌트·테스트·타입 갱신.
+
+## 2. 반영 항목
+#1 BLOCK — Playwright 스펙 3개를 새 마크업으로 갱신: `tests/builder-editor/locale-flag-switcher-visibility.playwright.ts`(헤더·드로어 분기 → `button[aria-haspopup="dialog"]` 클릭 후 `[role="dialog"] a[href]`), `international-guidance.playwright.ts`의 `openHeaderLanguageSwitcher`, `new-four-columns.playwright.ts`(45·125~145·159; `toHaveCount(8)`→`PUBLIC_LOCALES_8.length`). **404 프로브 루프**(new-four-columns 130~145: 모든 언어 옵션 href를 `page.request.get`으로 200 확인)를 `global-language-picker.playwright.ts`에 이식(/ja/columns/<slug>·/ja/videos·/ja/korean-lawyer-in-taiwan·/ja·/ja/columns 출발점 유지).
+#2 — 드로어 스크롤락 소실: `MobileNavDrawer.tsx` `[open]` 효과의 해제 분기를 `else if (!languagePickerOpen)`로(피커가 열려 있으면 body overflow 해제 금지). Playwright 390 스펙에 `getComputedStyle(document.body).overflow === 'hidden'` 단언 추가.
+#3 — 모바일 포커스·드로어 누수: 피커에 `onClosed?: () => void` 추가 → 드로어가 `setLanguagePickerOpen(false)`. 모바일 경로 닫힘 시 포커스는 `display:none` 트리거가 아니라 `button.mobile-toggle`로(피커 prop `returnFocusTo?: () => HTMLElement | null`). 390 스펙에 focusReturned 단언.
+#4 — href 패리티: `localeFlagHref(pathname, entry.locale, switchOptions)`(LocaleFlagSwitcher export) 사용, notice 판정은 기존 resolve 결과 유지. 유닛: `/en/portfolio/x`→ja 는 `/ja/portfolio`, `/en/events/x`→ja `/ja/events`, `/en/store/products/x`→ja `/ja/store` 리터럴 단언.
+#5 — RTL: 패널 `dir`은 `isRtlPublicLocale(locale)`, 항목 `<a dir>`은 `isRtlPublicLocale(entry.locale)`; 레지스트리 `rtl` 필드 삭제(파생). 테스트는 `RTL_PUBLIC_LOCALES`와 비교.
+#6 — 트리거 접근 이름: `aria-label={`${copy.open}: ${currentAutonym}`}`.
+#7 — 소스 문자열 검사(test 133~144) 삭제 → 행동 테스트로: 파일 상단 `// @vitest-environment jsdom`(jsdom 없으면 `happy-dom`/`@testing-library` 가용 여부 확인 후 보고; 둘 다 없으면 `renderToStaticMarkup` + 이벤트 핸들러 직접 호출로 Esc→onClose, 열림 시 body overflow 'hidden' 로직은 훅 단위 테스트) — 실제 달성 가능한 최대치로 하고 보고.
+#8 — 레지스트리 테스트: `toHaveLength(PUBLIC_LOCALES_8.length)`, 리터럴 지역 배열 → 불변식(ORDER 포함·중복 0·빈 그룹 없음·grouped 순서==ORDER).
+#9 — 픽커 href 리터럴 단언: `/ja/columns/<slug>`→vi(columnSlugsByLocale 전달), `/ko/videos`→th(home 폴백 + notice 텍스트 존재).
+#10 — globals.css 무효 셀렉터 6개 제거(`.header.transparent .utility-nav > * > button`만 유지), 죽은 `.utility-lang a[aria-current='page']`·드롭다운용 overflow/z-index 주석 정리.
+#11 — `aria-current="page"` (module.css·유닛·Playwright 동기).
+#12 — `publicLanguageHtmlLang` 삭제 → `publicDocumentLanguage` import.
+#13 — module.css 768px `.currentLabel` 블록 삭제(드로어에서 자국어 표기 유지 = 의도된 편차, 보고에 명시).
+#14 — `html { scrollbar-gutter: stable; }` 를 globals.css에 추가(전역 영향 — 헤더 고정폭 테스트가 깨지면 대신 락 시 `padding-right: calc(100vw - 100%)`로).
+#17 — 피커 z-index 2147483001 + 열 때 검색 오버레이가 열려 있으면 닫기(가능하면).
+#18 — `role="dialog" aria-modal aria-labelledby`를 `styles.panel`로 이동, 배경은 단순 클릭 타깃. 열림 동안 `#__next`/앱 루트에 `inert` 속성 부여(React 18이면 imperative setAttribute).
+#19 — 카피: ko title '지역과 언어를 선택해 주세요', vi 'Vui lòng chọn khu vực và ngôn ngữ của quý vị'.
+
+## 3. 허용 파일
+src/lib/public-language-registry.ts · src/lib/__tests__/public-language-registry.test.ts · src/components/GlobalLanguagePicker.tsx · .module.css · src/components/MobileNavDrawer.tsx · src/components/__tests__/global-language-picker.test.tsx · ja-mobile-nav-drawer.test.tsx · src/app/globals.css(해당 블록 + html 규칙) · tests/builder-editor/{global-language-picker,locale-flag-switcher-visibility,international-guidance,new-four-columns}.playwright.ts.
+금지: Header.tsx · Footer · public-guidance.ts · 데이터 팩 · docs/**.
+
+## 4. 검증(전부 실행·출력 그대로)
+cd /Users/son7/Projects/tseng-law-global-picker-20260918 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+git status --short && git diff --stat | tail -3
+npm run typecheck 2>&1 | tail -2
+npx vitest run src/components/__tests__/global-language-picker.test.tsx src/lib/__tests__/public-language-registry.test.ts src/components/__tests__/ja-desktop-header.test.tsx src/components/__tests__/ja-mobile-nav-drawer.test.tsx src/components/__tests__/header-content-fit.test.ts src/components/__tests__/locale-flag-switcher.test.tsx 2>&1 | tail -6
+npx eslint --max-warnings=0 --ext .ts,.tsx $(git diff --name-only | grep -E '^(src|tests)/.*\.(ts|tsx)$') 2>&1 | tail -3
+grep -c "regionLabel" src/lib/public-language-registry.ts src/components/GlobalLanguagePicker.tsx   # 0 0
+grep -c "aria-current=\"true\"\|aria-current='true'\|aria-current={isCurrent ? true" src/components/GlobalLanguagePicker.tsx   # 0
+
+## 5. 보고: diff --stat · 명령 출력 · #7 테스트 환경 선택과 이유 · #14 채택 방식 · 미해결.

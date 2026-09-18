@@ -8,16 +8,17 @@ export type ExistingSiteLocale4 = (typeof EXISTING_SITE_LOCALES_4)[number];
 /**
  * Guidance-language surface. Independent of Locale / SiteLocale. Never
  * normalized into KO. The `_4` suffix is historical — the set grew past four
- * (Arabic, then German and Spanish) and the name was kept so the flip
- * touched the locale data instead of every import in the repo.
+ * (Arabic, then German and Spanish, then French and Portuguese) and the name
+ * was kept so the flip touched the locale data instead of every import in the
+ * repo.
  */
-export const GUIDANCE_LOCALES_4 = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es'] as const;
+export const GUIDANCE_LOCALES_4 = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt'] as const;
 export type GuidanceLocale4 = (typeof GUIDANCE_LOCALES_4)[number];
 
 /**
  * Public language surface. Do not fold this into `siteLocales`. The `_8`
- * suffix is historical (see {@link GUIDANCE_LOCALES_4}); the set is eleven
- * since German and Spanish joined the guidance tier.
+ * suffix is historical (see {@link GUIDANCE_LOCALES_4}); the set is thirteen
+ * since French and Portuguese joined the guidance tier after German and Spanish.
  */
 export const PUBLIC_LOCALES_8 = [
   'ko',
@@ -31,6 +32,8 @@ export const PUBLIC_LOCALES_8 = [
   'ar',
   'de',
   'es',
+  'fr',
+  'pt',
 ] as const;
 export type PublicLocale8 = (typeof PUBLIC_LOCALES_8)[number];
 
@@ -100,6 +103,8 @@ export const PUBLIC_LANGUAGE_AUTONYMS: Record<PublicLocale8, string> = {
   ar: 'العربية',
   de: 'Deutsch',
   es: 'Español',
+  fr: 'Français',
+  pt: 'Português',
 };
 
 export type PublicDocumentLanguage =
@@ -113,10 +118,12 @@ export type PublicDocumentLanguage =
   | 'fil'
   | 'ar'
   | 'de'
-  | 'es';
+  | 'es'
+  | 'fr'
+  | 'pt';
 
 const DEFAULT_SITE_URL = 'https://tseng-law.com';
-const PUBLIC_LOCALE_PATH_RE = /^\/(ko|zh-hant|en|ja|vi|id|th|fil|ar|de|es)(?=\/|$)/i;
+const PUBLIC_LOCALE_PATH_RE = /^\/(ko|zh-hant|en|ja|vi|id|th|fil|ar|de|es|fr|pt)(?=\/|$)/i;
 const PAGE_KEY_BY_ROUTE: Record<GuidanceCoreRouteKey, GuidancePageKey> = {
   '': 'home',
   services: 'services',
@@ -139,6 +146,8 @@ export function isGuidanceLocale4(value?: string | null): value is GuidanceLocal
     || value === 'ar'
     || value === 'de'
     || value === 'es'
+    || value === 'fr'
+    || value === 'pt'
   );
 }
 

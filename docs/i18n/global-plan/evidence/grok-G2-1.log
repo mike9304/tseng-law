@@ -1,0 +1,94 @@
+[WO-G2-1 시작 Fri Sep 18 15:54:09 KST 2026]
+French and Portuguese are now guidance locales in this workspace (page languages only). Consultations stay English/Chinese/Japanese/Korean. No commit was made.
+
+## ① `git diff --stat`
+
+```
+ src/lib/seo.ts                                     |   2 +
+ .../international-guidance.playwright.ts           |   2 +
+ 54 files changed, 1853 insertions(+), 99 deletions(-)
+```
+
+Untracked (this WO): `src/content/columns-fr/.gitkeep`, `src/content/columns-pt/.gitkeep`, `src/lib/__tests__/guidance-fr-pt-content.test.ts`, `src/lib/__tests__/guidance-fr-pt-routing.test.ts`. Other `docs/i18n/global-plan/**` untracked files were already in the tree and were not edited.
+
+## ② Command output
+
+**`git status --short`** — 54 modified files (maps, packs, scripts, tests) plus the untracked gitkeeps/tests above.
+
+**`git diff --stat | tail -3`**
+```
+ src/lib/seo.ts                                     |   2 +
+ .../international-guidance.playwright.ts           |   2 +
+ 54 files changed, 1853 insertions(+), 99 deletions(-)
+```
+
+**`npm run typecheck 2>&1 | tail -2`** (exit 0)
+```
+Generating route types...
+✓ Route types generated successfully
+```
+
+**`npx vitest run … | tail -8`** (exit 1)
+```
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+
+ Test Files  1 failed | 51 passed (52)
+      Tests  3 failed | 896 passed (899)
+   Start at  16:29:52
+   Duration  26.83s
+```
+
+The three failures are all `src/data/__tests__/insights-archive-order.test.ts` (`getFeaturedInsights(locale)[0]?.id` expected `cosmetics-market-entry`, got `semiconductor-market-entry`). That file and the insights data were not touched. Guidance/fr/pt suites in the same command passed, including `guidance-fr-pt-content` (16) and `guidance-fr-pt-routing` (11).
+
+**`npx eslint --max-warnings=0 --ext .ts,.tsx $(git diff --name-only | grep -E '^src/.*\.(ts|tsx)$') 2>&1 | tail -3`** (exit 0, empty stdout). Untracked new tests also linted separately: exit 0.
+
+**`node scripts/check-guidance-country-mentions.mjs 2>&1 | tail -3`** (exit 0)
+```
+  ALLOW src/data/international-inquiry-copy.ts:446 [fil] Indonesian — field whose value is a list of language names
+  ALLOW src/data/international-inquiry-copy.ts:446 [fil] Thai — field whose value is a list of language names
+PASS guidance-country-mentions: 0 violations
+```
+
+**greps**
+```
+2
+26
+       0
+```
+(`avocate Wei Tseng|l'avocate` → 2; `advogada` → 26; `[변호사 검수 필요]` → 0). The pack uses a typographic apostrophe in `l’avocate`, so the ASCII `l'avocate` grep undercounts; the content test still matched `l[’']avocate Wei Tseng`.
+
+## ③ vs de/es (`5f116286`)
+
+**Skipped on purpose (WO scope):** `src/content/columns-de|es/*.md` and the de/es review docs. Empty `columns-fr/` and `columns-pt/` with `.gitkeep` only.
+
+**Required extras:** `guidance-fr-pt-content.test.ts`, `guidance-fr-pt-routing.test.ts`.
+
+**Not in 5f116286, filled because they are `Record<PublicLocale8>` maps from later work:** `src/lib/public-language-registry.ts` (europe: France et pays francophones / Portugal e Brasil).
+
+**Typecheck-only extra, also in the de/es commit:** `tests/builder-editor/international-guidance.playwright.ts` `og:locale` map (`fr_FR`, `pt_PT`). Playwright was not run.
+
+**Empty-column checker fixes (de/es had markdown, so they never hit this):**
+- `buildGuidanceLlmsTxt` treats a dir with no `.md` as “no translations”
+- `guidance-column-category-label` and `column-category-parity` skip when there are no `.md` files
+
+**Sentinel updates (fr is now a real public locale):** invalid `uiLocale`/`llms` 404 cases that used `'fr'` now use `'it'`. Builder `site-invariants` still uses `'fr'` as an unsupported *builder* locale and was left alone.
+
+**Not copied from de/es:** numeral/nationality fixtures in `scripts/check-column-translation.test.mjs` (no column markdown to check).
+
+## ④ Language FAQ (verbatim)
+
+**fr**  
+Q: `La consultation en français est-elle possible ?`  
+A: `Non. Ces indications sont rédigées en français, mais la consultation avec une avocate ou un avocat a lieu seulement en anglais, en chinois (中文), en japonais et en coréen. Nous ne promettons pas non plus de service d’interprétation. La traduction écrite est autre chose : le texte original que vous écrivez est conservé tel quel et n’est pas traduit automatiquement.`
+
+**pt**  
+Q: `Posso ter uma consulta em português?`  
+A: `Não. Esta orientação está escrita em português, mas a consulta com uma advogada ou um advogado realiza-se apenas em inglês, chinês (中文), japonês e coreano. Também não prometemos serviço de interpretação. A tradução escrita é outra coisa: o texto original que escreve guarda-se tal qual e não se traduz de forma automática.`
+
+## ⑤ Unresolved
+
+WO §5 vitest is not green: 3 failures in `insights-archive-order.test.ts`, pulled in only because the command glob is `src/data/__tests__`. Not caused by this change set; that file was not modified.
+
+No `git add` / commit / push. Column markdown remains WO-G2-1C.
+=== WO-G2-1 종료 code=0 Fri Sep 18 16:31:32 KST 2026 ===

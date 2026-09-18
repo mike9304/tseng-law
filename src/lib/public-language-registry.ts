@@ -95,6 +95,20 @@ export const PUBLIC_LANGUAGE_REGISTRY: readonly PublicLanguageEntry[] = [
     regionLabel: 'España y América Latina',
   },
   {
+    locale: 'fr',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.fr,
+    englishName: 'French',
+    region: 'europe',
+    regionLabel: 'France et pays francophones',
+  },
+  {
+    locale: 'pt',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.pt,
+    englishName: 'Portuguese',
+    region: 'europe',
+    regionLabel: 'Portugal e Brasil',
+  },
+  {
     locale: 'en',
     autonym: PUBLIC_LANGUAGE_AUTONYMS.en,
     englishName: 'English',
@@ -170,6 +184,18 @@ export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion
     europe: 'Europa',
     americas: 'América',
   },
+  fr: {
+    'asia-pacific': 'Asie-Pacifique',
+    'middle-east': 'Moyen-Orient',
+    europe: 'Europe',
+    americas: 'Amériques',
+  },
+  pt: {
+    'asia-pacific': 'Ásia-Pacífico',
+    'middle-east': 'Médio Oriente',
+    europe: 'Europa',
+    americas: 'Américas',
+  },
 };
 
 export const LANGUAGE_PICKER_COPY: Record<
@@ -241,6 +267,18 @@ export const LANGUAGE_PICKER_COPY: Record<
     title: 'Seleccione su región e idioma',
     close: 'Cerrar',
     current: 'Idioma actual',
+  },
+  fr: {
+    open: 'Choisir la région et la langue',
+    title: 'Veuillez choisir votre région et votre langue',
+    close: 'Fermer',
+    current: 'Langue actuelle',
+  },
+  pt: {
+    open: 'Escolher a região e a língua',
+    title: 'Escolha a sua região e a sua língua',
+    close: 'Fechar',
+    current: 'Língua atual',
   },
 };
 

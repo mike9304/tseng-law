@@ -101,7 +101,9 @@ export type DocumentLanguage =
   | 'fil'
   | 'ar'
   | 'de'
-  | 'es';
+  | 'es'
+  | 'fr'
+  | 'pt';
 
 const koreanFontClassName = [sansKorean.variable, serifKorean.variable].join(' ');
 const traditionalChineseFontClassName = [
@@ -131,7 +133,7 @@ export function getLocaleFontClassName(language: DocumentLanguage): string {
   if (language === 'ar') {
     return arabicFontClassName;
   }
-  if (language === 'vi' || language === 'id' || language === 'fil' || language === 'de' || language === 'es') {
+  if (language === 'vi' || language === 'id' || language === 'fil' || language === 'de' || language === 'es' || language === 'fr' || language === 'pt') {
     return latinExtendedFontClassName;
   }
   // Korean and English retain their existing shared pair.

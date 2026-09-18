@@ -45,7 +45,7 @@ export const GUIDANCE_DATA_FILES = [
   'src/data/international-guidance-offices.ts',
 ];
 
-export const GUIDANCE_LOCALES = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es'];
+export const GUIDANCE_LOCALES = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt'];
 
 /**
  * Country tokens that must not appear in guidance copy.
@@ -139,7 +139,7 @@ export const GUIDANCE_ALLOWED_CONTEXTS = [
   {
     id: 'locale-key',
     reason: 'object key / locale identifier, not reader-facing prose',
-    test: (entry) => /^(?:vi|id|th|fil|ar|en|ja|ko|zh-hant)$/.test(entry.key ?? ''),
+    test: (entry) => /^(?:vi|id|th|fil|ar|en|ja|ko|zh-hant|de|es|fr|pt)$/.test(entry.key ?? ''),
   },
   {
     id: 'language-field',
@@ -161,23 +161,29 @@ export function extractLocaleBlocks(text) {
   for (let i = 0; i < lines.length; i += 1) {
     const line = lines[i];
     if (!current) {
-      const open = /^ {2}'?(vi|id|th|fil|ar|de|es)'?: \{\s*$/.exec(line);
+      const open = /^ {2}'?(vi|id|th|fil|ar|de|es|fr|pt)'?: \{\s*$/.exec(line);
       if (open) {
         current = { locale: open[1], startLine: i + 1, lines: [] };
         closeAtColumnZero = false;
         continue;
       }
-      const western = /^export const (german|spanish)GuidanceContent\b/.exec(line);
+      const western = /^export const (german|spanish|french|portuguese)GuidanceContent\b/.exec(line);
       if (western) {
+        const westernLocale = {
+          german: 'de',
+          spanish: 'es',
+          french: 'fr',
+          portuguese: 'pt',
+        }[western[1]];
         current = {
-          locale: western[1] === 'german' ? 'de' : 'es',
+          locale: westernLocale,
           startLine: i + 1,
           lines: [],
         };
         closeAtColumnZero = true;
         continue;
       }
-      const shorthand = /^ {2}'?(de|es)'?: [A-Za-z]/.exec(line);
+      const shorthand = /^ {2}'?(de|es|fr|pt)'?: [A-Za-z]/.exec(line);
       if (shorthand) {
         blocks.push({ locale: shorthand[1], startLine: i + 1, lines: [] });
       }

@@ -1,5 +1,5 @@
 /**
- * Core guidance pages for the guidance languages (vi, id, th, fil, ar, de, es).
+ * Core guidance pages for the guidance languages (vi, id, th, fil, ar, de, es, fr, pt).
  *
  * Guidance is published in the page language; consultations with an attorney
  * are handled only in English, Chinese, Japanese and Korean. Every locale below
@@ -17,11 +17,13 @@
 
 import { AR_PRIVACY_POLICY_LABEL, ID_PRIVACY_POLICY_LABEL } from '@/data/guidance-privacy-label';
 import {
+  frenchGuidanceContent,
   germanGuidanceContent,
+  portugueseGuidanceContent,
   spanishGuidanceContent,
 } from '@/data/international-guidance-western';
 
-export type GuidanceLocale = 'vi' | 'id' | 'th' | 'fil' | 'ar' | 'de' | 'es';
+export type GuidanceLocale = 'vi' | 'id' | 'th' | 'fil' | 'ar' | 'de' | 'es' | 'fr' | 'pt';
 
 export type GuidancePageKey =
   | 'home'
@@ -2595,4 +2597,6 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
   },
   de: germanGuidanceContent,
   es: spanishGuidanceContent,
+  fr: frenchGuidanceContent,
+  pt: portugueseGuidanceContent,
 };

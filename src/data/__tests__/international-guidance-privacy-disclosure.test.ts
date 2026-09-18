@@ -18,6 +18,8 @@ const PENDING_CONFIRMATION: Record<(typeof GUIDANCE_LOCALES_4)[number], RegExp> 
   ar: /في انتظار .{0,20}تأكيد|بانتظار تأكيد المكتب|لم يتأكّد المكتب بعد/,
   de: /steht noch aus|ausstehende Bestätigung|noch nicht bestätigt durch die Kanzlei/,
   es: /pendiente de confirmación|aún no confirmad/,
+  fr: /en attente de confirmation|pas encore confirmé par le cabinet/,
+  pt: /pendente de confirmação|ainda não confirmad/,
 };
 
 const GENERIC_PENDING = /pending confirmation|operator confirmation|confirmed by the operator/i;

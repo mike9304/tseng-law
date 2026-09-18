@@ -248,7 +248,7 @@ describe('/api/consultation/international', () => {
   });
 
   it.each([
-    ['uiLocale', { uiLocale: 'fr' }],
+    ['uiLocale', { uiLocale: 'it' }],
     ['preferredConsultationLanguage', { preferredConsultationLanguage: 'de' }],
     ['originalLanguage', { originalLanguage: '   ' }],
   ])('rejects invalid %s without persist or mail', async (_label, override) => {

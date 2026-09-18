@@ -938,6 +938,8 @@ test.describe('O29 og:locale across the eight public locales', () => {
     ar: 'ar_AR',
     de: 'de_DE',
     es: 'es_ES',
+    fr: 'fr_FR',
+    pt: 'pt_PT',
   };
 
   for (const locale of PUBLIC_LOCALES_8) {

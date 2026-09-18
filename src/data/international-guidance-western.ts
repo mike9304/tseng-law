@@ -1,8 +1,8 @@
 /**
- * German and Spanish guidance packs. Same contract as vi/id/th/fil/ar:
- * page language ≠ consultation language. Consultations are only English,
- * Chinese, Japanese and Korean. No interpreter, reply-time, appointment,
- * fee figure, outcome or residency promise.
+ * German, Spanish, French and Portuguese guidance packs. Same contract as
+ * vi/id/th/fil/ar: page language ≠ consultation language. Consultations are
+ * only English, Chinese, Japanese and Korean. No interpreter, reply-time,
+ * appointment, fee figure, outcome or residency promise.
  */
 import type { GuidanceLocaleContent } from '@/data/international-guidance-content';
 
@@ -976,6 +976,982 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
           paragraphs: [
             'Los artículos se escribieron como información general en el momento de su publicación. Las normas y su aplicación pueden cambiar, y un artículo no recoge todas las circunstancias de su caso.',
             'Por eso, no tome un artículo como base para actuar en un asunto real. Úselo para entender el panorama general y hable después de su expediente con un abogado; esta página no es el paso de consulta.',
+          ],
+        },
+      ],
+    },
+  },
+};
+
+export const frenchGuidanceContent: GuidanceLocaleContent = {
+  languageName: 'Français',
+  nav: {
+    home: 'Accueil',
+    services: 'Domaines d’activité',
+    about: 'Le cabinet',
+    lawyers: 'Avocates et avocats',
+    pricing: 'Étendue et honoraires',
+    contact: 'Contact',
+    faq: 'Questions fréquentes',
+    privacy: 'Confidentialité',
+    disclaimer: 'Avertissement',
+    columns: 'Articles',
+  },
+  contactCta: 'Envoyer une demande de consultation',
+  footerNotice:
+    'Cette page en français ne contient que des indications générales sur le travail du cabinet selon le droit de Taïwan. Elle n’est pas un avis juridique pour une affaire concrète, et l’envoi d’un message ne crée pas, à lui seul, une relation entre avocate ou avocat et client.',
+  skipLink: 'Passer la navigation et aller au contenu',
+  menuLabel: 'Sommaire des pages',
+  languageLabel: 'Langue d’affichage',
+  mega: {
+    services: {
+      description: 'Le cabinet traite les groupes d’activité essentiels selon le droit de Taïwan.',
+      viewAllLabel: 'Tout afficher',
+    },
+    columns: {
+      description: 'Articles sur des questions fréquentes du droit de Taïwan.',
+      viewAllLabel: 'Tout afficher',
+    },
+    lawyers: {
+      description: 'Présentation des avocates et avocats en activité et des voies de contact.',
+      viewAllLabel: 'Tout afficher',
+    },
+    pricing: {
+      description: 'Cette page explique l’étendue du travail et la manière dont les honoraires sont confirmés.',
+      viewAllLabel: 'Tout afficher',
+    },
+    faq: {
+      description: 'Questions fréquentes sur le travail du cabinet à Taïwan.',
+      viewAllLabel: 'Tout afficher',
+    },
+  },
+  notFoundTitle: 'Page introuvable',
+  notFoundText:
+    'La page recherchée n’existe pas ou a été déplacée. Vous pouvez revenir à l’accueil en français pour voir les indications disponibles.',
+  backHomeLabel: 'Retour à l’accueil',
+  readSourceLabel: 'Ouvrir la liste d’articles dans la langue d’origine',
+  home: {
+    heroScrollLabel: 'Faire défiler vers le bas',
+    heroColumnsCtaLabel: 'Voir les articles',
+    servicesDetailLabel: 'Voir les détails',
+    servicesAssistanceBefore: 'Si le groupe auquel appartient votre affaire n’est pas clair, la page ',
+    servicesAssistanceLinkLabel: 'Contact',
+    servicesAssistanceAfter:
+      ' explique comment rédiger un résumé qu’une avocate ou un avocat examinera.',
+    columnsViewAllLabel: 'Voir tous les articles',
+    columnsReadMoreLabel: 'Lire la suite',
+    columnsReviewLabel: 'Relu par l’avocate Wei Tseng',
+    columnsOriginalLanguageBadge: 'Langue d’origine',
+    columnsOriginalLanguageNote:
+      'Les articles suivants ne sont pas encore disponibles en français. La liste reste dans la langue d’origine et ouvre la page correspondante ; le contenu n’est pas traduit automatiquement.',
+    imageBandAlt: 'Maison traditionnelle taïwanaise (三合院) et un pavillon contemporain en plein jour',
+    videoPauseLabel: 'Mettre la vidéo en pause',
+    videoPlayLabel: 'Lire la vidéo',
+    videoReplayLabel: 'Relire la vidéo',
+  },
+  pages: {
+    home: {
+      eyebrow: 'INDICATIONS',
+      title: 'Services juridiques à Taïwan — indications en français',
+      description:
+        'Explications générales en français sur le champ d’activité de Hovering International Law Firm à Taïwan, les langues de consultation et le premier contact.',
+      intro:
+        'Hovering International Law Firm accompagne des clients de l’étranger, y compris ceux qui ont un lien avec Taïwan, dans des affaires de droit taïwanais : investissement et constitution de sociétés, litiges civils, mariage, famille et successions, droit du travail, affaires pénales et propriété intellectuelle. Cette partie en français vous aide à voir quel travail entre dans notre champ, ce qu’il convient de préparer et comment nous joindre. Il s’agit d’indications générales, non d’un avis juridique pour votre propre affaire.',
+      sections: [
+        {
+          heading: 'Ce que nous faisons',
+          paragraphs: [
+            'Hovering International Law Firm est un cabinet d’avocats établi à Taïwan. Il travaille selon le droit taïwanais et tient des bureaux à Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) et Pingtung (屏東). Nous conseillons des entreprises et menons des procédures devant les tribunaux, et nous accompagnons des clients de l’étranger dans les démarches à suivre à Taïwan.',
+            'Tout le contenu de ces pages est général. L’issue d’une affaire dépend des faits, des règles applicables et du moment. Ces indications ne remplacent pas un entretien avec une avocate ou un avocat sur vos pièces.',
+          ],
+        },
+        {
+          heading: 'La langue de la page et la langue de consultation ne sont pas la même chose',
+          paragraphs: [
+            'Cette page est rédigée en français, mais la consultation avec une avocate ou un avocat a lieu seulement dans les quatre langues de consultation : anglais, chinois (中文), japonais et coréen. Lire les indications en français ne signifie pas que l’entretien avec l’avocate ou l’avocat se tient en français.',
+            'Nous ne promettons ni service d’interprétation, ni délai de réponse, ni rendez-vous par cette page. Si vous ne pouvez utiliser aucune des quatre langues, la page « Contact » explique comment nous examinons une manière de communiquer.',
+          ],
+        },
+        {
+          heading: 'Groupes d’activité',
+          paragraphs: [
+            'Le champ d’activité couvre les six groupes suivants. La page « Domaines d’activité » décrit chaque groupe plus en détail et indique ce qui n’est pas promis.',
+          ],
+          items: [
+            'Investissement et constitution de sociétés à Taïwan',
+            'Affaires civiles et dommages-intérêts',
+            'Mariage, famille et successions',
+            'Litiges du travail',
+            'Affaires pénales',
+            'Propriété intellectuelle : marques, brevets et droit d’auteur',
+          ],
+        },
+        {
+          heading: 'Par où commencer',
+          paragraphs: [
+            'Lisez la page « Domaines d’activité » pour vérifier si votre affaire entre dans notre champ, puis « Étendue et honoraires » et « Contact » pour savoir comment l’étendue est fixée et comment les honoraires sont confirmés avant le début du travail.',
+            'Lorsque vous envoyez un message, vous pouvez rédiger le résumé dans votre propre langue. Le texte original est conservé tel que vous l’avez écrit et n’est pas traduit automatiquement. Un message envoyé est une demande en attente d’examen : ce n’est pas encore une consultation ni un rendez-vous confirmé.',
+          ],
+        },
+      ],
+    },
+    services: {
+      eyebrow: 'DOMAINES D’ACTIVITÉ',
+      title: 'Affaires que nous traitons',
+      description:
+        'Six groupes d’activité du cabinet à Taïwan et les limites qu’il convient de connaître d’abord.',
+      intro:
+        'Voici les groupes que nous traitons réellement et les questions souvent posées au début. Cette présentation vous aide à juger si votre affaire entre dans notre champ ; elle est générale et n’est pas l’analyse juridique d’un dossier particulier.',
+      sections: [
+        {
+          heading: 'Investissement et constitution de sociétés à Taïwan',
+          paragraphs: [
+            'Nous accompagnons des investisseurs et des entreprises étrangers pour constituer ou exploiter une société à Taïwan : choix de la forme, préparation et dépôt des pièces, apport de capital, questions bancaires, examen du lieu d’exploitation et exigences propres à certains secteurs. Nous appuyons aussi la comptabilité et la fiscalité nées de la constitution et de l’exploitation à Taïwan.',
+            'L’ordre et la durée varient selon la forme, l’investisseur, le secteur, la banque et les pièces disponibles. La constitution d’une société ne produit pas, à elle seule, un titre de séjour (居留) ni un permis de travail (工作許可) : ce sont des procédures distinctes, appréciées selon la situation de chaque personne.',
+          ],
+        },
+        {
+          heading: 'Affaires civiles et dommages-intérêts',
+          paragraphs: [
+            'Ce groupe couvre les litiges contractuels, les dommages-intérêts nés d’un acte illicite et les litiges de consommation. Le travail commence en général par une chronologie, l’examen des pièces et des preuves existantes, puis seulement les étapes suivantes.',
+            'Les délais, y compris les délais légaux pour agir, et le caractère complet des preuves marquent le cours de l’affaire. Indiquez donc dès que possible les dates que vous connaissez. Conservez contrats, messages, justificatifs de paiement ou photos des lieux et mentionnez-les dans le premier message.',
+          ],
+        },
+        {
+          heading: 'Mariage, famille et successions',
+          paragraphs: [
+            'Nous traitons le divorce (離婚), le partage des biens, l’exercice et la charge des droits et devoirs à l’égard des enfants mineurs (未成年子女權利義務之行使或負擔), le droit de visite (會面交往) et les successions (繼承), y compris lorsque les parties ou les biens se trouvent dans des États différents. Les affaires familiales transfrontalières exigent souvent un examen supplémentaire des pièces du registre des ménages (戶籍), de la forme des actes et de leur force probante à Taïwan.',
+            'Parce que les affaires de famille s’accompagnent souvent de délais et de procédures parallèles, le premier résumé devrait indiquer le lien entre les parties, le lieu de résidence actuel et les procédures déjà en cours.',
+          ],
+        },
+        {
+          heading: 'Litiges du travail',
+          paragraphs: [
+            'Ce groupe couvre la fin du contrat de travail, l’indemnité selon le droit de Taïwan (資遣費 ; à ne pas identifier avec des institutions d’autres États), les salaires et les litiges nés du contrat de travail (勞動契約), du côté de la personne salariée comme de l’employeur. Lors de l’examen, nous séparons le motif de la fin des questions de préavis, de paiement et de délais.',
+            'Le contrat de travail, le règlement intérieur (工作規則), les bulletins de paie et les échanges écrits entre les parties sont le plus souvent les pièces décisives. Si vous les avez encore, mentionnez-le dans le résumé.',
+          ],
+        },
+        {
+          heading: 'Affaires pénales',
+          paragraphs: [
+            'Nous accompagnons à l’enquête et devant le tribunal, pour la personne mise en cause ou accusée comme pour la victime, et nous évaluons le risque pénal de l’activité d’entreprise.',
+            'Les affaires pénales ont souvent des délais courts et des étapes déjà fixées. Si vous avez déjà reçu un écrit de l’autorité de poursuite ou du tribunal, indiquez tôt la date de cet écrit afin que le contenu soit examiné dans le bon ordre.',
+          ],
+        },
+        {
+          heading: 'Propriété intellectuelle',
+          paragraphs: [
+            'Nous aidons à l’enregistrement des marques (商標) et des brevets (專利), au droit d’auteur et aux litiges sur ces droits à Taïwan.',
+            'Dans ce groupe, l’ordre des étapes est décisif : l’étendue de la protection, le moment du dépôt et l’usage effectif influencent le choix. Déposer une demande ne signifie pas, à soi seul, qu’elle sera accordée.',
+          ],
+        },
+        {
+          heading: 'Étendue et sa confirmation',
+          paragraphs: [
+            'Le cabinet travaille selon le droit de Taïwan et traite les affaires des groupes ci-dessus. L’étendue de chaque affaire est confirmée séparément après qu’une avocate ou un avocat a examiné votre message.',
+            'Le statut de séjour, le permis de travail et des questions comparables sont appréciés à partir des pièces et de la situation de chaque personne, non à partir de la nationalité. Si une partie de votre affaire touche ces questions, mentionnez-le lors du contact. Cette page ne promet ni un résultat ni un délai de réponse.',
+          ],
+        },
+      ],
+    },
+    about: {
+      eyebrow: 'LE CABINET',
+      title: 'À propos de Hovering International Law Firm',
+      description:
+        'Indications de base sur ce cabinet d’avocats taïwanais, ses bureaux et le travail avec des parties étrangères.',
+      intro:
+        'Hovering International Law Firm est un cabinet d’avocats à Taïwan. Les avocates et avocats travaillent du conseil aux entreprises jusqu’à la procédure judiciaire. Cette partie décrit la création du cabinet, les implantations et le travail avec des parties étrangères.',
+      sections: [
+        {
+          heading: 'Création et organisation',
+          paragraphs: [
+            'Hovering International Law Firm (昊鼎國際法律事務所) a été fondé en 2016 par des avocates et avocats formés à la National Taiwan University (國立臺灣大學). Le nom chinois 昊鼎 unit le caractère 昊 (« ciel vaste ») et le caractère 鼎 (« base solide ») et décrit l’orientation du cabinet depuis sa création.',
+            'Nous avons des bureaux à Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) et Pingtung (屏東). Le bureau de Kaohsiung se concentre sur la gouvernance d’entreprise et traite des litiges civils, pénaux et administratifs. Le bureau de Taichung traite des affaires de construction, de propriété intellectuelle et des affaires liées à la Corée et au Japon. Le bureau de Pingtung a été ouvert en 2017 pour le besoin local.',
+            'Outre le travail d’avocat, Hovering Accounting Office existe depuis 2020 et propose comptabilité et planification fiscale aux entrepreneurs et aux particuliers fortunés.',
+          ],
+        },
+        {
+          heading: 'Travail avec des parties étrangères',
+          paragraphs: [
+            'Le travail transfrontalier couvre la constitution de sociétés, les visas, les dépôts de marques et de brevets, l’examen des risques juridiques et le conseil fiscal des entreprises. Le bureau de Taichung traite en particulier la construction, la propriété intellectuelle et les affaires liées à la Corée et au Japon. L’avocate Wei Tseng (曾雋崴) accompagne des clients de Corée, du Japon et d’autres clients internationaux dans les groupes indiqués.',
+            'La possibilité de prendre une affaire dépend du contenu et de la langue de communication. Si votre affaire entre dans les groupes indiqués et peut être discutée dans l’une des quatre langues de consultation, vous pouvez envoyer un résumé pour examen.',
+          ],
+        },
+        {
+          heading: 'Lorsque vous nous contactez',
+          paragraphs: [
+            'Après réception de votre résumé, une avocate ou un avocat examine le contenu, puis parle de l’étendue possible, des pièces encore nécessaires et des étapes suivantes. Pour des questions fiscales ou comptables, le cabinet peut travailler avec le service de comptabilité dans un même flux.',
+            'Le résultat de chaque affaire dépend des faits et des pièces existantes ; nous ne promettons pas un résultat. Si vous avez besoin d’une réponse concrète pour votre situation, les pièces doivent être discutées dans l’une des quatre langues de consultation avec une avocate ou un avocat.',
+          ],
+        },
+      ],
+    },
+    lawyers: {
+      eyebrow: 'AVOCATES ET AVOCATS',
+      title: 'Équipe internationale de Hovering',
+      description: 'Profils des avocates et avocats, de la direction des opérations et de l’expertise-comptable associée de Hovering.',
+      intro: '',
+      sections: [],
+    },
+    pricing: {
+      eyebrow: 'ÉTENDUE ET HONORAIRES',
+      title: 'Comment l’étendue du travail et les honoraires sont fixés',
+      description:
+        'Explication de l’ordre : d’abord l’étendue du travail, puis la confirmation des honoraires, et pourquoi cette page ne publie pas de liste de tarifs.',
+      intro:
+        'Cette page explique comment les honoraires sont fixés, non leur montant. Le montant dépend de l’étendue de chaque affaire et n’a de sens que lorsque cette étendue est claire.',
+      sections: [
+        {
+          heading: 'L’étendue du travail est fixée en premier',
+          paragraphs: [
+            'Des affaires du même type peuvent exiger un travail très différent, selon le nombre de parties, les pièces disponibles, les délais à respecter et le fait qu’une procédure a déjà commencé. C’est pourquoi la première étape est toujours de fixer ce qui entre dans le travail et ce qui n’y entre pas.',
+            'Le résumé que vous envoyez au début est la base de cette étendue. Plus il décrit clairement le déroulement, votre demande et les délais, plus l’étendue peut être déterminée avec précision.',
+          ],
+        },
+        {
+          heading: 'Les honoraires sont confirmés avant le début du travail',
+          paragraphs: [
+            'Lorsque l’étendue est claire, le montant et le mode de calcul sont discutés et confirmés avec vous avant le début du travail. Si l’étendue change en cours de route, cela doit être confirmé à nouveau.',
+            'Cette page n’est pas une offre de prix et ne crée aucune obligation de paiement. L’envoi d’une demande par cette page n’entraîne aucun paiement.',
+          ],
+        },
+        {
+          heading: 'La consultation peut être un service payant',
+          paragraphs: [
+            'La consultation avec une avocate ou un avocat peut être une prestation payante. Cette page n’affirme pas que le premier entretien est offert, et aucune partie ne doit se lire en ce sens.',
+            'Si la consultation est payante, le montant et le mode de paiement sont communiqués avant qu’elle ait lieu.',
+          ],
+        },
+        {
+          heading: 'Pourquoi cette page ne publie pas de tarifs',
+          paragraphs: [
+            'Les honoraires dépendent de l’affaire elle-même : du travail à faire, du nombre de parties, des pièces, des délais et du fait qu’une procédure est déjà en cours. Un chiffre fixé à l’avance ne montrerait pas le coût de votre dossier. C’est pourquoi nous fixons d’abord l’étendue du travail, puis nous vous communiquons les honoraires avant le début du travail.',
+            'Outre les honoraires d’avocat, des frais de tribunal, d’autorité ou de tiers peuvent naître. Ils sont distincts des honoraires et dépendent de la procédure suivie.',
+          ],
+        },
+      ],
+    },
+    contact: {
+      eyebrow: 'CONTACT',
+      title: 'Comment joindre le cabinet',
+      description:
+        'Langue de la page, langues de consultation, la démarche si vous ne pouvez utiliser aucune des quatre langues, et ce que cette page ne promet pas.',
+      intro:
+        'Avant de nous écrire, distinguez s’il vous plaît les trois points suivants. Ils sont souvent mêlés, mais ils ne signifient pas la même chose.',
+      sections: [
+        {
+          heading: 'Trois choses à tenir séparées',
+          paragraphs: [
+            'La langue d’affichage de la page, la langue de consultation avec l’avocate ou l’avocat et la langue dans laquelle vous écrivez sont trois choses distinctes.',
+          ],
+          items: [
+            'Langue de la page : ces indications sont rédigées en français.',
+            'Langue de consultation : la consultation a lieu en anglais, en chinois (中文), en japonais et en coréen.',
+            'Votre langue d’écriture : vous pouvez rédiger le résumé dans votre propre langue ; le texte original est conservé tel quel.',
+          ],
+        },
+        {
+          heading: 'Si vous ne pouvez utiliser aucune des quatre langues de consultation',
+          paragraphs: [
+            'Dans le formulaire de contact, vous pouvez choisir « La manière de communiquer doit être confirmée ». Nous répondons pour examiner une manière possible de communiquer lorsqu’il en existe une ; une prestation dans une autre langue n’est pas assurée et aucun délai de réponse n’est promis.',
+            'Ce n’est qu’une étape d’examen, non une promesse. Nous ne promettons pas de service d’interprétation, ni une prestation en français ou dans une autre langue hors des quatre langues indiquées, ni d’accepter toutes les affaires.',
+          ],
+        },
+        {
+          heading: 'Ce que le premier message devrait contenir',
+          paragraphs: [
+            'Indiquez ce qui s’est passé, l’aide dont vous avez besoin, le lien de l’affaire avec Taïwan et le délai, si vous en connaissez un. Si vous avez déjà reçu un écrit d’un tribunal ou d’une autorité, indiquez la date de cet écrit.',
+            'À ce premier stade, vous n’avez pas encore à envoyer un numéro de passeport, un numéro d’identité, des données de compte, un dossier médical ou l’ensemble des preuves. Attendez les indications de l’avocate ou de l’avocat, puis envoyez les pièces sensibles par une voie sûre.',
+          ],
+        },
+        {
+          heading: 'Ce que cette page ne promet pas',
+          paragraphs: [
+            'Nous ne promettons pas de délai de réponse, nous ne confirmons pas de rendez-vous par cette page, nous ne promettons pas une avocate ou un avocat en particulier et nous ne mettons pas en place un service d’interprétation. La traduction écrite est autre chose : votre message n’est pas traduit automatiquement.',
+            'Lorsque vous envoyez une demande, le contenu est conservé et attend un examen. Si, après un certain temps, vous ne recevez pas de réponse, vous pouvez écrire à nouveau à l’adresse de courrier indiquée sur la page de contact.',
+          ],
+        },
+      ],
+    },
+    faq: {
+      eyebrow: 'QUESTIONS FRÉQUENTES',
+      title: 'Questions souvent posées',
+      description:
+        'Explications sur le champ d’activité, la préparation, les langues, les honoraires et le sens d’une demande envoyée.',
+      intro:
+        'Les questions suivantes reçoivent une réponse au niveau des indications générales. Une réponse pour votre propre affaire n’est possible qu’après qu’une avocate ou un avocat a examiné les pièces.',
+      sections: [
+        {
+          heading: 'Comment utiliser cette partie',
+          paragraphs: [
+            'Si vous ne trouvez pas de réponse pour votre situation, c’est souvent que la réponse dépend de faits particuliers. Écrivez alors ces faits dans le résumé, au lieu de les déduire vous-même de cette page.',
+          ],
+        },
+      ],
+      faqs: [
+        {
+          question: 'Quelles affaires le cabinet traite-t-il ?',
+          answer:
+            'Nous traitons six groupes : investissement et constitution de sociétés à Taïwan, affaires civiles et dommages-intérêts, mariage, famille et successions, litiges du travail, affaires pénales et propriété intellectuelle. L’acceptation d’une affaire se décide après examen du contenu.',
+        },
+        {
+          question: 'Que dois-je préparer avant de contacter le cabinet ?',
+          answer:
+            'Préparez un court résumé du déroulement, de votre demande, du lien avec Taïwan et du délai s’il en existe un. S’il existe déjà un écrit d’un tribunal ou d’une autorité, indiquez la date. À ce stade, vous n’avez pas encore à envoyer des pièces d’identité ni l’ensemble des preuves.',
+        },
+        {
+          question: 'La consultation en français est-elle possible ?',
+          answer:
+            'Non. Ces indications sont rédigées en français, mais la consultation avec une avocate ou un avocat a lieu seulement en anglais, en chinois (中文), en japonais et en coréen. Nous ne promettons pas non plus de service d’interprétation. La traduction écrite est autre chose : le texte original que vous écrivez est conservé tel quel et n’est pas traduit automatiquement.',
+        },
+        {
+          question: 'Que se passe-t-il si je ne peux utiliser aucune des quatre langues ?',
+          answer:
+            'Choisissez « La manière de communiquer doit être confirmée » lors de l’envoi de la demande. Nous répondons pour examiner une manière de communiquer, mais une prestation dans une autre langue n’est pas assurée. C’est une étape d’examen, non une promesse que nous puissions travailler dans une autre langue.',
+        },
+        {
+          question: 'Comment le texte que j’écris en français est-il traité ?',
+          answer:
+            'Le texte original que vous écrivez est conservé tel quel et n’est pas traduit automatiquement. Si besoin, la langue de la communication ultérieure est confirmée avec vous.',
+        },
+        {
+          question: 'La consultation a-t-elle déjà eu lieu une fois la demande envoyée ?',
+          answer:
+            'Non. Une demande envoyée attend l’examen d’une avocate ou d’un avocat. Ce n’est pas un avis juridique, ce n’est pas un rendez-vous confirmé, et l’envoi ne crée pas, à lui seul, une relation entre avocate ou avocat et client.',
+        },
+        {
+          question: 'Comment les honoraires sont-ils calculés ?',
+          answer:
+            'L’étendue du travail est d’abord fixée, puis le montant et le mode de calcul sont confirmés avec vous avant le début du travail. Cette page ne publie pas de chiffres et n’affirme pas que le premier entretien est offert.',
+        },
+        {
+          question: 'Que faire si mon affaire est urgente ?',
+          answer:
+            'Indiquez le délai ou la date d’un écrit officiel au début de votre résumé, afin que ces dates soient visibles lors de l’examen. Cette page n’a pas de canal d’urgence et n’assure aucun délai de réponse ; si votre affaire ne peut pas attendre, il convient de chercher en parallèle d’autres voies sur votre lieu.',
+        },
+      ],
+    },
+    privacy: {
+      eyebrow: 'CONFIDENTIALITÉ',
+      title: 'Données recueillies par le formulaire de contact',
+      description:
+        'Ce que le formulaire de cette partie en français recueille, comment le texte original est traité et comment nous joindre au sujet de vos données.',
+      intro:
+        'Cette partie concerne seulement le formulaire de contact de ces pages d’indications. Elle décrit le traitement des données, non une assurance technique.',
+      sections: [
+        {
+          heading: 'Données recueillies',
+          paragraphs: [
+            'Lorsque vous envoyez une demande par le formulaire de cette partie, les éléments suivants sont enregistrés :',
+          ],
+          items: [
+            'Le nom que vous indiquez',
+            'L’adresse de courrier pour la réponse',
+            'La langue d’affichage de la page au moment de l’envoi',
+            'La langue dans laquelle vous avez écrit',
+            'La langue de consultation que vous souhaitez',
+            'Le texte original que vous avez écrit',
+            'Votre consentement à l’envoi de la demande',
+            'Un numéro de réception pour retrouver la demande',
+          ],
+        },
+        {
+          heading: 'Le texte original est conservé tel quel',
+          paragraphs: [
+            'Votre texte est conservé exactement comme vous l’avez écrit et n’est pas traduit automatiquement. Si une traduction est nécessaire pour le traitement, cela est discuté avec vous séparément.',
+            'Parce que le texte original est conservé, n’écrivez pas, à ce premier stade, ce qui n’est pas encore nécessaire, par exemple un numéro de passeport, un numéro d’identité ou des données de compte.',
+          ],
+        },
+        {
+          heading: 'Lieu de conservation et accès',
+          paragraphs: [
+            'Le contenu de votre envoi est conservé dans un lieu qui n’est pas d’accès public. Seules les personnes autorisées du cabinet peuvent y accéder pour traiter la demande.',
+            'Cette page n’offre pas une assurance absolue de sécurité. Aucune voie de transmission ni aucun lieu de conservation n’est entièrement sûr ; les pièces sensibles ne devraient donc être envoyées que selon les indications particulières de l’avocate ou de l’avocat.',
+          ],
+        },
+        {
+          heading: 'Finalité de l’usage',
+          paragraphs: [
+            'Les données envoyées servent à l’examen de la demande, à vous répondre, à clarifier la manière de communiquer et au traitement si le travail est entrepris.',
+            'Les données ne sont pas utilisées à des fins de marketing sans un consentement distinct.',
+          ],
+        },
+        {
+          heading: 'Avis et numéro de réception',
+          paragraphs: [
+            'Lorsqu’une demande est envoyée avec succès, le système avise le cabinet. Si cet avis n’est pas encore confirmé, votre texte reste conservé et n’est pas perdu.',
+            'Le numéro de réception sert à retrouver votre demande dans nos dossiers. Il s’affiche après l’enregistrement ; vous pouvez le citer lors d’un nouveau contact.',
+          ],
+        },
+        {
+          heading: 'Vos droits et la voie de contact',
+          paragraphs: [
+            'Vous pouvez demander l’accès, la rectification ou l’effacement de vos données, ou retirer le consentement, par l’adresse de courrier indiquée sur la page de contact. S’il existe une obligation de conservation légale ou liée à une procédure, nous expliquons la limite.',
+            'Cette page n’indique pas de durée fixe de conservation, parce que la durée réelle dépend de la poursuite de l’affaire et des obligations liées. Si vous souhaitez un effacement plus tôt, indiquez-le lors du contact.',
+          ],
+        },
+        {
+          heading: 'Lieu de conservation et prestataires',
+          paragraphs: [
+            'Ce site est hébergé chez Vercel, et votre envoi est conservé dans un stockage d’objets non public de ce service. Les courriers sont envoyés par le service de courrier utilisé par le cabinet.',
+            'Les serveurs de certains prestataires peuvent se trouver hors de Taïwan, de sorte que vos données peuvent y être conservées et traitées. Une fois la finalité de conservation atteinte, les données sont effacées sans délai ; les données qui doivent être conservées selon les règles applicables le restent pendant cette durée. Les demandes relatives aux données personnelles sont reçues à wei@hoveringlaw.com.tw.',
+          ],
+        },
+      ],
+    },
+    disclaimer: {
+      eyebrow: 'AVERTISSEMENT',
+      title: 'Étendue et limites des indications de cette page',
+      description:
+        'Le caractère général des indications, le cadre juridique et les conditions d’une relation entre avocate ou avocat et client.',
+      intro:
+        'Cette partie précise ce que ces pages d’indications en français peuvent et ne peuvent pas faire pour vous.',
+      sections: [
+        {
+          heading: 'Indications générales seulement',
+          paragraphs: [
+            'Le contenu de ces pages est rédigé comme information générale. Il n’est pas un avis juridique pour votre affaire et ne remplace pas l’examen de vos propres pièces.',
+            'L’issue d’une affaire dépend des faits, des règles applicables et du moment ; deux situations qui semblent proches peuvent se terminer différemment.',
+          ],
+        },
+        {
+          heading: 'Cadre juridique',
+          paragraphs: [
+            'Le cabinet exerce selon le droit de Taïwan, et cette page ne parle que du travail dans ce cadre.',
+            'Le contenu n’est pas un conseil selon le droit d’un autre ordre juridique que Taïwan, y compris le droit de votre lieu de résidence. Si une partie de votre affaire relève d’un autre ordre juridique, nous clarifions avec vous quelle personne qualifiée est nécessaire pour cette partie.',
+          ],
+        },
+        {
+          heading: 'Une relation entre avocate ou avocat et client ne naît pas d’elle-même',
+          paragraphs: [
+            'Lire cette page, envoyer un formulaire ou un courrier ne crée pas, à soi seul, une relation entre avocate ou avocat et client.',
+            'Cette relation naît seulement après examen de l’affaire et confirmation, par les deux parties, de la prise en charge du travail.',
+          ],
+        },
+        {
+          heading: 'Aucune promesse de résultat',
+          paragraphs: [
+            'Aucune partie de cette page n’est une promesse sur le résultat d’une affaire, sur l’octroi d’une demande ou sur le statut de séjour et de travail.',
+            'Les liens externes sont fournis pour s’orienter ; nous n’assurons ni l’exactitude ni l’actualité des contenus de tiers.',
+          ],
+        },
+      ],
+    },
+    columns: {
+      eyebrow: 'ARTICLES',
+      title: 'Articles sur le droit de Taïwan',
+      description:
+        'Articles en français sur des questions fréquentes du droit de Taïwan. Le contenu est une information générale au moment de la publication, non un avis juridique pour votre affaire.',
+      intro:
+        'Le cabinet publie des articles sur des questions fréquentes du droit de Taïwan. Les articles disponibles en français figurent sur cette page ; il y a en outre quatre liens, chacun ouvrant la liste d’articles d’une langue d’origine.',
+      sections: [
+        {
+          heading: 'Quatre listes selon la langue',
+          paragraphs: [
+            'Cette partie contient quatre liens : la liste d’articles en coréen, en chinois, en anglais et en japonais. Chaque lien indique la langue de sa liste, afin que vous sachiez d’avance dans quelle langue le contenu s’ouvrira.',
+            'Ces quatre listes sont des listes selon la langue d’origine des articles, non des listes de traductions. Les articles déjà disponibles en français figurent séparément sur cette même page.',
+          ],
+        },
+        {
+          heading: 'Où mènent les liens',
+          paragraphs: [
+            'Lorsque vous choisissez l’un des quatre liens, la liste d’articles de cette langue s’ouvre. Dans la liste, vous choisissez vous-même le texte ; l’ensemble du contenu apparaît dans la langue d’origine de l’article.',
+            'Cette page ne résume pas le contenu des articles et n’assure pas qu’un thème existe dans les quatre langues. Chaque liste ne contient que les textes publiés dans cette langue.',
+          ],
+        },
+        {
+          heading: 'Jusqu’où un article peut servir d’orientation',
+          paragraphs: [
+            'Les articles sont des indications générales au moment de la publication. Les règles et leur application peuvent changer, et un article ne reprend pas toutes les circonstances de votre affaire.',
+            'Ne fondez donc aucune action dans une affaire réelle sur un article seul. Servez-vous-en pour une vue d’ensemble, puis discutez vos pièces séparément avec une avocate ou un avocat ; cette page n’est pas l’étape de consultation.',
+          ],
+        },
+      ],
+    },
+  },
+};
+
+export const portugueseGuidanceContent: GuidanceLocaleContent = {
+  languageName: 'Português',
+  nav: {
+    home: 'Início',
+    services: 'Áreas de atividade',
+    about: 'O escritório',
+    lawyers: 'Advogadas e advogados',
+    pricing: 'Âmbito e honorários',
+    contact: 'Contacto',
+    faq: 'Perguntas frequentes',
+    privacy: 'Privacidade',
+    disclaimer: 'Aviso legal',
+    columns: 'Artigos',
+  },
+  contactCta: 'Enviar um pedido de consulta',
+  footerNotice:
+    'Esta página em português contém apenas indicações gerais sobre o trabalho do escritório segundo o direito de Taiwan. Não é um parecer jurídico para um caso concreto, e o envio de uma mensagem não cria, por si só, uma relação entre advogada ou advogado e cliente.',
+  skipLink: 'Saltar a navegação e ir para o conteúdo',
+  menuLabel: 'Índice de páginas',
+  languageLabel: 'Língua de visualização',
+  mega: {
+    services: {
+      description: 'O escritório trata os grupos principais de atividade segundo o direito de Taiwan.',
+      viewAllLabel: 'Ver tudo',
+    },
+    columns: {
+      description: 'Artigos sobre questões frequentes do direito de Taiwan.',
+      viewAllLabel: 'Ver tudo',
+    },
+    lawyers: {
+      description: 'Apresentação das advogadas e dos advogados em atividade e das vias de contacto.',
+      viewAllLabel: 'Ver tudo',
+    },
+    pricing: {
+      description: 'Esta página explica o âmbito do trabalho e o modo como os honorários são confirmados.',
+      viewAllLabel: 'Ver tudo',
+    },
+    faq: {
+      description: 'Perguntas frequentes sobre o trabalho do escritório em Taiwan.',
+      viewAllLabel: 'Ver tudo',
+    },
+  },
+  notFoundTitle: 'Página não encontrada',
+  notFoundText:
+    'A página procurada não existe ou foi deslocada. Pode regressar ao início em português para ver as indicações disponíveis.',
+  backHomeLabel: 'Voltar ao início',
+  readSourceLabel: 'Abrir a lista de artigos na língua original',
+  home: {
+    heroScrollLabel: 'Deslocar para baixo',
+    heroColumnsCtaLabel: 'Ver artigos',
+    servicesDetailLabel: 'Ver pormenores',
+    servicesAssistanceBefore: 'Se ainda não for claro a que grupo pertence o seu assunto, a página de ',
+    servicesAssistanceLinkLabel: 'Contacto',
+    servicesAssistanceAfter:
+      ' explica como redigir um resumo que uma advogada ou um advogado irá examinar.',
+    columnsViewAllLabel: 'Ver todos os artigos',
+    columnsReadMoreLabel: 'Continuar a ler',
+    columnsReviewLabel: 'Revisto pela advogada Wei Tseng',
+    columnsOriginalLanguageBadge: 'Língua original',
+    columnsOriginalLanguageNote:
+      'Os artigos seguintes ainda não estão disponíveis em português. A lista permanece na língua original e abre essa página; o conteúdo não é traduzido de forma automática.',
+    imageBandAlt: 'Casa tradicional taiwanesa (三合院) e um pavilhão contemporâneo em plena luz do dia',
+    videoPauseLabel: 'Pausar o vídeo',
+    videoPlayLabel: 'Reproduzir o vídeo',
+    videoReplayLabel: 'Voltar a reproduzir o vídeo',
+  },
+  pages: {
+    home: {
+      eyebrow: 'INDICAÇÕES',
+      title: 'Serviços jurídicos em Taiwan — indicações em português',
+      description:
+        'Explicação geral em português sobre o âmbito de Hovering International Law Firm em Taiwan, as línguas de consulta e o primeiro contacto.',
+      intro:
+        'Hovering International Law Firm acompanha clientes do estrangeiro, também quem tem um vínculo com Taiwan, em assuntos de direito taiwanês: investimento e constituição de sociedades, litígios civis, casamento, família e sucessões, laboral, penal e propriedade intelectual. Esta parte em português ajuda a saber que trabalho entra no nosso âmbito, o que convém preparar e como nos contactar. São indicações gerais, não um parecer jurídico para o seu próprio caso.',
+      sections: [
+        {
+          heading: 'O que fazemos',
+          paragraphs: [
+            'Hovering International Law Firm é um escritório de advogados estabelecido em Taiwan. Trabalha segundo o direito taiwanês e tem escritórios em Taipé (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). Aconselhamos empresas e conduzimos procedimentos perante os tribunais, e acompanhamos clientes do estrangeiro nos trâmites que devem seguir-se em Taiwan.',
+            'Todo o conteúdo destas páginas é geral. O resultado de um assunto depende dos factos, das normas aplicáveis e do momento. Estas indicações não substituem uma conversa com uma advogada ou um advogado sobre o seu processo.',
+          ],
+        },
+        {
+          heading: 'A língua da página e a língua de consulta não são a mesma coisa',
+          paragraphs: [
+            'Esta página está escrita em português, mas a consulta com uma advogada ou um advogado realiza-se apenas nas quatro línguas de consulta: inglês, chinês (中文), japonês e coreano. Ler as indicações em português não significa que a conversa com a advogada ou o advogado se realize em português.',
+            'Não prometemos serviço de interpretação, não prometemos um prazo de resposta e não confirmamos marcações através desta página. Se não puder usar nenhuma dessas quatro línguas, a página «Contacto» explica como examinamos uma forma de comunicar.',
+          ],
+        },
+        {
+          heading: 'Grupos de atividade',
+          paragraphs: [
+            'O âmbito do escritório cobre os seis grupos seguintes. A página «Áreas de atividade» descreve cada grupo com mais pormenor e indica o que não é prometido.',
+          ],
+          items: [
+            'Investimento e constituição de sociedades em Taiwan',
+            'Litígios civis e indemnizações',
+            'Casamento, família e sucessões',
+            'Conflitos laborais',
+            'Assuntos penais',
+            'Propriedade intelectual: marcas, patentes e direitos de autor',
+          ],
+        },
+        {
+          heading: 'Por onde convém começar',
+          paragraphs: [
+            'Leia a página «Áreas de atividade» para verificar se o seu assunto entra no nosso âmbito e, em seguida, «Âmbito e honorários» e «Contacto» para saber como se fixa o âmbito e se confirmam os honorários antes de começar o trabalho.',
+            'Ao enviar uma mensagem, pode escrever o resumo na sua própria língua. O texto original é guardado tal como o escreve e não é traduzido de forma automática. Uma mensagem enviada é um pedido que espera exame: ainda não é uma consulta nem uma marcação confirmada.',
+          ],
+        },
+      ],
+    },
+    services: {
+      eyebrow: 'ÁREAS DE ATIVIDADE',
+      title: 'Assuntos que tratamos',
+      description:
+        'Seis grupos de trabalho do escritório em Taiwan e os limites que convém conhecer de antemão.',
+      intro:
+        'Seguem-se os grupos que realmente tratamos e as questões que costumam surgir no início. Esta descrição ajuda a avaliar se o seu assunto entra no nosso âmbito; é informação geral, não a análise jurídica de um processo concreto.',
+      sections: [
+        {
+          heading: 'Investimento e constituição de sociedades em Taiwan',
+          paragraphs: [
+            'Acompanhamos investidores e empresas estrangeiras que constituem ou exploram uma sociedade em Taiwan: escolha da forma societária, preparação e apresentação de documentos, entrada de capital, banca, avaliação do local e requisitos próprios de certos setores. Também apoiamos a contabilidade e a fiscalidade decorrentes de constituir e operar em Taiwan.',
+            'A ordem e a duração do processo variam segundo a forma societária, o investidor, o setor, o banco e os documentos disponíveis. Constituir uma sociedade não produz, por si só, um título de residência (居留) nem uma autorização de trabalho (工作許可): são trâmites distintos, apreciados segundo a situação de cada pessoa.',
+          ],
+        },
+        {
+          heading: 'Litígios civis e indemnizações',
+          paragraphs: [
+            'Este grupo cobre conflitos contratuais, pedidos de indemnização por ato ilícito e conflitos de consumo. O trabalho costuma começar por uma cronologia dos factos, a revisão de documentos e provas existentes e, só depois, os passos seguintes.',
+            'Os prazos, incluindo os prazos legais para demandar, e a integridade das provas marcam o curso do assunto civil, pelo que deve indicar desde o início as datas que conheça. Se conservar contratos, mensagens, comprovativos de pagamento ou fotografias do local, mencione-os na primeira mensagem.',
+          ],
+        },
+        {
+          heading: 'Casamento, família e sucessões',
+          paragraphs: [
+            'Tratamos divórcio (離婚), partilha de bens, exercício e assunção de direitos e deveres relativamente a filhos menores (未成年子女權利義務之行使或負擔), regime de visitas (會面交往) e sucessões (繼承), também quando as partes ou os bens estão em países distintos. Os assuntos de família transfronteiriços exigem muitas vezes um exame adicional de documentos do registo de agregados (戶籍), da forma dos documentos e do seu valor probatório em Taiwan.',
+            'Como os assuntos de família costumam ir ligados a prazos e a vários trâmites em paralelo, o resumo inicial deve indicar a relação entre as partes, o local de residência atual e os procedimentos já iniciados.',
+          ],
+        },
+        {
+          heading: 'Conflitos laborais',
+          paragraphs: [
+            'Este grupo cobre a cessação do contrato de trabalho, a indemnização segundo o direito de Taiwan (資遣費; não se identifica com instituições de outros países), salários e conflitos decorrentes do contrato de trabalho (勞動契約), tanto do lado da pessoa trabalhadora como do empregador. Ao rever o assunto separamos o fundamento da cessação das questões de pré-aviso, pagamento e prazos.',
+            'O contrato de trabalho, o regulamento interno (工作規則), os recibos de vencimento e a troca escrita entre as partes são, em regra, os documentos decisivos. Se ainda os conserva, indique-o no resumo.',
+          ],
+        },
+        {
+          heading: 'Assuntos penais',
+          paragraphs: [
+            'Acompanhamos na investigação e perante o tribunal, tanto a pessoa investigada ou acusada como a vítima, e avaliamos o risco penal da atividade empresarial.',
+            'Os assuntos penais costumam ter prazos curtos e etapas já definidas, pelo que, se já recebeu um escrito da autoridade ou do tribunal, indique a data desse escrito desde o início para que o conteúdo seja revisto na ordem adequada.',
+          ],
+        },
+        {
+          heading: 'Propriedade intelectual',
+          paragraphs: [
+            'Ajudamos no registo de marcas (商標) e patentes (專利), em direitos de autor e em conflitos sobre esses direitos em Taiwan.',
+            'Neste grupo a ordem dos passos é decisiva: o âmbito da proteção, o momento da apresentação e o uso efetivo influenciam a escolha. Apresentar um pedido não significa, por si só, que seja concedido.',
+          ],
+        },
+        {
+          heading: 'Âmbito e a sua confirmação',
+          paragraphs: [
+            'O escritório trabalha segundo o direito de Taiwan e trata assuntos dos grupos anteriores. O âmbito de cada assunto confirma-se separadamente depois de uma advogada ou um advogado rever o conteúdo que envia.',
+            'O estatuto de residência, a autorização de trabalho e questões semelhantes avaliam-se a partir do processo e da situação de cada pessoa, não a partir da nacionalidade. Se alguma parte do seu assunto tocar esses temas, indique-o ao contactar-nos. Esta página não promete um resultado nem um prazo de resposta.',
+          ],
+        },
+      ],
+    },
+    about: {
+      eyebrow: 'O ESCRITÓRIO',
+      title: 'Sobre Hovering International Law Firm',
+      description:
+        'Informação de base sobre este escritório de advogados em Taiwan, os seus escritórios e o trabalho com partes estrangeiras.',
+      intro:
+        'Hovering International Law Firm é um escritório de advogados em Taiwan. As advogadas e os advogados trabalham desde o aconselhamento a empresas até à atuação perante os tribunais. Esta parte descreve a fundação do escritório, as sedes e o trabalho com partes estrangeiras.',
+      sections: [
+        {
+          heading: 'Fundação e estrutura',
+          paragraphs: [
+            'Hovering International Law Firm (昊鼎國際法律事務所) foi fundado em 2016 por advogadas e advogados formados na National Taiwan University (國立臺灣大學). O nome chinês 昊鼎 une o carácter 昊 («céu amplo») e o carácter 鼎 («base sólida») e descreve a orientação do escritório desde a fundação.',
+            'Temos escritórios em Taipé (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). O escritório de Kaohsiung centra-se na governação de empresas e trata conflitos civis, penais e administrativos. O escritório de Taichung trata construção, propriedade intelectual e assuntos relacionados com a Coreia e o Japão. O escritório de Pingtung abriu em 2017 para a procura local.',
+            'Além do trabalho de advocacia, em 2020 criou-se Hovering Accounting Office, que oferece contabilidade e planeamento fiscal a empresários e a particulares com património elevado.',
+          ],
+        },
+        {
+          heading: 'Trabalho com partes estrangeiras',
+          paragraphs: [
+            'O trabalho transfronteiriço cobre constituição de sociedades, vistos, registo de marcas e patentes, avaliação de riscos jurídicos e aconselhamento fiscal empresarial. O escritório de Taichung trata em particular construção, propriedade intelectual e assuntos relacionados com a Coreia e o Japão. A advogada Wei Tseng (曾雋崴) acompanha clientes da Coreia, do Japão e outros clientes internacionais nos grupos indicados.',
+            'A possibilidade de tratar um assunto depende do conteúdo e da língua da comunicação. Se o seu assunto entra nos grupos indicados e pode ser falado numa das quatro línguas de consulta, pode enviar um resumo para exame.',
+          ],
+        },
+        {
+          heading: 'Quando nos contacta',
+          paragraphs: [
+            'Após receber o seu resumo, uma advogada ou um advogado examina o conteúdo e fala depois do âmbito possível, dos documentos ainda necessários e dos passos seguintes. Se o assunto colocar questões contabilísticas ou fiscais, o escritório pode trabalhar com a área de contabilidade num mesmo fluxo.',
+            'O resultado de cada assunto depende dos factos e dos documentos existentes; não prometemos um resultado. Se precisar de uma resposta concreta para a sua situação, esse processo deve ser falado diretamente com uma advogada ou um advogado numa das quatro línguas de consulta.',
+          ],
+        },
+      ],
+    },
+    lawyers: {
+      eyebrow: 'ADVOGADAS E ADVOGADOS',
+      title: 'Equipa internacional de Hovering',
+      description: 'Perfis das advogadas e dos advogados, da direção de operações e da contabilidade associada de Hovering.',
+      intro: '',
+      sections: [],
+    },
+    pricing: {
+      eyebrow: 'ÂMBITO E HONORÁRIOS',
+      title: 'Como se fixam o âmbito do trabalho e os honorários',
+      description:
+        'Explicação da ordem: primeiro o âmbito, depois a confirmação dos honorários, e por que esta página não publica uma lista de tarifas.',
+      intro:
+        'Esta página explica como se fixam os honorários, não o respetivo montante. O montante depende do âmbito de cada assunto e só faz sentido quando esse âmbito está claro.',
+      sections: [
+        {
+          heading: 'O primeiro passo é fixar o âmbito do trabalho',
+          paragraphs: [
+            'Assuntos do mesmo tipo podem exigir um trabalho muito distinto, segundo o número de partes, os documentos disponíveis, os prazos a cumprir e se um procedimento já começou. Por isso o primeiro passo é sempre esclarecer o que entra no trabalho e o que não entra.',
+            'O resumo que envia no início é a base desse âmbito. Quanto mais claro descrever os factos, o que espera e os prazos, mais preciso poderá ser o âmbito.',
+          ],
+        },
+        {
+          heading: 'Os honorários confirmam-se antes de começar o trabalho',
+          paragraphs: [
+            'Quando o âmbito está claro, o montante e o modo de cálculo são falados e confirmados consigo antes de começar. Se o âmbito mudar a meio do caminho, essa mudança também deve confirmar-se de novo.',
+            'Esta página não é uma oferta de preço e não gera qualquer obrigação de pagamento. Enviar um pedido através desta página também não implica qualquer pagamento.',
+          ],
+        },
+        {
+          heading: 'A consulta pode ser um serviço pago',
+          paragraphs: [
+            'A consulta com uma advogada ou um advogado pode ser um serviço pago. Esta página não afirma que o primeiro encontro seja oferecido, e nenhuma parte deve ler-se nesse sentido.',
+            'Se a consulta tiver custo, o montante e a forma de pagamento comunicam-se antes de ter lugar.',
+          ],
+        },
+        {
+          heading: 'Por que esta página não publica tarifas',
+          paragraphs: [
+            'O montante depende do próprio assunto: do trabalho a fazer, do número de partes, dos documentos, dos prazos e de se um procedimento já começou. Uma cifra colocada de antemão não mostraria o custo do seu processo. Por isso fixamos primeiro o âmbito do seu assunto e comunicamos-lhe depois os honorários para os avaliar antes de começar.',
+            'Além dos honorários da advogada ou do advogado, um assunto pode gerar taxas a pagar ao tribunal, a uma autoridade ou a um terceiro. Essas taxas são distintas dos honorários e dependem do procedimento seguido.',
+          ],
+        },
+      ],
+    },
+    contact: {
+      eyebrow: 'CONTACTO',
+      title: 'Como contactar o escritório',
+      description:
+        'Língua da página, línguas de consulta, o que ocorre se não puder usar essas quatro línguas, e o que esta página não promete.',
+      intro:
+        'Antes de nos escrever, tenha em conta estes três pontos em separado. Muitas vezes confundem-se, mas não significam o mesmo.',
+      sections: [
+        {
+          heading: 'Três coisas que convém distinguir',
+          paragraphs: [
+            'A língua de visualização da página, a língua da consulta com a advogada ou o advogado e a língua em que escreve são três coisas distintas.',
+          ],
+          items: [
+            'Língua da página: esta orientação está escrita em português.',
+            'Língua de consulta: a consulta realiza-se em inglês, chinês (中文), japonês e coreano.',
+            'Língua do seu texto: pode escrever o resumo na sua própria língua, e o texto original guarda-se tal qual.',
+          ],
+        },
+        {
+          heading: 'Se não puder usar nenhuma das quatro línguas de consulta',
+          paragraphs: [
+            'No formulário de contacto pode escolher «É preciso confirmar a forma de comunicar». Responderemos para examinar uma via possível de comunicação quando existir uma forma possível; não se assegura o serviço noutra língua e não se promete um prazo de resposta.',
+            'Isto é apenas um passo de verificação, não é uma promessa. Não prometemos serviço de interpretação, não prometemos serviço em português nem noutra língua fora das quatro indicadas, e não prometemos que possamos aceitar todos os assuntos.',
+          ],
+        },
+        {
+          heading: 'O que convém escrever na primeira mensagem',
+          paragraphs: [
+            'Indique o que ocorreu, que ajuda precisa, que relação tem o assunto com Taiwan e o prazo se o conhecer. Se já recebeu um escrito de um tribunal ou de uma autoridade, indique a data desse escrito.',
+            'Nesta primeira fase ainda não precisa de enviar número de passaporte, número de identidade, dados bancários, historial clínico nem o processo completo de provas. Espere as indicações da advogada ou do advogado e envie então o material sensível por um meio seguro.',
+          ],
+        },
+        {
+          heading: 'O que esta página não promete',
+          paragraphs: [
+            'Não prometemos um prazo de resposta, não confirmamos uma marcação através desta página, não prometemos uma advogada ou um advogado concreto e não pomos um serviço de interpretação. A tradução escrita é outra coisa: a mensagem que envia não se traduz de forma automática.',
+            'Quando envia um pedido, o conteúdo guarda-se e espera revisão. Se passado algum tempo não receber resposta, pode voltar a escrever para o endereço de correio que figura na página de contacto.',
+          ],
+        },
+      ],
+    },
+    faq: {
+      eyebrow: 'PERGUNTAS FREQUENTES',
+      title: 'Perguntas que se formulam com frequência',
+      description:
+        'Explicação do âmbito, da preparação, das línguas, dos honorários e do significado de enviar um pedido.',
+      intro:
+        'As perguntas seguintes respondem-se no plano da informação geral. A resposta para o seu próprio caso só pode dar-se depois de uma advogada ou um advogado rever o processo.',
+      sections: [
+        {
+          heading: 'Como usar esta parte',
+          paragraphs: [
+            'Se não encontrar uma resposta para a sua situação, costuma ser sinal de que a resposta depende de factos particulares. Nesse caso, escreva esses factos no resumo ao contactar-nos, em vez de os deduzir por sua conta desta página.',
+          ],
+        },
+      ],
+      faqs: [
+        {
+          question: 'Que tipo de assuntos trata este escritório?',
+          answer:
+            'Tratamos seis grupos: investimento e constituição de sociedades em Taiwan, litígios civis e indemnizações, casamento, família e sucessões, conflitos laborais, assuntos penais e propriedade intelectual. Se um assunto se aceita ou não decide-se depois de rever o seu conteúdo.',
+        },
+        {
+          question: 'O que devo preparar antes de contactar o escritório?',
+          answer:
+            'Prepare um resumo breve do ocorrido, do que espera, do vínculo com Taiwan e do prazo se existir. Se já houver um escrito de um tribunal ou de uma autoridade, indique a data. Nesta fase ainda não precisa de enviar documentos de identidade nem todas as provas.',
+        },
+        {
+          question: 'Posso ter uma consulta em português?',
+          answer:
+            'Não. Esta orientação está escrita em português, mas a consulta com uma advogada ou um advogado realiza-se apenas em inglês, chinês (中文), japonês e coreano. Também não prometemos serviço de interpretação. A tradução escrita é outra coisa: o texto original que escreve guarda-se tal qual e não se traduz de forma automática.',
+        },
+        {
+          question: 'O que ocorre se não puder usar nenhuma dessas quatro línguas?',
+          answer:
+            'Escolha «É preciso confirmar a forma de comunicar» ao enviar o pedido. Responderemos para examinar uma forma de comunicar, mas não se assegura o serviço noutra língua. É um passo de verificação, não uma promessa de que possamos atender noutra língua.',
+        },
+        {
+          question: 'Como se trata o texto que escrevo em português?',
+          answer:
+            'O texto original que escreve guarda-se tal qual e não se traduz de forma automática. Se for preciso, a língua da comunicação posterior confirma-se consigo.',
+        },
+        {
+          question: 'Se já enviei o pedido, a consulta já teve lugar?',
+          answer:
+            'Não. Um pedido enviado espera a revisão de uma advogada ou de um advogado. Não é parecer jurídico, não é uma marcação confirmada, e o envio não cria, por si só, uma relação entre advogada ou advogado e cliente.',
+        },
+        {
+          question: 'Como se calculam os honorários?',
+          answer:
+            'Primeiro fixa-se o âmbito do trabalho e depois confirmam-se consigo o montante e o modo de cálculo antes de começar. Esta página não publica cifras e não afirma que o primeiro encontro seja oferecido.',
+        },
+        {
+          question: 'O que faço se o meu assunto for urgente?',
+          answer:
+            'Indique o prazo ou a data de um escrito oficial no início do seu resumo para que essas datas sejam visíveis na revisão. Esta página não tem um canal de emergência e não assegura um prazo de resposta; se o seu assunto não puder esperar, convém procurar ao mesmo tempo outras vias no local onde se encontra.',
+        },
+      ],
+    },
+    privacy: {
+      eyebrow: 'PRIVACIDADE',
+      title: 'Dados recolhidos através do formulário de contacto',
+      description:
+        'O que o formulário desta parte em português recolhe, como se trata o texto original e como nos contactar sobre os seus dados.',
+      intro:
+        'Esta parte refere-se apenas ao formulário de contacto destas páginas de orientação. Descreve o trato dos dados, não uma segurança técnica absoluta.',
+      sections: [
+        {
+          heading: 'Dados que se recolhem',
+          paragraphs: [
+            'Quando envia um pedido através do formulário desta parte, registam-se os seguintes elementos:',
+          ],
+          items: [
+            'O nome que indica',
+            'O endereço de correio para responder',
+            'A língua de visualização da página no momento do envio',
+            'A língua em que escreveu',
+            'A língua de consulta que deseja',
+            'O texto original que escreveu',
+            'O seu consentimento para enviar o pedido',
+            'Um número de receção para voltar a localizar o pedido',
+          ],
+        },
+        {
+          heading: 'O texto original guarda-se tal qual',
+          paragraphs: [
+            'O seu escrito guarda-se exatamente como o redigiu e não se traduz de forma automática. Se for precisa uma tradução para tramitar o assunto, fala-se consigo em separado.',
+            'Como o texto original se guarda, não escreva nesta primeira fase dados que ainda não fazem falta, como o número de passaporte, o número de identidade ou dados de uma conta bancária.',
+          ],
+        },
+        {
+          heading: 'Onde se guarda e quem pode vê-lo',
+          paragraphs: [
+            'O conteúdo do seu envio guarda-se num lugar que não é de acesso público, e só as pessoas autorizadas do escritório podem aceder a ele para tramitar esse pedido.',
+            'Esta página não oferece uma segurança absoluta. Nenhuma via de envio nem de armazenamento é de todo segura, pelo que o material sensível convém enviá-lo apenas segundo as indicações concretas da advogada ou do advogado.',
+          ],
+        },
+        {
+          heading: 'Finalidade do uso',
+          paragraphs: [
+            'Os dados que envia usam-se para rever o pedido, voltar a contactá-lo, confirmar a forma de comunicar e tramitar o assunto se o trabalho chegar a começar.',
+            'Estes dados não se usam para marketing sem um consentimento seu dado em separado para esse fim.',
+          ],
+        },
+        {
+          heading: 'Aviso e número de receção',
+          paragraphs: [
+            'Quando um pedido se envia com êxito, o sistema avisa o escritório. Se esse aviso ainda não estiver confirmado, o que escreveu continua guardado e não se perde.',
+            'O número de receção serve para voltar a encontrar o seu pedido nos nossos registos. Mostra-se depois de guardar o pedido, e pode mencioná-lo se voltar a contactar-nos.',
+          ],
+        },
+        {
+          heading: 'Os seus direitos e como nos contactar',
+          paragraphs: [
+            'Pode pedir acesso, retificação ou supressão dos seus dados, ou retirar o consentimento, através do endereço de correio que figura na página de contacto. Se existir uma obrigação de conservação segundo as normas aplicáveis ou por um assunto em curso, explicaremos o motivo da limitação.',
+            'Esta página não indica um prazo fixo de conservação, porque a duração real depende de o assunto continuar e das obrigações de conservação associadas. Se desejar que se suprimam antes, indique-o ao contactar-nos.',
+          ],
+        },
+        {
+          heading: 'Lugar de armazenamento e prestadores',
+          paragraphs: [
+            'Este sítio aloja-se na Vercel, e o seu envio guarda-se num armazenamento de objetos não público desse serviço. O correio envia-se através do serviço de correio que o escritório utiliza.',
+            'Os servidores de alguns prestadores podem estar fora de Taiwan, de modo que os seus dados podem armazenar-se e tratar-se aí. Cumprida a finalidade do armazenamento, os dados suprimem-se sem demora; os dados que devam conservar-se segundo as normas aplicáveis conservam-se durante esse prazo. Os pedidos relativos a dados pessoais recebem-se em wei@hoveringlaw.com.tw.',
+          ],
+        },
+      ],
+    },
+    disclaimer: {
+      eyebrow: 'AVISO LEGAL',
+      title: 'Âmbito e limites da informação desta página',
+      description:
+        'O carácter geral da informação, o âmbito jurídico e as condições para que exista uma relação entre advogada ou advogado e cliente.',
+      intro:
+        'Esta parte esclarece o que estas páginas de orientação em português podem e não podem fazer por si.',
+      sections: [
+        {
+          heading: 'Apenas informação geral',
+          paragraphs: [
+            'O conteúdo destas páginas está escrito como informação geral. Não é um parecer jurídico para o seu caso e não substitui a revisão do seu próprio processo.',
+            'O resultado de um assunto depende dos factos, das normas aplicáveis e do momento, de modo que duas situações que parecem semelhantes podem terminar de forma distinta.',
+          ],
+        },
+        {
+          heading: 'Âmbito jurídico',
+          paragraphs: [
+            'O escritório exerce segundo o direito de Taiwan, e esta página só fala do trabalho nesse quadro.',
+            'O conteúdo não é aconselhamento segundo o direito de nenhuma jurisdição distinta de Taiwan, incluindo o direito do lugar onde reside. Se alguma parte do seu assunto se rege por outra jurisdição, confirmaremos consigo que profissional qualificado faz falta para essa parte.',
+          ],
+        },
+        {
+          heading: 'A relação entre advogada ou advogado e cliente não nasce por si só',
+          paragraphs: [
+            'Ler esta página, enviar o formulário ou enviar um correio não cria, por si só, uma relação entre advogada ou advogado e cliente.',
+            'Essa relação só nasce depois de rever o assunto e de ambas as partes confirmarem a aceitação do trabalho.',
+          ],
+        },
+        {
+          heading: 'Não há promessa de resultado',
+          paragraphs: [
+            'Nenhuma parte desta página é uma promessa sobre o resultado de um assunto, sobre a concessão de um pedido ou sobre o estatuto de residência e de trabalho.',
+            'As ligações externas oferecem-se para orientação; não asseguramos a exatidão nem a atualidade do conteúdo publicado por terceiros.',
+          ],
+        },
+      ],
+    },
+    columns: {
+      eyebrow: 'ARTIGOS',
+      title: 'Artigos sobre o direito de Taiwan',
+      description:
+        'Artigos em português que explicam temas frequentes do direito de Taiwan. O conteúdo é informação geral no momento da sua publicação, não um parecer jurídico para o seu caso.',
+      intro:
+        'O escritório publica artigos que explicam temas frequentes do direito de Taiwan. Os artigos disponíveis em português figuram nesta página; além disso há quatro ligações, cada uma abre a lista de artigos de uma língua original.',
+      sections: [
+        {
+          heading: 'Quatro listas segundo a língua',
+          paragraphs: [
+            'Esta parte contém quatro ligações: a lista de artigos em coreano, a lista em chinês, a lista em inglês e a lista em japonês. Cada ligação indica a língua da sua lista, para que saiba de antemão em que língua se abrirá o conteúdo.',
+            'Essas quatro listas são listas segundo a língua original do artigo, não listas de traduções. Os artigos já disponíveis em português figuram em separado nesta mesma página.',
+          ],
+        },
+        {
+          heading: 'Para onde levam as ligações',
+          paragraphs: [
+            'Ao escolher uma das quatro ligações abre-se a lista de artigos dessa língua. Nessa lista escolhe o texto que deseja ler, e todo o conteúdo aparece na língua original do artigo.',
+            'Esta página não resume o conteúdo dos artigos e não assegura que um tema exista nas quatro línguas. Cada lista só inclui os textos publicados nessa língua.',
+          ],
+        },
+        {
+          heading: 'Até onde o pode orientar um artigo',
+          paragraphs: [
+            'Os artigos escreveram-se como informação geral no momento da sua publicação. As normas e a sua aplicação podem mudar, e um artigo não recolhe todas as circunstâncias do seu caso.',
+            'Por isso, não tome um artigo como base para atuar num assunto real. Use-o para entender o panorama geral e fale depois do seu processo com uma advogada ou um advogado; esta página não é o passo de consulta.',
           ],
         },
       ],

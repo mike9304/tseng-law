@@ -33,8 +33,8 @@ function everyCopyString(): string[] {
 describe('public language registry', () => {
   it('lists each of the eleven locales once with matching autonyms', () => {
     const locales = PUBLIC_LANGUAGE_REGISTRY.map((entry) => entry.locale);
-    expect(locales).toHaveLength(11);
-    expect(new Set(locales).size).toBe(11);
+    expect(locales).toHaveLength(13);
+    expect(new Set(locales).size).toBe(13);
     expect(locales.sort()).toEqual([...PUBLIC_LOCALES_8].sort());
 
     for (const entry of PUBLIC_LANGUAGE_REGISTRY) {
@@ -76,7 +76,7 @@ describe('public language registry', () => {
     }
     expect(byRegion.get('asia-pacific')).toEqual(['ko', 'zh-hant', 'ja', 'vi', 'id', 'th', 'fil']);
     expect(byRegion.get('middle-east')).toEqual(['ar']);
-    expect(byRegion.get('europe')).toEqual(['de', 'es']);
+    expect(byRegion.get('europe')).toEqual(['de', 'es', 'fr', 'pt']);
     expect(byRegion.get('americas')).toEqual(['en']);
     expect(groupedPublicLanguages('ko').map((group) => group.region)).toEqual([...LANGUAGE_REGION_ORDER]);
   });

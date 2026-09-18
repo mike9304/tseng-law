@@ -1,0 +1,29 @@
+200 http://localhost:4353/fr lang="fr" | Services juridiques à Taïwan — indications en françai | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/fr/services lang="fr" | Affaires que nous traitons | Hovering International L | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/fr/about lang="fr" | À propos de Hovering International Law Firm | Hoverin | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/fr/lawyers lang="fr" | Équipe internationale de Hovering | Hovering Internat | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/fr/pricing lang="fr" | Comment l’étendue du travail et les honoraires sont f | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/fr/contact lang="fr" | Comment joindre le cabinet | Hovering International L | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/fr/faq lang="fr" | Questions souvent posées | Hovering International Law | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/fr/privacy lang="fr" | Données recueillies par le formulaire de contact | Ho | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/fr/disclaimer lang="fr" | Étendue et limites des indications de cette page | Ho | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/fr/columns lang="fr" | Articles sur le droit de Taïwan | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/pt lang="pt" | Serviços jurídicos em Taiwan — indicações em portuguê | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/pt/services lang="pt" | Assuntos que tratamos | Hovering International Law Fi | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/pt/about lang="pt" | Sobre Hovering International Law Firm | Hovering Inte | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/pt/lawyers lang="pt" | Equipa internacional de Hovering | Hovering Internati | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/pt/pricing lang="pt" | Como se fixam o âmbito do trabalho e os honorários |  | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/pt/contact lang="pt" | Como contactar o escritório | Hovering International  | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/pt/faq lang="pt" | Perguntas que se formulam com frequência | Hovering I | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/pt/privacy lang="pt" | Dados recolhidos através do formulário de contacto |  | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/pt/disclaimer lang="pt" | Âmbito e limites da informação desta página | Hoverin | availableLanguage":["en","zh-Hant","ja","ko"]
+200 http://localhost:4353/pt/columns lang="pt" | Artigos sobre o direito de Taiwan | availableLanguage":["en","zh-Hant","ja","ko"]
+--- sitemap fr/pt URLs:
+      20
+--- hreflang keys on /fr/services entry:
+['ar', 'de', 'en', 'es', 'fil', 'fr', 'id', 'ja', 'ko', 'pt', 'th', 'vi', 'x-default', 'zh-Hant']
+--- llms:
+fr/llms.txt 200
+2
+--- picker on /fr shows 13:
+       1

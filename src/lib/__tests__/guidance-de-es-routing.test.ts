@@ -26,7 +26,7 @@ describe('de/es guidance routing', () => {
   });
 
   it('registers de and es as guidance locales', () => {
-    expect(GUIDANCE_LOCALES_4).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es']);
+    expect(GUIDANCE_LOCALES_4).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt']);
     expect(isGuidanceLocale4('de')).toBe(true);
     expect(isGuidanceLocale4('es')).toBe(true);
     expect(isPublicLocale8('de')).toBe(true);
@@ -48,6 +48,8 @@ describe('de/es guidance routing', () => {
       'ar',
       'de',
       'es',
+      'fr',
+      'pt',
     ]);
     expect(PUBLIC_LANGUAGE_AUTONYMS.de).not.toMatch(/🇩🇪|Deutschland|German/);
     expect(PUBLIC_LANGUAGE_AUTONYMS.es).not.toMatch(/🇪🇸|España|Spanish|Latinoamérica/);

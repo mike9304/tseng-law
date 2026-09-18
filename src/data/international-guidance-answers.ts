@@ -264,4 +264,68 @@ export const guidanceAnswers: Record<
       sources: ['/es/contact', '/es/services'],
     },
   },
+  fr: {
+    services: {
+      answer:
+        'Le cabinet traite six groupes de travail selon le droit de Taïwan : investissement et constitution de sociétés, affaires civiles et dommages-intérêts, mariage, famille et successions, droit du travail, affaires pénales et propriété intellectuelle. L’étendue de chaque affaire est confirmée séparément après qu’une avocate ou un avocat a examiné le contenu que vous envoyez. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.',
+      sources: ['/fr/faq', '/fr/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm est un cabinet d’avocats à Taïwan, fondé en 2016 par des diplômées et diplômés de la National Taiwan University (國立臺灣大學), avec des bureaux à Taipei, Kaohsiung, Taichung et Pingtung. Depuis 2020 il existe un service de comptabilité ; le bureau de Taichung traite des affaires liées à la Corée et au Japon. Le cabinet ne promet pas de résultat. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.',
+      sources: ['/fr/lawyers', '/fr/services'],
+    },
+    lawyers: {
+      answer:
+        'Cette page présente les profils des avocates et avocats, de la direction des opérations et de l’expertise-comptable associée de Hovering. L’avocate Wei Tseng (曾雋崴) est habilitée à exercer à Taïwan et avocate dirigeante du cabinet ; elle travaille avec des clients de Corée, du Japon et d’autres clients internationaux. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.',
+      sources: ['/fr/about', '/fr/contact'],
+    },
+    pricing: {
+      answer:
+        'Cette page ne publie pas de liste de prix. L’étendue du travail est d’abord fixée à partir du résumé que vous envoyez, puis le montant et le mode de calcul sont confirmés avec vous avant le début du travail. La consultation avec une avocate ou un avocat peut être une prestation payante ; outre les honoraires, des frais de tribunal ou d’autorité peuvent naître. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.',
+      sources: ['/fr/contact', '/fr/faq'],
+    },
+    contact: {
+      answer:
+        'Envoyez votre résumé par le formulaire de contact : ce qui s’est passé, l’aide demandée, le lien avec Taïwan et le délai s’il existe. À ce stade, n’envoyez pas encore de pièces d’identité ni l’ensemble des preuves. Le cabinet ne promet pas de délai de réponse et ne confirme pas de rendez-vous par cette page. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.',
+      sources: ['/fr/faq', '/fr/pricing'],
+    },
+    faq: {
+      answer:
+        'Cette partie répond à des questions fréquentes : les six groupes de travail, la préparation avant le contact, le mode de fixation des honoraires et le sens d’un message envoyé. Une demande envoyée attend l’examen d’une avocate ou d’un avocat ; ce n’est pas un avis juridique, ce n’est pas un rendez-vous, et cela ne crée pas de relation entre avocate ou avocat et client. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.',
+      sources: ['/fr/contact', '/fr/services'],
+    },
+  },
+  pt: {
+    services: {
+      answer:
+        'O escritório trata seis grupos de trabalho segundo o direito de Taiwan: investimento e constituição de sociedades, litígios civis e indemnizações, casamento, família e sucessões, laboral, penal e propriedade intelectual. O âmbito de cada assunto confirma-se separadamente depois de uma advogada ou um advogado rever o conteúdo que envia. A consulta realiza-se em inglês, chinês, japonês e coreano.',
+      sources: ['/pt/faq', '/pt/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm é um escritório de advogados em Taiwan, fundado em 2016 por diplomadas e diplomados da National Taiwan University (國立臺灣大學), com escritórios em Taipé, Kaohsiung, Taichung e Pingtung. Desde 2020 inclui uma área de contabilidade, e o escritório de Taichung trata assuntos relacionados com a Coreia e o Japão. O escritório não promete um resultado. A consulta realiza-se em inglês, chinês, japonês e coreano.',
+      sources: ['/pt/lawyers', '/pt/services'],
+    },
+    lawyers: {
+      answer:
+        'Esta página mostra os perfis das advogadas e dos advogados, da direção de operações e da contabilidade associada de Hovering. A advogada Wei Tseng (曾雋崴) está habilitada a exercer em Taiwan e é a advogada diretora do escritório; trabalha com clientes da Coreia, do Japão e com outros clientes internacionais. A consulta realiza-se em inglês, chinês, japonês e coreano.',
+      sources: ['/pt/about', '/pt/contact'],
+    },
+    pricing: {
+      answer:
+        'Esta página não publica uma lista de preços. Primeiro fixa-se o âmbito do trabalho a partir do resumo que envia, e depois confirmam-se consigo o montante e o modo de cálculo antes de começar. A consulta com uma advogada ou um advogado pode ser um serviço pago, e junto aos honorários podem surgir taxas judiciais ou administrativas. A consulta realiza-se em inglês, chinês, japonês e coreano.',
+      sources: ['/pt/contact', '/pt/faq'],
+    },
+    contact: {
+      answer:
+        'Envie o seu resumo através do formulário de contacto: o que ocorreu, que ajuda precisa, que relação tem o assunto com Taiwan e o prazo se o conhecer. Nesta primeira fase não é preciso enviar documentos de identidade nem o processo completo de provas. O escritório não promete um prazo de resposta e não confirma uma marcação através desta página. A consulta realiza-se em inglês, chinês, japonês e coreano.',
+      sources: ['/pt/faq', '/pt/pricing'],
+    },
+    faq: {
+      answer:
+        'Esta parte responde a perguntas frequentes no plano da informação geral: os seis grupos de trabalho, a preparação antes do contacto, o modo de fixar os honorários e o significado de enviar uma mensagem. Um pedido enviado espera a revisão de uma advogada ou de um advogado; não é parecer jurídico, não é uma marcação e não cria uma relação entre advogada ou advogado e cliente. A consulta realiza-se em inglês, chinês, japonês e coreano.',
+      sources: ['/pt/contact', '/pt/services'],
+    },
+  },
 };

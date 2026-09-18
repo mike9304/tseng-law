@@ -33,6 +33,8 @@ const GUIDANCE_ALL_LABEL: Record<GuidanceLocale4, string> = {
   ar: 'الكل',
   de: 'Alle',
   es: 'Todo',
+  fr: 'Tout',
+  pt: 'Tudo',
 };
 
 const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
@@ -43,6 +45,8 @@ const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
   ar: "viewAllLabel: 'عرض الكل'",
   de: "viewAllLabel: 'Alle anzeigen'",
   es: "viewAllLabel: 'Ver todo'",
+  fr: "viewAllLabel: 'Tout afficher'",
+  pt: "viewAllLabel: 'Ver tudo'",
 };
 
 const ENGLISH_FILTER_LABELS = ['All', 'Company Setup', 'Legal Info', 'Case Studies'] as const;

@@ -348,6 +348,8 @@ const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
   ar: 'Arabic',
   de: 'German',
   es: 'Spanish',
+  fr: 'French',
+  pt: 'Portuguese',
 };
 
 export function buildRootLlmsTxt(): string {
@@ -563,6 +565,22 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     confidentialNotice:
       'Como el texto original se guarda, no escriba en esta primera fase datos que aún no hacen falta, como el número de pasaporte, el número de identidad o datos de una cuenta bancaria.',
   },
+  fr: {
+    consultationNotice:
+      'Ces indications sont rédigées en français, mais la consultation avec une avocate ou un avocat a lieu seulement en anglais, en chinois (中文), en japonais et en coréen.',
+    discoveryNotice:
+      'Le fichier llms.txt n’est qu’une carte pour trouver les pages publiques ; il ne promet ni rang dans les moteurs de recherche, ni soutien, ni recommandation par une intelligence artificielle, ni visibilité.',
+    confidentialNotice:
+      'Parce que le texte original est conservé, n’écrivez pas, à ce premier stade, ce qui n’est pas encore nécessaire, par exemple un numéro de passeport, un numéro d’identité ou des données de compte.',
+  },
+  pt: {
+    consultationNotice:
+      'Esta orientação está escrita em português, mas a consulta com uma advogada ou um advogado realiza-se apenas em inglês, chinês (中文), japonês e coreano.',
+    discoveryNotice:
+      'O ficheiro llms.txt é apenas um mapa para localizar páginas públicas; não promete posição em motores de busca, apoio, recomendação por inteligência artificial nem visibilidade.',
+    confidentialNotice:
+      'Como o texto original se guarda, não escreva nesta primeira fase dados que ainda não fazem falta, como o número de passaporte, o número de identidade ou dados de uma conta bancária.',
+  },
 };
 
 /**
@@ -615,7 +633,11 @@ export function buildGuidanceLlmsTxt(locale: GuidanceLocale4): string {
    */
   const columns = getAllColumnPosts(locale);
   const columnsDir = path.join(process.cwd(), COLUMN_CONTENT_DIR_BY_LOCALE[locale]);
-  if (columns.length === 0 && fs.existsSync(columnsDir)) {
+  const hasMarkdown =
+    fs.existsSync(columnsDir)
+    && fs.readdirSync(columnsDir).some((name) => name.endsWith('.md'));
+  // Empty dirs (gitkeep only) are "no translations yet", same as a missing dir.
+  if (columns.length === 0 && hasMarkdown) {
     throw new Error(`Missing legal columns for guidance llms.txt locale: ${locale}`);
   }
   const columnEntries: LlmsEntry[] = columns.map((column) => {

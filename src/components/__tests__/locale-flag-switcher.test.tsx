@@ -220,14 +220,14 @@ describe('LocaleFlagSwitcher', () => {
       (element) => element.props['data-locale-switch-fallback'] === 'columns-list',
     );
 
-    expect(fallbackLinks).toHaveLength(7);
+    expect(fallbackLinks).toHaveLength(9);
     fallbackLinks.forEach((element) => {
       expect(element.props['aria-disabled']).toBeUndefined();
-      expect(element.props.href).toMatch(/^\/(vi|id|th|fil|ar|de|es)\/columns$/);
+      expect(element.props.href).toMatch(/^\/(vi|id|th|fil|ar|de|es|fr|pt)\/columns$/);
       element.props.onClick?.();
     });
-    expect(onLocaleSelect.mock.calls.map(([target]) => target)).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es']);
-    expect(renderedLinks('ko').some((link) => /href="\/(vi|id|th|fil|ar|de|es)\/columns\//.test(link))).toBe(
+    expect(onLocaleSelect.mock.calls.map(([target]) => target)).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt']);
+    expect(renderedLinks('ko').some((link) => /href="\/(vi|id|th|fil|ar|de|es|fr|pt)\/columns\//.test(link))).toBe(
       false,
     );
   });

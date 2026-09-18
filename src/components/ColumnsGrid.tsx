@@ -121,6 +121,8 @@ const GUIDANCE_FILTER_ALL_LABEL: Record<GuidanceLocale4, string> = {
   ar: 'الكل',
   de: 'Alle',
   es: 'Todo',
+  fr: 'Tout',
+  pt: 'Tudo',
 };
 
 /** Same strings `guidanceColumnCategoryLabel` returns in `src/lib/columns.ts`. */
@@ -160,6 +162,16 @@ const GUIDANCE_FILTER_CATEGORY_LABEL: Record<GuidanceLocale4, Record<ColumnCateg
     legal: 'Información jurídica de Taiwán',
     case: 'Análisis de casos',
   },
+  fr: {
+    formation: 'Création de société à Taïwan',
+    legal: 'Informations juridiques sur Taïwan',
+    case: 'Analyse de cas',
+  },
+  pt: {
+    formation: 'Constituição de sociedades em Taiwan',
+    legal: 'Informações jurídicas sobre Taiwan',
+    case: 'Análise de casos',
+  },
 };
 
 /** Reviewed `home.columnsReadMoreLabel` — same CTA GuidanceHomeBody already uses. */
@@ -171,6 +183,8 @@ const GUIDANCE_CARD_READ_MORE_LABEL: Record<GuidanceLocale4, string> = {
   ar: 'متابعة القراءة',
   de: 'Weiterlesen',
   es: 'Seguir leyendo',
+  fr: 'Lire la suite',
+  pt: 'Continuar a ler',
 };
 
 function categoryFilterLabels(locale: PublicLocale8) {

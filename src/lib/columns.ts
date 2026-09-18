@@ -103,6 +103,8 @@ const FORMATION_CATEGORY_PHRASES = [
   'تأسيس الشركات', // ar
   'Gesellschaftsgründung', // de
   'Constitución de sociedades', // es
+  'Création de société à Taïwan', // fr
+  'Constituição de sociedades em Taiwan', // pt
 ];
 const CASE_CATEGORY_PHRASES = [
   '소송사례',
@@ -115,6 +117,8 @@ const CASE_CATEGORY_PHRASES = [
   'دراسات قضايا', // ar
   'Fallanalyse', // de
   'Análisis de casos', // es
+  'Analyse de cas', // fr
+  'Análise de casos', // pt
 ];
 
 function categoryFromString(cat: string): ColumnCategory {
@@ -150,6 +154,8 @@ const GUIDANCE_COLUMN_CATEGORY_LABELS: Partial<Record<GuidanceLocale4, Record<Co
   ar: { formation: 'تأسيس الشركات', legal: 'معلومات قانونية', case: 'دراسات قضايا' },
   de: { formation: 'Gesellschaftsgründung in Taiwan', legal: 'Rechtliche Informationen zu Taiwan', case: 'Fallanalyse' },
   es: { formation: 'Constitución de sociedades en Taiwán', legal: 'Información jurídica de Taiwán', case: 'Análisis de casos' },
+  fr: { formation: 'Création de société à Taïwan', legal: 'Informations juridiques sur Taïwan', case: 'Analyse de cas' },
+  pt: { formation: 'Constituição de sociedades em Taiwan', legal: 'Informações jurídicas sobre Taiwan', case: 'Análise de casos' },
 };
 const ENGLISH_COLUMN_CATEGORY_LABELS: Record<ColumnCategory, string> = {
   formation: 'Company Setup',

@@ -29,7 +29,8 @@ describe('column category parity with English', () => {
 
   for (const locale of GUIDANCE_LOCALES_4) {
     const dir = path.join(process.cwd(), COLUMN_CONTENT_DIR_BY_LOCALE[locale]);
-    const hasFiles = existsSync(dir);
+    const hasFiles =
+      existsSync(dir) && readdirSync(dir).some((file) => file.endsWith('.md'));
     (hasFiles ? it : it.skip)(`${locale}: every column keeps its English category`, () => {
       const posts = getAllColumnPosts(locale);
       // A locale may ship in batches (ar phase 2 starts with 5 files); every

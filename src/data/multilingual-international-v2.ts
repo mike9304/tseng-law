@@ -157,6 +157,28 @@ export const GUIDANCE_HOME_PATHS: Record<GuidanceLocale, GuidanceHomePaths> = {
     },
     ariaLabel: 'مساران للمعلومات',
   },
+  de: {
+    setup: {
+      label: 'Informationen zur Gesellschaftsgründung in Taiwan',
+      href: '/de/services',
+    },
+    legal: {
+      label: 'Rechtliche Informationen zu Taiwan',
+      href: '/de/faq',
+    },
+    ariaLabel: 'Zwei Informationswege',
+  },
+  es: {
+    setup: {
+      label: 'Información sobre la constitución de sociedades en Taiwán',
+      href: '/es/services',
+    },
+    legal: {
+      label: 'Información jurídica de Taiwán',
+      href: '/es/faq',
+    },
+    ariaLabel: 'Dos rutas de información',
+  },
 };
 
 export const LITIGATION_SITUATION_NAV: Record<

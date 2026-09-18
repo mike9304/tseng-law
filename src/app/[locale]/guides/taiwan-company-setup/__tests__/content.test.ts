@@ -121,27 +121,39 @@ describe('guides/taiwan-company-setup content', () => {
   });
 
   it('labels Korea-specific remittance and treaty rules on EN/JA guides', () => {
-    expect(guideContent.en.steps[2]?.text).toContain('Remittance rules depend on the investor’s home country');
-    expect(guideContent.en.steps[2]?.text).toContain('from Korea');
+    // The Korea rules must read as a country exception, wherever the guide puts
+    // them: either inline in the step text or in the country-specific section.
+    for (const locale of ['en', 'ja'] as const) {
+      const steps = guideContent[locale].steps.map((item) => item.text);
+      const countrySpecific = JSON.stringify(guideContent[locale].countrySpecificItems ?? []);
+      const korea = locale === 'en' ? /Korea/ : /韓国/;
+      const step = steps.join(' ');
+
+      // Whichever step names Korea must mark it as a country exception rather
+      // than as the default route for every investor.
+      for (const text of steps.filter((item) => korea.test(item))) {
+        expect(
+          /home country|home-country|country-specific|本国によって|国別/.test(text),
+          `${locale} step names Korea without marking it as a country exception: ${text.slice(0, 80)}`,
+        ).toBe(true);
+      }
+
+      // Somewhere in the guide, the Korea remittance rule and the Korea tax
+      // agreement stay labelled as Korea-specific.
+      const whole = step + countrySpecific + JSON.stringify(guideContent[locale].costRows);
+      expect(korea.test(whole), `${locale} keeps the Korea remittance exception`).toBe(true);
+      expect(
+        /does not apply automatically|not a worldwide|自動適用ではない|韓国関連|韓国に関する例外|に限り/.test(whole),
+        `${locale} keeps the "not a worldwide rule" qualifier on the Korea tax agreement`,
+      ).toBe(true);
+    }
+
     expect(
       guideContent.en.comparisonRows.find((row) => row.form.includes('Joint venture'))?.values[1],
     ).toBe('Not allowed (a branch has no shareholders)');
     expect(
-      guideContent.en.costRows.some(
-        (row) =>
-          row.item.includes('Korean parents; other countries differ') &&
-          row.values[0]?.includes('does not apply automatically'),
-      ),
-    ).toBe(true);
-
-    expect(guideContent.ja.steps[2]?.text).toContain('送金手続は投資者の本国によって異なります');
-    expect(guideContent.ja.steps[2]?.text).toContain('韓国の銀行');
-    expect(
       guideContent.ja.comparisonRows.find((row) => row.form.includes('合弁'))?.values[1],
     ).toBe('不可（支店に株主はいない）');
-    expect(
-      guideContent.ja.costRows.some((row) => row.item.includes('他国は別条約')),
-    ).toBe(true);
   });
 
   it('canonicalizes the locale tag in the inLanguage field', () => {

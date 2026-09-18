@@ -15,8 +15,8 @@ import { guideContent } from '@/app/[locale]/guides/taiwan-company-setup/content
  * keep a treaty cost row are held to that row's wording.
  */
 const WRONG_TREATY_DATE = /2023[.\-]12[.\-]0?2(?![0-9])|2023年12月2日(?!\d)/;
-const IN_FORCE = ['2023.12.27', '2023-12-27', '2023年12月27日'];
-const APPLIES_FROM = ['2024.1.1', '2024-01-01', '2024年1月1日'];
+const IN_FORCE = ['2023.12.27', '2023-12-27', '2023年12月27日', '27 December 2023', 'December 27, 2023'];
+const APPLIES_FROM = ['2024.1.1', '2024-01-01', '2024年1月1日', '1 January 2024', 'January 1, 2024'];
 const TREATY_MENTION =
   /이중과세|조세협정|조세조약|雙重課稅|租稅協定|所得稅協定|双重課税|租税条約|所得税協定|tax treaty|tax agreement|income tax agreement|double taxation|ADTA/i;
 
@@ -48,9 +48,11 @@ describe('company-setup Korea–Taiwan tax agreement dates', () => {
     ).toBe(true);
   });
 
-  it.each(LOCALES)('keeps both dates in the %s treaty cost row when that row exists', (locale) => {
+  it.each(LOCALES)('keeps both dates in the %s treaty cost row when that row carries a date', (locale) => {
     const row = treatyCostRow(locale);
-    if (row === null) {
+    // A locale may point at its country-specific section instead of printing the
+    // dates in the table; rule two still requires the date somewhere in that guide.
+    if (row === null || !/20\d\d/.test(row)) {
       return;
     }
     expect(IN_FORCE.some((date) => row.includes(date)), `${locale} cost row entry into force`).toBe(

@@ -398,7 +398,9 @@ describe('English investment column 001 — company-formation basics', () => {
     const visibleWords = countVisibleEnglishWords(parsed.content);
     const calculatedMinutes = Math.ceil(visibleWords / 200);
 
-    expect(visibleWords).toBe(2_948);
+    // 2_931 after the merge dropped the reader-facing editorial aside
+    // ("Korean companies remain part of that overseas audience …", 17 words).
+    expect(visibleWords).toBe(2_931);
     expect(visibleWords).toBeGreaterThan(2_000);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);

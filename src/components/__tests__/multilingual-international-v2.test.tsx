@@ -63,7 +63,7 @@ describe('MULTILINGUAL-INTERNATIONAL-v2 unpublished candidate', () => {
     });
     for (const locale of GUIDANCE_LOCALES_4) {
       const notice = internationalInquiryCopy[locale].consultationNotice;
-      expect(notice).toMatch(/English|Inggris|อังกฤษ|Ingles|الإنجليزية|tiếng Anh/i);
+      expect(notice).toMatch(/English|Englisch|inglés|Inggris|อังกฤษ|Ingles|الإنجليزية|tiếng Anh/i);
       expect(notice).not.toMatch(/9 language|chín ngôn ngữ|sembilan bahasa/i);
     }
   });

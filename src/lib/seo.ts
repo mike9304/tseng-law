@@ -145,6 +145,8 @@ const guidanceOpenGraphLocale: Record<string, string> = {
   id: 'id_ID',
   th: 'th_TH',
   fil: 'fil_PH',
+  de: 'de_DE',
+  es: 'es_ES',
   // Arabic has no single-country default on the site; `ar_AR` is the
   // Open Graph locale for the language itself.
   ar: 'ar_AR',
@@ -488,7 +490,7 @@ export function buildLegalServiceJsonLd(
     url: buildAbsoluteUrl(getLocalizedPath(locale, options?.path)),
     serviceType: options?.serviceType,
     email: CONSULTATION_EMAIL,
-    areaServed: ['Taiwan', 'South Korea'],
+    areaServed: ['Taiwan', 'South Korea', 'Japan'],
     knowsLanguage: organizationLanguageTags,
     sameAs: ['https://www.youtube.com/@weilawyer', 'https://blog.naver.com/wei_lawyer/223461663913', 'https://www.threads.com/@lawyer.wei'],
     contactPoint: [

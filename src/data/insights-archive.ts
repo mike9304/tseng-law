@@ -33,8 +33,19 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
       legal: '대만 법률정보',
       case: '소송사례 분석'
     },
-    homeFeaturedIds: ['gym-injury-lawsuit', 'cosmetics-market-entry', 'company-advanced-2'],
+    homeFeaturedIds: ['semiconductor-market-entry', 'gym-injury-lawsuit', 'cosmetics-market-entry'],
     posts: [
+      {
+        id: 'semiconductor-market-entry',
+        title: '반도체 부품기업이 대만 시장에 진출할 때: 현지 자회사·지사·대리점 중 무엇을 검토해야 할까?',
+        summary: '대만에 회사를 세울지보다 먼저, 계약·재고·인력·기술지원을 누가 맡을지를 정해야 합니다. 이 글은 일반 안내이며 획일적인 설립 요건이 아닙니다.',
+        href: '/ko/insights/semiconductor-market-entry',
+        category: 'formation',
+        date: '2026.09.17',
+        readTime: '8분',
+        image: '/images/018-taiwan-semiconductor-market-entry/featured-01.jpg',
+        keywords: ['반도체', '자회사', '지사', '대리점', '법인설립']
+      },
       {
         id: 'gym-injury-lawsuit',
         title: '대만 헬스장 부상 손해배상: 1심 사례·청구기한·증거·배상항목',
@@ -220,8 +231,19 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
       legal: '台灣法律資訊',
       case: '訴訟案例分析'
     },
-    homeFeaturedIds: ['gym-injury-lawsuit', 'cosmetics-market-entry', 'company-advanced-2'],
+    homeFeaturedIds: ['semiconductor-market-entry', 'gym-injury-lawsuit', 'cosmetics-market-entry'],
     posts: [
+      {
+        id: 'semiconductor-market-entry',
+        title: '半導體零組件企業進入台灣市場：在台子公司、分公司與代理商，該如何評估？',
+        summary: '先釐清在台灣由誰負責契約、庫存、人力與技術支援，再決定子公司、分公司或代理商。本文為一般說明，不是一體適用的設立要件。',
+        href: '/zh-hant/insights/semiconductor-market-entry',
+        category: 'formation',
+        date: '2026.09.17',
+        readTime: '8分',
+        image: '/images/018-taiwan-semiconductor-market-entry/featured-01.jpg',
+        keywords: ['半導體', '子公司', '分公司', '代理商', '公司設立']
+      },
       {
         id: 'gym-injury-lawsuit',
         title: '台灣健身房受傷求償：一審案例、期限、證據與賠償項目',
@@ -401,6 +423,12 @@ const baseInsightsArchive: Record<'ko' | 'zh-hant', InsightsArchive> = {
 };
 
 const englishPostCopy: Record<string, { title: string; summary: string; keywords?: string[]; readTime?: string }> = {
+  'semiconductor-market-entry': {
+    title: 'Semiconductor Component Companies Entering Taiwan: How to Assess a Subsidiary, Branch, or Agent',
+    summary: 'Decide who will handle contracts, inventory, staffing, and technical support in Taiwan before choosing a subsidiary, branch, or agent.',
+    keywords: ['semiconductor', 'subsidiary', 'branch', 'agent', 'company setup'],
+    readTime: '10 min read',
+  },
   'gym-injury-lawsuit': {
     title: 'Taiwan Gym Injury Claims: Case Study, Deadlines, Evidence, and Damages',
     summary: 'Using a first-instance Taiwan gym injury case, this guide explains deadlines for criminal complaints and civil claims, evidence preservation, damages, and insurance checks.',

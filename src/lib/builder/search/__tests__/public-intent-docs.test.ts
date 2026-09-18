@@ -13,14 +13,14 @@ describe('getPublicIntentSearchDocs', () => {
   });
 
   it.each(['en', 'ja'] as const)(
-    'returns three intent pages plus the corporate anchor for %s',
+    'returns four intent pages plus the corporate anchor for %s',
     (locale) => {
       const docs = getPublicIntentSearchDocs(locale);
       const href = getCorporateAdvisoryHref(locale);
       const advisory = getCorporateAdvisory(locale);
 
-      expect(docs).toHaveLength(4);
-      expect(new Set(docs.map((doc) => doc.id)).size).toBe(4);
+      expect(docs).toHaveLength(5);
+      expect(new Set(docs.map((doc) => doc.id)).size).toBe(5);
       expect(docs.every((doc) => doc.kind === 'page')).toBe(true);
       expect(docs.every((doc) => doc.locale === locale)).toBe(true);
       expect(docs.every((doc) => !('publishedAt' in doc))).toBe(true);

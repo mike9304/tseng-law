@@ -515,6 +515,26 @@ export const CINEMATIC_OPENING_COPY: Record<
     service: 'الدعم القانوني في تايوان · بالإنجليزية والصينية واليابانية والكورية',
     contact: 'التواصل مع المكتب',
   },
+  de: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ANWÄLTE IN TAIWAN',
+    scroll: 'Weiter nach unten',
+    skip: 'Intro überspringen',
+    mediaAlt:
+      'Helle Luftaufnahme bei natürlichem Licht über Taiwans Zentralgebirge und einem Wolkenmeer',
+    service: 'Rechtliche Hinweise zu Taiwan · Englisch, Chinesisch, Japanisch und Koreanisch',
+    contact: 'Die Kanzlei kontaktieren',
+  },
+  es: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ABOGADOS EN TAIWÁN',
+    scroll: 'Seguir hacia abajo',
+    skip: 'Saltar la intro',
+    mediaAlt:
+      'Toma aérea a plena luz natural sobre la Cordillera Central de Taiwán y un mar de nubes',
+    service: 'Orientación jurídica sobre Taiwán · inglés, chino, japonés y coreano',
+    contact: 'Contactar con el despacho',
+  },
 };
 
 export default function CinematicOpening({

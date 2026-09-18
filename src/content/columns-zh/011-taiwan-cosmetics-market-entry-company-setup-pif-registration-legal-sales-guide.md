@@ -111,7 +111,7 @@ PIF 制度已依產品群分階段適用。自 2026 年 7 月 1 日起，其餘�
 5. 依整體表現標準檢視標籤、銷售頁面、廣告與合作貼文。
 6. 建立應對查核與改正要求、申訴、安全資訊及必要後續措施的程序。
 
-公司與分公司的基本架構可參考[台灣公司設立基礎](/zh-hant/columns/taiwan-company-establishment-basics)，相關支援範圍可參考[台灣投資及公司設立服務](/zh-hant/services#investment)，承辦律師資料可參考[曾雋崴律師簡介](/zh-hant/lawyers/wei-tseng)。
+公司與分公司的基本架構可參考[台灣公司設立基礎](/zh-hant/columns/taiwan-company-establishment-basics)，相關支援範圍可參考[台灣投資及公司設立服務](/zh-hant/services/investment)，承辦律師資料可參考[曾雋崴律師簡介](/zh-hant/lawyers/wei-tseng)。
 
 ### 官方資料
 

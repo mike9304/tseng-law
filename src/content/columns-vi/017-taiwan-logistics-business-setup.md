@@ -140,7 +140,7 @@ Việc làm không có giấy phép có thể bị áp dụng tiền phạt hàn
 
 ## Hướng dẫn liên quan
 
-- [Dịch vụ đầu tư và thành lập công ty tại Đài Loan](/ko/services#investment)
+- [Dịch vụ đầu tư và thành lập công ty tại Đài Loan](/ko/services/investment)
 - [Hồ sơ luật sư Wei Tseng](/ko/lawyers/wei-tseng)
 - [Liên hệ trao đổi vụ việc](/vi/contact)
 

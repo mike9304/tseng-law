@@ -271,7 +271,7 @@ describe('Traditional Chinese investment column 017 — logistics and motor frei
       (match) => match[0],
     );
     expect(internalLinks).toEqual([
-      '[台灣投資及公司設立服務](/zh-hant/services#investment)',
+      '[台灣投資及公司設立服務](/zh-hant/services/investment)',
       '[曾雋崴律師簡介](/zh-hant/lawyers/wei-tseng)',
       '[聯絡我們](/zh-hant/contact)',
     ]);

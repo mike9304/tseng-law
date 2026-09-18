@@ -46,8 +46,8 @@ describe('public eight-locale helper isolation', () => {
   it('does not widen Locale3 or SiteLocale4', () => {
     expect(locales).toEqual(['ko', 'zh-hant', 'en']);
     expect(siteLocales).toEqual(['ko', 'zh-hant', 'en', 'ja']);
-    expect(PUBLIC_LOCALES_8).toHaveLength(9);
-    expect(GUIDANCE_LOCALES_4).toEqual(['vi', 'id', 'th', 'fil', 'ar']);
+    expect(PUBLIC_LOCALES_8).toHaveLength(11);
+    expect(GUIDANCE_LOCALES_4).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es']);
   });
 
   it('keeps helper free of CMS / builder-locale fallback', () => {
@@ -70,10 +70,12 @@ describe('public eight-locale helper isolation', () => {
       th: 'ไทย',
       fil: 'Filipino',
       ar: 'العربية',
+      de: 'Deutsch',
+      es: 'Español',
     });
     const autonyms = Object.values(PUBLIC_LANGUAGE_AUTONYMS);
-    expect(autonyms).toHaveLength(9);
-    expect(new Set(autonyms).size).toBe(9);
+    expect(autonyms).toHaveLength(11);
+    expect(new Set(autonyms).size).toBe(11);
     expect(autonyms.join('')).not.toMatch(/🇰🇷|🇯🇵|🇹🇼|🇺🇸|🇻🇳|🇮🇩|🇹🇭|🇵🇭|🇸🇦|🇦🇪/);
 
     const countryQualificationLabels = [
@@ -120,9 +122,9 @@ describe('document language (html lang 8)', () => {
   });
 });
 
-describe('allowed 50 guidance route pairs', () => {
-  it('covers five locales × ten core pages', () => {
-    expect(ALLOWED_ROUTE_PAIRS).toHaveLength(50);
+describe('allowed 70 guidance route pairs', () => {
+  it('covers seven locales × ten core pages', () => {
+    expect(ALLOWED_ROUTE_PAIRS).toHaveLength(70);
     expect(GUIDANCE_PAGE_KEYS).toHaveLength(10);
   });
 

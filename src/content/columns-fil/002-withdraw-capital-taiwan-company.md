@@ -139,7 +139,7 @@ Habang tumatagal ang kalagayan ng paghinto, maaaring lalong maging masalimuot an
 
 ## Kaugnay na Impormasyon
 
-1. [Mga Serbisyo sa Pamumuhunan at Pagtatatag ng Kompanya sa Taiwan](/ko/services#investment)
+1. [Mga Serbisyo sa Pamumuhunan at Pagtatatag ng Kompanya sa Taiwan](/ko/services/investment)
 2. [Mga Batayan sa Pagtatatag ng Kompanya sa Taiwan](/fil/columns/taiwan-company-establishment-basics)
 3. [Pagtatanong](/fil/contact)
 
@@ -147,4 +147,4 @@ Habang tumatagal ang kalagayan ng paghinto, maaaring lalong maging masalimuot an
 
 Ang artikulong ito ay pangkalahatang impormasyong legal at materyal na pang-edukasyon hinggil sa pagwawakas ng kompanya sa Taiwan at sa pagpapangasiwa sa ari-arian ng kompanya, at hindi ito payong legal para sa isang tiyak na usapin. Dahil maaaring magbago ang angkop na hakbang sa pagbubuwag, sa likidasyon, sa pagbawas ng kapital at sa pansamantalang paghinto ng negosyo, gayundin ang pag-uulat sa buwis, depende sa uri ng kompanya, sa articles of incorporation, sa kalagayang pinansiyal, sa mga kreditor, sa foreign investment at sa bawat transaksiyon, kailangang hiwalay na tiyakin ang inyong usapin bago ang aktuwal na resolusyon o ang paggalaw ng pondo.
 
-**Abogado Wei Tseng (曾雋崴)**
+**Abogada Wei Tseng (曾雋崴)**

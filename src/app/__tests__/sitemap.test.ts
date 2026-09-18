@@ -2,6 +2,8 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { readdirSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { getAllColumnPosts } from '@/lib/columns';
+import type { AttorneyProfileSourceRecord } from '@/lib/builder/lawyers/source';
+import type { ServiceAreaSourceRecord } from '@/lib/builder/services/source';
 import type { BuilderSitemapEntry } from '@/lib/builder/seo/sitemap-builder';
 import {
   GUIDANCE_LOCALES_4,
@@ -18,8 +20,12 @@ import {
 } from '@/data/__tests__/column-alternate-expectations';
 
 const sourceMocks = vi.hoisted(() => ({
-  readAttorneyProfileSourceRecords: vi.fn(async () => []),
-  readServiceAreaSourceRecords: vi.fn(async () => []),
+  readAttorneyProfileSourceRecords: vi.fn<
+    (...args: unknown[]) => Promise<AttorneyProfileSourceRecord[]>
+  >(async () => []),
+  readServiceAreaSourceRecords: vi.fn<
+    (...args: unknown[]) => Promise<ServiceAreaSourceRecord[]>
+  >(async () => []),
   collectAllBuilderSitemapEntries: vi.fn<() => Promise<BuilderSitemapEntry[]>>(
     async () => [],
   ),
@@ -37,7 +43,7 @@ vi.mock('@/lib/builder/seo/sitemap-builder', () => ({
   collectAllBuilderSitemapEntries: sourceMocks.collectAllBuilderSitemapEntries,
 }));
 
-const guidanceTranslatedColumnCount = ['vi', 'id', 'th', 'fil', 'ar'].reduce((total, locale) => {
+const guidanceTranslatedColumnCount = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es'].reduce((total, locale) => {
   const dir = path.join(process.cwd(), 'src/content', `columns-${locale}`);
   if (!existsSync(dir)) return total;
   return total + readdirSync(dir).filter((name) => name.endsWith('.md')).length;
@@ -124,16 +130,18 @@ describe('sitemap column lastModified', () => {
     }).toEqual({
       // Base includes EN file-backed columns + JA home, /about, /services,
       // /pricing, /contact, /lawyers, /lawyers/wei-tseng, /faq, /videos,
-      // /privacy, /disclaimer, /accessibility, three JA intent pages,
+      // /privacy, /disclaimer, /accessibility, four JA intent pages,
       // /korean-lawyer-in-taiwan, /ai-intake, /guides/taiwan-company-setup,
-      // /columns archive, 17 JA column details, and all six JA service
+      // /columns archive, 18 JA column details, and all six JA service
       // details (+41). Builder fixtures still drop 9 EN-only noindex routes.
-      // Plus 50 guidance core URLs (5 locales × 10 dictionary pages), plus one
+      // Plus 70 guidance core URLs (7 locales × 10 dictionary pages), plus one
       // URL per translated column file present in
-      // src/content/columns-{vi,id,th,fil,ar} (counted from disk so this
-      // assertion tracks the growing corpus; `ar` has no directory yet).
-      beforeFiltering: 221 + guidanceTranslatedColumnCount,
-      afterFiltering: 212 + guidanceTranslatedColumnCount,
+      // src/content/columns-{vi,id,th,fil,ar,de,es} (counted from disk so this
+      // assertion tracks the growing corpus).
+      // Semiconductor hub adds 4 URLs (ko/zh-hant/en STATIC_PATHS + ja entry).
+      // Public semiconductor guide board adds 4 more URLs.
+      beforeFiltering: 253 + guidanceTranslatedColumnCount,
+      afterFiltering: 244 + guidanceTranslatedColumnCount,
       removed: 9,
     });
 
@@ -335,6 +343,8 @@ describe('sitemap column lastModified', () => {
     '/taiwan-lawyer',
     '/taiwan-company-setup-lawyer',
     '/taiwan-litigation-lawyer',
+    '/taiwan-semiconductor-supplier-legal',
+    '/semiconductor',
     '/korean-lawyer-in-taiwan',
     '/ai-intake',
     '/guides/taiwan-company-setup',
@@ -348,6 +358,31 @@ describe('sitemap column lastModified', () => {
     expect(japaneseEntries).toHaveLength(1);
     expect(japaneseEntries[0]?.alternates?.languages).toHaveProperty('ja');
     expect(japaneseEntries[0]?.alternates?.languages).toHaveProperty('x-default');
+  });
+
+  it('publishes the semiconductor hub four times with the five-key hreflang cluster', async () => {
+    const { default: sitemap } = await import('../sitemap');
+    const entries = await sitemap();
+    const path = '/taiwan-semiconductor-supplier-legal';
+    const languages = {
+      ko: `https://tseng-law.com/ko${path}`,
+      'zh-Hant': `https://tseng-law.com/zh-hant${path}`,
+      en: `https://tseng-law.com/en${path}`,
+      ja: `https://tseng-law.com/ja${path}`,
+      'x-default': `https://tseng-law.com/en${path}`,
+    };
+    const pageUrls = [
+      languages.ko,
+      languages['zh-Hant'],
+      languages.en,
+      languages.ja,
+    ];
+
+    for (const url of pageUrls) {
+      const found = entries.filter((entry) => entry.url === url);
+      expect(found).toHaveLength(1);
+      expect(found[0]?.alternates?.languages).toEqual(languages);
+    }
   });
 
   it('strips the en alternate from the Japanese faq entry (English-noindex path)', async () => {
@@ -405,8 +440,8 @@ describe('sitemap column lastModified', () => {
 
     for (const pageKey of ['home', 'contact'] as const) {
       const expected = buildGuidanceCoreLanguageAlternates(pageKey);
-      expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(9);
-      for (const locale of ['ko', 'zh-hant', 'en', 'ja', 'vi', 'id', 'th', 'fil', 'ar'] as const) {
+      expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(11);
+      for (const locale of ['ko', 'zh-hant', 'en', 'ja', 'vi', 'id', 'th', 'fil', 'ar', 'de', 'es'] as const) {
         const url = `https://tseng-law.com${guidancePublicPath(locale, pageKey)}`;
         const matches = entries.filter((entry) => entry.url === url);
         expect(matches).toHaveLength(1);
@@ -425,10 +460,10 @@ describe('sitemap column lastModified', () => {
     const expected = buildGuidanceCoreLanguageAlternates('faq');
 
     expect(expected).not.toHaveProperty('en');
-    expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(8);
+    expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(10);
     expect(entries.some((entry) => entry.url === 'https://tseng-law.com/en/faq')).toBe(false);
 
-    for (const locale of ['ko', 'zh-hant', 'ja', 'vi', 'id', 'th', 'fil', 'ar'] as const) {
+    for (const locale of ['ko', 'zh-hant', 'ja', 'vi', 'id', 'th', 'fil', 'ar', 'de', 'es'] as const) {
       const url = `https://tseng-law.com${guidancePublicPath(locale, 'faq')}`;
       const matches = entries.filter((entry) => entry.url === url);
       expect(matches).toHaveLength(1);
@@ -497,9 +532,11 @@ describe('sitemap column lastModified', () => {
     expect(usLanding?.alternates?.languages).not.toHaveProperty('th');
     expect(usLanding?.alternates?.languages).not.toHaveProperty('fil');
     expect(usLanding?.alternates?.languages).not.toHaveProperty('ar');
+    expect(usLanding?.alternates?.languages).not.toHaveProperty('de');
+    expect(usLanding?.alternates?.languages).not.toHaveProperty('es');
   });
 
-  it('appends exactly 50 unique self-canonical guidance core URLs and retains non-core routes', async () => {
+  it('appends exactly 70 unique self-canonical guidance core URLs and retains non-core routes', async () => {
     const { default: sitemap } = await import('../sitemap');
     const entries = await sitemap();
     const urls = entries.map((entry) => entry.url);
@@ -507,10 +544,10 @@ describe('sitemap column lastModified', () => {
       GUIDANCE_PAGE_KEYS.map((pageKey) => guidanceCanonicalUrl(locale, pageKey)),
     );
 
-    expect(GUIDANCE_LOCALES_4).toHaveLength(5);
+    expect(GUIDANCE_LOCALES_4).toHaveLength(7);
     expect(GUIDANCE_PAGE_KEYS).toHaveLength(10);
-    expect(newUrls).toHaveLength(50);
-    expect(new Set(newUrls).size).toBe(50);
+    expect(newUrls).toHaveLength(70);
+    expect(new Set(newUrls).size).toBe(70);
     expect(urls.some((url) => url.includes('__public-guidance'))).toBe(false);
 
     for (const url of newUrls) {

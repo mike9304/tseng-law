@@ -28,7 +28,7 @@ const section4Heading = '## 4. 就業許可・居留資格・資本金';
 const section5Heading = '## 5. 税金と台湾・韓国所得税協定（韓国関連）';
 const officialSourcesHeading = '## 公式資料';
 const relatedGuidanceParagraph =
-  '関連する業務範囲は[台湾投資・会社設立サービス](/ja/services#investment)で、担当弁護士の経歴と対応言語は[曾雋崴弁護士のプロフィール](/ja/lawyers/wei-tseng)でご確認いただけます。具体的な事案に関するお問い合わせは[ご相談・お問い合わせ](/ja/contact)をご利用ください。';
+  '関連する業務範囲は[台湾投資・会社設立サービス](/ja/services/investment)で、担当弁護士の経歴と対応言語は[曾雋崴弁護士のプロフィール](/ja/lawyers/wei-tseng)でご確認いただけます。具体的な事案に関するお問い合わせは[ご相談・お問い合わせ](/ja/contact)をご利用ください。';
 const disclaimerParagraph =
   '本稿は、台湾での会社設立および関連制度を一般的に説明するための教育目的の資料であり、個別の事案に対する法律・税務上の助言ではありません。投資構造、業種、申請者の国籍・在留資格および所管官庁の最新の実務によって必要な手続や結果が異なり得るため、投資・契約・雇用を実行する前に、最新の公式資料と個別の事情をご確認ください。';
 const authorLine = '**曾雋崴弁護士（Wei Tseng）**';
@@ -451,7 +451,7 @@ describe('Japanese investment column 001 — company-setup basics', () => {
       (match) => match[0],
     );
     expect(internalLinks).toEqual([
-      '[台湾投資・会社設立サービス](/ja/services#investment)',
+      '[台湾投資・会社設立サービス](/ja/services/investment)',
       '[曾雋崴弁護士のプロフィール](/ja/lawyers/wei-tseng)',
       '[ご相談・お問い合わせ](/ja/contact)',
     ]);
@@ -515,7 +515,7 @@ describe('Japanese investment column 001 — company-setup basics', () => {
     }
 
     expect(raw).toContain(
-      '[台湾投資・会社設立サービス](/ja/services#investment)',
+      '[台湾投資・会社設立サービス](/ja/services/investment)',
     );
     expect(raw).toContain(
       '[曾雋崴弁護士のプロフィール](/ja/lawyers/wei-tseng)',

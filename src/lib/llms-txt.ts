@@ -346,6 +346,8 @@ const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
   th: 'Thai',
   fil: 'Filipino',
   ar: 'Arabic',
+  de: 'German',
+  es: 'Spanish',
 };
 
 export function buildRootLlmsTxt(): string {
@@ -544,6 +546,22 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     // so the line stands alone; the proposition is unchanged.
     confidentialNotice:
       'لأن النص الأصلي محفوظ، يُرجى عدم كتابة معلومات لا حاجة إليها في المرحلة الأولى، مثل رقم جواز السفر أو رقم الهوية أو بيانات الحساب المصرفي.',
+  },
+  de: {
+    consultationNotice:
+      'Diese Hinweise sind auf Deutsch geschrieben, aber die Beratung durch eine Anwältin oder einen Anwalt erfolgt nur auf Englisch, Chinesisch (中文), Japanisch und Koreanisch.',
+    discoveryNotice:
+      'Die Datei llms.txt ist nur eine Suchkarte öffentlicher Seiten; sie verspricht keine Suchplatzierung, keine Empfehlung, keine KI-Empfehlung und keine Anzeige.',
+    confidentialNotice:
+      'Weil der Originaltext gespeichert wird, schreiben Sie in der Anfangsphase bitte nichts, das noch nicht nötig ist, etwa Passnummer, Ausweisnummer oder Kontodaten.',
+  },
+  es: {
+    consultationNotice:
+      'Esta orientación está escrita en español, pero la consulta con un abogado se realiza únicamente en inglés, chino (中文), japonés y coreano.',
+    discoveryNotice:
+      'El archivo llms.txt es solo un mapa para localizar páginas públicas; no promete posición en buscadores, respaldo, recomendación de IA ni visibilidad.',
+    confidentialNotice:
+      'Como el texto original se guarda, no escriba en esta primera fase datos que aún no hacen falta, como el número de pasaporte, el número de identidad o datos de una cuenta bancaria.',
   },
 };
 

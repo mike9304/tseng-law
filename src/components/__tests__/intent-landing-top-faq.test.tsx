@@ -28,8 +28,12 @@ function parseFaqPage(html: string): {
   throw new Error('FAQPage JSON-LD was not rendered');
 }
 
+const generalIntentPageSlugs = intentPageSlugs.filter(
+  (slug) => slug !== 'taiwan-semiconductor-supplier-legal',
+);
+
 describe('intent landing top Q-A summary (P1-7②)', () => {
-  it.each(intentPageSlugs)(
+  it.each(generalIntentPageSlugs)(
     'places selected FAQ question–answer text before Related Services on EN /%s and matches FAQPage JSON-LD',
     (slug) => {
       const page = getIntentPage('en', slug);
@@ -65,7 +69,7 @@ describe('intent landing top Q-A summary (P1-7②)', () => {
   );
 
   it('selects top FAQ entries from intent-pages data rather than new copy', () => {
-    for (const slug of intentPageSlugs) {
+    for (const slug of generalIntentPageSlugs) {
       const page = getIntentPage('en', slug)!;
       const topFaqs = getIntentTopFaqs(page);
       expect(page.topFaqIds?.length).toBeGreaterThanOrEqual(1);

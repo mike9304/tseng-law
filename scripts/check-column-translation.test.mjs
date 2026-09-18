@@ -505,6 +505,38 @@ test('numbers: altered figure FAILs', () => {
   assert.match(details, /40000/);
 });
 
+test('numbers: de dotted date_display 13. September 2025 PASS', () => {
+  const result = checkPair({
+    sourceRaw: sourceDoc().replace('date_display: "Sept 13"', 'date_display: "2025년 9월 13일"'),
+    targetRaw: targetDoc({ lang: 'de' }).replace('date_display: "Sept 13"', 'date_display: "13. September 2025"'),
+    sourcePath: 'src.md',
+    targetPath: 'de.md',
+    lang: 'de',
+  });
+  assert.equal(
+    statuses(result).numbers,
+    'PASS',
+    JSON.stringify(result.checks.find((c) => c.id === 'numbers'), null, 2),
+  );
+  assert.equal(result.ok, true);
+});
+
+test('numbers: es de-month-de-year date_display PASS', () => {
+  const result = checkPair({
+    sourceRaw: sourceDoc().replace('date_display: "Sept 13"', 'date_display: "2025년 9월 13일"'),
+    targetRaw: targetDoc({ lang: 'es' }).replace('date_display: "Sept 13"', 'date_display: "13 de septiembre de 2025"'),
+    sourcePath: 'src.md',
+    targetPath: 'es.md',
+    lang: 'es',
+  });
+  assert.equal(
+    statuses(result).numbers,
+    'PASS',
+    JSON.stringify(result.checks.find((c) => c.id === 'numbers'), null, 2),
+  );
+  assert.equal(result.ok, true);
+});
+
 test('numbers: id thousand-dot grouping PASS', () => {
   const result = checkPair({
     sourceRaw: sourceDoc({
@@ -575,6 +607,20 @@ const WORD_NUMERAL_FIXTURES = {
     missing: ['과태료 4만 신타이완달러와 조문 12.', 'لم يبق إلا المادة 12.'],
     altered: ['과태료 4만 신타이완달러.', 'غرامة 50,000 TWD.'],
   },
+  de: {
+    word: ['기한은 15일이고 의결은 3분의 2이며 근속은 1년이다.', 'Die Frist beträgt fünfzehn Tage, das Quorum zwei Drittel, die Betriebszugehörigkeit ein Jahr.'],
+    scale: ['배상액 157만 대만달러.', 'Schadensersatz 1,57 Millionen Taiwan-Dollar.'],
+    approx: ['한 번에 10여 개의 업종.', 'etwa zehn Branchen.'],
+    missing: ['과태료 4만 신타이완달러와 조문 12.', 'Nur noch Artikel 12.'],
+    altered: ['과태료 4만 신타이완달러.', 'Geldbuße 50.000 TWD.'],
+  },
+  es: {
+    word: ['기한은 15일이고 의결은 3분의 2이며 근속은 1년이다.', 'El plazo es de quince días, el quórum de dos tercios y la antigüedad de un año.'],
+    scale: ['배상액 157만 대만달러.', 'Indemnización de 1,57 millones de dólares taiwaneses.'],
+    approx: ['한 번에 10여 개의 업종.', 'aproximadamente diez tipos de actividad.'],
+    missing: ['과태료 4만 신타이완달러와 조문 12.', 'Solo queda el artículo 12.'],
+    altered: ['과태료 4만 신타이완달러.', 'Multa de 50.000 TWD.'],
+  },
 };
 
 function numbersCheck(lang, sourceTail, targetTail) {
@@ -592,7 +638,7 @@ function numbersCheck(lang, sourceTail, targetTail) {
   });
 }
 
-for (const lang of ['vi', 'id', 'th', 'fil', 'ar']) {
+for (const lang of ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es']) {
   const fx = WORD_NUMERAL_FIXTURES[lang];
 
   test(`numbers: ${lang} word numerals PASS`, () => {
@@ -765,9 +811,29 @@ const ORDINAL_FIXTURES = {
       'للمساهمة مع طرف أجنبي يلزم إجراء دراسة.',
     ],
   },
+  de: {
+    match: [
+      '제3자와 대만 사업에 공동 출자하려면 건물 등기 제2종 등본이 필요하다.',
+      'Für die gemeinsame Einlage mit der dritten Partei ist die Abschrift der Gebäudeeintragung zweiter Art erforderlich.',
+    ],
+    unknown: [
+      '제3자와 대만 사업에 공동 출자하려면 검토가 필요하다.',
+      'Für eine gemeinsame Einlage mit einer ausländischen Partei ist eine Prüfung erforderlich.',
+    ],
+  },
+  es: {
+    match: [
+      '제3자와 대만 사업에 공동 출자하려면 건물 등기 제2종 등본이 필요하다.',
+      'Para aportar capital junto con un tercero se necesita transcripción de inscripción predial de tipo II.',
+    ],
+    unknown: [
+      '제3자와 대만 사업에 공동 출자하려면 검토가 필요하다.',
+      'Para aportar capital junto con una parte extranjera se necesita un estudio.',
+    ],
+  },
 };
 
-for (const lang of ['vi', 'id', 'th', 'fil', 'ar']) {
+for (const lang of ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es']) {
   const fx = ORDINAL_FIXTURES[lang];
 
   test(`numbers: ${lang} ordinal/article wording PASS`, () => {
@@ -815,9 +881,11 @@ const NATIONALITY_FIXTURES = {
   id: { insert: 'Perusahaan Indonesia wajib mengajukan berkas.', language: 'Dokumen dapat disusun dalam bahasa Indonesia.' },
   th: { insert: 'คนไทยต้องยื่นเอกสารชุดนี้.', language: 'เอกสารจัดทำเป็นภาษาไทยได้.' },
   fil: { insert: 'Ang kompanya sa Pilipinas ay dapat maghain.', language: 'Maaaring isulat sa wikang Filipino.' },
+  de: { insert: 'Deutsche Unternehmen müssen Unterlagen einreichen.', language: 'Unterlagen können auf Deutsch erstellt werden.' },
+  es: { insert: 'Las empresas españolas deben presentar documentos.', language: 'Los documentos pueden redactarse en español.' },
 };
 
-for (const lang of ['vi', 'id', 'th', 'fil']) {
+for (const lang of ['vi', 'id', 'th', 'fil', 'de', 'es']) {
   const fx = NATIONALITY_FIXTURES[lang];
 
   test(`nationality: ${lang} inserted demonym FAILs with block citation`, () => {

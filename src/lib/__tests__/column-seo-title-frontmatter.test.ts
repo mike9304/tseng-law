@@ -108,7 +108,7 @@ describe('English column corpus seoTitle', () => {
   const files = fs.readdirSync(enDir).filter((name) => name.endsWith('.md')).sort();
 
   it('adds a 60–70 character seoTitle only when the display title exceeds 70 characters', () => {
-    expect(files).toHaveLength(17);
+    expect(files).toHaveLength(18);
 
     for (const file of files) {
       const raw = fs.readFileSync(path.join(enDir, file), 'utf8');

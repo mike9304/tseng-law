@@ -17,7 +17,8 @@ export async function generateMetadata(props: { params: Promise<{ locale: SiteLo
 
   return buildSeoMetadata({
     locale,
-    title: page.title,
+    // SEO 제목이 따로 있는 페이지만 <title>·og:title에 그 문구를 쓰고, 화면 H1은 page.title을 유지한다.
+    title: page.seoTitle ?? page.title,
     description: page.description,
     path: `/${slug}`,
     keywords: page.keywords,

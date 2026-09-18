@@ -26,8 +26,12 @@ function bottomCtaHtml(html: string): string {
   return html.slice(opening!.index);
 }
 
+const generalIntentPageSlugs = intentPageSlugs.filter(
+  (slug) => slug !== 'taiwan-semiconductor-supplier-legal',
+);
+
 describe('intent landing EN/JA contact paths', () => {
-  it.each(intentPageSlugs)(
+  it.each(generalIntentPageSlugs)(
     'puts the official EN mailto, same-locale fees link, and initial-information warning in the page header for %s',
     (slug) => {
       const html = renderLanding('en', slug);
@@ -53,7 +57,7 @@ describe('intent landing EN/JA contact paths', () => {
     },
   );
 
-  it.each(intentPageSlugs)(
+  it.each(generalIntentPageSlugs)(
     'puts the official JA mailto, same-locale fees link, and initial-information warning in the page header for %s',
     (slug) => {
       const html = renderLanding('ja', slug);

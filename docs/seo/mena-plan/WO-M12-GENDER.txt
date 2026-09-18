@@ -1,0 +1,15 @@
+# WO-M12-GENDER — 曾雋崴(Wei Tseng) 변호사 여성형 전면 수정 (아랍어 전 표면) (Opus 5)
+
+## 공통 규칙
+작업트리 ~/Projects/tseng-law-mena-20260916 만. 커밋·build·playwright·전체 스위트 금지. 허용 파일: src/data/international-guidance-content.ts(ar 블록), src/data/international-guidance-team.ts(ar 블록), src/data/international-guidance-answers.ts(ar), src/data/international-guidance-offices.ts(ar), src/data/international-inquiry-copy.ts(ar), src/lib/llms-txt.ts(ar 공지), src/content/columns-ar/*.md(17편), 관련 테스트(guidance-ar-content·guidance-team-bios·litigation-wiring 등 ar 단언만). 다른 로케일·다른 인물 무변경. 사실·수치·법률 문장 무변경(성·수 일치만).
+
+## 사용자 확정(2026-09-17): 曾雋崴 / Wei Tseng 은 **여성**. 아랍어 호칭·서술 전부 여성형으로.
+- 호칭: المحامي → **المحامية** (Wei Tseng·曾雋崴·tseng-junwei 지칭 시), المحامي المدير → **المحامية المديرة**, محامٍ مؤهَّل → **محامية مؤهَّلة**, "أنا المحامي التايواني Wei Tseng" → "أنا المحامية التايوانية Wei Tseng".
+- 동사·형용사·대명사: 해당 인물 주어의 동사(يتولّى→تتولّى, حصل→حصلت, تخرّج→تخرّجت, يعمل→تعمل, شغل→شغلت 등)·형용사(مؤهَّل→مؤهَّلة, تايواني→تايوانية)·접미 대명사(ـه→ـها) 전부. **주어가 المكتب(사무소)·الفريق·다른 남성 인물(chang-rongxuan·son-jungmin·huang-shengping 등)이면 손대지 않음**.
+- 팀 팩 `representativeTitle`·`keyFactsHeading`·roles['tseng-junwei']·bios['tseng-junwei'] 전부. 칼럼 서명/인사(각 편 상단·하단 "المحامي Wei Tseng"), 본문 내 "المحامي" 가 Wei Tseng 지칭인 경우만.
+- 일반 명사 "محامٍ/محامي/محامين"(변호사 일반, 상담 안내 문장)은 그대로.
+## 완료 기준
+1. grep: `المحامي Wei Tseng`·`المحامي التايواني Wei` = 0, `المحامية Wei Tseng` ≥ 12; tseng-junwei ar bio에 남성형 동사 0(파일:줄 목록으로 보고)
+2. npx vitest run src/lib/__tests__/guidance-ar-content.test.ts src/data/__tests__/guidance-team-bios.test.ts src/data/__tests__/guidance-disclosure-parity.test.ts src/lib/__tests__/litigation-wiring-m7.test.ts src/lib/__tests__/international-guidance-answers.test.ts 통과(단언 갱신 포함, 출력)
+3. node scripts/check-column-translation.mjs --dir src/content/columns-ar --lang ar 17/17 PASS · npx tsc --noEmit 0
+4. 보고: 파일별 변경 줄 수, 남겨둔 남성형(다른 인물·일반 명사) 근거, 미해결

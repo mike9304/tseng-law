@@ -78,7 +78,7 @@ describe('legacy client search index + public intent docs', () => {
     const prepended = items.slice(0, staticDocs.length);
     const rest = items.slice(staticDocs.length);
 
-    expect(staticDocs).toHaveLength(4);
+    expect(staticDocs).toHaveLength(5);
     expect(prepended.map((item) => item.href)).toEqual(staticDocs.map((doc) => doc.url));
     expect(prepended.every((item) => item.category === 'services')).toBe(true);
     expect(rest[0]?.id).toBe('services-0');
@@ -88,7 +88,7 @@ describe('legacy client search index + public intent docs', () => {
 
     const newHrefs = staticDocs.map((doc) => doc.url);
     const newIds = prepended.map((item) => item.id);
-    expect(new Set(newIds).size).toBe(4);
+    expect(new Set(newIds).size).toBe(5);
     for (const href of newHrefs) {
       expect(items.filter((item) => item.href === href)).toHaveLength(1);
       expect(rest.some((item) => item.href === href)).toBe(false);

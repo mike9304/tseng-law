@@ -134,9 +134,10 @@ describe('Japanese investment column 004 — synchronized introduction', () => {
       expect(third).toMatch(selectionFactor);
     }
 
-    expect(third).toMatch(/韓国[^。]*(?:親会社|企業)[^。]*台湾[^。]*(?:進出|参入)/u);
+    expect(third).toMatch(/台湾国外の親会社が台湾に進出/u);
+    expect(third).toMatch(/韓国親会社の例/u);
     expect(third).toMatch(
-      /台湾法[^。]*韓国[^。]*(?:会計|税務)[^。]*(?:海外投資|国外投資)[^。]*(?:手続|手続き)[^。]*(?:併せて|ともに|一緒に)[^。]*(?:検討|確認)/u,
+      /台湾法[^。]*(?:会計|税務)[^。]*(?:海外投資|国外投資)[^。]*(?:手続|手続き)[^。]*(?:併せて|ともに|一緒に)[^。]*(?:検討|確認)/u,
     );
 
     for (const roadmapConcept of [

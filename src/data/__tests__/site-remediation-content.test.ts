@@ -120,7 +120,7 @@ describe('WO-1 trust, localization, and performance content contracts', () => {
     expect(siteContent.en.stats.items.every((item) => !korean.test(item.label))).toBe(true);
     expect(korean.test(siteContent.en.videos.featured.title)).toBe(false);
     expect(siteContent.en.services.items.every((item) => item.details && item.details.length > 0)).toBe(true);
-    expect(insightsArchive.en.posts).toHaveLength(17);
+    expect(insightsArchive.en.posts).toHaveLength(18);
     expect(insightsArchive.en.posts.every((post) => post.keywords.length > 0)).toBe(true);
     expect(insightsArchive.en.posts.every((post) => post.keywords.every((keyword) => !korean.test(keyword)))).toBe(true);
   });

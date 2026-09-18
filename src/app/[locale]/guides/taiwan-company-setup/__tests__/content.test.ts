@@ -94,7 +94,7 @@ describe('guides/taiwan-company-setup content', () => {
     expect(ko.relatedColumns.map((c) => c.slug)).toEqual(expected);
   });
 
-  it('links every locale to the four related P0 resources', () => {
+  it('links Korean and Traditional Chinese guides to the dedicated Korean landing first', () => {
     const expected = [
       'korean-lawyer-in-taiwan',
       'taiwan-company-setup-lawyer',
@@ -102,9 +102,46 @@ describe('guides/taiwan-company-setup content', () => {
       'services/investment',
     ];
 
-    for (const locale of locales) {
+    for (const locale of ['ko', 'zh-hant'] as const) {
       expect(guideContent[locale].relatedResources.map((item) => item.href)).toEqual(expected);
     }
+  });
+
+  it('points English and Japanese guides at the attorney profile before other landings', () => {
+    const expected = [
+      'lawyers/wei-tseng',
+      'taiwan-company-setup-lawyer',
+      'taiwan-lawyer',
+      'services/investment',
+    ];
+
+    for (const locale of ['en', 'ja'] as const) {
+      expect(guideContent[locale].relatedResources.map((item) => item.href)).toEqual(expected);
+    }
+  });
+
+  it('labels Korea-specific remittance and treaty rules on EN/JA guides', () => {
+    expect(guideContent.en.steps[2]?.text).toContain('Remittance rules depend on the investor’s home country');
+    expect(guideContent.en.steps[2]?.text).toContain('from Korea');
+    expect(
+      guideContent.en.comparisonRows.find((row) => row.form.includes('Joint venture'))?.values[1],
+    ).toBe('Not allowed (a branch has no shareholders)');
+    expect(
+      guideContent.en.costRows.some(
+        (row) =>
+          row.item.includes('Korean parents; other countries differ') &&
+          row.values[0]?.includes('does not apply automatically'),
+      ),
+    ).toBe(true);
+
+    expect(guideContent.ja.steps[2]?.text).toContain('送金手続は投資者の本国によって異なります');
+    expect(guideContent.ja.steps[2]?.text).toContain('韓国の銀行');
+    expect(
+      guideContent.ja.comparisonRows.find((row) => row.form.includes('合弁'))?.values[1],
+    ).toBe('不可（支店に株主はいない）');
+    expect(
+      guideContent.ja.costRows.some((row) => row.item.includes('他国は別条約')),
+    ).toBe(true);
   });
 
   it('canonicalizes the locale tag in the inLanguage field', () => {

@@ -16,7 +16,7 @@ const retainedLocalizedLinks = [
   '/ja/columns/taiwan-company-establishment-basics',
   '/ja/columns/taiwan-company-establishment-advanced-1',
   'https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF',
-  '/ja/services#investment',
+  '/ja/services/investment',
   '/ja/columns/taiwan-company-establishment-advanced-1',
   '/ja/contact',
 ];

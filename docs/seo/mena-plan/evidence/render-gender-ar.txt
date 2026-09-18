@@ -1,0 +1,5 @@
+200 /ar/lawyers fem=18 masc_wei=0 male_client=3
+200 /ar/about fem=12 masc_wei=0 male_client=3
+200 /ar/columns/taiwan-company-establishment-basics fem=6 masc_wei=0 male_client=0
+200 /ar/columns/taiwan-labor-severance-law fem=10 masc_wei=0 male_client=0
+200 /ar/columns/taiwan-gym-injury-lawsuit fem=0 masc_wei=0 male_client=0

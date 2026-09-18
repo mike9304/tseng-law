@@ -184,7 +184,7 @@ faq:
 
 ## ข้อมูลที่เกี่ยวข้อง
 
-- [บริการด้านการลงทุนและการจัดตั้งบริษัทในไต้หวัน](/ko/services#investment)
+- [บริการด้านการลงทุนและการจัดตั้งบริษัทในไต้หวัน](/ko/services/investment)
 - [พื้นฐานการจัดตั้งบริษัทในไต้หวัน](/th/columns/taiwan-company-establishment-basics)
 - [ติดต่อสอบถาม](/th/contact)
 

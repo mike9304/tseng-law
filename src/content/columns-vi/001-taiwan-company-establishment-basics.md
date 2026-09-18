@@ -138,7 +138,7 @@ Thuế suất giới hạn theo hiệp định không tự động được áp 
 - [Hướng dẫn về thường trú của Sở Di dân, Bộ Nội chính Đài Loan (內政部移民署)](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Hướng dẫn tra cứu trước địa điểm kinh doanh của thành phố Đài Bắc](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-Quý vị có thể tìm hiểu phạm vi công việc liên quan tại [Dịch vụ đầu tư và thành lập công ty tại Đài Loan](/ko/services#investment), và xem kinh nghiệm cùng các ngôn ngữ mà luật sư phụ trách sử dụng tại [Hồ sơ luật sư Wei Tseng](/ko/lawyers/wei-tseng). Với thắc mắc về một vụ việc cụ thể, xin quý vị sử dụng [mục liên hệ](/vi/contact).
+Quý vị có thể tìm hiểu phạm vi công việc liên quan tại [Dịch vụ đầu tư và thành lập công ty tại Đài Loan](/ko/services/investment), và xem kinh nghiệm cùng các ngôn ngữ mà luật sư phụ trách sử dụng tại [Hồ sơ luật sư Wei Tseng](/ko/lawyers/wei-tseng). Với thắc mắc về một vụ việc cụ thể, xin quý vị sử dụng [mục liên hệ](/vi/contact).
 
 Bài viết này là tài liệu mang tính giáo dục nhằm giải thích một cách khái quát về việc thành lập công ty tại Đài Loan và các chế độ liên quan, không phải là ý kiến pháp lý hay ý kiến về thuế cho một vụ việc cụ thể. Vì thủ tục cần thiết và kết quả có thể thay đổi tùy theo cấu trúc đầu tư, ngành nghề, quốc tịch và tư cách cư trú của người nộp đơn, cũng như thực tiễn mới nhất của cơ quan có thẩm quyền, xin quý vị xác nhận tài liệu chính thức mới nhất và hoàn cảnh cụ thể của mình trước khi tiến hành đầu tư, ký kết hợp đồng hoặc tuyển dụng.
 

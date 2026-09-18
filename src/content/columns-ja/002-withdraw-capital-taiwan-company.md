@@ -139,7 +139,7 @@ faq:
 
 ## 関連案内
 
-1. [台湾投資・会社設立サービス](/ja/services#investment)
+1. [台湾投資・会社設立サービス](/ja/services/investment)
 2. [台湾会社設立の基礎](/ja/columns/taiwan-company-establishment-basics)
 3. [お問い合わせ](/ja/contact)
 

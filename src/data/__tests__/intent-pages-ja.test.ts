@@ -31,11 +31,41 @@ describe('Japanese intent landing pages', () => {
     const ja = getIntentPage('ja', slug);
 
     expect(ja?.serviceSlugs).toEqual(ko?.serviceSlugs);
-    expect(ja?.columnSlugs).toEqual(ko?.columnSlugs);
-    // WO-JA-1 added one Japanese-only FAQ (debt recovery) to the litigation page.
-    const jaOnlyFaqCount = slug === 'taiwan-litigation-lawyer' ? 1 : 0;
+    if (slug === 'taiwan-semiconductor-supplier-legal') {
+      // ko↔ja 칼럼 미러의 반도체 예외 분기는 유지한다. 일본어 카피도 재작성 범위에
+      // 들어왔고 columns-ja에 설립·채용 4 slug가 있어, 화장품·물류 대신 그 4편을 고정한다.
+      expect(ja?.columnSlugs).toEqual([
+        'taiwan-company-establishment-basics',
+        'taiwan-company-subsidiary-vs-branch',
+        'taiwan-labor-severance-law',
+        'taiwan-mandatory-employment-period',
+      ]);
+    } else {
+      expect(ja?.columnSlugs).toEqual(ko?.columnSlugs);
+    }
+    // WO-JA-1 added one Japanese-only FAQ to both the company-setup and litigation pages.
+    const jaOnlyFaqCount =
+      slug === 'taiwan-company-setup-lawyer' || slug === 'taiwan-litigation-lawyer' ? 1 : 0;
     expect(ko).toBeDefined();
     expect(ja?.faq).toHaveLength(ko!.faq.length + jaOnlyFaqCount);
+  });
+
+  it('pins the WO-JA-1 company-setup description and appended FAQ copy', () => {
+    const page = getIntentPage('ja', 'taiwan-company-setup-lawyer');
+
+    expect(page?.description).toBe(
+      '日本企業の台湾進出に向けた会社設立の手続き・費用・期間と、子会社・支店・駐在員事務所の違いを日本語で解説します。投資審査から銀行口座開設、就業許可までを一貫してサポートします。',
+    );
+    expect(page?.faq[0]).toEqual({
+      question: '台湾の会社設立は通常どのくらいかかりますか？',
+      answer:
+        '一般的に約3ヶ月前後を見込みますが、投資承認の対象かどうか、資本金送金の時期、業種別許可の必要性によって変わることがあります。',
+    });
+    expect(page?.faq[3]).toEqual({
+      question: '設立にはどのくらいかかりますか？',
+      answer:
+        '会社設立自体はおおむね3か月、その後の就業許可・居留証に約1か月が目安です（詳細は台湾法人設立総合ガイドをご覧ください）。',
+    });
   });
 
   it.each(intentPageSlugs)('emits a self-referencing /ja canonical for %s', (slug) => {
@@ -68,7 +98,9 @@ describe('Japanese intent landing pages', () => {
     );
   });
 
-  it.each(intentPageSlugs)('separates a brief first email from later documents for %s', (slug) => {
+  it.each(intentPageSlugs.filter((slug) => slug !== 'taiwan-semiconductor-supplier-legal'))(
+    'separates a brief first email from later documents for %s',
+    (slug) => {
     const page = getIntentPage('ja', slug);
 
     expect(page?.prepareChecklist[0]).toContain('初回の簡潔な概要');

@@ -184,7 +184,7 @@ Mas ligtas na isagawa ang panghuling pagpili habang magkatulad ang katotohanang 
 
 ## Kaugnay na Gabay
 
-- [Mga Serbisyo sa Pamumuhunan at Pagtatatag ng Kompanya sa Taiwan](/ko/services#investment)
+- [Mga Serbisyo sa Pamumuhunan at Pagtatatag ng Kompanya sa Taiwan](/ko/services/investment)
 - [Mga Batayan sa Pagtatatag ng Kompanya sa Taiwan](/fil/columns/taiwan-company-establishment-basics)
 - [Pagtatanong para sa konsultasyon](/fil/contact)
 
@@ -192,4 +192,4 @@ Mas ligtas na isagawa ang panghuling pagpili habang magkatulad ang katotohanang 
 
 Ang artikulong ito ay materyal na pang-edukasyon na naglalayong ipaliwanag sa pangkalahatan ang pagkakaiba ng subsidiary sa Taiwan at ng branch ng dayuhang kompanya, at hindi ito payong legal o payo sa buwis para sa isang tiyak na usapin. Dahil maaaring magbago ang nalalapat na batas at ang pagtrato sa buwis ayon sa kinaroroonan ng mamumuhunan at ng punong tanggapan, sa nilalaman ng negosyo, sa transaksiyon at sa daloy ng pondo, sa mga kinakailangan sa paglalapat ng kasunduan, at sa pinakabagong gawi ng ahensiyang may hurisdiksiyon, mangyaring tiyakin ninyo ang pinakabagong opisyal na sanggunian at ang inyong indibidwal na kalagayan bago isagawa ang pagtatatag, ang pamumuhunan, ang kontrata, ang dibidendo o ang pagpapadala ng pondo.
 
-**Abogado Wei Tseng (曾雋崴)**
+**Abogada Wei Tseng (曾雋崴)**

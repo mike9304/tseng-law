@@ -101,6 +101,8 @@ const FORMATION_CATEGORY_PHRASES = [
   'การจัดตั้งบริษัท', // th
   'Pagtatatag ng Kompanya', // fil
   'تأسيس الشركات', // ar
+  'Gesellschaftsgründung', // de
+  'Constitución de sociedades', // es
 ];
 const CASE_CATEGORY_PHRASES = [
   '소송사례',
@@ -111,6 +113,8 @@ const CASE_CATEGORY_PHRASES = [
   'การวิเคราะห์คดี', // th
   'Pagsusuri ng Kaso', // fil
   'دراسات قضايا', // ar
+  'Fallanalyse', // de
+  'Análisis de casos', // es
 ];
 
 function categoryFromString(cat: string): ColumnCategory {
@@ -144,6 +148,8 @@ const GUIDANCE_COLUMN_CATEGORY_LABELS: Partial<Record<GuidanceLocale4, Record<Co
   th: { formation: 'การจัดตั้งบริษัทในไต้หวัน', legal: 'ข้อมูลกฎหมายไต้หวัน', case: 'การวิเคราะห์คดีตัวอย่าง' },
   fil: { formation: 'Pagtatatag ng Kompanya sa Taiwan', legal: 'Impormasyong Legal sa Taiwan', case: 'Pagsusuri ng Kaso sa Paglilitis' },
   ar: { formation: 'تأسيس الشركات', legal: 'معلومات قانونية', case: 'دراسات قضايا' },
+  de: { formation: 'Gesellschaftsgründung in Taiwan', legal: 'Rechtliche Informationen zu Taiwan', case: 'Fallanalyse' },
+  es: { formation: 'Constitución de sociedades en Taiwán', legal: 'Información jurídica de Taiwán', case: 'Análisis de casos' },
 };
 const ENGLISH_COLUMN_CATEGORY_LABELS: Record<ColumnCategory, string> = {
   formation: 'Company Setup',
@@ -250,6 +256,7 @@ const SLUG_ALIASES: Record<string, string> = {
   'mandatory-employment': 'taiwan-mandatory-employment-period',
   'labor-severance': 'taiwan-labor-severance-law',
   'traffic-accident-procedure': 'taiwan-traffic-accident-procedure',
+  'semiconductor-market-entry': 'taiwan-semiconductor-market-entry',
 };
 
 const REAL_SLUG_TO_INSIGHT_ID = Object.fromEntries(

@@ -111,7 +111,7 @@ Nếu kiểm tra khâu chuẩn bị bán hàng tại Đài Loan theo trình tự
 5. Rà soát nhãn sản phẩm, trang bán hàng, quảng cáo và bài đăng hợp tác theo tiêu chuẩn toàn bộ biểu đạt.
 6. Vận hành quy trình ứng phó với việc kiểm tra và yêu cầu cải chính, với khiếu nại và thông tin an toàn cùng các biện pháp tiếp theo cần thiết.
 
-Về cấu trúc cơ bản của công ty và chi nhánh, quý vị có thể tham khảo [Cơ bản về thành lập công ty tại Đài Loan](/vi/columns/taiwan-company-establishment-basics); về phạm vi hỗ trợ liên quan, xin xem [Dịch vụ đầu tư và thành lập công ty tại Đài Loan](/ko/services#investment); còn thông tin về luật sư phụ trách có tại [Giới thiệu luật sư Wei Tseng](/ko/lawyers/wei-tseng).
+Về cấu trúc cơ bản của công ty và chi nhánh, quý vị có thể tham khảo [Cơ bản về thành lập công ty tại Đài Loan](/vi/columns/taiwan-company-establishment-basics); về phạm vi hỗ trợ liên quan, xin xem [Dịch vụ đầu tư và thành lập công ty tại Đài Loan](/ko/services/investment); còn thông tin về luật sư phụ trách có tại [Giới thiệu luật sư Wei Tseng](/ko/lawyers/wei-tseng).
 
 ### Tài liệu chính thức
 

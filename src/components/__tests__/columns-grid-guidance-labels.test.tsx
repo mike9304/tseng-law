@@ -14,6 +14,7 @@ vi.mock('next/navigation', () => ({
 }));
 
 const GUIDANCE_CONTENT_SRC = path.join(process.cwd(), 'src/data/international-guidance-content.ts');
+const GUIDANCE_WESTERN_SRC = path.join(process.cwd(), 'src/data/international-guidance-western.ts');
 
 /**
  * Filter "All" word taken from reviewed `viewAllLabel` already in
@@ -30,6 +31,8 @@ const GUIDANCE_ALL_LABEL: Record<GuidanceLocale4, string> = {
   th: 'ทั้งหมด',
   fil: 'Lahat',
   ar: 'الكل',
+  de: 'Alle',
+  es: 'Todo',
 };
 
 const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
@@ -38,6 +41,8 @@ const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
   th: "viewAllLabel: 'ดูทั้งหมด'",
   fil: "viewAllLabel: 'Tingnan lahat'",
   ar: "viewAllLabel: 'عرض الكل'",
+  de: "viewAllLabel: 'Alle anzeigen'",
+  es: "viewAllLabel: 'Ver todo'",
 };
 
 const ENGLISH_FILTER_LABELS = ['All', 'Company Setup', 'Legal Info', 'Case Studies'] as const;
@@ -92,7 +97,7 @@ function filterButtonLabels(html: string): string[] {
 
 describe('ColumnsGrid guidance filter and card CTA labels', () => {
   it('pins All labels to reviewed viewAllLabel vocabulary already in the guidance content file', () => {
-    const src = readFileSync(GUIDANCE_CONTENT_SRC, 'utf8');
+    const src = `${readFileSync(GUIDANCE_CONTENT_SRC, 'utf8')}\n${readFileSync(GUIDANCE_WESTERN_SRC, 'utf8')}`;
     for (const locale of GUIDANCE_LOCALES_4) {
       expect(src, locale).toContain(VIEW_ALL_LABEL_EVIDENCE[locale]);
       const viewAllValue = VIEW_ALL_LABEL_EVIDENCE[locale].match(/'([^']+)'/)?.[1] ?? '';

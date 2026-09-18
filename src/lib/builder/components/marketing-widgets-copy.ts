@@ -244,7 +244,7 @@ export function getMarketingWidgetsCopy(locale: Locale): MarketingWidgetsCopy {
         defaultPlans: [
           { name: 'Basic', price: '$400', period: '/ consult', featured: false, ctaLabel: 'Apply', ctaHref: '/en/contact', features: ['Initial 1-hour consultation', 'Written summary', 'One follow-up question'] },
           { name: 'Standard', price: '$1,600', period: '/ mo', featured: true, ctaLabel: 'Recommended', ctaHref: '/en/contact', features: ['5 advisory matters per month', 'Contract review', 'Negotiation support', 'Monthly report'] },
-          { name: 'Premium', price: '$4,000', period: '/ mo', featured: false, ctaLabel: 'Contact us', ctaHref: '/en/contact', features: ['Unlimited advisory', 'Litigation support', 'Korea-Taiwan collaboration', 'Real-time response'] },
+          { name: 'Premium', price: '$4,000', period: '/ mo', featured: false, ctaLabel: 'Contact us', ctaHref: '/en/contact', features: ['Unlimited advisory', 'Litigation support', 'Cross-border collaboration', 'Real-time response'] },
         ],
         inspector: {
           plans: 'Plans (name | price | period | featured | ctaLabel | ctaHref | feature1; feature2)',
@@ -257,7 +257,7 @@ export function getMarketingWidgetsCopy(locale: Locale): MarketingWidgetsCopy {
           { feature: 'Monthly advisory matters', values: ['1', '5', 'Unlimited'] },
           { feature: 'Contract review', values: ['—', '✓', '✓'] },
           { feature: 'Litigation support', values: ['—', '—', '✓'] },
-          { feature: 'Korea-Taiwan collaboration', values: ['—', '✓', '✓'] },
+          { feature: 'Cross-border collaboration', values: ['—', '✓', '✓'] },
         ],
         inspector: {
           columns: 'Columns (one per line)',
@@ -267,8 +267,8 @@ export function getMarketingWidgetsCopy(locale: Locale): MarketingWidgetsCopy {
       teamMemberCard: {
         defaultContent: {
           name: 'Attorney Kim',
-          role: 'Managing attorney · Korea and Taiwan qualified',
-          bio: 'Focused on international business advisory and Korea-Taiwan negotiations.',
+          role: 'Managing attorney · Taiwan-qualified international practice',
+          bio: 'Focused on international business advisory and cross-border negotiations.',
           avatar: '',
           socialLinks: [
             { label: 'LinkedIn', href: 'https://linkedin.com/' },
@@ -287,7 +287,7 @@ export function getMarketingWidgetsCopy(locale: Locale): MarketingWidgetsCopy {
       testimonialCarousel: {
         empty: 'Add testimonials in the inspector',
         defaultItems: [
-          { name: 'Taiwan technology company', role: 'Legal lead', quote: 'Korea-Taiwan legal risks were mapped clearly, making internal decisions easier.' },
+          { name: 'Taiwan technology company', role: 'Legal lead', quote: 'Cross-border legal risks were mapped clearly, making internal decisions easier.' },
           { name: 'Korean manufacturer', role: 'Overseas business lead', quote: 'The team responded quickly across time zones and kept negotiations moving.' },
         ],
         itemAriaLabel: (index) => `testimonial ${index}`,

@@ -91,6 +91,13 @@ export function resolveColumnMarkdownLinkHref(
   return getConsultationPublicMailto(locale);
 }
 
+const FOOTNOTE_LABELS: Record<SiteLocale, string> = {
+  ko: '각주',
+  'zh-hant': '註腳',
+  en: 'Footnotes',
+  ja: '脚注',
+};
+
 const COLUMN_TABLE_SCROLL_HINTS: Record<SiteLocale, string> = {
   ko: '표가 화면보다 넓으면 좌우로 스크롤해 보세요.',
   'zh-hant': '若表格超出畫面，請左右捲動檢視。',
@@ -113,6 +120,11 @@ export default function ColumnContent({
     <div className="column-markdown" data-column-content="markdown">
       <ReactMarkdown
         remarkPlugins={[[remarkGfm, { singleTilde: false }], remarkUnderline]}
+        remarkRehypeOptions={
+          locale
+            ? { footnoteLabel: FOOTNOTE_LABELS[locale] }
+            : undefined
+        }
         components={{
           img: ({ src, alt }) => {
             if (!src) return null;

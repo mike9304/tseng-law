@@ -1,5 +1,5 @@
 /**
- * Core guidance pages for the five guidance languages (vi, id, th, fil, ar).
+ * Core guidance pages for the guidance languages (vi, id, th, fil, ar, de, es).
  *
  * Guidance is published in the page language; consultations with an attorney
  * are handled only in English, Chinese, Japanese and Korean. Every locale below
@@ -16,8 +16,12 @@
  */
 
 import { AR_PRIVACY_POLICY_LABEL, ID_PRIVACY_POLICY_LABEL } from '@/data/guidance-privacy-label';
+import {
+  germanGuidanceContent,
+  spanishGuidanceContent,
+} from '@/data/international-guidance-western';
 
-export type GuidanceLocale = 'vi' | 'id' | 'th' | 'fil' | 'ar';
+export type GuidanceLocale = 'vi' | 'id' | 'th' | 'fil' | 'ar' | 'de' | 'es';
 
 export type GuidancePageKey =
   | 'home'
@@ -1657,7 +1661,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         ' kung paano isulat ang buod na susuriin ng abogado.',
       columnsViewAllLabel: 'Tingnan ang lahat ng artikulo',
       columnsReadMoreLabel: 'Basahin pa',
-      columnsReviewLabel: 'Sinuri ni Abogado Wei Tseng',
+      columnsReviewLabel: 'Sinuri ni Abogada Wei Tseng',
       columnsOriginalLanguageBadge: 'Orihinal na wika (original language)',
       columnsOriginalLanguageNote:
         'Wala pang bersyong Filipino ng mga artikulo sa ibaba. Nananatili sa orihinal na wika ang listahan at bubukas ito sa pahina sa wikang iyon; hindi ito awtomatikong isinasalin.',
@@ -1791,7 +1795,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Gawaing may kaugnayan sa ibang bansa',
             paragraphs: [
-              'Kabilang sa gawain naming may kaugnayan sa ibang bansa ang pagtatatag ng kompanya, aplikasyon sa visa, pagpaparehistro ng marka ng kalakal at patente, pagtaya ng panganib na legal, at konsultasyon sa buwis ng kompanya. Natatanging hinahawakan ng tanggapan sa Taichung ang mga usapin ng konstruksiyon, intelektuwal na ari-arian, at ang mga may kaugnayan sa Korea at Japan. Si Abogado Wei Tseng (曾雋崴) naman ang tumutulong sa mga kliyenteng Koreano, Hapon, at sa iba pang internasyonal na kliyente sa mga pangkat ng gawaing nabanggit.',
+              'Kabilang sa gawain naming may kaugnayan sa ibang bansa ang pagtatatag ng kompanya, aplikasyon sa visa, pagpaparehistro ng marka ng kalakal at patente, pagtaya ng panganib na legal, at konsultasyon sa buwis ng kompanya. Natatanging hinahawakan ng tanggapan sa Taichung ang mga usapin ng konstruksiyon, intelektuwal na ari-arian, at ang mga may kaugnayan sa Korea at Japan. Si Abogada Wei Tseng (曾雋崴) naman ang tumutulong sa mga kliyenteng Koreano, Hapon, at sa iba pang internasyonal na kliyente sa mga pangkat ng gawaing nabanggit.',
               'Nakadepende sa nilalaman ng usapin at sa wikang gagamitin kung matatanggap namin ito. Kung kabilang ang usapin ninyo sa mga pangkat ng gawain sa itaas at maipapaliwanag ito sa isa sa apat na wika ng konsultasyon, maaari ninyong ipadala ang buod nito upang suriin ng abogado.',
             ],
           },
@@ -2124,7 +2128,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         viewAllLabel: 'عرض الكل',
       },
       lawyers: {
-        description: 'تعريف بالمحامي المسؤول وبطريقة التواصل مع المكتب.',
+        description: 'تعريف بالمحامية المسؤولة وبطريقة التواصل مع المكتب.',
         viewAllLabel: 'عرض الكل',
       },
       pricing: {
@@ -2152,7 +2156,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         ' تشرح كيفية كتابة الملخّص ليطّلع عليه المحامي.',
       columnsViewAllLabel: 'عرض جميع المقالات',
       columnsReadMoreLabel: 'متابعة القراءة',
-      columnsReviewLabel: 'بمراجعة المحامي Wei Tseng',
+      columnsReviewLabel: 'بمراجعة المحامية Wei Tseng',
       columnsOriginalLanguageBadge: 'اللغة الأصلية',
       columnsOriginalLanguageNote:
         'بعض المقالات متاحة بالعربية، وما لا نسخة عربية له يبقى بلغته الأصلية. والمقالات أدناه معروضة بلغتها الأصلية وتفتح الصفحة بتلك اللغة؛ ولا يُترجَم المحتوى ترجمة آلية.',
@@ -2286,7 +2290,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'الأعمال ذات العنصر الأجنبي',
             paragraphs: [
-              'تشمل أعمال المكتب ذات العنصر الأجنبي تأسيس الشركات، وملفات التأشيرات، وتسجيل العلامات التجارية وبراءات الاختراع، وتقدير المخاطر القانونية، والاستشارات الضريبية للشركات. ويختصّ مكتب تايتشونغ بقضايا البناء والملكية الفكرية والأعمال المتصلة بكوريا واليابان. ويتولّى المحامي Wei Tseng (曾雋崴) العملاء من كوريا واليابان وسائر العملاء الدوليين في مجموعات العمل المذكورة.',
+              'تشمل أعمال المكتب ذات العنصر الأجنبي تأسيس الشركات، وملفات التأشيرات، وتسجيل العلامات التجارية وبراءات الاختراع، وتقدير المخاطر القانونية، والاستشارات الضريبية للشركات. ويختصّ مكتب تايتشونغ بقضايا البناء والملكية الفكرية والأعمال المتصلة بكوريا واليابان. وتتولّى المحامية Wei Tseng (曾雋崴) العملاء من كوريا واليابان وسائر العملاء الدوليين في مجموعات العمل المذكورة.',
               'وقبولنا لقضية ما يتوقف على موضوعها وعلى لغة التواصل. فإذا كانت قضيتك ضمن مجموعات العمل المذكورة وأمكن التواصل بإحدى اللغات الأربع المعتمدة، فيمكنك إرسال ملخّص ليطّلع عليه المحامي.',
             ],
           },
@@ -2589,4 +2593,6 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       },
     },
   },
+  de: germanGuidanceContent,
+  es: spanishGuidanceContent,
 };

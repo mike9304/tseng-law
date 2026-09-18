@@ -57,7 +57,7 @@ const officialLinks = [
   '[Invest Taiwan — Foreign-Company Branch Investment and Registration Procedures](https://investtaiwan.nat.gov.tw/showPageengInvestmentStatus01?lang=eng&menuNum=7&search=InvestmentStatus01)',
 ];
 const internalLinks = [
-  '[Taiwan Investment and Company Formation Services](/en/services#investment)',
+  '[Taiwan Investment and Company Formation Services](/en/services/investment)',
   '[Taiwan Company Formation Basics](/en/columns/taiwan-company-establishment-basics)',
   '[Contact Our Office](/en/contact)',
 ];
@@ -382,7 +382,7 @@ describe('English investment column 004 — subsidiary versus branch', () => {
     const calculatedMinutes = Math.ceil(visibleWords / 200);
 
     expect(visibleWords).toBeGreaterThanOrEqual(1_800);
-    expect(visibleWords).toBe(5_493);
+    expect(visibleWords).toBe(5_505);
     expect(calculatedMinutes).toBe(28);
     expect(parsed.data.read_time).toBe(`${calculatedMinutes} min read`);
     expect(post?.readTime).toBe(`${calculatedMinutes} min read`);

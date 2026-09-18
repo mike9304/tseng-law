@@ -363,11 +363,11 @@ Kung may iba pa kayong nais itanong, mag-iwan lamang po kayo ng komento.
 
 ​
 
-Ito po ay mula kay Wei Tseng (曾雋崴), abogado sa Taiwan.
+Ito po ay mula kay Wei Tseng (曾雋崴), abogada sa Taiwan.
 
 ---
 
 > Iba pang babasahin:
 > - [Gabay sa abogado para sa paglilitis sa Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Abogadong Taiwanese na nakakapagsalita ng Koreano](/ko/korean-lawyer-in-taiwan)
+> - [Abogadang Taiwanese na nakakapagsalita ng Koreano](/ko/korean-lawyer-in-taiwan)
 > - [Gabay sa paghahanap ng abogado sa Taiwan](/ko/taiwan-lawyer)

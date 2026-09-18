@@ -35,6 +35,22 @@ const observedPages = [
     url: 'https://tseng-law.com/ko/korean-lawyer-in-taiwan',
   },
   {
+    label: 'semiconductor-supplier-legal-ko',
+    url: 'https://tseng-law.com/ko/taiwan-semiconductor-supplier-legal',
+  },
+  {
+    label: 'semiconductor-supplier-legal-zh-hant',
+    url: 'https://tseng-law.com/zh-hant/taiwan-semiconductor-supplier-legal',
+  },
+  {
+    label: 'semiconductor-supplier-legal-en',
+    url: 'https://tseng-law.com/en/taiwan-semiconductor-supplier-legal',
+  },
+  {
+    label: 'semiconductor-supplier-legal-ja',
+    url: 'https://tseng-law.com/ja/taiwan-semiconductor-supplier-legal',
+  },
+  {
     label: 'column-same-group',
     url: 'https://tseng-law.com/ko/columns/taiwan-company-establishment-advanced-1',
   },

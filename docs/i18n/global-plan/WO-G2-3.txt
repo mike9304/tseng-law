@@ -1,0 +1,37 @@
+WO-G2-3 — 안내 로케일 3개 추가: it(Italiano) · nl(Nederlands) · pl(Polski) — 커밋 f82be715(zh-hans·ms·ru·tr) 선례 복제 + 안내 로케일 폰트 바인딩 결함 수정
+
+작업트리: /Users/son7/Projects/tseng-law-global-picker-20260918. 밖 쓰기 금지. git add/commit/push 금지. build·next start·Playwright·전체 스위트·npm install 금지(§5 명령만).
+node: export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+**선행 학습(필수)**: `git show f82be715 --stat` 및 diff(ru/tr가 western 팩에 추가된 방식). 칼럼 md는 범위 밖(빈 폴더 + .gitkeep).
+
+## 1. 제품 잠금 (it·nl·pl 공통)
+- 공개 **안내** 로케일. 상담 언어 아님 → 해당 언어 상담·통역·즉시응답·성공률·비용/결과 보장·24/7·무료 상담 금지. 언어 FAQ 답 "아니오 — 영어·중국어(中文)·일본어·한국어만".
+- 격식: it `Lei`(대문자) / nl `u` / pl `Pan/Pani` 또는 비인칭 정중체(`Państwo` 복수 정중형 권장). 대표 변호사 曾雋崴(Wei Tseng) **여성**: it `l'avvocata Wei Tseng`(또는 `l'avvocato` + 여성 대명사 — `avvocata` 채택), nl `advocaat` 성중립 + `zij/haar`, pl `adwokat` 직함 + 여성형 동사·대명사(`adwokatka`는 쓰지 않음).
+- 본문은 de 팩(`germanGuidanceContent`) 의미 단위 번역. 사무소 사실 동일.
+- 카테고리(`src/lib/columns.ts`): it { formation: 'Costituzione di società a Taiwan', legal: 'Informazioni giuridiche su Taiwan', case: 'Analisi di casi' } · nl { formation: 'Oprichting van een vennootschap in Taiwan', legal: 'Juridische informatie over Taiwan', case: 'Casusanalyse' } · pl { formation: 'Zakładanie spółki na Tajwanie', legal: 'Informacje prawne o Tajwanie', case: 'Analiza spraw' }.
+- 지명: it/nl 'Taiwan', pl 'Tajwan'(격변화). og:locale it_IT · nl_NL · pl_PL. hreflang 'it' 'nl' 'pl'. autonym 'Italiano' · 'Nederlands' · 'Polski'. 레지스트리 region europe, englishName Italian · Dutch · Polish.
+- 폰트: latin-ext(pl ą ć ę ł ń ó ś ź ż) — 기존 latin 로더 subsets에 이미 latin-ext 포함 확인.
+- **네비 라벨 길이**: 각 nav 항목 ≤ 14자(공백 포함) 목표 — 1280px에서 데스크톱 네비가 접히지 않게(ru에서 발생한 mobile-nav-forced 재발 방지). 예 it 'Servizi'/'Lo studio'/'Avvocati'/'Costi'/'Contatti'/'Domande'/'Privacy'/'Avvertenze'/'Articoli'.
+
+## 2. 폰트 바인딩 결함 수정 (전 안내 로케일)
+실측(2026-09-18): `/de /es /fr /pt /ms /ru /tr /zh-hans` 페이지의 `--font-heading`/`--font-body`가 `html[lang]` 바인딩이 없어 한국어 폰트(Nanum Myeongjo·Apple SD Gothic Neo)로 폴백된다(vi/id/fil만 `src/app/globals.css` 210행 부근에 바인딩 있음). 수정:
+  a. `globals.css`의 `html[lang='vi'], html[lang='id'], html[lang='fil'] { … }` 셀렉터 목록에 `de, es, fr, pt, ms, ru, tr, it, nl, pl` 추가(같은 latin 변수). 같은 파일 609행 `.site[data-locale=…]` 블록도 동일 로케일로 확장.
+  b. `html[lang='zh-Hans']` 바인딩 신설: `--font-body: var(--font-noto-sans-sc-loaded …)`, `--font-heading/--font-display: var(--font-noto-serif-sc-loaded …)` — zh-Hant 바인딩(`html[lang='zh-Hant']` 또는 `.site[data-locale='zh-hant']`)을 찾아 SC 변수명으로 복제. fonts.ts의 SC 로더 variable 이름과 일치 확인.
+  c. 검증 테스트: `src/app/__tests__/fonts.test.ts` 또는 신규 `src/app/__tests__/locale-font-bindings.test.ts`에서 globals.css 텍스트를 읽어 모든 latin 안내 로케일이 바인딩 셀렉터에 포함되고 zh-Hans 바인딩이 존재함을 단언(로케일 목록은 `GUIDANCE_LOCALES_4`에서 파생, 예외 목록 th·ar·zh-hans 명시).
+
+## 3. 체커 테이블 보완
+`scripts/check-column-translation.mjs`: `GUIDANCE_LANGS`에 있는 모든 언어에 대해 `FORBIDDEN_PHRASES`(5~10개)·국적어 목록·언어 정규식·수사 스타일·어휘집 항목이 있어야 한다 — 현재 **zh-hans·ms·ru·tr 누락**(node --test 1 실패). 4언어 + it·nl·pl 7언어 전부 채우고 `check-column-translation.test.mjs` 통과.
+
+## 4. 허용 파일: f82be715가 만진 파일 전부 + `src/app/globals.css`(폰트 바인딩 블록만) + 신규 테스트 + `src/content/columns-{it,nl,pl}/.gitkeep` + 신규 `src/lib/__tests__/guidance-it-nl-pl-content.test.ts`·`-routing.test.ts`. 금지: 기존 팩 본문(문장) 수정, intent-pages, site-content, Header/Footer, docs/**.
+
+## 5. 검증(전부 실행·출력 그대로)
+cd /Users/son7/Projects/tseng-law-global-picker-20260918 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+git status --short | wc -l && git diff --stat | tail -1
+npm run typecheck 2>&1 | tail -2
+npx vitest run src/lib/__tests__/guidance-it-nl-pl-content.test.ts src/lib/__tests__/guidance-it-nl-pl-routing.test.ts src/lib/__tests__/guidance-zh-hans-ms-ru-tr-content.test.ts src/lib/__tests__/guidance-fr-pt-content.test.ts src/lib/__tests__/public-guidance.test.ts src/lib/__tests__/public-language-registry.test.ts src/app/__tests__/sitemap.test.ts src/app/__tests__/fonts.test.ts src/app/__tests__ "src/app/[locale]/__tests__/llms-discovery.test.tsx" src/lib/__tests__/international-guidance-answers.test.ts src/lib/__tests__/global-seo-locale-integrity.test.ts src/data/__tests__/guidance-country-mentions.test.ts src/data/__tests__/guidance-disclosure-parity.test.ts src/data/__tests__/guidance-office-facts-sync.test.ts src/data/__tests__/international-guidance-privacy-disclosure.test.ts src/lib/consultation/__tests__/intake-language-contract.test.ts src/components/__tests__/global-language-picker.test.tsx src/components/__tests__/locale-flag-switcher.test.tsx 2>&1 | tail -8
+node --test scripts/check-column-translation.test.mjs 2>&1 | grep -E "^ℹ (tests|pass|fail)"
+npx eslint --max-warnings=0 --ext .ts,.tsx $(git diff --name-only | grep -E '^src/.*\.(ts|tsx)$') $(git ls-files --others --exclude-standard | grep -E '^src/.*\.(ts|tsx)$') 2>&1 | tail -3
+node scripts/check-guidance-country-mentions.mjs 2>&1 | tail -2
+grep -rn "\[변호사 검수 필요\]" src/data/international-guidance-western.ts | wc -l   # 0
+
+## 6. 보고: diff --stat · 명령 출력 · 3로케일 언어 FAQ 문답 원문 · nav 라벨 표(3언어) · 폰트 바인딩 diff 요약 · 미해결.

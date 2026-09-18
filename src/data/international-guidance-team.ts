@@ -1141,7 +1141,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal avec de longues années comme paralegal senior dans plusieurs cabinets, chargé de l’appui procédural, du droit des sociétés et de l’investissement étranger.',
+        'Paralegal comptant de longues années d’expérience comme paralegal senior dans plusieurs cabinets, en charge de l’appui procédural, du droit des sociétés et de l’investissement étranger.',
         'Appui aux procédures, à la constitution de sociétés, aux autorisations d’investissement étranger, aux demandes de licence et aux échanges entre la Corée et Taïwan.',
       ],
       education: ['Licence en droit (LL.B.), Tunghai University'],
@@ -1153,7 +1153,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Coordonne les rendez-vous de consultation et la communication pour les clients de Corée.',
-        'Appuie les échanges entre équipes par des systèmes documentaires et des flux de travail, sur la base de l’informatique.',
+        'Appuie les échanges entre équipes par des systèmes documentaires et des flux de travail, avec une formation en informatique.',
       ],
       education: ['Licence (B.S.) informatique, National Cheng Kung University'],
       experience: ['Pôle opérations Corée, Hovering International Law Firm'],

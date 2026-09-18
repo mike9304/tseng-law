@@ -1041,10 +1041,10 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
       ' explique comment rédiger un résumé qu’une avocate ou un avocat examinera.',
     columnsViewAllLabel: 'Voir tous les articles',
     columnsReadMoreLabel: 'Lire la suite',
-    columnsReviewLabel: 'Relu par l’avocate Wei Tseng',
+    columnsReviewLabel: 'Révisé par l’avocate Wei Tseng',
     columnsOriginalLanguageBadge: 'Langue d’origine',
     columnsOriginalLanguageNote:
-      'Les articles suivants ne sont pas encore disponibles en français. La liste reste dans la langue d’origine et ouvre la page correspondante ; le contenu n’est pas traduit automatiquement.',
+      'Les articles suivants ne sont pas encore disponibles en français. La liste reste dans la langue d’origine et ouvre la page correspondante ; le contenu n’est pas traduit automatiquement.',
     imageBandAlt: 'Maison traditionnelle taïwanaise (三合院) et un pavillon contemporain en plein jour',
     videoPauseLabel: 'Mettre la vidéo en pause',
     videoPlayLabel: 'Lire la vidéo',
@@ -1057,7 +1057,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
       description:
         'Explications générales en français sur le champ d’activité de Hovering International Law Firm à Taïwan, les langues de consultation et le premier contact.',
       intro:
-        'Hovering International Law Firm accompagne des clients de l’étranger, y compris ceux qui ont un lien avec Taïwan, dans des affaires de droit taïwanais : investissement et constitution de sociétés, litiges civils, mariage, famille et successions, droit du travail, affaires pénales et propriété intellectuelle. Cette partie en français vous aide à voir quel travail entre dans notre champ, ce qu’il convient de préparer et comment nous joindre. Il s’agit d’indications générales, non d’un avis juridique pour votre propre affaire.',
+        'Hovering International Law Firm accompagne des clients de l’étranger, y compris ceux qui ont un lien avec Taïwan, dans des affaires de droit taïwanais : investissement et constitution de sociétés, litiges civils, mariage, famille et successions, droit du travail, affaires pénales et propriété intellectuelle. Cette partie en français vous aide à voir quel travail entre dans notre champ, ce qu’il convient de préparer et comment nous joindre. Il s’agit d’indications générales, non d’un avis juridique pour votre propre affaire.',
       sections: [
         {
           heading: 'Ce que nous faisons',
@@ -1069,14 +1069,14 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'La langue de la page et la langue de consultation ne sont pas la même chose',
           paragraphs: [
-            'Cette page est rédigée en français, mais la consultation avec une avocate ou un avocat a lieu seulement dans les quatre langues de consultation : anglais, chinois (中文), japonais et coréen. Lire les indications en français ne signifie pas que l’entretien avec l’avocate ou l’avocat se tient en français.',
-            'Nous ne promettons ni service d’interprétation, ni délai de réponse, ni rendez-vous par cette page. Si vous ne pouvez utiliser aucune des quatre langues, la page « Contact » explique comment nous examinons une manière de communiquer.',
+            'Cette page est rédigée en français, mais la consultation avec une avocate ou un avocat a lieu seulement dans les quatre langues de consultation : anglais, chinois (中文), japonais et coréen. Lire les indications en français ne signifie pas que l’entretien avec l’avocate ou l’avocat se tient en français.',
+            'Nous ne promettons ni service d’interprétation, ni délai de réponse, ni rendez-vous par cette page. Si vous ne pouvez utiliser aucune des quatre langues, la page « Contact » explique comment nous examinons une manière de communiquer.',
           ],
         },
         {
           heading: 'Groupes d’activité',
           paragraphs: [
-            'Le champ d’activité couvre les six groupes suivants. La page « Domaines d’activité » décrit chaque groupe plus en détail et indique ce qui n’est pas promis.',
+            'Le champ d’activité couvre les six groupes suivants. La page « Domaines d’activité » décrit chaque groupe plus en détail et indique ce qui n’est pas promis.',
           ],
           items: [
             'Investissement et constitution de sociétés à Taïwan',
@@ -1084,14 +1084,14 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
             'Mariage, famille et successions',
             'Litiges du travail',
             'Affaires pénales',
-            'Propriété intellectuelle : marques, brevets et droit d’auteur',
+            'Propriété intellectuelle : marques, brevets et droit d’auteur',
           ],
         },
         {
           heading: 'Par où commencer',
           paragraphs: [
-            'Lisez la page « Domaines d’activité » pour vérifier si votre affaire entre dans notre champ, puis « Étendue et honoraires » et « Contact » pour savoir comment l’étendue est fixée et comment les honoraires sont confirmés avant le début du travail.',
-            'Lorsque vous envoyez un message, vous pouvez rédiger le résumé dans votre propre langue. Le texte original est conservé tel que vous l’avez écrit et n’est pas traduit automatiquement. Un message envoyé est une demande en attente d’examen : ce n’est pas encore une consultation ni un rendez-vous confirmé.',
+            'Lisez la page « Domaines d’activité » pour vérifier si votre affaire entre dans notre champ, puis « Étendue et honoraires » et « Contact » pour savoir comment l’étendue est fixée et comment les honoraires sont confirmés avant le début du travail.',
+            'Lorsque vous envoyez un message, vous pouvez rédiger le résumé dans votre propre langue. Le texte original est conservé tel que vous l’avez écrit et n’est pas traduit automatiquement. Un message envoyé est une demande en attente d’examen : ce n’est pas encore une consultation ni un rendez-vous confirmé.',
           ],
         },
       ],
@@ -1102,13 +1102,13 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
       description:
         'Six groupes d’activité du cabinet à Taïwan et les limites qu’il convient de connaître d’abord.',
       intro:
-        'Voici les groupes que nous traitons réellement et les questions souvent posées au début. Cette présentation vous aide à juger si votre affaire entre dans notre champ ; elle est générale et n’est pas l’analyse juridique d’un dossier particulier.',
+        'Voici les groupes que nous traitons réellement et les questions souvent posées au début. Cette présentation vous aide à juger si votre affaire entre dans notre champ ; elle est générale et n’est pas l’analyse juridique d’un dossier particulier.',
       sections: [
         {
           heading: 'Investissement et constitution de sociétés à Taïwan',
           paragraphs: [
-            'Nous accompagnons des investisseurs et des entreprises étrangers pour constituer ou exploiter une société à Taïwan : choix de la forme, préparation et dépôt des pièces, apport de capital, questions bancaires, examen du lieu d’exploitation et exigences propres à certains secteurs. Nous appuyons aussi la comptabilité et la fiscalité nées de la constitution et de l’exploitation à Taïwan.',
-            'L’ordre et la durée varient selon la forme, l’investisseur, le secteur, la banque et les pièces disponibles. La constitution d’une société ne produit pas, à elle seule, un titre de séjour (居留) ni un permis de travail (工作許可) : ce sont des procédures distinctes, appréciées selon la situation de chaque personne.',
+            'Nous accompagnons des entreprises et des investisseurs étrangers pour constituer ou exploiter une société à Taïwan : choix de la forme, préparation et dépôt des pièces, apport de capital, questions bancaires, examen du lieu d’exploitation et exigences propres à certains secteurs. Nous appuyons aussi la comptabilité et la fiscalité nées de la constitution et de l’exploitation à Taïwan.',
+            'L’ordre et la durée varient selon la forme, l’investisseur, le secteur, la banque et les pièces disponibles. La constitution d’une société ne produit pas, à elle seule, un titre de séjour (居留) ni un permis de travail (工作許可) : ce sont des procédures distinctes, appréciées selon la situation de chaque personne.',
           ],
         },
         {
@@ -1128,14 +1128,14 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Litiges du travail',
           paragraphs: [
-            'Ce groupe couvre la fin du contrat de travail, l’indemnité selon le droit de Taïwan (資遣費 ; à ne pas identifier avec des institutions d’autres États), les salaires et les litiges nés du contrat de travail (勞動契約), du côté de la personne salariée comme de l’employeur. Lors de l’examen, nous séparons le motif de la fin des questions de préavis, de paiement et de délais.',
+            'Ce groupe couvre la fin du contrat de travail, l’indemnité selon le droit de Taïwan (資遣費 ; à ne pas identifier avec des institutions d’autres États), les salaires et les litiges nés du contrat de travail (勞動契約), du côté de la personne salariée comme de l’employeur. Lors de l’examen, nous séparons le motif de la fin des questions de préavis, de paiement et de délais.',
             'Le contrat de travail, le règlement intérieur (工作規則), les bulletins de paie et les échanges écrits entre les parties sont le plus souvent les pièces décisives. Si vous les avez encore, mentionnez-le dans le résumé.',
           ],
         },
         {
           heading: 'Affaires pénales',
           paragraphs: [
-            'Nous accompagnons à l’enquête et devant le tribunal, pour la personne mise en cause ou accusée comme pour la victime, et nous évaluons le risque pénal de l’activité d’entreprise.',
+            'Nous intervenons au stade de l’enquête et devant le tribunal, pour la personne mise en cause ou accusée comme pour la victime, et nous évaluons le risque pénal de l’activité d’entreprise.',
             'Les affaires pénales ont souvent des délais courts et des étapes déjà fixées. Si vous avez déjà reçu un écrit de l’autorité de poursuite ou du tribunal, indiquez tôt la date de cet écrit afin que le contenu soit examiné dans le bon ordre.',
           ],
         },
@@ -1143,7 +1143,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Propriété intellectuelle',
           paragraphs: [
             'Nous aidons à l’enregistrement des marques (商標) et des brevets (專利), au droit d’auteur et aux litiges sur ces droits à Taïwan.',
-            'Dans ce groupe, l’ordre des étapes est décisif : l’étendue de la protection, le moment du dépôt et l’usage effectif influencent le choix. Déposer une demande ne signifie pas, à soi seul, qu’elle sera accordée.',
+            'Dans ce groupe, l’ordre des étapes est décisif : l’étendue de la protection, le moment du dépôt et l’usage effectif influencent le choix. Déposer une demande ne signifie pas, à lui seul, qu’elle sera accordée.',
           ],
         },
         {
@@ -1166,7 +1166,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Création et organisation',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) a été fondé en 2016 par des avocates et avocats formés à la National Taiwan University (國立臺灣大學). Le nom chinois 昊鼎 unit le caractère 昊 (« ciel vaste ») et le caractère 鼎 (« base solide ») et décrit l’orientation du cabinet depuis sa création.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) a été fondé en 2016 par des avocates et avocats formés à la National Taiwan University (國立臺灣大學). Le nom chinois 昊鼎 unit le caractère 昊 (« ciel vaste ») et le caractère 鼎 (« base solide ») et décrit l’orientation du cabinet depuis sa création.',
             'Nous avons des bureaux à Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) et Pingtung (屏東). Le bureau de Kaohsiung se concentre sur la gouvernance d’entreprise et traite des litiges civils, pénaux et administratifs. Le bureau de Taichung traite des affaires de construction, de propriété intellectuelle et des affaires liées à la Corée et au Japon. Le bureau de Pingtung a été ouvert en 2017 pour le besoin local.',
             'Outre le travail d’avocat, Hovering Accounting Office existe depuis 2020 et propose comptabilité et planification fiscale aux entrepreneurs et aux particuliers fortunés.',
           ],
@@ -1182,7 +1182,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Lorsque vous nous contactez',
           paragraphs: [
             'Après réception de votre résumé, une avocate ou un avocat examine le contenu, puis parle de l’étendue possible, des pièces encore nécessaires et des étapes suivantes. Pour des questions fiscales ou comptables, le cabinet peut travailler avec le service de comptabilité dans un même flux.',
-            'Le résultat de chaque affaire dépend des faits et des pièces existantes ; nous ne promettons pas un résultat. Si vous avez besoin d’une réponse concrète pour votre situation, les pièces doivent être discutées dans l’une des quatre langues de consultation avec une avocate ou un avocat.',
+            'Le résultat de chaque affaire dépend des faits et des pièces existantes ; nous ne promettons pas un résultat. Si vous avez besoin d’une réponse concrète pour votre situation, les pièces doivent être discutées dans l’une des quatre langues de consultation avec une avocate ou un avocat.',
           ],
         },
       ],
@@ -1198,7 +1198,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'ÉTENDUE ET HONORAIRES',
       title: 'Comment l’étendue du travail et les honoraires sont fixés',
       description:
-        'Explication de l’ordre : d’abord l’étendue du travail, puis la confirmation des honoraires, et pourquoi cette page ne publie pas de liste de tarifs.',
+        'Explication de l’ordre : d’abord l’étendue du travail, puis la confirmation des honoraires, et pourquoi cette page ne publie pas de liste de tarifs.',
       intro:
         'Cette page explique comment les honoraires sont fixés, non leur montant. Le montant dépend de l’étendue de chaque affaire et n’a de sens que lorsque cette étendue est claire.',
       sections: [
@@ -1226,7 +1226,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Pourquoi cette page ne publie pas de tarifs',
           paragraphs: [
-            'Les honoraires dépendent de l’affaire elle-même : du travail à faire, du nombre de parties, des pièces, des délais et du fait qu’une procédure est déjà en cours. Un chiffre fixé à l’avance ne montrerait pas le coût de votre dossier. C’est pourquoi nous fixons d’abord l’étendue du travail, puis nous vous communiquons les honoraires avant le début du travail.',
+            'Les honoraires dépendent de l’affaire elle-même : du travail à faire, du nombre de parties, des pièces, des délais et du fait qu’une procédure est déjà en cours. Un chiffre fixé à l’avance ne montrerait pas le coût de votre dossier. C’est pourquoi nous fixons d’abord l’étendue du travail, puis nous vous communiquons les honoraires avant le début du travail.',
             'Outre les honoraires d’avocat, des frais de tribunal, d’autorité ou de tiers peuvent naître. Ils sont distincts des honoraires et dépendent de la procédure suivie.',
           ],
         },
@@ -1246,15 +1246,15 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
             'La langue d’affichage de la page, la langue de consultation avec l’avocate ou l’avocat et la langue dans laquelle vous écrivez sont trois choses distinctes.',
           ],
           items: [
-            'Langue de la page : ces indications sont rédigées en français.',
-            'Langue de consultation : la consultation a lieu en anglais, en chinois (中文), en japonais et en coréen.',
-            'Votre langue d’écriture : vous pouvez rédiger le résumé dans votre propre langue ; le texte original est conservé tel quel.',
+            'Langue de la page : ces indications sont rédigées en français.',
+            'Langue de consultation : la consultation a lieu en anglais, en chinois (中文), en japonais et en coréen.',
+            'Votre langue d’écriture : vous pouvez rédiger le résumé dans votre propre langue ; le texte original est conservé tel quel.',
           ],
         },
         {
           heading: 'Si vous ne pouvez utiliser aucune des quatre langues de consultation',
           paragraphs: [
-            'Dans le formulaire de contact, vous pouvez choisir « La manière de communiquer doit être confirmée ». Nous répondons pour examiner une manière possible de communiquer lorsqu’il en existe une ; une prestation dans une autre langue n’est pas assurée et aucun délai de réponse n’est promis.',
+            'Dans le formulaire de contact, vous pouvez choisir « La manière de communiquer doit être confirmée ». Nous répondons pour examiner une manière possible de communiquer lorsqu’il en existe une ; une prestation dans une autre langue n’est pas assurée et aucun délai de réponse n’est promis.',
             'Ce n’est qu’une étape d’examen, non une promesse. Nous ne promettons pas de service d’interprétation, ni une prestation en français ou dans une autre langue hors des quatre langues indiquées, ni d’accepter toutes les affaires.',
           ],
         },
@@ -1268,7 +1268,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ce que cette page ne promet pas',
           paragraphs: [
-            'Nous ne promettons pas de délai de réponse, nous ne confirmons pas de rendez-vous par cette page, nous ne promettons pas une avocate ou un avocat en particulier et nous ne mettons pas en place un service d’interprétation. La traduction écrite est autre chose : votre message n’est pas traduit automatiquement.',
+            'Nous ne promettons pas de délai de réponse, nous ne confirmons pas de rendez-vous par cette page, nous ne promettons pas une avocate ou un avocat en particulier et nous ne mettons pas en place un service d’interprétation. La traduction écrite est autre chose : votre message n’est pas traduit automatiquement.',
             'Lorsque vous envoyez une demande, le contenu est conservé et attend un examen. Si, après un certain temps, vous ne recevez pas de réponse, vous pouvez écrire à nouveau à l’adresse de courrier indiquée sur la page de contact.',
           ],
         },
@@ -1291,44 +1291,44 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
       ],
       faqs: [
         {
-          question: 'Quelles affaires le cabinet traite-t-il ?',
+          question: 'Quelles affaires le cabinet traite-t-il ?',
           answer:
-            'Nous traitons six groupes : investissement et constitution de sociétés à Taïwan, affaires civiles et dommages-intérêts, mariage, famille et successions, litiges du travail, affaires pénales et propriété intellectuelle. L’acceptation d’une affaire se décide après examen du contenu.',
+            'Nous traitons six groupes : investissement et constitution de sociétés à Taïwan, affaires civiles et dommages-intérêts, mariage, famille et successions, litiges du travail, affaires pénales et propriété intellectuelle. L’acceptation d’une affaire se décide après examen du contenu.',
         },
         {
-          question: 'Que dois-je préparer avant de contacter le cabinet ?',
+          question: 'Que dois-je préparer avant de contacter le cabinet ?',
           answer:
             'Préparez un court résumé du déroulement, de votre demande, du lien avec Taïwan et du délai s’il en existe un. S’il existe déjà un écrit d’un tribunal ou d’une autorité, indiquez la date. À ce stade, vous n’avez pas encore à envoyer des pièces d’identité ni l’ensemble des preuves.',
         },
         {
-          question: 'La consultation en français est-elle possible ?',
+          question: 'La consultation en français est-elle possible ?',
           answer:
-            'Non. Ces indications sont rédigées en français, mais la consultation avec une avocate ou un avocat a lieu seulement en anglais, en chinois (中文), en japonais et en coréen. Nous ne promettons pas non plus de service d’interprétation. La traduction écrite est autre chose : le texte original que vous écrivez est conservé tel quel et n’est pas traduit automatiquement.',
+            'Non. Ces indications sont rédigées en français, mais la consultation avec une avocate ou un avocat a lieu seulement en anglais, en chinois (中文), en japonais et en coréen. Nous ne promettons pas non plus de service d’interprétation. La traduction écrite est autre chose : le texte original que vous écrivez est conservé tel quel et n’est pas traduit automatiquement.',
         },
         {
-          question: 'Que se passe-t-il si je ne peux utiliser aucune des quatre langues ?',
+          question: 'Que se passe-t-il si je ne peux utiliser aucune des quatre langues ?',
           answer:
-            'Choisissez « La manière de communiquer doit être confirmée » lors de l’envoi de la demande. Nous répondons pour examiner une manière de communiquer, mais une prestation dans une autre langue n’est pas assurée. C’est une étape d’examen, non une promesse que nous puissions travailler dans une autre langue.',
+            'Choisissez « La manière de communiquer doit être confirmée » lors de l’envoi de la demande. Nous répondons pour examiner une manière de communiquer, mais une prestation dans une autre langue n’est pas assurée. C’est une étape d’examen, non une promesse que nous puissions travailler dans une autre langue.',
         },
         {
-          question: 'Comment le texte que j’écris en français est-il traité ?',
+          question: 'Comment le texte que j’écris en français est-il traité ?',
           answer:
             'Le texte original que vous écrivez est conservé tel quel et n’est pas traduit automatiquement. Si besoin, la langue de la communication ultérieure est confirmée avec vous.',
         },
         {
-          question: 'La consultation a-t-elle déjà eu lieu une fois la demande envoyée ?',
+          question: 'La consultation a-t-elle déjà eu lieu une fois la demande envoyée ?',
           answer:
             'Non. Une demande envoyée attend l’examen d’une avocate ou d’un avocat. Ce n’est pas un avis juridique, ce n’est pas un rendez-vous confirmé, et l’envoi ne crée pas, à lui seul, une relation entre avocate ou avocat et client.',
         },
         {
-          question: 'Comment les honoraires sont-ils calculés ?',
+          question: 'Comment les honoraires sont-ils calculés ?',
           answer:
             'L’étendue du travail est d’abord fixée, puis le montant et le mode de calcul sont confirmés avec vous avant le début du travail. Cette page ne publie pas de chiffres et n’affirme pas que le premier entretien est offert.',
         },
         {
-          question: 'Que faire si mon affaire est urgente ?',
+          question: 'Que faire si mon affaire est urgente ?',
           answer:
-            'Indiquez le délai ou la date d’un écrit officiel au début de votre résumé, afin que ces dates soient visibles lors de l’examen. Cette page n’a pas de canal d’urgence et n’assure aucun délai de réponse ; si votre affaire ne peut pas attendre, il convient de chercher en parallèle d’autres voies sur votre lieu.',
+            'Indiquez le délai ou la date d’un écrit officiel au début de votre résumé, afin que ces dates soient visibles lors de l’examen. Cette page n’a pas de canal d’urgence et n’assure aucun délai de réponse ; si votre affaire ne peut pas attendre, il convient de chercher en parallèle d’autres voies là où vous vous trouvez.',
         },
       ],
     },
@@ -1343,7 +1343,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Données recueillies',
           paragraphs: [
-            'Lorsque vous envoyez une demande par le formulaire de cette partie, les éléments suivants sont enregistrés :',
+            'Lorsque vous envoyez une demande par le formulaire de cette partie, les éléments suivants sont enregistrés :',
           ],
           items: [
             'Le nom que vous indiquez',
@@ -1367,7 +1367,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Lieu de conservation et accès',
           paragraphs: [
             'Le contenu de votre envoi est conservé dans un lieu qui n’est pas d’accès public. Seules les personnes autorisées du cabinet peuvent y accéder pour traiter la demande.',
-            'Cette page n’offre pas une assurance absolue de sécurité. Aucune voie de transmission ni aucun lieu de conservation n’est entièrement sûr ; les pièces sensibles ne devraient donc être envoyées que selon les indications particulières de l’avocate ou de l’avocat.',
+            'Cette page n’offre pas une assurance absolue de sécurité. Aucune voie de transmission ni aucun lieu de conservation n’est entièrement sûr ; les pièces sensibles ne devraient donc être envoyées que selon les indications particulières de l’avocate ou de l’avocat.',
           ],
         },
         {
@@ -1381,7 +1381,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Avis et numéro de réception',
           paragraphs: [
             'Lorsqu’une demande est envoyée avec succès, le système avise le cabinet. Si cet avis n’est pas encore confirmé, votre texte reste conservé et n’est pas perdu.',
-            'Le numéro de réception sert à retrouver votre demande dans nos dossiers. Il s’affiche après l’enregistrement ; vous pouvez le citer lors d’un nouveau contact.',
+            'Le numéro de réception sert à retrouver votre demande dans nos dossiers. Il s’affiche après l’enregistrement ; vous pouvez le citer lors d’un nouveau contact.',
           ],
         },
         {
@@ -1395,7 +1395,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Lieu de conservation et prestataires',
           paragraphs: [
             'Ce site est hébergé chez Vercel, et votre envoi est conservé dans un stockage d’objets non public de ce service. Les courriers sont envoyés par le service de courrier utilisé par le cabinet.',
-            'Les serveurs de certains prestataires peuvent se trouver hors de Taïwan, de sorte que vos données peuvent y être conservées et traitées. Une fois la finalité de conservation atteinte, les données sont effacées sans délai ; les données qui doivent être conservées selon les règles applicables le restent pendant cette durée. Les demandes relatives aux données personnelles sont reçues à wei@hoveringlaw.com.tw.',
+            'Les serveurs de certains prestataires peuvent se trouver hors de Taïwan, de sorte que vos données peuvent y être conservées et traitées. Une fois la finalité de conservation atteinte, les données sont effacées sans délai ; les données qui doivent être conservées selon les règles applicables le restent pendant cette durée. Les demandes relatives aux données personnelles sont reçues à wei@hoveringlaw.com.tw.',
           ],
         },
       ],
@@ -1412,7 +1412,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Indications générales seulement',
           paragraphs: [
             'Le contenu de ces pages est rédigé comme information générale. Il n’est pas un avis juridique pour votre affaire et ne remplace pas l’examen de vos propres pièces.',
-            'L’issue d’une affaire dépend des faits, des règles applicables et du moment ; deux situations qui semblent proches peuvent se terminer différemment.',
+            'L’issue d’une affaire dépend des faits, des règles applicables et du moment ; deux situations qui semblent proches peuvent se terminer différemment.',
           ],
         },
         {
@@ -1425,7 +1425,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Une relation entre avocate ou avocat et client ne naît pas d’elle-même',
           paragraphs: [
-            'Lire cette page, envoyer un formulaire ou un courrier ne crée pas, à soi seul, une relation entre avocate ou avocat et client.',
+            'Lire cette page, envoyer un formulaire ou un courrier ne crée pas, à lui seul, une relation entre avocate ou avocat et client.',
             'Cette relation naît seulement après examen de l’affaire et confirmation, par les deux parties, de la prise en charge du travail.',
           ],
         },
@@ -1433,7 +1433,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Aucune promesse de résultat',
           paragraphs: [
             'Aucune partie de cette page n’est une promesse sur le résultat d’une affaire, sur l’octroi d’une demande ou sur le statut de séjour et de travail.',
-            'Les liens externes sont fournis pour s’orienter ; nous n’assurons ni l’exactitude ni l’actualité des contenus de tiers.',
+            'Les liens externes sont fournis pour s’orienter ; nous n’assurons ni l’exactitude ni l’actualité des contenus de tiers.',
           ],
         },
       ],
@@ -1444,19 +1444,19 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
       description:
         'Articles en français sur des questions fréquentes du droit de Taïwan. Le contenu est une information générale au moment de la publication, non un avis juridique pour votre affaire.',
       intro:
-        'Le cabinet publie des articles sur des questions fréquentes du droit de Taïwan. Les articles disponibles en français figurent sur cette page ; il y a en outre quatre liens, chacun ouvrant la liste d’articles d’une langue d’origine.',
+        'Le cabinet publie des articles sur des questions fréquentes du droit de Taïwan. Les articles disponibles en français figurent sur cette page ; il y a en outre quatre liens, chacun ouvrant la liste d’articles d’une langue d’origine.',
       sections: [
         {
           heading: 'Quatre listes selon la langue',
           paragraphs: [
-            'Cette partie contient quatre liens : la liste d’articles en coréen, en chinois, en anglais et en japonais. Chaque lien indique la langue de sa liste, afin que vous sachiez d’avance dans quelle langue le contenu s’ouvrira.',
+            'Cette partie contient quatre liens : la liste d’articles en coréen, en chinois, en anglais et en japonais. Chaque lien indique la langue de sa liste, afin que vous sachiez d’avance dans quelle langue le contenu s’ouvrira.',
             'Ces quatre listes sont des listes selon la langue d’origine des articles, non des listes de traductions. Les articles déjà disponibles en français figurent séparément sur cette même page.',
           ],
         },
         {
           heading: 'Où mènent les liens',
           paragraphs: [
-            'Lorsque vous choisissez l’un des quatre liens, la liste d’articles de cette langue s’ouvre. Dans la liste, vous choisissez vous-même le texte ; l’ensemble du contenu apparaît dans la langue d’origine de l’article.',
+            'Lorsque vous choisissez l’un des quatre liens, la liste d’articles de cette langue s’ouvre. Dans la liste, vous choisissez vous-même le texte ; l’ensemble du contenu apparaît dans la langue d’origine de l’article.',
             'Cette page ne résume pas le contenu des articles et n’assure pas qu’un thème existe dans les quatre langues. Chaque liste ne contient que les textes publiés dans cette langue.',
           ],
         },
@@ -1464,7 +1464,7 @@ export const frenchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Jusqu’où un article peut servir d’orientation',
           paragraphs: [
             'Les articles sont des indications générales au moment de la publication. Les règles et leur application peuvent changer, et un article ne reprend pas toutes les circonstances de votre affaire.',
-            'Ne fondez donc aucune action dans une affaire réelle sur un article seul. Servez-vous-en pour une vue d’ensemble, puis discutez vos pièces séparément avec une avocate ou un avocat ; cette page n’est pas l’étape de consultation.',
+            'Ne fondez donc aucune action dans une affaire réelle sur un article seul. Servez-vous-en pour une vue d’ensemble, puis discutez vos pièces séparément avec une avocate ou un avocat ; cette page n’est pas l’étape de consultation.',
           ],
         },
       ],
@@ -1545,7 +1545,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
       description:
         'Explicação geral em português sobre o âmbito de Hovering International Law Firm em Taiwan, as línguas de consulta e o primeiro contacto.',
       intro:
-        'Hovering International Law Firm acompanha clientes do estrangeiro, também quem tem um vínculo com Taiwan, em assuntos de direito taiwanês: investimento e constituição de sociedades, litígios civis, casamento, família e sucessões, laboral, penal e propriedade intelectual. Esta parte em português ajuda a saber que trabalho entra no nosso âmbito, o que convém preparar e como nos contactar. São indicações gerais, não um parecer jurídico para o seu próprio caso.',
+        'Hovering International Law Firm acompanha clientes do estrangeiro, incluindo quem tem um vínculo com Taiwan, em assuntos de direito taiwanês: investimento e constituição de sociedades, litígios civis, casamento, família e sucessões, laboral, penal e propriedade intelectual. Esta parte em português ajuda a saber que trabalho entra no nosso âmbito, o que convém preparar e como nos contactar. São indicações gerais, não um parecer jurídico para o seu próprio caso.',
       sections: [
         {
           heading: 'O que fazemos',
@@ -1663,14 +1663,14 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
           heading: 'Trabalho com partes estrangeiras',
           paragraphs: [
             'O trabalho transfronteiriço cobre constituição de sociedades, vistos, registo de marcas e patentes, avaliação de riscos jurídicos e aconselhamento fiscal empresarial. O escritório de Taichung trata em particular construção, propriedade intelectual e assuntos relacionados com a Coreia e o Japão. A advogada Wei Tseng (曾雋崴) acompanha clientes da Coreia, do Japão e outros clientes internacionais nos grupos indicados.',
-            'A possibilidade de tratar um assunto depende do conteúdo e da língua da comunicação. Se o seu assunto entra nos grupos indicados e pode ser falado numa das quatro línguas de consulta, pode enviar um resumo para exame.',
+            'A possibilidade de tratar um assunto depende do conteúdo e da língua da comunicação. Se o seu assunto entra nos grupos indicados e pode ser tratado numa das quatro línguas de consulta, pode enviar um resumo para exame.',
           ],
         },
         {
           heading: 'Quando nos contacta',
           paragraphs: [
             'Após receber o seu resumo, uma advogada ou um advogado examina o conteúdo e fala depois do âmbito possível, dos documentos ainda necessários e dos passos seguintes. Se o assunto colocar questões contabilísticas ou fiscais, o escritório pode trabalhar com a área de contabilidade num mesmo fluxo.',
-            'O resultado de cada assunto depende dos factos e dos documentos existentes; não prometemos um resultado. Se precisar de uma resposta concreta para a sua situação, esse processo deve ser falado diretamente com uma advogada ou um advogado numa das quatro línguas de consulta.',
+            'O resultado de cada assunto depende dos factos e dos documentos existentes; não prometemos um resultado. Se precisar de uma resposta concreta para a sua situação, esse processo deve ser discutido diretamente com uma advogada ou um advogado numa das quatro línguas de consulta.',
           ],
         },
       ],
@@ -1700,7 +1700,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Os honorários confirmam-se antes de começar o trabalho',
           paragraphs: [
-            'Quando o âmbito está claro, o montante e o modo de cálculo são falados e confirmados consigo antes de começar. Se o âmbito mudar a meio do caminho, essa mudança também deve confirmar-se de novo.',
+            'Quando o âmbito está claro, o montante e o modo de cálculo são discutidos e confirmados consigo antes de começar. Se o âmbito mudar a meio do caminho, essa mudança também deve confirmar-se de novo.',
             'Esta página não é uma oferta de preço e não gera qualquer obrigação de pagamento. Enviar um pedido através desta página também não implica qualquer pagamento.',
           ],
         },
@@ -1756,7 +1756,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'O que esta página não promete',
           paragraphs: [
-            'Não prometemos um prazo de resposta, não confirmamos uma marcação através desta página, não prometemos uma advogada ou um advogado concreto e não pomos um serviço de interpretação. A tradução escrita é outra coisa: a mensagem que envia não se traduz de forma automática.',
+            'Não prometemos um prazo de resposta, não confirmamos uma marcação através desta página, não prometemos uma advogada ou um advogado concreto e não disponibilizamos serviço de interpretação. A tradução escrita é outra coisa: a mensagem que envia não se traduz de forma automática.',
             'Quando envia um pedido, o conteúdo guarda-se e espera revisão. Se passado algum tempo não receber resposta, pode voltar a escrever para o endereço de correio que figura na página de contacto.',
           ],
         },
@@ -1781,7 +1781,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Que tipo de assuntos trata este escritório?',
           answer:
-            'Tratamos seis grupos: investimento e constituição de sociedades em Taiwan, litígios civis e indemnizações, casamento, família e sucessões, conflitos laborais, assuntos penais e propriedade intelectual. Se um assunto se aceita ou não decide-se depois de rever o seu conteúdo.',
+            'Tratamos seis grupos: investimento e constituição de sociedades em Taiwan, litígios civis e indemnizações, casamento, família e sucessões, conflitos laborais, assuntos penais e propriedade intelectual. A aceitação de um assunto decide-se depois de rever o conteúdo.',
         },
         {
           question: 'O que devo preparar antes de contactar o escritório?',
@@ -1826,7 +1826,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
       description:
         'O que o formulário desta parte em português recolhe, como se trata o texto original e como nos contactar sobre os seus dados.',
       intro:
-        'Esta parte refere-se apenas ao formulário de contacto destas páginas de orientação. Descreve o trato dos dados, não uma segurança técnica absoluta.',
+        'Esta parte refere-se apenas ao formulário de contacto destas páginas de orientação. Descreve o tratamento dos dados, não uma garantia técnica.',
       sections: [
         {
           heading: 'Dados que se recolhem',

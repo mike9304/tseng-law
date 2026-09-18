@@ -628,9 +628,9 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Cette page est rédigée en français comme orientation générale, non comme avis juridique pour votre propre affaire.',
     consultationNotice:
-      'La consultation a lieu en quatre langues : anglais, chinois (中文), japonais et coréen.',
+      'La consultation a lieu en quatre langues : anglais, chinois (中文), japonais et coréen.',
     methodConfirmationNotice:
-      'Si vous ne pouvez utiliser aucune des quatre langues, choisissez « La manière de communiquer doit être confirmée ». Nous répondons pour examiner une manière possible de communiquer lorsqu’il en existe une ; une prestation dans une autre langue n’est pas assurée et aucun délai de réponse n’est promis.',
+      'Si vous ne pouvez utiliser aucune des quatre langues, choisissez « La manière de communiquer doit être confirmée ». Nous répondons pour examiner une manière possible de communiquer lorsqu’il en existe une ; une prestation dans une autre langue n’est pas assurée et aucun délai de réponse n’est promis.',
     preparationNotice:
       'Vous pouvez rédiger le résumé de votre affaire dans votre propre langue. Le texte original est conservé tel que vous l’avez écrit et n’est pas traduit automatiquement.',
     heading: 'Envoyer une demande de consultation',
@@ -639,7 +639,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     submitLabel: 'Envoyer la demande',
     submittingLabel: 'Envoi en cours…',
     successMessage:
-      'Nous avons reçu votre demande ; elle attend un examen. Cela ne signifie pas que la consultation a eu lieu ni qu’un rendez-vous est confirmé.',
+      'Nous avons reçu votre demande ; elle attend un examen. Cela ne signifie pas que la consultation a eu lieu ni qu’un rendez-vous est confirmé.',
     savedNotificationPendingMessage:
       'Votre demande est conservée, mais l’avis au cabinet n’est pas encore confirmé. Ce que vous avez écrit n’est pas perdu. Si vous ne recevez pas de réponse, vous pouvez aussi écrire à l’adresse de courrier de la page de contact.',
     receiptIdLabel: 'Numéro de réception',
@@ -647,7 +647,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Votre demande n’a pas pu être envoyée. Veuillez réessayer ou écrire à l’adresse de courrier de la page de contact.',
     originalLanguageLabel: 'Langue dans laquelle vous écrivez',
     originalLanguagePlaceholder:
-      'Par exemple : français, allemand, espagnol ou une autre langue',
+      'Par exemple : français, allemand, espagnol ou une autre langue',
     preferredConsultationLanguageLabel: 'Langue que vous souhaitez pour la consultation',
     originalTextLabel: 'Présentation courte de l’affaire (dans votre langue)',
     originalTextPlaceholder:
@@ -661,7 +661,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     invalidEmailMessage: 'Veuillez indiquer une adresse de courrier valable.',
     tooLongMessage: 'Le texte est trop long. Raccourcissez-le et renvoyez-le.',
     sourceLanguageNotice:
-      'Cet article n’est publié qu’en {language} ; le lien ouvre la page d’origine.',
+      'Cet article n’est publié qu’en {language} ; le lien ouvre la page d’origine.',
     unavailableTranslationNotice:
       'Cet élément n’est pas encore traduit dans la langue de cette page. Un lien qui indique la langue d’origine ouvre le texte original.',
     unavailableLanguageNotice: 'Cette page n’est pas proposée en {language}.',
@@ -714,7 +714,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Este artigo só está publicado em {language}, e a ligação abre essa página original.',
     unavailableTranslationNotice:
       'Este elemento ainda não está traduzido para a língua desta página. Uma ligação que indica a língua original abre o texto original.',
-    unavailableLanguageNotice: 'Esta página não se oferece em {language}.',
+    unavailableLanguageNotice: 'Esta página não está disponível em {language}.',
     languageOptions: {
       en: 'Inglês (English)',
       'zh-hant': 'Chinês (中文)',

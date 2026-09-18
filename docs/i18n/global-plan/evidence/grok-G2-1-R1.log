@@ -1,0 +1,118 @@
+[WO-G2-1-R1 시작 Fri Sep 18 18:04:51 KST 2026]
+WO-G2-1-R1 is applied in this workspace only. No git add/commit/push, no build, no `next start`, no Playwright, no full suite, no `npm install`.
+
+## diff --stat
+
+```
+ scripts/check-column-translation.mjs             | 125 ++++++++++++++++++++++-
+ scripts/check-column-translation.test.mjs        |  20 +++-
+ src/data/international-guidance-answers.ts       |  24 ++---
+ src/data/international-guidance-team.ts          |   4 +-
+ src/data/international-guidance-western.ts       | 108 ++++++++++----------
+ src/data/international-inquiry-copy.ts           |  12 +--
+ src/lib/__tests__/guidance-fr-pt-content.test.ts |  12 ++-
+ src/lib/llms-txt.ts                              |   2 +-
+ 8 files changed, 226 insertions(+), 81 deletions(-)
+```
+
+`src/lib/public-language-registry.ts` was in the allow-list. French picker/region strings had no `?!:;«»` spaces, so it stayed unchanged.
+
+## 명령 출력
+
+**`git status --short && git diff --stat | tail -3`**
+```
+ M scripts/check-column-translation.mjs
+ M scripts/check-column-translation.test.mjs
+ M src/data/international-guidance-answers.ts
+ M src/data/international-guidance-team.ts
+ M src/data/international-guidance-western.ts
+ M src/data/international-inquiry-copy.ts
+ M src/lib/__tests__/guidance-fr-pt-content.test.ts
+ M src/lib/llms-txt.ts
+?? docs/i18n/global-plan/evidence/grok-G2-1-R1.log
+ src/lib/__tests__/guidance-fr-pt-content.test.ts |  12 ++-
+ src/lib/llms-txt.ts                              |   2 +-
+ 8 files changed, 226 insertions(+), 81 deletions(-)
+```
+
+**`npm run typecheck 2>&1 | tail -2`** (exit 0; `tsc` is silent on success)
+```
+Generating route types...
+✓ Route types generated successfully
+```
+
+**`npx vitest run src/lib/__tests__/guidance-fr-pt-content.test.ts src/lib/__tests__/guidance-fr-pt-routing.test.ts src/lib/__tests__/international-guidance-answers.test.ts src/data/__tests__ src/lib/__tests__/public-language-registry.test.ts 2>&1 | tail -6`**
+```
+ Test Files  1 failed | 45 passed (46)
+      Tests  3 failed | 644 passed (647)
+   Start at  18:16:23
+   Duration  2.77s (transform 1.88s, setup 209ms, collect 7.68s, tests 4.75s, environment 4ms, prepare 1.97s)
+```
+
+Lane files all passed (`guidance-fr-pt-content` 17, `guidance-fr-pt-routing` 11, `international-guidance-answers` 8, `public-language-registry`, `guidance-disclosure-parity`, `guidance-office-facts-sync`). The 3 failures are pre-existing in unmodified `src/data/__tests__/insights-archive-order.test.ts` (`semiconductor-market-entry` vs `cosmetics-market-entry`).
+
+**`node --test scripts/check-column-translation.test.mjs 2>&1 | tail -4`**
+```
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17)
+```
+
+All new `numbers: fr|pt` and `nationality: fr|pt` cases passed. The 1 remaining failure is pre-existing: `forbidden phrase tables have 5–10 patterns per guidance language` throws on `GUIDANCE_LANGS` entries `zh-hans`/`ms`/`ru`/`tr`, which have no `FORBIDDEN_PHRASES` table. That list was already on HEAD; this WO did not touch it.
+
+**`npx eslint --max-warnings=0 --ext .ts,.tsx $(git diff --name-only | grep -E '^src/.*\.(ts|tsx)$') 2>&1 | tail -3`**
+```
+(no output)
+```
+exit 0.
+
+**Python NBSP check**
+```
+fr plain-space-before-punct: 0
+```
+Western French pack now has 58 U+00A0 insertions, matching the review count.
+
+**`grep -c "ser falad\|não pomos\|trato dos dados\|não se oferece" ...`**
+```
+src/data/international-guidance-western.ts:0
+src/data/international-inquiry-copy.ts:0
+```
+grep exits 1 because there are no matches; counts are the intended 0/0.
+
+## 적용한 FIX 번호 (1–17, 리뷰 표의 FIX 행 전부)
+
+| # | 적용 |
+|---|---|
+| 1 | French NBSP (U+00A0) before `?!:;` and inside `« »` in western/answers/team/inquiry/llms French strings; test asserts 0 plain ` ?` / ` :` / `« ` / ` »` |
+| 2 | `des entreprises et des investisseurs étrangers` |
+| 3 | `Nous intervenons au stade de l’enquête` |
+| 4 | `là où vous vous trouvez` |
+| 5 | both `à soi seul` → `à lui seul` |
+| 6 | `Révisé par l’avocate Wei Tseng` |
+| 7 | `et elle est l’avocate dirigeante du cabinet` |
+| 8 | `avec une formation en informatique` |
+| 9 | review string: `en charge de` (not the WO-summary `responsable de`) |
+| 10 | `tratamento dos dados, não uma garantia técnica` |
+| 11 | `não disponibilizamos serviço de interpretação` |
+| 12 | `tratado` / `discutido` / `discutidos` (3곳) |
+| 13 | `A aceitação de um assunto decide-se depois de rever o conteúdo.` |
+| 14 | `Esta página não está disponível em {language}.` |
+| 15 | all 6 PT answer keys: `realiza-se apenas em inglês…` |
+| 16 | replaced dead German regex; added interpreter denial assertion; FAQ question now includes NBSP |
+| 17 | `buildFrLexicon()` / `buildPtLexicon()` (0–20, tens, cent/mille, cem/mil) + fr/pt number and nationality fixtures |
+
+#16 note: the review regex `/ne promettons pas de service d'interprétation/` does not occur in the live FAQ (`pas non plus`). The test asserts `/ne promettons pas non plus de service d['']interprétation/` against the actual sentence.
+
+## NOTE 처리
+
+- **#18** applied (review supplied a string): `também quem` → `incluindo quem`.
+- **#19–#25** left as judgment items: PT adjective inflection in the forbidden scan, `24 horas` over-match, TWD 1.57M advertising question, missing es tariff clause, `droit du travail` vs `Litiges du travail`, `hasMarkdown` guard softening, picker/registry coverage gap.
+
+## 미해결
+
+- Pre-existing vitest failures in `insights-archive-order.test.ts` (3), outside the allow-list.
+- Pre-existing `FORBIDDEN_PHRASES` gap for `zh-hans`/`ms`/`ru`/`tr` in `check-column-translation.test.mjs`.
+- Untracked `docs/i18n/global-plan/evidence/grok-G2-1-R1.log` was already in the tree; this WO forbids `docs/**` writes, so it was not touched.
+- No commit, as requested.
+=== WO-G2-1-R1 종료 code=0 Fri Sep 18 18:19:49 KST 2026 ===

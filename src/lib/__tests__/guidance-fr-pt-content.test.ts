@@ -46,7 +46,7 @@ const PT_FORBIDDEN: ReadonlyArray<readonly [string, RegExp]> = [
 ];
 
 const LANGUAGE_FAQ_QUESTION = {
-  fr: 'La consultation en français est-elle possible ?',
+  fr: 'La consultation en français est-elle possible\u00a0?',
   pt: 'Posso ter uma consulta em português?',
 } as const;
 
@@ -116,7 +116,8 @@ describe('fr/pt guidance is a page language, not a consultation language', () =>
 
   it('does not offer a French-language consultation or interpreter', () => {
     const text = allText('fr');
-    expect(text).not.toMatch(/Beratung auf Deutsch/i);
+    expect(text).not.toMatch(/conseil en français|avocats? francophones/i);
+    expect(text).toMatch(/ne promettons pas non plus de service d[’']interprétation/i);
     expect(internationalInquiryCopy.fr.languageOptions).not.toHaveProperty('fr');
     expect(internationalInquiryCopy.fr.languageOptions).toHaveProperty('en');
     expect(internationalInquiryCopy.fr.languageOptions).toHaveProperty('needs-method-confirmation');
@@ -156,6 +157,13 @@ describe('fr/pt guidance packs are complete', () => {
     expect(shapeOf(guidanceTeamCopy[locale])).toEqual(shapeOf(guidanceTeamCopy.de));
     expect(shapeOf(guidanceTeamBios[locale])).toEqual(shapeOf(guidanceTeamBios.de));
     expect(shapeOf(internationalInquiryCopy[locale])).toEqual(shapeOf(internationalInquiryCopy.de));
+  });
+
+  it('uses French fixed spaces before ? : ; and inside guillemets', () => {
+    const text = allText('fr');
+    expect(text).not.toMatch(/ [?!:;]/);
+    expect(text).not.toMatch(/« /);
+    expect(text).not.toMatch(/ »/);
   });
 });
 

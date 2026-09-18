@@ -824,6 +824,127 @@ function buildEsLexicon() {
   return compilePhrases(entries);
 }
 
+function buildFrLexicon() {
+  const entries = [];
+  const units = ['an', 'ans', 'année', 'années', 'mois', 'jour', 'jours', 'semaine', 'semaines', 'fois', 'personne', 'personnes'];
+  const scales = [
+    ['milliard', 1_000_000_000], ['milliards', 1_000_000_000],
+    ['million', 1_000_000], ['millions', 1_000_000],
+    ['mille', 1_000], ['cent', 100], ['cents', 100],
+  ];
+  const atoms = [
+    ['zéro', 0], ['zero', 0], ['un', 1], ['une', 1],
+    ['deux', 2], ['trois', 3], ['quatre', 4], ['cinq', 5],
+    ['six', 6], ['sept', 7], ['huit', 8], ['neuf', 9], ['dix', 10],
+  ];
+  pushPhrase(entries, 'deux tiers', [2, 3]);
+  pushPhrase(entries, 'un tiers', [1, 3]);
+  pushPhrase(entries, 'la moitié', [1, 2]);
+  const teens = [
+    ['onze', 11], ['douze', 12], ['treize', 13], ['quatorze', 14], ['quinze', 15],
+    ['seize', 16], ['dix-sept', 17], ['dix-huit', 18], ['dix-neuf', 19],
+  ];
+  for (const [phrase, n] of teens) pushPhrase(entries, phrase, [n]);
+  const onesHyphen = atoms.filter(([, v]) => v >= 2 && v <= 9);
+  pushPhrase(entries, 'vingt', [20]);
+  pushPhrase(entries, 'vingt et un', [21]);
+  pushPhrase(entries, 'vingt-et-un', [21]);
+  for (const [o, ov] of onesHyphen) pushPhrase(entries, `vingt-${o}`, [20 + ov]);
+  const regularTens = [['trente', 30], ['quarante', 40], ['cinquante', 50], ['soixante', 60]];
+  for (const [t, tv] of regularTens) {
+    pushPhrase(entries, t, [tv]);
+    pushPhrase(entries, `${t} et un`, [tv + 1]);
+    pushPhrase(entries, `${t}-et-un`, [tv + 1]);
+    for (const [o, ov] of onesHyphen) pushPhrase(entries, `${t}-${o}`, [tv + ov]);
+  }
+  pushPhrase(entries, 'soixante-dix', [70]);
+  pushPhrase(entries, 'soixante et onze', [71]);
+  pushPhrase(entries, 'soixante-et-onze', [71]);
+  for (const [teen, n] of [['douze', 72], ['treize', 73], ['quatorze', 74], ['quinze', 75], ['seize', 76], ['dix-sept', 77], ['dix-huit', 78], ['dix-neuf', 79]]) {
+    pushPhrase(entries, `soixante-${teen}`, [n]);
+  }
+  pushPhrase(entries, 'quatre-vingts', [80]);
+  pushPhrase(entries, 'quatre-vingt-un', [81]);
+  for (const [o, ov] of onesHyphen) pushPhrase(entries, `quatre-vingt-${o}`, [80 + ov]);
+  pushPhrase(entries, 'quatre-vingt-dix', [90]);
+  pushPhrase(entries, 'quatre-vingt-onze', [91]);
+  for (const [teen, n] of [['douze', 92], ['treize', 93], ['quatorze', 94], ['quinze', 95], ['seize', 96], ['dix-sept', 97], ['dix-huit', 98], ['dix-neuf', 99]]) {
+    pushPhrase(entries, `quatre-vingt-${teen}`, [n]);
+  }
+  pushPhrase(entries, 'un an', [1]);
+  pushPhrase(entries, 'une année', [1]);
+  pushPhrase(entries, 'un mois', [1]);
+  pushPhrase(entries, 'un jour', [1]);
+  pushPhrase(entries, 'une semaine', [1]);
+  pushPhrase(entries, 'cent', [100]);
+  pushPhrase(entries, 'mille', [1_000]);
+  for (const [atom, value] of atoms) {
+    if (value >= 1) {
+      for (const [scale, factor] of scales) pushPhrase(entries, `${atom} ${scale}`, [value * factor]);
+    }
+    if (value === 1) {
+      for (const unit of units) pushPhrase(entries, `${atom} ${unit}`, [value]);
+    }
+    if (value >= 2) pushPhrase(entries, atom, [value]);
+  }
+  return compilePhrases(entries);
+}
+
+function buildPtLexicon() {
+  const entries = [];
+  const units = ['ano', 'anos', 'mês', 'meses', 'mes', 'dia', 'dias', 'semana', 'semanas', 'vez', 'vezes', 'pessoa', 'pessoas'];
+  const scales = [
+    ['mil milhões', 1_000_000_000],
+    ['milhão', 1_000_000], ['milhao', 1_000_000],
+    ['milhões', 1_000_000], ['milhoes', 1_000_000],
+    ['mil', 1_000], ['cem', 100], ['cento', 100],
+  ];
+  const atoms = [
+    ['zero', 0], ['um', 1], ['uma', 1],
+    ['dois', 2], ['duas', 2], ['três', 3], ['tres', 3],
+    ['quatro', 4], ['cinco', 5], ['seis', 6], ['sete', 7],
+    ['oito', 8], ['nove', 9], ['dez', 10],
+  ];
+  pushPhrase(entries, 'dois terços', [2, 3]);
+  pushPhrase(entries, 'duas terças', [2, 3]);
+  pushPhrase(entries, 'um terço', [1, 3]);
+  pushPhrase(entries, 'a metade', [1, 2]);
+  const teens = [
+    ['onze', 11], ['doze', 12], ['treze', 13], ['catorze', 14], ['quatorze', 14],
+    ['quinze', 15], ['dezasseis', 16], ['dezesseis', 16],
+    ['dezassete', 17], ['dezessete', 17],
+    ['dezoito', 18], ['dezanove', 19], ['dezenove', 19],
+  ];
+  for (const [phrase, n] of teens) pushPhrase(entries, phrase, [n]);
+  const tens = [
+    ['vinte', 20], ['trinta', 30], ['quarenta', 40], ['cinquenta', 50],
+    ['sessenta', 60], ['setenta', 70], ['oitenta', 80], ['noventa', 90],
+  ];
+  const ones = atoms.filter(([, v]) => v >= 1 && v <= 9);
+  for (const [t, tv] of tens) {
+    pushPhrase(entries, t, [tv]);
+    for (const [o, ov] of ones) pushPhrase(entries, `${t} e ${o}`, [tv + ov]);
+  }
+  pushPhrase(entries, 'um ano', [1]);
+  pushPhrase(entries, 'um mês', [1]);
+  pushPhrase(entries, 'um mes', [1]);
+  pushPhrase(entries, 'um dia', [1]);
+  pushPhrase(entries, 'uma semana', [1]);
+  pushPhrase(entries, 'cem', [100]);
+  pushPhrase(entries, 'cento', [100]);
+  pushPhrase(entries, 'mil', [1_000]);
+  for (const [atom, value] of atoms) {
+    if (value >= 1) {
+      for (const [scale, factor] of scales) pushPhrase(entries, `${atom} ${scale}`, [value * factor]);
+    }
+    if (value === 1) {
+      for (const unit of units) pushPhrase(entries, `${atom} ${unit}`, [value]);
+    }
+    if (value >= 2) pushPhrase(entries, atom, [value]);
+  }
+  return compilePhrases(entries);
+}
+
 export const WORD_NUMERAL_LEXICONS = {
   vi: buildViLexicon(),
   id: buildIdLexicon(),
@@ -832,8 +953,8 @@ export const WORD_NUMERAL_LEXICONS = {
   ar: buildArLexicon(),
   de: buildDeLexicon(),
   es: buildEsLexicon(),
-  fr: compilePhrases([]),
-  pt: compilePhrases([]),
+  fr: buildFrLexicon(),
+  pt: buildPtLexicon(),
 };
 
 export function lexiconEntryCount(lang) {

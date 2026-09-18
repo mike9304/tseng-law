@@ -621,6 +621,20 @@ const WORD_NUMERAL_FIXTURES = {
     missing: ['과태료 4만 신타이완달러와 조문 12.', 'Solo queda el artículo 12.'],
     altered: ['과태료 4만 신타이완달러.', 'Multa de 50.000 TWD.'],
   },
+  fr: {
+    word: ['기한은 15일이고 의결은 3분의 2이며 근속은 1년이다.', 'Le délai est de quinze jours, le quorum de deux tiers, l’ancienneté d’un an.'],
+    scale: ['배상액 157만 대만달러.', 'Indemnisation de 1,57 millions de dollars taïwanais.'],
+    approx: ['한 번에 10여 개의 업종.', 'environ dix secteurs d’activité.'],
+    missing: ['과태료 4만 신타이완달러와 조문 12.', 'Il ne reste que l’article 12.'],
+    altered: ['과태료 4만 신타이완달러.', 'Amende de 50.000 TWD.'],
+  },
+  pt: {
+    word: ['기한은 15일이고 의결은 3분의 2이며 근속은 1년이다.', 'O prazo é de quinze dias, o quórum de dois terços e a antiguidade de um ano.'],
+    scale: ['배상액 157만 대만달러.', 'Indemnização de 1,57 milhões de dólares de Taiwan.'],
+    approx: ['한 번에 10여 개의 업종.', 'aproximadamente dez tipos de atividade.'],
+    missing: ['과태료 4만 신타이완달러와 조문 12.', 'Só resta o artigo 12.'],
+    altered: ['과태료 4만 신타이완달러.', 'Coima de 50.000 TWD.'],
+  },
 };
 
 function numbersCheck(lang, sourceTail, targetTail) {
@@ -638,7 +652,7 @@ function numbersCheck(lang, sourceTail, targetTail) {
   });
 }
 
-for (const lang of ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es']) {
+for (const lang of ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt']) {
   const fx = WORD_NUMERAL_FIXTURES[lang];
 
   test(`numbers: ${lang} word numerals PASS`, () => {
@@ -883,9 +897,11 @@ const NATIONALITY_FIXTURES = {
   fil: { insert: 'Ang kompanya sa Pilipinas ay dapat maghain.', language: 'Maaaring isulat sa wikang Filipino.' },
   de: { insert: 'Deutsche Unternehmen müssen Unterlagen einreichen.', language: 'Unterlagen können auf Deutsch erstellt werden.' },
   es: { insert: 'Las empresas españolas deben presentar documentos.', language: 'Los documentos pueden redactarse en español.' },
+  fr: { insert: 'Les entreprises françaises doivent déposer un dossier.', language: 'Les documents peuvent être rédigés en français.' },
+  pt: { insert: 'As empresas portuguesas devem apresentar documentos.', language: 'Os documentos podem redigir-se em português.' },
 };
 
-for (const lang of ['vi', 'id', 'th', 'fil', 'de', 'es']) {
+for (const lang of ['vi', 'id', 'th', 'fil', 'de', 'es', 'fr', 'pt']) {
   const fx = NATIONALITY_FIXTURES[lang];
 
   test(`nationality: ${lang} inserted demonym FAILs with block citation`, () => {

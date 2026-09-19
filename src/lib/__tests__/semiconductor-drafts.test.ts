@@ -80,15 +80,33 @@ describe('semiconductor unpublished drafts', () => {
     expect(semiconductorDraftBodyWithoutLeadingTitle(service).startsWith('# ')).toBe(false);
   });
 
+  // 2026-09-19 owner decision: column 018 (taiwan-semiconductor-market-entry)
+  // graduated from this staging area to a published column, so it is the one
+  // slug allowed to appear publicly. Every other draft stays unpublished.
+  const PUBLISHED_SLUGS = new Set(['taiwan-semiconductor-market-entry']);
+
   it('does not leak drafts into public columns, services, or lookup helpers', () => {
     const publicSlugs = getAllColumnPosts('ko').map((post) => post.slug);
     for (const article of listSemiconductorArticleDrafts()) {
+      if (PUBLISHED_SLUGS.has(article.slug)) {
+        continue;
+      }
       expect(publicSlugs).not.toContain(article.slug);
       expect(getColumnPost(article.slug, 'ko')).toBeUndefined();
       expect(getColumnPost(article.slug, 'en')).toBeUndefined();
       expect(getColumnPost(article.slug, 'ja')).toBeUndefined();
     }
     expect(getServiceArea('semiconductor-companies')).toBeUndefined();
+  });
+
+  it('keeps the graduated 018 column public in every core locale', () => {
+    const publicSlugs = getAllColumnPosts('ko').map((post) => post.slug);
+    expect(publicSlugs).toContain('taiwan-semiconductor-market-entry');
+    for (const locale of ['ko', 'en', 'ja', 'zh-hant'] as const) {
+      expect(getColumnPost('taiwan-semiconductor-market-entry', locale)).toBeDefined();
+    }
+    // The staging record stays on disk as history; it must never be re-imported
+    // over the published column (see semiconductor-drafts-import).
     expect(getSemiconductorDraftBySlug('taiwan-semiconductor-market-entry')?.publish).toBe(false);
   });
 });

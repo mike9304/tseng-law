@@ -108,13 +108,21 @@ function toDraftDocument(record: SemiconductorDraftRecord, now: string): ColumnD
 
 export async function importSemiconductorColumnDrafts(): Promise<{
   imported: Array<{ id: string; slug: string; path: string; duplicate: boolean }>;
+  /**
+   * Drafts whose slug has already graduated to a published column. They are
+   * left untouched: a published article is never overwritten by its staging
+   * draft (column 018 took this path on 2026-09-19).
+   */
+  skippedPublished: Array<{ id: string; slug: string }>;
 }> {
   const now = new Date().toISOString();
   const imported = [];
+  const skippedPublished = [];
   for (const record of listSemiconductorArticleDrafts()) {
     const existing = await readColumnBundle('ko', record.slug);
     if (existing.published) {
-      throw new Error(`Refusing to overwrite published column ${record.slug}`);
+      skippedPublished.push({ id: record.id, slug: record.slug });
+      continue;
     }
     const duplicate = Boolean(existing.draft);
     const previousRevision = existing.draft?.revision ?? 0;
@@ -128,5 +136,5 @@ export async function importSemiconductorColumnDrafts(): Promise<{
       duplicate,
     });
   }
-  return { imported };
+  return { imported, skippedPublished };
 }

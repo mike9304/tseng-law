@@ -21,18 +21,28 @@ describe('semiconductor CMS draft import', () => {
     }
   });
 
-  it('registers the three Korean articles as unpublished drafts without duplicating or publishing', async () => {
+  it('registers the still-unpublished Korean articles as drafts and leaves published ones alone', async () => {
     tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'semi-draft-import-'));
     process.env.CONSULTATION_COLUMNS_DIR = tempDir;
 
     const first = await importSemiconductorColumnDrafts();
     const second = await importSemiconductorColumnDrafts();
 
-    expect(first.imported).toHaveLength(3);
+    // 2026-09-19 owner decision: column 018 (taiwan-semiconductor-market-entry)
+    // stays published, so its staging draft is skipped rather than re-imported.
+    expect(first.skippedPublished.map((item) => item.slug)).toEqual([
+      'taiwan-semiconductor-market-entry',
+    ]);
+    expect(first.imported).toHaveLength(listSemiconductorArticleDrafts().length - 1);
     expect(second.imported.every((item) => item.duplicate)).toBe(true);
+    expect(second.skippedPublished).toEqual(first.skippedPublished);
     expect(fs.existsSync(path.join(tempDir, 'ko'))).toBe(true);
 
+    const publishedSlugs = new Set(first.skippedPublished.map((item) => item.slug));
     for (const item of listSemiconductorArticleDrafts()) {
+      if (publishedSlugs.has(item.slug)) {
+        continue;
+      }
       const bundle = await readColumnBundle('ko', item.slug);
       expect(bundle.published).toBeNull();
       expect(bundle.draft?.draft).toBe(true);

@@ -29,6 +29,7 @@ const EXPECTED_EN_LEGACY_SEARCH_IDS = [
   'featured-0',
   'featured-1',
   'featured-2',
+  'insight-post-semiconductor-market-entry',
   'insight-post-gym-injury-lawsuit',
   'insight-post-cosmetics-market-entry',
   'insight-post-company-advanced-2',

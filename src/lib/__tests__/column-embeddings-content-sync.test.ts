@@ -5,7 +5,7 @@ import { getAllColumnPosts } from '@/lib/columns';
 import type { Locale } from '@/lib/locales';
 
 const SUPPORTED_LOCALES = ['ko', 'zh-hant', 'en'] as const satisfies readonly Locale[];
-const EXPECTED_RECORDS_PER_LOCALE = 17;
+const EXPECTED_RECORDS_PER_LOCALE = 18;
 const EXPECTED_VECTOR_DIMENSION = 1536;
 const GYM_INJURY_SLUG = 'taiwan-gym-injury-lawsuit';
 const DIVORCE_QNA_SLUG = 'taiwan-divorce-lawsuit-qna';

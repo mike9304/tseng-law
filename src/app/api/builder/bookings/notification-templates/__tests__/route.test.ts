@@ -1,6 +1,7 @@
 import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { guardBuilderReadWithPermission, guardMutation } from '@/lib/builder/security/guard';
+import { GUIDANCE_ONLY_LOCALE_SAMPLES } from '@/lib/test-support/locale-samples';
 import {
   createNotificationTemplate,
   listNotificationTemplates,
@@ -64,7 +65,9 @@ describe('/api/builder/bookings/notification-templates', () => {
   it('returns default-locale errors for unsupported locale filters', async () => {
     const route = await import('../route');
     const response = await route.GET(
-      new NextRequest('https://law.example.test/api/builder/bookings/notification-templates?locale=fr'),
+      new NextRequest(
+        `https://law.example.test/api/builder/bookings/notification-templates?locale=${GUIDANCE_ONLY_LOCALE_SAMPLES[0]}`,
+      ),
     );
     const payload = await response.json();
 

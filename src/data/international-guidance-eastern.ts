@@ -1,0 +1,1487 @@
+/**
+ * Czech guidance pack (batch 5). Same contract as the German and Italian packs:
+ * page language ≠ consultation language. Consultations happen only in English,
+ * Chinese, Japanese and Korean. No interpreter, reply-time, appointment, fee
+ * figure, outcome, success-rate or residency promise, and no "free first
+ * consultation" claim — "free" appears only inside a negation.
+ *
+ * Formal address: Czech vykání, with Vy/Vás/Vám/Vaše capitalised as in written
+ * correspondence. Attorney Wei Tseng (曾雋崴) is female, so the pack uses the
+ * feminine form advokátka and feminine verb agreement throughout; the mixed
+ * team is named "advokátky a advokáti".
+ *
+ * Terminology follows the Taiwanese source: Taiwanese legal terms keep the
+ * Chinese term in brackets on first use, exactly as the published packs do.
+ */
+import type { GuidanceLocaleContent } from '@/data/international-guidance-content';
+
+export const czechGuidanceContent: GuidanceLocaleContent = {
+  languageName: 'Čeština',
+  nav: {
+    home: 'Úvod',
+    services: 'Služby',
+    about: 'Kancelář',
+    lawyers: 'Advokáti',
+    pricing: 'Náklady',
+    contact: 'Kontakt',
+    faq: 'Otázky',
+    privacy: 'Soukromí',
+    disclaimer: 'Upozornění',
+    columns: 'Články',
+  },
+  contactCta: 'Odeslat žádost o posouzení',
+  footerNotice:
+    'Tato česká stránka obsahuje pouze obecné informace o práci kanceláře podle taiwanského práva. Není právní radou k jednotlivému případu a samotné odeslání zprávy nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
+  skipLink: 'Přeskočit navigaci a přejít k obsahu',
+  menuLabel: 'Přehled stránek',
+  languageLabel: 'Jazyk zobrazení',
+  mega: {
+    services: {
+      description: 'Kancelář vede základní skupiny věcí podle taiwanského práva.',
+      viewAllLabel: 'Zobrazit vše',
+    },
+    columns: {
+      description: 'Články k častým otázkám taiwanského práva.',
+      viewAllLabel: 'Zobrazit vše',
+    },
+    lawyers: {
+      description: 'Představení advokátek a advokátů a způsobů kontaktu.',
+      viewAllLabel: 'Zobrazit vše',
+    },
+    pricing: {
+      description: 'Tato stránka vysvětluje rozsah práce a způsob ujasnění nákladů.',
+      viewAllLabel: 'Zobrazit vše',
+    },
+    faq: {
+      description: 'Časté otázky k práci kanceláře na Tchaj-wanu.',
+      viewAllLabel: 'Zobrazit vše',
+    },
+  },
+  notFoundTitle: 'Stránka nenalezena',
+  notFoundText:
+    'Hledaná stránka neexistuje nebo byla přesunuta. Můžete se vrátit na českou úvodní stránku a prohlédnout si dostupné informace.',
+  backHomeLabel: 'Na úvodní stránku',
+  readSourceLabel: 'Otevřít seznam článků v původním jazyce',
+  home: {
+    heroScrollLabel: 'Posunout dolů',
+    heroColumnsCtaLabel: 'Zobrazit články',
+    servicesDetailLabel: 'Zobrazit podrobnosti',
+    servicesAssistanceBefore: 'Není-li zřejmé, do které skupiny Vaše věc patří, stránka ',
+    servicesAssistanceLinkLabel: 'Kontakt',
+    servicesAssistanceAfter: ' vysvětluje, jak sestavit shrnutí, které advokátka nebo advokát posoudí.',
+    columnsViewAllLabel: 'Zobrazit všechny články',
+    columnsReadMoreLabel: 'Číst dál',
+    columnsReviewLabel: 'Posoudila advokátka Wei Tseng',
+    columnsOriginalLanguageBadge: 'Původní jazyk',
+    columnsOriginalLanguageNote:
+      'Následující články zatím nejsou k dispozici v češtině. Seznam zůstává v původním jazyce a otevře příslušnou jazykovou stránku; obsah se automaticky nepřekládá.',
+    imageBandAlt: 'Tradiční taiwanský dvorec sanheyuan (三合院) a moderní pavilon za denního světla',
+    videoPauseLabel: 'Pozastavit video',
+    videoPlayLabel: 'Přehrát video',
+    videoReplayLabel: 'Přehrát video znovu',
+  },
+  pages: {
+    home: {
+      eyebrow: 'INFORMACE',
+      title: 'Právní služby na Tchaj-wanu — informace v češtině',
+      description:
+        'Obecné vysvětlení v češtině o rozsahu práce Hovering International Law Firm na Tchaj-wanu, o jazycích porady a o prvním kontaktu.',
+      intro:
+        'Hovering International Law Firm doprovází klienty ze zahraničí, včetně těch s vazbou na Tchaj-wan, ve věcech taiwanského práva: investice a zakládání společností, občanskoprávní spory, manželství, rodina a dědictví, pracovní právo, trestní věci a duševní vlastnictví. Tato česká část Vám pomůže rozpoznat, která práce spadá do našeho rozsahu, co si připravit a jak nás oslovit. Jde o obecné informace, nikoli o právní radu k Vašemu případu.',
+      sections: [
+        {
+          heading: 'Čím se zabýváme',
+          paragraphs: [
+            'Hovering International Law Firm je advokátní kancelář se sídlem na Tchaj-wanu. Pracuje podle taiwanského práva a má pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pchingtungu (屏東). Radíme podnikům, vedeme soudní řízení a doprovázíme klienty ze zahraničí v krocích potřebných na Tchaj-wanu.',
+            'Celý zdejší obsah je obecný. Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku. Tyto informace nenahrazují rozhovor s advokátkou nebo advokátem nad Vašimi dokumenty.',
+          ],
+        },
+        {
+          heading: 'Jazyk stránky a jazyk porady nejsou totéž',
+          paragraphs: [
+            'Tato stránka je psána česky, ale porada s advokátkou nebo advokátem probíhá pouze ve čtyřech jazycích porady: anglicky, čínsky (中文), japonsky a korejsky. Čtení informací v češtině neznamená, že rozhovor s advokátkou nebo advokátem proběhne česky.',
+            'Neslibujeme tlumočníka, lhůtu k odpovědi ani schůzku prostřednictvím této stránky. Nemůžete-li užít žádný ze čtyř jazyků, stránka «Kontakt» vysvětluje, jak posuzujeme způsob komunikace.',
+          ],
+        },
+        {
+          heading: 'Skupiny věcí',
+          paragraphs: [
+            'Rozsah práce zahrnuje následujících šest skupin. Stránka «Služby» popisuje každou skupinu přesněji a uvádí, co se neslibuje.',
+          ],
+          items: [
+            'Investice a zakládání společností na Tchaj-wanu',
+            'Občanskoprávní spory a náhrada škody',
+            'Manželství, rodina a dědictví',
+            'Pracovněprávní spory',
+            'Trestní věci',
+            'Duševní vlastnictví: ochranné známky, patenty a autorské právo',
+          ],
+        },
+        {
+          heading: 'Kde začít',
+          paragraphs: [
+            'Přečtěte si stránku «Služby» a ověřte, zda Vaše věc spadá do našeho rozsahu, poté «Náklady» a «Kontakt», abyste věděli, jak se stanoví rozsah a jak se náklady potvrzují před zahájením práce.',
+            'Při odeslání zprávy můžete shrnutí napsat ve svém jazyce. Původní text se uchová přesně tak, jak jste jej napsali, a automaticky se nepřekládá. Odeslaná zpráva je žádostí čekající na posouzení: není to ještě porada ani potvrzená schůzka.',
+          ],
+        },
+      ],
+    },
+    services: {
+      eyebrow: 'SLUŽBY',
+      title: 'Které věci vedeme',
+      description:
+        'Šest skupin práce kanceláře na Tchaj-wanu a hranice, které je užitečné znát nejdříve.',
+      intro:
+        'Níže jsou skupiny, které skutečně vedeme, a otázky, jež se v počáteční fázi kladou nejčastěji. Výklad Vám pomůže posoudit, zda Vaše věc spadá do našeho rozsahu; je obecný a není právním rozborem jednotlivého spisu.',
+      sections: [
+        {
+          heading: 'Investice a zakládání společností na Tchaj-wanu',
+          paragraphs: [
+            'Doprovázíme zahraniční investory a podniky při založení nebo vedení společnosti na Tchaj-wanu: volba právní formy, příprava a podání dokumentů, vklad kapitálu, bankovní otázky, posouzení sídla a odvětvové požadavky. Podporujeme také účetnictví a daně, které ze založení a z provozu na Tchaj-wanu vyplývají.',
+            'Postup a lhůty se liší podle formy, investora, odvětví, banky a podle již dostupných dokumentů. Založení společnosti samo o sobě nevede k pobytovému oprávnění (居留) ani k pracovnímu povolení (工作許可): jde o samostatná řízení posuzovaná podle situace konkrétní osoby.',
+          ],
+        },
+        {
+          heading: 'Občanskoprávní spory a náhrada škody',
+          paragraphs: [
+            'Tato skupina zahrnuje spory ze smluv, náhradu škody z protiprávního jednání a spotřebitelské spory. Práce zpravidla začíná časovou osou, posouzením dokumentů a existujících důkazů a teprve poté následují další kroky.',
+            'Průběh určují lhůty, včetně promlčecích, a úplnost důkazů. Uveďte proto známá data co nejdříve. Uschovejte smlouvy, zprávy, doklady o platbě nebo fotografie stavu na místě a zmiňte je v první zprávě.',
+          ],
+        },
+        {
+          heading: 'Manželství, rodina a dědictví',
+          paragraphs: [
+            'Vedeme rozvod (離婚), vypořádání majetku, výkon a převzetí práv a povinností k nezletilým dětem (未成年子女權利義務之行使或負擔), styk s dítětem (會面交往) a dědictví (繼承), a to i tehdy, nacházejí-li se strany nebo majetek v různých státech. Přeshraniční rodinné věci často vyžadují další posouzení matričních záznamů (戶籍), formy listin a jejich průkaznosti na Tchaj-wanu.',
+            'Protože rodinné věci s sebou často nesou lhůty a souběžná řízení, mělo by první shrnutí uvést vztah mezi stranami, současné bydliště a již probíhající řízení.',
+          ],
+        },
+        {
+          heading: 'Pracovněprávní spory',
+          paragraphs: [
+            'Tato skupina zahrnuje skončení pracovního poměru, odstupné podle taiwanského práva (資遣費; nelze je ztotožňovat s obdobnými instituty jiných států), odměnu a spory z pracovní smlouvy (勞動契約), a to jak na straně zaměstnance, tak na straně zaměstnavatele. Při posouzení odlišujeme důvod skončení od otázek výpovědní doby, výplaty a lhůt.',
+            'Rozhodujícími dokumenty bývají pracovní smlouva, vnitřní pracovní řád (工作規則), výplatní pásky a korespondence stran. Máte-li je stále k dispozici, zmiňte to ve shrnutí.',
+          ],
+        },
+        {
+          heading: 'Trestní věci',
+          paragraphs: [
+            'Doprovázíme v přípravném řízení i před soudem, jak podezřelé a obviněné, tak poškozené, a posuzujeme trestní rizika podnikatelské činnosti.',
+            'Trestní věci mívají krátké lhůty a pevně stanovené fáze. Obdrželi-li jste již písemnost orgánu činného v trestním řízení nebo soudu, uveďte datum na písemnosti včas, aby byl obsah posouzen ve správném pořadí.',
+          ],
+        },
+        {
+          heading: 'Duševní vlastnictví',
+          paragraphs: [
+            'Podporujeme zápis ochranných známek (商標) a patentů (專利), autorské právo a spory o tato práva na Tchaj-wanu.',
+            'V této skupině rozhoduje pořadí kroků: rozsah ochrany, okamžik podání přihlášky a skutečné užívání ovlivňují volbu. Podání přihlášky samo o sobě neznamená, že jí bude vyhověno.',
+          ],
+        },
+        {
+          heading: 'Rozsah a jeho potvrzení',
+          paragraphs: [
+            'Kancelář pracuje podle taiwanského práva a vede věci z výše uvedených skupin. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí Vaši zprávu.',
+            'Pobytový status, pracovní povolení a obdobné otázky se posuzují podle dokumentů a podle situace konkrétní osoby, nikoli podle státní příslušnosti. Dotýká-li se část Vaší věci těchto bodů, uveďte to při kontaktu. Tato stránka neslibuje výsledek ani lhůtu k odpovědi.',
+          ],
+        },
+      ],
+    },
+    about: {
+      eyebrow: 'KANCELÁŘ',
+      title: 'O Hovering International Law Firm',
+      description:
+        'Základní údaje o této taiwanské advokátní kanceláři, o jejích pobočkách a o práci se zahraničními stranami.',
+      intro:
+        'Hovering International Law Firm je advokátní kancelář na Tchaj-wanu. Advokátky a advokáti pracují od poradenství podnikům až po soudní řízení. Tato část popisuje vznik kanceláře, sídla a práci se zahraničními stranami.',
+      sections: [
+        {
+          heading: 'Založení a struktura',
+          paragraphs: [
+            'Hovering International Law Firm (昊鼎國際法律事務所) byla založena v roce 2016 advokátkami a advokáty, kteří studovali na National Taiwan University (國立臺灣大學). Čínský název 昊鼎 spojuje znak 昊 («širé nebe») se znakem 鼎 («pevný základ») a vystihuje zaměření kanceláře od jejího založení.',
+            'Máme pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pchingtungu (屏東). Pobočka v Kao-siungu se soustředí na vedení podniků a vede občanskoprávní, trestní a správní spory. Pobočka v Tchaj-čungu vede stavební věci, duševní vlastnictví a věci s vazbou na Koreu a Japonsko. Pobočka v Pchingtungu byla otevřena v roce 2017 pro místní potřebu.',
+            'Vedle advokátní práce působí od roku 2020 také Hovering Accounting Office, která nabízí účetnictví a daňové plánování podnikatelům a soukromým osobám s majetkem.',
+          ],
+        },
+        {
+          heading: 'Práce se zahraničními stranami',
+          paragraphs: [
+            'Přeshraniční práce zahrnuje zakládání společností, víza, přihlášky ochranných známek a patentů, posouzení právního rizika a daňové poradenství podnikům. Pobočka v Tchaj-čungu vede zejména stavební věci, duševní vlastnictví a věci s vazbou na Koreu a Japonsko. Advokátka Wei Tseng (曾雋崴) doprovází klienty z Koreje, z Japonska a další mezinárodní klienty v uvedených skupinách.',
+            'Zda můžeme věc převzít, závisí na obsahu a na jazyku komunikace. Spadá-li Vaše věc do uvedených skupin a lze-li ji projednat v některém ze čtyř jazyků porady, můžete zaslat shrnutí k posouzení.',
+          ],
+        },
+        {
+          heading: 'Když nás oslovíte',
+          paragraphs: [
+            'Po doručení Vašeho shrnutí posoudí advokátka nebo advokát obsah a poté hovoří o možném rozsahu práce, o dosud potřebných dokumentech a o dalších krocích. U daňových nebo účetních otázek může kancelář pracovat s účetním úsekem v jednom toku.',
+            'Výsledek každé věci závisí na skutkovém stavu a na dostupných dokumentech; výsledek neslibujeme. Potřebujete-li závaznou odpověď pro svou situaci, musí být dokumenty projednány v některém ze čtyř jazyků porady s advokátkou nebo advokátem.',
+          ],
+        },
+      ],
+    },
+    lawyers: {
+      eyebrow: 'ADVOKÁTI',
+      title: 'Mezinárodní tým Hovering',
+      description: 'Profily advokátek a advokátů, provozního vedení a přidružené účetní revize Hovering.',
+      intro: '',
+      sections: [],
+    },
+    pricing: {
+      eyebrow: 'NÁKLADY',
+      title: 'Jak se stanoví rozsah práce a náklady',
+      description:
+        'Vysvětlení pořadí: nejprve rozsah práce, poté potvrzení nákladů, a proč tato stránka neobsahuje ceník.',
+      intro:
+        'Tato stránka vysvětluje, jak se náklady stanoví, nikoli jejich výši. Výše závisí na rozsahu práce v jednotlivé věci a má smysl teprve tehdy, je-li tento rozsah zřejmý.',
+      sections: [
+        {
+          heading: 'Nejprve se stanoví rozsah práce',
+          paragraphs: [
+            'Věci téhož druhu mohou vyžadovat velmi rozdílné úsilí, podle počtu stran, dostupných dokumentů, lhůt, které je třeba dodržet, a podle toho, zda již bylo zahájeno řízení. Prvním krokem je proto vždy stanovit, co do práce patří a co nikoli.',
+            'Shrnutí, které na začátku zašlete, je základem tohoto rozsahu. Čím jasněji popisuje průběh, Váš požadavek a lhůty, tím přesněji lze rozsah určit.',
+          ],
+        },
+        {
+          heading: 'Náklady se potvrzují před zahájením práce',
+          paragraphs: [
+            'Je-li rozsah práce zřejmý, výše a způsob výpočtu nákladů se s Vámi projedná a potvrdí dříve, než práce začne. Změní-li se rozsah v průběhu, musí být potvrzen znovu.',
+            'Tato stránka není cenovou nabídkou a nezakládá povinnost k platbě.',
+          ],
+        },
+        {
+          heading: 'Porada může být úplatná',
+          paragraphs: [
+            'Porada s advokátkou nebo advokátem může být úplatnou službou. Tato stránka neříká, že první rozhovor je bezplatný, a žádnou její část nelze v tomto smyslu vykládat.',
+            'Je-li porada úplatná, sdělí se výše a způsob platby dříve, než se porada uskuteční.',
+          ],
+        },
+        {
+          heading: 'Proč tato stránka neuvádí sazby',
+          paragraphs: [
+            'Náklady závisejí na věci samé: na úsilí, počtu stran, dokumentech, lhůtách a na tom, zda již řízení probíhá. Číslo stanovené předem by náklady Vašeho spisu neukázalo. Proto nejprve stanovíme rozsah práce a náklady Vám sdělíme poté, dříve než práce začne.',
+            'Vedle odměny mohou vzniknout soudní poplatky, náklady orgánů nebo třetích osob. Ty jsou od odměny oddělené a závisejí na příslušném řízení.',
+          ],
+        },
+      ],
+    },
+    contact: {
+      eyebrow: 'KONTAKT',
+      title: 'Jak kancelář oslovit',
+      description:
+        'Jazyk stránky, jazyky porady, postup pro případ, že nemůžete užít žádný ze čtyř jazyků, a co tato stránka neslibuje.',
+      intro:
+        'Než nám napíšete, rozlište následující tři body. Bývají směšovány, ale znamenají různé věci.',
+      sections: [
+        {
+          heading: 'Tři věci, které je třeba držet odděleně',
+          paragraphs: [
+            'Jazyk zobrazení stránky, jazyk porady s advokátkou nebo advokátem a jazyk, v němž píšete, jsou tři různé věci.',
+          ],
+          items: [
+            'Jazyk stránky: tyto informace jsou psány česky.',
+            'Jazyk porady: porada probíhá anglicky, čínsky (中文), japonsky a korejsky.',
+            'Váš jazyk psaní: shrnutí můžete napsat ve svém jazyce; původní text se uchová beze změny.',
+          ],
+        },
+        {
+          heading: 'Nemůžete-li užít žádný ze čtyř jazyků porady',
+          paragraphs: [
+            'V kontaktním formuláři můžete zvolit «Způsob komunikace je třeba potvrdit». Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
+            'Jde pouze o krok posouzení, nikoli o příslib. Neslibujeme tlumočníka, službu v češtině ani v jiném jazyce mimo čtyři uvedené jazyky, ani to, že každou věc přijmeme.',
+          ],
+        },
+        {
+          heading: 'Co by měla obsahovat první zpráva',
+          paragraphs: [
+            'Uveďte, co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. Obdrželi-li jste již písemnost soudu nebo úřadu, uveďte datum na písemnosti.',
+            'V počáteční fázi zatím nemusíte zasílat číslo pasu, číslo dokladu, údaje o účtu, zdravotní dokumentaci ani soubor důkazů. Vyčkejte pokynů advokátky nebo advokáta a citlivé dokumenty zašlete až poté bezpečnou cestou.',
+          ],
+        },
+        {
+          heading: 'Co tato stránka neslibuje',
+          paragraphs: [
+            'Neslibujeme lhůtu k odpovědi, nepotvrzujeme schůzku prostřednictvím této stránky, neslibujeme určitou advokátku ani určitého advokáta a neposkytujeme tlumočníka. Písemný překlad je něco jiného: Vaše zpráva se automaticky nepřekládá.',
+            'Odešlete-li žádost, obsah se uchová a čeká na posouzení. Neobdržíte-li po nějaké době odpověď, můžete napsat znovu na e-mailovou adresu uvedenou na kontaktní stránce.',
+          ],
+        },
+      ],
+    },
+    faq: {
+      eyebrow: 'OTÁZKY',
+      title: 'Časté otázky',
+      description:
+        'Vysvětlení k rozsahu práce, přípravě, jazykům, nákladům a k tomu, co znamená odeslaná žádost.',
+      intro:
+        'Následující otázky jsou zodpovězeny na úrovni obecných informací. Odpověď pro Váš případ je možná teprve poté, co advokátka nebo advokát posoudí dokumenty.',
+      sections: [
+        {
+          heading: 'Jak tuto část užívat',
+          paragraphs: [
+            'Nenajdete-li odpověď pro svou situaci, závisí odpověď zpravidla na zvláštních skutečnostech. Napište je proto do shrnutí, namísto abyste je dovozovali z této stránky.',
+          ],
+        },
+      ],
+      faqs: [
+        {
+          question: 'Které věci kancelář vede?',
+          answer:
+            'Vedeme šest skupin: investice a zakládání společností na Tchaj-wanu, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Zda bude věc přijata, se rozhodne po posouzení obsahu.',
+        },
+        {
+          question: 'Co bych si měl připravit před kontaktem?',
+          answer:
+            'Připravte si krátké shrnutí průběhu, svého požadavku, vazby na Tchaj-wan a lhůty, existuje-li nějaká. Je-li již k dispozici písemnost soudu nebo úřadu, uveďte datum. V této fázi zatím nemusíte zasílat doklady totožnosti ani soubor důkazů.',
+        },
+        {
+          question: 'Je možná porada v češtině?',
+          answer:
+            'Ne. Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky. Neslibujeme ani tlumočníka. Písemný překlad je něco jiného: původní text, který napíšete, se uchová tak, jak je, a automaticky se nepřekládá.',
+        },
+        {
+          question: 'Co dělat, nemohu-li užít žádný ze čtyř jazyků?',
+          answer:
+            'Při odeslání žádosti zvolte «Způsob komunikace je třeba potvrdit». Odpovíme, abychom posoudili způsob komunikace, ale služba v jiném jazyce zaručena není. Jde o krok posouzení, nikoli o příslib, že můžeme pracovat v jiném jazyce.',
+        },
+        {
+          question: 'Jak se nakládá s mým textem v češtině?',
+          answer:
+            'Původní text, který napíšete, se uchová tak, jak je, a automaticky se nepřekládá. Je-li to potřeba, jazyk další komunikace se s Vámi potvrdí.',
+        },
+        {
+          question: 'Proběhla porada již tím, že je žádost odeslána?',
+          answer:
+            'Ne. Odeslaná žádost čeká na posouzení advokátkou nebo advokátem. Není to právní stanovisko, není to potvrzená schůzka a samotné odeslání nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
+        },
+        {
+          question: 'Jak se počítají náklady?',
+          answer:
+            'Nejprve se stanoví rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu nákladů, dříve než práce začne. Tato stránka neuvádí částky a neříká, že první rozhovor je bezplatný.',
+        },
+        {
+          question: 'Co dělat, je-li má věc velmi naléhavá?',
+          answer:
+            'Uveďte lhůtu nebo datum z úřední písemnosti hned na začátku shrnutí, aby byla tato data při posouzení vidět. Tato stránka nemá nouzový kanál a nezajišťuje lhůtu k odpovědi; nesnese-li Vaše věc odkladu, měli byste souběžně hledat další cesty ve svém místě.',
+        },
+      ],
+    },
+    privacy: {
+      eyebrow: 'SOUKROMÍ',
+      title: 'Údaje sbírané kontaktním formulářem',
+      description:
+        'Co sbírá kontaktní formulář v této české části, jak se nakládá s původním textem a jak nás oslovit ohledně Vašich údajů.',
+      intro:
+        'Tato část se týká pouze kontaktního formuláře na těchto informačních stránkách. Popisuje nakládání s údaji, nikoli technickou záruku.',
+      sections: [
+        {
+          heading: 'Které údaje se sbírají',
+          paragraphs: [
+            'Odešlete-li žádost prostřednictvím formuláře v této části, zaznamenají se tyto údaje:',
+          ],
+          items: [
+            'Jméno, které uvedete',
+            'E-mailová adresa pro odpověď',
+            'Jazyk zobrazení stránky v okamžiku odeslání',
+            'Jazyk, v němž jste psali',
+            'Jazyk porady, který si přejete',
+            'Původní text, který jste napsali',
+            'Váš souhlas s odesláním žádosti',
+            'Číslo podání pro dohledání žádosti',
+          ],
+        },
+        {
+          heading: 'Původní text se uchová beze změny',
+          paragraphs: [
+            'Váš text se uchová přesně tak, jak jste jej napsali, a automaticky se nepřekládá. Je-li pro vyřízení potřebný překlad, projedná se to s Vámi zvlášť.',
+            'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+          ],
+        },
+        {
+          heading: 'Místo uchování a přístup',
+          paragraphs: [
+            'Obsah Vašeho podání se uchovává na místě, které není veřejně přístupné. Přístup k němu mají pouze oprávněné osoby v kanceláři, a to za účelem vyřízení žádosti.',
+            'Tato stránka nedává absolutní záruku bezpečnosti. Žádná cesta přenosu a žádné místo uchování není zcela bezpečné; citlivé dokumenty by proto měly být zasílány až po zvláštním pokynu advokátky nebo advokáta.',
+          ],
+        },
+        {
+          heading: 'Účel užití',
+          paragraphs: [
+            'Odeslané údaje slouží k posouzení žádosti, k odpovědi Vám, k ujasnění způsobu komunikace a k vyřízení, je-li práce převzata.',
+            'Údaje se bez zvláštního souhlasu neužívají k marketingu.',
+          ],
+        },
+        {
+          heading: 'Oznámení a číslo podání',
+          paragraphs: [
+            'Je-li žádost úspěšně odeslána, systém uvědomí kancelář. Není-li toto oznámení zatím potvrzeno, Váš text zůstává uchován a neztrácí se.',
+            'Číslo podání slouží k dohledání Vaší žádosti v našich záznamech. Zobrazí se po uložení; můžete je uvést při novém kontaktu.',
+          ],
+        },
+        {
+          heading: 'Vaše práva a cesta ke kontaktu',
+          paragraphs: [
+            'Můžete žádat o přístup ke svým údajům, o jejich opravu nebo výmaz, případně odvolat souhlas, a to prostřednictvím e-mailové adresy uvedené na kontaktní stránce. Existuje-li zákonná nebo procesní povinnost uchování, vysvětlíme omezení.',
+            'Tato stránka neuvádí pevnou dobu uchování, protože skutečná doba závisí na dalším průběhu věci a na souvisejících povinnostech. Přejete-li si dřívější výmaz, sdělte to při kontaktu.',
+          ],
+        },
+        {
+          heading: 'Místo uchování a poskytovatelé',
+          paragraphs: [
+            'Tyto stránky jsou hostovány u společnosti Vercel a Vaše podání se uchovává v neveřejném objektovém úložišti této služby. E-maily se odesílají poštovní službou, kterou kancelář užívá.',
+            'Servery jednotlivých poskytovatelů se mohou nacházet mimo Tchaj-wan, takže Vaše údaje tam mohou být uchovávány a zpracovávány. Je-li účel uchování naplněn, údaje se bez zbytečného odkladu vymažou; údaje, které je třeba uchovávat podle použitelných předpisů, zůstávají po tuto dobu. Žádosti o osobní údaje přijímá wei@hoveringlaw.com.tw.',
+          ],
+        },
+      ],
+    },
+    disclaimer: {
+      eyebrow: 'UPOZORNĚNÍ',
+      title: 'Rozsah a hranice informací na této stránce',
+      description:
+        'Obecná povaha informací, právní rámec a předpoklady vzniku vztahu mezi advokátkou nebo advokátem a klientem.',
+      intro:
+        'Tato část objasňuje, co pro Vás tyto české informační stránky mohou udělat a co nikoli.',
+      sections: [
+        {
+          heading: 'Pouze obecné informace',
+          paragraphs: [
+            'Obsah těchto stránek je psán jako obecná informace. Není právní radou k Vašemu případu a nenahrazuje posouzení Vašich dokumentů.',
+            'Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku; dvě zdánlivě podobné situace mohou skončit různě.',
+          ],
+        },
+        {
+          heading: 'Právní rámec',
+          paragraphs: [
+            'Kancelář působí podle taiwanského práva a tato stránka hovoří pouze o práci v tomto rámci.',
+            'Obsah není poradenstvím podle práva jiného řádu než taiwanského, včetně práva místa Vašeho pobytu. Týká-li se část Vaší věci jiného právního řádu, ujasníme s Vámi, jaká kvalifikovaná osoba je pro tuto část potřebná.',
+          ],
+        },
+        {
+          heading: 'Vztah mezi advokátkou nebo advokátem a klientem nevzniká sám od sebe',
+          paragraphs: [
+            'Přečtení této stránky, odeslání formuláře nebo e-mailu samo o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
+            'Tento vztah vzniká teprve poté, co byla věc posouzena a obě strany potvrdily převzetí práce.',
+          ],
+        },
+        {
+          heading: 'Žádný příslib výsledku',
+          paragraphs: [
+            'Žádná část této stránky není příslibem ohledně výsledku věci, vyhovění přihlášce nebo žádosti či ohledně pobytového a pracovního statusu.',
+            'Vnější odkazy slouží k orientaci; neslibujeme správnost ani aktuálnost obsahu třetích osob.',
+          ],
+        },
+      ],
+    },
+    columns: {
+      eyebrow: 'ČLÁNKY',
+      title: 'Články o taiwanském právu',
+      description:
+        'Články v češtině k častým otázkám taiwanského práva. Obsah je obecnou informací k okamžiku zveřejnění, nikoli právní radou k Vašemu případu.',
+      intro:
+        'Kancelář zveřejňuje články k častým otázkám taiwanského práva. Články dostupné v češtině jsou na této stránce; vedle nich jsou čtyři odkazy, z nichž každý otevře seznam článků v jednom původním jazyce.',
+      sections: [
+        {
+          heading: 'Čtyři seznamy podle jazyka',
+          paragraphs: [
+            'Tato část obsahuje čtyři odkazy: seznam článků v korejštině, v čínštině, v angličtině a v japonštině. Každý odkaz uvádí jazyk seznamu, takže předem víte, v jakém jazyce se obsah otevře.',
+            'Tyto čtyři seznamy jsou seznamy podle původního jazyka článků, nikoli seznamy překladů. Články dostupné v češtině jsou zvlášť na této stránce.',
+          ],
+        },
+        {
+          heading: 'Kam odkazy vedou',
+          paragraphs: [
+            'Zvolíte-li jeden ze čtyř odkazů, otevře se seznam článků v daném jazyce. Ze seznamu si text vyberete sami; celý obsah se zobrazí v původním jazyce článku.',
+            'Tato stránka obsah článků neshrnuje a nezaručuje, že určité téma je k dispozici ve všech čtyřech jazycích. Každý seznam obsahuje pouze texty zveřejněné v daném jazyce.',
+          ],
+        },
+        {
+          heading: 'Nakolik může článek sloužit k orientaci',
+          paragraphs: [
+            'Články jsou obecnými informacemi k okamžiku zveřejnění. Předpisy a jejich používání se mohou změnit a článek neobsahuje všechny okolnosti Vašeho případu.',
+            'Nezakládejte proto postup ve skutečné věci pouze na článku. Užijte jej k přehledu a své dokumenty projednejte zvlášť s advokátkou nebo advokátem; tato stránka není krokem porady.',
+          ],
+        },
+      ],
+    },
+  },
+};
+
+/**
+ * Hungarian guidance pack (batch 5). Hungarian has no grammatical gender, so
+ * the attorney's title `ügyvéd` needs no feminine form; her gender is carried by
+ * the surrounding text where the source text carries it. Formal address: Ön.
+ */
+export const hungarianGuidanceContent: GuidanceLocaleContent = {
+  languageName: 'Magyar',
+  nav: {
+    home: 'Kezdőlap',
+    services: 'Szolgáltatások',
+    about: 'Az iroda',
+    lawyers: 'Ügyvédek',
+    pricing: 'Költségek',
+    contact: 'Kapcsolat',
+    faq: 'Kérdések',
+    privacy: 'Adatvédelem',
+    disclaimer: 'Jogi közlemény',
+    columns: 'Cikkek',
+  },
+  contactCta: 'Megkeresés elküldése',
+  footerNotice:
+    'Ez a magyar oldal csak általános tájékoztatást ad az iroda tajvani jog szerinti munkájáról. Nem jogi tanácsadás egyedi ügyben, és egy üzenet elküldése önmagában nem hoz létre ügyvéd–ügyfél viszonyt.',
+  skipLink: 'A navigáció átugrása, ugrás a tartalomra',
+  menuLabel: 'Oldalak áttekintése',
+  languageLabel: 'Megjelenítés nyelve',
+  mega: {
+    services: {
+      description: 'Az iroda a tajvani jog szerinti fő ügycsoportokat viszi.',
+      viewAllLabel: 'Összes megtekintése',
+    },
+    columns: {
+      description: 'Cikkek a tajvani jog gyakori kérdéseiről.',
+      viewAllLabel: 'Összes megtekintése',
+    },
+    lawyers: {
+      description: 'Az ügyvédek bemutatása és a kapcsolatfelvétel módjai.',
+      viewAllLabel: 'Összes megtekintése',
+    },
+    pricing: {
+      description: 'Ez az oldal a munka terjedelmét és a költségek tisztázását ismerteti.',
+      viewAllLabel: 'Összes megtekintése',
+    },
+    faq: {
+      description: 'Gyakori kérdések az iroda tajvani munkájáról.',
+      viewAllLabel: 'Összes megtekintése',
+    },
+  },
+  notFoundTitle: 'Az oldal nem található',
+  notFoundText:
+    'A keresett oldal nem létezik, vagy áthelyezték. Visszatérhet a magyar kezdőlapra, és megtekintheti az elérhető tájékoztatást.',
+  backHomeLabel: 'A kezdőlapra',
+  readSourceLabel: 'A cikkek listájának megnyitása az eredeti nyelven',
+  home: {
+    heroScrollLabel: 'Görgetés lefelé',
+    heroColumnsCtaLabel: 'Cikkek megtekintése',
+    servicesDetailLabel: 'Részletek megtekintése',
+    servicesAssistanceBefore: 'Ha nem egyértelmű, melyik csoportba tartozik az ügye, a ',
+    servicesAssistanceLinkLabel: 'Kapcsolat',
+    servicesAssistanceAfter: ' oldal elmagyarázza, hogyan készítsen olyan összefoglalót, amelyet egy ügyvéd megvizsgál.',
+    columnsViewAllLabel: 'Az összes cikk megtekintése',
+    columnsReadMoreLabel: 'Tovább olvasom',
+    columnsReviewLabel: 'Ellenőrizte Wei Tseng ügyvéd',
+    columnsOriginalLanguageBadge: 'Eredeti nyelv',
+    columnsOriginalLanguageNote:
+      'A következő cikkek magyarul még nem érhetők el. A lista az eredeti nyelven marad, és a megfelelő nyelvi oldalt nyitja meg; a tartalom automatikusan nem kerül fordításra.',
+    imageBandAlt: 'Hagyományos tajvani sanheyuan udvarház (三合院) és egy modern pavilon nappali fényben',
+    videoPauseLabel: 'Videó szüneteltetése',
+    videoPlayLabel: 'Videó lejátszása',
+    videoReplayLabel: 'Videó újrajátszása',
+  },
+  pages: {
+    home: {
+      eyebrow: 'TÁJÉKOZTATÁS',
+      title: 'Jogi szolgáltatások Tajvanon — magyar nyelvű tájékoztatás',
+      description:
+        'Általános magyar nyelvű ismertetés a Hovering International Law Firm tajvani munkájának köréről, a tanácsadás nyelveiről és az első kapcsolatfelvételről.',
+      intro:
+        'A Hovering International Law Firm külföldi ügyfeleket kísér — köztük tajvani kötődésűeket — tajvani jogi ügyekben: befektetés és cégalapítás, polgári jogi jogviták, házasság, család és öröklés, munkajog, büntetőügyek és szellemi tulajdon. Ez a magyar rész abban segít, hogy felismerje, milyen munka tartozik a körünkbe, mit készítsen elő, és hogyan érhet el minket. Általános tájékoztatás, nem az Ön ügyére szabott jogi tanácsadás.',
+      sections: [
+        {
+          heading: 'Mivel foglalkozunk',
+          paragraphs: [
+            'A Hovering International Law Firm Tajvanon bejegyzett ügyvédi iroda. Tajvani jog szerint dolgozik, irodái Tajpejben (臺北), Kaohsiungban (高雄), Taicsungban (臺中) és Pingtungban (屏東) működnek. Vállalatoknak adunk tanácsot, peres eljárásokat viszünk, és külföldi ügyfeleket kísérünk a Tajvanon szükséges lépésekben.',
+            'Az itteni tartalom mind általános. Egy ügy kimenetele a tényektől, az alkalmazandó szabályoktól és az időponttól függ. Ez a tájékoztatás nem pótolja az ügyvéddel folytatott, az Ön iratain alapuló megbeszélést.',
+          ],
+        },
+        {
+          heading: 'Az oldal nyelve és a tanácsadás nyelve nem ugyanaz',
+          paragraphs: [
+            'Ez az oldal magyarul készült, de az ügyvéddel folytatott tanácsadás kizárólag a négy tanácsadási nyelven zajlik: angolul, kínaiul (中文), japánul és koreaiul. A magyar tájékoztatás olvasása nem jelenti azt, hogy az ügyvéddel folytatott megbeszélés magyarul történik.',
+            'Nem ígérünk tolmácsot, válaszadási határidőt és ezen az oldalon keresztül időpontot sem. Ha a négy nyelv egyikét sem tudja használni, a «Kapcsolat» oldal elmagyarázza, hogyan vizsgáljuk meg a kommunikáció módját.',
+          ],
+        },
+        {
+          heading: 'Ügycsoportok',
+          paragraphs: [
+            'A munka köre az alábbi hat csoportot foglalja magában. A «Szolgáltatások» oldal mindegyiket pontosabban írja le, és megjelöli, mit nem ígérünk.',
+          ],
+          items: [
+            'Befektetés és cégalapítás Tajvanon',
+            'Polgári jogi jogviták és kártérítés',
+            'Házasság, család és öröklés',
+            'Munkaügyi jogviták',
+            'Büntetőügyek',
+            'Szellemi tulajdon: védjegy, szabadalom és szerzői jog',
+          ],
+        },
+        {
+          heading: 'Hol kezdje',
+          paragraphs: [
+            'Olvassa el a «Szolgáltatások» oldalt annak ellenőrzésére, hogy ügye a körünkbe tartozik-e, majd a «Költségek» és a «Kapcsolat» oldalt, hogy megtudja, hogyan rögzítjük a terjedelmet, és hogyan erősítjük meg a költségeket a munka megkezdése előtt.',
+            'Az üzenet küldésekor az összefoglalót a saját nyelvén is megírhatja. Az eredeti szöveget úgy őrizzük meg, ahogyan megírta, és automatikusan nem fordítjuk le. Az elküldött üzenet vizsgálatra váró megkeresés: még nem tanácsadás és nem megerősített időpont.',
+          ],
+        },
+      ],
+    },
+    services: {
+      eyebrow: 'SZOLGÁLTATÁSOK',
+      title: 'Milyen ügyeket viszünk',
+      description:
+        'Az iroda hat tajvani ügycsoportja és azok a korlátok, amelyeket érdemes elsőként ismerni.',
+      intro:
+        'Az alábbiakban azok a csoportok szerepelnek, amelyeket ténylegesen viszünk, és azok a kérdések, amelyek a kezdeti szakaszban gyakran felmerülnek. A leírás abban segít, hogy megítélje, ügye a körünkbe tartozik-e; általános, és nem egyedi ügy jogi elemzése.',
+      sections: [
+        {
+          heading: 'Befektetés és cégalapítás Tajvanon',
+          paragraphs: [
+            'Külföldi befektetőket és vállalkozásokat kísérünk tajvani társaság alapításában vagy működtetésében: társasági forma megválasztása, iratok előkészítése és benyújtása, tőke befizetése, banki kérdések, a székhely vizsgálata és ágazati követelmények. Támogatjuk a Tajvanon történő alapításból és működésből eredő könyvviteli és adózási feladatokat is.',
+            'Az eljárás menete és a határidők a formától, a befektetőtől, az ágazattól, a banktól és a már rendelkezésre álló iratoktól függően eltérnek. A cégalapítás önmagában nem vezet tartózkodási engedélyhez (居留) vagy munkavállalási engedélyhez (工作許可): ezek külön eljárások, amelyeket az adott személy helyzete alapján bírálnak el.',
+          ],
+        },
+        {
+          heading: 'Polgári jogi jogviták és kártérítés',
+          paragraphs: [
+            'Ez a csoport szerződéses jogvitákat, jogellenes károkozásból eredő kártérítést és fogyasztói jogvitákat foglal magában. A munka rendszerint az események időrendjével, az iratok és a meglévő bizonyítékok áttekintésével kezdődik, és csak ezután következnek a további lépések.',
+            'A menetet a határidők — köztük az elévülés — és a bizonyítékok teljessége szabják meg. Ezért az ismert dátumokat minél előbb adja meg. Őrizze meg a szerződéseket, üzeneteket, fizetési bizonylatokat vagy a helyszínről készült fényképeket, és említse meg őket az első üzenetben.',
+          ],
+        },
+        {
+          heading: 'Házasság, család és öröklés',
+          paragraphs: [
+            'Válást (離婚), vagyonmegosztást, a kiskorú gyermekkel kapcsolatos jogok és kötelezettségek gyakorlását és viselését (未成年子女權利義務之行使或負擔), a kapcsolattartást (會面交往) és az öröklést (繼承) visszük, akkor is, ha a felek vagy a vagyon különböző államokban vannak. A határon átnyúló családi ügyek gyakran igénylik az anyakönyvi nyilvántartás (戶籍), az okiratok alakjának és tajvani bizonyító erejének további vizsgálatát.',
+            'Mivel a családi ügyekhez gyakran határidők és párhuzamos eljárások társulnak, az első összefoglalónak meg kell jelölnie a felek viszonyát, a jelenlegi lakóhelyet és a már folyamatban lévő eljárásokat.',
+          ],
+        },
+        {
+          heading: 'Munkaügyi jogviták',
+          paragraphs: [
+            'Ez a csoport a munkaviszony megszűnését, a tajvani jog szerinti végkielégítést (資遣費; nem azonosítható más államok hasonló jogintézményeivel), a díjazást és a munkaszerződésből (勞動契約) eredő jogvitákat foglalja magában, munkavállalói és munkáltatói oldalon egyaránt. A vizsgálat során elkülönítjük a megszűnés okát a felmondási idő, a kifizetés és a határidők kérdéseitől.',
+            'A döntő iratok rendszerint a munkaszerződés, a belső munkarend (工作規則), a bérjegyzékek és a felek levelezése. Ha ezek még megvannak, említse meg az összefoglalóban.',
+          ],
+        },
+        {
+          heading: 'Büntetőügyek',
+          paragraphs: [
+            'A nyomozási szakaszban és a bíróság előtt egyaránt kísérünk, gyanúsítottakat és vádlottakat éppúgy, mint sértetteket, és vizsgáljuk az üzleti tevékenység büntetőjogi kockázatait.',
+            'A büntetőügyekben gyakran rövidek a határidők, és a szakaszok kötöttek. Ha már kapott iratot a nyomozó hatóságtól vagy a bíróságtól, adja meg időben az iraton szereplő dátumot, hogy a tartalom a megfelelő sorrendben kerüljön vizsgálatra.',
+          ],
+        },
+        {
+          heading: 'Szellemi tulajdon',
+          paragraphs: [
+            'Támogatjuk a védjegyek (商標) és szabadalmak (專利) bejegyzését, a szerzői jogot és az e jogokkal kapcsolatos tajvani jogvitákat.',
+            'Ebben a csoportban a lépések sorrendje dönt: az oltalom terjedelme, a bejelentés időpontja és a tényleges használat befolyásolja a választást. A bejelentés benyújtása önmagában nem jelenti, hogy annak helyt is adnak.',
+          ],
+        },
+        {
+          heading: 'A terjedelem és annak megerősítése',
+          paragraphs: [
+            'Az iroda tajvani jog szerint dolgozik, és a fenti csoportokba tartozó ügyeket viszi. Az egyes ügyek terjedelmét külön erősítjük meg azt követően, hogy egy ügyvéd megvizsgálta az üzenetét.',
+            'A tartózkodási jogállást, a munkavállalási engedélyt és a hasonló kérdéseket az iratok és az adott személy helyzete alapján ítélik meg, nem az állampolgárság alapján. Ha ügyének egy része ezeket érinti, jelezze a kapcsolatfelvételkor. Ez az oldal nem ígér eredményt és válaszadási határidőt sem.',
+          ],
+        },
+      ],
+    },
+    about: {
+      eyebrow: 'AZ IRODA',
+      title: 'A Hovering International Law Firmről',
+      description:
+        'Alapadatok erről a tajvani ügyvédi irodáról, annak irodáiról és a külföldi felekkel végzett munkáról.',
+      intro:
+        'A Hovering International Law Firm tajvani ügyvédi iroda. Ügyvédei a vállalati tanácsadástól a peres eljárásig dolgoznak. Ez a rész az iroda létrejöttét, székhelyeit és a külföldi felekkel végzett munkát mutatja be.',
+      sections: [
+        {
+          heading: 'Alapítás és felépítés',
+          paragraphs: [
+            'A Hovering International Law Firmet (昊鼎國際法律事務所) 2016-ban alapították a National Taiwan University (國立臺灣大學) egyetemen végzett ügyvédek. A kínai név, a 昊鼎, a 昊 («tágas ég») írásjegyet köti össze a 鼎 («szilárd alap») írásjeggyel, és az iroda alapítás óta követett irányát fejezi ki.',
+            'Irodáink Tajpejben (臺北), Kaohsiungban (高雄), Taicsungban (臺中) és Pingtungban (屏東) működnek. A kaohsiungi iroda a vállalatvezetésre összpontosít, és polgári, büntető- és közigazgatási jogvitákat visz. A taicsungi iroda építési ügyekkel, szellemi tulajdonnal, valamint koreai és japán kötődésű ügyekkel foglalkozik. A pingtungi irodát 2017-ben nyitottuk a helyi igények miatt.',
+            'Az ügyvédi munka mellett 2020 óta működik a Hovering Accounting Office is, amely könyvvitelt és adótervezést kínál vállalkozóknak és vagyonnal rendelkező magánszemélyeknek.',
+          ],
+        },
+        {
+          heading: 'Munka külföldi felekkel',
+          paragraphs: [
+            'A határon átnyúló munka cégalapítást, vízumokat, védjegy- és szabadalmi bejelentéseket, jogi kockázatvizsgálatot és vállalati adótanácsadást foglal magában. A taicsungi iroda különösen építési ügyekkel, szellemi tulajdonnal, valamint koreai és japán kötődésű ügyekkel foglalkozik. Wei Tseng ügyvéd (曾雋崴) koreai, japán és további nemzetközi ügyfeleket kísér a megjelölt csoportokban.',
+            'Hogy elvállalhatunk-e egy ügyet, a tartalomtól és a kommunikáció nyelvétől függ. Ha ügye a megjelölt csoportokba tartozik, és a négy tanácsadási nyelv valamelyikén megtárgyalható, összefoglalót küldhet vizsgálatra.',
+          ],
+        },
+        {
+          heading: 'Amikor megkeres minket',
+          paragraphs: [
+            'Az összefoglaló beérkezése után egy ügyvéd megvizsgálja a tartalmat, majd beszél a munka lehetséges terjedelméről, a még szükséges iratokról és a következő lépésekről. Adó- vagy könyvviteli kérdésekben az iroda egyetlen folyamatban dolgozhat együtt a könyvviteli résszel.',
+            'Minden ügy kimenetele a tényektől és a rendelkezésre álló iratoktól függ; eredményt nem ígérünk. Ha helyzetére kötelező erejű választ kíván, az iratokat a négy tanácsadási nyelv valamelyikén kell megtárgyalni egy ügyvéddel.',
+          ],
+        },
+      ],
+    },
+    lawyers: {
+      eyebrow: 'ÜGYVÉDEK',
+      title: 'A Hovering nemzetközi csapata',
+      description: 'A Hovering ügyvédeinek, működési vezetésének és társult könyvvizsgálatának bemutatása.',
+      intro: '',
+      sections: [],
+    },
+    pricing: {
+      eyebrow: 'KÖLTSÉGEK',
+      title: 'Hogyan rögzítjük a munka terjedelmét és a költségeket',
+      description:
+        'A sorrend ismertetése: előbb a munka terjedelme, majd a költségek megerősítése, és hogy ez az oldal miért nem tartalmaz árlistát.',
+      intro:
+        'Ez az oldal azt ismerteti, hogyan alakulnak a költségek, nem pedig azok összegét. Az összeg az adott ügy munkaterjedelmétől függ, és csak akkor mond valamit, ha ez a terjedelem világos.',
+      sections: [
+        {
+          heading: 'Először a munka terjedelmét rögzítjük',
+          paragraphs: [
+            'Az azonos típusú ügyek nagyon eltérő ráfordítást igényelhetnek a felek számától, a rendelkezésre álló iratoktól, a betartandó határidőktől és attól függően, hogy megindult-e már eljárás. Ezért az első lépés mindig annak rögzítése, mi tartozik a munkába és mi nem.',
+            'Az elején küldött összefoglaló ennek a terjedelemnek az alapja. Minél világosabban írja le az eseményeket, a kérését és a határidőket, annál pontosabban határozható meg a terjedelem.',
+          ],
+        },
+        {
+          heading: 'A költségeket a munka megkezdése előtt erősítjük meg',
+          paragraphs: [
+            'Ha a munka terjedelme világos, a költségek összegét és számítási módját a munka megkezdése előtt megbeszéljük és megerősítjük Önnel. Ha a terjedelem közben változik, azt újból meg kell erősíteni.',
+            'Ez az oldal nem árajánlat, és nem keletkeztet fizetési kötelezettséget.',
+          ],
+        },
+        {
+          heading: 'A tanácsadás díjköteles lehet',
+          paragraphs: [
+            'Az ügyvéddel folytatott tanácsadás díjköteles szolgáltatás lehet. Ez az oldal nem állítja, hogy az első beszélgetés ingyenes, és egyetlen része sem értelmezhető így.',
+            'Ha a tanácsadás díjköteles, annak összegét és a fizetés módját a tanácsadás előtt közöljük.',
+          ],
+        },
+        {
+          heading: 'Miért nem szerepelnek itt díjszabások',
+          paragraphs: [
+            'A költségek magától az ügytől függenek: a ráfordítástól, a felek számától, az iratoktól, a határidőktől és attól, hogy folyik-e már eljárás. Egy előre rögzített szám nem mutatná meg az Ön ügyének költségeit. Ezért előbb a munka terjedelmét rögzítjük, és a költségeket azután, a munka megkezdése előtt közöljük.',
+            'A munkadíjon felül bírósági, hatósági vagy harmadik személyeknél felmerülő költségek keletkezhetnek. Ezek a munkadíjtól elkülönülnek, és az adott eljárástól függenek.',
+          ],
+        },
+      ],
+    },
+    contact: {
+      eyebrow: 'KAPCSOLAT',
+      title: 'Hogyan érheti el az irodát',
+      description:
+        'Az oldal nyelve, a tanácsadás nyelvei, a teendő akkor, ha a négy nyelv egyikét sem tudja használni, és amit ez az oldal nem ígér.',
+      intro:
+        'Mielőtt írna nekünk, különítse el az alábbi három dolgot. Gyakran keverednek, pedig mást jelentenek.',
+      sections: [
+        {
+          heading: 'Három dolog, amelyet külön kell tartani',
+          paragraphs: [
+            'Az oldal megjelenítési nyelve, az ügyvéddel folytatott tanácsadás nyelve és az a nyelv, amelyen ír, három különböző dolog.',
+          ],
+          items: [
+            'Az oldal nyelve: ez a tájékoztatás magyarul készült.',
+            'A tanácsadás nyelve: a tanácsadás angolul, kínaiul (中文), japánul és koreaiul zajlik.',
+            'Az Ön írásának nyelve: az összefoglalót a saját nyelvén írhatja; az eredeti szöveg változatlanul megmarad.',
+          ],
+        },
+        {
+          heading: 'Ha a négy tanácsadási nyelv egyikét sem tudja használni',
+          paragraphs: [
+            'A kapcsolatfelvételi űrlapon választhatja azt, hogy «A kommunikáció módját meg kell erősíteni». Válaszolunk, hogy megvizsgáljuk a kommunikáció járható módját, ha van ilyen; más nyelvű szolgáltatás nem garantált, és válaszadási határidőt nem ígérünk.',
+            'Ez csak vizsgálati lépés, nem ígéret. Nem ígérünk tolmácsot, magyar vagy a négy megjelölt nyelven kívüli más nyelvű szolgáltatást, és azt sem, hogy minden ügyet elvállalunk.',
+          ],
+        },
+        {
+          heading: 'Mit tartalmazzon az első üzenet',
+          paragraphs: [
+            'Adja meg, mi történt, milyen segítségre van szüksége, milyen kötődése van az ügynek Tajvanhoz, és a határidőt, ha ismer ilyet. Ha már kapott bírósági vagy hatósági iratot, adja meg az iraton szereplő dátumot.',
+            'A kezdeti szakaszban még nem kell útlevélszámot, okmányszámot, számlaadatokat, egészségügyi dokumentációt vagy a bizonyítékok összességét elküldenie. Várja meg az ügyvéd útmutatását, és az érzékeny iratokat csak azután, biztonságos úton küldje el.',
+          ],
+        },
+        {
+          heading: 'Amit ez az oldal nem ígér',
+          paragraphs: [
+            'Nem ígérünk válaszadási határidőt, ezen az oldalon keresztül nem erősítünk meg időpontot, nem ígérünk meghatározott ügyvédet, és tolmácsot sem biztosítunk. Az írásbeli fordítás más kérdés: az üzenetét automatikusan nem fordítjuk le.',
+            'Ha megkeresést küld, a tartalom megőrzésre kerül, és vizsgálatra vár. Ha egy idő után nem kap választ, újra írhat a kapcsolatfelvételi oldalon megadott e-mail-címre.',
+          ],
+        },
+      ],
+    },
+    faq: {
+      eyebrow: 'KÉRDÉSEK',
+      title: 'Gyakori kérdések',
+      description:
+        'Magyarázatok a munka köréről, az előkészületekről, a nyelvekről, a költségekről és arról, mit jelent egy elküldött megkeresés.',
+      intro:
+        'Az alábbi kérdésekre általános tájékoztatás szintjén válaszolunk. Az Ön ügyére szabott válasz csak azután lehetséges, hogy egy ügyvéd megvizsgálta az iratokat.',
+      sections: [
+        {
+          heading: 'Hogyan használja ezt a részt',
+          paragraphs: [
+            'Ha nem talál választ a saját helyzetére, a válasz rendszerint különös tényektől függ. Ezeket írja bele az összefoglalóba ahelyett, hogy ebből az oldalból következtetne rájuk.',
+          ],
+        },
+      ],
+      faqs: [
+        {
+          question: 'Milyen ügyeket visz az iroda?',
+          answer:
+            'Hat csoportot viszünk: befektetés és cégalapítás Tajvanon, polgári jogi jogviták és kártérítés, házasság, család és öröklés, munkaügyi jogviták, büntetőügyek és szellemi tulajdon. Hogy egy ügyet elvállalunk-e, a tartalom vizsgálata után dől el.',
+        },
+        {
+          question: 'Mit készítsek elő a kapcsolatfelvétel előtt?',
+          answer:
+            'Készítsen rövid összefoglalót az eseményekről, a kéréséről, a Tajvanhoz fűződő kapcsolatról és a határidőről, ha van ilyen. Ha már van bírósági vagy hatósági irat, adja meg a dátumot. Ebben a szakaszban még nem kell személyazonosító okmányokat vagy a bizonyítékok összességét elküldenie.',
+        },
+        {
+          question: 'Lehetséges magyar nyelvű tanácsadás?',
+          answer:
+            'Nem. Ez a tájékoztatás magyarul készült, de az ügyvéddel folytatott tanácsadás kizárólag angolul, kínaiul (中文), japánul és koreaiul zajlik. Tolmácsot sem ígérünk. Az írásbeli fordítás más kérdés: az eredeti szöveget, amelyet ír, úgy őrizzük meg, és automatikusan nem fordítjuk le.',
+        },
+        {
+          question: 'Mi a teendő, ha a négy nyelv egyikét sem tudom használni?',
+          answer:
+            'A megkeresés küldésekor válassza azt, hogy «A kommunikáció módját meg kell erősíteni». Válaszolunk, hogy megvizsgáljuk a kommunikáció módját, de más nyelvű szolgáltatás nem garantált. Ez vizsgálati lépés, nem ígéret arra, hogy más nyelven tudunk dolgozni.',
+        },
+        {
+          question: 'Mi történik a magyar nyelvű szövegemmel?',
+          answer:
+            'Az eredeti szöveget, amelyet ír, úgy őrizzük meg, ahogyan van, és automatikusan nem fordítjuk le. Ha szükséges, a további kommunikáció nyelvét megerősítjük Önnel.',
+        },
+        {
+          question: 'Megtörtént-e már a tanácsadás azzal, hogy a megkeresés elment?',
+          answer:
+            'Nem. Az elküldött megkeresés ügyvédi vizsgálatra vár. Nem jogi állásfoglalás, nem megerősített időpont, és az elküldés önmagában nem hoz létre ügyvéd–ügyfél viszonyt.',
+        },
+        {
+          question: 'Hogyan számítják a költségeket?',
+          answer:
+            'Először a munka terjedelmét rögzítjük, majd a költségek összegét és számítási módját a munka megkezdése előtt megerősítjük Önnel. Ez az oldal nem ad meg összegeket, és nem állítja, hogy az első beszélgetés ingyenes.',
+        },
+        {
+          question: 'Mi a teendő, ha az ügyem nagyon sürgős?',
+          answer:
+            'A határidőt vagy a hivatalos iraton szereplő dátumot írja az összefoglaló elejére, hogy ezek a dátumok a vizsgálatkor láthatók legyenek. Ennek az oldalnak nincs sürgősségi csatornája, és nem biztosít válaszadási határidőt; ha ügye nem tűr halasztást, párhuzamosan keressen más utakat a lakóhelyén.',
+        },
+      ],
+    },
+    privacy: {
+      eyebrow: 'ADATVÉDELEM',
+      title: 'A kapcsolatfelvételi űrlapon gyűjtött adatok',
+      description:
+        'Mit gyűjt a kapcsolatfelvételi űrlap ebben a magyar részben, hogyan kezeljük az eredeti szöveget, és hogyan érhet el minket az adataival kapcsolatban.',
+      intro:
+        'Ez a rész csak az e tájékoztató oldalakon található kapcsolatfelvételi űrlapra vonatkozik. Az adatkezelést írja le, nem műszaki garanciát.',
+      sections: [
+        {
+          heading: 'Milyen adatokat gyűjtünk',
+          paragraphs: [
+            'Ha ebben a részben az űrlapon keresztül megkeresést küld, a következő adatokat rögzítjük:',
+          ],
+          items: [
+            'Az Ön által megadott név',
+            'A válaszhoz használt e-mail-cím',
+            'Az oldal megjelenítési nyelve a küldés pillanatában',
+            'Az a nyelv, amelyen írt',
+            'Az Ön által kívánt tanácsadási nyelv',
+            'Az eredeti szöveg, amelyet írt',
+            'Az Ön hozzájárulása a megkeresés elküldéséhez',
+            'Egy iktatószám a megkeresés visszakereséséhez',
+          ],
+        },
+        {
+          heading: 'Az eredeti szöveg változatlanul marad',
+          paragraphs: [
+            'A szövegét pontosan úgy őrizzük meg, ahogyan megírta, és automatikusan nem fordítjuk le. Ha az ügyintézéshez fordítás szükséges, azt külön megbeszéljük Önnel.',
+            'Mivel az eredeti szöveget megőrizzük, a kezdeti szakaszban ne írja le azt, ami még nem szükséges, például az útlevélszámot, az okmányszámot vagy a számlaadatokat.',
+          ],
+        },
+        {
+          heading: 'A tárolás helye és a hozzáférés',
+          paragraphs: [
+            'A küldemény tartalmát nyilvánosan nem hozzáférhető helyen tároljuk. Csak az irodán belüli jogosult személyek férhetnek hozzá, a megkeresés intézése céljából.',
+            'Ez az oldal nem ad feltétlen biztonsági garanciát. Egyetlen továbbítási út és egyetlen tárolási hely sem teljesen biztonságos; az érzékeny iratokat ezért csak az ügyvéd külön útmutatása után küldje el.',
+          ],
+        },
+        {
+          heading: 'A felhasználás célja',
+          paragraphs: [
+            'Az elküldött adatok a megkeresés vizsgálatát, az Önnek adott választ, a kommunikáció módjának tisztázását és — ha a munkát elvállaljuk — az ügyintézést szolgálják.',
+            'Az adatokat külön hozzájárulás nélkül nem használjuk marketingre.',
+          ],
+        },
+        {
+          heading: 'Értesítés és iktatószám',
+          paragraphs: [
+            'Ha a megkeresés sikeresen elment, a rendszer értesíti az irodát. Ha ez az értesítés még nincs megerősítve, a szövege akkor is tárolva marad, és nem vész el.',
+            'Az iktatószám a megkeresés visszakeresésére szolgál a nyilvántartásunkban. A mentés után jelenik meg; új kapcsolatfelvételkor megadhatja.',
+          ],
+        },
+        {
+          heading: 'Az Ön jogai és a kapcsolatfelvétel útja',
+          paragraphs: [
+            'Kérheti adataihoz a hozzáférést, azok helyesbítését vagy törlését, illetve visszavonhatja a hozzájárulást a kapcsolatfelvételi oldalon megadott e-mail-címen. Ha jogszabályi vagy eljárási megőrzési kötelezettség áll fenn, elmagyarázzuk a korlátozást.',
+            'Ez az oldal nem ad meg rögzített megőrzési időt, mert a tényleges időtartam az ügy további alakulásától és a kapcsolódó kötelezettségektől függ. Ha korábbi törlést kíván, jelezze a kapcsolatfelvételkor.',
+          ],
+        },
+        {
+          heading: 'Tárolási hely és szolgáltatók',
+          paragraphs: [
+            'Ezt a webhelyet a Vercel szolgáltatja, és a küldeménye e szolgáltatás nem nyilvános objektumtárolójában marad. Az e-maileket az iroda által használt levelezőszolgáltatáson keresztül küldjük.',
+            'Egyes szolgáltatók kiszolgálói Tajvanon kívül is lehetnek, így adatai ott is tárolhatók és kezelhetők. Ha a tárolás célja teljesült, az adatokat késedelem nélkül töröljük; azok az adatok, amelyeket az alkalmazandó szabályok szerint meg kell őrizni, erre az időre megmaradnak. A személyes adatokkal kapcsolatos kéréseket a wei@hoveringlaw.com.tw címen fogadjuk.',
+          ],
+        },
+      ],
+    },
+    disclaimer: {
+      eyebrow: 'JOGI KÖZLEMÉNY',
+      title: 'Az oldalon szereplő tájékoztatás köre és korlátai',
+      description:
+        'A tájékoztatás általános jellege, a jogi keret, és az ügyvéd–ügyfél viszony létrejöttének feltételei.',
+      intro:
+        'Ez a rész tisztázza, mit tudnak ezek a magyar tájékoztató oldalak megtenni Önért, és mit nem.',
+      sections: [
+        {
+          heading: 'Csak általános tájékoztatás',
+          paragraphs: [
+            'Ezeknek az oldalaknak a tartalma általános tájékoztatásként készült. Nem jogi tanácsadás az Ön ügyében, és nem pótolja iratainak vizsgálatát.',
+            'Egy ügy kimenetele a tényektől, az alkalmazandó szabályoktól és az időponttól függ; két látszólag hasonló helyzet eltérően végződhet.',
+          ],
+        },
+        {
+          heading: 'Jogi keret',
+          paragraphs: [
+            'Az iroda tajvani jog szerint működik, és ez az oldal csak az e keretben végzett munkáról szól.',
+            'A tartalom nem tanácsadás a tajvanitól eltérő más jogrend szerint, ideértve az Ön lakóhelyének jogát is. Ha ügyének egy része más jogrendet érint, tisztázzuk Önnel, milyen szakképzett személy szükséges ahhoz a részhez.',
+          ],
+        },
+        {
+          heading: 'Az ügyvéd–ügyfél viszony nem jön létre magától',
+          paragraphs: [
+            'Ennek az oldalnak az elolvasása, egy űrlap vagy e-mail elküldése önmagában nem hoz létre ügyvéd–ügyfél viszonyt.',
+            'Ez a viszony csak azt követően jön létre, hogy az ügyet megvizsgálták, és mindkét fél megerősítette a munka elvállalását.',
+          ],
+        },
+        {
+          heading: 'Nincs ígéret az eredményre',
+          paragraphs: [
+            'Ennek az oldalnak egyetlen része sem ígéret egy ügy kimenetelére, egy bejelentés vagy kérelem elfogadására, illetve a tartózkodási és munkavállalási jogállásra.',
+            'A külső hivatkozások tájékozódást szolgálnak; harmadik személyek tartalmának sem helyességét, sem naprakészségét nem ígérjük.',
+          ],
+        },
+      ],
+    },
+    columns: {
+      eyebrow: 'CIKKEK',
+      title: 'Cikkek a tajvani jogról',
+      description:
+        'Magyar nyelvű cikkek a tajvani jog gyakori kérdéseiről. A tartalom a közzététel időpontjában érvényes általános tájékoztatás, nem az Ön ügyére szabott jogi tanácsadás.',
+      intro:
+        'Az iroda cikkeket tesz közzé a tajvani jog gyakori kérdéseiről. A magyarul elérhető cikkek ezen az oldalon vannak; mellettük négy hivatkozás található, amelyek egy-egy eredeti nyelv cikklistáját nyitják meg.',
+      sections: [
+        {
+          heading: 'Négy lista nyelvenként',
+          paragraphs: [
+            'Ez a rész négy hivatkozást tartalmaz: a koreai, a kínai, az angol és a japán nyelvű cikkek listáját. Mindegyik hivatkozás megjelöli a lista nyelvét, így előre tudja, milyen nyelven nyílik meg a tartalom.',
+            'Ez a négy lista a cikkek eredeti nyelve szerinti lista, nem fordítási lista. A magyarul elérhető cikkek külön, ezen az oldalon találhatók.',
+          ],
+        },
+        {
+          heading: 'Hová vezetnek a hivatkozások',
+          paragraphs: [
+            'Ha a négy hivatkozás egyikét választja, az adott nyelv cikklistája nyílik meg. A listából Ön választja ki a szöveget; a teljes tartalom a cikk eredeti nyelvén jelenik meg.',
+            'Ez az oldal nem foglalja össze a cikkek tartalmát, és nem garantálja, hogy egy téma mind a négy nyelven elérhető. Minden lista csak az adott nyelven közzétett szövegeket tartalmazza.',
+          ],
+        },
+        {
+          heading: 'Mennyiben szolgálhat egy cikk tájékozódásul',
+          paragraphs: [
+            'A cikkek a közzététel időpontjában érvényes általános tájékoztatást adnak. A szabályok és azok alkalmazása változhat, és egy cikk nem tartalmazza az Ön ügyének minden körülményét.',
+            'Ezért valós ügyben ne alapozzon eljárást pusztán egy cikkre. Használja áttekintésre, és iratait külön beszélje meg egy ügyvéddel; ez az oldal nem a tanácsadás lépése.',
+          ],
+        },
+      ],
+    },
+  },
+};
+
+/**
+ * Romanian guidance pack (batch 5). Formal address: dumneavoastră. Attorney Wei
+ * Tseng is female, so the pack uses `avocata` and feminine agreement; the mixed
+ * team is named "avocatele și avocații".
+ */
+export const romanianGuidanceContent: GuidanceLocaleContent = {
+  languageName: 'Română',
+  nav: {
+    home: 'Acasă',
+    services: 'Servicii',
+    about: 'Cabinetul',
+    lawyers: 'Avocați',
+    pricing: 'Costuri',
+    contact: 'Contact',
+    faq: 'Întrebări',
+    privacy: 'Date personale',
+    disclaimer: 'Avertismente',
+    columns: 'Articole',
+  },
+  contactCta: 'Trimiteți o solicitare',
+  footerNotice:
+    'Această pagină în limba română conține doar informații generale despre activitatea cabinetului potrivit dreptului taiwanez. Nu este consultanță juridică pentru un caz concret, iar trimiterea unui mesaj nu creează prin ea însăși o relație între avocată sau avocat și client.',
+  skipLink: 'Săriți navigarea și mergeți la conținut',
+  menuLabel: 'Lista paginilor',
+  languageLabel: 'Limba de afișare',
+  mega: {
+    services: {
+      description: 'Cabinetul tratează grupele principale de lucrări potrivit dreptului taiwanez.',
+      viewAllLabel: 'Vedeți tot',
+    },
+    columns: {
+      description: 'Articole despre întrebări frecvente din dreptul taiwanez.',
+      viewAllLabel: 'Vedeți tot',
+    },
+    lawyers: {
+      description: 'Prezentarea avocatelor și avocaților și a modalităților de contact.',
+      viewAllLabel: 'Vedeți tot',
+    },
+    pricing: {
+      description: 'Această pagină explică întinderea lucrării și modul de clarificare a costurilor.',
+      viewAllLabel: 'Vedeți tot',
+    },
+    faq: {
+      description: 'Întrebări frecvente despre activitatea cabinetului în Taiwan.',
+      viewAllLabel: 'Vedeți tot',
+    },
+  },
+  notFoundTitle: 'Pagina nu a fost găsită',
+  notFoundText:
+    'Pagina căutată nu există sau a fost mutată. Vă puteți întoarce la pagina de start în limba română pentru a vedea informațiile disponibile.',
+  backHomeLabel: 'La pagina de start',
+  readSourceLabel: 'Deschideți lista articolelor în limba originală',
+  home: {
+    heroScrollLabel: 'Derulați în jos',
+    heroColumnsCtaLabel: 'Vedeți articolele',
+    servicesDetailLabel: 'Vedeți detaliile',
+    servicesAssistanceBefore: 'Dacă nu este clar din ce grupă face parte cazul dumneavoastră, pagina ',
+    servicesAssistanceLinkLabel: 'Contact',
+    servicesAssistanceAfter: ' explică cum să alcătuiți un rezumat pe care o avocată sau un avocat îl va examina.',
+    columnsViewAllLabel: 'Vedeți toate articolele',
+    columnsReadMoreLabel: 'Citiți mai departe',
+    columnsReviewLabel: 'Verificat de avocata Wei Tseng',
+    columnsOriginalLanguageBadge: 'Limba originală',
+    columnsOriginalLanguageNote:
+      'Articolele următoare nu sunt încă disponibile în limba română. Lista rămâne în limba originală și deschide pagina lingvistică corespunzătoare; conținutul nu este tradus automat.',
+    imageBandAlt: 'Curte tradițională taiwaneză sanheyuan (三合院) și un pavilion modern în lumina zilei',
+    videoPauseLabel: 'Opriți videoclipul',
+    videoPlayLabel: 'Redați videoclipul',
+    videoReplayLabel: 'Redați din nou videoclipul',
+  },
+  pages: {
+    home: {
+      eyebrow: 'INFORMAȚII',
+      title: 'Servicii juridice în Taiwan — informații în limba română',
+      description:
+        'Explicații generale în limba română despre aria de lucru a Hovering International Law Firm în Taiwan, despre limbile de consultanță și despre primul contact.',
+      intro:
+        'Hovering International Law Firm însoțește clienți din străinătate, inclusiv pe cei cu legătură cu Taiwanul, în chestiuni de drept taiwanez: investiții și înființare de societăți, litigii civile, căsătorie, familie și succesiuni, dreptul muncii, cauze penale și proprietate intelectuală. Această parte în limba română vă ajută să recunoașteți ce lucrări intră în aria noastră, ce să pregătiți și cum ne puteți contacta. Sunt informații generale, nu consultanță juridică pentru cazul dumneavoastră.',
+      sections: [
+        {
+          heading: 'Cu ce ne ocupăm',
+          paragraphs: [
+            'Hovering International Law Firm este un cabinet de avocatură stabilit în Taiwan. Lucrează potrivit dreptului taiwanez și are birouri în Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) și Pingtung (屏東). Consiliem întreprinderi, susținem cauze în fața instanțelor și însoțim clienți din străinătate în pașii necesari în Taiwan.',
+            'Tot conținutul de aici este general. Rezultatul unei cauze depinde de fapte, de normele aplicabile și de momentul respectiv. Aceste informații nu înlocuiesc discuția cu o avocată sau un avocat asupra documentelor dumneavoastră.',
+          ],
+        },
+        {
+          heading: 'Limba paginii și limba consultanței nu sunt același lucru',
+          paragraphs: [
+            'Această pagină este scrisă în limba română, dar consultanța cu o avocată sau un avocat se desfășoară numai în cele patru limbi de consultanță: engleză, chineză (中文), japoneză și coreeană. Citirea informațiilor în limba română nu înseamnă că discuția cu avocata sau avocatul va avea loc în limba română.',
+            'Nu promitem interpret, un termen de răspuns și nici o programare prin această pagină. Dacă nu puteți folosi niciuna dintre cele patru limbi, pagina «Contact» explică modul în care examinăm o cale de comunicare.',
+          ],
+        },
+        {
+          heading: 'Grupele de lucrări',
+          paragraphs: [
+            'Aria de lucru cuprinde următoarele șase grupe. Pagina «Servicii» descrie fiecare grupă mai exact și arată ce nu se promite.',
+          ],
+          items: [
+            'Investiții și înființare de societăți în Taiwan',
+            'Litigii civile și despăgubiri',
+            'Căsătorie, familie și succesiuni',
+            'Litigii de muncă',
+            'Cauze penale',
+            'Proprietate intelectuală: mărci, brevete și drept de autor',
+          ],
+        },
+        {
+          heading: 'De unde să începeți',
+          paragraphs: [
+            'Citiți pagina «Servicii» pentru a verifica dacă situația dumneavoastră intră în aria noastră, apoi «Costuri» și «Contact», pentru a afla cum se stabilește întinderea lucrării și cum se confirmă costurile înainte de începerea acesteia.',
+            'La trimiterea mesajului puteți scrie rezumatul în limba dumneavoastră. Textul original se păstrează exact așa cum l-ați scris și nu este tradus automat. Un mesaj trimis este o solicitare care așteaptă examinarea: nu este încă o consultanță și nici o programare confirmată.',
+          ],
+        },
+      ],
+    },
+    services: {
+      eyebrow: 'SERVICII',
+      title: 'Ce cauze tratăm',
+      description:
+        'Cele șase grupe de lucrări ale cabinetului în Taiwan și limitele pe care este util să le cunoașteți mai întâi.',
+      intro:
+        'Mai jos sunt grupele pe care le tratăm efectiv și întrebările care apar cel mai des în faza inițială. Expunerea vă ajută să apreciați dacă situația dumneavoastră intră în aria noastră; este generală și nu constituie o analiză juridică a unui dosar anume.',
+      sections: [
+        {
+          heading: 'Investiții și înființare de societăți în Taiwan',
+          paragraphs: [
+            'Însoțim investitori și întreprinderi străine la înființarea sau conducerea unei societăți în Taiwan: alegerea formei juridice, pregătirea și depunerea documentelor, vărsarea capitalului, chestiuni bancare, examinarea sediului și cerințele specifice domeniului. Sprijinim și contabilitatea și impozitele care decurg din înființarea și funcționarea în Taiwan.',
+            'Parcursul și termenele diferă după formă, investitor, domeniu, bancă și după documentele deja disponibile. Înființarea unei societăți nu duce prin ea însăși la un drept de ședere (居留) sau la o autorizație de muncă (工作許可): acestea sunt proceduri distincte, apreciate după situația persoanei.',
+          ],
+        },
+        {
+          heading: 'Litigii civile și despăgubiri',
+          paragraphs: [
+            'Această grupă cuprinde litigii din contracte, despăgubiri din fapte ilicite și litigii cu consumatorii. Lucrarea începe de regulă cu o cronologie, cu examinarea documentelor și a probelor existente, iar abia apoi urmează pașii următori.',
+            'Termenele, inclusiv prescripția, și caracterul complet al probelor determină parcursul. De aceea indicați cât mai devreme datele cunoscute. Păstrați contractele, mesajele, dovezile de plată sau fotografiile situației de la fața locului și menționați-le în primul mesaj.',
+          ],
+        },
+        {
+          heading: 'Căsătorie, familie și succesiuni',
+          paragraphs: [
+            'Tratăm divorțul (離婚), împărțirea bunurilor, exercitarea și asumarea drepturilor și obligațiilor față de copiii minori (未成年子女權利義務之行使或負擔), legăturile personale (會面交往) și succesiunile (繼承), inclusiv atunci când părțile sau bunurile se află în state diferite. Cauzele de familie transfrontaliere cer adesea o examinare suplimentară a evidenței populației (戶籍), a formei înscrisurilor și a puterii lor doveditoare în Taiwan.',
+            'Întrucât cauzele de familie aduc adesea termene și proceduri paralele, primul rezumat ar trebui să arate raportul dintre părți, domiciliul actual și procedurile deja în curs.',
+          ],
+        },
+        {
+          heading: 'Litigii de muncă',
+          paragraphs: [
+            'Această grupă cuprinde încetarea raportului de muncă, indemnizația potrivit dreptului taiwanez (資遣費; a nu se confunda cu instituții asemănătoare din alte state), remunerația și litigiile din contractul de muncă (勞動契約), atât din partea salariatului, cât și a angajatorului. La examinare deosebim motivul încetării de chestiunile privind preavizul, plata și termenele.',
+            'Documentele hotărâtoare sunt de obicei contractul de muncă, regulamentul intern (工作規則), fluturașii de salariu și corespondența părților. Dacă le mai aveți, menționați acest lucru în rezumat.',
+          ],
+        },
+        {
+          heading: 'Cauze penale',
+          paragraphs: [
+            'Însoțim în faza de urmărire penală și în fața instanței, atât persoane suspectate sau inculpate, cât și persoane vătămate, și apreciem riscurile penale ale activității de afaceri.',
+            'Cauzele penale au adesea termene scurte și etape fixe. Dacă ați primit deja un act de la organul de urmărire penală sau de la instanță, indicați din timp data de pe act, pentru ca conținutul să fie examinat în ordinea potrivită.',
+          ],
+        },
+        {
+          heading: 'Proprietate intelectuală',
+          paragraphs: [
+            'Sprijinim înregistrarea mărcilor (商標) și a brevetelor (專利), dreptul de autor și litigiile privind aceste drepturi în Taiwan.',
+            'În această grupă hotărăște ordinea pașilor: întinderea protecției, momentul depunerii și folosirea efectivă influențează alegerea. Depunerea unei cereri nu înseamnă prin ea însăși că aceasta va fi admisă.',
+          ],
+        },
+        {
+          heading: 'Întinderea lucrării și confirmarea ei',
+          paragraphs: [
+            'Cabinetul lucrează potrivit dreptului taiwanez și tratează cauze din grupele arătate mai sus. Întinderea fiecărei cauze se confirmă separat, după ce o avocată sau un avocat a examinat mesajul dumneavoastră.',
+            'Statutul de ședere, autorizația de muncă și chestiunile asemănătoare se apreciază după documente și după situația persoanei, nu după cetățenie. Dacă o parte a cauzei dumneavoastră atinge aceste puncte, arătați acest lucru la contactare. Această pagină nu promite un rezultat și nici un termen de răspuns.',
+          ],
+        },
+      ],
+    },
+    about: {
+      eyebrow: 'CABINETUL',
+      title: 'Despre Hovering International Law Firm',
+      description:
+        'Date de bază despre acest cabinet de avocatură taiwanez, despre birourile sale și despre lucrul cu părți străine.',
+      intro:
+        'Hovering International Law Firm este un cabinet de avocatură din Taiwan. Avocatele și avocații lucrează de la consultanța pentru întreprinderi până la procedura în fața instanței. Această parte descrie apariția cabinetului, sediile și lucrul cu părți străine.',
+      sections: [
+        {
+          heading: 'Înființare și structură',
+          paragraphs: [
+            'Hovering International Law Firm (昊鼎國際法律事務所) a fost înființat în 2016 de avocate și avocați care au studiat la National Taiwan University (國立臺灣大學). Denumirea chineză 昊鼎 unește caracterul 昊 («cer larg») cu 鼎 («temelie solidă») și descrie orientarea cabinetului încă de la înființare.',
+            'Avem birouri în Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) și Pingtung (屏東). Biroul din Kaohsiung se concentrează pe conducerea întreprinderilor și tratează litigii civile, penale și administrative. Biroul din Taichung tratează cauze din construcții, proprietate intelectuală și cauze cu legătură cu Coreea și Japonia. Biroul din Pingtung a fost deschis în 2017 pentru nevoile locale.',
+            'Pe lângă activitatea de avocatură există din 2020 și Hovering Accounting Office, care oferă contabilitate și planificare fiscală întreprinzătorilor și persoanelor fizice cu patrimoniu.',
+          ],
+        },
+        {
+          heading: 'Lucrul cu părți străine',
+          paragraphs: [
+            'Activitatea transfrontalieră cuprinde înființarea de societăți, vize, depuneri de mărci și brevete, examinarea riscului juridic și consultanță fiscală pentru întreprinderi. Biroul din Taichung tratează îndeosebi cauze din construcții, proprietate intelectuală și cauze cu legătură cu Coreea și Japonia. Avocata Wei Tseng (曾雋崴) însoțește clienți din Coreea, din Japonia și alți clienți internaționali în grupele arătate.',
+            'Dacă putem prelua o cauză depinde de conținut și de limba comunicării. Dacă situația dumneavoastră intră în grupele arătate și poate fi discutată într-una dintre cele patru limbi de consultanță, puteți trimite un rezumat spre examinare.',
+          ],
+        },
+        {
+          heading: 'Când ne contactați',
+          paragraphs: [
+            'După sosirea rezumatului dumneavoastră, o avocată sau un avocat examinează conținutul și vorbește apoi despre întinderea posibilă a lucrării, despre documentele încă necesare și despre pașii următori. Pentru chestiuni fiscale sau contabile, cabinetul poate lucra împreună cu secțiunea de contabilitate într-un singur flux.',
+            'Rezultatul fiecărei cauze depinde de fapte și de documentele disponibile; nu promitem un rezultat. Dacă aveți nevoie de un răspuns obligatoriu pentru situația dumneavoastră, documentele trebuie discutate într-una dintre cele patru limbi de consultanță cu o avocată sau un avocat.',
+          ],
+        },
+      ],
+    },
+    lawyers: {
+      eyebrow: 'AVOCAȚI',
+      title: 'Echipa internațională Hovering',
+      description: 'Profilurile avocatelor și avocaților, ale conducerii operative și ale revizuirii contabile asociate Hovering.',
+      intro: '',
+      sections: [],
+    },
+    pricing: {
+      eyebrow: 'COSTURI',
+      title: 'Cum se stabilesc întinderea lucrării și costurile',
+      description:
+        'Explicarea ordinii: mai întâi întinderea lucrării, apoi confirmarea costurilor, și de ce această pagină nu cuprinde o listă de prețuri.',
+      intro:
+        'Această pagină explică modul în care se stabilesc costurile, nu cuantumul lor. Cuantumul depinde de întinderea lucrării în cauza concretă și are înțeles abia atunci când această întindere este clară.',
+      sections: [
+        {
+          heading: 'Mai întâi se stabilește întinderea lucrării',
+          paragraphs: [
+            'Cauze de același fel pot cere un efort foarte diferit, după numărul părților, documentele disponibile, termenele de respectat și după cum a început deja o procedură. De aceea primul pas este întotdeauna să se stabilească ce ține de lucrare și ce nu.',
+            'Rezumatul pe care îl trimiteți la început este temeiul acestei întinderi. Cu cât descrie mai limpede desfășurarea, cererea dumneavoastră și termenele, cu atât mai exact se poate determina întinderea.',
+          ],
+        },
+        {
+          heading: 'Costurile se confirmă înainte de începerea lucrării',
+          paragraphs: [
+            'Când întinderea lucrării este clară, cuantumul și modul de calcul al costurilor se discută și se confirmă cu dumneavoastră înainte ca lucrarea să înceapă. Dacă întinderea se schimbă pe parcurs, aceasta trebuie confirmată din nou.',
+            'Această pagină nu este o ofertă de preț și nu creează o obligație de plată.',
+          ],
+        },
+        {
+          heading: 'Consultanța poate fi cu plată',
+          paragraphs: [
+            'Consultanța cu o avocată sau un avocat poate fi o prestație cu plată. Această pagină nu spune că prima discuție este gratuită și nicio parte a ei nu poate fi citită în acest sens.',
+            'Dacă consultanța este cu plată, cuantumul și modul de plată se comunică înainte ca aceasta să aibă loc.',
+          ],
+        },
+        {
+          heading: 'De ce această pagină nu arată tarife',
+          paragraphs: [
+            'Costurile depind de cauza însăși: de efort, de numărul părților, de documente, de termene și de faptul dacă o procedură este deja în curs. Un număr stabilit dinainte nu ar arăta costurile dosarului dumneavoastră. De aceea stabilim mai întâi întinderea lucrării și vă comunicăm apoi costurile, înainte ca lucrarea să înceapă.',
+            'Pe lângă onorariu pot apărea taxe de instanță, cheltuieli ale autorităților sau ale terților. Acestea sunt distincte de onorariu și depind de procedura respectivă.',
+          ],
+        },
+      ],
+    },
+    contact: {
+      eyebrow: 'CONTACT',
+      title: 'Cum puteți contacta cabinetul',
+      description:
+        'Limba paginii, limbile de consultanță, ce este de făcut dacă nu puteți folosi niciuna dintre cele patru limbi și ce nu promite această pagină.',
+      intro:
+        'Înainte de a ne scrie, deosebiți următoarele trei puncte. Sunt adesea amestecate, dar înseamnă lucruri diferite.',
+      sections: [
+        {
+          heading: 'Trei lucruri care trebuie ținute separat',
+          paragraphs: [
+            'Limba de afișare a paginii, limba consultanței cu avocata sau avocatul și limba în care scrieți sunt trei lucruri distincte.',
+          ],
+          items: [
+            'Limba paginii: aceste informații sunt scrise în limba română.',
+            'Limba consultanței: consultanța se desfășoară în engleză, chineză (中文), japoneză și coreeană.',
+            'Limba dumneavoastră de scriere: puteți scrie rezumatul în limba dumneavoastră; textul original se păstrează nemodificat.',
+          ],
+        },
+        {
+          heading: 'Dacă nu puteți folosi niciuna dintre cele patru limbi de consultanță',
+          paragraphs: [
+            'În formularul de contact puteți alege «Calea de comunicare trebuie confirmată». Răspundem pentru a examina o cale practicabilă de comunicare, dacă o asemenea cale există; o prestație în altă limbă nu este garantată, iar un termen de răspuns nu se promite.',
+            'Acesta este doar un pas de examinare, nu o promisiune. Nu promitem interpret, o prestație în limba română sau în altă limbă în afara celor patru arătate și nici că preluăm orice cauză.',
+          ],
+        },
+        {
+          heading: 'Ce ar trebui să cuprindă primul mesaj',
+          paragraphs: [
+            'Arătați ce s-a întâmplat, de ce ajutor aveți nevoie, ce legătură are cauza cu Taiwanul și termenul, dacă îl cunoașteți. Dacă ați primit deja un act de la o instanță sau de la o autoritate, indicați data de pe act.',
+            'În faza inițială nu trebuie să trimiteți încă numărul de pașaport, numărul actului de identitate, datele unui cont, documente medicale sau întregul material probator. Așteptați îndrumarea avocatei sau avocatului și trimiteți abia atunci documentele sensibile pe o cale sigură.',
+          ],
+        },
+        {
+          heading: 'Ce nu promite această pagină',
+          paragraphs: [
+            'Nu promitem un termen de răspuns, nu confirmăm o programare prin această pagină, nu promitem o anumită avocată sau un anumit avocat și nu punem la dispoziție interpret. Traducerea scrisă este altceva: mesajul dumneavoastră nu este tradus automat.',
+            'Dacă trimiteți o solicitare, conținutul se păstrează și așteaptă examinarea. Dacă după un timp nu primiți răspuns, puteți scrie din nou la adresa de e-mail arătată pe pagina de contact.',
+          ],
+        },
+      ],
+    },
+    faq: {
+      eyebrow: 'ÎNTREBĂRI',
+      title: 'Întrebări frecvente',
+      description:
+        'Explicații despre aria de lucru, pregătire, limbi, costuri și despre înțelesul unei solicitări trimise.',
+      intro:
+        'Întrebările următoare sunt lămurite la nivelul informațiilor generale. Un răspuns pentru cazul dumneavoastră este cu putință abia după ce o avocată sau un avocat a examinat documentele.',
+      sections: [
+        {
+          heading: 'Cum să folosiți această parte',
+          paragraphs: [
+            'Dacă nu găsiți un răspuns pentru situația dumneavoastră, răspunsul depinde de regulă de fapte deosebite. Scrieți-le atunci în rezumat, în loc să le deduceți din această pagină.',
+          ],
+        },
+      ],
+      faqs: [
+        {
+          question: 'Ce cauze tratează cabinetul?',
+          answer:
+            'Tratăm șase grupe: investiții și înființare de societăți în Taiwan, litigii civile și despăgubiri, căsătorie, familie și succesiuni, litigii de muncă, cauze penale și proprietate intelectuală. Dacă o cauză este preluată se hotărăște după examinarea conținutului.',
+        },
+        {
+          question: 'Ce ar trebui să pregătesc înainte de contactare?',
+          answer:
+            'Pregătiți un scurt rezumat al desfășurării, al cererii dumneavoastră, al legăturii cu Taiwanul și al termenului, dacă există unul. Dacă există deja un act al unei instanțe sau al unei autorități, indicați data. În această fază nu trebuie să trimiteți încă acte de identitate sau întregul material probator.',
+        },
+        {
+          question: 'Este cu putință o consultanță în limba română?',
+          answer:
+            'Nu. Aceste informații sunt scrise în limba română, dar consultanța cu o avocată sau un avocat se desfășoară numai în engleză, chineză (中文), japoneză și coreeană. Nu promitem nici interpret. Traducerea scrisă este altceva: textul original pe care îl scrieți se păstrează așa cum este și nu este tradus automat.',
+        },
+        {
+          question: 'Ce fac dacă nu pot folosi niciuna dintre cele patru limbi?',
+          answer:
+            'La trimiterea solicitării alegeți «Calea de comunicare trebuie confirmată». Răspundem pentru a examina o cale de comunicare, dar o prestație în altă limbă nu este garantată. Acesta este un pas de examinare, nu o promisiune că putem lucra în altă limbă.',
+        },
+        {
+          question: 'Cum este tratat textul meu în limba română?',
+          answer:
+            'Textul original pe care îl scrieți se păstrează așa cum este și nu este tradus automat. Dacă este nevoie, limba comunicării următoare se confirmă cu dumneavoastră.',
+        },
+        {
+          question: 'Consultanța a avut deja loc prin trimiterea solicitării?',
+          answer:
+            'Nu. O solicitare trimisă așteaptă examinarea de către o avocată sau un avocat. Nu este o opinie juridică, nu este o programare confirmată, iar trimiterea nu creează prin ea însăși o relație între avocată sau avocat și client.',
+        },
+        {
+          question: 'Cum se calculează costurile?',
+          answer:
+            'Mai întâi se stabilește întinderea lucrării, apoi cuantumul și modul de calcul al costurilor se confirmă cu dumneavoastră înainte ca lucrarea să înceapă. Această pagină nu arată sume și nu spune că prima discuție este gratuită.',
+        },
+        {
+          question: 'Ce fac dacă situația mea este foarte urgentă?',
+          answer:
+            'Arătați termenul sau data de pe un act oficial chiar la începutul rezumatului, astfel încât aceste date să fie vizibile la examinare. Această pagină nu are un canal de urgență și nu asigură un termen de răspuns; dacă situația dumneavoastră nu poate aștepta, ar trebui să căutați în paralel și alte căi în localitatea dumneavoastră.',
+        },
+      ],
+    },
+    privacy: {
+      eyebrow: 'DATE PERSONALE',
+      title: 'Datele culese prin formularul de contact',
+      description:
+        'Ce culege formularul de contact din această parte în limba română, cum este tratat textul original și cum ne puteți contacta în privința datelor dumneavoastră.',
+      intro:
+        'Această parte privește numai formularul de contact de pe aceste pagini de informare. Descrie tratarea datelor, nu o garanție tehnică.',
+      sections: [
+        {
+          heading: 'Ce date se culeg',
+          paragraphs: [
+            'Când trimiteți o solicitare prin formularul din această parte, se înregistrează următoarele date:',
+          ],
+          items: [
+            'Numele pe care îl indicați',
+            'Adresa de e-mail pentru răspuns',
+            'Limba de afișare a paginii în momentul trimiterii',
+            'Limba în care ați scris',
+            'Limba de consultanță pe care o doriți',
+            'Textul original pe care l-ați scris',
+            'Consimțământul dumneavoastră pentru trimiterea solicitării',
+            'Un număr de înregistrare pentru regăsirea solicitării',
+          ],
+        },
+        {
+          heading: 'Textul original se păstrează nemodificat',
+          paragraphs: [
+            'Textul dumneavoastră se păstrează exact așa cum l-ați scris și nu este tradus automat. Dacă pentru soluționare este nevoie de o traducere, aceasta se discută separat cu dumneavoastră.',
+            'Întrucât textul original se păstrează, în faza inițială nu scrieți ceea ce nu este încă necesar, de pildă numărul de pașaport, numărul actului de identitate sau datele unui cont.',
+          ],
+        },
+        {
+          heading: 'Locul păstrării și accesul',
+          paragraphs: [
+            'Conținutul trimiterii dumneavoastră se păstrează într-un loc care nu este accesibil publicului. Numai persoanele autorizate din cabinet au acces la el, pentru soluționarea solicitării.',
+            'Această pagină nu dă o garanție absolută de securitate. Nicio cale de transmitere și niciun loc de păstrare nu este pe deplin sigur; documentele sensibile ar trebui de aceea trimise abia după o îndrumare anume a avocatei sau avocatului.',
+          ],
+        },
+        {
+          heading: 'Scopul folosirii',
+          paragraphs: [
+            'Datele trimise servesc la examinarea solicitării, la răspunsul către dumneavoastră, la lămurirea căii de comunicare și la soluționare, dacă lucrarea este preluată.',
+            'Datele nu se folosesc pentru marketing fără un consimțământ distinct.',
+          ],
+        },
+        {
+          heading: 'Înștiințarea și numărul de înregistrare',
+          paragraphs: [
+            'Dacă o solicitare este trimisă cu succes, sistemul înștiințează cabinetul. Dacă această înștiințare nu este încă confirmată, textul dumneavoastră rămâne păstrat și nu se pierde.',
+            'Numărul de înregistrare servește la regăsirea solicitării dumneavoastră în evidențele noastre. Se arată după păstrare; îl puteți indica la un nou contact.',
+          ],
+        },
+        {
+          heading: 'Drepturile dumneavoastră și calea de contact',
+          paragraphs: [
+            'Puteți cere accesul la datele dumneavoastră, îndreptarea sau ștergerea lor ori vă puteți retrage consimțământul, prin adresa de e-mail arătată pe pagina de contact. Dacă există o obligație legală sau procesuală de păstrare, explicăm limitarea.',
+            'Această pagină nu arată un termen fix de păstrare, fiindcă durata efectivă depinde de desfășurarea ulterioară a cauzei și de obligațiile legate de aceasta. Dacă doriți o ștergere mai devreme, arătați acest lucru la contactare.',
+          ],
+        },
+        {
+          heading: 'Locul păstrării și furnizorii',
+          paragraphs: [
+            'Acest site este găzduit la Vercel, iar trimiterea dumneavoastră se păstrează într-un depozit de obiecte nepublic al acestui serviciu. E-mailurile se trimit prin serviciul de poștă electronică folosit de cabinet.',
+            'Serverele unor furnizori se pot afla în afara Taiwanului, astfel încât datele dumneavoastră pot fi păstrate și prelucrate acolo. Când scopul păstrării este îndeplinit, datele se șterg fără întârziere; datele care trebuie păstrate potrivit normelor aplicabile rămân pe acea durată. Cererile privind datele cu caracter personal se primesc la wei@hoveringlaw.com.tw.',
+          ],
+        },
+      ],
+    },
+    disclaimer: {
+      eyebrow: 'AVERTISMENTE',
+      title: 'Întinderea și limitele informațiilor de pe această pagină',
+      description:
+        'Caracterul general al informațiilor, cadrul juridic și condițiile nașterii unei relații între avocată sau avocat și client.',
+      intro:
+        'Această parte lămurește ce pot face pentru dumneavoastră aceste pagini de informare în limba română și ce nu.',
+      sections: [
+        {
+          heading: 'Numai informații generale',
+          paragraphs: [
+            'Conținutul acestor pagini este scris ca informare generală. Nu este consultanță juridică pentru cazul dumneavoastră și nu înlocuiește examinarea documentelor dumneavoastră.',
+            'Rezultatul unei cauze depinde de fapte, de normele aplicabile și de momentul respectiv; două situații aparent asemănătoare se pot sfârși diferit.',
+          ],
+        },
+        {
+          heading: 'Cadrul juridic',
+          paragraphs: [
+            'Cabinetul lucrează potrivit dreptului taiwanez, iar această pagină vorbește numai despre activitatea din acest cadru.',
+            'Conținutul nu este consultanță potrivit dreptului unei alte ordini juridice decât cea taiwaneză, inclusiv dreptul locului dumneavoastră de ședere. Dacă o parte a cauzei dumneavoastră privește o altă ordine juridică, vom lămuri împreună ce persoană calificată este necesară pentru acea parte.',
+          ],
+        },
+        {
+          heading: 'Relația dintre avocată sau avocat și client nu se naște de la sine',
+          paragraphs: [
+            'Citirea acestei pagini, trimiterea unui formular sau a unui e-mail nu creează prin ea însăși o relație între avocată sau avocat și client.',
+            'Această relație ia naștere abia după ce cauza a fost examinată și ambele părți au confirmat preluarea lucrării.',
+          ],
+        },
+        {
+          heading: 'Nicio promisiune privind rezultatul',
+          paragraphs: [
+            'Nicio parte a acestei pagini nu este o promisiune privind rezultatul unei cauze, admiterea unei cereri ori statutul de ședere și de muncă.',
+            'Legăturile externe servesc orientării; nu promitem nici exactitatea, nici actualitatea conținuturilor terților.',
+          ],
+        },
+      ],
+    },
+    columns: {
+      eyebrow: 'ARTICOLE',
+      title: 'Articole despre dreptul taiwanez',
+      description:
+        'Articole în limba română despre întrebări frecvente din dreptul taiwanez. Conținutul este informare generală la momentul publicării, nu consultanță juridică pentru cazul dumneavoastră.',
+      intro:
+        'Cabinetul publică articole despre întrebări frecvente din dreptul taiwanez. Articolele disponibile în limba română se află pe această pagină; alături sunt patru legături care deschid fiecare lista articolelor dintr-o limbă originală.',
+      sections: [
+        {
+          heading: 'Patru liste după limbă',
+          paragraphs: [
+            'Această parte cuprinde patru legături: lista articolelor în coreeană, în chineză, în engleză și în japoneză. Fiecare legătură arată limba listei, astfel încât știți dinainte în ce limbă se deschide conținutul.',
+            'Aceste patru liste sunt liste după limba originală a articolelor, nu liste de traduceri. Articolele disponibile în limba română se află separat, pe această pagină.',
+          ],
+        },
+        {
+          heading: 'Unde duc legăturile',
+          paragraphs: [
+            'Dacă alegeți una dintre cele patru legături, se deschide lista articolelor din acea limbă. Din listă alegeți dumneavoastră textul; întregul conținut apare în limba originală a articolului.',
+            'Această pagină nu rezumă conținutul articolelor și nu garantează că o temă este disponibilă în toate cele patru limbi. Fiecare listă cuprinde numai texte publicate în acea limbă.',
+          ],
+        },
+        {
+          heading: 'În ce măsură un articol poate servi drept orientare',
+          paragraphs: [
+            'Articolele sunt informații generale la momentul publicării. Normele și aplicarea lor se pot schimba, iar un articol nu cuprinde toate împrejurările cazului dumneavoastră.',
+            'De aceea nu întemeiați un demers într-o cauză reală numai pe un articol. Folosiți-l pentru privirea de ansamblu și discutați documentele dumneavoastră separat cu o avocată sau un avocat; această pagină nu este pasul consultanței.',
+          ],
+        },
+      ],
+    },
+  },
+};

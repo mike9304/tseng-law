@@ -363,96 +363,96 @@ export const guidanceAnswers: Record<
   ms: {
     services: {
       answer:
-        'Firma mengendalikan enam kumpulan kerja menurut undang-undang Taiwan: pelaburan dan penubuhan syarikat, pertikaian sivil dan ganti rugi, perkahwinan, keluarga dan pusaka, pertikaian buruh, jenayah dan harta intelek. Skop setiap hal disahkan secara berasingan selepas peguam menyemak kandungan yang anda hantar. Perundingan dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
+        'Firma mengendalikan enam kumpulan kerja menurut undang-undang Taiwan: pelaburan dan penubuhan syarikat, pertikaian sivil dan ganti rugi, perkahwinan, keluarga dan pusaka, pertikaian buruh, jenayah dan harta intelek. Skop setiap hal disahkan secara berasingan selepas peguam menyemak kandungan yang anda hantar. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
       sources: ['/ms/faq', '/ms/contact'],
     },
     about: {
       answer:
-        'Hovering International Law Firm ialah firma peguam di Taiwan, ditubuhkan pada 2016 oleh graduan National Taiwan University (國立臺灣大學), dengan pejabat di Taipei, Kaohsiung, Taichung dan Pingtung. Sejak 2020 terdapat bahagian perakaunan; pejabat Taichung mengendalikan hal yang berkaitan dengan Korea dan Jepun. Firma tidak menjanjikan hasil. Perundingan dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
+        'Hovering International Law Firm ialah firma peguam di Taiwan, ditubuhkan pada 2016 oleh graduan National Taiwan University (國立臺灣大學), dengan pejabat di Taipei, Kaohsiung, Taichung dan Pingtung. Sejak 2020 terdapat bahagian perakaunan; pejabat Taichung mengendalikan hal yang berkaitan dengan Korea dan Jepun. Firma tidak menjanjikan hasil. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
       sources: ['/ms/lawyers', '/ms/services'],
     },
     lawyers: {
       answer:
-        'Halaman ini memperkenalkan peguam, pengurusan operasi dan perakaunan rakan kongsi Hovering. Peguam Wei Tseng (曾雋崴) mempunyai kelayakan untuk beramal di Taiwan dan ialah peguam pengarah firma; beliau bekerja dengan klien dari Korea, Jepun dan klien antarabangsa lain. Perundingan dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
+        'Halaman ini memperkenalkan peguam, pengurusan operasi dan perakaunan rakan kongsi Hovering. Peguam Wei Tseng (曾雋崴) mempunyai kelayakan untuk beramal di Taiwan dan ialah peguam pengarah firma; beliau bekerja dengan klien dari Korea, Jepun dan klien antarabangsa lain. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
       sources: ['/ms/about', '/ms/contact'],
     },
     pricing: {
       answer:
-        'Halaman ini tidak menerbitkan senarai harga. Skop kerja ditetapkan dahulu daripada ringkasan yang anda hantar, kemudian jumlah dan cara pengiraan disahkan dengan anda sebelum kerja bermula. Perundingan dengan peguam boleh menjadi perkhidmatan berbayar; selain yuran, kos mahkamah atau pihak berkuasa boleh timbul. Perundingan dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
+        'Halaman ini tidak menerbitkan senarai harga. Skop kerja ditetapkan dahulu daripada ringkasan yang anda hantar, kemudian jumlah dan cara pengiraan disahkan dengan anda sebelum kerja bermula. Perundingan dengan peguam boleh menjadi perkhidmatan berbayar; selain yuran, kos mahkamah atau pihak berkuasa boleh timbul. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
       sources: ['/ms/contact', '/ms/faq'],
     },
     contact: {
       answer:
-        'Hantar ringkasan melalui borang hubungan: apa yang berlaku, bantuan yang diperlukan, kaitan dengan Taiwan dan tempoh jika ada. Pada peringkat ini belum perlu menghantar dokumen pengenalan atau seluruh bukti. Firma tidak menjanjikan tempoh jawapan dan tidak mengesahkan janji temu melalui halaman ini. Perundingan dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
+        'Hantar ringkasan melalui borang hubungan: apa yang berlaku, bantuan yang diperlukan, kaitan dengan Taiwan dan tempoh jika ada. Pada peringkat ini belum perlu menghantar dokumen pengenalan atau seluruh bukti. Firma tidak menjanjikan tempoh jawapan dan tidak mengesahkan janji temu melalui halaman ini. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
       sources: ['/ms/faq', '/ms/pricing'],
     },
     faq: {
       answer:
-        'Bahagian soalan menjawab pada tahap maklumat am: enam kumpulan kerja, persediaan sebelum hubungan, cara menetapkan yuran dan makna mesej yang dihantar. Permintaan yang dihantar menunggu semakan peguam; bukan nasihat undang-undang, bukan janji temu, dan tidak mewujudkan hubungan antara peguam dan klien. Perundingan dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
+        'Bahagian soalan menjawab pada tahap maklumat am: enam kumpulan kerja, persediaan sebelum hubungan, cara menetapkan yuran dan makna mesej yang dihantar. Permintaan yang dihantar menunggu semakan peguam; bukan nasihat undang-undang, bukan janji temu, dan tidak mewujudkan hubungan antara peguam dan klien. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
       sources: ['/ms/contact', '/ms/services'],
     },
   },
   ru: {
     services: {
       answer:
-        'Фирма ведёт шесть групп работы по праву Тайваня: инвестиции и учреждение компаний, гражданские дела и возмещение вреда, брак, семья и наследство, трудовые споры, уголовные дела и интеллектуальная собственность. Объём каждого дела подтверждается отдельно после того, как адвокат рассмотрит содержание, которое Вы отправляете. Консультация проводится на английском, китайском, японском и корейском языках.',
+        'Фирма ведёт шесть групп работы по праву Тайваня: инвестиции и учреждение компаний, гражданские дела и возмещение вреда, брак, семья и наследство, трудовые споры, уголовные дела и интеллектуальная собственность. Объём каждого дела подтверждается отдельно после того, как адвокат рассмотрит содержание, которое Вы отправляете. Консультация проводится только на английском, китайском, японском и корейском языках.',
       sources: ['/ru/faq', '/ru/contact'],
     },
     about: {
       answer:
-        'Hovering International Law Firm — адвокатская фирма на Тайване, основанная в 2016 году выпускниками National Taiwan University (國立臺灣大學), с офисами Тайбэй, Гаосюн, Тайчжун и Пиндун. С 2020 года есть бухгалтерское подразделение; офис Тайчжун ведёт дела, связанные с Кореей и Японией. Фирма не обещает результата. Консультация проводится на английском, китайском, японском и корейском языках.',
+        'Hovering International Law Firm — адвокатская фирма на Тайване, основанная в 2016 году выпускниками National Taiwan University (國立臺灣大學), с офисами Тайбэй, Гаосюн, Тайчжун и Пиндун. С 2020 года есть бухгалтерское подразделение; офис Тайчжун ведёт дела, связанные с Кореей и Японией. Фирма не обещает результата. Консультация проводится только на английском, китайском, японском и корейском языках.',
       sources: ['/ru/lawyers', '/ru/services'],
     },
     lawyers: {
       answer:
-        'Эта страница представляет адвокатов, руководство по операциям и партнёрскую бухгалтерию Hovering. Адвокат Вэй Цзэн (曾雋崴) уполномочена практиковать на Тайване и является руководящим адвокатом фирмы; она работает с доверителями из Кореи, Японии и другими международными доверителями. Консультация проводится на английском, китайском, японском и корейском языках.',
+        'Эта страница представляет адвокатов, руководство по операциям и партнёрскую бухгалтерию Hovering. Адвокат Вэй Цзэн (曾雋崴) уполномочена практиковать на Тайване и является руководящим адвокатом фирмы; она работает с доверителями из Кореи, Японии и другими международными доверителями. Консультация проводится только на английском, китайском, японском и корейском языках.',
       sources: ['/ru/about', '/ru/contact'],
     },
     pricing: {
       answer:
-        'Эта страница не публикует прейскурант. Объём работы сначала определяется по краткому изложению, которое Вы отправляете, затем размер и способ расчёта подтверждаются с Вами до начала работы. Консультация с адвокатом может быть возмездной услугой; помимо гонорара могут возникнуть судебные или административные расходы. Консультация проводится на английском, китайском, японском и корейском языках.',
+        'Эта страница не публикует прейскурант. Объём работы сначала определяется по краткому изложению, которое Вы отправляете, затем размер и способ расчёта подтверждаются с Вами до начала работы. Консультация с адвокатом может быть возмездной услугой; помимо гонорара могут возникнуть судебные или административные расходы. Консультация проводится только на английском, китайском, японском и корейском языках.',
       sources: ['/ru/contact', '/ru/faq'],
     },
     contact: {
       answer:
-        'Отправьте краткое изложение через контактную форму: что произошло, какая помощь нужна, какая связь у дела с Тайванем и срок, если он есть. На этом этапе ещё не нужно отправлять документы, удостоверяющие личность, или все доказательства. Фирма не обещает срок ответа и не подтверждает запись через эту страницу. Консультация проводится на английском, китайском, японском и корейском языках.',
+        'Отправьте краткое изложение через контактную форму: что произошло, какая помощь нужна, какая связь у дела с Тайванем и срок, если он есть. На этом этапе ещё не нужно отправлять документы, удостоверяющие личность, или все доказательства. Фирма не обещает срок ответа и не подтверждает запись через эту страницу. Консультация проводится только на английском, китайском, японском и корейском языках.',
       sources: ['/ru/faq', '/ru/pricing'],
     },
     faq: {
       answer:
-        'Этот раздел отвечает на частые вопросы на уровне общих сведений: шесть групп работы, подготовка до обращения, способ определения гонорара и смысл отправленного сообщения. Отправленный запрос ожидает рассмотрения адвокатом; это не юридическая консультация, не запись и не создаёт отношений между адвокатом и доверителем. Консультация проводится на английском, китайском, японском и корейском языках.',
+        'Этот раздел отвечает на частые вопросы на уровне общих сведений: шесть групп работы, подготовка до обращения, способ определения гонорара и смысл отправленного сообщения. Отправленный запрос ожидает рассмотрения адвокатом; это не юридическая консультация, не запись и не создаёт отношений между адвокатом и доверителем. Консультация проводится только на английском, китайском, японском и корейском языках.',
       sources: ['/ru/contact', '/ru/services'],
     },
   },
   tr: {
     services: {
       answer:
-        'Büro, Tayvan hukukuna göre altı çalışma grubu yürütür: yatırım ve şirket kuruluşu, hukuk davaları ve tazminat, evlilik, aile ve miras, iş hukuku, ceza ve fikri mülkiyet. Her işin kapsamı, bir avukat gönderdiğiniz içeriği inceledikten sonra ayrıca doğrulanır. Görüşme İngilizce, Çince, Japonca ve Korece yapılır.',
+        'Büro, Tayvan hukukuna göre altı çalışma grubu yürütür: yatırım ve şirket kuruluşu, hukuk davaları ve tazminat, evlilik, aile ve miras, iş hukuku, ceza ve fikri mülkiyet. Her işin kapsamı, bir avukat gönderdiğiniz içeriği inceledikten sonra ayrıca doğrulanır. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
       sources: ['/tr/faq', '/tr/contact'],
     },
     about: {
       answer:
-        'Hovering International Law Firm, 2016 yılında National Taiwan University (國立臺灣大學) mezunları tarafından kurulmuş, Taipei, Kaohsiung, Taichung ve Pingtung ofisleri olan bir Tayvan avukatlık bürosudur. 2020’den beri bir muhasebe birimi vardır; Taichung ofisi Kore ve Japonya bağlantılı işleri yürütür. Büro sonuç vaat etmez. Görüşme İngilizce, Çince, Japonca ve Korece yapılır.',
+        'Hovering International Law Firm, 2016 yılında National Taiwan University (國立臺灣大學) mezunları tarafından kurulmuş, Taipei, Kaohsiung, Taichung ve Pingtung ofisleri olan bir Tayvan avukatlık bürosudur. 2020’den beri bir muhasebe birimi vardır; Taichung ofisi Kore ve Japonya bağlantılı işleri yürütür. Büro sonuç vaat etmez. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
       sources: ['/tr/lawyers', '/tr/services'],
     },
     lawyers: {
       answer:
-        'Bu sayfa Hovering avukatlarının, operasyon yönetiminin ve ortak muhasebenin profillerini gösterir. Avukat Wei Tseng (曾雋崴) Tayvan’da meslek yürütmeye yetkilidir ve büronun yönetici avukatıdır; Kore, Japonya ve diğer uluslararası müvekkillerle çalışır. Büro bir sonuç vaat etmez. Görüşme İngilizce, Çince, Japonca ve Korece yapılır.',
+        'Bu sayfa Hovering avukatlarının, operasyon yönetiminin ve ortak muhasebenin profillerini gösterir. Avukat Wei Tseng (曾雋崴) Tayvan’da meslek yürütmeye yetkilidir ve büronun yönetici avukatıdır; Kore, Japonya ve diğer uluslararası müvekkillerle çalışır. Büro bir sonuç vaat etmez. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
       sources: ['/tr/about', '/tr/contact'],
     },
     pricing: {
       answer:
-        'Bu sayfa fiyat listesi yayımlamaz. Çalışma kapsamı önce gönderdiğiniz özete göre belirlenir, sonra tutar ve hesaplanma biçimi işe başlamadan önce sizinle doğrulanır. Avukatla görüşme ücretli bir hizmet olabilir; ücretin yanında mahkeme veya idare giderleri doğabilir. Görüşme İngilizce, Çince, Japonca ve Korece yapılır.',
+        'Bu sayfa fiyat listesi yayımlamaz. Çalışma kapsamı önce gönderdiğiniz özete göre belirlenir, sonra tutar ve hesaplanma biçimi işe başlamadan önce sizinle doğrulanır. Avukatla görüşme ücretli bir hizmet olabilir; ücretin yanında mahkeme veya idare giderleri doğabilir. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
       sources: ['/tr/contact', '/tr/faq'],
     },
     contact: {
       answer:
-        'Özetinizi iletişim formu üzerinden gönderin: ne olduğu, ne yardıma gereksinim duyduğunuz, işin Tayvan ile ilişkisi ve varsa süre. Bu ilk aşamada kimlik belgesi veya tüm kanıtları göndermeniz gerekmez. Büro yanıt süresi vaat etmez ve bu sayfa üzerinden randevu doğrulamaz. Görüşme İngilizce, Çince, Japonca ve Korece yapılır.',
+        'Özetinizi iletişim formu üzerinden gönderin: ne olduğu, ne yardıma gereksinim duyduğunuz, işin Tayvan ile ilişkisi ve varsa süre. Bu ilk aşamada kimlik belgesi veya tüm kanıtları göndermeniz gerekmez. Büro yanıt süresi vaat etmez ve bu sayfa üzerinden randevu doğrulamaz. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
       sources: ['/tr/faq', '/tr/pricing'],
     },
     faq: {
       answer:
-        'Bu bölüm sık sorulan soruları genel bilgi düzleminde yanıtlar: altı çalışma grubu, iletişimden önce hazırlık, ücretin belirlenme biçimi ve bir ileti göndermenin anlamı. Gönderilen talep bir avukatın incelemesini bekler; hukuki görüş değildir, randevu değildir ve avukat ile müvekkil arasında ilişki kurmaz. Görüşme İngilizce, Çince, Japonca ve Korece yapılır.',
+        'Bu bölüm sık sorulan soruları genel bilgi düzleminde yanıtlar: altı çalışma grubu, iletişimden önce hazırlık, ücretin belirlenme biçimi ve bir ileti göndermenin anlamı. Gönderilen talep bir avukatın incelemesini bekler; hukuki görüş değildir, randevu değildir ve avukat ile müvekkil arasında ilişki kurmaz. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
         sources: ['/tr/contact', '/tr/services'],
     },
   },

@@ -9,6 +9,7 @@ import { test } from 'node:test';
 import {
   CHECK_IDS,
   findCurrencyHits,
+  findForbiddenHits,
   findLangidHits,
   FORBIDDEN_PHRASES,
   GUIDANCE_LANGS,
@@ -333,6 +334,53 @@ test('forbidden ar success-rate FAILs with line', () => {
   });
   assert.equal(statuses(result).forbidden, 'FAIL');
   assert.match(result.checks.find((check) => check.id === 'forbidden').details.join('\n'), /ar-success-rate/);
+});
+
+test('it/nl/pl free-consult catches positive send and exempts first-consult denial', () => {
+  const itPos = findForbiddenHits(
+    'L’invio di una richiesta tramite questa pagina è altresì gratuito.',
+    'it',
+    1,
+  );
+  const nlPos = findForbiddenHits(
+    'Het sturen van een verzoek via deze pagina is eveneens kosteloos.',
+    'nl',
+    1,
+  );
+  const plPos = findForbiddenHits(
+    'Wysłanie wniosku za pośrednictwem tej strony jest również bezpłatne.',
+    'pl',
+    1,
+  );
+  assert.ok(itPos.some((hit) => hit.id === 'it-free-consult'));
+  assert.ok(nlPos.some((hit) => hit.id === 'nl-free-consult'));
+  assert.ok(plPos.some((hit) => hit.id === 'pl-free-consult'));
+
+  const itNeg = findForbiddenHits(
+    'Questa pagina non dice che il primo colloquio è gratuito, e nessuna parte può essere letta in quel senso.',
+    'it',
+    1,
+  );
+  const nlNeg = findForbiddenHits(
+    'Deze pagina zegt niet dat het eerste gesprek kosteloos is, en geen deel mag zo worden gelezen.',
+    'nl',
+    1,
+  );
+  const plNeg = findForbiddenHits(
+    'Ta strona nie mówi, że pierwsza rozmowa jest bezpłatna, i żadna część nie może być tak odczytana.',
+    'pl',
+    1,
+  );
+  assert.equal(itNeg.filter((hit) => hit.id === 'it-free-consult').length, 0);
+  assert.equal(nlNeg.filter((hit) => hit.id === 'nl-free-consult').length, 0);
+  assert.equal(plNeg.filter((hit) => hit.id === 'pl-free-consult').length, 0);
+});
+
+test('zh-hans-consult-lang ignores 可以用中文咨询 and flags 提供中文咨询服务', () => {
+  const faq = findForbiddenHits('可以用中文咨询吗？律师咨询以英语、中文、日语和韩语进行。', 'zh-hans', 1);
+  const boast = findForbiddenHits('本所提供中文咨询服务。', 'zh-hans', 1);
+  assert.equal(faq.filter((hit) => hit.id === 'zh-hans-consult-lang').length, 0);
+  assert.ok(boast.some((hit) => hit.id === 'zh-hans-consult-lang'));
 });
 
 test('forbidden ar free-consult FAILs', () => {

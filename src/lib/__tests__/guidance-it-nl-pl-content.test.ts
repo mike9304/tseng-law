@@ -31,7 +31,7 @@ const IT_FORBIDDEN: ReadonlyArray<readonly [string, RegExp]> = [
   ['garantiamo', /garantiamo/i],
   ['il migliore', /il migliore/i],
   ['l’unico', /l’unico/i],
-  ['consulenza gratuita', /consulenza gratuita/i],
+  ['gratuito', /gratuito/i],
   ['24 ore su 24', /24 ore su 24/i],
   ['consulenza in italiano', /consulenza in italiano/i],
 ];
@@ -42,6 +42,7 @@ const NL_FORBIDDEN: ReadonlyArray<readonly [string, RegExp]> = [
   ['de beste', /de beste/i],
   ['de enige', /de enige/i],
   ['gratis consultatie', /gratis consultatie/i],
+  ['kosteloos', /kosteloos/i],
   ['24 uur per dag', /24 uur per dag/i],
   ['advies in het Nederlands', /advies in het Nederlands/i],
 ];
@@ -51,10 +52,18 @@ const PL_FORBIDDEN: ReadonlyArray<readonly [string, RegExp]> = [
   ['gwarantujemy', /gwarantujemy/i],
   ['najlepsz', /najlepsz/i],
   ['jedyna', /jedyna/i],
-  ['bezpłatna konsultacja', /bezpłatna konsultacja/i],
+  ['bezpłatn', /bezpłatn/i],
   ['całodobowo', /całodobowo/i],
   ['konsultacja po polsku', /konsultacja po polsku/i],
 ];
+
+const POSITIVE_FREE_SEND_7A138084 = {
+  it: 'L’invio di una richiesta tramite questa pagina è altresì gratuito.',
+  nl: 'Het sturen van een verzoek via deze pagina is eveneens kosteloos.',
+  pl: 'Wysłanie wniosku za pośrednictwem tej strony jest również bezpłatne.',
+} as const;
+
+const FREE_CLAIM_LABELS = new Set(['gratuito', 'kosteloos', 'bezpłatn']);
 
 const LANGUAGE_FAQ_QUESTION = {
   it: 'È possibile una consulenza in italiano?',
@@ -108,6 +117,12 @@ function packStrings(locale: NewGuidanceLocale): Labelled[] {
 
 function allText(locale: NewGuidanceLocale): string {
   return packStrings(locale).map(([, value]) => value).join('\n');
+}
+
+function isFirstConsultFreeDenial(locale: NewGuidanceLocale, value: string): boolean {
+  if (locale === 'it') return /non dice che il primo colloquio è gratuito/i.test(value);
+  if (locale === 'nl') return /zegt niet dat het eerste gesprek kosteloos is/i.test(value);
+  return /nie mówi,\s*że pierwsza rozmowa jest bezpłatna/i.test(value);
 }
 
 describe('it/nl/pl guidance language contract', () => {
@@ -193,6 +208,9 @@ describe('it/nl/pl attorney gender and language FAQ', () => {
     expect(text).toMatch(/[Aa]dwokat Wei Tseng/);
     expect(text).not.toMatch(/adwokatka/i);
     expect(guidanceTeamCopy.pl.qualificationSentence).toMatch(/uprawniona/);
+    expect(guidanceTeamCopy.pl.representativeTitle).toBe('Adwokat kierujący');
+    expect(guidanceTeamCopy.pl.qualificationSentence).toMatch(/adwokatem kierującym/);
+    expect(guidanceTeamCopy.pl.representativeTitle).not.toMatch(/kierująca/);
   });
 
   it.each(['it', 'nl', 'pl'] as const)('answers the %s consultation-language FAQ in the negative', (locale) => {
@@ -223,6 +241,7 @@ describe('it/nl/pl forbidden-token scan', () => {
         path.endsWith('.question') && value === LANGUAGE_FAQ_QUESTION.it;
       for (const [label, pattern] of IT_FORBIDDEN) {
         if (isLanguageFaqQuestion && label === 'consulenza in italiano') continue;
+        if (FREE_CLAIM_LABELS.has(label) && isFirstConsultFreeDenial('it', value)) continue;
         expect(value, `${path} matched "${label}"`).not.toMatch(pattern);
       }
     }
@@ -234,6 +253,7 @@ describe('it/nl/pl forbidden-token scan', () => {
         path.endsWith('.question') && value === LANGUAGE_FAQ_QUESTION.nl;
       for (const [label, pattern] of NL_FORBIDDEN) {
         if (isLanguageFaqQuestion) continue;
+        if (FREE_CLAIM_LABELS.has(label) && isFirstConsultFreeDenial('nl', value)) continue;
         expect(value, `${path} matched "${label}"`).not.toMatch(pattern);
       }
     }
@@ -245,8 +265,24 @@ describe('it/nl/pl forbidden-token scan', () => {
         path.endsWith('.question') && value === LANGUAGE_FAQ_QUESTION.pl;
       for (const [label, pattern] of PL_FORBIDDEN) {
         if (isLanguageFaqQuestion && label === 'konsultacja po polsku') continue;
+        if (FREE_CLAIM_LABELS.has(label) && isFirstConsultFreeDenial('pl', value)) continue;
         expect(value, `${path} matched "${label}"`).not.toMatch(pattern);
       }
     }
+  });
+
+  it('pins the 7a138084 positive free-send sentences out of the packs', () => {
+    expect(allText('it')).not.toContain(POSITIVE_FREE_SEND_7A138084.it);
+    expect(allText('nl')).not.toContain(POSITIVE_FREE_SEND_7A138084.nl);
+    expect(allText('pl')).not.toContain(POSITIVE_FREE_SEND_7A138084.pl);
+    expect(POSITIVE_FREE_SEND_7A138084.it).toMatch(/gratuito/i);
+    expect(POSITIVE_FREE_SEND_7A138084.nl).toMatch(/kosteloos/i);
+    expect(POSITIVE_FREE_SEND_7A138084.pl).toMatch(/bezpłatn/i);
+  });
+
+  it('uses exclusive limiters on Italian, Dutch and Polish inquiry notices', () => {
+    expect(internationalInquiryCopy.it.consultationNotice).toMatch(/soltanto in quattro lingue/);
+    expect(internationalInquiryCopy.nl.consultationNotice).toMatch(/vindt alleen plaats in vier talen/);
+    expect(internationalInquiryCopy.pl.consultationNotice).toMatch(/wyłącznie w czterech językach/);
   });
 });

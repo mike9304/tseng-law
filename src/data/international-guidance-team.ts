@@ -549,7 +549,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     title: 'Międzynarodowy zespół Hovering',
     description:
       'Profile adwokatów, kierownictwa operacyjnego i partnerskiego biura rachunkowego Hovering.',
-    representativeTitle: 'Adwokat kierująca',
+    representativeTitle: 'Adwokat kierujący',
     teamTitle: 'Adwokaci i współpracownicy',
     partnerTitle: 'Partnerskie biuro rachunkowe',
     introLabel: 'Przedstawienie',
@@ -565,7 +565,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     practiceLabel: 'Główne dziedziny',
     consultationLanguagesLabel: 'Języki konsultacji',
     roles: {
-      'tseng-junwei': 'Adwokat kierująca na Tajwanie (Managing Attorney)',
+      'tseng-junwei': 'Adwokat kierujący na Tajwanie (Managing Attorney)',
       'chang-rongxuan': 'Adwokat na Tajwanie (Taiwan Attorney)',
       'chang-fangyu': 'Paralegal',
       'son-jungmin': 'Kierownictwo operacyjne Korei (Korea Operations Manager)',

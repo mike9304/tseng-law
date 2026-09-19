@@ -1,1 +1,67 @@
 [WO-G2-GATE-R1 시작 Sat Sep 19 14:18:24 KST 2026]
+선행 G2-4는 이미 `c1312c06`으로 커밋됨. 겹침 파일(answers/inquiry/team/checker)은 G2-4가 hi·sv·da·nb·fi만 덧붙인 것을 `git show c1312c06`으로 확인한 뒤, 이 WO 문장만 수정. 커밋하지 않음.
+
+## 적용
+
+1. ms/ru/tr GEO answers 각 6키 + inquiry consultationNotice: hanya / только / yalnızca. zh-hans 그대로.
+2. it/nl/pl inquiry consultationNotice: soltanto / alleen (vindt alleen plaats) / wyłącznie.
+3. it/nl/pl 금지 테스트·체커: gratuito / kosteloos / bezpłatn* 긍정 전송을 잡고, 「첫 상담이 무료라고 말하지 않는다」부정문만 면제. `7a138084` 원문 3문장 팩 부재 핀.
+4. zh-hans 테스트: `/免费咨询|咨询免费|首次.{0,12}免费/` + 부정 문맥 면제.
+5. pl representativeTitle·roles: `Adwokat kierujący` (자격 문장 `adwokatem kierującym`과 분사 성 통일). adwokatka 0. uprawniona 유지.
+6. 체커 zh-hans-consult-lang: `可以用中文咨询` 삭제, `提供中文咨询服务`만 남김.
+7. NOTE ru nav ≤14: Услуги / Стоимость / Приватность / Оговорки. 본문 «Направления работы» 인용은 그대로.
+
+닫힌 항목: G2-2 FIX #3 체커 빈 테이블 재작업 안 함.
+
+## diff --stat (이 WO 8파일)
+
+```
+ scripts/check-column-translation.mjs               | 27 +++++++-----
+ scripts/check-column-translation.test.mjs          | 48 ++++++++++++++++++++++
+ src/data/international-guidance-answers.ts         | 36 ++++++++--------
+ src/data/international-guidance-team.ts            |  4 +-
+ src/data/international-guidance-western.ts         |  8 ++--
+ src/data/international-inquiry-copy.ts             | 12 +++---
+ .../__tests__/guidance-it-nl-pl-content.test.ts    | 40 +++++++++++++++++-
+ .../guidance-zh-hans-ms-ru-tr-content.test.ts      | 31 +++++++++++++-
+ 8 files changed, 162 insertions(+), 44 deletions(-)
+```
+
+## 검증
+
+- `npm run typecheck` → Route types generated successfully, tsc exit 0
+- vitest guidance-zh-hans-ms-ru-tr-content + guidance-it-nl-pl-content + international-guidance-answers → 3 files, 64 passed
+- `node --test scripts/check-column-translation.test.mjs` → 128 pass / 0 fail
+- eslint --max-warnings=0 on the 6 src files → 0
+- git diff --check on the 8 files → clean
+- 7a138084 긍정 전송 3문장: it-nl-pl 팩에 없음
+- 작업 중 다른 레인이 ja 테스트·llms-txt(hi/sv/da/nb/fi)·seo 카운트 테스트를 만짐. 이 WO가 되돌리거나 이어받지 않음.
+
+커밋/푸시 없음.
+G2-2·G2-3 기계 게이트 FIX를 반영했습니다. 커밋하지 않았습니다. G2-4(`c1312c06`)가 겹치는 파일에 붙인 것은 hi·sv·da·nb·fi뿐이라, 이 WO 문장만 고쳤습니다.
+
+## 적용
+
+1. **ms/ru/tr** GEO 답 각 6키 + 문의 `consultationNotice`: `hanya` / `только` / `yalnızca`. zh-hans는 그대로입니다.
+2. **it/nl/pl** 문의 공지: `soltanto in quattro lingue` / `vindt alleen plaats in vier talen` / `wyłącznie w czterech językach`.
+3. **it/nl/pl** 테스트·체커: `gratuito` / `kosteloos` / `bezpłatn*` 긍정 전송을 잡고, 「첫 상담이 무료라고 말하지 않는다」만 면제. `7a138084` 원문 3문장이 팩에 없음을 핀했습니다.
+4. **zh-hans** 테스트: `免费咨询`·`咨询免费`·`首次.*免费` 긍정형 + 부정 문맥 면제.
+5. **pl** 직함: `Adwokat kierujący` + `adwokatem kierującym`. `adwokatka` 없음. `uprawniona` 유지.
+6. 체커 `zh-hans-consult-lang`: `可以用中文咨询` 삭제, `提供中文咨询服务`만 남김.
+7. **NOTE** ru nav ≤14자: `Услуги` / `Стоимость` / `Приватность` / `Оговорки`. 본문의 «Направления работы» 인용은 그대로입니다.
+
+G2-2 FIX #3 체커 빈 테이블은 재작업하지 않았습니다.
+
+## 이 WO 파일 (8)
+
+`162 insertions, 44 deletions` — answers / inquiry / team / western(nav) / 두 content 테스트 / 체커·체커 테스트.
+
+## 검증
+
+- `npm run typecheck` → tsc 0
+- vitest 3파일 **64 passed**
+- `node --test scripts/check-column-translation.test.mjs` → **128 pass / 0 fail**
+- eslint `--max-warnings=0` (이 src 6파일) → 0
+
+작업 중에 다른 레인이 ja 테스트·`llms-txt`(hi/sv/da/nb/fi)·SEO 카운트 테스트를 만졌습니다. 그 파일은 되돌리거나 이어받지 않았습니다.
+=== WO-G2-GATE-R1 종료 code=0 Sat Sep 19 14:26:13 KST 2026 ===

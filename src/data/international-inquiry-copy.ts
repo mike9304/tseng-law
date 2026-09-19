@@ -786,7 +786,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Halaman ini ditulis dalam bahasa Melayu sebagai maklumat am, bukan sebagai nasihat undang-undang bagi kes anda sendiri.',
     consultationNotice:
-      'Perundingan dijalankan dalam empat bahasa: Inggeris, Cina (中文), Jepun dan Korea.',
+      'Perundingan hanya dijalankan dalam empat bahasa: Inggeris, Cina (中文), Jepun dan Korea.',
     methodConfirmationNotice:
       'Jika anda tidak dapat menggunakan mana-mana daripada empat bahasa itu, pilih “Cara berkomunikasi mesti disahkan”. Kami menjawab untuk meneliti cara berkomunikasi yang boleh digunakan jika ada cara yang boleh digunakan; perkhidmatan dalam bahasa lain tidak dijanjikan dan tempoh jawapan tidak dijanjikan.',
     preparationNotice:
@@ -836,7 +836,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Эта страница написана на русском языке как общие сведения, а не как юридическая консультация по Вашему делу.',
     consultationNotice:
-      'Консультация проводится на четырёх языках: английском, китайском (中文), японском и корейском.',
+      'Консультация проводится только на четырёх языках: английском, китайском (中文), японском и корейском.',
     methodConfirmationNotice:
       'Если Вы не можете пользоваться ни одним из четырёх языков, выберите «Способ связи должен быть подтверждён». Мы отвечаем, чтобы рассмотреть возможный способ связи, если такой способ есть; услуга на другом языке не обеспечивается, и срок ответа не обещается.',
     preparationNotice:
@@ -886,7 +886,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Bu sayfa genel bilgi olarak Türkçe yazılmıştır; sizin dosyanız için hukuki görüş değildir.',
     consultationNotice:
-      'Görüşme dört dilde yapılır: İngilizce, Çince (中文), Japonca ve Korece.',
+      'Görüşme yalnızca dört dilde yapılır: İngilizce, Çince (中文), Japonca ve Korece.',
     methodConfirmationNotice:
       'Dört dilden hiçbirini kullanamıyorsanız «İletişim yolunun doğrulanması gerekir» seçeneğini seçin. Kullanılabilir bir yol varsa, o yolu incelemek için yanıtlarız; başka dilde hizmet sağlanmaz ve yanıt süresi vaat edilmez.',
     preparationNotice:
@@ -936,7 +936,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Questa pagina è scritta in italiano come orientamento generale, non come consulenza legale per il Suo caso.',
     consultationNotice:
-      'La consulenza si svolge in quattro lingue: inglese, cinese (中文), giapponese e coreano.',
+      'La consulenza si svolge soltanto in quattro lingue: inglese, cinese (中文), giapponese e coreano.',
     methodConfirmationNotice:
       'Se non può usare nessuna delle quattro lingue, scelga «La via di comunicazione deve essere confermata». Rispondiamo per esaminare una via praticabile di comunicazione, se una tale via esiste; una prestazione in un’altra lingua non è garantita e un termine di risposta non è promesso.',
     preparationNotice:
@@ -986,7 +986,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Deze pagina is in het Nederlands geschreven als algemene oriëntatie, niet als juridisch advies voor uw eigen zaak.',
     consultationNotice:
-      'De consultatie vindt plaats in vier talen: Engels, Chinees (中文), Japans en Koreaans.',
+      'De consultatie vindt alleen plaats in vier talen: Engels, Chinees (中文), Japans en Koreaans.',
     methodConfirmationNotice:
       'Als u geen van de vier talen kunt gebruiken, kies «Communicatieweg moet worden bevestigd». Wij antwoorden om een werkbare communicatieweg te onderzoeken, als zo’n weg bestaat; een dienst in een andere taal wordt niet gewaarborgd en een antwoordtermijn niet toegezegd.',
     preparationNotice:
@@ -1036,7 +1036,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Ta strona jest napisana po polsku jako ogólna orientacja, a nie jako porada prawna w Państwa sprawie.',
     consultationNotice:
-      'Konsultacja odbywa się w czterech językach: angielskim, chińskim (中文), japońskim i koreańskim.',
+      'Konsultacja odbywa się wyłącznie w czterech językach: angielskim, chińskim (中文), japońskim i koreańskim.',
     methodConfirmationNotice:
       'Jeśli nie można korzystać z żadnego z czterech języków, prosimy wybrać «Sposób komunikacji musi zostać potwierdzony». Odpowiadamy, aby zbadać możliwy sposób komunikacji, jeśli taki sposób istnieje; świadczenie w innym języku nie jest zapewniane, a termin odpowiedzi nie jest obiecany.',
     preparationNotice:

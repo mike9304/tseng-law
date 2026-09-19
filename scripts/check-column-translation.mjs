@@ -141,7 +141,7 @@ export const FORBIDDEN_PHRASES = {
     { id: 'pt-free-consult', re: /consulta gratuita|assessoria gratuita/i, note: '비용 보장(무료 상담)' },
   ],
   'zh-hans': [
-    { id: 'zh-hans-consult-lang', re: /可以用中文咨询|提供中文咨询|中文咨询服务/u, note: 'zh-hans 상담 가능 (FAQ 질문 외)' },
+    { id: 'zh-hans-consult-lang', re: /提供中文咨询服务/u, note: 'zh-hans 중문 상담 과장 광고' },
     { id: 'zh-hans-interpreter', re: /提供口译|口译服务|安排口译/u, note: '통역 제공' },
     { id: 'zh-hans-immediate', re: /立即回复|即时回复|几分钟内回复/u, note: '즉시 응답' },
     { id: 'zh-hans-success-rate', re: /胜诉率|成功率/u, note: '성공률' },
@@ -188,7 +188,7 @@ export const FORBIDDEN_PHRASES = {
     { id: 'it-win-100', re: /100\s*%\s*(di )?successo|successo\s*100\s*%/i, note: '성공률 100%' },
     { id: 'it-cost-guarantee', re: /garanzia di (costo|risultato)|garantiamo il risultato/i, note: '비용/결과 보장' },
     { id: 'it-always-on', re: /consulenza\s*24\s*\/\s*7|24 ore su 24/i, note: '즉시/상시 상담' },
-    { id: 'it-free-consult', re: /consulenza gratuita|primo colloquio gratuito/i, note: '비용 보장(무료 상담)' },
+    { id: 'it-free-consult', re: /gratuito/i, exemptRe: /non dice che il primo colloquio è gratuito/i, note: '비용 보장(무료 상담)' },
   ],
   nl: [
     { id: 'nl-consult-lang', re: /advies in het Nederlands|consultatie in het Nederlands/i, note: 'nl 상담 가능' },
@@ -198,7 +198,7 @@ export const FORBIDDEN_PHRASES = {
     { id: 'nl-win-100', re: /100\s*%\s*(succes|winst)|succes\s*100\s*%/i, note: '성공률 100%' },
     { id: 'nl-cost-guarantee', re: /kostengarantie|resultaatgarantie|we garanderen het resultaat/i, note: '비용/결과 보장' },
     { id: 'nl-always-on', re: /consultatie\s*24\s*\/\s*7|24 uur per dag/i, note: '즉시/상시 상담' },
-    { id: 'nl-free-consult', re: /gratis consultatie|kosteloos eerste gesprek/i, note: '비용 보장(무료 상담)' },
+    { id: 'nl-free-consult', re: /kosteloos|gratis consultatie/i, exemptRe: /zegt niet dat het eerste gesprek kosteloos is/i, note: '비용 보장(무료 상담)' },
   ],
   pl: [
     { id: 'pl-consult-lang', re: /konsultacja po polsku|porada w języku polskim/i, note: 'pl 상담 가능' },
@@ -208,7 +208,7 @@ export const FORBIDDEN_PHRASES = {
     { id: 'pl-win-100', re: /100\s*%\s*(sukcesu|wygranych)|sukces\s*100\s*%/i, note: '성공률 100%' },
     { id: 'pl-cost-guarantee', re: /gwarancja (kosztu|wyniku)|gwarantujemy wynik/i, note: '비용/결과 보장' },
     { id: 'pl-always-on', re: /konsultacja\s*24\s*\/\s*7|całodobowo/i, note: '즉시/상시 상담' },
-    { id: 'pl-free-consult', re: /bezpłatna konsultacja|darmowa porada/i, note: '비용 보장(무료 상담)' },
+    { id: 'pl-free-consult', re: /bezpłatn|darmowa porada/i, exemptRe: /nie mówi,\s*że pierwsza rozmowa jest bezpłatna/i, note: '비용 보장(무료 상담)' },
   ],
   hi: [
     { id: 'hi-consult-lang', re: /हिन्दी में परामर्श|हिंदी में परामर्श|हिन्दी परामर्श संभव/i, note: 'hi 상담 가능' },
@@ -1743,14 +1743,19 @@ export function findForbiddenHits(body, lang, bodyStartLine) {
   const lines = body.split('\n');
   lines.forEach((line, index) => {
     for (const pattern of patterns) {
-      if (pattern.re.test(line)) {
-        hits.push({
-          line: bodyStartLine + index,
-          id: pattern.id,
-          note: pattern.note,
-          text: line,
-        });
+      pattern.re.lastIndex = 0;
+      if (!pattern.re.test(line)) continue;
+      pattern.re.lastIndex = 0;
+      if (pattern.exemptRe) {
+        pattern.exemptRe.lastIndex = 0;
+        if (pattern.exemptRe.test(line)) continue;
       }
+      hits.push({
+        line: bodyStartLine + index,
+        id: pattern.id,
+        note: pattern.note,
+        text: line,
+      });
     }
   });
   return hits;

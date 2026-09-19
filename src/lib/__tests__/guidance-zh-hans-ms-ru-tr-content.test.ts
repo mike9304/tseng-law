@@ -32,7 +32,7 @@ const ZH_HANS_FORBIDDEN: ReadonlyArray<readonly [string, RegExp]> = [
   ['保证', /保证/],
   ['最佳', /最佳/],
   ['唯一', /唯一/],
-  ['免费咨询', /免费咨询/],
+  ['免费咨询', /免费咨询|咨询免费|首次.{0,12}免费/],
   ['24小时', /24小时/],
 ];
 
@@ -121,6 +121,10 @@ function allText(locale: NewGuidanceLocale): string {
   return packStrings(locale).map(([, value]) => value).join('\n');
 }
 
+function isZhHansFreeDenial(value: string): boolean {
+  return /不(说|表示|承诺|声称).{0,16}免费|并非免费|不是免费|没有免费/.test(value);
+}
+
 describe('zh-hans/ms/ru/tr guidance language contract', () => {
   it('names the four consultation languages on Simplified Chinese contact and FAQ surfaces', () => {
     const contact = guidanceContent['zh-hans'].pages.contact.sections.map((section) => section.paragraphs.join(' ')).join(' ');
@@ -188,6 +192,12 @@ describe('zh-hans/ms/ru/tr guidance packs are complete', () => {
     expect(shapeOf(guidanceTeamBios[locale])).toEqual(shapeOf(guidanceTeamBios.de));
     expect(shapeOf(internationalInquiryCopy[locale])).toEqual(shapeOf(internationalInquiryCopy.de));
   });
+
+  it('keeps every Russian nav label at or under 14 characters', () => {
+    for (const [key, label] of Object.entries(guidanceContent.ru.nav)) {
+      expect(label.length, `ru.nav.${key}="${label}"`).toBeLessThanOrEqual(14);
+    }
+  });
 });
 
 describe('zh-hans/ms/ru/tr attorney gender and language FAQ', () => {
@@ -252,9 +262,28 @@ describe('zh-hans/ms/ru/tr forbidden-token scan', () => {
         path.endsWith('.question') && value === LANGUAGE_FAQ_QUESTION['zh-hans'];
       for (const [label, pattern] of ZH_HANS_FORBIDDEN) {
         if (isLanguageFaqQuestion) continue;
+        if (label === '免费咨询' && isZhHansFreeDenial(value)) continue;
         expect(value, `${path} matched "${label}"`).not.toMatch(pattern);
       }
     }
+  });
+
+  it('uses exclusive limiters on Malay, Russian and Turkish GEO answers and inquiry notices', () => {
+    for (const entry of Object.values(guidanceAnswers.ms)) {
+      expect(entry.answer).toMatch(/hanya dijalankan/);
+    }
+    for (const entry of Object.values(guidanceAnswers.ru)) {
+      expect(entry.answer).toMatch(/проводится только на/);
+    }
+    for (const entry of Object.values(guidanceAnswers.tr)) {
+      expect(entry.answer).toMatch(/yalnızca .+ yapılır/);
+    }
+    expect(internationalInquiryCopy.ms.consultationNotice).toMatch(/hanya dijalankan dalam empat bahasa/);
+    expect(internationalInquiryCopy.ru.consultationNotice).toMatch(/только на четырёх языках/);
+    expect(internationalInquiryCopy.tr.consultationNotice).toMatch(/yalnızca dört dilde/);
+    expect(internationalInquiryCopy['zh-hans'].consultationNotice).toBe(
+      '咨询以四种语言进行：英语、中文、日语和韩语。',
+    );
   });
 
   it('keeps Malay copy free of advertising and consultation claims outside the language-FAQ question', () => {

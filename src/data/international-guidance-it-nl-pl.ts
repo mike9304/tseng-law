@@ -239,7 +239,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           heading: 'I costi si confermano prima dell’inizio del lavoro',
           paragraphs: [
             'Quando l’ambito di lavoro è chiaro, l’importo e il modo di calcolo dei costi si discutono e si confermano con Lei prima che il lavoro inizi. Se l’ambito cambia in corso d’opera, ciò deve essere confermato di nuovo.',
-            'Questa pagina non è un’offerta di prezzo e non crea un obbligo di pagamento. L’invio di una richiesta tramite questa pagina è altresì gratuito.',
+            'Questa pagina non è un’offerta di prezzo e non crea un obbligo di pagamento.',
           ],
         },
         {
@@ -727,7 +727,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kosten worden vóór het begin van het werk bevestigd',
           paragraphs: [
             'Is de omvang van het werk duidelijk, dan worden hoogte en berekeningswijze van de kosten met u besproken en bevestigd voordat het werk begint. Wijzigt de omvang onderweg, dan moet dat opnieuw worden bevestigd.',
-            'Deze pagina is geen prijsvoorstel en schept geen betalingsplicht. Het sturen van een verzoek via deze pagina is eveneens kosteloos.',
+            'Deze pagina is geen prijsvoorstel en schept geen betalingsplicht.',
           ],
         },
         {
@@ -1215,7 +1215,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Koszty potwierdza się przed rozpoczęciem pracy',
           paragraphs: [
             'Gdy zakres pracy jest jasny, wysokość i sposób obliczania kosztów omawia się i potwierdza z Państwem, zanim praca się zacznie. Jeśli zakres zmieni się w trakcie, trzeba to potwierdzić ponownie.',
-            'Ta strona nie jest ofertą cenową i nie tworzy obowiązku zapłaty. Wysłanie wniosku za pośrednictwem tej strony jest również bezpłatne.',
+            'Ta strona nie jest ofertą cenową i nie tworzy obowiązku zapłaty.',
           ],
         },
         {

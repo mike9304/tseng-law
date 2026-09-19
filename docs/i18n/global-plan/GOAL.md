@@ -25,7 +25,13 @@ Cloud Terminal MCP는 이 로컬 세션 네임스페이스에 없고(`CURSOR_API
 - [x] 2026-09-18 G2-2 zh-hans·ms·ru·tr (f82be715)
 - [x] 2026-09-19 G2-3 it·nl·pl + 전 안내 로케일 폰트 바인딩 + 체커 테이블 — Grok 구현분을 총괄(Opus 5 세션 son7-51)이 인수·검증·커밋 **7a138084**, 후속 정정 **6bb3e839**(it/nl/pl에만 있던 '문의 전송 무료' 긍정 문장 삭제 — 기존 8언어는 부정문만). 게이트: typecheck 0·vitest 266·checker 126 pass/0 fail·eslint 0·guidance-country 0·마커 0·상담 4언어 불변
 - [x] 2026-09-19 G2-4 hi·sv·da·nb·fi `c1312c06` (evidence/grok-G2-4.log): typecheck 0 · vitest 435 · checker 126 · 상담 FAQ 부정 5로케일 · Devanagari 바인딩. 공개 25언어(사이트 4 + 안내 21)
-- [~] G2-5 cs·hu·ro·el·he·uk — **총괄(son7-51) 직접 구현**. cs·hu 팩 초안 작성 완료(`international-guidance-eastern.ts`, 검증 워크트리 커밋 23233c03, 미배선). 남음: ro·uk, el(그리스 문자 subset 추가 필요), he(히브리 폰트 + `dir=rtl` — `public-guidance.ts`의 RTL 판정에 he 추가)
+- [x] 2026-09-19 G2-5 cs·hu·ro·uk·el·he — **총괄(son7-51) 직접 구현**. 팩 `international-guidance-eastern.ts`
+  (2978줄) 작성 → 레지스트리·라우팅·폰트·SEO 배선 → 시험 핀 정합. 공개 31언어(사이트 4 + 안내 27).
+  게이트: typecheck 0 · vitest 1320파일 11975건 통과 0 실패 · lint 0 · guidance-country 0 · 마커 0 · build 0.
+  런타임 실측 31언어 × 4경로 124건 전부 200, 선택기 31언어, 상담 4언어 고정, 히브리어 dir=rtl.
+  신규 인프라: 공용 Noto Sans에 'greek' subset, Noto Sans Hebrew 로더, RTL 판정에 he 추가.
+  검사에서 걸러낸 내용 결함 4종(uk 지명 격변화, hu·uk 통역 부정 누락, ro·uk·el·he 개인정보 문형,
+  'All' 라벨 부분문자열 규칙)을 고쳤다.
 - [x] 2026-09-19 G2-C-FR 칼럼 18편 `18adba43` (체커 18/18 PASS, FAQ 패리티 de와 동일). 원어민 검수 아님
 - [ ] G2-C 나머지 로케일 칼럼(pt·zh-hans·ms·ru·tr·it·nl·pl + G2-4/5)
 - [x] 2026-09-19 G2-GATE-R1 `WO-G2-GATE-R1` 커밋됨 — 배타 한정어·무료 전송 게이트·pl 직함·ru nav 축약. 원어민 검수는 여전히 아님

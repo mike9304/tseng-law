@@ -21,10 +21,10 @@ describe('column category parity with English', () => {
   const english = new Map(getAllColumnPosts('en').map((post) => [post.slug, post.category]));
 
   it('has the English baseline this test compares against', () => {
-    expect(english.size).toBe(17);
+    expect(english.size).toBe(18);
     const counts = { formation: 0, legal: 0, case: 0 };
     for (const category of english.values()) counts[category] += 1;
-    expect(counts).toEqual({ formation: 8, legal: 8, case: 1 });
+    expect(counts).toEqual({ formation: 9, legal: 8, case: 1 });
   });
 
   for (const locale of GUIDANCE_LOCALES_4) {
@@ -46,7 +46,7 @@ describe('column category parity with English', () => {
       // all three buckets, a partial batch every bucket its English sources use.
       const expected = new Set(posts.map((post) => english.get(post.slug)));
       expect(new Set(posts.map((post) => post.category))).toEqual(expected);
-      if (posts.length === 17) expect(expected.size).toBe(3);
+      if (posts.length === 18) expect(expected.size).toBe(3);
     });
   }
 });

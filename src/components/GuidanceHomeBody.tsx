@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import HeroMediaBackground from '@/components/HeroMediaBackground';
+import LocaleHomePathNav from '@/components/LocaleHomePathNav';
 import JsonLd from '@/components/JsonLd';
 import OrnamentDivider from '@/components/OrnamentDivider';
 import Reveal from '@/components/Reveal';
@@ -124,6 +125,7 @@ function GuidanceHero({ locale }: { locale: GuidanceLocale }) {
           <SectionLabel>{page.eyebrow}</SectionLabel>
           <h1 className="hero-title">{page.title}</h1>
           <p className="hero-subtitle">{page.description}</p>
+          <LocaleHomePathNav locale={locale} tone="dark" />
           <div className="hero-links-minimal hero-cta-actions">
             <Link
               href={guidancePublicPath(locale, 'contact')}

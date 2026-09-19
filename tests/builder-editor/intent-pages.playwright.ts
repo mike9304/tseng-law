@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 
 test('localizes public intent landing page shell labels for ko and zh-hant', async ({ page }) => {
   await page.goto('/ko/taiwan-lawyer', { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('section.page-header [data-builder-surface-key="section-label"]')).toContainText('검색 가이드');
+  await expect(page.locator('section.page-header [data-builder-surface-key="section-label"]')).toContainText('상담 안내');
   await expect(page.locator('.authority-card-eyebrow')).toContainText('담당 변호사');
   await expect(page.locator('.section-label').filter({ hasText: '진행 절차' })).toContainText('진행 절차');
   await expect(page.locator('.section-label').filter({ hasText: '관련 서비스' })).toContainText('관련 서비스');
@@ -11,7 +11,7 @@ test('localizes public intent landing page shell labels for ko and zh-hant', asy
   await expect(page.locator('.authority-card-actions .button').filter({ hasText: '상담 문의' })).toContainText('상담 문의');
 
   await page.goto('/zh-hant/taiwan-lawyer', { waitUntil: 'domcontentloaded' });
-  await expect(page.locator('section.page-header [data-builder-surface-key="section-label"]')).toContainText('搜尋指南');
+  await expect(page.locator('section.page-header [data-builder-surface-key="section-label"]')).toContainText('諮詢說明');
   await expect(page.locator('.authority-card-eyebrow')).toContainText('承辦律師');
   await expect(page.locator('.section-label').filter({ hasText: '流程' })).toContainText('流程');
   await expect(page.locator('.section-label').filter({ hasText: '相關服務' })).toContainText('相關服務');

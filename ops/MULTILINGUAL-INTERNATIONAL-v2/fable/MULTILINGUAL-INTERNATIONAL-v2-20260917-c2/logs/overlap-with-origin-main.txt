@@ -1,0 +1,10 @@
+src/app/[locale]/guides/taiwan-company-setup/content.ts
+src/app/globals.css
+src/app/sitemap.ts
+src/components/CinematicOpening.tsx
+src/components/IntentLandingPage.tsx
+src/content/columns-en/001-taiwan-company-establishment-basics.md
+src/content/columns-ja/001-taiwan-company-establishment-basics.md
+src/data/intent-pages.ts
+src/data/site-content.ts
+src/lib/__tests__/columns-en-investment-001.test.ts

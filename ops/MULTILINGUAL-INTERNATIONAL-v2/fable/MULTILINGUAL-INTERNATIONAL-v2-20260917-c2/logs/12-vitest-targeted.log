@@ -1,0 +1,64 @@
+cmd: npx vitest run (WO item 8 + EN c2 reported failures)
+Thu Sep 17 11:03:44 UTC 2026
+   ✓ Japanese Korean-lawyer-in-Taiwan landing > resolves Japanese landing content without Korean sentences 0ms
+   ✓ Japanese Korean-lawyer-in-Taiwan landing > keeps the same list counts as the Korean landing content 0ms
+   ✓ Japanese Korean-lawyer-in-Taiwan landing > emits a self-referencing /ja canonical for the landing path 0ms
+ ✓ src/app/[locale]/taiwan-debt-recovery-lawyer/__tests__/page.test.tsx (3 tests) 6ms
+ ✓ src/components/__tests__/en-international-v1.test.tsx (4 tests) 7ms
+ ❯ src/components/__tests__/intent-contact-paths.test.tsx (8 tests | 1 failed) 128ms
+   ✓ intent landing EN/JA contact paths > puts the official EN mailto, same-locale fees link, and initial-information warning in the page header for taiwan-lawyer 38ms
+   ✓ intent landing EN/JA contact paths > puts the official EN mailto, same-locale fees link, and initial-information warning in the page header for taiwan-company-setup-lawyer 17ms
+   × intent landing EN/JA contact paths > puts the official EN mailto, same-locale fees link, and initial-information warning in the page header for taiwan-litigation-lawyer 18ms
+     → expected '<section class="section page-header p…' not to contain 'intent-chip'
+   ✓ intent landing EN/JA contact paths > puts the official JA mailto, same-locale fees link, and initial-information warning in the page header for taiwan-lawyer 10ms
+   ✓ intent landing EN/JA contact paths > puts the official JA mailto, same-locale fees link, and initial-information warning in the page header for taiwan-company-setup-lawyer 12ms
+   ✓ intent landing EN/JA contact paths > puts the official JA mailto, same-locale fees link, and initial-information warning in the page header for taiwan-litigation-lawyer 11ms
+   ✓ intent landing EN/JA contact paths > keeps the ko page header as keyword chips without the EN/JA header contact actions 10ms
+   ✓ intent landing EN/JA contact paths > keeps the zh-hant page header as keyword chips without the EN/JA header contact actions 10ms
+ ✓ src/components/__tests__/multilingual-international-v2.test.tsx (14 tests) 23ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/data/__tests__/intent-pages-ja.test.ts > Japanese Taiwan company setup guide > keeps the same step and row counts as the Korean guide
+AssertionError: expected [ { item: '最低資本金（設立自体）', …(1) }, …(5) ] to have a length of 7 but got 6
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 7[39m
+[31m+ 6[39m
+
+ ❯ src/data/__tests__/intent-pages-ja.test.ts:90:38
+     88|     expect(guideContent.ja.steps).toHaveLength(guideContent.ko.steps.l…
+     89|     expect(guideContent.ja.comparisonRows).toHaveLength(guideContent.k…
+     90|     expect(guideContent.ja.costRows).toHaveLength(guideContent.ko.cost…
+       |                                      ^
+     91|     expect(guideContent.ja.faq).toHaveLength(guideContent.ko.faq.lengt…
+     92|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/components/__tests__/intent-contact-paths.test.tsx > intent landing EN/JA contact paths > puts the official EN mailto, same-locale fees link, and initial-information warning in the page header for taiwan-litigation-lawyer
+AssertionError: expected '<section class="section page-header p…' not to contain 'intent-chip'
+
+Expected: [32m"intent-chip"[39m
+Received: [31m"<section class="section page-header page-header--with-content _pageHeader_d79fbf"><div class="container"><div class="_pageHeaderCopy_d79fbf"><nav class="breadcrumb _trail_8048a5" aria-label="Current location"><a class="breadcrumb-link _home_8048a5" href="/en">Home</a><span aria-hidden="true" class="_separator_8048a5">/</span><span aria-current="page" class="breadcrumb-current _current_8048a5">Taiwan Litigation Lawyer for Contract Disputes &amp; Civil Claims</span></nav><div class="section-label" data-builder-surface-key="section-label">Litigation and Dispute Intake</div><h1 class="hero-title page-header-title" data-builder-surface-key="headline">Taiwan Litigation Lawyer for Contract Disputes &amp; Civil Claims</h1><p class="section-lede" data-builder-surface-key="description">A Taiwan litigation lawyer guide for overseas companies and individuals covering contract disputes, unpaid invoices, civil claims, criminal and family matters.</p></div><div class="_pageHeaderChildren_d79fbf"><nav class="intent-chip-wrap" aria-label="Start with the situation closest to yours"><p class="contact-email-actions__label">Start with the situation closest to yours</p><ul class="intent-article-list"><li><a class="link-underline" data-en-path="unpaid-invoices" href="/en/taiwan-debt-recovery-lawyer">Unpaid Invoices or Missing Supplier Deliveries</a></li><li><a class="link-underline" data-en-path="civil-claims" href="/en/services/civil">Contract Disputes and Civil Claims</a></li><li><a class="link-underline" data-en-path="criminal" href="/en/services/criminal">Police or Criminal Matters</a></li><li><a class="link-underline" data-en-path="family" href="/en/services/family">Family Matters</a></li></ul></nav><div class="contact-email-actions"><p class="contact-email-actions__label">Consultations in English, Chinese, Korean, and Japanese.</p><div class="contact-email-actions__row"><a href="mailto:wei@hoveringlaw.com.tw?subject=%5Btseng-law.com%20Consultation%5D%20Taiwan%20Legal%20and%20Corporate%20Services&amp;body=Dear%20Attorney%20Tseng%2C%0A%0AI%20would%20like%20to%20request%20a%20consultation%20regarding%20the%20following%20matter.%0A%0AName%20or%20company%3A%0AEmail%3A%0APhone%3A%0AType%20of%20inquiry%3A%0ATaiwan%20connection%20(counterparty%2C%20entity%2C%20property%2C%20residence%2C%20etc.)%3A%0ADeadline%20or%20key%20dates%2C%20if%20any%3A%0ABrief%20description%3A%0APreferred%20language%3A%20English%20%2F%20Korean%20%2F%20Chinese%20%2F%20Japanese%0AWhere%20you%20are%20located%2C%20time%20zone%2C%20and%20preferred%20contact%20method%20(optional)%3A%0AHow%20you%20found%20us%20(optional)%3A%0A%0APlease%20note%20that%20I%20will%20not%20include%20passport%20numbers%2C%20identification%20numbers%2C%20bank%20account%20information%2C%20or%20original%20identity%20documents%20in%20this%20initial%20email.%20Sensitive%20materials%20will%20be%20provided%20through%20a%20secure%20method%20after%20receiving%20instructions.%0A%0AThank%20you." class="button">Email about your Taiwan matter</a><a class="button button--outline" href="/en/pricing">Fees and scope</a></div><p class="contact-email-actions__note">First email: a brief overview of the issue or business, the Taiwan connection, any deadline, and how we can reach you. Time zone and how you found us are optional. Sensitive materials only after attorney instructions.</p></div></div></div></section>"[39m
+
+ ❯ src/components/__tests__/intent-contact-paths.test.tsx:45:26
+     43|       expect(header).toContain('brief overview');
+     44|       expect(header).toContain('Sensitive materials only after attorne…
+     45|       expect(header).not.toContain('intent-chip');
+       |                          ^
+     46|       expect(header).not.toMatch(/Book Consultation|booked|message has…
+     47| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  2 failed | 3 passed (5)
+      Tests  2 failed | 49 passed (51)
+   Start at  20:03:44
+   Duration  914ms (transform 603ms, setup 38ms, collect 1.56s, tests 172ms, environment 7ms, prepare 207ms)
+
+exit=
+Thu Sep 17 11:03:45 UTC 2026

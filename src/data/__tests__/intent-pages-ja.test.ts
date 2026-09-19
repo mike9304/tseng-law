@@ -119,7 +119,9 @@ describe('Japanese Taiwan company setup guide', () => {
   it('keeps the same step and row counts as the Korean guide', () => {
     expect(guideContent.ja.steps).toHaveLength(guideContent.ko.steps.length);
     expect(guideContent.ja.comparisonRows).toHaveLength(guideContent.ko.comparisonRows.length);
-    expect(guideContent.ja.costRows).toHaveLength(guideContent.ko.costRows.length);
+    // Korea–Taiwan DTA stays in KO general costs; JA moved it to countrySpecificItems.
+    expect(guideContent.ja.costRows).toHaveLength(guideContent.ko.costRows.length - 1);
+    expect(guideContent.ja.countrySpecificItems?.some((item) => item.title.includes('韓国所得税協定'))).toBe(true);
     expect(guideContent.ja.faq).toHaveLength(guideContent.ko.faq.length);
   });
 

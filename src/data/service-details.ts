@@ -17,12 +17,12 @@ export const serviceAreas: ServiceArea[] = [
     title: { ko: '투자·법인설립', 'zh-hant': '投資·公司設立', en: 'Investment & Company Setup' },
     subtitle: {
       ko: '한국 기업의 대만 진출을 위한 법인 설립 전 과정 지원',
-      'zh-hant': '協助韓國企業在台落地的全流程法律服務',
+      'zh-hant': '協助台灣本地企業與外國投資人辦理在台公司設立與投資程序',
       en: 'Legal support for overseas companies and investors entering or operating in Taiwan'
     },
     intro: {
       ko: '법무법인 호정은 한국 기업의 대만 시장 진출을 위해 법인 형태 선택부터 투자심의위원회 승인, 자본금 송금, 은행 계좌 개설, 영업장소 확보, 업종별 인허가까지 전 과정을 한국어로 밀착 지원합니다.',
-      'zh-hant': '昊鼎國際法律事務所協助韓國企業選擇公司型態、投審會審查、資本匯入、銀行開戶、營業場所確認及特殊行業許可，提供韓語全程對接服務。',
+      'zh-hant': '昊鼎國際法律事務所協助台灣本地企業與外國投資人（包含韓國企業）選擇公司型態、投審會審查、資本匯入、銀行開戶、營業場所確認及特殊行業許可。',
       en: 'Hovering supports overseas companies and investors entering or operating in Taiwan, including entity structuring, investment approval, registration, capital remittance, banking, and permitted-business review. We also assist with the tax and accounting matters that arise from establishing and operating a Taiwan company, coordinating with external accountants where needed.'
     },
     keyPoints: {
@@ -40,7 +40,7 @@ export const serviceAreas: ServiceArea[] = [
         '公司型態分為子公司（股份/有限公司）、分公司及聯絡處，在稅負與政府採購參與資格等方面有所差異。',
         '設立流程約10個步驟、耗時約3個月，包含公司名稱預查、委託書公證、投審會申請、銀行開戶、資本匯入、公司登記及稅籍登記等。',
         '單一股東取得工作許可之最低資本額為50萬TWD，維持工作許可須年營收達300萬TWD以上。',
-        '資本匯入須由投資人親赴韓國銀行臨櫃辦理，同時須申報海外直接投資。',
+        '資本匯入的手續依資金來源地與往來銀行而異，應在匯款前個別確認。若由韓國銀行匯出，公開說明記載本人臨櫃與海外直接投資申報，此為韓國相關例外而非所有外國投資人的共通規則。',
         '營業場所須透過台北市「營業場所預查系統」確認業種適合性。',
         '除免辦理工廠登記之製造場所生產之固態手工香皂外，法定範圍內之化粧品製造或輸入業者應就適用產品另行完成產品登錄，並建立、更新產品資訊檔案（PIF），存放於標示地址以供查核；PIF本身無須向主管機關登錄。廣告違規最高罰500萬TWD。',
         '物流業執照門檻包含資本額2,500萬TWD及20輛新車等要件。',

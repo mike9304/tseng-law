@@ -11,7 +11,7 @@ import { CORPORATE_ADVISORY_ANCHOR, getCorporateAdvisory } from '@/data/corporat
 import { getIntentPage, getIntentTopFaqs, type IntentPageSlug } from '@/data/intent-pages';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
 import { getColumnPost } from '@/lib/columns';
-import type { SiteLocale } from '@/lib/locales';
+import { isSiteLocale, type SiteLocale } from '@/lib/locales';
 import { getServiceArea } from '@/data/service-details';
 import { getJapaneseServiceDetail } from '@/data/service-details-ja';
 import styles from './IntentLandingPage.module.css';
@@ -22,6 +22,7 @@ import {
   getSensitiveInformationWarning,
 } from '@/lib/consultation/public-contact';
 import { getAiIntakeDiscovery } from '@/lib/ai-intake/discovery';
+import { LITIGATION_SITUATION_NAV } from '@/data/multilingual-international-v2';
 
 function summarize(text: string, maxLength = 180) {
   return text.length > maxLength ? `${text.slice(0, maxLength - 1).trimEnd()}…` : text;
@@ -169,7 +170,7 @@ const relatedResources: Record<
       href: 'taiwan-company-setup-lawyer',
       label: {
         ko: '대만 법인설립·회사설립 변호사 안내',
-        'zh-hant': '台灣公司設立律師指南',
+        'zh-hant': '台灣公司設立法律諮詢',
         en: 'Taiwan company setup lawyer guide',
         ja: '台湾会社設立弁護士ガイド',
       },
@@ -178,7 +179,7 @@ const relatedResources: Record<
       href: 'taiwan-litigation-lawyer',
       label: {
         ko: '대만 소송 변호사 안내',
-        'zh-hant': '台灣訴訟律師指南',
+        'zh-hant': '台灣訴訟法律諮詢',
         en: 'Taiwan litigation lawyer guide',
         ja: '台湾訴訟弁護士ガイド',
       },
@@ -188,7 +189,7 @@ const relatedResources: Record<
       label: {
         ko: '대만 회사설립 종합 가이드',
         'zh-hant': '台灣公司設立完整指南',
-        en: 'Complete Taiwan company setup guide',
+        en: 'Read the Company Setup Guide',
         ja: '台湾会社設立 総合ガイド',
       },
     },
@@ -217,7 +218,7 @@ const relatedResources: Record<
       label: {
         ko: '대만 회사설립 종합 가이드',
         'zh-hant': '台灣公司設立完整指南',
-        en: 'Complete Taiwan company setup guide',
+        en: 'Read the Company Setup Guide',
         ja: '台湾会社設立 総合ガイド',
       },
     },
@@ -338,6 +339,26 @@ function relatedResourceByHref(
   return relatedResources[slug].find((item) => item.href === href);
 }
 
+const enDebtRecoveryResource = {
+  href: 'taiwan-debt-recovery-lawyer',
+  label: {
+    ko: 'Unpaid invoices and supplier disputes',
+    'zh-hant': 'Unpaid invoices and supplier disputes',
+    en: 'Unpaid invoices and supplier disputes',
+    ja: 'Unpaid invoices and supplier disputes',
+  },
+} as const;
+
+const enCivilServiceResource = {
+  href: 'services/civil',
+  label: {
+    ko: 'Contract disputes and civil claims',
+    'zh-hant': 'Contract disputes and civil claims',
+    en: 'Contract disputes and civil claims',
+    ja: 'Contract disputes and civil claims',
+  },
+} as const;
+
 const enAssistanceResources: Array<{ href: string; label: Record<SiteLocale, string> }> = [
   {
     href: 'services/investment',
@@ -433,6 +454,8 @@ function relatedResourcesFor(locale: SiteLocale, slug: IntentPageSlug) {
       ].filter((item): item is NonNullable<typeof item> => item != null);
     }
     return [
+      enDebtRecoveryResource,
+      enCivilServiceResource,
       relatedResourceByHref(slug, 'taiwan-lawyer'),
       advisory,
       ...assistance,
@@ -557,6 +580,53 @@ export default function IntentLandingPage({
       <JsonLd data={faqSchema} />
 
       <PageHeader locale={locale} label={page.label} title={page.title} description={page.description}>
+        {isSiteLocale(locale) && slug === 'taiwan-litigation-lawyer' ? (
+          <nav
+            className="intent-situation-nav"
+            aria-label={LITIGATION_SITUATION_NAV[locale].aria}
+          >
+            <p className="contact-email-actions__label">{LITIGATION_SITUATION_NAV[locale].lead}</p>
+            <ul className="intent-article-list">
+              <li>
+                <Link
+                  href={`/${locale}/taiwan-debt-recovery-lawyer`}
+                  className="link-underline"
+                  data-en-path={locale === 'en' ? 'unpaid-invoices' : undefined}
+                  data-ml-path="unpaid-invoices"
+                >
+                  {LITIGATION_SITUATION_NAV[locale].unpaid}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={`/${locale}/services/civil`}
+                  className="link-underline"
+                  data-en-path={locale === 'en' ? 'civil-claims' : undefined}
+                >
+                  {LITIGATION_SITUATION_NAV[locale].civil}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={`/${locale}/services/criminal`}
+                  className="link-underline"
+                  data-en-path={locale === 'en' ? 'criminal' : undefined}
+                >
+                  {LITIGATION_SITUATION_NAV[locale].criminal}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={`/${locale}/services/family`}
+                  className="link-underline"
+                  data-en-path={locale === 'en' ? 'family' : undefined}
+                >
+                  {LITIGATION_SITUATION_NAV[locale].family}
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        ) : null}
         {isDirectContactLocale(locale) ? (
           <div className="contact-email-actions">
             <p className="contact-email-actions__label">{intentDirectContact[locale].support}</p>

@@ -69,9 +69,9 @@ describe('localized page titles', () => {
 
   it('uses brand-and-scope English homepage title after templating', () => {
     const metadata = getHomeLegacyMetadata('en');
-    expect(metadata.title).toBe('Taiwan Law Firm in Taipei — English Consultations');
+    expect(metadata.title).toBe('Taiwan Legal Services for International Clients');
     expect(buildLocalizedPageTitle(String(metadata.title), 'en')).toBe(
-      'Taiwan Law Firm in Taipei — English Consultations | Hovering International Law Firm',
+      'Taiwan Legal Services for International Clients | Hovering International Law Firm',
     );
     expect(String(metadata.title)).not.toMatch(/taiwan lawyer/i);
     expect(String(metadata.title)).not.toMatch(/company setup lawyer/i);

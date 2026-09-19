@@ -1,9 +1,12 @@
 import {
+  EN_HOME_HERO_TITLE,
   EN_HOME_HERO_SUBTITLE,
   EN_HOME_SERVICES_DESCRIPTION,
 } from '@/data/en-service-scope';
 import type { BuilderCanvasNode } from '@/lib/builder/canvas/types';
 import type { Locale } from '@/lib/locales';
+
+const STOCK_HERO_TITLE = 'Taiwan Law, Clearly Explained.';
 
 const STOCK_HERO_SUBTITLE =
   'Our multilingual legal team provides practical guidance for Taiwan investment, disputes, and cross-border matters.';
@@ -12,14 +15,21 @@ const STOCK_SERVICES_DESCRIPTION =
   'Structured support for investment, litigation, and advisory matters in Taiwan.';
 
 const PRIMITIVE_STOCK_TEXT: ReadonlyMap<string, { from: string; to: string }> = new Map([
+  ['home-hero-title', { from: STOCK_HERO_TITLE, to: EN_HOME_HERO_TITLE }],
   ['home-hero-subtitle', { from: STOCK_HERO_SUBTITLE, to: EN_HOME_HERO_SUBTITLE }],
   ['home-services-description', { from: STOCK_SERVICES_DESCRIPTION, to: EN_HOME_SERVICES_DESCRIPTION }],
 ]);
 
-const COMPOSITE_STOCK_OVERRIDES: ReadonlyMap<string, { surfaceKey: string; from: string; to: string }> = new Map([
-  ['hero-search', { surfaceKey: 'subtitle', from: STOCK_HERO_SUBTITLE, to: EN_HOME_HERO_SUBTITLE }],
-  ['services-bento', { surfaceKey: 'description', from: STOCK_SERVICES_DESCRIPTION, to: EN_HOME_SERVICES_DESCRIPTION }],
-]);
+const COMPOSITE_STOCK_OVERRIDES: ReadonlyArray<{
+  componentKey: string;
+  surfaceKey: string;
+  from: string;
+  to: string;
+}> = [
+  { componentKey: 'hero-search', surfaceKey: 'title', from: STOCK_HERO_TITLE, to: EN_HOME_HERO_TITLE },
+  { componentKey: 'hero-search', surfaceKey: 'subtitle', from: STOCK_HERO_SUBTITLE, to: EN_HOME_HERO_SUBTITLE },
+  { componentKey: 'services-bento', surfaceKey: 'description', from: STOCK_SERVICES_DESCRIPTION, to: EN_HOME_SERVICES_DESCRIPTION },
+];
 
 function projectPrimitiveStockText(node: BuilderCanvasNode): BuilderCanvasNode {
   if (node.kind !== 'text') return node;
@@ -41,8 +51,9 @@ function projectCompositeStockOverrides(node: BuilderCanvasNode): BuilderCanvasN
   if (node.kind !== 'composite') return node;
   const { componentKey, config } = node.content;
   if (!config || config.locale !== 'en') return node;
-  const mapping = COMPOSITE_STOCK_OVERRIDES.get(componentKey);
-  if (!mapping) return node;
+
+  const mappings = COMPOSITE_STOCK_OVERRIDES.filter((mapping) => mapping.componentKey === componentKey);
+  if (mappings.length === 0) return node;
 
   const overrides = config.overrides;
   if (!overrides || typeof overrides !== 'object' || Array.isArray(overrides)) {
@@ -50,9 +61,16 @@ function projectCompositeStockOverrides(node: BuilderCanvasNode): BuilderCanvasN
   }
 
   const record = overrides as Record<string, unknown>;
-  const current = record[mapping.surfaceKey];
-  if (current !== mapping.from) return node;
-  if (mapping.to === current) return node;
+  let next = record;
+  let changed = false;
+  for (const mapping of mappings) {
+    const current = next[mapping.surfaceKey];
+    if (current !== mapping.from || mapping.to === current) continue;
+    if (!changed) next = { ...record };
+    next[mapping.surfaceKey] = mapping.to;
+    changed = true;
+  }
+  if (!changed) return node;
 
   return {
     ...node,
@@ -60,10 +78,7 @@ function projectCompositeStockOverrides(node: BuilderCanvasNode): BuilderCanvasN
       ...node.content,
       config: {
         ...config,
-        overrides: {
-          ...record,
-          [mapping.surfaceKey]: mapping.to,
-        },
+        overrides: next,
       },
     },
   };

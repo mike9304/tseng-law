@@ -73,10 +73,10 @@ describe('English intent pages audience', () => {
     );
     expect(getIntentPage('zh-hant', 'taiwan-lawyer')?.title).toBe('台灣律師指南');
     expect(getIntentPage('zh-hant', 'taiwan-company-setup-lawyer')?.title).toBe(
-      '台灣公司設立律師指南',
+      '台灣公司設立法律諮詢',
     );
     expect(getIntentPage('zh-hant', 'taiwan-litigation-lawyer')?.title).toBe(
-      '台灣訴訟律師指南',
+      '台灣訴訟法律諮詢',
     );
   });
 });

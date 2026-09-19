@@ -1,0 +1,29 @@
+cmd: npm run build (NEXT_DIST_DIR=.next-build, already in tsconfig include)
+Fri Sep 18 06:33:01 UTC 2026
+├ ƒ /api/members/logout                                                                                        1.1 kB         130 kB
+├ ƒ /api/members/me                                                                                            1.1 kB         130 kB
+├ ƒ /api/members/signup                                                                                        1.1 kB         130 kB
+├ ƒ /api/metrics/collect                                                                                       1.1 kB         130 kB
+├ ƒ /api/reviews                                                                                               1.1 kB         130 kB
+├ ƒ /api/search                                                                                                1.1 kB         130 kB
+├ ○ /apple-icon.png                                                                                               0 B            0 B
+├ ○ /icon.png                                                                                                     0 B            0 B
+├ ○ /llms.txt                                                                                                  1.1 kB         130 kB
+├ ○ /manifest.webmanifest                                                                                      1.1 kB         130 kB
+├ ƒ /review/[token]                                                                                            1.1 kB         130 kB
+├ ƒ /robots.txt                                                                                                1.1 kB         130 kB
+└ ƒ /sitemap.xml                                                                                               1.1 kB         130 kB
++ First Load JS shared by all                                                                                  129 kB
+  ├ chunks/4bd1b696-2135e4d8b8354323.js                                                                       54.2 kB
+  ├ chunks/7222-6f34d2767914ef8c.js                                                                             72 kB
+  └ other shared chunks (total)                                                                               3.09 kB
+
+
+ƒ Middleware                                                                                                  34.9 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+exit=
+Fri Sep 18 06:34:09 UTC 2026

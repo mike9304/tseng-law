@@ -1,0 +1,5 @@
+start=2026-09-17T16:55:17Z
+ownership-race: son7-db folder 01:55:05 → both yielded → son7-a0 final claim 16:56:11Z; fresh start hash below
+start(final)=2026-09-17T16:56:12Z
+end=2026-09-17T17:00:02Z
+side-effect: next dev (NEXT_DIST_DIR=.next-m-fable-c3) auto-edited tsconfig.json include + next-env.d.ts reference; server stopped, both restored to HEAD content, build dir removed 17:00:36Z

@@ -3,6 +3,7 @@ import {
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
 import {
+  EN_HOME_HERO_TITLE,
   EN_HOME_HERO_SUBTITLE,
   EN_HOME_SERVICES_DESCRIPTION,
 } from '@/data/en-service-scope';
@@ -1876,7 +1877,7 @@ function buildEnglishSiteContent(base: SiteContent): SiteContent {
     hero: {
       ...base.hero,
       label: 'TAIWAN LEGAL',
-      title: 'Taiwan Law, Clearly Explained.',
+      title: EN_HOME_HERO_TITLE,
       subtitle: EN_HOME_HERO_SUBTITLE,
       typingPhrases: [
         'Start Your Taiwan Expansion with Confidence',

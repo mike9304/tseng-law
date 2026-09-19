@@ -51,7 +51,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
   ko: {
     'taiwan-lawyer': {
       slug: 'taiwan-lawyer',
-      label: '검색 가이드',
+      label: '상담 안내',
       title: '대만변호사 | 한국어 상담·소송·법인설립 지원',
       description: '한국 고객이 찾는 대만변호사의 한국어 상담, 소송, 대만 법인설립 지원 범위와 진행 방식, 관련 서비스와 칼럼을 정리한 안내 페이지입니다.',
       keywords: ['대만변호사', '증준외 변호사', '한국어 가능한 대만 변호사', '대만 소송 변호사', '대만 회사설립 변호사', '대만법인설립'],
@@ -112,7 +112,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     },
     'taiwan-company-setup-lawyer': {
       slug: 'taiwan-company-setup-lawyer',
-      label: '검색 가이드',
+      label: '상담 안내',
       title: '대만 법인설립·회사설립 변호사 | 절차·비용·기간',
       description: '대만 법인설립(회사설립)의 절차, 비용, 기간과 투자 승인, 지사·자회사 선택, 인허가 및 운영 리스크까지 검토하는 대만 변호사 상담 안내입니다.',
       keywords: ['대만 회사설립 변호사', '대만 법인설립 변호사', '대만 투자 변호사', '증준외 변호사', '대만 자회사 지사', '대만법인설립'],
@@ -178,7 +178,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     },
     'taiwan-litigation-lawyer': {
       slug: 'taiwan-litigation-lawyer',
-      label: '검색 가이드',
+      label: '상담 안내',
       title: '대만 소송 변호사 | 민사·형사·노동 한국어 대응',
       description: '대만 민사소송, 손해배상, 형사 대응, 가사 분쟁에서 한국 고객이 먼저 확인해야 할 포인트를 정리한 안내입니다.',
       keywords: ['대만 소송 변호사', '대만 민사소송 변호사', '대만 손해배상 변호사', '대만 형사소송 변호사', '증준외 변호사'],
@@ -368,7 +368,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
   'zh-hant': {
     'taiwan-lawyer': {
       slug: 'taiwan-lawyer',
-      label: '搜尋指南',
+      label: '諮詢說明',
       title: '台灣律師指南',
       description: '整理韓國客戶常找的台灣律師諮詢範圍、聯絡方式、相關服務與文章入口。',
       keywords: ['台灣律師', '曾雋崴律師', '韓文 台灣律師', '台灣訴訟律師', '台灣公司設立律師'],
@@ -429,8 +429,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     },
     'taiwan-company-setup-lawyer': {
       slug: 'taiwan-company-setup-lawyer',
-      label: '搜尋指南',
-      title: '台灣公司設立律師指南',
+      label: '諮詢說明',
+      title: '台灣公司設立法律諮詢',
       description: '整理台灣公司設立、投資核准、分公司與子公司選擇、許可與營運風險等律師諮詢重點。',
       keywords: ['台灣公司設立律師', '台灣法人設立律師', '台灣投資律師', '曾雋崴律師', '台灣子公司 分公司'],
       searchTerms: ['台灣公司設立律師', '台灣法人設立律師', '台灣投資律師'],
@@ -495,8 +495,8 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     },
     'taiwan-litigation-lawyer': {
       slug: 'taiwan-litigation-lawyer',
-      label: '搜尋指南',
-      title: '台灣訴訟律師指南',
+      label: '諮詢說明',
+      title: '台灣訴訟法律諮詢',
       description: '整理台灣民事訴訟、損害賠償、刑事應對與家事爭議中，韓國客戶最先需要確認的重點。',
       keywords: ['台灣訴訟律師', '台灣民事訴訟律師', '台灣損害賠償律師', '台灣刑事律師', '曾雋崴律師'],
       searchTerms: ['台灣訴訟律師', '台灣民事訴訟律師', '台灣損害賠償律師'],
@@ -779,14 +779,14 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     },
     'taiwan-company-setup-lawyer': {
       slug: 'taiwan-company-setup-lawyer',
-      label: 'SEARCH GUIDE',
+      label: 'Company Formation Legal Services',
       title: 'Taiwan Company Setup Lawyer for Overseas Businesses',
-      description: 'A focused guide on how a Taiwan company setup lawyer helps overseas businesses with entity choice, investment approval, registration, and operating contracts.',
+      description: 'Legal services for overseas businesses covering entity choice, investment approval, registration, and operating contracts.',
       keywords: ['Taiwan company setup lawyer', 'Taiwan incorporation lawyer', 'Taiwan investment lawyer', 'Wei Tseng attorney', 'Taiwan subsidiary branch', 'Taiwan branch vs subsidiary', 'Taiwan residence permit assistance', 'Taiwan tax accounting assistance'],
       searchTerms: ['Taiwan company setup lawyer', 'Taiwan incorporation lawyer', 'Taiwan investment lawyer', 'Taiwan branch vs subsidiary'],
       heroPoints: [
         'Entity choice, investment approval, capital remittance, registration, and operating contracts should be reviewed as one Taiwan-law process.',
-        'The guide explains subsidiary, branch, and representative-office choices from the perspective of overseas parents and investors entering Taiwan — not limited to one home country.',
+        'This page explains subsidiary, branch, and representative-office choices from the perspective of overseas parents and investors entering Taiwan — not limited to one home country.',
         'The firm provides consultations in English, Chinese, Korean, and Japanese, in person or by video. Attorney Wei Tseng works with clients directly in Korean, Chinese, and Japanese. Initial review can start remotely.',
         'After registration, the firm can assist with residence-permit procedures and tax-accounting assistance for the Taiwan operation.',
         'Official government pages are linked as reference destinations; they do not decide eligibility on their own.',
@@ -871,7 +871,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     },
     'taiwan-litigation-lawyer': {
       slug: 'taiwan-litigation-lawyer',
-      label: 'SEARCH GUIDE',
+      label: 'Litigation and Dispute Intake',
       title: 'Taiwan Litigation Lawyer for Contract Disputes & Civil Claims',
       description: 'A Taiwan litigation lawyer guide for overseas companies and individuals covering contract disputes, unpaid invoices, civil claims, criminal and family matters.',
       keywords: ['Taiwan litigation lawyer', 'Taiwan civil litigation lawyer', 'Taiwan damages lawyer', 'Taiwan criminal lawyer', 'Wei Tseng attorney', 'sue a company in Taiwan', 'Taiwan debt recovery lawyer', 'Taiwan commercial dispute lawyer'],
@@ -1088,7 +1088,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
   ja: {
     'taiwan-lawyer': {
       slug: 'taiwan-lawyer',
-      label: '検索ガイド',
+      label: '相談案内',
       title: '台湾弁護士｜日本語で相談できる台北の法律事務所',
       description: '日本企業・在台日本人の方が台湾弁護士に相談する際の範囲と進め方をまとめた案内ページです。会社設立・投資、民事・労働・家事・刑事事件、化粧品規制（PIF）まで、日本語で直接ご相談いただけます。',
       keywords: ['台湾弁護士', '日本語対応 台湾 弁護士', '台北 法律事務所 日本語', '台湾 会社設立 弁護士', '台湾 訴訟 弁護士', '曾雋崴弁護士'],
@@ -1146,7 +1146,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     },
     'taiwan-company-setup-lawyer': {
       slug: 'taiwan-company-setup-lawyer',
-      label: '検索ガイド',
+      label: '相談案内',
       title: '台湾会社設立・法人設立の弁護士｜手続き・費用・期間',
       description: '日本企業の台湾進出に向けた会社設立の手続き・費用・期間と、子会社・支店・駐在員事務所の違いを日本語で解説します。投資審査から銀行口座開設、就業許可までを一貫してサポートします。',
       keywords: ['台湾会社設立弁護士', '台湾法人設立弁護士', '台湾投資弁護士', '曾雋崴弁護士', '台湾子会社 支店', '台湾法人設立'],
@@ -1216,7 +1216,7 @@ export const intentPages: Record<SiteLocale, Record<IntentPageSlug, IntentPageCo
     },
     'taiwan-litigation-lawyer': {
       slug: 'taiwan-litigation-lawyer',
-      label: '検索ガイド',
+      label: '相談案内',
       title: '台湾訴訟弁護士｜民事・労働・家事 日本語対応',
       description: '台湾での契約紛争・未払い請求、民事訴訟、損害賠償、労働紛争、刑事対応、離婚・相続について、日本企業・在台日本人の方が最初に確認すべきポイントをまとめました。日本語で直接ご相談いただけます。',
       keywords: ['台湾訴訟弁護士', '台湾民事訴訟弁護士', '台湾損害賠償弁護士', '台湾刑事訴訟弁護士', '曾雋崴弁護士'],

@@ -1,0 +1,251 @@
+{
+  "schema_version": "MULTILINGUAL-INTERNATIONAL-v2",
+  "artifact_type": "INDEPENDENT_VALIDATION_STATUS",
+  "candidate_id": "MULTILINGUAL-INTERNATIONAL-v2-20260917-c2",
+  "worktree": "/Users/son7/Projects/tseng-law-en-international-20260917",
+  "git_head": "90352b029bfd5419c093a899d4bdeff49e5eb089",
+  "origin_main_at_review": "c4270097",
+  "implementation": {
+    "status": "UNPUBLISHED_CANDIDATE",
+    "reported_by": "Grok 4.6",
+    "note": "not verified as complete; see defects"
+  },
+  "independent_validation": {
+    "status": "CHANGES_REQUIRED",
+    "reviewer": "Claude Opus 5 (claude-opus-5[1m]), session son7-a0 — WO-permitted substitute for Fable 5.1",
+    "started_at": "2026-09-17T11:03:00Z",
+    "finished_at": "2026-09-17T11:10:07Z",
+    "candidate_hash": {
+      "manifest_entries": 44,
+      "match_start": 43,
+      "match_end": 43,
+      "only_mismatch": "ops/MULTILINGUAL-INTERNATIONAL-v2/candidate-manifest.sha256 (self-hash, structurally unmatchable)",
+      "snapshot_start_equals_end": true
+    },
+    "commands": {
+      "tsc": "exit 2 (content.ts:644 TS2322)",
+      "eslint_changed_src": "exit 0",
+      "vitest_targeted": "2 failed / 49 passed",
+      "test_unit_full": "6 failed / 10851 passed / 14 skipped",
+      "head_baseline_4_files": "44/44 passed",
+      "build": "NOT_TESTED"
+    },
+    "passed_highlights": [
+      "home two paths in 9 locales at 4 viewports with click and keyboard",
+      "core-4 P07 noindex/self-canonical/no hreflang/five situations; guidance and de/es 404",
+      "P07 absent from sitemap and llms.txt",
+      "four consultation languages kept; no interpreter/SLA/booking promises",
+      "JA column intro localized; treaty not renamed",
+      "AR dir=rtl renders",
+      "no new form/API/analytics calls"
+    ],
+    "defects": [
+      {
+        "id": "V2-01",
+        "severity": "P1",
+        "tests": [
+          "ML24"
+        ],
+        "where": "src/app/[locale]/taiwan-debt-recovery-lawyer/content.ts:644",
+        "summary": "tsc TS2322 readonly keywords"
+      },
+      {
+        "id": "V2-02",
+        "severity": "P1",
+        "tests": [
+          "ML22",
+          "ML24"
+        ],
+        "where": "intent-contact-paths.test.tsx:45; intent-pages-ja.test.ts:90; en-acquisition-guide-links.test.tsx:104 (x3); canonical-public-route-identity.test.ts:29",
+        "summary": "6 unit regressions vs HEAD (4 files pass 44/44 at HEAD)"
+      },
+      {
+        "id": "V2-03",
+        "severity": "P1",
+        "tests": [
+          "ML11"
+        ],
+        "where": "src/components/IntentLandingPage.tsx:506",
+        "summary": "ja/ko/zh-hant litigation hub has no link to P07 (EN-only nav)"
+      },
+      {
+        "id": "V2-04",
+        "severity": "P1",
+        "tests": [
+          "ML06",
+          "ML05"
+        ],
+        "where": "src/content/columns-ja/001-taiwan-company-establishment-basics.md:43,117,119,123",
+        "summary": "Korea-only treaty rates unlabeled under Japanese-reader intro"
+      },
+      {
+        "id": "V2-05",
+        "severity": "P1",
+        "tests": [
+          "ML07"
+        ],
+        "where": "src/app/[locale]/guides/taiwan-company-setup/content.ts:176 (KO), :311 (ZH)",
+        "summary": "treaty entry-into-force 2023.12.2 vs MOF/JA/EN 2023-12-27"
+      },
+      {
+        "id": "V2-06",
+        "severity": "P1",
+        "tests": [
+          "ML01",
+          "ML02",
+          "ML04",
+          "ML23",
+          "ML24"
+        ],
+        "where": "ops/MULTILINGUAL-INTERNATIONAL-v2/",
+        "summary": "required evidence missing or stub; manifest self-hash; QA PASS/NOT_TESTED contradictions; failures unreported"
+      },
+      {
+        "id": "V2-07",
+        "severity": "BLOCKED",
+        "tests": [
+          "ML02",
+          "ML20"
+        ],
+        "where": "src/data/multilingual-international-v2.ts:143",
+        "summary": "new Arabic path labels without cited ar/MENA policy"
+      },
+      {
+        "id": "V2-08",
+        "severity": "P2",
+        "tests": [
+          "ML09",
+          "ML15"
+        ],
+        "where": "intent-pages.ts KO/ZH/JA labels and ZH titles; guide content.ts:530",
+        "summary": "engagement pages still labeled/titled as guides; JA planHeading reuses guide title"
+      },
+      {
+        "id": "V2-09",
+        "severity": "P2",
+        "tests": [
+          "ML15"
+        ],
+        "where": "P07 content.ts:201,497",
+        "summary": "duplicate brand in JA/ZH titles"
+      },
+      {
+        "id": "V2-10",
+        "severity": "P2",
+        "tests": [
+          "ML22"
+        ],
+        "where": "P07 content.ts:312",
+        "summary": "simplified 公证 in Japanese"
+      },
+      {
+        "id": "V2-11",
+        "severity": "P2",
+        "tests": [
+          "ML10",
+          "ML15"
+        ],
+        "where": "multilingual-international-v2.ts:171-195; guide content.ts:114,240,532,554; service-details.ts:25",
+        "summary": "internal editorial notes shown to readers"
+      },
+      {
+        "id": "V2-12",
+        "severity": "P2-publication-blocking",
+        "tests": [
+          "ML23"
+        ],
+        "where": "services/[slug]/page.tsx:341; P07 reviewNote",
+        "summary": "existing reviewed badge beside unreviewed new blocks; draft note visible"
+      },
+      {
+        "id": "V2-13",
+        "severity": "P2",
+        "tests": [
+          "ML16"
+        ],
+        "where": "header language switcher (existing)",
+        "summary": "guidance-locale switch from P07 goes to home without untranslated notice"
+      },
+      {
+        "id": "V2-14",
+        "severity": "P2",
+        "tests": [
+          "ML19"
+        ],
+        "where": "JA home 1440x900 cinematic guide link",
+        "summary": "low contrast over bright background"
+      },
+      {
+        "id": "V2-15",
+        "severity": "P2",
+        "tests": [
+          "ML11"
+        ],
+        "where": "P07 page.tsx:89,92",
+        "summary": "nested H2"
+      },
+      {
+        "id": "V2-16",
+        "severity": "P2-legal-review",
+        "tests": [
+          "ML07",
+          "ML23"
+        ],
+        "where": "src/data/service-details.ts:20,25",
+        "summary": "ZH investment page new client-segment claim; Korean-language support sentence removed"
+      },
+      {
+        "id": "V2-17",
+        "severity": "P1-pre-deploy-integration",
+        "tests": [
+          "ML18",
+          "ML21",
+          "ML24"
+        ],
+        "where": "branch base",
+        "summary": "48 commits behind origin/main c4270097 (de/es, female attorney forms, semiconductor); 10 files changed on both sides; likely GuidanceLocale type gap for de/es after merge [inference]"
+      }
+    ],
+    "scenarios": {
+      "A_EN": "PASS",
+      "B_JA": "FAIL",
+      "C_KO": "FAIL",
+      "D_ZH_Hant": "FAIL",
+      "E_guidance4": "PASS",
+      "F_AR": "BLOCKED",
+      "G_injury": "PASS",
+      "H_language_switch": "FAIL"
+    },
+    "evidence": [
+      "FABLE-REPORT.md",
+      "QA-BY-LOCALE.md",
+      "SNAPSHOT-start.sha256",
+      "SNAPSHOT-end.sha256",
+      "logs/manifest-check-start.txt",
+      "logs/manifest-check-end.txt",
+      "logs/10-tsc.log",
+      "logs/11-eslint.log",
+      "logs/12-vitest-targeted.log",
+      "logs/13-test-unit-full.log",
+      "logs/14-vitest-4files-HEAD-baseline.log",
+      "logs/20-render-matrix.log",
+      "logs/21-guidance-switcher-ar.log",
+      "logs/22-guidance-content.log",
+      "logs/30-pw-homes.json",
+      "logs/40-simplified-scan.log",
+      "logs/overlap-with-origin-main.txt",
+      "screens/"
+    ]
+  },
+  "human_linguistic_review": "PENDING",
+  "legal_review": "PENDING",
+  "publication_approval": "PENDING",
+  "publish_authorized": false,
+  "deployed": false,
+  "performance": {
+    "organic_search": "NOT_MEASURED",
+    "ai_visibility": "NOT_MEASURED",
+    "inquiries": "NOT_MEASURED",
+    "retainers": "NOT_MEASURED"
+  }
+}

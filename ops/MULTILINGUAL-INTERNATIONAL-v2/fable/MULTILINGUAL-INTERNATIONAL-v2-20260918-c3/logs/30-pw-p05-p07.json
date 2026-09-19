@@ -1,0 +1,330 @@
+[
+ {
+  "l": "en",
+  "vp": "1440x900",
+  "nav": 1,
+  "links": [
+   {
+    "t": "Unpaid Invoices or Missing Supplier Deliveries",
+    "h": "/en/taiwan-debt-recovery-lawyer"
+   },
+   {
+    "t": "Contract Disputes and Civil Claims",
+    "h": "/en/services/civil"
+   },
+   {
+    "t": "Police or Criminal Matters",
+    "h": "/en/services/criminal"
+   },
+   {
+    "t": "Family Matters",
+    "h": "/en/services/family"
+   }
+  ],
+  "unpaidY": 536,
+  "unpaidInView": true,
+  "afterClick": "/en/taiwan-debt-recovery-lawyer",
+  "p07h1": "Taiwan Debt Recovery and Commercial Disputes for Overseas Businesses",
+  "p07h3": [
+   "Unpaid Invoices and Outstanding Payments",
+   "Advance Payments and Undelivered Goods",
+   "Defective Goods, Inspection and Acceptance Disputes",
+   "Delayed Performance and Contract Disagreements",
+   "When the Taiwan Counterparty Stops Responding"
+  ],
+  "p07title": "Taiwan Debt Recovery and Supplier Disputes | Hovering International Law Firm",
+  "draftNote": 1,
+  "mailto": 5,
+  "toCivil": "/en/services/civil",
+  "civilReviewBadge": 1,
+  "civilCommercial": 1,
+  "ext": 0
+ },
+ {
+  "l": "en",
+  "vp": "390x844",
+  "nav": 1,
+  "links": [
+   {
+    "t": "Unpaid Invoices or Missing Supplier Deliveries",
+    "h": "/en/taiwan-debt-recovery-lawyer"
+   },
+   {
+    "t": "Contract Disputes and Civil Claims",
+    "h": "/en/services/civil"
+   },
+   {
+    "t": "Police or Criminal Matters",
+    "h": "/en/services/criminal"
+   },
+   {
+    "t": "Family Matters",
+    "h": "/en/services/family"
+   }
+  ],
+  "unpaidY": 541,
+  "unpaidInView": true,
+  "afterClick": "/en/taiwan-debt-recovery-lawyer",
+  "p07h1": "Taiwan Debt Recovery and Commercial Disputes for Overseas Businesses",
+  "p07h3": [
+   "Unpaid Invoices and Outstanding Payments",
+   "Advance Payments and Undelivered Goods",
+   "Defective Goods, Inspection and Acceptance Disputes",
+   "Delayed Performance and Contract Disagreements",
+   "When the Taiwan Counterparty Stops Responding"
+  ],
+  "p07title": "Taiwan Debt Recovery and Supplier Disputes | Hovering International Law Firm",
+  "draftNote": 1,
+  "mailto": 5,
+  "toCivil": "/en/services/civil",
+  "civilReviewBadge": 1,
+  "civilCommercial": 1,
+  "ext": 0
+ },
+ {
+  "l": "ja",
+  "vp": "1440x900",
+  "nav": 1,
+  "links": [
+   {
+    "t": "未払い・取引先の未納品",
+    "h": "/ja/taiwan-debt-recovery-lawyer"
+   },
+   {
+    "t": "契約紛争とその他の民事",
+    "h": "/ja/services/civil"
+   },
+   {
+    "t": "警察・刑事手続",
+    "h": "/ja/services/criminal"
+   },
+   {
+    "t": "家事事件",
+    "h": "/ja/services/family"
+   }
+  ],
+  "unpaidY": 504,
+  "unpaidInView": true,
+  "afterClick": "/ja/taiwan-debt-recovery-lawyer",
+  "p07h1": "台湾企業との取引トラブル・売掛金回収の相談",
+  "p07h3": [
+   "未払い・売掛金の未回収",
+   "前払い後の未納品",
+   "不良品・検収をめぐる争い",
+   "納期遅延・契約条件の争い",
+   "取引先からの連絡途絶"
+  ],
+  "p07title": "台湾企業との取引トラブル・売掛金回収の相談 | 昊鼎国際法律事務所",
+  "draftNote": 1,
+  "mailto": 4,
+  "toCivil": "/ja/services/civil",
+  "civilReviewBadge": 1,
+  "civilCommercial": 1,
+  "ext": 0
+ },
+ {
+  "l": "ja",
+  "vp": "390x844",
+  "nav": 1,
+  "links": [
+   {
+    "t": "未払い・取引先の未納品",
+    "h": "/ja/taiwan-debt-recovery-lawyer"
+   },
+   {
+    "t": "契約紛争とその他の民事",
+    "h": "/ja/services/civil"
+   },
+   {
+    "t": "警察・刑事手続",
+    "h": "/ja/services/criminal"
+   },
+   {
+    "t": "家事事件",
+    "h": "/ja/services/family"
+   }
+  ],
+  "unpaidY": 475,
+  "unpaidInView": true,
+  "afterClick": "/ja/taiwan-debt-recovery-lawyer",
+  "p07h1": "台湾企業との取引トラブル・売掛金回収の相談",
+  "p07h3": [
+   "未払い・売掛金の未回収",
+   "前払い後の未納品",
+   "不良品・検収をめぐる争い",
+   "納期遅延・契約条件の争い",
+   "取引先からの連絡途絶"
+  ],
+  "p07title": "",
+  "draftNote": 1,
+  "mailto": 4,
+  "toCivil": "/ja/services/civil",
+  "civilReviewBadge": 1,
+  "civilCommercial": 1,
+  "ext": 0
+ },
+ {
+  "l": "ko",
+  "vp": "1440x900",
+  "nav": 1,
+  "links": [
+   {
+    "t": "미수금·미납품",
+    "h": "/ko/taiwan-debt-recovery-lawyer"
+   },
+   {
+    "t": "계약 분쟁과 그 밖의 민사",
+    "h": "/ko/services/civil"
+   },
+   {
+    "t": "수사·형사",
+    "h": "/ko/services/criminal"
+   },
+   {
+    "t": "가사 사건",
+    "h": "/ko/services/family"
+   }
+  ],
+  "unpaidY": 476,
+  "unpaidInView": true,
+  "afterClick": "/ko/taiwan-debt-recovery-lawyer",
+  "p07h1": "대만 기업 거래 분쟁·미수금 상담",
+  "p07h3": [
+   "미지급·미수금",
+   "선금 후 미납품",
+   "불량품·검수 다툼",
+   "납기 지연·계약 조건 다툼",
+   "거래처 연락 단절"
+  ],
+  "p07title": "",
+  "draftNote": 1,
+  "mailto": 5,
+  "toCivil": "/ko/services/civil",
+  "civilReviewBadge": 1,
+  "civilCommercial": 1,
+  "ext": 0
+ },
+ {
+  "l": "ko",
+  "vp": "390x844",
+  "nav": 1,
+  "links": [
+   {
+    "t": "미수금·미납품",
+    "h": "/ko/taiwan-debt-recovery-lawyer"
+   },
+   {
+    "t": "계약 분쟁과 그 밖의 민사",
+    "h": "/ko/services/civil"
+   },
+   {
+    "t": "수사·형사",
+    "h": "/ko/services/criminal"
+   },
+   {
+    "t": "가사 사건",
+    "h": "/ko/services/family"
+   }
+  ],
+  "unpaidY": 357,
+  "unpaidInView": true,
+  "afterClick": "/ko/taiwan-debt-recovery-lawyer",
+  "p07h1": "대만 기업 거래 분쟁·미수금 상담",
+  "p07h3": [
+   "미지급·미수금",
+   "선금 후 미납품",
+   "불량품·검수 다툼",
+   "납기 지연·계약 조건 다툼",
+   "거래처 연락 단절"
+  ],
+  "p07title": "대만 기업 거래 분쟁·미수금 상담 | 법무법인 호정",
+  "draftNote": 1,
+  "mailto": 5,
+  "toCivil": "/ko/services/civil",
+  "civilReviewBadge": 1,
+  "civilCommercial": 1,
+  "ext": 0
+ },
+ {
+  "l": "zh-hant",
+  "vp": "1440x900",
+  "nav": 1,
+  "links": [
+   {
+    "t": "未付款或供應商未交貨",
+    "h": "/zh-hant/taiwan-debt-recovery-lawyer"
+   },
+   {
+    "t": "契約爭議及其他民事",
+    "h": "/zh-hant/services/civil"
+   },
+   {
+    "t": "警察或刑事案件",
+    "h": "/zh-hant/services/criminal"
+   },
+   {
+    "t": "家事事件",
+    "h": "/zh-hant/services/family"
+   }
+  ],
+  "unpaidY": 415,
+  "unpaidInView": true,
+  "afterClick": "/zh-hant/taiwan-debt-recovery-lawyer",
+  "p07h1": "台灣企業交易糾紛與應收帳款諮詢",
+  "p07h3": [
+   "未付款與應收帳款",
+   "預付款後未交貨",
+   "瑕疵與驗收爭議",
+   "交期遲延與契約條件爭議",
+   "相對人停止聯絡"
+  ],
+  "p07title": "台灣企業交易糾紛與應收帳款諮詢 | 昊鼎國際法律事務所",
+  "draftNote": 1,
+  "mailto": 5,
+  "toCivil": "/zh-hant/services/civil",
+  "civilReviewBadge": 1,
+  "civilCommercial": 1,
+  "ext": 0
+ },
+ {
+  "l": "zh-hant",
+  "vp": "390x844",
+  "nav": 1,
+  "links": [
+   {
+    "t": "未付款或供應商未交貨",
+    "h": "/zh-hant/taiwan-debt-recovery-lawyer"
+   },
+   {
+    "t": "契約爭議及其他民事",
+    "h": "/zh-hant/services/civil"
+   },
+   {
+    "t": "警察或刑事案件",
+    "h": "/zh-hant/services/criminal"
+   },
+   {
+    "t": "家事事件",
+    "h": "/zh-hant/services/family"
+   }
+  ],
+  "unpaidY": 319,
+  "unpaidInView": true,
+  "afterClick": "/zh-hant/taiwan-debt-recovery-lawyer",
+  "p07h1": "台灣企業交易糾紛與應收帳款諮詢",
+  "p07h3": [
+   "未付款與應收帳款",
+   "預付款後未交貨",
+   "瑕疵與驗收爭議",
+   "交期遲延與契約條件爭議",
+   "相對人停止聯絡"
+  ],
+  "p07title": "",
+  "draftNote": 1,
+  "mailto": 5,
+  "toCivil": "/zh-hant/services/civil",
+  "civilReviewBadge": 1,
+  "civilCommercial": 1,
+  "ext": 0
+ }
+]

@@ -1,0 +1,9 @@
+cmd: vitest run (4 failing files) on git archive HEAD 90352b02
+Thu Sep 17 11:05:05 UTC 2026
+ ✓ src/app/[locale]/__tests__/canonical-public-route-identity.test.ts (2 tests) 2ms
+ ✓ src/data/__tests__/intent-pages-ja.test.ts (22 tests) 3ms
+ ✓ src/components/__tests__/intent-contact-paths.test.tsx (8 tests) 105ms
+ ✓ src/components/__tests__/en-acquisition-guide-links.test.tsx (12 tests) 34ms
+ Test Files  4 passed (4)
+      Tests  44 passed (44)
+Thu Sep 17 11:05:08 UTC 2026

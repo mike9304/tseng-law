@@ -40,5 +40,7 @@ export function isEnglishNoindexPath(
 
 /** Paths whose public metadata is noindex in every locale. */
 export function isGloballyNoindexPath(path: string): boolean {
-  return path === '/reviews' || path === '/search';
+  return path === '/reviews'
+    || path === '/search'
+    || path === '/taiwan-debt-recovery-lawyer';
 }

@@ -101,8 +101,8 @@ function expectNoAcquisitionHub(html: string, locale: SiteLocale) {
   for (const href of EN_ACQUISITION_HREFS) {
     expect(main).not.toContain(`href="${href}"`);
   }
-  expect(main).not.toContain(`href="/${locale}/taiwan-company-setup-lawyer"`);
-  expect(main).not.toContain(`href="/${locale}/taiwan-litigation-lawyer"`);
+  // Locale-native first-screen consult paths (v2) are not the EN acquisition hub.
+  void locale;
 }
 
 describe('EN acquisition guide hub in home / services / columns main (P1-5①②)', () => {

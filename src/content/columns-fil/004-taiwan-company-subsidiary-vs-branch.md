@@ -184,7 +184,7 @@ Mas ligtas na isagawa ang panghuling pagpili habang magkatulad ang katotohanang 
 
 ## Kaugnay na Gabay
 
-- [Mga Serbisyo sa Pamumuhunan at Pagtatatag ng Kompanya sa Taiwan](/ko/services#investment)
+- [Mga Serbisyo sa Pamumuhunan at Pagtatatag ng Kompanya sa Taiwan](/ko/services/investment)
 - [Mga Batayan sa Pagtatatag ng Kompanya sa Taiwan](/fil/columns/taiwan-company-establishment-basics)
 - [Pagtatanong para sa konsultasyon](/fil/contact)
 

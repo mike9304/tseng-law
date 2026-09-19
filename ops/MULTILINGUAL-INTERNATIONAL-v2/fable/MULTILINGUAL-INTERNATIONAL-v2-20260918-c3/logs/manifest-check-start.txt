@@ -1,0 +1,4 @@
+entries=93 OK=93 MISMATCH=0 MISSING=0 self_hash_listed=False
+problems=[]
+changed_outside_manifest(excluding fable/)=['ops/MULTILINGUAL-INTERNATIONAL-v2/FABLE51-REVIEW-WO-c3.md', 'ops/MULTILINGUAL-INTERNATIONAL-v2/candidate-manifest.sha256']
+manifest_entries_under_fable/=44 (c2 review artifacts listed as candidate files)

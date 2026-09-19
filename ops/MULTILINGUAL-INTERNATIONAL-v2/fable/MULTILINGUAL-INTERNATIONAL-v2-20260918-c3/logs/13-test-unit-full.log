@@ -1,0 +1,7 @@
+cmd: npm run test:unit
+Thu Sep 17 16:56:43 UTC 2026
+exit=1
+Thu Sep 17 16:57:29 UTC 2026
+      Tests  1 failed | 10856 passed | 14 skipped | 1 todo (10872)
+ FAIL  src/data/__tests__/intent-pages-en-growth.test.ts > EN intent pages growth copy > preserves other locales and Korean case column links
+ Test Files  1 failed | 1295 passed (1296)

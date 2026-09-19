@@ -29,6 +29,11 @@ import {
   CONSULTATION_EMAIL,
   getConsultationPublicMailto,
 } from '@/lib/consultation/public-contact';
+import {
+  CORE_HOME_PATHS,
+  INVESTMENT_PATH_COPY,
+} from '@/data/multilingual-international-v2';
+import CivilCommercialBlock from '@/components/CivilCommercialBlock';
 import { buildBreadcrumbJsonLd, buildLegalServiceJsonLd, buildPersonJsonLd, buildSeoMetadata } from '@/lib/seo';
 import styles from './ServiceDetail.module.css';
 import { protectJapaneseHeadingUnits } from '@/lib/services/japanese-heading-units';
@@ -314,6 +319,24 @@ export default async function ServiceDetailPage(props: { params: Promise<{ local
           <div className={`container svc-container ${styles.layout}`}>
             <div className={`svc-body ${styles.body}`}>
               <p className="svc-intro">{area.intro}</p>
+              {area.slug === 'investment' ? (
+                <div className="svc-keypoints">
+                  <h2 className="svc-keypoints-title">{INVESTMENT_PATH_COPY[locale].heading}</h2>
+                  <ul className="svc-keypoints-list">
+                    <li>
+                      <Link href={CORE_HOME_PATHS[locale].companySetup.href} className="link-underline">
+                        {INVESTMENT_PATH_COPY[locale].lawyerLabel}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={CORE_HOME_PATHS[locale].guide.href} className="link-underline">
+                        {INVESTMENT_PATH_COPY[locale].guideLabel}
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              ) : null}
+              {area.slug === 'civil' ? <CivilCommercialBlock locale={locale} /> : null}
               {attorney ? (
                 <p className="svc-review-note">
                   {t.reviewLead}

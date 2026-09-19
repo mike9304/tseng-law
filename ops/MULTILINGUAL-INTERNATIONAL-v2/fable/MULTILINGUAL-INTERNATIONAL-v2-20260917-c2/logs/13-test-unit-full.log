@@ -1,0 +1,44 @@
+cmd: npm run test:unit
+Thu Sep 17 11:03:44 UTC 2026
+exit=1
+Thu Sep 17 11:04:31 UTC 2026
+AssertionError: expected [ { item: '最低資本金（設立自体）', …(1) }, …(5) ] to have a length of 7 but got 6
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 7[39m
+[31m+ 6[39m
+
+ ❯ src/data/__tests__/intent-pages-ja.test.ts:90:38
+     88|     expect(guideContent.ja.steps).toHaveLength(guideContent.ko.steps.l…
+     89|     expect(guideContent.ja.comparisonRows).toHaveLength(guideContent.k…
+     90|     expect(guideContent.ja.costRows).toHaveLength(guideContent.ko.cost…
+       |                                      ^
+     91|     expect(guideContent.ja.faq).toHaveLength(guideContent.ko.faq.lengt…
+     92|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/6]⎯
+
+ FAIL  src/app/[locale]/__tests__/canonical-public-route-identity.test.ts > canonical attorney identity on public routes > preserves representative Korean and English runtime content
+AssertionError: expected 'If you already know the business plan…' to contain 'Attorney Wei Tseng'
+
+Expected: [32m"Attorney Wei Tseng"[39m
+Received: [31m"If you already know the business plan you want reviewed, continue to the company-formation legal-services page. The first email is an enquiry, not a retainer."[39m
+
+ ❯ src/app/[locale]/__tests__/canonical-public-route-identity.test.ts:29:37
+     27|   it('preserves representative Korean and English runtime content', ()…
+     28|     expect(guideContent.ko.ctaText).toContain('증준외 대만 변호사');
+     29|     expect(guideContent.en.ctaText).toContain('Attorney Wei Tseng');
+       |                                     ^
+     30|     expect(landingContent.ko.keywords).toContain('증준외 변호사');
+     31|     expect(landingContent.en.keywords).toContain('Attorney Wei Tseng');
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/6]⎯
+
+
+ Test Files  4 failed | 1292 passed (1296)
+      Tests  6 failed | 10851 passed | 14 skipped | 1 todo (10872)
+   Start at  20:03:44
+   Duration  46.76s (transform 21.33s, setup 3.35s, collect 169.47s, tests 289.09s, environment 91ms, prepare 37.64s)
+

@@ -3,14 +3,16 @@ import { getFeaturedInsights, insightsArchive } from '../insights-archive';
 
 describe('insights archive publication order', () => {
   it.each(['ko', 'zh-hant', 'en'] as const)(
-    'uses the verified 2026 cosmetics publication date in %s',
+    'keeps the verified cosmetics date and the semiconductor lead article in %s',
     (locale) => {
       const cosmetics = insightsArchive[locale].posts.find(
         (post) => post.id === 'cosmetics-market-entry',
       );
 
       expect(cosmetics?.date).toBe('2026.02.04');
-      expect(getFeaturedInsights(locale)[0]?.id).toBe('cosmetics-market-entry');
+      // 2026-09-19 owner decision: column 018 stays public and leads the home feed.
+      expect(getFeaturedInsights(locale)[0]?.id).toBe('semiconductor-market-entry');
+      expect(getFeaturedInsights(locale).map((post) => post.id)).toContain('cosmetics-market-entry');
     },
   );
 

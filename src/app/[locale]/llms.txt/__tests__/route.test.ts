@@ -262,13 +262,13 @@ describe('guidance llms.txt lists the translated columns', () => {
    * listed only the ten guidance pages — sixty-eight real pages missing from
    * the surface AI clients read, while ko/zh-hant/en/ja listed all seventeen.
    */
-  it.each(['vi', 'id', 'th', 'fil'] as const)('%s carries all seventeen column URLs', (locale) => {
+  it.each(['vi', 'id', 'th', 'fil'] as const)('%s carries all eighteen column URLs', (locale) => {
     const body = buildGuidanceLlmsTxt(locale);
     const columnUrls = [...body.matchAll(/https:\/\/tseng-law\.com\/[a-z-]+\/columns\/[^)\s]+/g)].map(
       (m) => m[0],
     );
-    expect(columnUrls.length).toBe(17);
-    expect(new Set(columnUrls).size).toBe(17);
+    expect(columnUrls.length).toBe(18);
+    expect(new Set(columnUrls).size).toBe(18);
     // Every column URL must stay inside its own locale, not fall back to /en or /ko.
     for (const url of columnUrls) {
       expect(url.startsWith(`https://tseng-law.com/${locale}/columns/`)).toBe(true);

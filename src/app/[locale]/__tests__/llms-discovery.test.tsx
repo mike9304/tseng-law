@@ -94,7 +94,7 @@ describe('guidance locale llms.txt catalogs', () => {
       const page = guidanceContent[locale].pages[pageKey];
       expect(bullets.filter((line) => line.includes(`](${url}):`))).toHaveLength(1);
       // Title and one-line annotation come from the page's own published copy.
-      expect(body).toContain(`- [${page.title}](${url}): ${page.description}`);
+      expect(body).toContain(`- [${page.title}](${url}): ${page.description.replace(/\s+/gu, ' ')}`);
     }
   });
 
@@ -138,8 +138,8 @@ describe('guidance locale llms.txt catalogs', () => {
     const notices = GUIDANCE_LOCALES_4.flatMap((locale) =>
       Object.values(GUIDANCE_LLMS_NOTICES[locale]),
     );
-    // Nine guidance languages × three notice lines.
-    expect(notices).toHaveLength(39);
+    // Sixteen guidance languages × three notice lines.
+    expect(notices).toHaveLength(48);
     expect(new Set(notices).size).toBe(notices.length);
   });
 
@@ -199,7 +199,7 @@ describe('/[locale]/llms.txt route — guidance locales', () => {
     }
   });
 
-  it.each(['it', 'xx', 'vi-VN', 'zh'])('keeps returning 404 for the unsupported locale %s', async (locale) => {
+  it.each(['cs', 'xx', 'vi-VN', 'zh'])('keeps returning 404 for the unsupported locale %s', async (locale) => {
     const response = await requestLlmsTxt(locale);
     const body = await response.text();
 
@@ -222,7 +222,7 @@ describe('root llms.txt guidance catalog links', () => {
     ]);
   });
 
-  it('lists four site-locale catalogs and thirteen guidance catalogs', () => {
+  it('lists four site-locale catalogs and sixteen guidance catalogs', () => {
     const body = buildRootLlmsTxt();
     const catalogUrls = Array.from(
       body.matchAll(/\]\((https:\/\/tseng-law\.com\/[a-z-]+\/llms\.txt)\):/gu),
@@ -233,7 +233,7 @@ describe('root llms.txt guidance catalog links', () => {
       ...siteLocales.map((locale) => `https://tseng-law.com/${locale}/llms.txt`),
       ...GUIDANCE_LOCALES_4.map((locale) => `https://tseng-law.com/${locale}/llms.txt`),
     ]);
-    expect(catalogUrls).toHaveLength(17);
+    expect(catalogUrls).toHaveLength(20);
   });
 
   it('labels each guidance catalog in its own language without widening consultation languages', () => {

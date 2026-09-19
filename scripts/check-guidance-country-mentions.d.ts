@@ -6,7 +6,23 @@
  * what lets the vitest gate import it under `strict`.
  */
 
-export type GuidanceLocale = 'vi' | 'id' | 'th' | 'fil' | 'ar';
+export type GuidanceLocale =
+  | 'vi'
+  | 'id'
+  | 'th'
+  | 'fil'
+  | 'ar'
+  | 'de'
+  | 'es'
+  | 'fr'
+  | 'pt'
+  | 'zh-hans'
+  | 'ms'
+  | 'ru'
+  | 'tr'
+  | 'it'
+  | 'nl'
+  | 'pl';
 
 export type GuidanceCountryHit = {
   country: string;

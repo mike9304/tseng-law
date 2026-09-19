@@ -453,7 +453,103 @@ export const guidanceAnswers: Record<
     faq: {
       answer:
         'Bu bölüm sık sorulan soruları genel bilgi düzleminde yanıtlar: altı çalışma grubu, iletişimden önce hazırlık, ücretin belirlenme biçimi ve bir ileti göndermenin anlamı. Gönderilen talep bir avukatın incelemesini bekler; hukuki görüş değildir, randevu değildir ve avukat ile müvekkil arasında ilişki kurmaz. Görüşme İngilizce, Çince, Japonca ve Korece yapılır.',
-      sources: ['/tr/contact', '/tr/services'],
+        sources: ['/tr/contact', '/tr/services'],
+    },
+  },
+  it: {
+    services: {
+      answer:
+        'Lo studio tratta sei gruppi di lavoro secondo il diritto di Taiwan: investimento e costituzione di società, controversie civili e risarcimento, matrimonio, famiglia e successioni, lavoro, penale e proprietà intellettuale. L’ambito di ciascuna questione viene confermato separatamente dopo che un’avvocata o un avvocato ha esaminato il contenuto che Lei invia. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
+      sources: ['/it/faq', '/it/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm è uno studio legale a Taiwan, fondato nel 2016 da laureate e laureati della National Taiwan University (國立臺灣大學), con uffici a Taipei, Kaohsiung, Taichung e Pingtung. Dal 2020 esiste una sezione di contabilità; l’ufficio di Taichung tratta questioni con nesso con la Corea e il Giappone. Lo studio non promette un risultato. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
+      sources: ['/it/lawyers', '/it/services'],
+    },
+    lawyers: {
+      answer:
+        'Questa pagina mostra i profili delle avvocate e degli avvocati, della direzione operativa e della revisione associata di Hovering. L’avvocata Wei Tseng (曾雋崴) è abilitata a Taiwan ed è l’avvocata dirigente dello studio; lavora con clienti dalla Corea, dal Giappone e con altri clienti internazionali. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
+      sources: ['/it/about', '/it/contact'],
+    },
+    pricing: {
+      answer:
+        'Questa pagina non pubblica un listino. Prima si fissa l’ambito di lavoro dal riassunto che Lei invia, poi importo e modo di calcolo dei costi si confermano con Lei prima che il lavoro inizi. La consulenza con un’avvocata o un avvocato può essere a pagamento; oltre all’onorario possono sorgere costi di tribunale o di autorità. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
+      sources: ['/it/contact', '/it/faq'],
+    },
+    contact: {
+      answer:
+        'Invii il riassunto tramite il modulo di contatto: che cosa è accaduto, di quale aiuto ha bisogno, quale nesso ha la questione con Taiwan e il termine, se Lo conosce. Nella fase iniziale non deve ancora inviare documenti di identità o l’insieme delle prove. Lo studio non promette un termine di risposta e non conferma un appuntamento tramite questa pagina. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
+      sources: ['/it/faq', '/it/pricing'],
+    },
+    faq: {
+      answer:
+        'Questa parte risponde a domande frequenti al livello di indicazioni generali: i sei gruppi di lavoro, la preparazione prima del contatto, la fissazione dei costi e il significato di un messaggio inviato. Una richiesta inviata attende l’esame di un’avvocata o di un avvocato; non è un parere giuridico, non è un appuntamento e non costituisce un rapporto tra avvocata o avvocato e cliente. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
+      sources: ['/it/contact', '/it/services'],
+    },
+  },
+  nl: {
+    services: {
+      answer:
+        'Het kantoor behandelt zes werkgroepen volgens Taiwanees recht: investering en oprichting van vennootschappen, civiele zaken en schadevergoeding, huwelijk, familie en erfrecht, arbeidsrecht, strafzaken en intellectuele eigendom. De omvang van elke zaak wordt afzonderlijk bevestigd nadat een advocaat de inhoud heeft beoordeeld die u stuurt. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.',
+      sources: ['/nl/faq', '/nl/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm is een advocatenkantoor in Taiwan, in 2016 opgericht door afgestudeerden van de National Taiwan University (國立臺灣大學), met kantoren in Taipei, Kaohsiung, Taichung en Pingtung. Sinds 2020 is er een boekhoudafdeling; het kantoor Taichung behandelt zaken met betrekking tot Korea en Japan. Het kantoor belooft geen resultaat. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.',
+      sources: ['/nl/lawyers', '/nl/services'],
+    },
+    lawyers: {
+      answer:
+        'Deze pagina toont de profielen van de advocaten, de operationele leiding en de partneraccountancy van Hovering. Advocaat Wei Tseng (曾雋崴) is bevoegd in Taiwan en is leidinggevend advocaat van het kantoor; zij werkt met cliënten uit Korea, Japan en andere internationale cliënten. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.',
+      sources: ['/nl/about', '/nl/contact'],
+    },
+    pricing: {
+      answer:
+        'Deze pagina publiceert geen prijslijst. Eerst wordt de omvang van het werk vastgesteld uit de samenvatting die u stuurt, daarna worden hoogte en berekeningswijze van de kosten met u bevestigd voordat het werk begint. Het gesprek met een advocaat kan tegen betaling zijn; naast het honorarium kunnen gerechtelijke of bestuurlijke kosten ontstaan. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.',
+      sources: ['/nl/contact', '/nl/faq'],
+    },
+    contact: {
+      answer:
+        'Stuur uw samenvatting via het contactformulier: wat er is gebeurd, welke hulp u nodig hebt, welk verband de zaak met Taiwan heeft en de termijn, als u er een kent. In de beginfase hoeft u nog geen identiteitsdocumenten of het gehele bewijs te sturen. Het kantoor belooft geen antwoordtermijn en bevestigt geen afspraak via deze pagina. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.',
+      sources: ['/nl/faq', '/nl/pricing'],
+    },
+    faq: {
+      answer:
+        'Dit deel beantwoordt veelgestelde vragen op het niveau van algemene informatie: de zes werkgroepen, de voorbereiding vóór het contact, de vaststelling van de kosten en de betekenis van een verzonden bericht. Een verzonden verzoek wacht op beoordeling door een advocaat; het is geen juridisch advies, geen afspraak en schept geen relatie tussen advocaat en cliënt. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.',
+      sources: ['/nl/contact', '/nl/services'],
+    },
+  },
+  pl: {
+    services: {
+      answer:
+        'Kancelaria prowadzi sześć grup spraw według prawa Tajwanu: inwestycje i zakładanie spółek, sprawy cywilne i odszkodowania, małżeństwo, rodzina i spadki, prawo pracy, sprawy karne oraz własność intelektualną. Zakres każdej sprawy jest potwierdzany osobno po tym, jak adwokat rozpatrzy treść, którą Państwo wysyłają. Konsultacja odbywa się wyłącznie po angielsku, chińsku, japońsku i koreańsku.',
+      sources: ['/pl/faq', '/pl/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm jest kancelarią adwokacką na Tajwanie, założoną w 2016 r. przez absolwentów National Taiwan University (國立臺灣大學), z biurami w Taipei, Kaohsiung, Taichung i Pingtung. Od 2020 r. istnieje dział księgowości; biuro w Taichung prowadzi sprawy związane z Koreą i Japonią. Kancelaria nie obiecuje wyniku. Konsultacja odbywa się wyłącznie po angielsku, chińsku, japońsku i koreańsku.',
+      sources: ['/pl/lawyers', '/pl/services'],
+    },
+    lawyers: {
+      answer:
+        'Ta strona pokazuje profile adwokatów, kierownictwa operacyjnego i partnerskiego biura rachunkowego Hovering. Adwokat Wei Tseng (曾雋崴) jest uprawniona do wykonywania zawodu na Tajwanie i jest adwokatem kierującym kancelarią; pracuje z klientami z Korei, Japonii i innymi klientami międzynarodowymi. Konsultacja odbywa się wyłącznie po angielsku, chińsku, japońsku i koreańsku.',
+      sources: ['/pl/about', '/pl/contact'],
+    },
+    pricing: {
+      answer:
+        'Ta strona nie publikuje cennika. Najpierw ustala się zakres pracy ze streszczenia, które Państwo wysyłają, a następnie wysokość i sposób obliczania kosztów potwierdza się z Państwem, zanim praca się zacznie. Rozmowa z adwokatem może być odpłatna; obok honorarium mogą powstać koszty sądowe lub urzędowe. Konsultacja odbywa się wyłącznie po angielsku, chińsku, japońsku i koreańsku.',
+      sources: ['/pl/contact', '/pl/faq'],
+    },
+    contact: {
+      answer:
+        'Prosimy wysłać streszczenie przez formularz kontaktowy: co się stało, jakiej pomocy potrzeba, jaki związek ma sprawa z Tajwanem oraz termin, jeśli jest znany. Na początku nie trzeba jeszcze wysyłać dokumentów tożsamości ani całości dowodów. Kancelaria nie obiecuje terminu odpowiedzi i nie potwierdza spotkania za pośrednictwem tej strony. Konsultacja odbywa się wyłącznie po angielsku, chińsku, japońsku i koreańsku.',
+      sources: ['/pl/faq', '/pl/pricing'],
+    },
+    faq: {
+      answer:
+        'Ta część odpowiada na częste pytania na poziomie informacji ogólnych: sześć grup spraw, przygotowanie przed kontaktem, ustalanie kosztów i znaczenie wysłanej wiadomości. Wysłany wniosek czeka na rozpatrzenie przez adwokata; nie jest poradą prawną, nie jest terminem i nie tworzy stosunku między adwokatem a klientem. Konsultacja odbywa się wyłącznie po angielsku, chińsku, japońsku i koreańsku.',
+      sources: ['/pl/contact', '/pl/services'],
     },
   },
 };

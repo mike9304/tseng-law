@@ -123,6 +123,24 @@ export const PUBLIC_LANGUAGE_REGISTRY: readonly PublicLanguageEntry[] = [
     englishName: 'Turkish',
     region: 'europe',
   },
+  {
+    locale: 'it',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.it,
+    englishName: 'Italian',
+    region: 'europe',
+  },
+  {
+    locale: 'nl',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.nl,
+    englishName: 'Dutch',
+    region: 'europe',
+  },
+  {
+    locale: 'pl',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.pl,
+    englishName: 'Polish',
+    region: 'europe',
+  },
 ];
 
 export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion, string>> = {
@@ -245,6 +263,27 @@ export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion
     europe: 'Avrupa',
     americas: 'Amerika',
   },
+  it: {
+    global: 'Globale',
+    'asia-pacific': 'Asia-Pacifico',
+    'middle-east': 'Medio Oriente',
+    europe: 'Europa',
+    americas: 'Americhe',
+  },
+  nl: {
+    global: 'Globaal',
+    'asia-pacific': 'Azië-Pacific',
+    'middle-east': 'Midden-Oosten',
+    europe: 'Europa',
+    americas: 'Amerika',
+  },
+  pl: {
+    global: 'Globalnie',
+    'asia-pacific': 'Azja i Pacyfik',
+    'middle-east': 'Bliski Wschód',
+    europe: 'Europa',
+    americas: 'Ameryki',
+  },
 };
 
 export const LANGUAGE_PICKER_COPY: Record<
@@ -352,6 +391,24 @@ export const LANGUAGE_PICKER_COPY: Record<
     title: 'Lütfen bölgenizi ve dilinizi seçin',
     close: 'Kapat',
     current: 'Geçerli dil',
+  },
+  it: {
+    open: 'Scegliere regione e lingua',
+    title: 'Scelga la Sua regione e la Sua lingua',
+    close: 'Chiudere',
+    current: 'Lingua attuale',
+  },
+  nl: {
+    open: 'Regio en taal kiezen',
+    title: 'Kies uw regio en taal',
+    close: 'Sluiten',
+    current: 'Huidige taal',
+  },
+  pl: {
+    open: 'Wybierz region i język',
+    title: 'Prosimy wybrać region i język',
+    close: 'Zamknij',
+    current: 'Bieżący język',
   },
 };
 

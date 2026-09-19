@@ -1,0 +1,104 @@
+[WO-G2-3 시작 Fri Sep 18 18:25:08 KST 2026]
+Italian, Dutch, and Polish guidance locales are live in this workspace as a copy of the `f82be715` (zh-hans/ms/ru/tr) pattern. Consultation languages stay English, Chinese (中文), Japanese, and Korean. Attorney Wei Tseng is female (`l’avvocata` / `advocaat` + `zij` / `adwokat` + feminine agreement). No commit was made.
+
+## diff --stat
+
+Tracked: **46 files changed, 1456 insertions(+), 88 deletions(-)** (plus 7 untracked files).
+
+Untracked:
+- `src/data/international-guidance-it-nl-pl.ts`
+- `src/lib/__tests__/guidance-it-nl-pl-content.test.ts`
+- `src/lib/__tests__/guidance-it-nl-pl-routing.test.ts`
+- `src/app/__tests__/locale-font-bindings.test.ts`
+- `src/content/columns-it/.gitkeep`
+- `src/content/columns-nl/.gitkeep`
+- `src/content/columns-pl/.gitkeep`
+
+## §5 command output (raw)
+
+```
+===== 1. git status --short | wc -l && git diff --stat | tail -1 =====
+      54
+ 46 files changed, 1456 insertions(+), 88 deletions(-)
+
+===== 2. npm run typecheck 2>&1 | tail -2 =====
+Generating route types...
+✓ Route types generated successfully
+```
+
+(typecheck exit 0; `tsc` printed nothing)
+
+```
+===== 3. vitest (tail) =====
+ Test Files  23 passed (23)
+      Tests  598 passed (598)
+   Start at  18:51:04
+   Duration  25.26s (transform 1.46s, setup 212ms, collect 4.62s, tests 28.17s, environment 2ms, prepare 945ms)
+
+===== 4. node --test scripts/check-column-translation.test.mjs =====
+ℹ tests 126
+ℹ pass 126
+ℹ fail 0
+
+===== 5. eslint =====
+(empty; exit 0)
+
+===== 6. country mentions =====
+  ALLOW src/data/international-inquiry-copy.ts:453 [fil] Thai — field whose value is a list of language names
+PASS guidance-country-mentions: 0 violations
+
+===== 7. western review markers =====
+       0
+```
+
+## Language FAQ (verbatim)
+
+**it**  
+Q: `È possibile una consulenza in italiano?`  
+A: `No. Queste indicazioni sono scritte in italiano, ma la consulenza con un’avvocata o un avvocato si svolge soltanto in inglese, cinese (中文), giapponese e coreano. Non promettiamo nemmeno un interprete. La traduzione scritta è un’altra cosa: il testo originale che scrive viene conservato così e non viene tradotto automaticamente.`
+
+**nl**  
+Q: `Kan ik in het Nederlands worden geadviseerd?`  
+A: `Nee. Deze toelichting is in het Nederlands geschreven, maar het gesprek met een advocaat vindt alleen plaats in het Engels, Chinees (中文), Japans en Koreaans. Wij beloven ook geen tolk. Schriftelijke vertaling is iets anders: de oorspronkelijke tekst die u schrijft, wordt zo bewaard en niet automatisch vertaald.`
+
+**pl**  
+Q: `Czy możliwa jest konsultacja po polsku?`  
+A: `Nie. Te informacje są napisane po polsku, ale konsultacja z adwokatem odbywa się wyłącznie w języku angielskim, chińskim (中文), japońskim i koreańskim. Nie obiecujemy też tłumacza ustnego. Tłumaczenie pisemne to coś innego: oryginalny tekst, który Państwo napiszą, jest zapisywany tak i nie jest tłumaczony automatycznie.`
+
+## Nav labels (all ≤ 14 chars)
+
+| key | it | n | nl | n | pl | n |
+|---|---|---|---|---|---|---|
+| home | Inizio | 6 | Home | 4 | Start | 5 |
+| services | Servizi | 7 | Diensten | 8 | Usługi | 6 |
+| about | Lo studio | 9 | Het kantoor | 11 | Kancelaria | 10 |
+| lawyers | Avvocati | 8 | Advocaten | 9 | Adwokaci | 8 |
+| pricing | Costi | 5 | Kosten | 6 | Koszty | 6 |
+| contact | Contatti | 8 | Contact | 7 | Kontakt | 7 |
+| faq | Domande | 7 | Vragen | 6 | Pytania | 7 |
+| privacy | Privacy | 7 | Privacy | 7 | Prywatność | 10 |
+| disclaimer | Avvertenze | 10 | Voorbehoud | 10 | Zastrzeżenia | 12 |
+| columns | Articoli | 8 | Artikelen | 9 | Artykuły | 8 |
+
+Formal address: it `Lei` / nl `u` / pl `Państwo`. og:locale `it_IT` · `nl_NL` · `pl_PL`. Autonyms Italiano / Nederlands / Polski. Region europe.
+
+## Font-binding diff summary
+
+`html[lang]` latin list grew from `vi, id, fil` to also include `de, es, fr, pt, ms, ru, tr, it, nl, pl`, all pointing at `--font-body-latin` / `--font-heading-latin`. The same locales were added on `.site[data-locale=…]`.
+
+New Simplified Chinese bindings:
+
+- `html[lang='zh-Hans']`, `html[lang='zh-hans']`
+- `.site[data-locale='zh-hans']`
+
+`--font-body` → `--font-noto-sans-sc-loaded`; `--font-heading` / `--font-display` → `--font-noto-serif-sc-loaded`. Covered by `src/app/__tests__/locale-font-bindings.test.ts`.
+
+Checker tables now exist for all `GUIDANCE_LANGS` (including the previous zh-hans/ms/ru/tr gap plus it/nl/pl): FORBIDDEN_PHRASES (8 each), nationality terms, language regexes, thousand style, and numeral lexicons.
+
+## Unresolved
+
+- Column markdown is empty by design (`.gitkeep` only).
+- `src/components/__tests__/public-module-locale-switcher.test.tsx` still hardcodes the old 17-locale list; it was outside the §5 vitest set.
+- No browser, `next start`, Playwright, or full suite (forbidden by the WO).
+- No git add/commit/push.
+=== WO-G2-3 종료 code=0 Fri Sep 18 18:52:46 KST 2026 ===

@@ -593,6 +593,36 @@ export const CINEMATIC_OPENING_COPY: Record<
     service: 'Tayvan hukuku bilgileri · İngilizce, Çince, Japonca ve Korece',
     contact: 'Ofisle iletişime geçin',
   },
+  it: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'AVVOCATE E AVVOCATI A TAIWAN',
+    scroll: 'Continuare verso il basso',
+    skip: 'Saltare l’introduzione',
+    mediaAlt:
+      'Ripresa aerea in luce naturale sopra la catena centrale di Taiwan e un mare di nubi',
+    service: 'Indicazioni giuridiche su Taiwan · inglese, cinese, giapponese e coreano',
+    contact: 'Contattare lo studio',
+  },
+  nl: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ADVOCATEN IN TAIWAN',
+    scroll: 'Verder naar beneden',
+    skip: 'Intro overslaan',
+    mediaAlt:
+      'Luchtbeeld in natuurlijk licht boven Taiwans Centrale Gebergte en een wolkenzee',
+    service: 'Juridische toelichting over Taiwan · Engels, Chinees, Japans en Koreaans',
+    contact: 'Het kantoor contacteren',
+  },
+  pl: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ADWOKACI NA TAJWANIE',
+    scroll: 'Przewinąć w dół',
+    skip: 'Pominąć wstęp',
+    mediaAlt:
+      'Zdjęcie lotnicze w naturalnym świetle nad Centralnym Pasmem Tajwanu i morzem chmur',
+    service: 'Informacje prawne o Tajwanie · angielski, chiński, japoński i koreański',
+    contact: 'Skontaktować się z kancelarią',
+  },
 };
 
 export default function CinematicOpening({

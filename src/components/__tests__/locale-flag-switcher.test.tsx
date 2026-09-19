@@ -71,6 +71,13 @@ describe('LocaleFlagSwitcher', () => {
       ['es', 'Español'],
       ['fr', 'Français'],
       ['pt', 'Português'],
+      ['zh-hans', '简体中文'],
+      ['ms', 'Bahasa Melayu'],
+      ['ru', 'Русский'],
+      ['tr', 'Türkçe'],
+      ['it', 'Italiano'],
+      ['nl', 'Nederlands'],
+      ['pl', 'Polski'],
     ]);
     expect(LOCALE_FLAG_OPTIONS.map((option) => option.locale)).toEqual([...PUBLIC_LOCALES_8]);
 
@@ -87,21 +94,10 @@ describe('LocaleFlagSwitcher', () => {
     expect(html).not.toContain('>EN</span>');
 
     const links = renderedLinks('ko');
-    const expected = [
-      { href: '/ko/services', label: '한국어' },
-      { href: '/zh-hant/services', label: '繁體中文' },
-      { href: '/en/services', label: 'English' },
-      { href: '/ja/services', label: '日本語' },
-      { href: '/vi/services', label: 'Tiếng Việt' },
-      { href: '/id/services', label: 'Bahasa Indonesia' },
-      { href: '/th/services', label: 'ไทย' },
-      { href: '/fil/services', label: 'Filipino' },
-      { href: '/ar/services', label: 'العربية' },
-      { href: '/de/services', label: 'Deutsch' },
-      { href: '/es/services', label: 'Español' },
-      { href: '/fr/services', label: 'Français' },
-      { href: '/pt/services', label: 'Português' },
-    ];
+    const expected = PUBLIC_LOCALES_8.map((locale) => ({
+      href: `/${locale}/services`,
+      label: PUBLIC_LANGUAGE_AUTONYMS[locale],
+    }));
 
     expect(links).toHaveLength(expected.length);
     expected.forEach((option, index) => {
@@ -224,14 +220,14 @@ describe('LocaleFlagSwitcher', () => {
       (element) => element.props['data-locale-switch-fallback'] === 'columns-list',
     );
 
-    expect(fallbackLinks).toHaveLength(13);
+    expect(fallbackLinks).toHaveLength(16);
     fallbackLinks.forEach((element) => {
       expect(element.props['aria-disabled']).toBeUndefined();
-      expect(element.props.href).toMatch(/^\/(vi|id|th|fil|ar|de|es|fr|pt|zh-hans|ms|ru|tr)\/columns$/);
+      expect(element.props.href).toMatch(/^\/(vi|id|th|fil|ar|de|es|fr|pt|zh-hans|ms|ru|tr|it|nl|pl)\/columns$/);
       element.props.onClick?.();
     });
-    expect(onLocaleSelect.mock.calls.map(([target]) => target)).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr']);
-    expect(renderedLinks('ko').some((link) => /href="\/(vi|id|th|fil|ar|de|es|fr|pt|zh-hans|ms|ru|tr)\/columns\//.test(link))).toBe(
+    expect(onLocaleSelect.mock.calls.map(([target]) => target)).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl']);
+    expect(renderedLinks('ko').some((link) => /href="\/(vi|id|th|fil|ar|de|es|fr|pt|zh-hans|ms|ru|tr|it|nl|pl)\/columns\//.test(link))).toBe(
       false,
     );
   });

@@ -941,6 +941,9 @@ test.describe('O29 og:locale across the eight public locales', () => {
     ms: 'ms_MY',
     ru: 'ru_RU',
     tr: 'tr_TR',
+    it: 'it_IT',
+    nl: 'nl_NL',
+    pl: 'pl_PL',
   };
 
   for (const locale of PUBLIC_LOCALES_8) {

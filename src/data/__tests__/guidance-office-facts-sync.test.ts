@@ -35,7 +35,7 @@ import {
 } from '@/data/international-guidance-offices';
 import { taiwanOfficeData } from '@/data/office-locations';
 
-const LOCALES: GuidanceLocale[] = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr'];
+const LOCALES: GuidanceLocale[] = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl'];
 
 /**
  * The office register. `office-locations.ts` is the canonical record every
@@ -101,6 +101,9 @@ const CLIENT_COUNTRY_TERMS: Record<GuidanceLocale, Record<string, string[]>> = {
   ms: { Korea: ['Korea'], Japan: ['Jepun'] },
   ru: { Korea: ['Коре'], Japan: ['Япон'] },
   tr: { Korea: ['Kore'], Japan: ['Japonya'] },
+  it: { Korea: ['Corea'], Japan: ['Giappone'] },
+  nl: { Korea: ['Korea'], Japan: ['Japan'] },
+  pl: { Korea: ['Kore'], Japan: ['Japon'] },
 };
 
 /** The attorney's Chinese name; how the same sentence is found in both modules. */

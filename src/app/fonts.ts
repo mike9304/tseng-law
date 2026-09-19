@@ -123,7 +123,10 @@ export type DocumentLanguage =
   | 'zh-Hans'
   | 'ms'
   | 'ru'
-  | 'tr';
+  | 'tr'
+  | 'it'
+  | 'nl'
+  | 'pl';
 
 const koreanFontClassName = [sansKorean.variable, serifKorean.variable].join(' ');
 const traditionalChineseFontClassName = [
@@ -171,6 +174,9 @@ export function getLocaleFontClassName(language: DocumentLanguage): string {
     || language === 'ms'
     || language === 'ru'
     || language === 'tr'
+    || language === 'it'
+    || language === 'nl'
+    || language === 'pl'
   ) {
     return latinExtendedFontClassName;
   }

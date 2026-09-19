@@ -24,6 +24,9 @@ const PENDING_CONFIRMATION: Record<(typeof GUIDANCE_LOCALES_4)[number], RegExp> 
   ms: /menunggu pengesahan pejabat|butiran itu belum disahkan oleh pejabat/,
   ru: /ожидает подтверждения бюро|ещё не подтверждено бюро/,
   tr: /büro onayı bekleniyor|büro henüz doğrulamamış/,
+  it: /in attesa di conferma dello studio|non ancora confermato dallo studio/,
+  nl: /wacht op bevestiging door het kantoor|nog niet bevestigd door het kantoor/,
+  pl: /oczekuje potwierdzenia kancelarii|nie zostało jeszcze potwierdzone przez kancelarię/,
 };
 
 const GENERIC_PENDING = /pending confirmation|operator confirmation|confirmed by the operator/i;

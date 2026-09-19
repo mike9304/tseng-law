@@ -36,6 +36,7 @@ const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..
 export const GUIDANCE_DATA_FILES = [
   'src/data/international-guidance-content.ts',
   'src/data/international-guidance-western.ts',
+  'src/data/international-guidance-it-nl-pl.ts',
   'src/data/international-guidance-asia.ts',
   'src/data/international-guidance-answers.ts',
   'src/data/international-guidance-team.ts',
@@ -46,7 +47,7 @@ export const GUIDANCE_DATA_FILES = [
   'src/data/international-guidance-offices.ts',
 ];
 
-export const GUIDANCE_LOCALES = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr'];
+export const GUIDANCE_LOCALES = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl'];
 
 /**
  * Country tokens that must not appear in guidance copy.
@@ -140,7 +141,7 @@ export const GUIDANCE_ALLOWED_CONTEXTS = [
   {
     id: 'locale-key',
     reason: 'object key / locale identifier, not reader-facing prose',
-    test: (entry) => /^(?:vi|id|th|fil|ar|en|ja|ko|zh-hant|zh-hans|de|es|fr|pt|ms|ru|tr)$/.test(entry.key ?? ''),
+    test: (entry) => /^(?:vi|id|th|fil|ar|en|ja|ko|zh-hant|zh-hans|de|es|fr|pt|ms|ru|tr|it|nl|pl)$/.test(entry.key ?? ''),
   },
   {
     id: 'language-field',
@@ -162,13 +163,13 @@ export function extractLocaleBlocks(text) {
   for (let i = 0; i < lines.length; i += 1) {
     const line = lines[i];
     if (!current) {
-      const open = /^ {2}'?(vi|id|th|fil|ar|de|es|fr|pt|zh-hans|ms|ru|tr)'?: \{\s*$/.exec(line);
+      const open = /^ {2}'?(vi|id|th|fil|ar|de|es|fr|pt|zh-hans|ms|ru|tr|it|nl|pl)'?: \{\s*$/.exec(line);
       if (open) {
         current = { locale: open[1], startLine: i + 1, lines: [] };
         closeAtColumnZero = false;
         continue;
       }
-      const western = /^export const (german|spanish|french|portuguese|russian|turkish)GuidanceContent\b/.exec(line);
+      const western = /^export const (german|spanish|french|portuguese|russian|turkish|italian|dutch|polish)GuidanceContent\b/.exec(line);
       if (western) {
         const westernLocale = {
           german: 'de',
@@ -177,6 +178,9 @@ export function extractLocaleBlocks(text) {
           portuguese: 'pt',
           russian: 'ru',
           turkish: 'tr',
+          italian: 'it',
+          dutch: 'nl',
+          polish: 'pl',
         }[western[1]];
         current = {
           locale: westernLocale,
@@ -200,7 +204,7 @@ export function extractLocaleBlocks(text) {
         closeAtColumnZero = true;
         continue;
       }
-      const shorthand = /^ {2}'?(de|es|fr|pt|zh-hans|ms|ru|tr)'?: [A-Za-z]/.exec(line);
+      const shorthand = /^ {2}'?(de|es|fr|pt|zh-hans|ms|ru|tr|it|nl|pl)'?: [A-Za-z]/.exec(line);
       if (shorthand) {
         blocks.push({ locale: shorthand[1], startLine: i + 1, lines: [] });
       }

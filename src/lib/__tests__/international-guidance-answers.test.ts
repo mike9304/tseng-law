@@ -31,6 +31,9 @@ const GUIDANCE_LOCALES = [
   'ms',
   'ru',
   'tr',
+  'it',
+  'nl',
+  'pl',
 ] as const satisfies readonly GuidanceLocale[];
 
 /**
@@ -81,6 +84,9 @@ const CONSULTATION_LANGUAGE_TERMS: Record<string, readonly string[]> = {
   ms: ['Inggeris', 'Cina', 'Jepun', 'Korea'],
   ru: ['английском', 'китайском', 'японском', 'корейском'],
   tr: ['İngilizce', 'Çince', 'Japonca', 'Korece'],
+  it: ['inglese', 'cinese', 'giapponese', 'coreano'],
+  nl: ['Engels', 'Chinees', 'Japans', 'Koreaans'],
+  pl: ['angielsku', 'chińsku', 'japońsku', 'koreańsku'],
 };
 
 /**
@@ -121,6 +127,14 @@ const GUIDANCE_LANGUAGE_TOKENS: ReadonlyArray<readonly [string, RegExp]> = [
   ['русском', /русском/],
   ['Turkish', /\bTurkish\b/i],
   ['Türkçe', /Türkçe/],
+  ['Italian', /\bItalian\b/i],
+  ['Italiano', /\bItaliano\b/],
+  ['italiano', /\bitaliano\b/],
+  ['Dutch', /\bDutch\b/i],
+  ['Nederlands', /\bNederlands\b/],
+  ['Polish', /\bPolish\b/i],
+  ['Polski', /\bPolski\b/],
+  ['polsku', /po polsku/],
 ];
 
 /**
@@ -163,6 +177,9 @@ const FORBIDDEN_COMBINATIONS: ReadonlyArray<readonly [string, RegExp, RegExp]> =
   ['русском + консультац', /русском/, /консультац/],
   ['Türkçe + danışma', /Türkçe/, /danışma|görüşme/],
   ['简体中文 + 咨询', /简体中文/, /咨询/],
+  ['italiano + consulenza', /\bitaliano\b/i, /consulenza/i],
+  ['Nederlands + consultatie', /\bNederlands\b/i, /consultatie/i],
+  ['polsku + konsultacja', /po polsku/i, /konsultacj/i],
 ];
 
 /**
@@ -188,6 +205,9 @@ const SERVICES_SCOPE_TERMS: Record<string, readonly [string, RegExp]> = {
   ms: ['skop', /skop/i],
   ru: ['Объём', /Объём/],
   tr: ['kapsamı', /kapsamı/],
+  it: ['ambito', /ambito/i],
+  nl: ['omvang', /omvang/i],
+  pl: ['zakres', /zakres/i],
 };
 
 const SERVICES_ACCEPTANCE_PATTERNS: Record<
@@ -246,6 +266,18 @@ const SERVICES_ACCEPTANCE_PATTERNS: Record<
     ['hukuki görüş değildir', /hukuki görüş değildir/i],
     ['doğrulanmış randevu değildir', /doğrulanmış randevu değildir/i],
   ],
+  it: [
+    ['se una questione viene accettata', /se una questione viene accettata/i],
+    ['si decide dopo', /si decide dopo/i],
+  ],
+  nl: [
+    ['of een zaak wordt aangenomen', /of een zaak wordt aangenomen/i],
+    ['beslist zich na', /beslist zich na/i],
+  ],
+  pl: [
+    ['czy sprawa zostanie przyjęta', /czy sprawa zostanie przyjęta/i],
+    ['rozstrzyga się po', /rozstrzyga się po/i],
+  ],
 };
 
 /** Every site-internal path an answer may cite. */
@@ -278,8 +310,8 @@ const entries = GUIDANCE_LOCALES.flatMap((locale) =>
 );
 
 describe('guidanceAnswers', () => {
-  it('covers 13 locales x 6 page keys', () => {
-    expect(GUIDANCE_LOCALES).toHaveLength(13);
+  it('covers 16 locales x 6 page keys', () => {
+    expect(GUIDANCE_LOCALES).toHaveLength(16);
     expect(ANSWER_PAGE_KEYS).toHaveLength(6);
     expect(Object.keys(guidanceAnswers).sort()).toEqual([...GUIDANCE_LOCALES].sort());
 

@@ -24,7 +24,7 @@ const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 export const repoRoot = resolve(scriptDirectory, '..');
 export const DEFAULT_SOURCE_DIR = join(repoRoot, 'src/content/columns');
 
-export const GUIDANCE_LANGS = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr'];
+export const GUIDANCE_LANGS = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl'];
 export const HANZI_MIN = 5;
 export const ENGLISH_WORD_MIN = 12;
 export const ENGLISH_STOPWORD_MIN = 3;
@@ -140,6 +140,76 @@ export const FORBIDDEN_PHRASES = {
     { id: 'pt-always-on', re: /consulta\s*24\s*horas|24\s*horas/i, note: '즉시/상시 상담' },
     { id: 'pt-free-consult', re: /consulta gratuita|assessoria gratuita/i, note: '비용 보장(무료 상담)' },
   ],
+  'zh-hans': [
+    { id: 'zh-hans-consult-lang', re: /可以用中文咨询|提供中文咨询|中文咨询服务/u, note: 'zh-hans 상담 가능 (FAQ 질문 외)' },
+    { id: 'zh-hans-interpreter', re: /提供口译|口译服务|安排口译/u, note: '통역 제공' },
+    { id: 'zh-hans-immediate', re: /立即回复|即时回复|几分钟内回复/u, note: '즉시 응답' },
+    { id: 'zh-hans-success-rate', re: /胜诉率|成功率/u, note: '성공률' },
+    { id: 'zh-hans-win-100', re: /100\s*%\s*(胜诉|成功)|胜诉\s*100\s*%/u, note: '성공률 100%' },
+    { id: 'zh-hans-cost-guarantee', re: /保证(费用|结果|胜诉)|结果保证/u, note: '비용/결과 보장' },
+    { id: 'zh-hans-always-on', re: /24\s*小时|全天候咨询/u, note: '즉시/상시 상담' },
+    { id: 'zh-hans-free-consult', re: /免费咨询/u, note: '비용 보장(무료 상담)' },
+  ],
+  ms: [
+    { id: 'ms-consult-lang', re: /perundingan dalam (bahasa )?Melayu|konsultasi dalam (bahasa )?Melayu/i, note: 'ms 상담 가능' },
+    { id: 'ms-interpreter', re: /jurubahasa disediakan|perkhidmatan jurubahasa|penterjemah disediakan/i, note: '통역 제공' },
+    { id: 'ms-immediate', re: /balasan segera|jawab serta-merta|dalam beberapa minit/i, note: '즉시 응답' },
+    { id: 'ms-success-rate', re: /kadar kejayaan|kadar kemenangan/i, note: '성공률' },
+    { id: 'ms-win-100', re: /100\s*%\s*(kejayaan|menang)|menang\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'ms-cost-guarantee', re: /jaminan (kos|hasil)|menjamin (kos|hasil)/i, note: '비용/결과 보장' },
+    { id: 'ms-always-on', re: /24\s*jam|perundingan 24/i, note: '즉시/상시 상담' },
+    { id: 'ms-free-consult', re: /perundingan percuma|konsultasi percuma/i, note: '비용 보장(무료 상담)' },
+  ],
+  ru: [
+    { id: 'ru-consult-lang', re: /консультация на русском|консультации на русском языке/i, note: 'ru 상담 가능' },
+    { id: 'ru-interpreter', re: /предоставляем переводчика|переводчик предоставляется|услуга устного перевода/i, note: '통역 제공' },
+    { id: 'ru-immediate', re: /немедленный ответ|ответ в течение минут|отвечаем сразу/i, note: '즉시 응답' },
+    { id: 'ru-success-rate', re: /процент выигранных|процент успеха|успешность дел/i, note: '성공률' },
+    { id: 'ru-win-100', re: /100\s*%\s*(успеха|выигрыша)|выигрыш\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'ru-cost-guarantee', re: /гарантия (стоимости|результата)|гарантируем результат/i, note: '비용/결과 보장' },
+    { id: 'ru-always-on', re: /круглосуточно|24\s*\/\s*7/i, note: '즉시/상시 상담' },
+    { id: 'ru-free-consult', re: /бесплатн\w* консультац/i, note: '비용 보장(무료 상담)' },
+  ],
+  tr: [
+    { id: 'tr-consult-lang', re: /Türkçe danışma|Türkçe görüşme mümkün/i, note: 'tr 상담 가능' },
+    { id: 'tr-interpreter', re: /tercüman sağlanır|tercüman hizmeti|tercüman temin/i, note: '통역 제공' },
+    { id: 'tr-immediate', re: /anında yanıt|dakikalar içinde yanıt|hemen cevap/i, note: '즉시 응답' },
+    { id: 'tr-success-rate', re: /başarı oranı|kazanma oranı/i, note: '성공률' },
+    { id: 'tr-win-100', re: /100\s*%\s*(başarı|kazanç)|başarı\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'tr-cost-guarantee', re: /maliyet garantisi|sonuç garantisi|sonucu garanti/i, note: '비용/결과 보장' },
+    { id: 'tr-always-on', re: /7\s*\/\s*24|24 saat danışma/i, note: '즉시/상시 상담' },
+    { id: 'tr-free-consult', re: /ücretsiz danışma|ücretsiz görüşme/i, note: '비용 보장(무료 상담)' },
+  ],
+  it: [
+    { id: 'it-consult-lang', re: /consulenza in italiano|consulenza in lingua italiana/i, note: 'it 상담 가능' },
+    { id: 'it-interpreter', re: /forniamo un interprete|interprete disponibile|servizio di interprete/i, note: '통역 제공' },
+    { id: 'it-immediate', re: /risposta immediata|risposta in pochi minuti|rispondiamo subito/i, note: '즉시 응답' },
+    { id: 'it-success-rate', re: /tasso di successo|percentuale di vittorie/i, note: '성공률' },
+    { id: 'it-win-100', re: /100\s*%\s*(di )?successo|successo\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'it-cost-guarantee', re: /garanzia di (costo|risultato)|garantiamo il risultato/i, note: '비용/결과 보장' },
+    { id: 'it-always-on', re: /consulenza\s*24\s*\/\s*7|24 ore su 24/i, note: '즉시/상시 상담' },
+    { id: 'it-free-consult', re: /consulenza gratuita|primo colloquio gratuito/i, note: '비용 보장(무료 상담)' },
+  ],
+  nl: [
+    { id: 'nl-consult-lang', re: /advies in het Nederlands|consultatie in het Nederlands/i, note: 'nl 상담 가능' },
+    { id: 'nl-interpreter', re: /we stellen een tolk|tolk beschikbaar|tolkendienst/i, note: '통역 제공' },
+    { id: 'nl-immediate', re: /onmiddellijk antwoord|antwoord binnen minuten|we antwoorden meteen/i, note: '즉시 응답' },
+    { id: 'nl-success-rate', re: /succespercentage|winstpercentage/i, note: '성공률' },
+    { id: 'nl-win-100', re: /100\s*%\s*(succes|winst)|succes\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'nl-cost-guarantee', re: /kostengarantie|resultaatgarantie|we garanderen het resultaat/i, note: '비용/결과 보장' },
+    { id: 'nl-always-on', re: /consultatie\s*24\s*\/\s*7|24 uur per dag/i, note: '즉시/상시 상담' },
+    { id: 'nl-free-consult', re: /gratis consultatie|kosteloos eerste gesprek/i, note: '비용 보장(무료 상담)' },
+  ],
+  pl: [
+    { id: 'pl-consult-lang', re: /konsultacja po polsku|porada w języku polskim/i, note: 'pl 상담 가능' },
+    { id: 'pl-interpreter', re: /zapewniamy tłumacza ustnego|tłumacz ustny dostępny|usługa tłumacza ustnego/i, note: '통역 제공' },
+    { id: 'pl-immediate', re: /natychmiastowa odpowiedź|odpowiedź w ciągu minut|odpowiadamy od razu/i, note: '즉시 응답' },
+    { id: 'pl-success-rate', re: /wskaźnik sukcesu|procent wygranych/i, note: '성공률' },
+    { id: 'pl-win-100', re: /100\s*%\s*(sukcesu|wygranych)|sukces\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'pl-cost-guarantee', re: /gwarancja (kosztu|wyniku)|gwarantujemy wynik/i, note: '비용/결과 보장' },
+    { id: 'pl-always-on', re: /konsultacja\s*24\s*\/\s*7|całodobowo/i, note: '즉시/상시 상담' },
+    { id: 'pl-free-consult', re: /bezpłatna konsultacja|darmowa porada/i, note: '비용 보장(무료 상담)' },
+  ],
 };
 
 /** Locale-prefix swaps that are allowed; everything else must stay byte-identical to source href. */
@@ -202,6 +272,13 @@ export const NATIONALITY_TERMS = {
   es: ['España', 'nacionalidad española', 'empresas españolas', 'españoles'],
   fr: ['France', 'nationalité française', 'entreprises françaises', 'Français'],
   pt: ['Portugal', 'nacionalidade portuguesa', 'empresas portuguesas', 'portugueses', 'Brasil', 'brasileiros'],
+  'zh-hans': ['中国国籍', '中国企业', '中国人', '大陆企业'],
+  ms: ['kewarganegaraan Malaysia', 'Malaysia', 'Malaysia', 'warganegara Malaysia'],
+  ru: ['Россия', 'российское гражданство', 'российские предприятия', 'россияне'],
+  tr: ['Türkiye', 'Türk vatandaşlığı', 'Türk şirketleri', 'Türkler'],
+  it: ['Italia', 'cittadinanza italiana', 'imprese italiane', 'italiani'],
+  nl: ['Nederland', 'Nederlandse nationaliteit', 'Nederlandse ondernemingen', 'Nederlanders'],
+  pl: ['Polska', 'obywatelstwo polskie', 'polskie przedsiębiorstwa', 'Polacy'],
 };
 
 export const NATIONALITY_LANGUAGE_NAMES = {
@@ -214,6 +291,13 @@ export const NATIONALITY_LANGUAGE_NAMES = {
   es: [/en español/gi, /idioma español/gi, /lengua española/gi],
   fr: [/en français/gi, /langue française/gi, /en langue française/gi],
   pt: [/em português/gi, /língua portuguesa/gi, /idioma português/gi],
+  'zh-hans': [/用中文/gu, /中文咨询/gu, /简体中文/gu],
+  ms: [/bahasa\s*melayu/gi, /dalam\s+bahasa\s+melayu/gi],
+  ru: [/на русском/gi, /русском языке/gi, /по-русски/gi],
+  tr: [/Türkçe/gi, /Türk dilinde/gi],
+  it: [/in italiano/gi, /lingua italiana/gi, /in lingua italiana/gi],
+  nl: [/in het Nederlands/gi, /Nederlandse taal/gi],
+  pl: [/po polsku/gi, /w języku polskim/gi, /język polski/gi],
 };
 
 export const SOURCE_LANGUAGE_NAME_RE = /한국어|베트남어|인도네시아어|태국어|필리핀어|영어|일본어|중국어|타이완어|대만어/g;
@@ -237,6 +321,13 @@ export const NUMBER_THOUSAND_STYLE = {
   es: 'dot',
   fr: 'dot',
   pt: 'dot',
+  'zh-hans': 'comma',
+  ms: 'dot',
+  ru: 'dot',
+  tr: 'dot',
+  it: 'dot',
+  nl: 'dot',
+  pl: 'dot',
 };
 
 /**
@@ -945,6 +1036,208 @@ function buildPtLexicon() {
   return compilePhrases(entries);
 }
 
+function buildZhHansLexicon() {
+  const entries = [];
+  const atoms = [
+    ['零', 0], ['一', 1], ['二', 2], ['两', 2], ['三', 3], ['四', 4],
+    ['五', 5], ['六', 6], ['七', 7], ['八', 8], ['九', 9], ['十', 10],
+  ];
+  pushPhrase(entries, '三分之二', [2, 3]);
+  pushPhrase(entries, '一半', [1, 2]);
+  pushPhrase(entries, '十五', [15]);
+  pushPhrase(entries, '一年', [1]);
+  const scales = [['亿', 100_000_000], ['万', 10_000], ['千', 1_000], ['百', 100]];
+  for (const [atom, value] of atoms) {
+    if (value >= 1) {
+      for (const [scale, factor] of scales) pushPhrase(entries, `${atom}${scale}`, [value * factor]);
+    }
+    if (value >= 2) pushPhrase(entries, atom, [value]);
+  }
+  return compilePhrases(entries);
+}
+
+function buildMsLexicon() {
+  const entries = [];
+  const units = ['tahun', 'bulan', 'hari', 'minggu', 'kali', 'orang'];
+  const scales = [['bilion', 1_000_000_000], ['juta', 1_000_000], ['ribu', 1_000]];
+  const atoms = [
+    ['sifar', 0], ['satu', 1], ['dua', 2], ['tiga', 3], ['empat', 4],
+    ['lima', 5], ['enam', 6], ['tujuh', 7], ['lapan', 8], ['sembilan', 9], ['sepuluh', 10],
+  ];
+  pushPhrase(entries, 'dua pertiga', [2, 3]);
+  pushPhrase(entries, 'lima belas', [15]);
+  pushPhrase(entries, 'satu tahun', [1]);
+  const teens = [
+    ['sebelas', 11], ['dua belas', 12], ['tiga belas', 13], ['empat belas', 14],
+    ['lima belas', 15], ['enam belas', 16], ['tujuh belas', 17], ['lapan belas', 18], ['sembilan belas', 19],
+  ];
+  for (const [phrase, n] of teens) pushPhrase(entries, phrase, [n]);
+  for (const [atom, value] of atoms) {
+    if (value >= 1) {
+      for (const [scale, factor] of scales) pushPhrase(entries, `${atom} ${scale}`, [value * factor]);
+    }
+    if (value === 1) {
+      for (const unit of units) pushPhrase(entries, `${atom} ${unit}`, [value]);
+    }
+    if (value >= 2) pushPhrase(entries, atom, [value]);
+  }
+  return compilePhrases(entries);
+}
+
+function buildRuLexicon() {
+  const entries = [];
+  const units = ['год', 'года', 'лет', 'месяц', 'месяца', 'день', 'дня', 'дней', 'неделя', 'недели'];
+  const scales = [['миллиард', 1_000_000_000], ['миллиона', 1_000_000], ['миллион', 1_000_000], ['тысяч', 1_000], ['тысяча', 1_000]];
+  const atoms = [
+    ['ноль', 0], ['один', 1], ['одна', 1], ['два', 2], ['две', 2], ['три', 3],
+    ['четыре', 4], ['пять', 5], ['шесть', 6], ['семь', 7], ['восемь', 8], ['девять', 9], ['десять', 10],
+  ];
+  pushPhrase(entries, 'две трети', [2, 3]);
+  pushPhrase(entries, 'пятнадцать', [15]);
+  pushPhrase(entries, 'один год', [1]);
+  const teens = [
+    ['одиннадцать', 11], ['двенадцать', 12], ['тринадцать', 13], ['четырнадцать', 14],
+    ['пятнадцать', 15], ['шестнадцать', 16], ['семнадцать', 17], ['восемнадцать', 18], ['девятнадцать', 19],
+  ];
+  for (const [phrase, n] of teens) pushPhrase(entries, phrase, [n]);
+  for (const [atom, value] of atoms) {
+    if (value >= 1) {
+      for (const [scale, factor] of scales) pushPhrase(entries, `${atom} ${scale}`, [value * factor]);
+    }
+    if (value === 1) {
+      for (const unit of units) pushPhrase(entries, `${atom} ${unit}`, [value]);
+    }
+    if (value >= 2) pushPhrase(entries, atom, [value]);
+  }
+  return compilePhrases(entries);
+}
+
+function buildTrLexicon() {
+  const entries = [];
+  const units = ['yıl', 'ay', 'gün', 'hafta', 'kez', 'kişi'];
+  const scales = [['milyar', 1_000_000_000], ['milyon', 1_000_000], ['bin', 1_000]];
+  const atoms = [
+    ['sıfır', 0], ['bir', 1], ['iki', 2], ['üç', 3], ['dört', 4],
+    ['beş', 5], ['altı', 6], ['yedi', 7], ['sekiz', 8], ['dokuz', 9], ['on', 10],
+  ];
+  pushPhrase(entries, 'üçte iki', [2, 3]);
+  pushPhrase(entries, 'on beş', [15]);
+  pushPhrase(entries, 'bir yıl', [1]);
+  const teens = [
+    ['on bir', 11], ['on iki', 12], ['on üç', 13], ['on dört', 14],
+    ['on beş', 15], ['on altı', 16], ['on yedi', 17], ['on sekiz', 18], ['on dokuz', 19],
+  ];
+  for (const [phrase, n] of teens) pushPhrase(entries, phrase, [n]);
+  for (const [atom, value] of atoms) {
+    if (value >= 1) {
+      for (const [scale, factor] of scales) pushPhrase(entries, `${atom} ${scale}`, [value * factor]);
+    }
+    if (value === 1) {
+      for (const unit of units) pushPhrase(entries, `${atom} ${unit}`, [value]);
+    }
+    if (value >= 2) pushPhrase(entries, atom, [value]);
+  }
+  return compilePhrases(entries);
+}
+
+function buildItLexicon() {
+  const entries = [];
+  const units = ['anno', 'anni', 'mese', 'mesi', 'giorno', 'giorni', 'settimana', 'settimane', 'volta', 'volte', 'persona', 'persone'];
+  const scales = [['miliardo', 1_000_000_000], ['miliardi', 1_000_000_000], ['milione', 1_000_000], ['milioni', 1_000_000], ['mila', 1_000], ['mille', 1_000]];
+  const atoms = [
+    ['zero', 0], ['uno', 1], ['una', 1], ['due', 2], ['tre', 3], ['quattro', 4],
+    ['cinque', 5], ['sei', 6], ['sette', 7], ['otto', 8], ['nove', 9], ['dieci', 10],
+  ];
+  pushPhrase(entries, 'due terzi', [2, 3]);
+  pushPhrase(entries, 'quindici', [15]);
+  pushPhrase(entries, 'un anno', [1]);
+  const teens = [
+    ['undici', 11], ['dodici', 12], ['tredici', 13], ['quattordici', 14], ['quindici', 15],
+    ['sedici', 16], ['diciassette', 17], ['diciotto', 18], ['diciannove', 19],
+  ];
+  for (const [phrase, n] of teens) pushPhrase(entries, phrase, [n]);
+  const tens = [
+    ['venti', 20], ['trenta', 30], ['quaranta', 40], ['cinquanta', 50],
+    ['sessanta', 60], ['settanta', 70], ['ottanta', 80], ['novanta', 90],
+  ];
+  const ones = atoms.filter(([, v]) => v >= 1 && v <= 9);
+  for (const [t, tv] of tens) {
+    pushPhrase(entries, t, [tv]);
+    for (const [o, ov] of ones) pushPhrase(entries, `${t}${o}`, [tv + ov]);
+  }
+  for (const [atom, value] of atoms) {
+    if (value >= 1) {
+      for (const [scale, factor] of scales) pushPhrase(entries, `${atom} ${scale}`, [value * factor]);
+    }
+    if (value === 1) {
+      for (const unit of units) pushPhrase(entries, `${atom} ${unit}`, [value]);
+    }
+    if (value >= 2) pushPhrase(entries, atom, [value]);
+  }
+  return compilePhrases(entries);
+}
+
+function buildNlLexicon() {
+  const entries = [];
+  const units = ['jaar', 'maand', 'maanden', 'dag', 'dagen', 'week', 'weken', 'keer', 'persoon', 'personen'];
+  const scales = [['miljard', 1_000_000_000], ['miljoen', 1_000_000], ['duizend', 1_000]];
+  const atoms = [
+    ['nul', 0], ['een', 1], ['één', 1], ['twee', 2], ['drie', 3], ['vier', 4],
+    ['vijf', 5], ['zes', 6], ['zeven', 7], ['acht', 8], ['negen', 9], ['tien', 10],
+  ];
+  pushPhrase(entries, 'twee derde', [2, 3]);
+  pushPhrase(entries, 'vijftien', [15]);
+  pushPhrase(entries, 'een jaar', [1]);
+  const teens = [
+    ['elf', 11], ['twaalf', 12], ['dertien', 13], ['veertien', 14], ['vijftien', 15],
+    ['zestien', 16], ['zeventien', 17], ['achttien', 18], ['negentien', 19],
+  ];
+  for (const [phrase, n] of teens) pushPhrase(entries, phrase, [n]);
+  const tens = [
+    ['twintig', 20], ['dertig', 30], ['veertig', 40], ['vijftig', 50],
+    ['zestig', 60], ['zeventig', 70], ['tachtig', 80], ['negentig', 90],
+  ];
+  for (const [t, tv] of tens) pushPhrase(entries, t, [tv]);
+  for (const [atom, value] of atoms) {
+    if (value >= 1) {
+      for (const [scale, factor] of scales) pushPhrase(entries, `${atom} ${scale}`, [value * factor]);
+    }
+    if (value === 1) {
+      for (const unit of units) pushPhrase(entries, `${atom} ${unit}`, [value]);
+    }
+    if (value >= 2) pushPhrase(entries, atom, [value]);
+  }
+  return compilePhrases(entries);
+}
+
+function buildPlLexicon() {
+  const entries = [];
+  const units = ['rok', 'lata', 'lat', 'miesiąc', 'miesiące', 'dzień', 'dni', 'tydzień', 'tygodnie', 'osoba', 'osoby'];
+  const scales = [['miliard', 1_000_000_000], ['milion', 1_000_000], ['miliony', 1_000_000], ['tysiąc', 1_000], ['tysiące', 1_000]];
+  const atoms = [
+    ['zero', 0], ['jeden', 1], ['jedna', 1], ['dwa', 2], ['dwie', 2], ['trzy', 3],
+    ['cztery', 4], ['pięć', 5], ['sześć', 6], ['siedem', 7], ['osiem', 8], ['dziewięć', 9], ['dziesięć', 10],
+  ];
+  pushPhrase(entries, 'dwie trzecie', [2, 3]);
+  pushPhrase(entries, 'piętnaście', [15]);
+  pushPhrase(entries, 'jeden rok', [1]);
+  const teens = [
+    ['jedenaście', 11], ['dwanaście', 12], ['trzynaście', 13], ['czternaście', 14],
+    ['piętnaście', 15], ['szesnaście', 16], ['siedemnaście', 17], ['osiemnaście', 18], ['dziewiętnaście', 19],
+  ];
+  for (const [phrase, n] of teens) pushPhrase(entries, phrase, [n]);
+  for (const [atom, value] of atoms) {
+    if (value >= 1) {
+      for (const [scale, factor] of scales) pushPhrase(entries, `${atom} ${scale}`, [value * factor]);
+    }
+    if (value === 1) {
+      for (const unit of units) pushPhrase(entries, `${atom} ${unit}`, [value]);
+    }
+    if (value >= 2) pushPhrase(entries, atom, [value]);
+  }
+  return compilePhrases(entries);
+}
+
 export const WORD_NUMERAL_LEXICONS = {
   vi: buildViLexicon(),
   id: buildIdLexicon(),
@@ -955,6 +1248,13 @@ export const WORD_NUMERAL_LEXICONS = {
   es: buildEsLexicon(),
   fr: buildFrLexicon(),
   pt: buildPtLexicon(),
+  'zh-hans': buildZhHansLexicon(),
+  ms: buildMsLexicon(),
+  ru: buildRuLexicon(),
+  tr: buildTrLexicon(),
+  it: buildItLexicon(),
+  nl: buildNlLexicon(),
+  pl: buildPlLexicon(),
 };
 
 export function lexiconEntryCount(lang) {
@@ -979,6 +1279,13 @@ export const DATE_MONTH_NAMES = {
   october: 10, oct: 10, oktober: 10, oktubre: 10, octubre: 10, outubro: 10, octobre: 10, 'ตุลาคม': 10, 'ต.ค.': 10,
   november: 11, nov: 11, nobyembre: 11, noviembre: 11, novembro: 11, novembre: 11, 'พฤศจิกายน': 11, 'พ.ย.': 11,
   december: 12, dec: 12, desember: 12, disyembre: 12, dezember: 12, diciembre: 12, dezembro: 12, décembre: 12, decembre: 12, 'ธันวาคม': 12, 'ธ.ค.': 12,
+  gennaio: 1, febbraio: 2, aprile: 4, maggio: 5, giugno: 6, luglio: 7, settembre: 9, ottobre: 10, dicembre: 12,
+  maart: 3, augustus: 8,
+  stycznia: 1, lutego: 2, marca: 3, kwietnia: 4, maja: 5, czerwca: 6, lipca: 7, sierpnia: 8, września: 9, października: 10, listopada: 11, grudnia: 12,
+  января: 1, февраля: 2, марта: 3, апреля: 4, июня: 6, июля: 7, августа: 8, сентября: 9, октября: 10, ноября: 11, декабря: 12,
+  ocak: 1, 'şubat': 2, nisan: 4, 'mayıs': 5, haziran: 6, temmuz: 7, 'ağustos': 8, 'eylül': 9, ekim: 10, 'kasım': 11, 'aralık': 12,
+  mac: 3, jun: 6, julai: 7, ogos: 8, disember: 12,
+  '一月': 1, '二月': 2, '三月': 3, '四月': 4, '五月': 5, '六月': 6, '七月': 7, '八月': 8, '九月': 9, '十月': 10, '十一月': 11, '十二月': 12,
 };
 
 export function parseArgs(argv) {

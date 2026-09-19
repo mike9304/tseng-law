@@ -36,7 +36,7 @@ import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
  * present in all four, so "all four dropped it" cannot pass as parity alone.
  */
 
-const LOCALES = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr'] as const satisfies readonly GuidanceLocale[];
+const LOCALES = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl'] as const satisfies readonly GuidanceLocale[];
 
 /** Per-locale marker for one disclosure element. */
 type ElementMarkers = Record<GuidanceLocale, RegExp>;
@@ -64,6 +64,9 @@ const ELEMENTS = {
     ms: /yang boleh digunakan/,
     ru: /возможн/,
     tr: /Kullanılabilir/,
+    it: /via praticabile/,
+    nl: /werkbare/,
+    pl: /możliwy sposób/,
   },
   /** Support in a language outside the four consultation languages is not guaranteed. */
   'no-other-language-guarantee': {
@@ -80,6 +83,9 @@ const ELEMENTS = {
     ms: /bahasa lain/,
     ru: /друг(?:ом|ого) язык/,
     tr: /başka dil/,
+    it: /un’altra lingua/,
+    nl: /andere taal/,
+    pl: /innym języku/,
   },
   /** No reply time is promised. */
   'no-reply-time-promise': {
@@ -96,6 +102,9 @@ const ELEMENTS = {
     ms: /tempoh jawapan/,
     ru: /срок[а]? ответа/,
     tr: /[Yy]anıt süresi/,
+    it: /termine di risposta/,
+    nl: /antwoordtermijn/,
+    pl: /termin(?:u)? odpowiedzi/,
   },
   /** The confirmation step is a step, not a promise. */
   'confirmation-is-not-a-promise': {
@@ -112,6 +121,9 @@ const ELEMENTS = {
     ms: /bukan janji/,
     ru: /не обещание/,
     tr: /vaat değil/,
+    it: /non è una promessa/,
+    nl: /geen belofte/,
+    pl: /nie jest obietnicą/,
   },
   /** No interpreter is arranged. */
   'no-interpreter-promise': {
@@ -128,6 +140,9 @@ const ELEMENTS = {
     ms: /jurubahasa/,
     ru: /переводчик/,
     tr: /tercüman/i,
+    it: /interprete/,
+    nl: /tolk/,
+    pl: /tłumacza ustnego/,
   },
   /** Not every matter can be accepted. */
   'not-every-matter-accepted': {
@@ -144,6 +159,9 @@ const ELEMENTS = {
     ms: /setiap hal/,
     ru: /каждое дело/,
     tr: /her işi/,
+    it: /ogni questione/,
+    nl: /elke zaak/,
+    pl: /każdą sprawę/,
   },
   /** No outcome is promised. */
   'no-outcome-promise': {
@@ -160,6 +178,9 @@ const ELEMENTS = {
     ms: /hasil/,
     ru: /результат/,
     tr: /sonuç/,
+    it: /risultato/,
+    nl: /resultaat/,
+    pl: /wyniku/,
   },
   /** A certain answer needs one of the four consultation languages. */
   'four-consultation-languages': {
@@ -176,6 +197,9 @@ const ELEMENTS = {
     ms: /empat bahasa perundingan/,
     ru: /четырёх язык/,
     tr: /dört görüşme dil/,
+    it: /quattro lingue di consulenza/,
+    nl: /vier consultatietalen/,
+    pl: /czterech języ(?:kach|ków) konsultacji/,
   },
   /** This page is not the consultation step. */
   'not-the-consultation-step': {
@@ -192,6 +216,9 @@ const ELEMENTS = {
     ms: /langkah perundingan/,
     ru: /шагом консультации/,
     tr: /görüşme adımı/,
+    it: /passo di consulenza/,
+    nl: /consultatiestap/,
+    pl: /etapem konsultacji/,
   },
   /** A sent message is not legal advice. */
   'not-legal-advice': {
@@ -208,6 +235,9 @@ const ELEMENTS = {
     ms: /nasihat undang-undang/,
     ru: /юридическ/,
     tr: /hukuki görüş/,
+    it: /parere giuridico/,
+    nl: /juridisch advies/,
+    pl: /poradą prawną/,
   },
   /** A sent message is not a confirmed appointment. */
   'not-an-appointment': {
@@ -224,6 +254,9 @@ const ELEMENTS = {
     ms: /janji temu/,
     ru: /запись/,
     tr: /randevu/,
+    it: /appuntamento/,
+    nl: /afspraak/,
+    pl: /spotkani|terminem/,
   },
   /** Sending a message forms no attorney–client relationship. */
   'no-attorney-client-relationship': {
@@ -240,6 +273,9 @@ const ELEMENTS = {
     ms: /hubungan antara peguam/,
     ru: /отношений между адвокатом/,
     tr: /avukat ile müvekkil/,
+    it: /rapporto tra avvocata o avvocato/,
+    nl: /relatie tussen advocaat/,
+    pl: /stosunku między adwokatem/,
   },
   /** Written text is never machine-translated for the reader. */
   'no-automatic-translation': {
@@ -256,6 +292,9 @@ const ELEMENTS = {
     ms: /secara automatik/,
     ru: /автоматически не переводится/,
     tr: /kendiliğinden çevril/,
+    it: /tradotto automaticamente/,
+    nl: /niet automatisch vertaald/,
+    pl: /tłumaczon[ay] automatycznie/,
   },
   /** The family group is named as covering marriage matters. */
   'marriage-in-family-group': {
@@ -272,6 +311,9 @@ const ELEMENTS = {
     ms: /perkahwinan/i,
     ru: /брак/i,
     tr: /evlilik/i,
+    it: /matrimonio/i,
+    nl: /huwelijk/i,
+    pl: /małżeństwo/i,
   },
   /** Meeting the attorney may be a paid service. */
   'consultation-may-be-paid': {
@@ -288,6 +330,9 @@ const ELEMENTS = {
     ms: /berbayar/,
     ru: /возмездн/,
     tr: /ücretli/,
+    it: /a pagamento/,
+    nl: /tegen betaling/,
+    pl: /odpłatn/,
   },
 } as const satisfies Record<string, ElementMarkers>;
 

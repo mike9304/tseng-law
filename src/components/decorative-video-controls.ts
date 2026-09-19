@@ -95,4 +95,19 @@ export const DECORATIVE_VIDEO_CONTROL_LABELS = {
     play: 'Videoyu oynat',
     replay: 'Videoyu yeniden oynat',
   },
+  it: {
+    pause: 'Mettere in pausa il video',
+    play: 'Riprodurre il video',
+    replay: 'Riprodurre di nuovo il video',
+  },
+  nl: {
+    pause: 'Video pauzeren',
+    play: 'Video afspelen',
+    replay: 'Video opnieuw afspelen',
+  },
+  pl: {
+    pause: 'Wstrzymać wideo',
+    play: 'Odtworzyć wideo',
+    replay: 'Odtworzyć wideo ponownie',
+  },
 } as const satisfies Record<PublicLocale8, DecorativeVideoControlLabels>;

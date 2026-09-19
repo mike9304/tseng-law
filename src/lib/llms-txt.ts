@@ -354,6 +354,9 @@ const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
   ms: 'Malay',
   ru: 'Russian',
   tr: 'Turkish',
+  it: 'Italian',
+  nl: 'Dutch',
+  pl: 'Polish',
 };
 
 export function buildRootLlmsTxt(): string {
@@ -616,6 +619,30 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
       'llms.txt dosyası yalnızca kamuya açık sayfaları bulmak için bir haritadır; arama sırası, destek, yapay zekâ önerisi veya görünürlük vaat etmez.',
     confidentialNotice:
       'Özgün metin saklandığı için ilk aşamada henüz gerekmeyen şeyleri yazmayın; örneğin pasaport numarası, kimlik numarası veya hesap bilgileri.',
+  },
+  it: {
+    consultationNotice:
+      'Queste indicazioni sono scritte in italiano, ma la consulenza con un’avvocata o un avvocato si svolge soltanto in inglese, cinese (中文), giapponese e coreano.',
+    discoveryNotice:
+      'Il file llms.txt è soltanto una mappa per trovare le pagine pubbliche; non promette collocazione nei motori di ricerca, sostegno, raccomandazione da intelligenza artificiale né visibilità.',
+    confidentialNotice:
+      'Poiché il testo originale viene conservato, nella fase iniziale non scriva ciò che non è ancora necessario, ad esempio il numero di passaporto, il numero di documento o i dati di un conto.',
+  },
+  nl: {
+    consultationNotice:
+      'Deze toelichting is in het Nederlands geschreven, maar het gesprek met een advocaat vindt alleen plaats in het Engels, Chinees (中文), Japans en Koreaans.',
+    discoveryNotice:
+      'Het bestand llms.txt is slechts een kaart om openbare pagina’s te vinden; het belooft geen zoekplaats, steun, aanbeveling door kunstmatige intelligentie of weergave.',
+    confidentialNotice:
+      'Omdat de oorspronkelijke tekst wordt bewaard, schrijf in deze eerste fase niets wat nog niet nodig is, zoals een paspoortnummer, een identiteitsnummer of rekeninggegevens.',
+  },
+  pl: {
+    consultationNotice:
+      'Te informacje są napisane po polsku, ale konsultacja z adwokatem odbywa się wyłącznie w języku angielskim, chińskim (中文), japońskim i koreańskim.',
+    discoveryNotice:
+      'Plik llms.txt jest jedynie mapą do znajdowania stron publicznych; nie obiecuje miejsca w wyszukiwaniu, poparcia, rekomendacji sztucznej inteligencji ani wyświetlenia.',
+    confidentialNotice:
+      'Ponieważ oryginalny tekst jest zapisywany, na pierwszym etapie nie należy wpisywać tego, co jeszcze nie jest potrzebne, na przykład numeru paszportu, numeru dokumentu tożsamości ani danych rachunku.',
   },
 };
 

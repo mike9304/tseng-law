@@ -1,11 +1,17 @@
 /**
- * German, Spanish, French, Portuguese, Russian and Turkish guidance packs.
+ * German, Spanish, French, Portuguese, Russian, Turkish, Italian, Dutch and
+ * Polish guidance packs.
  * Same contract as vi/id/th/fil/ar: page language ≠ consultation language
  * (except as noted for Chinese on the Simplified Chinese pack). Consultations
  * are only English, Chinese, Japanese and Korean. No interpreter, reply-time,
  * appointment, fee figure, outcome or residency promise.
  */
 import type { GuidanceLocaleContent } from '@/data/international-guidance-content';
+export {
+  dutchGuidanceContent,
+  italianGuidanceContent,
+  polishGuidanceContent,
+} from '@/data/international-guidance-it-nl-pl';
 
 export const germanGuidanceContent: GuidanceLocaleContent = {
   languageName: 'Deutsch',

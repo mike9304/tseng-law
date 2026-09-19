@@ -209,13 +209,33 @@ html[lang='zh-hant'] {
    unloaded KR variable and the whole declaration is dropped. */
 html[lang='vi'],
 html[lang='id'],
-html[lang='fil'] {
+html[lang='fil'],
+html[lang='de'],
+html[lang='es'],
+html[lang='fr'],
+html[lang='pt'],
+html[lang='ms'],
+html[lang='ru'],
+html[lang='tr'],
+html[lang='it'],
+html[lang='nl'],
+html[lang='pl'] {
   --font-body: var(--font-body-latin);
   --font-sans: var(--font-body-latin);
   --font-heading: var(--font-heading-latin);
   --font-heading-ko: var(--font-heading-latin);
   --font-display: var(--font-heading-latin);
   --font-display-en: var(--font-heading-latin);
+}
+
+html[lang='zh-Hans'],
+html[lang='zh-hans'] {
+  --font-body: var(--font-noto-sans-sc-loaded, 'Noto Sans SC'), 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  --font-sans: var(--font-noto-sans-sc-loaded, 'Noto Sans SC'), 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-heading: var(--font-noto-serif-sc-loaded, 'Noto Serif SC'), 'Noto Serif SC', 'Songti SC', Georgia, serif;
+  --font-heading-ko: var(--font-noto-serif-sc-loaded, 'Noto Serif SC'), 'Noto Serif SC', 'Songti SC', Georgia, serif;
+  --font-display: var(--font-noto-serif-sc-loaded, 'Noto Serif SC'), 'Noto Serif SC', 'Songti SC', Georgia, serif;
+  --font-display-en: var(--font-noto-serif-sc-loaded, 'Noto Serif SC'), 'Noto Serif SC', 'Songti SC', Georgia, serif;
 }
 
 /* Arabic: Noto Sans Arabic for body and headings (no Arabic serif pair is loaded). */
@@ -608,12 +628,30 @@ li,
 
 .site[data-locale='vi'],
 .site[data-locale='id'],
-.site[data-locale='fil'] {
+.site[data-locale='fil'],
+.site[data-locale='de'],
+.site[data-locale='es'],
+.site[data-locale='fr'],
+.site[data-locale='pt'],
+.site[data-locale='ms'],
+.site[data-locale='ru'],
+.site[data-locale='tr'],
+.site[data-locale='it'],
+.site[data-locale='nl'],
+.site[data-locale='pl'] {
   --font-body: var(--font-body-latin);
   --font-sans: var(--font-body-latin);
   --font-display: var(--font-heading-latin);
   --font-heading: var(--font-heading-latin);
   --font-heading-ko: var(--font-heading-latin);
+}
+
+.site[data-locale='zh-hans'] {
+  --font-body: var(--font-noto-sans-sc-loaded, 'Noto Sans SC'), 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-sans: var(--font-noto-sans-sc-loaded, 'Noto Sans SC'), 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-display: var(--font-noto-serif-sc-loaded, 'Noto Serif SC'), 'Noto Serif SC', 'Songti SC', Georgia, serif;
+  --font-heading: var(--font-noto-serif-sc-loaded, 'Noto Serif SC'), 'Noto Serif SC', 'Songti SC', Georgia, serif;
+  --font-heading-ko: var(--font-noto-serif-sc-loaded, 'Noto Serif SC'), 'Noto Serif SC', 'Songti SC', Georgia, serif;
 }
 
 .site[data-locale='ar'] {

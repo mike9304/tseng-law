@@ -1,5 +1,5 @@
 /**
- * Core guidance pages for the guidance languages (vi, id, th, fil, ar, de, es, fr, pt, zh-hans, ms, ru, tr).
+ * Core guidance pages for the guidance languages (vi, id, th, fil, ar, de, es, fr, pt, zh-hans, ms, ru, tr, it, nl, pl).
  *
  * Guidance is published in the page language; consultations with an attorney
  * are handled only in English, Chinese, Japanese and Korean. Every locale below
@@ -21,8 +21,11 @@ import {
   simplifiedChineseGuidanceContent,
 } from '@/data/international-guidance-asia';
 import {
+  dutchGuidanceContent,
   frenchGuidanceContent,
   germanGuidanceContent,
+  italianGuidanceContent,
+  polishGuidanceContent,
   portugueseGuidanceContent,
   russianGuidanceContent,
   spanishGuidanceContent,
@@ -42,7 +45,10 @@ export type GuidanceLocale =
   | 'zh-hans'
   | 'ms'
   | 'ru'
-  | 'tr';
+  | 'tr'
+  | 'it'
+  | 'nl'
+  | 'pl';
 
 export type GuidancePageKey =
   | 'home'
@@ -2622,4 +2628,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
   ms: malayGuidanceContent,
   ru: russianGuidanceContent,
   tr: turkishGuidanceContent,
+  it: italianGuidanceContent,
+  nl: dutchGuidanceContent,
+  pl: polishGuidanceContent,
 };

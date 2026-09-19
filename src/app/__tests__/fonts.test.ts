@@ -115,11 +115,14 @@ describe('locale font configuration', () => {
     expect(getLocaleFontClassName('ms')).toBe('--font-noto-sans-latin-loaded');
     expect(getLocaleFontClassName('ru')).toBe('--font-noto-sans-latin-loaded');
     expect(getLocaleFontClassName('tr')).toBe('--font-noto-sans-latin-loaded');
+    expect(getLocaleFontClassName('it')).toBe('--font-noto-sans-latin-loaded');
+    expect(getLocaleFontClassName('nl')).toBe('--font-noto-sans-latin-loaded');
+    expect(getLocaleFontClassName('pl')).toBe('--font-noto-sans-latin-loaded');
     expect(getLocaleFontClassName('zh-Hans')).toContain('--font-noto-sans-sc-loaded');
     expect(getLocaleFontClassName('zh-Hans')).toContain('--font-noto-serif-sc-loaded');
 
-    const documentLanguages = ['ko', 'zh-Hant', 'en', 'ja', 'vi', 'id', 'th', 'fil', 'de', 'es', 'fr', 'pt', 'zh-Hans', 'ms', 'ru', 'tr'] as const;
-    expect(documentLanguages).toHaveLength(16);
+    const documentLanguages = ['ko', 'zh-Hant', 'en', 'ja', 'vi', 'id', 'th', 'fil', 'de', 'es', 'fr', 'pt', 'zh-Hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl'] as const;
+    expect(documentLanguages).toHaveLength(19);
     for (const language of documentLanguages) {
       for (const fontClass of getLocaleFontClassName(language).split(' ').filter(Boolean)) {
         expect(managed).toContain(fontClass);

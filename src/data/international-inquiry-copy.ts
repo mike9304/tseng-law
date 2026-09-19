@@ -29,7 +29,10 @@ export type InquiryCopyLocale =
   | 'zh-hans'
   | 'ms'
   | 'ru'
-  | 'tr';
+  | 'tr'
+  | 'it'
+  | 'nl'
+  | 'pl';
 
 export interface InternationalInquiryCopy {
   /** The page language is guidance only. */
@@ -922,6 +925,156 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ko: 'Korece (한국어)',
       'needs-method-confirmation':
         'Dört dilden hiçbirini kullanamıyorum — iletişim yolunun doğrulanması gerekir',
+    },
+  },
+  it: {
+    guidanceNotice:
+      'Questa pagina è scritta in italiano come orientamento generale, non come consulenza legale per il Suo caso.',
+    consultationNotice:
+      'La consulenza si svolge in quattro lingue: inglese, cinese (中文), giapponese e coreano.',
+    methodConfirmationNotice:
+      'Se non può usare nessuna delle quattro lingue, scelga «La via di comunicazione deve essere confermata». Rispondiamo per esaminare una via praticabile di comunicazione, se una tale via esiste; una prestazione in un’altra lingua non è garantita e un termine di risposta non è promesso.',
+    preparationNotice:
+      'Può scrivere il riassunto nella Sua lingua. Il testo originale viene conservato così come Lo ha scritto e non viene tradotto automaticamente.',
+    heading: 'Inviare una richiesta di consulenza',
+    intro:
+      'Descriva brevemente la Sua questione. Un’avvocata o un avvocato esamina il contenuto prima che si parli del passo successivo.',
+    submitLabel: 'Inviare la richiesta',
+    submittingLabel: 'Invio in corso…',
+    successMessage:
+      'Abbiamo ricevuto la Sua richiesta; attende l’esame. Ciò non significa che la consulenza abbia avuto luogo o che un appuntamento sia confermato.',
+    savedNotificationPendingMessage:
+      'La Sua richiesta è conservata, ma la notifica allo studio non è ancora confermata. Quanto ha scritto non va perduto. Se non riceve risposta, può anche scrivere all’indirizzo di posta elettronica della pagina di contatto.',
+    receiptIdLabel: 'Numero di ricezione',
+    failureMessage:
+      'Non è stato possibile inviare la Sua richiesta. Riprovi o scriva all’indirizzo di posta elettronica della pagina di contatto.',
+    originalLanguageLabel: 'Lingua in cui scrive',
+    originalLanguagePlaceholder:
+      'Ad esempio italiano, inglese, cinese o un’altra lingua',
+    preferredConsultationLanguageLabel: 'Lingua che desidera per la consulenza',
+    originalTextLabel: 'Breve esposizione della questione (nella Sua lingua)',
+    originalTextPlaceholder:
+      'Indichi che cosa è accaduto, di quale aiuto ha bisogno e il termine, se ve n’è uno. Non indichi il numero di passaporto, il numero di documento o i dati di un conto.',
+    nameLabel: 'Nome',
+    emailLabel: 'Posta elettronica',
+    consentLabel:
+      'Ho letto l’informativa sulla privacy e acconsento all’invio di questa richiesta.',
+    privacyLinkLabel: 'Privacy',
+    requiredMessage: 'Questo campo è obbligatorio.',
+    invalidEmailMessage: 'Indichi un indirizzo di posta elettronica valido.',
+    tooLongMessage: 'Il testo è troppo lungo. Lo accorci e invii di nuovo.',
+    sourceLanguageNotice:
+      'Questo articolo è pubblicato soltanto in {language}; il collegamento apre la pagina originale.',
+    unavailableTranslationNotice:
+      'Questo punto non è ancora disponibile nella lingua di questa pagina. Un collegamento con la lingua originale apre il testo originale.',
+    unavailableLanguageNotice: 'Questa pagina non è offerta in {language}.',
+    languageOptions: {
+      en: 'Inglese (English)',
+      'zh-hant': 'Cinese (中文)',
+      ja: 'Giapponese (日本語)',
+      ko: 'Coreano (한국어)',
+      'needs-method-confirmation':
+        'Nessuna delle quattro lingue è utilizzabile — la via di comunicazione deve essere confermata',
+    },
+  },
+  nl: {
+    guidanceNotice:
+      'Deze pagina is in het Nederlands geschreven als algemene oriëntatie, niet als juridisch advies voor uw eigen zaak.',
+    consultationNotice:
+      'De consultatie vindt plaats in vier talen: Engels, Chinees (中文), Japans en Koreaans.',
+    methodConfirmationNotice:
+      'Als u geen van de vier talen kunt gebruiken, kies «Communicatieweg moet worden bevestigd». Wij antwoorden om een werkbare communicatieweg te onderzoeken, als zo’n weg bestaat; een dienst in een andere taal wordt niet gewaarborgd en een antwoordtermijn niet toegezegd.',
+    preparationNotice:
+      'U mag de samenvatting in uw eigen taal schrijven. De oorspronkelijke tekst wordt bewaard zoals u die hebt geschreven en niet automatisch vertaald.',
+    heading: 'Een consultatieverzoek sturen',
+    intro:
+      'Beschrijf uw zaak kort. Een advocaat beoordeelt de inhoud voordat de volgende stap wordt besproken.',
+    submitLabel: 'Het verzoek sturen',
+    submittingLabel: 'Wordt verzonden…',
+    successMessage:
+      'Wij hebben uw verzoek ontvangen; het wacht op beoordeling. Dit betekent niet dat de consultatie heeft plaatsgevonden of dat een afspraak is bevestigd.',
+    savedNotificationPendingMessage:
+      'Uw verzoek is bewaard, maar de kennisgeving aan het kantoor is nog niet bevestigd. Wat u hebt geschreven, gaat niet verloren. Als u geen antwoord ontvangt, kunt u ook schrijven naar het e-mailadres op de contactpagina.',
+    receiptIdLabel: 'Ontvangstnummer',
+    failureMessage:
+      'Uw verzoek kon niet worden verzonden. Probeer het opnieuw of schrijf naar het e-mailadres op de contactpagina.',
+    originalLanguageLabel: 'Taal waarin u schrijft',
+    originalLanguagePlaceholder:
+      'Bijvoorbeeld Nederlands, Engels, Chinees of een andere taal',
+    preferredConsultationLanguageLabel: 'Taal die u voor de consultatie wenst',
+    originalTextLabel: 'Korte weergave van de zaak (in uw taal)',
+    originalTextPlaceholder:
+      'Noem wat er is gebeurd, welke hulp u nodig hebt en de termijn, als er een is. Schrijf geen paspoortnummer, identiteitsnummer of rekeninggegevens.',
+    nameLabel: 'Naam',
+    emailLabel: 'E-mail',
+    consentLabel:
+      'Ik heb de privacypagina gelezen en stem in met het versturen van dit verzoek.',
+    privacyLinkLabel: 'Privacy',
+    requiredMessage: 'Dit veld is verplicht.',
+    invalidEmailMessage: 'Geef een geldig e-mailadres op.',
+    tooLongMessage: 'De tekst is te lang. Kort hem in en stuur opnieuw.',
+    sourceLanguageNotice:
+      'Dit artikel is alleen in het {language} gepubliceerd; de koppeling opent de oorspronkelijke pagina.',
+    unavailableTranslationNotice:
+      'Dit punt is in de taal van deze pagina nog niet beschikbaar. Een koppeling met de oorspronkelijke taal opent de oorspronkelijke tekst.',
+    unavailableLanguageNotice: 'Deze pagina wordt niet in het {language} aangeboden.',
+    languageOptions: {
+      en: 'Engels (English)',
+      'zh-hant': 'Chinees (中文)',
+      ja: 'Japans (日本語)',
+      ko: 'Koreaans (한국어)',
+      'needs-method-confirmation':
+        'Geen van de vier talen is bruikbaar — communicatieweg moet worden bevestigd',
+    },
+  },
+  pl: {
+    guidanceNotice:
+      'Ta strona jest napisana po polsku jako ogólna orientacja, a nie jako porada prawna w Państwa sprawie.',
+    consultationNotice:
+      'Konsultacja odbywa się w czterech językach: angielskim, chińskim (中文), japońskim i koreańskim.',
+    methodConfirmationNotice:
+      'Jeśli nie można korzystać z żadnego z czterech języków, prosimy wybrać «Sposób komunikacji musi zostać potwierdzony». Odpowiadamy, aby zbadać możliwy sposób komunikacji, jeśli taki sposób istnieje; świadczenie w innym języku nie jest zapewniane, a termin odpowiedzi nie jest obiecany.',
+    preparationNotice:
+      'Można napisać streszczenie we własnym języku. Oryginalny tekst jest zapisywany tak, jak został napisany, i nie jest tłumaczony automatycznie.',
+    heading: 'Wysłać wniosek o konsultację',
+    intro:
+      'Prosimy krótko opisać sprawę. Adwokat rozpatruje treść, zanim omawia się kolejny krok.',
+    submitLabel: 'Wysłać wniosek',
+    submittingLabel: 'Wysyłanie…',
+    successMessage:
+      'Otrzymaliśmy wniosek; czeka na rozpatrzenie. To nie oznacza, że konsultacja się odbyła ani że termin został potwierdzony.',
+    savedNotificationPendingMessage:
+      'Wniosek jest zapisany, ale powiadomienie kancelarii nie jest jeszcze potwierdzone. Napisane nie ginie. Jeśli nie ma odpowiedzi, można też napisać na adres poczty elektronicznej strony kontaktu.',
+    receiptIdLabel: 'Numer odbioru',
+    failureMessage:
+      'Nie udało się wysłać wniosku. Prosimy spróbować ponownie albo napisać na adres poczty elektronicznej strony kontaktu.',
+    originalLanguageLabel: 'Język, w którym Państwo piszą',
+    originalLanguagePlaceholder:
+      'Na przykład polski, angielski, chiński lub inny język',
+    preferredConsultationLanguageLabel: 'Język, którego Państwo życzą sobie do konsultacji',
+    originalTextLabel: 'Krótki opis sprawy (we własnym języku)',
+    originalTextPlaceholder:
+      'Prosimy podać, co się stało, jakiej pomocy potrzeba i termin, jeśli istnieje. Prosimy nie wpisywać numeru paszportu, numeru dokumentu ani danych rachunku.',
+    nameLabel: 'Imię i nazwisko',
+    emailLabel: 'Poczta elektroniczna',
+    consentLabel:
+      'Przeczytałem(-am) stronę o prywatności i wyrażam zgodę na wysłanie tego wniosku.',
+    privacyLinkLabel: 'Prywatność',
+    requiredMessage: 'To pole jest wymagane.',
+    invalidEmailMessage: 'Prosimy podać prawidłowy adres poczty elektronicznej.',
+    tooLongMessage: 'Tekst jest zbyt długi. Prosimy skrócić i wysłać ponownie.',
+    sourceLanguageNotice:
+      'Ten artykuł jest opublikowany tylko w języku {language}; łącze otwiera stronę oryginalną.',
+    unavailableTranslationNotice:
+      'Ten punkt nie jest jeszcze dostępny w języku tej strony. Łącze z językiem oryginału otwiera tekst oryginalny.',
+    unavailableLanguageNotice: 'Ta strona nie jest oferowana w języku {language}.',
+    languageOptions: {
+      en: 'Angielski (English)',
+      'zh-hant': 'Chiński (中文)',
+      ja: 'Japoński (日本語)',
+      ko: 'Koreański (한국어)',
+      'needs-method-confirmation':
+        'Żaden z czterech języków nie jest dostępny — sposób komunikacji musi zostać potwierdzony',
     },
   },
 };

@@ -146,8 +146,8 @@ describe('guidance font payload for eight document languages', () => {
     ]));
     expect(managed).toHaveLength(11);
 
-    const documentLanguages = ['ko', 'zh-Hant', 'en', 'ja', 'vi', 'id', 'th', 'fil', 'de', 'es', 'fr', 'pt', 'zh-Hans', 'ms', 'ru', 'tr'] as const;
-    expect(documentLanguages).toHaveLength(16);
+    const documentLanguages = ['ko', 'zh-Hant', 'en', 'ja', 'vi', 'id', 'th', 'fil', 'de', 'es', 'fr', 'pt', 'zh-Hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl'] as const;
+    expect(documentLanguages).toHaveLength(19);
     for (const language of documentLanguages) {
       for (const fontClass of getLocaleFontClassName(language).split(' ').filter(Boolean)) {
         expect(managed).toContain(fontClass);

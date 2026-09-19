@@ -18,6 +18,7 @@ const GUIDANCE_WESTERN_SRC = path.join(process.cwd(), 'src/data/international-gu
 const GUIDANCE_ASIA_SRC = path.join(process.cwd(), 'src/data/international-guidance-asia.ts');
 const GUIDANCE_IT_NL_PL_SRC = path.join(process.cwd(), 'src/data/international-guidance-it-nl-pl.ts');
 const GUIDANCE_NORDIC_SRC = path.join(process.cwd(), 'src/data/international-guidance-nordic.ts');
+const GUIDANCE_EASTERN_SRC = path.join(process.cwd(), 'src/data/international-guidance-eastern.ts');
 
 /**
  * Filter "All" word taken from reviewed `viewAllLabel` already in
@@ -53,7 +54,7 @@ const GUIDANCE_ALL_LABEL: Record<GuidanceLocale4, string> = {
   cs: 'Vše',
   hu: 'Összes',
   ro: 'Toate',
-  uk: 'Усі',
+  uk: 'Все',
   el: 'Όλα',
   he: 'הכול',
 };
@@ -82,9 +83,9 @@ const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
   fi: "viewAllLabel: 'Näytä kaikki'",
   cs: "viewAllLabel: 'Zobrazit vše'",
   hu: "viewAllLabel: 'Összes megtekintése'",
-  ro: "viewAllLabel: 'Vedeți tot'",
+  ro: "viewAllLabel: 'Vedeți toate'",
   uk: "viewAllLabel: 'Показати все'",
-  el: "viewAllLabel: 'Προβολή όλων'",
+  el: "viewAllLabel: 'Δείτε όλα'",
   he: "viewAllLabel: 'הצגת הכול'",
 };
 
@@ -140,7 +141,7 @@ function filterButtonLabels(html: string): string[] {
 
 describe('ColumnsGrid guidance filter and card CTA labels', () => {
   it('pins All labels to reviewed viewAllLabel vocabulary already in the guidance content file', () => {
-    const src = `${readFileSync(GUIDANCE_CONTENT_SRC, 'utf8')}\n${readFileSync(GUIDANCE_WESTERN_SRC, 'utf8')}\n${readFileSync(GUIDANCE_ASIA_SRC, 'utf8')}\n${readFileSync(GUIDANCE_IT_NL_PL_SRC, 'utf8')}\n${readFileSync(GUIDANCE_NORDIC_SRC, 'utf8')}`;
+    const src = `${readFileSync(GUIDANCE_CONTENT_SRC, 'utf8')}\n${readFileSync(GUIDANCE_WESTERN_SRC, 'utf8')}\n${readFileSync(GUIDANCE_ASIA_SRC, 'utf8')}\n${readFileSync(GUIDANCE_IT_NL_PL_SRC, 'utf8')}\n${readFileSync(GUIDANCE_NORDIC_SRC, 'utf8')}\n${readFileSync(GUIDANCE_EASTERN_SRC, 'utf8')}`;
     for (const locale of GUIDANCE_LOCALES_4) {
       expect(src, locale).toContain(VIEW_ALL_LABEL_EVIDENCE[locale]);
       const viewAllValue = VIEW_ALL_LABEL_EVIDENCE[locale].match(/'([^']+)'/)?.[1] ?? '';

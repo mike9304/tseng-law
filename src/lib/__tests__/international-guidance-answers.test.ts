@@ -5,7 +5,7 @@ import type {
   GuidanceLocale,
   GuidancePageKey,
 } from '@/data/international-guidance-content';
-import { GUIDANCE_PAGE_KEYS } from '@/lib/public-guidance';
+import { GUIDANCE_LOCALES_4, GUIDANCE_PAGE_KEYS } from '@/lib/public-guidance';
 
 /**
  * The guidance locales this suite covers.
@@ -39,6 +39,12 @@ const GUIDANCE_LOCALES = [
   'da',
   'nb',
   'fi',
+  'cs',
+  'hu',
+  'ro',
+  'uk',
+  'el',
+  'he',
 ] as const satisfies readonly GuidanceLocale[];
 
 /**
@@ -240,6 +246,12 @@ const SERVICES_SCOPE_TERMS: Record<string, readonly [string, RegExp]> = {
   da: ['omfang', /omfang/i],
   nb: ['omfang', /omfang/i],
   fi: ['laajuus', /laajuus/i],
+  cs: ['rozsah', /rozsah/i],
+  hu: ['terjedelm', /terjedelm/i],
+  ro: ['întinderea', /întinderea/i],
+  uk: ['обсяг', /обсяг/i],
+  el: ['εύρος', /εύρος/i],
+  he: ['היקף', /היקף/],
 };
 
 const SERVICES_ACCEPTANCE_PATTERNS: Record<
@@ -330,6 +342,30 @@ const SERVICES_ACCEPTANCE_PATTERNS: Record<
     ['hyväksytäänkö asia', /hyväksytäänkö asia/i],
     ['päätetään tarkastuksen jälkeen', /päätetään tarkastuksen jälkeen/i],
   ],
+  cs: [
+    ['bude věc přijata', /bude věc přijata/i],
+    ['rozhodne', /rozhodne/i],
+  ],
+  hu: [
+    ['elvállalunk-e', /elvállalunk-e/i],
+    ['dől el', /dől el/i],
+  ],
+  ro: [
+    ['este preluată', /este preluată/i],
+    ['se hotărăște', /se hotărăște/i],
+  ],
+  uk: [
+    ['буде справу прийнято', /буде справу прийнято/i],
+    ['вирішують', /вирішують/i],
+  ],
+  el: [
+    ['γίνεται δεκτή', /γίνεται δεκτή/i],
+    ['κρίνεται', /κρίνεται/i],
+  ],
+  he: [
+    ['יתקבל', /יתקבל/],
+    ['נקבע', /נקבע/],
+  ],
 };
 
 /** Every site-internal path an answer may cite. */
@@ -362,8 +398,8 @@ const entries = GUIDANCE_LOCALES.flatMap((locale) =>
 );
 
 describe('guidanceAnswers', () => {
-  it('covers 21 locales x 6 page keys', () => {
-    expect(GUIDANCE_LOCALES).toHaveLength(21);
+  it('covers every guidance locale x 6 page keys', () => {
+    expect(GUIDANCE_LOCALES).toHaveLength(GUIDANCE_LOCALES_4.length);
     expect(ANSWER_PAGE_KEYS).toHaveLength(6);
     expect(Object.keys(guidanceAnswers).sort()).toEqual([...GUIDANCE_LOCALES].sort());
 

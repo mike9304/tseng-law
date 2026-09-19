@@ -39,7 +39,7 @@ describe('ar routing tier', () => {
   it('has flipped ar into the content tier and emptied the routing-only tier', () => {
     expect(ROUTED_ONLY_LOCALES).toEqual([]);
     expect(ROUTED_PUBLIC_LOCALES).toEqual([...PUBLIC_LOCALES_8]);
-    expect(RTL_PUBLIC_LOCALES).toEqual(['ar']);
+    expect(RTL_PUBLIC_LOCALES).toEqual(['ar', 'he']);
     // Content tier now carries ar.
     expect(PUBLIC_LOCALES_8).toContain('ar');
     expect(GUIDANCE_LOCALES_4).toContain('ar');

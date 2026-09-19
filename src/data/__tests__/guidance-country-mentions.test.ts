@@ -76,6 +76,10 @@ describe('guidance data country-name gate', () => {
         expect(entry.locales, `${entry.file} locale blocks`).toEqual(['sv', 'da', 'nb', 'fi']);
         continue;
       }
+      if (entry.file.endsWith('international-guidance-eastern.ts')) {
+        expect(entry.locales, `${entry.file} locale blocks`).toEqual(['cs', 'hu', 'ro', 'uk', 'el', 'he']);
+        continue;
+      }
       expect(entry.locales.length % cycle.length, `${entry.file} partial locale record`).toBe(0);
       expect(entry.locales, `${entry.file} locale blocks`).toEqual(
         entry.locales.map((_, index) => cycle[index % cycle.length]),

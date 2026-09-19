@@ -53,6 +53,12 @@ describe('hi/sv/da/nb/fi guidance routing', () => {
       'da',
       'nb',
       'fi',
+      'cs',
+      'hu',
+      'ro',
+      'uk',
+      'el',
+      'he',
     ]);
     for (const locale of NEW_GUIDANCE) {
       expect(isGuidanceLocale4(locale)).toBe(true);
@@ -92,6 +98,12 @@ describe('hi/sv/da/nb/fi guidance routing', () => {
       'da',
       'nb',
       'fi',
+      'cs',
+      'hu',
+      'ro',
+      'uk',
+      'el',
+      'he',
     ]);
     expect(PUBLIC_LANGUAGE_AUTONYMS.hi).not.toMatch(/🇮🇳|\bIndia\b|\bHindi\b/);
     expect(PUBLIC_LANGUAGE_AUTONYMS.sv).not.toMatch(/🇸🇪|\bSverige\b|\bSwedish\b/);

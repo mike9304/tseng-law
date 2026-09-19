@@ -902,7 +902,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Értesítés és iktatószám',
           paragraphs: [
-            'Ha a megkeresés sikeresen elment, a rendszer értesíti az irodát. Ha ez az értesítés még nincs megerősítve, a szövege akkor is tárolva marad, és nem vész el.',
+            'Ha a megkeresés sikeresen elment, a rendszer értesíti az irodát. Ha ez az értesítés nem jut el az irodához, a szövege akkor is tárolva marad, és nem vész el.',
             'Az iktatószám a megkeresés visszakeresésére szolgál a nyilvántartásunkban. A mentés után jelenik meg; új kapcsolatfelvételkor megadhatja.',
           ],
         },
@@ -1022,23 +1022,23 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
   mega: {
     services: {
       description: 'Cabinetul tratează grupele principale de lucrări potrivit dreptului taiwanez.',
-      viewAllLabel: 'Vedeți tot',
+      viewAllLabel: 'Vedeți toate',
     },
     columns: {
       description: 'Articole despre întrebări frecvente din dreptul taiwanez.',
-      viewAllLabel: 'Vedeți tot',
+      viewAllLabel: 'Vedeți toate',
     },
     lawyers: {
       description: 'Prezentarea avocatelor și avocaților și a modalităților de contact.',
-      viewAllLabel: 'Vedeți tot',
+      viewAllLabel: 'Vedeți toate',
     },
     pricing: {
       description: 'Această pagină explică întinderea lucrării și modul de clarificare a costurilor.',
-      viewAllLabel: 'Vedeți tot',
+      viewAllLabel: 'Vedeți toate',
     },
     faq: {
       description: 'Întrebări frecvente despre activitatea cabinetului în Taiwan.',
-      viewAllLabel: 'Vedeți tot',
+      viewAllLabel: 'Vedeți toate',
     },
   },
   notFoundTitle: 'Pagina nu a fost găsită',
@@ -1394,7 +1394,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Înștiințarea și numărul de înregistrare',
           paragraphs: [
-            'Dacă o solicitare este trimisă cu succes, sistemul înștiințează cabinetul. Dacă această înștiințare nu este încă confirmată, textul dumneavoastră rămâne păstrat și nu se pierde.',
+            'Dacă o solicitare este trimisă cu succes, sistemul înștiințează cabinetul. Dacă această înștiințare nu ajunge la cabinet, textul dumneavoastră rămâne păstrat și nu se pierde.',
             'Numărul de înregistrare servește la regăsirea solicitării dumneavoastră în evidențele noastre. Se arată după păstrare; îl puteți indica la un nou contact.',
           ],
         },
@@ -1569,7 +1569,7 @@ export const ukrainianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Чим ми займаємося',
           paragraphs: [
-            'Hovering International Law Firm — адвокатська фірма, заснована на Тайвані. Вона працює за правом Тайваню та має офіси в Тайбеї (臺北), Гаосюні (高雄), Тайчжуні (臺中) і Піндуні (屏東). Ми консультуємо підприємства, ведемо судові процеси та супроводжуємо клієнтів з-за кордону в потрібних на Тайвані кроках.',
+            'Hovering International Law Firm — адвокатська фірма, заснована на Тайвані. Вона працює за правом Тайваню та має офіси в містах Тайбей (臺北), Гаосюн (高雄), Тайчжун (臺中) і Піндун (屏東). Ми консультуємо підприємства, ведемо судові процеси та супроводжуємо клієнтів з-за кордону в потрібних на Тайвані кроках.',
             'Увесь тутешній зміст є загальним. Результат справи залежить від обставин, від застосовних приписів і від моменту. Ці відомості не замінюють розмови з адвокатом над Вашими документами.',
           ],
         },
@@ -1674,14 +1674,14 @@ export const ukrainianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Заснування та будова',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) заснували 2016 року адвокати, які навчалися в National Taiwan University (國立臺灣大學). Китайська назва 昊鼎 поєднує знак 昊 («широке небо») зі знаком 鼎 («міцна основа») й описує спрямування фірми від заснування.',
-            'Ми маємо офіси в Тайбеї (臺北), Гаосюні (高雄), Тайчжуні (臺中) і Піндуні (屏東). Офіс у Гаосюні зосереджений на веденні підприємств і провадить цивільні, кримінальні та адміністративні спори. Офіс у Тайчжуні веде будівельні справи, інтелектуальну власність і справи, пов’язані з Кореєю та Японією. Офіс у Піндуні відкрито 2017 року для місцевих потреб.',
+            'Ми маємо офіси в містах Тайбей (臺北), Гаосюн (高雄), Тайчжун (臺中) і Піндун (屏東). Офіс у місті Гаосюн зосереджений на веденні підприємств і провадить цивільні, кримінальні та адміністративні спори. Офіс у місті Тайчжун веде будівельні справи, інтелектуальну власність і справи, пов’язані з Кореєю та Японією. Офіс у місті Піндун відкрито 2017 року для місцевих потреб.',
             'Крім адвокатської роботи, від 2020 року діє також Hovering Accounting Office, що пропонує бухгалтерський облік і податкове планування підприємцям і приватним особам із майном.',
           ],
         },
         {
           heading: 'Робота з іноземними сторонами',
           paragraphs: [
-            'Транскордонна робота охоплює створення товариств, візи, подання заявок на марки та патенти, перевірку правового ризику та податкове консультування підприємств. Офіс у Тайчжуні веде передусім будівельні справи, інтелектуальну власність і справи, пов’язані з Кореєю та Японією. Адвокат Wei Tseng (曾雋崴) супроводжує клієнтів з Кореї, Японії та інших країн у зазначених групах.',
+            'Транскордонна робота охоплює створення товариств, візи, подання заявок на марки та патенти, перевірку правового ризику та податкове консультування підприємств. Офіс у місті Тайчжун веде передусім будівельні справи, інтелектуальну власність і справи, пов’язані з Кореєю та Японією. Адвокат Wei Tseng (曾雋崴) супроводжує клієнтів з Кореї, Японії та інших країн у зазначених групах.',
             'Чи можемо ми взяти справу, залежить від змісту та від мови спілкування. Якщо Ваша справа належить до зазначених груп і її можна обговорити однією з чотирьох мов консультації, Ви можете надіслати виклад на розгляд.',
           ],
         },
@@ -1887,7 +1887,7 @@ export const ukrainianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Сповіщення та реєстраційний номер',
           paragraphs: [
-            'Якщо запит надіслано успішно, система сповіщає фірму. Якщо це сповіщення ще не підтверджено, Ваш текст залишається збереженим і не втрачається.',
+            'Якщо запит надіслано успішно, система сповіщає фірму. Якщо це сповіщення не надійде до фірми, Ваш текст залишається збереженим і не втрачається.',
             'Реєстраційний номер слугує для віднайдення Вашого запиту в наших записах. Його показують після збереження; Ви можете зазначити його при новому зверненні.',
           ],
         },
@@ -2012,23 +2012,23 @@ export const greekGuidanceContent: GuidanceLocaleContent = {
   mega: {
     services: {
       description: 'Το γραφείο χειρίζεται τις βασικές ομάδες εργασιών κατά το δίκαιο της Ταϊβάν.',
-      viewAllLabel: 'Προβολή όλων',
+      viewAllLabel: 'Δείτε όλα',
     },
     columns: {
       description: 'Άρθρα για συχνά ερωτήματα του δικαίου της Ταϊβάν.',
-      viewAllLabel: 'Προβολή όλων',
+      viewAllLabel: 'Δείτε όλα',
     },
     lawyers: {
       description: 'Παρουσίαση των δικηγόρων και των τρόπων επικοινωνίας.',
-      viewAllLabel: 'Προβολή όλων',
+      viewAllLabel: 'Δείτε όλα',
     },
     pricing: {
       description: 'Η σελίδα αυτή εξηγεί το εύρος της εργασίας και τον τρόπο αποσαφήνισης του κόστους.',
-      viewAllLabel: 'Προβολή όλων',
+      viewAllLabel: 'Δείτε όλα',
     },
     faq: {
       description: 'Συχνά ερωτήματα για την εργασία του γραφείου στην Ταϊβάν.',
-      viewAllLabel: 'Προβολή όλων',
+      viewAllLabel: 'Δείτε όλα',
     },
   },
   notFoundTitle: 'Η σελίδα δεν βρέθηκε',
@@ -2384,7 +2384,7 @@ export const greekGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ειδοποίηση και αριθμός πρωτοκόλλου',
           paragraphs: [
-            'Αν ένα αίτημα σταλεί επιτυχώς, το σύστημα ειδοποιεί το γραφείο. Αν η ειδοποίηση αυτή δεν έχει ακόμη επιβεβαιωθεί, το κείμενό σας παραμένει φυλαγμένο και δεν χάνεται.',
+            'Αν ένα αίτημα σταλεί επιτυχώς, το σύστημα ειδοποιεί το γραφείο. Αν η ειδοποίηση αυτή δεν φτάσει στο γραφείο, το κείμενό σας παραμένει φυλαγμένο και δεν χάνεται.',
             'Ο αριθμός πρωτοκόλλου χρησιμεύει στην ανεύρεση του αιτήματός σας στα αρχεία μας. Εμφανίζεται μετά τη φύλαξη· μπορείτε να τον αναφέρετε σε νέα επικοινωνία.',
           ],
         },
@@ -2885,7 +2885,7 @@ export const hebrewGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'הודעה ומספר קליטה',
           paragraphs: [
-            'אם פנייה נשלחה בהצלחה, המערכת מודיעה למשרד. אם הודעה זו טרם אושרה, הטקסט שלכם נותר שמור ואינו אובד.',
+            'אם פנייה נשלחה בהצלחה, המערכת מודיעה למשרד. אם הודעה זו אינה מגיעה אל המשרד, הטקסט שלכם נותר שמור ואינו אובד.',
             'מספר הקליטה משמש לאיתור הפנייה שלכם ברישומינו. הוא מוצג לאחר השמירה; אפשר לציינו בפנייה חוזרת.',
           ],
         },

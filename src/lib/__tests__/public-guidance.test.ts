@@ -46,8 +46,8 @@ describe('public eight-locale helper isolation', () => {
   it('does not widen Locale3 or SiteLocale4', () => {
     expect(locales).toEqual(['ko', 'zh-hant', 'en']);
     expect(siteLocales).toEqual(['ko', 'zh-hant', 'en', 'ja']);
-    expect(PUBLIC_LOCALES_8).toHaveLength(25);
-    expect(GUIDANCE_LOCALES_4).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi']);
+    expect(PUBLIC_LOCALES_8).toHaveLength(31);
+    expect(GUIDANCE_LOCALES_4).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi', 'cs', 'hu', 'ro', 'uk', 'el', 'he']);
   });
 
   it('keeps helper free of CMS / builder-locale fallback', () => {
@@ -59,7 +59,7 @@ describe('public eight-locale helper isolation', () => {
     expect(source).not.toContain('resolvePublishedSitePage');
   });
 
-  it('exposes twenty-five autonyms without flags or nationality labels', () => {
+  it('exposes every registry autonym without flags or nationality labels', () => {
     expect(PUBLIC_LANGUAGE_AUTONYMS).toEqual({
       ko: '한국어',
       'zh-hant': '繁體中文',
@@ -86,10 +86,16 @@ describe('public eight-locale helper isolation', () => {
       da: 'Dansk',
       nb: 'Norsk',
       fi: 'Suomi',
+      cs: 'Čeština',
+      hu: 'Magyar',
+      ro: 'Română',
+      uk: 'Українська',
+      el: 'Ελληνικά',
+      he: 'עברית',
     });
     const autonyms = Object.values(PUBLIC_LANGUAGE_AUTONYMS);
-    expect(autonyms).toHaveLength(25);
-    expect(new Set(autonyms).size).toBe(25);
+    expect(autonyms).toHaveLength(PUBLIC_LOCALES_8.length);
+    expect(new Set(autonyms).size).toBe(PUBLIC_LOCALES_8.length);
     expect(autonyms.join('')).not.toMatch(/🇰🇷|🇯🇵|🇹🇼|🇺🇸|🇻🇳|🇮🇩|🇹🇭|🇵🇭|🇸🇦|🇦🇪/);
 
     const countryQualificationLabels = [
@@ -136,9 +142,9 @@ describe('document language (html lang 8)', () => {
   });
 });
 
-describe('allowed 210 guidance route pairs', () => {
-  it('covers sixteen locales × ten core pages', () => {
-    expect(ALLOWED_ROUTE_PAIRS).toHaveLength(210);
+describe('allowed guidance route pairs', () => {
+  it('covers every guidance locale × ten core pages', () => {
+    expect(ALLOWED_ROUTE_PAIRS).toHaveLength(GUIDANCE_LOCALES_4.length * 10);
     expect(GUIDANCE_PAGE_KEYS).toHaveLength(10);
   });
 

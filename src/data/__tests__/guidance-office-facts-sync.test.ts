@@ -35,7 +35,7 @@ import {
 } from '@/data/international-guidance-offices';
 import { taiwanOfficeData } from '@/data/office-locations';
 
-const LOCALES: GuidanceLocale[] = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi'];
+const LOCALES: GuidanceLocale[] = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi', 'cs', 'hu', 'ro', 'uk', 'el', 'he'];
 
 /**
  * The office register. `office-locations.ts` is the canonical record every

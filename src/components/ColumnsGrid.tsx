@@ -138,7 +138,7 @@ const GUIDANCE_FILTER_ALL_LABEL: Record<GuidanceLocale4, string> = {
   cs: 'Vše',
   hu: 'Összes',
   ro: 'Toate',
-  uk: 'Усі',
+  uk: 'Все',
   el: 'Όλα',
   he: 'הכול',
 };

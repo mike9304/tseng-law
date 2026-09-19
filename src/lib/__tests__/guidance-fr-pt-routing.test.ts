@@ -28,7 +28,7 @@ describe('fr/pt guidance routing', () => {
   });
 
   it('registers fr and pt as guidance locales', () => {
-    expect(GUIDANCE_LOCALES_4).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi']);
+    expect(GUIDANCE_LOCALES_4).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi', 'cs', 'hu', 'ro', 'uk', 'el', 'he']);
     expect(isGuidanceLocale4('fr')).toBe(true);
     expect(isGuidanceLocale4('pt')).toBe(true);
     expect(isPublicLocale8('fr')).toBe(true);
@@ -64,6 +64,12 @@ describe('fr/pt guidance routing', () => {
       'da',
       'nb',
       'fi',
+      'cs',
+      'hu',
+      'ro',
+      'uk',
+      'el',
+      'he',
     ]);
     expect(PUBLIC_LANGUAGE_AUTONYMS.fr).not.toMatch(/🇫🇷|France|French/);
     expect(PUBLIC_LANGUAGE_AUTONYMS.pt).not.toMatch(/🇵🇹|Portugal|Brazil|Portuguese/);

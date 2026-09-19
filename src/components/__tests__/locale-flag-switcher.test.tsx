@@ -84,6 +84,12 @@ describe('LocaleFlagSwitcher', () => {
       ['da', 'Dansk'],
       ['nb', 'Norsk'],
       ['fi', 'Suomi'],
+      ['cs', 'Čeština'],
+      ['hu', 'Magyar'],
+      ['ro', 'Română'],
+      ['uk', 'Українська'],
+      ['el', 'Ελληνικά'],
+      ['he', 'עברית'],
     ]);
     expect(LOCALE_FLAG_OPTIONS.map((option) => option.locale)).toEqual([...PUBLIC_LOCALES_8]);
 
@@ -235,7 +241,7 @@ describe('LocaleFlagSwitcher', () => {
       );
       element.props.onClick?.();
     });
-    expect(onLocaleSelect.mock.calls.map(([target]) => target)).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi']);
+    expect(onLocaleSelect.mock.calls.map(([target]) => target)).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi', 'cs', 'hu', 'ro', 'uk', 'el', 'he']);
     const guidanceColumnsHref = new RegExp(
       `href="/(${GUIDANCE_LOCALES_4.join('|')})/columns/`,
     );

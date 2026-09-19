@@ -740,7 +740,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Tato část odpovídá na časté otázky na úrovni obecných informací: šest skupin práce, příprava před kontaktem, potvrzení nákladů a význam odeslané zprávy. Odeslaná zpráva čeká na posouzení a není poradou ani potvrzenou schůzkou. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+        'Tato část odpovídá na časté otázky na úrovni obecných informací: šest skupin práce, příprava před kontaktem, potvrzení nákladů a význam odeslané zprávy. Odeslaná zpráva čeká na posouzení, není právním stanoviskem ani potvrzenou schůzkou a sama o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem. Porada probíhá ve čtyřech jazycích: anglicky, čínsky, japonsky a korejsky.',
       sources: ['/cs/services', '/cs/contact'],
     },
   },
@@ -772,7 +772,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Ez a rész gyakori kérdésekre válaszol általános tájékoztatás szintjén: a hat ügycsoport, a kapcsolatfelvétel előtti előkészület, a költségek megerősítése és az elküldött üzenet jelentése. Az elküldött üzenet vizsgálatra vár, és nem tanácsadás, nem is megerősített időpont. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.',
+        'Ez a rész gyakori kérdésekre válaszol általános tájékoztatás szintjén: a hat ügycsoport, a kapcsolatfelvétel előtti előkészület, a költségek megerősítése és az elküldött üzenet jelentése. Az elküldött üzenet vizsgálatra vár, nem jogi állásfoglalás és nem megerősített időpont, és önmagában nem hoz létre ügyvéd–ügyfél viszonyt. A tanácsadás négy nyelven zajlik: angolul, kínaiul, japánul és koreaiul.',
       sources: ['/hu/services', '/hu/contact'],
     },
   },
@@ -804,7 +804,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Această parte răspunde la întrebări frecvente la nivel de informații generale: cele șase grupe de lucrări, pregătirea înainte de contactare, confirmarea costurilor și înțelesul unui mesaj trimis. Un mesaj trimis așteaptă examinarea și nu este consultanță și nici programare confirmată. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
+        'Această parte răspunde la întrebări frecvente la nivel de informații generale: cele șase grupe de lucrări, pregătirea înainte de contactare, confirmarea costurilor și înțelesul unui mesaj trimis. Un mesaj trimis așteaptă examinarea, nu este o opinie juridică și nici o programare confirmată, iar prin el însuși nu creează o relație între avocată sau avocat și client. Consultanța se desfășoară în patru limbi: engleză, chineză, japoneză și coreeană.',
       sources: ['/ro/services', '/ro/contact'],
     },
   },
@@ -816,7 +816,7 @@ export const guidanceAnswers: Record<
     },
     about: {
       answer:
-        'Hovering International Law Firm — тайванська адвокатська фірма, заснована 2016 року випускниками National Taiwan University (國立臺灣大學), з офісами в Тайбеї, Гаосюні, Тайчжуні та Піндуні. Від 2020 року діє й бухгалтерський відділ; офіс у Тайчжуні веде справи з вазкою на Корею та Японію. Фірма не обіцяє результату. Консультація відбувається лише англійською, китайською, японською та корейською.',
+        'Hovering International Law Firm — тайванська адвокатська фірма, заснована 2016 року випускниками National Taiwan University (國立臺灣大學), з офісами в містах Тайбей, Гаосюн, Тайчжун і Піндун. Від 2020 року діє й бухгалтерський відділ; офіс у Тайчжуні веде справи з вазкою на Корею та Японію. Фірма не обіцяє результату. Консультація відбувається лише англійською, китайською, японською та корейською.',
       sources: ['/uk/lawyers', '/uk/services'],
     },
     lawyers: {
@@ -836,7 +836,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Ця частина відповідає на часті питання на рівні загальних відомостей: шість груп роботи, підготовка перед зверненням, підтвердження витрат і значення надісланого повідомлення. Надіслане повідомлення очікує розгляду й не є консультацією чи підтвердженою зустріччю. Консультація відбувається лише англійською, китайською, японською та корейською.',
+        'Ця частина відповідає на часті питання на рівні загальних відомостей: шість груп роботи, підготовка перед зверненням, підтвердження витрат і значення надісланого повідомлення. Надіслане повідомлення очікує розгляду, не є юридичним висновком і не є підтвердженою зустріччю, а саме лише надсилання не створює відносин між адвокатом і клієнтом. Консультація відбувається чотирма мовами: англійською, китайською, японською та корейською.',
       sources: ['/uk/services', '/uk/contact'],
     },
   },
@@ -868,7 +868,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Το μέρος αυτό απαντά σε συχνά ερωτήματα σε επίπεδο γενικών πληροφοριών: οι έξι ομάδες εργασιών, η προετοιμασία πριν την επικοινωνία, η επιβεβαίωση του κόστους και η σημασία ενός μηνύματος που έχει σταλεί. Ένα μήνυμα που έχει σταλεί αναμένει εξέταση και δεν είναι συμβουλευτική ούτε επιβεβαιωμένο ραντεβού. Η συμβουλευτική διεξάγεται μόνο στα αγγλικά, κινεζικά, ιαπωνικά και κορεατικά.',
+        'Το μέρος αυτό απαντά σε συχνά ερωτήματα σε επίπεδο γενικών πληροφοριών: οι έξι ομάδες εργασιών, η προετοιμασία πριν την επικοινωνία, η επιβεβαίωση του κόστους και η σημασία ενός μηνύματος που έχει σταλεί. Ένα μήνυμα που έχει σταλεί αναμένει εξέταση, δεν είναι νομική γνώμη ούτε επιβεβαιωμένο ραντεβού, και από μόνο του δεν δημιουργεί σχέση δικηγόρου και εντολέα. Η συμβουλευτική διεξάγεται σε τέσσερις γλώσσες: αγγλικά, κινεζικά, ιαπωνικά και κορεατικά.',
       sources: ['/el/services', '/el/contact'],
     },
   },
@@ -900,7 +900,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'חלק זה משיב על שאלות נפוצות ברמת מידע כללי: שש קבוצות העבודה, ההכנה לפני הפנייה, אישור העלויות ומשמעותה של הודעה שנשלחה. הודעה שנשלחה ממתינה לבדיקה ואינה ייעוץ ואף לא פגישה מאושרת. הייעוץ מתקיים רק באנגלית, בסינית, ביפנית ובקוריאנית.',
+        'חלק זה משיב על שאלות נפוצות ברמת מידע כללי: שש קבוצות העבודה, ההכנה לפני הפנייה, אישור העלויות ומשמעותה של הודעה שנשלחה. הודעה שנשלחה ממתינה לבדיקה, אינה חוות דעת משפטית ואינה פגישה מאושרת, ושליחתה כשלעצמה אינה יוצרת יחסי עורך דין–לקוח. הייעוץ מתקיים בארבע שפות: אנגלית, סינית, יפנית וקוריאנית.',
       sources: ['/he/services', '/he/contact'],
     },
   },

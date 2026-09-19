@@ -53,6 +53,12 @@ describe('zh-hans/ms/ru/tr guidance routing', () => {
       'da',
       'nb',
       'fi',
+      'cs',
+      'hu',
+      'ro',
+      'uk',
+      'el',
+      'he',
     ]);
     for (const locale of NEW_GUIDANCE) {
       expect(isGuidanceLocale4(locale)).toBe(true);
@@ -91,6 +97,12 @@ describe('zh-hans/ms/ru/tr guidance routing', () => {
       'da',
       'nb',
       'fi',
+      'cs',
+      'hu',
+      'ro',
+      'uk',
+      'el',
+      'he',
     ]);
     expect(PUBLIC_LANGUAGE_AUTONYMS['zh-hans']).not.toMatch(/中国台湾|台湾省|大陆/);
     expect(PUBLIC_LANGUAGE_AUTONYMS.ms).not.toMatch(/🇲🇾|Malaysia|Malay/);

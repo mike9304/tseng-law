@@ -13,6 +13,7 @@ import {
   createDoubleOptInWindow,
 } from '@/lib/builder/marketing/subscriber-consent';
 import { sendTestEmail } from '@/lib/builder/marketing/dispatcher';
+import { MARKETING_FROM_ADDRESS } from '@/lib/builder/marketing/marketing-sender';
 import { linkSubscriberToCrmContact } from '@/lib/builder/marketing/subscriber-crm-link';
 import {
   getPublicMarketingApiErrorPayload,
@@ -161,7 +162,7 @@ export async function POST(request: NextRequest) {
       },
       segmentTags: [],
       fromName: '호정국제',
-      fromAddress: 'bookings@hoveringlaw.com.tw',
+      fromAddress: MARKETING_FROM_ADDRESS,
       status: 'draft',
       stats: { recipients: 0, opens: 0, clicks: 0, unsubscribes: 0, bounces: 0 },
       createdAt: now,

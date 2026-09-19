@@ -12,6 +12,8 @@ interface RenderedEmail {
   html: string;
   text: string;
   preheader?: string;
+  /** RFC 5322 headers the provider must set (one-click unsubscribe). */
+  headers: Record<string, string>;
 }
 
 interface RenderContext {
@@ -22,16 +24,83 @@ interface RenderContext {
 }
 
 const UNSUB_LABEL_BY_LOCALE: Record<Locale, string> = {
-  ko: '구독 해지',
+  ko: '구독 해지 / Unsubscribe',
   'zh-hant': '取消訂閱',
   en: 'Unsubscribe',
 };
 
-const FOOTER_BY_LOCALE: Record<Locale, string> = {
-  ko: '본 메일은 호정국제법률사무소에서 발송되었습니다. 본인 의사에 반하는 수신을 거부합니다.',
-  'zh-hant': '本郵件由 Hoyering International Law Firm 寄送。如不希望繼續接收，請點選下方連結取消訂閱。',
-  en: 'This message was sent by Hoyering International Law Firm. You may unsubscribe at any time.',
+/**
+ * Legal display block for marketing mail.
+ *
+ * 律師推展業務規範 §2③ requires the attorney name, firm name, address and phone
+ * on business-development material, and §2④ requires an advertisement label on
+ * anything that is not the firm's own website. Korean recipients additionally
+ * need the sender's name, address, phone and a Korean+English unsubscribe
+ * notice (정보통신망법 별표 6), plus the name of the attorney responsible for
+ * the advertisement (변협 광고규정 3조② 준용).
+ *
+ * Owner decisions 2026-09-17: representative phone is the Taichung office
+ * number (no Taipei number to publish); responsible attorney is 증준외(曾雋崴).
+ * Wording source: docs/marketing/EMAIL-SEQUENCE-WELCOME-REENGAGE-2026-09-17.md §3.
+ * Status: NEEDS_LAWYER_REVIEW before the first campaign send.
+ */
+export const MARKETING_AD_LABEL_BY_LOCALE: Record<Locale, string> = {
+  ko: '廣告',
+  'zh-hant': '廣告',
+  en: 'Advertisement (廣告)',
 };
+
+/** Korean advertising mail must start its subject with this exact prefix. */
+export const KOREAN_AD_SUBJECT_PREFIX = '(광고) ';
+
+/** Campaign ids with this prefix are transactional (opt-in confirmation etc.). */
+export const TRANSACTIONAL_CAMPAIGN_PREFIX = 'system-';
+
+const FIRM_LEGAL_BLOCK_BY_LOCALE: Record<Locale, readonly string[]> = {
+  ko: [
+    '본 메일은 수신에 동의하신 분께 법무법인 호정(昊鼎國際法律事務所)이 보냅니다.',
+    '변호사 증준외(曾雋崴) · 광고책임변호사: 증준외(曾雋崴)',
+    '타이베이 사무소: 103臺北市大同區承德路一段35號7樓之2 · 대표 전화(타이중 사무소): +886-4-2326-1862',
+    '이메일: wei@hoveringlaw.com.tw',
+    '수신거부는 아래 링크에서 즉시 처리되며, 처리 결과를 14일 이내에 알려드립니다. / To unsubscribe, use the link below.',
+  ],
+  'zh-hant': [
+    '本郵件由昊鼎國際法律事務所寄送給已同意訂閱之收件人。',
+    '曾雋崴 律師 · 廣告責任律師：曾雋崴',
+    '台北所：103臺北市大同區承德路一段35號7樓之2 · 代表電話（台中所）：+886-4-2326-1862',
+    'wei@hoveringlaw.com.tw',
+  ],
+  en: [
+    'Sent by Hovering International Law Firm (昊鼎國際法律事務所) to subscribers who opted in.',
+    'Attorney Wei Tseng (曾雋崴) · Attorney responsible for this advertisement: Wei Tseng (曾雋崴)',
+    'Taipei office: 103臺北市大同區承德路一段35號7樓之2 · Main phone (Taichung office): +886-4-2326-1862',
+    'wei@hoveringlaw.com.tw',
+  ],
+};
+
+export function isTransactionalCampaign(campaignId: string): boolean {
+  return campaignId.startsWith(TRANSACTIONAL_CAMPAIGN_PREFIX);
+}
+
+/** Subject with the Korean advertisement prefix applied where required. */
+export function applyAdSubjectPrefix(
+  subject: string,
+  locale: Locale,
+  campaignId: string,
+): string {
+  if (locale !== 'ko') return subject;
+  if (isTransactionalCampaign(campaignId)) return subject;
+  if (subject.startsWith(KOREAN_AD_SUBJECT_PREFIX.trim())) return subject;
+  return `${KOREAN_AD_SUBJECT_PREFIX}${subject}`;
+}
+
+/** One-click unsubscribe headers (RFC 8058) for a rendered marketing mail. */
+export function buildUnsubscribeHeaders(unsubUrl: string): Record<string, string> {
+  return {
+    'List-Unsubscribe': `<${unsubUrl}>`,
+    'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
+  };
+}
 
 function escapeHtml(value: string): string {
   return value
@@ -101,10 +170,15 @@ export function renderCampaignForSubscriber(ctx: RenderContext): RenderedEmail {
     ctx.trackingToken,
   )}" width="1" height="1" alt="" style="display:block;width:1px;height:1px;border:0" />`;
 
+  const transactional = isTransactionalCampaign(ctx.campaign.campaignId);
+  const legalLines = FIRM_LEGAL_BLOCK_BY_LOCALE[locale];
+  const adLabelLine = transactional ? '' : MARKETING_AD_LABEL_BY_LOCALE[locale];
+  const footerLines = adLabelLine ? [adLabelLine, ...legalLines] : [...legalLines];
+
   const footer = `
     <hr style="border:0;border-top:1px solid #e2e8f0;margin:24px 0" />
     <p style="font-size:12px;color:#64748b;line-height:1.5">
-      ${escapeHtml(FOOTER_BY_LOCALE[locale])}
+      ${footerLines.map((line) => escapeHtml(line)).join('<br />')}
       <br />
       <a href="${escapeHtml(unsubUrl)}" style="color:#64748b;text-decoration:underline">${escapeHtml(
         UNSUB_LABEL_BY_LOCALE[locale],
@@ -121,12 +195,18 @@ export function renderCampaignForSubscriber(ctx: RenderContext): RenderedEmail {
   );
   html = `${preheader ? `<div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden">${escapeHtml(preheader)}</div>` : ''}${html}${footer}`;
 
-  const plainTextWithUnsub = `${text}\n\n— ${FOOTER_BY_LOCALE[locale]}\n${UNSUB_LABEL_BY_LOCALE[locale]}: ${unsubUrl}`;
+  const plainTextWithUnsub = [
+    text,
+    '',
+    ...footerLines.map((line) => `— ${line}`),
+    `${UNSUB_LABEL_BY_LOCALE[locale]}: ${unsubUrl}`,
+  ].join('\n');
 
   return {
-    subject,
+    subject: applyAdSubjectPrefix(subject, locale, ctx.campaign.campaignId),
     html,
     text: plainTextWithUnsub,
     preheader,
+    headers: buildUnsubscribeHeaders(unsubUrl),
   };
 }

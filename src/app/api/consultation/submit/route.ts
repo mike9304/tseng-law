@@ -9,7 +9,10 @@ import {
 import { getConsultationPublicEmail } from '@/lib/consultation/public-contact';
 import { checkSubmitRateLimit } from '@/lib/consultation/rate-limit';
 import { hasAlreadySubmitted, markSubmitted } from '@/lib/consultation/idempotency';
-import { sendConsultationEmail } from '@/lib/email/send-consultation-email';
+import {
+  sendConsultationAcknowledgement,
+  sendConsultationEmail,
+} from '@/lib/email/send-consultation-email';
 import { validateCsrf } from '@/lib/builder/security/csrf';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 
@@ -248,6 +251,21 @@ export async function POST(request: NextRequest) {
     }
 
     markSubmitted(sessionId, intakeId);
+
+    // F0 acknowledgement to the enquirer. Best-effort: the office copy is
+    // already sent, so a failure here must not change the response.
+    if (fields.email?.trim()) {
+      try {
+        await sendConsultationAcknowledgement({
+          locale,
+          to: fields.email.trim(),
+          intakeId,
+          classification: body.classification ?? fields.category ?? 'unknown',
+        });
+      } catch (ackError) {
+        console.error('[consultation] acknowledgement send failed (non-blocking):', ackError);
+      }
+    }
 
     return NextResponse.json({
       success: true,

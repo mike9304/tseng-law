@@ -72,8 +72,84 @@ describe('renderCampaignForSubscriber', () => {
       trackingToken: 'trk',
       baseUrl: 'https://tseng-law.com',
     });
-    expect(rendered.subject).toBe('봄 안내');
+    // Korean advertising mail must begin with the (광고) prefix
+    // (정보통신망법 시행령 별표 6), so the stored subject is prefixed at render time.
+    expect(rendered.subject).toBe('(광고) 봄 안내');
     expect(rendered.html).toContain('user@example.com');
+  });
+
+  it('keeps the (광고) prefix off transactional system campaigns and off non-Korean locales', () => {
+    const optIn = renderCampaignForSubscriber({
+      campaign: { ...makeCampaign(), campaignId: 'system-opt-in' },
+      subscriber: makeSubscriber(),
+      trackingToken: 'trk',
+      baseUrl: 'https://tseng-law.com',
+    });
+    expect(optIn.subject).toBe('봄 안내');
+
+    const english = renderCampaignForSubscriber({
+      campaign: makeCampaign(),
+      subscriber: { ...makeSubscriber(), preferredLocale: 'en' },
+      trackingToken: 'trk',
+      baseUrl: 'https://tseng-law.com',
+    });
+    expect(english.subject).not.toContain('(광고)');
+  });
+
+  it('does not double-prefix a subject that already carries the ad label', () => {
+    const rendered = renderCampaignForSubscriber({
+      campaign: {
+        ...makeCampaign(),
+        subject: { ko: '(광고) 봄 안내', 'zh-hant': '春季通知', en: 'Spring update' },
+      },
+      subscriber: makeSubscriber(),
+      trackingToken: 'trk',
+      baseUrl: 'https://tseng-law.com',
+    });
+    expect(rendered.subject).toBe('(광고) 봄 안내');
+  });
+
+  it('puts the required display items and ad label in the footer of marketing mail', () => {
+    const rendered = renderCampaignForSubscriber({
+      campaign: makeCampaign(),
+      subscriber: makeSubscriber(),
+      trackingToken: 'trk',
+      baseUrl: 'https://tseng-law.com',
+    });
+    for (const body of [rendered.html, rendered.text]) {
+      expect(body).toContain('廣告');
+      expect(body).toContain('曾雋崴');
+      expect(body).toContain('광고책임변호사');
+      expect(body).toContain('103臺北市大同區承德路一段35號7樓之2');
+      expect(body).toContain('+886-4-2326-1862');
+      expect(body).toContain('wei@hoveringlaw.com.tw');
+    }
+    expect(rendered.html).not.toContain('Hoyering');
+    expect(rendered.text).toContain('구독 해지 / Unsubscribe');
+  });
+
+  it('drops the ad label from transactional campaigns but keeps the firm details', () => {
+    const rendered = renderCampaignForSubscriber({
+      campaign: { ...makeCampaign(), campaignId: 'system-opt-in' },
+      subscriber: makeSubscriber(),
+      trackingToken: 'trk',
+      baseUrl: 'https://tseng-law.com',
+    });
+    expect(rendered.text).not.toContain('— 廣告');
+    expect(rendered.text).toContain('曾雋崴');
+  });
+
+  it('emits one-click unsubscribe headers pointing at the subscriber token', () => {
+    const rendered = renderCampaignForSubscriber({
+      campaign: makeCampaign(),
+      subscriber: makeSubscriber(),
+      trackingToken: 'trk',
+      baseUrl: 'https://tseng-law.com',
+    });
+    expect(rendered.headers['List-Unsubscribe']).toBe(
+      '<https://tseng-law.com/api/marketing/unsubscribe?token=unsub-token>',
+    );
+    expect(rendered.headers['List-Unsubscribe-Post']).toBe('List-Unsubscribe=One-Click');
   });
 
   it('rewrites external anchors with a signed tracking redirect', () => {

@@ -245,7 +245,10 @@ describe('/[locale]/llms.txt', () => {
   });
 
   it('returns 404 for an invalid locale without falling back to Korean', async () => {
-    const response = await getLocaleResponse('fr');
+    // `xx` is not a language subtag the registry can ever hold. Do not use a
+    // real code such as `fr` here: guidance batches keep turning yesterday's
+    // "invalid" sample into a live locale and the assertion stops testing anything.
+    const response = await getLocaleResponse('xx');
     const body = await response.text();
 
     expect(response.status).toBe(404);

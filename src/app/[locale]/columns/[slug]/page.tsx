@@ -8,6 +8,7 @@ import { getAttorneyProfilePath } from '@/data/attorney-profiles';
 import { fileBackedColumnAlternateLocales, getAllColumnPosts, getColumnPost } from '@/lib/columns';
 import { getAllColumnPostsIncludingBlob } from '@/lib/consultation/columns-blob-reader';
 import ColumnContent from '@/components/ColumnContent';
+import NewsletterSignup from '@/components/marketing/NewsletterSignup';
 import JsonLd from '@/components/JsonLd';
 import {
   isBuilderDynamicTemplateBlockVisible,
@@ -411,6 +412,12 @@ export default async function ColumnDetailPage(props: { params: Promise<{ locale
           ) : <span style={{ flex: 1 }} />}
         </nav>
       )}
+
+      {/* Opt-in newsletter sign-up. Site locales only: the campaign engine
+          renders ko / zh-hant / en, and guidance locales have no newsletter. */}
+      {showBody && !guidanceLocale ? (
+        <NewsletterSignup locale={locale} />
+      ) : null}
     </>
   );
 }

@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { locales } from '@/lib/locales';
+import { MARKETING_FROM_ADDRESS } from './marketing-sender';
 import type { LocalizedText } from '@/lib/builder/bookings/types';
 
 export type CampaignStatus =
@@ -77,7 +78,7 @@ export const campaignCreateSchema = z.object({
   bodyText: localizedTextSchema,
   segmentTags: z.array(z.string().trim().min(1).max(64)).max(16).default([]),
   fromName: z.string().trim().min(1).max(120).default('호정국제'),
-  fromAddress: z.string().trim().email().max(200).default('bookings@hoveringlaw.com.tw'),
+  fromAddress: z.string().trim().email().max(200).default(MARKETING_FROM_ADDRESS),
   scheduledAt: z.string().datetime().optional(),
 });
 

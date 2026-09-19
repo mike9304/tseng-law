@@ -1,0 +1,55 @@
+{
+ "tool": "lighthouse",
+ "version": "12.6.1",
+ "fetchTime": "2026-09-17T05:51:16.077Z",
+ "url": "https://tseng-law.com/ko",
+ "formFactor": "mobile",
+ "throttling": "simulate",
+ "runs": 1,
+ "note": "lab only; CrUX field data not obtained (PSI API daily quota exhausted 2026-09-17)",
+ "performanceScore": 0.63,
+ "metrics": {
+  "largest-contentful-paint": 6614.7125,
+  "cumulative-layout-shift": 0,
+  "total-blocking-time": 118.5,
+  "first-contentful-paint": 3189.7125,
+  "speed-index": 7768.746697775399,
+  "server-response-time": 9.224000000000004,
+  "total-byte-weight": 4661780
+ },
+ "lcpElementSnippet": "<img alt=\"\" aria-hidden=\"true\" fetchpriority=\"high\" width=\"280\" height=\"268\" decoding=\"async\" data-nimg=\"1\" class=\"cinematic-opening__seal\" style=\"color:transparent\" src=\"/images/brand/hovering-seal-official-opening.webp\">",
+ "opportunities": {
+  "unused-javascript": {
+   "displayValue": "Est savings of 202 KiB",
+   "score": 0
+  },
+  "render-blocking-resources": {
+   "displayValue": null,
+   "score": 1
+  },
+  "uses-responsive-images": {
+   "displayValue": "Est savings of 10 KiB",
+   "score": 0
+  },
+  "modern-image-formats": {
+   "displayValue": "",
+   "score": 1
+  },
+  "uses-optimized-images": {
+   "displayValue": "",
+   "score": 1
+  },
+  "unused-css-rules": {
+   "displayValue": "Est savings of 297 KiB",
+   "score": 0
+  },
+  "offscreen-images": {
+   "displayValue": "",
+   "score": 1
+  },
+  "largest-contentful-paint-element": {
+   "displayValue": "6,610 ms",
+   "score": 0
+  }
+ }
+}

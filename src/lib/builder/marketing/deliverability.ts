@@ -4,7 +4,9 @@ import {
   type MarketingEmailProvider,
 } from './email-provider';
 
-export const DEFAULT_DELIVERABILITY_FROM_ADDRESS = 'bookings@hoveringlaw.com.tw';
+import { MARKETING_FROM_ADDRESS } from './marketing-sender';
+
+export const DEFAULT_DELIVERABILITY_FROM_ADDRESS = MARKETING_FROM_ADDRESS;
 
 export type MarketingDeliverabilityCheckId =
   | 'production_provider'

@@ -1,7 +1,10 @@
 import { NextRequest } from 'next/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
-import { sendConsultationEmail } from '@/lib/email/send-consultation-email';
+import {
+  sendConsultationAcknowledgement,
+  sendConsultationEmail,
+} from '@/lib/email/send-consultation-email';
 
 vi.mock('@/lib/builder/security/rate-limit', () => ({
   checkRateLimit: vi.fn(async () => ({ allowed: true, remaining: 2, retryAfterMs: 0 })),
@@ -27,6 +30,7 @@ vi.mock('@/lib/consultation/log-store', () => ({
 
 vi.mock('@/lib/email/send-consultation-email', () => ({
   sendConsultationEmail: vi.fn(async () => ({ intakeId: 'HC-TEST1234' })),
+  sendConsultationAcknowledgement: vi.fn(async () => true),
 }));
 
 describe('/api/consultation/submit', () => {
@@ -123,6 +127,34 @@ describe('/api/consultation/submit', () => {
       300_000,
     );
     expect(sendConsultationEmail).not.toHaveBeenCalled();
+  });
+
+  it('sends the F0 acknowledgement to the enquirer after a successful intake', async () => {
+    const route = await import('../route');
+    const response = await route.POST(makeRequest(validBody()));
+
+    expect(response.status).toBe(200);
+    await expect(response.json()).resolves.toMatchObject({
+      success: true,
+      intakeId: 'HC-TEST1234',
+    });
+    expect(sendConsultationAcknowledgement).toHaveBeenCalledWith({
+      locale: 'ko',
+      to: 'client@example.test',
+      intakeId: 'HC-TEST1234',
+      classification: 'general',
+    });
+  });
+
+  it('still reports success when the acknowledgement send fails', async () => {
+    vi.mocked(sendConsultationAcknowledgement).mockRejectedValueOnce(new Error('smtp down'));
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => {});
+    const route = await import('../route');
+    const response = await route.POST(makeRequest(validBody()));
+
+    expect(response.status).toBe(200);
+    await expect(response.json()).resolves.toMatchObject({ success: true });
+    consoleError.mockRestore();
   });
 });
 

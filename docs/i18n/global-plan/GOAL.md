@@ -25,18 +25,26 @@ Cloud Terminal MCP는 이 로컬 세션 네임스페이스에 없고(`CURSOR_API
 - [x] 2026-09-18 G2-2 zh-hans·ms·ru·tr (f82be715)
 - [x] 2026-09-19 G2-3 it·nl·pl + 전 안내 로케일 폰트 바인딩 + 체커 테이블 — Grok 구현분을 총괄(Opus 5 세션 son7-51)이 인수·검증·커밋 **7a138084**, 후속 정정 **6bb3e839**(it/nl/pl에만 있던 '문의 전송 무료' 긍정 문장 삭제 — 기존 8언어는 부정문만). 게이트: typecheck 0·vitest 266·checker 126 pass/0 fail·eslint 0·guidance-country 0·마커 0·상담 4언어 불변
 - [x] 2026-09-19 G2-4 hi·sv·da·nb·fi `c1312c06` (evidence/grok-G2-4.log): typecheck 0 · vitest 435 · checker 126 · 상담 FAQ 부정 5로케일 · Devanagari 바인딩. 공개 25언어(사이트 4 + 안내 21)
-- [ ] G2-5 cs·hu·ro·el·he·uk
+- [~] G2-5 cs·hu·ro·el·he·uk — **총괄(son7-51) 직접 구현**. cs·hu 팩 초안 작성 완료(`international-guidance-eastern.ts`, 검증 워크트리 커밋 23233c03, 미배선). 남음: ro·uk, el(그리스 문자 subset 추가 필요), he(히브리 폰트 + `dir=rtl` — `public-guidance.ts`의 RTL 판정에 he 추가)
 - [ ] G2-C-FR 칼럼: Opus·Fable·Sol CLI 한도(리셋 2026-10-18). Grok G2-4 끝난 뒤 같은 Grok 레인에 재발주. 워크트리 `~/Projects/tseng-law-global-g2c-fr-20260919` 유지
 - [ ] G2-C 나머지 로케일 칼럼(pt·zh-hans·ms·ru·tr·it·nl·pl + G2-4/5)
 - [x] 2026-09-19 G2-GATE-R1 `WO-G2-GATE-R1` 커밋됨 — 배타 한정어·무료 전송 게이트·pl 직함·ru nav 축약. 원어민 검수는 여전히 아님
 - [ ] G2-2·G2-3 원어민 검토: Opus/Fable 한도(2026-10-18)
 ### G3 릴리스
-- [ ] G3-1 `npm run qa` 0 · RELEASE-CHECK · PR → 사용자 머지 → 라이브 검증 → IndexNow
-- [ ] G3-2 볼트 갱신
+- [x] 2026-09-19 14:3x **G3-1 배포 완료** — 사용자 지시("워커 끝나면 바로 통합하고 배포까지 진행해")로 총괄(son7-51)이 통합·검증·푸시.
+  - 통합 순서: 워커 산출물 `c1312c06` → 다른 레인 문서 보존 `f78c1328` → 총괄 검증분 병합 `ee9b3e65`(최신 main 06af5b44 흡수 + 표본 가드) → 게이트 R1 `0d5409eb` → 인수 정정 **`9871b8e8`**
+  - `origin/main 06af5b44 → 9871b8e8` (fast-forward). 브랜치도 원격에 올림.
+  - 게이트 전부 통과: typecheck 0 · **vitest 1320파일 11758건 전부 통과, 실패 0** · lint 0 · security:builder-routes 0 · guidance-country 0 위반 · 칼럼 체커 128 pass/0 fail · `npm run build` 0
+  - 런타임 실측(`next start`): 안내 21언어 × home/services/faq/columns = 84건 전부 200, 사이트 4언어 200, 무효 `/xx` 404, 선택기 25언어 노출, `availableLanguage` 4개 고정, 미검수 마커 0
+  - **적색 기준선 해소**: main의 018 결정 반영(06af5b44)으로 낡은 핀이 갱신돼 판정 기준이 "기준선 대비 신규 실패 0"에서 **"실패 0"**으로 올라갔다.
+  - 인수 중 총괄이 고친 것: ①llms 고지문이 원문 인용이 아니었던 것(5언어) ②`fi`가 `fil`의 접두사라 카탈로그 격리 시험이 자기 URL에 걸린 것 ③낡은 개수·목록 핀 6곳을 레지스트리 파생으로 전환
+- [ ] G3-2 라이브 검증 + IndexNow 제출 + 볼트 갱신
 
 ## B. 미결·ASK
 - 새 언어 팩은 기존 안내 팩(vi 등)의 **번역**이라 새 법률 주장이 없음 → 마커 없이 배포 가능. 단 원어민 검수는 미실시(de/es와 동일 조건) — 사용자 인지.
-- 배포·머지는 사용자.
+- 배포·머지 권한: 2026-09-19 사용자가 총괄(son7-51)에게 위임("배포까지 진행해"). 이후 배포는 총괄이 게이트 통과 확인 후 직접 한다.
+- 저장소가 2026-09-19 13:59:36에 **비공개**로 전환됐다. `9871b8e8` 배포가 전환 이후 첫 배포이므로 Vercel의 비공개 소스 접근은 이때 처음 검증된다.
+- `vercel` CLI는 homebrew node 25에 묶여 그냥 실행하면 죽는다. `/Users/son7/.nvm/versions/node/v24.14.1/bin/node /opt/homebrew/bin/vercel …` 형태로 실행할 것. PATH 교체로는 안 된다.
 
 ## B2. 인수 메모 (2026-09-19, son7-51)
 - 커서 Fable 세션 종료 후 사용자 지시로 이 세션이 총괄 인수. 워크트리·브랜치·보드 그대로 사용.

@@ -11,7 +11,7 @@ import {
   type GuidanceLocale,
   type GuidancePageKey,
 } from '@/data/international-guidance-content';
-import { GUIDANCE_LOCALES_4, guidanceCanonicalUrl } from '@/lib/public-guidance';
+import { GUIDANCE_LOCALES_4, guidanceCanonicalUrl, publicDocumentLanguage } from '@/lib/public-guidance';
 import { getAttorneyProfile, primaryAttorneySlug } from '@/data/attorney-profiles';
 import {
   GUIDANCE_TEAM_MEMBER_IDS,
@@ -108,7 +108,7 @@ describe('guidance FAQPage JSON-LD', () => {
 
   it.each(GUIDANCE_LOCALES_4)('tags the %s FAQPage with the page language', (locale) => {
     const faqPage = nodeOfType(renderGuidance(locale, 'faq'), 'FAQPage');
-    expect(faqPage!.inLanguage).toBe(locale);
+    expect(faqPage!.inLanguage).toBe(publicDocumentLanguage(locale));
     expect(faqPage!['@context']).toBe('https://schema.org');
   });
 
@@ -176,7 +176,7 @@ describe('guidance LegalService JSON-LD', () => {
 
   it.each(GUIDANCE_LOCALES_4)('sets inLanguage and url from the %s page itself', (locale) => {
     const legalService = nodeOfType(renderGuidance(locale, 'pricing'), 'LegalService');
-    expect(legalService!.inLanguage).toBe(locale);
+    expect(legalService!.inLanguage).toBe(publicDocumentLanguage(locale));
     expect(legalService!.url).toBe(guidanceCanonicalUrl(locale, 'pricing'));
     expect(legalService!.description).toBe(guidanceContent[locale].pages.pricing.description);
   });
@@ -196,7 +196,7 @@ describe('guidance LegalService JSON-LD', () => {
 
   it.each(GUIDANCE_LOCALES_4)('sets inLanguage, url and description from the %s home', (locale) => {
     const legalService = nodeOfType(renderGuidanceHome(locale), 'LegalService');
-    expect(legalService!.inLanguage).toBe(locale);
+    expect(legalService!.inLanguage).toBe(publicDocumentLanguage(locale));
     expect(legalService!.url).toBe(guidanceCanonicalUrl(locale, 'home'));
     expect(legalService!.description).toBe(guidanceContent[locale].pages.home.description);
     expect((legalService!.provider as Record<string, unknown>)['@id']).toBe(ATTORNEY_PERSON_ID);

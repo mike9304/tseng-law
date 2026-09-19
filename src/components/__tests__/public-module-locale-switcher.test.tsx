@@ -13,7 +13,12 @@ import LocaleFlagSwitcher, {
   LOCALE_FLAG_OPTIONS,
   localeFlagHref,
 } from '@/components/LocaleFlagSwitcher';
-import { PUBLIC_LANGUAGE_AUTONYMS, type PublicLocale8 } from '@/lib/public-guidance';
+import {
+  GUIDANCE_LOCALES_4,
+  PUBLIC_LANGUAGE_AUTONYMS,
+  PUBLIC_LOCALES_8,
+  type PublicLocale8,
+} from '@/lib/public-guidance';
 import { restrictedPublicFamilyListPath } from '@/lib/public-route-policy';
 
 function renderedHtml(locale: PublicLocale8): string {
@@ -29,45 +34,17 @@ describe('public module locale family switching', () => {
     navigationState.pathname = '/ko/services';
   });
 
-  it('keeps the seventeen autonym order without country codes', () => {
-    expect(LOCALE_FLAG_OPTIONS.map((option) => option.locale)).toEqual([
-      'ko',
-      'zh-hant',
-      'en',
-      'ja',
-      'vi',
-      'id',
-      'th',
-      'fil',
-      'ar',
-      'de',
-      'es',
-      'fr',
-      'pt',
-      'zh-hans',
-      'ms',
-      'ru',
-      'tr',
-    ]);
-    expect(LOCALE_FLAG_OPTIONS.map((option) => option.label)).toEqual([
-      PUBLIC_LANGUAGE_AUTONYMS.ko,
-      PUBLIC_LANGUAGE_AUTONYMS['zh-hant'],
-      PUBLIC_LANGUAGE_AUTONYMS.en,
-      PUBLIC_LANGUAGE_AUTONYMS.ja,
-      PUBLIC_LANGUAGE_AUTONYMS.vi,
-      PUBLIC_LANGUAGE_AUTONYMS.id,
-      PUBLIC_LANGUAGE_AUTONYMS.th,
-      PUBLIC_LANGUAGE_AUTONYMS.fil,
-      PUBLIC_LANGUAGE_AUTONYMS.ar,
-      PUBLIC_LANGUAGE_AUTONYMS.de,
-      PUBLIC_LANGUAGE_AUTONYMS.es,
-      PUBLIC_LANGUAGE_AUTONYMS.fr,
-      PUBLIC_LANGUAGE_AUTONYMS.pt,
-      PUBLIC_LANGUAGE_AUTONYMS['zh-hans'],
-      PUBLIC_LANGUAGE_AUTONYMS.ms,
-      PUBLIC_LANGUAGE_AUTONYMS.ru,
-      PUBLIC_LANGUAGE_AUTONYMS.tr,
-    ]);
+  it('keeps the registry autonym order without country codes', () => {
+    // Pinned to the registry, not to a frozen count: each new guidance batch
+    // extends PUBLIC_LOCALES_8 and the switcher must follow the same order.
+    expect(LOCALE_FLAG_OPTIONS.map((option) => option.locale)).toEqual([...PUBLIC_LOCALES_8]);
+    expect(LOCALE_FLAG_OPTIONS.map((option) => option.label)).toEqual(
+      PUBLIC_LOCALES_8.map((locale) => PUBLIC_LANGUAGE_AUTONYMS[locale]),
+    );
+    for (const option of LOCALE_FLAG_OPTIONS) {
+      // Autonyms only: no country code, no region parenthetical.
+      expect(option.label).not.toMatch(/[(（]/);
+    }
   });
 
   it('maps the 12 product/category/portfolio EN/ZH switches to family lists', () => {
@@ -187,11 +164,11 @@ describe('public module locale family switching', () => {
     expect(html).not.toContain('href="/vi/store/products/taiwan-startup-guide');
     // WO-O22 A: no option is disabled any more — the guidance languages stay
     // clickable and are flagged as fallbacks so the label can explain where they
-    // land. WO-M3B added `ar` to that set, and de/es/fr/pt join it, so nine options
-    // fall back to home.
+    // land. Every guidance locale falls back to home, so the count tracks
+    // GUIDANCE_LOCALES_4 instead of a frozen number.
     expect(html).not.toContain('aria-disabled');
     expect(links.filter((link) => link.includes('data-locale-switch-fallback="home"'))).toHaveLength(
-      9,
+      GUIDANCE_LOCALES_4.length,
     );
     expect(links.some((link) => link.includes('href="/vi"'))).toBe(true);
   });

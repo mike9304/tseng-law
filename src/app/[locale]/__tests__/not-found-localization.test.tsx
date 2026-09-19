@@ -103,7 +103,7 @@ describe('localized 404', () => {
 
   it.each([
     { header: null, label: 'missing' },
-    { header: '/fr/design-review-missing-page', label: 'unknown' },
+    { header: '/xx/design-review-missing-page', label: 'unknown' },
   ] as const)(
     'defaults to Korean when x-tseng-pathname is $label',
     async ({ header }) => {

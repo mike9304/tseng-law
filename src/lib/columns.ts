@@ -108,7 +108,7 @@ const FORMATION_CATEGORY_PHRASES = [
   '公司登记', // zh-hans (Taiwan term, simplified)
   'Penubuhan syarikat di Taiwan', // ms
   'Учреждение компании на Тайване', // ru
-  "Tayvan'da şirket kuruluşu", // tr
+  'Tayvan’da şirket kuruluşu', // tr
   'Costituzione di società a Taiwan', // it
   'Oprichting van een vennootschap in Taiwan', // nl
   'Zakładanie spółki na Tajwanie', // pl
@@ -173,7 +173,7 @@ const GUIDANCE_COLUMN_CATEGORY_LABELS: Partial<Record<GuidanceLocale4, Record<Co
   'zh-hans': { formation: '在台湾设立公司', legal: '台湾法律资讯', case: '案例分析' },
   ms: { formation: 'Penubuhan syarikat di Taiwan', legal: 'Maklumat undang-undang Taiwan', case: 'Analisis kes' },
   ru: { formation: 'Учреждение компании на Тайване', legal: 'Правовая информация о Тайване', case: 'Анализ дел' },
-  tr: { formation: "Tayvan'da şirket kuruluşu", legal: 'Tayvan hukuku bilgileri', case: 'Vaka analizi' },
+  tr: { formation: 'Tayvan’da şirket kuruluşu', legal: 'Tayvan hukuku bilgileri', case: 'Vaka analizi' },
   it: { formation: 'Costituzione di società a Taiwan', legal: 'Informazioni giuridiche su Taiwan', case: 'Analisi di casi' },
   nl: { formation: 'Oprichting van een vennootschap in Taiwan', legal: 'Juridische informatie over Taiwan', case: 'Casusanalyse' },
   pl: { formation: 'Zakładanie spółki na Tajwanie', legal: 'Informacje prawne o Tajwanie', case: 'Analiza spraw' },

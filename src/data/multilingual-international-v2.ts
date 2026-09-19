@@ -179,6 +179,110 @@ export const GUIDANCE_HOME_PATHS: Record<GuidanceLocale, GuidanceHomePaths> = {
     },
     ariaLabel: 'Dos rutas de información',
   },
+  /**
+   * The remaining guidance locales (WO-G2-1 ~ WO-G2-3) reuse the same two
+   * information destinations and the wording of their own guidance pack nav.
+   * They stay informational: no consultation, interpreting, or reply promise.
+   */
+  fr: {
+    setup: {
+      label: 'Informations sur la création de société à Taïwan',
+      href: '/fr/services',
+    },
+    legal: {
+      label: 'Informations juridiques sur Taïwan',
+      href: '/fr/faq',
+    },
+    ariaLabel: 'Deux parcours d’information',
+  },
+  pt: {
+    setup: {
+      label: 'Informações sobre a constituição de sociedades em Taiwan',
+      href: '/pt/services',
+    },
+    legal: {
+      label: 'Informações jurídicas sobre Taiwan',
+      href: '/pt/faq',
+    },
+    ariaLabel: 'Dois percursos de informação',
+  },
+  'zh-hans': {
+    setup: {
+      label: '台湾公司设立相关信息',
+      href: '/zh-hans/services',
+    },
+    legal: {
+      label: '台湾法律事务相关信息',
+      href: '/zh-hans/faq',
+    },
+    ariaLabel: '两条信息路径',
+  },
+  ms: {
+    setup: {
+      label: 'Maklumat penubuhan syarikat di Taiwan',
+      href: '/ms/services',
+    },
+    legal: {
+      label: 'Maklumat isu undang-undang di Taiwan',
+      href: '/ms/faq',
+    },
+    ariaLabel: 'Dua laluan maklumat',
+  },
+  ru: {
+    setup: {
+      label: 'Информация о регистрации компании на Тайване',
+      href: '/ru/services',
+    },
+    legal: {
+      label: 'Информация по правовым вопросам Тайваня',
+      href: '/ru/faq',
+    },
+    ariaLabel: 'Два пути к информации',
+  },
+  tr: {
+    setup: {
+      label: 'Tayvan’da şirket kuruluşu hakkında bilgi',
+      href: '/tr/services',
+    },
+    legal: {
+      label: 'Tayvan’daki hukuki konular hakkında bilgi',
+      href: '/tr/faq',
+    },
+    ariaLabel: 'İki bilgi yolu',
+  },
+  it: {
+    setup: {
+      label: 'Informazioni sulla costituzione di società a Taiwan',
+      href: '/it/services',
+    },
+    legal: {
+      label: 'Informazioni giuridiche su Taiwan',
+      href: '/it/faq',
+    },
+    ariaLabel: 'Due percorsi informativi',
+  },
+  nl: {
+    setup: {
+      label: 'Informatie over het oprichten van een vennootschap in Taiwan',
+      href: '/nl/services',
+    },
+    legal: {
+      label: 'Juridische informatie over Taiwan',
+      href: '/nl/faq',
+    },
+    ariaLabel: 'Twee informatiepaden',
+  },
+  pl: {
+    setup: {
+      label: 'Informacje o zakładaniu spółki na Tajwanie',
+      href: '/pl/services',
+    },
+    legal: {
+      label: 'Informacje prawne dotyczące Tajwanu',
+      href: '/pl/faq',
+    },
+    ariaLabel: 'Dwie ścieżki informacyjne',
+  },
 };
 
 export const LITIGATION_SITUATION_NAV: Record<

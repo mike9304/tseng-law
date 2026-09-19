@@ -731,7 +731,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       '本页面以简体中文撰写，作为一般说明，不是针对您本人案件的法律意见。',
     consultationNotice:
-      '咨询以四种语言进行：英语、中文（中文）、日语和韩语。',
+      '咨询以四种语言进行：英语、中文、日语和韩语。',
     methodConfirmationNotice:
       '若您无法使用这四种语言中的任何一种，请选择「沟通方式须待确认」。我们会回复，以审视是否存在可行的沟通方式；不以其他语言提供服务，也不承诺回复时限。',
     preparationNotice:

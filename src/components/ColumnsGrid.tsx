@@ -195,7 +195,7 @@ const GUIDANCE_FILTER_CATEGORY_LABEL: Record<GuidanceLocale4, Record<ColumnCateg
     case: 'Анализ дел',
   },
   tr: {
-    formation: "Tayvan'da şirket kuruluşu",
+    formation: 'Tayvan’da şirket kuruluşu',
     legal: 'Tayvan hukuku bilgileri',
     case: 'Vaka analizi',
   },

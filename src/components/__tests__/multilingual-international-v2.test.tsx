@@ -61,9 +61,30 @@ describe('MULTILINGUAL-INTERNATIONAL-v2 unpublished candidate', () => {
       human_review_required: true,
       publish: false,
     });
+    // Every guidance locale must name English as one of the four consultation
+    // languages in its own words. A regex union silently passes a locale whose
+    // word is missing, so each locale carries its own expected token.
+    const englishWordByLocale: Record<(typeof GUIDANCE_LOCALES_4)[number], RegExp> = {
+      vi: /tiếng Anh/i,
+      id: /Inggris/i,
+      th: /อังกฤษ/,
+      fil: /Ingles/i,
+      ar: /الإنجليزية/,
+      de: /Englisch/i,
+      es: /inglés/i,
+      fr: /anglais/i,
+      pt: /inglês/i,
+      'zh-hans': /英语/,
+      ms: /Inggeris/i,
+      ru: /английск/i,
+      tr: /İngilizce/i,
+      it: /inglese/i,
+      nl: /Engels/i,
+      pl: /angielsk/i,
+    };
     for (const locale of GUIDANCE_LOCALES_4) {
       const notice = internationalInquiryCopy[locale].consultationNotice;
-      expect(notice).toMatch(/English|Englisch|inglés|Inggris|อังกฤษ|Ingles|الإنجليزية|tiếng Anh/i);
+      expect(notice, `${locale} consultation notice`).toMatch(englishWordByLocale[locale]);
       expect(notice).not.toMatch(/9 language|chín ngôn ngữ|sembilan bahasa/i);
     }
   });

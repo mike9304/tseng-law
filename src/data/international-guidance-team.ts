@@ -719,7 +719,7 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Family and labor disputes': 'Семейные и трудовые споры',
   },
   tr: {
-    'Taiwan company setup': "Tayvan'da şirket kuruluşu",
+    'Taiwan company setup': 'Tayvan’da şirket kuruluşu',
     'Taiwan investment counsel': 'Tayvan yatırımı için hukuki danışmanlık',
     'Civil litigation and damages': 'Hukuk davaları ve tazminat',
     'Trademark and patent filings': 'Marka ve patent başvuruları',

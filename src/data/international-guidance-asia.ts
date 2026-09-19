@@ -269,7 +269,7 @@ export const simplifiedChineseGuidanceContent: GuidanceLocaleContent = {
           ],
           items: [
             '页面语言：本说明以简体中文撰写。',
-            '咨询语言：咨询以英语、中文（中文）、日语和韩语进行。',
+            '咨询语言：咨询以英语、中文、日语和韩语进行。',
             '您的书写语言：您可以用自己的语言撰写摘要；原文会按原样保存。',
           ],
         },

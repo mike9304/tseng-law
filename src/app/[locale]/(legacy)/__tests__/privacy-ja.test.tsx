@@ -50,6 +50,9 @@ describe('Japanese privacy integration', () => {
       ms: `${SITE_URL}/ms/privacy`,
       ru: `${SITE_URL}/ru/privacy`,
       tr: `${SITE_URL}/tr/privacy`,
+      it: `${SITE_URL}/it/privacy`,
+      nl: `${SITE_URL}/nl/privacy`,
+      pl: `${SITE_URL}/pl/privacy`,
       'x-default': `${SITE_URL}/en/privacy`,
     });
   });
@@ -155,6 +158,9 @@ describe('Japanese privacy integration', () => {
       ms: `${SITE_URL}/ms/privacy`,
       ru: `${SITE_URL}/ru/privacy`,
       tr: `${SITE_URL}/tr/privacy`,
+      it: `${SITE_URL}/it/privacy`,
+      nl: `${SITE_URL}/nl/privacy`,
+      pl: `${SITE_URL}/pl/privacy`,
       'x-default': `${SITE_URL}/en/privacy`,
     });
     expect(metadata.alternates?.languages).toHaveProperty('ja', `${SITE_URL}/ja/privacy`);

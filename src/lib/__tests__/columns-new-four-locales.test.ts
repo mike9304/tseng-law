@@ -133,17 +133,7 @@ describe('new-four column hreflang + sitemap include/exclude', () => {
     const missing = path.join(os.tmpdir(), 'g19-columns-missing-does-not-exist');
     const locales = getColumnAlternateLocales(GYM_SLUG, {
       hasTranslation: (locale, slug) => {
-        if (
-          locale === 'vi'
-          || locale === 'id'
-          || locale === 'th'
-          || locale === 'fil'
-          || locale === 'ar'
-          || locale === 'de'
-          || locale === 'es'
-          || locale === 'fr'
-          || locale === 'pt'
-        ) {
+        if (GUIDANCE_LOCALES_4.includes(locale as (typeof GUIDANCE_LOCALES_4)[number])) {
           return hasColumnTranslation(locale, slug, { columnsDir: missing });
         }
         return true;
@@ -175,7 +165,7 @@ describe('new-four column hreflang + sitemap include/exclude', () => {
     const locales = getColumnAlternateLocales(GYM_SLUG, {
       hasTranslation: (locale, slug) => {
         if (locale === 'vi') return hasColumnTranslation('vi', slug, { columnsDir: present });
-        if (locale === 'id' || locale === 'th' || locale === 'fil' || locale === 'ar' || locale === 'de' || locale === 'es' || locale === 'fr' || locale === 'pt') return false;
+        if (GUIDANCE_LOCALES_4.includes(locale as (typeof GUIDANCE_LOCALES_4)[number])) return false;
         return true;
       },
     });
@@ -193,7 +183,7 @@ describe('new-four column hreflang + sitemap include/exclude', () => {
             date: post.date,
           }));
         }
-        if (locale === 'id' || locale === 'th' || locale === 'fil' || locale === 'ar' || locale === 'de' || locale === 'es' || locale === 'fr' || locale === 'pt') return [];
+        if (GUIDANCE_LOCALES_4.includes(locale as (typeof GUIDANCE_LOCALES_4)[number])) return [];
         return [{ slug: GYM_SLUG, date: '2026-07-25' }];
       },
     });

@@ -3,6 +3,7 @@ import os from 'os';
 import path from 'path';
 import { NextRequest } from 'next/server';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { GUIDANCE_ONLY_LOCALE_SAMPLES } from '@/lib/test-support/locale-samples';
 
 const checkRateLimitMock = vi.hoisted(() => vi.fn());
 
@@ -179,7 +180,7 @@ describe('/api/reviews file backend', () => {
   it('rejects an invalid locale query with the exact public error', async () => {
     const route = await import('../route');
     const response = await route.GET(
-      new NextRequest('https://tseng-law.com/api/reviews?locale=fr'),
+      new NextRequest(`https://tseng-law.com/api/reviews?locale=${GUIDANCE_ONLY_LOCALE_SAMPLES[0]}`),
     );
 
     expect(response.status).toBe(400);

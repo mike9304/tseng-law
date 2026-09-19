@@ -7,6 +7,7 @@ import {
 } from '@/lib/builder/members/members-engine';
 import { checkRateLimit } from '@/lib/builder/security/rate-limit';
 import { POST } from '../route';
+import { GUIDANCE_ONLY_LOCALE_SAMPLES } from '@/lib/test-support/locale-samples';
 
 vi.mock('@/lib/builder/members/members-engine', () => ({
   createMember: vi.fn(),
@@ -104,7 +105,7 @@ describe('members signup API', () => {
   });
 
   it('uses the safe Korean fallback for unsupported locale values', async () => {
-    const response = await POST(request({ locale: 'fr' }));
+    const response = await POST(request({ locale: GUIDANCE_ONLY_LOCALE_SAMPLES[0] }));
 
     expect(response.status).toBe(403);
     await expect(response.json()).resolves.toEqual({

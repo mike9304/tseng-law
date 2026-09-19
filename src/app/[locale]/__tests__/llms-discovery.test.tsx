@@ -19,6 +19,7 @@ import {
 } from '@/lib/public-guidance';
 import LocaleLayout from '../layout';
 import { GET as getLocaleLlmsTxt } from '../llms.txt/route';
+import { UNROUTABLE_LOCALE_SAMPLES } from '@/lib/test-support/locale-samples';
 
 vi.mock('next/navigation', () => ({
   notFound: () => {
@@ -199,7 +200,7 @@ describe('/[locale]/llms.txt route — guidance locales', () => {
     }
   });
 
-  it.each(['cs', 'xx', 'vi-VN', 'zh'])('keeps returning 404 for the unsupported locale %s', async (locale) => {
+  it.each(UNROUTABLE_LOCALE_SAMPLES)('keeps returning 404 for the unsupported locale %s', async (locale) => {
     const response = await requestLlmsTxt(locale);
     const body = await response.text();
 

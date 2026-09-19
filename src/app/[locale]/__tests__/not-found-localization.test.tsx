@@ -8,6 +8,7 @@ import {
 } from '@/lib/consultation/public-contact';
 import { siteLocales, type SiteLocale } from '@/lib/locales';
 import LocalizedNotFound, { generateMetadata } from '../not-found';
+import { UNROUTABLE_LOCALE_SAMPLES } from '@/lib/test-support/locale-samples';
 
 vi.mock('next/headers', () => ({
   headers: vi.fn(),
@@ -103,7 +104,7 @@ describe('localized 404', () => {
 
   it.each([
     { header: null, label: 'missing' },
-    { header: '/xx/design-review-missing-page', label: 'unknown' },
+    { header: `/${UNROUTABLE_LOCALE_SAMPLES[0]}/design-review-missing-page`, label: 'unknown' },
   ] as const)(
     'defaults to Korean when x-tseng-pathname is $label',
     async ({ header }) => {

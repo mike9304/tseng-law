@@ -11,6 +11,7 @@ import {
   type InternationalInquiryRecord,
 } from '@/lib/consultation/international-inquiry-store';
 import { sendInternationalInquiryNotification } from '@/lib/email/send-consultation-email';
+import { UNROUTABLE_LOCALE_SAMPLES } from '@/lib/test-support/locale-samples';
 
 const mocks = vi.hoisted(() => ({
   send: vi.fn(async () => undefined),
@@ -248,7 +249,7 @@ describe('/api/consultation/international', () => {
   });
 
   it.each([
-    ['uiLocale', { uiLocale: 'xx' }],
+    ['uiLocale', { uiLocale: UNROUTABLE_LOCALE_SAMPLES[0] }],
     ['preferredConsultationLanguage', { preferredConsultationLanguage: 'de' }],
     ['originalLanguage', { originalLanguage: '   ' }],
   ])('rejects invalid %s without persist or mail', async (_label, override) => {

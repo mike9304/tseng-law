@@ -11,6 +11,7 @@ import { siteLocales, type SiteLocale } from '@/lib/locales';
 import { GUIDANCE_LOCALES_4, PUBLIC_LOCALES_8 } from '@/lib/public-guidance';
 import { getOrganizationName } from '@/lib/seo';
 import { GET, generateStaticParams } from '../route';
+import { UNROUTABLE_LOCALE_SAMPLES } from '@/lib/test-support/locale-samples';
 
 const canonicalOrigin = 'https://tseng-law.com';
 const contentLanguage: Record<SiteLocale, string> = {
@@ -245,10 +246,7 @@ describe('/[locale]/llms.txt', () => {
   });
 
   it('returns 404 for an invalid locale without falling back to Korean', async () => {
-    // `xx` is not a language subtag the registry can ever hold. Do not use a
-    // real code such as `fr` here: guidance batches keep turning yesterday's
-    // "invalid" sample into a live locale and the assertion stops testing anything.
-    const response = await getLocaleResponse('xx');
+    const response = await getLocaleResponse(UNROUTABLE_LOCALE_SAMPLES[0]);
     const body = await response.text();
 
     expect(response.status).toBe(404);

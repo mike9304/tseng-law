@@ -2,11 +2,12 @@ import { describe, expect, it } from 'vitest';
 import { buildSeoMetadata, getLanguageAlternates } from '@/lib/seo';
 import {
   GUIDANCE_PAGE_KEYS,
+  PUBLIC_LOCALES_8,
   buildGuidanceCoreLanguageAlternates,
 } from '@/lib/public-guidance';
 
 describe('multilingual SEO language alternates', () => {
-  it('uses the actual nine-language cluster on every core path', () => {
+  it('uses the whole public language cluster on every core path', () => {
     for (const pageKey of GUIDANCE_PAGE_KEYS) {
       const path = pageKey === 'home' ? '' : `/${pageKey}`;
       const expected = buildGuidanceCoreLanguageAlternates(pageKey);
@@ -14,11 +15,16 @@ describe('multilingual SEO language alternates', () => {
       expect(getLanguageAlternates(path, ['ko'])).toEqual(expected);
 
       if (pageKey === 'faq') {
-        expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(19);
+        // FAQ has no English alternate, so it carries one tag fewer than the rest.
+        expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(
+          PUBLIC_LOCALES_8.length - 1,
+        );
         expect(expected).not.toHaveProperty('en');
         expect(expected['x-default']).toBe('https://tseng-law.com/ko/faq');
       } else {
-        expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(20);
+        expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(
+          PUBLIC_LOCALES_8.length,
+        );
         expect(expected).toMatchObject({
           ko: `https://tseng-law.com/ko${path}`,
           'zh-Hant': `https://tseng-law.com/zh-hant${path}`,

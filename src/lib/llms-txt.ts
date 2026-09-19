@@ -651,11 +651,11 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
   },
   hi: {
     consultationNotice:
-      'ये निर्देश हिन्दी में लिखे गए हैं, लेकिन अधिवक्ता से परामर्श केवल अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई में होता है।',
+      'ये निर्देश हिंदी में लिखे गए हैं, लेकिन अधिवक्ता से परामर्श केवल अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई में होता है।',
     discoveryNotice:
       'llms.txt फ़ाइल केवल सार्वजनिक पृष्ठ खोजने का मानचित्र है; यह खोज क्रम, समर्थन, कृत्रिम बुद्धि की अनुशंसा या दृश्यता का वादा नहीं करती।',
     confidentialNotice:
-      'मूल पाठ रखा जाता है, इसलिए पहले चरण में वह न लिखें जिसकी अभी आवश्यकता नहीं है, जैसे पासपोर्ट संख्या, पहचान संख्या या खाता विवरण।',
+      'क्योंकि मूल पाठ रखा जाता है, आरंभिक चरण में वह न लिखें जिसकी अभी आवश्यकता नहीं, जैसे पासपोर्ट संख्या, पहचान संख्या या खाता विवरण।',
   },
   sv: {
     consultationNotice:
@@ -663,7 +663,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     discoveryNotice:
       'Filen llms.txt är endast en karta för att hitta offentliga sidor; den lovar inte sökplacering, stöd, rekommendation från artificiell intelligens eller synlighet.',
     confidentialNotice:
-      'Eftersom originaltexten sparas ska ni i det första steget inte skriva det som ännu inte behövs, till exempel passnummer, identitetsnummer eller kontouppgifter.',
+      'Eftersom originaltexten sparas, skriv i inledningen inget som ännu inte behövs, till exempel passnummer, identitetsnummer eller kontouppgifter.',
   },
   da: {
     consultationNotice:
@@ -671,7 +671,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     discoveryNotice:
       'Filen llms.txt er kun et kort til at finde offentlige sider; den lover ikke søgeplacering, støtte, anbefaling fra kunstig intelligens eller synlighed.',
     confidentialNotice:
-      'Fordi originalteksten gemmes, skal De i det første trin ikke skrive det, der endnu ikke er nødvendigt, for eksempel pasnummer, identitetsnummer eller kontooplysninger.',
+      'Fordi originalteksten gemmes, skriv i begyndelsen ikke noget, der endnu ikke er nødvendigt, for eksempel pasnummer, identitetsnummer eller kontooplysninger.',
   },
   nb: {
     consultationNotice:
@@ -679,7 +679,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     discoveryNotice:
       'Filen llms.txt er bare et kart for å finne offentlige sider; den lover ikke søkeplassering, støtte, anbefaling fra kunstig intelligens eller synlighet.',
     confidentialNotice:
-      'Fordi originalteksten lagres, skal De i det første trinnet ikke skrive det som ennå ikke er nødvendig, for eksempel passnummer, identitetsnummer eller kontoopplysninger.',
+      'Fordi originalteksten lagres, skriv i begynnelsen ikke noe som ennå ikke trengs, for eksempel passnummer, identitetsnummer eller kontoopplysninger.',
   },
   fi: {
     consultationNotice:
@@ -687,7 +687,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     discoveryNotice:
       'Tiedosto llms.txt on vain kartta julkisten sivujen löytämiseen; se ei lupaa hakusijaa, tukea, tekoälyn suositusta eikä näkyvyyttä.',
     confidentialNotice:
-      'Alkuperäinen teksti säilytetään, joten ensimmäisessä vaiheessa älkää kirjoittako sellaista, mitä ei vielä tarvita, esimerkiksi passinumeroa, henkilötunnusta tai tilitietoja.',
+      'Koska alkuperäinen teksti säilytetään, älkää alkuvaiheessa kirjoittako sellaista, mitä ei vielä tarvita, esimerkiksi passinumeroa, henkilötunnusta tai tilitietoja.',
   },
 };
 

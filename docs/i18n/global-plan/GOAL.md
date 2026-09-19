@@ -28,7 +28,7 @@ Cloud Terminal MCP는 이 로컬 세션 네임스페이스에 없고(`CURSOR_API
 - [ ] G2-5 cs·hu·ro·el·he·uk
 - [ ] G2-C-FR 칼럼: Opus·Fable·Sol CLI 한도(리셋 2026-10-18). Grok G2-4 끝난 뒤 같은 Grok 레인에 재발주. 워크트리 `~/Projects/tseng-law-global-g2c-fr-20260919` 유지
 - [ ] G2-C 나머지 로케일 칼럼(pt·zh-hans·ms·ru·tr·it·nl·pl + G2-4/5)
-- [x] G2-2·G2-3 기계 게이트 PASS (`reviews/G2-2-ZH-HANS-MS-RU-TR-REVIEW.md` FIX 4, `reviews/G2-3-IT-NL-PL-REVIEW.md` FIX 4). 원어민 검수 아님. R1은 G2-4 이후 `WO-G2-GATE-R1.txt`
+- [x] 2026-09-19 G2-GATE-R1 `WO-G2-GATE-R1` 커밋됨 — 배타 한정어·무료 전송 게이트·pl 직함·ru nav 축약. 원어민 검수는 여전히 아님
 - [ ] G2-2·G2-3 원어민 검토: Opus/Fable 한도(2026-10-18)
 ### G3 릴리스
 - [ ] G3-1 `npm run qa` 0 · RELEASE-CHECK · PR → 사용자 머지 → 라이브 검증 → IndexNow

@@ -1,6 +1,7 @@
 import { Children, isValidElement, type ReactElement, type ReactNode } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { GUIDANCE_LOCALES_4 } from '@/lib/public-guidance';
 
 const navigationState = vi.hoisted(() => ({
   pathname: '/ko/services',
@@ -225,14 +226,20 @@ describe('LocaleFlagSwitcher', () => {
       (element) => element.props['data-locale-switch-fallback'] === 'columns-list',
     );
 
-    expect(fallbackLinks).toHaveLength(16);
+    expect(fallbackLinks).toHaveLength(GUIDANCE_LOCALES_4.length);
     fallbackLinks.forEach((element) => {
       expect(element.props['aria-disabled']).toBeUndefined();
-      expect(element.props.href).toMatch(/^\/(vi|id|th|fil|ar|de|es|fr|pt|zh-hans|ms|ru|tr|it|nl|pl)\/columns$/);
+      // Built from the registry: a new guidance batch must not need this list edited.
+      expect(element.props.href).toMatch(
+        new RegExp(`^/(${GUIDANCE_LOCALES_4.join('|')})/columns$`),
+      );
       element.props.onClick?.();
     });
     expect(onLocaleSelect.mock.calls.map(([target]) => target)).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi']);
-    expect(renderedLinks('ko').some((link) => /href="\/(vi|id|th|fil|ar|de|es|fr|pt|zh-hans|ms|ru|tr|it|nl|pl)\/columns\//.test(link))).toBe(
+    const guidanceColumnsHref = new RegExp(
+      `href="/(${GUIDANCE_LOCALES_4.join('|')})/columns/`,
+    );
+    expect(renderedLinks('ko').some((link) => guidanceColumnsHref.test(link))).toBe(
       false,
     );
   });

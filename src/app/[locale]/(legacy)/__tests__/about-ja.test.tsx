@@ -47,6 +47,11 @@ describe('Japanese About integration', () => {
       it: `${SITE_URL}/it/about`,
       nl: `${SITE_URL}/nl/about`,
       pl: `${SITE_URL}/pl/about`,
+      hi: `${SITE_URL}/hi/about`,
+      sv: `${SITE_URL}/sv/about`,
+      da: `${SITE_URL}/da/about`,
+      nb: `${SITE_URL}/nb/about`,
+      fi: `${SITE_URL}/fi/about`,
       'x-default': `${SITE_URL}/en/about`,
     });
     expect(metadata.keywords).toEqual([
@@ -153,6 +158,11 @@ describe('Japanese About integration', () => {
       it: `${SITE_URL}/it/about`,
       nl: `${SITE_URL}/nl/about`,
       pl: `${SITE_URL}/pl/about`,
+      hi: `${SITE_URL}/hi/about`,
+      sv: `${SITE_URL}/sv/about`,
+      da: `${SITE_URL}/da/about`,
+      nb: `${SITE_URL}/nb/about`,
+      fi: `${SITE_URL}/fi/about`,
       'x-default': `${SITE_URL}/en/about`,
     });
     expect(metadata.alternates?.languages).toHaveProperty('ja', `${SITE_URL}/ja/about`);

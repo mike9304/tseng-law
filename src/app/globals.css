@@ -223,7 +223,12 @@ html[lang='pl'],
 html[lang='sv'],
 html[lang='da'],
 html[lang='nb'],
-html[lang='fi'] {
+html[lang='fi'],
+html[lang='cs'],
+html[lang='hu'],
+html[lang='ro'],
+html[lang='uk'],
+html[lang='el'] {
   --font-body: var(--font-body-latin);
   --font-sans: var(--font-body-latin);
   --font-heading: var(--font-heading-latin);
@@ -268,6 +273,18 @@ html[lang='hi'] {
   --font-heading-ko: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
   --font-display: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
   --font-display-en: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+}
+
+/* Hebrew (right-to-left) gets its own face, like Arabic and Devanagari; the
+   shared latin face carries no Hebrew subset. The `html[dir='rtl']` rules
+   further down are script-agnostic and apply unchanged. */
+html[lang='he'] {
+  --font-body: var(--font-noto-sans-hebrew-loaded, 'Noto Sans Hebrew'), 'Noto Sans Hebrew', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-sans: var(--font-noto-sans-hebrew-loaded, 'Noto Sans Hebrew'), 'Noto Sans Hebrew', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading: var(--font-noto-sans-hebrew-loaded, 'Noto Sans Hebrew'), 'Noto Sans Hebrew', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading-ko: var(--font-noto-sans-hebrew-loaded, 'Noto Sans Hebrew'), 'Noto Sans Hebrew', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display: var(--font-noto-sans-hebrew-loaded, 'Noto Sans Hebrew'), 'Noto Sans Hebrew', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display-en: var(--font-noto-sans-hebrew-loaded, 'Noto Sans Hebrew'), 'Noto Sans Hebrew', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
 }
 
 *,
@@ -655,7 +672,12 @@ li,
 .site[data-locale='sv'],
 .site[data-locale='da'],
 .site[data-locale='nb'],
-.site[data-locale='fi'] {
+.site[data-locale='fi'],
+.site[data-locale='cs'],
+.site[data-locale='hu'],
+.site[data-locale='ro'],
+.site[data-locale='uk'],
+.site[data-locale='el'] {
   --font-body: var(--font-body-latin);
   --font-sans: var(--font-body-latin);
   --font-display: var(--font-heading-latin);
@@ -693,6 +715,14 @@ li,
   --font-display: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
   --font-heading: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
   --font-heading-ko: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+}
+
+.site[data-locale='he'] {
+  --font-body: var(--font-noto-sans-hebrew-loaded, 'Noto Sans Hebrew'), 'Noto Sans Hebrew', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-sans: var(--font-noto-sans-hebrew-loaded, 'Noto Sans Hebrew'), 'Noto Sans Hebrew', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display: var(--font-noto-sans-hebrew-loaded, 'Noto Sans Hebrew'), 'Noto Sans Hebrew', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading: var(--font-noto-sans-hebrew-loaded, 'Noto Sans Hebrew'), 'Noto Sans Hebrew', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading-ko: var(--font-noto-sans-hebrew-loaded, 'Noto Sans Hebrew'), 'Noto Sans Hebrew', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
 }
 
 html.has-cyber-cursor,

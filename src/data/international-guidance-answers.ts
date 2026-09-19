@@ -712,4 +712,196 @@ export const guidanceAnswers: Record<
       sources: ['/fi/contact', '/fi/services'],
     },
   },
+  cs: {
+    services: {
+      answer:
+        'Kancelář vede šest skupin podle taiwanského práva: investice a zakládání společností, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, práci, trestní věci a duševní vlastnictví. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí zaslaný obsah. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm je taiwanská advokátní kancelář, kterou v roce 2016 založili absolventi National Taiwan University (國立臺灣大學), s pobočkami v Tchaj-peji, Kao-siungu, Tchaj-čungu a Pchingtungu. Od roku 2020 působí i účetní úsek; pobočka v Tchaj-čungu vede věci s vazbou na Koreu a Japonsko. Kancelář neslibuje výsledek. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/lawyers', '/cs/services'],
+    },
+    lawyers: {
+      answer:
+        'Tato stránka ukazuje profily advokátek a advokátů Hovering, provozního vedení a přidružené účetní revize. Advokátka Wei Tseng (曾雋崴) je oprávněna na Tchaj-wanu a je řídící advokátkou kanceláře; pracuje s klienty z Koreje, z Japonska a s dalšími mezinárodními klienty. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/about', '/cs/contact'],
+    },
+    pricing: {
+      answer:
+        'Tato stránka nezveřejňuje ceník. Nejprve se z Vašeho shrnutí potvrdí rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu, dříve než práce začne. Rozhovor s advokátkou nebo advokátem může být úplatný; vedle odměny mohou vzniknout soudní nebo správní poplatky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/contact', '/cs/faq'],
+    },
+    contact: {
+      answer:
+        'Zašlete shrnutí kontaktním formulářem: co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. V počáteční fázi zatím není třeba zasílat doklady totožnosti ani celý důkazní materiál. Kancelář neslibuje lhůtu k odpovědi a nepotvrzuje schůzku prostřednictvím této stránky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/pricing'],
+    },
+    faq: {
+      answer:
+        'Tato část odpovídá na časté otázky na úrovni obecných informací: šest skupin práce, příprava před kontaktem, potvrzení nákladů a význam odeslané zprávy. Odeslaná zpráva čeká na posouzení a není poradou ani potvrzenou schůzkou. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/services', '/cs/contact'],
+    },
+  },
+  hu: {
+    services: {
+      answer:
+        'Az iroda hat csoportot visz a tajvani jog szerint: befektetés és cégalapítás, polgári jogi jogviták és kártérítés, házasság, család és öröklés, munkaügy, büntetőügyek és szellemi tulajdon. Az egyes ügyek terjedelmét külön erősítjük meg azt követően, hogy egy ügyvéd megvizsgálta a beküldött tartalmat. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.',
+      sources: ['/hu/faq', '/hu/contact'],
+    },
+    about: {
+      answer:
+        'A Hovering International Law Firm tajvani ügyvédi iroda, amelyet 2016-ban a National Taiwan University (國立臺灣大學) végzettjei alapítottak, irodákkal Tajpejben, Kaohsiungban, Taicsungban és Pingtungban. 2020 óta könyvviteli részleg is működik; a taicsungi iroda koreai és japán kötődésű ügyeket visz. Az iroda nem ígér eredményt. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.',
+      sources: ['/hu/lawyers', '/hu/services'],
+    },
+    lawyers: {
+      answer:
+        'Ez az oldal a Hovering ügyvédeinek, működési vezetésének és társult könyvvizsgálatának profiljait mutatja. Wei Tseng ügyvéd (曾雋崴) Tajvanon jogosult, és az iroda vezető ügyvédje; koreai, japán és további nemzetközi ügyfelekkel dolgozik. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.',
+      sources: ['/hu/about', '/hu/contact'],
+    },
+    pricing: {
+      answer:
+        'Ez az oldal nem tesz közzé árlistát. Előbb az összefoglalóból rögzítjük a munka terjedelmét, majd az összeget és a számítás módját erősítjük meg Önnel, a munka megkezdése előtt. Az ügyvéddel folytatott beszélgetés díjköteles lehet; a munkadíjon felül bírósági vagy hatósági költségek merülhetnek fel. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.',
+      sources: ['/hu/contact', '/hu/faq'],
+    },
+    contact: {
+      answer:
+        'Küldjön összefoglalót a kapcsolatfelvételi űrlapon: mi történt, milyen segítségre van szüksége, milyen kötődése van az ügynek Tajvanhoz, és a határidő, ha ismeri. A kezdeti szakaszban még nem kell személyazonosító okmányokat vagy a teljes bizonyítékanyagot beküldeni. Az iroda nem ígér válaszadási határidőt, és nem erősít meg időpontot ezen az oldalon keresztül. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.',
+      sources: ['/hu/faq', '/hu/pricing'],
+    },
+    faq: {
+      answer:
+        'Ez a rész gyakori kérdésekre válaszol általános tájékoztatás szintjén: a hat ügycsoport, a kapcsolatfelvétel előtti előkészület, a költségek megerősítése és az elküldött üzenet jelentése. Az elküldött üzenet vizsgálatra vár, és nem tanácsadás, nem is megerősített időpont. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.',
+      sources: ['/hu/services', '/hu/contact'],
+    },
+  },
+  ro: {
+    services: {
+      answer:
+        'Cabinetul vede șase grupe potrivit dreptului taiwanez: investiții și înființare de societăți, litigii civile și despăgubiri, căsătorie, familie și succesiuni, muncă, cauze penale și proprietate intelectuală. Întinderea fiecărei cauze se confirmă separat, după ce o avocată sau un avocat a examinat conținutul trimis. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
+      sources: ['/ro/faq', '/ro/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm este un cabinet de avocatură taiwanez, înființat în 2016 de absolvenți ai National Taiwan University (國立臺灣大學), cu birouri în Taipei, Kaohsiung, Taichung și Pingtung. Din 2020 există și o secțiune de contabilitate; biroul din Taichung tratează cauze cu legătură cu Coreea și Japonia. Cabinetul nu promite un rezultat. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
+      sources: ['/ro/lawyers', '/ro/services'],
+    },
+    lawyers: {
+      answer:
+        'Această pagină arată profilurile avocatelor și avocaților Hovering, ale conducerii operative și ale revizuirii contabile asociate. Avocata Wei Tseng (曾雋崴) este autorizată în Taiwan și este avocata coordonatoare a cabinetului; lucrează cu clienți din Coreea, din Japonia și cu alți clienți internaționali. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
+      sources: ['/ro/about', '/ro/contact'],
+    },
+    pricing: {
+      answer:
+        'Această pagină nu publică o listă de prețuri. Mai întâi se confirmă întinderea lucrării din rezumatul dumneavoastră, apoi cuantumul și modul de calcul se confirmă cu dumneavoastră înainte ca lucrarea să înceapă. Discuția cu o avocată sau un avocat poate fi cu plată; pe lângă onorariu pot apărea taxe de instanță sau ale autorităților. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
+      sources: ['/ro/contact', '/ro/faq'],
+    },
+    contact: {
+      answer:
+        'Trimiteți un rezumat prin formularul de contact: ce s-a întâmplat, de ce ajutor aveți nevoie, ce legătură are cauza cu Taiwanul și termenul, dacă îl cunoașteți. În faza inițială nu trebuie trimise încă acte de identitate sau întregul material probator. Cabinetul nu promite un termen de răspuns și nu confirmă o programare prin această pagină. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
+      sources: ['/ro/faq', '/ro/pricing'],
+    },
+    faq: {
+      answer:
+        'Această parte răspunde la întrebări frecvente la nivel de informații generale: cele șase grupe de lucrări, pregătirea înainte de contactare, confirmarea costurilor și înțelesul unui mesaj trimis. Un mesaj trimis așteaptă examinarea și nu este consultanță și nici programare confirmată. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
+      sources: ['/ro/services', '/ro/contact'],
+    },
+  },
+  uk: {
+    services: {
+      answer:
+        'Фірма веде шість груп за правом Тайваню: інвестиції та створення товариств, цивільні спори та відшкодування шкоди, шлюб, сім’я та спадкування, праця, кримінальні справи та інтелектуальна власність. Обсяг кожної справи підтверджують окремо після того, як адвокат розгляне надісланий зміст. Консультація відбувається лише англійською, китайською, японською та корейською.',
+      sources: ['/uk/faq', '/uk/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm — тайванська адвокатська фірма, заснована 2016 року випускниками National Taiwan University (國立臺灣大學), з офісами в Тайбеї, Гаосюні, Тайчжуні та Піндуні. Від 2020 року діє й бухгалтерський відділ; офіс у Тайчжуні веде справи з вазкою на Корею та Японію. Фірма не обіцяє результату. Консультація відбувається лише англійською, китайською, японською та корейською.',
+      sources: ['/uk/lawyers', '/uk/services'],
+    },
+    lawyers: {
+      answer:
+        'Ця сторінка показує профілі адвокатів Hovering, операційного керівництва та партнерської бухгалтерії. Адвокат Wei Tseng (曾雋崴) уповноважена на Тайвані та є керівним адвокатом фірми; вона працює з клієнтами з Кореї, Японії та іншими міжнародними клієнтами. Консультація відбувається лише англійською, китайською, японською та корейською.',
+      sources: ['/uk/about', '/uk/contact'],
+    },
+    pricing: {
+      answer:
+        'Ця сторінка не оприлюднює переліку цін. Спершу з Вашого викладу підтверджують обсяг роботи, потім розмір і спосіб обчислення підтверджують із Вами до початку роботи. Розмова з адвокатом може бути платною; крім гонорару можуть виникнути судові або адміністративні збори. Консультація відбувається лише англійською, китайською, японською та корейською.',
+      sources: ['/uk/contact', '/uk/faq'],
+    },
+    contact: {
+      answer:
+        'Надішліть виклад через форму звернення: що сталося, якої допомоги потребуєте, який зв’язок справа має з Тайванем, і строк, якщо Ви його знаєте. На початковому етапі ще не потрібно надсилати документи, що посвідчують особу, чи весь доказовий матеріал. Фірма не обіцяє строку відповіді та не підтверджує зустріч через цю сторінку. Консультація відбувається лише англійською, китайською, японською та корейською.',
+      sources: ['/uk/faq', '/uk/pricing'],
+    },
+    faq: {
+      answer:
+        'Ця частина відповідає на часті питання на рівні загальних відомостей: шість груп роботи, підготовка перед зверненням, підтвердження витрат і значення надісланого повідомлення. Надіслане повідомлення очікує розгляду й не є консультацією чи підтвердженою зустріччю. Консультація відбувається лише англійською, китайською, японською та корейською.',
+      sources: ['/uk/services', '/uk/contact'],
+    },
+  },
+  el: {
+    services: {
+      answer:
+        'Το γραφείο χειρίζεται έξι ομάδες κατά το δίκαιο της Ταϊβάν: επενδύσεις και σύσταση εταιρειών, αστικές διαφορές και αποζημίωση, γάμο, οικογένεια και κληρονομικά, εργασία, ποινικές υποθέσεις και διανοητική ιδιοκτησία. Το εύρος κάθε υπόθεσης επιβεβαιώνεται χωριστά, αφού δικηγόρος εξετάσει το περιεχόμενο που στείλατε. Η συμβουλευτική διεξάγεται μόνο στα αγγλικά, κινεζικά, ιαπωνικά και κορεατικά.',
+      sources: ['/el/faq', '/el/contact'],
+    },
+    about: {
+      answer:
+        'Η Hovering International Law Firm είναι ταϊβανέζικο δικηγορικό γραφείο, που ιδρύθηκε το 2016 από αποφοίτους του National Taiwan University (國立臺灣大學), με γραφεία στην Ταϊπέι, το Καοσιούνγκ, το Ταϊτσούνγκ και το Πινγκτούνγκ. Από το 2020 λειτουργεί και λογιστικό τμήμα· το γραφείο στο Ταϊτσούνγκ χειρίζεται υποθέσεις με δεσμό προς την Κορέα και την Ιαπωνία. Το γραφείο δεν υπόσχεται αποτέλεσμα. Η συμβουλευτική διεξάγεται μόνο στα αγγλικά, κινεζικά, ιαπωνικά και κορεατικά.',
+      sources: ['/el/lawyers', '/el/services'],
+    },
+    lawyers: {
+      answer:
+        'Η σελίδα αυτή δείχνει τα προφίλ των δικηγόρων της Hovering, της λειτουργικής διεύθυνσης και του συνεργαζόμενου λογιστικού ελέγχου. Η δικηγόρος Wei Tseng (曾雋崴) έχει άδεια στην Ταϊβάν και είναι η διευθύνουσα δικηγόρος του γραφείου· συνεργάζεται με εντολείς από την Κορέα, την Ιαπωνία και άλλους διεθνείς εντολείς. Η συμβουλευτική διεξάγεται μόνο στα αγγλικά, κινεζικά, ιαπωνικά και κορεατικά.',
+      sources: ['/el/about', '/el/contact'],
+    },
+    pricing: {
+      answer:
+        'Η σελίδα αυτή δεν δημοσιεύει τιμοκατάλογο. Πρώτα επιβεβαιώνεται το εύρος της εργασίας από την περίληψή σας, έπειτα το ύψος και ο τρόπος υπολογισμού επιβεβαιώνονται μαζί σας πριν αρχίσει η εργασία. Η συζήτηση με δικηγόρο μπορεί να είναι με αμοιβή· πέρα από την αμοιβή μπορεί να προκύψουν δικαστικά τέλη ή έξοδα αρχών. Η συμβουλευτική διεξάγεται μόνο στα αγγλικά, κινεζικά, ιαπωνικά και κορεατικά.',
+      sources: ['/el/contact', '/el/faq'],
+    },
+    contact: {
+      answer:
+        'Στείλτε περίληψη με τη φόρμα επικοινωνίας: τι συνέβη, ποια βοήθεια χρειάζεστε, ποιον δεσμό έχει η υπόθεση με την Ταϊβάν και την προθεσμία, αν τη γνωρίζετε. Στο αρχικό στάδιο δεν χρειάζεται ακόμη να σταλούν έγγραφα ταυτότητας ή το σύνολο των αποδεικτικών στοιχείων. Το γραφείο δεν υπόσχεται προθεσμία απάντησης και δεν επιβεβαιώνει ραντεβού μέσω αυτής της σελίδας. Η συμβουλευτική διεξάγεται μόνο στα αγγλικά, κινεζικά, ιαπωνικά και κορεατικά.',
+      sources: ['/el/faq', '/el/pricing'],
+    },
+    faq: {
+      answer:
+        'Το μέρος αυτό απαντά σε συχνά ερωτήματα σε επίπεδο γενικών πληροφοριών: οι έξι ομάδες εργασιών, η προετοιμασία πριν την επικοινωνία, η επιβεβαίωση του κόστους και η σημασία ενός μηνύματος που έχει σταλεί. Ένα μήνυμα που έχει σταλεί αναμένει εξέταση και δεν είναι συμβουλευτική ούτε επιβεβαιωμένο ραντεβού. Η συμβουλευτική διεξάγεται μόνο στα αγγλικά, κινεζικά, ιαπωνικά και κορεατικά.',
+      sources: ['/el/services', '/el/contact'],
+    },
+  },
+  he: {
+    services: {
+      answer:
+        'המשרד מטפל בשש קבוצות לפי דין טאיוואן: השקעה והקמת חברות, סכסוכים אזרחיים ופיצויים, נישואין, משפחה וירושה, עבודה, עניינים פליליים וקניין רוחני. היקף כל עניין מאושר בנפרד לאחר שעורכת דין או עורך דין בדקו את התוכן שנשלח. הייעוץ מתקיים רק באנגלית, בסינית, ביפנית ובקוריאנית.',
+      sources: ['/he/faq', '/he/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm הוא משרד עורכי דין טאיוואני, שנוסד בשנת 2016 בידי בוגרי National Taiwan University (國立臺灣大學), ולו סניפים בטאיפיי, בקאוסיונג, בטאיצ׳ונג ובפינגטונג. משנת 2020 פועלת גם מחלקת הנהלת חשבונות; הסניף בטאיצ׳ונג מטפל בעניינים בעלי זיקה לקוריאה וליפן. המשרד אינו מבטיח תוצאה. הייעוץ מתקיים רק באנגלית, בסינית, ביפנית ובקוריאנית.',
+      sources: ['/he/lawyers', '/he/services'],
+    },
+    lawyers: {
+      answer:
+        'עמוד זה מציג את הפרופילים של עורכות ועורכי הדין של Hovering, של ההנהלה התפעולית ושל ביקורת החשבונות השותפה. עורכת הדין Wei Tseng (曾雋崴) מוסמכת בטאיוואן והיא עורכת הדין המנהלת של המשרד; היא עובדת עם לקוחות מקוריאה, מיפן ועם לקוחות בין־לאומיים נוספים. הייעוץ מתקיים רק באנגלית, בסינית, ביפנית ובקוריאנית.',
+      sources: ['/he/about', '/he/contact'],
+    },
+    pricing: {
+      answer:
+        'עמוד זה אינו מפרסם מחירון. תחילה מאושר היקף העבודה מתוך התקציר שלכם, ולאחר מכן הגובה ואופן החישוב מאושרים עמכם לפני שהעבודה מתחילה. שיחה עם עורכת דין או עורך דין עשויה להיות בתשלום; מלבד שכר הטרחה עשויות להיווצר אגרות בית משפט או הוצאות רשויות. הייעוץ מתקיים רק באנגלית, בסינית, ביפנית ובקוריאנית.',
+      sources: ['/he/contact', '/he/faq'],
+    },
+    contact: {
+      answer:
+        'שלחו תקציר בטופס יצירת הקשר: מה קרה, לאיזו עזרה אתם זקוקים, מהי זיקת העניין לטאיוואן, והמועד אם הוא ידוע לכם. בשלב הראשון אין צורך לשלוח עדיין מסמכי זיהוי או את מכלול הראיות. המשרד אינו מבטיח מועד למענה ואינו מאשר פגישה דרך עמוד זה. הייעוץ מתקיים רק באנגלית, בסינית, ביפנית ובקוריאנית.',
+      sources: ['/he/faq', '/he/pricing'],
+    },
+    faq: {
+      answer:
+        'חלק זה משיב על שאלות נפוצות ברמת מידע כללי: שש קבוצות העבודה, ההכנה לפני הפנייה, אישור העלויות ומשמעותה של הודעה שנשלחה. הודעה שנשלחה ממתינה לבדיקה ואינה ייעוץ ואף לא פגישה מאושרת. הייעוץ מתקיים רק באנגלית, בסינית, ביפנית ובקוריאנית.',
+      sources: ['/he/services', '/he/contact'],
+    },
+  },
 };

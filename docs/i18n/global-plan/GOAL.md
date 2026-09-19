@@ -38,7 +38,7 @@ Cloud Terminal MCP는 이 로컬 세션 네임스페이스에 없고(`CURSOR_API
   - 런타임 실측(`next start`): 안내 21언어 × home/services/faq/columns = 84건 전부 200, 사이트 4언어 200, 무효 `/xx` 404, 선택기 25언어 노출, `availableLanguage` 4개 고정, 미검수 마커 0
   - **적색 기준선 해소**: main의 018 결정 반영(06af5b44)으로 낡은 핀이 갱신돼 판정 기준이 "기준선 대비 신규 실패 0"에서 **"실패 0"**으로 올라갔다.
   - 인수 중 총괄이 고친 것: ①llms 고지문이 원문 인용이 아니었던 것(5언어) ②`fi`가 `fil`의 접두사라 카탈로그 격리 시험이 자기 URL에 걸린 것 ③낡은 개수·목록 핀 6곳을 레지스트리 파생으로 전환
-- [~] G3-2 라이브 검증 + IndexNow 제출 + 볼트 갱신
+- [~] G3-2 라이브 검증 + IndexNow 제출 + 볼트 갱신 — 2026-09-19 20:4x 사용자 「그룩봇으로 나라별 노출·유입 설정」. HEAD 실측 83 URL 200(사이트4×5 + 안내21×3). IndexNow POST 83건 HTTP 200(영수증≠색인). 404(debt-collection·짧은 company-setup·G2-5) 미제출. GSC/GBP/YouTube는 그룩봇 ASK `ASK-20260919-2040-grokbot-country-exposure.md` + Grok Bot.app 붙여넣기. 정본 `docs/marketing/GROK-BOT-COUNTRY-EXPOSURE-WO-20260919.md`. GSC 국가 타깃 UI 없음.
 - **배포 차단 사건 (2026-09-19 14:31~19:2x)**: 저장소 비공개 전환(13:59:36) 이후 Vercel 배포가 전부 막혔다.
   증상은 배포 상태 `UNKNOWN`·빌드 0ms·GitHub 커밋 상태 `Vercel: Deployment was blocked`. 성공 배포 0건.
   근거: 마지막 성공 배포 13:42(전환 전), 전환 후 5시간 동안 시도 3건 전부 차단.

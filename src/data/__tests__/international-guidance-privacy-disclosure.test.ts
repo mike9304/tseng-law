@@ -32,6 +32,12 @@ const PENDING_CONFIRMATION: Record<(typeof GUIDANCE_LOCALES_4)[number], RegExp> 
   da: /venter på kontorets bekræftelse|endnu ikke bekræftet af kontoret/,
   nb: /venter på kontorets bekreftelse|ennå ikke bekreftet av kontoret/,
   fi: /odottaa toimiston vahvistusta|ei ole vielä vahvistettu toimiston toimesta/,
+  cs: /není zatím potvrzeno|čeká na potvrzení/i,
+  hu: /még nincs megerősítve|megerősítésre vár/i,
+  ro: /nu este încă confirmată|așteaptă confirmarea/i,
+  uk: /ще не підтверджено|очікує підтвердження/i,
+  el: /δεν έχει ακόμη επιβεβαιωθεί|αναμένει επιβεβαίωση/i,
+  he: /טרם אושרה|ממתין לאישור/,
 };
 
 const GENERIC_PENDING = /pending confirmation|operator confirmation|confirmed by the operator/i;

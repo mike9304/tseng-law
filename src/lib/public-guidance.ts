@@ -36,6 +36,12 @@ export const GUIDANCE_LOCALES_4 = [
   'da',
   'nb',
   'fi',
+  'cs',
+  'hu',
+  'ro',
+  'uk',
+  'el',
+  'he',
 ] as const;
 export type GuidanceLocale4 = (typeof GUIDANCE_LOCALES_4)[number];
 
@@ -80,6 +86,12 @@ export const PUBLIC_LOCALES_8 = [
   'da',
   'nb',
   'fi',
+  'cs',
+  'hu',
+  'ro',
+  'uk',
+  'el',
+  'he',
 ] as const;
 export type PublicLocale8 = (typeof PUBLIC_LOCALES_8)[number];
 
@@ -99,7 +111,10 @@ export const ROUTED_PUBLIC_LOCALES = [...PUBLIC_LOCALES_8, ...ROUTED_ONLY_LOCALE
 export type RoutedPublicLocale = (typeof ROUTED_PUBLIC_LOCALES)[number];
 
 /** Right-to-left public languages. Drives `<html dir>` and RTL CSS. */
-export const RTL_PUBLIC_LOCALES = ['ar'] as const;
+/** Right-to-left scripts: Arabic and Hebrew. The `html[dir='rtl']` rules in
+ * `globals.css` were written for Arabic but are script-agnostic, so Hebrew
+ * needs no new CSS — only this registry entry and the document-language check. */
+export const RTL_PUBLIC_LOCALES = ['ar', 'he'] as const;
 
 export const GUIDANCE_PAGE_KEYS = [
   'home',
@@ -163,6 +178,12 @@ export const PUBLIC_LANGUAGE_AUTONYMS: Record<PublicLocale8, string> = {
   da: 'Dansk',
   nb: 'Norsk',
   fi: 'Suomi',
+  cs: 'Čeština',
+  hu: 'Magyar',
+  ro: 'Română',
+  uk: 'Українська',
+  el: 'Ελληνικά',
+  he: 'עברית',
 };
 
 export type PublicDocumentLanguage =
@@ -190,10 +211,16 @@ export type PublicDocumentLanguage =
   | 'sv'
   | 'da'
   | 'nb'
-  | 'fi';
+  | 'fi'
+  | 'cs'
+  | 'hu'
+  | 'ro'
+  | 'uk'
+  | 'el'
+  | 'he';
 
 const DEFAULT_SITE_URL = 'https://tseng-law.com';
-const PUBLIC_LOCALE_PATH_RE = /^\/(ko|zh-hant|zh-hans|en|ja|vi|id|th|fil|ar|de|es|fr|pt|ms|ru|tr|it|nl|pl|hi|sv|da|nb|fi)(?=\/|$)/i;
+const PUBLIC_LOCALE_PATH_RE = /^\/(ko|zh-hant|zh-hans|en|ja|vi|id|th|fil|ar|de|es|fr|pt|ms|ru|tr|it|nl|pl|hi|sv|da|nb|fi|cs|hu|ro|uk|el|he)(?=\/|$)/i;
 const PAGE_KEY_BY_ROUTE: Record<GuidanceCoreRouteKey, GuidancePageKey> = {
   '': 'home',
   services: 'services',
@@ -230,6 +257,12 @@ export function isGuidanceLocale4(value?: string | null): value is GuidanceLocal
     || value === 'da'
     || value === 'nb'
     || value === 'fi'
+    || value === 'cs'
+    || value === 'hu'
+    || value === 'ro'
+    || value === 'uk'
+    || value === 'el'
+    || value === 'he'
   );
 }
 
@@ -268,7 +301,7 @@ export function isRtlPublicLocale(value?: string | null): boolean {
 }
 
 export function isRtlDocumentLanguage(language: PublicDocumentLanguage): boolean {
-  return language === 'ar';
+  return language === 'ar' || language === 'he';
 }
 
 export function isExistingSiteLocale4(value?: string | null): value is ExistingSiteLocale4 {

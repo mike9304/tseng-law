@@ -16,6 +16,7 @@ const fontLoaders = vi.hoisted(() => {
     Noto_Sans_Thai: createFontLoader(),
     Noto_Sans_Arabic: createFontLoader(),
     Noto_Sans_Devanagari: createFontLoader(),
+    Noto_Sans_Hebrew: createFontLoader(),
     Noto_Sans: createFontLoader(),
     Noto_Serif_KR: createFontLoader(),
     Noto_Serif_JP: createFontLoader(),
@@ -73,8 +74,8 @@ describe('locale font configuration', () => {
       '--font-noto-sans-jp-loaded',
       '--font-noto-serif-jp-loaded',
     ]));
-    expect(managed).toHaveLength(12);
-    expect(new Set(managed).size).toBe(12);
+    expect(managed).toHaveLength(13);
+    expect(new Set(managed).size).toBe(13);
     for (const locale of ['ko', 'en', 'zh-Hant', 'ja'] as const) {
       for (const fontClass of getLocaleFontClassName(locale).split(' ')) {
         expect(managed).toContain(fontClass);
@@ -96,7 +97,7 @@ describe('locale font configuration', () => {
       preload: false,
       variable: '--font-noto-sans-latin-loaded',
       weight: 'variable',
-      subsets: ['latin', 'latin-ext', 'vietnamese', 'cyrillic'],
+      subsets: ['latin', 'latin-ext', 'vietnamese', 'cyrillic', 'greek'],
     });
 
     const managed = getManagedLocaleFontClassNames();

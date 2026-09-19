@@ -674,6 +674,66 @@ export const CINEMATIC_OPENING_COPY: Record<
     service: 'Oikeudellista tietoa Taiwanista · englanti, kiina, japani ja korea',
     contact: 'Ottakaa yhteyttä toimistoon',
   },
+  cs: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ADVOKÁTI NA TCHAJ-WANU',
+    scroll: 'Pokračujte dolů',
+    skip: 'Přeskočit úvod',
+    mediaAlt:
+      'Letecký pohled na středohoří Tchaj-wanu a moře mraků v přirozeném světle',
+    service: 'Právní informace o Tchaj-wanu · angličtina, čínština, japonština a korejština',
+    contact: 'Obraťte se na kancelář',
+  },
+  hu: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ÜGYVÉDEK TAJVANON',
+    scroll: 'Folytassa lefelé',
+    skip: 'Bevezető átugrása',
+    mediaAlt:
+      'Légi felvétel Tajvan középhegységéről és a felhőtengerről természetes fényben',
+    service: 'Tajvani jogi tájékoztatás · angol, kínai, japán és koreai',
+    contact: 'Forduljon az irodához',
+  },
+  ro: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'AVOCAȚI ÎN TAIWAN',
+    scroll: 'Continuați în jos',
+    skip: 'Săriți introducerea',
+    mediaAlt:
+      'Vedere aeriană a munților centrali din Taiwan și a mării de nori în lumină naturală',
+    service: 'Informații juridice despre Taiwan · engleză, chineză, japoneză și coreeană',
+    contact: 'Contactați cabinetul',
+  },
+  uk: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'АДВОКАТИ НА ТАЙВАНІ',
+    scroll: 'Продовжуйте вниз',
+    skip: 'Пропустити вступ',
+    mediaAlt:
+      'Вигляд з висоти на центральний хребет Тайваню та море хмар у природному світлі',
+    service: 'Правова інформація про Тайвань · англійська, китайська, японська та корейська',
+    contact: 'Зверніться до фірми',
+  },
+  el: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ΔΙΚΗΓΟΡΟΙ ΣΤΗΝ ΤΑΪΒΑΝ',
+    scroll: 'Συνεχίστε προς τα κάτω',
+    skip: 'Παράλειψη εισαγωγής',
+    mediaAlt:
+      'Αεροφωτογραφία της κεντρικής οροσειράς της Ταϊβάν και θάλασσας νεφών σε φυσικό φως',
+    service: 'Νομικές πληροφορίες για την Ταϊβάν · αγγλικά, κινεζικά, ιαπωνικά και κορεατικά',
+    contact: 'Επικοινωνήστε με το γραφείο',
+  },
+  he: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'עורכי דין בטאיוואן',
+    scroll: 'המשיכו למטה',
+    skip: 'דילוג על המבוא',
+    mediaAlt:
+      'מבט מהאוויר על רכס ההרים המרכזי של טאיוואן וים העננים באור טבעי',
+    service: 'מידע משפטי על טאיוואן · אנגלית, סינית, יפנית וקוריאנית',
+    contact: 'פנו אל המשרד',
+  },
 };
 
 export default function CinematicOpening({

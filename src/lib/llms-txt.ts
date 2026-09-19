@@ -362,6 +362,12 @@ const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
   da: 'Danish',
   nb: 'Norwegian',
   fi: 'Finnish',
+  cs: 'Czech',
+  hu: 'Hungarian',
+  ro: 'Romanian',
+  uk: 'Ukrainian',
+  el: 'Greek',
+  he: 'Hebrew',
 };
 
 export function buildRootLlmsTxt(): string {
@@ -688,6 +694,54 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
       'Tiedosto llms.txt on vain kartta julkisten sivujen löytämiseen; se ei lupaa hakusijaa, tukea, tekoälyn suositusta eikä näkyvyyttä.',
     confidentialNotice:
       'Koska alkuperäinen teksti säilytetään, älkää alkuvaiheessa kirjoittako sellaista, mitä ei vielä tarvita, esimerkiksi passinumeroa, henkilötunnusta tai tilitietoja.',
+  },
+  cs: {
+    consultationNotice:
+      'Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
+    discoveryNotice:
+      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, podporu, doporučení umělé inteligence ani viditelnost.',
+    confidentialNotice:
+      'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+  },
+  hu: {
+    consultationNotice:
+      'Ez a tájékoztatás magyarul készült, de az ügyvéddel folytatott tanácsadás kizárólag angolul, kínaiul (中文), japánul és koreaiul zajlik.',
+    discoveryNotice:
+      'Az llms.txt fájl csak térkép a nyilvános oldalak megtalálásához; nem ígér keresési helyezést, támogatást, mesterséges intelligencia általi ajánlást és láthatóságot sem.',
+    confidentialNotice:
+      'Mivel az eredeti szöveget megőrizzük, a kezdeti szakaszban ne írja le azt, ami még nem szükséges, például az útlevélszámot, az okmányszámot vagy a számlaadatokat.',
+  },
+  ro: {
+    consultationNotice:
+      'Aceste informații sunt scrise în limba română, dar consultanța cu o avocată sau un avocat se desfășoară numai în engleză, chineză (中文), japoneză și coreeană.',
+    discoveryNotice:
+      'Fișierul llms.txt este doar o hartă pentru găsirea paginilor publice; nu promite poziție în căutare, susținere, recomandare din partea inteligenței artificiale și nici vizibilitate.',
+    confidentialNotice:
+      'Întrucât textul original se păstrează, în faza inițială nu scrieți ceea ce nu este încă necesar, de pildă numărul de pașaport, numărul actului de identitate sau datele unui cont.',
+  },
+  uk: {
+    consultationNotice:
+      'Ці відомості написано українською, але консультація з адвокатом відбувається лише англійською, китайською (中文), японською та корейською.',
+    discoveryNotice:
+      'Файл llms.txt — це лише мапа для пошуку публічних сторінок; він не обіцяє місця в пошуку, підтримки, рекомендації штучного інтелекту чи видимості.',
+    confidentialNotice:
+      'Оскільки первинний текст зберігається, на початковому етапі не пишіть того, що ще не потрібне, наприклад номера паспорта, номера документа чи даних рахунку.',
+  },
+  el: {
+    consultationNotice:
+      'Οι πληροφορίες αυτές είναι γραμμένες στα ελληνικά, αλλά η συμβουλευτική με δικηγόρο διεξάγεται μόνο στα αγγλικά, κινεζικά (中文), ιαπωνικά και κορεατικά.',
+    discoveryNotice:
+      'Το αρχείο llms.txt είναι μόνο χάρτης για την εύρεση των δημόσιων σελίδων· δεν υπόσχεται θέση στην αναζήτηση, υποστήριξη, σύσταση από τεχνητή νοημοσύνη ούτε προβολή.',
+    confidentialNotice:
+      'Επειδή το πρωτότυπο κείμενο διατηρείται, στο αρχικό στάδιο μη γράφετε ό,τι δεν είναι ακόμη απαραίτητο, για παράδειγμα τον αριθμό διαβατηρίου, τον αριθμό ταυτότητας ή στοιχεία λογαριασμού.',
+  },
+  he: {
+    consultationNotice:
+      'מידע זה כתוב בעברית, אך הייעוץ עם עורכת דין או עורך דין מתקיים רק באנגלית, בסינית (中文), ביפנית ובקוריאנית.',
+    discoveryNotice:
+      'הקובץ llms.txt הוא מפה בלבד לאיתור העמודים הפומביים; אין בו הבטחה לדירוג בחיפוש, לתמיכה, להמלצה של בינה מלאכותית או לחשיפה.',
+    confidentialNotice:
+      'מאחר שהטקסט המקורי נשמר, אל תכתבו בשלב הראשון את מה שאינו נדרש עדיין, למשל מספר דרכון, מספר תעודה או פרטי חשבון.',
   },
 };
 

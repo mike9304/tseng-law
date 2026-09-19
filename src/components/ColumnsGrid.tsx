@@ -135,6 +135,12 @@ const GUIDANCE_FILTER_ALL_LABEL: Record<GuidanceLocale4, string> = {
   da: 'Alle',
   nb: 'Alle',
   fi: 'Kaikki',
+  cs: 'Vše',
+  hu: 'Összes',
+  ro: 'Toate',
+  uk: 'Усі',
+  el: 'Όλα',
+  he: 'הכול',
 };
 
 /** Same strings `guidanceColumnCategoryLabel` returns in `src/lib/columns.ts`. */
@@ -244,6 +250,36 @@ const GUIDANCE_FILTER_CATEGORY_LABEL: Record<GuidanceLocale4, Record<ColumnCateg
     legal: 'Oikeudellista tietoa Taiwanista',
     case: 'Tapausanalyysi',
   },
+  cs: {
+    formation: 'Zakládání společností na Tchaj-wanu',
+    legal: 'Právní informace o Tchaj-wanu',
+    case: 'Rozbor případu',
+  },
+  hu: {
+    formation: 'Cégalapítás Tajvanon',
+    legal: 'Tajvani jogi tájékoztatás',
+    case: 'Esetelemzés',
+  },
+  ro: {
+    formation: 'Înființare de societăți în Taiwan',
+    legal: 'Informații juridice despre Taiwan',
+    case: 'Analiză de caz',
+  },
+  uk: {
+    formation: 'Створення товариств на Тайвані',
+    legal: 'Правова інформація про Тайвань',
+    case: 'Розбір справи',
+  },
+  el: {
+    formation: 'Σύσταση εταιρειών στην Ταϊβάν',
+    legal: 'Νομικές πληροφορίες για την Ταϊβάν',
+    case: 'Ανάλυση υπόθεσης',
+  },
+  he: {
+    formation: 'הקמת חברות בטאיוואן',
+    legal: 'מידע משפטי על טאיוואן',
+    case: 'ניתוח מקרה',
+  },
 };
 
 /** Reviewed `home.columnsReadMoreLabel` — same CTA GuidanceHomeBody already uses. */
@@ -269,6 +305,12 @@ const GUIDANCE_CARD_READ_MORE_LABEL: Record<GuidanceLocale4, string> = {
   da: 'Læs videre',
   nb: 'Les videre',
   fi: 'Lukekaa lisää',
+  cs: 'Číst dál',
+  hu: 'Tovább olvasom',
+  ro: 'Citiți mai departe',
+  uk: 'Читати далі',
+  el: 'Συνέχεια ανάγνωσης',
+  he: 'המשך קריאה',
 };
 
 function categoryFilterLabels(locale: PublicLocale8) {

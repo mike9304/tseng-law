@@ -135,4 +135,10 @@ export const DECORATIVE_VIDEO_CONTROL_LABELS = {
     play: 'Toistakaa video',
     replay: 'Toistakaa video uudelleen',
   },
+  cs: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' },
+  hu: { pause: 'Videó szüneteltetése', play: 'Videó lejátszása', replay: 'Videó újrajátszása' },
+  ro: { pause: 'Opriți videoclipul', play: 'Redați videoclipul', replay: 'Redați din nou videoclipul' },
+  uk: { pause: 'Зупинити відео', play: 'Відтворити відео', replay: 'Відтворити відео ще раз' },
+  el: { pause: 'Παύση του βίντεο', play: 'Αναπαραγωγή του βίντεο', replay: 'Νέα αναπαραγωγή του βίντεο' },
+  he: { pause: 'השהיית הסרטון', play: 'הפעלת הסרטון', replay: 'הפעלת הסרטון מחדש' },
 } as const satisfies Record<PublicLocale8, DecorativeVideoControlLabels>;

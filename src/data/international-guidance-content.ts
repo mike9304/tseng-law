@@ -1,5 +1,7 @@
 /**
- * Core guidance pages for the guidance languages (vi, id, th, fil, ar, de, es, fr, pt, zh-hans, ms, ru, tr, it, nl, pl, hi, sv, da, nb, fi).
+ * Core guidance pages for the guidance languages (vi, id, th, fil, ar, de, es,
+ * fr, pt, zh-hans, ms, ru, tr, it, nl, pl, hi, sv, da, nb, fi, cs, hu, ro, uk,
+ * el, he — the last two are Greek script and right-to-left Hebrew).
  *
  * Guidance is published in the page language; consultations with an attorney
  * are handled only in English, Chinese, Japanese and Korean. Every locale below
@@ -21,6 +23,14 @@ import {
   malayGuidanceContent,
   simplifiedChineseGuidanceContent,
 } from '@/data/international-guidance-asia';
+import {
+  czechGuidanceContent,
+  greekGuidanceContent,
+  hebrewGuidanceContent,
+  hungarianGuidanceContent,
+  romanianGuidanceContent,
+  ukrainianGuidanceContent,
+} from '@/data/international-guidance-eastern';
 import {
   danishGuidanceContent,
   finnishGuidanceContent,
@@ -60,7 +70,13 @@ export type GuidanceLocale =
   | 'sv'
   | 'da'
   | 'nb'
-  | 'fi';
+  | 'fi'
+  | 'cs'
+  | 'hu'
+  | 'ro'
+  | 'uk'
+  | 'el'
+  | 'he';
 
 export type GuidancePageKey =
   | 'home'
@@ -2648,4 +2664,10 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
   da: danishGuidanceContent,
   nb: norwegianGuidanceContent,
   fi: finnishGuidanceContent,
+  cs: czechGuidanceContent,
+  hu: hungarianGuidanceContent,
+  ro: romanianGuidanceContent,
+  uk: ukrainianGuidanceContent,
+  el: greekGuidanceContent,
+  he: hebrewGuidanceContent,
 };

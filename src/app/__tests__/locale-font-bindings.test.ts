@@ -3,7 +3,7 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { GUIDANCE_LOCALES_4 } from '@/lib/public-guidance';
 
-const LATIN_EXCEPTIONS = new Set(['th', 'ar', 'zh-hans', 'hi']);
+const LATIN_EXCEPTIONS = new Set(['th', 'ar', 'zh-hans', 'hi', 'he']);
 
 describe('guidance locale font-variable bindings', () => {
   const css = readFileSync(path.join(process.cwd(), 'src/app/globals.css'), 'utf8');
@@ -28,6 +28,11 @@ describe('guidance locale font-variable bindings', () => {
       'da',
       'nb',
       'fi',
+      'cs',
+      'hu',
+      'ro',
+      'uk',
+      'el',
     ]);
     for (const locale of latinGuidanceLocales) {
       expect(css, `missing html[lang='${locale}']`).toMatch(

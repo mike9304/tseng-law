@@ -36,7 +36,7 @@ import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
  * present in all four, so "all four dropped it" cannot pass as parity alone.
  */
 
-const LOCALES = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi'] as const satisfies readonly GuidanceLocale[];
+const LOCALES = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi', 'cs', 'hu', 'ro', 'uk', 'el', 'he'] as const satisfies readonly GuidanceLocale[];
 
 /** Per-locale marker for one disclosure element. */
 type ElementMarkers = Record<GuidanceLocale, RegExp>;
@@ -72,6 +72,12 @@ const ELEMENTS = {
     da: /farbar|brugbar/,
     nb: /farbar|brukbar/,
     fi: /käyttökelpois/,
+    cs: /schůdný/,
+    hu: /járható/,
+    ro: /practicabil/,
+    uk: /придатний/,
+    el: /εφικτό/,
+    he: /מעשית/,
   },
   /** Support in a language outside the four consultation languages is not guaranteed. */
   'no-other-language-guarantee': {
@@ -96,6 +102,12 @@ const ELEMENTS = {
     da: /andet sprog/,
     nb: /annet språk/,
     fi: /muulla kielellä|toisella kielellä/,
+    cs: /v jiném jazyce zaručena není/,
+    hu: /más nyelvű szolgáltatás nem garantált/,
+    ro: /în altă limbă nu este garantată/,
+    uk: /іншою мовою не гарантовано/,
+    el: /σε άλλη γλώσσα δεν είναι εγγυημένη/,
+    he: /בשפה אחרת אינו מובטח/,
   },
   /** No reply time is promised. */
   'no-reply-time-promise': {
@@ -120,6 +132,12 @@ const ELEMENTS = {
     da: /svartid/,
     nb: /svartid/,
     fi: /vastausaika/,
+    cs: /lhůtu k odpovědi|lhůta k odpovědi/,
+    hu: /válaszadási határidőt/,
+    ro: /termen de răspuns/,
+    uk: /строку відповіді|строк відповіді/,
+    el: /προθεσμία απάντησης/,
+    he: /מועד למענה/,
   },
   /** The confirmation step is a step, not a promise. */
   'confirmation-is-not-a-promise': {
@@ -144,6 +162,12 @@ const ELEMENTS = {
     da: /ikke et løfte/,
     nb: /ikke et løfte/,
     fi: /ei lupaus/,
+    cs: /příslib/,
+    hu: /nem ígéret/,
+    ro: /nu o promisiune/,
+    uk: /не обіцянка/,
+    el: /όχι υπόσχεση/,
+    he: /לא הבטחה/,
   },
   /** No interpreter is arranged. */
   'no-interpreter-promise': {
@@ -168,6 +192,12 @@ const ELEMENTS = {
     da: /tolk/,
     nb: /tolk/,
     fi: /tulkk/,
+    cs: /tlumočník/,
+    hu: /tolmács/,
+    ro: /interpret/,
+    uk: /перекладач/,
+    el: /διερμηνέα/,
+    he: /מתורגמן/,
   },
   /** Not every matter can be accepted. */
   'not-every-matter-accepted': {
@@ -192,6 +222,12 @@ const ELEMENTS = {
     da: /hver sag/,
     nb: /hver sak/,
     fi: /jokaista asiaa/,
+    cs: /každou věc/,
+    hu: /minden ügyet/,
+    ro: /orice cauză/,
+    uk: /кожну справу/,
+    el: /κάθε υπόθεση/,
+    he: /כל עניין/,
   },
   /** No outcome is promised. */
   'no-outcome-promise': {
@@ -216,6 +252,12 @@ const ELEMENTS = {
     da: /resultat/,
     nb: /resultat/,
     fi: /tulosta/,
+    cs: /výsledek/,
+    hu: /eredményt/,
+    ro: /rezultat/,
+    uk: /результат/,
+    el: /αποτέλεσμα/,
+    he: /תוצאה/,
   },
   /** A certain answer needs one of the four consultation languages. */
   'four-consultation-languages': {
@@ -240,6 +282,12 @@ const ELEMENTS = {
     da: /fire rådgivningssprog/,
     nb: /fire rådgivningsspråk/,
     fi: /neljästä neuvontakielestä/,
+    cs: /čtyř(ech)? jazyc/,
+    hu: /négy nyelv/,
+    ro: /patru limbi/,
+    uk: /чотир/,
+    el: /τέσσερ|τεσσάρ/,
+    he: /ארבע/,
   },
   /** This page is not the consultation step. */
   'not-the-consultation-step': {
@@ -264,6 +312,12 @@ const ELEMENTS = {
     da: /rådgivningsskridtet/,
     nb: /rådgivningssteget/,
     fi: /neuvontavaihe/,
+    cs: /krokem porady|krok porady/,
+    hu: /tanácsadás lépése/,
+    ro: /pasul consultanței/,
+    uk: /кроком консультації/,
+    el: /βήμα της συμβουλευτικής/,
+    he: /שלב הייעוץ/,
   },
   /** A sent message is not legal advice. */
   'not-legal-advice': {
@@ -288,6 +342,12 @@ const ELEMENTS = {
     da: /juridisk udtalelse/,
     nb: /juridisk uttalelse/,
     fi: /oikeudellinen lausunto/,
+    cs: /právní stanovisko/,
+    hu: /jogi állásfoglalás/,
+    ro: /opinie juridică/,
+    uk: /юридичний висновок/,
+    el: /νομική γνώμη/,
+    he: /חוות דעת משפטית/,
   },
   /** A sent message is not a confirmed appointment. */
   'not-an-appointment': {
@@ -312,6 +372,12 @@ const ELEMENTS = {
     da: /\btid\b/,
     nb: /\btime\b/,
     fi: /tapaamista|tapaaminen/,
+    cs: /schůzk/,
+    hu: /időpont/,
+    ro: /programare/,
+    uk: /зустріч/,
+    el: /ραντεβού/,
+    he: /פגישה/,
   },
   /** Sending a message forms no attorney–client relationship. */
   'no-attorney-client-relationship': {
@@ -336,6 +402,12 @@ const ELEMENTS = {
     da: /forhold mellem advokat/,
     nb: /forhold mellom advokat/,
     fi: /suhdetta asianajajan ja päämiehen/,
+    cs: /vztah mezi advokát/,
+    hu: /ügyvéd–ügyfél/,
+    ro: /relație între avocat/,
+    uk: /між адвокатом і клієнтом/,
+    el: /σχέση δικηγόρου/,
+    he: /עורך דין–לקוח/,
   },
   /** Written text is never machine-translated for the reader. */
   'no-automatic-translation': {
@@ -360,6 +432,12 @@ const ELEMENTS = {
     da: /automatisk/,
     nb: /automatisk/,
     fi: /automaattisesti/,
+    cs: /automaticky/,
+    hu: /automatikusan/,
+    ro: /automat/,
+    uk: /автоматично/,
+    el: /αυτόματα/,
+    he: /אוטומטית/,
   },
   /** The family group is named as covering marriage matters. */
   'marriage-in-family-group': {
@@ -384,6 +462,12 @@ const ELEMENTS = {
     da: /ægteskab/i,
     nb: /ekteskap/i,
     fi: /avioliitto/i,
+    cs: /manželství/i,
+    hu: /házasság/i,
+    ro: /căsătorie/i,
+    uk: /шлюб/i,
+    el: /γάμ/i,
+    he: /נישואין/,
   },
   /** Meeting the attorney may be a paid service. */
   'consultation-may-be-paid': {
@@ -408,6 +492,12 @@ const ELEMENTS = {
     da: /mod betaling/,
     nb: /mot betaling/,
     fi: /maksullinen/,
+    cs: /úplatn/,
+    hu: /díjköteles/,
+    ro: /cu plată/,
+    uk: /платn|платн/,
+    el: /με αμοιβή/,
+    he: /בתשלום/,
   },
 } as const satisfies Record<string, ElementMarkers>;
 

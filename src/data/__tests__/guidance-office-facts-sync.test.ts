@@ -109,6 +109,12 @@ const CLIENT_COUNTRY_TERMS: Record<GuidanceLocale, Record<string, string[]>> = {
   da: { Korea: ['Korea'], Japan: ['Japan'] },
   nb: { Korea: ['Korea'], Japan: ['Japan'] },
   fi: { Korea: ['Korea'], Japan: ['Japani'] },
+  cs: { Korea: ['Koreje'], Japan: ['Japonska'] },
+  hu: { Korea: ['koreai'], Japan: ['japán'] },
+  ro: { Korea: ['Coreea'], Japan: ['Japonia'] },
+  uk: { Korea: ['Кореї'], Japan: ['Японії'] },
+  el: { Korea: ['Κορέα'], Japan: ['Ιαπωνία'] },
+  he: { Korea: ['קוריאה'], Japan: ['יפן'] },
 };
 
 /** The attorney's Chinese name; how the same sentence is found in both modules. */

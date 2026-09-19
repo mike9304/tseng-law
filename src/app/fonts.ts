@@ -2,6 +2,7 @@ import {
   Noto_Sans,
   Noto_Sans_Arabic,
   Noto_Sans_Devanagari,
+  Noto_Sans_Hebrew,
   Noto_Sans_KR,
   Noto_Sans_JP,
   Noto_Sans_SC,
@@ -107,12 +108,22 @@ const sansDevanagari = Noto_Sans_Devanagari({
   subsets: ['devanagari'],
 });
 
+const sansHebrew = Noto_Sans_Hebrew({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-hebrew-loaded',
+  subsets: ['hebrew'],
+});
+
 const sansLatin = Noto_Sans({
   display: 'swap',
   preload: false,
   weight: 'variable',
   variable: '--font-noto-sans-latin-loaded',
-  subsets: ['latin', 'latin-ext', 'vietnamese', 'cyrillic'],
+  // Greek joins the shared face for `el`; without it the page falls back to a
+  // system serif and the locale looks unstyled.
+  subsets: ['latin', 'latin-ext', 'vietnamese', 'cyrillic', 'greek'],
 });
 
 export type DocumentLanguage =
@@ -140,7 +151,13 @@ export type DocumentLanguage =
   | 'sv'
   | 'da'
   | 'nb'
-  | 'fi';
+  | 'fi'
+  | 'cs'
+  | 'hu'
+  | 'ro'
+  | 'uk'
+  | 'el'
+  | 'he';
 
 const koreanFontClassName = [sansKorean.variable, serifKorean.variable].join(' ');
 const traditionalChineseFontClassName = [
@@ -155,6 +172,7 @@ const japaneseFontClassName = [sansJapanese.variable, serifJapanese.variable].jo
 const thaiFontClassName = [sansThai.variable, sansLatin.variable].join(' ');
 const arabicFontClassName = [sansArabic.variable, sansLatin.variable].join(' ');
 const hindiFontClassName = [sansDevanagari.variable, sansLatin.variable].join(' ');
+const hebrewFontClassName = [sansHebrew.variable, sansLatin.variable].join(' ');
 const latinExtendedFontClassName = sansLatin.variable;
 
 /**
@@ -181,6 +199,9 @@ export function getLocaleFontClassName(language: DocumentLanguage): string {
   if (language === 'hi') {
     return hindiFontClassName;
   }
+  if (language === 'he') {
+    return hebrewFontClassName;
+  }
   if (
     language === 'vi'
     || language === 'id'
@@ -199,6 +220,11 @@ export function getLocaleFontClassName(language: DocumentLanguage): string {
     || language === 'da'
     || language === 'nb'
     || language === 'fi'
+    || language === 'cs'
+    || language === 'hu'
+    || language === 'ro'
+    || language === 'uk'
+    || language === 'el'
   ) {
     return latinExtendedFontClassName;
   }
@@ -217,6 +243,7 @@ export function getManagedLocaleFontClassNames(): string[] {
         thaiFontClassName,
         arabicFontClassName,
         hindiFontClassName,
+        hebrewFontClassName,
         latinExtendedFontClassName,
       ].flatMap((className) => className.split(/\s+/).filter(Boolean)),
     ),

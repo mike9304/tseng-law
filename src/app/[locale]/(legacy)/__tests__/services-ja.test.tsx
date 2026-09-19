@@ -67,6 +67,12 @@ describe('Japanese services-list integration', () => {
       da: `${SITE_URL}/da/services`,
       nb: `${SITE_URL}/nb/services`,
       fi: `${SITE_URL}/fi/services`,
+      cs: `${SITE_URL}/cs/services`,
+      hu: `${SITE_URL}/hu/services`,
+      ro: `${SITE_URL}/ro/services`,
+      uk: `${SITE_URL}/uk/services`,
+      el: `${SITE_URL}/el/services`,
+      he: `${SITE_URL}/he/services`,
       'x-default': `${SITE_URL}/en/services`,
     });
     expect(metadata.keywords).toEqual([

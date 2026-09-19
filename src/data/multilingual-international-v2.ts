@@ -338,6 +338,72 @@ export const GUIDANCE_HOME_PATHS: Record<GuidanceLocale, GuidanceHomePaths> = {
     },
     ariaLabel: 'Kaksi tietopolkua',
   },
+  cs: {
+    setup: {
+      label: 'Informace o zakládání společností na Tchaj-wanu',
+      href: '/cs/services',
+    },
+    legal: {
+      label: 'Právní informace o Tchaj-wanu',
+      href: '/cs/faq',
+    },
+    ariaLabel: 'Dvě informační cesty',
+  },
+  hu: {
+    setup: {
+      label: 'Tájékoztatás a tajvani cégalapításról',
+      href: '/hu/services',
+    },
+    legal: {
+      label: 'Tajvani jogi tájékoztatás',
+      href: '/hu/faq',
+    },
+    ariaLabel: 'Két tájékoztatási útvonal',
+  },
+  ro: {
+    setup: {
+      label: 'Informații despre înființarea de societăți în Taiwan',
+      href: '/ro/services',
+    },
+    legal: {
+      label: 'Informații juridice despre Taiwan',
+      href: '/ro/faq',
+    },
+    ariaLabel: 'Două căi de informare',
+  },
+  uk: {
+    setup: {
+      label: 'Відомості про створення товариства на Тайвані',
+      href: '/uk/services',
+    },
+    legal: {
+      label: 'Правова інформація про Тайвань',
+      href: '/uk/faq',
+    },
+    ariaLabel: 'Два шляхи до відомостей',
+  },
+  el: {
+    setup: {
+      label: 'Πληροφορίες για τη σύσταση εταιρείας στην Ταϊβάν',
+      href: '/el/services',
+    },
+    legal: {
+      label: 'Νομικές πληροφορίες για την Ταϊβάν',
+      href: '/el/faq',
+    },
+    ariaLabel: 'Δύο διαδρομές πληροφόρησης',
+  },
+  he: {
+    setup: {
+      label: 'מידע על הקמת חברה בטאיוואן',
+      href: '/he/services',
+    },
+    legal: {
+      label: 'מידע משפטי על טאיוואן',
+      href: '/he/faq',
+    },
+    ariaLabel: 'שני מסלולי מידע',
+  },
 };
 
 export const LITIGATION_SITUATION_NAV: Record<

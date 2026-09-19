@@ -45,4 +45,10 @@ export const TEAM_NAME_BY_LOCALE: Record<PublicLocale8, string> = {
   da: 'Hovering International Team',
   nb: 'Hovering International Team',
   fi: 'Hovering International Team',
+  cs: 'Tchajwansko-korejský tým Hovering',
+  hu: 'A Hovering tajvani–koreai csapata',
+  ro: 'Echipa Taiwan–Coreea a Hovering',
+  uk: 'Тайвансько-корейська команда Hovering',
+  el: 'Η ομάδα Ταϊβάν–Κορέας της Hovering',
+  he: 'צוות טאיוואן–קוריאה של Hovering',
 };

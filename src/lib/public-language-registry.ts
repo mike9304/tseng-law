@@ -171,6 +171,42 @@ export const PUBLIC_LANGUAGE_REGISTRY: readonly PublicLanguageEntry[] = [
     englishName: 'Finnish',
     region: 'europe',
   },
+  {
+    locale: 'cs',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.cs,
+    englishName: 'Czech',
+    region: 'europe',
+  },
+  {
+    locale: 'hu',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.hu,
+    englishName: 'Hungarian',
+    region: 'europe',
+  },
+  {
+    locale: 'ro',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.ro,
+    englishName: 'Romanian',
+    region: 'europe',
+  },
+  {
+    locale: 'uk',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.uk,
+    englishName: 'Ukrainian',
+    region: 'europe',
+  },
+  {
+    locale: 'el',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.el,
+    englishName: 'Greek',
+    region: 'europe',
+  },
+  {
+    locale: 'he',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.he,
+    englishName: 'Hebrew',
+    region: 'europe',
+  },
 ];
 
 export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion, string>> = {
@@ -349,6 +385,49 @@ export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion
     europe: 'Eurooppa',
     americas: 'Amerikka',
   },
+
+  cs: {
+    global: 'Celosvětově',
+    'asia-pacific': 'Asie a Tichomoří',
+    'middle-east': 'Blízký východ',
+    europe: 'Evropa',
+    americas: 'Amerika',
+  },
+  hu: {
+    global: 'Világszerte',
+    'asia-pacific': 'Ázsia és Csendes-óceán',
+    'middle-east': 'Közel-Kelet',
+    europe: 'Európa',
+    americas: 'Amerika',
+  },
+  ro: {
+    global: 'Global',
+    'asia-pacific': 'Asia-Pacific',
+    'middle-east': 'Orientul Mijlociu',
+    europe: 'Europa',
+    americas: 'America',
+  },
+  uk: {
+    global: 'Глобально',
+    'asia-pacific': 'Азія і Тихий океан',
+    'middle-east': 'Близький Схід',
+    europe: 'Європа',
+    americas: 'Америка',
+  },
+  el: {
+    global: 'Παγκοσμίως',
+    'asia-pacific': 'Ασία–Ειρηνικός',
+    'middle-east': 'Μέση Ανατολή',
+    europe: 'Ευρώπη',
+    americas: 'Αμερική',
+  },
+  he: {
+    global: 'עולמי',
+    'asia-pacific': 'אסיה והאוקיינוס השקט',
+    'middle-east': 'המזרח התיכון',
+    europe: 'אירופה',
+    americas: 'אמריקה',
+  },
 };
 
 export const LANGUAGE_PICKER_COPY: Record<
@@ -504,6 +583,43 @@ export const LANGUAGE_PICKER_COPY: Record<
     title: 'Valitkaa alueenne ja kielenne',
     close: 'Sulje',
     current: 'Nykyinen kieli',
+  },
+
+  cs: {
+    open: 'Zvolte region a jazyk',
+    title: 'Zvolte svůj region a jazyk',
+    close: 'Zavřít',
+    current: 'Současný jazyk',
+  },
+  hu: {
+    open: 'Válasszon régiót és nyelvet',
+    title: 'Válassza ki a régióját és a nyelvét',
+    close: 'Bezárás',
+    current: 'Jelenlegi nyelv',
+  },
+  ro: {
+    open: 'Alegeți regiunea și limba',
+    title: 'Alegeți regiunea și limba dumneavoastră',
+    close: 'Închidere',
+    current: 'Limba actuală',
+  },
+  uk: {
+    open: 'Оберіть регіон і мову',
+    title: 'Оберіть свій регіон і мову',
+    close: 'Закрити',
+    current: 'Поточна мова',
+  },
+  el: {
+    open: 'Επιλέξτε περιοχή και γλώσσα',
+    title: 'Επιλέξτε την περιοχή και τη γλώσσα σας',
+    close: 'Κλείσιμο',
+    current: 'Τρέχουσα γλώσσα',
+  },
+  he: {
+    open: 'בחרו אזור ושפה',
+    title: 'בחרו את האזור והשפה שלכם',
+    close: 'סגירה',
+    current: 'השפה הנוכחית',
   },
 };
 

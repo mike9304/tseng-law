@@ -50,6 +50,12 @@ const GUIDANCE_ALL_LABEL: Record<GuidanceLocale4, string> = {
   da: 'Alle',
   nb: 'Alle',
   fi: 'Kaikki',
+  cs: 'Vše',
+  hu: 'Összes',
+  ro: 'Toate',
+  uk: 'Усі',
+  el: 'Όλα',
+  he: 'הכול',
 };
 
 const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
@@ -74,6 +80,12 @@ const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
   da: "viewAllLabel: 'Vis alle'",
   nb: "viewAllLabel: 'Vis alle'",
   fi: "viewAllLabel: 'Näytä kaikki'",
+  cs: "viewAllLabel: 'Zobrazit vše'",
+  hu: "viewAllLabel: 'Összes megtekintése'",
+  ro: "viewAllLabel: 'Vedeți tot'",
+  uk: "viewAllLabel: 'Показати все'",
+  el: "viewAllLabel: 'Προβολή όλων'",
+  he: "viewAllLabel: 'הצגת הכול'",
 };
 
 const ENGLISH_FILTER_LABELS = ['All', 'Company Setup', 'Legal Info', 'Case Studies'] as const;

@@ -38,6 +38,7 @@ export const GUIDANCE_DATA_FILES = [
   'src/data/international-guidance-western.ts',
   'src/data/international-guidance-it-nl-pl.ts',
   'src/data/international-guidance-asia.ts',
+  'src/data/international-guidance-nordic.ts',
   'src/data/international-guidance-answers.ts',
   'src/data/international-guidance-team.ts',
   'src/data/international-inquiry-copy.ts',
@@ -47,7 +48,7 @@ export const GUIDANCE_DATA_FILES = [
   'src/data/international-guidance-offices.ts',
 ];
 
-export const GUIDANCE_LOCALES = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl'];
+export const GUIDANCE_LOCALES = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi'];
 
 /**
  * Country tokens that must not appear in guidance copy.
@@ -141,7 +142,7 @@ export const GUIDANCE_ALLOWED_CONTEXTS = [
   {
     id: 'locale-key',
     reason: 'object key / locale identifier, not reader-facing prose',
-    test: (entry) => /^(?:vi|id|th|fil|ar|en|ja|ko|zh-hant|zh-hans|de|es|fr|pt|ms|ru|tr|it|nl|pl)$/.test(entry.key ?? ''),
+    test: (entry) => /^(?:vi|id|th|fil|ar|en|ja|ko|zh-hant|zh-hans|de|es|fr|pt|ms|ru|tr|it|nl|pl|hi|sv|da|nb|fi)$/.test(entry.key ?? ''),
   },
   {
     id: 'language-field',
@@ -163,7 +164,7 @@ export function extractLocaleBlocks(text) {
   for (let i = 0; i < lines.length; i += 1) {
     const line = lines[i];
     if (!current) {
-      const open = /^ {2}'?(vi|id|th|fil|ar|de|es|fr|pt|zh-hans|ms|ru|tr|it|nl|pl)'?: \{\s*$/.exec(line);
+      const open = /^ {2}'?(vi|id|th|fil|ar|de|es|fr|pt|zh-hans|ms|ru|tr|it|nl|pl|hi|sv|da|nb|fi)'?: \{\s*$/.exec(line);
       if (open) {
         current = { locale: open[1], startLine: i + 1, lines: [] };
         closeAtColumnZero = false;
@@ -190,11 +191,12 @@ export function extractLocaleBlocks(text) {
         closeAtColumnZero = true;
         continue;
       }
-      const asia = /^export const (simplifiedChinese|malay)GuidanceContent\b/.exec(line);
+      const asia = /^export const (simplifiedChinese|malay|hindi)GuidanceContent\b/.exec(line);
       if (asia) {
         const asiaLocale = {
           simplifiedChinese: 'zh-hans',
           malay: 'ms',
+          hindi: 'hi',
         }[asia[1]];
         current = {
           locale: asiaLocale,
@@ -204,7 +206,23 @@ export function extractLocaleBlocks(text) {
         closeAtColumnZero = true;
         continue;
       }
-      const shorthand = /^ {2}'?(de|es|fr|pt|zh-hans|ms|ru|tr|it|nl|pl)'?: [A-Za-z]/.exec(line);
+      const nordic = /^export const (swedish|danish|norwegian|finnish)GuidanceContent\b/.exec(line);
+      if (nordic) {
+        const nordicLocale = {
+          swedish: 'sv',
+          danish: 'da',
+          norwegian: 'nb',
+          finnish: 'fi',
+        }[nordic[1]];
+        current = {
+          locale: nordicLocale,
+          startLine: i + 1,
+          lines: [],
+        };
+        closeAtColumnZero = true;
+        continue;
+      }
+      const shorthand = /^ {2}'?(de|es|fr|pt|zh-hans|ms|ru|tr|it|nl|pl|hi|sv|da|nb|fi)'?: [A-Za-z]/.exec(line);
       if (shorthand) {
         blocks.push({ locale: shorthand[1], startLine: i + 1, lines: [] });
       }

@@ -1,6 +1,7 @@
 import {
   Noto_Sans,
   Noto_Sans_Arabic,
+  Noto_Sans_Devanagari,
   Noto_Sans_KR,
   Noto_Sans_JP,
   Noto_Sans_SC,
@@ -98,6 +99,14 @@ const sansArabic = Noto_Sans_Arabic({
   subsets: ['arabic'],
 });
 
+const sansDevanagari = Noto_Sans_Devanagari({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-devanagari-loaded',
+  subsets: ['devanagari'],
+});
+
 const sansLatin = Noto_Sans({
   display: 'swap',
   preload: false,
@@ -126,7 +135,12 @@ export type DocumentLanguage =
   | 'tr'
   | 'it'
   | 'nl'
-  | 'pl';
+  | 'pl'
+  | 'hi'
+  | 'sv'
+  | 'da'
+  | 'nb'
+  | 'fi';
 
 const koreanFontClassName = [sansKorean.variable, serifKorean.variable].join(' ');
 const traditionalChineseFontClassName = [
@@ -140,6 +154,7 @@ const simplifiedChineseFontClassName = [
 const japaneseFontClassName = [sansJapanese.variable, serifJapanese.variable].join(' ');
 const thaiFontClassName = [sansThai.variable, sansLatin.variable].join(' ');
 const arabicFontClassName = [sansArabic.variable, sansLatin.variable].join(' ');
+const hindiFontClassName = [sansDevanagari.variable, sansLatin.variable].join(' ');
 const latinExtendedFontClassName = sansLatin.variable;
 
 /**
@@ -163,6 +178,9 @@ export function getLocaleFontClassName(language: DocumentLanguage): string {
   if (language === 'ar') {
     return arabicFontClassName;
   }
+  if (language === 'hi') {
+    return hindiFontClassName;
+  }
   if (
     language === 'vi'
     || language === 'id'
@@ -177,6 +195,10 @@ export function getLocaleFontClassName(language: DocumentLanguage): string {
     || language === 'it'
     || language === 'nl'
     || language === 'pl'
+    || language === 'sv'
+    || language === 'da'
+    || language === 'nb'
+    || language === 'fi'
   ) {
     return latinExtendedFontClassName;
   }
@@ -194,6 +216,7 @@ export function getManagedLocaleFontClassNames(): string[] {
         japaneseFontClassName,
         thaiFontClassName,
         arabicFontClassName,
+        hindiFontClassName,
         latinExtendedFontClassName,
       ].flatMap((className) => className.split(/\s+/).filter(Boolean)),
     ),

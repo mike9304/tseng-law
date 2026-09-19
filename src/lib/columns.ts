@@ -177,6 +177,11 @@ const GUIDANCE_COLUMN_CATEGORY_LABELS: Partial<Record<GuidanceLocale4, Record<Co
   it: { formation: 'Costituzione di società a Taiwan', legal: 'Informazioni giuridiche su Taiwan', case: 'Analisi di casi' },
   nl: { formation: 'Oprichting van een vennootschap in Taiwan', legal: 'Juridische informatie over Taiwan', case: 'Casusanalyse' },
   pl: { formation: 'Zakładanie spółki na Tajwanie', legal: 'Informacje prawne o Tajwanie', case: 'Analiza spraw' },
+  hi: { formation: 'ताइवान में कंपनी स्थापना', legal: 'ताइवान कानूनी जानकारी', case: 'मामला विश्लेषण' },
+  sv: { formation: 'Bolagsbildning i Taiwan', legal: 'Juridisk information om Taiwan', case: 'Fallanalys' },
+  da: { formation: 'Selskabsstiftelse i Taiwan', legal: 'Juridisk information om Taiwan', case: 'Sagsanalyse' },
+  nb: { formation: 'Selskapsstiftelse i Taiwan', legal: 'Juridisk informasjon om Taiwan', case: 'Saksanalyse' },
+  fi: { formation: 'Yhtiön perustaminen Taiwanissa', legal: 'Oikeudellista tietoa Taiwanista', case: 'Tapausanalyysi' },
 };
 const ENGLISH_COLUMN_CATEGORY_LABELS: Record<ColumnCategory, string> = {
   formation: 'Company Setup',

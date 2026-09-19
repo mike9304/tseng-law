@@ -43,7 +43,7 @@ vi.mock('@/lib/builder/seo/sitemap-builder', () => ({
   collectAllBuilderSitemapEntries: sourceMocks.collectAllBuilderSitemapEntries,
 }));
 
-const guidanceTranslatedColumnCount = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl'].reduce((total, locale) => {
+const guidanceTranslatedColumnCount = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi'].reduce((total, locale) => {
   const dir = path.join(process.cwd(), 'src/content', `columns-${locale}`);
   if (!existsSync(dir)) return total;
   return total + readdirSync(dir).filter((name) => name.endsWith('.md')).length;
@@ -134,14 +134,14 @@ describe('sitemap column lastModified', () => {
       // /korean-lawyer-in-taiwan, /ai-intake, /guides/taiwan-company-setup,
       // /columns archive, 18 JA column details, and all six JA service
       // details (+41). Builder fixtures still drop 9 EN-only noindex routes.
-      // Plus 160 guidance core URLs (16 locales × 10 dictionary pages), plus one
+      // Plus 210 guidance core URLs (21 locales × 10 dictionary pages), plus one
       // URL per translated column file present in
       // src/content/columns-{vi,id,th,fil,ar,de,es,fr,pt,zh-hans,ms,ru,tr,it,nl,pl} (counted from disk so this
       // assertion tracks the growing corpus).
       // Semiconductor hub adds 4 URLs (ko/zh-hant/en STATIC_PATHS + ja entry).
       // Public semiconductor guide board adds 4 more URLs.
-      beforeFiltering: 343 + guidanceTranslatedColumnCount,
-      afterFiltering: 334 + guidanceTranslatedColumnCount,
+      beforeFiltering: 393 + guidanceTranslatedColumnCount,
+      afterFiltering: 384 + guidanceTranslatedColumnCount,
       removed: 9,
     });
 
@@ -440,8 +440,8 @@ describe('sitemap column lastModified', () => {
 
     for (const pageKey of ['home', 'contact'] as const) {
       const expected = buildGuidanceCoreLanguageAlternates(pageKey);
-      expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(20);
-      for (const locale of ['ko', 'zh-hant', 'en', 'ja', 'vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl'] as const) {
+      expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(25);
+      for (const locale of ['ko', 'zh-hant', 'en', 'ja', 'vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi'] as const) {
         const url = `https://tseng-law.com${guidancePublicPath(locale, pageKey)}`;
         const matches = entries.filter((entry) => entry.url === url);
         expect(matches).toHaveLength(1);
@@ -460,10 +460,10 @@ describe('sitemap column lastModified', () => {
     const expected = buildGuidanceCoreLanguageAlternates('faq');
 
     expect(expected).not.toHaveProperty('en');
-    expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(19);
+    expect(Object.keys(expected).filter((tag) => tag !== 'x-default')).toHaveLength(24);
     expect(entries.some((entry) => entry.url === 'https://tseng-law.com/en/faq')).toBe(false);
 
-    for (const locale of ['ko', 'zh-hant', 'ja', 'vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl'] as const) {
+    for (const locale of ['ko', 'zh-hant', 'ja', 'vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi'] as const) {
       const url = `https://tseng-law.com${guidancePublicPath(locale, 'faq')}`;
       const matches = entries.filter((entry) => entry.url === url);
       expect(matches).toHaveLength(1);
@@ -543,9 +543,14 @@ describe('sitemap column lastModified', () => {
     expect(usLanding?.alternates?.languages).not.toHaveProperty('it');
     expect(usLanding?.alternates?.languages).not.toHaveProperty('nl');
     expect(usLanding?.alternates?.languages).not.toHaveProperty('pl');
+    expect(usLanding?.alternates?.languages).not.toHaveProperty('hi');
+    expect(usLanding?.alternates?.languages).not.toHaveProperty('sv');
+    expect(usLanding?.alternates?.languages).not.toHaveProperty('da');
+    expect(usLanding?.alternates?.languages).not.toHaveProperty('nb');
+    expect(usLanding?.alternates?.languages).not.toHaveProperty('fi');
   });
 
-  it('appends exactly 160 unique self-canonical guidance core URLs and retains non-core routes', async () => {
+  it('appends exactly 210 unique self-canonical guidance core URLs and retains non-core routes', async () => {
     const { default: sitemap } = await import('../sitemap');
     const entries = await sitemap();
     const urls = entries.map((entry) => entry.url);
@@ -553,10 +558,10 @@ describe('sitemap column lastModified', () => {
       GUIDANCE_PAGE_KEYS.map((pageKey) => guidanceCanonicalUrl(locale, pageKey)),
     );
 
-    expect(GUIDANCE_LOCALES_4).toHaveLength(16);
+    expect(GUIDANCE_LOCALES_4).toHaveLength(21);
     expect(GUIDANCE_PAGE_KEYS).toHaveLength(10);
-    expect(newUrls).toHaveLength(160);
-    expect(new Set(newUrls).size).toBe(160);
+    expect(newUrls).toHaveLength(210);
+    expect(new Set(newUrls).size).toBe(210);
     expect(urls.some((url) => url.includes('__public-guidance'))).toBe(false);
 
     for (const url of newUrls) {

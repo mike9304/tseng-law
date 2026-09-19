@@ -1,0 +1,219 @@
+[WO-G2-4 시작 Sat Sep 19 13:28:59 KST 2026]
+Hindi, Swedish, Danish, Norwegian bokmål, and Finnish guidance locales are live in this workspace as a copy of the `7a138084`+`6bb3e839` (it·nl·pl) pattern. Consultation languages stay English, Chinese (中文), Japanese, and Korean. Attorney Wei Tseng is female (`अधिवक्ता Wei Tseng` + उन्होंने / `advokat` + hon|hun / `asianajaja`, no grammatical gender). No commit was made.
+
+## diff --stat
+
+Tracked: **51 files changed, 2586 insertions(+), 71 deletions(-)** (plus 17 untracked paths in the worktree).
+
+WO-owned untracked:
+- `src/data/international-guidance-nordic.ts`
+- `src/lib/__tests__/guidance-hi-sv-da-nb-fi-content.test.ts`
+- `src/lib/__tests__/guidance-hi-sv-da-nb-fi-routing.test.ts`
+- `src/content/columns-hi/.gitkeep`
+- `src/content/columns-sv/.gitkeep`
+- `src/content/columns-da/.gitkeep`
+- `src/content/columns-nb/.gitkeep`
+- `src/content/columns-fi/.gitkeep`
+
+Other-lane dirt already in the tree (not written by this WO): `docs/i18n/global-plan/GOAL.md`, `docs/i18n/global-plan/reviews/G1-REVIEW.md`, `docs/i18n/global-plan/reviews/G2-1-FR-PT-REVIEW.md`, plus untracked WO/review/evidence files for G2-C-FR and G2-GATE-R1.
+
+western pack body, `src/content/columns-fr/**`, Header/Footer, intent-pages, site-content: not written.
+
+## §5 command output (raw)
+
+```
+===== 1. git status --short | wc -l && git diff --stat | tail -1 =====
+      67
+ 50 files changed, 2581 insertions(+), 68 deletions(-)
+
+===== 2. npm run typecheck 2>&1 | tail -2 =====
+Generating route types...
+✓ Route types generated successfully
+```
+
+(typecheck exit 0; `tsc` printed nothing)
+
+```
+===== 3. vitest (tail -12) =====
+   ✓ sitemap column lastModified > keeps Japanese store/portfolio/events routes out of the sitemap  609ms
+   ✓ sitemap column lastModified > adds a reciprocal ja hreflang to every sibling of a published Japanese route  606ms
+   ✓ sitemap column lastModified > publishes nine reciprocal languages for home and contact core URLs  608ms
+   ✓ sitemap column lastModified > publishes eight FAQ languages excluding English  604ms
+   ✓ sitemap column lastModified > does not invent vi/id/th/fil URLs or hreflang for deep articles or US landings  630ms
+   ✓ sitemap column lastModified > appends exactly 210 unique self-canonical guidance core URLs and retains non-core routes  630ms
+
+ Test Files  14 passed (14)
+      Tests  435 passed (435)
+   Start at  14:13:18
+   Duration  20.86s (transform 1.06s, setup 160ms, collect 3.19s, tests 21.36s, environment 1ms, prepare 615ms)
+
+===== 4. node --test scripts/check-column-translation.test.mjs =====
+ℹ tests 126
+ℹ pass 126
+ℹ fail 0
+
+===== 5. eslint =====
+(empty; exit 0)
+
+===== 6. country mentions =====
+  ALLOW src/data/international-inquiry-copy.ts:458 [fil] Thai — field whose value is a list of language names
+PASS guidance-country-mentions: 0 violations
+
+===== 7. review markers =====
+       0
+```
+
+Post-§5: `src/components/__tests__/reveal-lifecycle.test.ts` (touched by 7a138084) was updated 11→12 managed classes + hi/sv/da/nb/fi. Re-eslint exit 0. Current tree: **68** short-status lines, **51 files changed, 2586 insertions(+), 71 deletions(-)**.
+
+## Language FAQ (verbatim)
+
+**hi**
+Q: `क्या हिंदी में परामर्श संभव है?`
+A: `नहीं। ये निर्देश हिंदी में लिखे गए हैं, लेकिन अधिवक्ता से परामर्श केवल अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई में होता है। हम दुभाषिए का भी वादा नहीं करते। लिखित अनुवाद अलग बात है: आपके लिखे मूल पाठ को वैसे ही रखा जाता है और स्वचालित रूप से अनुवाद नहीं किया जाता।`
+
+**sv**
+Q: `Kan jag få rådgivning på svenska?`
+A: `Nej. Dessa anvisningar är skrivna på svenska, men rådgivningen med en advokat sker endast på engelska, kinesiska (中文), japanska och koreanska. Vi lovar inte heller en tolk. Skriftlig översättning är något annat: den ursprungliga text ni skriver sparas som den är och översätts inte automatiskt.`
+
+**da**
+Q: `Kan jeg få rådgivning på dansk?`
+A: `Nej. Disse vejledninger er skrevet på dansk, men rådgivningen med en advokat foregår kun på engelsk, kinesisk (中文), japansk og koreansk. Vi lover heller ikke en tolk. Skriftlig oversættelse er noget andet: den oprindelige tekst, De skriver, gemmes som den er og oversættes ikke automatisk.`
+
+**nb**
+Q: `Kan jeg få rådgivning på norsk?`
+A: `Nei. Disse veiledningene er skrevet på norsk, men rådgivningen med en advokat foregår bare på engelsk, kinesisk (中文), japansk og koreansk. Vi lover heller ikke en tolk. Skriftlig oversettelse er noe annet: den opprinnelige teksten De skriver, lagres slik den er og oversettes ikke automatisk.`
+
+**fi**
+Q: `Voinko saada neuvontaa suomeksi?`
+A: `Ei. Nämä ohjeet on kirjoitettu suomeksi, mutta neuvonta asianajajan kanssa tapahtuu vain englanniksi, kiinaksi (中文), japaniksi ja koreaksi. Emme lupaa tulkkiakaan. Kirjallinen käännös on eri asia: alkuperäinen teksti, jonka kirjoitatte, säilytetään sellaisenaan eikä sitä käännetä automaattisesti.`
+
+## Nav labels (JS string.length, all ≤ 14)
+
+| key | hi | n | sv | n | da | n | nb | n | fi | n |
+|---|---|---|---|---|---|---|---|---|---|---|
+| home | होम | 3 | Hem | 3 | Hjem | 4 | Hjem | 4 | Etusivu | 7 |
+| services | सेवाएँ | 6 | Tjänster | 8 | Ydelser | 7 | Tjenester | 9 | Palvelut | 8 |
+| about | कार्यालय | 8 | Byrån | 5 | Kontoret | 8 | Kontoret | 8 | Toimisto | 8 |
+| lawyers | अधिवक्ता | 8 | Advokater | 9 | Advokater | 9 | Advokater | 9 | Asianajajat | 11 |
+| pricing | लागत | 4 | Kostnader | 9 | Omkostninger | 12 | Kostnader | 9 | Kulut | 5 |
+| contact | संपर्क | 6 | Kontakt | 7 | Kontakt | 7 | Kontakt | 7 | Yhteys | 6 |
+| faq | प्रश्न | 6 | Frågor | 6 | Spørgsmål | 9 | Spørsmål | 8 | Kysymykset | 10 |
+| privacy | गोपनीयता | 8 | Integritet | 10 | Privatliv | 9 | Personvern | 10 | Tietosuoja | 10 |
+| disclaimer | अस्वीकरण | 8 | Ansvar | 6 | Forbehold | 9 | Forbehold | 9 | Vastuuvapaus | 12 |
+| columns | लेख | 3 | Artiklar | 8 | Artikler | 8 | Artikler | 8 | Artikkelit | 10 |
+
+Formal address: hi `आप` / sv `ni` / da `De` / nb `De` / fi `te`. og:locale `hi_IN` · `sv_SE` · `da_DK` · `nb_NO` · `fi_FI`. Autonyms हिन्दी / Svenska / Dansk / Norsk / Suomi. Registry: hi asia-pacific Hindi; sv/da/nb/fi europe (Swedish / Danish / Norwegian / Finnish). `siteLocales` unchanged. `GUIDANCE_LOCALES_4` = 21, `PUBLIC_LOCALES_8` = 25.
+
+## Font-binding summary
+
+sv/da/nb/fi appended to the existing latin `html[lang]` and `.site[data-locale]` selectors (`--font-body-latin` / `--font-heading-latin`). hi is **not** on the latin list.
+
+New Devanagari binding:
+
+- `Noto_Sans_Devanagari` (`next/font/google`) → `--font-noto-sans-devanagari-loaded`, subsets `['devanagari']`
+- `html[lang='hi']` and `.site[data-locale='hi']` bind `--font-body` / `--font-heading` (and display aliases) to the Devanagari variable, with latin as fallback
+- managed font class list 11 → 12
+- `LATIN_EXCEPTIONS` = th, ar, zh-hans, hi (`locale-font-bindings.test.ts`)
+
+Checker: `GUIDANCE_LANGS` append hi/sv/da/nb/fi. FORBIDDEN_PHRASES 8 each (FAQ-question consult-lang tokens allowed). Nationality, language regex, thousand style, and numeral lexicons filled. Existing language tables not removed.
+
+## Unresolved
+
+- Column markdown is empty by design (`.gitkeep` only).
+- `src/components/__tests__/public-module-locale-switcher.test.tsx` still hardcodes a pre-G2-4 locale list; it was outside the §5 vitest set.
+- `docs/i18n/global-plan/GOAL.md` and `docs/i18n/global-plan/reviews/**` show other-lane edits; this WO did not write them.
+- No browser, `next start`, Playwright, or full suite (forbidden by the WO).
+- No git add/commit/push.
+=== WO-G2-4 종료 code=0 Sat Sep 19 14:14:50 KST 2026 ===
+Five public guidance locales are live: **hi · sv · da · nb · fi**. Consultation stays English, Chinese (中文), Japanese, Korean. No commit. Full write-up: `docs/i18n/global-plan/evidence/grok-G2-4.log`.
+
+## diff --stat
+
+Tracked: **51 files changed, 2586 insertions(+), 71 deletions(-)** (68 short-status lines including other-lane docs).
+
+WO untracked: `src/data/international-guidance-nordic.ts`, `guidance-hi-sv-da-nb-fi-{content,routing}.test.ts`, five `columns-{hi,sv,da,nb,fi}/.gitkeep`. Hindi lives in `international-guidance-asia.ts`. Western pack body, `columns-fr`, Header/Footer: not written.
+
+## §5 command output
+
+```
+===== 1. git status --short | wc -l && git diff --stat | tail -1 =====
+      67
+ 50 files changed, 2581 insertions(+), 68 deletions(-)
+
+===== 2. npm run typecheck 2>&1 | tail -2 =====
+Generating route types...
+✓ Route types generated successfully
+
+===== 3. vitest (tail -12) =====
+ Test Files  14 passed (14)
+      Tests  435 passed (435)
+
+===== 4. node --test scripts/check-column-translation.test.mjs =====
+ℹ tests 126
+ℹ pass 126
+ℹ fail 0
+
+===== 5. eslint =====
+(empty; exit 0)
+
+===== 6. country mentions =====
+PASS guidance-country-mentions: 0 violations
+
+===== 7. review markers =====
+       0
+```
+
+typecheck / vitest / checker / eslint / country-mentions all exit 0. After §5, `reveal-lifecycle.test.ts` was aligned to 12 managed classes (precedent file); re-eslint 0. Current tree: 68 / 51 files, +2586 / −71.
+
+## Language FAQ (verbatim)
+
+**hi**  
+Q: `क्या हिंदी में परामर्श संभव है?`  
+A: `नहीं। ये निर्देश हिंदी में लिखे गए हैं, लेकिन अधिवक्ता से परामर्श केवल अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई में होता है। हम दुभाषिए का भी वादा नहीं करते। लिखित अनुवाद अलग बात है: आपके लिखे मूल पाठ को वैसे ही रखा जाता है और स्वचालित रूप से अनुवाद नहीं किया जाता।`
+
+**sv**  
+Q: `Kan jag få rådgivning på svenska?`  
+A: `Nej. Dessa anvisningar är skrivna på svenska, men rådgivningen med en advokat sker endast på engelska, kinesiska (中文), japanska och koreanska. Vi lovar inte heller en tolk. Skriftlig översättning är något annat: den ursprungliga text ni skriver sparas som den är och översätts inte automatiskt.`
+
+**da**  
+Q: `Kan jeg få rådgivning på dansk?`  
+A: `Nej. Disse vejledninger er skrevet på dansk, men rådgivningen med en advokat foregår kun på engelsk, kinesisk (中文), japansk og koreansk. Vi lover heller ikke en tolk. Skriftlig oversættelse er noget andet: den oprindelige tekst, De skriver, gemmes som den er og oversættes ikke automatisk.`
+
+**nb**  
+Q: `Kan jeg få rådgivning på norsk?`  
+A: `Nei. Disse veiledningene er skrevet på norsk, men rådgivningen med en advokat foregår bare på engelsk, kinesisk (中文), japansk og koreansk. Vi lover heller ikke en tolk. Skriftlig oversettelse er noe annet: den opprinnelige teksten De skriver, lagres slik den er og oversettes ikke automatisk.`
+
+**fi**  
+Q: `Voinko saada neuvontaa suomeksi?`  
+A: `Ei. Nämä ohjeet on kirjoitettu suomeksi, mutta neuvonta asianajajan kanssa tapahtuu vain englanniksi, kiinaksi (中文), japaniksi ja koreaksi. Emme lupaa tulkkiakaan. Kirjallinen käännös on eri asia: alkuperäinen teksti, jonka kirjoitatte, säilytetään sellaisenaan eikä sitä käännetä automaattisesti.`
+
+## Nav labels (JS `string.length`, all ≤ 14)
+
+| key | hi | n | sv | n | da | n | nb | n | fi | n |
+|---|---|---|---|---|---|---|---|---|---|---|
+| home | होम | 3 | Hem | 3 | Hjem | 4 | Hjem | 4 | Etusivu | 7 |
+| services | सेवाएँ | 6 | Tjänster | 8 | Ydelser | 7 | Tjenester | 9 | Palvelut | 8 |
+| about | कार्यालय | 8 | Byrån | 5 | Kontoret | 8 | Kontoret | 8 | Toimisto | 8 |
+| lawyers | अधिवक्ता | 8 | Advokater | 9 | Advokater | 9 | Advokater | 9 | Asianajajat | 11 |
+| pricing | लागत | 4 | Kostnader | 9 | Omkostninger | 12 | Kostnader | 9 | Kulut | 5 |
+| contact | संपर्क | 6 | Kontakt | 7 | Kontakt | 7 | Kontakt | 7 | Yhteys | 6 |
+| faq | प्रश्न | 6 | Frågor | 6 | Spørgsmål | 9 | Spørsmål | 8 | Kysymykset | 10 |
+| privacy | गोपनीयता | 8 | Integritet | 10 | Privatliv | 9 | Personvern | 10 | Tietosuoja | 10 |
+| disclaimer | अस्वीकरण | 8 | Ansvar | 6 | Forbehold | 9 | Forbehold | 9 | Vastuuvapaus | 12 |
+| columns | लेख | 3 | Artiklar | 8 | Artikler | 8 | Artikler | 8 | Artikkelit | 10 |
+
+Address: hi `आप` / sv `ni` / da `De` / nb `De` / fi `te`. og:locale `hi_IN` · `sv_SE` · `da_DK` · `nb_NO` · `fi_FI`. Autonyms हिन्दी / Svenska / Dansk / Norsk / Suomi. `siteLocales` unchanged. `GUIDANCE_LOCALES_4` = 21, `PUBLIC_LOCALES_8` = 25.
+
+## Font binding
+
+sv/da/nb/fi are on the existing latin `html[lang]` / `.site[data-locale]` selectors. hi is not.
+
+`Noto_Sans_Devanagari` → `--font-noto-sans-devanagari-loaded`. `html[lang='hi']` and `.site[data-locale='hi']` bind `--font-body` / `--font-heading` to that variable. Managed classes 11 → 12. `LATIN_EXCEPTIONS` = th, ar, zh-hans, hi.
+
+## Unresolved
+
+- Column markdown is empty by design (`.gitkeep` only).
+- `public-module-locale-switcher.test.tsx` still uses a pre-G2-4 locale list (outside the §5 set).
+- `GOAL.md` and `docs/i18n/global-plan/reviews/**` have other-lane edits; this WO did not write them.
+- No browser, `next start`, Playwright, full suite, or git add/commit/push.
+=== WO-G2-4 종료 code=0 Sat Sep 19 14:16:31 KST 2026 ===

@@ -24,7 +24,7 @@ const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 export const repoRoot = resolve(scriptDirectory, '..');
 export const DEFAULT_SOURCE_DIR = join(repoRoot, 'src/content/columns');
 
-export const GUIDANCE_LANGS = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl'];
+export const GUIDANCE_LANGS = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi'];
 export const HANZI_MIN = 5;
 export const ENGLISH_WORD_MIN = 12;
 export const ENGLISH_STOPWORD_MIN = 3;
@@ -210,6 +210,56 @@ export const FORBIDDEN_PHRASES = {
     { id: 'pl-always-on', re: /konsultacja\s*24\s*\/\s*7|całodobowo/i, note: '즉시/상시 상담' },
     { id: 'pl-free-consult', re: /bezpłatna konsultacja|darmowa porada/i, note: '비용 보장(무료 상담)' },
   ],
+  hi: [
+    { id: 'hi-consult-lang', re: /हिन्दी में परामर्श|हिंदी में परामर्श|हिन्दी परामर्श संभव/i, note: 'hi 상담 가능' },
+    { id: 'hi-interpreter', re: /दुभाषिया प्रदान|दुभाषिए की सेवा|अनुवादक उपलब्ध/i, note: '통역 제공' },
+    { id: 'hi-immediate', re: /तुरंत उत्तर|कुछ मिनटों में उत्तर|तत्काल प्रतिक्रिया/i, note: '즉시 응답' },
+    { id: 'hi-success-rate', re: /जीत की दर|सफलता दर/i, note: '성공률' },
+    { id: 'hi-win-100', re: /100\s*%\s*(सफलता|जीत)|जीत\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'hi-cost-guarantee', re: /परिणाम की गारंटी|लागत की गारंटी|गारंटी/i, note: '비용/결과 보장' },
+    { id: 'hi-always-on', re: /24 घंटे|24\s*\/\s*7/i, note: '즉시/상시 상담' },
+    { id: 'hi-free-consult', re: /मुफ्त परामर्श|निःशुल्क परामर्श/i, note: '비용 보장(무료 상담)' },
+  ],
+  sv: [
+    { id: 'sv-consult-lang', re: /rådgivning på svenska|konsultation på svenska/i, note: 'sv 상담 가능' },
+    { id: 'sv-interpreter', re: /vi ställer en tolk|tolk tillgänglig|tolkservice/i, note: '통역 제공' },
+    { id: 'sv-immediate', re: /omedelbart svar|svar inom minuter|vi svarar genast/i, note: '즉시 응답' },
+    { id: 'sv-success-rate', re: /framgångsgrad|vinstprocent/i, note: '성공률' },
+    { id: 'sv-win-100', re: /100\s*%\s*(framgång|vinst)|framgång\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'sv-cost-guarantee', re: /kostnadsgaranti|resultatgaranti|vi garanterar resultatet/i, note: '비용/결과 보장' },
+    { id: 'sv-always-on', re: /rådgivning\s*24\s*\/\s*7|24\/7/i, note: '즉시/상시 상담' },
+    { id: 'sv-free-consult', re: /gratis konsultation|kostnadsfri rådgivning/i, note: '비용 보장(무료 상담)' },
+  ],
+  da: [
+    { id: 'da-consult-lang', re: /rådgivning på dansk|konsultation på dansk/i, note: 'da 상담 가능' },
+    { id: 'da-interpreter', re: /vi stiller en tolk|tolk tilgængelig|tolkeservice/i, note: '통역 제공' },
+    { id: 'da-immediate', re: /øjeblikkeligt svar|svar inden for minutter|vi svarer med det samme/i, note: '즉시 응답' },
+    { id: 'da-success-rate', re: /succesrate|gevinstprocent/i, note: '성공률' },
+    { id: 'da-win-100', re: /100\s*%\s*(succes|gevinst)|succes\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'da-cost-guarantee', re: /omkostningsgaranti|resultatgaranti|vi garanterer resultatet/i, note: '비용/결과 보장' },
+    { id: 'da-always-on', re: /rådgivning\s*24\s*\/\s*7|24\/7/i, note: '즉시/상시 상담' },
+    { id: 'da-free-consult', re: /gratis rådgivning|omkostningsfri rådgivning/i, note: '비용 보장(무료 상담)' },
+  ],
+  nb: [
+    { id: 'nb-consult-lang', re: /rådgivning på norsk|konsultasjon på norsk/i, note: 'nb 상담 가능' },
+    { id: 'nb-interpreter', re: /vi stiller en tolk|tolk tilgjengelig|tolketjeneste/i, note: '통역 제공' },
+    { id: 'nb-immediate', re: /umiddelbart svar|svar innen minutter|vi svarer med en gang/i, note: '즉시 응답' },
+    { id: 'nb-success-rate', re: /suksessrate|gevinstprosent/i, note: '성공률' },
+    { id: 'nb-win-100', re: /100\s*%\s*(suksess|gevinst)|suksess\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'nb-cost-guarantee', re: /kostnadsgaranti|resultatgaranti|vi garanterer resultatet/i, note: '비용/결과 보장' },
+    { id: 'nb-always-on', re: /rådgivning\s*24\s*\/\s*7|24\/7/i, note: '즉시/상시 상담' },
+    { id: 'nb-free-consult', re: /gratis konsultasjon|kostnadsfri rådgivning/i, note: '비용 보장(무료 상담)' },
+  ],
+  fi: [
+    { id: 'fi-consult-lang', re: /neuvontaa suomeksi|konsultaatio suomeksi/i, note: 'fi 상담 가능' },
+    { id: 'fi-interpreter', re: /asetamme tulkin|tulkki saatavilla|tulkkauspalvelu/i, note: '통역 제공' },
+    { id: 'fi-immediate', re: /välitön vastaus|vastaus minuuteissa|vastaamme heti/i, note: '즉시 응답' },
+    { id: 'fi-success-rate', re: /voittoprosentti|menestysprosentti/i, note: '성공률' },
+    { id: 'fi-win-100', re: /100\s*%\s*(menestys|voitto)|voitto\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'fi-cost-guarantee', re: /kustannustakuu|tulostakuu|takuu/i, note: '비용/결과 보장' },
+    { id: 'fi-always-on', re: /neuvonta\s*24\s*\/\s*7|24\/7/i, note: '즉시/상시 상담' },
+    { id: 'fi-free-consult', re: /ilmainen konsultaatio|maksuton neuvonta/i, note: '비용 보장(무료 상담)' },
+  ],
 };
 
 /** Locale-prefix swaps that are allowed; everything else must stay byte-identical to source href. */
@@ -279,6 +329,11 @@ export const NATIONALITY_TERMS = {
   it: ['Italia', 'cittadinanza italiana', 'imprese italiane', 'italiani'],
   nl: ['Nederland', 'Nederlandse nationaliteit', 'Nederlandse ondernemingen', 'Nederlanders'],
   pl: ['Polska', 'obywatelstwo polskie', 'polskie przedsiębiorstwa', 'Polacy'],
+  hi: ['भारत', 'भारतीय नागरिकता', 'भारतीय उद्यम', 'भारतीय'],
+  sv: ['Sverige', 'svenskt medborgarskap', 'svenska företag', 'svenskar'],
+  da: ['Danmark', 'dansk statsborgerskab', 'danske virksomheder', 'danskere'],
+  nb: ['Norge', 'norsk statsborgerskap', 'norske virksomheter', 'nordmenn'],
+  fi: ['Suomi', 'Suomen kansalaisuus', 'suomalaiset yritykset', 'suomalaiset'],
 };
 
 export const NATIONALITY_LANGUAGE_NAMES = {
@@ -298,6 +353,11 @@ export const NATIONALITY_LANGUAGE_NAMES = {
   it: [/in italiano/gi, /lingua italiana/gi, /in lingua italiana/gi],
   nl: [/in het Nederlands/gi, /Nederlandse taal/gi],
   pl: [/po polsku/gi, /w języku polskim/gi, /język polski/gi],
+  hi: [/हिन्दी में/gi, /हिंदी में/gi, /हिन्दी भाषा/gi],
+  sv: [/på svenska/gi, /svenska språket/gi],
+  da: [/på dansk/gi, /dansk sprog/gi],
+  nb: [/på norsk/gi, /norsk språk/gi],
+  fi: [/suomeksi/gi, /suomen kielellä/gi],
 };
 
 export const SOURCE_LANGUAGE_NAME_RE = /한국어|베트남어|인도네시아어|태국어|필리핀어|영어|일본어|중국어|타이완어|대만어/g;
@@ -328,6 +388,11 @@ export const NUMBER_THOUSAND_STYLE = {
   it: 'dot',
   nl: 'dot',
   pl: 'dot',
+  hi: 'comma',
+  sv: 'dot',
+  da: 'dot',
+  nb: 'dot',
+  fi: 'dot',
 };
 
 /**
@@ -1238,6 +1303,146 @@ function buildPlLexicon() {
   return compilePhrases(entries);
 }
 
+function buildHiLexicon() {
+  const entries = [];
+  const units = ['वर्ष', 'साल', 'माह', 'महीना', 'दिन', 'सप्ताह', 'व्यक्ति'];
+  const scales = [['अरब', 1_000_000_000], ['करोड़', 10_000_000], ['लाख', 100_000], ['हज़ार', 1_000], ['हजार', 1_000]];
+  const atoms = [
+    ['शून्य', 0], ['एक', 1], ['दो', 2], ['तीन', 3], ['चार', 4],
+    ['पाँच', 5], ['पांच', 5], ['छह', 6], ['सात', 7], ['आठ', 8], ['नौ', 9], ['दस', 10],
+  ];
+  pushPhrase(entries, 'दो तिहाई', [2, 3]);
+  pushPhrase(entries, 'पंद्रह', [15]);
+  pushPhrase(entries, 'एक वर्ष', [1]);
+  const teens = [
+    ['ग्यारह', 11], ['बारह', 12], ['तेरह', 13], ['चौदह', 14], ['पंद्रह', 15],
+    ['सोलह', 16], ['सत्रह', 17], ['अठारह', 18], ['उन्नीस', 19],
+  ];
+  for (const [phrase, n] of teens) pushPhrase(entries, phrase, [n]);
+  for (const [atom, value] of atoms) {
+    if (value >= 1) {
+      for (const [scale, factor] of scales) pushPhrase(entries, `${atom} ${scale}`, [value * factor]);
+    }
+    if (value === 1) {
+      for (const unit of units) pushPhrase(entries, `${atom} ${unit}`, [value]);
+    }
+    if (value >= 2) pushPhrase(entries, atom, [value]);
+  }
+  return compilePhrases(entries);
+}
+
+function buildSvLexicon() {
+  const entries = [];
+  const units = ['år', 'månad', 'månader', 'dag', 'dagar', 'vecka', 'veckor', 'gång', 'person', 'personer'];
+  const scales = [['miljard', 1_000_000_000], ['miljon', 1_000_000], ['tusen', 1_000]];
+  const atoms = [
+    ['noll', 0], ['en', 1], ['ett', 1], ['två', 2], ['tre', 3], ['fyra', 4],
+    ['fem', 5], ['sex', 6], ['sju', 7], ['åtta', 8], ['nio', 9], ['tio', 10],
+  ];
+  pushPhrase(entries, 'två tredjedelar', [2, 3]);
+  pushPhrase(entries, 'femton', [15]);
+  pushPhrase(entries, 'ett år', [1]);
+  const teens = [
+    ['elva', 11], ['tolv', 12], ['tretton', 13], ['fjorton', 14], ['femton', 15],
+    ['sexton', 16], ['sjutton', 17], ['arton', 18], ['nitton', 19],
+  ];
+  for (const [phrase, n] of teens) pushPhrase(entries, phrase, [n]);
+  for (const [atom, value] of atoms) {
+    if (value >= 1) {
+      for (const [scale, factor] of scales) pushPhrase(entries, `${atom} ${scale}`, [value * factor]);
+    }
+    if (value === 1) {
+      for (const unit of units) pushPhrase(entries, `${atom} ${unit}`, [value]);
+    }
+    if (value >= 2) pushPhrase(entries, atom, [value]);
+  }
+  return compilePhrases(entries);
+}
+
+function buildDaLexicon() {
+  const entries = [];
+  const units = ['år', 'måned', 'måneder', 'dag', 'dage', 'uge', 'uger', 'gang', 'person', 'personer'];
+  const scales = [['milliard', 1_000_000_000], ['million', 1_000_000], ['tusind', 1_000]];
+  const atoms = [
+    ['nul', 0], ['en', 1], ['et', 1], ['to', 2], ['tre', 3], ['fire', 4],
+    ['fem', 5], ['seks', 6], ['syv', 7], ['otte', 8], ['ni', 9], ['ti', 10],
+  ];
+  pushPhrase(entries, 'to tredjedele', [2, 3]);
+  pushPhrase(entries, 'femten', [15]);
+  pushPhrase(entries, 'et år', [1]);
+  const teens = [
+    ['elleve', 11], ['tolv', 12], ['tretten', 13], ['fjorten', 14], ['femten', 15],
+    ['seksten', 16], ['sytten', 17], ['atten', 18], ['nitten', 19],
+  ];
+  for (const [phrase, n] of teens) pushPhrase(entries, phrase, [n]);
+  for (const [atom, value] of atoms) {
+    if (value >= 1) {
+      for (const [scale, factor] of scales) pushPhrase(entries, `${atom} ${scale}`, [value * factor]);
+    }
+    if (value === 1) {
+      for (const unit of units) pushPhrase(entries, `${atom} ${unit}`, [value]);
+    }
+    if (value >= 2) pushPhrase(entries, atom, [value]);
+  }
+  return compilePhrases(entries);
+}
+
+function buildNbLexicon() {
+  const entries = [];
+  const units = ['år', 'måned', 'måneder', 'dag', 'dager', 'uke', 'uker', 'gang', 'person', 'personer'];
+  const scales = [['milliard', 1_000_000_000], ['million', 1_000_000], ['tusen', 1_000]];
+  const atoms = [
+    ['null', 0], ['en', 1], ['et', 1], ['to', 2], ['tre', 3], ['fire', 4],
+    ['fem', 5], ['seks', 6], ['sju', 7], ['åtte', 8], ['ni', 9], ['ti', 10],
+  ];
+  pushPhrase(entries, 'to tredjedeler', [2, 3]);
+  pushPhrase(entries, 'femten', [15]);
+  pushPhrase(entries, 'et år', [1]);
+  const teens = [
+    ['elleve', 11], ['tolv', 12], ['tretten', 13], ['fjorten', 14], ['femten', 15],
+    ['seksten', 16], ['sytten', 17], ['atten', 18], ['nitten', 19],
+  ];
+  for (const [phrase, n] of teens) pushPhrase(entries, phrase, [n]);
+  for (const [atom, value] of atoms) {
+    if (value >= 1) {
+      for (const [scale, factor] of scales) pushPhrase(entries, `${atom} ${scale}`, [value * factor]);
+    }
+    if (value === 1) {
+      for (const unit of units) pushPhrase(entries, `${atom} ${unit}`, [value]);
+    }
+    if (value >= 2) pushPhrase(entries, atom, [value]);
+  }
+  return compilePhrases(entries);
+}
+
+function buildFiLexicon() {
+  const entries = [];
+  const units = ['vuosi', 'vuotta', 'kuukausi', 'kuukautta', 'päivä', 'päivää', 'viikko', 'viikkoa', 'henkilö', 'henkilöä'];
+  const scales = [['miljardi', 1_000_000_000], ['miljoona', 1_000_000], ['tuhat', 1_000]];
+  const atoms = [
+    ['nolla', 0], ['yksi', 1], ['kaksi', 2], ['kolme', 3], ['neljä', 4],
+    ['viisi', 5], ['kuusi', 6], ['seitsemän', 7], ['kahdeksan', 8], ['yhdeksän', 9], ['kymmenen', 10],
+  ];
+  pushPhrase(entries, 'kaksi kolmasosaa', [2, 3]);
+  pushPhrase(entries, 'viisitoista', [15]);
+  pushPhrase(entries, 'yksi vuosi', [1]);
+  const teens = [
+    ['yksitoista', 11], ['kaksitoista', 12], ['kolmetoista', 13], ['neljätoista', 14],
+    ['viisitoista', 15], ['kuusitoista', 16], ['seitsemäntoista', 17], ['kahdeksantoista', 18], ['yhdeksäntoista', 19],
+  ];
+  for (const [phrase, n] of teens) pushPhrase(entries, phrase, [n]);
+  for (const [atom, value] of atoms) {
+    if (value >= 1) {
+      for (const [scale, factor] of scales) pushPhrase(entries, `${atom} ${scale}`, [value * factor]);
+    }
+    if (value === 1) {
+      for (const unit of units) pushPhrase(entries, `${atom} ${unit}`, [value]);
+    }
+    if (value >= 2) pushPhrase(entries, atom, [value]);
+  }
+  return compilePhrases(entries);
+}
+
 export const WORD_NUMERAL_LEXICONS = {
   vi: buildViLexicon(),
   id: buildIdLexicon(),
@@ -1255,6 +1460,11 @@ export const WORD_NUMERAL_LEXICONS = {
   it: buildItLexicon(),
   nl: buildNlLexicon(),
   pl: buildPlLexicon(),
+  hi: buildHiLexicon(),
+  sv: buildSvLexicon(),
+  da: buildDaLexicon(),
+  nb: buildNbLexicon(),
+  fi: buildFiLexicon(),
 };
 
 export function lexiconEntryCount(lang) {
@@ -1286,6 +1496,11 @@ export const DATE_MONTH_NAMES = {
   ocak: 1, 'şubat': 2, nisan: 4, 'mayıs': 5, haziran: 6, temmuz: 7, 'ağustos': 8, 'eylül': 9, ekim: 10, 'kasım': 11, 'aralık': 12,
   mac: 3, jun: 6, julai: 7, ogos: 8, disember: 12,
   '一月': 1, '二月': 2, '三月': 3, '四月': 4, '五月': 5, '六月': 6, '七月': 7, '八月': 8, '九月': 9, '十月': 10, '十一月': 11, '十二月': 12,
+  augusti: 8, marts: 3,
+  tammikuu: 1, helmikuu: 2, maaliskuu: 3, huhtikuu: 4, toukokuu: 5, kesäkuu: 6,
+  heinäkuu: 7, elokuu: 8, syyskuu: 9, lokakuu: 10, marraskuu: 11, joulukuu: 12,
+  'जनवरी': 1, 'फरवरी': 2, 'फ़रवरी': 2, 'मार्च': 3, 'अप्रैल': 4, 'मई': 5, 'जून': 6,
+  'जुलाई': 7, 'अगस्त': 8, 'सितंबर': 9, 'अक्टूबर': 10, 'नवंबर': 11, 'दिसंबर': 12,
 };
 
 export function parseArgs(argv) {

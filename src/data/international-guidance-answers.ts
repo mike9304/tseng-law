@@ -552,4 +552,164 @@ export const guidanceAnswers: Record<
       sources: ['/pl/contact', '/pl/services'],
     },
   },
+  hi: {
+    services: {
+      answer:
+        'कार्यालय ताइवान के विधि के अनुसार छह कार्य-समूहों का कार्य करता है: निवेश और कंपनी स्थापना, दीवानी विवाद और हर्जाना, विवाह, परिवार और उत्तराधिकार, श्रम, आपराधिक तथा बौद्धिक संपदा। प्रत्येक मामले का दायरा उस सामग्री की जाँच के बाद अलग से पुष्टि होता है जिसे आप भेजते हैं। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/faq', '/hi/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm ताइवान का एक कानून कार्यालय है, 2016 में National Taiwan University (國立臺灣大學) के स्नातकों द्वारा स्थापित, ताइपेई, काओश्युंग, ताइचुंग और पिंगतुंग में कार्यालयों के साथ। 2020 से लेखा विभाग है; ताइचुंग कार्यालय कोरिया और जापान से जुड़े मामलों का कार्य करता है। कार्यालय परिणाम का वादा नहीं करता। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/lawyers', '/hi/services'],
+    },
+    lawyers: {
+      answer:
+        'यह पृष्ठ Hovering के अधिवक्ताओं, संचालन प्रबंधन और सहभागी लेखा की प्रोफ़ाइलें दिखाता है। अधिवक्ता Wei Tseng (曾雋崴) ताइवान में अधिकृत हैं और कार्यालय की प्रबंध अधिवक्ता हैं; वह कोरिया, जापान और अन्य अंतरराष्ट्रीय मुवक्किलों के साथ कार्य करती हैं। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/about', '/hi/contact'],
+    },
+    pricing: {
+      answer:
+        'यह पृष्ठ मूल्य सूची प्रकाशित नहीं करता। पहले आपके भेजे सार से कार्य का दायरा तय होता है, फिर लागत की राशि और गणना का तरीका कार्य शुरू होने से पहले आपके साथ पुष्टि होता है। अधिवक्ता से बात शुल्क सहित हो सकती है; मानदेय के अतिरिक्त न्यायालय या प्राधिकरण की लागतें भी उठ सकती हैं। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/contact', '/hi/faq'],
+    },
+    contact: {
+      answer:
+        'संपर्क फ़ॉर्म से अपना सार भेजें: क्या हुआ, किस सहायता की आवश्यकता है, मामले का ताइवान से क्या संबंध है और यदि ज्ञात हो तो समयसीमा। आरंभ में पहचान पत्र या संपूर्ण प्रमाण भेजना आवश्यक नहीं। कार्यालय उत्तर की समयसीमा का वादा नहीं करता और इस पृष्ठ से नियुक्ति की पुष्टि नहीं करता। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/faq', '/hi/pricing'],
+    },
+    faq: {
+      answer:
+        'यह भाग सामान्य जानकारी के स्तर पर बार-बार पूछे जाने वाले प्रश्नों का उत्तर देता है: छह कार्य-समूह, संपर्क से पहले तैयारी, लागत तय होने का तरीका और भेजे गए संदेश का अर्थ। भेजा गया अनुरोध अधिवक्ता की जाँच की प्रतीक्षा करता है; यह कानूनी राय नहीं है, नियुक्ति नहीं है और अधिवक्ता तथा मुवक्किल के बीच संबंध नहीं बनाता। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/contact', '/hi/services'],
+    },
+  },
+  sv: {
+    services: {
+      answer:
+        'Byrån behandlar sex arbetsgrupper enligt Taiwans rätt: investering och bolagsbildning, civilrättsliga tvister och skadestånd, äktenskap, familj och arv, arbete, straffrätt samt immaterialrätt. Omfattningen av varje ärende bekräftas separat efter att en advokat har granskat det innehåll ni skickar. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
+      sources: ['/sv/faq', '/sv/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm är en advokatbyrå i Taiwan, grundad 2016 av utexaminerade från National Taiwan University (國立臺灣大學), med kontor i Taipei, Kaohsiung, Taichung och Pingtung. Sedan 2020 finns en redovisningsavdelning; kontoret i Taichung behandlar ärenden med anknytning till Korea och Japan. Byrån lovar inget resultat. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
+      sources: ['/sv/lawyers', '/sv/services'],
+    },
+    lawyers: {
+      answer:
+        'Denna sida visar profiler för Hoverings advokater, operativa ledning och anknutna revision. Advokat Wei Tseng (曾雋崴) är behörig i Taiwan och är byråns ledande advokat; hon arbetar med klienter från Korea, Japan och andra internationella klienter. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
+      sources: ['/sv/about', '/sv/contact'],
+    },
+    pricing: {
+      answer:
+        'Denna sida publicerar ingen prislista. Först fastställs arbetets omfattning utifrån sammanfattningen ni skickar, därefter bekräftas belopp och beräkningssätt med er innan arbetet börjar. Samtalet med en advokat kan vara mot betalning; utöver arvodet kan rättegångs- eller myndighetskostnader uppstå. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
+      sources: ['/sv/contact', '/sv/faq'],
+    },
+    contact: {
+      answer:
+        'Skicka er sammanfattning via kontaktformuläret: vad som har hänt, vilket stöd ni behöver, vilket samband ärendet har med Taiwan och fristen, om ni känner till den. I det första steget behöver ni ännu inte skicka identitetshandlingar eller hela bevisningen. Byrån lovar ingen svarstid och bekräftar ingen tid via denna sida. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
+      sources: ['/sv/faq', '/sv/pricing'],
+    },
+    faq: {
+      answer:
+        'Denna del besvarar vanliga frågor på nivån allmän information: de sex arbetsgrupperna, förberedelsen före kontakten, hur kostnaderna fastställs och vad ett skickat meddelande betyder. En skickad begäran väntar på en advokats granskning; den är inte ett juridiskt yttrande, inte en tid och skapar inte ett förhållande mellan advokat och klient. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
+      sources: ['/sv/contact', '/sv/services'],
+    },
+  },
+  da: {
+    services: {
+      answer:
+        'Kontoret behandler seks arbejdsgrupper efter Taiwans ret: investering og selskabsstiftelse, civile tvister og erstatning, ægteskab, familie og arv, arbejde, strafferet samt immaterialret. Omfanget af hver sag bekræftes separat, efter at en advokat har gennemgået det indhold, De sender. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
+      sources: ['/da/faq', '/da/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm er et advokatkontor i Taiwan, grundlagt i 2016 af dimittender fra National Taiwan University (國立臺灣大學), med kontorer i Taipei, Kaohsiung, Taichung og Pingtung. Siden 2020 findes en regnskabsafdeling; kontoret i Taichung behandler sager med tilknytning til Korea og Japan. Kontoret lover intet resultat. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
+      sources: ['/da/lawyers', '/da/services'],
+    },
+    lawyers: {
+      answer:
+        'Denne side viser profiler for Hoverings advokater, operative ledelse og tilknyttede revision. Advokat Wei Tseng (曾雋崴) er berettiget i Taiwan og er kontorets ledende advokat; hun arbejder med klienter fra Korea, Japan og andre internationale klienter. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
+      sources: ['/da/about', '/da/contact'],
+    },
+    pricing: {
+      answer:
+        'Denne side offentliggør ingen prisliste. Først fastlægges arbejdets omfang ud fra det resumé, De sender, derefter bekræftes beløb og beregningsmåde med Dem, før arbejdet begynder. Samtalen med en advokat kan være mod betaling; ud over honoraret kan rets- eller myndighedsomkostninger opstå. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
+      sources: ['/da/contact', '/da/faq'],
+    },
+    contact: {
+      answer:
+        'Send Deres resumé via kontaktformularen: hvad der er sket, hvilken hjælp De har brug for, hvilken forbindelse sagen har med Taiwan, og fristen, hvis De kender den. I det første trin behøver De endnu ikke sende identitetsdokumenter eller hele beviset. Kontoret lover ingen svartid og bekræfter ingen tid via denne side. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
+      sources: ['/da/faq', '/da/pricing'],
+    },
+    faq: {
+      answer:
+        'Denne del besvarer hyppige spørgsmål på niveauet almindelig information: de seks arbejdsgrupper, forberedelsen før kontakten, hvordan omkostningerne fastlægges, og hvad en sendt meddelelse betyder. En sendt anmodning venter på en advokats gennemgang; den er ikke en juridisk udtalelse, ikke en tid og skaber ikke et forhold mellem advokat og klient. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
+      sources: ['/da/contact', '/da/services'],
+    },
+  },
+  nb: {
+    services: {
+      answer:
+        'Kontoret behandler seks arbeidsgrupper etter Taiwans rett: investering og selskapsstiftelse, sivile tvister og erstatning, ekteskap, familie og arv, arbeid, strafferett samt immaterialrett. Omfanget av hver sak bekreftes separat etter at en advokat har gjennomgått innholdet De sender. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+      sources: ['/nb/faq', '/nb/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm er et advokatkontor i Taiwan, grunnlagt i 2016 av uteksaminerte fra National Taiwan University (國立臺灣大學), med kontorer i Taipei, Kaohsiung, Taichung og Pingtung. Siden 2020 finnes en regnskapsavdeling; kontoret i Taichung behandler saker med tilknytning til Korea og Japan. Kontoret lover ikke et resultat. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+      sources: ['/nb/lawyers', '/nb/services'],
+    },
+    lawyers: {
+      answer:
+        'Denne siden viser profiler for Hoverings advokater, operative ledelse og tilknyttede revisjon. Advokat Wei Tseng (曾雋崴) er berettiget i Taiwan og er kontorets ledende advokat; hun arbeider med klienter fra Korea, Japan og andre internasjonale klienter. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+      sources: ['/nb/about', '/nb/contact'],
+    },
+    pricing: {
+      answer:
+        'Denne siden publiserer ingen prisliste. Først fastsettes arbeidets omfang ut fra sammendraget De sender, deretter bekreftes beløp og beregningsmåte med Dem før arbeidet begynner. Samtalen med en advokat kan være mot betaling; i tillegg til honoraret kan retts- eller myndighetskostnader oppstå. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+      sources: ['/nb/contact', '/nb/faq'],
+    },
+    contact: {
+      answer:
+        'Send Deres sammendrag via kontaktskjemaet: hva som har skjedd, hvilken hjelp De trenger, hvilken sammenheng saken har med Taiwan, og fristen hvis De kjenner den. I det første trinnet trenger De ennå ikke sende identitetsdokumenter eller hele beviset. Kontoret lover ingen svartid og bekrefter ingen time via denne siden. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+      sources: ['/nb/faq', '/nb/pricing'],
+    },
+    faq: {
+      answer:
+        'Denne delen besvarer vanlige spørsmål på nivået alminnelig informasjon: de seks arbeidsgruppene, forberedelsen før kontakten, hvordan kostnadene fastsettes, og hva en sendt melding betyr. En sendt forespørsel venter på en advokats gjennomgang; den er ikke en juridisk uttalelse, ikke en time og skaper ikke et forhold mellom advokat og klient. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+      sources: ['/nb/contact', '/nb/services'],
+    },
+  },
+  fi: {
+    services: {
+      answer:
+        'Toimisto käsittelee kuutta työryhmää Taiwanin oikeuden mukaan: investointi ja yhtiön perustaminen, siviiliriidat ja vahingonkorvaus, avioliitto, perhe ja perintö, työ, rikosasiat sekä immateriaalioikeus. Kunkin asian laajuus vahvistetaan erikseen sen jälkeen, kun asianajaja on tarkastanut lähettämänne sisällön. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
+      sources: ['/fi/faq', '/fi/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm on taiwanilainen asianajotoimisto, jonka National Taiwan Universityn (國立臺灣大學) valmistuneet perustivat vuonna 2016, toimistoilla Taipeissa, Kaohsiungissa, Taichungissa ja Pingtungissa. Vuodesta 2020 on kirjanpito-osasto; Taichungin toimisto käsittelee Korean ja Japanin yhteyden omaavia asioita. Toimisto ei lupaa tulosta. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
+      sources: ['/fi/lawyers', '/fi/services'],
+    },
+    lawyers: {
+      answer:
+        'Tämä sivu näyttää Hoveringin asianajajien, operatiivisen johdon ja osakaskirjanpidon profiilit. Asianajaja Wei Tseng (曾雋崴) on kelpoinen Taiwanissa ja on toimiston johtava asianajaja; hän työskentelee päämiesten kanssa Koreasta, Japanista ja muiden kansainvälisten päämiesten kanssa. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
+      sources: ['/fi/about', '/fi/contact'],
+    },
+    pricing: {
+      answer:
+        'Tämä sivu ei julkaise hinnastoa. Ensin työn laajuus vahvistetaan lähettämästänne yhteenvedosta, sen jälkeen määrä ja laskentatapa vahvistetaan kanssanne ennen työn alkamista. Keskustelu asianajajan kanssa voi olla maksullinen; palkkion lisäksi voi syntyä tuomioistuin- tai viranomaiskuluja. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
+      sources: ['/fi/contact', '/fi/faq'],
+    },
+    contact: {
+      answer:
+        'Lähettäkää yhteenvedon yhteydenottolomakkeella: mitä on tapahtunut, millaista apua tarvitsette, mikä yhteys asialla on Taiwaniin, ja määräaika, jos tunnette sen. Ensimmäisessä vaiheessa ei vielä tarvitse lähettää henkilöllisyysasiakirjoja eikä koko näyttöä. Toimisto ei lupaa vastausaikaa eikä vahvista tapaamista tämän sivun kautta. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
+      sources: ['/fi/faq', '/fi/pricing'],
+    },
+    faq: {
+      answer:
+        'Tämä osa vastaa usein kysyttyihin kysymyksiin yleisen tiedon tasolla: kuusi työryhmää, valmistelu ennen yhteydenottoa, kulujen vahvistaminen ja lähetetyn viestin merkitys. Lähetetty pyyntö odottaa asianajajan tarkastusta; se ei ole oikeudellinen lausunto, ei tapaaminen eikä synnytä suhdetta asianajajan ja päämiehen välillä. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
+      sources: ['/fi/contact', '/fi/services'],
+    },
+  },
 };

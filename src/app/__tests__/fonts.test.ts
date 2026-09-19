@@ -15,6 +15,7 @@ const fontLoaders = vi.hoisted(() => {
     Noto_Sans_SC: createFontLoader(),
     Noto_Sans_Thai: createFontLoader(),
     Noto_Sans_Arabic: createFontLoader(),
+    Noto_Sans_Devanagari: createFontLoader(),
     Noto_Sans: createFontLoader(),
     Noto_Serif_KR: createFontLoader(),
     Noto_Serif_JP: createFontLoader(),
@@ -72,8 +73,8 @@ describe('locale font configuration', () => {
       '--font-noto-sans-jp-loaded',
       '--font-noto-serif-jp-loaded',
     ]));
-    expect(managed).toHaveLength(11);
-    expect(new Set(managed).size).toBe(11);
+    expect(managed).toHaveLength(12);
+    expect(new Set(managed).size).toBe(12);
     for (const locale of ['ko', 'en', 'zh-Hant', 'ja'] as const) {
       for (const fontClass of getLocaleFontClassName(locale).split(' ')) {
         expect(managed).toContain(fontClass);
@@ -118,11 +119,15 @@ describe('locale font configuration', () => {
     expect(getLocaleFontClassName('it')).toBe('--font-noto-sans-latin-loaded');
     expect(getLocaleFontClassName('nl')).toBe('--font-noto-sans-latin-loaded');
     expect(getLocaleFontClassName('pl')).toBe('--font-noto-sans-latin-loaded');
+    expect(getLocaleFontClassName('sv')).toBe('--font-noto-sans-latin-loaded');
+    expect(getLocaleFontClassName('da')).toBe('--font-noto-sans-latin-loaded');
+    expect(getLocaleFontClassName('nb')).toBe('--font-noto-sans-latin-loaded');
+    expect(getLocaleFontClassName('fi')).toBe('--font-noto-sans-latin-loaded');
     expect(getLocaleFontClassName('zh-Hans')).toContain('--font-noto-sans-sc-loaded');
     expect(getLocaleFontClassName('zh-Hans')).toContain('--font-noto-serif-sc-loaded');
 
-    const documentLanguages = ['ko', 'zh-Hant', 'en', 'ja', 'vi', 'id', 'th', 'fil', 'de', 'es', 'fr', 'pt', 'zh-Hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl'] as const;
-    expect(documentLanguages).toHaveLength(19);
+    const documentLanguages = ['ko', 'zh-Hant', 'en', 'ja', 'vi', 'id', 'th', 'fil', 'de', 'es', 'fr', 'pt', 'zh-Hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'sv', 'da', 'nb', 'fi'] as const;
+    expect(documentLanguages).toHaveLength(23);
     for (const language of documentLanguages) {
       for (const fontClass of getLocaleFontClassName(language).split(' ').filter(Boolean)) {
         expect(managed).toContain(fontClass);
@@ -143,6 +148,22 @@ describe('locale font configuration', () => {
     expect(classes).toContain('--font-noto-sans-arabic-loaded');
     expect(classes).toContain('--font-noto-sans-latin-loaded');
     // Arabic must not fall through to the Korean pair.
+    expect(classes).not.toContain('--font-noto-sans-kr-loaded');
+    for (const fontClass of classes) expect(getManagedLocaleFontClassNames()).toContain(fontClass);
+  });
+
+  it('requests Noto Sans Devanagari for Hindi and pairs it with the latin face', () => {
+    expect(fontLoaders.Noto_Sans_Devanagari).toHaveBeenCalledOnce();
+    expect(fontLoaders.Noto_Sans_Devanagari).toHaveBeenCalledWith({
+      display: 'swap',
+      preload: false,
+      variable: '--font-noto-sans-devanagari-loaded',
+      weight: 'variable',
+      subsets: ['devanagari'],
+    });
+    const classes = getLocaleFontClassName('hi').split(' ');
+    expect(classes).toContain('--font-noto-sans-devanagari-loaded');
+    expect(classes).toContain('--font-noto-sans-latin-loaded');
     expect(classes).not.toContain('--font-noto-sans-kr-loaded');
     for (const fontClass of classes) expect(getManagedLocaleFontClassNames()).toContain(fontClass);
   });

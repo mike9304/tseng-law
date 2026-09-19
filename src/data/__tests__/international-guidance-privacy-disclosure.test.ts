@@ -27,6 +27,11 @@ const PENDING_CONFIRMATION: Record<(typeof GUIDANCE_LOCALES_4)[number], RegExp> 
   it: /in attesa di conferma dello studio|non ancora confermato dallo studio/,
   nl: /wacht op bevestiging door het kantoor|nog niet bevestigd door het kantoor/,
   pl: /oczekuje potwierdzenia kancelarii|nie zostało jeszcze potwierdzone przez kancelarię/,
+  hi: /कार्यालय की पुष्टि की प्रतीक्षा|अभी कार्यालय द्वारा पुष्ट नहीं/,
+  sv: /väntar på byråns bekräftelse|ännu inte bekräftat av byrån/,
+  da: /venter på kontorets bekræftelse|endnu ikke bekræftet af kontoret/,
+  nb: /venter på kontorets bekreftelse|ennå ikke bekreftet av kontoret/,
+  fi: /odottaa toimiston vahvistusta|ei ole vielä vahvistettu toimiston toimesta/,
 };
 
 const GENERIC_PENDING = /pending confirmation|operator confirmation|confirmed by the operator/i;

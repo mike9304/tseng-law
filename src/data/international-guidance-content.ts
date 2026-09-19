@@ -1,5 +1,5 @@
 /**
- * Core guidance pages for the guidance languages (vi, id, th, fil, ar, de, es, fr, pt, zh-hans, ms, ru, tr, it, nl, pl).
+ * Core guidance pages for the guidance languages (vi, id, th, fil, ar, de, es, fr, pt, zh-hans, ms, ru, tr, it, nl, pl, hi, sv, da, nb, fi).
  *
  * Guidance is published in the page language; consultations with an attorney
  * are handled only in English, Chinese, Japanese and Korean. Every locale below
@@ -17,9 +17,16 @@
 
 import { AR_PRIVACY_POLICY_LABEL, ID_PRIVACY_POLICY_LABEL } from '@/data/guidance-privacy-label';
 import {
+  hindiGuidanceContent,
   malayGuidanceContent,
   simplifiedChineseGuidanceContent,
 } from '@/data/international-guidance-asia';
+import {
+  danishGuidanceContent,
+  finnishGuidanceContent,
+  norwegianGuidanceContent,
+  swedishGuidanceContent,
+} from '@/data/international-guidance-nordic';
 import {
   dutchGuidanceContent,
   frenchGuidanceContent,
@@ -48,7 +55,12 @@ export type GuidanceLocale =
   | 'tr'
   | 'it'
   | 'nl'
-  | 'pl';
+  | 'pl'
+  | 'hi'
+  | 'sv'
+  | 'da'
+  | 'nb'
+  | 'fi';
 
 export type GuidancePageKey =
   | 'home'
@@ -2631,4 +2643,9 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
   it: italianGuidanceContent,
   nl: dutchGuidanceContent,
   pl: polishGuidanceContent,
+  hi: hindiGuidanceContent,
+  sv: swedishGuidanceContent,
+  da: danishGuidanceContent,
+  nb: norwegianGuidanceContent,
+  fi: finnishGuidanceContent,
 };

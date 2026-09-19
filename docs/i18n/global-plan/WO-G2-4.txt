@@ -1,0 +1,52 @@
+WO-G2-4 — 안내 로케일 5개 추가: hi(हिन्दी) · sv(Svenska) · da(Dansk) · nb(Norsk bokmål) · fi(Suomi) — 커밋 7a138084+6bb3e839(it·nl·pl) 선례 복제
+
+작업트리: /Users/son7/Projects/tseng-law-global-picker-20260918. 밖 쓰기 금지. git add/commit/push 금지. build·next start·Playwright·전체 스위트·npm install 금지(§5 명령만).
+node: export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+**선행 학습(필수)**: `git show 7a138084 --stat` 및 `src/data/international-guidance-it-nl-pl.ts` 패턴. 칼럼 md는 범위 밖(빈 폴더 + .gitkeep).
+**파일 소유권**: `src/content/columns-fr/**` 와 `docs/i18n/global-plan/reviews/**` 는 Opus 레인 소유 — 읽기만, 쓰기 금지.
+
+## 1. 제품 잠금 (5로케일 공통)
+- 공개 **안내** 로케일. 상담 언어 아님 → 해당 언어 상담·통역·즉시응답·성공률·비용/결과 보장·24/7·무료 상담 금지. 언어 FAQ 답 "아니오 — 영어·중국어(中文)·일본어·한국어만".
+- 격식: hi `आप` / sv `ni` / da `De` / nb `De` / fi `te`. 대표 변호사 曾雋崴(Wei Tseng) **여성**.
+  - hi: `अधिवक्ता Wei Tseng` + 여성 합의(वह/उन्होंने). `वकीला` 조어 금지.
+  - sv: `advokat` + `hon/henne`. da/nb: `advokat` + `hun/hende`(da) · `hun/henne`(nb).
+  - fi: 문법적 성별 없음. `asianajaja Wei Tseng`.
+- 본문은 de 팩(`germanGuidanceContent`) 의미 단위 번역. 사무소 사실 동일. 새 법률 주장 금지. `[변호사 검수 필요]` 0.
+- 카테고리(`src/lib/columns.ts`):
+  - hi { formation: 'ताइवान में कंपनी स्थापना', legal: 'ताइवान कानूनी जानकारी', case: 'मामला विश्लेषण' }
+  - sv { formation: 'Bolagsbildning i Taiwan', legal: 'Juridisk information om Taiwan', case: 'Fallanalys' }
+  - da { formation: 'Selskabsstiftelse i Taiwan', legal: 'Juridisk information om Taiwan', case: 'Sagsanalyse' }
+  - nb { formation: 'Selskapsstiftelse i Taiwan', legal: 'Juridisk informasjon om Taiwan', case: 'Saksanalyse' }
+  - fi { formation: 'Yhtiön perustaminen Taiwanissa', legal: 'Oikeudellista tietoa Taiwanista', case: 'Tapausanalyysi' }
+- 지명: hi 'ताइवान', sv/da/nb/fi 'Taiwan'. og:locale hi_IN · sv_SE · da_DK · nb_NO · fi_FI. hreflang 'hi' 'sv' 'da' 'nb' 'fi'. autonym 'हिन्दी' · 'Svenska' · 'Dansk' · 'Norsk' · 'Suomi'.
+- 레지스트리: hi asia-pacific englishName Hindi; sv/da/nb/fi europe (Swedish / Danish / Norwegian / Finnish).
+- **네비 라벨 ≤ 14자**(공백 포함). ru mobile-nav-forced 재발 금지.
+- 무료 상담 긍정 문장 금지. 기존 팩처럼 '무료'는 부정문에만(6bb3e839).
+
+## 2. 팩·폰트
+- 신규 `src/data/international-guidance-nordic.ts` (sv/da/nb/fi) + `src/data/international-guidance-asia.ts`에 hi 추가(zh-hans/ms 옆). western 팩 본문 수정 금지.
+- `GUIDANCE_LOCALES_4` / `PUBLIC_LOCALES_8`에 5코드 append. `siteLocales` 확대 금지.
+- 폰트: sv/da/nb/fi는 기존 latin 바인딩 셀렉터에 추가. hi는 `Noto_Sans_Devanagari`(next/font/google) 로더 + `html[lang='hi']` 바인딩(`--font-body`/`--font-heading` → Devanagari 변수). latin 셀렉터에 hi 넣지 말 것.
+- `locale-font-bindings.test.ts` 갱신.
+
+## 3. 체커
+`scripts/check-column-translation.mjs`의 `GUIDANCE_LANGS`에 5언어 추가하고 FORBIDDEN_PHRASES(8 전후)·국적어·언어 정규식·수사 스타일·어휘집 항목을 채운다. 기존 언어 테이블 삭제/약화 금지. `src/content/columns-{hi,sv,da,nb,fi}/.gitkeep`만.
+
+금지 토큰 예: hi 'जीत की दर|गारंटी|सर्वश्रेष्ठ|एकमात्र|मुफ्त परामर्श|24 घंटे', sv 'framgångsgrad|garanti|bäst|enda|gratis konsultation|24/7', da 'succesrate|garanti|bedst|eneste|gratis rådgivning|24/7', nb 'suksessrate|garanti|best|eneste|gratis konsultasjon|24/7', fi 'voittoprosentti|takuu|paras|ainoa|ilmainen konsultaatio|24/7'. 언어 FAQ 질문 내 등장은 허용.
+
+## 4. 허용 파일
+it/nl/pl 커밋이 만진 파일 유형 전부(가이던스 맵·레지스트리·폰트·og·llms·사이트맵·체커·테스트) + 신규 nordic 팩 + asia.ts hi + 신규 테스트 `guidance-hi-sv-da-nb-fi-content.test.ts`·`-routing.test.ts` + gitkeep 5개.
+금지: 기존 팩 본문, intent-pages, site-content, Header/Footer, columns-fr, docs/reviews, git commit.
+
+## 5. 검증(전부 실행·출력 그대로)
+cd /Users/son7/Projects/tseng-law-global-picker-20260918 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+git status --short | wc -l && git diff --stat | tail -1
+npm run typecheck 2>&1 | tail -2
+npx vitest run src/lib/__tests__/guidance-hi-sv-da-nb-fi-content.test.ts src/lib/__tests__/guidance-hi-sv-da-nb-fi-routing.test.ts src/lib/__tests__/guidance-it-nl-pl-content.test.ts src/lib/__tests__/public-guidance.test.ts src/lib/__tests__/public-language-registry.test.ts src/app/__tests__/sitemap.test.ts src/app/__tests__/fonts.test.ts src/app/__tests__/locale-font-bindings.test.ts src/lib/__tests__/international-guidance-answers.test.ts src/lib/__tests__/global-seo-locale-integrity.test.ts src/data/__tests__/guidance-country-mentions.test.ts src/data/__tests__/guidance-disclosure-parity.test.ts src/lib/consultation/__tests__/intake-language-contract.test.ts src/components/__tests__/global-language-picker.test.tsx 2>&1 | tail -12
+node --test scripts/check-column-translation.test.mjs 2>&1 | grep -E "^ℹ (tests|pass|fail)"
+npx eslint --max-warnings=0 --ext .ts,.tsx $(git diff --name-only | grep -E '^src/.*\.(ts|tsx)$') $(git ls-files --others --exclude-standard | grep -E '^src/.*\.(ts|tsx)$') 2>&1 | tail -3
+node scripts/check-guidance-country-mentions.mjs 2>&1 | tail -2
+grep -rn "\[변호사 검수 필요\]" src/data/international-guidance-nordic.ts src/data/international-guidance-asia.ts | wc -l
+
+## 6. 보고: diff --stat · 명령 출력 · 5로케일 언어 FAQ 문답 원문 · nav 라벨 표(5언어, 글자 수) · 폰트 바인딩 요약 · 미해결.
+보고 파일: `docs/i18n/global-plan/evidence/grok-G2-4.log`에만 남김(이 워크오더를 실행하는 에이전트의 stdout). 별도 md 커밋 금지.

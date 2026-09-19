@@ -219,7 +219,11 @@ html[lang='ru'],
 html[lang='tr'],
 html[lang='it'],
 html[lang='nl'],
-html[lang='pl'] {
+html[lang='pl'],
+html[lang='sv'],
+html[lang='da'],
+html[lang='nb'],
+html[lang='fi'] {
   --font-body: var(--font-body-latin);
   --font-sans: var(--font-body-latin);
   --font-heading: var(--font-heading-latin);
@@ -255,6 +259,15 @@ html[lang='th'] {
   --font-heading-ko: var(--font-body-th);
   --font-display: var(--font-body-th);
   --font-display-en: var(--font-body-th);
+}
+
+html[lang='hi'] {
+  --font-body: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-sans: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading-ko: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display-en: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
 }
 
 *,
@@ -638,7 +651,11 @@ li,
 .site[data-locale='tr'],
 .site[data-locale='it'],
 .site[data-locale='nl'],
-.site[data-locale='pl'] {
+.site[data-locale='pl'],
+.site[data-locale='sv'],
+.site[data-locale='da'],
+.site[data-locale='nb'],
+.site[data-locale='fi'] {
   --font-body: var(--font-body-latin);
   --font-sans: var(--font-body-latin);
   --font-display: var(--font-heading-latin);
@@ -668,6 +685,14 @@ li,
   --font-display: var(--font-body-th);
   --font-heading: var(--font-body-th);
   --font-heading-ko: var(--font-body-th);
+}
+
+.site[data-locale='hi'] {
+  --font-body: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-sans: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading-ko: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
 }
 
 html.has-cyber-cursor,

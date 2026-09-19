@@ -130,6 +130,11 @@ const GUIDANCE_FILTER_ALL_LABEL: Record<GuidanceLocale4, string> = {
   it: 'Tutti',
   nl: 'Alles',
   pl: 'Wszystkie',
+  hi: 'सभी',
+  sv: 'Alla',
+  da: 'Alle',
+  nb: 'Alle',
+  fi: 'Kaikki',
 };
 
 /** Same strings `guidanceColumnCategoryLabel` returns in `src/lib/columns.ts`. */
@@ -214,6 +219,31 @@ const GUIDANCE_FILTER_CATEGORY_LABEL: Record<GuidanceLocale4, Record<ColumnCateg
     legal: 'Informacje prawne o Tajwanie',
     case: 'Analiza spraw',
   },
+  hi: {
+    formation: 'ताइवान में कंपनी स्थापना',
+    legal: 'ताइवान कानूनी जानकारी',
+    case: 'मामला विश्लेषण',
+  },
+  sv: {
+    formation: 'Bolagsbildning i Taiwan',
+    legal: 'Juridisk information om Taiwan',
+    case: 'Fallanalys',
+  },
+  da: {
+    formation: 'Selskabsstiftelse i Taiwan',
+    legal: 'Juridisk information om Taiwan',
+    case: 'Sagsanalyse',
+  },
+  nb: {
+    formation: 'Selskapsstiftelse i Taiwan',
+    legal: 'Juridisk informasjon om Taiwan',
+    case: 'Saksanalyse',
+  },
+  fi: {
+    formation: 'Yhtiön perustaminen Taiwanissa',
+    legal: 'Oikeudellista tietoa Taiwanista',
+    case: 'Tapausanalyysi',
+  },
 };
 
 /** Reviewed `home.columnsReadMoreLabel` — same CTA GuidanceHomeBody already uses. */
@@ -234,6 +264,11 @@ const GUIDANCE_CARD_READ_MORE_LABEL: Record<GuidanceLocale4, string> = {
   it: 'Leggere oltre',
   nl: 'Verder lezen',
   pl: 'Czytaj dalej',
+  hi: 'आगे पढ़ें',
+  sv: 'Läs vidare',
+  da: 'Læs videre',
+  nb: 'Les videre',
+  fi: 'Lukekaa lisää',
 };
 
 function categoryFilterLabels(locale: PublicLocale8) {

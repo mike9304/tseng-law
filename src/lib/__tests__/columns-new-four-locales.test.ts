@@ -71,6 +71,11 @@ describe('new-four column directory mapping', () => {
       it: 'src/content/columns-it',
       nl: 'src/content/columns-nl',
       pl: 'src/content/columns-pl',
+      hi: 'src/content/columns-hi',
+      sv: 'src/content/columns-sv',
+      da: 'src/content/columns-da',
+      nb: 'src/content/columns-nb',
+      fi: 'src/content/columns-fi',
     });
     expect(OPTIONAL_COLUMN_LOCALES).toEqual(GUIDANCE_LOCALES_4);
     expect(COLUMN_CONTENT_DIR_BY_LOCALE.vi).not.toBe(COLUMN_CONTENT_DIR_BY_LOCALE.ko);

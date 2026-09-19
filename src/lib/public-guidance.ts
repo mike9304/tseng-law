@@ -10,8 +10,9 @@ export type ExistingSiteLocale4 = (typeof EXISTING_SITE_LOCALES_4)[number];
  * normalized into KO. The `_4` suffix is historical — the set grew past four
  * (Arabic, then German and Spanish, then French and Portuguese, then
  * Simplified Chinese, Malay, Russian and Turkish, then Italian, Dutch and
- * Polish) and the name was kept so the flip touched the locale data instead
- * of every import in the repo.
+ * Polish, then Hindi, Swedish, Danish, Norwegian and Finnish) and the name
+ * was kept so the flip touched the locale data instead of every import in the
+ * repo.
  */
 export const GUIDANCE_LOCALES_4 = [
   'vi',
@@ -30,6 +31,11 @@ export const GUIDANCE_LOCALES_4 = [
   'it',
   'nl',
   'pl',
+  'hi',
+  'sv',
+  'da',
+  'nb',
+  'fi',
 ] as const;
 export type GuidanceLocale4 = (typeof GUIDANCE_LOCALES_4)[number];
 
@@ -44,9 +50,9 @@ export type GuidanceConsultationLanguageLocale =
 
 /**
  * Public language surface. Do not fold this into `siteLocales`. The `_8`
- * suffix is historical (see {@link GUIDANCE_LOCALES_4}); the set is twenty
- * since Italian, Dutch and Polish joined the guidance tier after Simplified
- * Chinese, Malay, Russian and Turkish.
+ * suffix is historical (see {@link GUIDANCE_LOCALES_4}); the set is
+ * twenty-five since Hindi, Swedish, Danish, Norwegian and Finnish joined the
+ * guidance tier after Italian, Dutch and Polish.
  */
 export const PUBLIC_LOCALES_8 = [
   'ko',
@@ -69,6 +75,11 @@ export const PUBLIC_LOCALES_8 = [
   'it',
   'nl',
   'pl',
+  'hi',
+  'sv',
+  'da',
+  'nb',
+  'fi',
 ] as const;
 export type PublicLocale8 = (typeof PUBLIC_LOCALES_8)[number];
 
@@ -147,6 +158,11 @@ export const PUBLIC_LANGUAGE_AUTONYMS: Record<PublicLocale8, string> = {
   it: 'Italiano',
   nl: 'Nederlands',
   pl: 'Polski',
+  hi: 'हिन्दी',
+  sv: 'Svenska',
+  da: 'Dansk',
+  nb: 'Norsk',
+  fi: 'Suomi',
 };
 
 export type PublicDocumentLanguage =
@@ -169,10 +185,15 @@ export type PublicDocumentLanguage =
   | 'tr'
   | 'it'
   | 'nl'
-  | 'pl';
+  | 'pl'
+  | 'hi'
+  | 'sv'
+  | 'da'
+  | 'nb'
+  | 'fi';
 
 const DEFAULT_SITE_URL = 'https://tseng-law.com';
-const PUBLIC_LOCALE_PATH_RE = /^\/(ko|zh-hant|zh-hans|en|ja|vi|id|th|fil|ar|de|es|fr|pt|ms|ru|tr|it|nl|pl)(?=\/|$)/i;
+const PUBLIC_LOCALE_PATH_RE = /^\/(ko|zh-hant|zh-hans|en|ja|vi|id|th|fil|ar|de|es|fr|pt|ms|ru|tr|it|nl|pl|hi|sv|da|nb|fi)(?=\/|$)/i;
 const PAGE_KEY_BY_ROUTE: Record<GuidanceCoreRouteKey, GuidancePageKey> = {
   '': 'home',
   services: 'services',
@@ -204,6 +225,11 @@ export function isGuidanceLocale4(value?: string | null): value is GuidanceLocal
     || value === 'it'
     || value === 'nl'
     || value === 'pl'
+    || value === 'hi'
+    || value === 'sv'
+    || value === 'da'
+    || value === 'nb'
+    || value === 'fi'
   );
 }
 

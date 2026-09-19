@@ -357,6 +357,11 @@ const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
   it: 'Italian',
   nl: 'Dutch',
   pl: 'Polish',
+  hi: 'Hindi',
+  sv: 'Swedish',
+  da: 'Danish',
+  nb: 'Norwegian',
+  fi: 'Finnish',
 };
 
 export function buildRootLlmsTxt(): string {
@@ -643,6 +648,46 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
       'Plik llms.txt jest jedynie mapą do znajdowania stron publicznych; nie obiecuje miejsca w wyszukiwaniu, poparcia, rekomendacji sztucznej inteligencji ani wyświetlenia.',
     confidentialNotice:
       'Ponieważ oryginalny tekst jest zapisywany, na pierwszym etapie nie należy wpisywać tego, co jeszcze nie jest potrzebne, na przykład numeru paszportu, numeru dokumentu tożsamości ani danych rachunku.',
+  },
+  hi: {
+    consultationNotice:
+      'ये निर्देश हिन्दी में लिखे गए हैं, लेकिन अधिवक्ता से परामर्श केवल अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई में होता है।',
+    discoveryNotice:
+      'llms.txt फ़ाइल केवल सार्वजनिक पृष्ठ खोजने का मानचित्र है; यह खोज क्रम, समर्थन, कृत्रिम बुद्धि की अनुशंसा या दृश्यता का वादा नहीं करती।',
+    confidentialNotice:
+      'मूल पाठ रखा जाता है, इसलिए पहले चरण में वह न लिखें जिसकी अभी आवश्यकता नहीं है, जैसे पासपोर्ट संख्या, पहचान संख्या या खाता विवरण।',
+  },
+  sv: {
+    consultationNotice:
+      'Dessa anvisningar är skrivna på svenska, men rådgivningen med en advokat sker endast på engelska, kinesiska (中文), japanska och koreanska.',
+    discoveryNotice:
+      'Filen llms.txt är endast en karta för att hitta offentliga sidor; den lovar inte sökplacering, stöd, rekommendation från artificiell intelligens eller synlighet.',
+    confidentialNotice:
+      'Eftersom originaltexten sparas ska ni i det första steget inte skriva det som ännu inte behövs, till exempel passnummer, identitetsnummer eller kontouppgifter.',
+  },
+  da: {
+    consultationNotice:
+      'Disse vejledninger er skrevet på dansk, men rådgivningen med en advokat foregår kun på engelsk, kinesisk (中文), japansk og koreansk.',
+    discoveryNotice:
+      'Filen llms.txt er kun et kort til at finde offentlige sider; den lover ikke søgeplacering, støtte, anbefaling fra kunstig intelligens eller synlighed.',
+    confidentialNotice:
+      'Fordi originalteksten gemmes, skal De i det første trin ikke skrive det, der endnu ikke er nødvendigt, for eksempel pasnummer, identitetsnummer eller kontooplysninger.',
+  },
+  nb: {
+    consultationNotice:
+      'Disse veiledningene er skrevet på norsk, men rådgivningen med en advokat foregår bare på engelsk, kinesisk (中文), japansk og koreansk.',
+    discoveryNotice:
+      'Filen llms.txt er bare et kart for å finne offentlige sider; den lover ikke søkeplassering, støtte, anbefaling fra kunstig intelligens eller synlighet.',
+    confidentialNotice:
+      'Fordi originalteksten lagres, skal De i det første trinnet ikke skrive det som ennå ikke er nødvendig, for eksempel passnummer, identitetsnummer eller kontoopplysninger.',
+  },
+  fi: {
+    consultationNotice:
+      'Nämä ohjeet on kirjoitettu suomeksi, mutta neuvonta asianajajan kanssa tapahtuu vain englanniksi, kiinaksi (中文), japaniksi ja koreaksi.',
+    discoveryNotice:
+      'Tiedosto llms.txt on vain kartta julkisten sivujen löytämiseen; se ei lupaa hakusijaa, tukea, tekoälyn suositusta eikä näkyvyyttä.',
+    confidentialNotice:
+      'Alkuperäinen teksti säilytetään, joten ensimmäisessä vaiheessa älkää kirjoittako sellaista, mitä ei vielä tarvita, esimerkiksi passinumeroa, henkilötunnusta tai tilitietoja.',
   },
 };
 

@@ -40,6 +40,11 @@ describe('multilingual SEO language alternates', () => {
           it: `https://tseng-law.com/it${path}`,
           nl: `https://tseng-law.com/nl${path}`,
           pl: `https://tseng-law.com/pl${path}`,
+          hi: `https://tseng-law.com/hi${path}`,
+          sv: `https://tseng-law.com/sv${path}`,
+          da: `https://tseng-law.com/da${path}`,
+          nb: `https://tseng-law.com/nb${path}`,
+          fi: `https://tseng-law.com/fi${path}`,
           'x-default': `https://tseng-law.com/en${path}`,
         });
         expect(expected).not.toHaveProperty('zh-hant');

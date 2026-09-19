@@ -81,6 +81,11 @@ describe('MULTILINGUAL-INTERNATIONAL-v2 unpublished candidate', () => {
       it: /inglese/i,
       nl: /Engels/i,
       pl: /angielsk/i,
+      hi: /अंग्रेज़ी/,
+      sv: /engelska/i,
+      da: /engelsk/i,
+      nb: /engelsk/i,
+      fi: /englanniksi/i,
     };
     for (const locale of GUIDANCE_LOCALES_4) {
       const notice = internationalInquiryCopy[locale].consultationNotice;

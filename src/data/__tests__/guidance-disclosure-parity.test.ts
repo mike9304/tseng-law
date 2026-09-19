@@ -36,7 +36,7 @@ import { internationalInquiryCopy } from '@/data/international-inquiry-copy';
  * present in all four, so "all four dropped it" cannot pass as parity alone.
  */
 
-const LOCALES = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl'] as const satisfies readonly GuidanceLocale[];
+const LOCALES = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi'] as const satisfies readonly GuidanceLocale[];
 
 /** Per-locale marker for one disclosure element. */
 type ElementMarkers = Record<GuidanceLocale, RegExp>;
@@ -67,6 +67,11 @@ const ELEMENTS = {
     it: /via praticabile/,
     nl: /werkbare/,
     pl: /możliwy sposób/,
+    hi: /व्यावहारिक|व्यवहार्य/,
+    sv: /farbar|användbar/,
+    da: /farbar|brugbar/,
+    nb: /farbar|brukbar/,
+    fi: /käyttökelpois/,
   },
   /** Support in a language outside the four consultation languages is not guaranteed. */
   'no-other-language-guarantee': {
@@ -86,6 +91,11 @@ const ELEMENTS = {
     it: /un’altra lingua/,
     nl: /andere taal/,
     pl: /innym języku/,
+    hi: /अन्य भाषा/,
+    sv: /annat språk/,
+    da: /andet sprog/,
+    nb: /annet språk/,
+    fi: /muulla kielellä|toisella kielellä/,
   },
   /** No reply time is promised. */
   'no-reply-time-promise': {
@@ -105,6 +115,11 @@ const ELEMENTS = {
     it: /termine di risposta/,
     nl: /antwoordtermijn/,
     pl: /termin(?:u)? odpowiedzi/,
+    hi: /उत्तर की समयसीमा/,
+    sv: /svarstid/,
+    da: /svartid/,
+    nb: /svartid/,
+    fi: /vastausaika/,
   },
   /** The confirmation step is a step, not a promise. */
   'confirmation-is-not-a-promise': {
@@ -124,6 +139,11 @@ const ELEMENTS = {
     it: /non è una promessa/,
     nl: /geen belofte/,
     pl: /nie jest obietnicą/,
+    hi: /वादा नहीं/,
+    sv: /inte ett löfte/,
+    da: /ikke et løfte/,
+    nb: /ikke et løfte/,
+    fi: /ei lupaus/,
   },
   /** No interpreter is arranged. */
   'no-interpreter-promise': {
@@ -143,6 +163,11 @@ const ELEMENTS = {
     it: /interprete/,
     nl: /tolk/,
     pl: /tłumacza ustnego/,
+    hi: /दुभाषि/,
+    sv: /tolk/,
+    da: /tolk/,
+    nb: /tolk/,
+    fi: /tulkk/,
   },
   /** Not every matter can be accepted. */
   'not-every-matter-accepted': {
@@ -162,6 +187,11 @@ const ELEMENTS = {
     it: /ogni questione/,
     nl: /elke zaak/,
     pl: /każdą sprawę/,
+    hi: /प्रत्येक मामला/,
+    sv: /varje ärende/,
+    da: /hver sag/,
+    nb: /hver sak/,
+    fi: /jokaista asiaa/,
   },
   /** No outcome is promised. */
   'no-outcome-promise': {
@@ -181,6 +211,11 @@ const ELEMENTS = {
     it: /risultato/,
     nl: /resultaat/,
     pl: /wyniku/,
+    hi: /परिणाम/,
+    sv: /resultat/,
+    da: /resultat/,
+    nb: /resultat/,
+    fi: /tulosta/,
   },
   /** A certain answer needs one of the four consultation languages. */
   'four-consultation-languages': {
@@ -200,6 +235,11 @@ const ELEMENTS = {
     it: /quattro lingue di consulenza/,
     nl: /vier consultatietalen/,
     pl: /czterech języ(?:kach|ków) konsultacji/,
+    hi: /चार परामर्श भाषा/,
+    sv: /fyra rådgivningsspråk/,
+    da: /fire rådgivningssprog/,
+    nb: /fire rådgivningsspråk/,
+    fi: /neljästä neuvontakielestä/,
   },
   /** This page is not the consultation step. */
   'not-the-consultation-step': {
@@ -219,6 +259,11 @@ const ELEMENTS = {
     it: /passo di consulenza/,
     nl: /consultatiestap/,
     pl: /etapem konsultacji/,
+    hi: /परामर्श चरण/,
+    sv: /rådgivningssteget/,
+    da: /rådgivningsskridtet/,
+    nb: /rådgivningssteget/,
+    fi: /neuvontavaihe/,
   },
   /** A sent message is not legal advice. */
   'not-legal-advice': {
@@ -238,6 +283,11 @@ const ELEMENTS = {
     it: /parere giuridico/,
     nl: /juridisch advies/,
     pl: /poradą prawną/,
+    hi: /कानूनी राय/,
+    sv: /juridiskt yttrande/,
+    da: /juridisk udtalelse/,
+    nb: /juridisk uttalelse/,
+    fi: /oikeudellinen lausunto/,
   },
   /** A sent message is not a confirmed appointment. */
   'not-an-appointment': {
@@ -257,6 +307,11 @@ const ELEMENTS = {
     it: /appuntamento/,
     nl: /afspraak/,
     pl: /spotkani|terminem/,
+    hi: /नियुक्ति/,
+    sv: /\btid\b/,
+    da: /\btid\b/,
+    nb: /\btime\b/,
+    fi: /tapaamista|tapaaminen/,
   },
   /** Sending a message forms no attorney–client relationship. */
   'no-attorney-client-relationship': {
@@ -276,6 +331,11 @@ const ELEMENTS = {
     it: /rapporto tra avvocata o avvocato/,
     nl: /relatie tussen advocaat/,
     pl: /stosunku między adwokatem/,
+    hi: /अधिवक्ता तथा मुवक्किल/,
+    sv: /förhållande mellan advokat/,
+    da: /forhold mellem advokat/,
+    nb: /forhold mellom advokat/,
+    fi: /suhdetta asianajajan ja päämiehen/,
   },
   /** Written text is never machine-translated for the reader. */
   'no-automatic-translation': {
@@ -295,6 +355,11 @@ const ELEMENTS = {
     it: /tradotto automaticamente/,
     nl: /niet automatisch vertaald/,
     pl: /tłumaczon[ay] automatycznie/,
+    hi: /स्वचालित/,
+    sv: /automatiskt/,
+    da: /automatisk/,
+    nb: /automatisk/,
+    fi: /automaattisesti/,
   },
   /** The family group is named as covering marriage matters. */
   'marriage-in-family-group': {
@@ -314,6 +379,11 @@ const ELEMENTS = {
     it: /matrimonio/i,
     nl: /huwelijk/i,
     pl: /małżeństwo/i,
+    hi: /विवाह/,
+    sv: /äktenskap/i,
+    da: /ægteskab/i,
+    nb: /ekteskap/i,
+    fi: /avioliitto/i,
   },
   /** Meeting the attorney may be a paid service. */
   'consultation-may-be-paid': {
@@ -333,6 +403,11 @@ const ELEMENTS = {
     it: /a pagamento/,
     nl: /tegen betaling/,
     pl: /odpłatn/,
+    hi: /शुल्क/,
+    sv: /mot betalning/,
+    da: /mod betaling/,
+    nb: /mot betaling/,
+    fi: /maksullinen/,
   },
 } as const satisfies Record<string, ElementMarkers>;
 

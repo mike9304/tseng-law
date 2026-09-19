@@ -283,6 +283,61 @@ export const GUIDANCE_HOME_PATHS: Record<GuidanceLocale, GuidanceHomePaths> = {
     },
     ariaLabel: 'Dwie ścieżki informacyjne',
   },
+  hi: {
+    setup: {
+      label: 'ताइवान में कंपनी स्थापना की जानकारी',
+      href: '/hi/services',
+    },
+    legal: {
+      label: 'ताइवान कानूनी जानकारी',
+      href: '/hi/faq',
+    },
+    ariaLabel: 'जानकारी के दो मार्ग',
+  },
+  sv: {
+    setup: {
+      label: 'Information om bolagsbildning i Taiwan',
+      href: '/sv/services',
+    },
+    legal: {
+      label: 'Juridisk information om Taiwan',
+      href: '/sv/faq',
+    },
+    ariaLabel: 'Två informationsvägar',
+  },
+  da: {
+    setup: {
+      label: 'Information om selskabsstiftelse i Taiwan',
+      href: '/da/services',
+    },
+    legal: {
+      label: 'Juridisk information om Taiwan',
+      href: '/da/faq',
+    },
+    ariaLabel: 'To informationsveje',
+  },
+  nb: {
+    setup: {
+      label: 'Informasjon om selskapsstiftelse i Taiwan',
+      href: '/nb/services',
+    },
+    legal: {
+      label: 'Juridisk informasjon om Taiwan',
+      href: '/nb/faq',
+    },
+    ariaLabel: 'To informasjonsveier',
+  },
+  fi: {
+    setup: {
+      label: 'Tietoa yhtiön perustamisesta Taiwanissa',
+      href: '/fi/services',
+    },
+    legal: {
+      label: 'Oikeudellista tietoa Taiwanista',
+      href: '/fi/faq',
+    },
+    ariaLabel: 'Kaksi tietopolkua',
+  },
 };
 
 export const LITIGATION_SITUATION_NAV: Record<

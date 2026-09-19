@@ -35,7 +35,7 @@ export const PUBLIC_LOCALES_8 = Object.freeze([
 ]);
 
 /** Guidance languages — src/lib/public-guidance.ts `GUIDANCE_LOCALES_4`. */
-export const GUIDANCE_LOCALES_4 = Object.freeze(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl']);
+export const GUIDANCE_LOCALES_4 = Object.freeze(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi']);
 
 /**
  * Core routes from src/lib/public-guidance.ts `GUIDANCE_PAGE_KEYS` /

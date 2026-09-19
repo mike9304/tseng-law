@@ -624,6 +624,56 @@ export const CINEMATIC_OPENING_COPY: Record<
     service: 'Informacje prawne o Tajwanie · angielski, chiński, japoński i koreański',
     contact: 'Skontaktować się z kancelarią',
   },
+  hi: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ताइवान में अधिवक्ता',
+    scroll: 'नीचे जारी रखें',
+    skip: 'प्रस्तावना छोड़ें',
+    mediaAlt:
+      'ताइवान की केंद्रीय पर्वत श्रृंखला और बादलों के सागर पर प्राकृतिक प्रकाश में हवाई चित्र',
+    service: 'ताइवान कानूनी जानकारी · अंग्रेज़ी, चीनी, जापानी और कोरियाई',
+    contact: 'कार्यालय से संपर्क करें',
+  },
+  sv: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ADVOKATER I TAIWAN',
+    scroll: 'Fortsätt nedåt',
+    skip: 'Hoppa över inledningen',
+    mediaAlt:
+      'Flygbild i naturligt ljus över Taiwans centrala bergskedja och ett molnhav',
+    service: 'Juridisk information om Taiwan · engelska, kinesiska, japanska och koreanska',
+    contact: 'Kontakta byrån',
+  },
+  da: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ADVOKATER I TAIWAN',
+    scroll: 'Fortsæt nedad',
+    skip: 'Spring indledningen over',
+    mediaAlt:
+      'Luftbillede i naturligt lys over Taiwans centrale bjergkæde og et hav af skyer',
+    service: 'Juridisk information om Taiwan · engelsk, kinesisk, japansk og koreansk',
+    contact: 'Kontakt kontoret',
+  },
+  nb: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ADVOKATER I TAIWAN',
+    scroll: 'Fortsett nedover',
+    skip: 'Hopp over innledningen',
+    mediaAlt:
+      'Flybilde i naturlig lys over Taiwans sentrale fjellkjede og et hav av skyer',
+    service: 'Juridisk informasjon om Taiwan · engelsk, kinesisk, japansk og koreansk',
+    contact: 'Kontakt kontoret',
+  },
+  fi: {
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ASIANAJAJAT TAIWANISSA',
+    scroll: 'Jatkakaa alaspäin',
+    skip: 'Ohittakaa johdanto',
+    mediaAlt:
+      'Ilmakuva luonnonvalossa Taiwanin keskusvuoriston ja pilvimeren yllä',
+    service: 'Oikeudellista tietoa Taiwanista · englanti, kiina, japani ja korea',
+    contact: 'Ottakaa yhteyttä toimistoon',
+  },
 };
 
 export default function CinematicOpening({

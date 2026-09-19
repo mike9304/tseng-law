@@ -944,6 +944,11 @@ test.describe('O29 og:locale across the eight public locales', () => {
     it: 'it_IT',
     nl: 'nl_NL',
     pl: 'pl_PL',
+    hi: 'hi_IN',
+    sv: 'sv_SE',
+    da: 'da_DK',
+    nb: 'nb_NO',
+    fi: 'fi_FI',
   };
 
   for (const locale of PUBLIC_LOCALES_8) {

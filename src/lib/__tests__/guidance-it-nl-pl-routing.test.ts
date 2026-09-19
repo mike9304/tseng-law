@@ -48,6 +48,11 @@ describe('it/nl/pl guidance routing', () => {
       'it',
       'nl',
       'pl',
+      'hi',
+      'sv',
+      'da',
+      'nb',
+      'fi',
     ]);
     for (const locale of NEW_GUIDANCE) {
       expect(isGuidanceLocale4(locale)).toBe(true);
@@ -80,6 +85,11 @@ describe('it/nl/pl guidance routing', () => {
       'it',
       'nl',
       'pl',
+      'hi',
+      'sv',
+      'da',
+      'nb',
+      'fi',
     ]);
     expect(PUBLIC_LANGUAGE_AUTONYMS.it).not.toMatch(/🇮🇹|\bItalia\b|\bItalian\b/);
     expect(PUBLIC_LANGUAGE_AUTONYMS.nl).not.toMatch(/🇳🇱|\bNederland\b|\bDutch\b/);

@@ -34,6 +34,11 @@ const GUIDANCE_LOCALES = [
   'it',
   'nl',
   'pl',
+  'hi',
+  'sv',
+  'da',
+  'nb',
+  'fi',
 ] as const satisfies readonly GuidanceLocale[];
 
 /**
@@ -87,6 +92,11 @@ const CONSULTATION_LANGUAGE_TERMS: Record<string, readonly string[]> = {
   it: ['inglese', 'cinese', 'giapponese', 'coreano'],
   nl: ['Engels', 'Chinees', 'Japans', 'Koreaans'],
   pl: ['angielsku', 'chińsku', 'japońsku', 'koreańsku'],
+  hi: ['अंग्रेज़ी', 'चीनी', 'जापानी', 'कोरियाई'],
+  sv: ['engelska', 'kinesiska', 'japanska', 'koreanska'],
+  da: ['engelsk', 'kinesisk', 'japansk', 'koreansk'],
+  nb: ['engelsk', 'kinesisk', 'japansk', 'koreansk'],
+  fi: ['englanniksi', 'kiinaksi', 'japaniksi', 'koreaksi'],
 };
 
 /**
@@ -135,6 +145,18 @@ const GUIDANCE_LANGUAGE_TOKENS: ReadonlyArray<readonly [string, RegExp]> = [
   ['Polish', /\bPolish\b/i],
   ['Polski', /\bPolski\b/],
   ['polsku', /po polsku/],
+  ['Hindi', /\bHindi\b/],
+  ['हिन्दी', /हिन्दी/],
+  ['Swedish', /\bSwedish\b/i],
+  ['Svenska', /\bSvenska\b/],
+  ['svenska', /\bsvenska\b/],
+  ['Danish', /\bDanish\b/i],
+  ['Dansk', /\bDansk\b/],
+  ['dansk', /\bdansk\b/],
+  ['Norwegian', /\bNorwegian\b/i],
+  ['norsk', /\bnorsk\b/],
+  ['Finnish', /\bFinnish\b/i],
+  ['suomeksi', /suomeksi/],
 ];
 
 /**
@@ -180,6 +202,11 @@ const FORBIDDEN_COMBINATIONS: ReadonlyArray<readonly [string, RegExp, RegExp]> =
   ['italiano + consulenza', /\bitaliano\b/i, /consulenza/i],
   ['Nederlands + consultatie', /\bNederlands\b/i, /consultatie/i],
   ['polsku + konsultacja', /po polsku/i, /konsultacj/i],
+  ['हिन्दी + परामर्श', /हिन्दी/, /परामर्श/],
+  ['svenska + rådgivning', /\bsvenska\b/i, /rådgivning/i],
+  ['dansk + rådgivning', /\bdansk\b/i, /rådgivning/i],
+  ['norsk + rådgivning', /\bnorsk\b/i, /rådgivning/i],
+  ['suomeksi + neuvonta', /suomeksi/, /neuvonta/],
 ];
 
 /**
@@ -208,6 +235,11 @@ const SERVICES_SCOPE_TERMS: Record<string, readonly [string, RegExp]> = {
   it: ['ambito', /ambito/i],
   nl: ['omvang', /omvang/i],
   pl: ['zakres', /zakres/i],
+  hi: ['दायरा', /दायरा/],
+  sv: ['omfattning', /omfattning/i],
+  da: ['omfang', /omfang/i],
+  nb: ['omfang', /omfang/i],
+  fi: ['laajuus', /laajuus/i],
 };
 
 const SERVICES_ACCEPTANCE_PATTERNS: Record<
@@ -278,6 +310,26 @@ const SERVICES_ACCEPTANCE_PATTERNS: Record<
     ['czy sprawa zostanie przyjęta', /czy sprawa zostanie przyjęta/i],
     ['rozstrzyga się po', /rozstrzyga się po/i],
   ],
+  hi: [
+    ['मामला स्वीकार', /मामला स्वीकार/],
+    ['स्वीकृति का निर्णय', /स्वीकृति का निर्णय/],
+  ],
+  sv: [
+    ['om ett ärende antas', /om ett ärende antas/i],
+    ['beslutas efter granskning', /beslutas efter granskning/i],
+  ],
+  da: [
+    ['om en sag antages', /om en sag antages/i],
+    ['besluttes efter gennemgang', /besluttes efter gennemgang/i],
+  ],
+  nb: [
+    ['om en sak tas imot', /om en sak tas imot/i],
+    ['avgjøres etter gjennomgang', /avgjøres etter gjennomgang/i],
+  ],
+  fi: [
+    ['hyväksytäänkö asia', /hyväksytäänkö asia/i],
+    ['päätetään tarkastuksen jälkeen', /päätetään tarkastuksen jälkeen/i],
+  ],
 };
 
 /** Every site-internal path an answer may cite. */
@@ -310,8 +362,8 @@ const entries = GUIDANCE_LOCALES.flatMap((locale) =>
 );
 
 describe('guidanceAnswers', () => {
-  it('covers 16 locales x 6 page keys', () => {
-    expect(GUIDANCE_LOCALES).toHaveLength(16);
+  it('covers 21 locales x 6 page keys', () => {
+    expect(GUIDANCE_LOCALES).toHaveLength(21);
     expect(ANSWER_PAGE_KEYS).toHaveLength(6);
     expect(Object.keys(guidanceAnswers).sort()).toEqual([...GUIDANCE_LOCALES].sort());
 

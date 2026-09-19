@@ -110,4 +110,29 @@ export const DECORATIVE_VIDEO_CONTROL_LABELS = {
     play: 'Odtworzyć wideo',
     replay: 'Odtworzyć wideo ponownie',
   },
+  hi: {
+    pause: 'वीडियो रोकें',
+    play: 'वीडियो चलाएँ',
+    replay: 'वीडियो फिर चलाएँ',
+  },
+  sv: {
+    pause: 'Pausa videon',
+    play: 'Spela videon',
+    replay: 'Spela videon igen',
+  },
+  da: {
+    pause: 'Sæt videoen på pause',
+    play: 'Afspil videoen',
+    replay: 'Afspil videoen igen',
+  },
+  nb: {
+    pause: 'Sett videoen på pause',
+    play: 'Spill av videoen',
+    replay: 'Spill av videoen på nytt',
+  },
+  fi: {
+    pause: 'Keskeyttäkää video',
+    play: 'Toistakaa video',
+    replay: 'Toistakaa video uudelleen',
+  },
 } as const satisfies Record<PublicLocale8, DecorativeVideoControlLabels>;

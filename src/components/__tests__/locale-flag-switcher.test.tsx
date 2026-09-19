@@ -78,6 +78,11 @@ describe('LocaleFlagSwitcher', () => {
       ['it', 'Italiano'],
       ['nl', 'Nederlands'],
       ['pl', 'Polski'],
+      ['hi', 'हिन्दी'],
+      ['sv', 'Svenska'],
+      ['da', 'Dansk'],
+      ['nb', 'Norsk'],
+      ['fi', 'Suomi'],
     ]);
     expect(LOCALE_FLAG_OPTIONS.map((option) => option.locale)).toEqual([...PUBLIC_LOCALES_8]);
 
@@ -226,7 +231,7 @@ describe('LocaleFlagSwitcher', () => {
       expect(element.props.href).toMatch(/^\/(vi|id|th|fil|ar|de|es|fr|pt|zh-hans|ms|ru|tr|it|nl|pl)\/columns$/);
       element.props.onClick?.();
     });
-    expect(onLocaleSelect.mock.calls.map(([target]) => target)).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl']);
+    expect(onLocaleSelect.mock.calls.map(([target]) => target)).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi']);
     expect(renderedLinks('ko').some((link) => /href="\/(vi|id|th|fil|ar|de|es|fr|pt|zh-hans|ms|ru|tr|it|nl|pl)\/columns\//.test(link))).toBe(
       false,
     );

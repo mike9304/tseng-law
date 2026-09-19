@@ -141,6 +141,36 @@ export const PUBLIC_LANGUAGE_REGISTRY: readonly PublicLanguageEntry[] = [
     englishName: 'Polish',
     region: 'europe',
   },
+  {
+    locale: 'hi',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.hi,
+    englishName: 'Hindi',
+    region: 'asia-pacific',
+  },
+  {
+    locale: 'sv',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.sv,
+    englishName: 'Swedish',
+    region: 'europe',
+  },
+  {
+    locale: 'da',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.da,
+    englishName: 'Danish',
+    region: 'europe',
+  },
+  {
+    locale: 'nb',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.nb,
+    englishName: 'Norwegian',
+    region: 'europe',
+  },
+  {
+    locale: 'fi',
+    autonym: PUBLIC_LANGUAGE_AUTONYMS.fi,
+    englishName: 'Finnish',
+    region: 'europe',
+  },
 ];
 
 export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion, string>> = {
@@ -284,6 +314,41 @@ export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion
     europe: 'Europa',
     americas: 'Ameryki',
   },
+  hi: {
+    global: 'वैश्विक',
+    'asia-pacific': 'एशिया-प्रशांत',
+    'middle-east': 'मध्य पूर्व',
+    europe: 'यूरोप',
+    americas: 'अमेरिका महाद्वीप',
+  },
+  sv: {
+    global: 'Globalt',
+    'asia-pacific': 'Asien-Stillahavsregionen',
+    'middle-east': 'Mellanöstern',
+    europe: 'Europa',
+    americas: 'Amerika',
+  },
+  da: {
+    global: 'Globalt',
+    'asia-pacific': 'Asien-Stillehavet',
+    'middle-east': 'Mellemøsten',
+    europe: 'Europa',
+    americas: 'Amerika',
+  },
+  nb: {
+    global: 'Globalt',
+    'asia-pacific': 'Asia-Stillehavet',
+    'middle-east': 'Midtøsten',
+    europe: 'Europa',
+    americas: 'Amerika',
+  },
+  fi: {
+    global: 'Maailmanlaajuinen',
+    'asia-pacific': 'Aasia ja Tyynimeri',
+    'middle-east': 'Lähi-itä',
+    europe: 'Eurooppa',
+    americas: 'Amerikka',
+  },
 };
 
 export const LANGUAGE_PICKER_COPY: Record<
@@ -409,6 +474,36 @@ export const LANGUAGE_PICKER_COPY: Record<
     title: 'Prosimy wybrać region i język',
     close: 'Zamknij',
     current: 'Bieżący język',
+  },
+  hi: {
+    open: 'क्षेत्र और भाषा चुनें',
+    title: 'कृपया अपना क्षेत्र और भाषा चुनें',
+    close: 'बंद करें',
+    current: 'वर्तमान भाषा',
+  },
+  sv: {
+    open: 'Välj region och språk',
+    title: 'Välj er region och ert språk',
+    close: 'Stäng',
+    current: 'Aktuellt språk',
+  },
+  da: {
+    open: 'Vælg region og sprog',
+    title: 'Vælg Deres region og Deres sprog',
+    close: 'Luk',
+    current: 'Aktuelt sprog',
+  },
+  nb: {
+    open: 'Velg region og språk',
+    title: 'Velg Deres region og Deres språk',
+    close: 'Lukk',
+    current: 'Gjeldende språk',
+  },
+  fi: {
+    open: 'Valitkaa alue ja kieli',
+    title: 'Valitkaa alueenne ja kielenne',
+    close: 'Sulje',
+    current: 'Nykyinen kieli',
   },
 };
 

@@ -32,7 +32,12 @@ export type InquiryCopyLocale =
   | 'tr'
   | 'it'
   | 'nl'
-  | 'pl';
+  | 'pl'
+  | 'hi'
+  | 'sv'
+  | 'da'
+  | 'nb'
+  | 'fi';
 
 export interface InternationalInquiryCopy {
   /** The page language is guidance only. */
@@ -1075,6 +1080,256 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ko: 'Koreański (한국어)',
       'needs-method-confirmation':
         'Żaden z czterech języków nie jest dostępny — sposób komunikacji musi zostać potwierdzony',
+    },
+  },
+  hi: {
+    guidanceNotice:
+      'यह पृष्ठ हिन्दी में सामान्य जानकारी के रूप में लिखा गया है, आपके मामले की कानूनी राय के रूप में नहीं।',
+    consultationNotice:
+      'परामर्श चार भाषाओं में होता है: अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई।',
+    methodConfirmationNotice:
+      'यदि आप चार भाषाओं में से किसी का उपयोग न कर सकें, तो «संचार मार्ग की पुष्टि आवश्यक है» चुनें। हम व्यवहार्य संचार मार्ग जाँचने के लिए उत्तर देते हैं, यदि ऐसा मार्ग हो; अन्य भाषा में सेवा सुनिश्चित नहीं है और उत्तर की समयसीमा का वादा नहीं है।',
+    preparationNotice:
+      'आप सार अपनी भाषा में लिख सकते हैं। मूल पाठ वैसे ही रखा जाता है जैसा आपने लिखा और स्वचालित रूप से अनुवाद नहीं किया जाता।',
+    heading: 'परामर्श अनुरोध भेजें',
+    intro:
+      'अपने मामले का संक्षेप में वर्णन करें। अगले चरण की चर्चा से पहले अधिवक्ता सामग्री की जाँच करते हैं।',
+    submitLabel: 'अनुरोध भेजें',
+    submittingLabel: 'भेजा जा रहा है…',
+    successMessage:
+      'हमने आपका अनुरोध प्राप्त कर लिया; वह जाँच की प्रतीक्षा करता है। इसका अर्थ यह नहीं कि परामर्श हो चुका या नियुक्ति पुष्ट हुई।',
+    savedNotificationPendingMessage:
+      'आपका अनुरोध सुरक्षित है, लेकिन कार्यालय को सूचना अभी पुष्ट नहीं हुई। जो आपने लिखा वह नहीं खोता। यदि उत्तर न मिले, तो संपर्क पृष्ठ के ईमेल पते पर भी लिख सकते हैं।',
+    receiptIdLabel: 'प्राप्ति संख्या',
+    failureMessage:
+      'आपका अनुरोध नहीं भेजा जा सका। पुनः प्रयास करें या संपर्क पृष्ठ के ईमेल पते पर लिखें।',
+    originalLanguageLabel: 'जिस भाषा में आप लिखते हैं',
+    originalLanguagePlaceholder:
+      'उदाहरण के लिए हिन्दी, अंग्रेज़ी, चीनी या कोई अन्य भाषा',
+    preferredConsultationLanguageLabel: 'परामर्श के लिए इच्छित भाषा',
+    originalTextLabel: 'मामले का संक्षिप्त विवरण (अपनी भाषा में)',
+    originalTextPlaceholder:
+      'बताएँ क्या हुआ, किस सहायता की आवश्यकता है और यदि हो तो समयसीमा। पासपोर्ट संख्या, पहचान संख्या या खाता विवरण न लिखें।',
+    nameLabel: 'नाम',
+    emailLabel: 'ईमेल',
+    consentLabel:
+      'मैंने गोपनीयता पृष्ठ पढ़ लिया है और इस अनुरोध को भेजने की सहमति देता/देती हूँ।',
+    privacyLinkLabel: 'गोपनीयता',
+    requiredMessage: 'यह फ़ील्ड आवश्यक है।',
+    invalidEmailMessage: 'कृपया मान्य ईमेल पता दें।',
+    tooLongMessage: 'पाठ बहुत लंबा है। उसे छोटा कर फिर भेजें।',
+    sourceLanguageNotice:
+      'यह लेख केवल {language} में प्रकाशित है; लिंक मूल पृष्ठ खोलता है।',
+    unavailableTranslationNotice:
+      'यह बिंदु इस पृष्ठ की भाषा में अभी उपलब्ध नहीं है। मूल भाषा का लिंक मूल पाठ खोलता है।',
+    unavailableLanguageNotice: 'यह पृष्ठ {language} में उपलब्ध नहीं है।',
+    languageOptions: {
+      en: 'अंग्रेज़ी (English)',
+      'zh-hant': 'चीनी (中文)',
+      ja: 'जापानी (日本語)',
+      ko: 'कोरियाई (한국어)',
+      'needs-method-confirmation':
+        'चार भाषाओं में से कोई उपयोगी नहीं — संचार मार्ग की पुष्टि आवश्यक है',
+    },
+  },
+  sv: {
+    guidanceNotice:
+      'Denna sida är skriven på svenska som allmän orientering, inte som juridisk rådgivning för ert ärende.',
+    consultationNotice:
+      'Rådgivningen sker på fyra språk: engelska, kinesiska (中文), japanska och koreanska.',
+    methodConfirmationNotice:
+      'Om ni inte kan använda något av de fyra språken, välj «Kommunikationsvägen måste bekräftas». Vi svarar för att undersöka en användbar kommunikationsväg, om en sådan väg finns; en tjänst på ett annat språk säkerställs inte och en svarstid lovas inte.',
+    preparationNotice:
+      'Ni får skriva sammanfattningen på ert eget språk. Originaltexten sparas som ni har skrivit den och översätts inte automatiskt.',
+    heading: 'Skicka en begäran om rådgivning',
+    intro:
+      'Beskriv ert ärende kort. En advokat granskar innehållet innan nästa steg diskuteras.',
+    submitLabel: 'Skicka begäran',
+    submittingLabel: 'Skickas…',
+    successMessage:
+      'Vi har tagit emot er begäran; den väntar på granskning. Det betyder inte att rådgivningen har ägt rum eller att en tid är bekräftad.',
+    savedNotificationPendingMessage:
+      'Er begäran är sparad, men underrättelsen till byrån är ännu inte bekräftad. Det ni har skrivit går inte förlorat. Om ni inte får svar kan ni också skriva till e-postadressen på kontaktsidan.',
+    receiptIdLabel: 'Mottagningsnummer',
+    failureMessage:
+      'Er begäran kunde inte skickas. Försök igen eller skriv till e-postadressen på kontaktsidan.',
+    originalLanguageLabel: 'Språk ni skriver på',
+    originalLanguagePlaceholder:
+      'Till exempel svenska, engelska, kinesiska eller ett annat språk',
+    preferredConsultationLanguageLabel: 'Språk ni önskar för rådgivningen',
+    originalTextLabel: 'Kort redogörelse för ärendet (på ert språk)',
+    originalTextPlaceholder:
+      'Ange vad som har hänt, vilket stöd ni behöver och fristen, om det finns en. Ange inte passnummer, identitetsnummer eller kontouppgifter.',
+    nameLabel: 'Namn',
+    emailLabel: 'E-post',
+    consentLabel:
+      'Jag har läst integritetssidan och samtycker till att denna begäran skickas.',
+    privacyLinkLabel: 'Integritet',
+    requiredMessage: 'Detta fält är obligatoriskt.',
+    invalidEmailMessage: 'Ange en giltig e-postadress.',
+    tooLongMessage: 'Texten är för lång. Korta den och skicka igen.',
+    sourceLanguageNotice:
+      'Denna artikel är publicerad endast på {language}; länken öppnar originalsidan.',
+    unavailableTranslationNotice:
+      'Denna punkt är ännu inte tillgänglig på sidans språk. En länk med originalspråket öppnar originaltexten.',
+    unavailableLanguageNotice: 'Denna sida erbjuds inte på {language}.',
+    languageOptions: {
+      en: 'Engelska (English)',
+      'zh-hant': 'Kinesiska (中文)',
+      ja: 'Japanska (日本語)',
+      ko: 'Koreanska (한국어)',
+      'needs-method-confirmation':
+        'Inget av de fyra språken är användbart — kommunikationsvägen måste bekräftas',
+    },
+  },
+  da: {
+    guidanceNotice:
+      'Denne side er skrevet på dansk som almindelig orientering, ikke som juridisk rådgivning for Deres sag.',
+    consultationNotice:
+      'Rådgivningen foregår på fire sprog: engelsk, kinesisk (中文), japansk og koreansk.',
+    methodConfirmationNotice:
+      'Hvis De ikke kan bruge noget af de fire sprog, skal De vælge «Kommunikationsvejen skal bekræftes». Vi svarer for at undersøge en brugbar kommunikationsvej, hvis en sådan vej findes; en ydelse på et andet sprog sikres ikke, og en svartid loves ikke.',
+    preparationNotice:
+      'De må skrive resuméet på Deres eget sprog. Originalteksten gemmes, som De har skrevet den, og oversættes ikke automatisk.',
+    heading: 'Send en anmodning om rådgivning',
+    intro:
+      'Beskriv Deres sag kort. En advokat gennemgår indholdet, før det næste skridt drøftes.',
+    submitLabel: 'Send anmodningen',
+    submittingLabel: 'Sendes…',
+    successMessage:
+      'Vi har modtaget Deres anmodning; den venter på gennemgang. Det betyder ikke, at rådgivningen har fundet sted, eller at en tid er bekræftet.',
+    savedNotificationPendingMessage:
+      'Deres anmodning er gemt, men underretningen til kontoret er endnu ikke bekræftet. Det, De har skrevet, går ikke tabt. Hvis De ikke får svar, kan De også skrive til e-mailadressen på kontaktsiden.',
+    receiptIdLabel: 'Modtagelsesnummer',
+    failureMessage:
+      'Deres anmodning kunne ikke sendes. Prøv igen, eller skriv til e-mailadressen på kontaktsiden.',
+    originalLanguageLabel: 'Sprog, De skriver på',
+    originalLanguagePlaceholder:
+      'For eksempel dansk, engelsk, kinesisk eller et andet sprog',
+    preferredConsultationLanguageLabel: 'Sprog, De ønsker til rådgivningen',
+    originalTextLabel: 'Kort fremstilling af sagen (på Deres sprog)',
+    originalTextPlaceholder:
+      'Angiv, hvad der er sket, hvilken hjælp De har brug for, og fristen, hvis der er en. Angiv ikke pasnummer, identitetsnummer eller kontooplysninger.',
+    nameLabel: 'Navn',
+    emailLabel: 'E-mail',
+    consentLabel:
+      'Jeg har læst privatlivssiden og samtykker i, at denne anmodning sendes.',
+    privacyLinkLabel: 'Privatliv',
+    requiredMessage: 'Dette felt er obligatorisk.',
+    invalidEmailMessage: 'Angiv en gyldig e-mailadresse.',
+    tooLongMessage: 'Teksten er for lang. Forkort den og send igen.',
+    sourceLanguageNotice:
+      'Denne artikel er kun offentliggjort på {language}; linket åbner originalsiden.',
+    unavailableTranslationNotice:
+      'Dette punkt er endnu ikke tilgængeligt på sidens sprog. Et link med originalsproget åbner originalteksten.',
+    unavailableLanguageNotice: 'Denne side tilbydes ikke på {language}.',
+    languageOptions: {
+      en: 'Engelsk (English)',
+      'zh-hant': 'Kinesisk (中文)',
+      ja: 'Japansk (日本語)',
+      ko: 'Koreansk (한국어)',
+      'needs-method-confirmation':
+        'Ingen af de fire sprog er brugbare — kommunikationsvejen skal bekræftes',
+    },
+  },
+  nb: {
+    guidanceNotice:
+      'Denne siden er skrevet på norsk som alminnelig orientering, ikke som juridisk rådgivning for Deres sak.',
+    consultationNotice:
+      'Rådgivningen foregår på fire språk: engelsk, kinesisk (中文), japansk og koreansk.',
+    methodConfirmationNotice:
+      'Hvis De ikke kan bruke noe av de fire språkene, velg «Kommunikasjonsveien må bekreftes». Vi svarer for å undersøke en brukbar kommunikasjonsvei, hvis en slik vei finnes; en ytelse på et annet språk sikres ikke, og en svartid loves ikke.',
+    preparationNotice:
+      'De kan skrive sammendraget på Deres eget språk. Originalteksten lagres slik De har skrevet den, og oversettes ikke automatisk.',
+    heading: 'Send en forespørsel om rådgivning',
+    intro:
+      'Beskriv Deres sak kort. En advokat gjennomgår innholdet før neste skritt diskuteres.',
+    submitLabel: 'Send forespørselen',
+    submittingLabel: 'Sendes…',
+    successMessage:
+      'Vi har mottatt Deres forespørsel; den venter på gjennomgang. Det betyr ikke at rådgivningen har funnet sted, eller at en time er bekreftet.',
+    savedNotificationPendingMessage:
+      'Deres forespørsel er lagret, men underretningen til kontoret er ennå ikke bekreftet. Det De har skrevet, går ikke tapt. Hvis De ikke får svar, kan De også skrive til e-postadressen på kontaktsiden.',
+    receiptIdLabel: 'Mottakelsesnummer',
+    failureMessage:
+      'Deres forespørsel kunne ikke sendes. Prøv igjen, eller skriv til e-postadressen på kontaktsiden.',
+    originalLanguageLabel: 'Språk De skriver på',
+    originalLanguagePlaceholder:
+      'For eksempel norsk, engelsk, kinesisk eller et annet språk',
+    preferredConsultationLanguageLabel: 'Språk De ønsker til rådgivningen',
+    originalTextLabel: 'Kort fremstilling av saken (på Deres språk)',
+    originalTextPlaceholder:
+      'Oppgi hva som har skjedd, hvilken hjelp De trenger, og fristen hvis det finnes en. Oppgi ikke passnummer, identitetsnummer eller kontoopplysninger.',
+    nameLabel: 'Navn',
+    emailLabel: 'E-post',
+    consentLabel:
+      'Jeg har lest personvernsiden og samtykker i at denne forespørselen sendes.',
+    privacyLinkLabel: 'Personvern',
+    requiredMessage: 'Dette feltet er obligatorisk.',
+    invalidEmailMessage: 'Oppgi en gyldig e-postadresse.',
+    tooLongMessage: 'Teksten er for lang. Kort den ned og send på nytt.',
+    sourceLanguageNotice:
+      'Denne artikkelen er publisert bare på {language}; lenken åpner originalsiden.',
+    unavailableTranslationNotice:
+      'Dette punktet er ennå ikke tilgjengelig på sidens språk. En lenke med originalspråket åpner originalteksten.',
+    unavailableLanguageNotice: 'Denne siden tilbys ikke på {language}.',
+    languageOptions: {
+      en: 'Engelsk (English)',
+      'zh-hant': 'Kinesisk (中文)',
+      ja: 'Japansk (日本語)',
+      ko: 'Koreansk (한국어)',
+      'needs-method-confirmation':
+        'Ingen av de fire språkene er brukbare — kommunikasjonsveien må bekreftes',
+    },
+  },
+  fi: {
+    guidanceNotice:
+      'Tämä sivu on kirjoitettu suomeksi yleisenä orientaationa, ei oikeudellisena neuvontana asiassanne.',
+    consultationNotice:
+      'Neuvonta tapahtuu neljällä kielellä: englanniksi, kiinaksi (中文), japaniksi ja koreaksi.',
+    methodConfirmationNotice:
+      'Jos ette voi käyttää mitään neljästä kielestä, valitkaa «Viestintätapa on vahvistettava». Vastaamme tutkiaksemme käyttökelpoisen viestintätavan, jos sellainen tapa on; palvelua toisella kielellä ei varmisteta eikä vastausaikaa luvata.',
+    preparationNotice:
+      'Voitte kirjoittaa yhteenvedon omalla kielellänne. Alkuperäinen teksti säilytetään sellaisena kuin olette sen kirjoittaneet, eikä sitä käännetä automaattisesti.',
+    heading: 'Lähettäkää neuvontapyyntö',
+    intro:
+      'Kuvatkaa asianne lyhyesti. Asianajaja tarkastaa sisällön ennen kuin seuraavaa vaihetta käsitellään.',
+    submitLabel: 'Lähettäkää pyyntö',
+    submittingLabel: 'Lähetetään…',
+    successMessage:
+      'Olemme vastaanottaneet pyyntönne; se odottaa tarkastusta. Tämä ei merkitse, että neuvonta olisi tapahtunut tai että tapaaminen olisi vahvistettu.',
+    savedNotificationPendingMessage:
+      'Pyyntönne on tallennettu, mutta ilmoitus toimistolle ei ole vielä vahvistettu. Kirjoittamanne ei katoa. Jos ette saa vastausta, voitte myös kirjoittaa yhteyssivun sähköpostiosoitteeseen.',
+    receiptIdLabel: 'Vastaanotonumero',
+    failureMessage:
+      'Pyyntöänne ei voitu lähettää. Yrittäkää uudelleen tai kirjoittakaa yhteyssivun sähköpostiosoitteeseen.',
+    originalLanguageLabel: 'Kieli, jolla kirjoitatte',
+    originalLanguagePlaceholder:
+      'Esimerkiksi suomi, englanti, kiina tai muu kieli',
+    preferredConsultationLanguageLabel: 'Kieli, jota toivotte neuvontaan',
+    originalTextLabel: 'Lyhyt kuvaus asiasta (omalla kielellänne)',
+    originalTextPlaceholder:
+      'Kertokaa, mitä on tapahtunut, millaista apua tarvitsette, ja määräaika, jos sellainen on. Älkää kirjoittako passinumeroa, henkilötunnusta älkääkä tilitietoja.',
+    nameLabel: 'Nimi',
+    emailLabel: 'Sähköposti',
+    consentLabel:
+      'Olen lukenut tietosuojasivun ja suostun tämän pyynnön lähettämiseen.',
+    privacyLinkLabel: 'Tietosuoja',
+    requiredMessage: 'Tämä kenttä on pakollinen.',
+    invalidEmailMessage: 'Antakaa kelvollinen sähköpostiosoite.',
+    tooLongMessage: 'Teksti on liian pitkä. Lyhentäkää se ja lähettäkää uudelleen.',
+    sourceLanguageNotice:
+      'Tämä artikkeli on julkaistu vain kielellä {language}; linkki avaa alkuperäisen sivun.',
+    unavailableTranslationNotice:
+      'Tämä kohta ei ole vielä saatavilla tämän sivun kielellä. Linkki alkuperäiskielellä avaa alkuperäisen tekstin.',
+    unavailableLanguageNotice: 'Tätä sivua ei tarjota kielellä {language}.',
+    languageOptions: {
+      en: 'Englanti (English)',
+      'zh-hant': 'Kiina (中文)',
+      ja: 'Japani (日本語)',
+      ko: 'Korea (한국어)',
+      'needs-method-confirmation':
+        'Mikään neljästä kielestä ei ole käyttökelpoinen — viestintätapa on vahvistettava',
     },
   },
 };

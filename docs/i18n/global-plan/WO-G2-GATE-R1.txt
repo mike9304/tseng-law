@@ -1,0 +1,21 @@
+WO-G2-GATE-R1 — G2-2·G2-3 기계 게이트 FIX (배포 차단 아님). G2-4 커밋 후에만 실행.
+
+작업트리: /Users/son7/Projects/tseng-law-global-picker-20260918. git commit/push 금지(총괄이 검수 후 커밋).
+선행: G2-4(hi/sv/da/nb/fi) 워커가 끝난 뒤. 그 워커가 만진 파일과 겹치면 그 diff를 먼저 읽고 이 WO 문장만 고친다.
+
+근거:
+- docs/i18n/global-plan/reviews/G2-2-ZH-HANS-MS-RU-TR-REVIEW.md (PASS, FIX 4)
+- docs/i18n/global-plan/reviews/G2-3-IT-NL-PL-REVIEW.md (PASS, FIX 4)
+
+## 할 일
+1. ms/ru/tr GEO `international-guidance-answers.ts` 각 6키 + inquiry `consultationNotice`: 배타 한정어(hanya / только / yalnızca). zh-hans는 그대로.
+2. it/nl/pl inquiry `consultationNotice`: soltanto / alleen / wyłącznie.
+3. it/nl/pl 금지 테스트·체커: `gratuito`/`kosteloos`/`bezpłatn*` 긍정 전송 문장을 잡고, 「첫 상담이 무료라고 말하지 않는다」부정문만 면제. `7a138084` 원문 문자열이 팩에 없음을 핀.
+4. zh-hans 테스트: `免费咨询`만이 아니라 `咨询免费`·`首次.*免费` 긍정형. 부정 문맥 면제.
+5. pl `representativeTitle` vs `qualificationSentence` 분사 성 통일 (WO: adwokat + 여성 동사, adwokatka 금지).
+6. 체커 `zh-hans-consult-lang`: `可以用中文咨询` 삭제. 과장(`提供中文咨询服务`)만 남기거나 규칙 삭제.
+7. (선택, NOTE) ru nav 라벨 14자 이하로 축약 — 1280px mobile-nav-forced 재발 방지.
+
+닫힌 항목: G2-2 FIX #3 체커 빈 테이블은 G2-3 `7a138084`가 채움. 재작업 금지.
+
+금지: 기존 팩 본문 광역 재번역, 칼럼 md, siteLocales, git push.

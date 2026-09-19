@@ -1,0 +1,49 @@
+WO-G2-C-FR — 프랑스어 칼럼 17편 번역 (안내 로케일 fr). Opus 5 구현 레인.
+
+작업트리: /Users/son7/Projects/tseng-law-global-g2c-fr-20260919
+브랜치: i18n/global-g2c-fr-20260919
+밖 쓰기 금지. git add/commit/push 금지. build·next start·Playwright·전체 스위트·npm install 금지(§5만).
+node: export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+**파일 소유권(충돌 금지)**: 이 레인은 `src/content/columns-fr/**` 와 프랑스어 체커 어휘집만. `GUIDANCE_LOCALES_4`·`public-guidance.ts`·가이던스 팩·레지스트리·Header 수정 금지. Grok G2-4가 그 파일을 잡고 있다.
+
+## 1. 제품 잠금
+- fr = 공개 안내 로케일. 프랑스어 상담·통역·즉시응답·성공률·보장·24/7·무료 상담 금지.
+- 격식 `vous`. 변호사 Wei Tseng 여성(`l’avocate`). 고정공백 U+00A0: `?` `:` `;` `« »` 안쪽.
+- 원문 동형: `src/content/columns-de/*.md` 17편과 블록·H 레벨·이미지 경로·FAQ 수 동일.
+- `url` / `lastmod` / `featured_image` 바이트 동일(de와 같은 원 URL·이미지 상대경로).
+- 허용 링크 변환만: `/de/columns|contact|services|faq|pricing` → `/fr/…`. 그 외 경로 유지.
+- 카테고리 정본: formation `Création de société à Taïwan` · legal `Informations juridiques sur Taïwan` · case `Analyse de cas` (`src/lib/columns.ts` fr 값과 문자 일치).
+- 일반 「한국 기업」 프레이밍 → `entreprises étrangères`. 사실인 한국(조세조약·010 한국인 당사자 등)은 유지.
+- 새 법률 주장 금지. `[변호사 검수 필요]` 0.
+
+설립 8: 001,002,004,005,011,013,015,017. 법률 8: 003,006,007,008,009,012,014,016. 사례 1: 010. (de 폴더에 018이 있으면 018도 포함 — de와 파일 집합을 맞출 것. 2026-09-19 de는 18편: 001–018, 번호 공백 없음 확인 후 de에 있는 slug만 번역.)
+
+## 2. 체커 어휘집
+`scripts/check-column-translation.mjs`의 fr `compilePhrases([])` / 빈 lexicon을 `buildFrLexicon()` 수준으로 채운다(de `buildDeLexicon` 복제). 다른 언어 테이블은 읽기만. Grok이 같은 파일에 hi/sv/da/nb/fi를 넣을 수 있으니 **fr 블록만** 건드리고, 충돌 나면 fr 함수만 남기고 보고.
+
+## 3. 허용 파일
+- `src/content/columns-fr/*.md` (de 동형 17 또는 18편)
+- `scripts/check-column-translation.mjs` (fr lexicon/FORBIDDEN만)
+- 필요 시 `scripts/check-column-translation.test.mjs` fr 단언만
+금지: 가이던스 팩, public-guidance, 레지스트리, 다른 columns-* , git commit.
+
+## 4. 검증
+cd /Users/son7/Projects/tseng-law-global-g2c-fr-20260919 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+ls src/content/columns-fr/*.md | wc -l
+node scripts/check-column-translation.mjs --dir src/content/columns-fr --lang fr
+node --test scripts/check-column-translation.test.mjs 2>&1 | grep -E "^ℹ (tests|pass|fail)"
+python3 - <<'PY'
+from pathlib import Path
+p=Path('src/content/columns-fr')
+for f in sorted(p.glob('*.md')):
+    t=f.read_text()
+    bad=['taux de réussite','garanti','meilleur cabinet','consultation gratuite','24h/24','[변호사 검수 필요]']
+    hits=[b for b in bad if b.lower() in t.lower()]
+    if hits: print('HIT', f.name, hits)
+print('scan-done', len(list(p.glob('*.md'))))
+PY
+
+## 5. 보고
+diff --stat · 체커 출력 · 파일 수 · FAQ 수 패리티(de vs fr, 파일별) · 미해결.
+git commit 하지 말 것. 종료 마커를 stdout 마지막에 `=== WO-G2-C-FR 종료 ===` 로 찍을 것.

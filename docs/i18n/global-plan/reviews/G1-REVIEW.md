@@ -1,5 +1,7 @@
 # G1-REVIEW — GlobalLanguagePicker (8c365373, d7aa7622)
 
+> **닫힘 (2026-09-19):** 이 FAIL(BLOCK 1)은 `WO-G1-R2` → 커밋 `86d6fe70`에서 반영됨. Playwright 스펙 이식·드로어 스크롤락/포커스·`localeFlagHref` 패리티. 지연 도착한 동일 검토를 다시 열지 말 것.
+
 Independent review, not the author. Branch `i18n/global-picker-20260918`, worktree
 `/Users/son7/Projects/tseng-law-global-picker-20260918`, base `4152e1c6`.
 Reviewer date: 2026-09-18 KST.

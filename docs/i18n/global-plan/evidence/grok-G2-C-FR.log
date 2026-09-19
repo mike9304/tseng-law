@@ -1,1 +1,46 @@
 [WO-G2-C-FR Grok 시작 Sat Sep 19 14:18:27 KST 2026]
+프랑스어 칼럼 18편(de 001–018과 파일 집합 동일)을 `src/content/columns-fr/`에만 썼습니다. 가이던스·레지스트리·체커 다른 언어 블록은 건드리지 않았고, commit도 하지 않았습니다.
+
+## diff --stat
+추적 파일 변경 없음. 신규 untracked 18편:
+
+`src/content/columns-fr/001` … `018` (de와 줄 수 1:1).  
+`docs/i18n/global-plan/WO-G2-C-FR.txt`는 세션 전부터 있던 untracked WO이며 이 레인이 쓰지 않음.
+
+## 파일 수
+`ls src/content/columns-fr/*.md | wc -l` → **18**
+
+## 체커
+이 작업트리에 `node_modules`가 없어 `npm install` 없이 `NODE_PATH=/Users/son7/Projects/tseng-law/node_modules`로 실행.
+
+`node scripts/check-column-translation.mjs --dir src/content/columns-fr --lang fr`  
+→ **summary PASS 18/18 files** (frontmatter·headings·images·blocks·links·hangul·english·forbidden·hanzi·numbers·nationality·langid·currency).
+
+`node --test scripts/check-column-translation.test.mjs`  
+→ **tests 126 / pass 126 / fail 0**
+
+금지어 스캔(taux de réussite, garanti, meilleur cabinet, consultation gratuite, 24h/24, `[변호사 검수 필요]`) → **HIT 없음, scan-done 18**
+
+## FAQ 패리티 (de vs fr)
+
+| 파일 | de | fr |
+|---|---:|---:|
+| 001, 002, 004, 008, 011, 018 | 3 | 3 |
+| 007 | 6 | 6 |
+| 014, 016, 017 | 4 | 4 |
+| 003, 005, 006, 009, 010, 012, 013, 015 | 0 | 0 |
+
+불일치 0.
+
+카테고리 정본: 설립 9편 `Création de société à Taïwan` · 법률 8편 `Informations juridiques sur Taïwan` · 사례 010 `Analyse de cas`.
+
+## 체커 어휘집
+`buildFrLexicon()`과 fr FORBIDDEN은 이미 채워져 있어 **mjs를 수정하지 않음**. Grok hi/sv/da/nb/fi 블록과 충돌 없음.
+
+## 미해결
+- **009 numbers WARN** `수사미해석 (1): 제6호` — 한국어 원문의 서수 표기가 정렬에서 남는 경고. FAIL 아님. DE와 같은 원문 잔여.
+- 이 작업트리에 `gray-matter`가 없어 체커는 본 레포 `node_modules`를 `NODE_PATH`로만 참조함.
+- 브라우저·build·Playwright는 지시대로 미실행.
+
+=== WO-G2-C-FR 종료 ===
+=== WO-G2-C-FR 종료 code=0 Sat Sep 19 14:40:38 KST 2026 ===

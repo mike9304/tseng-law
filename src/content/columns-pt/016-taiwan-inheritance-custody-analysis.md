@@ -1,0 +1,154 @@
+---
+title: "Sucessão e autoridade parental em Taiwan: guia jurídico para a família que fica"
+url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
+lastmod: "2026-07-25"
+date_display: "13 de setembro de 2025"
+read_time: "16 min de leitura"
+categories:
+  - "Informações jurídicas sobre Taiwan"
+featured_image: "../images/016-taiwan-inheritance-custody-analysis/featured-generic.webp"
+faq:
+  - q: "Se não houver testamento e os herdeiros forem só o cônjuge e 2 filhos, como se reparte a quota sucessória?"
+    a: "Segundo os artigos 1138 e 1144 do Código Civil de Taiwan (民法), o cônjuge herda em comum com os herdeiros do lugar que se aplica, e os descendentes em linha direta (直系血親卑親屬) são o lugar 1 da sucessão legal. Se não houver testamento (遺囑) válido, se os herdeiros em causa forem só o cônjuge e 2 filhos, e se não houver nem renúncia à sucessão (拋棄繼承), nem indignidade (喪失繼承權), nem sucessão por representação (代位繼承), nem outra circunstância que mude a conclusão, as 3 pessoas herdam em princípio cada uma de um terço. Isso é só uma hipótese para explicar a regra, não a conclusão de um assunto sucessório concreto."
+  - q: "O direito do cônjuge à repartição do património residual é o mesmo direito que a quota sucessória?"
+    a: "Não. O direito à repartição da diferença de património residual conjugal (剩餘財產差額分配) do artigo 1030-1 do Código Civil de Taiwan (民法) é um direito que o cônjuge pode fazer valer em separado quando os requisitos legais estão reunidos, e deve ser calculado de forma distinta da quota sucessória. Todos os bens adquiridos durante o casamento não entram por si no cálculo, e o cônjuge sobrevivente não recebe necessariamente a metade do património sucessório. Deve apreciar-se o caso depois de se ter confirmado o regime patrimonial, a causa e o momento de aquisição de cada bem, as dívidas e os postos legalmente excluídos."
+  - q: "Se um dos pais falecer, que acontece à autoridade parental do progenitor sobrevivente?"
+    a: "Segundo o artigo 1089 do Código Civil de Taiwan (民法), quando um dos pais não pode exercer os direitos e obrigações relativamente à criança menor, o outro exerce-os em princípio. Assim, se o progenitor sobrevivente conservar a autoridade parental (親權) e não existir uma decisão judicial contrária, este progenitor continua em geral a exercer os direitos e obrigações de autoridade parental. Contudo, segundo circunstâncias concretas tais como uma decisão já proferida, causas de limitação ou de suspensão da autoridade parental, elementos internacionais e o interesse superior da criança, a intervenção do tribunal pode ser necessária."
+  - q: "O progenitor sobrevivente pode utilizar livremente o património que a criança menor herdou?"
+    a: "Não. Segundo os artigos 1087 e 1088 do Código Civil de Taiwan (民法), o património que o menor adquire por sucessão é o património particular da criança (特有財產), e o pai, a mãe ou o tutor não se tornam os seus proprietários económicos. A administração, o uso, o gozo, a representação legal e a disposição devem fazer-se no interesse da criança; em caso de conflito de interesses ou de disposição importante, a designação de um representante especial (特別代理人) ou a intervenção do tribunal pode colocar-se. Não se deve considerar que os pais podem utilizar de forma unilateral e sem limite o património sucessório da criança."
+---
+
+# Sucessão e autoridade parental em Taiwan: guia jurídico para a família que fica
+
+![Imagem que simboliza o planeamento sucessório em Taiwan e a proteção do património do menor](../images/016-taiwan-inheritance-custody-analysis/featured-generic.webp)
+
+Quando um membro da família falecer, não é um só procedimento que se abre. Deve examinar-se em separado quem são os herdeiros (繼承人), que bens e que dívidas são o objeto da sucessão, se o cônjuge sobrevivente tem um direito patrimonial conjugal distinto, quem exerce os direitos e obrigações de autoridade parental (親權) relativamente à criança menor, se é precisa uma tutela dos menores (未成年人監護) e como proteger o património atribuído à criança. Estas questões podem influenciar-se, mas o fundamento jurídico e a ordem de apreciação não são os mesmos.
+
+Deve em particular distinguir-se a quota sucessória e o direito à repartição da diferença de património residual conjugal, a autoridade parental e a tutela dos menores, a representação legal (法定代理) e a propriedade do património. Se a conclusão de um posto for transposta tal qual a um outro, o titular do direito, o objeto do cálculo ou o procedimento judicial necessário podem ser mal compreendidos. O que se segue ordena uma ordem geral de verificação a partir do Código Civil de Taiwan (民法) e dos documentos oficiais de procedimento.
+
+## 1. Herdeiros legais e quota sucessória
+
+Segundo os artigos 1138 e 1144 do Código Civil de Taiwan (民法), o cônjuge herda em comum com os herdeiros do lugar que se aplica, e os descendentes em linha direta (直系血親卑親屬) são o lugar 1 da sucessão legal. Se não houver testamento (遺囑) válido, se os herdeiros em causa forem só o cônjuge e 2 filhos, e se não houver nem renúncia à sucessão (拋棄繼承), nem indignidade (喪失繼承權), nem sucessão por representação (代位繼承), nem outra circunstância que mude a conclusão, as 3 pessoas herdam em princípio cada uma de um terço. Isso é só uma hipótese para explicar a regra, não a conclusão de um assunto sucessório concreto.
+
+O artigo 1138 do Código Civil (民法) fixa a ordem dos herdeiros legais outros que o cônjuge: descendentes em linha direta, pais, irmãos e irmãs (兄弟姊妹) e avós, nesta ordem. Se existirem herdeiros de um lugar anterior, os herdeiros de um lugar posterior não herdam em princípio antes deles. Mesmo no interior de um mesmo lugar, deve confirmar-se o momento do falecimento, a filiação, a adoção e a existência de uma sucessão por representação; importa portanto assegurar primeiro as peças sobre o vínculo familiar.
+
+O cônjuge sobrevivente não é um herdeiro de lugar posterior da ordem sucessória de parentesco do artigo 1138 do Código Civil (民法); segundo o artigo 1144, herda em comum com os herdeiros do lugar realmente aplicável. Contudo, a proporção concreta da herança em comum pode variar segundo o lugar com o qual a herança se faz em conjunto. A existência de uma causa de indignidade, uma renúncia lícita e a constituição de uma sucessão por representação no lugar de um descendente falecido antes influenciam também o resultado.
+
+O facto de a sucessão estar aberta não significa que cada herdeiro se torne de imediato proprietário exclusivo de um depósito ou de um imóvel determinados. Na relação de herança em comum, a extensão do património sucessório confirma-se, as dívidas e os encargos ordenam-se e, por um acordo de partilha ou um procedimento judicial, a atribuição de cada bem pode fixar-se. Deve-se portanto distinguir a quota sucessória legal abstrata (應繼分) e a atribuição final de um bem concreto.
+
+## 2. Testamento e determinação do património sucessório
+
+Um testamento válido pode fixar um modo de repartição distinto da sucessão legal. Deve contudo verificar-se a forma do testamento, a capacidade de testar, a interpretação e a possibilidade de execução, e examinar em conjunto os limites das regras imperativas, incluindo a reserva hereditária (特留分). O só facto de existir um testamento não determina a atribuição de todo o património sucessório; inversamente, se o testamento mencionar só certos bens, o regime da sucessão legal pode aplicar-se ao resto.
+
+Antes de calcular a quota sucessória, deve primeiro determinar-se o inventário e a natureza jurídica do património sucessório. Devem confirmar-se por peças não só os imóveis, depósitos, valores, participações de empresa, créditos e móveis, mas também as dívidas do falecido (被繼承人), a responsabilidade de caução, os impostos impagados e os encargos ligados aos funerais. Não se deve concluir só segundo o nome do registo ou da conta; deve também pesquisar-se o relatório de propriedade real, a quota em copropriedade, os direitos de um terceiro e as cauções constituídas.
+
+As prestações cujo beneficiário é designado à parte, como o seguro ou a prestação de reforma (退休金), podem ser tratadas de outro modo que o património sucessório segundo o contrato e a lei aplicável. O património em fidúcia (信託) exige confirmar a estrutura do contrato de fidúcia e o direito aos benefícios; as doações ou transmissões entre vivos podem ligar-se à restituição, à imputação ou à reserva hereditária. Se existirem contas ou imóveis no estrangeiro, deve examinar-se em conjunto o direito do lugar de situação e as regras de conflito de Taiwan.
+
+O inquérito patrimonial não é só a pesquisa de direitos; é também a apreensão das dívidas e dos riscos de procedimento. Os certificados de saldo dos estabelecimentos financeiros, o registo imobiliário, as peças fiscais, os contratos de seguro, os documentos de fidúcia, os livros da sociedade bem como as peças de empréstimo e de caução devem ordenar-se a uma mesma data de referência. Se, com peças incompletas, só uma quota sucessória concreta for calculada, um desvio pode aparecer com o património líquido realmente partilhável.
+
+## 3. Direito do cônjuge à repartição do património residual
+
+Não. O direito à repartição da diferença de património residual conjugal (剩餘財產差額分配) do artigo 1030-1 do Código Civil de Taiwan (民法) é um direito que o cônjuge pode fazer valer em separado quando os requisitos legais estão reunidos, e deve ser calculado de forma distinta da quota sucessória. Todos os bens adquiridos durante o casamento não entram por si no cálculo, e o cônjuge sobrevivente não recebe necessariamente a metade do património sucessório. Deve apreciar-se o caso depois de se ter confirmado o regime patrimonial, a causa e o momento de aquisição de cada bem, as dívidas e os postos legalmente excluídos.
+
+Este direito é um regime que, no termo do regime legal dos bens (法定財產制), compara o acréscimo do património de cada cônjuge depois do casamento segundo o critério legal. O fundamento de nascimento, a contrapartida e o objeto do cálculo diferem da quota sucessória que nasce porque o cônjuge sobrevivente é herdeiro. Se este pedido se constituir, pode colocar-se a ordem de refletir primeiro o seu resultado, depois de determinar como património sucessório o que resta ao falecido.
+
+No cálculo, não se deve ver só a expressão «bens adquiridos durante o casamento», mas a extensão de inclusão e de exclusão que o Código Civil (民法) fixa. Podem existir postos legalmente excluídos, como os bens adquiridos por sucessão ou doação e a indemnização por prejuízo moral (慰撫金); as dívidas nascidas durante o casamento devem também ser tomadas em conta. Se os cônjuges tiverem convencionado um outro regime, quais são a causa e a data de aquisição do bem e como fixar a data de referência do valor apreciam-se segundo as peças.
+
+O artigo 1030-1 do Código Civil (民法) dispõe que, se o resultado de uma repartição igual for manifestamente inequitativo, o tribunal pode ajustar o montante da repartição. Devem examinar-se de forma concreta os fatores que a lei exige: duração do casamento, trabalho doméstico e cuidados às crianças, contribuição económica, circunstâncias profissionais, e situação de aquisição e de administração dos bens. Não se pode portanto fixar de antemão se o pedido nasce e o seu montante pela só comparação dos nomes ou pela duração do casamento.
+
+## 4. Dívidas sucessórias e renúncia à sucessão
+
+Segundo o artigo 1148 do Código Civil de Taiwan (民法), o herdeiro sucede de forma global aos direitos e obrigações patrimoniais do falecido desde a abertura da sucessão, com exclusão dos direitos e obrigações estritamente pessoais. A responsabilidade pelas dívidas sucessórias (繼承債務) é em princípio limitada ao valor do património adquirido pela sucessão. Deve contudo verificar-se em conjunto os procedimentos legais ligados e as exceções, como o estabelecimento do inventário, o anúncio e o pagamento aos credores e a conservação do património sucessório.
+
+O herdeiro que deseja renunciar à sucessão deve, segundo o artigo 1174 do Código Civil (民法), manifestar a sua vontade por escrito ao tribunal competente nos 3 meses a contar do dia em que conheceu o direito sucessório. Não se deve considerar que a renúncia na forma legal se constitui só porque se diz em família que não se receberá, ou porque não se utiliza o património. O efeito sobre o herdeiro do lugar seguinte daquele que renuncia ou sobre o relatório de representação deve também confirmar-se segundo o vínculo familiar e o curso do procedimento.
+
+Antes de dispor do património sucessório ou de pagar dívidas, deve pesquisar-se em conjunto o ativo e o passivo. Confirma-se a existência de credores, as cauções, as dívidas de caução, os contratos em curso e se os impostos foram declarados e, se for caso disso, examina-se a apresentação do inventário (遺產清冊) e o procedimento dos credores. Deve também evitar-se as circunstâncias que podem influir na limitação de responsabilidade que a lei fixa, como dissimular bens ou omiti-los do inventário.
+
+A orientação do procedimento de pedido dos assuntos sucessórios do portal fiscal do Ministério das Finanças de Taiwan (財政部) foi atualizada a 25 de junho de 2026 e explica o prazo geral de 3 meses do procedimento judicial relativo à apresentação do inventário e à renúncia, bem como o prazo geral de 6 meses da declaração do imposto sobre as sucessões (遺產稅). O ponto de partida, a prorrogação, as exceções e a competência devem contudo confirmar-se em cada assunto, e isso não deve servir de cálculo de uma data-limite pessoal.
+
+A declaração do imposto sobre as sucessões, a declaração no registo de estado civil (戶籍), a alteração de nome dos imóveis e dos veículos e o procedimento de pagamento dos estabelecimentos financeiros podem ter órgãos responsáveis e documentos distintos. Não se deve pensar que o escrito de renúncia apresentado ao tribunal e a declaração do imposto sobre as sucessões junto do órgão fiscal são o mesmo procedimento. Como vários prazos podem correr ao mesmo tempo, é mais seguro gerir o ponto de partida e os comprovativos de cada procedimento num calendário separado.
+
+## 5. Direitos e obrigações de autoridade parental do progenitor sobrevivente
+
+Segundo o artigo 1089 do Código Civil de Taiwan (民法), quando um dos pais não pode exercer os direitos e obrigações relativamente à criança menor, o outro exerce-os em princípio. Assim, se o progenitor sobrevivente conservar a autoridade parental e não existir uma decisão judicial contrária, este progenitor continua em geral a exercer os direitos e obrigações de autoridade parental. Contudo, segundo circunstâncias concretas tais como uma decisão já proferida, causas de limitação ou de suspensão da autoridade parental, elementos internacionais e o interesse superior da criança (子女最佳利益), a intervenção do tribunal pode ser necessária.
+
+Os direitos e obrigações de autoridade parental podem incluir a proteção e a educação da criança menor, a decisão sobre a residência, a representação legal e a administração dos bens, entre outros conteúdos. Cada faculdade não está no interesse pessoal dos pais; deve exercer-se no sentido de proteger a personalidade e o interesse patrimonial da criança. A apreciação da proteção quotidiana e a representação legal numa disposição patrimonial importante podem exigir um exame distinto.
+
+Não se deve ver só o vínculo familiar antes e depois do falecimento; devem confirmar-se as decisões de divórcio existentes ou as relativas ao exercício da autoridade parental, e se há limitação ou suspensão do direito. Se existir uma decisão de um tribunal estrangeiro, o reconhecimento e os efeitos em Taiwan bem como o procedimento necessário noutro Estado são também objeto de exame. Numa operação em que o interesse dos pais e da criança se opõem, deve ver-se à parte se a representação legal geral basta.
+
+A autoridade parental e a sucessão são, em direito, questões distintas. Mesmo se o progenitor sobrevivente exercer os direitos e obrigações de autoridade parental, o proprietário do património que a criança herdou é a criança, e os pais não o podem tratar como a sua própria quota sucessória. Além disso, a posição de autoridade parental pode existir mesmo se o progenitor sobrevivente não for herdeiro; se se tornar herdeiro, deve confirmar-se com mais cuidado a possibilidade de um conflito de interesses (利益衝突) entre ele e a criança.
+
+## 6. Designação do tutor e intervenção do tribunal
+
+A tutela dos menores do artigo 1091 do Código Civil de Taiwan (民法) coloca-se quando a criança menor não tem pais ou quando os dois não podem exercer os direitos e obrigações de autoridade parental. Não se pode afirmar que a tutela dos menores começa de imediato pelo só facto de um progenitor ter falecido. Deve primeiro confirmar-se o estado da autoridade parental do progenitor sobrevivente, as decisões existentes e se os direitos podem realmente exercer-se.
+
+Segundo o artigo 1093 do Código Civil (民法), o progenitor que exerce em último os direitos e obrigações de autoridade parental pode designar um tutor (監護人) do menor por testamento. Para que esta regra se aplique, o testamento deve reunir a forma legal e o progenitor que designa deve ter o poder de designar o tutor do menor. Mesmo se houver um conteúdo de designação, devem ver-se em conjunto as condições de abertura da tutela, a qualificação do tutor e se a aceita, bem como a declaração ao tribunal e os outros procedimentos de vigilância.
+
+Se não houver designação válida por testamento ou se a pessoa designada não puder assumir a carga, podem colocar-se a ordem legal do artigo 1094 do Código Civil (民法) e o regime de designação judicial do artigo 1094-1. O tribunal examina o interesse superior da criança a partir de factos concretos: idade e capacidade de exprimir a sua vontade do menor, relação e capacidade de cuidado do candidato, adequação da administração patrimonial e estabilidade da vida.
+
+Os pais e os outros com qualidade que a lei fixa podem, se existir uma causa legal, pedir ao tribunal a designação ou a alteração de tutor ou uma outra disposição necessária. Isso não significa que um candidato concreto se torne por si tutor pelo só vínculo familiar. O tutor não é o mesmo conceito que o progenitor que exerce a autoridade parental, e pode assumir obrigações separadas sobre a extensão das faculdades, o estabelecimento do inventário, o relatório e a vigilância judicial.
+
+No exame do tutor, deve ver-se de forma concreta o papel de proteção e o de administração patrimonial. No caso de um candidato que reside longo tempo no estrangeiro, de um candidato com um interesse económico com a criança ou de um candidato pouco experiente em administração de ativos, deve ver-se se é preciso um mecanismo complementar. O tribunal pode apreciar o modo de vigilância ou as medidas necessárias segundo as circunstâncias reais.
+
+## 7. Proteção do património sucessório do menor
+
+Não. Segundo os artigos 1087 e 1088 do Código Civil de Taiwan (民法), o património que o menor adquire por sucessão é o património particular da criança (特有財產), e o pai, a mãe ou o tutor não se tornam os seus proprietários económicos. A administração, o uso, o gozo, a representação legal e a disposição devem fazer-se no interesse da criança; em caso de conflito de interesses ou de disposição importante, a designação de um representante especial (特別代理人) ou a intervenção do tribunal pode colocar-se. Não se deve considerar que os pais podem utilizar de forma unilateral e sem limite o património sucessório da criança.
+
+O património particular designa o património que pertence ao menor ele próprio. Os depósitos, imóveis, ações ou outros direitos herdados devem ser afirmados como património da criança e administrados à parte no seu interesse. Mesmo se o pai, a mãe ou o tutor assumirem a administração, não se tornam os seus proprietários económicos e não o devem utilizar para os seus próprios encargos de vida ou para pagar as suas dívidas.
+
+As faculdades de administração, de uso, de gozo e de disposição do artigo 1088 do Código Civil (民法) estão ligadas à finalidade do interesse da criança. Importa consignar o tipo de bem, a necessidade da disposição, a adequação da contrapartida e o plano de conservação e de uso do produto. Nos atos de grande valor e de risco, como a venda de um imóvel, a constituição de caução ou o investimento de empresa, deve também verificar-se se uma autorização de outras normas ou um procedimento judicial é exigido.
+
+Se pais e criança forem co-herdeiros do mesmo património sucessório ou se tornarem contrapartes de um contrato, um conflito de interesses pode nascer. Deve examinar-se o regime do representante especial do artigo 1086 do Código Civil (民法) e confirmar quem pode representar a criança no acordo de partilha ou nos atos de procedimento. Se for preciso designar um representante especial vê-se não só segundo a forma da operação, mas segundo o facto de o interesse económico se opor realmente.
+
+Quando o tutor do menor administra o património, podem aplicar-se o estabelecimento do inventário, a conservação dos comprovativos, a separação das receitas e das despesas, bem como as regras de relatório e de vigilância junto do tribunal. As contas financeiras e os ativos de investimento devem ser administrados de modo que se possa identificar que são o património da criança, e cada despesa deve ser registada na sua finalidade e no seu fundamento. Para que o património e o registo de administração possam ser entregues com fluidez quando a tutela termina ou o menor atinge a maioridade, as peças devem ser ordenadas de forma sistemática desde o início.
+
+O planeamento que utiliza uma fidúcia ou um seguro também não pode ser tido por seguro segundo o só conteúdo do contrato. Devem confirmar-se o fiduciário (受託人) e o beneficiário, as condições de pagamento, a remuneração de administração, o mecanismo de vigilância e as condições de alteração e de extinção, e examinar em conjunto a reserva hereditária e as questões fiscais. Deve refletir-se de forma equilibrada a necessidade atual da criança e a sua vida futura; a comodidade do administrador patrimonial não deve primar o interesse da criança.
+
+## 8. Lei aplicável e procedimento da família internacional
+
+A uma família que tem um elemento internacional, não se deve aplicar de imediato só a regra interna do Código Civil de Taiwan (民法). A nacionalidade das partes, o domicílio e a residência habitual (經常居所), o centro de vida no momento do falecimento, o lugar de situação do património, o casamento ou o divórcio constituídos no estrangeiro e as decisões de autoridade parental existentes podem influir na lei aplicável e na competência. Mesmo no interior de uma mesma família, a sucessão, o regime patrimonial conjugal, a autoridade parental, a tutela e o registo dos bens podem ser submetidos a pontos de conexão distintos.
+
+A lei de Taiwan sobre a aplicação das leis civis com um elemento estrangeiro (涉外民事法律適用法) é o ponto de partida para fixar a lei aplicável às relações civis com um elemento estrangeiro. Confirmar só esta lei pode contudo não bastar; deve examinar-se em conjunto a competência internacional do tribunal, o reconhecimento e a execução das sentenças estrangeiras, bem como os tratados ou o direito do outro Estado. Se uma apreciação válida em Taiwan se aplicar tal qual à transmissão de um bem situado no estrangeiro deve confirmar-se à parte no lugar de situação do bem.
+
+O testamento estabelecido no estrangeiro deve examinar-se na forma de estabelecimento, a eficácia substancial, a tradução e a legalização (認證), bem como o procedimento de verificação (檢認) ou de execução. Os certificados de casamento e de divórcio e os documentos de filiação estrangeiros podem exigir uma apostila ou uma legalização consular e uma tradução. Se a grafia do nome, os dados do passaporte e o registo de estado civil diferirem entre si, uma documentação suplementar pode ser pedida no processo de identificação da mesma pessoa.
+
+Se existir uma sentença estrangeira sobre a autoridade parental ou a tutela, deve confirmar-se se esta sentença é definitiva, se um procedimento lícito foi seguido e se pode ser reconhecida em Taiwan. Se a criança tiver a sua residência habitual noutro país, a competência do tribunal local e as medidas de proteção urgente podem também ser importantes. Que procedimento de que país se trata primeiro deve prever-se com o interesse superior da criança e a possibilidade de execução.
+
+Em matéria fiscal, uma obrigação de declaração separada pode também nascer em cada Estado. Deve verificar-se se a declaração do imposto sobre as sucessões de Taiwan se recobre com o imposto sobre as sucessões e as doações (贈與稅) do estrangeiro, com a declaração das contas financeiras no exterior ou com o imposto de transmissão imobiliária, e examinar as regras de ajustamento da dupla tributação. Como a data de referência da taxa de câmbio, o modo de avaliação dos ativos e a extensão dos devedores podem diferir, o resultado da declaração de um país não deve ser copiado tal qual.
+
+## 9. Lista de verificação de preparação prática
+
+A ordem seguinte é um quadro de base para reunir os factos sem omissão e para não confundir direitos e procedimentos distintos. A ordem real de apresentação pode variar segundo o órgão competente e a urgência do assunto, de modo que o prazo de cada etapa deve confirmar-se à parte.
+
+1. Confirmam-se o certificado de óbito e as peças de declaração de óbito, os dados do vínculo familiar e do registo de estado civil de Taiwan, os registos de casamento, de divórcio e de adoção, e as decisões judiciais existentes. Se o documento for estrangeiro, verificam-se também a legalização, a tradução e se a grafia do nome coincide.
+2. Pesquisam-se imóveis, depósitos, ativos de investimento, participações de empresa e móveis, bem como os créditos, e ordenam-se em conjunto empréstimos, cauções, impostos e dívidas contratuais. Marca-se à parte o nome e o relatório de propriedade real, o beneficiário do seguro, a fidúcia, o património comum e as peças de transmissões entre vivos.
+3. Confirmam-se o original do testamento e a forma de estabelecimento, a capacidade de testar, as exigências de testemunhas ou de notariado, o executor testamentário e o conteúdo do legado (遺贈). Examina-se em conjunto como um testamento válido muda a repartição e os limites das regras imperativas, incluindo a reserva hereditária.
+4. Calculam-se à parte a quota sucessória legal e o direito à repartição da diferença de património residual conjugal. Distinguem-se o objeto do cálculo, as dívidas, os postos excluídos, a data de referência de avaliação e os comprovativos de cada regime, e não se reflete de forma duplicada o resultado de um cálculo no outro.
+5. Identificam-se os bens que se atribuem ao menor e confirmam-se a representação legal, a extensão de administração do pai, da mãe ou do tutor, o conflito de interesses e se é preciso um representante especial. Prevê-se também um modo de conservar as contas, os livros e o produto da disposição separados do património pessoal do adulto.
+6. Separam-se por órgão o procedimento judicial de renúncia, de inventário, de tutela e de representante especial, a declaração do imposto sobre as sucessões junto do órgão fiscal, e os procedimentos de registo de estado civil e de inscrição dos bens. Confirmam-se a competência, o ponto de partida, os documentos a apresentar, a possibilidade de completar e se há prorrogação de cada procedimento, e conservam-se o aviso de receção e as cópias.
+
+Ao reunir as peças, convém registar o lugar de conservação do original e as datas de emissão e de referência, e ordenar os ficheiros eletrónicos e os documentos em papel segundo um mesmo sistema de classificação. Se houver vários co-herdeiros ou administradores patrimoniais, deve consignar-se quem conserva que peças e que atos foram aprovados. Os dados pessoais e financeiros do menor devem ser geridos com um controlo de acesso a fim de que só sejam fornecidos às pessoas e órgãos que deles precisam.
+
+Deve também distinguir-se o património que exige uma conservação urgente e o procedimento habitual de declaração. Examina-se primeiro se existem circunstâncias a confirmar de imediato, como o risco de interrupção de uma conta ou da exploração de uma empresa, a deterioração de um imóvel ou a prescrição de um crédito, mas não se deve dispor sem poder sob pretexto da urgência. É útil gerir em conjunto num só calendário o andamento do procedimento judicial e dos procedimentos fiscal, de estado civil e de inscrição.
+
+## 10. Fontes oficiais
+
+- [Base de dados da regulamentação nacional de Taiwan: Código Civil](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001).
+- [Sistema de pesquisa regulamentar do Ministério da Justiça de Taiwan: versão inglesa do Código Civil](https://mojlaw.moj.gov.tw/ENG/LawContentE.aspx?LSID=FL001351).
+- [Base de dados da regulamentação nacional de Taiwan: lei sobre a aplicação das leis civis com um elemento estrangeiro](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007).
+- [Yuan judicial de Taiwan: formulário de pedido de designação de um tutor do menor](https://www.judicial.gov.tw/tw/cp-1369-4219-da7e1-1.html).
+- [Portal fiscal do Ministério das Finanças de Taiwan: procedimento de pedido dos assuntos sucessórios e documentos a preparar](https://www.etax.nat.gov.tw/etwmain/tax-info/house-land-transfer-taxtation-calculation-area/inheritance/file-process).
+
+Nas páginas oficiais de regulamentação, confirma-se a data de reforma e a de entrada em vigor do preceito, e a versão inglesa deve servir de material auxiliar para confrontar a explicação deste artigo com o texto original. O formulário do Yuan judicial e a orientação do portal fiscal mostram uma direção geral de preparação, mas a competência e as exigências de apresentação de cada assunto devem confirmar-se à parte segundo a orientação mais recente do órgão destinatário.
+
+## 11. Orientações ligadas
+
+- [Serviço de contencioso familiar em Taiwan](/ko/services/family)
+- [Guia do advogado litigante em Taiwan](/ko/taiwan-litigation-lawyer)
+- [Contacto](/pt/contact)
+
+---
+
+Este artigo é um material com fins educativos para explicar de forma geral o regime de sucessão, o regime patrimonial conjugal, a autoridade parental e a tutela dos menores em Taiwan; não é um conselho jurídico para um assunto concreto de sucessão ou de família. A lei aplicável, o procedimento e o resultado podem variar segundo o círculo dos herdeiros, o testamento, o património e as dívidas, o regime matrimonial, as decisões judiciais existentes e os elementos internacionais. Antes de calcular prazos como a renúncia ou a declaração fiscal, ou de dispor do património, confirmem-se as fontes oficiais mais recentes e as circunstâncias individuais.
+
+**A advogada Wei Tseng (曾雋崴)**

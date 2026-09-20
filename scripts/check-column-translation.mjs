@@ -24,7 +24,7 @@ const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 export const repoRoot = resolve(scriptDirectory, '..');
 export const DEFAULT_SOURCE_DIR = join(repoRoot, 'src/content/columns');
 
-export const GUIDANCE_LANGS = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi'];
+export const GUIDANCE_LANGS = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi', 'cs', 'hu', 'ro', 'uk', 'el', 'he'];
 export const HANZI_MIN = 5;
 export const ENGLISH_WORD_MIN = 12;
 export const ENGLISH_STOPWORD_MIN = 3;
@@ -260,6 +260,66 @@ export const FORBIDDEN_PHRASES = {
     { id: 'fi-always-on', re: /neuvonta\s*24\s*\/\s*7|24\/7/i, note: '즉시/상시 상담' },
     { id: 'fi-free-consult', re: /ilmainen konsultaatio|maksuton neuvonta/i, note: '비용 보장(무료 상담)' },
   ],
+  cs: [
+    { id: 'cs-consult-lang', re: /porada v češtině|konzultace v češtině|poradenství česky/i, note: 'cs 상담 가능' },
+    { id: 'cs-interpreter', re: /zajistíme tlumočníka|tlumočník k dispozici|tlumočnická služba/i, note: '통역 제공' },
+    { id: 'cs-immediate', re: /okamžitá odpověď|odpovíme ihned|odpověď do minuty/i, note: '즉시 응답' },
+    { id: 'cs-success-rate', re: /úspěšnost \d|míra úspěšnosti/i, note: '성공률' },
+    { id: 'cs-win-100', re: /100\s*%\s*úspěch|úspěch\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'cs-cost-guarantee', re: /záruka nákladů|záruka výsledku|garantujeme/i, note: '비용/결과 보장' },
+    { id: 'cs-always-on', re: /poradenství\s*24\s*\/\s*7|24\/7/i, note: '즉시/상시 상담' },
+    { id: 'cs-free-consult', re: /bezplatná konzultace|konzultace zdarma/i, note: '비용 보장(무료 상담)' },
+  ],
+  hu: [
+    { id: 'hu-consult-lang', re: /tanácsadás magyarul|magyar nyelvű tanácsadás/i, note: 'hu 상담 가능' },
+    { id: 'hu-interpreter', re: /tolmácsot biztosítunk|tolmács elérhető|tolmácsszolgálat/i, note: '통역 제공' },
+    { id: 'hu-immediate', re: /azonnali válasz|perceken belül válaszolunk/i, note: '즉시 응답' },
+    { id: 'hu-success-rate', re: /sikerességi arány|nyerési arány/i, note: '성공률' },
+    { id: 'hu-win-100', re: /100\s*%\s*siker|siker\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'hu-cost-guarantee', re: /költséggarancia|eredménygarancia|garantáljuk/i, note: '비용/결과 보장' },
+    { id: 'hu-always-on', re: /tanácsadás\s*24\s*\/\s*7|24\/7/i, note: '즉시/상시 상담' },
+    { id: 'hu-free-consult', re: /ingyenes tanácsadás|díjmentes konzultáció/i, note: '비용 보장(무료 상담)' },
+  ],
+  ro: [
+    { id: 'ro-consult-lang', re: /consultanță în română|consultanță în limba română/i, note: 'ro 상담 가능' },
+    { id: 'ro-interpreter', re: /asigurăm interpret|interpret disponibil|serviciu de interpretariat/i, note: '통역 제공' },
+    { id: 'ro-immediate', re: /răspuns imediat|răspundem imediat/i, note: '즉시 응답' },
+    { id: 'ro-success-rate', re: /rata de succes|procent de câștig/i, note: '성공률' },
+    { id: 'ro-win-100', re: /100\s*%\s*succes|succes\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'ro-cost-guarantee', re: /garanție de cost|garanția rezultatului|garantăm/i, note: '비용/결과 보장' },
+    { id: 'ro-always-on', re: /consultanță\s*24\s*\/\s*7|24\/7/i, note: '즉시/상시 상담' },
+    { id: 'ro-free-consult', re: /consultanță gratuită|consultație gratuită/i, note: '비용 보장(무료 상담)' },
+  ],
+  uk: [
+    { id: 'uk-consult-lang', re: /консультація українською|консультування українською/i, note: 'uk 상담 가능' },
+    { id: 'uk-interpreter', re: /надаємо перекладача|перекладач доступний|послуги перекладача/i, note: '통역 제공' },
+    { id: 'uk-immediate', re: /негайна відповідь|відповідаємо одразу/i, note: '즉시 응답' },
+    { id: 'uk-success-rate', re: /відсоток виграних|показник успішності/i, note: '성공률' },
+    { id: 'uk-win-100', re: /100\s*%\s*успіх|успіх\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'uk-cost-guarantee', re: /гарантія вартості|гарантія результату|гарантуємо/i, note: '비용/결과 보장' },
+    { id: 'uk-always-on', re: /консультації\s*24\s*\/\s*7|24\/7/i, note: '즉시/상시 상담' },
+    { id: 'uk-free-consult', re: /безкоштовна консультація|безоплатна консультація/i, note: '비용 보장(무료 상담)' },
+  ],
+  el: [
+    { id: 'el-consult-lang', re: /συμβουλευτική στα ελληνικά|νομική συμβουλή στα ελληνικά/i, note: 'el 상담 가능' },
+    { id: 'el-interpreter', re: /παρέχουμε διερμηνέα|διερμηνέας διαθέσιμος|υπηρεσία διερμηνείας/i, note: '통역 제공' },
+    { id: 'el-immediate', re: /άμεση απάντηση|απαντούμε αμέσως/i, note: '즉시 응답' },
+    { id: 'el-success-rate', re: /ποσοστό επιτυχίας|ποσοστό νικών/i, note: '성공률' },
+    { id: 'el-win-100', re: /100\s*%\s*επιτυχία|επιτυχία\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'el-cost-guarantee', re: /εγγύηση κόστους|εγγύηση αποτελέσματος|εγγυόμαστε/i, note: '비용/결과 보장' },
+    { id: 'el-always-on', re: /συμβουλευτική\s*24\s*\/\s*7|24\/7/i, note: '즉시/상시 상담' },
+    { id: 'el-free-consult', re: /δωρεάν συμβουλευτική|δωρεάν νομική συμβουλή/i, note: '비용 보장(무료 상담)' },
+  ],
+  he: [
+    { id: 'he-consult-lang', re: /ייעוץ בעברית|ייעוץ משפטי בעברית/, note: 'he 상담 가능' },
+    { id: 'he-interpreter', re: /נספק מתורגמן|מתורגמן זמין|שירותי תרגום סימולטני/, note: '통역 제공' },
+    { id: 'he-immediate', re: /מענה מיידי|נשיב מיד/, note: '즉시 응답' },
+    { id: 'he-success-rate', re: /שיעור הצלחה|אחוזי זכייה/, note: '성공률' },
+    { id: 'he-win-100', re: /100\s*%\s*הצלחה|הצלחה\s*100\s*%/, note: '성공률 100%' },
+    { id: 'he-cost-guarantee', re: /ערבות לעלות|הבטחת תוצאה|אנו מבטיחים/, note: '비용/결과 보장' },
+    { id: 'he-always-on', re: /ייעוץ\s*24\s*\/\s*7|24\/7/, note: '즉시/상시 상담' },
+    { id: 'he-free-consult', re: /ייעוץ חינם|ייעוץ ללא תשלום/, note: '비용 보장(무료 상담)' },
+  ],
 };
 
 /** Locale-prefix swaps that are allowed; everything else must stay byte-identical to source href. */
@@ -334,6 +394,12 @@ export const NATIONALITY_TERMS = {
   da: ['Danmark', 'dansk statsborgerskab', 'danske virksomheder', 'danskere'],
   nb: ['Norge', 'norsk statsborgerskap', 'norske virksomheter', 'nordmenn'],
   fi: ['Suomi', 'Suomen kansalaisuus', 'suomalaiset yritykset', 'suomalaiset'],
+  cs: ['české občanství', 'Česká republika', 'český'],
+  hu: ['magyar állampolgárság', 'Magyarország', 'magyar'],
+  ro: ['cetățenie română', 'România', 'român'],
+  uk: ['українське громадянство', 'Україна', 'український'],
+  el: ['ελληνική ιθαγένεια', 'Ελλάδα', 'ελληνικ'],
+  he: ['אזרחות ישראלית', 'ישראל', 'ישראלי'],
 };
 
 export const NATIONALITY_LANGUAGE_NAMES = {
@@ -358,6 +424,12 @@ export const NATIONALITY_LANGUAGE_NAMES = {
   da: [/på dansk/gi, /dansk sprog/gi],
   nb: [/på norsk/gi, /norsk språk/gi],
   fi: [/suomeksi/gi, /suomen kielellä/gi],
+  cs: [/v češtině/gi, /český jazyk/gi, /česky/gi],
+  hu: [/magyarul/gi, /magyar nyelven/gi],
+  ro: [/în română/gi, /în limba română/gi],
+  uk: [/українською/gi, /українською мовою/gi],
+  el: [/στα ελληνικά/gi, /ελληνική γλώσσα/gi],
+  he: [/בעברית/g, /בשפה העברית/g],
 };
 
 export const SOURCE_LANGUAGE_NAME_RE = /한국어|베트남어|인도네시아어|태국어|필리핀어|영어|일본어|중국어|타이완어|대만어/g;
@@ -393,6 +465,12 @@ export const NUMBER_THOUSAND_STYLE = {
   da: 'dot',
   nb: 'dot',
   fi: 'dot',
+  cs: 'dot',
+  hu: 'dot',
+  ro: 'dot',
+  uk: 'dot',
+  el: 'dot',
+  he: 'comma',
 };
 
 /**

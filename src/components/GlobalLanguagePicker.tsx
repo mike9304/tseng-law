@@ -220,7 +220,11 @@ export function GlobalLanguagePickerView({
         </div>
         <div className={styles.regions}>
           {groups.map((group) => (
-            <section key={group.region}>
+            // Regions stack full width and each list wraps into as many
+            // columns as fit. Europe carries 19 of the 31 languages; in a
+            // narrow region column that became one tall list the reader had to
+            // scroll past.
+            <section key={group.region} data-region={group.region}>
               <h3 className={styles.regionTitle}>{group.heading}</h3>
               <ul className={styles.list}>
                 {group.entries.map((entry) => {

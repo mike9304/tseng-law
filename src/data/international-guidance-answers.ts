@@ -1320,36 +1320,36 @@ export const guidanceAnswers: Record<
       sources: ['/cs/services', '/cs/contact'],
     },
   },
-  lt: { // SCAFFOLD(cs)
+  lt: {
     services: {
       answer:
-        'Kancelář vede šest agend podle tchajwanského práva: investice a zakládání společností, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí zaslaný obsah. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/faq', '/cs/contact'],
+        'Kontora veda šešias sritis pagal Taivano teisę: investicijas ir įmonių steigimą, civilinius ginčus ir žalos atlyginimą, santuoką, šeimą ir paveldėjimą, darbo ginčus, baudžiamąsias bylas ir intelektinę nuosavybę. Kiekvienos bylos apimtis patvirtinama atskirai po to, kai advokatė arba advokatas įvertina atsiųstą turinį. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.',
+      sources: ['/lt/faq', '/lt/contact'],
     },
     about: {
       answer:
-        'Hovering International Law Firm je tchajwanská advokátní kancelář, kterou v roce 2016 založili absolventi National Taiwan University (國立臺灣大學), s pobočkami v Tchaj-peji, Kao-siungu, Tchaj-čungu a Pching-tungu. Od roku 2020 působí i účetní úsek; pobočka v Tchaj-čungu vede věci s vazbou na Koreu a Japonsko. Kancelář neslibuje výsledek. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/lawyers', '/cs/services'],
+        'Hovering International Law Firm yra Taivano advokatų kontora, kurią 2016 m. įsteigė National Taiwan University (國立臺灣大學) absolventai, su biurais miestuose Taipėjus, Gaosiongas, Taidžongas ir Pingdongas. Nuo 2020 m. veikia ir apskaitos padalinys; Taidžongo biuras veda bylas, susijusias su Korėja ir Japonija. Kontora nežada rezultato. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.',
+      sources: ['/lt/lawyers', '/lt/services'],
     },
     lawyers: {
       answer:
-        'Tato stránka ukazuje profily advokátek a advokátů Hovering, provozního vedení a přidruženého účetnictví a auditu. Advokátka Wei Tseng (曾雋崴) je oprávněna vykonávat advokacii na Tchaj-wanu a je řídící advokátkou kanceláře; pracuje s klienty z Koreje, z Japonska a s dalšími mezinárodními klienty. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/about', '/cs/contact'],
+        'Šis puslapis rodo Hovering advokačių ir advokatų, operacijų vadovybės ir susijusios apskaitos bei audito profilius. Advokatė Wei Tseng (曾雋崴) turi teisę verstis advokatės praktika Taivane ir yra vadovaujančioji advokatė kontoroje; dirba su klientais iš Korėjos, iš Japonijos ir su kitais tarptautiniais klientais. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.',
+      sources: ['/lt/about', '/lt/contact'],
     },
     pricing: {
       answer:
-        'Tato stránka nezveřejňuje ceník. Nejprve se z Vašeho shrnutí potvrdí rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu, dříve než práce začne. Konzultace s advokátkou nebo advokátem může být úplatná; vedle odměny mohou vzniknout soudní nebo správní poplatky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/contact', '/cs/faq'],
+        'Šis puslapis neskelbia kainyno. Pirmiausia iš Jūsų santraukos patvirtinama darbo apimtis, tada su Jumis patvirtinamas dydis ir skaičiavimo būdas, prieš pradedant darbą. Konsultacija su advokate arba advokatu gali būti mokama; be atlygio gali atsirasti teismo ar administracinės rinkliavos. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.',
+      sources: ['/lt/contact', '/lt/faq'],
     },
     contact: {
       answer:
-        'Zašlete shrnutí kontaktním formulářem: co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. V počáteční fázi zatím není třeba zasílat doklady totožnosti ani celý důkazní materiál. Kancelář neslibuje lhůtu k odpovědi a nepotvrzuje schůzku prostřednictvím této stránky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/faq', '/cs/pricing'],
+        'Atsiųskite santrauką kontaktine forma: kas įvyko, kokios pagalbos reikia, kokį ryšį byla turi su Taivanu, ir terminą, jei jį žinote. Pradiniame etape dar nereikia siųsti tapatybės dokumentų ar visos įrodymų medžiagos. Kontora nežada atsakymo termino ir nepatvirtina susitikimo per šį puslapį. Konsultacija vyksta tik anglų, kinų, japonų ir korėjiečių kalbomis.',
+      sources: ['/lt/faq', '/lt/pricing'],
     },
     faq: {
       answer:
-        'Tato část odpovídá na časté otázky na úrovni obecných informací: šest agend kanceláře, příprava před kontaktem, potvrzení nákladů a význam odeslané zprávy. Odeslaná zpráva čeká na posouzení, není právním stanoviskem ani potvrzenou schůzkou a sama o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem. Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/services', '/cs/contact'],
+        'Ši dalis atsako į dažnus klausimus bendros informacijos lygiu: šešios kontoros sritys, pasirengimas prieš kreipiantis, išlaidų patvirtinimas ir išsiųsto pranešimo reikšmė. Išsiųstas pranešimas laukia įvertinimo, nėra teisinė nuomonė ir nėra patvirtintas susitikimas, ir pats savaime nesukuria advokato ir kliento santykių. Konsultacija vyksta tik keturiomis kalbomis: anglų, kinų, japonų ir korėjiečių.',
+      sources: ['/lt/services', '/lt/contact'],
     },
   },
   lv: { // SCAFFOLD(cs)

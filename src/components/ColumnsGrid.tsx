@@ -154,7 +154,7 @@ const GUIDANCE_FILTER_ALL_LABEL: Record<GuidanceLocale4, string> = {
   hr: 'Vše', // SCAFFOLD(cs)
   sr: 'Vše', // SCAFFOLD(cs)
   sl: 'Vše', // SCAFFOLD(cs)
-  lt: 'Vše', // SCAFFOLD(cs)
+  lt: 'Visus',
   lv: 'Vše', // SCAFFOLD(cs)
   et: 'Vše', // SCAFFOLD(cs)
   ca: 'Vše', // SCAFFOLD(cs)
@@ -363,10 +363,10 @@ const GUIDANCE_FILTER_CATEGORY_LABEL: Record<GuidanceLocale4, Record<ColumnCateg
     legal: 'Právní informace o Tchaj-wanu',
     case: 'Rozbor případu',
   },
-  lt: { // SCAFFOLD(cs)
-    formation: 'Zakládání společností na Tchaj-wanu',
-    legal: 'Právní informace o Tchaj-wanu',
-    case: 'Rozbor případu',
+  lt: {
+    formation: 'Įmonių steigimas Taivane',
+    legal: 'Teisinė informacija apie Taivaną',
+    case: 'Bylos analizė',
   },
   lv: { // SCAFFOLD(cs)
     formation: 'Zakládání společností na Tchaj-wanu',
@@ -432,7 +432,7 @@ const GUIDANCE_CARD_READ_MORE_LABEL: Record<GuidanceLocale4, string> = {
   hr: 'Číst dál', // SCAFFOLD(cs)
   sr: 'Číst dál', // SCAFFOLD(cs)
   sl: 'Číst dál', // SCAFFOLD(cs)
-  lt: 'Číst dál', // SCAFFOLD(cs)
+  lt: 'Skaityti toliau',
   lv: 'Číst dál', // SCAFFOLD(cs)
   et: 'Číst dál', // SCAFFOLD(cs)
   ca: 'Číst dál', // SCAFFOLD(cs)

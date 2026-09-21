@@ -627,11 +627,11 @@ export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion
     europe: 'Evropa',
     americas: 'Amerika',
   },
-  lt: { // SCAFFOLD(cs)
-    global: 'Celosvětově',
-    'asia-pacific': 'Asie a Tichomoří',
-    'middle-east': 'Blízký východ',
-    europe: 'Evropa',
+  lt: {
+    global: 'Visame pasaulyje',
+    'asia-pacific': 'Azija ir Ramusis vandenynas',
+    'middle-east': 'Artimieji Rytai',
+    europe: 'Europa',
     americas: 'Amerika',
   },
   lv: { // SCAFFOLD(cs)
@@ -933,11 +933,11 @@ export const LANGUAGE_PICKER_COPY: Record<
     close: 'Zavřít',
     current: 'Současný jazyk',
   },
-  lt: { // SCAFFOLD(cs)
-    open: 'Zvolte region a jazyk',
-    title: 'Zvolte svůj region a jazyk',
-    close: 'Zavřít',
-    current: 'Současný jazyk',
+  lt: {
+    open: 'Pasirinkite regioną ir kalbą',
+    title: 'Pasirinkite savo regioną ir kalbą',
+    close: 'Uždaryti',
+    current: 'Dabartinė kalba',
   },
   lv: { // SCAFFOLD(cs)
     open: 'Zvolte region a jazyk',

@@ -2304,54 +2304,54 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
         'Žádný ze čtyř jazyků není použitelný — způsob komunikace je třeba potvrdit',
     },
   },
-  lt: { // SCAFFOLD(cs)
+  lt: {
     guidanceNotice:
-      'Tato stránka je psána česky jako obecná orientace, nikoli jako právní rada ve Vaší věci.',
+      'Šis puslapis parašytas lietuviškai kaip bendra orientacija, o ne kaip teisinė konsultacija Jūsų byloje.',
     consultationNotice:
-      'Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky.',
+      'Konsultacija vyksta tik keturiomis kalbomis: anglų, kinų (中文), japonų ir korėjiečių.',
     methodConfirmationNotice:
-      'Pokud neovládáte žádný ze čtyř jazyků konzultace, zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
+      'Jei nemokate nė vienos iš keturių konsultacijos kalbų, pasirinkite „Bendravimo būdą reikia patvirtinti“. Atsakysime, kad įvertintume, ar yra tinkamas bendravimo būdas; paslauga kita kalba nėra garantuojama ir atsakymo terminas nežadamas.',
     preparationNotice:
-      'Shrnutí můžete napsat ve svém jazyce. Původní text se uchová tak, jak jste jej napsali, a automaticky se nepřekládá.',
-    heading: 'Odeslat žádost o posouzení',
+      'Santrauką galite parašyti savo kalba. Originalus tekstas išsaugomas toks, kokį parašėte, ir automatiškai neverčiamas.',
+    heading: 'Pateikti prašymą įvertinti',
     intro:
-      'Popište svou věc stručně. Advokátka nebo advokát posoudí obsah, než se přistoupí k dalšímu kroku.',
-    submitLabel: 'Odeslat žádost',
-    submittingLabel: 'Odesílá se…',
+      'Trumpai aprašykite savo bylą. Advokatė arba advokatas įvertins turinį, prieš pereinant prie kito žingsnio.',
+    submitLabel: 'Siųsti užklausą',
+    submittingLabel: 'Siunčiama…',
     successMessage:
-      'Obdrželi jsme Vaši žádost; čeká na posouzení. Neznamená to, že porada proběhla nebo že byla potvrzena schůzka.',
+      'Gavome Jūsų užklausą; ji laukia įvertinimo. Tai nereiškia, kad konsultacija įvyko arba kad buvo patvirtintas susitikimas.',
     savedNotificationPendingMessage:
-      'Vaše žádost byla uložena, ale oznámení kanceláři zatím není potvrzeno. Co jste napsali, se neztratí. Neobdržíte-li odpověď, můžete napsat i na e-mailovou adresu z kontaktní stránky.',
-    receiptIdLabel: 'Číslo podání',
+      'Jūsų užklausa išsaugota, bet pranešimas kontorai dar nepatvirtintas. Tai, ką parašėte, nedingsta. Jei atsakymo negausite, galite parašyti ir el. pašto adresu iš kontaktų puslapio.',
+    receiptIdLabel: 'Pateikimo numeris',
     failureMessage:
-      'Vaši žádost se nepodařilo odeslat. Zkuste to znovu nebo napište na e-mailovou adresu z kontaktní stránky.',
-    originalLanguageLabel: 'Jazyk, v němž píšete',
+      'Jūsų užklausos išsiųsti nepavyko. Bandykite dar kartą arba parašykite el. pašto adresu iš kontaktų puslapio.',
+    originalLanguageLabel: 'Kalba, kuria rašote',
     originalLanguagePlaceholder:
-      'Například čeština, angličtina, čínština nebo jiný jazyk',
-    preferredConsultationLanguageLabel: 'Jazyk, který si přejete pro konzultaci',
-    originalTextLabel: 'Krátký popis věci (ve Vašem jazyce)',
+      'Pavyzdžiui, lietuvių, anglų, kinų ar kita kalba',
+    preferredConsultationLanguageLabel: 'Kalba, kurios pageidaujate konsultacijai',
+    originalTextLabel: 'Trumpas bylos aprašymas (Jūsų kalba)',
     originalTextPlaceholder:
-      'Napište, co se stalo, jakou pomoc potřebujete a lhůtu, existuje-li. Nepište číslo pasu, číslo dokladu ani údaje o účtu.',
-    nameLabel: 'Jméno',
-    emailLabel: 'E-mail',
+      'Parašykite, kas įvyko, kokios pagalbos reikia ir terminą, jei toks yra. Nerašykite paso numerio, dokumento numerio ar sąskaitos duomenų.',
+    nameLabel: 'Vardas',
+    emailLabel: 'El. paštas',
     consentLabel:
-      'Přečetl(a) jsem stránku o soukromí a souhlasím s odesláním této žádosti.',
-    privacyLinkLabel: 'Soukromí',
-    requiredMessage: 'Toto pole je povinné.',
-    invalidEmailMessage: 'Zadejte platnou e-mailovou adresu.',
-    tooLongMessage: 'Text je příliš dlouhý. Zkraťte jej a odešlete znovu.',
+      'Perskaičiau privatumo puslapį ir sutinku, kad ši užklausa būtų išsiųsta.',
+    privacyLinkLabel: 'Privatumas',
+    requiredMessage: 'Šis laukas privalomas.',
+    invalidEmailMessage: 'Įveskite galiojantį el. pašto adresą.',
+    tooLongMessage: 'Tekstas per ilgas. Sutrumpinkite jį ir siųskite iš naujo.',
     sourceLanguageNotice:
-      'Tento článek je zveřejněn pouze v jazyce {language}; odkaz otevře původní stránku.',
+      'Šis straipsnis paskelbtas tik kalba {language}; nuoroda atveria originalų puslapį.',
     unavailableTranslationNotice:
-      'Tato část zatím není k dispozici v jazyce této stránky. Odkaz v původním jazyce otevře původní text.',
-    unavailableLanguageNotice: 'Tato stránka se v jazyce {language} nenabízí.',
+      'Ši dalis šio puslapio kalba dar nepateikiama. Nuoroda originalo kalba atveria originalų tekstą.',
+    unavailableLanguageNotice: 'Šis puslapis kalba {language} nesiūlomas.',
     languageOptions: {
-      en: 'Angličtina (English)',
-      'zh-hant': 'Čínština (中文)',
-      ja: 'Japonština (日本語)',
-      ko: 'Korejština (한국어)',
+      en: 'Anglų (English)',
+      'zh-hant': 'Kinų (中文)',
+      ja: 'Japonų (日本語)',
+      ko: 'Korėjiečių (한국어)',
       'needs-method-confirmation':
-        'Žádný ze čtyř jazyků není použitelný — způsob komunikace je třeba potvrdit',
+        'Nė viena iš keturių kalbų netinka — bendravimo būdą reikia patvirtinti',
     },
   },
   lv: { // SCAFFOLD(cs)

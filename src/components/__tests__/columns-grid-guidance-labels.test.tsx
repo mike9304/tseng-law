@@ -19,6 +19,7 @@ const GUIDANCE_ASIA_SRC = path.join(process.cwd(), 'src/data/international-guida
 const GUIDANCE_IT_NL_PL_SRC = path.join(process.cwd(), 'src/data/international-guidance-it-nl-pl.ts');
 const GUIDANCE_NORDIC_SRC = path.join(process.cwd(), 'src/data/international-guidance-nordic.ts');
 const GUIDANCE_EASTERN_SRC = path.join(process.cwd(), 'src/data/international-guidance-eastern.ts');
+const GUIDANCE_BALTIC_SRC = path.join(process.cwd(), 'src/data/international-guidance-baltic-atlantic.ts');
 
 /**
  * Filter "All" word taken from reviewed `viewAllLabel` already in
@@ -70,7 +71,7 @@ const GUIDANCE_ALL_LABEL: Record<GuidanceLocale4, string> = {
   hr: 'Vše', // SCAFFOLD(cs)
   sr: 'Vše', // SCAFFOLD(cs)
   sl: 'Vše', // SCAFFOLD(cs)
-  lt: 'Vše', // SCAFFOLD(cs)
+  lt: 'Visus',
   lv: 'Vše', // SCAFFOLD(cs)
   et: 'Vše', // SCAFFOLD(cs)
   ca: 'Vše', // SCAFFOLD(cs)
@@ -118,7 +119,7 @@ const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
   hr: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
   sr: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
   sl: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
-  lt: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
+  lt: "viewAllLabel: 'Rodyti visus'",
   lv: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
   et: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
   ca: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
@@ -177,7 +178,7 @@ function filterButtonLabels(html: string): string[] {
 
 describe('ColumnsGrid guidance filter and card CTA labels', () => {
   it('pins All labels to reviewed viewAllLabel vocabulary already in the guidance content file', () => {
-    const src = `${readFileSync(GUIDANCE_CONTENT_SRC, 'utf8')}\n${readFileSync(GUIDANCE_WESTERN_SRC, 'utf8')}\n${readFileSync(GUIDANCE_ASIA_SRC, 'utf8')}\n${readFileSync(GUIDANCE_IT_NL_PL_SRC, 'utf8')}\n${readFileSync(GUIDANCE_NORDIC_SRC, 'utf8')}\n${readFileSync(GUIDANCE_EASTERN_SRC, 'utf8')}`;
+    const src = `${readFileSync(GUIDANCE_CONTENT_SRC, 'utf8')}\n${readFileSync(GUIDANCE_WESTERN_SRC, 'utf8')}\n${readFileSync(GUIDANCE_ASIA_SRC, 'utf8')}\n${readFileSync(GUIDANCE_IT_NL_PL_SRC, 'utf8')}\n${readFileSync(GUIDANCE_NORDIC_SRC, 'utf8')}\n${readFileSync(GUIDANCE_EASTERN_SRC, 'utf8')}\n${readFileSync(GUIDANCE_BALTIC_SRC, 'utf8')}`;
     for (const locale of GUIDANCE_LOCALES_4) {
       expect(src, locale).toContain(VIEW_ALL_LABEL_EVIDENCE[locale]);
       const viewAllValue = VIEW_ALL_LABEL_EVIDENCE[locale].match(/'([^']+)'/)?.[1] ?? '';

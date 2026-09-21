@@ -381,7 +381,7 @@ const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
   hr: 'Czech', // SCAFFOLD(cs)
   sr: 'Czech', // SCAFFOLD(cs)
   sl: 'Czech', // SCAFFOLD(cs)
-  lt: 'Czech', // SCAFFOLD(cs)
+  lt: 'Lithuanian',
   lv: 'Czech', // SCAFFOLD(cs)
   et: 'Czech', // SCAFFOLD(cs)
   ca: 'Czech', // SCAFFOLD(cs)
@@ -875,13 +875,13 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     confidentialNotice:
       'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
   },
-  lt: { // SCAFFOLD(cs)
+  lt: {
     consultationNotice:
-      'Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
+      'Ši informacija parašyta lietuviškai, bet konsultacija su advokate arba advokatu vyksta tik anglų, kinų (中文), japonų ir korėjiečių kalbomis.',
     discoveryNotice:
-      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, podporu, doporučení umělé inteligence ani viditelnost.',
+      'Failas llms.txt yra tik viešųjų puslapių radimo žemėlapis; jis nežada vietos paieškoje, palaikymo, dirbtinio intelekto rekomendacijos ar matomumo.',
     confidentialNotice:
-      'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+      'Kadangi originalus tekstas išsaugomas, pradiniame etape nerašykite to, ko dar nereikia, pavyzdžiui, paso numerio, dokumento numerio ar sąskaitos duomenų.',
   },
   lv: { // SCAFFOLD(cs)
     consultationNotice:

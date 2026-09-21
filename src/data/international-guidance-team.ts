@@ -249,7 +249,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     experienceLabel: 'الخبرة',
     photoAltPrefix: 'صورة',
     workingLanguagesLabel: 'لغات العمل',
-    fullProfileLabel: 'الملف الكامل (English)',
+    fullProfileLabel: 'الملف الكامل (بالإنجليزية)',
     keyFactsHeading: 'المحامية Wei Tseng — معلومات أساسية',
     qualificationLabel: 'المؤهل وجهة العمل',
     qualificationSentence:
@@ -1456,12 +1456,12 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'يتولّى المكتب قضايا الشركات والأفراد في تايوان، ويعمل بالإنجليزية واليابانية والكورية والصينية.',
-        'مثَّلت طالبًا كوريًا في دعوى تعويض عن إصابة في ناد رياضي، وصدر حكم ابتدائي بالتعويض بمبلغ TWD 1.57M.',
+        'مثَّلت طالبًا كوريًا في دعوى تعويض عن إصابة في صالة رياضية، وصدر حكم ابتدائي بالتعويض بمبلغ TWD 1.57M (1.57 مليون دولار تايواني جديد).',
       ],
       education: [
         'ماجستير (M.S.)، Institute of Finance, National Taiwan University',
         'بكالوريوس (B.A.) بتخصص مزدوج في القانون والتمويل، National Chengchi University',
-        'طالب تبادل في Kobe University و Waseda University',
+        'طالبة تبادل في Kobe University و Waseda University',
       ],
       experience: [
         'Trend Law Office',

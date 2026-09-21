@@ -1,1 +1,25 @@
 [WO start 2026-09-21 16:27:55]
+Native review is in `docs/i18n/global-plan/reviews/native/ms-a.md` (guidance pack + columns 001–009). Naturalness: **3/5** guidance, **2/5** columns. 74 findings (19 P1, 55 P2). Consult-language lock and Wei Tseng’s gender are intact; Malay does not inflect, so there is no F hit.
+
+Main P1 issues: English `OUR TEAM` / `OFFICES`; 股東 as *rakan kongsi*; Korea left as the default reader; advertising-adjacent result claims in 003/008; Hangul slug and non-word *pliding*; *Hakim Agung* for 大法官.
+
+Last 15 lines of the output file:
+
+```
+| 60 | P2 | C | columns-ms/007-taiwan-divorce-lawsuit-qna.md | "perceraian didaftarkan di pejabat status sivil (戶政機關)" | Status sivil is French état civil; Malaysia uses pejabat pendaftaran / jabatan pendaftaran. Also “proses verbal mediasi”. | perceraian didaftarkan di pejabat pendaftaran isi rumah (戶政機關) |
+| 61 | P2 | D | columns-ms/003-taiwan-traffic-accident-procedure.md | "hubungi 119, dan jika ada kesalahan atau situasi keselamatan segera, 110 atau 112" | 112 is also a Malaysia mobile emergency number; without “di Taiwan” a reader may misdial meaning. | Di Taiwan: 119 untuk kecederaan/penyelamat, 110 untuk polis (112 pada telefon mudah alih) — ini bukan nombor Malaysia. |
+| 62 | P2 | E | columns-ms/005-taiwan-company-establishment-advanced-2.md | "anda boleh menghubungi kami pada bila-bila masa" | “Anytime” reads as a reply-time / always-on promise the rest of the site refuses. | anda boleh menghantar pertanyaan melalui halaman Hubungi; tempoh jawapan tidak dijanjikan |
+| 63 | P2 | C | columns-ms/005-taiwan-company-establishment-advanced-2.md | "Soalan dan jawapan (Q&A) berikut bertujuan membantu" | English abbreviation left in running Malay. | Soalan dan jawapan berikut bertujuan membantu |
+| 64 | P2 | C | columns-ms/006-taiwan-massage-history-law.md | "nisbah kualiti-harga sangat baik" | French rapport qualité-prix; a native writes berbaloi. | sangat berbaloi |
+| 65 | P2 | A | columns-ms/006-taiwan-massage-history-law.md | "Pernahkah anda mengalami zaman salun gunting rambut tradisional (理髮廳) pada awal Taiwan?" | Pada awal Taiwan is unparsable (“at the beginning of Taiwan”); means early-period Taiwan. | Pernahkah anda mengalami zaman salun gunting rambut tradisional (理髮廳) pada awal sejarah Taiwan moden? |
+| 66 | P2 | D | columns-ms/003-taiwan-traffic-accident-procedure.md | "Kanun Jenayah Republik China, perkara 185-4" | Body already says Kanun Jenayah Taiwan; Republik China will be read in Malaysia as China. | Kanun Jenayah Taiwan (中華民國刑法), perkara 185-4 |
+| 67 | P2 | C | columns-ms/008-taiwan-labor-severance-law.md | "dan jurujual dengan hasil terbaik di wilayah tengah Taiwan" | Stock blog hyperbole; “best” sits badly on a law-firm page even as case colour. Also later “pekerja dengan hasil terbaik”. | dan jurujual dengan jualan tinggi di wilayah tengah Taiwan |
+| 68 | P2 | C | columns-ms/008-taiwan-labor-severance-law.md | "Pada masa itu, pihak saya, Encik B, digaji lebih daripada 10 tahun" | Pihak saya is German meine Partei for “my client”; Encik B as a male client is fine. | Pada masa itu, klien saya, Encik B, telah bekerja lebih daripada 10 tahun |
+| 69 | P2 | C | columns-ms/007-taiwan-divorce-lawsuit-qna.md | "sebab ayat 1" | Indonesian ayat for 第1款; Malaysian drafting uses subseksyen / perenggan. Also 004 “perkara 99, ayat 1”. | sebab perenggan 1 |
+| 70 | P2 | C | columns-ms/002-withdraw-capital-taiwan-company.md | "Tataurusan (章程) boleh menetapkan syarat yang lebih ketat." | Coined from Satzung/statuts; Malaysian Companies Act 2016 uses perlembagaan syarikat. Also later in 002. | Perlembagaan syarikat (章程) boleh menetapkan syarat yang lebih ketat. |
+| 71 | P2 | C | columns-ms/008-taiwan-labor-severance-law.md | "Salam, saya Wei Tseng (曾雋崴), peguam di Taiwan." | Blog greeting clashes with the site’s formal-you register; fine as voice, but it reads imported. Also 009 Korea contrast as lecture. | Saya Wei Tseng (曾雋崴), peguam di Taiwan. |
+| 72 | P2 | E | columns-ms/009-taiwan-voluntary-resignation-severance.md | "Dalam kebanyakan kes, orang yang bersedia terlebih dahulu melihat haknya dilindungi." | Reads as a results promise to whoever files first. | Dalam banyak kes, pihak yang menyusun bukti dan mematuhi tempoh lebih awal berada dalam kedudukan yang lebih kuat — ini bukan jaminan hasil. |
+| 73 | P2 | C | ms-guidance.txt | "Pautan luaran adalah untuk orientasi" | German Orientierung; Malaysian disclaimer copy says rujukan. | Pautan luaran adalah untuk rujukan |
+| 74 | P2 | C | ms-guidance.txt | "kami jelaskan bersama anda profesional berkelayakan mana yang diperlukan bagi bahagian itu" | German word order; a native would not end on mana. | kami jelaskan bersama anda pakar berkelayakan yang diperlukan bagi bahagian itu |
+```
+=== end code=0 2026-09-21 16:35:23 ===

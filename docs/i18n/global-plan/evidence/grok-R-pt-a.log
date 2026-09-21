@@ -1,1 +1,26 @@
 [WO start 2026-09-21 16:29:15]
+Native review of the Portuguese guidance pack and columns 001–009 is in `docs/i18n/global-plan/reviews/native/pt-a.md`.
+
+**Verdict:** guidance pack **3/5**, columns **2/5**. Target is European Portuguese. Wei Tseng is feminine throughout (no masculine form). The guidance pack is usable EP with German chrome; the columns read as French legal prose, and 003 Q16–20 / 005 / 006 / 008–009 keep a blog register.
+
+**25 P1 rows** — among them: `conservatório do estado civil` (music school, not the registry), `fideicomisso` for 信託, Hangul slugs, `OUR TEAM` / `OFFICES`, missing Korea-treaty caveat, and result claims (“indemnização mais elevada possível”, typical 3/4/6-month sentences, the 008 success anecdote).
+
+Last 15 lines of the output file:
+
+```
+| 47 | P2 | D | columns-pt/003-taiwan-traffic-accident-procedure.md | "Se tiver outras perguntas, deixe-as nos comentários." | Blog CTA; this site has no comments. | "Para outras perguntas, utilize a página Contacto." |
+| 48 | P2 | D | columns-pt/003-taiwan-traffic-accident-procedure.md | "ligue para o 119, e se houver uma infração" | Taiwan numbers 119/110/112 given without saying they are Taiwan numbers. | "em Taiwan, ligue para o 119 (ambulância/bombeiros) e, em caso de infração ou urgência de segurança, para o 110 ou o 112 (a partir de um telemóvel)" |
+| 49 | P2 | A | columns-pt/003-taiwan-traffic-accident-procedure.md | "Acórdão do tribunal da Relação de Taiwan, ano 109, assunto 上易字 número 644" | “Relação” is a fair gloss of the High Court, but ROC year 109 is unexplained. | "Acórdão do Tribunal da Relação de Taiwan (臺灣高等法院), ano 109 (2020), 上易字 n.º 644" |
+| 50 | P2 | G | columns-pt/005-taiwan-company-establishment-advanced-2.md | "As perguntas e respostas (Q&A) seguintes" | English “Q&A” left in the heading. | "As perguntas e respostas seguintes" |
+| 51 | P2 | D | columns-pt/005-taiwan-company-establishment-advanced-2.md | "pode contactar-nos a qualquer momento" | Reads as always-on availability; no reply-time promise should stay implicit either. | "pode escrever através da página Contacto; um prazo de resposta não é prometido" |
+| 52 | P2 | D | columns-pt/005-taiwan-company-establishment-advanced-2.md | "informe-se junto do seu banco principal na Coreia" | Addresses the reader as a Korean remitter even though Q1 is labelled as a Korea-specific note. | "informe-se junto do banco no país de origem dos fundos (no exemplo, a Coreia)" |
+| 53 | P2 | A | columns-pt/006-taiwan-massage-history-law.md | "os Grandes Juízes (大法官) declararam inconstitucional" | Calque of Grand Justices; a Portuguese reader needs “juízes constitucionais”. | "os juízes constitucionais (大法官) declararam inconstitucional" |
+| 54 | P2 | C | columns-pt/006-taiwan-massage-history-law.md | "Na hora atual, a Coreia continua a autorizar" | French à l’heure actuelle; Portuguese says “Atualmente”. | "Atualmente, a Coreia continua a autorizar" |
+| 55 | P2 | C | columns-pt/007-taiwan-divorce-lawsuit-qna.md | "Nem sempre." | Section 3 opens with the bare FAQ answer; same pattern: §6 “Não.” / §7 “Não são os mesmos direitos.” | Make the heading the question, or open with a self-standing sentence: "Os cônjuges não têm de comparecer sempre em conjunto." |
+| 56 | P2 | A | columns-pt/007-taiwan-divorce-lawsuit-qna.md | "as relações pessoais (會面交往)" | Too vague next to the guidance pack’s accurate “regime de visitas”. throughout 007 | "o regime de visitas e de contacto (會面交往)" |
+| 57 | P2 | C | columns-pt/008-taiwan-labor-severance-law.md | "e vele para que a sociedade não o despeça de forma inapropriada" | French veiller à; “velar para que” is not how a native puts this. also “velar por não cair na intenção da sociedade” | "e cuide para que a sociedade não o despeça de forma indevida" |
+| 58 | P2 | B | columns-pt/008-taiwan-labor-severance-law.md | "sem pré-aviso prévio" | Tautology: pré-aviso already means prior notice. also table “Pré-aviso prévio” | "sem pré-aviso" |
+| 59 | P2 | B | columns-pt/004-taiwan-company-subsidiary-vs-branch.md | "o número de pessoais e de contratos não for elevado" | “Pessoais” is an adjective, not a noun for staff (French personnels). | "o número de pessoas e de contratos não for elevado" |
+| 60 | P2 | C | columns-pt/009-taiwan-voluntary-resignation-severance.md | "Como indicado acima, em Taiwan não é fácil" | “Acima” points at a previous Korean-series post, not this page. | "Em Taiwan não é fácil, em regra, obter a indemnização por despedimento." |
+```
+=== end code=0 2026-09-21 16:35:20 ===

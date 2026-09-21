@@ -1240,32 +1240,32 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
   },
   nb: {
     guidanceNotice:
-      'Denne siden er skrevet på norsk som alminnelig orientering, ikke som juridisk rådgivning for Deres sak.',
+      'Denne siden er skrevet på norsk som alminnelig orientering, ikke som juridisk rådgivning i din sak.',
     consultationNotice:
-      'Rådgivningen foregår på fire språk: engelsk, kinesisk (中文), japansk og koreansk.',
+      'Rådgivningen foregår bare på fire språk: engelsk, kinesisk (中文), japansk og koreansk.',
     methodConfirmationNotice:
-      'Hvis De ikke kan bruke noe av de fire språkene, velg «Kommunikasjonsveien må bekreftes». Vi svarer for å undersøke en brukbar kommunikasjonsvei, hvis en slik vei finnes; en ytelse på et annet språk sikres ikke, og en svartid loves ikke.',
+      'Hvis du ikke behersker noen av de fire språkene, velg «Kommunikasjonsveien må bekreftes». Vi svarer for å undersøke om det finnes en brukbar kommunikasjonsvei; rådgivning på et annet språk loves ikke, og vi lover ingen svartid.',
     preparationNotice:
-      'De kan skrive sammendraget på Deres eget språk. Originalteksten lagres slik De har skrevet den, og oversettes ikke automatisk.',
+      'Du kan skrive sammendraget på ditt eget språk. Originalteksten lagres slik du har skrevet den, og oversettes ikke automatisk.',
     heading: 'Send en forespørsel om rådgivning',
     intro:
-      'Beskriv Deres sak kort. En advokat gjennomgår innholdet før neste skritt diskuteres.',
+      'Beskriv saken din kort. En advokat gjennomgår innholdet før vi drøfter det neste trinnet.',
     submitLabel: 'Send forespørselen',
     submittingLabel: 'Sendes…',
     successMessage:
-      'Vi har mottatt Deres forespørsel; den venter på gjennomgang. Det betyr ikke at rådgivningen har funnet sted, eller at en time er bekreftet.',
+      'Vi har mottatt forespørselen din; den venter på gjennomgang. Det betyr ikke at rådgivningen har funnet sted, eller at en time er bekreftet.',
     savedNotificationPendingMessage:
-      'Deres forespørsel er lagret, men underretningen til kontoret er ennå ikke bekreftet. Det De har skrevet, går ikke tapt. Hvis De ikke får svar, kan De også skrive til e-postadressen på kontaktsiden.',
-    receiptIdLabel: 'Mottakelsesnummer',
+      'Forespørselen din er lagret, men varselet til kontoret er ennå ikke bekreftet. Det du har skrevet, går ikke tapt. Får du ikke svar, kan du også skrive til e-postadressen på kontaktsiden.',
+    receiptIdLabel: 'Mottaksnummer',
     failureMessage:
-      'Deres forespørsel kunne ikke sendes. Prøv igjen, eller skriv til e-postadressen på kontaktsiden.',
-    originalLanguageLabel: 'Språk De skriver på',
+      'Forespørselen din kunne ikke sendes. Prøv igjen, eller skriv til e-postadressen på kontaktsiden.',
+    originalLanguageLabel: 'Språket du skriver på',
     originalLanguagePlaceholder:
       'For eksempel norsk, engelsk, kinesisk eller et annet språk',
-    preferredConsultationLanguageLabel: 'Språk De ønsker til rådgivningen',
-    originalTextLabel: 'Kort fremstilling av saken (på Deres språk)',
+    preferredConsultationLanguageLabel: 'Språket du ønsker for rådgivningen',
+    originalTextLabel: 'Kort beskrivelse av saken (på ditt språk)',
     originalTextPlaceholder:
-      'Oppgi hva som har skjedd, hvilken hjelp De trenger, og fristen hvis det finnes en. Oppgi ikke passnummer, identitetsnummer eller kontoopplysninger.',
+      'Oppgi hva som har skjedd, hvilken hjelp du trenger, og fristen hvis det finnes en. Ikke oppgi passnummer, identitetsnummer eller kontoopplysninger.',
     nameLabel: 'Navn',
     emailLabel: 'E-post',
     consentLabel:
@@ -1285,7 +1285,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Japansk (日本語)',
       ko: 'Koreansk (한국어)',
       'needs-method-confirmation':
-        'Ingen av de fire språkene er brukbare — kommunikasjonsveien må bekreftes',
+        'Jeg behersker ikke noen av de fire språkene — kommunikasjonsveien må bekreftes',
     },
   },
   fi: {

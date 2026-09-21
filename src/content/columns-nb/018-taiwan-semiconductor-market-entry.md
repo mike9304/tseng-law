@@ -8,9 +8,9 @@ categories:
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Hvis det er kunder i Taiwan, skal man da obligatorisk stifte et selskap der?"
-    a: "Det kan ikke alene avgjøres fordi kunden er i Taiwan. Man skal se kundens krav og den faktiske virksomheten med handel, anlegg, personale og transaksjonsstruktur i Taiwan og deretter velge den mest passende enheten."
+    a: "Det kan ikke alene avgjøres fordi kunden er i Taiwan. Man skal se kundens krav og den faktiske virksomheten med handel, anlegg, personale og transaksjonsstruktur i Taiwan og deretter velge den enheten som passer til de faktiske forholdene."
   - q: "Forsvinner hovedsetets ansvar fullstendig når et taiwansk selskap stiftes?"
-    a: "Hvis man stifter et datterselskap og ikke en filial (分公司), bærer hovedsetet i utgangspunktet ikke de kontraktlige pliktene som underskrives i datterselskapets navn. Man skal dog etterprøve unntakene på grunn av misbruk av rettssubjektivitet, og om hovedsetet selv har påtatt seg en kausjon eller egne kontraktlige plikter."
+    a: "Hvis man stifter et datterselskap og ikke en filial (分公司), bærer hovedsetet i utgangspunktet ikke de kontraktsmessige pliktene som underskrives i datterselskapets navn. Man skal imidlertid etterprøve unntakene på grunn av misbruk av rettssubjektivitet, og om hovedsetet selv har påtatt seg en kausjon eller egne kontraktsmessige plikter."
   - q: "Kan man først arbeide via en forhandler og senere gå over til et selskap i Taiwan?"
     a: "En overgang i trinn kan planlegges, men man skal også etterprøve opphør eller endring av eksisterende avtaler, kundekontraktene, lagrene, behandlingen av mangler og personalet."
 ---
@@ -19,7 +19,7 @@ faq:
 
 ![Redaksjonelt foto til å vurdere inntredelsesstrukturen i Taiwan for en halvledervirksomhet](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
-Når handelen med taiwanske kunder begynner, kan det utenlandske hovedsetet motta forskjellige krav: å behandle tilbud og kontrakter i Taiwan, å holde et lager til hasteutskifting, eller å innsette personale til installasjon og vedlikehold (子公司). Da spør man gjerne først: «Rekker det å stifte et selskap i Taiwan (子公司) for å løse dette?»
+Når handelen med taiwanske kunder begynner, kan det utenlandske hovedsetet motta forskjellige krav: å behandle tilbud og kontrakter i Taiwan, å holde et reservedelslager i Taiwan for akutte behov, eller å innsette personale til installasjon og vedlikehold (子公司). Da spør man gjerne først: «Rekker det å stifte et selskap i Taiwan (子公司) for å løse dette?»
 
 Det som først skal klarlegges, er hvem i Taiwan som påtar seg hva. Den strukturen som skal vurderes, endrer seg etter om det utenlandske hovedsetet fortsetter med å underskrive salgskontraktene, et taiwansk selskap kjøper varer og selger dem videre, eller det lokale personalet kun yter teknisk støtte.
 
@@ -36,7 +36,7 @@ Før inntredelsesstrukturen besluttes, kan hovedsetet internt klarlegge:
 | Kontrakter med kundene | Hvem blir part i kontrakten: det utenlandske hovedsetet, det taiwanske datterselskapet eller et lokalt agentur? |
 | Tilbud og ordrer | Hvem bekrefter endelig prisen og leveringstiden, og hvor langt rekker fullmakten for den ansvarlige i Taiwan? |
 | Varer og lagre | Hvem innfører, holder og leder lagrene og behandler returneringer og utskiftinger? |
-| Personale | Reiser hovedsetets arbeidstakere, ansetter man i Taiwan, eller overlates arbeidet til en ekstern prestator? |
+| Personale | Reiser hovedsetets arbeidstakere, ansetter man i Taiwan, eller overlates arbeidet til en ekstern leverandør? |
 | Installasjon og teknisk støtte | Hvem skylder støtten til kunden og behandler problemene ved arbeidet på stedet? |
 | Fakturering og kostnader | Hvem fakturerer og innkrever, og hvordan avregnes kostnadene mellom hovedsetet og organisasjonen i Taiwan? |
 | Kvalitet og tvister | Hvem bekrefter resultatet av kontrollen og mottar klager over mangler eller skade? |
@@ -61,19 +61,19 @@ Hvis man beslutter å stifte en selvstendig juridisk person i Taiwan, skal man o
 
 ### Selskap med begrenset ansvar (有限公司): slankere styring, men mer lukket overdragelse av andelene
 
-Det kan dannes med 1 eller flere fysiske personer (有限公司), eller med taiwanske eller utenlandske juridiske personer som selskapsdeltakere; deltakerne er i utgangspunktet ansvarlige inntil beløpet av innskuddet sitt. Selskapet har fra 1 til 3 ledere, valgt blant deltakerne. Deltakere som ikke utfører handelen, kan utøve tilsynsrettigheter, uten at en særskilt revisor er nødvendig. Medmindre vedtektene bestemmer noe annet, gjelder 1 stemme per 1 deltaker, så kontrollen ikke trenger å stemme overens med innskuddsforholdet. Overdragelsen av innskuddet fra en alminnelig deltaker krever i utgangspunktet samtykke fra mer enn halvparten av de øvriges stemmerettigheter; for en leder, 2/3 eller mer. Det passer bedre til enkle deltakerforhold og en stabil kontroll enn til en hyppig kapitalinnhenting eller handelen med andeler. Senere kan det omdannes til et aksjeselskap (股份有限公司).
+Det kan dannes med 1 eller flere fysiske personer (有限公司), eller med taiwanske eller utenlandske juridiske personer som selskapsdeltakere; deltakerne er i utgangspunktet ansvarlige inntil beløpet av innskuddet sitt. Selskapet har fra 1 til 3 ledere, valgt blant deltakerne. Deltakere som ikke driver den daglige virksomheten, kan utøve tilsynsrett, uten at det trengs en særskilt tilsynsperson (監察人). Med mindre vedtektene bestemmer noe annet, gjelder 1 stemme per 1 deltaker, så kontrollen ikke trenger å stemme overens med innskuddsforholdet. Overdragelsen av innskuddet fra en alminnelig deltaker krever i utgangspunktet samtykke fra mer enn halvparten av de øvriges stemmerettigheter; for en leder, 2/3 eller mer. Det passer bedre til enkle deltakerforhold og en stabil kontroll enn til en hyppig kapitalinnhenting eller handelen med andeler. Senere kan det omdannes til et aksjeselskap (股份有限公司).
 
 ### Aksjeselskap (股份有限公司): passende hvis man vil inndra andre investorer, eller en notering er forutsigbar
 
-Kapitalen deles i aksjer. I utgangspunktet kreves 2 deltakere eller mer (股份有限公司), men staten eller en juridisk person kan stifte det alene, og en utenlandsk juridisk person kan holde 100 %. Aksjer er i utgangspunktet fritt overdragelige, med lovbestemte unntak; særlige aksjer og opsjoner til arbeidstakere kan utformes i samsvar med loven. Det passer til virksomheter som forventer investorer, aksjehandel, kapitalinsentiver til arbeidstakere eller en senere fusjon, overtakelse eller notering; det begrenser seg ikke til store virksomheter. I styringen kan et ikke-offentlig emitterende selskap ved vedtektene være uten styre og kun ha 1 eller 2 ledere. Et selskap med én stats- eller juridisk person som eneste deltaker kan ved vedtektene være uten revisor. Ikke hvert aksjeselskap (股份有限公司) skal la årsregnskapet attestere. De vesentligste revisjonsgrensene for et alminnelig selskap er en innbetalt kapital på TWD 30.000.000 (新臺幣), eller, derunder, driftsinntekter på TWD 100.000.000 eller 100 arbeidstakere i arbeidstryggningen; selskaper med offentlig utbud følger verdipapirreguleringen.
+Kapitalen deles i aksjer. I utgangspunktet kreves 2 deltakere eller mer (股份有限公司), men staten eller en juridisk person kan stifte det alene, og en utenlandsk juridisk person kan holde 100 %. Aksjer er i utgangspunktet fritt overdragelige, med lovbestemte unntak; særlige aksjer og opsjoner til arbeidstakere kan utformes i samsvar med loven. Det passer til virksomheter som forventer investorer, aksjehandel, kapitalinsentiver til arbeidstakere eller en senere fusjon, overtakelse eller notering; det begrenser seg ikke til store virksomheter. I styringen kan et ikke-offentlig emitterende selskap ved vedtektene være uten styre og kun ha 1 eller 2 ledere. Et selskap med én stats- eller juridisk person som eneste deltaker kan ved vedtektene være uten tilsynsperson (監察人). Ikke hvert aksjeselskap (股份有限公司) skal la årsregnskapet attestere. De vesentligste revisjonsgrensene for et alminnelig selskap er en innbetalt kapital på TWD 30.000.000 (新臺幣), eller, derunder, driftsinntekter på TWD 100.000.000 eller 100 arbeidstakere meldt inn i den taiwanske arbeidstakertrygden (勞工保險); selskaper med offentlig utbud følger verdipapirreguleringen.
 
 ## 4. Prosedyrene for filial og datterselskap skiller seg; kun datterselskapet gjennomgår etterprøvingen hos Investeringskommisjonen
 
 Når et utenlandsk selskap stifter et taiwansk datterselskap, forhåndskontrolleres navnet i utgangspunktet, og det søkes om en investeringstillatelse hos Investeringskommisjonen under ministeriet for økonomiske anliggender (經濟部投資審議司). Etter godkjenningen overføres midlene, investeringsbeløpet fastsettes, og en revisor (會計師) etterprøver kapitalen, hvoretter stiftelsen og den skattemessige registreringen fullføres.
 
-Derimot kreves til stiftelsen av en taiwansk filial av et alminnelig utenlandsk selskap i utgangspunktet ikke en investeringstillatelse fra Investeringskommisjonen; Handelsutviklingskontoret under ministeriet for økonomiske anliggender (經濟部商業發展署) behandler registreringen av filialen og den tilhørende kapitalfastsettelsen. Det gjenstår nødvendige den forutgående navnekontrollen, overføringen av driftskapitalen, kapitaletterprøvingen og den skattemessige registreringen; kalenderen er i alminnelighet kortere.
+Derimot kreves til stiftelsen av en taiwansk filial av et alminnelig utenlandsk selskap i utgangspunktet ikke en investeringstillatelse fra Investeringskommisjonen; Handelsutviklingskontoret under ministeriet for økonomiske anliggender (經濟部商業發展署) behandler registreringen av filialen og den tilhørende kapitalfastsettelsen. Det gjenstår nødvendige den forutgående navnekontrollen, overføringen av driftskapitalen, kapitaletterprøvingen og den skattemessige registreringen; tidsplanen er som regel kortere.
 
-Det foregående er et forslag til kontraktutforming. Å råde over én konkret formular gjør ikke transaksjonen rettmessig og forebygger ikke tvistene.
+Avsnittet over beskriver bare fremgangsmåten, ikke hvordan en kontrakt skal utformes. Å råde over én konkret formular gjør ikke transaksjonen rettmessig og forebygger ikke tvistene.
 
 ## 5. Selskapsregistreringen og ingeniørens rettmessige arbeid er ikke det samme
 
@@ -87,13 +87,13 @@ De følgende scenariene er hypotetiske for å hjelpe vurderingen; de fastslår i
 
 **Utenlandske virksomheter rettet mot den innledende eksporten.** Hvis det i Taiwan ennå verken er arbeidstakere eller lagre, og man vil etterprøve etterspørselen via en uavhengig distributør, kan man først se leveringen, distribusjonsforholdet og virksomhetsfeltet i Taiwan. En distribusjonskontrakt alene løser ikke alle reguleringsspørsmål i Taiwan.
 
-**Utenlandske virksomheter som utvider salget og den tekniske støtten i Taiwan.** Hvis man i Taiwan vil ansette og fortsatt lede lagre, innkreving og kundestøtte, bør man konkret sammenligne datterselskap og filial og også etterprøve det kontraktlige ansvaret, hovedsetets driftsmåte, skattene og personalet.
+**Utenlandske virksomheter som utvider salget og den tekniske støtten i Taiwan.** Hvis man i Taiwan vil ansette og fortsatt lede lagre, innkreving og kundestøtte, bør man konkret sammenligne datterselskap og filial og også etterprøve det kontraktsmessige ansvaret, hovedsetets driftsmåte, skattene og personalet.
 
 **Utenlandske virksomheter i markedsundersøkelsesfasen.** Hvis man før en salgsorganisasjon kun vil ha informasjons- og kontaktfunksjoner, kan et representasjonskontor (代表人辦事處) vurderes. Hvis den faktiske planen omfatter salg av lagre eller arbeid på stedet, skal det særskilt bekreftes om disse aktivitetene er tillatt.
 
-## 8. Til den første samtalen rekker et driftsoversikt; man trenger ikke straks å overdra alle fortrolige bilag
+## 8. Til den første samtalen rekker en driftsoversikt; man trenger ikke straks å overdra alle fortrolige bilag
 
-Ved den første samtalen kan man samle grunnopplysningene om hovedsetet og om den som innskyter, en allmenn beskrivelse av produktet eller tjenesten, den påtenkte transaksjonsstrømmen, planene for personale og anlegg i Taiwan og de kontrakt- og støttevilkårene som kundene krever. Det som ennå ikke er besluttet, kan merkes som «avventende».
+Til en første kontakt (rådgivning bare på engelsk, kinesisk, japansk eller koreansk) kan du samle grunnopplysningene om hovedkontoret og om den som skyter inn kapital, en allmenn beskrivelse av produktet eller tjenesten, den påtenkte transaksjonsstrømmen, planene for personale og anlegg i Taiwan og de kontrakt- og støttevilkårene som kundene krever. Det som ennå ikke er besluttet, kan merkes som «avventende».
 
 Det er ikke nødvendig ved den første kontakten å vedlegge alle fortrolige kundebilag eller detaljerte prosessopplysninger. Etter at navnet på motparten til interessekonfliktkontrollen er meddelt, fastlegges de nødvendige bilagene og avsendelsesmåten etter anvisningene fra den ansvarlige.
 
@@ -101,11 +101,11 @@ Det er ikke nødvendig ved den første kontakten å vedlegge alle fortrolige kun
 
 ### Hvis det er kunder i Taiwan, skal man da obligatorisk stifte et selskap der?
 
-Det kan ikke alene avgjøres fordi kunden er i Taiwan. Man skal se kundens krav og den faktiske virksomheten med handel, anlegg, personale og transaksjonsstruktur i Taiwan og deretter velge den mest passende enheten.
+Det kan ikke alene avgjøres fordi kunden er i Taiwan. Man skal se kundens krav og den faktiske virksomheten med handel, anlegg, personale og transaksjonsstruktur i Taiwan og deretter velge den enheten som passer til de faktiske forholdene.
 
 ### Forsvinner hovedsetets ansvar fullstendig når et taiwansk selskap stiftes?
 
-Hvis man stifter et datterselskap og ikke en filial (分公司), bærer hovedsetet i utgangspunktet ikke de kontraktlige pliktene som underskrives i datterselskapets navn. Man skal dog etterprøve unntakene på grunn av misbruk av rettssubjektivitet, og om hovedsetet selv har påtatt seg en kausjon eller egne kontraktlige plikter.
+Hvis man stifter et datterselskap og ikke en filial (分公司), bærer hovedsetet i utgangspunktet ikke de kontraktsmessige pliktene som underskrives i datterselskapets navn. Man skal imidlertid etterprøve unntakene på grunn av misbruk av rettssubjektivitet, og om hovedsetet selv har påtatt seg en kausjon eller egne kontraktsmessige plikter.
 
 ### Kan man først arbeide via en forhandler og senere gå over til et selskap i Taiwan?
 

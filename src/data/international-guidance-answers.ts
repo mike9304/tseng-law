@@ -651,32 +651,32 @@ export const guidanceAnswers: Record<
   nb: {
     services: {
       answer:
-        'Kontoret behandler seks arbeidsgrupper etter Taiwans rett: investering og selskapsstiftelse, sivile tvister og erstatning, ekteskap, familie og arv, arbeid, strafferett samt immaterialrett. Omfanget av hver sak bekreftes separat etter at en advokat har gjennomgått innholdet De sender. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+        'Kontoret behandler seks fagområder i taiwansk rett: investering og selskapsstiftelse, sivile tvister og erstatning, ekteskap, familie og arv, arbeidsrett, strafferett og immaterialrett. Omfanget i den enkelte sak bekreftes særskilt etter at en advokat har gjennomgått innholdet du sender inn. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/nb/faq', '/nb/contact'],
     },
     about: {
       answer:
-        'Hovering International Law Firm er et advokatkontor i Taiwan, grunnlagt i 2016 av uteksaminerte fra National Taiwan University (國立臺灣大學), med kontorer i Taipei, Kaohsiung, Taichung og Pingtung. Siden 2020 finnes en regnskapsavdeling; kontoret i Taichung behandler saker med tilknytning til Korea og Japan. Kontoret lover ikke et resultat. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+        'Hovering International Law Firm er et advokatkontor i Taiwan, grunnlagt i 2016 av jurister utdannet ved National Taiwan University (國立臺灣大學), med kontorer i Taipei, Kaohsiung, Taichung og Pingtung. Siden 2020 har kontoret også en regnskapsavdeling; kontoret i Taichung behandler saker med tilknytning til Korea og Japan. Kontoret lover ikke et resultat. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/nb/lawyers', '/nb/services'],
     },
     lawyers: {
       answer:
-        'Denne siden viser profiler for Hoverings advokater, operative ledelse og tilknyttede revisjon. Advokat Wei Tseng (曾雋崴) er berettiget i Taiwan og er kontorets ledende advokat; hun arbeider med klienter fra Korea, Japan og andre internasjonale klienter. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+        'Denne siden viser profiler for Hoverings advokater, den operative ledelsen og det tilknyttede revisjonskontoret. Advokat Wei Tseng (曾雋崴) har advokatbevilling i Taiwan og er kontorets ledende advokat; hun arbeider med klienter fra Korea og Japan og andre internasjonale klienter. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/nb/about', '/nb/contact'],
     },
     pricing: {
       answer:
-        'Denne siden publiserer ingen prisliste. Først fastsettes arbeidets omfang ut fra sammendraget De sender, deretter bekreftes beløp og beregningsmåte med Dem før arbeidet begynner. Samtalen med en advokat kan være mot betaling; i tillegg til honoraret kan retts- eller myndighetskostnader oppstå. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+        'Denne siden publiserer ingen prisliste. Først fastsettes arbeidets omfang ut fra sammendraget du sender inn, deretter bekreftes beløp og beregningsmåte med deg før arbeidet begynner. Samtalen med en advokat kan være mot betaling; i tillegg til honoraret kan det påløpe retts- eller myndighetskostnader. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/nb/contact', '/nb/faq'],
     },
     contact: {
       answer:
-        'Send Deres sammendrag via kontaktskjemaet: hva som har skjedd, hvilken hjelp De trenger, hvilken sammenheng saken har med Taiwan, og fristen hvis De kjenner den. I det første trinnet trenger De ennå ikke sende identitetsdokumenter eller hele beviset. Kontoret lover ingen svartid og bekrefter ingen time via denne siden. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+        'Send sammendraget ditt via kontaktskjemaet: hva som har skjedd, hvilken hjelp du trenger, hvilken tilknytning saken har til Taiwan, og fristen hvis du kjenner den. I første trinn trenger du ennå ikke sende identitetsdokumenter eller hele bevismaterialet. Kontoret lover ingen svartid og bekrefter ingen time via denne siden. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/nb/faq', '/nb/pricing'],
     },
     faq: {
       answer:
-        'Denne delen besvarer vanlige spørsmål på nivået alminnelig informasjon: de seks arbeidsgruppene, forberedelsen før kontakten, hvordan kostnadene fastsettes, og hva en sendt melding betyr. En sendt forespørsel venter på en advokats gjennomgang; den er ikke en juridisk uttalelse, ikke en time og skaper ikke et forhold mellom advokat og klient. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
+        'Denne delen besvarer vanlige spørsmål på et alminnelig informasjonsnivå: de seks fagområdene, forberedelsen før kontakt, hvordan kostnadene fastsettes, og hva en innsendt melding betyr. En innsendt forespørsel venter på gjennomgang hos en advokat; den er ikke en juridisk uttalelse, ikke en time, og den skaper ikke et forhold mellom advokat og klient. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/nb/contact', '/nb/services'],
     },
   },

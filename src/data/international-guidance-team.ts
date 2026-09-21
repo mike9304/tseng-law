@@ -660,28 +660,28 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'VÅRT TEAM',
     title: 'Hoverings internasjonale team',
     description:
-      'Profiler for Hoverings advokater, operative ledelse og tilknyttede revisjon.',
+      'Profiler for Hoverings advokater, den operative ledelsen og det tilknyttede revisjonskontoret.',
     representativeTitle: 'Ledende advokat',
     teamTitle: 'Advokater og medarbeidere',
-    partnerTitle: 'Tilknyttet revisjon',
+    partnerTitle: 'Tilknyttet revisjonskontor',
     introLabel: 'Presentasjon',
     educationLabel: 'Utdanning',
     experienceLabel: 'Erfaring',
     photoAltPrefix: 'Foto',
     workingLanguagesLabel: 'Arbeidsspråk',
-    fullProfileLabel: 'Fullstendig profil (English)',
+    fullProfileLabel: 'Fullstendig profil (på engelsk)',
     keyFactsHeading: 'Advokat Wei Tseng — Kjerneopplysninger',
     qualificationLabel: 'Bevilling og kontor',
     qualificationSentence:
-      '{name} er berettiget til å utøve advokatyrket i Taiwan og er ledende advokat ved {firm}.',
+      '{name} har advokatbevilling i Taiwan og er ledende advokat ved {firm}.',
     practiceLabel: 'Hovedområder',
     consultationLanguagesLabel: 'Rådgivningsspråk',
     roles: {
-      'tseng-junwei': 'Ledende advokat i Taiwan (Managing Attorney)',
-      'chang-rongxuan': 'Advokat i Taiwan (Taiwan Attorney)',
+      'tseng-junwei': 'Ledende advokat i Taiwan',
+      'chang-rongxuan': 'Advokat i Taiwan',
       'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Operativ ledelse Korea (Korea Operations Manager)',
-      'huang-shengping': 'Tilknyttet revisor (Partner CPA)',
+      'son-jungmin': 'Operativ ledelse, Korea',
+      'huang-shengping': 'Tilknyttet statsautorisert revisor',
     },
   },
   fi: {
@@ -2340,12 +2340,12 @@ export const guidanceTeamBios: Record<
   nb: {
     'tseng-junwei': {
       intro: [
-        'Kontoret behandler virksomhets- og individuelle saker i Taiwan på engelsk, japansk, koreansk og kinesisk.',
-        'Hun representerte en koreansk student i et erstatningskrav etter en skade i et treningssenter og oppnådde en dom i første instans på TWD 1.57M.',
+        'Kontoret behandler saker for virksomheter og privatpersoner i Taiwan på engelsk, japansk, koreansk og kinesisk.',
+        'Hun representerte en koreansk student i et erstatningskrav etter en skade på et treningssenter; saken endte med dom i første instans på 1 570 000 TWD.',
       ],
       education: [
         'Master (M.S.), Institute of Finance, National Taiwan University',
-        'Bachelor (B.A.) med dobbelt løp rett og finans, National Chengchi University',
+        'Bachelor (B.A.) med to studieretninger, jus og finans, National Chengchi University',
         'Utvekslingsstudent ved Kobe University og Waseda University',
       ],
       experience: [
@@ -2367,8 +2367,8 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal med lang virksomhet som senior paralegal ved flere kontorer, ansvarlig for prosessuell støtte, selskapsrett og utenlandske investeringer.',
-        'Støtte ved prosedyrer, selskapsstiftelse, tillatelser til utenlandske investeringer, lisenssøknader og utvekslingen mellom Korea og Taiwan.',
+        'Paralegal med lang erfaring som senior paralegal ved flere kontorer, med ansvar for prosesstøtte, selskapsrett og utenlandske investeringer.',
+        'Bistand ved prosedyre, selskapsstiftelse, godkjenning av utenlandske investeringer, lisenssøknader og kontakten mellom Korea og Taiwan.',
       ],
       education: ['Juridisk bachelor (LL.B.), Tunghai University'],
       experience: [
@@ -2379,15 +2379,15 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordinerer rådgivningstider og kommunikasjonen for klienter fra Korea.',
-        'Støtter utvekslingen mellom områder via dokumentsystemer og arbeidsflyter, på grunnlag av informatikk.',
+        'Støtter samhandlingen på tvers av landegrensene gjennom dokumentsystemer og arbeidsflyter, med bakgrunn i informatikk.',
       ],
       education: ['Bachelor (B.S.) i informatikk, National Cheng Kung University'],
-      experience: ['Område Korea-drift, Hovering International Law Firm'],
+      experience: ['Korea-drift, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
         'Har fullført bachelor- og masterprogrammer i regnskap ved National Chengchi University og leder nå et revisjonskontor.',
-        'Støtter den integrerte analysen av juridiske, skattemessige og finansielle risikoer for virksomhetsklienter.',
+        'Bidrar til en samlet analyse av juridisk, skattemessig og finansiell risiko for virksomhetsklienter.',
       ],
       education: [
         'Master (M.A.) i regnskap, National Chengchi University',

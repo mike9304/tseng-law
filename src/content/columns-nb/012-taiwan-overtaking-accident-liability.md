@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Bilde som forklarer vurderingen av ansvaret ved forbikjøringsulykker i Taiwan og den sikre forbikjøringsprosedyren](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Når det forankjørende kjøretøyet kjører langsomt, kan forbikjøring (超車) synes å være et hverdagsvalg, men det er en kjøring med betydelig risiko. Før De begynner å forbikjøre, skal De sammen undersøke veistrekningen, trafikksituasjonen i begge retninger, de forankjørende kjøretøyenes bevegelse og rommet til trygt å vende tilbake til det opprinnelige kjørefeltet (道路交通安全規則).
+Når det forankjørende kjøretøyet kjører langsomt, kan forbikjøring (超車) synes å være et hverdagsvalg, men det er en kjøring med betydelig risiko. Før du begynner på en forbikjøring, skal du sammen undersøke veistrekningen, trafikksituasjonen i begge retninger, de forankjørende kjøretøyenes bevegelse og rommet til trygt å vende tilbake til det opprinnelige kjørefeltet (道路交通安全規則).
 
 ## Forbikjøringsvilkår ifølge artikkel 101 i ferdselssikkerhetsforskriftene (道路交通安全規則)
 
@@ -21,7 +21,7 @@ Når det forankjørende kjøretøyet kjører langsomt, kan forbikjøring (超車
 
 Artikkel 101 forbyr forbikjøring på strekninger med skilt for svinger, bratte stigninger eller fall, smale broer, tunneler eller kryss samt ved jernbaneoverganger og på arbeidsområder.
 
-Dessuten må De ikke forbikjøre på steder eller strekninger med skole- eller sykehusskilt, på steder med andre forbikjøringsforbudsskilt eller -oppmerking, når et møtende kjøretøy nærmer seg, og heller ikke når 2 eller flere kjøretøy kjører i rekke foran (超車).
+Dessuten må du ikke kjøre forbi på steder eller strekninger med skole- eller sykehusskilt, på steder med andre forbikjøringsforbudsskilt eller -oppmerking, når et møtende kjøretøy nærmer seg, og heller ikke når 2 eller flere kjøretøy kjører i rekke foran (超車).
 
 For i samme kjørefelt å forbikjøre et forankjørende kjøretøy skal den bakfra kjørende først gi 2 korte hornsignaler eller blinke med frontlyktene 1 gang. Horn og frontlykter må ikke brukes gjentatte ganger for å tvinge det forankjørende kjøretøyet til å vike (超車).
 
@@ -29,7 +29,7 @@ Det bakfra kjørende kjøretøyet må først forbikjøre etter at det forankjør
 
 Deretter skal det forbikjørende kjøretøyet tenne det venstre blinklyset, kjøre forbi til venstre med en avstand på minst 0,5 meter til det forankjørende kjøretøyet og, når en sikker avstand er sikret, tenne det høyre blinklyset og trygt vende tilbake til det opprinnelige kjørefeltet.
 
-Denne rekkefølgen av signal og vikning i samme kjørefelt betyr ikke at forbikjøring på forbudte steder eller under forbudte vilkår ville være tillatt. Før De begynner å forbikjøre, skal alle vilkår i artikkel 101 vurderes samlet.
+Denne rekkefølgen av signal og vikning i samme kjørefelt betyr ikke at forbikjøring på forbudte steder eller under forbudte vilkår ville være tillatt. Før du begynner på en forbikjøring, skal alle vilkår i artikkel 101 vurderes samlet.
 
 ## Anonym ulykkessak som dette kontoret har behandlet
 
@@ -49,11 +49,11 @@ At det i enkelte saker kommer slike sakkyndige resultater, betyr ikke at det 1 g
 
 ## Punkter som skal undersøkes ved vurderingen av ulykkesansvaret
 
-Før forbikjøring skal De først undersøke om stedet eller trafikksituasjonen faller inn under forbikjøringsforbudet. Gjelder prosedyren for samme kjørefelt, så gi det foreskrevne horn- eller frontlyktsignalet uten å tvinge det forankjørende kjøretøyet til å vike, vent på et tydelig viketegn og fullfør forbikjøringen med tilstrekkelig avstand og sikker tilbakekjøringsavstand (超車).
+Før en forbikjøring skal du først undersøke om stedet eller trafikksituasjonen faller inn under forbikjøringsforbudet. Gjelder prosedyren for samme kjørefelt, så gi det foreskrevne horn- eller frontlyktsignalet uten å tvinge det forankjørende kjøretøyet til å vike, vent på et tydelig viketegn og fullfør forbikjøringen med tilstrekkelig avstand og sikker tilbakekjøringsavstand (超車).
 
 Overholdelsen av artikkel 101 er viktig, men sikrer i seg selv verken unngåelse av en ulykke eller et senere resultat av sakkyndig undersøkelse eller rettssak. Førere skal holde en ekstra sikkerhetsmargin og tilpasse seg situasjonen foran seg.
 
-Som supplement kan De konsultere [bildet av forbikjøringsreglene og -prosedyren](https://gonews.com.tw/car/daily/21934/). Da det er en sekundær kilde, bør De ved prøvingen av de juridiske vilkårene også lese de gjeldende offisielle forskriftene (道路交通安全規則).
+Som supplement kan du se [bildet av forbikjøringsreglene og -prosedyren](https://gonews.com.tw/car/daily/21934/). Da det er en sekundær kilde, bør du ved gjennomgangen av de juridiske vilkårene også lese de gjeldende offisielle forskriftene (道路交通安全規則).
 
 ---
 
@@ -62,4 +62,4 @@ Som supplement kan De konsultere [bildet av forbikjøringsreglene og -prosedyren
 > - [Hoverings internasjonale team](/nb/lawyers)
 > - [Prosedyre ved ferdselsuhell i Taiwan](/nb/columns/taiwan-traffic-accident-procedure)
 
-Dette stykket er allmenn juridisk informasjon om forbikjøringsordningen og vurderingen av ulykkesansvaret i Taiwan (超車); det er ikke rådgivning om en konkret sak og heller ikke et løfte om et bestemt resultat. Det faktiske ansvaret kan avvike etter ulykkessted, kjøretøybevegelse, hastighet, signaler, bevis, sakkyndig undersøkelse (鑑定) og den nyeste rett; konkrete saker skal undersøkes særskilt på grunnlag av de gjeldende dokumentene.
+Denne artikkelen er allmenn juridisk informasjon om forbikjøringsordningen og vurderingen av ulykkesansvaret i Taiwan (超車); det er ikke rådgivning om en konkret sak og heller ikke et løfte om et bestemt resultat. Det faktiske ansvaret kan avvike etter ulykkessted, kjøretøybevegelse, hastighet, signaler, bevis, sakkyndig undersøkelse (鑑定) og den nyeste rett; konkrete saker skal undersøkes særskilt på grunnlag av de gjeldende dokumentene.

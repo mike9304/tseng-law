@@ -35,15 +35,15 @@ kan ordningen for «forutgående forespørsel om forretningsstedet» (營業場�
 
 ​
 
-De kan uten gebyr undersøke om det på den ønskede adressen kan åpnes en «restaurantnæring».
+Du kan uten gebyr undersøke om det på den ønskede adressen kan åpnes en «restaurantnæring».
 
-Til denne kontrollen skal dog «utskriften av bygningsregistreringen av type 2» (建物登記第二類謄本, som inneholder bygningens detaljerte opplysninger) for driftsadressen lastes opp.
+Til denne kontrollen skal imidlertid «utskriften av bygningsregistreringen av type 2» (建物登記第二類謄本, som inneholder bygningens detaljerte opplysninger) for driftsadressen lastes opp.
 
 Enhver kan hos matrikkelkontoret (地政事務所) søke om «utskriften av bygningsregistreringen av type 2» for en vilkårlig adresse.
 
-Hvis De har vanskelig for personlig å gå til matrikkelkontoret (地政事務所),
+Hvis du har vanskelig for personlig å gå til matrikkelkontoret (地政事務所),
 
-kan De be en bekjent i Taiwan, utleieren, en megler eller en advokat om hjelp.
+kan du be en bekjent i Taiwan, utleieren, en megler eller en advokat om hjelp.
 
 Hvis kontrollresultatet angir at restaurantnæringen ikke er mulig, kan byadministrasjonen senere ved registreringen av den juridiske personen (公司登記) nekte registreringen.
 
@@ -51,11 +51,11 @@ Vær derfor oppmerksom på dette punktet.
 
 ​
 
-**Q. Skal alle bransjer via ordningen for «forutgående forespørsel om forretningsstedet» undersøke om utøvelsen er mulig?**
+**Spørsmål. Skal alle bransjer via ordningen for «forutgående forespørsel om forretningsstedet» undersøke om utøvelsen er mulig?**
 
 Det anbefales at alle bransjer via ordningen for «forutgående forespørsel om forretningsstedet» (營業場所預先查詢) bekrefter om utøvelsen er mulig.
 
-Ved selskapsregistreringen registreres dog ofte flere grener samtidig, og man vil ofte registrere omkring 10 grener på én gang.
+Ved selskapsregistreringen registreres imidlertid ofte flere grener samtidig, og man vil ofte registrere omkring 10 grener på én gang.
 
 I praksis trenger derfor ikke alle grener å undersøkes ved selskapsregistreringen.
 
@@ -71,13 +71,13 @@ Hvis man åpner på et sted der restaurantnæringen ikke er mulig, kan senere en
 
 «grener som undersøkes av embetet» (主動查詢之營業項目)
 
-Dette er det vesentlige; ved ytterligere spørsmål kan De til enhver tid henvende Dem til en advokat i Taiwan.
+Dette er hovedpunktene; har du flere spørsmål, kan du rådføre deg med en advokat i Taiwan (rådgivning foregår bare på engelsk, kinesisk, japansk eller koreansk).
 
-Myndighetenes regler kan ofte endres; før registreringen av den juridiske personen bør De bekrefte de nyeste forskriftene.
+Myndighetenes regler kan ofte endres; før registreringen av den juridiske personen bør du bekrefte de nyeste forskriftene.
 
 ---
 
 > Se også:
 > - [Hvilke saker vi behandler](/nb/services)
 > - [Hoverings internasjonale team](/nb/lawyers)
-> - [Hvordan De når kontoret](/nb/contact)
+> - [Slik når du kontoret](/nb/contact)

@@ -1,0 +1,170 @@
+# WO-F-vi — Vietnamese fix lane (Opus 5), 2026-09-21
+Worktree: /Users/son7/Projects/tseng-law-fix-a-20260921 (no git add/commit/push performed)
+Files touched: src/content/columns-vi/001–018 (18), src/data/international-guidance-{content,answers,team,offices}.ts,
+src/data/international-inquiry-copy.ts, src/lib/llms-txt.ts (vi strings only), this log.
+No test file was edited (no test pinned a string I changed; two tests that failed were satisfied by
+correcting the vi source itself — see "Test-driven adjustments").
+
+## Rows applied — part a (vi-a.md)
+a#1  llms discoveryNotice reworded (see disagreement note).  a#2 001 §intro+§5 Korea-treaty caveat added (R2b).
+a#3  004 FAQ + §6 + table: 10% ceiling now conditioned on a Korean-resident parent + country-specific note.
+a#4  005 Q1 heading generalised to "từ nước ngoài", Korea kept as a labelled example (neutral, no "Việt Nam").
+a#5  008 FAQ + body, 009 — "khác với Hàn Quốc" → "khác với một số nước, ví dụ Hàn Quốc" (R2c).
+a#6  003 "mức bồi thường cao nhất có thể" → evidence-supported wording.   a#7 003 3/4/6-month sentences → "trong một số bản án … không phải mức án điển hình hay được bảo đảm" (digits kept).
+a#8  003 án treo no longer a promise.   a#9 008 anecdote → "xác lập được quyền … theo luật trên cơ sở chứng cứ".
+a#10 003 emergency numbers labelled as Taiwan's: 119 (cấp cứu, cứu hỏa) / 110 (cảnh sát) / 112 từ di động (R9).
+a#11 a#12 already correct in this worktree (ĐỘI NGŨ CỦA CHÚNG TÔI / VĂN PHÒNG) — verified only.
+a#13 fullProfileLabel → "Hồ sơ đầy đủ (tiếng Anh)".
+a#16 "Việc tư vấn chỉ được thực hiện bằng bốn ngôn ngữ: … tiếng Trung (中文) …" (inquiry copy) + "chỉ" added to the
+     three guidance answers that list the four languages.
+a#17 "nhóm công việc" → "lĩnh vực công việc" (guidance content ×5, +1 "sáu nhóm"→"sáu lĩnh vực", answers ×1).
+a#18 menuLabel "Danh mục trang" → "Trình đơn" (the reviewer's "Menu" is explicitly forbidden by
+     src/lib/__tests__/guidance-chrome-language.test.ts, which asserts menuLabel !== 'Menu').
+a#19 object-storage calque removed.  a#20 行使或負擔 calque fixed in the guidance pack.
+a#21 English job titles removed from all five vi role lines; 會計師 roles → "kế toán viên công chứng".
+a#23 missing "mà" added.  a#24 email → "thư điện tử" (copy label, copied message, official-consultation label).
+a#25 "bởi các luật sư tốt nghiệp Đại học Quốc lập Đài Loan (國立臺灣大學)".
+a#26 languageLabel → "Ngôn ngữ của trang" (+2 running-text instances).
+a#27 "(PE, 常設機構)" → "(常設機構)" in 001 and 004.
+a#28 籌備處 "trù bị" → "chuẩn bị thành lập" (11 instances, 001/005/013).
+a#29 a#41 過半 "quá bán" → "hơn một nửa số" (4 instances, 002/018).
+a#30 003 "Bộ luật Hình sự Trung Hoa Dân Quốc" → "Bộ luật Hình sự Đài Loan" (×4).
+a#31 003 ISO dates → "ngày 29 tháng 5 năm 2026" / "ngày 1 tháng 7 năm 2026".
+a#32 003 thousands separators → Vietnamese periods, currency moved after the figure (1.000.000 TWD etc.).
+a#33 a#44 b#8 ROC years annotated: 109 (2020) ×2, 112 (2023) ×4.
+a#34 a#40 b#1 b#28 blog CTAs → "xin gửi qua trang Liên hệ; văn phòng không cam kết thời gian phản hồi" (003/005/013/015).
+a#35 003 closer → "Wei Tseng (曾雋崴), luật sư Đài Loan."   a#36 Q16 first person → impersonal practice voice.
+a#37 a#38 a#48 b#24 條例 → Luật (道路交通管理處罰條例, 產業創新條例, 勞工退休金條例 → "Luật Hưu trí Người lao động",
+     外國人投資條例 → "Luật Đầu tư của Người nước ngoài"); 10 instances. 章程 "Điều lệ công ty" left alone (correct).
+a#39 b#39 "hoặc người quản trị (董事)" removed (3 instances).
+a#42 a#43 006 opening question de-blogged; the age joke replaced by a neutral sentence in the SAME block
+     (deleting it would have changed the block count, which the hard rules forbid).
+a#45 b#12 b#13 b#26 b#31 b#35 b#38 R7b: bare FAQ answers made self-standing at the head of
+     007 §3, 010 §5, 011 §1, 013 Q2, 014 §1, 016 §3 and §7, 017 §1 and §3 (headings and counts unchanged).
+a#46 借名登記 → "đăng ký dưới danh nghĩa người khác" (×2).
+a#47 008 title + H1 "sao??" → "sao?" (matches the English single question mark).
+a#49 008 blog greeting removed; a#50 "ý đồ giăng ra" → "bẫy mà công ty sắp đặt"; a#51 "đương nhiên phải chi trả"
+     → "khi đủ điều kiện luật định … người sử dụng lao động có nghĩa vụ chi trả theo luật".
+a#53 009 "Như tôi đã trình bày trong bài trước" → self-standing sentence.   a#54 003 formula written out in words.
+a#55 005 intro rebuilt as "Nếu quý vị đã đọc …, quý vị có thể xem tiếp phần chuyên sâu 2 dưới đây." (links untouched).
+
+## Rows applied — part b (vi-b.md)
+b#2 "thế lực nước ngoài" → "bên nước ngoài".   b#3 戶籍 "hộ tịch" → "hộ khẩu" / "đăng ký hộ khẩu (戶籍)".
+b#4 one agency name per locale: "Vụ Thẩm định Đầu tư, Bộ Kinh tế (經濟部投資審議司)" (10 instances across 001/011/013/017/018).
+b#5 018 "Điểm làm việc" → "Văn phòng đại diện … (辦事處)".   b#6 018 "kế toán viên" → "kế toán viên công chứng (會計師, CPA)".
+b#7 010 1,579,589 → 1.579.589.   b#9 "thái độ" → "tâm thế".   b#10 "Cùng đọc bản án" → "Bình luận bản án".
+b#11 010 headline-list sentence rewritten as "Dưới đây là bản dịch tiếng Việt các tiêu đề …".
+b#14 劑型 → "dạng sản phẩm (劑型)".  b#15 宣傳 "tuyên truyền" → "quảng bá" (×2, incl. the §3 heading).
+b#16 "văn tự" → "chữ viết" (×2).   b#18 "Tiến vào thị trường" → "Gia nhập thị trường" (011 title/H1/§1 heading).
+b#19 "Các lĩnh vực mà văn phòng nhận xử lý" → "Các lĩnh vực dịch vụ" (13 instances, 011/013/014/015/016/017).
+b#20 "cự ly" → "khoảng cách".   b#21 emoji removed.   b#22 fullwidth colon → ASCII.   b#23 "Ví dụ)" → "Ví dụ:" (×2).
+b#25 013 "văn phòng trù bị" → "chuẩn bị thành lập".   b#27 013 "3 tháng" framed as "trong một số trường hợp … không phải thời hạn được bảo đảm".
+b#29 "**Q.**" → "**Câu hỏi.**".   b#30 015 exclamation → "quý vị cần lưu ý điều này trước khi đăng ký."
+b#32 意思表示 "biểu thị ý chí xin nghỉ việc" → "thông báo xin nghỉ việc" (7 instances in 014).
+b#33 "Liên hệ tư vấn" → "Liên hệ" in 007/014/016 (see disagreement note).
+b#34 016 行使或負擔 calque fixed (8 instances, incl. one the reviewer did not quote).
+b#36 "thuật ngữ thực tiễn" → "thuật ngữ kinh doanh" (×2).   b#37 "tiền công" → "tiền cước" (×2).
+b#40 018 title/H1 → "Doanh nghiệp sản xuất linh kiện bán dẫn gia nhập thị trường Đài Loan".
+b#42 018 orphan sentence → "Trên đây là so sánh chung về các hình thức công ty, không phải tư vấn cho một giao dịch cụ thể."
+b#43 "NT$30 triệu / NT$100 triệu" → "30 triệu TWD / 100 triệu TWD".
+b#44 商業發展署 → "Vụ Thương mại, Bộ Kinh tế (商業發展署)" — unified with 001 so the locale has one name for it.
+b#45 018 telegraphic vote rule written out ("mỗi cổ đông có 1 phiếu biểu quyết, nên …"; the digit is kept
+     because the checker's numbers lane needs it — see below).
+
+## Systemic sweeps (pattern → instances changed)
+條例 → Luật (4 statute names)                                        10
+籌備處 "trù bị" → "chuẩn bị thành lập"                                11
+過半 → "hơn một nửa số"                                                4
+"hoặc người quản trị (董事)" removed                                    3
+行使或負擔 "gánh vác quyền, nghĩa vụ" → "thực hiện quyền và gánh vác nghĩa vụ"  17 (16 columns + 1 guidance)
+戶籍 "hộ tịch" → "hộ khẩu" / "đăng ký hộ khẩu"                        38 (007×29, 016×5, 017×3, guidance×1)
+投資審議司 one name ("Vụ Thẩm định Đầu tư, Bộ Kinh tế")                 10
+"Các lĩnh vực mà văn phòng nhận xử lý" → "Các lĩnh vực dịch vụ"       13
+"nhóm công việc" → "lĩnh vực công việc" (guidance)                     7
+English titles in parentheses removed from vi roles                    5
+會計師 → "kế toán viên công chứng"                                      5 (4 guidance + 1 column)
+blog CTA / "bất cứ lúc nào" / "để lại bình luận" → Liên hệ + no reply-time  4
+"Bộ luật Hình sự Trung Hoa Dân Quốc" → "… Đài Loan"                    4
+English thousands separators → Vietnamese periods                     13 (003 ×12, 010 ×1)
+ISO dates in running text → Vietnamese long form                       2
+ROC years annotated with the Gregorian year                            6
+R2 Korea-as-default-reader → foreign/neutral                           9 passages (001, 004, 005, 007, 008, 009)
+
+## Rows skipped (with reason)
+a#14 (Hangul slug in `url:`) — ACCEPTED-vi says skip: canonical source metadata.
+a#15 ("TWD 1.57M" → "1,57 triệu TWD") — SKIPPED. src/data/__tests__/guidance-team-bios.test.ts pins "TWD 1.57M"
+     as a GUIDANCE_BIO_PRESERVED_TERMS entry and asserts every canonical figure ("1.57") survives byte-identically
+     in every guidance locale; its own comment says '"1.57" must not become "1,57"'. Changing it would mean
+     editing a cross-locale contract, which this WO forbids.
+a#22 (translate the bio education/experience lines, add 國立臺灣大學) — SKIPPED for the same test: institution names
+     are preserved terms in all guidance locales, and the same test forbids any Han character inside a bio line.
+     The surrounding Vietnamese in those lines is already translated.
+a#52 (delete the "Mức độ khó" table row in 008) — SKIPPED: the English source keeps the row
+     ("| Difficulty | Easy | Difficult | Easy |", columns-en/008 L54). Deleting it would diverge from the source.
+b#17 (Invest Taiwan `lang=jpn`) — skipped per the WO; fixed centrally by the supervisor.
+All `/ko/…` link and "Korean-speaking lawyer" label rows — already remapped (R1); labels verified, one reworded (b#33).
+
+## Test-driven adjustments (vi source, no test edited)
+- guidanceContent.vi.pages.lawyers.description must equal guidanceTeamCopy.vi.description → both carry
+  "kế toán viên công chứng hợp tác".
+- international-guidance-answers.test.ts caps each answer at 80 words; adding "chỉ" and "các luật sư tốt nghiệp"
+  pushed vi/services to 81 and vi/about to 84, so "sáu lĩnh vực công việc" → "sáu lĩnh vực",
+  "văn phòng luật tại Đài Loan" → "văn phòng luật Đài Loan", "cơ sở tại …" → "có cơ sở tại …" (list comma),
+  and "Tư vấn chỉ được thực hiện bằng …" → "Tư vấn chỉ bằng …". Both answers are now exactly 80 words.
+
+## Checker notes (numbers lane)
+The checker maps Vietnamese number words to digits, so "một" counts as 1. 018 §3 therefore keeps the digit in
+"mỗi cổ đông có 1 phiếu biểu quyết" (spelling it "một" made the lane FAIL "missing 1"); the reviewer's meaning is
+preserved. Per-file WARNs after the fix, against the HEAD baseline (checked by running the checker on
+`git show HEAD:` copies):
+  003  was 수사미해석 (3) → now "extra 2020" (1)   — deliberate, a#33
+  007  was 수사미해석 (4) → now "extra 2023" (4)   — deliberate, a#44
+  010  was 수사미해석 (1) → now "extra 2020" (1)   — deliberate, b#8
+  004  "extra 0" + nationality WARN  — BOTH pre-existing at HEAD, unchanged by this lane
+  006, 009  numbers WARN — pre-existing at HEAD, unchanged
+  011  수사미해석 제7호 — pre-existing at HEAD, unchanged
+  018  hanzi WARN (han=0) + numbers WARN (2×2) at HEAD → BOTH now PASS (han=19, numbers 25/25)
+No WARN is a FAIL; `summary PASS 18/18` holds.
+
+## Disagreements with the reviews (not applied as written)
+1. a#1 — the reviewer claims the English says "advertisement" and asks for "việc đăng quảng cáo". The English
+   source (src/lib/llms-txt.ts L122) says "guaranteed visibility", so I wrote "việc bảo đảm được hiển thị" and
+   applied the rest of the row ("thứ hạng trên công cụ tìm kiếm", "sự bảo trợ", "trí tuệ nhân tạo").
+2. a#18 — "Menu" cannot be used; guidance-chrome-language.test.ts asserts menuLabel !== 'Menu' (it is the exact
+   English fallback the test guards against). Used "Trình đơn".
+3. a#38 — reviewer's "Luật Khuyến khích Đổi mới Công nghiệp" adds "Khuyến khích" (promotion), which 產業創新條例
+   does not say. Used "Luật Đổi mới Công nghiệp".
+4. a#43 — the reviewer asks to delete the parenthetical joke in 006. Blocks may not be added or removed, so the
+   block was rewritten neutrally instead of deleted.
+5. a#52 — see skip note (the English source keeps the Difficulty row).
+6. b#3 — reviewer suggested "đăng ký cư trú"; ACCEPTED-vi prescribes "đăng ký hộ khẩu (戶籍)", which is what I used.
+7. b#6 — reviewer's "kế toán sư" is not Vietnamese usage; ACCEPTED-vi's "kế toán viên công chứng (會計師, CPA)" used.
+8. b#33 — "Liên hệ (không tư vấn bằng tiếng Việt)" reads as a negative label in a related-links list. ACCEPTED-vi
+   allows rewording a relabelled link, so the label is plain "Liên hệ" (the pack's own nav word); the consultation
+   -language lock is stated on the target page and in the guidance/FAQ strings, and nothing implies vi consultation.
+9. b#44 — reviewer's "Vụ Thương mại" adopted, but glossed 商業發展署 (the agency's current name, already used in 001)
+   rather than 商業司, and 001 was aligned to the same Vietnamese name so the locale has exactly one.
+
+## §Verify output (verbatim)
+$ node scripts/check-column-translation.mjs --dir src/content/columns-vi --lang vi 2>&1 | tail -8
+forbidden      PASS   
+hanzi          PASS   han=19
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-vi src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      27

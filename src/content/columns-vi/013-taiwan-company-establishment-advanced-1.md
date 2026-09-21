@@ -19,21 +19,21 @@ nên tôi xin tổng hợp lại những câu hỏi mà nhiều người thườ
 
 Quý vị nào đã đọc [**Cơ bản về thành lập công ty**](/vi/columns/taiwan-company-establishment-basics) thì xin tham khảo tiếp phần chuyên sâu chi tiết dưới đây.
 
-Mong rằng phần Hỏi–Đáp dưới đây sẽ hữu ích cho quý vị đang cân nhắc thành lập công ty tại Đài Loan. 😊
+Mong rằng phần Hỏi–Đáp dưới đây sẽ hữu ích cho quý vị đang cân nhắc thành lập công ty tại Đài Loan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
 **1. Tôi muốn thành lập công ty nhưng vẫn chưa tìm được địa chỉ đăng ký của công ty. Tôi có thể tiến hành thủ tục thành lập không?**
 
-Khi người nước ngoài thành lập công ty tại Đài Loan, quý vị phải nộp bản kế hoạch đầu tư (投資計畫書) lên Cục Thẩm định Đầu tư, Bộ Kinh tế (經濟部投資審議司) của Đài Loan để được thẩm định.
+Khi người nước ngoài thành lập công ty tại Đài Loan, quý vị phải nộp bản kế hoạch đầu tư (投資計畫書) lên Vụ Thẩm định Đầu tư, Bộ Kinh tế (經濟部投資審議司) của Đài Loan để được thẩm định.
 
-Bởi vì Cục Thẩm định Đầu tư phải xác nhận xem số vốn điều lệ đó có thực sự được sử dụng vào mục đích đầu tư hay không,
+Bởi vì Vụ Thẩm định Đầu tư phải xác nhận xem số vốn điều lệ đó có thực sự được sử dụng vào mục đích đầu tư hay không,
 
-và xem có phải thế lực nước ngoài đang đưa nguồn tiền vào Đài Loan dưới một danh nghĩa khác hay không.
+và xem có phải bên nước ngoài đang đưa nguồn tiền vào Đài Loan dưới một danh nghĩa khác hay không.
 
 Khi lập bản kế hoạch đầu tư, quý vị không nhất thiết phải ghi địa chỉ chính xác của công ty, chỉ cần ghi khu vực là được (ví dụ: thành phố Đài Bắc (臺北市)). ​
 
-Tuy nhiên, sau đó khi mở tài khoản văn phòng trù bị của công ty (公司籌備處帳戶) tại ngân hàng, nhiều ngân hàng sẽ xem xét hợp đồng thuê (租賃契約) và đến tận nơi kiểm tra địa chỉ công ty.
+Tuy nhiên, sau đó khi mở tài khoản văn phòng chuẩn bị thành lập công ty (公司籌備處帳戶) tại ngân hàng, nhiều ngân hàng sẽ xem xét hợp đồng thuê (租賃契約) và đến tận nơi kiểm tra địa chỉ công ty.
 
 Một nhân viên ngân hàng Đài Loan đã trực tiếp nói với tôi rằng,
 
@@ -43,23 +43,23 @@ Trong bài cơ bản trước đây cũng có một độc giả nói rằng m�
 
 Do các vụ rửa tiền (洗錢) tại Đài Loan rất nhiều, việc mở tài khoản ngân hàng ngày càng trở nên nghiêm ngặt hơn.
 
-**Lời khuyên**：
+**Lời khuyên:**
 
 Vì việc thẩm định kế hoạch đầu tư cũng mất thời gian,
 
 quý vị nên vừa soạn bản kế hoạch đầu tư vừa đồng thời tìm địa chỉ đăng ký của công ty.
 
-Theo Điều 9 Điều lệ Đầu tư của người nước ngoài (外國人投資條例), phần vốn góp đã được chấp thuận phải về đủ trong thời hạn do cơ quan chủ quản ấn định (核定期限); thời hạn thực tế cần được xác nhận trong văn bản chấp thuận riêng (trên thực tế thường được ấn định khoảng 1 năm).
+Theo Điều 9 Luật Đầu tư của Người nước ngoài (外國人投資條例), phần vốn góp đã được chấp thuận phải về đủ trong thời hạn do cơ quan chủ quản ấn định (核定期限); thời hạn thực tế cần được xác nhận trong văn bản chấp thuận riêng (trên thực tế thường được ấn định khoảng 1 năm).
 
 nên sau khi tìm được địa chỉ công ty và ký hợp đồng thuê,
 
-quý vị vẫn còn đủ thời gian để mở tài khoản văn phòng trù bị của công ty tại ngân hàng và chuyển vốn điều lệ vào.
+quý vị vẫn còn đủ thời gian để mở tài khoản văn phòng chuẩn bị thành lập công ty tại ngân hàng và chuyển vốn điều lệ vào.
 
 ​
 
 **2. Tôi không có thẻ cư trú Đài Loan thì có mở được tài khoản công ty tại ngân hàng không?**
 
-Có thể được.
+Quý vị vẫn có thể mở được tài khoản công ty.
 
 Thông thường ngân hàng yêu cầu hai loại giấy tờ chứng minh nhân thân,
 
@@ -73,7 +73,7 @@ nhưng Sở Di dân rất đông người, nên quý vị hãy đến sớm đ�
 
 **3. Tôi nghe nói khi thẩm định kế hoạch đầu tư thì phải ghi học vấn và kinh nghiệm làm việc. Tôi lo rằng học vấn và kinh nghiệm của mình không phù hợp với ngành nghề của công ty dự định thành lập.**
 
-Cục Thẩm định Đầu tư có xem xét lý lịch học vấn và kinh nghiệm của nhà đầu tư,
+Vụ Thẩm định Đầu tư có xem xét lý lịch học vấn và kinh nghiệm của nhà đầu tư,
 
 nhưng việc thẩm định không quá khắt khe.
 
@@ -87,7 +87,7 @@ Về điểm này, quý vị nên trao đổi kỹ với luật sư Đài Loan.
 
 **4. Khi thuê địa chỉ đăng ký của công ty (ví dụ: mặt bằng nhà hàng) thì có điều gì cần lưu ý không?**
 
-Việc thành lập công ty mất khoảng **3 tháng**, và việc xin giấy phép làm việc (工作許可) cùng thẻ cư trú cũng mất khoảng **1 tháng**,
+Trong một số trường hợp, việc thành lập công ty mất khoảng **3 tháng**, còn việc xin giấy phép làm việc (工作許可) cùng thẻ cư trú mất khoảng **1 tháng**; đó không phải thời hạn được bảo đảm,
 
 nên quý vị hãy đặt ngày bắt đầu hợp đồng muộn nhất có thể.
 
@@ -111,7 +111,7 @@ khi cần thiết quý vị có thể đề xuất công chứng (公證) hợp 
 
 Điều này tùy thuộc vào ngành nghề kinh doanh (營業項目) của công ty.
 
-Ví dụ) Nếu ngành nghề kinh doanh là dịch vụ ăn uống mà quý vị lại định thuê không gian văn phòng thương mại thông thường, thì việc mở tài khoản ngân hàng sẽ rất khó khăn.
+Ví dụ: nếu ngành nghề kinh doanh là dịch vụ ăn uống mà quý vị lại định thuê không gian văn phòng thương mại thông thường, thì việc mở tài khoản ngân hàng sẽ rất khó khăn.
 
 Như đã trình bày ở trên, ngân hàng sẽ xem xét hợp đồng thuê và đến tận nơi kiểm tra địa chỉ công ty.
 
@@ -119,15 +119,15 @@ Ngoài ra, ở bước đăng ký công ty cuối cùng, chính quyền thành p
 
 và nếu là không gian văn phòng thương mại thông thường thì không thể đăng ký công ty.
 
-Ví dụ) Nếu là ngành nghề kinh doanh có thể thực hiện tại không gian văn phòng thương mại, như ngành quảng cáo hay ngành bán buôn, thì quý vị có thể thành lập công ty tại đó. Trước khi ký hợp đồng thuê,
+Ví dụ: nếu là ngành nghề kinh doanh có thể thực hiện tại không gian văn phòng thương mại, như ngành quảng cáo hay ngành bán buôn, thì quý vị có thể thành lập công ty tại đó. Trước khi ký hợp đồng thuê,
 
 quý vị hãy xác nhận trước điều này.
 
-*Nếu quý vị cần hỗ trợ hoặc cần trao đổi về pháp luật Đài Loan, xin hãy để lại bình luận hoặc liên hệ với chúng tôi bất cứ lúc nào.*
+*Nếu quý vị cần hỗ trợ hoặc cần trao đổi về pháp luật Đài Loan, xin gửi qua trang Liên hệ; văn phòng không cam kết thời gian phản hồi.*
 
 ---
 
 > Xem thêm:
-> - [Các lĩnh vực mà văn phòng nhận xử lý](/vi/services)
+> - [Các lĩnh vực dịch vụ](/vi/services)
 > - [Đội ngũ quốc tế Hovering](/vi/lawyers)
 > - [Cách liên hệ với văn phòng](/vi/contact)

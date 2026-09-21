@@ -191,11 +191,11 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
     footerNotice:
       'Trang tiếng Việt này chỉ cung cấp thông tin hướng dẫn chung về công việc của văn phòng theo pháp luật Đài Loan. Đây không phải ý kiến pháp lý cho vụ việc cụ thể, và việc gửi thông tin qua trang này không tự nó tạo lập quan hệ giữa luật sư và khách hàng.',
     skipLink: 'Bỏ qua phần điều hướng, đến nội dung chính',
-    menuLabel: 'Danh mục trang',
-    languageLabel: 'Ngôn ngữ hiển thị',
+    menuLabel: 'Trình đơn',
+    languageLabel: 'Ngôn ngữ của trang',
     mega: {
       services: {
-        description: 'Văn phòng hỗ trợ những nhóm công việc chính theo pháp luật Đài Loan.',
+        description: 'Văn phòng hỗ trợ những lĩnh vực công việc chính theo pháp luật Đài Loan.',
         viewAllLabel: 'Xem tất cả',
       },
       columns: {
@@ -265,9 +265,9 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             ],
           },
           {
-            heading: 'Những nhóm công việc mà văn phòng nhận xử lý',
+            heading: 'Những lĩnh vực công việc mà văn phòng nhận xử lý',
             paragraphs: [
-              'Phạm vi công việc của văn phòng gồm sáu nhóm dưới đây. Trang “Lĩnh vực dịch vụ” trình bày chi tiết hơn từng nhóm và nêu rõ những điều không được bảo đảm.',
+              'Phạm vi công việc của văn phòng gồm sáu lĩnh vực dưới đây. Trang “Lĩnh vực dịch vụ” trình bày chi tiết hơn từng lĩnh vực và nêu rõ những điều không được bảo đảm.',
             ],
             items: [
               'Đầu tư và thành lập doanh nghiệp tại Đài Loan',
@@ -291,9 +291,9 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         eyebrow: 'LĨNH VỰC DỊCH VỤ',
         title: 'Các lĩnh vực mà văn phòng nhận xử lý',
         description:
-          'Sáu nhóm công việc thuộc phạm vi dịch vụ của văn phòng tại Đài Loan, cùng những giới hạn cần biết trước khi liên hệ.',
+          'Sáu lĩnh vực công việc thuộc phạm vi dịch vụ của văn phòng tại Đài Loan, cùng những giới hạn cần biết trước khi liên hệ.',
         intro:
-          'Dưới đây là các nhóm công việc mà văn phòng thực tế nhận xử lý, kèm những điểm thường được hỏi ở giai đoạn đầu. Phần mô tả này giúp quý vị xác định vụ việc của mình có thuộc phạm vi hỗ trợ hay không; đây là thông tin chung, không phải phân tích pháp lý cho một hồ sơ cụ thể.',
+          'Dưới đây là các lĩnh vực công việc mà văn phòng thực tế nhận xử lý, kèm những điểm thường được hỏi ở giai đoạn đầu. Phần mô tả này giúp quý vị xác định vụ việc của mình có thuộc phạm vi hỗ trợ hay không; đây là thông tin chung, không phải phân tích pháp lý cho một hồ sơ cụ thể.',
         sections: [
           {
             heading: 'Đầu tư và thành lập doanh nghiệp tại Đài Loan',
@@ -312,7 +312,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Hôn nhân, gia đình và thừa kế',
             paragraphs: [
-              'Văn phòng nhận các vụ việc về ly hôn (離婚), phân chia tài sản, việc thực hiện và gánh vác quyền, nghĩa vụ đối với con chưa thành niên (未成年子女權利義務之行使或負擔), thăm nom con (會面交往) và thừa kế (繼承), kể cả khi các bên hoặc tài sản ở nhiều quốc gia khác nhau. Những vụ việc có yếu tố nước ngoài thường cần xem xét thêm về giấy tờ hộ tịch (戶籍), hình thức văn bản và cách chứng minh tại Đài Loan.',
+              'Văn phòng nhận các vụ việc về ly hôn (離婚), phân chia tài sản, việc thực hiện quyền và gánh vác nghĩa vụ đối với con chưa thành niên (未成年子女權利義務之行使或負擔), thăm nom con (會面交往) và thừa kế (繼承), kể cả khi các bên hoặc tài sản ở nhiều quốc gia khác nhau. Những vụ việc có yếu tố nước ngoài thường cần xem xét thêm về giấy tờ đăng ký hộ khẩu (戶籍), hình thức văn bản và cách chứng minh tại Đài Loan.',
               'Vì các vấn đề gia đình thường đi kèm thời hạn và nhiều thủ tục song song, phần tóm tắt ban đầu nên nêu rõ quan hệ giữa các bên, nơi cư trú hiện tại và những thủ tục đã hoặc đang tiến hành.',
             ],
           },
@@ -366,7 +366,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Công việc có yếu tố nước ngoài',
             paragraphs: [
               'Công việc có yếu tố nước ngoài của văn phòng gồm thành lập công ty, hồ sơ thị thực, đăng ký nhãn hiệu và sáng chế, đánh giá rủi ro pháp lý và tư vấn thuế doanh nghiệp. Cơ sở Đài Trung chuyên trách các vụ việc về xây dựng, sở hữu trí tuệ và các công việc liên quan đến Hàn Quốc, Nhật Bản. Luật sư Wei Tseng (曾雋崴) phụ trách khách hàng Hàn Quốc, Nhật Bản và khách hàng quốc tế khác trong các nhóm việc nêu trên.',
-              'Việc chúng tôi có thể tiếp nhận một vụ việc hay không phụ thuộc vào nội dung vụ việc và ngôn ngữ trao đổi. Nếu vụ việc của quý vị thuộc các nhóm công việc nêu trên và có thể trao đổi bằng một trong bốn ngôn ngữ tư vấn, quý vị có thể gửi tóm tắt để luật sư xem xét.',
+              'Việc chúng tôi có thể tiếp nhận một vụ việc hay không phụ thuộc vào nội dung vụ việc và ngôn ngữ trao đổi. Nếu vụ việc của quý vị thuộc các lĩnh vực công việc nêu trên và có thể trao đổi bằng một trong bốn ngôn ngữ tư vấn, quý vị có thể gửi tóm tắt để luật sư xem xét.',
             ],
           },
           {
@@ -382,7 +382,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         eyebrow: 'LUẬT SƯ',
         title: 'Đội ngũ quốc tế Hovering',
         description:
-          'Hồ sơ của các luật sư, quản lý nghiệp vụ và kế toán viên hợp tác của Hovering.',
+          'Hồ sơ của các luật sư, quản lý nghiệp vụ và kế toán viên công chứng hợp tác của Hovering.',
         // WO-O33: `/en/lawyers` is header -> roster -> key facts. The three
         // prose cards this page used to carry were a duplicate of the key-facts
         // rows, a third copy of the consultation-language notice, and a
@@ -440,7 +440,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Ba điều cần phân biệt',
             paragraphs: [
-              'Ngôn ngữ hiển thị của trang, ngôn ngữ tư vấn với luật sư và ngôn ngữ quý vị dùng để viết tin nhắn là ba việc độc lập với nhau.',
+              'Ngôn ngữ của trang, ngôn ngữ tư vấn với luật sư và ngôn ngữ quý vị dùng để viết tin nhắn là ba việc độc lập với nhau.',
             ],
             items: [
               'Ngôn ngữ của trang: phần hướng dẫn này được viết bằng tiếng Việt.',
@@ -533,7 +533,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         eyebrow: 'QUYỀN RIÊNG TƯ',
         title: 'Thông tin được thu thập qua biểu mẫu liên hệ',
         description:
-          'Những thông tin biểu mẫu liên hệ ở phần tiếng Việt thu thập, cách xử lý nội dung gốc và cách quý vị liên hệ về dữ liệu của mình.',
+          'Những thông tin mà biểu mẫu liên hệ ở phần tiếng Việt thu thập, cách xử lý nội dung gốc và cách quý vị liên hệ về dữ liệu của mình.',
         intro:
           'Phần này chỉ nói về biểu mẫu liên hệ trên các trang hướng dẫn này. Nội dung ở đây mô tả cách thông tin được xử lý, không phải một cam kết kỹ thuật.',
         sections: [
@@ -545,7 +545,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             items: [
               'Tên quý vị cung cấp',
               'Địa chỉ thư điện tử để liên hệ lại',
-              'Ngôn ngữ hiển thị của trang khi quý vị gửi',
+              'Ngôn ngữ của trang khi quý vị gửi',
               'Ngôn ngữ quý vị dùng để viết nội dung',
               'Ngôn ngữ quý vị mong muốn dùng khi tư vấn',
               'Nội dung gốc quý vị viết',
@@ -591,7 +591,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Nơi lưu trữ dữ liệu và các nhà cung cấp dịch vụ',
             paragraphs: [
-              'Trang web này được lưu trữ trên Vercel, và nội dung quý vị gửi được giữ trong kho lưu trữ đối tượng không công khai của dịch vụ đó. Thư điện tử được gửi qua dịch vụ thư mà văn phòng đang sử dụng.',
+              'Trang web này được lưu trữ trên Vercel, và nội dung quý vị gửi được giữ trong kho lưu trữ không công khai của dịch vụ đó. Thư điện tử được gửi qua dịch vụ thư mà văn phòng đang sử dụng.',
               'Máy chủ của một số nhà cung cấp dịch vụ có thể đặt ngoài Đài Loan, khi đó thông tin của quý vị có thể được lưu và xử lý tại nơi đó. Khi mục đích lưu giữ đã đạt được, thông tin được xóa không chậm trễ; thông tin có nghĩa vụ lưu giữ theo quy định thì được giữ trong thời hạn tương ứng. Mọi yêu cầu liên quan đến dữ liệu cá nhân được tiếp nhận tại wei@hoveringlaw.com.tw.',
             ],
           },

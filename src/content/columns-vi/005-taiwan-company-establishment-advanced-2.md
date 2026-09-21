@@ -14,7 +14,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Ảnh đại diện](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Quý vị đã đọc [Thành lập công ty tại Đài Loan — Phần cơ bản](/vi/columns/taiwan-company-establishment-basics) và [Thành lập công ty tại Đài Loan — Phần chuyên sâu 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) thì cũng có thể xem thêm Thành lập công ty tại Đài Loan — Phần chuyên sâu 2.
+Nếu quý vị đã đọc [Thành lập công ty tại Đài Loan — Phần cơ bản](/vi/columns/taiwan-company-establishment-basics) và [Thành lập công ty tại Đài Loan — Phần chuyên sâu 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1), quý vị có thể xem tiếp phần chuyên sâu 2 dưới đây.
 
 ​
 
@@ -26,7 +26,7 @@ Chúng tôi mong phần Hỏi–Đáp dưới đây cũng hữu ích cho quý v�
 
 ​
 
-**1. Khi chuyển vốn điều lệ (資本額) từ Hàn Quốc vào tài khoản văn phòng trù bị của công ty Đài Loan (公司籌備處帳戶) thì cần lưu ý điều gì? (mục 1 nêu chế độ và thực tiễn ngân hàng của Hàn Quốc)**
+**1. Khi chuyển vốn điều lệ (資本額) từ nước ngoài vào tài khoản văn phòng chuẩn bị thành lập công ty Đài Loan (公司籌備處帳戶) thì cần lưu ý điều gì? (mục 1 dưới đây lấy chế độ ngoại hối và thực tiễn ngân hàng của Hàn Quốc làm ví dụ về một quốc gia nước ngoài, không phải hướng dẫn chung cho mọi nhà đầu tư nước ngoài)**
 
 Thông thường, các ngân hàng Hàn Quốc yêu cầu **chính nhà đầu tư** phải trực tiếp đến ngân hàng tại Hàn Quốc và chuyển tiền từ tài khoản đứng tên mình.
 
@@ -38,7 +38,7 @@ Trước khi chuyển vốn điều lệ, quý vị hãy hỏi ý kiến ngân h
 
 **​**
 
-**2. Khi nộp vốn điều lệ của công ty, quý vị có thể chuyển Đài tệ mới (新臺幣, TWD) từ tài khoản Đài Loan đứng tên mình vào tài khoản văn phòng trù bị của công ty Đài Loan không?**
+**2. Khi nộp vốn điều lệ của công ty, quý vị có thể chuyển Đài tệ mới (新臺幣, TWD) từ tài khoản Đài Loan đứng tên mình vào tài khoản văn phòng chuẩn bị thành lập công ty Đài Loan không?**
 
 Được, nhưng quý vị phải nộp giấy tờ chứng minh nguồn gốc của khoản Đài tệ mới đã có được tại Đài Loan.
 
@@ -50,17 +50,17 @@ Trường hợp chuyển tiền từ tài khoản ngân hàng ở Hàn Quốc th
 
 **​**
 
-**3. Sau khi vốn điều lệ đã được nộp vào tài khoản văn phòng trù bị của công ty, khi nào có thể chuyển tài khoản đó thành tài khoản công ty chính thức (正式公司帳戶)?**
+**3. Sau khi vốn điều lệ đã được nộp vào tài khoản văn phòng chuẩn bị thành lập công ty, khi nào có thể chuyển tài khoản đó thành tài khoản công ty chính thức (正式公司帳戶)?**
 
 Thông thường, sau khi nhận được giấy tờ đăng ký thành lập pháp nhân,
 
-người chịu trách nhiệm của công ty (公司負責人) có thể đến ngân hàng để chuyển tài khoản văn phòng trù bị của công ty thành tài khoản chính thức.
+người chịu trách nhiệm của công ty (公司負責人) có thể đến ngân hàng để chuyển tài khoản văn phòng chuẩn bị thành lập công ty thành tài khoản chính thức.
 
 Tuy nhiên, vì quy định nội bộ của mỗi ngân hàng một khác, nên nếu quý vị cần sử dụng vốn điều lệ gấp thì nên hỏi ngân hàng trước.
 
 **​**
 
-**4. Sau khi tài khoản văn phòng trù bị của công ty được chuyển thành tài khoản chính thức, quý vị có thể sử dụng ngay ngân hàng điện tử không?**
+**4. Sau khi tài khoản văn phòng chuẩn bị thành lập công ty được chuyển thành tài khoản chính thức, quý vị có thể sử dụng ngay ngân hàng điện tử không?**
 
 Điều này khác nhau tùy từng ngân hàng, nhưng thông thường tối thiểu phải có số điện thoại di động.
 
@@ -78,11 +78,11 @@ Tham khảo trang thông tin của Bộ Lao động Đài Loan (勞動部): <htt
 
 ​
 
-Nếu quý vị có thêm câu hỏi, xin liên hệ với chúng tôi bất cứ lúc nào.
+Nếu quý vị có thêm câu hỏi, xin gửi qua trang Liên hệ; văn phòng không cam kết thời gian phản hồi.
 
 ---
 
 > Xem thêm:
-> - [Các lĩnh vực mà văn phòng nhận xử lý](/vi/services)
+> - [Các lĩnh vực dịch vụ](/vi/services)
 > - [Đội ngũ quốc tế Hovering](/vi/lawyers)
 > - [Cách liên hệ với văn phòng](/vi/contact)

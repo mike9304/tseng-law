@@ -49,7 +49,7 @@ Việc có kết quả giám định theo từng vụ việc như trên không c
 
 ## Những điều cần xác nhận khi phán định trách nhiệm trong vụ tai nạn
 
-Trước khi vượt, trước hết phải xác nhận địa điểm hoặc tình hình giao thông đó có thuộc trường hợp cấm vượt hay không. Nếu áp dụng trình tự vượt trong cùng một làn đường, quý vị phải thực hiện tín hiệu còi hoặc đèn theo quy định mà không ép xe phía trước phải nhường đường, chờ tới khi có dấu hiệu nhường đường rõ ràng, rồi hoàn tất việc vượt trong khi vẫn giữ đủ khoảng cách và dành sẵn cự ly an toàn để quay lại làn đường ban đầu.
+Trước khi vượt, trước hết phải xác nhận địa điểm hoặc tình hình giao thông đó có thuộc trường hợp cấm vượt hay không. Nếu áp dụng trình tự vượt trong cùng một làn đường, quý vị phải thực hiện tín hiệu còi hoặc đèn theo quy định mà không ép xe phía trước phải nhường đường, chờ tới khi có dấu hiệu nhường đường rõ ràng, rồi hoàn tất việc vượt trong khi vẫn giữ đủ khoảng cách và dành sẵn khoảng cách an toàn để quay lại làn đường ban đầu.
 
 Việc tuân thủ Điều 101 là quan trọng, nhưng bản thân điều đó không bảo đảm rằng sẽ tránh được tai nạn, cũng không định trước kết quả giám định hay tố tụng về sau. Người lái xe vẫn cần dành thêm khoảng an toàn dự phòng và ứng phó phù hợp với tình hình phía trước.
 

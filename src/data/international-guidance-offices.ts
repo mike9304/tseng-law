@@ -746,9 +746,9 @@ export const guidanceFooterCopy: Record<GuidanceLocale, GuidanceFooterCopy> = {
     blogLabel: 'Blog',
     websiteLabel: 'Trang web chính thức',
     sitemapLabel: 'Sơ đồ trang web',
-    copyEmailLabel: 'Sao chép địa chỉ email',
-    emailCopiedMessage: 'Đã sao chép địa chỉ email.',
-    officialConsultationEmailLabel: 'Email tư vấn chính thức',
+    copyEmailLabel: 'Sao chép địa chỉ thư điện tử',
+    emailCopiedMessage: 'Đã sao chép địa chỉ thư điện tử.',
+    officialConsultationEmailLabel: 'Thư điện tử tư vấn chính thức',
   },
   id: {
     officeLabel: 'Kantor',

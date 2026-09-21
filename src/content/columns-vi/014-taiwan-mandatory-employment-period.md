@@ -15,7 +15,7 @@ faq:
   - q: "Nghỉ việc sớm thì có phải hoàn trả toàn bộ tiền thưởng khi ký hợp đồng hoặc thưởng giữ chân không?"
     a: "Không phải lúc nào cũng phải hoàn trả toàn bộ. Nếu tiền thưởng khi ký hợp đồng, thưởng giữ chân hoặc khoản chi trả trước khác được chi trả với tư cách là khoản bù đắp hợp lý cho thỏa thuận thời hạn làm việc tối thiểu, thì mục đích của khoản tiền đó phải được thông báo rõ ràng cho người lao động. Công văn giải thích ngày 5 tháng 6 năm 2026 của Bộ Lao động Đài Loan nêu rằng khi người lao động nghỉ việc trước lúc thời hạn kết thúc, số tiền hoàn trả phải được tính theo tỷ lệ với phần thời gian chưa thực hiện và không được yêu cầu hoàn trả toàn bộ. Kết luận trong từng vụ việc vẫn phải xem xét đồng thời mục đích chi trả, nội dung thỏa thuận, thời gian đã làm việc và lý do chấm dứt hợp đồng."
   - q: "Nếu hợp đồng chấm dứt sớm vì lý do không thể quy trách nhiệm cho người lao động thì có phải hoàn trả chi phí đào tạo không?"
-    a: "Điều 15-1 khoản 4 Luật Tiêu chuẩn Lao động của Đài Loan quy định rằng nếu hợp đồng lao động chấm dứt trước khi thời hạn làm việc tối thiểu kết thúc vì lý do không thể quy trách nhiệm cho người lao động (不可歸責於勞工), thì người lao động không phải chịu trách nhiệm vi phạm thỏa thuận thời hạn làm việc tối thiểu cũng như trách nhiệm hoàn trả chi phí đào tạo. Tuy nhiên, lý do chấm dứt hợp đồng và việc quy trách nhiệm vẫn phải được đánh giá dựa trên chứng cứ cụ thể như thông báo sa thải, biểu thị ý chí xin nghỉ việc và tài liệu về việc vi phạm điều kiện lao động."
+    a: "Điều 15-1 khoản 4 Luật Tiêu chuẩn Lao động của Đài Loan quy định rằng nếu hợp đồng lao động chấm dứt trước khi thời hạn làm việc tối thiểu kết thúc vì lý do không thể quy trách nhiệm cho người lao động (不可歸責於勞工), thì người lao động không phải chịu trách nhiệm vi phạm thỏa thuận thời hạn làm việc tối thiểu cũng như trách nhiệm hoàn trả chi phí đào tạo. Tuy nhiên, lý do chấm dứt hợp đồng và việc quy trách nhiệm vẫn phải được đánh giá dựa trên chứng cứ cụ thể như thông báo sa thải, thông báo xin nghỉ việc và tài liệu về việc vi phạm điều kiện lao động."
 ---
 
 # Thỏa thuận thời hạn làm việc tối thiểu (最低服務年限約定) tại Đài Loan: tiêu chí đánh giá hiệu lực, chi phí đào tạo và tiền phạt vi phạm hợp đồng (違約金)
@@ -31,11 +31,11 @@ Khi xem xét, điều quan trọng là không trộn lẫn bốn câu hỏi sau 
 3. Lý do chấm dứt hợp đồng lao động thuộc về bên nào
 4. Việc báo trước khi nghỉ việc và phạm vi hoàn trả được đánh giá như thế nào
 
-Ngay cả khi bốn vấn đề này cùng được ghi trong một bản hợp đồng, điều luật được áp dụng và chứng cứ cần thiết cho từng vấn đề vẫn khác nhau. Vì vậy, cần tách riêng để xem xét: thỏa thuận có hiệu lực hay không, biểu thị ý chí xin nghỉ việc phát sinh hiệu lực từ thời điểm nào, người lao động có trách nhiệm hoàn trả khoản chi trả trước (預付性給付) hoặc chi phí đào tạo hay không, và trên thực tế có phát sinh thiệt hại riêng biệt nào hay không.
+Ngay cả khi bốn vấn đề này cùng được ghi trong một bản hợp đồng, điều luật được áp dụng và chứng cứ cần thiết cho từng vấn đề vẫn khác nhau. Vì vậy, cần tách riêng để xem xét: thỏa thuận có hiệu lực hay không, thông báo xin nghỉ việc phát sinh hiệu lực từ thời điểm nào, người lao động có trách nhiệm hoàn trả khoản chi trả trước (預付性給付) hoặc chi phí đào tạo hay không, và trên thực tế có phát sinh thiệt hại riêng biệt nào hay không.
 
 ## 1. Thỏa thuận thời hạn làm việc tối thiểu khi nào có hiệu lực
 
-Không. Theo Điều 15-1 Luật Tiêu chuẩn Lao động (勞動基準法) của Đài Loan, nếu người sử dụng lao động đã tiến hành đào tạo kỹ thuật chuyên môn (專業技術培訓) và gánh chịu chi phí đó, hoặc đã cung cấp khoản bù đắp hợp lý (合理補償) để người lao động tuân thủ thời hạn làm việc tối thiểu, thì thỏa thuận có thể đáp ứng các căn cứ pháp định. Không bắt buộc phải có đủ cả hai căn cứ, nhưng ngay cả khi tồn tại một trong hai, thỏa thuận vẫn không được vượt quá phạm vi hợp lý khi xem xét toàn bộ tình tiết như thời gian và chi phí đào tạo, khả năng thay thế nhân lực (人力替補), mức và phạm vi của khoản bù đắp.
+Thỏa thuận thời hạn làm việc tối thiểu không đương nhiên có hiệu lực. Theo Điều 15-1 Luật Tiêu chuẩn Lao động (勞動基準法) của Đài Loan, nếu người sử dụng lao động đã tiến hành đào tạo kỹ thuật chuyên môn (專業技術培訓) và gánh chịu chi phí đó, hoặc đã cung cấp khoản bù đắp hợp lý (合理補償) để người lao động tuân thủ thời hạn làm việc tối thiểu, thì thỏa thuận có thể đáp ứng các căn cứ pháp định. Không bắt buộc phải có đủ cả hai căn cứ, nhưng ngay cả khi tồn tại một trong hai, thỏa thuận vẫn không được vượt quá phạm vi hợp lý khi xem xét toàn bộ tình tiết như thời gian và chi phí đào tạo, khả năng thay thế nhân lực (人力替補), mức và phạm vi của khoản bù đắp.
 
 Điều 15-1 khoản 1 quy định hai căn cứ pháp định theo cách lựa chọn. Thứ nhất là trường hợp người sử dụng lao động cung cấp đào tạo kỹ thuật chuyên môn cho người lao động và gánh chịu chi phí đó; thứ hai là trường hợp người sử dụng lao động cung cấp khoản bù đắp hợp lý để đổi lấy việc tuân thủ thời hạn làm việc tối thiểu. Điều cần xác minh không phải là tên gọi được ghi trong hợp đồng, mà là trên thực tế căn cứ nào đang tồn tại.
 
@@ -116,9 +116,9 @@ Cũng phải phân biệt việc hoàn trả chi phí đào tạo với việc h
 
 ## 7. Trường hợp hợp đồng chấm dứt vì lý do không thể quy trách nhiệm cho người lao động
 
-Điều 15-1 khoản 4 Luật Tiêu chuẩn Lao động của Đài Loan quy định rằng nếu hợp đồng lao động chấm dứt trước khi thời hạn làm việc tối thiểu kết thúc vì lý do không thể quy trách nhiệm cho người lao động (不可歸責於勞工), thì người lao động không phải chịu trách nhiệm vi phạm thỏa thuận thời hạn làm việc tối thiểu cũng như trách nhiệm hoàn trả chi phí đào tạo. Tuy nhiên, lý do chấm dứt hợp đồng và việc quy trách nhiệm vẫn phải được đánh giá dựa trên chứng cứ cụ thể như thông báo sa thải, biểu thị ý chí xin nghỉ việc và tài liệu về việc vi phạm điều kiện lao động.
+Điều 15-1 khoản 4 Luật Tiêu chuẩn Lao động của Đài Loan quy định rằng nếu hợp đồng lao động chấm dứt trước khi thời hạn làm việc tối thiểu kết thúc vì lý do không thể quy trách nhiệm cho người lao động (不可歸責於勞工), thì người lao động không phải chịu trách nhiệm vi phạm thỏa thuận thời hạn làm việc tối thiểu cũng như trách nhiệm hoàn trả chi phí đào tạo. Tuy nhiên, lý do chấm dứt hợp đồng và việc quy trách nhiệm vẫn phải được đánh giá dựa trên chứng cứ cụ thể như thông báo sa thải, thông báo xin nghỉ việc và tài liệu về việc vi phạm điều kiện lao động.
 
-Vì vậy, không thể chỉ căn cứ vào việc quan hệ lao động kết thúc trước thời hạn thỏa thuận để công nhận là người lao động đã vi phạm. Cần xác minh ai đã đưa ra biểu thị ý chí nào, căn cứ pháp lý để chấm dứt hợp đồng là gì, và tình tiết thực tế làm phát sinh việc chấm dứt thuộc về bên nào.
+Vì vậy, không thể chỉ căn cứ vào việc quan hệ lao động kết thúc trước thời hạn thỏa thuận để công nhận là người lao động đã vi phạm. Cần xác minh bên nào đã đưa ra thông báo nào, căn cứ pháp lý để chấm dứt hợp đồng là gì, và tình tiết thực tế làm phát sinh việc chấm dứt thuộc về bên nào.
 
 Tài liệu cần xem xét có thể gồm thông báo sa thải, đơn xin nghỉ việc, văn bản chấm dứt hợp đồng theo thỏa thuận, thư điện tử và tin nhắn, tài liệu về việc thay đổi điều kiện lao động, hồ sơ chấm công và hồ sơ công việc. Ngay cả khi có đề cập đến lý do sức khỏe hay lý do công việc, cũng không được kết luận chỉ dựa vào cách diễn đạt đó, mà phải xem xét đồng thời diễn biến thực tế, căn cứ chấm dứt theo pháp luật và các chứng cứ liên quan.
 
@@ -142,7 +142,7 @@ Trường hợp hợp đồng lao động có thời hạn được ký cho mộ
 
 Trong trường hợp thời gian làm việc liên tục dưới 3 tháng, các loại hợp đồng có thời hạn khác, hoặc khi có bên cho rằng tồn tại lý do chấm dứt ngay theo pháp luật, thì phải xem xét riêng điều luật được áp dụng và các tình tiết. Không thể ấn định trước kết luận pháp lý chỉ vì hợp đồng ghi một thời hạn báo trước dài hơn hay vì hợp đồng đòi hỏi bàn giao công việc ngay lập tức.
 
-Trên thực tế, cần lưu giữ nội dung và ngày gửi biểu thị ý chí xin nghỉ việc, ngày người sử dụng lao động thực tế nhận được, cùng thư từ trao đổi giữa các bên về ngày làm việc cuối cùng. Nếu tách thành bốn câu hỏi riêng — thời điểm việc nghỉ việc phát sinh hiệu lực, hiệu lực của thỏa thuận thời hạn làm việc tối thiểu, việc hoàn trả chi phí đào tạo hoặc khoản chi trả trước, và thiệt hại được yêu cầu riêng — thì có thể giảm bớt sai lầm rút ra mọi kết luận chỉ từ một câu chữ trong hợp đồng.
+Trên thực tế, cần lưu giữ nội dung và ngày gửi thông báo xin nghỉ việc, ngày người sử dụng lao động thực tế nhận được, cùng thư từ trao đổi giữa các bên về ngày làm việc cuối cùng. Nếu tách thành bốn câu hỏi riêng — thời điểm việc nghỉ việc phát sinh hiệu lực, hiệu lực của thỏa thuận thời hạn làm việc tối thiểu, việc hoàn trả chi phí đào tạo hoặc khoản chi trả trước, và thiệt hại được yêu cầu riêng — thì có thể giảm bớt sai lầm rút ra mọi kết luận chỉ từ một câu chữ trong hợp đồng.
 
 ## 9. Danh mục kiểm tra dành cho người sử dụng lao động và người lao động
 
@@ -169,7 +169,7 @@ Ngay cả khi sử dụng hợp đồng mẫu, cũng không được áp dụng 
 4. Ghi chép tách bạch căn cứ ấn định thời hạn thỏa thuận, thời gian đã làm việc, thời gian còn lại và khả năng thay thế nhân lực mà người sử dụng lao động nêu ra.
 5. Lưu giữ thông báo xin nghỉ việc, thông báo sa thải hoặc văn bản chấm dứt hợp đồng theo thỏa thuận, cùng các chứng cứ về việc gửi nhận như thư điện tử và tin nhắn.
 6. Sắp xếp nguyên nhân và diễn biến chấm dứt hợp đồng thực tế theo trình tự thời gian, đồng thời xác minh văn bản yêu cầu hoàn trả của người sử dụng lao động, bảng kê lương, thư từ giữa các bên và hồ sơ khấu trừ.
-7. Xem xét riêng từng vấn đề: hiệu lực của thỏa thuận thời hạn làm việc tối thiểu, biểu thị ý chí xin nghỉ việc và việc báo trước, việc hoàn trả chi phí đào tạo và khoản chi trả trước, và thiệt hại được yêu cầu riêng.
+7. Xem xét riêng từng vấn đề: hiệu lực của thỏa thuận thời hạn làm việc tối thiểu, thông báo xin nghỉ việc và việc báo trước, việc hoàn trả chi phí đào tạo và khoản chi trả trước, và thiệt hại được yêu cầu riêng.
 8. Không thừa nhận trách nhiệm chỉ vì đã ký tên hoặc vì người sử dụng lao động đã yêu cầu một số tiền nhất định, mà hãy xác minh các chứng cứ tương ứng với căn cứ pháp định, tính hợp lý, việc quy trách nhiệm khi chấm dứt hợp đồng và công thức tính theo tỷ lệ tại Điều 15-1.
 
 Khi sắp xếp tài liệu theo trình tự thời gian, nên ghi kèm ngày giao kết hợp đồng, ngày bắt đầu và ngày kết thúc khóa đào tạo, từng ngày chi trả, ngày bắt đầu và ngày kết thúc làm việc, ngày gửi thông báo. Nếu một phần tài liệu chỉ do người sử dụng lao động nắm giữ, trước hết hãy sắp xếp những tài liệu đang có cùng căn cứ tính số tiền bị yêu cầu, sau đó xác minh các tài liệu bổ sung theo trình tự thủ tục cần thiết.
@@ -183,12 +183,12 @@ Khi sắp xếp tài liệu theo trình tự thời gian, nên ghi kèm ngày gi
 
 ## 11. Thông tin liên quan
 
-- [Các lĩnh vực mà văn phòng nhận xử lý](/vi/services)
+- [Các lĩnh vực dịch vụ](/vi/services)
 - [Hướng dẫn về những trường hợp ngoại lệ khi tự xin nghỉ việc và trợ cấp thôi việc (資遣費)](/vi/columns/taiwan-voluntary-resignation-severance)
-- [Liên hệ tư vấn](/vi/contact)
+- [Liên hệ](/vi/contact)
 
 ---
 
-Bài viết này là tài liệu mang mục đích thông tin và giáo dục nhằm giải thích một cách khái quát về thỏa thuận thời hạn làm việc tối thiểu tại Đài Loan, việc hoàn trả chi phí đào tạo và khoản chi trả trước, cùng việc báo trước khi nghỉ việc; bài viết không phải là ý kiến pháp lý cho bất kỳ vụ việc lao động cụ thể nào. Hiệu lực của thỏa thuận và phạm vi trách nhiệm có thể khác nhau tùy theo loại hợp đồng và câu chữ của điều khoản, nội dung cùng chi phí đào tạo trên thực tế, mục đích và việc thông báo khoản bù đắp, thời gian làm việc, nguyên nhân chấm dứt hợp đồng và các chứng cứ liên quan. Trước khi đưa ra biểu thị ý chí xin nghỉ việc, khấu trừ tiền lương, ký thỏa thuận hoàn trả hoặc xử lý tranh chấp, quý vị vẫn nên kiểm tra tài liệu chính thức mới nhất và xác nhận các tình tiết cụ thể của vụ việc.
+Bài viết này là tài liệu mang mục đích thông tin và giáo dục nhằm giải thích một cách khái quát về thỏa thuận thời hạn làm việc tối thiểu tại Đài Loan, việc hoàn trả chi phí đào tạo và khoản chi trả trước, cùng việc báo trước khi nghỉ việc; bài viết không phải là ý kiến pháp lý cho bất kỳ vụ việc lao động cụ thể nào. Hiệu lực của thỏa thuận và phạm vi trách nhiệm có thể khác nhau tùy theo loại hợp đồng và câu chữ của điều khoản, nội dung cùng chi phí đào tạo trên thực tế, mục đích và việc thông báo khoản bù đắp, thời gian làm việc, nguyên nhân chấm dứt hợp đồng và các chứng cứ liên quan. Trước khi đưa ra thông báo xin nghỉ việc, khấu trừ tiền lương, ký thỏa thuận hoàn trả hoặc xử lý tranh chấp, quý vị vẫn nên kiểm tra tài liệu chính thức mới nhất và xác nhận các tình tiết cụ thể của vụ việc.
 
 **Luật sư Wei Tseng (曾雋崴)**

@@ -1,5 +1,5 @@
 ---
-title: "Doanh nghiệp linh kiện bán dẫn vào thị trường Đài Loan: đánh giá công ty con, chi nhánh hay đại lý"
+title: "Doanh nghiệp sản xuất linh kiện bán dẫn gia nhập thị trường Đài Loan: đánh giá công ty con, chi nhánh hay đại lý"
 lastmod: "2026-09-17"
 date_display: "Ngày 17 tháng 9 năm 2026"
 read_time: "8 phút đọc"
@@ -15,7 +15,7 @@ faq:
     a: "Có thể thiết kế chuyển đổi theo giai đoạn, nhưng cần rà soát chấm dứt hoặc sửa đổi hợp đồng hiện có, hợp đồng khách hàng, tồn kho, bảo hành và nhân sự."
 ---
 
-# Doanh nghiệp linh kiện bán dẫn vào thị trường Đài Loan: đánh giá công ty con, chi nhánh hay đại lý
+# Doanh nghiệp sản xuất linh kiện bán dẫn gia nhập thị trường Đài Loan: đánh giá công ty con, chi nhánh hay đại lý
 
 ![Ảnh minh họa cấu trúc doanh nghiệp bán dẫn vào thị trường Đài Loan](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
@@ -53,7 +53,7 @@ Khác biệt chính giữa công ty con Đài Loan và chi nhánh tại Đài Lo
 |---|---|---|
 | Công ty con Đài Loan | Thành lập theo pháp luật Đài Loan, có tư cách pháp nhân độc lập, là chủ thể pháp lý khác với công ty mẹ nước ngoài. | Vì công ty con là pháp nhân độc lập, cần xác nhận cách sắp xếp cung cấp sản phẩm, dịch vụ, cấp phép công nghệ và chia sẻ chi phí với công ty mẹ. |
 | Chi nhánh tại Đài Loan của công ty nước ngoài | Chi nhánh đăng ký hợp pháp tại Đài Loan, không có tư cách pháp nhân độc lập với tổng công ty, khác với công ty con thành lập riêng. | Chi nhánh là một phần của tổng công ty nước ngoài, không phải pháp nhân độc lập, nên tổng công ty nước ngoài chịu trực tiếp mọi trách nhiệm. Cần xác nhận phạm vi ủy quyền của người đại diện chi nhánh và phân công nội bộ về hợp đồng đối ngoại, giao hàng, bảo hành, hậu mãi. |
-| Văn phòng đại diện tại Đài Loan | Điểm làm việc đăng ký theo Điều 386 Luật Công ty, không được kinh doanh tại Đài Loan. | Vì không được kinh doanh, cần xác nhận hoạt động thực tế có nằm trong phạm vi cho phép hay không. |
+| Văn phòng đại diện tại Đài Loan | Văn phòng đại diện đăng ký theo Điều 386 Luật Công ty (辦事處), không được kinh doanh tại Đài Loan. | Vì không được kinh doanh, cần xác nhận hoạt động thực tế có nằm trong phạm vi cho phép hay không. |
 
 ## 3. Hình thức công ty con Đài Loan: công ty hữu hạn và công ty cổ phần
 
@@ -61,19 +61,19 @@ Nếu quyết định lập pháp nhân độc lập tại Đài Loan, cũng ph�
 
 ### Công ty hữu hạn: quản trị gọn, nhưng chuyển nhượng phần vốn khép kín hơn
 
-Công ty hữu hạn có thể do 1 cá nhân trở lên, hoặc cổ đông pháp nhân Đài Loan hay nước ngoài cấu thành; cổ đông về nguyên tắc chịu trách nhiệm trong phạm vi phần góp vốn. Công ty có 1 đến 3 giám đốc, bầu từ cổ đông. Cổ đông không điều hành có quyền giám sát, không cần đặt giám sát viên riêng. Trừ khi điều lệ quy định khác, 1 cổ đông 1 phiếu nên quyền kiểm soát không nhất thiết khớp tỷ lệ góp vốn. Việc chuyển nhượng phần vốn của cổ đông thông thường về nguyên tắc cần sự đồng ý quá bán quyền biểu quyết của cổ đông khác; đối với giám đốc thì từ 2/3 trở lên. Vì vậy phù hợp công ty có quan hệ cổ đông đơn giản, cấu trúc kiểm soát ổn định hơn là gọi vốn hay giao dịch phần vốn thường xuyên. Sau này có thể chuyển thành công ty cổ phần.
+Công ty hữu hạn có thể do 1 cá nhân trở lên, hoặc cổ đông pháp nhân Đài Loan hay nước ngoài cấu thành; cổ đông về nguyên tắc chịu trách nhiệm trong phạm vi phần góp vốn. Công ty có 1 đến 3 giám đốc, bầu từ cổ đông. Cổ đông không điều hành có quyền giám sát, không cần đặt giám sát viên riêng. Trừ khi điều lệ quy định khác, mỗi cổ đông có 1 phiếu biểu quyết, nên quyền kiểm soát không nhất thiết khớp với tỷ lệ góp vốn. Việc chuyển nhượng phần vốn của cổ đông thông thường về nguyên tắc cần sự đồng ý hơn một nửa số quyền biểu quyết của cổ đông khác; đối với giám đốc thì từ 2/3 trở lên. Vì vậy phù hợp công ty có quan hệ cổ đông đơn giản, cấu trúc kiểm soát ổn định hơn là gọi vốn hay giao dịch phần vốn thường xuyên. Sau này có thể chuyển thành công ty cổ phần.
 
 ### Công ty cổ phần: phù hợp khi muốn đưa nhà đầu tư khác vào hoặc có thể niêm yết
 
-Đặc điểm của công ty cổ phần là vốn chia thành cổ phần. Về nguyên tắc cần từ 2 cổ đông trở lên, nhưng chính phủ hoặc pháp nhân có thể thành lập một mình, pháp nhân nước ngoài cũng có thể nắm 100%. Cổ phần về nguyên tắc được chuyển nhượng tự do, nhưng có ngoại lệ theo luật, và có thể thiết kế cổ phần đặc biệt, quyền chọn cổ phần nhân viên theo pháp luật. Vì vậy phù hợp doanh nghiệp muốn thu hút nhà đầu tư, giao dịch cổ phần, khích lệ cổ phần nhân viên hoặc M&A, niêm yết sau này; không chỉ dành cho công ty lớn. Về quản trị, công ty không phát hành công chúng có thể theo điều lệ không lập hội đồng quản trị, chỉ đặt 1 hoặc 2 giám đốc. Công ty có một cổ đông là chính phủ hoặc pháp nhân cũng có thể theo điều lệ không đặt giám sát viên. Không phải mọi công ty cổ phần đều phải kiểm toán báo cáo tài chính năm. Ngưỡng kiểm toán chính của công ty thông thường là vốn góp đã nộp NT$30 triệu, hoặc chưa đạt mức đó nhưng doanh thu NT$100 triệu hoặc 100 người tham gia bảo hiểm lao động; công ty phát hành công chúng theo pháp luật chứng khoán.
+Đặc điểm của công ty cổ phần là vốn chia thành cổ phần. Về nguyên tắc cần từ 2 cổ đông trở lên, nhưng chính phủ hoặc pháp nhân có thể thành lập một mình, pháp nhân nước ngoài cũng có thể nắm 100%. Cổ phần về nguyên tắc được chuyển nhượng tự do, nhưng có ngoại lệ theo luật, và có thể thiết kế cổ phần đặc biệt, quyền chọn cổ phần nhân viên theo pháp luật. Vì vậy phù hợp doanh nghiệp muốn thu hút nhà đầu tư, giao dịch cổ phần, khích lệ cổ phần nhân viên hoặc M&A, niêm yết sau này; không chỉ dành cho công ty lớn. Về quản trị, công ty không phát hành công chúng có thể theo điều lệ không lập hội đồng quản trị, chỉ đặt 1 hoặc 2 giám đốc. Công ty có một cổ đông là chính phủ hoặc pháp nhân cũng có thể theo điều lệ không đặt giám sát viên. Không phải mọi công ty cổ phần đều phải kiểm toán báo cáo tài chính năm. Ngưỡng kiểm toán chính của công ty thông thường là vốn góp đã nộp 30 triệu TWD, hoặc chưa đạt mức đó nhưng doanh thu 100 triệu TWD hoặc 100 người tham gia bảo hiểm lao động; công ty phát hành công chúng theo pháp luật chứng khoán.
 
-## 4. Thủ tục lập chi nhánh và công ty con khác nhau; chỉ lập công ty con mới phải qua thẩm định của Ủy ban Thẩm định Đầu tư Bộ Kinh tế
+## 4. Thủ tục lập chi nhánh và công ty con khác nhau; chỉ lập công ty con mới phải qua thẩm định của Vụ Thẩm định Đầu tư, Bộ Kinh tế (經濟部投資審議司)
 
-Khi công ty nước ngoài lập công ty con tại Đài Loan, về nguyên tắc phải tra cứu trước tên công ty, rồi xin phép đầu tư tại Vụ Thẩm định Đầu tư Bộ Kinh tế. Sau khi được duyệt, chuyển vốn, hoàn tất thẩm định số vốn đầu tư và kiểm tra vốn của kế toán viên, rồi hoàn tất thành lập công ty và đăng ký thuế.
+Khi công ty nước ngoài lập công ty con tại Đài Loan, về nguyên tắc phải tra cứu trước tên công ty, rồi xin phép đầu tư tại Vụ Thẩm định Đầu tư, Bộ Kinh tế. Sau khi được duyệt, chuyển vốn, hoàn tất thẩm định số vốn đầu tư và kiểm tra vốn do kế toán viên công chứng (會計師, CPA) thực hiện, rồi hoàn tất thành lập công ty và đăng ký thuế.
 
-Ngược lại, khi công ty nước ngoài thông thường lập chi nhánh Đài Loan, về nguyên tắc không cần phép đầu tư của Vụ Thẩm định Đầu tư, mà Cục Phát triển Thương mại Bộ Kinh tế xử lý đăng ký chi nhánh và thẩm định vốn liên quan. Vẫn phải hoàn tất tra cứu tên, chuyển vốn lưu động, kiểm tra vốn và đăng ký thuế; thời gian thành lập thường nhanh hơn.
+Ngược lại, khi công ty nước ngoài thông thường lập chi nhánh Đài Loan, về nguyên tắc không cần phép đầu tư của Vụ Thẩm định Đầu tư, mà Vụ Thương mại, Bộ Kinh tế (商業發展署) xử lý đăng ký chi nhánh và thẩm định vốn liên quan. Vẫn phải hoàn tất tra cứu tên, chuyển vốn lưu động, kiểm tra vốn và đăng ký thuế; thời gian thành lập thường nhanh hơn.
 
-Trên đây là đề xuất thiết kế hợp đồng. Chỉ có một biểu mẫu nhất định không bảo đảm giao dịch hợp pháp, cũng không bảo đảm tránh tranh chấp.
+Trên đây là so sánh chung về các hình thức công ty, không phải tư vấn cho một giao dịch cụ thể. Chỉ có một biểu mẫu nhất định không bảo đảm giao dịch hợp pháp, cũng không bảo đảm tránh tranh chấp.
 
 ## 5. Đăng ký công ty và việc kỹ sư làm việc hợp pháp là hai việc khác nhau
 

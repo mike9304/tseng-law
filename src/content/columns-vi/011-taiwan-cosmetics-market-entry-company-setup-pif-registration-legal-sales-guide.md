@@ -1,5 +1,5 @@
 ---
-title: "Tiến vào thị trường mỹ phẩm Đài Loan: lựa chọn chủ thể nhập khẩu, đăng ký sản phẩm, việc lập và lưu giữ PIF cùng quy định về quảng cáo"
+title: "Gia nhập thị trường mỹ phẩm Đài Loan: lựa chọn chủ thể nhập khẩu, đăng ký sản phẩm, việc lập và lưu giữ PIF cùng quy định về quảng cáo"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide"
 lastmod: "2026-07-25"
 date_display: "Ngày 4 tháng 2 năm 2026"
@@ -13,10 +13,10 @@ faq:
   - q: "PIF là gì, và có phải là cùng một thủ tục với đăng ký sản phẩm tại TFDA không?"
     a: "Không phải là cùng một thủ tục. Đăng ký sản phẩm (產品登錄) là một thủ tục riêng biệt được thực hiện trên nền tảng đăng ký sản phẩm mỹ phẩm của Cục Quản lý Thực phẩm và Dược phẩm (衛生福利部食品藥物管理署, TFDA). PIF là hồ sơ tập hợp các tài liệu về chất lượng, tính an toàn, thành phần, công dụng được công bố, phương pháp sản xuất, kết quả thử nghiệm và đánh giá tính an toàn, do cơ sở sản xuất hoặc nhập khẩu mỹ phẩm lập, cập nhật và lưu giữ; bản thân PIF không thuộc chế độ phải nộp trước cho TFDA. Từ ngày 1 tháng 7 năm 2026, về nguyên tắc toàn bộ mỹ phẩm đều thuộc đối tượng áp dụng của chế độ PIF, và ngoại lệ là xà phòng thủ công dạng rắn được sản xuất tại địa điểm sản xuất (製造場所) được miễn đăng ký nhà máy (工廠登記)."
   - q: "Trong quảng cáo mỹ phẩm tại Đài Loan phải lưu ý những biểu đạt nào?"
-    a: "Quảng cáo được phán đoán theo toàn bộ biểu đạt, tức là không chỉ theo câu chữ mà còn theo tên gọi, văn tự, hình ảnh, ký hiệu và âm thanh. Biểu đạt sai sự thật hoặc phóng đại và việc công bố công dụng chữa bệnh đều bị cấm, nên phải đặc biệt thận trọng với các biểu đạt mang tính y tế như trị mụn, kháng viêm hoặc diệt khuẩn. Về tiền phạt hành chính, quảng cáo sai sự thật hoặc phóng đại bị phạt từ 40.000 đến 200.000 Đài tệ mới (新臺幣, TWD), còn việc công bố công dụng chữa bệnh bị phạt từ 600.000 đến 5.000.000 TWD. Bài đăng của những người có sức ảnh hưởng và của những chủ thể tương tự, nếu về thực chất là quảng cáo, cũng phải được xem xét theo cùng một tiêu chuẩn."
+    a: "Quảng cáo được phán đoán theo toàn bộ biểu đạt, tức là không chỉ theo câu chữ mà còn theo tên gọi, chữ viết, hình ảnh, ký hiệu và âm thanh. Biểu đạt sai sự thật hoặc phóng đại và việc công bố công dụng chữa bệnh đều bị cấm, nên phải đặc biệt thận trọng với các biểu đạt mang tính y tế như trị mụn, kháng viêm hoặc diệt khuẩn. Về tiền phạt hành chính, quảng cáo sai sự thật hoặc phóng đại bị phạt từ 40.000 đến 200.000 Đài tệ mới (新臺幣, TWD), còn việc công bố công dụng chữa bệnh bị phạt từ 600.000 đến 5.000.000 TWD. Bài đăng của những người có sức ảnh hưởng và của những chủ thể tương tự, nếu về thực chất là quảng cáo, cũng phải được xem xét theo cùng một tiêu chuẩn."
 ---
 
-# Tiến vào thị trường mỹ phẩm Đài Loan: lựa chọn chủ thể nhập khẩu, đăng ký sản phẩm, việc lập và lưu giữ PIF cùng quy định về quảng cáo
+# Gia nhập thị trường mỹ phẩm Đài Loan: lựa chọn chủ thể nhập khẩu, đăng ký sản phẩm, việc lập và lưu giữ PIF cùng quy định về quảng cáo
 
 ![Tài liệu sản phẩm và việc rà soát quy định cần thiết khi tiến vào thị trường mỹ phẩm Đài Loan](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg)
 
@@ -26,9 +26,9 @@ Các nghĩa vụ được áp dụng có thể khác nhau tùy theo chủng lo�
 
 ![](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/img-01.jpg)
 
-## 1. Hình thức tiến vào thị trường Đài Loan và việc lựa chọn chủ thể nhập khẩu
+## 1. Hình thức gia nhập thị trường Đài Loan và việc lựa chọn chủ thể nhập khẩu
 
-Không bắt buộc phải thành lập. Quý vị cũng có thể giao việc nhập khẩu và bán hàng cho nhà nhập khẩu tại Đài Loan, kể cả trường hợp nhà nhập khẩu đồng thời là đại lý bán hàng. Nếu muốn tự mình vận hành hoạt động kinh doanh tại Đài Loan, quý vị phải lưu ý rằng việc thành lập và đăng ký công ty con (子公司) tại Đài Loan khác với chi nhánh (分公司) của công ty nước ngoài, cơ cấu trách nhiệm và thuế của hai hình thức cũng khác nhau; thời gian cần thiết cho việc chấp thuận đầu tư của người nước ngoài và cho việc đăng ký công ty hoặc chi nhánh cũng thay đổi tùy theo từng vụ việc và tùy việc có phải bổ sung hồ sơ hay không. Trước hết phải xác định mô hình kinh doanh và chủ thể sẽ gánh chịu trách nhiệm với tư cách cơ sở sản xuất hoặc nhập khẩu mỹ phẩm (化粧品製造或輸入業者).
+Thương hiệu nước ngoài không bắt buộc phải thành lập công ty con hay chi nhánh tại Đài Loan. Quý vị cũng có thể giao việc nhập khẩu và bán hàng cho nhà nhập khẩu tại Đài Loan, kể cả trường hợp nhà nhập khẩu đồng thời là đại lý bán hàng. Nếu muốn tự mình vận hành hoạt động kinh doanh tại Đài Loan, quý vị phải lưu ý rằng việc thành lập và đăng ký công ty con (子公司) tại Đài Loan khác với chi nhánh (分公司) của công ty nước ngoài, cơ cấu trách nhiệm và thuế của hai hình thức cũng khác nhau; thời gian cần thiết cho việc chấp thuận đầu tư của người nước ngoài và cho việc đăng ký công ty hoặc chi nhánh cũng thay đổi tùy theo từng vụ việc và tùy việc có phải bổ sung hồ sơ hay không. Trước hết phải xác định mô hình kinh doanh và chủ thể sẽ gánh chịu trách nhiệm với tư cách cơ sở sản xuất hoặc nhập khẩu mỹ phẩm (化粧品製造或輸入業者).
 
 ### Trường hợp giao cho nhà nhập khẩu tại chỗ
 
@@ -42,7 +42,7 @@ Trong hợp đồng, nên quy định cụ thể phạm vi sử dụng quyền s
 
 Công ty con tại Đài Loan và chi nhánh của công ty nước ngoài không phải là cùng một tổ chức. Công ty con là một pháp nhân riêng biệt được thành lập theo pháp luật Đài Loan, trong khi chi nhánh được đăng ký với tư cách một bộ phận của trụ sở chính của công ty nước ngoài. Vì tư cách pháp nhân, trách nhiệm của trụ sở chính, việc xử lý kế toán và thuế, việc chuyển lợi nhuận, quyền đại diện và phương thức kiểm soát nội bộ đều khác nhau, quý vị không nên chọn hình thức tổ chức chỉ dựa trên mức độ kiểm soát hoạt động bán hàng.
 
-Trường hợp cần thực hiện thủ tục đầu tư của người nước ngoài thì phải xác nhận hướng dẫn của cơ quan phụ trách hiện hành là **Cục Thẩm định Đầu tư, Bộ Kinh tế (經濟部投資審議司)**. Thời gian cần cho việc chấp thuận đầu tư, chuyển vốn, đăng ký công ty hoặc chi nhánh, mở tài khoản ngân hàng, đăng ký thuế (稅籍登記) và có được tư cách nhập khẩu sẽ khác nhau tùy theo nhà đầu tư, ngành nghề, hình thức tổ chức, tài liệu nộp và việc có phải bổ sung hồ sơ hay không. Do đó, thay vì ấn định ngày ra mắt sản phẩm trên giả định về một khoảng thời gian cố định, trước hết phải xác nhận từng thủ tục có được áp dụng hay không cùng các điều kiện tiếp nhận hồ sơ mới nhất.
+Trường hợp cần thực hiện thủ tục đầu tư của người nước ngoài thì phải xác nhận hướng dẫn của cơ quan phụ trách hiện hành là **Vụ Thẩm định Đầu tư, Bộ Kinh tế (經濟部投資審議司)**. Thời gian cần cho việc chấp thuận đầu tư, chuyển vốn, đăng ký công ty hoặc chi nhánh, mở tài khoản ngân hàng, đăng ký thuế (稅籍登記) và có được tư cách nhập khẩu sẽ khác nhau tùy theo nhà đầu tư, ngành nghề, hình thức tổ chức, tài liệu nộp và việc có phải bổ sung hồ sơ hay không. Do đó, thay vì ấn định ngày ra mắt sản phẩm trên giả định về một khoảng thời gian cố định, trước hết phải xác nhận từng thủ tục có được áp dụng hay không cùng các điều kiện tiếp nhận hồ sơ mới nhất.
 
 Dù chọn cấu trúc nào thì chủ thể chịu trách nhiệm trung tâm theo quy định pháp luật về mỹ phẩm vẫn là **cơ sở sản xuất hoặc nhập khẩu mỹ phẩm**. Quý vị có thể giao việc sắp xếp tài liệu sản phẩm hoặc việc đánh giá tính an toàn cho chuyên gia bên ngoài, nhưng chỉ riêng việc ủy thác thì không làm chuyển dịch trách nhiệm pháp lý của cơ sở sản xuất hoặc nhập khẩu. Việc phân biệt giữa phân chia công việc theo hợp đồng và chủ thể chịu trách nhiệm theo pháp luật chính là điểm xuất phát khi xem xét cấu trúc tiến vào thị trường.
 
@@ -54,7 +54,7 @@ Không phải là cùng một thủ tục. Đăng ký sản phẩm là một th�
 
 Việc đăng ký sản phẩm mỹ phẩm được thực hiện trên nền tảng đăng ký sản phẩm mỹ phẩm của TFDA. Cơ sở sản xuất hoặc nhập khẩu mỹ phẩm phải hoàn tất đăng ký sản phẩm trước khi cung ứng, bán, tặng, trưng bày công khai hoặc cung cấp cho người tiêu dùng dùng thử sản phẩm đó. Không được chuẩn bị chỉ dựa trên tiêu chí bán có thu tiền; lịch tặng sản phẩm để xúc tiến bán hàng hoặc cung cấp cho người tiêu dùng dùng thử cũng phải được quản lý cùng với thời điểm đăng ký.
 
-Thời hạn hiệu lực của đăng ký sản phẩm là ba năm. Nếu muốn tiếp tục cung ứng thì phải nộp đơn xin gia hạn trong vòng ba tháng trước khi thời hạn hiệu lực kết thúc. Khi các nội dung đã đăng ký như tên sản phẩm, mục đích sử dụng, dạng bào chế, thành phần hay địa điểm sản xuất có thay đổi, cũng phải xác nhận xem có cần thủ tục tương ứng với nội dung thay đổi đó hay không.
+Thời hạn hiệu lực của đăng ký sản phẩm là ba năm. Nếu muốn tiếp tục cung ứng thì phải nộp đơn xin gia hạn trong vòng ba tháng trước khi thời hạn hiệu lực kết thúc. Khi các nội dung đã đăng ký như tên sản phẩm, mục đích sử dụng, dạng sản phẩm (劑型), thành phần hay địa điểm sản xuất có thay đổi, cũng phải xác nhận xem có cần thủ tục tương ứng với nội dung thay đổi đó hay không.
 
 Đăng ký sản phẩm là thủ tục khai báo trên nền tảng các nội dung đăng ký đã được ấn định. Việc hoàn tất đăng ký không có nghĩa là đã xác nhận rằng toàn bộ tài liệu cần cho PIF đã đầy đủ, và cũng không phải là phán đoán rằng nhãn mác hay quảng cáo của sản phẩm là hợp pháp. Lịch đăng ký sản phẩm, việc quản lý PIF và việc rà soát nhãn mác, quảng cáo phải được vận hành như những hạng mục tuân thủ pháp luật riêng biệt.
 
@@ -82,13 +82,13 @@ Việc khai báo thông tin sai sự thật khi đăng ký sản phẩm hoặc g
 
 Việc thu hồi hay tiêu hủy không phải là biện pháp tự động đi kèm với mọi trường hợp tài liệu PIF không đầy đủ. Phải phán đoán một cách phân biệt theo tính an toàn của sản phẩm, nội dung vi phạm, tình hình cải chính và các điều kiện luật định áp dụng cho từng biện pháp. Phải xem xét tách bạch giữa biện pháp áp dụng khi đã xác nhận có vấn đề về tính an toàn và yêu cầu bổ sung tài liệu, đồng thời ứng phó theo thông báo của cơ quan chủ quản và theo điều khoản được áp dụng.
 
-## 3. Quy định về nhãn mác, tuyên truyền và quảng cáo
+## 3. Quy định về nhãn mác, quảng bá và quảng cáo
 
-Quảng cáo được phán đoán theo toàn bộ biểu đạt, tức là không chỉ theo câu chữ mà còn theo tên gọi, văn tự, hình ảnh, ký hiệu và âm thanh. Biểu đạt sai sự thật hoặc phóng đại và việc công bố công dụng chữa bệnh đều bị cấm, nên phải đặc biệt thận trọng với các biểu đạt mang tính y tế như trị mụn, kháng viêm hoặc diệt khuẩn. Về tiền phạt hành chính, quảng cáo sai sự thật hoặc phóng đại bị phạt từ 40.000 đến 200.000 TWD, còn việc công bố công dụng chữa bệnh bị phạt từ 600.000 đến 5.000.000 TWD. Bài đăng của những người có sức ảnh hưởng và của những chủ thể tương tự, nếu về thực chất là quảng cáo, cũng phải được xem xét theo cùng một tiêu chuẩn.
+Quảng cáo được phán đoán theo toàn bộ biểu đạt, tức là không chỉ theo câu chữ mà còn theo tên gọi, chữ viết, hình ảnh, ký hiệu và âm thanh. Biểu đạt sai sự thật hoặc phóng đại và việc công bố công dụng chữa bệnh đều bị cấm, nên phải đặc biệt thận trọng với các biểu đạt mang tính y tế như trị mụn, kháng viêm hoặc diệt khuẩn. Về tiền phạt hành chính, quảng cáo sai sự thật hoặc phóng đại bị phạt từ 40.000 đến 200.000 TWD, còn việc công bố công dụng chữa bệnh bị phạt từ 600.000 đến 5.000.000 TWD. Bài đăng của những người có sức ảnh hưởng và của những chủ thể tương tự, nếu về thực chất là quảng cáo, cũng phải được xem xét theo cùng một tiêu chuẩn.
 
 ### Phán đoán theo toàn bộ biểu đạt chứ không theo từng từ ngữ riêng lẻ
 
-Việc nhãn mác, tuyên truyền hay quảng cáo có sai sự thật, phóng đại hoặc có công bố công dụng chữa bệnh hay không thì không được phán đoán chỉ bằng một từ ngữ nhất định. Phải xem xét đồng thời tên hàng hóa, câu văn, hình ảnh, ký hiệu, âm thanh, ngữ cảnh trước sau và ấn tượng tổng thể mà người tiêu dùng tiếp nhận. Ấn tượng do biểu đạt quảng cáo trung tâm tạo ra không đương nhiên được xóa bỏ chỉ bằng một dòng chú thích giới hạn in chữ nhỏ, vì vậy phải rà soát cả từng câu chữ riêng lẻ lẫn bản quảng cáo hoàn chỉnh.
+Việc nhãn mác, quảng bá hay quảng cáo có sai sự thật, phóng đại hoặc có công bố công dụng chữa bệnh hay không thì không được phán đoán chỉ bằng một từ ngữ nhất định. Phải xem xét đồng thời tên hàng hóa, câu văn, hình ảnh, ký hiệu, âm thanh, ngữ cảnh trước sau và ấn tượng tổng thể mà người tiêu dùng tiếp nhận. Ấn tượng do biểu đạt quảng cáo trung tâm tạo ra không đương nhiên được xóa bỏ chỉ bằng một dòng chú thích giới hạn in chữ nhỏ, vì vậy phải rà soát cả từng câu chữ riêng lẻ lẫn bản quảng cáo hoàn chỉnh.
 
 Chẳng hạn, việc biểu đạt rằng mỹ phẩm trị được mụn, có hiệu quả kháng viêm hoặc có tác dụng diệt khuẩn có thể bị coi là công bố công dụng chữa bệnh. Cũng phải xác nhận cách kết hợp tên bệnh với sản phẩm, hình ảnh trước và sau khi sử dụng, cách dàn dựng gợi liên tưởng đến nhân viên y tế, và ngữ cảnh nối phần giải thích thành phần với hiệu quả điều trị của sản phẩm.
 
@@ -111,7 +111,7 @@ Nếu kiểm tra khâu chuẩn bị bán hàng tại Đài Loan theo trình tự
 5. Rà soát nhãn sản phẩm, trang bán hàng, quảng cáo và bài đăng hợp tác theo tiêu chuẩn toàn bộ biểu đạt.
 6. Vận hành quy trình ứng phó với việc kiểm tra và yêu cầu cải chính, với khiếu nại và thông tin an toàn cùng các biện pháp tiếp theo cần thiết.
 
-Về cấu trúc cơ bản của công ty và chi nhánh, quý vị có thể tham khảo [Cơ bản về thành lập công ty tại Đài Loan](/vi/columns/taiwan-company-establishment-basics); về phạm vi hỗ trợ liên quan, xin xem [Các lĩnh vực mà văn phòng nhận xử lý](/vi/services); còn thông tin về luật sư phụ trách có tại [Đội ngũ quốc tế Hovering](/vi/lawyers).
+Về cấu trúc cơ bản của công ty và chi nhánh, quý vị có thể tham khảo [Cơ bản về thành lập công ty tại Đài Loan](/vi/columns/taiwan-company-establishment-basics); về phạm vi hỗ trợ liên quan, xin xem [Các lĩnh vực dịch vụ](/vi/services); còn thông tin về luật sư phụ trách có tại [Đội ngũ quốc tế Hovering](/vi/lawyers).
 
 ### Tài liệu chính thức
 
@@ -127,7 +127,7 @@ Về cấu trúc cơ bản của công ty và chi nhánh, quý vị có thể th
 - [Phụ lục chính thức của Tiêu chuẩn Nhận định Quảng cáo Mỹ phẩm](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Bộ Y tế và Phúc lợi (衛生福利部) — thông báo về quy định quảng cáo mỹ phẩm](https://www.mohw.gov.tw/cp-4256-48110-1.html)
 - [Invest Taiwan — giới thiệu chung về đầu tư của người nước ngoài](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
-- [Hướng dẫn của Cục Thẩm định Đầu tư, Bộ Kinh tế](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
+- [Hướng dẫn của Vụ Thẩm định Đầu tư, Bộ Kinh tế](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 Bài viết này là tài liệu mang tính giáo dục nhằm giải thích một cách khái quát chế độ liên quan đến việc tiến vào thị trường mỹ phẩm Đài Loan, không phải là ý kiến pháp lý về một sản phẩm hay một quảng cáo cụ thể, và cũng không bảo đảm việc cấp phép, việc đăng ký, khả năng bán hàng hay thời gian xử lý. Xin quý vị xác nhận riêng theo từng vụ việc hình thức tiến vào thị trường, tài liệu sản phẩm, nội dung nhãn mác và quảng cáo cùng thực tiễn mới nhất của cơ quan chủ quản.
 

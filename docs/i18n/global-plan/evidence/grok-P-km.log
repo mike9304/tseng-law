@@ -1,0 +1,5 @@
+[WO start 2026-09-22 05:17:36]
+WO-P-km is done. Report: `docs/i18n/global-plan/evidence/grok-P-km.log`.
+
+Verify: SCAFFOLD grep **0**, **TSC_OK**, 1096 tests passed. Five failures are other new locales still scaffolded (`GUIDANCE_LOCALES` 27 vs 45, duplicate llms notices, root `llms.txt` over 8 KiB) — not `km` rows. All nav labels ≤ 14. No git add/commit/push.
+=== end code=0 2026-09-22 05:41:06 ===

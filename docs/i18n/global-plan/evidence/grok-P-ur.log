@@ -1,0 +1,13 @@
+[WO start 2026-09-22 05:17:28]
+The Urdu guidance pack and UI strings for locale `ur` are in place. Report: `docs/i18n/global-plan/evidence/grok-P-ur.log`.
+
+Every scaffolded `ur` string cloned from Arabic is now natural Urdu for readers in Pakistan, and the `SCAFFOLD(ar)` markers for `ur` are gone. Consultation is stated as English, Chinese (中文), Japanese, and Korean only — including a plain **نہیں** on “Can I get advice in Urdu?” Wei Tseng is marked feminine (`وکیلہ`). Latin names and Traditional-Chinese glosses are unchanged.
+
+**Verify:** SCAFFOLD grep `0`, `TSC_OK`. Vitest: **1096 passed**, 5 failed. None of those five are `ur` rows. They fail because other new locales are still scaffolded:
+
+- answers test locale list is 27 vs 45 in the registry
+- llms notices are not unique across the untranslated locales
+- root `llms.txt` exceeds the 8 KiB budget with all 45 catalogs linked
+
+Nav labels all fit in 14 characters (`ہمارے بارے میں` is exactly 14). No git add/commit/push.
+=== end code=0 2026-09-22 05:33:18 ===

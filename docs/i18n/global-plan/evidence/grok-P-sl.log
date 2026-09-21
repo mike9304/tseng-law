@@ -1,0 +1,9 @@
+[WO start 2026-09-22 05:24:51]
+The Slovenian guidance pack and UI strings for locale `sl` are in place. Scaffolded Czech copy is replaced with natural Slovenian for readers in Slovenia; `SCAFFOLD(cs)` markers for `sl` are gone.
+
+Product facts are unchanged: consultation only in English, Chinese (中文), Japanese, and Korean; no interpreter, reply-time, appointment, free-first-meeting, or result promises; Wei Tseng is referred to in the feminine (`odvetnica`); Latin names and Traditional-Chinese glosses are kept.
+
+Verification: `SCAFFOLD` count for `sl` is **0**, `tsc` is **TSC_OK**. Five vitest failures remain because other new locales are still scaffolded (answers locale list 27 vs 45, shared llms notices, root `llms.txt` 8 KiB cap). None of those failures are on `sl` rows.
+
+The full file list, verbatim verify output, and terminology notes are in `docs/i18n/global-plan/evidence/grok-P-sl.log`. No git add/commit/push.
+=== end code=0 2026-09-22 05:43:03 ===

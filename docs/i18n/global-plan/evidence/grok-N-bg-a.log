@@ -1,0 +1,9 @@
+[WO start 2026-09-22 06:20:44]
+**WO-N-bg-a is done.** Nine Bulgarian columns are in `src/content/columns-bg/`. The checker is `summary PASS 9/9 files`; `[변호사 검수 필요]` is 0.
+
+Report: `docs/i18n/global-plan/evidence/grok-N-bg-a.log`
+
+001 was written and checked first; 002–009 follow the same register (formal **Ви**, „…“, `13 септември 2025 г.`, TWD 500.000, feminine **Адвокатка Wei Tseng (曾雋崴)**). Korea stays a labelled example; there is no **България**. Consultation is not offered in Bulgarian.
+
+The checker had no `bg` locale, so `--lang bg` could not accept remapped `/bg/…` landing links or Bulgarian month names. Minimal wiring was added in `scripts/check-column-translation.mjs` (noted in the log). That is outside the nine-file write list and can be taken over centrally. Numbers WARNs on Korean ordinals (제1항, 제2심, …) are unmatched maps, not missing digits.
+=== end code=0 2026-09-22 06:40:44 ===

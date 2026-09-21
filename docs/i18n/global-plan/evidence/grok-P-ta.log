@@ -1,0 +1,5 @@
+[WO start 2026-09-22 05:17:31]
+Tamil locale `ta` is translated. Report: `docs/i18n/global-plan/evidence/grok-P-ta.log`.
+
+Verify: SCAFFOLD `ta` = 0, TSC_OK. Vitest 1099 passed; the 5 failures are other still-scaffolded locales (shared llms notices, root 8 KiB budget, answers `GUIDANCE_LOCALES` 27 vs 45), not `ta` rows.
+=== end code=0 2026-09-22 05:42:45 ===

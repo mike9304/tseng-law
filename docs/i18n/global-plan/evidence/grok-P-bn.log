@@ -1,0 +1,11 @@
+[WO start 2026-09-22 05:17:25]
+Bengali (`bn`) is no longer a Hindi clone. Every scaffolded `bn` string is now natural Bangladesh Bengali, and the `// SCAFFOLD(hi)` markers for `bn` are gone.
+
+**Quality bar used:** RULEBOOK-FIX plus the German pack as the meaning source. Consultation is still only English, Chinese (中文), Japanese, Korean; Wei Tseng is marked feminine where Bengali marks gender (`তিনি`, `বিনিময় ছাত্রী`); product facts, Latin names, Chinese glosses, URLs and `{name}`/`{firm}` are unchanged.
+
+**Verify:** SCAFFOLD grep for `bn` = **0**, **TSC_OK**, **1096 tests passed**. Five failures are the other still-scaffolded locales (test lists still 27 vs 45; cloned notices not unique; root `llms.txt` over 8 KiB). No `bn`-row failure.
+
+**Nav (all ≤ 14):** মূলপাতা, সেবাসমূহ, পরিচিতি, আইনজীবী, ব্যয়, যোগাযোগ, প্রশ্নোত্তর, গোপনীয়তা, অস্বীকৃতি, প্রবন্ধ. Autonym: **বাংলা**.
+
+Full file list, verbatim verify output, and glossary: `docs/i18n/global-plan/evidence/grok-P-bn.log`. No git add/commit/push.
+=== end code=0 2026-09-22 05:31:31 ===

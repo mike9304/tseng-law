@@ -1,0 +1,9 @@
+[WO start 2026-09-22 06:20:44]
+Nine Lithuanian columns are in `src/content/columns-lt/` (001–009). The checker reports **summary PASS 9/9 files**; attorney-review markers are 0. Log: `docs/i18n/global-plan/evidence/grok-N-lt-a.log`.
+
+Register follows the existing Lithuanian guidance pack: formal **Jūs**, **Advokatė Wei Tseng (曾雋崴)** in bylines and first person, Korea only as a labelled example, consultation languages unchanged.
+
+Key glosses: leidimas dirbti (工作許可), užsieniečio leidimo gyventi pažymėjimas (外僑居留證), išeitinė išmoka pagal Taivano teisę (資遣費), Darbo standartų įstatymas (勞動基準法), trumpalaikis laisvės atėmimas (拘役), bausmės vykdymo atidėjimas (緩刑), priežiūros narys (監察人), akcininkai (股東).
+
+Unresolved: `numbers` WARN `수사미해석` on a few files (checker has no Lithuanian ordinal lexicon for 제N항 / 제N심). Digit counts still match; these are not FAILs. No git add/commit/push.
+=== end code=0 2026-09-22 06:39:21 ===

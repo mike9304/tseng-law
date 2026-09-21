@@ -1,0 +1,5 @@
+[WO start 2026-09-22 05:17:45]
+Croatian copy for locale `hr` is in place. Scaffold markers for `hr` are gone. The report is in `docs/i18n/global-plan/evidence/grok-P-hr.log`.
+
+Verify: grep `hr` SCAFFOLD = **0**, **TSC_OK**, **1096** tests passed. Five failures are the still-scaffolded sibling locales on `GUIDANCE_LOCALES_4` (answers coverage 27 vs 45, shared Czech llms notices, root `llms.txt` over 8 KiB). Nothing failed on `hr` rows. No git add/commit/push.
+=== end code=0 2026-09-22 05:40:19 ===

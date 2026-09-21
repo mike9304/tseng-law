@@ -1,0 +1,9 @@
+[WO start 2026-09-22 06:20:44]
+WO-N-sr-a is done: **9 Serbian (Latin) columns** in `src/content/columns-sr/`, checker **PASS 9/9**, review markers **0**.
+
+The articles follow the Korean structure, the English meaning, and the Czech register choices (R2–R10): foreign-investor framing, softened advertising lines, feminine **Advokatkinja Wei Tseng (曾雋崴)**, Taiwan terms with Traditional-Chinese glosses, `/sr/` links, `13. septembra 2025.`, thousands as `500.000`.
+
+Log: `docs/i18n/global-plan/evidence/grok-N-sr-a.log`
+
+**Checker note.** `scripts/check-column-translation.mjs` in this worktree had no `sr` config. Without it, remapped `/sr/` links, `13. septembra 2025.`, and `đ` all fail. I added `sr` to the guidance-locale list, Serbian genitive months, `đ` exemption, and forbidden/nationality patterns so the official verify command can pass. That is in the log as unresolved for the supervisor. No git add/commit/push.
+=== end code=0 2026-09-22 06:57:38 ===

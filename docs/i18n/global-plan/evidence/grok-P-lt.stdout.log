@@ -1,0 +1,7 @@
+[WO start 2026-09-22 05:24:54]
+Lithuanian `lt` copy is in place. Scaffold markers for this locale are gone; proper names, Chinese glosses, `{name}`/`{firm}`, and the four consultation languages are unchanged.
+
+**Verify:** SCAFFOLD `lt` count **0**, **TSC_OK**, **1096 passed / 5 failed**. The five failures are other still-scaffolded locales (shared cloned notices, answers locale list, root `llms.txt` 8 KiB budget) — none are `lt` rows.
+
+Full report: `docs/i18n/global-plan/evidence/grok-P-lt.log`
+=== end code=0 2026-09-22 05:44:38 ===

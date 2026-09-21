@@ -1,0 +1,16 @@
+[WO start 2026-09-22 06:20:44]
+Tamil columns 001–009 are in `src/content/columns-ta/`. Checker result: **summary PASS 9/9 files**. Review markers: 0.
+
+Verify (verbatim):
+
+```
+       9
+summary  PASS  9/9 files
+       0
+      34
+```
+
+Log: `docs/i18n/global-plan/evidence/grok-N-ta-a.log`
+
+003 still carries a numbers WARN on gazette issues `제644호` / `제477호` / `제236호` (counts match; not a FAIL). No git add/commit/push.
+=== end code=0 2026-09-22 06:53:46 ===

@@ -1,0 +1,7 @@
+[WO start 2026-09-22 06:20:44]
+WO-N-sl-a is done. All **9** Slovenian columns are in `src/content/columns-sl/`, and the checker reports **`summary PASS 9/9 files`**. Markers: **0**.
+
+`date_display` is `13. septembra 2025`; categories match `src/lib/columns.ts` for `sl`; attorney bylines and first-person passages use **Odvetnica Wei Tseng (曾雋崴)**. Korea is only a labelled example; consultation languages stay EN / 中文 / JA / KO.
+
+The verify block and term list are in `docs/i18n/global-plan/evidence/grok-N-sl-a.log`. Numbers WARNs on a few files are Korean lexical items written as words (R11), not missing digits. Nothing was staged or committed.
+=== end code=0 2026-09-22 06:41:53 ===

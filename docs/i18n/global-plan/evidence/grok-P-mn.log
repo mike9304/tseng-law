@@ -1,0 +1,9 @@
+[WO start 2026-09-22 05:17:39]
+The Mongolian (Cyrillic) `mn` pack is in. Every `SCAFFOLD(ru)` string for this locale is replaced; the markers are gone.
+
+The report is at `docs/i18n/global-plan/evidence/grok-P-mn.log`.
+
+**Verify:** SCAFFOLD grep for `mn` = **0**, **TSC_OK**, **1096 passed / 5 failed**. The five failures are other still-scaffolded locales (answers allowlist length, shared template llms notices, root `llms.txt` 8 KiB budget). None fail on `mn` rows.
+
+Consultation is stated as English, Chinese (中文), Japanese, Korean only. The Mongolian FAQ answer to “can I get advice in Mongolian?” is **Үгүй.** Attorney Wei Tseng is named as **эмэгтэй өмгөөлөгч**. Nav labels all fit in 14 characters (`Асуулт хариулт` is exactly 14).
+=== end code=0 2026-09-22 05:38:22 ===

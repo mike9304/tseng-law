@@ -1,0 +1,7 @@
+[WO start 2026-09-22 06:20:44]
+Nine Croatian columns are in `src/content/columns-hr/`. Official check: **summary PASS 9/9 files**, markers 0.
+
+Report: `docs/i18n/global-plan/evidence/grok-N-hr-a.log`.
+
+Checker support for `hr` was added in `scripts/check-column-translation.mjs` so remapped `/hr/` links, `13. rujna 2025.`, and Croatian `đ` can PASS. Guidance pack and other locales were not touched. No git add/commit/push.
+=== end code=0 2026-09-22 06:50:20 ===

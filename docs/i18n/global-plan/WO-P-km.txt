@@ -1,0 +1,32 @@
+WO-P-km — Translate the Khmer guidance pack and UI strings for tseng-law.com (new locale `km`, readers in Cambodia)
+
+Workspace (yours alone): /Users/son7/Projects/tseng-law-new-km-20260922
+Do NOT git add/commit/push/stash/checkout. Do not open .env or customer files. Keep helper scripts inside /Users/son7/Projects/tseng-law-new-km-20260922/.tmp-km/ only.
+node: export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+## What exists
+The locale `km` is already wired (registry, fonts, routing). Every string that still needs translating was cloned from a template locale (`th`) and carries a marker comment `// SCAFFOLD(th)`. Your job: replace every scaffolded `km` string with natural Khmer, then delete the marker comments for `km`. Nothing else may change.
+
+Find your work: `grep -rn "SCAFFOLD" src tests | grep -E "^\S+:[0-9]+:\s*'?km'?:|locale km"` — plus the whole pack object `khmerGuidanceContent` in `src/data/international-guidance-southeast-central.ts` (the marker `// SCAFFOLD(th) locale km` sits above it; the pack has ~365 strings: 10 pages home/services/about/lawyers/pricing/contact/faq/privacy/disclaimer/columns + nav/chrome). Files with `km` blocks:
+- src/data/international-guidance-southeast-central.ts (the pack; set `languageName` to the Khmer autonym)
+- src/data/international-guidance-team.ts (4 blocks: team copy, bios, language names, practice-area names), -offices.ts (2), -answers.ts (1), src/data/international-inquiry-copy.ts (1), src/lib/llms-txt.ts (2: English language name + notices), src/data/multilingual-international-v2.ts (GUIDANCE_HOME_PATHS labels), src/lib/columns.ts (3 column category labels), src/components/ColumnsGrid.tsx (3 tables: 'All' filter, category labels — must be byte-identical to src/lib/columns.ts, read-more label — must be byte-identical to the pack's home.columnsReadMoreLabel), src/components/CinematicOpening.tsx (opening copy), src/components/decorative-video-controls.ts, src/data/team-name.ts, src/lib/public-language-registry.ts (2 blocks: region labels, picker copy).
+- Test fixtures that pin YOUR wording (update them to match the Khmer you write; regexes must match your strings): src/data/__tests__/guidance-disclosure-parity.test.ts (km rows in 15 element tables — each regex must match the corresponding disclosure sentence in your pack), guidance-office-facts-sync.test.ts (Korea/Japan spellings you use), international-guidance-privacy-disclosure.test.ts (hosting-sentence regex), src/components/__tests__/columns-grid-guidance-labels.test.tsx, multilingual-international-v2.test.tsx, column-alternate-expectations.ts (language label), tests/builder-editor/international-guidance.playwright.ts.
+
+## How to translate (read docs/i18n/global-plan/reviews/native/RULEBOOK-FIX.md first — it is the quality standard)
+- Write as a Khmer legal editor for readers in Cambodia would — not a word-for-word rendering of the th template. Meaning reference: the German pack (`germanGuidanceContent` in src/data/international-guidance-western.ts) and the English site copy; both say the same things. Use the natural register, quotation marks, number/date conventions and forms of address of Khmer.
+- Product facts (never alter): consultation ONLY in English, Chinese (中文), Japanese, Korean — say so plainly ("No." to "Can I get advice in Khmer?"); no interpreter, reply-time, appointment, free first meeting, result or guarantee promises; attorney Wei Tseng (曾雋崴) is a woman (feminine forms where Khmer marks gender); keep Latin proper names (Hovering International Law Firm, National Taiwan University, Wei Tseng) and Traditional-Chinese glosses (工作許可, 資遣費, 臺北 …) exactly; keep every URL/email/placeholder like `{name}` `{firm}` unchanged; keep the four-language list in the same order.
+- Chinese glosses: keep them; for Khmer readers add nothing else in Chinese.
+- Constraints enforced by tests: nav labels (`nav.*`) ≤ 14 characters; `menuLabel` must not be the literal "Menu"; lawyers page title/description must equal guidanceTeamCopy title/description; the team bio must keep `TWD 1.57M`, institution names and the other preserved terms byte-identical (see GUIDANCE_BIO_PRESERVED_TERMS in src/data/international-guidance-team.ts); the `feasible-method-only`, `paid-consultation` etc. disclosure elements must exist as sentences (the parity test lists them); the two eyebrow labels (team `label`, offices `label`) are uppercase short nouns in Khmer.
+- No text in any other language may remain: after you finish, `grep -n "SCAFFOLD" <each file>` must show 0 lines for `km`, and no th-language sentence may survive (I diff your strings against the template; identical strings other than URLs, names, numbers and glosses are a failure).
+
+## Verify (run all, paste output into your log)
+cd /Users/son7/Projects/tseng-law-new-km-20260922 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+grep -rn "SCAFFOLD" src tests | grep -cE "^\S+:[0-9]+:\s*'?km'?:|locale km"
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+npx vitest run src/data/__tests__/ src/lib/__tests__/guidance-chrome-language.test.ts src/lib/__tests__/international-guidance-answers.test.ts "src/app/[locale]/__tests__/llms-discovery.test.tsx" src/components/__tests__/columns-grid-guidance-labels.test.tsx src/components/__tests__/multilingual-international-v2.test.tsx --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+git status --short | wc -l
+
+Pass: first grep = 0, TSC_OK, every test passed (tests that fail ONLY because another new locale is still scaffolded are acceptable — name them in the log; tests failing on `km` rows are not).
+
+## Report
+docs/i18n/global-plan/evidence/grok-P-km.log only: files touched, §Verify output verbatim, terminology choices (5–10 key legal terms with the Chinese gloss), anything you could not fit (e.g. a nav label over 14 chars).

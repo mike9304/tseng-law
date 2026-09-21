@@ -1,0 +1,7 @@
+[WO start 2026-09-22 06:19:03]
+The Latvian guidance pack and UI strings are in place. Every `lv` `SCAFFOLD(cs)` marker is gone; the locale now reads as formal Latvian for readers in Latvia (`Jūs`, `advokāte` Wei Tseng, „…“ quotes). Consultation is stated as English, ķīniešu (中文), japāņu, korejiešu only — the FAQ answer to advice in Latvian is **Nē.**
+
+**Verify:** SCAFFOLD `lv` count **0**, **TSC_OK**, **1096 passed / 5 failed**. The five failures are not `lv` rows: the answers suite still lists 27 locales vs 45 in the registry, and `llms.txt` uniqueness/8 KiB checks break because other new locales still share scaffolded notices.
+
+**Nav** all ≤ 14 characters. The columns “All” filter is **Visus** so it stays a substring of `Rādīt visus`. Log: `docs/i18n/global-plan/evidence/grok-P-lv.log`. No git add/commit/push.
+=== end code=0 2026-09-22 06:41:49 ===

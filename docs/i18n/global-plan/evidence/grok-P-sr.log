@@ -1,0 +1,7 @@
+[WO start 2026-09-22 05:17:48]
+Serbian (Latin) `sr` copy is in place: every `SCAFFOLD(cs)` `sr` string is replaced, markers are gone, `languageName` is `Srpski`.
+
+Verify: SCAFFOLD `sr` count **0**, **TSC_OK**. Vitest **1096 passed**; the **5 failures** are other still-scaffolded locales (answers list 27 vs 45; duplicate llms notices; root `llms.txt` over 8 KiB). Every `sr` row passed.
+
+Full report: `docs/i18n/global-plan/evidence/grok-P-sr.log`.
+=== end code=0 2026-09-22 05:54:40 ===

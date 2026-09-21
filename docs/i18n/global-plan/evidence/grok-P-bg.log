@@ -1,0 +1,7 @@
+[WO start 2026-09-22 05:17:43]
+The Bulgarian guidance pack and UI strings are in. Full report: `docs/i18n/global-plan/evidence/grok-P-bg.log`.
+
+Scaffolded `bg` copy cloned from Russian is now natural Bulgarian for readers in Bulgaria (formal **Вие**, quotes **„ “**, cities **Тайпе / Тайджун / Гаосюн / Пиндун**). Consultation stays English, Chinese (中文), Japanese, Korean; Wei Tseng is **адвокатка**; Chinese glosses and Latin names are unchanged.
+
+**Verify:** SCAFFOLD `bg` count **0**, **TSC_OK**, **1096 passed / 5 failed**. The five failures are other still-scaffolded locales (answers locale-count 27 vs 45, duplicate llms notices, root `llms.txt` 8 KiB budget) — none are `bg` rows. Nav labels all fit in 14 characters.
+=== end code=0 2026-09-22 05:37:01 ===

@@ -1,0 +1,9 @@
+[WO start 2026-09-22 05:17:41]
+Slovak `sk` copy is in. Every `SCAFFOLD(cs)` marker for this locale is gone; the guidance pack, team/offices/answers/inquiry, and chrome strings now read as Slovak for readers in Slovakia, not as a Czech calque.
+
+**Verify:** `SCAFFOLD sk` count **0**, **TSC_OK**. Vitest: **1096 passed**, 5 failed — all from other new locales still cloned (answers locale list 27 vs 45, shared llms notices, root `llms.txt` over 8 KiB). No failure was an `sk` row.
+
+**Kept as specified:** consultation only in English, Chinese (中文), Japanese, Korean; Wei Tseng feminine; `TWD 1.57M` and institution names unchanged; all nav labels ≤ 14 characters.
+
+Full file list, verbatim verify output, and glossary: `docs/i18n/global-plan/evidence/grok-P-sk.log`. No git add/commit/push.
+=== end code=0 2026-09-22 05:48:53 ===

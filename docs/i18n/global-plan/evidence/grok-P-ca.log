@@ -1,0 +1,7 @@
+[WO start 2026-09-22 06:19:06]
+Catalan (`ca`) is in place for the guidance pack and UI chrome. Report: `docs/i18n/global-plan/evidence/grok-P-ca.log`.
+
+**Verify:** SCAFFOLD `ca` count **0**, **TSC_OK**, **1096 passed**. Five failures are from other still-scaffolded locales / the 45-locale harness (answers list is 27 vs 45; shared llms notices; root `llms.txt` over 8 KiB). None failed on a `ca` row. The Catalan catalog listed all ten pages.
+
+Register is **vostè**, autonym **Català**, Wei Tseng as **l’advocada**, consultation only in English, Chinese (中文), Japanese, Korean. Nav labels all fit in 14 characters.
+=== end code=0 2026-09-22 06:46:30 ===

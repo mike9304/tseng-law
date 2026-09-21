@@ -1,0 +1,9 @@
+[WO start 2026-09-22 05:17:33]
+The Nepali (`ne`) guidance pack and UI strings are in. Scaffolded Hindi copy is gone; `languageName` is **नेपाली**.
+
+Report: `docs/i18n/global-plan/evidence/grok-P-ne.log`
+
+**Verify:** SCAFFOLD(ne) = 0, TSC_OK, 1099 tests passed. Five failures are from other locales still on their templates (answers list 27 vs 45, duplicate llms.txt notices, root catalog over 8 KiB) — not from `ne` rows. The Nepali llms.txt contract passed.
+
+Consultation is stated as English, Chinese (中文), Japanese, Korean only; the Nepali FAQ answer is **होइन।** Attorney Wei Tseng uses feminine forms. Chinese glosses and `TWD 1.57M` are unchanged. Every nav label is within 14 characters.
+=== end code=0 2026-09-22 05:31:12 ===

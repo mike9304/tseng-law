@@ -15,11 +15,11 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ![Eksempelbillede, der registrerer køretøjets position og sporene på kørebanen på stedet for en trafikulykke](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-Efter en trafikulykke (交通事故) i Taiwan skal De først sikre sikkerheden, foretage anmeldelse og bevisikring og derefter i rækkefølge undersøge kravfristerne, uagtsomheden (過失) og omfanget af et forlig. Det følgende er en almindelig handlingsrækkefølge på grundlag af taiwanske forskrifter og vejledninger fra offentlige myndigheder; konkret ansvar og procedure kan afvige efter omstændighederne i hver ulykke.
+Efter en trafikulykke (交通事故) i Taiwan skal du først sikre sikkerheden, foretage anmeldelse og bevisikring og derefter i rækkefølge undersøge kravfristerne, uagtsomheden (過失) og omfanget af et forlig. Det følgende er en almindelig handlingsrækkefølge på grundlag af taiwanske forskrifter og vejledninger fra offentlige myndigheder; konkret ansvar og procedure kan afvige efter omstændighederne i hver ulykke.
 
 ## Q1. Må man forlade stedet efter ulykken?
 
-Ved ulykker med tilskadekomst eller dødsfald skal føreren straks træffe redningsforanstaltninger (救護措施), underrette politiet og sikre køretøjet samt beviserne på stedet (保全現場). Uformel accept fra modparten eller blot en optagelse gør det ikke muligt at forlade stedet, før de krævede foranstaltninger er afsluttet.
+Ved ulykker med tilskadekomst eller dødsfald skal føreren straks træffe redningsforanstaltninger (救護措施), underrette politiet og sikre køretøjet samt beviserne på stedet (保全現場). Uformel accept fra modparten eller det blot at tage billeder giver ikke ret til at forlade stedet, før de krævede foranstaltninger er afsluttet.
 
 Ved personskadeulykker kan køretøjerne dog, hvis alle parter samtykker, efter mærkning af position og spor flyttes til et sted, der ikke hindrer trafikken. Det erstatter ikke de krævede foranstaltninger som hjælp og anmeldelse.
 
@@ -29,11 +29,11 @@ Artikel 185-4 i straffeloven (刑法) behandler det strafferetlige ansvar for de
 
 ## Q2. Hvilke beviser skal først sikres?
 
-Sikr først den personlige sikkerhed og advarselstegnene; ved tilskadekomst eller redningsbehov ringer De 119, ved en strafbar handling eller en presserende sikkerhedssituation 110 eller 112 (交通事故). Anmeld også trafikulykken til politiet, for så vidt situationen kræver det.
+Sikr først den personlige sikkerhed og advarselstegnene; ved tilskadekomst eller redningsbehov ringer du i Taiwan 119 (ambulance og brandvæsen), ved en strafbar handling eller en akut sikkerhedssituation 110 (politi) eller 112 fra en mobiltelefon (交通事故). Anmeld også trafikulykken til politiet, for så vidt situationen kræver det.
 
-Når sikkerheden er sikret, tag da oversigts- og næroptagelser for at fastholde køretøjets position og beskadigelse, vejmarkering, signaler og vejr. Vidnekontakter, anmodning om sikring af CCTV (監視器影像) og dashcam (行車紀錄器), oplysninger om parter, køretøjer og forsikringer samt lægejournaler (病歷) bør De ikke udelade. Private optagelser er nyttige, men erstatter ved ulykker med tilskadekomst eller dødsfald ikke den krævede politibehandling.
+Når sikkerheden er sikret, tag da oversigts- og næroptagelser for at fastholde køretøjets position og beskadigelse, vejmarkering, signaler og vejr. Vidnekontakter, anmodning om sikring af CCTV (監視器影像) og dashcam (行車紀錄器), oplysninger om parter, køretøjer og forsikringer samt lægejournaler (病歷) bør du ikke udelade. Private optagelser er nyttige, men erstatter ved ulykker med tilskadekomst eller dødsfald ikke den krævede politibehandling.
 
-Hvad politidokumenterne angår, kan De på ulykkesstedet modtage registrerings- og kontaktblanketten for parterne i trafikulykken (道路交通事故當事人登記聯單). Efter 7 dage fra ulykkesdagen kan situationsskitse og ulykkesfotos (現場圖 / 現場照片) ansøges; efter 30 dage fra ulykkesdagen kan den foreløbige analysebedømmelse af vejtrafikulykken (道路交通事故初步分析研判表) ansøges. Udstedelsestidspunkt og ansøgningsbetingelser undersøger De på ny hos den kompetente politimyndighed.
+Hvad politidokumenterne angår, kan du på ulykkesstedet modtage registrerings- og kontaktblanketten for parterne i trafikulykken (道路交通事故當事人登記聯單). Efter 7 dage fra ulykkesdagen kan situationsskitse og ulykkesfotos (現場圖 / 現場照片) ansøges; efter 30 dage fra ulykkesdagen kan den foreløbige analysebedømmelse af vejtrafikulykken (道路交通事故初步分析研判表) ansøges. Udstedelsestidspunkt og ansøgningsbetingelser bør du undersøge på ny hos den kompetente politimyndighed.
 
 ## Q3. Hvilke krav og frister skal undersøges ved tilskadekomst?
 
@@ -135,17 +135,17 @@ Kvitteringer, takstoptegnelser, ruteoptegnelser og behandlingsdokumenter er muli
 - [Dom fra byretten i Tainan (臺南) om transportudgifter til behandling](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
 
 
-## Q11. Hvordan bevises indtægtstabet i behandlings- og genopretningsperioden?
+## Q11. Hvordan bevises indtægtstabet i behandlings- og rekonvalescensperioden?
 
-Indtægtstab skal bevises ved dokumenter for, at der på grund af ulykkesrelateret tilskadekomst i genopretningsperioden (收入損失) helt eller delvis ikke kunne arbejdes, og at indtægten derved faktisk er nedsat. Attest eller hvileanbefaling er et vigtigt udgangspunkt, gør dog ikke alene kravet anerkendt.
+Indtægtstab skal bevises ved dokumenter for, at der på grund af ulykkesrelateret tilskadekomst i rekonvalescensperioden (收入損失) helt eller delvis ikke kunne arbejdes, og at indtægten derved faktisk er nedsat. Attest eller hvileanbefaling er et vigtigt udgangspunkt, gør dog ikke alene kravet anerkendt.
 
 Lægejournaler, fremmøde- eller fraværsoptegnelser, løn- og skattedokumenter samt arbejdsgiverens bekræftelse bør ordnes sammen. Selvstændige kan indgive dokumenter, der passer til deres virksomhedsform, såsom omsætningsdata, forretningsoptegnelser og selvangivelser.
 
-Omstændigheden fortsat arbejde eller uændret udbetalt løn vedrører bedømmelsen af indtægtstabet i genopretningsperioden, afgør dog ikke automatisk spørgsmålet om skade på grund af nedsættelse af arbejdsevnen. Denne omstændighed er heller ikke et selvstændigt grundlag til bedømmelse af den skade. Skaden på grund af nedsættelse af arbejdsevnen undersøges særskilt i Q12.
+Omstændigheden fortsat arbejde eller uændret udbetalt løn vedrører bedømmelsen af indtægtstabet i rekonvalescensperioden, afgør dog ikke automatisk spørgsmålet om skade på grund af nedsættelse af arbejdsevnen. Denne omstændighed er heller ikke et selvstændigt grundlag til bedømmelse af den skade. Skaden på grund af nedsættelse af arbejdsevnen undersøges særskilt i Q12.
 
 ## Q12. Hvordan bevises skaden på grund af nedsættelse af arbejdsevnen?
 
-Skaden på grund af nedsættelse af arbejdsevnen adskiller sig fra den i Q11 behandlede, i genopretningsperioden faktisk nedsatte indtægt. Ifølge artikel 193 og 216 i civilloven (民法) betragtes årsagssammenhæng med ulykken, vedvarende funktionsforstyrrelse (持續功能障礙), den skadelidtes erhverv og evner, sædvanligt forventelig indtægt samt grundlag og bevis for den arbejdsdygtige tid under ét.
+Skaden på grund af nedsættelse af arbejdsevnen adskiller sig fra den i Q11 behandlede, i rekonvalescensperioden faktisk nedsatte indtægt. Ifølge artikel 193 og 216 i civilloven (民法) betragtes årsagssammenhæng med ulykken, vedvarende funktionsforstyrrelse (持續功能障礙), den skadelidtes erhverv og evner, sædvanligt forventelig indtægt samt grundlag og bevis for den arbejdsdygtige tid under ét.
 
 At den nuværende løn forbliver uændret, udelukker ikke automatisk kravet. Omvendt fastlægges skadesbeløbet heller ikke mekanisk alene efter invaliditetsprocent eller nuværende løn.
 
@@ -171,11 +171,11 @@ Fastlæggelsen af de civilretlige kravsmodparter og det strafferetlige ansvar sk
 
 ## Q15. Hvilke ydelser og dækninger i motorkøretøjsforsikringen skal undersøges?
 
-Forsikringspligten ifølge artikel 6 i loven om obligatorisk ansvarsforsikring for motorkøretøjer (強制汽車責任保險法) rammer i princippet køretøjets ejer og i bestemte tilfælde også bruger eller forvalter af køretøjet. Dette system indretter en uagtsomhedsuafhængig ydelsesstruktur (無過失給付制度) for personer, der er kommet til skade eller er afgået ved døden ved motorkøretøjsulykker; den lovbestemte kreds af passagerer eller af en 3. person (第三人) uden for køretøjet skal undersøges.
+Forsikringspligten ifølge artikel 6 i loven om obligatorisk ansvarsforsikring for motorkøretøjer (強制汽車責任保險法) rammer i princippet køretøjets ejer og i bestemte tilfælde også bruger eller forvalter af køretøjet. Dette system indretter en uagtsomhedsuafhængig ydelsesstruktur (無過失給付制度) for personer, der er kommet til skade eller er afgået ved døden ved motorkøretøjsulykker; den lovbestemte kreds af passagerer eller af en tredjemand (第三人) uden for køretøjet skal undersøges.
 
 Ved eneulykker med 1 køretøj er dets fører som regel ikke ydelsesmodtager af den obligatoriske forsikring for det køretøj. Ved ulykker med flere køretøjer kan føreren dog kræve ydelser hos den obligatoriske forsikringsgiver for et andet involveret køretøj.
 
-Den 2026-05-29 ændrede ydelsesnorm (強制汽車責任保險給付標準) gælder for ulykker fra 2026-07-01. Loftet for nødvendige passende behandlingsudgifter ved tilskadekomst udgør TWD 200.000, invaliditetsydelser (失能) efter de lovbestemte 15 trin TWD 80.000–3.000.000, dødsfaldsydelsen TWD 3.000.000, og maksimum af dødsfald, invaliditet og behandlingsudgifter pr. 1 tilskadekommen person og 1 ulykke udgør TWD 3.200.000. For tidligere ulykker kan den tidligere norm gælde.
+Ydelsesnormen (強制汽車責任保險給付標準), der blev ændret 2026-05-29, gælder for ulykker fra den 1. juli 2026. Loftet for nødvendige passende behandlingsudgifter ved tilskadekomst udgør TWD 200.000, invaliditetsydelser (失能) efter de lovbestemte 15 trin TWD 80.000–3.000.000, dødsfaldsydelsen TWD 3.000.000, og maksimum af dødsfald, invaliditet og behandlingsudgifter pr. 1 tilskadekommen person og 1 ulykke udgør TWD 3.200.000. For tidligere ulykker kan den tidligere norm gælde.
 
 Ansvarsforsikring over for tredjemand (第三人責任險), førerens ulykkesforsikring (駕駛人傷害險) og kaskoforsikring (車體損失險) er kontraktlige valgprodukter. Den faktiske dækning afviger efter forsikret, loft, selvrisiko (自負額), undtagelse, uagtsomhed og øvrige vilkår i policen; forsikringsbevis og vilkår skal undersøges et for et.
 
@@ -184,11 +184,11 @@ Ansvarsforsikring over for tredjemand (第三人責任險), førerens ulykkesfor
 - [Civilloven artikel 193](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Civilloven artikel 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Civilloven artikel 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Dom fra Taiwans appelret år 109, sag 上易字 nummer 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [Dom fra Taiwans appelret år 109, sag 上易字 nummer 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Dom fra Taiwans appelret, år 109 (2020), sag 上易字 nr. 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Dom fra Taiwans appelret, år 109 (2020), sag 上易字 nr. 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Hoffmann-nutidsværdiberegneren fra Justitsyuanen](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Civilloven artikel 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Dom fra byretten i Taoyuan år 112, sag 壢簡字 nummer 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Dom fra byretten i Taoyuan, år 112 (2023), sag 壢簡字 nr. 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Civilloven artikel 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Straffeloven for Republikken Kina artikel 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Lov om obligatorisk ansvarsforsikring for motorkøretøjer](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
@@ -223,7 +223,7 @@ Derfor tilråder jeg ikke at overlade hele processen til forsikringsselskabet.
 
 ​
 
-Overlader De det til forsikringsselskabet, skal De løbende følge behandlingsforløbet og omhyggeligt undersøge dokumenterne fra begge sider.
+Overlader du det til forsikringsselskabet, bør du løbende følge behandlingsforløbet og omhyggeligt gennemgå dokumenterne fra begge sider.
 
 ​
 
@@ -231,11 +231,11 @@ Overlader De det til forsikringsselskabet, skal De løbende følge behandlingsfo
 
 ​
 
-Q17. Hvad er den forårsagendes strafferetlige ansvar for uagtsom legemsbeskadigelse?
+Q17. Hvilket strafferetligt ansvar har skadevolderen for uagtsom legemsbeskadigelse?
 
 ​
 
-Ved uagtsom legemsbeskadigelse (過失傷害) idømmer retterne for tiden omkring 3 måneders frihedsstraf.
+Ved uagtsom legemsbeskadigelse (過失傷害) er der i nogle afgørelser idømt omkring 3 måneders frihedsstraf; der findes intet typisk eller garanteret udfald.
 
 ​
 
@@ -247,7 +247,7 @@ Ved omregning til bøde fastsætter artikel 41 stk. 1 i straffeloven (刑法) om
 
 ​
 
-Uagtsom grov legemsbeskadigelse straffes sædvanligvis med 4 måneder, uagtsomt forvoldt død (過失致死) sædvanligvis med 6 måneders frihedsstraf.
+I nogle afgørelser er uagtsom grov legemsbeskadigelse straffet med omkring 4 måneder og uagtsomt forvoldt død (過失致死) med omkring 6 måneders frihedsstraf; heller ikke her er der et typisk eller garanteret udfald.
 
 ​
 
@@ -267,7 +267,7 @@ Uagtsomt forvoldt død tillader ikke frafald af klagen; indgår man dog forlig m
 
 ​
 
-Der kan være betinget strafudsættelse (緩刑), således at frihedsberøvelse ikke skal udstås.
+I nogle sager kan der idømmes betinget strafudsættelse (緩刑), så frihedsstraffen ikke skal udstås; det er ikke et løfte om et bestemt udfald.
 
 ​
 
@@ -299,7 +299,7 @@ Q20. Hvordan finder man en advokat til trafikulykker?
 
 ​
 
-Trafikulykker er meget hyppige sager; en almindelig processadvokat kan efter nogle års praksiserfaring behandle sager om trafikulykker.
+Trafikulykker er meget almindelige sager; en almindelig procesadvokat kan efter nogle års erfaring behandle sager om trafikulykker.
 
 ​
 
@@ -307,7 +307,7 @@ Afgørende er da advokatens omhu og oprigtighed.
 
 ​
 
-Vigtigt er, at advokaten omhyggeligt undersøger alle kravposter i sagen og påser, at De modtager den størst mulige erstatning.
+Vigtigt er, at advokaten omhyggeligt gennemgår alle kravposter i sagen og forklarer, hvad der kan kræves på det foreliggende bevisgrundlag.
 
 ​
 
@@ -315,7 +315,7 @@ Desuden skal advokaten klart redegøre for partens situation og klart meddele de
 
 ​
 
-Forsigtighed er påkrævet overfor advokater, der oppuster sagen, fraråder forlig og vil stride civilt og strafferetligt til enden, alene med henblik på mandatet.
+Forsigtighed er påkrævet over for advokater, der oppuster sagen, fraråder forlig og vil stride civilt og strafferetligt til enden, alene med henblik på mandatet.
 
 ​
 
@@ -323,7 +323,7 @@ Forsigtighed er påkrævet overfor advokater, der oppuster sagen, fraråder forl
 
 ​
 
-Hermed afslutter jeg spørgsmålene og svarene om trafikulykker. Jeg håber, at de hjælper Dem.
+Hermed afslutter jeg spørgsmålene og svarene om trafikulykker. Jeg håber, at de er til hjælp.
 
 ​
 
@@ -335,11 +335,11 @@ Efter behandling af mange trafikulykker ønsker jeg at nævne 1 vigtigt punkt.
 
 ​
 
-Ved den skadelidtes tilskadekomst eller dødsfald lider de selv eller familien legemlig og sjælelig pine.
+Ved den skadelidtes tilskadekomst eller dødsfald lider den skadelidte selv eller familien fysisk og psykisk.
 
 ​
 
-Mange forårsagere bekymrer sig hverken om telefonisk forespørgsel om tilstanden eller om sygebesøg og tænker, at forsikringsselskabet vil ordne alt, så de selv udebliver. Da føles hverken anger eller alvor.
+Mange skadevoldere ringer ikke og hører til tilstanden, besøger ikke den tilskadekomne og regner med, at forsikringsselskabet ordner alt, mens de selv holder sig væk. Da føles hverken anger eller alvor.
 
 ​
 
@@ -359,11 +359,11 @@ Derfor må dette punkt på ingen måde overses; det er tilrådeligt at drøfte s
 
 ​
 
-Hvis De har andre spørgsmål, så efterlad en kommentar.
+Har du flere spørgsmål, kan du sende en anmodning via kontaktformularen; der loves ikke svar med det samme.
 
 ​
 
-Jeg var WEI, taiwansk advokat (曾雋崴).
+Wei Tseng (曾雋崴), advokat i Taiwan.
 
 ---
 

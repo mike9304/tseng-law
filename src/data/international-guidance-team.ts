@@ -632,16 +632,16 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'VORES TEAM',
     title: 'Hoverings internationale team',
     description:
-      'Profiler for Hoverings advokater, operative ledelse og tilknyttede revision.',
+      'Profiler for Hoverings advokater, den operative ledelse og det tilknyttede revisionskontor.',
     representativeTitle: 'Ledende advokat',
     teamTitle: 'Advokater og medarbejdere',
-    partnerTitle: 'Tilknyttet revision',
+    partnerTitle: 'Tilknyttet revisionskontor',
     introLabel: 'Præsentation',
     educationLabel: 'Uddannelse',
     experienceLabel: 'Erfaring',
     photoAltPrefix: 'Foto',
     workingLanguagesLabel: 'Arbejdssprog',
-    fullProfileLabel: 'Fuld profil (English)',
+    fullProfileLabel: 'Fuld profil (på engelsk)',
     keyFactsHeading: 'Advokat Wei Tseng — Kerneoplysninger',
     qualificationLabel: 'Bevilling og kontor',
     qualificationSentence:
@@ -2282,7 +2282,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kontoret behandler virksomheds- og individuelle sager i Taiwan på engelsk, japansk, koreansk og kinesisk.',
-        'Hun repræsenterede en koreansk studerende i et erstatningskrav efter en skade i et fitnesscenter og opnåede en dom i første instans på TWD 1.57M.',
+        'Hun repræsenterede en koreansk studerende i et erstatningskrav efter en skade i et fitnesscenter og fik i første instans en dom på TWD 1.57M (1,57 mio. TWD).',
       ],
       education: [
         'Kandidat (M.S.), Institute of Finance, National Taiwan University',

@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Har De oplevet tiden med de traditionelle frisørsaloner (理髮廳) i Taiwans tidlige år?
+Har du oplevet tiden med de traditionelle frisørsaloner (理髮廳) i Taiwans tidlige år?
 
 Måden, hvorpå håret blev vasket i de saloner, var meget særegen.
 
@@ -29,13 +29,13 @@ Det lignede stærkt den vietnamesiske hårvask i dag.
 
 Og sådanne frisørsaloner i taiwansk stil forbliver for mange mennesker i Taiwan en særpræget kulturel erindring.
 
-(Afslører jeg dermed uforvarende min alder?)
+(Det røber nok min alder.)
 
 ​
 
 Hvordan det end forholder sig, når der tales om massage (按摩),
 
-findes der i Taiwan ligeledes talrige massagestræder.
+findes der i Taiwan også mange massagestrøg.
 
 Massageindretninger af enhver art står der side om side.
 
@@ -81,7 +81,7 @@ Der blev eksempelvis spurgt, om den skrevne regel, der kun tillod personer med s
 
 og der blev tvivlet på, om denne regel virkelig havde bidraget til beskyttelsen af arbejdet og eksistensen for personer med synshandicap.
 
-Til sidst erklærede de store dommere (大法官) bestemmelsen, der kun tillod personer med synshandicap at udøve massageerhvervet, for grundlovsstridig (違憲).
+Til sidst erklærede forfatningsdomstolens dommere (大法官) bestemmelsen, der kun tillod personer med synshandicap at udøve massageerhvervet, for grundlovsstridig (違憲).
 
 ​
 
@@ -119,10 +119,10 @@ Hvad der oprindeligt kun var modtagelse af massage med henblik på lempelse af s
 
 kan blive et traume for livet, hvis man udsættes for seksuel chikane.
 
-Hvis De under en massage i Taiwan mærker ubehag eller noget fremmed,
+Mærker du under en massage i Taiwan ubehag eller noget upassende,
 
-meddeler De det straks eller beder om standsning, så De beskytter Dem selv.
+så sig det straks, eller bed om at få behandlingen standset, så du beskytter dig selv.
 
-Hvis De mener at have været udsat for seksuel chikane,
+Mener du at have været udsat for seksuel chikane,
 
-går De med en betroet ven eller med en advokat fra Taiwan (律師) på politistationen for at anmelde det.
+så tag en person, du har tillid til, eller en advokat i Taiwan (律師) med på politistationen og anmeld det.

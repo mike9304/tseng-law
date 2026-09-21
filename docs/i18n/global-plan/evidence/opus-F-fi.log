@@ -1,0 +1,305 @@
+# WO-F-fi — Finnish fix lane report (Opus 5)
+Date: 2026-09-21 · Workspace: /Users/son7/Projects/tseng-law-fix-r-20260921
+Scope: src/content/columns-fi/001–018, guidance pack (nordic/team/answers/inquiry-copy `fi` only).
+No git add/commit/push. 22 tracked files modified, 0 test files changed.
+
+## Rows applied — fi-a.md
+a#1  applied — inquiry `consultationNotice` + guidance contact items[1]: added "vain".
+a#2  applied (supervisor variant) — "ei rinnastettavissa toisten valtioiden instituutteihin"
+     → "…muiden valtioiden vastaaviin järjestelyihin" (no reader-country named, per R2d).
+a#3  applied (sweep) — yhtymäsuhde → työsuhde; 0 instances of "yhtymä*" remain anywhere.
+a#4  applied — "Älkää siksi perustako toimea…" → "Älkää siksi tehkö todellisessa asiassa päätöksiä
+     pelkästään artikkelin perusteella."
+a#5  applied — team bio: "…sai päämiehelleen ensimmäisen asteen tuomion, jossa korvaukseksi
+     määrättiin 1,57 miljoonaa TWD." (fact kept, meaning fixed, `1.57M` removed).
+a#6/a#7 verified — labels already `TIIMIMME` / `TOIMISTOT` (uppercase kept: the surface renders
+     an uppercase eyebrow, same as every other locale).
+a#8  applied — "Täysi profiili (English)" → "Koko profiili (englanniksi)".
+a#9  applied — "mielivaltaisena 12 kuukauden jaksona" → "minä tahansa 12 kuukauden jaksona".
+a#10 applied — 001 §1 and §5 now carry the R2b country-specific note (no reader country named).
+a#11 applied — aresti → "lyhyt vapaudenmenetysrangaistus (拘役)" (002, both art. 9 and art. 90).
+a#12 applied — "Olin WEI, taiwanilainen asianajaja (曾雋崴)." → "Wei Tseng (曾雋崴), asianajaja Taiwanissa."
+a#13 applied — "suurimman mahdollisen korvauksen" → "…siinä laajuudessa kuin tosiseikat ja todisteet
+     sitä tukevat".
+a#14 applied — 3/4/6 kk sentences → "joissakin tuomioissa on määrätty…; tyypillistä tai etukäteen
+     taattua seuraamusta ei ole." (digits kept).
+a#15 applied — 緩刑 → "Ehdollinen vankeusrangaistus (緩刑) voi joissakin tapauksissa tulla kyseeseen;
+     tämä ei ole lupaus."
+a#16 applied — "Silloinkin kun korealainen emoyhtiö…" → "Kun ulkomainen emoyhtiö — esimerkiksi
+     korealainen — …; myös lähtömaan kirjanpito ja verotus…".
+a#17 skipped — per ACCEPTED (mechanical link rewrite, out of this lane).
+a#18 applied — "Kysykää tietoja Korean pääpankistanne" → "Kysykää … siitä pankista, josta varat
+     lähtevät." (Korea stays only in the section's own label). 005 Q2 also generalised.
+a#19 applied — "Voiko yhtiö palkata Korean kansalaisuuden omaavia henkilöitä?" → "…ulkomaalaisia
+     työntekijöiksi?"
+a#20 applied — 007: "perheissä, jotka kuten Korea (韓國) ja Taiwan (臺灣)…" → "…jotka liittyvät 2 tai
+     useampaan valtioon tai alueeseen — esimerkiksi Taiwaniin (臺灣) ja johonkin toiseen valtioon —";
+     §10 "lapsen on asuttava Koreassa" → "lapsi asuu Taiwanin ulkopuolella".
+a#21 applied — 008 FAQ + body and 009: "Toisin kuin Koreassa" → "Toisin kuin joissakin muissa maissa
+     — Korea on yksi esimerkki —" / "eräiden muiden maiden, esimerkiksi Korean, järjestelmästä".
+a#22 applied — "saada korkean irtisanomiskorvauksen" → "selvittää, oliko irtisanomiskorvaus lain
+     mukaan maksettava".
+a#23 skipped — per ACCEPTED (frontmatter `url`).
+a#24 applied (sweep) — työryhmä → oikeudenala, 12 instances across the guidance pack.
+a#25 applied (sweep) — seurata → avustaa, 6 instances (home intro, "Mitä teemme", services §1,
+     criminal, IP, about, answers.lawyers).
+a#26 applied — suoritus (Leistung) → neuvonta/palvelu/korvaus where it meant a service or an
+     insurance benefit; 003 suoritusnormi → korvausnormi, suoritukset → korvaukset (9 instances).
+a#27 applied — Sivuhakemisto → Valikko.
+a#28 applied — nav: Yhteys→Yhteystiedot, Kulut→Palkkiot, Kysymykset→Usein kysyttyä (all ≤14 chars,
+     nav-length test still green); CTA/heading → "Lähettäkää yhteydenottopyyntö"; every in-text
+     reference to those pages relabelled.
+a#29 applied — "Työalaan kuuluu seuraavat kuusi ryhmää." → "Työalaamme kuuluvat seuraavat kuusi
+     oikeudenalaa."
+a#30 applied — "Voimmeko ottaa asian, riippuu…" → "Se, voimmeko ottaa asian vastaan, riippuu…"
+a#31 applied — "Lähettäkää yhteenvedon" → "Lähettäkää yhteenveto".
+a#32 applied (sweep) — «…» and »…« → ”…”: 22 in 015, 4 in 018, 3 in 005, 2 in 004/014/016/017,
+     plus 6 in the guidance pack. 0 guillemets remain in fi content.
+a#33 applied — 未成年子女權利義務之行使或負擔 → "alaikäisten lasten huolto (…)" in the guidance pack,
+     007 FAQ + §7 and 016 (gloss kept; 007 §8 keeps the explanatory paragraph, reworded).
+a#34 applied — osakaskirjanpito/kumppanitilintarkastus → "yhteistyökumppanina toimiva tilitoimisto"
+     (description, partnerTitle, lawyers.description, answers.lawyers).
+a#35 applied — "ei-julkisessa objektivarastossa" → "ei-julkisessa tallennustilassa".
+a#36 applied — "hätäkanavaa" → "päivystystä".
+a#37 applied — "Mikään neljästä kielestä ei ole käyttökelpoinen" → "En osaa mitään neljästä kielestä".
+a#38 applied — "Ennakolta asetettu luku ei näyttäisi kuluja" → "Etukäteen ilmoitettu summa ei kertoisi,
+     mitä kulut teidän asiassanne olisivat."
+a#39 applied — "kaksinkertaisella oikeuden ja rahoituksen polulla" → "Oikeustieteen ja rahoituksen
+     kaksoistutkinto (B.A.), National Chengchi University".
+a#40 applied — English job titles dropped from every role line; `Paralegal` → `Lakimiesavustaja`,
+     `Osakaskirjanpitäjä (Partner CPA)` → `Osakkaana toimiva tilintarkastaja`.
+a#41 applied — "Vastaamme tutkiaksemme…" → "Otamme yhteyttä selvittääksemme, onko käyttökelpoista
+     viestintätapaa olemassa" (guidance contact §1, faq q3, inquiry methodConfirmationNotice).
+a#42 applied (sweep) — partitive month names: 001 (×4), 004 (×5), 007 (×2), 010, 011 (×3), 014 (×6),
+     015, 016. 0 nominative "N. kuukausi YYYY" forms remain.
+a#43 SKIPPED (checker) — see "Not applied" below.
+a#44 applied — "(常設機構, PE)" → "(常設機構)" in 001 and 004 (incl. the §6 heading).
+a#45 applied — 公開發行公司 → "julkisen osakeannin tehnyt yhtiö" (002 ×3); 018 "ei-julkisesti
+     liikkeeseen laskeva yhtiö" → "yhtiö, joka ei ole tehnyt julkista osakeantia".
+a#46 applied — typo "Polisiasiakirjoista" fixed; Te/Teidän/Teillä/Teitä lowercased everywhere
+     (003 ×6, 012 ×7, 013 ×10, 015 ×5). 0 capitalised te-forms remain in columns-fi.
+a#47 applied — "pelkkä tallenne" → "pelkät valokuvat eivät oikeuta poistumaan paikalta".
+a#48 applied — ISO dates in 003 → "29. toukokuuta 2026" / "1. heinäkuuta 2026"; suoritusnormi →
+     korvausnormi (sentence recast so the paragraph does not start with a digit + period, which
+     markdown would turn into a list item and break the block count).
+a#49 SKIPPED (checker) — see "Not applied".
+a#50 applied — "3. henkilöstä (第三人)" → "kolmannesta henkilöstä (第三人)"; 004 "3. (第三人)" →
+     "kolmas osapuoli (第三人)" (7 instances) and "3. valtiosta (第三國)" → "kolmannesta valtiosta".
+a#51 applied — "jättäkää kommentti" → "voitte lähettää kysymyksen yhteydenottolomakkeella; välitöntä
+     vastausta ei luvata." (no new link: the links rule compares hrefs with the source).
+a#52 applied — "Kiinan tasavallan rikoslaki" → "Taiwanin rikoslaki (中華民國刑法)" (4 source entries).
+a#53 applied — "alentaa tai antaa anteeksi korvauksen" → "alentaa korvausta tai evätä sen";
+     007 "antaa anteeksi jakosumman" → "sovitella jaettavaa määrää tai evätä jaon".
+a#54 applied in part — "2. asteen"/"1. asteen" → "2. oikeusasteen"/"1. oikeusasteen" in 003
+     (word forms rejected by the checker, see "Not applied"); in 010 the full word form
+     "ensimmäinen oikeusaste" was possible and is used (13 instances).
+a#55 applied — "(Q&A)" removed from 005 and 013; 0 "Q&A" remain.
+a#56 applied — "voitte ottaa meihin yhteyttä" → "Voitte lähettää kysymyksen yhteydenottolomakkeella;
+     välitöntä vastausta ei luvata."
+a#57 applied — "suurtuomarit (大法官)" → "perustuslakituomioistuimen suurtuomarit (大法官)".
+a#58 applied — "Vastaavasti Koreassa…" → "Vertailun vuoksi: Koreassa…".
+a#59 applied — hätäelatus → "elatus avioeron jälkeen (贍養費)" (007, both occurrences).
+a#60 applied — 008 title/H1 "…todella vaikea saada??" → "Irtisanomiskorvaus (資遣費) Taiwanissa:
+     milloin se maksetaan ja milloin ei".
+a#61 applied — "Hyvää päivää, olen Wei Tseng…" → "Olen Wei Tseng (曾雋崴), asianajaja Taiwanissa."
+a#62 applied — „…“ → ”…” (008, 013). 0 low-9 quotes remain.
+a#63 applied — "''**ajankohta**''" → "**ajankohta**".
+a#64 applied — "muotoilla yhtiön osakkeenomistajarakennetta" → "…osakkeenomistajarakenteessa".
+a#65 applied — "vahvistaneet työn vastaanottamisen" → "vahvistaneet, että toimisto ottaa
+     toimeksiannon vastaan".
+
+## Rows applied — fi-b.md
+b#1  applied (sweep) — yhtiömies* → osakkeenomistaja* (018, 8 instances incl. "2 yhtiömiestä").
+b#2  applied — 監察人 → "yhtiön valvoja (監察人)" (018 ×2); tilintarkastaja left only for 會計師.
+b#3  applied — "100 työntekijää työvakuutuksessa" → "…Taiwanin työntekijävakuutuksessa (勞工保險)";
+     009 "työvakuutukseen (勞保)" → "työntekijävakuutukseen (勞保)".
+b#4  applied — "astuu globaalisti" → "astuu yleisseuraantona".
+b#5  applied — "Suoritukset, … eläkesuoritus (退休金)" → "Etuudet, … eläke-etuus (退休金)".
+b#6  applied (sweep) — sopimuspalkkio → allekirjoitusbonus (7 instances, 014);
+     ennakkosuoritus → ennakkomaksu (11 instances) — 預付性給付 is a payment made in advance.
+b#7  applied — 外國人投資條例 → "Ulkomaisten sijoitusten laki" (013) / "Laki ulkomaisten
+     sijoituksista" (017 source list).
+b#8  applied — "Myös Korean merkit voivat…" → "Ulkomainen merkki voi käyttää paikallista
+     maahantuojaa tai hoitaa taiwanilaista liiketoimintaa itse".
+b#9  applied — "kolmas (3)" / "kolmannen (3)" → "kolmas osapuoli (第三人)".
+b#10 SKIPPED (checker) — see "Not applied".
+b#11 applied — "Putoaminen lattialle yrityksessä…" → "Liiketilassa tapahtuva kaatuminen,
+     elintarvikkeesta aiheutunut terveysvahinko ja ammattimaisen palvelun käytössä syntynyt vamma…".
+b#12 applied in part — "A:n ja B:n omaiset" → "A:n läheiset ja B:n omaiset". The "ajoneuvo numero 1/2"
+     labels were shortened to "ajoneuvo 1 / ajoneuvo 2"; the supervisor's "toinen ajoneuvo" could not
+     be used (see "Not applied").
+b#13 applied — "Tämä on olennainen; …" → "Tähän opas päättyy. Lisäkysymyksissä voitte kääntyä
+     taiwanilaisen asianajajan puoleen."
+b#14 applied (adapted) — 013 closing line → "Tämä sivu on vain yleistä opastusta. Neuvonta tapahtuu
+     vain englanniksi, kiinaksi (中文), japaniksi ja koreaksi; yhteydenottopyynnön voi lähettää
+     yhteydenottolomakkeella." The reviewer's "Neuvontaa ei anneta suomeksi" was NOT used: the
+     column checker's forbidden list matches /neuvontaa suomeksi/ and would fail the file.
+b#15 applied — "milloin tahansa" availability claim removed (015).
+b#16 applied — "(Q&A) … 😊" → "Seuraavat kysymykset ja vastaukset on tarkoitettu niille, jotka…".
+b#17 applied — 018 §8: "Ensimmäistä yhteydenottoa varten (neuvonta tapahtuu vain englanniksi,
+     kiinaksi, japaniksi tai koreaksi) voidaan koota…".
+b#18 applied — Te → te (see a#46).
+b#19 applied — 010: "1. oikeusaste*" → "ensimmäinen oikeusaste*" (13 instances, title + H1 + alts +
+     link labels + body). 003 keeps the digit (see "Not applied").
+b#20 SKIPPED (checker) — see "Not applied".
+b#21 applied — partitive dates (see a#42).
+b#22 SKIPPED (checker) — see "Not applied".
+b#23 applied (R7b) — pasted FAQ answers made self-standing: 011 §2 ("Tuoterekisteröinti ja PIF eivät
+     ole sama menettely."), 014 §1 ("Sopimus ei ole automaattisesti pätemätön."), 016 §3
+     ("Eloonjäänyt puoliso ei saa automaattisesti puolta pesästä.") and §7 ("Vanhemmat eivät saa
+     vapaasti käyttää lapsen perintövarallisuutta."), 017 §1 ("Lupavelvollisuus ei määräydy toiminnan
+     nimen mukaan.") and §3 ("Lupa ei siirry kaupan mukana."). Heading count unchanged.
+b#24 applied — 侵權行為 → "deliktiperusteinen vahingonkorvaus (侵權行為)" (010); the noun phrase
+     "oikeudenvastainen teko" as a name for tort replaced in 003 and 010; the adjective
+     "oikeudenvastainen" (= unlawful) left where it is correct Finnish.
+b#25 applied — "Tuomion lukeminen" → "Tuomion selostus" (alt + link label).
+b#26 applied — "Minkä kannan harjoittelevan henkilön tulisi omaksua?" → "Millainen asenne
+     harjoittelijalla olisi syytä olla?" (×2).
+b#27 applied — "palvelulla on turvallisuus…" → "palvelu on niin turvallinen kuin … voidaan kohtuudella
+     odottaa".
+b#28 applied — "tähän kieleen siirrettyinä" → "Alla ovat käännetyt otsikot …" (the reviewer's
+     "suomennetut" avoided: `nationality` gate scans for Finland tokens).
+b#29 applied — "että 1 onnettomuudesta" → "että yhdestä onnettomuudesta".
+b#30 applied — "koota yksilöllistä orientaatiota" → "selvittää ajoissa, mitkä määräajat ja menettelyt
+     voivat tulla kyseeseen juuri tässä asiassa".
+b#31 applied — "TFDA:n kosmetiikan tuoterekisteröintialustalla (衛生福利部食品藥物管理署)" →
+     "TFDA:n (衛生福利部食品藥物管理署) kosmetiikan tuoterekisteröintialustalla" (×2).
+b#32 applied (sweep) — subjekti → taho (011, 4 instances incl. title-level "vastuusubjekti").
+b#33 applied — fullwidth "：" → ":".
+b#34 applied — "Esim.)" → "Esimerkiksi:" (×2).
+b#35 applied — „**sisustusjakson**“ → **sisustusjakson** (no quotes).
+b#36 applied — guillemets (see a#32).
+b#37 applied — "**Q. …**" → "**Kysymys.** … (營業場所預先查詢) …?".
+b#38 applied — "Ottakaa siksi tämä kohta huomioon." → "Ottakaa tämä kohta siksi huomioon."
+b#39 applied — "tarkastus ei ole liiallisen tiukka" → "tarkastus kohdistuu siihen, onko suunnitelma
+     aito, ei siihen, vastaako koulutus alaa täsmälleen".
+b#40 applied — "korvaa vaikeasti ilmoituksen sopimuksen ajankohtana" → "ei juuri korvaa sitä
+     ilmoitusta, joka olisi pitänyt antaa sopimusta tehtäessä".
+b#41 applied (sweep) — työelämänormilaki → "työelämän normeja koskeva laki" (8 instances, 014).
+b#42 applied — "tai 3. on kantanut sen" → "tai kolmas osapuoli"; sentence recast because the
+     English-sentence gate fired on the "on"-heavy rewrite (4× "on" ≥ ENGLISH_STOPWORD_MIN).
+b#43 applied in part — "sija 1" → "1. perillisryhmään" (word form rejected by the checker, below).
+b#44 applied — "Trust-varallisuus" → "Trust-omaisuus"; "etuuksien oikeus" → "edunsaajaoikeus";
+     "trustee (受託人)" → "trustin hoitaja (受託人)".
+b#45 applied — "ei voi käyttää oikeuksia ja velvollisuuksia alaikäiseen lapseen nähden" → "ei voi
+     käyttää huoltoa (親權) alaikäiseen lapseen nähden" (×2).
+b#46 applied — "ideellisesta vahingosta" → "aineettomasta vahingosta"; same fix in 007.
+b#47 applied — "luvan haltija-subjekti" → "jolla lupa on" (×3).
+b#48 applied — asiakashuomio → asiakaspalvelu (×2).
+b#49 applied — "・" → "、" (×2).
+b#50 applied — luukku → hakemusreitti (×2).
+b#51 applied — "sopivin yksikkö" → "se yksikkö, joka vastaa tosiseikkoja" (×2).
+b#52 applied — "Edellä esitetty on ehdotus sopimuksen muotoiluun." → "Edellä kuvataan vain menettelyä,
+     ei sitä, miten sopimus pitäisi muotoilla."
+b#53 applied — "ulkoiselle suorittajalle" → "ulkoiselle palveluntarjoajalle".
+b#54 applied (sweep) — agentuuri → edustussuhde/edustaja; tulostruktuuri → "markkinoille tulon
+     rakenne" (7 instances incl. frontmatter title, H1 and the featured-image alt);
+     "jotka astuvat Taiwaniin" → "Taiwanin markkinoilla".
+b#55 applied — "sijoituslautakunnan tarkastuksen" → "sijoitustarkastusosaston tarkastuksen".
+b#56 applied — "hoikempi hallinto, mutta suljetumpi osuuksien luovutus" → "kevyempi hallinto, mutta
+     tiukemmin rajoitettu osuuksien luovutus".
+b#57 applied — "yhtiön perustamisen perusteen" → "yhtiön perustamisen perusteet".
+
+## Systemic sweeps (pattern → instances changed)
+- Te/Teidän/Teillä/Teitä → lowercase te-forms: 28 (003, 012, 013, 015); 0 remain.
+- «…» / »…« / „…“ / ''…'' → ”…”: 43 in columns + 6 in the guidance pack; 0 remain.
+- nominative month names → partitive: 24 across 8 files; 0 remain.
+- työryhmä → oikeudenala (guidance pack): 12.
+- seurata (begleiten) → avustaa: 6.
+- suoritus (Leistung) → neuvonta / palvelu / korvaus / etuus / ennakkomaksu: 9 (003) + 11 (014) + 3
+  (guidance) + 1 (016).
+- 第三人 digit ordinals ("3.", "kolmas (3)") → "kolmas osapuoli/henkilö (第三人)": 12 (003, 004, 011, 014).
+- yhtiömies → osakkeenomistaja (018): 8.
+- työelämänormilaki → työelämän normeja koskeva laki (014): 8.
+- sopimuspalkkio → allekirjoitusbonus (014): 7; ennakkosuoritus → ennakkomaksu (014): 11.
+- "1. oikeusaste*" → "ensimmäinen oikeusaste*" (010): 13.
+- sairauskertomus → potilasasiakirjat (病歷): 5 (003, 010).
+- muutorekisteröinti → muutosrekisteröinti (002): 4.
+- English chrome removed: `Q&A` ×2, `(English)` ×1, `(Managing Attorney)`/`(Taiwan Attorney)`/
+  `(Korea Operations Manager)`/`(Partner CPA)`/`Paralegal` ×5, `(常設機構, PE)` ×2, emoji ×1.
+- R7b self-standing section openers: 6 (011, 014, 016 ×2, 017 ×2).
+- R2 Korea-as-default-reader generalisations: 9 blocks (001 ×2, 004 ×2, 005 ×3, 007 ×2, 008 ×3,
+  009, 011) — Korea retained only as a labelled example or as a treaty fact.
+- R3 advertising softenings: 8 (003 ×4, 005, 008, 013, 015, 018).
+- R9 Taiwan emergency numbers: 1 (003 Q2 — 119 ambulanssi/pelastuslaitos, 110 poliisi,
+  112 matkapuhelimesta).
+
+## Not applied / applied differently (with reason)
+1. a#43 + b#20 — German `.` thousands separators (TWD 500.000 → 500 000). NOT applied.
+   `NUMBER_THOUSAND_STYLE.fi` in scripts/check-column-translation.mjs is `'dot'`, and a
+   space-grouped amount tokenises as two numbers: analyzeNumbers("500 000","fi") → [500, 0]
+   vs [500000] for "500.000". Every amount in 001–004, 006, 007, 010, 011, 017, 018 would break
+   `numbers`. Per the WO ("prefer the form the checker accepts") the dot form is kept.
+   Decision needed from the supervisor if Finnish space grouping is wanted (checker change).
+2. a#48 partial / dotted Finnish dates (29.5.2026). NOT used — analyzeNumbers("29.5.2026","fi")
+   → [5202, 29, 6]. The checker-safe Finnish form "29. toukokuuta 2026" → [29, 5, 2026] is used
+   instead, which is also correct running-text Finnish.
+3. a#49 + b#22 — glossing ROC years, "vuodelta 109 (2020)". NOT applied: the added Gregorian year
+   is counted by `numbers` and has no counterpart in the Korean source (3 files would FAIL).
+4. a#54 partial — 003 keeps "1./2. oikeusasteen" rather than "ensimmäisen/toisen oikeusasteen".
+   The Korean source writes 제1심/제2심, which analyzeNumbers parses as 1 and 2; the word form drops
+   the token and `numbers` failed with "missing from translation (2): 1×2". The real defect
+   ("2. asteen" = second degree) is fixed: the noun is now always *oikeusaste*. In 010 the source
+   writes 1심 (unparsed), so the full word form was possible and is used.
+5. b#43 partial — "sija 1" → "1. perillisryhmään", not "ensimmäiseen perillisryhmään": the source
+   1순위 yields a `1` token that the word form dropped (numbers FAIL, 1×2).
+6. b#10 — Invest Taiwan link forced to `lang=jpn`. NOT applied. The `links` rule byte-compares the
+   target's hrefs against the Korean source's; changing it to `lang=eng` produced
+   `missing …lang=jpn… / extra/unallowed …lang=eng…`. This needs a source-side fix (the same URL is
+   already `lang=eng` in 004), so it is a supervisor/source decision, not a fi-lane one.
+7. b#12 partial — "ajoneuvon numero 2" → "ajoneuvo 2", not "toinen ajoneuvo". The source labels are
+   1호 차량 / 2호 차량 and both digits are counted; the word form failed `numbers` (missing 1×2).
+   The genuine error in that row (omaiset = next of kin of a deceased person, used for the surviving
+   A) is fixed.
+8. a#17 / a#23 / b#10-style link and frontmatter rows — skipped per ACCEPTED-fi.md.
+9. b#14's suggested wording "Neuvontaa ei anneta suomeksi" — deliberately NOT used: the column
+   checker's fi forbidden list includes /neuvontaa suomeksi/i (rule `fi-consult-lang`) and the file
+   would FAIL. The same disclosure is expressed positively ("Neuvonta tapahtuu vain englanniksi,
+   kiinaksi (中文), japaniksi ja koreaksi").
+10. Reviewer wording I judged wrong and did not copy:
+    - a#2 / a#10 / a#20 suggested naming Suomi/Finland ("Suomen irtisanomiskorvaukseen",
+      "Onko Taiwanin ja Suomen välillä sopimusta", "esimerkiksi Suomeen ja Taiwaniin"). This is
+      forbidden by R2d and by the checker's `nationality` gate (fi tokens: Suomi, suomalaiset …).
+      Neutral generalisations used instead, per ACCEPTED-fi.md.
+    - a#5's "sai käräjäoikeudessa tuomion" — Taiwan's first instance is 地方法院; I wrote
+      "ensimmäisen asteen tuomion" rather than importing the Finnish court name.
+    - a#51's suggested rewrite adds a new `[Yhteydenotto](/fi/contact)` link into 003. The `links`
+      rule compares href sets with the source; a new link fails the file. The CTA is expressed
+      without a link.
+    - b#28's "suomennetut otsikot" — avoided for the `nationality` gate (see above).
+    - a#6/a#7 "Tiimimme"/"Toimistot" in sentence case: the pack renders these as uppercase eyebrow
+      labels in every locale, so TIIMIMME/TOIMISTOT were kept (they are already Finnish).
+11. Kept deliberately: 戶籍 = "väestörekisteri" (used consistently in 007 and the guidance pack; the
+    reviewer did not flag it and the Finnish reads naturally), and the team-bio judgment amount
+    1,57 miljoonaa TWD (attorney-approved fact, R3).
+
+## §Verify output (verbatim)
+
+$ cd /Users/son7/Projects/tseng-law-fix-r-20260921 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-fi --lang fi 2>&1 | tail -8
+forbidden      PASS
+hanzi          PASS   han=123
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-fi src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      23
+
+(23 = 18 columns + 4 guidance/data modules + WO-F-fi.txt, which was already untracked when the lane
+started. The count becomes 24 once this log file itself is written. No test file needed editing:
+no test pinned a Finnish string that changed.)

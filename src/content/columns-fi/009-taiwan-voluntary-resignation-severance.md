@@ -21,7 +21,7 @@ Erityisesti kun työntekijät irtisanoutuvat itse (自請離職),
 
 he eivät voi saada irtisanomiskorvausta (työstandardilain 18 artikla, 勞動基準法),
 
-ja tämä eroaa Koreasta.
+ja tämä eroaa eräiden muiden maiden, esimerkiksi Korean, järjestelmästä.
 
 ​
 
@@ -53,7 +53,7 @@ ei maksa palkkaa (工資) ajallaan,
 
 ei maksa ylityökorvausta (加班費)
 
-tai ei liitä työntekijää työvakuutukseen (勞保) tai sairausvakuutukseen (健保).
+tai ei liitä työntekijää työntekijävakuutukseen (勞保) tai sairausvakuutukseen (健保).
 
 Tällaisissa tapauksissa työnantajan on maksettava irtisanomiskorvaus silloinkin, kun työntekijä itse päättää työsopimuksen.
 
@@ -89,7 +89,7 @@ irtisanomiskorvaus evätä tai sitä vaatia.
 
 Siksi taiwanilaisissa työriidoissa (勞資糾紛)
 
-''**ajankohta**'' on hyvin tärkeä.
+**ajankohta** on hyvin tärkeä.
 
 Useimmissa tapauksissa suojataan se puoli, joka on valmistautunut etukäteen.
 

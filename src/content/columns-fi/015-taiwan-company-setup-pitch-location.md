@@ -23,57 +23,57 @@ Markkinatilanteen lisäksi
 
 toinen tärkeä kohta on
 
-sijaitseeko kyseinen osoite (營業地址) vyöhykkeellä, jossa «ravintola-alan» harjoittaminen on mahdollista.
+sijaitseeko kyseinen osoite (營業地址) vyöhykkeellä, jossa ”ravintola-alan” harjoittaminen on mahdollista.
 
 ​
 
 Jos liiketoiminta aloitetaan Taipein kaupungissa,
 
-voidaan käyttää Taipein kaupungin kaupallisen toimiston (臺北市商業處) järjestelmää «toimipaikan ennakkokysely» (營業場所預先查詢).
+voidaan käyttää Taipein kaupungin kaupallisen toimiston (臺北市商業處) järjestelmää ”toimipaikan ennakkokysely” (營業場所預先查詢).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
 ​
 
-Te voitte ilman maksua tutkia, voidaanko haluttuun osoitteeseen avata «ravintola-ala».
+Voitte tutkia maksutta, voidaanko haluttuun osoitteeseen avata ”ravintola-ala”.
 
-Tähän tarkastukseen on kuitenkin ladattava toimipaikan «rakennusrekisterin tyypin 2 ote» (建物登記第二類謄本, joka sisältää rakennuksen yksityiskohtaiset tiedot).
+Tähän tarkastukseen on kuitenkin ladattava toimipaikan ”rakennusrekisterin tyypin 2 ote” (建物登記第二類謄本, joka sisältää rakennuksen yksityiskohtaiset tiedot).
 
-Kuka tahansa voi kiinteistötoimistolta (地政事務所) hakea «rakennusrekisterin tyypin 2 otteen» mistä tahansa osoitteesta.
+Kuka tahansa voi kiinteistötoimistolta (地政事務所) hakea ”rakennusrekisterin tyypin 2 otteen” mistä tahansa osoitteesta.
 
-Jos Teillä on vaikeuksia mennä henkilökohtaisesti kiinteistötoimistolle (地政事務所),
+Jos teillä on vaikeuksia asioida henkilökohtaisesti kiinteistötoimistossa (地政事務所),
 
-Te voitte pyytää apua tutulta Taiwanissa, vuokranantajalta, välittäjältä tai asianajajalta.
+voitte pyytää apua tutulta Taiwanissa, vuokranantajalta, välittäjältä tai asianajajalta.
 
-Jos tarkastuksen tulos osoittaa, ettei ravintola-ala ole mahdollista, kaupunginhallitus voi myöhemmin oikeushenkilön rekisteröinnissä (公司登記) evätä rekisteröinnin.
+Jos tarkastuksen tulos osoittaa, ettei ravintola-ala ole mahdollista, kaupunginhallitus voi myöhemmin yhtiörekisteröinnissä (公司登記) evätä rekisteröinnin.
 
-Ottakaa siksi tämä kohta huomioon.
+Ottakaa tämä kohta siksi huomioon.
 
 ​
 
-**Q. Tuleeko kaikkien alojen järjestelmän «toimipaikan ennakkokysely» kautta tutkia, onko harjoittaminen mahdollista?**
+**Kysymys.** Tuleeko kaikkien alojen osalta tutkia järjestelmän ”toimipaikan ennakkokysely” (營業場所預先查詢) kautta, onko harjoittaminen mahdollista?
 
-Suositellaan, että kaikki alat järjestelmän «toimipaikan ennakkokysely» (營業場所預先查詢) kautta vahvistavat, onko harjoittaminen mahdollista.
+Suositellaan, että kaikki alat järjestelmän ”toimipaikan ennakkokysely” (營業場所預先查詢) kautta vahvistavat, onko harjoittaminen mahdollista.
 
 Yhtiörekisteröinnissä rekisteröidään kuitenkin usein useita aloja samanaikaisesti, ja usein halutaan rekisteröidä noin 10 alaa kerralla.
 
 Käytännössä kaikkia aloja ei siksi tarvitse tutkia yhtiörekisteröinnissä.
 
-«[Taipein kaupungin toimipaikkojen tietopalvelun työohjeiden](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)»(臺北市營業場所協助查詢服務作業須知) ja Taipein kaupungin voimassa olevan ohjeen mukaan
+”[Taipein kaupungin toimipaikkojen tietopalvelun työohjeiden](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)”(臺北市營業場所協助查詢服務作業須知) ja Taipein kaupungin voimassa olevan ohjeen mukaan
 
-on 1. tammikuu 2023 alkaen yhtiön tai kaupan (mukaan lukien sivuliike (分公司) ja haaratoimipaikka (分支機構)) perustamisen, kotipaikan siirron tai toimialojen lisäämisen rekisteröintiä haettaessa toimipaikan ennakkokyselyn tulos **pakollisesti** liitettävä rekisteröintihakemukseen, alasta riippumatta.
+on 1. tammikuuta 2023 alkaen yhtiön tai kaupan (mukaan lukien sivuliike (分公司) ja sivutoimipaikka (分支機構)) perustamisen, kotipaikan siirron tai toimialojen lisäämisen rekisteröintiä haettaessa toimipaikan ennakkokyselyn tulos **pakollisesti** liitettävä rekisteröintihakemukseen, alasta riippumatta.
 
-Jäljempänä oleva luettelo «viran puolesta tutkittavista aloista» (主動查詢之營業項目) merkitsee aloja, joita kaupallinen toimisto viran puolesta tutkii lisää rekisteröintitarkastuksen aikana (隨案主動查詢), kun ala on hakemuksessa mutta puuttuu liitetystä tuloksesta; se, ettei ala ole tässä luettelossa, ei merkitse, että tarkastus olisi vapautettu.
+Jäljempänä oleva luettelo ”viran puolesta tutkittavista aloista” (主動查詢之營業項目) merkitsee aloja, joita kaupallinen toimisto viran puolesta tutkii lisää rekisteröintitarkastuksen aikana (隨案主動查詢), kun ala on hakemuksessa mutta puuttuu liitetystä tuloksesta; se, ettei ala ole tässä luettelossa, ei merkitse, että tarkastus olisi vapautettu.
 
 Jos avataan paikassa, jossa ravintola-ala ei ole mahdollista, voi myöhemmin seurata toimivaltaisen viranomaisen hallinnollinen sakko (罰鍰).
 
-![«viran puolesta tutkittavat alat» (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
+![”viran puolesta tutkittavat alat” (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
-«viran puolesta tutkittavat alat» (主動查詢之營業項目)
+”viran puolesta tutkittavat alat” (主動查詢之營業項目)
 
-Tämä on olennainen; lisäkysymyksissä Te voitte milloin tahansa kääntyä asianajajan puoleen Taiwanissa.
+Tähän opas päättyy. Lisäkysymyksissä voitte kääntyä taiwanilaisen asianajajan puoleen.
 
-Viranomaisten säännöt voivat usein muuttua; ennen oikeushenkilön rekisteröintiä Teidän tulisi vahvistaa uusimmat säännökset.
+Viranomaisten säännöt voivat muuttua usein, joten ennen yhtiörekisteröintiä kannattaa tarkistaa uusimmat säännökset.
 
 ---
 

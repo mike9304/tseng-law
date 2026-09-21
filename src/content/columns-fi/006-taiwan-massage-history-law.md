@@ -23,7 +23,7 @@ Leikkauksen lisäksi oli erilaisia palveluita, kuten parranajo ja kasvojenhoito.
 
 Ja olennaista oli, että istuen saattoi saada hiuspesun sekä päänahan, hartioiden ja kaulan hieronnan.
 
-1 leikkaus riitti jo nauttimaan tästä korkeatasoisesta palvelusta, joten hinta–laatusuhde oli erinomainen.
+Yksi leikkaus riitti jo nauttimaan tästä korkeatasoisesta palvelusta, joten hinta–laatusuhde oli erinomainen.
 
 Se muistutti vahvasti nykypäivän vietnamilaista hiuspesua.
 
@@ -33,7 +33,7 @@ Ja tällaiset taiwanilaistyyliset parturiliikkeet jäävät monille Taiwanissa a
 
 ​
 
-Miten tahansa, kun puhutaan hieronnasta (按摩),
+Joka tapauksessa, kun puhutaan hieronnasta (按摩),
 
 Taiwanissa on samoin lukuisia hierontakatuja.
 
@@ -43,7 +43,7 @@ On näkövammaisten hierontaa (視障按摩), jalkahierontaa, öljyhierontaa, th
 
 Periaatteessa kuka tahansa voi valita hieronnan, joka sopii henkilökohtaiseen makuun, jännityksen lievittämiseksi.
 
-Ja syy siihen, että nykyään on niin paljon hierontapaikkoja, voi liittyä tähän 1 pyyntöön perustuslain tulkinnasta (釋憲).
+Ja syy siihen, että nykyään on niin paljon hierontapaikkoja, voi liittyä tähän yhteen perustuslain tulkintapyyntöön (釋憲).
 
 Kun Taiwan vuonna 1980 antoi ja saattoi voimaan vammaisten hyvinvointilain (殘障福利法),
 
@@ -55,7 +55,7 @@ Tämä laki kesti vuoteen 2003; tuolloin herra Lin, joka piti parturiliikettä,
 
 palkkasi työntekijöitä ilman näkövammaa hiuspesu- ja hierontapalveluihin, ja poliisi totesi sen.
 
-Silloisen oikeuden mukaan herra Lin ja työntekijät saivat hallinnollisen sakon (罰鍰) TWD 40.000, TWD 10.000 ja TWD 20.000 uudessa taiwanilaisessa dollarissa (新臺幣).
+Silloisen oikeuden mukaan herra Lin ja työntekijät saivat hallinnolliset sakot (罰鍰) TWD 40.000, TWD 10.000 ja TWD 20.000 (新臺幣).
 
 Herra Lin piti tätä seuraamusta hyvin epäoikeudenmukaisena ja pyysi perustuslain tulkintaa.
 
@@ -81,11 +81,11 @@ Kysyttiin esimerkiksi, eikö kirjallinen sääntö, joka salli hieronnan vain n�
 
 ja epäiltiin, oliko tämä sääntö todella edistänyt näkövammaisten työn ja olemassaolon suojaa.
 
-Lopulta suurtuomarit (大法官) julistivat säännöksen, joka salli vain näkövammaisten harjoittaa hieronta-alaa, perustuslainvastaiseksi (違憲).
+Lopulta perustuslakituomioistuimen suurtuomarit (大法官) julistivat säännöksen, joka salli vain näkövammaisten harjoittaa hieronta-alaa, perustuslainvastaiseksi (違憲).
 
 ​
 
-Vastaavasti Koreassa, jossa lukuisat näkövammaiset ansaitsevat elantonsa hieronnalla,
+Vertailun vuoksi: Koreassa, jossa monet näkövammaiset ansaitsevat elantonsa hieronnalla,
 
 hieronta-alaa saavat yleensä harjoittaa vain näkövammaiset, jotka ovat saaneet pätevyystodistuksen.
 

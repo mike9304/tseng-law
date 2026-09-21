@@ -683,7 +683,7 @@ export const guidanceAnswers: Record<
   fi: {
     services: {
       answer:
-        'Toimisto käsittelee kuutta työryhmää Taiwanin oikeuden mukaan: investointi ja yhtiön perustaminen, siviiliriidat ja vahingonkorvaus, avioliitto, perhe ja perintö, työ, rikosasiat sekä immateriaalioikeus. Kunkin asian laajuus vahvistetaan erikseen sen jälkeen, kun asianajaja on tarkastanut lähettämänne sisällön. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
+        'Toimisto käsittelee kuutta oikeudenalaa Taiwanin oikeuden mukaan: investoinnit ja yhtiön perustaminen, siviiliriidat ja vahingonkorvaus, avioliitto, perhe ja perintö, työ, rikosasiat sekä immateriaalioikeus. Kunkin asian laajuus vahvistetaan erikseen sen jälkeen, kun asianajaja on tarkastanut lähettämänne sisällön. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
       sources: ['/fi/faq', '/fi/contact'],
     },
     about: {
@@ -693,7 +693,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Tämä sivu näyttää Hoveringin asianajajien, operatiivisen johdon ja osakaskirjanpidon profiilit. Asianajaja Wei Tseng (曾雋崴) on kelpoinen Taiwanissa ja on toimiston johtava asianajaja; hän työskentelee päämiesten kanssa Koreasta, Japanista ja muiden kansainvälisten päämiesten kanssa. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
+        'Tämä sivu esittelee Hoveringin asianajajat, operatiivisen johdon sekä yhteistyökumppanina toimivan tilitoimiston ja kertoo, mitä kukin heistä tekee. Asianajaja Wei Tseng (曾雋崴) on kelpoinen harjoittamaan asianajajan ammattia Taiwanissa ja on toimiston johtava asianajaja; hän avustaa päämiehiä Koreasta, Japanista ja muualta maailmasta. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
       sources: ['/fi/about', '/fi/contact'],
     },
     pricing: {
@@ -703,12 +703,12 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Lähettäkää yhteenvedon yhteydenottolomakkeella: mitä on tapahtunut, millaista apua tarvitsette, mikä yhteys asialla on Taiwaniin, ja määräaika, jos tunnette sen. Ensimmäisessä vaiheessa ei vielä tarvitse lähettää henkilöllisyysasiakirjoja eikä koko näyttöä. Toimisto ei lupaa vastausaikaa eikä vahvista tapaamista tämän sivun kautta. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
+        'Lähettäkää yhteenveto yhteydenottolomakkeella: mitä on tapahtunut, millaista apua tarvitsette, mikä yhteys asialla on Taiwaniin, ja määräaika, jos tunnette sen. Ensimmäisessä vaiheessa ei vielä tarvitse lähettää henkilöllisyysasiakirjoja eikä koko todistusaineistoa. Toimisto ei lupaa vastausaikaa eikä vahvista tapaamista tämän sivun kautta. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
       sources: ['/fi/faq', '/fi/pricing'],
     },
     faq: {
       answer:
-        'Tämä osa vastaa usein kysyttyihin kysymyksiin yleisen tiedon tasolla: kuusi työryhmää, valmistelu ennen yhteydenottoa, kulujen vahvistaminen ja lähetetyn viestin merkitys. Lähetetty pyyntö odottaa asianajajan tarkastusta; se ei ole oikeudellinen lausunto, ei tapaaminen eikä synnytä suhdetta asianajajan ja päämiehen välillä. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
+        'Tämä osa vastaa usein kysyttyihin kysymyksiin yleisen tiedon tasolla: kuusi oikeudenalaa, valmistautuminen ennen yhteydenottoa, kulujen vahvistaminen ja lähetetyn viestin merkitys. Lähetetty pyyntö odottaa asianajajan tarkastusta; se ei ole oikeudellinen lausunto eikä tapaaminen, eikä se synnytä suhdetta asianajajan ja päämiehen välillä. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
       sources: ['/fi/contact', '/fi/services'],
     },
   },

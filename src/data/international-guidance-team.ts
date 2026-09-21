@@ -688,16 +688,16 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'TIIMIMME',
     title: 'Hoveringin kansainvälinen tiimi',
     description:
-      'Hoveringin asianajajien, operatiivisen johdon ja osakaskirjanpidon profiilit.',
+      'Hoveringin asianajajien, operatiivisen johdon ja yhteistyökumppanina toimivan tilitoimiston profiilit.',
     representativeTitle: 'Johtava asianajaja',
     teamTitle: 'Asianajajat ja työntekijät',
-    partnerTitle: 'Osakaskirjanpito',
+    partnerTitle: 'Yhteistyökumppanina toimiva tilitoimisto',
     introLabel: 'Esittely',
     educationLabel: 'Koulutus',
     experienceLabel: 'Kokemus',
     photoAltPrefix: 'Valokuva',
     workingLanguagesLabel: 'Työkielet',
-    fullProfileLabel: 'Täysi profiili (English)',
+    fullProfileLabel: 'Koko profiili (englanniksi)',
     keyFactsHeading: 'Asianajaja Wei Tseng — Keskeiset tiedot',
     qualificationLabel: 'Kelpoisuus ja toimisto',
     qualificationSentence:
@@ -705,11 +705,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     practiceLabel: 'Pääalueet',
     consultationLanguagesLabel: 'Neuvontakielet',
     roles: {
-      'tseng-junwei': 'Johtava asianajaja Taiwanissa (Managing Attorney)',
-      'chang-rongxuan': 'Asianajaja Taiwanissa (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Korean operatiivinen johto (Korea Operations Manager)',
-      'huang-shengping': 'Osakaskirjanpitäjä (Partner CPA)',
+      'tseng-junwei': 'Johtava asianajaja Taiwanissa',
+      'chang-rongxuan': 'Asianajaja Taiwanissa',
+      'chang-fangyu': 'Lakimiesavustaja',
+      'son-jungmin': 'Korean toimintojen johtaja',
+      'huang-shengping': 'Osakkaana toimiva tilintarkastaja',
     },
   },
   cs: {
@@ -2400,11 +2400,11 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Toimisto käsittelee yritysten ja yksityishenkilöiden asioita Taiwanissa englanniksi, japaniksi, koreaksi ja kiinaksi.',
-        'Hän edusti korealaista opiskelijaa vahingonkorvausvaatimuksessa kuntosalilla tapahtuneen vamman vuoksi ja sai ensimmäisen asteen tuomion TWD 1.57M.',
+        'Hän edusti korealaista opiskelijaa kuntosalilla sattunutta vammaa koskevassa vahingonkorvausasiassa ja sai päämiehelleen ensimmäisen asteen tuomion, jossa korvaukseksi määrättiin 1,57 miljoonaa TWD.',
       ],
       education: [
         'Maisteri (M.S.), Institute of Finance, National Taiwan University',
-        'Kandidaatti (B.A.) kaksinkertaisella oikeuden ja rahoituksen polulla, National Chengchi University',
+        'Oikeustieteen ja rahoituksen kaksoistutkinto (B.A.), National Chengchi University',
         'Vaihto-opiskelija Kobe Universityssä ja Waseda Universityssä',
       ],
       experience: [

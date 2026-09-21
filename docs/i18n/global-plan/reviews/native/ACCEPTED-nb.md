@@ -20,4 +20,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `nb-a.md` 
 - De/Deres/Dem → du (systemic P2) — apply throughout.
 
 ## Part b
-Apply every P1/P2 row of `nb-b.md` under the same skip rules above.
+Apply every P1/P2 row of `nb-b.md` under the same skip rules above. Additional: Danish/Swedish/English/French leakage in 011/014/016/017/018 (situationer, at stifte, modtage, der, påtänkte, taking, prestator, handel for 業) → Bokmål — full G sweep of all 18; b#2 tegningspremie → signeringsbonus (簽約金), fastholdelsesbonus ok; b#3 erstatningsmulighet → 'muligheten for å erstatte arbeidstakeren (人力替補)'; b#4 revisor → 'selskapets tilsynsperson (監察人)'; b#5 → 'arbeidstakerforsikring (勞工保險)'; b#7 'den etterlatte' → 'de etterlatte/den gjenlevende familien'; b#8 → R2; b#9 Invest Taiwan link fixed mechanically — skip; b#1 → R3/R7; FAQ openings → R7b; De/Dem → du in 010–018; thousands with space (25 000 000 TWD) if the checker accepts, else keep.

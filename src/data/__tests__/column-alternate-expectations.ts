@@ -69,7 +69,7 @@ const HREFLANG_TAG_BY_LOCALE: Record<PublicLocale8, string> = {
   lt: 'lt',
   lv: 'lv',
   et: 'et',
-  ca: 'cs', // SCAFFOLD(cs)
+  ca: 'ca',
   is: 'cs', // SCAFFOLD(cs)
 };
 

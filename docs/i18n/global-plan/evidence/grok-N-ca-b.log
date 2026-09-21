@@ -1,5 +1,73 @@
-[WO start 2026-09-22 07:17:37]
-Columns **010–018** are in `src/content/columns-ca/`. Checker: **summary PASS 18/18 files** (001–009 from the earlier batch plus these nine). Markers: **0**.
+WO-N-ca-b — Catalan columns 010–018
+worker: Cursor Grok 4.6
+date: 2026-09-22
+worktree: /Users/son7/Projects/tseng-law-new-ca-20260922
+register: vostè (formal Catalan, Catalonia); quotes « »; Taiwan / Taipei unaccented; feminine byline **Advocada Wei Tseng (曾雋崴)**; thousands 100.000; dates «13 de setembre de 2025»
 
-Log: `docs/i18n/global-plan/evidence/grok-N-ca-b.log`. No git operations.
-=== end code=0 2026-09-22 07:46:41 ===
+## File count
+9 files written in this work order (src/content/columns-ca/ 010–018). Directory now has 18 files because WO-N-ca-a already wrote 001–009.
+010-taiwan-gym-injury-lawsuit.md
+011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md
+012-taiwan-overtaking-accident-liability.md
+013-taiwan-company-establishment-advanced-1.md
+014-taiwan-mandatory-employment-period.md
+015-taiwan-company-setup-pitch-location.md
+016-taiwan-inheritance-custody-analysis.md
+017-taiwan-logistics-business-setup.md
+018-taiwan-semiconductor-market-entry.md
+
+## §Verify (verbatim)
+
+$ ls src/content/columns-ca/*.md | wc -l
+      18
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-ca --lang ca 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-ca-20260922/src/content/columns-ca/018-taiwan-semiconductor-market-entry.md  lang=ca
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=83
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-ca | wc -l
+       0
+
+$ git status --short | wc -l
+      44
+
+(git status line count includes WO-N-ca-a, WO-P-ca and other pre-existing dirty/untracked files in this worktree. This work order wrote only the 9 columns-ca files 010–018 + this log. No git add/commit/push/stash/checkout.)
+
+010–018 each PASS individually. Combined dir summary is 18/18 (001–009 from WO-N-ca-a + 010–018). Markers 0.
+
+## Key term choices (Catalan + Traditional-Chinese gloss)
+- lesions per imprudència (過失傷害)
+- delicte que requereix querella perquè es pugui formular acusació (告訴乃論之罪)
+- pacte de període mínim de treball (最低服務年限約定)
+- prestació anticipada (預付性給付)
+- autorització de transport de mercaderies per automòbil (汽車貨運業)
+- llicència d’explotació (營業執照) vs autorització de preparació de constitució (籌設許可)
+- supervisor (監察人)
+- accionistes (股東)
+- atestació d’un auditor de comptes (會計師查核簽證)
+- societat matriu (母公司)
+- permís de treball (工作許可); certificat de residència d’estranger (外僑居留證)
+- carta amb constància de contingut (存證信函); autenticació notarial (認證) vs adveració (檢認)
+
+## Unresolved points
+- numbers WARN (not FAIL) 수사미해석: Catalan has no WORD_NUMERAL_LEXICON for Korean article ordinals (제N항 / 제N호 / 제N종) or 제3자. Digit bags still match. Remaining unmatched-ordinal WARNs in this batch: 010 extra 2020 (ROC year 109); 012 제3자/제1항/제7호; 015 제2종×2; 016 eleven 제N항/제3자; 017 제3자×2.
+- Digit preservation required TWD 25.000.000 (not «25 milions») in 017, «tipus 2» not «tipus II» in 015, «ordre 1» not «primer ordre» in 016, «1 camió petit» / «1 soci té 1 vot» / «1 o més persones físiques» rather than fully lexicalised Catalan.
+- Korean 018 has no `url` frontmatter key and jumps heading 5→7; Catalan follows that structure. Native attorney review of Catalan legal register is still outstanding (no [변호사 검수 필요] markers left in files).

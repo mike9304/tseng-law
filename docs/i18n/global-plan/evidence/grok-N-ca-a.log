@@ -1,5 +1,72 @@
-[WO start 2026-09-22 06:47:36]
-Nine Catalan columns are in `src/content/columns-ca/`. The checker reports **`summary PASS 9/9 files`**, and `[변호사 검수 필요]` markers are **0**.
+WO-N-ca-a — Catalan columns 001–009
+worker: Cursor Grok 4.6
+date: 2026-09-22
+worktree: /Users/son7/Projects/tseng-law-new-ca-20260922
+register: vostè (formal Catalan, Catalonia); quotes « »; Taiwan / Taipei unaccented; feminine byline **Advocada Wei Tseng (曾雋崴)**; thousands 100.000; dates «13 de setembre de 2025»
 
-Evidence: `docs/i18n/global-plan/evidence/grok-N-ca-a.log` (file count, verbatim §Verify, term glosses, unresolved WARNs). No git add/commit/push.
-=== end code=0 2026-09-22 07:17:12 ===
+## File count
+9 files in src/content/columns-ca/:
+001-taiwan-company-establishment-basics.md
+002-withdraw-capital-taiwan-company.md
+003-taiwan-traffic-accident-procedure.md
+004-taiwan-company-subsidiary-vs-branch.md
+005-taiwan-company-establishment-advanced-2.md
+006-taiwan-massage-history-law.md
+007-taiwan-divorce-lawsuit-qna.md
+008-taiwan-labor-severance-law.md
+009-taiwan-voluntary-resignation-severance.md
+
+## §Verify (verbatim)
+
+$ ls src/content/columns-ca/*.md | wc -l
+       9
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-ca --lang ca 2>&1 | tail -20
+
+PASS  /Users/son7/Projects/tseng-law-new-ca-20260922/src/content/columns-ca/009-taiwan-voluntary-resignation-severance.md  lang=ca
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1]
+images         PASS   count=2
+blocks         PASS   blocks=44
+links          PASS   hrefs=3
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=65
+numbers        WARN   수사미해석 (1): 제6호
+                      sourceCount=11 targetCount=11
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  9/9 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-ca | wc -l
+       0
+
+$ git status --short | wc -l
+      33
+
+(git status line count includes WO-P-ca and other pre-existing dirty/untracked files in this worktree. This work order wrote only the 9 columns-ca files + this log. No git add/commit/push/stash/checkout.)
+
+## Key term choices (Catalan + Traditional-Chinese gloss)
+- permís de treball (工作許可)
+- certificat de residència d’estranger (外僑居留證, ARC)
+- accionista / accionistes (股東)
+- detenció penal de curta durada (拘役)
+- suspensió de la pena (緩刑)
+- indemnització per acomiadament (資遣費)
+- Llei de normes laborals (勞動基準法)
+- Llei de societats de Taiwan (公司法)
+- administrador / administradors (董事)
+- impost sobre les vendes (營業稅)
+
+(監察人 does not appear in Korean/English/Spanish 001–009; it belongs to later columns such as 018. Not invented here.)
+
+## Unresolved points
+- numbers WARN (not FAIL): Catalan has no WORD_NUMERAL_LEXICON for Korean article ordinals (제N항 / 제N호). Digit bags still match. Remaining unmatched-ordinal WARNs: 002 제1항; 003 eleven 제N항; 004 제3자/제1항/제2항/제3국; 007 nineteen 제N항; 009 제6호.
+- numbers WARN extra years: 003 extra 2020×2 and 2023 from ROC-year (民國) glosses; 007 extra 2023×4 from the same pattern. Digit bag otherwise exact.
+- Digit preservation required “l’últim 1 any” (001) and “cada període de suspensió (1 cop)” (002) rather than fully lexicalised Catalan; same constraint as the checker’s numeric bag.
+- Native attorney review of Catalan legal register is still outstanding (no [변호사 검수 필요] markers left in files).

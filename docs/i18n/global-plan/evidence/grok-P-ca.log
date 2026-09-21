@@ -1,7 +1,94 @@
-[WO start 2026-09-22 06:19:06]
-Catalan (`ca`) is in place for the guidance pack and UI chrome. Report: `docs/i18n/global-plan/evidence/grok-P-ca.log`.
+WO-P-ca — Catalan guidance pack + UI strings
+worker: Cursor Grok 4.6
+date: 2026-09-22
+worktree: /Users/son7/Projects/tseng-law-new-ca-20260922
+register: vostè (3rd person, Catalonia); quotes « » (IEC); Taiwan / Taipei unaccented; feminine forms for Wei Tseng (advocada, habilitada, estudianta, revisat per l’advocada)
 
-**Verify:** SCAFFOLD `ca` count **0**, **TSC_OK**, **1096 passed**. Five failures are from other still-scaffolded locales / the 45-locale harness (answers list is 27 vs 45; shared llms notices; root `llms.txt` over 8 KiB). None failed on a `ca` row. The Catalan catalog listed all ten pages.
+## Files touched
+src/data/international-guidance-baltic-atlantic.ts
+src/data/international-guidance-team.ts
+src/data/international-guidance-offices.ts
+src/data/international-guidance-answers.ts
+src/data/international-inquiry-copy.ts
+src/data/multilingual-international-v2.ts
+src/data/team-name.ts
+src/lib/llms-txt.ts
+src/lib/columns.ts
+src/lib/public-language-registry.ts
+src/components/ColumnsGrid.tsx
+src/components/CinematicOpening.tsx
+src/components/decorative-video-controls.ts
+src/data/__tests__/guidance-disclosure-parity.test.ts
+src/data/__tests__/guidance-office-facts-sync.test.ts
+src/data/__tests__/international-guidance-privacy-disclosure.test.ts
+src/data/__tests__/column-alternate-expectations.ts
+src/components/__tests__/columns-grid-guidance-labels.test.tsx
+src/components/__tests__/multilingual-international-v2.test.tsx
+tests/builder-editor/international-guidance.playwright.ts
 
-Register is **vostè**, autonym **Català**, Wei Tseng as **l’advocada**, consultation only in English, Chinese (中文), Japanese, Korean. Nav labels all fit in 14 characters.
-=== end code=0 2026-09-22 06:46:30 ===
+languageName autonym: Català
+GUIDANCE_CATALOG_LANGUAGE_NAMES.en: Catalan
+og:locale fixture: ca_ES
+hreflang fixture: ca
+nav.* all ≤ 14 (longest: El despatx / Avís legal = 10)
+menuLabel: Menú (not the English literal Menu)
+team eyebrow: EL NOSTRE EQUIP
+offices eyebrow: OFICINES
+lawyers title/description = guidanceTeamCopy title/description
+TWD 1.57M kept byte-identical in the bio (plus Catalan gloss 1,57 milions de dòlars taiwanesos)
+columns.ts category labels byte-identical to ColumnsGrid.tsx
+home.columnsReadMoreLabel = ColumnsGrid read-more = Continuar llegint
+All-filter Tot is a substring of viewAllLabel Veure-ho tot
+answers sources rewritten /cs/ → /ca/
+GUIDANCE_HOME_PATHS hrefs rewritten /cs/ → /ca/
+columns-grid test now also reads international-guidance-baltic-atlantic.ts so the Catalan viewAllLabel evidence is visible
+
+## §Verify (verbatim)
+
+$ grep -rn "SCAFFOLD" src tests | grep -cE "^\S+:[0-9]+:\s*'?ca'?:|locale ca"
+0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/data/__tests__/ src/lib/__tests__/guidance-chrome-language.test.ts src/lib/__tests__/international-guidance-answers.test.ts "src/app/[locale]/__tests__/llms-discovery.test.tsx" src/components/__tests__/columns-grid-guidance-labels.test.tsx src/components/__tests__/multilingual-international-v2.test.tsx --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+   × guidance locale llms.txt catalogs > writes a distinct notice set for each guidance language 3ms
+   × root llms.txt guidance catalog links > stays inside the 8 KiB root budget and the documented grammar 1ms
+   × root llms.txt guidance catalog links > lists every site-locale catalog and every guidance catalog 0ms
+   × root llms.txt guidance catalog links > labels each guidance catalog in its own language without widening consultation languages 0ms
+   × guidanceAnswers > covers every guidance locale x 6 page keys 4ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+ Test Files  2 failed | 45 passed (47)
+      Tests  5 failed | 1096 passed (1101)
+
+$ git status --short | wc -l
+      21
+
+## Failures not on `ca` rows (other new locales still scaffolded / harness not expanded)
+- international-guidance-answers.test.ts “covers every guidance locale x 6 page keys”: local GUIDANCE_LOCALES is 27, GUIDANCE_LOCALES_4 is 45. ca answers exist and the ca catalog “lists the ten ca guidance pages once each” passed. The length check fails because bn/ur/fa/my/ta/ne/km/mn/sk/bg/hr/sr/sl/lt/lv/et/is are in GUIDANCE_LOCALES_4 but not in that test’s local list.
+- llms-discovery “distinct notice set”: 84 unique strings vs 135 (45×3). Catalan notices are distinct from Czech. Remaining clones are the still-scaffolded locales sharing cs/ar/hi/th/ru triples.
+- llms-discovery root catalog (3 tests): buildRootLlmsTxt exceeds the 8192-byte limit because the root file lists every guidance locale. Not a ca wording defect; the per-locale ca catalog itself passed.
+
+No test failed on a `ca` row.
+
+## Terminology (Catalan + Chinese gloss)
+- permís de treball (工作許可)
+- permís de residència (居留)
+- indemnització per acomiadament / indemnització legal taiwanesa (資遣費)
+- divorci (離婚)
+- exercici i assumpció de drets i deures respecte de fills menors (未成年子女權利義務之行使或負擔)
+- règim de visites (會面交往)
+- successions (繼承)
+- registre de domicili (戶籍)
+- contracte de treball (勞動契約)
+- reglament intern (工作規則)
+- marques (商標) / patents (專利)
+- Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), Pingtung (屏東)
+
+Consultation languages, same order: anglès, xinès (中文), japonès i coreà.
+FAQ “Puc consultar en català?” → “No.”
+No interpreter / reply-time / free first meeting / result promises.
+Office-facts Korea/Japan spellings: Corea, Japó.
+
+## Could not fit
+None. Every nav label is ≤ 14 characters.

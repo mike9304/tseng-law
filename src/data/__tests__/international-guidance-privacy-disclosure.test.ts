@@ -54,7 +54,7 @@ const PENDING_CONFIRMATION: Record<(typeof GUIDANCE_LOCALES_4)[number], RegExp> 
   lt: /laukia kontoros patvirtinimo|kontora dar nepatvirtino/i,
   lv: /gaida biroja apstiprinājumu|birojs vēl nav apstiprinājis|není zatím potvrzeno|čeká na potvrzení/i,
   et: /büroo kinnitust oodates|büroo ei ole veel kinnitanud|ootab büroo kinnitust/i,
-  ca: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
+  ca: /pendent de confirmació|encara no confirmat/i,
   is: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
 };
 

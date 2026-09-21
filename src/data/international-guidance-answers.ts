@@ -1416,36 +1416,36 @@ export const guidanceAnswers: Record<
       sources: ['/et/services', '/et/contact'],
     },
   },
-  ca: { // SCAFFOLD(cs)
+  ca: {
     services: {
       answer:
-        'Kancelář vede šest agend podle tchajwanského práva: investice a zakládání společností, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí zaslaný obsah. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/faq', '/cs/contact'],
+        'El despatx atén sis àrees de pràctica segons el dret de Taiwan: inversió i constitució de societats, litigis civils i danys, matrimoni, família i successions, conflictes laborals, assumptes penals i propietat intel·lectual. L’abast de cada assumpte es confirma per separat després que una advocada o un advocat revisi el contingut enviat. La consulta es fa únicament en anglès, xinès, japonès i coreà.',
+      sources: ['/ca/faq', '/ca/contact'],
     },
     about: {
       answer:
-        'Hovering International Law Firm je tchajwanská advokátní kancelář, kterou v roce 2016 založili absolventi National Taiwan University (國立臺灣大學), s pobočkami v Tchaj-peji, Kao-siungu, Tchaj-čungu a Pching-tungu. Od roku 2020 působí i účetní úsek; pobočka v Tchaj-čungu vede věci s vazbou na Koreu a Japonsko. Kancelář neslibuje výsledek. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/lawyers', '/cs/services'],
+        'Hovering International Law Firm és un despatx d’advocats de Taiwan, fundat el 2016 per titulats de National Taiwan University (國立臺灣大學), amb oficines a Taipei, Kaohsiung, Taichung i Pingtung. Des del 2020 també hi ha una àrea de comptabilitat; l’oficina de Taichung atén assumptes relacionats amb Corea i el Japó. El despatx no promet un resultat. La consulta es fa únicament en anglès, xinès, japonès i coreà.',
+      sources: ['/ca/lawyers', '/ca/services'],
     },
     lawyers: {
       answer:
-        'Tato stránka ukazuje profily advokátek a advokátů Hovering, provozního vedení a přidruženého účetnictví a auditu. Advokátka Wei Tseng (曾雋崴) je oprávněna vykonávat advokacii na Tchaj-wanu a je řídící advokátkou kanceláře; pracuje s klienty z Koreje, z Japonska a s dalšími mezinárodními klienty. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/about', '/cs/contact'],
+        'Aquesta pàgina mostra els perfils dels advocats de Hovering, de la direcció d’operacions i de l’auditor associat. L’advocada Wei Tseng (曾雋崴) està habilitada per exercir a Taiwan i és l’advocada directora del despatx; treballa amb clients de Corea, del Japó i amb altres clients internacionals. La consulta es fa únicament en anglès, xinès, japonès i coreà.',
+      sources: ['/ca/about', '/ca/contact'],
     },
     pricing: {
       answer:
-        'Tato stránka nezveřejňuje ceník. Nejprve se z Vašeho shrnutí potvrdí rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu, dříve než práce začne. Konzultace s advokátkou nebo advokátem může být úplatná; vedle odměny mohou vzniknout soudní nebo správní poplatky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/contact', '/cs/faq'],
+        'Aquesta pàgina no publica una llista de tarifes. Primer es confirma l’abast del treball a partir del seu resum i després se’n confirmen amb vostè la quantia i el mode de càlcul, abans de començar. La consulta amb una advocada o un advocat pot ser un servei de pagament; a més dels honoraris poden sorgir taxes judicials o administratives. La consulta es fa únicament en anglès, xinès, japonès i coreà.',
+      sources: ['/ca/contact', '/ca/faq'],
     },
     contact: {
       answer:
-        'Zašlete shrnutí kontaktním formulářem: co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. V počáteční fázi zatím není třeba zasílat doklady totožnosti ani celý důkazní materiál. Kancelář neslibuje lhůtu k odpovědi a nepotvrzuje schůzku prostřednictvím této stránky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/faq', '/cs/pricing'],
+        'Enviï un resum pel formulari de contacte: què va passar, quina ajuda necessita, quin vincle té l’assumpte amb Taiwan i el termini, si el coneix. En la fase inicial encara no cal enviar documents d’identitat ni tot el material de prova. El despatx no promet un termini de resposta i no confirma una cita a través d’aquesta pàgina. La consulta es fa únicament en anglès, xinès, japonès i coreà.',
+      sources: ['/ca/faq', '/ca/pricing'],
     },
     faq: {
       answer:
-        'Tato část odpovídá na časté otázky na úrovni obecných informací: šest agend kanceláře, příprava před kontaktem, potvrzení nákladů a význam odeslané zprávy. Odeslaná zpráva čeká na posouzení, není právním stanoviskem ani potvrzenou schůzkou a sama o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem. Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/services', '/cs/contact'],
+        'Aquesta part respon preguntes freqüents com a informació general: les sis àrees del despatx, la preparació abans del contacte, la confirmació d’honoraris i el significat d’un missatge enviat. Un missatge enviat espera revisió, no és assessorament jurídic ni una cita confirmada, i per si sol no crea una relació entre advocada o advocat i client. La consulta es fa únicament en quatre idiomes: anglès, xinès, japonès i coreà.',
+      sources: ['/ca/services', '/ca/contact'],
     },
   },
   is: { // SCAFFOLD(cs)

@@ -1464,487 +1464,488 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
   },
 };
 
-// SCAFFOLD(cs) locale ca
 export const catalanGuidanceContent: GuidanceLocaleContent = {
-  languageName: 'Čeština',
+  languageName: 'Català',
   nav: {
-    home: 'Úvod',
-    services: 'Služby',
-    about: 'Kancelář',
-    lawyers: 'Advokáti',
-    pricing: 'Náklady',
-    contact: 'Kontakt',
-    faq: 'Otázky',
-    privacy: 'Soukromí',
-    disclaimer: 'Upozornění',
-    columns: 'Články',
+    home: 'Inici',
+    services: 'Serveis',
+    about: 'El despatx',
+    lawyers: 'Advocats',
+    pricing: 'Honoraris',
+    contact: 'Contacte',
+    faq: 'Preguntes',
+    privacy: 'Privadesa',
+    disclaimer: 'Avís legal',
+    columns: 'Articles',
   },
-  contactCta: 'Odeslat žádost o posouzení',
+  contactCta: 'Enviar una sol·licitud de consulta',
   footerNotice:
-    'Tato česká stránka obsahuje pouze obecné informace o práci kanceláře podle tchajwanského práva. Není právní radou k jednotlivému případu a samotné odeslání zprávy nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
-  skipLink: 'Přeskočit navigaci a přejít k obsahu',
-  menuLabel: 'Přehled stránek',
-  languageLabel: 'Jazyk zobrazení',
+    'Aquesta pàgina en català només ofereix orientació general sobre el treball del despatx segons el dret de Taiwan. No és assessorament jurídic per a un assumpte concret, i l’enviament d’un missatge no crea per si sol una relació entre advocada o advocat i client.',
+  skipLink: 'Saltar la navegació i anar al contingut',
+  menuLabel: 'Menú',
+  languageLabel: 'Idioma de la pàgina',
   mega: {
     services: {
-      description: 'Kancelář se zabývá hlavními agendami tchajwanského práva.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'El despatx atén les principals àrees de pràctica segons el dret de Taiwan.',
+      viewAllLabel: 'Veure-ho tot',
     },
     columns: {
-      description: 'Články k častým otázkám tchajwanského práva.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Articles que expliquen qüestions freqüents del dret de Taiwan.',
+      viewAllLabel: 'Veure-ho tot',
     },
     lawyers: {
-      description: 'Představení advokátek a advokátů a způsobů kontaktu.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Presentació dels advocats que atenen els assumptes i de les vies de contacte.',
+      viewAllLabel: 'Veure-ho tot',
     },
     pricing: {
-      description: 'Tato stránka vysvětluje rozsah práce a způsob ujasnění nákladů.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Aquesta pàgina explica l’abast del treball i com es confirmen els honoraris.',
+      viewAllLabel: 'Veure-ho tot',
     },
     faq: {
-      description: 'Časté otázky k práci kanceláře na Tchaj-wanu.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Preguntes freqüents sobre el treball del despatx a Taiwan.',
+      viewAllLabel: 'Veure-ho tot',
     },
   },
-  notFoundTitle: 'Stránka nenalezena',
+  notFoundTitle: 'Pàgina no trobada',
   notFoundText:
-    'Hledaná stránka neexistuje nebo byla přesunuta. Můžete se vrátit na českou úvodní stránku a prohlédnout si dostupné informace.',
-  backHomeLabel: 'Na úvodní stránku',
-  readSourceLabel: 'Otevřít seznam článků v původním jazyce',
+    'La pàgina que cerca no existeix o s’ha traslladat. Pot tornar a l’inici en català per veure l’orientació disponible.',
+  backHomeLabel: 'Tornar a l’inici',
+  readSourceLabel: 'Obrir la llista d’articles en l’idioma original',
   home: {
-    heroScrollLabel: 'Posunout dolů',
-    heroColumnsCtaLabel: 'Zobrazit články',
-    servicesDetailLabel: 'Zobrazit podrobnosti',
-    servicesAssistanceBefore: 'Není-li zřejmé, do které agendy Vaše věc patří, stránka ',
-    servicesAssistanceLinkLabel: 'Kontakt',
-    servicesAssistanceAfter: ' vysvětluje, jak sestavit shrnutí, které advokátka nebo advokát posoudí.',
-    columnsViewAllLabel: 'Zobrazit všechny články',
-    columnsReadMoreLabel: 'Číst dál',
-    columnsReviewLabel: 'Posoudila advokátka Wei Tseng',
-    columnsOriginalLanguageBadge: 'Původní jazyk',
+    heroScrollLabel: 'Desplaçar-se cap avall',
+    heroColumnsCtaLabel: 'Veure articles',
+    servicesDetailLabel: 'Veure detalls',
+    servicesAssistanceBefore:
+      'Si encara no té clar a quina àrea pertany el seu assumpte, la pàgina de ',
+    servicesAssistanceLinkLabel: 'Contacte',
+    servicesAssistanceAfter:
+      ' explica com redactar un resum que una advocada o un advocat revisarà.',
+    columnsViewAllLabel: 'Veure tots els articles',
+    columnsReadMoreLabel: 'Continuar llegint',
+    columnsReviewLabel: 'Revisat per l’advocada Wei Tseng',
+    columnsOriginalLanguageBadge: 'Idioma original',
     columnsOriginalLanguageNote:
-      'Následující články zatím nejsou k dispozici v češtině. Seznam zůstává v původním jazyce a otevře příslušnou jazykovou stránku; obsah se automaticky nepřekládá.',
-    imageBandAlt: 'Tradiční tchajwanský dvorec sanheyuan (三合院) a moderní pavilon za denního světla',
-    videoPauseLabel: 'Pozastavit video',
-    videoPlayLabel: 'Přehrát video',
-    videoReplayLabel: 'Přehrát video znovu',
+      'Els articles següents encara no estan en català. Aquesta llista roman en l’idioma original i obre aquella pàgina; el contingut no es tradueix de forma automàtica.',
+    imageBandAlt: 'Casa tradicional taiwanesa (三合院) i un pavelló contemporani a plena llum del dia',
+    videoPauseLabel: 'Posar el vídeo en pausa',
+    videoPlayLabel: 'Reproduir el vídeo',
+    videoReplayLabel: 'Tornar a reproduir el vídeo',
   },
   pages: {
     home: {
-      eyebrow: 'INFORMACE',
-      title: 'Právní služby na Tchaj-wanu — informace v češtině',
+      eyebrow: 'ORIENTACIÓ',
+      title: 'Serveis jurídics a Taiwan — orientació en català',
       description:
-        'Obecné vysvětlení v češtině o rozsahu práce Hovering International Law Firm na Tchaj-wanu, o jazycích konzultace a o prvním kontaktu.',
+        'Explicació general en català sobre l’abast de Hovering International Law Firm a Taiwan, els idiomes de consulta i el primer contacte.',
       intro:
-        'Hovering International Law Firm zastupuje zahraniční klienty, včetně osob s vazbou na Tchaj-wan, ve věcech tchajwanského práva: investice a zakládání společností, občanskoprávní spory, manželství, rodina a dědictví, pracovní právo, trestní věci a duševní vlastnictví. Tato česká část Vám pomůže rozpoznat, která práce spadá do našeho rozsahu, co si připravit a jak nás oslovit. Jde o obecné informace, nikoli o právní radu k Vašemu případu.',
+        'Hovering International Law Firm acompanya clients de l’estranger, també qui té un vincle amb Taiwan, en assumptes de dret taiwanès: inversió i constitució de societats, litigis civils, matrimoni, família i successions, laboral, penal i propietat intel·lectual. Aquesta part en català l’ajuda a saber quin treball entra en el nostre abast, què convé preparar i com contactar-nos. Són indicacions generals, no assessorament jurídic per al seu propi cas.',
       sections: [
         {
-          heading: 'Čím se zabýváme',
+          heading: 'Què fem',
           paragraphs: [
-            'Hovering International Law Firm je advokátní kancelář se sídlem na Tchaj-wanu. Pracuje podle tchajwanského práva a má pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pching-tungu (屏東). Radíme podnikům, vedeme soudní řízení a zastupujeme zahraniční klienty v krocích, které je na Tchaj-wanu třeba učinit.',
-            'Celý zdejší obsah je obecný. Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku. Tyto informace nenahrazují konzultaci s advokátkou nebo advokátem nad Vašimi dokumenty.',
+            'Hovering International Law Firm és un despatx d’advocats establert a Taiwan. Treballa segons el dret taiwanès i té oficines a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) i Pingtung (屏東). Assessorem empreses i tramitem procediments davant els tribunals, i acompanyem clients de l’estranger en els tràmits que cal seguir a Taiwan.',
+            'Tot el contingut d’aquestes pàgines és general. El resultat d’un assumpte depèn dels fets, de les normes aplicables i del moment, de manera que aquesta orientació no substitueix una conversa directa amb una advocada o un advocat sobre el seu expedient.',
           ],
         },
         {
-          heading: 'Jazyk stránky a jazyk konzultace nejsou totéž',
+          heading: 'L’idioma de la pàgina i l’idioma de la consulta no són el mateix',
           paragraphs: [
-            'Tato stránka je psána česky, ale konzultace s advokátkou nebo advokátem probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky. Čtení informací v češtině neznamená, že konzultace s advokátkou nebo advokátem proběhne česky.',
-            'Neslibujeme tlumočníka, lhůtu k odpovědi ani schůzku prostřednictvím této stránky. Pokud neovládáte žádný ze čtyř jazyků konzultace, stránka „Kontakt“ vysvětluje, jak posuzujeme způsob komunikace.',
+            'Aquesta pàgina està escrita en català, però la consulta amb una advocada o un advocat es fa únicament en els quatre idiomes de consulta: anglès, xinès (中文), japonès i coreà. Llegir l’orientació en català no vol dir que la conversa amb l’advocada o l’advocat se celebri en català.',
+            'No prometem intèrpret, no prometem un termini de resposta i no confirmem cites a través d’aquesta pàgina. Si no pot fer servir cap d’aquests quatre idiomes, la pàgina «Contacte» explica com comprovem una forma de comunicar-nos.',
           ],
         },
         {
-          heading: 'Agendy kanceláře',
+          heading: 'Àrees de pràctica que atenem',
           paragraphs: [
-            'Rozsah práce zahrnuje následujících šest agend. Stránka „Služby“ popisuje každou z nich přesněji a uvádí, co se neslibuje.',
+            'L’abast del despatx cobreix les sis àrees següents. La pàgina «Serveis» descriu cadascuna amb més detall i assenyala el que no es garanteix.',
           ],
           items: [
-            'Investice a zakládání společností na Tchaj-wanu',
-            'Občanskoprávní spory a náhrada škody',
-            'Manželství, rodina a dědictví',
-            'Pracovněprávní spory',
-            'Trestní věci',
-            'Duševní vlastnictví: ochranné známky, patenty a autorské právo',
+            'Inversió i constitució de societats a Taiwan',
+            'Litigis civils i reclamacions de danys',
+            'Matrimoni, família i successions',
+            'Conflictes laborals',
+            'Assumptes penals',
+            'Propietat intel·lectual: marques, patents i drets d’autor',
           ],
         },
         {
-          heading: 'Kde začít',
+          heading: 'Per on convé començar',
           paragraphs: [
-            'Přečtěte si stránku „Služby“ a ověřte, zda Vaše věc spadá do našeho rozsahu, poté „Náklady“ a „Kontakt“, abyste věděli, jak se stanoví rozsah a jak se náklady potvrzují před zahájením práce.',
-            'Při odeslání zprávy můžete shrnutí napsat ve svém jazyce. Původní text se uchová přesně tak, jak jste jej napsali, a automaticky se nepřekládá. Odeslaná zpráva je žádostí čekající na posouzení: není to ještě porada ani potvrzená schůzka.',
+            'Llegeixi la pàgina «Serveis» per comprovar si el seu assumpte entra en el nostre abast i, tot seguit, «Honoraris» i «Contacte» per saber com es fixa l’abast i es confirmen els honoraris abans de començar el treball.',
+            'En enviar un missatge pot escriure el resum en el seu propi idioma. El text original es guarda tal com l’escriu i no es tradueix de forma automàtica. Un missatge enviat és una sol·licitud que espera revisió: encara no és una consulta ni una cita confirmada.',
           ],
         },
       ],
     },
     services: {
-      eyebrow: 'SLUŽBY',
-      title: 'V čem klienty zastupujeme',
+      eyebrow: 'SERVEIS',
+      title: 'Assumptes que atenem',
       description:
-        'Šest agend, které kancelář na Tchaj-wanu vede, a hranice, které je užitečné znát nejdříve.',
+        'Les sis àrees de pràctica del despatx a Taiwan i els límits que convé conèixer d’entrada.',
       intro:
-        'Níže jsou agendy, které skutečně vedeme, a otázky, jež se v počáteční fázi kladou nejčastěji. Výklad Vám pomůže posoudit, zda Vaše věc spadá do našeho rozsahu; je obecný a není právním rozborem jednotlivého spisu.',
+        'A continuació, els assumptes dels quals ens ocupem i les qüestions que solen plantejar-se a l’inici. Aquesta descripció l’ajuda a valorar si el seu assumpte entra en el nostre abast; és informació general, no l’anàlisi jurídica d’un expedient concret.',
       sections: [
         {
-          heading: 'Investice a zakládání společností na Tchaj-wanu',
+          heading: 'Inversió i constitució de societats a Taiwan',
           paragraphs: [
-            'Zastupujeme zahraniční investory a podniky při založení nebo vedení společnosti na Tchaj-wanu: volba právní formy, příprava a podání dokumentů, vklad kapitálu, bankovní otázky, posouzení sídla a odvětvové požadavky. Podporujeme také účetnictví a daně, které ze založení a z provozu na Tchaj-wanu vyplývají.',
-            'Postup a lhůty se liší podle formy, investora, odvětví, banky a podle již dostupných dokumentů. Založení společnosti samo o sobě nevede k pobytovému oprávnění (居留) ani k pracovnímu povolení (工作許可): jde o samostatná řízení posuzovaná podle situace konkrétní osoby.',
+            'Acompanyem inversors i empreses estrangeres que constitueixen o gestionen una societat a Taiwan: elecció de la forma societària, preparació i presentació de documents, aportació de capital, banca, valoració del local i requisits propis de determinats sectors. També donem suport a la comptabilitat i a la fiscalitat derivades de constituir i operar a Taiwan.',
+            'L’ordre i la durada del procés varien segons la forma societària, l’inversor, el sector, el banc i els documents disponibles. Constituir una societat no produeix per si sola un permís de residència (居留) ni un permís de treball (工作許可): són tràmits distints que es valoren segons la situació de cada persona.',
           ],
         },
         {
-          heading: 'Občanskoprávní spory a náhrada škody',
+          heading: 'Litigis civils i danys',
           paragraphs: [
-            'Tato agenda zahrnuje spory ze smluv, náhradu škody z protiprávního jednání a spotřebitelské spory. Práce zpravidla začíná časovou osou, posouzením dokumentů a existujících důkazů a teprve poté následují další kroky.',
-            'Průběh určují lhůty, včetně promlčecích, a úplnost důkazů. Uveďte proto známá data co nejdříve. Uschovejte smlouvy, zprávy, doklady o platbě nebo fotografie stavu na místě a zmiňte je v první zprávě.',
+            'Aquesta àrea cobreix conflictes contractuals, reclamacions de danys per acte il·lícit i conflictes de consum. El treball sol començar per una cronologia dels fets, la revisió de documents i proves existents i, només després, els passos següents.',
+            'Els terminis, inclosos els terminis legals per demandar, i la integritat de les proves influeixen molt en el curs de l’assumpte civil, així que indiqui des del principi les dates que conegui. Si conserva contractes, missatges, justificants de pagament o fotos del lloc, esmenti-ho en el primer missatge.',
           ],
         },
         {
-          heading: 'Manželství, rodina a dědictví',
+          heading: 'Matrimoni, família i successions',
           paragraphs: [
-            'Vedeme rozvod (離婚), vypořádání majetku, výkon a převzetí práv a povinností k nezletilým dětem (未成年子女權利義務之行使或負擔), styk s dítětem (會面交往) a dědictví (繼承), a to i tehdy, nacházejí-li se strany nebo majetek v různých státech. Přeshraniční rodinné věci často vyžadují další posouzení matričních záznamů (戶籍), formy listin a jejich průkaznosti na Tchaj-wanu.',
-            'Protože rodinné věci s sebou často nesou lhůty a souběžná řízení, mělo by první shrnutí uvést vztah mezi stranami, současné bydliště a již probíhající řízení.',
+            'Atenem divorci (離婚), liquidació de béns, exercici i assumpció de drets i deures respecte de fills menors (未成年子女權利義務之行使或負擔), règim de visites (會面交往) i successions (繼承), també quan les parts o els béns estan en països distints. Els assumptes de família transfronterers solen exigir un examen addicional de documents del registre de domicili (戶籍), de la forma dels documents i del seu valor probatori a Taiwan.',
+            'Com que els assumptes de família solen anar units a terminis i a diversos tràmits en paral·lel, el resum inicial hauria d’indicar la relació entre les parts, el lloc de residència actual i els procediments ja iniciats.',
           ],
         },
         {
-          heading: 'Pracovněprávní spory',
+          heading: 'Conflictes laborals',
           paragraphs: [
-            'Tato agenda zahrnuje skončení pracovního poměru, odstupné podle tchajwanského práva (資遣費; nelze je ztotožňovat s obdobnými instituty jiných států), odměnu a spory z pracovní smlouvy (勞動契約), a to jak na straně zaměstnance, tak na straně zaměstnavatele. Při posouzení odlišujeme důvod skončení od otázek výpovědní doby, výplaty a lhůt.',
-            'Rozhodujícími dokumenty bývají pracovní smlouva, vnitřní pracovní řád (工作規則), výplatní pásky a korespondence stran. Máte-li je stále k dispozici, zmiňte to ve shrnutí.',
+            'Aquesta àrea cobreix l’extinció del contracte de treball, la indemnització segons el dret de Taiwan (資遣費; no s’identifica amb institucions d’altres països), salaris i conflictes derivats del contracte de treball (勞動契約), tant del costat de la persona treballadora com de l’ocupador. En revisar l’assumpte separem el fonament de l’extinció de les qüestions de preavís, pagament i terminis.',
+            'El contracte de treball, el reglament intern (工作規則), les nòmines i l’intercanvi escrit entre les parts solen ser els documents decisius. Si encara els conserva, indiqui-ho en el resum.',
           ],
         },
         {
-          heading: 'Trestní věci',
+          heading: 'Assumptes penals',
           paragraphs: [
-            'Zastupujeme v přípravném řízení i před soudem podezřelé a obviněné i poškozené a posuzujeme trestní rizika podnikatelské činnosti.',
-            'Trestní věci mívají krátké lhůty a pevně stanovené fáze. Obdrželi-li jste již písemnost orgánu činného v trestním řízení nebo soudu, uveďte datum na písemnosti včas, aby byl obsah posouzen ve správném pořadí.',
+            'Acompanyem en la investigació i davant el tribunal, tant la persona investigada o acusada com la víctima, i valorem el risc penal de l’activitat empresarial.',
+            'Els assumptes penals solen tenir terminis curts i etapes ja definides, de manera que si ja ha rebut un escrit de l’autoritat o del tribunal, indiqui la data d’aquest escrit des del principi perquè el contingut es revisi en l’ordre adequat.',
           ],
         },
         {
-          heading: 'Duševní vlastnictví',
+          heading: 'Propietat intel·lectual',
           paragraphs: [
-            'Podporujeme zápis ochranných známek (商標) a patentů (專利), autorské právo a spory o tato práva na Tchaj-wanu.',
-            'V této agendě rozhoduje pořadí kroků: rozsah ochrany, okamžik podání přihlášky a skutečné užívání ovlivňují volbu. Podání přihlášky samo o sobě neznamená, že jí bude vyhověno.',
+            'Ajudem en el registre de marques (商標) i patents (專利), en drets d’autor i en conflictes sobre aquests drets a Taiwan.',
+            'En aquesta àrea l’ordre dels passos és decisiu: l’abast de la protecció, el moment de la presentació i l’ús efectiu influeixen en l’estratègia. Presentar una sol·licitud no garanteix per si sola que es concedeixi.',
           ],
         },
         {
-          heading: 'Rozsah a jeho potvrzení',
+          heading: 'Abast i com es confirma',
           paragraphs: [
-            'Kancelář pracuje podle tchajwanského práva a vede věci z výše uvedených agend. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí Vaši zprávu.',
-            'Pobytový status, pracovní povolení a obdobné otázky se posuzují podle dokumentů a podle situace konkrétní osoby, nikoli podle státní příslušnosti. Dotýká-li se část Vaší věci těchto bodů, uveďte to při kontaktu. Tato stránka neslibuje výsledek ani lhůtu k odpovědi.',
+            'El despatx treballa segons el dret de Taiwan i atén assumptes de les àrees anteriors. L’abast de cada assumpte es confirma per separat després que una advocada o un advocat revisi el contingut que vostè envia.',
+            'L’estatut de residència, el permís de treball i qüestions similars es valoren a partir de l’expedient i de la situació de cada persona, no a partir de la nacionalitat. Si alguna part del seu assumpte toca aquests temes, indiqui-ho en contactar-nos. Aquesta pàgina no promet un resultat ni un termini de resposta.',
           ],
         },
       ],
     },
     about: {
-      eyebrow: 'KANCELÁŘ',
-      title: 'O Hovering International Law Firm',
+      eyebrow: 'EL DESPATX',
+      title: 'Sobre Hovering International Law Firm',
       description:
-        'Základní údaje o této tchajwanské advokátní kanceláři, o jejích pobočkách a o práci se zahraničními stranami.',
+        'Informació bàsica sobre aquest despatx d’advocats a Taiwan, les seves oficines i el treball amb parts estrangeres.',
       intro:
-        'Hovering International Law Firm je advokátní kancelář na Tchaj-wanu. Advokátky a advokáti pracují od poradenství podnikům až po soudní řízení. Tato část popisuje vznik kanceláře, sídla a práci se zahraničními stranami.',
+        'Hovering International Law Firm és un despatx d’advocats a Taiwan. Les advocades i els advocats treballen des de l’assessorament a empreses fins a l’actuació davant els tribunals. Aquesta part explica com es va fundar el despatx, les seves seus i el treball amb parts estrangeres.',
       sections: [
         {
-          heading: 'Založení a struktura',
+          heading: 'Fundació i estructura',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) byla založena v roce 2016 advokátkami a advokáty, kteří studovali na National Taiwan University (國立臺灣大學). Čínský název 昊鼎 spojuje znak 昊 („širé nebe“) se znakem 鼎 („pevný základ“) a vystihuje zaměření kanceláře od jejího založení.',
-            'Máme pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pching-tungu (屏東). Pobočka v Kao-siungu se soustředí na vedení podniků a vede občanskoprávní, trestní a správní spory. Pobočka v Tchaj-čungu vede stavební věci, duševní vlastnictví a věci s vazbou na Koreu a Japonsko. Pobočka v Pching-tungu byla otevřena v roce 2017 pro místní potřebu.',
-            'Vedle advokátní práce působí od roku 2020 také Hovering Accounting Office, která nabízí účetnictví a daňové plánování podnikatelům a soukromým osobám s majetkem.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) es va fundar el 2016 per advocats titulats per la National Taiwan University (國立臺灣大學). El nom xinès 昊鼎 uneix el caràcter 昊 («cel ampli») i el caràcter 鼎 («base sòlida»), i expressa l’orientació del despatx des del seu origen.',
+            'Tenim oficines a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) i Pingtung (屏東). L’oficina de Kaohsiung se centra en el govern corporatiu i atén conflictes civils, penals i administratius. L’oficina de Taichung atén construcció, propietat intel·lectual i assumptes relacionats amb Corea i el Japó. L’oficina de Pingtung es va obrir el 2017 per atendre la demanda local.',
+            'A més del treball d’advocacia, el 2020 es va crear Hovering Accounting Office, que ofereix comptabilitat i planificació fiscal a empresaris i a particulars amb patrimoni elevat.',
           ],
         },
         {
-          heading: 'Práce se zahraničními stranami',
+          heading: 'Treball amb parts estrangeres',
           paragraphs: [
-            'Přeshraniční práce zahrnuje zakládání společností, víza, přihlášky ochranných známek a patentů, posouzení právního rizika a daňové poradenství podnikům. Pobočka v Tchaj-čungu vede zejména stavební věci, duševní vlastnictví a věci s vazbou na Koreu a Japonsko. Advokátka Wei Tseng (曾雋崴) zastupuje klienty z Koreje, z Japonska a další mezinárodní klienty v uvedených agendách.',
-            'Zda můžeme věc převzít, závisí na obsahu a na jazyku komunikace. Spadá-li Vaše věc do uvedených agend a lze-li ji projednat v některém ze čtyř jazyků konzultace, můžete zaslat shrnutí k posouzení.',
+            'El treball transfronterer cobreix constitució de societats, visats, registre de marques i patents, avaluació de riscos jurídics i assessorament fiscal empresarial. L’oficina de Taichung atén en particular construcció, propietat intel·lectual i assumptes relacionats amb Corea i el Japó. L’advocada Wei Tseng (曾雋崴) acompanya clients de Corea, del Japó i altres clients internacionals en les àrees anteriors.',
+            'Si podem o no atendre un assumpte depèn del seu contingut i de l’idioma de la comunicació. Si el seu assumpte entra en les àrees anteriors i es pot parlar en un dels quatre idiomes de consulta, pot enviar un resum perquè una advocada o un advocat el revisi.',
           ],
         },
         {
-          heading: 'Když nás oslovíte',
+          heading: 'Quan ens contacta',
           paragraphs: [
-            'Po doručení Vašeho shrnutí posoudí advokátka nebo advokát obsah a poté hovoří o možném rozsahu práce, o dosud potřebných dokumentech a o dalších krocích. U daňových nebo účetních otázek může kancelář postupovat s účetním úsekem v jednom navazujícím postupu.',
-            'Výsledek každé věci závisí na skutkovém stavu a na dostupných dokumentech; výsledek neslibujeme. Potřebujete-li závaznou odpověď pro svou situaci, musí být dokumenty projednány s advokátkou nebo advokátem v některém ze čtyř jazyků konzultace.',
+            'Després de rebre el seu resum, una advocada o un advocat revisa el contingut i parla després de l’abast possible, dels documents que encara calen i dels passos següents. Si l’assumpte planteja qüestions comptables o fiscals, el despatx pot treballar de forma integrada amb l’àrea de comptabilitat.',
+            'El resultat de cada assumpte depèn dels fets i dels documents existents, de manera que no prometem un resultat. Si necessita una resposta concreta per a la seva situació, aquest expedient s’ha de parlar directament amb una advocada o un advocat en un dels quatre idiomes de consulta.',
           ],
         },
       ],
     },
     lawyers: {
-      eyebrow: 'ADVOKÁTI',
-      title: 'Mezinárodní tým Hovering',
-      description: 'Profily advokátek a advokátů, provozního vedení a přidruženého účetnictví a auditu Hovering.',
+      eyebrow: 'ADVOCATS',
+      title: 'Equip internacional de Hovering',
+      description: 'Perfils dels advocats, de la direcció d’operacions i de l’auditor associat de Hovering.',
       intro: '',
       sections: [],
     },
     pricing: {
-      eyebrow: 'NÁKLADY',
-      title: 'Jak se stanoví rozsah práce a náklady',
+      eyebrow: 'HONORARIS',
+      title: 'Com es fixen l’abast del treball i els honoraris',
       description:
-        'Vysvětlení pořadí: nejprve rozsah práce, poté potvrzení nákladů, a proč tato stránka neobsahuje ceník.',
+        'Explicació de l’ordre: primer l’abast, després la confirmació d’honoraris, i per què aquesta pàgina no publica una llista de tarifes.',
       intro:
-        'Tato stránka vysvětluje, jak se náklady stanoví, nikoli jejich výši. Výše závisí na rozsahu práce v jednotlivé věci a má smysl teprve tehdy, je-li tento rozsah zřejmý.',
+        'Aquesta pàgina explica com es fixen els honoraris, no la quantia. La quantia depèn de l’abast de cada assumpte i només té sentit quan aquest abast és clar.',
       sections: [
         {
-          heading: 'Nejprve se stanoví rozsah práce',
+          heading: 'El primer pas és fixar l’abast del treball',
           paragraphs: [
-            'Věci téhož druhu mohou vyžadovat velmi rozdílné úsilí, podle počtu stran, dostupných dokumentů, lhůt, které je třeba dodržet, a podle toho, zda již bylo zahájeno řízení. Prvním krokem je proto vždy stanovit, co do práce patří a co nikoli.',
-            'Shrnutí, které na začátku zašlete, je základem tohoto rozsahu. Čím jasněji popisuje průběh, Váš požadavek a lhůty, tím přesněji lze rozsah určit.',
+            'Assumptes del mateix tipus poden exigir un treball molt distint, segons el nombre de parts, els documents disponibles, els terminis que calgui complir i si un procediment ja ha començat. Per això el primer pas és sempre aclarir què entra en el treball i què no.',
+            'El resum que envia a l’inici és la base d’aquest abast. Com més clar descrigui els fets, el que espera i els terminis, més precís podrà ser l’abast.',
           ],
         },
         {
-          heading: 'Náklady se potvrzují před zahájením práce',
+          heading: 'Els honoraris es confirmen abans de començar el treball',
           paragraphs: [
-            'Je-li rozsah práce zřejmý, výše a způsob výpočtu nákladů se s Vámi projedná a potvrdí dříve, než práce začne. Změní-li se rozsah v průběhu, musí být potvrzen znovu.',
-            'Tato stránka není cenovou nabídkou a nezakládá povinnost k platbě.',
+            'Quan l’abast és clar, la quantia i el mode de càlcul es parlen i es confirmen amb vostè abans de començar. Si l’abast canvia a mig camí, aquest canvi també s’ha de confirmar de nou.',
+            'Aquesta pàgina no és una oferta de preu i no genera cap obligació de pagament. Enviar una sol·licitud a través d’aquesta pàgina tampoc no té cost.',
           ],
         },
         {
-          heading: 'Porada může být úplatná',
+          heading: 'La consulta pot ser un servei de pagament',
           paragraphs: [
-            'Porada s advokátkou nebo advokátem může být úplatnou službou. Tato stránka neříká, že první konzultace je bezplatná, a žádnou její část nelze v tomto smyslu vykládat.',
-            'Je-li porada úplatná, sdělí se výše a způsob platby dříve, než se porada uskuteční.',
+            'La consulta amb una advocada o un advocat pot ser un servei de pagament. Aquesta pàgina no afirma que la primera consulta sigui gratuïta, i cap part no s’ha de llegir en aquest sentit.',
+            'Si la consulta té cost, la quantia i la forma de pagament es comuniquen abans que tingui lloc.',
           ],
         },
         {
-          heading: 'Proč tato stránka neuvádí sazby',
+          heading: 'Per què aquesta pàgina no publica tarifes',
           paragraphs: [
-            'Náklady závisejí na věci samé: na úsilí, počtu stran, dokumentech, lhůtách a na tom, zda již řízení probíhá. Číslo stanovené předem by náklady Vašeho spisu neukázalo. Proto nejprve stanovíme rozsah práce a náklady Vám sdělíme poté, dříve než práce začne.',
-            'Vedle odměny mohou vzniknout soudní poplatky, náklady orgánů nebo třetích osob. Ty jsou od odměny oddělené a závisejí na příslušném řízení.',
+            'La quantia depèn de l’assumpte mateix: del treball que calgui fer, del nombre de parts, dels documents, dels terminis i de si un procediment ja ha començat. Un import indicat d’entrada no reflectiria el cost del seu expedient; per això, en lloc d’una llista de tarifes, fixem primer l’abast del seu assumpte i li comuniquem després els honoraris perquè els valori abans de començar.',
+            'A més dels honoraris de l’advocada o l’advocat, un assumpte pot generar taxes que s’hagin de pagar al tribunal, a una autoritat o a un tercer. Aquestes taxes són distintes dels honoraris i depenen del procediment que se segueixi.',
           ],
         },
       ],
     },
     contact: {
-      eyebrow: 'KONTAKT',
-      title: 'Jak kancelář oslovit',
+      eyebrow: 'CONTACTE',
+      title: 'Com contactar amb el despatx',
       description:
-        'Jazyk stránky, jazyky konzultace, postup pro případ, že neovládáte žádný ze čtyř jazyků, a co tato stránka neslibuje.',
+        'Idioma de la pàgina, idiomes de consulta, què passa si no pot fer servir aquests quatre idiomes, i el que aquesta pàgina no garanteix.',
       intro:
-        'Než nám napíšete, rozlište následující tři body. Bývají směšovány, ale znamenají různé věci.',
+        'Abans d’escriure’ns, tingui en compte aquests tres punts per separat. Sovint es confonen, però no volen dir el mateix.',
       sections: [
         {
-          heading: 'Tři věci, které je třeba držet odděleně',
+          heading: 'Tres coses que convé distingir',
           paragraphs: [
-            'Jazyk zobrazení stránky, jazyk konzultace s advokátkou nebo advokátem a jazyk, v němž píšete, jsou tři různé věci.',
+            'L’idioma de visualització de la pàgina, l’idioma de la consulta amb l’advocada o l’advocat i l’idioma en què vostè escriu són tres coses distintes.',
           ],
           items: [
-            'Jazyk stránky: tyto informace jsou psány česky.',
-            'Jazyk konzultace: porada probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
-            'Váš jazyk psaní: shrnutí můžete napsat ve svém jazyce; původní text se uchová beze změny.',
+            'Idioma de la pàgina: aquesta orientació està escrita en català.',
+            'Idioma de consulta: la consulta amb una advocada o un advocat es fa únicament en anglès, xinès (中文), japonès i coreà.',
+            'Idioma del seu text: pot escriure el resum en el seu propi idioma, i el text original es guarda tal qual.',
           ],
         },
         {
-          heading: 'Pokud neovládáte žádný ze čtyř jazyků konzultace',
+          heading: 'Si no pot fer servir cap dels quatre idiomes de consulta',
           paragraphs: [
-            'V kontaktním formuláři můžete zvolit „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
-            'Jde pouze o krok posouzení, nikoli o příslib. Neslibujeme tlumočníka, službu v češtině ani v jiném jazyce mimo čtyři uvedené jazyky, ani to, že každou věc přijmeme.',
+            'Al formulari de contacte pot triar «Cal confirmar la forma de comunicar-se». Respondrem per comprovar si existeix una via possible de comunicació; no es garanteix el servei en un altre idioma i no es promet un termini de resposta.',
+            'Això és només un pas de comprovació, no és una promesa. No prometem intèrpret, no prometem servei en català ni en un altre idioma fora dels quatre indicats, i no prometem que puguem acceptar tots els assumptes.',
           ],
         },
         {
-          heading: 'Co by měla obsahovat první zpráva',
+          heading: 'Què convé escriure en el primer missatge',
           paragraphs: [
-            'Uveďte, co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. Obdrželi-li jste již písemnost soudu nebo úřadu, uveďte datum na písemnosti.',
-            'V počáteční fázi zatím nemusíte zasílat číslo pasu, číslo dokladu, údaje o účtu, zdravotní dokumentaci ani soubor důkazů. Vyčkejte pokynů advokátky nebo advokáta a citlivé dokumenty zašlete až poté bezpečnou cestou.',
+            'Indiqui què va passar, quina ajuda necessita, quina relació té l’assumpte amb Taiwan i el termini si el coneix. Si ja ha rebut un escrit d’un tribunal o d’una autoritat, indiqui la data d’aquest escrit.',
+            'En aquesta primera fase encara no cal enviar número de passaport, número d’identitat, dades bancàries, historial mèdic ni l’expedient complet de proves. Esperi les indicacions de l’advocada o l’advocat i enviï aleshores el material sensible per un mitjà segur.',
           ],
         },
         {
-          heading: 'Co tato stránka neslibuje',
+          heading: 'El que aquesta pàgina no garanteix',
           paragraphs: [
-            'Neslibujeme lhůtu k odpovědi, nepotvrzujeme schůzku prostřednictvím této stránky, neslibujeme určitou advokátku ani určitého advokáta a neposkytujeme tlumočníka. Písemný překlad je něco jiného: Vaše zpráva se automaticky nepřekládá.',
-            'Odešlete-li žádost, obsah se uchová a čeká na posouzení. Neobdržíte-li po nějaké době odpověď, můžete napsat znovu na e-mailovou adresu uvedenou na kontaktní stránce.',
+            'No prometem un termini de resposta, no confirmem una cita a través d’aquesta pàgina, no prometem una advocada o un advocat concret i no posem intèrpret. La traducció escrita és una altra cosa: el missatge que envia no es tradueix de forma automàtica.',
+            'Quan envia una sol·licitud, el contingut es guarda i espera revisió. Si al cap d’un temps no rep resposta, pot tornar a escriure a l’adreça de correu que figura a la pàgina de contacte.',
           ],
         },
       ],
     },
     faq: {
-      eyebrow: 'OTÁZKY',
-      title: 'Časté otázky',
+      eyebrow: 'PREGUNTES',
+      title: 'Preguntes freqüents',
       description:
-        'Vysvětlení k rozsahu práce, přípravě, jazykům, nákladům a k tomu, co znamená odeslaná žádost.',
+        'Explicació de l’abast, de la preparació, dels idiomes, dels honoraris i del significat d’enviar una sol·licitud.',
       intro:
-        'Následující otázky jsou zodpovězeny na úrovni obecných informací. Odpověď pro Váš případ je možná teprve poté, co advokátka nebo advokát posoudí dokumenty.',
+        'Les respostes següents són informació general. La resposta per al seu propi cas només pot donar-se després que una advocada o un advocat revisi l’expedient.',
       sections: [
         {
-          heading: 'Jak tuto část užívat',
+          heading: 'Com usar aquesta part',
           paragraphs: [
-            'Nenajdete-li odpověď pro svou situaci, závisí odpověď zpravidla na zvláštních skutečnostech. Napište je proto do shrnutí, namísto abyste je dovozovali z této stránky.',
+            'Si no troba una resposta per a la seva situació, sol ser senyal que la resposta depèn de fets particulars. En aquest cas, escrigui aquests fets en el resum en contactar-nos, en lloc de deduir-los pel seu compte d’aquesta pàgina.',
           ],
         },
       ],
       faqs: [
         {
-          question: 'Které věci kancelář vede?',
+          question: 'Quin tipus d’assumptes atén aquest despatx?',
           answer:
-            'Vedeme šest agend: investice a zakládání společností na Tchaj-wanu, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Zda bude věc přijata, se rozhodne po posouzení obsahu.',
+            'Atenem sis àrees de pràctica: inversió i constitució de societats a Taiwan, litigis civils i danys, matrimoni, família i successions, conflictes laborals, assumptes penals i propietat intel·lectual. Si un assumpte s’accepta o no es decideix després de revisar-ne el contingut.',
         },
         {
-          question: 'Co si připravit před kontaktem?',
+          question: 'Què he de preparar abans de contactar amb el despatx?',
           answer:
-            'Připravte si krátké shrnutí průběhu, svého požadavku, vazby na Tchaj-wan a lhůty, existuje-li nějaká. Je-li již k dispozici písemnost soudu nebo úřadu, uveďte datum. V této fázi zatím nemusíte zasílat doklady totožnosti ani soubor důkazů.',
+            'Prepari un resum breu del que va passar, del que espera, del vincle amb Taiwan i del termini si n’hi ha. Si ja hi ha un escrit d’un tribunal o d’una autoritat, indiqui la data. En aquesta fase encara no cal enviar documents d’identitat ni totes les proves.',
         },
         {
-          question: 'Je možná porada v češtině?',
+          question: 'Puc consultar en català?',
           answer:
-            'Ne. Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky. Neslibujeme ani tlumočníka. Písemný překlad je něco jiného: původní text, který napíšete, se uchová tak, jak je, a automaticky se nepřekládá.',
+            'No. Aquesta orientació està escrita en català, però la consulta amb una advocada o un advocat es fa únicament en anglès, xinès (中文), japonès i coreà. Tampoc no prometem intèrpret. La traducció escrita és una altra cosa: el text original que vostè escriu es guarda tal qual i no es tradueix de forma automàtica.',
         },
         {
-          question: 'Co dělat, nemohu-li užít žádný ze čtyř jazyků?',
+          question: 'Què passa si no puc fer servir cap d’aquests quatre idiomes?',
           answer:
-            'Při odeslání žádosti zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili způsob komunikace, ale služba v jiném jazyce zaručena není. Jde o krok posouzení, nikoli o příslib, že můžeme pracovat v jiném jazyce.',
+            'Triï «Cal confirmar la forma de comunicar-se» en enviar la sol·licitud. Respondrem per comprovar una forma de comunicar-nos, però no es garanteix el servei en un altre idioma. És un pas de comprovació, no una promesa que puguem atendre en un altre idioma.',
         },
         {
-          question: 'Jak se nakládá s mým textem v češtině?',
+          question: 'Com es tracta el text que escric en català?',
           answer:
-            'Původní text, který napíšete, se uchová tak, jak je, a automaticky se nepřekládá. Je-li to potřeba, jazyk další komunikace se s Vámi potvrdí.',
+            'El text original que vostè escriu es guarda tal qual i no es tradueix de forma automàtica. Si cal, l’idioma de la comunicació posterior es confirma amb vostè.',
         },
         {
-          question: 'Proběhla porada již tím, že je žádost odeslána?',
+          question: 'Si ja he enviat la sol·licitud, la consulta ja ha tingut lloc?',
           answer:
-            'Ne. Odeslaná žádost čeká na posouzení advokátkou nebo advokátem. Není to právní stanovisko, není to potvrzená schůzka a samotné odeslání nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
+            'No. Una sol·licitud enviada espera la revisió d’una advocada o un advocat. No és assessorament jurídic, no és una cita confirmada, i l’enviament no crea per si sol una relació entre advocada o advocat i client.',
         },
         {
-          question: 'Jak se počítají náklady?',
+          question: 'Com es calculen els honoraris?',
           answer:
-            'Nejprve se stanoví rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu nákladů, dříve než práce začne. Tato stránka neuvádí částky a neříká, že první konzultace je bezplatná.',
+            'Primer es fixa l’abast del treball i després se’n confirmen amb vostè la quantia i el mode de càlcul abans de començar. Aquesta pàgina no publica xifres i no afirma que la primera consulta sigui gratuïta.',
         },
         {
-          question: 'Co dělat, je-li má věc velmi naléhavá?',
+          question: 'Què faig si el meu assumpte és urgent?',
           answer:
-            'Uveďte lhůtu nebo datum z úřední písemnosti hned na začátku shrnutí, aby byla tato data při posouzení vidět. Tato stránka nemá nouzový kanál a nezajišťuje lhůtu k odpovědi; nesnese-li Vaše věc odkladu, měli byste souběžně hledat další cesty ve svém místě.',
+            'Indiqui el termini o la data d’un escrit oficial a l’inici del resum perquè l’advocada o l’advocat vegi aquestes dates en revisar. Aquesta pàgina no té un canal d’emergència i no garanteix un termini de resposta; si el seu assumpte no pot esperar, convé cercar alhora altres vies allà on vostè es trobi.',
         },
       ],
     },
     privacy: {
-      eyebrow: 'SOUKROMÍ',
-      title: 'Údaje sbírané kontaktním formulářem',
+      eyebrow: 'PRIVADESA',
+      title: 'Dades que es recullen a través del formulari de contacte',
       description:
-        'Co sbírá kontaktní formulář v této české části, jak se nakládá s původním textem a jak nás oslovit ohledně Vašich údajů.',
+        'Què recull el formulari d’aquesta part en català, com es tracta el text original i com contactar-nos sobre les seves dades.',
       intro:
-        'Tato část se týká pouze kontaktního formuláře na těchto informačních stránkách. Popisuje nakládání s údaji, nikoli technickou záruku.',
+        'Aquesta part es refereix només al formulari de contacte d’aquestes pàgines d’orientació. Descriu el tractament de les dades, no una garantia tècnica.',
       sections: [
         {
-          heading: 'Které údaje se sbírají',
+          heading: 'Dades que es recullen',
           paragraphs: [
-            'Odešlete-li žádost prostřednictvím formuláře v této části, zaznamenají se tyto údaje:',
+            'Quan envia una sol·licitud a través del formulari d’aquesta part, es registren els elements següents:',
           ],
           items: [
-            'Jméno, které uvedete',
-            'E-mailová adresa pro odpověď',
-            'Jazyk zobrazení stránky v okamžiku odeslání',
-            'Jazyk, v němž jste psali',
-            'Jazyk konzultace, který si přejete',
-            'Původní text, který jste napsali',
-            'Váš souhlas s odesláním žádosti',
-            'Číslo podání pro dohledání žádosti',
+            'El nom que indica',
+            'L’adreça de correu per respondre',
+            'L’idioma de visualització de la pàgina en el moment de l’enviament',
+            'L’idioma en què va escriure',
+            'L’idioma de consulta que desitja',
+            'El text original que va escriure',
+            'El seu consentiment per enviar la sol·licitud',
+            'Un número de recepció per tornar a localitzar la sol·licitud',
           ],
         },
         {
-          heading: 'Původní text se uchová beze změny',
+          heading: 'El text original es guarda tal qual',
           paragraphs: [
-            'Váš text se uchová přesně tak, jak jste jej napsali, a automaticky se nepřekládá. Je-li pro vyřízení potřebný překlad, projedná se to s Vámi zvlášť.',
-            'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+            'El seu escrit es guarda exactament com el va redactar i no es tradueix de forma automàtica. Si cal una traducció per tramitar l’assumpte, se’n parla amb vostè per separat.',
+            'Com que el text original es guarda, no escrigui en aquesta primera fase dades que encara no calen, com el número de passaport, el número d’identitat o dades d’un compte bancari.',
           ],
         },
         {
-          heading: 'Místo uchování a přístup',
+          heading: 'On es guarda i qui pot veure-ho',
           paragraphs: [
-            'Obsah Vašeho podání se uchovává na místě, které není veřejně přístupné. Přístup k němu mají pouze oprávněné osoby v kanceláři, a to za účelem vyřízení žádosti.',
-            'Tato stránka nedává absolutní záruku bezpečnosti. Žádná cesta přenosu a žádné místo uchování není zcela bezpečné; citlivé dokumenty by proto měly být zasílány až po zvláštním pokynu advokátky nebo advokáta.',
+            'El contingut del seu enviament es guarda en un lloc que no és d’accés públic, i només les persones autoritzades del despatx hi poden accedir per tramitar aquesta sol·licitud.',
+            'Aquesta pàgina no ofereix una garantia absoluta de seguretat. Cap via d’enviament ni d’emmagatzematge no és del tot segura, de manera que el material sensible convé enviar-lo només segons les indicacions concretes de l’advocada o l’advocat.',
           ],
         },
         {
-          heading: 'Účel užití',
+          heading: 'Finalitat de l’ús',
           paragraphs: [
-            'Odeslané údaje slouží k posouzení žádosti, k odpovědi Vám, k ujasnění způsobu komunikace a k vyřízení, je-li práce převzata.',
-            'Údaje se bez zvláštního souhlasu neužívají k marketingu.',
+            'Les dades que envia s’usen per revisar la sol·licitud, tornar a contactar-lo, confirmar la forma de comunicar-se i tramitar l’assumpte si el treball arriba a començar.',
+            'Aquestes dades no s’usen per a màrqueting sense un consentiment seu donat per separat per a aquesta finalitat.',
           ],
         },
         {
-          heading: 'Oznámení a číslo podání',
+          heading: 'Avís i número de recepció',
           paragraphs: [
-            'Je-li žádost úspěšně odeslána, systém uvědomí kancelář. Není-li toto oznámení zatím potvrzeno, Váš text zůstává uchován a neztrácí se.',
-            'Číslo podání slouží k dohledání Vaší žádosti v našich záznamech. Zobrazí se po uložení; můžete je uvést při novém kontaktu.',
+            'Quan una sol·licitud s’envia amb èxit, el sistema avisa el despatx. Si aquest avís encara no està confirmat, el que vostè va escriure continua guardat i no es perd.',
+            'El número de recepció serveix per tornar a trobar la seva sol·licitud en els nostres registres. Es mostra després de guardar la sol·licitud, i pot esmentar-lo si torna a contactar-nos.',
           ],
         },
         {
-          heading: 'Vaše práva a cesta ke kontaktu',
+          heading: 'Els seus drets i com contactar-nos',
           paragraphs: [
-            'Můžete žádat o přístup ke svým údajům, o jejich opravu nebo výmaz, případně odvolat souhlas, a to prostřednictvím e-mailové adresy uvedené na kontaktní stránce. Existuje-li zákonná nebo procesní povinnost uchování, vysvětlíme omezení.',
-            'Tato stránka neuvádí pevnou dobu uchování, protože skutečná doba závisí na dalším průběhu věci a na souvisejících povinnostech. Přejete-li si dřívější výmaz, sdělte to při kontaktu.',
+            'Pot demanar accés, rectificació o supressió de les seves dades, o retirar el consentiment, a través de l’adreça de correu que figura a la pàgina de contacte. Si existeix una obligació de conservació segons les normes aplicables o per un assumpte en curs, n’explicarem el motiu de la limitació.',
+            'Aquesta pàgina no indica un termini fix de conservació, perquè la durada real depèn de si l’assumpte continua i de les obligacions de conservació associades. Si desitja que se suprimeixin abans, indiqui-ho en contactar-nos.',
           ],
         },
         {
-          heading: 'Místo uchování a poskytovatelé',
+          heading: 'Lloc d’emmagatzematge i prestadors',
           paragraphs: [
-            'Tyto stránky jsou hostovány u společnosti Vercel a Vaše podání se uchovává v neveřejném objektovém úložišti této služby. E-maily se odesílají poštovní službou, kterou kancelář užívá.',
-            'Servery jednotlivých poskytovatelů se mohou nacházet mimo Tchaj-wan, takže Vaše údaje tam mohou být uchovávány a zpracovávány. Je-li účel uchování naplněn, údaje se bez zbytečného odkladu vymažou; údaje, které je třeba uchovávat podle použitelných předpisů, zůstávají po tuto dobu. Žádosti o osobní údaje přijímá wei@hoveringlaw.com.tw.',
+            'Aquest lloc s’allotja a Vercel, i el seu enviament es guarda en un emmagatzematge d’objectes no públic d’aquest servei. El correu s’envia a través del servei de correu que utilitza el despatx.',
+            'Els servidors d’alguns prestadors poden ser fora de Taiwan, de manera que les seves dades poden emmagatzemar-s’hi i tractar-s’hi. Un cop acomplerta la finalitat de l’emmagatzematge, les dades se suprimeixen sense demora; les dades que s’hagin de conservar segons les normes aplicables es conserven durant aquest termini. Les sol·licituds relatives a dades personals es reben a wei@hoveringlaw.com.tw.',
           ],
         },
       ],
     },
     disclaimer: {
-      eyebrow: 'UPOZORNĚNÍ',
-      title: 'Rozsah a hranice informací na této stránce',
+      eyebrow: 'AVÍS LEGAL',
+      title: 'Abast i límits de la informació d’aquesta pàgina',
       description:
-        'Obecná povaha informací, právní rámec a předpoklady vzniku vztahu mezi advokátkou nebo advokátem a klientem.',
+        'El caràcter general de la informació, l’àmbit jurídic i les condicions perquè existeixi una relació entre advocada o advocat i client.',
       intro:
-        'Tato část objasňuje, co pro Vás tyto české informační stránky mohou udělat a co nikoli.',
+        'Aquesta part aclareix què poden i què no poden fer per vostè aquestes pàgines d’orientació en català.',
       sections: [
         {
-          heading: 'Pouze obecné informace',
+          heading: 'Només informació general',
           paragraphs: [
-            'Obsah těchto stránek je psán jako obecná informace. Není právní radou k Vašemu případu a nenahrazuje posouzení Vašich dokumentů.',
-            'Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku; dvě zdánlivě podobné situace mohou skončit různě.',
+            'El contingut d’aquestes pàgines està escrit com a informació general. No és assessorament jurídic per al seu cas i no substitueix la revisió del seu propi expedient.',
+            'El resultat d’un assumpte depèn dels fets, de les normes aplicables i del moment, de manera que dues situacions que semblen similars poden acabar de forma distinta.',
           ],
         },
         {
-          heading: 'Právní rámec',
+          heading: 'Àmbit jurídic',
           paragraphs: [
-            'Kancelář působí podle tchajwanského práva a tato stránka hovoří pouze o práci v tomto rámci.',
-            'Obsah není poradenstvím podle práva jiného řádu než tchajwanského, včetně práva místa Vašeho pobytu. Týká-li se část Vaší věci jiného právního řádu, ujasníme s Vámi, jaká kvalifikovaná osoba je pro tuto část potřebná.',
+            'El despatx exerceix segons el dret de Taiwan, i aquesta pàgina només parla del treball en aquest marc.',
+            'El contingut no és assessorament segons el dret de cap jurisdicció distinta de Taiwan, inclòs el dret del lloc on vostè resideix. Si alguna part del seu assumpte es regeix per una altra jurisdicció, confirmarem amb vostè quin professional qualificat cal per a aquesta part.',
           ],
         },
         {
-          heading: 'Vztah mezi advokátkou nebo advokátem a klientem nevzniká sám od sebe',
+          heading: 'La relació entre advocada o advocat i client no neix per si sola',
           paragraphs: [
-            'Přečtení této stránky, odeslání formuláře nebo e-mailu samo o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
-            'Tento vztah vzniká teprve poté, co byla věc posouzena a obě strany potvrdily převzetí práce.',
+            'Llegir aquesta pàgina, enviar el formulari o enviar un correu no crea per si sol una relació entre advocada o advocat i client.',
+            'Aquesta relació només neix després de revisar l’assumpte i que ambdues parts confirmin l’acceptació del treball.',
           ],
         },
         {
-          heading: 'Žádný příslib výsledku',
+          heading: 'No hi ha garantia de resultat',
           paragraphs: [
-            'Žádná část této stránky není příslibem ohledně výsledku věci, vyhovění přihlášce nebo žádosti či ohledně pobytového a pracovního statusu.',
-            'Vnější odkazy slouží k orientaci; neslibujeme správnost ani aktuálnost obsahu třetích osob.',
+            'Cap part d’aquesta pàgina no és una promesa sobre el resultat d’un assumpte, sobre la concessió d’una sol·licitud o sobre l’estatut de residència i de treball.',
+            'Els enllaços externs s’ofereixen per a la seva comoditat; no en garantim l’exactitud ni l’actualitat del contingut publicat per tercers.',
           ],
         },
       ],
     },
     columns: {
-      eyebrow: 'ČLÁNKY',
-      title: 'Články o tchajwanském právu',
+      eyebrow: 'ARTICLES',
+      title: 'Articles sobre el dret de Taiwan',
       description:
-        'Články v češtině k častým otázkám tchajwanského práva. Obsah je obecnou informací k okamžiku zveřejnění, nikoli právní radou k Vašemu případu.',
+        'Articles en català que expliquen qüestions freqüents del dret de Taiwan. El contingut és informació general en el moment de la publicació, no assessorament jurídic per al seu cas.',
       intro:
-        'Kancelář zveřejňuje články k častým otázkám tchajwanského práva. Články dostupné v češtině jsou na této stránce; vedle nich jsou čtyři odkazy, z nichž každý otevře seznam článků v jednom původním jazyce.',
+        'El despatx publica articles que expliquen qüestions freqüents del dret de Taiwan. Els articles disponibles en català figuren en aquesta pàgina; a més hi ha quatre enllaços, cadascun obre la llista d’articles d’un idioma original.',
       sections: [
         {
-          heading: 'Čtyři seznamy podle jazyka',
+          heading: 'Quatre llistes segons l’idioma',
           paragraphs: [
-            'Tato část obsahuje čtyři odkazy: seznam článků v korejštině, v čínštině, v angličtině a v japonštině. Každý odkaz uvádí jazyk seznamu, takže předem víte, v jakém jazyce se obsah otevře.',
-            'Tyto čtyři seznamy jsou seznamy podle původního jazyka článků, nikoli seznamy překladů. Články dostupné v češtině jsou zvlášť na této stránce.',
+            'Aquesta part conté quatre enllaços: la llista d’articles en coreà, la llista en xinès, la llista en anglès i la llista en japonès. Cada enllaç indica l’idioma de la seva llista, perquè sàpiga d’entrada en quin idioma s’obrirà el contingut.',
+            'Aquestes quatre llistes són llistes segons l’idioma original de l’article, no llistes de traduccions. Els articles ja disponibles en català figuren per separat en aquesta mateixa pàgina.',
           ],
         },
         {
-          heading: 'Kam odkazy vedou',
+          heading: 'On porten els enllaços',
           paragraphs: [
-            'Zvolíte-li jeden ze čtyř odkazů, otevře se seznam článků v daném jazyce. Ze seznamu si text vyberete sami; celý obsah se zobrazí v původním jazyce článku.',
-            'Tato stránka obsah článků neshrnuje a nezaručuje, že určité téma je k dispozici ve všech čtyřech jazycích. Každý seznam obsahuje pouze texty zveřejněné v daném jazyce.',
+            'En triar un dels quatre enllaços s’obre la llista d’articles d’aquest idioma. En aquesta llista vostè tria el text que vol llegir, i tot el contingut apareix en l’idioma original de l’article.',
+            'Aquesta pàgina no resumeix el contingut dels articles i no garanteix que un tema existeixi en els quatre idiomes. Cada llista només inclou els textos publicats en aquella llengua.',
           ],
         },
         {
-          heading: 'Nakolik může článek sloužit k orientaci',
+          heading: 'Fins on el pot orientar un article',
           paragraphs: [
-            'Články jsou obecnými informacemi k okamžiku zveřejnění. Předpisy a jejich používání se mohou změnit a článek neobsahuje všechny okolnosti Vašeho případu.',
-            'Nezakládejte proto postup ve skutečné věci pouze na článku. Užijte jej k přehledu a své dokumenty projednejte zvlášť s advokátkou nebo advokátem; tato stránka není krokem porady.',
+            'Els articles es van escriure com a informació general en el moment de la publicació. Les normes i la seva aplicació poden canviar, i un article no recull totes les circumstàncies del seu cas.',
+            'Per això, no prengui un article com a base per actuar en un assumpte real. Usi’l per entendre el panorama general i parli després del seu expedient amb una advocada o un advocat; aquesta pàgina no és el pas de consulta.',
           ],
         },
       ],

@@ -74,7 +74,7 @@ const GUIDANCE_ALL_LABEL: Record<GuidanceLocale4, string> = {
   lt: 'Visus',
   lv: 'Visus',
   et: 'Kõik',
-  ca: 'Vše', // SCAFFOLD(cs)
+  ca: 'Tot',
   is: 'Vše', // SCAFFOLD(cs)
 };
 
@@ -122,7 +122,7 @@ const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
   lt: "viewAllLabel: 'Rodyti visus'",
   lv: "viewAllLabel: 'Rādīt visus'",
   et: "viewAllLabel: 'Kuva kõik'",
-  ca: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
+  ca: "viewAllLabel: 'Veure-ho tot'",
   is: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
 };
 

@@ -580,16 +580,16 @@ export const GUIDANCE_HOME_PATHS: Record<GuidanceLocale, GuidanceHomePaths> = {
     },
     ariaLabel: 'Kaks teabeteed',
   },
-  ca: { // SCAFFOLD(cs)
+  ca: {
     setup: {
-      label: 'Informace o zakládání společností na Tchaj-wanu',
-      href: '/cs/services',
+      label: 'Informació sobre la constitució de societats a Taiwan',
+      href: '/ca/services',
     },
     legal: {
-      label: 'Právní informace o Tchaj-wanu',
-      href: '/cs/faq',
+      label: 'Informació jurídica de Taiwan',
+      href: '/ca/faq',
     },
-    ariaLabel: 'Dvě informační cesty',
+    ariaLabel: 'Dos camins d’informació',
   },
   is: { // SCAFFOLD(cs)
     setup: {

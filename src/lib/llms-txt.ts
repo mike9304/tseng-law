@@ -384,7 +384,7 @@ const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
   lt: 'Lithuanian',
   lv: 'Latvian',
   et: 'Estonian',
-  ca: 'Czech', // SCAFFOLD(cs)
+  ca: 'Catalan',
   is: 'Czech', // SCAFFOLD(cs)
 };
 
@@ -894,13 +894,13 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     confidentialNotice:
       'Kuna algtekst säilitatakse, ärge kirjutage algfaasis seda, mida veel vaja ei ole, näiteks passinumbrit, isikutunnistuse numbrit ega kontonumbreid.',
   },
-  ca: { // SCAFFOLD(cs)
+  ca: {
     consultationNotice:
-      'Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
+      'Aquesta orientació està escrita en català, però la consulta amb una advocada o un advocat es fa únicament en anglès, xinès (中文), japonès i coreà.',
     discoveryNotice:
-      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, podporu, doporučení umělé inteligence ani viditelnost.',
+      'El fitxer llms.txt és només un mapa per localitzar pàgines públiques; no promet posicionament en cercadors, aval, recomanació per part d’una intel·ligència artificial ni visibilitat garantida.',
     confidentialNotice:
-      'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+      'Com que el text original es guarda, no escrigui en aquesta primera fase dades que encara no calen, com el número de passaport, el número d’identitat o dades d’un compte bancari.',
   },
   is: { // SCAFFOLD(cs)
     consultationNotice:

@@ -2454,54 +2454,54 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
         'Ükski neljast keelest ei ole kasutatav — suhtlusviis tuleb kinnitada',
     },
   },
-  ca: { // SCAFFOLD(cs)
+  ca: {
     guidanceNotice:
-      'Tato stránka je psána česky jako obecná orientace, nikoli jako právní rada ve Vaší věci.',
+      'Aquesta pàgina està escrita en català com a orientació general, no com a assessorament jurídic per al seu propi cas.',
     consultationNotice:
-      'Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky.',
+      'La consulta es fa únicament en quatre idiomes: anglès, xinès (中文), japonès i coreà.',
     methodConfirmationNotice:
-      'Pokud neovládáte žádný ze čtyř jazyků konzultace, zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
+      'Si no pot fer servir cap dels quatre idiomes de consulta, triï «Cal confirmar la forma de comunicar-se». Respondrem per comprovar si existeix una via possible de comunicació; no es garanteix el servei en un altre idioma i no es promet un termini de resposta.',
     preparationNotice:
-      'Shrnutí můžete napsat ve svém jazyce. Původní text se uchová tak, jak jste jej napsali, a automaticky se nepřekládá.',
-    heading: 'Odeslat žádost o posouzení',
+      'Pot escriure el resum del seu assumpte en el seu propi idioma. El text original es guarda tal com l’escriu i no es tradueix de forma automàtica.',
+    heading: 'Enviar una sol·licitud de consulta',
     intro:
-      'Popište svou věc stručně. Advokátka nebo advokát posoudí obsah, než se přistoupí k dalšímu kroku.',
-    submitLabel: 'Odeslat žádost',
-    submittingLabel: 'Odesílá se…',
+      'Descrigui el seu assumpte de forma breu. Una advocada o un advocat revisa el contingut abans de parlar del pas següent.',
+    submitLabel: 'Enviar la sol·licitud',
+    submittingLabel: 'S’està enviant…',
     successMessage:
-      'Obdrželi jsme Vaši žádost; čeká na posouzení. Neznamená to, že porada proběhla nebo že byla potvrzena schůzka.',
+      'Hem rebut la seva sol·licitud i espera revisió. Això no vol dir que la consulta hagi tingut lloc ni que s’hagi confirmat una cita.',
     savedNotificationPendingMessage:
-      'Vaše žádost byla uložena, ale oznámení kanceláři zatím není potvrzeno. Co jste napsali, se neztratí. Neobdržíte-li odpověď, můžete napsat i na e-mailovou adresu z kontaktní stránky.',
-    receiptIdLabel: 'Číslo podání',
+      'La seva sol·licitud està guardada, però l’avís al despatx encara no està confirmat. El que va escriure no es perd. Si no rep resposta, també pot escriure a l’adreça de correu de la pàgina de contacte.',
+    receiptIdLabel: 'Número de recepció',
     failureMessage:
-      'Vaši žádost se nepodařilo odeslat. Zkuste to znovu nebo napište na e-mailovou adresu z kontaktní stránky.',
-    originalLanguageLabel: 'Jazyk, v němž píšete',
+      'No s’ha pogut enviar la seva sol·licitud. Torni-ho a provar o escrigui a l’adreça de correu de la pàgina de contacte.',
+    originalLanguageLabel: 'Idioma en què escriu',
     originalLanguagePlaceholder:
-      'Například čeština, angličtina, čínština nebo jiný jazyk',
-    preferredConsultationLanguageLabel: 'Jazyk, který si přejete pro konzultaci',
-    originalTextLabel: 'Krátký popis věci (ve Vašem jazyce)',
+      'Per exemple: català, anglès, xinès o un altre idioma',
+    preferredConsultationLanguageLabel: 'Idioma que prefereix per a la consulta',
+    originalTextLabel: 'Resum de l’assumpte (en el seu idioma)',
     originalTextPlaceholder:
-      'Napište, co se stalo, jakou pomoc potřebujete a lhůtu, existuje-li. Nepište číslo pasu, číslo dokladu ani údaje o účtu.',
-    nameLabel: 'Jméno',
-    emailLabel: 'E-mail',
+      'Indiqui què va passar, quina ajuda necessita i el termini si n’hi ha. No escrigui número de passaport, número d’identitat ni dades d’un compte bancari.',
+    nameLabel: 'Nom',
+    emailLabel: 'Correu electrònic',
     consentLabel:
-      'Přečetl(a) jsem stránku o soukromí a souhlasím s odesláním této žádosti.',
-    privacyLinkLabel: 'Soukromí',
-    requiredMessage: 'Toto pole je povinné.',
-    invalidEmailMessage: 'Zadejte platnou e-mailovou adresu.',
-    tooLongMessage: 'Text je příliš dlouhý. Zkraťte jej a odešlete znovu.',
+      'He llegit la pàgina de privadesa i accepto enviar aquesta sol·licitud.',
+    privacyLinkLabel: 'Privadesa',
+    requiredMessage: 'Aquest camp és obligatori.',
+    invalidEmailMessage: 'Introdueixi una adreça de correu vàlida.',
+    tooLongMessage: 'El text és massa llarg. Escurci’l i torni a enviar-lo.',
     sourceLanguageNotice:
-      'Tento článek je zveřejněn pouze v jazyce {language}; odkaz otevře původní stránku.',
+      'Aquest article només està publicat en {language}; l’enllaç obre la pàgina original.',
     unavailableTranslationNotice:
-      'Tato část zatím není k dispozici v jazyce této stránky. Odkaz v původním jazyce otevře původní text.',
-    unavailableLanguageNotice: 'Tato stránka se v jazyce {language} nenabízí.',
+      'Aquesta part encara no està disponible en l’idioma d’aquesta pàgina. Un enllaç en l’idioma original obre el text original.',
+    unavailableLanguageNotice: 'Aquesta pàgina no s’ofereix en {language}.',
     languageOptions: {
-      en: 'Angličtina (English)',
-      'zh-hant': 'Čínština (中文)',
-      ja: 'Japonština (日本語)',
-      ko: 'Korejština (한국어)',
+      en: 'Anglès (English)',
+      'zh-hant': 'Xinès (中文)',
+      ja: 'Japonès (日本語)',
+      ko: 'Coreà (한국어)',
       'needs-method-confirmation':
-        'Žádný ze čtyř jazyků není použitelný — způsob komunikace je třeba potvrdit',
+        'No puc fer servir cap dels quatre idiomes — cal confirmar la forma de comunicar-se',
     },
   },
   is: { // SCAFFOLD(cs)

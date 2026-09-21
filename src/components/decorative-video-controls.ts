@@ -189,6 +189,6 @@ export const DECORATIVE_VIDEO_CONTROL_LABELS = {
   lt: { pause: 'Pristabdyti vaizdo įrašą', play: 'Leisti vaizdo įrašą', replay: 'Leisti vaizdo įrašą iš naujo' },
   lv: { pause: 'Apturēt video', play: 'Atskaņot video', replay: 'Atskaņot video no sākuma' },
   et: { pause: 'Peatage video', play: 'Esitage video', replay: 'Esitage video uuesti' },
-  ca: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)
+  ca: { pause: 'Posar el vídeo en pausa', play: 'Reproduir el vídeo', replay: 'Tornar a reproduir el vídeo' },
   is: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)
 } as const satisfies Record<PublicLocale8, DecorativeVideoControlLabels>;

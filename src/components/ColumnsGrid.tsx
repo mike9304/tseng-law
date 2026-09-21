@@ -157,7 +157,7 @@ const GUIDANCE_FILTER_ALL_LABEL: Record<GuidanceLocale4, string> = {
   lt: 'Visus',
   lv: 'Visus',
   et: 'Kõik',
-  ca: 'Vše', // SCAFFOLD(cs)
+  ca: 'Tot',
   is: 'Vše', // SCAFFOLD(cs)
 };
 
@@ -378,10 +378,10 @@ const GUIDANCE_FILTER_CATEGORY_LABEL: Record<GuidanceLocale4, Record<ColumnCateg
     legal: 'Õigusteave Taiwani kohta',
     case: 'Juhtumianalüüs',
   },
-  ca: { // SCAFFOLD(cs)
-    formation: 'Zakládání společností na Tchaj-wanu',
-    legal: 'Právní informace o Tchaj-wanu',
-    case: 'Rozbor případu',
+  ca: {
+    formation: 'Constitució de societats a Taiwan',
+    legal: 'Informació jurídica de Taiwan',
+    case: 'Anàlisi de casos',
   },
   is: { // SCAFFOLD(cs)
     formation: 'Zakládání společností na Tchaj-wanu',
@@ -435,7 +435,7 @@ const GUIDANCE_CARD_READ_MORE_LABEL: Record<GuidanceLocale4, string> = {
   lt: 'Skaityti toliau',
   lv: 'Lasīt tālāk',
   et: 'Lugege edasi',
-  ca: 'Číst dál', // SCAFFOLD(cs)
+  ca: 'Continuar llegint',
   is: 'Číst dál', // SCAFFOLD(cs)
 };
 

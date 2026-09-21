@@ -94,7 +94,7 @@ const ELEMENTS = {
     lt: /tinkam[ąa]s? bendravimo būd/,
     lv: /izmantojamu/,
     et: /kasutatav/,
-    ca: /schůdný/, // SCAFFOLD(cs)
+    ca: /via possible/,
     is: /schůdný/, // SCAFFOLD(cs)
   },
   /** Support in a language outside the four consultation languages is not guaranteed. */
@@ -142,7 +142,7 @@ const ELEMENTS = {
     lt: /kita kalba nėra garantuojama/,
     lv: /citā valodā nav garantēts/,
     et: /muus keeles ei tagata/,
-    ca: /v jiném jazyce zaručena není/, // SCAFFOLD(cs)
+    ca: /un altre idioma/,
     is: /v jiném jazyce zaručena není/, // SCAFFOLD(cs)
   },
   /** No reply time is promised. */
@@ -190,7 +190,7 @@ const ELEMENTS = {
     lt: /atsakymo termino|atsakymo terminas/,
     lv: /atbildes termiņ/,
     et: /vastamise tähtaeg/,
-    ca: /lhůtu k odpovědi|lhůta k odpovědi/, // SCAFFOLD(cs)
+    ca: /termini de resposta/,
     is: /lhůtu k odpovědi|lhůta k odpovědi/, // SCAFFOLD(cs)
   },
   /** The confirmation step is a step, not a promise. */
@@ -238,7 +238,7 @@ const ELEMENTS = {
     lt: /pažad/,
     lv: /nevis solījums/,
     et: /mitte lubadus/,
-    ca: /příslib/, // SCAFFOLD(cs)
+    ca: /no és una promesa/,
     is: /příslib/, // SCAFFOLD(cs)
   },
   /** No interpreter is arranged. */
@@ -286,7 +286,7 @@ const ELEMENTS = {
     lt: /vertėjo žodžiu|vertėjas žodžiu/,
     lv: /tulku/,
     et: /tõlki/,
-    ca: /tlumočník/, // SCAFFOLD(cs)
+    ca: /intèrpret/,
     is: /tlumočník/, // SCAFFOLD(cs)
   },
   /** Not every matter can be accepted. */
@@ -334,7 +334,7 @@ const ELEMENTS = {
     lt: /kiekvieną bylą/,
     lv: /katru lietu/,
     et: /iga asja/,
-    ca: /každou věc/, // SCAFFOLD(cs)
+    ca: /tots els assumptes/,
     is: /každou věc/, // SCAFFOLD(cs)
   },
   /** No outcome is promised. */
@@ -382,7 +382,7 @@ const ELEMENTS = {
     lt: /rezultat/,
     lv: /iznākum/,
     et: /ei luba tulemust|tulemust me ei luba/,
-    ca: /výsledek/, // SCAFFOLD(cs)
+    ca: /resultat/,
     is: /výsledek/, // SCAFFOLD(cs)
   },
   /** A certain answer needs one of the four consultation languages. */
@@ -430,7 +430,7 @@ const ELEMENTS = {
     lt: /ketur/,
     lv: /četr/,
     et: /neljast nõustamiskeelest/,
-    ca: /čtyř/, // SCAFFOLD(cs)
+    ca: /quatre idiomes de consulta/,
     is: /čtyř/, // SCAFFOLD(cs)
   },
   /** This page is not the consultation step. */
@@ -478,7 +478,7 @@ const ELEMENTS = {
     lt: /konsultacijos žingsnis/,
     lv: /konsultācijas solis/,
     et: /nõustamissamm/,
-    ca: /krokem porady|krok porady/, // SCAFFOLD(cs)
+    ca: /pas de consulta/,
     is: /krokem porady|krok porady/, // SCAFFOLD(cs)
   },
   /** A sent message is not legal advice. */
@@ -526,7 +526,7 @@ const ELEMENTS = {
     lt: /teisinė nuomonė/,
     lv: /juridisks atzinums/,
     et: /õiguslik seisukoht/,
-    ca: /právní\w* stanovisk/, // SCAFFOLD(cs)
+    ca: /assessorament jurídic/,
     is: /právní\w* stanovisk/, // SCAFFOLD(cs)
   },
   /** A sent message is not a confirmed appointment. */
@@ -574,7 +574,7 @@ const ELEMENTS = {
     lt: /susitikim/,
     lv: /tikšan/,
     et: /kohtumist|kohtumine/,
-    ca: /schůzk/, // SCAFFOLD(cs)
+    ca: /cita/,
     is: /schůzk/, // SCAFFOLD(cs)
   },
   /** Sending a message forms no attorney–client relationship. */
@@ -622,7 +622,7 @@ const ELEMENTS = {
     lt: /advokato ir kliento santyk/,
     lv: /attiecības starp advokāt/,
     et: /suhet advokaadi ja kliendi vahel/,
-    ca: /vztah mezi advokát/, // SCAFFOLD(cs)
+    ca: /relació entre advocad/,
     is: /vztah mezi advokát/, // SCAFFOLD(cs)
   },
   /** Written text is never machine-translated for the reader. */
@@ -670,7 +670,7 @@ const ELEMENTS = {
     lt: /automatišk/,
     lv: /automātiski/,
     et: /automaatselt/,
-    ca: /automaticky/, // SCAFFOLD(cs)
+    ca: /de forma automàtica/,
     is: /automaticky/, // SCAFFOLD(cs)
   },
   /** The family group is named as covering marriage matters. */
@@ -718,7 +718,7 @@ const ELEMENTS = {
     lt: /santuok/i,
     lv: /laulīb/i,
     et: /abielu/i,
-    ca: /manželství/i, // SCAFFOLD(cs)
+    ca: /matrimoni/i,
     is: /manželství/i, // SCAFFOLD(cs)
   },
   /** Meeting the attorney may be a paid service. */
@@ -766,7 +766,7 @@ const ELEMENTS = {
     lt: /mokam/,
     lv: /maksas|pret samaksu/,
     et: /tasuline/,
-    ca: /úplatn/, // SCAFFOLD(cs)
+    ca: /servei de pagament/,
     is: /úplatn/, // SCAFFOLD(cs)
   },
 } as const satisfies Record<string, ElementMarkers>;

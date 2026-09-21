@@ -139,7 +139,7 @@ const CONSULTATION_LANGUAGE_TERMS: Record<string, readonly string[]> = {
   my: ['အင်္ဂလိပ်', 'တရုတ်', 'ဂျပန်', 'ကိုရီးယား'],
   km: ['ภาษาอังกฤษ', 'ภาษาจีน', 'ภาษาญี่ปุ่น', 'ภาษาเกาหลี'], // PLACEHOLDER(th) until the km lane is integrated
   ne: ['अङ्ग्रेजी', 'चिनियाँ', 'जापानी', 'कोरियाली'],
-  mn: ['английском', 'китайском', 'японском', 'корейском'], // PLACEHOLDER(ru) until the mn lane is integrated
+  mn: ['англи', 'хятад', 'япон', 'солонгос'],
   is: ['ensku', 'kínversku', 'japönsku', 'kóresku'],
 };
 
@@ -306,7 +306,7 @@ const SERVICES_SCOPE_TERMS: Record<string, readonly [string, RegExp]> = {
   my: ['အကျယ်အဝန်း', /အကျယ်အဝန်း/],
   km: ['ขอบเขต', /ขอบเขต/], // PLACEHOLDER(th)
   ne: ['दायरा', /दायरा/],
-  mn: ['Объём', /Объём/], // PLACEHOLDER(ru)
+  mn: ['хэмжээ', /хэмжээ/i],
   is: ['Umfang', /umfang/i],
 };
 
@@ -441,10 +441,7 @@ const SERVICES_ACCEPTANCE_PATTERNS: Record<
     ['พิจารณาหลังจาก', /พิจารณาหลังจาก/],
   ],
   ne: [['जाँचको प्रतीक्षा', /जाँचको प्रतीक्षा/], ['कानुनी राय होइन', /कानुनी राय होइन/]],
-  mn: [
-    ['не юридическая консультация', /не юридическая консультация/],
-    ['не подтверждённая запись', /не подтверждённая запись/],
-  ],
+  mn: [['хяналтыг хүлээнэ', /хяналтыг хүлээнэ/i], ['эрх зүйн зөвлөгөө биш', /эрх зүйн зөвлөгөө биш/i]],
   is: [['bíður mats', /bíður mats/i], ['ekki lögfræðilegt álit', /ekki lögfræðilegt álit/i]],
 };
 

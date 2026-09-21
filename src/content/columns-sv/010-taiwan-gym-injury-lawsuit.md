@@ -1,5 +1,5 @@
 ---
-title: "Skadestånd vid skada på gym i Taiwan: fall i 1 instans, frister, bevis och ersättningsposter"
+title: "Skadestånd vid skada på gym i Taiwan: fall i första instans, frister, bevis och ersättningsposter"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
 lastmod: "2026-07-25"
 date_display: "13 september 2025"
@@ -9,19 +9,19 @@ categories:
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 
-# Skadestånd vid skada på gym i Taiwan: fall i 1 instans, frister, bevis och ersättningsposter
+# Skadestånd vid skada på gym i Taiwan: fall i första instans, frister, bevis och ersättningsposter
 
 ![Huvudbild](../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg)
 
-Utifrån ett ärende där en koreansk universitetsstudent skadades medan denne fick anvisningar av en tränare (教練) på ett gym (健身房) i Taiwan förklarar denna text de rättsliga förfaranden som kan prövas efter en gymskada, kravfrister, metoder för bevisbevarande (保全證據) och ersättningsposter (損害賠償).
+Utifrån ett ärende där en koreansk universitetsstudent skadades medan denne fick anvisningar av en tränare (教練) på ett gym (健身房) i Taiwan förklarar den här texten de rättsliga förfaranden som kan prövas utifrån en gymskada, kravfrister, metoder för bevisbevarande (保全證據) och ersättningsposter (損害賠償).
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
 Olyckan inträffade på ett gym i Taichung (臺中), under ett marklyftpass (硬舉) som leddes av tränaren. Efter skadan räcker det inte att bara hålla fast vid att olyckan skedde inne på gymmet; man måste tillsammans granska användarens träningserfarenhet och hälsotillstånd, övningstyp och vikt, tränarens förklaringar och anvisningar, rörelsen och reaktionen just då, orsakssambandet (因果關係) mellan skadan och övningen, och de handlingar som stöder skadan.
 
-Jag var ombud (訴訟代理人) för käranden, den koreanska studenten. Distriktsdomstolen i Taichung förordnade den 24 januari 2022, i 1-instansdomen i konsumentmål nummer 7 för år 109 (109年度消字第7號), att svaranden skulle betala [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) samt den ränta som anges i domen.
+Jag var ombud (訴訟代理人) för käranden, den koreanska studenten. Distriktsdomstolen i Taichung förpliktade den 24 januari 2022, i domen i första instans i konsumentmål nr 7 för år 109 (2020) (109年度消字第7號), svaranden att betala [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) samt den ränta som anges i domen.
 
-Därefter har pressen uppgett att parterna förliktes (和解) i 2 instans. Enbart den officiella 1-instansdomen gör det inte möjligt att bekräfta utfallet i 2 instans eller förlikningsbeloppet; detta får inte läsas som det lagakraftvunna resultatet av 1-instansdomen.
+Därefter har pressen uppgett att parterna förliktes (和解) i andra instans. Enbart den officiella domen i första instans gör det inte möjligt att bekräfta utfallet i andra instans eller förlikningsbeloppet; det får inte läsas som ett lagakraftvunnet slutresultat.
 
 Rubrikerna på pressuppgifter, nätinlägg och rättskommentarer om detta ärende, översatta till svenska, är följande. Rubrikerna nedan syftar bara till att presentera innehållet i varje länk; de betyder inte att denna text själv fastställer faktum.
 
@@ -29,41 +29,41 @@ Rubrikerna på pressuppgifter, nätinlägg och rättskommentarer om detta ärend
 
 [En universitetsstudent, diskbråck (椎間盤破裂) efter marklyft på 90 kg… yrkar skadestånd mot gymmet](https://tw.news.yahoo.com/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82-%E6%80%92%E5%91%8A%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B1%82%E5%84%9F-095800997.html)
 
-![Koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i 1 instans 1.570.000 TWD i skadestånd och uppgift om förlikning i 2 instans](../images/010-taiwan-gym-injury-lawsuit/img-03.jpg)
+![Koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i första instans 1.570.000 TWD i skadestånd och uppgift om förlikning i andra instans](../images/010-taiwan-gym-injury-lawsuit/img-03.jpg)
 
-[Koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i 1 instans 1.570.000 TWD i skadestånd och uppgift om förlikning i 2 instans](https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com)
+[Koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i första instans 1.570.000 TWD i skadestånd och uppgift om förlikning i andra instans](https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com)
 
-![Koreansk universitetsstudent, skada under marklyft på 90 kg… 1 instans 1.570.000 TWD i skadestånd och uppgift om förlikning i 2 instans](../images/010-taiwan-gym-injury-lawsuit/img-04.jpg)
+![Koreansk universitetsstudent, skada under marklyft på 90 kg… första instans 1.570.000 TWD i skadestånd och uppgift om förlikning i andra instans](../images/010-taiwan-gym-injury-lawsuit/img-04.jpg)
 
-[Koreansk universitetsstudent, skada under marklyft på 90 kg… 1 instans 1.570.000 TWD i skadestånd och uppgift om förlikning i 2 instans](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
+[Koreansk universitetsstudent, skada under marklyft på 90 kg… första instans 1.570.000 TWD i skadestånd och uppgift om förlikning i andra instans](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
 
 ![En universitetsstudent, diskbråck efter marklyft på 90 kg… yrkar skadestånd mot gymmet](../images/010-taiwan-gym-injury-lawsuit/img-05.jpg)
 
 [En universitetsstudent, diskbråck efter marklyft på 90 kg… yrkar skadestånd mot gymmet](https://news.ebc.net.tw/news/living/362075)
 
-![Inlägg på PTT: koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i 1 instans, föreläggande mot gymmet att betala 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
+![Inlägg på PTT: koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i första instans, föreläggande mot gymmet att betala 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
 
-[Inlägg på PTT: koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i 1 instans, föreläggande mot gymmet att betala 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
+[Inlägg på PTT: koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i första instans, föreläggande mot gymmet att betala 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
-![Blogg: skada vid marklyft på 90 kg hos en koreansk universitetsstudent på 70 kg och skadestånd på mer än 1.000.000 TWD… fanns det fel hos gymmet? Vilken är den tränandes hållning?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
+![Blogg: skada vid marklyft på 90 kg hos en koreansk universitetsstudent på 70 kg och skadestånd på mer än 1.000.000 TWD… fanns det fel hos gymmet? Vilken var den tränandes inställning?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
-[Blogg: skada vid marklyft på 90 kg hos en koreansk universitetsstudent på 70 kg och skadestånd på mer än 1.000.000 TWD… fanns det fel hos gymmet? Vilken är den tränandes hållning?](https://blog.udn.com/blackjack/179081715)
+[Blogg: skada vid marklyft på 90 kg hos en koreansk universitetsstudent på 70 kg och skadestånd på mer än 1.000.000 TWD… fanns det fel hos gymmet? Vilken var den tränandes inställning?](https://blog.udn.com/blackjack/179081715)
 
-![Rättskommentar: en universitetsstudent, diskbråck under marklyft… i 1 instans, föreläggande mot ett känt gym att betala 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
+![Rättskommentar: en universitetsstudent, diskbråck under marklyft… i första instans, föreläggande mot ett känt gym att betala 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
-[Rättskommentar: en universitetsstudent, diskbråck under marklyft… i 1 instans, föreläggande mot ett känt gym att betala 1.570.000 TWD](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
+[Rättskommentar: en universitetsstudent, diskbråck under marklyft… i första instans, föreläggande mot ett känt gym att betala 1.570.000 TWD](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
 
-![Domsläsning: ärende om akut diskbråck efter att en nybörjare på gymmet fått anvisning om marklyft på 90 kg](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
+![Domskommentar: ärende om akut diskbråck efter att en nybörjare på gymmet fått anvisning om marklyft på 90 kg](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
 
-[Domsläsning: ärende om akut diskbråck efter att en nybörjare på gymmet fått anvisning om marklyft på 90 kg](https://www.instagram.com/p/Crp4vJag7v3/)
+[Domskommentar: ärende om akut diskbråck efter att en nybörjare på gymmet fått anvisning om marklyft på 90 kg](https://www.instagram.com/p/Crp4vJag7v3/)
 
 ![Fick en koreansk universitetsstudent diskbråck när denne gjorde marklyft på 90 kg under personlig träning?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
 **Fick en koreansk universitetsstudent diskbråck när denne gjorde marklyft på 90 kg under personlig träning?**
 
-Det praktiska intresset i detta ärende är att det visar att ansvaret inte avgörs omedelbart bara av att en skada har uppstått på gymmet. Innehållet i den säkerhetsplikt (安全義務) som åvilar tjänsteleverantören, den konkreta anvisningshandlingen och överträdelsen av aktsamhetsplikten (注意義務), orsakssambandet mellan skadan och beteendet samt skadans omfattning bedöms utifrån handlingarna i varje ärende. Villkoren och fristerna för det straffrättsliga och det civilrättsliga förfarandet är också skilda, så att spåren redan efter olyckan bör ordnas åtskilt.
+Det praktiska intresset i det här ärendet är att det visar att ansvaret inte avgörs omedelbart bara av att en skada har uppstått på gymmet. Innehållet i den säkerhetsplikt (安全義務) som åvilar tjänsteleverantören, den konkreta anvisningshandlingen och överträdelsen av aktsamhetsplikten (注意義務), orsakssambandet mellan skadan och beteendet samt skadans omfattning bedöms utifrån handlingarna i varje ärende. Villkoren och fristerna för det straffrättsliga och det civilrättsliga förfarandet är också skilda, så att spåren redan efter olyckan bör ordnas åtskilt.
 
-Det som följer är allmän information för att förklara tvister om gymskador i Taiwan; det är inte ett rättsutlåtande för ett konkret ärende. De faktiska rättigheterna och tillvägagångssättet kan variera efter avtalsförhållandet, olycksförloppet, skadans orsak och grad, parternas beteende, försäkringsvillkoren, den bevarade bevisningen och tillämplig rätt.
+Det som följer är allmän information för att förklara tvister om gymskador i Taiwan; det är inte ett rättsutlåtande för ett konkret ärende. De faktiska rättigheterna och tillvägagångssättet kan variera beroende på avtalsförhållandet, olycksförloppet, skadans orsak och grad, parternas beteende, försäkringsvillkoren, den bevarade bevisningen och tillämplig rätt.
 
 ## 1. Efter en gymskada i Taiwan, vilka rättsliga förfaranden kan prövas?
 
@@ -71,15 +71,15 @@ Det som följer är allmän information för att förklara tvister om gymskador 
 
 Det betyder inte att företagets eller tränarens ansvar erkänns varje gång en skada uppstår på gymmet. Det måste bedömas, ärende för ärende, vilken aktsamhetsplikt som konkret fanns, om den överträddes, om det finns orsakssamband mellan överträdelsen och skadan, om en verklig skada uppstod, vilka invändningar motparten har, och om det finns bevis som stöder varje påstående och varje invändning.
 
-Om de lagstadgade rekvisiten för brottet vållande till kroppsskada (過失傷害) är uppfyllda kan straffrättslig anmälan (告訴) prövas. Civilrättsligt skadeståndsyrkande kan också prövas, men vilken grund som gäller bland avtalsansvar, utomobligatoriskt ansvar (侵權行為) och konsumentskyddsansvar, samt ansvarets omfattning, varierar efter de konkreta fakta. Att flera förfaranden kan prövas för samma olycka betyder inte att alla måste följas, och inte heller att den ena sidans utgång skulle vara given.
+Om de lagstadgade rekvisiten för brottet vållande till kroppsskada (過失傷害) är uppfyllda kan straffrättslig anmälan (告訴) prövas. Civilrättsligt skadeståndsyrkande kan också prövas, men vilken grund som gäller bland avtalsansvar, utomobligatoriskt ansvar (侵權行為) och konsumentskyddsansvar, samt ansvarets omfattning, varierar beroende på de konkreta fakta. Att flera förfaranden kan prövas för samma olycka betyder inte att alla måste följas, och inte heller att den ena sidans utgång skulle vara given.
 
 ## 2. Vilka frister gäller för straffrättslig anmälan och civilt skadestånd?
 
 Enligt [artikel 287 i Taiwans strafflag (刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001) är brottet vållande till kroppsskada i artikel 284 ett brott som kräver anmälan för att åtal ska kunna väckas (告訴乃論之罪). Enligt [artikel 237 i Taiwans rättegångsbalk i brottmål (刑事訴訟法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001) ska den som har anmälningsrätt i princip anmäla inom 6 månader från den dag då denne fick kännedom om gärningsmannen.
 
-Rätten att yrka skadestånd för otillåten gärning enligt [artikel 197 i Taiwans civillag (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) upphör i princip om den inte utövas under 2 år från det att den skadelidande har fått kännedom om skadan och den som är skyldig att ersätta, och den upphör också när 10 år har gått från gärningen.
+Rätten att yrka utomobligatoriskt skadestånd (侵權行為) enligt [artikel 197 i Taiwans civillag (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) upphör i princip om den inte utövas under 2 år från det att den skadelidande har fått kännedom om skadan och den som är skyldig att ersätta, och den upphör också när 10 år har gått från gärningen.
 
-Om dock en annan yrkandegrund, som avtalsansvar, kommer i fråga, eller om andra regler gäller för fristens början, lopp, avbrott med mera, kan det variera efter fakta. Fristen får inte fastställas bara efter olycksdatum eller diagnosdatum; det är säkrare att tidigt och individuellt kontrollera de möjliga yrkandegrunderna och referensdatumen.
+Om dock en annan yrkandegrund, som avtalsansvar, kommer i fråga, eller om andra regler gäller för fristens början, lopp, avbrott med mera, kan det variera beroende på fakta. Fristen får inte fastställas bara utifrån olycksdatum eller diagnosdatum; det är säkrare att tidigt och individuellt kontrollera de möjliga yrkandegrunderna och referensdatumen.
 
 ## 3. Direkt efter olyckan, vilka bevis ska bevaras och hur?
 
@@ -107,9 +107,9 @@ Ja. Att en försäkring finns kan vara relevant när ersättningskällan prövas
 
 Särskilt nedsatt arbetsförmåga, inkomstminskning under återhämtningsperioden och icke-ekonomisk skada kan kräva medicinska, inkomst- och yrkeshandlingar, eller ett sakkunnigutlåtande. Det belopp som försäkringsgivaren föreslår eller det som den skadelidande kräver blir inte omedelbart det belopp som domstolen godkänner, och resultatet av invaliditetsbedömningen avgör inte heller automatiskt ersättningen. I den faktiska hanteringen måste försäkringsbrevet och villkoren, innehållet i olycksanmälan, försäkringsgivarens svar, behandlingsförloppet och skadehandlingarna kontrolleras tillsammans.
 
-Om ni har fått en gymskada är det viktigt att först få den nödvändiga vården, bevara handlingar som ännu kan säkras innan de försvinner och, tidigt, inhämta individuell vägledning om de frister och förfaranden som kan gälla för ärendet. Förhandling, konsumentklagomål (消費申訴) eller medling (調解), straffrättslig anmälan och civilt skadeståndsyrkande är alla medel som kan väljas efter ärendet, och det är inte förfaranden som alltid måste följas i sin helhet.
+Om du har skadats på gymmet är det viktigt att först få den vård som behövs, bevara handlingar som ännu kan säkras innan de försvinner och, tidigt, inhämta individuell vägledning om de frister och förfaranden som kan gälla för ärendet. Förhandling, konsumentklagomål (消費申訴) eller medling (調解), straffrättslig anmälan och civilt skadeståndsyrkande är alla medel som kan väljas beroende på ärendet, och det är inte förfaranden som alltid måste följas i sin helhet.
 
-Ett fall på ett verksamhetsgolv, hälsoskada av livsmedel och en skada som uppstått vid användning av en facktjänst kan också ha säkerhetsplikt, orsakssamband, skada och bevis som tvistefrågor. Slutsatsen i ett gymärende kan dock inte tillämpas oförändrad på en annan olycka, så varje falls avtal, beteende och tillämpliga normer måste granskas separat.
+Fall i en affärslokal, hälsoskada av livsmedel och skada vid en yrkesmässig tjänst kan också väcka frågor om säkerhetsplikt, orsakssamband, skada och bevis. Slutsatsen i ett gymärende kan dock inte tillämpas oförändrad på en annan olycka, så varje falls avtal, beteende och tillämpliga normer måste granskas separat.
 
 ---
 

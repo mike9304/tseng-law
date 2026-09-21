@@ -19,9 +19,9 @@ Som tidigare nämnts är det i Taiwan inte lätt för den anställda att få avg
 
 Särskilt om den anställda säger upp sig på eget initiativ (自請離職),
 
-kan avgångsvederlag (資遣費) inte tas ut (artikel 18 i lagen om arbetsnormer),
+kan den anställda inte få avgångsvederlag (資遣費) (artikel 18 i lagen om arbetsnormer),
 
-och detta skiljer sig från Korea.
+och det skiljer sig från vad som gäller i en del andra länder, till exempel Korea.
 
 ​
 
@@ -53,7 +53,7 @@ inte betalar lön (工資) i tid,
 
 inte betalar övertidsersättning (加班費),
 
-eller inte ansluter arbetstagaren till arbetsförsäkring (勞保) eller sjukförsäkring (健保).
+eller inte ansluter arbetstagaren till den taiwanesiska arbetstagarförsäkringen (勞保) eller sjukförsäkringen (健保).
 
 I sådana fall måste arbetsgivaren betala avgångsvederlag till arbetstagaren även om arbetstagaren avslutar arbetsavtalet på vanligt sätt.
 
@@ -73,11 +73,11 @@ Arbetstagaren måste alltså hålla reda på fristen väl.
 
 Med andra ord,
 
-Taiwans rätt, oavsett om felet ligger på företagets sida
+Taiwans rätt ger, oavsett om felet ligger på företagets sida
 
 eller på den anställdas sida,
 
-ger vardera parten rätt att inte betala avgångsvederlag eller att kräva det.
+den ena parten rätt att slippa betala avgångsvederlag och den andra rätt att kräva det.
 
 Ibland, när det finns fel på båda sidor i arbetsförhållandet,
 
@@ -89,7 +89,7 @@ kan avgångsvederlag utebli eller krävas.
 
 Därför är, i arbetstvister (勞資糾紛) i Taiwan,
 
-«**tiden**» mycket viktig.
+”**tiden**” mycket viktig.
 
 I de flesta fall får den som förberett sig i förväg sina rättigheter skyddade.
 

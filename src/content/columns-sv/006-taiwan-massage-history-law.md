@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Har ni själva upplevt den tidiga tiden med de traditionella taiwanesiska frisersalongerna (理髮廳)?
+Har du själv upplevt den tidiga tiden med de traditionella taiwanesiska frisersalongerna (理髮廳)?
 
 Sättet att tvätta håret i de salongerna var mycket säreget.
 
@@ -29,13 +29,13 @@ Det liknade mycket dagens vietnamesiska hårtvätt.
 
 Och dessa salonger i taiwansk stil är ett säreget kulturminne för många människor i Taiwan.
 
-(Avslöjar jag inte oavsiktligt min ålder?)
+(Det avslöjar kanske min ålder.)
 
 ​
 
 Hur som helst, när man talar om massage (按摩),
 
-finns det också i Taiwan många massagegenomfarter.
+finns det också i Taiwan gott om massagestråk.
 
 Massageinrättningar av alla slag ligger där i rad.
 
@@ -51,13 +51,13 @@ kunde i praktiken endast personer med synnedsättning (視障者) utöva massage
 
 Att en individ utan synnedsättning (非視障者) utövade yrket var olagligt.
 
-Denna lag höll i sig till 2003; då anställde herr Lin, som drev en frisersalong,
+Den lagen gällde fram till 2003; då anställde herr Lin, som drev en frisersalong,
 
 anställda utan synnedsättning för hårtvätt och massage, och polisen upptäckte det.
 
-Enligt den dåvarande rätten ålades herr Lin och dessa anställda vardera en administrativ böter (罰鍰) om TWD 40.000, TWD 10.000 och TWD 20.000 i ny taiwanesisk dollar (新臺幣).
+Enligt den dåvarande rätten ålades herr Lin och de anställda sanktionsavgifter (罰鍰) om TWD 40.000, TWD 10.000 respektive TWD 20.000 i ny taiwanesisk dollar (新臺幣).
 
-Herr Lin ansåg denna sanktion mycket orättvis och begärde en konstitutionell tolkning.
+Herr Lin ansåg sanktionen orimlig och begärde en konstitutionell tolkning.
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
@@ -73,7 +73,7 @@ en lag som skyddade anställning och rätten till existens (生存權) för pers
 
 Med tidens gång och utvidgningen av konsumtionsmarknaden
 
-växte dock uppfattningen fram att att skydda enbart rättigheterna för personer med synnedsättning alltför starkt begränsade rätten till arbete för personer utan synnedsättning.
+växte dock uppfattningen fram att ett alltför starkt skydd av enbart rättigheterna för personer med synnedsättning begränsade rätten till arbete för personer utan synnedsättning.
 
 I debatten om yrkesrättigheterna för personer med och utan synnedsättning framträdde många motstående meningar.
 
@@ -81,7 +81,7 @@ Man frågade sig till exempel om den skrivna regeln som endast tillät personer 
 
 och man tvivlade på att denna regel verkligen hade bidragit till att skydda anställning och existens för personer med synnedsättning.
 
-Slutligen förklarade de stora domarna (大法官) den bestämmelse som endast tillät personer med synnedsättning att utöva massageyrket som grundlagsstridig (違憲).
+Slutligen förklarade de stora domarna vid Justitieyuanen (大法官) den bestämmelse som endast tillät personer med synnedsättning att utöva massageyrket som grundlagsstridig (違憲).
 
 ​
 
@@ -113,16 +113,16 @@ och lagstiftaren strävar efter att finna en relativt balanserad lösning för a
 
 I dag väljer många massage för att släppa på spänningen,
 
-men i denna process uppstår fortlöpande fall av sexuella trakasserier (性騷擾) eller otuktiga handlingar (猥褻).
+men i samband med det uppstår återkommande fall av sexuella trakasserier (性騷擾) eller otuktiga handlingar (猥褻).
 
 Det som ursprungligen bara var att ta emot massage för att släppa på spänningen
 
 kan bli ett trauma för livet om man utsätts för sexuella trakasserier.
 
-Om ni under en massage i Taiwan känner obehag eller något underligt,
+Om du under en massage i Taiwan känner obehag eller att något är fel,
 
-meddela det omedelbart eller begär att man stannar, för att skydda er.
+säg genast till eller be om att behandlingen avbryts, för att skydda dig.
 
-Om ni anser att ni har utsatts för sexuella trakasserier,
+Om du anser att du har utsatts för sexuella trakasserier,
 
 gå till polisstationen tillsammans med en betrodd vän eller med en advokat i Taiwan (律師) för att göra anmälan.

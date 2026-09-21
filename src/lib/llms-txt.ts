@@ -665,9 +665,9 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
   },
   sv: {
     consultationNotice:
-      'Dessa anvisningar är skrivna på svenska, men rådgivningen med en advokat sker endast på engelska, kinesiska (中文), japanska och koreanska.',
+      'Den här vägledningen är skriven på svenska, men rådgivningen med en advokat sker endast på engelska, kinesiska (中文), japanska och koreanska.',
     discoveryNotice:
-      'Filen llms.txt är endast en karta för att hitta offentliga sidor; den lovar inte sökplacering, stöd, rekommendation från artificiell intelligens eller synlighet.',
+      'Filen llms.txt är bara en karta för att hitta offentliga sidor; den lovar inte sökplacering, stöd, rekommendation från artificiell intelligens eller synlighet.',
     confidentialNotice:
       'Eftersom originaltexten sparas, skriv i inledningen inget som ännu inte behövs, till exempel passnummer, identitetsnummer eller kontouppgifter.',
   },

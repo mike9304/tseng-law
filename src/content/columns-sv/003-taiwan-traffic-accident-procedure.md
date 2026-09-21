@@ -1,5 +1,5 @@
 ---
-title: "Q&A om hantering av trafikolyckor i Taiwan: åtgärder på platsen, vårdslöshet, förlikning och skadestånd"
+title: "Frågor och svar om hantering av trafikolyckor i Taiwan: åtgärder på platsen, vårdslöshet, förlikning och skadestånd"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
 date_display: "13 september 2025"
@@ -9,13 +9,13 @@ categories:
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 ---
 
-# Q&A om hantering av trafikolyckor i Taiwan: åtgärder på platsen, vårdslöshet, förlikning och skadestånd
+# Frågor och svar om hantering av trafikolyckor i Taiwan: åtgärder på platsen, vårdslöshet, förlikning och skadestånd
 
 ![Bild som förklarar säkerhetsåtgärder på platsen och bevarande av bevis omedelbart efter en trafikolycka i Taiwan](../images/003-taiwan-traffic-accident-procedure/featured-01.jpg)
 
 ![Exempelbild som registrerar fordonens läge och spår på körbanan på platsen för en trafikolycka](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-Om en trafikolycka (交通事故) inträffar i Taiwan ska ni först trygga säkerheten, göra anmälan och bevara bevis, och därefter i tur och ordning pröva reklamationsfrist, vårdslöshet (過失) och förlikningens (和解) omfattning. Följande är en allmän åtgärdsordning grundad på Taiwans författningar och anvisningar från offentliga organ; det konkreta ansvaret och förfarandet kan variera efter omständigheterna i varje olycka.
+Om en trafikolycka (交通事故) inträffar i Taiwan ska du först trygga säkerheten, göra anmälan och bevara bevis, och därefter i tur och ordning pröva anmälnings- och preskriptionsfrister, vårdslöshet (過失) och förlikningens (和解) omfattning. Följande är en allmän åtgärdsordning grundad på Taiwans författningar och anvisningar från offentliga organ; det konkreta ansvaret och förfarandet kan variera beroende på omständigheterna i varje olycka.
 
 ## Q1. Får man lämna platsen efter olyckan?
 
@@ -25,15 +25,15 @@ Dock, vid en olycka med skada, om alla parter är överens, får fordonet flytta
 
 Om det endast finns sakskada och fordonet kan flyttas, är regeln att märka fordonets läge och spåren på platsen, dokumentera dem med foto eller video och snabbt flytta fordonet till en säker plats. Att lämna platsen utan de föreskrivna åtgärderna kan medföra administrativ sanktion (行政處罰).
 
-Artikel 185-4 i Taiwans strafflag (刑法) reglerar det straffrättsliga ansvaret för den förare som lämnar platsen efter en trafikolycka som orsakar skada eller dödsfall. Tillämpningen bedöms efter olyckans omständigheter och de vidtagna åtgärderna.
+Artikel 185-4 i Taiwans strafflag (刑法) reglerar det straffrättsliga ansvaret för den förare som lämnar platsen efter en trafikolycka som orsakar skada eller dödsfall. Tillämpningen bedöms utifrån olyckans omständigheter och de vidtagna åtgärderna.
 
 ## Q2. Vilka bevis ska bevaras först?
 
-Trygga först den personliga säkerheten och varningssignalerna; om det finns skadade eller behov av räddning, ring 119, och om det finns brott eller ett brådskande säkerhetsläge, 110 eller 112. Gör också anmälan till polisen efter trafikolyckans omständigheter.
+Trygga först den personliga säkerheten och varningssignalerna; om det finns skadade eller behov av räddning, ring 119 (ambulans och räddningstjänst i Taiwan), och vid brott eller en akut säkerhetssituation 110 (polis) eller 112 från mobiltelefon. Gör också anmälan till polisen efter trafikolyckans omständigheter.
 
-När säkerheten är tryggad, ta översikts- och detaljfotografier för att registrera fordonens läge och skador, vägmarkeringar, signaler och väderförhållanden. Det bör inte utelämnas vittnens kontaktuppgifter, begäran om bevarande av CCTV-bilder (監視器影像) och färdskrivare (行車紀錄器), parternas, fordonets och försäkringens uppgifter samt journalen (病歷). Privata foton är nyttiga, men de ersätter inte den polisingripande som krävs vid olycka med skada eller dödsfall.
+När säkerheten är tryggad, ta översikts- och detaljfotografier för att registrera fordonens läge och skador, vägmarkeringar, signaler och väderförhållanden. Det bör inte utelämnas vittnens kontaktuppgifter, begäran om bevarande av CCTV-bilder (監視器影像) och färdskrivare (行車紀錄器), parternas, fordonets och försäkringens uppgifter samt journalen (病歷). Privata foton är nyttiga, men de ersätter inte det ingripande från polisen som krävs vid olycka med skada eller dödsfall.
 
-Vad gäller polisens handlingar kan ni på olycksplatsen ta emot talongen för registrering av parterna i trafikolyckan (道路交通事故當事人登記聯單). Efter 7 dagar från olycksdagen kan skissen och fotona från platsen (現場圖 / 現場照片) begäras; efter 30 dagar från olycksdagen kan tabellen för preliminär analys av trafikolyckan (道路交通事故初步分析研判表) begäras. Utfärdandetidpunkt och ansökningsvillkor ska bekräftas på nytt hos den behöriga polismyndigheten.
+Vad gäller polisens handlingar kan du på olycksplatsen få talongen för registrering av parterna i trafikolyckan (道路交通事故當事人登記聯單). Efter 7 dagar från olycksdagen kan skissen och fotona från platsen (現場圖 / 現場照片) begäras; efter 30 dagar från olycksdagen kan tabellen för preliminär analys av trafikolyckan (道路交通事故初步分析研判表) begäras. Utfärdandetidpunkt och ansökningsvillkor ska bekräftas på nytt hos den behöriga polismyndigheten.
 
 ## Q3. Vid skada, vilka krav och frister ska prövas?
 
@@ -41,9 +41,9 @@ Artikel 284 i strafflagen reglerar vållande till kroppsskada (過失傷害) och
 
 På det civilrättsliga skadeståndets (損害賠償) område är, enligt artikel 197 i Taiwans civillag (民法), kravet inte längre möjligt när 2 år har förflutit från den dag då skadan och den ersättningsskyldige blev kända, eller 10 år från den olagliga handlingens dag. Vilka fakta som påverkar preskriptionen (消滅時效) ska prövas särskilt.
 
-Den som lider skada genom ett brott kan, enligt artikel 487 i rättegångsbalken i brottmål, väcka en civil talan som bihang till brottmålet (刑事附帶民事訴訟). Så länge brottmålet pågår kan denna talan väckas fram till före avslutandet av den muntliga förhandlingen (言詞辯論終結) i 2:a instansen, enligt artikel 488 i rättegångsbalken i brottmål, men den kan inte väckas efter avslutandet av den muntliga förhandlingen i 1:a instansen och före anförande av överklagande. I allmänhet kan betalning av skilda rättegångskostnader (裁判費) undvikas, men inte alla utfall avslutas utan kostnad. Till exempel, om brottmålet avvisas och, på kärandens begäran, hänvisas till civil domstol, kan enligt artikel 503 i rättegångsbalken i brottmål rättegångskostnader påföras, och även reglerna om hänvisning och förfarande i artikel 504 ska prövas.
+Den som lider skada genom ett brott kan, enligt artikel 487 i rättegångsbalken i brottmål, väcka en civil talan som bihang till brottmålet (刑事附帶民事訴訟). Så länge brottmålet pågår kan denna talan väckas fram till före avslutandet av den muntliga förhandlingen (言詞辯論終結) i andra instans, enligt artikel 488 i rättegångsbalken i brottmål, men den kan inte väckas efter avslutandet av den muntliga förhandlingen i första instans och före anförande av överklagande. I allmänhet kan betalning av skilda rättegångskostnader (裁判費) undvikas, men inte alla utfall avslutas utan kostnad. Till exempel, om brottmålet avvisas och, på kärandens begäran, hänvisas till civil domstol, kan enligt artikel 503 i rättegångsbalken i brottmål rättegångskostnader påföras, och även reglerna om hänvisning och förfarande i artikel 504 ska prövas.
 
-Valet varierar efter avbrott i preskriptionen (時效中斷), kretsen av svarande, bevis, försäkring och behörighet. Det finns därför inget förfarande som enhetligt är att föredra för alla ärenden.
+Valet beror på avbrott i preskriptionen (時效中斷), kretsen av svarande, bevis, försäkring och behörighet. Det finns därför inget förfarande som enhetligt är att föredra för alla ärenden.
 
 ## Q4. Om det finns vårdslöshet på båda sidor, hur bedöms det straffrättsliga och civilrättsliga ansvaret?
 
@@ -59,7 +59,7 @@ I förlikningshandlingen (和解書) bör olyckans datum, plats och parter indiv
 
 Förlikningen (和解) i artikel 736 i civillagen är ett avtal där parterna ömsesidigt efterger för att avsluta en tvist eller undvika den. Enligt artikel 737 i civillagen bedöms den omfattning i vilken rättigheterna upphör också endast inom gränserna för det som har uppgivits i förlikningshandlingen. Man ska därför inte, utan att pröva texten, påstå att alla framtida krav försvinner.
 
-Om det är ett brott som åtalas efter angivelse kan, enligt artikel 238 i rättegångsbalken i brottmål, angivelsen återkallas fram till före avslutandet av den muntliga förhandlingen i 1:a instansen, och när den återkallats kan den inte göras på nytt. Dock, vid ett brott som inte åtalas efter angivelse, upphör åtalet inte automatiskt genom en privat förlikning, och det faktum att man har förlikats förpliktar inte alltid att återkalla angivelsen.
+Om det är ett brott som åtalas efter angivelse kan, enligt artikel 238 i rättegångsbalken i brottmål, angivelsen återkallas fram till före avslutandet av den muntliga förhandlingen i första instans, och när den återkallats kan den inte göras på nytt. Dock, vid ett brott som inte åtalas efter angivelse, upphör åtalet inte automatiskt genom en privat förlikning, och det faktum att man har förlikats förpliktar inte alltid att återkalla angivelsen.
 
 ### Officiella grunder för Q1–Q5
 
@@ -83,7 +83,7 @@ Om det är ett brott som åtalas efter angivelse kan, enligt artikel 238 i rätt
 
 ## Q6. Hur fastställs ansvaret för olyckan?
 
-Tabellen för preliminär analys av trafikolyckan som polisen upprättar är en förhandsanalys grundad på handlingarna från platsen. Den är inte en dom, den binder inte domstolen och den fastställer inte vårdslöshetsandelen (過失比例). Eftersom de nödvändiga handlingarna och tvisteomfånget varierar efter olyckan, är denna tabell, lagstadgad sakkunnigbedömning och omprövning (覆議) varken ett automatiskt förfarande eller ett obligatoriskt steg.
+Tabellen för preliminär analys av trafikolyckan som polisen upprättar är en förhandsanalys grundad på handlingarna från platsen. Den är inte en dom, den binder inte domstolen och den fastställer inte vårdslöshetsandelen (過失比例). Eftersom de nödvändiga handlingarna och tvisteomfånget varierar beroende på olyckan, är denna tabell, lagstadgad sakkunnigbedömning och omprövning (覆議) varken ett automatiskt förfarande eller ett obligatoriskt steg.
 
 Enligt tillämpliga regler kan den legitimationsberättigade parten begära en sakkunnigbedömning av fordonsolycka (車輛行車事故鑑定); det organ som utreder ärendet kan vidarebefordra det och rättsväsendet kan förordna det. Partens begäran görs i allmänhet inom 6 månader från olycksdagen; i ärenden som redan är under utredning eller rättegång sker sakkunnigbedömningen genom förordnande av rättsväsendet och inte genom en ny direkt begäran.
 
@@ -101,7 +101,7 @@ Kravet grundat på artikel 184 i civillagen förutsätter en olaglig kränkning 
 
 Bevara kvittona (收據), läkarintygen och journalen, och ordna tillsammans med dem den medicinska nödvändigheten av varje behandling och dess orsakssamband med olyckan. Handlingar om en behandling som fortsätter kan komplettera bevisningen efter domstolens processkalender och innehållet i det redan framställda kravet, men detta säkrar inte att alla sent ingivna handlingar eller varje utvidgning av kravet tas upp eller tillåts.
 
-Tillägg av medicinska handlingar ska skiljas från ändring eller höjning av det krävt beloppet. Efter att en civil talan som bihang till brottmålet har väckts uppkommer inte automatiskt rättegångskostnader enbart därför att fler sjukvårdskvitton ges in.
+Tillägg av medicinska handlingar ska skiljas från ändring eller höjning av det krävda beloppet. Efter att en civil talan som bihang till brottmålet har väckts uppkommer inte automatiskt rättegångskostnader enbart därför att fler sjukvårdskvitton ges in.
 
 Dock kan, enligt artikel 504 i rättegångsbalken i brottmål, när ärendet har hänvisats till den civila avdelningen, ändring, tillägg eller utvidgning av kravet utöver omfånget före hänvisningen väcka frågan om rättegångskostnader för den överskjutande delen. Hänvisningsfas, ingivningstidpunkt och kravets omfång ska prövas i varje ärende.
 
@@ -113,7 +113,7 @@ Läkarintyget eller det medicinska utlåtandet är nyttiga för att visa vårdbe
 
 ## Q10. Med vad styrks resekostnader för behandlingen?
 
-Resekostnader ordnas utifrån sambandet mellan behandlingsregistret och de skador som hör till olyckan. Sträcka, antal besök, datum, färdmedel, taxa samt nödvändigheten och rimligheten av att använda detta färdmedel kan vara relevanta för bedömningen.
+Resekostnader styrks utifrån sambandet mellan behandlingsregistret och de skador som hör till olyckan. Sträcka, antal besök, datum, färdmedel, taxa samt nödvändigheten och rimligheten av att använda detta färdmedel kan vara relevanta för bedömningen.
 
 Kvitton, taxeregister, sträckregister och kliniska handlingar är möjliga bevis. Taxikvittot är inte det enda bevismedlet, och att ge in det innebär inte i sig att det är tillräckligt.
 
@@ -151,7 +151,7 @@ Det faktum att den nuvarande lönen hålls utan variation utesluter inte automat
 
 Om den fortgående funktionsstörningen bestrids på ett väsentligt sätt kan en medicinsk sakkunnigbedömning vara nyttig, men den är inte obligatorisk i alla ärenden. Även jämkningen av vårdslöshet enligt artikel 217 i civillagen och andra justeringsgrunder prövas.
 
-När beräkningen görs som ett enda kapitalbelopp kan avdrag för mellansliggande ränta (中間利息扣除) komma i fråga. Hoffmann-kalkylatorn (霍夫曼) vid Justitieyuanen är bara ett beräkningsverktyg, inte en lagstadgat obligatorisk metod, och den utlovar inte resultatet. Enligt artikel 193 i civillagen kan domstolen, på parts begäran, också förordna betalning i periodisk ränta under villkor av säkerhet.
+När beräkningen görs som ett enda kapitalbelopp kan avdrag för mellansliggande ränta (中間利息扣除) komma i fråga. Hoffmann-kalkylatorn (霍夫曼) vid Justitieyuanen är bara ett beräkningsverktyg, inte en lagstadgad, obligatorisk metod, och den utlovar inte resultatet. Enligt artikel 193 i civillagen kan domstolen, på parts begäran, också förordna betalning i periodisk ränta under villkor av säkerhet.
 
 ## Q13. Hur bedöms ersättningen för ideell skada (慰撫金) för icke-förmögenhetsskada?
 
@@ -167,17 +167,17 @@ Arbetsgivaren kan invända att denne har iakttagit tillbörlig aktsamhet vid urv
 
 Om arbetsgivaren styrker dessa befrielsevillkor och den skadade inte får ersättningen enligt 1 stycket, kan domstolen, enligt artikel 188, 2 stycket, i civillagen, förordna hel eller delvis ersättning med hänsyn till arbetsgivarens och den skadades ekonomiska läge.
 
-Frågan om mot vem det civilrättsliga kravet riktas ska skiljas från det straffrättsliga ansvaret. Det straffrättsliga ansvaret enligt artikel 284 i strafflagen bedöms efter varje fysisk persons åsidosättande av aktsamhetsplikten och orsakssambandet för detta åsidosättande.
+Frågan om mot vem det civilrättsliga kravet riktas ska skiljas från det straffrättsliga ansvaret. Det straffrättsliga ansvaret enligt artikel 284 i strafflagen bedöms utifrån varje fysisk persons åsidosättande av aktsamhetsplikten och orsakssambandet för detta åsidosättande.
 
-## Q15. Vilka prestationer och täckningar i motorfordonsförsäkringen ska prövas?
+## Q15. Vilka ersättningar och täckningar i motorfordonsförsäkringen ska prövas?
 
-Skyldigheten att teckna enligt artikel 6 i lagen om obligatorisk motorfordonsansvarsförsäkring (強制汽車責任保險法) åvilar i princip fordonets ägare och, i de fall som föreskrivs, också fordonets brukare eller förvaltare. Denna ordning inrättar en struktur för ersättning utan vårdslöshet (無過失給付制度) för den som skadas eller avlider genom en motorfordonsolycka, men det ska prövas det omfång av passagerare eller 3:e man (第三人) utanför fordonet som lagen fastställer.
+Skyldigheten att teckna enligt artikel 6 i lagen om obligatorisk motorfordonsansvarsförsäkring (強制汽車責任保險法) åvilar i princip fordonets ägare och, i de fall som föreskrivs, också fordonets brukare eller förvaltare. Denna ordning inrättar en struktur för ersättning utan vårdslöshet (無過失給付制度) för den som skadas eller avlider genom en motorfordonsolycka, men det omfång av passagerare eller tredje man (第三人) utanför fordonet som lagen fastställer måste prövas.
 
-Vid en olycka med ett enda fordon är föraren av detta fordon i allmänhet inte adressat för prestationerna från detta fordons obligatoriska försäkring. Dock, vid en olycka där flera fordon deltar, finns fall där föraren kan kräva prestationer av den obligatoriska försäkringsgivaren för ett annat inblandat fordon.
+Vid en olycka med ett enda fordon är föraren av det fordonet i allmänhet inte berättigad till ersättning från det fordonets obligatoriska försäkring. Dock, vid en olycka där flera fordon deltar, finns fall där föraren kan kräva ersättning av den obligatoriska försäkringsgivaren för ett annat inblandat fordon.
 
-Prestationsskalan (強制汽車責任保險給付標準) ändrad den 2026-05-29 tillämpas på olyckor som inträffat från och med den 2026-07-01. Taket för skäliga och nödvändiga sjukvårdskostnader vid skada är TWD 200.000 i ny taiwanesisk dollar; prestationen för invaliditet (失能) går från TWD 80.000 till TWD 3.000.000 enligt 15 lagstadgade grader; prestationen vid dödsfall är TWD 3.000.000, och det gemensamma maximumet för dödsfall, invaliditet och sjukvårdskostnader för 1 skadad och 1 olycka är TWD 3.200.000. På tidigare olyckor kan den tidigare skalan tillämpas.
+Ersättningsnivåerna (強制汽車責任保險給付標準) som ändrades 2026-05-29 tillämpas på olyckor som inträffat från och med 2026-07-01. Taket för skäliga och nödvändiga sjukvårdskostnader vid skada är TWD 200.000 i ny taiwanesisk dollar; ersättningen vid invaliditet (失能) går från TWD 80.000 till TWD 3.000.000 enligt 15 lagstadgade grader; ersättningen vid dödsfall är TWD 3.000.000, och det gemensamma maximumet för dödsfall, invaliditet och sjukvårdskostnader för 1 skadad och 1 olycka är TWD 3.200.000. På tidigare olyckor kan den tidigare skalan tillämpas.
 
-Ansvarsförsäkringen mot 3:e man (第三人責任險), förarens olycksfallsförsäkring (駕駛人傷害險) och kaskoförsäkringen för det egna fordonet (車體損失險) är fakultativa produkter av avtalskaraktär. Den faktiska täckningen varierar efter försäkrad, tak, självrisk (自負額), undantag, vårdslöshet och de övriga villkoren i försäkringsbrevet, så att försäkringsbrevet och villkoren ska prövas från fall till fall.
+Ansvarsförsäkringen mot tredje man (第三人責任險), förarens olycksfallsförsäkring (駕駛人傷害險) och kaskoförsäkringen för det egna fordonet (車體損失險) är fakultativa produkter av avtalskaraktär. Den faktiska täckningen varierar beroende på försäkrad, tak, självrisk (自負額), undantag, vårdslöshet och de övriga villkoren i försäkringsbrevet, så att försäkringsbrevet och villkoren ska prövas från fall till fall.
 
 ### Officiella grunder för Q11–Q15
 
@@ -192,7 +192,7 @@ Ansvarsförsäkringen mot 3:e man (第三人責任險), förarens olycksfallsfö
 - [Civillagen, artikel 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Republiken Kinas strafflag, artikel 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Lagen om obligatorisk motorfordonsansvarsförsäkring](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
-- [Prestationsskalan för den obligatoriska motorfordonsansvarsförsäkringen](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
+- [Ersättningsnivåerna för den obligatoriska motorfordonsansvarsförsäkringen](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Standardavtal för personbilsförsäkring från finansinspektionen (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
 Q16. Efter olyckan, kan man lämna allt i försäkringsgivarens händer?
@@ -235,7 +235,7 @@ Q17. Vad är det straffrättsliga ansvaret för vållande till kroppsskada för 
 
 ​
 
-Vid vållande till kroppsskada utdömer domstolarna för närvarande ett straff om omkring 3 månader.
+I publicerad praxis förekommer vid vållande till kroppsskada straff om omkring 3 månader; något typiskt eller garanterat utfall finns inte.
 
 ​
 
@@ -247,7 +247,7 @@ Om det omvandlas till böter (易科罰金) fastställer artikel 41, 1 stycket, 
 
 ​
 
-För vållande till grov kroppsskada utdöms vanligen ett straff om 4 månader, och för vållande till annans död (過失致死) utdöms vanligen ett straff om 6 månader.
+I domar om vållande till grov kroppsskada förekommer straff om omkring 4 månader och vid vållande till annans död (過失致死) omkring 6 månader; utfallet beror på omständigheterna i det enskilda fallet.
 
 ​
 
@@ -267,7 +267,7 @@ Vid vållande till annans död är återkallelse av angivelsen inte möjlig; doc
 
 ​
 
-Det kan förekomma villkorlig dom (緩刑) så att man inte går i fängelse.
+I vissa fall kan påföljden bestämmas till villkorlig dom (緩刑) i stället för fängelse; det är inget som kan utlovas.
 
 ​
 
@@ -307,11 +307,11 @@ Det viktiga då är advokatens omsorg och ärlighet.
 
 ​
 
-Det är viktigt att advokaten med uppmärksamhet prövar alla poster i kravet och verkar för att den högsta möjliga ersättningen erhålls.
+Det är viktigt att advokaten noggrant går igenom varje post i kravet och förklarar vad som kan yrkas utifrån den bevisning som finns.
 
 ​
 
-Dessutom ska advokaten klart förklara partens läge och klart varna för de förutsebara riskerna om man inte förlikas.
+Dessutom ska advokaten tydligt förklara partens situation och varna för de förutsebara riskerna om man inte förlikas.
 
 ​
 
@@ -323,7 +323,7 @@ Man ska akta sig för den advokat som blåser upp ärendet och hävdar att man i
 
 ​
 
-Därmed avslutar jag frågorna och svaren om trafikolyckor. Jag hoppas att de är till nytta för er.
+Därmed avslutar jag frågorna och svaren om trafikolyckor. Jag hoppas att de är till nytta för dig.
 
 ​
 
@@ -347,11 +347,11 @@ Gärningsmannen bekymrar sig ofta inte om att ringa för att höra hur offret m�
 
 ​
 
-Offret förblir därmed mycket sårat och blir vred, så att denne ofta inte ger efter på förhandlingsbeloppet, eller begär kvarstad (假扣押) och driver utmätningen av motpartens egendom till slutet.
+Offret förblir därmed mycket sårat och blir förbittrad, så att denne ofta inte ger efter på förhandlingsbeloppet, eller begär kvarstad (假扣押) och driver utmätningen av motpartens egendom till slutet.
 
 ​
 
-Denna punkt ska därför absolut inte försummas, och det bör rådgöras med en advokat efter omständigheterna.
+Den punkten ska därför inte försummas, och det bör rådgöras med en advokat efter omständigheterna.
 
 ​
 
@@ -359,7 +359,7 @@ Denna punkt ska därför absolut inte försummas, och det bör rådgöras med en
 
 ​
 
-Om ni har ytterligare frågor, lämna dem i kommentarerna.
+Har du fler frågor är du välkommen att kontakta byrån.
 
 ​
 

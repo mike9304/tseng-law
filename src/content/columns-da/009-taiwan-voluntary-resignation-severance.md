@@ -21,7 +21,7 @@ Navnlig når arbejdstagere selv siger op (自請離職),
 
 kan de ikke modtage fratrædelsesgodtgørelse (artikel 18 i loven om arbejdsnormer, 勞動基準法),
 
-og dette adskiller sig fra Korea.
+og dette adskiller sig fra reglerne i visse andre lande — Korea er ét eksempel.
 
 ​
 
@@ -89,7 +89,7 @@ fratrædelsesgodtgørelsen nægtes eller kræves.
 
 Derfor er i taiwanske arbejdskonflikter (勞資糾紛)
 
-''**tidspunktet**'' meget vigtigt.
+**tidspunktet** meget vigtigt.
 
 I de fleste tilfælde beskyttes den side, der har forberedt sig på forhånd.
 

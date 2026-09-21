@@ -1190,32 +1190,32 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
   },
   da: {
     guidanceNotice:
-      'Denne side er skrevet på dansk som almindelig orientering, ikke som juridisk rådgivning for Deres sag.',
+      'Denne side er skrevet på dansk som almindelig orientering, ikke som juridisk rådgivning for din sag.',
     consultationNotice:
-      'Rådgivningen foregår på fire sprog: engelsk, kinesisk (中文), japansk og koreansk.',
+      'Rådgivningen foregår kun på fire sprog: engelsk, kinesisk (中文), japansk og koreansk.',
     methodConfirmationNotice:
-      'Hvis De ikke kan bruge noget af de fire sprog, skal De vælge «Kommunikationsvejen skal bekræftes». Vi svarer for at undersøge en brugbar kommunikationsvej, hvis en sådan vej findes; en ydelse på et andet sprog sikres ikke, og en svartid loves ikke.',
+      'Hvis du ikke kan bruge noget af de fire sprog, skal du vælge »Kommunikationsvejen skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsvej; rådgivning på et andet sprog loves ikke, og der loves ingen svartid.',
     preparationNotice:
-      'De må skrive resuméet på Deres eget sprog. Originalteksten gemmes, som De har skrevet den, og oversættes ikke automatisk.',
+      'Du må skrive resuméet på dit eget sprog. Originalteksten gemmes, som du har skrevet den, og oversættes ikke automatisk.',
     heading: 'Send en anmodning om rådgivning',
     intro:
-      'Beskriv Deres sag kort. En advokat gennemgår indholdet, før det næste skridt drøftes.',
+      'Beskriv din sag kort. En advokat gennemgår indholdet, før det næste skridt drøftes.',
     submitLabel: 'Send anmodningen',
     submittingLabel: 'Sendes…',
     successMessage:
-      'Vi har modtaget Deres anmodning; den venter på gennemgang. Det betyder ikke, at rådgivningen har fundet sted, eller at en tid er bekræftet.',
+      'Vi har modtaget din anmodning; den venter på gennemgang. Det betyder ikke, at rådgivningen har fundet sted, eller at en tid er bekræftet.',
     savedNotificationPendingMessage:
-      'Deres anmodning er gemt, men underretningen til kontoret er endnu ikke bekræftet. Det, De har skrevet, går ikke tabt. Hvis De ikke får svar, kan De også skrive til e-mailadressen på kontaktsiden.',
+      'Din anmodning er gemt, men underretningen til kontoret er endnu ikke bekræftet. Det, du har skrevet, går ikke tabt. Hvis du ikke får svar, kan du også skrive til e-mailadressen på kontaktsiden.',
     receiptIdLabel: 'Modtagelsesnummer',
     failureMessage:
-      'Deres anmodning kunne ikke sendes. Prøv igen, eller skriv til e-mailadressen på kontaktsiden.',
-    originalLanguageLabel: 'Sprog, De skriver på',
+      'Din anmodning kunne ikke sendes. Prøv igen, eller skriv til e-mailadressen på kontaktsiden.',
+    originalLanguageLabel: 'Sprog, du skriver på',
     originalLanguagePlaceholder:
       'For eksempel dansk, engelsk, kinesisk eller et andet sprog',
-    preferredConsultationLanguageLabel: 'Sprog, De ønsker til rådgivningen',
-    originalTextLabel: 'Kort fremstilling af sagen (på Deres sprog)',
+    preferredConsultationLanguageLabel: 'Sprog, du ønsker til rådgivningen',
+    originalTextLabel: 'Kort fremstilling af sagen (på dit sprog)',
     originalTextPlaceholder:
-      'Angiv, hvad der er sket, hvilken hjælp De har brug for, og fristen, hvis der er en. Angiv ikke pasnummer, identitetsnummer eller kontooplysninger.',
+      'Angiv, hvad der er sket, hvilken hjælp du har brug for, og fristen, hvis der er en. Angiv ikke pasnummer, identitetsnummer eller kontooplysninger.',
     nameLabel: 'Navn',
     emailLabel: 'E-mail',
     consentLabel:
@@ -1235,7 +1235,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Japansk (日本語)',
       ko: 'Koreansk (한국어)',
       'needs-method-confirmation':
-        'Ingen af de fire sprog er brugbare — kommunikationsvejen skal bekræftes',
+        'Jeg behersker ikke noget af de fire sprog — kommunikationsvejen skal bekræftes',
     },
   },
   nb: {

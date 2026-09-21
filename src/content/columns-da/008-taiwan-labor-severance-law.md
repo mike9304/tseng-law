@@ -1,5 +1,5 @@
 ---
-title: "Arbejdsret i Taiwan: er fratrædelsesgodtgørelsen i Taiwan virkelig vanskelig at opnå??"
+title: "Fratrædelsesgodtgørelse i Taiwan: hvornår den udbetales, og hvornår den ikke gør"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
 lastmod: "2026-09-10"
 date_display: "13. september 2025"
@@ -9,28 +9,28 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Modtager arbejdstagere i Taiwan fratrædelsesgodtgørelse, når de selv siger op?"
-    a: "Nej. I modsætning til Korea opstår pligten til udbetaling af fratrædelsesgodtgørelse (資遣費) i Taiwan først, når selskabet afskediger arbejdstageren; siger arbejdstageren selv op, behøver selskabet ikke at udbetale fratrædelsesgodtgørelse."
+    a: "Nej. I modsætning til visse andre lande — Korea er ét eksempel — opstår pligten til at udbetale fratrædelsesgodtgørelse (資遣費) i Taiwan først, når selskabet afskediger arbejdstageren; siger arbejdstageren selv op, behøver selskabet ikke at udbetale fratrædelsesgodtgørelse."
   - q: "Skal selskabet også ved en disciplinær afskedigelse udbetale fratrædelsesgodtgørelse?"
-    a: "Nej. Begår arbejdstageren en retsstridig handling, krænker interne regler eller udebliver uden gyldig grund 3 dage i træk (artikel 12 i loven om arbejdsnormer, 勞動基準法第12條), kan selskabet afskedige uden forudgående varsel og behøver ikke at udbetale fratrædelsesgodtgørelse. Derimod kræver en økonomisk afskedigelse (artikel 11) forudgående varsel og udbetaling af fratrædelsesgodtgørelse."
+    a: "Nej. Begår arbejdstageren et retsbrud, krænker interne regler eller udebliver uden gyldig grund 3 dage i træk (artikel 12 i loven om arbejdsnormer, 勞動基準法第12條), kan selskabet afskedige uden forudgående varsel og behøver ikke at udbetale fratrædelsesgodtgørelse. Derimod kræver en økonomisk afskedigelse (artikel 11) forudgående varsel og udbetaling af fratrædelsesgodtgørelse."
   - q: "Hvordan beregnes fratrædelsesgodtgørelsen i Taiwan?"
     a: "For hvert fuldført 1 års anciennitet skal arbejdsgiveren udbetale 0,5 måneds gennemsnitsløn som fratrædelsesgodtgørelse, højst 6 månedslønninger. Denne formel gælder for anciennitet, som artikel 12 i bekendtgørelsen om arbejdstageres pension (勞工退休金條例) finder anvendelse på; for anciennitet, som artikel 17 i loven om arbejdsnormer (勞動基準法) finder anvendelse på, udbetales pr. 1 år 1 måneds gennemsnitsløn uden maksimum."
 ---
 
-# Arbejdsret i Taiwan: er fratrædelsesgodtgørelsen (資遣費) i Taiwan virkelig vanskelig at opnå??
+# Fratrædelsesgodtgørelse (資遣費) i Taiwan: hvornår den udbetales, og hvornår den ikke gør
 
 ![Hovedbillede](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Goddag, jeg er Wei Tseng (曾雋崴), taiwansk advokat.
+Jeg hedder Wei Tseng (曾雋崴) og er advokat i Taiwan.
 
-I dag vil jeg tale med Dem om fratrædelsesgodtgørelsen (資遣費) i Taiwan.
+I denne artikel gennemgår jeg fratrædelsesgodtgørelsen (資遣費) i Taiwan.
 
 ![](../images/008-taiwan-labor-severance-law/img-01.jpg)
 
-Det ved mange af Dem allerede.
+Det ved mange allerede.
 
-I Korea skal selskabet udbetale fratrædelsesgodtgørelse, når arbejdstagere fratræder
+I nogle andre lande — Korea er ét eksempel — skal selskabet udbetale fratrædelsesgodtgørelse, når arbejdstagere fratræder
 
-I Taiwan forholder det sig imidlertid anderledes end i Korea:
+I Taiwan forholder det sig imidlertid anderledes:
 
 Pligten til udbetaling af fratrædelsesgodtgørelse opstår først, når selskabet afskediger arbejdstageren.
 
@@ -38,7 +38,7 @@ Siger arbejdstageren selv op, behøver selskabet ikke at udbetale fratrædelsesg
 
 ​
 
-Begår arbejdstageren imidlertid en retsstridig handling,
+Begår arbejdstageren imidlertid et retsbrud,
 
 **krænker vedkommende interne regler (工作規則),**
 
@@ -48,7 +48,7 @@ kan selskabet afskedige uden at udbetale fratrædelsesgodtgørelse.
 
 ​
 
-Jeg sammenfatter dette for Dem i en enkel tabel.
+Jeg sammenfatter det i en enkel tabel.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -58,7 +58,7 @@ Jeg sammenfatter dette for Dem i en enkel tabel.
 | Forudgående varsel | Påkrævet | Ikke påkrævet | Påkrævet |
 | Vanskelighed | Enkel | Vanskelig | Enkel |
 | Om selskabet skal udbetale fratrædelsesgodtgørelse (資遣費) | Påkrævet | Ikke påkrævet | Ikke påkrævet |
-|  | Taiwansk lov om arbejdsnormer artikel 11 (勞動基準法第11條): Medmindre 1 af følgende tilfælde indtræder, må arbejdsgiveren ikke bringe arbejdsaftalen til ophør, heller ikke efter forudgående underretning af arbejdstageren.  1. Stilstand af virksomheden (歇業) eller overdragelse af virksomheden (轉讓)  2. Tab (虧損) eller indskrænkning af virksomheden (業務緊縮)  3. Force majeure kræver en afbrydelse af virksomheden på 1 måned eller længere  4. Virksomhedens art kræver personalenedsættelse, og den afskedigede kan ikke omplaceres til en anden passende stilling  5. En bestemt arbejdstager kan ikke tilfredsstillende udføre det arbejde, stillingen kræver | Taiwansk lov om arbejdsnormer artikel 12 (勞動基準法第12條): Arbejdsgiveren kan afskedige uden forudgående underretning, når arbejdstageren hører under 1 af følgende tilfælde.  1. Den, der ved indgåelsen af arbejdsaftalen afgiver urigtige oplysninger, vildleder arbejdsgiveren, og der består fare for skade på virksomheden  2. Den, der over for arbejdsgiveren, dennes familie, dennes repræsentant (代理人) eller andre kolleger anvender vold eller groft fornærmer dem  3. Den, der er endeligt idømt tidsbegrænset fængsel (有期徒刑) eller en strengere straf, uden at betinget udsættelse (緩刑) er udtalt, og uden at ombytning til bøde (易科罰金) er tilladt  4. Alvorlig krænkelse af arbejdsaftalen eller af arbejdsreglerne  5. Den, der forsætligt fortærer maskiner, redskaber, råvarer, produkter eller andre goder tilhørende arbejdsgiveren, eller forsætligt åbenbarer arbejdsgiverens tekniske og forretningshemmeligheder og tilføjer arbejdsgiveren skade  6. Ulovligt fravær (曠工) uden gyldig grund i 3 på hinanden følgende dage, eller i 6 dage eller mere i 1 måned |  |
+|  | Taiwansk lov om arbejdsnormer artikel 11 (勞動基準法第11條): Medmindre 1 af følgende tilfælde indtræder, må arbejdsgiveren ikke bringe arbejdsaftalen til ophør, heller ikke efter forudgående underretning af arbejdstageren.  1. Stilstand af virksomheden (歇業) eller overdragelse af virksomheden (轉讓)  2. Tab (虧損) eller indskrænkning af virksomheden (業務緊縮)  3. En ekstraordinær hændelse (不可抗力) kræver afbrydelse af virksomheden i 1 måned eller længere  4. Virksomhedens art kræver personalenedsættelse, og den afskedigede kan ikke omplaceres til en anden passende stilling  5. En bestemt arbejdstager kan ikke tilfredsstillende udføre det arbejde, stillingen kræver | Taiwansk lov om arbejdsnormer artikel 12 (勞動基準法第12條): Arbejdsgiveren kan afskedige uden forudgående underretning, når arbejdstageren hører under 1 af følgende tilfælde.  1. Den, der ved indgåelsen af arbejdsaftalen afgiver urigtige oplysninger, vildleder arbejdsgiveren, og der består fare for skade på virksomheden  2. Den, der over for arbejdsgiveren, dennes familie, dennes repræsentant (代理人) eller andre kolleger anvender vold eller groft fornærmer dem  3. Den, der er endeligt idømt tidsbegrænset fængsel (有期徒刑) eller en strengere straf, uden at betinget udsættelse (緩刑) er udtalt, og uden at ombytning til bøde (易科罰金) er tilladt  4. Alvorlig krænkelse af arbejdsaftalen eller af arbejdsreglerne  5. Den, der forsætligt fortærer maskiner, redskaber, råvarer, produkter eller andre goder tilhørende arbejdsgiveren, eller forsætligt åbenbarer arbejdsgiverens tekniske og forretningshemmeligheder og tilføjer arbejdsgiveren skade  6. Ulovligt fravær (曠工) uden gyldig grund i 3 på hinanden følgende dage, eller i 6 dage eller mere i 1 måned |  |
 
 > I Taiwan skal arbejdsgiveren for hvert fuldført 1 års anciennitet (年資)
 > udbetale 0,5 måneds gennemsnitsløn (平均工資) som fratrædelsesgodtgørelse.
@@ -78,7 +78,7 @@ og får arbejdstagere til selv at sige op.
 
 Arbejdstagere skal være forsigtige
 
-og påse, at de ikke træder i selskabets hensigt.
+og passe på, at de ikke går i selskabets fælde.
 
 ​
 
@@ -138,7 +138,7 @@ hvorfor han stærkt afviste dette urimelige krav.
 
 B nægtede at skrive dette,
 
-og til sidst anviste selskabets ramme ham vredt at gå.
+og til sidst bad en leder i selskabet ham vredt om at gå.
 
 B forlod, med en følelse af uret og sorg,
 
@@ -174,15 +174,15 @@ og kunne bevise, at han ikke selv havde sagt op.
 
 Derfor kunne han senere med advokathjælp
 
-modtage en høj fratrædelsesgodtgørelse,
+få fastslået, at han efter loven havde krav på fratrædelsesgodtgørelse,
 
-mens andre fratrådte medarbejdere ikke havde så megen held.
+mens andre fratrådte medarbejdere ikke stod lige så stærkt.
 
 ​
 
 Fordi der findes mange sådanne sager,
 
-skal De sikre beviser,
+skal du sikre beviser,
 
 når selskabet tager upassende midler i brug.
 
@@ -194,9 +194,9 @@ stiller overdrevne krav
 
 eller omplacerer medarbejdere til mærkelige stillinger,
 
-**skal De sikre beviser.**
+**skal du sikre beviser.**
 
-**Deres normale fremmøderegistre,**
+**Dine normale fremmøderegistre,**
 
 **overarbejdsregistre, præstationsregistre,**
 
@@ -204,25 +204,25 @@ eller omplacerer medarbejdere til mærkelige stillinger,
 
 **samt samtaleoptagelser med overordnede —**
 
-**sikr beviser, som er gunstige for Dem.**
+**sikr de beviser, der taler til din fordel.**
 
 ​
 
-Når De arbejder i Taiwan,
+Når du arbejder i Taiwan,
 
-er fratrædelsesgodtgørelse vanskeligere at opnå, end man tænker
+er fratrædelsesgodtgørelse vanskeligere at opnå, end man tror
 
 Indgå ikke let kompromiser med selskabet
 
-og påse, at selskabet ikke afskediger Dem upassende
+og pas på, at selskabet ikke afskediger dig på utilbørlig vis
 
-eller driver Dem til egen opsigelse
+eller presser dig til selv at sige op
 
 Fratrædelsesgodtgørelse er en lovbestemt ret for arbejdstageren,
 
-og selskabet har selvfølgelig at udbetale den.
+og selskabet skal naturligvis udbetale den.
 
-Også De skal i Taiwan beskytte Deres rettigheder.
+Også i Taiwan bør du beskytte dine rettigheder.
 
 ---
 

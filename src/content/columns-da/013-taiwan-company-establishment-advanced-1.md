@@ -13,21 +13,21 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Forsidebillede](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-For nylig har talrige personer med held stiftet et selskab (公司) i Taiwan og opnået et arbejdsvisum samt et opholdskort for udlændinge (外僑居留證),
+For nylig har mange fået stiftet et selskab (公司) i Taiwan og opnået et arbejdsvisum samt et opholdskort for udlændinge (外僑居留證),
 
 og de spørgsmål, der ofte stilles ved stiftelsen, er samlet nedenfor.
 
 Den, der har læst [**grundlaget for selskabsstiftelsen**](/da/columns/taiwan-company-establishment-basics), kan derefter også konsultere denne udførligere fordybelse.
 
-De følgende spørgsmål og svar (Q&A) sigter mod at hjælpe personer, der overvejer en selskabsstiftelse i Taiwan. 😊
+Spørgsmålene og svarene nedenfor skal hjælpe personer, der overvejer at stifte selskab i Taiwan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
 **1. Jeg vil stifte et selskab, men har endnu ikke fundet en registreringsadresse. Er stiftelsen alligevel mulig?**
 
-Når en udlænding stifter et selskab i Taiwan, skal vedkommende indgive en investeringsplan (投資計畫書) til afdelingen for investeringsprøvelse under Ministeriet for økonomiske anliggender (經濟部投資審議司) til prøvelse.
+Når en udlænding stifter et selskab i Taiwan, skal vedkommende indgive en investeringsplan (投資計畫書) til Investeringsafdelingen under Ministeriet for økonomiske anliggender (經濟部投資審議司) til prøvelse.
 
-Afdelingen for investeringsprøvelse skal undersøge, om den pågældende kapital (資本額) faktisk bruges til investeringsformål
+Investeringsafdelingen skal undersøge, om den pågældende kapital (資本額) faktisk bruges til investeringsformål
 
 og om udenlandske aktører ikke indfører midler under et andet påskud.
 
@@ -43,13 +43,13 @@ Allerede i grundlagsteksten har en læser anført, at kontoåbningen viste sig a
 
 Fordi tilfældene af hvidvask (洗錢) i Taiwan er meget talrige, bliver åbningen af bankkonti stadig strengere.
 
-**Bemærkning**：
+**Bemærkning:**
 
 Fordi prøvelsen af investeringsplanen også tager tid,
 
-bør De udarbejde investeringsplanen og samtidig søge selskabets registreringsadresse.
+bør du udarbejde investeringsplanen og samtidig søge efter selskabets registreringsadresse.
 
-Ifølge artikel 9 i forordningen om udenlandsk investering (外國人投資條例) skal det godkendte indskud ankomme fuldt ud inden for den frist, som den kompetente myndighed har fastsat (核定期限); fristen skal bekræftes i godkendelsesakten i hver sag (i praksis fastsættes den ofte omkring 1 år).
+Ifølge artikel 9 i loven om investering fra udlændinge (外國人投資條例) skal det godkendte indskud ankomme fuldt ud inden for den frist, som den kompetente myndighed har fastsat (核定期限); fristen skal bekræftes i godkendelsesakten i hver sag (i praksis fastsættes den ofte omkring 1 år).
 
 Inden for denne frist bliver der, efter at selskabsadressen er fundet og lejeaftalen er indgået,
 
@@ -63,11 +63,11 @@ Det er muligt.
 
 Banken kræver som regel en dobbelt identitetskontrol,
 
-og uden opholdskort kan De hos Taiwans immigrationsmyndighed ansøge om ‘**grunddatabladet**(統一證號基本資料表)’.
+og uden opholdskort kan du hos Taiwans immigrationsmyndighed ansøge om ‘**grunddatabladet for det ensartede identitetsnummer**(統一證號基本資料表)’.
 
 Udstedelsen er mulig samme dag,
 
-men immigrationsmyndigheden (移民署) er meget travlt besøgt; De bør derfor komme tidligt og trække et nummer.
+men immigrationsmyndigheden (移民署) har mange besøgende; du bør derfor komme tidligt og trække et nummer.
 
 ​
 
@@ -77,11 +77,11 @@ Prøvelseskommissionen under Ministeriet for økonomiske anliggender prøver gan
 
 men prøvelsen er ikke overdrevent streng.
 
-De kan anføre forskelligartede erhvervserfaringer, herunder bijob,
+Du kan anføre forskellige former for erhvervserfaring, herunder bijob,
 
 og redegøre så udførligt, at de prøvende personer kan overbevises.
 
-Om dette punkt bør De udveksle Dem grundigt med en advokat i Taiwan.
+Dette punkt bør du drøfte grundigt med en advokat i Taiwan.
 
 ​
 
@@ -89,13 +89,13 @@ Om dette punkt bør De udveksle Dem grundigt med en advokat i Taiwan.
 
 Selskabsstiftelsen varer omkring **3 måneder**, opnåelsen af arbejdstilladelsen (工作許可) og af opholdskortet omkring **1 måned**,
 
-derfor bør De placere aftalens ikrafttrædelsesdato så sent som muligt.
+derfor bør du lægge aftalens ikrafttrædelsesdato så sent som muligt.
 
 Desuden giver udlejeren i lejeaftaler for butikslokaler i Taiwan ofte lejeren en „**indretningsperiode**“ (裝潢期間).
 
-Dette er en periode fritaget for leje; De kan forhandle herom.
+Dette er en lejefri periode, som du kan forhandle om.
 
-For en udlænding er det ikke enkelt at leje et butikslokale, og depositaet (押金) i Taiwan er snarere lavt (sædvanligvis 2 måneder), så udlejerens beskyttelse er begrænset;
+For en udlænding er det ikke enkelt at leje et butikslokale, og depositummet (押金) i Taiwan er forholdsvis lavt (sædvanligvis 2 måneder), så udlejerens beskyttelse er begrænset;
 
 udlejere tøver derfor med at udleje til udlændinge.
 
@@ -103,7 +103,7 @@ Derfor anbefaler jeg at søge driftsadressen tidligt.
 
 Forløber forhandlingen med udlejeren ikke gnidningsløst,
 
-kan De om nødvendigt foreslå en notarial bekræftelse af lejeaftalen (公證) eller et supplerende depositum.
+kan du om nødvendigt foreslå en notarial bekræftelse af lejeaftalen (公證) eller et supplerende depositum.
 
 ​
 
@@ -111,7 +111,7 @@ kan De om nødvendigt foreslå en notarial bekræftelse af lejeaftalen (公證) 
 
 Det afhænger af selskabets forretningsgrene (營業項目).
 
-Eks.) Er forretningsgrenen restauration, og man vil leje et kommercielt kontorlokale, vil åbningen af bankkontoen være meget vanskelig.
+F.eks.: Er forretningsgrenen restauration, og man vil leje et kommercielt kontorlokale, vil åbningen af bankkontoen være meget vanskelig.
 
 Som allerede anført prøver banken lejeaftalen og inspicerer selskabsadressen på stedet.
 
@@ -119,15 +119,15 @@ Desuden kræver stadsforvaltningen (市政府) ved den endelige selskabsregistre
 
 ved et kommercielt kontorlokale er selskabsregistreringen (公司登記) da ikke mulig.
 
-Eks.) Drejer det sig om forretningsgrene (營業項目), der er mulige i et kommercielt kontorlokale, såsom reklame eller engros, kan selskabet stiftes i et kommercielt kontorlokale. Før indgåelsen af lejeaftalen
+F.eks.: Drejer det sig om forretningsgrene (營業項目), der er mulige i et kommercielt kontorlokale, såsom reklame eller engros, kan selskabet stiftes i et kommercielt kontorlokale. Før indgåelsen af lejeaftalen
 
-bør De kontrollere dette på forhånd.
+bør du kontrollere dette på forhånd.
 
-*Hvis De har brug for støtte eller en samtale om taiwansk ret, så efterlad en kommentar eller tag kontakt.*
+*Har du brug for hjælp eller en samtale om taiwansk ret, kan du sende en anmodning via kontaktformularen; der loves ikke svar med det samme.*
 
 ---
 
 > Se også:
 > - [Hvilke sager vi behandler](/da/services)
 > - [Hoverings internationale team](/da/lawyers)
-> - [Hvordan De når kontoret](/da/contact)
+> - [Sådan kontakter du kontoret](/da/contact)

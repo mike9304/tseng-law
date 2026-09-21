@@ -1,0 +1,293 @@
+WO-F-da — Danish (da) native-quality fix lane — Opus 5 fix worker
+date: 2026-09-21 · workspace: /Users/son7/Projects/tseng-law-fix-m-20260921 (no git add/commit/push)
+scope touched: src/content/columns-da/001–018, src/data/international-guidance-nordic.ts (danishGuidanceContent only),
+src/data/international-guidance-answers.ts (da), src/data/international-guidance-team.ts (da copy + da bio),
+src/data/international-inquiry-copy.ts (da). src/lib/llms-txt.ts GUIDANCE_LLMS_NOTICES.da needed no change
+(already natural Danish, no De/Deres, no flagged term). No test file needed editing.
+
+================================================================================
+1. ROWS APPLIED
+================================================================================
+Part a (guidance pack + columns 001–009) — all P1/P2 applied:
+ a#1  consultationNotice: "Rådgivningen foregår kun på fire sprog …" ('kun' added; same in guidance contact item).
+ a#2  "Vi svarer for at prøve en farbar kommunikationsvej" → "Vi vender tilbage for at undersøge, om der findes
+      en brugbar kommunikationsvej; rådgivning på et andet sprog loves ikke, og der loves ingen svartid."
+      (used the reviewer's natural rewrite rather than the literal 'Vi svarer for at kunne prøve…' in ACCEPTED;
+      the disclosure-parity markers /brugbar/, /andet sprog/, /svartid/ all still present — test passes.)
+ a#3  "(資遣費; ikke atligestille med institutter i andre stater)" → "(資遣費; det er ikke det samme som
+      fratrædelsesgodtgørelse eller andre ordninger i andre lande)".
+ a#4  "tvister ur ansættelseskontrakten" → "tvister om ansættelseskontrakten".
+ a#5  "artikelns" → "artiklens".
+ a#6/7 VORES TEAM / KONTORER verified already Danish (mechanical R1/R5 fix) — left as is.
+ a#8  fullProfileLabel "Fuld profil (English)" → "Fuld profil (på engelsk)".
+ a#9  001 §5: country-specific note added after the 10 % sentence (Korea fact pattern; a treaty with the reader's
+      own country must be checked separately; not a worldwide investor rule). Numbers/dates untouched.
+ a#10 004: "Selv når et koreansk moderselskab går ind i Taiwan" → "Når et udenlandsk moderselskab etablerer sig i
+      Taiwan … bogføring og skat i moderselskabets hjemland"; 004 §6 got the same country-specific note (R2b).
+ a#11 005 Q1: "Deres hovedbank i Korea" → "din bank i det land, pengene sendes fra … i det koreanske eksempel er
+      det din hovedbank i Korea"; Q1 heading generalised ("fra udlandet"), Korea kept as a labelled example.
+ a#12 005 Q5: "personer med koreansk statsborgerskab" → "udenlandske statsborgere".
+ a#13 008 FAQ + lead: "I modsætning til Korea" → "I modsætning til visse andre lande — Korea er ét eksempel";
+      008 body "I Korea skal selskabet…" → "I nogle andre lande — Korea er ét eksempel —…";
+      008 "anderledes end i Korea" → "anderledes"; 009 "adskiller sig fra Korea" → "… fra reglerne i visse andre
+      lande — Korea er ét eksempel."
+ a#14 007: "familier, der som Korea (韓國) og Taiwan (臺灣)" → "familier, der er knyttet til 2 eller flere stater
+      eller områder — for eksempel Taiwan (臺灣) og et andet land (外國)"; §10 "barnet skal bo i Korea" → "bo i
+      udlandet … leveomkostningerne i bopælslandet". No claim about the reader's own law added.
+ a#15 003 Q20 (R3): "påser, at De modtager den størst mulige erstatning" → "gennemgår alle kravposter i sagen
+      omhyggeligt og forklarer, hvad der kan kræves på det foreliggende bevisgrundlag."
+ a#16 008 (R3): "modtage en høj fratrædelsesgodtgørelse" → "få fastslået, at han efter loven havde krav på
+      fratrædelsesgodtgørelse"; "ikke havde så megen held" → "ikke stod lige så stærkt".
+ a#17 003: "Jeg var WEI, taiwansk advokat (曾雋崴)." → "Wei Tseng (曾雋崴), advokat i Taiwan."
+ a#18 004: kræfter/kræfternes → medarbejdere/medarbejdernes (5 instances).
+ a#19 004: "missses" → "kan ansøgningsfristen eller beviskravene blive overset".
+ a#20 SKIPPED (see §3).
+ a#21 De/Deres → du (systemic, see §2).
+ a#22 "arbejdsgrupper" → "praksisområder" / "områder" (mega.services, home §3 heading + text, services description,
+      answers.da.services, answers.da.faq).
+ a#23 "ledsager klienter" → "bistår" (home intro, home §1, services §1, about §2 Wei Tseng line, criminal §5).
+ a#24 "kontrakt tvister, erstatning fra retsstridig handling" → "kontraktstvister, erstatning uden for kontrakt".
+ a#25 "udøvelse og bæring af rettigheder og pligter…" → "forældremyndighed og forældreansvar for mindreårige børn
+      (未成年子女權利義務之行使或負擔)"; same in 007 (2 places, incl. the explanatory sentence).
+ a#26 "Vi ledsager i efterforskningen …" → "Vi bistår sigtede, tiltalte og forurettede under efterforskningen og
+      i retten og vurderer strafferetlige risici ved erhvervsvirksomhed."
+ a#27 "farbar" → "brugbar" (part of a#2).
+ a#28 "udlovés" → "loves"; also heading "Hvad denne side ikke udlover" → "… ikke lover", "vi udlover hverken
+      rigtigheden" → "vi indestår hverken for rigtigheden", "udlover ikke, at et emne findes" → "lover ikke …".
+ a#29 "昊 (»vid himmel«)" → "昊 (»den vide himmel«)".
+ a#30 lawyers.description / answers.da.lawyers / partnerTitle → "Profiler for Hoverings advokater, den operative
+      ledelse og det tilknyttede revisionskontor." / partnerTitle "Tilknyttet revisionskontor".
+ a#31 inquiry option → "Jeg behersker ikke noget af de fire sprog — kommunikationsvejen skal bekræftes".
+ a#32 menuLabel "Sidefortegnelse" → "Menu".
+ a#33 team bio: see §3 (partially applied — Danish gloss added, byte-identical token kept).
+ a#34 "hostes hos Vercel … objektlager" → "drives hos Vercel, og din indsendelse gemmes i et ikke-offentligt lager".
+ a#35 "Støt derfor ingen handling …" → "Byg derfor ikke en beslutning i en virkelig sag alene på en artikel."
+ a#36 "stiller ikke en tolk." → "stiller ikke en tolk til rådighed." (2 places).
+ a#37 "nødkanal" → "akut linje".
+ a#38 "prøvelsesskridt" → "kun en afklaring" (contact §2 and FAQ 4).
+ a#39 "Sendes en anmodning med held" → "Når en anmodning går igennem".
+ a#40 answers.da.services "arbejde" → "arbejdsret".
+ a#41 001 "Kildeskattsatsen efter Taiwans interne ret" → "Kildeskattesatsen efter intern taiwansk ret" (+ the
+      official-sources link label).
+ a#42 002 "hæfte" (拘役) → "kortvarig frihedsstraf (拘役)" (art. 9 and art. 90 sentences); "strafferetlig bøde" → "bøde".
+ a#43 003 Q1 "blot en optagelse" → "det blot at tage billeder giver ikke ret til at forlade stedet".
+ a#44 003 Q17 (R3): "idømmer retterne for tiden omkring 3 måneders frihedsstraf" → "er der i nogle afgørelser idømt
+      omkring 3 måneders frihedsstraf; der findes intet typisk eller garanteret udfald"; same treatment for the
+      4-/6-month sentence.
+ a#45 003 Q15 date — see §3 (partially applied because of the numbers gate).
+ a#46 003 "efterlad en kommentar" → "Har du flere spørgsmål, kan du sende en anmodning via kontaktformularen; der
+      loves ikke svar med det samme." (no new link added — links must stay byte-identical).
+ a#47 ROC years glossed: 003 "år 109 (2020)" ×2 + "år 112 (2023)"; 007 "året 112 (2023)" ×2; 010 "året 109 (2020)";
+      "nummer" → "nr." in those case citations.
+ a#48 "en 3. person (第三人)" → "en tredjemand (第三人)" (003); 004 "en 3. (第三人)" ×5 → "en tredjemand (第三人)",
+      "en 3. stat (第三國)" → "et tredjeland (第三國)".
+ a#49 005 "(Q&A)" removed; sentence rewritten as natural Danish.
+ a#50 005 "Hvis De har andre spørgsmål, kan De kontakte os." → contact-form sentence with no reply-time promise.
+ a#51 005 "den taiwanske selskabs" → "det taiwanske selskabs" (Q1 + Q2).
+ a#52 004 "Den hæftelsesomfang … bedømmes" → "Det hæftelsesomfang … afhænger af".
+ a#53 004 "Vil datterselskabet på børsen, skal det opfylde de fastsatte betingelser" → "… de betingelser, der er
+      fastsat i …" (body + FAQ).
+ a#54 002 "offentligt udstedende selskab (公開發行公司)" → "selskab, der har gennemført et offentligt udbud af aktier
+      (公開發行公司)" (FAQ + body + the 'under denne tilstedeværelsesbetingelse' sentence).
+ a#55 006 "de store dommere (大法官)" → "forfatningsdomstolens dommere (大法官)".
+ a#56 007 "nødunderholdet (贍養費)" → "ægtefællebidraget efter skilsmissen (贍養費)" (2 places).
+ a#57 008 title + H1 → "Fratrædelsesgodtgørelse (資遣費) i Taiwan: hvornår den udbetales, og hvornår den ikke gør"
+      (double "??" gone). No test pinned the old title (full suite green).
+ a#58 008 "Force majeure" → "En ekstraordinær hændelse (不可抗力)".
+ a#59 009 "''**tidspunktet**''" → "**tidspunktet**".
+ a#60 008 "Goddag, jeg er Wei Tseng (曾雋崴), taiwansk advokat." → "Jeg hedder Wei Tseng (曾雋崴) og er advokat i
+      Taiwan."; blog asides in 003 Q16–Q20, 006 and 008 rewritten into a professional first person (block count kept).
+ a#61 006 "massagestræder" → "massagestrøg".
+ a#62 004 "fortjener det anbefaling" → "anbefales det" (2 places).
+ a#63 003 Q18 "Der kan være betinget strafudsættelse (緩刑) …" → "I nogle sager kan der idømmes betinget
+      strafudsættelse (緩刑), så frihedsstraffen ikke skal udstås; det er ikke et løfte om et bestemt udfald."
+ a#64 "listen sprog" → "listens sprog".
+
+Part b (columns 010–018) — all P1/P2 applied:
+ b#1  "Jeg var … processfuldmægtig (訴訟代理人)" → "Jeg førte denne sag som procesfuldmægtig (訴訟代理人)".
+ b#2  "den enes held er fastslået" → "…og heller ikke, at nogen af dem fører til et bestemt resultat."
+ b#3  "flytningsregistret" → "rejsebilag, kvitteringer og lignende dokumenter".
+ b#4  "Strafferetlig erstatning (懲罰性賠償金)" → "Pønal erstatning (懲罰性賠償金)".
+ b#5  011 "Også mærker fra Korea" → "Også et udenlandsk mærke" (R2).
+ b#6  011 "fordele produkter" → "distribuere produkter".
+ b#7  013 "personer med held stiftet" → "mange fået stiftet".
+ b#8  013 "efterlad en kommentar eller tag kontakt" → contact-form sentence, no reply promise (R3).
+ b#9  014 tegningspræmie(n) → underskriftsbonus(sen) (簽約金) — every instance incl. FAQ.
+ b#10 015 "hjælpeindretningen (分支機構)" → "andre forretningsenheder (分支機構)".
+ b#11 015 "til enhver tid henvende Dem" → contact-form sentence, no availability promise (R3).
+ b#12 017 transportkommission/-kommissionær → spedition/speditør (運送承攬), all instances incl. FAQ + §1.
+ b#13 017 kundeopmærksomhed(en) → kundeservice(n).
+ b#14 017 "skade på en 3." / "anmeldelse fra en 3." → "tredjemand".
+ b#15 018 "prestator" → "leverandør".
+ b#16 018 "uden at en særskilt revisor er nødvendig" / "uden revisor" → "en tilsynsførende (監察人)"; 會計師 kept as
+      "revisor".
+ b#17 018 "den udenlandske mor" → "det udenlandske moderselskab"; "omkostningsdelingen med moren" → "… med
+      moderselskabet".
+ b#18 010 "student" → "studerende" (18 instances, incl. image alt texts).
+ b#19 010 "året 109" → "året 109 (2020)".
+ b#20 010 "Har De pådraget Dem en skade" → "Er du kommet til skade" (+ full De sweep, §2).
+ b#21 010 "erstatning fra retsstridig handling" → "erstatning uden for kontrakt (侵權行為)".
+ b#22 010 "Det praktiske ved denne sag" → "Det praktisk vigtige ved denne sag".
+ b#23 010 (+003, same pattern) "genopretningsperioden" → "rekonvalescensperioden" (2+4 instances).
+ b#24 011 "tredjemand (3)" → "tredjemand" (2).
+ b#25 011 "bakteriedræbende aktion" → "bakteriedræbende virkning".
+ b#26 011 "optagelsesbetingelser" → "indgivelseskrav".
+ b#27 011 "Tilbagekaldet eller tilintetgørelsen (銷毀)" → "Tilbagekaldelse eller tilintetgørelse (銷毀)".
+ b#28 SKIPPED (see §3).
+ b#29 012 "konsultere [billedet …]" → "se [illustrationen …]" (link target untouched).
+ b#30 012 "Dette stykke" → "Denne artikel"; "overhalingsordningen" → "overhalingsreglerne".
+ b#31 012 "dette kontor" → "kontoret"; "Anonym ulykkessag" → "Anonymiseret ulykkessag".
+ b#32 013 "(Q&A)" removed, sentence rewritten.
+ b#33 013 emoji removed.
+ b#34 013 "bør De udveksle Dem grundigt" → "Dette punkt bør du drøfte grundigt".
+ b#35 013 "**Bemærkning**：" → "**Bemærkning:**" (fullwidth colon, R6b) ×2.
+ b#36 013 "Eks.)" → "F.eks.:" ×2.
+ b#37 013 "depositaet (押金) … snarere lavt" → "depositummet (押金) … forholdsvis lavt".
+ b#38 014 "5 juni 2026" → "5. juni 2026" (6 places incl. link label); 016 "25 juni 2026" → "25. juni 2026".
+ b#39 014 minimumstjenesteperiode(n) → bindingsperiode(n) (title, H1, FAQ, body — every instance; 最低服務年限約定
+      gloss kept).
+ b#40 014 "fratrædelsesviljeserklæringen" → "opsigelsen" (all instances).
+ b#41 014 "bæring af omkostningen" → "afholdelse af omkostningen" (§2 heading + §6).
+ b#42 014 "led N" → "stk. N" (9 instances); "regulerer selektivt 2 lovbestemte krav" → "opstiller 2 alternative
+      lovbestemte krav".
+ b#43 014 "kræve arbejdstageren ansvaret" → "pålægge arbejdstageren ansvaret".
+ b#44 015 "Udover markedssituationen" → "Ud over markedssituationen".
+ b#45 013/015/005 link label "Hvordan De når kontoret" → "Sådan kontakter du kontoret" (path unchanged; the guidance
+      contact page title was renamed to match).
+ b#46 016 "godtgørelse for ideel skade (慰撫金)" → "godtgørelse for svie og smerte (慰撫金)".
+ b#47 016 "formueens" → "formuens".
+ b#48 016 "trustee (受託人)" → "forvalteren (受託人)".
+ b#49 016 "descendenterne i ret linje (直系血親卑親屬)" → "livsarvingerne (直系血親卑親屬)" ("rang 1" kept — see §3).
+ b#50 016 §3 and §7 body no longer open with a bare "Nej." (R7b). Same treatment in 007 §6, 014 §1, 017 §1 and §3.
+ b#51 016 "indtrædelsesarv (代位繼承)" → "arv ved stedfortræden (代位繼承)" (4 instances).
+ b#52 017 "ministeriet for trafik (交通部)" → "Ministeriet for transport og kommunikation (交通部)" (12 instances incl.
+      link labels).
+ b#53 017 "et vidt praksisterm" → "et bredt forretningsudtryk".
+ b#54 017/018/011/013/001 investment-review office unified to "Investeringsafdelingen under Ministeriet for
+      økonomiske anliggender (經濟部投資審議司)".
+ b#55 018 "I governance … ikke-offentligt emitterende selskab" → "I ledelsen … et selskab uden offentligt udbud af
+      aktier"; H3 "slankere governance" → "enklere ledelsesstruktur".
+ b#56 018 "Det foregående er et forslag til kontraktudformning." → "… en almen sammenligning af selskabsformer, ikke
+      rådgivning om en konkret transaktion."
+ b#57 018 "ordn da først" → "skal man først få styr på".
+
+Rulebook rows beyond the reviewer rows: R2 (a#9–14, b#5), R3 (a#15/16/44/50/63, b#8/11), R4 verified (no masculine
+form for Wei Tseng anywhere; "han" in 008/010/012 is the male client/motorcyclist and was left), R5 (a#6–8, a#49,
+b#32, b#48, b#55), R6 (dates, ordinals, » « quotes; « » in the da inquiry copy changed to » « for pack consistency),
+R6b (b#35), R7/R7b (a#46, a#60, b#33, b#50), R8 (glossary sweep, §2), R9 (003 Q2 now says "i Taiwan 119 (ambulance
+og brandvæsen) … 110 (politi) eller 112 fra en mobiltelefon"), R10 (du-register + German/French/English calques).
+
+================================================================================
+2. SYSTEMIC SWEEPS (pattern → instances changed)
+================================================================================
+ De/Dem/Deres (formal, German Sie) → du/dig/din/dit/dine …… 101 in the guidance pack
+   (52 De, 10 Dem, 39 Deres) + 63 in columns 001–018. Verified afterwards: every remaining capital "De" is the
+   plural determiner/pronoun at sentence start ("De sendte data", "De følgende scenarier", "De blandes ofte",
+   "De er adskilt", "De midler…", 30 further cases), i.e. no formal address left in Danish anywhere.
+ Swedish tokens (ur, artikelns, Kildeskattsats) ………………… 3 (a#4, a#5, a#41)
+ German calques (arbejdsgrupper, ledsage, farbar, udlovés,
+   prøvelsesskridt, nødkanal, kræfter, institutter, bæring,
+   Dette stykke, fortjener det anbefaling, udveksle Dem,
+   Eks.), ordn da, Willenserklärung, Das Praktische) ………… 43
+ "held" for success/Erfolg ………………………………………………………… 4 (a#39, b#2, b#7, 008) — 0 left
+   (7 remaining greps are "uheld"/"withheld").
+ digit stand-ins for third party ("3. person", "en 3.",
+   "tredjemand (3)", "en 3. stat", "en 3.s") ……………………… 13 → tredjemand / tredjeland / tredjemands
+ Korea-as-default-reader framing ………………………………………… 11 passages (001, 004, 005 ×3, 007 ×2, 008 ×3, 009, 011)
+   + 2 country-specific treaty notes added (001 §5, 004 §6). Korea kept as a labelled example throughout.
+ Blog register: "efterlad en kommentar" ×2, emoji ×1,
+   "??" ×2, "til enhver tid"/"kontakt os" invitations ×3 …… 8 → contact-form wording with no reply-time promise
+ English chrome (Q&A ×2, governance ×2, trustee ×1,
+   "(English)" ×1) …………………………………………………………………… 6
+ Fullwidth CJK punctuation in running text (：) …………………… 2 (013) — the only other one is inside the 008
+   frontmatter `url`, which is out of scope.
+ Dates: "5 juni"/"25 juni" → "5./25. juni" 7; ISO date in
+   running text restructured 1 (see §3).
+ ROC years glossed with the Gregorian year …………………………… 6
+ Glossary unification (R8): 經濟部投資審議司 5 files → one
+   label; 交通部 12; 運送承攬 9; 監察人 2; 分支機構 2; 拘役 2;
+   公開發行公司 3; 大法官 1; 贍養費 2; 未成年子女權利義務… 3;
+   代位繼承 4; 慰撫金 1; 受託人 1; 直系血親卑親屬 1; 簽約金 5;
+   最低服務年限 20; 就醫交通費 1; 懲罰性賠償金 1; 訴訟代理人 1;
+   外國人投資條例 2; 統一證號基本資料表 1; 工作規則 1 ……………… 80
+ "retsstridig handling" (unerlaubte Handlung) → "erstatning
+   uden for kontrakt" / "skadegørende handling" / "retsbrud" … 9 (the adjectival "retsstridig krænkelse" kept:
+   that is ordinary Danish legal usage).
+
+================================================================================
+3. ROWS SKIPPED / PARTIALLY APPLIED (with reason)
+================================================================================
+ a#20 (005 body link with the percent-encoded Hangul slug) — SKIPPED per ACCEPTED-da ("blog link fixed
+   mechanically — skip") and the hard rule that links stay unchanged. The link to "uddybning del 1" still points at
+   wei-wei-lawyer.com with a Hangul slug; only the supervisor can remap it. (Frontmatter `url:` Hangul in 008/009
+   also left, per ACCEPTED.)
+ b#28 (011 official link uses lang=jpn) — SKIPPED. The hard rules forbid changing links and the checker compares
+   hrefs against the source; the fix is a supervisor-level link remap, not a translation fix. Flagged here.
+ a#33 (TWD 1.57M in the team bio) — PARTIALLY applied. "1,57 mio. TWD" alone fails
+   src/data/__tests__/guidance-team-bios.test.ts: "TWD 1.57M" is in GUIDANCE_BIO_PRESERVED_TERMS, which every
+   locale must keep byte-identical (changing that constant would touch all 27 locales, out of scope). Final Danish:
+   "…og fik i første instans en dom på TWD 1.57M (1,57 mio. TWD)." — the term survives, the Danish reader gets a
+   parseable figure. The fact itself was kept, as ACCEPTED requires.
+ a#45 (003 ISO date) — PARTIALLY applied. "den 29. maj 2026" drops the digit 5 that the source date 2026-05-29
+   contributes, and the checker's `numbers` rule then fails ("missing from translation (1): 5"); "29.05.2026" is
+   parsed as one token and loses both 2026s. Per the WO ("prefer the form the checker accepts"), the sentence was
+   restructured so the ISO stamp is no longer an ungrammatical attributive after "Den":
+   "Ydelsesnormen (強制汽車責任保險給付標準), der blev ændret 2026-05-29, gælder for ulykker fra den 1. juli 2026."
+   The second date is now written in Danish form.
+ b#49 ("rang 1" → "første arveklasse") — PARTIALLY applied: "descendenterne i ret linje" → "livsarvingerne", but
+   "rang 1" was kept because the digit is counted by the checker and the surrounding text uses "den gældende rang"
+   consistently.
+
+Disagreements with the reviewers (not applied):
+ · a#2's ACCEPTED phrasing "Vi svarer for at kunne prøve…" keeps the German "svare for" (= vouch for/be liable),
+   which is the very defect the row reports; the reviewer's own suggestion ("Vi vender tilbage for at undersøge…")
+   is the correct Danish and is what was written.
+ · a#46 proposed adding a [Kontakt](/da/contact) link inside a body paragraph of 003. Not applied: link count and
+   hrefs must stay identical to the source. The CTA was rewritten in prose instead.
+ · b#9's ACCEPTED value "ansættelsesbonus/underskriftsbonus" — used "underskriftsbonus (簽約金)" per ACCEPTED;
+   the reviewer's "ansættelsesbonus" is vaguer and was not used.
+ · b#10's "underafdelinger" reads like an internal org unit; "andre forretningsenheder (分支機構)" was used, which
+   matches R8 ("branch establishment, generic").
+ · b#48's "trusteeen (受託人)" is not Danish; "forvalteren (受託人)" (the reviewer's own alternative) was used.
+ · b#16: the reviewer's "tilsynsførende" was applied, but the second sentence he calls a repeat ("uden revisor")
+   is about a different body and was rewritten rather than deleted.
+ · 016 "Nej."-openings: the reviewer proposed deleting the word only; the headings were left untouched (heading
+   count is gated) and the first sentence made self-standing, which R7b allows.
+
+A checker artefact worth recording for the next lane: findEnglishSentences() flags any ≥12-word sentence whose
+Latin-only text contains ≥3 of {at, for, by, have}. Danish "at"/"for" trip it easily, and "5. juni" additionally
+splits a sentence for that counter. Three rewrites (003, 004, 007) and one in 014 were re-phrased for this reason
+only — meaning unchanged.
+
+================================================================================
+4. §VERIFY OUTPUT (verbatim)
+================================================================================
+$ cd /Users/son7/Projects/tseng-law-fix-m-20260921 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-da --lang da 2>&1 | tail -8
+forbidden      PASS
+hanzi          PASS   han=119
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-da src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      23
+
+(23 = the 22 modified in-scope files + the untracked WO-F-da.txt; it reads 24 after this log file was written.
+No git add/commit/push/stash/checkout was run.
+Diff hunks were verified to fall inside the Danish blocks only: nordic.ts lines 520–981 = danishGuidanceContent,
+answers.ts 622–647 = da, team.ts 635–644 + 2285 = da, inquiry-copy.ts 1193–1238 = da.)

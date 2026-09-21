@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Billede, der forklarer vurderingen af ansvaret ved overhalingsulykker i Taiwan og den sikre overhalingsprocedure](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Når det forankørende køretøj kører langsomt, kan overhaling (超車) synes at være et hverdagsvalg, men det er en kørsel med betydelig risiko. Før De begynder at overhale, skal De sammen undersøge vejstrækningen, trafiksituationen i begge retninger, de forankørende køretøjers bevægelse og rummet til sikkert at vende tilbage til den oprindelige vognbane (道路交通安全規則).
+Når det forankørende køretøj kører langsomt, kan overhaling (超車) synes at være et hverdagsvalg, men det er en kørsel med betydelig risiko. Før du begynder at overhale, bør du samlet vurdere vejstrækningen, trafiksituationen i begge retninger, de forankørende køretøjers bevægelse og rummet til sikkert at vende tilbage til den oprindelige vognbane (道路交通安全規則).
 
 ## Overhalingsbetingelser ifølge artikel 101 i færdselssikkerhedsforskrifterne (道路交通安全規則)
 
@@ -21,7 +21,7 @@ Når det forankørende køretøj kører langsomt, kan overhaling (超車) synes 
 
 Artikel 101 forbyder overhaling på strækninger med skilte for sving, stejle stigninger eller fald, smalle broer, tunneler eller kryds samt ved jernbaneoverkørsler og på arbejdsområder.
 
-Desuden må De ikke overhale på steder eller strækninger med skole- eller hospitalskilte, på steder med andre overhalingsforbudsskilte eller -afmærkninger, når et modkørende køretøj nærmer sig, og heller ikke når 2 eller flere køretøjer kører i træk foran (超車).
+Desuden må du ikke overhale på steder eller strækninger med skole- eller hospitalskilte, på steder med andre overhalingsforbudsskilte eller -afmærkninger, når et modkørende køretøj nærmer sig, og heller ikke når 2 eller flere køretøjer kører i træk foran (超車).
 
 For i samme vognbane at overhale et forankørende køretøj skal den bagvedkørende først give 2 korte hornsignaler eller blinke med forlygterne 1 gang. Horn og forlygter må ikke bruges gentagne gange for at tvinge det forankørende køretøj til at vige (超車).
 
@@ -29,11 +29,11 @@ Det bagvedkørende køretøj må først overhale, efter at det forankørende kø
 
 Derefter skal det overhalende køretøj tænde det venstre blinklys, køre forbi til venstre med en afstand på mindst 0,5 meter til det forankørende køretøj og, når en sikker afstand er sikret, tænde det højre blinklys og sikkert vende tilbage til den oprindelige vognbane.
 
-Denne rækkefølge af signal og vigen i samme vognbane betyder ikke, at overhaling på forbudte steder eller under forbudte betingelser ville være tilladt. Før De begynder at overhale, skal alle betingelser i artikel 101 vurderes under ét.
+Denne rækkefølge af signal og vigen i samme vognbane betyder ikke, at overhaling på forbudte steder eller under forbudte betingelser ville være tilladt. Før man begynder at overhale, skal alle betingelser i artikel 101 vurderes under ét.
 
-## Anonym ulykkessag, som dette kontor har behandlet
+## Anonymiseret ulykkessag, som kontoret har behandlet
 
-I en anonymiseret sag fra dette kontor kørte motorcyklisten A med passageren B på en bjergvej. Foran dem kørte 2 personbiler; det forreste køretøj nummer 1 bevægede sig langsomt, så også køretøj nummer 2 og motorcyklen kom frem med lav hastighed.
+I en anonymiseret sag fra kontoret kørte motorcyklisten A med passageren B på en bjergvej. Foran dem kørte 2 personbiler; det forreste køretøj nummer 1 bevægede sig langsomt, så også køretøj nummer 2 og motorcyklen kom frem med lav hastighed.
 
 ![Ulykkesskitse, der viser motorcyklens overhalingssti og de 2 forankørende køretøjer på en bjergvej](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
@@ -49,11 +49,11 @@ At der i enkelte sager kommer sådanne sagkyndige resultater, betyder ikke, at d
 
 ## Punkter, der skal undersøges ved vurderingen af ulykkesansvaret
 
-Før overhaling skal De først undersøge, om stedet eller trafiksituationen falder ind under overhalingsforbuddet. Gælder proceduren for samme vognbane, så giv det foreskrevne horn- eller forlygtesignal uden at tvinge det forankørende køretøj til at vige, vent på et tydeligt vigetegn og fuldfør overhalingen med tilstrækkelig afstand og sikker tilbagevendingsafstand (超車).
+Før overhaling bør du først undersøge, om stedet eller trafiksituationen falder ind under overhalingsforbuddet. Gælder proceduren for samme vognbane, så giv det foreskrevne horn- eller forlygtesignal uden at tvinge det forankørende køretøj til at vige, vent på et tydeligt vigetegn og fuldfør overhalingen med tilstrækkelig afstand og sikker tilbagevendingsafstand (超車).
 
 Overholdelsen af artikel 101 er vigtig, men sikrer i sig selv hverken undgåelse af en ulykke eller et senere resultat af sagkyndig undersøgelse eller retssag. Førere skal holde en ekstra sikkerhedsmargin og tilpasse sig situationen foran sig.
 
-Som supplement kan De konsultere [billedet af overhalingsreglerne og -proceduren](https://gonews.com.tw/car/daily/21934/). Da det er en sekundær kilde, bør De ved prøvelsen af de juridiske betingelser også læse de gældende officielle forskrifter (道路交通安全規則).
+Som supplement kan du se [illustrationen af overhalingsreglerne og -proceduren](https://gonews.com.tw/car/daily/21934/). Da det er en sekundær kilde, bør du ved vurderingen af de juridiske betingelser også læse de gældende officielle forskrifter (道路交通安全規則).
 
 ---
 
@@ -62,4 +62,4 @@ Som supplement kan De konsultere [billedet af overhalingsreglerne og -proceduren
 > - [Hoverings internationale team](/da/lawyers)
 > - [Procedure ved færdselsuheld i Taiwan](/da/columns/taiwan-traffic-accident-procedure)
 
-Dette stykke er almindelig juridisk information om overhalingsordningen og vurderingen af ulykkesansvaret i Taiwan (超車); det er ikke rådgivning om en konkret sag og heller ikke et løfte om et bestemt resultat. Det faktiske ansvar kan afvige efter ulykkessted, køretøjsbevægelse, hastighed, signaler, beviser, sagkyndig undersøgelse (鑑定) og den nyeste ret; konkrete sager skal undersøges særskilt på grundlag af de pågældende dokumenter.
+Denne artikel er almindelig juridisk information om overhalingsreglerne og vurderingen af ulykkesansvaret i Taiwan (超車); det er ikke rådgivning om en konkret sag og heller ikke et løfte om et bestemt resultat. Det faktiske ansvar kan afvige efter ulykkessted, køretøjsbevægelse, hastighed, signaler, beviser, sagkyndig undersøgelse (鑑定) og den nyeste ret; konkrete sager skal undersøges særskilt på grundlag af de pågældende dokumenter.

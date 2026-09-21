@@ -619,7 +619,7 @@ export const guidanceAnswers: Record<
   da: {
     services: {
       answer:
-        'Kontoret behandler seks arbejdsgrupper efter Taiwans ret: investering og selskabsstiftelse, civile tvister og erstatning, ægteskab, familie og arv, arbejde, strafferet samt immaterialret. Omfanget af hver sag bekræftes separat, efter at en advokat har gennemgået det indhold, De sender. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
+        'Kontoret behandler seks praksisområder efter taiwansk ret: investering og selskabsstiftelse, civile tvister og erstatning, ægteskab, familie og arv, arbejdsret, strafferet samt immaterialret. Omfanget af hver sag bekræftes særskilt, efter at en advokat har gennemgået det indhold, du sender. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/da/faq', '/da/contact'],
     },
     about: {
@@ -629,22 +629,22 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Denne side viser profiler for Hoverings advokater, operative ledelse og tilknyttede revision. Advokat Wei Tseng (曾雋崴) er berettiget i Taiwan og er kontorets ledende advokat; hun arbejder med klienter fra Korea, Japan og andre internationale klienter. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
+        'Denne side viser profiler for Hoverings advokater, den operative ledelse og det tilknyttede revisionskontor. Advokat Wei Tseng (曾雋崴) er beskikket som advokat i Taiwan og er kontorets ledende advokat; hun arbejder med klienter fra Korea, Japan og andre internationale klienter. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/da/about', '/da/contact'],
     },
     pricing: {
       answer:
-        'Denne side offentliggør ingen prisliste. Først fastlægges arbejdets omfang ud fra det resumé, De sender, derefter bekræftes beløb og beregningsmåde med Dem, før arbejdet begynder. Samtalen med en advokat kan være mod betaling; ud over honoraret kan rets- eller myndighedsomkostninger opstå. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
+        'Denne side offentliggør ingen prisliste. Først fastlægges arbejdets omfang ud fra det resumé, du sender, derefter bekræftes beløb og beregningsmåde med dig, før arbejdet begynder. Samtalen med en advokat kan være mod betaling; ud over honoraret kan rets- eller myndighedsomkostninger opstå. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/da/contact', '/da/faq'],
     },
     contact: {
       answer:
-        'Send Deres resumé via kontaktformularen: hvad der er sket, hvilken hjælp De har brug for, hvilken forbindelse sagen har med Taiwan, og fristen, hvis De kender den. I det første trin behøver De endnu ikke sende identitetsdokumenter eller hele beviset. Kontoret lover ingen svartid og bekræfter ingen tid via denne side. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
+        'Send dit resumé via kontaktformularen: hvad der er sket, hvilken hjælp du har brug for, hvilken forbindelse sagen har med Taiwan, og fristen, hvis du kender den. I det første trin behøver du endnu ikke sende identitetsdokumenter eller hele beviset. Kontoret lover ingen svartid og bekræfter ingen tid via denne side. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/da/faq', '/da/pricing'],
     },
     faq: {
       answer:
-        'Denne del besvarer hyppige spørgsmål på niveauet almindelig information: de seks arbejdsgrupper, forberedelsen før kontakten, hvordan omkostningerne fastlægges, og hvad en sendt meddelelse betyder. En sendt anmodning venter på en advokats gennemgang; den er ikke en juridisk udtalelse, ikke en tid og skaber ikke et forhold mellem advokat og klient. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
+        'Denne del besvarer hyppige spørgsmål på niveauet almindelig information: de seks praksisområder, forberedelsen før kontakten, hvordan omkostningerne fastlægges, og hvad en sendt meddelelse betyder. En sendt anmodning venter på en advokats gennemgang; den er ikke en juridisk udtalelse, ikke en tid og skaber ikke et forhold mellem advokat og klient. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.',
       sources: ['/da/contact', '/da/services'],
     },
   },

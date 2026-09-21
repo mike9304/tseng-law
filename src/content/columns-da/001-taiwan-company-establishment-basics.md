@@ -54,7 +54,7 @@ Stiftelsen af et taiwansk datterselskab begynder som regel med den forudgående 
 
 2. Autentisk akt og legalisering af udenlandske dokumenter såsom fuldmagten (委任書) og, om nødvendigt, autentifikation ved en taiwansk repræsentation i udlandet (駐外館處驗證)
 
-3. Investeringsansøgning hos Ministeriet for økonomiske anliggender, afdelingen for investeringsprøvelse (經濟部投資審議司) (hvis det finder anvendelse)
+3. Investeringsansøgning hos Investeringsafdelingen under Ministeriet for økonomiske anliggender (經濟部投資審議司) (hvis det finder anvendelse)
 
 4. Åbning af selskabets forberedelseskonto (公司籌備處帳戶)
 
@@ -116,7 +116,7 @@ Til ansøgningen om varigt ophold (永久居留) skal udenlandske personer i pri
 
 ## 5. Skatter og indkomstskatteoverenskomsten Taiwan–Korea
 
-Den almindelige sats for den taiwanske omsætningsafgift (營業稅) udgør 5 %; angivelsen sker sædvanligvis hver 2. måned. Den almindelige sats for indkomstskatten for profitgivende virksomheder (營利事業所得稅) udgør 20 %, men den faktiske beskatning afhænger af den skattepligtige indkomst og de gældende forskrifter. Kildeskattsatsen efter Taiwans interne ret på udbytte til ikke-hjemmehørende udgør 21 %. På udbytte, der opfylder anvendelsesbetingelserne og proceduren i indkomstskatteoverenskomsten Taiwan–Korea, gælder maksimumsatsen på 10 %. Konkret angivelse og kildeskat skal behandles efter hjemmehørende-status, reel begunstiget (受益所有人), indkomsttype og overenskomstdokumenter.
+Den almindelige sats for den taiwanske omsætningsafgift (營業稅) udgør 5 %; angivelsen sker sædvanligvis hver 2. måned. Den almindelige sats for indkomstskatten for profitgivende virksomheder (營利事業所得稅) udgør 20 %, men den faktiske beskatning afhænger af den skattepligtige indkomst og de gældende forskrifter. Kildeskattesatsen efter intern taiwansk ret på udbytte til ikke-hjemmehørende udgør 21 %. På udbytte, der opfylder anvendelsesbetingelserne og proceduren i indkomstskatteoverenskomsten Taiwan–Korea, gælder maksimumsatsen på 10 %. Landespecifik note: denne overenskomst gælder forhold med tilknytning til Korea. Om der findes en indkomstskatteoverenskomst mellem Taiwan og dit eget land, og hvilke vilkår den i så fald stiller, skal undersøges særskilt; det er ikke en regel, der gælder for investorer fra hele verden. Konkret angivelse og kildeskat skal behandles efter hjemmehørende-status, reel begunstiget (受益所有人), indkomsttype og overenskomstdokumenter.
 
 Omsætningsafgift og indkomstskat for profitgivende virksomheder adskiller sig efter skattegenstand og angivelsesmåde; den skat, der anvendes på omsætningen, og den skat, der anvendes på den skattepligtige indkomst, skal skelnes. Ved udbetaling af udbytte, renter, royalties eller vederlag for tjenesteydelser til udenlandske kapitalejere eller til koncernforbundne virksomheder skal betalingens karakter og den modtagende persons stilling, de interne regler om kildeskat og den mulige anvendelse af indkomstskatteoverenskomsten undersøges på forhånd.
 
@@ -131,14 +131,14 @@ Den begrænsede overenskomstsats gælder ikke automatisk alene fordi en overensk
 - [Vejledning fra Administrationen for handelsudvikling under Taiwans ministerium for økonomiske anliggender (商業發展署) om selskabs- og handelsregistrering](https://gcis.nat.gov.tw/mainNew/English/index.jsp)
 - [Arbejdshåndbog vedrørende arbejdstilladelsen for driftsansvarlige i virksomheder med investering fra oversøiske kinesere eller udlændinge](https://ws.wda.gov.tw/Download.ashx?n=VGhlIERpcmVjdG9yIG9yIE1hbmFnZXIgb2YgYW4gQXBwcm92ZWQgQnVzaW5lc3MgSW52ZXN0ZWQgb3IgRXN0YWJsaXNoZWQgYnkgT3ZlcnNlYXMgQ2hpbmVzZSBvciBGb3JlaWduZXIocykoU09QIE1hbnVhbCkucGRm&u=LzAwMS9VcGxvYWQvMzIxL3JlbGZpbGUvMC8yNTE1LzUzMWMyZTM0LTI1NmYtNGI5MC1iMzAzLTEzNWI4MTQxYTk5MC5wZGY%3D)
 - [Vejledning fra Taiwans finansministerium om indkomstskatteoverenskomsten Taiwan–Korea](https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10)
-- [Forskrift vedrørende kildeskattsatsen på udbytte til ikke-hjemmehørende](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
+- [Forskrift vedrørende kildeskattesatsen på udbytte til ikke-hjemmehørende](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Vejledning om angivelsescyklussen for den taiwanske omsætningsafgift](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/business-tax/collection-prcedure/oVL9pwM)
 - [Vejledning om satsen for den taiwanske indkomstskat for profitgivende virksomheder](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR)
 - [Vejledning om beskatningen af udbytteindkomst for udenlandske personer](https://www.etax.nat.gov.tw/etwmain/alien-tax-service/alien-tax-faq/KK9Y76o)
 - [Vejledning fra Taiwans immigrationsmyndighed (內政部移民署) om varigt ophold](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Vejledning fra byen Taipei om den forudgående forespørgsel om forretningsstedet](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-De kan se det pågældende arbejdsområde under [Hvilke sager vi behandler](/da/services), den ansvarlige advokats forløb og sprog under [Hoverings internationale team](/da/lawyers). Ved spørgsmål om en konkret sag bedes De bruge [Kontakt](/da/contact).
+Du kan se kontorets arbejdsområde under [Hvilke sager vi behandler](/da/services) og den ansvarlige advokats baggrund og sprog under [Hoverings internationale team](/da/lawyers). Har du spørgsmål om en konkret sag, kan du bruge [Kontakt](/da/contact).
 
 Denne artikel er almindeligt informerende materiale til undervisningsformål om selskabsstiftelse i Taiwan (公司設立) og de dermed sammenhængende ordninger; den er ikke juridisk eller skattemæssig rådgivning i en konkret sag og lover ikke et bestemt resultat. Nødvendige procedurer og udfald kan afvige efter investeringsstruktur, branche, ansøgerens nationalitet og opholdsstatus samt den kompetente myndigheds nyeste praksis; før gennemførelse af investering, kontrakt eller beskæftigelse skal de nyeste officielle kilder og de egne omstændigheder undersøges.
 

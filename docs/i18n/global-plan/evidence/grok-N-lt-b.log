@@ -1,0 +1,62 @@
+WO-N-lt-b — Lithuanian columns 010–018
+workspace: /Users/son7/Projects/tseng-law-new-lt-20260922
+wrote: src/content/columns-lt/010–018 (9 files)
+no git add/commit/push
+
+## File count
+9 (this WO). Dir total 18 including 001–009 from WO-N-lt-a.
+
+## §Verify (verbatim)
+
+ls src/content/columns-lt/*.md | wc -l
+      18
+
+node scripts/check-column-translation.mjs --dir src/content/columns-lt --lang lt 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-lt-20260922/src/content/columns-lt/018-taiwan-semiconductor-market-entry.md  lang=lt
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=66
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-lt | wc -l
+       0
+
+git status --short | wc -l
+      44
+
+Full dir run: PASS 001–018; summary PASS 18/18 files; this WO 010–018 all PASS; markers 0.
+
+## Key term choices (Lithuanian + Traditional-Chinese gloss)
+
+1. proceso atstovė (訴訟代理人) — feminine; client in 010 remains masculine
+2. kūno sužalojimas dėl neatsargumo (過失傷害); nusikaltimas, baudžiamas tik pagal skundą (告訴乃論之罪)
+3. laiškas su turinio patvirtinimu (存證信函); vaizdo įrašai gali būti perrašyti (影像可能被覆蓋)
+4. baudinis žalos atlyginimas (懲罰性賠償金); slaugos išlaidos (看護費用); vykimo gydytis išlaidos (就醫交通費)
+5. produkto informacijos byla (產品資訊檔案, PIF); administracinė bauda (罰鍰)
+6. Ekonomikos ministerijos Investicijų peržiūros departamentas (經濟部投資審議司)
+7. minimalus tarnybos laikotarpis (最低服務年限); profesinių įgūdžių mokymas (專業技術培訓); išmoka, mokama iš anksto (預付性給付)
+8. automobilių krovinių vežimo veikla (汽車貨運業); steigimo parengiamasis leidimas (籌設許可); verslo registracijos pažymėjimas (營業執照)
+9. nepilnamečių vaikų teisių ir pareigų įgyvendinimas ir prisiėmimas (未成年子女權利義務之行使或負擔); naudos teisė pagal patikėjimo sandorį (信託受益權)
+10. patronuojančioji bendrovė (母公司) — parent company, not „motina“
+
+Byline / first person: **Advokatė Wei Tseng (曾雋崴)** (feminine). Formal Jūs. Categories: Įmonių steigimas Taivane / Teisinė informacija apie Taivaną / Bylos analizė. Dates: 2025 m. rugsėjo 13 d. / 2026 m. vasario 4 d. / 2026 m. rugsėjo 17 d. Thousands: 1.579.589; 25.000.000. Invest Taiwan: lang=eng.
+
+## Unresolved
+
+- numbers WARN 수사미해석 on 010 (1심/제7호), 011 (제3자/제1항/제7호), 014 (제N항/제3자), 015 (제2종), 016 (제3자), 017 (제3자). Checker has no Lithuanian ordinal lexicon; numeral bags still match (sourceCount = targetCount). Not FAILs.
+- 010 keeps the plaintiff as a labelled Korean student (case fact, not reader-as-Korean). R2 applied to 011 (užsienio prekių ženklai, not Korean brands).

@@ -864,15 +864,15 @@ export const CINEMATIC_OPENING_COPY: Record<
     service: 'Právní informace o Tchaj-wanu · angličtina, čínština, japonština a korejština',
     contact: 'Obraťte se na kancelář',
   },
-  lt: { // SCAFFOLD(cs)
+  lt: {
     primary: 'HOVERING INTERNATIONAL LAW FIRM',
-    secondary: 'ADVOKÁTI NA TCHAJ-WANU',
-    scroll: 'Pokračujte dolů',
-    skip: 'Přeskočit úvod',
+    secondary: 'ADVOKATAI TAIVANE',
+    scroll: 'Slinkite žemyn',
+    skip: 'Praleisti įžangą',
     mediaAlt:
-      'Letecký pohled na středohoří Tchaj-wanu a moře mraků v přirozeném světle',
-    service: 'Právní informace o Tchaj-wanu · angličtina, čínština, japonština a korejština',
-    contact: 'Obraťte se na kancelář',
+      'Oro vaizdas: Taivano centriniai kalnai ir debesų jūra natūralioje šviesoje',
+    service: 'Teisinė informacija apie Taivaną · anglų, kinų, japonų ir korėjiečių kalbos',
+    contact: 'Kreipkitės į kontorą',
   },
   lv: { // SCAFFOLD(cs)
     primary: 'HOVERING INTERNATIONAL LAW FIRM',

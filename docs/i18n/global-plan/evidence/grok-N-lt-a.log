@@ -1,0 +1,62 @@
+WO-N-lt-a — Lithuanian columns 001–009
+workspace: /Users/son7/Projects/tseng-law-new-lt-20260922
+wrote: src/content/columns-lt/001–009 (9 files)
+no git add/commit/push
+
+## File count
+9
+
+## §Verify (verbatim)
+
+ls src/content/columns-lt/*.md | wc -l
+       9
+
+node scripts/check-column-translation.mjs --dir src/content/columns-lt --lang lt 2>&1 | tail -20
+
+PASS  /Users/son7/Projects/tseng-law-new-lt-20260922/src/content/columns-lt/009-taiwan-voluntary-resignation-severance.md  lang=lt
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1]
+images         PASS   count=2
+blocks         PASS   blocks=44
+links          PASS   hrefs=3
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=71
+numbers        WARN   수사미해석 (1): 제6호
+                      sourceCount=11 targetCount=11
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  9/9 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-lt | wc -l
+       0
+
+git status --short | wc -l
+      33
+
+Full dir run: PASS 001–009; summary PASS 9/9 files; markers 0.
+
+## Key term choices (Lithuanian + Traditional-Chinese gloss)
+
+1. leidimas dirbti (工作許可)
+2. užsieniečio leidimo gyventi pažymėjimas (外僑居留證, ARC)
+3. išeitinė išmoka pagal Taivano teisę (資遣費) — not 退休金
+4. Darbo standartų įstatymas (勞動基準法)
+5. trumpalaikis laisvės atėmimas (拘役) — not pre-trial detention
+6. bausmės vykdymo atidėjimas (緩刑) — not parole
+7. priežiūros narys (監察人) — not auditor
+8. akcininkai (股東) — not partners
+9. Ekonomikos ministerijos Investicijų peržiūros departamentas (經濟部投資審議司)
+10. nepilnamečių vaikų teisių ir pareigų įgyvendinimas ir prisiėmimas (未成年子女權利義務之行使或負擔)
+
+Byline / first person: **Advokatė Wei Tseng (曾雋崴)** (feminine). Formal Jūs. Categories: Įmonių steigimas Taivane / Teisinė informacija apie Taivaną. Dates: 2025 m. rugsėjo 13 d. Thousands: 100.000.
+
+## Unresolved
+
+- numbers WARN 수사미해석 on 002 (제1항×2), 003 (제1심/제2심/제1항/제2항/제3자/제N호/1일로), 004 (제3자/제1항/제2항/제3국), 007 (제N항/제4호/제3자), 009 (제6호). Checker has no Lithuanian ordinal lexicon; numeral bags still match (sourceCount = targetCount). Not FAILs.
+- 005 Q1 keeps Korea as a labelled FX/banking example (source is Korea-specific; R2).

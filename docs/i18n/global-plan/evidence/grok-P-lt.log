@@ -1,0 +1,83 @@
+WO-P-lt — Lithuanian guidance pack + UI strings
+Workspace: /Users/son7/Projects/tseng-law-new-lt-20260922
+Date: 2026-09-22
+Agent: Grok 4.6
+
+## Files touched
+src/data/international-guidance-baltic-atlantic.ts
+src/data/international-guidance-team.ts
+src/data/international-guidance-offices.ts
+src/data/international-guidance-answers.ts
+src/data/international-inquiry-copy.ts
+src/data/multilingual-international-v2.ts
+src/data/team-name.ts
+src/lib/llms-txt.ts
+src/lib/columns.ts
+src/lib/public-language-registry.ts
+src/components/ColumnsGrid.tsx
+src/components/CinematicOpening.tsx
+src/components/decorative-video-controls.ts
+src/components/__tests__/columns-grid-guidance-labels.test.tsx
+src/components/__tests__/multilingual-international-v2.test.tsx
+src/data/__tests__/column-alternate-expectations.ts
+src/data/__tests__/guidance-disclosure-parity.test.ts
+src/data/__tests__/guidance-office-facts-sync.test.ts
+src/data/__tests__/international-guidance-privacy-disclosure.test.ts
+tests/builder-editor/international-guidance.playwright.ts
+
+(columns-grid test also reads the Baltic pack file so VIEW_ALL_LABEL_EVIDENCE for lt can see `viewAllLabel: 'Rodyti visus'`.)
+
+## §Verify output (verbatim)
+
+=== grep SCAFFOLD lt ===
+0
+=== tsc ===
+TSC_OK
+=== vitest ===
+   × guidance locale llms.txt catalogs > writes a distinct notice set for each guidance language 3ms
+   × root llms.txt guidance catalog links > stays inside the 8 KiB root budget and the documented grammar 1ms
+   × root llms.txt guidance catalog links > lists every site-locale catalog and every guidance catalog 0ms
+   × root llms.txt guidance catalog links > labels each guidance catalog in its own language without widening consultation languages 0ms
+   × guidanceAnswers > covers every guidance locale x 6 page keys 4ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+ Test Files  2 failed | 45 passed (47)
+      Tests  5 failed | 1096 passed (1101)
+=== git status --short | wc -l ===
+      21
+
+## Failures that are not lt rows
+These 5 failures are caused by other new locales that are still scaffolded (or by the batch size of all new locales), not by Lithuanian copy:
+
+1. src/lib/__tests__/international-guidance-answers.test.ts
+   "covers every guidance locale x 6 page keys"
+   The suite's hardcoded GUIDANCE_LOCALES list is the previous 27. GUIDANCE_LOCALES_4 / guidanceAnswers now also contain bn, ur, fa, my, ta, ne, km, mn, sk, bg, hr, sr, sl, lv, et, ca, is (still scaffolded) plus lt. Would fail the same way with lt omitted.
+
+2. src/app/[locale]/__tests__/llms-discovery.test.tsx
+   "writes a distinct notice set for each guidance language"
+   Expected 135 unique notice strings; received 84 because remaining scaffolded locales still share cloned Czech / Hindi / Arabic / Thai / Russian notices. Lithuanian notices are distinct.
+
+3–5. same file, root llms.txt catalog tests
+   Root catalog exceeds the 8192-byte budget because every new locale is listed. Not an lt wording defect.
+
+No failing assertion targeted an lt row, lt regex, or Lithuanian string.
+
+## Terminology (legal terms + Chinese gloss kept exactly)
+- išeitinė išmoka pagal Taivano teisę (資遣費)
+- leidimas dirbti (工作許可)
+- teisė gyventi (居留)
+- nepilnamečių vaikų teisių ir pareigų įgyvendinimas ir prisiėmimas (未成年子女權利義務之行使或負擔)
+- bendravimas su vaiku (會面交往)
+- santuokos nutraukimas (離婚)
+- paveldėjimas (繼承)
+- namų ūkio registras (戶籍)
+- darbo sutartis (勞動契約)
+- vidaus darbo taisyklės (工作規則)
+- prekių ženklas (商標) / patentas (專利)
+
+Register: formal Jūs; typographic quotes „…“; cities Taipėjus / Gaosiongas / Taidžongas / Pingdongas listed in nominative when enumerated (so officeTitles stay substrings). Attorney Wei Tseng is feminine (advokatė, vadovaujančioji advokatė, Magistrė). Consultation languages in order: anglų, kinų (中文), japonų, korėjiečių. Autonym languageName: Lietuvių. Team / office eyebrows: KOMANDA, BIURAI. Bio keeps TWD 1.57M and GUIDANCE_BIO_PRESERVED_TERMS byte-identical. FAQ “Ar galima konsultacija lietuvių kalba?” opens “Ne.”
+
+## Could not fit / constraints
+- All nav.* labels ≤ 14 characters (longest: Straipsniai = 11). menuLabel = “Puslapių sąrašas” (not the literal Menu).
+- ColumnsGrid All chip is “Visus” (accusative), not nominative “Visi”, so it remains a substring of mega viewAllLabel “Rodyti visus” (columns-grid test).
+- answers sources and GUIDANCE_HOME_PATHS hrefs use /lt/… (locale paths; not left on the Czech /cs/ clones).
+- og:locale fixture: lt_LT. hreflang tag: lt.

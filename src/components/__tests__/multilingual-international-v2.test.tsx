@@ -100,7 +100,7 @@ describe('MULTILINGUAL-INTERNATIONAL-v2 unpublished candidate', () => {
       hr: /anglick/i, // SCAFFOLD(cs)
       sr: /anglick/i, // SCAFFOLD(cs)
       sl: /anglick/i, // SCAFFOLD(cs)
-      lt: /anglick/i, // SCAFFOLD(cs)
+      lt: /anglų/i,
       lv: /anglick/i, // SCAFFOLD(cs)
       et: /anglick/i, // SCAFFOLD(cs)
       ca: /anglick/i, // SCAFFOLD(cs)

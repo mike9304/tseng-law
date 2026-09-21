@@ -1,0 +1,155 @@
+[WO-C-D 시작 Mon Sep 21 10:27:42 KST 2026]
+[WO-C-D 완료 Mon Sep 21 11:45:51 KST 2026]
+worker: Cursor Grok 4.6
+worktree: /Users/son7/Projects/tseng-law-columns-a-20260920
+git HEAD: 18fc4b34 i18n(columns): 칼럼 18편 번역 3개 언어 — tr·it·nl (WO-C-B)
+git add/commit/push: not run
+
+=== 언어별 파일 수 ===
+da: 18
+nb: 18
+fi: 18
+
+=== §5 명령 출력 그대로 ===
+
+$ git status --short | wc -l
+      56
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-da --lang da 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-columns-a-20260920/src/content/columns-da/018-taiwan-semiconductor-market-entry.md  lang=da
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=113
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-nb --lang nb 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-columns-a-20260920/src/content/columns-nb/018-taiwan-semiconductor-market-entry.md  lang=nb
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=113
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-fi --lang fi 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-columns-a-20260920/src/content/columns-fi/018-taiwan-semiconductor-market-entry.md  lang=fi
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=113
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-da src/content/columns-nb src/content/columns-fi | wc -l
+       0
+
+$ ls src/content/columns-da/*.md | wc -l; ls src/content/columns-nb/*.md | wc -l; ls src/content/columns-fi/*.md | wc -l
+      18
+      18
+      18
+
+=== 추가 잠금 스캔 (체커 외) ===
+da rådgivning på dansk / konsultation på dansk / gratis rådgivning / omkostningsfri rådgivning / 24/7 / succesrate / resultatgaranti / tolkeservice: 0
+nb rådgivning på norsk / konsultasjon på norsk / gratis konsultasjon / kostnadsfri rådgivning / 24/7 / suksessrate / resultatgaranti / tolketjeneste: 0
+fi neuvontaa suomeksi / konsultaatio suomeksi / ilmainen konsultaatio / maksuton neuvonta / 24/7 / takuu / voittoprosentti / tulkkauspalvelu: 0
+Danmark / danske virksomheder / Norge / norske virksomheter / Suomen kansalaisuus / suomalaiset yritykset / Suomi: 0
+본문 한글: url 원본 바이트만 (008·009 wei-wei-lawyer.com/post/한글슬러그). 체커 hangul PASS.
+
+=== 용어 선택에서 망설인 지점 ===
+- da/nb 지점: filial (分公司). 이탈리아어 filiale(지점)와 달리 덴마크·보크몰에서는 지점의 바른 말. 자회사는 datterselskab / datterselskap.
+- fi 자회사 tytäryhtiö · 지점 sivuliike (分公司) · 대표사무소 edustusto (代表人辦事處).
+- fi 체커 /takuu/i 가 모든 출현을 잡음. 018 보증 처리(제품 하자)는 vikojen käsittely (DA behandling af mangler). 면제문 미삽입.
+- da 015 무료 조회: gratis rådgivning/omkostningsfri rådgivning만 금지 → uden gebyr. nb uten gebyr. fi ilman maksua (ilmainen konsultaatio / maksuton neuvonta 회피).
+- 007 무상취득: da erhvervelse uden vederlag / nb ervervelse uten vederlag / fi vastikkeeton saanto.
+- 분수는 1/3 (en tredjedel / yksi kolmasosa는 수사 카운트 어긋남). 천단위 점 (TWD 500.000). da/nb/fi MAGNITUDE_WORDS 미수록 → 157만은 1.570.000 (010은 NL/DA와 같이 1,57 millioner/miljoonaa + 명시 1.570.000, extra 1.57 WARN).
+- da/nb 영어검사: for/at 가 영어 stopword. fi on(=is) 동일. 한자 병기 없는 12어+3 stopword 문장 FAIL → DA/NL과 같은 漢字 병기로 회피.
+- 한국 기업 → 외국 기업 (da udenlandske virksomheder / nb utenlandske virksomheter / fi ulkomaiset yritykset). Danmark/Norge/Suomi 삽입 없음. 004 한국 모회사·010 한국 유학생은 koreansk/korealainen 유지.
+- 상담 언어 잠금: 해당 언어로 상담 가능·통역·무료 상담 암시 0. 링크 «한국어 가능한 대만 변호사»는 한국어 구사로 유지 (da Taiwansk advokat, der taler koreansk / nb … som taler koreansk / fi Taiwanilainen asianajaja, joka puhuu koreaa). href /ko/korean-lawyer-in-taiwan 불변.
+- date_display: da/nb 13. september 2025 / 4. februar 2026 / 17. september 2026. fi는 DATE_MONTH_NAMES가 syyskuu(주격)만 수록 → 13. syyskuu 2025 / 4. helmikuu 2026 (syyskuuta 미사용).
+- 018: 원본에 url 키 없음. 세 언어 모두 동일하게 생략.
+- read_time 숫자는 NL/DA 맞춤 (번역문이 길어져 원본 분량과 다름; 체커는 read_time 수사 제외). da N minutters læsetid / nb N minutter lesetid / fi N min lukuaikaa.
+- nb 1차 DA→NB 치환이 어간을 깨뜨림 (af 내부치환, URL). 단어경계 재변환 + 잔여 덴마크어 2차 소거 (december→desember, hverken→verken, stk.→ledd 숫자는 유지).
+- da/nb/fi 서수 테이블 없음 → 제N심/항/호/제3자는 수사미해석 WARN. FAIL 아님. 숫자는 아라비아로 남김.
+
+=== 미해결 ===
+- 원어민 검수 아님 (G2-C-FR·WO-C-A·WO-C-B와 동일 조건).
+- da/nb/fi 서수 WARN은 체커 테이블 부재. FAIL 아님. 총괄이 서수 패턴을 넣으면 후속 패치.
+- nb 일부 문장은 덴마크어 문장골격을 보크몰 철자로 옮긴 층이 남음. 체커 PASS. 총괄이 문장 재구성을 요구하면 후속.
+- fi date_display «13. syyskuu 2025»는 체커 월명(주격)에 맞춘 표기. 관용은 «13. syyskuuta 2025». 총괄이 속격+월번호 소비를 넣으면 후속.
+- git add/commit/push 하지 않음. 산출물은 untracked 54 md + WO-C-D.txt + 본 로그 (status --short 56).
+WO-C-D 완료. 세 언어 모두 체커 **PASS 18/18**, 마커 0, 파일 각 18. git add/commit/push는 하지 않았습니다.
+
+**산출물**
+- `src/content/columns-da/` 18
+- `src/content/columns-nb/` 18
+- `src/content/columns-fi/` 18
+
+**§5 (직접 재실행)**
+- `git status --short | wc -l` → 56
+- da / nb / fi → 각각 `summary PASS 18/18 files`
+- `[변호사 검수 필요]` → 0
+- 파일 수 → 18 / 18 / 18
+
+보고 전문(명령 출력·용어 망설임·미해결)은 `docs/i18n/global-plan/evidence/grok-C-D.log`에 있습니다. 원어민 검수는 이번 범위 밖입니다.
+=== WO-C-D 종료 code=0 Mon Sep 21 11:45:51 KST 2026 ===
+WO-C-D is done. Danish, Norwegian, and Finnish each checker-**PASS 18/18**. Marker 0. File counts 18 / 18 / 18. git add/commit/push was not run.
+
+**Outputs**
+- `src/content/columns-da/` 18
+- `src/content/columns-nb/` 18
+- `src/content/columns-fi/` 18
+
+**§5 (re-run)**
+- `git status --short | wc -l` → 56
+- da / nb / fi → each `summary PASS 18/18 files`
+- `[변호사 검수 필요]` → 0
+- files → 18 / 18 / 18
+
+**Term calls worth noting**
+- Finnish `takuu` is banned by the checker, so product-warranty wording is `vikojen käsittely`.
+- Finnish dates use nominative `syyskuu` so the month table consumes the `9`.
+- 015 free lookup: `uden gebyr` / `uten gebyr` / `ilman maksua`.
+
+The full command dumps, term notes, and open items are in `docs/i18n/global-plan/evidence/grok-C-D.log`. Native-speaker review is out of scope.
+=== WO-C-D 종료 code=0 Mon Sep 21 11:46:45 KST 2026 ===

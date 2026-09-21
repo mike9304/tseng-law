@@ -1,0 +1,195 @@
+---
+title: "Markkinoillepääsy Taiwanissa: tytäryhtiön ja sivuliikkeen erot"
+url: "https://www.wei-wei-lawyer.com/post/taiwan-company-subsidiary-vs-branch"
+lastmod: "2026-07-25"
+date_display: "13. syyskuu 2025"
+read_time: "18 min lukuaikaa"
+categories:
+  - "Yhtiön perustaminen Taiwanissa"
+featured_image: "../images/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg"
+faq:
+  - q: "Voivatko taiwanilaiset henkilöt tai taiwanilaiset oikeushenkilöt osallistua osakkeenomistajina taiwanilaiseen sivuliikkeeseen?"
+    a: "Sivuliike (分公司) on osa ulkomaista yhtiötä, joten sivuliikkeessä itsessään ei ole osakkeenomistajia (股東). Jos aiotte sijoittaa yhdessä 3. (第三人) kanssa taiwanilaiseen yritykseen, on muun muassa tutkittava taiwanilaisen tytäryhtiön (子公司) perustamista ja sen osakkeenomistajapiirin määräämistä. Vastuu, äänioikeus, rahoitus, luvat ja verotus on tutkittava sijoitussuhteen ja yrityssuunnitelman mukaan."
+  - q: "Miten verorasitus eroaa taiwanilaisen tytäryhtiön ja taiwanilaisen sivuliikkeen välillä?"
+    a: "Tytäryhtiö ja sivuliike kuuluvat yleensä 5 %:n liikevaihtoveron (營業稅) ja 20 %:n elinkeinotuloveron (營利事業所得稅) piiriin. Kun taiwanilainen tytäryhtiö jakaa osinkoa (股利) ulkomaiselle emoyhtiölle, ennakonpidätysaste (扣繳率) Taiwanin sisäisessä oikeudessa on 21 %; jos Taiwanin ja Korean välisen tuloverosopimuksen (所得稅協定) soveltamisedellytykset täyttyvät, enimmäisaste on 10 %. Ulkomaisen yhtiön taiwanilaisen sivuliikkeen verojen jälkeisen voiton siirto päätoimipaikkaan ei ole osinkoa (股利), joten lähtökohtaisesti lisäennakonpidätystä ei ole. Elinkeinotoimijat, joiden päätoimipaikka on Taiwanin ulkopuolella, on vapautettu 5 %:n jakamattoman voiton lisäveron (未分配盈餘加徵稅額) ilmoittamisesta."
+  - q: "Kumpi muoto, tytäryhtiö vai sivuliike, tulee valita, jotta päästään pörssiin Taiwanissa tai saadaan investointiverohyvitys?"
+    a: "Sivuliike ei ole itsenäinen liikkeeseenlaskeva yhtiö (發行公司) eikä voi Taiwanissa olla pörssilistauksen kohde (上市). Jos tytäryhtiö aikoo pörssiin, sen on täytettävä yhtiölain (公司法) ja Taiwan Stock Exchangen (臺灣證券交易所) asetetut edellytykset. Veroedut eivät määräydy yhtenäisesti pelkän organisaatiomuodon perusteella. Teollisen innovaation asetuksen (產業創新條例) 10-1 artiklan investointiverohyvityksen (投資抵減) ja vastaavien järjestelyjen osalta kohdeinvestointi, hakemuksen määräaika, hyvitystapa, päällekkäinen käyttö ja verokatto on tutkittava yksi kerrallaan."
+---
+
+# Markkinoillepääsy Taiwanissa: tytäryhtiön ja sivuliikkeen erot
+
+![Kansikuva, joka vertaa taiwanilaista tytäryhtiötä ja ulkomaisen yhtiön sivuliikettä](../images/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg)
+
+Kun ulkomainen yritys aikoo toimia jatkuvasti Taiwanissa, tutkitaan usein taiwanilaista tytäryhtiötä (子公司) ja ulkomaisen yhtiön taiwanilaista sivuliikettä. Molemmat muodot luovat toimipaikan Taiwanissa, mutta eroavat sen mukaan, kuka tulee sopimuspuoleksi, kuka kantaa velan, voidaanko 3. (第三人) sijoitus vastaanottaa ja mitä menettelyä vaaditaan voiton siirtämiseksi ulkomaille. Jos verrataan vain perustamisvaiheen (公司設立) helppoutta, voi toiminnan aikana syntyä odottamattomia vastuu- tai verokysymyksiä; arvio on tehtävä koko yrityksen keston yli.
+
+![](../images/004-taiwan-company-subsidiary-vs-branch/img-01.jpg)
+
+Taiwanilainen tytäryhtiö on taiwanilaisen oikeuden mukaan perustettu itsenäinen oikeushenkilö (法人). Ulkomainen emoyhtiö (母公司) voi tulla osakkeenomistajaksi, mutta tytäryhtiö on emoyhtiöstä erillinen oikeussubjekti. Ulkomaisen yhtiön taiwanilainen sivuliike (分公司) on sen sijaan osa ulkomaista päätoimipaikkaa (本公司) ja toimipaikka ilman omaa oikeussubjektiutta. Arkikielessä sitä kutsutaan joskus osastoksi; tässä artikkelissa käytetään nimitystä sivuliike oikeussuhteen selventämiseksi.
+
+Kumpi muoto sopii paremmin, eroaa toimialan, sijoittajakokoonpanon, sopimusrakenteen, Taiwanissa vaadittujen lupien (許可), työntekijämäärän, rahoitustavan, voiton käytön ja kotiuttamisen, tulevan osakkeenomistajien ottamisen tai pörssilistauksen sekä toiminnan päättämissuunnitelman mukaan. Silloinkin kun korealainen emoyhtiö tulee Taiwaniin, ei saa tarkastella vain taiwanilaista oikeutta; korealainen kirjanpito ja verotus sekä ulkomaisen sijoituksen menettely on tutkittava yhdessä. Seuraavassa verrataan järjestyksessä oikeussubjektiutta, verotusta, vastuuta, rahoitusta, investointiverohyvitystä, tuloverosopimusta ja vetäytymistä.
+
+## 1. Oikeussubjektius ja sijoitusrakenne
+
+Sivuliike on osa ulkomaista yhtiötä, joten sivuliikkeessä itsessään ei ole osakkeenomistajia (股東). Jos aiotte sijoittaa yhdessä 3. (第三人) kanssa taiwanilaiseen yritykseen, on muun muassa tutkittava taiwanilaisen tytäryhtiön perustamista ja sen osakkeenomistajapiirin määräämistä. Vastuu, äänioikeus, rahoitus, luvat ja verotus on tutkittava sijoitussuhteen ja yrityssuunnitelman mukaan.
+
+Taiwanilaisen yhtiölain (公司法) 1 artikla määrää yhtiöksi yhtiölain mukaan järjestetyn, rekisteröidyn ja perustetun voittoa tavoittelevan oikeushenkilön. Sen jälkeen perustettu taiwanilainen tytäryhtiö on ulkomaisesta emoyhtiöstä erillinen taiwanilainen oikeushenkilö. Tytäryhtiö voi omalla nimellään vuokrata toimistotiloja, tehdä kauppa- ja työsopimuksia, hankkia omaisuutta ja olla osapuolena oikeusriidassa. Sopimuksista syntyneet saamiset ja velat kuuluvat lähtökohtaisesti tytäryhtiölle. Vaikka emoyhtiö määrää yrityspolitiikan tai nimeää toimielinten jäsenet, 2 yhtiön oikeussubjektius ei siten heti muutu 1:ksi.
+
+Tytäryhtiöön sovellettava vastuun laajuus arvioidaan tosiasiallisesti valitun yhtiömuodon ja käyttäytymisen mukaan. Rajoitetun vastuun yhtiön (有限公司) osakkeenomistajat vastaavat yhtiölain 99 artiklan 1 momentin mukaan lähtökohtaisesti yhtiötä kohtaan sijoitusmäärään rajoitetusti. 99 artiklan 2 momentti sisältää kuitenkin poikkeuksen: jos osakkeenomistajat väärinkäyttävät oikeussubjektiutta siten, että yhtiön on vaikea maksaa takaisin tiettyjä velkoja, ja väärinkäyttö on törkeää, he voivat vastata tarpeellisessa laajuudessa. Jos osakkeenomistaja tai emoyhtiö on erikseen asettanut takauksen tai osallistunut suoraan oikeudenvastaiseen tekoon, siitä seuraava vastuu on samoin tutkittava. Rajoitetun vastuun periaate (有限責任) on siksi tärkeä lähtökohta, mutta ei varmuus siitä, että vastuu kaikissa tiloissa päättyy sijoitusmäärään.
+
+Jos ulkomainen yhtiö aikoo toimia omalla nimellään Taiwanissa, sen on noudatettava yhtiölain (公司法) sivuliikettä koskevia säännöksiä. Yhtiölain 371 artiklan mukaan ulkomainen yhtiö ei saa ilman sivuliikkeen rekisteröintiä toimia ulkomaisen yhtiön nimissä Taiwanissa. 372 artiklan mukaan ulkomaisen yhtiön on osoitettava varat, jotka palvelevat yksinomaan taiwanilaisen sivuliikkeen toimintaa, ja nimettävä vastuuhenkilö (負責人) Taiwaniin. Nämä varat ovat päätoimipaikan varoja taiwanilaista toimintaa varten, eivät sivuliikkeen osakkeita tai osuuksia. Vastuuhenkilön nimeäminen ei ole menettely, joka muuttaa sivuliikkeen itsenäiseksi yhtiöksi, vaan järjestely (負責人), jolla ulkomaisen yhtiön työ Taiwanissa suoritetaan ja vastuusuhde selvennetään.
+
+| Vertailukohta | Taiwanilainen tytäryhtiö | Ulkomaisen yhtiön taiwanilainen sivuliike |
+| --- | --- | --- |
+| Oikeudellinen asema | Taiwanilaisen oikeuden mukaan perustettu itsenäinen oikeushenkilö (法人) | Osa ulkomaista päätoimipaikkaa ilman omaa oikeussubjektiutta |
+| Sijoitus- ja osakkeenomistajarakenne | Osakkeenomistajapiiri ja sijoitussuhde yhtiömuodon mukaan | Ei omia osakkeita, osuuksia tai osakkeenomistajarakennetta (股東) |
+| Yhteissijoitus 3. (第三人) taholta | Voidaan muotoilla yhtiöjärjestyksen, osakkeenomistajapiirin ja osakassopimuksen kautta | Sijoitus itse sivuliikkeeseen on mahdoton; muita laillisia yhteisrakennetta on tutkittava |
+| Vastuusubjekti | Sopimukset ja velat kuuluvat lähtökohtaisesti tytäryhtiölle | Sivuliikkeen sopimukset ja velat kuuluvat ulkomaiselle yhtiölle |
+| Olennaiset päätökset ja toiminnan valvonta | Valitun yhtiömuodon toimielinten ja sisäisten sääntöjen mukaan, kuten osakkeenomistajakokous ja johtajat | Ulkomaisen päätoimipaikan päätösjärjestelmän ja Taiwanin vastuuhenkilön toimivallan mukaan |
+
+Jos taiwanilaista yritystä on tarkoitus harjoittaa yhdessä 3. (第三人) kanssa, sijoitusosuuden määrääminen ei riitä. Äänioikeus, johtajien nimeäminen, suostumusoikeudet olennaisissa asioissa, lisäsijoitus, toimet varojen puutteessa, henkisen omaisuuden käyttö, voitonjako, kilpailurajoitukset, osuuksien luovutus, umpikuja ja toiminnan päättyminen on määrättävä yhdessä. Yhteissijoituksella taiwanilaiseen tytäryhtiöön on se etu, että nämä suhteet voidaan muotoilla yhtiön osakkeenomistajarakennetta. Muita laillisia teitä voi kuitenkin olla, kuten sopimusperusteiset yhteishankkeet tiettyyn projektiin tai erilliset tarkoitusrakenteet; ei saa päätellä, että tytäryhtiö on ainoa ratkaisu jokaiseen yhteishankkeeseen.
+
+Sivuliikkeessä toiminnan viimeinen oikeussubjekti on ulkomainen yhtiö. Päätoimipaikan on konkreettisesti määrättävä niiden sopimusten piiri, jotka Taiwanin vastuuhenkilö voi tehdä, pankkivaltuudet, henkilöstövaltuudet, raportointijärjestelmä, budjetin hyväksyntä ja sisäinen valvonta. Jos päinvastoin valitaan tytäryhtiö, yhtiöjärjestys ja toimielimet, osakkeenomistajien toimivallanjako sekä tytär- ja emoyhtiön väliset palvelu-, laina- ja lisenssisopimukset on dokumentoitava erikseen. Nimitystä olennaisempaa on, vastaavatko tosiasiallinen toimivalta ja transaktiovirta oikeudellista rakennetta.
+
+Myöskään lupia ei voi päätellä pelkästään oikeussubjektiudesta. Toimialakohtaiset säännökset voivat erikseen määrätä hakemussubjektin, vähimmäispääoman, ammattilaiset, toimipaikan, ulkomaisen sijoituksen tutkimisen tai vastuuhenkilön kelpoisuuden. Se, että tytäryhtiön tai sivuliikkeen rekisteröinti on mahdollinen, ei ole sama kuin valtuus harjoittaa tiettyä säänneltyä toimintaa (許可). Suunnitellut liiketoimet on jaoteltava; kunkin toiminnan sopimuspuoli ja luvan haltija on ensin tutkittava.
+
+## 2. Verotus ja voiton siirto
+
+Tytäryhtiö ja sivuliike kuuluvat yleensä 5 %:n liikevaihtoveron ja 20 %:n elinkeinotuloveron piiriin. Kun taiwanilainen tytäryhtiö jakaa osinkoa ulkomaiselle emoyhtiölle, ennakonpidätysaste Taiwanin sisäisessä oikeudessa on 21 %; jos Taiwanin ja Korean välisen tuloverosopimuksen soveltamisedellytykset täyttyvät, enimmäisaste on 10 %. Ulkomaisen yhtiön taiwanilaisen sivuliikkeen verojen jälkeisen voiton siirto päätoimipaikkaan ei ole osinkoa (股利), joten lähtökohtaisesti lisäennakonpidätystä ei ole. Elinkeinotoimijat, joiden päätoimipaikka on Taiwanin ulkopuolella, on vapautettu 5 %:n jakamattoman voiton lisäveron ilmoittamisesta.
+
+Liikevaihtovero (營業稅) on välillinen vero tavaroiden tai palveluiden luovutuksesta Taiwanissa. Yleinen aste on 5 %; ilmoitus tehdään tavallisesti 2 kuukauden verokaudelta. Nolla-aste, verovapaus, erityisaste tai ostoveron vähennysoikeus voi poiketa transaktion luonteen mukaan. Jos tytäryhtiö ja sivuliike harjoittavat verollista toimintaa Taiwanissa, liikevaihtoverovelvollisuus on tutkittava; pelkkä luku 5 % ei salli päätelmää, että tosiasiallisesti maksettu vero olisi sama kullekin toiminnalle.
+
+Elinkeinotulovero (營利事業所得稅) lasketaan yrityksen veronalaisen tulon (課稅所得) mukaan. Jos veronalainen tulo ylittää laissa säädetyn kynnysmäärän, yleinen aste on 20 %. Kyse ei ole verosta, joka heti kertoisi liikevaihdon 20 %:lla; tulon kirjaaminen, toimintakulut, poistot, tappionvähennys, verohyvitys ja siirtohinnoittelun oikaisut muuttavat perustetta ja tosiasiallista veron määrää. Vaikka liikevaihto ja aste olisivat samat, tytäryhtiön ja sivuliikkeen ilmoitustulokset voivat poiketa, jos sopimusrakenne ja kulujen kohdistus poikkeavat.
+
+| Verokohta | Taiwanilainen tytäryhtiö | Ulkomaisen yhtiön taiwanilainen sivuliike |
+| --- | --- | --- |
+| Liikevaihtovero (營業稅) | Yleinen aste 5 %, tavallinen ilmoitussykli 2 kuukautta | Yleinen aste 5 %, tavallinen ilmoitussykli 2 kuukautta |
+| Elinkeinotulovero (營利事業所得稅) | Yleinen aste 20 %, jos veronalainen tulo ylittää kynnysmäärän | Yleinen aste 20 % taiwanilaiseen sivuliikkeeseen kohdistuvasta veronalaisesta tulosta |
+| Voiton siirto ulkomaille | Osinko (股利) ulkomaiselle emoyhtiölle: sisäinen ennakonpidätys 21 %; sopimusedellytysten täyttyessä enimmäisaste 10 % Taiwanin ja Korean tuloverosopimuksen (所得稅協定) mukaan | Verojen jälkeisen voiton siirto päätoimipaikkaan ei ole osinkoa, joten lähtökohtaisesti erillistä osingon ennakonpidätystä ei ole |
+| Jakamattoman voiton lisävero (未分配盈餘加徵稅額) | Varattaessa on tutkittava tuloverolain 5 %:n lisävero | Elinkeinotoimijat, joiden päätoimipaikka on Taiwanin ulkopuolella, on vapautettu ilmoituksesta |
+| Laskennan ydinkysymykset | Kulut, tappiot, varaaminen, jakoajankohta, lopullinen edunsaaja | Taiwaniin kohdistuva tulo, kulujen jako päätoimipaikka–sivuliike, siirtohinnoittelu, siirtoasiakirjat |
+
+Kun taiwanilainen tytäryhtiö jakaa verojen jälkeisen voiton osinkona ulkomaiselle emoyhtiölle, tytäryhtiö ja osakkeenomistaja ovat erillisiä oikeussubjekteja. Taiwanin sisäisen oikeuden mukaan ennakonpidätysaste osingosta ulkomaisille osakkeenomistajille on 21 %. Jos emoyhtiö on korealainen asukas, kuuluu Taiwanin ja Korean tuloverosopimuksen piiriin ja on osingon tosiasiallinen edunsaaja (受益所有人) sekä täyttää muut soveltamisedellytykset, voidaan tutkia sopimuksen 10 %:n enimmäisastetta. Sopimusastetta ei sovelleta automaattisesti pelkästään siksi, että saaja on Koreassa. Asuintodistus (居住者證明), tosiasiallisen edunsaajan arviointi, maksu- ja ilmoitusajankohta sekä tarvittava hakemus- tai palautusmenettely on tutkittava uusimman käytännön mukaan.
+
+Ulkomaisen yhtiön taiwanilaisessa sivuliikkeessä syntyvä voitto ei ole erillisen yhtiön voittoa, joka jaetaan osakkeenomistajille, vaan osa voittoa, joka kuuluu ulkomaiselle päätoimipaikalle. Verojen jälkeisen voiton siirto päätoimipaikkaan sen jälkeen, kun elinkeinotulovero on ilmoitettu ja maksettu Taiwanissa, eroaa siksi osingosta (股利); sivuliikkeen tasolla ei lähtökohtaisesti ole lisäosingon ennakonpidätystä. Kaikki sivuliikkeen ja päätoimipaikan väliset maksut eivät kuitenkaan aina saa samaa käsittelyä. Jos korot, rojaltit, palvelukorvaukset, omaisuushinnat tai maksut 3. (第三人) taholle sekoittuvat, kunkin maksun substanssi ja ennakonpidätysvelvollisuus on arvioitava erikseen.
+
+Myös jakamattoman voiton lisävero (未分配盈餘加徵稅額) on erotettava oikeudellisen rakenteen mukaan. Jos taiwanilainen tytäryhtiö varaa voittoa, voi tulla kyseeseen tuloverolain (所得稅法) 66-9 artiklan 5 %:n lisävero. Taiwanin valtiovarainministeriön (財政部) ohjeen mukaan elinkeinotoimijat, joiden päätoimipaikka on Taiwanin ulkopuolella, on vapautettu kyseisestä jakamattoman voiton ilmoituksesta. Tämä ei merkitse, että sivuliikkeen taiwanilainen toiminta jäisi verottamatta, eikä että kaikki päätoimipaikkaan siirtoihin liittyvät todistusvelvollisuudet katoaisivat.
+
+Muotoja verrattaessa on tarkasteltava voiton syntymisen ja käytön prosessia, ei vain asteikkoa. Tytäryhtiö laskee omissa kirjoissaan veronalaisen tulon, kulut, tappiot, varaamisen ja jaettavissa olevan määrän. Tulos voi poiketa sen mukaan, tarvitaanko myöhemmin varoja uudelleensijoitukseen Taiwanissa (再投資), milloin jaetaan ja onko osakkeenomistajalainoja tai rojalteja. Sivuliikkeen on erotettava taiwanilaiseen toimintaan kohdistuvat tulot ja kulut ja luotava perusta päätoimipaikan yhteisten kulujen jaolle. Päätoimipaikan ja sivuliikkeen sisäisten transaktioiden kirjanpidollinen esitys ja verotuksellinen kohdistus on samoin tutkittava.
+
+Tytär- ja emoyhtiön välisiin transaktioihin sekä sivuliikkeen ja päätoimipaikan kulujen jakoon voivat tulla sovellettaviksi siirtohinnoittelun (移轉訂價) periaatteet. Sopimuksen, laskun, laskentaperusteen, voimien tosiasiallisen työn, omaisuuden käytön ja rahaliikkeen on täsmättävä. Pelkästään siksi, että päätoimipaikka on maksanut, eivät kaikki kulut saa kelvata taiwanilaisen sivuliikkeen toimintakuluiksi; pelkästään siksi, että määrä on konsernin sisäisessä sopimuksessa, tytäryhtiön rasite ei tietenkään kelpaa hyväksytyksi. Transaktion luonnetta ja liiketaloudellista hintaa tukevaa aineistoa on säilytettävä.
+
+Korean puolella on yhdessä tutkittava ulkomaisen veron vähennys (外國稅額扣抵), osingot ulkomaisista tytäryhtiöistä, sivuliikkeen tulo ja tappio, yhdistetty tai erillinen kirjanpito sekä valuuttailmoitukset. Miten taiwanilaisen sivuliikkeen alkutappio käsitellään suhteessa päätoimipaikkaan, voi poiketa korealaisen verooikeuden ja kirjanpitoperiaatteiden mukaan. Siksi ei saa ennakolta päätellä, että sivuliikkeen valinta alentaisi korealaisen emoyhtiön verorasitusta. Taiwanin veron määrä ja Korean lopullinen rasite, varojen kotiuttamisen ajankohta ja todistuskustannukset olisi verrattava laskentataulukossa (計算表).
+
+## 3. Velka ja oikeudellinen vastuu
+
+Sivuliike ei ole ulkomaisesta yhtiöstä erillinen oikeushenkilö, joten taiwanilaisen sivuliikkeen velka on ulkomaisen yhtiön velkaa. Vuokra-, osto-, palvelu-, työ- tai lainasopimuksista syntyneet velvoitteet, jotka sivuliikkeen vastuuhenkilö (負責人) on laillisesti tehnyt ulkomaisen yhtiön nimissä, kantaa lähtökohtaisesti ulkomainen päätoimipaikka. Jos taiwanilaisessa toiminnassa syntyy tappiota tai velkaa on vaikea maksaa takaisin sivuliikkeen omaisuudella, ulkomaisen yhtiön vastuu oikeussubjektina (法人) ei rajoitu sivuliikkeelle osoitettuihin varoihin.
+
+Taiwanilainen tytäryhtiö on erillinen oikeushenkilö, joten sen tekemät sopimukset ja sen kantamat velat kuuluvat lähtökohtaisesti sille. Rajoitetun vastuun yhtiön osakkeenomistajat vastaavat yhtiölain 99 artiklan periaatteen mukaan sijoitusmäärään asti; osakeyhtiön (股份有限公司) osakkeenomistajat vastaavat sovellettavan yhtiömuodon säännösten mukaan merkitsemiensä osakkeiden laajuudessa. Tämä ero voi riskipitoisessa toiminnassa, pitkäaikaisissa sopimuksissa ja toiminnassa lukuisia työntekijöitä tai kuluttajia kohtaan olla tärkeä tutkimuskohde.
+
+Tytäryhtiön perustaminen ei kuitenkaan katkaise jokaista riskiä emoyhtiöltä. Jos pankki tai vuokranantaja vaatii takausta emoyhtiöltä, emoyhtiö voi vastata takaussopimuksen mukaan. Sama pätee, jos emoyhtiö suoraan ottaa tytäryhtiön sopimukset tai allekirjoittaa yhteisenä osapuolena. Jos yhtiön omaisuutta ja osakkeenomistajan omaisuutta ei eroteta tai oikeussubjektiutta väärinkäytetään velkojien vahingoittamiseksi, voi tulla kyseeseen yhtiöoikeudellinen poikkeus. Vastuun raja ei riipu vain rekisteröintimuodosta vaan myös tosiasiallisesta päätöksestä ja varojen hoidosta.
+
+Johtajien, johtajien (經理人) ja Taiwanin vastuuhenkilön velvollisuudet on tarkasteltava erikseen. Tapaukset, joissa toimiva henkilö itse vastaa — tahallinen tai tuottamuksellinen oikeudenvastainen teko, lainrikkomus, virheellinen ilmoitus, turvallisuusjohtamisen loukkaus — eivät ratkea pelkällä yhtiömuodolla. Työsuhteet, ennakonpidätys ja veroilmoitus, henkilötiedot, kuluttajansuoja, ympäristö- ja tuotessäännöt sekä toimialakohtaiset lupavelvollisuudet noudattavat kunkin lain määräämää vastuusubjektia ja seuraamusta. Jos konserniyhtiöt jakavat työn, aineiston ja toiminnan on täsmättävä siitä, kuka tosiasiassa kantaa minkä velvollisuuden.
+
+Sopimusvaiheessa vastuunrajoitus, vahingonkorvaus, takaus, vakuus, sovellettava oikeus ja riidanratkaisuehdot on sovitettava yritysriskiin. Vakuutuksella siirrettävät riskit ja sisäisellä valvonnalla ehkäistävät riskit on erotettava. Jos sinetin ja sähköisen allekirjoituksen valtuudet, menojen hyväksyntä, asiakkaan tunnistaminen, veron laskenta ja ilmoitus, valvontailmoitus ja onnettomuuksien raportointijärjestelmä selvennetään, organisaatiomuodon antama oikeudellinen erottelu voidaan pitää yllä myös tosiasiallisessa toiminnassa.
+
+Vastuun vertailua ei lopulta voi päättää yhdellä lauseella, että tytäryhtiö on turvallinen ja sivuliike vaarallinen. Sivuliikkeessä rakenne on selvä, että ulkomainen yhtiö vastaa suoraan; tytäryhtiössä itsenäinen oikeushenkilö ja osakkeenomistajien rajoitettu vastuu ovat lähtökohta. Sen päälle on asetettava takaus, oikeudenvastainen teko, oikeussubjektiuden väärinkäyttö, sääntelyvastuu ja konsernisopimukset, jotta tosiasiallinen altistuma ja ohjauskeinot voidaan arvioida.
+
+## 4. Rahoitus ja pörssilistaus Taiwanissa
+
+Sivuliike ei ole itsenäinen liikkeeseenlaskeva yhtiö (發行公司) eikä voi Taiwanissa olla pörssilistauksen kohde (上市). Jos tytäryhtiö aikoo pörssiin, sen on täytettävä yhtiölain ja pörssin asetetut edellytykset. Veroedut eivät määräydy yhtenäisesti pelkän organisaatiomuodon perusteella. Teollisen innovaation asetuksen 10-1 artiklan investointiverohyvityksen osalta kohdeinvestointi, hakemuksen määräaika, hyvitystapa, päällekkäinen käyttö ja verokatto on tutkittava yksi kerrallaan.
+
+Sivuliikkeellä ei ole omia osakkeita tai osuuksia, joten niitä ei voi laskea liikkeeseen 3. (第三人) taholle ja tehdä heistä sivuliikkeen osakkeenomistajia. Taiwanilaiseen toimintaan tarvittavat varat voidaan hankkia päätoimipaikan osoittamista varoista, päätoimipaikan tuesta tai laillisesta luotonotosta. Osakkeiden liikkeeseenlaskun mahdottomuutta ei saa laajentaa siihen, että kaikki rahoituksen muodot olisivat mahdottomia. Luottomahdollisuus, vakuus, päätoimipaikan takaus, pankin tutkimus ja valuutta-asiakirjat on tutkittava kunkin konkreettisen transaktion mukaan.
+
+Taiwanilainen tytäryhtiö voi valitun yhtiömuodon ja lakisääteisen menettelyn mukaan käyttää rakenteita osakkeiden liikkeeseenlaskulla tai sijoituksen korottamisella. Paikallisia osakkeenomistajia voidaan ottaa osakkeenomistajiksi, myöhempien sijoittajien oikeuksia tai osakelajien ehtoja muotoilla, ja toimielinten ja työntekijöiden osakeperusteista palkitsemista tutkia. Jos osuuksien luovutus sijoituksen paluuseen, uudelleenjärjestely kuten sulautuminen tai jakautuminen ja strategisen sijoituksen ottaminen sisältyvät pitkäaikaiseen suunnitelmaan, tytäryhtiön itsenäinen oikeushenkilö voi sopia tähän suunnitelmaan. Kukin keino on kuitenkin yhtiölain, sijoitussääntöjen, yhtiöjärjestyksen ja osakassopimuksen rajoitusten alainen.
+
+Pörssilistaus Taiwanissa on alue, jossa sivuliikkeen ja tytäryhtiön rakenne-ero tulee selvästi esiin. Ulkomaisen yhtiön taiwanilainen sivuliike ei ole itsenäinen liikkeeseenlaskeva yhtiö eikä sillä ole omia osakkeita, joten sivuliike itse ei voi olla pörssilistauksen kohde taiwanilaisilla arvopaperimarkkinoilla. Ulkomaisen yhtiön pörssikelpoisuus päätoimipaikkana ja taiwanilaisen sivuliikkeen itsensä pörssikelpoisuus ovat erillisiä kysymyksiä.
+
+Pelkkä taiwanilaisen tytäryhtiön olemassaolo ei automaattisesti perusta pörssilistauskelpoisuutta. Jos pörssilistaus on suunnitteilla, on ensin luotava pörssikelpoinen liikkeeseenlaskeva muoto ja täytettävä Taiwan Stock Exchangen kyseinen markkinastandardi. Perustamisen kesto, pääoma, tuottokyky, osakkeiden hajautus, yhtiöjohtaminen, sisäinen valvonta, tilinpäätöksen tarkastus ja julkistaminen sekä kaikki sovellettavat edellytykset on valmisteltava. Toimiala- tai ulkomaalaisia koskevat sijoitusrajoitukset, konsernin uudelleenjärjestely ja osakkeenomistajapiiri voivat vaikuttaa pörssisuunnitelmaan.
+
+Siksi on suositeltavaa hahmotella paitsi nyt tarvittava käyttöpääoman tarve myös tulevat varojen lähteet ja kotiuttamistiet ajassa. Se, antaako päätoimipaikka koko määrän, otetaanko sijoittajia Taiwanista tai 3. valtiosta (第三國), tarvitaanko pankkiluottoa ja vakuutta, annetaanko toimielimille ja työntekijöille osakeperusteista palkitsemista ja tavoitellaanko myöhemmin osuuksien myyntiä tai pörssilistusta, tekee sopivan rakenteen (結構) selväksi. Lyhyen pääsyn sopiva rakenne ja pitkän pääomamarkkinasuunnitelman sopiva rakenne voivat poiketa toisistaan.
+
+## 5. Investointiverohyvitys
+
+Veroedut eivät määräydy yhtenäisesti pelkän organisaationimityksen taiwanilainen tytäryhtiö tai sivuliike perusteella. Verovelvollisen kelpoisuus, tosiasiallinen sijoitussisältö, määrä, omaisuuserien tila ja käyttötarkoitus, sijoitusajankohta, hakemuksen määräaika, hyväksymismenettely, hyvitystapa ja rajoitus päällekkäisestä käytöstä muiden etujen kanssa on kaikki tutkittava. Verohyvitys on erotettava veronalaisen tulon laskennasta; sitä ei saa ymmärtää järjestelyksi, joka heti vähentää koko kulumäärän maksettavasta verosta.
+
+Voimassa oleva teollisen innovaation asetuksen (產業創新條例) 10-1 artikla kattaa tietyt sijoitukset 1. tammikuu 2025 – 31. joulukuu 2029. Yhtiöt tai rajoitetun vastuun kommandiittiyhtiöt (有限合夥), jotka samana verovuonna sijoittavat vähintään TWD 1.000.000 (新臺幣) ja enintään TWD 2.000.000.000, voivat tutkia soveltamista lakisääteisten edellytysten ja hyväksymismenettelyn alla. Sijoittajan on hankittava kohdeomaisuuserä omaan käyttöön; uutuus ja tosiasiallinen käyttö on samoin tutkittava.
+
+Kohdealueita ovat uudet älykkäät koneet, 5G-järjestelmät, kyberturvallisuuden tuotteet tai palvelut, tekoälyn tuotteet tai palvelut sekä energiansäästön ja hiilidioksidin vähentämisen (節能減碳) laitteisto, ohjelmisto, tekniikka tai tekniset palvelut. Pelkästään siksi, että jokin näyttää vastaavan alueen nimeä, ei seuraa automaattista hyväksyntää. Sopimus, veroasiakirjat, maksutositteet, omaisuusluettelo, tekninen sisältö, käyttösuunnitelma ja hakemusasiakirjat on yksi kerrallaan tutkittava, sopivatko ne lakisääteiseen kehykseen ja menettelyyn.
+
+Lakisääteisen valinnan mukaan voidaan tutkia, kohdistetaanko enintään 5 % sijoitusmäärästä kyseisen vuoden elinkeinotuloveroon kyseisenä verovuonna vai kohdistetaanko enintään 3 % sijoitusmäärästä vuosittain 3 vuoden ajan. 10-1 artiklan mukainen vuotuinen hyvitysmäärä on rajoitettu 30 %:iin kyseisen vuoden elinkeinotuloverosta. Yhteisessä käytössä muiden investointiverohyvitysten kanssa samana vuonna kokonaiskatto ja päällekkäinen rajoitus on tutkittava erikseen. Merkintä «30 %» ei merkitse, että 30 % tutkimus- ja kehityskustannuksista palautettaisiin automaattisesti.
+
+Erillinen tutkimus- ja kehitystoimintaa koskeva järjestelmä voi olla muiden säännösten, kuten teollisen innovaation asetuksen 10 artiklan, kohde. Jos 10 artiklan tutkimukseen liittyvä hyvitys ja 10-1 artiklan tietyn laite- ja tekniikkasijoituksen hyvitys sekoitetaan, kohdekulut, hakemusajankohta ja katto voidaan arvioida väärin. Ennen sijoitusta yrityksen on erikseen tutkittava, mitä säännöstä aiotaan soveltaa, mikä on hakemusviranomainen ja aikataulu ja voidaanko sitä käyttää yhdessä muiden tukien tai hyvitysten kanssa.
+
+Voidaanko sivuliike hakea vai täyttääkö tytäryhtiö edellytykset, on arvioitava sen hakemussubjektin mukaan, jonka kyseinen säännös määrää, ja tosiasiallisen sijoitussuhteen mukaan. Pelkkä tytäryhtiön asema ei anna etua, eikä pelkkä sivuliikkeen asema salli päätelmää sulkeutumisesta kaikesta verotuesta. Jos rakennetta sovitetaan sijoitussopimuksen tekemisen ja omaisuuserien hankinnan jälkeen, hakemuksen määräaika tai todiste-ehdot voidaan menettää; tutkimus sijoitussuunnittelun (投資規劃) vaiheessa on varmempi.
+
+## 6. Taiwanin ja Korean välinen tuloverosopimus ja kiinteä toimipaikka (PE)
+
+Taiwanin ja Korean tuloverosopimus (所得稅協定) on allekirjoitettu 17. marraskuu 2021, tullut voimaan 27. joulukuu 2023 ja sitä sovelletaan 1. tammikuu 2024 alkaen. Sopimus sovittaa kummankin alueen asukkaiden kaksinkertaista verotusta, ei kuitenkaan ole säännös, joka automaattisesti vapauttaisi kaiken taiwanilaisen lähteen tulon. Tulolaji, tosiasiallinen edunsaaja, asukasasema, todellinen yhteys kiinteään toimipaikkaan ja sisäiset menettelyt on kukin tutkittava.
+
+Sopimuksen enimmäisasteet osingolle, korolle ja rojaltille ovat kukin 10 %. Tämän asteen soveltamiseksi saajan on täytettävä sopimuksen edellytykset, muun muassa olla toisen alueen asukas ja tulon tosiasiallinen edunsaaja. Taiwanissa vaadittu asuintodistus sekä hakemus-, ilmoitus- tai palautusmenettely on samoin luotava. Jos transaktioiden välissä on johdinyhtiö (導管公司) tai tulo todella liittyy taiwanilaiseen kiinteään toimipaikkaan, voi olla tarpeen erillinen analyysi.
+
+Yritysvoitto on lähtökohtaisesti verovapaata toisella alueella, jos toisen alueen yritys ei pidä sopimuksen mukaista kiinteää toimipaikkaa (常設機構, PE) toisella alueella. Jos päinvastoin kiinteä toimipaikka on olemassa, siihen kohdistuva voitto voidaan verottaa toisella alueella. Yritysvoittolausekkeen tutkimisessa on siksi ensin tarkasteltava, perustaako Taiwanissa harjoitettu toiminta kiinteän toimipaikan (常設機構), ja sitten laskettava, mitkä tulot ja kulut kohdistuvat siihen.
+
+Kiinteään toimipaikkaan voi kuulua tietty paikka toiminnan harjoittamiseen. Jos toimintaa harjoitetaan kiinteiden järjestelyjen, kuten johtavan paikan, sivuliikkeen tai toimiston kautta, on tutkittava paikan käyttöaika, yrityksen määräämisoikeus ja harjoitettu työ. Ulkomaisen yhtiön toimipaikka, jolla on muodollinen sivuliikkeen rekisteröinti Taiwanissa, kuuluu tavallisesti Taiwanin kiinteän järjestelyn kiinteään toimipaikkaan; sivuliikkeen taiwanilaista yritysvoittoa ei saa tietenkään pitää verovapaana.
+
+Kiinteän järjestelyn rinnalla sopimus määrää useita kiinteän toimipaikan tyyppejä. Jos rakennuspaikka, rakennus-, asennus- tai asennustyöt tai niihin liittyvä valvontatoiminta ylittää 6 kuukautta, voi tulla kyseeseen rakennustöiden kiinteä toimipaikka (常設機構). Jos yritys työntekijöiden tai muiden voimien kautta minkä tahansa 12 kuukauden jakson aikana yhteensä yli 183 päivää antaa palveluita, voi syntyä palvelun kiinteä toimipaikka. Myös edustajien toiminta, jotka toistuvasti käyttävät sopimuksentekovaltuutta yrityksen puolesta, voi kuulua edustajan kiinteään toimipaikkaan.
+
+Kukin mittapuu koskee eri toimintatyyppiä. Pelkästään siksi, että palvelupäivät ovat 183 päivää tai vähemmän, ei saa päätellä, ettei ole kiinteää toimipaikkaa kuten johtavaa paikkaa tai toimistoa; pelkästään siksi, että rakennusaika on 6 kuukautta tai vähemmän, ei katoa mahdollisuus edustajan kiinteään toimipaikkaan (代理人). Paikka, kesto, voimat, neuvottelu- ja sopimuksentekovaltuus, varastot tai järjestelyt sekä vastapuolelle kuten asiakkaille näkyvä toimintamuoto on kaikki tutkittava.
+
+Tytäryhtiö ja kiinteä toimipaikka eivät myöskään ole sama käsite. Taiwanilainen tytäryhtiö on erillinen oikeushenkilö; pelkkä ominaisuus ulkomaisen emoyhtiön tytäryhtiönä ei heti tee siitä emoyhtiön taiwanilaista kiinteää toimipaikkaa. Jos kuitenkin on konkreettisia seikkoja — esimerkiksi että tytäryhtiö toistuvasti käyttää sopimuksentekovaltuutta emoyhtiön luona tai että emoyhtiö tytäryhtiön paikalla suorittaa omaa toimintaansa — erillinen tutkimus on tarpeen. Yhtiörekisteröinti ja sopimuksen mukainen verotuksen kytkentäpiste arvioidaan kukin omien edellytystensä mukaan.
+
+Sopimuksen soveltamisen valmisteluun on hankittava paitsi sopimus ja lasku myös aineisto tosiasiallisesta työn suorittamisesta. Voimien oleskelupäivien Taiwanissa, paikan käytön, päätöksen, sopimusneuvottelun ja -allekirjoituksen, kulujen kantamisen, palvelutulosten ja rahavirran kirjaaminen auttaa kiinteän toimipaikan arvioinnissa ja voiton kohdistuksessa. Jotta sisäisiä ilmoitusmenettelyjä tai siirtohinnoitteluasiakirjoja ei laiminlyötäisi, kun vedotaan sopimushelpotukseen, kummankin alueen ilmoitussuunnitelmia on ohjattava yhdessä.
+
+## 7. Kumpi muoto tulee valita
+
+Kumpikaan, tytäryhtiö tai sivuliike, ei ole ylivertainen jokaiseen markkinoillepääsyyn Taiwanissa. Jos toiminta tarvitsee itsenäisen taiwanilaisen oikeushenkilön ja paikallisen osakkeenomistajarakennetta, tytäryhtiö voi sopia; jos ulkomainen yhtiö aikoo suorittaa taiwanilaisen toiminnan suoraan ja säilyttää päätoimipaikan valvonnan, sivuliikkeen rakenne voi sopia. Arvio siitä, että perustaminen (公司設立) on mahdollista, ja arvio siitä, onko rakenne tarkoituksenmukainen toiminta, verotus ja vetäytyminen mukaan lukien, on kuitenkin erotettava.
+
+Ennen valintaa on suositeltavaa järjestää ja verrata seuraavat kohdat kirjallisesti.
+
+- Kuka on sijoittaja ja miten äänioikeus ja päätösvalta olennaisissa asioissa jaetaan (股東)
+- Minkä laajuuden vastuusta ulkomainen päätoimipaikka tai emoyhtiö kantaa sopimuksellisesti ja lain mukaan
+- Mihin subjektiin asiakassopimukset, työllistäminen, henkinen omaisuus, toimipaikka ja luvat kohdistetaan
+- Missä liikevaihto ja kulut kirjataan ja miten varaaminen, osinko tai siirto päätoimipaikkaan tapahtuu
+- Miten sijoituksen hyväksyntä, pankkitili, varojen tuonti sekä valuutta- ja siirtoasiakirjat valmistellaan
+- Miten kirjat, tarkastus, siirtohinnoitteluasiakirjat sekä korealainen ilmoitus ja ulkomaisen veron vähennys ohjataan (移轉訂價)
+- Onko pääomankorotus, paikalliset osakkeenomistajat, osakeperusteinen palkitseminen, pörssilistaus, sulautuminen ja uudelleenjärjestely sekä osuuksien luovutus suunnitteilla
+- Kuka toiminnan päättyessä suorittaa sopimuksen päättämisen, työsuhteet, veroilmoituksen, omaisuuden luovutuksen ja vetäytymismenettelyn
+
+Vaikka odotettu liikevaihto markkinoillepääsyn alussa olisi vähäinen eikä voimien ja sopimusten määrä suuri, tulevat suunnitelmat on kuvattava mukaan. Mahdollisuus vetäytyä lyhyen markkinatestin jälkeen, pitkäaikainen sijoitus ja paikallisten osakkeenomistajien ottaminen, laajentuminen säänneltyihin toimiin ja päätoimipaikan takauksen asettaminen voidaan verrata skenaarioittain. Jos kussakin skenaariossa tarvittavat varat, verojen jälkeiset maksuvälineet, vastuun altistuma sekä asiakirja- ja ilmoituskustannukset esitetään taulukkona, muotnimityksestä johtuvia ennakkoluuloja voidaan vähentää.
+
+Myös mahdollisuus muuttaa rakennetta toiminnan aikana on tarkasteltava. Sivuliikkeen toiminnan luovutus uuteen tytäryhtiöön tai tytäryhtiön omaisuuden luovutus toiseen konserniyhtiöön voi tuoda sopimusvastapuolten suostumuksen, työsuhteet, luvat, omaisuuden luovutuksen sekä vero- ja valuuttamenettelyt. Ei saa olettaa, että ensin valittu muoto voitaisiin myöhemmin yksinkertaisesti korvata nimenmuutoksella. Jos muuntomahdollisuus otetaan huomioon, on suositeltavaa aloittaa luovutusehdoista olennaisissa sopimuksissa ja henkisen omaisuuden käyttöoikeuksista.
+
+Myös vetäytymismenettelyt eroavat. Jos ulkomaisen yhtiön sivuliike aikoo lopettaa taiwanilaisen toiminnan, on haettava sivuliikkeen rekisteröinnin kumoamista (廢止分公司登記) yhtiölain 378 artiklan mukaan. Ennen kumoamishakemusta syntyneet velka-, vero-, työoikeudelliset, sopimukselliset ja sääntelyvelvollisuudet eivät kuitenkaan katoa pelkällä hakemuksella. Tilitys kauppakumppaneiden kanssa, työsuhteiden päättäminen, saamisten perintä, omaisuuden luovutus, veroilmoitus ja pankkitilien järjestely on suoritettava sopivassa järjestyksessä.
+
+Yhtiölain 379 artiklan mukaan sivuliikkeen rekisteröinnin kumoaminen ei koske velkojien oikeuksia eikä ulkomaisen yhtiön velvollisuuksia. Velkojat voivat edelleen käyttää oikeuksia kumoamista edeltäneestä toiminnasta, ja ulkomainen yhtiö kantaa velvollisuudet. Pelkästään siksi, että sivuliike on kadonnut rekisteristä, ei siksi saa arvioida, että aiempi vastuu olisi päättynyt. Riitapotentiaalia sisältävät sopimukset ja takaukset, mahdollinen verotarkastuksen kesto ja säilytysvelvollisuudet on tutkittava.
+
+Jos ulkomaisen yhtiön kaikki taiwanilaiset sivuliikkeet kumotaan, Taiwanin toiminnasta ja sivuliikkeestä syntyneet oikeudet ja velvollisuudet on selvitettävä yhtiölain 380 artiklan mukaan. Selvityksen (清算) jälkeen maksamatta jääneen velan kantaa ulkomainen yhtiö edelleen. Periaate, että ulkomainen päätoimipaikka ja sivuliike ovat sama oikeussubjekti, toimii paitsi pääsyssä myös vetäytymisessä. Selvitysmiehen (清算人) nimeäminen, velkojien ilmoitus, ilmoitus ja jäljellä olevien varojen käsittely on sovitettava uusimpaan menettelyyn.
+
+Taiwanilainen tytäryhtiö on itsenäinen oikeushenkilö eikä käy ulkomaisen sivuliikkeen rekisteröinnin kumoamisen vaan yhtiölain mukaisen purkamisen (解散) ja selvityksen. Osakkeenomistajien päätös, selvitysmies, saamisten ja velkojen järjestely, veroilmoitus ja jäljellä olevan omaisuuden jako on noudatettava tytäryhtiöön sovellettavan menettelyn mukaan. Vaikka emoyhtiö on päättänyt vetäytyä Taiwanista, varoja ei voi heti viedä takaisin tytäryhtiön oikeussubjektiutta ja velkojasuhteita sivuuttaen. Kummankin muodon päättymismenettelyjä ja työmäärää ei saa käsitellä samoina.
+
+Lopullinen valinta on varmempi tutkia, jos Taiwanin ja päätoimipaikan sijaintipaikan ammattilaiset jakavat samat seikat. Jos annetaan yrityssuunnitelma, organisaatiokaavio, sijoittajat, odotetut sopimukset, rahavirta, henkilöstön sijoittelu ja vetäytymisskenaario, oikeudellisia, verotuksellisia, kirjanpidollisia ja valuuttaoikeudellisia kysymyksiä voidaan tutkia toisiinsa kytkettyinä. Perustamisen jälkeen on säännöllisesti tutkittava, onko tosiasiallinen toiminta poikennut valitusta rakenteesta.
+
+## Viralliset lähteet
+
+- [Taiwanin oikeusministeriön lakikanta — yhtiölaki](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
+- [Taiwanin oikeusministeriön lakikanta — liikevaihtoverolain (營業稅法) 10 artikla](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
+- [Taiwanin oikeusministeriön lakikanta — tuloverolaki](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
+- [Taiwanin valtiovarainministeriö — ohje ennakonpidätyksestä osingosta ulkomaisille osakkeenomistajille](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
+- [Taiwanin valtiovarainministeriö — tulkinta ulkomaisen yhtiön sivuliikkeen voitosta](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)
+- [Taiwanin valtiovarainministeriö — ohje jakamattoman voiton ilmoituksen vapautuksesta](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/undistributed-surplus-earnings/om7pAeL)
+- [Taiwanin valtiovarainministeriö — ohje Taiwanin ja Korean tuloverosopimuksesta](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=127fffb302f24987b0bbf1eff78ff9c9)
+- [Taiwanin oikeusministeriön lakikanta — teollisen innovaation asetuksen 10-1 artikla](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10-1&pcode=J0040051)
+- [Taiwan Stock Exchange — ottamisnormit](https://www.twse.com.tw/zh/listed/method/standars.html)
+- [Invest Taiwan — menettely ulkomaisen yhtiön sivuliikkeen sijoitukselle ja rekisteröinnille](https://investtaiwan.nat.gov.tw/showPageengInvestmentStatus01?lang=eng&menuNum=7&search=InvestmentStatus01)
+
+## Liittyvät oppaat
+
+- [Palvelut sijoituksesta ja yhtiön perustamisesta Taiwanissa](/ko/services/investment)
+- [Yhtiön perustamisen perusteet Taiwanissa](/fi/columns/taiwan-company-establishment-basics)
+- [Yhteydenotto](/fi/contact)
+
+---
+
+Tämä artikkeli on yleistä informatiivista aineistoa opetus tarkoitukseen taiwanilaisen tytäryhtiön ja ulkomaisen yhtiön sivuliikkeen eroista (子公司·分公司); se ei ole oikeudellista tai verotuksellista neuvontaa konkreettisessa asiassa eikä lupaa tiettyä lopputulosta. Sovellettavat säännökset ja verotuksellinen käsittely voivat poiketa sijoittajan ja päätoimipaikan sijainnin, yrityssisällön, transaktioiden ja rahavirran, sopimusedellytysten ja toimivaltaisen viranomaisen uusimman käytännön mukaan; ennen perustamisen, sijoituksen, sopimuksen, osingon tai siirron suorittamista on tutkittava uusimmat viralliset lähteet ja omat olosuhteet.
+
+**Asianajaja Wei Tseng (曾雋崴)**

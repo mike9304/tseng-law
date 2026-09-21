@@ -1,1 +1,25 @@
 [WO start 2026-09-21 16:32:53]
+Review is in `docs/i18n/global-plan/reviews/native/da-b.md` (columns 010–018 only; guidance pack left to part a).
+
+**Verdict:** columns **2/5**. 17 P1 (meaning, Korea leftover, advertising/CTA, French leftover, 監察人 as *revisor*) and 40 P2. Wei Tseng is not masculinized. 016 is the strongest file; 013/015 are the most blog-like; 018 has the sharpest single errors.
+
+Last 15 lines of the file:
+
+```
+| 43 | P2 | B | columns-da/014-taiwan-mandatory-employment-period.md | "kan man hverken kræve arbejdstageren ansvaret for brud" | Missing preposition: *kræve nogen ansvaret* is not Danish. | kan man hverken pålægge arbejdstageren ansvaret for brud |
+| 44 | P2 | B | columns-da/015-taiwan-company-setup-pitch-location.md | "Udover markedssituationen" | *Udover* as one word is the preposition *beyond* in older spelling; needs *Ud over*. | Ud over markedssituationen |
+| 45 | P2 | C | columns-da/015-taiwan-company-setup-pitch-location.md | "Hvordan De når kontoret" | German *Wie Sie das Büro erreichen* as the contact-page label. Also 013. | Kontakt |
+| 46 | P2 | G | columns-da/016-taiwan-inheritance-custody-analysis.md | "godtgørelse for ideel skade (慰撫金)" | Norwegian *ideell skade*; Danish tort language is *svie og smerte* / *tort*. | godtgørelse for svie og smerte (慰撫金) |
+| 47 | P2 | B | columns-da/016-taiwan-inheritance-custody-analysis.md | "formueens beliggenhedssted" | Double genitive; *formue* takes *formuens*. | formuens beliggenhedssted |
+| 48 | P2 | G | columns-da/016-taiwan-inheritance-custody-analysis.md | "Man skal bekræfte trustee (受託人) og den begunstigede" | English *trustee* left in running Danish. | Man skal bekræfte trusteeen (受託人) og den begunstigede / forvalteren (受託人) |
+| 49 | P2 | C | columns-da/016-taiwan-inheritance-custody-analysis.md | "descendenterne i ret linje (直系血親卑親屬) er rang 1" | Academic German-style; Danish heirs are *livsarvinger* in *første arveklasse*. | livsarvingerne (直系血親卑親屬) er første arveklasse |
+| 50 | P2 | C | columns-da/016-taiwan-inheritance-custody-analysis.md | "Nej. Retten til fordeling af forskellen i ægteskabelig restformue" | FAQ answer dumped as the opening of a body section (also §7). | Retten til fordeling af forskellen i ægteskabelig restformue |
+| 51 | P2 | A | columns-da/016-taiwan-inheritance-custody-analysis.md | "indtrædelsesarv (代位繼承)" | Coined calque; 代位繼承 is succession by representation. | arv ved stedfortræden (代位繼承) |
+| 52 | P2 | A | columns-da/017-taiwan-logistics-business-setup.md | "ministeriet for trafik (交通部)" | 交通部 is MOTC; Danish *trafik* is road traffic, not the ministry. Throughout 017. | Ministeriet for transport og kommunikation (交通部) |
+| 53 | P2 | C | columns-da/017-taiwan-logistics-business-setup.md | "«Logistik» er et vidt praksisterm" | Coined *praksisterm*; English was “a broad business term”. | «Logistik» er et bredt forretningsudtryk |
+| 54 | P2 | A | columns-da/017-taiwan-logistics-business-setup.md | "Investeringskommissionen under ministeriet for økonomiske anliggender (經濟部投資審議司)" | Same office is “afdelingen for investeringsprøvelse” in 011/013; two names for 投資審議司. | Investeringsafdelingen under Ministeriet for økonomiske anliggender (經濟部投資審議司) — same label in 011, 013, 017 and 018 |
+| 55 | P2 | G | columns-da/018-taiwan-semiconductor-market-entry.md | "I governance kan et ikke-offentligt emitterende selskab" | English *governance* left in; *emitterende* is not how Danish names 非公開發行公司 (see 002/004 in part a). | I ledelsen kan et selskab uden offentligt udbud af aktier |
+| 56 | P2 | C | columns-da/018-taiwan-semiconductor-market-entry.md | "Det foregående er et forslag til kontraktudformning." | Orphaned leftover after company-form procedures, not contract drafting. | Delete the sentence, or: Det foregående er en almen sammenligning af selskabsformer, ikke rådgivning om en konkret transaktion. |
+| 57 | P2 | C | columns-da/018-taiwan-semiconductor-market-entry.md | "ordn da først det arbejde, som hovedsædet udfører" | Bare imperative *ordn da* is not running Danish on a firm site. | skal man først få styr på det arbejde, som hovedsædet udfører |
+```
+=== end code=0 2026-09-21 16:38:50 ===

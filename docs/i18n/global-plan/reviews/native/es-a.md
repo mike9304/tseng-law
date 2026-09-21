@@ -1,0 +1,48 @@
+# Spanish native review — part a (es)
+reviewer: Grok 4.6 · date: 2026-09-21 · scope: es-guidance.txt (365 strings); columns-es/001-taiwan-company-establishment-basics.md, 002-withdraw-capital-taiwan-company.md, 003-taiwan-traffic-accident-procedure.md [IN PROGRESS: 004–009]
+
+## Verdict
+naturalness (1 = machine, 5 = native professional): 3/5 for guidance pack, 3/5 for columns 001–002, 2/5 for column 003 (Q16–Q20)
+variety used: Panhispanic legal Spanish with a Spain lean (despacho, « », 500.000) mixed with Latin-American forms (egresados, contador, Sitio oficial). Readable on both sides of the Atlantic once English leftovers and the Korea-as-default holes are closed. Not a Spain-only or Mexico-only mix-up of the Portuguese EP/BR kind.
+systemic patterns (max 6, each one line, with 1 example quote):
+- German pivot in the guidance pack: `"grupos de trabajo"`, `"Índice de páginas"`, `"Idioma de visualización"`, `"en un mismo flujo"`.
+- English chrome left on the Spanish site: `"OUR TEAM"`, `"OFFICES"`, `"Perfil completo (English)"`.
+- Korea left as the default reader where English already labelled a country-specific note: `"El Acuerdo de Impuesto sobre la Renta (所得稅協定) entre Taiwán y Corea"`.
+- Column 003 Q16–Q20 keep a Korean-blog voice (`"déjelas en los comentarios"`, empty lines, `"procure que se obtenga la máxima indemnización posible"`).
+- 拘役 rendered as `"detención"` (pre-trial arrest) in 002; `"prisión de duración determinada"` is a calque of 有期徒刑.
+Gender of attorney Wei Tseng: feminine throughout this part (`la abogada Wei Tseng`, `Abogada directora`, `habilitada`, `Revisado por la abogada Wei Tseng`, `Estudiante de intercambio`, `Hola, soy Wei Tseng (曾雋崴), abogada`). No masculine form, pronoun or title found in the files reviewed so far.
+
+## Findings
+| # | sev | cat | file | quote (≤120 chars, verbatim) | problem (English, one line) | suggested Spanish rewrite |
+|---|-----|-----|------|------|------|------|
+| 1 | P1 | A | es-guidance.txt | "no promete posición en buscadores, respaldo, recomendación de IA ni visibilidad" | “Respaldo” ≠ endorsement; “visibilidad” ≠ advertisement (de: Empfehlung / Anzeige). | "no promete posicionamiento en buscadores, recomendación, recomendación por inteligencia artificial ni inserción publicitaria" |
+| 2 | P1 | A | columns-es/001-taiwan-company-establishment-basics.md | "El Acuerdo de Impuesto sobre la Renta (所得稅協定) entre Taiwán y Corea entró en vigor" | English caveat that this 10 % rate is a Korea-related fact pattern, not a worldwide investor rule, was dropped. | After the sentence, add: "Nota específica de país: esta explicación vale solo para un caso ligado a Corea que cumpla el acuerdo; no es una regla para cualquier inversor extranjero." |
+| 3 | P1 | A | columns-es/002-withdraw-capital-taiwan-company.md | "prisión de duración determinada de hasta 5 años, detención o multa penal" | 拘役 is a short custodial sentence (≤60 days), not *detención* (pre-trial arrest). also art. 90 in 002 | "pena de prisión de hasta 5 años, pena privativa de corta duración (拘役) o multa penal" |
+| 4 | P1 | E | columns-es/003-taiwan-traffic-accident-procedure.md | "procure que se obtenga la máxima indemnización posible" | “Highest possible” compensation is a best-result claim forbidden in Taiwan attorney advertising. | "procure pedir la indemnización que los hechos y las pruebas sostienen" |
+| 5 | P1 | E | columns-es/003-taiwan-traffic-accident-procedure.md | "los tribunales imponen en la actualidad una pena de unos 3 meses" | Presented as the typical current sentence; there is no typical or guaranteed outcome. also “suele imponerse una pena de 4 meses” / “6 meses” | "en algunas sentencias se ha impuesto una pena de unos 3 meses; no existe un resultado típico ni garantizado" |
+| 6 | P1 | E | columns-es/003-taiwan-traffic-accident-procedure.md | "Puede obtenerse la suspensión de la pena (緩刑) y no ir a prisión." | Reads as a promise that a suspended sentence avoids prison. | "En algunos casos el tribunal puede acordar la suspensión de la pena (緩刑); esto no es una promesa de evitar la prisión." |
+| 7 | P1 | G | es-guidance.txt | "OUR TEAM" | English section label left on the Spanish lawyers page. | "NUESTRO EQUIPO" |
+| 8 | P1 | G | es-guidance.txt | "OFFICES" | English section label left on the Spanish offices block. | "OFICINAS" |
+| 9 | P1 | G | es-guidance.txt | "Perfil completo (English)" | English leftover in the profile link on an otherwise Spanish page. | "Perfil completo (en inglés)" |
+| 10 | P1 | D | columns-es/003-taiwan-traffic-accident-procedure.md | "llame al 119, y si hay un delito o una situación de seguridad urgente, al 110 o al 112" | Spain and Latin America use 112; these must be labelled as Taiwan numbers. | "en Taiwán, llame al 119 (ambulancia/bomberos) y, en caso de delito o urgencia de seguridad, al 110 o al 112 (desde un móvil)" |
+| 11 | P2 | C | es-guidance.txt | "Índice de páginas" | Menu labelled as if it were a table of contents (de: Seitenverzeichnis). | "Menú" |
+| 12 | P2 | C | es-guidance.txt | "Idioma de visualización" | German Anzeigesprache; reads as display-settings jargon. | "Idioma de la página" |
+| 13 | P2 | C | es-guidance.txt | "los grupos principales de trabajo" | German Tätigkeitsgruppen; the nav already says “Áreas de trabajo”. Recurs through home/services/faq. | "las áreas principales de trabajo" |
+| 14 | P2 | C | es-guidance.txt | "los grupos que realmente atendemos" | German tatsächlich; odd emphasis for a law-firm page. | "los asuntos de los que nos ocupamos" |
+| 15 | P2 | C | es-guidance.txt | "en un mismo flujo" | German in einem Ablauf. | "de forma integrada" |
+| 16 | P2 | C | es-guidance.txt | "Acompañamos en la investigación y ante el tribunal" | Missing object; German “begleiten im Ermittlungsverfahren” copied. | "Intervenimos en la investigación y ante el tribunal, tanto a favor de la persona investigada o acusada como de la víctima" |
+| 17 | P2 | C | es-guidance.txt | "constituyen o explotan una sociedad" | “Explotar una sociedad” reads as exploiting the company, not operating it. | "constituyen o gestionan una sociedad" |
+| 18 | P2 | C | es-guidance.txt | "Preguntas que se formulan a menudo" | Overwrought calque; the nav already has “Preguntas frecuentes”. | "Preguntas frecuentes" |
+| 19 | P2 | C | es-guidance.txt | "Las preguntas siguientes se responden en el plano de la información general." | Questions do not answer themselves; “plano” is a German Ebene calque. | "Las respuestas siguientes son información general." |
+| 20 | P2 | C | es-guidance.txt | "Una cifra puesta de antemano" | Stiff calque; a native would say “un importe indicado de antemano”. | "Un importe indicado de antemano" |
+| 21 | P2 | D | es-guidance.txt | "obtuvo una sentencia de primera instancia de TWD 1.57M" | English decimal and “M”; ES/LatAm use 1,57 and “millones”. Keep TWD and the amount. | "obtuvo una sentencia de primera instancia de 1,57 millones de TWD" |
+| 22 | P2 | E | es-guidance.txt | "la consulta con un abogado se realiza en inglés, chino (中文), japonés y coreano." | Exclusive “únicamente” missing here and in the inquiry consultationNotice; FAQ already has it. | "la consulta con un abogado se realiza únicamente en inglés, chino (中文), japonés y coreano." |
+| 23 | P2 | G | es-guidance.txt | "Abogada directora en Taiwán (Managing Attorney)" | English job titles left in parentheses on every role line. also Taiwan Attorney / Korea Operations Manager / Partner CPA | "Abogada directora en Taiwán" |
+| 24 | P2 | D | columns-es/003-taiwan-traffic-accident-procedure.md | "modificado el 2026-05-29 se aplica a los accidentes ocurridos a partir del 2026-07-01" | ISO dates in running Spanish. | "modificado el 29 de mayo de 2026 se aplica a los accidentes ocurridos a partir del 1 de julio de 2026" |
+| 25 | P2 | D | columns-es/003-taiwan-traffic-accident-procedure.md | "Si tiene otras preguntas, déjelas en los comentarios." | Blog CTA; this site has no comments. | "Para otras preguntas, utilice la página Contacto; no se promete un plazo de respuesta." |
+| 26 | P2 | G | columns-es/003-taiwan-traffic-accident-procedure.md | "Q&A sobre accidentes de tráfico en Taiwán" | English “Q&A” left in the title. also in the H1 | "Preguntas y respuestas sobre accidentes de tráfico en Taiwán" |
+| 27 | P2 | C | columns-es/003-taiwan-traffic-accident-procedure.md | "Código Penal de la República de China, artículo 185-4" | *República de China* on a Spanish page is read as the PRC; the code is Taiwan’s. Body already says “Código Penal de Taiwán”. | "Código Penal de Taiwán (中華民國刑法), artículo 185-4" |
+| 28 | P2 | C | columns-es/001-taiwan-company-establishment-basics.md | "establecimiento permanente (常設機構, PE)" | English abbreviation *PE* left in running Spanish. | "establecimiento permanente (常設機構)" |
+| 29 | P2 | C | columns-es/002-withdraw-capital-taiwan-company.md | "prisión de duración determinada de hasta 5 años" | Calque of 有期徒刑 / French peine à temps; Spanish just says the maximum. | "pena de prisión de hasta 5 años" |
+| 30 | P2 | D | columns-es/003-taiwan-traffic-accident-procedure.md | "Sentencia del Tribunal Superior de Taiwán, año 109, asunto 上易字 n.º 644" | ROC year 109 unexplained; a Spanish reader will not map it to 2020. | "Sentencia del Tribunal Superior de Taiwán (臺灣高等法院), año 109 (2020), 上易字 n.º 644" |
+| 31 | P2 | C | columns-es/003-taiwan-traffic-accident-procedure.md | "Hola, soy Wei Tseng (曾雋崴), abogada de Taiwán." | Blog greeting clashes with the rest of the site’s formal register. Wait — this quote is in 008; in 003 the close is "Wei Tseng (曾雋崴), abogada de Taiwán." | "Wei Tseng (曾雋崴), abogada de Taiwán." |

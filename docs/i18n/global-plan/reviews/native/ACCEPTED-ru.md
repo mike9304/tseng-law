@@ -15,4 +15,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `ru-a.md` 
 - Number format: 500 000 (space thousands), 1,57 млн TWD.
 
 ## Part b
-Apply every P1/P2 row of `ru-b.md` under the same skip rules above.
+Apply every P1/P2 row of `ru-b.md` under the same skip rules above. Additional: b#1 signature → «**Адвокат Wei Tseng (曾雋崴)**» is common-gender and acceptable; keep it but make every verb/participle feminine; b#2 '3 лицо' → третье лицо (R11); b#3 → R3/R7; b#4 → R2 (no 'Korean explanations'); b#5 транспортная комиссия → 'экспедиторская деятельность (運送承攬)'; b#6 gloss 營業用車輛牌照 → 'номерные знаки коммерческого транспорта (營業用車輛牌照)'; b#7 戶籍 → 'регистрация по месту жительства (戶籍)'; b#8 'канцелярский пункт' → 'представительство/офис'; German calques (промысел → деятельность, встречное предоставление → вознаграждение, по принципу → как правило); FAQ openings → R7b; blog chrome (😊, Пример), Совет：, Q.) → R6b/R7; thousands 1 579 589.

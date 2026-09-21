@@ -698,7 +698,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     koreaOfficeTitle: 'הסניף בקוריאה',
     koreaAddressCardLabel: 'כתובת הסניף בקוריאה',
     koreaMapLinkLabel: 'הצגה ב־Naver Map',
-    reviewCountWord: 'חוות דעת',
+    reviewCountWord: 'ביקורות',
     phoneLabel: 'טלפון',
     faxLabel: 'פקס',
     mapLinkLabel: 'הצגה במפה',
@@ -710,7 +710,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     officeTitles: {
       taipei: 'טאיפיי',
       taichung: 'טאיצ׳ונג',
-      kaohsiung: 'קאוסיונג',
+      kaohsiung: 'קאושיונג',
       pingtung: 'פינגטונג',
     },
   },

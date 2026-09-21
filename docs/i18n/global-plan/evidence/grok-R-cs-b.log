@@ -1,1 +1,27 @@
 [WO start 2026-09-21 16:19:02]
+Native review of Czech columns 010–018 is in `docs/i18n/global-plan/reviews/native/cs-b.md`. Guidance pack and 001–009 were left to part a.
+
+**Verdict:** columns **2/5**. 012 is the most natural; 011/014/016–018 are careful but still translationese; 013 and 015 read as leftover blog posts. Wei Tseng is feminine where named. No win-rate or result-guarantee claim.
+
+**Must-fix (P1):** `základna` for legal basis (010); `minimální doba práce` and `předplatné` (014); `zbývající rodinu`, `odchodné` for 退休金, and 認證/檢認 collapsed (016); `formulář`/`opatřené` and `povolení od cizince` (018); comment CTA implying Czech help (013); leftover `Q&A` and a Chinese colon (013).
+
+Last 15 lines of the output file:
+
+```
+| 30 | P2 | C | columns-cs/010-taiwan-gym-injury-lawsuit.md | "Pád na podlaze provozovny, zdravotní újma jídlem a úraz při využívání odborné služby" | Machine list: újma jídlem is not how Czech names a food-related injury. | Pád v provozovně, újma na zdraví způsobená jídlem a úraz při odborné službě |
+| 31 | P2 | C | columns-cs/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "[Které věci vedeme](/cs/services)" | Stock calque of “matters we handle”. also 013, 014, 015, 016, 017 | [V čem klienty zastupujeme](/cs/services) |
+| 32 | P2 | C | columns-cs/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "Není nutné ji vždy zakládat." | FAQ answer pasted as §1 with a dangling ji and no question. also 011 §2 “Není to stejný postup.” | Dceřinou společnost ani pobočku není nutné vždy zakládat. |
+| 33 | P2 | C | columns-cs/012-taiwan-overtaking-accident-liability.md | "Věc přešla do řízení a v jeho průběhu bylo provedeno několik znaleckých posudků" | Řízení without civil/criminal is vague; native would name the proceeding. | Věc přešla do soudního řízení; v jeho průběhu bylo vypracováno několik znaleckých posudků |
+| 34 | P2 | C | columns-cs/013-taiwan-company-establishment-advanced-1.md | "založení společnosti na Tchaj-wanu. 😊" | Korean-blog emoji on a law-firm column. also title “prohloubená část 1/3” in 013, 015 | (drop the emoji; retitle as „podrobnější výklad, 1. část“) |
+| 35 | P2 | C | columns-cs/013-taiwan-company-establishment-advanced-1.md | "Př.) Pokud je odvětvím gastronomie" | Př.) is a Korean/Japanese 例) marker; Czech uses např. | Např. pokud je odvětvím gastronomie |
+| 36 | P2 | C | columns-cs/014-taiwan-mandatory-employment-period.md | "Ne. Podle čl. 15-1 tchajwanského zákona o pracovních normách" | FAQ “No.” dumped as the opening of §1 without the question. also 016 §3/§7, 017 §1/§3 | Ujednání není automaticky neplatné. Podle čl. 15-1… |
+| 37 | P2 | C | columns-cs/014-taiwan-mandatory-employment-period.md | "není zařízením, které fyzicky nebo právně brání odchodu pracovníka" | Zařízení for a legal “device/mechanism” sounds like equipment. | není institutem, který by fyzicky nebo právně bránil odchodu pracovníka |
+| 38 | P2 | C | columns-cs/015-taiwan-company-setup-pitch-location.md | "To je podstata; v dalších otázkách se můžete kdykoli obrátit na advokáta na Tchaj-wanu." | Blog close plus generic masculine advokát; not how this site should end a column. | Před zápisem ověřte aktuální pokyny úřadu; kancelář konzultuje jen ve čtyřech uvedených jazycích. |
+| 39 | P2 | C | columns-cs/016-taiwan-inheritance-custody-analysis.md | "Ověříte existenci věřitelů, zajištění, ručitelské dluhy" | Sudden 2nd-person checklist inside otherwise impersonal prose. also body list §9 | Je třeba ověřit existenci věřitelů, zajištění a ručitelské dluhy |
+| 40 | P2 | C | columns-cs/018-taiwan-semiconductor-market-entry.md | "Pro první rozhovor stačí provozní přehled" | Rozhovor for a lawyer consultation is interview/chat, not konzultace. throughout 018; also 013 | Pro první konzultaci stačí provozní přehled |
+| 41 | P2 | D | columns-cs/010-taiwan-gym-injury-lawsuit.md | "Nehoda nastala v posilovně v Taichungu (臺中)" | English Taichung; Institute of Czech / the guidance pack use Tchaj-čung. | Nehoda nastala v posilovně v Tchaj-čungu (臺中) |
+| 42 | P2 | D | columns-cs/010-taiwan-gym-injury-lawsuit.md | "1.579.589 TWD" | Period as thousands separator is German; Czech uses a space. also 011 fines, 017 25.000.000, 018 30.000.000 | 1 579 589 TWD |
+| 43 | P2 | D | columns-cs/017-taiwan-logistics-business-setup.md | "na Kinmenu (金門) a Lienchiangu neboli Matsu (連江・馬祖)" | English Lienchiang/Matsu; Czech transcription is Lien-ťiang / Ma-cu. | na Ťin-menu (金門) a Lien-ťiangu neboli Ma-cu (連江・馬祖) |
+| 44 | P2 | E | columns-cs/018-taiwan-semiconductor-market-entry.md | "a požadovaný jazyk rozhovoru" | Invites a preferred consultation language on a Czech page without restating the four-language lock. | a požadovaný jazyk konzultace (pouze angličtina, čínština (中文), japonština nebo korejština) |
+```
+=== end code=0 2026-09-21 16:24:40 ===

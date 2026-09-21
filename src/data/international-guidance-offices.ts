@@ -40,7 +40,7 @@ export interface GuidanceOfficeCopy {
 
 export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
   vi: {
-    label: 'OFFICES',
+    label: 'VĂN PHÒNG',
     title: 'Văn phòng',
     description: 'Địa chỉ các văn phòng tại Đài Loan của Hovering International Law Firm.',
     officeLabel: 'Văn phòng',
@@ -65,7 +65,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   id: {
-    label: 'OFFICES',
+    label: 'KANTOR',
     title: 'Kantor',
     description: 'Alamat kantor Hovering International Law Firm di Taiwan.',
     officeLabel: 'Kantor',
@@ -90,7 +90,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   th: {
-    label: 'OFFICES',
+    label: 'สำนักงาน',
     title: 'สำนักงาน',
     description: 'ที่อยู่สำนักงานของ Hovering International Law Firm ในไต้หวัน',
     officeLabel: 'สำนักงาน',
@@ -115,7 +115,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   fil: {
-    label: 'OFFICES',
+    label: 'MGA TANGGAPAN',
     title: 'Mga tanggapan',
     description: 'Mga address ng tanggapan ng Hovering International Law Firm sa Taiwan.',
     officeLabel: 'Tanggapan',
@@ -140,7 +140,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   ar: {
-    label: 'OFFICES',
+    label: 'المكاتب',
     title: 'المكاتب',
     description: 'عناوين مكاتب Hovering International Law Firm في تايوان.',
     officeLabel: 'مكتب',
@@ -165,7 +165,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   de: {
-    label: 'OFFICES',
+    label: 'BÜROS',
     title: 'Büros',
     description: 'Anschriften der Büros von Hovering International Law Firm in Taiwan.',
     officeLabel: 'Büro',
@@ -190,7 +190,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   es: {
-    label: 'OFFICES',
+    label: 'OFICINAS',
     title: 'Oficinas',
     description: 'Direcciones de las oficinas de Hovering International Law Firm en Taiwán.',
     officeLabel: 'Oficina',
@@ -215,7 +215,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   fr: {
-    label: 'OFFICES',
+    label: 'BUREAUX',
     title: 'Bureaux',
     description: 'Adresses des bureaux de Hovering International Law Firm à Taïwan.',
     officeLabel: 'Bureau',
@@ -240,7 +240,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   pt: {
-    label: 'OFFICES',
+    label: 'ESCRITÓRIOS',
     title: 'Escritórios',
     description: 'Moradas dos escritórios de Hovering International Law Firm em Taiwan.',
     officeLabel: 'Escritório',
@@ -265,7 +265,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   'zh-hans': {
-    label: 'OFFICES',
+    label: '办公室',
     title: '办公室',
     description: 'Hovering International Law Firm 在台湾的办公室地址。',
     officeLabel: '办公室',
@@ -290,7 +290,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   ms: {
-    label: 'OFFICES',
+    label: 'PEJABAT',
     title: 'Pejabat',
     description: 'Alamat pejabat Hovering International Law Firm di Taiwan.',
     officeLabel: 'Pejabat',
@@ -315,7 +315,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   ru: {
-    label: 'OFFICES',
+    label: 'ОФИСЫ',
     title: 'Офисы',
     description: 'Адреса офисов Hovering International Law Firm на Тайване.',
     officeLabel: 'Офис',
@@ -340,7 +340,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   tr: {
-    label: 'OFFICES',
+    label: 'OFİSLER',
     title: 'Ofisler',
     description: 'Hovering International Law Firm’in Tayvan’daki ofis adresleri.',
     officeLabel: 'Ofis',
@@ -365,7 +365,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   it: {
-    label: 'OFFICES',
+    label: 'SEDI',
     title: 'Uffici',
     description: 'Indirizzi degli uffici di Hovering International Law Firm a Taiwan.',
     officeLabel: 'Ufficio',
@@ -390,7 +390,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   nl: {
-    label: 'OFFICES',
+    label: 'KANTOREN',
     title: 'Kantoren',
     description: 'Adressen van de kantoren van Hovering International Law Firm in Taiwan.',
     officeLabel: 'Kantoor',
@@ -415,7 +415,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   pl: {
-    label: 'OFFICES',
+    label: 'BIURA',
     title: 'Biura',
     description: 'Adresy biur Hovering International Law Firm na Tajwanie.',
     officeLabel: 'Biuro',
@@ -440,7 +440,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   hi: {
-    label: 'OFFICES',
+    label: 'कार्यालय',
     title: 'कार्यालय',
     description: 'Hovering International Law Firm के ताइवान स्थित कार्यालयों के पते।',
     officeLabel: 'कार्यालय',
@@ -465,7 +465,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   sv: {
-    label: 'OFFICES',
+    label: 'KONTOR',
     title: 'Kontor',
     description: 'Adresser till Hovering International Law Firms kontor i Taiwan.',
     officeLabel: 'Kontor',
@@ -490,7 +490,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   da: {
-    label: 'OFFICES',
+    label: 'KONTORER',
     title: 'Kontorer',
     description: 'Adresser på Hovering International Law Firms kontorer i Taiwan.',
     officeLabel: 'Kontor',
@@ -515,7 +515,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   nb: {
-    label: 'OFFICES',
+    label: 'KONTORER',
     title: 'Kontorer',
     description: 'Adresser til Hovering International Law Firms kontorer i Taiwan.',
     officeLabel: 'Kontor',
@@ -540,7 +540,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   fi: {
-    label: 'OFFICES',
+    label: 'TOIMISTOT',
     title: 'Toimistot',
     description: 'Hovering International Law Firmin Taiwanin toimistojen osoitteet.',
     officeLabel: 'Toimisto',
@@ -565,7 +565,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   cs: {
-    label: 'OFFICES',
+    label: 'POBOČKY',
     title: 'Pobočky',
     description: 'Adresy taiwanských poboček Hovering International Law Firm.',
     officeLabel: 'Pobočka',
@@ -590,7 +590,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   hu: {
-    label: 'OFFICES',
+    label: 'IRODÁK',
     title: 'Irodák',
     description: 'A Hovering International Law Firm tajvani irodáinak címei.',
     officeLabel: 'Iroda',
@@ -615,7 +615,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   ro: {
-    label: 'OFFICES',
+    label: 'BIROURI',
     title: 'Birouri',
     description: 'Adresele birourilor din Taiwan ale Hovering International Law Firm.',
     officeLabel: 'Birou',
@@ -640,7 +640,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   uk: {
-    label: 'OFFICES',
+    label: 'ОФІСИ',
     title: 'Офіси',
     description: 'Адреси тайванських офісів Hovering International Law Firm.',
     officeLabel: 'Офіс',
@@ -665,7 +665,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   el: {
-    label: 'OFFICES',
+    label: 'ΓΡΑΦΕΙΑ',
     title: 'Γραφεία',
     description: 'Διευθύνσεις των γραφείων της Hovering International Law Firm στην Ταϊβάν.',
     officeLabel: 'Γραφείο',
@@ -690,7 +690,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   he: {
-    label: 'OFFICES',
+    label: 'משרדים',
     title: 'סניפים',
     description: 'כתובות סניפי Hovering International Law Firm בטאיוואן.',
     officeLabel: 'סניף',

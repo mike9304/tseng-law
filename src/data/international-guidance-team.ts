@@ -125,7 +125,7 @@ export interface GuidanceTeamCopy {
 
 export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
   vi: {
-    label: 'OUR TEAM',
+    label: 'ĐỘI NGŨ CỦA CHÚNG TÔI',
     title: 'Đội ngũ quốc tế Hovering',
     description:
       'Hồ sơ của các luật sư, quản lý nghiệp vụ và kế toán viên hợp tác của Hovering.',
@@ -153,7 +153,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   id: {
-    label: 'OUR TEAM',
+    label: 'TIM KAMI',
     title: 'Tim Internasional Hovering',
     description:
       'Profil para advokat, manajer operasional, dan akuntan mitra Hovering.',
@@ -181,7 +181,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   th: {
-    label: 'OUR TEAM',
+    label: 'ทีมงานของเรา',
     title: 'ทีมงานระหว่างประเทศ Hovering',
     description:
       'ประวัติของทนายความ ผู้จัดการงาน และผู้สอบบัญชีพันธมิตรของ Hovering',
@@ -209,7 +209,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   fil: {
-    label: 'OUR TEAM',
+    label: 'ANG AMING KOPONAN',
     title: 'Pandaigdigang koponan ng Hovering',
     description:
       'Mga profile ng mga abogado, tagapamahala ng operasyon, at kasosyong akawntant ng Hovering.',
@@ -237,7 +237,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   ar: {
-    label: 'OUR TEAM',
+    label: 'فريقنا',
     title: 'فريق Hovering الدولي',
     description:
       'ملفات المحامين ومديري الأعمال والمحاسب الشريك في Hovering.',
@@ -265,7 +265,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   de: {
-    label: 'OUR TEAM',
+    label: 'UNSER TEAM',
     title: 'Internationales Team von Hovering',
     description:
       'Profile der Anwältinnen und Anwälte, der Betriebsleitung und der Partner-Wirtschaftsprüfung von Hovering.',
@@ -293,7 +293,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   es: {
-    label: 'OUR TEAM',
+    label: 'NUESTRO EQUIPO',
     title: 'Equipo internacional de Hovering',
     description:
       'Perfiles de los abogados, de la dirección de operaciones y del contador asociado de Hovering.',
@@ -321,7 +321,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   fr: {
-    label: 'OUR TEAM',
+    label: 'NOTRE ÉQUIPE',
     title: 'Équipe internationale de Hovering',
     description:
       'Profils des avocates et avocats, de la direction des opérations et de l’expertise-comptable associée de Hovering.',
@@ -349,7 +349,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   pt: {
-    label: 'OUR TEAM',
+    label: 'A NOSSA EQUIPA',
     title: 'Equipa internacional de Hovering',
     description:
       'Perfis das advogadas e dos advogados, da direção de operações e da contabilidade associada de Hovering.',
@@ -377,7 +377,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   'zh-hans': {
-    label: 'OUR TEAM',
+    label: '我们的团队',
     title: 'Hovering 国际团队',
     description:
       'Hovering 律师、运营主管与合作会计师的简介。',
@@ -405,7 +405,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   ms: {
-    label: 'OUR TEAM',
+    label: 'PASUKAN KAMI',
     title: 'Pasukan antarabangsa Hovering',
     description:
       'Profil peguam, pengurusan operasi dan perakaunan rakan kongsi Hovering.',
@@ -433,7 +433,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   ru: {
-    label: 'OUR TEAM',
+    label: 'НАША КОМАНДА',
     title: 'Международная команда Hovering',
     description:
       'Профили адвокатов, руководства по операциям и партнёрской бухгалтерии Hovering.',
@@ -461,7 +461,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   tr: {
-    label: 'OUR TEAM',
+    label: 'EKİBİMİZ',
     title: 'Hovering uluslararası ekibi',
     description:
       'Hovering avukatlarının, operasyon yönetiminin ve ortak muhasebenin profilleri.',
@@ -489,7 +489,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   it: {
-    label: 'OUR TEAM',
+    label: 'IL NOSTRO TEAM',
     title: 'Team internazionale di Hovering',
     description:
       'Profili delle avvocate e degli avvocati, della direzione operativa e della revisione associata di Hovering.',
@@ -517,7 +517,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   nl: {
-    label: 'OUR TEAM',
+    label: 'ONS TEAM',
     title: 'Internationaal team van Hovering',
     description:
       'Profielen van de advocaten, de operationele leiding en de partneraccountancy van Hovering.',
@@ -545,7 +545,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   pl: {
-    label: 'OUR TEAM',
+    label: 'NASZ ZESPÓŁ',
     title: 'Międzynarodowy zespół Hovering',
     description:
       'Profile adwokatów, kierownictwa operacyjnego i partnerskiego biura rachunkowego Hovering.',
@@ -573,7 +573,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   hi: {
-    label: 'OUR TEAM',
+    label: 'हमारी टीम',
     title: 'Hovering की अंतरराष्ट्रीय टीम',
     description:
       'Hovering के अधिवक्ताओं, संचालन प्रबंधन और सहभागी लेखा परीक्षा की प्रोफ़ाइलें।',
@@ -601,7 +601,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   sv: {
-    label: 'OUR TEAM',
+    label: 'VÅRT TEAM',
     title: 'Hoverings internationella team',
     description:
       'Profiler för Hoverings advokater, operativa ledning och anknutna revision.',
@@ -629,7 +629,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   da: {
-    label: 'OUR TEAM',
+    label: 'VORES TEAM',
     title: 'Hoverings internationale team',
     description:
       'Profiler for Hoverings advokater, operative ledelse og tilknyttede revision.',
@@ -657,7 +657,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   nb: {
-    label: 'OUR TEAM',
+    label: 'VÅRT TEAM',
     title: 'Hoverings internasjonale team',
     description:
       'Profiler for Hoverings advokater, operative ledelse og tilknyttede revisjon.',
@@ -685,7 +685,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   fi: {
-    label: 'OUR TEAM',
+    label: 'TIIMIMME',
     title: 'Hoveringin kansainvälinen tiimi',
     description:
       'Hoveringin asianajajien, operatiivisen johdon ja osakaskirjanpidon profiilit.',
@@ -713,7 +713,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   cs: {
-    label: 'OUR TEAM',
+    label: 'NÁŠ TÝM',
     title: 'Mezinárodní tým Hovering',
     description:
       'Profily advokátek a advokátů, provozního vedení a přidružené účetní revize Hovering.',
@@ -741,7 +741,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   hu: {
-    label: 'OUR TEAM',
+    label: 'CSAPATUNK',
     title: 'A Hovering nemzetközi csapata',
     description:
       'A Hovering ügyvédeinek, működési vezetésének és társult könyvvizsgálatának profiljai.',
@@ -769,7 +769,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   ro: {
-    label: 'OUR TEAM',
+    label: 'ECHIPA NOASTRĂ',
     title: 'Echipa internațională Hovering',
     description:
       'Profilurile avocatelor și avocaților, ale conducerii operative și ale revizuirii contabile asociate Hovering.',
@@ -797,7 +797,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   uk: {
-    label: 'OUR TEAM',
+    label: 'НАША КОМАНДА',
     title: 'Міжнародна команда Hovering',
     description:
       'Профілі адвокатів, операційного керівництва та партнерської бухгалтерії Hovering.',
@@ -825,7 +825,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   el: {
-    label: 'OUR TEAM',
+    label: 'Η ΟΜΑΔΑ ΜΑΣ',
     title: 'Η διεθνής ομάδα της Hovering',
     description:
       'Προφίλ των δικηγόρων, της λειτουργικής διεύθυνσης και του συνεργαζόμενου λογιστικού ελέγχου της Hovering.',
@@ -853,7 +853,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   he: {
-    label: 'OUR TEAM',
+    label: 'הצוות שלנו',
     title: 'הצוות הבין־לאומי של Hovering',
     description:
       'פרופילים של עורכות ועורכי הדין, של ההנהלה התפעולית ושל ביקורת החשבונות השותפה של Hovering.',

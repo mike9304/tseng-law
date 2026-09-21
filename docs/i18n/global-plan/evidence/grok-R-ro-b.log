@@ -1,1 +1,26 @@
 [WO start 2026-09-21 16:18:34]
+Written to `docs/i18n/global-plan/reviews/native/ro-b.md` (columns 010–018 only; guidance pack is part a).
+
+**Verdict:** columns **2/5**. Same French-pivot register as 001–009. 012 is the most readable; 013 is leftover blog copy; **016 and 018 carry real meaning errors**. Wei Tseng stays feminine. Versus part a: `filială` is used correctly, internal links are `/ro/…`, no Hangul slugs.
+
+**P1 (must fix):** `cumpără și revine` (resells → comes back), `Orice societate… nu trebuie să facă certificate` (audit meaning reversed), `licența reținerii` (lawfulness → licence), `acțiunea reală` (in rem vs in practice), `familia care rămâne` (surviving family), `schimbați cu o avocată` (discuss → change), administrative fines called `infracțiune`, Invest Taiwan link `lang=jpn`.
+
+Last 15 lines of the file:
+
+```
+| 47 | P2 | C | columns-ro/010-taiwan-gym-injury-lawsuit.md | "văzut gradul vătămării și evoluția tratamentului" | Fr. *vu le degré*; a participle hanging with no Romanian syntax. | ținând seama de gradul vătămării și de evoluția tratamentului |
+| 48 | P2 | C | columns-ro/010-taiwan-gym-injury-lawsuit.md | "tratament, medicamente și reeducare" | Fr. *rééducation*; Romanian medical/legal is recuperare / kinetoterapie. | tratament, medicamente și recuperare |
+| 49 | P2 | C | columns-ro/012-taiwan-overtaking-accident-liability.md | "au fost practicate mai multe expertize (鑑定) ale accidentului" | Fr. *pratiquer une expertise*; Romanian procedure is "s-au efectuat expertize". | s-au efectuat mai multe expertize (鑑定) ale accidentului |
+| 50 | P2 | C | columns-ro/012-taiwan-overtaking-accident-liability.md | "să claxoneze de 2 ori scurt sau să facă un apel de faruri" | Fr. *appel de phares*; Romanian drivers say "să clipească din faruri". | să claxoneze de două ori scurt sau să clipească din faruri |
+| 51 | P2 | C | columns-ro/012-taiwan-overtaking-accident-liability.md | "Prezentul text este o informație juridică generală" | French *le présent texte*; native column close is "Acest text". | Acest text este o informare juridică generală |
+| 52 | P2 | C | columns-ro/015-taiwan-company-setup-pitch-location.md | "Puteți verifica fără taxă dacă, la adresa dorită" | "Fără taxă" is a calque; the service is free of charge. | Puteți verifica gratuit dacă, la adresa dorită |
+| 53 | P2 | C | columns-ro/016-taiwan-inheritance-custody-analysis.md | "nu se deschide 1 procedură" | English "not just one process"; "1 procedură" reads like procedure no. 1. | nu se declanșează o singură procedură |
+| 54 | P2 | C | columns-ro/016-taiwan-inheritance-custody-analysis.md | "Formularul Yuanului judecătoresc" | Raw calque of 司法院; a Romania reader does not know "Yuan" as a court. | Formularul Yuanului Judiciar (司法院) |
+| 55 | P2 | D | columns-ro/017-taiwan-logistics-business-setup.md | "Administrația imigrației a Ministerului Internelor (內政部移民署)" | Romanian state usage is Ministerul de Interne / Ministerul Afacerilor Interne, not "Internelor". | Administrația imigrației a Ministerului de Interne (內政部移民署) |
+| 56 | P2 | C | columns-ro/014-taiwan-mandatory-employment-period.md | "după tipul și ținuta contractului" | Fr. *tenue du contrat*; Romanian is conținutul / clauzele contractului. | după tipul și conținutul contractului |
+| 57 | P2 | C | columns-ro/018-taiwan-semiconductor-market-entry.md | "Cele de mai sus sunt o propunere de concepție contractuală." | Orphan sentence after company-registration procedure, not after contract drafting. | (move under the contract-design section, or cut: this paragraph does not follow §4) |
+| 58 | P2 | C | columns-ro/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "Lucrul PIF, inclusiv evaluarea de siguranță" | "Lucrul PIF" is a bare English "PIF work" calque. | Întocmirea PIF, inclusiv evaluarea de siguranță |
+| 59 | P2 | C | columns-ro/015-taiwan-company-setup-pitch-location.md | "înregistrarea persoanei juridice (公司登記)" | 公司登記 is company registration, not "registration of the legal person" as a civil-status act. | înregistrarea societății (公司登記) |
+| 60 | P2 | C | columns-ro/012-taiwan-overtaking-accident-liability.md | "Ca supliment, puteți consulta" | Fr. *en complément*; native is "În plus" / "Ca material auxiliar". | Ca material auxiliar, puteți consulta |
+```
+=== end code=0 2026-09-21 16:25:11 ===

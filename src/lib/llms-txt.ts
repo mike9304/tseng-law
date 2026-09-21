@@ -643,7 +643,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Deze toelichting is in het Nederlands geschreven, maar het gesprek met een advocaat vindt alleen plaats in het Engels, Chinees (中文), Japans en Koreaans.',
     discoveryNotice:
-      'Het bestand llms.txt is slechts een kaart om openbare pagina’s te vinden; het belooft geen zoekplaats, steun, aanbeveling door kunstmatige intelligentie of weergave.',
+      'Het bestand llms.txt is slechts een kaart om openbare pagina’s te vinden; het belooft geen plaats in zoekresultaten, geen aanbeveling, geen vermelding door kunstmatige intelligentie en geen weergave.',
     confidentialNotice:
       'Omdat de oorspronkelijke tekst wordt bewaard, schrijf in deze eerste fase niets wat nog niet nodig is, zoals een paspoortnummer, een identiteitsnummer of rekeninggegevens.',
   },

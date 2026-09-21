@@ -21,7 +21,7 @@ De manier waarop in die zalen het haar werd gewassen, was zeer eigen.
 
 Naast het knippen bestonden er diverse diensten zoals scheren en gezichtsverzorging.
 
-En het wezenlijke was dat men zittend een haarwas kon ontvangen met massage van hoofdhuid, schouders en hals.
+Het bijzondere was dat men zittend een haarwas kon ontvangen met massage van hoofdhuid, schouders en hals.
 
 1 knipbeurt volstond reeds om van deze dienst van hoog niveau te genieten, zodat de prijs-kwaliteitverhouding uitstekend was.
 
@@ -73,7 +73,7 @@ een wet op die de arbeid en het bestaansrecht (生存權) van personen met een v
 
 Met het verstrijken van de tijd en de verruiming van de consumptiemarkt
 
-klonk evenwel de opvatting dat het alleen beschermen van de rechten van personen met een visuele beperking het arbeidsrecht van personen zonder visuele beperking te zeer inperkte.
+klonk echter de opvatting dat het alleen beschermen van de rechten van personen met een visuele beperking het arbeidsrecht van personen zonder visuele beperking te zeer inperkte.
 
 In het debat over de beroepsrechten van personen met en zonder visuele beperking verschenen talrijke tegengestelde meningen.
 
@@ -81,13 +81,13 @@ Zo werd bijvoorbeeld gevraagd of de geschreven regel die alleen personen met een
 
 en werd betwijfeld of deze regel werkelijk had bijgedragen tot de bescherming van de arbeid en het bestaan van personen met een visuele beperking.
 
-Ten slotte verklaarden de Grote Rechters (大法官) de bepaling die alleen personen met een visuele beperking het massageberoep toestond, ongrondwettig (違憲).
+Ten slotte verklaarde het Grondwettelijk Hof (大法官) de bepaling die alleen personen met een visuele beperking het massageberoep toestond, ongrondwettig (違憲).
 
 ​
 
-Op vergelijkbare wijze mogen in Korea, waar talrijke personen met een visuele beperking hun levensonderhoud met massage verdienen,
+Ter vergelijking: in Korea, waar veel mensen met een visuele beperking hun levensonderhoud met massage verdienen,
 
-in de regel alleen personen met een visuele beperking die een bekwaamheidsbewijs hebben verkregen, het massageberoep uitoefenen.
+mogen in de regel alleen personen met een visuele beperking die een bekwaamheidsbewijs hebben verkregen, het massageberoep uitoefenen.
 
 Weliswaar is de regering van Korea ertoe overgegaan massagediploma’s ook aan personen zonder visuele beperking af te geven,
 
@@ -121,7 +121,7 @@ kan een trauma voor het leven worden indien men seksuele intimidatie ondergaat.
 
 Indien u tijdens een massage in Taiwan ongemak of iets vreemds voelt,
 
-deelt u dit terstond mee of vraagt u dat men stopt, teneinde uzelf te beschermen.
+deelt u dit meteen mee of vraagt u dat men stopt, om uzelf te beschermen.
 
 Indien u meent seksuele intimidatie te hebben ondergaan,
 

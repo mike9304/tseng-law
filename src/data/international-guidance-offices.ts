@@ -394,7 +394,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     title: 'Kantoren',
     description: 'Adressen van de kantoren van Hovering International Law Firm in Taiwan.',
     officeLabel: 'Kantoor',
-    mapPreviewLabel: 'Kaartvoorvertoning',
+    mapPreviewLabel: 'Voorbeeld van de kaart',
     koreaOfficeTitle: 'Kantoor Korea',
     koreaAddressCardLabel: 'Adres van het kantoor in Korea',
     koreaMapLinkLabel: 'Bekijken in Naver Map',

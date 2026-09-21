@@ -21,11 +21,11 @@ In het bijzonder wanneer werknemers zelf ontslag nemen (自請離職),
 
 kunnen zij geen ontslagvergoeding ontvangen (artikel 18 van de wet op de arbeidsnormen, 勞動基準法),
 
-en dit verschilt van Korea.
+en dat verschilt van de regels in veel andere landen, waaronder Korea.
 
 ​
 
-Er bestaan evenwel **uitzonderingsgevallen**.
+Er bestaan echter **uitzonderingsgevallen**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
@@ -59,7 +59,7 @@ In zulke gevallen moet de werkgever ook dan ontslagvergoeding betalen wanneer de
 
 ​
 
-De wet op de arbeidsnormen (勞動基準法) bepaalt evenwel
+De wet op de arbeidsnormen (勞動基準法) bepaalt echter
 
 dat werknemers die de arbeidsovereenkomst volgens punt 1 of punt 6 hierboven willen beëindigen (bijvoorbeeld wegens ontbrekende verzekeringsaansluiting),
 
@@ -77,9 +77,9 @@ het recht van Taiwan, of de schuld bij de vennootschap ligt
 
 of bij de werknemer,
 
-erkent aan beide zijden het recht geen ontslagvergoeding te betalen of ontslagvergoeding te vorderen.
+erkent aan beide partijen het recht geen ontslagvergoeding te betalen of ontslagvergoeding te vorderen.
 
-Soms ligt schuld aan beide zijden,
+Soms ligt de schuld bij beide partijen,
 
 en wanneer beide twisten,
 
@@ -87,11 +87,11 @@ kan naargelang wie het eerst met voldoende grond de overeenkomst beëindigt,
 
 de ontslagvergoeding worden geweigerd of gevorderd.
 
-Daarom is in Taiwanees arbeidsgeschillen (勞資糾紛)
+Daarom is bij Taiwanese arbeidsgeschillen (勞資糾紛)
 
-het ''**tijdstip**'' zeer belangrijk.
+het **tijdstip** zeer belangrijk.
 
-In de meeste gevallen wordt de zijde beschermd die zich vooraf heeft voorbereid.
+In de meeste gevallen wordt de partij beschermd die zich vooraf heeft voorbereid.
 
 ---
 

@@ -13,27 +13,27 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Hoofdafbeelding](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Onlangs hebben talrijke personen met succes een vennootschap (公司) in Taiwan opgericht en een werkvisum alsmede een verblijfskaart (外僑居留證) verkregen,
+Onlangs hebben talrijke personen met succes een vennootschap (公司) in Taiwan opgericht en een werkvisum en een verblijfskaart (外僑居留證) verkregen.
 
-en de vragen die bij de oprichting vaak worden gesteld, zijn hieronder verzameld.
+De vragen die bij de oprichting vaak worden gesteld, zijn hieronder verzameld.
 
 Wie [**de grondslagen van de vennootschapsoprichting**](/nl/columns/taiwan-company-establishment-basics) heeft gelezen, kan vervolgens ook deze uitvoeriger verdieping raadplegen.
 
-De volgende vragen en antwoorden (Q&A) beogen personen te helpen die een vennootschapsoprichting in Taiwan overwegen. 😊
+De volgende vragen en antwoorden beogen personen te helpen die een vennootschapsoprichting in Taiwan overwegen.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
 **1. Ik wil een vennootschap oprichten, maar heb nog geen inschrijvingsadres gevonden. Is de oprichting toch mogelijk?**
 
-Wanneer een buitenlander in Taiwan een vennootschap opricht, moet hij of zij een investeringsplan (投資計畫書) indienen bij het Investeringsonderzoeksbureau van het ministerie van Economische Zaken (經濟部投資審議司) ter toetsing.
+Wanneer een buitenlander in Taiwan een vennootschap opricht, moet hij of zij een investeringsplan (投資計畫書) indienen bij het Dienst Investeringstoetsing van het ministerie van Economische Zaken (經濟部投資審議司) ter toetsing.
 
-Het Investeringsonderzoeksbureau moet nagaan of het betreffende kapitaal (資本額) werkelijk voor investeringsdoeleinden wordt gebruikt
+De Dienst Investeringstoetsing moet nagaan of het betreffende kapitaal (資本額) werkelijk voor investeringsdoeleinden wordt gebruikt
 
 en of buitenlandse actoren geen middelen onder een ander voorwendsel binnenbrengen.
 
 Bij het opstellen van het investeringsplan hoeft het exacte vennootschapsadres niet te worden vermeld; de vermelding van de streek volstaat (voorbeeld: stad Taipei). ​
 
-Wanneer later bij de bank de voorbereidingsrekening van de vennootschap (公司籌備處帳戶) wordt geopend, toetsen talrijke banken evenwel de huurovereenkomst (租賃契約) en inspecteren zij ter plaatse het vennootschapsadres.
+Wanneer later bij de bank de voorbereidingsrekening van de vennootschap (公司籌備處帳戶) wordt geopend, toetsen talrijke banken echter de huurovereenkomst (租賃契約) en inspecteren zij ter plaatse het vennootschapsadres.
 
 Een medewerker of een medewerkster van een Taiwanese bank heeft mij persoonlijk gezegd dat
 
@@ -43,7 +43,7 @@ Reeds in de grondslagtekst heeft een lezeres aangegeven dat de rekeningopening d
 
 Omdat de gevallen van witwassen (洗錢) in Taiwan zeer talrijk zijn, wordt de opening van bankrekeningen steeds strenger.
 
-**Toelichting**：
+**Toelichting**:
 
 Omdat de toetsing van het investeringsplan ook tijd vergt,
 
@@ -81,7 +81,7 @@ U kunt uiteenlopende beroepservaringen vermelden, inclusief bijbaanwerk,
 
 en ze zo uitvoerig toelichten dat de toetsende personen kunnen worden overtuigd.
 
-Over dit punt dient u zich grondig met een advocaat of een advocate van Taiwan uit te wisselen.
+Over dit punt dient u grondig te overleggen met een advocaat in Taiwan.
 
 ​
 
@@ -91,7 +91,7 @@ De vennootschapsoprichting duurt ongeveer **3 maanden**, de verkrijging van de w
 
 daarom dient u de ingangsdatum van de overeenkomst zo laat mogelijk te plaatsen.
 
-Bovendien verleent de verhuurder in huurovereenkomsten voor winkelpanden in Taiwan de huurder vaak een „**inrichtingsperiode**“ (裝潢期間).
+Bovendien verleent de verhuurder in huurovereenkomsten voor winkelpanden in Taiwan de huurder vaak een **inrichtingsperiode** (裝潢期間).
 
 Dit is een van huur vrijgestelde periode; u kunt daarover onderhandelen.
 
@@ -111,7 +111,7 @@ dan kunt u zo nodig een notariële bekrachtiging van de huurovereenkomst (公證
 
 Dat hangt af van de bedrijfsactiviteiten (營業項目) van de vennootschap.
 
-Vb.) Indien de bedrijfsactiviteit de horeca is en men een commercieel kantoorpand wil huren, zal de opening van de bankrekening zeer moeilijk zijn.
+Bijvoorbeeld: als de bedrijfsactiviteit de horeca is en men een commercieel kantoorpand wil huren, zal de opening van de bankrekening zeer moeilijk zijn.
 
 Zoals reeds aangegeven, toetst de bank de huurovereenkomst en inspecteert zij ter plaatse het vennootschapsadres.
 
@@ -119,11 +119,11 @@ Bovendien eist het stadsbestuur (市政府) bij de definitieve vennootschapsinsc
 
 bij een commercieel kantoorpand is de vennootschapsinschrijving (公司登記) dan niet mogelijk.
 
-Vb.) Gaat het om bedrijfsactiviteiten (營業項目) die in een commercieel kantoorpand mogelijk zijn, zoals reclame of groothandel, dan kan de vennootschap in een commercieel kantoorpand worden opgericht. Vóór het sluiten van de huurovereenkomst
+Bijvoorbeeld: gaat het om bedrijfsactiviteiten (營業項目) die in een commercieel kantoorpand mogelijk zijn, zoals reclame of groothandel, dan kan de vennootschap in een commercieel kantoorpand worden opgericht. Vóór het sluiten van de huurovereenkomst
 
 dient u dit vooraf te controleren.
 
-*Indien u steun of een gesprek over het recht van Taiwan nodig hebt, laat dan een reactie achter of neem contact op.*
+*Als u advies over Taiwanees recht nodig hebt, neem dan contact op of neem contact op.*
 
 ---
 

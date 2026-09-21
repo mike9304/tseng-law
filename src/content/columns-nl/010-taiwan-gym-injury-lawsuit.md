@@ -1,5 +1,5 @@
 ---
-title: "Schadevergoeding bij een blessure in een fitnesscentrum in Taiwan: zaak van vonnis in aanleg 1, termijnen, bewijzen en schadeposten"
+title: "Schadevergoeding bij een blessure in een fitnesscentrum in Taiwan: zaak: vonnis in eerste aanleg, termijnen, bewijs en schadeposten"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
 lastmod: "2026-07-25"
 date_display: "13 september 2025"
@@ -9,53 +9,53 @@ categories:
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 
-# Schadevergoeding bij een blessure in een fitnesscentrum in Taiwan: zaak van vonnis in aanleg 1, termijnen, bewijzen en schadeposten (損害賠償)
+# Schadevergoeding bij een blessure in een fitnesscentrum in Taiwan: zaak: vonnis in eerste aanleg, termijnen, bewijs en schadeposten (損害賠償)
 
 ![Hoofdafbeelding](../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg)
 
-Aan de hand van een zaak waarin een Koreaanse student in een fitnesscentrum (健身房) in Taiwan onder leiding van een trainer (教練) gewond raakte, licht dit artikel de juridische procedures toe die na een blessure in een fitnesscentrum kunnen worden onderzocht, de vorderingstermijnen, de methoden tot bewijsbehoud (保全證據) en de schadeposten (損害賠償).
+Aan de hand van een zaak waarin een Koreaanse student in een fitnesscentrum (健身房) in Taiwan onder leiding van een trainer (教練) gewond raakte, licht dit artikel de juridische procedures toe die na een blessure in een fitnesscentrum kunnen worden onderzocht, de vorderingstermijnen, hoe u bewijs (保全證據) veiligstelt en de schadeposten (損害賠償).
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
 Het ongeval vond plaats in een fitnesscentrum in Taichung (臺中), tijdens een deadlift-training (硬舉) onder leiding van de trainer. Na de blessure is niet alleen te bezien dat het ongeval in het fitnesscentrum plaatsvond; samen moeten de trainingservaring en de gezondheidstoestand van de gebruiker, het soort oefening en het gewicht, de uitleg en de leiding van de trainer, de beweging en de reactie op dat ogenblik, het causaal verband (因果關係) tussen blessure en oefening, en de stukken die de schade staven, worden onderzocht.
 
-Ik was in deze zaak procesgemachtigde (訴訟代理人) van de eiser, de Koreaanse student. De arrondissementsrechtbank van Taichung (臺灣臺中地方法院) gelastte op 24 januari 2022, in het vonnis in aanleg 1 van de consumentenzaak nummer 7 van het jaar 109 (109年度消字第7號), de verweerder tot betaling van [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) alsmede de in het vonnis vermelde rente.
+Ik was in deze zaak procesgemachtigde (訴訟代理人) van de eiser, de Koreaanse student. De rechtbank van Taichung (臺灣臺中地方法院) veroordeelde op 24 januari 2022, in het vonnis in eerste aanleg van de consumentenzaak nummer 7 van het jaar 109 (109年度消字第7號), de verweerder tot betaling van [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) en de in het vonnis vermelde rente.
 
-Daarna meldde de pers dat de partijen in de beroepsinstantie een dading (和解) hadden gesloten. Het enige officiële vonnis in aanleg 1 laat niet toe het resultaat van de beroepsinstantie noch het dadingbedrag te bevestigen; dit mag niet als het onherroepelijke resultaat van het vonnis in aanleg 1 worden gelezen.
+Daarna meldde de pers dat de partijen in hoger beroep een schikking (和解) hadden getroffen. Het enige officiële vonnis in eerste aanleg laat niet toe het resultaat van het hoger beroep noch het schikkingsbedrag te bevestigen; dit mag niet als het onherroepelijke resultaat van het vonnis in eerste aanleg worden gelezen.
 
-De titels van persberichten, online-publicaties en juridische toelichtingen over deze zaak, naar het Nederlands overgebracht, zijn de volgende. De titels hieronder dienen alleen om de inhoud van elke koppeling voor te stellen; zij betekenen niet dat deze tekst zelf de feiten vaststelt.
+De titels van persberichten, online-publicaties en juridische toelichtingen over deze zaak, naar het Nederlands overgebracht, zijn de volgende. De titels hieronder geven alleen aan waar elke koppeling over gaat; zij betekenen niet dat deze tekst zelf de feiten vaststelt.
 
 ![Een mannelijke student, hernia (椎間盤破裂) na een deadlift van 90 kg… vordert schadevergoeding van het fitnesscentrum](../images/010-taiwan-gym-injury-lawsuit/img-02.jpg)
 
 [Een mannelijke student, hernia (椎間盤破裂) na een deadlift van 90 kg… vordert schadevergoeding van het fitnesscentrum](https://tw.news.yahoo.com/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82-%E6%80%92%E5%91%8A%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B1%82%E5%84%9F-095800997.html)
 
-![Koreaanse mannelijke student, hernia tijdens een deadlift van 90 kg… in aanleg 1 1,57 miljoen TWD (1.570.000) schadevergoeding en bericht over een dading in de beroepsinstantie](../images/010-taiwan-gym-injury-lawsuit/img-03.jpg)
+![Koreaanse mannelijke student, hernia tijdens een deadlift van 90 kg… in eerste aanleg 1,57 miljoen TWD (1.570.000) schadevergoeding en bericht over een schikking in hoger beroep](../images/010-taiwan-gym-injury-lawsuit/img-03.jpg)
 
-[Koreaanse mannelijke student, hernia tijdens een deadlift van 90 kg… in aanleg 1 1,57 miljoen TWD (1.570.000) schadevergoeding en bericht over een dading in de beroepsinstantie](https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com)
+[Koreaanse mannelijke student, hernia tijdens een deadlift van 90 kg… in eerste aanleg 1,57 miljoen TWD (1.570.000) schadevergoeding en bericht over een schikking in hoger beroep](https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com)
 
-![Koreaanse mannelijke student, blessure tijdens een deadlift van 90 kg… vonnis in aanleg 1 1,57 miljoen TWD (1.570.000) schadevergoeding en bericht over een dading in de beroepsinstantie](../images/010-taiwan-gym-injury-lawsuit/img-04.jpg)
+![Koreaanse mannelijke student, blessure tijdens een deadlift van 90 kg… vonnis in eerste aanleg 1,57 miljoen TWD (1.570.000) schadevergoeding en bericht over een schikking in hoger beroep](../images/010-taiwan-gym-injury-lawsuit/img-04.jpg)
 
-[Koreaanse mannelijke student, blessure tijdens een deadlift van 90 kg… vonnis in aanleg 1 1,57 miljoen TWD (1.570.000) schadevergoeding en bericht over een dading in de beroepsinstantie](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
+[Koreaanse mannelijke student, blessure tijdens een deadlift van 90 kg… vonnis in eerste aanleg 1,57 miljoen TWD (1.570.000) schadevergoeding en bericht over een schikking in hoger beroep](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
 
 ![Een mannelijke student, hernia na een deadlift van 90 kg… vordert schadevergoeding van het fitnesscentrum](../images/010-taiwan-gym-injury-lawsuit/img-05.jpg)
 
 [Een mannelijke student, hernia na een deadlift van 90 kg… vordert schadevergoeding van het fitnesscentrum](https://news.ebc.net.tw/news/living/362075)
 
-![PTT-bericht: Koreaanse mannelijke student, hernia tijdens een deadlift van 90 kg… in aanleg 1, last tot het fitnesscentrum tot betaling van 1,57 miljoen TWD (1.570.000)](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
+![PTT-bericht: Koreaanse mannelijke student, hernia tijdens een deadlift van 90 kg… in eerste aanleg het fitnesscentrum veroordeeld tot betaling van 1,57 miljoen TWD (1.570.000)](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
 
-[PTT-bericht: Koreaanse mannelijke student, hernia tijdens een deadlift van 90 kg… in aanleg 1, last tot het fitnesscentrum tot betaling van 1,57 miljoen TWD (1.570.000)](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
+[PTT-bericht: Koreaanse mannelijke student, hernia tijdens een deadlift van 90 kg… in eerste aanleg het fitnesscentrum veroordeeld tot betaling van 1,57 miljoen TWD (1.570.000)](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
 ![Blog: blessure door deadlift van 90 kg van een Koreaanse student van 70 kg en schadevergoeding van meer dan 1.000.000 TWD… was er schuld van het fitnesscentrum? Welke houding moet de trainende persoon innemen?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
 [Blog: blessure door deadlift van 90 kg van een Koreaanse student van 70 kg en schadevergoeding van meer dan 1.000.000 TWD… was er schuld van het fitnesscentrum? Welke houding moet de trainende persoon innemen?](https://blog.udn.com/blackjack/179081715)
 
-![Juridische toelichting: een mannelijke student, hernia tijdens de deadlift… in aanleg 1, last tot een bekend fitnesscentrum tot betaling van 1,57 miljoen TWD (1.570.000)](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
+![Juridische toelichting: een mannelijke student, hernia tijdens de deadlift… in eerste aanleg een bekend fitnesscentrum veroordeeld tot betaling van 1,57 miljoen TWD (1.570.000)](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
-[Juridische toelichting: een mannelijke student, hernia tijdens de deadlift… in aanleg 1, last tot een bekend fitnesscentrum tot betaling van 1,57 miljoen TWD (1.570.000)](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
+[Juridische toelichting: een mannelijke student, hernia tijdens de deadlift… in eerste aanleg een bekend fitnesscentrum veroordeeld tot betaling van 1,57 miljoen TWD (1.570.000)](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
 
-![Lezing van het vonnis: zaak van acute hernia nadat een beginner in het fitnesscentrum de last van een deadlift van 90 kg had ontvangen](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
+![Lezing van het vonnis: zaak van acute hernia nadat een beginner in het fitnesscentrum de opdracht kreeg een deadlift van 90 kg te doen](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
 
-[Lezing van het vonnis: zaak van acute hernia nadat een beginner in het fitnesscentrum de last van een deadlift van 90 kg had ontvangen](https://www.instagram.com/p/Crp4vJag7v3/)
+[Lezing van het vonnis: zaak van acute hernia nadat een beginner in het fitnesscentrum de opdracht kreeg een deadlift van 90 kg te doen](https://www.instagram.com/p/Crp4vJag7v3/)
 
 ![Leed een Koreaanse mannelijke student een hernia bij een deadlift van 90 kg tijdens persoonlijke training?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
@@ -67,11 +67,11 @@ Hetgeen volgt is algemene informatie tot toelichting van geschillen over blessur
 
 ## 1. Welke juridische procedures kunnen na een blessure in een fitnesscentrum in Taiwan worden onderzocht?
 
-Het [artikel 7 van de Taiwanese wet op de consumentenbescherming (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) bepaalt dat de onderneming, wanneer zij een dienst verleent, ervoor moet zorgen dat die dienst de veiligheid vertoont die naar de professionele of technische maatstaf van het ogenblik van de verlening redelijkerwijs mag worden verwacht.
+Het [artikel 7 van de Taiwanese wet op de consumentenbescherming (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) bepaalt dat de onderneming, wanneer zij een dienst verleent, ervoor moet zorgen dat die dienst de veiligheid biedt die naar de professionele of technische maatstaf van het ogenblik van de verlening redelijkerwijs mag worden verwacht.
 
-Dat betekent niet dat de aansprakelijkheid van de onderneming of van de trainer wordt erkend telkens wanneer een blessure in een fitnesscentrum ontstaat. Moet zaak voor zaak worden beoordeeld welke zorgplicht concreet bestond, of zij is geschonden, of er een causaal verband (因果關係) tussen schending en blessure bestaat, of werkelijke schade is ontstaan, welke verweren de wederpartij heeft, en of er bewijs is dat elke stelling en elk verweer schraagt.
+Dat betekent niet dat de aansprakelijkheid van de onderneming of van de trainer wordt erkend telkens wanneer een blessure in een fitnesscentrum ontstaat. Er moet per zaak worden beoordeeld welke zorgplicht concreet gold, of zij is geschonden, of er een causaal verband (因果關係) tussen schending en blessure bestaat, of werkelijke schade is ontstaan, welke verweren de wederpartij heeft, en of er bewijs is dat elke stelling en elk verweer schraagt.
 
-Zijn de wettelijke bestanddelen van het misdrijf van letsel door onvoorzichtigheid (過失傷害) vervuld, dan kan de strafklacht (告訴) worden onderzocht. Ook de civiele vordering tot schadevergoeding kan worden onderzocht, maar welke grond tussen contractuele aansprakelijkheid, delictuele aansprakelijkheid (侵權行為) en consumentenbeschermingsaansprakelijkheid geldt, alsmede de omvang van de aansprakelijkheid, variëren naar de concrete feiten. Dat voor 1 ongeval meerdere procedures kunnen worden onderzocht, betekent niet dat zij alle moeten worden gevolgd, noch dat het succes van 1 zijde vaststaat.
+Zijn de wettelijke bestanddelen van het misdrijf van letsel door onvoorzichtigheid (過失傷害) vervuld, dan kan de strafklacht (告訴) worden onderzocht. Ook de civiele vordering tot schadevergoeding kan worden onderzocht, maar welke grond tussen contractuele aansprakelijkheid, delictuele aansprakelijkheid (侵權行為) en consumentenbeschermingsaansprakelijkheid geldt en de omvang van de aansprakelijkheid, variëren naar de concrete feiten. Dat voor 1 ongeval meerdere procedures kunnen worden onderzocht, betekent niet dat zij alle moeten worden gevolgd, en evenmin dat succes in een van die procedures vaststaat.
 
 ## 2. Welke termijnen gelden voor de strafklacht en de civiele schadevergoeding?
 
@@ -79,13 +79,13 @@ Volgens [artikel 287 van het Taiwanese Wetboek van Strafrecht (刑法)](https://
 
 Het recht tot schadevergoeding uit onrechtmatige daad volgens [artikel 197 van het Taiwanese Burgerlijk Wetboek (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) eindigt in beginsel wanneer het 2 jaar lang niet wordt uitgeoefend vanaf het ogenblik waarop het slachtoffer de schade en de schadeplichtige kent, en eindigt ook wanneer 10 jaar zijn verstreken sinds de onrechtmatige daad.
 
-Of een andere vorderingsoorzaak, zoals contractuele aansprakelijkheid, in het spel komt, of andere regels gelden voor het aanvangspunt, het verloop, de stuiting, enz., kan naar de feiten (民法) variëren. De termijn mag niet alleen naar de datum van het ongeval of van de diagnose worden vastgelegd; het is veiliger vroegtijdig en individueel de mogelijke vorderinggronden en de referentiedata na te gaan.
+Of een andere vorderingsoorzaak, zoals contractuele aansprakelijkheid, in het spel komt, of andere regels gelden voor het aanvangspunt, het verloop, de stuiting, enz., kan naar de feiten (民法) variëren. De termijn mag niet alleen naar de datum van het ongeval of van de diagnose worden vastgelegd; het is veiliger vroegtijdig en individueel de mogelijke vorderingsgronden en de referentiedata na te gaan.
 
 ## 3. Welke bewijzen moeten dadelijk na het ongeval hoe worden bewaard?
 
-Om aansprakelijkheid, causaal verband en schade toe te lichten, verdient het aanbeveling niet alleen CCTV-beelden (監視器影像) van het ogenblik van het ongeval, maar ook het medisch dossier (病歷) en het medisch attest (診斷證明書), de kwitanties van medische kosten (醫療費用), van vervoer (就醫交通費) en van verzorging (看護費用), de berichten gewisseld met het fitnesscentrum en de trainer, de verklaringen van getuigen, de lesreservatie en het aanwezigheidsregister, het oefenplan en het trainingsregister, samen te verzamelen. Het is raadzaam, voor zover mogelijk, de gewonde zone en de staat van de plaats van het ongeval te fotograferen, en het verloop vóór en na het ongeval alsmede de inhoud van de communicaties per datum te ordenen, om later de stukken gemakkelijker te kunnen vergelijken.
+Om aansprakelijkheid, causaal verband en schade toe te lichten, verdient het aanbeveling niet alleen CCTV-beelden (監視器影像) van het ogenblik van het ongeval, maar ook het medisch dossier (病歷) en het medisch attest (診斷證明書), de kwitanties van medische kosten (醫療費用), van vervoer (就醫交通費) en van verzorging (看護費用), de berichten gewisseld met het fitnesscentrum en de trainer, de verklaringen van getuigen, de lesreservatie en het aanwezigheidsregister, het oefenplan en het trainingsregister, samen te verzamelen. Het is raadzaam, voor zover mogelijk, de gewonde zone en de staat van de plaats van het ongeval te fotograferen, en het verloop vóór en na het ongeval en de inhoud van de communicaties per datum te ordenen, om later de stukken gemakkelijker te kunnen vergelijken.
 
-Beelden kunnen na het verstrijken van de bewaartermijn worden overschreven of om andere redenen onbruikbaar worden. Daarom kan worden overwogen het fitnesscentrum tot bewaring te verzoeken door een aanmaning met inhoudsbewijs (存證信函) of een schrijven op naam van een advocaat (律師函) dat het nodige tijdvak, de plaats en de camerapositie concreet vermeldt. Dit schrijven is een praktische maatregel om spoor te laten van wat is verzocht en wanneer. Het legt evenwel op zich aan de wederpartij geen nieuwe wettelijke plicht tot bewaring van de beelden op noch belet het de schrapping, en het enkele feit dat de beelden niet resteren, leidt de rechter ook niet automatisch tot een nadelige beoordeling.
+Beelden kunnen na het verstrijken van de bewaartermijn worden overschreven of om andere redenen onbruikbaar worden. Daarom kan worden overwogen het fitnesscentrum tot bewaring te verzoeken door een aanmaning met inhoudsbewijs (存證信函) of een schrijven op naam van een advocaat (律師函) dat het nodige tijdvak, de plaats en de camerapositie concreet vermeldt. Dit schrijven is een praktische maatregel om spoor te laten van wat is verzocht en wanneer. Het legt echter op zich aan de wederpartij geen nieuwe wettelijke plicht tot bewaring van de beelden op noch belet het de schrapping, en het enkele feit dat de beelden niet resteren, leidt de rechter ook niet automatisch tot een nadelige beoordeling.
 
 Kunnen de omstandigheden van het ongeval de bestanddelen van een misdrijf vervullen, dan kan snel worden aangegeven opdat het onderzoeksorgaan (偵查機關) beoordeelt of er een rechtmatige grond van inbeslagneming of bewaring bestaat. Aangeven betekent niet dat politie of openbaar ministerie het CCTV noodzakelijk zullen veiligstellen, zodat ook de stukken die de partij zelf kan bewaren, zoals medische stukken en communicatiestukken, moeten worden verzameld.
 
@@ -109,7 +109,7 @@ In het bijzonder kunnen het verlies van arbeidsvermogen, de vermindering van ink
 
 Heeft u een blessure in een fitnesscentrum opgelopen, dan is het belangrijk eerst de nodige medische zorg te ontvangen, de nog veilig te stellen stukken te bewaren voordat zij verdwijnen, en vroegtijdig individuele oriëntatie te verzamelen over de termijnen en procedures die op de zaak van toepassing kunnen zijn. Onderhandeling, consumentenklacht (消費申訴) of bemiddeling (調解), strafklacht en civiele vordering tot schadevergoeding zijn alle middelen die naar de zaak kunnen worden gekozen, en zijn geen procedures die steeds in hun geheel zouden moeten worden gevolgd.
 
-Een val op de vloer van een vestiging, gezondheidsschade door voedingsmiddelen en een blessure bij gebruik van een professionele dienst kunnen eveneens als geschilpunten de veiligheidsplicht, het causaal verband, de schade en het bewijs hebben. De conclusie van een zaak van een fitnesscentrum kan evenwel niet ongewijzigd op een ander ongeval worden toegepast, zodat het contract, het gedrag en de toepasselijke normen van elk geval afzonderlijk moeten worden onderzocht.
+Een val op de vloer van een vestiging, gezondheidsschade door voedingsmiddelen en een blessure bij gebruik van een professionele dienst kunnen eveneens als geschilpunten de veiligheidsplicht, het causaal verband, de schade en het bewijs hebben. De conclusie van een zaak van een fitnesscentrum kan echter niet ongewijzigd op een ander ongeval worden toegepast, zodat het contract, het gedrag en de toepasselijke normen van elk geval afzonderlijk moeten worden onderzocht.
 
 ---
 

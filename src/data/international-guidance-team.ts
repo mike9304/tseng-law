@@ -520,16 +520,16 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'ONS TEAM',
     title: 'Internationaal team van Hovering',
     description:
-      'Profielen van de advocaten, de operationele leiding en de partneraccountancy van Hovering.',
+      'Profielen van de advocaten, de bedrijfsleiding en het aangesloten accountantskantoor van Hovering.',
     representativeTitle: 'Leidinggevend advocaat',
     teamTitle: 'Advocaten en medewerkers',
-    partnerTitle: 'Partneraccountancy',
-    introLabel: 'Voorstelling',
+    partnerTitle: 'Aangesloten accountantskantoor',
+    introLabel: 'Kennismaking',
     educationLabel: 'Opleiding',
     experienceLabel: 'Ervaring',
     photoAltPrefix: 'Foto',
     workingLanguagesLabel: 'Werktalen',
-    fullProfileLabel: 'Volledig profiel (English)',
+    fullProfileLabel: 'Volledig profiel (in het Engels)',
     keyFactsHeading: 'Advocaat Wei Tseng — Kerngegevens',
     qualificationLabel: 'Bevoegdheid en kantoor',
     qualificationSentence:
@@ -537,11 +537,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     practiceLabel: 'Hoofdgebieden',
     consultationLanguagesLabel: 'Consultatietalen',
     roles: {
-      'tseng-junwei': 'Leidinggevend advocaat in Taiwan (Managing Attorney)',
-      'chang-rongxuan': 'Advocaat in Taiwan (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Operationele leiding Korea (Korea Operations Manager)',
-      'huang-shengping': 'Partneraccountant (Partner CPA)',
+      'tseng-junwei': 'Leidinggevend advocaat in Taiwan',
+      'chang-rongxuan': 'Advocaat in Taiwan',
+      'chang-fangyu': 'Juridisch medewerker (paralegal)',
+      'son-jungmin': 'Operationeel manager Korea',
+      'huang-shengping': 'Partner-accountant (CPA)',
     },
   },
   pl: {
@@ -2046,11 +2046,11 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Het kantoor behandelt ondernemings- en individuele zaken in Taiwan in het Engels, Japans, Koreaans en Chinees.',
-        'Zij vertegenwoordigde een Koreaanse student in een schadevergoedingsvordering wegens een letsel in een fitnesszaal en verkreeg een vonnis in eerste aanleg van TWD 1.57M.',
+        'Zij vertegenwoordigde een Koreaanse student in een schadevergoedingsvordering wegens een letsel in een fitnesszaal en verkreeg een vonnis in eerste aanleg van 1,57 miljoen TWD.',
       ],
       education: [
-        'Master (M.S.), Institute of Finance, National Taiwan University',
-        'Bachelor (B.A.) met dubbel traject recht en financiën, National Chengchi University',
+        'Masterdiploma (M.S.) financiën, Institute of Finance, National Taiwan University',
+        'Bachelordiploma (B.A.) in de dubbele opleiding rechten en financiën, National Chengchi University',
         'Uitwisselingsstudente aan de Kobe University en de Waseda University',
       ],
       experience: [
@@ -2064,7 +2064,7 @@ export const guidanceTeamBios: Record<
         'Eerder werkzaam bij het Ministry of Education, Legal Affairs Division, met nadruk op bestuurs- en civiele zaken.',
         'Ervaring met zaken over hogescholen, rechten van onderwijspersoneel en bestuursrechtelijke klachten.',
       ],
-      education: ['Bachelor of Laws (LL.B.), National Chung Hsing University'],
+      education: ['Bachelordiploma rechten (LL.B.), National Chung Hsing University'],
       experience: [
         'Ministry of Education, Legal Affairs Division',
         'Advocaat, Hovering International Law Firm',
@@ -2072,10 +2072,10 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal met langdurige werkzaamheid als senior paralegal in meerdere kantoren, verantwoordelijk voor procedurele ondersteuning, vennootschapsrecht en buitenlandse investeringen.',
+        'Juridisch medewerker met jarenlange ervaring als senior paralegal bij meerdere kantoren, verantwoordelijk voor procesondersteuning, vennootschapsrecht en buitenlandse investeringen.',
         'Ondersteuning bij procedures, oprichting van vennootschappen, vergunningen voor buitenlandse investeringen, licentieaanvragen en de uitwisseling tussen Korea en Taiwan.',
       ],
-      education: ['Bachelor of Laws (LL.B.), Tunghai University'],
+      education: ['Bachelordiploma rechten (LL.B.), Tunghai University'],
       experience: [
         'Senior Paralegal, Boyin Law Firm',
         'Senior Paralegal, Muyang International Law Firm',
@@ -2086,8 +2086,8 @@ export const guidanceTeamBios: Record<
         'Coördineert consultatieafspraken en de communicatie voor cliënten uit Korea.',
         'Ondersteunt de uitwisseling tussen afdelingen via documentsystemen en werkstromen, op basis van informatica.',
       ],
-      education: ['Bachelor (B.S.) informatica, National Cheng Kung University'],
-      experience: ['Gebied Korea-operaties, Hovering International Law Firm'],
+      education: ['Bachelordiploma (B.S.) informatica, National Cheng Kung University'],
+      experience: ['Korea-operaties, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
@@ -2095,8 +2095,8 @@ export const guidanceTeamBios: Record<
         'Ondersteunt de geïntegreerde analyse van juridische, fiscale en financiële risico’s voor ondernemingscliënten.',
       ],
       education: [
-        'Master (M.A.) accountancy, National Chengchi University',
-        'Bachelor (B.A.) accountancy, National Chengchi University',
+        'Masterdiploma (M.A.) accountancy, National Chengchi University',
+        'Bachelordiploma (B.A.) accountancy, National Chengchi University',
       ],
       experience: ['Chinshin CPA Firm'],
     },

@@ -994,10 +994,10 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'De consultatie vindt alleen plaats in vier talen: Engels, Chinees (中文), Japans en Koreaans.',
     methodConfirmationNotice:
-      'Als u geen van de vier talen kunt gebruiken, kies «Communicatieweg moet worden bevestigd». Wij antwoorden om een werkbare communicatieweg te onderzoeken, als zo’n weg bestaat; een dienst in een andere taal wordt niet gewaarborgd en een antwoordtermijn niet toegezegd.',
+      'Als u geen van de vier talen kunt gebruiken, kies dan “Communicatiekanaal moet worden bevestigd”. Wij antwoorden om te onderzoeken of er een werkbare manier van communiceren bestaat; een dienst in een andere taal wordt niet gewaarborgd en een antwoordtermijn niet toegezegd.',
     preparationNotice:
       'U mag de samenvatting in uw eigen taal schrijven. De oorspronkelijke tekst wordt bewaard zoals u die hebt geschreven en niet automatisch vertaald.',
-    heading: 'Een consultatieverzoek sturen',
+    heading: 'Een verzoek om advies sturen',
     intro:
       'Beschrijf uw zaak kort. Een advocaat beoordeelt de inhoud voordat de volgende stap wordt besproken.',
     submitLabel: 'Het verzoek sturen',
@@ -1013,7 +1013,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     originalLanguagePlaceholder:
       'Bijvoorbeeld Nederlands, Engels, Chinees of een andere taal',
     preferredConsultationLanguageLabel: 'Taal die u voor de consultatie wenst',
-    originalTextLabel: 'Korte weergave van de zaak (in uw taal)',
+    originalTextLabel: 'Korte beschrijving van de zaak (in uw taal)',
     originalTextPlaceholder:
       'Noem wat er is gebeurd, welke hulp u nodig hebt en de termijn, als er een is. Schrijf geen paspoortnummer, identiteitsnummer of rekeninggegevens.',
     nameLabel: 'Naam',
@@ -1035,7 +1035,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Japans (日本語)',
       ko: 'Koreaans (한국어)',
       'needs-method-confirmation':
-        'Geen van de vier talen is bruikbaar — communicatieweg moet worden bevestigd',
+        'Geen van de vier talen is bruikbaar — communicatiekanaal moet worden bevestigd',
     },
   },
   pl: {

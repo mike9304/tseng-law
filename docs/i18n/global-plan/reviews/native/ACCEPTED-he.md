@@ -16,4 +16,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `he-a.md` 
 - Guillemets → Hebrew straight quotes throughout (R6).
 
 ## Part b
-Apply every P1/P2 row of `he-b.md` under the same skip rules above.
+Apply every P1/P2 row of `he-b.md` under the same skip rules above. Additional (part b): b#1 broken token 'להistance' → rewrite the sentence; b#2 האשמה → רשלנות/אשם (過失); b#3 משלח → בעל המטען (貨主), משלח only for 承攬運送人; b#4 → 'לעבור ביקורת רואה חשבון על הדוחות השנתיים'; b#6 → R2 (מותגים זרים); b#7 Invest Taiwan link fixed mechanically — skip; b#8 typical-success opening → R3 (no 'many succeeded' framing); b#9/b#10 → R3/R7; b#11 CTA → 'לעורכת דין' / 'למשרד'; 'אינה משמעה' family → 'אין פירוש הדבר' (systemic sweep 001–018); numerals as words where natural (R11); «» → "…" (R6); fullwidth colon (R6b).

@@ -15,4 +15,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `el-a.md` 
 - «Υπόδειξη» for official notices → «Οδηγός/Ανακοίνωση» as suggested.
 
 ## Part b
-Apply every P1/P2 row of `el-b.md` under the same skip rules above.
+Apply every P1/P2 row of `el-b.md` under the same skip rules above. Additional (part b): «η μόνη X» → «η X και μόνο / απλώς η X» (systemic sweep in 010–018 too); b#2 → «αντικατασταθούν/διαγραφούν» (overwritten); b#3 → R2 (ξένες μάρκες); b#5 Invest Taiwan link fixed mechanically — skip; b#6 → R7b («Πότε είναι εκτελεστό/απαιτητό…»); b#7 αποσβέννυται → λύεται; b#8 → R3; b#9 «οικογένεια που απομένει» → «επιζώσα οικογένεια»; b#10 Συνιστάται → Συστήνεται/Ιδρύεται (ambiguity) — use «Ιδρύεται κατά το δίκαιο της Ταϊβάν»; b#11 συνέντευξη → συμβουλευτική/πρώτη συνάντηση; b#12 → R5; «3ο πρόσωπο» → «τρίτος» (R11); «Υπόδειξη» → «οδηγός/ανακοίνωση» (systemic).

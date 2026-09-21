@@ -16,4 +16,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `it-a.md` 
 - Also apply the supervisor's own rows in it-supervisor.md (P1 #1, P2 #2–#10).
 
 ## Part b
-Apply every P1/P2 row of `it-b.md` under the same skip rules above.
+Apply every P1/P2 row of `it-b.md` under the same skip rules above. Additional (part b): Spanish/French leakage is severe in 010–018 (rege, alega, sbozzo, consignare, dispensa, pretenduto, affare, pezzi/pezze, in contropartita, di immediato, apprensione, cerchio) — treat as a full sweep of every column for non-Italian tokens; b#1 persecuzioni → azione penale/procedimento (告訴乃論之罪 = reato procedibile a querela); b#2 processo clinico → cartella clinica (病歷); b#3 postura → atteggiamento/mentalità (心態); b#5 interpellanza → lettera raccomandata con certificazione del contenuto (存證信函); b#6 → lesioni colpose (過失傷害); b#9 grado 1 → primo grado; b#10 → R2 (marchi esteri); b#14 Invest Taiwan link fixed mechanically — skip; b#16 persona collettiva → persona giuridica; b#17 cessione → precedenza (traffic); b#22/b#23 → R3 + 'a un’avvocata'; b#27 esperto contabile → dottore commercialista (會計師, CPA).

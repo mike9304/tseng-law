@@ -17,4 +17,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `zh-hans-a
 - Also apply the supervisor's own rows in zh-hans-supervisor.md.
 
 ## Part b
-Apply every P1/P2 row of `zh-hans-b.md` under the same skip rules above.
+Apply every P1/P2 row of `zh-hans-b.md` under the same skip rules above. Additional (part b): self-gloss rows b#3–b#6, b#10–b#12, b#14–b#16 → Traditional gloss on first use (as in part a decisions), official names in Traditional (統一證號基本資料表, 營業場所預先查詢, 建物登記第二類謄本, 外僑居留證); b#7 号 → 款 (第7条第1项第7款); b#8 → official wording 弯道 etc. per reviewer; b#9 行为人 → 外国当事人/外方; b#13 → R7b; b#17 → 经营许可（經營許可, 汽车运输业）vs 营业执照 distinction per reviewer; b#18 认证 → 会计师查核签证（會計師查核簽證）; b#19/b#20 → R3/R7; 检视 → 审查/核对 (systemic); 第1审/第2审/第3人 → 一审/二审/第三人 (R11); amounts 新台币 2,500 万元 or 新台币 25,000,000 元 (keep digits; checker must parse); 「」 → “ ” (R6).

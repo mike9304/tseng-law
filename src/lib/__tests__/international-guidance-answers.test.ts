@@ -134,7 +134,7 @@ const CONSULTATION_LANGUAGE_TERMS: Record<string, readonly string[]> = {
   lv: ['angļu', 'ķīniešu', 'japāņu', 'korejiešu'],
   et: ['inglise', 'hiina', 'jaapani', 'korea'],
   ca: ['anglès', 'xinès', 'japonès', 'coreà'],
-  my: ['ภาษาอังกฤษ', 'ภาษาจีน', 'ภาษาญี่ปุ่น', 'ภาษาเกาหลี'], // PLACEHOLDER(th) until the my lane is integrated
+  my: ['အင်္ဂလိပ်', 'တရုတ်', 'ဂျပန်', 'ကိုရီးယား'],
   km: ['ภาษาอังกฤษ', 'ภาษาจีน', 'ภาษาญี่ปุ่น', 'ภาษาเกาหลี'], // PLACEHOLDER(th) until the km lane is integrated
   ne: ['अङ्ग्रेजी', 'चिनियाँ', 'जापानी', 'कोरियाली'],
   mn: ['английском', 'китайском', 'японском', 'корейском'], // PLACEHOLDER(ru) until the mn lane is integrated
@@ -301,7 +301,7 @@ const SERVICES_SCOPE_TERMS: Record<string, readonly [string, RegExp]> = {
   lv: ['apjoms', /apjoms/i],
   et: ['ulatus', /ulatus/i],
   ca: ['abast', /abast/i],
-  my: ['ขอบเขต', /ขอบเขต/], // PLACEHOLDER(th)
+  my: ['အကျယ်အဝန်း', /အကျယ်အဝန်း/],
   km: ['ขอบเขต', /ขอบเขต/], // PLACEHOLDER(th)
   ne: ['दायरा', /दायरा/],
   mn: ['Объём', /Объём/], // PLACEHOLDER(ru)
@@ -433,10 +433,7 @@ const SERVICES_ACCEPTANCE_PATTERNS: Record<
   lv: [['gaida izvērtējumu', /gaida izvērtējumu/i], ['nav juridisks atzinums', /nav juridisks atzinums/i]],
   et: [['ootab läbivaatamist', /ootab läbivaatamist/i], ['ei ole õiguslik seisukoht', /ei ole õiguslik seisukoht/i]],
   ca: [['espera revisió', /espera revisió/i], ['no és assessorament jurídic', /no és assessorament jurídic/i]],
-  my: [
-    ['รับเรื่องใดเรื่องหนึ่ง', /รับเรื่องใดเรื่องหนึ่ง/],
-    ['พิจารณาหลังจาก', /พิจารณาหลังจาก/],
-  ],
+  my: [['စစ်ဆေးရန် စောင့်ဆိုင်း', /စစ်ဆေးရန် စောင့်ဆိုင်း/], ['ဥပဒေအကြံဉာဏ် မဟုတ်', /ဥပဒေအကြံဉာဏ် မဟုတ်/]],
   km: [
     ['รับเรื่องใดเรื่องหนึ่ง', /รับเรื่องใดเรื่องหนึ่ง/],
     ['พิจารณาหลังจาก', /พิจารณาหลังจาก/],

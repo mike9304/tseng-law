@@ -426,16 +426,16 @@ export const GUIDANCE_HOME_PATHS: Record<GuidanceLocale, GuidanceHomePaths> = {
     },
     ariaLabel: 'مساران للمعلومات',
   },
-  fa: { // SCAFFOLD(ar)
+  fa: {
     setup: {
-      label: 'معلومات تأسيس شركة في تايوان',
-      href: '/ar/services',
+      label: 'اطلاعات تأسیس شرکت در تایوان',
+      href: '/fa/services',
     },
     legal: {
-      label: 'معلومات عن مسألة قانونية في تايوان',
-      href: '/ar/faq',
+      label: 'اطلاعات دربارهٔ موضوع حقوقی در تایوان',
+      href: '/fa/faq',
     },
-    ariaLabel: 'مساران للمعلومات',
+    ariaLabel: 'دو مسیر اطلاعات',
   },
   my: { // SCAFFOLD(th)
     setup: {

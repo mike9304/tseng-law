@@ -151,10 +151,10 @@ export const DECORATIVE_VIDEO_CONTROL_LABELS = {
     play: 'تشغيل الفيديو',
     replay: 'إعادة تشغيل الفيديو',
   },
-  fa: { // SCAFFOLD(ar)
-    pause: 'إيقاف الفيديو مؤقتًا',
-    play: 'تشغيل الفيديو',
-    replay: 'إعادة تشغيل الفيديو',
+  fa: {
+    pause: 'توقف ویدئو',
+    play: 'پخش ویدئو',
+    replay: 'پخش دوبارهٔ ویدئو',
   },
   my: { // SCAFFOLD(th)
     pause: 'หยุดวิดีโอชั่วคราว',

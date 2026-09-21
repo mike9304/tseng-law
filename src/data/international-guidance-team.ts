@@ -936,32 +936,32 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'huang-shengping': 'محاسب قانوني شريك (Partner CPA)',
     },
   },
-  fa: { // SCAFFOLD(ar)
-    label: 'فريقنا',
-    title: 'فريق Hovering الدولي',
+  fa: {
+    label: 'تیم',
+    title: 'تیم بین المللی Hovering',
     description:
-      'ملفات المحامين ومديري الأعمال والمحاسب الشريك في Hovering.',
-    representativeTitle: 'المحامية المديرة',
-    teamTitle: 'المحامون والموظفون',
-    partnerTitle: 'المحاسب الشريك',
-    introLabel: 'تعريف',
-    educationLabel: 'التعليم',
-    experienceLabel: 'الخبرة',
-    photoAltPrefix: 'صورة',
-    workingLanguagesLabel: 'لغات العمل',
-    fullProfileLabel: 'الملف الكامل (بالإنجليزية)',
-    keyFactsHeading: 'المحامية Wei Tseng — معلومات أساسية',
-    qualificationLabel: 'المؤهل وجهة العمل',
+      'نمایهٔ وکلا، مدیریت عملیات و حسابدار شریک Hovering.',
+    representativeTitle: 'وکیلِ مدیر',
+    teamTitle: 'وکلا و همکاران',
+    partnerTitle: 'حسابدار شریک',
+    introLabel: 'معرفی',
+    educationLabel: 'تحصیلات',
+    experienceLabel: 'سابقه',
+    photoAltPrefix: 'تصویر',
+    workingLanguagesLabel: 'زبان‌های کار',
+    fullProfileLabel: 'نمایهٔ کامل (به انگلیسی)',
+    keyFactsHeading: 'وکیل Wei Tseng — اطلاعات اصلی',
+    qualificationLabel: 'صلاحیت و دفتر',
     qualificationSentence:
-      '{name} محامية مؤهَّلة لمزاولة المهنة في تايوان والمحامية المديرة في {firm}.',
-    practiceLabel: 'المجالات الرئيسية',
-    consultationLanguagesLabel: 'لغات الاستشارة',
+      '{name} مجاز به وکالت در تایوان است و وکیلِ مدیر {firm} است.',
+    practiceLabel: 'زمینه‌های اصلی',
+    consultationLanguagesLabel: 'زبان‌های مشاوره',
     roles: {
-      'tseng-junwei': 'المحامية المديرة في تايوان (Managing Attorney)',
-      'chang-rongxuan': 'محامٍ في تايوان (Taiwan Attorney)',
-      'chang-fangyu': 'مساعد قانوني (Paralegal)',
-      'son-jungmin': 'مدير عمليات كوريا (Korea Operations Manager)',
-      'huang-shengping': 'محاسب قانوني شريك (Partner CPA)',
+      'tseng-junwei': 'وکیلِ مدیر در تایوان (Managing Attorney)',
+      'chang-rongxuan': 'وکیل در تایوان (Taiwan Attorney)',
+      'chang-fangyu': 'دستیار حقوقی (Paralegal)',
+      'son-jungmin': 'مدیر عملیات کره (Korea Operations Manager)',
+      'huang-shengping': 'حسابدار رسمی شریک (Partner CPA)',
     },
   },
   my: { // SCAFFOLD(th)
@@ -1425,7 +1425,7 @@ export const guidanceLanguageNames: Record<GuidanceLocale, Record<string, string
   he: { Korean: 'קוריאנית', Chinese: 'סינית', Japanese: 'יפנית' },
   bn: { Korean: 'कोरियाई', Chinese: 'चीनी', Japanese: 'जापानी' }, // SCAFFOLD(hi)
   ur: { Korean: 'الكورية', Chinese: 'الصينية', Japanese: 'اليابانية' }, // SCAFFOLD(ar)
-  fa: { Korean: 'الكورية', Chinese: 'الصينية', Japanese: 'اليابانية' }, // SCAFFOLD(ar)
+  fa: { Korean: 'کره‌ای', Chinese: 'چینی', Japanese: 'ژاپنی' },
   my: { Korean: 'ภาษาเกาหลี', Chinese: 'ภาษาจีน', Japanese: 'ภาษาญี่ปุ่น' }, // SCAFFOLD(th)
   ta: { Korean: 'कोरियाई', Chinese: 'चीनी', Japanese: 'जापानी' }, // SCAFFOLD(hi)
   ne: { Korean: 'कोरियाई', Chinese: 'चीनी', Japanese: 'जापानी' }, // SCAFFOLD(hi)
@@ -1695,13 +1695,13 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Visa and residency': 'التأشيرات والإقامة',
     'Family and labor disputes': 'منازعات الأسرة والعمل',
   },
-  fa: { // SCAFFOLD(ar)
-    'Taiwan company setup': 'تأسيس الشركات في تايوان',
-    'Taiwan investment counsel': 'الاستشارات القانونية للاستثمار في تايوان',
-    'Civil litigation and damages': 'التقاضي المدني ودعاوى التعويض',
-    'Trademark and patent filings': 'تسجيل العلامات التجارية وبراءات الاختراع',
-    'Visa and residency': 'التأشيرات والإقامة',
-    'Family and labor disputes': 'منازعات الأسرة والعمل',
+  fa: {
+    'Taiwan company setup': 'تأسیس شرکت در تایوان',
+    'Taiwan investment counsel': 'مشاورهٔ سرمایه‌گذاری در تایوان',
+    'Civil litigation and damages': 'دعاوی مدنی و خسارت',
+    'Trademark and patent filings': 'ثبت علامت تجاری و اختراع',
+    'Visa and residency': 'روادید و اقامت',
+    'Family and labor disputes': 'اختلافات خانوادگی و کار',
   },
   my: { // SCAFFOLD(th)
     'Taiwan company setup': 'การจัดตั้งบริษัทในไต้หวัน',
@@ -3653,16 +3653,16 @@ export const guidanceTeamBios: Record<
       experience: ['Chinshin CPA Firm'],
     },
   },
-  fa: { // SCAFFOLD(ar)
+  fa: {
     'tseng-junwei': {
       intro: [
-        'يتولّى المكتب قضايا الشركات والأفراد في تايوان، ويعمل بالإنجليزية واليابانية والكورية والصينية.',
-        'مثَّلت طالبًا كوريًا في دعوى تعويض عن إصابة في صالة رياضية، وصدر حكم ابتدائي بالتعويض بمبلغ TWD 1.57M (1.57 مليون دولار تايواني جديد).',
+        'دفتر پرونده‌های شرکت‌ها و اشخاص را در تایوان می‌پذیرد و به انگلیسی، ژاپنی، کره‌ای و چینی کار می‌کند.',
+        'نمایندگی دانشجوی کره‌ای را در دعوای خسارت ناشی از آسیب در باشگاه ورزشی بر عهده داشت و حکم بدوی به پرداخت TWD 1.57M صادر شد.',
       ],
       education: [
-        'ماجستير (M.S.)، Institute of Finance, National Taiwan University',
-        'بكالوريوس (B.A.) بتخصص مزدوج في القانون والتمويل، National Chengchi University',
-        'طالبة تبادل في Kobe University و Waseda University',
+        'کارشناسی ارشد (M.S.)، Institute of Finance, National Taiwan University',
+        'کارشناسی (B.A.) با دو رشتهٔ حقوق و مالیه، National Chengchi University',
+        'دانشجوی تبادل در Kobe University و Waseda University',
       ],
       experience: [
         'Trend Law Office',
@@ -3672,42 +3672,42 @@ export const guidanceTeamBios: Record<
     },
     'chang-rongxuan': {
       intro: [
-        'عمل سابقًا في Ministry of Education, Legal Affairs Division، وركّز على المنازعات الإدارية والمدنية.',
-        'لديه خبرة في القضايا المتعلقة بالجامعات وبحقوق أعضاء هيئة التدريس وبالتظلمات الإدارية.',
+        'پیش‌تر در Ministry of Education, Legal Affairs Division کار کرده و بر اختلافات اداری و مدنی متمرکز بوده است.',
+        'در پرونده‌های مربوط به دانشگاه‌ها، حقوق اعضای هیئت علمی و شکایت اداری سابقه دارد.',
       ],
-      education: ['بكالوريوس في القانون (LL.B.)، National Chung Hsing University'],
+      education: ['کارشناسی حقوق (LL.B.)، National Chung Hsing University'],
       experience: [
         'Ministry of Education, Legal Affairs Division',
-        'محامٍ، Hovering International Law Firm',
+        'وکیل، Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'خبرة تمتد سنوات طويلة في وظيفة مساعد قانوني أول في عدة مكاتب محاماة، تشمل دعم التقاضي والشؤون القانونية للشركات وقضايا الاستثمار الأجنبي.',
-        'يشمل نطاق العمل دعم التقاضي وتأسيس الشركات وإجراءات الموافقة على الاستثمار الأجنبي وطلبات التراخيص والتواصل بين كوريا وتايوان.',
+        'سال‌ها در چند دفتر وکالت به‌عنوان دستیار حقوقی ارشد کار کرده است، از جمله پشتیبانی دادرسی، امور حقوقی شرکت‌ها و سرمایه‌گذاری خارجی.',
+        'محدودهٔ کار شامل پشتیبانی دادرسی، تأسیس شرکت، آیین تصویب سرمایه‌گذاری خارجی، درخواست پروانه و ارتباط میان کره و تایوان است.',
       ],
-      education: ['بكالوريوس في القانون (LL.B.)، Tunghai University'],
+      education: ['کارشناسی حقوق (LL.B.)، Tunghai University'],
       experience: [
-        'مساعد قانوني أول، Boyin Law Firm',
-        'مساعد قانوني أول، Muyang International Law Firm',
+        'دستیار حقوقی ارشد، Boyin Law Firm',
+        'دستیار حقوقی ارشد، Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
       intro: [
-        'ينسّق مواعيد الجلسات والتواصل للعملاء من كوريا.',
-        'يدعم التواصل بين الفرق عبر أنظمة التوثيق وسير العمل، انطلاقًا من خلفية في علوم الحاسب.',
+        'وقت نشست‌ها و ارتباط موکلان کره را هماهنگ می‌کند.',
+        'با پشتوانهٔ علوم رایانه، ارتباط میان گروه‌ها را از راه سامانه‌های مستندسازی و گردش کار پشتیبانی می‌کند.',
       ],
-      education: ['بكالوريوس (B.S.) في علوم الحاسب، National Cheng Kung University'],
-      experience: ['قسم الأعمال الكورية، Hovering International Law Firm'],
+      education: ['کارشناسی (B.S.) علوم رایانه، National Cheng Kung University'],
+      experience: ['بخش امور کره، Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'أنهى برنامجَي البكالوريوس والماجستير في المحاسبة في National Chengchi University، ويدير حاليًا مكتب محاسبة.',
-        'يدعم التحليل المتكامل للمخاطر القانونية والضريبية والمالية للعملاء من الشركات.',
+        'دوره‌های کارشناسی و کارشناسی ارشد حسابداری را در National Chengchi University به پایان رسانده و اکنون دفتر حسابداری اداره می‌کند.',
+        'تحلیل یکپارچهٔ خطر حقوقی، مالیاتی و مالی را برای موکلان شرکتی پشتیبانی می‌کند.',
       ],
       education: [
-        'ماجستير (M.A.) في المحاسبة، National Chengchi University',
-        'بكالوريوس (B.A.) في المحاسبة، National Chengchi University',
+        'کارشناسی ارشد (M.A.) حسابداری، National Chengchi University',
+        'کارشناسی (B.A.) حسابداری، National Chengchi University',
       ],
       experience: ['Chinshin CPA Firm'],
     },

@@ -1772,6 +1772,14 @@ function buildFiLexicon() {
   return compilePhrases(entries);
 }
 
+/** Small cardinal/ordinal lexicons (1–3) for the 18 locales added 2026-09-22. Extras only raise WARN. */
+function buildSmallLexicon(words) {
+  const entries = [];
+  for (const [word, value] of Object.entries(words)) pushPhrase(entries, word, [value]);
+  return compilePhrases(entries);
+}
+const SMALL_LEXICON_WORDS = {"fa": {"یک": 1, "دو": 2, "سه": 3, "اول": 1, "یکم": 1, "دوم": 2, "سوم": 3}, "ur": {"ایک": 1, "دو": 2, "تین": 3, "پہلا": 1, "پہلی": 1, "پہلے": 1, "دوسرا": 2, "دوسری": 2, "دوسرے": 2, "تیسرا": 3, "تیسری": 3, "تیسرے": 3}, "bn": {"এক": 1, "দুই": 2, "তিন": 3, "প্রথম": 1, "দ্বিতীয়": 2, "তৃতীয়": 3}, "ta": {"ஒரு": 1, "ஒன்று": 1, "இரண்டு": 2, "மூன்று": 3, "முதல்": 1, "இரண்டாம்": 2, "மூன்றாம்": 3}, "ne": {"एक": 1, "दुई": 2, "तीन": 3, "पहिलो": 1, "दोस्रो": 2, "तेस्रो": 3}, "my": {"တစ်": 1, "နှစ်": 2, "သုံး": 3, "ပထမ": 1, "ဒုတိယ": 2, "တတိယ": 3}, "km": {"មួយ": 1, "ពីរ": 2, "បី": 3, "ទីមួយ": 1, "ទីពីរ": 2, "ទីបី": 3}, "mn": {"нэг": 1, "хоёр": 2, "гурав": 3, "нэгдүгээр": 1, "хоёрдугаар": 2, "гуравдугаар": 3}, "sk": {"jeden": 1, "jedna": 1, "jedno": 1, "dva": 2, "dve": 2, "dvaja": 2, "tri": 3, "traja": 3, "prvý": 1, "prvá": 1, "prvé": 1, "prvého": 1, "prvej": 1, "druhý": 2, "druhá": 2, "druhé": 2, "druhého": 2, "druhej": 2, "tretí": 3, "tretia": 3, "tretie": 3, "tretieho": 3}, "bg": {"един": 1, "една": 1, "едно": 1, "два": 2, "две": 2, "три": 3, "първи": 1, "първа": 1, "първо": 1, "първата": 1, "първия": 1, "втори": 2, "втора": 2, "второ": 2, "втората": 2, "втория": 2, "трети": 3, "трета": 3, "трето": 3}, "hr": {"jedan": 1, "jedna": 1, "jedno": 1, "dva": 2, "dvije": 2, "tri": 3, "prvi": 1, "prva": 1, "prvo": 1, "prvog": 1, "prve": 1, "drugi": 2, "druga": 2, "drugo": 2, "drugog": 2, "druge": 2, "treći": 3, "treća": 3, "treće": 3, "trećeg": 3}, "sr": {"jedan": 1, "jedna": 1, "jedno": 1, "dva": 2, "dve": 2, "tri": 3, "prvi": 1, "prva": 1, "prvo": 1, "prvog": 1, "prve": 1, "drugi": 2, "druga": 2, "drugo": 2, "drugog": 2, "druge": 2, "treći": 3, "treća": 3, "treće": 3, "trećeg": 3}, "sl": {"ena": 1, "eno": 1, "dva": 2, "dve": 2, "tri": 3, "trije": 3, "prvi": 1, "prva": 1, "prvo": 1, "prvega": 1, "prve": 1, "drugi": 2, "druga": 2, "drugo": 2, "drugega": 2, "tretji": 3, "tretja": 3, "tretje": 3}, "lt": {"vienas": 1, "viena": 1, "du": 2, "dvi": 2, "trys": 3, "pirmas": 1, "pirma": 1, "pirmos": 1, "pirmoji": 1, "pirmosios": 1, "pirmojo": 1, "antras": 2, "antra": 2, "antros": 2, "antroji": 2, "antrosios": 2, "trečias": 3, "trečia": 3, "trečios": 3, "trečioji": 3}, "lv": {"viens": 1, "viena": 1, "divi": 2, "divas": 2, "trīs": 3, "pirmais": 1, "pirmā": 1, "pirmās": 1, "pirmajā": 1, "otrais": 2, "otrā": 2, "otrās": 2, "otrajā": 2, "trešais": 3, "trešā": 3, "trešās": 3}, "et": {"üks": 1, "ühe": 1, "kaks": 2, "kahe": 2, "kolm": 3, "kolme": 3, "esimene": 1, "esimese": 1, "esimeses": 1, "teine": 2, "teise": 2, "teises": 2, "kolmas": 3, "kolmanda": 3}, "ca": {"dos": 2, "dues": 2, "tres": 3, "primer": 1, "primera": 1, "segon": 2, "segona": 2, "tercer": 3, "tercera": 3}, "is": {"einn": 1, "eitt": 1, "tveir": 2, "tvær": 2, "tvö": 2, "þrír": 3, "þrjár": 3, "þrjú": 3, "fyrsta": 1, "fyrsti": 1, "annar": 2, "önnur": 2, "annað": 2, "annarri": 2, "þriðja": 3, "þriðji": 3}};
+
 export const WORD_NUMERAL_LEXICONS = {
   vi: buildViLexicon(),
   id: buildIdLexicon(),
@@ -1794,6 +1802,7 @@ export const WORD_NUMERAL_LEXICONS = {
   da: buildDaLexicon(),
   nb: buildNbLexicon(),
   fi: buildFiLexicon(),
+  ...Object.fromEntries(Object.entries(SMALL_LEXICON_WORDS).map(([lang, words]) => [lang, buildSmallLexicon(words)])),
 };
 
 export function lexiconEntryCount(lang) {
@@ -3225,7 +3234,7 @@ export function checkNumbers(source, target, lang) {
   // language (third party, first/second/third instance, third country). They
   // must not force a bare digit into the translation; a digit there is still
   // tolerated (counted as an extra, i.e. a WARN).
-  const lexicalSource = sourceText.replace(/제\s?3\s?자|제삼자|제\s?3\s?국|(?<![\d.,])[123]심(?![\d])/g, ' ');
+  const lexicalSource = sourceText.replace(/제\s?3\s?자|제삼자|제\s?3\s?국|제\s?[123]\s?종|(?<![\d.,])[123]심(?![\d])/g, ' ');
   const sourceAnalysis = analyzeNumbers(lexicalSource, 'ko');
   const targetAnalysis = analyzeNumbers(targetText, lang);
   const sourceBag = countMap(sourceAnalysis.tokens);

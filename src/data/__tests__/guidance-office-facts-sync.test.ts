@@ -117,7 +117,7 @@ const CLIENT_COUNTRY_TERMS: Record<GuidanceLocale, Record<string, string[]>> = {
   he: { Korea: ['קוריאה'], Japan: ['יפן'] },
   bn: { Korea: ['कोरिया'], Japan: ['जापान'] }, // SCAFFOLD(hi)
   ur: { Korea: ['كوريا'], Japan: ['اليابان', 'يابان'] }, // SCAFFOLD(ar)
-  fa: { Korea: ['كوريا'], Japan: ['اليابان', 'يابان'] }, // SCAFFOLD(ar)
+  fa: { Korea: ['کره'], Japan: ['ژاپن'] },
   my: { Korea: ['เกาหลี'], Japan: ['ญี่ปุ่น'] }, // SCAFFOLD(th)
   ta: { Korea: ['कोरिया'], Japan: ['जापान'] }, // SCAFFOLD(hi)
   ne: { Korea: ['कोरिया'], Japan: ['जापान'] }, // SCAFFOLD(hi)

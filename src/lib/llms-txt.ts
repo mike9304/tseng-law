@@ -370,7 +370,7 @@ const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
   he: 'Hebrew',
   bn: 'Hindi', // SCAFFOLD(hi)
   ur: 'Arabic', // SCAFFOLD(ar)
-  fa: 'Arabic', // SCAFFOLD(ar)
+  fa: 'Persian',
   my: 'Thai', // SCAFFOLD(th)
   ta: 'Hindi', // SCAFFOLD(hi)
   ne: 'Hindi', // SCAFFOLD(hi)
@@ -782,18 +782,18 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     confidentialNotice:
       'لأن النص الأصلي محفوظ، يُرجى عدم كتابة معلومات لا حاجة إليها في المرحلة الأولى، مثل رقم جواز السفر أو رقم الهوية أو بيانات الحساب المصرفي.',
   },
-  fa: { // SCAFFOLD(ar)
+  fa: {
     // Verbatim from the published `faq` answer to "is the session held in the
-    // language of this page?", minus its leading "لا. " — the same clause the
+    // language of this page?", minus its leading "خیر. " — the same clause the
     // other guidance locales quote.
     consultationNotice:
-      'هذه الصفحة الإرشادية مكتوبة بالعربية. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية، ولا نلتزم بتوفير ترجمة فورية.',
+      'این صفحهٔ راهنما به فارسی نوشته شده است. مشاوره فقط به انگلیسی، چینی (中文)، ژاپنی و کرهای انجام میشود و مترجم شفاهی فراهم نمیکنیم.',
     discoveryNotice:
-      'ملف llms.txt هذا ليس إلا خريطة للاستدلال على الصفحات العامة؛ وهو لا يَعِد بترتيب في نتائج البحث ولا بتزكية، ولا بترشيح من الذكاء الاصطناعي، ولا بإعلان.',
+      'پروندهٔ llms.txt تنها نقشهای برای یافتن صفحههای عمومی است؛ رتبهای در نتایج جستوجو، توصیهای، پیشنهاد هوش مصنوعی یا نمایانی را وعده نمیدهد.',
     // The published privacy-page sentence, with its leading connective dropped
     // so the line stands alone; the proposition is unchanged.
     confidentialNotice:
-      'لأن النص الأصلي محفوظ، يُرجى عدم كتابة معلومات لا حاجة إليها في المرحلة الأولى، مثل رقم جواز السفر أو رقم الهوية أو بيانات الحساب المصرفي.',
+      'متن اصلی ذخیره میشود، لطفاً در مرحلهٔ نخست اطلاعاتی را که هنوز لازم نیست ننویسید، مانند شمارهٔ گذرنامه یا شمارهٔ شناسنامه یا دادههای حساب بانکی.',
   },
   my: { // SCAFFOLD(th)
     consultationNotice:

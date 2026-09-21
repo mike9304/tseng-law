@@ -41,7 +41,7 @@ A büntető törvénykönyv 284. cikke a gondatlan testi sértésről (過失傷
 
 A polgári kártérítésben (損害賠償) a tajvani polgári törvénykönyv (民法) 197. cikke szerint az igény már nem érvényesíthető 2 évvel azután, hogy a kár és a kártérítésre kötelezett ismertté vált, vagy 10 évvel a jogellenes cselekmény napjától. Hogy mely tények hatnak az elévülésre (消滅時效), külön kell vizsgálni.
 
-Aki bűncselekmény miatt kárt szenved, a büntetőeljárási törvény 487. cikke szerint polgári mellékkeresetet (刑事附帶民事訴訟) indíthat a büntetőeljáráshoz kapcsolódóan. Amíg a büntetőeljárás tart, ez a kereset a 2. fok szóbeli tárgyalásának lezárásáig (言詞辯論終結) indítható a büntetőeljárási törvény 488. cikke szerint, de nem indítható az 1. fok szóbeli tárgyalásának lezárása után és a fellebbezés benyújtása előtt. Elvben elkerülhető a külön bírósági illeték (裁判費) megfizetése, de nem minden eredmény végződik költség nélkül. Például, ha a büntetőügyet elutasították, és a felperes kérelmére a polgári bírósághoz utalták, a büntetőeljárási törvény 503. cikke szerint eljárási költségek szabhatók ki, továbbá ellenőrizni kell a 504. cikk áttételi szabályait és eljárását.
+Aki bűncselekmény miatt kárt szenved, a büntetőeljárási törvény 487. cikke szerint polgári mellékkeresetet (刑事附帶民事訴訟) indíthat a büntetőeljáráshoz kapcsolódóan. Amíg a büntetőeljárás tart, ez a kereset a másodfokú szóbeli tárgyalás berekesztéséig (言詞辯論終結) indítható a büntetőeljárási törvény 488. cikke szerint, de nem indítható az elsőfokú szóbeli tárgyalás berekesztése után és a fellebbezés benyújtása előtt. Elvben elkerülhető a külön bírósági illeték (裁判費) megfizetése, de nem minden eredmény végződik költség nélkül. Például, ha a büntetőügyet elutasították, és a felperes kérelmére a polgári bírósághoz utalták, a büntetőeljárási törvény 503. cikke szerint eljárási költségek szabhatók ki, továbbá ellenőrizni kell a 504. cikk áttételi szabályait és eljárását.
 
 A választás az elévülés megszakadása (時效中斷), az alperesi kör, a bizonyítékok, a biztosítás és az illetékesség szerint különbözik. Ezért nincs minden ügyre egységesen előnyben részesített eljárás.
 
@@ -55,11 +55,11 @@ A szakvélemény (鑑定) vagy az előzetes elemzési táblázat fontos irat leh
 
 ## Q5. Mit kell foglalni az egyezségi okiratba?
 
-Az egyezségi okiratban (和解書) individualizálni kell a baleset dátumát, helyét és feleit, valamint rögzíteni a fizetés összegét és időpontját, a biztosítási szolgáltatások rendezését, a lefedett és a fenntartott igényeket. Világosan meg kell állapítani a további kezelést, a később felfedezett sérüléseket, az olyan iratok kiadását, mint az orvosi igazolás (診斷證明書), valamint a fizetés és a büntetőjogi panasz visszavonása közötti viszonyt.
+Az egyezségi okiratban (和解書) pontosan meg kell jelölni a baleset dátumát, helyét és feleit, valamint rögzíteni a fizetés összegét és időpontját, a biztosítási szolgáltatások rendezését, a lefedett és a fenntartott igényeket. Világosan meg kell állapítani a további kezelést, a később felfedezett sérüléseket, az olyan iratok kiadását, mint az orvosi igazolás (診斷證明書), valamint a fizetés és a büntetőjogi panasz visszavonása közötti viszonyt.
 
 A polgári törvénykönyv 736. cikke szerinti egyezség (和解) olyan szerződés, amelyben a felek kölcsönösen engednek, hogy a vitát lezárják vagy elkerüljék. A polgári törvénykönyv 737. cikke szerint az, hogy milyen terjedelemben szűnnek meg a jogok, szintén csak az egyezségi okiratban feladottak határain belül értékelhető. Ezért nem szabad a szöveg vizsgálata nélkül azt állítani, hogy minden jövőbeli igény eltűnik.
 
-Ha magánindítványra üldözendő bűncselekményről van szó, a büntetőeljárási törvény 238. cikke szerint a panasz az 1. fok szóbeli tárgyalásának lezárásáig vonható vissza, és a visszavonás után nem terjeszthető elő újra. Azonban olyan bűncselekményben, amely nem magánindítványra üldözendő, a magánegyezség nem fejezi be automatikusan a vádat, és az egyezség ténye nem kötelez mindig a panasz visszavonására.
+Ha magánindítványra üldözendő bűncselekményről van szó, a büntetőeljárási törvény 238. cikke szerint a panasz az elsőfokú szóbeli tárgyalás berekesztéséig vonható vissza, és a visszavonás után nem terjeszthető elő újra. Azonban olyan bűncselekményben, amely nem magánindítványra üldözendő, a magánegyezség nem fejezi be automatikusan a vádat, és az egyezség ténye nem kötelez mindig a panasz visszavonására.
 
 ### Q1–Q5 hivatalos alapjai
 
@@ -95,7 +95,7 @@ A polgári törvénykönyv 184. cikkén alapuló igény jogellenes jogsértést,
 
 - **Sérülések**: A polgári törvénykönyv 193. cikke szerint vizsgálhatók a szükséges orvosi költségek (醫療費用), a mindennapi élet többletköltségei, például a gondozási költségek (看護費用), a kezelésre járás közlekedési költségei (就醫交通費) és a műszaki segítség, valamint a tényleges munkaképtelenség miatti jövedelemkiesés (收入損失) és a munkaképesség csökkenése (勞動能力減損). A polgári törvénykönyv 195. cikke szerint a nemvagyoni kár is vizsgálható.
 - **Halál**: A polgári törvénykönyv 192. cikke szerint, ha van alap, vizsgálhatók a halál előtti orvosi költségek és a megnövekedett életviteli szükségletek költségei, a temetési költségek (殯葬費), valamint annak a személynek a tartási érdekkiesése (扶養利益損失), akinek törvényes tartási joga volt. A polgári törvénykönyv 194. cikke szerint egyes rokonok nemvagyoni kára is vizsgálható.
-- **Vagyon**: A polgári törvénykönyv 196. cikke szerint a indokolt tényleges vagyoni kár érvényesíthető, ideértve a jármű javítási költségeit vagy az értékvesztést.
+- **Vagyon**: A polgári törvénykönyv 196. cikke szerint az indokolt tényleges vagyoni kár érvényesíthető, ideértve a jármű javítási költségeit vagy az értékvesztést.
 
 ## Q8. Ha a kezelés tart, hogyan kell bemutatni az orvosi költségiratokat?
 
@@ -113,7 +113,7 @@ Még ha a hozzátartozó ténylegesen, díjazás nélkül nyújtott gondozást, 
 
 ## Q10. Mivel bizonyítják a kezelésre járás költségeit?
 
-A közlekedési költségeket a kezelési nyilvántartás és a balesettel összefüggő sérülések közötti kapcsolat alapján rendezik. Az útvonal, a vizitek száma, a dátumok, a közlekedési eszköz, a díjszabás, valamint e eszköz használatának szükségessége és ésszerűsége lényeges lehet az értékeléshez.
+A közlekedési költségeket a kezelési nyilvántartás és a balesettel összefüggő sérülések közötti kapcsolat alapján rendezik. Az útvonal, a vizitek száma, a dátumok, a közlekedési eszköz, a díjszabás, valamint ennek az eszköznek a használatára vonatkozó szükségesség és ésszerűség lényeges lehet az értékeléshez.
 
 A nyugták, a díjszabási nyilvántartások, az útvonal-nyilvántartások és a klinikai iratok lehetséges bizonyítékok. A taxi nyugta nem az egyetlen bizonyítási eszköz, és önmagában a bemutatása nem vonja maga után, hogy elégséges.
 
@@ -171,13 +171,13 @@ Azt, hogy kivel szemben irányul a polgári igény, el kell különíteni a bün
 
 ## Q15. Milyen gépjármű-biztosítási szolgáltatásokat és fedezeteket kell ellenőrizni?
 
-A kötelező gépjármű-felelősségbiztosításról szóló törvény (強制汽車責任保險法) 6. cikke szerinti szerződéskötési kötelezettség elvben a jármű tulajdonosát terheli, a meghatározott esetekben pedig a jármű használóját vagy üzemeltetőjét is. Ez a rend a gépjármű-baleset miatt megsérült vagy meghalt személyre gondatlanságtól független kifizetési szerkezetet (無過失給付制度) állít fel, de ellenőrizni kell a törvény által megállapított utasok vagy a járművön kívüli 3. személy (第三人) terjedelmét.
+A kötelező gépjármű-felelősségbiztosításról szóló törvény (強制汽車責任保險法) 6. cikke szerinti szerződéskötési kötelezettség elvben a jármű tulajdonosát terheli, a meghatározott esetekben pedig a jármű használóját vagy üzemeltetőjét is. Ez a rend a gépjármű-baleset miatt megsérült vagy meghalt személyre gondatlanságtól független kifizetési szerkezetet (無過失給付制度) állít fel, de ellenőrizni kell a törvény által megállapított utasok vagy a járművön kívüli harmadik személy (第三人) terjedelmét.
 
 Egyjárműves balesetben e jármű vezetője elvben nem címzettje e jármű kötelező biztosításának. Több jármű részvételével járó balesetben azonban vannak esetek, amikor a vezető a másik érintett jármű kötelező biztosítója felé érvényesíthet szolgáltatásokat.
 
-A 2026-05-29-én módosított kifizetési tarifa (強制汽車責任保險給付標準) a 2026-07-01-től bekövetkezett balesetekre alkalmazandó. A sérülések ésszerű és szükséges orvosi költségeinek plafonja TWD 200.000 tajvani új dollárban; a rokkantsági szolgáltatás (失能) TWD 80.000-tól TWD 3.000.000-ig terjed a 15 törvényes fokozat szerint; a halálozási szolgáltatás TWD 3.000.000, a halál, a rokkantság és az orvosi költségek együttes maximuma 1 károsultra és 1 balesetre TWD 3.200.000. A korábbi balesetekre a megelőző tarifa alkalmazható.
+A 2026. május 29-én módosított kifizetési tarifa (強制汽車責任保險給付標準) a 2026. július 1-jétől bekövetkezett balesetekre alkalmazandó. A sérülések ésszerű és szükséges orvosi költségeinek plafonja TWD 200.000 tajvani új dollárban; a rokkantsági szolgáltatás (失能) TWD 80.000-tól TWD 3.000.000-ig terjed a 15 törvényes fokozat szerint; a halálozási szolgáltatás TWD 3.000.000, a halál, a rokkantság és az orvosi költségek együttes maximuma 1 károsultra és 1 balesetre TWD 3.200.000. A korábbi balesetekre a megelőző tarifa alkalmazható.
 
-A 3. személyekkel szembeni felelősségbiztosítás (第三人責任險), a járművezetői balesetbiztosítás (駕駛人傷害險) és a saját jármű kárbiztosítása (車體損失險) fakultatív, szerződéses jellegű termékek. A tényleges fedezet a biztosított, a plafon, az önrész (自負額), a kizárások, a gondatlanság és a kötvény egyéb feltételei szerint különbözik, ezért a kötvényt és a feltételeket ügyenként kell ellenőrizni.
+A Harmadik személlyel szembeni felelősségbiztosítás (第三人責任險), a járművezetői balesetbiztosítás (駕駛人傷害險) és a saját jármű kárbiztosítása (車體損失險) fakultatív, szerződéses jellegű termékek. A tényleges fedezet a biztosított, a plafon, az önrész (自負額), a kizárások, a gondatlanság és a kötvény egyéb feltételei szerint különbözik, ezért a kötvényt és a feltételeket ügyenként kell ellenőrizni.
 
 ### Q11–Q15 hivatalos alapjai
 
@@ -199,7 +199,7 @@ Q16. A baleset után rábízható-e minden a biztosítóra?
 
 ​
 
-Tapasztalatom szerint a biztosítók gyakran nem intézik elégségesen a baleset feleinek érzelmi vonatkozását.
+A gyakorlatban a biztosítók gyakran nem kezelik kielégítően a baleset feleinek érzelmi helyzetét.
 
 ​
 
@@ -235,7 +235,7 @@ Q17. Mi a közúti baleset okozójának gondatlan testi sértés miatti büntet�
 
 ​
 
-Gondatlan testi sértés esetén a bíróságok jelenleg mintegy 3 hónap büntetést szabnak ki.
+Gondatlan testi sértés miatt egyes ítéletekben mintegy 3 hónap szabadságvesztést szabtak ki; tipikus vagy előre ígérhető kimenetel nincs.
 
 ​
 
@@ -247,7 +247,7 @@ Ha pénzbírságra váltják (易科罰金), a büntető törvénykönyv 41. cik
 
 ​
 
-Gondatlan súlyos testi sértésért rendszerint 4 hónap büntetést szabnak ki, gondatlan halálokozásért (過失致死) rendszerint 6 hónap büntetést.
+Gondatlan súlyos testi sértés miatt egyes ítéletekben mintegy 4 hónap, gondatlan halálokozás (過失致死) miatt mintegy 6 hónap szabadságvesztést szabtak ki; ezek sem tipikus, sem ígérhető kimenetelek.
 
 ​
 
@@ -267,7 +267,7 @@ Gondatlan halálokozásnál a panasz visszavonása nem lehetséges; ha azonban e
 
 ​
 
-Beállhat a végrehajtás felfüggesztése (緩刑), és nem kell börtönbe menni.
+A bíróság egyes esetekben felfüggesztheti a büntetés végrehajtását (緩刑), így elkerülhető a letöltendő szabadságvesztés; ez azonban nem ígéret.
 
 ​
 
@@ -307,7 +307,7 @@ Akkor az ügyvéd gondossága és tisztessége a fontos.
 
 ​
 
-Lényeges, hogy az ügyvéd figyelemmel vizsgálja az igény minden tételét, és arra törekedjen, hogy a lehető legmagasabb kártérítést szerezzék meg.
+Lényeges, hogy az ügyvéd figyelemmel vizsgálja az igény minden tételét, és a tények, valamint a bizonyítékok által alátámasztott kártérítés érvényesítésére törekedjen.
 
 ​
 
@@ -347,7 +347,7 @@ Az okozó gyakran nem törődik azzal, hogy telefonáljon az áldozat állapotá
 
 ​
 
-Az áldozat így nagyon megsérül és haragba esik, ezért gyakran nem enged a tárgyalási összegben, vagy ideiglenes zárást (假扣押) kér, és a másik fél vagyonának zárását a végéig viszi.
+A sértett ezért mélyen megsértődik és haragra gerjed, ezért gyakran nem enged a tárgyalási összegből, vagy ideiglenes biztosítási intézkedést (假扣押) kér, és a másik fél vagyonának zárolását a végsőkig viszi.
 
 ​
 
@@ -359,7 +359,7 @@ Ezt a pontot tehát abszolút nem szabad elhanyagolni, és a körülményekhez k
 
 ​
 
-Ha további kérdéseik vannak, hagyják a hozzászólásokban.
+Ha további kérdése van, a Kapcsolat oldalon küldhet megkeresést.
 
 ​
 

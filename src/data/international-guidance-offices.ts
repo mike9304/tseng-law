@@ -609,7 +609,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     ],
     officeTitles: {
       taipei: 'Tajpej',
-      taichung: 'Taicsung',
+      taichung: 'Tajcsung',
       kaohsiung: 'Kaohsiung',
       pingtung: 'Pingtung',
     },

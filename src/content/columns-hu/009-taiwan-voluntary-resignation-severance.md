@@ -19,9 +19,9 @@ Amint korábban jeleztük, Tajvanon a munkavállaló számára nem könnyű vég
 
 Különösen, ha a munkavállaló saját elhatározásából távozik (自請離職),
 
-nem kaphat végkielégítést (資遣費) (a munkaügyi normákról szóló törvény 18. cikke),
+nem kaphat végkielégítést (資遣費) (a munkaügyi törvény 18. cikke),
 
-ami Koreától különbözik.
+ami egyes más jogrendszerektől — például Koreától — eltér.
 
 ​
 
@@ -29,7 +29,7 @@ Vannak azonban **kivételes esetek**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-A következő különös helyzetekben, még ha a munkavállaló saját elhatározásából távozik is, a munkáltató köteles végkielégítést fizetni (a munkaügyi normákról szóló törvény 14. cikke, amely megfelelően alkalmazza a 17. cikket; 勞動基準法第14條):
+A következő különös helyzetekben, még ha a munkavállaló saját elhatározásából távozik is, a munkáltató köteles végkielégítést fizetni (a munkaügyi törvény 14. cikke, amely megfelelően alkalmazza a 17. cikket; 勞動基準法第14條):
 
 1. Ha a munkáltató a munkaszerződés (勞動契約) megkötésekor hamis akaratnyilatkozatot (虛偽意思表示) tesz, úgy hogy a munkavállaló tévedésbe esik, és kár bekövetkezésének kockázata áll fenn
 
@@ -59,7 +59,7 @@ Ilyen esetekben, még ha a munkavállaló szokásos módon fejezi is be a munkas
 
 ​
 
-A munkaügyi normákról szóló törvény (勞動基準法) azonban úgy rendelkezik, hogy
+A munkaügyi törvény (勞動基準法) azonban úgy rendelkezik, hogy
 
 ha a munkavállaló a fenti 1. vagy 6. pont alapján kívánja befejezni a munkaszerződést (például azért, hogy a szerződés a biztosításba be nem jelentés miatt szűnjön meg),
 
@@ -89,7 +89,7 @@ a végkielégítés nem kerül kifizetésre, vagy követelhető.
 
 Ezért a tajvani munkaügyi vitákban (勞資糾紛)
 
-a «**idő**» nagyon fontos.
+a határidő döntő.
 
 A legtöbb esetben annak a jogai védettek, aki előre felkészült.
 
@@ -98,4 +98,4 @@ A legtöbb esetben annak a jogai védettek, aki előre felkészült.
 > Lásd még:
 > - [Hogyan rögzítjük a munka terjedelmét és a költségeket](/hu/pricing)
 > - [A Hovering nemzetközi csapata](/hu/lawyers)
-> - [Milyen ügyeket viszünk](/hu/services)
+> - [Milyen ügyekben járunk el](/hu/services)

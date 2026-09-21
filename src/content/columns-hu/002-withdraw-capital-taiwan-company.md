@@ -36,7 +36,7 @@ Ez a cikk külön tárgyalja a tajvani társaság megszüntetésekor gyakran ös
 
 A társaság végleges megszüntetéséhez elvben a feloszlatás bejegyzését és a felszámolást kell lefolytatni; a tartozások és az adók rendezése után a fennmaradó maradványvagyont a tagok között osztják fel. Ha a társaságnak fenn kell maradnia, és a hozzájárulást vissza kell adni, a társasági formának megfelelő jogszerű eljárást — például tőkeleszállítást — kell vizsgálni. A szokásos működési költségek, az osztalék és a társaság által ténylegesen viselt kölcsönök törlesztése egyenként külön jogi és adójogi alapot és eljárást igényel.
 
-A tőke az a tőketétel, amely a tagok által az alapításkor vagy a tőkeemeléskor (增資) befizetett összeget jelzi. Nem mindig egyezik a társaság számla aktuális egyenlegével, és a működés során szerzett javakat vagy viselt tartozásokat sem lehet mind a tőke szónnal értelmezni. A megszüntetés időpontjában a könyv szerinti tőkeösszegen túl együtt kell figyelembe venni a tényleges vagyont és tartozásokat, a folyamatban lévő követeléseket és tartozásokat, az adókat, a függő tartozásokat és a felszámolási költségeket.
+A tőke az a tőketétel, amely a tagok által az alapításkor vagy a tőkeemeléskor (增資) befizetett összeget jelzi. Nem mindig egyezik a társaság számla aktuális egyenlegével, és a működés során szerzett javakat vagy viselt tartozásokat sem lehet mind a tőke szóval értelmezni. A megszüntetés időpontjában a könyv szerinti tőkeösszegen túl együtt kell figyelembe venni a tényleges vagyont és tartozásokat, a folyamatban lévő követeléseket és tartozásokat, az adókat, a függő tartozásokat és a felszámolási költségeket.
 
 Annak megítéléséhez, hogy a hozzájárulások visszaadhatók-e a tagoknak, először az ügylet jogi jellegét kell megállapítani. A feltételek aszerint különböznek, hogy a társaság áruk vagy szolgáltatások miatti költségeiről, már jogszerűen megállapított osztalékról, a társaságnak nyújtott kölcsön törlesztéséről, a tőkét csökkentő tőkeleszállításról vagy a felszámolás utáni maradványvagyon felosztásáról van-e szó. Önmagában az ügylet megnevezésének megváltoztatása vagy a könyvekben tetszőleges számla hozzárendelése nem változtatja meg ezt a jelleget.
 
@@ -96,7 +96,7 @@ Ha a tagok vagy a vezetés tőkét kíván a társaságba vinni, vagy a tartozá
 
 Ha maga a tevékenység folytatódik, de a szükséges tőke kisebb, vagy a tőkeszerkezetet igazítják, a tőkeleszállítás vizsgálható mint a hozzájárulás egy részének jogszerű visszaadása a társaság létének fenntartása mellett. A tőkeleszállítás azonban nem nemhivatalos kivonási eszköz, amellyel a tagok bármikor elvinnék a társaság pénzeszközeit, és nem mindig lehetséges. Először a társaság vagyoni helyzetét és formáját, a tőkeleszállítás célját, az alapszabályt és a hitelezőkre gyakorolt hatást kell vizsgálni.
 
-A tőkeleszállítás a társasági törvénynek az a eljárása, amely a társaság tőkeösszegét megváltoztatja. Nem fejeződik be azzal, hogy banki átutalás történik, és a tőketételt a könyvekben csökkentik. A társasági formához igazodó határozatot, a hitelezővédelmet, a tőkevizsgálatot és a könyvelési kezelést, a külföldi beruházást, az adókat, az átutalást és a változásbejegyzést mind vizsgálni kell. A szükséges határozatképesség, a közzététel és az értesítés, a kifogásolási eljárás és a benyújtandó iratok a korlátolt felelősségű társaság, a részvénytársaság és az adott szerkezet szerint különbözhetnek.
+A tőkeleszállítás a társasági törvénynek az az eljárása, amely a társaság tőkeösszegét megváltoztatja. Nem fejeződik be azzal, hogy banki átutalás történik, és a tőketételt a könyvekben csökkentik. A társasági formához igazodó határozatot, a hitelezővédelmet, a tőkevizsgálatot és a könyvelési kezelést, a külföldi beruházást, az adókat, az átutalást és a változásbejegyzést mind vizsgálni kell. A szükséges határozatképesség, a közzététel és az értesítés, a kifogásolási eljárás és a benyújtandó iratok a korlátolt felelősségű társaság, a részvénytársaság és az adott szerkezet szerint különbözhetnek.
 
 A tőkeleszállítás vizsgálatakor azt is figyelembe kell venni, miből táplálkozik a visszaadandó összeg. Még ha a társaságnak van is készpénze, a bérek, az adók, a szállítói ár, a kölcsönök, a kauciók és a várható működési költségek kifizetése után tovább kell tudnia működni. Ha a tőkeleszállítás gyengíti a hitelezővédelmet vagy megnehezíti a tartozások teljesítését, az eljárást és az igazgatók mérlegelési felelősségét pontosabban kell vizsgálni.
 
@@ -139,7 +139,7 @@ Minél tovább tart a szüneteltetés, annál inkább bonyolódhat a későbbi m
 
 ## Kapcsolódó útmutatók
 
-1. [Milyen ügyeket viszünk](/hu/services)
+1. [Milyen ügyekben járunk el](/hu/services)
 2. [Társaságalapítás Tajvanon: alapok](/hu/columns/taiwan-company-establishment-basics)
 3. [Kapcsolat](/hu/contact)
 

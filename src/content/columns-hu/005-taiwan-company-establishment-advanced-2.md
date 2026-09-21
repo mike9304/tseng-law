@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Kiemelt kép](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Akik elolvasták a [Társaságalapítás Tajvanon – alapok](/hu/columns/taiwan-company-establishment-basics) és a [Társaságalapítás Tajvanon – elmélyítő rész 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) írásokat, a Társaságalapítás Tajvanon – elmélyítő rész 2 (公司設立) anyagát is megtekinthetik.
+Ha elolvasta a [Társaságalapítás Tajvanon – alapok](/hu/columns/taiwan-company-establishment-basics) és a [Társaságalapítás Tajvanon – elmélyítő rész 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) írásokat, a Társaságalapítás Tajvanon – elmélyítő rész 2 (公司設立) anyagát is érdemes áttekintenie.
 
 ​
 
@@ -21,7 +21,7 @@ Akik elolvasták a [Társaságalapítás Tajvanon – alapok](/hu/columns/taiwan
 
 ​
 
-Az alábbi kérdések és válaszok (Q&A) azoknak kívánnak segíteni, akik tajvani társaságalapítást (公司設立) fontolgatnak.
+Az alábbi kérdések és válaszok azoknak kívánnak segíteni, akik tajvani társaságalapítást (公司設立) fontolgatnak.
 
 ​
 
@@ -67,7 +67,7 @@ Egyes bankok további követelményeket támaszthatnak, például a számla hasz
 
 **​**
 
-**5. Foglalkoztathat-e a társaság koreai állampolgárságú személyeket munkavállalóként?**
+**5. Foglalkoztathat-e a társaság külföldi állampolgárságú munkavállalókat?**
 
 A. Első munkavállaló: a kérelmet a tengerentúli kínaiak vagy külföldiek szokásos beruházási vállalkozásában végzett vezetői munkaként (一般僑外投資事業主管工作) nyújtják be. Az alábbi B pont „szakmai vagy műszaki jellegű munkájának” kritériuma nem alkalmazandó, de alkalmazandók a címzett feltételei, ideértve annak a vezetőnek (經理人) a feltételét, akinek társaságában a tengerentúli kínaiak vagy külföldiek hozzájárulása meghaladja az 1/3-ot, valamint a munkáltató tőkére és árbevételre vonatkozó eredményfeltételeit (a vizsgálati szabványok 38. és 39. cikke).
 
@@ -77,11 +77,11 @@ Lásd a tajvani Munkaügyi Minisztérium (勞動部) honlapját: <https://ezwork
 
 ​
 
-Ha további kérdése van, kapcsolatba léphet velünk.
+Ha további kérdése van, a Kapcsolat oldalon küldhet megkeresést. A tanácsadás nem magyarul, hanem angolul, kínaiul (中文), japánul és koreaiul zajlik.
 
 ---
 
 > Lásd még:
-> - [Milyen ügyeket viszünk](/hu/services)
+> - [Milyen ügyekben járunk el](/hu/services)
 > - [A Hovering nemzetközi csapata](/hu/lawyers)
 > - [Hogyan érheti el az irodát](/hu/contact)

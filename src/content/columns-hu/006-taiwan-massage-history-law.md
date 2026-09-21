@@ -15,13 +15,13 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Emlékeznek a hagyományos fodrászszalonok (理髮廳) korára Tajvan kezdetein?
+Emlékszik még a hagyományos tajvani fodrászszalonok (理髮廳) korára?
 
 Ezekben a szalonokban a hajmosás módja nagyon sajátos volt.
 
 A hajvágáson túl különféle szolgáltatások voltak, például borotválás és arckezelés.
 
-A lényeg pedig az volt, hogy ülve hajmosást kaphattak fejbőr-, váll- és nyakmasszázzsal.
+A lényeg pedig az volt, hogy ülve kaphatott hajmosást fejbőr-, váll- és nyakmasszázzsal.
 
 Már egy hajvágás lehetővé tette e magas színvonalú szolgáltatás élvezetét, ezért az ár-érték arány kiváló volt.
 
@@ -81,11 +81,11 @@ Például azt kérdezték, hogy az írott szabály, amely kizárólag látássé
 
 és kétségbe vonták, hogy e szabály ténylegesen hozzájárult-e a látássérült személyek foglalkoztatásának és létfenntartásának védelméhez.
 
-Végül a Nagybírák (大法官) alkotmányellenesnek (違憲) nyilvánították azt a rendelkezést, amely kizárólag látássérült személyeknek engedte a masszőri foglalkozás gyakorlását.
+Végül az alkotmánybírák (大法官) alkotmányellenesnek (違憲) nyilvánították azt a rendelkezést, amely kizárólag látássérült személyeknek engedte a masszőri foglalkozás gyakorlását.
 
 ​
 
-Hasonlóképpen Koreában, ahol sok látássérült személy masszázsból tartja fenn magát,
+Összehasonlításképpen Koreában — ez csak egy megjelölt külföldi példa —, ahol sok látássérült személy masszázsból tartja fenn magát,
 
 elvben csak a képesítési igazolást szerzett látássérült személyek végezhetik a masszőri foglalkozást.
 
@@ -117,12 +117,12 @@ Ma sokan a feszültség oldására választják a masszázst,
 
 Ami eredetileg csupán masszázs igénybevétele lett volna a feszültség oldására,
 
-élethosszig tartó traumává válhat, ha szexuális zaklatást szenvednek el.
+élethosszig tartó traumává válhat, ha szexuális zaklatás éri az embert.
 
-Ha tajvani masszázs során kényelmetlenséget vagy valami különöset éreznek,
+Ha tajvani masszázs során kényelmetlenséget vagy valami szokatlant érez,
 
-közöljék ezt haladéktalanul, vagy kérjék a megszakítást, hogy védjék magukat.
+jelezze ezt haladéktalanul, vagy kérje a kezelés megszakítását, hogy megvédje magát.
 
-Ha úgy ítélik meg, hogy szexuális zaklatást szenvedtek el,
+Ha úgy ítéli meg, hogy szexuális zaklatás érte,
 
-menjenek a rendőrőrsre megbízható baráttal vagy tajvani ügyvéddel (律師), és tegyenek feljelentést.
+menjen a rendőrőrsre megbízható ismerőssel vagy tajvani ügyvéddel (律師), és tegyen feljelentést.

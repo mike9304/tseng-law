@@ -136,7 +136,7 @@ const CONSULTATION_LANGUAGE_TERMS: Record<string, readonly string[]> = {
   ca: ['anglès', 'xinès', 'japonès', 'coreà'],
   my: ['ภาษาอังกฤษ', 'ภาษาจีน', 'ภาษาญี่ปุ่น', 'ภาษาเกาหลี'], // PLACEHOLDER(th) until the my lane is integrated
   km: ['ภาษาอังกฤษ', 'ภาษาจีน', 'ภาษาญี่ปุ่น', 'ภาษาเกาหลี'], // PLACEHOLDER(th) until the km lane is integrated
-  ne: ['अंग्रेज़ी', 'चीनी', 'जापानी', 'कोरियाई'], // PLACEHOLDER(hi) until the ne lane is integrated
+  ne: ['अङ्ग्रेजी', 'चिनियाँ', 'जापानी', 'कोरियाली'],
   mn: ['английском', 'китайском', 'японском', 'корейском'], // PLACEHOLDER(ru) until the mn lane is integrated
 };
 
@@ -302,7 +302,7 @@ const SERVICES_SCOPE_TERMS: Record<string, readonly [string, RegExp]> = {
   ca: ['abast', /abast/i],
   my: ['ขอบเขต', /ขอบเขต/], // PLACEHOLDER(th)
   km: ['ขอบเขต', /ขอบเขต/], // PLACEHOLDER(th)
-  ne: ['दायरा', /दायरा/], // PLACEHOLDER(hi)
+  ne: ['दायरा', /दायरा/],
   mn: ['Объём', /Объём/], // PLACEHOLDER(ru)
   is: ['rozsah', /rozsah/i], // PLACEHOLDER(cs)
 };
@@ -440,10 +440,7 @@ const SERVICES_ACCEPTANCE_PATTERNS: Record<
     ['รับเรื่องใดเรื่องหนึ่ง', /รับเรื่องใดเรื่องหนึ่ง/],
     ['พิจารณาหลังจาก', /พิจารณาหลังจาก/],
   ],
-  ne: [
-    ['मामला स्वीकार', /मामला स्वीकार/],
-    ['स्वीकृति का निर्णय', /स्वीकृति का निर्णय/],
-  ],
+  ne: [['जाँचको प्रतीक्षा', /जाँचको प्रतीक्षा/], ['कानुनी राय होइन', /कानुनी राय होइन/]],
   mn: [
     ['не юридическая консультация', /не юридическая консультация/],
     ['не подтверждённая запись', /не подтверждённая запись/],

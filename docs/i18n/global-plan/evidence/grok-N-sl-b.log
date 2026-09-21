@@ -1,1 +1,9 @@
 [WO start 2026-09-22 06:42:32]
+WO-N-sl-b is done. Columns **010–018** are in `src/content/columns-sl/`, written as Slovenian legal copy for readers in Slovenia (Czech register decisions, Korean structure, English meaning).
+
+The checker reports **`summary PASS 18/18 files`** (this lane’s 9 plus 001–009 from the other part). Markers: **0**. Nothing was staged or committed.
+
+Log: `docs/i18n/global-plan/evidence/grok-N-sl-b.log`
+
+Notable choices: feminine **Odvetnica Wei Tseng (曾雋崴)**; consultation only in English, Chinese (中文), Japanese, Korean; Taiwan terms glossed on first use (訴訟代理人, 最低服務年限, 汽車貨運業, 罰鍰, …); Korea kept only as a labelled example. Number WARNs are R11 lexical items (`제N항`, `1심`, `제3자`) with matching source/target counts — not FAILs.
+=== end code=0 2026-09-22 07:03:46 ===

@@ -1,1 +1,27 @@
 [WO start 2026-09-21 16:29:15]
+Native review is in `docs/i18n/global-plan/reviews/native/ru-a.md`.
+
+**Verdict:** guidance pack **3/5**, columns **2/5**. Standard Russian with ё, consistent. Consultation-language lines stay correctly negative (FAQ «Нет.», no interpreter, no reply-time). The site still reads as German legal translation plus a Korean blog overlay.
+
+**69 findings** (24 P1, 45 P2). Strongest must-fixes: masculine «адвокат» / «руководящим адвокатом» for Wei Tseng; «Вэй Цзэн» vs Latin «Wei Tseng»; leftover `OUR TEAM` / `OFFICES` / `Q&A`; Korea left as the default reader (001 DTA, 004–005, 007–009); typical-sentence and high-payout claims in 003/008.
+
+Last 15 lines of the file:
+
+```
+| 55 | P2 | C | columns-ru/003-taiwan-traffic-accident-procedure.md | По моему опыту, страховая компания часто недостаточно обрабатывает эмоциональную сторону | Sudden first-person blog after formal Q1–Q15; «обрабатывает эмоциональную сторону» is machine | По опыту практики страховщики часто не уделяют внимания эмоциональной стороне для участников ДТП |
+| 56 | P2 | C | columns-ru/003-taiwan-traffic-accident-procedure.md | Если у вас есть дополнительные вопросы, оставьте их в комментариях. | Invites blog comments the guidance site does not offer; also lowercase «вы» vs pack «Вы» | Если у Вас есть вопросы по Вашему делу, направьте изложение через страницу «Контакты»; срок ответа не обещается |
+| 57 | P2 | G | columns-ru/003-taiwan-traffic-accident-procedure.md | FAQ полиции по дорожно-транспортным происшествиям | English "FAQ" left in a source label | Часто задаваемые вопросы полиции по ДТП |
+| 58 | P2 | C | columns-ru/004-taiwan-company-subsidiary-vs-branch.md | судить следует на протяжении всего периода дела | Calque of "judge over the life of the business" | оценивать это следует на весь срок деятельности |
+| 59 | P2 | B | columns-ru/005-taiwan-company-establishment-advanced-2.md | с этого заработной дохода (薪資所得的扣繳憑單影本) | Gender clash: «этого» (m) + «заработной» (f) + «дохода» (m) | с этого дохода в виде заработной платы (薪資所得的扣繳憑單影本) |
+| 60 | P2 | C | columns-ru/005-taiwan-company-establishment-advanced-2.md | Если у вас есть дополнительные вопросы, вы можете обратиться к нам. | Blog CTA with no no-reply-time disclaimer (EN had "at any time") | Дополнительные вопросы можно направить через страницу «Контакты»; срок ответа не обещается |
+| 61 | P2 | C | columns-ru/006-taiwan-massage-history-law.md | Приходилось ли вам самим застать эпоху традиционных парикмахерских (理髮廳) раннего Тайваня? | Asks a Russian reader to "remember" early-Taiwan barbershops | Известны ли Вам традиционные тайваньские парикмахерские (理髮廳) раннего периода? |
+| 62 | P2 | A | columns-ru/006-taiwan-massage-history-law.md | В итоге Великие судьи (大法官) объявили неконституционной | Calque of "Grand Justices"; Russian names this the Constitutional Court | В итоге судьи Конституционного суда (大法官) признали эту норму неконституционной |
+| 63 | P2 | D | columns-ru/006-taiwan-massage-history-law.md | Сходным образом в Корее, где многие лица с нарушением зрения зарабатывают на жизнь массажем | Long Korea-only comparative block left as if the reader were Korean | Для сравнения: в некоторых странах (в том числе в Корее) промысел массажа по-прежнему закреплён преимущественно за лицами с нарушением зрения |
+| 64 | P2 | C | columns-ru/007-taiwan-divorce-lawsuit-qna.md | эти сроки нельзя переносить как есть на другие требования | «как есть» is a Korean 그대로 / German als solches tic | эти сроки нельзя механически переносить на другие требования |
+| 65 | P2 | D | columns-ru/007-taiwan-divorce-lawsuit-qna.md | в решении номер 4 года 112 (112年憲判字第4號) | ROC year 112 unexplained for a Russian reader | в решении № 4 112 года календаря Китайской Республики (2023; 112年憲判字第4號) |
+| 66 | P2 | C | columns-ru/008-taiwan-labor-severance-law.md | выходное пособие на Тайване действительно трудно получить?? | Double question mark; title is blog-clickbait on a law-firm page | Трудовое право Тайваня: когда выплачивается выходное пособие (資遣費) |
+| 67 | P2 | C | columns-ru/008-taiwan-labor-severance-law.md | Моя сторона, господин B, к тому времени проработал | Calque of "my side"; «сторона» (f) sits awkwardly next to «господин B» | Мой доверитель, господин B, к тому времени проработал |
+| 68 | P2 | B | columns-ru/008-taiwan-labor-severance-law.md | к такому неразумному требованию относился крайне недовольно | «относился недовольно» is not a Russian collocation | к такому неразумному требованию отнёсся крайне негативно |
+| 69 | P2 | C | columns-ru/009-taiwan-voluntary-resignation-severance.md | «**время**» имеет очень большое значение. | Guillemets + bold for a word a native would just write | время здесь имеет решающее значение. |
+```
+=== end code=0 2026-09-21 16:37:58 ===

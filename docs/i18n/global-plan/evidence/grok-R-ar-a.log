@@ -1,1 +1,24 @@
 [WO start 2026-09-21 16:29:15]
+Wrote the review to `docs/i18n/global-plan/reviews/native/ar-a.md` (guidance pack + columns 001–009; 58 findings, P1 then P2).
+
+**Verdict:** guidance pack **3/5**, columns **2/5**. MSA for Gulf/Levant is consistent in the guidance pack. Wei Tseng is feminine almost everywhere (`المحامية المديرة`, `مثَّلت`, `أنا المحامية`); the clear miss is masculine **طالب تبادل**. Consultation disclaimers stay correctly negative. Column 002’s `الحبس القصير (拘役)` is good; 007’s `الزيارة والتواصل (會面交往)` is clearer than the guidance pack. 003 Q16–20, 005, 006, 008 and 009 still read as a Korean blog.
+
+Last 15 lines of the file:
+
+```
+| 45 | P2 | C | columns-ar/003-taiwan-traffic-accident-procedure.md | "وإذا بقيت مسائل إضافية يمكن تركها في التعليقات." | Blog CTA; this site has no comments. Q16–Q20 share the Korean-blog layout. | للمسائل الإضافية استعملوا صفحة التواصل. |
+| 46 | P2 | C | columns-ar/003-taiwan-traffic-accident-procedure.md | "كانت هذه المحامية التايوانية WEI." | Chatty sign-off; WEI in Latin caps instead of Wei Tseng. | — المحامية Wei Tseng (曾雋崴) |
+| 47 | P2 | C | columns-ar/004-taiwan-company-subsidiary-vs-branch.md | "لذا يجب الحكم بالنظر إلى مدة النشاط كلها" | Broken “judge over the entire duration”; native على امتداد فترة النشاط. | لذا يجب التقييم على امتداد فترة النشاط كلها |
+| 48 | P2 | A | columns-ar/004-taiwan-company-subsidiary-vs-branch.md | "الفرع ليس شركة إصدار مستقلة، لذا لا يمكن أن يصير محل إدراج في تايوان" | 公開發行公司 calqued as “issuing company”; means a company that has made a public offering. | الفرع ليس شركة طرحت أسهمها على الجمهور (公開發行公司)، لذا لا يمكن أن يكون محل إدراج في تايوان |
+| 49 | P2 | C | columns-ar/005-taiwan-company-establishment-advanced-2.md | "ويُرجى أن تنفع الأسئلة والأجوبة أدناه أيضًا من ينظر في تأسيس شركة في تايوان." | Blog wish-line plus empty lines; 005/006/008/009 share that layout. | فيما يلي أسئلة شائعة لمن ينظر في تأسيس شركة في تايوان. |
+| 50 | P2 | A | columns-ar/006-taiwan-massage-history-law.md | "أعلن قضاة التفسير الدستوري (大法官) عدم دستورية النص" | Calque of Grand Justices; Arab readers need constitutional-court judges. | أعلن قضاة المحكمة الدستورية (大法官) عدم دستورية النص |
+| 51 | P2 | C | columns-ar/006-taiwan-massage-history-law.md | "(هل كشفت عمري من غير قصد؟)" | Korean-blog aside no native legal page would keep. | احذفوا الجملة؛ أو: وهذا من ذكريات جيل سابق. |
+| 52 | P2 | B | columns-ar/007-taiwan-divorce-lawsuit-qna.md | "المصادر الرسمية 1 الآتية، حتى 25/7/2026" | Leftover “1” from English “primary sources (1st level)”. | المصادر الرسمية الآتية، حتى 25/7/2026 |
+| 53 | P2 | D | columns-ar/007-taiwan-divorce-lawsuit-qna.md | "الحكم الدستوري رقم 4 لسنة 112 (112年憲判字第4號)" | ROC year 112 is unexplained; Arab reader needs 2023. | الحكم الدستوري رقم 4 لسنة 112 (2023؛ 112年憲判字第4號) |
+| 54 | P2 | C | columns-ar/007-taiwan-divorce-lawsuit-qna.md | "فقد تُطرح غرامة إدارية لا تجاوز 30,000 دولار تايواني" | تُطرح is “put forward”; imposing a fine is تُفرَض. Repeats in §3. | فقد تُفرَض غرامة إدارية لا تجاوز 30,000 دولار تايواني |
+| 55 | P2 | A | columns-ar/007-taiwan-divorce-lawsuit-qna.md | "أمور تتميز عن القرار المدني في السلطة الأبوية" | 親權 as “paternal power”; the FAQ already has the accurate gloss. | أمور تتميز عن القرار المدني في الولاية على الأبناء القصر (親權) |
+| 56 | P2 | C | columns-ar/008-taiwan-labor-severance-law.md | "هل الحصول على بدل إنهاء الخدمة في تايوان صعب إلى هذا الحد؟؟" | Double ؟؟ and “مرحبا، أنا المحامية” keep the Korean-blog opening. | قانون العمل في تايوان: متى يُستحق بدل إنهاء الخدمة (資遣費)؟ |
+| 57 | P2 | C | columns-ar/009-taiwan-voluntary-resignation-severance.md | "كما سبق البيان، ليس يسيرًا في تايوان أن يحصل الموظف على بدل إنهاء الخدمة" | “As stated above” points at a previous Korean-series post, not this page. | في تايوان، ليس من اليسير عامة أن يحصل الموظف على بدل إنهاء الخدمة (資遣費). |
+| 58 | P2 | B | columns-ar/009-taiwan-voluntary-resignation-severance.md | "يكون ''**الوقت**'' بالغ الأهمية." | Doubled English quotes around a bolded word; Arabic uses «الوقت» or "الوقت". | يكون «الوقت» بالغ الأهمية. |
+```
+=== end code=0 2026-09-21 16:37:17 ===

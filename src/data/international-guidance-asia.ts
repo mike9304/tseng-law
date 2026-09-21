@@ -520,7 +520,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
   languageLabel: 'Bahasa paparan',
   mega: {
     services: {
-      description: 'Firma mengendalikan kumpulan kerja utama menurut undang-undang Taiwan.',
+      description: 'Firma mengendalikan bidang amalan utama menurut undang-undang Taiwan.',
       viewAllLabel: 'Lihat semua',
     },
     columns: {
@@ -542,14 +542,14 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
   },
   notFoundTitle: 'Halaman tidak dijumpai',
   notFoundText:
-    'Halaman yang anda cari tidak wujud atau telah dipindahkan. anda boleh kembali ke laman utama bahasa Melayu untuk melihat maklumat yang ada.',
+    'Halaman yang anda cari tidak wujud atau telah dipindahkan. Anda boleh kembali ke laman utama bahasa Melayu untuk melihat maklumat yang ada.',
   backHomeLabel: 'Ke laman utama',
   readSourceLabel: 'Buka senarai rencana dalam bahasa asal',
   home: {
     heroScrollLabel: 'Tatal ke bawah',
     heroColumnsCtaLabel: 'Lihat rencana',
     servicesDetailLabel: 'Lihat butiran',
-    servicesAssistanceBefore: 'Jika tidak jelas kumpulan mana yang merangkumi hal anda, halaman ',
+    servicesAssistanceBefore: 'Jika tidak jelas bidang mana yang merangkumi hal anda, halaman ',
     servicesAssistanceLinkLabel: 'Hubungi',
     servicesAssistanceAfter:
       ' menerangkan bagaimana anda merumuskan ringkasan untuk disemak oleh peguam.',
@@ -559,7 +559,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
     columnsOriginalLanguageBadge: 'Bahasa asal',
     columnsOriginalLanguageNote:
       'Rencana berikut belum tersedia dalam bahasa Melayu. Senarai kekal dalam bahasa asal dan membuka halaman bahasa berkenaan; kandungannya tidak diterjemah secara automatik.',
-    imageBandAlt: 'Sanheyuan tradisional Taiwan (三合院) dan pavilion moden pada waktu siang',
+    imageBandAlt: 'Sanheyuan tradisional Taiwan (三合院) dan paviliun moden pada waktu siang',
     videoPauseLabel: 'Jeda video',
     videoPlayLabel: 'Mainkan video',
     videoReplayLabel: 'Mainkan semula video',
@@ -571,12 +571,12 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
       description:
         'Penjelasan am dalam bahasa Melayu tentang bidang kerja Hovering International Law Firm di Taiwan, bahasa perundingan, dan hubungan pertama.',
       intro:
-        'Hovering International Law Firm menemani klien dari luar negara, termasuk yang berkaitan dengan Taiwan, dalam hal menurut undang-undang Taiwan: pelaburan dan penubuhan syarikat, pertikaian sivil, perkahwinan, keluarga dan pusaka, buruh, jenayah dan harta intelek. Bahagian bahasa Melayu ini membantu anda melihat kerja mana yang termasuk dalam skop kami, apa yang perlu disediakan, dan bagaimana menghubungi kami. Ini ialah maklumat am, bukan nasihat undang-undang bagi kes anda sendiri.',
+        'Hovering International Law Firm membantu klien dari luar negara, termasuk yang berkaitan dengan Taiwan, dalam hal menurut undang-undang Taiwan: pelaburan dan penubuhan syarikat, pertikaian sivil, perkahwinan, keluarga dan pusaka, buruh, jenayah dan harta intelek. Halaman bahasa Melayu ini menerangkan kerja mana yang termasuk dalam skop kami, apa yang perlu disediakan, dan bagaimana menghubungi kami. Ini ialah maklumat am, bukan nasihat undang-undang bagi kes anda sendiri.',
       sections: [
         {
           heading: 'Apa yang kami lakukan',
           paragraphs: [
-            'Hovering International Law Firm ialah firma peguam yang ditubuhkan di Taiwan. Firma bekerja menurut undang-undang Taiwan dan mempunyai pejabat di Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) dan Pingtung (屏東). Kami menasihati syarikat, menjalankan prosedur di mahkamah, dan menemani klien dari luar negara melalui langkah yang diperlukan di Taiwan.',
+            'Hovering International Law Firm ialah firma peguam yang ditubuhkan di Taiwan. Firma bekerja menurut undang-undang Taiwan dan mempunyai pejabat di Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) dan Pingtung (屏東). Kami menasihati syarikat, menjalankan prosedur di mahkamah, dan membimbing klien dari luar negara melalui langkah yang diperlukan di Taiwan.',
             'Semua kandungan di sini bersifat am. Hasil suatu hal bergantung pada fakta, peraturan yang terpakai, dan masa. Maklumat ini tidak menggantikan perbualan dengan peguam tentang dokumen anda.',
           ],
         },
@@ -588,9 +588,9 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Kumpulan kerja',
+          heading: 'Bidang amalan',
           paragraphs: [
-            'Skop kerja merangkumi enam kumpulan berikut. Halaman Bidang kerja menerangkan setiap kumpulan dengan lebih lanjut dan menyatakan apa yang tidak dijanjikan.',
+            'Skop kerja merangkumi enam bidang berikut. Halaman Bidang kerja menerangkan setiap bidang dengan lebih lanjut dan menyatakan apa yang tidak dijanjikan.',
           ],
           items: [
             'Pelaburan dan penubuhan syarikat di Taiwan',
@@ -598,7 +598,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
             'Perkahwinan, keluarga dan pusaka',
             'Pertikaian buruh',
             'Hal jenayah',
-            'Harta intelek: cap dagangan, paten dan hak cipta',
+            'Harta intelek: tanda dagangan, paten dan hak cipta',
           ],
         },
         {
@@ -614,21 +614,21 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'BIDANG KERJA',
       title: 'Hal yang kami kendalikan',
       description:
-        'Enam kumpulan kerja firma di Taiwan dan batas yang anda perlu ketahui dahulu.',
+        'Enam bidang amalan firma di Taiwan dan batas yang anda perlu ketahui dahulu.',
       intro:
-        'Berikut ialah kumpulan yang kami kendalikan secara sebenar, dan soalan yang kerap timbul pada peringkat awal. Paparan ini membantu anda menilai sama ada hal anda termasuk dalam skop kami; ia bersifat am dan bukan analisis undang-undang bagi suatu urusan tunggal.',
+        'Berikut ialah bidang yang kami kendalikan secara sebenar, dan soalan yang kerap timbul pada peringkat awal. Paparan ini membantu anda menilai sama ada hal anda termasuk dalam skop kami; ia bersifat am dan bukan analisis undang-undang bagi suatu urusan tunggal.',
       sections: [
         {
           heading: 'Pelaburan dan penubuhan syarikat di Taiwan',
           paragraphs: [
-            'Kami menemani pelabur dan syarikat asing dalam penubuhan atau pengoperasian syarikat di Taiwan: pemilihan bentuk undang-undang, penyediaan dan penyerahan dokumen, modal masuk, urusan bank, semakan tempat operasi, serta keperluan khusus industri. Kami juga membantu perakaunan dan cukai yang timbul daripada penubuhan dan pengoperasian di Taiwan.',
+            'Kami membantu pelabur dan syarikat asing dalam penubuhan atau pengoperasian syarikat di Taiwan: pemilihan bentuk undang-undang, penyediaan dan penyerahan dokumen, modal masuk, urusan bank, semakan tempat operasi, serta keperluan khusus industri. Kami juga membantu perakaunan dan cukai yang timbul daripada penubuhan dan pengoperasian di Taiwan.',
             'Aliran dan tempoh berbeza mengikut bentuk undang-undang, pelabur, industri, bank dan dokumen yang ada. Penubuhan syarikat tidak dengan sendirinya membawa permit tinggal (居留) atau permit kerja (工作許可): itu prosedur berasingan yang dinilai menurut keadaan orang berkenaan.',
           ],
         },
         {
           heading: 'Hal sivil dan ganti rugi',
           paragraphs: [
-            'Kumpulan ini merangkumi pertikaian kontrak, ganti rugi daripada perbuatan salah, dan pertikaian pengguna. Kerja biasanya bermula dengan kronologi, semakan dokumen dan bukti yang ada, dan hanya kemudian langkah seterusnya.',
+            'Bidang ini merangkumi pertikaian kontrak, ganti rugi daripada perbuatan salah, dan pertikaian pengguna. Kerja biasanya bermula dengan kronologi, semakan dokumen dan bukti yang ada, dan hanya kemudian langkah seterusnya.',
             'Tempoh, termasuk tempoh saman berkanun, dan kelengkapan bukti membentuk perjalanan. Oleh itu nyatakan tarikh yang diketahui seawal mungkin. Simpan kontrak, mesej, resit bayaran atau foto keadaan di tempat, dan sebutkannya dalam mesej pertama.',
           ],
         },
@@ -642,28 +642,28 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Pertikaian buruh',
           paragraphs: [
-            'Kumpulan ini merangkumi penamatan hubungan pekerjaan, bayaran pemberhentian menurut undang-undang Taiwan (資遣費; tidak disamakan dengan institusi negara lain), upah, dan pertikaian daripada kontrak buruh (勞動契約), sama ada di pihak pekerja atau majikan. Semasa semakan kami memisahkan sebab penamatan daripada soalan notis, bayaran dan tempoh.',
+            'Bidang ini merangkumi penamatan hubungan pekerjaan, pampasan pemberhentian menurut undang-undang Taiwan (資遣費; jangan disamakan dengan skim atau peraturan negara lain), upah, dan pertikaian daripada kontrak buruh (勞動契約), sama ada di pihak pekerja atau majikan. Semasa semakan kami memisahkan sebab penamatan daripada soalan notis, bayaran dan tempoh.',
             'Kontrak buruh, peraturan kerja (工作規則), slip gaji dan surat-menyurat pihak biasanya dokumen yang menentukan. Jika anda masih menyimpannya, sebutkan dalam ringkasan.',
           ],
         },
         {
           heading: 'Hal jenayah',
           paragraphs: [
-            'Kami menemani dalam siasatan dan di mahkamah, bagi tertuduh atau terdakwa serta bagi orang yang tercedera, dan menilai risiko jenayah aktiviti perniagaan.',
+            'Kami mewakili klien dalam siasatan dan di mahkamah, bagi tertuduh atau terdakwa serta bagi orang yang tercedera, dan menilai risiko jenayah aktiviti perniagaan.',
             'Hal jenayah kerap mempunyai tempoh pendek dan peringkat yang ditetapkan. Jika anda sudah menerima surat daripada pihak pendakwaan atau mahkamah, nyatakan tarikh pada surat itu awal, supaya kandungannya disemak dalam urutan yang betul.',
           ],
         },
         {
           heading: 'Harta intelek',
           paragraphs: [
-            'Kami membantu pendaftaran cap dagangan (商標) dan paten (專利), hak cipta, dan pertikaian tentang hak ini di Taiwan.',
-            'Dalam kumpulan ini urutan langkah menentukan: skop perlindungan, masa pemfailan dan penggunaan sebenar mempengaruhi pilihan. Penyerahan permohonan tidak dengan sendirinya bermakna ia diluluskan.',
+            'Kami membantu pendaftaran tanda dagangan (商標) dan paten (專利), hak cipta, dan pertikaian tentang hak ini di Taiwan.',
+            'Dalam bidang ini urutan langkah menentukan: skop perlindungan, masa pemfailan dan penggunaan sebenar mempengaruhi pilihan. Penyerahan permohonan tidak dengan sendirinya bermakna ia diluluskan.',
           ],
         },
         {
           heading: 'Skop dan pengesahannya',
           paragraphs: [
-            'Firma bekerja menurut undang-undang Taiwan dan mengendalikan hal dalam kumpulan di atas. Skop setiap hal disahkan secara berasingan selepas peguam menyemak mesej anda.',
+            'Firma bekerja menurut undang-undang Taiwan dan mengendalikan hal dalam bidang di atas. Skop setiap hal disahkan secara berasingan selepas peguam menyemak mesej anda.',
             'Status tinggal, permit kerja dan soalan sebanding dinilai daripada dokumen dan keadaan orang berkenaan, bukan daripada kewarganegaraan. Jika sebahagian hal anda menyentuh soalan demikian, nyatakan semasa menghubungi. Halaman ini tidak menjanjikan hasil mahupun tempoh jawapan.',
           ],
         },
@@ -688,8 +688,8 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kerja dengan pihak asing',
           paragraphs: [
-            'Kerja merentas sempadan merangkumi penubuhan syarikat, visa, pemfailan cap dagangan dan paten, semakan risiko undang-undang, dan nasihat cukai syarikat. Pejabat Taichung khususnya mengendalikan hal pembinaan, harta intelek, dan hal yang berkaitan dengan Korea dan Jepun. Peguam Wei Tseng (曾雋崴) menemani klien dari Korea, Jepun dan klien antarabangsa lain dalam kumpulan tersebut.',
-            'Sama ada kami dapat menerima suatu hal bergantung pada kandungan dan bahasa komunikasi. Jika hal anda termasuk dalam kumpulan tersebut dan boleh dibincangkan dalam salah satu daripada empat bahasa perundingan, anda boleh menghantar ringkasan untuk disemak.',
+            'Kerja merentas sempadan merangkumi penubuhan syarikat, visa, pemfailan tanda dagangan dan paten, semakan risiko undang-undang, dan nasihat cukai syarikat. Pejabat Taichung khususnya mengendalikan hal pembinaan, harta intelek, dan hal yang berkaitan dengan Korea dan Jepun. Peguam Wei Tseng (曾雋崴) mewakili klien dari Korea, Jepun dan klien antarabangsa lain dalam bidang tersebut.',
+            'Sama ada kami dapat menerima suatu hal bergantung pada kandungan dan bahasa komunikasi. Jika hal anda termasuk dalam bidang tersebut dan boleh dibincangkan dalam salah satu daripada empat bahasa perundingan, anda boleh menghantar ringkasan untuk disemak.',
           ],
         },
         {
@@ -704,7 +704,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'PEGUAM',
       title: 'Pasukan antarabangsa Hovering',
-      description: 'Profil peguam, pengurusan operasi dan perakaunan rakan kongsi Hovering.',
+      description: 'Profil peguam, pengurusan operasi dan akauntan rakan kongsi Hovering.',
       intro: '',
       sections: [],
     },
@@ -712,7 +712,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'SKOP DAN KOS',
       title: 'Bagaimana skop kerja dan kos ditetapkan',
       description:
-        'Penjelasan urutan: dahulu skop kerja, kemudian pengesahan kos, dan mengapa halaman ini tidak mengandungi senarai harga.',
+        'Penjelasan urutan: dahulu skop kerja, kemudian pengesahan kos, dan mengapa halaman ini tidak menyiarkan jadual yuran.',
       intro:
         'Halaman ini menerangkan bagaimana kos ditetapkan, bukan jumlahnya. Jumlah bergantung pada skop kerja hal berkenaan dan hanya bermakna apabila skop itu jelas.',
       sections: [
@@ -738,7 +738,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Mengapa halaman ini tidak menyebut tarif',
+          heading: 'Mengapa halaman ini tidak menyebut jadual yuran',
           paragraphs: [
             'Kos bergantung pada hal itu sendiri: usaha, bilangan pihak, dokumen, tempoh, dan sama ada prosedur sudah berjalan. Angka yang ditetapkan lebih awal tidak akan menunjukkan kos bagi urusan anda. Oleh itu kami menetapkan skop kerja dahulu, kemudian memaklumkan kos kepada anda sebelum kerja bermula.',
             'Selain yuran peguam, kos mahkamah, pihak berkuasa atau pihak ketiga boleh timbul. Ini berasingan daripada yuran dan bergantung pada prosedur berkenaan.',
@@ -761,14 +761,14 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
           ],
           items: [
             'Bahasa halaman: Maklumat ini ditulis dalam bahasa Melayu.',
-            'Bahasa perundingan: Perundingan dijalankan dalam bahasa Inggeris, Cina (中文), Jepun dan Korea.',
-            'Bahasa tulisan anda: anda boleh menulis ringkasan dalam bahasa anda sendiri; teks asal disimpan tanpa diubah.',
+            'Bahasa perundingan: Perundingan hanya dijalankan dalam bahasa Inggeris, Cina (中文), Jepun dan Korea.',
+            'Bahasa tulisan anda: Anda boleh menulis ringkasan dalam bahasa anda sendiri; teks asal disimpan tanpa diubah.',
           ],
         },
         {
           heading: 'Jika anda tidak dapat menggunakan mana-mana daripada empat bahasa perundingan',
           paragraphs: [
-            'Dalam borang hubungan anda boleh memilih “Cara berkomunikasi mesti disahkan”. Kami menjawab untuk meneliti cara berkomunikasi yang boleh digunakan jika ada cara yang boleh digunakan; perkhidmatan dalam bahasa lain tidak dijanjikan dan tempoh jawapan tidak dijanjikan.',
+            'Dalam borang pertanyaan anda boleh memilih “Cara berkomunikasi mesti disahkan”. Kami menjawab untuk meneliti sama ada terdapat cara berkomunikasi yang boleh digunakan; perkhidmatan dalam bahasa lain tidak dijanjikan dan tempoh jawapan tidak dijanjikan.',
             'Ini hanya langkah semakan, bukan janji. Kami tidak menjanjikan jurubahasa, tidak menjanjikan perkhidmatan dalam bahasa Melayu atau bahasa lain di luar empat bahasa tersebut, dan tidak menjanjikan bahawa kami menerima setiap hal.',
           ],
         },
@@ -805,9 +805,9 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
       ],
       faqs: [
         {
-          question: 'Hal apa yang dikendalikan oleh firma?',
+          question: 'Apakah hal yang dikendalikan oleh firma?',
           answer:
-            'Kami mengendalikan enam kumpulan: pelaburan dan penubuhan syarikat di Taiwan, hal sivil dan ganti rugi, perkahwinan, keluarga dan pusaka, pertikaian buruh, hal jenayah dan harta intelek. Sama ada suatu hal diterima diputuskan selepas kandungan disemak.',
+            'Kami mengendalikan enam bidang: pelaburan dan penubuhan syarikat di Taiwan, hal sivil dan ganti rugi, perkahwinan, keluarga dan pusaka, pertikaian buruh, hal jenayah dan harta intelek. Sama ada suatu hal diterima diputuskan selepas kandungan disemak.',
         },
         {
           question: 'Apa yang patut saya sediakan sebelum menghubungi?',
@@ -825,7 +825,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
             'Apabila menghantar permintaan, pilih “Cara berkomunikasi mesti disahkan”. Kami menjawab untuk meneliti cara berkomunikasi, tetapi perkhidmatan dalam bahasa lain tidak dijanjikan. Ini langkah semakan, bukan janji bahawa kami dapat bekerja dalam bahasa lain.',
         },
         {
-          question: 'Bagaimana teks bahasa Melayu saya dilayan?',
+          question: 'Bagaimana teks bahasa Melayu saya diuruskan?',
           answer:
             'Teks asal yang anda tulis disimpan sebagaimana adanya, dan tidak diterjemah secara automatik. Jika perlu, bahasa komunikasi seterusnya disahkan bersama anda.',
         },
@@ -848,14 +848,14 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
     },
     privacy: {
       eyebrow: 'PRIVASI',
-      title: 'Data yang dikumpul melalui borang hubungan',
+      title: 'Data yang dikumpul melalui borang pertanyaan',
       description:
-        'Apa yang borang hubungan dalam bahagian bahasa Melayu ini kumpul, bagaimana teks asal dilayan, dan bagaimana anda menghubungi kami tentang data anda.',
+        'Apa yang dikumpulkan oleh borang pertanyaan dalam halaman bahasa Melayu ini, bagaimana teks asal diuruskan, dan bagaimana anda menghubungi kami tentang data anda.',
       intro:
-        'Bahagian ini hanya merangkumi borang hubungan pada halaman maklumat ini. Ia menerangkan pengendalian data, bukan jaminan teknikal.',
+        'Bahagian ini hanya merangkumi borang pertanyaan pada halaman maklumat ini. Ia menerangkan pengendalian data, bukan jaminan teknikal.',
       sections: [
         {
-          heading: 'Data apa yang dikumpul',
+          heading: 'Apakah data yang dikumpul',
           paragraphs: [
             'Apabila anda menghantar permintaan melalui borang dalam bahagian ini, maklumat berikut dicatat:',
           ],
@@ -901,14 +901,14 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Hak anda dan cara menghubungi',
           paragraphs: [
-            'anda boleh meminta maklumat, pembetulan atau penghapusan data anda, atau menarik balik persetujuan, melalui alamat e-mel yang dinyatakan pada halaman hubungan. Jika wujud kewajipan simpanan menurut undang-undang atau prosedur, kami menerangkan batasannya.',
+            'Anda boleh meminta maklumat, pembetulan atau penghapusan data anda, atau menarik balik persetujuan, melalui alamat e-mel yang dinyatakan pada halaman hubungan. Jika wujud kewajipan simpanan menurut undang-undang atau prosedur, kami menerangkan batasannya.',
             'Halaman ini tidak menyebut tempoh simpanan yang tetap, kerana tempoh sebenar bergantung pada sama ada hal diteruskan dan pada kewajipan yang berkaitan. Jika anda mahu penghapusan lebih awal, nyatakan semasa menghubungi.',
           ],
         },
         {
           heading: 'Tempat simpanan dan pembekal perkhidmatan',
           paragraphs: [
-            'Laman web ini dihoskan di Vercel, dan penghantaran anda disimpan dalam storan objek bukan awam perkhidmatan itu. E-mel dihantar melalui perkhidmatan e-mel yang digunakan oleh firma.',
+            'Laman web ini dihoskan di Vercel, dan penghantaran anda disimpan dalam storan bukan awam perkhidmatan itu. E-mel dihantar melalui perkhidmatan e-mel yang digunakan oleh firma.',
             'Pelayan pembekal individu boleh berada di luar Taiwan, jadi data anda boleh disimpan dan diproses di situ. Apabila tujuan simpanan selesai, data dihapuskan tanpa kelewatan; data yang mesti disimpan menurut peraturan yang terpakai kekal untuk tempoh itu. Pertanyaan tentang data peribadi diterima di wei@hoveringlaw.com.tw.',
           ],
         },
@@ -932,22 +932,22 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Skop undang-undang yang terpakai',
           paragraphs: [
-            'Firma mengamalkan menurut undang-undang Taiwan, dan halaman ini hanya berbicara tentang kerja dalam rangka itu.',
-            'Kandungan bukan nasihat menurut undang-undang suatu bidang kuasa selain Taiwan, termasuk undang-undang tempat anda tinggal. Jika sebahagian hal anda menyentuh bidang kuasa lain, kami jelaskan bersama anda profesional berkelayakan mana yang diperlukan bagi bahagian itu.',
+            'Firma beramal di bawah undang-undang Taiwan, dan halaman ini hanya bercakap tentang kerja dalam rangka itu.',
+            'Kandungan bukan nasihat menurut undang-undang suatu bidang kuasa selain Taiwan, termasuk undang-undang tempat anda tinggal. Jika sebahagian hal anda menyentuh bidang kuasa lain, kami jelaskan bersama anda pakar berkelayakan yang diperlukan bagi bahagian itu.',
           ],
         },
         {
           heading: 'Hubungan antara peguam dan klien tidak timbul dengan sendirinya',
           paragraphs: [
             'Membaca halaman ini, menghantar borang atau e-mel dengan sendirinya tidak mewujudkan hubungan antara peguam dan klien.',
-            'Hubungan ini timbul hanya selepas hal disemak dan kedua-dua pihak mengesahkan penerimaan kerja.',
+            'Hubungan ini timbul hanya selepas hal disemak dan kedua-dua pihak mengesahkan secara bertulis bahawa firma menerima kes itu.',
           ],
         },
         {
           heading: 'Tiada janji hasil',
           paragraphs: [
             'Tiada bahagian halaman ini merupakan janji tentang hasil suatu hal, kelulusan permohonan, atau status tinggal dan kerja.',
-            'Pautan luaran adalah untuk orientasi; kami tidak menjanjikan ketepatan mahupun kemas kini kandungan pihak ketiga.',
+            'Pautan luaran adalah untuk rujukan; kami tidak menjanjikan ketepatan mahupun kemas kini kandungan pihak ketiga.',
           ],
         },
       ],

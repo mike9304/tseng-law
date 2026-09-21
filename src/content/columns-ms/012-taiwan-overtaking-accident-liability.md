@@ -23,11 +23,11 @@ Perkara 101 melarang pemotongan pada bahagian yang dilengkapi papan tanda yang m
 
 Selain itu, anda tidak boleh memotong di tempat atau bahagian yang dilengkapi papan tanda sekolah atau hospital, di tempat yang dilengkapi papan tanda atau tanda lain larangan memotong, apabila kenderaan menghampiri dari arah bertentangan, mahupun apabila 2 kenderaan atau lebih bergerak satu di belakang yang lain di hadapan anda.
 
-Untuk memotong kenderaan di hadapan pada lorong yang sama, pemandu kenderaan di belakang mesti dahulu membunyikan hon 2 kali secara singkat atau membuat isyarat lampu. Hon dan lampu tidak boleh digunakan secara berulang untuk memaksa kenderaan di hadapan menyerahkan lorong.
+Untuk memotong kenderaan di hadapan pada lorong yang sama, pemandu kenderaan di belakang mesti dahulu membunyikan hon dua kali secara singkat atau mengerdipkan lampu besar sekali. Hon dan lampu tidak boleh digunakan secara berulang untuk memaksa kenderaan di hadapan menyerahkan lorong.
 
 Kenderaan di belakang hanya boleh memotong selepas kenderaan di hadapan memperlahankan dan menyisih, atau telah menyatakan kehendaknya untuk menyerahkan laluan melalui isyarat tangan atau isyarat belok kanan.
 
-Kemudian, kenderaan yang memotong mesti menyalakan isyarat belok kiri, lalu di kiri sambil mengekalkan jarak sekurang-kurangnya 0,5 meter berbanding kenderaan di hadapan dan, jarak selamat sekali dijamin, menyalakan isyarat belok kanan dan kembali dengan selamat ke lorong asal.
+Kemudian, kenderaan yang memotong mesti menyalakan isyarat belok kiri, lalu di kiri sambil mengekalkan jarak sekurang-kurangnya 0.5 meter berbanding kenderaan di hadapan dan, jarak selamat sekali dijamin, menyalakan isyarat belok kanan dan kembali dengan selamat ke lorong asal.
 
 Urutan isyarat dan penyerahan pada lorong yang sama ini tidak bermakna bahawa pemotongan dibenarkan di tempat atau dalam syarat yang dilarang. Sebelum memulakan pemotongan, semua syarat perkara 101 mesti dinilai bersama.
 
@@ -41,17 +41,17 @@ A cuba memotong 2 kenderaan, masuk ke lorong bertentangan dan memecut. Kenderaan
 
 B mengalami kecederaan berat di kepala dan meninggal di tempat; A hilang kesedaran dan dihantar ke hospital.
 
-Keluarga A dan B melihat dahulu pertukaran lorong secara tiba-tiba kenderaan nombor 2 sebagai punca utama perlanggaran. Kes membawa kepada perbicaraan dan, semasa tatacara, beberapa kepakaran (鑑定) kemalangan dijalankan.
+Keluarga A dan B melihat dahulu pertukaran lorong secara tiba-tiba kenderaan nombor 2 sebagai punca utama perlanggaran. Kes membawa kepada perbicaraan dan, semasa tatacara, beberapa penilaian pakar (鑑定) kemalangan dijalankan.
 
-Menurut hasil kepakaran, A menanggung tanggungjawab utama perlanggaran ini. Kesimpulan ini terhad kepada fakta kes ini. Kepakaran mengambil kira bersama hakikat bahawa A ingin memotong 2 kenderaan di hadapan yang bergerak satu di belakang yang lain, bahawa ia masuk ke lorong bertentangan, bahawa ia bergerak pada kelajuan yang hampir tidak meninggalkan ruang brek, bahawa isyarat hon dan lampu yang ditetapkan tidak ada, serta pergerakan pertukaran lorong kenderaan nombor 2, struktur jalan dan lorong dan bukti lain yang dikumpulkan.
+Menurut hasil penilaian pakar, A menanggung tanggungjawab utama perlanggaran ini. Kesimpulan ini terhad kepada fakta kes ini. Kepakaran mengambil kira bersama hakikat bahawa A ingin memotong 2 kenderaan di hadapan yang bergerak satu di belakang yang lain, bahawa ia masuk ke lorong bertentangan, bahawa ia bergerak pada kelajuan yang hampir tidak meninggalkan ruang brek, bahawa isyarat hon dan lampu yang ditetapkan tidak ada, serta pergerakan pertukaran lorong kenderaan nombor 2, struktur jalan dan lorong dan bukti lain yang dikumpulkan.
 
-Bahawa, dalam sesetengah kes, hasil kepakaran sedemikian berlaku tidak bermakna bahawa satu peninggalan isyarat yang ditetapkan sentiasa menetapkan tanggungjawab. Kecuaian (過失) dalam kemalangan memotong bergantung pada tempat kemalangan, konfigurasi lorong, kelajuan, pergerakan kenderaan, isyarat, selang masa, penglihatan dan bukti lain.
+Bahawa, dalam sesetengah kes, hasil penilaian pakar sedemikian berlaku tidak bermakna bahawa satu peninggalan isyarat yang ditetapkan sentiasa menetapkan tanggungjawab. Kecuaian (過失) dalam kemalangan memotong bergantung pada tempat kemalangan, konfigurasi lorong, kelajuan, pergerakan kenderaan, isyarat, selang masa, penglihatan dan bukti lain.
 
 ## Titik yang perlu disahkan untuk menilai tanggungjawab kemalangan
 
 Sebelum memotong, anda mesti dahulu mengesahkan sama ada tempat atau keadaan lalu lintas masuk ke dalam larangan memotong. Jika prosedur lorong yang sama terpakai, berikan isyarat hon atau lampu yang ditetapkan, tanpa memaksa kenderaan di hadapan menyerah, tunggu isyarat penyerahan yang jelas dan selesaikan pemotongan dengan jarak yang mencukupi dan jarak kembali yang selamat.
 
-Pematuhan perkara 101 penting, tetapi ia tidak memastikan dengan sendirinya pengelakan kemalangan mahupun hasil kepakaran atau perbicaraan kemudian. Pemandu mesti menempah ruang keselamatan tambahan dan menyesuaikan diri dengan keadaan di hadapan mereka.
+Pematuhan perkara 101 penting, tetapi ia tidak memastikan dengan sendirinya pengelakan kemalangan mahupun hasil penilaian pakar atau perbicaraan kemudian. Pemandu mesti menyediakan ruang keselamatan tambahan dan menyesuaikan diri dengan keadaan di hadapan mereka.
 
 Sebagai pelengkap, anda boleh merujuk [ilustrasi peraturan dan prosedur memotong](https://gonews.com.tw/car/daily/21934/). Kerana ini sumber sekunder, semasa pengesahan syarat undang-undang, sesuai juga membaca peraturan rasmi yang berkuat kuasa.
 
@@ -62,4 +62,4 @@ Sebagai pelengkap, anda boleh merujuk [ilustrasi peraturan dan prosedur memotong
 > - [Pasukan antarabangsa Hovering](/ms/lawyers)
 > - [Prosedur rawatan kemalangan lalu lintas di Taiwan](/ms/columns/taiwan-traffic-accident-procedure)
 
-Teks ini ialah maklumat undang-undang umum mengenai peraturan memotong dan penilaian tanggungjawab kemalangan di Taiwan; ia tidak merupakan nasihat untuk kes konkret mahupun janji mengenai hasil tertentu. Tanggungjawab sebenar boleh berbeza menurut tempat kemalangan, pergerakan kenderaan, kelajuan, isyarat, bukti, kepakaran (鑑定) dan undang-undang yang berkuat kuasa; kes konkret mesti diteliti secara berasingan daripada dokumen berkenaan.
+Teks ini ialah maklumat undang-undang umum mengenai peraturan memotong dan penilaian tanggungjawab kemalangan di Taiwan; ia tidak merupakan nasihat untuk kes konkret mahupun janji mengenai hasil tertentu. Tanggungjawab sebenar boleh berbeza menurut tempat kemalangan, pergerakan kenderaan, kelajuan, isyarat, bukti, penilaian pakar (鑑定) dan undang-undang yang berkuat kuasa; kes konkret mesti diteliti secara berasingan daripada dokumen berkenaan.

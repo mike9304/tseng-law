@@ -794,9 +794,9 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Perundingan hanya dijalankan dalam empat bahasa: Inggeris, Cina (中文), Jepun dan Korea.',
     methodConfirmationNotice:
-      'Jika anda tidak dapat menggunakan mana-mana daripada empat bahasa itu, pilih “Cara berkomunikasi mesti disahkan”. Kami menjawab untuk meneliti cara berkomunikasi yang boleh digunakan jika ada cara yang boleh digunakan; perkhidmatan dalam bahasa lain tidak dijanjikan dan tempoh jawapan tidak dijanjikan.',
+      'Jika anda tidak dapat menggunakan mana-mana daripada empat bahasa itu, pilih “Cara berkomunikasi mesti disahkan”. Kami menjawab untuk meneliti sama ada terdapat cara berkomunikasi yang boleh digunakan; perkhidmatan dalam bahasa lain tidak dijanjikan dan tempoh jawapan tidak dijanjikan.',
     preparationNotice:
-      'anda boleh menulis ringkasan hal anda dalam bahasa anda sendiri. Teks asal disimpan sebagaimana anda menulisnya dan tidak diterjemah secara automatik.',
+      'Anda boleh menulis ringkasan hal anda dalam bahasa anda sendiri. Teks asal disimpan sebagaimana anda menulisnya dan tidak diterjemah secara automatik.',
     heading: 'Hantar permintaan perundingan',
     intro:
       'Terangkan hal anda secara ringkas. Seorang peguam menyemak kandungan sebelum langkah seterusnya dibincangkan.',

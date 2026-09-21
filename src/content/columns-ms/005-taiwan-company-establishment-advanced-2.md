@@ -21,19 +21,19 @@ Mereka yang telah membaca [Penubuhan syarikat di Taiwan – asas](/ms/columns/ta
 
 ​
 
-Soalan dan jawapan (Q&A) berikut bertujuan membantu orang yang mempertimbangkan penubuhan syarikat (公司設立) di Taiwan.
+Soalan dan jawapan berikut bertujuan membantu orang yang mempertimbangkan penubuhan syarikat (公司設立) di Taiwan.
 
 ​
 
-**1. Apabila memindahkan modal (資本額) dari Korea ke akaun persediaan syarikat Taiwan (公司籌備處帳戶), apa yang perlu diberi perhatian? (perkara ini menyangkut rejim Korea dan amalan bank Korea)**
+**1. Apabila memindahkan modal (資本額) dari luar negara ke akaun persediaan syarikat Taiwan (公司籌備處帳戶), apa yang perlu diberi perhatian? (contoh di bawah menggunakan rejim dan amalan bank Korea; peraturan negara asal pelabur lain mesti disemak secara berasingan)**
 
 Pada umumnya, bank di Korea menuntut bahawa pelabur datang **secara peribadi** ke bank di Korea dan memindahkan dana dari akaun atas namanya sendiri.
 
 Pindahan melalui bank dalam talian atau melalui saudara di Korea tidak mungkin.
 
-Selain itu, selaras dengan peraturan Korea mengenai kawalan pertukaran, orang berwarganegara Korea yang menubuhkan badan undang-undang asing atau memperoleh bahagian mesti memfailkan «pengisytiharan pelaburan langsung ke luar negara». Pengisytiharan mesti didaftarkan pada saat pindahan modal kepada badan undang-undang Taiwan (台灣法人); jika tidak, sanksi kerana pelanggaran peraturan pertukaran boleh terpakai.
+Selain itu, selaras dengan peraturan Korea mengenai kawalan pertukaran, orang berwarganegara Korea yang menubuhkan badan undang-undang asing atau memperoleh bahagian mesti memfailkan “pengisytiharan pelaburan langsung ke luar negara”. Pengisytiharan mesti didaftarkan pada saat pindahan modal kepada badan undang-undang Taiwan (台灣法人); jika tidak, sanksi kerana pelanggaran peraturan pertukaran boleh terpakai.
 
-Sebelum memindahkan modal (資本金匯款), tanyakan kepada bank utama anda di Korea.
+Sebelum memindahkan modal (資本金匯款), tanyakan kepada bank utama anda di negara asal anda.
 
 **​**
 
@@ -45,7 +45,7 @@ Jika contohnya pendapatan gaji yang diperoleh di Taiwan, perlu dikemukakan salin
 
 Jika dividen dan keuntungan daripada pelaburan dalam perniagaan di Taiwan, perlu dikemukakan salinan perakuan potongan di punca ke atas dividen dan keuntungan itu (股息和紅利的扣繳憑單影本).
 
-Jika pindahan dilakukan dari akaun bank di Korea, tidak perlu menyertakan dokumen mengenai punca dana.
+Jika pindahan dilakukan dari akaun bank di luar negara, tidak perlu menyertakan dokumen mengenai punca dana.
 
 **​**
 
@@ -67,17 +67,17 @@ Sesetengah bank boleh mengenakan keperluan tambahan, contohnya tempoh penggunaan
 
 **​**
 
-**5. Bolehkah syarikat menggaji orang berwarganegara Korea sebagai pekerja?**
+**5. Bolehkah syarikat menggaji pekerja warganegara asing?**
 
-A. Pekerja pertama: permohonan dikemukakan sebagai kerja pengurusan dalam perniagaan pelaburan biasa orang Cina luar negara atau orang asing (一般僑外投資事業主管工作). Kriteria «kerja bersifat khusus atau teknikal» pada titik B di bawah tidak terpakai, tetapi terpakai syarat penerima, khususnya pengurus (經理人) syarikat yang modal orang Cina luar negara atau orang asing melebihi 1/3, serta syarat prestasi majikan mengenai modal dan perolehan (perkara 38 dan 39 standard semakan).
+A. Pekerja pertama: permohonan dikemukakan sebagai kerja pengurusan dalam perniagaan pelaburan biasa orang Cina luar negara atau orang asing (一般僑外投資事業主管工作). Kriteria “kerja bersifat khusus atau teknikal” pada titik B di bawah tidak terpakai, tetapi terpakai syarat penerima, khususnya pengurus (經理人) syarikat yang modal orang Cina luar negara atau orang asing melebihi 1/3, serta syarat prestasi majikan mengenai modal dan perolehan (perkara 38 dan 39 standard semakan).
 
-B. Mulai pekerja berikutnya, terdapat had: jika bilangan pekerja yang digaji melebihi 1 orang, pendidikan dan pengalaman relevan pekerja, peraturan upah purata penggajian serta peraturan modal dan perolehan syarikat dirawat selaras dengan «kerja khusus atau teknikal» (專門性或技術性工作).
+B. Mulai pekerja berikutnya, terdapat had: jika bilangan pekerja yang digaji melebihi 1 orang, pendidikan dan pengalaman relevan pekerja, peraturan upah purata penggajian serta peraturan modal dan perolehan syarikat dirawat selaras dengan “kerja khusus atau teknikal” (專門性或技術性工作).
 
-Rujuk tapak kementerian Buruh Taiwan (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
+Rujuk tapak Kementerian Buruh Taiwan (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 
 ​
 
-Jika anda mempunyai soalan lain, anda boleh menghubungi kami pada bila-bila masa.
+Jika anda mempunyai soalan lain, anda boleh menghantar pertanyaan melalui halaman Hubungi; tempoh jawapan tidak dijanjikan.
 
 ---
 

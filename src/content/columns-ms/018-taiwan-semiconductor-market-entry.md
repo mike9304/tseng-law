@@ -19,7 +19,7 @@ faq:
 
 ![Foto editorial untuk menilai struktur masuk ke Taiwan syarikat semikonduktor](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
-Apabila operasi dengan pelanggan Taiwan bermula, pejabat utama di luar negara boleh menerima pelbagai keperluan: merawat sebut harga dan kontrak di Taiwan, memegang stok penggantian kecemasan atau menempatkan kakitangan pemasangan dan penyelenggaraan. Maka mudah untuk bertanya dahulu: « Cukupkah menubuhkan syarikat di Taiwan untuk menyelesaikannya? »
+Apabila operasi dengan pelanggan Taiwan bermula, pejabat utama di luar negara boleh menerima pelbagai keperluan: merawat sebut harga dan kontrak di Taiwan, memegang stok penggantian kecemasan atau menempatkan kakitangan pemasangan dan penyelenggaraan. Maka mudah untuk bertanya dahulu: “Cukupkah menubuhkan syarikat di Taiwan untuk menyelesaikannya?”
 
 Yang perlu dijelaskan dahulu ialah siapa mengurus apa di Taiwan. Struktur yang dinilai berubah menurut sama ada pejabat utama asing terus menandatangani kontrak jualan, sama ada syarikat Taiwan membeli dan menjual semula, atau sama ada kakitangan tempatan hanya menyediakan sokongan teknikal.
 
@@ -27,7 +27,7 @@ Teks ini ialah penjelasan umum bagi syarikat asing bahan, komponen dan peralatan
 
 ## 1. Jelaskan pembahagian operasi dan perdagangan sebelum memilih bentuk pendaftaran
 
-Andaikan pengeluar asing komponen ketepatan menjual kepada pelanggan Taiwan. Pada permulaan pejabat utama menghantar terus, tetapi pelanggan meminta menyimpan alat ganti di Taiwan dan sokongan jurutera di tempat. Alamat semata-mata tidak mencukupi: perlu subjek yang boleh menjual, mengimport, menyimpan, menggaji, menyediakan sokongan teknikal dan menanggung tanggungjawab.
+Andaikan pengeluar asing komponen ketepatan menjual kepada pelanggan Taiwan. Pada permulaan pejabat utama menghantar terus, tetapi pelanggan meminta menyimpan alat ganti di Taiwan dan sokongan jurutera di tempat. Alamat semata-mata tidak mencukupi: perlu pihak yang boleh menjual, mengimport, menyimpan, menggaji, menyediakan sokongan teknikal dan menanggung tanggungjawab.
 
 Sebelum memutuskan struktur masuk, pejabat utama boleh menjelaskan secara dalaman:
 
@@ -38,7 +38,7 @@ Sebelum memutuskan struktur masuk, pejabat utama boleh menjelaskan secara dalama
 | Barang dan stok | Siapa mengimport, memegang dan mengurus stok, serta merawat pemulangan dan penggantian? |
 | Kakitangan | Adakah pekerja pejabat utama berpindah, adakah diambil kerja di Taiwan atau adakah kerja diserahkan kepada penyedia luaran? |
 | Pemasangan dan sokongan teknikal | Siapa mesti memberikan sokongan kepada pelanggan dan merawat masalah kerja di tempat? |
-| Kutipan dan kos | Siapa mengebil dan mengutip, dan bagaimana dilikuidasi kos antara pejabat utama dan organisasi di Taiwan? |
+| Kutipan dan kos | Siapa mengebil dan mengutip, dan bagaimana dikira kos antara pejabat utama dan organisasi di Taiwan? |
 | Kualiti dan pertikaian | Siapa mengesahkan hasil pemeriksaan dan menerima aduan kecacatan atau kerosakan? |
 
 Khususnya jika penjual kontrak jualan bukan syarikat yang menyediakan sokongan teknikal, dokumen mesti membezakan daripada siapa pelanggan boleh menuntut kewajipan apa.
@@ -51,7 +51,7 @@ Perbezaan utama antara anak syarikat Taiwan dan cawangan Taiwan syarikat asing i
 
 | Struktur | Perbezaan asas | Apa yang perlu disahkan dahulu |
 |---|---|---|
-| Anak syarikat Taiwan | Ia ditubuhkan menurut undang-undang Taiwan, dengan personaliti undang-undang sendiri, dan ialah subjek undang-undang yang berasingan daripada syarikat induk asing. | Kerana anak syarikat ialah badan undang-undang bebas, perlu disahkan bagaimana disusun bekalan, perkhidmatan, lesen teknologi dan pembahagian kos dengan syarikat induk. |
+| Anak syarikat Taiwan | Ia ditubuhkan menurut undang-undang Taiwan, dengan personaliti undang-undang sendiri, dan ialah entiti undang-undang yang berasingan daripada syarikat induk asing. | Kerana anak syarikat ialah badan undang-undang bebas, perlu disahkan bagaimana disusun bekalan, perkhidmatan, lesen teknologi dan pembahagian kos dengan syarikat induk. |
 | Cawangan Taiwan syarikat asing | Cawangan yang didaftarkan secara sah di Taiwan, tanpa personaliti undang-undang yang berasingan daripada pejabat utama, berbeza daripada anak syarikat yang ditubuhkan secara berasingan. | Cawangan ialah bahagian pejabat utama asing, bukan badan undang-undang bebas, sehingga pejabat utama menanggung kewajipan secara langsung. Sahkan skop kuasa wakil cawangan dan pembahagian dalaman kontrak luaran, penghantaran, liputan kecacatan dan perkhidmatan selepas jualan. |
 | Pejabat perwakilan di Taiwan | Titik perniagaan yang didaftarkan menurut perkara 386 undang-undang syarikat; ia tidak boleh menjalankan aktiviti perniagaan di Taiwan. | Kerana ia tidak boleh menjalankan aktiviti perniagaan, sahkan sama ada aktiviti sebenar kekal dalam bidang yang dibenarkan. |
 
@@ -61,25 +61,25 @@ Jika anda memutuskan menubuhkan badan undang-undang bebas di Taiwan, perlu juga 
 
 ### Syarikat liabiliti terhad (有限公司): tadbir urus lebih mudah, tetapi pindahan bahagian lebih tertutup
 
-Ia boleh dibentuk dengan 1 atau beberapa orang fizikal, atau dengan rakan kongsi badan undang-undang Taiwan atau asing; rakan kongsi menjawab, pada prinsipnya, sehingga jumlah sumbangan mereka. Syarikat mempunyai 1 hingga 3 pentadbir, dipilih antara rakan kongsi. Rakan kongsi yang tidak melaksanakan perdagangan boleh menjalankan hak pengawasan, tanpa keperluan pemeriksa yang berasingan. Kecuali peruntukan statutori sebaliknya, setiap rakan kongsi mempunyai 1 undi, sehingga kawalan tidak mesti bertepatan dengan nisbah sumbangan. Pindahan sumbangan rakan kongsi biasa menuntut, pada prinsipnya, persetujuan lebih daripada 1/2 hak undi yang lain; bagi pentadbir, dua pertiga atau lebih. Ini lebih sesuai kepada hubungan rakan kongsi yang mudah dan kawalan yang stabil daripada pengumpulan modal yang kerap atau perundingan bahagian. Kemudian, ia boleh ditukar menjadi syarikat saham (股份有限公司).
+Ia boleh dibentuk dengan 1 atau beberapa orang perseorangan, atau dengan pemegang saham badan undang-undang Taiwan atau asing; pemegang saham bertanggungjawab, pada prinsipnya, sehingga jumlah sumbangan mereka. Syarikat mempunyai 1 hingga 3 pengarah, dipilih antara pemegang saham. Pemegang saham yang tidak melaksanakan perdagangan boleh menjalankan hak pengawasan, tanpa keperluan penyelia syarikat (監察人) yang berasingan. Kecuali peruntukan statutori sebaliknya, setiap pemegang saham mempunyai 1 undi, sehingga kawalan tidak mesti bertepatan dengan nisbah sumbangan. Pindahan sumbangan pemegang saham biasa menuntut, pada prinsipnya, persetujuan lebih daripada 1/2 hak undi yang lain; bagi pengarah, dua pertiga atau lebih. Ini lebih sesuai kepada hubungan pemegang saham yang mudah dan kawalan yang stabil daripada pengumpulan modal yang kerap atau perundingan bahagian. Kemudian, ia boleh ditukar menjadi syarikat saham (股份有限公司).
 
 ### Syarikat saham (股份有限公司): sesuai jika ingin memasukkan pelabur lain atau jika penyenaraian boleh dipertimbangkan
 
-Modal dibahagi kepada saham. Pada prinsipnya 2 rakan kongsi atau lebih diperlukan, tetapi negara atau badan undang-undang boleh menubuhkannya sendirian, dan badan undang-undang asing boleh memegang 100 %. Saham, pada prinsipnya, boleh dipindahkan secara bebas, dengan pengecualian berkanun; saham khas dan opsyen pekerja boleh direka menurut undang-undang. Ini sesuai kepada syarikat yang menjangka pelabur, perundingan saham, insentif modal untuk pekerja atau penggabungan, pemerolehan atau penyenaraian masa depan; ia tidak terhad kepada syarikat besar. Dalam tadbir urus, syarikat bukan pengeluar awam boleh, melalui statut, tidak mempunyai majlis dan hanya mempunyai 1 atau 2 pentadbir. Syarikat dengan 1 rakan kongsi negara atau badan undang-undang boleh, melalui statut, tidak mempunyai pemeriksa. Tidak semua syarikat saham (股份有限公司) mesti membuat akaun tahunan disahkan. Ambang utama audit syarikat biasa ialah modal berbayar TWD 30.000.000, atau, di bawah itu, hasil operasi TWD 100.000.000 atau 100 pekerja dalam rejim insurans buruh; syarikat tawaran awam mengikuti peraturan sekuriti.
+Modal dibahagi kepada saham. Pada prinsipnya 2 pemegang saham atau lebih diperlukan, tetapi negara atau badan undang-undang boleh menubuhkannya sendirian, dan badan undang-undang asing boleh memegang 100 %. Saham, pada prinsipnya, boleh dipindahkan secara bebas, dengan pengecualian berkanun; saham khas dan opsyen pekerja boleh direka menurut undang-undang. Ini sesuai kepada syarikat yang menjangka pelabur, perundingan saham, insentif modal untuk pekerja atau penggabungan, pemerolehan atau penyenaraian masa depan; ia tidak terhad kepada syarikat besar. Dalam tadbir urus, syarikat yang bukan syarikat tawaran awam (非公開發行) boleh, melalui statut, tidak mempunyai lembaga pengarah dan hanya mempunyai 1 atau 2 pengarah. Syarikat dengan 1 pemegang saham negara atau badan undang-undang boleh, melalui statut, tidak mempunyai penyelia syarikat. Tidak semua syarikat saham (股份有限公司) mesti membuat akaun tahunan disahkan. Ambang utama audit syarikat biasa ialah modal berbayar TWD 30,000,000, atau, di bawah itu, hasil operasi TWD 100,000,000 atau 100 pekerja dalam rejim insurans buruh; syarikat tawaran awam mengikuti peraturan sekuriti.
 
-## 4. Prosedur cawangan dan anak syarikat berbeza; hanya anak syarikat melalui semakan Suruhanjaya Pelaburan
+## 4. Prosedur cawangan dan anak syarikat berbeza; hanya anak syarikat melalui semakan Jabatan Semakan Pelaburan
 
-Apabila syarikat asing menubuhkan anak syarikat Taiwan, nama pada prinsipnya disahkan terlebih dahulu dan kebenaran pelaburan dipohon kepada Suruhanjaya Pelaburan kementerian Ekonomi (經濟部投資審議司). Selepas kelulusan, dana dipindahkan, jumlah pelaburan ditentukan dan akauntan (會計師) mengesahkan modal, kemudian penubuhan dan pendaftaran cukai disempurnakan.
+Apabila syarikat asing menubuhkan anak syarikat Taiwan, nama pada prinsipnya disahkan terlebih dahulu dan kebenaran pelaburan dipohon kepada Jabatan Semakan Pelaburan, Kementerian Hal Ehwal Ekonomi (經濟部投資審議司). Selepas kelulusan, dana dipindahkan, jumlah pelaburan ditentukan dan akauntan (會計師) mengesahkan modal, kemudian penubuhan dan pendaftaran cukai disempurnakan.
 
-Sebaliknya, untuk menubuhkan cawangan Taiwan syarikat asing biasa, kebenaran pelaburan Suruhanjaya Pelaburan pada prinsipnya tidak dituntut; Jabatan Perdagangan kementerian Ekonomi (經濟部商業發展署) merawat pendaftaran cawangan dan penentuan modal berkaitan. Kekal diperlukan semakan terdahulu nama, pindahan modal operasi, pengesahan modal dan pendaftaran cukai; kalendar pada umumnya lebih pendek.
+Sebaliknya, untuk menubuhkan cawangan Taiwan syarikat asing biasa, kebenaran pelaburan Jabatan Semakan Pelaburan pada prinsipnya tidak dituntut; Jabatan Perdagangan Kementerian Hal Ehwal Ekonomi (經濟部商業發展署) merawat pendaftaran cawangan dan penentuan modal berkaitan. Kekal diperlukan semakan terdahulu nama, pindahan modal operasi, pengesahan modal dan pendaftaran cukai; kalendar pada umumnya lebih pendek.
 
-Yang terdahulu ialah cadangan reka bentuk kontrak. Mempunyai borang konkret tidak menjadikan operasi sah dan tidak mengelakkan pertikaian.
+Nasihat di atas berkaitan reka bentuk kontrak. Mempunyai borang konkret tidak menjadikan operasi sah dan tidak mengelakkan pertikaian.
 
 ## 5. Pendaftaran syarikat dan kerja sah jurutera bukan perkara yang sama
 
 Menyempurnakan pendaftaran di Taiwan tidak bermakna bahawa kakitangan pejabat utama asing boleh bekerja secara automatik di Taiwan. Orang asing yang bekerja di Taiwan memerlukan lesen kerja yang sah dan, untuk kediaman yang lebih panjang, lesen kediaman. Pada prinsipnya majikan memohon lesen kerja dan lesen kediaman yang sepadan.
 
-Agak lebih mudah memperoleh lesen kerja bagi pengurus anak syarikat atau cawangan Taiwan syarikat asing. Untuk memohonkannya bagi orang asing 2 atau yang berikutnya, kementerian Buruh menuntut, menurut sektor, ambang modal, perolehan atau lain-lain. Jika anda merancang bahawa kakitangan asing bekerja di Taiwan, perlu disahkan sebelum menubuhkan syarikat sama ada modal yang dirancang mencapai ambang yang terpakai.
+Agak lebih mudah memperoleh lesen kerja bagi pengurus anak syarikat atau cawangan Taiwan syarikat asing. Untuk memohonkannya bagi orang asing yang kedua dan seterusnya, Kementerian Buruh menuntut, menurut sektor, ambang modal, perolehan atau lain-lain. Jika anda merancang bahawa kakitangan asing bekerja di Taiwan, perlu disahkan sebelum menubuhkan syarikat sama ada modal yang dirancang mencapai ambang yang terpakai.
 
 ## 7. Struktur yang boleh sesuai menurut peringkat perdagangan
 
@@ -91,9 +91,9 @@ Senario berikut ialah hipotesis untuk membantu berfikir; mereka tidak menetapkan
 
 **Syarikat asing dalam fasa kajian pasaran.** Jika, sebelum organisasi jualan, anda hanya mahu fungsi maklumat dan perhubungan, pejabat perwakilan boleh dinilai. Jika pelan sebenar merangkumi jualan stok atau kerja di tempat, perlu disahkan secara berasingan sama ada aktiviti ini dibenarkan.
 
-## 8. Bagi temu ramah pertama, gambaran operasi mencukupi; tidak perlu menyerahkan dari awal semua dokumen sulit
+## 8. Bagi perundingan pertama, gambaran operasi mencukupi; tidak perlu menyerahkan dari awal semua dokumen sulit
 
-Semasa temu ramah pertama, anda boleh mengumpulkan data asas pejabat utama dan penyumbang, perihalan umum produk atau perkhidmatan, aliran operasi yang dirancang, pelan kakitangan dan kemudahan di Taiwan, serta syarat kontrak dan sokongan yang diminta pelanggan. Yang belum diputuskan boleh ditanda sebagai « menunggu ».
+Semasa perundingan pertama, anda boleh mengumpulkan data asas pejabat utama dan penyumbang, perihalan umum produk atau perkhidmatan, aliran operasi yang dirancang, pelan kakitangan dan kemudahan di Taiwan, serta syarat kontrak dan sokongan yang diminta pelanggan. Yang belum diputuskan boleh ditanda sebagai “menunggu”.
 
 Tidak perlu disertakan pada hubungan pertama semua bahan sulit pelanggan atau data proses terperinci. Selepas menyediakan nama pihak lawan bagi kawalan konflik, bahan yang diperlukan dan cara penghantaran ditentukan menurut petunjuk orang bertanggungjawab.
 
@@ -113,6 +113,6 @@ Peralihan berperingkat boleh dirancang, tetapi perlu juga disemak terhapus atau 
 
 ## Temu ramah mengenai struktur masuk ke Taiwan
 
-Jika anda merancang menjual, mengurus stok, menyediakan sokongan pemasangan atau mengambil kerja secara tempatan di Taiwan, susun dahulu kerja yang akan dilaksanakan pejabat utama dan yang akan kembali kepada organisasi di Taiwan. Selepas pengesahan tema temu ramah dan konflik kepentingan, pejabat akan menjelaskan bahan yang diperlukan dan skop perkhidmatan yang boleh disediakan.
+Jika anda merancang menjual, mengurus stok, menyediakan sokongan pemasangan atau mengambil kerja secara tempatan di Taiwan, susun dahulu kerja yang akan dilaksanakan pejabat utama dan yang akan kembali kepada organisasi di Taiwan. Selepas pengesahan tema perundingan dan konflik kepentingan, pejabat akan menjelaskan bahan yang diperlukan dan skop perkhidmatan yang boleh disediakan.
 
-Contoh objek: Temu ramah mengenai struktur masuk ke Taiwan syarikat semikonduktor. Semasa hubungan pertama, nyatakan nama syarikat, negara pejabat utama, produk atau perkhidmatan yang dirancang, pelan operasi di Taiwan dan bahasa temu ramah yang diingini. Hantar bahan reka bentuk sulit dan kontrak lengkap hanya selepas menerima petunjuk tambahan. Bahasa temu ramah yang benar-benar tersedia dan skop mana-mana mandat mesti disahkan pada saat hubungan.
+Contoh objek: Perbincangan awal mengenai struktur masuk ke Taiwan syarikat semikonduktor. Semasa hubungan pertama, nyatakan nama syarikat, negara pejabat utama, produk atau perkhidmatan yang dirancang, pelan operasi di Taiwan dan bahasa perundingan yang diingini. Hantar bahan reka bentuk sulit dan kontrak lengkap hanya selepas menerima petunjuk tambahan. Bahasa perundingan yang benar-benar tersedia dan skop mana-mana mandat mesti disahkan pada saat hubungan.

@@ -1,5 +1,5 @@
 ---
-title: "Q&A zur Behandlung von Verkehrsunfällen in Taiwan: Maßnahmen am Unfallort, Fahrlässigkeit, Vergleich und Schadensersatz"
+title: "Fragen und Antworten zur Behandlung von Verkehrsunfällen in Taiwan: Maßnahmen am Unfallort, Fahrlässigkeit, Vergleich und Schadensersatz"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
 date_display: "13. September 2025"
@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 ---
 
-# Q&A zur Behandlung von Verkehrsunfällen in Taiwan: Maßnahmen am Unfallort, Fahrlässigkeit, Vergleich und Schadensersatz
+# Fragen und Antworten zur Behandlung von Verkehrsunfällen in Taiwan: Maßnahmen am Unfallort, Fahrlässigkeit, Vergleich und Schadensersatz
 
 ![Bild zur Erläuterung der Sicherheitsmaßnahmen am Unfallort und der Beweissicherung unmittelbar nach einem Verkehrsunfall in Taiwan](../images/003-taiwan-traffic-accident-procedure/featured-01.jpg)
 
@@ -19,7 +19,7 @@ Nach einem Verkehrsunfall (交通事故) in Taiwan müssen Sie zuerst die Sicher
 
 ## Q1. Darf man den Unfallort nach dem Unfall verlassen?
 
-Bei Unfällen mit Verletzung oder Tod muss der Fahrer sofort Hilfe leisten (救護措施), die Polizei benachrichtigen und Fahrzeug sowie Beweise am Ort sichern (保全現場). Informelle Zustimmung der Gegenseite oder bloße Aufzeichnung erlaubt nicht, den Ort zu verlassen, ohne die erforderlichen Maßnahmen abgeschlossen zu haben.
+Bei Unfällen mit Verletzung oder Tod muss der Fahrer sofort Hilfe leisten (救護措施), die Polizei benachrichtigen und Fahrzeug sowie Beweise am Ort sichern (保全現場). Informelle Zustimmung der Gegenseite oder eine bloße Ton- oder Videoaufnahme erlaubt nicht, den Ort zu verlassen, ohne die erforderlichen Maßnahmen abgeschlossen zu haben.
 
 Bei Verletzungsunfällen können die Fahrzeuge jedoch, wenn alle Parteien zustimmen, nach Kennzeichnung von Position und Spuren an einen den Verkehr nicht behindernden Ort versetzt werden. Das ersetzt nicht die erforderlichen Maßnahmen wie Hilfe und Meldung.
 
@@ -29,9 +29,9 @@ Artikel 185-4 des Strafgesetzbuchs (刑法) behandelt die strafrechtliche Verant
 
 ## Q2. Welche Beweise sind zuerst zu sichern?
 
-Sichern Sie zuerst die persönliche Sicherheit und Warnzeichen; bei Verletzung oder Rettungsbedarf rufen Sie 119, bei Straftat oder eiliger Sicherheitslage 110 oder 112. Melden Sie den Verkehrsunfall auch der Polizei, soweit die Lage es erfordert.
+Sichern Sie zuerst die persönliche Sicherheit und Warnzeichen; in Taiwan rufen Sie bei Verletzung oder Rettungsbedarf 119 (Rettung und Feuerwehr), bei einer Straftat oder eiliger Sicherheitslage 110 (Polizei) und vom Mobiltelefon 112. Melden Sie den Verkehrsunfall auch der Polizei, soweit die Lage es erfordert.
 
-Ist die Sicherheit gewährleistet, fertigen Sie Übersicht- und Nahaufnahmen, um Fahrzeugposition und Beschädigung, Straßenmarkierung, Signale und Wetter festzuhalten. Zeugenkontakte, Ersuchen um Sicherung von CCTV (監視器影像) und Dashcam (行車紀錄器), Daten der Parteien, Fahrzeuge und Versicherungen sowie Krankenakten (病歷) sollten Sie nicht auslassen. Private Aufnahmen sind nützlich, ersetzen aber bei Verletzungs- oder Todesunfällen nicht die erforderliche Polizeibearbeitung.
+Ist die Sicherheit gewährleistet, fertigen Sie Übersichts- und Nahaufnahmen, um Fahrzeugposition und Beschädigung, Straßenmarkierung, Signale und Wetter festzuhalten. Zeugenkontakte, Ersuchen um Sicherung von CCTV (監視器影像) und Dashcam (行車紀錄器), Daten der Parteien, Fahrzeuge und Versicherungen sowie Krankenakten (病歷) sollten Sie nicht auslassen. Private Aufnahmen sind nützlich, ersetzen aber bei Verletzungs- oder Todesunfällen nicht die erforderliche Polizeibearbeitung.
 
 Polizeiunterlagen: am Unfallort können Sie den Registrierungs-Kontaktzettel der Verkehrsunfallparteien (道路交通事故當事人登記聯單) erhalten. Nach 7 Tagen ab Unfalltag können Lageplan und Unfallfotos (現場圖 / 現場照片) beantragt werden; nach 30 Tagen ab Unfalltag kann die vorläufige Analysebewertung des Straßenverkehrsunfalls (道路交通事故初步分析研判表) beantragt werden. Ausstellungszeitpunkt und Antragsvoraussetzungen prüfen Sie bitte erneut bei der zuständigen Polizeibehörde.
 
@@ -64,9 +64,9 @@ Bei Antragsdelikten kann die Anzeige nach Artikel 238 der Strafprozessordnung bi
 ### Amtliche Grundlagen Q1–Q5
 
 - [Straßenverkehrsverwaltungs- und Sanktionsverordnung (道路交通管理處罰條例) Artikel 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
-- [Strafgesetzbuch der Republik China Artikel 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
-- [Strafgesetzbuch der Republik China Artikel 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
-- [Strafgesetzbuch der Republik China Artikel 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
+- [Taiwanesisches Strafgesetzbuch (中華民國刑法) Artikel 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
+- [Taiwanesisches Strafgesetzbuch (中華民國刑法) Artikel 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [Taiwanesisches Strafgesetzbuch (中華民國刑法) Artikel 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
 - [Strafprozessordnung Artikel 237](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001)
 - [Strafprozessordnung Artikel 238](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=238&pcode=C0010001)
 - [Strafprozessordnung Artikel 487](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=487&pcode=C0010001)
@@ -130,7 +130,7 @@ Belege, Tarifaufzeichnungen, Routenaufzeichnungen und Behandlungsunterlagen sind
 - [Zivilgesetzbuch Artikel 196](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=196&pcode=B0000001)
 - [Zivilgesetzbuch Artikel 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Strafprozessordnung Artikel 504](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001)
-- [Hinweise des Justizyuans (司法院) zur Anspruchserweiterung nach Verweisung](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
+- [Hinweise des Justiz-Yuan (司法院) zur Anspruchserweiterung nach Verweisung](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
 - [Urteil des Bezirksgerichts Chiayi (嘉義) zu familiären Pflegekosten](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
 - [Urteil des Bezirksgerichts Tainan (臺南) zu Fahrtkosten zur Behandlung](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
 
@@ -151,7 +151,7 @@ Dass das gegenwärtige Gehalt unverändert bleibt, schließt den Anspruch nicht 
 
 Wird eine andauernde Funktionsstörung tatsächlich bestritten, kann ein medizinisches Gutachten nützlich sein, ist aber nicht in jedem Fall erforderlich. Mitverschulden nach Artikel 217 des Zivilgesetzbuchs (民法) und andere Anpassungsgründe werden mitgeprüft.
 
-Bei Berechnung als Einmalbetrag kann der Abzug von Zwischenzinsen (中間利息扣除) in Betracht kommen. Der Hoffmann-Rechner (霍夫曼) des Justizyuans ist nur Berechnungshilfe, keine rechtlich zwingende Methode und gibt auch kein Ergebnis vor. Nach Artikel 193 des Zivilgesetzbuchs kann das Gericht auf Antrag der Partei auch periodische Zahlung unter Sicherheitsleistung anordnen.
+Bei Berechnung als Einmalbetrag kann der Abzug von Zwischenzinsen (中間利息扣除) in Betracht kommen. Der Hoffmann-Rechner (霍夫曼) des Justiz-Yuan ist nur Berechnungshilfe, keine rechtlich zwingende Methode und gibt auch kein Ergebnis vor. Nach Artikel 193 des Zivilgesetzbuchs kann das Gericht auf Antrag der Partei auch periodische Zahlung unter Sicherheitsleistung anordnen.
 
 ## Q13. Wie wird Schmerzensgeld (慰撫金) für nichtvermögensrechtlichen Schaden beurteilt?
 
@@ -184,13 +184,13 @@ Haftpflichtversicherung gegenüber Dritten (第三人責任險), Fahrerunfallver
 - [Zivilgesetzbuch Artikel 193](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Zivilgesetzbuch Artikel 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Zivilgesetzbuch Artikel 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Urteil des taiwanesischen Obergerichts Jahr 109, Sache 上易字 Nummer 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [Urteil des taiwanesischen Obergerichts Jahr 109, Sache 上易字 Nummer 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
-- [Hoffmann-Barwertrechner des Justizyuans](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
+- [Urteil des taiwanesischen Obergerichts, Jahr 109 (2020), Sache 上易字 Nummer 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Urteil des taiwanesischen Obergerichts, Jahr 109 (2020), Sache 上易字 Nummer 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Hoffmann-Barwertrechner des Justiz-Yuan](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Zivilgesetzbuch Artikel 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Urteil des Bezirksgerichts Taoyuan Jahr 112, Sache 壢簡字 Nummer 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Urteil des Bezirksgerichts Taoyuan, Jahr 112 (2023), Sache 壢簡字 Nummer 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Zivilgesetzbuch Artikel 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
-- [Strafgesetzbuch der Republik China Artikel 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [Taiwanesisches Strafgesetzbuch (中華民國刑法) Artikel 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Gesetz über die obligatorische Kraftfahrzeughaftpflichtversicherung](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
 - [Leistungsmaßstab der obligatorischen Kraftfahrzeughaftpflichtversicherung](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Standardvertrag der Finanzaufsichtskommission (金融監督管理委員會) für private Kraftfahrtversicherung](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
@@ -235,7 +235,7 @@ Q17. Was ist die strafrechtliche Verantwortung des Verursachers wegen fahrlässi
 
 ​
 
-Bei fahrlässiger Körperverletzung (過失傷害) verhängen Gerichte derzeit etwa 3 Monate Freiheitsstrafe.
+Bei fahrlässiger Körperverletzung (過失傷害) ist in manchen Urteilen etwa 3 Monate Freiheitsstrafe verhängt worden; ein typisches oder garantiertes Ergebnis gibt es nicht.
 
 ​
 
@@ -247,7 +247,7 @@ Bei Umwandlung in Geldstrafe bestimmt Artikel 41 Absatz 1 des Strafgesetzbuchs (
 
 ​
 
-Fahrlässige schwere Körperverletzung wird gewöhnlich mit 4 Monaten, fahrlässige Tötung (過失致死) gewöhnlich mit 6 Monaten Freiheitsstrafe geahndet.
+In manchen Urteilen ist fahrlässige schwere Körperverletzung mit 4 Monaten und fahrlässige Tötung (過失致死) mit 6 Monaten Freiheitsstrafe geahndet worden; ein typisches oder garantiertes Ergebnis gibt es nicht.
 
 ​
 
@@ -267,7 +267,7 @@ Fahrlässige Tötung lässt die Anzeigerücknahme nicht zu; vergleicht man sich 
 
 ​
 
-Es kann Strafaussetzung zur Bewährung (緩刑) geben, sodass keine Haft angetreten werden muss.
+In manchen Fällen kann Strafaussetzung zur Bewährung (緩刑) in Betracht kommen; ein bestimmtes Ergebnis wird damit nicht versprochen.
 
 ​
 
@@ -303,15 +303,15 @@ Verkehrsunfälle sind sehr häufige Sachen; ein allgemeiner Prozessanwalt kann n
 
 ​
 
-Entscheidend sind dabei Sorgfalt und Redlichkeit des Anwalts.
+Entscheidend sind dabei Sorgfalt und Redlichkeit der Anwältin oder des Anwalts.
 
 ​
 
-Wichtig ist, dass der Anwalt alle Anspruchsposten der Sache sorgfältig prüft und darauf hinwirkt, dass Sie den größtmöglichen Ersatz erhalten.
+Wichtig ist, dass die Anwältin oder der Anwalt alle Anspruchsposten der Sache sorgfältig prüft und die Ansprüche geltend macht, die der Sachverhalt und die Beweise tragen.
 
 ​
 
-Außerdem muss der Anwalt die Lage der Partei klar erläutern und die bei ausbleibendem Vergleich zu erwartenden Risiken klar mitteilen.
+Außerdem muss die Anwältin oder der Anwalt die Lage der Partei klar erläutern und die bei ausbleibendem Vergleich zu erwartenden Risiken klar mitteilen.
 
 ​
 
@@ -359,11 +359,11 @@ Deshalb darf dieser Punkt keinesfalls übersehen werden; es ist ratsam, die Lage
 
 ​
 
-Wenn Sie weitere Fragen haben, hinterlassen Sie bitte einen Kommentar.
+Wenn Sie weitere Fragen haben, schreiben Sie bitte über die Seite „Kontakt“; eine Antwortfrist wird nicht zugesagt.
 
 ​
 
-Ich war WEI, taiwanesische Anwältin (曾雋崴).
+Wei Tseng (曾雋崴), Rechtsanwältin in Taiwan.
 
 ---
 

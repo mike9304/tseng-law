@@ -542,9 +542,9 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Diese Seite ist auf Deutsch als allgemeine Orientierung geschrieben, nicht als Rechtsberatung für Ihren eigenen Fall.',
     consultationNotice:
-      'Die Beratung erfolgt in vier Sprachen: Englisch, Chinesisch (中文), Japanisch und Koreanisch.',
+      'Die Beratung erfolgt nur in vier Sprachen: Englisch, Chinesisch (中文), Japanisch und Koreanisch.',
     methodConfirmationNotice:
-      'Wenn Sie keine der vier Sprachen nutzen können, wählen Sie „Kommunikationsweise muss bestätigt werden“. Wir antworten, um eine gangbare Kommunikationsweise zu prüfen, wenn eine solche besteht; eine Leistung in einer anderen Sprache wird nicht gewährleistet und eine Antwortfrist nicht zugesagt.',
+      'Wenn Sie keine der vier Sprachen nutzen können, wählen Sie „Kommunikationsweise muss bestätigt werden“. Wir antworten, um zu prüfen, ob ein praktikabler Kommunikationsweg besteht; eine Leistung in einer anderen Sprache wird nicht gewährleistet und eine Antwortfrist nicht zugesagt.',
     preparationNotice:
       'Sie dürfen die Zusammenfassung in Ihrer eigenen Sprache schreiben. Der Originaltext wird so gespeichert, wie Sie ihn geschrieben haben, und nicht automatisch übersetzt.',
     heading: 'Beratungsanfrage senden',
@@ -585,7 +585,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Japanisch (日本語)',
       ko: 'Koreanisch (한국어)',
       'needs-method-confirmation':
-        'Keine der vier Sprachen ist nutzbar — Kommunikationsweise muss bestätigt werden',
+        'Ich spreche keine der vier Sprachen — die Kommunikationsweise muss bestätigt werden',
     },
   },
   es: {

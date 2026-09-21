@@ -43,15 +43,15 @@ Jede Person kann bei einem Grundbuchamt (地政事務所) die „Abschrift der G
 
 Wenn Sie das Grundbuchamt (地政事務所) nicht selbst aufsuchen können,
 
-können Sie taiwanische Bekannte, die Vermieterseite, eine Immobilienmaklerin oder einen Immobilienmakler oder eine Anwältin oder einen Anwalt um Hilfe bitten.
+können Sie taiwanesische Bekannte, die Vermieterseite, eine Immobilienmaklerin oder einen Immobilienmakler oder eine Anwältin oder einen Anwalt um Hilfe bitten.
 
 Ergibt die Abfrage, dass Restaurantbetrieb unmöglich ist, kann die Stadtverwaltung die Eintragung später bei der Eintragung der juristischen Person (公司登記) ablehnen.
 
-Bitte beachten Sie dies daher!
+Das ist bei der späteren Eintragung zu berücksichtigen.
 
 ​
 
-**Q. Müssen alle Branchen über das System der „Vorabprüfung des Geschäftsorts“ prüfen, ob der Betrieb zulässig ist?**
+**Müssen alle Branchen über das System der „Vorabprüfung des Geschäftsorts“ prüfen, ob der Betrieb zulässig ist?**
 
 Es wird empfohlen, für alle Branchen über das System der „Vorabprüfung des Geschäftsorts“ (營業場所預先查詢) zu prüfen, ob der Betrieb zulässig ist.
 
@@ -71,7 +71,7 @@ Wird in einem Lokal eröffnet, in dem Restaurantbetrieb unmöglich ist, kann sp�
 
 "von Amts wegen abzufragende Geschäftszweige" (主動查詢之營業項目)
 
-Soweit der Hinweis; bei weiteren Fragen können Sie sich an eine taiwanische Anwältin oder einen taiwanischen Anwalt wenden.
+Das ist der Hinweis. Bei weiteren Fragen können Sie sich an eine taiwanesische Anwältin oder einen taiwanesischen Anwalt wenden; eine Antwortfrist wird nicht zugesagt.
 
 Die Regeln der Verwaltungsbehörden können häufig geändert werden; vor der Eintragung der juristischen Person empfiehlt es sich, die neuesten Vorschriften zu prüfen.
 

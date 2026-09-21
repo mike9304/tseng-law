@@ -29,21 +29,21 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
   },
   contactCta: 'Beratungsanfrage senden',
   footerNotice:
-    'Diese deutsche Seite enthält nur allgemeine Hinweise zur Arbeit der Kanzlei nach taiwanischem Recht. Sie ist keine Rechtsberatung für einen konkreten Fall, und das Absenden einer Nachricht begründet für sich kein Mandatsverhältnis.',
+    'Diese deutsche Seite enthält nur allgemeine Hinweise zur Arbeit der Kanzlei nach taiwanesischem Recht. Sie ist keine Rechtsberatung für einen konkreten Fall, und das Absenden einer Nachricht begründet für sich kein Mandatsverhältnis.',
   skipLink: 'Navigation überspringen und zum Inhalt',
-  menuLabel: 'Seitenverzeichnis',
+  menuLabel: 'Menü',
   languageLabel: 'Anzeigesprache',
   mega: {
     services: {
-      description: 'Die Kanzlei bearbeitet die wesentlichen Tätigkeitsgruppen nach taiwanischem Recht.',
+      description: 'Die Kanzlei bearbeitet die wesentlichen Tätigkeitsfelder des taiwanesischen Rechts.',
       viewAllLabel: 'Alle anzeigen',
     },
     columns: {
-      description: 'Beiträge zu häufigen Fragen des taiwanischen Rechts.',
+      description: 'Beiträge zu häufigen Fragen des taiwanesischen Rechts.',
       viewAllLabel: 'Alle anzeigen',
     },
     lawyers: {
-      description: 'Vorstellung der tätigen Anwältinnen und Anwälte und der Kontaktwege.',
+      description: 'Vorstellung der Anwältinnen und Anwälte und der Kontaktwege.',
       viewAllLabel: 'Alle anzeigen',
     },
     pricing: {
@@ -74,7 +74,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
     columnsOriginalLanguageBadge: 'Originalsprache',
     columnsOriginalLanguageNote:
       'Die folgenden Beiträge liegen noch nicht auf Deutsch vor. Die Liste bleibt in der Originalsprache und öffnet die jeweilige Sprachseite; der Inhalt wird nicht automatisch übersetzt.',
-    imageBandAlt: 'Traditionelles taiwanisches Sanheyuan (三合院) und ein moderner Pavillon bei Tageslicht',
+    imageBandAlt: 'Traditionelles taiwanesisches Sanheyuan (三合院) und ein moderner Pavillon bei Tageslicht',
     videoPauseLabel: 'Video anhalten',
     videoPlayLabel: 'Video abspielen',
     videoReplayLabel: 'Video erneut abspielen',
@@ -86,12 +86,12 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
       description:
         'Allgemeine Erläuterungen auf Deutsch zum Tätigkeitsbereich von Hovering International Law Firm in Taiwan, zu den Beratungssprachen und zum ersten Kontakt.',
       intro:
-        'Hovering International Law Firm begleitet Mandanten aus dem Ausland, auch solche mit Bezug zu Taiwan, in Angelegenheiten nach taiwanischem Recht: Investition und Gesellschaftsgründung, zivilrechtliche Streitigkeiten, Ehe-, Familien- und Erbsachen, Arbeitsrecht, Strafsachen und geistiges Eigentum. Dieser deutsche Teil hilft Ihnen zu erkennen, welche Arbeit in unseren Tätigkeitsbereich fällt, was vorzubereiten ist und wie Sie uns erreichen. Es handelt sich um allgemeine Angaben, nicht um Rechtsberatung für Ihren eigenen Fall.',
+        'Hovering International Law Firm begleitet Mandanten aus dem Ausland, auch solche mit Bezug zu Taiwan, in Angelegenheiten nach taiwanesischem Recht: Investition und Gesellschaftsgründung, zivilrechtliche Streitigkeiten, Ehe-, Familien- und Erbsachen, Arbeitsrecht, Strafsachen und geistiges Eigentum. Dieser deutsche Teil hilft Ihnen zu erkennen, welche Arbeit in unseren Tätigkeitsbereich fällt, was vorzubereiten ist und wie Sie uns erreichen. Es handelt sich um allgemeine Angaben, nicht um Rechtsberatung für Ihren eigenen Fall.',
       sections: [
         {
           heading: 'Was wir tun',
           paragraphs: [
-            'Hovering International Law Firm ist eine in Taiwan niedergelassene Anwaltskanzlei. Sie arbeitet nach taiwanischem Recht und unterhält Büros in Taipeh (臺北), Kaohsiung (高雄), Taichung (臺中) und Pingtung (屏東). Wir beraten Unternehmen und führen Verfahren vor Gericht und begleiten Mandanten aus dem Ausland durch die in Taiwan erforderlichen Schritte.',
+            'Hovering International Law Firm ist eine in Taiwan niedergelassene Anwaltskanzlei. Sie arbeitet nach taiwanesischem Recht und unterhält Büros in Taipeh (臺北), Kaohsiung (高雄), Taichung (臺中) und Pingtung (屏東). Wir beraten Unternehmen und führen Verfahren vor Gericht und begleiten Mandanten aus dem Ausland durch die in Taiwan erforderlichen Schritte.',
             'Der gesamte Inhalt hier ist allgemein. Der Ausgang einer Sache hängt von den Tatsachen, den anwendbaren Vorschriften und dem Zeitpunkt ab. Diese Hinweise ersetzen nicht das Gespräch mit einer Anwältin oder einem Anwalt über Ihre Unterlagen.',
           ],
         },
@@ -103,7 +103,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Tätigkeitsgruppen',
+          heading: 'Tätigkeitsfelder',
           paragraphs: [
             'Der Tätigkeitsbereich umfasst die folgenden sechs Gruppen. Die Seite „Tätigkeitsfelder“ beschreibt jede Gruppe genauer und nennt, was nicht zugesagt wird.',
           ],
@@ -129,7 +129,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'TÄTIGKEITSFELDER',
       title: 'Welche Angelegenheiten wir bearbeiten',
       description:
-        'Sechs Tätigkeitsgruppen der Kanzlei in Taiwan und die Grenzen, die Sie zuerst kennen sollten.',
+        'Sechs Tätigkeitsfelder der Kanzlei in Taiwan und die Grenzen, die Sie zuerst kennen sollten.',
       intro:
         'Nachfolgend die Gruppen, die wir tatsächlich bearbeiten, und Fragen, die in der Anfangsphase häufig gestellt werden. Die Darstellung hilft Ihnen zu beurteilen, ob Ihr Anliegen in unseren Tätigkeitsbereich fällt; sie ist allgemein und keine rechtliche Analyse eines einzelnen Vorgangs.',
       sections: [
@@ -150,21 +150,21 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ehe, Familie und Erbrecht',
           paragraphs: [
-            'Wir bearbeiten Scheidung (離婚), Vermögensauseinandersetzung, Ausübung und Tragung der Rechte und Pflichten gegenüber minderjährigen Kindern (未成年子女權利義務之行使或負擔), Umgang (會面交往) und Erbrecht (繼承), auch wenn Parteien oder Vermögen in verschiedenen Staaten liegen. Grenzüberschreitende Familiensachen erfordern oft zusätzliche Prüfung von Haushaltsregisterunterlagen (戶籍), der Form von Urkunden und ihrer Beweisbarkeit in Taiwan.',
+            'Wir bearbeiten Scheidung (離婚), Vermögensauseinandersetzung, elterliche Sorge für minderjährige Kinder (未成年子女權利義務之行使或負擔), Umgang (會面交往) und Erbrecht (繼承), auch wenn Parteien oder Vermögen in verschiedenen Staaten liegen. Grenzüberschreitende Familiensachen erfordern oft zusätzliche Prüfung von Haushaltsregisterunterlagen (戶籍), der Form von Urkunden und ihrer Beweisbarkeit in Taiwan.',
             'Weil Familiensachen häufig Fristen und parallele Verfahren mit sich bringen, sollte die erste Zusammenfassung das Verhältnis der Parteien, den aktuellen Wohnort und bereits laufende Verfahren nennen.',
           ],
         },
         {
           heading: 'Arbeitsrechtliche Streitigkeiten',
           paragraphs: [
-            'Diese Gruppe umfasst Beendigung des Arbeitsverhältnisses, Abfindung nach taiwanischem Recht (資遣費; nicht mit Instituten anderer Staaten gleichzusetzen), Lohn und Streitigkeiten aus dem Arbeitsvertrag (勞動契約), sowohl auf Arbeitnehmer- als auch auf Arbeitgeberseite. Bei der Prüfung trennen wir den Beendigungsgrund von Fragen der Ankündigung, der Zahlung und der Fristen.',
+            'Diese Gruppe umfasst Beendigung des Arbeitsverhältnisses, Abfindung nach taiwanesischem Recht (資遣費; nicht mit Abfindungs- oder Kündigungsschutzregelungen anderer Staaten gleichzusetzen), Lohn und Streitigkeiten aus dem Arbeitsvertrag (勞動契約), sowohl auf Arbeitnehmer- als auch auf Arbeitgeberseite. Bei der Prüfung trennen wir den Beendigungsgrund von Fragen der Ankündigung, der Zahlung und der Fristen.',
             'Arbeitsvertrag, Betriebsordnung (工作規則), Gehaltsabrechnungen und der Schriftwechsel der Parteien sind meist die entscheidenden Unterlagen. Wenn Sie sie noch haben, erwähnen Sie das in der Zusammenfassung.',
           ],
         },
         {
           heading: 'Strafsachen',
           paragraphs: [
-            'Wir begleiten im Ermittlungsverfahren und vor Gericht, für Beschuldigte oder Angeklagte ebenso wie für Verletzte, und bewerten strafrechtliche Risiken unternehmerischer Tätigkeit.',
+            'Wir vertreten Beschuldigte, Angeklagte und Verletzte im Ermittlungsverfahren und vor Gericht und bewerten strafrechtliche Risiken unternehmerischer Tätigkeit.',
             'Strafsachen haben oft kurze Fristen und festgelegte Stufen. Wenn Sie bereits ein Schreiben der Strafverfolgungsbehörde oder des Gerichts erhalten haben, nennen Sie das Datum auf dem Schreiben früh, damit der Inhalt in der richtigen Reihenfolge geprüft wird.',
           ],
         },
@@ -178,7 +178,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Umfang und seine Bestätigung',
           paragraphs: [
-            'Die Kanzlei arbeitet nach taiwanischem Recht und bearbeitet Angelegenheiten der oben genannten Gruppen. Der Umfang jeder Sache wird gesondert bestätigt, nachdem eine Anwältin oder ein Anwalt Ihre Nachricht geprüft hat.',
+            'Die Kanzlei arbeitet nach taiwanesischem Recht und bearbeitet Angelegenheiten der oben genannten Gruppen. Der Umfang jeder Sache wird gesondert bestätigt, nachdem eine Anwältin oder ein Anwalt Ihre Nachricht geprüft hat.',
             'Aufenthaltsstatus, Arbeitserlaubnis und vergleichbare Fragen werden aus den Unterlagen und der Lage der jeweiligen Person beurteilt, nicht aus der Staatsangehörigkeit. Wenn ein Teil Ihres Anliegens solche Fragen berührt, nennen Sie das bei der Kontaktaufnahme. Diese Seite verspricht weder ein Ergebnis noch eine Antwortfrist.',
           ],
         },
@@ -188,7 +188,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'DIE KANZLEI',
       title: 'Über Hovering International Law Firm',
       description:
-        'Grundangaben zu dieser taiwanischen Anwaltskanzlei, ihren Büros und der Arbeit mit ausländischen Beteiligten.',
+        'Grundangaben zu dieser taiwanesischen Anwaltskanzlei, ihren Büros und der Arbeit mit ausländischen Beteiligten.',
       intro:
         'Hovering International Law Firm ist eine Anwaltskanzlei in Taiwan. Die Anwältinnen und Anwälte arbeiten von der Unternehmensberatung bis zum Gerichtsverfahren. Dieser Teil beschreibt die Entstehung der Kanzlei, die Standorte und die Arbeit mit ausländischen Beteiligten.',
       sections: [
@@ -196,7 +196,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Gründung und Aufbau',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) wurde 2016 von Anwältinnen und Anwälten gegründet, die an der National Taiwan University (國立臺灣大學) studiert haben. Der chinesische Name 昊鼎 verbindet das Schriftzeichen 昊 („weiter Himmel“) mit 鼎 („fester Grund“) und beschreibt die Ausrichtung der Kanzlei seit der Gründung.',
-            'Wir haben Büros in Taipeh (臺北), Kaohsiung (高雄), Taichung (臺中) und Pingtung (屏東). Das Büro Kaohsiung konzentriert sich auf Unternehmensführung und bearbeitet zivil-, straf- und verwaltungsrechtliche Streitigkeiten. Das Büro Taichung bearbeitet Bausachen, geistiges Eigentum und Angelegenheiten mit Bezug zu Korea und Japan. Das Büro Pingtung wurde 2017 für den örtlichen Bedarf eröffnet.',
+            'Wir haben Büros in Taipeh (臺北), Kaohsiung (高雄), Taichung (臺中) und Pingtung (屏東). Das Büro Kaohsiung konzentriert sich auf Unternehmensführung und bearbeitet zivil-, straf- und verwaltungsrechtliche Streitigkeiten. Das Büro Taichung bearbeitet Bausachen, geistiges Eigentum und Angelegenheiten mit Bezug zu Korea und Japan. Das Büro Pingtung wurde 2017 eröffnet, um Mandantinnen und Mandanten in der Region vor Ort zu betreuen.',
             'Neben der anwaltlichen Arbeit besteht seit 2020 auch Hovering Accounting Office, das Buchhaltung und Steuerplanung für Unternehmer und vermögende Privatpersonen anbietet.',
           ],
         },
@@ -210,7 +210,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Wenn Sie uns kontaktieren',
           paragraphs: [
-            'Nach Eingang Ihrer Zusammenfassung prüft eine Anwältin oder ein Anwalt den Inhalt und spricht dann über den möglichen Arbeitsumfang, noch benötigte Unterlagen und die nächsten Schritte. Bei steuerlichen oder buchhalterischen Fragen kann die Kanzlei mit der Buchhaltungsabteilung in einem Ablauf arbeiten.',
+            'Nach Eingang Ihrer Zusammenfassung prüft eine Anwältin oder ein Anwalt den Inhalt und spricht dann über den möglichen Arbeitsumfang, noch benötigte Unterlagen und die nächsten Schritte. Bei steuerlichen oder buchhalterischen Fragen kann die Kanzlei mit der Buchhaltungsabteilung in einem gemeinsamen Verfahren arbeiten.',
             'Das Ergebnis jeder Sache hängt von den Tatsachen und den vorhandenen Unterlagen ab; wir versprechen kein Ergebnis. Wenn Sie eine verbindliche Antwort für Ihre Lage brauchen, müssen die Unterlagen in einer der vier Beratungssprachen mit einer Anwältin oder einem Anwalt besprochen werden.',
           ],
         },
@@ -241,7 +241,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kosten werden vor Beginn der Arbeit bestätigt',
           paragraphs: [
-            'Ist der Arbeitsumfang klar, werden Höhe und Berechnungsweise der Kosten mit Ihnen besprochen und bestätigt, bevor die Arbeit beginnt. Ändert sich der Umfang unterwegs, muss das erneut bestätigt werden.',
+            'Ist der Arbeitsumfang klar, werden Höhe und Berechnungsweise der Kosten mit Ihnen besprochen und bestätigt, bevor die Arbeit beginnt. Ändert sich der Umfang im Verlauf der Bearbeitung, muss das erneut bestätigt werden.',
             'Diese Seite ist kein Preisangebot und begründet keine Zahlungspflicht. Das Senden einer Anfrage über diese Seite ist ebenfalls kostenfrei.',
           ],
         },
@@ -276,14 +276,14 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
           ],
           items: [
             'Seitensprache: Diese Hinweise sind auf Deutsch geschrieben.',
-            'Beratungssprache: Die Beratung erfolgt auf Englisch, Chinesisch (中文), Japanisch und Koreanisch.',
+            'Beratungssprache: Die Beratung erfolgt nur auf Englisch, Chinesisch (中文), Japanisch und Koreanisch.',
             'Ihre Schreibsprache: Sie dürfen die Zusammenfassung in Ihrer eigenen Sprache schreiben; der Originaltext wird unverändert gespeichert.',
           ],
         },
         {
           heading: 'Wenn Sie keine der vier Beratungssprachen nutzen können',
           paragraphs: [
-            'Im Kontaktformular können Sie „Kommunikationsweise muss bestätigt werden“ wählen. Wir antworten, um eine gangbare Kommunikationsweise zu prüfen, wenn eine solche besteht; eine Leistung in einer anderen Sprache wird nicht gewährleistet und eine Antwortfrist nicht zugesagt.',
+            'Im Kontaktformular können Sie „Kommunikationsweise muss bestätigt werden“ wählen. Wir antworten, um zu prüfen, ob ein praktikabler Kommunikationsweg besteht; eine Leistung in einer anderen Sprache wird nicht gewährleistet und eine Antwortfrist nicht zugesagt.',
             'Das ist nur ein Prüfungsschritt, kein Versprechen. Wir versprechen keinen Dolmetscher, keine Leistung auf Deutsch oder in einer anderen Sprache außerhalb der vier genannten Sprachen, und nicht, dass wir jede Sache annehmen.',
           ],
         },
@@ -357,7 +357,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Was, wenn mein Anliegen sehr eilig ist?',
           answer:
-            'Nennen Sie die Frist oder das Datum auf einem amtlichen Schreiben am Anfang Ihrer Zusammenfassung, damit diese Daten bei der Prüfung sichtbar sind. Diese Seite hat keinen Notfallkanal und gewährleistet keine Antwortfrist; wenn Ihr Anliegen nicht warten kann, sollten Sie parallel andere Wege an Ihrem Ort suchen.',
+            'Nennen Sie die Frist oder das Datum auf einem amtlichen Schreiben am Anfang Ihrer Zusammenfassung, damit diese Daten bei der Prüfung sichtbar sind. Diese Seite hat keinen Notfallkontakt und sagt keine Antwortfrist zu; wenn Ihr Anliegen nicht warten kann, sollten Sie parallel andere Wege an Ihrem Ort suchen.',
         },
       ],
     },
@@ -424,7 +424,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Speicherort und Dienstleister',
           paragraphs: [
             'Diese Website wird bei Vercel gehostet, und Ihre Sendung wird in einem nicht öffentlichen Objektspeicher dieses Dienstes gespeichert. E-Mails werden über den von der Kanzlei genutzten E-Mail-Dienst versendet.',
-            'Server einzelner Dienstleister können außerhalb Taiwans stehen, sodass Ihre Daten dort gespeichert und verarbeitet werden können. Ist der Speicherzweck erfüllt, werden die Daten ohne Verzögerung gelöscht; Daten, die nach geltenden Vorschriften aufbewahrt werden müssen, bleiben für diese Dauer. Anfragen zu personenbezogenen Daten nimmt wei@hoveringlaw.com.tw entgegen.',
+            'Server einzelner Dienstleister können außerhalb Taiwans stehen, sodass Ihre Daten dort gespeichert und verarbeitet werden können. Ist der Speicherzweck erfüllt, werden die Daten ohne Verzögerung gelöscht; Daten, die nach geltenden Vorschriften aufbewahrt werden müssen, bleiben für diese Dauer. Anfragen zu personenbezogenen Daten richten Sie an wei@hoveringlaw.com.tw.',
           ],
         },
       ],
@@ -447,7 +447,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Rechtlicher Geltungsbereich',
           paragraphs: [
-            'Die Kanzlei praktiziert nach taiwanischem Recht, und diese Seite spricht nur über Arbeit in diesem Rahmen.',
+            'Die Kanzlei ist nach taiwanesischem Recht tätig, und diese Seite betrifft nur Arbeit in diesem Rahmen.',
             'Der Inhalt ist keine Beratung nach dem Recht einer anderen Rechtsordnung als Taiwan, einschließlich des Rechts Ihres Wohnorts. Betrifft ein Teil Ihrer Sache eine andere Rechtsordnung, klären wir mit Ihnen, welche qualifizierte Fachperson für diesen Teil nötig ist.',
           ],
         },
@@ -469,11 +469,11 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
     },
     columns: {
       eyebrow: 'BEITRÄGE',
-      title: 'Beiträge zum taiwanischen Recht',
+      title: 'Beiträge zum taiwanesischen Recht',
       description:
-        'Deutsche Beiträge zu häufigen Fragen des taiwanischen Rechts. Der Inhalt ist allgemeine Information zum Zeitpunkt der Veröffentlichung, keine Rechtsberatung für Ihren Fall.',
+        'Deutsche Beiträge zu häufigen Fragen des taiwanesischen Rechts. Der Inhalt ist allgemeine Information zum Zeitpunkt der Veröffentlichung, keine Rechtsberatung für Ihren Fall.',
       intro:
-        'Die Kanzlei veröffentlicht Beiträge zu häufigen Fragen des taiwanischen Rechts. Beiträge, die auf Deutsch vorliegen, stehen auf dieser Seite; daneben gibt es vier Links, die jeweils die Beitragsliste einer Originalsprache öffnen.',
+        'Die Kanzlei veröffentlicht Beiträge zu häufigen Fragen des taiwanesischen Rechts. Beiträge, die auf Deutsch vorliegen, stehen auf dieser Seite; daneben gibt es vier Links, die jeweils die Beitragsliste einer Originalsprache öffnen.',
       sections: [
         {
           heading: 'Vier Listen nach Sprache',

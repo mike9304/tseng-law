@@ -56,7 +56,7 @@ const ELEMENTS = {
     th: /เป็นไปได้/,
     fil: /posible/i,
     ar: /طريقة ممكنة/,
-    de: /gangbare/,
+    de: /praktikabl/,
     es: /forma posible|vía posible/,
     fr: /manière possible/,
     pt: /forma possível/,

@@ -1,1 +1,25 @@
 [WO start 2026-09-21 16:36:31]
+Native review for France is in `docs/i18n/global-plan/reviews/native/fr-a.md`.
+
+**Verdict:** guidance pack **3/5**, columns **2/5**. Metropolitan French is consistent. Wei Tseng is feminine throughout (`avocate`, `Elle a représenté`). 23 P1 + 37 P2: Korea left as the default reader, advertising-risk sentences in 003/005/008, English chrome (`OUR TEAM` / `OFFICES`), Hangul slugs, and `détention` for 拘役. The guidance pack is readable after the earlier grammar sweep; 001–002 and 004 are usable legal French once those holes are closed.
+
+Last 15 lines of the file:
+
+```
+| 46 | P2 | A | columns-fr/003-taiwan-traffic-accident-procedure.md | "la partie légitimée peut demander une expertise" | *Légitimée* reads as parentage; the English is the party entitled to apply. | "la partie qui y a qualité peut demander une expertise" |
+| 47 | P2 | G | columns-fr/003-taiwan-traffic-accident-procedure.md | "Q&A sur le traitement des accidents de la circulation à Taïwan" | English abbreviation left in the title. also 005 `questions et réponses (Q&A)`. | "Questions-réponses sur le traitement des accidents de la circulation à Taïwan" |
+| 48 | P2 | C | columns-fr/003-taiwan-traffic-accident-procedure.md | "Si vous avez d’autres questions, laissez-les dans les commentaires." | Blog-comment CTA; this site has no comments. | "Si vous avez d’autres questions, vous pouvez écrire depuis la page Contact. Aucun délai de réponse n’est promis." |
+| 49 | P2 | C | columns-fr/004-taiwan-company-subsidiary-vs-branch.md | "la fixation de son cercle d’actionnaires" | *Cercle* is a geometric/social circle; shareholders form a *structure* / *composition*. | "la fixation de la composition de son actionnariat" |
+| 50 | P2 | A | columns-fr/004-taiwan-company-subsidiary-vs-branch.md | "Les actionnaires d’une société à responsabilité limitée (有限公司)" | In French company law a SARL has *associés*, not *actionnaires* (SA). 002 already uses *associés* for 有限公司. | "Les associés d’une société à responsabilité limitée (有限公司)" |
+| 51 | P2 | C | columns-fr/006-taiwan-massage-history-law.md | "Avez-vous connu l’époque des salons de coiffure traditionnels (理髮廳) aux origines de Taïwan ?" | Empty “at Taiwan’s beginnings”; the rest of the site is formal *vous*, this is blog *vous*. | "Vous souvenez-vous de l’époque des salons de coiffure traditionnels (理髮廳) à Taïwan ?" |
+| 52 | P2 | A | columns-fr/006-taiwan-massage-history-law.md | "Finalement, les Grands Juges (大法官) déclarèrent inconstitutionnelle" | Calque of Grand Justices; French readers need the court. | "Finalement, la Cour constitutionnelle (大法官) déclara inconstitutionnelle" |
+| 53 | P2 | A | columns-fr/007-taiwan-divorce-lawsuit-qna.md | "et les relations personnelles (會面交往)" | Guidance pack correctly has *droit de visite*; *relations personnelles* is Belgian, and a France reader hears “personal relationships”. throughout 007. | "et le droit de visite (會面交往)" |
+| 54 | P2 | D | columns-fr/007-taiwan-divorce-lawsuit-qna.md | "dans la décision numéro 4 de l’année 112 (112年憲判字第4號)" | ROC year 112 unexplained; a France reader will not map it to 2023. also source list. | "dans la décision n° 4 de 2023 (Minguo 112) (112年憲判字第4號)" |
+| 55 | P2 | B | columns-fr/008-taiwan-labor-severance-law.md | "est-elle vraiment difficile à obtenir à Taïwan ??" | Double question mark in the title (and again in the H1). | "est-elle vraiment difficile à obtenir à Taïwan ?" |
+| 56 | P2 | A | columns-fr/008-taiwan-labor-severance-law.md | "l’article 12 du règlement sur la pension de retraite des travailleurs (勞工退休金條例)" | 條例 is an act, not a *règlement*. also 008 FAQ. | "l’article 12 de la loi sur la pension de retraite des travailleurs (勞工退休金條例)" |
+| 57 | P2 | C | columns-fr/008-taiwan-labor-severance-law.md | "Bonjour, je suis Wei Tseng (曾雋崴), avocate à Taïwan." | Blog greeting clashes with the rest of the site’s formal *vous*. | "Wei Tseng (曾雋崴), avocate à Taïwan." |
+| 58 | P2 | C | columns-fr/008-taiwan-labor-severance-law.md | "et veiller à ne pas tomber dans l’intention de la société" | Opaque calque; a native would say *piège* / *manœuvre*. | "et veiller à ne pas céder à la manœuvre de la société" |
+| 59 | P2 | C | columns-fr/008-taiwan-labor-severance-law.md | "si la personne employée démissionne elle-même" | *Personne employée* is German gender-neutral padding; French labour law says *salarié*. Systemic in 008. | "si le salarié démissionne de lui-même" |
+| 60 | P2 | C | columns-fr/009-taiwan-voluntary-resignation-severance.md | "Comme indiqué plus haut, à Taïwan il n’est pas aisé" | Blog-series leftover pointing at article 008; this page must stand alone. | "À Taïwan, il n’est en principe pas aisé pour le salarié d’obtenir l’indemnité de licenciement (資遣費)." |
+```
+=== end code=0 2026-09-21 16:42:10 ===

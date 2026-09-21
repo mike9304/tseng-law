@@ -1,1 +1,25 @@
 [WO start 2026-09-21 16:35:55]
+Native review of columns 010–018 is in `docs/i18n/global-plan/reviews/native/ms-b.md`. Guidance pack was left to part a.
+
+**Verdict:** 3/5 naturalness. 014 and 016 are the most usable legal Malay; 013/015 still read as a Korean blog; 010, 017 and 018 fail on title-level false friends (`gimnasium`, `automotif`, `rakan kongsi`, `temu ramah`). No masculine form for Wei Tseng. **22 P1 / 48 P2** (70 rows).
+
+Last 15 lines of the output file:
+
+```
+| 56 | P2 | C | columns-ms/016-taiwan-inheritance-custody-analysis.md | "kuasa ibu bapa ibu bapa yang hidup" | Tautological calque of surviving-parent parental authority; heading of §5. | kuasa ibu bapa pihak yang hidup |
+| 57 | P2 | C | columns-ms/016-taiwan-inheritance-custody-analysis.md | "pengisytiharan di daftar status sivil (戶籍)" | Status sivil is French état civil (part a); Malaysia uses daftar isi rumah / pendaftaran. | pengisytiharan di daftar isi rumah (戶籍) |
+| 58 | P2 | A | columns-ms/016-taiwan-inheritance-custody-analysis.md | "pampasan kerugian moral (慰撫金)" | 慰撫金 is solatium; kerugian moral is the same French/German calque as part a 003/007. | pampasan penderitaan / ganti rugi bukan wang (慰撫金) |
+| 59 | P2 | C | columns-ms/016-taiwan-inheritance-custody-analysis.md | "termasuk rizab waris (特留分)" | French réserve héréditaire; Malaysian succession copy says bahagian wajib / hak mutlak waris. | termasuk bahagian wajib waris (特留分) |
+| 60 | P2 | D | columns-ms/017-taiwan-logistics-business-setup.md | "modal minimum TWD 25.000.000 (新臺幣)" | European grouping; Malaysia writes 25,000,000. Also 10.000.000 in the same file. | modal minimum TWD 25,000,000 (新臺幣) |
+| 61 | P2 | C | columns-ms/017-taiwan-logistics-business-setup.md | "cara penerimaan tarif" | Tarif in Malaysia is customs duty (part a); here it is the freight charge. | cara penerimaan tambang / caj pengangkutan |
+| 62 | P2 | C | columns-ms/017-taiwan-logistics-business-setup.md | "pengangkutan trak kecil yang dijalankan orang fizikal" | Orang fizikal is French personne physique; Malaysia uses orang perseorangan. Also 018. | pengangkutan trak kecil yang dijalankan orang perseorangan |
+| 63 | P2 | C | columns-ms/017-taiwan-logistics-business-setup.md | "perhatian kepada pelanggan pada tamatnya kontrak" | 客戶服務 calqued as “customer attention”. Also later “perhatian kepada pelanggan”. | perkhidmatan pelanggan pada tamatnya kontrak |
+| 64 | P2 | C | columns-ms/018-taiwan-semiconductor-market-entry.md | "Syarikat mempunyai 1 hingga 3 pentadbir, dipilih antara rakan kongsi" | 董事 is a director (pengarah); pentadbir is an administrator. | Syarikat mempunyai 1 hingga 3 pengarah, dipilih antara pemegang saham |
+| 65 | P2 | A | columns-ms/018-taiwan-semiconductor-market-entry.md | "Yang terdahulu ialah cadangan reka bentuk kontrak." | Orphan sentence: previous paragraph is company/branch registration, not contract design. | Yang terdahulu ialah rangka umum laluan pendaftaran; memilih satu borang tidak menjadikan urus niaga sah. |
+| 66 | P2 | C | columns-ms/018-taiwan-semiconductor-market-entry.md | "orang asing 2 atau yang berikutnya" | Machine residue for “the second and subsequent foreign employees”. | orang asing yang kedua dan seterusnya |
+| 67 | P2 | A | columns-ms/018-taiwan-semiconductor-market-entry.md | "syarikat bukan pengeluar awam" | 非公開發行 is a company that has not made a public share offering; pengeluar is a producer. | syarikat yang bukan syarikat tawaran awam (非公開發行) |
+| 68 | P2 | D | columns-ms/018-taiwan-semiconductor-market-entry.md | "modal berbayar TWD 30.000.000, atau, di bawah itu, hasil operasi TWD 100.000.000" | European millions; Malaysia parses 30,000,000 / 100,000,000 faster. | modal berbayar TWD 30,000,000, atau di bawah itu hasil operasi TWD 100,000,000 |
+| 69 | P2 | C | columns-ms/018-taiwan-semiconductor-market-entry.md | "bagaimana dilikuidasi kos antara pejabat utama dan organisasi di Taiwan?" | Same winding-up false friend as 014, here for intercompany cost settlement. | bagaimana dikira / diselesaikan kos antara pejabat utama dan organisasi di Taiwan? |
+| 70 | P2 | C | columns-ms/017-taiwan-logistics-business-setup.md | "komisen pengangkutan (運送承攬)" | 承攬 is contracting/forwarding, not a sales commission. Recurs as “komisioner pengangkutan”. | pengendali / perantara pengangkutan (運送承攬) |
+```
+=== end code=0 2026-09-21 16:42:16 ===

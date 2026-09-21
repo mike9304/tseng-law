@@ -1,1 +1,23 @@
 [WO start 2026-09-21 16:36:31]
+Review is in `docs/i18n/global-plan/reviews/native/vi-a.md` (guidance pack + columns 001–009). Naturalness: **4/5** guidance, **3/5** columns. 14 P1 rows (Korea leftover, advertising, English/Hangul chrome); no masculine form for Wei Tseng. 001–002 and 004 are usable legal Vietnamese; 007 already recasts the family example as Việt Nam–Đài Loan.
+
+Last 15 lines of the file:
+
+```
+| 41 | P2 | A | columns-vi/006-taiwan-massage-history-law.md | "đã nộp đơn thỉnh cầu Đại pháp quan (大法官) giải thích Hiến pháp" | Calque of Grand Justices; a Vietnam reader needs the constitutional court. also `các Đại pháp quan đã tuyên bố`. | "đã nộp đơn đề nghị các thẩm phán hiến pháp (大法官) giải thích Hiến pháp" |
+| 42 | P2 | C | columns-vi/006-taiwan-massage-history-law.md | "Quý vị đã từng trải nghiệm thời kỳ các tiệm cắt tóc truyền thống thuở ban đầu của Đài Loan chưa?" | Empty “at Taiwan’s beginnings”; the rest of the site is formal *quý vị*, this is blog chat. | "Quý vị còn nhớ thời kỳ các tiệm cắt tóc truyền thống ở Đài Loan không?" |
+| 43 | P2 | C | columns-vi/006-taiwan-massage-history-law.md | "(Nói vậy chắc cũng vô tình để lộ tuổi tác mất rồi nhỉ?)" | Parenthetical blog joke clashes with a client-facing legal article. | Xóa câu này. |
+| 44 | P2 | D | columns-vi/007-taiwan-divorce-lawsuit-qna.md | "Phán quyết Hiến pháp số 4 năm 112 (112年憲判字第4號)" | ROC year 112 unexplained; a Vietnam reader will not map it to 2023. | "Phán quyết Hiến pháp số 4 năm 112 (2023) (112年憲判字第4號)" |
+| 45 | P2 | C | columns-vi/007-taiwan-divorce-lawsuit-qna.md | "Không phải lúc nào cũng như vậy." | Section 3 opens with the bare FAQ answer; a heading should be a self-standing sentence. | Mở bằng câu đứng độc lập: "Vợ chồng không phải lúc nào cũng bắt buộc phải cùng có mặt." |
+| 46 | P2 | A | columns-vi/007-taiwan-divorce-lawsuit-qna.md | "đăng ký đứng tên hộ (借名登記)" | *Hộ* is read as household registration (戶籍); 借名登記 is nominee title. | "đăng ký đứng tên hộ cho người khác / đăng ký dưới danh nghĩa người khác (借名登記)" |
+| 47 | P2 | B | columns-vi/008-taiwan-labor-severance-law.md | "thật sự khó đến vậy sao??" | Double question mark in the title (and again in the H1). | "thật sự khó đến vậy sao?" |
+| 48 | P2 | A | columns-vi/008-taiwan-labor-severance-law.md | "Điều 12 Điều lệ Quỹ hưu trí lao động (勞工退休金條例)" | 條例 is an act, not *điều lệ* (bylaws). also FAQ of 008. | "Điều 12 Luật Hưu trí Người lao động (勞工退休金條例)" |
+| 49 | P2 | C | columns-vi/008-taiwan-labor-severance-law.md | "Xin chào quý vị, tôi là Wei Tseng (曾雋崴), luật sư Đài Loan." | Blog greeting clashes with the rest of the site’s formal *quý vị*-register. | "Wei Tseng (曾雋崴), luật sư Đài Loan." |
+| 50 | P2 | C | columns-vi/008-taiwan-labor-severance-law.md | "và chú ý để không rơi vào ý đồ mà công ty giăng ra." | Opaque calque; a native would say *bẫy / sự sắp đặt*. | "và đề phòng không sập bẫy sắp đặt của công ty." |
+| 51 | P2 | E | columns-vi/008-taiwan-labor-severance-law.md | "Trợ cấp thôi việc là quyền lợi hợp pháp của người lao động, và công ty đương nhiên phải chi trả." | *Đương nhiên phải chi trả* reads as a guaranteed payout on a client page. | "Khi đủ điều kiện luật định, trợ cấp thôi việc (資遣費) là quyền của người lao động." |
+| 52 | P2 | C | columns-vi/008-taiwan-labor-severance-law.md | "Mức độ khó" | Korean-blog difficulty column on a legal comparison table (`Đơn giản` / `Khó` / `Đơn giản`). | Xóa hàng “Mức độ khó”; bảng chỉ cần điều kiện, báo trước và trợ cấp thôi việc. |
+| 53 | P2 | C | columns-vi/009-taiwan-voluntary-resignation-severance.md | "Như tôi đã trình bày trong bài trước, tại Đài Loan việc người lao động nhận được trợ cấp thôi việc là điều không dễ dàng." | *Bài trước* points at a previous Korean-series post, not this page. | "Tại Đài Loan, theo quy định chung, người lao động không dễ được nhận trợ cấp thôi việc." |
+| 54 | P2 | B | columns-vi/003-taiwan-traffic-accident-procedure.md | "3*30*1,000=90,000 Đài tệ (TWD)." | Formula and English commas in running text; Vietnamese would write the arithmetic out. | "tính theo mức 1.000 TWD mỗi ngày thì mức án 3 tháng là 90.000 TWD (3 × 30 × 1.000)." |
+| 55 | P2 | C | columns-vi/005-taiwan-company-establishment-advanced-2.md | "Quý vị đã đọc [Thành lập công ty tại Đài Loan — Phần cơ bản]" | Sentence is a broken *đã đọc A thì cũng có thể xem B*; Hangul link sits in the same line. | "Nếu quý vị đã đọc phần cơ bản, có thể xem tiếp phần chuyên sâu 2 dưới đây." |
+```
+=== end code=0 2026-09-21 16:43:13 ===

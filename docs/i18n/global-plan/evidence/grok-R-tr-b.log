@@ -1,1 +1,24 @@
 [WO start 2026-09-21 16:36:53]
+Native review of columns 010–018 is in `docs/i18n/global-plan/reviews/native/tr-b.md`. Guidance pack was left to part a.
+
+**Verdict:** columns **3/5**. 014, 016 and 017 are usable legal Turkish; 013 and 015 still read as a Korean blog. No gender error for Wei Tseng. Ten P1 meaning shifts (trust as *vakıf*, probate as *yoklama*, *nakliye* for household moving, *Statü* for the investment statute, Korea put back as the default reader in 011).
+
+Last 15 lines of the output file:
+
+```
+| 35 | P2 | C | columns-tr/016-taiwan-inheritance-custody-analysis.md | "düz soy altsoyu (直系血親卑親屬) yasal mirasın 1. sırasıdır" | *Düz soy* is a calque; Turkish succession says *altsoy*, and *1. sıra* should be spelled. | "altsoy (直系血親卑親屬) yasal mirasın birinci sırasıdır" |
+| 36 | P2 | C | columns-tr/016-taiwan-inheritance-custody-analysis.md | "evlilik kalan malvarlığı farkı dağıtımı (剩餘財產差額分配)" | Word-for-word German/Chinese stack; unreadable as a heading term. Recurs through 016. | "evlilik sonu kalan malvarlığı farkının dağıtımı (剩餘財產差額分配)" |
+| 37 | P2 | C | columns-tr/016-taiwan-inheritance-custody-analysis.md | "3 kişi kural olarak her biri 3’te 1 miras alır" | Digit *3 kişi* plus fraction as digits; native prose spells *üç kişi … üçte bir*. | "üç kişi kural olarak her biri üçte bir miras alır" |
+| 38 | P2 | G | columns-tr/017-taiwan-logistics-business-setup.md | "Lienchiang veya Matsu (連江・馬祖)" | Japanese middle dot `・` left in the Chinese gloss. | "Lienchiang veya Matsu (連江、馬祖)" |
+| 39 | P2 | B | columns-tr/017-taiwan-logistics-business-setup.md | "Tayvan Kara Yolu Kanunu (公路法)" | Two-word *Kara Yolu* is not Turkish usage; the statute name is *Karayolu*. Recurs through 017. | "Tayvan Karayolu Kanunu (公路法)" |
+| 40 | P2 | B | columns-tr/017-taiwan-logistics-business-setup.md | "kuruluş hazırlık izni başvurulur" | *Başvurmak* needs dative / *için*; same `İşletme ruhsatı başvurulur`. | "kuruluş hazırlık izni için başvurulur" |
+| 41 | P2 | B | columns-tr/018-taiwan-semiconductor-market-entry.md | "yabancı tüzel kişinin 100 % pay tutması da mümkündür" | Turkish puts the percent sign before the number (`%100`), not after. | "yabancı tüzel kişinin %100 pay tutması da mümkündür" |
+| 42 | P2 | A | columns-tr/018-taiwan-semiconductor-market-entry.md | "merkez ve koyanların temel bilgisi" | English “investors”; *koyanlar* is an unfinished “capital contributors”. | "merkezin ve yatırımcıların temel bilgisi" |
+| 43 | P2 | B | columns-tr/018-taiwan-semiconductor-market-entry.md | "yoksa iş dış yükleniciye mi verilir?" | Broken noun phrase; English is an outside vendor. | "yoksa iş dış yükleniciye / taşerona mı verilir?" |
+| 44 | P2 | B | columns-tr/018-taiwan-semiconductor-market-entry.md | "oturma belgesi (外僑居留證) de başvurmalıdır" | Accusative object of *başvurmak* is wrong; you apply *for* the certificate. | "oturma belgesi (外僑居留證) için de başvurmalıdır" |
+| 45 | P2 | C | columns-tr/018-taiwan-semiconductor-market-entry.md | "ayrı bir hukuk öznesidir" | Same Rechtssubjekt calque as 011 *özne*. | "ana şirketten ayrı bir tüzel kişidir" |
+| 46 | P2 | B | columns-tr/018-taiwan-semiconductor-market-entry.md | "Tayvan sorumlunun yetkisi nereye kadar uzanır?" | Missing possessive: *sorumlunun*. | "Tayvan’daki yetkilinin yetkisi nereye kadar uzanır?" |
+| 47 | P2 | C | columns-tr/013-taiwan-company-establishment-advanced-1.md | "son dönemde pek çok kişi Tayvan’da başarıyla şirket (公司) kurmuş" | Blog opener plus a line-broken comma; the series voice does not match 014/016. | "Tayvan’da şirket (公司) kuruluşu ve ardından çalışma vizesi ile oturma belgesi (外僑居留證) alınması sık sorulmaktadır." |
+| 48 | P2 | C | columns-tr/014-taiwan-mandatory-employment-period.md | "peşin nitelikli edim (預付性給付)" | German Leistung-calque; HR Turkish says avans niteliğinde ödeme / peşin ödeme. Recurs through 014. | "avans niteliğindeki ödeme (預付性給付)" |
+```
+=== end code=0 2026-09-21 16:43:12 ===

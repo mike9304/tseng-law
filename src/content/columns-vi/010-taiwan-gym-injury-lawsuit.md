@@ -19,11 +19,11 @@ Bài viết này dựa trên vụ việc một sinh viên đại học người 
 
 Vụ tai nạn xảy ra trong buổi tập động tác nâng tạ deadlift (硬舉) do huấn luyện viên hướng dẫn tại một phòng tập ở Đài Trung (臺中). Sau khi bị chấn thương, quý vị không nên chỉ nhìn vào việc tai nạn đã xảy ra bên trong phòng tập, mà cần xem xét đồng thời kinh nghiệm tập luyện và tình trạng sức khỏe của người tập, loại bài tập và mức tạ, phần giải thích cùng hướng dẫn của huấn luyện viên, động tác và cách xử lý tại thời điểm đó, quan hệ nhân quả (因果關係) giữa việc tập luyện và chấn thương, cùng các tài liệu chứng minh cho thiệt hại.
 
-Trong vụ án này, tôi tham gia với tư cách người đại diện tố tụng của nguyên đơn là sinh viên người Hàn Quốc. Tại bản án sơ thẩm ngày 24 tháng 1 năm 2022 về vụ án tiêu dùng số 7 năm 109 (109年度消字第7號), Tòa án Địa phương Đài Trung (臺灣臺中地方法院) đã tuyên buộc bị đơn phải trả [1,579,589 Đài tệ mới (新臺幣, TWD)](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) cùng khoản tiền lãi được ghi trong bản án.
+Trong vụ án này, tôi tham gia với tư cách người đại diện tố tụng của nguyên đơn là sinh viên người Hàn Quốc. Tại bản án sơ thẩm ngày 24 tháng 1 năm 2022 về vụ án tiêu dùng số 7 năm 109 (2020) (109年度消字第7號), Tòa án Địa phương Đài Trung (臺灣臺中地方法院) đã tuyên buộc bị đơn phải trả [1.579.589 Đài tệ mới (新臺幣, TWD)](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) cùng khoản tiền lãi được ghi trong bản án.
 
 Sau đó, báo chí đưa tin rằng các bên đã đạt được thỏa thuận (和解) ở giai đoạn phúc thẩm. Chỉ dựa vào bản án sơ thẩm chính thức thì không thể xác nhận kết quả xử lý của cấp phúc thẩm hay số tiền thỏa thuận, nên không được coi đó là kết quả đã có hiệu lực pháp luật của bản án sơ thẩm.
 
-Dưới đây là phần chuyển ngữ sang tiếng Việt tiêu đề của các bản tin báo chí, bài đăng trực tuyến và bình luận pháp lý về vụ việc này. Các tiêu đề dưới đây chỉ nhằm giới thiệu nội dung được đưa tin hoặc đăng tải tại từng đường dẫn, không có nghĩa là bài viết này xác định riêng những nội dung đó là sự thật.
+Dưới đây là bản dịch tiếng Việt các tiêu đề bản tin báo chí, bài đăng trực tuyến và bình luận pháp lý về vụ việc này. Các tiêu đề dưới đây chỉ nhằm giới thiệu nội dung được đưa tin hoặc đăng tải tại từng đường dẫn, không có nghĩa là bài viết này xác định riêng những nội dung đó là sự thật.
 
 ![Nam sinh viên đại học bị vỡ đĩa đệm sau khi nâng tạ deadlift 90 kg, yêu cầu phòng tập thể hình bồi thường](../images/010-taiwan-gym-injury-lawsuit/img-02.jpg)
 
@@ -45,17 +45,17 @@ Dưới đây là phần chuyển ngữ sang tiếng Việt tiêu đề của c�
 
 [Bài đăng trên PTT (批踢踢): Nam sinh viên đại học người Hàn Quốc bị vỡ đĩa đệm khi nâng tạ deadlift 90 kg, sơ thẩm tuyên buộc phía phòng tập bồi thường 1,57 triệu Đài tệ](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
-![Bài viết trên blog: Nam sinh viên đại học người Hàn Quốc nặng 70 kg bị chấn thương khi nâng tạ deadlift 90 kg và khoản bồi thường hơn 1 triệu Đài tệ, phòng tập có lỗi hay không? Người tập nên giữ thái độ ra sao?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
+![Bài viết trên blog: Nam sinh viên đại học người Hàn Quốc nặng 70 kg bị chấn thương khi nâng tạ deadlift 90 kg và khoản bồi thường hơn 1 triệu Đài tệ, phòng tập có lỗi hay không? Người tập nên giữ tâm thế ra sao?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
-[Bài viết trên blog: Nam sinh viên đại học người Hàn Quốc nặng 70 kg bị chấn thương khi nâng tạ deadlift 90 kg và khoản bồi thường hơn 1 triệu Đài tệ, phòng tập có lỗi hay không? Người tập nên giữ thái độ ra sao?](https://blog.udn.com/blackjack/179081715)
+[Bài viết trên blog: Nam sinh viên đại học người Hàn Quốc nặng 70 kg bị chấn thương khi nâng tạ deadlift 90 kg và khoản bồi thường hơn 1 triệu Đài tệ, phòng tập có lỗi hay không? Người tập nên giữ tâm thế ra sao?](https://blog.udn.com/blackjack/179081715)
 
 ![Bình luận pháp lý: Nam sinh viên đại học bị vỡ đĩa đệm khi nâng tạ deadlift, sơ thẩm tuyên buộc phía phòng tập thể hình nổi tiếng bồi thường 1,57 triệu Đài tệ](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
 [Bình luận pháp lý: Nam sinh viên đại học bị vỡ đĩa đệm khi nâng tạ deadlift, sơ thẩm tuyên buộc phía phòng tập thể hình nổi tiếng bồi thường 1,57 triệu Đài tệ](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
 
-![Cùng đọc bản án: vụ việc người mới tập tại phòng tập được yêu cầu nâng tạ deadlift 90 kg dẫn đến vỡ đĩa đệm cấp tính](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
+![Bình luận bản án: vụ việc người mới tập tại phòng tập được yêu cầu nâng tạ deadlift 90 kg dẫn đến vỡ đĩa đệm cấp tính](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
 
-[Cùng đọc bản án: vụ việc người mới tập tại phòng tập được yêu cầu nâng tạ deadlift 90 kg dẫn đến vỡ đĩa đệm cấp tính](https://www.instagram.com/p/Crp4vJag7v3/)
+[Bình luận bản án: vụ việc người mới tập tại phòng tập được yêu cầu nâng tạ deadlift 90 kg dẫn đến vỡ đĩa đệm cấp tính](https://www.instagram.com/p/Crp4vJag7v3/)
 
 ![Nam sinh viên đại học người Hàn Quốc có bị vỡ đĩa đệm khi nâng tạ deadlift 90 kg trong buổi tập với huấn luyện viên cá nhân hay không?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
@@ -103,7 +103,7 @@ Các khoản thiệt hại có thể xem xét yêu cầu bồi thường gồm n
 
 ## 5. Dù phòng tập thể hình có bảo hiểm trách nhiệm, việc bồi thường hay số tiền bồi thường vẫn có thể bị tranh chấp hay không?
 
-Đúng như vậy. Việc có bảo hiểm có thể có ý nghĩa khi xem xét nguồn tiền bồi thường, nhưng bản thân điều đó không công nhận trách nhiệm pháp lý của phòng tập hay của huấn luyện viên và cũng không ấn định số tiền phải chi trả. Giữa doanh nghiệp bảo hiểm và các bên có thể phát sinh tranh chấp về hạn mức bồi thường của hợp đồng bảo hiểm, về các điều khoản miễn trách và loại trừ, về quan hệ nhân quả giữa tai nạn và chấn thương, cũng như về tính cần thiết và số tiền của từng khoản thiệt hại.
+Có thể bị tranh chấp. Việc có bảo hiểm có thể có ý nghĩa khi xem xét nguồn tiền bồi thường, nhưng bản thân điều đó không công nhận trách nhiệm pháp lý của phòng tập hay của huấn luyện viên và cũng không ấn định số tiền phải chi trả. Giữa doanh nghiệp bảo hiểm và các bên có thể phát sinh tranh chấp về hạn mức bồi thường của hợp đồng bảo hiểm, về các điều khoản miễn trách và loại trừ, về quan hệ nhân quả giữa tai nạn và chấn thương, cũng như về tính cần thiết và số tiền của từng khoản thiệt hại.
 
 Đặc biệt, đối với suy giảm khả năng lao động, phần thu nhập giảm sút trong thời gian dưỡng bệnh và thiệt hại phi tài sản, có thể cần đến tài liệu về y tế, thu nhập, nghề nghiệp hoặc ý kiến chuyên gia. Số tiền mà doanh nghiệp bảo hiểm đưa ra hay số tiền mà người bị thiệt hại yêu cầu không đương nhiên trở thành số tiền được tòa án công nhận, và kết quả giám định mức độ suy giảm cũng không tự động quyết định số tiền bồi thường. Khi xử lý trên thực tế, quý vị cần kiểm tra đồng thời đơn bảo hiểm và điều khoản hợp đồng bảo hiểm, nội dung thông báo tai nạn, văn bản trả lời của doanh nghiệp bảo hiểm, diễn biến điều trị và tài liệu về thiệt hại.
 

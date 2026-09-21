@@ -29,7 +29,7 @@ Trường hợp chỉ có thiệt hại về tài sản và xe vẫn di chuyển
 
 ## Q2. Tôi cần lưu giữ những chứng cứ nào trước tiên?
 
-Trước hết hãy bảo đảm an toàn cho bản thân và đặt biển cảnh báo; nếu có người bị thương hoặc cần cứu hộ thì gọi 119, còn nếu là tình huống tội phạm hoặc trật tự trị an khẩn cấp thì gọi 110 hoặc 112. Quý vị cũng hãy trình báo cảnh sát cho phù hợp với tình huống của vụ tai nạn giao thông.
+Trước hết hãy bảo đảm an toàn cho bản thân và đặt biển cảnh báo. Tại Đài Loan, nếu có người bị thương hoặc cần cứu hộ thì gọi 119 (cấp cứu, cứu hỏa), còn nếu là tình huống tội phạm hoặc trật tự trị an khẩn cấp thì gọi 110 (cảnh sát); từ điện thoại di động cũng có thể gọi 112. Quý vị cũng hãy trình báo cảnh sát cho phù hợp với tình huống của vụ tai nạn giao thông.
 
 Sau khi đã bảo đảm an toàn, hãy chụp cả ảnh toàn cảnh lẫn ảnh cận cảnh để ghi lại vị trí xe và mức độ hư hỏng, vạch kẻ đường, tín hiệu giao thông cùng thời tiết. Quý vị cũng không nên bỏ sót thông tin liên lạc của người làm chứng, việc yêu cầu bảo toàn hình ảnh camera giám sát và camera hành trình, thông tin của các bên, của xe và của bảo hiểm, cùng hồ sơ bệnh án. Việc tự chụp ảnh là hữu ích, nhưng không thay thế được thủ tục xử lý của cảnh sát mà pháp luật đòi hỏi trong vụ tai nạn có người bị thương hoặc tử vong.
 
@@ -49,7 +49,7 @@ Lựa chọn sẽ khác nhau tùy việc thời hiệu có bị gián đoạn ha
 
 Trách nhiệm hình sự chỉ có thể được phán định khi xác định được từng bên có vi phạm nghĩa vụ chú ý hay không, và vi phạm đó có quan hệ nhân quả với thương tích của bên kia hay không. Việc cả hai bên đều có lỗi vô ý (過失) không đương nhiên làm phát sinh trách nhiệm về tội gây thương tích do vô ý.
 
-Về dân sự, theo Điều 217 Bộ luật Dân sự, nếu người bị thiệt hại cũng có lỗi góp phần làm phát sinh hoặc mở rộng thiệt hại thì tòa án có thể giảm nhẹ hoặc miễn khoản bồi thường thiệt hại. Ví dụ, nếu thiệt hại được công nhận là TWD 1,000,000 theo Đài tệ mới (新臺幣, TWD) và lỗi của người bị thiệt hại được đánh giá là 50% thì trước các điều chỉnh khác, khoản bồi thường có thể giảm còn TWD 500,000.
+Về dân sự, theo Điều 217 Bộ luật Dân sự, nếu người bị thiệt hại cũng có lỗi góp phần làm phát sinh hoặc mở rộng thiệt hại thì tòa án có thể giảm nhẹ hoặc miễn khoản bồi thường thiệt hại. Ví dụ, nếu thiệt hại được công nhận là 1.000.000 TWD theo Đài tệ mới (新臺幣, TWD) và lỗi của người bị thiệt hại được đánh giá là 50% thì trước các điều chỉnh khác, khoản bồi thường có thể giảm còn 500.000 TWD.
 
 Kết quả giám định hoặc bảng phân tích sơ bộ có thể là tài liệu quan trọng, nhưng không ràng buộc tòa án một cách máy móc. Tòa án xem xét đồng thời toàn bộ chứng cứ như lời khai, hình ảnh và tình trạng xe.
 
@@ -63,10 +63,10 @@ Nếu là tội chỉ khởi tố khi có yêu cầu của người bị hại t
 
 ### Căn cứ chính thức cho Q1–Q5
 
-- [Điều 62 Điều lệ Xử phạt Quản lý Giao thông Đường bộ (道路交通管理處罰條例)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
-- [Điều 185-4 Bộ luật Hình sự Trung Hoa Dân Quốc (中華民國刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
-- [Điều 284 Bộ luật Hình sự Trung Hoa Dân Quốc](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
-- [Điều 287 Bộ luật Hình sự Trung Hoa Dân Quốc](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
+- [Điều 62 Luật Xử phạt Quản lý Giao thông Đường bộ (道路交通管理處罰條例)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [Điều 185-4 Bộ luật Hình sự Đài Loan (中華民國刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
+- [Điều 284 Bộ luật Hình sự Đài Loan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [Điều 287 Bộ luật Hình sự Đài Loan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
 - [Điều 237 Bộ luật Tố tụng Hình sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001)
 - [Điều 238 Bộ luật Tố tụng Hình sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=238&pcode=C0010001)
 - [Điều 487 Bộ luật Tố tụng Hình sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=487&pcode=C0010001)
@@ -175,7 +175,7 @@ Nghĩa vụ tham gia bảo hiểm theo Điều 6 Luật Bảo hiểm Trách nhi�
 
 Trong vụ tai nạn chỉ liên quan tới một xe, người lái chiếc xe đó thông thường không thuộc đối tượng được chi trả theo bảo hiểm bắt buộc của chính chiếc xe ấy. Tuy nhiên, trong vụ tai nạn có nhiều xe liên quan, có trường hợp người lái xe có thể yêu cầu doanh nghiệp bảo hiểm bắt buộc của xe liên quan khác chi trả.
 
-Tiêu chuẩn chi trả (強制汽車責任保險給付標準) sửa đổi ngày 2026-05-29 được áp dụng cho vụ tai nạn xảy ra từ ngày 2026-07-01. Mức trần chi phí y tế hợp lý và cần thiết cho thương tích là TWD 200,000 theo Đài tệ mới; khoản chi trả cho tình trạng mất khả năng lao động (失能) là TWD 80,000–3,000,000 theo 15 cấp độ luật định; khoản chi trả cho trường hợp tử vong là TWD 3,000,000; và mức tối đa cộng gộp của khoản tử vong, mất khả năng lao động và chi phí y tế cho mỗi người bị hại trong mỗi vụ tai nạn là TWD 3,200,000. Với vụ tai nạn xảy ra trước thời điểm đó, tiêu chuẩn trước đây có thể được áp dụng.
+Tiêu chuẩn chi trả (強制汽車責任保險給付標準) sửa đổi ngày 29 tháng 5 năm 2026 được áp dụng cho vụ tai nạn xảy ra từ ngày 1 tháng 7 năm 2026. Mức trần chi phí y tế hợp lý và cần thiết cho thương tích là 200.000 TWD theo Đài tệ mới; khoản chi trả cho tình trạng mất khả năng lao động (失能) là 80.000–3.000.000 TWD theo 15 cấp độ luật định; khoản chi trả cho trường hợp tử vong là 3.000.000 TWD; và mức tối đa cộng gộp của khoản tử vong, mất khả năng lao động và chi phí y tế cho mỗi người bị hại trong mỗi vụ tai nạn là 3.200.000 TWD. Với vụ tai nạn xảy ra trước thời điểm đó, tiêu chuẩn trước đây có thể được áp dụng.
 
 Bảo hiểm trách nhiệm đối với người thứ ba (第三人責任險), bảo hiểm tai nạn cho người lái xe (駕駛人傷害險) và bảo hiểm thiệt hại thân xe (車體損失險) đều là sản phẩm bảo hiểm tự nguyện theo hợp đồng. Phạm vi bảo đảm trên thực tế thay đổi tùy theo người được bảo hiểm, hạn mức, mức tự chịu (自負額), các trường hợp loại trừ, lỗi cùng những điều kiện khác trong điều khoản hợp đồng, nên quý vị phải kiểm tra riêng từng đơn bảo hiểm và điều khoản.
 
@@ -184,22 +184,22 @@ Bảo hiểm trách nhiệm đối với người thứ ba (第三人責任險),
 - [Điều 193 Bộ luật Dân sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Điều 216 Bộ luật Dân sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Điều 217 Bộ luật Dân sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Bản án Thượng Dị số 644 năm 109 của Tòa án Cấp cao Đài Loan (109年度上易字第644號)](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Bản án Thượng Dị số 644 năm 109 (2020) của Tòa án Cấp cao Đài Loan (109年度上易字第644號)](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
 - [Bản án Thượng Dị số 477 năm 109 của Tòa án Cấp cao Đài Loan](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Máy tính giá trị hiện tại Hoffmann của Viện Tư pháp](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Điều 195 Bộ luật Dân sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
 - [Bản án Lịch Giản số 236 năm 112 của Tòa án Địa phương Đào Viên (112年度壢簡字第236號)](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Điều 188 Bộ luật Dân sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
-- [Điều 284 Bộ luật Hình sự Trung Hoa Dân Quốc](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [Điều 284 Bộ luật Hình sự Đài Loan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Luật Bảo hiểm Trách nhiệm Dân sự Bắt buộc của Chủ xe Cơ giới](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
 - [Tiêu chuẩn chi trả của Bảo hiểm Trách nhiệm Dân sự Bắt buộc của Chủ xe Cơ giới](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Hợp đồng mẫu bảo hiểm xe cơ giới dùng cho cá nhân của Ủy ban Giám sát Quản lý Tài chính (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Sau vụ tai nạn, tôi có thể giao toàn bộ mọi việc cho công ty bảo hiểm không?
+Q16. Sau vụ tai nạn, quý vị có thể giao toàn bộ mọi việc cho công ty bảo hiểm không?
 
 ​
 
-Theo kinh nghiệm của tôi, công ty bảo hiểm nhiều khi không xử lý đầy đủ vấn đề cảm xúc của các bên trong vụ tai nạn.
+Trên thực tiễn xử lý vụ việc, công ty bảo hiểm nhiều khi không xử lý đầy đủ vấn đề cảm xúc của các bên trong vụ tai nạn.
 
 ​
 
@@ -207,7 +207,7 @@ Những phần quan trọng liên quan tới cảm xúc của đối phương nh
 
 ​
 
-Với công ty bảo hiểm, việc chi thêm TWD 500,000 hay TWD 1,000,000 cho một vụ việc riêng lẻ không ảnh hưởng lớn tới lợi ích của toàn công ty, nhưng với người trong cuộc thì điều đó có thể ảnh hưởng tới việc có để lại tiền án hình sự (前科) hay không.
+Với công ty bảo hiểm, việc chi thêm 500.000 TWD hay 1.000.000 TWD cho một vụ việc riêng lẻ không ảnh hưởng lớn tới lợi ích của toàn công ty, nhưng với người trong cuộc thì điều đó có thể ảnh hưởng tới việc có để lại tiền án hình sự (前科) hay không.
 
 ​
 
@@ -219,7 +219,7 @@ Cũng có thể phát sinh xung đột lợi ích giữa công ty bảo hiểm v
 
 ​
 
-Vì vậy, tôi không khuyến nghị giao toàn bộ vụ kiện cho công ty bảo hiểm.
+Vì vậy, không nên giao toàn bộ vụ kiện cho công ty bảo hiểm.
 
 ​
 
@@ -235,11 +235,11 @@ Q17. Trách nhiệm hình sự về tội gây thương tích do vô ý của ng
 
 ​
 
-Trong trường hợp gây thương tích do vô ý, hiện nay tòa án tuyên mức hình phạt khoảng 3 tháng.
+Trong một số bản án, hành vi gây thương tích do vô ý đã bị tuyên khoảng 3 tháng tù; đó không phải mức án điển hình hay được bảo đảm.
 
 ​
 
-Nếu chuyển sang nộp tiền thay thế hình phạt tù (易科罰金), Điều 41 khoản 1 Bộ luật Hình sự quy định quy đổi TWD 1,000, 2,000 hoặc 3,000 cho mỗi ngày; tính theo mức TWD 1,000 mỗi ngày thì mức án 3 tháng là 3\*30\*1,000=90,000 Đài tệ (TWD).
+Nếu chuyển sang nộp tiền thay thế hình phạt tù (易科罰金), Điều 41 khoản 1 Bộ luật Hình sự quy định quy đổi 1.000 TWD, 2.000 hoặc 3.000 cho mỗi ngày; tính theo mức 1.000 TWD mỗi ngày thì mức án 3 tháng tương ứng 90.000 TWD (3 tháng × 30 ngày × 1.000 TWD).
 
 ​
 
@@ -247,7 +247,7 @@ Nếu chuyển sang nộp tiền thay thế hình phạt tù (易科罰金), Đi
 
 ​
 
-Gây thương tích nặng do vô ý thường bị tuyên 4 tháng, làm chết người do vô ý (過失致死) thường bị tuyên 6 tháng.
+Trong một số bản án, hành vi gây thương tích nặng do vô ý đã bị tuyên khoảng 4 tháng và hành vi làm chết người do vô ý (過失致死) khoảng 6 tháng; đó cũng không phải mức án điển hình hay được bảo đảm.
 
 ​
 
@@ -267,7 +267,7 @@ Làm chết người do vô ý thì không thể rút yêu cầu khởi tố, nh
 
 ​
 
-Quý vị có thể được hưởng án treo và không phải vào tù.
+Trong một số trường hợp, tòa án có thể cho hưởng án treo (緩刑); đây không phải lời hứa rằng quý vị sẽ không phải chấp hành hình phạt tù.
 
 ​
 
@@ -307,7 +307,7 @@ Vì tai nạn giao thông là loại vụ việc rất phổ biến, nên một 
 
 ​
 
-Điều quan trọng là luật sư xem xét cẩn thận toàn bộ các khoản yêu cầu bồi thường của vụ việc, để quý vị nhận được mức bồi thường cao nhất có thể.
+Điều quan trọng là luật sư xem xét cẩn thận toàn bộ các khoản yêu cầu bồi thường của vụ việc, để các khoản mà tình tiết và chứng cứ có thể chứng minh đều được xem xét đầy đủ.
 
 ​
 
@@ -359,11 +359,11 @@ Vì vậy, tuyệt đối không được xem nhẹ điểm này, và tùy hoàn
 
 ​
 
-Nếu quý vị còn thắc mắc nào khác, xin để lại bình luận.
+Nếu quý vị còn thắc mắc, xin gửi qua trang Liên hệ; văn phòng không cam kết thời gian phản hồi.
 
 ​
 
-Trên đây là chia sẻ của WEI, luật sư Đài Loan.
+Wei Tseng (曾雋崴), luật sư Đài Loan.
 
 ---
 

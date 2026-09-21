@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Quý vị đã từng trải nghiệm thời kỳ các tiệm cắt tóc truyền thống thuở ban đầu của Đài Loan chưa?
+Quý vị còn nhớ thời kỳ các tiệm cắt tóc truyền thống ở Đài Loan không?
 
 Cách gội đầu ở các tiệm cắt tóc thời đó rất đặc biệt.
 
@@ -29,7 +29,7 @@ Cách làm này rất giống với gội đầu kiểu Việt (越式洗髮).
 
 Và những tiệm cắt tóc kiểu Đài Loan như thế vẫn còn là một ký ức văn hóa độc đáo của nhiều người Đài Loan.
 
-(Nói vậy chắc cũng vô tình để lộ tuổi tác mất rồi nhỉ?)
+(Nhắc lại ký ức này cũng cho thấy đó đã là chuyện của khá nhiều năm trước.)
 
 ​
 
@@ -57,7 +57,7 @@ Quy định này kéo dài đến tận năm 2003, khi ông Lâm (林) đang kin
 
 Theo pháp luật khi đó, ông Lâm và hai nhân viên lần lượt bị áp dụng tiền phạt hành chính (罰鍰) là 40.000 Đài tệ mới (新臺幣4萬元, TWD), 10.000 Đài tệ (1萬元) và 20.000 Đài tệ (2萬元).
 
-Ông Lâm cho rằng mức xử phạt này hết sức bất hợp lý nên đã nộp đơn thỉnh cầu Đại pháp quan (大法官) giải thích Hiến pháp.
+Ông Lâm cho rằng mức xử phạt này hết sức bất hợp lý nên đã nộp đơn đề nghị các thẩm phán hiến pháp (大法官) giải thích Hiến pháp.
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
@@ -81,7 +81,7 @@ Ví dụ, có ý kiến băn khoăn rằng quy định thành văn chỉ cho ph�
 
 và cũng có ý kiến đặt câu hỏi liệu quy định này có thực sự góp phần bảo vệ việc làm và cuộc sống của người khiếm thị hay không.
 
-Cuối cùng, các Đại pháp quan đã tuyên bố điều luật chỉ cho phép người khiếm thị hành nghề massage là vi hiến (違憲).
+Cuối cùng, các thẩm phán hiến pháp đã tuyên bố điều luật chỉ cho phép người khiếm thị hành nghề massage là vi hiến (違憲).
 
 ​
 

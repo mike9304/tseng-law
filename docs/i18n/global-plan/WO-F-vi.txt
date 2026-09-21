@@ -1,6 +1,6 @@
 WO-F-vi — Apply the accepted native-review fixes to the Vietnamese content (Opus 5 fix lane)
 
-Workspace (yours alone): /Users/son7/Projects/tseng-law-fix-u-20260921
+Workspace (yours alone): /Users/son7/Projects/tseng-law-fix-a-20260921
 Do NOT git add/commit/push. Write only inside: src/data/international-guidance-*.ts, src/data/international-inquiry-copy.ts, src/lib/llms-txt.ts (the Vietnamese/`vi` strings only — never another locale's), src/content/columns-vi/*.md, and your log docs/i18n/global-plan/evidence/opus-F-vi.log. If a test pins a Vietnamese string you changed (e.g. a FAQ question or a title in src/lib/__tests__/guidance-*vi*.test.ts), update that test's expected string to the new wording — nothing else in tests.
 node: export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
 
@@ -22,7 +22,7 @@ Where the Vietnamese guidance strings live: src/data/international-guidance-*.ts
 - Guidance pack: keep the TypeScript structure; only string values change. Strings must remain valid TS string literals (escape quotes as the file already does).
 
 ## Verify (run all, paste output into your log)
-cd /Users/son7/Projects/tseng-law-fix-u-20260921 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+cd /Users/son7/Projects/tseng-law-fix-a-20260921 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
 node scripts/check-column-translation.mjs --dir src/content/columns-vi --lang vi 2>&1 | tail -8
 grep -rn "\[변호사 검수 필요\]" src/content/columns-vi src/data | wc -l
 npx tsc --noEmit -p tsconfig.json && echo TSC_OK

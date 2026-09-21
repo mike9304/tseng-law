@@ -293,7 +293,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Trang này được viết bằng tiếng Việt để cung cấp thông tin hướng dẫn chung, không phải ý kiến pháp lý cho vụ việc cụ thể của quý vị.',
     consultationNotice:
-      'Việc tư vấn được thực hiện bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Hàn.',
+      'Việc tư vấn chỉ được thực hiện bằng bốn ngôn ngữ: tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn.',
     methodConfirmationNotice:
       'Nếu quý vị không dùng được ngôn ngữ nào trong bốn ngôn ngữ đó, hãy chọn “Cần xác nhận cách liên hệ”. Văn phòng xác nhận phương thức trao đổi bằng thư trả lời khi có phương thức khả thi; không bảo đảm hỗ trợ bằng ngôn ngữ khác và không cam kết thời gian phản hồi.',
     preparationNotice:

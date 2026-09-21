@@ -1,5 +1,5 @@
 ---
-title: "Luật lao động Đài Loan: Nhận trợ cấp thôi việc (資遣費) ở Đài Loan thật sự khó đến vậy sao??"
+title: "Luật lao động Đài Loan: Nhận trợ cấp thôi việc (資遣費) ở Đài Loan thật sự khó đến vậy sao?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
 lastmod: "2026-09-10"
 date_display: "Ngày 13 tháng 9 năm 2025"
@@ -9,20 +9,20 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Tại Đài Loan, người lao động tự xin nghỉ việc có được nhận trợ cấp thôi việc (資遣費) không?"
-    a: "Không. Tại Đài Loan, khác với Hàn Quốc, nghĩa vụ chi trả trợ cấp thôi việc chỉ phát sinh khi công ty chủ động cho người lao động thôi việc; nếu người lao động tự xin nghỉ việc thì công ty không phải chi trả khoản này."
+    a: "Không. Khác với một số nước — ví dụ Hàn Quốc — tại Đài Loan nghĩa vụ chi trả trợ cấp thôi việc (資遣費) chỉ phát sinh khi người sử dụng lao động chủ động cho người lao động thôi việc; nếu người lao động tự xin nghỉ việc thì công ty không phải chi trả khoản này."
   - q: "Trong trường hợp sa thải kỷ luật, công ty có phải chi trả trợ cấp thôi việc không?"
     a: "Không. Khi người lao động có hành vi vi phạm pháp luật, vi phạm nội quy lao động (工作規則), hoặc vắng mặt không có lý do chính đáng (曠工) liên tục 3 ngày (Điều 12 Luật Tiêu chuẩn Lao động (勞動基準法)), công ty được chấm dứt hợp đồng mà không cần báo trước và không phải chi trả trợ cấp thôi việc. Ngược lại, trường hợp cho thôi việc vì lý do kinh tế (Điều 11) thì phải báo trước và phải chi trả trợ cấp thôi việc."
   - q: "Trợ cấp thôi việc tại Đài Loan được tính như thế nào?"
-    a: "Cứ mỗi một năm thâm niên công tác đầy đủ của người lao động, người sử dụng lao động phải chi trả 0,5 tháng tiền lương bình quân (平均工資) làm trợ cấp thôi việc, tối đa không quá 6 tháng tiền lương. Đây là công thức cho thời gian làm việc thuộc phạm vi điều chỉnh của Điều 12 Điều lệ Quỹ hưu trí lao động (勞工退休金條例); đối với thời gian làm việc thuộc Điều 17 Luật Tiêu chuẩn Lao động (勞動基準法), trợ cấp là một tháng lương bình quân cho mỗi năm làm việc và không có mức trần."
+    a: "Cứ mỗi một năm thâm niên công tác đầy đủ của người lao động, người sử dụng lao động phải chi trả 0,5 tháng tiền lương bình quân (平均工資) làm trợ cấp thôi việc, tối đa không quá 6 tháng tiền lương. Đây là công thức cho thời gian làm việc thuộc phạm vi điều chỉnh của Điều 12 Luật Hưu trí Người lao động (勞工退休金條例); đối với thời gian làm việc thuộc Điều 17 Luật Tiêu chuẩn Lao động (勞動基準法), trợ cấp là một tháng lương bình quân cho mỗi năm làm việc và không có mức trần."
 ---
 
-# Luật lao động Đài Loan: Nhận trợ cấp thôi việc (資遣費) ở Đài Loan thật sự khó đến vậy sao??
+# Luật lao động Đài Loan: Nhận trợ cấp thôi việc (資遣費) ở Đài Loan thật sự khó đến vậy sao?
 
 ![Ảnh đại diện](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Xin chào quý vị, tôi là Wei Tseng (曾雋崴), luật sư Đài Loan.
+Wei Tseng (曾雋崴), luật sư Đài Loan.
 
-Hôm nay tôi muốn cùng quý vị trao đổi về trợ cấp thôi việc (資遣費) theo chế độ của Đài Loan.
+Bài viết này trình bày chế độ trợ cấp thôi việc (資遣費) của Đài Loan.
 
 ![](../images/008-taiwan-labor-severance-law/img-01.jpg)
 
@@ -30,7 +30,7 @@ Chắc hẳn nhiều quý vị đã từng nghe nói đến khoản tiền này.
 
 Ở Hàn Quốc, khi người lao động nghỉ việc thì công ty phải chi trả khoản trợ cấp một lần theo pháp luật Hàn Quốc (退職金).
 
-Nhưng Đài Loan lại khác với Hàn Quốc:
+Nhưng tại Đài Loan, quy định lại khác với một số nước, ví dụ Hàn Quốc:
 
 chỉ khi phía công ty cho người lao động thôi việc thì mới phát sinh nghĩa vụ chi trả trợ cấp thôi việc.
 
@@ -62,7 +62,7 @@ Tôi xin tổng hợp lại bằng một bảng đơn giản như sau.
 
 > Tại Đài Loan, cứ mỗi một năm thâm niên công tác đầy đủ của người lao động,
 > người sử dụng lao động phải chi trả 0,5 tháng tiền lương bình quân (平均工資) làm trợ cấp thôi việc.
-> (Tối đa không quá 6 tháng tiền lương) Đây là công thức cho thời gian làm việc thuộc phạm vi điều chỉnh của Điều 12 Điều lệ Quỹ hưu trí lao động (勞工退休金條例); đối với thời gian làm việc thuộc Điều 17 Luật Tiêu chuẩn Lao động (勞動基準法), trợ cấp là một tháng lương bình quân cho mỗi năm làm việc và không có mức trần.
+> (Tối đa không quá 6 tháng tiền lương) Đây là công thức cho thời gian làm việc thuộc phạm vi điều chỉnh của Điều 12 Luật Hưu trí Người lao động (勞工退休金條例); đối với thời gian làm việc thuộc Điều 17 Luật Tiêu chuẩn Lao động (勞動基準法), trợ cấp là một tháng lương bình quân cho mỗi năm làm việc và không có mức trần.
 
 ​
 
@@ -78,7 +78,7 @@ nhằm ép người lao động tự xin nghỉ việc.
 
 Người lao động cần hết sức thận trọng,
 
-và chú ý để không rơi vào ý đồ mà công ty giăng ra.
+và đề phòng để không sập bẫy mà công ty sắp đặt.
 
 ​
 
@@ -174,9 +174,9 @@ và nhờ vậy chứng minh được rằng ông không hề tự nguyện xin 
 
 Nhờ đó, sau này với sự hỗ trợ của luật sư,
 
-ông đã nhận được khoản trợ cấp thôi việc lớn,
+ông đã xác lập được quyền hưởng trợ cấp thôi việc theo luật trên cơ sở chứng cứ đã thu thập,
 
-nhưng những người lao động đã nghỉ việc khác thì không được may mắn như vậy.
+trong khi những người lao động đã nghỉ việc khác không giữ được chứng cứ tương tự.
 
 ​
 
@@ -218,9 +218,9 @@ và hãy cảnh giác để công ty không sa thải quý vị một cách khô
 
 hoặc ép quý vị phải tự xin nghỉ việc.
 
-Trợ cấp thôi việc là quyền lợi hợp pháp của người lao động,
+Khi đủ điều kiện luật định, trợ cấp thôi việc (資遣費) là quyền của người lao động,
 
-và công ty đương nhiên phải chi trả.
+và người sử dụng lao động có nghĩa vụ chi trả theo luật.
 
 Quý vị cũng hãy bảo vệ quyền lợi của chính mình khi ở Đài Loan.
 
@@ -229,4 +229,4 @@ Quý vị cũng hãy bảo vệ quyền lợi của chính mình khi ở Đài L
 > Xem thêm:
 > - [Cách xác định phạm vi công việc và chi phí](/vi/pricing)
 > - [Đội ngũ quốc tế Hovering](/vi/lawyers)
-> - [Các lĩnh vực mà văn phòng nhận xử lý](/vi/services)
+> - [Các lĩnh vực dịch vụ](/vi/services)

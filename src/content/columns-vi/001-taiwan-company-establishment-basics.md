@@ -32,7 +32,7 @@ Vì vậy, ngay từ đầu quý vị nên xem xét đồng thời mô hình kin
 
 Công ty con (子公司) tại Đài Loan (công ty trách nhiệm hữu hạn (有限公司) hoặc công ty cổ phần (股份有限公司)) là một pháp nhân độc lập theo pháp luật Đài Loan. Chi nhánh Đài Loan (分公司) của một công ty nước ngoài không có tư cách pháp nhân độc lập, mà hoạt động kinh doanh tại Đài Loan với tư cách là một bộ phận của công ty nước ngoài đó. Văn phòng đại diện (代表人辦事處) không phải là cơ sở kinh doanh thực hiện hoạt động sinh lợi; phạm vi hoạt động của văn phòng đại diện bị giới hạn ở việc thực hiện hành vi pháp lý và công việc liên lạc cho công ty nước ngoài. Trách nhiệm, nghĩa vụ thuế, các loại giấy phép và điều kiện tham gia mua sắm công vẫn phải được xác nhận riêng theo từng hình thức tổ chức và từng vụ việc cụ thể.
 
-Công ty con tại Đài Loan là pháp nhân độc lập, tách biệt với trụ sở chính, có thể nhân danh chính mình ký kết hợp đồng và là chủ thể của quyền và nghĩa vụ. Khi lựa chọn giữa công ty trách nhiệm hữu hạn và công ty cổ phần, quý vị cần cân nhắc cơ cấu phần vốn góp (出資額) hoặc cổ phần, thành phần các cơ quan của công ty, cách thức ra quyết định và kế hoạch huy động vốn. Không thể chỉ vì có tư cách pháp nhân độc lập mà cho rằng mọi trách nhiệm luôn giới hạn trong phạm vi công ty con; các quan hệ riêng lẻ như bảo lãnh, bảo đảm, hợp đồng với công ty mẹ hay trách nhiệm của thành viên hội đồng quản trị hoặc người quản trị (董事) cũng phải được xem xét cùng lúc.
+Công ty con tại Đài Loan là pháp nhân độc lập, tách biệt với trụ sở chính, có thể nhân danh chính mình ký kết hợp đồng và là chủ thể của quyền và nghĩa vụ. Khi lựa chọn giữa công ty trách nhiệm hữu hạn và công ty cổ phần, quý vị cần cân nhắc cơ cấu phần vốn góp (出資額) hoặc cổ phần, thành phần các cơ quan của công ty, cách thức ra quyết định và kế hoạch huy động vốn. Không thể chỉ vì có tư cách pháp nhân độc lập mà cho rằng mọi trách nhiệm luôn giới hạn trong phạm vi công ty con; các quan hệ riêng lẻ như bảo lãnh, bảo đảm, hợp đồng với công ty mẹ hay trách nhiệm của thành viên hội đồng quản trị (董事) cũng phải được xem xét cùng lúc.
 
 Chi nhánh Đài Loan của công ty nước ngoài là tổ chức để công ty nước ngoài đó tiến hành hoạt động kinh doanh tại Đài Loan. Bản thân chi nhánh không có cổ đông riêng, và vì không phải là một pháp nhân riêng biệt mà là một bộ phận của trụ sở chính (本公司), nên trụ sở chính phải gánh chịu các khoản nợ và trách nhiệm của chi nhánh. Không được mặc định rằng việc chuyển tiền giữa trụ sở chính và chi nhánh Đài Loan, việc chuyển lợi nhuận ra nước ngoài, cách hạch toán kế toán và cách xử lý về thuế đều giống với cơ cấu chia cổ tức của công ty con.
 
@@ -40,7 +40,7 @@ Văn phòng đại diện là đầu mối hoạt động trong phạm vi đư�
 
 Rốt cuộc, khi so sánh các hình thức tổ chức, ngoài phạm vi trách nhiệm, quý vị còn phải xem xét đồng thời cơ cấu vốn, việc phân chia và chuyển lợi nhuận, nghĩa vụ thuế, giấy phép theo ngành nghề, quan hệ lao động và điều kiện tham gia mua sắm công. Nếu một gói thầu hoặc một loại giấy phép cụ thể có yêu cầu về pháp nhân Đài Loan, về mức vốn, về thành tích hoặc về đăng ký, thì không được chỉ dựa vào tên gọi của tổ chức để kết luận có được tham gia hay không, mà phải kiểm tra quy định pháp luật và thông báo liên quan.
 
-Hiệp định thuế thu nhập Đài Loan–Hàn Quốc (台韓所得稅協定) đã có hiệu lực từ ngày 27 tháng 12 năm 2023 và được áp dụng từ ngày 1 tháng 1 năm 2024; đây là hiệp định giữa Đài Loan và Hàn Quốc, và phần nội dung về hiệp định trong bài chỉ áp dụng cho các trường hợp đáp ứng điều kiện áp dụng của hiệp định. Khi đáp ứng các điều kiện áp dụng của hiệp định, thuế suất trần tại nước nguồn đối với cổ tức, lãi và tiền bản quyền (royalty) đều là 10%. Lợi nhuận kinh doanh về nguyên tắc do phía nơi cư trú đánh thuế, trừ những trường hợp như có cơ sở thường trú (PE, 常設機構) theo hiệp định tại lãnh thổ bên kia, nhưng trước hết vẫn phải xác nhận hình thức thực hiện công việc trên thực tế.
+Lưu ý theo quốc gia — Hiệp định thuế thu nhập Đài Loan–Hàn Quốc: Hiệp định thuế thu nhập Đài Loan–Hàn Quốc (台韓所得稅協定) đã có hiệu lực từ ngày 27 tháng 12 năm 2023 và được áp dụng từ ngày 1 tháng 1 năm 2024; đây là hiệp định giữa Đài Loan và Hàn Quốc, và phần nội dung về hiệp định trong bài chỉ áp dụng cho các trường hợp đáp ứng điều kiện áp dụng của hiệp định. Khi đáp ứng các điều kiện áp dụng của hiệp định, thuế suất trần tại nước nguồn đối với cổ tức, lãi và tiền bản quyền (royalty) đều là 10%. Lợi nhuận kinh doanh về nguyên tắc do phía nơi cư trú đánh thuế, trừ những trường hợp như có cơ sở thường trú (常設機構) theo hiệp định tại lãnh thổ bên kia, nhưng trước hết vẫn phải xác nhận hình thức thực hiện công việc trên thực tế. Phần trình bày về hiệp định này chỉ dành cho những tình huống liên quan đến Hàn Quốc và đáp ứng điều kiện của hiệp định; đây không phải quy tắc chung áp dụng cho mọi nhà đầu tư nước ngoài. Việc giữa Đài Loan và quốc gia của quý vị có hiệp định thuế hay không, cùng nội dung của hiệp định đó, phải được xác nhận riêng.
 
 Cơ sở thường trú theo hiệp định có thể bao gồm cơ sở cố định như nơi quản lý, chi nhánh, văn phòng; công trình xây dựng kéo dài quá 6 tháng; hoạt động cung cấp dịch vụ có tổng số ngày vượt quá 183 ngày trong bất kỳ giai đoạn 12 tháng nào; và đại lý thường xuyên thực hiện quyền ký kết hợp đồng. Bốn loại này có điều kiện áp dụng khác nhau, và nếu đã có địa điểm cố định hoặc có hoạt động của đại lý thì phải xem xét riêng, không phụ thuộc vào số ngày cung cấp dịch vụ. Do đó, không được chỉ dựa vào một con số 183 ngày để phán đoán cơ sở thường trú có hình thành hay không, hoặc lợi nhuận kinh doanh có bị đánh thuế hay không.
 
@@ -54,9 +54,9 @@ Việc thành lập công ty con tại Đài Loan thường bắt đầu từ kh
 
 2. Công chứng, chứng nhận các giấy tờ nước ngoài như giấy ủy quyền, và khi cần thiết là xác thực tại cơ quan đại diện của Đài Loan ở nước ngoài
 
-3. Nộp đơn xin đầu tư nước ngoài lên Cục Thẩm định Đầu tư, Bộ Kinh tế (經濟部投資審議司) (khi thuộc trường hợp phải nộp)
+3. Nộp đơn xin đầu tư nước ngoài lên Vụ Thẩm định Đầu tư, Bộ Kinh tế (經濟部投資審議司) (khi thuộc trường hợp phải nộp)
 
-4. Mở tài khoản văn phòng trù bị của công ty (公司籌備處帳戶)
+4. Mở tài khoản văn phòng chuẩn bị thành lập công ty (公司籌備處帳戶)
 
 5. Chuyển vốn đầu tư từ nước ngoài vào Đài Loan
 
@@ -66,7 +66,7 @@ Việc thành lập công ty con tại Đài Loan thường bắt đầu từ kh
 
 8. Đăng ký thuế
 
-9. Chuyển tài khoản văn phòng trù bị thành tài khoản công ty chính thức
+9. Chuyển tài khoản văn phòng chuẩn bị thành lập thành tài khoản công ty chính thức
 
 10. Các thủ tục bổ sung như đăng ký doanh nghiệp xuất nhập khẩu, giấy phép theo ngành nghề, giấy phép làm việc và cư trú (khi thuộc trường hợp phải làm)
 
@@ -74,7 +74,7 @@ Kiểm tra trước tên công ty bằng tiếng Trung và ngành nghề kinh do
 
 Các giấy tờ được lập ở nước ngoài như giấy ủy quyền, giấy chứng nhận pháp nhân còn tồn tại, tài liệu xác nhận quyền đại diện có thể phải qua công chứng, chứng nhận hoặc xác thực tại cơ quan đại diện của Đài Loan ở nước ngoài, tùy theo nơi phát hành và tính chất của giấy tờ. Quý vị cũng phải kiểm tra xem bản dịch, cách ghi tên người có quyền ký và tên pháp nhân có khớp với đơn đăng ký hay không. Vì hồ sơ cần chuẩn bị có thể khác nhau tùy theo quốc tịch của nhà đầu tư và tùy nhà đầu tư là cá nhân hay pháp nhân, nên sắp xếp trước thời hạn hiệu lực và lộ trình chứng nhận trước khi xin cấp giấy tờ sẽ hiệu quả hơn.
 
-Ở bước mở tài khoản văn phòng trù bị và chuyển vốn đầu tư, ngân hàng có thể xác minh chủ sở hữu hưởng lợi (實質受益人) và nguồn tiền như một phần của quy trình nhận biết khách hàng. Nếu người chuyển tiền, mục đích chuyển tiền, nội dung đã được phê duyệt đầu tư và tài khoản nhận tiền không khớp với nhau, quý vị có thể phải giải trình bổ sung hoặc bổ sung hồ sơ. Sau khi chuyển tiền, cần trải qua thủ tục thẩm định xác nhận đối với số vốn đầu tư thực tế, rồi tiến hành đăng ký thành lập công ty và đăng ký thuế, sau đó chuyển tài khoản trù bị thành tài khoản chính thức theo quy trình của ngân hàng.
+Ở bước mở tài khoản văn phòng chuẩn bị thành lập và chuyển vốn đầu tư, ngân hàng có thể xác minh chủ sở hữu hưởng lợi (實質受益人) và nguồn tiền như một phần của quy trình nhận biết khách hàng. Nếu người chuyển tiền, mục đích chuyển tiền, nội dung đã được phê duyệt đầu tư và tài khoản nhận tiền không khớp với nhau, quý vị có thể phải giải trình bổ sung hoặc bổ sung hồ sơ. Sau khi chuyển tiền, cần trải qua thủ tục thẩm định xác nhận đối với số vốn đầu tư thực tế, rồi tiến hành đăng ký thành lập công ty và đăng ký thuế, sau đó chuyển tài khoản chuẩn bị thành lập thành tài khoản chính thức theo quy trình của ngân hàng.
 
 Trình tự, mức độ cần thiết và thời gian của các thủ tục thay đổi tùy theo hình thức tổ chức, số vốn đầu tư, ngành nghề, nội dung thẩm định, tiến độ thủ tục của ngân hàng và việc có phải bổ sung hồ sơ hay không. Cũng có những thủ tục chỉ tiến hành sau khi đã thành lập công ty, như đăng ký doanh nghiệp xuất nhập khẩu, giấy phép liên quan đến nhà máy, sản phẩm hoặc ngành nghề chuyên môn, đơn xin giấy phép làm việc và cư trú cho người nước ngoài. Khi ấn định ngày ký hợp đồng hoặc ngày bắt đầu kinh doanh, quý vị phải tính đến không chỉ việc đăng ký công ty mà cả thời điểm hoàn tất những thủ tục tiếp theo này.
 
@@ -120,7 +120,7 @@ Thuế kinh doanh (營業稅) của Đài Loan có thuế suất phổ thông l�
 
 Thuế kinh doanh và thuế thu nhập doanh nghiệp có đối tượng chịu thuế và cách kê khai khác nhau, nên phải phân biệt loại thuế đánh trên doanh thu với loại thuế đánh trên thu nhập chịu thuế. Khi chi trả cổ tức, lãi, tiền bản quyền hoặc phí dịch vụ cho cổ đông ở nước ngoài hay công ty liên kết, quý vị phải xem xét trước tính chất của khoản chi trả, địa vị của bên nhận, quy định khấu trừ tại nguồn theo pháp luật trong nước và khả năng áp dụng hiệp định thuế thu nhập.
 
-Hiệp định thuế thu nhập Đài Loan–Hàn Quốc, như đã nêu chỉ áp dụng cho các trường hợp đáp ứng điều kiện áp dụng của hiệp định, có hiệu lực từ ngày 27 tháng 12 năm 2023 và được áp dụng từ ngày 1 tháng 1 năm 2024; đối với lãi và tiền bản quyền đáp ứng điều kiện, thuế suất trần tại nước nguồn cũng là 10%. Khi xem xét quyền đánh thuế đối với lợi nhuận kinh doanh, phải xem xét cả bốn loại cơ sở thường trú đã trình bày ở trên. Không chỉ số ngày cung cấp dịch vụ, mà cả địa điểm cố định, thời gian thi công công trình, quyền ký kết hợp đồng của đại lý và hoạt động thực tế của đại lý cũng phải được xác nhận cùng lúc.
+Hiệp định thuế thu nhập Đài Loan–Hàn Quốc, như đã nêu chỉ áp dụng cho những tình huống liên quan đến Hàn Quốc và đáp ứng điều kiện áp dụng của hiệp định, có hiệu lực từ ngày 27 tháng 12 năm 2023 và được áp dụng từ ngày 1 tháng 1 năm 2024; đối với lãi và tiền bản quyền đáp ứng điều kiện, thuế suất trần tại nước nguồn cũng là 10%. Khi xem xét quyền đánh thuế đối với lợi nhuận kinh doanh, phải xem xét cả bốn loại cơ sở thường trú đã trình bày ở trên. Không chỉ số ngày cung cấp dịch vụ, mà cả địa điểm cố định, thời gian thi công công trình, quyền ký kết hợp đồng của đại lý và hoạt động thực tế của đại lý cũng phải được xác nhận cùng lúc. Việc giữa Đài Loan và quốc gia của nhà đầu tư có hiệp định thuế hay không, cùng nội dung của hiệp định đó, phải được xác nhận riêng cho từng quốc gia; đây không phải quy tắc chung áp dụng cho mọi nhà đầu tư nước ngoài.
 
 Thuế suất giới hạn theo hiệp định không tự động được áp dụng chỉ vì hiệp định tồn tại. Phải xác nhận người nộp thuế có phải là đối tượng cư trú theo hiệp định hay không, có phải là chủ sở hữu hưởng lợi hay không, tính chất pháp lý của khoản thu nhập, cùng giấy chứng nhận cư trú thuế và các giấy tờ phải nộp. Quý vị nên quản lý sao cho cấu trúc giao dịch, hợp đồng, hóa đơn, công việc thực tế và dòng tiền khớp với nhau, đồng thời kiểm tra riêng thời hạn kê khai và việc lưu giữ chứng từ.
 
@@ -128,7 +128,7 @@ Thuế suất giới hạn theo hiệp định không tự động được áp 
 
 - [Quy định pháp luật về đầu tư nước ngoài của Bộ Kinh tế Đài Loan (bản tiếng Anh)](https://law.moea.gov.tw/EngLawContent.aspx?id=10484&lan=E)
 - [Hướng dẫn nghiệp vụ đầu tư của Bộ Kinh tế Đài Loan](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42885)
-- [Hướng dẫn đăng ký công ty và đăng ký thương mại của Cục Phát triển Thương mại, Bộ Kinh tế (商業發展署)](https://gcis.nat.gov.tw/mainNew/English/index.jsp)
+- [Hướng dẫn đăng ký công ty và đăng ký thương mại của Vụ Thương mại, Bộ Kinh tế (商業發展署)](https://gcis.nat.gov.tw/mainNew/English/index.jsp)
 - [Sổ tay nghiệp vụ về giấy phép làm việc cho người quản lý doanh nghiệp có vốn đầu tư của Hoa kiều hoặc người nước ngoài](https://ws.wda.gov.tw/Download.ashx?n=VGhlIERpcmVjdG9yIG9yIE1hbmFnZXIgb2YgYW4gQXBwcm92ZWQgQnVzaW5lc3MgSW52ZXN0ZWQgb3IgRXN0YWJsaXNoZWQgYnkgT3ZlcnNlYXMgQ2hpbmVzZSBvciBGb3JlaWduZXIocykoU09QIE1hbnVhbCkucGRm&u=LzAwMS9VcGxvYWQvMzIxL3JlbGZpbGUvMC8yNTE1LzUzMWMyZTM0LTI1NmYtNGI5MC1iMzAzLTEzNWI4MTQxYTk5MC5wZGY%3D)
 - [Hướng dẫn của Bộ Tài chính Đài Loan (財政部) về Hiệp định thuế thu nhập Đài Loan–Hàn Quốc](https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10)
 - [Quy định về thuế suất khấu trừ tại nguồn đối với cổ tức trả cho người không cư trú](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
@@ -138,7 +138,7 @@ Thuế suất giới hạn theo hiệp định không tự động được áp 
 - [Hướng dẫn về thường trú của Sở Di dân, Bộ Nội chính Đài Loan (內政部移民署)](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Hướng dẫn tra cứu trước địa điểm kinh doanh của thành phố Đài Bắc](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-Quý vị có thể tìm hiểu phạm vi công việc liên quan tại [Các lĩnh vực mà văn phòng nhận xử lý](/vi/services), và xem kinh nghiệm cùng các ngôn ngữ mà luật sư phụ trách sử dụng tại [Đội ngũ quốc tế Hovering](/vi/lawyers). Với thắc mắc về một vụ việc cụ thể, xin quý vị sử dụng [mục liên hệ](/vi/contact).
+Quý vị có thể tìm hiểu phạm vi công việc liên quan tại [Các lĩnh vực dịch vụ](/vi/services), và xem kinh nghiệm cùng các ngôn ngữ mà luật sư phụ trách sử dụng tại [Đội ngũ quốc tế Hovering](/vi/lawyers). Với thắc mắc về một vụ việc cụ thể, xin quý vị sử dụng [mục liên hệ](/vi/contact).
 
 Bài viết này là tài liệu mang tính giáo dục nhằm giải thích một cách khái quát về việc thành lập công ty tại Đài Loan và các chế độ liên quan, không phải là ý kiến pháp lý hay ý kiến về thuế cho một vụ việc cụ thể. Vì thủ tục cần thiết và kết quả có thể thay đổi tùy theo cấu trúc đầu tư, ngành nghề, quốc tịch và tư cách cư trú của người nộp đơn, cũng như thực tiễn mới nhất của cơ quan có thẩm quyền, xin quý vị xác nhận tài liệu chính thức mới nhất và hoàn cảnh cụ thể của mình trước khi tiến hành đầu tư, ký kết hợp đồng hoặc tuyển dụng.
 

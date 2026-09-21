@@ -13,7 +13,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![Ảnh đại diện](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Như tôi đã trình bày trong bài trước, tại Đài Loan việc người lao động nhận được trợ cấp thôi việc là điều không dễ dàng.
+Tại Đài Loan, theo quy định chung, người lao động không dễ được nhận trợ cấp thôi việc.
 
 ​
 
@@ -21,7 +21,7 @@ Như tôi đã trình bày trong bài trước, tại Đài Loan việc người
 
 người lao động không được nhận trợ cấp thôi việc (Điều 18 Luật Tiêu chuẩn Lao động), vì nghĩa vụ chi trả khoản này về nguyên tắc chỉ phát sinh khi công ty chủ động cho người lao động thôi việc,
 
-và điểm này khác với Hàn Quốc.
+và điểm này khác với một số nước, ví dụ Hàn Quốc.
 
 ​
 
@@ -98,4 +98,4 @@ Trong phần lớn trường hợp, bên nào chuẩn bị trước thì bên đ
 > Xem thêm:
 > - [Cách xác định phạm vi công việc và chi phí](/vi/pricing)
 > - [Đội ngũ quốc tế Hovering](/vi/lawyers)
-> - [Các lĩnh vực mà văn phòng nhận xử lý](/vi/services)
+> - [Các lĩnh vực dịch vụ](/vi/services)

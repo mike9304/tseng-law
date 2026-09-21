@@ -47,11 +47,11 @@ quý vị có thể nhờ người quen tại Đài Loan, chủ nhà, môi giớ
 
 Nếu kết quả tra cứu cho thấy không thể kinh doanh nhà hàng, thì về sau, khi làm thủ tục đăng ký công ty (公司登記), chính quyền thành phố có thể không chấp nhận cho đăng ký.
 
-Vì vậy, xin quý vị hết sức lưu ý!
+Vì vậy, quý vị cần lưu ý điều này trước khi đăng ký.
 
 ​
 
-**Q. Có phải mọi ngành nghề đều phải tra cứu khả năng kinh doanh thông qua hệ thống "tra cứu trước địa điểm kinh doanh" hay không?**
+**Câu hỏi. Có phải mọi ngành nghề đều phải tra cứu khả năng kinh doanh thông qua hệ thống "tra cứu trước địa điểm kinh doanh" hay không?**
 
 Chúng tôi khuyến nghị rằng đối với mọi ngành nghề, quý vị đều nên xác nhận khả năng kinh doanh thông qua hệ thống "tra cứu trước địa điểm kinh doanh".
 
@@ -71,13 +71,13 @@ Nếu mở cửa hàng tại nơi không được phép kinh doanh nhà hàng, v
 
 "ngành nghề kinh doanh thuộc diện tra cứu chủ động" (主動查詢之營業項目)
 
-Trên đây là toàn bộ nội dung; nếu có thêm thắc mắc, xin quý vị liên hệ với luật sư Đài Loan bất cứ lúc nào.
+Trên đây là toàn bộ nội dung; nếu có thêm thắc mắc, xin quý vị gửi qua trang Liên hệ; văn phòng không cam kết thời gian phản hồi.
 
 Quy định của các cơ quan hành chính có thể thay đổi thường xuyên, vì vậy trước khi đăng ký công ty, quý vị nên xác nhận quy định mới nhất.
 
 ---
 
 > Xem thêm:
-> - [Các lĩnh vực mà văn phòng nhận xử lý](/vi/services)
+> - [Các lĩnh vực dịch vụ](/vi/services)
 > - [Đội ngũ quốc tế Hovering](/vi/lawyers)
 > - [Cách liên hệ với văn phòng](/vi/contact)

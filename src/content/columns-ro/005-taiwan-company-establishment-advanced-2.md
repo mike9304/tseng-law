@@ -21,7 +21,7 @@ Cei care au citit [Înființarea unei societăți în Taiwan – bazele](/ro/col
 
 ​
 
-Întrebările și răspunsurile (Q&A) de mai jos urmăresc să ajute persoanele care au în vedere o înființare de societate (公司設立) în Taiwan.
+Întrebările și răspunsurile de mai jos urmăresc să ajute persoanele care au în vedere o înființare de societate (公司設立) în Taiwan.
 
 ​
 
@@ -67,9 +67,9 @@ Unele bănci pot impune cerințe suplimentare, de exemplu o durată de folosire 
 
 **​**
 
-**5. Poate societatea să angajeze ca salariați persoane cu cetățenie coreeană?**
+**5. Poate societatea să angajeze salariați străini?**
 
-A. Primul salariat: cererea se depune ca muncă de conducere într-o întreprindere de investiție obișnuită a chinezilor de peste mări sau a străinilor (一般僑外投資事業主管工作). Criteriul „muncii de natură specializată sau tehnică” de la punctul B de mai jos nu se aplică, dar se aplică condițiile de destinatar, între care cea de conducător (經理人) al unei societăți al cărei aport al chinezilor de peste mări sau al străinilor depășește 1/3, precum și condițiile de rezultate ale angajatorului relative la capital și cifră de afaceri (art. 38 și 39 din standardele de examinare).
+A. Primul salariat: cererea se depune ca muncă de conducere într-o întreprindere de investiție obișnuită a chinezilor de peste mări sau a străinilor (一般僑外投資事業主管工作). Criteriul „muncii de natură specializată sau tehnică” de la punctul B de mai jos nu se aplică, dar se aplică condițiile de destinatar, între care cea de conducător (經理人) al unei societăți al cărei aport al chinezilor de peste mări sau al străinilor depășește 1/3, precum și condițiile de rezultate ale angajatorului referitoare la capital și cifră de afaceri (art. 38 și 39 din standardele de examinare).
 
 B. De la al doilea salariat există restricții: dacă numărul de salariați angajați depășește 1 persoană, formarea și experiența relevantă a salariatului, regulile de remunerare medie la angajare, precum și regulile de capital și de cifră de afaceri ale societății se tratează potrivit „muncii specializate sau tehnice” (專門性或技術性工作).
 
@@ -77,7 +77,7 @@ Consultați site-ul Ministerului Muncii din Taiwan (勞動部): <https://ezworkt
 
 ​
 
-Dacă aveți alte întrebări, ne puteți contacta.
+Pentru o cauză concretă folosiți pagina Contact a cabinetului; consultanța nu se face în limba română.
 
 ---
 

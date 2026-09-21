@@ -1010,18 +1010,18 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
     contact: 'Contact',
     faq: 'Întrebări',
     privacy: 'Date personale',
-    disclaimer: 'Avertismente',
+    disclaimer: 'Note juridice',
     columns: 'Articole',
   },
   contactCta: 'Trimiteți o solicitare',
   footerNotice:
-    'Această pagină în limba română conține doar informații generale despre activitatea cabinetului potrivit dreptului taiwanez. Nu este consultanță juridică pentru un caz concret, iar trimiterea unui mesaj nu creează prin ea însăși o relație între avocată sau avocat și client.',
-  skipLink: 'Săriți navigarea și mergeți la conținut',
+    'Această pagină în limba română conține doar informații generale despre activitatea cabinetului potrivit dreptului taiwanez. Nu este consultanță juridică pentru un caz concret, iar trimiterea unui mesaj nu creează prin ea însăși o relație între avocat și client.',
+  skipLink: 'Treceți la conținut',
   menuLabel: 'Lista paginilor',
   languageLabel: 'Limba de afișare',
   mega: {
     services: {
-      description: 'Cabinetul tratează grupele principale de lucrări potrivit dreptului taiwanez.',
+      description: 'Cabinetul acoperă principalele domenii de practică din dreptul taiwanez.',
       viewAllLabel: 'Vedeți toate',
     },
     columns: {
@@ -1029,11 +1029,11 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
       viewAllLabel: 'Vedeți toate',
     },
     lawyers: {
-      description: 'Prezentarea avocatelor și avocaților și a modalităților de contact.',
+      description: 'Prezentarea avocaților și a modalităților de contact.',
       viewAllLabel: 'Vedeți toate',
     },
     pricing: {
-      description: 'Această pagină explică întinderea lucrării și modul de clarificare a costurilor.',
+      description: 'Această pagină explică obiectul mandatului și modul de clarificare a onorariilor.',
       viewAllLabel: 'Vedeți toate',
     },
     faq: {
@@ -1050,9 +1050,9 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
     heroScrollLabel: 'Derulați în jos',
     heroColumnsCtaLabel: 'Vedeți articolele',
     servicesDetailLabel: 'Vedeți detaliile',
-    servicesAssistanceBefore: 'Dacă nu este clar din ce grupă face parte cazul dumneavoastră, pagina ',
+    servicesAssistanceBefore: 'Dacă nu este clar din ce domeniu face parte cazul dumneavoastră, pagina ',
     servicesAssistanceLinkLabel: 'Contact',
-    servicesAssistanceAfter: ' explică cum să alcătuiți un rezumat pe care o avocată sau un avocat îl va examina.',
+    servicesAssistanceAfter: ' explică cum să alcătuiți un rezumat pe care un avocat îl va examina.',
     columnsViewAllLabel: 'Vedeți toate articolele',
     columnsReadMoreLabel: 'Citiți mai departe',
     columnsReviewLabel: 'Verificat de avocata Wei Tseng',
@@ -1071,26 +1071,26 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Explicații generale în limba română despre aria de lucru a Hovering International Law Firm în Taiwan, despre limbile de consultanță și despre primul contact.',
       intro:
-        'Hovering International Law Firm însoțește clienți din străinătate, inclusiv pe cei cu legătură cu Taiwanul, în chestiuni de drept taiwanez: investiții și înființare de societăți, litigii civile, căsătorie, familie și succesiuni, dreptul muncii, cauze penale și proprietate intelectuală. Această parte în limba română vă ajută să recunoașteți ce lucrări intră în aria noastră, ce să pregătiți și cum ne puteți contacta. Sunt informații generale, nu consultanță juridică pentru cazul dumneavoastră.',
+        'Hovering International Law Firm însoțește clienți din străinătate, inclusiv pe cei cu legătură cu Taiwanul, în chestiuni de drept taiwanez: investiții și înființare de societăți, litigii civile, căsătorie, familie și succesiuni, dreptul muncii, cauze penale și proprietate intelectuală. Această parte în limba română vă ajută să recunoașteți ce cauze intră în aria noastră, ce să pregătiți și cum ne puteți contacta. Sunt informații generale, nu consultanță juridică pentru cazul dumneavoastră.',
       sections: [
         {
           heading: 'Cu ce ne ocupăm',
           paragraphs: [
             'Hovering International Law Firm este un cabinet de avocatură stabilit în Taiwan. Lucrează potrivit dreptului taiwanez și are birouri în Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) și Pingtung (屏東). Consiliem întreprinderi, susținem cauze în fața instanțelor și însoțim clienți din străinătate în pașii necesari în Taiwan.',
-            'Tot conținutul de aici este general. Rezultatul unei cauze depinde de fapte, de normele aplicabile și de momentul respectiv. Aceste informații nu înlocuiesc discuția cu o avocată sau un avocat asupra documentelor dumneavoastră.',
+            'Tot conținutul de aici este general. Rezultatul unei cauze depinde de fapte, de normele aplicabile și de momentul respectiv. Aceste informații nu înlocuiesc discuția cu un avocat asupra documentelor dumneavoastră.',
           ],
         },
         {
           heading: 'Limba paginii și limba consultanței nu sunt același lucru',
           paragraphs: [
-            'Această pagină este scrisă în limba română, dar consultanța cu o avocată sau un avocat se desfășoară numai în cele patru limbi de consultanță: engleză, chineză (中文), japoneză și coreeană. Citirea informațiilor în limba română nu înseamnă că discuția cu avocata sau avocatul va avea loc în limba română.',
-            'Nu promitem interpret, un termen de răspuns și nici o programare prin această pagină. Dacă nu puteți folosi niciuna dintre cele patru limbi, pagina «Contact» explică modul în care examinăm o cale de comunicare.',
+            'Această pagină este scrisă în limba română, dar consultanța cu un avocat se desfășoară numai în cele patru limbi de consultanță: engleză, chineză (中文), japoneză și coreeană. Citirea informațiilor în limba română nu înseamnă că discuția cu avocatul va avea loc în limba română.',
+            'Nu promitem interpret, un termen de răspuns și nici o programare prin această pagină. Dacă nu puteți folosi niciuna dintre cele patru limbi, pagina „Contact” explică modul în care căutăm o cale de comunicare.',
           ],
         },
         {
-          heading: 'Grupele de lucrări',
+          heading: 'Domeniile de practică',
           paragraphs: [
-            'Aria de lucru cuprinde următoarele șase grupe. Pagina «Servicii» descrie fiecare grupă mai exact și arată ce nu se promite.',
+            'Aria de lucru cuprinde următoarele șase domenii. Pagina „Servicii” descrie fiecare domeniu mai exact și arată ce nu se promite.',
           ],
           items: [
             'Investiții și înființare de societăți în Taiwan',
@@ -1104,7 +1104,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'De unde să începeți',
           paragraphs: [
-            'Citiți pagina «Servicii» pentru a verifica dacă situația dumneavoastră intră în aria noastră, apoi «Costuri» și «Contact», pentru a afla cum se stabilește întinderea lucrării și cum se confirmă costurile înainte de începerea acesteia.',
+            'Citiți pagina „Servicii” pentru a verifica dacă situația dumneavoastră intră în aria noastră, apoi „Costuri” și „Contact”, pentru a afla cum se stabilește obiectul mandatului și cum se confirmă onorariile înainte de începerea lucrării.',
             'La trimiterea mesajului puteți scrie rezumatul în limba dumneavoastră. Textul original se păstrează exact așa cum l-ați scris și nu este tradus automat. Un mesaj trimis este o solicitare care așteaptă examinarea: nu este încă o consultanță și nici o programare confirmată.',
           ],
         },
@@ -1114,9 +1114,9 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'SERVICII',
       title: 'Ce cauze tratăm',
       description:
-        'Cele șase grupe de lucrări ale cabinetului în Taiwan și limitele pe care este util să le cunoașteți mai întâi.',
+        'Cele șase domenii de practică ale cabinetului în Taiwan și limitele pe care este util să le cunoașteți mai întâi.',
       intro:
-        'Mai jos sunt grupele pe care le tratăm efectiv și întrebările care apar cel mai des în faza inițială. Expunerea vă ajută să apreciați dacă situația dumneavoastră intră în aria noastră; este generală și nu constituie o analiză juridică a unui dosar anume.',
+        'Mai jos sunt domeniile pe care le tratăm efectiv și întrebările care apar cel mai des în faza inițială. Expunerea vă ajută să apreciați dacă situația dumneavoastră intră în aria noastră; este generală și nu constituie o analiză juridică a unui dosar anume.',
       sections: [
         {
           heading: 'Investiții și înființare de societăți în Taiwan',
@@ -1128,7 +1128,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Litigii civile și despăgubiri',
           paragraphs: [
-            'Această grupă cuprinde litigii din contracte, despăgubiri din fapte ilicite și litigii cu consumatorii. Lucrarea începe de regulă cu o cronologie, cu examinarea documentelor și a probelor existente, iar abia apoi urmează pașii următori.',
+            'Acest domeniu cuprinde litigii din contracte, despăgubiri din fapte ilicite și litigii cu consumatorii. Lucrarea începe de regulă cu o cronologie, cu examinarea documentelor și a probelor existente, iar abia apoi urmează pașii următori.',
             'Termenele, inclusiv prescripția, și caracterul complet al probelor determină parcursul. De aceea indicați cât mai devreme datele cunoscute. Păstrați contractele, mesajele, dovezile de plată sau fotografiile situației de la fața locului și menționați-le în primul mesaj.',
           ],
         },
@@ -1142,7 +1142,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Litigii de muncă',
           paragraphs: [
-            'Această grupă cuprinde încetarea raportului de muncă, indemnizația potrivit dreptului taiwanez (資遣費; a nu se confunda cu instituții asemănătoare din alte state), remunerația și litigiile din contractul de muncă (勞動契約), atât din partea salariatului, cât și a angajatorului. La examinare deosebim motivul încetării de chestiunile privind preavizul, plata și termenele.',
+            'Acest domeniu cuprinde încetarea raportului de muncă, indemnizația potrivit dreptului taiwanez (資遣費; a nu se confunda cu instituții asemănătoare din alte state), remunerația și litigiile din contractul de muncă (勞動契約), atât din partea salariatului, cât și a angajatorului. La examinare deosebim motivul încetării de chestiunile privind preavizul, plata și termenele.',
             'Documentele hotărâtoare sunt de obicei contractul de muncă, regulamentul intern (工作規則), fluturașii de salariu și corespondența părților. Dacă le mai aveți, menționați acest lucru în rezumat.',
           ],
         },
@@ -1157,13 +1157,13 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Proprietate intelectuală',
           paragraphs: [
             'Sprijinim înregistrarea mărcilor (商標) și a brevetelor (專利), dreptul de autor și litigiile privind aceste drepturi în Taiwan.',
-            'În această grupă hotărăște ordinea pașilor: întinderea protecției, momentul depunerii și folosirea efectivă influențează alegerea. Depunerea unei cereri nu înseamnă prin ea însăși că aceasta va fi admisă.',
+            'În acest domeniu hotărăște ordinea pașilor: întinderea protecției, momentul depunerii și folosirea efectivă influențează alegerea. Depunerea unei cereri nu înseamnă prin ea însăși că aceasta va fi admisă.',
           ],
         },
         {
-          heading: 'Întinderea lucrării și confirmarea ei',
+          heading: 'Obiectul mandatului și confirmarea lui',
           paragraphs: [
-            'Cabinetul lucrează potrivit dreptului taiwanez și tratează cauze din grupele arătate mai sus. Întinderea fiecărei cauze se confirmă separat, după ce o avocată sau un avocat a examinat mesajul dumneavoastră.',
+            'Cabinetul lucrează potrivit dreptului taiwanez și tratează cauze din domeniile arătate mai sus. Obiectul fiecărui mandat se confirmă separat, după ce un avocat a examinat mesajul dumneavoastră.',
             'Statutul de ședere, autorizația de muncă și chestiunile asemănătoare se apreciază după documente și după situația persoanei, nu după cetățenie. Dacă o parte a cauzei dumneavoastră atinge aceste puncte, arătați acest lucru la contactare. Această pagină nu promite un rezultat și nici un termen de răspuns.',
           ],
         },
@@ -1175,12 +1175,12 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Date de bază despre acest cabinet de avocatură taiwanez, despre birourile sale și despre lucrul cu părți străine.',
       intro:
-        'Hovering International Law Firm este un cabinet de avocatură din Taiwan. Avocatele și avocații lucrează de la consultanța pentru întreprinderi până la procedura în fața instanței. Această parte descrie apariția cabinetului, sediile și lucrul cu părți străine.',
+        'Hovering International Law Firm este un cabinet de avocatură din Taiwan. Avocații cabinetului lucrează de la consultanța pentru întreprinderi până la procedura în fața instanței. Această parte descrie apariția cabinetului, sediile și lucrul cu părți străine.',
       sections: [
         {
           heading: 'Înființare și structură',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) a fost înființat în 2016 de avocate și avocați care au studiat la National Taiwan University (國立臺灣大學). Denumirea chineză 昊鼎 unește caracterul 昊 («cer larg») cu 鼎 («temelie solidă») și descrie orientarea cabinetului încă de la înființare.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) a fost înființat în 2016 de avocați care au studiat la National Taiwan University (國立臺灣大學). Denumirea chineză 昊鼎 unește caracterul 昊 („cer larg”) cu 鼎 („temelie solidă”) și descrie orientarea cabinetului încă de la înființare.',
             'Avem birouri în Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) și Pingtung (屏東). Biroul din Kaohsiung se concentrează pe conducerea întreprinderilor și tratează litigii civile, penale și administrative. Biroul din Taichung tratează cauze din construcții, proprietate intelectuală și cauze cu legătură cu Coreea și Japonia. Biroul din Pingtung a fost deschis în 2017 pentru nevoile locale.',
             'Pe lângă activitatea de avocatură există din 2020 și Hovering Accounting Office, care oferă contabilitate și planificare fiscală întreprinzătorilor și persoanelor fizice cu patrimoniu.',
           ],
@@ -1188,15 +1188,15 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Lucrul cu părți străine',
           paragraphs: [
-            'Activitatea transfrontalieră cuprinde înființarea de societăți, vize, depuneri de mărci și brevete, examinarea riscului juridic și consultanță fiscală pentru întreprinderi. Biroul din Taichung tratează îndeosebi cauze din construcții, proprietate intelectuală și cauze cu legătură cu Coreea și Japonia. Avocata Wei Tseng (曾雋崴) însoțește clienți din Coreea, din Japonia și alți clienți internaționali în grupele arătate.',
-            'Dacă putem prelua o cauză depinde de conținut și de limba comunicării. Dacă situația dumneavoastră intră în grupele arătate și poate fi discutată într-una dintre cele patru limbi de consultanță, puteți trimite un rezumat spre examinare.',
+            'Activitatea transfrontalieră cuprinde înființarea de societăți, vize, depuneri de mărci și brevete, examinarea riscului juridic și consultanță fiscală pentru întreprinderi. Biroul din Taichung tratează îndeosebi cauze din construcții, proprietate intelectuală și cauze cu legătură cu Coreea și Japonia. Avocata Wei Tseng (曾雋崴) însoțește clienți din Coreea, din Japonia și alți clienți internaționali în domeniile arătate.',
+            'Dacă putem prelua o cauză depinde de conținut și de limba comunicării. Dacă situația dumneavoastră intră în domeniile arătate și poate fi discutată într-una dintre cele patru limbi de consultanță, puteți trimite un rezumat spre examinare.',
           ],
         },
         {
           heading: 'Când ne contactați',
           paragraphs: [
-            'După sosirea rezumatului dumneavoastră, o avocată sau un avocat examinează conținutul și vorbește apoi despre întinderea posibilă a lucrării, despre documentele încă necesare și despre pașii următori. Pentru chestiuni fiscale sau contabile, cabinetul poate lucra împreună cu secțiunea de contabilitate într-un singur flux.',
-            'Rezultatul fiecărei cauze depinde de fapte și de documentele disponibile; nu promitem un rezultat. Dacă aveți nevoie de un răspuns obligatoriu pentru situația dumneavoastră, documentele trebuie discutate într-una dintre cele patru limbi de consultanță cu o avocată sau un avocat.',
+            'După sosirea rezumatului dumneavoastră, un avocat examinează conținutul și vorbește apoi despre obiectul posibil al mandatului, despre documentele încă necesare și despre pașii următori. Pentru chestiuni fiscale sau contabile, cabinetul poate lucra împreună cu secțiunea de contabilitate într-un singur flux.',
+            'Rezultatul fiecărei cauze depinde de fapte și de documentele disponibile; nu promitem un rezultat. Dacă aveți nevoie de un răspuns obligatoriu pentru situația dumneavoastră, documentele trebuie discutate cu un avocat într-una dintre cele patru limbi de consultanță.',
           ],
         },
       ],
@@ -1204,43 +1204,43 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'AVOCAȚI',
       title: 'Echipa internațională Hovering',
-      description: 'Profilurile avocatelor și avocaților, ale conducerii operative și ale revizuirii contabile asociate Hovering.',
+      description: 'Profilurile avocaților, ale conducerii operaționale și ale cabinetului de contabilitate asociat Hovering.',
       intro: '',
       sections: [],
     },
     pricing: {
       eyebrow: 'COSTURI',
-      title: 'Cum se stabilesc întinderea lucrării și costurile',
+      title: 'Cum se stabilesc obiectul mandatului și onorariile',
       description:
-        'Explicarea ordinii: mai întâi întinderea lucrării, apoi confirmarea costurilor, și de ce această pagină nu cuprinde o listă de prețuri.',
+        'Explicarea ordinii: mai întâi obiectul mandatului, apoi confirmarea onorariilor, și de ce această pagină nu cuprinde o listă de prețuri.',
       intro:
-        'Această pagină explică modul în care se stabilesc costurile, nu cuantumul lor. Cuantumul depinde de întinderea lucrării în cauza concretă și are înțeles abia atunci când această întindere este clară.',
+        'Această pagină explică modul în care se stabilesc costurile, nu cuantumul lor. Cuantumul depinde de obiectul mandatului în cauza concretă și capătă înțeles abia atunci când acest obiect este clar.',
       sections: [
         {
-          heading: 'Mai întâi se stabilește întinderea lucrării',
+          heading: 'Mai întâi se stabilește obiectul mandatului',
           paragraphs: [
-            'Cauze de același fel pot cere un efort foarte diferit, după numărul părților, documentele disponibile, termenele de respectat și după cum a început deja o procedură. De aceea primul pas este întotdeauna să se stabilească ce ține de lucrare și ce nu.',
-            'Rezumatul pe care îl trimiteți la început este temeiul acestei întinderi. Cu cât descrie mai limpede desfășurarea, cererea dumneavoastră și termenele, cu atât mai exact se poate determina întinderea.',
+            'Cauze de același fel pot cere un efort foarte diferit, după numărul părților, documentele disponibile, termenele de respectat și după cum a început deja o procedură. De aceea primul pas este întotdeauna să se stabilească ce intră în mandat și ce nu.',
+            'Rezumatul pe care îl trimiteți la început este temeiul acestui obiect. Cu cât descrie mai limpede desfășurarea, cererea dumneavoastră și termenele, cu atât mai exact poate fi delimitat mandatul.',
           ],
         },
         {
-          heading: 'Costurile se confirmă înainte de începerea lucrării',
+          heading: 'Onorariile se confirmă înainte de începerea lucrării',
           paragraphs: [
-            'Când întinderea lucrării este clară, cuantumul și modul de calcul al costurilor se discută și se confirmă cu dumneavoastră înainte ca lucrarea să înceapă. Dacă întinderea se schimbă pe parcurs, aceasta trebuie confirmată din nou.',
+            'Când obiectul mandatului este clar, cuantumul onorariului și modul lui de calcul se discută și se confirmă cu dumneavoastră înainte ca lucrarea să înceapă. Dacă obiectul se schimbă pe parcurs, el trebuie confirmat din nou.',
             'Această pagină nu este o ofertă de preț și nu creează o obligație de plată.',
           ],
         },
         {
-          heading: 'Consultanța poate fi cu plată',
+          heading: 'Consultanța poate fi contra cost',
           paragraphs: [
-            'Consultanța cu o avocată sau un avocat poate fi o prestație cu plată. Această pagină nu spune că prima discuție este gratuită și nicio parte a ei nu poate fi citită în acest sens.',
-            'Dacă consultanța este cu plată, cuantumul și modul de plată se comunică înainte ca aceasta să aibă loc.',
+            'Consultanța cu un avocat poate fi o prestație contra cost. Această pagină nu spune că prima discuție este gratuită și nimic din ea nu trebuie înțeles în acest sens.',
+            'Dacă consultanța este contra cost, cuantumul și modul de plată se comunică înainte ca aceasta să aibă loc.',
           ],
         },
         {
           heading: 'De ce această pagină nu arată tarife',
           paragraphs: [
-            'Costurile depind de cauza însăși: de efort, de numărul părților, de documente, de termene și de faptul dacă o procedură este deja în curs. Un număr stabilit dinainte nu ar arăta costurile dosarului dumneavoastră. De aceea stabilim mai întâi întinderea lucrării și vă comunicăm apoi costurile, înainte ca lucrarea să înceapă.',
+            'Costurile depind de cauza însăși: de efort, de numărul părților, de documente, de termene și de faptul dacă o procedură este deja în curs. Un număr stabilit dinainte nu ar arăta costurile dosarului dumneavoastră. De aceea stabilim mai întâi obiectul mandatului și vă comunicăm apoi onorariul, înainte ca lucrarea să înceapă.',
             'Pe lângă onorariu pot apărea taxe de instanță, cheltuieli ale autorităților sau ale terților. Acestea sunt distincte de onorariu și depind de procedura respectivă.',
           ],
         },
@@ -1257,7 +1257,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Trei lucruri care trebuie ținute separat',
           paragraphs: [
-            'Limba de afișare a paginii, limba consultanței cu avocata sau avocatul și limba în care scrieți sunt trei lucruri distincte.',
+            'Limba de afișare a paginii, limba consultanței cu avocatul și limba în care scrieți sunt trei lucruri distincte.',
           ],
           items: [
             'Limba paginii: aceste informații sunt scrise în limba română.',
@@ -1268,7 +1268,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Dacă nu puteți folosi niciuna dintre cele patru limbi de consultanță',
           paragraphs: [
-            'În formularul de contact puteți alege «Calea de comunicare trebuie confirmată». Răspundem pentru a examina o cale practicabilă de comunicare, dacă o asemenea cale există; o prestație în altă limbă nu este garantată, iar un termen de răspuns nu se promite.',
+            'În formularul de contact puteți alege „Calea de comunicare trebuie confirmată”. Vă putem scrie pentru a vedea dacă există o cale de comunicare pe care o putem folosi; o prestație în altă limbă nu este garantată, iar un termen de răspuns nu se promite.',
             'Acesta este doar un pas de examinare, nu o promisiune. Nu promitem interpret, o prestație în limba română sau în altă limbă în afara celor patru arătate și nici că preluăm orice cauză.',
           ],
         },
@@ -1276,13 +1276,13 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Ce ar trebui să cuprindă primul mesaj',
           paragraphs: [
             'Arătați ce s-a întâmplat, de ce ajutor aveți nevoie, ce legătură are cauza cu Taiwanul și termenul, dacă îl cunoașteți. Dacă ați primit deja un act de la o instanță sau de la o autoritate, indicați data de pe act.',
-            'În faza inițială nu trebuie să trimiteți încă numărul de pașaport, numărul actului de identitate, datele unui cont, documente medicale sau întregul material probator. Așteptați îndrumarea avocatei sau avocatului și trimiteți abia atunci documentele sensibile pe o cale sigură.',
+            'În faza inițială nu trebuie să trimiteți încă numărul de pașaport, numărul actului de identitate, datele unui cont, documente medicale sau întregul material probator. Așteptați îndrumarea avocatului și trimiteți abia atunci documentele sensibile pe o cale sigură.',
           ],
         },
         {
           heading: 'Ce nu promite această pagină',
           paragraphs: [
-            'Nu promitem un termen de răspuns, nu confirmăm o programare prin această pagină, nu promitem o anumită avocată sau un anumit avocat și nu punem la dispoziție interpret. Traducerea scrisă este altceva: mesajul dumneavoastră nu este tradus automat.',
+            'Nu promitem un termen de răspuns, nu confirmăm o programare prin această pagină, nu promitem un anumit avocat și nu punem la dispoziție interpret. Traducerea scrisă este altceva: mesajul dumneavoastră nu este tradus automat.',
             'Dacă trimiteți o solicitare, conținutul se păstrează și așteaptă examinarea. Dacă după un timp nu primiți răspuns, puteți scrie din nou la adresa de e-mail arătată pe pagina de contact.',
           ],
         },
@@ -1294,7 +1294,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Explicații despre aria de lucru, pregătire, limbi, costuri și despre înțelesul unei solicitări trimise.',
       intro:
-        'Întrebările următoare sunt lămurite la nivelul informațiilor generale. Un răspuns pentru cazul dumneavoastră este cu putință abia după ce o avocată sau un avocat a examinat documentele.',
+        'Întrebările următoare sunt lămurite la nivelul informațiilor generale. Un răspuns pentru cazul dumneavoastră este posibil abia după ce un avocat a examinat documentele.',
       sections: [
         {
           heading: 'Cum să folosiți această parte',
@@ -1307,7 +1307,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Ce cauze tratează cabinetul?',
           answer:
-            'Tratăm șase grupe: investiții și înființare de societăți în Taiwan, litigii civile și despăgubiri, căsătorie, familie și succesiuni, litigii de muncă, cauze penale și proprietate intelectuală. Dacă o cauză este preluată se hotărăște după examinarea conținutului.',
+            'Tratăm șase domenii: investiții și înființare de societăți în Taiwan, litigii civile și despăgubiri, căsătorie, familie și succesiuni, litigii de muncă, cauze penale și proprietate intelectuală. Dacă o cauză este preluată se hotărăște după examinarea conținutului.',
         },
         {
           question: 'Ce ar trebui să pregătesc înainte de contactare?',
@@ -1315,14 +1315,14 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
             'Pregătiți un scurt rezumat al desfășurării, al cererii dumneavoastră, al legăturii cu Taiwanul și al termenului, dacă există unul. Dacă există deja un act al unei instanțe sau al unei autorități, indicați data. În această fază nu trebuie să trimiteți încă acte de identitate sau întregul material probator.',
         },
         {
-          question: 'Este cu putință o consultanță în limba română?',
+          question: 'Este posibilă o consultanță în limba română?',
           answer:
-            'Nu. Aceste informații sunt scrise în limba română, dar consultanța cu o avocată sau un avocat se desfășoară numai în engleză, chineză (中文), japoneză și coreeană. Nu promitem nici interpret. Traducerea scrisă este altceva: textul original pe care îl scrieți se păstrează așa cum este și nu este tradus automat.',
+            'Nu. Aceste informații sunt scrise în limba română, dar consultanța cu un avocat se desfășoară numai în engleză, chineză (中文), japoneză și coreeană. Nu promitem nici interpret. Traducerea scrisă este altceva: textul original pe care îl scrieți se păstrează așa cum este și nu este tradus automat.',
         },
         {
           question: 'Ce fac dacă nu pot folosi niciuna dintre cele patru limbi?',
           answer:
-            'La trimiterea solicitării alegeți «Calea de comunicare trebuie confirmată». Răspundem pentru a examina o cale de comunicare, dar o prestație în altă limbă nu este garantată. Acesta este un pas de examinare, nu o promisiune că putem lucra în altă limbă.',
+            'La trimiterea solicitării alegeți „Calea de comunicare trebuie confirmată”. Vă putem scrie pentru a vedea dacă există o cale de comunicare pe care o putem folosi, dar o prestație în altă limbă nu este garantată. Acesta este un pas de examinare, nu o promisiune că putem lucra în altă limbă.',
         },
         {
           question: 'Cum este tratat textul meu în limba română?',
@@ -1332,12 +1332,12 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Consultanța a avut deja loc prin trimiterea solicitării?',
           answer:
-            'Nu. O solicitare trimisă așteaptă examinarea de către o avocată sau un avocat. Nu este o opinie juridică, nu este o programare confirmată, iar trimiterea nu creează prin ea însăși o relație între avocată sau avocat și client.',
+            'Nu. O solicitare trimisă așteaptă examinarea de către un avocat. Nu este o opinie juridică, nu este o programare confirmată, iar trimiterea nu creează prin ea însăși o relație între avocat și client.',
         },
         {
           question: 'Cum se calculează costurile?',
           answer:
-            'Mai întâi se stabilește întinderea lucrării, apoi cuantumul și modul de calcul al costurilor se confirmă cu dumneavoastră înainte ca lucrarea să înceapă. Această pagină nu arată sume și nu spune că prima discuție este gratuită.',
+            'Mai întâi se stabilește obiectul mandatului, apoi cuantumul onorariului și modul lui de calcul se confirmă cu dumneavoastră înainte ca lucrarea să înceapă. Această pagină nu arată sume și nu spune că prima discuție este gratuită.',
         },
         {
           question: 'Ce fac dacă situația mea este foarte urgentă?',
@@ -1381,7 +1381,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Locul păstrării și accesul',
           paragraphs: [
             'Conținutul trimiterii dumneavoastră se păstrează într-un loc care nu este accesibil publicului. Numai persoanele autorizate din cabinet au acces la el, pentru soluționarea solicitării.',
-            'Această pagină nu dă o garanție absolută de securitate. Nicio cale de transmitere și niciun loc de păstrare nu este pe deplin sigur; documentele sensibile ar trebui de aceea trimise abia după o îndrumare anume a avocatei sau avocatului.',
+            'Această pagină nu dă o garanție absolută de securitate. Nicio cale de transmitere și niciun loc de păstrare nu este pe deplin sigur; documentele sensibile ar trebui de aceea trimise abia după o îndrumare anume din partea avocatului.',
           ],
         },
         {
@@ -1408,17 +1408,17 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Locul păstrării și furnizorii',
           paragraphs: [
-            'Acest site este găzduit la Vercel, iar trimiterea dumneavoastră se păstrează într-un depozit de obiecte nepublic al acestui serviciu. E-mailurile se trimit prin serviciul de poștă electronică folosit de cabinet.',
+            'Acest site este găzduit la Vercel, iar mesajul dumneavoastră este stocat într-un spațiu de stocare privat al acestui serviciu, neaccesibil publicului. E-mailurile se trimit prin serviciul de poștă electronică folosit de cabinet.',
             'Serverele unor furnizori se pot afla în afara Taiwanului, astfel încât datele dumneavoastră pot fi păstrate și prelucrate acolo. Când scopul păstrării este îndeplinit, datele se șterg fără întârziere; datele care trebuie păstrate potrivit normelor aplicabile rămân pe acea durată. Cererile privind datele cu caracter personal se primesc la wei@hoveringlaw.com.tw.',
           ],
         },
       ],
     },
     disclaimer: {
-      eyebrow: 'AVERTISMENTE',
+      eyebrow: 'NOTE JURIDICE',
       title: 'Întinderea și limitele informațiilor de pe această pagină',
       description:
-        'Caracterul general al informațiilor, cadrul juridic și condițiile nașterii unei relații între avocată sau avocat și client.',
+        'Caracterul general al informațiilor, cadrul juridic și condițiile nașterii unei relații între avocat și client.',
       intro:
         'Această parte lămurește ce pot face pentru dumneavoastră aceste pagini de informare în limba română și ce nu.',
       sections: [
@@ -1437,9 +1437,9 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Relația dintre avocată sau avocat și client nu se naște de la sine',
+          heading: 'Relația dintre avocat și client nu se naște de la sine',
           paragraphs: [
-            'Citirea acestei pagini, trimiterea unui formular sau a unui e-mail nu creează prin ea însăși o relație între avocată sau avocat și client.',
+            'Citirea acestei pagini, trimiterea unui formular sau a unui e-mail nu creează prin ea însăși o relație între avocat și client.',
             'Această relație ia naștere abia după ce cauza a fost examinată și ambele părți au confirmat preluarea lucrării.',
           ],
         },
@@ -1478,7 +1478,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'În ce măsură un articol poate servi drept orientare',
           paragraphs: [
             'Articolele sunt informații generale la momentul publicării. Normele și aplicarea lor se pot schimba, iar un articol nu cuprinde toate împrejurările cazului dumneavoastră.',
-            'De aceea nu întemeiați un demers într-o cauză reală numai pe un articol. Folosiți-l pentru privirea de ansamblu și discutați documentele dumneavoastră separat cu o avocată sau un avocat; această pagină nu este pasul consultanței.',
+            'De aceea nu întemeiați un demers într-o cauză reală numai pe un articol. Folosiți-l pentru privirea de ansamblu și discutați documentele dumneavoastră separat cu un avocat; această pagină nu este pasul consultanței.',
           ],
         },
       ],

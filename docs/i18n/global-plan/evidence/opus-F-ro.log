@@ -1,0 +1,317 @@
+# WO-F-ro — Opus 5 fix lane report (Romanian, ro)
+date: 2026-09-21 · worktree: /Users/son7/Projects/tseng-law-fix-d-20260921
+scope: RULEBOOK-FIX R2–R10 + ACCEPTED-ro.md + ro-a.md / ro-b.md P1/P2 (P3 where cheap)
+files touched: src/content/columns-ro/001–018 (18), src/data/international-guidance-eastern.ts,
+  -team.ts, -answers.ts, src/data/international-inquiry-copy.ts, src/lib/llms-txt.ts,
+  + 2 test files whose pinned Romanian strings changed (see "Tests").
+
+## Rows applied
+
+### ro-a (guidance pack + columns 001–009)
+a#1 applied  — "despăgubirea cea mai ridicată posibil" → "despăgubirea pe care faptele și probele o pot susține" (R3).
+a#2/a#36 applied — bio fact kept, reformatted: "TWD 1.57M" → "1,57 mil. TWD"; sentence rebuilt
+             ("...iar instanța de fond a pronunțat o hotărâre de 1,57 mil. TWD"). Korean student kept
+             (real case fact, not reader framing).
+a#3/a#4 SKIPPED — already localized upstream (guidanceTeamCopy.ro.label = 'ECHIPA NOASTRĂ',
+             guidanceOfficeCopy.ro.label = 'BIROURI'). Verified, no "OUR TEAM"/"OFFICES" left.
+a#5/a#6/a#7 SKIPPED per ACCEPTED-ro (R1 link remap already done; frontmatter `url:` Hangul is
+             canonical source metadata). Verified: 0 `/ko/` links in columns-ro; Hangul only inside
+             `url:` values of 008/009.
+a#8 applied  — R2b country-specific note added to 001 §1 and §5 (and to 004 §6): "Notă specifică de
+             țară: acordul se aplică unei situații cu element coreean…; nu este o regulă general
+             valabilă pentru orice investitor." No digits added/removed.
+a#9 applied  — "să fi șezut … și licit" → "să fi locuit neîntrerupt și legal". Checked 002–009 for the
+             same verb: no other instance.
+a#10 applied — "documentele efectiv de pregătit trebuie să o fie după indicațiile" →
+             "documentele care trebuie efectiv pregătite se stabilesc după indicațiile".
+a#11 applied — "poate fi revendicat dauna patrimonială efectivă justificată" → "poate fi cerută dauna
+             patrimonială efectivă, dacă este dovedită".
+a#12 applied (systemic) — société fille → filială, all forms.
+a#13 applied — "Prezentul articol distinge … formele de implantare" → "Acest articol distinge … formele
+             de prezență"; heading "Forme de implantare" → "Forme de prezență".
+a#14 applied — "convine să se …" (il convient) → "este indicat să …" / imperative, all 6 sites.
+a#15 applied (systemic) — Fr. "pièces" → documente/acte (see sweeps); genuine "piese de schimb"
+             (spare parts, 018) preserved; "piesele de schimb/virament" (FX docs) →
+             "documentele de schimb valutar".
+a#16 applied — "avutele" → "activele" (3).
+a#17 applied — "cât la" (quant à) → "în privința" (4).
+a#18 applied — "constatarea produselor, admiterea cheltuielilor" → "constatarea veniturilor și
+             admiterea cheltuielilor".
+a#19/a#20 applied — "instanța 1/2" → prima instanță / apel; "forma o acțiune" → "introduce o acțiune
+             civilă alăturată procesului penal".
+a#21 applied (R11) — "un terț 3" / "o parte 3" / "unei părți 3" → terț forms.
+a#22 applied (R2a) — "societate-mamă coreeană" → "societate-mamă străină — de exemplu din Coreea —";
+             "fiscalitatea Coreei" → "fiscalitatea din statul societății-mamă" etc. (004, 6 sentences).
+a#23 applied — hiring FAQ "persoane cu cetățenie coreeană" → "salariați străini" (005 §5).
+a#24 applied (R2c) — "Spre deosebire de Coreea" → "Spre deosebire de unele state — de exemplu Coreea —"
+             (008 FAQ + body, 009).
+a#25 SKIPPED — string no longer exists; the Korean-speaking-lawyer CTA was already relabelled by R1.
+a#26/a#27/a#28 applied — German calques: "grupe de lucrări" → "domenii de practică" (all sites);
+             "întinderea lucrării" → "obiectul mandatului"; "costurile" → "onorariile" in the pricing
+             page title/headings; "Cabinetul vede șase grupe" → "Cabinetul acoperă șase domenii de
+             practică". Note: answers.ro.services keeps "Întinderea fiecărui mandat …" so the
+             international-guidance-answers test's SCOPE token (/întinderea/) still matches.
+a#29 applied (systemic) — mechanical "o avocată sau un avocat" pairing → "un avocat"; "avocatelor și
+             avocaților" → "avocaților". Feminine forms for Wei Tseng untouched (avocata Wei Tseng,
+             Avocată coordonatoare, "este autorizată", "Verificat de avocata Wei Tseng").
+a#30 NOT APPLIED — nav.privacy 'Date personale'. The pack contract test caps every nav label at 14
+             characters; "Confidențialitate" (17) and "Protecția datelor" (17) do not fit. Kept
+             'Date personale' (14), which is standard Romanian GDPR wording. Flagged for the supervisor.
+a#31 applied (adapted) — nav.disclaimer 'Avertismente' → 'Note juridice' (13 chars; "Declinarea
+             răspunderii" is 22 and breaks the same 14-char nav rule); eyebrow → 'NOTE JURIDICE'.
+a#32 applied — "depozit de obiecte nepublic" → "spațiu de stocare privat … neaccesibil publicului".
+a#33 applied — "cu putință" → "posibil/posibilă" (2, incl. the FAQ question).
+a#34 applied — "conducerii operative"/"revizuirii contabile asociate" → "conducerii operaționale"/
+             "cabinetului de contabilitate asociat" (3 sites: eastern, team, answers).
+a#35 applied (systemic) — «» → „” (10 guidance + 24 column instances).
+a#37 applied (adapted) — slash dates → Romanian month-name form ("27 decembrie 2023", "1 ianuarie
+             2024", "24 ianuarie 2022" …). See "Checker note" below: the dotted form 27.12.2023 was
+             tried first and FAILED the number check in 8 files (the dot is read as a thousands
+             separator for `ro`), so the form the checker accepts was used. 23 dates converted.
+a#38 applied — 'Profil complet (English)' → 'Profil complet (în engleză)'.
+a#39 applied — "Master (M.S.), Institute of Finance…" → "Master (M.S.) în finanțe, Institute of
+             Finance…"; "Senior Paralegal" → "Paralegal senior" (2); "Anterior la Ministry of
+             Education" → "Anterior, în cadrul Ministry of Education". Latin-script proper names kept.
+a#40 applied — "pe fond de informatică" → "având formare în informatică".
+a#41 applied — "clienții companii" → "clienții persoane juridice".
+a#42 applied — "cu plată" → "contra cost" (heading + 3 sentences).
+a#43 applied — "nicio parte a ei nu poate fi citită în acest sens" → "nimic din ea nu trebuie înțeles
+             în acest sens".
+a#44 applied — "Răspundem pentru a examina o cale practicabilă de comunicare" → "Vă putem scrie pentru
+             a vedea dacă există o cale de comunicare pe care o putem folosi" (contact §1, FAQ q3,
+             inquiry methodConfirmationNotice). Reply-time/other-language disclaimers preserved.
+a#45 applied — 005 close: "Dacă aveți alte întrebări, ne puteți contacta." → "Pentru o cauză concretă
+             folosiți pagina Contact a cabinetului; consultanța nu se face în limba română."
+             (plain text, NOT a markdown link — adding a link breaks the checker's href parity).
+a#46 applied — "tribunalele pronunță în prezent o pedeapsă de aproximativ 3 luni" → "În unele hotărâri
+             … s-a pronunțat o pedeapsă de aproximativ 3 luni; nu există un rezultat tipic sau
+             garantat…" (digit 3 kept).
+a#47 applied — "Poate exista un sursis (緩刑) și să nu se meargă la închisoare." → "Instanța poate
+             dispune suspendarea executării pedepsei (緩刑); aceasta nu este o regulă și nu se promite
+             un asemenea rezultat." (R8: 緩刑 = suspended sentence; "sursis" also removed in 008.)
+a#48 applied — "lăsați-le în comentarii" → "Pentru întrebări legate de o cauză concretă folosiți
+             pagina Contact a cabinetului."
+a#49 applied — "să soma unei părți" → "să someze o parte" (2 sites: frontmatter FAQ + body).
+a#50 applied — "A ști dacă …" (Fr. savoir si) → direct clause (4 sites in 007).
+a#51 applied — "Marii Judecători (大法官)" → "judecătorii constituționali (大法官)".
+a#52 applied (adapted) — 008 title/H1: "…indemnizația de concediere în Taiwan??" → "Dreptul muncii din
+             Taiwan: este chiar atât de greu de obținut indemnizația de concediere?" — keeps the EN
+             source's question form ("Is Severance Pay Hard to Get in Taiwan?"), drops the "??" and
+             the duplicated "în Taiwan". Reviewer's declarative title not used, to keep EN meaning.
+a#53 applied — missing full stops restored in 008 (3 sentences).
+a#54 applied — 009 opening "După cum s-a arătat mai sus" → "După cum am arătat într-un articol
+             anterior" (EN reads "As noted previously", i.e. a previous article, not "above").
+a#55 applied — "cel care s-a pregătit din timp își vede drepturile protejate" → "partea care se
+             pregătește din timp este într-o poziție mai bună pentru a-și apăra drepturile"
+             (no result promise).
+a#56 applied — "veniturile pe care se pot aștepta" → "veniturile la care se poate aștepta".
+a#57 applied — "impozitul pe venitul întreprinderilor cu scop lucrativ" → "impozitul pe venitul
+             întreprinderilor" (15 instances, 001/002/004); Chinese gloss 營利事業所得稅 kept.
+a#58 applied — "intenționează să exercite în mod continuu în Taiwan" → "… să desfășoare în mod
+             continuu o activitate în Taiwan".
+a#59 applied (R2d, rulebook wording not reviewer's) — "pentru o familie legată, precum Coreea și
+             Taiwan, de două state" → "pentru o familie legată de două sau mai multe state ori
+             teritorii (Taiwanul și o altă țară)". Reviewer's "de exemplu România și Taiwan" NOT used:
+             naming the reader's country is forbidden by R2d and would FAIL the checker's nationality
+             gate (NATIONALITY_TERMS.ro contains "România").
+a#60 applied — skipLink "Săriți navigarea și mergeți la conținut" → "Treceți la conținut".
+
+### ro-b (columns 010–018)
+b#1 applied  — "cumpără și revine" → "cumpără și revinde marfa".
+b#2 applied  — "Orice societate pe acțiuni … nu trebuie să facă certificate conturile anuale." →
+             "Nu orice societate pe acțiuni (股份有限公司) trebuie să își auditeze situațiile financiare
+             anuale."
+b#3 applied  — "licența reținerii trebuie confirmate separat" → "legalitatea reținerii trebuie
+             confirmată separat".
+b#4 applied  — "În acțiunea reală" → "În practică".
+b#5 applied  — "documentele încă susceptibile de a fi asigurate" → "documentele care mai pot fi
+             păstrate".
+b#6 applied  — 016 title/H1 "ghid juridic pentru familia care rămâne" → "…pentru soțul și copiii
+             supraviețuitori".
+b#7 applied  — "ar trebui să schimbați în mod aprofundat cu un avocat" → "ar trebui să discutați pe
+             larg acest punct cu un avocat din Taiwan".
+b#8 applied  — 罰鍰 ≠ infracțiune: 011 "același rezultat de infracțiune" → "aceeași faptă
+             contravențională"; "tipul de infracțiune" → "tipul de încălcare"; "conținutul
+             infracțiunii" → "conținutul încălcării"; 017 "infracțiunile și restanțele" →
+             "încălcările și restanțele" (2). 罰鍰 = amendă administrativă / 罰金 = amendă penală were
+             already correct elsewhere and were left as is.
+b#9 applied (R7b) — first sentence made self-standing, heading count unchanged:
+             014 §1 "Nu. Potrivit art. 15-1…" → "Nu, clauza nu este valabilă în mod automat. Potrivit…"
+             (+ heading noun aligned to "clauza de durată minimă a muncii");
+             016 §3 → "Nu, acest drept nu se confundă cu cota succesorală. …";
+             016 §7 → "Nu, patrimoniul moștenit de minor nu devine al părinților. …".
+             The frontmatter FAQ answers keep their bare "Nu." (there the question is explicit).
+b#10 applied — "…valabil, că moștenitorii vizați sunt…" → "…valabil, dacă moștenitorii vizați sunt…"
+             (2 sites; digits 1/2/3 untouched).
+b#11 applied — "pentru străinul 2 sau următorii" → "pentru al 2-lea străin sau pentru următorii"
+             (digit kept so the number check stays green).
+b#12 applied — "pot recurgere" / "se recurgere" → "poate apela" / "se apelează".
+b#13 SKIPPED per ACCEPTED-ro ("Invest Taiwan link fixed mechanically — skip"). NOTE for the
+             supervisor: the `lang=jpn` Invest Taiwan URL is still present in columns-ro/011 (line in
+             "Surse oficiale"). I did not touch it because the WO's hard rules forbid changing links
+             and ACCEPTED marks the row skipped — please confirm whether it still needs fixing.
+b#14 applied — "Mărcile coreene pot recurgere și la un importator local și pot exploata ele însele…" →
+             "O marcă străină poate apela la un importator local sau poate desfășura ea însăși…".
+b#15 applied — "lăsați un comentariu sau luați legătura" → "Pentru o cauză concretă folosiți pagina
+             Contact a cabinetului; consultanța nu se face în limba română."
+b#16 applied — "vă puteți adresa oricând unui avocat" → "vă puteți adresa unui avocat din Taiwan prin
+             pagina Contact a cabinetului; nu promitem un termen de răspuns."
+b#17 applied — "să culegeți o orientare individuală" → "să verificați din timp termenele și
+             procedurile aplicabile cauzei (consultanța nu se face în limba română)".
+b#18 applied — "cabinetul va explica materialele necesare și întinderea serviciilor" → "cabinetul
+             poate indica ce acte sunt utile și ce servicii pot fi furnizate; consultanța nu se face
+             în limba română."
+b#19 applied — "posturi/posturile de despăgubire" → "capete de despăgubire"; 016 "posturile legal
+             excluse" → "elementele excluse prin lege"; 014 "ambele posturi" → "ambele capete";
+             002 "posturile de declarație" → "rubricile de declarație"; 003 "toate posturile
+             revendicării/următoare" → "capetele cererii". Genuine job-post senses kept
+             (008 "mută salariații la posturi ciudate"; 010 image caption "postura persoanei
+             care se antrenează" = body posture in a deadlift).
+b#20 applied — see a#19.
+b#21 applied (systemic) — "pe Taiwan" → "în Taiwan"; "de pe Taiwan" → "din Taiwan".
+b#22 applied — see a#21.
+b#23 applied — "precept(ul)" → "dispoziție/dispoziția" (5, in 011/014/016).
+b#24 applied — "angajatorul dispensă o formare" → "angajatorul oferă o formare" (2).
+b#25 applied (systemic within 014) — "Pact(ul) de perioadă minimă de muncă" → "Clauza de durată minimă
+             a muncii", with full agreement rework of every dependent word (nul→nulă, întreg→întreagă,
+             fiecărui pact→fiecărei clauze, toate pactele→toate clauzele …). 25 sites incl. title/H1.
+b#26 applied — "a constitui de nou un comerț …" → "a înființa un nou operator …" (2).
+b#27 applied — "atenția către client" → "relația cu clientul".
+b#28 applied — "câmpul de activitate" → "obiectul de activitate" (3); the see-also line in 001 became
+             "Puteți vedea domeniul de activitate vizat la …".
+b#29 applied — "fiecare asociat are 1 persoană 1 vot" → "fiecare asociat are un vot (1 asociat, 1 vot)"
+             (digits preserved for the number check).
+b#30 applied — "captări frecvente de capital sau negocierii de părți" → "atrageri frecvente de capital
+             sau cesiunilor de părți sociale".
+b#31 applied — 監察人: "comisar" → "cenzor (監察人)" (2).
+b#32 applied — "nu devin proprietarii săi economici" → "nu devin beneficiarii reali ai acestui
+             patrimoniu" (3).
+b#33 applied — see-also chrome "[Cum se stabilesc întinderea lucrării și costurile](/ro/pricing)" →
+             "[Cum se stabilesc obiectul mandatului și onorariile](/ro/pricing)" in 7 columns, matching
+             the new guidance pricing title (label text only; target path unchanged).
+b#34 applied — see a#29.
+b#35 applied — "o cititoare sau un cititor a indicat" → "un cititor a arătat".
+b#36 applied — "influentează" → "influențează" (3).
+b#37 applied — "după primul întocmire" → "după prima întocmire".
+b#38 applied — "Cele ce urmează sunt o informație generală" → "… sunt informații generale".
+b#39 applied — "siguranța pe care se poate aștepta" → "siguranța la care se poate aștepta".
+b#40 applied — "un panorama operațional este suficient" → "o prezentare de ansamblu a operațiunilor
+             este suficientă".
+b#41 applied — "«ramuri obiect al unei verificări din oficiu»" → "„ramuri supuse unei verificări din
+             oficiu”" (2 + image alt).
+b#42 applied — see a#35.
+b#43 applied — see a#37.
+b#44 applied — "(Q&A)" removed from 005 and 013 body; "**Sfat**：" → "**Sfat:**" (fullwidth colon, R6b).
+b#45 applied — "un stocaj electronic sau în nor sigur" → "o stocare electronică sau în cloud, cu
+             măsuri de securitate".
+b#46 applied — "întreprinderii din partea Taiwanului" → "întreprinderii taiwaneze".
+b#47 applied — "văzut gradul vătămării" → "ținând seama de gradul vătămării și de evoluția
+             tratamentului".
+b#48 applied — "reeducare" → "recuperare".
+b#49 applied — "au fost practicate mai multe expertize" → "s-au efectuat mai multe expertize".
+b#50 applied — "să facă un apel de faruri" → "să clipească din faruri".
+b#51 applied — "Prezentul text/articol" → "Acest text/articol" (6).
+b#52 applied — "fără taxă" → "gratuit".
+b#53 applied — "nu se deschide 1 procedură" → "nu se declanșează o singură procedură".
+b#54 applied — "Formularul Yuanului judecătoresc" → "Formularul Yuanului Judiciar (司法院)".
+b#55 applied — "Ministerului Internelor" → "Ministerului de Interne" (2).
+b#56 applied — "după tipul și ținuta contractului" → "după tipul și conținutul contractului".
+b#57 NOT APPLIED — 018 "Cele de mai sus sunt o propunere de concepție contractuală." The English source
+             (columns-en/018, line 78) carries the identical orphan sentence after the registration
+             paragraph, so the Romanian is faithful; moving or deleting it would break block-count /
+             block-order parity, which the WO forbids. This is an EN-source defect — flagged for the
+             supervisor, not fixed in ro alone.
+b#58 applied — "Lucrul PIF" → "Întocmirea PIF".
+b#59 applied — "înregistrarea persoanei juridice (公司登記)" → "înregistrarea societății (公司登記)" (2).
+b#60 applied — "Ca supliment" → "Ca material auxiliar".
+
+## Systemic sweeps (pattern → instances changed, across all 18 columns unless noted)
+- "pe Taiwan" → "în Taiwan" ............................................ 101  (incl. 2× "de pe Taiwan" → "din Taiwan", 1× sentence-initial)
+- "société fille" family → filială/filiala/filiale/filialei/filialelor ... 76  (+5 agreement repairs: "la filială", "între filială și sucursală", "în cazul filialei", "constituirii unei filiale … taiwaneze")
+- Fr. "pièces" → documente/documentele/documentelor/documentul ........... 63  ("piese de schimb" = spare parts in 018 preserved; FX docs → "documente de schimb valutar")
+- «…» → „…” ............................................................. 24 columns + 10 guidance = 34
+- "relative la" / "relativ la" → "referitoare la" / "referitor la" ....... 29  (+4 adjectival "relativă la" → "privind")
+- "întreprinderilor cu scop lucrativ" → "întreprinderilor" ............... 15
+- "instanța 1 / instanța 2 / instanței 1 / instanței 2" → prima instanță / apel ... 22
+- "Pact" → "Clauză" family (014 only, full agreement rework) ............. 25
+- Fr. "il convient" ("convine să …") → "este indicat / imperativ" ......... 8
+- 제3자 digit forms ("un terț 3", "o parte 3", "unei părți 3") → terț ...... 14
+- slash dates → Romanian month-name dates ............................... 23
+- "posturi/posturile" (Fr. postes) → capete / rubrici / elemente .......... 10  (2 genuine job/body-posture senses kept)
+- "precept" → "dispoziție" ................................................ 5
+- "Prezentul articol/text" → "Acest articol/text" ......................... 6
+- "cât la" (quant à) → "în privința" ...................................... 4
+- "o avocată sau un avocat" pairing → "un avocat" .................. 2 columns + 17 guidance = 19
+- "grupe (de lucrări)" → "domenii (de practică)" (guidance) ............... 16
+- "întinderea lucrării" → "obiectul mandatului" (guidance + 7 column see-also lines) ... 17
+- "a instrui o cauză" (Fr. instruire) → "a instrumenta" ................... 6  (incl. the outright typo "instruiească")
+- "câmpul de activitate" → "obiectul de activitate" ....................... 3
+- "influentează" → "influențează" ......................................... 3
+- "avutele" → "activele" .................................................. 3
+- 經濟部投資審議司 unified to "Departamentul de examinare a investițiilor al Ministerului Economiei" (018 was "Comisia investițiilor") ... 1
+- 緩刑 "sursis" → "suspendarea executării pedepsei" ........................ 2
+- 公開發行公司 "face apel public la economii" → "a făcut ofertă publică de acțiuni" ... 2
+Guidance-pack total: 84 string replacements. Column total: ~470 replacements.
+
+## Checker note (WO §Verify instruction: "prefer the form the checker accepts")
+ACCEPTED-ro asked for dotted dates (24.01.2022). Applied first; the number check then FAILED in 8
+files (001, 004, 007, 010, 011, 014, 015, 016) with "missing from translation: 1, 12, 2023, 2024 …" —
+NUMBER_THOUSAND_STYLE.ro is 'dot', so "27.12.2023" is consumed as one numeral instead of a date.
+Switched to the Romanian month-name form ("27 decembrie 2023"), which DATE_MONTH_NAMES already
+supports for ro (line 1602 of scripts/check-column-translation.mjs); all 18 files green again. This is
+an equally standard Romanian legal/press date form and is what de/pl use.
+
+## Tests updated (only strings I changed; nothing else in tests)
+- src/lib/__tests__/guidance-cs-hu-ro-uk-el-he-content.test.ts
+  LANGUAGE_FAQ_QUESTION.ro: 'Este cu putință o consultanță în limba română?' →
+                            'Este posibilă o consultanță în limba română?'   (a#33)
+- src/data/__tests__/guidance-disclosure-parity.test.ts
+  ELEMENTS['feasible-method-only'].ro:   /practicabil/ → /cale de comunicare pe care o putem folosi/  (a#44)
+  ELEMENTS['consultation-may-be-paid'].ro: /cu plată/   → /contra cost/                              (a#42)
+All other ro-sensitive assertions still pass unchanged (avocata Wei Tseng present / avocatul Wei Tseng
+absent; nav labels ≤ 14 chars; the 5 forbidden ro advertising patterns; the answers-test SCOPE token
+/întinderea/ and acceptance tokens /este preluată/ + /se hotărăște/).
+
+## Not applied / disagreements
+1. a#30 (nav 'Date personale' → 'Confidențialitate'): blocked by the pack test's 14-character nav-label
+   cap. No natural Romanian alternative fits. Kept 'Date personale'; changed only the disclaimer label.
+2. a#31 full wording ('Declinarea răspunderii', 22 chars): same cap — used 'Note juridice' (13).
+3. a#59 reviewer wording ("de exemplu România și Taiwan"): naming the reader's country is forbidden by
+   R2d and would fail the checker's nationality gate. Used the rulebook's neutral phrasing instead.
+4. a#52 reviewer's declarative title: not used. The English source title is a question; kept the
+   question form and fixed only the "??" and the duplicated "în Taiwan".
+5. a#54: the dangling cross-reference also exists in the English source ("As noted previously"). Kept
+   the cross-reference but made it point to a previous article rather than "mai sus".
+6. b#57 (018 orphan "Cele de mai sus sunt o propunere de concepție contractuală."): identical orphan in
+   columns-en/018; moving/cutting it would break block parity. Left as is — an EN-source defect.
+7. b#13 (Invest Taiwan `lang=jpn` URL in 011): ACCEPTED-ro says this was fixed mechanically, but the
+   `lang=jpn` URL is still in the file. Hard rules forbid changing links, so it was left untouched.
+   Needs a supervisor decision.
+8. a#2: kept "un student coreean" in the team bio. It describes a real, attorney-approved case, not the
+   reader's framing, so R2a's generalization does not apply; only the number format was changed.
+
+## §Verify output (verbatim)
+=== node scripts/check-column-translation.mjs --dir src/content/columns-ro --lang ro 2>&1 | tail -8
+forbidden      PASS   
+hanzi          PASS   han=64
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+=== grep -rn "[변호사 검수 필요]" src/content/columns-ro src/data | wc -l
+       0
+
+=== npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+=== npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+=== git status --short | wc -l
+      26
+
+(git status 26 = 25 modified source/test files + 1 untracked docs/i18n/global-plan/WO-F-ro.txt, the work order itself.)

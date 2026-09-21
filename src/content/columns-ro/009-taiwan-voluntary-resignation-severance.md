@@ -13,7 +13,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![Imagine principală](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-După cum s-a arătat mai sus, în Taiwan nu este ușor pentru salariat să obțină indemnizația de concediere (資遣費).
+După cum am arătat într-un articol anterior, în Taiwan nu este ușor pentru salariat să obțină indemnizația de concediere (資遣費).
 
 ​
 
@@ -21,7 +21,7 @@ După cum s-a arătat mai sus, în Taiwan nu este ușor pentru salariat să obț
 
 nu poate primi indemnizația de concediere (資遣費) (art. 18 din legea privind normele muncii),
 
-iar aceasta diferă de Coreea.
+spre deosebire de unele state, de exemplu Coreea.
 
 ​
 
@@ -89,13 +89,13 @@ indemnizația poate să nu fie plătită sau poate fi pretinsă.
 
 De aceea, în conflictele de muncă (勞資糾紛) din Taiwan,
 
-«**timpul**» este foarte important.
+„**timpul**” este foarte important.
 
-În majoritatea cazurilor, cel care s-a pregătit din timp își vede drepturile protejate.
+În majoritatea cazurilor, partea care se pregătește din timp este într-o poziție mai bună pentru a-și apăra drepturile.
 
 ---
 
 > Vezi și:
-> - [Cum se stabilesc întinderea lucrării și costurile](/ro/pricing)
+> - [Cum se stabilesc obiectul mandatului și onorariile](/ro/pricing)
 > - [Echipa internațională Hovering](/ro/lawyers)
 > - [Ce cauze tratăm](/ro/services)

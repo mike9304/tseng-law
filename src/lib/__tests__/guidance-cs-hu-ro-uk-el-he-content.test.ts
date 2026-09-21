@@ -39,7 +39,7 @@ const CONSULTATION_FOUR: Record<EasternLocale, readonly string[]> = {
 const LANGUAGE_FAQ_QUESTION: Record<EasternLocale, string> = {
   cs: 'Je možná porada v češtině?',
   hu: 'Lehetséges magyar nyelvű tanácsadás?',
-  ro: 'Este cu putință o consultanță în limba română?',
+  ro: 'Este posibilă o consultanță în limba română?',
   uk: 'Чи можлива консультація українською?',
   el: 'Είναι δυνατή συμβουλευτική στα ελληνικά;',
   he: 'האם אפשר לקבל ייעוץ בעברית?',

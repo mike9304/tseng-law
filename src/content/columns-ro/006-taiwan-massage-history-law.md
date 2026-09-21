@@ -81,7 +81,7 @@ S-a pus, de exemplu, întrebarea dacă regula scrisă care permitea numai persoa
 
 și s-a pus la îndoială dacă această regulă contribuise cu adevărat la protejarea ocupării și a subzistenței persoanelor cu dizabilitate vizuală.
 
-În cele din urmă, Marii Judecători (大法官) au declarat neconstituțională (違憲) dispoziția care permitea numai persoanelor cu dizabilitate vizuală să exercite meseria de masaj.
+În cele din urmă, judecătorii constituționali (大法官) au declarat neconstituțională (違憲) dispoziția care permitea numai persoanelor cu dizabilitate vizuală să exercite meseria de masaj.
 
 ​
 

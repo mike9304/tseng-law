@@ -82,7 +82,7 @@ describe('international guidance privacy pages', () => {
     {
       locale: 'id',
       heading: 'Tempat penyimpanan data dan penyedia layanan',
-      hosting: /Situs ini dihosting di Vercel/,
+      hosting: /Situs ini diselenggarakan di Vercel/,
       deletion: /data dihapus tanpa penundaan/,
     },
     {

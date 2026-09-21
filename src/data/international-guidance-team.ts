@@ -165,7 +165,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     experienceLabel: 'Pengalaman',
     photoAltPrefix: 'Foto',
     workingLanguagesLabel: 'Bahasa kerja',
-    fullProfileLabel: 'Profil lengkap (English)',
+    fullProfileLabel: 'Profil lengkap (bahasa Inggris)',
     keyFactsHeading: 'Advokat Wei Tseng — Fakta utama',
     qualificationLabel: 'Kualifikasi dan kantor',
     qualificationSentence:
@@ -173,11 +173,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     practiceLabel: 'Bidang utama',
     consultationLanguagesLabel: 'Bahasa konsultasi',
     roles: {
-      'tseng-junwei': 'Advokat pengelola di Taiwan (Managing Attorney)',
-      'chang-rongxuan': 'Advokat di Taiwan (Taiwan Attorney)',
+      'tseng-junwei': 'Advokat pengelola di Taiwan',
+      'chang-rongxuan': 'Advokat di Taiwan',
       'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Manajer operasional Korea (Korea Operations Manager)',
-      'huang-shengping': 'Akuntan mitra (Partner CPA)',
+      'son-jungmin': 'Manajer operasional Korea',
+      'huang-shengping': 'Akuntan mitra',
     },
   },
   th: {
@@ -893,7 +893,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
  */
 export const guidanceLanguageNames: Record<GuidanceLocale, Record<string, string>> = {
   vi: { Korean: 'tiếng Hàn', Chinese: 'tiếng Trung', Japanese: 'tiếng Nhật' },
-  id: { Korean: 'bahasa Korea', Chinese: 'bahasa Tionghoa', Japanese: 'bahasa Jepang' },
+  id: { Korean: 'bahasa Korea', Chinese: 'bahasa Mandarin', Japanese: 'bahasa Jepang' },
   th: { Korean: 'ภาษาเกาหลี', Chinese: 'ภาษาจีน', Japanese: 'ภาษาญี่ปุ่น' },
   fil: { Korean: 'Koreano', Chinese: 'Tsino', Japanese: 'Hapon' },
   ar: { Korean: 'الكورية', Chinese: 'الصينية', Japanese: 'اليابانية' },
@@ -1278,7 +1278,7 @@ export const guidanceTeamBios: Record<
   id: {
     'tseng-junwei': {
       intro: [
-        'Kantor menangani perkara korporasi dan perorangan di Taiwan dalam bahasa Inggris, bahasa Jepang, bahasa Korea, dan bahasa Tionghoa.',
+        'Kantor menangani perkara korporasi dan perorangan di Taiwan dalam bahasa Inggris, bahasa Jepang, bahasa Korea, dan bahasa Mandarin.',
         'Mewakili seorang mahasiswa asal Korea dalam perkara cedera di pusat kebugaran dan memperoleh putusan ganti rugi tingkat pertama sebesar TWD 1.57M.',
       ],
       education: [

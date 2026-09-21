@@ -25,21 +25,21 @@ Tanya jawab berikut ini pun diharapkan dapat membantu Anda yang sedang mempertim
 
 ​
 
-**1. Apa yang harus diperhatikan ketika modal (資本額) dikirimkan dari Korea ke rekening kantor persiapan perusahaan (公司籌備處帳戶) di Taiwan? (butir ini membahas sistem Korea dan praktik perbankan Korea)**
+**1. Apa yang harus diperhatikan ketika modal (資本額) dikirimkan dari luar negeri ke rekening kantor persiapan perusahaan (公司籌備處帳戶) di Taiwan? (butir ini memakai Korea sebagai satu contoh rezim devisa; ketentuan di negara Anda sendiri harus dipastikan tersendiri)**
 
-Pada umumnya bank-bank di Korea mensyaratkan investor **sendiri** datang langsung ke bank di Korea dan mengirimkan dana dari rekening atas namanya sendiri.
+Sebagai contoh, bank-bank di Korea pada umumnya mensyaratkan investor **sendiri** datang langsung ke bank dan mengirimkan dana dari rekening atas namanya sendiri.
 
-Pengiriman dana melalui perbankan internet ataupun pengiriman yang diwakilkan kepada kerabat di Korea tidak dimungkinkan.
+Pengiriman dana melalui perbankan internet ataupun pengiriman yang diwakilkan kepada kerabat di negara tersebut tidak dimungkinkan.
 
 Selain itu, menurut peraturan pengelolaan devisa Korea, orang yang berkewarganegaraan Korea yang mendirikan badan hukum asing atau memperoleh saham atau bagian penyertaan modal wajib menyampaikan "laporan investasi langsung ke luar negeri". Laporan itu harus diterima pada saat modal dikirimkan kepada badan hukum Taiwan, dan apabila tidak dilaporkan dapat dikenai sanksi karena melanggar peraturan pengelolaan devisa.
 
-Sebelum mengirimkan modal, mohon Anda berkonsultasi lebih dahulu dengan bank utama tempat Anda bertransaksi di Korea.
+Sebelum mengirimkan modal, tanyakan lebih dahulu kepada bank utama tempat Anda bertransaksi di negara asal dana.
 
 **​**
 
-**2. Ketika modal perusahaan disetorkan, dapatkah Dolar Taiwan Baru (新臺幣, TWD) dikirimkan dari rekening pribadi Anda di Taiwan ke rekening kantor persiapan perusahaan Taiwan?**
+**2. Ketika modal perusahaan disetorkan, dapatkah dolar Taiwan baru (新臺幣, TWD) dikirimkan dari rekening pribadi Anda di Taiwan ke rekening kantor persiapan perusahaan Taiwan?**
 
-Hal itu dimungkinkan, tetapi Anda harus menyerahkan dokumen bukti sumber dana atas Dolar Taiwan Baru yang diperoleh di Taiwan.
+Hal itu dimungkinkan, tetapi Anda harus menyerahkan dokumen bukti sumber dana atas dolar Taiwan baru yang diperoleh di Taiwan.
 
 Sebagai contoh, apabila dana itu berupa penghasilan gaji yang diperoleh di Taiwan, Anda harus menyerahkan salinan bukti potong pajak atas penghasilan gaji itu (薪資所得的扣繳憑單影本).
 
@@ -67,17 +67,17 @@ Sebagian bank dapat menetapkan persyaratan tambahan, misalnya masa penggunaan re
 
 **​**
 
-**5. Dapatkah perusahaan mempekerjakan orang asing sebagai karyawan**
+**5. Dapatkah perusahaan mempekerjakan orang asing sebagai karyawan?**
 
-A. Karyawan pertama : pekerjaan manajerial pada usaha penanaman modal jenis umum oleh orang Tionghoa perantauan atau orang asing (一般僑外投資事業主管工作). Kriteria "pekerjaan yang bersifat khusus atau teknis" pada bagian B di bawah tidak berlaku, tetapi persyaratan objek (seperti manajer (經理人) perusahaan yang penyertaan modal Tionghoa perantauan atau asingnya melebihi sepertiga) dan persyaratan kinerja pemberi kerja berupa modal dan omzet (Pasal 38 dan Pasal 39 Standar Penelaahan) tetap berlaku.
+A. Karyawan pertama: pekerjaan manajerial pada usaha penanaman modal jenis umum oleh orang Tionghoa perantauan atau orang asing (一般僑外投資事業主管工作). Kriteria "pekerjaan yang bersifat khusus atau teknis" pada bagian B di bawah tidak berlaku, tetapi persyaratan objek (seperti manajer (經理人) perusahaan yang penyertaan modal Tionghoa perantauan atau asingnya melebihi sepertiga) dan persyaratan kinerja pemberi kerja berupa modal dan omzet (Pasal 38 dan Pasal 39 Standar Penelaahan) tetap berlaku.
 
-B. Mulai karyawan asing kedua terdapat pembatasan : apabila jumlah pekerja yang dipekerjakan melebihi 1 orang, latar belakang pendidikan dan pengalaman kerja karyawan yang relevan, ketentuan gaji rata-rata pada saat mempekerjakan, serta ketentuan modal dan omzet perusahaan diproses menurut "pekerjaan spesialis atau teknis" (專門性或技術性工作).
+B. Mulai karyawan asing kedua terdapat pembatasan: apabila jumlah pekerja yang dipekerjakan melebihi 1 orang, latar belakang pendidikan dan pengalaman kerja karyawan yang relevan, ketentuan gaji rata-rata pada saat mempekerjakan, serta ketentuan modal dan omzet perusahaan diproses menurut "pekerjaan spesialis atau teknis" (專門性或技術性工作).
 
 Lihat situs Kementerian Ketenagakerjaan Taiwan (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 
 ​
 
-Apabila Anda memiliki pertanyaan tambahan, silakan menghubungi kami kapan saja.
+Apabila Anda memiliki pertanyaan tambahan, kirimkanlah melalui halaman Kontak; waktu balasan tidak dijanjikan.
 
 ---
 

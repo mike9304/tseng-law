@@ -83,7 +83,7 @@ const MAX_ZH_HANS_CHARS = 400;
  */
 const CONSULTATION_LANGUAGE_TERMS: Record<string, readonly string[]> = {
   vi: ['tiếng Anh', 'tiếng Trung', 'tiếng Nhật', 'tiếng Hàn'],
-  id: ['Inggris', 'Tionghoa', 'Jepang', 'Korea'],
+  id: ['Inggris', 'Mandarin', 'Jepang', 'Korea'],
   th: ['ภาษาอังกฤษ', 'ภาษาจีน', 'ภาษาญี่ปุ่น', 'ภาษาเกาหลี'],
   fil: ['Ingles', 'Tsino', 'Hapon', 'Koreano'],
   ar: ['بالإنجليزية', 'الصينية', 'اليابانية', 'الكورية'],

@@ -29,7 +29,7 @@ Suasananya sangat mirip dengan jasa keramas ala Vietnam yang ada sekarang.
 
 Salon pangkas rambut bergaya Taiwan seperti ini pun tetap tersimpan sebagai kenangan budaya yang khas bagi banyak orang Taiwan.
 
-(Jangan-jangan saya justru membocorkan usia saya sendiri?)
+(Catatan: bagian ini merupakan kenangan pribadi, bukan keterangan hukum.)
 
 ​
 
@@ -55,7 +55,7 @@ Ketentuan ini terus berlaku sampai tahun 2003, ketika Tuan Lin yang pada waktu i
 
 mempekerjakan dua karyawan yang bukan penyandang disabilitas netra untuk memberikan jasa cuci rambut dan pijat, lalu ketahuan oleh polisi.
 
-Menurut hukum yang berlaku pada waktu itu, Tuan Lin dan kedua karyawannya masing-masing dikenai denda administratif (罰鍰) sebesar 40.000, 10.000, dan 20.000 Dolar Taiwan Baru (新臺幣, TWD).
+Menurut hukum yang berlaku pada waktu itu, Tuan Lin dan kedua karyawannya masing-masing dikenai denda administratif (罰鍰) sebesar 40.000, 10.000, dan 20.000 dolar Taiwan baru (新臺幣, TWD).
 
 Tuan Lin menilai sanksi tersebut sangat tidak wajar, sehingga ia mengajukan permohonan penafsiran konstitusi.
 
@@ -81,7 +81,7 @@ Sebagai contoh, timbul pemikiran apakah ketentuan tertulis yang hanya memperbole
 
 dan dipertanyakan pula apakah ketentuan tersebut benar-benar berkontribusi pada perlindungan pekerjaan dan penghidupan penyandang disabilitas netra.
 
-Pada akhirnya para Hakim Yuan Kehakiman (大法官) menyatakan bahwa pasal undang-undang yang hanya memperbolehkan penyandang disabilitas netra bekerja di bidang usaha pijat bertentangan dengan konstitusi (違憲).
+Pada akhirnya para Hakim Agung Mahkamah Konstitusi (大法官) menyatakan bahwa pasal undang-undang yang hanya memperbolehkan penyandang disabilitas netra bekerja di bidang usaha pijat bertentangan dengan konstitusi (違憲).
 
 ​
 

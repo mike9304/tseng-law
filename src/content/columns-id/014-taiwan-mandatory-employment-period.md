@@ -35,7 +35,7 @@ Sekalipun keempat persoalan itu tertulis bersama-sama dalam satu perjanjian yang
 
 ## 1. Kapan perjanjian masa kerja minimum dapat berlaku sah
 
-Tidak. Menurut Pasal 15-1 Undang-Undang Standar Ketenagakerjaan Taiwan (勞動基準法), apabila pemberi kerja menyelenggarakan pelatihan teknis khusus (專業技術培訓) dan menanggung biayanya, atau memberikan kompensasi yang wajar (合理補償) agar pekerja menaati masa kerja minimum, perjanjian masa kerja minimum dapat memenuhi syarat yang ditentukan undang-undang. Kedua syarat itu tidak harus dipenuhi sekaligus, tetapi sekalipun salah satunya terpenuhi, perjanjian tersebut tidak boleh melampaui batas yang wajar apabila ditinjau dari keseluruhan keadaan, termasuk jangka waktu dan biaya pelatihan, kemungkinan penggantian tenaga kerja (人力替補可能性), serta besaran dan cakupan kompensasinya.
+Perjanjian itu tidak otomatis batal demi hukum. Menurut Pasal 15-1 Undang-Undang Standar Ketenagakerjaan Taiwan (勞動基準法), apabila pemberi kerja menyelenggarakan pelatihan teknis khusus (專業技術培訓) dan menanggung biayanya, atau memberikan kompensasi yang wajar (合理補償) agar pekerja menaati masa kerja minimum, perjanjian masa kerja minimum dapat memenuhi syarat yang ditentukan undang-undang. Kedua syarat itu tidak harus dipenuhi sekaligus, tetapi sekalipun salah satunya terpenuhi, perjanjian tersebut tidak boleh melampaui batas yang wajar apabila ditinjau dari keseluruhan keadaan, termasuk jangka waktu dan biaya pelatihan, kemungkinan penggantian tenaga kerja (人力替補可能性), serta besaran dan cakupan kompensasinya.
 
 Pasal 15-1 ayat (1) mengatur dua syarat hukum yang bersifat alternatif. Yang pertama adalah apabila pemberi kerja memberikan pelatihan teknis khusus kepada pekerja dan menanggung biayanya; yang kedua adalah apabila pemberi kerja memberikan kompensasi yang wajar sebagai imbalan atas kesediaan pekerja menaati masa kerja minimum. Yang harus dipastikan bukanlah nama yang diberikan dalam perjanjian tertulis, melainkan dasar mana yang sesungguhnya ada.
 
@@ -191,4 +191,4 @@ Ketika menyusun dokumen menurut urutan waktu, sebaiknya Anda mencantumkan sekali
 
 Tulisan ini merupakan bahan yang bertujuan mendidik dan menjelaskan secara umum perjanjian masa kerja minimum di Taiwan, pengembalian biaya pelatihan dan pembayaran di muka, serta pemberitahuan pengunduran diri; tulisan ini bukan nasihat hukum untuk perkara ketenagakerjaan tertentu. Keabsahan perjanjian dan cakupan tanggung jawabnya dapat berbeda menurut jenis dan rumusan perjanjiannya, pelatihan dan biaya yang sesungguhnya, tujuan kompensasi dan pemberitahuannya, masa kerja, penyebab berakhirnya hubungan kerja, dan bukti yang ada. Sebelum menyampaikan pernyataan pengunduran diri, menerima pemotongan upah, menandatangani kesepakatan pengembalian, atau menghadapi sengketa, sebaiknya Anda memastikan sumber resmi terbaru dan keadaan perkara Anda sendiri.
 
-**Pengacara Wei Tseng (曾雋崴)**
+**Advokat Wei Tseng (曾雋崴)**

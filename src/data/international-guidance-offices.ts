@@ -449,7 +449,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     koreaAddressCardLabel: 'कोरिया कार्यालय का पता',
     koreaMapLinkLabel: 'Naver Map पर देखें',
     reviewCountWord: 'समीक्षाएँ',
-    phoneLabel: 'दूरभाष',
+    phoneLabel: 'फ़ोन',
     faxLabel: 'फैक्स',
     mapLinkLabel: 'मानचित्र पर देखें',
     photoAlts: [

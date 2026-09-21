@@ -587,7 +587,7 @@ export const guidanceAnswers: Record<
   sv: {
     services: {
       answer:
-        'Byrån behandlar sex arbetsgrupper enligt Taiwans rätt: investering och bolagsbildning, civilrättsliga tvister och skadestånd, äktenskap, familj och arv, arbete, straffrätt samt immaterialrätt. Omfattningen av varje ärende bekräftas separat efter att en advokat har granskat det innehåll ni skickar. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
+        'Byrån arbetar inom sex områden enligt Taiwans rätt: investering och bolagsbildning, civilrättsliga tvister och skadestånd, äktenskap, familj och arv, arbetsrätt, straffrätt samt immaterialrätt. Omfattningen av varje ärende bekräftas separat efter att en advokat har granskat det innehåll du skickar. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
       sources: ['/sv/faq', '/sv/contact'],
     },
     about: {
@@ -597,22 +597,22 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Denna sida visar profiler för Hoverings advokater, operativa ledning och anknutna revision. Advokat Wei Tseng (曾雋崴) är behörig i Taiwan och är byråns ledande advokat; hon arbetar med klienter från Korea, Japan och andra internationella klienter. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
+        'Den här sidan visar profiler för Hoverings advokater, operativa ledning och anknutna revisionsbyrå. Advokat Wei Tseng (曾雋崴) är behörig i Taiwan och är byråns ledande advokat; hon arbetar med klienter från Korea och Japan och med andra internationella klienter. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
       sources: ['/sv/about', '/sv/contact'],
     },
     pricing: {
       answer:
-        'Denna sida publicerar ingen prislista. Först fastställs arbetets omfattning utifrån sammanfattningen ni skickar, därefter bekräftas belopp och beräkningssätt med er innan arbetet börjar. Samtalet med en advokat kan vara mot betalning; utöver arvodet kan rättegångs- eller myndighetskostnader uppstå. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
+        'Den här sidan publicerar ingen prislista. Först fastställs arbetets omfattning utifrån den sammanfattning du skickar, därefter bekräftas belopp och beräkningssätt med dig innan arbetet börjar. Samtalet med en advokat kan ske mot betalning; utöver arvodet kan kostnader för domstol eller myndigheter tillkomma. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
       sources: ['/sv/contact', '/sv/faq'],
     },
     contact: {
       answer:
-        'Skicka er sammanfattning via kontaktformuläret: vad som har hänt, vilket stöd ni behöver, vilket samband ärendet har med Taiwan och fristen, om ni känner till den. I det första steget behöver ni ännu inte skicka identitetshandlingar eller hela bevisningen. Byrån lovar ingen svarstid och bekräftar ingen tid via denna sida. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
+        'Skicka din sammanfattning via kontaktformuläret: vad som har hänt, vilken hjälp du behöver, vilket samband ärendet har med Taiwan och fristen, om du känner till den. I det första steget behöver du ännu inte skicka identitetshandlingar eller hela bevisningen. Byrån lovar ingen svarstid och bekräftar ingen tid via den här sidan. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
       sources: ['/sv/faq', '/sv/pricing'],
     },
     faq: {
       answer:
-        'Denna del besvarar vanliga frågor på nivån allmän information: de sex arbetsgrupperna, förberedelsen före kontakten, hur kostnaderna fastställs och vad ett skickat meddelande betyder. En skickad begäran väntar på en advokats granskning; den är inte ett juridiskt yttrande, inte en tid och skapar inte ett förhållande mellan advokat och klient. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
+        'Den här delen besvarar vanliga frågor på en allmän nivå: de sex verksamhetsområdena, hur du förbereder dig före kontakten, hur kostnaderna fastställs och vad ett skickat meddelande betyder. En skickad begäran väntar på att granskas av en advokat; den är inte ett juridiskt yttrande, inte en tid och skapar inte ett förhållande mellan advokat och klient. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
       sources: ['/sv/contact', '/sv/services'],
     },
   },

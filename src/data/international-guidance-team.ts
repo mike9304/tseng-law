@@ -604,16 +604,16 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'VÅRT TEAM',
     title: 'Hoverings internationella team',
     description:
-      'Profiler för Hoverings advokater, operativa ledning och anknutna revision.',
+      'Profiler för Hoverings advokater, operativa ledning och anknutna revisionsbyrå.',
     representativeTitle: 'Ledande advokat',
     teamTitle: 'Advokater och medarbetare',
-    partnerTitle: 'Anknuten revision',
+    partnerTitle: 'Anknuten revisionsbyrå',
     introLabel: 'Presentation',
     educationLabel: 'Utbildning',
     experienceLabel: 'Erfarenhet',
     photoAltPrefix: 'Foto',
     workingLanguagesLabel: 'Arbetsspråk',
-    fullProfileLabel: 'Fullständig profil (English)',
+    fullProfileLabel: 'Fullständig profil (på engelska)',
     keyFactsHeading: 'Advokat Wei Tseng — Kärnuppgifter',
     qualificationLabel: 'Behörighet och byrå',
     qualificationSentence:
@@ -2223,7 +2223,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Byrån behandlar företags- och enskilda ärenden i Taiwan på engelska, japanska, koreanska och kinesiska.',
-        'Hon företrädde en koreansk student i ett skadeståndsanspråk efter en skada i ett gym och erhöll en dom i första instans på TWD 1.57M.',
+        'Hon företrädde en koreansk student i ett skadeståndsanspråk efter en skada på ett gym och fick i första instans en dom på 1,57 miljoner TWD.',
       ],
       education: [
         'Master (M.S.), Institute of Finance, National Taiwan University',
@@ -2250,7 +2250,7 @@ export const guidanceTeamBios: Record<
     'chang-fangyu': {
       intro: [
         'Paralegal med lång verksamhet som senior paralegal vid flera byråer, ansvarig för processstöd, bolagsrätt och utländska investeringar.',
-        'Stöd vid förfaranden, bolagsbildning, tillstånd för utländska investeringar, licensansökningar och utbytet mellan Korea och Taiwan.',
+        'Stöd vid förfaranden, bolagsbildning, tillstånd för utländska investeringar, licensansökningar och kontakterna mellan Korea och Taiwan.',
       ],
       education: ['Juridisk kandidatexamen (LL.B.), Tunghai University'],
       experience: [
@@ -2261,7 +2261,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Samordnar rådgivningstider och kommunikationen för klienter från Korea.',
-        'Stödjer utbytet mellan områden via dokumentsystem och arbetsflöden, utifrån datavetenskap.',
+        'Stödjer samarbetet mellan verksamhetsområdena genom dokumentsystem och arbetsflöden, med bakgrund i datavetenskap.',
       ],
       education: ['Kandidatexamen (B.S.) i datavetenskap, National Cheng Kung University'],
       experience: ['Område Korea-verksamhet, Hovering International Law Firm'],

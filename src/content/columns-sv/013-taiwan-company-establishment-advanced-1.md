@@ -17,17 +17,17 @@ På senare tid har många personer bildat bolag (公司) i Taiwan och fått arbe
 
 och de frågor som ofta ställs vid bildandet samlas nedan.
 
-De som har läst [**grunderna i bolagsbildning**](/sv/columns/taiwan-company-establishment-basics) kan därefter också ta del av denna mer detaljerade fördjupning.
+De som har läst [**grunderna i bolagsbildning**](/sv/columns/taiwan-company-establishment-basics) kan därefter också läsa den här mer detaljerade fördjupningen.
 
-Följande frågor och svar (Q&A) syftar till att hjälpa personer som överväger att bilda bolag i Taiwan. 😊
+Följande frågor och svar är tänkta som hjälp för den som överväger att bilda bolag i Taiwan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
 **1. Jag vill bilda bolag, men har ännu inte hittat en registreringsadress. Är bildandet ändå möjligt?**
 
-När en utlänning bildar bolag i Taiwan ska en investeringsplan (投資計畫書) ges in till Investeringsgranskningsavdelningen vid ekonomiministeriet (經濟部投資審議司) för prövning.
+När en utlänning bildar bolag i Taiwan ska en investeringsplan (投資計畫書) ges in till avdelningen för investeringsprövning vid ekonomiministeriet (經濟部投資審議司) för prövning.
 
-Investeringsgranskningsavdelningen ska kontrollera om det aktuella kapitalet (資本額) verkligen används för investeringsändamål
+Avdelningen ska kontrollera om det aktuella kapitalet (資本額) verkligen används för investeringsändamål
 
 och att utländska aktörer inte för in medel under någon annan beteckning.
 
@@ -39,17 +39,17 @@ En anställd vid en taiwanesisk bank har själv sagt till mig att
 
 många utlänningar på senare tid försvinner efter kontoöppningen, så att kontoöppning hanteras allt striktare.
 
-Redan i grundtexten har en läsare angett att kontoöppningen var det svåraste steget; jag instämmer.
+Flera som har gått igenom processen beskriver kontoöppningen som det svåraste steget, och det stämmer med min erfarenhet.
 
 Eftersom fallen av penningtvätt (洗錢) är mycket många i Taiwan blir öppning av bankkonton allt striktare.
 
-**Råd**：
+**Råd:**
 
 Eftersom prövningen av investeringsplanen också tar tid
 
-bör ni upprätta investeringsplanen och söka bolagets registreringsadress samtidigt.
+bör du upprätta investeringsplanen och söka bolagets registreringsadress samtidigt.
 
-Enligt artikel 9 i förordningen om utländska investeringar (外國人投資條例) ska det godkända tillskottet inflyta i sin helhet inom den frist som den behöriga myndigheten har fastställt (核定期限); fristen ska bekräftas i respektive godkännandehandling (i praktiken fastställs den ofta till omkring 1 år).
+Enligt artikel 9 i lagen om utländska medborgares investeringar (外國人投資條例) ska det godkända tillskottet inflyta i sin helhet inom den frist som den behöriga myndigheten har fastställt (核定期限); fristen ska bekräftas i respektive godkännandehandling (i praktiken fastställs den ofta till omkring 1 år).
 
 Inom den fristen, när bolagsadressen har hittats och hyresavtalet har ingåtts,
 
@@ -63,7 +63,7 @@ Det är möjligt.
 
 Banken kräver i allmänhet dubbel identitetskontroll,
 
-och utan uppehållskort kan ni hos Taiwans immigrationsmyndighet begära «**grunddatabladet**» (統一證號基本資料表).
+och utan uppehållskort kan du hos Taiwans immigrationsmyndighet begära ”**grunduppgiftsblanketten för det enhetliga id-numret**” (統一證號基本資料表).
 
 Utfärdande är möjligt samma dag,
 
@@ -75,13 +75,13 @@ men immigrationsmyndigheten (移民署) är mycket välbesökt; det är därför
 
 Ekonomiministeriets prövningskommitté granskar visst investerarens bakgrund,
 
-men prövningen är inte överdrivet sträng.
+men prövningen tar sikte på om investeringsplanen är verklig, inte på att utbildningen ska matcha branschen exakt.
 
-Ni kan nämna varierande yrkeserfarenhet, inklusive extrajobb,
+Du kan nämna all slags yrkeserfarenhet, även extrajobb,
 
 och redogöra i detalj så att de som prövar ärendet kan övertygas.
 
-På denna punkt bör ni samtala grundligt med en taiwanesisk advokat.
+På den punkten bör du gå igenom saken grundligt med en advokat i Taiwan.
 
 ​
 
@@ -89,11 +89,11 @@ På denna punkt bör ni samtala grundligt med en taiwanesisk advokat.
 
 Bolagsbildningen tar omkring **3 månader**, och erhållandet av arbetstillstånd (工作許可) och uppehållskort omkring **1 månad**,
 
-så ni bör sätta avtalets startdatum så sent som möjligt.
+så du bör sätta avtalets startdatum så sent som möjligt.
 
-Dessutom ger hyresvärden i taiwanesiska hyresavtal för butikslokaler ofta hyresgästen en «**inredningsperiod**» (裝潢期間).
+Dessutom ger hyresvärden i taiwanesiska hyresavtal för butikslokaler ofta hyresgästen en ”**inredningsperiod**” (裝潢期間).
 
-Det är en period som är befriad från hyra; ni kan förhandla om den.
+Det är en period utan hyra, och den går att förhandla om.
 
 Det är inte lätt för en utlänning att hyra en butikslokal, och depositionen (押金) i Taiwan är ganska låg (vanligen 2 månader), så hyresvärdens skydd är begränsat;
 
@@ -103,7 +103,7 @@ Därför rekommenderar jag att söka driftstället tidigt.
 
 Om förhandlingen med hyresvärden inte går smidigt
 
-kan ni, om det behövs, föreslå notarisering av hyresavtalet (公證) eller en extra deposition.
+kan du, om det behövs, föreslå notarisering av hyresavtalet (公證) eller en extra deposition.
 
 ​
 
@@ -111,7 +111,7 @@ kan ni, om det behövs, föreslå notarisering av hyresavtalet (公證) eller en
 
 Det beror på bolagets verksamhetsgrenar (營業項目).
 
-Ex.) Om verksamhetsgrenen är restaurang och man avser att hyra en kontorslokal blir öppning av bankkonto mycket svår.
+T.ex. om verksamhetsgrenen är restaurang och man avser att hyra en kontorslokal blir det mycket svårt att öppna bankkonto.
 
 Som redan angetts granskar banken hyresavtalet och inspekterar bolagsadressen på plats.
 
@@ -119,15 +119,15 @@ Dessutom kräver stadsförvaltningen (市政府) vid den slutliga bolagsregistre
 
 om det är en kontorslokal är bolagsregistrering (公司登記) då inte möjlig.
 
-Ex.) Om det rör sig om verksamhetsgrenar som är möjliga i kontorslokal, såsom reklam eller partihandel, kan bolaget bildas i kontorslokal. Innan hyresavtalet ingås
+T.ex. om det rör sig om verksamhetsgrenar som är möjliga i kontorslokal, såsom reklam eller partihandel, kan bolaget bildas i en kontorslokal. Innan hyresavtalet ingås
 
-bör ni kontrollera detta i förväg.
+bör du kontrollera detta i förväg.
 
-*Om ni behöver hjälp eller ett samtal om Taiwans rätt, lämna en kommentar eller ta kontakt.*
+*Den här texten är endast allmän vägledning. Rådgivning med advokat sker på engelska, kinesiska (中文), japanska eller koreanska; se kontaktsidan.*
 
 ---
 
 > Se även:
 > - [Vilka ärenden vi behandlar](/sv/services)
 > - [Hoverings internationella team](/sv/lawyers)
-> - [Hur ni når byrån](/sv/contact)
+> - [Hur du når byrån](/sv/contact)

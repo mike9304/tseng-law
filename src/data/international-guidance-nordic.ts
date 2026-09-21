@@ -22,18 +22,18 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
     contact: 'Kontakt',
     faq: 'Frågor',
     privacy: 'Integritet',
-    disclaimer: 'Ansvar',
+    disclaimer: 'Friskrivning',
     columns: 'Artiklar',
   },
   contactCta: 'Skicka en begäran om rådgivning',
   footerNotice:
-    'Denna sida på svenska innehåller endast allmänna anvisningar om byråns arbete enligt Taiwans rätt. Den är inte juridisk rådgivning för ett konkret ärende, och att skicka ett meddelande skapar i sig inte ett förhållande mellan advokat och klient.',
+    'Den här sidan på svenska ger bara allmän vägledning om byråns arbete enligt Taiwans rätt. Den är inte juridisk rådgivning för ett konkret ärende, och att skicka ett meddelande skapar i sig inte ett förhållande mellan advokat och klient.',
   skipLink: 'Hoppa över navigeringen och gå till innehållet',
-  menuLabel: 'Sidförteckning',
+  menuLabel: 'Meny',
   languageLabel: 'Visningsspråk',
   mega: {
     services: {
-      description: 'Byrån behandlar de väsentliga arbetsgrupperna enligt Taiwans rätt.',
+      description: 'Byrån arbetar inom de centrala verksamhetsområdena enligt Taiwans rätt.',
       viewAllLabel: 'Visa alla',
     },
     columns: {
@@ -55,17 +55,17 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
   },
   notFoundTitle: 'Sidan hittades inte',
   notFoundText:
-    'Den sökta sidan finns inte eller har flyttats. Ni kan återvända till startsidan på svenska för att se de anvisningar som finns.',
+    'Den sökta sidan finns inte eller har flyttats. Du kan gå tillbaka till startsidan på svenska för att se den vägledning som finns.',
   backHomeLabel: 'Till startsidan',
   readSourceLabel: 'Öppna artikellistan på originalspråket',
   home: {
     heroScrollLabel: 'Rulla nedåt',
     heroColumnsCtaLabel: 'Se artiklarna',
     servicesDetailLabel: 'Se detaljerna',
-    servicesAssistanceBefore: 'Om det är oklart vilken grupp ert ärende tillhör, förklarar sidan ',
+    servicesAssistanceBefore: 'Om det är oklart vilket område ditt ärende hör till förklarar sidan ',
     servicesAssistanceLinkLabel: 'Kontakt',
     servicesAssistanceAfter:
-      ' hur ni formulerar en sammanfattning som en advokat granskar.',
+      ' hur du formulerar en sammanfattning som en advokat granskar.',
     columnsViewAllLabel: 'Se alla artiklar',
     columnsReadMoreLabel: 'Läs vidare',
     columnsReviewLabel: 'Granskad av advokat Wei Tseng',
@@ -79,31 +79,31 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
   },
   pages: {
     home: {
-      eyebrow: 'ANVISNINGAR',
-      title: 'Juridiska tjänster i Taiwan — anvisningar på svenska',
+      eyebrow: 'VÄGLEDNING',
+      title: 'Juridiska tjänster i Taiwan — vägledning på svenska',
       description:
         'Allmänna förklaringar på svenska om Hovering International Law Firms arbetsområde i Taiwan, rådgivningsspråken och den första kontakten.',
       intro:
-        'Hovering International Law Firm följer klienter från utlandet, även med anknytning till Taiwan, i frågor enligt Taiwans rätt: investering och bolagsbildning, civilrättsliga tvister, äktenskap, familj och arv, arbetsrätt, straffrätt och immaterialrätt. Den här svenska delen hjälper er att se vilket arbete som faller inom vårt område, vad som ska förberedas och hur ni når oss. Det är allmänna uppgifter, inte juridisk rådgivning för ert eget ärende.',
+        'Hovering International Law Firm biträder klienter från utlandet i frågor enligt Taiwans rätt: investering och bolagsbildning, civilrättsliga tvister, äktenskap, familj och arv, arbetsrätt, straffrätt och immaterialrätt. Den här svenska delen hjälper dig att se vilket arbete som ligger inom vårt område, vad du bör förbereda och hur du når oss. Det är allmän information, inte juridisk rådgivning för ditt eget ärende.',
       sections: [
         {
           heading: 'Vad vi gör',
           paragraphs: [
-            'Hovering International Law Firm är en advokatbyrå etablerad i Taiwan. Den arbetar enligt Taiwans rätt och har kontor i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) och Pingtung (屏東). Vi ger råd till företag och driver förfaranden i domstol och följer klienter från utlandet genom de steg som krävs i Taiwan.',
-            'Hela innehållet här är allmänt. Utgången av ett ärende beror på fakta, tillämpliga regler och tidpunkten. Dessa anvisningar ersätter inte samtalet med en advokat om era handlingar.',
+            'Hovering International Law Firm är en advokatbyrå etablerad i Taiwan. Den arbetar enligt Taiwans rätt och har kontor i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) och Pingtung (屏東). Vi ger råd till företag, för talan i domstol och följer klienter från utlandet genom de steg som krävs i Taiwan.',
+            'Hela innehållet här är allmänt. Utgången av ett ärende beror på fakta, tillämpliga regler och tidpunkten. Den här vägledningen ersätter inte ett samtal med en advokat om dina handlingar.',
           ],
         },
         {
           heading: 'Sidans språk och rådgivningsspråket är inte samma sak',
           paragraphs: [
-            'Den här sidan är skriven på svenska, men rådgivningen med en advokat sker endast på de fyra rådgivningsspråken engelska, kinesiska (中文), japanska och koreanska. Att läsa anvisningarna på svenska betyder inte att samtalet med advokaten sker på svenska.',
-            'Vi lovar inte en tolk, en svarstid eller en tid via den här sidan. Om ni inte kan använda något av de fyra språken förklarar sidan »Kontakt« hur vi prövar en kommunikationsväg.',
+            'Den här sidan är skriven på svenska, men rådgivningen med en advokat sker endast på de fyra rådgivningsspråken engelska, kinesiska (中文), japanska och koreanska. Att läsa vägledningen på svenska betyder inte att samtalet med advokaten sker på svenska.',
+            'Vi lovar inte en tolk, en svarstid eller en tid via den här sidan. Om du inte kan använda något av de fyra språken förklarar sidan ”Kontakt” hur vi undersöker en möjlig kommunikationsväg.',
           ],
         },
         {
-          heading: 'Arbetsgrupper',
+          heading: 'Verksamhetsområden',
           paragraphs: [
-            'Arbetsområdet omfattar följande sex grupper. Sidan »Tjänster« beskriver varje grupp mer precist och anger vad som inte utlovas.',
+            'Arbetet omfattar följande sex områden. Sidan ”Tjänster” beskriver varje område närmare och anger vad som inte utlovas.',
           ],
           items: [
             'Investering och bolagsbildning i Taiwan',
@@ -115,10 +115,10 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Var ni bör börja',
+          heading: 'Var du bör börja',
           paragraphs: [
-            'Läs sidan »Tjänster« för att se om ert ärende faller inom vårt område, därefter »Kostnader« och »Kontakt« för att veta hur omfattningen fastställs och hur kostnaderna bekräftas innan arbetet börjar.',
-            'När ni skickar ett meddelande får ni skriva sammanfattningen på ert eget språk. Originaltexten sparas som ni skrev den och översätts inte automatiskt. Ett skickat meddelande är en begäran som väntar på granskning: det är ännu inte rådgivning och inte en bekräftad tid.',
+            'Läs sidan ”Tjänster” för att se om ditt ärende ligger inom vårt område, därefter ”Kostnader” och ”Kontakt” för att se hur omfattningen fastställs och hur kostnaderna bekräftas innan arbetet börjar.',
+            'När du skickar ett meddelande får du skriva sammanfattningen på ditt eget språk. Originaltexten sparas som du skrev den och översätts inte automatiskt. Ett skickat meddelande är en begäran som väntar på granskning: det är ännu inte rådgivning och inte en bekräftad tid.',
           ],
         },
       ],
@@ -127,57 +127,57 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'TJÄNSTER',
       title: 'Vilka ärenden vi behandlar',
       description:
-        'Sex arbetsgrupper hos byrån i Taiwan och de gränser ni först bör känna till.',
+        'Sex verksamhetsområden hos byrån i Taiwan och de gränser du först bör känna till.',
       intro:
-        'Nedan de grupper vi faktiskt behandlar och frågor som ofta ställs i inledningen. Framställningen hjälper er att bedöma om ert ärende faller inom vårt område; den är allmän och inte en juridisk analys av ett enskilt ärende.',
+        'Nedan följer de områden vi faktiskt arbetar med och frågor som ofta ställs i inledningen. Framställningen hjälper dig att bedöma om ditt ärende ligger inom vårt område; den är allmän och inte en juridisk analys av ett enskilt ärende.',
       sections: [
         {
           heading: 'Investering och bolagsbildning i Taiwan',
           paragraphs: [
-            'Vi följer utländska investerare och företag vid bildande eller drift av ett bolag i Taiwan: val av rättsform, förberedelse och ingivande av handlingar, kapitalinsats, bankfrågor, prövning av lokalen samt branschkrav. Vi stöder också bokföring och skatt som följer av bildande och drift i Taiwan.',
-            'Förlopp och tid skiljer sig efter form, investerare, bransch, bank och redan tillgängliga handlingar. En bolagsbildning leder inte av sig själv till uppehållstillstånd (居留) eller arbetstillstånd (工作許可): det är skilda förfaranden som bedöms efter personens läge.',
+            'Vi biträder utländska investerare och företag vid bildande eller drift av ett bolag i Taiwan: val av rättsform, förberedelse och ingivande av handlingar, kapitalinsats, bankfrågor, prövning av lokalen samt branschkrav. Vi hjälper också till med bokföring och skatt som följer av bildande och drift i Taiwan.',
+            'Förlopp och tid skiljer sig åt beroende på bolagsform, investerare, bransch, bank och vilka handlingar som redan finns. En bolagsbildning leder inte av sig själv till uppehållstillstånd (居留) eller arbetstillstånd (工作許可): det är skilda förfaranden som bedöms utifrån personens situation.',
           ],
         },
         {
           heading: 'Civilrättsliga tvister och skadestånd',
           paragraphs: [
-            'Den här gruppen omfattar avtals tvister, skadestånd från otillåten handling och konsumenttvister. Arbetet börjar i regel med en kronologi, granskning av befintliga handlingar och bevis och först därefter med nästa steg.',
-            'Frister, inbegripet preskription, och bevisens fullständighet präglar förloppet. Ange därför kända datum så tidigt som möjligt. Bevara avtal, meddelanden, betalningskvitton eller foton av läget på plats och nämn dem i det första meddelandet.',
+            'Det här området omfattar avtalstvister, utomobligatoriskt skadestånd och konsumenttvister. Arbetet börjar i regel med en kronologi och en genomgång av befintliga handlingar och bevis, och först därefter tas nästa steg.',
+            'Frister, inbegripet preskription, och hur fullständig bevisningen är präglar förloppet. Ange därför kända datum så tidigt som möjligt. Spara avtal, meddelanden, betalningskvitton eller foton från platsen och nämn dem i det första meddelandet.',
           ],
         },
         {
           heading: 'Äktenskap, familj och arv',
           paragraphs: [
-            'Vi behandlar skilsmässa (離婚), bodelning, utövande och bärande av rättigheter och skyldigheter mot minderåriga barn (未成年子女權利義務之行使或負擔), umgänge (會面交往) och arv (繼承), även när parter eller tillgångar finns i olika stater. Gränsöverskridande familjeärenden kräver ofta ytterligare prövning av folkbokföring (戶籍), handlingars form och deras bevisvärde i Taiwan.',
-            'Eftersom familjeärenden ofta medför frister och parallella förfaranden bör den första sammanfattningen ange parternas förhållande, nuvarande bostad och redan pågående förfaranden.',
+            'Vi behandlar skilsmässa (離婚), bodelning, vårdnad och föräldraansvar för minderåriga barn (未成年子女權利義務之行使或負擔), umgänge (會面交往) och arv (繼承), även när parter eller tillgångar finns i olika stater. Gränsöverskridande familjeärenden kräver ofta ytterligare prövning av folkbokföring (戶籍), handlingars form och deras bevisvärde i Taiwan.',
+            'Eftersom familjeärenden ofta medför frister och parallella förfaranden bör den första sammanfattningen ange parternas relation, var de bor nu och vilka förfaranden som redan pågår.',
           ],
         },
         {
           heading: 'Arbetsrättsliga tvister',
           paragraphs: [
-            'Den här gruppen omfattar upphörande av anställning, avgångsvederlag enligt Taiwans rätt (資遣費; inte att likställa med institut i andra stater), lön och tvister ur anställningsavtalet (勞動契約), både på arbetstagar- och arbetsgivarsidan. Vid prövningen skiljer vi uppsägningsgrunden från frågor om underrättelse, betalning och frister.',
-            'Anställningsavtal, arbetsordning (工作規則), lönebesked och parternas skriftväxling är oftast de avgörande handlingarna. Om ni fortfarande har dem, nämn det i sammanfattningen.',
+            'Det här området omfattar upphörande av anställning, avgångsvederlag enligt Taiwans rätt (資遣費; inte detsamma som avgångsvederlag eller liknande ersättningar i andra länders rätt), lön och tvister om anställningsavtalet (勞動契約), både på arbetstagar- och arbetsgivarsidan. Vid prövningen skiljer vi uppsägningsgrunden från frågor om underrättelse, betalning och frister.',
+            'Anställningsavtal, arbetsreglemente (工作規則), lönebesked och parternas skriftväxling är oftast de avgörande handlingarna. Om du fortfarande har dem, nämn det i sammanfattningen.',
           ],
         },
         {
           heading: 'Straffrättsliga frågor',
           paragraphs: [
-            'Vi följer i förundersökning och inför domstol, för misstänkta eller tilltalade liksom för målsägande, och bedömer straffrättsliga risker i företagsverksamhet.',
-            'Straffrättsliga ärenden har ofta korta frister och fastlagda steg. Om ni redan har fått en skrivelse från åklagare eller domstol, nämn datumet på skrivelsen tidigt så att innehållet prövas i rätt ordning.',
+            'Vi biträder misstänkta, tilltalade och målsägande under förundersökning och i domstol, och bedömer straffrättsliga risker i företagsverksamhet.',
+            'Straffrättsliga ärenden har ofta korta frister och fasta steg. Om du redan har fått en skrivelse från åklagare eller domstol, nämn datumet på skrivelsen tidigt så att innehållet kan prövas i rätt ordning.',
           ],
         },
         {
           heading: 'Immaterialrätt',
           paragraphs: [
-            'Vi stöder vid registrering av varumärken (商標) och patent (專利), vid upphovsrätt och vid tvister om dessa rättigheter i Taiwan.',
-            'I den här gruppen avgör ordningen på stegen: skyddsomfång, ansökningstidpunkt och faktisk användning påverkar valet. Att ge in en ansökan betyder inte av sig själv att den beviljas.',
+            'Vi hjälper till vid registrering av varumärken (商標) och patent (專利), i upphovsrättsliga frågor och vid tvister om dessa rättigheter i Taiwan.',
+            'Inom det här området är ordningen på stegen avgörande: skyddsomfång, tidpunkt för ansökan och faktisk användning påverkar valet. Att ge in en ansökan betyder inte i sig att den beviljas.',
           ],
         },
         {
           heading: 'Omfattning och dess bekräftelse',
           paragraphs: [
-            'Byrån arbetar enligt Taiwans rätt och behandlar ärenden i de ovannämnda grupperna. Omfattningen av varje ärende bekräftas särskilt efter att en advokat har granskat ert meddelande.',
-            'Uppehållsstatus, arbetstillstånd och jämförbara frågor bedöms utifrån handlingarna och personens läge, inte utifrån medborgarskapet. Om en del av ert ärende rör sådana frågor, nämn det vid kontakten. Den här sidan lovar varken ett resultat eller en svarstid.',
+            'Byrån arbetar enligt Taiwans rätt och tar ärenden inom de områden som nämns ovan. Omfattningen av varje ärende bekräftas särskilt efter att en advokat har granskat ditt meddelande.',
+            'Uppehållsstatus, arbetstillstånd och liknande frågor bedöms utifrån handlingarna och personens situation, inte utifrån medborgarskapet. Om en del av ditt ärende rör sådana frågor, nämn det vid kontakten. Den här sidan lovar varken ett resultat eller en svarstid.',
           ],
         },
       ],
@@ -188,28 +188,28 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
       description:
         'Grunduppgifter om denna taiwanesiska advokatbyrå, dess kontor och arbetet med utländska parter.',
       intro:
-        'Hovering International Law Firm är en advokatbyrå i Taiwan. Advokaterna arbetar från företagsrådgivning till rättegång. Den här delen beskriver byråns tillkomst, orterna och arbetet med utländska parter.',
+        'Hovering International Law Firm är en advokatbyrå i Taiwan. Advokaterna arbetar med allt från affärsjuridisk rådgivning till processer i domstol. Den här delen beskriver byråns bakgrund, orterna och arbetet med utländska parter.',
       sections: [
         {
           heading: 'Grundande och uppbyggnad',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) grundades 2016 av advokater som studerat vid National Taiwan University (國立臺灣大學). Det kinesiska namnet 昊鼎 förenar tecknet 昊 (»vid himmel«) med 鼎 (»fast grund«) och beskriver byråns inriktning sedan grundandet.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) grundades 2016 av advokater som studerat vid National Taiwan University (國立臺灣大學). Det kinesiska namnet 昊鼎 förenar tecknet 昊 (”den vida himlen”) med 鼎 (”fast grund”) och beskriver byråns inriktning sedan grundandet.',
             'Vi har kontor i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) och Pingtung (屏東). Kontoret i Kaohsiung är inriktat på företagsledning och behandlar civil-, straff- och förvaltningsrättsliga tvister. Kontoret i Taichung behandlar byggärenden, immaterialrätt och ärenden med anknytning till Korea och Japan. Kontoret i Pingtung öppnades 2017 för det lokala behovet.',
-            'Vid sidan av det advokatmässiga arbetet finns sedan 2020 också Hovering Accounting Office, som erbjuder bokföring och skatteplanering för företagare och förmögna privatpersoner.',
+            'Vid sidan av advokatverksamheten finns sedan 2020 också Hovering Accounting Office, som erbjuder bokföring och skatteplanering för företagare och förmögna privatpersoner.',
           ],
         },
         {
           heading: 'Arbete med utländska parter',
           paragraphs: [
-            'Det gränsöverskridande arbetet omfattar bolagsbildning, visum, varumärkes- och patentansökningar, juridisk riskprövning och skatterådgivning för företag. Kontoret i Taichung behandlar särskilt byggärenden, immaterialrätt och ärenden med anknytning till Korea och Japan. Advokat Wei Tseng (曾雋崴) följer klienter från Korea, Japan och andra internationella klienter i de nämnda grupperna.',
-            'Om vi kan ta ett ärende beror på innehållet och på kommunikationens språk. Faller ert ärende inom de nämnda grupperna och kan det diskuteras på ett av de fyra rådgivningsspråken, kan ni skicka en sammanfattning för granskning.',
+            'Det gränsöverskridande arbetet omfattar bolagsbildning, visum, varumärkes- och patentansökningar, juridisk riskprövning och skatterådgivning för företag. Kontoret i Taichung behandlar särskilt byggärenden, immaterialrätt och ärenden med anknytning till Korea och Japan. Advokat Wei Tseng (曾雋崴) biträder klienter från Korea och Japan och andra internationella klienter inom de områden som nämns ovan.',
+            'Om vi kan ta ett ärende beror på innehållet och på vilket språk kommunikationen sker. Ligger ditt ärende inom de områden som nämns ovan och kan det diskuteras på ett av de fyra rådgivningsspråken, kan du skicka en sammanfattning för granskning.',
           ],
         },
         {
-          heading: 'När ni kontaktar oss',
+          heading: 'När du kontaktar oss',
           paragraphs: [
-            'När er sammanfattning kommit in granskar en advokat innehållet och talar därefter om möjlig arbetsomfattning, ännu behövliga handlingar och nästa steg. Vid skatte- eller bokföringsfrågor kan byrån arbeta med bokföringsavdelningen i ett och samma flöde.',
-            'Resultatet av varje ärende beror på fakta och de handlingar som finns; vi lovar inget resultat. Om ni behöver ett bindande svar för er situation måste handlingarna diskuteras med en advokat på ett av de fyra rådgivningsspråken.',
+            'När din sammanfattning har kommit in granskar en advokat innehållet och går därefter igenom möjlig arbetsomfattning, vilka handlingar som ännu behövs och nästa steg. Vid skatte- eller bokföringsfrågor kan byrån arbeta tillsammans med redovisningsavdelningen i ett och samma flöde.',
+            'Resultatet i varje ärende beror på fakta och på de handlingar som finns; vi lovar inget resultat. Om du behöver ett bindande svar för din situation måste handlingarna gås igenom med en advokat på ett av de fyra rådgivningsspråken.',
           ],
         },
       ],
@@ -217,7 +217,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ADVOKATER',
       title: 'Hoverings internationella team',
-      description: 'Profiler för advokater, driftsledning och partnerrevision hos Hovering.',
+      description: 'Profiler för Hoverings advokater, operativa ledning och anknutna revisionsbyrå.',
       intro: '',
       sections: [],
     },
@@ -227,76 +227,76 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
       description:
         'Förklaring av ordningen: först arbetsomfattningen, därefter kostnadsbekräftelsen, och varför den här sidan inte innehåller en prislista.',
       intro:
-        'Den här sidan förklarar hur kostnader fastställs, inte deras belopp. Beloppet beror på arbetsomfattningen i det enskilda ärendet och är meningsfullt först när den omfattningen är klar.',
+        'Den här sidan förklarar hur kostnaderna fastställs, inte hur stora de blir. Beloppet beror på arbetets omfattning i det enskilda ärendet och går att ange först när omfattningen är klar.',
       sections: [
         {
           heading: 'Först fastställs arbetsomfattningen',
           paragraphs: [
-            'Ärenden av samma slag kan ha mycket olika arbetsinsats, beroende på antalet parter, tillgängliga handlingar, frister som ska iakttas och om ett förfarande redan har börjat. Därför är det första steget alltid att fastställa vad som hör till arbetet och vad som inte gör det.',
-            'Sammanfattningen ni skickar i början är grunden för den omfattningen. Ju tydligare den beskriver förloppet, er begäran och fristerna, desto preciserare kan omfattningen bestämmas.',
+            'Ärenden av samma slag kan kräva mycket olika arbetsinsats, beroende på antalet parter, vilka handlingar som finns, vilka frister som ska hållas och om ett förfarande redan har inletts. Därför är det första steget alltid att bestämma vad som hör till uppdraget och vad som inte gör det.',
+            'Sammanfattningen du skickar i början är grunden för omfattningen. Ju tydligare den beskriver förloppet, vad du vill ha hjälp med och fristerna, desto mer exakt kan omfattningen bestämmas.',
           ],
         },
         {
           heading: 'Kostnaderna bekräftas innan arbetet börjar',
           paragraphs: [
-            'När arbetsomfattningen är klar diskuteras belopp och beräkningssätt med er och bekräftas innan arbetet börjar. Ändras omfattningen under vägen måste det bekräftas på nytt.',
-            'Den här sidan är inte ett priserbjudande och skapar ingen betalningsskyldighet.',
+            'När arbetets omfattning är klar går vi igenom belopp och beräkningssätt med dig och bekräftar dem innan arbetet börjar. Ändras omfattningen under arbetets gång måste det bekräftas på nytt.',
+            'Den här sidan är inte en offert och medför ingen betalningsskyldighet.',
           ],
         },
         {
           heading: 'Rådgivningen kan vara mot betalning',
           paragraphs: [
-            'Rådgivningen med en advokat kan vara en prestation mot betalning. Den här sidan säger inte att det första samtalet är kostnadsfritt, och ingen del får läsas på det sättet.',
-            'Om rådgivningen är mot betalning meddelas belopp och betalningssätt innan den äger rum.',
+            'Rådgivningen med en advokat kan ske mot betalning. Den här sidan säger inte att det första samtalet är kostnadsfritt, och ingen del av den får läsas på det sättet.',
+            'Sker rådgivningen mot betalning får du besked om belopp och betalningssätt innan den äger rum.',
           ],
         },
         {
           heading: 'Varför den här sidan inte anger taxor',
           paragraphs: [
-            'Kostnaderna beror på ärendet självt: på insatsen, antalet parter, handlingarna, fristerna och om ett förfarande redan pågår. Ett i förväg satt tal skulle inte visa kostnaderna för ert ärende. Därför fastställer vi först arbetsomfattningen och meddelar er därefter kostnaderna, innan arbetet börjar.',
-            'Utöver advokatarvodet kan rättegångs-, myndighets- eller tredjepartskostnader uppstå. De är skilda från arvodet och beror på det aktuella förfarandet.',
+            'Kostnaderna beror på ärendet självt: på arbetsinsatsen, antalet parter, handlingarna, fristerna och om ett förfarande redan pågår. Ett belopp som satts i förväg skulle inte visa vad just ditt ärende kostar. Därför fastställer vi först arbetets omfattning och ger dig därefter besked om kostnaderna, innan arbetet börjar.',
+            'Utöver advokatarvodet kan kostnader för domstol, myndigheter eller tredje man tillkomma. De är skilda från arvodet och beror på det aktuella förfarandet.',
           ],
         },
       ],
     },
     contact: {
       eyebrow: 'KONTAKT',
-      title: 'Hur ni når byrån',
+      title: 'Hur du når byrån',
       description:
-        'Sidans språk, rådgivningsspråken, tillvägagångssättet om ni inte kan använda något av de fyra språken, och vad den här sidan inte utlovar.',
+        'Sidans språk, rådgivningsspråken, vad som gäller om du inte kan använda något av de fyra språken, och vad den här sidan inte utlovar.',
       intro:
-        'Innan ni skriver till oss, skilj på följande tre punkter. De blandas ofta, men betyder olika saker.',
+        'Innan du skriver till oss bör du skilja på följande tre saker. De blandas ofta ihop, men betyder olika saker.',
       sections: [
         {
           heading: 'Tre saker som måste hållas isär',
           paragraphs: [
-            'Sidans visningsspråk, rådgivningsspråket med advokaten och språket ni skriver på är tre skilda saker.',
+            'Sidans visningsspråk, rådgivningsspråket med advokaten och språket du skriver på är tre skilda saker.',
           ],
           items: [
-            'Sidans språk: Dessa anvisningar är skrivna på svenska.',
-            'Rådgivningsspråk: Rådgivningen sker på engelska, kinesiska (中文), japanska och koreanska.',
-            'Ert skriftspråk: Ni får skriva sammanfattningen på ert eget språk; originaltexten sparas oförändrad.',
+            'Sidans språk: Den här vägledningen är skriven på svenska.',
+            'Rådgivningsspråk: Rådgivningen sker endast på engelska, kinesiska (中文), japanska och koreanska.',
+            'Ditt skriftspråk: Du får skriva sammanfattningen på ditt eget språk; originaltexten sparas oförändrad.',
           ],
         },
         {
-          heading: 'Om ni inte kan använda något av de fyra rådgivningsspråken',
+          heading: 'Om du inte kan använda något av de fyra rådgivningsspråken',
           paragraphs: [
-            'I kontaktformuläret kan ni välja »Kommunikationssättet måste bekräftas«. Vi svarar för att pröva en farbar kommunikationsväg, om en sådan finns; en prestation på ett annat språk utlovas inte och en svarstid utlovas inte.',
-            'Det är bara ett prövningssteg, inte ett löfte. Vi lovar inte en tolk, inte en prestation på svenska eller på ett annat språk utanför de fyra nämnda språken, och inte att vi tar emot varje ärende.',
+            'I kontaktformuläret kan du välja ”Kommunikationssättet måste bekräftas”. Vi hör av oss för att undersöka om det finns en användbar kommunikationsväg; rådgivning på ett annat språk utlovas inte och ingen svarstid utlovas.',
+            'Det är bara ett steg för att undersöka saken, inte ett löfte. Vi lovar inte en tolk, inte rådgivning på svenska eller på ett annat språk utanför de fyra som nämns, och inte att vi tar emot varje ärende.',
           ],
         },
         {
           heading: 'Vad som bör stå i det första meddelandet',
           paragraphs: [
-            'Ange vad som har hänt, vilken hjälp ni behöver, vilket samband ärendet har med Taiwan och fristen, om ni känner en. Om ni redan har fått en skrivelse från en domstol eller en myndighet, nämn datumet på skrivelsen.',
-            'I inledningen behöver ni ännu inte skicka passnummer, identitetsnummer, kontouppgifter, journaler eller hela bevisningen. Vänta på anvisningar från advokaten och skicka då känsliga handlingar på en säker väg.',
+            'Ange vad som har hänt, vilken hjälp du behöver, vilket samband ärendet har med Taiwan och vilken frist som gäller, om du känner till någon. Om du redan har fått en skrivelse från en domstol eller en myndighet, nämn datumet på skrivelsen.',
+            'I inledningen behöver du ännu inte skicka passnummer, identitetsnummer, kontouppgifter, journaler eller hela bevisningen. Vänta på besked från advokaten och skicka då känsliga handlingar på ett säkert sätt.',
           ],
         },
         {
           heading: 'Vad den här sidan inte utlovar',
           paragraphs: [
-            'Vi lovar ingen svarstid, bekräftar ingen tid via den här sidan, lovar inte en viss advokat och ställer inte en tolk. Skriftlig översättning är något annat: ert meddelande översätts inte automatiskt.',
-            'När ni skickar en begäran sparas innehållet och väntar på granskning. Om ni efter en tid inte får svar kan ni skriva på nytt till den e-postadress som anges på kontaktsidan.',
+            'Vi lovar ingen svarstid, bekräftar ingen tid via den här sidan, lovar inte en viss advokat och ordnar inte en tolk. Skriftlig översättning är något annat: ditt meddelande översätts inte automatiskt.',
+            'När du skickar en begäran sparas innehållet och väntar på granskning. Om du efter en tid inte får svar kan du skriva på nytt till den e-postadress som anges på kontaktsidan.',
           ],
         },
       ],
@@ -307,12 +307,12 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
       description:
         'Förklaringar om arbetsområde, förberedelse, språk, kostnader och vad en skickad begäran betyder.',
       intro:
-        'Följande frågor besvaras på nivån allmänna uppgifter. Ett svar för ert eget ärende är möjligt först efter att en advokat har granskat handlingarna.',
+        'Frågorna nedan besvaras på en allmän nivå. Ett svar för ditt eget ärende är möjligt först efter att en advokat har granskat handlingarna.',
       sections: [
         {
-          heading: 'Hur ni använder den här delen',
+          heading: 'Hur du använder den här delen',
           paragraphs: [
-            'Hittar ni inget svar för er situation beror svaret oftast på särskilda fakta. Skriv då dessa fakta i sammanfattningen i stället för att själva dra slutsatser från den här sidan.',
+            'Hittar du inget svar som passar din situation beror svaret oftast på omständigheterna i det enskilda fallet. Skriv då dessa omständigheter i sammanfattningen i stället för att själv dra slutsatser av den här sidan.',
           ],
         },
       ],
@@ -320,42 +320,42 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Vilka ärenden behandlar byrån?',
           answer:
-            'Vi behandlar sex grupper: investering och bolagsbildning i Taiwan, civilrättsliga tvister och skadestånd, äktenskap, familj och arv, arbetsrättsliga tvister, straffrättsliga frågor och immaterialrätt. Om ett ärende tas emot avgörs efter granskning av innehållet.',
+            'Vi arbetar inom sex områden: investering och bolagsbildning i Taiwan, civilrättsliga tvister och skadestånd, äktenskap, familj och arv, arbetsrättsliga tvister, straffrättsliga frågor och immaterialrätt. Om ett ärende tas emot avgörs efter granskning av innehållet.',
         },
         {
           question: 'Vad bör jag förbereda före kontakten?',
           answer:
-            'Förbered en kort sammanfattning av förloppet, er begäran, sambandet med Taiwan och fristen, om en finns. Finns redan en skrivelse från en domstol eller en myndighet, nämn datumet. I det här skedet behöver ni ännu inte skicka identitetshandlingar eller hela bevisningen.',
+            'Förbered en kort sammanfattning av förloppet, vad du vill ha hjälp med, sambandet med Taiwan och fristen, om det finns någon. Finns redan en skrivelse från en domstol eller en myndighet, nämn datumet. I det här skedet behöver du ännu inte skicka identitetshandlingar eller hela bevisningen.',
         },
         {
           question: 'Kan jag få rådgivning på svenska?',
           answer:
-            'Nej. Dessa anvisningar är skrivna på svenska, men rådgivningen med en advokat sker endast på engelska, kinesiska (中文), japanska och koreanska. Vi lovar inte heller en tolk. Skriftlig översättning är något annat: den ursprungliga text ni skriver sparas som den är och översätts inte automatiskt.',
+            'Nej. Den här vägledningen är skriven på svenska, men rådgivningen med en advokat sker endast på engelska, kinesiska (中文), japanska och koreanska. Vi lovar inte heller en tolk. Skriftlig översättning är något annat: den text du skriver sparas i original och översätts inte automatiskt.',
         },
         {
           question: 'Vad om jag inte kan använda något av de fyra språken?',
           answer:
-            'Välj vid sändningen »Kommunikationssättet måste bekräftas«. Vi svarar för att pröva ett kommunikationssätt, men en prestation på ett annat språk utlovas inte. Det är ett prövningssteg, inte ett löfte om att vi kan arbeta på ett annat språk.',
+            'Välj ”Kommunikationssättet måste bekräftas” när du skickar begäran. Vi hör av oss för att undersöka om det finns ett användbart kommunikationssätt, men rådgivning på ett annat språk utlovas inte. Det är ett steg för att undersöka saken, inte ett löfte om att vi kan arbeta på ett annat språk.',
         },
         {
           question: 'Hur behandlas min svenska text?',
           answer:
-            'Originaltexten ni skriver sparas som den är och översätts inte automatiskt. Om det behövs bekräftas språket för den fortsatta kommunikationen med er.',
+            'Den text du skriver sparas i original och översätts inte automatiskt. Om det behövs bekräftar vi språket för den fortsatta kommunikationen med dig.',
         },
         {
           question: 'Har rådgivningen redan skett när begäran är skickad?',
           answer:
-            'Nej. En skickad begäran väntar på granskning av en advokat. Det är inte juridisk rådgivning, inte en bekräftad tid, och sändningen skapar i sig inte ett förhållande mellan advokat och klient.',
+            'Nej. En skickad begäran väntar på att granskas av en advokat. Det är inte juridisk rådgivning, inte en bekräftad tid, och att skicka den skapar i sig inte ett förhållande mellan advokat och klient.',
         },
         {
           question: 'Hur beräknas kostnaderna?',
           answer:
-            'Först fastställs arbetsomfattningen, därefter bekräftas belopp och beräkningssätt med er innan arbetet börjar. Den här sidan anger inga tal och säger inte att det första samtalet är kostnadsfritt.',
+            'Först fastställs arbetets omfattning, därefter bekräftas belopp och beräkningssätt med dig innan arbetet börjar. Den här sidan anger inga belopp och säger inte att det första samtalet är kostnadsfritt.',
         },
         {
           question: 'Vad om mitt ärende är mycket brådskande?',
           answer:
-            'Ange fristen eller datumet på en officiell skrivelse i början av er sammanfattning, så att dessa data syns vid granskningen. Den här sidan har ingen nödkanal och utlovar ingen svarstid; om ert ärende inte kan vänta bör ni parallellt söka andra vägar på er ort.',
+            'Ange fristen eller datumet på en officiell skrivelse i början av din sammanfattning, så att uppgifterna syns vid granskningen. Den här sidan har ingen jourkanal och utlovar ingen svarstid; om ditt ärende inte kan vänta bör du parallellt söka andra vägar där du befinner dig.',
         },
       ],
     },
@@ -363,90 +363,90 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'INTEGRITET',
       title: 'Uppgifter som samlas in via kontaktformuläret',
       description:
-        'Vad kontaktformuläret i den här svenska delen samlar in, hur originaltexten behandlas och hur ni når oss om era uppgifter.',
+        'Vad kontaktformuläret i den här svenska delen samlar in, hur originaltexten behandlas och hur du når oss om dina uppgifter.',
       intro:
-        'Den här delen gäller endast kontaktformuläret på dessa anvisningssidor. Den beskriver behandlingen av uppgifter, inte ett tekniskt löfte.',
+        'Den här delen gäller endast kontaktformuläret på de svenska vägledningssidorna. Den beskriver hur uppgifter behandlas och är inte ett tekniskt löfte.',
       sections: [
         {
           heading: 'Vilka uppgifter som samlas in',
           paragraphs: [
-            'När ni skickar en begäran via formuläret i den här delen antecknas följande:',
+            'När du skickar en begäran via formuläret i den här delen antecknas följande:',
           ],
           items: [
-            'Det namn ni uppger',
+            'Det namn du uppger',
             'E-postadressen för svaret',
             'Sidans visningsspråk vid sändningen',
-            'Språket ni skrev på',
-            'Det rådgivningsspråk ni önskar',
-            'Originaltexten ni skrev',
-            'Ert samtycke till att skicka begäran',
+            'Språket du skrev på',
+            'Det rådgivningsspråk du önskar',
+            'Originaltexten du skrev',
+            'Ditt samtycke till att skicka begäran',
             'Ett mottagningsnummer för att återfinna begäran',
           ],
         },
         {
           heading: 'Originaltexten sparas oförändrad',
           paragraphs: [
-            'Er text sparas precis som ni skrev den och översätts inte automatiskt. Behövs en översättning för behandlingen, tas det upp särskilt med er.',
+            'Din text sparas precis som du skrev den och översätts inte automatiskt. Behövs en översättning för handläggningen tar vi upp det särskilt med dig.',
             'Eftersom originaltexten sparas, skriv i inledningen inget som ännu inte behövs, till exempel passnummer, identitetsnummer eller kontouppgifter.',
           ],
         },
         {
           heading: 'Lagringsplats och åtkomst',
           paragraphs: [
-            'Innehållet i er sändning lagras på en plats som inte är offentligt tillgänglig. Endast behöriga personer på byrån får komma åt det för att behandla begäran.',
+            'Det du skickar lagras på en plats som inte är offentligt tillgänglig. Endast behöriga personer på byrån får komma åt innehållet för att handlägga begäran.',
             'Den här sidan ger inget absolut säkerhetslöfte. Ingen överföringsväg och ingen lagringsplats är helt säker; känsliga handlingar bör därför skickas endast efter särskild anvisning från advokaten.',
           ],
         },
         {
           heading: 'Ändamålet med användningen',
           paragraphs: [
-            'De skickade uppgifterna tjänar till att granska begäran, återkoppla till er, klargöra kommunikationssättet och behandla ärendet om arbetet tas upp.',
+            'Uppgifterna du skickar används för att granska begäran, återkoppla till dig, klargöra kommunikationssättet och handlägga ärendet om arbetet tas upp.',
             'Uppgifterna används inte för marknadsföring utan ett särskilt samtycke.',
           ],
         },
         {
           heading: 'Underrättelse och mottagningsnummer',
           paragraphs: [
-            'Skickas en begäran framgångsrikt underrättar systemet byrån. Är den underrättelsen ännu inte bekräftad, stannar er text sparad och går inte förlorad.',
-            'Mottagningsnumret tjänar till att återfinna er begäran i våra handlingar. Det visas efter sparandet; ni kan ange det vid en ny kontakt.',
+            'När en begäran har skickats underrättar systemet byrån. Är underrättelsen ännu inte bekräftad ligger din text kvar sparad och går inte förlorad.',
+            'Mottagningsnumret används för att hitta din begäran i våra handlingar. Det visas när begäran har sparats, och du kan ange det vid en ny kontakt.',
           ],
         },
         {
-          heading: 'Era rättigheter och kontaktvägen',
+          heading: 'Dina rättigheter och kontaktvägen',
           paragraphs: [
-            'Ni kan begära insyn, rättelse eller radering av era uppgifter eller återkalla samtycket, via den e-postadress som anges på kontaktsidan. Finns en laglig eller processuell skyldighet att bevara, förklarar vi begränsningen.',
-            'Den här sidan anger ingen fast bevarandetid, eftersom den faktiska tiden beror på om ärendet fortsätter och på de skyldigheter som följer. Önskar ni en tidigare radering, meddela det vid kontakten.',
+            'Du kan begära insyn, rättelse eller radering av dina uppgifter eller återkalla ditt samtycke via den e-postadress som anges på kontaktsidan. Finns en skyldighet enligt lag eller processregler att bevara uppgifterna förklarar vi begränsningen.',
+            'Den här sidan anger ingen fast bevarandetid, eftersom den faktiska tiden beror på om ärendet fortsätter och på de skyldigheter som följer av det. Vill du att uppgifterna raderas tidigare, meddela det vid kontakten.',
           ],
         },
         {
           heading: 'Lagringsplats och leverantörer',
           paragraphs: [
-            'Den här webbplatsen hostas hos Vercel, och er sändning lagras i ett icke-offentligt objektlager hos den tjänsten. E-post skickas via den e-posttjänst byrån använder.',
-            'Enskilda leverantörers servrar kan stå utanför Taiwan, så att era uppgifter kan lagras och behandlas där. När lagringsändamålet är uppfyllt raderas uppgifterna utan dröjsmål; uppgifter som måste bevaras enligt tillämpliga regler stannar under den tiden. Förfrågningar om personuppgifter tas emot av wei@hoveringlaw.com.tw.',
+            'Den här webbplatsen drivs hos Vercel, och det du skickar lagras i ett icke-offentligt objektlager hos den tjänsten. E-post skickas via den e-posttjänst byrån använder.',
+            'Enskilda leverantörers servrar kan stå utanför Taiwan, så att dina uppgifter kan lagras och behandlas där. När ändamålet med lagringen är uppfyllt raderas uppgifterna utan dröjsmål; uppgifter som måste bevaras enligt tillämpliga regler ligger kvar under den tiden. Frågor om personuppgifter tas emot på wei@hoveringlaw.com.tw.',
           ],
         },
       ],
     },
     disclaimer: {
-      eyebrow: 'ANSVAR',
+      eyebrow: 'FRISKRIVNING',
       title: 'Omfattning och gränser för uppgifterna på den här sidan',
       description:
         'Uppgifternas allmänna karaktär, det rättsliga tillämpningsområdet och förutsättningarna för ett förhållande mellan advokat och klient.',
       intro:
-        'Den här delen klargör vad dessa svenska anvisningssidor kan göra för er och vad de inte kan.',
+        'Den här delen klargör vad de svenska vägledningssidorna kan göra för dig och vad de inte kan.',
       sections: [
         {
           heading: 'Endast allmänna uppgifter',
           paragraphs: [
-            'Innehållet på dessa sidor är skrivet som allmän information. Det är inte juridisk rådgivning för ert ärende och ersätter inte granskningen av era egna handlingar.',
-            'Utgången av ett ärende beror på fakta, tillämpliga regler och tidpunkten; två till synes lika lägen kan sluta olika.',
+            'Innehållet på de här sidorna är skrivet som allmän information. Det är inte juridisk rådgivning för ditt ärende och ersätter inte en genomgång av dina egna handlingar.',
+            'Utgången av ett ärende beror på fakta, tillämpliga regler och tidpunkten; två till synes lika fall kan få olika utgång.',
           ],
         },
         {
           heading: 'Rättsligt tillämpningsområde',
           paragraphs: [
             'Byrån verkar enligt Taiwans rätt, och den här sidan talar endast om arbete inom den ramen.',
-            'Innehållet är inte rådgivning enligt rätten i en annan rättsordning än Taiwan, inbegripet rätten på er bostadsort. Rör en del av ert ärende en annan rättsordning, klargör vi med er vilken kvalificerad fackperson som behövs för den delen.',
+            'Innehållet är inte rådgivning enligt rätten i någon annan rättsordning än Taiwans, inbegripet rätten på din hemort. Rör en del av ditt ärende en annan rättsordning reder vi tillsammans med dig ut vilken kvalificerad fackperson som behövs för den delen.',
           ],
         },
         {
@@ -469,29 +469,29 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'ARTIKLAR',
       title: 'Artiklar om Taiwans rätt',
       description:
-        'Artiklar på svenska om vanliga frågor i Taiwans rätt. Innehållet är allmän information vid publiceringstidpunkten, inte juridisk rådgivning för ert ärende.',
+        'Artiklar på svenska om vanliga frågor i Taiwans rätt. Innehållet är allmän information vid publiceringstidpunkten, inte juridisk rådgivning för ditt ärende.',
       intro:
         'Byrån publicerar artiklar om vanliga frågor i Taiwans rätt. Artiklar som finns på svenska står på den här sidan; därtill finns fyra länkar som var och en öppnar artikellistan för ett originalspråk.',
       sections: [
         {
           heading: 'Fyra listor efter språk',
           paragraphs: [
-            'Den här delen innehåller fyra länkar: artikellistan på koreanska, på kinesiska, på engelska och på japanska. Varje länk anger listans språk, så att ni i förväg vet på vilket språk innehållet öppnas.',
+            'Den här delen innehåller fyra länkar: artikellistan på koreanska, på kinesiska, på engelska och på japanska. Varje länk anger listans språk, så att du i förväg vet på vilket språk innehållet öppnas.',
             'Dessa fyra listor är listor efter artiklarnas originalspråk, inte översättningslistor. Artiklar som finns på svenska står särskilt på den här sidan.',
           ],
         },
         {
           heading: 'Vart länkarna leder',
           paragraphs: [
-            'När ni väljer en av de fyra länkarna öppnas artikellistan för det språket. Ur listan väljer ni själva texten; hela innehållet visas på artikelns originalspråk.',
+            'När du väljer en av de fyra länkarna öppnas artikellistan för det språket. Ur listan väljer du själv texten; hela innehållet visas på artikelns originalspråk.',
             'Den här sidan sammanfattar inte artiklarnas innehåll och utlovar inte att ett ämne finns på alla fyra språken. Varje lista innehåller endast texter som är publicerade på det språket.',
           ],
         },
         {
           heading: 'Hur långt en artikel kan tjäna som orientering',
           paragraphs: [
-            'Artiklar är allmänna uppgifter vid publiceringstidpunkten. Regler och deras tillämpning kan ändras, och en artikel innehåller inte alla omständigheter i ert ärende.',
-            'Stöd därför ingen handling i ett verkligt ärende enbart på en artikel. Använd den för överblick och diskutera era handlingar särskilt med en advokat; den här sidan är inte rådgivningssteget.',
+            'Artiklar är allmän information vid publiceringstidpunkten. Regler och deras tillämpning kan ändras, och en artikel täcker inte alla omständigheter i ditt ärende.',
+            'Grunda därför inte ett beslut i ett verkligt ärende enbart på en artikel. Använd den för överblick och gå igenom dina handlingar särskilt med en advokat; den här sidan är inte rådgivningssteget.',
           ],
         },
       ],

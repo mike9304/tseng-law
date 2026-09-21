@@ -1140,52 +1140,52 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
   },
   sv: {
     guidanceNotice:
-      'Denna sida är skriven på svenska som allmän orientering, inte som juridisk rådgivning för ert ärende.',
+      'Den här sidan är skriven på svenska som allmän vägledning, inte som juridisk rådgivning för ditt ärende.',
     consultationNotice:
-      'Rådgivningen sker på fyra språk: engelska, kinesiska (中文), japanska och koreanska.',
+      'Rådgivningen sker endast på fyra språk: engelska, kinesiska (中文), japanska och koreanska.',
     methodConfirmationNotice:
-      'Om ni inte kan använda något av de fyra språken, välj «Kommunikationsvägen måste bekräftas». Vi svarar för att undersöka en användbar kommunikationsväg, om en sådan väg finns; en tjänst på ett annat språk säkerställs inte och en svarstid lovas inte.',
+      'Om du inte kan använda något av de fyra språken, välj ”Kommunikationsvägen måste bekräftas”. Vi hör av oss för att undersöka om det finns en användbar kommunikationsväg; rådgivning på ett annat språk utlovas inte och ingen svarstid lovas.',
     preparationNotice:
-      'Ni får skriva sammanfattningen på ert eget språk. Originaltexten sparas som ni har skrivit den och översätts inte automatiskt.',
+      'Du får skriva sammanfattningen på ditt eget språk. Originaltexten sparas som du har skrivit den och översätts inte automatiskt.',
     heading: 'Skicka en begäran om rådgivning',
     intro:
-      'Beskriv ert ärende kort. En advokat granskar innehållet innan nästa steg diskuteras.',
+      'Beskriv ditt ärende kort. En advokat granskar innehållet innan nästa steg diskuteras.',
     submitLabel: 'Skicka begäran',
     submittingLabel: 'Skickas…',
     successMessage:
-      'Vi har tagit emot er begäran; den väntar på granskning. Det betyder inte att rådgivningen har ägt rum eller att en tid är bekräftad.',
+      'Vi har tagit emot din begäran; den väntar på granskning. Det betyder inte att rådgivningen har ägt rum eller att en tid är bekräftad.',
     savedNotificationPendingMessage:
-      'Er begäran är sparad, men underrättelsen till byrån är ännu inte bekräftad. Det ni har skrivit går inte förlorat. Om ni inte får svar kan ni också skriva till e-postadressen på kontaktsidan.',
+      'Din begäran är sparad, men underrättelsen till byrån är ännu inte bekräftad. Det du har skrivit går inte förlorat. Om du inte får svar kan du också skriva till e-postadressen på kontaktsidan.',
     receiptIdLabel: 'Mottagningsnummer',
     failureMessage:
-      'Er begäran kunde inte skickas. Försök igen eller skriv till e-postadressen på kontaktsidan.',
-    originalLanguageLabel: 'Språk ni skriver på',
+      'Din begäran kunde inte skickas. Försök igen eller skriv till e-postadressen på kontaktsidan.',
+    originalLanguageLabel: 'Språk du skriver på',
     originalLanguagePlaceholder:
       'Till exempel svenska, engelska, kinesiska eller ett annat språk',
-    preferredConsultationLanguageLabel: 'Språk ni önskar för rådgivningen',
-    originalTextLabel: 'Kort redogörelse för ärendet (på ert språk)',
+    preferredConsultationLanguageLabel: 'Språk du önskar för rådgivningen',
+    originalTextLabel: 'Kort redogörelse för ärendet (på ditt språk)',
     originalTextPlaceholder:
-      'Ange vad som har hänt, vilket stöd ni behöver och fristen, om det finns en. Ange inte passnummer, identitetsnummer eller kontouppgifter.',
+      'Ange vad som har hänt, vilken hjälp du behöver och fristen, om det finns någon. Ange inte passnummer, identitetsnummer eller kontouppgifter.',
     nameLabel: 'Namn',
     emailLabel: 'E-post',
     consentLabel:
-      'Jag har läst integritetssidan och samtycker till att denna begäran skickas.',
+      'Jag har läst integritetssidan och samtycker till att begäran skickas.',
     privacyLinkLabel: 'Integritet',
     requiredMessage: 'Detta fält är obligatoriskt.',
     invalidEmailMessage: 'Ange en giltig e-postadress.',
     tooLongMessage: 'Texten är för lång. Korta den och skicka igen.',
     sourceLanguageNotice:
-      'Denna artikel är publicerad endast på {language}; länken öppnar originalsidan.',
+      'Den här artikeln är publicerad endast på {language}; länken öppnar originalsidan.',
     unavailableTranslationNotice:
-      'Denna punkt är ännu inte tillgänglig på sidans språk. En länk med originalspråket öppnar originaltexten.',
-    unavailableLanguageNotice: 'Denna sida erbjuds inte på {language}.',
+      'Den här punkten är ännu inte tillgänglig på sidans språk. En länk med originalspråket öppnar originaltexten.',
+    unavailableLanguageNotice: 'Den här sidan erbjuds inte på {language}.',
     languageOptions: {
       en: 'Engelska (English)',
       'zh-hant': 'Kinesiska (中文)',
       ja: 'Japanska (日本語)',
       ko: 'Koreanska (한국어)',
       'needs-method-confirmation':
-        'Inget av de fyra språken är användbart — kommunikationsvägen måste bekräftas',
+        'Jag behärskar inte något av de fyra språken — kommunikationsvägen måste bekräftas',
     },
   },
   da: {

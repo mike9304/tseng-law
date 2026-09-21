@@ -1,0 +1,324 @@
+WO-F-sv — Swedish (sv) native-quality fix lane
+worker: Claude Opus 5 (1M) · date: 2026-09-21
+workspace: /Users/son7/Projects/tseng-law-fix-f-20260921 (no git add/commit/push performed)
+scope touched: src/content/columns-sv/001–018, src/data/international-guidance-nordic.ts (sv block only),
+  src/data/international-guidance-team.ts (sv blocks only), src/data/international-guidance-answers.ts (sv only),
+  src/data/international-inquiry-copy.ts (sv only), src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.sv only).
+No test file needed editing: no test pinned a Swedish string that changed (full lib+data suite green, 2770 tests).
+
+================================================================================
+1. ROWS APPLIED
+================================================================================
+Part a (guidance pack + columns 001–009)
+ a#1  applied — inquiry consultationNotice + contact items now read "Rådgivningen sker endast på …".
+ a#2  applied — "Vi svarar för att pröva …" → "Vi hör av oss för att undersöka om det finns en användbar
+      kommunikationsväg …" (guidance contact §1, FAQ q3, inquiry methodConfirmationNotice). Kept the token
+      "användbar" because guidance-disclosure-parity pins sv feasible-method-only as /farbar|användbar/.
+ a#3  applied — "två till synes lika lägen" → "två till synes lika fall"; "personens läge" → "personens
+      situation" (guidance services ×2, disclaimer).
+ a#4  applied — "inte att likställa med institut i andra stater" → "inte detsamma som avgångsvederlag eller
+      liknande ersättningar i andra länders rätt".
+ a#5  no-op — guidanceTeamCopy.sv.label is already 'VÅRT TEAM' (R5 done upstream). Verified.
+ a#6  no-op — guidanceOfficeCopy.sv.label is already 'KONTOR'. Verified.
+ a#7  applied — 'Fullständig profil (English)' → '(på engelska)'.
+ a#8  applied (R2b form) — 001 §1 and §5 and 004 §2/§6 keep every figure and date and now carry the
+      country-specific framing sentence ("avtalet gäller förhållanden med anknytning till Korea … måste prövas
+      särskilt"). No digits added or removed. The reviewer's suggested rewrite (explicit "För svenska
+      mottagare … 21 %") was not used verbatim — it would assert Swedish-resident tax treatment; the neutral
+      R2b wording is used instead.
+ a#9  skipped per ACCEPTED-sv (R1 already remapped; the sv columns contain no /ko/ links — verified: 0 hits).
+ a#10 skipped per ACCEPTED-sv (related-link labels already relabelled; no "advokat som kan koreanska" string
+      remains in columns-sv — verified: 0 hits).
+ a#11 partly skipped — see §4 "Not applied".
+ a#12 applied — 005 Q1 heading generalised to "överförs från utlandet …(exemplet nedan gäller koreanska regler
+      och koreansk bankpraxis)"; "rådfråga er huvudbank i Korea" → "fråga din bank i det land pengarna skickas
+      från"; Q2 "från ett bankkonto i Korea" → "från ett bankkonto utomlands".
+ a#13 applied — 005 Q5 "personer med koreansk nationalitet" → "utländska medborgare".
+ a#14 applied — 004 "Även när ett koreanskt moderbolag …" → "Även när ett utländskt moderbolag etablerar sig i
+      Taiwan …"; the whole Korea-tax paragraph and the checklist bullet generalised to "moderbolagets hemland".
+ a#15 applied (R2c) — 008 faq/lead and 009 now read "Till skillnad från vad som gäller i en del andra länder,
+      till exempel Korea, …"; 008 "I Korea måste företaget …" → "I en del länder, till exempel Korea, …".
+ a#16 applied (R2d, neutral) — 007 "som, liksom Korea och Taiwan," → "som är knuten till 2 eller fler stater
+      eller territorier — Taiwan och ett annat land —". Sweden deliberately NOT named (the column checker's
+      nationality rule fails on a nationality in the target that the source block does not have).
+ a#17 applied — 003 Q20 "verkar för att den högsta möjliga ersättningen erhålls" → "går igenom varje post i
+      kravet noggrant och förklarar vad som kan yrkas utifrån den bevisning som finns".
+ a#18 applied (R8) — 002 "häkte" ×2 → "kortare frihetsberövande (拘役)".
+ a#19 applied — "Ni" → "du" everywhere (see systemic sweeps).
+ a#20 applied — "anvisningar" as the name of the Swedish site → "vägledning" (footerNotice, home eyebrow/title,
+      404, contact items, FAQ q3, privacy, disclaimer, llms consultationNotice).
+ a#21 applied — "Arbetsgrupper"/"arbetsgrupperna" → "Verksamhetsområden"/"områden" (mega, home §2, services
+      description/intro, FAQ q0, answers.sv.services/faq).
+ a#22 applied — "följer klienter" → "biträder klienter" (home intro, about §1 verb reworded, about §2 attorney
+      bio). Firm-practice fact "klienter från Korea och Japan" kept.
+ a#23 applied — "avtals tvister" → "avtalstvister"; "skadestånd från otillåten handling" → "utomobligatoriskt
+      skadestånd". (No 侵權行為 gloss added — guidance-disclosure-parity requires the same CJK-term set across
+      locales and an added gloss broke that test; reverted.)
+ a#24 applied — guidance services §2 and 007 (frontmatter + §8) → "vårdnad och föräldraansvar för minderåriga/
+      omyndigt barn (未成年子女權利義務之行使或負擔)".
+ a#25 applied — "Vi följer i förundersökning …" → "Vi biträder misstänkta, tilltalade och målsägande under
+      förundersökning och i domstol …".
+ a#26 applied — "farbar kommunikationsväg" → "användbar kommunikationsväg" (see a#2 note).
+ a#27 applied — "prestation" as Leistung → "rådgivning"/"ersättning"/"tjänst" (guidance contact ×3, FAQ q3,
+      pricing; 003 Q15 "Prestationsskalan/prestationen" → "Ersättningsnivåerna/ersättningen"; 016
+      "Prestationer där förmånstagare angetts" → "Utbetalningar …"; 014 "förskottsprestation" →
+      "förskottsbetalning" ×10).
+ a#28 applied — 昊 (»vid himmel«) → 昊 (”den vida himlen”).
+ a#29 applied — "anknutna revision" → "anknuten revisionsbyrå" (lawyers.description, teamCopy.description,
+      partnerTitle, answers.sv.lawyers).
+ a#30 applied — language option label → "Jag behärskar inte något av de fyra språken — kommunikationsvägen
+      måste bekräftas".
+ a#31 applied — menuLabel "Sidförteckning" → "Meny".
+ a#32 applied with a change — nav.disclaimer "Ansvar" → "Friskrivning" (NOT "Ansvarsfriskrivning": the nav
+      label is capped at 14 characters by guidance-hi-sv-da-nb-fi-content.test.ts; "Ansvarsfriskrivning" is 19).
+      pages.disclaimer.eyebrow "ANSVAR" → "FRISKRIVNING".
+ a#33 applied — team bio "en dom i första instans på TWD 1.57M" → "fick i första instans en dom på
+      1,57 miljoner TWD". Fact kept (ACCEPTED-sv).
+ a#34 applied — "hostas hos Vercel" → "drivs hos Vercel".
+ a#35 applied — 003 lead "reklamationsfrist" → "anmälnings- och preskriptionsfrister".
+ a#36 applied — "den polisingripande som krävs" → "det ingripande från polisen som krävs".
+ a#37 applied — "inte en lagstadgat obligatorisk metod" → "inte en lagstadgad, obligatorisk metod".
+ a#38 applied in a checker-safe form — the ISO dates keep their digits but lose the ungrammatical "den":
+      "Ersättningsnivåerna … som ändrades 2026-05-29 tillämpas på olyckor som inträffat från och med
+      2026-07-01." Reason: Swedish month-name dates would drop a digit the checker requires — "maj" (and
+      "mars", "augusti") are absent from DATE_MONTH_NAMES in scripts/check-column-translation.mjs, so
+      "den 29 maj 2026" loses the month number 5 → numbers FAIL. Plain YYYY-MM-DD without "den" is standard
+      Swedish (SS-ISO 8601) and parses.
+ a#39 applied — "Q&A" removed from 003 title + H1 ("Frågor och svar om …"), 005 and 013 ("Följande frågor och
+      svar …").
+ a#40 applied (R3) — 003 Q17/Q18 sentence-length claims rewritten as "I publicerad praxis förekommer … något
+      typiskt eller garanterat utfall finns inte" / "… utfallet beror på omständigheterna i det enskilda
+      fallet"; the villkorlig-dom sentence now says "det är inget som kan utlovas". Digits 3/4/6 kept.
+ a#41 applied without a new link — "lämna dem i kommentarerna" → "Har du fler frågor är du välkommen att
+      kontakta byrån." (a markdown link would change the file's href count, which the checker compares).
+ a#42 applied — 003 "år 109, ärende 上易字 nummer 644/477" → "år 109 (2020), mål 上易字 nr …"; 007 "domen nummer 4
+      för år 112" → "domen nr 4 för år 112 (2023)" (4 places); 010 "år 109" → "år 109 (2020)".
+ a#43 applied — "3:e man/3:e part" → "tredje man/tredje part" (16 instances, all files).
+ a#44 applied — 004 "Överföringen till huvudkontoret, av …, av vinsten efter skatt är inte utdelning" →
+      "När ett utländskt bolags taiwanesiska filial för över vinsten efter skatt till huvudkontoret är det
+      inte utdelning, så någon ytterligare källskatt tas i princip inte ut." (frontmatter FAQ + body).
+ a#45 applied — "en taiwanes" → "en taiwanesisk medborgare"; "delta som aktieägare" → "vara delägare".
+ a#46 applied — "massagegenomfarter" → "massagestråk".
+ a#47 applied — "de stora domarna (大法官)" → "de stora domarna vid Justitieyuanen (大法官)".
+ a#48 applied — compound linking -o-: skilsmässoförfarande/-ärende/-talan/-registrering/-väg/-grund/-avtal/
+      -dom/-yrkande (16 instances in 007, incl. title and H1).
+ a#49 applied — "nödunderhåll (贍養費) till den felfria maken eller makan" → "underhåll efter skilsmässa (贍養費)
+      till den make eller maka som är utan skuld" (frontmatter + §7 + §7 explanatory paragraph).
+ a#50 applied — 008 title + H1 → "Avgångsvederlag i Taiwan: när det utgår och när det inte gör det" (double
+      "??" and clickbait removed).
+ a#51 applied — "3. Force majeure kräver avbrott …" → "3. En extraordinär händelse (不可抗力) kräver avbrott …".
+ a#52 applied — 009 "kan avgångsvederlag (資遣費) inte tas ut" → "kan den anställda inte få avgångsvederlag
+      (資遣費)".
+ a#53 NOT applied — see §4.
+ a#54 applied — 008 "Hej, jag är Wei Tseng …" → "Jag heter Wei Tseng (曾雋崴) och är advokat i Taiwan."; the
+      surrounding blog register in 003 Q16–Q20, 006, 008, 013 toned down (no block added or removed).
+ a#55 applied — "Stöd därför ingen handling … på en artikel" → "Grunda därför inte ett beslut i ett verkligt
+      ärende enbart på en artikel".
+
+Part b (columns 010–018)
+ b#1  applied — "facklig teknisk utbildning" → "yrkesinriktad teknisk utbildning" and all derivatives
+      (fackkurs → yrkeskurs; fackligt/fackliga → yrkesmässigt/yrkesinriktade): 17 instances in 014.
+ b#2  applied — "kontraktssumma" → "signeringsbonus" (6); "kvarstannandebonus" → "retentionsbonus" (6).
+ b#3  applied — "ersättningsmöjligheten"/"ersättningssvårigheten" → "möjligheten/svårigheten att ersätta
+      arbetstagaren" (3).
+ b#4  applied per ACCEPTED — 018 "utan att en separat revisor behövs" → "utan att en särskild bolagsövervakare
+      (監察人) behöver utses"; "avstå från revisor" → "avstå från bolagsövervakare (監察人)"; 會計師 kept as
+      "auktoriserad revisor (會計師)".
+ b#5  applied per ACCEPTED — "arbetsskadeförsäkringen" → "den taiwanesiska arbetstagarförsäkringen (勞工保險)";
+      009 "arbetsförsäkring (勞保)" → "den taiwanesiska arbetstagarförsäkringen (勞保)".
+ b#6  applied — "en administrativ måltid för prövning" → "en administrativ handläggningstid (riktvärde) för
+      prövning".
+ b#7  applied — "Prestationer där förmånstagare angetts separat" → "Utbetalningar där …".
+ b#8  applied — "Ett fall på ett verksamhetsgolv … facktjänst" → "Fall i en affärslokal, hälsoskada av
+      livsmedel och skada vid en yrkesmässig tjänst kan också väcka frågor om säkerhetsplikt …".
+ b#9  NOT applied — see §4.
+ b#10 applied (R3/R7) — 013 "lämna en kommentar eller ta kontakt" → "Den här texten är endast allmän
+      vägledning. Rådgivning med advokat sker på engelska, kinesiska (中文), japanska eller koreanska; se
+      kontaktsidan." (no new markdown link, see a#41 note).
+ b#11 applied — 018 "Vid det första samtalet kan ni sammanställa …" → "Inför en första kontakt (rådgivning
+      sker endast på engelska, kinesiska, japanska eller koreanska) kan du sammanställa …".
+ b#12 applied — "Om ni har fått en gymskada …" → "Om du har skadats på gymmet är det viktigt att först få den
+      vård som behövs" (plus the whole du-sweep).
+ b#13 NOT applied — see §4.
+ b#14 applied — "1 instans"/"2 instans"/"1-instansdomen" → "första instans"/"andra instans"/"domen i första
+      instans" (15 instances in 010, incl. title, H1, image alts and link labels).
+ b#15 applied — "3:e man" → "tredje man" (011, 014, 016, 017; part of the 16-instance sweep in a#43).
+ b#16 applied — 010 "skadestånd för otillåten gärning" → "utomobligatoriskt skadestånd (侵權行為)".
+ b#17 applied — "Vilken är den tränandes hållning?" → "Vilken var den tränandes inställning?" (alt + label).
+ b#18 applied — "Domsläsning:" → "Domskommentar:" (alt + label).
+ b#19 applied — "konsumentmål nummer 7 för år 109" → "konsumentmål nr 7 för år 109 (2020)".
+ b#20 applied — "samma lucka och förfarande" → "samma ansökningsväg och samma förfarande"; "skilda luckor" →
+      "skilda ansökningsvägar".
+ b#21 applied — "stämma avtalsrollen mot" → "stämma av avtalsrollen mot" (frontmatter + §4).
+ b#22 applied — "ordinär/ordinärt" → "vanlig/vanligt" (017 ×3, 018 ×3).
+ b#23 applied — 013 Q&A + 😊 removed.
+ b#24 applied — "**Råd**：" → "**Råd:**" (fullwidth colon gone; no fullwidth punctuation remains outside
+      Chinese glosses — verified 0 hits).
+ b#25 applied — "Ex.)" ×2 → "T.ex.".
+ b#26 applied — "**Q.**" → "**Fråga.**"; all «…» / »…« replaced by Swedish ”…” (10 in the guidance pack,
+      1 in inquiry copy, 17 in columns 005/008/009/013/015/016/017/018 — 0 guillemets remain).
+ b#27 applied — "Uppmärksamma därför denna punkt." → "Var därför uppmärksam på den punkten."
+ b#28 applied (R7b) — orphaned FAQ answers at section openings rewritten self-standing: 011 §1 ("Det är inte
+      alltid nödvändigt att bilda ett dotterbolag eller en filial i Taiwan."), 014 §1 ("Avtalet är inte
+      automatiskt ogiltigt."), 016 §3 ("Det är inte samma rätt som arvslotten.") and §7 ("Den efterlevande
+      föräldern får inte fritt använda den förmögenheten."), 017 §1/§3/§4. Heading and block counts unchanged;
+      the frontmatter FAQ answers keep their "Nej."/"Nej, inte alltid." since they follow a question.
+ b#29 applied — "ersätter svårt underrättelsen vid avtalstillfället" → "kan knappast ersätta den underrättelse
+      som skulle ha lämnats när avtalet ingicks".
+ b#30 applied — "det kräva beloppet" → "det krävda beloppet" (3).
+ b#31 applied — "förskottsprestation(er)" → "förskottsbetalning(ar)" (10).
+ b#32 applied — "Den förra ses med centrum på …" → "Den förra bedöms utifrån faktisk yrkesinriktad teknisk
+      utbildning och vem som burit kostnaden".
+ b#33 applied — see b#28 (011).
+ b#34 applied — "på TFDA:s plattform … (衛生福利部食品藥物管理署)" → "på TFDA:s (衛生福利部食品藥物管理署) plattform …".
+ b#35 applied — 罰鍰 "administrativ bötesavgift/administrativ böter" → "sanktionsavgift" (011 ×5, 015, 017 ×2,
+      007 ×3, 006).
+ b#36 applied in part — "artikel 7, 1 stycket, nummer 7" → "artikel 7, 1 stycket, punkt 7". The reviewer's
+      "artikel 7 första stycket 7" was not used: spelling out "första" deletes the digit 1 that the Korean
+      source (제1항) forces, which the checker scores as a missing number.
+ b#37 applied — "utöva rättigheter och skyldigheter mot det omyndiga barnet" → "utöva föräldraansvaret (親權)
+      för det omyndiga barnet" (frontmatter + §5); "mot" → "för" elsewhere in 007/016.
+ b#38 applied — "representationsarv (代位繼承)" → "istadarätt (代位繼承)" (4).
+ b#39 applied with a change — "rang 1 i lagstadgat arv" → "tillhör första arvsklassen (rang 1) i lagstadgat
+      arv". Pure "första arvsklassen" made the file FAIL numbers (Korean 제1순위 requires the digit 1, twice);
+      the parenthesis keeps the digit and the natural term. Verified: 18/18 PASS after the change.
+ b#40 applied — "att greppa skulder" → "att klarlägga skulder".
+ b#41 applied — "begäran om nödreservlager" → "begäran om att hålla ett reservdelslager i Taiwan för akuta
+      behov".
+ b#42 applied — "den mest lämpliga enheten väljas" → "den enhet som passar de faktiska förhållandena väljas"
+      (frontmatter + body).
+ b#43 applied (rewrite, not deletion — block count must hold) — "Ovanstående är ett förslag till
+      avtalsutformning." → "Ovanstående beskriver bara förfarandet, inte hur ett avtal ska utformas."
+ b#44 applied — "Delägare som inte utför näringen" → "Delägare som inte sköter den löpande förvaltningen".
+ b#45 applied — "連江・馬祖" → "連江、馬祖" (2).
+ b#46 applied — "men prövningen är inte överdrivet sträng" → "men prövningen tar sikte på om
+      investeringsplanen är verklig, inte på att utbildningen ska matcha branschen exakt".
+ b#47 applied — "Distriktsdomstolen i Taichung förordnade …" → "… förpliktade … svaranden att betala …".
+ b#48 applied — "ska syftet tydligt underrättas arbetstagaren" → "ska arbetstagaren tydligt underrättas om
+      syftet" (frontmatter + §6).
+
+================================================================================
+2. SYSTEMIC SWEEPS (pattern → instances changed)
+================================================================================
+ S1  Ni/ni/er/ert/era → du/dig/din/ditt/dina (or imperative in checklists, which is what a Swedish legal
+     checklist actually uses)                                            → 101 in columns + 74 in the
+                                                                            guidance pack/inquiry copy.
+                                                                            Residual count now 0 in both.
+ S2  German "je nach" calque: "varierar/skiljer sig/bedöms/prövas/beräknas/bekräftas/fastställas efter X"
+     → "beroende på / utifrån X"                                         → 26 (global sweep) + 31 handled
+                                                                            per file (e.g. "prövas efter
+                                                                            bolagsformen", "bedöms efter
+                                                                            olyckans omständigheter").
+ S3  Guillemets »…« / «…» → Swedish ”…”                                  → 28 (10 guidance, 1 inquiry copy,
+                                                                            17 columns). 0 remain.
+ S4  Digit ordinals → words: 3:e man/part → tredje man/part (16);
+     1 instans/2 instans/1-instansdomen (15); 1:a/2:a/2:e instansen (3)  → 34. Only "var 2:e månad" (001)
+                                                                            remains — see §4.
+ S5  Leistung-calque "prestation(er)" → rådgivning/ersättning/utbetalning/förskottsbetalning/tjänst → 21.
+ S6  罰鍰 "administrativ bötesavgift / administrativ böter" → "sanktionsavgift"  → 12.
+ S7  侵權行為 "otillåten handling/gärning" → "utomobligatoriskt skadestånd"   → 6 (004, 007, 010, guidance).
+ S8  "anvisningar" (Hinweise-calque) as the name of the Swedish site → "vägledning"/"information" → 14.
+ S9  "Arbetsgrupper/arbetsgrupp" (Tätigkeitsgruppen) → "verksamhetsområden/område" → 11.
+ S10 "följa klienter" (begleiten) → "biträda/hjälpa klienter"            → 4.
+ S11 未成年子女權利義務之行使或負擔 word-for-word → "vårdnad och föräldraansvar (för) …"; "mot barnet" → "för barnet"
+                                                                          → 7 (007 ×5, 016 ×2).
+ S12 skilsmässa- compounds missing the linking -o-                       → 16 (007).
+ S13 經濟部投資審議司 — one Swedish name everywhere: "avdelningen för investeringsprövning vid
+     ekonomiministeriet (經濟部投資審議司)"                                    → 5 mentions unified across 001,
+                                                                            011, 013, 017, 018.
+ S14 工作規則 → "arbetsreglerna" (was "arbetsordningen")                     → 4 (008 ×3, guidance ×1).
+ S15 "Denna artikel/Denna text" (stiff) → "Den här artikeln/texten" where it opens or closes a column → 13.
+ S16 ROC-year glosses "år 109 → år 109 (2020)", "år 112 → år 112 (2023)"  → 8 (003 ×2, 007 ×4, 010 ×2).
+     These add a number to the target; the checker scores that as WARN, never FAIL. Verified 18/18 PASS.
+ S17 Fullwidth CJK punctuation outside Chinese glosses (：, ・)            → 3 (013, 017 ×2). 0 remain.
+
+Gender (R4): Wei Tseng's Swedish copy carries no masculine marking anywhere; the team bio keeps "Hon
+företrädde …". Swedish does not inflect verbs/participles for gender, so no further change was required.
+The male manager in 008 ("han gav B ett A4-ark") and the male client in 010 were left untouched, as instructed.
+Hard rules verified: consultation languages still EN/中文/JA/KO only and now marked "endast"; no interpreter,
+reply-time, free-consultation, 24/7, result or superlative promise was introduced (the sv forbidden-token scan
+in guidance-hi-sv-da-nb-fi-content.test.ts passes); Chinese glosses intact; frontmatter keys, url, lastmod,
+featured_image, image paths, external hrefs, block/heading/image counts unchanged; markers 0; no Hangul
+outside url values.
+
+================================================================================
+3. §VERIFY OUTPUT (verbatim)
+================================================================================
+$ node scripts/check-column-translation.mjs --dir src/content/columns-sv --lang sv 2>&1 | tail -8
+forbidden      PASS
+hanzi          PASS   han=77
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-sv src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      24
+
+(24 = 23 modified files + the untracked WO-F-sv.txt that was handed to this lane. This log file is created
+inside docs/i18n/global-plan/evidence/ and will make it 25 once written.)
+
+================================================================================
+4. NOT APPLIED — with reasons (for the supervisor)
+================================================================================
+ (i)  a#53 and b#13 — Swedish space-grouped thousands ("500 000 TWD", "25 000 000 TWD", "1.579.589" →
+      "1 579 589"). BLOCKED BY THE CHECKER, not by judgement. scripts/check-column-translation.mjs sets
+      NUMBER_THOUSAND_STYLE.sv = 'dot'; any space separator (U+0020, U+00A0, U+202F, U+2009, U+2007 — all
+      tested) splits "500 000" into the tokens 500 and 0, so the source value 500000 goes missing and the
+      file FAILs the numbers rule. The German-style "500.000" is therefore kept throughout 001–004, 006, 007,
+      010, 011, 015, 017, 018. FIX REQUIRED UPSTREAM: add 'sv' (and da/nb/fi) to a space-thousands style in
+      NUMBER_THOUSAND_STYLE, then this row can be applied mechanically. The decimal-comma half of the row WAS
+      applied where the checker does not govern the text (guidance team bio: "1,57 miljoner TWD").
+ (ii) a#38's month-name half — "den 29 maj 2026" is the natural Swedish form but DATE_MONTH_NAMES in the
+      checker lacks the Swedish months maj, mars and augusti, so a month-name date silently drops the month
+      number and FAILs. Applied the checker-safe variant (plain 2026-05-29 without "den"), which is standard
+      Swedish. FIX REQUIRED UPSTREAM: add maj: 5, mars: 3, augusti: 8 to DATE_MONTH_NAMES.
+ (iii) a#11 (005 body link) — the body still points at
+      https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-… (percent-
+      encoded Hangul) instead of the English slug used in 001–004/006–007. ACCEPTED-sv says rows about the
+      Hangul/percent-encoded wei-wei-lawyer.com body links are already fixed mechanically (R1) and are to be
+      skipped — but in columns-sv/005 the old link is still live. Flagging it: it is a one-line href change
+      (…/post/taiwan-company-establishment-advanced-1) that this lane did not make because ACCEPTED-sv told
+      it to skip and because the checker byte-compares hrefs.
+ (iv) b#9 (011 Invest Taiwan link lang=jpn) — same situation. ACCEPTED-sv says "fixed mechanically — skip",
+      but columns-sv/011 still carries
+      https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01, i.e. a Swedish reader is
+      sent to the Japanese UI, while 004 already uses lang=eng. Not changed (skip instruction + href parity);
+      flagging for the supervisor.
+ (v)  a#8's suggested wording — the reviewer wants the Swedish text to state the rate that applies to Swedish
+      recipients ("För svenska mottagare gäller i stället intern taiwanesisk källskatt (i regel 21 %)"). Not
+      applied as written: that is an affirmative tax statement about the reader's own jurisdiction, which
+      RULEBOOK R2b and ACCEPTED-sv forbid ("Do NOT insert claims about the law of the reader's country") and
+      which would also put a nationality into a block whose Korean source has none. The R2b framing sentence
+      is used instead, and the pre-existing internal 21 % sentence is kept.
+ (vi) a#16's suggested wording — "till exempel Sverige och Taiwan". Not applied: naming Sweden in a block
+      whose source names only Korea makes the column checker's `nationality` rule FAIL (a nationality present
+      in the target and absent from the aligned source block is a hard failure unless an adapt-log covers it).
+      The neutral R2d formulation was used.
+ (vii) a#32's suggested wording — "Ansvarsfriskrivning" as the nav label. Not applied: 19 characters, and
+      guidance-hi-sv-da-nb-fi-content.test.ts caps every sv nav label at 14. Used "Friskrivning" (12).
+ (viii) b#36's suggested wording — "artikel 7 första stycket 7". Not applied verbatim (deletes the digit 1
+      the source requires); used "artikel 7, 1 stycket, punkt 7".
+ (ix) b#39's suggested wording — bare "tillhör första arvsklassen". Not applied verbatim (same digit problem,
+      confirmed by an actual FAIL run); used "tillhör första arvsklassen (rang 1)".
+ (x)  a#23's optional gloss — adding (侵權行為) to the guidance services text was reverted: guidance-disclosure-
+      parity.test.ts requires the same set of Chinese-character terms per surface across all locales, and the
+      added gloss broke `services: sv annotates a different set of Chinese-character terms than vi`.
+ (xi) "var 2:e månad" (001 §5) — left as is. "varannan månad" is the natural Swedish, but it deletes the
+      digit 2 that the source carries. Same class of problem as (i)/(ii).
+
+Nothing in either review was judged simply wrong on the Swedish; the only disagreements are the six wording
+substitutions above, each of which is a checker/test constraint rather than a language call, plus a#8/a#16
+where the reviewer's suggestion conflicts with the supervisor's own rulebook.

@@ -192,7 +192,7 @@ const GUIDANCE_FILTER_CATEGORY_LABEL: Record<GuidanceLocale4, Record<ColumnCateg
   },
   'zh-hans': {
     formation: '在台湾设立公司',
-    legal: '台湾法律资讯',
+    legal: '台湾法律信息',
     case: '案例分析',
   },
   ms: {

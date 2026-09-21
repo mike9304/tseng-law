@@ -1236,9 +1236,16 @@ function buildRuLexicon() {
   // same pair as 'ein Drittel'; Russian declines the numeral, so both the
   // accusative and the bare noun are listed.
   pushPhrase(entries, 'две трети', [2, 3]);
+  pushPhrase(entries, 'двух третей', [2, 3]);
+  pushPhrase(entries, 'двумя третями', [2, 3]);
   pushPhrase(entries, 'одну треть', [1, 3]);
   pushPhrase(entries, 'одной трети', [1, 3]);
   pushPhrase(entries, 'треть', [1, 3]);
+  // Russian declines the numeral 1 by gender and case; the base builder only
+  // emits the nominative pair, so standalone forms went uncounted.
+  for (const one of ['одна', 'одну', 'одного', 'одной', 'одним', 'одном']) {
+    pushPhrase(entries, one, [1]);
+  }
   const units = ['год', 'года', 'лет', 'месяц', 'месяца', 'день', 'дня', 'дней', 'неделя', 'недели'];
   const scales = [['миллиард', 1_000_000_000], ['миллиона', 1_000_000], ['миллион', 1_000_000], ['тысяч', 1_000], ['тысяча', 1_000]];
   const atoms = [

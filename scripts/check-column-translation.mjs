@@ -2706,6 +2706,9 @@ const LANGID_SCRIPTS = [
 
 // 베트남어 고유 결합 문자(다른 라틴 로케일에 나타나면 혼입)
 const LANGID_VI_RE = /[\u01A0\u01A1\u01AF\u01B0\u0110\u0111\u1EA0-\u1EF9]/u;
+// Croatian / Serbian (Latin) / Bosnian use Đ đ too, so those locales get the set without U+0110/U+0111.
+const LANGID_VI_RE_NO_DJ = /[\u01A0\u01A1\u01AF\u01B0\u1EA0-\u1EF9]/u;
+const DJ_LOCALES = new Set(['hr', 'sr', 'bs']);
 
 export function findLangidHits(body, startLine, lang) {
   const hits = [];
@@ -2723,7 +2726,7 @@ export function findLangidHits(body, startLine, lang) {
       const m = scrubbed.match(script.re);
       if (m) hits.push({ line: startLine + i, script: script.id, label: script.label, text: line });
     }
-    if (lang !== 'vi' && LANGID_VI_RE.test(scrubbed)) {
+    if (lang !== 'vi' && (DJ_LOCALES.has(lang) ? LANGID_VI_RE_NO_DJ : LANGID_VI_RE).test(scrubbed)) {
       hits.push({ line: startLine + i, script: 'vi', label: '베트남어 고유 문자', text: line });
     }
   }

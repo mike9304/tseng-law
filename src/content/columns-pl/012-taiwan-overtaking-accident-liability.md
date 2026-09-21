@@ -21,9 +21,9 @@ Gdy pojazd z przodu jedzie wolno, wyprzedzanie (超車) może wydawać się zwyk
 
 Art. 101 zakazuje wyprzedzania na odcinkach ze znakami wskazującymi zakręt, stromy spadek lub zjazd, wąski most, tunel lub skrzyżowanie, a także na przejazdach kolejowych i na odcinkach robót.
 
-Ponadto nie można wyprzedzać w miejscach lub na odcinkach ze znakiem szkoły lub szpitala, w miejscach z innymi znakami lub oznaczeniami zakazu wyprzedzania, gdy zbliża się pojazd z przeciwka, ani gdy z przodu jadą kolejno 2 pojazdy lub więcej.
+Ponadto nie można wyprzedzać w miejscach lub na odcinkach ze znakiem szkoły lub szpitala, w miejscach z innymi znakami lub oznaczeniami zakazu wyprzedzania, gdy zbliża się pojazd z przeciwka, ani gdy z przodu jadą kolejno dwa pojazdy lub więcej.
 
-Aby wyprzedzić pojazd z przodu na tym samym pasie, kierowca pojazdu z tyłu musi najpierw krótko zasygnalizować klaksonem 2 razy albo raz mrugnąć światłami. Klaksonu i świateł nie wolno używać wielokrotnie, aby zmusić pojazd z przodu do ustąpienia.
+Aby wyprzedzić pojazd z przodu na tym samym pasie, kierowca pojazdu z tyłu musi najpierw krótko zasygnalizować klaksonem dwa razy albo raz mrugnąć światłami. Klaksonu i świateł nie wolno używać wielokrotnie, aby zmusić pojazd z przodu do ustąpienia.
 
 Pojazd z tyłu może wyprzedzić dopiero po tym, gdy pojazd z przodu zwolnił i zjechał na bok albo okazał wolę ustąpienia znakiem ręki lub prawym kierunkowskazem.
 
@@ -33,7 +33,7 @@ Ta kolejność sygnałów i ustąpienia na tym samym pasie nie oznacza, że wypr
 
 ## Zanonimizowana sprawa wypadku prowadzona przez kancelarię
 
-W zanonimizowanej sprawie prowadzonej przez tę kancelarię motocyklista A jechał drogą górską z pasażerem B. Z przodu jechały 2 samochody osobowe; pojazd nr 1, najbardziej z przodu, poruszał się wolno, więc pojazd nr 2 i motocykl też posuwały się z małą prędkością.
+W zanonimizowanej sprawie prowadzonej przez tę kancelarię motocyklista A jechał drogą górską z pasażerem B. Z przodu jechały dwa samochody osobowe; pojazd nr 1, najbardziej z przodu, poruszał się wolno, więc pojazd nr 2 i motocykl też posuwały się z małą prędkością.
 
 ![Schemat wypadku pokazujący tor wyprzedzania motocykla i 2 pojazdów z przodu na drodze górskiej](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
@@ -43,7 +43,7 @@ B doznał ciężkich obrażeń głowy i zmarł na miejscu; A stracił przytomno�
 
 Rodziny A i B uznały najpierw nagłą zmianę pasa pojazdu nr 2 za główną przyczynę zderzenia. Sprawa przeszła do procesu, a w jego toku przeprowadzono kilka ekspertyz (鑑定) wypadku.
 
-Według wyniku ekspertyzy główną odpowiedzialność za to zderzenie ponosił A. Ten wniosek był ograniczony do faktów tej sprawy. Ekspertyza uwzględniła razem to, że A chciał wyprzedzić 2 pojazdy z przodu jadące jeden za drugim, że wjechał na przeciwny pas, że jechał z prędkością prawie niepozostawiającą zapasu hamowania, że brakowało przepisanych sygnałów klaksonu i świateł, a także ruch zmiany pasa pojazdu nr 2, strukturę drogi i pasów oraz inne zebrane dowody.
+Według wyniku ekspertyzy główną odpowiedzialność za to zderzenie ponosił A. Ten wniosek był ograniczony do faktów tej sprawy. Ekspertyza uwzględniła razem to, że A chciał wyprzedzić dwa pojazdy z przodu jadące jeden za drugim, że wjechał na przeciwny pas, że jechał z prędkością prawie niepozostawiającą zapasu hamowania, że brakowało przepisanych sygnałów klaksonu i świateł, a także ruch zmiany pasa pojazdu nr 2, strukturę drogi i pasów oraz inne zebrane dowody.
 
 To, że w niektórych sprawach takie wyniki ekspertyzy następują, nie oznacza, że jedno pominięcie przepisanego sygnału zawsze ustala odpowiedzialność. Wina (過失) w wypadku przy wyprzedzaniu zależy od miejsca wypadku, układu pasów, prędkości, ruchów pojazdów, sygnałów, odstępów czasu, widoczności i innych dowodów.
 

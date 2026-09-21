@@ -203,14 +203,14 @@ describe('it/nl/pl attorney gender and language FAQ', () => {
     expect(guidanceTeamBios.nl['tseng-junwei'].intro.join(' ')).toMatch(/\bzij\b/i);
   });
 
-  it('names Wei Tseng as adwokat with feminine agreement in Polish, not adwokatka', () => {
+  it('names Wei Tseng as adwokatka with feminine agreement in Polish', () => {
     const text = allText('pl');
-    expect(text).toMatch(/[Aa]dwokat Wei Tseng/);
-    expect(text).not.toMatch(/adwokatka/i);
+    expect(text).toMatch(/[Aa]dwokatka Wei Tseng/);
+    expect(text).not.toMatch(/[Aa]dwokat Wei Tseng/);
     expect(guidanceTeamCopy.pl.qualificationSentence).toMatch(/uprawniona/);
-    expect(guidanceTeamCopy.pl.representativeTitle).toBe('Adwokat kierujący');
-    expect(guidanceTeamCopy.pl.qualificationSentence).toMatch(/adwokatem kierującym/);
-    expect(guidanceTeamCopy.pl.representativeTitle).not.toMatch(/kierująca/);
+    expect(guidanceTeamCopy.pl.representativeTitle).toBe('Adwokatka kierująca kancelarią');
+    expect(guidanceTeamCopy.pl.qualificationSentence).toMatch(/kieruje kancelarią/);
+    expect(guidanceTeamCopy.pl.representativeTitle).not.toMatch(/kierujący/);
   });
 
   it.each(['it', 'nl', 'pl'] as const)('answers the %s consultation-language FAQ in the negative', (locale) => {

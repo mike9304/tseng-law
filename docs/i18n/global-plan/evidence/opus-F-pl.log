@@ -1,0 +1,151 @@
+# WO-F-pl — Polish fix lane report (Opus 5, 2026-09-21)
+
+Workspace: /Users/son7/Projects/tseng-law-fix-c-20260921 (branch fix/native-c-20260921, no git writes)
+Scope touched: src/content/columns-pl/001–018, src/data/international-guidance-it-nl-pl.ts (pl block only),
+-team.ts (pl blocks), -offices.ts (pl blocks), -answers.ts (pl block), international-inquiry-copy.ts (pl block),
+src/lib/__tests__/guidance-it-nl-pl-content.test.ts (only the pl gender assertions, see §Tests).
+src/lib/llms-txt.ts: inspected, GUIDANCE_LLMS_NOTICES.pl needed no change.
+
+## 1. Rows applied
+
+pl-a: all 56 rows applied, except as noted below.
+  a#5 (OUR TEAM) and a#6 (OFFICES) were already fixed in the sources (guidanceTeamCopy.pl.label = 'NASZ ZESPÓŁ',
+      guidanceOfficeCopy.pl.label = 'BIURA'); the dump pl-guidance.txt is stale there. Verified, no edit needed.
+  a#4 / a#15 ("Adwokat na Tajwanie mówiąca po koreańsku") — already remapped by R1; verified absent, label reads
+      naturally, no edit needed.
+  a#56 ("Profil Adwokat Wei Tseng") — the link label no longer exists after R1; the masculine byline part of the
+      row was applied (8 bylines).
+pl-b: all 58 rows applied, except b#20 (see §4 Not applied).
+
+## 2. Systemic sweeps (pattern → instances changed)
+
+Columns (18 files):
+  **Adwokat Wei Tseng (曾雋崴)** → **Adwokatka …**                                     8
+  German guillemets « » → Polish „ ”                                                  24 + 24
+  "N. instancji" → "pierwszej/drugiej instancji" (+ "1. instancja" in 010 alts)        13 + 7 + 2
+  "osoba/osobą/osoby/osobie/osobę/osób 3." → "osoba trzecia" (declined)                17
+  "państwa 3." → "państwa trzeciego"                                                    1
+  經濟部投資審議司: 4 competing names → one name "Departament Przeglądu Inwestycji
+      Ministerstwa Gospodarki" (001, 011 ×2, 013 ×3, 017 ×2, 018 ×3)                   11
+  營業稅 "podatek od sprzedaży" → "podatek od wartości dodanej" (001, 002, 004)          9
+  lowercase formal-you "państwo" → "Państwo" (002 title+H1, 001, 003 ×3, 004 ×2,
+      005, 006 ×3) — all remaining lowercase "państw*" verified as "state/country"     12
+  wy-imperatives / "Wasze" → Państwo/Proszę/Należy forms (002 list 1–7, 008 ×6,
+      010, 011 ×2, 013, 015, 017 ×2, 018 ×3)                                           19
+  子女最佳利益 "najlepszy interes dziecka" → "dobro dziecka" (007, 016)                  12
+  剩餘財產差額分配 "podział różnicy majątku rezydualnego" → "podział nadwyżki majątku
+      małżeńskiego" (007, 016); company-law 剩餘財產 → "majątek pozostały" (002, 004)    22
+  "sprawa/operacja/produkt po sprawie…" → "w każdej sprawie osobno" etc.                5
+  "zbadać" used for EN "consider" → "rozważyć/dochodzić/…" (002, 003, 004, 010)        13
+  "wychodząc od" → "na podstawie" (001 ×2, 002 ×2)                                      4
+  "nie należy wnosić" → "nie należy wyciągać wniosku / zakładać" (002 ×2, 004)          3
+  "toteż" stacked → "dlatego / a zatem" (003, 004 ×7)                                   8
+  "handel" for 業 → "działalność / przedsiębiorstwo" (017, whole file)                  29
+  Ministry-of-Labour 函釋 "Wskazówka" → "Interpretacja" (014)                            1
+  預付性給付 "świadczenie przedpłacone" → "świadczenie wypłacone z góry"                  11
+  戶籍 → one term "rejestr gospodarstw domowych" (007, 016, 017 ×2 + guidance)           5
+  認證/檢認 → "uwierzytelnienie" / "stwierdzenie ważności testamentu"                     3
+  工作規則 → "regulamin pracy" (008 ×3)                                                   3
+  拘役 "areszt" → "kara aresztu (拘役)" (002 ×2)                                          2
+  背信 "sprzeniewierzenie" → "nadużycie zaufania"                                        1
+  公開發行公司 "spółka apelująca do publicznej oferty" → "spółka, która dokonała
+      oferty publicznej akcji"                                                          3
+  大法官 "Wielcy Sędziowie" → "sędziowie konstytucyjni"                                  1
+  監察人 "komisarz" → "organ nadzoru (監察人)" (018 ×2)                                    2
+  訴訟代理人 "Byłam adwokatem" → "Byłam pełnomocnikiem procesowym (訴訟代理人)"              1
+  外國人投資條例 "Statut inwestycji cudzoziemców" → "ustawa o inwestycjach cudzoziemców"   2
+  "koreański student uniwersytecki" → "koreański student" (010, incl. alts/labels)     17
+  Fullwidth "：" after a Polish heading → ":" (013)                                      1
+  Emoji 😊 on a law-firm page (013)                                                      1
+  "Q&A" / "Q." English leftovers (003 title+H1, 005, 013, 015)                          5
+  ISO dates in running text → "29 maja 2026 r." / "1 lipca 2026 r." (003)               2
+  Korea-centric framing (R2): 001 ×2 (tax-treaty scope note), 004 ×3, 005 ×2 (Q1 label,
+      Q5 hiring), 006, 007 ×2, 008 ×3, 009                                             15
+  Advertising-rule softening (R3): 003 ×4 (3/4/6-month sentences, "maximum
+      compensation", 緩刑), 005 ("contact us at any time"), 008 (anecdote), 015          7
+
+Guidance pack (pl only):
+  infinitive German-calque UI labels → Polish imperatives (Wyślij / Pomiń / Otwórz /
+      Przewiń / Zobacz ×3 / Wstrzymaj / Odtwórz ×2 / Skopiuj / Zobacz na mapie ×2)     13
+  « » → „ ” (it-nl-pl.ts pl block 9 + inquiry-copy 1)                                  10
+  nav.home 'Start' (German) → 'Strona główna'                                            1
+  Wei Tseng feminine: columnsReviewLabel, keyFactsHeading, representativeTitle,
+      roles.tseng-junwei, qualificationSentence, answers.lawyers, about-section         7
+  'Pełny profil (English)' → '(w języku angielskim)'                                     1
+  calques fixed: "jednego akt", "w tym ramach", "praktykuje", "w jednym biegu",
+      "magazyn obiektów", "podwójnym tokiem", "Napisane nie ginie", "w wskazanych",
+      "TWD 1.57M" → "1,57 mln TWD", "po pewnym czasie", stacked passives, "Hol przyjęć" 13
+  Taipei → Tajpej in the pl pack (prose ×3, photoAlts ×3, officeTitles.taipei) — the
+      pl columns already used "Tajpej" exclusively, so the pack was the odd one out      7
+
+## 3. Tests
+
+src/lib/__tests__/guidance-it-nl-pl-content.test.ts pinned the OLD masculine convention
+("names Wei Tseng as adwokat … not adwokatka", representativeTitle 'Adwokat kierujący',
+qualificationSentence /adwokatem kierującym/). Per the WO, the expected strings were updated to the
+new wording (adwokatka / 'Adwokatka kierująca kancelarią' / /kieruje kancelarią/). Nothing else in tests.
+The stale file-header comment in international-guidance-it-nl-pl.ts ("Polish adwokat … not adwokatka")
+was updated to match.
+
+## 4. Not applied (and why)
+
+b#20 — thousands separator "1.579.589 TWD" → "1 579 589 TWD" (and TWD 25.000.000 in 011/017/018).
+  NOT applied. scripts/check-column-translation.mjs sets NUMBER_THOUSAND_STYLE.pl = 'dot'; with spaces the
+  parser reads 1 579 589 as three numbers (1, 579, 589) and `numbers` FAILs ("missing from translation").
+  Verified directly: analyzeNumbers("kwota 1 579 589 TWD","pl") → [1,579,589]. Per the WO ("prefer the form
+  the checker accepts and note it"), the dot form stays. A follow-up would need the checker changed first.
+  (The "TWD 1.57M" English decimal in the team bio WAS fixed → "1,57 mln TWD"; that one parses identically.)
+
+b#47 — "rangą 1 dziedziczenia ustawowego" → the reviewer's "pierwszej grupy". Applied as
+  "grupy 1 dziedziczenia ustawowego": the word "ranga" (German Rang) is gone and "grupa/krąg" is used
+  throughout, but the digit 1 is kept because the ko source carries it and the pl word-numeral lexicon
+  only maps cardinals (jeden/dwa/…), not ordinals ("pierwszej" would drop the token and FAIL `numbers`).
+  Same reason for keeping "2 państwami" in 007 §1 and "1 poszkodowanego / 1 wypadku" in 003 Q15.
+
+a#30 (part) — "Taipei → Tajpej" was applied (see §2), but the office *addresses* and the Latin-script firm
+  names (Hovering International Law Firm, National Taiwan University) were left untouched per R5.
+
+## 5. Where I disagree with the reviewer (not applied as suggested)
+
+1. b#1 — reviewer: "Byłam adwokatką (訴訟代理人) powoda". 訴訟代理人 is not "adwokatka"; per RULEBOOK R8 it is the
+   litigation representative. Written as "Byłam pełnomocnikiem procesowym (訴訟代理人) powoda — koreańskiego
+   studenta": the feminine verb "Byłam" carries the gender (R4) and the term is now correct (R8).
+2. a#16 — reviewer: "…na przykład Polską i Tajwanem". Not applied (ACCEPTED-pl says apply as R2d): the neutral
+   "z 2 państwami lub terytoriami albo z większą ich liczbą (na przykład z Tajwanem i innym państwem)" avoids
+   asserting anything about Polish law, as the rulebook requires.
+3. a#24 — reviewer: "1,57 mln TWD" in the team bio: applied, but as "wyrok pierwszej instancji zasądzający
+   1,57 mln TWD" (a judgment is "zasądzający kwotę", not "wyrok na kwotę").
+4. b#37 — reviewer says "wskazówka" is wrong in 015–017 too. Only the 014 instance is 函釋 (administrative
+   interpretation) and it was changed; the others are link labels for official *guidance pages*
+   ("Wskazówka Ministerstwa …"), where "wskazówka" is correct. Left as is.
+5. b#42 — the "część pogłębiona N" calque was fixed as "omówienie pogłębione N" (005/013/015 titles, H1 and
+   cross-links), not with the reviewer's em-dash retitling, so the existing en-dash title pattern is kept.
+6. a#47 — "(Czy nie zdradzam tu mimowolnie swojego wieku?)" could not be deleted (block counts are fixed), so
+   it was rewritten as "(To już wspomnienie sprzed wielu lat.)".
+
+## 6. Verify (verbatim)
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-pl --lang pl 2>&1 | tail -8
+forbidden      PASS   
+hanzi          PASS   han=72
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "[변호사 검수 필요]" src/content/columns-pl src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      25
+
+Pass criteria: checker summary PASS 18/18 — OK; markers 0 — OK; TSC_OK — OK; tests 2770 passed — OK.

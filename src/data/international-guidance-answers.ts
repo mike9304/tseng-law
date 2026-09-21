@@ -528,12 +528,12 @@ export const guidanceAnswers: Record<
     },
     about: {
       answer:
-        'Hovering International Law Firm jest kancelarią adwokacką na Tajwanie, założoną w 2016 r. przez absolwentów National Taiwan University (國立臺灣大學), z biurami w Taipei, Kaohsiung, Taichung i Pingtung. Od 2020 r. istnieje dział księgowości; biuro w Taichung prowadzi sprawy związane z Koreą i Japonią. Kancelaria nie obiecuje wyniku. Konsultacja odbywa się wyłącznie po angielsku, chińsku, japońsku i koreańsku.',
+        'Hovering International Law Firm jest kancelarią adwokacką na Tajwanie, założoną w 2016 r. przez absolwentów National Taiwan University (國立臺灣大學), z biurami w Tajpej, Kaohsiung, Taichung i Pingtung. Od 2020 r. istnieje dział księgowości; biuro w Taichung prowadzi sprawy związane z Koreą i Japonią. Kancelaria nie obiecuje wyniku. Konsultacja odbywa się wyłącznie po angielsku, chińsku, japońsku i koreańsku.',
       sources: ['/pl/lawyers', '/pl/services'],
     },
     lawyers: {
       answer:
-        'Ta strona pokazuje profile adwokatów, kierownictwa operacyjnego i partnerskiego biura rachunkowego Hovering. Adwokat Wei Tseng (曾雋崴) jest uprawniona do wykonywania zawodu na Tajwanie i jest adwokatem kierującym kancelarią; pracuje z klientami z Korei, Japonii i innymi klientami międzynarodowymi. Konsultacja odbywa się wyłącznie po angielsku, chińsku, japońsku i koreańsku.',
+        'Ta strona pokazuje profile adwokatów, kierownictwa operacyjnego i partnerskiego biura rachunkowego Hovering. Adwokatka Wei Tseng (曾雋崴) jest uprawniona do wykonywania zawodu na Tajwanie i kieruje kancelarią; pracuje z klientami z Korei, Japonii i innymi klientami międzynarodowymi. Konsultacja odbywa się wyłącznie po angielsku, chińsku, japońsku i koreańsku.',
       sources: ['/pl/about', '/pl/contact'],
     },
     pricing: {

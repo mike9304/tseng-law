@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Czy państwo pamiętają czasy tradycyjnych salonów fryzjerskich (理髮廳) z początków Tajwanu?
+Czy znają Państwo dawne tajwańskie salony fryzjerskie (理髮廳)?
 
 Sposób mycia włosów w tych salonach był bardzo szczególny.
 
@@ -29,7 +29,7 @@ Przypominało to bardzo dzisiejsze mycie włosów w stylu wietnamskim.
 
 A te salony w stylu tajwańskim pozostają odrębnym wspomnieniem kulturowym dla wielu osób na Tajwanie.
 
-(Czy nie zdradzam tu mimowolnie swojego wieku?)
+(To już wspomnienie sprzed wielu lat.)
 
 ​
 
@@ -81,11 +81,11 @@ Pytano na przykład, czy przepis pisany, który zezwalał wyłącznie osobom z n
 
 i podważano, czy przepis ten rzeczywiście przyczynił się do ochrony zatrudnienia i egzystencji osób z niepełnosprawnością wzroku.
 
-Ostatecznie Wielcy Sędziowie (大法官) uznali za niekonstytucyjny (違憲) przepis, który zezwalał wyłącznie osobom z niepełnosprawnością wzroku na wykonywanie zawodu masażysty.
+Ostatecznie sędziowie konstytucyjni (大法官) uznali za niekonstytucyjny (違憲) przepis, który zezwalał wyłącznie osobom z niepełnosprawnością wzroku na wykonywanie zawodu masażysty.
 
 ​
 
-Podobnie w Korei, gdzie wiele osób z niepełnosprawnością wzroku utrzymuje się z masażu,
+Podobne rozwiązania przyjęto w niektórych państwach — na przykład w Korei, gdzie wiele osób z niepełnosprawnością wzroku utrzymuje się z masażu,
 
 co do zasady tylko osoby z niepełnosprawnością wzroku, które uzyskały certyfikat kwalifikacji, mogą wykonywać zawód masażysty.
 
@@ -119,10 +119,10 @@ To, co początkowo miało być jedynie przyjęciem masażu w celu rozluźnienia 
 
 może stać się traumą na całe życie, jeżeli dozna się molestowania seksualnego.
 
-Jeżeli podczas masażu na Tajwanie odczuwają państwo dyskomfort lub coś dziwnego,
+Jeżeli podczas masażu na Tajwanie odczuwają Państwo dyskomfort lub coś niepokojącego,
 
 proszę to niezwłocznie zakomunikować albo poprosić o przerwanie, aby się chronić.
 
-Jeżeli uznają państwo, że doznali molestowania seksualnego,
+Jeżeli uznają Państwo, że doszło do molestowania seksualnego,
 
 proszę udać się na komisariat z zaufanym przyjacielem albo z adwokatem na Tajwanie (律師), aby złożyć zawiadomienie.

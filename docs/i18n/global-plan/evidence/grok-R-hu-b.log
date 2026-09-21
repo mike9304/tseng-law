@@ -1,1 +1,24 @@
 [WO start 2026-09-21 16:19:02]
+Native review of Hungarian columns 010–018 is in `docs/i18n/global-plan/reviews/native/hu-b.md`. Guidance pack and 001–009 stay in part a.
+
+**Verdict:** columns **3/5**. No masculine forms for Wei Tseng. **012** is the most native piece; **018** has the worst meaning errors (`űrlap` for corporate form; `könyvvizsgáló` for 監察人). Nine P1 rows (mindset vs posture, factory floor vs business premises, Korea leftover, Japanese URL, `hivatal` for the firm, `hatályosul` vs enforceable, usufruct vs trust beneficiary).
+
+Last 15 lines of the file:
+
+```
+| 32 | P2 | B | columns-hu/016-taiwan-inheritance-custody-analysis.md | a egyenes ági leszármazók | Missing az before a vowel. Also “az hagyaték felét”, “a eredményt is befolyásolja”, “a átvételi elismervényt”. | az egyenes ági leszármazók |
+| 33 | P2 | B | columns-hu/016-taiwan-inheritance-custody-analysis.md | írásban kell nyilatkozzon az illetékes bíróságnak | Formal HU after kell takes the infinitive. Also 017 “kell megszerezze”. | írásban kell nyilatkoznia az illetékes bíróságnak |
+| 34 | P2 | G | columns-hu/016-taiwan-inheritance-custody-analysis.md | A trustvagyon (信託) a trustszerződés | English trust- compounds on a Hungarian page; HU civil law: bizalmi vagyonkezelés. Also trustokmányokat. | A bizalmi vagyonkezelésbe adott vagyon (信託) a szerződés szerkezetének |
+| 35 | P2 | C | columns-hu/016-taiwan-inheritance-custody-analysis.md | Nem. A tajvani polgári törvénykönyv (民法) 1030-1. cikke | FAQ “No.” pasted under a non-yes-no heading. Also 014 §1, 016 §7, 017 §1 and §3. | A tajvani polgári törvénykönyv (民法) 1030-1. cikke szerinti… |
+| 36 | P2 | C | columns-hu/016-taiwan-inheritance-custody-analysis.md | jogi útmutató a hátramaradt családnak | hátramaradt is “left over”; native address is túlélő családtagok. | jogi útmutató a túlélő családtagoknak |
+| 37 | P2 | A | columns-hu/017-taiwan-logistics-business-setup.md | a Kinmenben (金門) és Lienchiangban vagy Matsun | EN: Kinmen or Lienchiang (Matsu); HU “és … vagy” makes Kinmen-and-Lienchiang-or-Matsu. | Kinmenben (金門) vagy Lienchiangban (Macu, 連江／馬祖) |
+| 38 | P2 | G | columns-hu/017-taiwan-logistics-business-setup.md | 連江・馬祖 | Japanese middle-dot between Chinese characters on a Hungarian page. | 連江／馬祖 |
+| 39 | P2 | B | columns-hu/017-taiwan-logistics-business-setup.md | és a engedélyt továbbra is viseli | a + vowel: az engedélyt. Same file: “a ugyanazon”, “a üzleti tervbe”, “az jogellenes”, “A eredmény”. | és az engedélyt továbbra is viseli |
+| 40 | P2 | C | columns-hu/017-taiwan-logistics-business-setup.md | A eredmény nem dől el gépi módon | gépi módon is a calque of “mechanically”; also missing az. | Az eredmény nem dől el automatikusan |
+| 41 | P2 | C | columns-hu/017-taiwan-logistics-business-setup.md | kisebb kezdeti állóberuházást követelhet | állóberuházás is a calque of 固定投資 / CAPEX. | kisebb kezdeti beruházást igényelhet |
+| 42 | P2 | A | columns-hu/018-taiwan-semiconductor-market-entry.md | a külföldi székhely többféle követelést kaphat | követelés is a legal claim; EN is commercial requests. The next sentence correctly uses Kérést. | a külföldi székhely többféle kérést kaphat |
+| 43 | P2 | A | columns-hu/018-taiwan-semiconductor-market-entry.md | majd a legmegfelelőbb vállalkozást kell választani | EN: choose the entity that fits those facts; vállalkozás is a business, and the superlative overclaims. | majd az ezeknek megfelelő szervezeti formát kell választani |
+| 44 | P2 | E | columns-hu/018-taiwan-semiconductor-market-entry.md | Az első egyeztetéshez elég az üzemeltetési áttekintés | First-consultation CTA without naming the four consultation languages or stating that Hungarian is not one of them. | Az első megkereséshez elég az üzemeltetési áttekintés. A tanácsadás kizárólag angolul, kínaiul (中文), japánul és koreaiul zajlik. |
+| 45 | P2 | C | columns-hu/018-taiwan-semiconductor-market-entry.md | ha a vételi szerződés szerinti eladó | vételi szerződés is the buyer’s side; HU commercial usage is adásvételi szerződés. | ha az adásvételi szerződés szerinti eladó |
+```
+=== end code=0 2026-09-21 16:26:26 ===

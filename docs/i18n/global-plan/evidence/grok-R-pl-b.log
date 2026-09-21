@@ -1,1 +1,23 @@
 [WO start 2026-09-21 16:18:34]
+Native review of Polish columns 010–018 is in `docs/i18n/global-plan/reviews/native/pl-b.md`. Columns score **2/5** (same machine-German legal voice as part a). Fourteen P1 rows: masculine forms for Wei Tseng, three different names for 投資審議司, FAQ answers dumped under the wrong heading, and English/Chinese leftovers (`Q&A`, `Q.`, fullwidth `：`). Column 012 is the most readable; 016 no longer addresses a Korean reader. Consultation-language disclaimers stay correctly negative.
+
+Last 15 lines of the output file:
+
+```
+| 44 | P2 | A | columns-pl/016-taiwan-inheritance-custody-analysis.md | prawo do podziału różnicy majątku rezydualnego małżeńskiego (剩餘財產差額分配) | "rezydualny" is not Polish family-law vocabulary; this is a leftover-property (Zugewinn) claim | roszczenie o podział nadwyżki majątku małżeńskiego (剩餘財產差額分配) |
+| 45 | P2 | C | columns-pl/016-taiwan-inheritance-custody-analysis.md | nadrzędny interes dziecka (子女最佳利益) | Calque of "best interests"; Polish family courts say "dobro dziecka" | dobro dziecka (子女最佳利益) |
+| 46 | P2 | A | columns-pl/016-taiwan-inheritance-custody-analysis.md | legalizacji (認證) oraz procedurze weryfikacji (檢認) | 認證 is notarisation/authentication; 檢認 is probate of a will, not "verification" | uwierzytelnienia (認證) oraz procedury stwierdzenia ważności testamentu (檢認) |
+| 47 | P2 | A | columns-pl/016-taiwan-inheritance-custody-analysis.md | zstępni w linii prostej (直系血親卑親屬) są rangą 1 dziedziczenia ustawowego | German "Rang 1"; Polish succession uses "grupa" / "krąg" | zstępni w linii prostej (直系血親卑親屬) należą do pierwszej grupy dziedziczenia ustawowego |
+| 48 | P2 | C | columns-pl/017-taiwan-logistics-business-setup.md | Handel logistyczny na Tajwanie i zezwolenie na samochodowy przewóz towarów | "Handel" for 業 is a German Gewerbe calque; Polish: "działalność" (systemic in this file) | Działalność logistyczna na Tajwanie i zezwolenie na samochodowy przewóz towarów |
+| 49 | P2 | B | columns-pl/017-taiwan-logistics-business-setup.md | rejestracja zameldowania (戶籍) w właściwym okręgu | "w właściwym" needs "we"; twice in this file | rejestracja zameldowania (戶籍) we właściwym okręgu |
+| 50 | P2 | C | columns-pl/017-taiwan-logistics-business-setup.md | potwierdźcie aktualne źródła oficjalne i okoliczności sprawy | Informal "potwierdźcie" after "Państwo" throughout the article | proszę potwierdzić aktualne źródła oficjalne i okoliczności sprawy |
+| 51 | P2 | A | columns-pl/018-taiwan-semiconductor-market-entry.md | Nie każda spółka akcyjna (股份有限公司) musi certyfikować roczne sprawozdania | EN is a financial-statement audit, not "certify" | Nie każda spółka akcyjna (股份有限公司) musi poddawać roczne sprawozdania badaniu przez biegłego rewidenta |
+| 52 | P2 | C | columns-pl/018-taiwan-semiconductor-market-entry.md | Kto jest dłużnikiem wsparcia wobec klienta | Calque of "who owes support duties"; Polish would not say "dłużnik wsparcia" | Kto jest zobowiązany do świadczenia wsparcia wobec klienta |
+| 53 | P2 | A | columns-pl/018-taiwan-semiconductor-market-entry.md | dane podstawowe siedziby i wnoszących | "wnoszących" is incomplete; EN is "investors" | dane podstawowe siedziby i inwestorów |
+| 54 | P2 | C | columns-pl/018-taiwan-semiconductor-market-entry.md | można oznaczyć jako «w toku» | EN "to be determined"; "w toku" means already under way | można oznaczyć jako „do ustalenia” |
+| 55 | P2 | C | columns-pl/018-taiwan-semiconductor-market-entry.md | uporządkujcie najpierw pracę, którą wykona siedziba | Informal plural imperative after "Jeśli planują Państwo"; also "podajcie", "przesyłajcie" | proszę najpierw uporządkować pracę, którą wykona siedziba |
+| 56 | P2 | C | columns-pl/018-taiwan-semiconductor-market-entry.md | a następnie wybrać najbardziej adekwatny podmiot | "najbardziej adekwatny" is a French/English calque; Polish: "najwłaściwszy" | a następnie wybrać najwłaściwszy podmiot |
+| 57 | P2 | C | columns-pl/012-taiwan-overtaking-accident-liability.md | gdy z przodu jadą kolejno 2 pojazdy lub więcej | Digit "2" in running prose; Polish spells out small numbers (also "klaksonem 2 razy") | gdy z przodu jadą kolejno dwa pojazdy lub więcej |
+| 58 | P2 | C | columns-pl/010-taiwan-gym-injury-lawsuit.md | Należy oceniać, sprawa po sprawie, jaki obowiązek staranności | Calque of "case by case"; also 011 "produkt po produkcie" | Należy oceniać w każdej sprawie osobno, jaki obowiązek staranności |
+```
+=== end code=0 2026-09-21 16:25:46 ===

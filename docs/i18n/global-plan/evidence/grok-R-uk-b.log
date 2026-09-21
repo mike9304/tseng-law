@@ -1,1 +1,24 @@
 [WO start 2026-09-21 16:19:02]
+Review is in `docs/i18n/global-plan/reviews/native/uk-b.md`. Guidance pack is out of scope (part a). Columns 010–018: **3/5** — usable legal Ukrainian after the P1 fixes, not yet something a Kyiv lawyer would publish as original.
+
+Thirteen P1 rows, thirty-two P2. The same tics as part a continue: digit **3** for *third party*, masculine **Адвокат** on Wei Tseng’s signature, German thousands/dates, `експлуатувати` / `головний заклад`. New to this batch: **Статут** for 外國人投資條例, **戶籍** as цивільний стан, German **Kanzlei** → канцелярія, and **вкладників** for investors. 012 is the strongest piece; 013/015 still read as a Korean blog.
+
+Last 15 lines of the output file:
+
+```
+| 32 | P2 | A | columns-uk/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "лікарська форма (劑型)" | For cosmetics 劑型 is the product form (cream, lotion), not a medicinal dosage form. | форма випуску (劑型) |
+| 33 | P2 | C | columns-uk/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "агент, ексклюзивний дистриб’ютор чи комерціалізатор" | комерціалізатор is a French/German marketing calque no Ukrainian contract would use. | агент, ексклюзивний дистриб’ютор чи продавець |
+| 34 | P2 | B | columns-uk/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "Не завжди треба її засновувати." | Dangling її with no noun in the FAQ answer’s first sentence. | Не завжди треба засновувати дочірнє товариство або філію. |
+| 35 | P2 | C | columns-uk/015-taiwan-company-setup-pitch-location.md | "Такий основний зміст; з додатковими запитаннями" | Korean 이상은 기본 내용 blog closer. | Це основний орієнтир. |
+| 36 | P2 | G | columns-uk/015-taiwan-company-setup-pitch-location.md | "**Q. Чи всі галузі повинні перевіряти" | Latin Q. left as a heading. | **Чи всі галузі повинні перевіряти |
+| 37 | P2 | C | columns-uk/015-taiwan-company-setup-pitch-location.md | "Ви можете без оплати перевірити" | без оплати is a calque; native is безкоштовно. | Ви можете безкоштовно перевірити |
+| 38 | P2 | C | columns-uk/015-taiwan-company-setup-pitch-location.md | "допоміжним закладом (分支機構)" | заклад = institution/facility; this is a branch office. | відокремленим підрозділом (分支機構) |
+| 39 | P2 | A | columns-uk/016-taiwan-inheritance-custody-analysis.md | "правовий орієнтир для сім’ї, що лишається" | EN “surviving families”; present-tense лишається reads as “the family that is staying”. | правовий орієнтир для сім’ї після смерті близької людини |
+| 40 | P2 | C | columns-uk/016-taiwan-inheritance-custody-analysis.md | "осередок життя на момент смерті" | German Lebensmittelpunkt; Ukrainian private international law uses звичайне місце проживання. | звичайне місце проживання на момент смерті |
+| 41 | P2 | C | columns-uk/014-taiwan-mandatory-employment-period.md | "супроводжує експлуатацію діяльності або виконання законного обов’язку" | Same Betrieb calque inside an otherwise careful labour article. | супроводжує ведення діяльності або виконання законного обов’язку |
+| 42 | P2 | D | columns-uk/014-taiwan-mandatory-employment-period.md | "вказівкою Міністерства праці Тайваню (勞動部) від 5/6/2026" | Slash date is ambiguous (5 June vs June 5); EN is June 5, 2026. | вказівкою Міністерства праці Тайваню (勞動部) від 5 червня 2026 р. |
+| 43 | P2 | C | columns-uk/017-taiwan-logistics-business-setup.md | "передачі даних, вантажу й уваги до клієнта наприкінці договору" | увага до клієнта is a calque of customer-handling; also later «увагу до клієнта». | передачі даних, вантажу й обслуговування клієнтів наприкінці договору |
+| 44 | P2 | C | columns-uk/018-taiwan-semiconductor-market-entry.md | "закордонний головний заклад може отримати різні вимоги" | заклад = institution/facility; head office is головний офіс. Throughout 018 and 011 «головного закладу». | закордонний головний офіс може отримати різні вимоги |
+| 45 | P2 | C | columns-uk/018-taiwan-semiconductor-market-entry.md | "Не можна визначити однаково лише тому, що клієнт перебуває на Тайвані." | Source word order; a native FAQ would recast. | Сам факт наявності клієнта на Тайвані ще не означає, що треба засновувати товариство. |
+```
+=== end code=0 2026-09-21 16:25:49 ===

@@ -13,7 +13,7 @@ systemic patterns (max 6, each one line, with 1 example quote):
 - visz/hivatal calques for the firm’s work: "Milyen ügyeket viszünk" / "A hivatal által kezelt anonimizált baleseti ügy"
 
 Gender (F): no finding. Hungarian ügyvéd is the professional title for a woman; verbs and possessives do not mark sex. No úr, masculine pronoun, or ügyvéd úr attached to Wei Tseng (曾雋崴). Signature lines use **Ügyvéd Wei Tseng (曾雋崴)**.
-Column 012 is the most native stretch in this part; once hivatal is iroda, a Hungary reader would not flag it as translation. 014 and 016 are dense, usable legal Hungarian after the hatályosul / haszonélvezet holes. 011 is a solid regulatory article with one Korea-audience leftover. 017 is readable but article-scarred. 010 is usable once the mindset and premises mistranslations and 1. fok are closed. 013 and 015 still read as a Korean blog run through a translator (emoji, Pl.), Q&A, comment CTA). 018 has the worst meaning errors in the batch (űrlap, könyvvizsgáló for 監察人).
+Column 012 is the most native stretch in this part; once hivatal is iroda, a Hungary reader would not flag it as translation. 014 and 016 are dense, usable legal Hungarian after the hatályosul / haszonélvezet holes. 011 is a solid regulatory article with one Korea-audience leftover. 017 is readable but article-scarred. 010 is usable once the mindset and premises mistranslations and 1. fok are closed. 013 and 015 still read as a Korean blog run through a translator (emoji, Pl., Q&A, comment CTA). 018 has the worst meaning errors in the batch (űrlap, könyvvizsgáló for 監察人).
 
 ## Findings
 | # | sev | cat | file | quote (≤120 chars, verbatim) | problem (English, one line) | suggested Hungarian rewrite |

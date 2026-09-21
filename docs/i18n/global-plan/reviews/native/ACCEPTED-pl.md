@@ -16,4 +16,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `pl-a.md` 
 - German infinitive buttons → Polish imperative/noun forms as suggested.
 
 ## Part b
-Apply every P1/P2 row of `pl-b.md` under the same skip rules above.
+Apply every P1/P2 row of `pl-b.md` under the same skip rules above. Additional (part b): b#1/b#2 adwokatka in every byline 010–018; b#3/b#4 one Polish name for 經濟部投資審議司; b#5 'beneficjent rzeczywisty'; b#7 監察人 → 'członek organu nadzoru (監察人)' or 'nadzorca spółki' — not komisarz; b#8–b#10 → R7b; b#11–b#13 → R5/R6b; b#14 → 'drugiego lub kolejnego cudzoziemca'.

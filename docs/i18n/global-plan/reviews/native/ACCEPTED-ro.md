@@ -15,4 +15,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `ro-a.md` 
 - French guillemets → „ghilimele” (R6).
 
 ## Part b
-Apply every P1/P2 row of `ro-b.md` under the same skip rules above.
+Apply every P1/P2 row of `ro-b.md` under the same skip rules above. Additional (part b): 'pe Taiwan' → 'în Taiwan' everywhere (systemic); 'parte 3' → 'un terț' (R11); slash dates → 24.01.2022; «» → „”; b#8 罰鍰 = amendă administrativă vs 罰金 = amendă penală; b#9 → R7b; b#13 Invest Taiwan link fixed mechanically — skip.

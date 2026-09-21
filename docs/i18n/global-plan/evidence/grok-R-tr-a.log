@@ -1,1 +1,25 @@
 [WO start 2026-09-21 16:29:15]
+Review is in `docs/i18n/global-plan/reviews/native/tr-a.md` (guidance pack + columns 001–009). Naturalness: **3/5** guidance, **2/5** columns. Türkiye Turkish throughout; no masculine form for Wei Tseng. 21 P1 and 44 P2.
+
+Hardest must-fixes: *görüşme* used for 會面交往 (child contact, but *görüşme* is the site’s word for consultation); *konum* for “urgent matter”; 拘役 rendered as *tutuklama*; Korea left as the default reader; result claims in 003/008; leftover `OUR TEAM` / `OFFICES` / Hangul slugs.
+
+Last 15 lines of the output file:
+
+```
+| 51 | P2 | C | columns-tr/004-taiwan-company-subsidiary-vs-branch.md | "Tayvan bağlı şirketi kurup ortak çevresini saptama" | *Çevre* is a geometric/social circle; shareholders form a yapı / çevre değil. | "Tayvan bağlı şirketi kurup ortak yapısını belirleme" |
+| 52 | P2 | G | columns-tr/005-taiwan-company-establishment-advanced-2.md | "Aşağıdaki soru ve yanıtlar (Q&A), Tayvan’da şirket kuruluşunu" | English abbreviation left in running Turkish. | "Aşağıdaki soru ve yanıtlar, Tayvan’da şirket kuruluşunu" |
+| 53 | P2 | B | columns-tr/005-taiwan-company-establishment-advanced-2.md | "«yurt dışı doğrudan yatırım beyanı» yatırmalıdır" | You *yapar* / *sunar* a declaration; *yatırmak* is for money. | "“yurt dışı doğrudan yatırım beyanı” sunmalıdır" |
+| 54 | P2 | C | columns-tr/005-taiwan-company-establishment-advanced-2.md | "Başka sorularınız varsa bize her zaman yazabilirsiniz." | Reads as always-on availability; no reply-time promise should stay implicit either. | "Başka sorularınız varsa İletişim formundan yazabilirsiniz; yanıt süresi vaat edilmez." |
+| 55 | P2 | C | columns-tr/006-taiwan-massage-history-law.md | "Tayvan’ın başlangıçlarındaki geleneksel berber salonları (理髮廳) dönemini tanıdınız mı?" | Empty “at Taiwan’s beginnings”; the rest of the site is formal siz, this is blog *siz*. | "Tayvan’daki geleneksel berber salonları (理髮廳) dönemini hatırlıyor musunuz?" |
+| 56 | P2 | A | columns-tr/006-taiwan-massage-history-law.md | "Sonunda Büyük Hâkimler (大法官), yalnızca görme engelli kişilerin masaj mesleğini" | Calque of Grand Justices; Turkish readers need the court. | "Sonunda Anayasa Mahkemesi (大法官), yalnızca görme engelli kişilerin masaj mesleğini" |
+| 57 | P2 | D | columns-tr/007-taiwan-divorce-lawsuit-qna.md | "112 yılı 4 sayılı kararında (112年憲判字第4號)" | ROC year 112 unexplained; a Türkiye reader will not map it to 2023. also 003 `109 yılı`. | "2023 (Minguo 112) yılı 4 sayılı kararında (112年憲判字第4號)" |
+| 58 | P2 | B | columns-tr/008-taiwan-labor-severance-law.md | "almak gerçekten zor mu??" | Double question mark in the title (and again in the H1). | "almak gerçekten zor mu?" |
+| 59 | P2 | A | columns-tr/008-taiwan-labor-severance-law.md | "İşçi Emeklilik Ödeneği Yönetmeliği’nin (勞工退休金條例)" | 條例 is an act, not a *yönetmelik* (regulation). also 008 FAQ. | "İşçi Emeklilik Kanunu’nun (勞工退休金條例)" |
+| 60 | P2 | C | columns-tr/008-taiwan-labor-severance-law.md | "Merhaba, ben Tayvan avukatı Wei Tseng (曾雋崴)." | Blog greeting clashes with the rest of the site’s formal siz-register. | "Wei Tseng (曾雋崴), Tayvan avukatı." |
+| 61 | P2 | C | columns-tr/008-taiwan-labor-severance-law.md | "ve şirketin niyetine kapılmamaya dikkat etmelidir" | Opaque calque; a native would say tuzak / yönlendirme. | "ve şirketin yönlendirmesine kapılmamaya dikkat etmelidir" |
+| 62 | P2 | E | columns-tr/008-taiwan-labor-severance-law.md | "Kıdem tazminatı çalışanın yasal hakkıdır, ve şirket elbette ödemelidir." | *Elbette ödemelidir* reads as a guaranteed payout on a client page. | "Koşulları oluştuğunda kıdem tazminatı (資遣費) kanunun tanıdığı bir haktır." |
+| 63 | P2 | C | columns-tr/009-taiwan-voluntary-resignation-severance.md | "Daha önce belirtildiği üzere, Tayvan’da çalışanın kıdem tazminatı (資遣費) alması kolay değildir." | *Yukarıda* points at a previous Korean-series post, not this page. | "Tayvan’da kıdem tazminatı (資遣費) almak, genel olarak, kolay değildir." |
+| 64 | P2 | C | columns-tr/009-taiwan-voluntary-resignation-severance.md | "«**zaman**» çok önemlidir." | Scare-quoted *zaman* plus French quotes; a native would just say the deadline. | "süre çok önemlidir." |
+| 65 | P2 | C | tr-guidance.txt | "Sıranın açıklaması: önce çalışma kapsamı, sonra ücretin doğrulanması" | *Sıra* as a page description is German *Ablauf*; a pricing page says süreç. | "Süreç: önce çalışma kapsamı belirlenir, sonra ücret doğrulanır; bu sayfada fiyat listesi yoktur." |
+```
+=== end code=0 2026-09-21 16:36:34 ===

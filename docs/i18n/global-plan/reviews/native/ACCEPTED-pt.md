@@ -15,4 +15,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `pt-a.md` 
 - French calques (sweep): 'O só facto' → 'O simples facto', 'de forma de conjunto' → 'no seu conjunto', 'a contar de' ok in PT.
 
 ## Part b
-Apply every P1/P2 row of `pt-b.md` under the same skip rules above.
+Apply every P1/P2 row of `pt-b.md` under the same skip rules above. Additional: full French-calque sweep of 010–018 (postos de indemnização → rubricas de indemnização; O só facto → O simples facto; Em contrapartida → Pelo contrário; persiguições engajadas → 'procedimento criminal (crime semipúblico, 告訴乃論之罪)'; relatório contratual → relação contratual; dispensar → ministrar; sobrepostas → 'apagadas/regravadas'; assegurados → preservados; de entrada → à partida); b#2 postura → atitude/mentalidade; b#7 intimação → 'condenação do ginásio a pagar'; b#8 Invest Taiwan link fixed mechanically — skip; b#14 → 'período de obras/instalação (裝潢期間)'; b#16–b#18 → R3/R7 + 'a uma advogada'; b#19 'lugar 1' → 'primeiro lugar' (R11); b#20 → beneficiário efetivo; b#21 戶籍 → 'registo de agregado familiar (戶籍)'; b#23 entrevista → consulta.

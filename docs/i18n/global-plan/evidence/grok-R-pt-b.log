@@ -1,1 +1,24 @@
 [WO start 2026-09-21 16:35:55]
+Review of columns 010–018 is in `docs/i18n/global-plan/reviews/native/pt-b.md`. Guidance pack was out of scope (part a). Naturalness: **2/5** for the columns. 23 P1 and 25 P2 findings; no P3 listed.
+
+Highest-severity pattern: French calques that reverse legal meaning — especially **“dispensar uma formação”** (Portuguese: waive training; English: provide it). Wei Tseng is feminine except the masculine CTA in 015. 011 correctly says “marcas estrangeiras”; 018 correctly refuses a language/scope promise.
+
+Last 15 lines of the output file:
+
+```
+| 35 | P2 | E | columns-pt/013-taiwan-company-establishment-advanced-1.md | "numerosas pessoas constituíram com êxito uma sociedade" | Success-story opener; attorney advertising must not read as a results claim. | "muitas pessoas constituíram uma sociedade em Taiwan e obtiveram um visto de trabalho" |
+| 36 | P2 | E | columns-pt/013-taiwan-company-establishment-advanced-1.md | "o exame não é excessivamente estrito." | Reads as an easy-approval assurance. | "o exame não se limita a um único critério formal; cada pedido é apreciado pelos seus documentos" |
+| 37 | P2 | C | columns-pt/013-taiwan-company-establishment-advanced-1.md | "visam ajudar as pessoas que ponderam constituir uma sociedade em Taiwan. 😊" | Emoji and first-person blog register on a law-firm page. | Drop the emoji; keep a plain professional sentence. |
+| 38 | P2 | C | columns-pt/014-taiwan-mandatory-employment-period.md | "Não." | Section 1 opens with the bare FAQ answer; same pattern later in 014 and 016 §3 and §7. | Open with a self-standing sentence: "O pacto não é automaticamente nulo." |
+| 39 | P2 | B | columns-pt/014-taiwan-mandatory-employment-period.md | "O só facto de o contrato consigne um pré-aviso mais longo" | After “de o contrato” the verb must be infinitive “consignar”. | "O mero facto de o contrato consignar um pré-aviso mais longo" |
+| 40 | P2 | C | columns-pt/015-taiwan-company-setup-pitch-location.md | "As exigências das coletividades locais de Taiwan diferem" | French collectivités locales; Portugal says autarquias, Brazil municípios. | "As exigências das autarquias locais de Taiwan diferem" |
+| 41 | P2 | C | columns-pt/016-taiwan-inheritance-custody-analysis.md | "guia jurídico para a família que fica" | English is “surviving families”; “família que fica” is not how a native names them. | "guia jurídico para a família sobrevivente" |
+| 42 | P2 | A | columns-pt/016-taiwan-inheritance-custody-analysis.md | "O património em fidúcia (信託)" | Portuguese fidúcia is fiducia/fiduciary alienation, not a 信託 trust. also later in 016 | "O património em trust (信託)" |
+| 43 | P2 | A | columns-pt/016-taiwan-inheritance-custody-analysis.md | "a data de reforma e a de entrada em vigor do preceito" | French réforme of a statute; “reforma” in Portuguese often means pension reform. | "a data de alteração e a de entrada em vigor do preceito" |
+| 44 | P2 | C | columns-pt/016-taiwan-inheritance-custody-analysis.md | "Yuan judicial de Taiwan" | Unexplained calque of Judicial Yuan; a reader needs “Yuan Judicial” plus a gloss. also later in 016 | "Yuan Judicial de Taiwan (司法院, órgão judicial central)" |
+| 45 | P2 | C | columns-pt/017-taiwan-logistics-business-setup.md | "a atenção ao cliente no termo do contrato" | French attention au client; Portuguese customer service is “atendimento”. also later in 017 | "o atendimento ao cliente no termo do contrato" |
+| 46 | P2 | C | columns-pt/017-taiwan-logistics-business-setup.md | "Em caso de submandato" | French sous-mandat; Portuguese says subcontratação. also “empresários de submandato” | "Em caso de subcontratação" |
+| 47 | P2 | D | columns-pt/018-taiwan-semiconductor-market-entry.md | "Comissão dos investimentos do Ministério da Economia (經濟部投資審議司)" | Same body as “Departamento de Exame” in 011/013/017; pick one Portuguese name. | Use the same gloss as 011: "Departamento de Revisão dos Investimentos do Ministério da Economia (經濟部投資審議司)" |
+| 48 | P2 | A | columns-pt/018-taiwan-semiconductor-market-entry.md | "segundo as indicações do responsável" | English is “the responsible attorney’s instructions”; the lawyer is dropped. | "segundo as indicações da advogada responsável" |
+```
+=== end code=0 2026-09-21 16:40:47 ===

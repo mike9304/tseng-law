@@ -712,7 +712,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ÜGYVÉDEK',
       title: 'A Hovering nemzetközi csapata',
-      description: 'A Hovering ügyvédeinek, működési vezetésének és a társult könyvvizsgálónak (könyvelőiroda) a bemutatása.',
+      description: 'A Hovering ügyvédeinek, működési vezetésének és a társult könyvelőiroda bemutatása.',
       intro: '',
       sections: [],
     },

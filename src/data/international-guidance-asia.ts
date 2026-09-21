@@ -1192,7 +1192,7 @@ export const hindiGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'अधिवक्ता',
       title: 'Hovering की अंतरराष्ट्रीय टीम',
-      description: 'Hovering के अधिवक्ताओं, संचालन नेतृत्व और साझेदार लेखाकार (Partner CPA) की रूपरेखा।',
+      description: 'Hovering के अधिवक्ताओं, संचालन नेतृत्व और साझेदार लेखाकार की रूपरेखा।',
       intro: '',
       sections: [],
     },

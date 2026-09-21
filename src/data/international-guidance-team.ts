@@ -184,16 +184,16 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'ทีมงานของเรา',
     title: 'ทีมงานระหว่างประเทศ Hovering',
     description:
-      'ประวัติของทนายความ ผู้จัดการงาน และผู้สอบบัญชีพันธมิตรของ Hovering',
+      'ประวัติของทนายความ ผู้จัดการงาน และหุ้นส่วนผู้สอบบัญชีของ Hovering',
     representativeTitle: 'ทนายความผู้บริหาร',
     teamTitle: 'ทนายความและเจ้าหน้าที่',
-    partnerTitle: 'ผู้สอบบัญชีพันธมิตร',
+    partnerTitle: 'หุ้นส่วนผู้สอบบัญชี',
     introLabel: 'แนะนำ',
     educationLabel: 'การศึกษา',
     experienceLabel: 'ประสบการณ์',
     photoAltPrefix: 'ภาพ',
     workingLanguagesLabel: 'ภาษาที่ใช้ทำงาน',
-    fullProfileLabel: 'ประวัติฉบับเต็ม (English)',
+    fullProfileLabel: 'ประวัติฉบับเต็ม (ภาษาอังกฤษ)',
     keyFactsHeading: 'ทนายความ Wei Tseng — ข้อมูลพื้นฐาน',
     qualificationLabel: 'คุณสมบัติและสังกัด',
     qualificationSentence:
@@ -201,11 +201,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     practiceLabel: 'สาขาที่รับดำเนินการหลัก',
     consultationLanguagesLabel: 'ภาษาที่ใช้ให้คำปรึกษา',
     roles: {
-      'tseng-junwei': 'ทนายความผู้บริหารในไต้หวัน (Managing Attorney)',
-      'chang-rongxuan': 'ทนายความในไต้หวัน (Taiwan Attorney)',
-      'chang-fangyu': 'ผู้ช่วยงานกฎหมาย (Paralegal)',
-      'son-jungmin': 'ผู้จัดการงานประเทศเกาหลี (Korea Operations Manager)',
-      'huang-shengping': 'ผู้สอบบัญชีพันธมิตร (Partner CPA)',
+      'tseng-junwei': 'ทนายความผู้บริหารในไต้หวัน',
+      'chang-rongxuan': 'ทนายความในไต้หวัน',
+      'chang-fangyu': 'ผู้ช่วยงานกฎหมาย',
+      'son-jungmin': 'ผู้จัดการงานประเทศเกาหลี',
+      'huang-shengping': 'หุ้นส่วนผู้สอบบัญชี',
     },
   },
   fil: {
@@ -962,7 +962,7 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Taiwan investment counsel': 'ที่ปรึกษากฎหมายด้านการลงทุนในไต้หวัน',
     'Civil litigation and damages': 'คดีแพ่งและค่าสินไหมทดแทน',
     'Trademark and patent filings': 'การยื่นจดทะเบียนเครื่องหมายการค้าและสิทธิบัตร',
-    'Visa and residency': 'วีซ่าและการมีถิ่นที่อยู่',
+    'Visa and residency': 'วีซ่าและการพำนัก',
     'Family and labor disputes': 'ข้อพิพาทครอบครัวและแรงงาน',
   },
   fil: {
@@ -1338,7 +1338,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'สำนักงานรับดำเนินการเรื่องของบริษัทและบุคคลในไต้หวัน โดยใช้ภาษาอังกฤษ ภาษาญี่ปุ่น ภาษาเกาหลี และภาษาจีน',
-        'เคยเป็นผู้แทนนักศึกษาชาวเกาหลีในคดีเรียกค่าเสียหายจากการบาดเจ็บในฟิตเนส และได้รับคำพิพากษาศาลชั้นต้นให้ชดใช้ค่าเสียหาย TWD 1.57M',
+        'เคยเป็นทนายความให้แก่นักศึกษาชาวเกาหลีในคดีเรียกค่าเสียหายจากการบาดเจ็บที่ฟิตเนส และศาลชั้นต้นพิพากษาให้นักศึกษาผู้นั้นได้รับค่าเสียหาย TWD 1.57M',
       ],
       education: [
         'ปริญญาโท (M.S.), Institute of Finance, National Taiwan University',

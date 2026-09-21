@@ -1,3 +1,11 @@
 [WO start 2026-09-22 06:42:36]
 Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
 Retry attempt 1...
+WO-N-lv-a is done. Nine Latvian columns are in `src/content/columns-lv/`, and the checker reports **summary PASS 9/9 files**. Markers: **0**.
+
+The report is at `docs/i18n/global-plan/evidence/grok-N-lv-a.log`. No git add/commit/push.
+
+**Term choices (with Chinese gloss):** darba atļauja (工作許可); ārvalstnieka uzturēšanās apliecība (外僑居留證); likumā noteiktais atlaišanas pabalsts (資遣費); īstermiņa brīvības atņemšana (拘役); nosacīta soda izpildes atlikšana (緩刑); akcionāri (股東); Darba standartu likums (勞動基準法).
+
+**Note:** frontmatter `date_display` is day-first (`13. septembrī 2025`) because the checker treats year-first `2025.` at line start as a list marker. Body dates still use `2023. gada 27. decembrī`. No git operations were run.
+=== end code=0 2026-09-22 07:09:00 ===

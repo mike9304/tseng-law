@@ -1,3 +1,9 @@
 [WO start 2026-09-22 06:36:34]
 Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
 Retry attempt 1...
+Nine Estonian columns are in `src/content/columns-et/` (001–009). The checker reports **summary PASS 9/9 files**; review markers are 0.
+
+Log: `docs/i18n/global-plan/evidence/grok-N-et-a.log`
+
+Remaining checker notes are ordinal WARNs only (제1항 / 제3자 / 제6호 and similar). Digit counts still match; Estonian has no ordinal table in the checker.
+=== end code=0 2026-09-22 07:09:06 ===

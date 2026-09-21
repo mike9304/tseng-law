@@ -606,11 +606,11 @@ export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion
     europe: 'Европа',
     americas: 'Америка',
   },
-  hr: { // SCAFFOLD(cs)
-    global: 'Celosvětově',
-    'asia-pacific': 'Asie a Tichomoří',
-    'middle-east': 'Blízký východ',
-    europe: 'Evropa',
+  hr: {
+    global: 'Globalno',
+    'asia-pacific': 'Azija i Pacifik',
+    'middle-east': 'Bliski istok',
+    europe: 'Europa',
     americas: 'Amerika',
   },
   sr: { // SCAFFOLD(cs)
@@ -915,11 +915,11 @@ export const LANGUAGE_PICKER_COPY: Record<
     close: 'Закрыть',
     current: 'Текущий язык',
   },
-  hr: { // SCAFFOLD(cs)
-    open: 'Zvolte region a jazyk',
-    title: 'Zvolte svůj region a jazyk',
-    close: 'Zavřít',
-    current: 'Současný jazyk',
+  hr: {
+    open: 'Odaberite regiju i jezik',
+    title: 'Odaberite svoju regiju i jezik',
+    close: 'Zatvorite',
+    current: 'Trenutačni jezik',
   },
   sr: { // SCAFFOLD(cs)
     open: 'Zvolte region a jazyk',

@@ -1,1 +1,68 @@
-[WO start 2026-09-22 06:50:31]
+WO-N-hr-b — columns 010–018 into Croatian (`hr`)
+Workspace: /Users/son7/Projects/tseng-law-new-hr-20260922
+No git add/commit/push/stash/checkout.
+
+## File count
+9 files written in src/content/columns-hr/ (010–018). Lane A’s 001–009 already present, so the directory lists 18 md files.
+010-taiwan-gym-injury-lawsuit.md
+011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md
+012-taiwan-overtaking-accident-liability.md
+013-taiwan-company-establishment-advanced-1.md
+014-taiwan-mandatory-employment-period.md
+015-taiwan-company-setup-pitch-location.md
+016-taiwan-inheritance-custody-analysis.md
+017-taiwan-logistics-business-setup.md
+018-taiwan-semiconductor-market-entry.md
+
+Each of 010–018: checker PASS 1/1. Official `--dir` run: summary PASS 18/18 files (includes 001–009). Markers 0.
+
+## §Verify (verbatim)
+
+      18
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-hr-20260922/src/content/columns-hr/018-taiwan-semiconductor-market-entry.md  lang=hr
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=145
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+      45
+
+## Key term choices (Chinese gloss kept)
+
+- parnična zastupnica (訴訟代理人)
+- nehajna tjelesna ozljeda (過失傷害)
+- kazneno djelo koje se goni samo na prijavu (告訴乃論之罪)
+- pismo s ovjerom sadržaja (存證信函)
+- kaznena naknada štete (懲罰性賠償金)
+- najmanje trajanje radnog odnosa (最低服務年限)
+- stručno-tehnička obuka (專業技術培訓)
+- nagrada za potpis / nagrada za ostanak (簽約金 / 留任獎金)
+- Odjel za pregled ulaganja Ministarstva gospodarstva (經濟部投資審議司)
+- boravišna iskaznica za strance (外僑居留證)
+- izvršavanje i nošenje prava i dužnosti prema maloljetnom djetetu (未成年子女權利義務之行使或負擔)
+- djelatnost cestovnog prijevoza tereta automobilima (汽車貨運業)
+- poslovna dozvola vs potvrda o upisu poslovanja (經營許可 / 營業執照)
+
+Register: Vi/Vaš; Croatian „ “; Tajvan; Odvjetnica Wei Tseng (曾雋崴); consultation EN / kineski (中文) / japanski / korejski.
+R2–R10 from the start (011 foreign brands; 010 first-person feminine; 014 R7b self-standing FAQ; 015 ZWSP+NBSP; 011 Invest Taiwan lang=eng).
+
+## Unresolved
+
+- numbers WARN on Korean ordinals left as words (제1항, 제7호, 제3자, 1심 …) — R11; counts still match; not FAIL.
+- Official `ls | wc -l` is 18 because 001–009 from WO-N-hr-a are in the same directory; this lane’s 9 files are all PASS.
+- 008/009 Korean `url` values contain Hangul (lane A; byte-identical to source).

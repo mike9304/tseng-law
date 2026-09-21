@@ -1,5 +1,101 @@
-[WO start 2026-09-22 05:17:45]
-Croatian copy for locale `hr` is in place. Scaffold markers for `hr` are gone. The report is in `docs/i18n/global-plan/evidence/grok-P-hr.log`.
+WO-P-hr — Croatian guidance pack + UI strings (locale `hr`)
+Workspace: /Users/son7/Projects/tseng-law-new-hr-20260922
+No git add/commit/push/stash/checkout. Helpers only under .tmp-hr/.
 
-Verify: grep `hr` SCAFFOLD = **0**, **TSC_OK**, **1096** tests passed. Five failures are the still-scaffolded sibling locales on `GUIDANCE_LOCALES_4` (answers coverage 27 vs 45, shared Czech llms notices, root `llms.txt` over 8 KiB). Nothing failed on `hr` rows. No git add/commit/push.
-=== end code=0 2026-09-22 05:40:19 ===
+## Files touched
+src/data/international-guidance-central-europe.ts
+src/data/international-guidance-team.ts
+src/data/international-guidance-offices.ts
+src/data/international-guidance-answers.ts
+src/data/international-inquiry-copy.ts
+src/data/multilingual-international-v2.ts
+src/data/team-name.ts
+src/lib/llms-txt.ts
+src/lib/columns.ts
+src/lib/public-language-registry.ts
+src/components/ColumnsGrid.tsx
+src/components/CinematicOpening.tsx
+src/components/decorative-video-controls.ts
+src/data/__tests__/guidance-disclosure-parity.test.ts
+src/data/__tests__/guidance-office-facts-sync.test.ts
+src/data/__tests__/international-guidance-privacy-disclosure.test.ts
+src/data/__tests__/column-alternate-expectations.ts
+src/components/__tests__/columns-grid-guidance-labels.test.tsx
+src/components/__tests__/multilingual-international-v2.test.tsx
+tests/builder-editor/international-guidance.playwright.ts
+docs/i18n/global-plan/evidence/grok-P-hr.log  (this file)
+.tmp-hr/  (helper scripts only; not product copy)
+
+SCAFFOLD(cs) marker comments for locale `hr` removed. Other locales untouched.
+
+Autonym: Hrvatski. llms English name: Croatian.
+Lawyers title/description = guidanceTeamCopy.hr title/description.
+columnsReadMoreLabel = ColumnsGrid hr read-more = Čitajte dalje.
+ColumnsGrid All + category labels byte-identical to src/lib/columns.ts:
+  Sve / Osnivanje društava na Tajvanu / Pravne informacije o Tajvanu / Analiza slučaja
+Eyebrows: NAŠ TIM / UREDI
+menuLabel: Popis stranica (not "Menu")
+FAQ: „Mogu li dobiti savjet na hrvatskom?“ → „Ne.“
+nav (all ≤14): Naslovnica / Područja rada (13) / O uredu / Odvjetnici / Troškovi / Kontakt / Pitanja / Privatnost / Odricanje / Članci
+
+## §Verify (verbatim)
+
+0
+TSC_OK
+   × guidance locale llms.txt catalogs > writes a distinct notice set for each guidance language 3ms
+   × root llms.txt guidance catalog links > stays inside the 8 KiB root budget and the documented grammar 1ms
+   × root llms.txt guidance catalog links > lists every site-locale catalog and every guidance catalog 0ms
+   × root llms.txt guidance catalog links > labels each guidance catalog in its own language without widening consultation languages 0ms
+   × guidanceAnswers > covers every guidance locale x 6 page keys 4ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+ Test Files  2 failed | 45 passed (47)
+      Tests  5 failed | 1096 passed (1101)
+      22
+
+## Failures (not `hr` rows)
+
+All five fail because the new-locale batch is still on GUIDANCE_LOCALES_4 while sibling locales remain Czech scaffolds. None assert against Croatian wording.
+
+1. src/lib/__tests__/international-guidance-answers.test.ts
+   `covers every guidance locale x 6 page keys`
+   GUIDANCE_LOCALES in that file is 27 (ends at `he`); GUIDANCE_LOCALES_4 is 45.
+   hr answers exist and sources use `/hr/…`. Adding only `hr` would still be 28 vs 45.
+
+2. src/app/[locale]/__tests__/llms-discovery.test.tsx
+   `writes a distinct notice set for each guidance language`
+   expected unique notices 135 (45×3), received 84.
+   hr notices are unique Croatian. Remaining collisions are other cs-cloned locales
+   (sr, sl, lt, lv, et, ca, is, …) still sharing Czech notice text.
+
+3–5. same file, root llms.txt catalog tests
+   `llms.txt exceeds its 8192-byte limit`
+   root catalog lists every GUIDANCE_LOCALES_4 entry; size blow-up is the batch, not hr copy.
+   Tests that pin hr (disclosure-parity, office-facts Korea/Japan, privacy hosting regex,
+   columns-grid labels, multilingual-international-v2 /englesk/i, column-alternate `hr`) passed.
+
+## Terminology (Chinese gloss kept byte-identical)
+
+- boravišni status (居留)
+- dozvola za rad (工作許可)
+- zakonska otpremnina / tajvansko pravo (資遣費) — not Croatian otpremnina-as-EU-severance
+- ugovor o radu (勞動契約)
+- pravila rada (工作規則)
+- razvod (離婚)
+- ostvarivanje i preuzimanje prava i dužnosti prema maloljetnoj djeci (未成年子女權利義務之行使或負擔)
+- viđanje djeteta (會面交往)
+- nasljeđivanje (繼承)
+- kućna evidencija (戶籍)
+- žigovi (商標), patenti (專利)
+- Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), Pingtung (屏東)
+- Hovering International Law Firm (昊鼎國際法律事務所); odvjetnica Wei Tseng (曾雋崴)
+
+Register: Vi/Vaš; Croatian „ “; Tajvan (not Tchaj-wan); odvjetnica/odvjetnik (Wei Tseng feminine);
+savjetovanje (not Czech porada); ured (not pobočka); Područja rada (not agenda calque).
+Consultation languages in that order: engleski, kineski (中文), japanski, korejski.
+Office-facts spellings: Koreje/Korejom, Japana/Japanom.
+
+## Could not fit
+
+None. Longest nav label is Područja rada (13). menuLabel is Popis stranica.
+GUIDANCE_BIO_PRESERVED_TERMS including TWD 1.57M, National Taiwan University, institution names kept.
+{name} {firm} URLs emails unchanged.

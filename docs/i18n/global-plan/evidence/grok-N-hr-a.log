@@ -1,7 +1,66 @@
-[WO start 2026-09-22 06:20:44]
-Nine Croatian columns are in `src/content/columns-hr/`. Official check: **summary PASS 9/9 files**, markers 0.
+WO-N-hr-a — columns 001–009 into Croatian (`hr`)
+Workspace: /Users/son7/Projects/tseng-law-new-hr-20260922
+No git add/commit/push/stash/checkout.
 
-Report: `docs/i18n/global-plan/evidence/grok-N-hr-a.log`.
+## File count
+9 files in src/content/columns-hr/:
+001-taiwan-company-establishment-basics.md
+002-withdraw-capital-taiwan-company.md
+003-taiwan-traffic-accident-procedure.md
+004-taiwan-company-subsidiary-vs-branch.md
+005-taiwan-company-establishment-advanced-2.md
+006-taiwan-massage-history-law.md
+007-taiwan-divorce-lawsuit-qna.md
+008-taiwan-labor-severance-law.md
+009-taiwan-voluntary-resignation-severance.md
 
-Checker support for `hr` was added in `scripts/check-column-translation.mjs` so remapped `/hr/` links, `13. rujna 2025.`, and Croatian `đ` can PASS. Guidance pack and other locales were not touched. No git add/commit/push.
-=== end code=0 2026-09-22 06:50:20 ===
+Checker support added in scripts/check-column-translation.mjs so `--lang hr` can score correct Croatian (was missing): GUIDANCE_LANGS + hr; DATE_MONTH_NAMES (rujna …); langid exemption for Croatian đ/Đ; NUMBER_THOUSAND_STYLE.hr = dot; NATIONALITY_TERMS/LANGUAGE_NAMES.hr (Hrvatska); FORBIDDEN_PHRASES.hr. Without this, remapped /hr/core links, 13. rujna 2025., and natural đ failed the gate.
+
+## §Verify (verbatim)
+
+       9
+PASS  /Users/son7/Projects/tseng-law-new-hr-20260922/src/content/columns-hr/009-taiwan-voluntary-resignation-severance.md  lang=hr
+check          status  details
+-------------- ------  -------
+frontmatter    PASS
+headings       PASS   levels=[1]
+images         PASS   count=2
+blocks         PASS   blocks=44
+links          PASS   hrefs=3
+hangul         PASS
+english        PASS
+forbidden      PASS
+hanzi          PASS   han=68
+numbers        WARN   수사미해석 (1): 제6호
+                      sourceCount=11 targetCount=11
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  9/9 files
+       0
+      34
+
+## Key term choices (Chinese gloss kept)
+
+- dozvola za rad (工作許可)
+- boravišna iskaznica za strance (外僑居留證)
+- zakonska otpremnina / tajvansko pravo (資遣費) — not EU otpremnina
+- Zakon o standardima rada (勞動基準法)
+- kratkotrajna kazna zatvora (拘役) — not pre-trial detention
+- uvjetna osuda (緩刑) — not parole
+- nadzornik društva (監察人) — not auditor
+- dioničari (股東) — not partners
+- izvršavanje i nošenje prava i dužnosti prema maloljetnom djetetu (未成年子女權利義務之行使或負擔)
+- osobni kontakt (會面交往)
+- Odjel za pregled ulaganja Ministarstva gospodarstva (經濟部投資審議司)
+
+Register: Vi/Vaš; Croatian „ “; Tajvan; Odvjetnica Wei Tseng (曾雋崴); consultation EN / kineski (中文) / japanski / korejski.
+
+R2–R10 applied from the start (Korea as labelled example; tax-treaty framing; 003 compensation/緩刑 softened; 008 anecdote = entitlement under the law; 007 family = two or more countries / child outside Taiwan; 005 hiring = foreign nationals; 003 emergency 119/110/112).
+
+## Unresolved
+
+- numbers WARN on Korean ordinals left as words (제1항, 제6호, 제3자, 제1심 …) — R11; counts still match; not FAIL.
+- 008/009 Korean `url` values contain Hangul (byte-identical to source, as required).
+- Checker had no `hr` row before this lane; support was added so the official `--lang hr` command can PASS. Guidance pack and other locales untouched.

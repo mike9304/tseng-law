@@ -378,7 +378,7 @@ const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
   mn: 'Russian', // SCAFFOLD(ru)
   sk: 'Czech', // SCAFFOLD(cs)
   bg: 'Russian', // SCAFFOLD(ru)
-  hr: 'Czech', // SCAFFOLD(cs)
+  hr: 'Croatian',
   sr: 'Czech', // SCAFFOLD(cs)
   sl: 'Slovenian',
   lt: 'Lithuanian',
@@ -851,13 +851,13 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     confidentialNotice:
       'Поскольку исходный текст сохраняется, на первом этапе не пишите то, что ещё не нужно: номер паспорта, номер удостоверения или данные счёта.',
   },
-  hr: { // SCAFFOLD(cs)
+  hr: {
     consultationNotice:
-      'Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
+      'Ove su informacije napisane na hrvatskom, ali savjetovanje s odvjetnicom ili odvjetnikom odvija se samo na engleskom, kineskom (中文), japanskom i korejskom.',
     discoveryNotice:
-      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, podporu, doporučení umělé inteligence ani viditelnost.',
+      'Datoteka llms.txt samo je karta za pronalaženje javnih stranica; ne obećava poredak u pretraživanju, podršku, preporuku umjetne inteligencije ni vidljivost.',
     confidentialNotice:
-      'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+      'Budući da se izvorni tekst čuva, u početnoj fazi nemojte pisati ono što još nije potrebno, primjerice broj putovnice, broj isprave ili podatke o računu.',
   },
   sr: { // SCAFFOLD(cs)
     consultationNotice:

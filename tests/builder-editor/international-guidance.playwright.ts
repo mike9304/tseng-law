@@ -965,7 +965,7 @@ test.describe('O29 og:locale across the eight public locales', () => {
     mn: 'ru_RU', // SCAFFOLD(ru)
     sk: 'cs_CZ', // SCAFFOLD(cs)
     bg: 'ru_RU', // SCAFFOLD(ru)
-    hr: 'cs_CZ', // SCAFFOLD(cs)
+    hr: 'hr_HR',
     sr: 'cs_CZ', // SCAFFOLD(cs)
     sl: 'sl_SI',
     lt: 'lt_LT',

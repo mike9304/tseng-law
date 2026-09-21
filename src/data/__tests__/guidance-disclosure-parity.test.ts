@@ -88,7 +88,7 @@ const ELEMENTS = {
     mn: /возможн/, // SCAFFOLD(ru)
     sk: /schůdný/, // SCAFFOLD(cs)
     bg: /возможн/, // SCAFFOLD(ru)
-    hr: /schůdný/, // SCAFFOLD(cs)
+    hr: /provediv/,
     sr: /schůdný/, // SCAFFOLD(cs)
     sl: /izvedljiv/,
     lt: /tinkam[ąa]s? bendravimo būd/,
@@ -136,7 +136,7 @@ const ELEMENTS = {
     mn: /друг(?:ом|ого) язык/, // SCAFFOLD(ru)
     sk: /v jiném jazyce zaručena není/, // SCAFFOLD(cs)
     bg: /друг(?:ом|ого) язык/, // SCAFFOLD(ru)
-    hr: /v jiném jazyce zaručena není/, // SCAFFOLD(cs)
+    hr: /na drugom jeziku nije zajamčena/,
     sr: /v jiném jazyce zaručena není/, // SCAFFOLD(cs)
     sl: /v drugem jeziku ni zagotovljena/,
     lt: /kita kalba nėra garantuojama/,
@@ -184,7 +184,7 @@ const ELEMENTS = {
     mn: /срок[а]? ответа/, // SCAFFOLD(ru)
     sk: /lhůtu k odpovědi|lhůta k odpovědi/, // SCAFFOLD(cs)
     bg: /срок[а]? ответа/, // SCAFFOLD(ru)
-    hr: /lhůtu k odpovědi|lhůta k odpovědi/, // SCAFFOLD(cs)
+    hr: /rok za odgovor/,
     sr: /lhůtu k odpovědi|lhůta k odpovědi/, // SCAFFOLD(cs)
     sl: /rok za odgovor|roka za odgovor/,
     lt: /atsakymo termino|atsakymo terminas/,
@@ -232,7 +232,7 @@ const ELEMENTS = {
     mn: /не обещание/, // SCAFFOLD(ru)
     sk: /příslib/, // SCAFFOLD(cs)
     bg: /не обещание/, // SCAFFOLD(ru)
-    hr: /příslib/, // SCAFFOLD(cs)
+    hr: /ne o obećanju|nije obećanje/,
     sr: /příslib/, // SCAFFOLD(cs)
     sl: /obljub/,
     lt: /pažad/,
@@ -280,7 +280,7 @@ const ELEMENTS = {
     mn: /переводчик/, // SCAFFOLD(ru)
     sk: /tlumočník/, // SCAFFOLD(cs)
     bg: /переводчик/, // SCAFFOLD(ru)
-    hr: /tlumočník/, // SCAFFOLD(cs)
+    hr: /tumač/,
     sr: /tlumočník/, // SCAFFOLD(cs)
     sl: /tolmač/,
     lt: /vertėjo žodžiu|vertėjas žodžiu/,
@@ -328,7 +328,7 @@ const ELEMENTS = {
     mn: /каждое дело/, // SCAFFOLD(ru)
     sk: /každou věc/, // SCAFFOLD(cs)
     bg: /каждое дело/, // SCAFFOLD(ru)
-    hr: /každou věc/, // SCAFFOLD(cs)
+    hr: /svaki predmet/,
     sr: /každou věc/, // SCAFFOLD(cs)
     sl: /vsak[oe] zadev/,
     lt: /kiekvieną bylą/,
@@ -376,7 +376,7 @@ const ELEMENTS = {
     mn: /результат/, // SCAFFOLD(ru)
     sk: /výsledek/, // SCAFFOLD(cs)
     bg: /результат/, // SCAFFOLD(ru)
-    hr: /výsledek/, // SCAFFOLD(cs)
+    hr: /ishod/,
     sr: /výsledek/, // SCAFFOLD(cs)
     sl: /izid/,
     lt: /rezultat/,
@@ -424,7 +424,7 @@ const ELEMENTS = {
     mn: /четырёх язык/, // SCAFFOLD(ru)
     sk: /čtyř/, // SCAFFOLD(cs)
     bg: /четырёх язык/, // SCAFFOLD(ru)
-    hr: /čtyř/, // SCAFFOLD(cs)
+    hr: /četiri/,
     sr: /čtyř/, // SCAFFOLD(cs)
     sl: /štirih/,
     lt: /ketur/,
@@ -472,7 +472,7 @@ const ELEMENTS = {
     mn: /шагом консультации/, // SCAFFOLD(ru)
     sk: /krokem porady|krok porady/, // SCAFFOLD(cs)
     bg: /шагом консультации/, // SCAFFOLD(ru)
-    hr: /krokem porady|krok porady/, // SCAFFOLD(cs)
+    hr: /korak savjetovanja/,
     sr: /krokem porady|krok porady/, // SCAFFOLD(cs)
     sl: /korak posveta/,
     lt: /konsultacijos žingsnis/,
@@ -520,7 +520,7 @@ const ELEMENTS = {
     mn: /юридическ/, // SCAFFOLD(ru)
     sk: /právní\w* stanovisk/, // SCAFFOLD(cs)
     bg: /юридическ/, // SCAFFOLD(ru)
-    hr: /právní\w* stanovisk/, // SCAFFOLD(cs)
+    hr: /pravn\w* mišljenj/,
     sr: /právní\w* stanovisk/, // SCAFFOLD(cs)
     sl: /pravn\w* mnenj/,
     lt: /teisinė nuomonė/,
@@ -568,7 +568,7 @@ const ELEMENTS = {
     mn: /запись/, // SCAFFOLD(ru)
     sk: /schůzk/, // SCAFFOLD(cs)
     bg: /запись/, // SCAFFOLD(ru)
-    hr: /schůzk/, // SCAFFOLD(cs)
+    hr: /sastanak/,
     sr: /schůzk/, // SCAFFOLD(cs)
     sl: /sestank/,
     lt: /susitikim/,
@@ -616,7 +616,7 @@ const ELEMENTS = {
     mn: /отношений между адвокатом/, // SCAFFOLD(ru)
     sk: /vztah mezi advokát/, // SCAFFOLD(cs)
     bg: /отношений между адвокатом/, // SCAFFOLD(ru)
-    hr: /vztah mezi advokát/, // SCAFFOLD(cs)
+    hr: /odnos između odvjetnic/,
     sr: /vztah mezi advokát/, // SCAFFOLD(cs)
     sl: /razmerje med odvetnic/,
     lt: /advokato ir kliento santyk/,
@@ -664,7 +664,7 @@ const ELEMENTS = {
     mn: /автоматически не переводится/, // SCAFFOLD(ru)
     sk: /automaticky/, // SCAFFOLD(cs)
     bg: /автоматически не переводится/, // SCAFFOLD(ru)
-    hr: /automaticky/, // SCAFFOLD(cs)
+    hr: /automatski/,
     sr: /automaticky/, // SCAFFOLD(cs)
     sl: /samodejno/,
     lt: /automatišk/,
@@ -712,7 +712,7 @@ const ELEMENTS = {
     mn: /брак/i, // SCAFFOLD(ru)
     sk: /manželství/i, // SCAFFOLD(cs)
     bg: /брак/i, // SCAFFOLD(ru)
-    hr: /manželství/i, // SCAFFOLD(cs)
+    hr: /brak/i,
     sr: /manželství/i, // SCAFFOLD(cs)
     sl: /zakonsk/i,
     lt: /santuok/i,
@@ -760,7 +760,7 @@ const ELEMENTS = {
     mn: /возмездн/, // SCAFFOLD(ru)
     sk: /úplatn/, // SCAFFOLD(cs)
     bg: /возмездн/, // SCAFFOLD(ru)
-    hr: /úplatn/, // SCAFFOLD(cs)
+    hr: /naplatn/,
     sr: /úplatn/, // SCAFFOLD(cs)
     sl: /plačljiv/,
     lt: /mokam/,

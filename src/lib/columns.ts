@@ -215,7 +215,7 @@ const GUIDANCE_COLUMN_CATEGORY_LABELS: Partial<Record<GuidanceLocale4, Record<Co
   mn: { formation: 'Учреждение компании на Тайване', legal: 'Правовая информация о Тайване', case: 'Анализ дел' }, // SCAFFOLD(ru)
   sk: { formation: 'Zakládání společností na Tchaj-wanu', legal: 'Právní informace o Tchaj-wanu', case: 'Rozbor případu' }, // SCAFFOLD(cs)
   bg: { formation: 'Учреждение компании на Тайване', legal: 'Правовая информация о Тайване', case: 'Анализ дел' }, // SCAFFOLD(ru)
-  hr: { formation: 'Zakládání společností na Tchaj-wanu', legal: 'Právní informace o Tchaj-wanu', case: 'Rozbor případu' }, // SCAFFOLD(cs)
+  hr: { formation: 'Osnivanje društava na Tajvanu', legal: 'Pravne informacije o Tajvanu', case: 'Analiza slučaja' },
   sr: { formation: 'Zakládání společností na Tchaj-wanu', legal: 'Právní informace o Tchaj-wanu', case: 'Rozbor případu' }, // SCAFFOLD(cs)
   sl: { formation: 'Ustanavljanje družb na Tajvanu', legal: 'Pravne informacije o Tajvanu', case: 'Razčlenitev primera' },
   lt: { formation: 'Įmonių steigimas Taivane', legal: 'Teisinė informacija apie Taivaną', case: 'Bylos analizė' },

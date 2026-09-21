@@ -564,12 +564,12 @@ export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion
     europe: 'ยุโรป',
     americas: 'ทวีปอเมริกา',
   },
-  ta: { // SCAFFOLD(hi)
-    global: 'वैश्विक',
-    'asia-pacific': 'एशिया-प्रशांत',
-    'middle-east': 'मध्य पूर्व',
-    europe: 'यूरोप',
-    americas: 'अमेरिका महाद्वीप',
+  ta: {
+    global: 'உலகளாவிய',
+    'asia-pacific': 'ஆசியா-பசிபிக்',
+    'middle-east': 'மத்திய கிழக்கு',
+    europe: 'ஐரோப்பா',
+    americas: 'அமெரிக்காக்கள்',
   },
   ne: { // SCAFFOLD(hi)
     global: 'वैश्विक',
@@ -879,11 +879,11 @@ export const LANGUAGE_PICKER_COPY: Record<
     close: 'ปิด',
     current: 'ภาษาปัจจุบัน',
   },
-  ta: { // SCAFFOLD(hi)
-    open: 'क्षेत्र और भाषा चुनें',
-    title: 'कृपया अपना क्षेत्र और भाषा चुनें',
-    close: 'बंद करें',
-    current: 'वर्तमान भाषा',
+  ta: {
+    open: 'பகுதியையும் மொழியையும் தேர்ந்தெடுக்கவும்',
+    title: 'உங்கள் பகுதியையும் மொழியையும் தேர்ந்தெடுக்கவும்',
+    close: 'மூடவும்',
+    current: 'தற்போதைய மொழி',
   },
   ne: { // SCAFFOLD(hi)
     open: 'क्षेत्र और भाषा चुनें',

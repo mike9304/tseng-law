@@ -448,16 +448,16 @@ export const GUIDANCE_HOME_PATHS: Record<GuidanceLocale, GuidanceHomePaths> = {
     },
     ariaLabel: 'สองเส้นทางข้อมูล',
   },
-  ta: { // SCAFFOLD(hi)
+  ta: {
     setup: {
-      label: 'ताइवान में कंपनी स्थापना की जानकारी',
-      href: '/hi/services',
+      label: 'தைவானில் நிறுவனம் அமைப்பதற்கான தகவல்',
+      href: '/ta/services',
     },
     legal: {
-      label: 'ताइवान कानूनी जानकारी',
-      href: '/hi/faq',
+      label: 'தைவான் சட்டத் தகவல்',
+      href: '/ta/faq',
     },
-    ariaLabel: 'जानकारी के दो मार्ग',
+    ariaLabel: 'தகவலுக்கான இரு வழிகள்',
   },
   ne: { // SCAFFOLD(hi)
     setup: {

@@ -1,5 +1,88 @@
-[WO start 2026-09-22 06:54:30]
-Tamil columns **010–018** are in `src/content/columns-ta/`. Checker: **summary PASS 18/18 files**, `[변호사 검수 필요]` **0**.
+WO-N-ta-b — Tamil columns 010–018 (locale `ta`)
+Workspace: /Users/son7/Projects/tseng-law-new-ta-20260922
+Agent: grok. No git add/commit/push/stash/checkout. No .env / customer files.
 
-Evidence: `docs/i18n/global-plan/evidence/grok-N-ta-b.log`. No git add/commit/push.
-=== end code=0 2026-09-22 07:22:51 ===
+================================================================
+§1. FILE COUNT
+================================================================
+
+src/content/columns-ta/*.md = 18 (001–009 from WO-N-ta-a + this batch 010–018)
+
+This WO wrote:
+  010-taiwan-gym-injury-lawsuit.md
+  011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md
+  012-taiwan-overtaking-accident-liability.md
+  013-taiwan-company-establishment-advanced-1.md
+  014-taiwan-mandatory-employment-period.md
+  015-taiwan-company-setup-pitch-location.md
+  016-taiwan-inheritance-custody-analysis.md
+  017-taiwan-logistics-business-setup.md
+  018-taiwan-semiconductor-market-entry.md
+
+checker: summary PASS 18/18 files (9/9 of this batch; 001–009 already present)
+markers [변호사 검수 필요]: 0
+
+================================================================
+§2. VERIFY (verbatim)
+================================================================
+
+$ ls src/content/columns-ta/*.md | wc -l
+      18
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-ta --lang ta 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-ta-20260922/src/content/columns-ta/018-taiwan-semiconductor-market-entry.md  lang=ta
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=92
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-ta | wc -l
+       0
+
+$ git status --short | wc -l
+      45
+
+================================================================
+§3. KEY TERMS (Tamil + Traditional-Chinese gloss)
+================================================================
+
+  குறைந்தபட்ச பணிக் கால ஒப்பந்தம் (最低服務年限約定)
+  நிபுணத்துவத் தொழில்நுட்பப் பயிற்சி (專業技術培訓)
+  கையொப்பத் தொகை (簽約金)
+  தங்கியிருக்கும் போனஸ் (留任獎金)
+  முன்செலுத்தும் நன்மை (預付性給付)
+  அபராதத் தொகை (違約金)
+  எஞ்சிய சொத்து வேறுபாட்டுப் பகிர்வு (剩餘財產差額分配)
+  பெற்றோர் உரிமை (親權)
+  தனிச் சொத்து (特有財產)
+  மரபுரிமைத் துறப்பு (拋棄繼承)
+  சான்றாதாரம் (認證) vs சரிபார்ப்பு (檢認)
+
+Byline kept as **வழக்கறிஞர் Wei Tseng (曾雋崴)** (Latin name not transliterated).
+Tamil finite verbs do not inflect for gender; first-person passages use நான் + this byline.
+Korea kept only as a labelled example (R2). Nationality gate: no இந்தியா / இலங்கை / தமிழ்நாடு.
+011 Invest Taiwan link kept with lang=eng (as in hi).
+
+================================================================
+§4. UNRESOLVED
+================================================================
+
+- numbers WARN (not FAIL) on 011 / 016 / 017: 수사미해석 제3자 despite மூன்றாம் தரப்பினர். Numeral counts match. Left as WARN.
+- 015 numbers WARN 제2종 unmatched (no Tamil type-ordinal token in the checker). Digit 2 kept. Left as WARN.
+- git status --short | wc -l = 45 because this worktree already carried WO-N-ta-a columns 001–009, WO-P-ta guidance files, tests, and checker `ta` support. This WO wrote only columns-ta/010–018 and this log; no git add/commit/push/stash/checkout.
+- Native legal-Tamil review of 010–018 is still pending (no [변호사 검수 필요] markers were left in the files).

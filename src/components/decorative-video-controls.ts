@@ -161,11 +161,7 @@ export const DECORATIVE_VIDEO_CONTROL_LABELS = {
     play: 'เล่นวิดีโอ',
     replay: 'เล่นวิดีโออีกครั้ง',
   },
-  ta: { // SCAFFOLD(hi)
-    pause: 'वीडियो रोकें',
-    play: 'वीडियो चलाएँ',
-    replay: 'वीडियो फिर चलाएँ',
-  },
+  ta: { pause: 'காணொளியை இடைநிறுத்தவும்', play: 'காணொளியை இயக்கவும்', replay: 'காணொளியை மீண்டும் இயக்கவும்' },
   ne: { // SCAFFOLD(hi)
     pause: 'वीडियो रोकें',
     play: 'वीडियो चलाएँ',

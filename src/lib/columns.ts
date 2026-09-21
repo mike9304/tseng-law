@@ -209,7 +209,7 @@ const GUIDANCE_COLUMN_CATEGORY_LABELS: Partial<Record<GuidanceLocale4, Record<Co
   ur: { formation: 'تائیوان میں کمپنی کا قیام', legal: 'تائیوان قانونی معلومات', case: 'مقدمے کا جائزہ' },
   fa: { formation: 'تأسیس شرکت در تایوان', legal: 'اطلاعات حقوقی تایوان', case: 'تحلیل پرونده' },
   my: { formation: 'การจัดตั้งบริษัทในไต้หวัน', legal: 'ข้อมูลกฎหมายไต้หวัน', case: 'การวิเคราะห์คดีตัวอย่าง' }, // SCAFFOLD(th)
-  ta: { formation: 'ताइवान में कंपनी स्थापना', legal: 'ताइवान कानूनी जानकारी', case: 'मामला विश्लेषण' }, // SCAFFOLD(hi)
+  ta: { formation: 'தைவானில் நிறுவனம் அமைத்தல்', legal: 'தைவான் சட்டத் தகவல்', case: 'வழக்குப் பகுப்பாய்வு' },
   ne: { formation: 'ताइवान में कंपनी स्थापना', legal: 'ताइवान कानूनी जानकारी', case: 'मामला विश्लेषण' }, // SCAFFOLD(hi)
   km: { formation: 'การจัดตั้งบริษัทในไต้หวัน', legal: 'ข้อมูลกฎหมายไต้หวัน', case: 'การวิเคราะห์คดีตัวอย่าง' }, // SCAFFOLD(th)
   mn: { formation: 'Учреждение компании на Тайване', legal: 'Правовая информация о Тайване', case: 'Анализ дел' }, // SCAFFOLD(ru)

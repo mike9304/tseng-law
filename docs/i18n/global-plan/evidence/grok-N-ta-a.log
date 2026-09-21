@@ -1,16 +1,85 @@
-[WO start 2026-09-22 06:20:44]
-Tamil columns 001–009 are in `src/content/columns-ta/`. Checker result: **summary PASS 9/9 files**. Review markers: 0.
+WO-N-ta-a — Tamil columns 001–009 (locale `ta`)
+Workspace: /Users/son7/Projects/tseng-law-new-ta-20260922
+Agent: grok. No git add/commit/push/stash/checkout. No .env / customer files.
 
-Verify (verbatim):
+================================================================
+§1. FILE COUNT
+================================================================
 
-```
+src/content/columns-ta/*.md = 9
+
+  001-taiwan-company-establishment-basics.md
+  002-withdraw-capital-taiwan-company.md
+  003-taiwan-traffic-accident-procedure.md
+  004-taiwan-company-subsidiary-vs-branch.md
+  005-taiwan-company-establishment-advanced-2.md
+  006-taiwan-massage-history-law.md
+  007-taiwan-divorce-lawsuit-qna.md
+  008-taiwan-labor-severance-law.md
+  009-taiwan-voluntary-resignation-severance.md
+
+checker: summary PASS 9/9 files
+markers [변호사 검수 필요]: 0
+
+================================================================
+§2. VERIFY (verbatim)
+================================================================
+
+$ ls src/content/columns-ta/*.md | wc -l
        9
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-ta --lang ta 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-ta-20260922/src/content/columns-ta/009-taiwan-voluntary-resignation-severance.md  lang=ta
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1]
+images         PASS   count=2
+blocks         PASS   blocks=44
+links          PASS   hrefs=3
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=68
+numbers        PASS   sourceCount=10 targetCount=10
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
 summary  PASS  9/9 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-ta | wc -l
        0
+
+$ git status --short | wc -l
       34
-```
 
-Log: `docs/i18n/global-plan/evidence/grok-N-ta-a.log`
+================================================================
+§3. KEY TERMS (Tamil + Traditional-Chinese gloss)
+================================================================
 
-003 still carries a numbers WARN on gazette issues `제644호` / `제477호` / `제236호` (counts match; not a FAIL). No git add/commit/push.
-=== end code=0 2026-09-22 06:53:46 ===
+  பணி அனுமதி (工作許可)
+  வெளிநாட்டவர் தங்கல் அட்டை (外僑居留證)
+  பங்குதாரர் (股東)
+  சட்டப்பூர்வ பிரிவினை ஊதியம் (資遣費)
+  தொழிலாளர் தரச் சட்டம் (勞動基準法)
+  பணி விதிகள் (工作規則)
+  குறுகிய காலக் காவல் தண்டனை (拘役)
+  நிறுத்தி வைக்கப்பட்ட தண்டனை (緩刑)
+  அபராதமாக மாற்றுதல் (易科罰金)
+  தன்னார்வ விலகல் (自請離職)
+
+Byline kept as **வழக்கறிஞர் Wei Tseng (曾雋崴)** (Latin name not transliterated).
+Tamil finite verbs do not inflect for gender; first-person passages use நான் + this byline.
+Korea kept only as a labelled example (R2). 008 anecdote: entitlement under the statute, not “high severance” (R3).
+
+================================================================
+§4. UNRESOLVED
+================================================================
+
+- 003 numbers WARN (not FAIL): 수사미해석 제644호 / 제477호 / 제236호 — gazette/case issue numbers, not article items. Source and target numeral counts match (141/141). Left as WARN.
+- 監察人 does not occur in Korean 001–009, so it is not glossed in this batch.
+- git status --short | wc -l = 34 because this worktree already carried WO-P-ta guidance files, tests, and checker `ta` support. This WO wrote only columns-ta/*.md and this log; no git add/commit/push/stash/checkout.
+- Native legal-Tamil review of 001–009 is still pending (no [변호사 검수 필요] markers were left in the files).

@@ -62,7 +62,7 @@ const GUIDANCE_ALL_LABEL: Record<GuidanceLocale4, string> = {
   ur: 'سب',
   fa: 'همه',
   my: 'ทั้งหมด', // SCAFFOLD(th)
-  ta: 'सभी', // SCAFFOLD(hi)
+  ta: 'அனைத்தும்',
   ne: 'सभी', // SCAFFOLD(hi)
   km: 'ทั้งหมด', // SCAFFOLD(th)
   mn: 'Все', // SCAFFOLD(ru)
@@ -110,7 +110,7 @@ const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
   ur: "viewAllLabel: 'سب دیکھیں'",
   fa: "viewAllLabel: 'نمایش همه'",
   my: "viewAllLabel: 'ดูทั้งหมด'", // SCAFFOLD(th)
-  ta: "viewAllLabel: 'सभी देखें'", // SCAFFOLD(hi)
+  ta: "viewAllLabel: 'அனைத்தும் காண்க'",
   ne: "viewAllLabel: 'सभी देखें'", // SCAFFOLD(hi)
   km: "viewAllLabel: 'ดูทั้งหมด'", // SCAFFOLD(th)
   mn: "viewAllLabel: 'Показать все'", // SCAFFOLD(ru)

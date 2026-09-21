@@ -55,7 +55,7 @@ export const TEAM_NAME_BY_LOCALE: Record<PublicLocale8, string> = {
   ur: 'Hovering کی بین الاقوامی ٹیم',
   fa: 'تیم بین‌المللی Hovering',
   my: 'Hovering International Team', // SCAFFOLD(th)
-  ta: 'Hovering International Team', // SCAFFOLD(hi)
+  ta: 'Hovering பன்னாட்டுக் குழு',
   ne: 'Hovering International Team', // SCAFFOLD(hi)
   km: 'Hovering International Team', // SCAFFOLD(th)
   mn: 'Hovering International Team', // SCAFFOLD(ru)

@@ -3234,7 +3234,7 @@ export function checkNumbers(source, target, lang) {
   // language (third party, first/second/third instance, third country). They
   // must not force a bare digit into the translation; a digit there is still
   // tolerated (counted as an extra, i.e. a WARN).
-  const lexicalSource = sourceText.replace(/제\s?3\s?자|제삼자|제\s?3\s?국|제\s?[123]\s?종|(?<![\d.,])[123]심(?![\d])/g, ' ');
+  const lexicalSource = sourceText.replace(/제\s?3\s?자|제삼자|제\s?3\s?국|제\s?[123]\s?종|(?<![\d.,])1일로|(?<![\d.,])[123]심(?![\d])/g, ' ');
   const sourceAnalysis = analyzeNumbers(lexicalSource, 'ko');
   const targetAnalysis = analyzeNumbers(targetText, lang);
   const sourceBag = countMap(sourceAnalysis.tokens);

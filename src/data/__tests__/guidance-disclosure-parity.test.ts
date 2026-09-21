@@ -82,7 +82,7 @@ const ELEMENTS = {
     ur: /قابلِ عمل/,
     fa: /روش ممکن/,
     my: /เป็นไปได้/, // SCAFFOLD(th)
-    ta: /व्यावहारिक|व्यवहार्य/, // SCAFFOLD(hi)
+    ta: /சாத்தியமான/,
     ne: /व्यावहारिक|व्यवहार्य/, // SCAFFOLD(hi)
     km: /เป็นไปได้/, // SCAFFOLD(th)
     mn: /возможн/, // SCAFFOLD(ru)
@@ -130,7 +130,7 @@ const ELEMENTS = {
     ur: /کسی اور زبان/,
     fa: /زبان دیگر/,
     my: /ภาษาอื่น/, // SCAFFOLD(th)
-    ta: /अन्य भाषा/, // SCAFFOLD(hi)
+    ta: /பிற மொழி/,
     ne: /अन्य भाषा/, // SCAFFOLD(hi)
     km: /ภาษาอื่น/, // SCAFFOLD(th)
     mn: /друг(?:ом|ого) язык/, // SCAFFOLD(ru)
@@ -178,7 +178,7 @@ const ELEMENTS = {
     ur: /جواب کی مدت/,
     fa: /مهلت پاسخ/,
     my: /ระยะเวลา(ในการ)?ตอบกลับ/, // SCAFFOLD(th)
-    ta: /उत्तर की समयसीमा/, // SCAFFOLD(hi)
+    ta: /பதிலளிக்கும் காலக்கெடு/,
     ne: /उत्तर की समयसीमा/, // SCAFFOLD(hi)
     km: /ระยะเวลา(ในการ)?ตอบกลับ/, // SCAFFOLD(th)
     mn: /срок[а]? ответа/, // SCAFFOLD(ru)
@@ -226,7 +226,7 @@ const ELEMENTS = {
     ur: /وعدہ نہیں/,
     fa: /نه وعده/,
     my: /ไม่ใช่คำมั่น/, // SCAFFOLD(th)
-    ta: /वादा नहीं/, // SCAFFOLD(hi)
+    ta: /வாக்குறுதி அல்ல/,
     ne: /वादा नहीं/, // SCAFFOLD(hi)
     km: /ไม่ใช่คำมั่น/, // SCAFFOLD(th)
     mn: /не обещание/, // SCAFFOLD(ru)
@@ -274,7 +274,7 @@ const ELEMENTS = {
     ur: /ترجمان/,
     fa: /مترجم شفاهی/,
     my: /ล่าม/, // SCAFFOLD(th)
-    ta: /दुभाषि/, // SCAFFOLD(hi)
+    ta: /மொழிபெயர்ப்பாளர/,
     ne: /दुभाषि/, // SCAFFOLD(hi)
     km: /ล่าม/, // SCAFFOLD(th)
     mn: /переводчик/, // SCAFFOLD(ru)
@@ -322,7 +322,7 @@ const ELEMENTS = {
     ur: /ہر مقدمہ/,
     fa: /پذیرش هر پرونده/,
     my: /ได้ทุกเรื่อง/, // SCAFFOLD(th)
-    ta: /प्रत्येक मामला/, // SCAFFOLD(hi)
+    ta: /ஒவ்வொரு வழக்கையும்/,
     ne: /प्रत्येक मामला/, // SCAFFOLD(hi)
     km: /ได้ทุกเรื่อง/, // SCAFFOLD(th)
     mn: /каждое дело/, // SCAFFOLD(ru)
@@ -370,7 +370,7 @@ const ELEMENTS = {
     ur: /نتیجے/,
     fa: /تعهد به نتیجه/,
     my: /รับประกันผล/, // SCAFFOLD(th)
-    ta: /परिणाम/, // SCAFFOLD(hi)
+    ta: /முடிவை உறுதி/,
     ne: /परिणाम/, // SCAFFOLD(hi)
     km: /รับประกันผล/, // SCAFFOLD(th)
     mn: /результат/, // SCAFFOLD(ru)
@@ -418,7 +418,7 @@ const ELEMENTS = {
     ur: /چار مشورے کی زبان/,
     fa: /چهار زبان/,
     my: /4 ภาษาที่ใช้ให้คำปรึกษา/, // SCAFFOLD(th)
-    ta: /चार परामर्श भाषा/, // SCAFFOLD(hi)
+    ta: /நான்கு ஆலோசனை மொழி/,
     ne: /चार परामर्श भाषा/, // SCAFFOLD(hi)
     km: /4 ภาษาที่ใช้ให้คำปรึกษา/, // SCAFFOLD(th)
     mn: /четырёх язык/, // SCAFFOLD(ru)
@@ -466,7 +466,7 @@ const ELEMENTS = {
     ur: /مشورے کا مرحلہ/,
     fa: /گام مشاوره/,
     my: /ขั้นตอนการให้คำปรึกษา/, // SCAFFOLD(th)
-    ta: /परामर्श चरण/, // SCAFFOLD(hi)
+    ta: /ஆலோசனைப் படி அல்ல/,
     ne: /परामर्श चरण/, // SCAFFOLD(hi)
     km: /ขั้นตอนการให้คำปรึกษา/, // SCAFFOLD(th)
     mn: /шагом консультации/, // SCAFFOLD(ru)
@@ -514,7 +514,7 @@ const ELEMENTS = {
     ur: /قانونی رائے/,
     fa: /نظر حقوقی/,
     my: /ความเห็นทางกฎหมาย/, // SCAFFOLD(th)
-    ta: /कानूनी राय/, // SCAFFOLD(hi)
+    ta: /சட்டக் கருத்து அல்ல/,
     ne: /कानूनी राय/, // SCAFFOLD(hi)
     km: /ความเห็นทางกฎหมาย/, // SCAFFOLD(th)
     mn: /юридическ/, // SCAFFOLD(ru)
@@ -562,7 +562,7 @@ const ELEMENTS = {
     ur: /ملاقات کا وقت/,
     fa: /وقت ملاقات/,
     my: /การนัดหมาย/, // SCAFFOLD(th)
-    ta: /नियुक्ति/, // SCAFFOLD(hi)
+    ta: /சந்திப்ப/,
     ne: /नियुक्ति/, // SCAFFOLD(hi)
     km: /การนัดหมาย/, // SCAFFOLD(th)
     mn: /запись/, // SCAFFOLD(ru)
@@ -610,7 +610,7 @@ const ELEMENTS = {
     ur: /وکیل اور موکل/,
     fa: /رابطه میان وکیل/,
     my: /ความสัมพันธ์ระหว่างทนายความ/, // SCAFFOLD(th)
-    ta: /अधिवक्ता तथा मुवक्किल/, // SCAFFOLD(hi)
+    ta: /வழக்கறிஞருக்கும் கட்சிக்காரருக்கும்/,
     ne: /अधिवक्ता तथा मुवक्किल/, // SCAFFOLD(hi)
     km: /ความสัมพันธ์ระหว่างทนายความ/, // SCAFFOLD(th)
     mn: /отношений между адвокатом/, // SCAFFOLD(ru)
@@ -658,7 +658,7 @@ const ELEMENTS = {
     ur: /خودکار ترجمہ/,
     fa: /ترجمهٔ ماشینی/,
     my: /แปลโดยอัตโนมัติ/, // SCAFFOLD(th)
-    ta: /स्वचालित/, // SCAFFOLD(hi)
+    ta: /தானியங்கியாக மொழிபெயர்க்கப்படாது/,
     ne: /स्वचालित/, // SCAFFOLD(hi)
     km: /แปลโดยอัตโนมัติ/, // SCAFFOLD(th)
     mn: /автоматически не переводится/, // SCAFFOLD(ru)
@@ -706,7 +706,7 @@ const ELEMENTS = {
     ur: /شادی/,
     fa: /ازدواج/,
     my: /การสมรส/, // SCAFFOLD(th)
-    ta: /विवाह/, // SCAFFOLD(hi)
+    ta: /திருமணம்/,
     ne: /विवाह/, // SCAFFOLD(hi)
     km: /การสมรส/, // SCAFFOLD(th)
     mn: /брак/i, // SCAFFOLD(ru)
@@ -754,7 +754,7 @@ const ELEMENTS = {
     ur: /معاوضے/,
     fa: /خدمتی با هزینه/,
     my: /บริการที่มีค่าใช้จ่าย/, // SCAFFOLD(th)
-    ta: /शुल्क/, // SCAFFOLD(hi)
+    ta: /கட்டணச் சேவை/,
     ne: /शुल्क/, // SCAFFOLD(hi)
     km: /บริการที่มีค่าใช้จ่าย/, // SCAFFOLD(th)
     mn: /возмездн/, // SCAFFOLD(ru)

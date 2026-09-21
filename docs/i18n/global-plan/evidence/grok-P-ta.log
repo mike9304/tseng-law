@@ -1,5 +1,133 @@
-[WO start 2026-09-22 05:17:31]
-Tamil locale `ta` is translated. Report: `docs/i18n/global-plan/evidence/grok-P-ta.log`.
+WO-P-ta — Tamil guidance pack + UI strings (locale `ta`)
+Workspace: /Users/son7/Projects/tseng-law-new-ta-20260922
+Agent: grok. No git add/commit/push/stash/checkout. No .env / customer files.
 
-Verify: SCAFFOLD `ta` = 0, TSC_OK. Vitest 1099 passed; the 5 failures are other still-scaffolded locales (shared llms notices, root 8 KiB budget, answers `GUIDANCE_LOCALES` 27 vs 45), not `ta` rows.
-=== end code=0 2026-09-22 05:42:45 ===
+================================================================
+§1. FILES TOUCHED
+================================================================
+
+Product copy
+  src/data/international-guidance-south-asia.ts     tamilGuidanceContent (languageName தமிழ்); SCAFFOLD(hi) locale ta removed
+  src/data/international-guidance-team.ts           team copy, bios, language names, practice-area names
+  src/data/international-guidance-offices.ts        chrome + officeTitles (தைப்பே / தைச்சுங் / காவோசியூங் / பிங்துங்)
+  src/data/international-guidance-answers.ts        6 page answers; sources /ta/...
+  src/data/international-inquiry-copy.ts            inquiry chrome + field labels
+  src/lib/llms-txt.ts                               English name 'Tamil' + 3 Tamil notices
+  src/data/multilingual-international-v2.ts         GUIDANCE_HOME_PATHS labels; hrefs /ta/services /ta/faq
+  src/lib/columns.ts                                3 category labels
+  src/components/ColumnsGrid.tsx                    All=அனைத்தும்; categories byte-identical to columns.ts; read-more=மேலும் படிக்க
+  src/components/CinematicOpening.tsx               opening copy
+  src/components/decorative-video-controls.ts       pause / play / replay
+  src/data/team-name.ts                             Hovering பன்னாட்டுக் குழு
+  src/lib/public-language-registry.ts               region labels + picker copy
+
+Test fixtures pinning this wording
+  src/data/__tests__/guidance-disclosure-parity.test.ts   15 ta markers; LOCALES includes 'ta'
+  src/data/__tests__/guidance-office-facts-sync.test.ts   கொரியா / ஜப்பான்
+  src/data/__tests__/international-guidance-privacy-disclosure.test.ts
+      pending-confirmation negative regex (must not match live privacy copy)
+  src/components/__tests__/columns-grid-guidance-labels.test.tsx
+  src/components/__tests__/multilingual-international-v2.test.tsx   /ஆங்கிலம்/
+  src/data/__tests__/column-alternate-expectations.ts   ta: 'ta'
+  tests/builder-editor/international-guidance.playwright.ts   ta_IN
+
+Helper (allowed): .tmp-ta/  (not product)
+
+================================================================
+§2. VERIFY (verbatim)
+================================================================
+
+$ grep -rn "SCAFFOLD" src tests | grep -cE "^\S+:[0-9]+:\s*'?ta'?:|locale ta"
+0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/data/__tests__/ src/lib/__tests__/guidance-chrome-language.test.ts src/lib/__tests__/international-guidance-answers.test.ts "src/app/[locale]/__tests__/llms-discovery.test.tsx" src/components/__tests__/columns-grid-guidance-labels.test.tsx src/components/__tests__/multilingual-international-v2.test.tsx --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+   × guidance locale llms.txt catalogs > writes a distinct notice set for each guidance language 3ms
+   × root llms.txt guidance catalog links > stays inside the 8 KiB root budget and the documented grammar 1ms
+   × root llms.txt guidance catalog links > lists every site-locale catalog and every guidance catalog 0ms
+   × root llms.txt guidance catalog links > labels each guidance catalog in its own language without widening consultation languages 0ms
+   × guidanceAnswers > covers every guidance locale x 6 page keys 4ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+ Test Files  2 failed | 45 passed (47)
+      Tests  5 failed | 1099 passed (1104)
+
+$ git status --short | wc -l
+      22
+
+Pass: SCAFFOLD ta count = 0, TSC_OK. No ta-row failure.
+
+Acceptable failures (other new locales still scaffolded — not ta):
+  1. llms-discovery “distinct notice set”: expected 135 unique notices
+     (GUIDANCE_LOCALES_4.length × 3 = 45 × 3), got 84. 27 finished locales
+     + ta = 28 × 3 unique Tamil/finished notices. The other 17 batch locales
+     still share Hindi/Thai/Arabic/Russian/Czech template notices.
+  2–4. root llms.txt 8192-byte budget: validateLlmsTxt throws because the
+     root catalog lists every new locale. Cascades to “lists every catalog”
+     and “labels each guidance catalog”. Not a Tamil wording defect.
+  5. international-guidance-answers.test.ts GUIDANCE_LOCALES (hardcoded 27)
+     vs GUIDANCE_LOCALES_4 (45). Adding only ta would still fail (28 vs 45).
+     Tamil answers + /ta/ sources are in the data file.
+
+================================================================
+§3. TERMINOLOGY (Tamil + Traditional-Chinese gloss, kept byte-identical)
+================================================================
+
+  பணி அனுமதி (工作許可)
+  தங்கல் அனுமதி (居留)
+  சட்டப்பூர்வ பிரிவினை ஊதியம் (資遣費; not equated with other countries’ severance)
+  தொழிலாளர் ஒப்பந்தம் (勞動契約)
+  பணி விதிகள் (工作規則)
+  விவாகரத்து (離婚)
+  பெற்றோர் பொறுப்பு (未成年子女權利義務之行使或負擔)
+  சந்திப்பு உரிமை (會面交往)
+  வாரிசுரிமை (繼承)
+  குடும்பப் பதிவு (戶籍)
+  வணிகச் சின்னம் (商標)
+  காப்புரிமை (專利)
+  firm gloss: 昊鼎國際法律事務所; NTU: 國立臺灣大學
+  cities: தைப்பே (臺北), காவோசியூங் (高雄), தைச்சுங் (臺中), பிங்துங் (屏東)
+
+Register: formal legal Tamil for readers in Tamil Nadu / Sri Lanka.
+Quotation marks: “ …” (Tamil print convention matching the German pack).
+Numerals: Western digits. Dates: 2016-இல் / 2017-இல் / 2020 முதல்.
+Address: அவர் + -ார் honorific (epicene polite), which is the form used
+for a woman attorney in this register. Explicit feminine: பரிமாற்ற மாணவி
+(Wei Tseng). Client in the gym case: கொரிய மாணவர் (the student, not her).
+FAQ “Can I get advice in Tamil?”: இல்லை. Four consultation languages in
+order: ஆங்கிலம், சீனம் (中文), ஜப்பானியம், கொரியன்.
+
+Other pins
+  languageName / autonym: தமிழ்
+  llms English name: Tamil
+  menuLabel: பக்கப் பட்டியல்  (not the literal "Menu")
+  lawyers title/description = guidanceTeamCopy:
+    Hovering-இன் பன்னாட்டுக் குழு
+    Hovering வழக்கறிஞர்கள், செயல்பாட்டு நிர்வாகம் மற்றும் கூட்டாளர் கணக்காளரின் சுயவிவரங்கள்.
+  bio keeps TWD 1.57M and GUIDANCE_BIO_PRESERVED_TERMS byte-identical
+  All filter அனைத்தும் ⊂ viewAllLabel அனைத்தும் காண்க
+  columnsReadMoreLabel = ColumnsGrid read-more = மேலும் படிக்க
+  eyebrows (Tamil has no case): குழு / அலுவலகங்கள்
+
+Disclosure markers (stems, because Tamil case endings break nominative):
+  no-interpreter-promise  /மொழிபெயர்ப்பாளர/   (மொழிபெயர்ப்பாளர் / -ரை)
+  not-an-appointment      /சந்திப்ப/          (சந்திப்பு / சந்திப்பை)
+
+================================================================
+§4. COULD NOT FIT
+================================================================
+
+  None. Every nav.* JS .length ≤ 14 (lawyers வழக்கறிஞர்கள் = 13, longest).
+  No Tamil string was clipped. No extra Chinese added for Tamil readers.
+  Placeholders {name} {firm}, URLs, e-mail wei@hoveringlaw.com.tw, Vercel
+  hosting sentence, and Latin proper names left unchanged.
+
+================================================================
+§5. CONSTRAINTS HELD
+================================================================
+
+  Consultation only in English, Chinese (中文), Japanese, Korean.
+  No interpreter / reply-time / appointment / free first meeting / result
+  / guarantee promises. Wei Tseng (曾雋崴) marked feminine where Tamil
+  marks gender. SCAFFOLD comments for ta deleted (grep count 0).

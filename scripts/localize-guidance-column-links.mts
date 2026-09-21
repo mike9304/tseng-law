@@ -22,7 +22,10 @@ const MAP: ReadonlyArray<readonly [RegExp, GuidancePageKey]> = [
 
 const dryRun = process.argv.includes('--dry-run');
 const BLOG_BASICS = 'https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8';
-const LINK_RE = /\[([^\]\n]+)\]\(((?:\/ko\/[^)\s]+)|https:\/\/www\.wei-wei-lawyer\.com\/post\/[^)\s]+)\)/g;
+const BLOG_ADVANCED_1 = 'https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1';
+const INVEST_TAIWAN_JPN = 'https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01';
+const INVEST_TAIWAN_ENG = 'https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01';
+const LINK_RE = /\[([^\]\n]+)\]\(((?:\/ko\/[^)\s]+)|https:\/\/www\.wei-wei-lawyer\.com\/post\/[^)\s]+|https:\/\/investtaiwan\.nat\.gov\.tw\/showPage\?lang=jpn&search=InvestmentStatus01)\)/g;
 let total = 0;
 const perLocale: Record<string, number> = {};
 const leftovers: string[] = [];
@@ -38,6 +41,14 @@ for (const locale of GUIDANCE_LOCALES_4) {
       if (href === BLOG_BASICS) {
         count += 1;
         return `[${label}](/${locale}/columns/taiwan-company-establishment-basics)`;
+      }
+      if (href === BLOG_ADVANCED_1) {
+        count += 1;
+        return `[${label}](/${locale}/columns/taiwan-company-establishment-advanced-1)`;
+      }
+      if (href === INVEST_TAIWAN_JPN) {
+        count += 1;
+        return `[${label}](${INVEST_TAIWAN_ENG})`;
       }
       if (href.startsWith('https://')) return whole; // other blog links: leave (reported by the checker if unexpected)
       const columnMatch = href.match(/^\/ko\/columns\/(.+)$/);

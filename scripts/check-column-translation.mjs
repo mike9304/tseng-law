@@ -1765,6 +1765,10 @@ export const GUIDANCE_HREF_TRANSFORMS = [
   { id: 'setup-guide', from: /^\/ko\/guides\/taiwan-company-setup$/, to: (lang) => `/${lang}/services` },
   { id: 'setup-lawyer', from: /^\/ko\/taiwan-company-setup-lawyer$/, to: (lang) => `/${lang}/contact` },
   // Korean-blog cross-link to the basics article (대만 회사설립 기초편) → the locale's own column 001.
+  // Korean-blog cross-link to the advanced-1 article (대만 회사설립 심화편-1) → the locale's own column 013.
+  { id: 'blog-advanced-1', from: /^https:\/\/www\.wei-wei-lawyer\.com\/post\/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1$/, to: (lang) => `/${lang}/columns/taiwan-company-establishment-advanced-1` },
+  // Invest Taiwan overview: the Korean source links the Japanese page; guidance readers get the English page.
+  { id: 'invest-taiwan-lang', from: /^https:\/\/investtaiwan\.nat\.gov\.tw\/showPage\?lang=(?:jpn|eng)&search=InvestmentStatus01$/, to: () => 'https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01' },
   { id: 'blog-basics', from: /^https:\/\/www\.wei-wei-lawyer\.com\/post\/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8$/, to: (lang) => `/${lang}/columns/taiwan-company-establishment-basics` },
 ];
 

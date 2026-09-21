@@ -1,0 +1,391 @@
+WO-F-it — Italian fix lane (Opus 5), 2026-09-21
+Workspace: /Users/son7/Projects/tseng-law-fix-i-20260921 (no git add/commit/push performed)
+Scope touched: src/content/columns-it/*.md (18), src/data/international-guidance-it-nl-pl.ts,
+  src/data/international-guidance-team.ts, src/data/international-guidance-answers.ts,
+  src/data/international-inquiry-copy.ts, src/lib/llms-txt.ts,
+  src/data/__tests__/guidance-disclosure-parity.test.ts (one pinned it string only).
+
+=========================================================================
+1. ROWS APPLIED
+=========================================================================
+
+it-supervisor.md (guidance pack)
+  P1 #1  applied — «i rapporti (會面交往)» → «il diritto di visita (會面交往)» (same fix carried into
+         007, where 會面交往 was «rapporti personali», for one term per locale).
+  P2 #2  applied — «Consuliamo imprese e conduciamo…» → «Forniamo consulenza alle imprese, le
+         rappresentiamo in giudizio e accompagniamo i clienti dall’estero…».
+  P2 #3  applied ×2 — «Sosteniamo anche la contabilità…» → «Assistiamo anche in materia contabile e
+         fiscale…»; «Sosteniamo la registrazione di marchi…» → «Assistiamo nella registrazione…».
+         Also swept the same verb in the team bios («Sostiene lo scambio…» → «Facilita…»,
+         «Sostiene l’analisi…» → «Contribuisce all’analisi…»).
+  P2 #4  applied — «l’esercizio e l’assunzione dei diritti e dei doveri verso i figli minori» →
+         «l’affidamento e la responsabilità genitoriale sui figli minori (未成年子女權利義務之行使或負擔)».
+  P2 #5  applied — «segnano il corso» → «determinano l’andamento della pratica».
+  P2 #6  applied ×3 (about ×2 + answers.ts) — «questioni con nesso con la Corea e il Giappone» →
+         «questioni collegate alla Corea e al Giappone»; also the remaining «anche con un nesso con
+         Taiwan» → «anche quando hanno un collegamento con Taiwan».
+  P2 #7  applied ×3 (guidance, guidanceTeamCopy, answers) — «della direzione operativa e della
+         revisione associata» → «del responsabile operativo e del commercialista partner».
+         Knock-on: roles «Direzione operativa Corea» → «Responsabile operativo Corea»;
+         «Revisore associato (Partner CPA)» → «Dottore commercialista partner (Partner CPA)»;
+         partnerTitle «Revisione associata» → «Commercialista partner»; bio «studio di revisione»
+         → «studio di dottori commercialisti» (會計師 = commercialista, per ACCEPTED b#27).
+  P2 #8  applied — faq.intro → «Alle domande seguenti si risponde a livello di indicazioni generali.»
+  P2 #9  applied — columnsReadMoreLabel «Leggere oltre» → «Continua a leggere» (supervisor wording
+         preferred over a#34 «Leggi di più»).
+  P2 #10 applied — nav.home «Inizio» → «Home» (4 chars, nav ≤14 gate still green).
+  P3 #11 applied — «privati con patrimonio» → «privati con patrimoni rilevanti».
+  P3 #12 applied (systemic) — «via di comunicazione / via sicura / via di trasmissione / via di
+         contatto» → «canale …» (7 strings across guidance + inquiry copy). This changed the
+         phrase the disclosure-parity test pinned; see §5.
+
+it-a.md
+  a#1  applied (= sup#1).  a#2  applied — llms.txt discoveryNotice: «sostegno … né visibilità» →
+       «avallo, raccomandazione da intelligenza artificiale né inserzione pubblicitaria» (matches the
+       en source "endorsement, recommendation, guaranteed visibility" and the de "Empfehlung/Anzeige").
+  a#3  applied — «Le richieste … sono accolte da wei@…» → «Per le richieste … si scriva a wei@…».
+  a#4  applied (R2b) — after the Taiwan–Korea treaty sentence in 001: “Nota specifica per Paese:
+       questo accordo riguarda fattispecie collegate alla Corea; se tra Taiwan e il Paese
+       dell’investitore esista un accordo fiscale, e con quale contenuto, deve verificarsi a parte.
+       Non è una regola valida per ogni investitore estero.”
+  a#5  applied in MODIFIED form (per ACCEPTED: no statements about the reader’s own country) — the
+       same neutral note added to 004; the reviewer’s “per un investitore italiano vale la ritenuta
+       interna del 21%” was NOT written (invents a fact and trips the `nationality` gate).
+  a#6  applied + swept — «pezzi» (French pièces) → «documenti» (65→1; the surviving one is the
+       legitimate “pezzi di ricambio” in 018); «pezze» → «documenti» (12→0).
+  a#7  applied + swept — «un 3 / un 3° / terzo n. 3» → «un terzo» (12→0).
+  a#8  applied + swept — «pretende di» → «intende» (9→0, incl. «pretenduto/pretenduta»).
+  a#9  applied + swept — «In contropartita,» → «Per contro,»; «è, in contropartita, una parte» →
+       «è invece una parte» (8 instances of the French sense; the 31 remaining “contropartita” are
+       the correct Italian 合理補償 “contropartita ragionevole” in 014).
+  a#10 applied — «tribunale della Relazione di Taiwan» → «Alta Corte di Taiwan (臺灣高等法院)», ROC year
+       «anno 109» → «anno 109 (2020)» (×2); «affare 上易字 n. 644» → «causa …».
+  a#11 applied — «un’immissione grave» → «un’ingerenza grave … da parte di un terzo».
+  a#12 applied — «lavoratori contratati supera 1 persona» → «lavoratori assunti supera una persona».
+  a#13 applied (modified wording) — «cerchio di azionisti» → «compagine azionaria» (more natural than
+       “cerchia”); «cerchio dei convenuti/degli eredi» → «cerchia …»; «cerchio dei contratti» →
+       «l’insieme dei contratti». 8→0.
+  a#14 + a#39 applied per ACCEPTED — fact kept, trophy verb dropped, Italian number format:
+       «Ha seguito in primo grado la domanda di risarcimento di uno studente coreano per una lesione
+       in palestra, definita con una sentenza di 1,57 milioni di TWD.»
+  a#15 applied (R3) — “risarcimento più elevato possibile” → “esamini … tutte le voci del danno e
+       spieghi in modo realistico che cosa si può chiedere”.
+  a#16 applied (R3) — the “others were not so lucky” anecdote → “ottenere il riconoscimento
+       dell’indennità di licenziamento spettante per legge, sulla base delle prove raccolte.”
+  a#17 / a#18  already correct in the repo (guidanceTeamCopy.it.label = 'IL NOSTRO TEAM';
+       guidanceOfficeCopy.it.label = 'SEDI'). No change needed.
+  a#19 / a#20  SKIPPED per ACCEPTED (links already remapped; 0 `/ko/` links remain, frontmatter
+       `url:` Hangul is canonical metadata).
+  a#21 applied — «il cocontraente» → «la controparte contrattuale».
+  a#22 applied in MODIFIED form (R2, no “dall’Italia”) — 005 Q1 heading now reads “(questo punto
+       descrive, a titolo di esempio, il regime e la prassi bancaria della Corea; per un
+       trasferimento da un altro Paese, le regole della banca e del controllo dei cambi locali
+       devono verificarsi a parte)”.
+  a#23 applied (= sup#2, supervisor wording).       a#24 applied ×4 — courtesy «Lo ha scritto /
+       se Lo conosce» → lowercase «lo».
+  a#25 applied — «i gruppi che trattiamo davvero» → «le aree di cui ci occupiamo».
+  a#26 applied — «per il fabbisogno locale» → «per le esigenze del territorio».
+  a#27 applied (supervisor wording, = sup#11).      a#28 applied — «in un unico flusso» → «in modo
+       integrato».
+  a#29 applied — «tanto dal lato … quanto dal lato del datore» → «sia dal lato del lavoratore sia da
+       quello del datore di lavoro».
+  a#30 applied ×2 — «stanno su questa pagina» → «si trovano su questa pagina».
+  a#31 applied — «Non fondi quindi un’azione in una questione reale…» → «…una decisione su un caso
+       reale…».
+  a#32 applied — disclaimer heading «non nasce da sé» → «non sorge automaticamente».
+  a#33 applied via sup#7 (supervisor wording).      a#34 applied via sup#9.
+  a#35 applied — menuLabel «Indice delle pagine» → «Menu».
+  a#36 applied + swept — «Gruppi di lavoro» → «Aree di attività»; the whole “gruppi di lavoro /
+       questo gruppo / nei gruppi indicati / Trattiamo sei gruppi” family → “aree di attività /
+       quest’area / nelle aree indicate / sei aree di attività” (13 strings in guidance + answers).
+  a#37 applied (supervisor wording, = sup#8).       a#38 applied — «e non che accettiamo ogni
+       questione» → «né promettiamo di accettare ogni questione».
+  a#40 applied — «L’esame s’impone indipendentemente dai giorni di servizio» → «È necessario un
+       esame, indipendentemente dai giorni di prestazione».
+  a#41 applied + swept — every voi imperative in 002 → Lei (Esaminate/Cercate/Stabilite/Adottate/
+       Chiedete/Preparate/Presentate/Designate+conducete/Fissate/Non considerate/tenete conto/
+       Terminate+presentate/esaminate = 13 forms).
+  a#42 applied + swept — «tesoreria» → «liquidità» (6→0).
+  a#43 applied ×2 — «pena detentiva a tempo di 5 anni / 1 anno al massimo» → «la reclusione fino a
+       5 anni / 1 anno».
+  a#44 applied — «modificata in 2026-05-29 … a contare da 2026-07-01» → «modificata il 29 maggio
+       2026 … a decorrere dal 1 luglio 2026» (the checker parses this form; see §4 for the one
+       date form that had to stay as it was).
+  a#45 applied (R7) — «le lasci nei commenti» → «Per altre domande utilizzi la pagina dei contatti.»
+  a#46 applied — «un 3 (第三人) esteriore al veicolo» → «un terzo (第三人) estraneo al veicolo».
+  a#47 applied — «non è se non uno strumento» → «è soltanto uno strumento».
+  a#48 applied (R3) — «può contattarci in qualsiasi momento» → «Per altre domande può scrivere
+       tramite la pagina dei contatti; un termine di risposta non è promesso.»
+  a#49 applied — «Non starò rivelando la mia età…» → «Sto svelando la mia età senza volerlo?»
+  a#50 applied — «i Grandi Giudici (大法官)» → «i giudici costituzionali (大法官)».
+  a#51 applied — «si rechi alla questura con un amico di fiducia o con un avvocato» → «si rechi alla
+       polizia con una persona di fiducia o con un’avvocata o un avvocato di Taiwan (律師)» (also R4).
+  a#52 applied ×3 — «diritto dei conflitti» → «diritto internazionale privato».
+  a#53 applied — «(1.º livello)» → «(di primo livello)».
+  a#54 applied + swept — «di immediato» → «subito» (12→0).
+  a#55 applied — «in forma/in modo d’insieme» → «nel loro insieme».
+  a#56 applied in MODIFIED form (R2d, no “Italia”) — «per una famiglia legata a 2 o più Stati o
+       territori (per esempio Taiwan e un altro Paese)»; and «il figlio vivrà nella Corea» → «il
+       figlio vivrà fuori da Taiwan … il livello di vita di quel Paese».
+  a#57 applied — «vegliare a non cadere nell’intenzione della società» → «fare attenzione a non
+       cadere nel disegno della società».
+  a#58 applied — «Come indicato sopra, a Taiwan non è facile…» → «A Taiwan, in via generale, non è
+       facile…».
+  a#59 NOT APPLIED (checker constraint) — see §4.
+  a#60 applied + swept — French space before percent removed everywhere: «5 %» → «5%» (38→0); the
+       “ogni 2 mesi” wording was left as is (the checker counts that digit).
+
+it-b.md
+  b#1  applied — «le persecuzioni possano essere impegnate (告訴乃論之罪)» → «il reato di lesioni colpose
+       … è perseguibile solo a querela di parte (告訴乃論之罪)».
+  b#2  applied ×3 — «processo clinico / fascicolo clinico (病歷)» → «cartella clinica (病歷)» (003+010).
+  b#3  applied ×2 — «Qual è la postura della persona che si allena?» → «Qual era l’atteggiamento di
+       chi si allenava?» (心態).
+  b#4  applied — «sovrapposte» → «sovrascritte».
+  b#5  applied ×4 — «interpellanza» → «lettera raccomandata con certificazione del contenuto
+       (存證信函)» on first use in 010, «lettera raccomandata» in 014.
+  b#6  applied — «infrazione di lesione per imprudenza (過失傷害)» → «reato di lesioni colpose (過失傷害)»;
+       swept the whole 過失 family in 003 (lesioni colpose / lesioni colpose gravi / omicidio colposo).
+  b#7  applied — «l’approssimazione dei documenti» → «così da poter in seguito confrontare i
+       documenti tra loro».
+  b#8  applied — «ancora suscettibili di essere assicurati prima di scomparire» → «mettere al sicuro
+       i documenti che si possono ancora salvare prima che scompaiano».
+  b#9  applied + swept — «grado 1» → «primo grado» (15→0 as an instance label).
+  b#10 applied (R2) — «Anche i marchi della Corea» → «Anche un marchio straniero può rivolgersi…».
+  b#11 applied ×4 — «funzione allegata (宣稱功能)» → «funzione dichiarata (宣稱功能)».
+  b#12 applied — «sostenuto da un terzo n. 3 che riunisca la qualificazione» → «… da un terzo …».
+  b#13 applied (= a#9).      b#14 SKIPPED per ACCEPTED (Invest Taiwan link); see §5 caveat.
+  b#15 applied — «Lo sbozzo rivisto» → «La bozza rivista».
+  b#16 applied — «persona collettiva» → «persona giuridica».
+  b#17 applied — «segnali e di cessione nella stessa via» → «segnali e di precedenza nella stessa
+       corsia»; «segnale chiaro di cessione» → «segnale chiaro di via libera».
+  b#18 applied (= a#6 sweep).
+  b#19 applied ×2 — «rege» → «disciplina»; «2 requisiti» → «due requisiti».
+  b#20 applied ×7 — Spanish «alega» → «deduce».
+  b#21 applied ×3 — «d’ingresso» (d’emblée) → «in partenza» / «subito».
+  b#22 + b#23 applied ×2 (R3+R4) — «può rivolgersi in qualunque momento a un avvocato di Taiwan» →
+       «può rivolgersi a un’avvocata o a un avvocato di Taiwan tramite la pagina dei contatti,
+       tenendo presente che un termine di risposta non è promesso».
+  b#24 applied ×2 — «all’indirizzo pretenduto» → «all’indirizzo che si intende usare»; «lingua di
+       colloquio pretenduta» → «desiderata».
+  b#25 applied — «l’apprensione dei debiti» → «la ricognizione dei debiti».
+  b#26 applied (= a#13 sweep).
+  b#27 applied — «un esperto contabile (會計師)» → «un commercialista (會計師)» (and the same term used
+       in the guidance team copy).
+  b#28 applied + swept — French «affaire» → «caso / causa / procedimento / pratica» (75→0; the 24
+       remaining “affari” are the correct Italian: piano d’affari, legge sugli affari familiari,
+       affari importanti, volume d’affari, affari successori).
+  b#29 applied (= a#54).     b#30 applied — «prestatore» → «gestore del servizio».
+  b#31 applied — «rieducazione» → «riabilitazione».
+  b#32 applied — «10 anni … dal delitto» → «10 anni dal fatto illecito»; «indennizzo per delitto» →
+       «risarcimento da fatto illecito»; «responsabilità delittuale (侵權行為)» → «responsabilità da
+       fatto illecito (侵權行為)»; 003 «delitto penale di fuga» → «reato di fuga».
+  b#33 applied + swept — «a contare da» → «a decorrere da» (23→0).
+  b#34 applied + swept — the whole «in forma + adjective» family (76→0): per tempo, in concreto,
+       separatamente, automaticamente, direttamente, periodicamente, in via alternativa/definitiva/
+       ordinaria/generale, in modo chiaro/distinto/lecito/uniforme/meccanico/…, nel loro insieme,
+       a titolo universale, in parti uguali, caso per caso, sul piano materiale o giuridico.
+       Same treatment for «in separato» → «separatamente» (27→0).
+  b#35 applied — «Quali espressioni devono vigilarsi» → «Su quali espressioni occorre vigilare».
+  b#36 applied — «si devono confermare le 2, la forma solida e…» → «si devono confermare entrambe:
+       la forma solida e…».
+  b#37 applied ×2 — «in fondo, sono pubblicità» → «nella sostanza, sono pubblicità».
+  b#38 applied ×2 — «linee direttrici» → «linee guida».
+  b#39 applied in part — «A contare dal 1 luglio 2026, in principio…» → «A decorrere dal 1 luglio
+       2026, in linea di principio…» (11 «in principio» → «in linea di principio»). The “1°”
+       ordinal could not be written; see §4.
+  b#40 applied ×2 — «per saggio» → «per una prova»; also «risultati di saggio» → «risultati delle
+       prove», «laboratorio di saggio» → «laboratorio di prova» (6 more).
+  b#41 applied ×2 — «pannelli» → «cartelli» (traffic signs).
+  b#42 applied ×2 — «via di origine» → «corsia di partenza».
+  b#43 applied — «0,5 metro relativamente al veicolo» → «0,5 metri dal veicolo».
+  b#44 applied — emoji 😊 removed.
+  b#45 applied — «lasci un commento o prenda contatto» → «utilizzi la pagina dei contatti; un
+       termine di risposta non è promesso».
+  b#46 applied — «anche si deve fissare l’inizio del contratto…» → «perciò l’inizio del contratto va
+       fissato…».
+  b#47 applied — «Consiglio：» → «Consiglio:» (the only fullwidth colon in running text).
+  b#48 applied — «attori stranieri» → «soggetti stranieri».
+  b#49 applied ×7 — «dispensa/dispensare una formazione» → «eroga/erogare»; «registro reale di
+       dispensa» → «registro effettivo di erogazione».
+  b#50 applied ×4 — «consignare/consigna/consigne» → «annotare / riportare / prevedere».
+  b#51 applied — «collettività locali» → «enti locali» («Le regole degli enti locali…»).
+  b#52 applied — «Anche, nella pratica,» → «Nella pratica, peraltro,».
+  b#53 applied ×2 — «famiglia che resta» → «famiglia superstite» (title + H1).
+  b#54 applied — «al minore egli stesso» → «al minore stesso».
+  b#55 applied — «è esigita» → «è richiesta» (+ 9 more «esigito/esigita» → «richiesto/richiesta»).
+  b#56 applied ×2 — «attenzione al cliente» → «assistenza al cliente» (客戶服務).
+  b#57 applied ×2 — «consacrato/si consacra» → «dedicato/si dedica»; also 003 «consacrare un tempo
+       sufficiente» → «dedicare».
+  b#58 applied ×2 — «(連江・馬祖)» → «(連江、馬祖)».
+  b#59 applied — «captazione frequente di capitale o alla negoziazione di quote» → «frequente
+       raccolta di capitale o alla circolazione delle quote».
+  b#60 applied — «proposta di concezione contrattuale» → «solo un’ipotesi di strutturazione
+       contrattuale» (+ «materiali di concezione riservati» → «materiali progettuali riservati»,
+       «la concezione della ripartizione» → «l’assetto concreto della ripartizione»).
+
+=========================================================================
+2. SYSTEMIC SWEEPS (pattern → instances changed, all 18 columns)
+=========================================================================
+  pezzi/pezze (pièces)            → documenti / documentazione .............. 76
+  in forma + adj (stock)          → natural Italian adverbials ............... 76
+  affare/affari (affaire)         → caso / causa / procedimento / pratica .... 75
+  apprezzare/apprezzamento        → valutare / valutazione ................... 72
+  % with French space (“5 %”)     → “5%” ..................................... 38
+  in separato                     → separatamente ............................ 27
+  a contare da                    → a decorrere da ........................... 23
+  vedersi (“il faut voir”)        → esaminarsi / verificare .................. 14
+  grado 1 (1심)                    → primo grado .............................. 15
+  gruppi di lavoro (guidance)     → aree di attività ......................... 13
+  voi imperatives in 002          → Lei ...................................... 13
+  di immediato                    → subito ................................... 12
+  un 3 / un 3° / terzo n. 3       → un terzo ................................. 12
+  in principio                    → in linea di principio .................... 11
+  esigito/esigita                 → richiesto/richiesta ...................... 10
+  dispensa(re) una formazione     → erogare .................................. 10
+  pretende di / pretenduto        → intende / che si intende ................. 9
+  cerchio                         → compagine azionaria / cerchia / insieme ... 8
+  In contropartita (en contrep.)  → Per contro / invece ....................... 8
+  dossier                         → fascicolo ................................. 9
+  alega (Spanish)                 → deduce .................................... 7
+  consignare / consigna           → annotare / riportare / prevedere .......... 7
+  tale e quale / tale quale       → in modo identico / senz’altro ............. 7
+  tesoreria                       → liquidità ................................. 6
+  canale di comunicazione (P3)    → guidance + inquiry copy ................... 7
+  ponderare (pondérer)            → valutare / prendere in considerazione ..... 4
+  interpellanza (存證信函)           → lettera raccomandata …..................... 4
+  avvicinare (rapprocher)         → confrontare / verificare .................. 4
+  “Lo” courtesy pronoun (guidance)→ “lo” ...................................... 4
+  rege / sbozzo / cocontraente / persona collettiva / esperto contabile /
+    questura / collettività locali / attori stranieri / immissione /
+    contratati / 1.º / non è se non / consoli / recensiti / in scarto /
+    stima di / Grandi Giudici / diritto dei conflitti ........................ 1 each
+
+  R8 glossary unifications (one name per locale):
+    經濟部投資審議司 → “Dipartimento per l’esame degli investimenti del Ministero dell’Economia”
+      (was 3 different names in 011/013/017/018) ............................. 6
+    罰鍰 → “sanzione amministrativa pecuniaria” (was ammenda/multa/sanzione) ... 5
+    工作規則 → “regolamento interno” (014 had “regolamento di lavoro”) .......... 1
+    認證/檢認 → “autenticazione notarile” / “procedura di verifica del testamento” 3
+    緩刑 → “sospensione condizionale della pena” ............................... 2
+    分支機構 → “sede secondaria” (was “stabilimento ausiliario”) ................ 1
+    統一證號基本資料表 → “scheda di dati di base del numero unificato di identificazione” 1
+    訴訟代理人 → “l’avvocata che ha rappresentato in giudizio (訴訟代理人)” .......... 1
+  R5: “Profilo completo (English)” → “Profilo completo (in inglese)”; “(Q&A)” removed from the
+      Italian headings in 005/013 (“Le domande e risposte seguenti…”). OUR TEAM / OFFICES were
+      already ‘IL NOSTRO TEAM’ / ‘SEDI’ — no change needed.
+  R7b: bodies that opened with a bare answer under a topic heading made self-standing in
+      011 (§1, §2), 014 (§1), 016 (§3, §7) — body only; the frontmatter FAQ keeps “No.” because
+      there the question is present. Heading counts unchanged.
+  R9: 003 now says explicitly “a Taiwan, il 119 (ambulanza e vigili del fuoco); … il 110 (polizia)
+      oppure il 112 da un telefono cellulare”.
+  R2: Korea reframed as a labelled example in 001, 004 (parent company / home country), 005, 007,
+      008, 009, 011. The Korean student in 010 was kept (a fact of that case).
+  R10: Lei register is now uniform (002 was the only voi island).
+
+=========================================================================
+3. ROWS SKIPPED (with reason)
+=========================================================================
+  a#19, a#20, b#14  — links. ACCEPTED-it.md says the `/ko/…`, Hangul-slug and Invest-Taiwan links
+      were remapped mechanically; the hard rules forbid changing links. Verified: 0 `/ko/` links
+      remain in columns-it. CAVEAT: the Invest Taiwan source link in 011 still reads
+      `…showPage?lang=jpn&search=InvestmentStatus01`. I did not change it (link + ACCEPTED skip),
+      but it is still Japanese on an Italian page — flagging it for the supervisor.
+  frontmatter `url:` Hangul (001–018) — skipped per ACCEPTED (canonical source metadata).
+  a#5 (reviewer wording) — NOT applied as written: “per un investitore italiano vale di regola la
+      ritenuta interna del 21 %” invents a rule for the reader’s country and would fail the
+      checker’s `nationality` gate for `it` (terms: Italia / italiani / imprese italiane).
+      Replaced with the R2b neutral note.
+  a#22, a#56 (reviewer wording naming Italy) — same reason; neutral R2 generalization applied.
+  a#59, b#39 (ordinal “1°” in dates) — NOT APPLIED; see §4.
+  a#14 “drop the fact” variant — ACCEPTED keeps the fact; only the verb and the number format
+      were changed.
+
+=========================================================================
+4. CHECKER-FORCED DEVIATION (noted per R6 / WO §Verify)
+=========================================================================
+  a#59 / b#39 ask for the Italian ordinal in “dal 1 gennaio 2024”, “dal 1 luglio 2026”, etc.
+  Writing “1°” (or “1º”, or “primo”) breaks `checkNumbers` for `it`: the date matcher stops
+  recognising the D-month-YYYY pattern and the year is then read as two tokens.
+
+      $ node -e "extractNormalizedNumbers('dal 1 gennaio 2024.','it')"   -> [1, 1, 2024]   OK
+      $ node -e "extractNormalizedNumbers('dal 1° gennaio 2024.','it')"  -> [1, 20, 1, 24] FAIL
+      $ node -e "extractNormalizedNumbers('dal primo gennaio 2024.','it')" -> [1, 20, 24]  FAIL
+
+  With “1°” the run was `summary FAIL 14/18` (001, 004, 011, 015: “missing 2024/2025/2026,
+  extra 20/24/25/26”). Per R6 the previous form was kept for those 8 dates and the deviation is
+  recorded here. Everything else in a#44 (ISO dates → “29 maggio 2026”, “a decorrere dal 1 luglio
+  2026”) was applied and passes.
+
+=========================================================================
+5. TEST TOUCHED (allowed by the WO: a test pinning an Italian string I changed)
+=========================================================================
+  src/data/__tests__/guidance-disclosure-parity.test.ts
+    ELEMENTS['feasible-method-only'].it :  /via praticabile/  →  /praticabile/
+  Reason: sup#12 (P3, systemic) replaced “una via praticabile di comunicazione” with “un canale di
+  comunicazione praticabile”. The disclosure element itself is unchanged; only the pinned surface
+  form moved. Nothing else in tests was modified.
+
+=========================================================================
+6. §VERIFY OUTPUT (verbatim)
+=========================================================================
+$ cd /Users/son7/Projects/tseng-law-fix-i-20260921 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-it --lang it 2>&1 | tail -8
+forbidden      PASS
+hanzi          PASS   han=73
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-it src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      25
+
+(git status --short, for the record:
+ M src/content/columns-it/001..018 (18 files)
+ M src/data/__tests__/guidance-disclosure-parity.test.ts
+ M src/data/international-guidance-answers.ts
+ M src/data/international-guidance-it-nl-pl.ts
+ M src/data/international-guidance-team.ts
+ M src/data/international-inquiry-copy.ts
+ M src/lib/llms-txt.ts
+ ?? docs/i18n/global-plan/WO-F-it.txt   ← the work order itself, untracked; not created by me)
+
+=========================================================================
+7. WHERE I DISAGREED WITH THE REVIEWERS (not applied as written)
+=========================================================================
+  1. a#5 — “per un investitore italiano vale di regola la ritenuta interna del 21 %”. Wrong twice:
+     it asserts a rule about the reader’s country (forbidden by ACCEPTED and by R2d) and it is not
+     in the English source. Applied the neutral R2b note instead.
+  2. a#22 / a#56 — same problem (“non un trasferimento dall’Italia”, “per esempio Italia e Taiwan”).
+     Naming Italy also fails the checker’s `nationality` gate. Neutralized.
+  3. a#13 — “cerchia dei suoi azionisti”. For 股東 the natural Italian company-law term is
+     “compagine azionaria”; “cerchia” was kept only for eredi / convenuti.
+  4. a#34 — “Leggi di più”. Used the supervisor’s “Continua a leggere” (sup#9) instead; both are
+     tu-imperatives, the supervisor’s decision governs.
+  5. a#37 — “Di seguito, risposte a livello di indicazioni generali.” is a fragment; used the
+     supervisor’s full clause (sup#8).
+  6. b#5 — “lettera con avviso di ricevimento e contenuto certificato”. 存證信函 is not a
+     return-receipt letter; the content is what the post office certifies. Used “lettera
+     raccomandata con certificazione del contenuto”.
+  7. a-verdict praise for 007’s “rapporti personali (會面交往)” — I still changed it. R8 requires one
+     term per locale and the supervisor fixed the guidance pack to “il diritto di visita”; leaving
+     two different renderings of 會面交往 on the same site would be worse than the small loss.
+  8. a#14’s alternative (“drop the fact”) — not taken; ACCEPTED keeps the TWD 1,57 mln first-instance
+     judgment and only the presentation was fixed.
+  9. b#14 — the Invest Taiwan `lang=jpn` link is genuinely still wrong, but changing links is
+     outside the hard rules and ACCEPTED marks the row as already fixed. Left untouched and
+     escalated in §3.

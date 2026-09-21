@@ -492,16 +492,16 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'IL NOSTRO TEAM',
     title: 'Team internazionale di Hovering',
     description:
-      'Profili delle avvocate e degli avvocati, della direzione operativa e della revisione associata di Hovering.',
+      'Profili delle avvocate e degli avvocati, del responsabile operativo e del commercialista partner di Hovering.',
     representativeTitle: 'Avvocata dirigente',
     teamTitle: 'Avvocate, avvocati e collaboratori',
-    partnerTitle: 'Revisione associata',
+    partnerTitle: 'Commercialista partner',
     introLabel: 'Presentazione',
     educationLabel: 'Formazione',
     experienceLabel: 'Esperienza',
     photoAltPrefix: 'Foto',
     workingLanguagesLabel: 'Lingue di lavoro',
-    fullProfileLabel: 'Profilo completo (English)',
+    fullProfileLabel: 'Profilo completo (in inglese)',
     keyFactsHeading: 'Avvocata Wei Tseng — Dati essenziali',
     qualificationLabel: 'Qualifica e studio',
     qualificationSentence:
@@ -512,8 +512,8 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'tseng-junwei': 'Avvocata dirigente a Taiwan (Managing Attorney)',
       'chang-rongxuan': 'Avvocato a Taiwan (Taiwan Attorney)',
       'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Direzione operativa Corea (Korea Operations Manager)',
-      'huang-shengping': 'Revisore associato (Partner CPA)',
+      'son-jungmin': 'Responsabile operativo Corea (Korea Operations Manager)',
+      'huang-shengping': 'Dottore commercialista partner (Partner CPA)',
     },
   },
   nl: {
@@ -1987,7 +1987,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Lo studio tratta questioni di imprese e di privati a Taiwan in inglese, giapponese, coreano e cinese.',
-        'Ha rappresentato uno studente coreano in una domanda di risarcimento per una lesione in una palestra e ha ottenuto una sentenza di primo grado di TWD 1.57M.',
+        'Ha seguito in primo grado la domanda di risarcimento di uno studente coreano per una lesione in palestra, definita con una sentenza di 1,57 milioni di TWD.',
       ],
       education: [
         'Master (M.S.), Institute of Finance, National Taiwan University',
@@ -2025,15 +2025,15 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Coordina gli appuntamenti di consulenza e la comunicazione per i clienti dalla Corea.',
-        'Sostiene lo scambio tra le aree tramite sistemi documentali e flussi di lavoro, sulla base dell’informatica.',
+        'Facilita lo scambio tra le due aree tramite sistemi documentali e flussi di lavoro, sulla base dell’informatica.',
       ],
       education: ['Laurea (B.S.) in informatica, National Cheng Kung University'],
       experience: ['Area operazioni Corea, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'Ha concluso i programmi di laurea e master in contabilità alla National Chengchi University e dirige attualmente uno studio di revisione.',
-        'Sostiene l’analisi integrata dei rischi giuridici, fiscali e finanziari per i clienti d’impresa.',
+        'Ha concluso i programmi di laurea e master in contabilità alla National Chengchi University e dirige attualmente uno studio di dottori commercialisti.',
+        'Contribuisce all’analisi integrata dei rischi giuridici, fiscali e finanziari per i clienti d’impresa.',
       ],
       education: [
         'Master (M.A.) in contabilità, National Chengchi University',

@@ -19,17 +19,17 @@ e le domande formulate di frequente al momento della costituzione sono riunite d
 
 Chi ha letto [**i fondamenti della costituzione di società**](/it/columns/taiwan-company-establishment-basics) può in seguito fare riferimento anche a questa parte approfondita più dettagliata.
 
-Le domande e risposte (Q&A) seguenti mirano ad aiutare le persone che valutano di costituire una società a Taiwan. 😊
+Le domande e risposte seguenti mirano ad aiutare le persone che valutano di costituire una società a Taiwan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
 **1. Intendo costituire una società, ma non ho ancora trovato un indirizzo di iscrizione. La costituzione è comunque possibile?**
 
-Quando uno straniero costituisce una società a Taiwan, deve presentare un piano di investimento (投資計畫書) al Dipartimento di esame degli investimenti del Ministero dell’Economia (經濟部投資審議司) per l’esame.
+Quando uno straniero costituisce una società a Taiwan, deve presentare un piano di investimento (投資計畫書) al Dipartimento per l’esame degli investimenti del Ministero dell’Economia (經濟部投資審議司) per l’esame.
 
 Il Dipartimento di esame degli investimenti deve verificare se il capitale (資本額) in questione è realmente utilizzato a fini di investimento
 
-e se attori stranieri non introducono fondi con un altro pretesto.
+e se soggetti stranieri non introducono fondi con un altro pretesto.
 
 Nella redazione del piano di investimento, non è necessario indicare l’indirizzo esatto della società; l’indicazione della regione basta (esempio: città di Taipei). ​
 
@@ -37,19 +37,19 @@ Quando più tardi il conto preparatorio della società (公司籌備處帳戶) �
 
 Un’impiegata o un impiegato di una banca taiwanese mi ha detto di persona che
 
-numerosi stranieri scompaiono di recente dopo l’apertura del conto, di modo che l’apertura dei conti è trattata in forma sempre più rigorosa.
+numerosi stranieri scompaiono di recente dopo l’apertura del conto, di modo che l’apertura dei conti è trattata in modo sempre più rigoroso.
 
 Già nella parte fondamentale, una lettrice o un lettore ha indicato che l’apertura del conto era la tappa più difficile; concordo.
 
 Poiché i casi di riciclaggio di capitali (洗錢) sono molto numerosi a Taiwan, l’apertura dei conti bancari diventa sempre più rigorosa.
 
-**Consiglio**：
+**Consiglio**:
 
 Poiché l’esame del piano di investimento richiede anche tempo,
 
 conviene redigere il piano di investimento e cercare l’indirizzo di iscrizione della società allo stesso tempo.
 
-Secondo l’articolo 9 dello Statuto dell’investimento degli stranieri (外國人投資條例), l’apporto approvato deve arrivare per intero nel termine fissato dall’autorità competente (核定期限); il termine deve confermarsi nell’atto di approvazione di ciascun affare (nella pratica, è di frequente fissato intorno a 1 anno).
+Secondo l’articolo 9 dello Statuto dell’investimento degli stranieri (外國人投資條例), l’apporto approvato deve arrivare per intero nel termine fissato dall’autorità competente (核定期限); il termine deve confermarsi nell’atto di approvazione di ciascun caso (nella pratica, è di frequente fissato intorno a 1 anno).
 
 In questo termine, una volta trovato l’indirizzo della società e firmato il contratto di locazione,
 
@@ -63,7 +63,7 @@ resta tempo sufficiente per aprire in banca il conto preparatorio e trasferire i
 
 La banca esige in generale una doppia verifica di identità,
 
-e senza carta di soggiorno, si può chiedere presso l’amministrazione dell’immigrazione di Taiwan il «**foglio di dati di base**» (統一證號基本資料表).
+e senza carta di soggiorno, si può chiedere presso l’amministrazione dell’immigrazione di Taiwan la «**scheda di dati di base del numero unificato di identificazione**» (統一證號基本資料表).
 
 Il rilascio è possibile nello stesso giorno,
 
@@ -81,7 +81,7 @@ Si possono menzionare esperienze professionali varie, compreso il lavoro a tempo
 
 ed esporle in dettaglio in modo da poter convincere le persone incaricate dell’esame.
 
-Su questo punto, conviene scambiare in forma approfondita con un’avvocata o un avvocato di Taiwan.
+Su questo punto, conviene scambiare in modo approfondito con un’avvocata o un avvocato di Taiwan.
 
 ​
 
@@ -89,7 +89,7 @@ Su questo punto, conviene scambiare in forma approfondita con un’avvocata o un
 
 La costituzione della società dura circa **3 mesi**, l’ottenimento dell’autorizzazione di lavoro (工作許可) e della carta di soggiorno circa **1 mese**,
 
-anche si deve fissare l’inizio del contratto il più tardi possibile.
+perciò l’inizio del contratto va fissato il più tardi possibile.
 
 Inoltre, nei contratti di locazione di locali commerciali a Taiwan, il locatore concede di frequente al locatario un «**periodo di allestimento**» (裝潢期間).
 
@@ -101,7 +101,7 @@ i locatori esitano quindi a locare a stranieri.
 
 È per questo che raccomando di cercare il locale di esercizio presto.
 
-Se la negoziazione con il locatore non si svolge in forma fluida,
+Se la negoziazione con il locatore non si svolge senza intoppi,
 
 si può, se del caso, proporre l’autenticazione del contratto di locazione (公證) o un deposito cauzionale supplementare.
 
@@ -123,7 +123,7 @@ Es.) Se si tratta di rami di attività possibili in un locale commerciale di uff
 
 conviene verificarlo in anticipo.
 
-*Se ha bisogno di aiuto o di uno scambio sul diritto di Taiwan, lasci un commento o prenda contatto.*
+*Se ha bisogno di aiuto sul diritto di Taiwan, utilizzi la pagina dei contatti; un termine di risposta non è promesso.*
 
 ---
 

@@ -39,7 +39,7 @@ describe('ar routing tier', () => {
   it('has flipped ar into the content tier and emptied the routing-only tier', () => {
     expect(ROUTED_ONLY_LOCALES).toEqual([]);
     expect(ROUTED_PUBLIC_LOCALES).toEqual([...PUBLIC_LOCALES_8]);
-    expect(RTL_PUBLIC_LOCALES).toEqual(['ar', 'he']);
+    expect(RTL_PUBLIC_LOCALES).toEqual(['ar', 'he', 'ur', 'fa']);
     // Content tier now carries ar.
     expect(PUBLIC_LOCALES_8).toContain('ar');
     expect(GUIDANCE_LOCALES_4).toContain('ar');
@@ -107,8 +107,8 @@ describe('ar routing tier', () => {
   it('binds an Arabic font stack and ships the generated RTL mirrors', () => {
     const css = read('src/app/globals.css');
     expect(css).toMatch(/--font-body-ar:\s*var\(--font-noto-sans-arabic-loaded, 'Noto Sans Arabic'\)/);
-    expect(css).toMatch(/html\[lang='ar'\] \{[^}]*--font-body:\s*var\(--font-body-ar\)/);
-    expect(css).toMatch(/\.site\[data-locale='ar'\] \{[^}]*--font-body:\s*var\(--font-body-ar\)/);
+    expect(css).toMatch(/html\[lang='ar'\](?:,\s*html\[lang='[a-z]+'\])* \{[^}]*--font-body:\s*var\(--font-body-ar\)/);
+    expect(css).toMatch(/\.site\[data-locale='ar'\](?:,\s*\.site\[data-locale='[a-z]+'\])* \{[^}]*--font-body:\s*var\(--font-body-ar\)/);
     const rtlBlock = css.slice(css.indexOf("RTL — html[dir='rtl']"));
     expect(rtlBlock.length).toBeGreaterThan(0);
     // Public chrome the guidance pages render must have mirrors…

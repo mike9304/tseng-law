@@ -18,6 +18,10 @@ vi.mock('next/font/google', () => {
     Noto_Sans_Arabic: font,
     Noto_Sans_Devanagari: font,
     Noto_Sans_Hebrew: font,
+    Noto_Sans_Bengali: font,
+    Noto_Sans_Tamil: font,
+    Noto_Sans_Myanmar: font,
+    Noto_Sans_Khmer: font,
     Noto_Sans: font,
     Noto_Serif_KR: font,
     Noto_Serif_JP: font,
@@ -147,7 +151,7 @@ describe('guidance font payload for eight document languages', () => {
       '--font-noto-sans-arabic-loaded',
       '--font-noto-sans-devanagari-loaded',
     ]));
-    expect(managed).toHaveLength(13);
+    expect(managed).toHaveLength(17);
 
     const documentLanguages = ['ko', 'zh-Hant', 'en', 'ja', 'vi', 'id', 'th', 'fil', 'de', 'es', 'fr', 'pt', 'zh-Hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'sv', 'da', 'nb', 'fi'] as const;
     expect(documentLanguages).toHaveLength(23);

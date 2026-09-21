@@ -17,6 +17,10 @@ const fontLoaders = vi.hoisted(() => {
     Noto_Sans_Arabic: createFontLoader(),
     Noto_Sans_Devanagari: createFontLoader(),
     Noto_Sans_Hebrew: createFontLoader(),
+    Noto_Sans_Bengali: createFontLoader(),
+    Noto_Sans_Tamil: createFontLoader(),
+    Noto_Sans_Myanmar: createFontLoader(),
+    Noto_Sans_Khmer: createFontLoader(),
     Noto_Sans: createFontLoader(),
     Noto_Serif_KR: createFontLoader(),
     Noto_Serif_JP: createFontLoader(),
@@ -74,8 +78,8 @@ describe('locale font configuration', () => {
       '--font-noto-sans-jp-loaded',
       '--font-noto-serif-jp-loaded',
     ]));
-    expect(managed).toHaveLength(13);
-    expect(new Set(managed).size).toBe(13);
+    expect(managed).toHaveLength(17) // + Bengali, Tamil, Myanmar, Khmer (2026-09-22);
+    expect(new Set(managed).size).toBe(17);
     for (const locale of ['ko', 'en', 'zh-Hant', 'ja'] as const) {
       for (const fontClass of getLocaleFontClassName(locale).split(' ')) {
         expect(managed).toContain(fontClass);

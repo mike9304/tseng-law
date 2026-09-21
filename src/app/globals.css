@@ -228,7 +228,18 @@ html[lang='cs'],
 html[lang='hu'],
 html[lang='ro'],
 html[lang='uk'],
-html[lang='el'] {
+html[lang='el'],
+html[lang='mn'],
+html[lang='sk'],
+html[lang='bg'],
+html[lang='hr'],
+html[lang='sr'],
+html[lang='sl'],
+html[lang='lt'],
+html[lang='lv'],
+html[lang='et'],
+html[lang='ca'],
+html[lang='is'] {
   --font-body: var(--font-body-latin);
   --font-sans: var(--font-body-latin);
   --font-heading: var(--font-heading-latin);
@@ -714,7 +725,18 @@ li,
 .site[data-locale='hu'],
 .site[data-locale='ro'],
 .site[data-locale='uk'],
-.site[data-locale='el'] {
+.site[data-locale='el'],
+.site[data-locale='mn'],
+.site[data-locale='sk'],
+.site[data-locale='bg'],
+.site[data-locale='hr'],
+.site[data-locale='sr'],
+.site[data-locale='sl'],
+.site[data-locale='lt'],
+.site[data-locale='lv'],
+.site[data-locale='et'],
+.site[data-locale='ca'],
+.site[data-locale='is'] {
   --font-body: var(--font-body-latin);
   --font-sans: var(--font-body-latin);
   --font-display: var(--font-heading-latin);

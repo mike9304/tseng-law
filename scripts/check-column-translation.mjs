@@ -638,14 +638,17 @@ function compilePhrases(entries) {
     seen.add(entry.phrase);
     const escaped = entry.phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+');
     const thai = /[\u0E00-\u0E7F]/.test(entry.phrase);
-    const arabic = /[\u0600-\u06FF]/.test(entry.phrase);
+    // JS `\b` is ASCII-only: it never forms a boundary next to Arabic, Cyrillic,
+    // Greek, Hebrew or Devanagari letters, so `\b…\b` silently matches nothing
+    // in those scripts and their word numerals went uncounted. Bound them by a
+    // letter/mark edge instead, as the Arabic branch already did.
+    const nonLatinScript = /[\u0600-\u06FF\u0400-\u04FF\u0370-\u03FF\u0590-\u05FF\u0900-\u097F]/.test(entry.phrase);
     let re;
     if (thai) {
       re = new RegExp(escaped, 'gu');
-    } else if (arabic) {
-      // JS \b is ASCII-only. Bound Arabic spellings by a letter/mark edge
-      // (space, punctuation, start/end) so عشر does not fire inside عشرون
-      // and ربع does not fire inside أربعة.
+    } else if (nonLatinScript) {
+      // Keeps عشر from firing inside عشرون and ربع inside أربعة, and does the
+      // same for Cyrillic/Greek/Hebrew/Devanagari spellings.
       re = new RegExp(`(?<![\\p{L}\\p{M}])${escaped}(?![\\p{L}\\p{M}])`, 'gu');
     } else {
       re = new RegExp(`\\b${escaped}\\b`, 'giu');
@@ -1229,6 +1232,13 @@ function buildMsLexicon() {
 
 function buildRuLexicon() {
   const entries = [];
+  // Fractions the Korean source writes as digits (3분의 1). German carries the
+  // same pair as 'ein Drittel'; Russian declines the numeral, so both the
+  // accusative and the bare noun are listed.
+  pushPhrase(entries, 'две трети', [2, 3]);
+  pushPhrase(entries, 'одну треть', [1, 3]);
+  pushPhrase(entries, 'одной трети', [1, 3]);
+  pushPhrase(entries, 'треть', [1, 3]);
   const units = ['год', 'года', 'лет', 'месяц', 'месяца', 'день', 'дня', 'дней', 'неделя', 'недели'];
   const scales = [['миллиард', 1_000_000_000], ['миллиона', 1_000_000], ['миллион', 1_000_000], ['тысяч', 1_000], ['тысяча', 1_000]];
   const atoms = [

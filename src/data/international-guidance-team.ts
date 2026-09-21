@@ -576,16 +576,16 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'हमारी टीम',
     title: 'Hovering की अंतरराष्ट्रीय टीम',
     description:
-      'Hovering के अधिवक्ताओं, संचालन प्रबंधन और सहभागी लेखा परीक्षा की प्रोफ़ाइलें।',
+      'Hovering के अधिवक्ताओं, संचालन प्रबंधन और साझेदार लेखाकार की प्रोफ़ाइलें।',
     representativeTitle: 'प्रबंध अधिवक्ता',
     teamTitle: 'अधिवक्ता और सहयोगी',
-    partnerTitle: 'सहभागी लेखा परीक्षा',
+    partnerTitle: 'साझेदार लेखाकार',
     introLabel: 'परिचय',
     educationLabel: 'शिक्षा',
     experienceLabel: 'अनुभव',
     photoAltPrefix: 'फ़ोटो',
     workingLanguagesLabel: 'कार्य भाषाएँ',
-    fullProfileLabel: 'पूर्ण प्रोफ़ाइल (English)',
+    fullProfileLabel: 'पूर्ण प्रोफ़ाइल (अंग्रेज़ी में)',
     keyFactsHeading: 'अधिवक्ता Wei Tseng — मुख्य तथ्य',
     qualificationLabel: 'योग्यता और कार्यालय',
     qualificationSentence:
@@ -597,7 +597,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'chang-rongxuan': 'ताइवान अधिवक्ता (Taiwan Attorney)',
       'chang-fangyu': 'Paralegal',
       'son-jungmin': 'कोरिया संचालन प्रबंधन (Korea Operations Manager)',
-      'huang-shengping': 'सहभागी लेखाकार (Partner CPA)',
+      'huang-shengping': 'साझेदार लेखाकार (Partner CPA)',
     },
   },
   sv: {
@@ -1073,7 +1073,7 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Taiwan company setup': 'ताइवान में कंपनी स्थापना',
     'Taiwan investment counsel': 'ताइवान निवेश के लिए कानूनी सलाह',
     'Civil litigation and damages': 'दीवानी मुकदमे और हर्जाना',
-    'Trademark and patent filings': 'चिह्न और पेटेंट आवेदन',
+    'Trademark and patent filings': 'व्यापार चिह्न और पेटेंट आवेदन',
     'Visa and residency': 'वीज़ा और निवास',
     'Family and labor disputes': 'परिवार और श्रम विवाद',
   },
@@ -2164,7 +2164,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'कार्यालय ताइवान में उद्यमों और व्यक्तियों के मामलों का अंग्रेज़ी, जापानी, कोरियाई और चीनी में कार्य करता है।',
-        'उन्होंने एक कोरियाई छात्र का व्यायामशाला में चोट के हर्जाने के दावे में प्रतिनिधित्व किया और प्रथम न्यायाधीश में TWD 1.57M का निर्णय प्राप्त किया।',
+        'उन्होंने जिम में लगी चोट के हर्जाने के एक दावे में कोरियाई छात्र का प्रतिनिधित्व किया और प्रथम दृष्टया न्यायालय (निचली अदालत) से TWD 1,570,000 का निर्णय दिलाया।',
       ],
       education: [
         'स्नातकोत्तर (M.S.), Institute of Finance, National Taiwan University',

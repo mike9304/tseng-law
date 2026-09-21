@@ -1,0 +1,247 @@
+WO-F-hi — Hindi native-quality fix lane (Opus 5), 2026-09-21
+Workspace: /Users/son7/Projects/tseng-law-fix-b-20260921 (no git add/commit/push performed)
+
+================================================================
+§1. ROWS APPLIED
+================================================================
+
+hi-a.md (guidance pack + columns 001–009)
+  a#1  P1 F  003 masculine first person → feminine ("सलाह नहीं देती")            APPLIED
+  a#2  P1 F  008 "चाहता हूँ" → "चाहती हूँ" (+ "समेट देती हूँ", "बताती हूँ")       APPLIED
+  a#3  P1 F  006 "बता रहा?" → "बता रही?"                                          APPLIED
+  a#4  P1 F  008/009 "कोरियाई बोल सकने वाले … अधिवक्ता"                           N/A — string no longer present (R1 relabelled); verified by grep
+  a#5  P1 A  team bio "प्रथम न्यायाधीश … TWD 1.57M" → "प्रथम दृष्टया न्यायालय
+              (निचली अदालत) से TWD 1,570,000 का निर्णय दिलाया"                    APPLIED (digits kept per ACCEPTED a#5)
+  a#6  P1 A  003 "मध्य राष्ट्र दंड संहिता" → "ताइवान दंड संहिता (中華民國刑法)" ×4 APPLIED
+  a#7  P1 A  003 "सुनवाई 2 / सुनवाई 1" → "अपील न्यायालय / निचली अदालत"            APPLIED
+  a#8  P1 A  001 country-specific note added to the Taiwan–Korea treaty para      APPLIED (matches EN L45)
+  a#9  P1 D  004 "कोरियाई मूल कंपनी" as the default reader                        N/A — already generalized ("विदेश स्थित मूल कंपनी"); verified
+  a#10 P1 D  005 Korean FX/bank Q&A                                               ALREADY LABELLED ("यह बिंदु कोरियाई व्यवस्था … से संबंधित है"); guillemets + hiring FAQ fixed
+  a#11 P1 D  007 "संतान कोरिया में रहेगी" → "संतान ताइवान से बाहर रहेगी …
+              उस देश का जीवन-लागत स्तर"                                            APPLIED (neutral per ACCEPTED a#9–a#12, no भारत)
+  a#12 P1 D  008/009 "कोरिया से भिन्न" → "कई देशों में, उदाहरण के लिए कोरिया में" APPLIED (R2c)
+  a#13 P1 A  006 "महा-न्यायाधीशों (大法官)" → "संविधान न्यायालय के न्यायाधीशों"    APPLIED
+  a#14 P1 E  003 "न्यायालय वर्तमान में लगभग 3 माह का दंड देते हैं" → "कुछ निर्णयों
+              में … दिया गया है; यह कोई निश्चित या सामान्य परिणाम नहीं है"        APPLIED (also the 4 माह / 6 माह sentence)
+  a#15 P1 E  003 "सशर्त निलंबन हो सकता है और कारागार न जाना पड़े" → "कुछ मामलों
+              में दंडादेश का निलंबन (緩刑) संभव … यह कोई वादा नहीं है"             APPLIED
+  a#16 P1 A  001 garbled minimum-capital rule                                     APPLIED (frontmatter + body)
+  a#17 P1 G  /ko/ links                                                           SKIPPED per ACCEPTED (R1 done); verified 0 "/ko/" in columns-hi
+  a#18 P1 G  005 Hangul slug in wei-wei-lawyer.com body link                      SKIPPED per ACCEPTED (source parity; links check would fail)
+  a#19 P2 B  "ताइवान के विधि" (gender) → "ताइवान के कानून" (12 in asia.ts + 1 in
+              answers.ts) and "श्रम विधि" → "श्रम कानून"                           APPLIED
+  a#20 P2 B  French guillemets → Hindi “ ”                                        APPLIED (pack + all columns, see §2)
+  a#21 P2 B  हिन्दी / हिंदी                                                       APPLIED PER ACCEPTED (prose = हिंदी; autonym हिन्दी kept in languageName / picker); reviewer's direction inverted by supervisor
+  a#22 P2 B  "पुष्टि होता है" → "पुष्ट होता है" (answers.ts ×2, 016 ×1)           APPLIED
+  a#23 P2 B  "नई संपर्क में" → "नए संपर्क में"                                    APPLIED
+  a#24 P2 B  "की स्वयं की विधिक व्यक्तित्व" → "का स्वयं का … व्यक्तित्व नहीं
+              होता" (001 ×2, 004 table ×2)                                        APPLIED
+  a#25 P2 C  "यह हिन्दी भाग" → "ये हिंदी पृष्ठ … मदद करते हैं"                    APPLIED (3 places)
+  a#26 P2 C  home intro "साथ देती है" calque → "… मामलों में … सहायता करती है"    APPLIED
+  a#27 P2 C  जालस्थल → वेबसाइट                                                    APPLIED
+  a#28 P2 C  privacy आँकड़े → जानकारी / व्यक्तिगत डेटा (10 strings)               APPLIED
+  a#29 P2 C  "गैर-सार्वजनिक वस्तु संग्रह" → "गैर-सार्वजनिक भंडारण"               APPLIED
+  a#30 P2 C  "ये निर्देश हिंदी में" → "ये पृष्ठ हिंदी में" (FAQ + llms.txt)       APPLIED
+  a#31 P2 C  "कार्य-समूहों का कार्य करता है" → "कार्य-क्षेत्रों में सेवा देता है" APPLIED (mega + answers.services)
+  a#32 P2 A  चिह्न → व्यापार चिह्न (商標) — home item, services, about,
+              practice-area name                                                  APPLIED (4)
+  a#33 P2 C  未成年子女權利義務之行使或負擔 → "नाबालिग बच्चों/संतान की अभिरक्षा तथा
+              अभिभावकीय अधिकार और कर्तव्य"                                        APPLIED (pack + 007 ×3)
+  a#34 P2 C  Partner CPA: one term "साझेदार लेखाकार" (team label/title/role,
+              lawyers page, answers)                                              APPLIED (5)
+  a#35 P2 C  मानदेय → अधिवक्ता शुल्क                                              APPLIED
+  a#36 P2 C  nav.home होम → मुखपृष्ठ; nav.faq प्रश्न → सामान्य प्रश्न;
+              nav.about कार्यालय → हमारे बारे में (+ matching eyebrows)           APPLIED (nav-length test still passes, both = 14 chars)
+  a#37 P2 C  第三人 "3 पक्ष" → "तृतीय पक्ष"; "3 देश" → "तीसरे देश"                APPLIED (see §2)
+  a#38 P2 C  "सिविल कोड" → "सिविल संहिता"                                         APPLIED (007 ×22, 010 ×1; 0 left)
+  a#39 P2 A  會面交往 → "मुलाक़ात और संपर्क का अधिकार"                             APPLIED (pack + 007 ×2)
+  a#40 P2 D  007 "वर्ष 112" → "वर्ष 112 (ई. 2023)" in the body                    APPLIED (link labels left alone to limit extra numerals)
+  a#41 P2 D  TWD 1.57M → Indian grouping                                          PARTIAL — "TWD 1,570,000" per ACCEPTED a#5; NO लाख/crore regrouping
+  a#42 P2 G  "Taipei नगर" → "ताइपेई नगर"                                          APPLIED ×2
+  a#43 P2 G  008 title/H1 fullwidth "：" and "??" → ":" and "?"                   APPLIED (frontmatter `url` untouched)
+  a#44 P2 D  003 emergency numbers rewritten with "ताइवान में: 119 (एम्बुलेंस और
+              अग्निशमन) … 110 (पुलिस) … मोबाइल से 112"                            APPLIED (R9; no country claim about the reader's own country)
+  a#45 P2 D  003/005/008/009 "Korean-speaking lawyer" CTA                         N/A — not present any more (verified)
+  a#46 P2 C  bare 負責人 calque "उत्तरदायी"/"जिम्मेदार" → "प्रभारी व्यक्ति /
+              प्रभारी अधिकारी (負責人)"                                            APPLIED (001 ×2, 002 ×3, 004 ×6, 005 ×1, 017 ×1, 018 ×1)
+  a#47 P2 C  003 broken "if investigation or trial is already pending" calque     APPLIED
+  a#48 P2 C  002 "1 बार में 1 वर्ष"                                               PARTIAL — "1 माह" → "एक माह" applied; the 1회 digit had to stay (see §4)
+  a#49 P2 C  व्यायामशाला → जिम (team bio)                                         APPLIED
+  a#50 P2 C  008 "सर्वोच्च परिणाम वाले" → "ऊँची बिक्री वाले / ऊँचे निष्पादन वाले" APPLIED ×2
+  a#51 P2 B  आंक → आँक                                                            APPLIED (007 ×6, 010 ×7, 011 ×6, 012 ×9)
+  a#52 P2 C  005 guillemets + Korean-FX labelling                                 APPLIED
+  a#53 P2 C  006 Korea comparison framed as a labelled example                    APPLIED
+  a#54 P2 A  慰撫金 "नैतिक क्षतिपूर्ति" → "मानसिक पीड़ा की सांत्वना राशि";
+              "नैतिक क्षति" → "मानसिक पीड़ा की क्षतिपूर्ति"                        APPLIED ×4
+
+hi-b.md (columns 010–018)
+  b#1  P1 F  010 "था" → "थी"; 訴訟代理人 → "अधिवक्ता"                              APPLIED
+  b#2  P1 A  010 "1 सुनवाई / 2 सुनवाई" → "प्रथम दृष्टया (निचली अदालत) / अपील
+              न्यायालय" — title, H1, body, image alts and link labels             APPLIED ×18
+  b#3  P1 A  010 就醫交通費 → "चिकित्सा हेतु आने-जाने का व्यय"; 看護費用 →
+              "परिचर्या व्यय"                                                     APPLIED
+  b#4  P1 A  013 統一證號基本資料表 → "एकीकृत पहचान संख्या का मूल विवरण प्रपत्र"   APPLIED
+  b#5  P1 A  017 रसद → लॉजिस्टिक्स everywhere incl. title (slug/url untouched)    APPLIED ×13
+  b#6  P1 A  股東 साझेदार → शेयरधारक                                              APPLIED (002 ×52, 018 ×9; 001 ×5 separately)
+  b#7  P1 A  018 監察人 लेखापरीक्षक → पर्यवेक्षक (監察人)                          APPLIED ×2
+  b#8  P1 A  經濟部投資審議司 — one name: "आर्थिक मंत्रालय का निवेश समीक्षा विभाग" APPLIED (001, 011, 013, 017, 018)
+  b#9  P1 E  013/015 CTA: comments + "किसी भी समय" → contact page, four
+              consultation languages named, no reply-time promised                APPLIED (also 005)
+  b#10 P1 G  011 Invest Taiwan lang=jpn                                           SKIPPED per ACCEPTED (source href parity; links check would fail)
+  b#11 P2 A  016 "अवयस्क संरक्षण" → "अवयस्क की संरक्षकता (未成年人監護)"           APPLIED ×5
+  b#12 P2 A  पंचांग → समय-सारणी                                                   APPLIED (014 ×3, 016 ×2)
+  b#13 P2 A  010 提供時 "प्रस्तुति के समय" → "सेवा देते समय"                       APPLIED
+  b#14 P2 A  018 orphan sentence → "ऊपर दी गई बातें पंजीकरण-मार्गों की सामान्य
+              रूपरेखा हैं …"                                                      APPLIED
+  b#15 P2 A  016 लेन (債權) → "प्राप्य राशियाँ / दावे"                             APPLIED ×3
+  b#16 P2 B  012 doubled "पहले पहले"                                              APPLIED
+  b#17 P2 B  016 missing spaces (किंतुआरंभ, काआरंभ)                               APPLIED ×2
+  b#18 P2 B  016 "पुष्टि होता" → "पुष्ट होता"                                     APPLIED
+  b#19 P2 B  011 broken "including where it also acts as sales agent" calque      APPLIED ×2
+  b#20 P2 B  014 "अनुच्छेद 15-1 2 वैधानिक शर्तों" → "… दो वैधानिक शर्तों"         APPLIED
+  b#21 P2 B  014 "उठाना वाला" → "उठाया जाने वाला"                                 APPLIED
+  b#22 P2 B  guillemets in 013–018                                                APPLIED (see §2)
+  b#23 P2 B  013 fullwidth "**सलाह**：" → "**सलाह:**"                             APPLIED
+  b#24 P2 C  010 "सिविल कोड" → "सिविल संहिता"                                     APPLIED
+  b#25 P2 C  010 "अ-संपत्ति क्षति" → "गैर-धन संबंधी क्षति (非財產上損害)"          APPLIED ×2
+  b#26 P2 C  011 "दावित कार्य" → "दावा किए गए प्रभाव (宣稱功能)"                   APPLIED ×4
+  b#27 P2 C  第三人 in 011/014/016/017                                            APPLIED ×6
+  b#28 P2 C  012 "2 या अधिक वाहन" → "दो या अधिक"; "हॉर्न 2 बार" → "हॉर्न दो बार"  APPLIED; "हेडलाइट 1 बार" and "वाहन संख्या 1/2" kept (see §4)
+  b#29 P2 C  013 "प्रश्न-उत्तर (Q&A) … 😊" → "प्रश्न और उत्तर", emoji removed     APPLIED (also 005, 003 title)
+  b#30 P2 C  013/015 "उदा.)" → "उदाहरण:"; भोजनालय → रेस्तराँ                      APPLIED (013 ×4, 015 ×6)
+  b#31 P2 C  013 "सजावट अवधि" → "फिट-आउट (साज-सज्जा) अवधि (裝潢期間)"              APPLIED
+  b#32 P2 C  014 "हस्ताक्षर राशि" → "साइन-ऑन राशि (簽約金)"                        APPLIED ×7
+  b#33 P2 C  016 "माता-पिता अधिकार के अधिकार और दायित्व" → "माता-पिता के अधिकार
+              और कर्तव्य" (+ heading glossed 親權)                                 APPLIED ×7
+  b#34 P2 C  016 "वैधानिक उत्तराधिकार के क्रम 1"                                  PARTIAL — reworded to "… के क्रम 1 में आते हैं"; the digit had to stay (see §4)
+  b#35 P2 C  016 "विवाह के दौरान जन्मे ऋण" → "… लिए गए ऋण"                        APPLIED
+  b#36 P2 C  017 "शाखा संघ (同業公會)" → "व्यापार संघ"                             APPLIED ×7
+  b#37 P2 C  017 "ग्राहक ध्यान" → "ग्राहक सेवा"                                   APPLIED ×2
+  b#38 P2 C  018 "ताइवान जिम्मेदार" → "ताइवान स्थित प्रभारी व्यक्ति (負責人)"      APPLIED
+  b#39 P2 C  018 "वांछित बातचीत की भाषा" → "वांछित परामर्श भाषा (अंग्रेज़ी, चीनी,
+              जापानी या कोरियाई)"                                                 APPLIED
+  b#40 P2 C  018 title/H1 word order "अर्धचालक घटक बेचने वाली विदेशी कंपनियाँ"    APPLIED ×2
+  b#41 P2 C  010 存證信函 → "विषय-प्रमाणित पत्र"; 律師函 → "अधिवक्ता-पत्र"          APPLIED
+  b#42 P2 C  016 剩餘財產差額分配 → "पति-पत्नी की अधिशेष संपत्ति के अंतर का
+              वितरण अधिकार"                                                       APPLIED ×4
+  b#43 P2 D  010 TWD 1,579,589 → Indian grouping                                  SKIPPED per ACCEPTED (no lakh/crore regrouping)
+  b#44 P2 D  010 "वर्ष 109" → "वर्ष 109 (ई. 2020)"                                APPLIED
+  b#45 P2 D  012 Taiwan drives on the right — sentence added                      APPLIED (without naming the reader's own country, per ACCEPTED)
+  b#46 P2 D  017 TWD 25,000,000 grouping                                          SKIPPED per ACCEPTED
+  b#47 P2 D  018 TWD 30,000,000 / 100,000,000 grouping                            SKIPPED per ACCEPTED
+  b#48 P2 G  013 Latin "Q&A"                                                      APPLIED (013, 005, 003 title/H1)
+  b#49 P2 C  015 "भवन पंजीकरण प्रकार 2 उद्धरण" → "भवन पंजी की श्रेणी 2 की
+              प्रमाणित प्रति (建物登記第二類謄本)"                                  APPLIED (digit kept, see §4)
+  b#50 P2 C  018 "संगम-ज्ञापन" → "अंतर्नियम (章程)"                                APPLIED ×3
+
+================================================================
+§2. SYSTEMIC SWEEPS (pattern → instances changed)
+================================================================
+  French guillemets « » → Hindi “ ”                     → 36 in columns + 7 in the guidance pack (0 left)
+  Straight " introduced by that sweep → curly “ ”       → 24 lines (a straight " inside YAML frontmatter broke 017; fixed)
+  ताइवान के विधि (fem. noun + masc. के) → ताइवान के कानून → 13
+  हिन्दी → हिंदी in running prose (autonym kept)        → 13 (asia.ts) + 2 (inquiry copy) + 1 (llms.txt)
+  आँकड़े (= statistics) → जानकारी / व्यक्तिगत डेटा       → 10 privacy strings
+  साझेदार (股東) → शेयरधारक                              → 66 (002 ×52, 018 ×9, 001 ×5)
+  विच्छेद भुगतान → विच्छेद वेतन (資遣費)                  → 32 (008 ×26, 009 ×8, 002 ×1 as वैधानिक विच्छेद वेतन)
+  digit+noun calque 3 पक्ष / 3 देश (第三人 / 第三國)       → 16
+  1 सुनवाई / 2 सुनवाई (一審 / 二審) → court-level words   → 21 (003 ×3, 010 ×18)
+  "आंक" → "आँक" (missing nukta)                          → 28
+  "सिविल कोड" → "सिविल संहिता"                           → 23 (0 left)
+  bare 負責人 ("उत्तरदायी"/"जिम्मेदार") → प्रभारी व्यक्ति → 14 (adjectival "उत्तरदायी होते हैं" left untouched)
+  戶籍 "नागरिक स्थिति"/"निवास पंजी" → "गृह-पंजीकरण"       → 36
+  Partner CPA: सहभागी लेखा परीक्षा/लेखाकार → साझेदार लेखाकार → 5
+  經濟部投資審議司 → one name across 001/011/013/017/018  → 5
+  拘役 "निरोध" → "अल्पावधि कारावास (拘役)"                → 2
+  中華民國刑法 "मध्य राष्ट्र" → "ताइवान दंड संहिता (中華民國刑法)" → 4
+  भोजनालय (= canteen) → रेस्तराँ                         → 10
+  पंचांग (= almanac) → समय-सारणी                         → 5
+  Q&A / 😊 / "उदा.)" / "टिप्पणी करें" blog leftovers      → 8
+  CJK fullwidth punctuation in running text (：)          → 2 (only the frontmatter `url` value still holds one — not rendered)
+  R4 feminine first person for Wei Tseng                 → 7 (003 ×3, 006 ×1, 008 ×3) + 010 ×1 (था → थी)
+
+================================================================
+§3. VERIFY (verbatim)
+================================================================
+$ node scripts/check-column-translation.mjs --dir src/content/columns-hi --lang hi 2>&1 | tail -8
+forbidden      PASS
+hanzi          PASS   han=71
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-hi src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      25
+(re-run after this log file was written: 26)
+
+(25 = 18 columns-hi files + 5 data files + src/lib/llms-txt.ts + the untracked
+ WO-F-hi.txt; 26 once this log is added.
+ No test file needed editing: the pinned Hindi strings — the language-FAQ question
+ "क्या हिंदी में परामर्श संभव है?", /अधिवक्ता Wei Tseng/, the four consultation
+ languages and the 14-char nav limit — all still hold after the edits.)
+
+================================================================
+§4. ROWS NOT APPLIED / DISAGREEMENTS
+================================================================
+Checker-forced (the WO says: prefer the form the checker accepts and note it)
+  1. a#48 (002) "1 बार में 1 वर्ष": the Korean source has 1회 ×2, and the Hindi
+     numeral lexicon in check-column-translation.mjs maps "एक <unit>" only for
+     वर्ष/साल/माह/महीना/दिन/सप्ताह/व्यक्ति — "एक बार" parses to nothing. Writing
+     "एक बार में एक वर्ष" made `numbers` FAIL (missing 1×2). Kept the digit and
+     reworded to "गतिविधि स्थगन की अवधि 1 बार में 1 वर्ष से अधिक नहीं हो सकती";
+     "1 माह" → "एक माह" was applied (parses fine).
+  2. b#34 (016) "क्रम 1": "प्रथम क्रम" made `numbers` FAIL (missing 1×2) — there is
+     no hi entry in ORDINAL_WORD_N. Kept "क्रम 1 में आते हैं".
+  3. b#28 (012) "हेडलाइट 1 बार" and "वाहन संख्या 1 / 2": same lexicon gap
+     (no "बार" unit, no Hindi ordinals). Digits kept; the other numeral calques in
+     that file ("2 या अधिक वाहन", "हॉर्न 2 बार") were converted to words.
+  4. b#49 (015) "प्रकार 2 उद्धरण": 제2종 ×2 are unmatched ordinals in the source, so
+     the "2" must survive. Fixed the real error (उद्धरण → प्रमाणित प्रति) and kept
+     "श्रेणी 2".
+
+Reviewer rows I believe are wrong / were overridden (NOT applied)
+  5. a#41 / b#43 / b#46 / b#47 — Indian लाख/crore regrouping (TWD 15,70,000 /
+     15,79,589 / 2.5 करोड़ / 3 करोड़). Not applied: ACCEPTED-hi mandates international
+     digits, and regrouping would desynchronise the amounts from every other locale
+     and from the `numbers` gate. I agree with the supervisor here.
+  6. a#21 — the reviewer asked to unify on हिन्दी. ACCEPTED-hi inverts this (हिंदी in
+     prose, हिन्दी only as the autonym) and the repo test pins the FAQ question
+     "क्या हिंदी में परामर्श संभव है?". Followed ACCEPTED, not the reviewer.
+  7. a#10 / a#11 / b#45 — the reviewer's suggested wording inserts भारत / "भारतीय
+     मार्ग नहीं" / "भारत से उल्टा". Not applied as written: the checker's
+     `nationality` gate lists भारत/भारतीय as forbidden target-only terms, and R2
+     forbids claims about the reader's own country. Used the neutral generalisation
+     instead ("अपने देश", "ताइवान से बाहर", "ताइवान में वाहन दाईं ओर चलते हैं").
+  8. a#17 / a#18 / b#10 — link rows. /ko/ links are already remapped (0 left). The
+     Hangul-slug wei-wei-lawyer.com link in 005 and the Invest Taiwan `lang=jpn`
+     parameter in 011 are byte-identical to the Korean source; changing either makes
+     `links` report missing/extra. Skipped per ACCEPTED-hi.
+  9. a#4 / a#45 — "कोरियाई बोल सकने वाली/वाले ताइवान अधिवक्ता" no longer exists in
+     any Hindi column (R1 relabelling already removed it). Nothing to fix.
+ 10. a#9 — the quoted sentence ("भले कोरियाई मूल कंपनी ताइवान में प्रवेश करे…") is not
+     in 004 any more; the file already says "विदेश स्थित मूल कंपनी", matching the
+     English. Verified rather than re-edited.
+
+Product facts held constant
+  - Consultation languages stated only as English / Chinese (中文) / Japanese /
+    Korean; no Hindi-consultation, interpreter, reply-time, free-first-meeting,
+    24/7, result or superlative claim was introduced (003 Q17/Q18/Q20, 005, 008,
+    013, 015, 018 CTAs were softened in that direction).
+  - Attorney Wei Tseng is feminine in every first-person and third-person mention.
+  - Traditional-Chinese glosses kept; several were added where R8 required a term to
+    be pinned (拘役, 侵權行為, 監察人, 章程, 負責人, 親權, 中華民國刑法).
+  - frontmatter keys, `url`, `lastmod`, `featured_image`, image paths, external
+    links, numbers/dates and block counts unchanged (checker confirms).

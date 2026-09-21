@@ -343,9 +343,9 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Halaman ini ditulis dalam bahasa Indonesia sebagai panduan umum, bukan nasihat hukum untuk perkara Anda sendiri.',
     consultationNotice:
-      'Konsultasi dilayani dalam empat bahasa: bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea.',
+      'Konsultasi hanya dilayani dalam empat bahasa: bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea.',
     methodConfirmationNotice:
-      'Jika tidak satu pun dari keempat bahasa itu dapat Anda gunakan, pilih “Perlu konfirmasi cara berkomunikasi”. Kami akan membalas untuk memastikan cara berkomunikasi jika ada cara yang memungkinkan, tetapi layanan dalam bahasa lain tidak dijamin dan waktu balasan tidak dijanjikan.',
+      'Jika tidak satu pun dari keempat bahasa itu dapat Anda gunakan, pilih “Perlu konfirmasi cara berkomunikasi”. Kami akan membalas untuk memastikan apakah ada cara berkomunikasi yang memungkinkan, tetapi layanan dalam bahasa lain tidak dijamin dan waktu balasan tidak dijanjikan.',
     preparationNotice:
       'Anda boleh menulis ringkasan perkara dalam bahasa Anda sendiri. Teks asli yang Anda tulis disimpan apa adanya dan tidak diterjemahkan secara otomatis.',
     heading: 'Kirim permintaan konsultasi',
@@ -382,7 +382,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     unavailableLanguageNotice: 'Halaman ini tidak tersedia dalam {language}.',
     languageOptions: {
       en: 'Inggris (English)',
-      'zh-hant': 'Tionghoa (中文)',
+      'zh-hant': 'Mandarin (中文)',
       ja: 'Jepang (日本語)',
       ko: 'Korea (한국어)',
       'needs-method-confirmation':

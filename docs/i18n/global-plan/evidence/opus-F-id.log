@@ -1,0 +1,147 @@
+# WO-F-id — Opus 5 fix lane report (Indonesian / `id`)
+worktree: /Users/son7/Projects/tseng-law-fix-c-20260921 · date: 2026-09-21 · no git add/commit/push
+
+## 1. Rows applied
+
+### id-a (guidance pack + columns 001–009)
+a#1 OUR TEAM / a#2 OFFICES — verified already 'TIM KAMI' / 'KANTOR' (mechanical). No change needed.
+a#3 fullProfileLabel 'Profil lengkap (English)' -> 'Profil lengkap (bahasa Inggris)'.
+a#4 llms discoveryNotice: 'dukungan' -> 'pengesahan' (endorsement). PARTIAL — see §4.
+a#5 003 'ganti rugi sebesar mungkin' -> 'memeriksa ... agar tidak ada pos yang terlewat, dan mengupayakan ganti rugi yang didukung oleh fakta serta bukti'.
+a#6 003 'saat ini pengadilan pada umumnya menjatuhkan ... 3 bulan' -> 'pada sebagian putusan pernah dijatuhkan ... ; bukan hasil yang lazim maupun yang dapat dijanjikan'; same for 4 bulan / 6 bulan.
+a#7 003 'Anda dapat memperoleh pidana bersyarat (緩刑) ...' -> 'Dalam sebagian perkara ... dapat dipertimbangkan ...; hal itu bukan suatu janji.'
+a#8 008 'B berhasil memperoleh pesangon dalam jumlah besar' -> 'B dapat menegaskan hak atas pesangon menurut undang-undang'.
+a#9 005 'menghubungi kami kapan saja' -> 'kirimkanlah melalui halaman Kontak; waktu balasan tidak dijanjikan'.
+a#11 005 Q1 de-Korea'd: heading now 'dikirimkan dari luar negeri ... (butir ini memakai Korea sebagai satu contoh rezim devisa; ketentuan di negara Anda sendiri harus dipastikan tersendiri)'; 'bank di Korea' -> 'bank di negara asal dana'; 'kerabat di Korea' -> 'kerabat di negara tersebut' (R2a, neutral).
+a#12 001 + 004: appended the English framing sentence (R2b, neutral, no country named): 'Pembahasan perjanjian ini hanya berlaku bagi keadaan yang berkaitan dengan Korea dan memenuhi syarat perjanjian tersebut; ini bukan aturan yang berlaku bagi investor dari semua negara. Ada atau tidaknya perjanjian pajak antara Taiwan dan negara Anda sendiri, beserta isinya, harus dipastikan tersendiri.' — 001 §note + §5, 004 FAQ + §body + §6 (5 places).
+a#13 006 'para Hakim Yuan Kehakiman (大法官)' -> 'para Hakim Agung Mahkamah Konstitusi (大法官)' (per ACCEPTED, not the reviewer's 'hakim konstitusi').
+a#15 'hanya' added to every consultation-language sentence that lacked it: guidanceAnswers ×6, contact bullet, inquiry consultationNotice (8 strings).
+a#16 role lines: English job titles in parentheses removed (Managing Attorney / Taiwan Attorney / Korea Operations Manager / Partner CPA) — 4 roles.
+a#17 'kelompok pekerjaan' -> 'bidang layanan' (per ACCEPTED, not 'bidang praktik') — 8 instances incl. mega/home/services/about.
+a#18 languageLabel 'Bahasa tampilan' -> 'Bahasa'.
+a#19 menuLabel 'Daftar halaman' -> 'Menu navigasi'. NOT plain 'Menu' — see §4.
+a#20 'penyimpanan objek yang tidak terbuka untuk umum' -> 'penyimpanan yang tidak terbuka untuk umum'.
+a#21 'memastikan cara berkomunikasi jika ada cara yang memungkinkan' -> 'memastikan apakah ada cara berkomunikasi yang memungkinkan' (contact §2, faq, home, inquiry methodConfirmationNotice — 4 places). 'memungkinkan' deliberately kept: guidance-disclosure-parity.test.ts detects the `feasible-method-only` element in id by /memungkinkan/i.
+a#22 'kedua pihak sama-sama memastikan penerimaan pekerjaan tersebut' -> '... memastikan secara tertulis bahwa kantor menerima perkara itu'.
+a#23 'bahasa Tionghoa' -> 'bahasa Mandarin' everywhere it names the consultation/list language (content ×4, answers ×6, team ×2, inquiry ×2, llms ×1 = 15). 'Nama Tionghoanya, 昊鼎' kept (ethnonym/script, correct). Test row `id:` in international-guidance-answers.test.ts updated 'Tionghoa' -> 'Mandarin'.
+a#24 'hak menjenguk anak (會面交往)' -> 'hak kunjungan dan bertemu anak (會面交往)'.
+a#25 'bekerja bersama bagian akuntansi dalam satu alur penanganan' -> 'menangani urusan itu bersama bagian akuntansi secara terpadu'.
+a#26 'Situs ini dihosting di Vercel' -> 'Situs ini diselenggarakan di Vercel'; the id `hosting` regex in src/data/__tests__/international-guidance-privacy-disclosure.test.ts updated to match (only that locale's row).
+a#27 'perseroan terbatas berbasis saham' -> 'perseroan terbatas berbentuk saham' (9 instances, 001/002/004).
+a#28 / b#28 title split resolved on 'Advokat': '**Pengacara Wei Tseng (曾雋崴)**' -> '**Advokat Wei Tseng (曾雋崴)**' ×6; '**Wei Tseng (曾雋崴), Pengacara Taiwan**' -> '... Advokat di Taiwan**' ×2; 003/008 first-person 'pengacara Taiwan' -> 'advokat di Taiwan' ×2. Generic 'pengacara' (a lawyer, any) left alone.
+a#29 002 'pidana penjara berjangka paling lama lima tahun, kurungan' -> 'pidana penjara paling lama lima tahun, kurungan (拘役)' (+ the Art. 90 sentence). Also 007/008 'pidana penjara berjangka (有期徒刑)' -> 'pidana penjara untuk waktu tertentu (有期徒刑)'.
+a#30 'Q&A' -> 'Tanya Jawab' in 003 and 007 title + H1 (4 strings).
+a#31 003 'silakan tinggalkan di kolom komentar' -> 'gunakanlah halaman Kontak'. ZWSP padding NOT removed — see §4.
+a#32 / R9 003 emergency numbers rewritten: 'gunakan nomor darurat yang berlaku di Taiwan — bukan nomor darurat negara Anda: 119 untuk ambulans dan pemadam kebakaran ..., 110 untuk polisi ..., serta 112 dari telepon genggam.'
+a#33 003 ISO dates -> '29 Mei 2026' / '1 Juli 2026'.
+a#34 003 'Kitab Undang-Undang Hukum Pidana Republik Tiongkok' -> 'Kitab Undang-Undang Hukum Pidana Taiwan (中華民國刑法)' ×4 (link labels; hrefs untouched).
+a#35 003 ROC years glossed: 'tahun 109 (2020)' ×2, 'tahun 112 (2023)' ×1.
+a#36 005 Q5 heading: missing '?' added.
+a#37 006 chatty aside -> '(Catatan: bagian ini merupakan kenangan pribadi, bukan keterangan hukum.)'
+a#38 007 'Putusan Nomor 4 Tahun 112 (112年憲判字第4號)' -> '... (tahun 2023 Masehi; 112年憲判字第4號)' ×2.
+a#39 008 '??' -> '?' in title + H1.
+a#40 009 'Seperti yang telah saya sampaikan sebelumnya, di Taiwan tidak mudah' -> 'Di Taiwan pada umumnya tidak mudah'.
+a#41 009 "''**saat**''" -> '**saat**'.
+a#42 / b#10 'Dolar Taiwan Baru' -> 'dolar Taiwan baru' (EYD lowercase) — 16 instances across 001–011/017.
+
+### id-b (columns 010–018)
+b#1 013 blog CTA -> '*Apabila Anda memerlukan pembahasan mengenai hukum Taiwan dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, atau bahasa Korea, gunakanlah halaman Kontak; bahasa Indonesia tidak termasuk bahasa konsultasi, dan waktu balasan tidak dijanjikan.*' (wording avoids the checker's `id-consult-lang` regex, which fires on the literal string 'konsultasi ... bahasa Indonesia' even when negated). 013 Q3 'berkonsultasi ... dengan pengacara Taiwan' -> 'meminta peninjauan dari advokat di Taiwan'.
+b#2 015 'menghubungi pengacara Taiwan kapan saja' -> 'tulislah melalui halaman Kontak; waktu balasan tidak dijanjikan, dan konsultasi hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, atau bahasa Korea'.
+b#4 014 §1 R7b: body now opens 'Perjanjian itu tidak otomatis batal demi hukum. Menurut Pasal 15-1 ...' (frontmatter FAQ 'Tidak.' kept — there the heading IS a yes/no question).
+b#5 016 'disposisi' -> 'pengalihan' — 12 instances (處分).
+b#6 018 'hak pengawasan' -> 'hak pemeriksaan (檢查權), sehingga pengawas perseroan (監察人) tidak wajib diangkat terpisah'.
+b#7 / b#37 one name for 經濟部投資審議司: 'Departemen Peninjauan Investasi, Kementerian Urusan Ekonomi (經濟部投資審議司)' in 011 (×2), 013 (×2), 017 (×2), 018 (×3 incl. the §4 heading, which had said 'Komisi', and the body 'Direktorat').
+b#8 018 'Contoh subjek:' -> 'Contoh baris subjek surel: Konsultasi struktur masuk pasar Taiwan untuk perusahaan semikonduktor.'
+b#9 010 'perkara tahun 109 消字 Nomor 7' -> 'tahun 109 (2020) ...'.
+b#11 011 §1 body lead -> 'Tidak selalu harus didirikan anak perusahaan atau kantor cabang.' (frontmatter FAQ left as is).
+b#12 'subjek' -> 'pihak' where it names a party (011 title/H1/§heading 'Pemilihan Subjek Impor' -> 'Pemilihan Importir' ×3, plus 'subjek tanggung jawab' ×3; 017 'subjek pemegang izin' ×3; 004 ×8). 'subjek hukum' / 'subjek hak dan kewajiban' kept — standard Indonesian legal terminology.
+b#13 012 'cadangan keselamatan' -> 'kelonggaran keselamatan'.
+b#14 013 'banyak orang telah berhasil mendirikan ... serta memperoleh visa' -> 'banyak orang mendirikan ... serta mengajukan visa'.
+b#15 013 'peninjauan itu tidak terlampau ketat' -> 'tidak terbatas pada satu kriteria formal; setiap permohonan dinilai dari dokumennya'; 'para peninjau dapat diyakinkan' -> 'keterkaitannya dengan rencana usaha dapat dipahami dari dokumen'.
+b#16 013 emoji + 'Semoga ... bermanfaat' -> 'Tanya jawab berikut dapat menjadi orientasi umum ...' (emoji removed).
+b#17 013 'Contoh)' ×2 -> 'Misalnya, ...'.
+b#18 013 '**Saran**：' -> '**Saran:**' (R6b fullwidth colon).
+b#19 013 '"**masa pengerjaan interior**" (裝潢期間)' -> '"**masa pengerjaan interior bebas sewa**" (裝潢期間)'.
+b#20 013 orphan break moved so each block is self-standing ('... Sebelum menandatangani perjanjian sewa,' / 'sebaiknya Anda memastikan hal itu terlebih dahulu.') — block count unchanged.
+b#21 015 'Karena itu, mohon berhati-hati!' -> 'Karena itu, periksalah hasilnya sebelum mendaftarkan perusahaan.'
+b#22 015 stray quote/space before the Chinese gloss after the markdown link fixed.
+b#23 016 'Yuan Kehakiman Taiwan (司法院)' -> 'Lembaga Kehakiman Taiwan (司法院)'; 'Formulir Yuan Kehakiman' -> 'Formulir Lembaga Kehakiman'; swept 003 too.
+b#24 016 title + H1 -> 'Pewarisan dan Hak Asuh Anak di Taiwan: Panduan Hukum bagi Keluarga yang Ditinggalkan'.
+b#25 R7b FAQ-paste openings made self-standing: 016 §3 'Bukan.' -> 'Hak itu bukan bagian dari warisan.'; 016 §7 'Tidak.' -> 'Orang tua atau wali tidak menjadi pemiliknya.'; 017 §1 'Tidak selalu demikian.' -> 'Cakupan keduanya tidak selalu sama.'; 017 §3 'Tidak.' -> 'Izin usaha tidak berpindah dengan sendirinya karena akuisisi.' Heading counts unchanged.
+b#26 016 'harta aktif dan harta pasif' -> 'harta dan utang'.
+b#27 017 'Statuta Investasi oleh Warga Negara Asing (外國人投資條例)' -> 'Undang-Undang Penanaman Modal oleh Orang Asing (外國人投資條例)'; 013 'Peraturan Penanaman Modal ...' unified to the same name.
+b#29 018 Traditional-Chinese glosses restored (file had han=0, now han=48): 工作許可, 居留, 有限公司, 股份有限公司, 監察人, 檢查權, 勞工保險, 公開發行公司, 經濟部投資審議司, 經濟部商業發展署.
+b#30 018 'NT$30 juta' / 'NT$100 juta' -> 'TWD 30 juta' / 'TWD 100 juta' (amounts unchanged; the digit-plus-juta form keeps the checker's number parity, unlike 'TWD 30.000.000').
+b#31 018 'perseroan terbatas oleh saham' -> 'perseroan terbatas berbentuk saham' (5 instances incl. the H3).
+b#32 018 'listing di masa depan' -> 'pencatatan saham di bursa, atau pendaftaran di pasar negara berkembang pada masa depan' (restores the English 'emerging-market registration' that had been dropped); H3 'mungkin listing' -> 'berencana mencatatkan saham'.
+b#34 018 'relatif lebih mudah mengajukan izin kerja' -> 'pada umumnya menempuh jalur permohonan izin kerja yang berbeda; hal itu bukan jaminan persetujuan'.
+b#35 018 'Pada konsultasi pertama, kumpulkan ...' -> 'Pada kontak pertama melalui halaman Kontak, kumpulkan ...'; §8 heading 'Untuk konsultasi pertama' -> 'Untuk kontak pertama'.
+b#36 018 'Departemen Pengembangan Perdagangan Kementerian Ekonomi' -> 'Departemen Perdagangan, Kementerian Urusan Ekonomi (經濟部商業發展署)' (English source: Department of Commerce).
+b#38 018 'jasa vendor eksternal?' -> 'jasa penyedia dari luar?'
+
+## 2. Systemic sweeps (pattern -> instances changed)
+- 'bahasa Tionghoa' -> 'bahasa Mandarin' (consultation/list language) -> 15
+- missing exclusivity 'hanya' added to consultation sentences -> 8
+- 'kelompok pekerjaan' -> 'bidang layanan' -> 8
+- 'Dolar Taiwan Baru' -> 'dolar Taiwan baru' (EYD) -> 16
+- 'perseroan terbatas berbasis/oleh saham' -> 'berbentuk saham' -> 14
+- Wei Tseng title unified on 'Advokat' -> 10
+- 'subjek' -> 'pihak/importir' where it names a party -> 18 ('subjek hukum' kept)
+- 'disposisi' (處分) -> 'pengalihan' -> 12
+- 經濟部投資審議司 one Indonesian name -> 9 (011/013/017/018)
+- 'pidana penjara berjangka' -> 'pidana penjara (untuk waktu tertentu)' + 拘役 gloss -> 4
+- English job titles stripped from role lines -> 4
+- 'Q&A' -> 'Tanya Jawab' -> 4
+- ROC years annotated with the CE year -> 5 (003 ×3, 007 ×2, 010 ×1 — 6 total)
+- 'Yuan Kehakiman' -> 'Lembaga Kehakiman Taiwan (司法院)' -> 3
+- R2 Korea-centric framing neutralised -> 005 Q1 (4 sentences) + R2b note appended in 001/004 (5 places)
+- R3 advertising softening -> 7 sentences (003 ×4, 005, 008, 013 ×2, 015, 018 ×2)
+- R7 blog register (comment CTA, 'kapan saja', emoji, 'Contoh)', '??', tag question, chatty aside) -> 11
+- R7b FAQ-paste openings made self-standing -> 5 (014, 016 ×2, 017 ×2)
+- R6b fullwidth punctuation in running text -> 1 (013 '：')
+- 018 Chinese glosses restored -> 10 terms
+
+## 3. Rows skipped (with reason)
+- a#10 / b#3 — link rows (Korean Wix slug in 005, Invest Taiwan `lang=jpn` in 011): supervisor fixes centrally; link parity is checked. Left untouched.
+- Frontmatter `url:` containing Hangul (008, 009): per ACCEPTED, canonical source metadata, not rendered.
+- a#14 'TWD 1.57M' -> 'TWD 1,57 juta': REVERTED. src/data/__tests__/guidance-team-bios.test.ts asserts every string in GUIDANCE_BIO_PRESERVED_TERMS (which includes 'TWD 1.57M') appears byte-identical in EVERY locale's bio. That constant is cross-locale, not an Indonesian string, so it is out of this lane's write scope. The bio keeps 'TWD 1.57M'. Needs a supervisor decision if the juta form is wanted.
+- a#19 'Menu': test src/lib/__tests__/guidance-chrome-language.test.ts guards `menuLabel !== 'Menu'` (that literal is the English fallback it detects). Used 'Menu navigasi' instead — Indonesian, and not the fallback string.
+- a#31 / b#18 empty `​` (ZWSP) padding blocks in 003/005/013/015: NOT removed. The checker compares ZWSP counts and non-empty block counts against the source (003 has 52 ZWSP, 005 has 8, 013 has 5); deleting them fails `blocks`. Left in place.
+- b#33 018 renumber '## 7.' -> '## 6.' (and 8 -> 7): REVERTED. The checker's `numbers` lane compares digit tokens against the Korean source and reported `missing from translation (1): 8 / extra in translation (1): 6` -> FAIL. Per the rulebook ("prefer the form the checker accepts"), the source's 7/8 numbering is kept. The same outline gap exists in columns-en/018; it is a source-side bug for the supervisor.
+
+## 4. Where I disagree with the reviewer (not applied as written)
+- a#4 (llms discoveryNotice). Applied 'dukungan' -> 'pengesahan' (endorsement) — correct. Did NOT apply 'jaminan untuk ditampilkan' -> 'pemuatan iklan'. The English source reads "it does not promise search ranking, endorsement, AI recommendation, or guaranteed visibility", and vi/th render the same concept as display/visibility ("việc được hiển thị", "การแสดงผล"). 'Pemuatan iklan' (ad placement) would change the meaning to something the source does not say. Kept 'jaminan untuk ditampilkan'.
+- a#13. Reviewer wanted 'para hakim konstitusi'; ACCEPTED-id specifies 'para Hakim Agung Mahkamah Konstitusi (大法官)'. Followed ACCEPTED.
+- a#17. Reviewer wanted 'bidang praktik'; ACCEPTED-id specifies 'bidang layanan' (and it matches the existing nav label). Followed ACCEPTED.
+- b#30. Reviewer wanted 'TWD 30.000.000'; used 'TWD 30 juta' so the amount is unchanged AND the checker's number parity with the source ('30') is preserved. Same for 'TWD 100 juta'.
+- b#11/b#4/b#25. Reviewer sometimes proposed replacing the heading; I made the first sentence self-standing instead, because the rulebook forbids changing the heading count/structure and the headings are shared with the other locales' outline.
+- b#20. Reviewer's rewrite would merge two blocks; the checker compares block counts, so I moved the break instead of removing it.
+- Note on the frontmatter FAQ blocks: where the frontmatter `q:` really is a yes/no question (008 ×2, 011, 014, 017 ×2), the 'Tidak./Bukan.' opening is correct and was kept; only the body leads under topic headings were rewritten.
+
+## 5. Verify (verbatim)
+
+```
+$ node scripts/check-column-translation.mjs --dir src/content/columns-id --lang id 2>&1 | tail -8
+forbidden      PASS   
+hanzi          PASS   han=48
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "[변호사 검수 필요]" src/content/columns-id src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      28
+```
+(28 = 25 tracked files modified + `.tmp-id/` helper dir + the untracked WO file + this log.)

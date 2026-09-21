@@ -686,11 +686,11 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
     footerNotice:
       'Halaman berbahasa Indonesia ini hanya memuat panduan umum tentang pekerjaan kantor kami menurut hukum Taiwan. Ini bukan nasihat hukum untuk perkara tertentu, dan mengirim pesan melalui halaman ini dengan sendirinya tidak membentuk hubungan antara advokat dan klien.',
     skipLink: 'Lewati navigasi, langsung ke isi utama',
-    menuLabel: 'Daftar halaman',
-    languageLabel: 'Bahasa tampilan',
+    menuLabel: 'Menu navigasi',
+    languageLabel: 'Bahasa',
     mega: {
       services: {
-        description: 'Kantor menangani kelompok pekerjaan utama menurut hukum Taiwan.',
+        description: 'Kantor menangani bidang layanan utama menurut hukum Taiwan.',
         viewAllLabel: 'Lihat semua',
       },
       columns: {
@@ -720,7 +720,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       heroColumnsCtaLabel: 'Lihat artikel',
       servicesDetailLabel: 'Lihat detail',
       servicesAssistanceBefore:
-        'Jika Anda belum yakin perkara Anda termasuk kelompok yang mana, halaman ',
+        'Jika Anda belum yakin perkara Anda termasuk bidang layanan yang mana, halaman ',
       servicesAssistanceLinkLabel: 'Kontak',
       servicesAssistanceAfter:
         ' menjelaskan cara menyusun ringkasan yang akan ditinjau advokat.',
@@ -755,14 +755,14 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Bahasa halaman dan bahasa konsultasi adalah dua hal berbeda',
             paragraphs: [
-              'Halaman ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam empat bahasa: bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea. Membaca panduan dalam bahasa Indonesia tidak berarti pembicaraan dengan advokat akan berlangsung dalam bahasa Indonesia.',
-              'Kami tidak menjanjikan penerjemah, tidak menjanjikan balasan dalam jangka waktu tertentu, dan tidak memastikan janji temu melalui halaman ini. Jika keempat bahasa tersebut tidak dapat Anda gunakan, halaman “Kontak” menjelaskan cara kami memastikan cara berkomunikasi.',
+              'Halaman ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam empat bahasa: bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea. Membaca panduan dalam bahasa Indonesia tidak berarti pembicaraan dengan advokat akan berlangsung dalam bahasa Indonesia.',
+              'Kami tidak menjanjikan penerjemah, tidak menjanjikan balasan dalam jangka waktu tertentu, dan tidak memastikan janji temu melalui halaman ini. Jika keempat bahasa tersebut tidak dapat Anda gunakan, halaman “Kontak” menjelaskan bagaimana kami memastikan apakah ada cara berkomunikasi yang memungkinkan.',
             ],
           },
           {
             heading: 'Jenis perkara yang kami tangani',
             paragraphs: [
-              'Lingkup pekerjaan kantor mencakup enam kelompok berikut. Halaman “Bidang layanan” menjelaskan masing-masing kelompok lebih rinci sekaligus menyebutkan hal-hal yang tidak dijamin.',
+              'Lingkup pekerjaan kantor mencakup enam bidang layanan berikut. Halaman “Bidang layanan” menjelaskan masing-masing bidang lebih rinci sekaligus menyebutkan hal-hal yang tidak dijamin.',
             ],
             items: [
               'Investasi dan pendirian perusahaan di Taiwan',
@@ -786,9 +786,9 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         eyebrow: 'BIDANG LAYANAN',
         title: 'Bidang perkara yang kami tangani',
         description:
-          'Enam kelompok pekerjaan yang termasuk dalam lingkup layanan kantor di Taiwan, beserta batasan yang perlu Anda ketahui lebih dulu.',
+          'Enam bidang layanan yang ditangani kantor di Taiwan, beserta batasan yang perlu Anda ketahui lebih dulu.',
         intro:
-          'Berikut kelompok pekerjaan yang benar-benar kami tangani, beserta hal-hal yang biasa ditanyakan pada tahap awal. Uraian ini membantu Anda menilai apakah perkara Anda termasuk dalam lingkup kami; sifatnya keterangan umum, bukan analisis hukum atas satu berkas tertentu.',
+          'Berikut bidang layanan yang benar-benar kami tangani, beserta hal-hal yang biasa ditanyakan pada tahap awal. Uraian ini membantu Anda menilai apakah perkara Anda termasuk dalam lingkup kami; sifatnya keterangan umum, bukan analisis hukum atas satu berkas tertentu.',
         sections: [
           {
             heading: 'Investasi dan pendirian perusahaan di Taiwan',
@@ -807,7 +807,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Perkawinan, keluarga, dan waris',
             paragraphs: [
-              'Kami menangani perkara perceraian (離婚), pembagian harta, pelaksanaan dan pemikulan hak serta kewajiban terhadap anak yang belum dewasa (未成年子女權利義務之行使或負擔), hak menjenguk anak (會面交往), dan waris (繼承), termasuk ketika para pihak atau hartanya berada di negara yang berbeda. Perkara keluarga lintas negara umumnya memerlukan pemeriksaan tambahan atas dokumen kependudukan (戶籍), bentuk surat, dan cara pembuktiannya di Taiwan.',
+              'Kami menangani perkara perceraian (離婚), pembagian harta, pelaksanaan dan pemikulan hak serta kewajiban terhadap anak yang belum dewasa (未成年子女權利義務之行使或負擔), hak kunjungan dan bertemu anak (會面交往), dan waris (繼承), termasuk ketika para pihak atau hartanya berada di negara yang berbeda. Perkara keluarga lintas negara umumnya memerlukan pemeriksaan tambahan atas dokumen kependudukan (戶籍), bentuk surat, dan cara pembuktiannya di Taiwan.',
               'Karena perkara keluarga sering disertai tenggat waktu dan beberapa prosedur yang berjalan bersamaan, ringkasan awal sebaiknya menyebutkan hubungan antarpihak, tempat tinggal saat ini, dan prosedur yang sudah atau sedang berjalan.',
             ],
           },
@@ -836,7 +836,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Lingkup dan cara memastikannya',
             paragraphs: [
               'Kantor kami bekerja berdasarkan hukum Taiwan dan menangani perkara yang termasuk dalam kelompok di atas. Lingkup setiap perkara dipastikan tersendiri setelah advokat meninjau isi pesan Anda.',
-              'Status tinggal, izin kerja, dan hal-hal sejenis dinilai dari berkas dan keadaan masing-masing orang, tidak disimpulkan dari kewarganegaraan. Jika ada bagian perkara Anda yang menyangkut hal-hal itu, sebutkanlah saat menghubungi kami agar advokat dapat menentukan kelompok pekerjaannya; halaman ini tidak menjanjikan hasil maupun waktu balasan.',
+              'Status tinggal, izin kerja, dan hal-hal sejenis dinilai dari berkas dan keadaan masing-masing orang, tidak disimpulkan dari kewarganegaraan. Jika ada bagian perkara Anda yang menyangkut hal-hal itu, sebutkanlah saat menghubungi kami agar advokat dapat menentukan bidang layanannya; halaman ini tidak menjanjikan hasil maupun waktu balasan.',
             ],
           },
         ],
@@ -860,14 +860,14 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Pekerjaan yang melibatkan pihak asing',
             paragraphs: [
-              'Pekerjaan lintas negara kami mencakup pendirian perusahaan, pengurusan visa, pendaftaran merek dan paten, penilaian risiko hukum, dan konsultasi pajak perusahaan. Kantor Taichung secara khusus menangani perkara konstruksi, kekayaan intelektual, dan urusan yang berkaitan dengan Korea serta Jepang. Advokat Wei Tseng (曾雋崴) mendampingi klien dari Korea, Jepang, dan klien internasional lainnya pada kelompok pekerjaan di atas.',
-              'Dapat atau tidaknya kami menangani suatu perkara bergantung pada isi perkara itu dan pada bahasa yang dipakai berkomunikasi. Jika perkara Anda termasuk kelompok pekerjaan di atas dan dapat dibicarakan dalam salah satu dari empat bahasa konsultasi, Anda dapat mengirimkan ringkasannya untuk ditinjau advokat.',
+              'Pekerjaan lintas negara kami mencakup pendirian perusahaan, pengurusan visa, pendaftaran merek dan paten, penilaian risiko hukum, dan konsultasi pajak perusahaan. Kantor Taichung secara khusus menangani perkara konstruksi, kekayaan intelektual, dan urusan yang berkaitan dengan Korea serta Jepang. Advokat Wei Tseng (曾雋崴) mendampingi klien dari Korea, Jepang, dan klien internasional lainnya pada bidang layanan di atas.',
+              'Dapat atau tidaknya kami menangani suatu perkara bergantung pada isi perkara itu dan pada bahasa yang dipakai berkomunikasi. Jika perkara Anda termasuk bidang layanan di atas dan dapat dibicarakan dalam salah satu dari empat bahasa konsultasi, Anda dapat mengirimkan ringkasannya untuk ditinjau advokat.',
             ],
           },
           {
             heading: 'Ketika Anda menghubungi kami',
             paragraphs: [
-              'Setelah ringkasan Anda kami terima, advokat meninjau isinya lalu membicarakan lingkup pekerjaan yang dapat dikerjakan, dokumen yang masih diperlukan, dan langkah selanjutnya. Untuk perkara yang menimbulkan persoalan akuntansi atau perpajakan, kantor dapat bekerja bersama bagian akuntansi dalam satu alur penanganan.',
+              'Setelah ringkasan Anda kami terima, advokat meninjau isinya lalu membicarakan lingkup pekerjaan yang dapat dikerjakan, dokumen yang masih diperlukan, dan langkah selanjutnya. Untuk perkara yang menimbulkan persoalan akuntansi atau perpajakan, kantor dapat menangani urusan itu bersama bagian akuntansi secara terpadu.',
               'Hasil setiap perkara bergantung pada faktanya dan pada berkas yang ada, sehingga kami tidak menjanjikan hasil. Bila Anda memerlukan jawaban yang pasti untuk keadaan Anda, berkas itu perlu dibicarakan langsung dengan advokat dalam salah satu dari empat bahasa konsultasi.',
             ],
           },
@@ -939,14 +939,14 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             ],
             items: [
               'Bahasa halaman: panduan ini ditulis dalam bahasa Indonesia.',
-              'Bahasa konsultasi: konsultasi dengan advokat dilayani dalam bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea.',
+              'Bahasa konsultasi: konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea.',
               'Bahasa tulisan Anda: Anda boleh menulis ringkasan dalam bahasa Anda sendiri, dan teks aslinya disimpan apa adanya.',
             ],
           },
           {
             heading: 'Jika keempat bahasa konsultasi itu tidak dapat Anda gunakan',
             paragraphs: [
-              'Pada formulir kontak Anda dapat memilih “Perlu konfirmasi cara berkomunikasi”. Kami akan membalas untuk memastikan cara berkomunikasi jika ada cara yang memungkinkan, tetapi layanan dalam bahasa lain tidak dijamin dan waktu balasan tidak dijanjikan.',
+              'Pada formulir kontak Anda dapat memilih “Perlu konfirmasi cara berkomunikasi”. Kami akan membalas untuk memastikan apakah ada cara berkomunikasi yang memungkinkan, tetapi layanan dalam bahasa lain tidak dijamin dan waktu balasan tidak dijanjikan.',
               'Ini hanyalah langkah pemastian, bukan janji. Kami tidak menjanjikan penerjemah, tidak menjanjikan layanan dalam bahasa Indonesia atau bahasa lain di luar keempat bahasa tersebut, dan tidak menjanjikan bahwa setiap perkara dapat kami terima.',
             ],
           },
@@ -995,12 +995,12 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             question: 'Bisakah saya berkonsultasi dalam bahasa Indonesia?',
             answer:
-              'Tidak. Panduan ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Tionghoa (中文), bahasa Jepang, dan bahasa Korea. Kami juga tidak menjanjikan penerjemah. Penerjemahan tulisan adalah hal terpisah: teks asli yang Anda tulis disimpan apa adanya dan tidak diterjemahkan secara otomatis.',
+              'Tidak. Panduan ini ditulis dalam bahasa Indonesia, tetapi konsultasi dengan advokat hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, dan bahasa Korea. Kami juga tidak menjanjikan penerjemah. Penerjemahan tulisan adalah hal terpisah: teks asli yang Anda tulis disimpan apa adanya dan tidak diterjemahkan secara otomatis.',
           },
           {
             question: 'Bagaimana jika keempat bahasa itu tidak dapat saya gunakan?',
             answer:
-              'Pilihlah “Perlu konfirmasi cara berkomunikasi” ketika mengirim permintaan. Kami akan membalas untuk memastikan cara berkomunikasi, tetapi layanan dalam bahasa lain tidak dijamin. Ini langkah pemastian, bukan janji bahwa kami dapat melayani dalam bahasa lain.',
+              'Pilihlah “Perlu konfirmasi cara berkomunikasi” ketika mengirim permintaan. Kami akan membalas untuk memastikan apakah ada cara berkomunikasi yang memungkinkan, tetapi layanan dalam bahasa lain tidak dijamin. Ini langkah pemastian, bukan janji bahwa kami dapat melayani dalam bahasa lain.',
           },
           {
             question: 'Bagaimana tulisan saya dalam bahasa Indonesia diperlakukan?',
@@ -1086,7 +1086,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Tempat penyimpanan data dan penyedia layanan',
             paragraphs: [
-              'Situs ini dihosting di Vercel, dan kiriman Anda disimpan di penyimpanan objek yang tidak terbuka untuk umum pada layanan tersebut. Email dikirim melalui layanan email yang digunakan kantor kami.',
+              'Situs ini diselenggarakan di Vercel, dan kiriman Anda disimpan di penyimpanan yang tidak terbuka untuk umum pada layanan tersebut. Email dikirim melalui layanan email yang digunakan kantor kami.',
               'Server sebagian penyedia layanan dapat berada di luar Taiwan, sehingga data Anda dapat disimpan dan diproses di sana. Setelah tujuan penyimpanannya tercapai, data dihapus tanpa penundaan; data yang wajib disimpan menurut ketentuan yang berlaku disimpan selama jangka waktu tersebut. Permintaan yang berkaitan dengan data pribadi diterima di wei@hoveringlaw.com.tw.',
             ],
           },
@@ -1118,7 +1118,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Hubungan advokat dan klien tidak terbentuk dengan sendirinya',
             paragraphs: [
               'Membaca halaman ini, mengirim formulir, atau mengirim email dengan sendirinya tidak membentuk hubungan antara advokat dan klien.',
-              'Hubungan itu baru terbentuk setelah perkara ditinjau dan kedua pihak sama-sama memastikan penerimaan pekerjaan tersebut.',
+              'Hubungan itu baru terbentuk setelah perkara ditinjau dan kedua pihak sama-sama memastikan secara tertulis bahwa kantor menerima perkara itu.',
             ],
           },
           {
@@ -1141,7 +1141,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Empat daftar menurut bahasa',
             paragraphs: [
-              'Bagian ini berisi empat tautan: daftar artikel berbahasa Korea, daftar berbahasa Tionghoa, daftar berbahasa Inggris, dan daftar berbahasa Jepang. Setiap tautan mencantumkan bahasa daftarnya, sehingga Anda tahu lebih dulu isi dalam bahasa apa yang akan terbuka.',
+              'Bagian ini berisi empat tautan: daftar artikel berbahasa Korea, daftar berbahasa Mandarin, daftar berbahasa Inggris, dan daftar berbahasa Jepang. Setiap tautan mencantumkan bahasa daftarnya, sehingga Anda tahu lebih dulu isi dalam bahasa apa yang akan terbuka.',
               'Keempat daftar itu adalah daftar menurut bahasa asli artikelnya, bukan daftar terjemahan. Artikel yang sudah tersedia dalam bahasa Indonesia dimuat tersendiri di halaman ini.',
             ],
           },

@@ -13,7 +13,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![Gambar utama](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Seperti yang telah saya sampaikan sebelumnya, di Taiwan tidak mudah bagi karyawan untuk memperoleh pesangon (資遣費), yaitu uang yang wajib dibayarkan pemberi kerja hanya apabila pemberi kerja sendiri yang memutuskan hubungan kerja.
+Di Taiwan pada umumnya tidak mudah bagi karyawan untuk memperoleh pesangon (資遣費), yaitu uang yang wajib dibayarkan pemberi kerja hanya apabila pemberi kerja sendiri yang memutuskan hubungan kerja.
 
 ​
 
@@ -89,7 +89,7 @@ dapat terbebas dari kewajiban membayar pesangon atau justru dapat menuntut pesan
 
 Karena itu, dalam sengketa ketenagakerjaan (勞資糾紛) di Taiwan,
 
-''**saat**'' sangat menentukan.
+**saat** sangat menentukan.
 
 Dalam sebagian besar kasus, pihak yang telah bersiap lebih dahulu yang haknya terlindungi.
 

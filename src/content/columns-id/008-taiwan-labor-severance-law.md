@@ -1,5 +1,5 @@
 ---
-title: "Hukum Ketenagakerjaan Taiwan: Benarkah Pesangon (資遣費) Sulit Diperoleh di Taiwan??"
+title: "Hukum Ketenagakerjaan Taiwan: Benarkah Pesangon (資遣費) Sulit Diperoleh di Taiwan?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
 lastmod: "2026-09-10"
 date_display: "13 September 2025"
@@ -16,11 +16,11 @@ faq:
     a: "Setiap kali karyawan menggenapi satu tahun masa kerja (年資), pemberi kerja wajib membayar pesangon sebesar 0,5 bulan upah rata-rata (平均工資), dengan batas maksimum 6 bulan upah. Ini adalah rumus untuk masa kerja yang tunduk pada Pasal 12 Peraturan Dana Pensiun Pekerja (勞工退休金條例); untuk masa kerja yang tunduk pada Pasal 17 Undang-Undang Standar Ketenagakerjaan (勞動基準法), pesangon adalah satu bulan upah rata-rata untuk setiap satu tahun penuh masa kerja tanpa batas atas."
 ---
 
-# Hukum Ketenagakerjaan Taiwan: Benarkah Pesangon (資遣費) Sulit Diperoleh di Taiwan??
+# Hukum Ketenagakerjaan Taiwan: Benarkah Pesangon (資遣費) Sulit Diperoleh di Taiwan?
 
 ![Gambar utama](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Halo, saya Wei Tseng (曾雋崴), pengacara Taiwan.
+Halo, saya Wei Tseng (曾雋崴), advokat di Taiwan.
 
 Hari ini saya ingin berbicara dengan Anda mengenai pesangon (資遣費) di Taiwan, yaitu uang yang wajib dibayarkan perusahaan hanya apabila perusahaan sendiri yang memutuskan hubungan kerja.
 
@@ -58,7 +58,7 @@ Saya akan merangkumnya untuk Anda dalam sebuah tabel sederhana.
 | Pemberitahuan sebelumnya | Diperlukan | Tidak diperlukan | Diperlukan |
 | Tingkat kesulitan | Mudah | Sulit | Mudah |
 | Apakah perusahaan wajib membayar pesangon (資遣費) | Wajib | Tidak wajib | Tidak wajib |
-|  | Pasal 11 Undang-Undang Standar Ketenagakerjaan Taiwan (勞動基準法第11條): Kecuali terjadi salah satu keadaan berikut, pemberi kerja tidak dapat mengakhiri perjanjian kerja sekalipun telah memberikan pemberitahuan sebelumnya kepada pekerja.  1. Usaha pemberi kerja dihentikan (歇業) atau dialihkan  2. Usaha pemberi kerja mengalami kerugian atau penyusutan kegiatan usaha  3. Keadaan kahar mengharuskan penangguhan kegiatan kerja (暫停工作) selama 1 bulan atau lebih  4. Sifat usaha berubah sehingga pengurangan jumlah pekerja menjadi perlu, sedangkan pekerja yang diberhentikan tidak dapat ditempatkan pada posisi lain yang sesuai  5. Pekerja tertentu ternyata tidak mampu melaksanakan pekerjaan yang dituntut oleh jabatannya secara memuaskan | Pasal 12 Undang-Undang Standar Ketenagakerjaan Taiwan (勞動基準法第12條): Pemberi kerja dapat memberhentikan pekerja tanpa pemberitahuan sebelumnya apabila pekerja berada dalam salah satu keadaan berikut.  1. Memberikan keterangan tidak benar pada saat membuat perjanjian kerja sehingga menyesatkan pemberi kerja dan berpotensi menimbulkan kerugian bagi usahanya  2. Melakukan kekerasan atau penghinaan berat terhadap pemberi kerja, keluarga pemberi kerja, wakil pemberi kerja (代理人), atau rekan kerja lainnya  3. Dijatuhi pidana penjara berjangka (有期徒刑) atau pidana yang lebih berat dan putusannya telah berkekuatan hukum tetap, tanpa dijatuhkannya pidana bersyarat (緩刑) maupun izin membayar uang pengganti pidana penjara (易科罰金)  4. Melanggar perjanjian kerja atau peraturan perusahaan secara berat  5. Dengan sengaja merusak atau menghabiskan mesin, perkakas, bahan baku, produk, atau barang lain milik pemberi kerja, atau dengan sengaja membocorkan rahasia teknis maupun rahasia usaha pemberi kerja sehingga menimbulkan kerugian bagi pemberi kerja  6. Mangkir tanpa alasan sah selama 3 hari berturut-turut, atau mangkir tanpa alasan sah selama 6 hari atau lebih dalam satu bulan |  |
+|  | Pasal 11 Undang-Undang Standar Ketenagakerjaan Taiwan (勞動基準法第11條): Kecuali terjadi salah satu keadaan berikut, pemberi kerja tidak dapat mengakhiri perjanjian kerja sekalipun telah memberikan pemberitahuan sebelumnya kepada pekerja.  1. Usaha pemberi kerja dihentikan (歇業) atau dialihkan  2. Usaha pemberi kerja mengalami kerugian atau penyusutan kegiatan usaha  3. Keadaan kahar mengharuskan penangguhan kegiatan kerja (暫停工作) selama 1 bulan atau lebih  4. Sifat usaha berubah sehingga pengurangan jumlah pekerja menjadi perlu, sedangkan pekerja yang diberhentikan tidak dapat ditempatkan pada posisi lain yang sesuai  5. Pekerja tertentu ternyata tidak mampu melaksanakan pekerjaan yang dituntut oleh jabatannya secara memuaskan | Pasal 12 Undang-Undang Standar Ketenagakerjaan Taiwan (勞動基準法第12條): Pemberi kerja dapat memberhentikan pekerja tanpa pemberitahuan sebelumnya apabila pekerja berada dalam salah satu keadaan berikut.  1. Memberikan keterangan tidak benar pada saat membuat perjanjian kerja sehingga menyesatkan pemberi kerja dan berpotensi menimbulkan kerugian bagi usahanya  2. Melakukan kekerasan atau penghinaan berat terhadap pemberi kerja, keluarga pemberi kerja, wakil pemberi kerja (代理人), atau rekan kerja lainnya  3. Dijatuhi pidana penjara untuk waktu tertentu (有期徒刑) atau pidana yang lebih berat dan putusannya telah berkekuatan hukum tetap, tanpa dijatuhkannya pidana bersyarat (緩刑) maupun izin membayar uang pengganti pidana penjara (易科罰金)  4. Melanggar perjanjian kerja atau peraturan perusahaan secara berat  5. Dengan sengaja merusak atau menghabiskan mesin, perkakas, bahan baku, produk, atau barang lain milik pemberi kerja, atau dengan sengaja membocorkan rahasia teknis maupun rahasia usaha pemberi kerja sehingga menimbulkan kerugian bagi pemberi kerja  6. Mangkir tanpa alasan sah selama 3 hari berturut-turut, atau mangkir tanpa alasan sah selama 6 hari atau lebih dalam satu bulan |  |
 
 > Di Taiwan, setiap kali karyawan menggenapi satu tahun masa kerja (年資),
 > pemberi kerja wajib membayar pesangon sebesar 0,5 bulan upah rata-rata (平均工資).
@@ -174,7 +174,7 @@ dan dapat membuktikan bahwa B tidak mengundurkan diri atas kemauan sendiri.
 
 Karena itu, dengan bantuan pengacara sesudahnya,
 
-B berhasil memperoleh pesangon dalam jumlah besar,
+B dapat menegaskan hak atas pesangon menurut undang-undang,
 
 tetapi karyawan lain yang telah keluar tidak seberuntung itu.
 
@@ -210,7 +210,7 @@ atau menempatkan karyawan pada posisi yang tidak wajar,
 
 Apabila Anda bekerja di Taiwan,
 
-pesangon ternyata lebih sulit diperoleh daripada yang dibayangkan, bukan?
+pesangon ternyata lebih sulit diperoleh daripada yang mungkin Anda bayangkan.
 
 Jangan mudah berkompromi dengan perusahaan,
 

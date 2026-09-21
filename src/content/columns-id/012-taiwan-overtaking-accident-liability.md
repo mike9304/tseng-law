@@ -51,7 +51,7 @@ Munculnya hasil penilaian ahli menurut perkara masing-masing seperti ini tidak b
 
 Sebelum mendahului, Anda harus lebih dahulu memastikan apakah tempat atau keadaan lalu lintas tersebut termasuk dalam larangan mendahului. Apabila prosedur jalur yang sama berlaku, berikan isyarat klakson atau lampu utama sebagaimana ditentukan tanpa memaksa kendaraan di depan memberi jalan, tunggu sampai ada isyarat memberi jalan yang jelas, lalu selesaikan tindakan mendahului dengan jarak antara yang memadai dan jarak yang aman untuk kembali ke jalur semula.
 
-Menaati Pasal 101 memang penting, tetapi hal itu sendiri tidak menjamin terhindarnya kecelakaan maupun hasil penilaian ahli atau gugatan di kemudian hari. Pengemudi tetap harus menyediakan cadangan keselamatan yang lebih besar dan menyesuaikan tindakannya dengan keadaan jalan di depannya.
+Menaati Pasal 101 memang penting, tetapi hal itu sendiri tidak menjamin terhindarnya kecelakaan maupun hasil penilaian ahli atau gugatan di kemudian hari. Pengemudi tetap harus menyediakan kelonggaran keselamatan yang lebih besar dan menyesuaikan tindakannya dengan keadaan jalan di depannya.
 
 Sebagai bahan tambahan, Anda dapat merujuk pada [ilustrasi peraturan dan langkah-langkah mendahului](https://gonews.com.tw/car/daily/21934/). Karena tulisan itu merupakan bahan sekunder, mohon periksa pula ketentuan resmi yang berlaku saat ini ketika memastikan syarat-syarat hukumnya.
 

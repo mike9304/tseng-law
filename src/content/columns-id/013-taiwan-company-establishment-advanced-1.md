@@ -13,19 +13,19 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Gambar utama](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Belakangan ini banyak orang telah berhasil mendirikan perusahaan di Taiwan serta memperoleh visa kerja dan Kartu Izin Tinggal Orang Asing (外僑居留證, ARC),
+Belakangan ini banyak orang mendirikan perusahaan di Taiwan serta mengajukan visa kerja dan Kartu Izin Tinggal Orang Asing (外僑居留證, ARC),
 
 dan berikut ini saya rangkumkan pertanyaan-pertanyaan yang banyak ditanyakan pada saat pendirian perusahaan.
 
 Bagi Anda yang telah membaca [**Dasar Pendirian Perusahaan**](/id/columns/taiwan-company-establishment-basics), silakan lanjutkan pula ke panduan lanjutan yang lebih rinci ini.
 
-Semoga tanya jawab di bawah ini bermanfaat bagi Anda yang sedang mempertimbangkan untuk mendirikan perusahaan di Taiwan. 😊
+Tanya jawab berikut dapat menjadi orientasi umum bagi Anda yang sedang mempertimbangkan untuk mendirikan perusahaan di Taiwan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
 **1. Saya ingin mendirikan perusahaan, tetapi belum menemukan alamat pendaftaran perusahaan. Apakah pendirian tetap dapat dilakukan?**
 
-Ketika orang asing mendirikan perusahaan di Taiwan, ia harus mengajukan rencana investasi (投資計畫書) kepada Departemen Peninjauan Investasi, Kementerian Ekonomi Taiwan (經濟部投資審議司) untuk ditinjau.
+Ketika orang asing mendirikan perusahaan di Taiwan, ia harus mengajukan rencana investasi (投資計畫書) kepada Departemen Peninjauan Investasi, Kementerian Urusan Ekonomi (經濟部投資審議司) untuk ditinjau.
 
 Hal itu karena Departemen Peninjauan Investasi harus memastikan apakah modal tersebut benar-benar digunakan untuk keperluan investasi,
 
@@ -43,13 +43,13 @@ Pada tulisan dasar sebelumnya pun ada pembaca yang menyebutkan bahwa pembukaan r
 
 Karena kasus pencucian uang (洗錢) di Taiwan sangat banyak, pembukaan rekening bank menjadi semakin ketat.
 
-**Saran**：
+**Saran:**
 
 Karena peninjauan rencana investasi juga memakan waktu,
 
 sebaiknya penyusunan rencana investasi dan pencarian alamat pendaftaran perusahaan Anda jalankan secara bersamaan.
 
-Menurut Pasal 9 Peraturan Penanaman Modal oleh Orang Asing (外國人投資條例), setoran modal yang telah disetujui harus tiba seluruhnya dalam jangka waktu yang ditetapkan instansi berwenang (核定期限); jangka waktu sebenarnya harus dipastikan pada dokumen persetujuan masing-masing (dalam praktik sering ditetapkan sekitar 1 tahun).
+Menurut Pasal 9 Undang-Undang Penanaman Modal oleh Orang Asing (外國人投資條例), setoran modal yang telah disetujui harus tiba seluruhnya dalam jangka waktu yang ditetapkan instansi berwenang (核定期限); jangka waktu sebenarnya harus dipastikan pada dokumen persetujuan masing-masing (dalam praktik sering ditetapkan sekitar 1 tahun).
 
 sehingga setelah Anda mencari alamat perusahaan dan menandatangani perjanjian sewa,
 
@@ -73,15 +73,15 @@ tetapi kantor Badan Imigrasi tersebut sangat ramai, sehingga sebaiknya Anda data
 
 **3. Saya mendengar bahwa pada peninjauan rencana investasi harus dituliskan riwayat pendidikan dan pengalaman kerja. Saya khawatir riwayat pendidikan dan pengalaman kerja saya tidak sesuai dengan bidang usaha perusahaan yang hendak saya dirikan.**
 
-Departemen Peninjauan Investasi di bawah Kementerian Ekonomi memang meninjau latar belakang investor,
+Departemen Peninjauan Investasi, Kementerian Urusan Ekonomi, memang meninjau latar belakang investor,
 
-tetapi peninjauan itu tidak terlampau ketat.
+tetapi peninjauan itu tidak terbatas pada satu kriteria formal; setiap permohonan dinilai dari dokumennya.
 
 Anda dapat menyebutkan berbagai pengalaman kerja, termasuk pekerjaan paruh waktu,
 
-dan menjelaskannya secara rinci sehingga para peninjau dapat diyakinkan.
+dan menjelaskannya secara rinci sehingga keterkaitannya dengan rencana usaha dapat dipahami dari dokumen.
 
-Mengenai hal ini, sebaiknya Anda berkonsultasi secara saksama dengan pengacara Taiwan.
+Mengenai hal ini, sebaiknya Anda meminta peninjauan dari advokat di Taiwan.
 
 ​
 
@@ -91,7 +91,7 @@ Pendirian perusahaan memakan waktu sekitar **3 bulan**, dan perolehan izin kerja
 
 sehingga sebaiknya Anda menetapkan tanggal mulai perjanjian selambat mungkin.
 
-Selain itu, dalam perjanjian sewa toko di Taiwan, pemilik kerap memberikan "**masa pengerjaan interior**" (裝潢期間) kepada penyewa.
+Selain itu, dalam perjanjian sewa toko di Taiwan, pemilik kerap memberikan "**masa pengerjaan interior bebas sewa**" (裝潢期間) kepada penyewa.
 
 Masa tersebut adalah jangka waktu yang dibebaskan dari sewa, dan sebaiknya Anda merundingkannya.
 
@@ -111,7 +111,7 @@ bila diperlukan Anda dapat mengusulkan pembuatan akta notaris (公證) atas perj
 
 Hal itu bergantung pada bidang usaha terdaftar (營業項目) perusahaan.
 
-Contoh) Apabila bidang usaha terdaftarnya adalah usaha rumah makan, tetapi Anda hendak menyewa ruang perkantoran komersial, pembukaan rekening bank akan sangat sulit.
+Misalnya, apabila bidang usaha terdaftarnya adalah usaha rumah makan, tetapi Anda hendak menyewa ruang perkantoran komersial, pembukaan rekening bank akan sangat sulit.
 
 Sebagaimana telah saya sampaikan di atas, bank memeriksa perjanjian sewa dan meninjau langsung alamat perusahaan di lapangan.
 
@@ -119,11 +119,11 @@ Selain itu, pada tahap akhir pendaftaran perusahaan, pemerintah kota (市政府)
 
 dan apabila tempatnya berupa ruang perkantoran komersial, pendaftaran perusahaan tidak dapat dilakukan.
 
-Contoh) Apabila bidang usaha terdaftarnya termasuk yang dapat dijalankan di ruang perkantoran komersial, seperti usaha periklanan atau usaha perdagangan besar, perusahaan dapat didirikan di ruang perkantoran komersial. Sebelum menandatangani
+Misalnya, apabila bidang usaha terdaftarnya termasuk yang dapat dijalankan di ruang perkantoran komersial, seperti usaha periklanan atau usaha perdagangan besar, perusahaan dapat didirikan di ruang perkantoran komersial. Sebelum menandatangani perjanjian sewa,
 
-perjanjian sewa, sebaiknya Anda memastikannya terlebih dahulu.
+sebaiknya Anda memastikan hal itu terlebih dahulu.
 
-*Apabila Anda memerlukan bantuan atau konsultasi mengenai hukum Taiwan, silakan tinggalkan komentar atau hubungi kami kapan saja.*
+*Apabila Anda memerlukan pembahasan mengenai hukum Taiwan dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, atau bahasa Korea, gunakanlah halaman Kontak; bahasa Indonesia tidak termasuk bahasa konsultasi, dan waktu balasan tidak dijanjikan.*
 
 ---
 

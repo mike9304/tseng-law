@@ -47,7 +47,7 @@ Anda dapat meminta bantuan kepada kenalan di Taiwan, pemilik atau pihak yang men
 
 Apabila hasil pemeriksaan menunjukkan bahwa usaha rumah makan tidak dimungkinkan, pemerintah kota dapat tidak menerima pendaftaran tersebut ketika kemudian Anda mendaftarkan perusahaan (公司登記).
 
-Karena itu, mohon berhati-hati!
+Karena itu, periksalah hasilnya sebelum mendaftarkan perusahaan.
 
 ​
 
@@ -59,7 +59,7 @@ Namun, pada saat pendaftaran perusahaan sering kali beberapa bidang usaha didaft
 
 Karena itu, dalam praktiknya tidak semua bidang usaha perlu diperiksa pada saat pendaftaran perusahaan.
 
-Menurut "[Petunjuk Pelaksanaan Layanan Bantuan Pemeriksaan Lokasi Usaha Kota Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) "(臺北市營業場所協助查詢服務作業須知) dan menurut pengumuman terkini Kota Taipei,
+Menurut "[Petunjuk Pelaksanaan Layanan Bantuan Pemeriksaan Lokasi Usaha Kota Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)" (臺北市營業場所協助查詢服務作業須知) dan menurut pengumuman terkini Kota Taipei,
 
 sejak 1 Januari 2023, permohonan pendaftaran pendirian, pemindahan lokasi, atau penambahan bidang usaha perusahaan maupun usaha dagang (termasuk kantor cabang (分公司) dan cabang pembantu (分支機構)) **wajib** melampirkan hasil pemeriksaan awal lokasi usaha, tanpa memandang bidang usahanya.
 
@@ -71,7 +71,7 @@ Apabila usaha dibuka di tempat yang tidak memperbolehkan usaha rumah makan, kemu
 
 "bidang usaha yang menjadi objek pemeriksaan atas inisiatif instansi" (主動查詢之營業項目)
 
-Demikian penjelasan ini; apabila Anda memiliki pertanyaan lebih lanjut, silakan menghubungi pengacara Taiwan kapan saja.
+Demikian penjelasan ini. Apabila Anda memiliki pertanyaan lebih lanjut, tulislah melalui halaman Kontak; waktu balasan tidak dijanjikan, dan konsultasi hanya dilayani dalam bahasa Inggris, bahasa Mandarin (中文), bahasa Jepang, atau bahasa Korea.
 
 Peraturan instansi administratif dapat sering berubah, sehingga sebaiknya Anda memastikan ketentuan terbaru sebelum melakukan pendaftaran perusahaan.
 

@@ -1,5 +1,5 @@
 ---
-title: "Q&A Kecelakaan Lalu Lintas di Taiwan: Tindakan di Lokasi, Kelalaian, Perdamaian, dan Ganti Rugi"
+title: "Tanya Jawab Kecelakaan Lalu Lintas di Taiwan: Tindakan di Lokasi, Kelalaian, Perdamaian, dan Ganti Rugi"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
 date_display: "13 September 2025"
@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 ---
 
-# Q&A Kecelakaan Lalu Lintas di Taiwan: Tindakan di Lokasi, Kelalaian, Perdamaian, dan Ganti Rugi
+# Tanya Jawab Kecelakaan Lalu Lintas di Taiwan: Tindakan di Lokasi, Kelalaian, Perdamaian, dan Ganti Rugi
 
 ![Gambar yang menjelaskan tindakan pengamanan di lokasi dan pengamanan bukti segera setelah kecelakaan lalu lintas di Taiwan](../images/003-taiwan-traffic-accident-procedure/featured-01.jpg)
 
@@ -29,7 +29,7 @@ Pasal 185-4 Kitab Undang-Undang Hukum Pidana Taiwan (刑法) mengatur tanggung j
 
 ## Q2. Bukti apa yang harus lebih dahulu diamankan?
 
-Amankan lebih dahulu keselamatan pribadi dan pasang tanda peringatan; apabila ada korban luka atau diperlukan penyelamatan hubungi 119, sedangkan untuk tindak pidana atau keadaan keamanan yang mendesak hubungi 110 atau 112. Lakukan pula pelaporan kepada polisi sesuai dengan keadaan kecelakaan lalu lintas tersebut.
+Amankan lebih dahulu keselamatan pribadi dan pasang tanda peringatan, lalu gunakan nomor darurat yang berlaku di Taiwan — bukan nomor darurat negara Anda: 119 untuk ambulans dan pemadam kebakaran apabila ada korban luka atau diperlukan penyelamatan, 110 untuk polisi pada tindak pidana atau keadaan keamanan yang mendesak, serta 112 dari telepon genggam. Lakukan pula pelaporan kepada polisi sesuai dengan keadaan kecelakaan lalu lintas tersebut.
 
 Setelah keselamatan terjamin, ambillah foto bersudut lebar sekaligus foto jarak dekat untuk merekam posisi kendaraan dan kerusakannya, marka jalan, lampu isyarat, serta cuaca. Sebaiknya Anda juga tidak melewatkan nomor kontak saksi, permohonan pengamanan rekaman CCTV (監視器影像) dan kamera dasbor (行車紀錄器), data para pihak, kendaraan, dan asuransi, serta rekam medis (病歷). Dokumentasi pribadi memang berguna, tetapi tidak menggantikan penanganan polisi yang diwajibkan pada kecelakaan dengan korban luka atau meninggal.
 
@@ -49,7 +49,7 @@ Pilihan yang tepat berbeda-beda menurut ada tidaknya terputusnya daluwarsa (時�
 
 Tanggung jawab pidana baru dapat dinilai apabila terbukti adanya pelanggaran kewajiban berhati-hati oleh masing-masing pihak dan adanya hubungan sebab akibat antara pelanggaran itu dengan luka yang dialami pihak lain. Kelalaian yang ada pada kedua belah pihak saja tidak serta-merta menimbulkan tanggung jawab atas perbuatan melukai karena kelalaian.
 
-Dalam perkara perdata, menurut Pasal 217 Kitab Undang-Undang Hukum Perdata, apabila pada pihak yang dirugikan terdapat kelalaian yang ikut menimbulkan atau memperbesar kerugian (與有過失), pengadilan dapat mengurangi atau membebaskan jumlah ganti rugi. Sebagai contoh, apabila kerugian yang diakui dalam Dolar Taiwan Baru (新臺幣, TWD) berjumlah TWD 1.000.000 dan kelalaian pihak yang dirugikan dinilai 50%, maka sebelum penyesuaian lainnya jumlah itu dapat berkurang menjadi TWD 500.000.
+Dalam perkara perdata, menurut Pasal 217 Kitab Undang-Undang Hukum Perdata, apabila pada pihak yang dirugikan terdapat kelalaian yang ikut menimbulkan atau memperbesar kerugian (與有過失), pengadilan dapat mengurangi atau membebaskan jumlah ganti rugi. Sebagai contoh, apabila kerugian yang diakui dalam dolar Taiwan baru (新臺幣, TWD) berjumlah TWD 1.000.000 dan kelalaian pihak yang dirugikan dinilai 50%, maka sebelum penyesuaian lainnya jumlah itu dapat berkurang menjadi TWD 500.000.
 
 Penilaian ahli (鑑定) atau laporan analisis awal dapat menjadi bahan yang penting, tetapi tidak mengikat pengadilan secara mekanis. Pengadilan menilai keseluruhan bukti secara bersamaan, termasuk keterangan, rekaman gambar, dan kondisi kendaraan.
 
@@ -64,9 +64,9 @@ Apabila perkaranya merupakan delik aduan, menurut Pasal 238 Kitab Undang-Undang 
 ### Dasar Resmi Q1–Q5
 
 - [Peraturan Pengelolaan dan Sanksi Lalu Lintas Jalan Raya (道路交通管理處罰條例) Pasal 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
-- [Kitab Undang-Undang Hukum Pidana Republik Tiongkok Pasal 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
-- [Kitab Undang-Undang Hukum Pidana Republik Tiongkok Pasal 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
-- [Kitab Undang-Undang Hukum Pidana Republik Tiongkok Pasal 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
+- [Kitab Undang-Undang Hukum Pidana Taiwan (中華民國刑法) Pasal 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
+- [Kitab Undang-Undang Hukum Pidana Taiwan (中華民國刑法) Pasal 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [Kitab Undang-Undang Hukum Pidana Taiwan (中華民國刑法) Pasal 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
 - [Kitab Undang-Undang Hukum Acara Pidana Taiwan Pasal 237](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001)
 - [Kitab Undang-Undang Hukum Acara Pidana Pasal 238](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=238&pcode=C0010001)
 - [Kitab Undang-Undang Hukum Acara Pidana Pasal 487](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=487&pcode=C0010001)
@@ -130,7 +130,7 @@ Kuitansi, catatan tarif, catatan rute, dan data perawatan merupakan bukti yang m
 - [Kitab Undang-Undang Hukum Perdata Pasal 196](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=196&pcode=B0000001)
 - [Kitab Undang-Undang Hukum Perdata Pasal 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Kitab Undang-Undang Hukum Acara Pidana Pasal 504](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001)
-- [Penjelasan Yuan Kehakiman (司法院) mengenai perluasan tuntutan setelah pelimpahan](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
+- [Penjelasan Lembaga Kehakiman Taiwan (司法院) mengenai perluasan tuntutan setelah pelimpahan](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
 - [Putusan Pengadilan Distrik Chiayi (嘉義) mengenai biaya perawatan oleh kerabat](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
 - [Putusan Pengadilan Distrik Tainan (臺南) mengenai biaya transportasi berobat](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
 
@@ -175,7 +175,7 @@ Kewajiban mengikuti asuransi menurut Pasal 6 Undang-Undang Asuransi Tanggung Jaw
 
 Dalam kecelakaan yang melibatkan satu kendaraan, pengemudi kendaraan itu pada umumnya bukan penerima manfaat asuransi wajib kendaraan tersebut. Namun, dalam kecelakaan yang melibatkan beberapa kendaraan, terdapat keadaan ketika pengemudi dapat menuntut manfaat kepada penanggung asuransi wajib dari kendaraan lain yang terlibat.
 
-Standar manfaat (強制汽車責任保險給付標準) yang diubah pada 2026-05-29 berlaku bagi kecelakaan yang terjadi sejak 2026-07-01. Batas biaya pengobatan yang wajar dan diperlukan untuk luka adalah TWD 200.000 dalam Dolar Taiwan Baru, manfaat kecacatan (失能) berkisar TWD 80.000–3.000.000 menurut 15 tingkat yang ditentukan undang-undang, manfaat kematian adalah TWD 3.000.000, dan jumlah maksimum gabungan kematian, kecacatan, serta biaya pengobatan bagi 1 korban dan 1 kecelakaan adalah TWD 3.200.000. Bagi kecelakaan sebelum tanggal itu dapat berlaku standar yang lama.
+Standar manfaat (強制汽車責任保險給付標準) yang diubah pada 29 Mei 2026 berlaku bagi kecelakaan yang terjadi sejak 1 Juli 2026. Batas biaya pengobatan yang wajar dan diperlukan untuk luka adalah TWD 200.000 dalam dolar Taiwan baru, manfaat kecacatan (失能) berkisar TWD 80.000–3.000.000 menurut 15 tingkat yang ditentukan undang-undang, manfaat kematian adalah TWD 3.000.000, dan jumlah maksimum gabungan kematian, kecacatan, serta biaya pengobatan bagi 1 korban dan 1 kecelakaan adalah TWD 3.200.000. Bagi kecelakaan sebelum tanggal itu dapat berlaku standar yang lama.
 
 Asuransi tanggung jawab terhadap pihak ketiga (第三人責任險), asuransi kecelakaan diri pengemudi (駕駛人傷害險), dan asuransi kerugian kendaraan sendiri (車體損失險) merupakan produk pilihan yang bersifat kontraktual. Perlindungan yang sesungguhnya berbeda menurut pihak tertanggung, batas pertanggungan, risiko sendiri (自負額), pengecualian, kelalaian, dan syarat lainnya dalam polis, sehingga polis asuransi dan syarat-syaratnya harus diperiksa satu per satu.
 
@@ -184,13 +184,13 @@ Asuransi tanggung jawab terhadap pihak ketiga (第三人責任險), asuransi kec
 - [Kitab Undang-Undang Hukum Perdata Pasal 193](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Kitab Undang-Undang Hukum Perdata Pasal 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Kitab Undang-Undang Hukum Perdata Pasal 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Putusan Pengadilan Tinggi Taiwan tahun 109 perkara 上易字 Nomor 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [Putusan Pengadilan Tinggi Taiwan tahun 109 perkara 上易字 Nomor 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Putusan Pengadilan Tinggi Taiwan tahun 109 (2020) perkara 上易字 Nomor 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Putusan Pengadilan Tinggi Taiwan tahun 109 (2020) perkara 上易字 Nomor 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Kalkulator nilai kini Hoffmann milik Yuan Kehakiman](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Kitab Undang-Undang Hukum Perdata Pasal 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Putusan Pengadilan Distrik Taoyuan tahun 112 perkara 壢簡字 Nomor 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Putusan Pengadilan Distrik Taoyuan tahun 112 (2023) perkara 壢簡字 Nomor 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Kitab Undang-Undang Hukum Perdata Pasal 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
-- [Kitab Undang-Undang Hukum Pidana Republik Tiongkok Pasal 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [Kitab Undang-Undang Hukum Pidana Taiwan (中華民國刑法) Pasal 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Undang-Undang Asuransi Tanggung Jawab Kendaraan Bermotor Wajib](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
 - [Standar manfaat Asuransi Tanggung Jawab Kendaraan Bermotor Wajib](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Kontrak baku asuransi kendaraan bermotor pribadi Komisi Pengawas Keuangan (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
@@ -235,7 +235,7 @@ Q17. Apa tanggung jawab pidana atas perbuatan melukai karena kelalaian bagi piha
 
 ​
 
-Dalam hal melukai karena kelalaian, saat ini pengadilan pada umumnya menjatuhkan pidana sekitar 3 bulan.
+Dalam hal melukai karena kelalaian, pada sebagian putusan pernah dijatuhkan pidana sekitar 3 bulan; angka itu bukan hasil yang lazim maupun yang dapat dijanjikan.
 
 ​
 
@@ -247,7 +247,7 @@ Apabila pidana itu dialihkan menjadi uang pengganti pidana penjara (易科罰金
 
 ​
 
-Untuk luka berat karena kelalaian pada umumnya dijatuhkan pidana 4 bulan, sedangkan untuk kematian karena kelalaian (過失致死) pada umumnya dijatuhkan pidana 6 bulan.
+Untuk luka berat karena kelalaian pernah dijatuhkan pidana sekitar 4 bulan, sedangkan untuk kematian karena kelalaian (過失致死) pernah dijatuhkan pidana sekitar 6 bulan; keduanya pun bukan hasil yang lazim maupun yang dapat dijanjikan.
 
 ​
 
@@ -267,7 +267,7 @@ Untuk kematian karena kelalaian, pencabutan pengaduan tidak dimungkinkan, tetapi
 
 ​
 
-Anda dapat memperoleh pidana bersyarat (緩刑) sehingga tidak perlu menjalani pidana penjara.
+Dalam sebagian perkara, pidana bersyarat (緩刑) dapat dipertimbangkan sehingga pidana penjara tidak dijalankan; hal itu bukan suatu janji.
 
 ​
 
@@ -307,7 +307,7 @@ Yang penting dalam hal ini adalah ketelitian dan kejujuran pengacara tersebut.
 
 ​
 
-Penting bahwa pengacara memeriksa dengan saksama seluruh pos tuntutan dalam perkara itu dan mengupayakan agar Anda memperoleh ganti rugi sebesar mungkin.
+Penting bahwa pengacara memeriksa dengan saksama seluruh pos tuntutan dalam perkara itu agar tidak ada pos yang terlewat, dan mengupayakan ganti rugi yang didukung oleh fakta serta bukti.
 
 ​
 
@@ -359,11 +359,11 @@ Karena itu hal ini sama sekali tidak boleh diabaikan, dan sebaiknya Anda berundi
 
 ​
 
-Apabila Anda memiliki pertanyaan tambahan, silakan tinggalkan di kolom komentar.
+Apabila Anda memiliki pertanyaan tambahan, gunakanlah halaman Kontak.
 
 ​
 
-Demikian dari saya, Wei Tseng (曾雋崴), pengacara Taiwan.
+Demikian dari saya, Wei Tseng (曾雋崴), advokat di Taiwan.
 
 ---
 

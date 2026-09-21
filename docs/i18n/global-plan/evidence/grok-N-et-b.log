@@ -1,5 +1,82 @@
-[WO start 2026-09-22 07:09:34]
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
-Retry attempt 1...
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 2)...
-Retry attempt 2...
+WO-N-et-b — Estonian columns 010–018
+Workspace: /Users/son7/Projects/tseng-law-new-et-20260922
+Date: 2026-09-22
+Agent: Grok 4.6
+
+## File count
+9 files written in src/content/columns-et/ (010–018).
+Directory now also contains 001–009 from WO-N-et-a (18 total).
+
+010-taiwan-gym-injury-lawsuit.md
+011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md
+012-taiwan-overtaking-accident-liability.md
+013-taiwan-company-establishment-advanced-1.md
+014-taiwan-mandatory-employment-period.md
+015-taiwan-company-setup-pitch-location.md
+016-taiwan-inheritance-custody-analysis.md
+017-taiwan-logistics-business-setup.md
+018-taiwan-semiconductor-market-entry.md
+
+## §Verify output (verbatim)
+
+      18
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-et-20260922/src/content/columns-et/018-taiwan-semiconductor-market-entry.md  lang=et
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=143
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+      44
+
+Commands (in order):
+ls src/content/columns-et/*.md | wc -l
+node scripts/check-column-translation.mjs --dir src/content/columns-et --lang et 2>&1 | tail -20
+grep -rn "\[변호사 검수 필요\]" src/content/columns-et | wc -l
+git status --short | wc -l
+
+Pass: summary PASS 18/18 files (includes 001–009 already present); this lane’s 010–018 all PASS individually; markers 0.
+
+Each of 010–018 was checked after write (and after any FAIL fix) before continuing.
+
+## Key term choices (Estonian + Traditional-Chinese gloss)
+- kohtumenetluse esindaja (訴訟代理人)
+- hooletusest põhjustatud kehavigastus (過失傷害)
+- sisutõendiga kiri (存證信函)
+- karistuslik hüvitis (懲罰性賠償金)
+- Majandusministeeriumi investeeringute läbivaatamise osakond (經濟部投資審議司)
+- kosmeetika tootja või importija (化粧品製造或輸入業者)
+- haldusrahve (罰鍰)
+- miinimumteenistuse tähtaja kokkulepe (最低服務年限約定)
+- kutseoskuste koolitus (專業技術培訓)
+- ettemakstud hüvitis (預付性給付)
+- alaealiste laste hooldusõigus ja vanemlik vastutus (未成年子女權利義務之行使或負擔)
+- usaldusvara kasusaaja õigus (信託受益權)
+- mootorveokite kaubaveo tegevusala (汽車貨運業)
+- veo vahendamine (運送承攬)
+- järelevalvaja (監察人)
+
+Register: formal teie; typographic quotes „…“; thousands TWD 1.579.589 / TWD 25.000.000 (dot grouping); dates nominative 13. september 2025 / 4. veebruar 2026 / 17. september 2026. Bylines **Advokaat Wei Tseng (曾雋崴)** (Latin name kept; Estonian noun unmarked for gender). Categories: formation = „Ettevõtte asutamine Taiwanis“; legal = „Õigusteave Taiwani kohta“; case = „Juhtumianalüüs“. Related links /et/services · /et/lawyers · /et/contact · /et/pricing · /et/about · /et/columns/<slug> with guidance titles. Invest Taiwan lang=eng (011).
+
+R2–R8: Korea kept as labelled example (010 gym case facts); reader country unnamed; advertising softened (013/018 contact form, no immediate reply; consultation languages EN/中文/JA/KO only); FAQ and section openings self-standing (011, 014, 016, 017); first-use Chinese glosses; 011 foreign brands (not Korean brands); 013 emoji/comment CTA removed.
+
+## Unresolved
+- numbers WARN (not FAIL): 010 1심 / 제7호; 011 제3자 / 제1항 / 제7호; 014 제N항 / 제3자; 015 제2종; 016 제3자; 017 제3자. Digit bags match; checker has no Estonian ordinal table.
+- Date parser accepts only nominative month names (24. jaanuar 2022), not inflected 24. jaanuaril 2022.
+- Estonian copula „on“ counts as English stopword; Hanzi-free sentences with several „on“ trip the english leftover gate (fixed in 016 by adding 親權 and rephrasing).
+- 018 has no url in Korean source (matched); heading numbering jumps 5 → 7 as in source.
+- Native attorney review of Estonian legal register is still open; no [변호사 검수 필요] markers in the files.

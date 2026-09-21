@@ -1,11 +1,84 @@
-[WO start 2026-09-22 06:19:04]
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
-Retry attempt 1...
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 2)...
-Retry attempt 2...
-Estonian (`et`) guidance and UI strings are in place. Scaffold markers for `et` are gone.
+WO-P-et — Estonian guidance pack + UI strings
+Workspace: /Users/son7/Projects/tseng-law-new-et-20260922
+Date: 2026-09-22
+Agent: Grok 4.6
 
-**Pass:** SCAFFOLD grep `0`, `TSC_OK`. **1096 tests passed.** Five failures are from other still-scaffold locales / the root `llms.txt` 8 KiB budget, not from Estonian rows.
+## Files touched
+src/data/international-guidance-baltic-atlantic.ts
+src/data/international-guidance-team.ts
+src/data/international-guidance-offices.ts
+src/data/international-guidance-answers.ts
+src/data/international-inquiry-copy.ts
+src/data/multilingual-international-v2.ts
+src/data/team-name.ts
+src/lib/llms-txt.ts
+src/lib/columns.ts
+src/lib/public-language-registry.ts
+src/components/ColumnsGrid.tsx
+src/components/CinematicOpening.tsx
+src/components/decorative-video-controls.ts
+src/components/__tests__/columns-grid-guidance-labels.test.tsx
+src/components/__tests__/multilingual-international-v2.test.tsx
+src/data/__tests__/column-alternate-expectations.ts
+src/data/__tests__/guidance-disclosure-parity.test.ts
+src/data/__tests__/guidance-office-facts-sync.test.ts
+src/data/__tests__/international-guidance-privacy-disclosure.test.ts
+tests/builder-editor/international-guidance.playwright.ts
 
-Report: `docs/i18n/global-plan/evidence/grok-P-et.log`. No git add/commit/push.
-=== end code=0 2026-09-22 06:36:06 ===
+(columns-grid test also reads the Baltic pack file so VIEW_ALL_LABEL_EVIDENCE for et can see `viewAllLabel: 'Kuva kõik'`.)
+
+## §Verify output (verbatim)
+
+=== grep SCAFFOLD et ===
+0
+=== tsc ===
+TSC_OK
+=== vitest ===
+   × guidance locale llms.txt catalogs > writes a distinct notice set for each guidance language 3ms
+   × root llms.txt guidance catalog links > stays inside the 8 KiB root budget and the documented grammar 1ms
+   × root llms.txt guidance catalog links > lists every site-locale catalog and every guidance catalog 0ms
+   × root llms.txt guidance catalog links > labels each guidance catalog in its own language without widening consultation languages 0ms
+   × guidanceAnswers > covers every guidance locale x 6 page keys 4ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+ Test Files  2 failed | 45 passed (47)
+      Tests  5 failed | 1096 passed (1101)
+=== git status --short | wc -l ===
+      21
+
+## Failures that are not et rows
+These 5 failures are caused by other new locales that are still scaffolded (or by the batch size of all new locales), not by Estonian copy:
+
+1. src/lib/__tests__/international-guidance-answers.test.ts
+   "covers every guidance locale x 6 page keys"
+   The suite's hardcoded GUIDANCE_LOCALES list is the previous 27. GUIDANCE_LOCALES_4 / guidanceAnswers now also contain bn, ur, fa, my, ta, ne, km, mn, sk, bg, hr, sr, sl, lt, lv, ca, is (still scaffolded) plus et. Would fail the same way with et omitted.
+
+2. src/app/[locale]/__tests__/llms-discovery.test.tsx
+   "writes a distinct notice set for each guidance language"
+   Expected 135 unique notice strings; received 84 because remaining scaffolded locales still share cloned Czech / Hindi / Arabic / Thai / Russian notices. Estonian notices are distinct.
+
+3–5. same file, root llms.txt catalog tests
+   Root catalog exceeds the 8192-byte budget because every new locale is listed. Not an et wording defect.
+
+No failing assertion targeted an et row, et regex, or Estonian string.
+
+## Terminology (legal terms + Chinese gloss kept exactly)
+- seadusjärgne lahkumishüvitis (資遣費)
+- tööluba (工作許可)
+- elamisõigus (居留)
+- alaealiste laste hooldusõigus ja vanemlik vastutus (未成年子女權利義務之行使或負擔)
+- suhtlusõigus (會面交往)
+- abielulahutus (離婚)
+- pärimine (繼承)
+- leibkonnaregister (戶籍)
+- tööleping (勞動契約)
+- töökorralduseeskiri (工作規則)
+- kaubamärk (商標) / patent (專利)
+
+Register: formal teie + -ge/-ke imperative; typographic quotes „…“; cities Taipei / Kaohsiung / Taichung / Pingtung (Latin office titles, so they stay substrings of officeTitles). Attorney Wei Tseng: Estonian does not mark grammatical gender on nouns; used gender-neutral advokaat / juhtiv advokaat / Ta esindas. Consultation languages in order: inglise, hiina (中文), jaapani, korea. Autonym languageName: Eesti. English llms name: Estonian. Team / office eyebrows: MEESKOND, BÜROOD. Bio keeps TWD 1.57M and GUIDANCE_BIO_PRESERVED_TERMS byte-identical. FAQ “Kas ma saan nõu eesti keeles?” opens “Ei.”
+
+## Could not fit / constraints
+- All nav.* labels ≤ 14 characters (longest: Advokaadid / Privaatsus = 10). menuLabel = “Menüü” (not the literal Menu).
+- ColumnsGrid All chip is “Kõik”, a substring of mega viewAllLabel “Kuva kõik”. columnsReadMoreLabel = “Lugege edasi” (byte-identical in pack and ColumnsGrid).
+- answers sources and GUIDANCE_HOME_PATHS hrefs use /et/… (locale paths; not left on the Czech /cs/ clones).
+- og:locale fixture: et_EE. hreflang tag: et.
+- Nothing dropped for length. Korea/Jaapan spellings pinned in office-facts test.

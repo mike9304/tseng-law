@@ -977,487 +977,487 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
   },
 };
 
-// SCAFFOLD(cs) locale et
 export const estonianGuidanceContent: GuidanceLocaleContent = {
-  languageName: 'Čeština',
+  languageName: 'Eesti',
   nav: {
-    home: 'Úvod',
-    services: 'Služby',
-    about: 'Kancelář',
-    lawyers: 'Advokáti',
-    pricing: 'Náklady',
+    home: 'Avaleht',
+    services: 'Teenused',
+    about: 'Büroo',
+    lawyers: 'Advokaadid',
+    pricing: 'Tasud',
     contact: 'Kontakt',
-    faq: 'Otázky',
-    privacy: 'Soukromí',
-    disclaimer: 'Upozornění',
-    columns: 'Články',
+    faq: 'Küsimused',
+    privacy: 'Privaatsus',
+    disclaimer: 'Vastutus',
+    columns: 'Artiklid',
   },
-  contactCta: 'Odeslat žádost o posouzení',
+  contactCta: 'Saatke läbivaatamistaotlus',
   footerNotice:
-    'Tato česká stránka obsahuje pouze obecné informace o práci kanceláře podle tchajwanského práva. Není právní radou k jednotlivému případu a samotné odeslání zprávy nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
-  skipLink: 'Přeskočit navigaci a přejít k obsahu',
-  menuLabel: 'Přehled stránek',
-  languageLabel: 'Jazyk zobrazení',
+    'See eestikeelne leht sisaldab ainult üldist teavet büroo töö kohta Taiwani õiguse järgi. See ei ole õigusnõu üksiku asja kohta ja teate saatmine iseenesest ei tekita suhet advokaadi ja kliendi vahel.',
+  skipLink: 'Jätke navigeerimine vahele ja minge sisu juurde',
+  menuLabel: 'Menüü',
+  languageLabel: 'Kuva keel',
   mega: {
     services: {
-      description: 'Kancelář se zabývá hlavními agendami tchajwanského práva.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Büroo tegeleb Taiwani õiguse põhiliste valdkondadega.',
+      viewAllLabel: 'Kuva kõik',
     },
     columns: {
-      description: 'Články k častým otázkám tchajwanského práva.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Artikleid Taiwani õiguse korduvatest küsimustest.',
+      viewAllLabel: 'Kuva kõik',
     },
     lawyers: {
-      description: 'Představení advokátek a advokátů a způsobů kontaktu.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Büroo advokaatide tutvustus ja ühenduse võtmise viisid.',
+      viewAllLabel: 'Kuva kõik',
     },
     pricing: {
-      description: 'Tato stránka vysvětluje rozsah práce a způsob ujasnění nákladů.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'See leht selgitab töö ulatust ja seda, kuidas tasud kinnitatakse.',
+      viewAllLabel: 'Kuva kõik',
     },
     faq: {
-      description: 'Časté otázky k práci kanceláře na Tchaj-wanu.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Korduvad küsimused büroo töö kohta Taiwanis.',
+      viewAllLabel: 'Kuva kõik',
     },
   },
-  notFoundTitle: 'Stránka nenalezena',
+  notFoundTitle: 'Lehte ei leitud',
   notFoundText:
-    'Hledaná stránka neexistuje nebo byla přesunuta. Můžete se vrátit na českou úvodní stránku a prohlédnout si dostupné informace.',
-  backHomeLabel: 'Na úvodní stránku',
-  readSourceLabel: 'Otevřít seznam článků v původním jazyce',
+    'Otsitud lehte ei ole või see on teisaldatud. Võite naasta eestikeelsele avalehele ja tutvuda kättesaadavate juhistega.',
+  backHomeLabel: 'Avalehele',
+  readSourceLabel: 'Avage artiklite loend algkeeles',
   home: {
-    heroScrollLabel: 'Posunout dolů',
-    heroColumnsCtaLabel: 'Zobrazit články',
-    servicesDetailLabel: 'Zobrazit podrobnosti',
-    servicesAssistanceBefore: 'Není-li zřejmé, do které agendy Vaše věc patří, stránka ',
+    heroScrollLabel: 'Kerige allapoole',
+    heroColumnsCtaLabel: 'Vaadake artikleid',
+    servicesDetailLabel: 'Vaadake üksikasju',
+    servicesAssistanceBefore: 'Kui ei ole selge, millisesse valdkonda teie asi kuulub, selgitab leht ',
     servicesAssistanceLinkLabel: 'Kontakt',
-    servicesAssistanceAfter: ' vysvětluje, jak sestavit shrnutí, které advokátka nebo advokát posoudí.',
-    columnsViewAllLabel: 'Zobrazit všechny články',
-    columnsReadMoreLabel: 'Číst dál',
-    columnsReviewLabel: 'Posoudila advokátka Wei Tseng',
-    columnsOriginalLanguageBadge: 'Původní jazyk',
+    servicesAssistanceAfter:
+      ', kuidas koostada kokkuvõte, mille advokaat läbi vaatab.',
+    columnsViewAllLabel: 'Vaadake kõiki artikleid',
+    columnsReadMoreLabel: 'Lugege edasi',
+    columnsReviewLabel: 'Läbi vaadanud advokaat Wei Tseng',
+    columnsOriginalLanguageBadge: 'Algkeel',
     columnsOriginalLanguageNote:
-      'Následující články zatím nejsou k dispozici v češtině. Seznam zůstává v původním jazyce a otevře příslušnou jazykovou stránku; obsah se automaticky nepřekládá.',
-    imageBandAlt: 'Tradiční tchajwanský dvorec sanheyuan (三合院) a moderní pavilon za denního světla',
-    videoPauseLabel: 'Pozastavit video',
-    videoPlayLabel: 'Přehrát video',
-    videoReplayLabel: 'Přehrát video znovu',
+      'Järgmisi artikleid ei ole veel eesti keeles. Loend jääb algkeelde ja avab vastava keelelehe; sisu ei tõlgita automaatselt.',
+    imageBandAlt: 'Traditsiooniline taiwani sanheyuan (三合院) ja kaasaegne paviljon päevavalguses',
+    videoPauseLabel: 'Peatage video',
+    videoPlayLabel: 'Esitage video',
+    videoReplayLabel: 'Esitage video uuesti',
   },
   pages: {
     home: {
-      eyebrow: 'INFORMACE',
-      title: 'Právní služby na Tchaj-wanu — informace v češtině',
+      eyebrow: 'JUHISED',
+      title: 'Õigusteenused Taiwanis — juhised eesti keeles',
       description:
-        'Obecné vysvětlení v češtině o rozsahu práce Hovering International Law Firm na Tchaj-wanu, o jazycích konzultace a o prvním kontaktu.',
+        'Üldine seletus eesti keeles Hovering International Law Firmi töövaldkonna kohta Taiwanis, nõustamiskeelte ja esimese ühenduse kohta.',
       intro:
-        'Hovering International Law Firm zastupuje zahraniční klienty, včetně osob s vazbou na Tchaj-wan, ve věcech tchajwanského práva: investice a zakládání společností, občanskoprávní spory, manželství, rodina a dědictví, pracovní právo, trestní věci a duševní vlastnictví. Tato česká část Vám pomůže rozpoznat, která práce spadá do našeho rozsahu, co si připravit a jak nás oslovit. Jde o obecné informace, nikoli o právní radu k Vašemu případu.',
+        'Hovering International Law Firm abistab välismaiseid kliente, sealhulgas Taiwaniga seotud isikuid, Taiwani õiguse asjades: investeeringud ja äriühingu asutamine, tsiviilvaidlused, abielu, perekond ja pärimine, tööõigus, kriminaalasjad ning intellektuaalomand. See eestikeelne osa aitab teil näha, milline töö kuulub meie valdkonda, mida ette valmistada ja kuidas meieni jõuda. Tegemist on üldise teabega, mitte õigusnõuga teie asjas.',
       sections: [
         {
-          heading: 'Čím se zabýváme',
+          heading: 'Millega tegeleme',
           paragraphs: [
-            'Hovering International Law Firm je advokátní kancelář se sídlem na Tchaj-wanu. Pracuje podle tchajwanského práva a má pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pching-tungu (屏東). Radíme podnikům, vedeme soudní řízení a zastupujeme zahraniční klienty v krocích, které je na Tchaj-wanu třeba učinit.',
-            'Celý zdejší obsah je obecný. Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku. Tyto informace nenahrazují konzultaci s advokátkou nebo advokátem nad Vašimi dokumenty.',
+            'Hovering International Law Firm on Taiwanis asutatud advokaadibüroo. Ta töötab Taiwani õiguse järgi ning tal on bürood Taipeis (臺北), Kaohsiungis (高雄), Taichungis (臺中) ja Pingtungis (屏東). Nõustame ettevõtteid, viime läbi kohtumenetlusi ja abistame välismaiseid kliente sammudes, mida Taiwanis on vaja teha.',
+            'Kogu siinne sisu on üldine. Asja tulemus sõltub asjaoludest, kohalduvatest sätetest ja ajast. Need juhised ei asenda vestlust advokaadiga teie dokumentide üle.',
           ],
         },
         {
-          heading: 'Jazyk stránky a jazyk konzultace nejsou totéž',
+          heading: 'Lehe keel ja nõustamiskeel ei ole sama asi',
           paragraphs: [
-            'Tato stránka je psána česky, ale konzultace s advokátkou nebo advokátem probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky. Čtení informací v češtině neznamená, že konzultace s advokátkou nebo advokátem proběhne česky.',
-            'Neslibujeme tlumočníka, lhůtu k odpovědi ani schůzku prostřednictvím této stránky. Pokud neovládáte žádný ze čtyř jazyků konzultace, stránka „Kontakt“ vysvětluje, jak posuzujeme způsob komunikace.',
+            'See leht on kirjutatud eesti keeles, kuid nõustamine advokaadiga toimub ainult neljas nõustamiskeeles: inglise, hiina (中文), jaapani ja korea keeles. Juhiste lugemine eesti keeles ei tähenda, et vestlus advokaadiga toimuks eesti keeles.',
+            'Me ei luba tõlki, vastamise tähtaega ega kohtumist selle lehe kaudu. Kui te ei saa kasutada ühtegi neljast keelest, selgitab leht „Kontakt“, kuidas suhtlusviisi kontrollitakse.',
           ],
         },
         {
-          heading: 'Agendy kanceláře',
+          heading: 'Töövaldkonnad',
           paragraphs: [
-            'Rozsah práce zahrnuje následujících šest agend. Stránka „Služby“ popisuje každou z nich přesněji a uvádí, co se neslibuje.',
+            'Töövaldkond hõlmab järgmisi kuut rühma. Leht „Teenused“ kirjeldab iga rühma täpsemalt ja ütleb, mida ei lubata.',
           ],
           items: [
-            'Investice a zakládání společností na Tchaj-wanu',
-            'Občanskoprávní spory a náhrada škody',
-            'Manželství, rodina a dědictví',
-            'Pracovněprávní spory',
-            'Trestní věci',
-            'Duševní vlastnictví: ochranné známky, patenty a autorské právo',
+            'Investeeringud ja äriühingu asutamine Taiwanis',
+            'Tsiviilvaidlused ja kahjuhüvitis',
+            'Abielu, perekond ja pärimine',
+            'Tööõiguslikud vaidlused',
+            'Kriminaalasjad',
+            'Intellektuaalomand: kaubamärgid, patendid ja autoriõigus',
           ],
         },
         {
-          heading: 'Kde začít',
+          heading: 'Kust alustada',
           paragraphs: [
-            'Přečtěte si stránku „Služby“ a ověřte, zda Vaše věc spadá do našeho rozsahu, poté „Náklady“ a „Kontakt“, abyste věděli, jak se stanoví rozsah a jak se náklady potvrzují před zahájením práce.',
-            'Při odeslání zprávy můžete shrnutí napsat ve svém jazyce. Původní text se uchová přesně tak, jak jste jej napsali, a automaticky se nepřekládá. Odeslaná zpráva je žádostí čekající na posouzení: není to ještě porada ani potvrzená schůzka.',
+            'Lugege esmalt lehte „Teenused“, et näha, kas teie asi kuulub meie valdkonda, seejärel lehti „Tasud“ ja „Kontakt“, millest selgub, kuidas töö ulatus kindlaks määratakse ja kuidas tasud enne töö algust kinnitatakse.',
+            'Teate saatmisel võite kokkuvõtte kirjutada oma keeles. Algtekst säilitatakse täpselt nii, nagu te selle kirjutasite, ja seda ei tõlgita automaatselt. Saadetud teade on läbivaatamist ootav taotlus: see ei ole veel nõustamine ega kinnitatud kohtumine.',
           ],
         },
       ],
     },
     services: {
-      eyebrow: 'SLUŽBY',
-      title: 'V čem klienty zastupujeme',
+      eyebrow: 'TEENUSED',
+      title: 'Milliste asjadega tegeleme',
       description:
-        'Šest agend, které kancelář na Tchaj-wanu vede, a hranice, které je užitečné znát nejdříve.',
+        'Kuus valdkonda Taiwani büroos ja piirid, mida on kasulik esmalt teada.',
       intro:
-        'Níže jsou agendy, které skutečně vedeme, a otázky, jež se v počáteční fázi kladou nejčastěji. Výklad Vám pomůže posoudit, zda Vaše věc spadá do našeho rozsahu; je obecný a není právním rozborem jednotlivého spisu.',
+        'Allpool on valdkonnad, millega tegelikult tegeleme, ja küsimused, mida algfaasis sageli esitatakse. Esitus aitab teil hinnata, kas teie asi kuulub meie valdkonda; see on üldine ega ole üksiku asja õiguslik analüüs.',
       sections: [
         {
-          heading: 'Investice a zakládání společností na Tchaj-wanu',
+          heading: 'Investeeringud ja äriühingu asutamine Taiwanis',
           paragraphs: [
-            'Zastupujeme zahraniční investory a podniky při založení nebo vedení společnosti na Tchaj-wanu: volba právní formy, příprava a podání dokumentů, vklad kapitálu, bankovní otázky, posouzení sídla a odvětvové požadavky. Podporujeme také účetnictví a daně, které ze založení a z provozu na Tchaj-wanu vyplývají.',
-            'Postup a lhůty se liší podle formy, investora, odvětví, banky a podle již dostupných dokumentů. Založení společnosti samo o sobě nevede k pobytovému oprávnění (居留) ani k pracovnímu povolení (工作許可): jde o samostatná řízení posuzovaná podle situace konkrétní osoby.',
+            'Abistame välismaiseid investoreid ja ettevõtteid äriühingu asutamisel või juhtimisel Taiwanis: õigusliku vormi valik, dokumentide ettevalmistamine ja esitamine, kapitali sissemakse, pangaküsimused, tegutsemiskoha hindamine ning valdkonnanõuded. Toetame ka raamatupidamist ja makse, mis tekivad asutamisest ja tegutsemisest Taiwanis.',
+            'Menetluse käik ja kestus erinevad vormi, investori, tegevusala, panga ja juba olemasolevate dokumentide järgi. Äriühingu asutamine iseenesest ei too kaasa elamisõigust (居留) ega tööluba (工作許可): need on eraldi menetlused, mida hinnatakse isiku olukorra järgi.',
           ],
         },
         {
-          heading: 'Občanskoprávní spory a náhrada škody',
+          heading: 'Tsiviilvaidlused ja kahjuhüvitis',
           paragraphs: [
-            'Tato agenda zahrnuje spory ze smluv, náhradu škody z protiprávního jednání a spotřebitelské spory. Práce zpravidla začíná časovou osou, posouzením dokumentů a existujících důkazů a teprve poté následují další kroky.',
-            'Průběh určují lhůty, včetně promlčecích, a úplnost důkazů. Uveďte proto známá data co nejdříve. Uschovejte smlouvy, zprávy, doklady o platbě nebo fotografie stavu na místě a zmiňte je v první zprávě.',
+            'Sellesse valdkonda kuuluvad lepinguvaidlused, lepinguväline kahjuõiguslik vastutus ja tarbijavaidlused. Töö algab tavaliselt sündmuste ajajärjestuse selgitamisest ning olemasolevate dokumentide ja tõendite läbivaatamisest ning alles seejärel lepitakse kokku järgmised sammud.',
+            'Tähtajad, sealhulgas aegumine, ja tõendite täielikkus mõjutavad kulgu otsustavalt. Nimetage seetõttu teadaolevad kuupäevad võimalikult varakult. Säilitage lepingud, teated, maksetõendid või fotod olukorrast kohapeal ja mainige neid esimeses teates.',
           ],
         },
         {
-          heading: 'Manželství, rodina a dědictví',
+          heading: 'Abielu, perekond ja pärimine',
           paragraphs: [
-            'Vedeme rozvod (離婚), vypořádání majetku, výkon a převzetí práv a povinností k nezletilým dětem (未成年子女權利義務之行使或負擔), styk s dítětem (會面交往) a dědictví (繼承), a to i tehdy, nacházejí-li se strany nebo majetek v různých státech. Přeshraniční rodinné věci často vyžadují další posouzení matričních záznamů (戶籍), formy listin a jejich průkaznosti na Tchaj-wanu.',
-            'Protože rodinné věci s sebou často nesou lhůty a souběžná řízení, mělo by první shrnutí uvést vztah mezi stranami, současné bydliště a již probíhající řízení.',
+            'Tegeleme abielulahutusega (離婚), vara jagamisega, alaealiste laste hooldusõiguse ja vanemliku vastutusega (未成年子女權利義務之行使或負擔), suhtlusõigusega (會面交往) ja pärimisega (繼承), ka siis, kui pooled või vara asuvad eri riikides. Piiriülesed perekonnaasjad nõuavad sageli täiendavat kontrolli leibkonnaregistri (戶籍), dokumentide vormi ja nende tõendusväärtuse kohta Taiwanis.',
+            'Kuna perekonnaasjadega kaasnevad sageli tähtajad ja paralleelsed menetlused, peaks esimene kokkuvõte nimetama poolte suhte, praeguse elukoha ja juba käimasolevad menetlused.',
           ],
         },
         {
-          heading: 'Pracovněprávní spory',
+          heading: 'Tööõiguslikud vaidlused',
           paragraphs: [
-            'Tato agenda zahrnuje skončení pracovního poměru, odstupné podle tchajwanského práva (資遣費; nelze je ztotožňovat s obdobnými instituty jiných států), odměnu a spory z pracovní smlouvy (勞動契約), a to jak na straně zaměstnance, tak na straně zaměstnavatele. Při posouzení odlišujeme důvod skončení od otázek výpovědní doby, výplaty a lhůt.',
-            'Rozhodujícími dokumenty bývají pracovní smlouva, vnitřní pracovní řád (工作規則), výplatní pásky a korespondence stran. Máte-li je stále k dispozici, zmiňte to ve shrnutí.',
+            'Sellesse valdkonda kuuluvad töösuhte lõpetamine, Taiwani õiguse järgne seadusjärgne lahkumishüvitis (資遣費; seda ei saa samastada teiste riikide sarnaste korraldustega), töötasu ja vaidlused töölepingust (勞動契約), nii töötaja kui ka tööandja poolel. Hindamisel eristame lõpetamise alust etteteatamise, väljamakse ja tähtaegade küsimustest.',
+            'Tööleping, töökorralduseeskiri (工作規則), palgalehed ja poolte kirjavahetus on tavaliselt määravad dokumendid. Kui need on teil veel olemas, mainige seda kokkuvõttes.',
           ],
         },
         {
-          heading: 'Trestní věci',
+          heading: 'Kriminaalasjad',
           paragraphs: [
-            'Zastupujeme v přípravném řízení i před soudem podezřelé a obviněné i poškozené a posuzujeme trestní rizika podnikatelské činnosti.',
-            'Trestní věci mívají krátké lhůty a pevně stanovené fáze. Obdrželi-li jste již písemnost orgánu činného v trestním řízení nebo soudu, uveďte datum na písemnosti včas, aby byl obsah posouzen ve správném pořadí.',
+            'Abistame eeluurimises ja kohtus nii kahtlustatavaid või süüdistatavaid kui ka kannatanuid ning hindame ettevõtluse kriminaalõiguslikke riske.',
+            'Kriminaalasjadel on sageli lühikesed tähtajad ja kindlaksmääratud etapid. Kui olete juba saanud kirja prokuratuurilt või kohtult, nimetage selle kuupäev varakult, et sisu vaadataks läbi õiges järjekorras.',
           ],
         },
         {
-          heading: 'Duševní vlastnictví',
+          heading: 'Intellektuaalomand',
           paragraphs: [
-            'Podporujeme zápis ochranných známek (商標) a patentů (專利), autorské právo a spory o tato práva na Tchaj-wanu.',
-            'V této agendě rozhoduje pořadí kroků: rozsah ochrany, okamžik podání přihlášky a skutečné užívání ovlivňují volbu. Podání přihlášky samo o sobě neznamená, že jí bude vyhověno.',
+            'Abistame kaubamärkide (商標) ja patentide (專利) registreerimisel, autoriõiguses ja nende õiguste vaidlustes Taiwanis.',
+            'Selles valdkonnas otsustab sammude järjekord: kaitse ulatus, taotluse esitamise hetk ja tegelik kasutamine mõjutavad valikut. Taotluse esitamine iseenesest ei tähenda, et see rahuldatakse.',
           ],
         },
         {
-          heading: 'Rozsah a jeho potvrzení',
+          heading: 'Ulatus ja selle kinnitamine',
           paragraphs: [
-            'Kancelář pracuje podle tchajwanského práva a vede věci z výše uvedených agend. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí Vaši zprávu.',
-            'Pobytový status, pracovní povolení a obdobné otázky se posuzují podle dokumentů a podle situace konkrétní osoby, nikoli podle státní příslušnosti. Dotýká-li se část Vaší věci těchto bodů, uveďte to při kontaktu. Tato stránka neslibuje výsledek ani lhůtu k odpovědi.',
+            'Büroo töötab Taiwani õiguse järgi ja tegeleb eespool nimetatud valdkondade asjadega. Iga asja ulatus kinnitatakse eraldi pärast seda, kui advokaat on teie teate läbi vaadanud.',
+            'Elamisstaatus, tööluba ja sarnased küsimused hinnatakse dokumentide ja isiku olukorra järgi, mitte kodakondsuse järgi. Kui osa teie asjast puudutab selliseid küsimusi, nimetage see ühendust võttes. See leht ei luba tulemust ega vastamise tähtaega.',
           ],
         },
       ],
     },
     about: {
-      eyebrow: 'KANCELÁŘ',
-      title: 'O Hovering International Law Firm',
+      eyebrow: 'BÜROO',
+      title: 'Hovering International Law Firmist',
       description:
-        'Základní údaje o této tchajwanské advokátní kanceláři, o jejích pobočkách a o práci se zahraničními stranami.',
+        'Põhiandmed selle Taiwani advokaadibüroo, selle büroode ja välismaiste osapooltega tehtava töö kohta.',
       intro:
-        'Hovering International Law Firm je advokátní kancelář na Tchaj-wanu. Advokátky a advokáti pracují od poradenství podnikům až po soudní řízení. Tato část popisuje vznik kanceláře, sídla a práci se zahraničními stranami.',
+        'Hovering International Law Firm on advokaadibüroo Taiwanis. Advokaadid töötavad ettevõtete nõustamisest kuni kohtumenetluseni. See osa kirjeldab büroo teket, asukohti ja tööd välismaiste osapooltega.',
       sections: [
         {
-          heading: 'Založení a struktura',
+          heading: 'Asutamine ja ülesehitus',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) byla založena v roce 2016 advokátkami a advokáty, kteří studovali na National Taiwan University (國立臺灣大學). Čínský název 昊鼎 spojuje znak 昊 („širé nebe“) se znakem 鼎 („pevný základ“) a vystihuje zaměření kanceláře od jejího založení.',
-            'Máme pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pching-tungu (屏東). Pobočka v Kao-siungu se soustředí na vedení podniků a vede občanskoprávní, trestní a správní spory. Pobočka v Tchaj-čungu vede stavební věci, duševní vlastnictví a věci s vazbou na Koreu a Japonsko. Pobočka v Pching-tungu byla otevřena v roce 2017 pro místní potřebu.',
-            'Vedle advokátní práce působí od roku 2020 také Hovering Accounting Office, která nabízí účetnictví a daňové plánování podnikatelům a soukromým osobám s majetkem.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) asutasid 2016. aastal advokaadid, kes on õppinud National Taiwan Universitys (國立臺灣大學). Hiinakeelne nimi 昊鼎 ühendab märgi 昊 („lai taevas“) märgiga 鼎 („kindel alus“) ja kirjeldab büroo suunda asutamisest saadik.',
+            'Meil on bürood Taipeis (臺北), Kaohsiungis (高雄), Taichungis (臺中) ja Pingtungis (屏東). Kaohsiungi büroo keskendub ettevõtte juhtimisele ning tegeleb tsiviil-, kriminaal- ja haldusvaidlustega. Taichungi büroo tegeleb ehitusasjade, intellektuaalomandi ning Korea ja Jaapaniga seotud asjadega. Pingtungi büroo avati 2017. aastal kohaliku vajaduse jaoks.',
+            'Advokaaditöö kõrval tegutseb alates 2020. aastast ka Hovering Accounting Office, mis pakub raamatupidamist ja maksude planeerimist ettevõtjatele ja varakatele eraisikutele.',
           ],
         },
         {
-          heading: 'Práce se zahraničními stranami',
+          heading: 'Töö välismaiste osapooltega',
           paragraphs: [
-            'Přeshraniční práce zahrnuje zakládání společností, víza, přihlášky ochranných známek a patentů, posouzení právního rizika a daňové poradenství podnikům. Pobočka v Tchaj-čungu vede zejména stavební věci, duševní vlastnictví a věci s vazbou na Koreu a Japonsko. Advokátka Wei Tseng (曾雋崴) zastupuje klienty z Koreje, z Japonska a další mezinárodní klienty v uvedených agendách.',
-            'Zda můžeme věc převzít, závisí na obsahu a na jazyku komunikace. Spadá-li Vaše věc do uvedených agend a lze-li ji projednat v některém ze čtyř jazyků konzultace, můžete zaslat shrnutí k posouzení.',
+            'Piiriülese töö hulka kuuluvad äriühingu asutamine, viisad, kaubamärgi- ja patenditaotlused, õigusliku riski hindamine ja ettevõtete maksunõustamine. Taichungi büroo tegeleb eelkõige ehitusasjade, intellektuaalomandi ning Korea ja Jaapaniga seotud asjadega. Advokaat Wei Tseng (曾雋崴) abistab kliente Koreast, Jaapanist ja mujalt maailmast nimetatud valdkondades.',
+            'Kas saame asja vastu võtta, sõltub sisust ja suhtluskeelest. Kui teie asi kuulub nimetatud valdkondadesse ja seda saab arutada ühes neljast nõustamiskeelest, võite saata kokkuvõtte läbivaatamiseks.',
           ],
         },
         {
-          heading: 'Když nás oslovíte',
+          heading: 'Kui võtate meiega ühendust',
           paragraphs: [
-            'Po doručení Vašeho shrnutí posoudí advokátka nebo advokát obsah a poté hovoří o možném rozsahu práce, o dosud potřebných dokumentech a o dalších krocích. U daňových nebo účetních otázek může kancelář postupovat s účetním úsekem v jednom navazujícím postupu.',
-            'Výsledek každé věci závisí na skutkovém stavu a na dostupných dokumentech; výsledek neslibujeme. Potřebujete-li závaznou odpověď pro svou situaci, musí být dokumenty projednány s advokátkou nebo advokátem v některém ze čtyř jazyků konzultace.',
+            'Kui teie kokkuvõte on saabunud, vaatab advokaat sisu läbi ja räägib seejärel võimalikust töö ulatusest, veel vajalikest dokumentidest ja järgmistest sammudest. Maksu- või raamatupidamisküsimustes võib büroo töötada raamatupidamisüksusega ühes menetluses.',
+            'Iga asja tulemus sõltub asjaoludest ja olemasolevatest dokumentidest; tulemust me ei luba. Kui vajate siduvat vastust oma olukorrale, tuleb dokumendid arutada advokaadiga ühes neljast nõustamiskeelest.',
           ],
         },
       ],
     },
     lawyers: {
-      eyebrow: 'ADVOKÁTI',
-      title: 'Mezinárodní tým Hovering',
-      description: 'Profily advokátek a advokátů, provozního vedení a přidruženého účetnictví a auditu Hovering.',
+      eyebrow: 'ADVOKAADID',
+      title: 'Hoveringi rahvusvaheline meeskond',
+      description: 'Hoveringi advokaatide, tegevjuhtimise ja seotud audiitorbüroo profiilid.',
       intro: '',
       sections: [],
     },
     pricing: {
-      eyebrow: 'NÁKLADY',
-      title: 'Jak se stanoví rozsah práce a náklady',
+      eyebrow: 'TASUD',
+      title: 'Kuidas kinnitatakse töö ulatus ja tasud',
       description:
-        'Vysvětlení pořadí: nejprve rozsah práce, poté potvrzení nákladů, a proč tato stránka neobsahuje ceník.',
+        'Selgitus järjekorrast: esmalt töö ulatus, seejärel tasude kinnitamine, ja miks sellel lehel ei ole hinnakirja.',
       intro:
-        'Tato stránka vysvětluje, jak se náklady stanoví, nikoli jejich výši. Výše závisí na rozsahu práce v jednotlivé věci a má smysl teprve tehdy, je-li tento rozsah zřejmý.',
+        'See leht selgitab, kuidas tasud kinnitatakse, mitte nende suurust. Suurus sõltub üksiku asja töö ulatusest ja on mõttekas alles siis, kui see ulatus on selge.',
       sections: [
         {
-          heading: 'Nejprve se stanoví rozsah práce',
+          heading: 'Esmalt kinnitatakse töö ulatus',
           paragraphs: [
-            'Věci téhož druhu mohou vyžadovat velmi rozdílné úsilí, podle počtu stran, dostupných dokumentů, lhůt, které je třeba dodržet, a podle toho, zda již bylo zahájeno řízení. Prvním krokem je proto vždy stanovit, co do práce patří a co nikoli.',
-            'Shrnutí, které na začátku zašlete, je základem tohoto rozsahu. Čím jasněji popisuje průběh, Váš požadavek a lhůty, tím přesněji lze rozsah určit.',
+            'Sama liiki asjades võib töömaht olla väga erinev, olenevalt poolte arvust, olemasolevatest dokumentidest, järgitavatest tähtaegadest ja sellest, kas menetlus on juba alanud. Seepärast on esimene samm alati kindlaks määrata, mis kuulub töösse ja mis mitte.',
+            'Kokkuvõte, mille alguses saadate, on selle ulatuse alus. Mida selgemalt see kirjeldab sündmuste käiku, teie soovi ja tähtaegu, seda täpsemalt saab ulatuse määrata.',
           ],
         },
         {
-          heading: 'Náklady se potvrzují před zahájením práce',
+          heading: 'Tasud kinnitatakse enne töö algust',
           paragraphs: [
-            'Je-li rozsah práce zřejmý, výše a způsob výpočtu nákladů se s Vámi projedná a potvrdí dříve, než práce začne. Změní-li se rozsah v průběhu, musí být potvrzen znovu.',
-            'Tato stránka není cenovou nabídkou a nezakládá povinnost k platbě.',
+            'Kui töö ulatus on selge, arutatakse summa ja arvutusviis teiega läbi ja kinnitatakse enne töö algust. Kui ulatus muutub töö käigus, tuleb see uuesti kinnitada.',
+            'See leht ei ole hinnapakkumine ega tekita maksekohustust.',
           ],
         },
         {
-          heading: 'Porada může být úplatná',
+          heading: 'Nõustamine võib olla tasuline',
           paragraphs: [
-            'Porada s advokátkou nebo advokátem může být úplatnou službou. Tato stránka neříká, že první konzultace je bezplatná, a žádnou její část nelze v tomto smyslu vykládat.',
-            'Je-li porada úplatná, sdělí se výše a způsob platby dříve, než se porada uskuteční.',
+            'Nõustamine advokaadiga võib olla tasuline teenus. See leht ei ütle, et esimene vestlus on tasuta, ja ühtegi osa ei tohi nii lugeda.',
+            'Kui nõustamine on tasuline, teatatakse summa ja makseviis enne selle toimumist.',
           ],
         },
         {
-          heading: 'Proč tato stránka neuvádí sazby',
+          heading: 'Miks sellel lehel ei ole tariife',
           paragraphs: [
-            'Náklady závisejí na věci samé: na úsilí, počtu stran, dokumentech, lhůtách a na tom, zda již řízení probíhá. Číslo stanovené předem by náklady Vašeho spisu neukázalo. Proto nejprve stanovíme rozsah práce a náklady Vám sdělíme poté, dříve než práce začne.',
-            'Vedle odměny mohou vzniknout soudní poplatky, náklady orgánů nebo třetích osob. Ty jsou od odměny oddělené a závisejí na příslušném řízení.',
+            'Tasud sõltuvad asjast endast: töömahust, poolte arvust, dokumentidest, tähtaegadest ja sellest, kas menetlus juba käib. Eelnevalt öeldud number ei näitaks, millised oleksid tasud teie asjas. Seepärast kinnitame esmalt töö ulatuse ja teatame teile seejärel tasud, enne kui töö algab.',
+            'Lisaks advokaaditasule võivad tekkida kohtu-, asutuse- või kolmanda isiku kulud. Need on tasust eraldi ja sõltuvad vastavast menetlusest.',
           ],
         },
       ],
     },
     contact: {
       eyebrow: 'KONTAKT',
-      title: 'Jak kancelář oslovit',
+      title: 'Kuidas bürooni jõuda',
       description:
-        'Jazyk stránky, jazyky konzultace, postup pro případ, že neovládáte žádný ze čtyř jazyků, a co tato stránka neslibuje.',
+        'Lehe keel, nõustamiskeeled, toimimisviis, kui te ei saa kasutada ühtegi neljast keelest, ja mida see leht ei luba.',
       intro:
-        'Než nám napíšete, rozlište následující tři body. Bývají směšovány, ale znamenají různé věci.',
+        'Enne kui meile kirjutate, eristage järgmised kolm asja. Neid aetakse sageli segi, kuid need tähendavad erinevaid asju.',
       sections: [
         {
-          heading: 'Tři věci, které je třeba držet odděleně',
+          heading: 'Kolm asja, mida tuleb hoida lahus',
           paragraphs: [
-            'Jazyk zobrazení stránky, jazyk konzultace s advokátkou nebo advokátem a jazyk, v němž píšete, jsou tři různé věci.',
+            'Lehe kuva keel, nõustamiskeel advokaadiga ja keel, milles te kirjutate, on kolm eri asja.',
           ],
           items: [
-            'Jazyk stránky: tyto informace jsou psány česky.',
-            'Jazyk konzultace: porada probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
-            'Váš jazyk psaní: shrnutí můžete napsat ve svém jazyce; původní text se uchová beze změny.',
+            'Lehe keel: need juhised on kirjutatud eesti keeles.',
+            'Nõustamiskeel: nõustamine toimub ainult inglise, hiina (中文), jaapani ja korea keeles.',
+            'Teie kirjutamiskeel: kokkuvõtte võite kirjutada oma keeles; algtekst säilitatakse muutmata kujul.',
           ],
         },
         {
-          heading: 'Pokud neovládáte žádný ze čtyř jazyků konzultace',
+          heading: 'Kui te ei saa kasutada ühtegi neljast nõustamiskeelest',
           paragraphs: [
-            'V kontaktním formuláři můžete zvolit „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
-            'Jde pouze o krok posouzení, nikoli o příslib. Neslibujeme tlumočníka, službu v češtině ani v jiném jazyce mimo čtyři uvedené jazyky, ani to, že každou věc přijmeme.',
+            'Kontaktvormil võite valida „Suhtlusviis tuleb kinnitada“. Vastame, et kontrollida, kas on olemas kasutatav suhtlusviis; teenust muus keeles ei tagata ja vastamise tähtaega ei lubata.',
+            'See on üksnes kontroll, mitte lubadus. Me ei luba tõlki, teenust eesti keeles ega muus keeles väljaspool neid nelja keelt, ega seda, et võtame iga asja vastu.',
           ],
         },
         {
-          heading: 'Co by měla obsahovat první zpráva',
+          heading: 'Mis peaks olema esimeses teates',
           paragraphs: [
-            'Uveďte, co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. Obdrželi-li jste již písemnost soudu nebo úřadu, uveďte datum na písemnosti.',
-            'V počáteční fázi zatím nemusíte zasílat číslo pasu, číslo dokladu, údaje o účtu, zdravotní dokumentaci ani soubor důkazů. Vyčkejte pokynů advokátky nebo advokáta a citlivé dokumenty zašlete až poté bezpečnou cestou.',
+            'Nimetage, mis on juhtunud, millist abi vajate, milline side on asjal Taiwaniga, ja tähtaeg, kui te selle teate. Kui olete juba saanud kirja kohtult või asutuselt, nimetage kirjal olev kuupäev.',
+            'Algfaasis ei ole veel vaja saata passinumbrit, isikutunnistuse numbrit, kontonumbreid, haiguslugu ega kogu tõendusmaterjali. Oodake advokaadi juhiseid ja saatke tundlikud dokumendid seejärel turvalist teed pidi.',
           ],
         },
         {
-          heading: 'Co tato stránka neslibuje',
+          heading: 'Mida see leht ei luba',
           paragraphs: [
-            'Neslibujeme lhůtu k odpovědi, nepotvrzujeme schůzku prostřednictvím této stránky, neslibujeme určitou advokátku ani určitého advokáta a neposkytujeme tlumočníka. Písemný překlad je něco jiného: Vaše zpráva se automaticky nepřekládá.',
-            'Odešlete-li žádost, obsah se uchová a čeká na posouzení. Neobdržíte-li po nějaké době odpověď, můžete napsat znovu na e-mailovou adresu uvedenou na kontaktní stránce.',
+            'Me ei luba vastamise tähtaega, ei kinnita kohtumist selle lehe kaudu, ei luba konkreetset advokaati ega korralda tõlki. Kirjalik tõlge on midagi muud: teie teadet ei tõlgita automaatselt.',
+            'Kui saadate taotluse, säilitatakse sisu ja see ootab läbivaatamist. Kui te mõne aja pärast vastust ei saa, võite kirjutada uuesti kontaktlehel nimetatud e-posti aadressile.',
           ],
         },
       ],
     },
     faq: {
-      eyebrow: 'OTÁZKY',
-      title: 'Časté otázky',
+      eyebrow: 'KÜSIMUSED',
+      title: 'Korduma kippuvad küsimused',
       description:
-        'Vysvětlení k rozsahu práce, přípravě, jazykům, nákladům a k tomu, co znamená odeslaná žádost.',
+        'Selgitused töövaldkonna, ettevalmistuse, keelte, tasude ja saadetud taotluse tähenduse kohta.',
       intro:
-        'Následující otázky jsou zodpovězeny na úrovni obecných informací. Odpověď pro Váš případ je možná teprve poté, co advokátka nebo advokát posoudí dokumenty.',
+        'Järgmistele küsimustele vastatakse üldise teabe tasemel. Vastus teie asjale on võimalik alles pärast seda, kui advokaat on dokumendid läbi vaadanud.',
       sections: [
         {
-          heading: 'Jak tuto část užívat',
+          heading: 'Kuidas seda osa kasutada',
           paragraphs: [
-            'Nenajdete-li odpověď pro svou situaci, závisí odpověď zpravidla na zvláštních skutečnostech. Napište je proto do shrnutí, namísto abyste je dovozovali z této stránky.',
+            'Kui te ei leia vastust oma olukorrale, sõltub vastus tavaliselt erilistest asjaoludest. Kirjutage need asjaolud kokkuvõttesse, selle asemel et neid ise sellelt lehelt tuletada.',
           ],
         },
       ],
       faqs: [
         {
-          question: 'Které věci kancelář vede?',
+          question: 'Milliste asjadega büroo tegeleb?',
           answer:
-            'Vedeme šest agend: investice a zakládání společností na Tchaj-wanu, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Zda bude věc přijata, se rozhodne po posouzení obsahu.',
+            'Tegeleme kuue valdkonnaga: investeeringud ja äriühingu asutamine Taiwanis, tsiviilvaidlused ja kahjuhüvitis, abielu, perekond ja pärimine, tööõiguslikud vaidlused, kriminaalasjad ning intellektuaalomand. Kas asi võetakse vastu, otsustatakse pärast sisu läbivaatamist.',
         },
         {
-          question: 'Co si připravit před kontaktem?',
+          question: 'Mida peaksin ette valmistama enne ühenduse võtmist?',
           answer:
-            'Připravte si krátké shrnutí průběhu, svého požadavku, vazby na Tchaj-wan a lhůty, existuje-li nějaká. Je-li již k dispozici písemnost soudu nebo úřadu, uveďte datum. V této fázi zatím nemusíte zasílat doklady totožnosti ani soubor důkazů.',
+            'Valmistage lühike kokkuvõte sündmuste käigust, oma soovist, Taiwaniga seotud sidemest ja tähtajast, kui see on olemas. Kui kohtu või asutuse kiri on juba olemas, nimetage selle kuupäev. Selles etapis ei ole veel vaja saata isikut tõendavaid dokumente ega kogu tõendusmaterjali.',
         },
         {
-          question: 'Je možná porada v češtině?',
+          question: 'Kas ma saan nõu eesti keeles?',
           answer:
-            'Ne. Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky. Neslibujeme ani tlumočníka. Písemný překlad je něco jiného: původní text, který napíšete, se uchová tak, jak je, a automaticky se nepřekládá.',
+            'Ei. Need juhised on kirjutatud eesti keeles, kuid nõustamine advokaadiga toimub ainult inglise, hiina (中文), jaapani ja korea keeles. Me ei luba ka tõlki. Kirjalik tõlge on midagi muud: algtekst, mille kirjutate, säilitatakse nii, nagu see on, ja seda ei tõlgita automaatselt.',
         },
         {
-          question: 'Co dělat, nemohu-li užít žádný ze čtyř jazyků?',
+          question: 'Mis siis, kui ma ei saa kasutada ühtegi neljast keelest?',
           answer:
-            'Při odeslání žádosti zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili způsob komunikace, ale služba v jiném jazyce zaručena není. Jde o krok posouzení, nikoli o příslib, že můžeme pracovat v jiném jazyce.',
+            'Valige saatmisel „Suhtlusviis tuleb kinnitada“. Vastame, et kontrollida suhtlusviisi, kuid teenust muus keeles ei tagata. See on kontroll, mitte lubadus, et saame töötada muus keeles.',
         },
         {
-          question: 'Jak se nakládá s mým textem v češtině?',
+          question: 'Kuidas minu eestikeelset teksti käsitletakse?',
           answer:
-            'Původní text, který napíšete, se uchová tak, jak je, a automaticky se nepřekládá. Je-li to potřeba, jazyk další komunikace se s Vámi potvrdí.',
+            'Algtekst, mille kirjutate, säilitatakse nii, nagu see on, ja seda ei tõlgita automaatselt. Kui vaja, kinnitatakse edasise suhtluse keel teiega.',
         },
         {
-          question: 'Proběhla porada již tím, že je žádost odeslána?',
+          question: 'Kas nõustamine on juba toimunud, kui taotlus on saadetud?',
           answer:
-            'Ne. Odeslaná žádost čeká na posouzení advokátkou nebo advokátem. Není to právní stanovisko, není to potvrzená schůzka a samotné odeslání nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
+            'Ei. Saadetud taotlus ootab advokaadi läbivaatamist. See ei ole õigusnõu, ei ole kinnitatud kohtumine, ja saatmine iseenesest ei tekita suhet advokaadi ja kliendi vahel.',
         },
         {
-          question: 'Jak se počítají náklady?',
+          question: 'Kuidas tasud arvutatakse?',
           answer:
-            'Nejprve se stanoví rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu nákladů, dříve než práce začne. Tato stránka neuvádí částky a neříká, že první konzultace je bezplatná.',
+            'Esmalt kinnitatakse töö ulatus, seejärel kinnitatakse teiega summa ja arvutusviis enne töö algust. See leht ei nimeta arve ega ütle, et esimene vestlus on tasuta.',
         },
         {
-          question: 'Co dělat, je-li má věc velmi naléhavá?',
+          question: 'Mis siis, kui minu asi on väga kiireloomuline?',
           answer:
-            'Uveďte lhůtu nebo datum z úřední písemnosti hned na začátku shrnutí, aby byla tato data při posouzení vidět. Tato stránka nemá nouzový kanál a nezajišťuje lhůtu k odpovědi; nesnese-li Vaše věc odkladu, měli byste souběžně hledat další cesty ve svém místě.',
+            'Nimetage tähtaeg või ametikiri kuupäev kokkuvõtte alguses, et need andmed oleksid läbivaatamisel nähtavad. Sellel lehel ei ole valvesidet ega lubata vastamise tähtaega; kui teie asi ei saa oodata, peaksite paralleelselt otsima muid teid oma asukohas.',
         },
       ],
     },
     privacy: {
-      eyebrow: 'SOUKROMÍ',
-      title: 'Údaje sbírané kontaktním formulářem',
+      eyebrow: 'PRIVAATSUS',
+      title: 'Andmed, mida kontaktvorm kogub',
       description:
-        'Co sbírá kontaktní formulář v této české části, jak se nakládá s původním textem a jak nás oslovit ohledně Vašich údajů.',
+        'Mida kogub kontaktvorm selles eestikeelses osas, kuidas algteksti käsitletakse ja kuidas meieni oma andmete asjus jõuda.',
       intro:
-        'Tato část se týká pouze kontaktního formuláře na těchto informačních stránkách. Popisuje nakládání s údaji, nikoli technickou záruku.',
+        'See osa puudutab ainult nende juhislehtede kontaktvormi. See kirjeldab andmete käsitlemist, mitte tehnilist garantiid.',
       sections: [
         {
-          heading: 'Které údaje se sbírají',
+          heading: 'Milliseid andmeid kogutakse',
           paragraphs: [
-            'Odešlete-li žádost prostřednictvím formuláře v této části, zaznamenají se tyto údaje:',
+            'Kui saadate taotluse selle osa vormiga, märgitakse järgmised andmed:',
           ],
           items: [
-            'Jméno, které uvedete',
-            'E-mailová adresa pro odpověď',
-            'Jazyk zobrazení stránky v okamžiku odeslání',
-            'Jazyk, v němž jste psali',
-            'Jazyk konzultace, který si přejete',
-            'Původní text, který jste napsali',
-            'Váš souhlas s odesláním žádosti',
-            'Číslo podání pro dohledání žádosti',
+            'Nimi, mille te märkisite',
+            'E-posti aadress vastuse jaoks',
+            'Lehe kuva keel saatmise hetkel',
+            'Keel, milles te kirjutasite',
+            'Nõustamiskeel, mida soovite',
+            'Algtekst, mille te kirjutasite',
+            'Teie nõusolek taotluse saatmiseks',
+            'Vastuvõtunumber taotluse leidmiseks',
           ],
         },
         {
-          heading: 'Původní text se uchová beze změny',
+          heading: 'Algtekst säilitatakse muutmata kujul',
           paragraphs: [
-            'Váš text se uchová přesně tak, jak jste jej napsali, a automaticky se nepřekládá. Je-li pro vyřízení potřebný překlad, projedná se to s Vámi zvlášť.',
-            'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+            'Teie tekst säilitatakse täpselt nii, nagu te selle kirjutasite, ja seda ei tõlgita automaatselt. Kui töötlemiseks on vaja tõlget, arutatakse see teiega eraldi.',
+            'Kuna algtekst säilitatakse, ärge kirjutage algfaasis seda, mida veel vaja ei ole, näiteks passinumbrit, isikutunnistuse numbrit ega kontonumbreid.',
           ],
         },
         {
-          heading: 'Místo uchování a přístup',
+          heading: 'Säilitamiskoht ja juurdepääs',
           paragraphs: [
-            'Obsah Vašeho podání se uchovává na místě, které není veřejně přístupné. Přístup k němu mají pouze oprávněné osoby v kanceláři, a to za účelem vyřízení žádosti.',
-            'Tato stránka nedává absolutní záruku bezpečnosti. Žádná cesta přenosu a žádné místo uchování není zcela bezpečné; citlivé dokumenty by proto měly být zasílány až po zvláštním pokynu advokátky nebo advokáta.',
+            'Teie saadetise sisu säilitatakse kohas, mis ei ole avalikult kättesaadav. Juurdepääs on ainult büroo volitatud isikutel taotluse menetlemiseks.',
+            'See leht ei anna absoluutset turvagarantiid. Ükski edastustee ega ükski säilitamiskoht ei ole täielikult turvaline; tundlikud dokumendid tuleks seetõttu saata alles pärast advokaadi erijuhist.',
           ],
         },
         {
-          heading: 'Účel užití',
+          heading: 'Kasutamise eesmärk',
           paragraphs: [
-            'Odeslané údaje slouží k posouzení žádosti, k odpovědi Vám, k ujasnění způsobu komunikace a k vyřízení, je-li práce převzata.',
-            'Údaje se bez zvláštního souhlasu neužívají k marketingu.',
+            'Saadetud andmed teenivad taotluse läbivaatamist, tagasisidet teile, suhtlusviisi selgitamist ja menetlemist, kui töö võetakse vastu.',
+            'Andmeid ei kasutata turunduseks ilma eraldi nõusolekuta.',
           ],
         },
         {
-          heading: 'Oznámení a číslo podání',
+          heading: 'Teade ja vastuvõtunumber',
           paragraphs: [
-            'Je-li žádost úspěšně odeslána, systém uvědomí kancelář. Není-li toto oznámení zatím potvrzeno, Váš text zůstává uchován a neztrácí se.',
-            'Číslo podání slouží k dohledání Vaší žádosti v našich záznamech. Zobrazí se po uložení; můžete je uvést při novém kontaktu.',
+            'Kui taotlus saadetakse edukalt, teavitab süsteem bürood. Kui seda teadet ei ole veel kinnitatud, jääb teie tekst alles ega kao.',
+            'Vastuvõtunumber aitab teie taotlust meie toimikutest leida. See kuvatakse pärast säilitamist; võite selle uuel ühendusel nimetada.',
           ],
         },
         {
-          heading: 'Vaše práva a cesta ke kontaktu',
+          heading: 'Teie õigused ja ühenduse võtmise viis',
           paragraphs: [
-            'Můžete žádat o přístup ke svým údajům, o jejich opravu nebo výmaz, případně odvolat souhlas, a to prostřednictvím e-mailové adresy uvedené na kontaktní stránce. Existuje-li zákonná nebo procesní povinnost uchování, vysvětlíme omezení.',
-            'Tato stránka neuvádí pevnou dobu uchování, protože skutečná doba závisí na dalším průběhu věci a na souvisejících povinnostech. Přejete-li si dřívější výmaz, sdělte to při kontaktu.',
+            'Võite taotleda oma andmete tutvustamist, parandamist või kustutamist või nõusoleku tagasi võtta kontaktlehel nimetatud e-posti aadressi kaudu. Kui on seaduslik või menetlusest tulenev säilitamiskohustus, selgitame piirangut.',
+            'See leht ei nimeta kindlat säilitamistähtaega, sest tegelik kestus sõltub sellest, kas asja jätkatakse, ja sellega seotud kohustustest. Kui soovite varasemat kustutamist, teatage sellest ühendust võttes.',
           ],
         },
         {
-          heading: 'Místo uchování a poskytovatelé',
+          heading: 'Säilitamiskoht ja teenuseosutajad',
           paragraphs: [
-            'Tyto stránky jsou hostovány u společnosti Vercel a Vaše podání se uchovává v neveřejném objektovém úložišti této služby. E-maily se odesílají poštovní službou, kterou kancelář užívá.',
-            'Servery jednotlivých poskytovatelů se mohou nacházet mimo Tchaj-wan, takže Vaše údaje tam mohou být uchovávány a zpracovávány. Je-li účel uchování naplněn, údaje se bez zbytečného odkladu vymažou; údaje, které je třeba uchovávat podle použitelných předpisů, zůstávají po tuto dobu. Žádosti o osobní údaje přijímá wei@hoveringlaw.com.tw.',
+            'Neid veebilehti majutab Vercel ja teie saadetis säilitatakse selle teenuse mitteavalikus objektisalves. E-kirjad saadetakse büroo kasutatava e-postiteenuse kaudu.',
+            'Üksikute teenuseosutajate serverid võivad asuda väljaspool Taiwani, nii et teie andmeid võidakse seal säilitada ja töödelda. Kui säilitamise eesmärk on täidetud, kustutatakse andmed viivituseta; andmed, mida tuleb kohalduvate sätete järgi säilitada, jäävad selleks ajaks. Isikuandmete taotlused võtab vastu wei@hoveringlaw.com.tw.',
           ],
         },
       ],
     },
     disclaimer: {
-      eyebrow: 'UPOZORNĚNÍ',
-      title: 'Rozsah a hranice informací na této stránce',
+      eyebrow: 'VASTUTUS',
+      title: 'Selle lehe teabe ulatus ja piirid',
       description:
-        'Obecná povaha informací, právní rámec a předpoklady vzniku vztahu mezi advokátkou nebo advokátem a klientem.',
+        'Teabe üldine iseloom, õiguslik kohaldamisala ja eeldused suhtele advokaadi ja kliendi vahel.',
       intro:
-        'Tato část objasňuje, co pro Vás tyto české informační stránky mohou udělat a co nikoli.',
+        'See osa teeb selgeks, mida need eestikeelsed juhislehed saavad teie heaks teha ja mida mitte.',
       sections: [
         {
-          heading: 'Pouze obecné informace',
+          heading: 'Ainult üldine teave',
           paragraphs: [
-            'Obsah těchto stránek je psán jako obecná informace. Není právní radou k Vašemu případu a nenahrazuje posouzení Vašich dokumentů.',
-            'Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku; dvě zdánlivě podobné situace mohou skončit různě.',
+            'Nende lehtede sisu on kirjutatud üldise teabena. See ei ole õigusnõu teie asjas ega asenda teie dokumentide läbivaatamist.',
+            'Asja tulemus sõltub asjaoludest, kohalduvatest sätetest ja ajast; kaks näiliselt sarnast olukorda võivad lõppeda erinevalt.',
           ],
         },
         {
-          heading: 'Právní rámec',
+          heading: 'Õiguslik kohaldamisala',
           paragraphs: [
-            'Kancelář působí podle tchajwanského práva a tato stránka hovoří pouze o práci v tomto rámci.',
-            'Obsah není poradenstvím podle práva jiného řádu než tchajwanského, včetně práva místa Vašeho pobytu. Týká-li se část Vaší věci jiného právního řádu, ujasníme s Vámi, jaká kvalifikovaná osoba je pro tuto část potřebná.',
+            'Büroo tegutseb Taiwani õiguse järgi ja see leht räägib ainult tööst selles raamistikus.',
+            'Sisu ei ole nõustamine muu õiguskorra kui Taiwani õiguse järgi, sealhulgas teie elukoha õiguse järgi. Kui osa teie asjast puudutab teist õiguskorda, selgitame teiega, millist pädevat asjatundjat selle osa jaoks vaja on.',
           ],
         },
         {
-          heading: 'Vztah mezi advokátkou nebo advokátem a klientem nevzniká sám od sebe',
+          heading: 'Suhe advokaadi ja kliendi vahel ei teki iseenesest',
           paragraphs: [
-            'Přečtení této stránky, odeslání formuláře nebo e-mailu samo o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
-            'Tento vztah vzniká teprve poté, co byla věc posouzena a obě strany potvrdily převzetí práce.',
+            'Selle lehe lugemine, vormi või e-kirja saatmine iseenesest ei tekita suhet advokaadi ja kliendi vahel.',
+            'See suhe tekib alles pärast seda, kui asi on läbi vaadatud ja mõlemad pooled on kinnitanud, et büroo võtab töö vastu.',
           ],
         },
         {
-          heading: 'Žádný příslib výsledku',
+          heading: 'Tulemust ei lubata',
           paragraphs: [
-            'Žádná část této stránky není příslibem ohledně výsledku věci, vyhovění přihlášce nebo žádosti či ohledně pobytového a pracovního statusu.',
-            'Vnější odkazy slouží k orientaci; neslibujeme správnost ani aktuálnost obsahu třetích osob.',
+            'Ükski osa sellest lehest ei ole lubadus asja tulemuse, taotluse rahuldamise ega elamis- ja tööstaatuse kohta.',
+            'Välislingid on mõeldud orienteerumiseks; me ei taga kolmandate isikute sisu õigsust ega ajakohasust.',
           ],
         },
       ],
     },
     columns: {
-      eyebrow: 'ČLÁNKY',
-      title: 'Články o tchajwanském právu',
+      eyebrow: 'ARTIKLID',
+      title: 'Artikleid Taiwani õigusest',
       description:
-        'Články v češtině k častým otázkám tchajwanského práva. Obsah je obecnou informací k okamžiku zveřejnění, nikoli právní radou k Vašemu případu.',
+        'Eestikeelsed artiklid Taiwani õiguse korduvatest küsimustest. Sisu on üldine teave avaldamise hetkel, mitte õigusnõu teie asjas.',
       intro:
-        'Kancelář zveřejňuje články k častým otázkám tchajwanského práva. Články dostupné v češtině jsou na této stránce; vedle nich jsou čtyři odkazy, z nichž každý otevře seznam článků v jednom původním jazyce.',
+        'Büroo avaldab artikleid Taiwani õiguse korduvatest küsimustest. Eestikeelsed artiklid on sellel lehel; kõrval on neli linki, millest igaüks avab ühe algkeele artiklite loendi.',
       sections: [
         {
-          heading: 'Čtyři seznamy podle jazyka',
+          heading: 'Neli loendit keele järgi',
           paragraphs: [
-            'Tato část obsahuje čtyři odkazy: seznam článků v korejštině, v čínštině, v angličtině a v japonštině. Každý odkaz uvádí jazyk seznamu, takže předem víte, v jakém jazyce se obsah otevře.',
-            'Tyto čtyři seznamy jsou seznamy podle původního jazyka článků, nikoli seznamy překladů. Články dostupné v češtině jsou zvlášť na této stránce.',
+            'Selles osas on neli linki: artiklite loend korea, hiina, inglise ja jaapani keeles. Iga link nimetab loendi keele, et te teaksite ette, millises keeles sisu avaneb.',
+            'Need neli loendit on loendid artiklite algkeele järgi, mitte tõlkeloendid. Eestikeelsed artiklid on eraldi sellel lehel.',
           ],
         },
         {
-          heading: 'Kam odkazy vedou',
+          heading: 'Kuhu lingid viivad',
           paragraphs: [
-            'Zvolíte-li jeden ze čtyř odkazů, otevře se seznam článků v daném jazyce. Ze seznamu si text vyberete sami; celý obsah se zobrazí v původním jazyce článku.',
-            'Tato stránka obsah článků neshrnuje a nezaručuje, že určité téma je k dispozici ve všech čtyřech jazycích. Každý seznam obsahuje pouze texty zveřejněné v daném jazyce.',
+            'Kui valite ühe neljast lingist, avaneb selle keele artiklite loend. Loendist valite teksti ise; kogu sisu ilmub artikli algkeeles.',
+            'See leht ei võta artiklite sisu kokku ega taga, et teema on kättesaadav kõigis neljas keeles. Iga loend sisaldab ainult selles keeles avaldatud tekste.',
           ],
         },
         {
-          heading: 'Nakolik může článek sloužit k orientaci',
+          heading: 'Kui kaugele saab artikkel orienteerida',
           paragraphs: [
-            'Články jsou obecnými informacemi k okamžiku zveřejnění. Předpisy a jejich používání se mohou změnit a článek neobsahuje všechny okolnosti Vašeho případu.',
-            'Nezakládejte proto postup ve skutečné věci pouze na článku. Užijte jej k přehledu a své dokumenty projednejte zvlášť s advokátkou nebo advokátem; tato stránka není krokem porady.',
+            'Artiklid on üldine teave avaldamise hetkel. Sätted ja nende kohaldamine võivad muutuda ning artikkel ei kata kõiki teie asja asjaolusid.',
+            'Ärge seetõttu tehke tegelikus asjas otsuseid üksnes artikli põhjal. Kasutage seda ülevaate saamiseks ja arutage oma dokumente eraldi advokaadiga; see leht ei ole nõustamissamm.',
           ],
         },
       ],

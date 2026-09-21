@@ -1,9 +1,73 @@
-[WO start 2026-09-22 06:36:34]
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
-Retry attempt 1...
-Nine Estonian columns are in `src/content/columns-et/` (001–009). The checker reports **summary PASS 9/9 files**; review markers are 0.
+WO-N-et-a — Estonian columns 001–009
+Workspace: /Users/son7/Projects/tseng-law-new-et-20260922
+Date: 2026-09-22
+Agent: Grok 4.6
 
-Log: `docs/i18n/global-plan/evidence/grok-N-et-a.log`
+## File count
+9 files in src/content/columns-et/:
+001-taiwan-company-establishment-basics.md
+002-withdraw-capital-taiwan-company.md
+003-taiwan-traffic-accident-procedure.md
+004-taiwan-company-subsidiary-vs-branch.md
+005-taiwan-company-establishment-advanced-2.md
+006-taiwan-massage-history-law.md
+007-taiwan-divorce-lawsuit-qna.md
+008-taiwan-labor-severance-law.md
+009-taiwan-voluntary-resignation-severance.md
 
-Remaining checker notes are ordinal WARNs only (제1항 / 제3자 / 제6호 and similar). Digit counts still match; Estonian has no ordinal table in the checker.
-=== end code=0 2026-09-22 07:09:06 ===
+## §Verify output (verbatim)
+
+       9
+
+PASS  /Users/son7/Projects/tseng-law-new-et-20260922/src/content/columns-et/009-taiwan-voluntary-resignation-severance.md  lang=et
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1]
+images         PASS   count=2
+blocks         PASS   blocks=44
+links          PASS   hrefs=3
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=72
+numbers        WARN   수사미해석 (1): 제6호
+                      sourceCount=11 targetCount=11
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  9/9 files
+       0
+      33
+
+Commands (in order):
+ls src/content/columns-et/*.md | wc -l
+node scripts/check-column-translation.mjs --dir src/content/columns-et --lang et 2>&1 | tail -20
+grep -rn "\[변호사 검수 필요\]" src/content/columns-et | wc -l
+git status --short | wc -l
+
+Pass: summary PASS 9/9 files; markers 0.
+
+## Key term choices (Estonian + Traditional-Chinese gloss)
+- tööluba (工作許可)
+- välismaalase elamiskaart (外僑居留證)
+- seadusjärgne lahkumishüvitis (資遣費)
+- tööstandardite seadus (勞動基準法)
+- osanikud (股東)
+- järelevalvaja (監察人)
+- püsiv tegevuskoht (常設機構)
+- lühiajaline vabadusekaotus (拘役)
+- tingimisi karistus (緩刑)
+- alaealiste laste hooldusõigus ja vanemlik vastutus (未成年子女權利義務之行使或負擔)
+
+Register: formal teie; typographic quotes „…“; thousands TWD 500.000 / TWD 1.000.000 (dot grouping); dates nominative 13. september 2025. Bylines **Advokaat Wei Tseng (曾雋崴)** (Latin name kept; Estonian noun unmarked for gender). Categories: formation = „Ettevõtte asutamine Taiwanis“; legal = „Õigusteave Taiwani kohta“. Related links /et/services · /et/lawyers · /et/contact · /et/pricing with guidance titles. Invest Taiwan lang=eng.
+
+R2–R8: Korea kept as labelled example (tax treaty, remittance FAQ, massage comparison, labour contrast); reader country unnamed; advertising softened (contact form, no immediate reply; 008 anecdote establishes statutory entitlement, no result promise); FAQ answers self-standing; first-use Chinese glosses.
+
+## Unresolved
+- numbers WARN (not FAIL): 004 제1항/제2항/제3자/제3국; 007 제1항/제2항/제4호/제3자; 009 제6호. Digit bags match; checker has no Estonian ordinal table.
+- Date parser accepts only nominative month names (27. detsember 2023), not inflected 27. detsembril 2023.
+- Estonian copula „on“ counts as English stopword; three in one Hanzi-free sentence trips the english leftover gate (fixed in 004 by adding 所得稅協定 and rephrasing).
+- 005 Q1 stays Korea-labelled (source is Korea remittance / FX-notice practice), not generalized.
+- Native attorney review of Estonian legal register is still open; no [변호사 검수 필요] markers in the files.

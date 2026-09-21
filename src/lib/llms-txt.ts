@@ -383,7 +383,7 @@ const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
   sl: 'Slovenian',
   lt: 'Lithuanian',
   lv: 'Czech', // SCAFFOLD(cs)
-  et: 'Czech', // SCAFFOLD(cs)
+  et: 'Estonian',
   ca: 'Czech', // SCAFFOLD(cs)
   is: 'Czech', // SCAFFOLD(cs)
 };
@@ -886,13 +886,13 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     confidentialNotice:
       'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
   },
-  et: { // SCAFFOLD(cs)
+  et: {
     consultationNotice:
-      'Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
+      'Need juhised on kirjutatud eesti keeles, kuid nõustamine advokaadiga toimub ainult inglise, hiina (中文), jaapani ja korea keeles.',
     discoveryNotice:
-      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, podporu, doporučení umělé inteligence ani viditelnost.',
+      'Fail llms.txt on üksnes kaart avalike lehtede leidmiseks; see ei luba kohta otsingutulemustes, tuge, tehisintellekti soovitust ega nähtavust.',
     confidentialNotice:
-      'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+      'Kuna algtekst säilitatakse, ärge kirjutage algfaasis seda, mida veel vaja ei ole, näiteks passinumbrit, isikutunnistuse numbrit ega kontonumbreid.',
   },
   ca: { // SCAFFOLD(cs)
     consultationNotice:

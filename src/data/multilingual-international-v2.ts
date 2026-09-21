@@ -569,16 +569,16 @@ export const GUIDANCE_HOME_PATHS: Record<GuidanceLocale, GuidanceHomePaths> = {
     },
     ariaLabel: 'Dvě informační cesty',
   },
-  et: { // SCAFFOLD(cs)
+  et: {
     setup: {
-      label: 'Informace o zakládání společností na Tchaj-wanu',
-      href: '/cs/services',
+      label: 'Teave ettevõtte asutamise kohta Taiwanis',
+      href: '/et/services',
     },
     legal: {
-      label: 'Právní informace o Tchaj-wanu',
-      href: '/cs/faq',
+      label: 'Õigusteave Taiwani kohta',
+      href: '/et/faq',
     },
-    ariaLabel: 'Dvě informační cesty',
+    ariaLabel: 'Kaks teabeteed',
   },
   ca: { // SCAFFOLD(cs)
     setup: {

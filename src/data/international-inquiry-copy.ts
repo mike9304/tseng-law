@@ -2404,54 +2404,54 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
         'Žádný ze čtyř jazyků není použitelný — způsob komunikace je třeba potvrdit',
     },
   },
-  et: { // SCAFFOLD(cs)
+  et: {
     guidanceNotice:
-      'Tato stránka je psána česky jako obecná orientace, nikoli jako právní rada ve Vaší věci.',
+      'See leht on kirjutatud eesti keeles üldiseks orienteerumiseks, mitte õigusnõuks teie asjas.',
     consultationNotice:
-      'Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky.',
+      'Nõustamine toimub ainult neljas keeles: inglise, hiina (中文), jaapani ja korea keeles.',
     methodConfirmationNotice:
-      'Pokud neovládáte žádný ze čtyř jazyků konzultace, zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
+      'Kui te ei saa kasutada ühtegi neljast nõustamiskeelest, valige „Suhtlusviis tuleb kinnitada“. Vastame, et kontrollida, kas on olemas kasutatav suhtlusviis; teenust muus keeles ei tagata ja vastamise tähtaega ei lubata.',
     preparationNotice:
-      'Shrnutí můžete napsat ve svém jazyce. Původní text se uchová tak, jak jste jej napsali, a automaticky se nepřekládá.',
-    heading: 'Odeslat žádost o posouzení',
+      'Kokkuvõtte võite kirjutada oma keeles. Algtekst säilitatakse nii, nagu te selle kirjutasite, ja seda ei tõlgita automaatselt.',
+    heading: 'Saatke läbivaatamistaotlus',
     intro:
-      'Popište svou věc stručně. Advokátka nebo advokát posoudí obsah, než se přistoupí k dalšímu kroku.',
-    submitLabel: 'Odeslat žádost',
-    submittingLabel: 'Odesílá se…',
+      'Kirjeldage oma asja lühidalt. Advokaat vaatab sisu läbi, enne kui järgmise sammu juurde minnakse.',
+    submitLabel: 'Saatke taotlus',
+    submittingLabel: 'Saadetakse…',
     successMessage:
-      'Obdrželi jsme Vaši žádost; čeká na posouzení. Neznamená to, že porada proběhla nebo že byla potvrzena schůzka.',
+      'Saime teie taotluse kätte; see ootab läbivaatamist. See ei tähenda, et nõustamine oleks toimunud või et kohtumine oleks kinnitatud.',
     savedNotificationPendingMessage:
-      'Vaše žádost byla uložena, ale oznámení kanceláři zatím není potvrzeno. Co jste napsali, se neztratí. Neobdržíte-li odpověď, můžete napsat i na e-mailovou adresu z kontaktní stránky.',
-    receiptIdLabel: 'Číslo podání',
+      'Teie taotlus on salvestatud, kuid teadet büroole ei ole veel kinnitatud. Kirjutatu ei kao. Kui te vastust ei saa, võite kirjutada ka kontaktlehe e-posti aadressile.',
+    receiptIdLabel: 'Vastuvõtunumber',
     failureMessage:
-      'Vaši žádost se nepodařilo odeslat. Zkuste to znovu nebo napište na e-mailovou adresu z kontaktní stránky.',
-    originalLanguageLabel: 'Jazyk, v němž píšete',
+      'Teie taotlust ei õnnestunud saata. Proovige uuesti või kirjutage kontaktlehe e-posti aadressile.',
+    originalLanguageLabel: 'Keel, milles kirjutate',
     originalLanguagePlaceholder:
-      'Například čeština, angličtina, čínština nebo jiný jazyk',
-    preferredConsultationLanguageLabel: 'Jazyk, který si přejete pro konzultaci',
-    originalTextLabel: 'Krátký popis věci (ve Vašem jazyce)',
+      'Näiteks eesti, inglise, hiina või muu keel',
+    preferredConsultationLanguageLabel: 'Keel, mida soovite nõustamiseks',
+    originalTextLabel: 'Lühikirjeldus asjast (teie keeles)',
     originalTextPlaceholder:
-      'Napište, co se stalo, jakou pomoc potřebujete a lhůtu, existuje-li. Nepište číslo pasu, číslo dokladu ani údaje o účtu.',
-    nameLabel: 'Jméno',
-    emailLabel: 'E-mail',
+      'Kirjutage, mis juhtus, millist abi vajate, ja tähtaeg, kui see on olemas. Ärge kirjutage passinumbrit, isikutunnistuse numbrit ega kontonumbreid.',
+    nameLabel: 'Nimi',
+    emailLabel: 'E-post',
     consentLabel:
-      'Přečetl(a) jsem stránku o soukromí a souhlasím s odesláním této žádosti.',
-    privacyLinkLabel: 'Soukromí',
-    requiredMessage: 'Toto pole je povinné.',
-    invalidEmailMessage: 'Zadejte platnou e-mailovou adresu.',
-    tooLongMessage: 'Text je příliš dlouhý. Zkraťte jej a odešlete znovu.',
+      'Olen lugenud privaatsuslehte ja nõustun selle taotluse saatmisega.',
+    privacyLinkLabel: 'Privaatsus',
+    requiredMessage: 'See väli on kohustuslik.',
+    invalidEmailMessage: 'Sisestage kehtiv e-posti aadress.',
+    tooLongMessage: 'Tekst on liiga pikk. Lühendage see ja saatke uuesti.',
     sourceLanguageNotice:
-      'Tento článek je zveřejněn pouze v jazyce {language}; odkaz otevře původní stránku.',
+      'See artikkel on avaldatud ainult keeles {language}; link avab alglehe.',
     unavailableTranslationNotice:
-      'Tato část zatím není k dispozici v jazyce této stránky. Odkaz v původním jazyce otevře původní text.',
-    unavailableLanguageNotice: 'Tato stránka se v jazyce {language} nenabízí.',
+      'See osa ei ole veel selle lehe keeles kättesaadav. Link algkeeles avab algteksti.',
+    unavailableLanguageNotice: 'Seda lehte keeles {language} ei pakuta.',
     languageOptions: {
-      en: 'Angličtina (English)',
-      'zh-hant': 'Čínština (中文)',
-      ja: 'Japonština (日本語)',
-      ko: 'Korejština (한국어)',
+      en: 'Inglise (English)',
+      'zh-hant': 'Hiina (中文)',
+      ja: 'Jaapani (日本語)',
+      ko: 'Korea (한국어)',
       'needs-method-confirmation':
-        'Žádný ze čtyř jazyků není použitelný — způsob komunikace je třeba potvrdit',
+        'Ükski neljast keelest ei ole kasutatav — suhtlusviis tuleb kinnitada',
     },
   },
   ca: { // SCAFFOLD(cs)

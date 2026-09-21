@@ -1,3 +1,7 @@
 [WO start 2026-09-22 06:53:37]
 Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
 Retry attempt 1...
+Columns 001–009 are in `src/content/columns-is/`. Checker: **summary PASS 9/9 files**, markers 0.
+
+Evidence log: `docs/i18n/global-plan/evidence/grok-N-is-a.log`. No git add/commit/push.
+=== end code=0 2026-09-22 07:36:56 ===

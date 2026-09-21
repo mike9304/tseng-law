@@ -277,7 +277,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     experienceLabel: 'Berufserfahrung',
     photoAltPrefix: 'Foto',
     workingLanguagesLabel: 'Arbeitssprachen',
-    fullProfileLabel: 'Vollständiges Profil (English)',
+    fullProfileLabel: 'Vollständiges Profil (auf Englisch)',
     keyFactsHeading: 'Rechtsanwältin Wei Tseng — Wesentliche Angaben',
     qualificationLabel: 'Qualifikation und Kanzlei',
     qualificationSentence:
@@ -285,11 +285,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     practiceLabel: 'Schwerpunkte',
     consultationLanguagesLabel: 'Beratungssprachen',
     roles: {
-      'tseng-junwei': 'Geschäftsführende Anwältin in Taiwan (Managing Attorney)',
-      'chang-rongxuan': 'Anwalt in Taiwan (Taiwan Attorney)',
+      'tseng-junwei': 'Leitende Anwältin in Taiwan',
+      'chang-rongxuan': 'Anwalt in Taiwan',
       'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Betriebsleitung Korea (Korea Operations Manager)',
-      'huang-shengping': 'Partner-Wirtschaftsprüfer (Partner CPA)',
+      'son-jungmin': 'Betriebsleitung Korea',
+      'huang-shengping': 'Partner-Wirtschaftsprüfer',
     },
   },
   es: {
@@ -1515,10 +1515,10 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Die Kanzlei bearbeitet Unternehmens- und Individualangelegenheiten in Taiwan auf Englisch, Japanisch, Koreanisch und Chinesisch.',
-        'Sie vertrat einen koreanischen Studenten in einem Schadensersatzverfahren wegen einer Verletzung im Fitnessstudio und erwirkte ein erstinstanzliches Urteil über TWD 1.57M.',
+        'Sie vertrat einen koreanischen Studenten in einem Schadensersatzverfahren wegen einer Verletzung im Fitnessstudio und erwirkte ein erstinstanzliches Urteil über 1,57 Millionen TWD.',
       ],
       education: [
-        'Magister (M.S.), Institute of Finance, National Taiwan University',
+        'Master of Science (M.S.), Institute of Finance, National Taiwan University',
         'Bachelor (B.A.) mit Doppelstudium Recht und Finanzen, National Chengchi University',
         'Austauschstudierende an der Kobe University und der Waseda University',
       ],
@@ -1564,7 +1564,7 @@ export const guidanceTeamBios: Record<
         'Unterstützt die integrierte Analyse rechtlicher, steuerlicher und finanzieller Risiken für Unternehmenskunden.',
       ],
       education: [
-        'Magister (M.A.) Rechnungswesen, National Chengchi University',
+        'Master of Arts (M.A.) Rechnungswesen, National Chengchi University',
         'Bachelor (B.A.) Rechnungswesen, National Chengchi University',
       ],
       experience: ['Chinshin CPA Firm'],

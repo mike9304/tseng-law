@@ -81,7 +81,7 @@ So entstand etwa der Gedanke, ob die ausdrückliche Regelung, dass nur sehbehind
 
 und es wurde bezweifelt, ob diese Regelung wirklich zum Schutz von Arbeitsplätzen und Existenz sehbehinderter Personen beitrug.
 
-Schließlich erklärten die Verfassungsrichter (大法官) die Gesetzesvorschrift, nach der nur sehbehinderte Personen im Massagegewerbe tätig sein durften, für verfassungswidrig (違憲).
+Schließlich erklärte das Verfassungsgericht (大法官) die Gesetzesvorschrift, nach der nur sehbehinderte Personen im Massagegewerbe tätig sein durften, für verfassungswidrig (違憲).
 
 ​
 
@@ -125,4 +125,4 @@ müssen Sie dies sofort mitteilen oder die Beendigung verlangen, um sich zu sch�
 
 Wenn Sie das Gefühl haben, sexuell belästigt worden zu sein,
 
-sollten Sie mit einer vertrauenswürdigen Person oder einem Anwalt in Taiwan (律師) zur Polizei gehen und Anzeige erstatten.
+sollten Sie mit einer vertrauenswürdigen Person oder einer Anwältin oder einem Anwalt in Taiwan (律師) zur Polizei gehen und Anzeige erstatten.

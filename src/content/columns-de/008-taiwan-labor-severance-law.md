@@ -1,5 +1,5 @@
 ---
-title: "Taiwanesisches Arbeitsrecht: Ist Abfindung in Taiwan wirklich schwer zu erhalten??"
+title: "Taiwanesisches Arbeitsrecht: Ist Abfindung in Taiwan schwer zu erhalten?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
 lastmod: "2026-09-10"
 date_display: "13. September 2025"
@@ -9,18 +9,18 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Erhalten Beschäftigte in Taiwan Abfindung, wenn sie von sich aus kündigen?"
-    a: "Nein. Anders als in Korea entsteht in Taiwan die Pflicht zur Zahlung der Abfindung (資遣費) erst, wenn die Gesellschaft die beschäftigte Person entlässt; kündigt die beschäftigte Person selbst, muss die Gesellschaft keine Abfindung zahlen."
+    a: "Nein. Anders als in manchen Rechtsordnungen — Korea ist ein Beispiel — entsteht in Taiwan die Pflicht zur Zahlung der Abfindung (資遣費) erst, wenn die Gesellschaft die beschäftigte Person entlässt; kündigt die beschäftigte Person selbst, muss die Gesellschaft keine Abfindung zahlen."
   - q: "Muss die Gesellschaft auch bei einer Disziplinarkündigung Abfindung zahlen?"
     a: "Nein. Begeht die beschäftigte Person eine rechtswidrige Handlung, verletzt sie Betriebsregeln oder bleibt sie ohne berechtigten Grund 3 Tage hintereinander unentschuldigt fern (Artikel 12 des Arbeitsstandardsgesetzes, 勞動基準法第12條), kann die Gesellschaft ohne vorherige Ankündigung kündigen und muss keine Abfindung zahlen. Dagegen erfordert eine wirtschaftliche Kündigung (Artikel 11) vorherige Ankündigung und Abfindungszahlung."
   - q: "Wie wird die Abfindung in Taiwan berechnet?"
-    a: "Für jedes vollendete 1 Jahr der Betriebszugehörigkeit muss der Arbeitgeber 0,5 Monatsbeträge des Durchschnittslohns als Abfindung zahlen, höchstens 6 Monatsgehälter. Diese Formel gilt für Betriebszugehörigkeit, auf die Artikel 12 der Verordnung über die Altersversorgung der Arbeitnehmer (勞工退休金條例) Anwendung findet; für Betriebszugehörigkeit, auf die Artikel 17 des Arbeitsstandardsgesetzes (勞動基準法) Anwendung findet, wird je 1 Jahr 1 Monatsbetrag des Durchschnittslohns ohne Obergrenze gezahlt."
+    a: "Für jedes vollendete 1 Jahr der Betriebszugehörigkeit muss der Arbeitgeber 0,5 Monatsbeträge des Durchschnittslohns als Abfindung zahlen, höchstens 6 Monatsgehälter. Diese Formel gilt für Betriebszugehörigkeit, auf die Artikel 12 der Gesetz über die Altersversorgung der Arbeitnehmer (勞工退休金條例) Anwendung findet; für Betriebszugehörigkeit, auf die Artikel 17 des Arbeitsstandardsgesetzes (勞動基準法) Anwendung findet, wird je 1 Jahr 1 Monatsbetrag des Durchschnittslohns ohne Obergrenze gezahlt."
 ---
 
-# Taiwanesisches Arbeitsrecht: Ist Abfindung in Taiwan wirklich schwer zu erhalten??
+# Taiwanesisches Arbeitsrecht: Ist Abfindung in Taiwan schwer zu erhalten?
 
 ![Titelbild](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Guten Tag, ich bin Wei Tseng (曾雋崴), taiwanesische Anwältin.
+Ich bin Wei Tseng (曾雋崴), Rechtsanwältin in Taiwan.
 
 Heute möchte ich mit Ihnen über die Abfindung (資遣費) in Taiwan sprechen.
 
@@ -28,9 +28,9 @@ Heute möchte ich mit Ihnen über die Abfindung (資遣費) in Taiwan sprechen.
 
 Das wissen bereits viele von Ihnen.
 
-In Korea muss die Gesellschaft Abfindung zahlen, wenn Beschäftigte ausscheiden
+Im Vergleich zu manchen anderen Rechtsordnungen — Korea ist ein gekennzeichnetes Beispiel — muss die Gesellschaft dort in der Regel Abfindung zahlen, wenn Beschäftigte ausscheiden
 
-In Taiwan ist es jedoch anders als in Korea:
+In Taiwan ist es jedoch anders:
 
 Die Pflicht zur Abfindungszahlung entsteht erst, wenn die Gesellschaft die beschäftigte Person entlässt.
 
@@ -62,7 +62,7 @@ Ich fasse dies für Sie in einer einfachen Tabelle zusammen.
 
 > In Taiwan muss der Arbeitgeber für jedes vollendete 1 Jahr der Betriebszugehörigkeit (年資)
 > 0,5 Monatsbeträge des Durchschnittslohns (平均工資) als Abfindung zahlen.
-> (höchstens 6 Monatsgehälter) Diese Formel gilt für Betriebszugehörigkeit, auf die Artikel 12 der Verordnung über die Altersversorgung der Arbeitnehmer (勞工退休金條例) Anwendung findet; für Betriebszugehörigkeit, auf die Artikel 17 des Arbeitsstandardsgesetzes (勞動基準法) Anwendung findet, wird je 1 Jahr 1 Monatsbetrag des Durchschnittslohns ohne Obergrenze gezahlt.
+> (höchstens 6 Monatsgehälter) Diese Formel gilt für Betriebszugehörigkeit, auf die Artikel 12 der Gesetz über die Altersversorgung der Arbeitnehmer (勞工退休金條例) Anwendung findet; für Betriebszugehörigkeit, auf die Artikel 17 des Arbeitsstandardsgesetzes (勞動基準法) Anwendung findet, wird je 1 Jahr 1 Monatsbetrag des Durchschnittslohns ohne Obergrenze gezahlt.
 
 ​
 
@@ -174,9 +174,9 @@ und konnte beweisen, dass er nicht selbst gekündigt hatte.
 
 Deshalb konnte er später mit anwaltlicher Hilfe
 
-eine hohe Abfindung erhalten,
+klären lassen, dass ihm die Abfindung nach dem Gesetz zustand,
 
-während andere ausgeschiedene Beschäftigte nicht so viel Glück hatten.
+während andere ausgeschiedene Beschäftigte diesen Nachweis nicht führen konnten.
 
 ​
 
@@ -220,7 +220,7 @@ oder zur eigenen Kündigung treibt
 
 Abfindung ist ein gesetzliches Recht der beschäftigten Person,
 
-und die Gesellschaft hat sie selbstverständlich zu zahlen.
+und liegen die gesetzlichen Voraussetzungen vor, hat die Gesellschaft sie zu zahlen.
 
 Auch Sie müssen in Taiwan Ihre Rechte schützen.
 

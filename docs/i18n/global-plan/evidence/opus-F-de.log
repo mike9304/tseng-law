@@ -1,0 +1,114 @@
+# WO-F-de — German fix lane (Opus 5), 2026-09-21
+Worktree: /Users/son7/Projects/tseng-law-fix-b-20260921 (branch fix/native-b-20260921). No git add/commit/push.
+Files written: src/content/columns-de/*.md (17 of 18; 012 had no findings), src/data/international-guidance-western.ts,
+-team.ts, -answers.ts, src/data/international-inquiry-copy.ts, src/data/__tests__/guidance-disclosure-parity.test.ts
+(one pinned German marker), this log. src/lib/llms-txt.ts needed no change (GUIDANCE_LLMS_NOTICES.de already correct).
+
+## ROWS APPLIED
+Guidance pack (de): a#1 (consultationNotice + contact items[1] now "nur"), a#2/a#3 verified (already mechanical),
+a#4 fullProfileLabel "(auf Englisch)", a#23 Institute→Abfindungs-/Kündigungsschutzregelungen, a#24 Seitenverzeichnis→Menü,
+a#25 Tätigkeitsgruppen→Tätigkeitsfelder (mega.services + services description + section heading + answers.ts ×2 = 5),
+a#26 "tätige Anwältinnen"→"Anwältinnen", a#27 gangbare→"praktikabler Kommunikationsweg" (western.ts + inquiry-copy),
+a#28 Pingtung, a#29 "in einem Ablauf"→"gemeinsames Verfahren", a#30 unterwegs→"im Verlauf der Bearbeitung",
+a#31 praktiziert→"ist … tätig", a#32 "TWD 1.57M"→"1,57 Millionen TWD", a#33 English role parentheses removed ×4
+(tseng-junwei→"Leitende Anwältin in Taiwan" per ACCEPTED), a#34 option label "Ich spreche keine der vier Sprachen …",
+a#35 Notfallkanal→Notfallkontakt / "sagt keine Antwortfrist zu", a#36 →"elterliche Sorge für minderjährige Kinder
+(未成年子女權利義務之行使或負擔)", a#37 Magister→Master of Science/Master of Arts ×2, a#38 Strafsachen sentence given an object,
+a#39 "Anfragen … richten Sie an …".
+Columns: a#5 (001 R2b country note), a#6 (002 拘役 ×2 → "kurze Freiheitsstrafe (拘役)"), a#7/a#8/a#9 (003 R3),
+a#10 (003 R9 Taiwan numbers labelled), a#11 (003 sign-off), a#12+a#13 (004), a#15/a#16 (005), a#17/a#18 (007),
+a#20/a#21 (008), a#22 (009 broken sentence), a#40 (PE removed 001 body + 004 body/heading), a#41, a#42 (辦法),
+a#43, a#44 (4 link labels → "Taiwanesisches Strafgesetzbuch (中華民國刑法)"), a#45 (see disagreements), a#46, a#47,
+a#48, a#49 ×2, a#50 ×5, a#51, a#52, a#53 (台→臺), a#54, a#55 ×2, a#56 ×3, a#57 (R7b §3 + §6), a#58 (title/H1 "??"→"?"),
+a#59 ×2, a#60, a#61, a#62, a#63, a#64 (see systemic).
+b#1, b#2 ×2, b#4 (013 + 017), b#5, b#6 (014 §1 heading made a question + self-standing opener), b#7 (Rücktritt→Kündigung),
+b#8, b#9, b#10, b#11 (011/013/018 one name), b#12, b#13, b#14, b#15, b#16, b#17, b#18 (adapted), b#19, b#20, b#21,
+b#22, b#23, b#24, b#25, b#26, b#27 ×2, b#28, b#29, b#30, b#31 ×7, b#32 ×3, b#33, b#34, b#35, b#36 (016 §3 + §7),
+b#37, b#38, b#39, b#40 ×2, b#41 ×3, b#42, b#43, b#44 ×2, b#45, b#46, b#47.
+
+## ROWS SKIPPED (with reason)
+- a#14, a#19 (Hangul / percent-encoded slugs in 005/008/009 `url:` and body links) — ACCEPTED-de skip list (R1 mechanical,
+  canonical source metadata).
+- b#3 (Invest Taiwan `lang=jpn` in 011) — supervisor fixes centrally; link parity would break.
+- Any /ko/… link or related-link label row — already remapped (R1); new labels read naturally, left as they are.
+- a#43 "Also 004": 004 contains no 公開發行公司. Its 發行公司 = "Emissionsgesellschaft" is correct; not changed.
+
+## SYSTEMIC SWEEPS (pattern → instances changed)
+- taiwanisch* → taiwanesisch* (ACCEPTED override of the reviewers' "taiwanisch") → 184
+  (pack 11; 001:27, 002:8, 004:73, 005:6, 011:19, 013:7, 015:3, 017:5, 018:25).
+- Korea as the default reader → labelled example / neutral (R2) → 10 passages (001, 004, 005 ×2, 007 ×2, 008 ×3, 009).
+  006 (Korean massage law) and 010 (the Korean student is a case fact) deliberately kept.
+- 條例 "Verordnung" → "Gesetz" → 9 (004 ×5, 008 ×2, 013, 017).
+- 辦法 "Methode" → "Vorschriften" → 8 (002 ×4, 011 ×4).
+- English chrome → German (R5) → 30: "Q&A" ×6 (003 title+H1, 005, 007 title+H1, 013), "(PE)" ×3,
+  role parentheses ×4, "(English)", 018 chrome ×15 (Limited Company/Company Limited by Shares ×8, Supervisor ×2,
+  Board, Governance ×2, After-Sales, Department of Commerce), Investment Commission ×3, Compliance-Punkte, Change-of-Control ×3.
+- 監察人 → "Aufsichtsperson der Gesellschaft (監察人)" ×2; 經濟部投資審議司 → "Abteilung für Investitionsprüfung des
+  Wirtschaftsministeriums" in 011/013/018 → 7.
+- Employee resignation "Rücktritt*" → "Kündigung*" (014) → 11; 簽約金 "Vertragsprämie" → "Antrittsprämie" → 7;
+  "Kündigungsankündigung" → "Kündigungserklärung/Ankündigungsfrist" → 3.
+- Gender-split noun chains a native firm would not write (b-verdict): "Importeurin oder Importeur" → "importierende
+  Person" (011) → 19; "Absenderin oder Absender / Spediteurin … / Beförderin …" → short generic (017) → 6.
+- R7b bare FAQ answers under topic headings made self-standing → 5 (007 §3, 007 §6, 014 §1, 016 §3, 016 §7, 017 §3).
+- R7 blog register: comment CTAs → "Kontakt" + no reply-time promise (003, 005, 013, 015), emoji, "Beispiel)" ×2,
+  fullwidth "：", "Q." heading marker, "Bitte beachten Sie dies daher!", "Soweit der Hinweis", "??" in title/H1 → 13.
+- ROC year glossed with the Gregorian year → 7 (003 ×3, 007 ×3, 010). 司法院 "Justizyuans" → "Justiz-Yuan" → 4.
+- "Institute" (organisations) → "Rechtsinstitute" → 3 (pack, 007, 016). R6b fullwidth punctuation outside glosses: 0 left
+  (only the untouched Korean `url:` in 008).
+
+## NOTES / CHECKER TRADE-OFFS
+- Adding the Gregorian year to ROC citations makes `numbers` report WARN "extra in translation" on 003/007/010 (extra
+  2020/2023). WARN is not FAIL; summary stays PASS 18/18. Flagged here so the supervisor can revert if unwanted.
+- b#18: deleting "1-fachen" outright made `numbers` FAIL (missing "1"). Kept the digit:
+  "bis zur Höhe des tatsächlichen Schadens (bis zum 1-fachen)".
+- Adding 有限公司/股份有限公司/董事會/監察人 glosses to 018 turned its former `hanzi WARN han=0` into PASS han=61.
+- The team-bio figure change (a#32, "TWD 1.57M" → "1,57 Millionen TWD") departs from the doc comment in
+  international-guidance-team.ts that figures stay byte-identical; it is explicitly authorised by R3/a#32 and the
+  enforcing test (guidance-team-bios.test.ts) only covers vi/id/th/fil, so nothing broke.
+- Test touched: src/data/__tests__/guidance-disclosure-parity.test.ts, `de: /gangbare/` → `de: /praktikabl/`
+  (the pinned word was rewritten by a#27). Nothing else in tests changed.
+
+## DISAGREEMENTS WITH THE REVIEWERS (not applied as suggested)
+1. a#45 (003): the reviewer says the English is "merely taking photographs". src/content/columns-en/003 line 24 reads
+   "a recording alone", so "Fotografieren oder Filmen" would change the source meaning. Applied a corrected fix for the
+   real ambiguity instead: "eine bloße Ton- oder Videoaufnahme".
+2. a#64 / b-verdict recommend standardising on "taiwanisch". ACCEPTED-de chooses "taiwanesisch"; supervisor followed.
+3. a#47 / a#52 / b#5 / b#33 suggest inserting a markdown link to /de/contact. Adding links breaks link parity
+   (checker counts hrefs), so the same content is given as plain text ("über die Seite „Kontakt“") plus the
+   no-reply-time caveat.
+4. a#60: the suggested "Wei Tseng (曾雋崴), Rechtsanwältin in Taiwan." leaves a verbless fragment at the head of a
+   first-person article. Used "Ich bin Wei Tseng (曾雋崴), Rechtsanwältin in Taiwan." (greeting removed, register fixed).
+5. b#10: the reviewer wanted the English company-form names kept with glosses; ACCEPTED-de prescribes
+   "GmbH-ähnliche Gesellschaft (有限公司) / Aktiengesellschaft (股份有限公司)". Supervisor followed, with an explicit
+   "nicht mit der deutschen GmbH oder AG gleichzusetzen" in the body.
+6. a#5: the reviewer's wording names Deutschland/Österreich/Schweiz. ACCEPTED-de requires the neutral R2 form, so the
+   note reads "Ob zwischen Taiwan und Ihrem eigenen Staat ein Abkommen besteht …".
+7. b#22 "Compliance-Punkte" → the reviewer's "Erfüllungspunkte" is not idiomatic; used "Punkte der Regeleinhaltung".
+8. b#23: the reviewer's "die taiwanische Unternehmerin oder der taiwanische Unternehmer" reintroduces exactly the
+   splitting the same review calls unreadable; used "das taiwanische Unternehmen".
+
+## §VERIFY (verbatim)
+$ node scripts/check-column-translation.mjs --dir src/content/columns-de --lang de 2>&1 | tail -8
+forbidden      PASS   
+hanzi          PASS   han=61
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-de src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      25
+(25 = 22 modified in-scope files + untracked .tmp-de/ helper dir + untracked docs/i18n/global-plan/WO-F-de.txt
+ + this untracked log docs/i18n/global-plan/evidence/opus-F-de.log)

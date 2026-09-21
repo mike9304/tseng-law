@@ -21,7 +21,7 @@ Insbesondere wenn Beschäftigte von sich aus kündigen (自請離職),
 
 können sie keine Abfindung erhalten (Artikel 18 des Arbeitsstandardsgesetzes, 勞動基準法),
 
-und dies unterscheidet sich von Korea.
+und dies unterscheidet sich von manchen anderen Rechtsordnungen; Korea ist ein Beispiel.
 
 ​
 
@@ -53,7 +53,7 @@ den Lohn (工資) nicht rechtzeitig zahlt,
 
 keine Überstundenvergütung (加班費) zahlt
 
-oder die beschäftigte Person nicht in die Arbeitsversicherung (勞保) oder Krankenversicherung (健保) aufnimmt.
+oder die beschäftigte Person nicht in die Arbeitnehmerversicherung (勞保) oder die Krankenversicherung (健保) aufnimmt.
 
 In solchen Fällen muss der Arbeitgeber auch dann Abfindung zahlen, wenn die beschäftigte Person den Arbeitsvertrag selbst beendet.
 
@@ -73,11 +73,11 @@ Deshalb müssen beschäftigte Personen die Frist genau im Blick behalten.
 
 Mit anderen Worten:
 
-Das taiwanesische Recht räumt, ob das Verschulden bei der Gesellschaft
+Das taiwanesische Recht gibt — je nachdem, ob das Verschulden bei der Gesellschaft
 
-oder bei der beschäftigten Person liegt,
+oder bei der beschäftigten Person liegt —
 
-beiden Seiten das Recht ein, keine Abfindung zu zahlen oder Abfindung zu verlangen.
+der einen oder der anderen Seite das Recht, die Abfindung zu verweigern oder sie zu verlangen.
 
 Manchmal liegt Verschulden auf beiden Seiten,
 
@@ -89,7 +89,7 @@ die Abfindung verweigert oder verlangt werden.
 
 Deshalb ist in taiwanesischen Arbeitsstreitigkeiten (勞資糾紛)
 
-der ''**Zeitpunkt**'' sehr wichtig.
+der **Zeitpunkt** sehr wichtig.
 
 In den meisten Fällen wird die Seite geschützt, die sich vorher vorbereitet hat.
 

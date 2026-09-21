@@ -21,7 +21,7 @@ Lalo na kung kusang-loob na nagbitiw (自請離職) ang empleyado,
 
 hindi siya makakatanggap ng separation pay (Artikulo 18 ng Labor Standards Act),
 
-at ito ay naiiba sa Korea.
+at ito ay naiiba sa ilang bansa (halimbawa ang Korea); huwag itumbas ang 資遣費 sa separation pay sa ilalim ng batas paggawa ng ibang bansa.
 
 ​
 
@@ -29,7 +29,7 @@ Ngunit may mga **eksepsiyonal na sitwasyon**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-Sa mga sumusunod na natatanging sitwasyon, kailangan pa ring bayaran ng employer ang manggagawa ng separation pay kahit kusang-loob itong nagbitiw — ayon sa Artikulo 14 ng Labor Standards Act, na nag-aaplay ng Artikulo 17 nang mutatis mutandis (勞動基準法):
+Sa mga sumusunod na natatanging sitwasyon, kailangan pa ring bayaran ng employer ang manggagawa ng separation pay kahit kusang-loob itong nagbitiw — ayon sa Artikulo 14 ng Labor Standards Act, na nag-aaplay ng Artikulo 17 nang may kaukulang pagbabago (準用, 勞動基準法):
 
 1. Kung sa pagpasok sa kontrata sa paggawa (labor contract, 勞動契約) ay gumawa ang employer ng hindi totoong paglalahad (虛偽之意思表示), kaya't naniwala nang mali ang manggagawa at may panganib siyang magdusa ng pinsala
 
@@ -89,13 +89,13 @@ ang siyang makatatangging magbayad o makahihingi ng separation pay.
 
 Kaya nga sa mga alitan sa paggawa dito sa Taiwan,
 
-napakahalaga ng ''**panahon**''.
+napakahalaga ang **panahon**.
 
-Sa karamihan ng pagkakataon, ang panig na naunang naghanda ang siyang napoprotektahan sa kanyang karapatan.
+Sa maraming kaso, mas matatag ang panig na maagang nagtipon ng ebidensya at sumunod sa taning; hindi ito katiyakan ng resulta.
 
 ---
 
 > Iba pang babasahin:
 > - [Paano itinatakda ang saklaw ng trabaho at ang bayarin](/fil/pricing)
-> - [Pandaigdigang koponan ng Hovering](/fil/lawyers)
+> - [Pandaigdigang pangkat ng Hovering](/fil/lawyers)
 > - [Mga usaping hinahawakan ng tanggapan](/fil/services)

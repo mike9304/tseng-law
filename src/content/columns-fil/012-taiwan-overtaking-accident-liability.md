@@ -23,7 +23,7 @@ Ipinagbabawal ng Artikulo 101 ang paglampas sa mga bahagi ng kalsadang may karat
 
 Ipinagbabawal din ang paglampas sa mga lugar o bahagi ng kalsadang may karatula ng paaralan o ospital, sa mga dakong may ibang karatula o marka ng pagbabawal sa paglampas, kapag may paparating na sasakyan mula sa kabilang direksyon, gayundin kapag may dalawa o higit pang sasakyang magkakasunod na tumatakbo sa unahan.
 
-Kapag nais lampasan ang sasakyang nasa unahan sa iisang lane, kailangang patunugin muna ng nagmamaneho sa likuran ang busina (horn, 喇叭) nang dalawang maikling tunog, o kaya ay kurapin nang isang beses ang mga ilaw sa unahan (headlights, 變換燈光). Hindi dapat paulit-ulit na patunugin ang busina o kurapin ang mga ilaw sa unahan upang piliting magbigay-daan ang sasakyan sa unahan.
+Kapag nais lampasan ang sasakyang nasa unahan sa iisang lane, kailangang patunugin muna ng nagmamaneho sa likuran ang busina (喇叭) nang dalawang maikling tunog, o kaya ay kurapin nang isang beses ang mga ilaw sa unahan (變換燈光). Hindi dapat paulit-ulit na patunugin ang busina o kurapin ang mga ilaw sa unahan upang piliting magbigay-daan ang sasakyan sa unahan.
 
 Makakalampas lamang ang sasakyan sa likuran matapos bagalan ng sasakyan sa unahan ang takbo nito saka pumihit sa gilid, o matapos nitong ipahiwatig sa pamamagitan ng senyas ng kamay o ng kanang turn signal (右方向燈) na nagbibigay-daan na ito.
 
@@ -33,7 +33,7 @@ Ang pagkakasunod-sunod na ito ng pagsenyas at pagbibigay-daan sa iisang lane ay 
 
 ## Isang anonimong kaso ng aksidenteng hinawakan ng tanggapan
 
-Sa isang anonimong kaso na hinawakan ng tanggapang ito, ang nagmamaneho ng motorsiklo (機車) na tatawagin ditong A ay tumatakbo sa daang bundok kasama ang pasaherong si B. May dalawang sasakyang pampasahero (小客車) sa unahan, at dahil mabagal ang takbo ng pinakaunang sasakyan na Sasakyan 1, mabagal ding tumatakbo ang Sasakyan 2 pati ang motorsiklo.
+Sa isang anonimong kaso na hinawakan ng tanggapang ito, ang nagmamaneho ng motorsiklo (機車) na tatawagin ditong A ay tumatakbo sa daang bundok kasama ang pasaherong si B. May dalawang sasakyang pampasahero (小客車) sa unahan, at dahil mabagal ang takbo ng pinakaunang sasakyan na Sasakyan 1, mabagal ding tumatakbo ang Sasakyan 2 at ang motorsiklo.
 
 ![Diagram ng aksidenteng nagpapakita ng ruta ng paglampas ng motorsiklo gayundin ng dalawang sasakyan sa unahan sa daang bundok](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
@@ -41,11 +41,11 @@ Sinubukan ni A na lampasan nang sabay ang dalawang sasakyan, kaya pumasok siya s
 
 Nagtamo si B ng malubhang pinsala sa ulo at namatay sa mismong pinangyarihan; nawalan naman ng malay si A saka dinala sa ospital.
 
-Sa simula ay pinaniwalaan ng mga pamilya nina A at B na ang biglaang paglipat ng lane ng Sasakyan 2 ang pangunahing sanhi ng banggaan. Umabot sa paglilitis (litigation) ang usapin, at sa proseso nito ay ilang ulit na isinagawa ang expert appraisal (鑑定) hinggil sa aksidente.
+Sa simula ay pinaniwalaan ng mga pamilya nina A at B na ang biglaang paglipat ng lane ng Sasakyan 2 ang pangunahing sanhi ng banggaan. Umabot sa paglilitis ang usapin, at sa proseso nito ay ilang ulit na isinagawa ang pagsusuri ng eksperto (expert appraisal, 鑑定) hinggil sa aksidente.
 
-Ayon sa mga resulta ng appraisal, si A ang itinuring na pangunahing may pananagutan sa banggaang ito. Ang konklusyong iyon ay limitado lamang sa mga pangyayari ng kasong ito. Sabay-sabay na isinaalang-alang sa appraisal ang pagtatangka ni A na lampasan ang dalawang magkakasunod na sasakyan sa unahan, ang pagpasok niya sa kabilang lane, ang bilis na nag-iwan ng kakaunting kaluwagan upang makapreno, ang hindi paggawa ng itinakdang senyas ng busina o ng ilaw sa unahan, ang galaw ng Sasakyan 2 sa paglipat ng lane, ang ayos ng kalsada pati ng mga lane, gayundin ang iba pang ebidensyang nakalap.
+Ayon sa mga resulta ng appraisal, si A ang itinuring na pangunahing may pananagutan sa banggaang ito. Ang konklusyong iyon ay limitado lamang sa mga pangyayari ng kasong ito. Sabay-sabay na isinaalang-alang sa appraisal ang pagtatangka ni A na lampasan ang dalawang magkakasunod na sasakyan sa unahan, ang pagpasok niya sa kabilang lane, ang bilis na nag-iwan ng kakaunting kaluwagan upang makapreno, ang hindi paggawa ng itinakdang senyas ng busina o ng ilaw sa unahan, ang galaw ng Sasakyan 2 sa paglipat ng lane, ang ayos ng kalsada at ng mga lane, gayundin ang iba pang ebidensyang nakalap.
 
-Ang ganitong resultang nakabatay sa isang tiyak na kaso ay hindi nangangahulugang laging natutukoy ang pananagutan sa isang nalaktawang senyas. Ang kapabayaan (negligence, 過失) sa aksidente ng paglampas ay nakadepende sa lugar ng pangyayari, sa ayos ng mga lane, sa bilis, sa galaw ng mga sasakyan, sa mga senyas, sa agwat ng oras, sa saklaw ng paningin (visibility), gayundin sa iba pang makukuhang ebidensya.
+Ang ganitong resultang nakabatay sa isang tiyak na kaso ay hindi nangangahulugang laging natutukoy ang pananagutan sa isang nalaktawang senyas. Ang kapabayaan (過失) sa aksidente ng paglampas ay nakadepende sa lugar ng pangyayari, sa ayos ng mga lane, sa bilis, sa galaw ng mga sasakyan, sa mga senyas, sa agwat ng oras, sa saklaw ng paningin, gayundin sa iba pang makukuhang ebidensya.
 
 ## Mga dapat tiyakin sa paghusga ng pananagutan sa aksidente
 
@@ -59,7 +59,7 @@ Bilang karagdagang babasahin ay maaaring sumangguni sa [ilustradong gabay sa mga
 
 > Iba pang babasahin:
 > - [Paano itinatakda ang saklaw ng trabaho at ang bayarin](/fil/pricing)
-> - [Pandaigdigang koponan ng Hovering](/fil/lawyers)
+> - [Pandaigdigang pangkat ng Hovering](/fil/lawyers)
 > - [Pamamaraan sa paghawak ng aksidente sa trapiko sa Taiwan](/fil/columns/taiwan-traffic-accident-procedure)
 
-Ang artikulong ito ay pangkalahatang impormasyong legal hinggil sa mga alituntunin sa paglampas sa Taiwan pati sa paghusga ng pananagutan sa aksidente; hindi ito payong legal para sa isang tiyak na kaso ni pangako ng anumang resulta. Maaaring mag-iba ang aktuwal na pananagutan depende sa lugar ng aksidente, sa galaw ng mga sasakyan, sa bilis, sa mga senyas, sa ebidensya, sa expert appraisal, gayundin sa kasalukuyang mga regulasyon, kaya kailangang isa-isang suriin ang tiyak na kaso batay sa mga kaugnay na materyal.
+Ang artikulong ito ay pangkalahatang impormasyong legal hinggil sa mga alituntunin sa paglampas sa Taiwan at sa paghusga ng pananagutan sa aksidente; hindi ito payong legal para sa isang tiyak na kaso ni pangako ng anumang resulta. Maaaring mag-iba ang aktuwal na pananagutan depende sa lugar ng aksidente, sa galaw ng mga sasakyan, sa bilis, sa mga senyas, sa ebidensya, sa pagsusuri ng eksperto, gayundin sa kasalukuyang mga regulasyon, kaya kailangang isa-isang suriin ang tiyak na kaso batay sa mga kaugnay na materyal.

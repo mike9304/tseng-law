@@ -26,7 +26,7 @@ const GUIDANCE_EASTERN_SRC = path.join(process.cwd(), 'src/data/international-gu
  *   vi  line 140  mega.services.viewAllLabel: 'Xem tất cả'     → 'Tất cả'
  *   id  line 635  mega.services.viewAllLabel: 'Lihat semua'    → 'Semua'
  *   th  line 1130 mega.services.viewAllLabel: 'ดูทั้งหมด'       → 'ทั้งหมด'
- *   fil line 1625 mega.services.viewAllLabel: 'Tingnan lahat'  → 'Lahat'
+ *   fil line 1625 mega.services.viewAllLabel: 'Tingnan ang lahat' → 'Lahat'
  *   ar  line 2120 mega.services.viewAllLabel: 'عرض الكل'       → 'الكل'
  */
 const GUIDANCE_ALL_LABEL: Record<GuidanceLocale4, string> = {
@@ -63,7 +63,7 @@ const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
   vi: "viewAllLabel: 'Xem tất cả'",
   id: "viewAllLabel: 'Lihat semua'",
   th: "viewAllLabel: 'ดูทั้งหมด'",
-  fil: "viewAllLabel: 'Tingnan lahat'",
+  fil: "viewAllLabel: 'Tingnan ang lahat'",
   ar: "viewAllLabel: 'عرض الكل'",
   de: "viewAllLabel: 'Alle anzeigen'",
   es: "viewAllLabel: 'Ver todo'",

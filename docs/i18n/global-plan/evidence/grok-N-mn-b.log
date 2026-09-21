@@ -1,1 +1,74 @@
-[WO start 2026-09-22 08:08:51]
+WO-N-mn-b — Mongolian (Cyrillic) columns 010–018
+Workspace: /Users/son7/Projects/tseng-law-new-mn-20260922
+Agent: Grok 4.6 (Cursor)
+Date: 2026-09-22
+
+## Files
+9 files written in src/content/columns-mn/ (this work order):
+010-taiwan-gym-injury-lawsuit.md
+011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md
+012-taiwan-overtaking-accident-liability.md
+013-taiwan-company-establishment-advanced-1.md
+014-taiwan-mandatory-employment-period.md
+015-taiwan-company-setup-pitch-location.md
+016-taiwan-inheritance-custody-analysis.md
+017-taiwan-logistics-business-setup.md
+018-taiwan-semiconductor-market-entry.md
+
+Directory also contains WO-N-mn-a 001–009. Combined checker: 18/18 PASS. This batch 010–018 all PASS.
+
+## §Verify (verbatim)
+
+ls src/content/columns-mn/*.md | wc -l
+      18
+
+node scripts/check-column-translation.mjs --dir src/content/columns-mn --lang mn 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-mn-20260922/src/content/columns-mn/018-taiwan-semiconductor-market-entry.md  lang=mn
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=98
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-mn | wc -l
+       0
+
+git status --short | wc -l
+      45
+
+## Key terms (Mongolian + Traditional-Chinese gloss)
+- автомашины ачаа тээвэр (汽車貨運業)
+- ачаа зуучлах (運送承攬)
+- байгуулах бэлтгэлийн зөвшөөрөл (籌設許可)
+- Замын тухай хууль (公路法)
+- хөдөлмөр эрхлэх зөвшөөрөл (工作許可)
+- гадаадын иргэний оршин суух үнэмлэх (外僑居留證)
+- хянагч (監察人) / хяналтын эрх (監察權) — not «аудитор»
+- хязгаарлагдмал хариуцлагатай компани (有限公司) / хувьцаат компани (股份有限公司)
+- нийтэд хувьцаа санал болгосон компани (公開發行公司)
+- Эдийн засгийн яамны Хөрөнгө оруулалтыг хянан шалгах газар (經濟部投資審議司)
+- хувьцаа эзэмшигч (股東)
+- өрхийн бүртгэл (戶籍)
+
+Register: formal Та; quotes «»; date_display numeric (2025.09.13 / 2026.09.17); thousands 100,000; byline **Эмэгтэй өмгөөлөгч Wei Tseng (曾雋崴)** where the Korean source has a byline (Latin name kept). Categories from columns.ts mn. Consultation languages not implied in mn (EN / 中文 / JA / KO only). R2–R10 from ru: Korea as labelled example only; advertising-risk softened; FAQ answers self-standing; 018 source skips §6 and has no `url` key — both kept.
+
+## Unresolved
+- numbers WARN (not FAIL) on leftover Korean ordinal tokens the checker still lists on 010/011/014/015: 제7호, 제1항, 제2종. Mongolian uses N дэх хэсэг / N дугаар зүйл; the paragraph regex does not always consume every Korean 제N호 form.
+- 013/015 keep Korean ZWSP spacers to match block/ZWSP counts.
+- 012 used «тодорхой үр дүнг амлахгүй» (not «үр дүнгийн баталгаа») after the mn-cost-guarantee gate.
+- 016 FAQ/body keep «1 дүгээр дараалал» so the 1×2 number pair from 제1순위 is present.
+- git status --short count 45 is the whole worktree (guidance pack + mn-a + these columns + helpers), not 9-file-only.

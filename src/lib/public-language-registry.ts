@@ -585,12 +585,12 @@ export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion
     europe: 'ยุโรป',
     americas: 'ทวีปอเมริกา',
   },
-  mn: { // SCAFFOLD(ru)
-    global: 'Глобально',
-    'asia-pacific': 'Азиатско-Тихоокеанский регион',
-    'middle-east': 'Ближний Восток',
-    europe: 'Европа',
-    americas: 'Америка',
+  mn: {
+    global: 'Дэлхий даяар',
+    'asia-pacific': 'Ази, Номхон далай',
+    'middle-east': 'Ойрхи Дорнод',
+    europe: 'Европ',
+    americas: 'Америк',
   },
   sk: {
     global: 'Celosvetovo',
@@ -897,11 +897,11 @@ export const LANGUAGE_PICKER_COPY: Record<
     close: 'ปิด',
     current: 'ภาษาปัจจุบัน',
   },
-  mn: { // SCAFFOLD(ru)
-    open: 'Выбрать регион и язык',
-    title: 'Выберите регион и язык',
-    close: 'Закрыть',
-    current: 'Текущий язык',
+  mn: {
+    open: 'Бүс болон хэл сонгох',
+    title: 'Бүс, хэлээ сонгоно уу',
+    close: 'Хаах',
+    current: 'Одоогийн хэл',
   },
   sk: {
     open: 'Zvoľte región a jazyk',

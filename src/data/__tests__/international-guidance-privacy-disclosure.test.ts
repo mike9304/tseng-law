@@ -45,7 +45,7 @@ const PENDING_CONFIRMATION: Record<(typeof GUIDANCE_LOCALES_4)[number], RegExp> 
   ta: /அலுவலக உறுதிப்பாட்டுக்காகக் காத்திருக்கிறது|அலுவலகம் இன்னும் உறுதிப்படுத்தவில்லை/,
   ne: /कार्यालयको पुष्टिको प्रतीक्षा|कार्यालयद्वारा अझै पुष्टि भएको छैन/,
   km: /รอการยืนยัน|ยังไม่ได้รับการยืนยัน/, // SCAFFOLD(th)
-  mn: /ожидает подтверждения бюро|ещё не подтверждено бюро/, // SCAFFOLD(ru)
+  mn: /фирмийн баталгааг хүлээж|фирм хараахан баталгаажуулаагүй/,
   sk: /zatiaľ nie je potvrdené kanceláriou|čaká na potvrdenie kancelárie/i,
   bg: /очаква потвърждение от кантората|все още не е потвърдено от кантората/,
   hr: /čeka potvrdu ureda|još nije potvrđeno od strane ureda/i,

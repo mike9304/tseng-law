@@ -1,9 +1,80 @@
-[WO start 2026-09-22 05:17:39]
-The Mongolian (Cyrillic) `mn` pack is in. Every `SCAFFOLD(ru)` string for this locale is replaced; the markers are gone.
+WO-P-mn — Mongolian (Cyrillic) guidance pack + UI strings
+Workspace: /Users/son7/Projects/tseng-law-new-mn-20260922
+Agent: Grok 4.6 (Cursor)
+Date: 2026-09-22
 
-The report is at `docs/i18n/global-plan/evidence/grok-P-mn.log`.
+## Files touched
+src/data/international-guidance-southeast-central.ts
+src/data/international-guidance-team.ts
+src/data/international-guidance-offices.ts
+src/data/international-guidance-answers.ts
+src/data/international-inquiry-copy.ts
+src/data/multilingual-international-v2.ts
+src/data/team-name.ts
+src/lib/llms-txt.ts
+src/lib/columns.ts
+src/lib/public-language-registry.ts
+src/components/ColumnsGrid.tsx
+src/components/CinematicOpening.tsx
+src/components/decorative-video-controls.ts
+src/data/__tests__/guidance-disclosure-parity.test.ts
+src/data/__tests__/guidance-office-facts-sync.test.ts
+src/data/__tests__/international-guidance-privacy-disclosure.test.ts
+src/data/__tests__/column-alternate-expectations.ts
+src/components/__tests__/columns-grid-guidance-labels.test.tsx
+src/components/__tests__/multilingual-international-v2.test.tsx
+tests/builder-editor/international-guidance.playwright.ts
+docs/i18n/global-plan/evidence/grok-P-mn.log
+Helpers only under .tmp-mn/ (not product copy).
 
-**Verify:** SCAFFOLD grep for `mn` = **0**, **TSC_OK**, **1096 passed / 5 failed**. The five failures are other still-scaffolded locales (answers allowlist length, shared template llms notices, root `llms.txt` 8 KiB budget). None fail on `mn` rows.
+team-name.ts: SCAFFOLD marker removed; string kept as the brand form `Hovering International Team` (same untranslated brand used by de/ru/vi and the file’s own rule).
 
-Consultation is stated as English, Chinese (中文), Japanese, Korean only. The Mongolian FAQ answer to “can I get advice in Mongolian?” is **Үгүй.** Attorney Wei Tseng is named as **эмэгтэй өмгөөлөгч**. Nav labels all fit in 14 characters (`Асуулт хариулт` is exactly 14).
-=== end code=0 2026-09-22 05:38:22 ===
+## §Verify (verbatim)
+
+grep -rn "SCAFFOLD" src tests | grep -cE "^\S+:[0-9]+:\s*'?mn'?:|locale mn"
+0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/data/__tests__/ src/lib/__tests__/guidance-chrome-language.test.ts src/lib/__tests__/international-guidance-answers.test.ts "src/app/[locale]/__tests__/llms-discovery.test.tsx" src/components/__tests__/columns-grid-guidance-labels.test.tsx src/components/__tests__/multilingual-international-v2.test.tsx --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+   × guidance locale llms.txt catalogs > writes a distinct notice set for each guidance language 3ms
+   × root llms.txt guidance catalog links > stays inside the 8 KiB root budget and the documented grammar 1ms
+   × root llms.txt guidance catalog links > lists every site-locale catalog and every guidance catalog 0ms
+   × root llms.txt guidance catalog links > labels each guidance catalog in its own language without widening consultation languages 0ms
+   × guidanceAnswers > covers every guidance locale x 6 page keys 3ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+ Test Files  2 failed | 45 passed (47)
+      Tests  5 failed | 1096 passed (1101)
+
+git status --short | wc -l
+      22
+
+Pass notes:
+- SCAFFOLD grep for mn = 0.
+- TSC_OK.
+- No test failed on an `mn` row. Remaining 5 failures are other new locales still scaffolded / wiring-wide:
+  1) src/lib/__tests__/international-guidance-answers.test.ts — `GUIDANCE_LOCALES` is the 27 completed locales; `GUIDANCE_LOCALES_4` is 45 (bn/ur/fa/my/ta/ne/km/sk/bg/hr/sr/sl/lt/lv/et/ca/is still scaffolded, not in the answers allowlist).
+  2) llms-discovery “distinct notice set” — other scaffolded locales still share identical template notice strings (Set size 84 vs 135). mn’s three notices are unique Mongolian.
+  3–5) root llms.txt 8 KiB budget — `buildRootLlmsTxt` lists every newly wired guidance catalog; the byte limit is exceeded independently of mn wording.
+
+mn-specific checks that passed: disclosure parity (mn added to LOCALES; all 15 element regexes match the pack), privacy hosting/Vercel/contact, office Korea/Japan spellings (Солонгос / Япон), columns-grid All/category/read-more, multilingual consultation notice `/англи/`, mn llms catalog + notice-block verbatim quotes.
+
+## Terminology (Mongolian + Chinese gloss kept)
+- хөдөлмөр эрхлэх зөвшөөрөл (工作許可)
+- оршин суух зөвшөөрөл (居留)
+- ажлаас чөлөөлөх төлбөр (資遣費)
+- гэрлэлт цуцлалт (離婚)
+- хөдөлмөрийн гэрээ (勞動契約)
+- ажлын журам (工作規則)
+- насанд хүрээгүй хүүхдийн эрх, үүргийг хэрэгжүүлэх, хүлээх (未成年子女權利義務之行使或負擔)
+- уулзалт харилцаа (會面交往)
+- өв залгамжлал (繼承)
+- өрхийн бүртгэл (戶籍)
+- барааны тэмдэг (商標) / патент (專利)
+- Тайбэй (臺北), Гаосюн (高雄), Тайжун (臺中), Пиндун (屏東)
+
+Register: formal Та; quotes «»; autonym `Монгол`; consultation languages in order англи, хятад (中文), япон, солонгос. Wei Tseng marked as эмэгтэй өмгөөлөгч (Mongolian has no grammatical gender). FAQ “Би монгол хэлээр зөвлөгөө авч болох уу?” → “Үгүй.” Eyebrows БАГ / ОФИСУУД.
+
+## Could not fit
+All `nav.*` labels ≤ 14 characters (faq `Асуулт хариулт` = 14). menuLabel is `Хуудсын жагсаалт`, not “Menu”. Nothing dropped for length.

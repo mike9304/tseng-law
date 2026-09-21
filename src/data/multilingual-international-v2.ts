@@ -481,16 +481,16 @@ export const GUIDANCE_HOME_PATHS: Record<GuidanceLocale, GuidanceHomePaths> = {
     },
     ariaLabel: 'สองเส้นทางข้อมูล',
   },
-  mn: { // SCAFFOLD(ru)
+  mn: {
     setup: {
-      label: 'Информация о регистрации компании на Тайване',
+      label: 'Тайваньд компани бүртгүүлэх мэдээлэл',
       href: '/mn/services',
     },
     legal: {
-      label: 'Информация по правовым вопросам Тайваня',
+      label: 'Тайванийн эрх зүйн асуудлын мэдээлэл',
       href: '/mn/faq',
     },
-    ariaLabel: 'Два пути к информации',
+    ariaLabel: 'Мэдээлэлд хүрэх хоёр зам',
   },
   sk: {
     setup: {

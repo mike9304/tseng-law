@@ -85,7 +85,7 @@ const ELEMENTS = {
     ta: /சாத்தியமான/,
     ne: /व्यवहार्य/,
     km: /เป็นไปได้/, // SCAFFOLD(th)
-    mn: /возможн/, // SCAFFOLD(ru)
+    mn: /хэрэгжүүлж болох/,
     sk: /schodný/,
     bg: /приложим начин/,
     hr: /provediv/,
@@ -133,7 +133,7 @@ const ELEMENTS = {
     ta: /பிற மொழி/,
     ne: /अर्को भाषा/,
     km: /ภาษาอื่น/, // SCAFFOLD(th)
-    mn: /друг(?:ом|ого) язык/, // SCAFFOLD(ru)
+    mn: /өөр хэл дээрх үйлчилгээ баталгаажихгүй/,
     sk: /v inom jazyku zaručená nie je/,
     bg: /друг език/,
     hr: /na drugom jeziku nije zajamčena/,
@@ -181,7 +181,7 @@ const ELEMENTS = {
     ta: /பதிலளிக்கும் காலக்கெடு/,
     ne: /जवाफको समयसीमा/,
     km: /ระยะเวลา(ในการ)?ตอบกลับ/, // SCAFFOLD(th)
-    mn: /срок[а]? ответа/, // SCAFFOLD(ru)
+    mn: /хариу өгөх хугацаа/,
     sk: /lehotu na odpoveď|lehota na odpoveď/,
     bg: /срок за отговор/,
     hr: /rok za odgovor/,
@@ -229,7 +229,7 @@ const ELEMENTS = {
     ta: /வாக்குறுதி அல்ல/,
     ne: /वाचा होइन/,
     km: /ไม่ใช่คำมั่น/, // SCAFFOLD(th)
-    mn: /не обещание/, // SCAFFOLD(ru)
+    mn: /амлалт биш/,
     sk: /prísľub/,
     bg: /не обещание/,
     hr: /ne o obećanju|nije obećanje/,
@@ -277,7 +277,7 @@ const ELEMENTS = {
     ta: /மொழிபெயர்ப்பாளர/,
     ne: /दोभाषे/,
     km: /ล่าม/, // SCAFFOLD(th)
-    mn: /переводчик/, // SCAFFOLD(ru)
+    mn: /орчуулагч/,
     sk: /tlmočník/,
     bg: /преводач/,
     hr: /tumač/,
@@ -325,7 +325,7 @@ const ELEMENTS = {
     ta: /ஒவ்வொரு வழக்கையும்/,
     ne: /हरेक मुद्दा/,
     km: /ได้ทุกเรื่อง/, // SCAFFOLD(th)
-    mn: /каждое дело/, // SCAFFOLD(ru)
+    mn: /ямар ч хэргийг/,
     sk: /každú vec/,
     bg: /всяко дело/,
     hr: /svaki predmet/,
@@ -373,7 +373,7 @@ const ELEMENTS = {
     ta: /முடிவை உறுதி/,
     ne: /नतिजा/,
     km: /รับประกันผล/, // SCAFFOLD(th)
-    mn: /результат/, // SCAFFOLD(ru)
+    mn: /үр дүн/,
     sk: /výsledok/,
     bg: /резултат/,
     hr: /ishod/,
@@ -421,7 +421,7 @@ const ELEMENTS = {
     ta: /நான்கு ஆலோசனை மொழி/,
     ne: /चारवटा परामर्श भाषा/,
     km: /4 ภาษาที่ใช้ให้คำปรึกษา/, // SCAFFOLD(th)
-    mn: /четырёх язык/, // SCAFFOLD(ru)
+    mn: /дөрвөн зөвлөгөөний хэл/,
     sk: /štyroch/,
     bg: /четирите езика за консултация/,
     hr: /četiri/,
@@ -469,7 +469,7 @@ const ELEMENTS = {
     ta: /ஆலோசனைப் படி அல்ல/,
     ne: /परामर्शको चरण/,
     km: /ขั้นตอนการให้คำปรึกษา/, // SCAFFOLD(th)
-    mn: /шагом консультации/, // SCAFFOLD(ru)
+    mn: /зөвлөгөөний алхам биш/,
     sk: /krokom porady|krok porady/,
     bg: /стъпка от консултацията/,
     hr: /korak savjetovanja/,
@@ -517,7 +517,7 @@ const ELEMENTS = {
     ta: /சட்டக் கருத்து அல்ல/,
     ne: /कानुनी राय/,
     km: /ความเห็นทางกฎหมาย/, // SCAFFOLD(th)
-    mn: /юридическ/, // SCAFFOLD(ru)
+    mn: /эрх зүйн зөвлөгөө биш/,
     sk: /právn\w* stanovisk/,
     bg: /правна консултация/,
     hr: /pravn\w* mišljenj/,
@@ -565,7 +565,7 @@ const ELEMENTS = {
     ta: /சந்திப்ப/,
     ne: /निर्धारित भेट/,
     km: /การนัดหมาย/, // SCAFFOLD(th)
-    mn: /запись/, // SCAFFOLD(ru)
+    mn: /цаг товлолт/,
     sk: /stretnut/,
     bg: /среща/,
     hr: /sastanak/,
@@ -613,7 +613,7 @@ const ELEMENTS = {
     ta: /வழக்கறிஞருக்கும் கட்சிக்காரருக்கும்/,
     ne: /अधिवक्ता तथा पक्षकार/,
     km: /ความสัมพันธ์ระหว่างทนายความ/, // SCAFFOLD(th)
-    mn: /отношений между адвокатом/, // SCAFFOLD(ru)
+    mn: /өмгөөлөгч ба үйлчлүүлэгчийн харилцаа/,
     sk: /vzťah medzi advokát/,
     bg: /отношения между адвокатка или адвокат и клиент/,
     hr: /odnos između odvjetnic/,
@@ -661,7 +661,7 @@ const ELEMENTS = {
     ta: /தானியங்கியாக மொழிபெயர்க்கப்படாது/,
     ne: /स्वतः अनुवाद/,
     km: /แปลโดยอัตโนมัติ/, // SCAFFOLD(th)
-    mn: /автоматически не переводится/, // SCAFFOLD(ru)
+    mn: /автоматаар орчуулагдахгүй|автоматаар орчуулахгүй/,
     sk: /automaticky/,
     bg: /не се превежда автоматично/,
     hr: /automatski/,
@@ -709,7 +709,7 @@ const ELEMENTS = {
     ta: /திருமணம்/,
     ne: /विवाह/,
     km: /การสมรส/, // SCAFFOLD(th)
-    mn: /брак/i, // SCAFFOLD(ru)
+    mn: /гэрлэлт/i,
     sk: /manželstvo/i,
     bg: /брак/i,
     hr: /brak/i,
@@ -757,7 +757,7 @@ const ELEMENTS = {
     ta: /கட்டணச் சேவை/,
     ne: /दस्तुर/,
     km: /บริการที่มีค่าใช้จ่าย/, // SCAFFOLD(th)
-    mn: /возмездн/, // SCAFFOLD(ru)
+    mn: /төлбөртэй/,
     sk: /odplatn/,
     bg: /платен/,
     hr: /naplatn/,

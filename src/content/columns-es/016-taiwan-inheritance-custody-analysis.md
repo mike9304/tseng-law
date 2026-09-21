@@ -1,5 +1,5 @@
 ---
-title: "Sucesión y patria potestad en Taiwán: guía jurídica para la familia que queda"
+title: "Sucesión y patria potestad en Taiwán: guía jurídica para la familia sobreviviente"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
 lastmod: "2026-07-25"
 date_display: "13 de septiembre de 2025"
@@ -15,10 +15,10 @@ faq:
   - q: "Si fallece uno de los padres, ¿cómo queda la patria potestad del progenitor sobreviviente?"
     a: "Según el artículo 1089 del Código Civil de Taiwán (民法), cuando uno de los padres no puede ejercer los derechos y obligaciones respecto del menor, en principio los ejerce el otro. Por ello, si el progenitor sobreviviente conserva la patria potestad (親權) y no hay una resolución judicial en contrario, ese progenitor suele seguir ejerciendo los derechos y obligaciones de patria potestad. Sin embargo, según circunstancias concretas como una resolución existente, causas de limitación o suspensión de la patria potestad, elementos internacionales y el interés superior del hijo, puede ser necesaria la intervención del tribunal."
   - q: "¿Puede el progenitor sobreviviente utilizar con libertad el patrimonio que el menor ha heredado?"
-    a: "No. Según los artículos 1087 y 1088 del Código Civil de Taiwán (民法), el patrimonio que el menor adquiere por sucesión es patrimonio peculiar del hijo (特有財產), y el padre, la madre o el tutor no se convierten en dueños sustanciales de ese patrimonio. La administración, el uso, el disfrute, la representación legal y la disposición deben hacerse en interés del hijo, y en caso de conflicto de intereses o de una disposición importante puede plantearse el nombramiento de un representante especial (特別代理人) o la intervención del tribunal. No debe considerarse que los padres pueden utilizar de forma unilateral e ilimitada el caudal hereditario del hijo."
+    a: "No. Según los artículos 1087 y 1088 del Código Civil de Taiwán (民法), el patrimonio que el menor adquiere por sucesión es patrimonio propio del hijo (特有財產), y el padre, la madre o el tutor no se convierten en titulares ni en beneficiarios efectivos de ese patrimonio. La administración, el uso, el disfrute, la representación legal y la disposición deben hacerse en interés del hijo, y en caso de conflicto de intereses o de una disposición importante puede plantearse el nombramiento de un representante especial (特別代理人) o la intervención del tribunal. No debe considerarse que los padres pueden utilizar de forma unilateral e ilimitada el caudal hereditario del hijo."
 ---
 
-# Sucesión y patria potestad en Taiwán: guía jurídica para la familia que queda
+# Sucesión y patria potestad en Taiwán: guía jurídica para la familia sobreviviente
 
 ![Imagen que simboliza la planificación sucesoria en Taiwán y la protección del patrimonio del menor](../images/016-taiwan-inheritance-custody-analysis/featured-generic.webp)
 
@@ -38,9 +38,9 @@ El que se haya abierto la sucesión no significa que cada heredero sea de inmedi
 
 ## 2. Testamento y determinación del caudal hereditario
 
-Un testamento válido puede fijar un modo de distribución distinto de la sucesión legal. Sin embargo, deben comprobarse la forma del testamento, la capacidad para testar, la interpretación y la posibilidad de ejecución, y examinarse juntos los límites de las normas imperativas, incluida la legítima (特留分). El solo hecho de que haya testamento no determina la atribución de todo el caudal hereditario y, a la inversa, si el testamento solo consigna algunos bienes, al resto puede aplicarse la regulación de la sucesión legal.
+Un testamento válido puede fijar un modo de distribución distinto de la sucesión legal. Sin embargo, deben comprobarse la forma del testamento, la capacidad para testar, la interpretación y la posibilidad de ejecución, y examinarse juntos los límites de las normas imperativas, incluida la legítima (特留分). El mero hecho de que haya testamento no determina la atribución de todo el caudal hereditario y, a la inversa, si el testamento solo consigna algunos bienes, al resto puede aplicarse la regulación de la sucesión legal.
 
-Antes de calcular la cuota hereditaria debe determinarse primero el inventario y el carácter jurídico del caudal hereditario. Deben confirmarse con datos no solo inmuebles, depósitos, valores, participaciones empresariales, créditos y muebles, sino también las deudas del causante, la responsabilidad de fianza, los impuestos impagados y los gastos relacionados con el funeral. No debe concluirse solo con el nombre del registro o de la cuenta; también deben investigarse la relación de propiedad real, la cuota en copropiedad, los derechos de un tercero y las garantías constituidas.
+Antes de calcular la cuota hereditaria debe determinarse primero el inventario y el carácter jurídico del caudal hereditario. Deben confirmarse con datos no solo inmuebles, depósitos, valores, participaciones empresariales, créditos y muebles, sino también las deudas del causante, la responsabilidad de fianza, los impuestos impagados y los gastos relacionados con el funeral. No debe concluirse solo con el nombre del registro o de la cuenta; también deben investigarse la relación de la titularidad efectiva, la cuota en copropiedad, los derechos de un tercero y las garantías constituidas.
 
 Prestaciones con beneficiario designado por separado, como el seguro o la prestación de jubilación (退休金), pueden tratarse de un modo distinto del caudal hereditario según el contrato y la ley aplicable. El patrimonio en fideicomiso (信託) debe confirmarse en la estructura del contrato de fideicomiso y en el derecho a beneficios, y las donaciones o transmisiones en vida pueden conectarse con la colación, la imputación o la legítima. Si hay cuentas o inmuebles en el extranjero, deben verse juntos el Derecho del lugar de situación y las normas de ley aplicable de Taiwán.
 
@@ -48,7 +48,7 @@ La investigación patrimonial no es solo un proceso de buscar derechos, sino tam
 
 ## 3. Derecho del cónyuge a la distribución del patrimonio residual
 
-No. El derecho a la distribución de la diferencia de patrimonio residual conyugal (剩餘財產差額分配) del artículo 1030-1 del Código Civil de Taiwán es un derecho que el cónyuge puede alegar por separado cuando se reúnen los requisitos legales, y debe calcularse distinguido de la cuota hereditaria. No todos los bienes adquiridos durante el matrimonio entran de modo natural en el cálculo, ni el cónyuge sobreviviente recibe necesariamente la mitad del caudal hereditario. Debe valorarse de forma individual tras confirmar el régimen patrimonial, la causa y el momento de adquisición de cada bien, las deudas y las partidas legalmente excluidas.
+La distribución del patrimonio residual no se confunde con la cuota hereditaria. El derecho a la distribución de la diferencia de patrimonio residual conyugal (剩餘財產差額分配) del artículo 1030-1 del Código Civil de Taiwán es un derecho que el cónyuge puede alegar por separado cuando se reúnen los requisitos legales, y debe calcularse distinguido de la cuota hereditaria. No todos los bienes adquiridos durante el matrimonio entran de modo natural en el cálculo, ni el cónyuge sobreviviente recibe necesariamente la mitad del caudal hereditario. Debe valorarse de forma individual tras confirmar el régimen patrimonial, la causa y el momento de adquisición de cada bien, las deudas y las partidas legalmente excluidas.
 
 Este derecho es un régimen que, al extinguirse el régimen legal de bienes (法定財產制), compara el incremento del patrimonio de cada cónyuge durante el matrimonio según el criterio legal. El fundamento de nacimiento, la contraparte y el objeto de cálculo son distintos de la cuota hereditaria que nace porque el cónyuge sobreviviente es heredero. Si esa reclamación se constituye, puede plantearse el orden de reflejar primero su resultado y, después, determinar como caudal hereditario el patrimonio que queda al causante.
 
@@ -66,7 +66,7 @@ Antes de disponer del caudal hereditario o de pagar deudas deben investigarse ju
 
 La orientación del procedimiento de solicitud de asuntos sucesorios del portal tributario del Ministerio de Hacienda de Taiwán (財政部) se actualizó el 25 de junio de 2026 y explica el plazo general de 3 meses del procedimiento judicial relativo a la presentación del inventario y a la repudiación, y el plazo general de 6 meses de la declaración del impuesto de sucesiones (遺產稅). Sin embargo, el dies a quo, la prórroga, las excepciones y la competencia deben confirmarse en cada caso, y ello no debe utilizarse como cálculo de una fecha límite personal.
 
-La declaración del impuesto de sucesiones, la declaración en el registro civil (戶籍), el cambio de nombre de inmuebles y vehículos y el procedimiento de pago de las entidades financieras pueden tener órganos responsables y documentos distintos. No debe pensarse que el escrito de repudiación que se presenta al tribunal y la declaración del impuesto de sucesiones ante el órgano tributario son el mismo procedimiento. Como varios plazos pueden correr a la vez, es más seguro gestionar el dies a quo y los justificantes de cada procedimiento en un calendario separado.
+La declaración del impuesto de sucesiones, la declaración en el registro de domicilio (戶籍), el cambio de nombre de inmuebles y vehículos y el procedimiento de pago de las entidades financieras pueden tener órganos responsables y documentos distintos. No debe pensarse que el escrito de repudiación que se presenta al tribunal y la declaración del impuesto de sucesiones ante el órgano tributario son el mismo procedimiento. Como varios plazos pueden correr a la vez, es más seguro gestionar el dies a quo y los justificantes de cada procedimiento en un calendario separado.
 
 ## 5. Derechos y obligaciones de patria potestad del progenitor sobreviviente
 
@@ -80,7 +80,7 @@ La patria potestad y la sucesión son, en Derecho, cuestiones distintas. Aunque 
 
 ## 6. Designación de tutor e intervención del tribunal
 
-La tutela de menores del artículo 1091 del Código Civil se plantea cuando el menor no tiene padres o cuando ambos no pueden ejercer los derechos y obligaciones de patria potestad. No puede afirmarse que la tutela de menores empieza de inmediato por el solo hecho de que haya fallecido uno de los padres. Deben confirmarse primero el estado de patria potestad del progenitor sobreviviente, las resoluciones existentes y si los derechos pueden ejercerse realmente.
+La tutela de menores del artículo 1091 del Código Civil se plantea cuando el menor no tiene padres o cuando ambos no pueden ejercer los derechos y obligaciones de patria potestad. No puede afirmarse que la tutela de menores empieza de inmediato por el mero hecho de que haya fallecido uno de los padres. Deben confirmarse primero el estado de patria potestad del progenitor sobreviviente, las resoluciones existentes y si los derechos pueden ejercerse realmente.
 
 Según el artículo 1093 del Código Civil, el progenitor que ejerce en último lugar los derechos y obligaciones de patria potestad puede designar tutor (監護人) del menor por testamento. Para que esta norma se aplique, el testamento debe reunir la forma legal y el progenitor que designa debe tener facultad de designar tutor del menor. Aunque haya un contenido de designación, deben verse juntos los requisitos de inicio de la tutela, la cualificación del tutor y si la acepta, y la declaración ante el tribunal y los demás procedimientos de supervisión.
 
@@ -92,9 +92,9 @@ Al examinar al tutor deben verse de forma concreta el papel de protección y el 
 
 ## 7. Protección del caudal hereditario del menor
 
-No. Según los artículos 1087 y 1088 del Código Civil de Taiwán, el patrimonio que el menor adquiere por sucesión es patrimonio peculiar del hijo (特有財產), y el padre, la madre o el tutor no se convierten en dueños sustanciales de ese patrimonio. La administración, el uso, el disfrute, la representación legal y la disposición deben hacerse en interés del hijo, y en caso de conflicto de intereses o de una disposición importante puede plantearse el nombramiento de un representante especial (特別代理人) o la intervención del tribunal. No debe considerarse que los padres pueden utilizar de forma unilateral e ilimitada el caudal hereditario del hijo.
+El patrimonio heredado no pasa a ser de los padres. Según los artículos 1087 y 1088 del Código Civil de Taiwán, el patrimonio que el menor adquiere por sucesión es patrimonio propio del hijo (特有財產), y el padre, la madre o el tutor no se convierten en titulares ni en beneficiarios efectivos de ese patrimonio. La administración, el uso, el disfrute, la representación legal y la disposición deben hacerse en interés del hijo, y en caso de conflicto de intereses o de una disposición importante puede plantearse el nombramiento de un representante especial (特別代理人) o la intervención del tribunal. No debe considerarse que los padres pueden utilizar de forma unilateral e ilimitada el caudal hereditario del hijo.
 
-El patrimonio peculiar significa el patrimonio que pertenece al propio menor. Los depósitos, inmuebles, acciones u otros derechos heredados deben afirmarse como patrimonio del hijo y administrarse por separado en su interés. Aunque el padre, la madre o el tutor asuman la administración, no se convierten en dueños sustanciales de ese patrimonio, y no deben utilizarlo para sus propios gastos de vida o para pagar sus deudas.
+El patrimonio propio del hijo es el que pertenece al propio menor. Los depósitos, inmuebles, acciones u otros derechos heredados deben afirmarse como patrimonio del hijo y administrarse por separado en su interés. Aunque el padre, la madre o el tutor asuman la administración, no se convierten en titulares ni en beneficiarios efectivos de ese patrimonio, y no deben utilizarlo para sus propios gastos de vida o para pagar sus deudas.
 
 Las facultades de administración, uso, disfrute y disposición del artículo 1088 del Código Civil están vinculadas a la finalidad del interés del hijo. Es importante dejar constancia del tipo de bien, de la necesidad de la disposición, de la adecuación de la contraprestación y del plan de custodia y uso del producto. En actos de gran valor y riesgo, como la venta de un inmueble, la constitución de garantía o la inversión empresarial, también debe comprobarse si se exige autorización de otras normas o un procedimiento judicial.
 
@@ -110,7 +110,7 @@ A una familia con elemento internacional no debe aplicarse de inmediato solo la 
 
 La Ley de aplicación de las leyes civiles con elemento extranjero de Taiwán (涉外民事法律適用法) es el punto de partida para fijar la ley aplicable a las relaciones civiles con elemento extranjero. Sin embargo, confirmar solo esa ley puede no bastar, y deben examinarse juntos la competencia internacional del tribunal, el reconocimiento y la ejecución de sentencias extranjeras, y los tratados o el Derecho del otro Estado. Si una valoración válida en Taiwán se aplica tal cual a la transmisión de un bien situado en el extranjero debe confirmarse por separado en el lugar de situación del bien.
 
-El testamento otorgado en el extranjero debe examinarse en la forma de otorgamiento, la eficacia sustancial, la traducción y la legalización (認證), y el procedimiento de adveración (檢認) o de ejecución. Los certificados de matrimonio y divorcio y los documentos de filiación extranjeros pueden requerir apostilla o legalización consular y traducción. Si la grafía del nombre, los datos del pasaporte y el registro civil difieren entre sí, puede pedirse documentación adicional en el proceso de identificación de la misma persona.
+El testamento otorgado en el extranjero debe examinarse en la forma de otorgamiento, la eficacia sustancial, la traducción y la autenticación notarial (認證), y el procedimiento de adveración (檢認) o de ejecución. Los certificados de matrimonio y divorcio y los documentos de filiación extranjeros pueden requerir apostilla o legalización consular y traducción. Si la grafía del nombre, los datos del pasaporte y el registro civil difieren entre sí, puede pedirse documentación adicional en el proceso de identificación de la misma persona.
 
 Si hay una sentencia extranjera sobre patria potestad o tutela, debe confirmarse si esa sentencia es definitiva, si se siguió un procedimiento lícito y si puede reconocerse en Taiwán. Si el hijo tiene residencia habitual en otro país, también pueden ser importantes la competencia del tribunal local y las medidas de protección urgente. Qué procedimiento de qué país se tramita primero debe considerarse junto con el interés superior del hijo y la posibilidad de ejecución.
 
@@ -121,7 +121,7 @@ En materia fiscal también puede surgir una obligación de declaración separada
 El orden siguiente es un marco básico para reunir los hechos sin omisión y para no confundir derechos y procedimientos distintos. El orden real de presentación puede variar según el órgano competente y la urgencia del asunto, de modo que el plazo de cada etapa debe confirmarse por separado.
 
 1. Se confirman el certificado de defunción y los datos de declaración de fallecimiento, los datos de la relación familiar y del registro civil de Taiwán, los registros de matrimonio, divorcio y adopción, y las resoluciones judiciales existentes. Si el documento es extranjero, se comprueban también la legalización, la traducción y si coincide la grafía del nombre.
-2. Se investigan inmuebles, depósitos, activos de inversión, participaciones empresariales y muebles, y créditos, y se ordenan juntos préstamos, fianzas, impuestos y deudas contractuales. Se marcan por separado el nombre y la relación de propiedad real, el beneficiario del seguro, el fideicomiso, el patrimonio común y los datos de transmisiones en vida.
+2. Se investigan inmuebles, depósitos, activos de inversión, participaciones empresariales y muebles, y créditos, y se ordenan juntos préstamos, fianzas, impuestos y deudas contractuales. Se marcan por separado el nombre y la relación de la titularidad efectiva, el beneficiario del seguro, el fideicomiso, el patrimonio común y los datos de transmisiones en vida.
 3. Se confirman el original del testamento y la forma de otorgamiento, la capacidad para testar, los requisitos de testigos o de notaría, el albacea y el contenido del legado (遺贈). Se examinan juntos cómo un testamento válido cambia la distribución y los límites de las normas imperativas, incluida la legítima.
 4. Se calculan por separado la cuota hereditaria legal y el derecho a la distribución de la diferencia de patrimonio residual conyugal. Se distinguen el objeto de cálculo, las deudas, las partidas excluidas, la fecha de referencia de valoración y los justificantes de cada régimen, y no se refleja de forma duplicada el resultado de un cálculo en el otro.
 5. Se identifican los bienes que se atribuyen al menor y se confirman la representación legal, el alcance de administración del padre, la madre o el tutor, el conflicto de intereses y si hace falta un representante especial. También se prevé un modo de custodiar las cuentas, los libros y el producto de la disposición separados del patrimonio personal del adulto.
@@ -136,7 +136,7 @@ También deben distinguirse el patrimonio que requiere una conservación urgente
 - [Base de datos de normativa nacional de Taiwán: Código Civil](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001)
 - [Sistema de búsqueda normativa del Ministerio de Justicia de Taiwán: versión inglesa del Código Civil](https://mojlaw.moj.gov.tw/ENG/LawContentE.aspx?LSID=FL001351)
 - [Base de datos de normativa nacional de Taiwán: Ley de aplicación de las leyes civiles con elemento extranjero](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007)
-- [Yuan Judicial de Taiwán: formulario de solicitud de nombramiento de tutor del menor](https://www.judicial.gov.tw/tw/cp-1369-4219-da7e1-1.html)
+- [Yuan Judicial de Taiwán (司法院, órgano judicial central): formulario de solicitud de nombramiento de tutor del menor](https://www.judicial.gov.tw/tw/cp-1369-4219-da7e1-1.html)
 - [Portal tributario del Ministerio de Hacienda de Taiwán: procedimiento de solicitud de asuntos sucesorios y documentos a preparar](https://www.etax.nat.gov.tw/etwmain/tax-info/house-land-transfer-taxtation-calculation-area/inheritance/file-process)
 
 En las páginas oficiales de normativa deben confirmarse la fecha de reforma y la de entrada en vigor del precepto, y la versión inglesa debe utilizarse como material auxiliar para contrastar la explicación en este artículo con el tenor original. El formulario del Yuan Judicial y la orientación del portal tributario muestran una dirección general de preparación, pero la competencia y los requisitos de presentación de cada asunto deben confirmarse por separado según la orientación más reciente del órgano receptor.
@@ -145,7 +145,7 @@ En las páginas oficiales de normativa deben confirmarse la fecha de reforma y l
 
 - [Asuntos que atendemos](/es/services)
 - [Cómo se fijan el alcance del trabajo y los honorarios](/es/pricing)
-- [Consulta](/es/contact)
+- [Contacto](/es/contact)
 
 ---
 

@@ -13,7 +13,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![Imagen principal](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Como indiqué antes, en Taiwán no es fácil que el trabajador obtenga la indemnización por despido (資遣費).
+En Taiwán no es fácil, por regla general, que el trabajador obtenga la indemnización por despido (資遣費).
 
 ​
 
@@ -21,7 +21,7 @@ En particular, si el trabajador dimite de forma voluntaria (自請離職),
 
 no puede percibir la indemnización por despido (資遣費) (artículo 18 de la Ley de Normas Laborales),
 
-y ello difiere de Corea.
+y ello difiere de algunos ordenamientos, como el coreano.
 
 ​
 
@@ -89,7 +89,7 @@ puede no pagarse la indemnización o puede exigirse.
 
 Por ello, en los conflictos laborales (勞資糾紛) de Taiwán,
 
-el ''**tiempo**'' es muy importante.
+el **tiempo** es muy importante.
 
 En la mayoría de los casos, quien se ha preparado de antemano ve protegidos sus derechos.
 

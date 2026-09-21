@@ -21,15 +21,15 @@ El [artículo 101 del Reglamento de seguridad del tráfico por carretera de Taiw
 
 El artículo 101 prohíbe adelantar en tramos con señales que indican curva, pendiente pronunciada, puente estrecho, túnel o intersección, así como en pasos a nivel ferroviarios y en tramos de obras.
 
-Tampoco puede adelantarse en lugares o tramos con señal de escuela o de hospital, en lugares con otras señales o marcas de prohibición de adelantamiento, cuando se aproxima un vehículo en sentido contrario, ni cuando delante circulan de forma continua 2 o más vehículos.
+Tampoco puede adelantarse en lugares o tramos con señal de escuela o de hospital, en lugares con otras señales o marcas de prohibición de adelantamiento, cuando se aproxima un vehículo en sentido contrario, ni cuando delante circulan de forma continua dos o más vehículos.
 
-Para rebasar el vehículo de delante en el mismo carril, el conductor del vehículo de detrás debe primero hacer 2 toques cortos de claxon o 1 destello de los faros delanteros. No deben utilizarse el claxon ni los faros de forma repetida para forzar a que el vehículo de delante ceda el paso.
+Para rebasar el vehículo de delante en el mismo carril, el conductor del vehículo de detrás debe primero hacer dos toques cortos de claxon o un destello de los faros delanteros. No deben utilizarse el claxon ni los faros de forma repetida para forzar a que el vehículo de delante ceda el paso.
 
-El vehículo de detrás solo puede adelantar después de que el de delante reduzca la velocidad y se aparte, o después de que manifieste su voluntad de ceder el paso con una seña de la mano o con el intermitente derecho.
+El vehículo de detrás solo puede adelantar después de que el de delante reduzca la velocidad y se aparte, o después de que manifieste su voluntad de ceder el paso con una señal con la mano o con el intermitente derecho.
 
 A continuación, el vehículo que adelanta debe encender el intermitente izquierdo, rebasar por la izquierda manteniendo una distancia de al menos 0,5 metros respecto del vehículo de delante y, una vez asegurada una distancia segura, encender el intermitente derecho y volver con seguridad al carril original.
 
-Ese orden de señales y de cesión en el mismo carril no significa que el adelantamiento esté permitido en un lugar o en una condición prohibidos. Antes de iniciar el adelantamiento deben valorarse juntos todos los requisitos del artículo 101.
+Ese orden de señales y de ceder el paso en el mismo carril no significa que el adelantamiento esté permitido en un lugar o en una condición prohibidos. Antes de iniciar el adelantamiento deben valorarse juntos todos los requisitos del artículo 101.
 
 ## Caso anónimo de accidente tramitado por este despacho
 
@@ -49,7 +49,7 @@ El que en cada asunto aparezca un resultado de peritaje de este tipo no signific
 
 ## Aspectos que deben comprobarse al valorar la responsabilidad del accidente
 
-Antes de adelantar debe confirmarse primero si el lugar o la situación del tráfico están comprendidos en la prohibición de adelantar. Si se aplica el procedimiento del mismo carril, dé las señales de claxon o de faros previstas sin forzar a que el vehículo de delante ceda el paso, espere una indicación clara de cesión y complete el adelantamiento con una separación suficiente y una distancia segura para volver al carril original.
+Antes de adelantar debe confirmarse primero si el lugar o la situación del tráfico están comprendidos en la prohibición de adelantar. Si se aplica el procedimiento del mismo carril, deben darse las señales de claxon o de faros previstas sin forzar a que el vehículo de delante ceda el paso, debe esperarse una indicación clara de que le ceden el paso y completar el adelantamiento con una separación suficiente y una distancia segura para volver al carril original.
 
 Cumplir el artículo 101 es importante, pero ello por sí solo no garantiza evitar el accidente ni el resultado posterior del peritaje o del litigio. El conductor debe reservar un margen adicional de seguridad y adaptar su conducta a la situación que tiene delante.
 

@@ -592,9 +592,9 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Esta página está escrita en español como orientación general, no como asesoramiento jurídico para su propio caso.',
     consultationNotice:
-      'La consulta se realiza en cuatro idiomas: inglés, chino (中文), japonés y coreano.',
+      'La consulta se realiza únicamente en cuatro idiomas: inglés, chino (中文), japonés y coreano.',
     methodConfirmationNotice:
-      'Si no puede usar ninguno de esos cuatro idiomas, elija «Hace falta confirmar la forma de comunicarse». Responderemos para comprobar una vía posible de comunicación cuando exista una forma posible; no se garantiza el servicio en otro idioma y no se promete un plazo de respuesta.',
+      'Si no puede usar ninguno de esos cuatro idiomas, elija «Hace falta confirmar la forma de comunicarse». Responderemos para comprobar si existe una vía posible de comunicación; no se garantiza el servicio en otro idioma y no se promete un plazo de respuesta.',
     preparationNotice:
       'Puede escribir el resumen de su asunto en su propio idioma. El texto original se guarda tal como lo escribe y no se traduce de forma automática.',
     heading: 'Enviar una solicitud de consulta',

@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-¿Ha llegado a conocer la época de las barberías tradicionales (理髮廳) de los primeros tiempos de Taiwán?
+¿Recuerda la época de las barberías tradicionales (理髮廳) de los primeros tiempos de Taiwán?
 
 La forma de lavar el cabello en aquellas barberías era muy peculiar.
 
@@ -81,7 +81,7 @@ Por ejemplo, se pensó si la norma escrita que solo permitía a las personas con
 
 y se cuestionó si esa norma había contribuido realmente a proteger el empleo y la subsistencia de las personas con discapacidad visual.
 
-Al final, los Grandes Jueces (大法官) declararon inconstitucional (違憲) el precepto que solo permitía a las personas con discapacidad visual dedicarse al oficio de masaje.
+Al final, el Tribunal Constitucional (大法官) declaró inconstitucional (違憲) el precepto que solo permitía a las personas con discapacidad visual dedicarse al oficio de masaje.
 
 ​
 

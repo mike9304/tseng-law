@@ -579,7 +579,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Esta orientación está escrita en español, pero la consulta con un abogado se realiza únicamente en inglés, chino (中文), japonés y coreano.',
     discoveryNotice:
-      'El archivo llms.txt es solo un mapa para localizar páginas públicas; no promete posición en buscadores, respaldo, recomendación de IA ni visibilidad.',
+      'El archivo llms.txt es solo un mapa para localizar páginas públicas; no promete posicionamiento en buscadores, respaldo, recomendación por parte de una inteligencia artificial ni visibilidad garantizada.',
     confidentialNotice:
       'Como el texto original se guarda, no escriba en esta primera fase datos que aún no hacen falta, como el número de pasaporte, el número de identidad o datos de una cuenta bancaria.',
   },

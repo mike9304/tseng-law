@@ -801,7 +801,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     title: 'Міжнародна команда Hovering',
     description:
       'Профілі адвокатів, операційного керівництва та партнерської бухгалтерії Hovering.',
-    representativeTitle: 'Керівний адвокат',
+    representativeTitle: 'Керівна адвокатка',
     teamTitle: 'Адвокати та співробітники',
     partnerTitle: 'Партнерська бухгалтерія',
     introLabel: 'Представлення',
@@ -809,17 +809,17 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     experienceLabel: 'Досвід',
     photoAltPrefix: 'Світлина',
     workingLanguagesLabel: 'Робочі мови',
-    fullProfileLabel: 'Повний профіль (English)',
-    keyFactsHeading: 'Адвокат Wei Tseng — Основні відомості',
+    fullProfileLabel: 'Повний профіль (англійською)',
+    keyFactsHeading: 'Адвокатка Wei Tseng — основні відомості',
     qualificationLabel: 'Кваліфікація та фірма',
     qualificationSentence:
-      '{name} уповноважена провадити адвокатську діяльність на Тайвані та є керівним адвокатом {firm}.',
+      '{name} уповноважена провадити адвокатську діяльність на Тайвані та є керівною адвокаткою {firm}.',
     practiceLabel: 'Основні напрями',
     consultationLanguagesLabel: 'Мови консультації',
     roles: {
-      'tseng-junwei': 'Керівний адвокат на Тайвані (Managing Attorney)',
+      'tseng-junwei': 'Керівна адвокатка на Тайвані (Managing Attorney)',
       'chang-rongxuan': 'Адвокат на Тайвані (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
+      'chang-fangyu': 'Помічник адвоката (paralegal)',
       'son-jungmin': 'Керівництво операціями в Кореї (Korea Operations Manager)',
       'huang-shengping': 'Партнерський бухгалтер (Partner CPA)',
     },
@@ -1137,7 +1137,7 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Taiwan company setup': 'Створення товариств на Тайвані',
     'Taiwan investment counsel': 'Консультування щодо інвестицій на Тайвані',
     'Civil litigation and damages': 'Цивільні спори та відшкодування шкоди',
-    'Trademark and patent filings': 'Заявки на марки та патенти',
+    'Trademark and patent filings': 'Заявки на торговельні марки та патенти',
     'Visa and residency': 'Віза та проживання',
     'Family and labor disputes': 'Сімейні та трудові спори',
   },
@@ -2694,7 +2694,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal із тривалою працею старшим paralegal у кількох фірмах, відповідальний за процесуальну підтримку, корпоративне право та іноземні інвестиції.',
+        'Помічник адвоката з багаторічним досвідом роботи старшим помічником у кількох фірмах; відповідає за процесуальну підтримку, корпоративне право та іноземні інвестиції.',
         'Підтримка в провадженнях, у створенні товариств, у погодженнях іноземних інвестицій, у заявах на ліцензії та в обміні між Кореєю і Тайванем.',
       ],
       education: [

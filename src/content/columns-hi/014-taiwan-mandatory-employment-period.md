@@ -5,7 +5,7 @@ lastmod: "2026-07-25"
 date_display: "13 सितंबर 2025"
 read_time: "18 मिनट का पाठ"
 categories:
-  - "ताइवान संबंधी कानूनी जानकारी"
+  - "ताइवान कानूनी जानकारी"
 featured_image: "../images/014-taiwan-mandatory-employment-period/featured-01.jpg"
 faq:
   - q: "क्या ताइवान श्रम अनुबंध का न्यूनतम सेवा अवधि करार (最低服務年限約定) स्वतः शून्य है?"

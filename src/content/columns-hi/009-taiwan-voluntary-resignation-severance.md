@@ -5,7 +5,7 @@ lastmod: "2026-09-10"
 date_display: "13 सितंबर 2025"
 read_time: "3 मिनट का पाठ"
 categories:
-  - "ताइवान संबंधी कानूनी जानकारी"
+  - "ताइवान कानूनी जानकारी"
 featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg"
 ---
 

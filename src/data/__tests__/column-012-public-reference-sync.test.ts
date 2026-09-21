@@ -5,6 +5,7 @@ import { pathToFileURL } from 'node:url';
 
 import matter from 'gray-matter';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { hreflangTagForPublicLocale } from '@/lib/public-guidance';
 
 import { insightsArchive } from '@/data/insights-archive';
 import { serviceAreas } from '@/data/service-details';
@@ -375,7 +376,7 @@ describe('column 012 public reference synchronization', () => {
 
       const languages: Record<string, unknown> = { ...(matches[0]?.alternates?.languages ?? {}) };
       for (const optionalLocale of presentOptionalLocales) {
-        expect(languages[optionalLocale], `${locale} -> ${optionalLocale}`).toBe(
+        expect(languages[hreflangTagForPublicLocale(optionalLocale)], `${locale} -> ${optionalLocale}`).toBe(
           `${siteUrl}/${optionalLocale}/columns/${slug}`,
         );
       }
@@ -405,7 +406,7 @@ describe('column 012 public reference synchronization', () => {
 
       const languages: Record<string, unknown> = { ...(metadata.alternates?.languages ?? {}) };
       for (const optionalLocale of presentOptionalLocales) {
-        expect(languages[optionalLocale], `${locale} -> ${optionalLocale}`).toBe(
+        expect(languages[hreflangTagForPublicLocale(optionalLocale)], `${locale} -> ${optionalLocale}`).toBe(
           `${siteUrl}/${optionalLocale}/columns/${slug}`,
         );
       }
@@ -433,7 +434,7 @@ describe('column 012 public reference synchronization', () => {
         ...(aliasMetadata.alternates?.languages ?? {}),
       };
       for (const optionalLocale of presentOptionalLocales) {
-        expect(aliasLanguages[optionalLocale], `${locale} -> ${optionalLocale}`).toBe(
+        expect(aliasLanguages[hreflangTagForPublicLocale(optionalLocale)], `${locale} -> ${optionalLocale}`).toBe(
           `${siteUrl}/${optionalLocale}/columns/${slug}`,
         );
       }

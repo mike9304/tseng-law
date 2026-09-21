@@ -5,7 +5,7 @@ lastmod: "2025-09-13"
 date_display: "13 सितंबर 2025"
 read_time: "3 मिनट का पाठ"
 categories:
-  - "ताइवान संबंधी कानूनी जानकारी"
+  - "ताइवान कानूनी जानकारी"
 featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 ---
 

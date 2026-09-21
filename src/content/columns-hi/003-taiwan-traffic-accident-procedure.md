@@ -5,7 +5,7 @@ lastmod: "2026-09-10"
 date_display: "13 सितंबर 2025"
 read_time: "12 मिनट का पाठ"
 categories:
-  - "ताइवान संबंधी कानूनी जानकारी"
+  - "ताइवान कानूनी जानकारी"
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 ---
 

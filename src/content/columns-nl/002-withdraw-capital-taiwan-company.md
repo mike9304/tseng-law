@@ -5,7 +5,7 @@ lastmod: "2026-09-10"
 date_display: "13 september 2025"
 read_time: "16 minuten leestijd"
 categories:
-  - "Vennootschapsoprichting in Taiwan"
+  - "Oprichting van een vennootschap in Taiwan"
 featured_image: "../images/002-withdraw-capital-taiwan-company/featured-01.png"
 faq:
   - q: "Moet men, om middelen van een Taiwanese vennootschap aan de vennoten terug te geven, steeds ontbinding en vereffening uitvoeren?"

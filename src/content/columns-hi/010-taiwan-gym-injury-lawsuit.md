@@ -5,7 +5,7 @@ lastmod: "2026-07-25"
 date_display: "13 सितंबर 2025"
 read_time: "10 मिनट का पाठ"
 categories:
-  - "मुकदमे का विश्लेषण"
+  - "मामला विश्लेषण"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 

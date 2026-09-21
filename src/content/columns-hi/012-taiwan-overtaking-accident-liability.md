@@ -5,7 +5,7 @@ lastmod: "2026-09-10"
 date_display: "13 सितंबर 2025"
 read_time: "5 मिनट का पाठ"
 categories:
-  - "ताइवान संबंधी कानूनी जानकारी"
+  - "ताइवान कानूनी जानकारी"
 featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.jpg"
 ---
 

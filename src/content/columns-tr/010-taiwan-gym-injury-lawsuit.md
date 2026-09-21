@@ -5,7 +5,7 @@ lastmod: "2026-07-25"
 date_display: "13 Eylül 2025"
 read_time: "10 dk okuma"
 categories:
-  - "Dava incelemesi"
+  - "Vaka analizi"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 

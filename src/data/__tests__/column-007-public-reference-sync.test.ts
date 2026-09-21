@@ -9,6 +9,7 @@ import { insightsArchive } from '@/data/insights-archive';
 import { serviceAreas } from '@/data/service-details';
 import { siteContent } from '@/data/site-content';
 import { getColumnPost } from '@/lib/columns';
+import { hreflangTagForPublicLocale } from '@/lib/public-guidance';
 import { filterSearchIndex, getSearchIndex } from '@/lib/search';
 import { buildArticleJsonLd, buildFaqJsonLd } from '@/lib/seo';
 import type { BuilderSitemapEntry } from '@/lib/builder/seo/sitemap-builder';
@@ -368,7 +369,7 @@ describe('column 007 public reference synchronization', () => {
 
       const languages: Record<string, unknown> = { ...(matches[0]?.alternates?.languages ?? {}) };
       for (const optionalLocale of presentOptionalLocales) {
-        expect(languages[optionalLocale], `${locale} -> ${optionalLocale}`).toBe(
+        expect(languages[hreflangTagForPublicLocale(optionalLocale)], `${locale} -> ${optionalLocale}`).toBe(
           `${siteUrl}/${optionalLocale}/columns/${slug}`,
         );
       }
@@ -398,7 +399,7 @@ describe('column 007 public reference synchronization', () => {
 
       const languages: Record<string, unknown> = { ...(metadata.alternates?.languages ?? {}) };
       for (const optionalLocale of presentOptionalLocales) {
-        expect(languages[optionalLocale], `${locale} -> ${optionalLocale}`).toBe(
+        expect(languages[hreflangTagForPublicLocale(optionalLocale)], `${locale} -> ${optionalLocale}`).toBe(
           `${siteUrl}/${optionalLocale}/columns/${slug}`,
         );
       }
@@ -426,7 +427,7 @@ describe('column 007 public reference synchronization', () => {
         ...(aliasMetadata.alternates?.languages ?? {}),
       };
       for (const optionalLocale of presentOptionalLocales) {
-        expect(aliasLanguages[optionalLocale], `${locale} -> ${optionalLocale}`).toBe(
+        expect(aliasLanguages[hreflangTagForPublicLocale(optionalLocale)], `${locale} -> ${optionalLocale}`).toBe(
           `${siteUrl}/${optionalLocale}/columns/${slug}`,
         );
       }

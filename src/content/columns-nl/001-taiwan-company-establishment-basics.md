@@ -5,7 +5,7 @@ lastmod: "2026-07-25"
 date_display: "13 september 2025"
 read_time: "14 minuten leestijd"
 categories:
-  - "Vennootschapsoprichting in Taiwan"
+  - "Oprichting van een vennootschap in Taiwan"
 featured_image: "../images/001-taiwan-company-establishment-basics/featured-01.jpg"
 faq:
   - q: "Waarin onderscheiden zich bij de vennootschapsoprichting in Taiwan de dochtervennootschap, het bijkantoor en het vertegenwoordigingskantoor?"

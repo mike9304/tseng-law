@@ -5,7 +5,7 @@ lastmod: "2026-09-10"
 date_display: "13 september 2025"
 read_time: "4 minuten leestijd"
 categories:
-  - "Vennootschapsoprichting in Taiwan"
+  - "Oprichting van een vennootschap in Taiwan"
 featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg"
 ---
 

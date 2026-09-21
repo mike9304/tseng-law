@@ -5,7 +5,7 @@ lastmod: "2026-07-25"
 date_display: "13 września 2025"
 read_time: "10 min czytania"
 categories:
-  - "Analiza sprawy sądowej"
+  - "Analiza spraw"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 

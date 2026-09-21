@@ -5,7 +5,7 @@ lastmod: "2026-07-25"
 date_display: "13 сентября 2025"
 read_time: "14 минут чтения"
 categories:
-  - "Создание компании на Тайване"
+  - "Учреждение компании на Тайване"
 featured_image: "../images/001-taiwan-company-establishment-basics/featured-01.jpg"
 faq:
   - q: "Чем при создании компании на Тайване различаются дочерняя компания, филиал и представительство?"

@@ -5,7 +5,7 @@ lastmod: "2026-07-25"
 date_display: "13 सितंबर 2025"
 read_time: "16 मिनट का पाठ"
 categories:
-  - "ताइवान संबंधी कानूनी जानकारी"
+  - "ताइवान कानूनी जानकारी"
 featured_image: "../images/016-taiwan-inheritance-custody-analysis/featured-generic.webp"
 faq:
   - q: "यदि वसीयत न हो और उत्तराधिकारी केवल पति/पत्नी तथा बच्चे हों, तो उत्तराधिकार अंश कैसे बँटता है?"

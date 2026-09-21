@@ -4,7 +4,7 @@ lastmod: "2026-09-17"
 date_display: "17 september 2026"
 read_time: "8 minuten leestijd"
 categories:
-  - "Vennootschapsoprichting in Taiwan"
+  - "Oprichting van een vennootschap in Taiwan"
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Indien er klanten in Taiwan zijn, moet men daar verplicht een vennootschap oprichten?"

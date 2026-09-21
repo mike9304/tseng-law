@@ -5,7 +5,7 @@ lastmod: "2026-07-25"
 date_display: "13 september 2025"
 read_time: "18 minuten leestijd"
 categories:
-  - "Vennootschapsoprichting in Taiwan"
+  - "Oprichting van een vennootschap in Taiwan"
 featured_image: "../images/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg"
 faq:
   - q: "Kunnen Taiwanese personen of Taiwanese rechtspersonen als vennoten aan een Taiwanees bijkantoor deelnemen?"

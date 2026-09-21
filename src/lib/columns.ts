@@ -135,15 +135,32 @@ const CASE_CATEGORY_PHRASES = [
   'Analiza spraw', // pl
 ];
 
+/**
+ * Category phrases derived from the badge labels themselves.
+ *
+ * The hardcoded phrase lists used to drift from `GUIDANCE_COLUMN_CATEGORY_LABELS`
+ * — zh-hans listed `公司登记` while the label (and every column's frontmatter)
+ * said `在台湾设立公司`, so nine Simplified Chinese columns resolved to `legal`.
+ * Deriving from the label map makes a new locale impossible to get wrong: the
+ * label a column writes into its frontmatter is the phrase that classifies it.
+ */
+function labelPhrases(cat: ColumnCategory): string[] {
+  return Object.values(GUIDANCE_COLUMN_CATEGORY_LABELS)
+    .map((labels) => labels?.[cat])
+    .filter((phrase): phrase is string => Boolean(phrase));
+}
+
 function categoryFromString(cat: string): ColumnCategory {
   if (
     FORMATION_CATEGORY_PHRASES.some((phrase) => cat.includes(phrase))
+    || labelPhrases('formation').some((phrase) => cat.includes(phrase))
     || /company setup|company formation|incorporation/i.test(cat)
   ) {
     return 'formation';
   }
   if (
     CASE_CATEGORY_PHRASES.some((phrase) => cat.includes(phrase))
+    || labelPhrases('case').some((phrase) => cat.includes(phrase))
     || /case study|litigation case|lawsuit case/i.test(cat)
   ) {
     return 'case';

@@ -518,7 +518,7 @@ describe('sitemap column lastModified', () => {
       const languages: Record<string, unknown> = { ...(entry.alternates?.languages ?? {}) };
 
       for (const locale of presentOptionalColumnLocales(post.slug)) {
-        expect(languages[locale], `${post.slug} -> ${locale}`).toBe(
+        expect(languages[hreflangTagForPublicLocale(locale)], `${post.slug} -> ${locale}`).toBe(
           `https://tseng-law.com/${locale}/columns/${post.slug}`,
         );
         expect(urls, `${post.slug} -> ${locale}`).toContain(

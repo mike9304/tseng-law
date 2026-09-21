@@ -5,7 +5,7 @@ lastmod: "2026-09-10"
 date_display: "13 सितंबर 2025"
 read_time: "6 मिनट का पाठ"
 categories:
-  - "ताइवान संबंधी कानूनी जानकारी"
+  - "ताइवान कानूनी जानकारी"
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "ताइवान में कर्मचारी स्वयं त्यागपत्र दें तो क्या विच्छेद भुगतान मिलता है?"

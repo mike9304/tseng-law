@@ -5,7 +5,7 @@ lastmod: "2026-07-25"
 date_display: "4 februari 2026"
 read_time: "12 minuten leestijd"
 categories:
-  - "Vennootschapsoprichting in Taiwan"
+  - "Oprichting van een vennootschap in Taiwan"
 featured_image: "../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg"
 faq:
   - q: "Moet men, om cosmetica in Taiwan te verkopen, steeds een dochtervennootschap of een bijkantoor oprichten?"

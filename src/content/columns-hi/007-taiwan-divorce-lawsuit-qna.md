@@ -5,7 +5,7 @@ lastmod: "2026-09-10"
 date_display: "13 सितंबर 2025"
 read_time: "18 मिनट का पाठ"
 categories:
-  - "ताइवान संबंधी कानूनी जानकारी"
+  - "ताइवान कानूनी जानकारी"
 featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
 faq:
   - q: "ताइवान में आपसी सहमति से तलाक क्या समझौते पर हस्ताक्षर होते ही प्रभावी हो जाता है?"

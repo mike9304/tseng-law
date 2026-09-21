@@ -230,7 +230,10 @@ export function getSearchEngineVerification(): Metadata['verification'] | undefi
 }
 
 export function getLocaleLanguageTag(locale: PublicSeoLocale): string {
+  // BCP-47 script subtags are title-case. Emitting the raw locale id would put
+  // `zh-hans` in hreflang, which is not the canonical tag search engines match.
   if (locale === 'zh-hant') return 'zh-Hant';
+  if (locale === 'zh-hans') return 'zh-Hans';
   return locale;
 }
 

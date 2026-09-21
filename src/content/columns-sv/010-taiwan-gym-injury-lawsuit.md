@@ -5,7 +5,7 @@ lastmod: "2026-07-25"
 date_display: "13 september 2025"
 read_time: "10 minuters läsning"
 categories:
-  - "Analys av rättsfall"
+  - "Fallanalys"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 

@@ -272,7 +272,7 @@ describe('guidance breadcrumb / person / collection JSON-LD', () => {
     const collection = nodeOfType(renderGuidance(locale, 'lawyers'), 'CollectionPage');
     expect(collection).toBeDefined();
     expect(collection!.url).toBe(guidanceCanonicalUrl(locale, 'lawyers'));
-    expect(collection!.inLanguage).toBe(locale);
+    expect(collection!.inLanguage).toBe(publicDocumentLanguage(locale));
 
     const list = collection!.mainEntity as Record<string, unknown>;
     expect(list['@type']).toBe('ItemList');
@@ -301,7 +301,7 @@ describe('guidance breadcrumb / person / collection JSON-LD', () => {
   it.each(GUIDANCE_LOCALES_4)('emits a %s WebSite node without a SearchAction', (locale) => {
     const website = buildGuidanceWebsiteJsonLd(locale) as Record<string, unknown>;
     expect(website['@type']).toBe('WebSite');
-    expect(website.inLanguage).toBe(locale);
+    expect(website.inLanguage).toBe(publicDocumentLanguage(locale));
     expect(website.url).toBe(guidanceCanonicalUrl(locale, 'home'));
     // Explicit exception to the parity rule: no `/search` route exists here.
     expect(website).not.toHaveProperty('potentialAction');

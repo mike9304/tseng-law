@@ -5,7 +5,7 @@ lastmod: "2026-07-25"
 date_display: "13 september 2025"
 read_time: "12 minuten leestijd"
 categories:
-  - "Vennootschapsoprichting in Taiwan"
+  - "Oprichting van een vennootschap in Taiwan"
 featured_image: "../images/017-taiwan-logistics-business-setup/featured-01.jpg"
 faq:
   - q: "Moet elke met logistiek samenhangende handel in Taiwan de vergunning voor goederenvervoer per motorvoertuig (汽車貨運業) verkrijgen?"

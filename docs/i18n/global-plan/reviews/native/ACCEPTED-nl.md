@@ -15,4 +15,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `nl-a.md` 
 - Flemish-only diction (dading, van bij het begin) → neutral Standard Dutch.
 
 ## Part b
-Apply every P1/P2 row of `nl-b.md` under the same skip rules above.
+Apply every P1/P2 row of `nl-b.md` under the same skip rules above. Additional (part b): zich-reflexive calques → Dutch passive/impersonal (systemic sweep); vennoten → aandeelhouders (股東) everywhere; b#2 nabestaanden → 'A en B' (the parties themselves); b#3 → R3 ('te allen tijde' out); b#4 takken → bedrijfsactiviteiten/registratieposten (營業項目); b#5 vervoerscommissie → expeditie (運送承攬); b#7 → R2 (buitenlandse merken); b#8 one Dutch name for 經濟部投資審議司; b#9 'een derde (3)' → 'een derde'; b#10 Invest Taiwan link fixed mechanically — skip; b#11 prestataire → dienstverlener; 'Neen.' → 'Nee.'; Belgian glue (dading → schikking, horecazaak ok) → neutral Standard Dutch.

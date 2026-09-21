@@ -16,4 +16,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `sv-a.md` 
 - Number format: 500 000 and 1,57 miljoner (checker permitting).
 
 ## Part b
-Apply every P1/P2 row of `sv-b.md` under the same skip rules above.
+Apply every P1/P2 row of `sv-b.md` under the same skip rules above. Additional (part b): b#1 facklig → yrkes-/teknisk utbildning; b#2 kontraktssumma → signeringsbonus (簽約金), kvarstannandebonus → stannabonus/retentionsbonus; b#3 ersättningsmöjlighet → svårighet att ersätta arbetstagaren (人力替補); b#4 監察人 → 'styrelsesuppleant'? No — use 'bolagets övervakare (監察人)' and keep revisor for 會計師 only; b#5 → arbetslöshets-/arbetsskade → 'sjukförsäkring'? No — 勞工保險 = 'arbetstagarförsäkring (勞工保險)'; b#6 måltid → prövning; b#7 prestationer → förmåner; b#9 Invest Taiwan link fixed mechanically — skip; b#10 → R3/R7. Ni → du throughout (systemic).

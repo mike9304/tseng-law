@@ -1,1 +1,23 @@
 [WO start 2026-09-21 16:21:45]
+Native review of columns 010–018 is in `docs/i18n/global-plan/reviews/native/zh-hans-b.md`. Columns overall: **2/5**. No masculine form for 曾雋崴. Strongest P1 items: 010「新课」and「姿势」, 012「转弯/平交道」, 013「外国行为人」plus the comment CTA, 015「随时」, 017「營業執照」used for 经营许可, 018「认证年度账目」.
+
+Last 15 lines of the output file:
+
+```
+| 36 | P2 | C | columns-zh-hans/014-taiwan-mandatory-employment-period.md | "## 3. 次项法定要件：合理补偿" | 首项/次项 is JP/KR; mainland headings are 第一项/第二项. | ## 3. 第二项法定要件：合理补偿 |
+| 37 | P2 | B | columns-zh-hans/014-taiwan-mandatory-employment-period.md | "不能仅因契约使用「违约金」一语即确定请求金额。" | Mainland punctuation is “ ”; 「」 is Taiwan/Japanese. Also 013/015/016/017. | 不能仅因契约使用“违约金”一语即确定请求金额。 |
+| 38 | P2 | C | columns-zh-hans/016-taiwan-inheritance-custody-analysis.md | "家庭成员死亡时，开启的不是单一程序。" | Calque of “does not set just one process in motion”; 开启程序 is not mainland legal Chinese. | 家庭成员死亡后，并不是只走一套程序。 |
+| 39 | P2 | C | columns-zh-hans/016-taiwan-inheritance-custody-analysis.md | "职业情事，以及财产取得与管理情况" | 职业情事 is a word-for-word “occupational circumstances”; no native collocation. | 职业与工作情况，以及财产取得与管理情况 |
+| 40 | P2 | D | columns-zh-hans/016-taiwan-inheritance-custody-analysis.md | "原则上3人各继承1/3" | Mainland legal prose writes 三分之一; slash fractions look like a spreadsheet. | 原则上三人各继承三分之一 |
+| 41 | P2 | D | columns-zh-hans/016-taiwan-inheritance-custody-analysis.md | "未成年人因继承取得的财产是子女的特有财产" | 特有财产 / 亲权 / 应继分 / 抛弃继承 need one Traditional unpack for mainland readers (亲权≠内地监护). | 未成年人因继承取得的财产是子女的特有财产（特有財產）；亲权（親權）不要写成内地意义上的监护 |
+| 42 | P2 | G | columns-zh-hans/017-taiwan-logistics-business-setup.md | "在金门及连江或马祖（连江・马祖）经营的事业" | Japanese middle dot ・; 及/或 mixed; official is 連江（馬祖）. | 在金门、连江（馬祖）经营的事业 |
+| 43 | P2 | C | columns-zh-hans/017-taiwan-logistics-business-setup.md | "不得停在一般侨外投资核准的审查" | 停在 is a Korean/Japanese calque of “do not stop at”. | 不能只完成一般侨外投资核准，还须把公路法第35条的业种核准一并纳入计划 |
+| 44 | P2 | D | columns-zh-hans/017-taiwan-logistics-business-setup.md | "对不法工作一般订有3年禁止入国期间" | 入国 is JP/TW; mainland immigration copy is 入境. | 对非法工作一般订有3年禁止入境期间 |
+| 45 | P2 | A | columns-zh-hans/018-taiwan-semiconductor-market-entry.md | "未来并购、上市的企业" | English also has “emerging-market registration” (興櫃); that limb was dropped. | 未来并购、上市或兴柜（興櫃）登记的企业 |
+| 46 | P2 | C | columns-zh-hans/018-taiwan-semiconductor-market-entry.md | "再选择最适当的事业体。" | 事业体 is Japanese 事業体; mainland is 法律主体/经营主体. | 再选择最合适的法律主体 |
+| 47 | P2 | D | columns-zh-hans/018-taiwan-semiconductor-market-entry.md | "仅子公司经投资审议委员会审查" | Body uses 投资审议司 (current name) while the heading keeps 投资审议委员会. | 仅子公司须经经济部投资审议司（舊稱投資審議委員會）审查 |
+| 48 | P2 | C | columns-zh-hans/018-taiwan-semiconductor-market-entry.md | "尚未决定的事项可标为「待定」。" | 「待定」 plus English “to be determined” calque; mainland would write 暂未确定. | 尚未决定的事项可标为“暂未确定”。 |
+| 49 | P2 | C | columns-zh-hans/010-taiwan-gym-injury-lawsuit.md | "并尽早就可能适用于该案的期限与程序取得个别指引。" | “Obtain individual guidance” reads as a consult offer on a guidance locale; keep the negative frame. | 并尽早核对可能适用于该案的期限与程序；具体意见须另经联系页确认。 |
+| 50 | P2 | D | columns-zh-hans/016-taiwan-inheritance-custody-analysis.md | "台湾涉外民事法律适用法是确定有外国因素民事关系准据法的起点。" | Keep the statute name, but 有外国因素 is a calque of “foreign element”; mainland conflicts copy says 涉外因素. | 台湾涉外民事法律适用法是确定涉外民事关系准据法的起点。 |
+```
+=== end code=0 2026-09-21 16:28:21 ===

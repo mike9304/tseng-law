@@ -1,1 +1,27 @@
 [WO start 2026-09-21 16:20:06]
+Native review of Greek columns 010–018 is in `docs/i18n/global-plan/reviews/native/el-b.md`. Guidance pack was not re-reviewed (part a).
+
+**Verdict:** columns **2/5**. Same Katharevousa mix as part a. No masculine form for Wei Tseng. **012** is the most readable; **011** is the weakest public page; **013** and **015** still read as Korean blog posts.
+
+**12 P1 issues** include: «η μόνη απόφαση» for “judgment alone”; CCTV «επικαλυφθούν»; Korean brands as the default reader; «επιρροές» for influencers; Japanese Invest Taiwan URL; FAQ «Όχι.» under the wrong heading; «απόσβεση» for employment termination; «ανά πάσα στιγμή» availability; «οικογένεια που απομένει»; «Συνιστάται» (recommended vs incorporated); «συνέντευξη» for consultation.
+
+Last 15 lines of the file:
+
+```
+| 30 | P2 | C | columns-el/013-taiwan-company-establishment-advanced-1.md | "Π.χ.) Εάν ο κλάδος δραστηριότητας είναι η εστίαση" | East-Asian «Π.χ.)» example marker, twice in 013. | Π.χ. εάν ο κλάδος δραστηριότητας είναι η εστίαση |
+| 31 | P2 | B | columns-el/013-taiwan-company-establishment-advanced-1.md | "**Συμβουλή**：" | Fullwidth colon from CJK source punctuation. | **Συμβουλή:** |
+| 32 | P2 | C | columns-el/013-taiwan-company-establishment-advanced-1.md | "Μπορείτε να μνημονεύσετε ποικίλες επαγγελματικές εμπειρίες" | «μνημονεύσετε» is archaic for “mention”; same stock as part a. | Μπορείτε να αναφέρετε διάφορες επαγγελματικές εμπειρίες |
+| 33 | P2 | D | columns-el/013-taiwan-company-establishment-advanced-1.md | "αφήστε σχόλιο ή επικοινωνήστε." | Blog leftover; the Greek site page has no comment box for clients. | Αν έχετε περαιτέρω ερωτήματα, χρησιμοποιήστε τη σελίδα Επικοινωνία. |
+| 34 | P2 | B | columns-el/014-taiwan-mandatory-employment-period.md | "αλλά ιδώνται από κοινού η πραγματική πορεία, το νόμιμο θεμέλιο" | Broken verb; intended ιδωθούν / εξετάζονται. | αλλά εξετάζονται από κοινού η πραγματική πορεία, το νομικό έρεισμα |
+| 35 | P2 | C | columns-el/015-taiwan-company-setup-pitch-location.md | "**Ε. Πρέπει όλοι οι κλάδοι να ελέγχουν" | «Ε.» copies Korean/Japanese 問; a Greek FAQ is Ερώτηση or simply the question. | **Ερώτηση.** Πρέπει όλοι οι κλάδοι να ελέγχουν |
+| 36 | P2 | D | columns-el/016-taiwan-inheritance-custody-analysis.md | "Δικαστικό Yuan της Ταϊβάν: έντυπο αιτήσεως διορισμού κηδεμόνα ανηλίκου" | «Δικαστικό Yuan» is opaque; keep the institution name and gloss it. | Judicial Yuan (司法院) της Ταϊβάν: έντυπο αίτησης διορισμού κηδεμόνα ανηλίκου |
+| 37 | P2 | C | columns-el/016-taiwan-inheritance-custody-analysis.md | "μπορεί να τεθεί η σειρά να αντανακλασθεί πρώτα το αποτέλεσμά της" | «αντανακλασθεί» copies 반영 (“be reflected”); native is να ληφθεί υπ’ όψιν / να αποτυπωθεί. | μπορεί να πρέπει πρώτα να ληφθεί υπ’ όψιν το αποτέλεσμά της |
+| 38 | P2 | C | columns-el/017-taiwan-logistics-business-setup.md | "άδεια μεταφοράς εμπορευμάτων δι’ αυτοκινήτου (汽車貨運業)" | «δι’ αυτοκινήτου» is katharevousa throughout 017; native is οδική μεταφορά με φορτηγό. | άδεια οδικής μεταφοράς εμπορευμάτων με φορτηγό (汽車貨運業) |
+| 39 | P2 | D | columns-el/017-taiwan-logistics-business-setup.md | "στο Kinmen (金門) και στο Lienchiang ή Matsu (連江・馬祖)" | Place names left in English/pinyin on a Greek page. Also in the FAQ. | στο Κινμέν (金門) και στο Λιεντσιάνγκ ή Ματσού (連江・馬祖) |
+| 40 | P2 | C | columns-el/017-taiwan-logistics-business-setup.md | "υπάρχουν ίδια περιορισμένα εξαιρέματα, ιδίως 1 μικρό φορτηγό" | «εξαιρέματα» is rare; «ίδια» is ambiguous (same / own). | ισχύουν περιορισμένες εξαιρέσεις, ιδίως ένα μικρό φορτηγό κυριότητάς του |
+| 41 | P2 | C | columns-el/018-taiwan-semiconductor-market-entry.md | "πώς θα διαρρυθμισθούν η προμήθεια προϊόντων, η παροχή υπηρεσιών" | «διαρρυθμισθούν» is the same German gestaltbar leftover as part a «Διαρρυθμίσιμη». | πώς θα ρυθμιστούν η προμήθεια προϊόντων, η παροχή υπηρεσιών |
+| 42 | P2 | C | columns-el/018-taiwan-semiconductor-market-entry.md | "η αλλοδαπή κύρια εγκατάσταση μπορεί να δεχθεί διάφορες απαιτήσεις" | «κύρια εγκατάσταση» is tax PE jargon; English is head office. Systemic in 018. | η αλλοδαπή έδρα μπορεί να δεχθεί διάφορα αιτήματα |
+| 43 | P2 | C | columns-el/013-taiwan-company-establishment-advanced-1.md | "και εάν αλλοδαποί παράγοντες δεν εισάγουν κεφάλαια υπό άλλο πρόσχημα" | «παράγοντες» = factors/agents; English is “foreign parties”. | και ότι αλλοδαποί δεν εισάγουν κεφάλαια υπό άλλο πρόσχημα |
+| 44 | P2 | B | columns-el/013-taiwan-company-establishment-advanced-1.md | "αφού ευρεθεί η διεύθυνση της εταιρείας και υπογραφεί η μισθωτική σύμβαση" | Katharevousa «ευρεθεί»; a client page says βρεθεί. | αφού βρεθεί η διεύθυνση της εταιρείας και υπογραφεί η μισθωτική σύμβαση |
+```
+=== end code=0 2026-09-21 16:28:39 ===

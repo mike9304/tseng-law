@@ -15,4 +15,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `hu-a.md` 
 - ISO dates → 2023. december 27. form where the checker accepts.
 
 ## Part b
-Apply every P1/P2 row of `hu-b.md` under the same skip rules above.
+Apply every P1/P2 row of `hu-b.md` under the same skip rules above. Additional (part b): b#1 心態 → szemlélet/hozzáállás; b#2 → üzleti helyiségben történő elesés; b#3 → R2 (külföldi márkák); b#4 Invest Taiwan link fixed mechanically — skip; b#5 hivatal → az iroda (R8); b#6 → 'mikor érvényesíthető'; b#7 haszonélvezet → kedvezményezetti jog (信託受益權); b#8 űrlap → társasági forma; b#9 könyvvizsgáló → felügyelőbiztos/felügyelő (監察人). Ordinals as words (1. fok → első fok), dates 2022. január 24., a/az sweep.

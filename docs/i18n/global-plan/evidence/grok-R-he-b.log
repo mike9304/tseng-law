@@ -1,1 +1,27 @@
 [WO start 2026-09-21 16:18:34]
+Native review of Hebrew columns 010–018 is in `docs/i18n/global-plan/reviews/native/he-b.md`. Source files were not edited.
+
+**Verdict:** columns **2/5** (Israeli Hebrew, consistent). 014, 016 and 018 are usable statute/FAQ pieces; 013 and 015 still read like a Korean law-blog. Wei Tseng is feminine in 010/013 and the bylines; 015’s closing CTA is masculine.
+
+**Must-fix before a client sees it (P1):** Latin fragment `להistance` in 010; 過失 as “האשמה” in 012; 貨主 as “משלח” (Israeli freight-forwarder) in 017; “לאשר דוחות” for an audit in 018; broken sentence in 014; Korea leftover and `lang=jpn` in 011; success / comment-CTA / “בכל עת” in 013–015.
+
+Last 15 lines of the output file:
+
+```
+| 32 | P2 | A | columns-he/013-taiwan-company-establishment-advanced-1.md | "הקימו רבים חברה (公司) בטאיוואן בהצלחה וקיבלו אשרת עבודה" | Opening calls 工作許可 a visa; the same article later correctly says היתר העבודה (工作許可). | …וקיבלו היתר עבודה (工作許可) וכן כרטיס שהייה (外僑居留證) |
+| 33 | P2 | C | columns-he/013-taiwan-company-establishment-advanced-1.md | "בפרקטיקה הוא נקבע לעיתים קרובות סביב 1 שנה" | Spreadsheet "1 שנה / 1 חודש"; also 014 "פחות מ-1 שנה", 016 "דרגה 1", 017 "1 משאית", 018 "אדם טבעי 1". | בפרקטיקה הוא נקבע לעיתים קרובות סביב שנה |
+| 34 | P2 | B | columns-he/014-taiwan-mandatory-employment-period.md | "אין ההסכם לחרוג מההיקף הסביר" | Missing modal; the infinitive is used as a finite verb. Also in the FAQ. | אסור שההסכם יחרוג מההיקף הסביר |
+| 35 | P2 | A | columns-he/014-taiwan-mandatory-employment-period.md | "חוזה עבודה בלא קצובת זמן (不定期契約)" | קצובה is an allotment; 不定期契約 is an indefinite-term employment contract. | חוזה עבודה לתקופה בלתי קצובה (不定期契約) |
+| 36 | P2 | C | columns-he/014-taiwan-mandatory-employment-period.md | "## 1. מתי מקבל הסכם תקופת העבודה המינימלית תוקף" | Section 1 opens with the FAQ answer "לא." under a "when" heading, so the paragraph does not answer the heading. Also 016 §§3 and 7. | Open with the validity test, not with "לא." |
+| 37 | P2 | B | columns-he/015-taiwan-company-setup-pitch-location.md | "«ענפים המושא לבדיקה מיוזמת»" | המושא does not agree and is not Hebrew for "subject to proactive query"; also in the alt-text. | "ענפים הנבדקים מיוזמת הרשות" (主動查詢之營業項目) |
+| 38 | P2 | C | columns-he/015-taiwan-company-setup-pitch-location.md | "**ש. האם כל הענפים חייבים לבדוק" | Korean/Chinese Q-marker "ש." ; Israeli copy uses "שאלה:" or the question alone. | **שאלה: האם כל הענפים חייבים לבדוק |
+| 39 | P2 | B | columns-he/016-taiwan-inheritance-custody-analysis.md | "את ההשפעה על היורש מהדרגה הבאה של הוותר" | Typo: הוותר for הוויתור. | את ההשפעה על היורש מהדרגה הבאה של הוויתור |
+| 40 | P2 | A | columns-he/016-taiwan-inheritance-custody-analysis.md | "אין ירושה במקום (代位繼承)" | 代位繼承 is succession by representation; "ירושה במקום" is opaque to an Israeli reader. | אין ירושה בדרך של החלפה (代位繼承) |
+| 41 | P2 | C | columns-he/016-taiwan-inheritance-custody-analysis.md | "טובת הילד המיטבית (子女最佳利益)" | Double superlative: טובת הילד already is "the child's best interests". Also later in §§6 and 8. | טובת הילד (子女最佳利益) |
+| 42 | P2 | C | columns-he/016-taiwan-inheritance-custody-analysis.md | "הנחיה משפטית למשפחה שנשארה" | "The family that stayed" for surviving family; native is המשפחה שנותרה. | הנחיה משפטית למשפחה שנותרה |
+| 43 | P2 | C | columns-he/016-taiwan-inheritance-custody-analysis.md | "ביחס הירושה המשותפת מאמתים את היקף עיזבון הירושה" | עיזבון already means the estate; "estate of the inheritance" is a 遺產 calque, repeated through 016. | ביחסי הירושה המשותפת מאמתים את היקף העיזבון |
+| 44 | P2 | B | columns-he/016-taiwan-inheritance-custody-analysis.md | "ואת הנוסח האנגלי יש לשמש כחומר עזר" | לשמש is intransitive; the object needs להשתמש ב־. | ואת הנוסח האנגלי יש להשתמש בו כחומר עזר |
+| 45 | P2 | C | columns-he/017-taiwan-logistics-business-setup.md | "להפקיד את ההובלה בפועל בידי יזם טאיוואני" | יזם in Israeli Hebrew is a startup founder; 業者 here is a licensed operator. Systemic in 017. | להפקיד את ההובלה בפועל בידי מפעיל טאיוואני בעל היתר |
+| 46 | P2 | A | columns-he/018-taiwan-semiconductor-market-entry.md | "בלי צורך במשגיח נפרד" | 監察人 (company supervisor) with no Chinese gloss; משגיח alone reads as a kashrut supervisor. Also "שלא לקיים משגיח". | בלי צורך במפקח סטטוטורי נפרד (監察人) |
+```
+=== end code=0 2026-09-21 16:28:23 ===

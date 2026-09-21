@@ -1,1 +1,25 @@
 [WO start 2026-09-21 16:21:45]
+Native review of Italian columns 010–018 is in `docs/i18n/global-plan/reviews/native/it-b.md`. Source files were not edited.
+
+**Verdict:** columns **2/5** (guidance pack out of scope). The set is French legal prose in Italian words, with Spanish leftovers in 014 (`alega`) and blog register in 013–015. Wei Tseng is feminine except the 015 CTA (`un avvocato`). Strongest P1s: `persecuzioni` for prosecution, `processo clinico` for medical records, Korea put back in 011 against the English, `in qualunque momento a un avvocato`.
+
+Last 15 lines of the output file:
+
+```
+| 46 | P2 | C | columns-it/013-taiwan-company-establishment-advanced-1.md | "anche si deve fissare l’inizio del contratto il più tardi possibile." | Stray French aussi; missing connector after the timing of incorporation. | "perciò l’inizio del contratto va fissato il più tardi possibile." |
+| 47 | P2 | G | columns-it/013-taiwan-company-establishment-advanced-1.md | "Consiglio：" | Fullwidth Chinese colon. | "Consiglio:" |
+| 48 | P2 | A | columns-it/013-taiwan-company-establishment-advanced-1.md | "e se attori stranieri non introducono fondi con un altro pretesto." | English is “foreign parties”; “attori” are plaintiffs or stage actors. | "e che soggetti stranieri non facciano entrare fondi con un altro pretesto." |
+| 49 | P2 | C | columns-it/014-taiwan-mandatory-employment-period.md | "se il datore di lavoro dispensa una formazione tecnica specializzata" | French dispenser une formation; Italian “eroga” or “fornisce”. | "se il datore di lavoro eroga una formazione tecnica specializzata" |
+| 50 | P2 | C | columns-it/014-taiwan-mandatory-employment-period.md | "solo per consignare in forma semplicemente formale uno dei 2" | French consigner (to record); not used this way in Italian. also 011, 016 | "solo per annotare in modo puramente formale uno dei due" |
+| 51 | P2 | D | columns-it/015-taiwan-company-setup-pitch-location.md | "Le esigenze delle collettività locali di Taiwan differiscono" | French collectivités locales; Italy says enti locali. | "Le regole degli enti locali di Taiwan differiscono" |
+| 52 | P2 | C | columns-it/015-taiwan-company-setup-pitch-location.md | "Anche, nella pratica, non è necessario verificare tutti i rami" | Sentence-initial “Anche,” is French Aussi. | "Nella pratica, peraltro, non è necessario verificare tutti i rami" |
+| 53 | P2 | C | columns-it/016-taiwan-inheritance-custody-analysis.md | "guida giuridica per la famiglia che resta" | Calque of “surviving families”; a native says famiglia superstite. | "guida giuridica per la famiglia superstite" |
+| 54 | P2 | B | columns-it/016-taiwan-inheritance-custody-analysis.md | "Il patrimonio particolare designa il patrimonio che appartiene al minore egli stesso" | Broken pronoun; “egli stesso” cannot follow “al minore”. | "Il patrimonio particolare è il patrimonio che appartiene al minore stesso" |
+| 55 | P2 | B | columns-it/016-taiwan-inheritance-custody-analysis.md | "se un’autorizzazione di altre norme o una procedura giudiziaria è esigita" | Invented participle of esigere; Italian is “è richiesta”. | "se è richiesta un’autorizzazione prevista da altre norme o una procedura giudiziaria" |
+| 56 | P2 | C | columns-it/017-taiwan-logistics-business-setup.md | "l’attenzione al cliente al termine del contratto" | French attention au client = customer service, not “attenzione”. | "l’assistenza al cliente al termine del contratto" |
+| 57 | P2 | C | columns-it/017-taiwan-logistics-business-setup.md | "per il commercio consacrato solo ai traslochi (搬家)" | French consacré; Italian “dedicato”. | "per il commercio dedicato solo ai traslochi (搬家)" |
+| 58 | P2 | G | columns-it/017-taiwan-logistics-business-setup.md | "Lienchiang o Matsu (連江・馬祖)" | Japanese nakaguro ・ inside a Traditional-Chinese gloss. | "Lienchiang o Matsu (連江、馬祖)" |
+| 59 | P2 | C | columns-it/018-taiwan-semiconductor-market-entry.md | "una captazione frequente di capitale o alla negoziazione di quote" | French captation de capital; Italian is raccolta di capitale. | "una frequente raccolta di capitale o alla circolazione delle quote" |
+| 60 | P2 | C | columns-it/018-taiwan-semiconductor-market-entry.md | "Quanto precede è una proposta di concezione contrattuale." | French conception; “concezione contrattuale” is not how a native labels this caveat. | "Quanto precede è solo un’ipotesi di strutturazione contrattuale." |
+```
+=== end code=0 2026-09-21 16:28:36 ===

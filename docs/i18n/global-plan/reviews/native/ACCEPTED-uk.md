@@ -14,4 +14,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `uk-a.md` 
 - a#13, a#21: R3 wording.
 
 ## Part b
-Apply every P1/P2 row of `uk-b.md` under the same skip rules above.
+Apply every P1/P2 row of `uk-b.md` under the same skip rules above. Additional (part b): b#1 signature → **Адвокатка Wei Tseng (曾雋崴)** in all 18; b#2 '3 сторона' → 'третя сторона/третя особа' (R11; the inheritance '3 особи' is a real count — leave); b#3 → R2; b#4 експлуатувати → вести діяльність; b#5/b#6 → R3/R7; b#7 → R5; b#8 Invest Taiwan link fixed mechanically — skip; b#9 Статут → Закон/Положення про іноземні інвестиції (外國人投資條例); b#10 戶籍 → реєстрація домогосподарства/місця проживання (戶籍); b#12 вкладники → інвестори; b#13 канцелярія → фірма/бюро (R8). Thousands 1 579 589, dates 24.01.2022.

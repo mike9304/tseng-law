@@ -1,0 +1,140 @@
+[WO-C-F 시작 Mon Sep 21 10:29:08 KST 2026]
+[WO-C-F 완료 Mon Sep 21 2026] grok. No git add/commit/push.
+
+## File counts
+- src/content/columns-uk/*.md = 18
+- src/content/columns-el/*.md = 18
+- src/content/columns-he/*.md = 18
+- [변호사 검수 필요] = 0
+- Unexpected writes outside columns-uk/el/he and this log: 0 (WO-C-F.txt was already untracked)
+
+## §5 command output (verbatim)
+
+```
+===== git status --short | wc -l =====
+      56
+===== uk tail -20 =====
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-columns-d-20260920/src/content/columns-uk/018-taiwan-semiconductor-market-entry.md  lang=uk
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=51
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+===== el tail -20 =====
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-columns-d-20260920/src/content/columns-el/018-taiwan-semiconductor-market-entry.md  lang=el
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=22
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+===== he tail -20 =====
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-columns-d-20260920/src/content/columns-he/018-taiwan-semiconductor-market-entry.md  lang=he
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=61
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+===== marker =====
+       0
+===== file counts =====
+      18
+      18
+      18
+```
+
+Checker: uk/el/he each `summary PASS 18/18 files`. Marker 0. File counts 18/18/18.
+
+## Terminology hesitations
+1. date_display: used numeric slash form (`13/9/2025`, `4/2/2026`, `17/9/2026`) and the same slash form in body dates. uk/el/he month names are not in DATE_MONTH_NAMES; a native month word would drop the month number from the bag. Arabic columns already use `13/9/2025`.
+2. 3분의 1 / 3분의 2: written `1/3` / `2/3`. uk/el/he have no WORD_NUMERAL_LEXICONS; spelling out третина/ένα τρίτο/שליש would lose digits.
+3. 제N항 / 제1심 / 제3자 / 제2종: written with Arabic digits (`абзац 1`, `1 інстанції`, `3 особа` / `εδάφιο 1`, `1ος βαθμός`, `3ο πρόσωπο` / `פסקה 1`, `ערכאה 1`, `צד 3`). Checker has no targetOrdinalSpecs for these langs → numbers WARN `수사미해석` on several files, not FAIL. Bags still match.
+4. 001 opening 한국 기업: followed French/German → іноземні підприємства / ξένες επιχειρήσεις / חברות זרות. Корея / Κορέα / קוריאה kept where the Korean source names 한국 (tax treaty, Korean student, Korean labour/massage comparison).
+5. 華僑: uk хуацяо (華僑); el υπερπόντιοι Κινέζοι (華僑); he סינים שמחוץ לטאיוואן (華僑). Not Hebrew-letter transliteration.
+6. Company form: uk товариство (aligned with FR société), not компанія. el εταιρεία. he חברה / חברה בת / סניף / משרד ייצוג.
+7. el nationality term `ελληνικ` is a prefix: avoided ελληνική/ελληνικά/ελληνικό/Ελλάδα entirely.
+8. uk forbidden includes bare `гарантуємо`; el `εγγυόμαστε`; he `אנו מבטיחים`. Unused. 015 무료로 조회 → без оплати перевірити / χωρίς επιβάρυνση / בלא תשלום (not free-consult phrases).
+9. Place names uk nominative: Тайбей, Тайчжун (Гаосюн/Піндун do not appear in these 18 sources).
+10. Attorney female in all three: адвокатка / η δικηγόρος / עורכת הדין Wei Tseng (曾雋崴).
+11. Thousand separators: uk/el dots (`TWD 500.000`); he commas (`TWD 500,000`).
+
+## Unresolved
+- numbers WARN on unmatched Korean ordinals remains (no uk/el/he ordinal lexicon in the checker). Not a FAIL.
+- date_display is numeric, not a localized month name, because of the lexicon gap above.
+- No bilingual lawyer review of legal nuance beyond the structural/claim checker.
+- Consultation-language disclaimer is implicit (no uk/el/he consult claim); the columns do not add a new FAQ stating “we do not consult in this language.”
+WO-C-F is done. 54 column files are in the worktree only. No git add/commit/push.
+
+**File counts:** uk 18 · el 18 · he 18  
+**Checker:** `summary PASS 18/18 files` for all three  
+**`[변호사 검수 필요]`:** 0
+
+§5 output (verbatim):
+
+```
+===== git status --short | wc -l =====
+      56
+===== uk tail -20 =====
+… currency PASS …
+summary  PASS  18/18 files
+===== el tail -20 =====
+… currency PASS …
+summary  PASS  18/18 files
+===== he tail -20 =====
+… currency PASS …
+summary  PASS  18/18 files
+===== marker =====
+       0
+===== file counts =====
+      18
+      18
+      18
+```
+
+Meaning follows the Korean originals; block/hanzi/FAQ style follows French. Guidance-locale locks held: no consult/interpreter/24/7/free-consult claim in uk·el·he; attorney is female (`адвокатка` / `δικηγόρος` / `עורכת הדין Wei Tseng`); uk place names stay nominative (Тайбей, Тайчжун).
+
+**Terminology calls:** `date_display` is numeric (`13/9/2025`) because uk/el/he month names are not in the checker lexicon. Fractions are `1/3`. Thousand separators are dots in uk/el and commas in he. Korean ordinals (`제1항`, `1심`, `제3자`) stay as digits and produce numbers WARN only.
+
+Full write-up: `docs/i18n/global-plan/evidence/grok-C-F.log`.
+=== WO-C-F 종료 code=0 Mon Sep 21 11:34:29 KST 2026 ===

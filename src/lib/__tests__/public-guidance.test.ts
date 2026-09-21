@@ -46,7 +46,8 @@ describe('public eight-locale helper isolation', () => {
   it('does not widen Locale3 or SiteLocale4', () => {
     expect(locales).toEqual(['ko', 'zh-hant', 'en']);
     expect(siteLocales).toEqual(['ko', 'zh-hant', 'en', 'ja']);
-    expect(PUBLIC_LOCALES_8).toHaveLength(31);
+    expect(PUBLIC_LOCALES_8).toHaveLength(4 + GUIDANCE_LOCALES_4.length);
+    expect(PUBLIC_LOCALES_8).toHaveLength(49);
     expect(GUIDANCE_LOCALES_4).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi', 'cs', 'hu', 'ro', 'uk', 'el', 'he']);
   });
 

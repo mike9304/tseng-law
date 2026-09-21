@@ -1,0 +1,338 @@
+# WO-F-nl — Dutch (nl) native-quality fix lane — Opus 5
+worktree: /Users/son7/Projects/tseng-law-fix-l-20260921
+date: 2026-09-21
+scope: src/content/columns-nl/001–018, dutchGuidanceContent + nl keys in
+       international-guidance-team/-offices/-answers, international-inquiry-copy, llms-txt
+
+## 1. Rows applied
+
+### nl-a.md (guidance pack + columns 001–009)
+a#1  P1 applied — 001: treaty paragraph now opens "Landspecifieke noot — het
+     inkomstenbelastingverdrag (所得稅協定) tussen Taiwan en Korea: …" and closes with the
+     English source's framing ("Deze bespreking geldt alleen voor feiten die onder het
+     verdrag tussen Taiwan en Korea vallen … het is geen algemene regel voor investeerders").
+     No digits/dates touched (R2b).
+a#2  P1 applied — 004: "Zelfs wanneer een Koreaanse moedervennootschap Taiwan betreedt …" →
+     "Wanneer een buitenlandse moedervennootschap de Taiwanese markt betreedt … ook de
+     boekhouding, de belastingen en de regels voor uitgaande investeringen van het land van
+     herkomst … Korea is verderop in dit artikel één voorbeeld van zo'n land van herkomst, niet
+     het enige." (mirrors columns-en/004 L31). Also R2b: the country-specific note added to
+     004 §6, and "de belastingdruk van de Koreaanse moedervennootschap" → "… van de
+     moedervennootschap in Korea" (EN: "the parent company's tax burden in Korea").
+a#3  P1 applied — 008 FAQ + body: "Anders dan in Korea" → "Anders dan in sommige andere
+     landen — Korea is daarvan een voorbeeld —" (R2c).
+a#4  P1 applied — guidance services: "(資遣費; niet gelijk te stellen met instituten van
+     andere staten)" → "(資遣費; dit is niet hetzelfde als de ontslagvergoeding of de
+     transitievergoeding in Nederland of België)".
+a#5  P1 applied — "Steun daarom geen handeling …" → "Baseer in een echte zaak geen stappen
+     alleen op een artikel."
+a#6  P1 applied — llms-txt GUIDANCE_LLMS_NOTICES.nl.discoveryNotice → "het belooft geen
+     plaats in zoekresultaten, geen aanbeveling, geen vermelding door kunstmatige
+     intelligentie en geen weergave."
+a#7  P1 applied — 股東 → aandeelhouders everywhere (systemic, §3).
+a#8  P1 applied — 003 sign-off "Ik was WEI, Taiwanese advocaat (曾雋崴)." →
+     "Wei Tseng (曾雋崴), advocaat in Taiwan".
+a#9  P1 applied (R3) — 003 "erop toeziet dat u de grootst mogelijke vergoeding ontvangt" →
+     "alle schadeposten … zorgvuldig naloopt, zodat geen post over het hoofd wordt gezien".
+a#10 P1 applied (R3) — 008 success story → "Daarom kon later, met bijstand van een advocaat,
+     worden vastgesteld dat hij recht had op de wettelijke ontslagvergoeding, terwijl andere
+     vertrokken werknemers dat bewijs niet hadden." ("geluk" removed per R8 成功≠luck.)
+a#11 P1 — already Dutch in source (`label: 'ONS TEAM'`); verified, no change needed.
+a#12 P1 — already Dutch (`label: 'KANTOREN'`); verified.
+a#13/a#14/a#15 P1 SKIPPED per ACCEPTED-nl (R1 link remap done mechanically / `url:` frontmatter).
+     See §4 for the two leftovers I did not touch.
+a#16 P1 applied, modified — 005 Q1 generalised to "vanuit het buitenland … (het onderstaande
+     voorbeeld betreft het stelsel en de bankpraktijk van Korea; in andere landen gelden eigen
+     regels)"; "uw huisbank in Korea" → "uw eigen bank in het land van waaruit u overmaakt";
+     "bankrekening in Korea" → "buitenlandse bankrekening".
+     NOT applied: the reviewer's "bijvoorbeeld vanuit Nederland of België" — naming the reader's
+     country trips checkNationality (FAIL) and is forbidden by ACCEPTED-nl.
+a#17 P1 applied — 005 Q5 → "Kan de vennootschap buitenlandse werknemers in dienst nemen?" (R2e).
+a#18 P1 applied — 009 "en dit verschilt van Korea." → "en dat verschilt van de regels in veel
+     andere landen, waaronder Korea."
+a#19 P2 applied — "wezenlijke werkgroepen" → "de belangrijkste praktijkgebieden van het
+     Taiwanese recht"; heading "Werkgroepen" → "Praktijkgebieden"; same in answers.nl (2×) and
+     services description/intro.
+a#20 P2 applied — "beslist zich" → "Of wij een zaak aannemen, wordt beslist na beoordeling …"
+a#21 P2 applied — 004 → "De aansprakelijkheid van de dochtervennootschap hangt af van …";
+     aansprakelijkheidomvang → aansprakelijkheidsomvang.
+a#22 P2 applied — "Voorstelling van de advocaten en de contactwegen." → "Kennismaking met de
+     advocaten en de contactmogelijkheden."; team `introLabel` 'Voorstelling' → 'Kennismaking'.
+a#23 P2 applied (partly) — CTA/heading "Een consultatieverzoek sturen" → "Een verzoek om advies
+     sturen" (guidance + inquiry copy). "Consultatietaal/consultatietalen" kept: it is a defined
+     product term, glossed in the page itself and used consistently across all 27 locales.
+a#24 P2 applied — 44 guillemets «» → “” across the columns; all « » in the nl guidance slice
+     removed (the remaining « » in that file belong to the Italian block).
+a#25 P2 applied — "van bij het begin" → "vanaf het begin" (001, 016).
+a#26 P2 applied — dading → schikking (systemic, §3).
+a#27 P2 applied — "veelgestelde vragen van Taiwanees recht" → "… over het Taiwanese recht"
+     (mega.columns, pages.columns description + intro).
+a#28 P2 applied — run-on split: "Wij adviseren ondernemingen, voeren procedures voor de rechter
+     en begeleiden buitenlandse cliënten door de stappen die in Taiwan nodig zijn."
+a#29 P2 applied — "…uit hoe u een korte samenvatting opstelt die een advocaat kan beoordelen."
+a#30 P2 applied — "Een vooraf genoemd bedrag zou de kosten van uw dossier niet weergeven."
+a#31 P2 applied — "…en stellen geen tolk ter beschikking."
+a#32 P2 applied — "geen noodkanaal en waarborgt geen antwoordtermijn" → "geen spoedlijn en
+     belooft geen antwoordtermijn; … zoek dan tegelijk naar andere mogelijkheden in uw eigen land."
+a#33 P2 applied — "niet-openbare objectopslag" → "niet-openbare opslag"; "uw verzending" →
+     "uw bericht" (2×).
+a#34 P2 applied — "gekwalificeerde vakpersoon" → "dan overleggen wij met u welke bevoegde
+     deskundige u voor dat deel nodig hebt."
+a#35 P2 applied — "beide zijden de overname van het werk" → "beide partijen hebben bevestigd
+     dat het kantoor de zaak aanvaardt."
+a#36 P2 applied — offices `mapPreviewLabel` "Kaartvoorvertoning" → "Voorbeeld van de kaart".
+a#37 P2 applied — "Gebied Korea-operaties, …" → "Korea-operaties, Hovering International Law Firm".
+a#38 P2 applied — `partnerTitle` "Partneraccountancy" → "Aangesloten accountantskantoor";
+     role "Partneraccountant (Partner CPA)" → "Partner-accountant (CPA)"; the lawyers/answers
+     description → "de bedrijfsleiding en het aangesloten accountantskantoor van Hovering".
+a#39 P2 applied — "TWD 1.57M" → "1,57 miljoen TWD" (fact itself unchanged, per ACCEPTED).
+a#40 P2 applied — degree lines Dutch-framed: "Masterdiploma (M.S.) financiën, Institute of
+     Finance, National Taiwan University", "Bachelordiploma rechten (LL.B.), …" etc.
+     Proper names (universities, firms) kept in Latin script per R5.
+a#41 P2 applied — English job titles in parentheses removed from all five nl role lines;
+     `fullProfileLabel` "Volledig profiel (English)" → "Volledig profiel (in het Engels)" (R5).
+a#42 P2 applied — "Korte weergave van de zaak" → "Korte beschrijving van de zaak".
+a#43 P2 applied — "bewijsconservering" → "bewijs veiligstellen" / "het veiligstellen van bewijs";
+     "conservering van CCTV" → "veiligstelling van CCTV-beelden"; "bewijzen ter plaatse
+     conserveren (保全現場)" → "… veiligstellen (保全現場)".
+a#44 P2 applied — "louter opname" → "alleen foto's maken geeft geen recht de plaats te verlaten".
+a#45 P2 applied — "(Q&A)" removed from 005 and 013 running text (R5).
+a#46 P2 applied — "Naar welk maatstaf" → "Naar welke maatstaf".
+a#47 P2 applied — "de Taiwanees echtscheiding" → "de Taiwanese echtscheiding".
+a#48 P2 applied — 008 "verkrijgen??" → "verkrijgen?" in title and H1.
+a#49 P2 applied — 006 "de Grote Rechters (大法官)" → "het Grondwettelijk Hof (大法官)" (R8).
+a#50 P2 applied, modified — 007: "Vooral bij gezinnen die met 2 of meer staten of gebieden zijn
+     verbonden — Taiwan (臺灣) en een ander land, bijvoorbeeld Korea (韓國) — …" (R2d neutral form;
+     no NL/BE naming — see a#16).
+a#51 P2 applied, modified — 007: "Alleen de afspraak dat het kind buiten Taiwan gaat wonen —
+     bijvoorbeeld in Korea — maakt het levenspeil daar niet tot een zelfstandige formule …"
+a#52 P2 applied — 006: "Ter vergelijking: in Korea, waar veel mensen … " (block count kept: the
+     original two blocks stay two blocks, the verb moved to the second block).
+a#53 P2 applied — 001: ", PE" dropped from "(常設機構, PE)".
+a#54 P2 applied — "een 3e (第三人)" → "een derde (第三人)" (7×, 004 + 011).
+a#55 P2 applied — 007 "is een instituut dat" → "is een wettelijke regeling die"; "geen instituut
+     dat" → "geen regeling die"; "de instituten echtscheiding, …" → "over echtscheiding, …".
+a#56 P2 applied — 008 "Goedendag, ik ben Wei Tseng (曾雋崴), Taiwanese advocaat." → "Ik ben Wei
+     Tseng (曾雋崴), advocaat in Taiwan."
+a#57 P2 applied — 009 "het ''**tijdstip**''" → "het **tijdstip**".
+a#58 P2 applied — heading "Paginataal en consultatietaal zijn niet hetzelfde" → "De taal van de
+     pagina is niet de taal van het gesprek met de advocaat"; list item "Paginataal:" → "Taal van
+     de pagina:"; contact description likewise.
+a#59 P2 applied — "toetsingsstap" → "controle" (2×); "communicatieweg" → "werkbare manier van
+     communiceren" / "communicatiekanaal" (5×, see §4 note on the test regex).
+a#60 P2 applied — 003 Q16: "Volgens mijn ervaring behandelt de verzekeringsmaatschappij de
+     gevoelszijde …" → "Uit de praktijk blijkt dat de verzekeringsmaatschappij vaak weinig
+     aandacht heeft voor wat de betrokkenen bij het ongeval voelen."; the whole Q16–Q20 stretch
+     de-blogged (R7): "Daarom raad ik niet aan" → "Het is daarom niet aan te raden",
+     "Daarmee sluit ik … Ik hoop dat zij u helpen." → "Hiermee eindigen de vragen en antwoorden
+     over verkeersongevallen.", "laat dan een commentaar na" → "neem dan contact op".
+     Zero-width-space padding lines left untouched (block-count parity).
+
+### nl-b.md (columns 010–018)
+b#1  P1 applied — 010: "de last van een deadlift van 90 kg had ontvangen" → "de opdracht kreeg
+     een deadlift van 90 kg te doen" (2×: alt text + link label).
+b#2  P1 applied, modified — 012: "De familie van A en de nabestaanden van B zagen eerst …".
+     ACCEPTED-nl's shorthand ("A en B, the parties themselves") is factually impossible here —
+     B died at the scene and A was unconscious — and the English source reads "The families of
+     A and B". I followed the English source; flagging the deviation.
+b#3  P1 applied — 015: "Dit is het wezenlijke; … te allen tijde …" → "Hiermee sluit deze
+     toelichting af. Voor verdere vragen kunt u contact opnemen met een advocaat in Taiwan."
+b#4  P1 applied — 營業項目 "takken" → "bedrijfsactiviteiten" (13×, 015 + 017).
+b#5  P1 applied — 運送承攬 "vervoerscommissie" → "expeditie" (5×), "vervoerscommissionair" →
+     "expediteur" (3×).
+b#6  P1 applied — 018 "vennoten" → "aandeelhouders" (systemic, §3).
+b#7  P1 applied — 011: "Ook merken uit Korea kunnen …" → "Een buitenlands merk kan een lokale
+     importeur inschakelen, maar kan de Taiwanese activiteit ook zelf drijven; …" (R2).
+b#8  P1 applied — one Dutch name for 經濟部投資審議司 everywhere: "Dienst Investeringstoetsing van
+     het ministerie van Economische Zaken" (was 4 different names across 001/011/013/017/018).
+b#9  P1 applied — "een derde (3)" → "een derde (第三人)" (2×, 011).
+b#10 P1 SKIPPED per ACCEPTED-nl (see §4).
+b#11 P1 applied — 018 "prestataire" → "dienstverlener"; "Neen." → "Nee." (8×).
+b#12 P2 applied — covered by b#3.
+b#13 P2 applied — "aanleg 1" → "eerste aanleg" (13×), "1e aanleg" → "eerste aanleg" (2×),
+     "2e aanleg" → "tweede aanleg" (1×); 010 title/H1 → "zaak: vonnis in eerste aanleg,
+     termijnen, bewijs en schadeposten".
+b#14 P2 applied — "dading" → "schikking" (§3); 010 "in de beroepsinstantie een dading hadden
+     gesloten" → "in hoger beroep een schikking (和解) hadden getroffen" (+ 5 caption/label
+     instances of "beroepsinstantie" → "hoger beroep").
+b#15 P2 applied — 010 "om de inhoud van elke koppeling voor te stellen" → "De titels hieronder
+     geven alleen aan waar elke koppeling over gaat".
+b#16 P2 applied — 010 "last tot het/een bekend fitnesscentrum tot betaling" → "het/een bekend
+     fitnesscentrum veroordeeld tot betaling" (4×); the court sentence rebuilt with
+     "veroordeelde … tot betaling".
+b#17 P2 applied — "de veiligheid vertoont" → "de veiligheid biedt".
+b#18 P2 applied — "Er moet per zaak worden beoordeeld welke zorgplicht concreet gold".
+b#19 P2 applied — "noch dat het succes van 1 zijde vaststaat" → "en evenmin dat succes in een
+     van die procedures vaststaat".
+b#20 P2 applied — vorderinggronden → vorderingsgronden.
+b#21 P2 applied — "de methoden tot bewijsbehoud (保全證據)" → "hoe u bewijs (保全證據) veiligstelt".
+b#22 P2 applied — "arrondissementsrechtbank" → "rechtbank" (4×).
+b#23 P2 applied — 012 "met lage snelheid voortkwamen" → "langzaam reden".
+b#24 P2 applied — 012 "remmarge" → "ruimte om te remmen" (2×; "De motorrijder had te weinig
+     ruimte om te remmen").
+b#25 P2 applied — 012 heading → "Een geanonimiseerde zaak die dit kantoor heeft behandeld".
+b#26 P2 applied — 012 "handteken" → "handsein".
+b#27 P2 applied — 011 "invoersubject" → "importeur" (title, H1, §1 heading);
+     "verantwoordelijkheidssubject" → "de wettelijk verantwoordelijke" / "de centrale
+     verantwoordelijke" / "wie volgens de reglementering verantwoordelijk is".
+b#28 P2 applied — "het kalender"/"bevoorradingskalender" → "leveringsschema" / "de planning"
+     (011, 3×); 018 "de kalender is korter" → "de doorlooptijd is korter"; 014 → rooster /
+     opleidingsrooster / presentielijst; 016 → tijdschema (2×); 003 → procesagenda.
+b#29 P2 applied — "lost zich niet automatisch op" → "verdwijnt niet automatisch door alleen een
+     voorbehoud in kleine letters".
+b#30 P2 applied — "de nieuwst ondertekende" → "de nieuwste ondertekende".
+b#31 P2 applied — "in het beheersveld" → "in het dagelijks beheer".
+b#32 P2 applied (R7b) — bare FAQ answers made self-standing without touching heading/block
+     counts: 014 §1 "Nee." → "De afspraak is niet automatisch nietig."; 016 §3 → "Dit is niet
+     hetzelfde recht als het erfdeel."; 016 §7 → "De ouder mag dat vermogen niet vrij gebruiken.";
+     017 §1 → "Niet elke logistieke activiteit is vergunningsplichtig."; 017 §3 → "Bij een
+     aandelenaankoop wordt de vergunning zelf niet verkregen en ook niet overgedragen".
+b#33 P2 applied — "Neen." → "Nee." (8×).
+b#34 P2 applied — 014 "geen inrichting die … fysisch of juridisch belet" → "geen regeling die de
+     werknemer feitelijk of juridisch belet ontslag te nemen".
+b#35 P2 applied — 014 "deelt zich niet alleen volgens …" → "hangt niet alleen af van de
+     opleidingsplaats of van wie de opleiding organiseert".
+b#36 P2 applied — guillemets (§3) and 013's „…“ → plain bold.
+b#37 P2 applied — "eenvormig" removed in all 13 places (algemene toepassing / zonder meer /
+     niet in het algemeen / collectief).
+b#38 P2 applied — 016 "van bij het begin" → "vanaf het begin".
+b#39 P2 applied — 016 "opent zich niet één enkele procedure" → "is er niet één enkele procedure".
+b#40 P2 applied — 016 title + H1 "voor de nagelaten familie" → "voor nabestaanden".
+b#41 P2 applied — 013 "(Q&A)" removed and the 😊 emoji deleted.
+b#42 P2 applied — 013 "Toelichting：" → "Toelichting:" (R6b).
+b#43 P2 applied — 013 „**inrichtingsperiode**“ → **inrichtingsperiode** (裝潢期間).
+b#44 P2 applied — 013 "dient u zich grondig … uit te wisselen" → "dient u grondig te overleggen
+     met een advocaat in Taiwan".
+b#45 P2 applied — 013 "laat dan een reactie achter" → "Als u advies over Taiwanees recht nodig
+     hebt, neem dan contact op."
+b#46 P2 applied — 013 "Vb.)" → "Bijvoorbeeld:" (2×).
+b#47 P2 applied — 013 opening: comma → full stop, second clause made a sentence.
+b#48 P2 applied — 017 "subject-houder van de vergunning" → "die de vergunning houdt" (3×).
+b#49 P2 applied — 017 "klantenaandacht" → "klantenservice" (2×).
+b#50 P2 applied — 017 "beroeprijbewijs" → "beroepsrijbewijs" (3×).
+b#51 P2 applied — 018 "buitencontracten" → "externe contracten".
+b#52 P2 applied — 018 "In governance …" → "Bij de inrichting van het bestuur kan een
+     niet-openbaar emitterende vennootschap statutair bepalen dat zij geen raad van bestuur
+     heeft, maar slechts 1 of 2 bestuurders."; "slankere governance" → "eenvoudiger
+     bestuursstructuur"; "auditdrempels" → "drempels voor die accountantscontrole";
+     "de jaarrekening laten certificeren" → "door een accountant laten controleren en
+     certificeren (會計師查核簽證)" (R8).
+b#53 P2 applied — covered by b#28.
+b#54 P2 applied — 014 "van meet af aan" → "bij voorbaat" (2×, incl. the stacked "van van").
+b#55 P2 applied — 017 "domicileregister (戶籍)" → "inschrijving in het bevolkingsregister (戶籍)"
+     (3×); "in het bevoegde arrondissement" → "van/in het bevoegde district" (3×).
+
+## 2. Rows skipped (with reason)
+- a#13, a#14, a#15, b#10: skipped per ACCEPTED-nl ("already fixed mechanically / out of scope").
+  Two leftovers that are genuinely still present but that I did not touch, because the hard rules
+  forbid changing links and the English source carries the identical href:
+    * 005 body link to "verdieping deel 1" still points at the percent-encoded Hangul slug
+      https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-…-1  (identical in columns-en/005).
+    * 011 official-source link still opens the Japanese interface (…showPage?lang=jpn&…)
+      (identical in columns-en/011). Changing either would break the links-parity check.
+  Recommend the supervisor decide these in the link lane, not here.
+- Frontmatter `url:` values with Hangul (008, 009, and the fullwidth "：" inside 008's url):
+  skipped per ACCEPTED-nl; the sweep script explicitly restores the `url:` line byte-identically.
+- a#16 / a#50 / a#51 reviewer wording that names "Nederland of België" inside a column: NOT
+  applied. checkNationality FAILs when a country term appears in a block whose Korean source
+  block names no country, and ACCEPTED-nl orders the neutral R2 generalization instead. The
+  neutral form is applied. (The NL/BE mention in a#4 is in the guidance pack, not a column, and
+  is a non-equivalence disclaimer, not a statement of Dutch law — applied as accepted.)
+- a#23 partial: "consultatietaal/consultatietalen" kept as the defined product term (reason above).
+- Team bio "vonnis in eerste aanleg van 1,57 miljoen TWD": fact kept, only number format fixed
+  (ACCEPTED-nl).
+
+## 3. Systemic sweeps (pattern → instances changed, columns-nl unless noted)
+  vennoten → aandeelhouders                     65
+  vennoot  → aandeelhouder                      13
+  Vennoten → Aandeelhouders                      4
+  vennoten-compounds (lijst/besluit/kring/
+    structuur/overeenkomst/vergadering/
+    leningen/vermogen/verhoudingen)              18
+  evenwel → echter                              62
+  Evenwel → Toch                                 5
+  alsmede → en (incl. ", alsmede" → " en")      88
+  terstond → meteen                             14
+  teneinde → om                                  4
+  eenvormig* → algemeen/zonder meer/collectief  13
+  wezenlijk* (calque senses)                     7
+  dading/dadingsakte/dadingsproces-verbaal/
+    dadingbedrag/privé-dading → schikking*      26
+  Neen. → Nee.                                   8
+  van bij het begin → vanaf het begin            2
+  van meet af aan → bij voorbaat                 2
+  «…» → “…”                                     44
+  „ → “ (then removed in 013)                    2
+  arrondissementsrechtbank → rechtbank           4
+  arrondissement → district                      3
+  domicileregister → bevolkingsregister          3
+  aanleg 1 / 1e aanleg / 2e aanleg → words      16
+  3e (第三人) / een derde (3) → derde (第三人)      9
+  takken (營業項目) → bedrijfsactiviteiten        13
+  vervoerscommissie/-commissionair → expeditie   8
+  zich-reflexive calques (beoordeelt/beslist/
+    laat/lost/deelt/opent/bepalen zich)         16 (incl. 1 in the guidance pack)
+  zijde/zijden (party sense) → partij(en)       13
+  經濟部投資審議司 → one Dutch name                 7 (4 variants unified)
+  Q&A removed / 😊 removed / ?? → ?              5
+  beroepsinstantie → hoger beroep                6
+  spelling (-s- fugen, inflection)               7
+  guidance pack .ts string fixes                49 (it-nl-pl 33, team 20, offices 1,
+                                                   answers 3, inquiry 4, llms 1)
+
+## 4. Notes
+- checkEnglish (≥12 words, Latin-only, ≥3 English stopwords) fires on Dutch sentences that pile
+  up "in / is / of / was". Two of my rewrites tripped it (011 L23, 018 L68) and one pre-existing
+  line did after the domicileregister fix (017 L55); all three were rephrased, not reverted.
+- The disclosure-parity test pins the nl regex /werkbare/ for "feasible-method-only". My first
+  wording ("een werkbaar communicatiekanaal") broke it; changed to "een werkbare manier van
+  communiceren" rather than editing the test.
+- No `[변호사 검수 필요]` markers, no Hangul outside `url:` values, no frontmatter key / url /
+  lastmod / featured_image / image path / external link / block-count changes.
+
+## 5. Verify (verbatim)
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-nl --lang nl 2>&1 | tail -8
+forbidden      PASS
+hanzi          PASS   han=108
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-nl src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      26
+
+(26 = 18 columns-nl files + 6 nl string sources + this log + the untracked WO-F-nl.txt
+ itself; no file outside the allowed write set was touched.)
+
+## 6. Where I disagree with the reviewer (not applied)
+1. b#2 — ACCEPTED-nl's shorthand "nabestaanden → 'A en B' (the parties themselves)" is
+   factually wrong: B died at the scene, A was unconscious in hospital, and the English source
+   says "The families of A and B". Written as "De familie van A en de nabestaanden van B".
+2. a#16 / a#50 / a#51 — the reviewer wants "Nederland of België" named inside the columns as the
+   reader's country. Besides tripping checkNationality, naming the reader's jurisdiction in a
+   Taiwan-law column invites a reader to assume something is being said about Dutch/Belgian law.
+   Neutral R2 phrasing used instead.
+3. a#23 — "consultatie" is not only EU/medical Dutch; "consultatietaal" is a defined, glossed
+   term of this product used in all 27 locales, and replacing it piecemeal would make the page
+   inconsistent with its own definition list. Only the CTA/heading was changed.
+4. b#4/b#6 suggest spelling out "tien"/"twee" for 10/2. Done for 015's "tien
+   bedrijfsactiviteiten" (the checker parses Dutch number words), but digits were kept where the
+   sentence is a legal threshold list (e.g. "1 of 2 bestuurders", "2 aandeelhouders of meer"),
+   because that is how Dutch statutory prose writes them and it keeps number parity obvious.
+5. a#40 — the reviewer would translate the degree lines fully. Institution names (Institute of
+   Finance, National Taiwan University, Kobe University) are kept in Latin script per R5; only
+   the Dutch framing of the degree was added.

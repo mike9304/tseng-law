@@ -512,7 +512,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
     disclaimer: 'Voorbehoud',
     columns: 'Artikelen',
   },
-  contactCta: 'Een consultatieverzoek sturen',
+  contactCta: 'Een verzoek om advies sturen',
   footerNotice:
     'Deze Nederlandstalige pagina bevat alleen algemene toelichting over het werk van het kantoor volgens Taiwanees recht. Het is geen juridisch advies voor een concreet dossier, en het versturen van een bericht schept op zich geen relatie tussen advocaat en cliënt.',
   skipLink: 'Navigatie overslaan en naar de inhoud',
@@ -520,15 +520,15 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
   languageLabel: 'Weergavetaal',
   mega: {
     services: {
-      description: 'Het kantoor behandelt de wezenlijke werkgroepen volgens Taiwanees recht.',
+      description: 'Het kantoor behandelt de belangrijkste praktijkgebieden van het Taiwanese recht.',
       viewAllLabel: 'Alles tonen',
     },
     columns: {
-      description: 'Artikelen over veelgestelde vragen van Taiwanees recht.',
+      description: 'Artikelen over veelgestelde vragen over het Taiwanese recht.',
       viewAllLabel: 'Alles tonen',
     },
     lawyers: {
-      description: 'Voorstelling van de advocaten en de contactwegen.',
+      description: 'Kennismaking met de advocaten en de contactmogelijkheden.',
       viewAllLabel: 'Alles tonen',
     },
     pricing: {
@@ -552,7 +552,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
     servicesAssistanceBefore: 'Als onduidelijk is tot welke groep uw zaak behoort, legt de pagina ',
     servicesAssistanceLinkLabel: 'Contact',
     servicesAssistanceAfter:
-      ' uit hoe u een samenvatting formuleert die een advocaat beoordeelt.',
+      ' uit hoe u een korte samenvatting opstelt die een advocaat kan beoordelen.',
     columnsViewAllLabel: 'Alle artikelen bekijken',
     columnsReadMoreLabel: 'Verder lezen',
     columnsReviewLabel: 'Beoordeeld door advocaat Wei Tseng',
@@ -576,21 +576,21 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Wat wij doen',
           paragraphs: [
-            'Hovering International Law Firm is een in Taiwan gevestigd advocatenkantoor. Het werkt volgens Taiwanees recht en heeft kantoren in Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) en Pingtung (屏東). Wij adviseren ondernemingen en voeren procedures voor de rechter en begeleiden cliënten uit het buitenland door de in Taiwan vereiste stappen.',
+            'Hovering International Law Firm is een in Taiwan gevestigd advocatenkantoor. Het werkt volgens Taiwanees recht en heeft kantoren in Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) en Pingtung (屏東). Wij adviseren ondernemingen, voeren procedures voor de rechter en begeleiden buitenlandse cliënten door de stappen die in Taiwan nodig zijn.',
             'De hele inhoud hier is algemeen. De afloop van een zaak hangt af van de feiten, de toepasselijke regels en het tijdstip. Deze toelichting vervangt niet het gesprek met een advocaat over uw stukken.',
           ],
         },
         {
-          heading: 'Paginataal en consultatietaal zijn niet hetzelfde',
+          heading: 'De taal van de pagina is niet de taal van het gesprek met de advocaat',
           paragraphs: [
             'Deze pagina is in het Nederlands geschreven, maar het gesprek met een advocaat vindt alleen plaats in de vier consultatietalen Engels, Chinees (中文), Japans en Koreaans. Het lezen van de Nederlandse toelichting betekent niet dat het gesprek met de advocaat in het Nederlands plaatsvindt.',
-            'Wij beloven geen tolk, geen antwoordtermijn en geen afspraak via deze pagina. Als u geen van de vier talen kunt gebruiken, legt de pagina «Contact» uit hoe wij een communicatieweg onderzoeken.',
+            'Wij beloven geen tolk, geen antwoordtermijn en geen afspraak via deze pagina. Als u geen van de vier talen kunt gebruiken, legt de pagina “Contact” uit hoe wij naar een werkbare manier van communiceren zoeken.',
           ],
         },
         {
-          heading: 'Werkgroepen',
+          heading: 'Praktijkgebieden',
           paragraphs: [
-            'Het werkterrein omvat de volgende zes groepen. De pagina «Diensten» beschrijft elke groep nader en noemt wat niet wordt toegezegd.',
+            'Het werkterrein omvat de volgende zes praktijkgebieden. De pagina “Diensten” beschrijft elk gebied nader en noemt wat niet wordt toegezegd.',
           ],
           items: [
             'Investering en oprichting van een vennootschap in Taiwan',
@@ -604,7 +604,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Waar u moet beginnen',
           paragraphs: [
-            'Lees de pagina «Diensten» om te toetsen of uw zaak tot ons terrein behoort, daarna «Kosten» en «Contact» om te weten hoe de omvang wordt vastgesteld en hoe de kosten vóór het begin van het werk worden bevestigd.',
+            'Lees de pagina “Diensten” om te toetsen of uw zaak tot ons terrein behoort, daarna “Kosten” en “Contact” om te weten hoe de omvang wordt vastgesteld en hoe de kosten vóór het begin van het werk worden bevestigd.',
             'Bij het sturen van een bericht mag u de samenvatting in uw eigen taal schrijven. De oorspronkelijke tekst wordt bewaard zoals u die hebt geschreven en niet automatisch vertaald. Een verzonden bericht is een verzoek dat op beoordeling wacht: dat is nog geen advies en nog geen bevestigde afspraak.',
           ],
         },
@@ -614,9 +614,9 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'DIENSTEN',
       title: 'Welke zaken wij behandelen',
       description:
-        'Zes werkgroepen van het kantoor in Taiwan en de grenzen die u eerst moet kennen.',
+        'De zes praktijkgebieden van het kantoor in Taiwan en de grenzen die u eerst moet kennen.',
       intro:
-        'Hieronder de groepen die wij daadwerkelijk behandelen, en vragen die in de beginfase vaak worden gesteld. De weergave helpt u te beoordelen of uw zaak tot ons terrein behoort; zij is algemeen en geen juridische analyse van één dossier.',
+        'Hieronder staan de praktijkgebieden die wij daadwerkelijk behandelen, met vragen die in de beginfase vaak worden gesteld. De weergave helpt u te beoordelen of uw zaak tot ons terrein behoort; zij is algemeen en geen juridische analyse van één dossier.',
       sections: [
         {
           heading: 'Investering en oprichting van een vennootschap in Taiwan',
@@ -642,7 +642,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Arbeidsrechtelijke geschillen',
           paragraphs: [
-            'Deze groep omvat beëindiging van de arbeidsovereenkomst, ontslagvergoeding volgens Taiwanees recht (資遣費; niet gelijk te stellen met instituten van andere staten), loon en geschillen uit de arbeidsovereenkomst (勞動契約), zowel aan werknemers- als aan werkgeverszijde. Bij de toetsing scheiden wij de beëindigingsgrond van vragen over aankondiging, betaling en termijnen.',
+            'Deze groep omvat beëindiging van de arbeidsovereenkomst, ontslagvergoeding volgens Taiwanees recht (資遣費; dit is niet hetzelfde als de ontslagvergoeding of de transitievergoeding in Nederland of België), loon en geschillen uit de arbeidsovereenkomst (勞動契約), zowel aan werknemers- als aan werkgeverszijde. Bij de toetsing scheiden wij de beëindigingsgrond van vragen over aankondiging, betaling en termijnen.',
             'Arbeidsovereenkomst, arbeidsreglement (工作規則), loonstroken en de briefwisseling van de partijen zijn meestal de beslissende stukken. Als u ze nog hebt, vermeld dat in de samenvatting.',
           ],
         },
@@ -680,7 +680,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Oprichting en opbouw',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) is in 2016 opgericht door advocaten die aan de National Taiwan University (國立臺灣大學) hebben gestudeerd. De Chinese naam 昊鼎 verbindt het teken 昊 («wijde hemel») met 鼎 («vaste grond») en beschrijft de koers van het kantoor sinds de oprichting.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) is in 2016 opgericht door advocaten die aan de National Taiwan University (國立臺灣大學) hebben gestudeerd. De Chinese naam 昊鼎 verbindt het teken 昊 (“wijde hemel”) met 鼎 (“vaste grond”) en beschrijft de koers van het kantoor sinds de oprichting.',
             'Wij hebben kantoren in Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) en Pingtung (屏東). Het kantoor Kaohsiung richt zich op ondernemingsbestuur en behandelt civiele, straf- en bestuursrechtelijke geschillen. Het kantoor Taichung behandelt bouwzaken, intellectuele eigendom en zaken met betrekking tot Korea en Japan. Het kantoor Pingtung is in 2017 geopend voor de plaatselijke behoefte.',
             'Naast het advocatenwerk bestaat sinds 2020 ook Hovering Accounting Office, dat boekhouding en fiscale planning biedt voor ondernemers en vermogende particulieren.',
           ],
@@ -704,7 +704,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ADVOCATEN',
       title: 'Internationaal team van Hovering',
-      description: 'Profielen van de advocaten, de operationele leiding en de partneraccountancy van Hovering.',
+      description: 'Profielen van de advocaten, de bedrijfsleiding en het aangesloten accountantskantoor van Hovering.',
       intro: '',
       sections: [],
     },
@@ -740,7 +740,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Waarom deze pagina geen tarieven noemt',
           paragraphs: [
-            'De kosten hangen van de zaak zelf af: van de inzet, het aantal betrokkenen, de stukken, de termijnen en of een procedure al loopt. Een vooraf gezet getal zou de kosten voor uw dossier niet tonen. Daarom stellen wij eerst de omvang van het werk vast en delen u daarna de kosten mee, voordat het werk begint.',
+            'De kosten hangen van de zaak zelf af: van de inzet, het aantal betrokkenen, de stukken, de termijnen en of een procedure al loopt. Een vooraf genoemd bedrag zou de kosten van uw dossier niet weergeven. Daarom stellen wij eerst de omvang van het werk vast en delen u daarna de kosten mee, voordat het werk begint.',
             'Naast het honorarium kunnen gerechtelijke, bestuurlijke of derdenkosten ontstaan. Die zijn van het honorarium gescheiden en hangen van de betreffende procedure af.',
           ],
         },
@@ -750,7 +750,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'CONTACT',
       title: 'Hoe u het kantoor bereikt',
       description:
-        'Paginataal, consultatietalen, de werkwijze als u geen van de vier talen kunt gebruiken, en wat deze pagina niet toezegt.',
+        'De taal van de pagina, de consultatietalen, de werkwijze als u geen van de vier talen kunt gebruiken, en wat deze pagina niet toezegt.',
       intro:
         'Voordat u ons schrijft, onderscheidt u de volgende drie punten. Zij worden vaak vermengd, maar betekenen iets anders.',
       sections: [
@@ -760,7 +760,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
             'De weergavetaal van de pagina, de consultatietaal met de advocaat en de taal waarin u schrijft, zijn drie gescheiden dingen.',
           ],
           items: [
-            'Paginataal: deze toelichting is in het Nederlands geschreven.',
+            'Taal van de pagina: deze toelichting is in het Nederlands geschreven.',
             'Consultatietaal: de consultatie vindt plaats in het Engels, Chinees (中文), Japans en Koreaans.',
             'Uw schrijftaal: u mag de samenvatting in uw eigen taal schrijven; de oorspronkelijke tekst wordt ongewijzigd bewaard.',
           ],
@@ -768,8 +768,8 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Als u geen van de vier consultatietalen kunt gebruiken',
           paragraphs: [
-            'In het contactformulier kunt u «Communicatieweg moet worden bevestigd» kiezen. Wij antwoorden om een werkbare communicatieweg te onderzoeken, als zo’n weg bestaat; een dienst in een andere taal wordt niet gewaarborgd en een antwoordtermijn niet toegezegd.',
-            'Dit is alleen een toetsingsstap, geen belofte. Wij beloven geen tolk, geen dienst in het Nederlands of in een andere taal buiten de vier genoemde talen, en niet dat wij elke zaak aannemen.',
+            'In het contactformulier kunt u “Communicatiekanaal moet worden bevestigd” kiezen. Wij antwoorden om te onderzoeken of er een werkbare manier van communiceren bestaat; een dienst in een andere taal wordt niet gewaarborgd en een antwoordtermijn niet toegezegd.',
+            'Dit is alleen een controle, geen belofte. Wij beloven geen tolk, geen dienst in het Nederlands of in een andere taal buiten de vier genoemde talen, en niet dat wij elke zaak aannemen.',
           ],
         },
         {
@@ -782,7 +782,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Wat deze pagina niet toezegt',
           paragraphs: [
-            'Wij beloven geen antwoordtermijn, bevestigen geen afspraak via deze pagina, beloven geen bepaalde advocaat en stellen geen tolk. Schriftelijke vertaling is iets anders: uw bericht wordt niet automatisch vertaald.',
+            'Wij beloven geen antwoordtermijn, bevestigen geen afspraak via deze pagina, beloven geen bepaalde advocaat en stellen geen tolk ter beschikking. Schriftelijke vertaling is iets anders: uw bericht wordt niet automatisch vertaald.',
             'Als u een verzoek stuurt, wordt de inhoud bewaard en wacht op beoordeling. Ontvangt u na enige tijd geen antwoord, dan kunt u opnieuw schrijven naar het e-mailadres op de contactpagina.',
           ],
         },
@@ -807,7 +807,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Welke zaken behandelt het kantoor?',
           answer:
-            'Wij behandelen zes groepen: investering en oprichting van een vennootschap in Taiwan, civiele zaken en schadevergoeding, huwelijk, familie en erfrecht, arbeidsrechtelijke geschillen, strafzaken en intellectuele eigendom. Of een zaak wordt aangenomen, beslist zich na beoordeling van de inhoud.',
+            'Wij behandelen zes groepen: investering en oprichting van een vennootschap in Taiwan, civiele zaken en schadevergoeding, huwelijk, familie en erfrecht, arbeidsrechtelijke geschillen, strafzaken en intellectuele eigendom. Of wij een zaak aannemen, wordt beslist na beoordeling van de inhoud.',
         },
         {
           question: 'Wat moet ik voorbereiden vóór het contact?',
@@ -822,7 +822,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Wat als ik geen van de vier talen kan gebruiken?',
           answer:
-            'Kies bij het sturen van het verzoek «Communicatieweg moet worden bevestigd». Wij antwoorden om een communicatieweg te onderzoeken, maar een dienst in een andere taal wordt niet gewaarborgd. Dit is een toetsingsstap, geen belofte dat wij in een andere taal kunnen werken.',
+            'Kies bij het sturen van het verzoek “Communicatiekanaal moet worden bevestigd”. Wij antwoorden om te onderzoeken of er een werkbare manier van communiceren bestaat, maar een dienst in een andere taal wordt niet gewaarborgd. Dit is een controle, geen belofte dat wij in een andere taal kunnen werken.',
         },
         {
           question: 'Hoe wordt mijn Nederlandse tekst behandeld?',
@@ -842,7 +842,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Wat als mijn zaak zeer spoedeisend is?',
           answer:
-            'Noem de termijn of de datum op een ambtelijk schrijven aan het begin van uw samenvatting, zodat die data bij de beoordeling zichtbaar zijn. Deze pagina heeft geen noodkanaal en waarborgt geen antwoordtermijn; als uw zaak niet kan wachten, moet u parallel andere wegen op uw plaats zoeken.',
+            'Noem de termijn of de datum op een ambtelijk schrijven aan het begin van uw samenvatting, zodat die data bij de beoordeling zichtbaar zijn. Deze pagina heeft geen spoedlijn en belooft geen antwoordtermijn; als uw zaak niet kan wachten, zoek dan tegelijk naar andere mogelijkheden in uw eigen land.',
         },
       ],
     },
@@ -880,14 +880,14 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Bewaarplaats en toegang',
           paragraphs: [
-            'De inhoud van uw verzending wordt bewaard op een niet openbaar toegankelijke plaats. Alleen bevoegde personen in het kantoor mogen erbij om het verzoek te behandelen.',
+            'De inhoud van uw bericht wordt bewaard op een niet openbaar toegankelijke plaats. Alleen bevoegde personen in het kantoor mogen erbij om het verzoek te behandelen.',
             'Deze pagina geeft geen absolute veiligheidsgarantie. Geen overdrachtweg en geen bewaarplaats is volledig veilig; gevoelige stukken moeten daarom alleen na bijzondere aanwijzing van de advocaat worden verzonden.',
           ],
         },
         {
           heading: 'Doel van het gebruik',
           paragraphs: [
-            'De verzonden gegevens dienen tot beoordeling van het verzoek, de terugkoppeling aan u, de verduidelijking van de communicatieweg en de behandeling, als het werk wordt opgenomen.',
+            'De verzonden gegevens worden gebruikt om het verzoek te beoordelen, u te antwoorden, het communicatiekanaal af te spreken en de zaak te behandelen als het kantoor die aanneemt.',
             'De gegevens worden niet zonder een afzonderlijke toestemming voor marketing gebruikt.',
           ],
         },
@@ -908,7 +908,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Bewaarplaats en dienstverleners',
           paragraphs: [
-            'Deze website wordt bij Vercel gehost, en uw verzending wordt in een niet-openbare objectopslag van deze dienst bewaard. E-mails worden verzonden via de e-maildienst die het kantoor gebruikt.',
+            'Deze website wordt bij Vercel gehost, en uw bericht wordt in een niet-openbare opslag van deze dienst bewaard. E-mails worden verzonden via de e-maildienst die het kantoor gebruikt.',
             'Servers van afzonderlijke dienstverleners kunnen buiten Taiwan staan, zodat uw gegevens daar kunnen worden bewaard en verwerkt. Is het bewaardoel vervuld, dan worden de gegevens zonder vertraging gewist; gegevens die volgens toepasselijke voorschriften moeten worden bewaard, blijven voor die duur. Verzoeken over persoonsgegevens neemt wei@hoveringlaw.com.tw in ontvangst.',
           ],
         },
@@ -933,14 +933,14 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Juridisch geldingsgebied',
           paragraphs: [
             'Het kantoor werkt volgens Taiwanees recht, en deze pagina spreekt alleen over werk in dat kader.',
-            'De inhoud is geen advies volgens het recht van een andere rechtsorde dan Taiwan, met inbegrip van het recht van uw woonplaats. Raakt een deel van uw zaak een andere rechtsorde, dan verduidelijken wij met u welke gekwalificeerde vakpersoon voor dat deel nodig is.',
+            'De inhoud is geen advies volgens het recht van een andere rechtsorde dan Taiwan, met inbegrip van het recht van uw woonplaats. Raakt een deel van uw zaak een andere rechtsorde, dan overleggen wij met u welke bevoegde deskundige u voor dat deel nodig hebt.',
           ],
         },
         {
           heading: 'Een relatie tussen advocaat en cliënt ontstaat niet vanzelf',
           paragraphs: [
             'Het lezen van deze pagina, het versturen van een formulier of een e-mail schept op zich geen relatie tussen advocaat en cliënt.',
-            'Die relatie ontstaat pas nadat de zaak is beoordeeld en beide zijden de overname van het werk hebben bevestigd.',
+            'Die relatie ontstaat pas nadat de zaak is beoordeeld en beide partijen hebben bevestigd dat het kantoor de zaak aanvaardt.',
           ],
         },
         {
@@ -956,9 +956,9 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'ARTIKELEN',
       title: 'Artikelen over Taiwanees recht',
       description:
-        'Nederlandse artikelen over veelgestelde vragen van Taiwanees recht. De inhoud is algemene informatie op het tijdstip van publicatie, geen juridisch advies voor uw zaak.',
+        'Nederlandse artikelen over veelgestelde vragen over het Taiwanese recht. De inhoud is algemene informatie op het tijdstip van publicatie, geen juridisch advies voor uw zaak.',
       intro:
-        'Het kantoor publiceert artikelen over veelgestelde vragen van Taiwanees recht. Artikelen die in het Nederlands beschikbaar zijn, staan op deze pagina; daarnaast zijn er vier koppelingen die elk de artikelenlijst van een oorspronkelijke taal openen.',
+        'Het kantoor publiceert artikelen over veelgestelde vragen over het Taiwanese recht. Artikelen die in het Nederlands beschikbaar zijn, staan op deze pagina; daarnaast zijn er vier koppelingen die elk de artikelenlijst van een oorspronkelijke taal openen.',
       sections: [
         {
           heading: 'Vier lijsten naar taal',
@@ -978,7 +978,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Hoe ver een artikel als oriëntatie kan dienen',
           paragraphs: [
             'Artikelen zijn algemene informatie op het tijdstip van publicatie. Voorschriften en hun toepassing kunnen veranderen, en een artikel bevat niet alle omstandigheden van uw zaak.',
-            'Steun daarom geen handeling in een echte zaak alleen op een artikel. Gebruik het voor het overzicht en bespreek uw stukken afzonderlijk met een advocaat; deze pagina is niet de consultatiestap.',
+            'Baseer in een echte zaak geen stappen alleen op een artikel. Gebruik het voor het overzicht en bespreek uw stukken afzonderlijk met een advocaat; deze pagina is niet de consultatiestap.',
           ],
         },
       ],

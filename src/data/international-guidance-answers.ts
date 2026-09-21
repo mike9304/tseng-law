@@ -491,7 +491,7 @@ export const guidanceAnswers: Record<
   nl: {
     services: {
       answer:
-        'Het kantoor behandelt zes werkgroepen volgens Taiwanees recht: investering en oprichting van vennootschappen, civiele zaken en schadevergoeding, huwelijk, familie en erfrecht, arbeidsrecht, strafzaken en intellectuele eigendom. De omvang van elke zaak wordt afzonderlijk bevestigd nadat een advocaat de inhoud heeft beoordeeld die u stuurt. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.',
+        'Het kantoor behandelt zes praktijkgebieden van het Taiwanese recht: investering en oprichting van vennootschappen, civiele zaken en schadevergoeding, huwelijk, familie en erfrecht, arbeidsrecht, strafzaken en intellectuele eigendom. De omvang van elke zaak wordt afzonderlijk bevestigd nadat een advocaat de inhoud heeft beoordeeld die u stuurt. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.',
       sources: ['/nl/faq', '/nl/contact'],
     },
     about: {
@@ -501,7 +501,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Deze pagina toont de profielen van de advocaten, de operationele leiding en de partneraccountancy van Hovering. Advocaat Wei Tseng (曾雋崴) is bevoegd in Taiwan en is leidinggevend advocaat van het kantoor; zij werkt met cliënten uit Korea, Japan en andere internationale cliënten. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.',
+        'Deze pagina toont de profielen van de advocaten, de bedrijfsleiding en het aangesloten accountantskantoor van Hovering. Advocaat Wei Tseng (曾雋崴) is bevoegd in Taiwan en is leidinggevend advocaat van het kantoor; zij werkt met cliënten uit Korea, Japan en andere internationale cliënten. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.',
       sources: ['/nl/about', '/nl/contact'],
     },
     pricing: {
@@ -516,7 +516,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Dit deel beantwoordt veelgestelde vragen op het niveau van algemene informatie: de zes werkgroepen, de voorbereiding vóór het contact, de vaststelling van de kosten en de betekenis van een verzonden bericht. Een verzonden verzoek wacht op beoordeling door een advocaat; het is geen juridisch advies, geen afspraak en schept geen relatie tussen advocaat en cliënt. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.',
+        'Dit deel beantwoordt veelgestelde vragen op het niveau van algemene informatie: de zes praktijkgebieden, de voorbereiding vóór het contact, de vaststelling van de kosten en de betekenis van een verzonden bericht. Een verzonden verzoek wacht op beoordeling door een advocaat; het is geen juridisch advies, geen afspraak en schept geen relatie tussen advocaat en cliënt. De consultatie vindt alleen plaats in het Engels, Chinees, Japans en Koreaans.',
       sources: ['/nl/contact', '/nl/services'],
     },
   },

@@ -126,7 +126,7 @@ PIF הוא אוסף חומרים המסודר כך שניתן יהיה להמש�
 - [קריטריוני ההכרה בסימון, בקידום ובפרסום של קוסמטיקה (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [הנספח הרשמי לקריטריוני ההכרה בפרסום קוסמטיקה](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [הודעת משרד הבריאות והרווחה (衛生福利部) על רגולציית פרסום הקוסמטיקה](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan: סקירת השקעה זרה](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan: סקירת השקעה זרה](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [הנחיית אגף בדיקת ההשקעות במשרד הכלכלה](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 מאמר זה הוא חומר חינוכי להסבר כללי של המשטרים הקשורים לכניסה לשוק הקוסמטיקה בטאיוואן, ואינו חוות דעת משפטית על מוצר או פרסום מסוים, ואינו קובע מתן היתר או רישום, אפשרות מכירה או משך טיפול. יש לאמת לפי כל עניין את צורת הכניסה, חומרי המוצר, תוכן הסימון והפרסום ואת הפרקטיקה העדכנית ביותר של הרשות המוסמכת.

@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Beitragsbild](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Wer [Gesellschaftsgründung in Taiwan – Grundlagen](/de/columns/taiwan-company-establishment-basics) und [Gesellschaftsgründung in Taiwan – Vertiefung Teil 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) gelesen hat, kann auch Gesellschaftsgründung in Taiwan – Vertiefung Teil 2 (公司設立) zur Kenntnis nehmen.
+Wer [Gesellschaftsgründung in Taiwan – Grundlagen](/de/columns/taiwan-company-establishment-basics) und [Gesellschaftsgründung in Taiwan – Vertiefung Teil 1](/de/columns/taiwan-company-establishment-advanced-1) gelesen hat, kann auch Gesellschaftsgründung in Taiwan – Vertiefung Teil 2 (公司設立) zur Kenntnis nehmen.
 
 ​
 

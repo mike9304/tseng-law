@@ -126,7 +126,7 @@ PIF制度曾按产品群分阶段适用。自2026年7月1日起，其余化妆�
 - [化妆品标示宣传广告认定准则](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [化妆品广告认定准则官方附件](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [卫生福利部— 化妆品广告监管公告](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan — 侨外投资说明](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan — 侨外投资说明](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [经济部投资审议司 — 指南](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 本文为一般说明品牌进入台湾化妆品市场相关制度的教育文件；并非针对具体产品或广告的法律意见，也不表示许可或登录将获核准、销售将可行或处理期限将获遵守。进入形态、产品资料、标示与广告内容，以及主管机关最新实务，须在各案中确认。

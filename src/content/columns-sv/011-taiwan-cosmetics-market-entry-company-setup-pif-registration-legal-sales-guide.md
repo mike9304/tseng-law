@@ -126,7 +126,7 @@ Bolagets och filialens grundstruktur kan ses i [Grunderna för bolagsbildning i 
 - [Kriterier för bedömning av märkning, marknadsföring och reklam för kosmetika (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Officiellt bihang till kriterierna för bedömning av kosmetikareklam](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Hälsoministeriet (衛生福利部) — kungörelse om reglering av kosmetikareklam](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan — redogörelse för utländsk investering](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan — redogörelse för utländsk investering](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Avdelningen för investeringsprövning vid ekonomiministeriet — vägledning](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 Den här texten är utbildningsmaterial som allmänt förklarar ordningen kring ett märkes inträde på Taiwans kosmetikamarknad; det är inte ett rättsutlåtande om en konkret produkt eller reklam och det påstår inte att tillstånd eller registrering kommer att erhållas, att försäljning blir möjlig eller att en handläggningstid kommer att hållas. Inträdesformen, produktuppgifterna, innehållet i märkning och reklam samt den behöriga myndighetens senaste praxis måste bekräftas i varje ärende.

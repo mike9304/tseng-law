@@ -126,7 +126,7 @@ Die Grundstruktur von Gesellschaft und Zweigniederlassung können Sie unter [Gru
 - [Anerkennungsmaßstäbe für Kennzeichnung, Bewerbung und Werbung von Kosmetik (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Amtliche Anlage zu den Anerkennungsmaßstäben für Kosmetikwerbung](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Ministerium für Gesundheit und Wohlfahrt (衛生福利部) — Bekanntmachung zur Regelung der Kosmetikwerbung](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan — Überblick über ausländische Investition](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan — Überblick über ausländische Investition](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Hinweis der Abteilung für Investitionsprüfung des Wirtschaftsministeriums](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 Dieser Beitrag ist allgemeines Informationsmaterial zu Bildungszwecken über die Regelungen des Markteintritts in den taiwanesischen Kosmetikmarkt; er ist keine Rechtsmeinung zu einem einzelnen Produkt oder einer einzelnen Werbung und sichert weder Genehmigung oder Registrierung noch Verkaufsmöglichkeit oder Bearbeitungsdauer zu. Eintrittsform, Produktunterlagen, Inhalt von Kennzeichnung und Werbung sowie die neueste Praxis der zuständigen Behörde sind im Einzelfall zu prüfen.

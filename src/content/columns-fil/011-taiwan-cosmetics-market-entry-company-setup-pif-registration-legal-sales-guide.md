@@ -126,7 +126,7 @@ Ang batayang istruktura ng kompanya at ng branch ay makikita sa [Mga Batayan sa 
 - [Pamantayan sa Pagkilala ng Pagmamarka, Pagtataguyod at Advertising ng Kosmetiko (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Opisyal na talahanayan ng Pamantayan sa Pagkilala ng Advertising ng Kosmetiko](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Anunsiyo ng Ministri ng Kalusugan at Kapakanan (Ministry of Health and Welfare, 衛生福利部) hinggil sa regulasyon sa advertising ng kosmetiko](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan: Paglalahad hinggil sa pamumuhunan ng dayuhan](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan: Paglalahad hinggil sa pamumuhunan ng dayuhan](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Patnubay ng Kagawaran ng Pagsusuri ng Pamumuhunan (經濟部投資審議司)](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 Ang artikulong ito ay materyal na pang-edukasyon na naglalayong ipaliwanag sa pangkalahatan ang mga sistemang kaugnay ng pagpasok sa merkado ng kosmetiko sa Taiwan; hindi ito legal na opinyon hinggil sa isang tiyak na produkto o advertising, at hindi rin nito ginagarantiyahan ang pahintulot, ang rehistro, ang posibilidad ng pagbebenta o ang tagal ng pagproseso. Mangyaring tiyakin sa bawat indibidwal na kaso ang anyo ng pagpasok sa merkado, ang materyal ng produkto, ang nilalaman ng pagmamarka at advertising, at ang pinakabagong praktika ng ahensiyang may hurisdiksiyon.

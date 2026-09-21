@@ -126,7 +126,7 @@ La struttura di base della società e della succursale (分公司) può vedersi 
 - [Criteri di determinazione dell'etichettatura, della promozione e della pubblicità dei cosmetici (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Allegato ufficiale dei criteri di determinazione della pubblicità dei cosmetici](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Ministero della salute e del benessere (衛生福利部) — avviso sulla regolazione della pubblicità dei cosmetici](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan — spiegazione sull'investimento straniero](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan — spiegazione sull'investimento straniero](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Dipartimento per l'esame degli investimenti del Ministero dell'Economia — guida](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 Questo testo è un documento educativo destinato a spiegare in termini generali il regime legato all'ingresso di un marchio nel mercato dei cosmetici di Taiwan; non è un parere giuridico su un prodotto o una pubblicità concreti e non afferma che l'autorizzazione o il registro saranno ottenuti, che la vendita sarà possibile né che un termine di trattamento sarà rispettato. La forma di ingresso, i dati del prodotto, il contenuto dell'etichettatura e della pubblicità, e la pratica più recente dell'autorità competente devono essere confermati in ciascun caso.

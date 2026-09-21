@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![ภาพประกอบหลัก](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-ท่านที่ได้อ่าน [การจัดตั้งบริษัทในไต้หวัน -ฉบับพื้นฐาน-](/th/columns/taiwan-company-establishment-basics) และ [การจัดตั้งบริษัทในไต้หวัน - ภาคขั้นสูง - 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) แล้ว ก็สามารถอ่านบทความ การจัดตั้งบริษัทในไต้หวัน - ภาคขั้นสูง - 2 นี้ประกอบกันได้
+ท่านที่ได้อ่าน [การจัดตั้งบริษัทในไต้หวัน -ฉบับพื้นฐาน-](/th/columns/taiwan-company-establishment-basics) และ [การจัดตั้งบริษัทในไต้หวัน - ภาคขั้นสูง - 1](/th/columns/taiwan-company-establishment-advanced-1) แล้ว ก็สามารถอ่านบทความ การจัดตั้งบริษัทในไต้หวัน - ภาคขั้นสูง - 2 นี้ประกอบกันได้
 
 ​
 

@@ -126,7 +126,7 @@ Struktur dasar perusahaan dan kantor cabang dapat dilihat pada [Dasar pendirian 
 - [Kriteria Penetapan Penandaan, Promosi, dan Iklan Kosmetik (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Lampiran resmi Kriteria Penetapan Iklan Kosmetik](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Kementerian Kesehatan dan Kesejahteraan (衛生福利部) — pengumuman mengenai pengaturan iklan kosmetik](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan — penjelasan mengenai penanaman modal asing](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan — penjelasan mengenai penanaman modal asing](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Departemen Peninjauan Investasi, Kementerian Urusan Ekonomi — panduan](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 Tulisan ini merupakan bahan yang bertujuan mendidik dan menjelaskan secara umum ketentuan yang berkaitan dengan masuknya suatu merek ke pasar kosmetik Taiwan; tulisan ini bukan pendapat hukum atas produk atau iklan tertentu dan tidak menjamin diperolehnya izin atau pendaftaran, kemungkinan penjualan, maupun jangka waktu penyelesaian prosedurnya. Bentuk masuk ke pasar, data produk, isi penandaan dan iklan, serta praktik terbaru instansi yang berwenang hendaknya dipastikan untuk masing-masing perkara.

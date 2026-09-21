@@ -126,7 +126,7 @@ Podstawową strukturę spółki i oddziału można zobaczyć w [Podstawy zakład
 - [Kryteria ustalania oznakowania, promocji i reklamy kosmetyków (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Urzędowy załącznik kryteriów ustalania reklamy kosmetyków](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Ministerstwo Zdrowia i Opieki (衛生福利部) — obwieszczenie o regulacji reklamy kosmetyków](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan — wyjaśnienie o inwestycji zagranicznej](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan — wyjaśnienie o inwestycji zagranicznej](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Departament Przeglądu Inwestycji Ministerstwa Gospodarki — przewodnik](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 Ten tekst jest materiałem edukacyjnym przeznaczonym do ogólnego wyjaśnienia reżimu związanego z wejściem marki na rynek kosmetyków Tajwanu; nie jest opinią prawną o konkretnym produkcie lub reklamie i nie twierdzi, że zezwolenie lub rejestracja zostaną uzyskane, że sprzedaż będzie możliwa ani że termin załatwienia zostanie dotrzymany. Formę wejścia, dane produktu, treść oznakowania i reklamy oraz najnowszą praktykę organu właściwego należy potwierdzić w każdej sprawie.

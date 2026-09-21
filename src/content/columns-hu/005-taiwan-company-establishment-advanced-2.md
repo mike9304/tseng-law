@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Kiemelt kép](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Ha elolvasta a [Társaságalapítás Tajvanon – alapok](/hu/columns/taiwan-company-establishment-basics) és a [Társaságalapítás Tajvanon – elmélyítő rész 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) írásokat, a Társaságalapítás Tajvanon – elmélyítő rész 2 (公司設立) anyagát is érdemes áttekintenie.
+Ha elolvasta a [Társaságalapítás Tajvanon – alapok](/hu/columns/taiwan-company-establishment-basics) és a [Társaságalapítás Tajvanon – elmélyítő rész 1](/hu/columns/taiwan-company-establishment-advanced-1) írásokat, a Társaságalapítás Tajvanon – elmélyítő rész 2 (公司設立) anyagát is érdemes áttekintenie.
 
 ​
 

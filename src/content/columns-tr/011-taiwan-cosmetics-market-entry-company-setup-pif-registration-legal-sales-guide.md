@@ -126,7 +126,7 @@ Tayvan satış hazırlığı aşağıdaki sırayla denetlenirse bir rejimin diğ
 - [Kozmetik etiketleme, tanıtım ve reklamın belirlenme ölçütleri (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Kozmetik reklam belirlenme ölçütlerinin resmi eki](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Sağlık ve Refah Bakanlığı (衛生福利部) — kozmetik reklam düzenlemesi bildirimi](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan — yabancı yatırım açıklaması](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan — yabancı yatırım açıklaması](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Ekonomi Bakanlığı Yatırım İnceleme Dairesi — rehber](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 Bu yazı, bir markanın Tayvan kozmetik pazarına girişine bağlı rejimi genel olarak açıklamaya yönelik eğitim belgesidir; somut bir ürüne veya reklama ilişkin hukuki görüş değildir ve izin ya da tescilin alınacağını, satışın mümkün olacağını veya bir işlem süresinin tutulacağını ileri sürmez. Giriş biçimi, ürün verileri, etiketleme ve reklam içeriği ile yetkili makamın en yeni uygulaması her işte doğrulanmalıdır.

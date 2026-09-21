@@ -126,7 +126,7 @@ Structura de bază a societății și a sucursalei se poate vedea în [Bazele î
 - [Criterii de determinare a etichetării, promovării și publicității cosmeticelor (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Anexa oficială a criteriilor de determinare a publicității cosmeticelor](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Ministerul Sănătății și Bunăstării (衛生福利部) — aviz asupra reglementării publicității cosmeticelor](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan — explicație asupra investiției străine](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan — explicație asupra investiției străine](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Departamentul de examinare a investițiilor al Ministerului Economiei — ghid](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 Acest text este un document educativ destinat să explice în mod general regimul legat de intrarea unei mărci pe piața cosmeticelor din Taiwan; nu este un aviz juridic asupra unui produs sau unei publicități concrete și nu afirmă că autorizarea sau înregistrarea vor fi obținute, că vânzarea va fi posibilă nici că un termen de tratare va fi ținut. Forma de intrare, datele produsului, conținutul etichetării și al publicității, și practica cea mai recentă a autorității competente trebuie confirmate în fiecare cauză.

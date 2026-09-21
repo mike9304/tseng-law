@@ -126,7 +126,7 @@ Về cấu trúc cơ bản của công ty và chi nhánh, quý vị có thể th
 - [Tiêu chuẩn Nhận định Nhãn mác, Tuyên truyền và Quảng cáo Mỹ phẩm (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Phụ lục chính thức của Tiêu chuẩn Nhận định Quảng cáo Mỹ phẩm](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Bộ Y tế và Phúc lợi (衛生福利部) — thông báo về quy định quảng cáo mỹ phẩm](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan — giới thiệu chung về đầu tư của người nước ngoài](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan — giới thiệu chung về đầu tư của người nước ngoài](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Hướng dẫn của Vụ Thẩm định Đầu tư, Bộ Kinh tế](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 Bài viết này là tài liệu mang tính giáo dục nhằm giải thích một cách khái quát chế độ liên quan đến việc tiến vào thị trường mỹ phẩm Đài Loan, không phải là ý kiến pháp lý về một sản phẩm hay một quảng cáo cụ thể, và cũng không bảo đảm việc cấp phép, việc đăng ký, khả năng bán hàng hay thời gian xử lý. Xin quý vị xác nhận riêng theo từng vụ việc hình thức tiến vào thị trường, tài liệu sản phẩm, nội dung nhãn mác và quảng cáo cùng thực tiễn mới nhất của cơ quan chủ quản.

@@ -126,7 +126,7 @@ De basisstructuur van vennootschap en bijkantoor (分公司) kan worden gezien i
 - [Criteria van vaststelling van etikettering, promotie en reclame van cosmetica (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Officiële bijlage van de criteria van vaststelling van de reclame van cosmetica](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Ministerie van Volksgezondheid en Welzijn (衛生福利部) — bekendmaking over de regulering van de reclame van cosmetica](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan — toelichting over buitenlandse investering](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan — toelichting over buitenlandse investering](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Dienst Investeringstoetsing van het ministerie van Economische Zaken — handleiding](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 Dit artikel is een educatief document bestemd om in het algemeen het stelsel te toelichten dat met de toetreding van een merk tot de cosmetische markt van Taiwan is verbonden; het is geen juridisch oordeel over een concreet product of een concrete reclame (廣告) en stelt niet dat de vergunning of de registratie zullen worden verkregen, dat de verkoop mogelijk zal zijn, noch dat een behandelingstermijn zal worden nagekomen. De toetredingsvorm, de productgegevens, de inhoud van etikettering en reclame, en de nieuwste praktijk van de bevoegde autoriteit moeten in elke zaak worden bevestigd.

@@ -126,7 +126,7 @@ Základní strukturu společnosti a pobočky lze vidět v [Základy založení s
 - [Kritéria posouzení označení, propagace a reklamy kosmetiky (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Oficiální příloha kritérií posouzení reklamy na kosmetiku](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Ministerstvo zdravotnictví a sociálních věcí (衛生福利部) — oznámení o regulaci reklamy na kosmetiku](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan — výklad zahraniční investice](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan — výklad zahraniční investice](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Odbor přezkumu investic Ministerstva hospodářství — pokyny](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 Tento text je vzdělávacím podkladem k obecnému vysvětlení režimu souvisejícího se vstupem na trh kosmetiky na Tchaj-wanu; není právním stanoviskem k jednotlivému výrobku nebo reklamě a neslibuje určený výsledek, povolení, registraci, možnost prodeje ani dodržení lhůty vyřízení. Formu vstupu, podklady k výrobku, obsah označení a reklamy a nejnovější praxi příslušného orgánu je třeba ověřit v každé věci zvlášť.

@@ -126,7 +126,7 @@ Struktur asas syarikat dan cawangan boleh dilihat dalam [Asas penubuhan syarikat
 - [Kriteria penentuan pelabelan, promosi dan pengiklanan kosmetik (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Lampiran rasmi kriteria penentuan pengiklanan kosmetik](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Kementerian Kesihatan dan Kebajikan (衛生福利部) — notis mengenai pengawalseliaan pengiklanan kosmetik](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan — penjelasan mengenai pelaburan asing](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan — penjelasan mengenai pelaburan asing](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Jabatan Semakan Pelaburan, Kementerian Hal Ehwal Ekonomi — panduan](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 Teks ini ialah dokumen pendidikan yang bertujuan menjelaskan secara umum rejim berkaitan masuknya jenama ke pasaran kosmetik Taiwan; ini bukan nasihat undang-undang mengenai produk atau pengiklanan konkret dan ia tidak menegaskan bahawa kebenaran atau pendaftaran akan diperoleh, bahawa jualan akan mungkin mahupun bahawa tempoh rawatan akan dipegang. Bentuk masuk, data produk, kandungan pelabelan dan pengiklanan, serta amalan terbaharu pihak berkuasa kompeten mesti disahkan dalam setiap kes.

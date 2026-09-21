@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Bild till artikeln](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-De som har läst [Bolagsbildning i Taiwan – grunder](/sv/columns/taiwan-company-establishment-basics) och [Bolagsbildning i Taiwan – fördjupning del 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) kan också ta del av Bolagsbildning i Taiwan – fördjupning del 2 (公司設立).
+De som har läst [Bolagsbildning i Taiwan – grunder](/sv/columns/taiwan-company-establishment-basics) och [Bolagsbildning i Taiwan – fördjupning del 1](/sv/columns/taiwan-company-establishment-advanced-1) kan också ta del av Bolagsbildning i Taiwan – fördjupning del 2 (公司設立).
 
 ​
 

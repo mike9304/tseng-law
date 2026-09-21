@@ -126,7 +126,7 @@ Grunnstrukturen for selskap og filial (分公司) kan ses i [Grunnlaget for sels
 - [Kriterier for fastleggelse av merking, promovering og reklame for kosmetikk (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Offisielt vedlegg til kriteriene for fastleggelse av reklame for kosmetikk](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Ministeriet for folkehelse og velferd (衛生福利部) — kunngjøring om regulering av reklame for kosmetikk](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan — redegjørelse om utenlandsk investering](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan — redegjørelse om utenlandsk investering](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Avdelingen for investeringsprøving under Ministeriet for økonomiske anliggender — veiledning](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 Denne artikkelen er et undervisningsdokument bestemt til alminnelig å belyse den ordningen som er knyttet til et merkes adgang til kosmetikkmarkedet i Taiwan; den er ikke en juridisk vurdering av et konkret produkt eller en konkret reklame (廣告) og fastslår ikke at tillatelsen eller registreringen vil bli oppnådd, at salget vil være mulig, eller at en behandlingsfrist vil bli overholdt. Adgangsformen, produktopplysningene, innholdet i merking og reklame og den nyeste praksisen hos den kompetente myndigheten skal bekreftes i hver sak.

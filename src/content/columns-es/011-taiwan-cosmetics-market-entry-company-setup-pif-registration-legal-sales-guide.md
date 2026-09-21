@@ -126,7 +126,7 @@ La estructura básica de la sociedad y de la sucursal puede verse en [Fundamento
 - [Criterios de Determinación del Etiquetado, la Promoción y la Publicidad de Cosméticos (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Anexo oficial de los Criterios de Determinación de la Publicidad de Cosméticos](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Ministerio de Salud y Bienestar (衛生福利部) — anuncio sobre la regulación de la publicidad de cosméticos](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan — explicación sobre la inversión extranjera](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan — explicación sobre la inversión extranjera](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Departamento de Revisión de Inversiones del Ministerio de Economía — guía](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 Este artículo es material educativo destinado a explicar de forma general el régimen relacionado con la entrada de una marca en el mercado de cosméticos de Taiwán; no es un dictamen jurídico sobre un producto o una publicidad concretos y no garantiza la obtención de una autorización o un registro, la posibilidad de venta ni el plazo de tramitación. La forma de entrada, los datos del producto, el contenido del etiquetado y de la publicidad, y la práctica más reciente de la autoridad competente deben confirmarse en cada asunto.

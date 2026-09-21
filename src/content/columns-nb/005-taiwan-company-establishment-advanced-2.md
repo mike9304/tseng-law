@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Utvalgt bilde](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Den, som har lest [Selskapsstiftelse i Taiwan – grunnlag](/nb/columns/taiwan-company-establishment-basics) og [Selskapsstiftelse i Taiwan – utdyping del 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1), kan likeledes gjøre seg kjent med Selskapsstiftelse i Taiwan – utdyping del 2 (公司設立).
+Den, som har lest [Selskapsstiftelse i Taiwan – grunnlag](/nb/columns/taiwan-company-establishment-basics) og [Selskapsstiftelse i Taiwan – utdyping del 1](/nb/columns/taiwan-company-establishment-advanced-1), kan likeledes gjøre seg kjent med Selskapsstiftelse i Taiwan – utdyping del 2 (公司設立).
 
 ​
 

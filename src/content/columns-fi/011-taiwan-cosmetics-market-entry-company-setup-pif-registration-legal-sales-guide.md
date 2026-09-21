@@ -126,7 +126,7 @@ Yhtiön ja sivuliikkeen (分公司) perusrakennetta käsitellään artikkelissa 
 - [Kriteerit kosmetiikan merkintöjen, promootion ja mainonnan toteamiselle (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [Virallinen liite kosmetiikan mainonnan toteamiskriteereihin](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Terveys- ja hyvinvointiministeriö (衛生福利部) — tiedote kosmetiikan mainonnan sääntelystä](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan — selostus ulkomaisesta sijoituksesta](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan — selostus ulkomaisesta sijoituksesta](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Talousministeriön sijoitustarkastusosasto — ohjeistus](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 Tämä artikkeli on opetusaineistoa, joka yleisesti selostaa merkin kosmetiikkamarkkinoille pääsyyn Taiwanissa liittyvää järjestelmää; se ei ole oikeudellinen arvio konkreettisesta tuotteesta tai konkreettisesta mainonnasta (廣告) eikä totea, että lupa tai rekisteröinti saataisiin, että myynti olisi mahdollista tai että käsittelyaikaa noudatettaisiin. Pääsymuoto, tuotetiedot, merkintöjen ja mainonnan sisältö sekä toimivaltaisen viranomaisen uusin käytäntö on vahvistettava kussakin asiassa.

@@ -126,7 +126,7 @@ PIF مجموعة مواد تُنظَّم بحيث يمكن الاستمرار ف
 - [معايير الاعتراف ببيانات مستحضرات التجميل وترويجها وإعلانها](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [الملحق الرسمي لمعايير الاعتراف بإعلان مستحضرات التجميل](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [إعلان وزارة الصحة والرفاه بتنظيم إعلان مستحضرات التجميل](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan: لمحة عن الاستثمار الأجنبي](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan: لمحة عن الاستثمار الأجنبي](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [إرشاد إدارة مراجعة الاستثمار بوزارة الاقتصاد](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 هذه المقالة مادة ذات غرض تعليمي لشرح أنظمة دخول سوق مستحضرات التجميل في تايوان على نحو عام، ولا تضمن رأيًا قانونيًا في منتج أو إعلان بعينه، ولا الإجازة أو التسجيل، ولا إمكانية البيع أو مدة المعالجة. ويُستحسن التحقق، بحسب كل حالة، من شكل الدخول ومواد المنتج ومضمون البيانات والإعلان وأحدث ممارسة الجهة المختصة.

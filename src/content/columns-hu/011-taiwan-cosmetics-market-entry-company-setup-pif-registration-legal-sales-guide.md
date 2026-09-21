@@ -126,7 +126,7 @@ A társaság és a fióktelep alapstruktúrája a [társaságalapítás alapjai 
 - [A kozmetikumok jelölésének, népszerűsítésének és reklámjának megállapítási mércéi (化粧品標示宣傳廣告認定準則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCODE=L0030099)
 - [A kozmetikai reklám megállapítási mércéinek hivatalos melléklete](https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000249593&lan=C)
 - [Egészségügyi és Jóléti Minisztérium (衛生福利部) — közlemény a kozmetikai reklám szabályozásáról](https://www.mohw.gov.tw/cp-4256-48110-1.html)
-- [Invest Taiwan — a külföldi beruházás ismertetése](https://investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01)
+- [Invest Taiwan — a külföldi beruházás ismertetése](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [A Gazdasági Minisztérium Beruházásvizsgáló Főosztályának útmutatója](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
 Ez a cikk a tajvani kozmetikai piacra lépéshez kapcsolódó rendszert általánosan ismertető, oktatási célú anyag; nem jogi vélemény egyedi termékre vagy reklámra, és nem ígér meghatározott eredményt az engedélyről, a nyilvántartásról, az értékesítési lehetőségről vagy az ügyintézési időtartamról. A belépési formát, a termékadatokat, a jelölés és a reklám tartalmát, valamint az illetékes szerv legújabb gyakorlatát ügyenként kell megerősíteni.

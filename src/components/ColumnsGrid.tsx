@@ -118,7 +118,7 @@ const GUIDANCE_FILTER_ALL_LABEL: Record<GuidanceLocale4, string> = {
   id: 'Semua',
   th: 'ทั้งหมด',
   fil: 'Lahat',
-  ar: 'الكل',
+  ar: 'اقرأ المزيد',
   de: 'Alle',
   es: 'Todo',
   fr: 'Tout',

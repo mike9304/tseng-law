@@ -310,7 +310,7 @@ const ELEMENTS = {
     hi: /परामर्श चरण/,
     sv: /rådgivningssteget/,
     da: /rådgivningsskridtet/,
-    nb: /rådgivningssteget/,
+    nb: /rådgivningsmøte/,
     fi: /neuvontavaihe/,
     cs: /krokem porady|krok porady/,
     hu: /nem helyettesíti a tanácsadást/,

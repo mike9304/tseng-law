@@ -519,8 +519,8 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     title: 'Kontorer',
     description: 'Adresser til Hovering International Law Firms kontorer i Taiwan.',
     officeLabel: 'Kontor',
-    mapPreviewLabel: 'Kartforhåndsvisning',
-    koreaOfficeTitle: 'Kontor Korea',
+    mapPreviewLabel: 'Forhåndsvisning av kartet',
+    koreaOfficeTitle: 'Kontoret i Korea',
     koreaAddressCardLabel: 'Adresse til kontoret i Korea',
     koreaMapLinkLabel: 'Se i Naver Map',
     reviewCountWord: 'omtaler',
@@ -528,8 +528,8 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     faxLabel: 'Faks',
     mapLinkLabel: 'Se på kartet',
     photoAlts: [
-      'Mottakelsesrommet på kontoret i Taipei, Hovering International Law Firm',
-      'Advokatrommet på kontoret i Taipei, Hovering International Law Firm',
+      'Resepsjonen på kontoret i Taipei, Hovering International Law Firm',
+      'Advokatenes arbeidsrom på kontoret i Taipei, Hovering International Law Firm',
       'Møterommet på kontoret i Taipei, Hovering International Law Firm',
     ],
     officeTitles: {

@@ -1,5 +1,5 @@
 ---
-title: "Unntak der arbeidstakere tross egen oppsigelse kan motta fratredelsesgodtgjørelse (資遣費)"
+title: "Unntak der arbeidstakere tross egen oppsigelse kan motta sluttvederlag (資遣費)"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
 lastmod: "2026-09-10"
 date_display: "13. september 2025"
@@ -9,19 +9,19 @@ categories:
 featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg"
 ---
 
-# Unntak der arbeidstakere tross egen oppsigelse kan motta fratredelsesgodtgjørelse (資遣費)
+# Unntak der arbeidstakere tross egen oppsigelse kan motta sluttvederlag (資遣費)
 
 ![Hovedbilde](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Som tidligere belyst er det i Taiwan ikke lett for arbeidstakere å motta fratredelsesgodtgjørelse (資遣費).
+Som tidligere belyst er det i Taiwan ikke lett for arbeidstakere å motta sluttvederlag (資遣費).
 
 ​
 
 Særlig når arbeidstakere selv sier opp (自請離職),
 
-kan de ikke motta fratredelsesgodtgjørelse (artikkel 18 i loven om arbeidsnormer, 勞動基準法),
+kan de ikke motta sluttvederlag (artikkel 18 i loven om arbeidsnormer, 勞動基準法),
 
-og dette skiller seg fra Korea.
+og dette skiller seg fra ordningen i enkelte andre land, for eksempel Korea.
 
 ​
 
@@ -29,7 +29,7 @@ Det finnes imidlertid **unntakstilfeller**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-I de følgende særlige situasjonene skal arbeidsgiveren utbetale fratredelsesgodtgjørelse til arbeidstakeren, også når denne selv sier opp (artikkel 14 i loven om arbeidsnormer, som anvender artikkel 17 tilsvarende, 勞動基準法第14條):
+I de følgende særlige situasjonene skal arbeidsgiveren utbetale sluttvederlag til arbeidstakeren, også når denne selv sier opp (artikkel 14 i loven om arbeidsnormer, som anvender artikkel 17 tilsvarende, 勞動基準法第14條):
 
 1. Når arbeidsgiveren ved inngåelsen av arbeidsavtalen (勞動契約) avgir en uriktig viljeserklæring (虛偽意思表示), så arbeidstakeren tar feil derav, og det består fare for skade
 
@@ -37,11 +37,11 @@ I de følgende særlige situasjonene skal arbeidsgiveren utbetale fratredelsesgo
 
 2. Når arbeidsgiveren, familiemedlemmer av arbeidsgiveren eller representanter av arbeidsgiveren (代理人) anvender vold overfor arbeidstakeren eller grovt fornærmer vedkommende (重大侮辱)
 
-3. Når det kontraktlige arbeidet kan skade arbeidstakerens helse, arbeidstakeren har anmodet arbeidsgiveren om forbedring, og dette forblir uten virkning
+3. Når det kontraktsmessige arbeidet kan skade arbeidstakerens helse, arbeidstakeren har anmodet arbeidsgiveren om forbedring, og dette forblir uten virkning
 
 4. Når arbeidsgiveren, dennes representant eller andre arbeidstakere lider av en lovbestemt smittsom sykdom (法定傳染病), det består smittefare for samarbeidende, og dette bringer arbeidstakerens helse alvorlig i fare
 
-5. Når arbeidsgiveren ikke utbetaler det kontraktlige arbeidsvederlaget (工作報酬) eller ikke tildeler arbeidstakere med akkordlønn (按件計酬) tilstrekkelig arbeid
+5. Når arbeidsgiveren ikke utbetaler det kontraktsmessige arbeidsvederlaget (工作報酬) eller ikke tildeler arbeidstakere med akkordlønn (按件計酬) tilstrekkelig arbeid
 
 6. Når arbeidsgiveren krenker arbeidsavtalen eller arbeidsretten, så arbeidstakerens rettigheter kan komme i fare
 
@@ -55,7 +55,7 @@ ikke utbetaler overarbeidsvederlag (加班費)
 
 eller ikke tilslutter arbeidstakeren til arbeidsforsikringen (勞保) eller sykeforsikringen (健保).
 
-I slike tilfeller skal arbeidsgiveren også da utbetale fratredelsesgodtgjørelse når arbeidstakeren selv bringer arbeidsavtalen til opphør.
+I slike tilfeller skal arbeidsgiveren også da utbetale sluttvederlag når arbeidstakeren selv bringer arbeidsavtalen til opphør.
 
 ​
 
@@ -77,7 +77,7 @@ Taiwans rett, hva enten skylden ligger hos selskapet
 
 eller hos arbeidstakeren,
 
-anerkjenner hos begge sider retten til ikke å utbetale fratredelsesgodtgjørelse eller å kreve fratredelsesgodtgjørelse.
+anerkjenner hos begge sider retten til ikke å utbetale sluttvederlag eller å kreve sluttvederlag.
 
 Sommetider ligger skyld hos begge sider,
 
@@ -85,11 +85,11 @@ og når begge tvistes,
 
 kan etter hvem som først med tilstrekkelig grunn bringer avtalen til opphør,
 
-fratredelsesgodtgjørelsen nektes eller kreves.
+sluttvederlaget nektes eller kreves.
 
 Derfor er i taiwanske arbeidskonflikter (勞資糾紛)
 
-''**tidspunktet**'' svært viktig.
+**tidspunktet** svært viktig.
 
 I de fleste tilfeller beskyttes den siden som har forberedt seg på forhånd.
 

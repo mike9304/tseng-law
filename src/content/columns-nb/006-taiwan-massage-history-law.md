@@ -1,5 +1,5 @@
 ---
-title: "Historie og retsstilling for massasje i Taiwan"
+title: "Historie og rettsstilling for massasje i Taiwan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
 lastmod: "2025-09-13"
 date_display: "13. september 2025"
@@ -9,120 +9,120 @@ categories:
 featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 ---
 
-# Historie og retsstilling for massasje i Taiwan
+# Historie og rettsstilling for massasje i Taiwan
 
 ![Utvalgt bilde](../images/006-taiwan-massage-history-law/featured-01.jpg)
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Har De opplevd tiden med de tradisjonelle frisørsalonger (理髮廳) i Taiwans tidlige år?
+Har du opplevd tiden med de tradisjonelle frisørsalongene (理髮廳) i Taiwans tidlige år?
 
-Måden, hvorpå håret ble vasket i de saloner, var meget særegen.
+Måten håret ble vasket på i disse salongene, var helt spesiell.
 
-Ud over klipping fandtes der forskjellige ytelser slik som barbering og ansiktspleie.
+I tillegg til klipping fantes det ulike tjenester slik som barbering og ansiktspleie.
 
-Og det vesentlige var, at man sittende kunne få hårvask med massasje av hodebunn, skuldre og hals.
+Og det viktigste var at man sittende kunne få hårvask med massasje av hodebunn, skuldre og nakke.
 
-1 klipping var allerede tilstrekkelig til å nyde denne ytelse på høyt niveau, så forholdet mellom pris og kvalitet var fremragende.
+1 klipp var nok til å få denne behandlingen på høyt nivå, så forholdet mellom pris og kvalitet var fremragende.
 
-Det lignede sterkt den vietnamesiske hårvask i dag.
+Det lignet mye på den vietnamesiske hårvasken i dag.
 
-Og slike frisørsalonger i taiwansk stil forbliver for mange mennesker i Taiwan en særpreget kulturel erindring.
+Og slike frisørsalonger i taiwansk stil er fortsatt et særpreget kulturminne for mange i Taiwan.
 
-(Avslører jeg dermed uforvarende min alder?)
+(Det røper kanskje hvor lenge siden det er.)
 
 ​
 
-Hvordan det enn forholder seg, når der tales om massasje (按摩),
+Uansett hvordan det henger sammen: når det er snakk om massasje (按摩),
 
-finnes der i Taiwan likeledes talrige massasjegater.
+finnes det også i Taiwan mange massasjegater.
 
-Massasjeinnretninger av enhver art står der side om side.
+Massasjesteder av alle slag ligger side om side.
 
-Der er massasje ved personer med synshemming (視障按摩), fodmassasje, oljemassasje, thailandsk massasje og andre former.
+Der finnes massasje utført av personer med synshemming (視障按摩), fotmassasje, oljemassasje, thaimassasje og andre former.
 
-I prinsippet kan enhver velge den massasje, der passer til den personlige smag, for at lette spenning.
+I prinsippet kan hver enkelt velge den massasjen som passer egen smak, for å løse opp spenninger.
 
-Og grunnen til, at der i dag finnes så mange massasjeinnretninger, kan henge sammen med denne 1 anmodning om grunnlovstolkning (釋憲).
+Og grunnen til at det i dag finnes så mange massasjesteder, kan henge sammen med denne 1 anmodningen om grunnlovstolkning (釋憲).
 
-Da Taiwan i 1980 utstedte og satte loven om velferd for personer med funksjonshemming (殘障福利法) i kraft,
+Da Taiwan i 1980 vedtok og satte i kraft loven om velferd for personer med funksjonsnedsettelse (殘障福利法),
 
-måtte i virkeligheten kun personer med synshemming (視障者) utøve massasjeyrket (按摩業).
+var det i praksis bare personer med synshemming (視障者) som fikk utøve massasjeyrket (按摩業).
 
-At noen uten synshemming (非視障者) utøvde dette yrke, var ulovligt.
+At noen uten synshemming (非視障者) utøvde dette yrket, var ulovlig.
 
-Denne lov holdt stand inntil 2003; dengang ansatte hr. Lin, der drev en frisørforretning,
+Denne loven sto ved lag til 2003; den gangen ansatte herr Lin, som drev en frisørsalong,
 
-medarbeidere uten synshemming til hårvask- og massasjeytelser, og politiet konstaterede det.
+medarbeidere uten synshemming til hårvask og massasje, og politiet slo ned på det.
 
-Ifølge den daværende rett fikk hr. Lin og de medarbeidere henholdsvis en administrativ bot (罰鍰) på TWD 40.000, TWD 10.000 og TWD 20.000 i ny taiwansk dollar (新臺幣).
+Etter datidens regler fikk herr Lin og de nevnte medarbeiderne hver sin administrative bot (罰鍰) på TWD 40.000, TWD 10.000 og TWD 20.000 i ny taiwansk dollar (新臺幣).
 
-Hr. Lin fant denne sanksjon meget urettferdig og anmodede om en grunnlovstolkning.
+Herr Lin mente sanksjonen var svært urettferdig og ba om en grunnlovstolkning.
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
 I Taiwan
 
-møter personer med synshemming talrige hindringer ved vekst, aktivitet, læring og utdanning, blant annet,
+møter personer med synshemming mange hindringer i oppvekst, aktivitet, læring og utdanning,
 
-og de yrke, de kan utøve, er meget begrensede.
+og yrkene de kan utøve, er sterkt begrenset.
 
-Derfor fastsatte den daværende lovgiver, til beskyttelse av personer med synshemming, der befandt seg i en svagere stilling,
+Derfor vedtok datidens lovgiver, for å verne personer med synshemming, som sto i en svakere stilling,
 
-en lov, der beskyttede arbeidet og eksistensretten (生存權) for personer med synshemming.
+en lov som vernet arbeidet og eksistensretten (生存權) til personer med synshemming.
 
-Med tidens gang og utvidelsen av forbrukermarkedet
+Etter hvert som tiden gikk og forbrukermarkedet vokste,
 
-lød imidlertid den oppfatning, etter at den blotte beskyttelse av rettighetene hos personer med synshemming innskrenket arbeidsretten hos personer uten synshemming overdrevent.
+kom likevel den oppfatningen at vernet av rettighetene til personer med synshemming grep uforholdsmessig inn i yrkesfriheten til personer uten synshemming.
 
-I debatten om yrkesrettighetene for personer med og uten synshemming fremkom talrige motstående meninger.
+I debatten om yrkesrettighetene til personer med og uten synshemming kom det mange motstridende syn.
 
-Der ble eksempelvis spurgt, om den skrevne regel, der kun tillot personer med synshemming massasje, ikke var forskjellsbehandling overfor personer uten synshemming,
+Det ble for eksempel spurt om regelen, som bare tillot personer med synshemming å gi massasje, innebar forskjellsbehandling av personer uten synshemming,
 
-og der ble tvivlet på, om denne regel virkelig hadde bidraget til beskyttelsen av arbeidet og eksistensen for personer med synshemming.
+og det ble stilt spørsmål ved om regelen virkelig hadde bidratt til å verne arbeidet og livsgrunnlaget for personer med synshemming.
 
-Til sist erklærte de store dommere (大法官) bestemmelsen, der kun tillot personer med synshemming å utøve massasjeyrket, for grunnlovsstridig (違憲).
+Til slutt erklærte forfatningsdomstolens dommere (大法官) bestemmelsen som bare tillot personer med synshemming å utøve massasjeyrket, grunnlovsstridig (違憲).
 
 ​
 
-På tilsvarende vis må i Korea, hvor talrige personer med synshemming tjener til livets opphold med massasje,
+Til sammenligning: i Korea, der mange personer med synshemming lever av massasje,
 
-som regel kun personer med synshemming, der har opnået et kompetansebevis, utøve massasjeyrket.
+kan som regel bare personer med synshemming som har oppnådd et kompetansebevis, utøve massasjeyrket.
 
 Riktignok har Koreas regering på et tidspunkt også utstedt massasjediplomer til personer uten synshemming,
 
-og talrige personer med synshemming har, av frygt for at miste deres eksistensgrunnlag, organiseret intense protester.
+og mange personer med synshemming har, i frykt for å miste livsgrunnlaget sitt, gjennomført kraftige protester.
 
-På nåværende tidspunkt tillater Korea stadig kun personer med synshemming, der besidder kvalifikasjonen, å utøve massasjeyrket,
+I dag tillater Korea fortsatt bare personer med synshemming som har kvalifikasjonen, å utøve massasjeyrket,
 
-og hvis noen uten den kvalifikasjon mottar et massasjevederlag fra en annen,
+og hvis noen uten denne kvalifikasjonen tar betalt for massasje,
 
-kan der ifølge den koreanske lov om medisinske ytelser (醫療法) idømmes fengsel i inntil 3 år.
+kan det ifølge den koreanske lov om medisinske ytelser (醫療法) idømmes fengsel i inntil 3 år.
 
-Hvis noen uten synshemming driver en massasjevirksomhet, kan der idømmes fengsel i inntil 5 år.
-
-​
-
-Dette viser, hvordan hvert land velger forskjellige tilgange til beskyttelse av de forskjellige gruppers rettigheter og interesser.
-
-Beskyttelsen av hver gruppes rettigheter og interesser endrer seg stadig med tiden,
-
-og lovgiveren søker en relativt balansert løsning til avklaring av interessekonflikten.
+Hvis noen uten synshemming driver en massasjevirksomhet, kan det idømmes fengsel i inntil 5 år.
 
 ​
 
-I dag velger talrige mennesker massasje for at lette spenning,
+Dette viser hvordan hvert land velger ulike måter å verne ulike gruppers rettigheter og interesser på.
 
-men i den prosess blir tilfeller av seksuell trakassering (性騷擾) eller usømmelige handlinger (猥褻) ved med å forekomme.
+Vernet av den enkelte gruppes rettigheter og interesser endrer seg stadig med tiden,
 
-Hvad der opprinnelig kun var mottakelse av massasje med henblik på lettelse av spenning,
+og lovgiveren søker en rimelig balansert løsning på interessekonflikten.
 
-kan bli et traume for livet, hvis man utsettes for seksuell trakassering.
+​
 
-Hvis De under en massasje i Taiwan merker ubehag eller noe fremmed,
+I dag velger mange massasje for å løse opp spenninger,
 
-meddeler De det straks eller ber om stans, så De beskytter Dem selv.
+men underveis forekommer det stadig tilfeller av seksuell trakassering (性騷擾) og usømmelige handlinger (猥褻).
 
-Hvis De mener å ha vært utsatt for seksuell trakassering,
+Det som i utgangspunktet bare var en massasje for å løse opp spenninger,
 
-går De med en betrodd venn eller med en advokat fra Taiwan (律師) på politistasjonen for å anmelde det.
+kan bli et traume for livet hvis man blir utsatt for seksuell trakassering.
+
+Hvis du under en massasje i Taiwan merker ubehag eller noe fremmed,
+
+si fra med en gang, eller be om at massasjen (按摩) stanses, slik at du verner deg selv.
+
+Hvis du mener å ha vært utsatt for seksuell trakassering,
+
+bør du gå til politiet sammen med en du stoler på, eller med en advokat i Taiwan (律師), og anmelde forholdet.

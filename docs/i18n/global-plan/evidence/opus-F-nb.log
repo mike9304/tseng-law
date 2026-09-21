@@ -1,0 +1,300 @@
+# WO-F-nb — Norwegian Bokmål fix lane (Opus 5), 2026-09-21
+
+Workspace: /Users/son7/Projects/tseng-law-fix-o-20260921 (branch fix/native-o-20260921)
+Scope written: src/content/columns-nb/*.md (18), src/data/international-guidance-nordic.ts
+(norwegianGuidanceContent), -team.ts, -offices.ts, -answers.ts, src/data/international-inquiry-copy.ts,
+src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.nb), plus one pinned test string
+(src/data/__tests__/guidance-disclosure-parity.test.ts, nb regex for the
+"not-the-consultation-step" element — see "Test expectation updated" below).
+No git add/commit/push/stash. No other locale touched.
+
+## 1. Rows applied
+
+### nb-a.md (guidance pack + columns 001–009)
+a#1  applied — inquiry consultationNotice + pages.contact items[1] now say "foregår bare på fire språk".
+a#2  applied (per ACCEPTED: institutter → ordninger) — "(資遣費; ikke å likestille med tilsvarende
+     ordninger i andre land)"; the 007 "er et institut, der" → "er en ordning som".
+a#3  applied — "Ikke bygg en beslutning i en virkelig sak bare på en artikkel."
+a#4  applied (reviewer wording) — llms discoveryNotice: "lover ingen plassering i søkeresultater,
+     ingen anbefaling, ingen anbefaling fra kunstig intelligens og ingen synlighet."
+a#5  applied as R2b — country-specific note added to both Taiwan–Korea treaty passages in 001 and to
+     the §6 treaty paragraph in 004. No numbers/dates deleted. No claim about Norwegian law added.
+a#6  applied — 004 "Selv når et koreansk morselskap går ind i Taiwan" → "Når et utenlandsk morselskap
+     etablerer seg i Taiwan … Korea brukes nedenfor bare som ett eksempel på et hjemland."
+a#7  applied — 008 FAQ + body: "I motsetning til det som gjelder i noen andre land — Korea er ett
+     eksempel —"; 009 "og dette skiller seg fra ordningen i enkelte andre land, for eksempel Korea."
+a#8  applied — 拘役 → "kortvarig frihetsstraff (拘役)" (both art. 9 and art. 90 sentences in 002);
+     大法官 → "forfatningsdomstolens dommere (大法官)" (006); 贍養費 → "underhold etter skilsmisse (贍養費)".
+     Note: ACCEPTED said 'ektefellebidrag' for 贍養費; I used "underhold etter skilsmisse", which is the
+     standard Bokmål family-law term and matches the body text further down in 007 (see §5).
+a#9  applied — "Wei Tseng (曾雋崴), advokat i Taiwan."
+a#10 applied (R3) — "går nøye gjennom hvert kravpunkt i saken og forklarer hva som kan kreves ut fra
+     de bevisene som finnes."
+a#11 applied (R3) — 008: "få vurdert om han hadde krav på sluttvederlag etter loven".
+a#12 verified — guidanceTeamCopy.nb.label was already 'VÅRT TEAM' (no 'OUR TEAM' left).
+a#13 verified — guidanceOfficeCopy.nb.label was already 'KONTORER'.
+a#14 applied — 'Fullstendig profil (på engelsk)'.
+a#15 SKIPPED per ACCEPTED + WO hard rule (external links unchanged). See §4.
+a#16 applied + swept (see §2).
+a#17 applied — 005 Q1 headline generalized to "overføres fra utlandet …"; the Korean bank/FX text kept
+     but explicitly labelled ("Eksempel Korea: …"); "Deres hovedbank i Korea" → "banken din i hjemlandet".
+a#18 applied — 005 Q5 "Kan selskapet ansette utenlandske statsborgere som arbeidstakere?"
+a#19 applied (R2d, neutral) — "Særlig når en familie har tilknytning til 2 eller flere land eller
+     områder — Taiwan (臺灣) og et annet land —"; "barnet skal bo i Korea" → "bo utenfor Taiwan".
+a#20 applied as a systemic sweep (De/Deres/Dem → du/din/deg) — see §2.
+a#21–a#46 all applied in the guidance pack (fagområder; bistår; brukbar; rådgivning på et annet språk
+     loves ikke; kontraktstvister + erstatning utenfor kontrakt; foreldreansvar for mindreårige barn
+     (未成年子女權利義務之行使或負擔); "Vi bistår siktede, tiltalte og fornærmede …"; Meny; Presentasjon av
+     advokatene og hvordan du tar kontakt; "…den operative ledelsen og det tilknyttede revisjonskontoret"
+     (mega/lawyers.description + guidanceTeamCopy.description + guidanceAnswers.nb.lawyers + partnerTitle
+     'Tilknyttet revisjonskontor'); "Nedenfor følger fagområdene …"; "tar deretter opp mulig arbeidsomfang,
+     dokumenter som fortsatt trengs"; "Jeg behersker ikke noen av de fire språkene — …"; driftes hos Vercel;
+     "et ikke-offentlig lager hos denne tjenesten"; nødlinje; "ikke et rådgivningsmøte"; "Når en forespørsel
+     blir sendt, varsler systemet kontoret."; "Hver lenke oppgir hvilket språk listen er på"; Forhåndsvisning
+     av kartet; "Korea-drift, Hovering International Law Firm"; "1 570 000 TWD" (a#42, see §4);
+     "Bachelor (B.A.) med to studieretninger, jus og finans"; English job titles removed from every role
+     line (a#44); 昊 («den vide himmelen»); "Kort beskrivelse av saken (på ditt språk)").
+a#47 applied — "2. Notarialbekreftelse og legalisering …" and "…kreve en notarialbekreftelse, en legalisering".
+a#48 applied — "(常設機構, PE)" → "(常設機構)".
+a#49 NOT applied as written — see §4 (checker rejects space thousands). Dots kept.
+a#50 applied — "Uformelt samtykke fra motparten eller bare bilder gir ikke rett til å forlate stedet".
+a#51 applied (R3 wording) — "Straffen for uaktsom legemsbeskadigelse (過失傷害) varierer med
+     omstendighetene; i publisert praksis forekommer blant annet fengsel i omkring 3 måneder. Det finnes
+     ingen typisk utgang…". Same treatment for the 4-month / 6-month sentence and for 緩刑 (R3).
+a#52 applied — "Ytelsesnormen (強制汽車責任保險給付標準), slik den ble endret 29. mai 2026, gjelder for
+     ulykker fra og med 1. juli 2026." (ISO dates removed from running text; checker still parses them.)
+a#53 applied (no new link added, to keep href parity) — "Har du flere spørsmål, kan du sende en
+     forespørsel via kontaktsiden; det loves ingen svartid."
+a#54 applied — "3. person (第三人)" / "en 3. (第三人)" → "tredjemann (第三人)".
+a#55 applied — Q&A dropped in 005 and 013: "Spørsmålene og svarene nedenfor er ment som hjelp for den …".
+a#56 applied — see a#8.
+a#57 applied — 006: "Til sammenligning: i Korea, der mange personer med synshemming lever av massasje, …".
+a#58 applied — see a#8.
+a#59 applied — "kjennelse nr. 4 for år 112 (2023) (112年憲判字第4號)"; "år 109 (2020)" in the 003 judgment
+     link labels. (Adds an "extra in translation" WARN — see §4.)
+a#60 applied — 008 frontmatter title + H1: "Sluttvederlag (資遣費) i Taiwan: når det utbetales, og når
+     det ikke gjør det" (double "??" gone). Heading count unchanged.
+a#61 applied — "En ekstraordinær hendelse (不可抗力) krever …".
+a#62 applied — 009: "det **tidspunktet** svært viktig" (ASCII '' quotes removed).
+a#63 applied — 008: "Jeg heter Wei Tseng (曾雋崴) og er advokat i Taiwan." + "Her gjennomgår jeg reglene
+     om sluttvederlag (資遣費) i Taiwan."; 003 close and 006 asides de-blogged (R7).
+a#64 applied — "Veiene utenlandske virksomheter og enkeltpersonforetak bruker for å komme inn på det
+     taiwanske markedet, varierer med hva virksomheten går ut på".
+a#65 applied + swept — 股東 "kapitaleier*" → "aksjeeier*" (88); "begrenset hefte" → "begrenset ansvar".
+
+### nb-b.md (columns 010–018)
+b#1  applied — 013 close: "*Denne artikkelen er bare alminnelig veiledning. Rådgivning med advokat
+     foregår ikke på norsk; bruk kontaktsiden hvis du vil ta kontakt.*" (no new link, href parity).
+b#2  applied — 簽約金 "tegningspremie*" → "signeringsbonus*" (7); "fastholdelsesbonussen" → "-bonusen" (4).
+b#3  applied — "muligheten for å erstatte arbeidstakeren (人力替補)"; "erstatningsvanskeligheten" →
+     "vanskeligheten ved å erstatte arbeidstakeren".
+b#4  applied both places — "uten at det trengs en særskilt tilsynsperson (監察人)" and "kan ved vedtektene
+     være uten tilsynsperson (監察人)". The 會計師 audit sentence keeps "revisor (會計師)".
+b#5  applied — "100 arbeidstakere meldt inn i den taiwanske arbeidstakertrygden (勞工保險)".
+b#6  applied — "ansvars- og skattestrukturen" (both body and FAQ).
+b#7  applied — 016 title + H1 "…for den etterlatte familien"; 親權 "foreldremyndighet*" →
+     "foreldreansvar*" throughout (27); "den gjenlevende forelder" → "…forelderen".
+b#8  applied — "Et utenlandsk merke kan bruke en lokal importør eller selv drive virksomheten i Taiwan".
+b#9  SKIPPED per ACCEPTED (and WO hard rule: external links unchanged).
+b#10 applied + swept — full Danish sweep, see §2.
+b#11 applied — "påtänkte" → "planlagte" (2).
+b#12 applied — "herunder å ta kjøretøyet ut av drift og å skifte det ut".
+b#13 applied — "som den virksomheten som transporterer passasjerer eller gods … mot vederlag"
+     ("passakerer" → "passasjerer", relative "der" → "som").
+b#14 applied — "prestator" → "leverandør".
+b#15 applied — 018 §8 "Til en første kontakt (rådgivning bare på engelsk, kinesisk, japansk eller
+     koreansk) kan du samle …"; 015 "…kan du rådføre deg med en advokat i Taiwan (rådgivning foregår
+     bare på engelsk, kinesisk, japansk eller koreansk)."
+b#16 applied — "Har du skadet deg på et treningssenter (健身房), er det viktig først å få den …"; De→du sweep.
+b#17 NOT applied as written — see §4 (dots kept).
+b#18 applied — "forbrukersak nr. 7 for år 109 (2020) (109年度消字第7號)".
+b#19 applied — 侵權行為 "rettsstridig handling" → "delikt (侵權行為)" (9).
+b#20 applied — "Hvilket syn bør den som trener, ha på saken?"
+b#21 applied — "Domskommentar: sak om akutt skiveprolaps etter at en nybegynner på treningssenteret …"
+     (image alt + link label, both occurrences).
+b#22 applied — 就醫交通費 "flyttingsregisteret" → "reiseoversikten" + "reise til og fra behandlingsstedet".
+b#23 applied — "og heller ikke at noen av dem vil føre fram" (成功 ≠ hell); also 013 "har mange lykkes med".
+b#24 applied — "tredjemann" without the "(3)".
+b#25 applied — "har antiinflammatorisk virkning eller dreper bakterier"; "acne" → "akne" (3).
+b#26 applied — 011 §2 body now opens "Produktregistrering og PIF er 2 ulike ordninger."; §1 already
+     opened self-standing ("Stiftelse er ikke alltid påkrevd.").
+b#27 applied — "Denne artikkelen er allmenn juridisk informasjon …".
+b#28 applied — Q&A + 😊 removed from 013.
+b#29 applied — "**Merknad:**" (fullwidth ： gone).
+b#30 applied — "F.eks.: er forretningsgrenen servering …" (both examples).
+b#31 applied — "men prøvingen tar sikte på om planen er reell, ikke på at utdanningen skal treffe
+     bransjen nøyaktig."
+b#32 applied in part — "**Q.**" → "**Spørsmål.**". The guillemet half is NOT applied, see §5.
+b#33 applied (R7b) — 014 §1 opens "Avtalen er ikke automatisk ugyldig. Ifølge artikkel 15-1 …".
+b#34 applied — "kan neppe erstatte den opplysningen som skulle ha vært gitt da avtalen ble inngått."
+b#35 applied — "blannet" → "blandet"; the following Danish relative "der" → "som".
+b#36 applied — "når den ene av foreldrene ikke kan utøve foreldreansvaret (親權) for det mindreårige
+     barnet"; same calque fixed in 007 (未成年子女權利義務之行使或負擔 kept as gloss).
+b#37 applied — "stedfortredende arv (代位繼承)" (4) and the "inntrelsesforholdet" typo.
+b#38 applied — "livsarvinger i rett nedstigende linje (直系血親卑親屬) tilhører 1. arveklasse i den
+     lovbestemte arvefølgen". "1." kept rather than "første" — see §4 (number parity).
+b#39 applied — "Formuesundersøkelsen er ikke bare en kartlegging av rettigheter; den skal også
+     klarlegge gjelden og risikoen i prosedyrene."
+b#40 applied — "følger ikke all utenlandsk investering samme søknadsvei og samme prosedyre";
+     "forskjellige skranker" → "andre søknadsveier"; "investeringsvej" → "investeringsvei".
+b#41 applied — 交通部 → "samferdselsdepartementet" throughout 017 (14).
+b#42 applied — "連江、馬祖" (nakaguro gone, 2).
+b#43 applied — "velge den enheten som passer til de faktiske forholdene" (FAQ + body).
+b#44 applied — "Avsnittet over beskriver bare fremgangsmåten, ikke hvordan en kontrakt skal utformes."
+b#45 applied — "Deltakere som ikke driver den daglige virksomheten, kan utøve tilsynsrett".
+b#46 applied — "rekker en driftsoversikt".
+b#47 applied — "å holde et reservedelslager i Taiwan for akutte behov".
+b#48 applied — "siger" → "sier"; folded into the Danish sweep.
+
+## 2. Systemic sweeps (pattern → instances changed, all 18 columns unless noted)
+
+Address / register
+- De/Deres/Dem (polite 2nd person) → du/deg/din/ditt: 57 in the columns + 61 strings in the guidance
+  pack (nordic.ts, inquiry copy, answers, llms). Demonstrative "De …" ("De følgende scenariene",
+  "De foregående tall", …) deliberately left alone: 29 remaining occurrences, all demonstrative.
+
+Danish leakage (the reviewer's "004–007 worst" + "014/016/017 flooded" patterns; swept over all 18)
+- relative/expletive `der` → `som` / `det`: 205  (127 ", der" + 40 expletive + 38 individually reviewed)
+- `dog`/`Dog` → `imidlertid`/`Likevel`: 61
+- `blot/blott/blotte` → `bare` / "X alene" / "det at": 22 (each rewritten in context)
+- `pågjeldende` → `aktuelle`: 13
+- Danish -rne plurals (forsikringerne, systemerne, fakturaerne, parterne, aksjerne, reglerne,
+  normerne, ektefellerne, sikkerheterne, trustdokumenterne, forsikringskontrakterne, investorerne,
+  Klausulerne, transportnormerne, kvitteringerne, arvingerne, byrderne, descendenterne): 24
+- Danish neuter -igt/-ligt → -ig/-lig (kontraktligt, virkeligt, årligt, urimeligt, betydeligt,
+  forskjelligt, Rimeligt, rettmessigt, ulovligt): 11
+- `-mæssig` → `-messig` (skattemæssige, driftsmæssige, Skattemæssigt): 4
+- `brug/brugen/brugte/ervervsbrug` → `bruk…/næringsbruk`: 6; `nummerplader*` → `kjennemerke*`: 4
+- af-/ej-/-ede/-get Danish forms (afspejling, afgifter, aftalt, rejse-, leje, eje, plejeudgifter,
+  professionel, modtage(t), deltaget, krevede, organiserede, legaliserede, handlede, anbefalet,
+  anslået, balancedagen, beregningsmåden, måden, fandtes, befandt, svagere, opbevarer, misbruges,
+  tilblevne, gemmes, redegør, tydeliggøres, forsvinde, tillid, anderledes, sådan, meget, behøves,
+  sikkerhed, situationer, Hvornår, siger, udlannet, retsstilling, Ud over, sygdom, stk., blannet,
+  Navnlig, kaldes, Medmindre, rimeligt, nøjere, kvitteringerne, opgjort, opgaven, tilladte,
+  descendenter, -hed nouns, fremlægge, mærke, værdi(en), repræsentere, Indhent, Drejer, begynd,
+  Blandt, besitter, adskilt, oversigt, hvori, gengjeld, derudover, grundbilag, præsentationen,
+  præciserer, næppe, Tillægsskatt, sætning, kommunikationsberetninger, internationalt,
+  kontraktredaktionen, driftsmåde, mottagelse, fordelingsmåde, over for, end→enn, at+infinitiv→å+inf,
+  hvorfor→og derfor, henblikk→sikte, antages, uforudsigelig, beskadigelse, passakerer, "handel" for
+  業→"virksomhet", situationer, påtänkte, taking, prestator): 232 further single-token replacements
+  across the 18 files (each verified in context; counts printed per rule during the run).
+- Swedish `påtänkte`: 2. English `taking`: 1. French/Italian `prestator`: 1. `force majeure`: 1.
+
+Terminology (R8)
+- 資遣費 "fratredelsesgodtgjørelse*" → "sluttvederlag/sluttvederlaget" (34) — aligns the columns with the
+  guidance pack, which already used "sluttvederlag".
+- 侵權行為 → "delikt (侵權行為)" (9); 股東 → "aksjeeier*" (93); 母公司 "moderselskap" → "morselskap" (24);
+  親權 → "foreldreansvar*" (27); 拘役 (2); 大法官 (1); 緩刑 → "betinget (緩刑)"; 背信 → "tillitsbrudd (背信)";
+  監察人 → "tilsynsperson (監察人)" (2); 勞工保險 → "arbeidstakertrygden (勞工保險)"; 工作規則 → "arbeidsreglement";
+  公開發行公司 → "selskap som har gjennomført offentlig aksjeutstedelse (公開發行公司)" (2);
+  簽約金/留任獎金/人力替補 (see b#2/b#3); 交通部 (14); 就醫交通費 (1); 辭職 "fratredelsesviljeserklæringen" →
+  "arbeidstakerens oppsigelse" (4); 代位繼承 (5); 業 "handel" → "virksomhet" (13).
+- 項 "stk. N" (Danish subsection marker) → "N. ledd": 14.
+
+Typography (R6 / R6b)
+- ISO dates in running text → Norwegian order ("29. mai 2026", "1. juli 2026"): 003 (2 dates).
+- Fullwidth CJK punctuation outside Chinese glosses: ： (1), ・ (2) → ASCII/Norwegian.
+- Ordinals as words where the checker allows it: "1./2. instans" → "første/andre instans" (9);
+  "3. person/3. (第三人)" → "tredjemann" (7). Digits kept everywhere the checker needs them (§4).
+- ROC years glossed with the Gregorian year: 112→(2023) ×4, 109→(2020) ×3.
+
+Structure / register (R7, R7b)
+- FAQ answers pasted as section openings made self-standing: 007 §3, 007 §7, 010 §5, 011 §2, 014 §1,
+  016 §3, 016 §7, 017 §1, 017 §3 (9 sections). Heading counts and block counts unchanged everywhere.
+- Blog register removed: "legg igjen en kommentar" (2), "??" in title+H1 (2), 😊 (1), "Q&A" (2),
+  "**Q.**" heading (1), "Jeg var WEI" (1), "God dag, jeg er …" (1), "Jeg håper de er til hjelp" (1),
+  the "min alder" aside reworded (1).
+
+Related-link labels (R1 follow-up)
+- "[Hvordan De når kontoret](/nb/contact)" → "[Slik når du kontoret](/nb/contact)" (3), matching the
+  retitled guidance page. Targets untouched.
+
+Guidance pack, additional German-pivot sweeps inside the nb strings only
+- "arbeidsgruppe*/gruppe*" (practice areas) → "fagområde*" (17); "følger klienter" → "bistår klienter" (4);
+  "utlove*/utlover" → "love*/lover" (9); "skritt" → "trinn" (7); "prøving(sskritt)" → "kontroll/forsøk" (5);
+  "ytelse" (Leistung) → "rådgivning/tjeneste" (5); "artikelliste" → "artikkelliste" (4).
+
+## 3. Test expectation updated (the one change outside the content scope, permitted by the WO)
+src/data/__tests__/guidance-disclosure-parity.test.ts:313
+  -  nb: /rådgivningssteget/,
+  +  nb: /rådgivningsmøte/,
+Reason: the row a#37 wording "denne siden er ikke rådgivningssteget" is exactly the German coinage the
+reviewer flagged; the test pinned the old string. Nothing else in tests was touched.
+(Two other near-misses were resolved WITHOUT touching tests: the "not-an-appointment" element pins
+/\btime\b/, and "time" is in fact the idiomatic Bokmål word for an appointment, so I reverted my own
+"møtetid" edit; and the "english" structural check twice flagged a rewritten sentence that had become
+Latin-only with ≥3 English stopwords — both were rephrased, keeping a Chinese gloss, not test-edited.)
+
+## 4. Checker constraints I had to respect (noted per the WO)
+- Thousands separator: a#49 and b#17 ask for space ("500 000", "25 000 000"). The checker parses nb
+  with NUMBER_THOUSAND_STYLE 'dot'; "25 000 000 TWD" tokenizes as 25 / 0 / 0, i.e. the source amount goes
+  MISSING and `numbers` FAILs. Verified with extractNormalizedNumbers before deciding. Dots therefore
+  kept in the columns (TWD 500.000, TWD 25.000.000, 1.570.000 …), as ACCEPTED-nb allows ("else keep").
+  The guidance pack is not covered by the checker, so a#42 there uses the Norwegian form "1 570 000 TWD".
+- Spelled-out numerals: "ett"/"én"/"tjue" are NOT in the checker's nb word-numeral lexicon, so
+  "1 år" → "ett år" or "20 lastebiler" → "tjue lastebiler" would drop a source token and FAIL. Digits kept
+  for those. Words that ARE in the lexicon (to, tre, fem, seks, ti, tolv) and the R11 lexical items
+  (tredjemann, første/andre instans) were spelled out.
+- b#38 "rang 1" → "1. arveklasse" rather than "første arveklasse", for the same reason (제1순위 in the
+  source carries a 1 that is not stripped by R11).
+- ROC-year glosses (a#59 / b#18) add a year that is not in the Korean source, so 003/007/010 now show
+  `numbers  WARN  extra in translation`. WARN does not fail the checker; summary is PASS 18/18.
+  Files with a numbers WARN after the fix: 003 (2020×2, 2023), 006 (1×2), 007 (2023×4), 010, 018.
+
+## 5. Reviewer rows I did NOT apply (and why)
+- b#32, guillemet half ("French/German guillemets « » in 013, 015, 017"): NOT applied. RULEBOOK-FIX R6
+  explicitly lists nb among the locales that DO use « », and Norwegian typography uses «…» as its primary
+  quotation marks. Changing them would have made the files less native, not more. The "**Q.**" half of
+  the row was applied.
+- a#15 / b#9 (Hangul-slug wei-wei-lawyer.com link in 005; Invest Taiwan `lang=jpn` link in 011): skipped
+  per ACCEPTED-nb and the WO hard rule that external links stay byte-identical. Both are still live in
+  the files; they need a supervisor decision, not a translator edit.
+- a#5's second half ("For norske mottakere gjelder i utgangspunktet intern taiwansk kildeskatt (vanligvis
+  21 %)"): NOT applied as a Norway-specific statement. ACCEPTED/R2 forbid adding claims about the reader's
+  own country. I used the neutral R2b framing instead ("Om det finnes en skatteavtale mellom Taiwan og ditt
+  eget land … må undersøkes særskilt"). The 21 % internal rate already stands in 001 §5 as a Taiwan fact.
+- a#8's 贍養費 gloss: ACCEPTED proposed 'ektefellebidrag'; I used "underhold etter skilsmisse (贍養費)",
+  which is the term Norwegian family lawyers use for post-divorce maintenance and matches the body text
+  the reviewer himself praised. Flagging it as a deliberate deviation.
+- a#53 / b#1 suggested inserting a `[Kontakt](/nb/contact)` link. NOT done: the `links` check compares
+  href counts against the Korean source, and those spots have no link in the source. The sentences point
+  to the contact page in prose instead.
+- 018 b#44 offered "delete the stray sentence". I kept a sentence (rewritten) rather than deleting, because
+  deleting would change the block count the checker compares.
+
+## 6. Residual issues a human should look at (not fixable inside this WO)
+- The conservative "definite article + indefinite noun" pattern ("det taiwanske datterselskap", "den
+  taiwanske filial") is still pervasive in 001/002/004/007/014/016/017. It is attested formal Bokmål, it
+  was not on any accepted row, and normalizing it is a full re-translation rather than a token sweep.
+- 008 and 009 frontmatter `url:` values are raw Hangul (canonical source metadata) — untouched by rule.
+- 011 links to Invest Taiwan with `lang=jpn`; 005 links to a percent-encoded Hangul blog slug (see §5).
+
+## 7. §Verify — verbatim output
+=== node scripts/check-column-translation.mjs --dir src/content/columns-nb --lang nb 2>&1 | tail -8 ===
+forbidden      PASS   
+hanzi          PASS   han=123
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+=== grep -rn "[변호사 검수 필요]" src/content/columns-nb src/data | wc -l ===
+       0
+
+=== npx tsc --noEmit -p tsconfig.json && echo TSC_OK ===
+TSC_OK
+
+=== npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 ===
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+=== git status --short | wc -l ===
+      26
+
+Pass criteria: checker summary PASS 18/18 — OK; markers 0 — OK; TSC_OK — OK; tests 2770 passed / 160 files — OK.
+
+(Note: the captured `git status --short | wc -l` is 26 — that run preceded the creation of this log
+file itself; re-running it now gives 27 = 25 modified sources + 1 permitted test file + this log
++ the untracked WO-F-nb.txt. Nothing outside the WO write scope is modified.)

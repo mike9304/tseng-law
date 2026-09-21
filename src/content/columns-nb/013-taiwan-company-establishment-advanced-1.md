@@ -13,13 +13,13 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Forsidebilde](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-For nylig har tallrike personer med hell stiftet et selskap (公司) i Taiwan og oppnådd et arbeidsvisum samt et oppholdskort for utlendinger (外僑居留證),
+I det siste har mange lykkes med å stifte et selskap (公司) i Taiwan og oppnådd et arbeidsvisum samt et oppholdskort for utlendinger (外僑居留證),
 
 og de spørsmålene som ofte stilles ved stiftelsen, er samlet nedenfor.
 
 Den som har lest [**grunnlaget for selskapsstiftelsen**](/nb/columns/taiwan-company-establishment-basics), kan deretter også konsultere denne utførligere fordypningen.
 
-De følgende spørsmål og svar (Q&A) sikter mot å hjelpe personer som vurderer en selskapsstiftelse i Taiwan. 😊
+Spørsmålene og svarene nedenfor er ment som hjelp for den som vurderer en selskapsstiftelse i Taiwan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
@@ -33,7 +33,7 @@ og om utenlandske aktører ikke innfører midler under et annet påskudd.
 
 Ved utarbeidelsen av investeringsplanen trenger den nøyaktige selskapsadressen ikke å opgis; angivelse av området er tilstrekkelig (eksempel: byen Taipei). ​
 
-Når senere selskapets forberedelseskonto (公司籌備處帳戶) åpnes i banken, prøver tallrike banker dog leieavtalen (租賃契約) og inspiserer selskapsadressen på stedet.
+Når senere selskapets forberedelseskonto (公司籌備處帳戶) åpnes i banken, prøver tallrike banker imidlertid leieavtalen (租賃契約) og inspiserer selskapsadressen på stedet.
 
 En medarbeider ved en taiwansk bank har personlig sagt til meg at
 
@@ -43,11 +43,11 @@ Allerede i grunnlagsteksten har en leser anført at kontoåpningen viste seg å 
 
 Fordi tilfellene av hvitvasking (洗錢) i Taiwan er svært tallrike, blir åpningen av bankkonti stadig strengere.
 
-**Merknad**：
+**Merknad:**
 
 Fordi prøvingen av investeringsplanen også tar tid,
 
-bør De utarbeide investeringsplanen og samtidig søke selskapets registreringsadresse.
+bør du utarbeide investeringsplanen og samtidig søke selskapets registreringsadresse.
 
 Ifølge artikkel 9 i forskriften om utenlandsk investering (外國人投資條例) skal det godkjente innskuddet ankomme fullt ut innen den fristen som den kompetente myndighet har fastsatt (核定期限); fristen skal bekreftes i godkjenningsakten i hver sak (i praksis fastsettes den ofte omkring 1 år).
 
@@ -63,11 +63,11 @@ Det er mulig.
 
 Banken krever som regel en dobbelt identitetskontroll,
 
-og uten oppholdskort kan De hos Taiwans immigrasjonsmyndighet søke om ‘**grunndataarket**(統一證號基本資料表)’.
+og uten oppholdskort kan du hos Taiwans immigrasjonsmyndighet søke om ‘**grunndataarket**(統一證號基本資料表)’.
 
 Utstedelsen er mulig samme dag,
 
-men immigrasjonsmyndigheten (移民署) er svært travelt besøkt; De bør derfor komme tidlig og trekke et nummer.
+men immigrasjonsmyndigheten (移民署) er svært travelt besøkt; du bør derfor komme tidlig og trekke et nummer.
 
 ​
 
@@ -75,13 +75,13 @@ men immigrasjonsmyndigheten (移民署) er svært travelt besøkt; De bør derfo
 
 Prøvingskommisjonen under Ministeriet for økonomiske anliggender prøver riktignok investorens bakgrunn,
 
-men prøvingen er ikke overdrevent streng.
+men prøvingen tar sikte på om planen er reell, ikke på at utdanningen skal treffe bransjen nøyaktig.
 
-De kan anføre ulike yrkeserfaringer, herunder bierverv,
+Du kan oppgi ulike yrkeserfaringer, herunder bierverv,
 
 og redegjøre så utførlig at de prøvende personene kan overbevises.
 
-Om dette punktet bør De drøfte dette grundig med en advokat i Taiwan.
+Om dette punktet bør du drøfte dette grundig med en advokat i Taiwan.
 
 ​
 
@@ -89,11 +89,11 @@ Om dette punktet bør De drøfte dette grundig med en advokat i Taiwan.
 
 Selskapsstiftelsen varer omkring **3 måneder**, oppnåelsen av arbeidstillatelsen (工作許可) og av oppholdskortet omkring **1 måned**,
 
-derfor bør De legge avtalens ikrafttredelsesdato så sent som mulig.
+derfor bør du legge avtalens ikrafttredelsesdato så sent som mulig.
 
 Dessuten gir utleieren i leieavtaler for butikklokaler i Taiwan ofte leieren en „**innredningsperiode**“ (裝潢期間).
 
-Dette er en periode fritatt for leie; De kan forhandle herom.
+Dette er en periode uten leie; det kan du forhandle om.
 
 For en utlending er det ikke enkelt å leie et butikklokale, og depositumet (押金) i Taiwan er snarere lavt (vanligvis 2 måneder), så utleierens beskyttelse er begrenset;
 
@@ -103,7 +103,7 @@ Derfor anbefaler jeg å søke driftsadressen tidlig.
 
 Forløper forhandlingen med utleieren ikke gnidningsfritt,
 
-kan De om nødvendig foreslå en notarial bekreftelse av leieavtalen (公證) eller et supplerende depositum.
+kan du om nødvendig foreslå en notarial bekreftelse av leieavtalen (公證) eller et supplerende depositum.
 
 ​
 
@@ -111,7 +111,7 @@ kan De om nødvendig foreslå en notarial bekreftelse av leieavtalen (公證) el
 
 Det avhenger av selskapets forretningsgrener (營業項目).
 
-Eks.) Er forretningsgrenen servering, og man vil leie et kommersielt kontorlokale, vil åpningen av bankkontoen være svært vanskelig.
+F.eks.: er forretningsgrenen servering, og man vil leie et kommersielt kontorlokale, vil åpningen av bankkontoen være svært vanskelig.
 
 Som allerede anført prøver banken leieavtalen og inspiserer selskapsadressen på stedet.
 
@@ -119,15 +119,15 @@ Dessuten krever byadministrasjonen (市政府) ved den endelige selskapsregistre
 
 ved et kommersielt kontorlokale er selskapsregistreringen (公司登記) da ikke mulig.
 
-Eks.) Dreier det seg om forretningsgrener (營業項目) som er mulige i et kommersielt kontorlokale, slik som reklame eller engros, kan selskapet stiftes i et kommersielt kontorlokale. Før inngåelsen av leieavtalen
+F.eks.: dreier det seg om forretningsgrener (營業項目) som er mulige i et kommersielt kontorlokale, slik som reklame eller engros, kan selskapet stiftes i et kommersielt kontorlokale. Før inngåelsen av leieavtalen
 
-bør De kontrollere dette på forhånd.
+bør du kontrollere dette på forhånd.
 
-*Hvis De har behov for støtte eller en samtale om taiwansk rett, så legg igjen en kommentar eller ta kontakt.*
+*Denne artikkelen er bare alminnelig veiledning. Rådgivning med advokat foregår ikke på norsk; bruk kontaktsiden hvis du vil ta kontakt.*
 
 ---
 
 > Se også:
 > - [Hvilke saker vi behandler](/nb/services)
 > - [Hoverings internasjonale team](/nb/lawyers)
-> - [Hvordan De når kontoret](/nb/contact)
+> - [Slik når du kontoret](/nb/contact)

@@ -381,7 +381,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     title: 'Hovering 国际团队',
     description:
       'Hovering 律师、运营主管与合作会计师的简介。',
-    representativeTitle: '主持律师',
+    representativeTitle: '主任律师（主持律師）',
     teamTitle: '律师与同事',
     partnerTitle: '合作会计师',
     introLabel: '简介',
@@ -389,19 +389,19 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     experienceLabel: '经历',
     photoAltPrefix: '照片',
     workingLanguagesLabel: '工作语言',
-    fullProfileLabel: '完整简介 (English)',
+    fullProfileLabel: '完整简介（英文）',
     keyFactsHeading: '律师曾雋崴 — 要点',
     qualificationLabel: '资格与事务所',
     qualificationSentence:
-      '{name} 具有台湾执业资格，为 {firm} 的主持律师。',
+      '{name} 具有台湾执业资格，为 {firm} 的主任律师。',
     practiceLabel: '主要领域',
     consultationLanguagesLabel: '咨询语言',
     roles: {
-      'tseng-junwei': '台湾主持律师 (Managing Attorney)',
-      'chang-rongxuan': '台湾律师 (Taiwan Attorney)',
+      'tseng-junwei': '台湾主任律师（Managing Attorney）',
+      'chang-rongxuan': '台湾律师（Taiwan Attorney）',
       'chang-fangyu': '律师助理',
-      'son-jungmin': '韩国运营主管 (Korea Operations Manager)',
-      'huang-shengping': '合作会计师 (Partner CPA)',
+      'son-jungmin': '韩国运营主管（Korea Operations Manager）',
+      'huang-shengping': '合作会计师（Partner CPA）',
     },
   },
   ms: {
@@ -1751,17 +1751,17 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         '事务所在台湾以英语、日语、韩语和中文处理企业与个人事项。',
-        '曾代理一名韩国学生因健身房受伤提出的损害赔偿，并取得新台币 157 万元的一审判决。',
+        '曾代理一名韩国学生因健身房受伤提出的损害赔偿，并取得新台币157万元的一审判决。',
       ],
       education: [
-        '硕士（M.S.），Institute of Finance, National Taiwan University',
-        '学士（B.A.），政治大学法律与金融双主修',
-        '神户大学与早稻田大学交换学生',
+        '硕士（M.S.），国立台湾大学财务金融研究所（Institute of Finance, National Taiwan University）',
+        '学士（B.A.），国立政治大学法律与金融双主修',
+        '神户大学、早稻田大学交换学生',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        '法律扶助基金会台中分会（Legal Aid Foundation, Taichung Branch）',
       ],
     },
     'chang-rongxuan': {
@@ -1769,9 +1769,9 @@ export const guidanceTeamBios: Record<
         '此前任职于教育部法制单位，侧重行政与民事事项。',
         '具有高校、教师权利与行政救济方面的经验。',
       ],
-      education: ['法学学士（LL.B.），National Chung Hsing University'],
+      education: ['法学学士（LL.B.），国立中兴大学（National Chung Hsing University）'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        '教育部法制处（Ministry of Education, Legal Affairs Division）',
         '律师，Hovering International Law Firm',
       ],
     },
@@ -1780,7 +1780,7 @@ export const guidanceTeamBios: Record<
         '律师助理，多年在多家事务所担任资深律师助理，负责诉讼支持、公司法与外资。',
         '协助程序、公司设立、外资核准、证照申请以及韩国与台湾之间的往来。',
       ],
-      education: ['法学学士（LL.B.），Tunghai University'],
+      education: ['法学学士（LL.B.），东海大学（Tunghai University）'],
       experience: [
         'Senior Paralegal, Boyin Law Firm',
         'Senior Paralegal, Muyang International Law Firm',
@@ -1791,12 +1791,12 @@ export const guidanceTeamBios: Record<
         '协调韩国委托人的咨询行程与沟通。',
         '以信息科学为背景，通过文件系统与工作流程支持部门之间的往来。',
       ],
-      education: ['学士（B.S.）信息科学，National Cheng Kung University'],
+      education: ['信息科学学士（B.S.），国立成功大学（National Cheng Kung University）'],
       experience: ['韩国运营部门，Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        '完成政治大学会计学学士与硕士课程，目前主持一家会计师事务所。',
+        '完成国立政治大学会计学学士与硕士课程，目前主持一家会计师事务所。',
         '协助企业客户进行法律、税务与财务风险的综合分析。',
       ],
       education: [

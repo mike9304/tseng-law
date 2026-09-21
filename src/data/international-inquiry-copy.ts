@@ -744,7 +744,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       '咨询以四种语言进行：英语、中文、日语和韩语。',
     methodConfirmationNotice:
-      '若您无法使用这四种语言中的任何一种，请选择「沟通方式须待确认」。我们会回复，以审视是否存在可行的沟通方式；不以其他语言提供服务，也不承诺回复时限。',
+      '若您无法使用这四种语言中的任何一种，请选择“沟通方式须待确认”。我们会回复，评估是否有可行的沟通安排；不以其他语言提供服务，也不承诺回复时限。',
     preparationNotice:
       '您可以用自己的语言撰写案情摘要。原文会按您写下的内容保存，不会被自动翻译。',
     heading: '提交咨询请求',
@@ -765,7 +765,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     preferredConsultationLanguageLabel: '您希望用于咨询的语言',
     originalTextLabel: '事项的简短说明（用您的语言）',
     originalTextPlaceholder:
-      '请说明发生了什么、您需要何种协助，以及期限（若有）。请勿写下护照号码、身份证件号码或银行账户资料。',
+      '请说明发生了什么、您需要何种协助，以及期限（若有）。请勿写下护照号码、身份证件号码或银行账户信息。',
     nameLabel: '姓名',
     emailLabel: '电子邮件',
     consentLabel:
@@ -780,10 +780,10 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       '此项目尚无本页语言的版本。标明原文语言的链接会打开原文。',
     unavailableLanguageNotice: '本页不以{language}提供。',
     languageOptions: {
-      en: '英语 (English)',
-      'zh-hant': '中文 (中文)',
-      ja: '日语 (日本語)',
-      ko: '韩语 (한국어)',
+      en: '英语（English）',
+      'zh-hant': '中文',
+      ja: '日语（日本語）',
+      ko: '韩语（한국어）',
       'needs-method-confirmation':
         '四种语言都无法使用 — 沟通方式须待确认',
     },

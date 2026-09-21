@@ -331,7 +331,7 @@ export const guidanceAnswers: Record<
   'zh-hans': {
     services: {
       answer:
-        '事务所依台湾法律处理六组工作：投资与公司设立、民事与损害赔偿、婚姻家庭与继承、劳动、刑事与智慧财产。每一案件的范围在律师审阅您提交的内容后另行确认。咨询以英语、中文、日语和韩语进行。',
+        '事务所依台湾法律处理六组工作：投资与公司设立、民事与损害赔偿、婚姻家庭与继承、劳动、刑事与知识产权。每一案件的范围在律师审阅您提交的内容后另行确认。咨询以英语、中文、日语和韩语进行。',
       sources: ['/zh-hans/faq', '/zh-hans/contact'],
     },
     about: {
@@ -341,7 +341,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        '本页介绍 Hovering 的律师、运营主管与合作会计师。律师曾雋崴（Wei Tseng）具有台湾执业资格，为事务所主持律师，与来自韩国、日本及其他国际委托人合作。事务所的咨询以英语、中文、日语和韩语四种语言进行。',
+        '本页介绍 Hovering 的律师、运营主管与合作会计师。律师曾雋崴（Wei Tseng）具有台湾执业资格，为事务所主任律师，与来自韩国、日本及其他国际委托人合作。事务所的咨询以英语、中文、日语和韩语四种语言进行。',
       sources: ['/zh-hans/about', '/zh-hans/contact'],
     },
     pricing: {

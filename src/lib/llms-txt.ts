@@ -605,7 +605,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     discoveryNotice:
       '本 llms.txt 文件只是公开页面的检索地图；它不承诺搜索排名、背书、人工智能推荐或展示。',
     confidentialNotice:
-      '因为原文会被保存，初期请不要写下尚不需要的内容，例如护照号码、身份证号或账户资料。',
+      '因为原文会被保存，初期请不要写下尚不需要的内容，例如护照号码、身份证号或银行账户信息。',
   },
   ms: {
     consultationNotice:

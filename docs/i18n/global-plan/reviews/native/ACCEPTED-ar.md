@@ -15,4 +15,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `ar-a.md` 
 - Calques (systemic sweep): 'وليس معنى أن' → 'ولا يعني ذلك أن'; 'على نحو ملموس' → 'تفصيلًا'; 'القضية المفردة' → 'القضية المعيَّنة'; 'أحرف هان' → 'الحروف الصينية (漢字)'; 'الهواكياو' → 'المستثمرون الصينيون المقيمون في الخارج (華僑)'. Blog voice R7 (title '؟؟').
 
 ## Part b
-Apply every P1/P2 row of `ar-b.md` under the same skip rules above.
+Apply every P1/P2 row of `ar-b.md` under the same skip rules above. Additional: b#1 الوكيل القضائي → الوكيلة القضائية; b#2 → 'قد تُمحى/تُستبدل التسجيلات بعد انقضاء مدة الحفظ'; b#3, b#14 → R2; b#4 Invest Taiwan link fixed mechanically — skip; b#5 المكتب → المكتب (the firm) is fine — fix per reviewer's sense (an anonymized case the firm handled); b#6, b#9, b#10 → R3/R7; b#8 → R6b; b#11 → 'بالمحامية'; b#12 'الأب الباقي' → 'الوالد الباقي على قيد الحياة'; b#13 信託 → 'الائتمان (信託)' never الوصاية; b#15 → 'شاحنة صغيرة واحدة'. Calques sweep (على نحو ملموس / القضية المفردة / وليس المعنى).

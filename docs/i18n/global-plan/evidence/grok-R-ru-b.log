@@ -1,1 +1,23 @@
 [WO start 2026-09-21 16:38:55]
+Native review of columns 010–018 is in `docs/i18n/global-plan/reviews/native/ru-b.md`. Guidance pack was not re-reviewed (part a). Columns score **2/5**: readable, but German calques and Korean-blog voice stay. Eight P1 items: masculine **Адвокат** byline, «3 лицо», comment-box CTA, leftover «корейских пояснений», freight forwarding as «комиссия», untranslated 營業用車輛牌照, 戶籍 as «семейное состояние», representative office as «Канцелярский пункт». Body of 010/013 is correctly feminine (`выступала`, `я согласна`). 018 does not promise a Russian consultation.
+
+Last 15 lines of the file:
+
+```
+| 36 | P2 | C | columns-ru/015-taiwan-company-setup-pitch-location.md | **Q. Должны ли все отрасли через систему | English **Q.** left as a running heading | **Вопрос.** Должны ли все отрасли через систему |
+| 37 | P2 | C | columns-ru/015-taiwan-company-setup-pitch-location.md | На этом изложение заканчивается; при дополнительных вопросах можно обратиться к адвокату на Тайване. | Blog closer with no no-reply-time line (EN “feel free to contact”) | Дополнительные вопросы можно направить через страницу «Контакты»; срок ответа не обещается |
+| 38 | P2 | C | columns-ru/015-taiwan-company-setup-pitch-location.md | Можно без платы проверить, допускается ли | *без платы* is a calque; native is *бесплатно* | Можно бесплатно проверить, допускается ли |
+| 39 | P2 | C | columns-ru/016-taiwan-inheritance-custody-analysis.md | нисходящие по прямой линии являются разрядом 1 законного наследования | Academic German-style; Russian heirs are *наследники первой очереди*. Also FAQ | нисходящие родственники по прямой линии составляют первую очередь законного наследования |
+| 40 | P2 | C | columns-ru/016-taiwan-inheritance-custody-analysis.md | Нет. Право требования распределения разницы остаточного имущества супругов | FAQ “No.” dumped as the opening of §3 (and §7) | Право требования распределения разницы остаточного имущества супругов |
+| 41 | P2 | C | columns-ru/016-taiwan-inheritance-custody-analysis.md | не становятся его экономическими собственниками | Calque of “economic owners”; native is *не становятся собственниками* | не становятся его собственниками |
+| 42 | P2 | C | columns-ru/017-taiwan-logistics-business-setup.md | Логистический промысел на Тайване и разрешение автомобильных грузовых перевозок | German *Gewerbe*; *промысел* is fishing/cottage industry. Throughout 017 | Логистическая деятельность на Тайване и разрешение на автомобильные грузовые перевозки |
+| 43 | P2 | C | columns-ru/017-taiwan-logistics-business-setup.md | Если компания за встречное предоставление перевозит чужой груз | German *Gegenleistung*; native is *возмездно / за вознаграждение*. Throughout 017 | Если компания возмездно перевозит чужой груз |
+| 44 | P2 | C | columns-ru/017-taiwan-logistics-business-setup.md | по принципу действуют минимальный капитал TWD 25.000.000 | German *grundsätzlich* as «по принципу». Also 016 “по принципу осуществляет / не наследуют” | по общему правилу действуют минимальный капитал 25 000 000 TWD |
+| 45 | P2 | C | columns-ru/017-taiwan-logistics-business-setup.md | «Логистика» — широкий практический термин | Coined *практический термин*; EN was “a broad business term” | «Логистика» — широкое деловое понятие |
+| 46 | P2 | A | columns-ru/018-taiwan-semiconductor-market-entry.md | определение суммы инвестиции и проверку бухгалтера (會計師) | 會計師 is a CPA; *бухгалтер* is a bookkeeper. Keep 監察人 as *ревизор* (that contrast is right) | определение суммы инвестиции и проверку аудитора (會計師) |
+| 47 | P2 | A | columns-ru/018-taiwan-semiconductor-market-entry.md | основные сведения о головной организации и вкладчиках | EN “investors”; *вкладчик* is a bank depositor | основные сведения о головной организации и инвесторах |
+| 48 | P2 | C | columns-ru/018-taiwan-semiconductor-market-entry.md | Вышеизложенное является предложением по проектированию договора. | Orphaned leftover after company-form procedures, not contract drafting | Delete the sentence, or: Вышеизложенное — общее сравнение форм компаний, а не консультация по конкретной сделке. |
+| 49 | P2 | C | columns-ru/018-taiwan-semiconductor-market-entry.md | Настоящая контора после проверки темы беседы и конфликта интересов | *Контора* is dated/German; 012 already used *бюро* for the same office | Фирма после проверки темы обращения и конфликта интересов |
+| 50 | P2 | C | columns-ru/018-taiwan-semiconductor-market-entry.md | Иностранные предприятия по компонентам полупроводников при выходе на тайваньский рынок | Source word order copied into the title; no native would lead with “enterprises on components” | Выход иностранных производителей полупроводниковых компонентов на рынок Тайваня |
+```
+=== end code=0 2026-09-21 16:44:00 ===

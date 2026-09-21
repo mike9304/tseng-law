@@ -17,4 +17,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `fi-a.md` 
 - Te-capitalisation → te (lowercase) throughout; blog voice (R7); '3. (第三人)' → 'kolmas osapuoli' (R11).
 
 ## Part b
-Apply every P1/P2 row of `fi-b.md` under the same skip rules above.
+Apply every P1/P2 row of `fi-b.md` under the same skip rules above. Additional: b#1 yhtiömiehet → osakkeenomistajat (股東); b#2 監察人 → 'yhtiön valvoja (監察人)', tilintarkastaja only for 會計師; b#3 → 'työeläke-/työntekijävakuutus (勞工保險)'; b#4 → 'perillinen tulee perittävän sijaan kaikkiin varallisuusoikeuksiin'; b#5 Suoritukset → etuudet; b#6 sopimuspalkkio → allekirjoituspalkkio (簽約金); b#7 asetus → 'laki ulkomaalaisten sijoituksista (外國人投資條例)'; b#8 → R2; b#9 'kolmas (3)' → kolmas osapuoli (R11); b#10 → skip (mechanical); b#11 → 'kaatuminen liiketiloissa'; b#12 'ajoneuvon numero 2' → 'toinen ajoneuvo'; b#13–b#15 → R3/R7; b#16 → R5; FAQ openings → R7b; te lowercase.

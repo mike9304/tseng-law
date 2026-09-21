@@ -15,4 +15,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `tr-a.md` 
 - Turkish typography: %10 (percent before number), guillemets → "…"; '3. kişi' → 'üçüncü kişi', '2. derece' → 'istinaf' (R11); blog voice R7.
 
 ## Part b
-Apply every P1/P2 row of `tr-b.md` under the same skip rules above.
+Apply every P1/P2 row of `tr-b.md` under the same skip rules above. Additional: b#1 duruş → 'tutum/zihniyet (心態)'; b#2 → R2; b#3 Statü → 'Yabancı Yatırım Kanunu (外國人投資條例)'; b#4 vakıf → 'tröst/inançlı mülkiyet (信託)'; b#5 yoklama → 'vasiyetnamenin tasdiki (檢認)'; b#6 遺贈 → vasiyetle bırakma; b#7 → 'gerçek lehdar'; b#8 nakliye (搬家) → 'ev taşıma (搬家)'; b#9 vekâlet → 'dış kaynak kullanımı'; b#10 acente → 'temsilci/aracı ile'; «» → "…"; '3. kişi' → üçüncü kişi, '1. derece' → ilk derece (R11); FAQ openings → R7b; emoji/comment CTA → R7.

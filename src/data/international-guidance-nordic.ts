@@ -1482,22 +1482,22 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
     services: 'Palvelut',
     about: 'Toimisto',
     lawyers: 'Asianajajat',
-    pricing: 'Kulut',
-    contact: 'Yhteys',
-    faq: 'Kysymykset',
+    pricing: 'Palkkiot',
+    contact: 'Yhteystiedot',
+    faq: 'Usein kysyttyä',
     privacy: 'Tietosuoja',
     disclaimer: 'Vastuuvapaus',
     columns: 'Artikkelit',
   },
-  contactCta: 'Lähettäkää neuvontapyyntö',
+  contactCta: 'Lähettäkää yhteydenottopyyntö',
   footerNotice:
     'Tämä suomenkielinen sivu sisältää vain yleisiä ohjeita toimiston työstä Taiwanin oikeuden mukaan. Se ei ole oikeudellista neuvontaa yksittäisessä asiassa, eikä viestin lähettäminen yksinään synnytä suhdetta asianajajan ja päämiehen välillä.',
   skipLink: 'Ohittakaa navigointi ja siirtykää sisältöön',
-  menuLabel: 'Sivuhakemisto',
+  menuLabel: 'Valikko',
   languageLabel: 'Näyttökieli',
   mega: {
     services: {
-      description: 'Toimisto käsittelee Taiwanin oikeuden mukaiset keskeiset työryhmät.',
+      description: 'Toimisto käsittelee Taiwanin oikeuden keskeisiä oikeudenaloja.',
       viewAllLabel: 'Näytä kaikki',
     },
     columns: {
@@ -1505,7 +1505,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
       viewAllLabel: 'Näytä kaikki',
     },
     lawyers: {
-      description: 'Esittely toimivista asianajajista ja yhteystavoista.',
+      description: 'Esittely toimiston asianajajista ja yhteydenottotavoista.',
       viewAllLabel: 'Näytä kaikki',
     },
     pricing: {
@@ -1526,8 +1526,8 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
     heroScrollLabel: 'Vierittäkää alaspäin',
     heroColumnsCtaLabel: 'Katsokaa artikkelit',
     servicesDetailLabel: 'Katsokaa tiedot',
-    servicesAssistanceBefore: 'Jos on epäselvää, mihin ryhmään asianne kuuluu, sivu ',
-    servicesAssistanceLinkLabel: 'Yhteys',
+    servicesAssistanceBefore: 'Jos on epäselvää, mihin oikeudenalaan asianne kuuluu, sivu ',
+    servicesAssistanceLinkLabel: 'Yhteystiedot',
     servicesAssistanceAfter:
       ' selittää, miten laaditte yhteenvedon, jonka asianajaja tarkistaa.',
     columnsViewAllLabel: 'Katsokaa kaikki artikkelit',
@@ -1548,12 +1548,12 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
       description:
         'Yleisiä selityksiä suomeksi Hovering International Law Firm -toimiston työalasta Taiwanissa, neuvontakielistä ja ensimmäisestä yhteydenotosta.',
       intro:
-        'Hovering International Law Firm seuraa ulkomaisia päämiehiä, myös Taiwanin yhteyden omaavia, Taiwanin oikeuden mukaisissa asioissa: sijoittaminen ja yhtiön perustaminen, siviiliriidat, avioliitto, perhe ja perintö, työlainsäädäntö, rikosasiat ja immateriaalioikeus. Tämä suomenkielinen osa auttaa teitä näkemään, mikä työ kuuluu alaamme, mitä on valmisteltava ja miten tavoitatte meidät. Kyse on yleisistä tiedoista, ei oikeudellisesta neuvonnasta omassa asiassanne.',
+        'Hovering International Law Firm avustaa ulkomaisia päämiehiä, myös Taiwan-yhteyden omaavia, Taiwanin oikeuden mukaisissa asioissa: sijoittaminen ja yhtiön perustaminen, siviiliriidat, avioliitto, perhe ja perintö, työlainsäädäntö, rikosasiat ja immateriaalioikeus. Tämä suomenkielinen osa auttaa teitä näkemään, mikä työ kuuluu alaamme, mitä on valmisteltava ja miten tavoitatte meidät. Kyse on yleisistä tiedoista, ei oikeudellisesta neuvonnasta omassa asiassanne.',
       sections: [
         {
           heading: 'Mitä teemme',
           paragraphs: [
-            'Hovering International Law Firm on Taiwanissa perustettu asianajotoimisto. Se toimii Taiwanin oikeuden mukaan ja sillä on toimistot Taipeissa (臺北), Kaohsiungissa (高雄), Taichungissa (臺中) ja Pingtungissa (屏東). Neuvomme yrityksiä ja hoidamme menettelyjä tuomioistuimessa sekä seuraamme ulkomaisia päämiehiä Taiwanissa tarvittavissa vaiheissa.',
+            'Hovering International Law Firm on Taiwanissa perustettu asianajotoimisto. Se toimii Taiwanin oikeuden mukaan ja sillä on toimistot Taipeissa (臺北), Kaohsiungissa (高雄), Taichungissa (臺中) ja Pingtungissa (屏東). Neuvomme yrityksiä ja hoidamme oikeudenkäyntejä sekä avustamme ulkomaisia päämiehiä Taiwanissa tarvittavissa vaiheissa.',
             'Koko sisältö täällä on yleistä. Asian tulos riippuu tosiseikoista, sovellettavista säännöistä ja ajankohdasta. Nämä ohjeet eivät korvaa keskustelua asianajajan kanssa asiakirjoistanne.',
           ],
         },
@@ -1561,13 +1561,13 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Sivun kieli ja neuvontakieli eivät ole sama asia',
           paragraphs: [
             'Tämä sivu on kirjoitettu suomeksi, mutta neuvonta asianajajan kanssa tapahtuu vain neljällä neuvontakielellä: englanti, kiina (中文), japani ja korea. Ohjeiden lukeminen suomeksi ei tarkoita, että keskustelu asianajajan kanssa tapahtuisi suomeksi.',
-            'Emme lupaa tulkkia, vastausaikaa emmekä tapaamista tämän sivun kautta. Jos ette voi käyttää mitään neljästä kielestä, sivu »Yhteys« selittää, miten tutkimme viestintätapaa.',
+            'Emme lupaa tulkkia, vastausaikaa emmekä tapaamista tämän sivun kautta. Jos ette voi käyttää mitään neljästä kielestä, sivu ”Yhteystiedot” selittää, miten viestintätapaa selvitetään.',
           ],
         },
         {
-          heading: 'Työryhmät',
+          heading: 'Oikeudenalat',
           paragraphs: [
-            'Työalaan kuuluu seuraavat kuusi ryhmää. Sivu »Palvelut« kuvaa kunkin ryhmän tarkemmin ja kertoo, mitä ei luvata.',
+            'Työalaamme kuuluvat seuraavat kuusi oikeudenalaa. Sivu ”Palvelut” kuvaa kunkin oikeudenalan tarkemmin ja kertoo, mitä ei luvata.',
           ],
           items: [
             'Sijoittaminen ja yhtiön perustaminen Taiwanissa',
@@ -1581,7 +1581,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Mistä kannattaa aloittaa',
           paragraphs: [
-            'Lukekaa sivu »Palvelut« nähdäksenne, kuuluuko asianne alaamme, sen jälkeen »Kulut« ja »Yhteys« tietääksenne, miten laajuus vahvistetaan ja miten kulut vahvistetaan ennen työn alkamista.',
+            'Lukekaa ensin sivu ”Palvelut” nähdäksenne, kuuluuko asianne alaamme, ja sen jälkeen sivut ”Palkkiot” ja ”Yhteystiedot”, joista käy ilmi, miten työn laajuus ja kulut vahvistetaan ennen työn alkamista.',
             'Viestiä lähettäessänne voitte kirjoittaa yhteenvedon omalla kielellänne. Alkuperäinen teksti säilytetään sellaisena kuin kirjoititte sen, eikä sitä käännetä automaattisesti. Lähetetty viesti on tarkistusta odottava pyyntö: se ei ole vielä neuvontaa eikä vahvistettu tapaaminen.',
           ],
         },
@@ -1591,56 +1591,56 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'PALVELUT',
       title: 'Mitä asioita käsittelemme',
       description:
-        'Kuusi työryhmää Taiwanin toimistossa ja rajat, jotka teidän on hyvä tuntea ensin.',
+        'Kuusi oikeudenalaa Taiwanin toimistossa ja rajat, jotka teidän on hyvä tuntea ensin.',
       intro:
-        'Alla ryhmät, joita tosiasiassa käsittelemme, ja kysymykset, joita alkuvaiheessa usein esitetään. Esitys auttaa teitä arvioimaan, kuuluuko asianne alaamme; se on yleinen eikä yksittäisen asian oikeudellinen analyysi.',
+        'Alla ovat oikeudenalat, joita tosiasiassa käsittelemme, ja kysymykset, joita alkuvaiheessa usein esitetään. Esitys auttaa teitä arvioimaan, kuuluuko asianne alaamme; se on yleinen eikä yksittäisen asian oikeudellinen analyysi.',
       sections: [
         {
           heading: 'Sijoittaminen ja yhtiön perustaminen Taiwanissa',
           paragraphs: [
-            'Seuraamme ulkomaisia sijoittajia ja yrityksiä yhtiön perustamisessa tai toiminnassa Taiwanissa: oikeudellisen muodon valinta, asiakirjojen valmistelu ja jättäminen, pääomansijoitus, pankkiasiat, toimitilan tarkastus sekä toimialavaatimukset. Tuemme myös kirjanpitoa ja veroja, jotka syntyvät perustamisesta ja toiminnasta Taiwanissa.',
-            'Kulku ja kesto eroavat muodon, sijoittajan, toimialan, pankin ja jo olemassa olevien asiakirjojen mukaan. Yhtiön perustaminen ei yksin johda oleskelulupaan (居留) tai työlupaan (工作許可): ne ovat erillisiä menettelyjä, jotka arvioidaan henkilön tilanteen mukaan.',
+            'Avustamme ulkomaisia sijoittajia ja yrityksiä yhtiön perustamisessa ja toiminnassa Taiwanissa: oikeudellisen muodon valinta, asiakirjojen valmistelu ja jättäminen, pääomansijoitus, pankkiasiat, toimitilan tarkastus sekä toimialavaatimukset. Tuemme myös kirjanpitoa ja veroja, jotka syntyvät perustamisesta ja toiminnasta Taiwanissa.',
+            'Menettelyn vaiheet ja kesto vaihtelevat yhtiömuodon, sijoittajan, toimialan, pankin ja jo olemassa olevien asiakirjojen mukaan. Yhtiön perustaminen ei yksin johda oleskelulupaan (居留) tai työlupaan (工作許可): ne ovat erillisiä menettelyjä, jotka arvioidaan henkilön tilanteen mukaan.',
           ],
         },
         {
           heading: 'Siviiliriidat ja vahingonkorvaus',
           paragraphs: [
-            'Tähän ryhmään kuuluvat sopimusriidat, vahingonkorvaus oikeudenvastaisesta teosta ja kuluttajariidat. Työ alkaa yleensä aikajärjestyksellä, olemassa olevien asiakirjojen ja todisteiden tarkastuksella ja vasta sen jälkeen seuraavilla vaiheilla.',
-            'Määräajat, myös vanhentuminen, ja todisteiden täydellisyys leimaavat kulkua. Ilmoittakaa siksi tunnetut päivämäärät mahdollisimman varhain. Säilyttäkää sopimukset, viestit, maksutositteet tai valokuvat paikan tilanteesta ja mainitkaa ne ensimmäisessä viestissä.',
+            'Tähän oikeudenalaan kuuluvat sopimusriidat, sopimuksen ulkopuolinen vahingonkorvausvastuu ja kuluttajariidat. Työ alkaa yleensä tapahtumien aikajärjestyksen selvittämisestä sekä olemassa olevien asiakirjojen ja todisteiden läpikäynnistä, ja vasta sen jälkeen sovitaan seuraavista vaiheista.',
+            'Määräajat, myös vanhentuminen, ja todisteiden kattavuus vaikuttavat ratkaisevasti asian etenemiseen. Ilmoittakaa siksi tunnetut päivämäärät mahdollisimman varhain. Säilyttäkää sopimukset, viestit, maksutositteet tai valokuvat paikan tilanteesta ja mainitkaa ne ensimmäisessä viestissä.',
           ],
         },
         {
           heading: 'Avioliitto, perhe ja perintö',
           paragraphs: [
-            'Käsittelemme avioeroa (離婚), omaisuuden jakoa, oikeuksien ja velvollisuuksien käyttämistä ja kantamista alaikäisiä lapsia kohtaan (未成年子女權利義務之行使或負擔), tapaamista (會面交往) ja perintöä (繼承), myös kun osapuolet tai varallisuus ovat eri valtioissa. Rajat ylittävät perheasiat edellyttävät usein lisätarkastusta väestörekisteristä (戶籍), asiakirjojen muodosta ja niiden todistusarvosta Taiwanissa.',
+            'Käsittelemme avioeroa (離婚), omaisuuden jakoa, alaikäisten lasten huoltoa (未成年子女權利義務之行使或負擔), tapaamisoikeutta (會面交往) ja perintöä (繼承), myös kun osapuolet tai varallisuus ovat eri valtioissa. Rajat ylittävät perheasiat edellyttävät usein lisäselvitystä väestörekisteristä (戶籍), asiakirjojen muodosta ja niiden todistusarvosta Taiwanissa.',
             'Koska perheasioihin liittyy usein määräaikoja ja rinnakkaisia menettelyjä, ensimmäisen yhteenvedon tulisi nimetä osapuolten suhde, nykyinen asuinpaikka ja jo käynnissä olevat menettelyt.',
           ],
         },
         {
           heading: 'Työoikeudelliset riidat',
           paragraphs: [
-            'Tähän ryhmään kuuluvat yhtymäsuhteen päättyminen, Taiwanin oikeuden mukainen irtisanomiskorvaus (資遣費; ei rinnastettavissa toisten valtioiden instituutteihin), palkka ja riidat työsopimuksesta (勞動契約), sekä työntekijän että työnantajan puolella. Tarkastuksessa erotamme päättämisperusteen ilmoitusta, maksua ja määräaikoja koskevista kysymyksistä.',
-            'Työsopimus, työjärjestys (工作規則), palkkalaskelmat ja osapuolten kirjeenvaihto ovat yleensä ratkaisevat asiakirjat. Jos teillä on ne vielä, mainitkaa se yhteenvedossa.',
+            'Tähän oikeudenalaan kuuluvat työsuhteen päättyminen, Taiwanin oikeuden mukainen irtisanomiskorvaus (資遣費; ei rinnastettavissa muiden valtioiden vastaaviin järjestelyihin), palkka ja riidat työsopimuksesta (勞動契約), sekä työntekijän että työnantajan puolella. Tarkastuksessa erotamme päättämisperusteen ilmoitusta, maksua ja määräaikoja koskevista kysymyksistä.',
+            'Työsopimus, työsäännöt (工作規則), palkkalaskelmat ja osapuolten kirjeenvaihto ovat yleensä ratkaisevat asiakirjat. Jos teillä on ne vielä, mainitkaa se yhteenvedossa.',
           ],
         },
         {
           heading: 'Rikosasiat',
           paragraphs: [
-            'Seuraamme esitutkinnassa ja tuomioistuimessa, sekä epäiltyjen tai syytettyjen että asianomistajien puolesta, ja arvioimme yritystoiminnan rikosoikeudellisia riskejä.',
-            'Rikosasioissa on usein lyhyet määräajat ja määrätyt vaiheet. Jos olette jo saaneet kirjoituksen syyttäjältä tai tuomioistuimelta, mainitkaa kirjoituksen päivämäärä varhain, jotta sisältö tarkistetaan oikeassa järjestyksessä.',
+            'Avustamme esitutkinnassa ja tuomioistuimessa sekä epäiltyjä tai syytettyjä että asianomistajia, ja arvioimme yritystoiminnan rikosoikeudellisia riskejä.',
+            'Rikosasioissa on usein lyhyet määräajat ja määrätyt vaiheet. Jos olette jo saaneet asiakirjan syyttäjältä tai tuomioistuimelta, mainitkaa sen päivämäärä varhain, jotta sisältö käydään läpi oikeassa järjestyksessä.',
           ],
         },
         {
           heading: 'Immateriaalioikeus',
           paragraphs: [
-            'Tuemme tavaramerkkien (商標) ja patenttien (專利) rekisteröinnissä, tekijänoikeudessa ja näitä oikeuksia koskevissa riidoissa Taiwanissa.',
-            'Tässä ryhmässä vaiheiden järjestys ratkaisee: suojan laajuus, hakemusajankohta ja tosiasiallinen käyttö vaikuttavat valintaan. Hakemuksen jättäminen ei yksin merkitse, että se hyväksytään.',
+            'Avustamme tavaramerkkien (商標) ja patenttien (專利) rekisteröinnissä, tekijänoikeudessa ja näitä oikeuksia koskevissa riidoissa Taiwanissa.',
+            'Tällä oikeudenalalla vaiheiden järjestys ratkaisee: suojan laajuus, hakemusajankohta ja tosiasiallinen käyttö vaikuttavat valintaan. Hakemuksen jättäminen ei yksin merkitse, että se hyväksytään.',
           ],
         },
         {
           heading: 'Laajuus ja sen vahvistaminen',
           paragraphs: [
-            'Toimisto toimii Taiwanin oikeuden mukaan ja käsittelee asioita edellä mainituissa ryhmissä. Kunkin asian laajuus vahvistetaan erikseen sen jälkeen, kun asianajaja on tarkistanut viestinne.',
+            'Toimisto toimii Taiwanin oikeuden mukaan ja käsittelee asioita edellä mainituilla oikeudenaloilla. Kunkin asian laajuus vahvistetaan erikseen sen jälkeen, kun asianajaja on tarkistanut viestinne.',
             'Oleskeluasema, työlupa ja vastaavat kysymykset arvioidaan asiakirjoista ja henkilön tilanteesta, ei kansalaisuudesta. Jos osa asiastanne koskee tällaisia kysymyksiä, mainitkaa se yhteydenotossa. Tämä sivu ei lupaa tulosta eikä vastausaikaa.',
           ],
         },
@@ -1657,7 +1657,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Perustaminen ja rakentuminen',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) perustettiin vuonna 2016 asianajajien toimesta, jotka ovat opiskelleet National Taiwan Universityssa (國立臺灣大學). Kiinankielinen nimi 昊鼎 yhdistää merkin 昊 (»laaja taivas«) merkkiin 鼎 (»luja perusta«) ja kuvaa toimiston suuntaa perustamisesta lähtien.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) perustettiin vuonna 2016 asianajajien toimesta, jotka ovat opiskelleet National Taiwan Universityssa (國立臺灣大學). Kiinankielinen nimi 昊鼎 yhdistää merkin 昊 (”laaja taivas”) merkkiin 鼎 (”luja perusta”) ja kuvaa toimiston suuntaa perustamisesta lähtien.',
             'Meillä on toimistot Taipeissa (臺北), Kaohsiungissa (高雄), Taichungissa (臺中) ja Pingtungissa (屏東). Kaohsiungin toimisto keskittyy yrityksen johtamiseen ja käsittelee siviili-, rikos- ja hallinto-oikeudellisia riitoja. Taichungin toimisto käsittelee rakennusasioita, immateriaalioikeutta ja Korean ja Japanin yhteyden omaavia asioita. Pingtungin toimisto avattiin vuonna 2017 paikallista tarvetta varten.',
             'Asianajotyön rinnalla on vuodesta 2020 myös Hovering Accounting Office, joka tarjoaa kirjanpitoa ja verosuunnittelua yrittäjille ja varakkaille yksityishenkilöille.',
           ],
@@ -1665,14 +1665,14 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Työ ulkomaisten osapuolten kanssa',
           paragraphs: [
-            'Rajat ylittävään työhön kuuluvat yhtiön perustaminen, viisumit, tavaramerkki- ja patenttihakemukset, oikeudellinen riskitarkastus ja yritysten veroneuvonta. Taichungin toimisto käsittelee erityisesti rakennusasioita, immateriaalioikeutta ja Korean ja Japanin yhteyden omaavia asioita. Asianajaja Wei Tseng (曾雋崴) seuraa päämiehiä Koreasta, Japanista ja muita kansainvälisiä päämiehiä mainituissa ryhmissä.',
-            'Voimmeko ottaa asian, riippuu sisällöstä ja viestinnän kielestä. Jos asianne kuuluu mainittuihin ryhmiin ja sitä voidaan käsitellä yhdellä neljästä neuvontakielestä, voitte lähettää yhteenvedon tarkistettavaksi.',
+            'Rajat ylittävään työhön kuuluvat yhtiön perustaminen, viisumit, tavaramerkki- ja patenttihakemukset, oikeudellinen riskitarkastus ja yritysten veroneuvonta. Taichungin toimisto käsittelee erityisesti rakennusasioita, immateriaalioikeutta ja Korean ja Japanin yhteyden omaavia asioita. Asianajaja Wei Tseng (曾雋崴) avustaa päämiehiä Koreasta, Japanista ja muualta maailmasta näillä oikeudenaloilla.',
+            'Se, voimmeko ottaa asian vastaan, riippuu sisällöstä ja viestinnän kielestä. Jos asianne kuuluu mainittuihin oikeudenaloihin ja sitä voidaan käsitellä yhdellä neljästä neuvontakielestä, voitte lähettää yhteenvedon tarkistettavaksi.',
           ],
         },
         {
           heading: 'Kun otatte meihin yhteyttä',
           paragraphs: [
-            'Kun yhteenvedonne on saapunut, asianajaja tarkistaa sisällön ja puhuu sitten mahdollisesta työn laajuudesta, vielä tarvittavista asiakirjoista ja seuraavista vaiheista. Vero- tai kirjanpitokysymyksissä toimisto voi työskennellä kirjanpito-osaston kanssa yhdessä kulussa.',
+            'Kun yhteenvedonne on saapunut, asianajaja tarkistaa sisällön ja puhuu sitten mahdollisesta työn laajuudesta, vielä tarvittavista asiakirjoista ja seuraavista vaiheista. Vero- tai kirjanpitokysymyksissä toimisto voi työskennellä kirjanpito-osaston kanssa saman toimeksiannon puitteissa.',
             'Kunkin asian tulos riippuu tosiseikoista ja olemassa olevista asiakirjoista; emme lupaa tulosta. Jos tarvitsette sitovan vastauksen tilanteeseenne, asiakirjat on käsiteltävä asianajajan kanssa yhdellä neljästä neuvontakielestä.',
           ],
         },
@@ -1681,12 +1681,12 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ASIANAJAJAT',
       title: 'Hoveringin kansainvälinen tiimi',
-      description: 'Hoveringin asianajajien, operatiivisen johdon ja kumppanitilintarkastuksen profiilit.',
+      description: 'Hoveringin asianajajien, operatiivisen johdon ja yhteistyökumppanina toimivan tilitoimiston profiilit.',
       intro: '',
       sections: [],
     },
     pricing: {
-      eyebrow: 'KULUT',
+      eyebrow: 'PALKKIOT',
       title: 'Miten työn laajuus ja kulut vahvistetaan',
       description:
         'Selitys järjestyksestä: ensin työn laajuus, sitten kulujen vahvistaminen, ja miksi tällä sivulla ei ole hinnastoa.',
@@ -1697,7 +1697,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Ensin vahvistetaan työn laajuus',
           paragraphs: [
             'Samanlaisissa asioissa työmäärä voi olla hyvin erilainen osapuolten määrän, käytettävissä olevien asiakirjojen, noudatettavien määräaikojen ja sen mukaan, onko menettely jo alkanut. Siksi ensimmäinen vaihe on aina vahvistaa, mikä kuuluu työhön ja mikä ei.',
-            'Yhteenveto, jonka lähetätte alussa, on tämän laajuuden perusta. Mitä selkeämmin se kuvaa kulkua, pyyntöänne ja määräaikoja, sitä tarkemmin laajuus voidaan määrätä.',
+            'Yhteenveto, jonka lähetätte alussa, on tämän laajuuden perusta. Mitä selkeämmin se kuvaa tapahtumien kulun, pyyntönne ja määräajat, sitä tarkemmin laajuus voidaan määrittää.',
           ],
         },
         {
@@ -1710,21 +1710,21 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Neuvonta voi olla maksullinen',
           paragraphs: [
-            'Neuvonta asianajajan kanssa voi olla maksullinen suoritus. Tämä sivu ei sano, että ensimmäinen keskustelu olisi maksuton, eikä mitään osaa saa lukea niin.',
+            'Neuvonta asianajajan kanssa voi olla maksullinen palvelu. Tämä sivu ei sano, että ensimmäinen keskustelu olisi maksuton, eikä mitään osaa saa lukea niin.',
             'Jos neuvonta on maksullinen, määrä ja maksutapa ilmoitetaan ennen sen tapahtumista.',
           ],
         },
         {
           heading: 'Miksi tällä sivulla ei ole taksoja',
           paragraphs: [
-            'Kulut riippuvat asiasta itsestään: työmäärästä, osapuolten määrästä, asiakirjoista, määräajoista ja siitä, onko menettely jo käynnissä. Ennakolta asetettu luku ei näyttäisi kuluja asiassanne. Siksi vahvistamme ensin työn laajuuden ja ilmoitamme teille sitten kulut, ennen kuin työ alkaa.',
+            'Kulut riippuvat asiasta itsestään: työmäärästä, osapuolten määrästä, asiakirjoista, määräajoista ja siitä, onko menettely jo käynnissä. Etukäteen ilmoitettu summa ei kertoisi, mitä kulut teidän asiassanne olisivat. Siksi vahvistamme ensin työn laajuuden ja ilmoitamme teille sitten kulut, ennen kuin työ alkaa.',
             'Asianajopalkkion lisäksi voi syntyä tuomioistuin-, viranomais- tai kolmannen osapuolen kuluja. Ne ovat erillisiä palkkiosta ja riippuvat kyseisestä menettelystä.',
           ],
         },
       ],
     },
     contact: {
-      eyebrow: 'YHTEYS',
+      eyebrow: 'YHTEYSTIEDOT',
       title: 'Miten tavoitatte toimiston',
       description:
         'Sivun kieli, neuvontakielet, menettely, jos ette voi käyttää mitään neljästä kielestä, ja mitä tämä sivu ei lupaa.',
@@ -1738,22 +1738,22 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
           ],
           items: [
             'Sivun kieli: Nämä ohjeet on kirjoitettu suomeksi.',
-            'Neuvontakieli: Neuvonta tapahtuu englanniksi, kiinaksi (中文), japaniksi ja koreaksi.',
+            'Neuvontakieli: Neuvonta tapahtuu vain englanniksi, kiinaksi (中文), japaniksi ja koreaksi.',
             'Kirjoituskielenne: Voitte kirjoittaa yhteenvedon omalla kielellänne; alkuperäinen teksti säilytetään muuttamattomana.',
           ],
         },
         {
           heading: 'Jos ette voi käyttää mitään neljästä neuvontakielestä',
           paragraphs: [
-            'Yhteydenottolomakkeessa voitte valita »Viestintätapa on vahvistettava«. Vastaamme tutkiaksemme käyttökelpoisen viestintätavan, jos sellainen on; suoritusta muulla kielellä ei luvata eikä vastausaikaa luvata.',
-            'Tämä on vain tutkimisvaihe, ei lupaus. Emme lupaa tulkkia, emme suoritusta suomeksi tai muulla kielellä neljän mainitun kielen ulkopuolella, emmekä sitä, että otamme vastaan jokaista asiaa.',
+            'Yhteydenottolomakkeessa voitte valita ”Viestintätapa on vahvistettava”. Otamme yhteyttä selvittääksemme, onko käyttökelpoista viestintätapaa olemassa; neuvontaa muulla kielellä ei luvata eikä vastausaikaa luvata.',
+            'Tämä on vain selvitysvaihe, ei lupaus. Emme lupaa tulkkia, emme neuvontaa suomeksi tai muulla kielellä näiden neljän kielen ulkopuolella, emmekä sitä, että otamme vastaan jokaista asiaa.',
           ],
         },
         {
           heading: 'Mitä ensimmäisessä viestissä tulisi olla',
           paragraphs: [
-            'Ilmoittakaa, mitä on tapahtunut, millaista apua tarvitsette, mikä yhteys asialla on Taiwaniin, ja määräaika, jos tunnette sen. Jos olette jo saaneet kirjoituksen tuomioistuimelta tai viranomaiselta, mainitkaa kirjoituksen päivämäärä.',
-            'Alkuvaiheessa teidän ei vielä tarvitse lähettää passinumeroa, henkilötunnusta, tilitietoja, sairauskertomuksia tai koko todistusaineistoa. Odottakaa asianajajan ohjeita ja lähettäkää sitten arkaluonteiset asiakirjat turvallista tietä.',
+            'Ilmoittakaa, mitä on tapahtunut, millaista apua tarvitsette, mikä yhteys asialla on Taiwaniin, ja määräaika, jos tunnette sen. Jos olette jo saaneet asiakirjan tuomioistuimelta tai viranomaiselta, mainitkaa sen päivämäärä.',
+            'Alkuvaiheessa teidän ei vielä tarvitse lähettää passinumeroa, henkilötunnusta, tilitietoja, potilasasiakirjoja tai koko todistusaineistoa. Odottakaa asianajajan ohjeita ja lähettäkää sitten arkaluonteiset asiakirjat turvallista tietä.',
           ],
         },
         {
@@ -1766,7 +1766,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
       ],
     },
     faq: {
-      eyebrow: 'KYSYMYKSET',
+      eyebrow: 'USEIN KYSYTTYÄ',
       title: 'Usein kysytyt kysymykset',
       description:
         'Selityksiä työalasta, valmistelusta, kielistä, kuluista ja lähetetyn pyynnön merkityksestä.',
@@ -1784,22 +1784,22 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Mitä asioita toimisto käsittelee?',
           answer:
-            'Käsittelemme kuutta ryhmää: sijoittaminen ja yhtiön perustaminen Taiwanissa, siviiliriidat ja vahingonkorvaus, avioliitto, perhe ja perintö, työoikeudelliset riidat, rikosasiat ja immateriaalioikeus. Otetaanko asia vastaan, ratkeaa sisällön tarkistuksen jälkeen.',
+            'Käsittelemme kuutta oikeudenalaa: sijoittaminen ja yhtiön perustaminen Taiwanissa, siviiliriidat ja vahingonkorvaus, avioliitto, perhe ja perintö, työoikeudelliset riidat, rikosasiat ja immateriaalioikeus. Se, otammeko asian vastaan, ratkeaa sisällön läpikäynnin jälkeen.',
         },
         {
           question: 'Mitä minun tulisi valmistella ennen yhteydenottoa?',
           answer:
-            'Valmistakaa lyhyt yhteenveto kulusta, pyynnöstänne, Taiwan-yhteydestä ja määräajasta, jos sellainen on. Jos tuomioistuimen tai viranomaisen kirjoitus on jo olemassa, mainitkaa päivämäärä. Tässä vaiheessa teidän ei vielä tarvitse lähettää henkilöllisyysasiakirjoja tai koko todistusaineistoa.',
+            'Valmistelkaa lyhyt yhteenveto tapahtumien kulusta, pyynnöstänne, Taiwan-yhteydestä ja määräajasta, jos sellainen on. Jos tuomioistuimen tai viranomaisen asiakirja on jo olemassa, mainitkaa sen päivämäärä. Tässä vaiheessa teidän ei vielä tarvitse lähettää henkilöllisyysasiakirjoja tai koko todistusaineistoa.',
         },
         {
           question: 'Voinko saada neuvontaa suomeksi?',
           answer:
-            'Ei. Nämä ohjeet on kirjoitettu suomeksi, mutta neuvonta asianajajan kanssa tapahtuu vain englanniksi, kiinaksi (中文), japaniksi ja koreaksi. Emme lupaa tulkkiakaan. Kirjallinen käännös on eri asia: alkuperäinen teksti, jonka kirjoitatte, säilytetään sellaisenaan eikä sitä käännetä automaattisesti.',
+            'Ei. Nämä ohjeet on kirjoitettu suomeksi, mutta neuvonta asianajajan kanssa tapahtuu vain englanniksi, kiinaksi (中文), japaniksi ja koreaksi. Emme myöskään lupaa tulkkia. Kirjallinen käännös on eri asia: alkuperäinen teksti, jonka kirjoitatte, säilytetään sellaisenaan eikä sitä käännetä automaattisesti.',
         },
         {
           question: 'Entä jos en voi käyttää mitään neljästä kielestä?',
           answer:
-            'Valitkaa lähettäessä »Viestintätapa on vahvistettava«. Vastaamme tutkiaksemme viestintätapaa, mutta suoritusta muulla kielellä ei luvata. Tämä on tutkimisvaihe, ei lupaus siitä, että voimme työskennellä muulla kielellä.',
+            'Valitkaa lähettäessänne ”Viestintätapa on vahvistettava”. Otamme yhteyttä selvittääksemme, onko käyttökelpoista viestintätapaa olemassa, mutta neuvontaa muulla kielellä ei luvata. Tämä on selvitysvaihe, ei lupaus siitä, että voimme työskennellä muulla kielellä.',
         },
         {
           question: 'Miten suomenkielistä tekstiäni käsitellään?',
@@ -1819,7 +1819,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Entä jos asiani on hyvin kiireellinen?',
           answer:
-            'Ilmoittakaa määräaika tai virallisen kirjoituksen päivämäärä yhteenvedon alussa, jotta nämä tiedot näkyvät tarkistuksessa. Tällä sivulla ei ole hätäkanavaa eikä se lupaa vastausaikaa; jos asianne ei voi odottaa, teidän tulisi rinnakkain etsiä muita teitä paikkakunnallanne.',
+            'Ilmoittakaa määräaika tai virallisen kirjoituksen päivämäärä yhteenvedon alussa, jotta nämä tiedot näkyvät tarkistuksessa. Tällä sivulla ei ole päivystystä eikä se lupaa vastausaikaa; jos asianne ei voi odottaa, teidän tulisi rinnakkain etsiä muita teitä paikkakunnallanne.',
         },
       ],
     },
@@ -1876,7 +1876,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Oikeutenne ja yhteystie',
+          heading: 'Oikeutenne ja yhteydenotto',
           paragraphs: [
             'Voitte pyytää tietojenne tarkastusta, oikaisua tai poistamista tai peruuttaa suostumuksen yhteyssivulla ilmoitetun sähköpostiosoitteen kautta. Jos on lakisääteinen tai menettelyyn liittyvä säilytysvelvollisuus, selitämme rajoituksen.',
             'Tämä sivu ei ilmoita kiinteää säilytysaikaa, koska tosiasiallinen kesto riippuu siitä, jatketaanko asiaa, ja siihen liittyvistä velvollisuuksista. Jos toivotte aikaisempaa poistoa, ilmoittakaa se yhteydenotossa.',
@@ -1885,7 +1885,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Säilytyspaikka ja palveluntarjoajat',
           paragraphs: [
-            'Tätä sivustoa isännöi Vercel, ja lähetyksenne säilytetään tämän palvelun ei-julkisessa objektivarastossa. Sähköpostit lähetetään toimiston käyttämän sähköpostipalvelun kautta.',
+            'Tätä sivustoa isännöi Vercel, ja lähetyksenne säilytetään tämän palvelun ei-julkisessa tallennustilassa. Sähköpostit lähetetään toimiston käyttämän sähköpostipalvelun kautta.',
             'Yksittäisten palveluntarjoajien palvelimet voivat sijaita Taiwanin ulkopuolella, joten tietojanne voidaan säilyttää ja käsitellä siellä. Kun säilytystarkoitus on täytetty, tiedot poistetaan viivytyksettä; tiedot, jotka on säilytettävä sovellettavien sääntöjen mukaan, jäävät siksi ajaksi. Henkilötietopyynnöt ottaa vastaan wei@hoveringlaw.com.tw.',
           ],
         },
@@ -1917,14 +1917,14 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Suhde asianajajan ja päämiehen välillä ei synny itsestään',
           paragraphs: [
             'Tämän sivun lukeminen, lomakkeen tai sähköpostin lähettäminen ei yksinään synnytä suhdetta asianajajan ja päämiehen välillä.',
-            'Tämä suhde syntyy vasta sen jälkeen, kun asia on tarkistettu ja molemmat osapuolet ovat vahvistaneet työn vastaanottamisen.',
+            'Tämä suhde syntyy vasta sen jälkeen, kun asia on tarkistettu ja molemmat osapuolet ovat vahvistaneet, että toimisto ottaa toimeksiannon vastaan.',
           ],
         },
         {
           heading: 'Ei lupausta tuloksesta',
           paragraphs: [
             'Mikään osa tästä sivusta ei ole lupaus asian tuloksesta, hakemuksen hyväksymisestä tai oleskelu- ja työasemasta.',
-            'Ulkoiset linkit palvelevat suuntautumista; emme lupaa kolmansien sisältöjen oikeellisuutta emmekä ajantasaisuutta.',
+            'Ulkoiset linkit on tarkoitettu yleiskuvan saamiseen; emme vastaa kolmansien sisältöjen oikeellisuudesta emmekä ajantasaisuudesta.',
           ],
         },
       ],
@@ -1952,10 +1952,10 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Mihin asti artikkeli voi palvella suuntautumisena',
+          heading: 'Mihin asti artikkelista voi olla apua',
           paragraphs: [
-            'Artikkelit ovat yleisiä tietoja julkaisuajankohtana. Säännöt ja niiden soveltaminen voivat muuttua, eikä artikkeli sisällä kaikkia asianne olosuhteita.',
-            'Älkää siksi perustako toimea todellisessa asiassa yksin artikkeliin. Käyttäkää sitä yleiskuvaan ja keskustelkaa asiakirjoistanne erikseen asianajajan kanssa; tämä sivu ei ole neuvontavaihe.',
+            'Artikkelit ovat yleistä tietoa julkaisuajankohtana. Säännöt ja niiden soveltaminen voivat muuttua, eikä artikkeli kata kaikkia asianne olosuhteita.',
+            'Älkää siksi tehkö todellisessa asiassa päätöksiä pelkästään artikkelin perusteella. Käyttäkää sitä yleiskuvan saamiseen ja keskustelkaa asiakirjoistanne erikseen asianajajan kanssa; tämä sivu ei ole neuvontavaihe.',
           ],
         },
       ],

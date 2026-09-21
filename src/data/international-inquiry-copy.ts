@@ -1290,16 +1290,16 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
   },
   fi: {
     guidanceNotice:
-      'Tämä sivu on kirjoitettu suomeksi yleisenä orientaationa, ei oikeudellisena neuvontana asiassanne.',
+      'Tämä sivu on kirjoitettu suomeksi yleiseksi taustatiedoksi, ei oikeudelliseksi neuvonnaksi asiassanne.',
     consultationNotice:
-      'Neuvonta tapahtuu neljällä kielellä: englanniksi, kiinaksi (中文), japaniksi ja koreaksi.',
+      'Neuvonta tapahtuu vain neljällä kielellä: englanniksi, kiinaksi (中文), japaniksi ja koreaksi.',
     methodConfirmationNotice:
-      'Jos ette voi käyttää mitään neljästä kielestä, valitkaa «Viestintätapa on vahvistettava». Vastaamme tutkiaksemme käyttökelpoisen viestintätavan, jos sellainen tapa on; palvelua toisella kielellä ei varmisteta eikä vastausaikaa luvata.',
+      'Jos ette voi käyttää mitään neljästä kielestä, valitkaa ”Viestintätapa on vahvistettava”. Otamme yhteyttä selvittääksemme, onko käyttökelpoista viestintätapaa olemassa; neuvontaa muulla kielellä ei luvata eikä vastausaikaa luvata.',
     preparationNotice:
       'Voitte kirjoittaa yhteenvedon omalla kielellänne. Alkuperäinen teksti säilytetään sellaisena kuin olette sen kirjoittaneet, eikä sitä käännetä automaattisesti.',
-    heading: 'Lähettäkää neuvontapyyntö',
+    heading: 'Lähettäkää yhteydenottopyyntö',
     intro:
-      'Kuvatkaa asianne lyhyesti. Asianajaja tarkastaa sisällön ennen kuin seuraavaa vaihetta käsitellään.',
+      'Kuvatkaa asianne lyhyesti. Asianajaja käy sisällön läpi, ennen kuin seuraavasta vaiheesta sovitaan.',
     submitLabel: 'Lähettäkää pyyntö',
     submittingLabel: 'Lähetetään…',
     successMessage:
@@ -1335,7 +1335,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Japani (日本語)',
       ko: 'Korea (한국어)',
       'needs-method-confirmation':
-        'Mikään neljästä kielestä ei ole käyttökelpoinen — viestintätapa on vahvistettava',
+        'En osaa mitään neljästä kielestä — viestintätapa on vahvistettava',
     },
   },
   cs: {

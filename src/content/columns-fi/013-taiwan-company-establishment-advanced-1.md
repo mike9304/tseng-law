@@ -13,13 +13,13 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Kansikuva](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Äskettäin lukuisat henkilöt ovat onnistuneesti perustaneet yhtiön (公司) Taiwanissa ja saaneet työluvan sekä ulkomaalaisen oleskelukortin (外僑居留證),
+Viime aikoina monet ovat perustaneet yhtiön (公司) Taiwanissa ja saaneet työluvan sekä ulkomaalaisen oleskelukortin (外僑居留證),
 
 ja perustamisen yhteydessä usein esitetyt kysymykset on koottu jäljempänä.
 
-Se, joka on lukenut [**yhtiön perustamisen perusteen**](/fi/columns/taiwan-company-establishment-basics), voi sen jälkeen tutustua myös tähän seikkaperäisempään syventävään osaan.
+Se, joka on lukenut [**yhtiön perustamisen perusteet**](/fi/columns/taiwan-company-establishment-basics), voi sen jälkeen tutustua myös tähän seikkaperäisempään syventävään osaan.
 
-Seuraavat kysymykset ja vastaukset (Q&A) tähtäävät auttamaan henkilöitä, jotka harkitsevat yhtiön perustamista Taiwanissa. 😊
+Seuraavat kysymykset ja vastaukset on tarkoitettu niille, jotka harkitsevat yhtiön perustamista Taiwanissa.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
@@ -37,19 +37,19 @@ Kun myöhemmin yhtiön valmistelutili (公司籌備處帳戶) avataan pankissa, 
 
 Eräs taiwanilaisen pankin työntekijä on henkilökohtaisesti sanonut minulle, että
 
-lukuisat ulkomaalaiset katoavat äskettäin tilin avaamisen jälkeen, joten tilin avaamista käsitellään yhä tiukemmin.
+viime aikoina monet ulkomaalaiset ovat kadonneet tilin avaamisen jälkeen, joten tilin avaamista käsitellään yhä tiukemmin.
 
-Jo perustetekstissä eräs lukija on todennut, että tilin avaaminen osoittautui vaikeimmaksi vaiheeksi; olen tästä samaa mieltä.
+Jo perusteet-artikkelin yhteydessä eräs lukija totesi, että tilin avaaminen osoittautui vaikeimmaksi vaiheeksi; olen tästä samaa mieltä.
 
 Koska rahanpesutapauksia (洗錢) Taiwanissa on hyvin runsaasti, pankkitilien avaaminen tiukkenee yhä.
 
-**Huomautus**：
+**Huomautus:**
 
 Koska sijoitussuunnitelman tarkastus vie myös aikaa,
 
-Teidän tulisi laatia sijoitussuunnitelma ja samalla etsiä yhtiön rekisteröintiosoitetta.
+teidän kannattaa laatia sijoitussuunnitelma ja etsiä yhtiön rekisteröintiosoitetta samaan aikaan.
 
-Ulkomaisten sijoitusten asetuksen (外國人投資條例) 9 artiklan mukaan hyväksytyn sijoituksen on saavuttava kokonaisuudessaan toimivaltaisen viranomaisen asettamassa määräajassa (核定期限); määräaika on vahvistettava hyväksymisasiakirjassa kussakin asiassa (käytännössä se asetetaan usein noin 1 vuodeksi).
+Ulkomaisten sijoitusten lain (外國人投資條例) 9 artiklan mukaan hyväksytyn sijoituksen on saavuttava kokonaisuudessaan toimivaltaisen viranomaisen asettamassa määräajassa (核定期限); määräaika on vahvistettava hyväksymisasiakirjassa kussakin asiassa (käytännössä se asetetaan usein noin 1 vuodeksi).
 
 Tämän määräajan kuluessa jää, sen jälkeen kun yhtiön osoite on löydetty ja vuokrasopimus on tehty,
 
@@ -63,25 +63,25 @@ Se on mahdollista.
 
 Pankki vaatii yleensä kaksinkertaisen henkilöllisyyden tarkastuksen,
 
-ja ilman oleskelukorttia Te voitte Taiwanin maahanmuuttoviranomaiselta hakea ‘**perustietolomaketta**(統一證號基本資料表)’.
+ja ilman oleskelukorttia voitte hakea Taiwanin maahanmuuttoviranomaiselta **yhtenäisen tunnusnumeron perustietolomakkeen** (統一證號基本資料表).
 
-Antaminen on mahdollista samana päivänä,
+Lomake voidaan antaa samana päivänä,
 
-mutta maahanmuuttoviranomainen (移民署) on hyvin ruuhkainen; Teidän tulisi siksi tulla varhain ja nostaa numero.
+mutta maahanmuuttoviranomainen (移民署) on hyvin ruuhkainen, joten paikalle kannattaa tulla ajoissa ja ottaa vuoronumero.
 
 ​
 
 **3. Olen kuullut, että sijoitussuunnitelman (投資計畫書) tarkastuksessa on ilmoitettava koulutus ja työkokemus, ja pelkään, etteivät koulutukseni ja kokemukseni sovi perustettavan yhtiön alaan.**
 
-Talousministeriön tarkastuslautakunta tutkii tosin sijoittajan taustan,
+Talousministeriön sijoitustarkastusosasto tutkii tosin sijoittajan taustan,
 
-mutta tarkastus ei ole liiallisen tiukka.
+mutta tarkastus kohdistuu siihen, onko suunnitelma aito, ei siihen, vastaako koulutus alaa täsmälleen.
 
-Te voitte ilmoittaa monenlaisia työkokemuksia, mukaan lukien sivutyöt,
+Voitte ilmoittaa monenlaisia työkokemuksia, mukaan lukien sivutyöt,
 
 ja selostaa niin seikkaperäisesti, että tarkastavat henkilöt voidaan vakuuttaa.
 
-Tästä kohdasta Teidän tulisi keskustella perusteellisesti asianajajan kanssa Taiwanissa.
+Tästä kohdasta kannattaa keskustella perusteellisesti taiwanilaisen asianajajan kanssa.
 
 ​
 
@@ -89,13 +89,13 @@ Tästä kohdasta Teidän tulisi keskustella perusteellisesti asianajajan kanssa 
 
 Yhtiön perustaminen kestää noin **3 kuukautta**, työluvan (工作許可) ja oleskelukortin saaminen noin **1 kuukauden**,
 
-siksi Teidän tulisi sijoittaa sopimuksen voimaantulopäivä mahdollisimman myöhään.
+siksi sopimuksen voimaantulopäivä kannattaa sijoittaa mahdollisimman myöhään.
 
-Lisäksi vuokranantaja antaa Taiwanissa liikehuoneistojen vuokrasopimuksissa usein vuokralaiselle „**sisustusjakson**“ (裝潢期間).
+Lisäksi vuokranantaja antaa Taiwanissa liikehuoneistojen vuokrasopimuksissa usein vuokralaiselle **sisustusjakson** (裝潢期間).
 
-Tämä on vuokrasta vapaa jakso; Te voitte neuvotella siitä.
+Tämä on vuokrasta vapaa jakso, josta voitte neuvotella.
 
-Ulkomaalaiselle liikehuoneiston vuokraaminen ei ole yksinkertaista, ja vakuus (押金) Taiwanissa on pikemminkin matala (tavallisesti 2 kuukautta), joten vuokranantajan suoja on rajallinen;
+Ulkomaalaiselle liikehuoneiston vuokraaminen ei ole yksinkertaista, ja vakuus (押金) on Taiwanissa melko matala (tavallisesti 2 kuukautta), joten vuokranantajan suoja on rajallinen;
 
 vuokranantajat epäröivät siksi vuokrata ulkomaalaisille.
 
@@ -103,7 +103,7 @@ Siksi suosittelen etsimään toimipaikkaa varhain.
 
 Jos neuvottelu vuokranantajan kanssa ei suju kitkattomasti,
 
-Te voitte tarvittaessa ehdottaa vuokrasopimuksen notaarivahvistusta (公證) tai täydentävää vakuutta.
+voitte tarvittaessa ehdottaa vuokrasopimuksen notaarivahvistusta (公證) tai täydentävää vakuutta.
 
 ​
 
@@ -111,7 +111,7 @@ Te voitte tarvittaessa ehdottaa vuokrasopimuksen notaarivahvistusta (公證) tai
 
 Se riippuu yhtiön toimialoista (營業項目).
 
-Esim.) Jos toimiala on ravintola-ala ja halutaan vuokrata kaupallinen toimistotila, pankkitilin avaaminen on hyvin vaikeaa.
+Esimerkiksi: jos toimiala on ravintola-ala ja halutaan vuokrata kaupallinen toimistotila, pankkitilin avaaminen on hyvin vaikeaa.
 
 Kuten jo todettu, pankki tutkii vuokrasopimuksen ja tarkastaa yhtiön osoitteen paikan päällä.
 
@@ -119,11 +119,11 @@ Lisäksi kaupunginhallitus (市政府) vaatii lopullisessa yhtiörekisteröinnis
 
 kaupallisessa toimistotilassa yhtiörekisteröinti (公司登記) ei tällöin ole mahdollista.
 
-Esim.) Jos kyse on toimialoista (營業項目), jotka ovat mahdollisia kaupallisessa toimistotilassa, kuten mainonta tai tukkukauppa, yhtiö voidaan perustaa kaupalliseen toimistotilaan. Ennen vuokrasopimuksen tekemistä
+Esimerkiksi: jos kyse on toimialoista (營業項目), jotka ovat mahdollisia kaupallisessa toimistotilassa, kuten mainonta tai tukkukauppa, yhtiö voidaan perustaa kaupalliseen toimistotilaan. Ennen vuokrasopimuksen tekemistä
 
-Teidän tulisi tarkistaa tämä etukäteen.
+tämä kannattaa tarkistaa etukäteen.
 
-*Jos Te tarvitsette tukea tai keskustelua taiwanilaisesta oikeudesta, jättäkää kommentti tai ottakaa yhteyttä.*
+*Tämä sivu on vain yleistä opastusta. Neuvonta tapahtuu vain englanniksi, kiinaksi (中文), japaniksi ja koreaksi; yhteydenottopyynnön voi lähettää yhteydenottolomakkeella.*
 
 ---
 

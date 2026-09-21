@@ -92,6 +92,8 @@ const MIN_WORDS = 40;
 const MAX_WORDS = 80;
 const MIN_THAI_CHARS = 120;
 const MAX_THAI_CHARS = 400;
+// Burmese and Khmer stack combining marks that [...str] counts one by one, so their ceiling is wider.
+const MAX_STACKED_SCRIPT_CHARS = 540;
 const MIN_ZH_HANS_CHARS = 70;
 const MAX_ZH_HANS_CHARS = 400;
 
@@ -508,7 +510,7 @@ describe('guidanceAnswers', () => {
       if (locale === 'th' || locale === 'my' || locale === 'km') {
         const chars = [...answer].length;
         expect(chars, `${locale}/${key} chars=${chars}`).toBeGreaterThanOrEqual(MIN_THAI_CHARS);
-        expect(chars, `${locale}/${key} chars=${chars}`).toBeLessThanOrEqual(MAX_THAI_CHARS);
+        expect(chars, `${locale}/${key} chars=${chars}`).toBeLessThanOrEqual(locale === 'th' ? MAX_THAI_CHARS : MAX_STACKED_SCRIPT_CHARS);
       } else if (locale === 'zh-hans') {
         const chars = [...answer].length;
         expect(chars, `${locale}/${key} chars=${chars}`).toBeGreaterThanOrEqual(MIN_ZH_HANS_CHARS);

@@ -567,7 +567,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
   cs: {
     label: 'POBOČKY',
     title: 'Pobočky',
-    description: 'Adresy taiwanských poboček Hovering International Law Firm.',
+    description: 'Adresy tchajwanských poboček Hovering International Law Firm.',
     officeLabel: 'Pobočka',
     mapPreviewLabel: 'Náhled mapy',
     koreaOfficeTitle: 'Korejská pobočka',
@@ -586,7 +586,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
       taipei: 'Tchaj-pej',
       taichung: 'Tchaj-čung',
       kaohsiung: 'Kao-siung',
-      pingtung: 'Pchingtung',
+      pingtung: 'Pching-tung',
     },
   },
   hu: {

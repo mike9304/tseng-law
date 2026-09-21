@@ -716,8 +716,8 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'NÁŠ TÝM',
     title: 'Mezinárodní tým Hovering',
     description:
-      'Profily advokátek a advokátů, provozního vedení a přidružené účetní revize Hovering.',
-    representativeTitle: 'Kierující advokátka',
+      'Profily advokátek a advokátů, provozního vedení a přidruženého účetnictví a auditu Hovering.',
+    representativeTitle: 'Řídící advokátka',
     teamTitle: 'Advokáti a spolupracovníci',
     partnerTitle: 'Přidružené účetnictví',
     introLabel: 'Představení',
@@ -725,13 +725,13 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     experienceLabel: 'Praxe',
     photoAltPrefix: 'Fotografie',
     workingLanguagesLabel: 'Pracovní jazyky',
-    fullProfileLabel: 'Úplný profil (English)',
+    fullProfileLabel: 'Úplný profil (v angličtině)',
     keyFactsHeading: 'Advokátka Wei Tseng — Základní údaje',
     qualificationLabel: 'Oprávnění a kancelář',
     qualificationSentence:
       '{name} je oprávněna vykonávat advokacii na Tchaj-wanu a je řídící advokátkou {firm}.',
     practiceLabel: 'Hlavní oblasti',
-    consultationLanguagesLabel: 'Jazyky porady',
+    consultationLanguagesLabel: 'Jazyky konzultace',
     roles: {
       'tseng-junwei': 'Řídící advokátka na Tchaj-wanu (Managing Attorney)',
       'chang-rongxuan': 'Advokát na Tchaj-wanu (Taiwan Attorney)',
@@ -2459,7 +2459,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kancelář vede věci podniků a soukromých osob na Tchaj-wanu v angličtině, japonštině, korejštině a čínštině.',
-        'Zastupovala korejského studenta v nároku na náhradu škody za úraz v posilovně a dosáhla rozsudku prvního stupně ve výši TWD 1.57M.',
+        'Zastupovala korejského studenta v nároku na náhradu škody za úraz v posilovně a dosáhla rozsudku prvního stupně ve výši 1,57 mil. TWD.',
       ],
       education: [
         'Magistr (M.S.), Institute of Finance, National Taiwan University',
@@ -2487,8 +2487,8 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal s dlouhou praxí jako senior paralegal ve více kancelářích, odpovědný za procesní podporu, právo obchodních společností a zahraniční investice.',
-        'Podpora v řízeních, při zakládání společností, u povolení zahraničních investic, u žádostí o licence a při výměně mezi Koreou a Tchaj-wanem.',
+        'Paralegal s dlouholetou praxí; dříve senior paralegal ve více advokátních kancelářích, se zaměřením na procesní podporu, korporátní agendu a zahraniční investice.',
+        'Podpora v soudních řízeních, při zakládání společností, u povolení zahraničních investic, u žádostí o licence a při komunikaci mezi Koreou a Tchaj-wanem.',
       ],
       education: [
         'Bakalář práv (LL.B.), Tunghai University',

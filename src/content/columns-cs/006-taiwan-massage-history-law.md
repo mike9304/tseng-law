@@ -29,7 +29,7 @@ Připomínalo to velmi dnešní mytí vlasů ve vietnamském stylu.
 
 A tyto salony v tchajwanském stylu zůstávají zvláštní kulturní vzpomínkou pro mnoho osob na Tchaj-wanu.
 
-(Neprozrazuji tu mimoděk svůj věk?)
+Dnes už se salony v této podobě téměř nevyskytují.
 
 ​
 
@@ -55,7 +55,7 @@ Tento zákon platil do roku 2003; tehdy pan Lin, který vedl kadeřnictví,
 
 zaměstnal pracovníky bez zrakového postižení k službám mytí vlasů a masáže, a policie to zjistila.
 
-Podle tehdejšího práva byla panu Linovi a těmto pracovníkům uložena správní peněžitá sankce (罰鍰) ve výši TWD 40.000, TWD 10.000 a TWD 20.000 v novém tchajwanském dolaru (新臺幣).
+Podle tehdejšího práva byla panu Linovi a těmto pracovníkům uložena správní pokuta (罰鍰) ve výši TWD 40.000, TWD 10.000 a TWD 20.000 v novém tchajwanském dolaru (新臺幣).
 
 Pan Lin považoval tuto sankci za velmi nespravedlivou a požádal o ústavní výklad.
 
@@ -63,7 +63,7 @@ Pan Lin považoval tuto sankci za velmi nespravedlivou a požádal o ústavní v
 
 Na Tchaj-wanu
 
-osoby se zrakovým postižením narážejí na četné překážky ve růstu, aktivitě, učení a vzdělávání, mimo jiné,
+osoby se zrakovým postižením narážejí na četné překážky v růstu, aktivitě, učení a vzdělávání, mimo jiné,
 
 a povolání, která mohou vykonávat, jsou velmi omezená.
 
@@ -81,7 +81,7 @@ Ptalo se například, zda psané ustanovení, které dovolovalo výhradně osob�
 
 a zpochybňovalo se, zda toto ustanovení skutečně přispělo k ochraně zaměstnání a existence osob se zrakovým postižením.
 
-Nakonec velcí soudci (大法官) prohlásili za protiústavní (違憲) ustanovení, které dovolovalo výhradně osobám se zrakovým postižením vykonávat povolání maséra.
+Nakonec ústavní soudci (大法官) prohlásili za protiústavní (違憲) ustanovení, které dovolovalo výhradně osobám se zrakovým postižením vykonávat povolání maséra.
 
 ​
 

@@ -9,9 +9,9 @@ categories:
 featured_image: "../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg"
 faq:
   - q: "Aby bylo možné prodávat kosmetiku na Tchaj-wanu, je nutné vždy založit dceřinou společnost nebo pobočku?"
-    a: "Není nutné ji vždy zakládat. Je také možné svěřit dovoz a prodej tchajwanskému dovozci (včetně případu, kdy zároveň působí jako prodejní zástupce). Pokud hodláte činnost na Tchaj-wanu provozovat sami, založení a zápis tchajwanské dceřiné společnosti (子公司) se liší od založení a zápisu pobočky (分公司) zahraniční společnosti a liší se i struktura odpovědnosti a daní; lhůta potřebná k povolení zahraniční investice (僑外投資核准) a k zápisu společnosti nebo pobočky se liší podle každé věci a podle toho, zda dochází k opravě nebo doplnění dokladů. Nejprve je třeba stanovit obchodní model a subjekt, který ponese odpovědnost jako výrobce nebo dovozce kosmetiky (化粧品製造或輸入業者)."
+    a: "Dceřinou společnost ani pobočku není nutné vždy zakládat. Je také možné svěřit dovoz a prodej tchajwanskému dovozci (včetně případu, kdy zároveň působí jako prodejní zástupce). Pokud hodláte činnost na Tchaj-wanu provozovat sami, založení a zápis tchajwanské dceřiné společnosti (子公司) se liší od založení a zápisu pobočky (分公司) zahraniční společnosti a liší se i struktura odpovědnosti a daní; lhůta potřebná k povolení zahraniční investice (僑外投資核准) a k zápisu společnosti nebo pobočky se liší podle každé věci a podle toho, zda dochází k opravě nebo doplnění dokladů. Nejprve je třeba stanovit obchodní model a subjekt, který ponese odpovědnost jako výrobce nebo dovozce kosmetiky (化粧品製造或輸入業者)."
   - q: "Co je PIF a jde o stejný postup jako registrace produktu u TFDA?"
-    a: "Není to stejný postup. Registrace produktu (產品登錄) je samostatný úkon, který se provádí na platformě registrace kosmetických produktů TFDA (衛生福利部食品藥物管理署). PIF je spis, který sdružuje údaje o jakosti, bezpečnosti, složení, tvrzené funkci, způsobu výroby, výsledcích zkoušek a hodnocení bezpečnosti a který výrobce nebo dovozce kosmetiky sestavuje, aktualizuje a uchovává; samotný PIF není dokumentem, který by se musel předem předkládat TFDA. Od 1. 7. 2026 zásadně všechny kosmetické přípravky spadají pod režim PIF, s výjimkou tuhého ručně vyráběného mýdla vyrobeného v místě výroby osvobozeném od registrace závodu (工廠登記)."
+    a: "Registrace produktu a PIF nejsou týmž postupem. Registrace produktu (產品登錄) je samostatný úkon, který se provádí na platformě registrace kosmetických produktů TFDA (衛生福利部食品藥物管理署). PIF je spis, který sdružuje údaje o jakosti, bezpečnosti, složení, tvrzené funkci, způsobu výroby, výsledcích zkoušek a hodnocení bezpečnosti a který výrobce nebo dovozce kosmetiky sestavuje, aktualizuje a uchovává; samotný PIF není dokumentem, který by se musel předem předkládat TFDA. Od 1. 7. 2026 zásadně všechny kosmetické přípravky spadají pod režim PIF, s výjimkou tuhého ručně vyráběného mýdla vyrobeného v místě výroby osvobozeném od registrace závodu (工廠登記)."
   - q: "Na jaké výrazy je třeba dávat pozor v reklamě na kosmetiku na Tchaj-wanu?"
     a: "Reklama se posuzuje nejen podle věty, ale podle celého vyjádření, včetně názvu výrobku, textu, obrazu, symbolu a zvuku. Zakázány jsou nepravdivé nebo nadsazené výrazy a tvrzení léčebného účinku a zvláštní pozornost je třeba věnovat lékařským výrazům, jako je léčba akné, protizánětlivost nebo baktericidní působení. Správní pokuta činí 40.000 až 200.000 tchajwanských dolarů (新臺幣, TWD) za nepravdivou nebo nadsazenou reklamu a 600.000 až 5.000.000 TWD za tvrzení léčebného účinku. Příspěvky influencerů a dalších je rovněž třeba posoudit podle téhož měřítka, pokud jsou v podstatě reklamou."
 ---
@@ -28,7 +28,7 @@ Použitelné povinnosti se mohou lišit podle druhu výrobku a místa výroby (�
 
 ## 1. Forma vstupu na Tchaj-wan a volba dovozce
 
-Není nutné ji vždy zakládat. Je také možné svěřit dovoz a prodej tchajwanskému dovozci (včetně případu, kdy zároveň působí jako prodejní zástupce). Pokud hodláte činnost na Tchaj-wanu provozovat sami, založení a zápis tchajwanské dceřiné společnosti se liší od založení a zápisu pobočky zahraniční společnosti a liší se i struktura odpovědnosti a daní; lhůta potřebná k povolení zahraniční investice a k zápisu společnosti nebo pobočky se liší podle každé věci a podle toho, zda dochází k opravě nebo doplnění dokladů. Nejprve je třeba stanovit obchodní model a subjekt, který ponese odpovědnost jako výrobce nebo dovozce kosmetiky.
+Dceřinou společnost ani pobočku není nutné vždy zakládat. Je také možné svěřit dovoz a prodej tchajwanskému dovozci (včetně případu, kdy zároveň působí jako prodejní zástupce). Pokud hodláte činnost na Tchaj-wanu provozovat sami, založení a zápis tchajwanské dceřiné společnosti se liší od založení a zápisu pobočky zahraniční společnosti a liší se i struktura odpovědnosti a daní; lhůta potřebná k povolení zahraniční investice a k zápisu společnosti nebo pobočky se liší podle každé věci a podle toho, zda dochází k opravě nebo doplnění dokladů. Nejprve je třeba stanovit obchodní model a subjekt, který ponese odpovědnost jako výrobce nebo dovozce kosmetiky.
 
 ### Když se svěří místnímu dovozci
 
@@ -48,23 +48,23 @@ Ať je zvolena kterákoli struktura, ústředním subjektem odpovědnosti v regu
 
 ## 2. Registrace produktu a PIF jsou dva odlišné režimy
 
-Není to stejný postup. Registrace produktu je samostatný úkon, který se provádí na platformě registrace kosmetických produktů TFDA (衛生福利部食品藥物管理署). PIF je spis, který sdružuje údaje o jakosti, bezpečnosti, složení, tvrzené funkci, způsobu výroby, výsledcích zkoušek a hodnocení bezpečnosti a který výrobce nebo dovozce kosmetiky sestavuje, aktualizuje a uchovává; samotný PIF není dokumentem, který by se musel předem předkládat TFDA. Od 1. 7. 2026 zásadně všechny kosmetické přípravky spadají pod režim PIF, s výjimkou tuhého ručně vyráběného mýdla (固態手工香皂) vyrobeného v místě výroby osvobozeném od registrace závodu (工廠登記).
+Registrace produktu a PIF nejsou týmž postupem. Registrace produktu je samostatný úkon, který se provádí na platformě registrace kosmetických produktů TFDA (衛生福利部食品藥物管理署). PIF je spis, který sdružuje údaje o jakosti, bezpečnosti, složení, tvrzené funkci, způsobu výroby, výsledcích zkoušek a hodnocení bezpečnosti a který výrobce nebo dovozce kosmetiky sestavuje, aktualizuje a uchovává; samotný PIF není dokumentem, který by se musel předem předkládat TFDA. Od 1. 7. 2026 zásadně všechny kosmetické přípravky spadají pod režim PIF, s výjimkou tuhého ručně vyráběného mýdla (固態手工香皂) vyrobeného v místě výroby osvobozeném od registrace závodu (工廠登記).
 
 ### Okamžik registrace produktu a doba platnosti
 
 Registrace kosmetického produktu se provádí na platformě registrace kosmetických produktů TFDA. Výrobce nebo dovozce kosmetiky musí dokončit registraci produktu předtím, než výrobek dodá, prodá, daruje, veřejně vystaví (公開陳列) nebo poskytne spotřebiteli k vyzkoušení. Přípravu nelze organizovat jen podle úplatného prodeje; kalendář propagačních darů nebo poskytnutí k vyzkoušení spotřebitelem je třeba spravovat společně s okamžikem registrace.
 
-Doba platnosti registrace produktu je 3 roky. Má-li se v dodávkách pokračovat, je třeba požádat o prodloužení (展延) do 3 měsíců před uplynutím platnosti. Změní-li se zapsané údaje, jako je název výrobku, použití, léková forma (劑型), složky a místo výroby, je třeba také ověřit, zda je nutný postup odpovídající obsahu změny.
+Doba platnosti registrace produktu je 3 roky. Má-li se v dodávkách pokračovat, je třeba požádat o prodloužení (展延) do 3 měsíců před uplynutím platnosti. Změní-li se zapsané údaje, jako je název výrobku, použití, forma přípravku (劑型), složky a místo výroby, je třeba také ověřit, zda je nutný postup odpovídající obsahu změny.
 
 Registrace produktu je úkonem ohlášení stanovených údajů na platformě. Dokončení registrace neznamená, že jsou kompletní všechny podklady potřebné k PIF, ani není posouzením, že označení nebo reklama výrobku jsou v souladu s právem. Kalendář registrace produktu, správa PIF a přezkum označení a reklamy se musí provozovat jako samostatné body souladu.
 
 ### Podklady PIF a stupňovité uplatnění
 
-PIF je soubor podkladů uspořádaný tak, aby bylo možné nadále vysvětlovat jakost a bezpečnost výrobku. Kromě jakosti, bezpečnosti, složení, tvrzené funkce (宣稱功能), způsobu výroby, výsledků zkoušek a hodnocení bezpečnosti je třeba podle výrobku uspořádat základní informace o výrobku a výrobci a podpůrné podklady, jako je etiket. Nařízení o správě informačního spisu kosmetických produktů (化粧品產品資訊檔案管理辦法) uspořádává potřebné podklady do 16 kategorií, proto je třeba podle typu výrobku ověřit podklady každé kategorie a požadavky na podpis a kvalifikaci.
+PIF je soubor podkladů uspořádaný tak, aby bylo možné nadále vysvětlovat jakost a bezpečnost výrobku. Kromě jakosti, bezpečnosti, složení, tvrzené funkce (宣稱功能), způsobu výroby, výsledků zkoušek a hodnocení bezpečnosti je třeba podle výrobku uspořádat základní informace o výrobku a výrobci a podpůrné podklady, například etiketu. Nařízení o správě informačního spisu kosmetických produktů (化粧品產品資訊檔案管理辦法) uspořádává potřebné podklady do 16 kategorií, proto je třeba podle typu výrobku ověřit podklady každé kategorie a požadavky na podpis a kvalifikaci.
 
 Režim PIF se uplatňoval stupňovitě podle skupin výrobků. Od 1. 7. 2026 jsou do předmětu uplatnění zahrnuty i zbývající kosmetické přípravky, takže se zásadně vztahuje na veškerou kosmetiku. Výjimka se omezuje na tuhé ručně vyráběné mýdlo vyrobené v místě výroby osvobozeném od registrace závodu. Výrobek není vyloučen jen proto, že je ruční nebo že používá název mýdla; je třeba ověřit obojí, tuhou formu i podmínku osvobození místa výroby od registrace závodu.
 
-Práci PIF, včetně hodnocení bezpečnosti, může podpořit 3. osoba, která má potřebnou kvalifikaci a způsobilost. I když se však využije podpora sestavení 3. osobou nebo služba uchování podkladů, právní odpovědnost výrobce nebo dovozce kosmetiky trvá. Je třeba vybudovat systém, který umožní původnímu výrobci, zkušebně, hodnotiteli bezpečnosti a podniku na straně Tchaj-wanu vzájemně předávat informace o změnách a nejnovější podepsané podklady.
+Práci PIF, včetně hodnocení bezpečnosti, může podpořit třetí osoba, která má potřebnou kvalifikaci a způsobilost. I když se však využije podpora sestavení třetí osobou nebo služba uchování podkladů, právní odpovědnost výrobce nebo dovozce kosmetiky trvá. Je třeba vybudovat systém, který umožní původnímu výrobci, zkušebně, hodnotiteli bezpečnosti a podniku na straně Tchaj-wanu vzájemně předávat informace o změnách a nejnovější podepsané podklady.
 
 ### Aktualizace a uchování
 
@@ -72,7 +72,7 @@ Změní-li se surovina nebo receptura, způsob a místo výroby, označení vče
 
 Podle čl. 7 nařízení o správě informačního spisu kosmetických produktů je doba uchování nejméně 5 let počítaných ode dne následujícího po dni posledního dodání výrobku na trh. Podle čl. 8 téhož nařízení je místem uchování adresa označení výrobce nebo dovozce kosmetiky stanovená v čl. 7 odst. 1 č. 7 zákona o správě hygieny a bezpečnosti kosmetiky (化粧品衛生安全管理法). Ustanovení, které stanoví dobu, a ustanovení, které stanoví místo, je třeba provozovat odděleně.
 
-I když původní výrobce uchovává originál nebo se používá bezpečné elektronické či cloudové uložiště, výrobce nebo dovozce musí mít přístup k úplným podkladům. Je třeba stanovit přístupová oprávnění, zálohy, správu verzí, formát souborů a odpovědnou osobu tak, aby bylo možné podklady rychle vyhledat a předložit, když je příslušný orgán požaduje. Je také důležité ve smlouvě upravit příjemce předání, způsob a to, zda přístupové oprávnění trvá, aby se podklady udržely po zákonnou dobu uchování i po skončení smlouvy s prodejním partnerem nebo poskytovatelem služeb.
+I když původní výrobce uchovává originál nebo se používá bezpečné elektronické či cloudové úložiště, výrobce nebo dovozce musí mít přístup k úplným podkladům. Je třeba stanovit přístupová oprávnění, zálohy, správu verzí, formát souborů a odpovědnou osobu tak, aby bylo možné podklady rychle vyhledat a předložit, když je příslušný orgán požaduje. Je také důležité ve smlouvě upravit příjemce předání, způsob a to, zda přístupové oprávnění trvá, aby se podklady udržely po zákonnou dobu uchování i po skončení smlouvy s prodejním partnerem nebo poskytovatelem služeb.
 
 ### Kontrola, náprava a správní opatření
 
@@ -102,7 +102,7 @@ Ve smlouvě o spolupráci a v provozních pokynech lze stanovit rozsah povolený
 
 ### Pořadí ověření přípravy prodeje
 
-Přípravu prodeje na Tchaj-wanu, ověří-li se v následujícím pořadí, lze snížit riziko záměny jednoho režimu s jiným.
+Ověří-li se příprava prodeje na Tchaj-wanu v tomto pořadí, klesá riziko záměny jednoho režimu s jiným.
 
 1. Stanovit, zda sami zřídíte dceřinou společnost nebo pobočku na Tchaj-wanu, nebo zda svěříte dovoz a prodej místnímu dovozci.
 2. Ověřit subjekt, který nese právní odpovědnost jako výrobce nebo dovozce kosmetiky, a smluvního odpovědného za práci.
@@ -111,7 +111,7 @@ Přípravu prodeje na Tchaj-wanu, ověří-li se v následujícím pořadí, lze
 5. Přezkoumat etiketu, prodejní stránku, reklamu a příspěvky ze spolupráce podle měřítka celého vyjádření.
 6. Provozovat postup k reakci na kontroly a požadavky na nápravu, stížnosti, bezpečnostní informace a potřebné následné kroky.
 
-Základní strukturu společnosti a pobočky lze vidět v [Základy založení společnosti na Tchaj-wanu](/cs/columns/taiwan-company-establishment-basics), rozsah související podpory v [Které věci vedeme](/cs/services) a údaje o odpovědné advokátce v [Mezinárodní tým Hovering](/cs/lawyers).
+Základní strukturu společnosti a pobočky lze vidět v [Základy založení společnosti na Tchaj-wanu](/cs/columns/taiwan-company-establishment-basics), rozsah související podpory v [V čem klienty zastupujeme](/cs/services) a údaje o odpovědné advokátce v [Mezinárodní tým Hovering](/cs/lawyers).
 
 ### Oficiální podklady
 

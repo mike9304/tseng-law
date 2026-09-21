@@ -21,7 +21,7 @@ Zvláště pokud zaměstnanec odejde z vlastní vůle (自請離職),
 
 nemůže obdržet odstupné (資遣費) (článek 18 zákona o pracovních normách),
 
-což se liší od Koreje.
+což se liší od úpravy v některých jurisdikcích, například v Koreji.
 
 ​
 
@@ -89,13 +89,13 @@ odstupné nemusí být vyplaceno, nebo může být žádáno.
 
 Proto ve sporech práce (勞資糾紛) na Tchaj-wanu
 
-je «**čas**» velmi důležitý.
+je „**čas**“ velmi důležitý.
 
-Ve většině případů ten, kdo se připravil předem, má chráněná práva.
+Ve sporech o odstupné proto rozhoduje, která strana dříve ukončí smlouvu s řádným důvodem a s důkazy.
 
 ---
 
 > Viz také:
 > - [Jak se stanoví rozsah práce a náklady](/cs/pricing)
 > - [Mezinárodní tým Hovering](/cs/lawyers)
-> - [Které věci vedeme](/cs/services)
+> - [V čem klienty zastupujeme](/cs/services)

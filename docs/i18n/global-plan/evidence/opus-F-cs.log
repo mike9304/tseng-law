@@ -1,0 +1,232 @@
+# WO-F-cs — Czech fix lane report (Opus 5, 2026-09-21)
+
+Workspace: /Users/son7/Projects/tseng-law-fix-a-20260921 (no git add/commit/push performed)
+Files touched: 18 × src/content/columns-cs/*.md, src/data/international-guidance-eastern.ts (cs block only),
+src/data/international-guidance-team.ts (cs blocks), -offices.ts (cs blocks), -answers.ts (cs block),
+src/data/international-inquiry-copy.ts (cs block). src/lib/llms-txt.ts: no change needed (no flagged row;
+GUIDANCE_LLMS_NOTICES.cs already says "pouze anglicky, čínsky (中文), japonsky a korejsky").
+No test file needed updating — no pinned Czech string was changed (FAQ question
+'Je možná porada v češtině?' and the /^Ne\./ answer opening were deliberately preserved).
+
+## 1. Rows applied — cs-a.md
+a#1  APPLIED  'Kierující advokátka' → 'Řídící advokátka' (guidanceTeamCopy.cs.representativeTitle).
+                G-sweep for other Polish-looking tokens in the cs pack: none found.
+a#2  ALREADY DONE in source ('NÁŠ TÝM'); the dump cs-guidance.txt is stale. Verified.
+a#3  ALREADY DONE in source ('POBOČKY'). Verified.
+a#4  APPLIED (R2b) 001 §1: paragraph now opens "Poznámka k jednotlivým zemím — dohoda o dani z příjmu
+                Tchaj-wan–Korea (所得稅協定): …" and closes with the English caveat (Korea-only fact pattern,
+                not a worldwide investor rule, check your own country's treaty separately). No digits added.
+a#5  APPLIED  002 ×3: 'společnost apelující na veřejnou nabídku (公開發行公司)' → 'společnost, která veřejně
+                emitovala akcie (公開發行公司)'.
+a#6  APPLIED  002 ×2 (R8): 'vazbu/vazba' → 'krátkodobé odnětí svobody (拘役)'.
+a#7  APPLIED  002 (R8): 'zpronevěra (背信)' → 'trestný čin porušení důvěry (背信)'.
+a#8  APPLIED  004 §: 'právní oddělení, které nabízí forma organizace' → 'právní oddělenost, kterou zvolená
+                forma organizace vytváří'.
+a#9  SKIPPED  per ACCEPTED-cs (frontmatter `url:` Hangul = canonical source metadata, not rendered).
+a#10 SKIPPED  per ACCEPTED-cs (R1 already remapped /ko/ links). New labels verified as natural Czech; the
+                services label was reworded (see b#31).
+a#11 APPLIED  (R2a/c/d) 004 "korejská mateřská společnost" → "zahraniční mateřská společnost … v zemi jejího
+                sídla" + "Korea je dále v článku uvedena jen jako označený příklad, nikoli jako jediná země
+                původu investora."; 005 Q5 (a#52); 007 (a#11/R2d, see below); 008 (R2c); 009 (R2c);
+                006 Korea massage passage kept — it is already a labelled comparative example ("Podobně v Koreji").
+a#12 APPLIED  guidanceAnswers.cs.lawyers: 'je oprávněna na Tchaj-wanu' → 'je oprávněna vykonávat advokacii
+                na Tchaj-wanu'. (teamCopy.qualificationSentence already carried the full form.)
+a#13 APPLIED  guidanceAnswers.cs.services: 'práci' → 'pracovněprávní spory'.
+a#14 APPLIED  003 Q: 'přezkum se omezuje na jediný okamžik' → 'ten však lze podat jen jednou'.
+a#15 APPLIED  007 ×2: 'Pohlavní styk po dohodě' → 'Dobrovolný pohlavní styk'.
+a#16 APPLIED  007 + 008 table item 3: 'na čas (有期徒刑)' → 'na dobu určitou (有期徒刑)'.
+a#17 APPLIED  FAQ question 'Co bych si měl připravit před kontaktem?' → 'Co si připravit před kontaktem?'
+                (not a test-pinned string; the pinned language FAQ was left untouched).
+a#18 APPLIED  001: 'každých 2 měsíce' → 'jednou za 2 měsíce'.
+a#19 APPLIED  001: 'posuzovat z skutečně nabízených' → 'posuzovat podle skutečně nabízených … a podle struktury'.
+a#20 APPLIED  002: 'eventualní dluhy' → 'možné (podmíněné) závazky'.
+a#21 APPLIED  002 ×3 'valná hromada se usnáší' + ×3 'lze usnesení přijmout'.
+a#22 APPLIED  002 ×3: 'povinnost podat roční daňové přiznání…'.
+a#23 APPLIED  003: 'Níže je uvedeno obecné pořadí postupu'.
+a#24 APPLIED  004: 'ze samotného statusu pobočky nelze dovozovat, že je z veškeré daňové podpory vyloučena'.
+a#25 APPLIED  005: 'zásadně je potřeba alespoň číslo mobilního telefonu'.
+a#26 APPLIED  006: 've růstu' → 'v růstu'.
+a#27 APPLIED  007: 'musí se manželé vždy dostavit společně?'.
+a#28 APPLIED  008 title + H1: '??' → '?'.
+a#29 APPLIED  (R6) French guillemets → Czech „ “ everywhere in the cs pack (7 pairs after targeted rewrites)
+                and in columns 004 ×2, 008, 009, 013 ×2, 014, 015 ×11, 016, 017 ×3, 018 ×2 (+ 018 ‘…’ → „…“).
+                Guillemet count in columns-cs is now 0.
+a#30 APPLIED  doprovázet → zastupovat, 5 instances in the pack (home.intro, about §1, services §1,
+                criminal §1, about "Práce se zahraničními stranami").
+a#31 APPLIED  + systemic: 'skupina/skupiny věcí' as a practice-area label → 'agenda/agendy', 14 instances in
+                the pack + 2 in guidanceAnswers.cs.
+a#32 APPLIED  + systemic: the calque 'jazyk(y/ů/ích) porady' → 'jazyk(y) konzultace', 10 instances
+                (pack 9 incl. two headings + teamCopy.consultationLanguagesLabel), plus
+                internationalInquiryCopy.cs.preferredConsultationLanguageLabel.
+a#33 APPLIED  'v jednom toku' → 'v jednom navazujícím postupu'.
+a#34 APPLIED  'přidružené účetní revize' → 'přidruženého účetnictví a auditu' ×3 (pack, teamCopy, answers).
+a#35 PARTLY APPLIED — see §4 (disagreement): the English job title and the awkward double "paralegal … senior
+                paralegal" were rewritten ('Paralegal s dlouholetou praxí; dříve senior paralegal ve více
+                advokátních kancelářích, se zaměřením na …'), which also removes the masculine participle.
+                The person's gender was NOT changed to feminine.
+a#36 APPLIED  'daň z příjmu podniků zaměřených na zisk' → 'daň z příjmu ziskových podniků', 11 instances
+                (001 ×3, 002 ×1, 004 ×7).
+a#37 APPLIED  001 ×3: 'spojovací práce' → 'styčná (kontaktní) činnost'.
+a#38 APPLIED  + systemic: archaic 'statky' for corporate assets → 'majetek/zboží', 18 instances in 002 and
+                2 in 004 ('dodávek statků' → 'dodání zboží', 'nabývat statky' → 'nabývat majetek').
+a#39 APPLIED  003: 'registrační spojovací lístek' → 'evidenční lístek účastníků dopravní nehody (道路交通事故當事人登記聯單)'.
+a#40 APPLIED  003 Q16–Q20 + closing: first-person blog voice removed (13 blocks rewritten in place; block
+                count and ZWSP spacer blocks unchanged), comments CTA replaced (see R3 below).
+a#41 APPLIED  006: chatty aside '(Neprozrazuji tu mimoděk svůj věk?)' replaced by a neutral sentence — the
+                block itself had to stay to keep the block count.
+a#42 APPLIED  006: 'velcí soudci (大法官)' → 'ústavní soudci (大法官)' (R8: Constitutional Court justices).
+a#43 APPLIED  (R7b) 007 §3/§6/§7 openings made self-standing ("Manželé se k soudní mediaci nemusí vždy dostavit
+                společně. …", "Jméno zapsané u nemovitosti samo o sobě o rozdělení majetku nerozhoduje. …",
+                "Tyto nároky nejsou tatáž práva. …"); FAQ answers kept in sync. Heading count unchanged.
+a#44 APPLIED  008: 'vedoucí kádry' → 'vedoucí pracovníci' (+ verb agreement in 4 neighbouring blocks).
+a#45 APPLIED  008 table row renamed with the viewpoint: '| Obtížnost pro zaměstnavatele | Nižší | Vyšší | Netýká se |'.
+a#46 APPLIED  009 closing: the slogan replaced with the reviewer's evidence-based sentence.
+a#47 APPLIED  'Pchingtung' → 'Pching-tung' ×5 (pack ×3, officeTitles.pingtung, guidanceAnswers.about).
+a#48 APPLIED  'taiwanský' → 'tchajwanský' — 14 instances in the pack, 1 in offices, 2 in answers.
+                Columns already used 'tchajwanský' consistently (0 hits).
+a#49 APPLIED  team bio: 'TWD 1.57M' → '1,57 mil. TWD' (fact kept; format only, as R3/ACCEPTED-cs allow).
+a#50 NOT APPLIED — checker constraint, see §3.
+a#51 APPLIED  003: ISO '2026-05-29' / '2026-07-01' → '29. 5. 2026' / '1. 7. 2026' (checker still parses all
+                three numbers per date; numbers PASS).
+a#52 APPLIED  005 Q5: 'Může společnost zaměstnávat cizince (včetně osob s korejskou státní příslušností)?'.
+a#53 APPLIED  008 opening: greeting dropped → 'Advokátka Wei Tseng (曾雋崴) níže shrnuje pravidla odstupného
+                (資遣費) na Tchaj-wanu.' + second block rewritten.
+a#54 APPLIED  inquiry banner + guidanceAnswers.cs.faq + contact item now say 'pouze ve čtyřech jazycích'.
+a#55 APPLIED  'Q&A' removed from all Czech titles/headings: 003 (title + H1), 005, 007 (title + H1), 013.
+a#56 APPLIED  001 ×2: 'Minimální kapitál vlastní odvětví' → 'Minimální kapitál daného odvětví'.
+a#57 APPLIED  001 ×2: 'Mezi těmito případy, existuje-li …' → 'Existuje-li v těchto případech zaměstnavatel —
+                společnost nebo pobočka — méně než 1 rok, uplatní se zásadně …' (+ the parallel
+                'Existuje-li 1 rok nebo déle, uplatní se zásadně …' ×2).
+a#58 APPLIED  + systemic: 'Nemůžete-li užít žádný ze čtyř jazyků' → 'Pokud neovládáte žádný ze čtyř jazyků
+                konzultace' ×4 (pack heading, pack paragraph, contact description, inquiry copy).
+a#59 APPLIED  003: 'náhrada pokud možno nejvyšší' → 'náhrada v rozsahu, který skutkový stav a důkazy odůvodňují'.
+a#60 APPLIED  008: luck framing → 'prokázat svůj zákonný nárok na odstupné; ostatní zaměstnanci, kteří odešli
+                bez důkazů, stejný nárok neprosadili.'
+
+## 2. Rows applied — cs-b.md
+b#1  APPLIED  010: 'která základna se uplatní' → 'který právní základ se uplatní — smluvní odpovědnost,
+                delikt (侵權行為) nebo ochrana spotřebitele —'.
+b#2  APPLIED  014 throughout (29 instances): 'minimální doba/době/dobu/doby práce' →
+                '… trvání pracovního poměru', incl. title and H1.
+b#3  APPLIED  014 (10 instances): 'předplatné plnění / předplatného plnění' → 'plnění poskytnuté předem /
+                plnění poskytnutého předem (預付性給付)'.
+b#4  APPLIED  016 title + H1: 'právní vodítka pro zbývající rodinu' → 'právní přehled pro pozůstalou rodinu'
+                (merges b#4 with b#29 — 'vodítko' is itself the calque).
+b#5  APPLIED  016: 'odchodné (退休金)' → 'dávka z odchodu do důchodu (退休金)'.
+b#6  APPLIED  016: 'ověření (認證), jakož i v postupu ověření (檢認)' → 'ověření (認證) a v řízení o prohlášení
+                závěti za pravou (檢認) nebo o jejím výkonu'.
+b#7  APPLIED  018: 'Pouhé opatřené jednoho určitého formuláře' → 'Pouhé zvolení jedné určité právní formy'.
+b#8  APPLIED  018: 'pracovní povolení od dalšího cizince' → '… pro dalšího cizince'.
+b#9  APPLIED  013 closing CTA → 'Potřebujete-li konzultaci k tchajwanskému právu, kancelář jedná pouze
+                anglicky, čínsky (中文), japonsky a korejsky; komentáře se na webu nevedou.'
+b#10 APPLIED  013: '(Q&A)' removed from the heading.
+b#11 APPLIED  013: '**Rada**：' → '**Rada:**'. Full-width CJK punctuation sweep over all 18 columns
+                (：，（）、): 1 instance found and fixed; the only remaining one is inside 008's frontmatter
+                `url:` value, which is out of scope.
+b#12 APPLIED  010: 'není-li vykonáváno po 2 roky … dlužníka náhrady' → 'není-li uplatněno do 2 let … o osobě
+                povinné k náhradě'.
+b#13 APPLIED  011: 'léková forma (劑型)' → 'forma přípravku (劑型)'.
+b#14 APPLIED  013: '«list základních údajů» (統一證號基本資料表)' → '„výpis základních údajů k jednotnému
+                identifikačnímu číslu“ (統一證號基本資料表)'.
+b#15 APPLIED  016: 'globálně nastupuje' → 'univerzálně nastupuje'.
+b#16 APPLIED  017 ×3: 'zprostředkování dopravy (運送承攬)' → 'zasílatelství (運送承攬)'.
+b#17 APPLIED  011: 'uložiště' → 'úložiště'.
+b#18 APPLIED  011: 'jako je etiket' → 'například etiketu'.
+b#19 APPLIED  + systemic: '3. osoba' → 'třetí osoba', 15 instances (003 ×2, 004 ×6, 007 ×3, 011 ×2, 014 ×1,
+                016 ×1, 017 ×2). Verified the checker still matches every number (numbers PASS).
+b#20 APPLIED  011: sentence re-ordered per the reviewer.
+b#21 APPLIED  013 Q1 recast as 'zatím nemám adresu zápisu'; Q3 recast impersonally ('Při posouzení … se prý
+                uvádí …'), removing the masculine-only 'Slyšel jsem'.
+b#22 APPLIED  013: 'čtenářka nebo čtenář uvedli'; the bank anecdote recast as 'Podle sdělení pracovnice jedné
+                tchajwanské banky …' (removes the first-person 'mi … řekla' mismatch).
+b#23 APPLIED  014: 'část specializovaně technická'.
+b#24 APPLIED  014: 'propojit s tématem školení, s odborností a techničností'.
+b#25 APPLIED  see a#29 (all guillemets converted; 015 alone had 11).
+b#26 APPLIED  015 ×3: 'seznam „odvětví, která jsou předmětem úředního ověření“'.
+b#27 APPLIED  016 §9 lead-in and checklist recast impersonally (see b#39); the 'obecný pořadí' gender clash
+                the reviewer quotes does not occur in the current 016 text (fixed variant already present) —
+                the same pattern in 003 was fixed under a#23.
+b#28 APPLIED  010: 'Byla jsem advokátkou (訴訟代理人) žalobce' → 'Advokátka Wei Tseng zastupovala žalobce,
+                korejského studenta, jako procesní zástupkyně (訴訟代理人).'
+b#29 APPLIED  'vodítko' calque removed everywhere: 010 body, 014 §11 heading, 016 title + §11 heading,
+                017 heading, 014 related-link label. 0 occurrences of 'vodítk' remain in columns-cs.
+b#30 APPLIED  010: 'Pád v provozovně, újma na zdraví způsobená jídlem a úraz při odborné službě'.
+b#31 APPLIED  + systemic: '[Které věci vedeme](/cs/services)' → '[V čem klienty zastupujeme](/cs/services)',
+                11 columns, and the guidance pack page title `pages.services.title` was changed to match
+                (ACCEPTED-cs explicitly allows rewording the label; the target path is unchanged).
+b#32 APPLIED  011 FAQ/§1/§2 openings made self-standing ('Dceřinou společnost ani pobočku není nutné vždy
+                zakládat.', 'Registrace produktu a PIF nejsou týmž postupem.').
+b#33 APPLIED  012: 'Věc přešla do soudního řízení; v jeho průběhu bylo vypracováno několik znaleckých posudků'.
+b#34 APPLIED  013: emoji removed; series retitled 'Založení společnosti na Tchaj-wanu – podrobnější výklad,
+                N. část' in 013, 005 (title, H1 and body references) and 015.
+b#35 APPLIED  013 ×2: 'Př.)' → 'Např.'.
+b#36 APPLIED  (R7b) 014 FAQ + §1 'Ujednání není automaticky neplatné. Podle čl. 15-1 …'; 016 §3 and §7;
+                017 §1 and §3. Heading count unchanged everywhere.
+b#37 APPLIED  014: 'není institutem, který by fyzicky nebo právně bránil odchodu pracovníka'.
+b#38 APPLIED  015 closing rewritten (no generic-masculine 'advokát', four-language lock restated).
+b#39 APPLIED  016: 2nd-person checklist converted to impersonal 'je třeba …' — 15 verb forms across §4 lead-in,
+                the §9 list items 1–6, §9 closing and §10 lead-in.
+b#40 APPLIED  'rozhovor' in the consultation sense → 'konzultace': 018 ×6 (incl. the §8 heading and the
+                'Konzultace o struktuře vstupu' section), 013 ×1, guidance pack ×3, guidanceAnswers ×1.
+b#41 APPLIED  010 ×2: 'Taichung' → 'Tchaj-čung'.
+b#42 NOT APPLIED — checker constraint, see §3.
+b#43 APPLIED  017 ×4: 'Kinmen/Lienchiang/Matsu' → 'Ťin-men / Lien-ťiang / Ma-cu'.
+b#44 APPLIED  018: 'požadovaný jazyk konzultace (pouze angličtina, čínština (中文), japonština nebo korejština)'
+                + the following sentence aligned.
+
+## 3. Rows NOT applied for a checker constraint (noted as the WO requires)
+a#50 / b#42 — thousands separator.  ČSN-correct Czech spacing ("500 000", "1 579 589") is REJECTED by
+scripts/check-column-translation.mjs: NUMBER_THOUSAND_STYLE.cs = 'dot', and the grouped-number regexes only
+accept `.`/`,` groupings, so "500 000 TWD" tokenises as 500 + 0 and "1 579 589 TWD" as 1 + 579 + 589, which
+breaks the numbers parity check (verified experimentally with analyzeNumbers before editing). The German-style
+dot separators were therefore kept in the columns, per the WO's "prefer the form the checker accepts".
+The guidance pack is NOT parsed by that checker, so the team-bio figure there was fixed to Czech form
+(1,57 mil. TWD) as a#49 asks. RECOMMENDATION for the supervisor: teach the checker a space/NBSP grouping for
+cs/pl/sv/fi/hu/ro/uk before the Czech columns can carry correct Czech number typography.
+Dates were fine: "29. 5. 2026" parses to 29/5/2026 in running text, so a#51 was applied.
+
+## 4. Where I disagree with the reviewer (not applied as written)
+1. a#35 — gender of the paralegal Fang-Yu Chang. The reviewer infers from the given name 芳瑜 that she is a
+   woman and asks for 'Právní asistentka … odpovědná'. The product facts fix only attorney Wei Tseng's gender;
+   the canonical record (src/data/team-members.ts) states no gender, and every other gendered locale (pl, ru,
+   de …) uses the masculine/neutral form. Guessing a real person's gender from a name is not a fix I am willing
+   to ship. I rewrote the sentence so that it carries no gendered participle at all and dropped the redundant
+   'paralegal … senior paralegal', which removes the readability complaint without asserting a fact.
+   Decision needed from the attorney/supervisor if the feminine form is in fact correct.
+2. a#10 / a#9 — link and frontmatter-URL rows: skipped per ACCEPTED-cs, not on my own judgment. One body link
+   in 005 still points at the Korean blog with a percent-encoded Hangul slug
+   ("…prohloubená část 1" → wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-…). The hard rules forbid changing
+   links, so I left it; it could be remapped to /cs/columns/taiwan-company-establishment-advanced-1
+   (013 exists in cs) in a follow-up. FLAGGED, not changed.
+3. b#27 — the quoted string 'Následující uspořádává obecný pořadí ověření' does not exist in the current
+   016 text; the live sentence is already grammatical. The same gender clash in 003 was real and fixed (a#23).
+4. a#32/b#40 wording — I did not replace every occurrence of 'porada' with 'konzultace'. 'právní porada' is the
+   Czech Bar's own term and reads as good legal Czech; only the calqued compound 'jazyky porady' and the
+   'rozhovor' = consultation misuse were replaced. This also keeps guidance-disclosure-parity's cs pattern
+   /krokem porady/ and the pinned FAQ 'Je možná porada v češtině?' intact, so no test had to be edited.
+
+## 5. §Verify output (verbatim)
+$ node scripts/check-column-translation.mjs --dir src/content/columns-cs --lang cs 2>&1 | tail -8
+forbidden      PASS   
+hanzi          PASS   han=30
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-cs src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      23
+
+PASS CRITERIA: checker summary PASS 18/18 ✓ · markers 0 ✓ · TSC_OK ✓ · 160 test files / 2770 tests passed ✓

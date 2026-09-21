@@ -1,5 +1,5 @@
 ---
-title: "Založení společnosti na Tchaj-wanu – prohloubená část 1"
+title: "Založení společnosti na Tchaj-wanu – podrobnější výklad, 1. část"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-1"
 lastmod: "2026-09-10"
 date_display: "13. září 2025"
@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg"
 ---
 
-# Založení společnosti na Tchaj-wanu – prohloubená část 1
+# Založení společnosti na Tchaj-wanu – podrobnější výklad, 1. část
 
 ![Hlavní snímek](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
@@ -19,11 +19,11 @@ a otázky často kladené při zakládání jsou sebrány níže.
 
 Osoby, které si přečetly [**základy založení společnosti**](/cs/columns/taiwan-company-establishment-basics), mohou následně nahlédnout i do této podrobnější prohloubené části.
 
-Následující otázky a odpovědi (Q&A) mají pomoci osobám, které zvažují založení společnosti na Tchaj-wanu. 😊
+Následující otázky a odpovědi mají pomoci osobám, které zvažují založení společnosti na Tchaj-wanu.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
-**1. Chci založit společnost, ale ještě jsem nenašel adresu zápisu. Je založení přesto možné?**
+**1. Chci založit společnost, ale zatím nemám adresu zápisu. Je založení přesto možné?**
 
 Když cizinec zakládá společnost na Tchaj-wanu, musí předložit investiční plán (投資計畫書) Odboru přezkumu investic Ministerstva hospodářství (經濟部投資審議司) k posouzení.
 
@@ -35,15 +35,15 @@ Při sestavování investičního plánu není třeba uvádět přesnou adresu s
 
 Když se později v bance otevírá přípravný účet společnosti (公司籌備處帳戶), mnoho bank však přezkoumává nájemní smlouvu (租賃契約) a provádí místní prohlídku adresy společnosti.
 
-Zaměstnankyně nebo zaměstnanec tchajwanské banky mi osobně řekla, že
+Podle sdělení pracovnice jedné tchajwanské banky platí, že
 
 v poslední době mnoho cizinců po otevření účtu zmizí, proto se otevírání účtů posuzuje stále přísněji.
 
-Již v základní části čtenářka nebo čtenář uvedl, že otevření účtu je nejtěžší etapou; souhlasím s tím.
+Již u základní části čtenářky a čtenáři uváděli, že otevření účtu je nejtěžší etapou; praxe to potvrzuje.
 
 Protože na Tchaj-wanu je velmi mnoho případů praní peněz (洗錢), otevírání bankovních účtů se stává stále přísnějším.
 
-**Rada**：
+**Rada:**
 
 Protože posouzení investičního plánu také zabere čas,
 
@@ -63,7 +63,7 @@ Je to možné.
 
 Banka obecně vyžaduje dvojí ověření totožnosti,
 
-a bez průkazu k pobytu lze u tchajwanské imigrační správy požádat o «**list základních údajů**» (統一證號基本資料表).
+a bez průkazu k pobytu lze u tchajwanské imigrační správy požádat o „**výpis základních údajů k jednotnému identifikačnímu číslu**“ (統一證號基本資料表).
 
 Vydání je možné téhož dne,
 
@@ -71,7 +71,7 @@ imigrační správa (移民署) je však velmi vytížená; proto je třeba při
 
 ​
 
-**3. Slyšel jsem, že při posouzení investičního plánu je třeba uvést vzdělání a odbornou praxi, a obávám se, že mé vzdělání a praxe neodpovídají odvětví společnosti, kterou chci založit.**
+**3. Při posouzení investičního plánu se prý uvádí vzdělání a odborná praxe. Co když mé vzdělání a praxe neodpovídají odvětví společnosti, kterou chci založit?**
 
 Přezkumná komise Ministerstva hospodářství sice posuzuje zázemí investora,
 
@@ -81,7 +81,7 @@ Lze uvést různorodé pracovní zkušenosti, včetně brigád,
 
 a vyložit je podrobně tak, aby bylo možné přesvědčit osoby provádějící posouzení.
 
-V tomto bodě byste měli věc důkladně probrat s advokátem na Tchaj-wanu.
+V tomto bodě je vhodné věc důkladně probrat s advokátkou nebo advokátem na Tchaj-wanu.
 
 ​
 
@@ -91,7 +91,7 @@ Založení společnosti trvá přibližně **3 měsíce**, získání pracovníh
 
 proto je třeba začátek smlouvy stanovit co nejpozději.
 
-Kromě toho v nájemních smlouvách na obchodní provozovny na Tchaj-wanu pronajímatel často poskytuje nájemci «**období úpravy interiéru**» (裝潢期間).
+Kromě toho v nájemních smlouvách na obchodní provozovny na Tchaj-wanu pronajímatel často poskytuje nájemci „**období úpravy interiéru**“ (裝潢期間).
 
 Jde o období osvobozené od nájemného; lze o něj jednat.
 
@@ -99,7 +99,7 @@ Cizinci není snadné pronajmout obchodní provozovnu a kauce (押金) na Tchaj-
 
 pronajímatelé se proto zdráhají pronajímat cizincům.
 
-Proto doporučuji hledat provozovnu včas.
+Je proto vhodné hledat provozovnu včas.
 
 Pokud jednání s pronajímatelem neprobíhá hladce,
 
@@ -111,7 +111,7 @@ lze v případě potřeby navrhnout ověření nájemní smlouvy (公證) nebo d
 
 Záleží to na odvětvích činnosti (營業項目) společnosti.
 
-Př.) Pokud je odvětvím gastronomie a zamýšlí se pronajmout kancelářský prostor, otevření bankovního účtu bude velmi obtížné.
+Např. pokud je odvětvím gastronomie a zamýšlí se pronajmout kancelářský prostor, otevření bankovního účtu bude velmi obtížné.
 
 Jak již bylo uvedeno, banka přezkoumává nájemní smlouvu a provádí místní prohlídku adresy společnosti.
 
@@ -119,15 +119,15 @@ Kromě toho při konečném zápisu společnosti městský úřad (市政府) ta
 
 jde-li o kancelářský prostor, zápis společnosti (公司登記) pak není možný.
 
-Př.) Jde-li o odvětví možná v kancelářském prostoru, jako je reklama nebo velkoobchod, lze společnost založit v kancelářském prostoru. Před uzavřením nájemní smlouvy
+Např. jde-li o odvětví možná v kancelářském prostoru, jako je reklama nebo velkoobchod, lze společnost založit v kancelářském prostoru. Před uzavřením nájemní smlouvy
 
 to předem ověřte.
 
-*Potřebujete-li pomoc nebo rozhovor o právu Tchaj-wanu, zanechte komentář nebo se ozvěte.*
+*Potřebujete-li konzultaci k tchajwanskému právu, kancelář jedná pouze anglicky, čínsky (中文), japonsky a korejsky; komentáře se na webu nevedou.*
 
 ---
 
 > Další čtení:
-> - [Které věci vedeme](/cs/services)
+> - [V čem klienty zastupujeme](/cs/services)
 > - [Mezinárodní tým Hovering](/cs/lawyers)
 > - [Jak kancelář oslovit](/cs/contact)

@@ -1,5 +1,5 @@
 ---
-title: "Dědictví a rodičovská péče na Tchaj-wanu: právní vodítka pro zbývající rodinu"
+title: "Dědictví a rodičovská péče na Tchaj-wanu: právní přehled pro pozůstalou rodinu"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
 lastmod: "2026-07-25"
 date_display: "13. září 2025"
@@ -11,14 +11,14 @@ faq:
   - q: "Pokud není závěť a dědici jsou jen manžel a 2 děti, jak se rozděluje dědický podíl?"
     a: "Podle čl. 1138 a čl. 1144 občanského zákoníku Tchaj-wanu (民法) manžel dědí společně s dědici příslušného pořadí a přímí potomci (直系血親卑親屬) jsou pořadím 1 zákonného dědění. Není-li platná závěť (遺囑), jsou-li dotčenými dědici jen manžel a 2 děti a není-li vzdání se dědictví (拋棄繼承), dědická nezpůsobilost (喪失繼承權), dědění z zastoupení (代位繼承) ani jiná okolnost, která by změnila závěr, dědí 3 osoby zásadně každá 1/3. Jde jen o hypotézu k výkladu pravidla, nikoli o závěr konkrétní dědické věci."
   - q: "Je právo manžela na rozdělení zůstatkového majetku totéž právo jako dědický podíl?"
-    a: "Ne. Právo na rozdělení rozdílu zůstatkového manželského majetku (剩餘財產差額分配) podle čl. 1030-1 občanského zákoníku Tchaj-wanu (民法) je právo, které manžel může uplatnit zvlášť, jsou-li splněny zákonné předpoklady, a musí se vypočíst odděleně od dědického podílu. Veškerý majetek nabytý za manželství do výpočtu sám o sobě nevstupuje a pozůstalý manžel nutně nedostává polovinu dědického majetku. Je třeba posoudit věc po ověření majetkového režimu, důvodu a okamžiku nabytí každého majetku, dluhů a zákonně vyloučených položek."
+    a: "Nejde o totéž právo. Právo na rozdělení rozdílu zůstatkového manželského majetku (剩餘財產差額分配) podle čl. 1030-1 občanského zákoníku Tchaj-wanu (民法) je právo, které manžel může uplatnit zvlášť, jsou-li splněny zákonné předpoklady, a musí se vypočíst odděleně od dědického podílu. Veškerý majetek nabytý za manželství do výpočtu sám o sobě nevstupuje a pozůstalý manžel nutně nedostává polovinu dědického majetku. Je třeba posoudit věc po ověření majetkového režimu, důvodu a okamžiku nabytí každého majetku, dluhů a zákonně vyloučených položek."
   - q: "Pokud jeden z rodičů zemře, co se stane s rodičovskou péčí pozůstalého rodiče?"
     a: "Podle čl. 1089 občanského zákoníku Tchaj-wanu (民法) platí, že když jeden z rodičů nemůže vykonávat práva a povinnosti vůči nezletilému dítěti, vykonává je zásadně druhý. Pokud tedy pozůstalý rodič rodičovskou péči (親權) zachovává a neexistuje opačné soudní rozhodnutí, tento rodič obvykle nadále vykonává práva a povinnosti rodičovské péče. Podle konkrétních okolností, jako je již vydané rozhodnutí, důvody omezení nebo pozastavení rodičovské péče, mezinárodní prvky a nejlepší zájem dítěte, však může být nutný zásah soudu."
   - q: "Může pozůstalý rodič volně užívat majetek, který nezletilé dítě zdědilo?"
-    a: "Ne. Podle čl. 1087 a čl. 1088 občanského zákoníku Tchaj-wanu (民法) je majetek, který nezletilý nabude děděním, zvláštním majetkem dítěte (特有財產) a otec, matka ani opatrovník se nestávají jeho hospodářskými vlastníky. Správa, užívání, požívání, zákonné zastoupení a nakládání se musí dít v zájmu dítěte; při střetu zájmů nebo důležitém nakládání může vzniknout jmenování zvláštního zástupce (特別代理人) nebo zásah soudu. Nelze mít za to, že rodiče mohou jednostranně a bez omezení užívat dědický majetek dítěte."
+    a: "Volně jej užívat nemůže. Podle čl. 1087 a čl. 1088 občanského zákoníku Tchaj-wanu (民法) je majetek, který nezletilý nabude děděním, zvláštním majetkem dítěte (特有財產) a otec, matka ani opatrovník se nestávají jeho hospodářskými vlastníky. Správa, užívání, požívání, zákonné zastoupení a nakládání se musí dít v zájmu dítěte; při střetu zájmů nebo důležitém nakládání může vzniknout jmenování zvláštního zástupce (特別代理人) nebo zásah soudu. Nelze mít za to, že rodiče mohou jednostranně a bez omezení užívat dědický majetek dítěte."
 ---
 
-# Dědictví a rodičovská péče na Tchaj-wanu: právní vodítka pro zbývající rodinu
+# Dědictví a rodičovská péče na Tchaj-wanu: právní přehled pro pozůstalou rodinu
 
 ![Snímek symbolizující plánování dědictví na Tchaj-wanu a ochranu majetku nezletilého](../images/016-taiwan-inheritance-custody-analysis/featured-generic.webp)
 
@@ -40,29 +40,29 @@ Skutečnost, že dědění je otevřeno, neznamená, že každý dědic se ihned
 
 Platná závěť může stanovit způsob rozdělení odlišný od zákonného dědění. Je však třeba ověřit formu závěti, způsobilost pořizovat, výklad a možnost výkonu a společně posoudit omezení kogentních norem, včetně povinného dílu (特留分). Samotná existence závěti neurčuje přiřazení veškerého dědického majetku; naopak, pokud závěť uvádí jen některé majetky, může se na zbytek uplatnit režim zákonného dědění.
 
-Před výpočtem dědického podílu je třeba nejprve určit soupis a právní povahu dědického majetku. Doklady je třeba potvrdit nejen nemovitosti, vklady, cenné papíry, podnikové podíly, pohledávky a movité věci, ale i dluhy zůstavitele (被繼承人), ručitelskou odpovědnost, neuhrazené daně a náklady související s pohřbem. Nelze uzavírat jen podle jména v evidenci nebo na účtu; je třeba také zkoumat skutečný vlastnický vztah, podíl ve spoluvlastnictví, práva 3. osoby a zřízená zajištění.
+Před výpočtem dědického podílu je třeba nejprve určit soupis a právní povahu dědického majetku. Doklady je třeba potvrdit nejen nemovitosti, vklady, cenné papíry, podnikové podíly, pohledávky a movité věci, ale i dluhy zůstavitele (被繼承人), ručitelskou odpovědnost, neuhrazené daně a náklady související s pohřbem. Nelze uzavírat jen podle jména v evidenci nebo na účtu; je třeba také zkoumat skutečný vlastnický vztah, podíl ve spoluvlastnictví, práva třetích osob a zřízená zajištění.
 
-Plnění, jejichž příjemce je určen zvlášť, jako pojištění nebo odchodné (退休金), se mohou podle smlouvy a použitelného práva zacházet jinak než dědický majetek. Majetek ve svěřenském fondu (信託) vyžaduje ověření struktury svěřenské smlouvy a práva na výnosy; darování nebo převody za života se mohou spojit s vrácením, započtením nebo povinným dílem. Existují-li účty nebo nemovitosti v zahraničí, je třeba společně posoudit právo místa polohy a kolizní pravidla Tchaj-wanu.
+Plnění, jejichž příjemce je určen zvlášť, jako pojištění nebo dávka z odchodu do důchodu (退休金), se mohou podle smlouvy a použitelného práva zacházet jinak než dědický majetek. Majetek ve svěřenském fondu (信託) vyžaduje ověření struktury svěřenské smlouvy a práva na výnosy; darování nebo převody za života se mohou spojit s vrácením, započtením nebo povinným dílem. Existují-li účty nebo nemovitosti v zahraničí, je třeba společně posoudit právo místa polohy a kolizní pravidla Tchaj-wanu.
 
 Majetkové šetření není jen hledání práv; je to také zachycení dluhů a procesních rizik. Potvrzení zůstatků finančních institucí, evidence nemovitostí, daňové podklady, pojistné smlouvy, svěřenské dokumenty, účetní knihy společnosti a doklady o úvěrech a ručení je třeba uspořádat k témuž referenčnímu dni. Pokud se při neúplných podkladech vypočte jen konkrétní dědický podíl, může vzniknout rozdíl vůči čistému majetku skutečně dělitelném.
 
 ## 3. Právo manžela na rozdělení zůstatkového majetku
 
-Ne. Právo na rozdělení rozdílu zůstatkového manželského majetku (剩餘財產差額分配) podle čl. 1030-1 občanského zákoníku Tchaj-wanu (民法) je právo, které manžel může uplatnit zvlášť, jsou-li splněny zákonné předpoklady, a musí se vypočíst odděleně od dědického podílu. Veškerý majetek nabytý za manželství do výpočtu sám o sobě nevstupuje a pozůstalý manžel nutně nedostává polovinu dědického majetku. Je třeba posoudit věc po ověření majetkového režimu, důvodu a okamžiku nabytí každého majetku, dluhů a zákonně vyloučených položek.
+Nejde o totéž právo. Právo na rozdělení rozdílu zůstatkového manželského majetku (剩餘財產差額分配) podle čl. 1030-1 občanského zákoníku Tchaj-wanu (民法) je právo, které manžel může uplatnit zvlášť, jsou-li splněny zákonné předpoklady, a musí se vypočíst odděleně od dědického podílu. Veškerý majetek nabytý za manželství do výpočtu sám o sobě nevstupuje a pozůstalý manžel nutně nedostává polovinu dědického majetku. Je třeba posoudit věc po ověření majetkového režimu, důvodu a okamžiku nabytí každého majetku, dluhů a zákonně vyloučených položek.
 
 Toto právo je režim, který při skončení zákonného majetkového režimu (法定財產制) porovnává přírůstek majetku každého manžela po manželství podle zákonného měřítka. Základ vzniku, protistrana a předmět výpočtu se liší od dědického podílu, který vzniká proto, že pozůstalý manžel je dědicem. Pokud se tento nárok ustaví, může se položit otázka pořadí nejprve odrazit jeho výsledek a poté určit jako dědický majetek to, co zůstaviteli zbývá.
 
-Ve výpočtu nelze hledět jen na výraz «majetek nabytý za manželství», ale na rozsah zahrnutí a vyloučení, který stanoví občanský zákoník (民法). Mohou existovat zákonně vyloučené položky, jako majetek nabytý děděním nebo darováním a náhrada za duševní újmu (慰撫金); je třeba zohlednit i dluhy vzniklé za manželství. Zda manželé sjednali jiný režim, jaké jsou důvod a den nabytí majetku a jak stanovit referenční den hodnoty, se posuzuje podle podkladů.
+Ve výpočtu nelze hledět jen na výraz „majetek nabytý za manželství“, ale na rozsah zahrnutí a vyloučení, který stanoví občanský zákoník (民法). Mohou existovat zákonně vyloučené položky, jako majetek nabytý děděním nebo darováním a náhrada za duševní újmu (慰撫金); je třeba zohlednit i dluhy vzniklé za manželství. Zda manželé sjednali jiný režim, jaké jsou důvod a den nabytí majetku a jak stanovit referenční den hodnoty, se posuzuje podle podkladů.
 
 Čl. 1030-1 občanského zákoníku (民法) stanoví, že pokud je výsledek rovného rozdělení zjevně nespravedlivý, může soud částku rozdělení upravit. Je třeba konkrétně posoudit prvky, které zákon vyžaduje: dobu manželství, domácí práci a péči o děti, hospodářský přínos, profesní okolnosti a situaci nabytí a správy majetku. Nelze proto předem určit, zda nárok vznikne a v jaké výši, jen porovnáním jmen nebo dobou manželství.
 
 ## 4. Dědické dluhy a vzdání se dědictví
 
-Podle čl. 1148 občanského zákoníku Tchaj-wanu (民法) dědic od otevření dědění globálně nastupuje do majetkových práv a povinností zůstavitele, s výjimkou výlučně osobních práv a povinností. Odpovědnost za dědické dluhy (繼承債務) je zásadně omezena hodnotou majetku nabytého děděním. Je však třeba společně ověřit související zákonné postupy a výjimky, jako sestavení soupisu, oznámení a plnění věřitelům a zachování dědického majetku.
+Podle čl. 1148 občanského zákoníku Tchaj-wanu (民法) dědic od otevření dědění univerzálně nastupuje do majetkových práv a povinností zůstavitele, s výjimkou výlučně osobních práv a povinností. Odpovědnost za dědické dluhy (繼承債務) je zásadně omezena hodnotou majetku nabytého děděním. Je však třeba společně ověřit související zákonné postupy a výjimky, jako sestavení soupisu, oznámení a plnění věřitelům a zachování dědického majetku.
 
 Dědic, který se chce vzdát dědictví, musí podle čl. 1174 občanského zákoníku (民法) projevit vůli písemně u příslušného soudu do 3 měsíců ode dne, kdy poznal dědické právo. Nelze mít za to, že se zákonná forma vzdání se ustaví jen proto, že se v rodině řekne, že se nepřijme, nebo proto, že se majetek neužívá. Účinek na dědice následujícího pořadí po tom, kdo se vzdává, nebo na vztah zastoupení je třeba také ověřit podle rodinného svazku a průběhu řízení.
 
-Před nakládáním s dědickým majetkem nebo plněním dluhů je třeba společně zkoumat aktiva i pasiva. Ověříte existenci věřitelů, zajištění, ručitelské dluhy, probíhající smlouvy a to, zda byly daně přiznány, a je-li třeba, posoudíte předložení soupisu (遺產清冊) a řízení věřitelů. Je třeba se také vyhnout okolnostem, které mohou ovlivnit omezení odpovědnosti, které zákon stanoví, jako skrývání majetku nebo jeho vynechání ze soupisu.
+Před nakládáním s dědickým majetkem nebo plněním dluhů je třeba společně zkoumat aktiva i pasiva. Je třeba ověřit existenci věřitelů, zajištění, ručitelské dluhy, probíhající smlouvy a to, zda byly daně přiznány, a je-li třeba, posoudit předložení soupisu (遺產清冊) a řízení věřitelů. Je třeba se také vyhnout okolnostem, které mohou ovlivnit omezení odpovědnosti, které zákon stanoví, jako skrývání majetku nebo jeho vynechání ze soupisu.
 
 Pokyny k postupu žádosti v dědických věcech daňového portálu Ministerstva financí Tchaj-wanu (財政部) byly aktualizovány 25. 6. 2026 a vysvětlují obecnou dobu 3 měsíců soudního řízení k předložení soupisu a vzdání se, jakož i obecnou dobu 6 měsíců přiznání daně z dědictví (遺產稅). Počátek běhu, prodloužení, výjimky a příslušnost se však musí ověřit v každé věci a nesmí to sloužit jako výpočet osobní konečné lhůty.
 
@@ -92,7 +92,7 @@ Při posuzování opatrovníka je třeba konkrétně vidět roli ochrany a roli 
 
 ## 7. Ochrana dědického majetku nezletilého
 
-Ne. Podle čl. 1087 a čl. 1088 občanského zákoníku Tchaj-wanu (民法) je majetek, který nezletilý nabude děděním, zvláštním majetkem dítěte (特有財產) a otec, matka ani opatrovník se nestávají jeho hospodářskými vlastníky. Správa, užívání, požívání, zákonné zastoupení a nakládání se musí dít v zájmu dítěte; při střetu zájmů nebo důležitém nakládání může vzniknout jmenování zvláštního zástupce (特別代理人) nebo zásah soudu. Nelze mít za to, že rodiče mohou jednostranně a bez omezení užívat dědický majetek dítěte.
+Pozůstalý rodič jej nemůže užívat volně. Podle čl. 1087 a čl. 1088 občanského zákoníku Tchaj-wanu (民法) je majetek, který nezletilý nabude děděním, zvláštním majetkem dítěte (特有財產) a otec, matka ani opatrovník se nestávají jeho hospodářskými vlastníky. Správa, užívání, požívání, zákonné zastoupení a nakládání se musí dít v zájmu dítěte; při střetu zájmů nebo důležitém nakládání může vzniknout jmenování zvláštního zástupce (特別代理人) nebo zásah soudu. Nelze mít za to, že rodiče mohou jednostranně a bez omezení užívat dědický majetek dítěte.
 
 Zvláštní majetek označuje majetek, který náleží samotnému nezletilému. Zděděné vklady, nemovitosti, akcie nebo jiná práva je třeba potvrdit jako majetek dítěte a spravovat zvlášť v jeho zájmu. I když otec, matka nebo opatrovník přebírají správu, nestávají se hospodářskými vlastníky a nesmějí jej užívat na vlastní životní náklady nebo k plnění svých dluhů.
 
@@ -110,7 +110,7 @@ Na rodinu, která má mezinárodní prvek, nelze ihned uplatnit jen vnitřní pr
 
 Tchajwanský zákon o použití občanských předpisů s cizím prvkem (涉外民事法律適用法) je výchozím bodem k určení použitelného práva na občanskoprávní vztahy s cizím prvkem. Pouhé ověření tohoto zákona však nemusí stačit; je třeba společně posoudit mezinárodní příslušnost soudu, uznání a výkon cizích rozhodnutí, jakož i smlouvy nebo právo druhého státu. Zda se platné posouzení na Tchaj-wanu uplatní beze změny na převod majetku nacházejícího se v zahraničí, je třeba zvlášť ověřit v místě polohy majetku.
 
-Závěť pořízená v zahraničí je třeba posoudit ve formě pořízení, hmotné účinnosti, překladu a ověření (認證), jakož i v postupu ověření (檢認) nebo výkonu. Cizí osvědčení o manželství a rozvodu a doklady o původu mohou vyžadovat apostilu nebo konzulární ověření a překlad. Liší-li se zápis jména, údaje pasu a evidence obyvatel mezi sebou, mohou být v procesu ztotožnění téže osoby požadovány dodatečné doklady.
+Závěť pořízená v zahraničí je třeba posoudit ve formě pořízení, hmotné účinnosti, překladu a ověření (認證) a v řízení o prohlášení závěti za pravou (檢認) nebo o jejím výkonu. Cizí osvědčení o manželství a rozvodu a doklady o původu mohou vyžadovat apostilu nebo konzulární ověření a překlad. Liší-li se zápis jména, údaje pasu a evidence obyvatel mezi sebou, mohou být v procesu ztotožnění téže osoby požadovány dodatečné doklady.
 
 Existuje-li cizí rozhodnutí o rodičovské péči nebo opatrovnictví, je třeba ověřit, zda je toto rozhodnutí konečné, zda byl dodržen zákonný postup a zda může být na Tchaj-wanu uznáno. Má-li dítě obvyklý pobyt v jiné zemi, mohou být důležité i příslušnost místního soudu a naléhavá ochranná opatření. Který postup které země se řeší nejprve, je třeba zvážit s nejlepším zájmem dítěte a možností výkonu.
 
@@ -120,16 +120,16 @@ V daňové oblasti může v každém státě vzniknout i zvlášť povinnost př
 
 Následující pořadí je základním rámcem k shromáždění skutkových okolností bez opomenutí a k tomu, aby se nezaměňovala odlišná práva a postupy. Skutečné pořadí podání se může lišit podle příslušného orgánu a naléhavosti věci, proto je třeba zvlášť ověřit lhůtu každé etapy.
 
-1. Ověříte úmrtní list a podklady oznámení o úmrtí, údaje o rodinném svazku a evidenci obyvatel Tchaj-wanu, záznamy o manželství, rozvodu a osvojení a existující soudní rozhodnutí. Je-li dokument cizí, ověříte také ověření, překlad a to, zda zápis jména souhlasí.
-2. Zkoumáte nemovitosti, vklady, investiční aktiva, podnikové podíly a movité věci i pohledávky a společně uspořádáte úvěry, ručení, daně a smluvní dluhy. Zvlášť označíte jméno a skutečný vlastnický vztah, příjemce pojištění, svěřenský fond, společný majetek a podklady převodů za života.
-3. Ověříte originál závěti a formu pořízení, způsobilost pořizovat, požadavky svědků nebo notáře, vykonavatele závěti a obsah odkazu (遺贈). Společně posoudíte, jak platná závěť mění rozdělení, a omezení kogentních norem, včetně povinného dílu.
-4. Odděleně vypočtete zákonný dědický podíl a právo na rozdělení rozdílu zůstatkového manželského majetku. Rozlišíte předmět výpočtu, dluhy, vyloučené položky, referenční den ocenění a doklady každého režimu a výsledek jednoho výpočtu se do druhého nepromítá duplicitně.
-5. Identifikujete majetek přiřazený nezletilému a ověříte zákonné zastoupení, rozsah správy otce, matky nebo opatrovníka, střet zájmů a to, zda je třeba zvláštní zástupce. Předvídáte také způsob uchovat účty, knihy a výtěžek nakládání odděleně od osobního majetku zletilého.
-6. Podle orgánu oddělíte soudní řízení o vzdání se, soupisu, opatrovnictví a zvláštním zástupci, přiznání daně z dědictví u daňového orgánu a postupy evidence obyvatel a zápisu majetku. Ověříte příslušnost, počátek, doklady k podání, možnost doplnění a to, zda je u každého postupu prodloužení, a uchováte potvrzení o přijetí a kopie.
+1. Je třeba ověřit úmrtní list a podklady oznámení o úmrtí, údaje o rodinném svazku a evidenci obyvatel Tchaj-wanu, záznamy o manželství, rozvodu a osvojení a existující soudní rozhodnutí. Je-li dokument cizí, je třeba ověřit i jeho ověření, překlad a to, zda zápis jména souhlasí.
+2. Je třeba prověřit nemovitosti, vklady, investiční aktiva, podnikové podíly a movité věci i pohledávky a společně uspořádat úvěry, ručení, daně a smluvní dluhy. Zvlášť je třeba označit jméno a skutečný vlastnický vztah, příjemce pojištění, svěřenský fond, společný majetek a podklady převodů za života.
+3. Je třeba ověřit originál závěti a formu pořízení, způsobilost pořizovat, požadavky svědků nebo notáře, vykonavatele závěti a obsah odkazu (遺贈). Společně je třeba posoudit, jak platná závěť mění rozdělení, a omezení kogentních norem, včetně povinného dílu.
+4. Odděleně je třeba vypočítat zákonný dědický podíl a právo na rozdělení rozdílu zůstatkového manželského majetku. Je třeba rozlišit předmět výpočtu, dluhy, vyloučené položky, referenční den ocenění a doklady každého režimu a výsledek jednoho výpočtu se do druhého nepromítá duplicitně.
+5. Je třeba identifikovat majetek přiřazený nezletilému a ověřit zákonné zastoupení, rozsah správy otce, matky nebo opatrovníka, střet zájmů a to, zda je třeba zvláštní zástupce. Předem je třeba stanovit i způsob, jak uchovat účty, knihy a výtěžek nakládání odděleně od osobního majetku zletilého.
+6. Podle orgánu je třeba oddělit soudní řízení o vzdání se, soupisu, opatrovnictví a zvláštním zástupci, přiznání daně z dědictví u daňového orgánu a postupy evidence obyvatel a zápisu majetku. Je třeba ověřit příslušnost, počátek, doklady k podání, možnost doplnění a to, zda je u každého postupu prodloužení, a uchováte potvrzení o přijetí a kopie.
 
 Při shromažďování podkladů je vhodné zaznamenat místo uložení originálu a dny vydání a referenční dny a uspořádat elektronické soubory a papírové dokumenty podle téhož třídicího systému. Je-li více spoludědiců nebo správců majetku, je třeba zaznamenat, kdo které podklady uchovává a které úkony byly schváleny. Osobní a finanční údaje nezletilého je třeba spravovat s řízením přístupu, aby byly poskytnuty jen osobám a orgánům, které je potřebují.
 
-Je třeba také rozlišit majetek, který vyžaduje naléhavé zachování, a obvyklý postup přiznání. Nejprve posoudíte, zda existují okolnosti k okamžitému ověření, jako riziko přerušení účtu nebo provozu podniku, poškození nemovitosti nebo promlčení pohledávky, avšak nelze nakládat bez oprávnění pod záminkou naléhavosti. Je užitečné spravovat společně v jednom kalendáři postup soudního řízení a daňových, evidenčních a zápisových postupů.
+Je třeba také rozlišit majetek, který vyžaduje naléhavé zachování, a obvyklý postup přiznání. Nejprve je třeba posoudit, zda existují okolnosti k okamžitému ověření, jako riziko přerušení účtu nebo provozu podniku, poškození nemovitosti nebo promlčení pohledávky, avšak nelze nakládat bez oprávnění pod záminkou naléhavosti. Je užitečné spravovat společně v jednom kalendáři postup soudního řízení a daňových, evidenčních a zápisových postupů.
 
 ## 10. Oficiální podklady
 
@@ -139,11 +139,11 @@ Je třeba také rozlišit majetek, který vyžaduje naléhavé zachování, a ob
 - [Soudní jüan Tchaj-wanu: formulář žádosti o jmenování opatrovníka nezletilého](https://www.judicial.gov.tw/tw/cp-1369-4219-da7e1-1.html)
 - [Daňový portál Ministerstva financí Tchaj-wanu: postup žádosti v dědických věcech a podklady k přípravě](https://www.etax.nat.gov.tw/etwmain/tax-info/house-land-transfer-taxtation-calculation-area/inheritance/file-process)
 
-Na oficiálních stránkách předpisů ověříte den novely a den nabytí účinnosti ustanovení a anglické znění má sloužit jako pomocný podklad k porovnání výkladu tohoto článku s původním textem. Formulář Soudního jüanu a pokyny daňového portálu ukazují obecný směr přípravy, avšak příslušnost a požadavky podání každé věci je třeba zvlášť ověřit podle nejnovějších pokynů orgánu, kterému se podává.
+Na oficiálních stránkách předpisů je třeba ověřit den novely a den nabytí účinnosti ustanovení a anglické znění má sloužit jako pomocný podklad k porovnání výkladu tohoto článku s původním textem. Formulář Soudního jüanu a pokyny daňového portálu ukazují obecný směr přípravy, avšak příslušnost a požadavky podání každé věci je třeba zvlášť ověřit podle nejnovějších pokynů orgánu, kterému se podává.
 
-## 11. Související vodítka
+## 11. Související odkazy
 
-- [Které věci vedeme](/cs/services)
+- [V čem klienty zastupujeme](/cs/services)
 - [Jak se stanoví rozsah práce a náklady](/cs/pricing)
 - [Kontakt](/cs/contact)
 

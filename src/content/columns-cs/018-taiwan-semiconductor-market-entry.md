@@ -19,13 +19,13 @@ faq:
 
 ![Snímek k posouzení struktury vstupu podniku polovodičů na Tchaj-wan](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
-Když začnou obchody s tchajwanskými zákazníky, může zahraniční sídlo obdržet různé požadavky: zpracovat nabídky a smlouvy na Tchaj-wanu, držet zásobu náhradních dílů pro naléhavou výměnu nebo umístit personál k instalaci a údržbě. Tehdy je snadné se nejprve zeptat: «Stačí k řešení založit společnost na Tchaj-wanu?»
+Když začnou obchody s tchajwanskými zákazníky, může zahraniční sídlo obdržet různé požadavky: zpracovat nabídky a smlouvy na Tchaj-wanu, držet zásobu náhradních dílů pro naléhavou výměnu nebo umístit personál k instalaci a údržbě. Tehdy je snadné se nejprve zeptat: „Stačí k řešení založit společnost na Tchaj-wanu?“
 
 Nejprve je třeba vyjasnit, kdo na Tchaj-wanu co obstarává. Struktura k posouzení se mění podle toho, zda zahraniční sídlo nadále uzavírá kupní smlouvy, zda tchajwanská společnost zboží nakupuje a dále prodává, nebo zda místní personál poskytuje jen technickou podporu.
 
 Tento text je obecným výkladem pro zahraniční podniky materiálů, součástek a zařízení polovodičů, které navrhují strukturu vstupu na Tchaj-wan. Následující provozní situace a kontrolní body jsou hypotetické příklady a návrhy k posouzení, nikoli skutečný mandát konkrétního podniku ani jednotný požadavek založení. Daně, kontrola vývozu, povolení podle výrobku a zařazení investora vyžadují ještě samostatný rozbor.
 
-## 1. Před volbou formy zápisu je třeba nejprve uspořádat ‘rozdělení obchodu a provozu’
+## 1. Před volbou formy zápisu je třeba nejprve uspořádat „rozdělení obchodu a provozu“
 
 Předpokládejme, že zahraniční výrobce přesných součástek prodává tchajwanským zákazníkům. Zpočátku sídlo odesílá přímo, avšak zákazník žádá skladování náhradních dílů na Tchaj-wanu a podporu inženýrů na místě. Nestačí adresa: je třeba subjekt, který může prodávat, dovážet, skladovat, zaměstnávat, poskytovat technickou podporu a nést odpovědnost.
 
@@ -73,13 +73,13 @@ Když zahraniční společnost zakládá tchajwanskou dceřinou společnost, ná
 
 Naproti tomu při zakládání tchajwanské pobočky běžné zahraniční společnosti zásadně není třeba investičního povolení Odboru přezkumu investic; Odbor obchodního rozvoje Ministerstva hospodářství (經濟部商業發展署) provádí zápis pobočky a související určení kapitálu. Nadále jsou nutné předběžné ověření názvu, převod provozního kapitálu, ověření kapitálu a daňový zápis; kalendář je obvykle kratší.
 
-Výše uvedené je návrh smluvního uspořádání. Pouhé opatřené jednoho určitého formuláře nečiní transakci zákonnou a neslibuje určený výsledek.
+Výše uvedené je návrh smluvního uspořádání. Pouhé zvolení jedné určité právní formy nečiní transakci zákonnou a neslibuje určený výsledek.
 
 ## 5. Zápis společnosti a zákonná práce inženýra nejsou totéž
 
 Dokončení zápisu na Tchaj-wanu neznamená, že zaměstnanci zahraničního sídla mohou na Tchaj-wanu automaticky pracovat. Cizinec, který na Tchaj-wanu pracuje, potřebuje zákonné pracovní povolení (工作許可) a pro delší pobyt i průkaz k pobytu (外僑居留證). Zásadně zaměstnavatel žádá o pracovní povolení a odpovídající průkaz k pobytu.
 
-Pro vedoucího tchajwanské dceřiné společnosti a pobočky zahraniční společnosti je žádost o pracovní povolení relativně snazší. Má-li se však žádat o pracovní povolení od dalšího cizince, Ministerstvo práce podle odvětví požaduje prahy kapitálu, obratu a podobně. Pokud plánujete, že zahraniční zaměstnanci budou pracovat na Tchaj-wanu, je třeba před založením tchajwanské společnosti předem ověřit, zda nastavení kapitálu splňuje příslušný práh.
+Pro vedoucího tchajwanské dceřiné společnosti a pobočky zahraniční společnosti je žádost o pracovní povolení relativně snazší. Má-li se však žádat o pracovní povolení pro dalšího cizince, Ministerstvo práce podle odvětví požaduje prahy kapitálu, obratu a podobně. Pokud plánujete, že zahraniční zaměstnanci budou pracovat na Tchaj-wanu, je třeba před založením tchajwanské společnosti předem ověřit, zda nastavení kapitálu splňuje příslušný práh.
 
 ## 7. Struktury, které lze porovnat podle stupně rozvoje podniku
 
@@ -91,9 +91,9 @@ Následující situace jsou hypotetické k podpoře úvahy; neslibují určený 
 
 **Zahraniční podniky ve fázi průzkumu trhu.** Pokud před zřízením prodejní organizace chcete jen funkce sběru informací a styku, lze posoudit zastoupení. Pokud však skutečný plán zahrnuje prodej skladovaného zboží nebo práci na místě, je třeba zvlášť ověřit, zda tyto činnosti jsou povoleny.
 
-## 8. Pro první rozhovor stačí provozní přehled; není nutné hned předávat veškeré důvěrné podklady
+## 8. Pro první konzultaci stačí provozní přehled; není nutné hned předávat veškeré důvěrné podklady
 
-Při prvním rozhovoru lze uspořádat základní údaje sídla a vkladatelů, obecný popis výrobku nebo služby, předpokládaný tok transakcí, plán personálu a zařízení na Tchaj-wanu a smluvní a podpůrné podmínky, které požadují zákazníci. Co ještě není rozhodnuto, lze označit jako «nevyřízeno».
+Při první konzultaci lze uspořádat základní údaje sídla a vkladatelů, obecný popis výrobku nebo služby, předpokládaný tok transakcí, plán personálu a zařízení na Tchaj-wanu a smluvní a podpůrné podmínky, které požadují zákazníci. Co ještě není rozhodnuto, lze označit jako „nevyřízeno“.
 
 Při prvním kontaktu není nutné připojit veškeré důvěrné podklady zákazníka nebo podrobné údaje o procesu. Po poskytnutí názvu protistrany potřebného k ověření střetu zájmů se potřebné podklady a způsob předání určí podle pokynů odpovědné osoby.
 
@@ -111,8 +111,8 @@ Pokud založíte dceřinou společnost, nikoli pobočku, sídlo zásadně nenese
 
 Postupný přechod lze navrhnout, avšak je třeba také posoudit skončení nebo změnu stávajících smluv, smlouvy se zákazníky, zásoby, vyřízení vad a personál.
 
-## Rozhovor o struktuře vstupu na Tchaj-wan
+## Konzultace o struktuře vstupu na Tchaj-wan
 
-Pokud plánujete na Tchaj-wanu prodej, správu zásob, podporu instalace nebo místní nábor, uspořádejte nejprve práci, kterou vykoná sídlo, a práci, která připadne tchajwanské organizaci. Po ověření témat rozhovoru a střetu zájmů kancelář vysvětlí potřebné podklady a rozsah služeb, které lze poskytnout.
+Pokud plánujete na Tchaj-wanu prodej, správu zásob, podporu instalace nebo místní nábor, uspořádejte nejprve práci, kterou vykoná sídlo, a práci, která připadne tchajwanské organizaci. Po ověření témat konzultace a střetu zájmů kancelář vysvětlí potřebné podklady a rozsah služeb, které lze poskytnout.
 
-Příklad předmětu: Rozhovor o struktuře vstupu podniku polovodičů na Tchaj-wan. Při prvním kontaktu uveďte název společnosti, zemi sídla, předpokládaný výrobek nebo službu, plán provozu na Tchaj-wanu a požadovaný jazyk rozhovoru. Důvěrné konstrukční podklady a úplné smlouvy zašlete až po obdržení dalšího pokynu. Skutečně dostupné jazyky rozhovoru a rozsah případného mandátu je třeba ověřit při kontaktu.
+Příklad předmětu: Konzultace o struktuře vstupu podniku polovodičů na Tchaj-wan. Při prvním kontaktu uveďte název společnosti, zemi sídla, předpokládaný výrobek nebo službu, plán provozu na Tchaj-wanu a požadovaný jazyk konzultace (pouze angličtina, čínština (中文), japonština nebo korejština). Důvěrné konstrukční podklady a úplné smlouvy zašlete až po obdržení dalšího pokynu. Skutečně dostupné jazyky konzultace a rozsah případného mandátu je třeba ověřit při kontaktu.

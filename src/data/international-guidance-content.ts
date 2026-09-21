@@ -1666,8 +1666,8 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       about: 'Tungkol sa tanggapan',
       lawyers: 'Mga abogado',
       pricing: 'Saklaw at bayarin',
-      contact: 'Kontak',
-      faq: 'Madalas itanong',
+      contact: 'Makipag-ugnayan',
+      faq: 'Mga madalas itanong',
       privacy: 'Patakaran sa pribasiya',
       disclaimer: 'Paunawa at limitasyon',
       columns: 'Mga artikulo',
@@ -1680,24 +1680,24 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
     languageLabel: 'Wika ng pahina',
     mega: {
       services: {
-        description: 'Tinutulungan ng tanggapan ang mga pangunahing uri ng gawain sa ilalim ng batas ng Taiwan.',
-        viewAllLabel: 'Tingnan lahat',
+        description: 'Hinahawakan ng tanggapan ang mga pangunahing larangan sa ilalim ng batas ng Taiwan.',
+        viewAllLabel: 'Tingnan ang lahat',
       },
       columns: {
         description: 'Mga artikulo na nagpapaliwanag ng madalas na paksa sa batas ng Taiwan.',
-        viewAllLabel: 'Tingnan lahat',
+        viewAllLabel: 'Tingnan ang lahat',
       },
       lawyers: {
-        description: 'Pagpapakilala sa mga abogado at sa paraan ng pagkontak sa tanggapan.',
-        viewAllLabel: 'Tingnan lahat',
+        description: 'Pagpapakilala sa mga abogado at sa paraan ng pakikipag-ugnayan sa tanggapan.',
+        viewAllLabel: 'Tingnan ang lahat',
       },
       pricing: {
         description: 'Ipinapaliwanag ng pahinang ito ang saklaw ng gawain at kung paano itanong ang bayarin.',
-        viewAllLabel: 'Tingnan lahat',
+        viewAllLabel: 'Tingnan ang lahat',
       },
       faq: {
         description: 'Mga madalas itanong tungkol sa gawain ng tanggapan sa Taiwan.',
-        viewAllLabel: 'Tingnan lahat',
+        viewAllLabel: 'Tingnan ang lahat',
       },
     },
     notFoundTitle: 'Hindi natagpuan ang pahina',
@@ -1710,14 +1710,14 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       heroColumnsCtaLabel: 'Tingnan ang mga artikulo',
       servicesDetailLabel: 'Tingnan ang detalye',
       servicesAssistanceBefore:
-        'Kung hindi pa tiyak kung saang grupo nabibilang ang inyong usapin, ipinapaliwanag ng pahinang ',
-      servicesAssistanceLinkLabel: 'Kontak',
+        'Kung hindi pa tiyak kung saang larangan nabibilang ang inyong usapin, ipinapaliwanag ng pahinang ',
+      servicesAssistanceLinkLabel: 'Makipag-ugnayan',
       servicesAssistanceAfter:
         ' kung paano isulat ang buod na susuriin ng abogado.',
       columnsViewAllLabel: 'Tingnan ang lahat ng artikulo',
       columnsReadMoreLabel: 'Basahin pa',
       columnsReviewLabel: 'Sinuri ni Abogada Wei Tseng',
-      columnsOriginalLanguageBadge: 'Orihinal na wika (original language)',
+      columnsOriginalLanguageBadge: 'Orihinal na wika',
       columnsOriginalLanguageNote:
         'Wala pang bersyong Filipino ng mga artikulo sa ibaba. Nananatili sa orihinal na wika ang listahan at bubukas ito sa pahina sa wikang iyon; hindi ito awtomatikong isinasalin.',
       imageBandAlt:
@@ -1733,7 +1733,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         description:
           'Pangkalahatang paliwanag sa Filipino tungkol sa saklaw ng gawain ng Hovering International Law Firm sa Taiwan, ang mga wika ng konsultasyon, at kung paano magsimulang makipag-ugnayan.',
         intro:
-          'Tumutulong ang Hovering International Law Firm sa mga dayuhang kliyente, kabilang ang mga nasa Taiwan, para sa mga usaping nasa ilalim ng batas ng Taiwan: pamumuhunan at pagtatatag ng kompanya, sibil na alitan, usaping pag-aasawa at pampamilya, paggawa, kriminal, at intelektuwal na ari-arian. Tutulungan kayo ng bahaging Filipino na ito na malaman kung anong gawain ang saklaw namin, ano ang dapat ihanda, at paano makipag-ugnayan. Pangkalahatang impormasyon ito, hindi legal na payo para sa sarili ninyong usapin.',
+          'Tumutulong ang Hovering International Law Firm sa mga dayuhang kliyente, kabilang ang mga nasa Taiwan, para sa mga usaping nasa ilalim ng batas ng Taiwan: pamumuhunan at pagtatatag ng kompanya, sibil na alitan, usaping pag-aasawa at pampamilya, paggawa, kriminal, at intelektuwal na ari-arian. Tutulungan kayo ng gabay na ito sa Filipino na malaman kung anong gawain ang saklaw namin, ano ang dapat ihanda, at paano makipag-ugnayan. Pangkalahatang impormasyon ito, hindi legal na payo para sa sarili ninyong usapin.',
         sections: [
           {
             heading: 'Ano ang tinutulungan namin',
@@ -1746,19 +1746,19 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Magkaibang bagay ang wika ng pahina at ang wika ng konsultasyon',
             paragraphs: [
               'Nakasulat sa Filipino ang pahinang ito, ngunit ang aktwal na konsultasyon sa abogado ay isinasagawa lamang sa apat na wika: Ingles, Tsino, Hapon, at Koreano. Ang pagkakabasa ninyo ng gabay sa Filipino ay hindi nangangahulugang sa Filipino gagawin ang pag-uusap sa abogado.',
-              'Hindi kami nangangako ng interpreter (tagapagsalin) para sa pag-uusap, hindi kami nangangako ng sagot sa loob ng takdang panahon, at hindi kinukumpirma ang appointment sa pahinang ito. Kung hindi ninyo magagamit ang apat na wikang nabanggit, ipinapaliwanag ng pahinang “Kontak” kung paano namin kinukumpirma ang paraan ng pakikipag-usap.',
+              'Hindi kami nangangako ng interpreter (tagapagpaliwanag sa pasalita) para sa pag-uusap, hindi kami nangangako ng sagot sa loob ng takdang panahon, at hindi kinukumpirma ang appointment sa pahinang ito. Kung hindi ninyo magagamit ang apat na wikang nabanggit, ipinapaliwanag ng pahinang “Makipag-ugnayan” kung paano namin kinukumpirma ang paraan ng pakikipag-usap.',
             ],
           },
           {
             heading: 'Mga uri ng usaping hinahawakan ng tanggapan',
             paragraphs: [
-              'Anim na pangkat ang saklaw ng gawain ng tanggapan. Mas detalyadong ipinapaliwanag ng pahinang “Mga larangan ng serbisyo” ang bawat pangkat at ang mga bagay na hindi ginagarantiya.',
+              'Anim na larangan ang saklaw ng gawain ng tanggapan. Mas detalyadong ipinapaliwanag ng pahinang “Mga usaping hinahawakan ng tanggapan” ang bawat larangan at ang mga bagay na hindi ginagarantiya.',
             ],
             items: [
               'Pamumuhunan at pagtatatag ng kompanya sa Taiwan',
               'Sibil na alitan at paghahabol ng danyos',
               'Usaping pag-aasawa, pampamilya, at pagmamana',
-              'Alitan sa paggawa at empleo',
+              'Alitan sa paggawa',
               'Usaping kriminal',
               'Intelektuwal na ari-arian: trademark (marka ng kalakal), patent (patente), at copyright (karapatang-sipi)',
             ],
@@ -1766,7 +1766,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Saan kayo dapat magsimula',
             paragraphs: [
-              'Basahin muna ang pahinang “Mga larangan ng serbisyo” upang makita kung kabilang sa saklaw ng gawain ang usapin ninyo, saka ang pahinang “Saklaw at bayarin” at “Kontak” upang malaman kung paano itinatakda ang saklaw at kinukumpirma ang bayarin bago magsimula ang trabaho.',
+              'Basahin muna ang pahinang “Mga usaping hinahawakan ng tanggapan” upang makita kung kabilang sa saklaw ng gawain ang usapin ninyo, saka ang pahinang “Saklaw at bayarin” at “Makipag-ugnayan” upang malaman kung paano itinatakda ang saklaw at kinukumpirma ang bayarin bago magsimula ang trabaho.',
               'Kapag nagpadala kayo ng mensahe, maaari ninyong isulat ang buod sa sarili ninyong wika. Iniingatan ang orihinal na teksto gaya ng pagkakasulat ninyo at hindi ito awtomatikong isinasalin. Ang naipadalang mensahe ay isang usaping naghihintay ng pagsusuri: hindi pa ito natapos na konsultasyon, at hindi pa ito kumpirmadong appointment (takdang pagkikita).',
             ],
           },
@@ -1776,9 +1776,9 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         eyebrow: 'MGA SERBISYO',
         title: 'Mga usaping hinahawakan ng tanggapan',
         description:
-          'Anim na pangkat ng gawaing saklaw ng serbisyo ng tanggapan sa Taiwan, kasama ang mga limitasyong dapat ninyong malaman nang maaga.',
+          'Anim na larangan ng gawaing saklaw ng serbisyo ng tanggapan sa Taiwan, kasama ang mga limitasyong dapat ninyong malaman nang maaga.',
         intro:
-          'Narito ang mga pangkat ng gawaing talagang hinahawakan ng tanggapan, kasama ang mga bagay na madalas itanong sa simula. Tinutulungan kayo ng paglalarawang ito na matantiya kung kabilang dito ang usapin ninyo; pangkalahatang impormasyon ito, hindi legal na pagsusuri sa isang tiyak na dokumento.',
+          'Narito ang mga larangan ng gawaing talagang hinahawakan ng tanggapan, kasama ang mga bagay na madalas itanong sa simula. Tinutulungan kayo ng paglalarawang ito na matantiya kung kabilang dito ang usapin ninyo; pangkalahatang impormasyon ito, hindi legal na pagsusuri sa isang tiyak na dokumento.',
         sections: [
           {
             heading: 'Pamumuhunan at pagtatatag ng kompanya sa Taiwan',
@@ -1802,7 +1802,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             ],
           },
           {
-            heading: 'Alitan sa paggawa at empleo',
+            heading: 'Alitan sa paggawa',
             paragraphs: [
               'Kabilang dito ang pagtatapos ng empleo, ang separation pay sa ilalim ng batas ng Taiwan (資遣費, na huwag ituring na katumbas ng katulad na sistema sa ibang bansa), sahod, at mga alitang nagmumula sa mga probisyon ng kontrata sa trabaho (勞動契約), para man sa panig ng manggagawa o ng employer. Sa pagsusuri, hiwalay naming tinitingnan ang batayan ng pagtatapos ng empleo at ang mga usapin ng abiso, ng dapat bayaran, at ng takdang panahon.',
               'Karaniwang ang kontrata sa trabaho, ang patakaran sa trabaho (工作規則), ang talaan ng sahod, at ang mga palitan ng mensahe ng dalawang panig ang nagpapasya sa usapin. Kung nasa inyo pa ang mga ito, banggitin ninyo sa buod upang mas maging tumpak ang paunang pagsusuri.',
@@ -1819,14 +1819,14 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Intelektuwal na ari-arian',
             paragraphs: [
               'Tumutulong ang tanggapan sa pagpaparehistro ng trademark (marka ng kalakal, 商標) at patent (patente, 專利), sa mga usapin ng copyright (karapatang-sipi), at sa mga alitang may kaugnayan sa mga karapatang ito sa Taiwan.',
-              'Sa pangkat na ito, mahalaga ang pagkakasunod-sunod ng mga hakbang: ang saklaw ng proteksiyon, ang panahon ng paghahain, at ang aktwal na paggamit ay pawang nakaaapekto sa pipiliing paraan. Ang paghahain ng aplikasyon ay hindi katiyakan na maaaprubahan ito.',
+              'Sa larangang ito, mahalaga ang pagkakasunod-sunod ng mga hakbang: ang saklaw ng proteksiyon, ang panahon ng paghahain, at ang aktwal na paggamit ay pawang nakaaapekto sa pipiliing paraan. Ang paghahain ng aplikasyon ay hindi katiyakan na maaaprubahan ito.',
             ],
           },
           {
             heading: 'Saklaw at kung paano ito kinukumpirma',
             paragraphs: [
-              'Gumagawa ang tanggapan sa ilalim ng batas ng Taiwan at tumatanggap ng mga usaping kabilang sa mga pangkat sa itaas. Hiwalay na kinukumpirma ang saklaw ng bawat usapin matapos suriin ng abogado ang ipinadala ninyo.',
-              'Ang katayuan sa paninirahan, ang permiso sa trabaho, at ang mga katulad nito ay sinusuri batay sa mga dokumento at pangyayaring natatangi sa bawat tao, hindi hinuhugot sa pagkamamamayan. Kung may bahagi ng usapin ninyo na may kinalaman dito, banggitin ninyo kapag nakipag-ugnayan kayo upang matukoy ng abogado kung saang pangkat ng gawain kabilang ang usapin ninyo; walang ipinapangakong resulta at walang ipinapangakong panahon ng pagsagot ang pahinang ito.',
+              'Gumagawa ang tanggapan sa ilalim ng batas ng Taiwan at tumatanggap ng mga usaping kabilang sa mga larangan sa itaas. Hiwalay na kinukumpirma ang saklaw ng bawat usapin matapos suriin ng abogado ang ipinadala ninyo.',
+              'Ang katayuan sa paninirahan, ang permiso sa trabaho, at ang mga katulad nito ay sinusuri batay sa mga dokumento at pangyayaring natatangi sa bawat tao, hindi hinuhugot sa pagkamamamayan. Kung may bahagi ng usapin ninyo na may kinalaman dito, banggitin ninyo kapag nakipag-ugnayan kayo upang matukoy ng abogado kung saang larangan ng gawain kabilang ang usapin ninyo; walang ipinapangakong resulta at walang ipinapangakong panahon ng pagsagot ang pahinang ito.',
             ],
           },
         ],
@@ -1850,8 +1850,8 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Gawaing may kaugnayan sa ibang bansa',
             paragraphs: [
-              'Kabilang sa gawain naming may kaugnayan sa ibang bansa ang pagtatatag ng kompanya, aplikasyon sa visa, pagpaparehistro ng marka ng kalakal at patente, pagtaya ng panganib na legal, at konsultasyon sa buwis ng kompanya. Natatanging hinahawakan ng tanggapan sa Taichung ang mga usapin ng konstruksiyon, intelektuwal na ari-arian, at ang mga may kaugnayan sa Korea at Japan. Si Abogada Wei Tseng (曾雋崴) naman ang tumutulong sa mga kliyenteng Koreano, Hapon, at sa iba pang internasyonal na kliyente sa mga pangkat ng gawaing nabanggit.',
-              'Nakadepende sa nilalaman ng usapin at sa wikang gagamitin kung matatanggap namin ito. Kung kabilang ang usapin ninyo sa mga pangkat ng gawain sa itaas at maipapaliwanag ito sa isa sa apat na wika ng konsultasyon, maaari ninyong ipadala ang buod nito upang suriin ng abogado.',
+              'Kabilang sa gawain naming may kaugnayan sa ibang bansa ang pagtatatag ng kompanya, aplikasyon sa visa, pagpaparehistro ng marka ng kalakal at patente, pagtaya ng panganib na legal, at konsultasyon sa buwis ng kompanya. Natatanging hinahawakan ng tanggapan sa Taichung ang mga usapin ng konstruksiyon, intelektuwal na ari-arian, at ang mga may kaugnayan sa Korea at Japan. Si Abogada Wei Tseng (曾雋崴) naman ang tumutulong sa mga kliyenteng Koreano, Hapon, at sa iba pang internasyonal na kliyente sa mga larangan ng gawaing nabanggit.',
+              'Nakadepende sa nilalaman ng usapin at sa wikang gagamitin kung matatanggap namin ito. Kung kabilang ang usapin ninyo sa mga larangan ng gawain sa itaas at maipapaliwanag ito sa isa sa apat na wika ng konsultasyon, maaari ninyong ipadala ang buod nito upang suriin ng abogado.',
             ],
           },
           {
@@ -1865,9 +1865,9 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       },
       lawyers: {
         eyebrow: 'MGA ABOGADO',
-        title: 'Pandaigdigang koponan ng Hovering',
+        title: 'Pandaigdigang pangkat ng Hovering',
         description:
-          'Mga profile ng mga abogado, tagapamahala ng operasyon, at kasosyong akawntant ng Hovering.',
+          'Mga profile ng mga abogado, tagapamahala ng operasyon, at kasosyong CPA ng Hovering.',
         // WO-O33: `/en/lawyers` is header -> roster -> key facts. The three
         // prose cards this page used to carry were a duplicate of the key-facts
         // rows, a third copy of the consultation-language notice, and a
@@ -1915,7 +1915,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
         ],
       },
       contact: {
-        eyebrow: 'KONTAK',
+        eyebrow: 'MAKIPAG-UGNAYAN',
         title: 'Paano makipag-ugnayan sa tanggapan',
         description:
           'Ang wika ng pahina, ang mga wika ng konsultasyon, ang gagawin kung hindi ninyo magagamit ang apat na wikang iyon, at ang mga bagay na hindi ginagarantiya.',
@@ -1929,14 +1929,14 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             ],
             items: [
               'Wika ng pahina: nakasulat sa Filipino ang gabay na ito.',
-              'Wika ng konsultasyon: isinasagawa ang konsultasyon sa abogado sa Ingles, Tsino, Hapon, at Koreano.',
+              'Wika ng konsultasyon: isinasagawa lamang sa Ingles, Tsino, Hapon, at Koreano ang konsultasyon sa abogado.',
               'Wika ng pagsulat ninyo: maaari ninyong isulat ang buod sa sarili ninyong wika, at iniingatan ang orihinal na teksto gaya ng pagkakasulat ninyo.',
             ],
           },
           {
             heading: 'Kung hindi ninyo magagamit ang apat na wika ng konsultasyon',
             paragraphs: [
-              'Sa form ng kontak, maaari ninyong piliin ang “Kailangang kumpirmahin ang paraan ng pakikipag-ugnayan”. Sasagot kami upang magkasamang kumpirmahin kung paano tayo makakapag-usap kung may posibleng paraan, ngunit hindi garantisado ang serbisyo sa ibang wika at walang pangako sa panahon ng pagsagot.',
+              'Sa form ng katanungan, maaari ninyong piliin ang “Kailangang kumpirmahin ang paraan ng pakikipag-ugnayan”. Sasagot kami upang magkasamang kumpirmahin kung paano tayo makakapag-usap kung may posibleng paraan, ngunit hindi garantisado ang serbisyo sa ibang wika at walang pangako sa panahon ng pagsagot.',
               'Hakbang lamang ito ng pagkumpirma, hindi pangako. Hindi kami nangangako ng interpreter para sa pasalitang pag-uusap, hindi kami nangangako ng serbisyo sa Filipino o sa alinmang wikang wala sa apat na nabanggit, at hindi kami nangangakong matatanggap ang bawat usapin.',
             ],
           },
@@ -1950,8 +1950,8 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Ang mga hindi ginagarantiya ng pahinang ito',
             paragraphs: [
-              'Hindi kami nangangako ng panahon ng pagsagot, hindi namin kinukumpirma ang appointment sa pahinang ito, hindi namin ipinapangako kung sinong abogado ang hahawak ng usapin, at hindi kami nagbibigay ng interpreter (tagapagsalin) para sa pasalitang pag-uusap. Hiwalay dito ang usapin ng nakasulat na salin: hindi awtomatikong isinasalin ang mensaheng ipinadala ninyo.',
-              'Kapag nagpadala kayo ng mensahe, naitatala ang nilalaman nito at naghihintay ng pagsusuri. Kung lumipas na ang ilang panahon at wala kayong natatanggap na sagot, maaari ninyo itong ipadalang muli sa email address na nasa pahina ng kontak.',
+              'Hindi kami nangangako ng panahon ng pagsagot, hindi namin kinukumpirma ang appointment sa pahinang ito, hindi namin ipinapangako kung sinong abogado ang hahawak ng usapin, at hindi kami nagbibigay ng interpreter (tagapagpaliwanag sa pasalita) para sa pasalitang pag-uusap. Hiwalay dito ang usapin ng nakasulat na salin: hindi awtomatikong isinasalin ang mensaheng ipinadala ninyo.',
+              'Kapag nagpadala kayo ng mensahe, naitatala ang nilalaman nito at naghihintay ng pagsusuri. Kung lumipas na ang ilang panahon at wala kayong natatanggap na sagot, maaari ninyo itong ipadalang muli sa email address na nasa pahinang Makipag-ugnayan.',
             ],
           },
         ],
@@ -1975,7 +1975,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             question: 'Anong mga usapin ang tinatanggap ng tanggapan?',
             answer:
-              'Tumatanggap ang tanggapan ng anim na pangkat ng usapin: pamumuhunan at pagtatatag ng kompanya sa Taiwan, sibil na alitan at danyos, usaping pag-aasawa, pampamilya, at pagmamana, alitan sa paggawa, usaping kriminal, at intelektuwal na ari-arian. Ang pagtanggap sa isang tiyak na usapin ay napagpapasyahan pagkatapos suriin ang nilalaman nito.',
+              'Tumatanggap ang tanggapan ng anim na larangan ng usapin: pamumuhunan at pagtatatag ng kompanya sa Taiwan, sibil na alitan at danyos, usaping pag-aasawa, pampamilya, at pagmamana, alitan sa paggawa, usaping kriminal, at intelektuwal na ari-arian. Ang pagtanggap sa isang tiyak na usapin ay napagpapasyahan pagkatapos suriin ang nilalaman nito.',
           },
           {
             question: 'Ano ang dapat kong ihanda bago makipag-ugnayan?',
@@ -2016,16 +2016,16 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
       },
       privacy: {
         eyebrow: 'PRIBASIYA',
-        title: 'Impormasyong kinokolekta sa form ng kontak',
+        title: 'Impormasyong kinokolekta sa form ng katanungan',
         description:
-          'Ano ang kinokolekta ng form ng kontak sa bahaging Filipino, paano hinahawakan ang orihinal na teksto, at paano kayo makikipag-ugnayan tungkol sa impormasyon ninyo.',
+          'Ano ang kinokolekta ng form ng katanungan sa gabay na ito sa Filipino, paano hinahawakan ang orihinal na teksto, at paano kayo makikipag-ugnayan tungkol sa impormasyon ninyo.',
         intro:
-          'Ang bahaging ito ay tungkol lamang sa form ng kontak sa mga pahina ng gabay na ito. Naglalarawan ito kung paano hinahawakan ang impormasyon, hindi ito teknikal na garantiya.',
+          'Ang bahaging ito ay tungkol lamang sa form ng katanungan sa mga pahina ng gabay na ito. Naglalarawan ito kung paano hinahawakan ang impormasyon, hindi ito teknikal na garantiya.',
         sections: [
           {
             heading: 'Ang mga impormasyong kinokolekta',
             paragraphs: [
-              'Kapag nagpadala kayo ng mensahe sa form ng bahaging ito, naitatala ang mga sumusunod:',
+              'Kapag nagpadala kayo ng mensahe sa form ng gabay na ito, naitatala ang mga sumusunod:',
             ],
             items: [
               'Ang pangalang inilagay ninyo',
@@ -2048,7 +2048,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Saan iniimbak at sino ang makakakita',
             paragraphs: [
-              'Iniimbak ang ipinadala ninyo sa isang lugar na hindi bukas sa publiko, at ang mga awtorisadong tao lamang sa tanggapan ang maaaring maka-access dito upang asikasuhin ang mensahe.',
+              'Iniimbak ang ipinadala ninyo sa isang lugar na hindi bukas sa publiko, at ang mga awtorisadong tao lamang sa tanggapan ang maaaring makakita nito upang asikasuhin ang mensahe.',
               'Hindi nagbibigay ang pahinang ito ng ganap na garantiya sa seguridad. Walang daan ng pagpapadala o paraan ng pag-iimbak na ganap na ligtas, kaya ang mga sensitibong dokumento ay dapat ipadala lamang ayon sa tiyak na tagubilin ng abogado.',
             ],
           },
@@ -2069,14 +2069,14 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Ang mga karapatan ninyo at ang paraan ng pakikipag-ugnayan',
             paragraphs: [
-              'Maaari kayong humiling na makita, maitama, o mabura ang impormasyon ninyo, o bawiin ang pagsang-ayon ninyo, sa pamamagitan ng email address na nasa pahina ng kontak. Kung may tungkuling mag-ingat ng talaan alinsunod sa mga umiiral na tuntunin, o dahil sa isang usaping kasalukuyang isinasagawa, ipapaliwanag namin ang dahilan ng limitasyon.',
+              'Maaari kayong humiling na makita, maitama, o mabura ang impormasyon ninyo, o bawiin ang pagsang-ayon ninyo, sa pamamagitan ng email address na nasa pahinang Makipag-ugnayan. Kung may tungkuling mag-ingat ng talaan alinsunod sa mga umiiral na tuntunin, o dahil sa isang usaping kasalukuyang isinasagawa, ipapaliwanag namin ang dahilan ng limitasyon.',
               'Hindi nagsasaad ang pahinang ito ng nakatakdang haba ng pag-iingat, dahil nakadepende ang aktwal na haba kung magpapatuloy ba ang usapin at kung anong tungkuling mag-ingat ang kaugnay nito. Kung nais ninyong mabura nang mas maaga ang impormasyon ninyo, banggitin ninyo ang kahilingang iyon kapag nakipag-ugnayan kayo.',
             ],
           },
           {
             heading: 'Saan nakaimbak ang impormasyon at ang mga tagapaglaan ng serbisyo',
             paragraphs: [
-              'Naka-host sa Vercel ang website na ito, at iniimbak ang ipinadala ninyo sa pribadong object storage ng serbisyong iyon — hindi ito bukas sa publiko. Ipinapadala naman ang email sa pamamagitan ng serbisyo ng email na ginagamit ng tanggapan.',
+              'Naka-host sa Vercel ang website na ito, at iniimbak ang ipinadala ninyo sa pribadong imbakan ng serbisyong iyon — hindi ito bukas sa publiko. Ipinapadala naman ang email sa pamamagitan ng serbisyo ng email na ginagamit ng tanggapan.',
               'Maaaring nasa labas ng Taiwan ang mga server ng ilang tagapaglaan ng serbisyo, kaya maaaring maimbak at maproseso roon ang impormasyon ninyo. Kapag natupad na ang layunin ng pag-iingat, binubura ang impormasyon nang walang pagkaantala; iniingatan naman sa buong takdang panahon ang impormasyong may tungkuling itago alinsunod sa mga umiiral na tuntunin. Tinatanggap sa wei@hoveringlaw.com.tw ang mga kahilingang may kinalaman sa personal na impormasyon.',
             ],
           },
@@ -2108,7 +2108,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Hindi kusang nabubuo ang ugnayan ng abogado at kliyente',
             paragraphs: [
               'Ang pagbabasa ng pahinang ito, ang pagpapadala ng form, o ang pagpapadala ng email ay hindi bumubuo ng ugnayan ng abogado at kliyente.',
-              'Nabubuo lamang ang ugnayang iyon matapos masuri ang usapin at matapos kumpirmahin ng dalawang panig ang pagtanggap sa trabaho.',
+              'Nabubuo lamang ang ugnayang iyon matapos masuri ang usapin at matapos kumpirmahin ng dalawang panig, sa sulat, na tinanggap ng tanggapan ang usapin.',
             ],
           },
           {

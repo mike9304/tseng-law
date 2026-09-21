@@ -29,7 +29,7 @@ kung ang adres na iyon ay nasa lugar kung saan pinahihintulutang mag-operate ang
 
 Kung sisimulan ninyo ang negosyo sa Lungsod ng Taipei,
 
-magagamit ninyo ang sistemang "prior inquiry sa business location" (營業場所預先查詢) ng Taipei City Department of Commerce (臺北市商業處).
+magagamit ninyo ang sistemang paunang pagsusuri sa lugar ng negosyo (營業場所預先查詢) ng Taipei City Department of Commerce (臺北市商業處).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
@@ -37,33 +37,33 @@ magagamit ninyo ang sistemang "prior inquiry sa business location" (營業場所
 
 Masusuri ninyo nang walang bayad kung maaaring magbukas ng "negosyong restawran" sa adres na nais ninyo.
 
-Gayunman, sa paggawa ng prior inquiry, kailangan ninyong i-upload ang "Type II building registration transcript" (建物登記第二類謄本, nakasaad dito ang detalyadong impormasyon tungkol sa gusaling iyon) ng adres ng lugar ng negosyo.
+Gayunman, sa paggawa ng paunang pagsusuri, kailangan ninyong i-upload ang "Type II building registration transcript" (建物登記第二類謄本, nakasaad dito ang detalyadong impormasyon tungkol sa gusaling iyon) ng adres ng lugar ng negosyo.
 
 Sinuman ay maaaring mag-aplay ng "Type II building registration transcript" sa land office (地政事務所) para sa anumang adres.
 
 Kung mahirap para sa inyo na personal na pumunta sa land office,
 
-maaari kayong humingi ng tulong sa kakilala ninyo sa Taiwan, sa kasero, sa ahente ng real estate, o sa abogado.
+maaari kayong humingi ng tulong sa kakilala ninyo sa Taiwan, sa kasero, sa ahente ng real estate, o sa isang abogada o abogado.
 
-Kung ipakita ng resulta ng prior inquiry na hindi pinahihintulutan ang negosyong restawran, maaaring hindi tanggapin ng pamahalaan ng lungsod ang rehistro kapag nag-aplay kayo ng rehistro ng kompanya sa hinaharap.
+Kung ipakita ng resulta ng paunang pagsusuri na hindi pinahihintulutan ang negosyong restawran, maaaring hindi tanggapin ng pamahalaan ng lungsod ang rehistro kapag nag-aplay kayo ng rehistro ng kompanya sa hinaharap.
 
 Kaya nga, mangyaring mag-ingat kayo!
 
 ​
 
-**Q. Kailangan ba ng lahat ng uri ng negosyo na magtanong sa sistemang "prior inquiry sa business location" kung pinahihintulutan ang operasyon?**
+**Q. Kailangan ba ng lahat ng uri ng negosyo na magtanong sa sistemang paunang pagsusuri sa lugar ng negosyo kung pinahihintulutan ang operasyon?**
 
-Inirerekomenda namin na gamitin ng lahat ng uri ng negosyo ang sistemang "prior inquiry sa business location" upang tiyakin kung pinahihintulutan ang operasyon.
+Inirerekomenda namin na gamitin ng lahat ng uri ng negosyo ang sistemang paunang pagsusuri sa lugar ng negosyo upang tiyakin kung pinahihintulutan ang operasyon.
 
 Gayunman, madalas na maraming business item ang inirerehistro kapag nagrerehistro ng kompanya, kaya malimit na nais irehistro nang sabay-sabay ang humigit-kumulang sampung business item.
 
-Kaya nga, sa katunayan ay hindi kailangang gawan ng prior inquiry ang lahat ng business item kapag nagrerehistro ng kompanya.
+Kaya nga, sa katunayan ay hindi kailangang gawan ng paunang pagsusuri ang lahat ng business item kapag nagrerehistro ng kompanya.
 
 Ayon sa "[Mga Alituntunin sa Pagpapatakbo ng Serbisyong Tulong sa Pagsusuri ng Lugar ng Negosyo ng Lungsod ng Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) "(臺北市營業場所協助查詢服務作業須知) at ayon sa kasalukuyang paunawa ng Lungsod ng Taipei,
 
-mula Enero 1, 2023, ang aplikasyon para sa pagpaparehistro ng pagtatatag, paglipat ng lokasyon, o pagdaragdag ng business item ng kompanya o negosyo (kasama ang sangay (分公司) at sub-sangay (分支機構)) ay **kinakailangang** maglakip ng resulta ng paunang pagsusuri sa lugar ng negosyo, anuman ang business item.
+mula Enero 1, 2023, ang aplikasyon para sa pagpaparehistro ng pagtatatag, paglipat ng lokasyon, o pagdaragdag ng business item ng kompanya o negosyo (kasama ang sangay ng kompanya (分公司) at tanggapang sangay (分支機構)) ay **kinakailangang** maglakip ng resulta ng paunang pagsusuri sa lugar ng negosyo, anuman ang business item.
 
-Ang listahan ng "mga business item na kailangang unang itanong" (主動查詢之營業項目) sa ibaba ay ang mga item na kusang sinusuri ng Department of Commerce habang isinasagawa ang pagsusuri sa pagpaparehistro (隨案主動查詢) kapag nakasaad ang item na iyon sa aplikasyon ngunit wala ito sa nakalakip na resulta; hindi nangangahulugang exempted sa pagsusuri ang item na wala sa listahang ito.
+Ang listahan ng "mga business item na kailangang unang itanong" (主動查詢之營業項目) sa ibaba ay ang mga item na kusang sinusuri ng Department of Commerce habang isinasagawa ang pagsusuri sa pagpaparehistro (隨案主動查詢) kapag nakasaad ang item na iyon sa aplikasyon ngunit wala ito sa nakalakip na resulta; hindi nangangahulugang hindi na kailangang suriin ang item na wala sa listahang ito.
 
 Kung magbubukas sa lugar na hindi pinahihintulutan ang operasyon ng restawran, maaari kayong patawan sa hinaharap ng administrative fine (罰鍰) ng ahensiyang may hurisdiksiyon.
 
@@ -71,7 +71,7 @@ Kung magbubukas sa lugar na hindi pinahihintulutan ang operasyon ng restawran, m
 
 "mga business item na kailangang unang itanong" (主動查詢之營業項目)
 
-Hanggang dito ang gabay; kung mayroon pa kayong katanungan, huwag mag-atubiling magtanong anumang oras sa abogadong Taiwanese.
+Hanggang dito ang gabay; kung mayroon pa kayong katanungan, maaari ninyo itong ipadala sa pahinang Makipag-ugnayan para sa isang abogada o abogado sa Taiwan; walang pangako sa panahon ng sagot.
 
 Madalas magbago ang mga patakaran ng ahensiyang administratibo, kaya mainam na tiyakin ninyo ang pinakabagong regulasyon bago magrehistro ng kompanya.
 
@@ -79,5 +79,5 @@ Madalas magbago ang mga patakaran ng ahensiyang administratibo, kaya mainam na t
 
 > Iba pang babasahin:
 > - [Mga usaping hinahawakan ng tanggapan](/fil/services)
-> - [Pandaigdigang koponan ng Hovering](/fil/lawyers)
+> - [Pandaigdigang pangkat ng Hovering](/fil/lawyers)
 > - [Paano makipag-ugnayan sa tanggapan](/fil/contact)

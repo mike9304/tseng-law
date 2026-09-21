@@ -442,7 +442,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Nakasulat sa Filipino ang pahinang ito bilang pangkalahatang gabay. Hindi ito legal na payo para sa tiyak na usapin ninyo.',
     consultationNotice:
-      'Ang aktwal na konsultasyon ay isinasagawa sa apat na wika: Ingles, Tsino, Hapon, at Koreano.',
+      'Ang aktwal na konsultasyon ay isinasagawa lamang sa apat na wika: Ingles, Tsino, Hapon, at Koreano.',
     methodConfirmationNotice:
       'Kung wala sa apat na wikang iyon ang kaya ninyong gamitin, piliin ang “Kailangang kumpirmahin ang paraan ng pakikipag-ugnayan”. Sasagot kami upang kumpirmahin kung paano tayo makakapag-usap kung may posibleng paraan, ngunit hindi garantisado ang serbisyo sa ibang wika at walang pangako sa panahon ng pagsagot.',
     preparationNotice:
@@ -455,10 +455,10 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     successMessage:
       'Natanggap namin ang mensahe ninyo at naghihintay ito ng pagsusuri. Hindi ito nangangahulugang naganap na ang konsultasyon o kumpirmado na ang appointment.',
     savedNotificationPendingMessage:
-      'Naitala na ang mensahe ninyo, ngunit hindi pa nakukumpirma ang abiso papunta sa opisina. Hindi nawala ang isinulat ninyo. Kung wala kayong matanggap na sagot, maaari rin kayong sumulat sa email address na nasa pahina ng kontak.',
-    receiptIdLabel: 'Numero ng pagtanggap (reference number)',
+      'Naitala na ang mensahe ninyo, ngunit hindi pa nakukumpirma ang abiso papunta sa opisina. Hindi nawala ang isinulat ninyo. Kung wala kayong matanggap na sagot, maaari rin kayong sumulat sa email address na nasa pahinang Makipag-ugnayan.',
+    receiptIdLabel: 'Numero ng pagtanggap',
     failureMessage:
-      'Hindi naipadala ang mensahe ninyo. Pakisubukan muli, o ipadala ito sa email address na nasa pahina ng kontak.',
+      'Hindi naipadala ang mensahe ninyo. Pakisubukan muli, o ipadala ito sa email address na nasa pahinang Makipag-ugnayan.',
     originalLanguageLabel: 'Wikang ginagamit ninyo sa pagsulat',
     originalLanguagePlaceholder:
       'Halimbawa: Filipino, Vietnamese, Indonesian, Thai, o ibang wika',

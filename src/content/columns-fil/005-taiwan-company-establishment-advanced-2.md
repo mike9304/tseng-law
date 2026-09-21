@@ -21,19 +21,19 @@ Ang mga nakabasa na ng [Mga Batayan sa Pagtatatag ng Kompanya sa Taiwan](/fil/co
 
 ​
 
-Umaasa kaming makakatulong din ang Q&A sa ibaba sa mga nag-iisip na magtatag ng kompanya sa Taiwan.
+Umaasa kaming makakatulong din ang mga tanong at sagot sa ibaba sa mga nag-iisip na magtatag ng kompanya sa Taiwan.
 
 ​
 
-**1. Ano ang dapat pag-ingatan kapag nagpapadala ng kapital mula sa Korea patungo sa preparatory office account (公司籌備處帳戶) ng kompanya sa Taiwan? (tinatalakay sa bahaging ito ang sistema ng Korea at ang praktika ng mga bangko sa Korea)**
+**1. Ano ang dapat pag-ingatan kapag nagpapadala ng kapital mula sa ibang bansa patungo sa preparatory office account (公司籌備處帳戶) ng kompanya sa Taiwan? (halimbawa lamang ang sistema ng Korea at ang praktika ng mga bangko sa Korea; iba-iba ang tuntunin sa bawat bansa)**
 
 Sa pangkalahatan, hinihingi ng mga bangko sa Korea na ang mamumuhunan **mismo** ang personal na pumunta sa bangko sa Korea at magpadala ng pondo mula sa sarili niyang account.
 
 Hindi maaari ang pagpapadala sa pamamagitan ng online banking o ang pagpapadalang isinasagawa ng kamag-anak o kakilala sa Korea bilang kinatawan ng mamumuhunan.
 
-Bukod dito, ayon sa batas sa pangangasiwa ng foreign exchange ng Korea, ang taong may pagkamamamayang Koreano na nagtatag ng dayuhang legal na persona (法人) o kumuha ng bahagi sa equity nito ay kailangang maghain ng "ulat sa overseas direct investment". Kailangang matanggap ang paghahain sa panahon ng pagpapadala ng kapital sa legal na persona sa Taiwan, at kung hindi maghahain, maaaring magkaroon ng parusa dahil sa paglabag sa batas sa pangangasiwa ng foreign exchange.
+Bukod dito, ayon sa batas sa pangangasiwa ng foreign exchange ng Korea, ang taong may pagkamamamayang Koreano na nagtatag ng dayuhang juridical person (法人) o kumuha ng bahagi sa equity nito ay kailangang maghain ng "ulat sa overseas direct investment". Kailangang matanggap ang paghahain sa panahon ng pagpapadala ng kapital sa juridical person sa Taiwan, at kung hindi maghahain, maaaring magkaroon ng parusa dahil sa paglabag sa batas sa pangangasiwa ng foreign exchange.
 
-Bago ipadala ang kapital, mangyaring kumonsulta muna sa pangunahing bangko ninyo sa Korea.
+Halimbawa lamang ng isang rehimen ng palitang dayuhan ang Korea. Bago ipadala ang kapital, mangyaring kumonsulta muna sa pangunahing bangko ninyo sa bansang pinagmumulan ng pondo at tiyakin ang tuntunin sa pamumuhunan palabas ng bansang iyon.
 
 **​**
 
@@ -45,7 +45,7 @@ Halimbawa, kung ito ay kita mula sa sahod sa Taiwan, kailangang isumite ang kopy
 
 Kung ito ay dibidendo (dividends) at tubong nagmula sa pamumuhunan sa negosyo sa Taiwan, kailangang isumite ang kopya ng withholding tax statement para sa dibidendo at tubong iyon (股息和紅利的扣繳憑單影本).
 
-Kapag ang pagpapadala ay mula sa isang bank account sa Korea, hindi na kailangang ilakip ang mga dokumento hinggil sa pinagmulan ng pondo.
+Kapag ang pagpapadala ay mula sa isang bank account sa ibang bansa, hindi na kailangang ilakip ang mga dokumento hinggil sa pinagmulan ng pondo.
 
 **​**
 
@@ -77,11 +77,11 @@ Sanggunian ang website ng Ministri ng Paggawa (Ministry of Labor, 勞動部) ng 
 
 ​
 
-Kung mayroon pa kayong karagdagang katanungan, mangyaring magtanong anumang oras.
+Kung may karagdagang katanungan, maaari ninyo itong ipadala sa pahinang Makipag-ugnayan; walang pangako sa panahon ng sagot.
 
 ---
 
 > Karagdagang babasahin:
 > - [Mga usaping hinahawakan ng tanggapan](/fil/services)
-> - [Pandaigdigang koponan ng Hovering](/fil/lawyers)
+> - [Pandaigdigang pangkat ng Hovering](/fil/lawyers)
 > - [Paano makipag-ugnayan sa tanggapan](/fil/contact)

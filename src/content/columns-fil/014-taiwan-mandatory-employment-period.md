@@ -1,5 +1,5 @@
 ---
-title: "Kasunduan sa Pinakamababang Panahon ng Paglilingkod (最低服務年限約定) sa Taiwan: Bisa, Gastos sa Pagsasanay (訓練費用), at Multa sa Paglabag ng Kontrata (違約金)"
+title: "Kasunduan sa Pinakamababang Panahon ng Paglilingkod (最低服務年限約定) sa Taiwan: Bisa, Gastos sa Pagsasanay (訓練費用), at Parusang Kontraktuwal sa Paglabag ng Kontrata (contractual penalty, 違約金)"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-mandatory-employment-period"
 lastmod: "2026-07-25"
 date_display: "Setyembre 13, 2025"
@@ -18,7 +18,7 @@ faq:
     a: "Itinatakda ng Artikulo 15-1, talata 4 ng Labor Standards Act ng Taiwan na kapag natapos ang kontrata sa paggawa bago matapos ang minimum service period dahil sa dahilang hindi maipapataw sa manggagawa, hindi mananagot ang manggagawa sa paglabag sa minimum service period clause ni sa pagsasauli ng training costs. Gayunman, ang dahilan ng pagtatapos at ang pagpapataw ng pananagutan ay dapat pasyahan batay sa tiyak na ebidensiya gaya ng abiso ng pagtanggal, ng paglalahad ng intensiyong magbitiw, at ng mga dokumento hinggil sa paglabag sa kondisyon sa paggawa."
 ---
 
-# Kasunduan sa Pinakamababang Panahon ng Paglilingkod (最低服務年限約定) sa Taiwan: Bisa, Gastos sa Pagsasanay (訓練費用), at Multa sa Paglabag ng Kontrata (違約金)
+# Kasunduan sa Pinakamababang Panahon ng Paglilingkod (最低服務年限約定) sa Taiwan: Bisa, Gastos sa Pagsasanay (訓練費用), at Parusang Kontraktuwal sa Paglabag ng Kontrata (contractual penalty, 違約金)
 
 ![Larawang nagpapaliwanag sa minimum service period sa kontrata sa paggawa at sa pagsasauli ng gastos](../images/014-taiwan-mandatory-employment-period/featured-01.jpg)
 
@@ -35,7 +35,7 @@ Kahit magkasamang nakasulat ang apat na suliraning ito sa iisang kontrata, magka
 
 ## 1. Kailan Maaaring Magkabisa ang Minimum Service Period Clause
 
-Hindi. Ayon sa Artikulo 15-1 ng Labor Standards Act (勞動基準法) ng Taiwan, matutugunan ng minimum service period clause ang mga legal na kinakailangan kung ang employer (雇主) ay nagbigay sa manggagawa (worker, 勞工) ng specialized technical training (專業技術培訓) at ang employer ang sumagot sa gastos nito, o kung nagbigay ang employer ng makatwirang kompensasyon (reasonable compensation, 合理補償) upang tuparin ng manggagawa ang minimum service period. Hindi kailangang matugunan nang sabay ang dalawang kinakailangan; gayunman, kahit naroon ang isa sa mga ito, hindi dapat lumampas sa makatwirang saklaw ang kasunduan kung isasaalang-alang ang lahat ng pangyayari gaya ng tagal at halaga ng pagsasanay, ang posibilidad na mapalitan ang manggagawa, at ang halaga at saklaw ng kompensasyon.
+Hindi ito awtomatikong walang bisa. Ayon sa Artikulo 15-1 ng Labor Standards Act (勞動基準法) ng Taiwan, matutugunan ng minimum service period clause ang mga legal na kinakailangan kung ang employer (雇主) ay nagbigay sa manggagawa (worker, 勞工) ng specialized technical training (專業技術培訓) at ang employer ang sumagot sa gastos nito, o kung nagbigay ang employer ng makatwirang kompensasyon (reasonable compensation, 合理補償) upang tuparin ng manggagawa ang minimum service period. Hindi kailangang matugunan nang sabay ang dalawang kinakailangan; gayunman, kahit naroon ang isa sa mga ito, hindi dapat lumampas sa makatwirang saklaw ang kasunduan kung isasaalang-alang ang lahat ng pangyayari gaya ng tagal at halaga ng pagsasanay, ang posibilidad na mapalitan ang manggagawa, at ang halaga at saklaw ng kompensasyon.
 
 Nagtatakda ang Artikulo 15-1, talata 1 ng dalawang legal na kinakailangang magkapalit-palit. Ang una ay kapag nagbigay ang employer sa manggagawa ng specialized technical training at sinagot niya ang gastos nito; ang pangalawa ay kapag nagbigay siya ng makatwirang kompensasyon bilang kapalit ng pagtupad sa minimum service period. Hindi ang pangalang inilagay sa kontrata ang mahalaga kundi kung alin sa mga batayang ito ang talagang umiiral.
 
@@ -185,7 +185,7 @@ Sa pag-aayos ng mga dokumento ayon sa panahon, mabuting sabay na ipakita ang pet
 
 - [Mga usaping hinahawakan ng tanggapan](/fil/services)
 - [Gabay sa boluntaryong pagbibitiw at sa mga eksepsiyon sa separation pay (資遣費)](/fil/columns/taiwan-voluntary-resignation-severance)
-- [Pagtatanong para sa konsultasyon](/fil/contact)
+- [Makipag-ugnayan](/fil/contact)
 
 ---
 

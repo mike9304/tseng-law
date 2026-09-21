@@ -19,9 +19,9 @@ Naabutan pa ba ninyo ang panahon ng mga tradisyonal na barberya sa Taiwan noong 
 
 Napakatangi ng paraan ng paghuhugas ng buhok sa mga barberyang iyon noon.
 
-Hindi lamang gupit ang inaalok nila; mayroon ding ahit, pag-aalaga ng mukha, pati iba't ibang serbisyo.
+Hindi lamang gupit ang inaalok nila; mayroon ding ahit, pag-aalaga ng mukha, at iba't ibang serbisyo.
 
-Ang mahalagang bahagi pa nga, habang nakaupo ay hinuhugasan ang buhok ninyo sabay ng massage sa anit, balikat, pati leeg.
+Ang mahalagang bahagi pa nga, habang nakaupo ay hinuhugasan ang buhok ninyo sabay ng massage sa anit, balikat, at leeg.
 
 Sa isang gupit lamang ay natatamasa na ninyo ang ganitong espesyal na serbisyo, kaya napakasulit nito sa halagang binabayaran.
 
@@ -39,7 +39,7 @@ maraming kalye rin sa Taiwan ang kilala sa mga massage shop.
 
 Nagkalat doon ang iba't ibang uri ng massage shop.
 
-May massage na isinasagawa ng mga taong may kapansanan sa paningin (視障按摩), foot massage (腳底按摩), oil massage, Thai massage, pati marami pang iba.
+May massage na isinasagawa ng mga taong may kapansanan sa paningin (視障按摩), foot massage (腳底按摩), oil massage, Thai massage, at marami pang iba.
 
 Sa madaling salita, makapipili ang bawat isa ng massage na akma sa kanyang panlasa upang mabawasan ang stress.
 
@@ -69,7 +69,7 @@ at napakalimitado ng mga hanapbuhay na maaari nilang pasukin.
 
 Kaya naman, upang maprotektahan ang mga taong may kapansanan sa paningin bilang mahinang sektor, ang mga mambabatas noon
 
-ay gumawa ng batas na nangangalaga sa kanilang trabaho, pati sa kanilang karapatang mabuhay (生存權).
+ay gumawa ng batas na nangangalaga sa kanilang trabaho, at sa kanilang karapatang mabuhay (生存權).
 
 Ngunit kasabay ng paglipas ng panahon at ng paglawak ng pamilihan ng mga mamimili,
 
@@ -79,13 +79,13 @@ Maraming tutol na pananaw ang lumitaw sa proseso ng pagtatalo hinggil sa karapat
 
 Halimbawa, umusbong ang tanong kung ang tahasang probisyong nagpapahintulot lamang sa mga may kapansanan sa paningin na magtrabaho sa industriya ng massage ay hindi kaya diskriminasyon laban sa mga walang kapansanan sa paningin,
 
-at itinaas din ang duda kung tunay bang nakatulong ang probisyong ito sa pangangalaga sa trabaho, pati sa kabuhayan ng mga may kapansanan sa paningin.
+at itinaas din ang duda kung tunay bang nakatulong ang probisyong ito sa pangangalaga sa trabaho, at sa kabuhayan ng mga may kapansanan sa paningin.
 
 Sa huli, idineklara ng Grand Justices (大法官) na labag sa konstitusyon (違憲) ang probisyong nagsasaad na ang mga may kapansanan sa paningin lamang ang maaaring magtrabaho sa industriya ng massage.
 
 ​
 
-Katulad nito, sa Korea kung saan maraming taong may kapansanan sa paningin ang nabubuhay sa pamamagitan ng massage,
+Bilang paghahambing: sa Korea, kung saan maraming taong may kapansanan sa paningin ang nabubuhay sa pamamagitan ng massage,
 
 karaniwang ang mga may kapansanan sa paningin lamang na nakakuha ng lisensya ang maaaring magtrabaho sa industriya ng massage.
 
@@ -97,13 +97,13 @@ Sa kasalukuyan, sa Korea ay ang mga may kapansanan sa paningin pa rin lamang na 
 
 at kapag may sumingil ng bayad sa massage mula sa iba nang walang kwalipikasyon
 
-maaari siyang parusahan ng pagkakabilanggo na hanggang 3 taon ayon sa Medical Service Act ng Korea (韓國《醫療法》).
+maaari siyang parusahan ng pagkakabilanggo na hanggang 3 taon ayon sa Medical Service Act ng Korea (韓國醫療法).
 
 Kapag ang taong walang kapansanan sa paningin ang nagpapatakbo ng negosyong massage, maaari siyang parusahan ng pagkakabilanggo na hanggang 5 taon.
 
 ​
 
-Mula rito ay makikita na magkakaiba ang paraang ginagamit ng bawat bansa upang protektahan ang mga karapatan, pati ang interes ng iba't ibang pangkat.
+Mula rito ay makikita na magkakaiba ang paraang ginagamit ng bawat bansa upang protektahan ang mga karapatan, at ang interes ng iba't ibang pangkat.
 
 Patuloy na nagbabago sa paglipas ng panahon ang proteksiyon sa karapatan, gayundin sa interes ng bawat pangkat,
 
@@ -125,4 +125,4 @@ dapat ninyong agad itong ipaalam o hilingin na itigil ito upang maprotektahan an
 
 Kung sa palagay ninyo ay naranasan ninyo ang sexual harassment,
 
-dapat kayong magpunta sa himpilan ng pulisya (警察局) kasama ang isang mapagkakatiwalaang kaibigan o isang abogado sa Taiwan, at magsumbong.
+dapat kayong magpunta sa himpilan ng pulisya (警察局) kasama ang isang mapagkakatiwalaang kaibigan o isang abogada o abogado sa Taiwan, at magsumbong.

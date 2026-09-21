@@ -1,0 +1,222 @@
+# WO-F-fil — Filipino (fil) native-quality fix lane
+worker: Claude Opus 5 (1M) · date: 2026-09-21 · worktree: /Users/son7/Projects/tseng-law-fix-f-20260921
+scope: RULEBOOK-FIX.md R2–R10 + ACCEPTED-fil.md + fil-a.md (62 rows) + fil-b.md (48 rows)
+
+## Rows applied — part a (guidance pack unless noted)
+a#1,a#2  verified only: labels already Filipino ("ANG AMING KOPONAN"/"MGA TANGGAPAN"); KOPONAN→PANGKAT under a#24.
+a#3   fullProfileLabel 'Buong profile (English)' → 'Buong profile (sa Ingles)'.
+a#4   001 §1 and §5: added the English source's country-specific note, in the supervisor's NEUTRAL form
+      (Korea-related fact pattern, "hindi ito pangkalahatang tuntunin para sa mamumuhunan mula sa alinmang bansa",
+      check whether Taiwan has an agreement with your own country). No 'Pilipinas'. (R2b)
+a#5   004 §opening: added "Ang Korea sa ibaba ay isang halimbawa lamang na may tatak, hindi ang tanging bansang pinagmulan."
+      + the same neutral note at §6 (Taiwan–Korea agreement). (R2b)
+a#6   005 Q1: heading generalized to "mula sa ibang bansa … (halimbawa lamang ang sistema ng Korea …; iba-iba ang tuntunin
+      sa bawat bansa)"; "bangko ninyo sa Korea" → "bangko ninyo sa bansang pinagmumulan ng pondo"; Q2 "bank account sa Korea"
+      → "bank account sa ibang bansa". (R2a)
+a#7   SKIPPED per constraint (Hangul slug in the 005 'advanced-1' body link — link parity, supervisor fixes centrally).
+a#8   003 Q20 "upang matamo ang pinakamalaking bayad-pinsala" → "…upang hindi malampasan ang mga paghahablang suportado
+      ng ebidensya; hindi ito pangako ng anumang halaga." (R3)
+a#9   003 Q17 "3 buwan … ipinapataw ng hukuman sa kasalukuyan" → "sa ilang hatol ay may ipinataw … hindi ito karaniwan o
+      garantisadong resulta." (digits kept)
+a#10  003 Q17 "karaniwang 4 na buwan / karaniwang 6 na buwan" → "sa ilang hatol … hindi ito nakapirming resulta."
+a#11  003 Q18 suspended sentence → "Sa ilang kaso ay maaaring pag-isipan ng hukuman … hindi ito pangakong maiiwasan
+      ang pagkakakulong." (+ Filipino gloss 緩刑 = nasuspindeng parusa, R8)
+a#12  008 "nakatanggap siya ng malaking separation pay" → "napatunayan ang karapatan niya sa 資遣費 sa ilalim ng batas;
+      hindi ito pangako ng anumang halaga".
+a#13  008 frontmatter + body "hindi tulad ng Korea" → "hindi tulad ng ilang bansa — ang Korea ay isang halimbawa —". (R2c)
+a#14  009 "naiiba sa Korea" → "naiiba sa ilang bansa (halimbawa ang Korea); huwag itumbas ang 資遣費 sa separation pay
+      sa ilalim ng batas paggawa ng ibang bansa." (neutral, no 'Pilipinas')
+a#15  009 "ang panig na naunang naghanda ang siyang napoprotektahan" → "Sa maraming kaso, mas matatag ang panig na
+      maagang nagtipon ng ebidensya at sumunod sa taning; hindi ito katiyakan ng resulta."
+a#16  columnsOriginalLanguageBadge → 'Orihinal na wika'.
+a#17  roles: English job titles dropped ('Punong abogada sa Taiwan', 'Abogado sa Taiwan',
+      'Tagapamahala ng operasyon para sa Korea', 'Kasosyong CPA'). (R5)
+a#18  SKIPPED (blocked): 'TWD 1.57M' → 'TWD 1.57 milyon' fails the CROSS-LOCALE invariant
+      GUIDANCE_BIO_PRESERVED_TERMS (src/data/international-guidance-team.ts:1177), asserted byte-identical for all 27
+      locales by src/data/__tests__/guidance-team-bios.test.ts. Reverted; this is a supervisor-level (all-locale) change.
+a#19  'lamang' added: inquiry-copy consultationNotice, contact language bullet, and all 6 guidance answers.
+a#20  mega.services description → 'Hinahawakan ng tanggapan ang mga pangunahing larangan …'.
+a#21  'bahaging Filipino na ito' → 'gabay na ito sa Filipino'.
+a#22  internal page reference '“Mga larangan ng serbisyo”' → the real page title '“Mga usaping hinahawakan ng tanggapan”' (×2).
+a#23  'pangkat' (practice group) → 'larangan' everywhere: 13 instances in guidance-content + 2 in guidance-answers.
+a#24  'koponan' → 'pangkat': team label/title, content lawyers title, and 11 column related-link labels (14 total).
+a#25  representativeTitle / qualificationSentence 'Namamahalang abogada' → 'Punong abogada' (+001 CTA).
+a#26  bio 'Kinatawan nito' → 'Kinatawan niya' (her personal credit restored). (R4)
+a#27  'doble ang medyor' → 'may dobleng major'.
+a#28  photoAlts 'Silid-tanggapan ng tanggapan' → 'Opisina ng tanggapan'; 'Silid-trabaho ng abogado sa tanggapan sa Taipei'
+      → 'Silid-trabaho ng abogado sa Taipei'.
+a#29  'maaaring maka-access dito' → 'maaaring makakita nito'.
+a#30  disclaimer 'kumpirmahin … ang pagtanggap sa trabaho' → 'kumpirmahin ng dalawang panig, sa sulat, na tinanggap ng
+      tanggapan ang usapin'.
+a#31  'interpreter (tagapagsalin)' → 'interpreter (tagapagpaliwanag sa pasalita)' (×2).
+a#32  'Alitan sa paggawa at empleo' → 'Alitan sa paggawa' (home item + services heading).
+a#33  'akawntant' → 'CPA' (partnerTitle, team/content/answers descriptions).
+a#34  'form ng kontak' → 'form ng katanungan' (contact, privacy ×3, answers).
+a#35  nav.contact 'Kontak' → 'Makipag-ugnayan' (+ eyebrow, mega/home link label, 4 in-body page references,
+      'pahina ng kontak' → 'pahinang Makipag-ugnayan' ×4). fil is NOT under the 14-char nav-cap test
+      (only cs/hu/ro/uk/el/he, hi/sv/da/nb/fi, it/nl/pl, ru are) and fil nav already had 20–22-char labels.
+a#36  nav.faq 'Madalas itanong' → 'Mga madalas itanong'.
+a#37  viewAllLabel 'Tingnan lahat' → 'Tingnan ang lahat' (×5). Test evidence string updated in
+      src/components/__tests__/columns-grid-guidance-labels.test.tsx (the one test that pins it; still passes).
+a#38  'Q&A' removed from 003/005/007/013 titles, H1s and running text → 'Mga tanong at sagot' (7 instances).
+a#39  003 Q2 → "sa Taiwan, … 119 (ambulansiya at bumbero) … 110 (pulisya) o sa 112 mula sa mobile phone." (R9)
+      Did NOT add "hindi ito 911 ng Pilipinas" — it injects a country term the source block does not name
+      (checker `nationality` lane FAILs on that) plus an unsourced digit.
+a#40  'Kodigo Penal ng Republika ng Tsina' → 'Kodigo Penal ng Taiwan' (4 instances). (R8)
+a#41  003 "mag-iwan lamang po kayo ng komento" → "Para sa iba pang tanong, gamitin ang pahinang Makipag-ugnayan;
+      walang pangako sa panahon ng sagot." (R3/R7)
+a#42  003 ISO dates 2026-05-29 / 2026-07-01 → 'Mayo 29, 2026' / 'Hulyo 1, 2026' (no ISO left in running text).
+a#43  003 ROC years glossed: 'taong 109 (2020)' ×2, 'taong 112 (2023)'.
+a#44  003 'oral argument' → 'pasalitaang pagtatalo', with Filipino+Chinese gloss on the instance levels
+      ('second instance (antas ng apela, 二審)', 'first instance (unang antas, 一審)').
+      The English tokens 'first/second instance' are KEPT because the checker's fil ordinal lane matches only
+      /first instance/ and /second instance/ — dropping them makes the Korean 1심/2심 digits go missing (FAIL).
+a#45  005 "magtanong anumang oras" → "ipadala sa pahinang Makipag-ugnayan; walang pangako sa panahon ng sagot." (R3)
+a#46  006 Korea coda signposted: "Bilang paghahambing: sa Korea, …".
+a#47  006 '韓國《醫療法》' → '韓國醫療法'. (R6b)
+a#48  007 'Judgment Blg. 4 ng taong 112' → 'Hatol Blg. 4 ng taong 112 (2023; …)' (4 instances incl. frontmatter + sources).
+a#49  008 'sa Taiwan??' → 'sa Taiwan?' (title + H1).
+a#50  008 'force majeure' glossed 'pangyayaring hindi kayang pigilan (force majeure, 不可抗力)'; '1 buwan' → 'isang buwan'.
+a#51  008 'pinakamataas na benta' ×2 → 'isa sa mga tagabentang mataas ang benta' / 'isa sa mga empleyadong mataas ang benta'.
+a#52  008 'Magandang araw, ako si Wei Tseng' → 'Ako si Wei Tseng'. (R7)
+a#53  008 digit+noun → word forms: 'bawat isang taon', 'tatlong sunod na araw' ×3, 'anim na buwang sahod' ×2,
+      'anim na araw', 'isang buwan' ×2, 'sampung taon' ×2.
+      PARTIAL: '0.5 buwan' kept as a digit — 'kalahating buwan' makes the source figure 0.5 missing → numbers FAIL. Noted per WO §Verify.
+a#54  009 'mutatis mutandis' → 'may kaukulang pagbabago (準用, 勞動基準法)'.
+a#55  009 "''**panahon**''." → "**panahon**."
+a#56  001/004 'permanent establishment (PE, 常設機構)' → '(permanenteng establisimyento, 常設機構)'; 004 §6 heading likewise.
+      'PE' the bare abbreviation is gone; the Taglish head term stays (ACCEPTED locale rule).
+a#57  004 'gawaing tortious' → 'gawang labag sa batas (tort, 侵權行為)' (3 instances). (R8)
+a#58  'legal na persona' → 'juridical person' (29) and 'legal na pagkatao' / 'personalidad legal' / 'legal personality'
+      → 'legal na personalidad' (5 + 9 + 4 + 2). PH Civil Code term.
+a#59  008: the "do not equate" caveat added in the body first mention ("Katangi-tangi ito sa Taiwan, kaya huwag itong
+      itumbas sa separation pay sa ilalim ng batas paggawa ng ibang bansa") instead of in the title —
+      the reviewer's title text names 'Pilipinas' (nationality-lane risk) and is too long for an H1/<title>.
+a#60  004 'hindi ito garantiyang' → 'hindi ito katiyakang'.
+a#61  privacy 'pribadong object storage' → 'pribadong imbakan'.
+a#62  003 blog sign-off shortened; ZWSP (​) blocks KEPT — they are separate blocks and the checker compares
+      block counts against the Korean source (R7: never merge/split blocks).
+
+## Rows applied — part b
+b#1   SKIPPED per constraint (Invest Taiwan lang=jpn — link parity, supervisor).
+b#2   013 'dayuhang pwersa' → 'dayuhang partido'.
+b#3   013 closing "mag-iwan po kayo ng komento … anumang oras" → "gamitin ang pahinang Makipag-ugnayan; walang pangako
+      sa panahon ng sagot."
+b#4   013 'isang abogado sa Taiwan' → 'isang abogada o abogado sa Taiwan' + Makipag-ugnayan pointer. (R4)
+b#5   014 §1 bare 'Hindi.' → 'Hindi ito awtomatikong walang bisa.' (frontmatter FAQ keeps 'Hindi.' — it has its own question). (R7b)
+b#6   015 "huwag mag-atubiling magtanong anumang oras sa abogadong Taiwanese" → Makipag-ugnayan + no reply-time promise.
+b#7   015 'abogadong Taiwanese' → 'isang abogada o abogado sa Taiwan'; 015 §3 'o sa abogado' → 'o sa isang abogada o abogado'.
+b#8   016 §3 'Hindi.' → 'Hindi ito iisa at ang bahagi sa mana.'; §7 'Hindi.' → 'Hindi ito malayang magagamit ng magulang.' (R7b)
+b#9   017 'Lienchiang (Matsu, 連江・馬祖)' → 'Lienchiang o Matsu (連江、馬祖)'. (R6b)
+b#10  017 §3 'Hindi.' → 'Hindi awtomatikong naililipat sa bumibili ang lisensiya.' (R7b)
+b#11  Agency name unified across 001/011/013/017/018 (8 instances incl. 018's old 'Investment Commission'):
+      'Kagawaran ng Pagsusuri ng Pamumuhunan (經濟部投資審議司)'. (R8 — one name per locale)
+b#12  010 title + H1 'Kaso sa First Instance' → 'Kaso sa Unang Antas (第一審)'. Body 'first instance' kept (checker ordinal lane).
+b#13  010 'taong 109' → 'taong 109 (2020)'.
+b#14  NOT APPLIED — see "Disagreed with" below.
+b#15  'pati' as an 'and' dump → 'at': 95 instances across the 18 columns. Kept idiomatic 'kundi pati' (not only…but also)
+      and 'pati na' / 'pati rin' (15 remaining, all correct).
+b#16  010 'litigation representative' → 'kinatawan sa paglilitis (訴訟代理人)'. (R8)
+b#17  010 'business operator' → 'operator ng negosyo' (glossed on first use; 3 instances).
+b#18  010 'proof-of-content letter' / "lawyer's letter" → 'sulat na may patunay ng nilalaman (存證信函)' /
+      'sulat ng abogado (律師函)'. (R8)
+b#19  digit+noun → word forms in 010/013/016/017: 'anim na buwan' ×4, 'dalawang taon', 'sampung taon', 'limang beses',
+      'tatlong beses', 'tatlong buwan' ×2, 'isang buwan' ×2, 'dalawang buwang upa', 'isang taon'.
+b#20  010 'acute na pagkapunit' → 'biglaang pagkapunit' (alt + link label, kept identical).
+b#21  covered by a#24 sweep.
+b#22  covered by the a#58 sweep (011/017 'legal na persona' → 'juridical person').
+b#23  011 'ma-access' → 'magamit at mabuksan'; 'karapatan sa pag-access' ×2 → 'karapatang makabasa at makakuha ng materyal';
+      016 'karapatan sa pag-access' → 'kung sino ang makababasa ng mga dokumento'.
+b#24  011 'talata 1, aytem 7' → 'talata 1, subparagraph 7 (款)'. (R8: 條/項/款)
+b#25  011 'anyo ng paghahanda (dosage form)' → 'anyo ng produkto (劑型)'.
+b#26  012 English parenthetical synonyms dropped: '(litigation)', '(negligence, …)'→'(過失)', '(visibility)',
+      '(horn, …)'→'(喇叭)', '(headlights, …)'→'(變換燈光)'; 'expert appraisal' → 'pagsusuri ng eksperto (expert appraisal, 鑑定)' ×2.
+b#27  NOT APPLIED — '0.5 metro' → 'kalahating metro' makes the source figure 0.5 missing (checker numbers FAIL:
+      src="…적어도 0.5미터의 간격…"). Digit kept, per WO §Verify ("prefer the form the checker accepts").
+b#28  013 'marami ang matagumpay na nakapagtatag' → 'marami ang nagtatag' (no success claim). (R3)
+b#29  013 'hindi naman ito napakahigpit' → 'hindi iisa ang pormal na pamantayan; sinusuri ang bawat aplikasyon ayon sa
+      mga isinumiteng dokumento.'
+b#30  013 'Sana po ay makatulong ang Q&A … 😊' → 'Ang mga tanong at sagot sa ibaba ay pangkalahatang gabay …' (emoji gone).
+b#31  013 '**Payo**：' → '**Payo:**'. (R6b)
+b#32  013 "'**UI No. Basic Information Form**(統一證號基本資料表)'" →
+      '**pangunahing talahanayan ng unified ID number** (統一證號基本資料表)'.
+b#33  013 'Halimbawa)' ×2 → 'Halimbawa, …'; first one also glossed '營業項目' / '餐飲業'.
+b#34  013 orphan break fixed WITHOUT merging blocks (each block made self-standing; block count unchanged).
+b#35  014 title + H1 'Multa sa Paglabag ng Kontrata (違約金)' → 'Parusang Kontraktuwal sa Paglabag ng Kontrata
+      (contractual penalty, 違約金)'. (R8: 違約金 ≠ 罰鍰/罰金)
+b#36  related-link labels 'Pagtatanong para sa konsultasyon' (4) and 'Konsultasyon at katanungan' (2) → 'Makipag-ugnayan'.
+b#37  015 'exempted sa pagsusuri' → 'hindi na kailangang suriin'.
+b#38  015 'sangay (分公司) at sub-sangay (分支機構)' → 'sangay ng kompanya (分公司) at tanggapang sangay (分支機構)'. (R8)
+b#39  015 'prior inquiry sa business location' → 'paunang pagsusuri sa lugar ng negosyo' (6 instances).
+b#40  016 stranded 'ba' fronted in the FAQ question (+ 剩餘財產差額分配 gloss).
+b#41  016 'residual property' → 'natitirang ari-arian (剩餘財產差額分配)' (5 instances incl. the §3 heading).
+b#42  017 '主體 → paksa ng pahintulot' → 'entidad na pinahihintulutan' (3 instances).
+b#43  018 register normalized: 'kumpanya'→'kompanya' (35), 'Puwede'→'Maaari' (4), 'dahil lang'→'dahil lamang' (2);
+      'legal person'→'juridical person' (4), 'legal personality'→'legal na personalidad' (4).
+b#44  018 'supervisor' → 'superbisor (監察人)' ×2.
+b#45  018 'NT$30 milyon' / 'NT$100 milyon' → 'TWD 30 milyon' / 'TWD 100 milyon'.
+b#46  018 'Mas madali relatibong kumuha ng work permit' → 'Mas madalas na natutugunan … ang pamantayan …; hindi ito
+      pangako ng pag-apruba.' (R3)
+b#47  018 '"to be determined."' → '"hindi pa napagpapasyahan."'
+b#48  018 'kumpirmahin kapag kumontak' → 'kumpirmahin kapag kayo ay makipag-ugnayan'.
+
+## Extra rulebook sweeps not tied to a numbered row
+R2d   007: "gaya ng Pilipinas at Taiwan" → "ang Taiwan at ang isa pang bansa"; §10 "gastusin sa pamumuhay sa Pilipinas …
+      maninirahan doon ang anak" → "gastusin sa pamumuhay sa ibang bansa … maninirahan ang anak sa labas ng Taiwan".
+      No claims added about any reader-country's law.
+R2 (R8 note) 011: "mga brand na Pilipino" → "mga dayuhang brand".
+R7b   007 §3 and §6 bare answers made self-standing (English source also opens "No.", so headings kept).
+R8    004: 'kompanyang ina' (mother company) → 'parent company' (24 instances); 001 'kompanyang magulang (parent company)'
+      → 'parent company (kompanyang nagmamay-ari, 母公司)'.
+R4    006 closing 'isang abogado sa Taiwan' → 'isang abogada o abogado sa Taiwan'.
+R5    guidance mega/home/lawyers chrome — see a#3/a#17/a#24/a#33.
+
+## Rows skipped, with reason
+a#7, b#1   link parity — supervisor fixes centrally (Hangul 'advanced-1' slug in 005; Invest Taiwan lang=jpn in 011).
+a#18       blocked by the cross-locale GUIDANCE_BIO_PRESERVED_TERMS invariant ('TWD 1.57M' byte-identical, 27 locales).
+a#53(part) '0.5 buwan' kept as a digit — word form makes the source figure missing (checker numbers FAIL).
+b#27       '0.5 metro' kept as a digit — same reason (verbatim failure reproduced and reverted).
+b#14       not applied — see below.
+frontmatter `url:` Hangul — skipped per ACCEPTED (canonical source metadata).
+
+## Where I think the reviewer is wrong (NOT applied)
+1. b#14 (and the date-order half of a#42): "Enero 24, 2022 is US month-day order; write 24 Enero 2022."
+   Philippine usage — including this corpus's own unchangeable frontmatter `date_display: "Setyembre 13, 2025"` /
+   "Setyembre 17, 2026" — is month-day-year. "24 Enero 2022" is neither the PH convention nor idiomatic Filipino
+   (the formal Filipino form would be "ika-24 ng Enero 2022"). I fixed only the genuine violation the rulebook names
+   (ISO dates in running text, a#42) and normalized them to the corpus's month-day-year form.
+2. a#39's "hindi ito 911 ng Pilipinas": injects a country term into a block whose Korean source names no country
+   (checker `nationality` lane FAILs) plus an unsourced digit. R9's Taiwan labelling was applied instead.
+3. a#59's proposed title with "(huwag itumbas sa separation pay sa Labor Code ng Pilipinas)": same nationality risk,
+   and it is a page <title>. The caveat was put in the body's first mention of 資遣費 instead.
+4. a#44 / b#12's full replacement of "first instance"/"second instance" with Filipino-only wording: the checker's fil
+   ordinal lane recognizes only the English tokens, so removing them drops the Korean 1심/2심 digits (FAIL).
+   Filipino glosses were added alongside instead; the 010 title (no ordinal lane pressure there) did take the Filipino form.
+
+## §Verify (verbatim)
+$ node scripts/check-column-translation.mjs --dir src/content/columns-fil --lang fil 2>&1 | tail -8
+hanzi          PASS   han=22
+numbers        WARN   extra in translation (2): 1×2
+                      sourceCount=25 targetCount=27
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-fil src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      26
+
+Note: git status shows 26 entries = 24 modified tracked files + untracked .tmp-fil/ (worker scratch, inside this
+worktree) + untracked docs/i18n/global-plan/WO-F-fil.txt (the work order itself). This log adds a 27th entry.
+No git add/commit/push/stash/checkout was run.

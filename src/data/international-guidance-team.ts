@@ -209,31 +209,31 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     },
   },
   fil: {
-    label: 'ANG AMING KOPONAN',
-    title: 'Pandaigdigang koponan ng Hovering',
+    label: 'ANG AMING PANGKAT',
+    title: 'Pandaigdigang pangkat ng Hovering',
     description:
-      'Mga profile ng mga abogado, tagapamahala ng operasyon, at kasosyong akawntant ng Hovering.',
-    representativeTitle: 'Namamahalang abogada',
+      'Mga profile ng mga abogado, tagapamahala ng operasyon, at kasosyong CPA ng Hovering.',
+    representativeTitle: 'Punong abogada',
     teamTitle: 'Mga abogado at kawani',
-    partnerTitle: 'Kasosyong akawntant',
+    partnerTitle: 'Kasosyong CPA',
     introLabel: 'Panimula',
     educationLabel: 'Edukasyon',
     experienceLabel: 'Karanasan',
     photoAltPrefix: 'Larawan',
     workingLanguagesLabel: 'Mga wikang ginagamit sa trabaho',
-    fullProfileLabel: 'Buong profile (English)',
+    fullProfileLabel: 'Buong profile (sa Ingles)',
     keyFactsHeading: 'Abogadang Wei Tseng — Mahahalagang impormasyon',
     qualificationLabel: 'Kwalipikasyon at tanggapan',
     qualificationSentence:
-      'Si {name} ay abogadang kwalipikado sa Taiwan at ang namamahalang abogada ng {firm}.',
+      'Si {name} ay abogadang kwalipikado sa Taiwan at ang punong abogada ng {firm}.',
     practiceLabel: 'Pangunahing larangan',
     consultationLanguagesLabel: 'Wika ng konsultasyon',
     roles: {
-      'tseng-junwei': 'Namamahalang abogada sa Taiwan (Managing Attorney)',
-      'chang-rongxuan': 'Abogado sa Taiwan (Taiwan Attorney)',
+      'tseng-junwei': 'Punong abogada sa Taiwan',
+      'chang-rongxuan': 'Abogado sa Taiwan',
       'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Tagapamahala ng operasyong Korea (Korea Operations Manager)',
-      'huang-shengping': 'Kasosyong akawntant (Partner CPA)',
+      'son-jungmin': 'Tagapamahala ng operasyon para sa Korea',
+      'huang-shengping': 'Kasosyong CPA',
     },
   },
   ar: {
@@ -1397,11 +1397,11 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Tinatanggap ng tanggapan ang mga usaping pangkorporasyon at pang-indibidwal sa Taiwan, sa Ingles, Hapon, Koreano, at Tsino.',
-        'Kinatawan nito ang isang mag-aaral mula sa Korea sa usapin ng pinsalang natamo sa gym, na nagbunga ng hatol sa unang hukuman para sa danyos na TWD 1.57M.',
+        'Kinatawan niya ang isang mag-aaral mula sa Korea sa usapin ng pinsalang natamo sa gym, na nagbunga ng hatol sa unang hukuman para sa danyos na TWD 1.57M.',
       ],
       education: [
         'Masterado (M.S.), Institute of Finance, National Taiwan University',
-        'Batsilyer (B.A.) na doble ang medyor sa Batas at Pananalapi, National Chengchi University',
+        'Batsilyer (B.A.) na may dobleng major sa Batas at Pananalapi, National Chengchi University',
         'Palitang mag-aaral, Kobe University at Waseda University',
       ],
       experience: [

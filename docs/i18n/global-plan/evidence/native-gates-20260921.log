@@ -1,0 +1,13 @@
+[2026-09-21 17:31:28 HEAD 43fd1347]
+[lint]
+LINT=0
+[tsc]
+TSC_OK
+[build]
+ƒ Middleware                                                                                                  35.1 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+[vitest final 17:42:10]  Test Files  1322 passed (1322)       Tests  12069 passed | 14 skipped | 1 todo (12084) 

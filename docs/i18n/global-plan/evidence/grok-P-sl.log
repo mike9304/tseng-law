@@ -1,9 +1,68 @@
-[WO start 2026-09-22 05:24:51]
-The Slovenian guidance pack and UI strings for locale `sl` are in place. Scaffolded Czech copy is replaced with natural Slovenian for readers in Slovenia; `SCAFFOLD(cs)` markers for `sl` are gone.
+WO-P-sl — Slovenian guidance pack + UI strings (locale sl)
+Workspace: /Users/son7/Projects/tseng-law-new-sl-20260922
+No git add/commit/push/stash/checkout. Helper only in .tmp-sl/.
 
-Product facts are unchanged: consultation only in English, Chinese (中文), Japanese, and Korean; no interpreter, reply-time, appointment, free-first-meeting, or result promises; Wei Tseng is referred to in the feminine (`odvetnica`); Latin names and Traditional-Chinese glosses are kept.
+## Files touched
+src/data/international-guidance-central-europe.ts (slovenianGuidanceContent; languageName Slovenščina)
+src/data/international-guidance-team.ts (team copy, bios, language names, practice-area names)
+src/data/international-guidance-offices.ts (office copy + footer copy)
+src/data/international-guidance-answers.ts (sources now /sl/…)
+src/data/international-inquiry-copy.ts
+src/data/multilingual-international-v2.ts (GUIDANCE_HOME_PATHS)
+src/data/team-name.ts
+src/lib/llms-txt.ts (English name Slovenian + notices)
+src/lib/columns.ts (category labels)
+src/lib/public-language-registry.ts (region labels + picker copy)
+src/components/ColumnsGrid.tsx (All / categories / read-more; categories byte-identical to columns.ts; read-more byte-identical to home.columnsReadMoreLabel)
+src/components/CinematicOpening.tsx
+src/components/decorative-video-controls.ts
+src/data/__tests__/guidance-disclosure-parity.test.ts
+src/data/__tests__/guidance-office-facts-sync.test.ts
+src/data/__tests__/international-guidance-privacy-disclosure.test.ts
+src/data/__tests__/column-alternate-expectations.ts
+src/components/__tests__/columns-grid-guidance-labels.test.tsx (also reads central-europe.ts for viewAllLabel evidence)
+src/components/__tests__/multilingual-international-v2.test.tsx
+tests/builder-editor/international-guidance.playwright.ts (og:locale sl_SI)
 
-Verification: `SCAFFOLD` count for `sl` is **0**, `tsc` is **TSC_OK**. Five vitest failures remain because other new locales are still scaffolded (answers locale list 27 vs 45, shared llms notices, root `llms.txt` 8 KiB cap). None of those failures are on `sl` rows.
+## §Verify (verbatim)
 
-The full file list, verbatim verify output, and terminology notes are in `docs/i18n/global-plan/evidence/grok-P-sl.log`. No git add/commit/push.
-=== end code=0 2026-09-22 05:43:03 ===
+===1 grep===
+0
+===2 tsc===
+TSC_OK
+===3 vitest===
+   × guidance locale llms.txt catalogs > writes a distinct notice set for each guidance language 3ms
+   × root llms.txt guidance catalog links > stays inside the 8 KiB root budget and the documented grammar 1ms
+   × root llms.txt guidance catalog links > lists every site-locale catalog and every guidance catalog 0ms
+   × root llms.txt guidance catalog links > labels each guidance catalog in its own language without widening consultation languages 0ms
+   × guidanceAnswers > covers every guidance locale x 6 page keys 4ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+ Test Files  2 failed | 45 passed (47)
+      Tests  5 failed | 1096 passed (1101)
+===4 git status count===
+      22
+
+Pass on sl: grep = 0, TSC_OK, no test failed on sl rows.
+
+Acceptable failures (other new locales still scaffolded; not sl-specific):
+- src/lib/__tests__/international-guidance-answers.test.ts: local GUIDANCE_LOCALES is 27 vs GUIDANCE_LOCALES_4 length 45 (bn/ur/fa/my/ta/ne/km/mn/sk/bg/hr/sr/lt/lv/et/ca/is still cloned).
+- src/app/[locale]/__tests__/llms-discovery.test.tsx distinct-notice set: unique count 84 vs 135. 27 original locales × 3 = 81; sl contributes +3 unique notices (84). Remaining clones still share template notices.
+- same file, three root-catalog tests: llms.txt exceeds 8192-byte root budget because all 18 new locales are listed, not because of sl wording.
+
+## Terminology (key legal terms + Chinese gloss)
+工作許可 — delovno dovoljenje
+居留 — dovoljenje za prebivanje
+資遣費 — odpravnina (po tajvanskem pravu; ni enačena z instituti drugih držav)
+離婚 — ločitev
+未成年子女權利義務之行使或負擔 — izvrševanje in prevzem pravic ter dolžnosti do mladoletnih otrok
+會面交往 — stiki z otrokom
+繼承 — dedovanje
+戶籍 — matične evidence
+勞動契約 — pogodba o zaposlitvi
+工作規則 — interni delovni red
+商標 / 專利 — znamka / patent
+
+Other register: tajvansko pravo; odvetnica Wei Tseng (feminine); posvet (consultation) vs pravni nasvet (legal advice); razmerje med odvetnico ali odvetnikom in stranko; lowercase vi (Slovenski pravopis); navednice » «; languageName Slovenščina; eyebrows EKIPA / PISARNE; cities Tajpej / Gaosjung / Tajdžong / Pingdong (臺北 高雄 臺中 屏東). Bio keeps TWD 1.57M and all GUIDANCE_BIO_PRESERVED_TERMS.
+
+## Could not fit
+Nav labels all ≤ 14: Domov, Področja, Pisarna, Odvetniki, Stroški, Stik, Vprašanja, Zasebnost, Izjava, Članki. menuLabel = Pregled strani (not Menu). Nothing dropped.

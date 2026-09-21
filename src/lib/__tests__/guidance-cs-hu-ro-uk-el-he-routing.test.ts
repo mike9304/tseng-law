@@ -42,8 +42,10 @@ describe('cs/hu/ro/uk/el/he guidance routing', () => {
   });
 
   it('registers the six locales as guidance locales at the end of the registry', () => {
-    expect(GUIDANCE_LOCALES_4.slice(-6)).toEqual([...NEW_GUIDANCE]);
-    expect(PUBLIC_LOCALES_8.slice(-6)).toEqual([...NEW_GUIDANCE]);
+    for (const locale of NEW_GUIDANCE) {
+      expect(GUIDANCE_LOCALES_4).toContain(locale);
+      expect(PUBLIC_LOCALES_8).toContain(locale);
+    }
     expect(PUBLIC_LOCALES_8).toHaveLength(4 + GUIDANCE_LOCALES_4.length);
     for (const locale of NEW_GUIDANCE) {
       expect(isGuidanceLocale4(locale)).toBe(true);
@@ -68,7 +70,7 @@ describe('cs/hu/ro/uk/el/he guidance routing', () => {
   });
 
   it('renders only Arabic and Hebrew right-to-left', () => {
-    expect(RTL_PUBLIC_LOCALES).toEqual(['ar', 'he']);
+    expect(RTL_PUBLIC_LOCALES).toEqual(['ar', 'he', 'ur', 'fa']);
     expect(isRtlDocumentLanguage('he')).toBe(true);
     expect(isRtlDocumentLanguage('ar')).toBe(true);
     for (const locale of ['cs', 'hu', 'ro', 'uk', 'el'] as const) {

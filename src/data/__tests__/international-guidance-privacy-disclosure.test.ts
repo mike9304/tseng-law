@@ -50,7 +50,7 @@ const PENDING_CONFIRMATION: Record<(typeof GUIDANCE_LOCALES_4)[number], RegExp> 
   bg: /ожидает подтверждения бюро|ещё не подтверждено бюро/, // SCAFFOLD(ru)
   hr: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
   sr: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
-  sl: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
+  sl: /še ni potrjeno s strani pisarne|čaka na potrditev pisarne/,
   lt: /laukia kontoros patvirtinimo|kontora dar nepatvirtino/i,
   lv: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
   et: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)

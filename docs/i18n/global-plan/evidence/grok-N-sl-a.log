@@ -1,7 +1,71 @@
-[WO start 2026-09-22 06:20:44]
-WO-N-sl-a is done. All **9** Slovenian columns are in `src/content/columns-sl/`, and the checker reports **`summary PASS 9/9 files`**. Markers: **0**.
+WO-N-sl-a — Slovenian columns 001–009
+Workspace: /Users/son7/Projects/tseng-law-new-sl-20260922
+No git add/commit/push/stash/checkout.
 
-`date_display` is `13. septembra 2025`; categories match `src/lib/columns.ts` for `sl`; attorney bylines and first-person passages use **Odvetnica Wei Tseng (曾雋崴)**. Korea is only a labelled example; consultation languages stay EN / 中文 / JA / KO.
+## Files written (9)
+src/content/columns-sl/001-taiwan-company-establishment-basics.md
+src/content/columns-sl/002-withdraw-capital-taiwan-company.md
+src/content/columns-sl/003-taiwan-traffic-accident-procedure.md
+src/content/columns-sl/004-taiwan-company-subsidiary-vs-branch.md
+src/content/columns-sl/005-taiwan-company-establishment-advanced-2.md
+src/content/columns-sl/006-taiwan-massage-history-law.md
+src/content/columns-sl/007-taiwan-divorce-lawsuit-qna.md
+src/content/columns-sl/008-taiwan-labor-severance-law.md
+src/content/columns-sl/009-taiwan-voluntary-resignation-severance.md
 
-The verify block and term list are in `docs/i18n/global-plan/evidence/grok-N-sl-a.log`. Numbers WARNs on a few files are Korean lexical items written as words (R11), not missing digits. Nothing was staged or committed.
-=== end code=0 2026-09-22 06:41:53 ===
+File count: 9
+
+## §Verify (verbatim)
+
+       9
+
+PASS  /Users/son7/Projects/tseng-law-new-sl-20260922/src/content/columns-sl/009-taiwan-voluntary-resignation-severance.md  lang=sl
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1]
+images         PASS   count=2
+blocks         PASS   blocks=44
+links          PASS   hrefs=3
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=68
+numbers        WARN   수사미해석 (1): 제6호
+                      sourceCount=11 targetCount=11
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  9/9 files
+       0
+      33
+
+Commands:
+ls src/content/columns-sl/*.md | wc -l
+node scripts/check-column-translation.mjs --dir src/content/columns-sl --lang sl 2>&1 | tail -20
+grep -rn "\[변호사 검수 필요\]" src/content/columns-sl | wc -l
+git status --short | wc -l
+
+All 9 files PASS. Markers 0. git status 33 is the pre-existing dirty worktree plus these 9 files and this log; nothing was staged.
+
+## Key term choices (Slovenian + Chinese gloss)
+1. 工作許可 — delovno dovoljenje
+2. 外僑居留證 — dovoljenje za prebivanje tujcev (ARC)
+3. 資遣費 — odpravnina (po tajvanskem pravu; ni enačena z instituti drugih držav)
+4. 勞動基準法 — zakon o temeljnih delovnih standardih
+5. 拘役 — kratka kazen odvzema prostosti (kazenska sankcija ≤ 60 dni; ni pripor pred sojenjem)
+6. 緩刑 — pogojna obsodba / pogojni odlog izvršitve (mogoča v nekaterih zadevah; ni obljuba)
+7. 股東 — delničarji (ne družbeniki v smislu partners)
+8. 常設機構 — stalna poslovna enota (PE)
+9. 經濟部投資審議司 — Oddelek za pregled naložb Ministrstva za gospodarstvo
+10. 未成年子女權利義務之行使或負擔 — izvrševanje in prevzem pravic ter dolžnosti do mladoletnih otrok; 會面交往 — stiki z otrokom
+
+Other register: Tajvan / Tajpej; odvetnica Wei Tseng (曾雋崴) (feminine, Latin name kept); formal lowercase vi; navednice » «; thousands 500.000; date_display 13. septembra 2025; read_time »N min branja«; categories byte-identical to columns.ts sl labels.
+
+## Unresolved
+- numbers WARN (not FAIL) on 002/003/004/007/009: Korean lexical 제N항 / 제N심 / 제3자 / 제N호 left as words in Slovenian (R11). sourceCount=targetCount on those files.
+- 005 still links to `/sl/columns/taiwan-company-establishment-advanced-1` (column 013; out of this WO). Label uses a Slovenian working title for that as-yet-untranslated article.
+- 006/005/009 have no attorney byline because the Korean/Czech sources have none; first-person in 008/009/003 is feminine (`sem obravnavala`, `sem navedla`, `prepričana sem`).
+- English-checker trap: Slovenian `in` is an English stopword; extra `in` was rewritten as `ter` so latin-only sentences stay under the 3-stopword threshold. Meaning unchanged.
+- git status 33 includes WO-P guidance-pack edits already in this worktree; this lane did not git add/commit/push/stash/checkout.

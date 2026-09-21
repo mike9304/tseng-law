@@ -48,7 +48,7 @@ describe('public eight-locale helper isolation', () => {
     expect(siteLocales).toEqual(['ko', 'zh-hant', 'en', 'ja']);
     expect(PUBLIC_LOCALES_8).toHaveLength(4 + GUIDANCE_LOCALES_4.length);
     expect(PUBLIC_LOCALES_8).toHaveLength(49);
-    expect(GUIDANCE_LOCALES_4).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi', 'cs', 'hu', 'ro', 'uk', 'el', 'he']);
+    expect(GUIDANCE_LOCALES_4).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi', 'cs', 'hu', 'ro', 'uk', 'el', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne', 'km', 'mn', 'sk', 'bg', 'hr', 'sr', 'sl', 'lt', 'lv', 'et', 'ca', 'is']);
   });
 
   it('keeps helper free of CMS / builder-locale fallback', () => {
@@ -93,6 +93,24 @@ describe('public eight-locale helper isolation', () => {
       uk: 'Українська',
       el: 'Ελληνικά',
       he: 'עברית',
+      bn: 'বাংলা',
+      ur: 'اردو',
+      fa: 'فارسی',
+      my: 'မြန်မာ',
+      ta: 'தமிழ்',
+      ne: 'नेपाली',
+      km: 'ខ្មែរ',
+      mn: 'Монгол',
+      sk: 'Slovenčina',
+      bg: 'Български',
+      hr: 'Hrvatski',
+      sr: 'Srpski',
+      sl: 'Slovenščina',
+      lt: 'Lietuvių',
+      lv: 'Latviešu',
+      et: 'Eesti',
+      ca: 'Català',
+      is: 'Íslenska',
     });
     const autonyms = Object.values(PUBLIC_LANGUAGE_AUTONYMS);
     expect(autonyms).toHaveLength(PUBLIC_LOCALES_8.length);

@@ -189,7 +189,7 @@ export const DECORATIVE_VIDEO_CONTROL_LABELS = {
   },
   hr: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)
   sr: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)
-  sl: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)
+  sl: { pause: 'Zaustavi video', play: 'Predvajaj video', replay: 'Predvajaj video znova' },
   lt: { pause: 'Pristabdyti vaizdo įrašą', play: 'Leisti vaizdo įrašą', replay: 'Leisti vaizdo įrašą iš naujo' },
   lv: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)
   et: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)

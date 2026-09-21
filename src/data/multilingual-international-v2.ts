@@ -536,16 +536,16 @@ export const GUIDANCE_HOME_PATHS: Record<GuidanceLocale, GuidanceHomePaths> = {
     },
     ariaLabel: 'Dvě informační cesty',
   },
-  sl: { // SCAFFOLD(cs)
+  sl: {
     setup: {
-      label: 'Informace o zakládání společností na Tchaj-wanu',
-      href: '/cs/services',
+      label: 'Informacije o ustanavljanju družb na Tajvanu',
+      href: '/sl/services',
     },
     legal: {
-      label: 'Právní informace o Tchaj-wanu',
-      href: '/cs/faq',
+      label: 'Pravne informacije o Tajvanu',
+      href: '/sl/faq',
     },
-    ariaLabel: 'Dvě informační cesty',
+    ariaLabel: 'Dve informacijski poti',
   },
   lt: {
     setup: {

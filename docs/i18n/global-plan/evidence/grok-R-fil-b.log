@@ -1,1 +1,26 @@
 [WO start 2026-09-21 16:47:54]
+Native review of columns 010–018 is in `docs/i18n/global-plan/reviews/native/fil-b.md`. Guidance pack and 001–009 were not re-reviewed.
+
+**Verdict:** 3/5 overall. 012 is the most natural. 014 and 016 are legally careful (stay-in-post clause; PH `lehitima` for 特留分). 013/015 keep the blog voice. 018 is the weakest (spoken register + English leftovers). Attorney Wei Tseng is feminine except generic `abogado` in 013 and `abogadong Taiwanese` in 015.
+
+**11 P1, 37 P2.** Main must-fixes: Japanese Invest Taiwan link in 011; `dayuhang pwersa` in 013; comment/anytime CTAs in 013 and 015; bare `Hindi.` under topic headings in 014/016/017; Japanese nakaguro in 017; `Investment Commission` in 018 vs `Department of Investment Review` elsewhere.
+
+Last 15 lines of the output file:
+
+```
+| 35 | P2 | A | columns-fil/014-taiwan-mandatory-employment-period.md | "Multa sa Paglabag ng Kontrata (違約金)" | *Multa* is read as a statutory fine (罰鍰/罰金); 違約金 is a contractual penalty. | Penal clause / contractual penalty sa paglabag ng kontrata (違約金) |
+| 36 | P2 | C | columns-fil/014-taiwan-mandatory-employment-period.md | "[Pagtatanong para sa konsultasyon](/fil/contact)" | Related-link label says *konsultasyon* (a meeting the Filipino page does not offer); nav is Makipag-ugnayan. also 016/017 `Konsultasyon at katanungan`. | [Makipag-ugnayan](/fil/contact) |
+| 37 | P2 | G | columns-fil/015-taiwan-company-setup-pitch-location.md | "hindi nangangahulugang exempted sa pagsusuri" | English *exempted* left in running Filipino. | hindi nangangahulugang hindi na kailangang suriin ang item na wala sa listahang ito |
+| 38 | P2 | A | columns-fil/015-taiwan-company-setup-pitch-location.md | "sangay (分公司) at sub-sangay (分支機構)" | Coined *sub-sangay*; 分支機構 is a generic branch establishment, not a sub-branch. | sangay ng kompanya (分公司) at tanggapang sangay (分支機構) |
+| 39 | P2 | C | columns-fil/015-taiwan-company-setup-pitch-location.md | "sistemang \"prior inquiry sa business location\" (營業場所預先查詢)" | English calque of the Taipei tool name; a native would name the paunang pagsusuri. | sistemang paunang pagsusuri sa lugar ng negosyo (營業場所預先查詢) |
+| 40 | P2 | B | columns-fil/016-taiwan-inheritance-custody-analysis.md | "Ang karapatan ng asawa sa paghahati sa pagkakaiba ng residual property ba ay kaparehong karapatan" | *Ba* is stranded after a long noun phrase; a native fronts it. | Ang karapatan ba ng asawa sa paghahati sa pagkakaiba ng natitirang ari-arian (剩餘財產差額分配) ay iisa at ang bahagi sa mana? |
+| 41 | P2 | G | columns-fil/016-taiwan-inheritance-custody-analysis.md | "paghahati sa pagkakaiba ng residual property ng mag-asawa" | English *residual property* left in running Filipino; 剩餘財產差額分配 is the Taiwan marital-property claim. Recurs heading §3. | paghahati sa pagkakaiba ng natitirang ari-arian ng mag-asawa (剩餘財產差額分配) |
+| 42 | P2 | C | columns-fil/017-taiwan-logistics-business-setup.md | "siyang paksa ng pahintulot" | 主體 calqued as *paksa* (topic); the company is the permit-holder. also later in 017. | siyang entidad na pinahihintulutan |
+| 43 | P2 | C | columns-fil/018-taiwan-semiconductor-market-entry.md | "Puwede bang magsimula sa distributor at lumipat sa kumpanya sa Taiwan?" | Spoken *Puwede* / *dahil lang* / *kumpanya* on a site that otherwise uses formal *Maaari* and *kompanya*. Recurs FAQ and body. | Maaari bang magsimula sa distributor at lumipat sa kompanya sa Taiwan? |
+| 44 | P2 | G | columns-fil/018-taiwan-semiconductor-market-entry.md | "kaya hindi kailangang magtalaga ng hiwalay na supervisor" | 監察人 is the company supervisor; the Chinese gloss is missing. also later `walang supervisor`. | kaya hindi kailangang magtalaga ng hiwalay na superbisor (監察人) |
+| 45 | P2 | D | columns-fil/018-taiwan-semiconductor-market-entry.md | "paid-in capital na NT$30 milyon" | Rest of this part writes TWD; PH readers also expect *milyon* with TWD. also `NT$100 milyon`. | paid-in capital na TWD 30 milyon |
+| 46 | P2 | E | columns-fil/018-taiwan-semiconductor-market-entry.md | "Mas madali relatibong kumuha ng work permit para sa manager" | “Relatively easier” reads as an easy-approval line on a law-firm page. | Mas madalas na natutugunan ng manager ng subsidiary o sangay ang pamantayan para sa work permit; hindi ito pangako ng pag-apruba. |
+| 47 | P2 | G | columns-fil/018-taiwan-semiconductor-market-entry.md | "maaaring markahan na “to be determined.”" | English leftover on a Filipino intake checklist. | maaaring markahan na “hindi pa napagpapasyahan.” |
+| 48 | P2 | C | columns-fil/018-taiwan-semiconductor-market-entry.md | "ay kumpirmahin kapag kumontak." | *Kumontak* is chatty spelling of contact; the negative lock itself should stay. | ay kumpirmahin kapag kayo ay makipag-ugnayan. |
+```
+=== end code=0 2026-09-21 16:53:58 ===

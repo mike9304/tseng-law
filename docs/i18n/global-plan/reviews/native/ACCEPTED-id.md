@@ -14,4 +14,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `id-a.md` 
 - Number format Indonesian (500.000, 0,5); 'TWD 1.57M' → 'TWD 1,57 juta'; ISO dates in 003 → '29 Mei 2026'; 'Q&A' → 'Tanya Jawab'; 'kelompok pekerjaan' → 'bidang layanan'; blog voice R7.
 
 ## Part b
-Apply every P1/P2 row of `id-b.md` under the same skip rules above.
+Apply every P1/P2 row of `id-b.md` under the same skip rules above. Additional: b#1, b#2 → R3/R7; b#3 skip (mechanical); b#4 → R7b; b#5 disposisi → 'pengalihan/pelepasan harta (處分)'; b#6 → 'hak pemeriksaan (檢查權)'; b#7 one name: 'Departemen Peninjauan Investasi, Kementerian Urusan Ekonomi (經濟部投資審議司)' in 011/013/018; b#8 'subjek' → 'pihak/entitas' (sweep); keep Traditional glosses in 018 as in 010–017; emoji/Contoh)/ZWSP → R6b/R7.

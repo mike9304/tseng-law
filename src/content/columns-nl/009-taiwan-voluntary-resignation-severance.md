@@ -1,0 +1,101 @@
+---
+title: "Uitzonderingen waarin werknemers ondanks eigen ontslag een ontslagvergoeding (資遣費) kunnen ontvangen"
+url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
+lastmod: "2026-09-10"
+date_display: "13 september 2025"
+read_time: "3 minuten leestijd"
+categories:
+  - "Juridische informatie over Taiwan"
+featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg"
+---
+
+# Uitzonderingen waarin werknemers ondanks eigen ontslag een ontslagvergoeding (資遣費) kunnen ontvangen
+
+![Hoofdafbeelding](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
+
+Zoals eerder toegelicht, is het in Taiwan voor werknemers niet licht een ontslagvergoeding (資遣費) te ontvangen.
+
+​
+
+In het bijzonder wanneer werknemers zelf ontslag nemen (自請離職),
+
+kunnen zij geen ontslagvergoeding ontvangen (artikel 18 van de wet op de arbeidsnormen, 勞動基準法),
+
+en dit verschilt van Korea.
+
+​
+
+Er bestaan evenwel **uitzonderingsgevallen**.
+
+![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
+
+In de volgende bijzondere situaties moet de werkgever de werknemer ook dan ontslagvergoeding betalen wanneer deze zelf ontslag neemt (artikel 14 van de wet op de arbeidsnormen, dat artikel 17 overeenkomstig toepast, 勞動基準法第14條):
+
+1. Wanneer de werkgever bij het sluiten van de arbeidsovereenkomst (勞動契約) een onjuiste wilsverklaring (虛偽意思表示) aflegt, zodat de werknemer daarin dwaalt en het gevaar van schade bestaat
+
+(bijvoorbeeld wanneer de werkgever belooft de werknemer na indiensttreding naar een in werkelijkheid niet bestaande buitenlandse vestiging te zenden)
+
+2. Wanneer de werkgever, gezinsleden van de werkgever of vertegenwoordigers van de werkgever (代理人) tegenover de werknemer geweld gebruiken of hem zwaar beledigen (重大侮辱)
+
+3. Wanneer de contractuele arbeid de gezondheid van de werknemer kan schaden, de werknemer de werkgever tot verbetering heeft verzocht en dit zonder uitwerking blijft
+
+4. Wanneer de werkgever, diens vertegenwoordiger of andere werknemers aan een wettelijk bepaalde besmettelijke ziekte (法定傳染病) lijden, besmettingsgevaar voor samenwerkenden bestaat en dit de gezondheid van de werknemer ernstig in gevaar brengt
+
+5. Wanneer de werkgever het contractuele arbeidsloon (工作報酬) niet betaalt of werknemers met stukloon (按件計酬) niet voldoende werk toewijst
+
+6. Wanneer de werkgever de arbeidsovereenkomst of het arbeidsrecht schendt, zodat de rechten van de werknemer in gevaar kunnen komen
+
+​
+
+De frequentste voorbeelden zijn dat de werkgever
+
+het loon (工資) niet tijdig betaalt,
+
+geen overwerkvergoeding (加班費) betaalt
+
+of de werknemer niet bij de arbeidsverzekering (勞保) of de ziekteverzekering (健保) aansluit.
+
+In zulke gevallen moet de werkgever ook dan ontslagvergoeding betalen wanneer de werknemer de arbeidsovereenkomst zelf beëindigt.
+
+​
+
+De wet op de arbeidsnormen (勞動基準法) bepaalt evenwel
+
+dat werknemers die de arbeidsovereenkomst volgens punt 1 of punt 6 hierboven willen beëindigen (bijvoorbeeld wegens ontbrekende verzekeringsaansluiting),
+
+de arbeidsovereenkomst binnen **30 dagen** vanaf de dag waarop zij de situatie kennen,
+
+of (bij punt 6) binnen **30 dagen** vanaf de dag waarop zij het schadegevolg kennen, moeten beëindigen.
+
+Daarom moeten werknemers de termijn nauwkeurig in het oog houden.
+
+​
+
+Met andere woorden:
+
+het recht van Taiwan, of de schuld bij de vennootschap ligt
+
+of bij de werknemer,
+
+erkent aan beide zijden het recht geen ontslagvergoeding te betalen of ontslagvergoeding te vorderen.
+
+Soms ligt schuld aan beide zijden,
+
+en wanneer beide twisten,
+
+kan naargelang wie het eerst met voldoende grond de overeenkomst beëindigt,
+
+de ontslagvergoeding worden geweigerd of gevorderd.
+
+Daarom is in Taiwanees arbeidsgeschillen (勞資糾紛)
+
+het ''**tijdstip**'' zeer belangrijk.
+
+In de meeste gevallen wordt de zijde beschermd die zich vooraf heeft voorbereid.
+
+---
+
+> Zie ook:
+> - [Gids van de procesadvocaat in Taiwan](/ko/taiwan-litigation-lawyer)
+> - [Taiwanese advocaat die Koreaans spreekt](/ko/korean-lawyer-in-taiwan)
+> - [Werkterreinen — arbeid](/ko/services/labor)

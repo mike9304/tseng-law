@@ -1,0 +1,133 @@
+---
+title: "Costituzione di società a Taiwan – parte approfondita 1"
+url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-1"
+lastmod: "2026-09-10"
+date_display: "13 settembre 2025"
+read_time: "4 min di lettura"
+categories:
+  - "Costituzione di società a Taiwan"
+featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg"
+---
+
+# Costituzione di società a Taiwan – parte approfondita 1
+
+![Immagine in evidenza](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
+
+Di recente, numerose persone hanno costituito con successo una società (公司) a Taiwan e hanno ottenuto un visto di lavoro nonché una carta di soggiorno (外僑居留證),
+
+e le domande formulate di frequente al momento della costituzione sono riunite di seguito.
+
+Chi ha letto [**i fondamenti della costituzione di società**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) può in seguito fare riferimento anche a questa parte approfondita più dettagliata.
+
+Le domande e risposte (Q&A) seguenti mirano ad aiutare le persone che valutano di costituire una società a Taiwan. 😊
+
+![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
+
+**1. Intendo costituire una società, ma non ho ancora trovato un indirizzo di iscrizione. La costituzione è comunque possibile?**
+
+Quando uno straniero costituisce una società a Taiwan, deve presentare un piano di investimento (投資計畫書) al Dipartimento di esame degli investimenti del Ministero dell’Economia (經濟部投資審議司) per l’esame.
+
+Il Dipartimento di esame degli investimenti deve verificare se il capitale (資本額) in questione è realmente utilizzato a fini di investimento
+
+e se attori stranieri non introducono fondi con un altro pretesto.
+
+Nella redazione del piano di investimento, non è necessario indicare l’indirizzo esatto della società; l’indicazione della regione basta (esempio: città di Taipei). ​
+
+Quando più tardi il conto preparatorio della società (公司籌備處帳戶) è aperto in banca, numerose banche esaminano però il contratto di locazione (租賃契約) e ispezionano sul posto l’indirizzo della società.
+
+Un’impiegata o un impiegato di una banca taiwanese mi ha detto di persona che
+
+numerosi stranieri scompaiono di recente dopo l’apertura del conto, di modo che l’apertura dei conti è trattata in forma sempre più rigorosa.
+
+Già nella parte fondamentale, una lettrice o un lettore ha indicato che l’apertura del conto era la tappa più difficile; concordo.
+
+Poiché i casi di riciclaggio di capitali (洗錢) sono molto numerosi a Taiwan, l’apertura dei conti bancari diventa sempre più rigorosa.
+
+**Consiglio**：
+
+Poiché l’esame del piano di investimento richiede anche tempo,
+
+conviene redigere il piano di investimento e cercare l’indirizzo di iscrizione della società allo stesso tempo.
+
+Secondo l’articolo 9 dello Statuto dell’investimento degli stranieri (外國人投資條例), l’apporto approvato deve arrivare per intero nel termine fissato dall’autorità competente (核定期限); il termine deve confermarsi nell’atto di approvazione di ciascun affare (nella pratica, è di frequente fissato intorno a 1 anno).
+
+In questo termine, una volta trovato l’indirizzo della società e firmato il contratto di locazione,
+
+resta tempo sufficiente per aprire in banca il conto preparatorio e trasferire il capitale.
+
+​
+
+**2. Si può aprire un conto di società in banca anche senza carta di soggiorno di Taiwan?**
+
+È possibile.
+
+La banca esige in generale una doppia verifica di identità,
+
+e senza carta di soggiorno, si può chiedere presso l’amministrazione dell’immigrazione di Taiwan il «**foglio di dati di base**» (統一證號基本資料表).
+
+Il rilascio è possibile nello stesso giorno,
+
+ma l’amministrazione dell’immigrazione (移民署) è molto frequentata; conviene quindi arrivare presto e ritirare un numero.
+
+​
+
+**3. Ho sentito dire che, nell’esame del piano di investimento, deve indicarsi la formazione e l’esperienza professionale, e mi inquieto che la mia formazione e la mia esperienza non corrispondano al settore della società che intendo costituire.**
+
+La commissione di esame del Ministero dell’Economia esamina di fatto gli antecedenti dell’investitore,
+
+ma l’esame non è eccessivamente rigoroso.
+
+Si possono menzionare esperienze professionali varie, compreso il lavoro a tempo parziale,
+
+ed esporle in dettaglio in modo da poter convincere le persone incaricate dell’esame.
+
+Su questo punto, conviene scambiare in forma approfondita con un’avvocata o un avvocato di Taiwan.
+
+​
+
+**4. Quali punti devono osservarsi quando l’indirizzo di iscrizione della società (per esempio un locale di ristorazione) è preso in locazione?**
+
+La costituzione della società dura circa **3 mesi**, l’ottenimento dell’autorizzazione di lavoro (工作許可) e della carta di soggiorno circa **1 mese**,
+
+anche si deve fissare l’inizio del contratto il più tardi possibile.
+
+Inoltre, nei contratti di locazione di locali commerciali a Taiwan, il locatore concede di frequente al locatario un «**periodo di allestimento**» (裝潢期間).
+
+Si tratta di un periodo esente da canone; si può negoziare.
+
+Non è facile per uno straniero prendere in locazione un locale commerciale, e il deposito cauzionale (押金) a Taiwan è piuttosto basso (di regola 2 mesi), di modo che la protezione del locatore è limitata;
+
+i locatori esitano quindi a locare a stranieri.
+
+È per questo che raccomando di cercare il locale di esercizio presto.
+
+Se la negoziazione con il locatore non si svolge in forma fluida,
+
+si può, se del caso, proporre l’autenticazione del contratto di locazione (公證) o un deposito cauzionale supplementare.
+
+​
+
+**5. Si può, nella costituzione della società, prendere in locazione un locale commerciale di uffici?**
+
+Ciò dipende dai rami di attività (營業項目) della società.
+
+Es.) Se il ramo di attività è la ristorazione e si intende prendere in locazione un locale commerciale di uffici, l’apertura del conto bancario sarà molto difficile.
+
+Come già indicato, la banca esamina il contratto di locazione e ispeziona sul posto l’indirizzo della società.
+
+Inoltre, nell’iscrizione finale della società, il municipio (市政府) esige anche che l’indirizzo iscritto si situi in una zona dove l’esercizio di un ristorante è autorizzato;
+
+se si tratta di un locale commerciale di uffici, l’iscrizione della società (公司登記) non è allora possibile.
+
+Es.) Se si tratta di rami di attività possibili in un locale commerciale di uffici, quali la pubblicità o il commercio all’ingrosso, la società può essere costituita in un locale commerciale di uffici. Prima della conclusione del contratto di locazione
+
+conviene verificarlo in anticipo.
+
+*Se ha bisogno di aiuto o di uno scambio sul diritto di Taiwan, lasci un commento o prenda contatto.*
+
+---
+
+> Vedere anche:
+> - [Guida d’insieme della costituzione di società a Taiwan — procedure, costi e forme giuridiche](/ko/guides/taiwan-company-setup)
+> - [Avvocata taiwanese che parla coreano](/ko/korean-lawyer-in-taiwan)
+> - [Guida dell’avvocata per la costituzione di persone giuridiche e di società a Taiwan](/ko/taiwan-company-setup-lawyer)

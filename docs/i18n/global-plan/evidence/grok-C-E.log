@@ -1,0 +1,140 @@
+[WO-C-E 시작 Mon Sep 21 10:28:28 KST 2026]
+[WO-C-E 완료 Mon Sep 21 11:00:46 KST 2026]
+agent: grok
+worktree: /Users/son7/Projects/tseng-law-columns-c-20260920
+git: no add/commit/push (per WO)
+
+## 언어별 파일 수
+- columns-cs: 18
+- columns-hu: 18
+- columns-ro: 18
+- [변호사 검수 필요]: 0
+
+## §5 명령 출력 그대로
+
+### git status --short | wc -l
+      56
+
+### node scripts/check-column-translation.mjs --dir src/content/columns-cs --lang cs 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-columns-c-20260920/src/content/columns-cs/018-taiwan-semiconductor-market-entry.md  lang=cs
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=28
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+### node scripts/check-column-translation.mjs --dir src/content/columns-hu --lang hu 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-columns-c-20260920/src/content/columns-hu/018-taiwan-semiconductor-market-entry.md  lang=hu
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=36
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+### node scripts/check-column-translation.mjs --dir src/content/columns-ro --lang ro 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-columns-c-20260920/src/content/columns-ro/018-taiwan-semiconductor-market-entry.md  lang=ro
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=61
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+### grep -rn "\[변호사 검수 필요\]" src/content/columns-cs src/content/columns-hu src/content/columns-ro | wc -l
+       0
+
+### ls src/content/columns-cs/*.md | wc -l; ls src/content/columns-hu/*.md | wc -l; ls src/content/columns-ro/*.md | wc -l
+      18
+      18
+      18
+
+git status --short = 56 = 54 column md + WO-C-E.txt + this log. No extra writes.
+
+## 용어 선택에서 망설인 지점
+1. date_display — DATE_MONTH_NAMES에 září / szeptember / septembrie가 없음. 월 이름을 쓰면 월 숫자 9가 유실되어 numbers FAIL. cs/ro는 `13/9/2025`(아랍 선례), hu는 ISO `2025-09-13`. 011=`4/2/2026`·`2026-02-04`, 018=`17/9/2026`·`2026-09-17`.
+2. 3분의 1 — 낱말 분수(třetina / egyharmad / o treime)는 렉시콘이 비어 있어도 숫자 가방에서 1이 빠질 수 있어 `1/3`로 통일 (WO: 숫자를 낱말로 풀지 말 것). PL과 동형. FR의 « un tiers »는 fr 렉시콘이 받아 줌.
+3. 015 10여 — 초역 cs `asi deset`는 숫자 10 누락 FAIL. PL/HU/RO처럼 `asi 10`으로 고침. WO « 낱말로 풀지 말 것 »과도 맞음. FR `environ dix`는 fr 수사 렉시콘 전제.
+4. 한국 기업 — FR/DE/PL 선례대로 외국 기업/개인사업자로 일반화. Česká republika / Magyarország / România 삽입 없음. 대만–한국 소득세협정은 원본 법률사실이므로 Tchaj-wan–Korea / Tajvan–Korea / Taiwan–Coreea 유지.
+5. 직함 — cs **Advokátka** (여성형), hu **Ügyvéd** (문법성 없음), ro **Avocata**. 014 ro 서명선은 FR 동형 `Wei Tseng (曾雋崴), avocată pe Taiwan`.
+6. 금지 어간 — cs `garantujeme`, hu `garantáljuk`, ro `garantăm`은 부정문에도 FAIL. 결과 미약속은 neslibuje / nem ígér / nu promite 로만 씀. 24/7·무료상담·해당언어 상담·통역 0.
+7. 국적 부분문자열 — cs `český`는 경계 없이 českých 등도 잡힘. hu `magyar`는 단어경계(`magyarázat` 허용). ro `român`은 România/română/românesc 전부 매칭. 세 언어 모두 해당 어간 회피.
+8. 천단위 — cs/hu/ro 모두 점(TWD 500.000). 만/억은 FR/PL 전개값을 복사.
+9. 한자 병기 — 번체 괄호, FR과 동일 위치. 工作許可, 外僑居留證, 資遣費, 勞動契約 등.
+10. 링크 — /ko/contact → /{lang}/contact, /ko/columns… → /{lang}/columns…. /ko/services/investment·labor·family 및 /ko/lawyers, /ko/guides, /ko/korean-lawyer-in-taiwan 은 원본 유지.
+
+## 미해결
+- numbers WARN(수사미해석 제N항/제3자/1심/제2종 등): 세 언어 모두 FAIL 아님. 체커에 cs/hu/ro ordinal spec이 없음. 숫자 가방은 sourceCount=targetCount.
+- 원어민 문장 품질·광고규정 의미 검수는 기계 게이트(이 체커)만 통과. 독립 원어민 리뷰 없음.
+- git add/commit/push 하지 않음 (WO).
+WO-C-E is done. All three guidance locales pass the column checker. Git was not touched.
+
+**Files:** `columns-cs` 18 · `columns-hu` 18 · `columns-ro` 18
+**Marker `[변호사 검수 필요]`:** 0
+**Checker:** `summary PASS 18/18 files` for cs, hu, and ro
+
+§5 tails (verbatim): see above.
+
+`56` is 54 new column files + `WO-C-E.txt` + the evidence log. Nothing else was written.
+
+French/Polish were the structural templates (same blocks, lists, tables, ZWSP). Korean was the meaning source. Consultation-language lock held: no cs/hu/ro consult, interpreter, 24/7, free-consult, or result-guarantee wording.
+
+Hesitations: slash/ISO dates because month names are absent from DATE_MONTH_NAMES; `1/3` instead of spelled fractions; 「한국 기업」 generalized like FR/DE; never use garantujeme/garantáljuk/garantăm even in negation; CS 015 `asi 10` after `asi deset` failed numbers. Remaining `numbers` WARNs are Korean ordinals (`제1항`, `제3자`, `1심`) — these three langs have no ordinal matcher; counts still match. No native-speaker review.
+=== WO-C-E 종료 code=0 Mon Sep 21 11:00:46 KST 2026 ===
+WO-C-E 완료. 세 언어 모두 체커 **PASS 18/18**, 마커 0, 파일 각 18. git add/commit/push는 하지 않았습니다.
+
+**파일 수:** `columns-cs` 18 · `columns-hu` 18 · `columns-ro` 18
+
+**§5 요지** (`git status --short | wc -l` = 56 = 칼럼 54 + WO-C-E.txt + 이 로그):
+
+- cs `summary  PASS  18/18 files`
+- hu `summary  PASS  18/18 files`
+- ro `summary  PASS  18/18 files`
+- `[변호사 검수 필요]` 0
+
+전문·명령 출력은 `docs/i18n/global-plan/evidence/grok-C-E.log`에 있습니다.
+
+**용어에서 가른 지점:** 체커 월 이름 표에 září/szeptember/septembrie가 없어 날짜는 cs/ro `13/9/2025`, hu ISO `2025-09-13`. 분수는 `1/3`. 직함은 cs **advokátka**, hu **ügyvéd**, ro **avocata**. `garantujeme`/`garantáljuk`/`garantăm`은 부정문에도 쓰지 않음.
+
+**미해결:** `제N항`/`제3자`/`1심` 수사미해석은 WARN만(FAIL 아님). 원어민 검수는 없음.
+=== WO-C-E 종료 code=0 Mon Sep 21 11:01:26 KST 2026 ===

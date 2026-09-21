@@ -1,0 +1,212 @@
+WO-F-ru — Russian native-review fix lane (Opus 5), 2026-09-21
+Worktree: /Users/son7/Projects/tseng-law-fix-d-20260921 (no git add/commit/push)
+Scope written: src/content/columns-ru/*.md (18), src/data/international-guidance-western.ts (ru block),
+  -team.ts / -offices.ts / -answers.ts (ru blocks), src/data/international-inquiry-copy.ts (ru),
+  src/lib/__tests__/guidance-zh-hans-ms-ru-tr-content.test.ts (one ru string pin), this log.
+src/lib/llms-txt.ts GUIDANCE_LLMS_NOTICES.ru: reviewed, no change needed (already natural, no English chrome).
+
+================================================================
+1. ROWS APPLIED
+================================================================
+ru-supervisor.md (guidance pack)
+  P1 #1  attorney name -> Latin «Wei Tseng (曾雋崴)» everywhere in the pack (home.columnsReviewLabel,
+         about.sections[1].p0, guidanceTeamCopy.keyFactsHeading, guidanceAnswers.ru.lawyers). Cyrillic
+         «Вэй Цзэн» now 0 occurrences repo-wide.
+  P2 #2  city names take the preposition (see "deviations", row 2 below).
+  P2 #3  lawyers.description + guidanceTeamCopy.description -> «Профили адвокатов, операционного
+         менеджера и партнёра-бухгалтера Hovering.» (also guidanceAnswers.lawyers)
+  P2 #4  representativeTitle «Управляющий адвокат», partnerTitle «Партнёр-бухгалтер (CPA)»,
+         introLabel «О себе»; roles.tseng-junwei / roles.son-jungmin aligned.
+  P2 #5  nav.privacy «Приватность»->«Данные», nav.disclaimer «Оговорки»->«Оговорка»
+         (supervisor fallback: «Конфиденциальность» 18 ch / «Отказ от ответственности» 24 ch both
+         break the ≤14-char nav test).
+  P2 #6  «Китайское имя 昊鼎» -> «Китайское название 昊鼎»
+  P2 #7  «назовите дату на письме рано» -> «укажите дату письма как можно раньше» (+ contact page)
+  P2 #8  faq.intro -> «Ответы ниже даны на уровне общих сведений.»
+  P2 #9  «ответа на Ваше положение» -> «ответа для Вашей ситуации» (+ about «по Вашему положению»)
+  P2 #10 privacy calques: «Номер получения»->«Номер обращения» (item, heading, body, inquiry
+         receiptIdLabel), «Содержание Вашей отправки»/«Ваша отправка»->«отправленные Вами данные»,
+         «путь связи»->«способ связи»
+  P2 #11 about.intro -> «Адвокаты ведут работу от консультирования компаний до судебных разбирательств.»
+  P3 #12/#13 checked, no change (nav «Материалы» consistent; capitalised Вы kept — and extended to the
+         columns, which were lowercase; 21 instances raised, see sweep S9)
+
+ru-a.md — applied: a#1 a#2 a#3 a#4 a#5 a#6 a#7 a#8 a#9 a#10 a#11 a#12 a#13 a#14 a#15 a#16 a#17
+  a#19 a#20 a#21 a#22 a#23 a#24 a#25 a#26 a#27 a#28 a#29 a#30 a#31 a#32 a#33 a#34 a#35 a#36 a#37
+  a#38 a#39 a#40 a#41 a#42 a#43 a#44 a#45 a#46 a#47 a#48 a#50 a#51 a#52 a#54 a#55 a#56 a#57 a#58
+  a#59 a#60 a#61 a#62 a#63 a#64 a#65 a#67 a#68 a#69   (a#66 partly — see §3)
+ru-b.md — applied: b#2 b#3 b#4 b#5 b#6 b#7 b#8 b#10 b#11 b#12 b#13 b#14 b#15 b#16 b#17 b#18 b#19
+  b#20 b#21 b#22 b#23 b#24 b#26 b#27 b#28 b#29 b#30 b#31 b#32 b#33 b#34 b#35 b#36 b#37 b#38 b#39
+  b#40 b#41 b#42 b#43 b#44(register half) b#45 b#46 b#47 b#48 b#49 b#50
+
+RULEBOOK-FIX rules
+  R2  Korea de-centred: 001 §1/§5 DTA passages now carry the English "country-specific note" framing;
+      004 §Intro "Даже когда корейская материнская компания" -> "материнская компания, находящаяся за
+      пределами Тайваня" + "Корея далее в этой статье — лишь один обозначенный пример";
+      005 Q1–Q2 remitter/bank generalised to "банк в стране инвестора" with Korea as labelled example
+      and a "правила валютного контроля … в стране инвестора проверять отдельно" line; 005 Q5 hiring FAQ
+      -> «нанимать иностранцев»; 006 Korea block prefixed «Для сравнения: в некоторых странах, например
+      в Корее…»; 007 family/relocation examples neutralised (no claim about the reader's own law);
+      008 + 009 «В отличие от Кореи» -> «в отличие от некоторых других правопорядков (например,
+      корейского)»; 001 «языки ведущего адвоката» -> «рабочие языки адвокатов».
+      010's Korean-student references kept: they are the facts of the cited case and the EN source keeps them.
+  R3  advertising language: 003 Q17 «суды … назначают примерно 3 месяца» / «обычно назначают 4/6 месяцев»
+      -> «в отдельных приговорах назначали около …; типичного или гарантированного исхода нет»;
+      003 «условное осуждение … в тюрьму идти не придётся» -> «В некоторых делах возможно условное
+      осуждение (緩刑); это не обещание избежать лишения свободы»; 003 «возмещение возможно более полное»
+      -> «добивался возмещения, которое подтверждают факты и доказательства»; 008 anecdote «смог
+      получить высокое выходное пособие … такой удачи не было» -> «смог подтвердить своё право на
+      выходное пособие по закону … другим этого сделать не удалось»; blog CTAs in 003/005/013/015
+      -> «направьте краткое изложение через страницу «Контакты»; срок ответа не обещается».
+      Team-bio TWD 1,570,000 fact kept, reformatted «1,57 млн TWD».
+  R4  gender: pack qualificationSentence -> «уполномочена вести адвокатскую деятельность на Тайване и
+      возглавляет {firm}»; guidanceAnswers.lawyers likewise; keyFactsHeading feminine-safe.
+      Column first-person narration verified feminine corpus-wide (я вела / я выступала / я хотела;
+      masculine 1st-person past forms: 0 matches). Bylines «**Адвокат Wei Tseng (曾雋崴)**» kept per
+      ACCEPTED-ru (common gender); «адвокат Тайваня» -> «адвокат на Тайване» (3).
+  R5  English chrome: fullProfileLabel «Полный профиль (на английском)»; «Senior Paralegal» ->
+      «Старший помощник адвоката» (2); 003/007 titles+H1 «Q&A» -> «Вопросы и ответы»; 005 «(Q&A)»
+      dropped; 003 source label «FAQ полиции» -> «Часто задаваемые вопросы полиции»; 015 «**Q.**» ->
+      «**Вопрос.**». OUR TEAM / OFFICES were already Russian.
+  R6/R6b typography: «**Совет**：» (fullwidth colon) -> «**Совет:**»; French spaced colons in 005 ->
+      Russian colons; guillemets already «»; no straight quotes outside YAML; fullwidth ：，（）、
+      in running Russian text: 0 remaining.
+  R7  blog register: 😊 removed; «Пример)» -> «Например:» (2); «оставьте комментарий»/«оставьте их в
+      комментариях» removed (003, 013); 008 title/H1 «получить??» -> «получить?»; 009 ««**время**»»
+      -> «время имеет решающее значение».
+  R7b FAQ-answer dumps made self-standing while keeping heading count: 011 §1, 014 §1, 016 §3, 016 §7,
+      017 §1, 017 §3, 017 §4.
+  R8  glossary sweeps — see §2.
+  R9  003: «119 (на Тайване — скорая помощь и пожарная охрана)», «110 (полиция Тайваня)»,
+      «112 (экстренный вызов с мобильного телефона на Тайване)».
+  R10 register unified: formal Вы/Ваш capitalised in all 18 columns (was lowercase), matching the pack.
+
+================================================================
+2. SYSTEMIC SWEEPS (pattern -> instances changed)
+================================================================
+S1  «по принципу» (grundsätzlich) -> «по общему правилу»                          17  (16 + 1 capitalised)
+S1b «по принципу статьи 99» -> «согласно статье 99»                                1
+S2  digit third party: «3 лиц(а/ам/о) (第三人)», «со стороны 3 лица», «3-го лица»
+    -> «треть{их,ему,ем,е} лиц…»                                                  14
+S3  court-level digits «1/2 инстанци…» -> «перв{ой,ая}/втор{ой,ая} инстанци…»     22
+S4  «срок* службы» (最低服務年限) -> «срок* работы»                                   30
+S5  «промысел/промысл*» (Gewerbe) -> «деятельность / предприятие» (006, 017, 018) 41  (0 left)
+S6  «встречное предоставление» (Gegenleistung) -> «вознаграждение»                14
+S7  «налог* с оборота» (營業稅) -> «налог* на добавленную стоимость»                 13
+S8  «карт* проживания» (外僑居留證) -> «вид на жительство / ARC», agreement fixed     13
+S9  formal address «вы/вас/вам/ваш*» -> «Вы/Вас/Вам/Ваш*»                         21
+S10 «как есть» (그대로/als solches) -> «механически / без изменений»                  7
+S11 «(следует) судить» (beurteilen) -> «оценивать / определять / считать»         10
+S12 «волеизъявление об уходе» (Willenserklärung) -> «заявление об увольнении
+    по собственному желанию»                                                       7
+S13 «срочное лишение свободы» -> «лишение свободы на (определённый) срок»;
+    «арест» (拘役) -> «краткосрочное лишение свободы»                                4
+S14 «разряд» (наследственная очередь) -> «очередь / очерёдность» (016)             9
+S15 «экономическ* собственник*» -> «собственник*» (016)                            3
+S16 «транспортная комиссия» (運送承攬) -> «транспортная экспедиция»; «транспортный
+    комиссионер» -> «транспортный экспедитор» (017)                                8
+S17 bare 營業用車輛牌照 -> «коммерческие номерные знаки (營業用車輛牌照)» (017)              7
+S18 戶籍 «реестр/регистрация семейного состояния», «домовая регистрация»
+    -> «регистрация по месту жительства (戶籍)» (016, 017, pack)                     4
+S19 «изготовитель происхождения» (原製造者) -> «первоначальный изготовитель» (011)    3
+S20 ROC years glossed: 112年 -> «112 года Китайской Республики (2023…)» (007, 2),
+    109年 -> «109 год Китайской Республики (2020…)» (010, 1)                        3
+S21 firm self-reference (本所/事務所): «бюро» (012, 2), «Настоящая контора» (018, 1)
+    -> «фирма»                                                                     3
+S22 «Департамент рассмотрения инвестиций Министерства экономики (經濟部投資審議司)»
+    made the single name (013 «Комиссия Министерства экономики» removed)           1
+(«контора» in the 001/004 permanent-establishment lists was KEPT: it is the wording of
+ the Russian text of income-tax treaties for a PE «место управления, отделение, контору».)
+
+================================================================
+3. ROWS SKIPPED / PARTIALLY APPLIED — with reason
+================================================================
+- a#49, b#9, b#44(number half), ACCEPTED "Number format: 500 000 / 1 579 589":
+  NOT applied in the columns. scripts/check-column-translation.mjs cannot parse space-grouped
+  thousands — NUMBER_THOUSAND_STYLE.ru = 'dot' and the grouped-token regexes only accept [.,],
+  so «1 579 589» tokenises as 1, 579, 589. Proven empirically: converting 010 to space thousands
+  produced `numbers FAIL missing from translation (11): 1000000x2, 1570000x8, 1579589` and
+  `summary FAIL 17/18`. Per the WO ("prefer the form the checker accepts"), the existing dot form
+  stays in all 18 columns. In the guidance pack (not checker-covered) the supervisor's format WAS
+  applied: «добилась решения первой инстанции на 1,57 млн TWD».
+  -> Supervisor action if the space form is wanted: teach the checker a space/NBSP thousands group
+     for ru (and the other space-grouping locales).
+- a#53 (ISO dates «2026-05-29» / «2026-07-01» in 003 §body): NOT applied, checker-blocked.
+  The checker's month lexicon has января…декабря but is MISSING «мая», so «29 мая 2026 г.» loses the
+  month token and yields `numbers FAIL missing from translation (1): 5`. («1 июля 2026 г.» parses
+  fine.) Rather than mix one Russian and one ISO date in the same sentence, both were left ISO.
+  -> Supervisor action: add `мая: 5` to the month lexicon, then this row is a one-line change.
+- a#18 (percent-encoded Hangul related-reading link in 005): skipped per ACCEPTED-ru (R1, already
+  remapped). Verified: `hangul PASS`, no Hangul outside `url` in any ru column.
+- b#25 (Invest Taiwan `lang=jpn`): left as-is per the WO's known-checker-constraint note (link parity;
+  supervisor fixes centrally).
+- b#1 (byline «**Адвокат Wei Tseng (曾雋崴)**» -> «Wei Tseng (曾雋崴), адвокат на Тайване»): not applied
+  per ACCEPTED-ru — «адвокат» is common gender and the supervisor chose to keep the byline; only verbs
+  and participles around it were made feminine. Same for a#3's first-person line in 008.
+- a#66 (retitle 008 to «Трудовое право Тайваня: когда выплачивается выходное пособие (資遣費)»):
+  only the «??» -> «?» half applied. The English source title IS a question ("Taiwan Labor Law: Is
+  Severance Pay Hard to Get in Taiwan?"), and the WO's hard rule is to keep the meaning of the English
+  source, so the question form was preserved instead of replacing it with a statement.
+- Rows about /ko/ links, "Korean-speaking lawyer" labels, Hangul `url:` frontmatter: skipped per
+  ACCEPTED-ru (already done mechanically in R1). New labels re-read and left as they are.
+
+================================================================
+4. DEVIATIONS FROM THE REVIEWERS / SUPERVISOR (deliberate, listed for review)
+================================================================
+1) sup#2 / a#25 wording. «офисы в Тайбэе (臺北), Гаосюне (高雄)…» breaks
+   src/data/__tests__/guidance-office-facts-sync.test.ts: it asserts every office-enumerating guidance
+   string literally contains each `guidanceOfficeCopy.ru.officeTitles` value, and «Тайбэй» is not a
+   substring of «Тайбэе» (the other three are substrings of their prepositional forms). Since that test
+   is cross-locale infrastructure and the WO limits test edits to ru string pins, the three enumerating
+   strings use the equally idiomatic «офисы в городах Тайбэй (臺北), Гаосюн (高雄), Тайчжун (臺中) и
+   Пиндун (屏東)» — preposition present, names correctly undeclined after «в городах». The single-office
+   sentences DO take the prepositional case as the supervisor asked: «Офис в Гаосюне…», «Офис в
+   Тайчжуне…», «Офис в Пиндуне…», «Офис в Корее».
+2) a#2 / ACCEPTED preferred «руководит фирмой». Used «возглавляет {firm}» because the slot is filled
+   with the indeclinable «Hovering International Law Firm»: «возглавляет X» (accusative) is clean,
+   «руководит X» needs an instrumental the name cannot show. Gender-neutral either way.
+3) a#19 suggested naming Russia as the second country («например с Россией и Тайванем»). Not used —
+   R2d / ACCEPTED forbid statements tied to the reader's own country. Written as «(например, с Тайванем
+   и другим государством)».
+4) a#48 «налог с оборота» -> НДС applied, but 營業稅 is kept glossed in Chinese at each first mention so
+   the Taiwanese term is still traceable.
+5) 營業執照 in 017 left as «лицензия на эксплуатацию (營業執照)». R8's generic gloss is "business
+   registration certificate", but in the Highway-Act context this is the transport operator's operating
+   licence, and the part-b reviewer (who read 017 closely) did not flag it. Flagging for the supervisor
+   rather than changing it unilaterally.
+6) b#48 chose the reviewer's second option (rewrite, not delete) for 018's orphaned sentence, so the
+   paragraph's block count is untouched: «Вышеизложенное — общее сравнение форм присутствия на Тайване,
+   а не консультация по конкретной сделке.»
+
+Test touched (allowed by the WO): src/lib/__tests__/guidance-zh-hans-ms-ru-tr-content.test.ts
+  `/адвокат Вэй Цзэн/i` -> `/адвокат(?:ом)? Wei Tseng \(曾雋崴\)/i` (+ the it() title), because the pinned
+  Russian string was the P1 row itself. No other test changed.
+
+================================================================
+5. §VERIFY OUTPUT (verbatim)
+================================================================
+$ node scripts/check-column-translation.mjs --dir src/content/columns-ru --lang ru 2>&1 | tail -8
+forbidden      PASS   
+hanzi          PASS   han=39
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "[변호사 검수 필요]" src/content/columns-ru src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      26
+
+Pass criteria: checker summary PASS 18/18 — yes; markers 0 — yes; TSC_OK — yes; tests 2770 passed — yes.
+(git status 26 = 24 modified files in scope + .tmp-ru/ helper dir + the WO file itself, both untracked.)

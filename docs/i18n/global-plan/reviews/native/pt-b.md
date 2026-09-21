@@ -1,16 +1,16 @@
 # Portuguese native review — part b (pt)
-reviewer: Grok 4.6 · date: 2026-09-21 · scope: columns-pt/010-taiwan-gym-injury-lawsuit.md, 011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md, 012-taiwan-overtaking-accident-liability.md (013–018 pending)
+reviewer: Grok 4.6 · date: 2026-09-21 · scope: columns-pt/010-taiwan-gym-injury-lawsuit.md, 011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md, 012-taiwan-overtaking-accident-liability.md, 013-taiwan-company-establishment-advanced-1.md, 014-taiwan-mandatory-employment-period.md, 015-taiwan-company-setup-pitch-location.md (016–018 pending)
 
 ## Verdict
-naturalness (1 = machine, 5 = native professional): N/A for guidance pack (out of scope), 2/5 so far for columns 010–012
-variety used: European Portuguese (pt_PT) as the consistent target — pessoa coletiva, a contar de, « »; 010–012 are French legal prose in Portuguese clothes. Incremental write: 010–012 only.
+naturalness (1 = machine, 5 = native professional): N/A for guidance pack (out of scope), 2/5 so far for columns 010–015
+variety used: European Portuguese (pt_PT) as the consistent target — pessoa coletiva, a contar de, correio eletrónico, « »; 010–012 and 014 are French legal prose; 013 and 015 keep a Korean-blog register (emoji, empty lines, “Ex.)”). Incremental write: 010–015.
 systemic patterns (max 6, each one line, with 1 example quote):
 - French legal lexicon: `"postos de indemnização"`, `"O só facto"`, `"Em contrapartida"` for “by contrast”, `"persiguições … engajadas"`.
-- French verbs that reverse or blur meaning: `"sobrepostas"` (overwritten), `"assegurados"` (secured), `"aproximação"` (cross-check).
-- Digit-words left as numerals: `"2 veículos"`, `"buzinar 2 vezes"`.
-- Gender of attorney Wei Tseng: feminine in 010 (`Fui advogada`) and 011 (`Advogada Wei Tseng`). 012 has no byline.
+- French verbs that reverse meaning: `"dispensar uma formação"` (to provide, not to waive), `"sobrepostas"` (overwritten), `"assegurados"` (secured).
+- Digit-words left as numerals: `"2 veículos"`, `"as 4 perguntas"`, `"lugar 1"`.
+- Blog/CTA leftovers in 013–015: emoji, `"deixe um comentário"`, `"a qualquer momento a um advogado"`.
+- Gender of attorney Wei Tseng: feminine in 010 (`Fui advogada`), 011, 014. Masculine CTA in 015 (`um advogado de Taiwan`). 012–013 have no byline for her.
 - 011 correctly generalizes `"As marcas estrangeiras"` (English already dropped Korea). `lang=jpn` on Invest Taiwan is a leftover.
-- No file in this batch is native professional Portuguese.
 
 ## Findings
 | # | sev | cat | file | quote (≤120 chars, verbatim) | problem (English, one line) | suggested Portuguese rewrite |
@@ -25,3 +25,28 @@ systemic patterns (max 6, each one line, with 1 example quote):
 | 8 | P1 | G | columns-pt/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "lang=jpn" | Portuguese page links Invest Taiwan in Japanese. | Keep the same path family but `lang=por` (or `eng` if Portuguese is unavailable). |
 | 9 | P1 | A | columns-pt/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "Em contrapartida, se os dados do PIF estiverem incompletos" | French en contrepartie (“by contrast”) ≠ Portuguese “contrapartida” (consideration). also 011 later | "Pelo contrário, se os dados do PIF estiverem incompletos" |
 | 10 | P1 | A | columns-pt/012-taiwan-overtaking-accident-liability.md | "Esta ordem de sinais e de cessão na mesma via" | “Cessão” is assignment of rights, not yielding the lane. also later “sinal claro de cessão” | "Esta ordem de sinais e de cedência de passagem na mesma via" |
+| 11 | P1 | A | columns-pt/014-taiwan-mandatory-employment-period.md | "se o empregador dispensar uma formação técnica especializada" | Portuguese “dispensar” means to waive; English is “provides training”. also throughout 014 | "se o empregador ministrar uma formação técnica especializada" |
+| 12 | P1 | A | columns-pt/014-taiwan-mandatory-employment-period.md | "não uma norma que declara de entrada válidos ou nulos todos os pactos" | French d’emblée (“from the outset”) ≠ “de entrada” (of entry). also later in 014 | "não uma norma que declare à partida válidos ou nulos todos os pactos" |
+| 13 | P1 | A | columns-pt/014-taiwan-mandatory-employment-period.md | "de convencer uma restituição ou de responder a um litígio" | English is “entering into a repayment agreement”; “convencer” does not take that object. | "de aceder a um acordo de restituição ou de responder a um litígio" |
+| 14 | P1 | A | columns-pt/013-taiwan-company-establishment-advanced-1.md | "«**período de arranjo**» (裝潢期間)" | 裝潢期間 is a fit-out/rent-free fitting period; “arranjo” means arrangement. | "«período de obras / de instalação» (裝潢期間)" |
+| 15 | P1 | G | columns-pt/013-taiwan-company-establishment-advanced-1.md | "As perguntas e respostas (Q&A) seguintes" | English “Q&A” left in the heading. | "As perguntas e respostas seguintes" |
+| 16 | P1 | E | columns-pt/013-taiwan-company-establishment-advanced-1.md | "deixe um comentário ou tome contacto." | Blog CTA; this site has no comments. English also said “at any time”. | "escreva através da página Contacto; um prazo de resposta não é prometido." |
+| 17 | P1 | E | columns-pt/015-taiwan-company-setup-pitch-location.md | "pode dirigir-se a qualquer momento a um advogado de Taiwan." | Reads as always-on availability; no reply-time promise should stay implicit either. | "pode escrever através da página Contacto; um prazo de resposta não é prometido." |
+| 18 | P1 | F | columns-pt/015-taiwan-company-setup-pitch-location.md | "a um advogado de Taiwan." | Masculine title for a generic referral on a site whose lead attorney is a woman. also “ou de um advogado” earlier in 015 | "a uma advogada ou a um advogado de Taiwan" / prefer the Contact page |
+| 19 | P2 | A | columns-pt/010-taiwan-gym-injury-lawsuit.md | "postos de indemnização (損害賠償)" | French postes; Portuguese says rubricas or categorias de danos. also §4 “postos de prejuízo” | "categorias de indemnização (損害賠償)" |
+| 20 | P2 | A | columns-pt/010-taiwan-gym-injury-lawsuit.md | "uma interpelação com aviso de conteúdo (存證信函)" | 存證信函 is a content-certified letter, not a parliamentary interpellation. | "uma carta com conteúdo certificado (存證信函)" |
+| 21 | P2 | A | columns-pt/010-taiwan-gym-injury-lawsuit.md | "os medicamentos e a reeducação" | Medical rehabilitation is “reabilitação”; “reeducação” reads as penal re-education. | "os medicamentos e a reabilitação" |
+| 22 | P2 | D | columns-pt/010-taiwan-gym-injury-lawsuit.md | "1,57 milhão TWD de indemnização" | 1,57 takes the plural; also missing “de”. throughout 010 headlines | "1,57 milhões de TWD de indemnização" |
+| 23 | P2 | D | columns-pt/010-taiwan-gym-injury-lawsuit.md | "assunto de consumo número 7 do ano 109" | ROC year 109 is unexplained for a Portugal/Brazil reader. | "processo de consumo n.º 7 do ano 109 (2020)" |
+| 24 | P2 | C | columns-pt/010-taiwan-gym-injury-lawsuit.md | "O só facto de o acidente ter tido lugar" | French Le seul fait; a native would write “o mero facto”. throughout 010, 014 | "O mero facto de o acidente ter ocorrido" |
+| 25 | P2 | A | columns-pt/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "Departamento de Exame dos Investimentos do Ministério da Economia" | French examen; official name is Department of Investment Review. also 013, 014 no, 013 and later | "Departamento de Revisão dos Investimentos do Ministério da Economia (經濟部投資審議司)" |
+| 26 | P2 | B | columns-pt/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "Não é sempre necessário constituí-la." | Dangling “-la”: no feminine noun in the preceding sentence of the section. | "Não é sempre necessário constituir uma filial ou uma sucursal." |
+| 27 | P2 | A | columns-pt/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "a forma farmacêutica (劑型)" | 劑型 on a cosmetic is the dosage/presentation form, not a medicinal “forma farmacêutica”. | "a forma de apresentação (劑型)" |
+| 28 | P2 | C | columns-pt/012-taiwan-overtaking-accident-liability.md | "de se ter engajado na via oposta" | French engagé / Brazilian engajar; European Portuguese says “entrar” or “lançar-se”. | "de se ter lançado na via oposta" |
+| 29 | P2 | B | columns-pt/012-taiwan-overtaking-accident-liability.md | "quando 2 veículos ou mais circulam um atrás do outro" | Digit for a small number in running prose. also “buzinar 2 vezes”, “as 4 perguntas” in 014 | "quando dois veículos ou mais circulam um atrás do outro" |
+| 30 | P2 | E | columns-pt/013-taiwan-company-establishment-advanced-1.md | "numerosas pessoas constituíram com êxito uma sociedade" | Success-story opener; attorney advertising must not read as a results claim. | "muitas pessoas constituíram uma sociedade em Taiwan e obtiveram um visto de trabalho" |
+| 31 | P2 | E | columns-pt/013-taiwan-company-establishment-advanced-1.md | "o exame não é excessivamente estrito." | Reads as an easy-approval assurance. | "o exame não se limita a um único critério formal; cada pedido é apreciado pelos seus documentos" |
+| 32 | P2 | C | columns-pt/013-taiwan-company-establishment-advanced-1.md | "As perguntas e respostas (Q&A) seguintes visam ajudar as pessoas que ponderam constituir uma sociedade em Taiwan. 😊" | Emoji and first-person blog register on a law-firm page. | Drop the emoji; keep a plain professional sentence. |
+| 33 | P2 | C | columns-pt/014-taiwan-mandatory-employment-period.md | "Não." | Section 1 opens with the bare FAQ answer; same pattern later in 014. | Open with a self-standing sentence: "O pacto não é automaticamente nulo." |
+| 34 | P2 | B | columns-pt/014-taiwan-mandatory-employment-period.md | "O só facto de o contrato consigne um pré-aviso mais longo" | After “de o contrato” the verb must be infinitive “consignar”. | "O mero facto de o contrato consignar um pré-aviso mais longo" |
+| 35 | P2 | C | columns-pt/015-taiwan-company-setup-pitch-location.md | "As exigências das coletividades locais de Taiwan diferem" | French collectivités locales; Portugal says autarquias, Brazil municípios. | "As exigências das autarquias locais de Taiwan diferem" |

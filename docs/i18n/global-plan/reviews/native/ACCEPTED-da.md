@@ -22,4 +22,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `da-a.md` 
 - Number format: 500.000 → 500.000 is fine in Danish (period thousands) — keep; 1.57M → 1,57 mio.
 
 ## Part b
-Apply every P1/P2 row of `da-b.md` under the same skip rules above.
+Apply every P1/P2 row of `da-b.md` under the same skip rules above. Additional: 'held' → 'succes/medhold' (systemic); '3.' / 'tredjemand (3)' → 'tredjemand' (R11); processfuldmægtig → 'procesfuldmægtig/rettergangsfuldmægtig (訴訟代理人)'; b#4 → 'pønalerstatning (懲罰性賠償金)'; b#9 tegningspræmie → 'underskriftsbonus (簽約金)'; b#10 → 'filial (分公司) og anden forretningsenhed (分支機構)'; b#12 → 'speditionsvirksomhed (運送承攬)'; b#13 → 'kundeservice'; b#15 prestator → leverandør; b#16 revisor → 'selskabets tilsynsførende (監察人)'; b#17 'mor' → 'moderselskab'; b#5 → R2; b#7, b#8, b#11 → R3/R7. De/Deres → du in 010–018 as well.

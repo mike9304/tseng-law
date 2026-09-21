@@ -79,7 +79,7 @@ const ELEMENTS = {
     el: /εφικτό/,
     he: /מעשית/,
     bn: /व्यावहारिक|व्यवहार्य/, // SCAFFOLD(hi)
-    ur: /طريقة ممكنة/, // SCAFFOLD(ar)
+    ur: /قابلِ عمل/,
     fa: /روش ممکن/,
     my: /เป็นไปได้/, // SCAFFOLD(th)
     ta: /व्यावहारिक|व्यवहार्य/, // SCAFFOLD(hi)
@@ -127,7 +127,7 @@ const ELEMENTS = {
     el: /σε άλλη γλώσσα δεν είναι εγγυημένη/,
     he: /בשפה אחרת אינו מובטח/,
     bn: /अन्य भाषा/, // SCAFFOLD(hi)
-    ur: /لغة أخرى/, // SCAFFOLD(ar)
+    ur: /کسی اور زبان/,
     fa: /زبان دیگر/,
     my: /ภาษาอื่น/, // SCAFFOLD(th)
     ta: /अन्य भाषा/, // SCAFFOLD(hi)
@@ -175,7 +175,7 @@ const ELEMENTS = {
     el: /προθεσμία απάντησης/,
     he: /מועד למענה/,
     bn: /उत्तर की समयसीमा/, // SCAFFOLD(hi)
-    ur: /مدة للرد/, // SCAFFOLD(ar)
+    ur: /جواب کی مدت/,
     fa: /مهلت پاسخ/,
     my: /ระยะเวลา(ในการ)?ตอบกลับ/, // SCAFFOLD(th)
     ta: /उत्तर की समयसीमा/, // SCAFFOLD(hi)
@@ -223,7 +223,7 @@ const ELEMENTS = {
     el: /όχι υπόσχεση/,
     he: /לא הבטחה/,
     bn: /वादा नहीं/, // SCAFFOLD(hi)
-    ur: /لا وعد/, // SCAFFOLD(ar)
+    ur: /وعدہ نہیں/,
     fa: /نه وعده/,
     my: /ไม่ใช่คำมั่น/, // SCAFFOLD(th)
     ta: /वादा नहीं/, // SCAFFOLD(hi)
@@ -271,7 +271,7 @@ const ELEMENTS = {
     el: /διερμηνέα/,
     he: /מתורגמן/,
     bn: /दुभाषि/, // SCAFFOLD(hi)
-    ur: /ترجمة فورية/, // SCAFFOLD(ar)
+    ur: /ترجمان/,
     fa: /مترجم شفاهی/,
     my: /ล่าม/, // SCAFFOLD(th)
     ta: /दुभाषि/, // SCAFFOLD(hi)
@@ -319,7 +319,7 @@ const ELEMENTS = {
     el: /κάθε υπόθεση/,
     he: /כל עניין/,
     bn: /प्रत्येक मामला/, // SCAFFOLD(hi)
-    ur: /قبول كل قضية/, // SCAFFOLD(ar)
+    ur: /ہر مقدمہ/,
     fa: /پذیرش هر پرونده/,
     my: /ได้ทุกเรื่อง/, // SCAFFOLD(th)
     ta: /प्रत्येक मामला/, // SCAFFOLD(hi)
@@ -367,7 +367,7 @@ const ELEMENTS = {
     el: /αποτέλεσμα/,
     he: /תוצאה/,
     bn: /परिणाम/, // SCAFFOLD(hi)
-    ur: /التزام ب(?:ال)?نتيجة/, // SCAFFOLD(ar)
+    ur: /نتیجے/,
     fa: /تعهد به نتیجه/,
     my: /รับประกันผล/, // SCAFFOLD(th)
     ta: /परिणाम/, // SCAFFOLD(hi)
@@ -415,7 +415,7 @@ const ELEMENTS = {
     el: /τέσσερ|τεσσάρ/,
     he: /ארבע/,
     bn: /चार परामर्श भाषा/, // SCAFFOLD(hi)
-    ur: /اللغات الأربع/, // SCAFFOLD(ar)
+    ur: /چار مشورے کی زبان/,
     fa: /چهار زبان/,
     my: /4 ภาษาที่ใช้ให้คำปรึกษา/, // SCAFFOLD(th)
     ta: /चार परामर्श भाषा/, // SCAFFOLD(hi)
@@ -463,7 +463,7 @@ const ELEMENTS = {
     el: /βήμα της συμβουλευτικής/,
     he: /שלב הייעוץ/,
     bn: /परामर्श चरण/, // SCAFFOLD(hi)
-    ur: /خطوة استشارة/, // SCAFFOLD(ar)
+    ur: /مشورے کا مرحلہ/,
     fa: /گام مشاوره/,
     my: /ขั้นตอนการให้คำปรึกษา/, // SCAFFOLD(th)
     ta: /परामर्श चरण/, // SCAFFOLD(hi)
@@ -511,7 +511,7 @@ const ELEMENTS = {
     el: /νομική γνώμη/,
     he: /חוות דעת משפטית/,
     bn: /कानूनी राय/, // SCAFFOLD(hi)
-    ur: /رأيًا قانوني/, // SCAFFOLD(ar)
+    ur: /قانونی رائے/,
     fa: /نظر حقوقی/,
     my: /ความเห็นทางกฎหมาย/, // SCAFFOLD(th)
     ta: /कानूनी राय/, // SCAFFOLD(hi)
@@ -559,7 +559,7 @@ const ELEMENTS = {
     el: /ραντεβού/,
     he: /פגישה/,
     bn: /नियुक्ति/, // SCAFFOLD(hi)
-    ur: /موعد|مواعيد/, // SCAFFOLD(ar)
+    ur: /ملاقات کا وقت/,
     fa: /وقت ملاقات/,
     my: /การนัดหมาย/, // SCAFFOLD(th)
     ta: /नियुक्ति/, // SCAFFOLD(hi)
@@ -607,7 +607,7 @@ const ELEMENTS = {
     el: /σχέση δικηγόρου/,
     he: /עורך דין–לקוח/,
     bn: /अधिवक्ता तथा मुवक्किल/, // SCAFFOLD(hi)
-    ur: /علاقة بين المحامي/, // SCAFFOLD(ar)
+    ur: /وکیل اور موکل/,
     fa: /رابطه میان وکیل/,
     my: /ความสัมพันธ์ระหว่างทนายความ/, // SCAFFOLD(th)
     ta: /अधिवक्ता तथा मुवक्किल/, // SCAFFOLD(hi)
@@ -655,7 +655,7 @@ const ELEMENTS = {
     el: /αυτόματα/,
     he: /אוטומטית/,
     bn: /स्वचालित/, // SCAFFOLD(hi)
-    ur: /ترجمة آلية/, // SCAFFOLD(ar)
+    ur: /خودکار ترجمہ/,
     fa: /ترجمهٔ ماشینی/,
     my: /แปลโดยอัตโนมัติ/, // SCAFFOLD(th)
     ta: /स्वचालित/, // SCAFFOLD(hi)
@@ -703,7 +703,7 @@ const ELEMENTS = {
     el: /γάμ/i,
     he: /נישואין/,
     bn: /विवाह/, // SCAFFOLD(hi)
-    ur: /الزواج/, // SCAFFOLD(ar)
+    ur: /شادی/,
     fa: /ازدواج/,
     my: /การสมรส/, // SCAFFOLD(th)
     ta: /विवाह/, // SCAFFOLD(hi)
@@ -751,7 +751,7 @@ const ELEMENTS = {
     el: /με αμοιβή/,
     he: /בתשלום/,
     bn: /शुल्क/, // SCAFFOLD(hi)
-    ur: /خدمة بمقابل/, // SCAFFOLD(ar)
+    ur: /معاوضے/,
     fa: /خدمتی با هزینه/,
     my: /บริการที่มีค่าใช้จ่าย/, // SCAFFOLD(th)
     ta: /शुल्क/, // SCAFFOLD(hi)

@@ -369,7 +369,7 @@ const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
   el: 'Greek',
   he: 'Hebrew',
   bn: 'Hindi', // SCAFFOLD(hi)
-  ur: 'Arabic', // SCAFFOLD(ar)
+  ur: 'Urdu',
   fa: 'Persian',
   my: 'Thai', // SCAFFOLD(th)
   ta: 'Hindi', // SCAFFOLD(hi)
@@ -769,18 +769,13 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     confidentialNotice:
       'क्योंकि मूल पाठ रखा जाता है, आरंभिक चरण में वह न लिखें जिसकी अभी आवश्यकता नहीं, जैसे पासपोर्ट संख्या, पहचान संख्या या खाता विवरण।',
   },
-  ur: { // SCAFFOLD(ar)
-    // Verbatim from the published `faq` answer to "is the session held in the
-    // language of this page?", minus its leading "لا. " — the same clause the
-    // other guidance locales quote.
+  ur: {
     consultationNotice:
-      'هذه الصفحة الإرشادية مكتوبة بالعربية. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية، ولا نلتزم بتوفير ترجمة فورية.',
+      'یہ صفحات اردو میں لکھے گئے ہیں، مگر وکیل سے مشورہ صرف انگریزی، چینی (中文)، جاپانی اور کوریائی میں ہوتا ہے۔',
     discoveryNotice:
-      'ملف llms.txt هذا ليس إلا خريطة للاستدلال على الصفحات العامة؛ وهو لا يَعِد بترتيب في نتائج البحث ولا بتزكية، ولا بترشيح من الذكاء الاصطناعي، ولا بإعلان.',
-    // The published privacy-page sentence, with its leading connective dropped
-    // so the line stands alone; the proposition is unchanged.
+      'llms.txt فائل صرف عوامی صفحات تلاش کرنے کا نقشہ ہے؛ یہ تلاش کی ترتیب، حمایت، مصنوعی ذہانت کی سفارش یا نمائش کا وعدہ نہیں کرتی۔',
     confidentialNotice:
-      'لأن النص الأصلي محفوظ، يُرجى عدم كتابة معلومات لا حاجة إليها في المرحلة الأولى، مثل رقم جواز السفر أو رقم الهوية أو بيانات الحساب المصرفي.',
+      'چونکہ اصل متن رکھا جاتا ہے، ابتدائی مرحلے میں وہ نہ لکھیں جس کی ابھی ضرورت نہیں، جیسے پاسپورٹ نمبر، شناختی نمبر یا اکاؤنٹ کی تفصیل۔',
   },
   fa: {
     // Verbatim from the published `faq` answer to "is the session held in the

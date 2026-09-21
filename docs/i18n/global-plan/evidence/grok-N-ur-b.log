@@ -1,1 +1,84 @@
-[WO start 2026-09-22 07:01:32]
+WO-N-ur-b — Urdu columns 010–018 (locale `ur`, readers in Pakistan)
+Workspace: /Users/son7/Projects/tseng-law-new-ur-20260922
+Agent: Grok 4.6  Date: 2026-09-22
+No git add/commit/push/stash/checkout. Helper scratch only in .tmp-ur/.
+
+================================================================
+§1. FILE COUNT
+================================================================
+9 files written in src/content/columns-ur/ (010–018). Directory also holds WO-N-ur-a 001–009, so ls count is 18:
+010-taiwan-gym-injury-lawsuit.md
+011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md
+012-taiwan-overtaking-accident-liability.md
+013-taiwan-company-establishment-advanced-1.md
+014-taiwan-mandatory-employment-period.md
+015-taiwan-company-setup-pitch-location.md
+016-taiwan-inheritance-custody-analysis.md
+017-taiwan-logistics-business-setup.md
+018-taiwan-semiconductor-market-entry.md
+
+================================================================
+§2. VERIFY (verbatim)
+================================================================
+$ ls src/content/columns-ur/*.md | wc -l
+      18
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-ur --lang ur 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-ur-20260922/src/content/columns-ur/018-taiwan-semiconductor-market-entry.md  lang=ur
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=42
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-ur | wc -l
+       0
+
+$ git status --short | wc -l
+      45
+
+================================================================
+§3. KEY TERM CHOICES (Urdu + Traditional-Chinese gloss)
+================================================================
+- کام کی اجازت (工作許可)
+- غیر ملکی رہائشی سند (外僑居留證)
+- کم از کم خدمت کی مدت (最低服務年限)
+- ملازمت کے معیار کا قانون (勞動基準法)
+- موٹر مال برداری (汽車貨運業)
+- سڑک کا قانون (公路法)
+- قیام کی تیاری کی اجازت (籌設許可)
+- شعبے کی انجمن (同業公會)
+- وزارتِ اقتصادیات کی سرمایہ کاری جائزہ ڈائریکٹوریٹ (經濟部投資審議司)
+- نگران (監察人) / شیئر ہولڈرز (股東)
+
+Register: formal آپ; quotation " "; Western digits; thousands 100,000; dates 13 ستمبر 2025 / 17 ستمبر 2026.
+Byline / first person: **وکیلہ Wei Tseng (曾雋崴)** (Latin name kept; feminine).
+Consultation languages never implied in Urdu. Korea only as a labelled example. Reader country not named.
+
+Checker fixes in this lane:
+- 012: forbidden نتیجے کی ضمانت → یقینی نہیں / انجام کا وعدہ نہیں.
+- 016: 제1순위 was consumed as instance ordinal پہلا درجہ; rewritten 1 درجہ so digit 1 is present.
+- 018: 주주 1인 1표 needed two digits; شیئر ہولڈر 1 شخص کو 1 ووٹ.
+
+================================================================
+§4. UNRESOLVED
+================================================================
+- 016 and 017 numbers WARN 수사미해석 제3자 (count still matched; تیسرا فریق used as in ur-a).
+- 018 Korean source skips heading ## 6 (jumps 5 → 7); Urdu keeps the same gap.
+- Native attorney review of the Urdu legal register is still pending.
+- git status --short count 45 includes WO-N-ur-a columns 001–009, checker/guidance edits, .tmp-ur/, and this log — not only the 9 columns of this work order.
+- Nationality gate: پاکستان / پاکستانی never written; foreign-investor / home-country framing used instead.

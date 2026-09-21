@@ -1,1 +1,5 @@
 [WO start 2026-09-22 06:47:36]
+Nine Catalan columns are in `src/content/columns-ca/`. The checker reports **`summary PASS 9/9 files`**, and `[변호사 검수 필요]` markers are **0**.
+
+Evidence: `docs/i18n/global-plan/evidence/grok-N-ca-a.log` (file count, verbatim §Verify, term glosses, unresolved WARNs). No git add/commit/push.
+=== end code=0 2026-09-22 07:17:12 ===

@@ -146,10 +146,10 @@ export const DECORATIVE_VIDEO_CONTROL_LABELS = {
     play: 'वीडियो चलाएँ',
     replay: 'वीडियो फिर चलाएँ',
   },
-  ur: { // SCAFFOLD(ar)
-    pause: 'إيقاف الفيديو مؤقتًا',
-    play: 'تشغيل الفيديو',
-    replay: 'إعادة تشغيل الفيديو',
+  ur: {
+    pause: 'ویڈیو روکیں',
+    play: 'ویڈیو چلائیں',
+    replay: 'ویڈیو پھر چلائیں',
   },
   fa: {
     pause: 'توقف ویدئو',

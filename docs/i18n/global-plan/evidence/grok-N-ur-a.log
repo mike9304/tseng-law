@@ -1,5 +1,78 @@
-[WO start 2026-09-22 06:20:44]
-`src/content/columns-ur/` has all **9** files. Checker: **`summary PASS 9/9 files`**. Markers: **0**.
+WO-N-ur-a — Urdu columns 001–009 (locale `ur`, readers in Pakistan)
+Workspace: /Users/son7/Projects/tseng-law-new-ur-20260922
+Agent: Grok 4.6  Date: 2026-09-22
+No git add/commit/push/stash/checkout. Helper scratch only in .tmp-ur/.
 
-Log: `docs/i18n/global-plan/evidence/grok-N-ur-a.log`
-=== end code=0 2026-09-22 07:01:17 ===
+================================================================
+§1. FILE COUNT
+================================================================
+9 files in src/content/columns-ur/:
+001-taiwan-company-establishment-basics.md
+002-withdraw-capital-taiwan-company.md
+003-taiwan-traffic-accident-procedure.md
+004-taiwan-company-subsidiary-vs-branch.md
+005-taiwan-company-establishment-advanced-2.md
+006-taiwan-massage-history-law.md
+007-taiwan-divorce-lawsuit-qna.md
+008-taiwan-labor-severance-law.md
+009-taiwan-voluntary-resignation-severance.md
+
+================================================================
+§2. VERIFY (verbatim)
+================================================================
+$ ls src/content/columns-ur/*.md | wc -l
+       9
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-ur --lang ur 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-ur-20260922/src/content/columns-ur/009-taiwan-voluntary-resignation-severance.md  lang=ur
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1]
+images         PASS   count=2
+blocks         PASS   blocks=44
+links          PASS   hrefs=3
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=10
+numbers        PASS   sourceCount=10 targetCount=10
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  9/9 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-ur | wc -l
+       0
+
+$ git status --short | wc -l
+      34
+
+================================================================
+§3. KEY TERM CHOICES (Urdu + Traditional-Chinese gloss)
+================================================================
+- کام کی اجازت (工作許可)
+- غیر ملکی رہائشی سند (外僑居留證)
+- قانونی علیحدگی معاوضہ (資遣費)
+- ملازمت کے معیار کا قانون (勞動基準法)
+- مختصر حراستی سزا (拘役)
+- معطل سزا (緩刑)
+- شیئر ہولڈرز (股東)
+- تیسرا فریق (第三人)
+- کاروباری ٹیکس (營業稅) / منافع بخش ادارے کا انکم ٹیکس (營利事業所得稅)
+- باقی ماندہ جائیداد کے فرق کی تقسیم (剩餘財產差額分配)
+
+Register: formal آپ; quotation " "; Western digits; thousands 100,000; dates 13 ستمبر 2025.
+Byline / first person: **وکیلہ Wei Tseng (曾雋崴)** (Latin name kept; feminine).
+Consultation languages never implied in Urdu. Korea only as a labelled example (تائیوان–کوریا انکم ٹیکس معاہدہ). Reader country not named.
+
+================================================================
+§4. UNRESOLVED
+================================================================
+- Checker had no `ur` wiring at start (GUIDANCE_LANGS, DATE_MONTH_NAMES, LANGID skip for Arabic script, ordinals شق/بند/تیسرا فریق/فی دن, nationality پاکستان, forbiddenphrases). Minimal wiring was added in scripts/check-column-translation.mjs so verify could run; WO asked for columns + this log only.
+- git status --short count 34 includes other-lane files, the checker wiring, .tmp-ur/, and this log — not only the 9 columns.
+- Native attorney review of the Urdu legal register is still pending.
+- Nationality gate: پاکستان / پاکستانی never written; home-country / foreign-investor framing used instead.

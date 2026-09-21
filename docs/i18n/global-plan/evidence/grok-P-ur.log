@@ -1,13 +1,81 @@
-[WO start 2026-09-22 05:17:28]
-The Urdu guidance pack and UI strings for locale `ur` are in place. Report: `docs/i18n/global-plan/evidence/grok-P-ur.log`.
+WO-P-ur — Urdu guidance pack + UI strings (locale `ur`, readers in Pakistan)
+Workspace: /Users/son7/Projects/tseng-law-new-ur-20260922
+Agent: Grok 4.6  Date: 2026-09-22
+No git add/commit/push/stash/checkout. Helper scratch only in .tmp-ur/.
 
-Every scaffolded `ur` string cloned from Arabic is now natural Urdu for readers in Pakistan, and the `SCAFFOLD(ar)` markers for `ur` are gone. Consultation is stated as English, Chinese (中文), Japanese, and Korean only — including a plain **نہیں** on “Can I get advice in Urdu?” Wei Tseng is marked feminine (`وکیلہ`). Latin names and Traditional-Chinese glosses are unchanged.
+================================================================
+§1. FILES TOUCHED
+================================================================
+src/data/international-guidance-south-asia.ts   (urduGuidanceContent pack; languageName اردو)
+src/data/international-guidance-team.ts         (team copy, language names, practice areas, bios)
+src/data/international-guidance-offices.ts      (office copy + chrome)
+src/data/international-guidance-answers.ts      (6 answer-first blocks; sources /ur/…)
+src/data/international-inquiry-copy.ts
+src/lib/llms-txt.ts                             (English catalog name Urdu + 3 notices)
+src/data/multilingual-international-v2.ts       (GUIDANCE_HOME_PATHS; href /ur/…)
+src/lib/columns.ts                              (3 category labels)
+src/components/ColumnsGrid.tsx                  (All filter, category labels, read-more)
+src/components/CinematicOpening.tsx
+src/components/decorative-video-controls.ts
+src/data/team-name.ts
+src/lib/public-language-registry.ts             (region labels + picker copy)
+src/data/__tests__/guidance-disclosure-parity.test.ts
+src/data/__tests__/guidance-office-facts-sync.test.ts
+src/data/__tests__/international-guidance-privacy-disclosure.test.ts
+src/data/__tests__/column-alternate-expectations.ts
+src/components/__tests__/columns-grid-guidance-labels.test.tsx
+src/components/__tests__/multilingual-international-v2.test.tsx
+tests/builder-editor/international-guidance.playwright.ts  (og:locale ur_PK)
 
-**Verify:** SCAFFOLD grep `0`, `TSC_OK`. Vitest: **1096 passed**, 5 failed. None of those five are `ur` rows. They fail because other new locales are still scaffolded:
+SCAFFOLD(ar) markers for `ur` removed. Other locales untouched.
 
-- answers test locale list is 27 vs 45 in the registry
-- llms notices are not unique across the untranslated locales
-- root `llms.txt` exceeds the 8 KiB budget with all 45 catalogs linked
+================================================================
+§2. VERIFY (verbatim)
+================================================================
+$ grep -rn "SCAFFOLD" src tests | grep -cE "^\S+:[0-9]+:\s*'?ur'?:|locale ur"
+0
 
-Nav labels all fit in 14 characters (`ہمارے بارے میں` is exactly 14). No git add/commit/push.
-=== end code=0 2026-09-22 05:33:18 ===
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/data/__tests__/ src/lib/__tests__/guidance-chrome-language.test.ts src/lib/__tests__/international-guidance-answers.test.ts "src/app/[locale]/__tests__/llms-discovery.test.tsx" src/components/__tests__/columns-grid-guidance-labels.test.tsx src/components/__tests__/multilingual-international-v2.test.tsx --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+   × guidance locale llms.txt catalogs > writes a distinct notice set for each guidance language 3ms
+   × root llms.txt guidance catalog links > stays inside the 8 KiB root budget and the documented grammar 1ms
+   × root llms.txt guidance catalog links > lists every site-locale catalog and every guidance catalog 0ms
+   × root llms.txt guidance catalog links > labels each guidance catalog in its own language without widening consultation languages 0ms
+   × guidanceAnswers > covers every guidance locale x 6 page keys 4ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+ Test Files  2 failed | 45 passed (47)
+      Tests  5 failed | 1096 passed (1101)
+
+$ git status --short | wc -l
+      22
+
+ur rows: all pass (disclosure parity, privacy, office facts spelling table, columns-grid, v2 English-word regex, llms ur catalog/notice/verbatim/route). No ur-row failure.
+
+Failures caused only by other new locales still scaffolded (not by `ur` copy):
+- international-guidance-answers.test.ts: hardcoded GUIDANCE_LOCALES is 27; GUIDANCE_LOCALES_4 is 45 (bn/fa/my/ta/ne/km/mn/sk/bg/hr/sr/sl/lt/lv/et/ca/is still unlisted).
+- llms-discovery distinct-notice-set: 84 unique notices (28 completed languages including ur × 3) vs 135 expected (45 × 3); remaining locales still share template notices.
+- llms-discovery root catalog (3 tests): buildRootLlmsTxt exceeds 8192 bytes because all 45 guidance locales are now linked; independent of Urdu wording.
+
+================================================================
+§3. TERMINOLOGY (key legal terms + Chinese gloss kept)
+================================================================
+- 居留              رہائش (居留)
+- 工作許可          کام کی اجازت (工作許可)
+- 資遣費            قانونی علیحدگی معاوضہ (資遣費)
+- 勞動契約          ملازمت کا معاہدہ (勞動契約)
+- 工作規則          کام کے قواعد (工作規則)
+- 商標 / 專利       تجارتی علامت (商標) / پیٹنٹ (專利)
+- 離婚              طلاق (離婚)
+- 未成年子女權利義務之行使或負擔
+                    نابالغ بچوں کی نگرانی اور والدین کے حقوق و فرائض (未成年子女權利義務之行使或負擔)
+- 會面交往          ملاقات اور رابطے کا حق (會面交往)
+- 繼承 / 戶籍       وراثت (繼承) / گھریلو رجسٹریشن (戶籍)
+
+Register: formal آپ; feminine forms for وکیلہ Wei Tseng (曾雋崴); quotation " "; Western digits; cities تائپے / کاؤشنگ / تائچونگ / پنگٹنگ with 臺北 高雄 臺中 屏東. Consultation languages in order: انگریزی، چینی (中文)، جاپانی، کوریائی. Autonym اردو. Team/offices eyebrows: ٹیم / دفاتر. FAQ “اردو میں مشورہ؟” → نہیں۔
+
+================================================================
+§4. COULD NOT FIT
+================================================================
+Nav labels all ≤ 14 JS characters (about = 14: ہمارے بارے میں). menuLabel فہرست صفحات (not "Menu"). No overflow.

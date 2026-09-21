@@ -31,9 +31,9 @@ Ezután az előző járműnek be kell kapcsolnia a bal indexet, balra elhaladnia
 
 Ez az ugyanazon sávbeli jelzés- és elsőbbségátadási sorrend nem jelenti azt, hogy tiltott helyen vagy feltétel mellett az előzés megengedett lenne. Az előzés megkezdése előtt a 101. cikk minden feltételét együtt kell megítélni.
 
-## A hivatal által kezelt anonimizált baleseti ügy
+## Az iroda által kezelt, anonimizált baleseti ügy
 
-A hivatal által kezelt anonimizált ügyben A motorkerékpár-vezető B utassal hegyi úton haladt. Előttük két személygépkocsi volt; a legelöl haladó 1. számú jármű lassan mozgott, ezért a 2. számú jármű és a motorkerékpár is lassú sebességgel haladt.
+Az iroda által kezelt, anonimizált ügyben A motorkerékpár-vezető B utassal hegyi úton haladt. Előttük két személygépkocsi volt; a legelöl haladó 1. számú jármű lassan mozgott, ezért a 2. számú jármű és a motorkerékpár is lassú sebességgel haladt.
 
 ![Baleseti ábra, amely a motorkerékpár és az elöl haladó két jármű előzési pályáját mutatja hegyi úton](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 

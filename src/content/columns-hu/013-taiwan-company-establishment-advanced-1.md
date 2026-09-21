@@ -17,17 +17,17 @@ Az utóbbi időben sokan sikerrel alapítottak társaságot (公司) Tajvanon, �
 
 és az alapításkor gyakran felmerülő kérdéseket az alábbiakban rendezzük.
 
-Akik elolvasták a [**társaságalapítás alapjait**](/hu/columns/taiwan-company-establishment-basics), ezt követően ezt a részletesebb elmélyítő részt is nézzék meg.
+Ha elolvasta a [**társaságalapítás alapjait**](/hu/columns/taiwan-company-establishment-basics), ezt a részletesebb elmélyítő részt is érdemes áttekintenie.
 
-Az alábbi kérdések és válaszok (Q&A) azoknak kívánnak segíteni, akik tajvani társaságalapítást fontolgatnak. 😊
+Az alábbi kérdések és válaszok azoknak kívánnak segíteni, akik tajvani társaságalapítást fontolgatnak.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
 **1. Társaságot szeretnék alapítani, de még nem találtam bejegyzési címet. Az alapítás így is lehetséges?**
 
-Amikor külföldi személy Tajvanon társaságot alapít, beruházási tervet (投資計畫書) kell benyújtania a Gazdasági Minisztérium Beruházásvizsgáló Osztályához (經濟部投資審議司) vizsgálat céljából.
+Amikor külföldi személy Tajvanon társaságot alapít, beruházási tervet (投資計畫書) kell benyújtania a Gazdasági Minisztérium Beruházásvizsgáló Főosztályához (經濟部投資審議司) vizsgálat céljából.
 
-A Beruházásvizsgáló Osztálynak ellenőriznie kell, hogy az érintett tőke (資本額) ténylegesen beruházási célra használódik-e,
+A Beruházásvizsgáló Főosztálynak ellenőriznie kell, hogy az érintett tőke (資本額) ténylegesen beruházási célra használódik-e,
 
 és hogy külföldi szereplők nem más ürüggyel visznek-e be forrásokat.
 
@@ -43,13 +43,13 @@ Már az alapozó részben egy olvasó azt jelezte, hogy a számlanyitás a legne
 
 Mivel a pénzmosási (洗錢) esetek Tajvanon nagyon számosak, a bankszámlanyitás egyre szigorúbbá válik.
 
-**Tanács**：
+**Tanács:**
 
 Mivel a beruházási terv vizsgálata is időt vesz igénybe,
 
 a beruházási tervet és a társaság bejegyzési címének keresését egyszerre kell végezni.
 
-A külföldiek beruházásáról szóló rendelet (外國人投資條例) 9. cikke szerint a jóváhagyott hozzájárulásnak az illetékes szerv által rögzített határidőn (核定期限) belül teljes egészében meg kell érkeznie; a határidőt az egyes ügy jóváhagyási iratában kell megerősíteni (a gyakorlatban gyakran körülbelül 1 évre rögzítik).
+A külföldiek befektetéséről szóló törvény (外國人投資條例) 9. cikke szerint a jóváhagyott hozzájárulásnak az illetékes szerv által rögzített határidőn (核定期限) belül teljes egészében meg kell érkeznie; a határidőt az egyes ügy jóváhagyási iratában kell megerősíteni (a gyakorlatban gyakran körülbelül 1 évre rögzítik).
 
 E határidőn belül, miután megtalálták a társaság címét és aláírták a bérleti szerződést,
 
@@ -63,7 +63,7 @@ Lehetséges.
 
 A bank általában kettős személyazonosítást kér,
 
-és tartózkodási igazolvány nélkül a tajvani bevándorlási hivataltól a «**alapadatok lapját**» (統一證號基本資料表) lehet kérni.
+és tartózkodási igazolvány nélkül a tajvani bevándorlási hivataltól az „**alapadatok lapját**” (統一證號基本資料表) lehet kérni.
 
 A kiadás még aznap lehetséges,
 
@@ -81,7 +81,7 @@ Említhetők változatos munkahelyi tapasztalatok, ideértve a részmunkaidőt,
 
 és részletesen kell őket kifejteni, hogy a vizsgálatot végzőket meggyőzhessék.
 
-Ezen a ponton alaposan egyeztetni kell tajvani ügyvéddel.
+Ezen a ponton alaposan egyeztetni kell tajvani ügyvéddel; a tanácsadás nem magyarul, hanem angolul, kínaiul (中文), japánul és koreaiul zajlik.
 
 ​
 
@@ -91,7 +91,7 @@ A társaságalapítás körülbelül **3 hónapot**, a munkavállalási engedél
 
 ezért a szerződés kezdőnapját a lehető legkésőbbre kell tenni.
 
-Emellett a tajvani üzlethelyiség-bérleti szerződésekben a bérbeadó gyakran «**berendezési időszakot**» (裝潢期間) ad a bérlőnek.
+Emellett a tajvani üzlethelyiség-bérleti szerződésekben a bérbeadó gyakran „**berendezési időszakot**” (裝潢期間) ad a bérlőnek.
 
 Ez bérmentes időszak; erről lehet tárgyalni.
 
@@ -99,7 +99,7 @@ Külföldi személynek nem könnyű üzlethelyiséget bérelni, és a tajvani ka
 
 a bérbeadók ezért idegenkednek attól, hogy külföldinek adjanak bérbe.
 
-Ezért ajánlom, hogy az üzleti helyet korán keressék.
+Ezért ajánlom, hogy az üzlethelyiséget korán keresse meg.
 
 Ha a bérbeadóval a tárgyalás nem folyik gördülékenyen,
 
@@ -107,27 +107,27 @@ szükség esetén javasolható a bérleti szerződés közjegyzői hitelesítés
 
 ​
 
-**5. A társaságalapításkor bérelhető-e irodai kereskedelmi tér?**
+**5. A társaságalapításkor bérelhető-e irodahelyiség irodaházban?**
 
 Ez a társaság tevékenységi ágaitól (營業項目) függ.
 
-Pl.) Ha a tevékenységi ág a vendéglátás, és irodai kereskedelmi teret kívánnak bérelni, a bankszámla megnyitása nagyon nehéz lesz.
+Például ha a tevékenységi ág a vendéglátás, és irodaházban kíván irodahelyiséget bérelni, a bankszámla megnyitása nagyon nehéz lesz.
 
 Amint már említettem, a bank megvizsgálja a bérleti szerződést, és a helyszínen ellenőrzi a társaság címét.
 
 Emellett a végső társasági bejegyzéskor a városi önkormányzat (市政府) azt is megköveteli, hogy a bejegyzett cím olyan övezetben legyen, ahol étterem üzemeltetése engedélyezett;
 
-ha irodai kereskedelmi térről van szó, a társaság bejegyzése (公司登記) akkor nem lehetséges.
+ha irodaházi irodahelyiségről van szó, a társaság bejegyzése (公司登記) akkor nem lehetséges.
 
-Pl.) Ha olyan tevékenységi ágakról van szó, amelyek irodai kereskedelmi térben lehetségesek, például reklám vagy nagykereskedelem, a társaság irodai kereskedelmi térben alapítható. A bérleti szerződés megkötése előtt
+Például ha olyan tevékenységi ágakról van szó, amelyek irodaházi irodahelyiségben is folytathatók — például reklám vagy nagykereskedelem —, a társaság irodahelyiségben is megalapítható. A bérleti szerződés megkötése előtt
 
 ezt előzetesen ellenőrizni kell.
 
-*Ha tajvani jogban segítségre vagy egyeztetésre van szükség, hagyjon hozzászólást, vagy vegye fel a kapcsolatot.*
+*Ha tajvani jogban segítségre van szüksége, a Kapcsolat oldalon küldhet megkeresést. A tanácsadás nem magyarul, hanem angolul, kínaiul (中文), japánul és koreaiul zajlik.*
 
 ---
 
 > További olvasmány:
-> - [Milyen ügyeket viszünk](/hu/services)
+> - [Milyen ügyekben járunk el](/hu/services)
 > - [A Hovering nemzetközi csapata](/hu/lawyers)
 > - [Hogyan érheti el az irodát](/hu/contact)

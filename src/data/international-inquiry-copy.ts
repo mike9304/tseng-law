@@ -1392,18 +1392,18 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Ez az oldal magyarul készült általános tájékozódás céljából, nem az Ön ügyére szabott jogi tanácsadásként.',
     consultationNotice:
-      'A tanácsadás négy nyelven zajlik: angolul, kínaiul (中文), japánul és koreaiul.',
+      'A tanácsadás kizárólag négy nyelven zajlik: angolul, kínaiul (中文), japánul és koreaiul.',
     methodConfirmationNotice:
-      'Ha a négy nyelv egyikét sem tudja használni, válassza azt, hogy «A kommunikáció módját meg kell erősíteni». Válaszolunk, hogy megvizsgáljuk a kommunikáció járható módját, ha van ilyen; más nyelvű szolgáltatás nem garantált, és válaszadási határidőt nem ígérünk.',
+      'Ha a négy nyelv egyikét sem tudja használni, válassza azt, hogy „A kommunikáció módját meg kell erősíteni”. Válaszolunk, hogy megvizsgáljuk a kommunikáció járható módját, ha van ilyen; más nyelvű szolgáltatás nem garantált, és válaszadási határidőt nem ígérünk.',
     preparationNotice:
-      'Az összefoglalót a saját nyelvén írhatja. Az eredeti szöveget úgy őrizzük meg, ahogyan megírta, és automatikusan nem fordítjuk le.',
+      'Az összefoglalót a saját nyelvén írhatja. Az eredeti szöveget úgy őrizzük meg, ahogyan megírta, és nem fordítjuk le automatikusan.',
     heading: 'Megkeresés elküldése',
     intro:
       'Írja le röviden az ügyét. Egy ügyvéd megvizsgálja a tartalmat, mielőtt a következő lépésre kerülne sor.',
     submitLabel: 'Megkeresés elküldése',
     submittingLabel: 'Küldés folyamatban…',
     successMessage:
-      'Megkapta a megkeresését; vizsgálatra vár. Ez nem jelenti azt, hogy a tanácsadás megtörtént vagy hogy időpontot erősítettünk meg.',
+      'Megkaptuk a megkeresését; vizsgálatra vár. Ez nem jelenti azt, hogy a tanácsadás megtörtént vagy hogy időpontot erősítettünk meg.',
     savedNotificationPendingMessage:
       'A megkeresését elmentettük, de az irodának szóló értesítés még nincs megerősítve. Amit írt, nem vész el. Ha nem kap választ, a kapcsolatfelvételi oldal e-mail-címére is írhat.',
     receiptIdLabel: 'Iktatószám',

@@ -744,20 +744,20 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'CSAPATUNK',
     title: 'A Hovering nemzetközi csapata',
     description:
-      'A Hovering ügyvédeinek, működési vezetésének és társult könyvvizsgálatának profiljai.',
+      'A Hovering ügyvédeinek, működési vezetésének és a társult könyvvizsgálónak (könyvelőiroda) a profiljai.',
     representativeTitle: 'Vezető ügyvéd',
     teamTitle: 'Ügyvédek és munkatársak',
-    partnerTitle: 'Társult könyvvizsgálat',
+    partnerTitle: 'Társult könyvvizsgáló (könyvelőiroda)',
     introLabel: 'Bemutatkozás',
     educationLabel: 'Tanulmányok',
     experienceLabel: 'Tapasztalat',
     photoAltPrefix: 'Fénykép',
     workingLanguagesLabel: 'Munkanyelvek',
-    fullProfileLabel: 'Teljes profil (English)',
+    fullProfileLabel: 'Teljes profil (angolul)',
     keyFactsHeading: 'Wei Tseng ügyvéd — Fő adatok',
     qualificationLabel: 'Képesítés és iroda',
     qualificationSentence:
-      '{name} jogosult Tajvanon ügyvédi tevékenységet folytatni, és a(z) {firm} vezető ügyvédje.',
+      '{name} jogosult Tajvanon ügyvédi tevékenységet folytatni, és a {firm} vezető ügyvédje.',
     practiceLabel: 'Fő területek',
     consultationLanguagesLabel: 'Tanácsadási nyelvek',
     roles: {
@@ -2527,8 +2527,8 @@ export const guidanceTeamBios: Record<
   hu: {
     'tseng-junwei': {
       intro: [
-        'Az iroda vállalatok és magánszemélyek tajvani ügyeit viszi angolul, japánul, koreaiul és kínaiul.',
-        'Koreai hallgatót képviselt edzőtermi sérülés miatti kártérítési igényben, és első fokon TWD 1.57M összegű ítéletet ért el.',
+        'Az iroda vállalatok és magánszemélyek tajvani ügyeiben jár el angolul, japánul, koreaiul és kínaiul.',
+        'Koreai hallgatót képviselt edzőtermi sérülés miatti kártérítési igényben, és első fokon 1,57 millió TWD megítélését érte el.',
       ],
       education: [
         'Mesterfokozat (M.S.), Institute of Finance, National Taiwan University',
@@ -2556,7 +2556,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal, aki több irodában dolgozott vezető paralegalként, eljárási támogatásért, társasági jogért és külföldi befektetésekért felelve.',
+        'Jogi asszisztens (paralegal); több irodában vezető paralegalként eljárási, társasági jogi és külföldi befektetési ügyeket támogatott.',
         'Támogatás eljárásokban, cégalapításban, külföldi befektetési engedélyekben, engedélykérelmekben, valamint a koreai–tajvani kapcsolatokban.',
       ],
       education: [
@@ -2582,7 +2582,7 @@ export const guidanceTeamBios: Record<
     'huang-shengping': {
       intro: [
         'A National Chengchi University számviteli alap- és mesterképzését végezte el, jelenleg könyvelőirodát vezet.',
-        'Vállalati ügyfeleknek jogi, adózási és pénzügyi kockázatok együttes elemzését támogatja.',
+        'Vállalati ügyfeleket a jogi, adózási és pénzügyi kockázatok együttes elemzésében támogatja.',
       ],
       education: [
         'Mesterfokozat (M.A.) számvitelből, National Chengchi University',

@@ -313,7 +313,7 @@ const ELEMENTS = {
     nb: /rådgivningssteget/,
     fi: /neuvontavaihe/,
     cs: /krokem porady|krok porady/,
-    hu: /tanácsadás lépése/,
+    hu: /nem helyettesíti a tanácsadást/,
     ro: /pasul consultanței/,
     uk: /кроком консультації/,
     el: /βήμα της συμβουλευτικής/,

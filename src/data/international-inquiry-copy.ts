@@ -894,7 +894,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Görüşme yalnızca dört dilde yapılır: İngilizce, Çince (中文), Japonca ve Korece.',
     methodConfirmationNotice:
-      'Dört dilden hiçbirini kullanamıyorsanız «İletişim yolunun doğrulanması gerekir» seçeneğini seçin. Kullanılabilir bir yol varsa, o yolu incelemek için yanıtlarız; başka dilde hizmet sağlanmaz ve yanıt süresi vaat edilmez.',
+      'Dört dilden hiçbirini kullanamıyorsanız “İletişim yolunun doğrulanması gerekir” seçeneğini seçin. Kullanılabilir bir yol varsa, o yolu incelemek için yanıtlarız; başka dilde hizmet sağlanmaz ve yanıt süresi vaat edilmez.',
     preparationNotice:
       'İşinizin özetini kendi dilinizde yazabilirsiniz. Özgün metin yazdığınız gibi saklanır ve kendiliğinden çevrilmez.',
     heading: 'Görüşme talebi gönderin',
@@ -915,7 +915,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     preferredConsultationLanguageLabel: 'Görüşme için istediğiniz dil',
     originalTextLabel: 'İşin kısa özeti (kendi dilinizde)',
     originalTextPlaceholder:
-      'Ne olduğunu, ne yardıma gereksinim duyduğunuzu ve varsa süreyi belirtin. Pasaport numarası, kimlik numarası veya hesap bilgisi yazmayın.',
+      'Ne olduğunu, hangi konuda yardıma ihtiyaç duyduğunuzu ve varsa süreyi belirtin. Pasaport numarası, kimlik numarası veya hesap bilgisi yazmayın.',
     nameLabel: 'Ad',
     emailLabel: 'E-posta',
     consentLabel:

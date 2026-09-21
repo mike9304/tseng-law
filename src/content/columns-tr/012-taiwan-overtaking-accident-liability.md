@@ -21,7 +21,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 Madde 101, viraj, dik yokuş veya iniş, dar köprü, tünel veya kavşak levhası bulunan kesitlerde, hemzemin geçitlerde ve şantiyelerde sollamayı yasaklar.
 
-Ayrıca okul veya hastane levhası bulunan yer veya kesitlerde, başka sollama yasağı levhası veya işaretinin bulunduğu yerlerde, karşıdan bir araç yaklaşırken ve önde 2 veya daha fazla araç art arda giderken de sollanamaz.
+Ayrıca okul veya hastane levhası bulunan yer veya kesitlerde, başka sollama yasağı levhası veya işaretinin bulunduğu yerlerde, karşıdan bir araç yaklaşırken ve önde iki veya daha fazla araç art arda giderken de sollanamaz.
 
 Aynı şeritte öndeki aracı geçmek için arkadaki araç sürücüsü önce 2 kez kısa korna çalmalı veya farları bir kez yakıp söndürmelidir. Korna ve farlar, öndeki aracı yol vermeye zorlamak için tekrar tekrar kullanılmamalıdır.
 
@@ -49,9 +49,9 @@ Bazı işlerde böyle bilirkişilik sonuçlarının çıkması, öngörülen bir
 
 ## Kaza sorumluluğunu değerlendirirken doğrulanacak noktalar
 
-Sollamadan önce önce o yerin veya trafik durumunun sollama yasağına girip girmediği doğrulanmalıdır. Aynı şerit usulü uygulanıyorsa, öndeki aracı yol vermeye zorlamadan öngörülen korna veya far işaretini verin, açık bir yol verme işaretini bekleyin ve yeterli aralık ile güvenli dönüş mesafesiyle sollamayı tamamlayın.
+Sollamadan önce o yerin veya trafik durumunun sollama yasağına girip girmediği doğrulanmalıdır. Aynı şerit usulü uygulanıyorsa, öndeki aracı yol vermeye zorlamadan öngörülen korna veya far işaretini verin, açık bir yol verme işaretini bekleyin ve yeterli aralık ile güvenli dönüş mesafesiyle sollamayı tamamlayın.
 
-Madde 101’e uymak önemlidir; ancak tek başına kazayı önlemeyi veya sonraki bilirkişilik ya da yargılama sonucunu sağlamaz. Sürücüler ek bir güvenlik payı bırakmalı ve öndeki duruma göre uyarlanmalıdır.
+Madde 101’e uymak önemlidir; ancak tek başına kazayı önlemeyi veya sonraki bilirkişilik ya da yargılama sonucunu sağlamaz. Sürücüler ek bir güvenlik payı bırakmalı ve önlerindeki duruma göre hareket etmelidir.
 
 Ek olarak [sollama kuralları ve usulünün şemasına](https://gonews.com.tw/car/daily/21934/) bakılabilir. İkincil kaynak olduğundan, hukuki şartlar doğrulanırken yürürlükteki resmi kurallar da okunmalıdır.
 

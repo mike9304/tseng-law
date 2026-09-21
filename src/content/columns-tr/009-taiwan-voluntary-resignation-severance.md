@@ -13,7 +13,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![Öne çıkan görsel](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Daha önce belirtildiği üzere, Tayvan’da çalışanın kıdem tazminatı (資遣費) alması kolay değildir.
+Tayvan’da çalışanın kıdem tazminatı (資遣費) alması, genel olarak, kolay değildir.
 
 ​
 
@@ -21,7 +21,7 @@ Daha önce belirtildiği üzere, Tayvan’da çalışanın kıdem tazminatı (�
 
 kıdem tazminatı (資遣費) alamaz (İş Standartları Kanunu 18. madde),
 
-ve bu Kore’den farklıdır.
+ve bu, bazı hukuk düzenlerinden — örneğin Kore’den — farklıdır.
 
 ​
 
@@ -89,7 +89,7 @@ kıdem tazminatı ödenmeyebilir veya istenebilir.
 
 Bu yüzden Tayvan’daki iş uyuşmazlıklarında (勞資糾紛)
 
-«**zaman**» çok önemlidir.
+**zamanlama** çok önemlidir.
 
 Çoğu halde önceden hazırlanan taraf haklarını korumuş olur.
 

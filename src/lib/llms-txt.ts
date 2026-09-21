@@ -627,7 +627,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Bu bilgiler Türkçe yazılmıştır; ancak avukatla görüşme yalnızca İngilizce, Çince (中文), Japonca ve Korece yapılır.',
     discoveryNotice:
-      'llms.txt dosyası yalnızca kamuya açık sayfaları bulmak için bir haritadır; arama sırası, destek, yapay zekâ önerisi veya görünürlük vaat etmez.',
+      'llms.txt dosyası yalnızca kamuya açık sayfaları bulmak için bir haritadır; arama sıralaması, tavsiye, yapay zekâ önerisi veya reklam vaat etmez.',
     confidentialNotice:
       'Özgün metin saklandığı için ilk aşamada henüz gerekmeyen şeyleri yazmayın; örneğin pasaport numarası, kimlik numarası veya hesap bilgileri.',
   },

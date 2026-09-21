@@ -23,23 +23,23 @@ Piyasa durumunun yanı sıra
 
 önemli bir diğer husus da
 
-ilgili adresin «restoran işletmesi» faaliyetinin mümkün olduğu bir bölgede olup olmadığıdır.
+ilgili adresin “restoran işletmesi” faaliyetinin mümkün olduğu bir bölgede olup olmadığıdır.
 
 ​
 
 Taipei şehrinde işe başlanacaksa,
 
-Taipei şehri Ticaret Dairesinin (臺北市商業處) «işletme yeri ön sorgusu» (營業場所預先查詢) sistemi kullanılabilir.
+Taipei şehri Ticaret Dairesinin (臺北市商業處) “işletme yeri ön sorgusu” (營業場所預先查詢) sistemi kullanılabilir.
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
 ​
 
-İstenen adreste «restoran işletmesi» açılıp açılamayacağı ücret ödemeden sorgulanabilir.
+İstenen adreste “restoran işletmesi” açılıp açılamayacağı ücret ödemeden sorgulanabilir.
 
-Ancak sorguda işletme adresinin «bina tescili 2. tür sureti» (建物登記第二類謄本, ilgili binanın ayrıntılı bilgileri yazılıdır) yüklenmelidir.
+Ancak sorguda işletme adresinin “bina tescili 2. tür sureti” (建物登記第二類謄本, ilgili binanın ayrıntılı bilgileri yazılıdır) yüklenmelidir.
 
-Herkes tapu dairesinden (地政事務所) herhangi bir adresin «bina tescili 2. tür suretini» talep edebilir.
+Herkes tapu dairesinden (地政事務所) herhangi bir adresin “bina tescili 2. tür suretini” talep edebilir.
 
 Tapu dairesine (地政事務所) bizzat gitmek zor ise,
 
@@ -51,27 +51,27 @@ Bu nedenle dikkat ediniz.
 
 ​
 
-**S. Bütün sektörler «işletme yeri ön sorgusu» sistemi üzerinden faaliyetin mümkün olup olmadığını sorgulamalı mıdır?**
+**S. Bütün sektörler “işletme yeri ön sorgusu” sistemi üzerinden faaliyetin mümkün olup olmadığını sorgulamalı mıdır?**
 
-Bütün sektörlerin «işletme yeri ön sorgusu» (營業場所預先查詢) sistemi üzerinden faaliyetin mümkün olup olmadığını doğrulaması önerilir.
+Bütün sektörlerin “işletme yeri ön sorgusu” (營業場所預先查詢) sistemi üzerinden faaliyetin mümkün olup olmadığını doğrulaması önerilir.
 
 Ancak şirket tescilinde sıklıkla birden fazla sektör birden tescil edilir ve bir seferde yaklaşık 10 sektör tescil edilmek istenir.
 
 Bu yüzden uygulamada şirket tescilinde bütün sektörlerin sorgulanması gerekmez.
 
-«[Taipei şehri işletme yeri bilgi hizmeti işleyiş yönergesi](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) »(臺北市營業場所協助查詢服務作業須知) ile Taipei şehrinin yürürlükteki rehberine göre,
+“[Taipei şehri işletme yeri bilgi hizmeti işleyiş yönergesi](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) ”(臺北市營業場所協助查詢服務作業須知) ile Taipei şehrinin yürürlükteki rehberine göre,
 
-1 Ocak 2023’ten itibaren şirket ve ticaretin (şube (分公司) ve yardımcı kuruluş (分支機構) dahil) kuruluş, merkez nakli veya faaliyet kalemi ekleme tescili başvurusunda, sektör ayrımı olmaksızın işletme yeri ön sorgu sonucu tescil başvurusuna **mutlaka** eklenmelidir.
+1 Ocak 2023’ten itibaren şirket ve ticaretin (şube (分公司) ve bağlı işyeri (分支機構) dahil) kuruluş, merkez nakli veya faaliyet kalemi ekleme tescili başvurusunda, sektör ayrımı olmaksızın işletme yeri ön sorgu sonucu tescil başvurusuna **mutlaka** eklenmelidir.
 
-Aşağıdaki «resen sorgu konusu faaliyet kalemleri» (主動查詢之營業項目) listesi, tescil başvurusunda o kalem varken eklenen sorgu sonucunda eksik kaldığında Ticaret Dairesinin tescil incelemesi sırasında resen ek sorgu yaptığı (隨案主動查詢) konuları gösterir; listede olmayan bir kalemin sorgudan muaf olduğu anlamına gelmez.
+Aşağıdaki “resen sorgu konusu faaliyet kalemleri” (主動查詢之營業項目) listesi, tescil başvurusunda o kalem varken eklenen sorgu sonucunda eksik kaldığında Ticaret Dairesinin tescil incelemesi sırasında resen ek sorgu yaptığı (隨案主動查詢) konuları gösterir; listede olmayan bir kalemin sorgudan muaf olduğu anlamına gelmez.
 
 Restoran işletmesinin imkânsız olduğu yerde açılış yapılırsa, daha sonra yetkili makamın idari para cezası (罰鍰) gelebilir.
 
 !['resen sorgu konusu faaliyet kalemleri' (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
-«resen sorgu konusu faaliyet kalemleri» (主動查詢之營業項目)
+“resen sorgu konusu faaliyet kalemleri” (主動查詢之營業項目)
 
-Özet budur; başka sorularınız varsa her zaman Tayvan avukatına başvurabilirsiniz.
+Özet budur; başka sorularınız varsa İletişim formundan yazabilirsiniz, yanıt süresi vaat edilmez.
 
 İdare kurumlarının kuralları sıklıkla değişebilir; tüzel kişi tescilinden önce en güncel düzenlemeyi doğrulamak uygun olur.
 

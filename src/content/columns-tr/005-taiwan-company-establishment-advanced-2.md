@@ -21,19 +21,19 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ​
 
-Aşağıdaki soru ve yanıtlar (Q&A), Tayvan’da şirket kuruluşunu (公司設立) düşünen kişilere yardımcı olmayı amaçlar.
+Aşağıdaki soru ve yanıtlar, Tayvan’da şirket kuruluşunu (公司設立) düşünen kişilere yardımcı olmayı amaçlar.
 
 ​
 
-**1. Kore’den Tayvan şirketi hazırlık hesabına (公司籌備處帳戶) sermaye (資本額) aktarılırken nelere dikkat edilmelidir? (bu nokta Kore rejimini ve Kore banka uygulamasını ilgilendirir)**
+**1. Yurt dışından Tayvan şirketi hazırlık hesabına (公司籌備處帳戶) sermaye (資本額) aktarılırken nelere dikkat edilmelidir? (Aşağıdaki banka ve döviz kuralları yalnızca Kore örneğidir; kendi ülkenizin kuralları ayrıca incelenmelidir.)**
 
 Kural olarak Kore bankaları, yatırımcının Kore’deki bir bankaya **bizzat** gidip kendi adına bir hesaptan aktarmasını ister.
 
 Çevrimiçi bankacılık veya Kore’deki bir yakın aracılığıyla vekâleten aktarım mümkün değildir.
 
-Ayrıca Kore döviz denetimi kurallarına göre, Kore uyruklu kişi yabancı bir tüzel kişi kurar veya pay edinirse «yurt dışı doğrudan yatırım beyanı» yatırmalıdır. Beyan, sermayenin Tayvan tüzel kişisine (台灣法人) aktarıldığı anda kayda geçmelidir; aksi halde döviz kurallarının ihlali nedeniyle yaptırımlar uygulanabilir.
+Ayrıca Kore döviz denetimi kurallarına göre, Kore uyruklu kişi yabancı bir tüzel kişi kurar veya pay edinirse “yurt dışı doğrudan yatırım beyanı” sunmalıdır. Beyan, sermayenin Tayvan tüzel kişisine (台灣法人) aktarıldığı anda kayda geçmelidir; aksi halde döviz kurallarının ihlali nedeniyle yaptırımlar uygulanabilir.
 
-Sermayeyi aktarmadan (資本金匯款) önce Kore’deki ana bankanıza danışınız.
+Sermayeyi aktarmadan (資本金匯款) önce kendi ülkenizde çalıştığınız bankaya danışınız.
 
 **​**
 
@@ -67,17 +67,17 @@ Bazı bankalar ek gerekler koyabilir, örneğin kuruluştan sonra hesabın en az
 
 **​**
 
-**5. Şirket Kore uyruklu kişileri çalışan olarak istihdam edebilir mi?**
+**5. Şirket yabancı uyruklu kişileri çalışan olarak istihdam edebilir mi?**
 
-A. 1. çalışan: başvuru, olağan yurt dışı Çinli veya yabancı yatırım işletmesinde yönetim işi (一般僑外投資事業主管工作) olarak sunulur. Aşağıdaki B noktasındaki «uzmanlık veya teknik nitelikte iş» ölçütü uygulanmaz, ancak yurt dışı Çinli veya yabancı koyulan sermayesi 1/3’ü aşan bir şirketin işletme sorumlusu (經理人) olmak gibi muhatap koşulları ile işverenin sermaye ve ciroya ilişkin sonuç koşulları uygulanır (inceleme ölçütleri madde 38 ve 39).
+A. İlk çalışan: başvuru, olağan yurt dışı Çinli veya yabancı yatırım işletmesinde yönetim işi (一般僑外投資事業主管工作) olarak sunulur. Aşağıdaki B noktasındaki “uzmanlık veya teknik nitelikte iş” ölçütü uygulanmaz, ancak yurt dışı Çinli veya yabancı koyulan sermayesi 1/3’ü aşan bir şirketin işletme sorumlusu (經理人) olmak gibi muhatap koşulları ile işverenin sermaye ve ciroya ilişkin sonuç koşulları uygulanır (inceleme ölçütleri madde 38 ve 39).
 
-B. 2. çalışandan itibaren kısıtlar vardır: istihdam edilen kişi sayısı 1 kişiyi aşarsa, çalışanın ilgili eğitimi ve deneyimi, istihdam ortalama ücret kuralları ile şirketin sermaye ve ciro kuralları «uzmanlık veya teknik iş»e (專門性或技術性工作) göre işlenir.
+B. İkinci çalışandan itibaren kısıtlar vardır: istihdam edilen kişi sayısı 1 kişiyi aşarsa, çalışanın ilgili eğitimi ve deneyimi, istihdam ortalama ücret kuralları ile şirketin sermaye ve ciro kuralları “uzmanlık veya teknik iş”e (專門性或技術性工作) göre işlenir.
 
 Tayvan Çalışma Bakanlığı (勞動部) sitesine bakınız: <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 
 ​
 
-Başka sorularınız varsa bize her zaman yazabilirsiniz.
+Başka sorularınız varsa İletişim formundan yazabilirsiniz; yanıt süresi vaat edilmez.
 
 ---
 

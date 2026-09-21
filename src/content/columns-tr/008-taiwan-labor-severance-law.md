@@ -1,5 +1,5 @@
 ---
-title: "Tayvan iş hukuku: Tayvan’da kıdem tazminatı (資遣費) almak gerçekten zor mu??"
+title: "Tayvan iş hukuku: Tayvan’da kıdem tazminatı (資遣費) almak gerçekten zor mu?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
 lastmod: "2026-09-10"
 date_display: "13 Eylül 2025"
@@ -9,18 +9,18 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Tayvan’da çalışan kendi isteğiyle ayrılırsa kıdem tazminatı (資遣費) alır mı?"
-    a: "Hayır. Kore’den farklı olarak Tayvan’da kıdem tazminatı (資遣費) ödeme yükümlülüğü ancak şirket çalışanı işten çıkardığında doğar; çalışan kendi isteğiyle ayrılırsa şirket kıdem tazminatı ödemek zorunda değildir."
+    a: "Hayır. Bazı hukuk düzenlerinden — örneğin Kore’den — farklı olarak Tayvan’da kıdem tazminatı (資遣費) ödeme yükümlülüğü ancak şirket çalışanı işten çıkardığında doğar; çalışan kendi isteğiyle ayrılırsa şirket kıdem tazminatı ödemek zorunda değildir."
   - q: "Disiplin nedeniyle işten çıkarmada da şirket kıdem tazminatı ödemeli midir?"
     a: "Hayır. Çalışan hukuka aykırı bir fiil işlerse, şirket kurallarını ihlal ederse veya meşru neden olmadan 3 gün üst üste izinsiz devamsızlık yaparsa (İş Standartları Kanunu 12. madde, 勞動基準法第12條) şirket önceden bildirim olmadan işten çıkarabilir ve kıdem tazminatı ödemek zorunda değildir. Buna karşılık ekonomik işten çıkarma (11. madde) önceden bildirimi ve kıdem tazminatı ödemesini gerektirir."
   - q: "Tayvan’da kıdem tazminatı nasıl hesaplanır?"
-    a: "Tamamlanan her 1 yıl kıdem için işveren, ortalama ücretin 0,5 aylık tutarını kıdem tazminatı olarak ödemelidir; en çok 6 aylık ücret. Bu formül, İşçi Emeklilik Ödeneği Yönetmeliği’nin (勞工退休金條例) 12. maddesinin uygulandığı kıdeme ilişkindir; İş Standartları Kanunu’nun (勞動基準法) 17. maddesinin uygulandığı kıdemde, 1 yıl başına ortalama ücretin 1 aylık tutarı tavan olmadan ödenir."
+    a: "Tamamlanan her 1 yıl kıdem için işveren, ortalama ücretin 0,5 aylık tutarını kıdem tazminatı olarak ödemelidir; en çok 6 aylık ücret. Bu formül, İşçi Emeklilik Kanunu’nun (勞工退休金條例) 12. maddesinin uygulandığı kıdeme ilişkindir; İş Standartları Kanunu’nun (勞動基準法) 17. maddesinin uygulandığı kıdemde, 1 yıl başına ortalama ücretin 1 aylık tutarı tavan olmadan ödenir."
 ---
 
-# Tayvan iş hukuku: Tayvan’da kıdem tazminatı (資遣費) almak gerçekten zor mu??
+# Tayvan iş hukuku: Tayvan’da kıdem tazminatı (資遣費) almak gerçekten zor mu?
 
 ![Öne çıkan görsel](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Merhaba, ben Tayvan avukatı Wei Tseng (曾雋崴).
+Wei Tseng (曾雋崴), Tayvan avukatı.
 
 Bugün sizinle Tayvan’daki kıdem tazminatı (資遣費) hakkında konuşmak istiyorum.
 
@@ -28,9 +28,9 @@ Bugün sizinle Tayvan’daki kıdem tazminatı (資遣費) hakkında konuşmak i
 
 Bunu zaten birçok kişi biliyordur.
 
-Kore’de çalışanlar işten ayrıldığında şirket kıdem tazminatı ödemelidir
+Bazı hukuk düzenlerinde — Kore bunlardan biridir — çalışan işten ayrıldığında şirket kural olarak kıdem tazminatı öder
 
-Tayvan ise Kore’den farklıdır:
+Tayvan ise bundan farklıdır:
 
 Kıdem tazminatı ödeme yükümlülüğü ancak şirket çalışanı işten çıkardığında doğar.
 
@@ -62,7 +62,7 @@ Bunu size basit bir tabloda özetliyorum.
 
 > Tayvan’da tamamlanan her 1 yıl kıdem (年資) için
 > işveren, ortalama ücretin (平均工資) 0,5 aylık tutarını kıdem tazminatı olarak ödemelidir.
-> (en çok 6 aylık ücret) Bu formül, İşçi Emeklilik Ödeneği Yönetmeliği’nin (勞工退休金條例) 12. maddesinin uygulandığı kıdeme ilişkindir; İş Standartları Kanunu’nun (勞動基準法) 17. maddesinin uygulandığı kıdemde, 1 yıl başına ortalama ücretin 1 aylık tutarı tavan olmadan ödenir.
+> (en çok 6 aylık ücret) Bu formül, İşçi Emeklilik Kanunu’nun (勞工退休金條例) 12. maddesinin uygulandığı kıdeme ilişkindir; İş Standartları Kanunu’nun (勞動基準法) 17. maddesinin uygulandığı kıdemde, 1 yıl başına ortalama ücretin 1 aylık tutarı tavan olmadan ödenir.
 
 ​
 
@@ -78,7 +78,7 @@ ve çalışanları kendi isteğiyle istifa etmeye iter.
 
 Çalışanlar tedbirli olmalı
 
-ve şirketin niyetine kapılmamaya dikkat etmelidir.
+ve şirketin bu yönlendirmesine kapılmamaya dikkat etmelidir.
 
 ​
 
@@ -118,7 +118,7 @@ Aksi halde B şirketi bırakmalıymış;
 
 B’ye bir A4 kâğıdı verdi
 
-ve şunu yazmasını söyledi: «Ben, OOO, görevimi ve ücretimi gönüllü olarak düşürüyorum»
+ve şunu yazmasını söyledi: “Ben, OOO, görevimi ve ücretimi gönüllü olarak düşürüyorum”
 
 içerik olarak.
 
@@ -174,7 +174,7 @@ ve kendi isteğiyle istifa etmediğini ispatlayabildi.
 
 Bu yüzden daha sonra bir avukatın yardımıyla
 
-yüksek bir kıdem tazminatı alabildi,
+kanunun tanıdığı kıdem tazminatı hakkını tespit ettirebildi,
 
 oysa ayrılan diğer çalışanlar o kadar şanslı olmadı.
 
@@ -218,9 +218,9 @@ ve şirketin sizi uygunsuz biçimde işten çıkarmamasına
 
 veya kendi isteğinizle istifa etmeye itmemesine dikkat edin
 
-Kıdem tazminatı çalışanın yasal hakkıdır,
+Koşulları oluştuğunda kıdem tazminatı (資遣費) kanunun tanıdığı bir haktır,
 
-ve şirket elbette ödemelidir.
+ve işveren bunu ödemekle yükümlüdür.
 
 Tayvan’da haklarınızı da korumalısınız.
 

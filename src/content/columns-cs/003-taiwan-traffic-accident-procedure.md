@@ -1,5 +1,5 @@
 ---
-title: "Q&A k postupu po dopravních nehodách na Tchaj-wanu: úkony na místě, zavinění, smír a náhrada škody"
+title: "Otázky a odpovědi k postupu po dopravních nehodách na Tchaj-wanu: úkony na místě, zavinění, smír a náhrada škody"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
 date_display: "13. září 2025"
@@ -9,13 +9,13 @@ categories:
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 ---
 
-# Q&A k postupu po dopravních nehodách na Tchaj-wanu: úkony na místě, zavinění, smír a náhrada škody
+# Otázky a odpovědi k postupu po dopravních nehodách na Tchaj-wanu: úkony na místě, zavinění, smír a náhrada škody
 
 ![Obrázek vysvětlující bezpečnostní opatření na místě a zachování důkazů ihned po dopravní nehodě na Tchaj-wanu](../images/003-taiwan-traffic-accident-procedure/featured-01.jpg)
 
 ![Příkladový obrázek zaznamenávající polohu vozidel a stopy na vozovce na místě dopravní nehody](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-Dojde-li na Tchaj-wanu k dopravní nehodě (交通事故), je třeba nejprve zajistit bezpečnost, provést oznámení a zachování důkazů a poté postupně posoudit lhůtu nároku, zavinění (過失) a rozsah smíru (和解). Níže je uveden obecný pořadí postupu založený na předpisech Tchaj-wanu a pokynech veřejných orgánů; odpovědnost a konkrétní postup se mohou lišit podle okolností každé nehody.
+Dojde-li na Tchaj-wanu k dopravní nehodě (交通事故), je třeba nejprve zajistit bezpečnost, provést oznámení a zachování důkazů a poté postupně posoudit lhůtu nároku, zavinění (過失) a rozsah smíru (和解). Níže je uvedeno obecné pořadí postupu založený na předpisech Tchaj-wanu a pokynech veřejných orgánů; odpovědnost a konkrétní postup se mohou lišit podle okolností každé nehody.
 
 ## Q1. Lze po nehodě opustit místo události?
 
@@ -29,11 +29,11 @@ Jsou-li jen majetkové škody a vozidlo lze posunout, zásada zní: označit pol
 
 ## Q2. Jaké důkazy je třeba zachovat v první řadě?
 
-Nejprve zajistěte osobní bezpečnost a výstražné značky; jsou-li zranění nebo je-li třeba záchrany, volejte 119, a jde-li o trestný čin nebo naléhavou bezpečnostní situaci, 110 nebo 112. Proveďte také oznámení na policii podle okolností dopravní nehody.
+Nejprve zajistěte osobní bezpečnost a výstražné značky. Na Tchaj-wanu volejte při zranění nebo potřebě záchrany 119 (záchranná služba a hasiči), při trestném činu nebo naléhavé bezpečnostní situaci 110 (policie); z mobilního telefonu lze volat 112. Proveďte také oznámení na policii podle okolností dopravní nehody.
 
 Když je bezpečnost zajištěna, pořiďte celkové i detailní snímky, abyste zaznamenali polohu a poškození vozidel, silniční značení, světla a povětrnostní podmínky. Nelze opomenout kontaktní údaje svědků, žádost o zachování obrazů CCTV (監視器影像) a palubní kamery (行車紀錄器), údaje stran, vozidla a pojištění a zdravotní dokumentaci (病歷). Osobní snímky jsou užitečné, avšak nenahrazují policejní zásah požadovaný u nehody s poraněním nebo se smrtí.
 
-Pokud jde o listiny policie, na místě nehody lze obdržet registrační spojovací lístek stran dopravní nehody (道路交通事故當事人登記聯單). Po uplynutí 7 dnů od data nehody lze požádat o náčrt a snímky místa (現場圖 / 現場照片); po uplynutí 30 dnů od data nehody lze požádat o tabulku předběžné analýzy dopravní nehody (道路交通事故初步分析研判表). Okamžik vydání a předpoklady žádosti je třeba znovu potvrdit u příslušného policejního orgánu.
+Pokud jde o listiny policie, na místě nehody lze obdržet evidenční lístek účastníků dopravní nehody (道路交通事故當事人登記聯單). Po uplynutí 7 dnů od data nehody lze požádat o náčrt a snímky místa (現場圖 / 現場照片); po uplynutí 30 dnů od data nehody lze požádat o tabulku předběžné analýzy dopravní nehody (道路交通事故初步分析研判表). Okamžik vydání a předpoklady žádosti je třeba znovu potvrdit u příslušného policejního orgánu.
 
 ## Q3. Při poranění, jaké nároky a jaké lhůty je třeba ověřit?
 
@@ -64,9 +64,9 @@ Jde-li o trestný čin stíhaný na soukromou žalobu, podle článku 238 trestn
 ### Oficiální základy Q1–Q5
 
 - [Nařízení o řízení a sankcích silničního provozu (道路交通管理處罰條例), článek 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
-- [Trestní zákon Čínské republiky, článek 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
-- [Trestní zákon Čínské republiky, článek 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
-- [Trestní zákon Čínské republiky, článek 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
+- [Trestní zákon Tchaj-wanu, článek 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
+- [Trestní zákon Tchaj-wanu, článek 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [Trestní zákon Tchaj-wanu, článek 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
 - [Tchajwanský trestní řád, článek 237](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001)
 - [Trestní řád, článek 238](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=238&pcode=C0010001)
 - [Trestní řád, článek 487](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=487&pcode=C0010001)
@@ -87,7 +87,7 @@ Tabulka předběžné analýzy dopravní nehody sestavená policií je předbě�
 
 Podle použitelných předpisů může legitimovaná strana požádat o znalecký posudek nehody vozidel (車輛行車事故鑑定); orgán, který věc vede, ji může postoupit a soudní orgán ji může zadat. Žádost strany se podává zásadně do 6 měsíců od data nehody; ve věcech již ve vyšetřování nebo v souzení probíhá znalecký posudek zadáním soudního orgánu, nikoli novou přímou žádostí.
 
-Při nesouhlasu s názorem znaleckého posudku lze požádat o přezkum, avšak přezkum se omezuje na jediný okamžik. Názor znaleckého posudku a přezkumu je důkazem nebo podkladem odkazu a soud nezávisle hodnotí celek spisu, včetně výpovědí, obrazů a protokolů místa.
+Při nesouhlasu s názorem znaleckého posudku lze požádat o přezkum, ten však lze podat jen jednou. Názor znaleckého posudku a přezkumu je důkazem nebo podkladem odkazu a soud nezávisle hodnotí celek spisu, včetně výpovědí, obrazů a protokolů místa.
 
 ## Q7. Jaké škody lze uplatnit po nehodě?
 
@@ -171,13 +171,13 @@ Otázku, proti komu se občanskoprávní nárok směřuje, je třeba odlišit od
 
 ## Q15. Jaká plnění a jaká krytí povinného pojištění vozidel je třeba ověřit?
 
-Povinnost uzavření podle článku 6 zákona o povinném pojištění odpovědnosti vozidel (強制汽車責任保險法) spočívá zásadně na vlastníkovi vozidla a v předvídaných případech také na uživateli nebo správci tohoto vozidla. Tento režim zřizuje strukturu krytí bez zavinění (無過失給付制度) pro osobu zraněnou nebo zemřelou v důsledku automobilové nehody, avšak je třeba ověřit rozsah cestujících nebo 3. osoby (第三人) mimo vozidlo, který stanoví zákon.
+Povinnost uzavření podle článku 6 zákona o povinném pojištění odpovědnosti vozidel (強制汽車責任保險法) spočívá zásadně na vlastníkovi vozidla a v předvídaných případech také na uživateli nebo správci tohoto vozidla. Tento režim zřizuje strukturu krytí bez zavinění (無過失給付制度) pro osobu zraněnou nebo zemřelou v důsledku automobilové nehody, avšak je třeba ověřit rozsah cestujících nebo třetích osob (第三人) mimo vozidlo, který stanoví zákon.
 
 U nehody jednoho vozidla není řidič tohoto vozidla zásadně adresátem plnění povinného pojištění tohoto vozidla. Avšak u nehody, v níž se účastní několik vozidel, existují případy, v nichž řidič může uplatnit plnění u pojistitele povinného pojištění jiného zúčastněného vozidla.
 
-Sazebník plnění (強制汽車責任保險給付標準) změněný 2026-05-29 se uplatní na nehody, které nastaly od 2026-07-01. Strop přiměřených a potřebných lékařských nákladů za poranění činí TWD 200.000 v novém tchajwanském dolaru; plnění za invaliditu (失能) činí od TWD 80.000 do TWD 3.000.000 podle 15 zákonných stupňů; plnění za smrt činí TWD 3.000.000 a společné maximum smrti, invalidity a lékařských nákladů pro 1 poškozeného a 1 nehodu činí TWD 3.200.000. Na dřívější nehody se může uplatnit předchozí sazebník.
+Sazebník plnění (強制汽車責任保險給付標準) změněný 29. 5. 2026 se uplatní na nehody, které nastaly od 1. 7. 2026. Strop přiměřených a potřebných lékařských nákladů za poranění činí TWD 200.000 v novém tchajwanském dolaru; plnění za invaliditu (失能) činí od TWD 80.000 do TWD 3.000.000 podle 15 zákonných stupňů; plnění za smrt činí TWD 3.000.000 a společné maximum smrti, invalidity a lékařských nákladů pro 1 poškozeného a 1 nehodu činí TWD 3.200.000. Na dřívější nehody se může uplatnit předchozí sazebník.
 
-Pojištění odpovědnosti vůči 3. osobám (第三人責任險), pojištění úrazů řidiče (駕駛人傷害險) a pojištění škod vlastního vozidla (車體損失險) jsou fakultativními produkty smluvní povahy. Skutečné krytí se liší podle pojištěného, stropu, spoluúčasti (自負額), výluk, zavinění a jiných podmínek pojistky, takže pojistku a podmínky je třeba ověřit věc po věci.
+Pojištění odpovědnosti vůči třetím osobám (第三人責任險), pojištění úrazů řidiče (駕駛人傷害險) a pojištění škod vlastního vozidla (車體損失險) jsou fakultativními produkty smluvní povahy. Skutečné krytí se liší podle pojištěného, stropu, spoluúčasti (自負額), výluk, zavinění a jiných podmínek pojistky, takže pojistku a podmínky je třeba ověřit věc po věci.
 
 ### Oficiální základy Q11–Q15
 
@@ -190,28 +190,28 @@ Pojištění odpovědnosti vůči 3. osobám (第三人責任險), pojištění 
 - [Občanský zákoník, článek 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
 - [Rozsudek okresního soudu Tchao-jüan, rok 112, věc 壢簡字 číslo 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Občanský zákoník, článek 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
-- [Trestní zákon Čínské republiky, článek 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [Trestní zákon Tchaj-wanu, článek 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Zákon o povinném pojištění odpovědnosti vozidel](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
 - [Sazebník plnění povinného pojištění odpovědnosti vozidel](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Vzorová smlouva pojištění vozidel soukromého užití Komise finančního dohledu (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Po nehodě, lze vše nechat v rukou pojistitele?
+Q16. Lze po nehodě nechat vše na pojistiteli?
 
 ​
 
-Podle mé zkušenosti pojistitelé často nevyřizují dostatečně emoční stránku stran nehody.
+V praxi pojistitelé často neřeší dostatečně citlivě emoční stránku věci na straně účastníků nehody.
 
 ​
 
-Mohou zanedbat důležité části, které se týkají pocitů druhé strany, jako omluvy a výrazy útěchy.
+Mohou opomíjet i to, co je pro druhou stranu podstatné — omluvu a projev účasti.
 
 ​
 
-Pro pojistitele vydání dodatečně TWD 500.000 nebo TWD 1.000.000 v konkrétní věci podstatně neovlivní celkový zisk pojistitele, avšak pro stranu nehody může tato částka rozhodovat, zda jsou či nejsou trestní předchozí odsouzení (前科).
+Pro pojistitele nemá vyplacení dalších TWD 500.000 nebo TWD 1.000.000 v jednotlivé věci podstatný vliv na celkový hospodářský výsledek; pro účastníka nehody však může taková částka rozhodovat o tom, zda bude, či nebude mít záznam v rejstříku trestů (前科).
 
 ​
 
-Může také vzniknout střet zájmů mezi pojistitelem a stranou a protože pojistitel musí vést mnoho věcí, je mu obtížné věnovat každé dostatečný čas.
+Mezi pojistitelem a účastníkem nehody navíc může vzniknout střet zájmů; pojistitel vyřizuje velké množství věcí, a každé z nich proto může věnovat jen omezený čas.
 
 ​
 
@@ -219,11 +219,11 @@ Může také vzniknout střet zájmů mezi pojistitelem a stranou a protože poj
 
 ​
 
-Nedoporučuji proto svěřovat celek sporu pojistiteli.
+Není proto vhodné přenechat celý spor pojistiteli.
 
 ​
 
-Svěří-li se spis pojistiteli, je třeba průběžně sledovat proces vedení a pečlivě posuzovat listiny obou stran.
+Je-li věc svěřena pojistiteli, je třeba průběžně sledovat postup vyřizování a pečlivě posuzovat listiny obou stran.
 
 ​
 
@@ -235,11 +235,11 @@ Q17. Jaká je trestní odpovědnost za ublížení na zdraví z nedbalosti pacha
 
 ​
 
-Při ublížení na zdraví z nedbalosti soudy ukládají v současnosti trest přibližně 3 měsíců.
+V některých rozsudcích byl za ublížení na zdraví z nedbalosti uložen trest přibližně 3 měsíců; obvyklý ani zaručený výsledek však neexistuje.
 
 ​
 
-Je-li zaměňován za pokutu (易科罰金), článek 41 odstavec 1 trestního zákona stanoví záměnu na TWD 1.000, TWD 2.000 nebo TWD 3.000 za 1 den; počítáno podle TWD 1.000 za den, trest 3 měsíců odpovídá 3 × 30 × TWD 1.000 = TWD 90.000.
+Je-li trest přeměněn na peněžitý trest (易科罰金), článek 41 odstavec 1 trestního zákona stanoví přepočet TWD 1.000, TWD 2.000 nebo TWD 3.000 za 1 den; při sazbě TWD 1.000 za den odpovídá trest 3 měsíců částce 3 × 30 × TWD 1.000 = TWD 90.000.
 
 ​
 
@@ -247,7 +247,7 @@ Je-li zaměňován za pokutu (易科罰金), článek 41 odstavec 1 trestního z
 
 ​
 
-Za těžké ublížení na zdraví z nedbalosti se obvykle ukládá trest 4 měsíců a za smrt z nedbalosti (過失致死) se obvykle ukládá trest 6 měsíců.
+V některých rozsudcích byl za těžké ublížení na zdraví z nedbalosti uložen trest 4 měsíců a za smrt z nedbalosti (過失致死) trest 6 měsíců; o typický ani zaručený výsledek však nejde.
 
 ​
 
@@ -267,7 +267,7 @@ Při smrti z nedbalosti zpětvzetí žaloby není možné; avšak uzavřete-li s
 
 ​
 
-Může nastat podmíněný odklad výkonu (緩刑) a nejít do vězení.
+V některých případech je možné podmíněné odsouzení, tedy podmíněný odklad výkonu trestu (緩刑); příslibem to však není.
 
 ​
 
@@ -299,31 +299,23 @@ Q20. Jak se hledá advokát k dopravní nehodě?
 
 ​
 
-Protože dopravní nehody jsou věcmi velmi častými, obecný procesní advokát, který nashromáždil několik let praktické zkušenosti, může vést věc dopravní nehody.
+Dopravní nehody patří k velmi častým věcem, takže je zpravidla může vést i advokát se všeobecnou sporovou praxí a několikaletou zkušeností.
 
 ​
 
-Důležitá je tehdy pečlivost a poctivost advokáta.
+Rozhoduje především pečlivost a poctivost advokáta.
 
 ​
 
-Podstatné je, aby advokát s pozorností posoudil všechny položky nároku a usiloval o to, aby byla získána náhrada pokud možno nejvyšší.
+Podstatné je, aby advokát pečlivě posoudil všechny položky nároku a usiloval o náhradu v rozsahu, který skutkový stav a důkazy odůvodňují.
 
 ​
 
-Dále musí advokát jasně vysvětlit situaci strany a jasně varovat o předvídatelných rizicích, nedojde-li ke smíru.
+Advokát má dále srozumitelně vysvětlit situaci klienta a upozornit na předvídatelná rizika pro případ, že ke smíru nedojde.
 
 ​
 
-Je třeba se vyvarovat advokáta, který věc nafukuje a tvrdí, že nelze uzavírat smír a že je třeba se soudit až do konce na občanskoprávní a trestní rovině, jen aby přijal zakázku.
-
-​
-
-​
-
-​
-
-Tím končím otázky a odpovědi o dopravních nehodách. Doufám, že vám budou užitečné.
+Je namístě vyhnout se advokátovi, který věc nafukuje a jen kvůli získání zakázky tvrdí, že smír uzavřít nelze a že je nutné se soudit až do konce v občanskoprávní i trestní rovině.
 
 ​
 
@@ -331,11 +323,19 @@ Tím končím otázky a odpovědi o dopravních nehodách. Doufám, že vám bud
 
 ​
 
-Po vedení mnoha dopravních nehod chci uvést jeden důležitý bod.
+Tím tento přehled otázek a odpovědí k dopravním nehodám končí.
 
 ​
 
-Z důvodu poranění nebo smrti oběti ona sama nebo její rodina utrpí fyzickou a duševní bolest.
+​
+
+​
+
+Z praxe ve věcech dopravních nehod vyplývá ještě jeden podstatný bod.
+
+​
+
+Poranění nebo smrt poškozeného přináší jemu samému i jeho rodině fyzickou a duševní újmu.
 
 ​
 
@@ -351,7 +351,7 @@ Oběť tak zůstává velmi zraněná a upadá do hněvu, takže často neustoup
 
 ​
 
-Tento bod proto nelze absolutně zanedbat a podle okolností je třeba se poradit s advokátkou nebo advokátem.
+Tento aspekt proto nelze podceňovat; podle okolností je namístě poradit se s advokátkou nebo advokátem.
 
 ​
 
@@ -359,7 +359,7 @@ Tento bod proto nelze absolutně zanedbat a podle okolností je třeba se poradi
 
 ​
 
-Máte-li další otázky, zanechte je v komentářích.
+Máte-li další otázky, popište je v žádosti o posouzení na kontaktní stránce; porada probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.
 
 ​
 

@@ -17,9 +17,9 @@ Na základě věci, v níž se korejský vysokoškolský student zranil, když v
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
-Nehoda nastala v posilovně v Taichungu (臺中) při tréninku mrtvého tahu (硬舉) vedeném trenérem. Po úrazu nestačí setrvat jen u faktu, že k nehodě došlo uvnitř posilovny; je třeba společně posoudit sportovní zkušenost a zdravotní stav uživatele, druh cvičení a zátěž, vysvětlení a pokyny trenéra, pohyb a reakci v onom okamžiku, příčinnou souvislost (因果關係) mezi úrazem a cvičením a dokumenty, které podpírají škodu.
+Nehoda nastala v posilovně v Tchaj-čungu (臺中) při tréninku mrtvého tahu (硬舉) vedeném trenérem. Po úrazu nestačí setrvat jen u faktu, že k nehodě došlo uvnitř posilovny; je třeba společně posoudit sportovní zkušenost a zdravotní stav uživatele, druh cvičení a zátěž, vysvětlení a pokyny trenéra, pohyb a reakci v onom okamžiku, příčinnou souvislost (因果關係) mezi úrazem a cvičením a dokumenty, které podpírají škodu.
 
-Byla jsem advokátkou (訴訟代理人) žalobce, korejského studenta. Okresní soud v Taichungu 24. 1. 2022 v rozsudku 1. instance ve spotřebitelské věci č. 7 roku 109 (109年度消字第7號) nařídil žalovanému zaplatit [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) a úroky uvedené v rozsudku.
+Advokátka Wei Tseng zastupovala žalobce, korejského studenta, jako procesní zástupkyně (訴訟代理人). Okresní soud v Tchaj-čungu 24. 1. 2022 v rozsudku 1. instance ve spotřebitelské věci č. 7 roku 109 (109年度消字第7號) nařídil žalovanému zaplatit [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) a úroky uvedené v rozsudku.
 
 Poté tisk uvedl, že strany uzavřely smír (和解) ve 2. instanci. Samotný oficiální rozsudek 1. instance neumožňuje potvrdit výsledek 2. instance ani výši smíru; nelze to číst jako konečný výsledek rozsudku 1. instance.
 
@@ -71,19 +71,19 @@ Níže uvedené je obecná informace k vysvětlení sporů o úraz v posilovně 
 
 To neznamená, že odpovědnost podniku nebo trenéra je uznána pokaždé, když k úrazu dojde v posilovně. Je třeba posuzovat věc po věci, jaká konkrétní povinnost péče existovala, zda byla porušena, zda je příčinná souvislost mezi porušením a úrazem, zda vznikla skutečná škoda, jaké námitky má protistrana a zda existuje důkaz podpírající každé tvrzení a každou námitku.
 
-Jsou-li splněny zákonné znaky trestného činu ublížení na zdraví z nedbalosti (過失傷害), lze posoudit trestní oznámení (告訴). Lze také posoudit občanský nárok na náhradu škody, avšak která základna se uplatní z odpovědnosti smluvní, deliktní (侵權行為) a z ochrany spotřebitele, jakož i rozsah odpovědnosti, se liší podle konkrétních skutkových okolností. To, že u jedné nehody lze posoudit více postupů, neznamená, že je třeba je všechny podstoupit, ani že úspěch jedné ze stran je předem dán.
+Jsou-li splněny zákonné znaky trestného činu ublížení na zdraví z nedbalosti (過失傷害), lze posoudit trestní oznámení (告訴). Lze také posoudit občanský nárok na náhradu škody, avšak který právní základ se uplatní — smluvní odpovědnost, delikt (侵權行為) nebo ochrana spotřebitele — i rozsah odpovědnosti se liší podle konkrétních skutkových okolností. To, že u jedné nehody lze posoudit více postupů, neznamená, že je třeba je všechny podstoupit, ani že úspěch jedné ze stran je předem dán.
 
 ## 2. Jaké lhůty se uplatní na trestní oznámení a občanskou náhradu škody?
 
 Podle [čl. 287 tchajwanského trestního zákoníku (刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001) je trestný čin ublížení na zdraví z nedbalosti podle čl. 284 trestního zákoníku trestným činem, který k zahájení stíhání vyžaduje oznámení (告訴乃論之罪). Podle [čl. 237 tchajwanského trestního řádu (刑事訴訟法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001) musí oprávněný k oznámení podat oznámení zásadně do 6 měsíců ode dne, kdy poznal pachatele.
 
-Právo žádat náhradu škody z deliktu podle [čl. 197 tchajwanského občanského zákoníku (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) zaniká zásadně, není-li vykonáváno po 2 roky od okamžiku, kdy poškozený poznal škodu i dlužníka náhrady, a zaniká také, když od deliktu uplynulo 10 let.
+Právo žádat náhradu škody z deliktu podle [čl. 197 tchajwanského občanského zákoníku (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) zaniká zásadně, není-li uplatněno do 2 let od okamžiku, kdy se poškozený dozvěděl o škodě i o osobě povinné k náhradě, a zaniká také, když od deliktu uplynulo 10 let.
 
 Pokud však přichází v úvahu jiný důvod nároku, jako smluvní odpovědnost, nebo pokud se uplatní jiná pravidla o počátku běhu, průběhu, přerušení atd., může se to lišit podle skutkových okolností. Lhůtu nelze určovat jen podle data nehody nebo diagnózy; bezpečnější je včas a jednotlivě ověřit možné základy nároku a referenční data.
 
 ## 3. Hned po nehodě, jaké důkazy je třeba zachovat a jak?
 
-Aby bylo možné vysvětlit odpovědnost, příčinnou souvislost a škodu, je vhodné shromáždit společně nejen snímky CCTV (監視器影像) z okamžiku nehody, ale také zdravotní dokumentaci (病歷) a lékařské osvědčení (診斷證明書), stvrzenky za léčebné výdaje (醫療費用), dopravu (就醫交通費) a péči (看護費用), zprávy vyměněné s posilovnou a trenérem, prohlášení svědků, rezervaci lekcí a evidenci docházky, plán cvičení a záznam tréninku. Je vhodné v možném rozsahu vyfotografovat místo úrazu a stav místa nehody a uspořádat podle data průběh před nehodou a po ní i obsah komunikace, aby později bylo snazší dokumenty porovnat.
+Aby bylo možné vysvětlit odpovědnost, příčinnou souvislost a škodu, je vhodné shromáždit společně nejen snímky CCTV (監視器影像) z okamžiku nehody, ale také zdravotní dokumentaci (病歷) a lékařské osvědčení (診斷證明書), stvrzenky za léčebné výdaje (醫療費用), dopravu k lékaři (就醫交通費) a ošetřovatelskou péči (看護費用), zprávy vyměněné s posilovnou a trenérem, prohlášení svědků, rezervaci lekcí a evidenci docházky, plán cvičení a záznam tréninku. Je vhodné v možném rozsahu vyfotografovat místo úrazu a stav místa nehody a uspořádat podle data průběh před nehodou a po ní i obsah komunikace, aby později bylo snazší dokumenty porovnat.
 
 Snímky mohou být po uplynutí doby uchování přepsány nebo se z jiných důvodů stát nepoužitelnými. Lze proto zvážit žádost posilovně o zachování prostřednictvím doručenky s potvrzením obsahu (存證信函) nebo písemnosti jménem advokátky (律師函), která konkrétně zaznamená potřebný časový úsek, místo a polohu kamery. Tato písemnost je praktickým opatřením k zaznamenání toho, co a kdy bylo žádáno. Sama o sobě však protistraně neukládá novou právní povinnost snímky zachovat ani nebrání jejich smazání a samotná okolnost, že snímky nezůstaly, také nevede soud k automaticky nepříznivému posouzení.
 
@@ -107,9 +107,9 @@ Ano. Skutečnost, že pojištění existuje, může být významná při posuzov
 
 Zejména ztráta pracovní schopnosti, snížení příjmu v době zotavení a nemajetková škoda mohou vyžadovat zdravotní, příjmové a profesní podklady nebo stanovisko znalce. Částka, kterou navrhne pojistitel, nebo ta, kterou žádá poškozený, se nestává ihned částkou uznanou soudem a výsledek posouzení postižení také náhradu automaticky neurčuje. Ve skutečném postupu je třeba společně ověřit pojistku a podmínky, obsah oznámení nehody, odpověď pojistitele, průběh léčby a podklady škody.
 
-Pokud jste utrpěli úraz v posilovně, je důležité nejprve získat potřebné ošetření, zachovat dokumenty, které ještě lze zajistit, než zmizí, a včas získat individuální vodítko k lhůtám a postupům, které se na věc mohou vztahovat. Vyjednávání, spotřebitelská stížnost (消費申訴) nebo smírčí řízení (調解), trestní oznámení a občanský nárok na náhradu škody jsou všechny prostředky, které lze podle věci zvolit, a nejsou postupy, které by bylo vždy nutné podstoupit vcelku.
+Pokud jste utrpěli úraz v posilovně, je důležité nejprve získat potřebné ošetření, zachovat dokumenty, které ještě lze zajistit, než zmizí, a včas získat individuální právní radu k lhůtám a postupům, které se na věc mohou vztahovat. Vyjednávání, spotřebitelská stížnost (消費申訴) nebo smírčí řízení (調解), trestní oznámení a občanský nárok na náhradu škody jsou všechny prostředky, které lze podle věci zvolit, a nejsou postupy, které by bylo vždy nutné podstoupit vcelku.
 
-Pád na podlaze provozovny, zdravotní újma jídlem a úraz při využívání odborné služby mohou mít také za sporné body povinnost bezpečnosti, příčinnou souvislost, škodu a důkaz. Závěr z věci posilovny však nelze beze změny uplatnit na jinou nehodu, proto je třeba smlouvu, jednání a příslušné normy každého případu posoudit zvlášť.
+Pád v provozovně, újma na zdraví způsobená jídlem a úraz při odborné službě mohou mít také za sporné body povinnost bezpečnosti, příčinnou souvislost, škodu a důkaz. Závěr z věci posilovny však nelze beze změny uplatnit na jinou nehodu, proto je třeba smlouvu, jednání a příslušné normy každého případu posoudit zvlášť.
 
 ---
 

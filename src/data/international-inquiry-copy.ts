@@ -1342,9 +1342,9 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Tato stránka je psána česky jako obecná orientace, nikoli jako právní rada ve Vaší věci.',
     consultationNotice:
-      'Porada probíhá ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky.',
+      'Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky.',
     methodConfirmationNotice:
-      'Nemůžete-li užít žádný ze čtyř jazyků, zvolte «Způsob komunikace je třeba potvrdit». Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
+      'Pokud neovládáte žádný ze čtyř jazyků konzultace, zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
     preparationNotice:
       'Shrnutí můžete napsat ve svém jazyce. Původní text se uchová tak, jak jste jej napsali, a automaticky se nepřekládá.',
     heading: 'Odeslat žádost o posouzení',
@@ -1362,7 +1362,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     originalLanguageLabel: 'Jazyk, v němž píšete',
     originalLanguagePlaceholder:
       'Například čeština, angličtina, čínština nebo jiný jazyk',
-    preferredConsultationLanguageLabel: 'Jazyk, který si přejete pro poradu',
+    preferredConsultationLanguageLabel: 'Jazyk, který si přejete pro konzultaci',
     originalTextLabel: 'Krátký popis věci (ve Vašem jazyce)',
     originalTextPlaceholder:
       'Napište, co se stalo, jakou pomoc potřebujete a lhůtu, existuje-li. Nepište číslo pasu, číslo dokladu ani údaje o účtu.',

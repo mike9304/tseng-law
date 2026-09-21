@@ -9,9 +9,9 @@ categories:
 featured_image: "../images/017-taiwan-logistics-business-setup/featured-01.jpg"
 faq:
   - q: "Musí každá činnost související s logistikou na Tchaj-wanu získat povolení automobilové nákladní dopravy (汽車貨運業)?"
-    a: "Není tomu vždy tak. «Logistika» je široký praktický pojem; potřeba povolení se neurčuje jen podle názvu společnosti nebo odvětví zapsaných v rejstříku. Pokud společnost přijímá protiplnění a dopravuje cizí náklad nákladním automobilem, může tato činnost tvořit automobilovou nákladní dopravu. Naproti tomu skladování, balení, provoz systémů, odeslání v postavení odesílatele (貨主), zprostředkování dopravy (運送承攬) a obdobné činnosti je třeba posoudit jednotlivě podle smluvního vztahu, dopravní odpovědnosti, obsahu protiplnění a skutečného stavu provozu vozidel."
+    a: "Povolení automobilové nákladní dopravy není potřeba vždy. „Logistika“ je široký praktický pojem; potřeba povolení se neurčuje jen podle názvu společnosti nebo odvětví zapsaných v rejstříku. Pokud společnost přijímá protiplnění a dopravuje cizí náklad nákladním automobilem, může tato činnost tvořit automobilovou nákladní dopravu. Naproti tomu skladování, balení, provoz systémů, odeslání v postavení odesílatele (貨主), zasílatelství (運送承攬) a obdobné činnosti je třeba posoudit jednotlivě podle smluvního vztahu, dopravní odpovědnosti, obsahu protiplnění a skutečného stavu provozu vozidel."
   - q: "Jaké jsou požadavky na kapitál, vozidla a postup k novému založení běžné automobilové nákladní dopravy?"
-    a: "Pro běžnou automobilovou nákladní dopravu se zásadně uplatní minimální kapitál 25.000.000 TWD (新臺幣) a nejméně 20 nových nákladních automobilů. Pro činnost věnovanou pouze stěhování (搬家) se však uplatní 10.000.000 TWD a nejméně 8 jednotek a pro činnost provozovanou na Kinmenu (金門) a Lienchiangu neboli Matsu (連江・馬祖) 10.000.000 TWD a nejméně 5 jednotek, v posledním případě s omezením provozní oblasti. U dopravy malým nákladním vozem provozované fyzickou osobou existují vlastní omezené výjimky, zejména 1 malý nákladní vůz ve vlastnictví, stáří vozidla nepřesahující 2 roky, profesní řidičské oprávnění malého vozidla (小型車職業駕駛執照) a zápis bydliště (戶籍) v příslušném obvodu. Zahraniční investici, schválení Ministerstva dopravy (交通部), povolení přípravy založení (籌設許可), zápis společnosti a obchodu, přípravu vozidel a zařízení, provozní licenci (營業執照) a členství v oborovém sdružení (同業公會) je třeba ověřit každé zvlášť."
+    a: "Pro běžnou automobilovou nákladní dopravu se zásadně uplatní minimální kapitál 25.000.000 TWD (新臺幣) a nejméně 20 nových nákladních automobilů. Pro činnost věnovanou pouze stěhování (搬家) se však uplatní 10.000.000 TWD a nejméně 8 jednotek a pro činnost provozovanou na Ťin-menu (金門) a v Lien-ťiangu neboli Ma-cu (連江・馬祖) 10.000.000 TWD a nejméně 5 jednotek, v posledním případě s omezením provozní oblasti. U dopravy malým nákladním vozem provozované fyzickou osobou existují vlastní omezené výjimky, zejména 1 malý nákladní vůz ve vlastnictví, stáří vozidla nepřesahující 2 roky, profesní řidičské oprávnění malého vozidla (小型車職業駕駛執照) a zápis bydliště (戶籍) v příslušném obvodu. Zahraniční investici, schválení Ministerstva dopravy (交通部), povolení přípravy založení (籌設許可), zápis společnosti a obchodu, přípravu vozidel a zařízení, provozní licenci (營業執照) a členství v oborovém sdružení (同業公會) je třeba ověřit každé zvlášť."
   - q: "Pokud se nabude společnost, která již má povolení, získá se automaticky i provozní licence automobilové nákladní dopravy?"
     a: "Ne. Při nabytí akcií se povolení nezískává ani nepřenáší; cílová společnost, subjekt držitele povolení, nadále existuje jako táž právnická osoba a licenci nadále drží. Při převodu podniku nebo aktiv se licence cílové společnosti na nabyvatele sama o sobě nepřenáší. Je třeba ověřit platnost provozní licence a rozsah schválených odvětví, vozidla a tabulky k obchodnímu použití (營業用車輛牌照), parkovací zařízení, členství v oborovém sdružení, porušení a nedoplatky, pojištění, zajištění a doložky změny ovládání ve smlouvě a podstoupit schválení zahraniční investice a potřebný postup schválení nebo změny u příslušného silničního orgánu."
   - q: "Pokud se skutečná doprava svěří tchajwanskému podnikateli s povolením, nepotřebuje vaše společnost ani povolení automobilové nákladní dopravy, ani pracovní povolení?"
@@ -22,7 +22,7 @@ faq:
 
 ![Snímek vysvětlující právní postup logistické činnosti na Tchaj-wanu](../images/017-taiwan-logistics-business-setup/featured-01.jpg)
 
-Když na Tchaj-wanu plánujete činnost související s odesíláním, nelze potřebu povolení určit jen podle označení «logistická společnost». Skladování, balení, logistický systém, zprostředkování dopravy (運送承攬), odeslání vlastního zboží a doprava cizího nákladu automobilem za protiplnění mohou spadat pod odlišné právní režimy.
+Když na Tchaj-wanu plánujete činnost související s odesíláním, nelze potřebu povolení určit jen podle označení „logistická společnost“. Skladování, balení, logistický systém, zasílatelství (運送承攬), odeslání vlastního zboží a doprava cizího nákladu automobilem za protiplnění mohou spadat pod odlišné právní režimy.
 
 Tento článek rozlišuje tři situace: nově založit automobilovou nákladní dopravu, nabýt akcie stávajícího podnikatele nebo přijmout převod jeho podniku a aktiv a svěřit dopravu podnikateli s povolením. Při posuzování konkrétního podnikatelského plánu je třeba ověřit nejen znění smlouvy, ale i skutečný způsob provozu, jako způsob vybírání sazeb, odpovědnost za škody na nákladu, přidělování vozidel a to, kdo spravuje řidiče a vozidla.
 
@@ -30,27 +30,27 @@ Tento článek rozlišuje tři situace: nově založit automobilovou nákladní 
 
 ## 1. Rozsah logistické činnosti a automobilové nákladní dopravy (汽車貨運業)
 
-Není tomu vždy tak. «Logistika» je široký praktický pojem; potřeba povolení se neurčuje jen podle názvu společnosti nebo odvětví zapsaných v rejstříku. Pokud společnost přijímá protiplnění a dopravuje cizí náklad nákladním automobilem, může tato činnost tvořit automobilovou nákladní dopravu. Naproti tomu skladování, balení, provoz systémů, odeslání v postavení odesílatele (貨主), zprostředkování dopravy a obdobné činnosti je třeba posoudit jednotlivě podle smluvního vztahu, dopravní odpovědnosti, obsahu protiplnění a skutečného stavu provozu vozidel.
+Povolení automobilové nákladní dopravy není potřeba vždy. „Logistika“ je široký praktický pojem; potřeba povolení se neurčuje jen podle názvu společnosti nebo odvětví zapsaných v rejstříku. Pokud společnost přijímá protiplnění a dopravuje cizí náklad nákladním automobilem, může tato činnost tvořit automobilovou nákladní dopravu. Naproti tomu skladování, balení, provoz systémů, odeslání v postavení odesílatele (貨主), zprostředkování dopravy a obdobné činnosti je třeba posoudit jednotlivě podle smluvního vztahu, dopravní odpovědnosti, obsahu protiplnění a skutečného stavu provozu vozidel.
 
 Tchajwanský zákon o silnicích (公路法) upravuje automobilovou dopravní činnost (汽車運輸業) jako činnost, která za protiplnění dopravuje cestující nebo náklad automobilem. Společnost se proto nestává ihned automobilovou nákladní dopravou jen proto, že poskytuje logistickou službu v širším smyslu. Naopak, i když byla smlouva sepsána jako zprostředkování dopravy nebo provoz platformy, pokud společnost skutečně přijímá dopravné jako dopravce (運送人) a nese odpovědnost za přidělování vozidel, provoz a škody na nákladu, nemůže dohledu uniknout pouhým označením.
 
 Při stanovení rozsahu činnosti je třeba konkrétně uspořádat alespoň následující vztahy.
 
 - Kdo uzavírá přepravní smlouvu s odesílatelem a kdo přijímá dopravné nebo protiplnění za logistickou službu
-- Kdo nese odpovědnost za ztrátu, poškození a zpoždění nákladu a za škodu 3. osobě
+- Kdo nese odpovědnost za ztrátu, poškození a zpoždění nákladu a za škodu třetí osobě
 - Kdo spravuje vozidla, tabulky k obchodnímu použití (營業用車輛牌照), řidiče, přidělování a provoz
-- Jak se od skutečné dopravy oddělují pomocné práce, jako sklad, balení, informační systém a zprostředkování dopravy
+- Jak se od skutečné dopravy oddělují pomocné práce, jako sklad, balení, informační systém a zasílatelství
 - V případě dalšího pověření, jaký rozsah práce podnikatel s povolením skutečně vykonává
 
 Ústředním příslušným orgánem podle čl. 3 zákona o silnicích je Ministerstvo dopravy (交通部). Protože skutečné přijímání žádostí a správní pokyny obstarává Silniční úřad Ministerstva dopravy (交通部公路局) a jeho podřízené orgány, je třeba ověřit nejnovější pokyny. Není-li zřejmé, že plánovaný obchodní model tvoří automobilovou nákladní dopravu, je důležité předložit příslušnému orgánu předpokládanou smlouvu a způsob provozu k jistotě před stanovením odvětví v rejstříku.
 
 ## 2. Nové založení automobilové nákladní dopravy
 
-Pro běžnou automobilovou nákladní dopravu se zásadně uplatní minimální kapitál 25.000.000 TWD (新臺幣) a nejméně 20 nových nákladních automobilů. Pro činnost věnovanou pouze stěhování (搬家) se však uplatní 10.000.000 TWD a nejméně 8 jednotek a pro činnost provozovanou na Kinmenu (金門) a Lienchiangu neboli Matsu (連江・馬祖) 10.000.000 TWD a nejméně 5 jednotek, v posledním případě s omezením provozní oblasti. U dopravy malým nákladním vozem provozované fyzickou osobou existují vlastní omezené výjimky, zejména 1 malý nákladní vůz ve vlastnictví, stáří vozidla nepřesahující 2 roky, profesní řidičské oprávnění malého vozidla (小型車職業駕駛執照) a zápis bydliště (戶籍) v příslušném obvodu. Zahraniční investici, schválení Ministerstva dopravy, povolení přípravy založení (籌設許可), zápis společnosti a obchodu, přípravu vozidel a zařízení, provozní licenci (營業執照) a členství v oborovém sdružení (同業公會) je třeba ověřit každé zvlášť.
+Pro běžnou automobilovou nákladní dopravu se zásadně uplatní minimální kapitál 25.000.000 TWD (新臺幣) a nejméně 20 nových nákladních automobilů. Pro činnost věnovanou pouze stěhování (搬家) se však uplatní 10.000.000 TWD a nejméně 8 jednotek a pro činnost provozovanou na Ťin-menu (金門) a v Lien-ťiangu neboli Ma-cu (連江・馬祖) 10.000.000 TWD a nejméně 5 jednotek, v posledním případě s omezením provozní oblasti. U dopravy malým nákladním vozem provozované fyzickou osobou existují vlastní omezené výjimky, zejména 1 malý nákladní vůz ve vlastnictví, stáří vozidla nepřesahující 2 roky, profesní řidičské oprávnění malého vozidla (小型車職業駕駛執照) a zápis bydliště (戶籍) v příslušném obvodu. Zahraniční investici, schválení Ministerstva dopravy, povolení přípravy založení (籌設許可), zápis společnosti a obchodu, přípravu vozidel a zařízení, provozní licenci (營業執照) a členství v oborovém sdružení (同業公會) je třeba ověřit každé zvlášť.
 
 ### Požadavky na kapitál a vozidla a omezené výjimky
 
-Když běžná společnost nově provozuje automobilovou nákladní dopravu, uplatní se zásadně minimální kapitál 25.000.000 TWD a nejméně 20 nových vozidel. Pro toho, kdo se věnuje pouze stěhování, se uplatní vlastní měřítko minimálního kapitálu 10.000.000 TWD a nejméně 8 nových vozidel a pro toho, kdo provozuje na Kinmenu a Lienchiangu neboli Matsu, minimální kapitál 10.000.000 TWD a nejméně 5 nových vozidel. Podnikatel, který využívá měřítko Kinmenu a Lienchiangu, podléhá omezení rozsahu provozu podle schválené oblasti.
+Když běžná společnost nově provozuje automobilovou nákladní dopravu, uplatní se zásadně minimální kapitál 25.000.000 TWD a nejméně 20 nových vozidel. Pro toho, kdo se věnuje pouze stěhování, se uplatní vlastní měřítko minimálního kapitálu 10.000.000 TWD a nejméně 8 nových vozidel a pro toho, kdo provozuje na Ťin-menu a v Lien-ťiangu neboli Ma-cu, minimální kapitál 10.000.000 TWD a nejméně 5 nových vozidel. Podnikatel, který využívá měřítko Ťin-menu a Lien-ťiangu, podléhá omezení rozsahu provozu podle schválené oblasti.
 
 Doprava malým nákladním vozem (小貨車) provozovaná fyzickou osobou je úzký režim, odlišný od běžného zakládání společností. Mezi požadavky patří, že žadatel má zápis bydliště v příslušném obvodu, má profesní řidičské oprávnění malého vozidla a používá 1 malý nákladní vůz ve vlastnictví o stáří nepřesahujícím 2 roky. Není to obvyklá cesta, kterou zahraniční právnická osoba vstupuje do automobilové nákladní dopravy.
 
@@ -80,7 +80,7 @@ Po získání povolení přípravy založení se příprava zásadně musí doko
 
 ## 3. Nabytí stávajícího podnikatele
 
-Ne. Při nabytí akcií se povolení nezískává ani nepřenáší; cílová společnost, subjekt držitele povolení, nadále existuje jako táž právnická osoba a licenci nadále drží. Při převodu podniku nebo aktiv se licence cílové společnosti na nabyvatele sama o sobě nepřenáší. Je třeba ověřit platnost provozní licence a rozsah schválených odvětví, vozidla a tabulky k obchodnímu použití, parkovací zařízení, členství v oborovém sdružení, porušení a nedoplatky, pojištění, zajištění a doložky změny ovládání ve smlouvě a podstoupit schválení zahraniční investice a potřebný postup schválení nebo změny u příslušného silničního orgánu.
+Nabytím akcií se povolení nepřevádí. Při nabytí akcií se povolení nezískává ani nepřenáší; cílová společnost, subjekt držitele povolení, nadále existuje jako táž právnická osoba a licenci nadále drží. Při převodu podniku nebo aktiv se licence cílové společnosti na nabyvatele sama o sobě nepřenáší. Je třeba ověřit platnost provozní licence a rozsah schválených odvětví, vozidla a tabulky k obchodnímu použití, parkovací zařízení, členství v oborovém sdružení, porušení a nedoplatky, pojištění, zajištění a doložky změny ovládání ve smlouvě a podstoupit schválení zahraniční investice a potřebný postup schválení nebo změny u příslušného silničního orgánu.
 
 ### Rozdíl mezi nabytím akcií a převodem podniku nebo aktiv
 
@@ -118,7 +118,7 @@ Je třeba ověřit platnost provozní licence podnikatele, jemuž je práce svě
 
 I když se cizinec stane akcionářem nebo investorem cílové společnosti, tato skutečnost mu sama o sobě neuděluje právo pracovat ani pobytový status na Tchaj-wanu. Pokud na Tchaj-wanu vykonává každodenní práci, jako řízení společnosti, prodej, přidělování vozidel a péči o zákazníka, musí před zahájením práce ověřit, zda potřebuje pracovní povolení odpovídající skutečné funkci, a zvlášť provést pozdější pobytový postup.
 
-Na práci bez povolení se mohou uplatnit správní pokuta a příkaz opustit Tchaj-wan (限令出國). Platné pracovní pokyny k zákazu vstupu (禁止入國) Imigrační správy Ministerstva vnitra (內政部移民署) stanoví obecně u nedovolené práce dobu zákazu vstupu 3 roky, avšak mohou se uplatnit požadavky na osvobození nebo zkrácení doby, které tytéž pokyny stanoví. Výsledek se neurčuje mechanicky jen proto, že existuje oznámení 3. osoby, a příslušný orgán posuzuje skutkové okolnosti, použitelné normy a okolnosti každé věci.
+Na práci bez povolení se mohou uplatnit správní pokuta a příkaz opustit Tchaj-wan (限令出國). Platné pracovní pokyny k zákazu vstupu (禁止入國) Imigrační správy Ministerstva vnitra (內政部移民署) stanoví obecně u nedovolené práce dobu zákazu vstupu 3 roky, avšak mohou se uplatnit požadavky na osvobození nebo zkrácení doby, které tytéž pokyny stanoví. Výsledek se neurčuje mechanicky jen proto, že existuje oznámení třetí osoby, a příslušný orgán posuzuje skutkové okolnosti, použitelné normy a okolnosti každé věci.
 
 ## Oficiální podklady
 
@@ -138,9 +138,9 @@ Na práci bez povolení se mohou uplatnit správní pokuta a příkaz opustit Tc
 - [Čl. 68 zákona o službách zaměstnanosti](https://laws.mol.gov.tw/flaw/FLAWDOC01.aspx?flno=68&id=FL015128)
 - [Imigrační správa Ministerstva vnitra: správní pokyny k době zákazu vstupu](https://www.immigration.gov.tw/5475/5478/141478/141482/148796/cp)
 
-## Související vodítka
+## Související odkazy
 
-- [Které věci vedeme](/cs/services)
+- [V čem klienty zastupujeme](/cs/services)
 - [Mezinárodní tým Hovering](/cs/lawyers)
 - [Kontakt](/cs/contact)
 

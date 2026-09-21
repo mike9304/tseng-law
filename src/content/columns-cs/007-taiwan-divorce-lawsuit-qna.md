@@ -1,5 +1,5 @@
 ---
-title: "Q&A k postupu rozvodu na Tchaj-wanu: mediace, řízení, vypořádání majetku a děti"
+title: "Otázky a odpovědi k postupu rozvodu na Tchaj-wanu: mediace, řízení, vypořádání majetku a děti"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-divorce-lawsuit-qna"
 lastmod: "2026-09-10"
 date_display: "13. září 2025"
@@ -10,25 +10,25 @@ featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
 faq:
   - q: "Na Tchaj-wanu nabývá rozvod dohodou účinků ihned po podpisu dohody?"
     a: "Rozvod dohodou (兩願離婚) podle článku 1050 občanského zákoníku Tchaj-wanu (民法) nabývá účinků teprve tehdy, je-li dohoda uzavřena písemně, 2 svědci nebo více podepíší po zjištění skutečné vůle k rozvodu obou stran a rozvod je zapsán u matričního úřadu (戶政機關). Samotná podepsaná dohoda rozvod nedokončí; existuje-li zahraniční prvek, je třeba zvlášť ověřit rozhodné právo, ověření a překlad dokumentů i oznámení v jiném státě nebo na jiném území."
-  - q: "Při mediaci o rozvodu před tchajwanským soudem musí manželé vždy dostavit se společně?"
-    a: "Ne vždy. Tchajwanský soud může podle povahy rodinné věci (家事事件) nařídit straně nebo zákonnému zástupci osobní účast; není-li příkaz bez oprávněného důvodu splněn, může poprvé přicházet v úvahu správní pokuta (罰鍰) do TWD 30.000 (新臺幣) podle článku 13 zákona o rodinných věcech (家事事件法) a článku 303 občanského soudního řádu (民事訴訟法) užitého přiměřeně. Zda je nutné mediovat společně v témže prostoru a zda jsou možné oddělení, ochranná opatření, zastoupení nebo jiné procesní kroky, je třeba ověřit podle soudu a okolností věci."
+  - q: "Při mediaci o rozvodu před tchajwanským soudem musí se manželé vždy dostavit společně?"
+    a: "Manželé se k soudní mediaci nemusí vždy dostavit společně. Tchajwanský soud může podle povahy rodinné věci (家事事件) nařídit straně nebo zákonnému zástupci osobní účast; není-li příkaz bez oprávněného důvodu splněn, může poprvé přicházet v úvahu správní pokuta (罰鍰) do TWD 30.000 (新臺幣) podle článku 13 zákona o rodinných věcech (家事事件法) a článku 303 občanského soudního řádu (民事訴訟法) užitého přiměřeně. Zda je nutné mediovat společně v témže prostoru a zda jsou možné oddělení, ochranná opatření, zastoupení nebo jiné procesní kroky, je třeba ověřit podle soudu a okolností věci."
   - q: "Může manžel nebo manželka odpovědní za rozvrat manželství žádat na Tchaj-wanu rozvod rozsudkem?"
     a: "Výhrada (但書) platného článku 1052 odst. 2 občanského zákoníku (民法) stanoví, že je-li závažný důvod rozvratu manželství (婚姻破綻) přičitatelný jen jedné straně, může rozvod zásadně žádat jen druhá strana. Ústavní soud Tchaj-wanu (憲法法庭) však v rozhodnutí č. 4 roku 112 (112年憲判字第4號) posoudil, že ustanovení je protiústavní (違憲) v rozsahu, v němž zcela zbavuje manžela s vinou (有責配偶) jakékoli příležitosti k rozvodu, aniž by zohlednilo vznik závažného důvodu nebo jeho dostatečné trvání, takže se v konkrétní věci stává zjevně tvrdým. Text zůstává; nelze obecně tvrdit, že je to možné nebo nemožné, nýbrž je třeba vidět, jak soud užije smysl rozhodnutí a konkrétní skutky."
   - q: "Určuje zaplacení kupní ceny z prostředků před manželstvím nebo zápis na jméno jedné strany vlastnictví a vypořádání majetku?"
-    a: "Ne. Jméno zapsané u bydlení a původ kupních prostředků jsou důležité důkazy, avšak jednotlivé nároky, jako vlastnictví, darování, zápis na jméno jiné osoby (借名登記), zápůjčka a bezdůvodné obohacení (不當得利), jsou otázkami odlišnými od rozdělení rozdílu zůstatkového majetku (剩餘財產差額分配) podle článku 1030-1 občanského zákoníku (民法). Skutečnou dohodu, důvod a dobu nabytí, toky prostředků, dluhy, bezúplatné nabytí a důkazy je třeba zkoumat zvlášť; pouhé zaplacení části z prostředků před manželstvím nebo zápis na jméno jedné strany neurčuje všechny závěry."
+    a: "Jméno zapsané u nemovitosti samo o sobě o rozdělení majetku nerozhoduje. Jméno zapsané u bydlení a původ kupních prostředků jsou důležité důkazy, avšak jednotlivé nároky, jako vlastnictví, darování, zápis na jméno jiné osoby (借名登記), zápůjčka a bezdůvodné obohacení (不當得利), jsou otázkami odlišnými od rozdělení rozdílu zůstatkového majetku (剩餘財產差額分配) podle článku 1030-1 občanského zákoníku (民法). Skutečnou dohodu, důvod a dobu nabytí, toky prostředků, dluhy, bezúplatné nabytí a důkazy je třeba zkoumat zvlášť; pouhé zaplacení části z prostředků před manželstvím nebo zápis na jméno jedné strany neurčuje všechny závěry."
   - q: "Jsou rozdělení zůstatkového majetku, náhrada škody za rozvod, výživné manžela a výživné dítěte týmž nárokem?"
-    a: "Nejde o tatáž práva. Právo na rozdělení rozdílu zůstatkového majetku podle článku 1030-1 občanského zákoníku (民法), náhrada škody za rozvod rozsudkem podle článku 1056, výživné v nouzi (贍養費) pro manžela bez zavinění podle článku 1057 a výživné (扶養費) nezletilého dítěte mají odlišné předpoklady vzniku, výpočet i lhůty. Na právo na rozdělení se uplatní 2 roky od poznání rozdílu a 5 let od zániku zákonného majetkového režimu; tyto lhůty se nemají přenášet tak, jak jsou, na jiné nároky."
+    a: "Tyto nároky nejsou tatáž práva. Právo na rozdělení rozdílu zůstatkového majetku podle článku 1030-1 občanského zákoníku (民法), náhrada škody za rozvod rozsudkem podle článku 1056, výživné v nouzi (贍養費) pro manžela bez zavinění podle článku 1057 a výživné (扶養費) nezletilého dítěte mají odlišné předpoklady vzniku, výpočet i lhůty. Na právo na rozdělení se uplatní 2 roky od poznání rozdílu a 5 let od zániku zákonného majetkového režimu; tyto lhůty se nemají přenášet tak, jak jsou, na jiné nároky."
   - q: "Podle jakého měřítka posuzuje tchajwanský soud otázky týkající se nezletilého dítěte?"
     a: "Podle článků 1055 a 1055-1 občanského zákoníku Tchaj-wanu (民法) soud posuzuje otázky týkající se dítěte, včetně výkonu a nesení práv a povinností vůči nezletilému dítěti (未成年子女權利義務之行使或負擔) a osobního styku (會面交往), podle měřítka nejlepšího zájmu dítěte (子女最佳利益). Protože zákonná hlediska a konkrétní podklady — věk, zdraví, vůle a potřeby vývoje dítěte, život, schopnost péče a postoj rodičů, citový vztah k dítěti a to, zda se brání vztah s druhým rodičem — se berou v úvahu souhrnně, nelze závěr určit jen podle příjmů rodičů nebo odpovědnosti za rozvrat manželství."
 ---
 
-# Q&A k postupu rozvodu na Tchaj-wanu: mediace, řízení, vypořádání majetku a děti
+# Otázky a odpovědi k postupu rozvodu na Tchaj-wanu: mediace, řízení, vypořádání majetku a děti
 
 ![Obrázek vysvětlující postup rozvodu na Tchaj-wanu a mezinárodní rodinné věci](../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg)
 
 Ve věci rozvodu na Tchaj-wanu je třeba odlišit nejen způsob ukončení manželství, nýbrž také pořádek matriky (戶籍), účinek v zahraničí, manželský majetek, náhradu škody, výživné manžela po rozvodu (贍養費) i rozhodnutí o nezletilém dítěti (未成年子女) a výživné (扶養費). Tytéž skutky mohou sloužit jako podklad několika nároků, avšak předpoklady, účinky, předmět důkazu a lhůty každého práva nejsou tytéž.
 
-Zvláště u rodiny spojené, jako Korea a Tchaj-wan, se 2 státy nebo územími nebo více, nelze postup určit jen podle státní příslušnosti jedné strany nebo místa uzavření manželství. Nejprve je třeba ověřit současné středisko života, stav existujících řízení a zápisů, místo sepsání dokumentů, bydliště dítěte a polohu majetku, aby se snížily zbytečné dvojí postupy a mezery ve výkonu.
+Zvláště u rodiny spojené se 2 nebo více státy či územími (Tchaj-wan a další stát) nelze postup určit jen podle státní příslušnosti jedné strany nebo místa uzavření manželství. Nejprve je třeba ověřit současné středisko života, stav existujících řízení a zápisů, místo sepsání dokumentů, bydliště dítěte a polohu majetku, aby se snížily zbytečné dvojí postupy a mezery ve výkonu.
 
 ## 1. 3 cesty rozvodu na Tchaj-wanu a první body k ověření v mezinárodní věci
 
@@ -50,7 +50,7 @@ Je-li tchajwanský rozsudek o rozvodu pravomocný, nebo došlo-li k soudní medi
 
 ## 3. Soudní mediace a řízení, účast a opravné prostředky
 
-Ne vždy. Tchajwanský soud může podle povahy rodinné věci nařídit straně nebo zákonnému zástupci osobní účast; není-li příkaz bez oprávněného důvodu splněn, může poprvé přicházet v úvahu správní pokuta (罰鍰) do TWD 30.000 (新臺幣) podle článku 13 zákona o rodinných věcech (家事事件法) a článku 303 občanského soudního řádu (民事訴訟法) užitého přiměřeně. Zda je nutné mediovat společně v témže prostoru a zda jsou možné oddělení, ochranná opatření, zastoupení nebo jiné procesní kroky, je třeba ověřit podle soudu a okolností věci.
+Manželé se k soudní mediaci nemusí vždy dostavit společně. Tchajwanský soud může podle povahy rodinné věci nařídit straně nebo zákonnému zástupci osobní účast; není-li příkaz bez oprávněného důvodu splněn, může poprvé přicházet v úvahu správní pokuta (罰鍰) do TWD 30.000 (新臺幣) podle článku 13 zákona o rodinných věcech (家事事件法) a článku 303 občanského soudního řádu (民事訴訟法) užitého přiměřeně. Zda je nutné mediovat společně v témže prostoru a zda jsou možné oddělení, ochranná opatření, zastoupení nebo jiné procesní kroky, je třeba ověřit podle soudu a okolností věci.
 
 Rodinné věci stanovené zákonem o rodinných věcech procházejí zásadně soudní mediací před rozhodnutím. I věci podané ihned jako žaloba se v právu někdy považují za návrh na mediaci; pro výjimky týkající se způsobu doručení nebo povahy věci a pravidla přeměny postupu nelze tvrdit, že všechny věci jdou v neměnném pořadí. V mediaci lze vedle vůle k rozvodu společně uspořádat související sporné body, jako majetek, děti a způsob plnění; dohodu nepříznivou pro nezletilé dítě však nelze potvrdit tak, jak je.
 
@@ -67,7 +67,7 @@ Výhrada (但書) platného článku 1052 odst. 2 občanského zákoníku (民�
 Článek 1052 odst. 1 občanského zákoníku (民法) vypočítává 10 důvodů, které dovolují žádat rozvod rozsudkem, jsou-li na straně druhé následující okolnosti.
 
 1. Bigamie (重婚)
-2. Pohlavní styk po dohodě s osobou jinou než manželem
+2. Dobrovolný pohlavní styk s osobou jinou než manželem
 3. Týrání (虐待) druhé strany v míře, která činí společný život nesnesitelným
 4. Druhá strana týrá příbuzné v přímé linii, nebo příbuzní v přímé linii druhé strany týrají samotnou osobu, takže společný život se stává nesnesitelným
 5. Trvá zlovolné opuštění (惡意遺棄) druhé strany
@@ -75,13 +75,13 @@ Výhrada (但書) platného článku 1052 odst. 2 občanského zákoníku (民�
 7. Existuje závažná nevyléčitelná nemoc
 8. Existuje závažná nevyléčitelná duševní choroba
 9. Život nebo smrt jsou neznámé déle než 3 roky
-10. Pravomocné odsouzení k trestu odnětí svobody na čas (有期徒刑) přesahujícímu 6 měsíců za úmyslný trestný čin
+10. Pravomocné odsouzení k trestu odnětí svobody na dobu určitou (有期徒刑) přesahujícímu 6 měsíců za úmyslný trestný čin
 
 Odstavec 2 klade případ, v němž je manželství z jiného závažného důvodu než uvedených 10 důvodů obtížné udržet, jako samostatný obecný důvod. Proto je třeba věci, které tvrdí určitý důvod odstavce 1, a věci, které tvrdí obtížnost udržení manželství podle odstavce 2, odlišit co do právní stavby a předmětu důkazu. I když zákonodárná lhůta ústavního posouzení výhrady odstavce 2 uplynula, samotný text výhrady není ke dni 25. 7. 2026 vypuštěn; soud musí v každé věci užít smysl výroku o protiústavnosti.
 
 I když manžel nebo manželka nejsou k zastižení nebo opustili bydliště, důvody se nemají směšovat. Důvod odstavce 1, podle nějž jsou život nebo smrt neznámé déle než 3 roky, důvod odstavce 1, podle nějž trvá zlovolné opuštění, a důvod odstavce 2, podle nějž je manželství z jiného závažného důvodu obtížné udržet, se liší. Oznámení zmizení na policii může být důkazem o místě a průběhu skutků, avšak není obecným předběžným předpokladem všech žádostí o rozvod. Neexistuje ani obecný předpoklad, podle nějž by bylo třeba nejprve podat žalobu o splnění povinnosti společného života, aby se tvrdilo zlovolné opuštění nebo jiný závažný důvod. Samotná skutečnost opuštění bydliště po několik měsíců nenaplňuje žádný důvod; důvod odchodu, oprávněný důvod odděleného života, styk a výživné i trvalost je třeba zkoumat jako konkrétní skutky.
 
-Zda pohlavní styk po dohodě s osobou jinou než manželem spadá pod důvod odstavce 1, je třeba zkoumat podle přesných skutků, zákonných předpokladů a příslušných lhůt. Existence tohoto skutku neurčuje zároveň závěry o rozvodu rozsudkem, náhradě škody podle článku 1056, rozdělení rozdílu zůstatkového majetku, výživném manžela podle článku 1057 ani o právech a povinnostech vůči nezletilému dítěti nebo výživném. Každý sporný bod se posuzuje podle vlastních předpokladů a měřítek, jako je nejlepší zájem dítěte.
+Zda dobrovolný pohlavní styk s osobou jinou než manželem spadá pod důvod odstavce 1, je třeba zkoumat podle přesných skutků, zákonných předpokladů a příslušných lhůt. Existence tohoto skutku neurčuje zároveň závěry o rozvodu rozsudkem, náhradě škody podle článku 1056, rozdělení rozdílu zůstatkového majetku, výživném manžela podle článku 1057 ani o právech a povinnostech vůči nezletilému dítěti nebo výživném. Každý sporný bod se posuzuje podle vlastních předpokladů a měřítek, jako je nejlepší zájem dítěte.
 
 ## 5. Manželství v zahraničí, rozvod v zahraničí a tchajwanská matrika
 
@@ -95,7 +95,7 @@ Zahraniční dokumenty mohou vyžadovat ověření tchajwanskými zastupitelský
 
 ## 6. Jméno bydlení, majetek před manželstvím a rozdělení zůstatkového majetku
 
-Ne. Jméno zapsané u bydlení a původ kupních prostředků jsou důležité důkazy, avšak jednotlivé nároky, jako vlastnictví, darování, zápis na jméno jiné osoby (借名登記), zápůjčka a bezdůvodné obohacení (不當得利), jsou otázkami odlišnými od rozdělení rozdílu zůstatkového majetku (剩餘財產差額分配) podle článku 1030-1 občanského zákoníku (民法). Skutečnou dohodu, důvod a dobu nabytí, toky prostředků, dluhy, bezúplatné nabytí a důkazy je třeba zkoumat zvlášť; pouhé zaplacení části z prostředků před manželstvím nebo zápis na jméno jedné strany neurčuje všechny závěry.
+Jméno zapsané u nemovitosti samo o sobě o rozdělení majetku nerozhoduje. Jméno zapsané u bydlení a původ kupních prostředků jsou důležité důkazy, avšak jednotlivé nároky, jako vlastnictví, darování, zápis na jméno jiné osoby (借名登記), zápůjčka a bezdůvodné obohacení (不當得利), jsou otázkami odlišnými od rozdělení rozdílu zůstatkového majetku (剩餘財產差額分配) podle článku 1030-1 občanského zákoníku (民法). Skutečnou dohodu, důvod a dobu nabytí, toky prostředků, dluhy, bezúplatné nabytí a důkazy je třeba zkoumat zvlášť; pouhé zaplacení části z prostředků před manželstvím nebo zápis na jméno jedné strany neurčuje všechny závěry.
 
 Otázky bydlení je třeba rozdělit do 3 vrstev. Nejprve se podle zápisu a důvodu nabytí vidí, kdo vlastní určitý majetek. Poté se podle skutečné dohody a povahy poskytnutí prostředků vidí, zda vzniká darování, zápis na jméno jiné osoby, zápůjčka, správa (信託), bezdůvodné obohacení, náhrada nákladů nebo jiný smluvní nárok. Nakonec se zvlášť vidí, zda tento majetek nebo jeho hodnota a související dluhy vstupují při zániku zákonného majetkového režimu (法定財產制) do výpočtu rozdělení rozdílu zůstatkového majetku. Samotné zaplacení zálohy nebo splátek úvěru z úspor před manželstvím nepřenáší zapsané jméno a zápis na jméno jedné strany také neuzavře všechny otázky smlouvy, užívání, splácení a manželského majetku.
 
@@ -107,9 +107,9 @@ Pohlavní styk s osobou jinou než manželem nebo odpovědnost za rozvrat manže
 
 Toto právo zanikne, není-li vykonáno do 2 let od poznání rozdílu zůstatkového majetku a v každém případě do 5 let od zániku zákonného majetkového režimu. Tyto 2 lhůty mají být vázány jen na nárok podle článku 1030-1 a nemají sloužit jako lhůty pro vlastnictví, zápůjčku, náhradu škody, výživné manžela po rozvodu nebo výživné dítěte. Skutečný počátek běhu lhůty a okamžik zániku zákonného majetkového režimu je třeba ověřit jeden po druhém podle podkladů.
 
-## 7. Náhrada škody za rozvod, výživné manžela, nesezdané soužití a 3. osoba
+## 7. Náhrada škody za rozvod, výživné manžela, nesezdané soužití a třetí osoba
 
-Nejde o tatáž práva. Právo na rozdělení rozdílu zůstatkového majetku podle článku 1030-1 občanského zákoníku (民法), náhrada škody za rozvod rozsudkem podle článku 1056, výživné v nouzi pro manžela bez zavinění podle článku 1057 a výživné nezletilého dítěte mají odlišné předpoklady vzniku, výpočet i lhůty. Na právo na rozdělení se uplatní 2 roky od poznání rozdílu a 5 let od zániku zákonného majetkového režimu; tyto lhůty se nemají přenášet tak, jak jsou, na jiné nároky.
+Tyto nároky nejsou tatáž práva. Právo na rozdělení rozdílu zůstatkového majetku podle článku 1030-1 občanského zákoníku (民法), náhrada škody za rozvod rozsudkem podle článku 1056, výživné v nouzi pro manžela bez zavinění podle článku 1057 a výživné nezletilého dítěte mají odlišné předpoklady vzniku, výpočet i lhůty. Na právo na rozdělení se uplatní 2 roky od poznání rozdílu a 5 let od zániku zákonného majetkového režimu; tyto lhůty se nemají přenášet tak, jak jsou, na jiné nároky.
 
 Náhrada škody podle článku 1056 občanského zákoníku (民法) je právo, které vůči druhé straně odpovědné v rozvodu rozsudkem zkoumá zvlášť majetkovou škodu a nemajetkovou újmu splňující zákonné předpoklady (výhrada odstavce 2: osoba, která žádá, sama nesmí mít zavinění). Úkon zakládající odpovědnost, škodu, příčinnou souvislost a samostatné předpoklady nemajetkového nároku je třeba podepřít důkazy. Samotná skutečnost, že existují skutky týkající se rozvratu manželství, neurčuje určitou částku a nenahrazuje vznik jiných majetkových nároků.
 
@@ -119,7 +119,7 @@ Výživné nezletilého dítěte je právem a povinností mezi rodiči a dítět
 
 Strany, které žijí spolu bez manželství, nenabývají samotnou skutečností společného života manželská práva, jako rozvod nebo výživné manžela (贍養費). Existuje-li však skutečně společný majetek, zápůjčka, smlouva, zápis na jméno jiné osoby, správa, bezdůvodné obohacení nebo protiprávní čin, lze to analyzovat jako majetkový nebo věřitelský vztah nezávislý na manželství. Podle samotné doby soužití nelze slíbit rozdělení, které předpokládá manželství, ani předem tvrdit konkrétní obnovení práva.
 
-Příbuzní manžela, například z rodiny manžela nebo manželky, nejsou dlužníky výživného manžela po rozvodu podle článku 1057 občanského zákoníku (民法). Samotné tvrzení závažného zásahu nebo urážky 3. osobou nezakládá ihned náhradu škody. Nároky vůči 3. osobě vyžadují samostatný právní základ z protiprávního činu nebo majetkového práva a příslušné předpoklady a důkazy, totiž protiprávní čin, úmysl nebo nedbalost, škodu a příčinnou souvislost.
+Příbuzní manžela, například z rodiny manžela nebo manželky, nejsou dlužníky výživného manžela po rozvodu podle článku 1057 občanského zákoníku (民法). Samotné tvrzení závažného zásahu nebo urážky třetí osobou nezakládá ihned náhradu škody. Nároky vůči třetí osobě vyžadují samostatný právní základ z protiprávního činu nebo majetkového práva a příslušné předpoklady a důkazy, totiž protiprávní čin, úmysl nebo nedbalost, škodu a příčinnou souvislost.
 
 ## 8. Práva a povinnosti vůči nezletilému dítěti a nejlepší zájem dítěte
 
@@ -147,7 +147,7 @@ Při výkonu výživného dítěte jsou důležité znění existujícího exeku
 
 ## 10. Mezinárodní přestěhování s dítětem
 
-Samotná dohoda, že dítě bude žít v Koreji, nečiní z korejské úrovně životních nákladů samostatný vzorec výživného dítěte. Skutečné náklady na bydlení, vzdělání, nemoc a cestování i potřebu dítěte, příjmy, majetek a břemeno péče obou rodičů i existující dohodu nebo rozhodnutí je třeba zkoumat společně. Náklady státu pobytu mohou sloužit jako podklad k hodnocení konkrétních výdajů, avšak samy neurčují výši břemene.
+Samotná dohoda, že dítě bude žít mimo Tchaj-wan, nečiní z úrovně životních nákladů v zemi pobytu samostatný vzorec výživného dítěte. Skutečné náklady na bydlení, vzdělání, nemoc a cestování i potřebu dítěte, příjmy, majetek a břemeno péče obou rodičů i existující dohodu nebo rozhodnutí je třeba zkoumat společně. Náklady státu pobytu mohou sloužit jako podklad k hodnocení konkrétních výdajů, avšak samy neurčují výši břemene.
 
 Při mezinárodním přestěhování je třeba nejprve ověřit, kdo má pravomoc určit bydliště a cesty dítěte a zda existuje souhlas druhého rodiče nebo použitelný soudní příkaz. Poté se zkoumá, zda přestěhování odpovídá nejlepšímu zájmu dítěte a jaký účinek má na vzdělání, lékařskou péči, kontinuitu života a trvalý osobní styk s rodičem, který zůstává. Je potřeba skutečně proveditelný plán, jako četnost styků, pobyt o prázdninách, cestovní náklady a místo předání.
 
@@ -188,7 +188,7 @@ Následující primární prameny (1. úroveň) jsou výchozím bodem k ověřen
 
 ## 13. Související pokyny
 
-- [Které věci vedeme](/cs/services)
+- [V čem klienty zastupujeme](/cs/services)
 - [Jak se stanoví rozsah práce a náklady](/cs/pricing)
 - [Kontakt](/cs/contact)
 

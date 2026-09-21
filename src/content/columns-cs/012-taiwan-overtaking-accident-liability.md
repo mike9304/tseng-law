@@ -41,7 +41,7 @@ A se pokusil předjet obě vozidla, vjel do protisměrného pruhu a zrychlil. Vo
 
 B utrpěl těžké poranění hlavy a zemřel na místě; A ztratil vědomí a byl převezen do nemocnice.
 
-Rodiny A a B nejprve považovaly náhlou změnu pruhu vozidla č. 2 za hlavní příčinu srážky. Věc přešla do řízení a v jeho průběhu bylo provedeno několik znaleckých posudků (鑑定) nehody.
+Rodiny A a B nejprve považovaly náhlou změnu pruhu vozidla č. 2 za hlavní příčinu srážky. Věc přešla do soudního řízení; v jeho průběhu bylo vypracováno několik znaleckých posudků (鑑定) k nehodě.
 
 Podle výsledku posudku nesl hlavní odpovědnost za tuto srážku A. Tento závěr byl omezen na skutkové okolnosti této věci. Posudek zohlednil společně to, že A chtěl předjet 2 vozidla vpředu jedoucí za sebou, že vjel do protisměrného pruhu, že jel rychlostí, která téměř nenechávala rezervu k brzdění, že chyběly předepsané signály klaksonu a světel, jakož i pohyb změny pruhu vozidla č. 2, uspořádání silnice a pruhů a ostatní zajištěné důkazy.
 

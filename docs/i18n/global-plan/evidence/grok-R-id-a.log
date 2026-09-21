@@ -1,3 +1,25 @@
 [WO start 2026-09-21 16:39:14]
 Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
 Retry attempt 1...
+Review is in `docs/i18n/global-plan/reviews/native/id-a.md` (guidance pack + columns 001–009). Naturalness: **4/5** guidance, **3/5** columns. 13 P1 and 29 P2 rows. No masculine form for Wei Tseng. The FAQ/llms consultation lock is intact; contact/inquiry copy still omits **hanya**. 001, 002, 004, and 007 already generalise Korea → Indonesia well.
+
+Last 15 lines of the file:
+
+```
+| 28 | P2 | C | columns-id/001-taiwan-company-establishment-basics.md | "**Pengacara Wei Tseng (曾雋崴)**" | Guidance pack uses Advokat; 001, 002, 004, 007, 008 use Pengacara for the same woman. Pick one. | **Advokat Wei Tseng (曾雋崴)** |
+| 29 | P2 | C | columns-id/002-withdraw-capital-taiwan-company.md | "pidana penjara berjangka paling lama lima tahun, kurungan, atau denda pidana" | Berjangka is 有期徒刑 copied as an adjective; Indonesian just states the maximum term. Kurungan for 拘役 is otherwise the right KUHP word (not remand). | pidana penjara paling lama lima tahun, kurungan (拘役), atau denda pidana |
+| 30 | P2 | G | columns-id/003-taiwan-traffic-accident-procedure.md | "Q&A Kecelakaan Lalu Lintas di Taiwan" | English “Q&A” left in the title. Also 007 title and H1. | Tanya jawab kecelakaan lalu lintas di Taiwan |
+| 31 | P2 | C | columns-id/003-taiwan-traffic-accident-procedure.md | "silakan tinggalkan di kolom komentar" | Korean-blog comment CTA; this site has no comments. Also empty `​` padding in Q16–Q20. | Untuk pertanyaan lain, gunakan halaman Kontak. |
+| 32 | P2 | D | columns-id/003-taiwan-traffic-accident-procedure.md | "hubungi 119, sedangkan untuk tindak pidana atau keadaan keamanan yang mendesak hubungi 110 atau 112" | 112 is also Indonesia’s national emergency number; without “di Taiwan” a reader may misdial. | Di Taiwan: 119 untuk ambulans/pemadam, 110 untuk polisi (112 dari telepon genggam) — ini bukan nomor Indonesia. |
+| 33 | P2 | D | columns-id/003-taiwan-traffic-accident-procedure.md | "yang diubah pada 2026-05-29 berlaku bagi kecelakaan yang terjadi sejak 2026-07-01" | ISO dates in running Indonesian. | yang diubah pada 29 Mei 2026 berlaku bagi kecelakaan yang terjadi sejak 1 Juli 2026 |
+| 34 | P2 | D | columns-id/003-taiwan-traffic-accident-procedure.md | "Kitab Undang-Undang Hukum Pidana Republik Tiongkok Pasal 185-4" | Republik Tiongkok reads as China to many Indonesian clients; the same file also says “Taiwan”. Keep 中華民國刑法 as a gloss. | Kitab Undang-Undang Hukum Pidana Taiwan (中華民國刑法) Pasal 185-4 |
+| 35 | P2 | D | columns-id/003-taiwan-traffic-accident-procedure.md | "Putusan Pengadilan Tinggi Taiwan tahun 109 perkara 上易字 Nomor 644" | ROC year 109 is opaque; add CE 2020. Also tahun 112 in 003/007 = 2023. | Putusan Pengadilan Tinggi Taiwan tahun 109 (2020) perkara 上易字 Nomor 644 |
+| 36 | P2 | B | columns-id/005-taiwan-company-establishment-advanced-2.md | "Dapatkah perusahaan mempekerjakan orang asing sebagai karyawan" | Question mark missing on the hiring heading (Q5 was otherwise correctly generalised). | Dapatkah perusahaan mempekerjakan orang asing sebagai karyawan? |
+| 37 | P2 | C | columns-id/006-taiwan-massage-history-law.md | "(Jangan-jangan saya justru membocorkan usia saya sendiri?)" | Chatty blog aside on a law-firm page; Korea comparison below is already signposted as perbandingan. | Hapus, atau: Catatan: kenangan ini bersifat pribadi, bukan nasihat. |
+| 38 | P2 | D | columns-id/007-taiwan-divorce-lawsuit-qna.md | "Mahkamah Konstitusi Taiwan (憲法法庭) dalam Putusan Nomor 4 Tahun 112 (112年憲判字第4號)" | ROC year 112 unexplained; 007’s Indonesia framing and 戶政→administrasi kependudukan are otherwise native. | dalam Putusan Nomor 4 Tahun 112 (2023 Masehi; 112年憲判字第4號) |
+| 39 | P2 | B | columns-id/008-taiwan-labor-severance-law.md | "Benarkah Pesangon (資遣費) Sulit Diperoleh di Taiwan??" | Double question mark in the title (and again in the H1). | Benarkah Pesangon (資遣費) Sulit Diperoleh di Taiwan? |
+| 40 | P2 | C | columns-id/009-taiwan-voluntary-resignation-severance.md | "Seperti yang telah saya sampaikan sebelumnya, di Taiwan tidak mudah" | “Sebelumnya” points at a previous Korean-series post, not this page. Korea contrast was usefully rewritten as “anggapan umum”. | Di Taiwan, pada umumnya tidak mudah bagi karyawan untuk memperoleh pesangon (資遣費). |
+| 41 | P2 | B | columns-id/009-taiwan-voluntary-resignation-severance.md | "''**saat**'' sangat menentukan" | Broken doubled quotes around saat (French «temps» leftover). | **saat** sangat menentukan |
+| 42 | P2 | B | columns-id/001-taiwan-company-establishment-basics.md | "500.000 Dolar Taiwan Baru (新臺幣, TWD)" | EYD writes currency names lowercase (dolar AS). Recurs through 001–004. Keep the figures. | 500.000 dolar Taiwan baru (新臺幣, TWD) |
+```
+=== end code=0 2026-09-21 16:47:36 ===

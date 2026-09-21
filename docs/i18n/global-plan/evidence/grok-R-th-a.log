@@ -1,1 +1,27 @@
 [WO start 2026-09-21 16:39:14]
+Wrote the native review to `docs/i18n/global-plan/reviews/native/th-a.md` (guidance pack + columns 001–009). No source files were edited.
+
+**Verdict:** guidance pack **4/5**, columns **3/5**. Standard Central Thai, consistent. 001, 002, 004 and 007 are careful legal Thai (they already localise the reader as Thai). 003 Q16–Q20 and 008 fail on gender and advertising.
+
+**Must-fix before a client sees it:** the bio that can be read as the attorney being ordered to pay TWD 1.57M; masculine **ผม** for Wei Tseng; “highest compensation” / typical 3–6 month sentences / high-severance success story / “contact anytime”; Korea tax and FX left as the working example; English **OUR TEAM** / **OFFICES**.
+
+Last 15 lines of the output file:
+
+```
+| 36 | P2 | C | columns-th/003-taiwan-traffic-accident-procedure.md | "หากท่านมีข้อสงสัยเพิ่มเติม ขอเชิญฝากข้อความไว้ในช่องแสดงความคิดเห็น" | Korean-blog comment CTA plus empty-line padding in Q16–Q20; looks unedited on a law-firm page. | หากท่านมีข้อสงสัยเพิ่มเติม โปรดใช้หน้าติดต่อ |
+| 37 | P2 | C | columns-th/003-taiwan-traffic-accident-procedure.md | "ที่กล่าวมาทั้งหมดนี้คือ Q&A เกี่ยวกับอุบัติเหตุจราจร ผมหวังว่าจะเป็นประโยชน์แก่ท่าน" | English Q&A left in a Thai heading/title too (“การรับมืออุบัติเหตุจราจรในไต้หวัน Q&A”). | ที่กล่าวมาทั้งหมดนี้คือคำถามและคำตอบเกี่ยวกับอุบัติเหตุจราจร ดิฉันหวังว่าจะเป็นประโยชน์แก่ท่าน |
+| 38 | P2 | D | th-guidance.txt | "คำพิพากษาศาลชั้นต้นให้ชดใช้ค่าเสียหาย TWD 1.57M" | M = million is English; Thai writes ล้าน. Amount itself unchanged. | คำพิพากษาศาลชั้นต้นให้ได้รับค่าเสียหาย TWD 1.57 ล้าน |
+| 39 | P2 | D | th-guidance.txt | "สถานะการมีถิ่นที่อยู่ (居留)" | ถิ่นที่อยู่ is domicile; later pages correctly use สถานะการพำนัก. Recurs in services, 001 FAQ (“สถานะการมีถิ่นที่อยู่”). | สถานะการพำนัก (居留) |
+| 40 | P2 | D | th-guidance.txt | "ดำเนินการเพียง 4 ภาษา ได้แก่ ภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี" | The four consultation languages should keep 中文 on first mention, as the language-option line already does. Recurs through home, contact, FAQ, answers. | ดำเนินการเพียง 4 ภาษา ได้แก่ ภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี |
+| 41 | P2 | D | columns-th/003-taiwan-traffic-accident-procedure.md | "หากมีผู้บาดเจ็บหรือจำเป็นต้องได้รับการช่วยเหลือ ให้โทร 119 หากเกี่ยวข้องกับการกระทำความผิดอาญาหรือเหตุฉุกเฉินด้านความสงบเรียบร้อย ให้โทร 110 หรือ 112" | Thailand’s numbers are 1669 / 191 / 199; without “ในไต้หวัน” a reader may misdial. | ในไต้หวัน: โทร 119 สำหรับผู้บาดเจ็บ/ดับเพลิง, 110 สำหรับตำรวจ (112 จากโทรศัพท์มือถือ) — มิใช่หมายเลขของประเทศไทย |
+| 42 | P2 | D | columns-th/003-taiwan-traffic-accident-procedure.md | "เกณฑ์การจ่ายค่าสินไหมซึ่งแก้ไขเมื่อ 2026-05-29 ใช้บังคับแก่อุบัติเหตุที่เกิดขึ้นตั้งแต่ 2026-07-01 เป็นต้นไป" | ISO dates in running text; Thailand writes day-month-year. Keep the digits. | เกณฑ์การจ่ายค่าสินไหมซึ่งแก้ไขเมื่อ 29 พฤษภาคม ค.ศ. 2026 ใช้บังคับแก่อุบัติเหตุที่เกิดขึ้นตั้งแต่ 1 กรกฎาคม ค.ศ. 2026 เป็นต้นไป |
+| 43 | P2 | D | columns-th/007-taiwan-divorce-lawsuit-qna.md | "คำวินิจฉัยของศาลรัฐธรรมนูญไต้หวัน (憲法法庭) ที่ 4 ปี 112 (112年憲判字第4號)" | ROC year 112 is opaque in Thailand; add CE 2023. Recurs in the FAQ and the source list. | คำวินิจฉัยของศาลรัฐธรรมนูญไต้หวัน (憲法法庭) ที่ 4 ปี 112 (ค.ศ. 2023; 112年憲判字第4號) |
+| 44 | P2 | D | columns-th/006-taiwan-massage-history-law.md | "ในทำนองเดียวกัน ในประเทศเกาหลีใต้ซึ่งมีผู้พิการทางสายตาจำนวนมากประกอบอาชีพนวดเพื่อเลี้ยงชีพ" | Long Korea-only comparative coda on a Thai page; keep as comparative law, but signpost it. | เพื่อเปรียบเทียบ: ในประเทศเกาหลีใต้ ซึ่งมีผู้พิการทางสายตาจำนวนมากประกอบอาชีพนวดเพื่อเลี้ยงชีพ |
+| 45 | P2 | G | th-guidance.txt | "ทนายความผู้บริหารในไต้หวัน (Managing Attorney)" | English job titles left in parentheses on every role line (Taiwan Attorney, Paralegal, Korea Operations Manager, Partner CPA). | ทนายความผู้จัดการสำนักงานในไต้หวัน |
+| 46 | P2 | G | columns-th/003-taiwan-traffic-accident-procedure.md | "ที่กล่าวมาข้างต้นคือการแบ่งปันจาก WEI ทนายความไต้หวัน" | Latin WEI plus blog sign-off on a Thai legal page. | ที่กล่าวมาข้างต้นคือข้อมูลจากทนายความ Wei Tseng |
+| 47 | P2 | G | columns-th/005-taiwan-company-establishment-advanced-2.md | "A. พนักงานคนแรก : งานผู้บริหารของกิจการลงทุนทั่วไป" | English A./B. list markers and a space before the colon. | 1) พนักงานคนแรก: งานผู้บริหารของกิจการลงทุนทั่วไป |
+| 48 | P2 | C | columns-th/003-taiwan-traffic-accident-procedure.md | "โทษจำคุก 3 เดือน จึงเป็น 3*30*1,000=90,000 ดอลลาร์ไต้หวันใหม่ (TWD)" | Memo-style formula in a client-facing Q&A; a native writes the arithmetic out. | โทษจำคุก 3 เดือนจึงเท่ากับ TWD 90,000 (30 วัน × 3 เดือน × TWD 1,000) |
+| 49 | P2 | C | th-guidance.txt | "งานที่รับดำเนินการ" | Nav/services label is a calque of “matters we handle”; Thai firm sites say บริการ or สาขาที่ให้คำปรึกษา. Recurs as page titles. | บริการ |
+| 50 | P2 | D | columns-th/001-taiwan-company-establishment-basics.md | "ภาษีและความตกลงภาษีเงินได้ไต้หวัน–เกาหลีใต้" | Section heading still frames the Korea treaty as the tax chapter a Thai investor came for. | ภาษี และหมายเหตุเฉพาะประเทศเกี่ยวกับความตกลงภาษีเงินได้ไต้หวัน–เกาหลีใต้ |
+```
+=== end code=0 2026-09-21 16:47:30 ===

@@ -1,3 +1,25 @@
 [WO start 2026-09-21 16:39:14]
 Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
 Retry attempt 1...
+Native Filipino review is in `docs/i18n/global-plan/reviews/native/fil-a.md` (guidance pack + columns 001–009, 15 P1 + 47 P2). Gender for Wei Tseng is feminine throughout. Consultation lock holds in the FAQ and llms notice.
+
+Last 15 lines of the output file:
+
+```
+| 48 | P2 | D | columns-fil/007-taiwan-divorce-lawsuit-qna.md | "Judgment Blg. 4 ng taong 112 (112年憲判字第4號)" | ROC year 112 is opaque in the Philippines; add CE 2023. Recurs FAQ and sources. | Hatol Blg. 4 ng taong 112 (2023; 112年憲判字第4號) |
+| 49 | P2 | B | columns-fil/008-taiwan-labor-severance-law.md | "sa Taiwan??" | Double question mark in the title (and again in the H1). | sa Taiwan? |
+| 50 | P2 | G | columns-fil/008-taiwan-labor-severance-law.md | "Kapag dahil sa force majeure (不可抗力) ay kailangan ang pansamantalang paghinto ng trabaho (暫停工作) nang 1 buwan" | English *force majeure* left in a Filipino statute paraphrase; *1 buwan* is memo-digit style. | Kapag dahil sa pangyayaring hindi kayang pigilan (不可抗力) ay kailangan ang pansamantalang paghinto ng trabaho nang isang buwan o higit pa |
+| 51 | P2 | C | columns-fil/008-taiwan-labor-severance-law.md | "at siya ang tagabenta (salesperson) na may pinakamataas na benta sa gitnang bahagi ng Taiwan" | Stock blog hyperbole; “pinakamataas” sits badly on a law-firm page even as case colour. also later “pinakamataas na benta sa gitnang rehiyon” | at siya ang tagabenta na mataas ang benta sa gitnang bahagi ng Taiwan |
+| 52 | P2 | C | columns-fil/008-taiwan-labor-severance-law.md | "Magandang araw, ako si Wei Tseng (曾雋崴), abogada sa Taiwan." | Blog greeting clashes with the rest of the site’s formal-you register. | Ako si Wei Tseng (曾雋崴), abogada sa Taiwan. |
+| 53 | P2 | C | columns-fil/008-taiwan-labor-severance-law.md | "Sa bawat 1 taon ng natapos na haba ng serbisyo ng empleyado" | Digit+noun Korean/Chinese memo style; a native writes bawat taon / kalahating buwan. also “3 sunod na araw”, “0.5 buwan”. | Sa bawat taon ng natapos na haba ng serbisyo ng empleyado, kailangang magbayad ang employer ng separation pay na katumbas ng kalahating buwan |
+| 54 | P2 | G | columns-fil/009-taiwan-voluntary-resignation-severance.md | "na nag-aaplay ng Artikulo 17 nang mutatis mutandis (勞動基準法)" | Latin left in running Filipino. | na nag-aaplay ng Artikulo 17 nang may kaukulang pagbabago (準用, 勞動基準法) |
+| 55 | P2 | B | columns-fil/009-taiwan-voluntary-resignation-severance.md | "napakahalaga ng ''**panahon**''." | Doubled quotes plus bold around a single word; looks unedited. | napakahalaga ng panahon. |
+| 56 | P2 | C | columns-fil/001-taiwan-company-establishment-basics.md | "maliban na lamang sa mga sitwasyong may permanent establishment (PE, 常設機構)" | English abbreviation *PE* left in running Filipino. also 004 heading | maliban na lamang sa mga sitwasyong may permanenteng establisimyento (常設機構) |
+| 57 | P2 | C | columns-fil/004-taiwan-company-subsidiary-vs-branch.md | "o kung direkta silang nakilahok sa gawaing tortious (侵權行為)" | English *tortious* dropped into Filipino; PH lawyers say gawang labag sa batas / tort. | o kung direkta silang nakilahok sa gawang labag sa batas (侵權行為) |
+| 58 | P2 | C | columns-fil/001-taiwan-company-establishment-basics.md | "Ang subsidiary sa Taiwan (limited company 有限公司 o company limited by shares 股份有限公司) ay isang malayang legal na persona" | *Legal na persona* is a German/Spanish calque; PH Civil Code uses juridical person / legal na personalidad. Recurs 002, 004. | Ang subsidiary sa Taiwan (有限公司 o 股份有限公司) ay isang malayang juridical person sa ilalim ng batas ng Taiwan. |
+| 59 | P2 | D | columns-fil/008-taiwan-labor-severance-law.md | "Mahirap Ba Talagang Makakuha ng Separation Pay (資遣費) sa Taiwan??" | 資遣費 is labelled with the PH Labor Code term without the “do not equate” caveat the guidance pack already has. | Mahirap ba talagang makakuha ng 資遣費 sa Taiwan? (huwag itumbas sa separation pay sa Labor Code ng Pilipinas) |
+| 60 | P2 | C | columns-fil/004-taiwan-company-subsidiary-vs-branch.md | "hindi ito garantiyang sa anumang sitwasyon ay magtatapos ang pananagutan" | Readable, but *garantiya* on a law-firm page should stay in the negative form the rest of the site uses (*hindi katiyakan*). | hindi ito katiyakang sa anumang sitwasyon ay magtatapos ang pananagutan sa halaga ng kontribusyon sa kapital |
+| 61 | P2 | C | fil-guidance.txt | "Naka-host sa Vercel ang website na ito, at iniimbak ang ipinadala ninyo sa pribadong object storage" | *Object storage* left in English inside a privacy notice. | Naka-host sa Vercel ang website na ito, at iniimbak ang ipinadala ninyo sa pribadong imbakan ng serbisyong iyon |
+| 62 | P2 | C | columns-fil/003-taiwan-traffic-accident-procedure.md | "Dito nagtatapos ang Q&A tungkol sa aksidente sa trapiko. Sana ay makatulong ito sa inyo." | Korean-blog sign-off plus empty `​` padding in Q16–Q20; looks unedited on a law-firm page. | Dito nagtatapos ang mga tanong at sagot tungkol sa aksidente sa trapiko. |
+```
+=== end code=0 2026-09-21 16:47:09 ===

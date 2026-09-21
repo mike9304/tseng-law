@@ -427,7 +427,7 @@ export const guidanceAnswers: Record<
   tr: {
     services: {
       answer:
-        'Büro, Tayvan hukukuna göre altı çalışma grubu yürütür: yatırım ve şirket kuruluşu, hukuk davaları ve tazminat, evlilik, aile ve miras, iş hukuku, ceza ve fikri mülkiyet. Her işin kapsamı, bir avukat gönderdiğiniz içeriği inceledikten sonra ayrıca doğrulanır. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
+        'Büro, Tayvan hukukuna göre altı çalışma alanında iş yürütür: yatırım ve şirket kuruluşu, hukuk davaları ve tazminat, evlilik, aile ve miras, iş hukuku, ceza ve fikri mülkiyet. Her işin kapsamı, bir avukat gönderdiğiniz içeriği inceledikten sonra ayrıca doğrulanır. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
       sources: ['/tr/faq', '/tr/contact'],
     },
     about: {
@@ -437,7 +437,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Bu sayfa Hovering avukatlarının, operasyon yönetiminin ve ortak muhasebenin profillerini gösterir. Avukat Wei Tseng (曾雋崴) Tayvan’da meslek yürütmeye yetkilidir ve büronun yönetici avukatıdır; Kore, Japonya ve diğer uluslararası müvekkillerle çalışır. Büro bir sonuç vaat etmez. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
+        'Bu sayfa Hovering avukatlarının, operasyon yönetiminin ve bağlı muhasebe bürosunun profillerini gösterir. Avukat Wei Tseng (曾雋崴) Tayvan’da meslek yürütmeye yetkilidir ve büronun yönetici avukatıdır; Kore, Japonya ve diğer uluslararası müvekkillerle çalışır. Büro bir sonuç vaat etmez. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
       sources: ['/tr/about', '/tr/contact'],
     },
     pricing: {
@@ -447,12 +447,12 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Özetinizi iletişim formu üzerinden gönderin: ne olduğu, ne yardıma gereksinim duyduğunuz, işin Tayvan ile ilişkisi ve varsa süre. Bu ilk aşamada kimlik belgesi veya tüm kanıtları göndermeniz gerekmez. Büro yanıt süresi vaat etmez ve bu sayfa üzerinden randevu doğrulamaz. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
+        'Özetinizi iletişim formu üzerinden gönderin: ne olduğu, hangi konuda yardıma ihtiyaç duyduğunuz, işin Tayvan ile ilişkisi ve varsa süre. Bu ilk aşamada kimlik belgesi veya tüm kanıtları göndermeniz gerekmez. Büro yanıt süresi vaat etmez ve bu sayfa üzerinden randevu doğrulamaz. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
       sources: ['/tr/faq', '/tr/pricing'],
     },
     faq: {
       answer:
-        'Bu bölüm sık sorulan soruları genel bilgi düzleminde yanıtlar: altı çalışma grubu, iletişimden önce hazırlık, ücretin belirlenme biçimi ve bir ileti göndermenin anlamı. Gönderilen talep bir avukatın incelemesini bekler; hukuki görüş değildir, randevu değildir ve avukat ile müvekkil arasında ilişki kurmaz. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
+        'Bu bölüm sık sorulan soruları genel bilgi düzleminde yanıtlar: altı çalışma alanı, iletişimden önce hazırlık, ücretin belirlenme biçimi ve bir ileti göndermenin anlamı. Gönderilen talep bir avukatın incelemesini bekler; hukuki görüş değildir, randevu değildir ve avukat ile müvekkil arasında ilişki kurmaz. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
         sources: ['/tr/contact', '/tr/services'],
     },
   },

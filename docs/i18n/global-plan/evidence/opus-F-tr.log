@@ -1,0 +1,254 @@
+# opus-F-tr.log — Turkish (tr) native-review fix lane, Opus 5
+worktree: /Users/son7/Projects/tseng-law-fix-e-20260921
+date: 2026-09-21
+inputs: RULEBOOK-FIX.md (R2–R10), ACCEPTED-tr.md, reviews/native/tr-a.md, tr-b.md, EN sources src/content/columns-en/*
+files written: src/content/columns-tr/001–018 (18), src/data/international-guidance-western.ts (turkishGuidanceContent),
+  src/data/international-guidance-team.ts (tr blocks), src/data/international-guidance-answers.ts (tr),
+  src/data/international-inquiry-copy.ts (tr), src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.tr)
+no other locale's strings touched (verified by diff scan); no git add/commit/push; no test expectation edited (none pinned a changed tr string)
+
+## ROWS APPLIED
+
+### tr-a.md — guidance pack
+a#1  會面交往 → "çocukla kişisel ilişki kurma hakkı (會面交往)" (services/family)
+a#2  "Konum çok ivediyse ne olur?" → "Konunuz çok acilse ne olur?"; "konum bekleyemiyorsa" → "işiniz bekleyemiyorsa";
+     also "Bu sayfanın ivedi bir kanalı yoktur" left (valid TR) — question + answer now agree
+a#3  資遣費 caveat: "başka devletlerin kurumlarıyla" → "başka ülkelerin benzer düzenlemeleriyle" (ACCEPTED: kurum → düzenleme;
+     the reviewer's "Türkiye'deki kıdem/ihbar tazminatı" NOT used — it would assert the reader's own law, which ACCEPTED forbids)
+a#4  llms discoveryNotice: "arama sırası, destek, … görünürlük" → "arama sıralaması, tavsiye, … reklam"
+a#18/a#19 OUR TEAM / OFFICES — already Turkish (EKİBİMİZ / OFİSLER): verified, no change needed
+a#20 fullProfileLabel "Tam profil (English)" → "Tam profil (İngilizce)"
+a#22 guillemets «…» → “…” (guidance: 3 pairs — western.ts ×2, inquiry-copy ×1)
+a#25 "çalışma gruplarını yürütür" → "çalışma alanlarında faaliyet gösterir" (+ systemic sweep, see below)
+a#26 menuLabel "Sayfa dizini" → "Menü"
+a#27 "Görevli avukatların tanıtımı" → "Avukatların tanıtımı" (+ 001 footer "görevli avukatın" → "avukatın")
+a#28 "hukuk biçiminin/biçimine" → "şirket türünün/türüne" (2)
+a#29 "bir zaman dizisi, … kanıtların incelenmesi ve ancak ondan sonra sonraki adımlarla başlar" →
+     "olayların kronolojisinin, eldeki belge ve delillerin incelenmesiyle başlar; sonraki adımlar ancak ondan sonra gelir"
+a#30 "yerel gereksinim için açıldı" → "bölgedeki ihtiyaç üzerine açıldı"
+a#31 "aynı akışta çalışabilir" → "birlikte aynı süreç içinde çalışabilir"
+     (reviewer's "tek bir süreç" rejected: /\btek\b/ is a forbidden token in guidance-zh-hans-ms-ru-tr-content.test.ts)
+a#32 "ne yardıma gereksinim duyduğunuzu" → "hangi konuda yardıma ihtiyaç duyduğunuzu" (3: contact page, answers.tr.contact, inquiry placeholder)
+a#33 "Kapsam yolda değişirse" → "Kapsam süreç içinde değişirse"
+a#34 "duyarlı belge(ler)" → "hassas belge(ler)" (2)
+a#35 "kamuya açık olmayan nesne depolamasında" → "kamuya açık olmayan bir depolama alanında"
+a#36 "çalışmanın üstlenilmesini doğruladıktan" → "işin kabulünü doğruladıktan"
+a#37 qualificationSentence "{firm} yönetici avukatıdır" → "{firm}’in yönetici avukatıdır"
+a#38 "soruları wei@hoveringlaw.com.tw alır" → "sorularınızı … adresine yazabilirsiniz"
+a#39 role lines: English parentheticals removed — "Tayvan'da yönetici avukat", "Tayvan avukatı",
+     "Kore operasyonları yöneticisi", "Ortak yeminli mali müşavir"
+a#40 "ortak muhasebenin profilleri" → "bağlı muhasebe bürosunun profilleri" (western + team description + answers.tr.lawyers);
+     partnerTitle "Ortak muhasebe" → "Bağlı muhasebe bürosu"
+a#41 contact list item: "Görüşme İngilizce, …" → "Görüşme yalnızca İngilizce, …"
+a#65 pricing description "Sıranın açıklaması: …" → "Süreç: önce çalışma kapsamı belirlenir, sonra ücret doğrulanır; …"
+
+### tr-a.md — columns
+a#5  001: Taiwan–Korea treaty paragraph + country-specific note ("… anlaşmanın koşullarını karşılayan Kore bağlantılı
+     durumlar içindir; her yabancı yatırımcı için geçerli genel bir kural değildir. Tayvan ile kendi ülkeniz arasında
+     bir vergi anlaşması bulunup bulunmadığı … ayrıca incelenmelidir.") — mirrors EN 001 line 45. Block count unchanged.
+a#6  004: "Kore ana şirketi Tayvan'a giriş yapsa bile…" → foreign parent + "Kore, … işaretlenen bir örnektir; tek menşe
+     ülke değildir." (EN 004 line 31). This also satisfies R2b for 004.
+a#7  005 Q1: "Kore'den …" → "Yurt dışından …? (Aşağıdaki banka ve döviz kuralları yalnızca Kore örneğidir; kendi
+     ülkenizin kuralları ayrıca incelenmelidir.)"; "Kore'deki ana bankanıza" → "kendi ülkenizde çalıştığınız bankaya" (R2a)
+a#8  005 Q5: "Kore uyruklu kişileri" → "yabancı uyruklu kişileri"
+a#9  007: "Kore ve Tayvan gibi 2 veya daha fazla devlet" → "birden fazla devlet veya bölgeye — örneğin Tayvan ile
+     başka bir ülkeye —"; "2 ebeveynin geliri" → "her iki ebeveynin geliri"
+a#10 007: "Çocuğun Kore'de yaşayacağına … Kore yaşam düzeyi" → "Tayvan dışında yaşayacağına … o ülkenin yaşam maliyeti"
+a#11 008 (FAQ + body) and 009: "Kore'den farklı olarak" → "Bazı hukuk düzenlerinden — örneğin Kore'den — farklı olarak";
+     008 "Kore'de çalışanlar işten ayrıldığında…" → "Bazı hukuk düzenlerinde — Kore bunlardan biridir —…" (EN 008 line 31);
+     008 "Tayvan ise Kore'den farklıdır" → "Tayvan ise bundan farklıdır"
+a#12 002: 拘役 "tutuklama" → "kısa süreli hapis (拘役)" (art. 9 and art. 90)
+a#13 003: "mümkün olan en yüksek tazminatın alınmasına çalışması" → "olguların ve delillerin desteklediği tazminat
+     kalemlerini eksiksiz değerlendirmesi" (R3)
+a#14 003: "mahkemeler şu sırada yaklaşık 3 aylık bir ceza verir" → "Bazı kararlarda … yaklaşık 3 aylık hapis cezası
+     görülmüştür; tipik veya garanti bir sonuç yoktur."; same treatment for the 4-month / 6-month line (digits kept)
+a#15 003: "Cezanın ertelenmesi (緩刑) olabilir ve hapishaneye gidilmeyebilir." → "Mahkeme bazı hallerde cezanın
+     ertelenmesine (緩刑) hükmedebilir; bu bir vaat değildir."
+a#16 008: "yüksek bir kıdem tazminatı alabildi" → "kanunun tanıdığı kıdem tazminatı hakkını tespit ettirebildi"
+a#17 003: R9 — "Tayvan'da yaralı veya kurtarma gerekiyorsa 119'u (ambulans ve itfaiye), suç veya acil güvenlik durumu
+     varsa 110'u (polis) arayınız; cep telefonundan 112 numarası kullanılabilir."
+a#24 percent order — systemic, see sweeps
+a#42 001: "oturmayı ve sermayesini ile başlıca vergileri" → "oturmayı, sermayeyi ve başlıca vergileri"
+a#43 001 + 004: "(常設機構, PE)" → "(常設機構)"; 004 §6 heading "işyeri (PE)" → "işyeri (常設機構)"
+a#44 001/002/018: accusative → dative/için with başvurmak (5 instances; see sweeps)
+a#45 002: "her birinde paradan şirket hesabından çıkabilir" → "her birinde para şirket hesabından çıkabilir"
+a#46 003: "2. derecenin sözlü tartışmasının kapanışına" → "istinaf duruşmasının sona ermesine";
+     "1. derecenin sözlü tartışması" → "ilk derece duruşması" (×2)
+a#47 003: ISO dates → "29 Mayıs 2026" / "1 Temmuz 2026" (checker: numbers still PASS, 145/145)
+a#48 003: "yorumlara bırakınız" → "İletişim sayfasından yazabilirsiniz; yanıt süresi vaat edilmez."
+a#49 003: "Çin Cumhuriyeti Ceza Kanunu" → "Tayvan Ceza Kanunu (中華民國刑法)" (4 link labels)
+a#50 004 etc.: "3. kişi" → "üçüncü kişi" — systemic, see sweeps
+a#51 004: "ortak çevresini saptama" → "ortak yapısını belirleme" (2) and table cell "ortak çevresi" → "ortak yapısı"
+a#52 005 / b#25 013: "(Q&A), " removed
+a#53 005: "beyanı yatırmalıdır" → "beyanı sunmalıdır"
+a#54 005: "bize her zaman yazabilirsiniz" → "İletişim formundan yazabilirsiniz; yanıt süresi vaat edilmez."
+a#55 006: "Tayvan'ın başlangıçlarındaki … dönemini tanıdınız mı?" → "Tayvan'ın eski geleneksel berber salonlarını
+     (理髮廳) hatırlıyor musunuz?" (EN: "Do you remember Taiwan's old-fashioned barbershops?")
+a#56 006: "Büyük Hâkimler (大法官)" → "Anayasa Mahkemesi (大法官)"
+a#57 007 (×2) + 003 (3 link labels): ROC years mapped — "2023 (Minguo 112) yılı", "2020 (Minguo 109) yılı"
+a#58 008: title + H1 "zor mu??" → "zor mu?"
+a#59 008 (FAQ + body): "İşçi Emeklilik Ödeneği Yönetmeliği (勞工退休金條例)" → "İşçi Emeklilik Kanunu (勞工退休金條例)"
+a#60 008: "Merhaba, ben Tayvan avukatı Wei Tseng (曾雋崴)." → "Wei Tseng (曾雋崴), Tayvan avukatı."
+a#61 008: "şirketin niyetine kapılmamaya" → "şirketin bu yönlendirmesine kapılmamaya"
+a#62 008: "Kıdem tazminatı çalışanın yasal hakkıdır, / ve şirket elbette ödemelidir." → "Koşulları oluştuğunda kıdem
+     tazminatı (資遣費) kanunun tanıdığı bir haktır, / ve işveren bunu ödemekle yükümlüdür." (two blocks kept)
+a#63 009: "Daha önce belirtildiği üzere, …" → "Tayvan'da … alması, genel olarak, kolay değildir."
+a#64 009: "“**zaman**” çok önemlidir." → "**zamanlama** çok önemlidir." (EN: **"timing"**)
+
+### tr-b.md — columns 010–018
+b#1  010: "Çalışan kişinin duruşu nedir?" → "Egzersiz yapanın zihniyeti nedir?" (×2: image alt + link label)
+b#2  011: already generalised in the file ("yabancı bir kozmetik markası") — verified, no change needed
+b#3  013 + 017: "Yabancılar Yatırım Statüsü (外國人投資條例)" → "Yabancı Yatırım Kanunu (外國人投資條例)" (per ACCEPTED b#3)
+b#4  016: 信託 "vakıf" → "trust" (malvarlığı/sözleşme/belgeleri/plan, 4 sites); 受託人 "Mütevelli" → "Yedieminin (受託人)"
+b#5  016: 檢認 "yoklama" → "vasiyetnamenin resmi incelemesi (檢認)"
+b#6  016: "vasiyet infazcısı ve vasiyetname içeriği (遺贈)" → "vasiyetname infazcısı ve vasiyetle bırakılan kazandırma (遺贈)"
+b#7  016: "ekonomik maliki olmaz" → "maliki veya gerçek hak sahibi olmaz" (FAQ + body); "ekonomik malik olmaz" →
+     "malvarlığının sahibi olmaz"
+b#8  017: 搬家 "nakliye" → "evden eve eşya taşıma (搬家)" (FAQ + body + §2 line)
+b#9  017: title + H1 "vekâlet" → "taşımanın başkasına bırakılması"; "İzinli işletmeye vekâlet" → "İşin izinli bir
+     işletmeye bırakılması"; "alt vekâlet" → "alt yükleniciye devir / alt yüklenici" (6 vekâlet instances total)
+b#10 018: "acente ile işletip" → "bağımsız dağıtıcı ile işletip" (FAQ + H3) — EN says "distributor"
+b#11 010: "kayıp emeklilik anına kadar" → "zarar emeklilik yaşına kadar"
+b#12 010: "1. derece" → "ilk derece" / "ilk derece mahkemesi örneği" (13)
+b#13 010: "intervertebral disk yırtılması" → "disk yırtılması" (14)
+b#14 010: "109 yılı tüketici işi 7 sayılı" → "2020 (Minguo 109) yılı tüketici işi 7 sayılı"
+b#15 010: "iş işe değerlendirilmelidir" → "her somut olayda ayrı ayrı değerlendirilmelidir"
+b#16 010: "## 2. Ceza şikâyeti ve hukuk tazminatına…" → "## 2. Ceza şikâyeti ve tazminat davasına…"
+b#17 011: "etiketlemenin (標示) ile reklamın (廣告)" → "etiketlemenin (標示) ve reklamın (廣告)"
+b#18 011/018 + sweep: "ithalat öznesi" → "ithalatçı" (3), "sorumluluk öznesi" → "kimin sorumlu olduğu / asıl sorumlu",
+     "hukuk öznesi(dir)" → "tüzel kişi(dir)", "hak öznesidir" → "hak sahibidir", "hakkın öznesi" → "hakkın sahibi"
+b#19 011/017: "3. kişi" → "üçüncü kişi" (in the global sweep)
+b#20 011: "antienflamatuar / bakterisidal" → "iltihap giderici / bakteri öldürücü" (3)
+b#21 011 + b-pattern 016/017 (R7b): bare answers made self-standing in the body —
+     011 §1 "Mutlaka kurulması gerekmez." → "Tayvan'da bağlı şirket veya şube kurulması zorunlu değildir."
+     016 §3 "Hayır." → "Sağ kalan eşin talebi miras payından ibaret değildir."
+     016 §7 "Hayır." → "Küçüğün mirasla edindiği malvarlığı ebeveynin malvarlığına karışmaz."
+     017 §1 "Her zaman böyle değildir." → "Her lojistik işi, düzenlemeye tabi motorlu yük taşımacılığı sayılmaz."
+     017 §3 "Hayır." → "İşletme ruhsatı pay edinimiyle devralınmaz."
+     (frontmatter FAQ answers keep "Hayır." — there the question is present, so the short answer is correct)
+     014 §1: heading turned into the question the answer replies to — "## 1. Kısa yanıt: asgari hizmet süresi kaydı
+     her zaman geçerli midir?" (heading count unchanged)
+b#22 012 + 016: doubled "önce önce" fixed (2)
+b#23 012: "önde 2 veya daha fazla araç" → "önde iki veya daha fazla araç"
+b#24 012: "öndeki duruma göre uyarlanmalıdır" → "önlerindeki duruma göre hareket etmelidir"
+b#26 013: "yabancı aktörlerin" → "yabancı kişilerin"
+b#27 013: "yorum bırakın veya iletişime geçin" → "İletişim sayfasından yazabilirsiniz; yanıt süresi vaat edilmez"
+b#28 013: fullwidth "**Tavsiye**：" → "**Tavsiye:**"
+b#29 013: emoji 😊 removed
+b#30 014: "asgari çalışma süresi" → "asgari hizmet süresi" (29 instances incl. title/H1/FAQ)
+b#31 014: "yerine geçmekte güçlük çeker" → "yerine geçmez"
+b#32 015: 分支機構 "yardımcı kuruluş" → "bağlı işyeri"
+b#33 015 etc.: guillemets (global sweep)
+b#34 015: "her zaman Tayvan avukatına başvurabilirsiniz" → "İletişim formundan yazabilirsiniz, yanıt süresi vaat edilmez"
+b#35 016: "düz soy altsoyu (直系血親卑親屬)" → "altsoy (直系血親卑親屬)" (2) and "sırasını düz soy altsoyu," → "sırasını altsoy,"
+     — PARTIAL: "1. sırasıdır" kept as a digit (see checker note below)
+b#36 016: "evlilik kalan malvarlığı farkı dağıtımı/dağıtım hakkı" → "evlilik sonu kalan malvarlığı farkının dağıtımı /
+     … dağıtımını isteme hakkı"; heading + FAQ q "Eşin kalan malvarlığı farkı dağıtım hakkı" → "… farkının dağıtımını
+     isteme hakkı" (6 sites)
+b#37 016: "3 kişi" → "üç kişi" (2) — PARTIAL: fraction written "1/3 oranında" not "üçte bir" (checker note below)
+b#38 017: Japanese middle dot "連江・馬祖" → "連江、馬祖" (2)
+b#39 017: "Kara Yolu Kanunu / Kara Yolu İdaresi" → "Karayolu Kanunu / Karayolu İdaresi" (14)
+b#40 017: "kuruluş hazırlık izni başvurulur" / "İşletme ruhsatı başvurulur" → "… için başvurulur" (2)
+b#41 018: "100 %" → "%100" (in the percent sweep)
+b#42 018: "merkez ve koyanların temel bilgisi" → "merkezin ve yatırımcıların temel bilgisi"
+b#43 018: "yoksa iş dış yükleniciye mi verilir?" → "yoksa iş dış bir yükleniciye mi verilir?"
+b#44 018: "oturma belgesi (外僑居留證) de başvurmalıdır" → "… için de başvurmalıdır"
+b#45 018: "ayrı bir hukuk öznesidir" → "ayrı bir tüzel kişidir"
+b#46 018: "Tayvan sorumlunun yetkisi" → "Tayvan'daki yetkilinin yetkisi"
+b#47 013: blog opener de-blogged: "Son dönemde pek çok kişi … başarıyla şirket kurmuş, …," →
+     "Tayvan'da şirket (公司) kuruluşunu tamamlayan ve ardından çalışma vizesi ile oturma belgesi (外僑居留證) alan pek
+     çok kişi vardır." + "Kuruluş sırasında sıkça sorulan sorular aşağıda toplanmıştır." (two blocks kept)
+b#48 014: "peşin nitelikli edim" → "avans niteliğindeki ödeme" (10)
+
+## SYSTEMIC SWEEPS (pattern → instances changed)
+1. Percent order (R6/a#24/b#41): "N %" / "N %'suffix" → "%N" / "%N'suffix" with Turkish vowel harmony
+   (%5'tir, %10'dur, %20'dir, %21'dir, %3'ü, %30'u, %30'unun) → 38 instances (001:6, 003:1, 004:30, 018:1)
+2. Guillemets (R6/a#22/b#33): «…» → “…” → 26 pairs (52 chars) in columns 004/005/008/009/013/014/015/016/017/018
+   + 3 pairs in the guidance pack (western.ts ×2, inquiry-copy ×1)
+3. 第三人 (R8/R11/a#50/b#19): "3. kişi*" → "üçüncü kişi*" → 14 instances (003/004/007/011/017) + 3 sentence/table capitalisations
+4. Court instances (R8/R11/a#46/b#12): "1. derece" → "ilk derece", "2. derece" → "istinaf" → 16 instances (003:3, 010:13)
+5. "çalışma grupları / bu grup / anılan gruplar / altı grup" → "çalışma alanları / bu alan / anılan alanlar /
+   altı çalışma alanı" → 16 instances (western.ts 14, answers.ts 2)
+6. Rechtssubjekt calque "özne" (b#18/b#45) → 8 instances (001, 004 ×3, 011 ×2, 018, 017 "iznin öznesi" ×2)
+7. başvurmak + accusative (a#44/b#40/b#44) → 7 instances (001 ×2, 002 ×3, 017 ×2, 018 ×1)
+8. 最低服務年限 "asgari çalışma süresi" → "asgari hizmet süresi" → 29 (014)
+9. 預付性給付 "peşin nitelikli edim" → "avans niteliğindeki ödeme" → 10 (014)
+10. 公路法 "Kara Yolu" → "Karayolu" → 14 (017)
+11. Medical Latin "intervertebral disk yırtılması" → "disk yırtılması" → 14 (010)
+12. CJK punctuation outside glosses (R6b): "**Tavsiye**：" (013) and "連江・馬祖" → "連江、馬祖" (017 ×2) → 3
+    (remaining ： is inside the frontmatter `url:` value — out of scope; 、 inside Chinese glosses kept per R6b)
+13. Blog-register / availability CTAs (R3/R7): "yorumlara bırakınız" (003), "bize her zaman yazabilirsiniz" (005),
+    "yorum bırakın" (013), "her zaman Tayvan avukatına başvurabilirsiniz" (015), emoji (013), "??" (008 ×2),
+    "Merhaba, ben …" (008) → 8 sites, all now "İletişim …; yanıt süresi vaat edilmez."
+14. R4 gender: no change required — Turkish *avukat* is epicene and both reviewers report no finding; all bylines,
+    bios, review labels and first-person narration were re-read and carry no masculine marking.
+15. R8 glossary verified across all 18 files (存證信函, 公開發行公司, 罰鍰/罰金, 運送承攬, 病歷, 就醫交通費, 看護費用,
+    訴訟代理人, 統一證號, 退休金, 背信, 告訴乃論之罪, 過失傷害, 分支機構, 營業執照, 經濟部投資審議司 — one consistent
+    name "Ekonomi Bakanlığı Yatırım İnceleme Dairesi" in 001/013/017): all already correct except the rows fixed above.
+
+## ROWS SKIPPED (with reason)
+a#21 Hangul slug in `url:` of 008/009 and the percent-encoded Korean Wix path in the 005 body.
+     ACCEPTED-tr: url-Hangul rows are out of scope; the WO hard rule allows Korean characters inside `url` values and
+     forbids changing links. Checked EN 005 — it carries the identical wei-wei-lawyer.com link, so changing the
+     Turkish one would break link parity with the source. Left for the supervisor.
+a#23 "TWD 1.57M" → "1,57 milyon TWD" in the team bio. NOT APPLIED: GUIDANCE_BIO_PRESERVED_TERMS contains the literal
+     'TWD 1.57M' and src/data/__tests__/guidance-team-bios.test.ts asserts it byte-identical in EVERY locale
+     ("must keep \"TWD 1.57M\" byte-identical"). Turkish-only reformatting would fail that cross-locale test, and the
+     preserved-terms list is not a Turkish string, so it is outside this lane's write scope. Supervisor's call.
+Invest Taiwan link `lang=jpn` — untouched per the WO (link parity; supervisor fixes centrally).
+
+## CHECKER-CONSTRAINED DEVIATIONS (WO §Verify: "prefer the form the checker accepts")
+b#35 016: the reviewer asked for "yasal mirasın birinci sırasıdır". With the ordinal spelled out the checker FAILED
+     (`numbers FAIL missing from translation (6): 1×4, 3×2`, source 제1순위 / 3분의 1). Kept "yasal mirasın 1. sırasıdır"
+     and applied only the "düz soy altsoyu → altsoy" half of the row.
+b#37 016: for the same reason the fraction is written "her biri 1/3 oranında miras alır" (keeps both digits) instead of
+     "her biri üçte bir"; "3 kişi → üç kişi" was applied.
+a#57/b#14 ROC-year mapping: adding the Gregorian year makes the checker report
+     `numbers WARN extra in translation (2): 2023×2` on 007 (and equivalents on 003/010). Status stays PASS; the row is
+     a genuine reader need (a Türkiye reader cannot map Minguo 112 to 2023), so it was applied. Flagged here.
+003 also carries a pre-existing `numbers WARN 수사미해석` listing the Korean lexical digit-words (제1심/제2심/제3자) that
+     R11 says to write as words — expected, not introduced by this lane.
+
+## DISAGREED WITH / NOT APPLIED AS WRITTEN
+1. a#3 — the reviewer's rewrite inserts a claim about Turkish law ("Türkiye'deki kıdem veya ihbar tazminatı ile aynı
+   tutulmamalıdır"). RULEBOOK R2d and ACCEPTED forbid statements about the reader's own law. Used the neutral
+   "başka ülkelerin benzer düzenlemeleriyle aynı tutulmamalıdır" (ACCEPTED: kurum → düzenleme).
+2. a#31 — the reviewer's "tek bir süreç içinde" contains "tek", a forbidden token enforced by
+   src/lib/__tests__/guidance-zh-hans-ms-ru-tr-content.test.ts. Used "birlikte aynı süreç içinde".
+3. b#1 — ACCEPTED suggests glossing as "tutum/zihniyet (心態)". The two sites are an image alt and a link label that
+   translate a news/blog headline; inserting a Chinese gloss into a headline is editorially wrong and 心態 is not a
+   Taiwanese legal term, so the gloss was omitted: "Egzersiz yapanın zihniyeti nedir?".
+4. a#60 — the greeting the reviewer objects to is faithful to the EN source ("Hello, I am Wei Tseng (曾雋崴), Taiwan
+   Attorney."). Only the chatty "Merhaba, ben …" frame was dropped; the following first-person sentence ("Bugün
+   sizinle … konuşmak istiyorum", EN "Today, I would like to explain …") was kept as source-faithful.
+5. b#47 — the reviewer's replacement drops the EN sentence's content ("Recently, many people have successfully
+   established companies …"). Kept the content, removed only the blog cadence and the trailing comma-fragment.
+6. a#39 — applied, but noting the cross-locale inconsistency: all 27 guidance locales carry the same English job-title
+   parenthetical (Managing Attorney / Taiwan Attorney / Korea Operations Manager / Partner CPA); tr is now the only
+   one without it. If the supervisor prefers parity over the reviewer's row, this is a one-line revert.
+7. 股東 "ortak": R8 says 股東 = shareholders, not partners. Turkish "ortak" covers both and neither reviewer flagged it;
+   changing ~30 instances to "pay sahibi" was judged out of scope. Noted for the supervisor.
+
+## §VERIFY OUTPUT (verbatim)
+$ node scripts/check-column-translation.mjs --dir src/content/columns-tr --lang tr 2>&1 | tail -8
+forbidden      PASS   
+hanzi          PASS   han=69
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "[변호사 검수 필요]" src/content/columns-tr src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      24

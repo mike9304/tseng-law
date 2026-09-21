@@ -13,13 +13,13 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Öne çıkan görsel](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Son dönemde pek çok kişi Tayvan’da başarıyla şirket (公司) kurmuş, çalışma vizesi ile oturma belgesi (外僑居留證) almıştır,
+Tayvan’da şirket (公司) kuruluşunu tamamlayan ve ardından çalışma vizesi ile oturma belgesi (外僑居留證) alan pek çok kişi vardır.
 
-ve kuruluş sırasında sıkça sorulan sorular aşağıda toplanmıştır.
+Kuruluş sırasında sıkça sorulan sorular aşağıda toplanmıştır.
 
 [**Şirket kuruluşunun temel bölümünü**](/tr/columns/taiwan-company-establishment-basics) okuyanlar ardından bu daha ayrıntılı derinlemesine bölüme de bakabilir.
 
-Aşağıdaki soru ve yanıtlar (Q&A), Tayvan’da şirket kurmayı düşünenlere yardımcı olmayı amaçlar. 😊
+Aşağıdaki soru ve yanıtlar, Tayvan’da şirket kurmayı düşünenlere yardımcı olmayı amaçlar.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
@@ -29,7 +29,7 @@ Yabancı, Tayvan’da şirket kurarken Ekonomi Bakanlığı Yatırım İnceleme 
 
 Yatırım İnceleme Dairesi, söz konusu sermayenin (資本額) gerçekten yatırım amacıyla kullanılıp kullanılmadığını
 
-ve yabancı aktörlerin başka bir gerekçeyle fon sokup sokmadığını doğrulamalıdır.
+ve yabancı kişilerin başka bir gerekçeyle fon sokup sokmadığını doğrulamalıdır.
 
 Yatırım planı yazılırken şirketin tam adresini yazmak gerekmez; bölgeyi belirtmek yeterlidir (örnek: Taipei şehri). ​
 
@@ -43,13 +43,13 @@ Temel bölümde de bir okur, hesap açılışının en zor adım olduğunu belir
 
 Tayvan’da kara para aklama (洗錢) vakaları çok sayıda olduğu için banka hesabı açılışı giderek daha sıkılaşmaktadır.
 
-**Tavsiye**：
+**Tavsiye:**
 
 Yatırım planı incelemesi de zaman aldığı için,
 
 yatırım planını yazmak ile şirket tescil adresini aramak aynı anda yürütülmelidir.
 
-Yabancılar Yatırım Statüsü (外國人投資條例) madde 9 uyarınca onaylanan katkı, yetkili makamın belirlediği süre (核定期限) içinde tam olarak gelmelidir; süre her dosyanın onay belgesinde teyit edilir (uygulamada sıklıkla yaklaşık 1 yıl olarak belirlenir).
+Yabancı Yatırım Kanunu (外國人投資條例) madde 9 uyarınca onaylanan katkı, yetkili makamın belirlediği süre (核定期限) içinde tam olarak gelmelidir; süre her dosyanın onay belgesinde teyit edilir (uygulamada sıklıkla yaklaşık 1 yıl olarak belirlenir).
 
 Bu süre içinde şirket adresi bulunup kira sözleşmesi imzalandıktan sonra,
 
@@ -63,7 +63,7 @@ Mümkündür.
 
 Banka genel olarak çifte kimlik doğrulaması ister,
 
-ve oturma belgesi yoksa Tayvan göç idaresinden «**temel veri formu**» (統一證號基本資料表) talep edilebilir.
+ve oturma belgesi yoksa Tayvan göç idaresinden “**temel veri formu**” (統一證號基本資料表) talep edilebilir.
 
 Aynı gün teslim mümkün olmakla birlikte,
 
@@ -91,7 +91,7 @@ Bu noktada Tayvan avukatı ile yeterince görüşülmesi uygun olur.
 
 sözleşme başlangıç günü mümkün olduğunca geç tutulmalıdır.
 
-Ayrıca Tayvan’daki dükkân kira sözleşmelerinde ev sahibi kiracıya sıklıkla «**dekorasyon süresi**» (裝潢期間) verir.
+Ayrıca Tayvan’daki dükkân kira sözleşmelerinde ev sahibi kiracıya sıklıkla “**dekorasyon süresi**” (裝潢期間) verir.
 
 Bu, kiranın muaf tutulduğu bir süredir; müzakere edilebilir.
 
@@ -123,7 +123,7 @@ ofis tipi ticari mekân ise şirket tescili (公司登記) mümkün olmaz.
 
 imzalanmadan önce önceden doğrulanmalıdır.
 
-*Tayvan hukuku hakkında yardıma veya görüşmeye ihtiyacınız varsa, yorum bırakın veya iletişime geçin.*
+*Tayvan hukuku hakkında yardıma veya görüşmeye ihtiyacınız varsa İletişim sayfasından yazabilirsiniz; yanıt süresi vaat edilmez.*
 
 ---
 

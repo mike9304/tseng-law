@@ -1,5 +1,5 @@
 ---
-title: "Tayvan kozmetik pazarına giriş: ithalat öznesinin seçimi, ürün tescili, PIF’in hazırlanması ve saklanması ile reklam düzenlemesi"
+title: "Tayvan kozmetik pazarına giriş: ithalatçının seçimi, ürün tescili, PIF’in hazırlanması ve saklanması ile reklam düzenlemesi"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide"
 lastmod: "2026-07-25"
 date_display: "4 Şubat 2026"
@@ -9,26 +9,26 @@ categories:
 featured_image: "../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg"
 faq:
   - q: "Tayvan’da kozmetik satmak için bağlı şirket veya şube mutlaka kurulmalı mıdır?"
-    a: "Mutlaka kurulması gerekmez. İthalat ve satışı bir Tayvan ithalatçısına (aynı zamanda satış acentesi olduğu hal dâhil) bırakmak da mümkündür. Tayvan işini bizzat işletmek istenirse Tayvan bağlı şirketinin (子公司) kuruluş ve tescili, yabancı şirket şubesinin (分公司) kuruluş ve tescilinden farklıdır; sorumluluk ve vergi yapısı da farklıdır. Yabancı yatırım onayı (僑外投資核准) ile şirket veya şube tescili için gereken süre, her işe ve belgelerinin düzeltilmesi veya tamamlanması olup olmadığına göre değişir. Önce faaliyet modeli ve kozmetik üreticisi veya ithalatçısı (化粧品製造或輸入業者) olarak sorumluluğu üstlenecek özne sabitlenmelidir."
+    a: "Tayvan’da bağlı şirket veya şube kurulması zorunlu değildir. İthalat ve satışı bir Tayvan ithalatçısına (aynı zamanda satış acentesi olduğu hal dâhil) bırakmak da mümkündür. Tayvan işini bizzat işletmek istenirse Tayvan bağlı şirketinin (子公司) kuruluş ve tescili, yabancı şirket şubesinin (分公司) kuruluş ve tescilinden farklıdır; sorumluluk ve vergi yapısı da farklıdır. Yabancı yatırım onayı (僑外投資核准) ile şirket veya şube tescili için gereken süre, her işe ve belgelerinin düzeltilmesi veya tamamlanması olup olmadığına göre değişir. Önce faaliyet modeli ve kozmetik üreticisi veya ithalatçısı (化粧品製造或輸入業者) olarak sorumluluğu üstlenecek özne sabitlenmelidir."
   - q: "PIF nedir ve TFDA ürün tescili ile aynı usul müdür?"
     a: "Aynı usul değildir. Ürün tescili (產品登錄), TFDA’nın (衛生福利部食品藥物管理署) kozmetik ürün tescil platformunda yürütülen ayrı bir işlemdir. PIF, kalite, güvenlik, bileşim, ileri sürülen işlev, üretim yöntemi, deneme sonuçları ve güvenlik değerlendirmesi vb. verileri toplayan ve kozmetik üreticisi veya ithalatçısının hazırladığı, güncellediği ve sakladığı bir dosyadır; PIF’in kendisi TFDA’ya önceden sunulması gereken bir belge değildir. 1 Temmuz 2026’dan itibaren kural olarak bütün kozmetikler PIF rejimine girer; fabrika tescilinden (工廠登記) muaf bir üretim yerinde üretilen katı el yapımı sabun istisnadır."
   - q: "Tayvan kozmetik reklamında hangi ifadelere dikkat edilmelidir?"
-    a: "Reklam yalnızca cümleye göre değil, ürün adı, metin, görüntü, işaret ve ses dâhil bütün sunuma göre değerlendirilir. Yanlış veya abartılı ifadeler ile tıbbi etkinlik iddiası yasaktır; sivilce tedavisi, antienflamatuar veya bakterisidal gibi tıbbi ifadelere özel dikkat gerekir. İdari para cezası (罰鍰) yanlış veya abartılı reklamda TWD 40.000 ile TWD 200.000 (新臺幣), tıbbi etkinlik iddiasında TWD 600.000 ile TWD 5.000.000 arasındadır. Influencer ve diğerlerinin paylaşımları da özünde reklamsa aynı ölçüte göre incelenmelidir."
+    a: "Reklam yalnızca cümleye göre değil, ürün adı, metin, görüntü, işaret ve ses dâhil bütün sunuma göre değerlendirilir. Yanlış veya abartılı ifadeler ile tıbbi etkinlik iddiası yasaktır; sivilce tedavisi, iltihap giderici veya bakteri öldürücü gibi tıbbi ifadelere özel dikkat gerekir. İdari para cezası (罰鍰) yanlış veya abartılı reklamda TWD 40.000 ile TWD 200.000 (新臺幣), tıbbi etkinlik iddiasında TWD 600.000 ile TWD 5.000.000 arasındadır. Influencer ve diğerlerinin paylaşımları da özünde reklamsa aynı ölçüte göre incelenmelidir."
 ---
 
-# Tayvan kozmetik pazarına giriş: ithalat öznesinin seçimi, ürün tescili, PIF’in hazırlanması ve saklanması ile reklam düzenlemesi
+# Tayvan kozmetik pazarına giriş: ithalatçının seçimi, ürün tescili, PIF’in hazırlanması ve saklanması ile reklam düzenlemesi
 
 ![Tayvan kozmetik pazarına giriş için gereken ürün verileri ve düzenleme incelemesi](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg)
 
-Tayvan’da ürün dağıtmak isteyen yabancı bir kozmetik markası, ithalatı kime bırakacağını, ürün tescilini (產品登錄) ne zaman tamamlayacağını, ürün bilgi dosyasını (產品資訊檔案, Product Information File, PIF) kimin nerede yöneteceğini ve etiketlemenin (標示) ile reklamın (廣告) hangi ölçüte göre inceleneceğini sabitlemelidir. Kore markaları da yerel bir ithalatçıya başvurabilir ve Tayvan işini bizzat işletebilir; bu yüzden satış hazırlığı yalnızca bir şirketin kurulmuş olmasıyla tamamlanmaz.
+Tayvan’da ürün dağıtmak isteyen yabancı bir kozmetik markası, ithalatı kime bırakacağını, ürün tescilini (產品登錄) ne zaman tamamlayacağını, ürün bilgi dosyasını (產品資訊檔案, Product Information File, PIF) kimin nerede yöneteceğini ve etiketlemenin (標示) ve reklamın (廣告) hangi ölçüte göre inceleneceğini sabitlemelidir. Kore markaları da yerel bir ithalatçıya başvurabilir ve Tayvan işini bizzat işletebilir; bu yüzden satış hazırlığı yalnızca bir şirketin kurulmuş olmasıyla tamamlanmaz.
 
-Uygulanan yükümlülükler ürünün türüne ve üretim yerine (製造場所), gerçek ithalat biçimine, dağıtım tarzına ve reklam içeriğine göre değişebilir. Aşağıda Tayvan’a giriş biçimi ve yasal sorumluluk öznesi, TFDA ürün tescili, PIF’in hazırlanması, güncellenmesi ve saklanması, etiketleme ve reklam ile denetim ve düzeltme tedbirleri ayrı açıklanır. Gerçek tedarik takvimini sabitlemeden önce en yeni mevzuat ve yetkili makamın (主管機關) rehberi ürüne göre yeniden doğrulanmalıdır.
+Uygulanan yükümlülükler ürünün türüne ve üretim yerine (製造場所), gerçek ithalat biçimine, dağıtım tarzına ve reklam içeriğine göre değişebilir. Aşağıda Tayvan’a giriş biçimi ve yasal sorumluluğun kime ait olduğu, TFDA ürün tescili, PIF’in hazırlanması, güncellenmesi ve saklanması, etiketleme ve reklam ile denetim ve düzeltme tedbirleri ayrı açıklanır. Gerçek tedarik takvimini sabitlemeden önce en yeni mevzuat ve yetkili makamın (主管機關) rehberi ürüne göre yeniden doğrulanmalıdır.
 
 ![](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/img-01.jpg)
 
-## 1. Tayvan’a giriş biçimi ve ithalat öznesinin seçimi
+## 1. Tayvan’a giriş biçimi ve ithalatçının seçimi
 
-Mutlaka kurulması gerekmez. İthalat ve satışı bir Tayvan ithalatçısına (aynı zamanda satış acentesi olduğu hal dâhil) bırakmak da mümkündür. Tayvan işini bizzat işletmek istenirse Tayvan bağlı şirketinin kuruluş ve tescili, yabancı şirket şubesinin kuruluş ve tescilinden farklıdır; sorumluluk ve vergi yapısı da farklıdır. Yabancı yatırım onayı ile şirket veya şube tescili için gereken süre, her işe ve belgelerinin düzeltilmesi veya tamamlanması olup olmadığına göre değişir. Önce faaliyet modeli ve kozmetik üreticisi veya ithalatçısı olarak sorumluluğu üstlenecek özne sabitlenmelidir.
+Tayvan’da bağlı şirket veya şube kurulması zorunlu değildir. İthalat ve satışı bir Tayvan ithalatçısına (aynı zamanda satış acentesi olduğu hal dâhil) bırakmak da mümkündür. Tayvan işini bizzat işletmek istenirse Tayvan bağlı şirketinin kuruluş ve tescili, yabancı şirket şubesinin kuruluş ve tescilinden farklıdır; sorumluluk ve vergi yapısı da farklıdır. Yabancı yatırım onayı ile şirket veya şube tescili için gereken süre, her işe ve belgelerinin düzeltilmesi veya tamamlanması olup olmadığına göre değişir. Önce faaliyet modeli ve kozmetik üreticisi veya ithalatçısı olarak sorumluluğu üstlenecek özne sabitlenmelidir.
 
 ### Yerel ithalatçıya bırakıldığında
 
@@ -44,7 +44,7 @@ Tayvan bağlı şirketi ile yabancı bir şirketin şubesi aynı örgüt değild
 
 Yabancı yatırım usulü gerekiyorsa, hâlihazırda yetkili makam olarak **Ekonomi Bakanlığı Yatırım İnceleme Dairesi’nin (經濟部投資審議司)** rehberi doğrulanmalıdır. Yatırım onayı, fon transferi, şirket veya şube tescili, banka hesabı açılması, vergi kaydı (稅籍登記) ve ithalatçı niteliğinin elde edilmesi için gereken süre, yatırımcıya, sektöre, örgüt biçimine, sunulan belgelere ve düzeltme veya tamamlama olup olmadığına göre değişir. Bu yüzden belirli sabit bir süre varsayılarak lansman tarihi sabitlenmek yerine, her işlemin uygulanması ve en yeni kabul şartları önce doğrulanmalıdır.
 
-Hangi yapı seçilirse seçilsin, kozmetik düzenlemesinde merkezi sorumluluk öznesi **kozmetik üreticisi veya ithalatçısıdır**. Ürün verilerinin sıralanması veya güvenlik değerlendirmesi (安全性評估) dış uzmanlara bırakılabilir; ancak işin bırakılmış olması üreticinin veya ithalatçının hukuki sorumluluğunu devretmez. Sözleşmeye göre iş bölümünü, düzenlemeye göre sorumluluk öznesinden ayırmak, giriş yapısının incelenmesinin başlangıç noktasıdır.
+Hangi yapı seçilirse seçilsin, kozmetik düzenlemesinde asıl sorumlu **kozmetik üreticisi veya ithalatçısıdır**. Ürün verilerinin sıralanması veya güvenlik değerlendirmesi (安全性評估) dış uzmanlara bırakılabilir; ancak işin bırakılmış olması üreticinin veya ithalatçının hukuki sorumluluğunu devretmez. Sözleşmeye göre iş bölümünü, düzenlemeye göre kimin sorumlu olduğundan ayırmak, giriş yapısının incelenmesinin başlangıç noktasıdır.
 
 ## 2. Ürün tescili ile PIF ayrı rejimlerdir
 
@@ -64,7 +64,7 @@ PIF, ürünün kalitesi ve güvenliğini açıklamaya devam edebilmek için yap�
 
 PIF rejimi ürün gruplarına göre aşamalı uygulanmıştır. 1 Temmuz 2026’dan itibaren kalan kozmetikler de uygulama konusuna girer; böylece kural olarak bütün kozmetiklere uygulanır. İstisna, fabrika tescilinden muaf bir üretim yerinde üretilen katı el yapımı sabunla sınırlıdır. Bir ürün yalnızca el yapımı olduğu veya sabun adı kullandığı için dışlanmaz; katı biçim ile üretim yerinin fabrika tescili muafiyeti şartı her ikisi de doğrulanmalıdır.
 
-Güvenlik değerlendirmesi dâhil PIF işi, gereken yeterlilik ve kapasiteye sahip bir 3. kişi tarafından desteklenebilir. Ancak 3. kişinin hazırlama desteği veya veri saklama hizmeti kullanılsa bile kozmetik üreticisi veya ithalatçısının hukuki sorumluluğu sürer. Asıl üretici, deneme laboratuvarı, güvenlik değerlendiricisi ve Tayvan tarafındaki işletmenin değişiklik bilgilerini ve en yeni imzalı verileri birbirine iletebileceği bir sistem kurulmalıdır.
+Güvenlik değerlendirmesi dâhil PIF işi, gereken yeterlilik ve kapasiteye sahip bir üçüncü kişi tarafından desteklenebilir. Ancak üçüncü kişinin hazırlama desteği veya veri saklama hizmeti kullanılsa bile kozmetik üreticisi veya ithalatçısının hukuki sorumluluğu sürer. Asıl üretici, deneme laboratuvarı, güvenlik değerlendiricisi ve Tayvan tarafındaki işletmenin değişiklik bilgilerini ve en yeni imzalı verileri birbirine iletebileceği bir sistem kurulmalıdır.
 
 ### Güncelleme ve saklama
 
@@ -84,13 +84,13 @@ Geri çağırma veya imha (銷毀), her PIF veri eksikliğine kendiliğinden eş
 
 ## 3. Etiketleme, tanıtım ve reklam düzenlemesi
 
-Reklam yalnızca cümleye göre değil, ürün adı, metin, görüntü, işaret ve ses dâhil bütün sunuma göre değerlendirilir. Yanlış veya abartılı ifadeler ile tıbbi etkinlik iddiası yasaktır; sivilce tedavisi, antienflamatuar veya bakterisidal gibi tıbbi ifadelere özel dikkat gerekir. İdari para cezası yanlış veya abartılı reklamda TWD 40.000 ile TWD 200.000, tıbbi etkinlik iddiasında TWD 600.000 ile TWD 5.000.000 arasındadır. Influencer ve diğerlerinin paylaşımları da özünde reklamsa aynı ölçüte göre incelenmelidir.
+Reklam yalnızca cümleye göre değil, ürün adı, metin, görüntü, işaret ve ses dâhil bütün sunuma göre değerlendirilir. Yanlış veya abartılı ifadeler ile tıbbi etkinlik iddiası yasaktır; sivilce tedavisi, iltihap giderici veya bakteri öldürücü gibi tıbbi ifadelere özel dikkat gerekir. İdari para cezası yanlış veya abartılı reklamda TWD 40.000 ile TWD 200.000, tıbbi etkinlik iddiasında TWD 600.000 ile TWD 5.000.000 arasındadır. Influencer ve diğerlerinin paylaşımları da özünde reklamsa aynı ölçüte göre incelenmelidir.
 
 ### Her kelimeye göre değil, bütün sunuma göre değerlendirilir
 
 Etiketleme, tanıtım (宣傳) veya reklamın yanlış veya abartılı olup olmadığı, ya da tıbbi etkinlik (醫療效能) iddia edip etmediği, belirli bir kelimeye göre tek başına yargılanmaz. Ürün adı, cümle, görüntü, işaret, ses, öncesi ve sonrası bağlam ile tüketicinin aldığı bütün izlenim birlikte incelenir. Merkezi reklam sunumunun oluşturduğu izlenim, küçük punto kısıtlayıcı ibareyle kendiliğinden dağılmaz; bu yüzden her metin ve nihai ürün incelenmelidir.
 
-Örneğin bir kozmetiğin sivilceyi tedavi ettiği, antienflamatuar etkisi veya bakterisidal eylemi olduğu ileri sürülürse bu tıbbi etkinlik iddiası olabilir. Bir hastalık adının ürünle birleştirilmesi, kullanım öncesi ve sonrası görüntüler, sağlık çalışanını çağrıştıran sahneleme ve bileşen açıklamasını ürünün tedavi etkisine bağlayan bağlam da birlikte doğrulanmalıdır.
+Örneğin bir kozmetiğin sivilceyi tedavi ettiği, iltihap giderici veya bakteri öldürücü etkisi olduğu ileri sürülürse bu tıbbi etkinlik iddiası olabilir. Bir hastalık adının ürünle birleştirilmesi, kullanım öncesi ve sonrası görüntüler, sağlık çalışanını çağrıştıran sahneleme ve bileşen açıklamasını ürünün tedavi etkisine bağlayan bağlam da birlikte doğrulanmalıdır.
 
 Yanlış veya abartılı reklam (虛偽誇大廣告) için idari para cezası TWD 40.000 ile TWD 200.000, tıbbi etkinlik iddiası için TWD 600.000 ile TWD 5.000.000 arasındadır. Aralık ihlal türüne göre farklı olduğundan, yayından önce reklamın bütün sunumu dayanak verilerle karşılaştırılmalıdır.
 

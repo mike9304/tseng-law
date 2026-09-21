@@ -13,7 +13,7 @@ faq:
   - q: "Tayvan mahkemesindeki boşanma arabuluculuğunda eşler her zaman birlikte hazır bulunmak zorunda mıdır?"
     a: "Her zaman değil. Tayvan mahkemesi, aile işinin (家事事件) niteliğine göre bir tarafa veya kanuni temsilciye bizzat hazır bulunmasını emredebilir; meşru neden olmadan uyulmazsa, Aile İşleri Kanunu’nun (家事事件法) 13. maddesi ve kıyasen uygulanan Hukuk Muhakemeleri Usulü Kanunu’nun (民事訴訟法) 303. maddesine göre ilk kez en çok TWD 30.000 (新臺幣) idari para cezası (罰鍰) gündeme gelebilir. Aynı mekânda mutlaka birlikte arabuluculuk gerekip gerekmediği ve ayrılık, koruma tedbirleri, temsil veya başka usul tedbirlerinin mümkün olup olmadığı, mahkeme ve işin şartlarına göre doğrulanmalıdır."
   - q: "Evliliğin bozulmasından sorumlu eş de Tayvan’da mahkeme kararıyla boşanma isteyebilir mi?"
-    a: "Yürürlükteki Medeni Kanun’un (民法) 1052. maddesinin 2. fıkrasının kaydı (但書), evliliğin bozulmasının (婚姻破綻) ağır nedeni yalnızca bir tarafa yüklenebiliyorsa kural olarak yalnız diğer tarafın boşanma isteyebileceğini öngörür. Tayvan Anayasa Mahkemesi (憲法法庭) ise 112 yılı 4 sayılı kararında (112年憲判字第4號), hükmün, ağır nedenin doğuşunu veya yeterince sürmesini hesaba katmadan sorumlu eşi (有責配偶) boşanma imkânından tamamen yoksun bırakıp somut işte açıkça katı hale geldiği ölçüde anayasaya aykırı (違憲) olduğuna hükmetmiştir. Metin durmaktadır; genel olarak mümkün veya imkânsız denmemeli, mahkemenin kararın anlamını ve somut olguları nasıl uyguladığına bakılmalıdır."
+    a: "Yürürlükteki Medeni Kanun’un (民法) 1052. maddesinin 2. fıkrasının kaydı (但書), evliliğin bozulmasının (婚姻破綻) ağır nedeni yalnızca bir tarafa yüklenebiliyorsa kural olarak yalnız diğer tarafın boşanma isteyebileceğini öngörür. Tayvan Anayasa Mahkemesi (憲法法庭) ise 2023 (Minguo 112) yılı 4 sayılı kararında (112年憲判字第4號), hükmün, ağır nedenin doğuşunu veya yeterince sürmesini hesaba katmadan sorumlu eşi (有責配偶) boşanma imkânından tamamen yoksun bırakıp somut işte açıkça katı hale geldiği ölçüde anayasaya aykırı (違憲) olduğuna hükmetmiştir. Metin durmaktadır; genel olarak mümkün veya imkânsız denmemeli, mahkemenin kararın anlamını ve somut olguları nasıl uyguladığına bakılmalıdır."
   - q: "Satın alma bedelinin evlilik öncesi fonlarla ödenmesi veya bir taraf adına tescil, mülkiyeti ve mal paylaşımını kesinleştirir mi?"
     a: "Hayır. Konutun tescilli adı ve satın alma fonlarının kaynağı önemli delillerdir; ancak mülkiyet, bağış, başkası adına tescil (借名登記), ödünç ve sebepsiz zenginleşme (不當得利) gibi bireysel talepler, Medeni Kanun’un (民法) 1030-1. maddesindeki kalan mal varlığı farkının paylaşımından (剩餘財產差額分配) ayrı meselelerdir. Gerçek anlaşma, edinim nedeni ve tarihi, fon akışları, borçlar, karşılıksız edinim ve deliller ayrı incelenmelidir; evlilik öncesi fonlarla bir kısmın ödenmesi veya bir taraf adına tescil, bütün sonuçları tek başına kesinleştirmez."
   - q: "Kalan mal varlığı paylaşımı, boşanma tazminatı, eş nafakası ve çocuk nafakası aynı talep midir?"
@@ -28,7 +28,7 @@ faq:
 
 Tayvan’daki bir boşanma işinde yalnızca evliliğin sona erme biçimi değil, nüfus kaydının (戶籍) düzenlenmesi, yurtdışındaki etki, evlilik malvarlığı, tazminat, boşanma sonrası eş nafakası (贍養費) ile reşit olmayan çocuğa (未成年子女) ilişkin kararlar ve çocuk nafakası (扶養費) da birbirinden ayırt edilmelidir. Aynı olgular birden fazla talebin malzemesi olabilir; ancak her hakkın şartları, etkileri, ispat konusu ve süreleri aynı değildir.
 
-Özellikle Kore ve Tayvan gibi 2 veya daha fazla devlet veya bölgeye bağlı bir ailede usul, yalnızca bir tarafın uyruğuna veya evliliğin kurulduğu yere bakılarak sabitlenemez. Önce mevcut yaşam merkezi, mevcut yargılamaların ve kayıtların durumu, belgelerin düzenlendiği yer, çocuğun ikameti ve malların durumu doğrulanmalıdır ki gereksiz mükerrer usuller ve infaz boşlukları azalabilsin.
+Özellikle birden fazla devlet veya bölgeye — örneğin Tayvan ile başka bir ülkeye — bağlı bir ailede usul, yalnızca bir tarafın uyruğuna veya evliliğin kurulduğu yere bakılarak sabitlenemez. Önce mevcut yaşam merkezi, mevcut yargılamaların ve kayıtların durumu, belgelerin düzenlendiği yer, çocuğun ikameti ve malların durumu doğrulanmalıdır ki gereksiz mükerrer usuller ve infaz boşlukları azalabilsin.
 
 ## 1. Tayvan’da boşanmanın 3 yolu ve uluslararası bir işte ilk doğrulanacak noktalar
 
@@ -62,7 +62,7 @@ Kanun yolları da belgenin adına bakılarak tek başına belirlenemez. Yol ve s
 
 ## 4. Mahkeme kararıyla boşanma nedenleri ve sorumlu eşin sınırı
 
-Yürürlükteki Medeni Kanun’un (民法) 1052. maddesinin 2. fıkrasının kaydı (但書), evliliğin bozulmasının (婚姻破綻) ağır nedeni yalnızca bir tarafa yüklenebiliyorsa kural olarak yalnız diğer tarafın boşanma isteyebileceğini öngörür. Tayvan Anayasa Mahkemesi (憲法法庭) ise 112 yılı 4 sayılı kararında (112年憲判字第4號), hükmün, ağır nedenin doğuşunu veya yeterince sürmesini hesaba katmadan sorumlu eşi (有責配偶) boşanma imkânından tamamen yoksun bırakıp somut işte açıkça katı hale geldiği ölçüde anayasaya aykırı (違憲) olduğuna hükmetmiştir. Metin durmaktadır; genel olarak mümkün veya imkânsız denmemeli, mahkemenin kararın anlamını ve somut olguları nasıl uyguladığına bakılmalıdır.
+Yürürlükteki Medeni Kanun’un (民法) 1052. maddesinin 2. fıkrasının kaydı (但書), evliliğin bozulmasının (婚姻破綻) ağır nedeni yalnızca bir tarafa yüklenebiliyorsa kural olarak yalnız diğer tarafın boşanma isteyebileceğini öngörür. Tayvan Anayasa Mahkemesi (憲法法庭) ise 2023 (Minguo 112) yılı 4 sayılı kararında (112年憲判字第4號), hükmün, ağır nedenin doğuşunu veya yeterince sürmesini hesaba katmadan sorumlu eşi (有責配偶) boşanma imkânından tamamen yoksun bırakıp somut işte açıkça katı hale geldiği ölçüde anayasaya aykırı (違憲) olduğuna hükmetmiştir. Metin durmaktadır; genel olarak mümkün veya imkânsız denmemeli, mahkemenin kararın anlamını ve somut olguları nasıl uyguladığına bakılmalıdır.
 
 Medeni Kanun’un (民法) 1052. maddesinin 1. fıkrası, diğer tarafta aşağıdaki durumlar bulunduğunda mahkeme kararıyla boşanma istenebilecek 10 nedeni sayar.
 
@@ -107,7 +107,7 @@ Eş dışındaki bir kişiyle cinsel ilişki veya evliliğin bozulması sorumlul
 
 Bu hak, kalan mal varlığı farkının öğrenildiği günden 2 yıl içinde ve her halde yasal mal rejiminin sona ermesinden 5 yıl içinde kullanılmazsa sona erer. Bu 2 süre yalnızca 1030-1. madde talebine bağlanmalıdır; mülkiyet, ödünç, tazminat, boşanma sonrası eş nafakası veya çocuk nafakasının süreleri olarak kullanılmamalıdır. Sürenin gerçek başlangıç noktası ve yasal mal rejiminin sona erme anı, belgelere göre tek tek doğrulanmalıdır.
 
-## 7. Boşanma tazminatı, eş nafakası, evlilik dışı birlikte yaşama ve 3. kişiler
+## 7. Boşanma tazminatı, eş nafakası, evlilik dışı birlikte yaşama ve üçüncü kişiler
 
 Aynı haklar değildir. Medeni Kanun’un (民法) 1030-1. maddesindeki kalan mal varlığı farkının paylaşımı hakkı, 1056. maddedeki mahkeme kararıyla boşanma tazminatı, 1057. maddedeki kusursuz eş için ihtiyaç nafakası ve reşit olmayan çocuğun nafakası, doğuş şartları, hesap ve süreler bakımından farklıdır. Paylaşım hakkına, farkın öğrenildiği günden 2 yıl ve yasal mal rejiminin sona ermesinden 5 yıl uygulanır; bu süreler diğer taleplere olduğu gibi aktarılmamalıdır.
 
@@ -119,7 +119,7 @@ Reşit olmayan çocuğun nafakası ebeveyn ile çocuk arasındaki bir hak ve yü
 
 Evlilik olmadan birlikte yaşayan taraflar, yalnızca birlikte yaşamış olmakla boşanma veya eş nafakası (贍養費) gibi evlilik haklarını kazanmaz. Ancak gerçekten ortak malvarlığı, ödünç, sözleşme, başkası adına tescil, güven, sebepsiz zenginleşme veya haksız fiil varsa bunlar evlilikten bağımsız malvarlığı veya alacak ilişkisi olarak çözümlenebilir. Yalnızca birlikte yaşama süresine göre evliliği varsayan bir paylaşım vaat edilemez, somut hakkın restorasyonu da önceden saptanamaz.
 
-Eşin akrabaları, örneğin koca veya karı ailesi, Medeni Kanun’un (民法) 1057. maddesindeki boşanma sonrası eş nafakasının borçlusu değildir. 3. kişinin ağır müdahalesi veya hakareti iddiası tek başına derhal tazminat doğurmaz. 3. kişiye karşı talepler, haksız fiilden veya malvarlığı hukukundan ayrı bir hukuki dayanak ile ilgili şartları ve delilleri, yani hukuka aykırı fiili, kast veya ihmali, zararı ve illiyet bağını gerektirir.
+Eşin akrabaları, örneğin koca veya karı ailesi, Medeni Kanun’un (民法) 1057. maddesindeki boşanma sonrası eş nafakasının borçlusu değildir. Üçüncü kişinin ağır müdahalesi veya hakareti iddiası tek başına derhal tazminat doğurmaz. Üçüncü kişiye karşı talepler, haksız fiilden veya malvarlığı hukukundan ayrı bir hukuki dayanak ile ilgili şartları ve delilleri, yani hukuka aykırı fiili, kast veya ihmali, zararı ve illiyet bağını gerektirir.
 
 ## 8. Reşit olmayan çocuğa ilişkin hak ve yükümlülükler ve çocuğun üstün yararı
 
@@ -147,7 +147,7 @@ Aile İşleri Kanunu’nun 194. maddesindeki icrada da yöntem çocuğun üstün
 
 ## 10. Çocukla birlikte uluslararası yer değiştirme
 
-Çocuğun Kore’de yaşayacağına dair anlaşma tek başına Kore yaşam düzeyi seviyesini çocuk nafakasının bağımsız formülü yapmaz. Gerçek konut, eğitim, hastalık ve seyahat giderleri ile çocuğun ihtiyacı, 2 ebeveynin geliri, malvarlığı ve bakım yükü ile mevcut anlaşma veya karar birlikte incelenmelidir. İkamet devletinin maliyetleri somut giderleri değerlendirme malzemesi olabilir; fakat yük tutarını tek başına sabitlemez.
+Çocuğun Tayvan dışında yaşayacağına dair anlaşma tek başına o ülkenin yaşam maliyeti düzeyini çocuk nafakasının bağımsız formülü yapmaz. Gerçek konut, eğitim, hastalık ve seyahat giderleri ile çocuğun ihtiyacı, her iki ebeveynin geliri, malvarlığı ve bakım yükü ile mevcut anlaşma veya karar birlikte incelenmelidir. İkamet devletinin maliyetleri somut giderleri değerlendirme malzemesi olabilir; fakat yük tutarını tek başına sabitlemez.
 
 Uluslararası yer değiştirmede önce çocuğun ikamet yerini ve seyahatlerini kimin belirleme yetkisine sahip olduğu ve diğer ebeveynin rızasının veya uygulanabilir bir mahkeme emrinin bulunup bulunmadığı doğrulanır. Ardından yer değiştirmenin çocuğun üstün yararına uyup uymadığı ve eğitim, tıbbi bakım, yaşamın sürekliliği ile kalan ebeveynle sürekli kişisel ilişkiler üzerindeki etkisi incelenir. İletişim sıklığı, tatillerde kalış, seyahat giderleri ve teslim yeri gibi gerçekten uygulanabilir bir plan gerekir.
 

@@ -2472,11 +2472,11 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
   footerNotice:
     'Bu Türkçe sayfa, firmanın Tayvan hukukuna göre yürüttüğü çalışma hakkında yalnızca genel bilgi verir. Belirli bir dosya için hukuki görüş değildir ve bir ileti göndermek kendi başına avukat ile müvekkil arasında ilişki kurmaz.',
   skipLink: 'Gezinmeyi atlayıp içeriğe geçin',
-  menuLabel: 'Sayfa dizini',
+  menuLabel: 'Menü',
   languageLabel: 'Görüntüleme dili',
   mega: {
     services: {
-      description: 'Büro, Tayvan hukukuna göre başlıca çalışma gruplarını yürütür.',
+      description: 'Büro, Tayvan hukukuna göre başlıca çalışma alanlarında faaliyet gösterir.',
       viewAllLabel: 'Tümünü göster',
     },
     columns: {
@@ -2484,7 +2484,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
       viewAllLabel: 'Tümünü göster',
     },
     lawyers: {
-      description: 'Görevli avukatların tanıtımı ve iletişim yolları.',
+      description: 'Avukatların tanıtımı ve iletişim yolları.',
       viewAllLabel: 'Tümünü göster',
     },
     pricing: {
@@ -2505,7 +2505,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
     heroScrollLabel: 'Aşağı kaydırın',
     heroColumnsCtaLabel: 'Yazılara bakın',
     servicesDetailLabel: 'Ayrıntılara bakın',
-    servicesAssistanceBefore: 'Konunuzun hangi gruba girdiği belirsizse, ',
+    servicesAssistanceBefore: 'Konunuzun hangi çalışma alanına girdiği belirsizse, ',
     servicesAssistanceLinkLabel: 'İletişim',
     servicesAssistanceAfter:
       ' sayfası, bir avukatın inceleyeceği özeti nasıl yazacağınızı açıklar.',
@@ -2544,9 +2544,9 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Çalışma grupları',
+          heading: 'Çalışma alanları',
           paragraphs: [
-            'Çalışma alanı aşağıdaki altı grubu kapsar. Çalışma alanları sayfası her grubu daha ayrıntılı anlatır ve nelerin vaat edilmediğini belirtir.',
+            'Çalışma alanlarımız aşağıdaki altı başlığı kapsar. Çalışma alanları sayfası her alanı daha ayrıntılı anlatır ve nelerin vaat edilmediğini belirtir.',
           ],
           items: [
             'Tayvan’da yatırım ve şirket kuruluşu',
@@ -2570,35 +2570,35 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'ÇALIŞMA ALANLARI',
       title: 'Hangi işleri yürütürüz',
       description:
-        'Firmanın Tayvan’daki altı çalışma grubu ve önce bilmeniz gereken sınırlar.',
+        'Firmanın Tayvan’daki altı çalışma alanı ve önce bilmeniz gereken sınırlar.',
       intro:
-        'Aşağıda gerçekten yürüttüğümüz gruplar ve ilk aşamada sık sorulan sorular yer alır. Anlatım, konunuzun kapsamımıza girip girmediğini değerlendirmenize yardımcı olur; geneldir ve ayrı bir dosyanın hukuki çözümlemesi değildir.',
+        'Aşağıda gerçekten yürüttüğümüz çalışma alanları ve ilk aşamada sık sorulan sorular yer alır. Anlatım, konunuzun kapsamımıza girip girmediğini değerlendirmenize yardımcı olur; geneldir ve ayrı bir dosyanın hukuki çözümlemesi değildir.',
       sections: [
         {
           heading: 'Tayvan’da yatırım ve şirket kuruluşu',
           paragraphs: [
-            'Yabancı yatırımcıları ve şirketleri Tayvan’da şirket kurma veya işletmede destekleriz: hukuk biçiminin seçimi, belgelerin hazırlanması ve sunulması, sermaye koyma, banka işleri, işyerinin incelenmesi ve sektöre özgü gerekler. Tayvan’da kuruluş ve işletmeden doğan muhasebe ve vergi konularında da yardımcı oluruz.',
-            'Akış ve süre, hukuk biçimine, yatırımcıya, sektöre, bankaya ve eldeki belgelere göre değişir. Şirket kuruluşu kendiliğinden oturma iznine (居留) veya çalışma iznine (工作許可) götürmez: bunlar, ilgili kişinin durumuna göre değerlendirilen ayrı usullerdir.',
+            'Yabancı yatırımcıları ve şirketleri Tayvan’da şirket kurma veya işletmede destekleriz: şirket türünün seçimi, belgelerin hazırlanması ve sunulması, sermaye koyma, banka işleri, işyerinin incelenmesi ve sektöre özgü gerekler. Tayvan’da kuruluş ve işletmeden doğan muhasebe ve vergi konularında da yardımcı oluruz.',
+            'Akış ve süre, şirket türüne, yatırımcıya, sektöre, bankaya ve eldeki belgelere göre değişir. Şirket kuruluşu kendiliğinden oturma iznine (居留) veya çalışma iznine (工作許可) götürmez: bunlar, ilgili kişinin durumuna göre değerlendirilen ayrı usullerdir.',
           ],
         },
         {
           heading: 'Hukuk davaları ve tazminat',
           paragraphs: [
-            'Bu grup sözleşme uyuşmazlıklarını, haksız fiilden doğan tazminatı ve tüketici uyuşmazlıklarını kapsar. Çalışma genellikle bir zaman dizisi, eldeki belge ve kanıtların incelenmesi ve ancak ondan sonra sonraki adımlarla başlar.',
+            'Bu alan sözleşme uyuşmazlıklarını, haksız fiilden doğan tazminatı ve tüketici uyuşmazlıklarını kapsar. Çalışma genellikle olayların kronolojisinin, eldeki belge ve delillerin incelenmesiyle başlar; sonraki adımlar ancak ondan sonra gelir.',
             'Süreler, yasal dava süreleri dâhil, ve kanıtların tamlığı seyri biçimlendirir. Bu yüzden bilinen tarihleri mümkün olduğunca erken belirtin. Sözleşmeleri, iletileri, ödeme belgelerini veya yerindeki durumun fotoğraflarını saklayın ve ilk iletide anın.',
           ],
         },
         {
           heading: 'Evlilik, aile ve miras',
           paragraphs: [
-            'Boşanma (離婚), mal paylaşımı, reşit olmayan çocuklara ilişkin hak ve yükümlülüklerin kullanılması veya yüklenilmesi (未成年子女權利義務之行使或負擔), görüşme (會面交往) ve miras (繼承) işlerini yürütürüz; taraflar veya malvarlığı farklı devletlerde olsa da. Sınır aşan aile işleri çoğu zaman hane kaydı belgelerinin (戶籍), belgenin biçiminin ve Tayvan’daki ispat gücünün ek incelenmesini gerektirir.',
+            'Boşanma (離婚), mal paylaşımı, reşit olmayan çocuklara ilişkin hak ve yükümlülüklerin kullanılması veya yüklenilmesi (未成年子女權利義務之行使或負擔), çocukla kişisel ilişki kurma hakkı (會面交往) ve miras (繼承) işlerini yürütürüz; taraflar veya malvarlığı farklı devletlerde olsa da. Sınır aşan aile işleri çoğu zaman hane kaydı belgelerinin (戶籍), belgenin biçiminin ve Tayvan’daki ispat gücünün ek incelenmesini gerektirir.',
             'Aile işleri sık sık süreler ve paralel usuller getirdiğinden, ilk özet tarafların ilişkisini, güncel oturma yerini ve hâlihazırda yürüyen usulleri belirtmelidir.',
           ],
         },
         {
           heading: 'İş uyuşmazlıkları',
           paragraphs: [
-            'Bu grup iş ilişkisinin sona ermesini, Tayvan hukukuna göre kıdem tazminatını (資遣費; başka devletlerin kurumlarıyla aynı tutulmamalıdır), ücreti ve iş sözleşmesinden (勞動契約) doğan uyuşmazlıkları kapsar; işçi veya işveren tarafında. İncelemede sona erme sebebini bildirim, ödeme ve süre sorularından ayırırız.',
+            'Bu alan iş ilişkisinin sona ermesini, Tayvan hukukuna göre kıdem tazminatını (資遣費; başka ülkelerin benzer düzenlemeleriyle aynı tutulmamalıdır), ücreti ve iş sözleşmesinden (勞動契約) doğan uyuşmazlıkları kapsar; işçi veya işveren tarafında. İncelemede sona erme sebebini bildirim, ödeme ve süre sorularından ayırırız.',
             'İş sözleşmesi, iş kuralları (工作規則), ücret bordroları ve tarafların yazışması çoğu zaman belirleyici belgelerdir. Hâlâ elinizdeyse özetinizde belirtin.',
           ],
         },
@@ -2613,13 +2613,13 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Fikri mülkiyet',
           paragraphs: [
             'Tayvan’da marka (商標) ve patent (專利) tescilinde, telifte ve bu haklara ilişkin uyuşmazlıklarda yardımcı oluruz.',
-            'Bu grupta adımların sırası belirleyicidir: koruma kapsamı, başvuru anı ve fiilî kullanım seçimi etkiler. Bir başvurunun sunulması, kendiliğinden onaylandığı anlamına gelmez.',
+            'Bu alanda adımların sırası belirleyicidir: koruma kapsamı, başvuru anı ve fiilî kullanım seçimi etkiler. Bir başvurunun sunulması, kendiliğinden onaylandığı anlamına gelmez.',
           ],
         },
         {
           heading: 'Kapsam ve doğrulanması',
           paragraphs: [
-            'Büro Tayvan hukukuna göre çalışır ve yukarıdaki gruplardaki işleri yürütür. Her işin kapsamı, bir avukat iletinizi inceledikten sonra ayrıca doğrulanır.',
+            'Büro Tayvan hukukuna göre çalışır ve yukarıdaki alanlardaki işleri yürütür. Her işin kapsamı, bir avukat iletinizi inceledikten sonra ayrıca doğrulanır.',
             'Oturma durumu, çalışma izni ve benzeri sorular uyruktan değil, belgelerden ve ilgili kişinin durumundan değerlendirilir. Konunuzun bir kısmı bu soruları ilgilendiriyorsa, iletişimde belirtin. Bu sayfa ne sonuç ne de yanıt süresi vaat eder.',
           ],
         },
@@ -2637,21 +2637,21 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kuruluş ve yapı',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所), 2016 yılında National Taiwan University’de (國立臺灣大學) öğrenim görmüş avukatlar tarafından kuruldu. Çin adı 昊鼎, 昊 (“geniş gök”) işaretini 鼎 (“sağlam temel”) ile birleştirir ve firmanın kuruluşundan beri yönünü anlatır.',
-            'Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) ve Pingtung (屏東) ofislerimiz vardır. Kaohsiung ofisi şirket yönetimine odaklanır ve hukuk, ceza ve idare uyuşmazlıklarını yürütür. Taichung ofisi inşaat işleri, fikri mülkiyet ve Kore ile Japonya bağlantılı işleri yürütür. Pingtung ofisi 2017’de yerel gereksinim için açıldı.',
+            'Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) ve Pingtung (屏東) ofislerimiz vardır. Kaohsiung ofisi şirket yönetimine odaklanır ve hukuk, ceza ve idare uyuşmazlıklarını yürütür. Taichung ofisi inşaat işleri, fikri mülkiyet ve Kore ile Japonya bağlantılı işleri yürütür. Pingtung ofisi 2017’de bölgedeki ihtiyaç üzerine açıldı.',
             'Avukatlık çalışmasının yanında 2020’den beri Hovering Accounting Office da vardır; girişimcilere ve varlıklı kişilere muhasebe ve vergi planlaması sunar.',
           ],
         },
         {
           heading: 'Yabancı taraflarla çalışma',
           paragraphs: [
-            'Sınır aşan çalışma şirket kuruluşunu, vizeleri, marka ve patent başvurularını, hukuki risk incelemesini ve şirketlere vergi danışmanlığını kapsar. Taichung ofisi özellikle inşaat işleri, fikri mülkiyet ve Kore ile Japonya bağlantılı işleri yürütür. Avukat Wei Tseng (曾雋崴), anılan gruplarda Kore, Japonya ve diğer uluslararası müvekkilleri destekler.',
-            'Bir işi alıp alamayacağımız içeriğe ve iletişim diline bağlıdır. Konunuz anılan gruplara giriyorsa ve dört görüşme dilinden birinde konuşulabiliyorsa, inceleme için bir özet gönderebilirsiniz.',
+            'Sınır aşan çalışma şirket kuruluşunu, vizeleri, marka ve patent başvurularını, hukuki risk incelemesini ve şirketlere vergi danışmanlığını kapsar. Taichung ofisi özellikle inşaat işleri, fikri mülkiyet ve Kore ile Japonya bağlantılı işleri yürütür. Avukat Wei Tseng (曾雋崴), anılan alanlarda Kore, Japonya ve diğer uluslararası müvekkilleri destekler.',
+            'Bir işi alıp alamayacağımız içeriğe ve iletişim diline bağlıdır. Konunuz anılan alanlara giriyorsa ve dört görüşme dilinden birinde konuşulabiliyorsa, inceleme için bir özet gönderebilirsiniz.',
           ],
         },
         {
           heading: 'Bizimle iletişime geçtiğinizde',
           paragraphs: [
-            'Özetiniz geldikten sonra bir avukat içeriği inceler, ardından olası çalışma kapsamını, hâlâ gereken belgeleri ve sonraki adımları konuşur. Vergi veya muhasebe sorularında büro, muhasebe birimiyle aynı akışta çalışabilir.',
+            'Özetiniz geldikten sonra bir avukat içeriği inceler, ardından olası çalışma kapsamını, hâlâ gereken belgeleri ve sonraki adımları konuşur. Vergi veya muhasebe sorularında büro, muhasebe birimiyle birlikte aynı süreç içinde çalışabilir.',
             'Her işin sonucu olgulara ve eldeki belgelere bağlıdır; sonuç vaat etmeyiz. Durumunuz için bağlayıcı bir yanıt gerekiyorsa, belgeler dört görüşme dilinden birinde bir avukatla konuşulmalıdır.',
           ],
         },
@@ -2660,7 +2660,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'AVUKATLAR',
       title: 'Hovering uluslararası ekibi',
-      description: 'Hovering avukatlarının, operasyon yönetiminin ve ortak muhasebenin profilleri.',
+      description: 'Hovering avukatlarının, operasyon yönetiminin ve bağlı muhasebe bürosunun profilleri.',
       intro: '',
       sections: [],
     },
@@ -2668,7 +2668,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'KAPSAM VE ÜCRET',
       title: 'Çalışma kapsamı ve ücret nasıl belirlenir',
       description:
-        'Sıranın açıklaması: önce çalışma kapsamı, sonra ücretin doğrulanması ve bu sayfada neden fiyat listesi olmadığı.',
+        'Süreç: önce çalışma kapsamı belirlenir, sonra ücret doğrulanır; bu sayfada neden fiyat listesi olmadığı açıklanır.',
       intro:
         'Bu sayfa ücretin nasıl belirlendiğini açıklar, tutarını değil. Tutar, ilgili işin çalışma kapsamına bağlıdır ve bu kapsam açık olmadan anlamlı değildir.',
       sections: [
@@ -2682,7 +2682,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ücret, işe başlamadan önce doğrulanır',
           paragraphs: [
-            'Çalışma kapsamı açık olduğunda ücretin tutarı ve hesaplanma biçimi, işe başlamadan önce sizinle konuşulur ve doğrulanır. Kapsam yolda değişirse yeniden doğrulanmalıdır.',
+            'Çalışma kapsamı açık olduğunda ücretin tutarı ve hesaplanma biçimi, işe başlamadan önce sizinle konuşulur ve doğrulanır. Kapsam süreç içinde değişirse yeniden doğrulanmalıdır.',
             'Bu sayfa bir fiyat önerisi değildir ve ödeme yükümlülüğü doğurmaz. Bu sayfa üzerinden talep göndermek de ücret gerektirmez.',
           ],
         },
@@ -2717,22 +2717,22 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
           ],
           items: [
             'Sayfa dili: Bu bilgiler Türkçe yazılmıştır.',
-            'Görüşme dili: Görüşme İngilizce, Çince (中文), Japonca ve Korece yapılır.',
+            'Görüşme dili: Görüşme yalnızca İngilizce, Çince (中文), Japonca ve Korece yapılır.',
             'Yazma diliniz: Özeti kendi dilinizde yazabilirsiniz; özgün metin değiştirilmeden saklanır.',
           ],
         },
         {
           heading: 'Dört görüşme dilinden hiçbirini kullanamıyorsanız',
           paragraphs: [
-            'İletişim formunda «İletişim yolunun doğrulanması gerekir» seçeneğini seçebilirsiniz. Kullanılabilir bir yol varsa, o yolu incelemek için yanıtlarız; başka dilde hizmet sağlanmaz ve yanıt süresi vaat edilmez.',
+            'İletişim formunda “İletişim yolunun doğrulanması gerekir” seçeneğini seçebilirsiniz. Kullanılabilir bir yol varsa, o yolu incelemek için yanıtlarız; başka dilde hizmet sağlanmaz ve yanıt süresi vaat edilmez.',
             'Bu yalnızca bir inceleme adımıdır, bir vaat değildir. Tercüman vaat etmeyiz, dört dilin dışında Türkçe veya başka dilde hizmet vaat etmeyiz ve her işi kabul edeceğimizi vaat etmeyiz.',
           ],
         },
         {
           heading: 'İlk iletide neler olmalıdır',
           paragraphs: [
-            'Ne olduğunu, ne yardıma gereksinim duyduğunuzu, işin Tayvan ile ilişkisini ve biliyorsanız süreyi belirtin. Mahkemeden veya bir idareden yazı aldıysanız, yazıdaki tarihi belirtin.',
-            'İlk aşamada henüz pasaport numarası, kimlik numarası, hesap bilgisi, sağlık kaydı veya tüm kanıtları göndermeniz gerekmez. Avukatın yönlendirmesini bekleyin ve duyarlı belgeleri o zaman güvenli bir yolla gönderin.',
+            'Ne olduğunu, hangi konuda yardıma ihtiyaç duyduğunuzu, işin Tayvan ile ilişkisini ve biliyorsanız süreyi belirtin. Mahkemeden veya bir idareden yazı aldıysanız, yazıdaki tarihi belirtin.',
+            'İlk aşamada henüz pasaport numarası, kimlik numarası, hesap bilgisi, sağlık kaydı veya tüm kanıtları göndermeniz gerekmez. Avukatın yönlendirmesini bekleyin ve hassas belgeleri o zaman güvenli bir yolla gönderin.',
           ],
         },
         {
@@ -2763,7 +2763,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Büro hangi işleri yürütür?',
           answer:
-            'Altı grup yürütürüz: Tayvan’da yatırım ve şirket kuruluşu, hukuk davaları ve tazminat, evlilik, aile ve miras, iş uyuşmazlıkları, ceza işleri ve fikri mülkiyet. Bir işin alınıp alınmayacağı içerik incelendikten sonra kararlaştırılır.',
+            'Altı çalışma alanımız vardır: Tayvan’da yatırım ve şirket kuruluşu, hukuk davaları ve tazminat, evlilik, aile ve miras, iş uyuşmazlıkları, ceza işleri ve fikri mülkiyet. Bir işin alınıp alınmayacağı içerik incelendikten sonra kararlaştırılır.',
         },
         {
           question: 'İletişimden önce ne hazırlamalıyım?',
@@ -2778,7 +2778,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Dört dilden hiçbirini kullanamazsam ne olur?',
           answer:
-            'Talebi gönderirken «İletişim yolunun doğrulanması gerekir» seçeneğini seçin. İletişim yolunu incelemek için yanıtlarız, ancak başka dilde hizmet sağlanmaz. Bu bir inceleme adımıdır, başka dilde çalışabileceğimize dair bir vaat değildir.',
+            'Talebi gönderirken “İletişim yolunun doğrulanması gerekir” seçeneğini seçin. İletişim yolunu incelemek için yanıtlarız, ancak başka dilde hizmet sağlanmaz. Bu bir inceleme adımıdır, başka dilde çalışabileceğimize dair bir vaat değildir.',
         },
         {
           question: 'Türkçe metnim nasıl ele alınır?',
@@ -2796,9 +2796,9 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
             'Önce çalışma kapsamı belirlenir, sonra ücretin tutarı ve hesaplanma biçimi işe başlamadan önce sizinle doğrulanır. Bu sayfa sayı vermez ve ilk konuşmanın ücretsiz olduğunu söylemez.',
         },
         {
-          question: 'Konum çok ivediyse ne olur?',
+          question: 'Konunuz çok acilse ne olur?',
           answer:
-            'Süreyi veya resmi bir yazıdaki tarihi özetinizin başında belirtin ki incelemede görülsün. Bu sayfanın ivedi bir kanalı yoktur ve yanıt süresi sağlanmaz; konum bekleyemiyorsa bulunduğunuz yerde paralel başka yollar aramalısınız.',
+            'Süreyi veya resmi bir yazıdaki tarihi özetinizin başında belirtin ki incelemede görülsün. Bu sayfanın ivedi bir kanalı yoktur ve yanıt süresi sağlanmaz; işiniz bekleyemiyorsa bulunduğunuz yerde paralel başka yollar aramalısınız.',
         },
       ],
     },
@@ -2837,7 +2837,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Saklama yeri ve erişim',
           paragraphs: [
             'Gönderinizin içeriği kamuya açık olmayan bir yerde saklanır. Yalnızca büroda yetkili kişiler talebi işlemek için erişebilir.',
-            'Bu sayfa mutlak bir güvenlik vaadi vermez. Hiçbir iletim yolu ve hiçbir saklama yeri tümüyle güvenli değildir; bu yüzden duyarlı belgeler yalnızca avukatın özel yönlendirmesinden sonra gönderilmelidir.',
+            'Bu sayfa mutlak bir güvenlik vaadi vermez. Hiçbir iletim yolu ve hiçbir saklama yeri tümüyle güvenli değildir; bu yüzden hassas belgeler yalnızca avukatın özel yönlendirmesinden sonra gönderilmelidir.',
           ],
         },
         {
@@ -2864,8 +2864,8 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Saklama yeri ve hizmet sağlayıcılar',
           paragraphs: [
-            'Bu site Vercel’de barındırılır ve gönderiniz bu hizmetin kamuya açık olmayan nesne depolamasında saklanır. E-postalar büronun kullandığı e-posta hizmeti üzerinden gönderilir.',
-            'Bazı sağlayıcıların sunucuları Tayvan dışında olabilir, bu yüzden verileriniz orada saklanıp işlenebilir. Saklama amacı dolunca veriler gecikmeksizin silinir; yürürlükteki kurallara göre saklanması gereken veriler bu süre boyunca kalır. Kişisel verilere ilişkin soruları wei@hoveringlaw.com.tw alır.',
+            'Bu site Vercel’de barındırılır ve gönderiniz bu hizmetin kamuya açık olmayan bir depolama alanında saklanır. E-postalar büronun kullandığı e-posta hizmeti üzerinden gönderilir.',
+            'Bazı sağlayıcıların sunucuları Tayvan dışında olabilir, bu yüzden verileriniz orada saklanıp işlenebilir. Saklama amacı dolunca veriler gecikmeksizin silinir; yürürlükteki kurallara göre saklanması gereken veriler bu süre boyunca kalır. Kişisel verilere ilişkin sorularınızı wei@hoveringlaw.com.tw adresine yazabilirsiniz.',
           ],
         },
       ],
@@ -2896,7 +2896,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Avukat–müvekkil ilişkisi kendiliğinden doğmaz',
           paragraphs: [
             'Bu sayfayı okumak, bir form veya e-posta göndermek kendi başına avukat ile müvekkil arasında ilişki kurmaz.',
-            'Bu ilişki ancak iş incelendikten ve her iki taraf çalışmanın üstlenilmesini doğruladıktan sonra doğar.',
+            'Bu ilişki ancak iş incelendikten ve her iki taraf işin kabulünü doğruladıktan sonra doğar.',
           ],
         },
         {

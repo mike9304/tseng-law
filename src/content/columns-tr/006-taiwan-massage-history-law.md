@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Tayvan’ın başlangıçlarındaki geleneksel berber salonları (理髮廳) dönemini tanıdınız mı?
+Tayvan’ın eski geleneksel berber salonlarını (理髮廳) hatırlıyor musunuz?
 
 O salonlarda saç yıkama biçimi çok kendine özgüydü.
 
@@ -81,7 +81,7 @@ Görme engelli olan ve olmayan kişilerin meslek hakları tartışmasında çok 
 
 ve bu kuralın gerçekten görme engelli kişilerin istihdamını ve geçimini korumaya katkıda bulunup bulunmadığı kuşkuya düşürüldü.
 
-Sonunda Büyük Hâkimler (大法官), yalnızca görme engelli kişilerin masaj mesleğini icra edebileceğini söyleyen hükmü anayasaya aykırı (違憲) ilan etti.
+Sonunda Anayasa Mahkemesi (大法官), yalnızca görme engelli kişilerin masaj mesleğini icra edebileceğini söyleyen hükmü anayasaya aykırı (違憲) ilan etti.
 
 ​
 

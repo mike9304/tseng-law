@@ -29,7 +29,7 @@ Tayvan Ceza Kanununun (刑法) 185-4. maddesi, yaralanma veya ölüm doğuran bi
 
 ## Q2. Hangi kanıtlar önce korunmalıdır?
 
-Önce kişisel güvenliği ve uyarı işaretlerini sağlayınız; yaralı veya kurtarma gerekiyorsa 119’u, suç veya acil güvenlik durumu varsa 110 veya 112’yi arayınız. Trafik kazasının olgularına göre polise bildirimi de yapınız.
+Önce kişisel güvenliği ve uyarı işaretlerini sağlayınız. Tayvan’da yaralı veya kurtarma gerekiyorsa 119’u (ambulans ve itfaiye), suç veya acil güvenlik durumu varsa 110’u (polis) arayınız; cep telefonundan 112 numarası kullanılabilir. Trafik kazasının olgularına göre polise bildirimi de yapınız.
 
 Güvenlik sağlandıktan sonra genel ve yakın çekimler alarak araçların konumunu ve hasarını, yol işaretlerini, sinyalleri ve hava durumunu kaydediniz. Tanıkların iletişim bilgileri, CCTV (監視器影像) ve araç kamerası (行車紀錄器) görüntülerinin korunması talebi, tarafların, aracın ve sigortanın verileri ile klinik dosya (病歷) atlanmamalıdır. Kişisel fotoğraflar yararlıdır, ancak yaralanma veya ölüm kazasında gereken polis işlemlerinin yerine geçmez.
 
@@ -41,7 +41,7 @@ Ceza Kanununun 284. maddesi taksirle yaralamayı (過失傷害) ve taksirle ağ�
 
 Medeni tazminatta (損害賠償), Tayvan Medeni Kanununun (民法) 197. maddesine göre zarar ve tazmin yükümlüsünün öğrenildiği günden 2 yıl, veya haksız fiilin olduğu günden 10 yıl geçince talep mümkün olmaz. Hangi olguların zamanaşımını (消滅時效) etkilediği ayrı incelenmelidir.
 
-Bir suç nedeniyle zarar gören kişi, Ceza Muhakemesi Kanununun 487. maddesine göre ceza yargılamasına bağlı medeni dava (刑事附帶民事訴訟) açabilir. Ceza yargılaması sürerken bu dava, Ceza Muhakemesi Kanununun 488. maddesine göre 2. derecenin sözlü tartışmasının kapanışına (言詞辯論終結) kadar açılabilir, ancak 1. derecenin sözlü tartışması kapandıktan ve temyiz yoluna gidilmeden önce açılamaz. Kural olarak ayrı yargılama gideri (裁判費) ödenmesi kaçınılabilir, ancak her sonuç maliyetsiz bitmez. Örneğin ceza dosyası reddedilip davacının talebiyle hukuk mahkemesine gönderilirse, Ceza Muhakemesi Kanununun 503. maddesine göre giderler yüklenebilir ve 504. maddenin gönderme ile usul kuralları da doğrulanmalıdır.
+Bir suç nedeniyle zarar gören kişi, Ceza Muhakemesi Kanununun 487. maddesine göre ceza yargılamasına bağlı medeni dava (刑事附帶民事訴訟) açabilir. Ceza yargılaması sürerken bu dava, Ceza Muhakemesi Kanununun 488. maddesine göre istinaf duruşmasının sona ermesine (言詞辯論終結) kadar açılabilir, ancak ilk derece duruşması sona erdikten sonra ve temyiz yoluna gidilmeden önce açılamaz. Kural olarak ayrı yargılama gideri (裁判費) ödenmesi kaçınılabilir, ancak her sonuç maliyetsiz bitmez. Örneğin ceza dosyası reddedilip davacının talebiyle hukuk mahkemesine gönderilirse, Ceza Muhakemesi Kanununun 503. maddesine göre giderler yüklenebilir ve 504. maddenin gönderme ile usul kuralları da doğrulanmalıdır.
 
 Seçim, zamanaşımının kesilmesine (時效中斷), davalıların çevresine, kanıtlara, sigortaya ve yetkiye göre değişir. Bu yüzden bütün dosyalar için tek biçimde tercih edilen bir usul yoktur.
 
@@ -49,7 +49,7 @@ Seçim, zamanaşımının kesilmesine (時效中斷), davalıların çevresine, 
 
 Ceza sorumluluğu, her birinin özen yükümlülüğünü ihlali ve bu ihlalin karşı tarafın yaralanmasıyla nedensellik bağı tanındığında tutulabilir. Yalnızca her iki tarafta da kusur olmuş olması, taksirle yaralama sorumluluğunu kendiliğinden doğurmaz.
 
-Medeni planda, Medeni Kanunun 217. maddesine göre zarar görenin zararın doğuşuna veya büyümesine katkıda bulunan bir kusuru (與有過失) varsa mahkeme tazminatı indirebilir veya bağışık tutabilir. Örneğin Tayvan yeni doları (新臺幣, TWD) cinsinden tanınan zarar TWD 1.000.000 ve zarar görenin kusuru 50 % olarak değerlendirilirse, başka ayarlardan önce tutar TWD 500.000’e inebilir.
+Medeni planda, Medeni Kanunun 217. maddesine göre zarar görenin zararın doğuşuna veya büyümesine katkıda bulunan bir kusuru (與有過失) varsa mahkeme tazminatı indirebilir veya bağışık tutabilir. Örneğin Tayvan yeni doları (新臺幣, TWD) cinsinden tanınan zarar TWD 1.000.000 ve zarar görenin kusuru %50 olarak değerlendirilirse, başka ayarlardan önce tutar TWD 500.000’e inebilir.
 
 Bilirkişi incelemesi (鑑定) veya ön analiz tablosu önemli belgeler olabilir, ancak mahkemeyi mekanik biçimde bağlamaz. Mahkeme beyanlar, görüntüler ve araçların durumu dâhil bütün kanıtları inceler.
 
@@ -59,14 +59,14 @@ Uzlaşma belgesinde (和解書) kazanın tarihini, yerini ve taraflarını belir
 
 Medeni Kanunun 736. maddesindeki uzlaşma (和解), tarafların bir uyuşmazlığı bitirmek veya önlemek üzere karşılıklı ödün verdiği bir sözleşmedir. Medeni Kanunun 737. maddesine göre hakların sona erdiği kapsam da, uzlaşma belgesinde bırakılan sınırlar içinde değerlendirilir. Bu yüzden metin incelenmeden bütün gelecekteki taleplerin kalktığı ileri sürülmemelidir.
 
-Şikâyete bağlı bir suçsa, Ceza Muhakemesi Kanununun 238. maddesine göre şikâyet 1. derecenin sözlü tartışmasının kapanışına kadar geri alınabilir ve geri alındıktan sonra yeniden sunulamaz. Ancak şikâyete bağlı olmayan bir suçta kamu davası özel bir uzlaşmayla kendiliğinden bitmez ve uzlaşılmış olması her zaman şikâyetin geri alınmasını zorunlu kılmaz.
+Şikâyete bağlı bir suçsa, Ceza Muhakemesi Kanununun 238. maddesine göre şikâyet ilk derece duruşmasının sona ermesine kadar geri alınabilir ve geri alındıktan sonra yeniden sunulamaz. Ancak şikâyete bağlı olmayan bir suçta kamu davası özel bir uzlaşmayla kendiliğinden bitmez ve uzlaşılmış olması her zaman şikâyetin geri alınmasını zorunlu kılmaz.
 
 ### Q1–Q5 resmi dayanakları
 
 - [Karayolu trafiği yönetimi ve yaptırım yönetmeliği (道路交通管理處罰條例), madde 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
-- [Çin Cumhuriyeti Ceza Kanunu, madde 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
-- [Çin Cumhuriyeti Ceza Kanunu, madde 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
-- [Çin Cumhuriyeti Ceza Kanunu, madde 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
+- [Tayvan Ceza Kanunu (中華民國刑法), madde 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
+- [Tayvan Ceza Kanunu (中華民國刑法), madde 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [Tayvan Ceza Kanunu (中華民國刑法), madde 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
 - [Tayvan Ceza Muhakemesi Kanunu, madde 237](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001)
 - [Ceza Muhakemesi Kanunu, madde 238](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=238&pcode=C0010001)
 - [Ceza Muhakemesi Kanunu, madde 487](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=487&pcode=C0010001)
@@ -94,7 +94,7 @@ Bilirkişi görüşüne katılınmazsa yeniden inceleme istenebilir, ancak yenid
 Medeni Kanunun 184. maddesine dayanan talep, bir hakka hukuka aykırı saldırı, kaza ile nedensellik bağı ve zararın kanıtını varsayar. Yalnızca bir kaza olmuş olması, aşağıdaki kalemlerin hepsinin tanındığı anlamına gelmez. Medeni Kanunun 216. maddesi gerçek zarar ile yoksun kalınan kârın (所失利益) kapsamını saptama ölçütüdür.
 
 - **Yaralanma**: Medeni Kanunun 193. maddesine göre gereken tıbbi giderler (醫療費用), bakım giderleri (看護費用), tedaviye gidiş giderleri (就醫交通費) ve yardımcı araçlar gibi günlük yaşama eklenen giderler ile gerçek iş göremezlikten doğan gelir kaybı (收入損失) ve çalışma gücünün azalması (勞動能力減損) incelenebilir. Medeni Kanunun 195. maddesine göre manevi zarar da incelenebilir.
-- **Ölüm**: Medeni Kanunun 192. maddesine göre yer varsa ölümden önceki tıbbi giderler ve artan yaşam gereksinimi giderleri, cenaze giderleri (殯葬費) ve yasal nafaka hakkına sahip kişinin nafaka kaybı (扶養利益損失) incelenebilir. Medeni Kanunun 194. maddesine göre belirli yakınların manevi zararı da incelenebilir.
+- **Ölüm**: Medeni Kanunun 192. maddesine göre yer varsa ölümden önceki tıbbi giderler ve artan yaşam ihtiyacı giderleri, cenaze giderleri (殯葬費) ve yasal nafaka hakkına sahip kişinin nafaka kaybı (扶養利益損失) incelenebilir. Medeni Kanunun 194. maddesine göre belirli yakınların manevi zararı da incelenebilir.
 - **Malvarlığı**: Medeni Kanunun 196. maddesine göre aracın onarım giderleri veya değer kaybı dâhil, belgelenmiş gerçek malvarlığı zararı talep edilebilir.
 
 ## Q8. Tedavi sürerse tıbbi gider belgelerini nasıl sunmalı?
@@ -171,11 +171,11 @@ Medeni talebin kime yöneltileceği sorusu, ceza sorumluluğundan ayırt edilmel
 
 ## Q15. Hangi zorunlu otomobil sigortası ödemeleri ve teminatları doğrulanmalıdır?
 
-Zorunlu otomobil mali sorumluluk sigortası kanununun (強制汽車責任保險法) 6. maddesine göre abone olma yükümlülüğü kural olarak araç sahibine ve öngörülen hallerde o aracın kullanıcısına veya yöneticisine düşer. Bu rejim, otomobil kazası nedeniyle yaralanan veya ölen kişi için kusursuz teminat yapısı (無過失給付制度) kurar, ancak kanunun saptadığı yolcuların veya araç dışındaki 3. kişinin (第三人) kapsamı doğrulanmalıdır.
+Zorunlu otomobil mali sorumluluk sigortası kanununun (強制汽車責任保險法) 6. maddesine göre abone olma yükümlülüğü kural olarak araç sahibine ve öngörülen hallerde o aracın kullanıcısına veya yöneticisine düşer. Bu rejim, otomobil kazası nedeniyle yaralanan veya ölen kişi için kusursuz teminat yapısı (無過失給付制度) kurar, ancak kanunun saptadığı yolcuların veya araç dışındaki üçüncü kişinin (第三人) kapsamı doğrulanmalıdır.
 
 Tek araçlı bir kazada o aracın sürücüsü kural olarak o aracın zorunlu sigortasının ödemelerinin muhatabı değildir. Ancak birden çok aracın karıştığı bir kazada, sürücünün karışan başka bir aracın zorunlu sigortacısından ödeme talep edebildiği haller vardır.
 
-2026-05-29’da değiştirilen ödeme tablosu (強制汽車責任保險給付標準) 2026-07-01’den itibaren olan kazalara uygulanır. Yaralanmada gereken makul tıbbi gider tavanı Tayvan yeni doları cinsinden TWD 200.000’dir; sakatlık (失能) ödemesi yasal 15 dereceye göre TWD 80.000 ile TWD 3.000.000 arasındadır; ölüm ödemesi TWD 3.000.000’dir ve 1 mağdur ile 1 kaza için ölüm, sakatlık ve tıbbi giderlerin toplam azamisi TWD 3.200.000’dir. Önceki kazalara önceki tablo uygulanabilir.
+29 Mayıs 2026’da değiştirilen ödeme tablosu (強制汽車責任保險給付標準) 1 Temmuz 2026’dan itibaren olan kazalara uygulanır. Yaralanmada gereken makul tıbbi gider tavanı Tayvan yeni doları cinsinden TWD 200.000’dir; sakatlık (失能) ödemesi yasal 15 dereceye göre TWD 80.000 ile TWD 3.000.000 arasındadır; ölüm ödemesi TWD 3.000.000’dir ve 1 mağdur ile 1 kaza için ölüm, sakatlık ve tıbbi giderlerin toplam azamisi TWD 3.200.000’dir. Önceki kazalara önceki tablo uygulanabilir.
 
 Üçüncü kişilere karşı mali sorumluluk sigortası (第三人責任險), sürücü kaza sigortası (駕駛人傷害險) ve kendi araç hasarı sigortası (車體損失險) sözleşmeye bağlı isteğe bağlı ürünlerdir. Gerçek teminat, sigortalıya, tavana, muafiyete (自負額), istisnalara, kusura ve poliçenin diğer koşullarına göre değişir, böylece poliçe ve koşullar dosya dosya doğrulanmalıdır.
 
@@ -184,13 +184,13 @@ Tek araçlı bir kazada o aracın sürücüsü kural olarak o aracın zorunlu si
 - [Medeni Kanun, madde 193](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Medeni Kanun, madde 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Medeni Kanun, madde 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Tayvan İstinaf Mahkemesinin 109 yılı 上易字 644 sayılı kararı](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [Tayvan İstinaf Mahkemesinin 109 yılı 上易字 477 sayılı kararı](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Tayvan İstinaf Mahkemesinin 2020 (Minguo 109) yılı 上易字 644 sayılı kararı](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Tayvan İstinaf Mahkemesinin 2020 (Minguo 109) yılı 上易字 477 sayılı kararı](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Yargı Yuanının Hoffmann bugünkü değer hesaplayıcısı](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Medeni Kanun, madde 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Taoyuan bölge mahkemesinin 112 yılı 壢簡字 236 sayılı kararı](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Taoyuan bölge mahkemesinin 2023 (Minguo 112) yılı 壢簡字 236 sayılı kararı](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Medeni Kanun, madde 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
-- [Çin Cumhuriyeti Ceza Kanunu, madde 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [Tayvan Ceza Kanunu (中華民國刑法), madde 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Zorunlu otomobil mali sorumluluk sigortası kanunu](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
 - [Zorunlu otomobil mali sorumluluk sigortası ödeme tablosu](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Finansal Denetim Komisyonunun (金融監督管理委員會) özel kullanımlı otomobil sigortası örnek sözleşmesi](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
@@ -235,7 +235,7 @@ Q17. Trafik kazası failinin taksirle yaralamadaki ceza sorumluluğu nedir?
 
 ​
 
-Taksirle yaralamada mahkemeler şu sırada yaklaşık 3 aylık bir ceza verir.
+Bazı kararlarda taksirle yaralama için yaklaşık 3 aylık hapis cezası görülmüştür; tipik veya garanti bir sonuç yoktur.
 
 ​
 
@@ -247,7 +247,7 @@ Para cezasına çevrilirse (易科罰金), Ceza Kanununun 41. maddesi fıkra 1, 
 
 ​
 
-Taksirle ağır yaralamada kural olarak 4 aylık ceza verilir ve taksirle ölümde (過失致死) kural olarak 6 aylık ceza verilir.
+Bazı kararlarda taksirle ağır yaralama için yaklaşık 4 aylık, taksirle ölüm (過失致死) için yaklaşık 6 aylık hapis cezası görülmüştür; burada da tipik veya garanti bir sonuç yoktur.
 
 ​
 
@@ -267,7 +267,7 @@ Taksirle ölümde şikâyetin geri alınması mümkün değildir; ancak karşı 
 
 ​
 
-Cezanın ertelenmesi (緩刑) olabilir ve hapishaneye gidilmeyebilir.
+Mahkeme bazı hallerde cezanın ertelenmesine (緩刑) hükmedebilir; bu bir vaat değildir.
 
 ​
 
@@ -307,7 +307,7 @@ O zaman önemli olan avukatın özeni ve dürüstlüğüdür.
 
 ​
 
-Avukatın talebin bütün kalemlerini dikkatle incelemesi ve mümkün olan en yüksek tazminatın alınmasına çalışması önemlidir.
+Avukatın talebin bütün kalemlerini dikkatle incelemesi ve olguların ve delillerin desteklediği tazminat kalemlerini eksiksiz değerlendirmesi önemlidir.
 
 ​
 
@@ -359,7 +359,7 @@ Bu nokta bu yüzden kesinlikle savsaklanmamalı ve olgulara göre bir avukatla k
 
 ​
 
-Başka sorularınız varsa yorumlara bırakınız.
+Başka sorularınız varsa İletişim sayfasından yazabilirsiniz; yanıt süresi vaat edilmez.
 
 ​
 

@@ -52,7 +52,7 @@ const PENDING_CONFIRMATION: Record<(typeof GUIDANCE_LOCALES_4)[number], RegExp> 
   sr: /čeka potvrdu kancelarije|kancelarija još nije potvrdila|detalji politike još nisu potvrđeni/i,
   sl: /še ni potrjeno s strani pisarne|čaka na potrditev pisarne/,
   lt: /laukia kontoros patvirtinimo|kontora dar nepatvirtino/i,
-  lv: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
+  lv: /gaida biroja apstiprinājumu|birojs vēl nav apstiprinājis|není zatím potvrzeno|čeká na potvrzení/i,
   et: /büroo kinnitust oodates|büroo ei ole veel kinnitanud|ootab büroo kinnitust/i,
   ca: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
   is: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)

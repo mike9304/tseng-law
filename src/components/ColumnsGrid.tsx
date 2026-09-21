@@ -155,7 +155,7 @@ const GUIDANCE_FILTER_ALL_LABEL: Record<GuidanceLocale4, string> = {
   sr: 'Sve',
   sl: 'Vse',
   lt: 'Visus',
-  lv: 'Vše', // SCAFFOLD(cs)
+  lv: 'Visus',
   et: 'Kõik',
   ca: 'Vše', // SCAFFOLD(cs)
   is: 'Vše', // SCAFFOLD(cs)
@@ -368,10 +368,10 @@ const GUIDANCE_FILTER_CATEGORY_LABEL: Record<GuidanceLocale4, Record<ColumnCateg
     legal: 'Teisinė informacija apie Taivaną',
     case: 'Bylos analizė',
   },
-  lv: { // SCAFFOLD(cs)
-    formation: 'Zakládání společností na Tchaj-wanu',
-    legal: 'Právní informace o Tchaj-wanu',
-    case: 'Rozbor případu',
+  lv: {
+    formation: 'Sabiedrību dibināšana Taivānā',
+    legal: 'Juridiskā informācija par Taivānu',
+    case: 'Lietas izklāsts',
   },
   et: {
     formation: 'Ettevõtte asutamine Taiwanis',
@@ -433,7 +433,7 @@ const GUIDANCE_CARD_READ_MORE_LABEL: Record<GuidanceLocale4, string> = {
   sr: 'Čitajte dalje',
   sl: 'Berite dalje',
   lt: 'Skaityti toliau',
-  lv: 'Číst dál', // SCAFFOLD(cs)
+  lv: 'Lasīt tālāk',
   et: 'Lugege edasi',
   ca: 'Číst dál', // SCAFFOLD(cs)
   is: 'Číst dál', // SCAFFOLD(cs)

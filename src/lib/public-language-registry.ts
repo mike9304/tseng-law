@@ -634,11 +634,11 @@ export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion
     europe: 'Europa',
     americas: 'Amerika',
   },
-  lv: { // SCAFFOLD(cs)
-    global: 'Celosvětově',
-    'asia-pacific': 'Asie a Tichomoří',
-    'middle-east': 'Blízký východ',
-    europe: 'Evropa',
+  lv: {
+    global: 'Visā pasaulē',
+    'asia-pacific': 'Āzija un Klusais okeāns',
+    'middle-east': 'Tuvie Austrumi',
+    europe: 'Eiropa',
     americas: 'Amerika',
   },
   et: {
@@ -939,11 +939,11 @@ export const LANGUAGE_PICKER_COPY: Record<
     close: 'Uždaryti',
     current: 'Dabartinė kalba',
   },
-  lv: { // SCAFFOLD(cs)
-    open: 'Zvolte region a jazyk',
-    title: 'Zvolte svůj region a jazyk',
-    close: 'Zavřít',
-    current: 'Současný jazyk',
+  lv: {
+    open: 'Izvēlieties reģionu un valodu',
+    title: 'Izvēlieties savu reģionu un valodu',
+    close: 'Aizvērt',
+    current: 'Pašreizējā valoda',
   },
   et: {
     open: 'Valige piirkond ja keel',

@@ -382,7 +382,7 @@ const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
   sr: 'Serbian',
   sl: 'Slovenian',
   lt: 'Lithuanian',
-  lv: 'Czech', // SCAFFOLD(cs)
+  lv: 'Latvian',
   et: 'Estonian',
   ca: 'Czech', // SCAFFOLD(cs)
   is: 'Czech', // SCAFFOLD(cs)
@@ -878,13 +878,13 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     confidentialNotice:
       'Kadangi originalus tekstas išsaugomas, pradiniame etape nerašykite to, ko dar nereikia, pavyzdžiui, paso numerio, dokumento numerio ar sąskaitos duomenų.',
   },
-  lv: { // SCAFFOLD(cs)
+  lv: {
     consultationNotice:
-      'Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
+      'Šī informācija ir rakstīta latviešu valodā, bet konsultācija ar advokāti vai advokātu notiek tikai angļu, ķīniešu (中文), japāņu un korejiešu valodā.',
     discoveryNotice:
-      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, podporu, doporučení umělé inteligence ani viditelnost.',
+      'Fails llms.txt ir tikai karte publisko lapu atrašanai; tas nesola vietu meklēšanā, atbalstu, mākslīgā intelekta ieteikumu un redzamību.',
     confidentialNotice:
-      'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+      'Tā kā sākotnējais teksts tiek saglabāts, sākumposmā nerakstiet to, kas vēl nav vajadzīgs, piemēram, pases numuru, personas dokumenta numuru vai konta datus.',
   },
   et: {
     consultationNotice:

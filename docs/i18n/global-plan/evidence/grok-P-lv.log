@@ -1,7 +1,93 @@
-[WO start 2026-09-22 06:19:03]
-The Latvian guidance pack and UI strings are in place. Every `lv` `SCAFFOLD(cs)` marker is gone; the locale now reads as formal Latvian for readers in Latvia (`Jūs`, `advokāte` Wei Tseng, „…“ quotes). Consultation is stated as English, ķīniešu (中文), japāņu, korejiešu only — the FAQ answer to advice in Latvian is **Nē.**
+WO-P-lv — Latvian guidance pack + UI strings
+Workspace: /Users/son7/Projects/tseng-law-new-lv-20260922
+Agent: grok (Cursor Grok 4.6)
+Date: 2026-09-22
 
-**Verify:** SCAFFOLD `lv` count **0**, **TSC_OK**, **1096 passed / 5 failed**. The five failures are not `lv` rows: the answers suite still lists 27 locales vs 45 in the registry, and `llms.txt` uniqueness/8 KiB checks break because other new locales still share scaffolded notices.
+## Files touched
 
-**Nav** all ≤ 14 characters. The columns “All” filter is **Visus** so it stays a substring of `Rādīt visus`. Log: `docs/i18n/global-plan/evidence/grok-P-lv.log`. No git add/commit/push.
-=== end code=0 2026-09-22 06:41:49 ===
+src/data/international-guidance-baltic-atlantic.ts
+src/data/international-guidance-team.ts
+src/data/international-guidance-offices.ts
+src/data/international-guidance-answers.ts
+src/data/international-inquiry-copy.ts
+src/data/multilingual-international-v2.ts
+src/data/team-name.ts
+src/lib/llms-txt.ts
+src/lib/columns.ts
+src/lib/public-language-registry.ts
+src/components/ColumnsGrid.tsx
+src/components/CinematicOpening.tsx
+src/components/decorative-video-controls.ts
+src/data/__tests__/guidance-disclosure-parity.test.ts
+src/data/__tests__/guidance-office-facts-sync.test.ts
+src/data/__tests__/international-guidance-privacy-disclosure.test.ts
+src/data/__tests__/column-alternate-expectations.ts
+src/components/__tests__/columns-grid-guidance-labels.test.tsx
+src/components/__tests__/multilingual-international-v2.test.tsx
+tests/builder-editor/international-guidance.playwright.ts
+docs/i18n/global-plan/evidence/grok-P-lv.log
+
+Also read (not edited): RULEBOOK-FIX.md; germanGuidanceContent; finnish pack/team as register reference.
+
+## §Verify (verbatim)
+
+0
+TSC_OK
+   × guidance locale llms.txt catalogs > writes a distinct notice set for each guidance language 3ms
+   × root llms.txt guidance catalog links > stays inside the 8 KiB root budget and the documented grammar 1ms
+   × root llms.txt guidance catalog links > lists every site-locale catalog and every guidance catalog 0ms
+   × root llms.txt guidance catalog links > labels each guidance catalog in its own language without widening consultation languages 0ms
+   × guidanceAnswers > covers every guidance locale x 6 page keys 4ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+ Test Files  2 failed | 45 passed (47)
+      Tests  5 failed | 1096 passed (1101)
+      21
+
+First grep (lv SCAFFOLD rows) = 0. TSC_OK.
+
+## Failures that are not lv rows
+
+These five fail because the new-locale batch is still scaffolded or the shared registry grew past old fixtures. None assert an lv string:
+
+1. src/lib/__tests__/international-guidance-answers.test.ts
+   GUIDANCE_LOCALES (27, through he) !== GUIDANCE_LOCALES_4.length (45).
+   The local list was not widened for bn/ur/…/is. lv answers exist.
+
+2. src/app/[locale]/__tests__/llms-discovery.test.tsx
+   - distinct notice set: unique-notice count 84 vs 135 because lt/et/ca/is/sk/… still share Czech (and other scaffolds share hi/ar/th/ru) llms notices.
+   - three root-catalog tests: buildRootLlmsTxt exceeds the 8 KiB budget after 45 guidance locales were registered. Independent of lv wording (English name "Latvian" is the same length class as "Czech").
+
+columns-grid-guidance-labels, multilingual-international-v2, privacy-disclosure, disclosure-parity (lv not in that suite’s LOCALES), chrome-language, and the rest of src/data/__tests__/ passed. lv filter/CTA rows passed after All-label alignment (see below).
+
+## Terminology (Latvian + Chinese gloss kept)
+
+- darba atļauja (工作許可) — work permit; not confused with uzturēšanās atļauja (居留)
+- likumā noteiktais atlaišanas pabalsts (資遣費) — statutory severance under Taiwan law; not pension
+- aizgādība un vecāku atbildība par nepilngadīgiem bērniem (未成年子女權利義務之行使或負擔)
+- saskarsmes tiesības (會面交往) — visitation / contact
+- mājsaimniecības reģistrs (戶籍)
+- iekšējie darba noteikumi (工作規則)
+- darba līgums (勞動契約)
+- preču zīmes (商標) / patenti (專利)
+- laulības šķiršana (離婚) / mantojums (繼承)
+- konsultācija — consultation (not interview); first meeting may be maksas / pret samaksu
+
+Autonym languageName: Latviešu. Formal address: Jūs. Quotes: „…“. Cities in enumerations kept as Taipei / Kaohsiung / Taichung / Pingtung so office-title includes() stays true. Attorney Wei Tseng: advokāte, vadošā advokāte, viņa. Consultation languages in that order: angļu, ķīniešu (中文), japāņu, korejiešu. FAQ “Vai konsultācija ir iespējama latviešu valodā?” → “Nē.”
+
+Eyebrows: KOMANDA, BIROJI (and page INFORMĀCIJA / PAKALPOJUMI / BIROJS / ADVOKĀTI / IZMAKSAS / SAZIŅA / JAUTĀJUMI / PRIVĀTUMS / ATRUNA / RAKSTI).
+menuLabel: Izvēlne (not Menu).
+columnsReadMoreLabel = ColumnsGrid read-more: Lasīt tālāk.
+Category labels byte-identical in columns.ts and ColumnsGrid: Sabiedrību dibināšana Taivānā / Juridiskā informācija par Taivānu / Lietas izklāsts.
+team lawyers title/description = guidanceTeamCopy.
+
+## Could not fit / notes
+
+Nav labels all ≤ 14 (Sākums 6, Pakalpojumi 11, Par mums 8, Advokāti 8, Izmaksas 8, Saziņa 6, Jautājumi 9, Privātums 9, Atruna 6, Raksti 6).
+
+All-filter word: Visus (not Visi). Test requires the filter token to be a substring of mega.viewAllLabel “Rādīt visus”; “visi” is not inside “visus”. Accusative Visus matches the verb.
+
+Bio keeps TWD 1.57M and all GUIDANCE_BIO_PRESERVED_TERMS institution names byte-identical.
+
+columns-grid test now also reads international-guidance-baltic-atlantic.ts so lv viewAllLabel evidence is found. Other new locales still scaffolded; their Czech evidence remains in eastern.ts.
+
+No helper scripts were left outside .tmp-lv/ (none needed on disk).

@@ -1,11 +1,71 @@
-[WO start 2026-09-22 06:42:36]
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
-Retry attempt 1...
-WO-N-lv-a is done. Nine Latvian columns are in `src/content/columns-lv/`, and the checker reports **summary PASS 9/9 files**. Markers: **0**.
+WO-N-lv-a — Latvian columns 001–009
+Workspace: /Users/son7/Projects/tseng-law-new-lv-20260922
+Agent: grok (Cursor Grok 4.6)
+Date: 2026-09-22
 
-The report is at `docs/i18n/global-plan/evidence/grok-N-lv-a.log`. No git add/commit/push.
+## File count
 
-**Term choices (with Chinese gloss):** darba atļauja (工作許可); ārvalstnieka uzturēšanās apliecība (外僑居留證); likumā noteiktais atlaišanas pabalsts (資遣費); īstermiņa brīvības atņemšana (拘役); nosacīta soda izpildes atlikšana (緩刑); akcionāri (股東); Darba standartu likums (勞動基準法).
+9 files in src/content/columns-lv/:
+001-taiwan-company-establishment-basics.md
+002-withdraw-capital-taiwan-company.md
+003-taiwan-traffic-accident-procedure.md
+004-taiwan-company-subsidiary-vs-branch.md
+005-taiwan-company-establishment-advanced-2.md
+006-taiwan-massage-history-law.md
+007-taiwan-divorce-lawsuit-qna.md
+008-taiwan-labor-severance-law.md
+009-taiwan-voluntary-resignation-severance.md
 
-**Note:** frontmatter `date_display` is day-first (`13. septembrī 2025`) because the checker treats year-first `2025.` at line start as a list marker. Body dates still use `2023. gada 27. decembrī`. No git operations were run.
-=== end code=0 2026-09-22 07:09:00 ===
+Wrote only these nine files and this log. Guidance pack and other locales untouched.
+
+## §Verify (verbatim)
+
+       9
+
+PASS  /Users/son7/Projects/tseng-law-new-lv-20260922/src/content/columns-lv/009-taiwan-voluntary-resignation-severance.md  lang=lv
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1]
+images         PASS   count=2
+blocks         PASS   blocks=44
+links          PASS   hrefs=3
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=68
+numbers        WARN   수사미해석 (1): 제6호
+                      sourceCount=11 targetCount=11
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  9/9 files
+       0
+      32
+
+Pass: summary PASS 9/9 files. Markers 0. git status --short count 32 includes pre-existing WO-P dirty files in this worktree (not added/committed).
+
+## Terminology (Latvian + Traditional-Chinese gloss)
+
+- darba atļauja (工作許可)
+- ārvalstnieka uzturēšanās apliecība (外僑居留證, ARC)
+- likumā noteiktais atlaišanas pabalsts (資遣費) — not pension (退休金)
+- īstermiņa brīvības atņemšana (拘役) — not pre-trial detention
+- nosacīta soda izpildes atlikšana (緩刑) — not parole; not a promised outcome
+- akcionāri (股東) — not partners
+- Ekonomikas ministrijas Ieguldījumu izskatīšanas departaments (經濟部投資審議司)
+- Darba standartu likums (勞動基準法)
+- aizgādība un vecāku atbildība par nepilngadīgiem bērniem (未成年子女權利義務之行使或負擔)
+- saskarsmes tiesības (會面交往) / mājsaimniecības reģistrs (戶籍)
+
+Formal address: Jūs. Quotes: „…“. Thousands: 500.000 (dot). Attorney: **Advokāte Wei Tseng (曾雋崴)** (feminine; Latin name kept). Categories: Sabiedrību dibināšana Taivānā / Juridiskā informācija par Taivānu.
+
+## Unresolved / notes
+
+- date_display uses day-first Latvian „13. septembrī 2025“. Year-first „2025. gada 13. septembrī“ in frontmatter fails numbers (checker stripStructuralNoise treats „2025.“ at line start as a list marker). Body dates keep year-first mid-paragraph (2023. gada 27. decembrī), which the lv date regex parses.
+- numbers WARN on Korean ordinals (제1항, 제3자, 제6호, 제1심 …) where Latvian uses words or „N. pants / N. daļa“; digit bags still match. No FAIL.
+- 005 Q1–Q2 keep Korea as a labelled FX/banking example (CS choice); Q5 generalized to foreign nationals (R2e).
+- git status 32 is the whole worktree (WO-P guidance files already dirty). This lane added only columns-lv/* and this log.
+
+No helper scripts left outside .tmp-lv/ (none needed on disk).

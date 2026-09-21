@@ -2354,54 +2354,54 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
         'Nė viena iš keturių kalbų netinka — bendravimo būdą reikia patvirtinti',
     },
   },
-  lv: { // SCAFFOLD(cs)
+  lv: {
     guidanceNotice:
-      'Tato stránka je psána česky jako obecná orientace, nikoli jako právní rada ve Vaší věci.',
+      'Šī lapa ir rakstīta latviešu valodā kā vispārīga orientācija, nevis kā juridisks padoms Jūsu lietā.',
     consultationNotice:
-      'Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky.',
+      'Konsultācija notiek tikai četrās valodās: angļu, ķīniešu (中文), japāņu un korejiešu.',
     methodConfirmationNotice:
-      'Pokud neovládáte žádný ze čtyř jazyků konzultace, zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
+      'Ja nevarat lietot nevienu no četrām konsultācijas valodām, izvēlieties „Saziņas veids ir jāapstiprina“. Mēs atbildēsim, lai izvērtētu, vai pastāv izmantojams saziņas veids; pakalpojums citā valodā nav garantēts, un atbildes termiņš netiek solīts.',
     preparationNotice:
-      'Shrnutí můžete napsat ve svém jazyce. Původní text se uchová tak, jak jste jej napsali, a automaticky se nepřekládá.',
-    heading: 'Odeslat žádost o posouzení',
+      'Kopsavilkumu varat rakstīt savā valodā. Sākotnējais teksts tiek saglabāts tā, kā to uzrakstījāt, un netiek tulkots automātiski.',
+    heading: 'Nosūtīt izvērtēšanas pieteikumu',
     intro:
-      'Popište svou věc stručně. Advokátka nebo advokát posoudí obsah, než se přistoupí k dalšímu kroku.',
-    submitLabel: 'Odeslat žádost',
-    submittingLabel: 'Odesílá se…',
+      'Aprakstiet savu lietu īsi. Advokāte vai advokāts izvērtēs saturu, pirms tiek sperts nākamais solis.',
+    submitLabel: 'Nosūtīt pieteikumu',
+    submittingLabel: 'Notiek nosūtīšana…',
     successMessage:
-      'Obdrželi jsme Vaši žádost; čeká na posouzení. Neznamená to, že porada proběhla nebo že byla potvrzena schůzka.',
+      'Esam saņēmuši Jūsu pieteikumu; tas gaida izvērtējumu. Tas nenozīmē, ka konsultācija ir notikusi vai ka tikšanās ir apstiprināta.',
     savedNotificationPendingMessage:
-      'Vaše žádost byla uložena, ale oznámení kanceláři zatím není potvrzeno. Co jste napsali, se neztratí. Neobdržíte-li odpověď, můžete napsat i na e-mailovou adresu z kontaktní stránky.',
-    receiptIdLabel: 'Číslo podání',
+      'Jūsu pieteikums ir saglabāts, taču paziņojums birojam vēl nav saņemts. Tas, ko uzrakstījāt, nezūd. Ja atbildi nesaņemat, varat rakstīt arī uz e-pasta adresi no saziņas lapas.',
+    receiptIdLabel: 'Iesnieguma numurs',
     failureMessage:
-      'Vaši žádost se nepodařilo odeslat. Zkuste to znovu nebo napište na e-mailovou adresu z kontaktní stránky.',
-    originalLanguageLabel: 'Jazyk, v němž píšete',
+      'Jūsu pieteikumu neizdevās nosūtīt. Mēģiniet vēlreiz vai rakstiet uz e-pasta adresi no saziņas lapas.',
+    originalLanguageLabel: 'Valoda, kurā rakstāt',
     originalLanguagePlaceholder:
-      'Například čeština, angličtina, čínština nebo jiný jazyk',
-    preferredConsultationLanguageLabel: 'Jazyk, který si přejete pro konzultaci',
-    originalTextLabel: 'Krátký popis věci (ve Vašem jazyce)',
+      'Piemēram, latviešu, angļu, ķīniešu vai cita valoda',
+    preferredConsultationLanguageLabel: 'Valoda, ko vēlaties konsultācijai',
+    originalTextLabel: 'Īss lietas apraksts (Jūsu valodā)',
     originalTextPlaceholder:
-      'Napište, co se stalo, jakou pomoc potřebujete a lhůtu, existuje-li. Nepište číslo pasu, číslo dokladu ani údaje o účtu.',
-    nameLabel: 'Jméno',
-    emailLabel: 'E-mail',
+      'Uzrakstiet, kas ir noticis, kāda palīdzība Jums vajadzīga, un termiņu, ja tāds ir. Nerakstiet pases numuru, personas dokumenta numuru un konta datus.',
+    nameLabel: 'Vārds',
+    emailLabel: 'E-pasts',
     consentLabel:
-      'Přečetl(a) jsem stránku o soukromí a souhlasím s odesláním této žádosti.',
-    privacyLinkLabel: 'Soukromí',
-    requiredMessage: 'Toto pole je povinné.',
-    invalidEmailMessage: 'Zadejte platnou e-mailovou adresu.',
-    tooLongMessage: 'Text je příliš dlouhý. Zkraťte jej a odešlete znovu.',
+      'Esmu izlasījis(-usi) privātuma lapu un piekrītu šā pieteikuma nosūtīšanai.',
+    privacyLinkLabel: 'Privātums',
+    requiredMessage: 'Šis lauks ir obligāts.',
+    invalidEmailMessage: 'Ievadiet derīgu e-pasta adresi.',
+    tooLongMessage: 'Teksts ir pārāk garš. Saīsiniet to un nosūtiet no jauna.',
     sourceLanguageNotice:
-      'Tento článek je zveřejněn pouze v jazyce {language}; odkaz otevře původní stránku.',
+      'Šis raksts ir publicēts tikai valodā {language}; saite atver sākotnējo lapu.',
     unavailableTranslationNotice:
-      'Tato část zatím není k dispozici v jazyce této stránky. Odkaz v původním jazyce otevře původní text.',
-    unavailableLanguageNotice: 'Tato stránka se v jazyce {language} nenabízí.',
+      'Šī daļa šīs lapas valodā vēl nav pieejama. Saite sākotnējā valodā atver sākotnējo tekstu.',
+    unavailableLanguageNotice: 'Šī lapa valodā {language} netiek piedāvāta.',
     languageOptions: {
-      en: 'Angličtina (English)',
-      'zh-hant': 'Čínština (中文)',
-      ja: 'Japonština (日本語)',
-      ko: 'Korejština (한국어)',
+      en: 'Angļu (English)',
+      'zh-hant': 'Ķīniešu (中文)',
+      ja: 'Japāņu (日本語)',
+      ko: 'Korejiešu (한국어)',
       'needs-method-confirmation':
-        'Žádný ze čtyř jazyků není použitelný — způsob komunikace je třeba potvrdit',
+        'Neviena no četrām valodām nav lietojama — saziņas veids ir jāapstiprina',
     },
   },
   et: {

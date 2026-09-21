@@ -1,7 +1,72 @@
-[WO start 2026-09-22 07:09:35]
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
-Retry attempt 1...
-WO-N-lv-b is done. Latvian columns **010–018** are in `src/content/columns-lv/`; the report is `docs/i18n/global-plan/evidence/grok-N-lv-b.log`.
+WO-N-lv-b — Latvian columns 010–018
+Workspace: /Users/son7/Projects/tseng-law-new-lv-20260922
+Agent: grok (Cursor Grok 4.6)
+Date: 2026-09-22
 
-Checker: **summary PASS 18/18 files** (this lane plus 001–009). Markers **0**. No git operations.
-=== end code=0 2026-09-22 07:44:19 ===
+## File count
+
+9 files in src/content/columns-lv/ (this lane):
+010-taiwan-gym-injury-lawsuit.md
+011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md
+012-taiwan-overtaking-accident-liability.md
+013-taiwan-company-establishment-advanced-1.md
+014-taiwan-mandatory-employment-period.md
+015-taiwan-company-setup-pitch-location.md
+016-taiwan-inheritance-custody-analysis.md
+017-taiwan-logistics-business-setup.md
+018-taiwan-semiconductor-market-entry.md
+
+Wrote only these nine files and this log. Guidance pack and other locales untouched. WO-N-lv-a 001–009 already present in the same directory (18 files on disk).
+
+## §Verify (verbatim)
+
+      18
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-lv-20260922/src/content/columns-lv/018-taiwan-semiconductor-market-entry.md  lang=lv
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=33
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+      43
+
+Pass: summary PASS 18/18 files (010–018 plus the other lane’s 001–009). Markers 0. git status --short count 43 includes pre-existing dirty files in this worktree (not added/committed).
+
+## Terminology (Latvian + Traditional-Chinese gloss)
+
+- automobiļu kravas pārvadājumi (汽車貨運業)
+- dibināšanas sagatavošanas atļauja (籌設許可)
+- nozares apvienība (同業公會)
+- darbības licence (營業執照) — not 經營許可
+- kravu ekspedīcija (運送承攬) / pārvadātājs (運送人) / nosūtītājs (貨主)
+- licences aizdošana (借牌)
+- mājsaimniecības reģistrs (戶籍)
+- darba atļauja (工作許可) / ārvalstnieka uzturēšanās apliecība (外僑居留證)
+- uzraugs (監察人) — not 會計師 (zvērināts revidents)
+- mantojuma apliecinājums (認證) vs mantojuma apstiprinājums (檢認); aizgādība (親權)
+
+Formal address: Jūs. Quotes: „…“. Thousands: 25.000.000 (dot). Attorney: **Advokāte Wei Tseng (曾雋崴)** (feminine; Latin name kept). Categories: Sabiedrību dibināšana Taivānā / Juridiskā informācija par Taivānu / Lietas izklāsts.
+
+## Unresolved / notes
+
+- date_display uses day-first Latvian „13. septembrī 2025“ / „17. septembrī 2026“. Year-first „2025. gada 13. septembrī“ in frontmatter fails numbers (checker stripStructuralNoise treats „2025.“ at line start as a list marker). Body dates keep year-first mid-paragraph.
+- Do not start a paragraph with „N. pants“ (012): that line is counted as a list item and the article number is stripped. Prefix with the statute name.
+- numbers WARN on Korean ordinals (제3자, 제N항) in some files where Latvian uses words; digit bags still match. No FAIL.
+- 018 has no `url` (Korean source has none); heading numbering skips 6 as in the source.
+- git status 43 is the whole worktree (WO-P / WO-N-lv-a already dirty). This lane added only columns-lv/010–018 and this log.
+
+No helper scripts left outside .tmp-lv/ (none needed on disk).

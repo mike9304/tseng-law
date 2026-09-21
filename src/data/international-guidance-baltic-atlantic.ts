@@ -489,487 +489,486 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
   },
 };
 
-// SCAFFOLD(cs) locale lv
 export const latvianGuidanceContent: GuidanceLocaleContent = {
-  languageName: 'Čeština',
+  languageName: 'Latviešu',
   nav: {
-    home: 'Úvod',
-    services: 'Služby',
-    about: 'Kancelář',
-    lawyers: 'Advokáti',
-    pricing: 'Náklady',
-    contact: 'Kontakt',
-    faq: 'Otázky',
-    privacy: 'Soukromí',
-    disclaimer: 'Upozornění',
-    columns: 'Články',
+    home: 'Sākums',
+    services: 'Pakalpojumi',
+    about: 'Par mums',
+    lawyers: 'Advokāti',
+    pricing: 'Izmaksas',
+    contact: 'Saziņa',
+    faq: 'Jautājumi',
+    privacy: 'Privātums',
+    disclaimer: 'Atruna',
+    columns: 'Raksti',
   },
-  contactCta: 'Odeslat žádost o posouzení',
+  contactCta: 'Nosūtīt izvērtēšanas pieteikumu',
   footerNotice:
-    'Tato česká stránka obsahuje pouze obecné informace o práci kanceláře podle tchajwanského práva. Není právní radou k jednotlivému případu a samotné odeslání zprávy nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
-  skipLink: 'Přeskočit navigaci a přejít k obsahu',
-  menuLabel: 'Přehled stránek',
-  languageLabel: 'Jazyk zobrazení',
+    'Šī latviešu lapa sniedz tikai vispārīgu informāciju par biroja darbu saskaņā ar Taivānas tiesībām. Tā nav juridisks padoms konkrētā lietā, un ziņojuma nosūtīšana pati par sevi nerada attiecības starp advokāti vai advokātu un klientu.',
+  skipLink: 'Izlaist navigāciju un pāriet pie satura',
+  menuLabel: 'Izvēlne',
+  languageLabel: 'Attēlošanas valoda',
   mega: {
     services: {
-      description: 'Kancelář se zabývá hlavními agendami tchajwanského práva.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Birojs strādā Taivānas tiesību galvenajās jomās.',
+      viewAllLabel: 'Rādīt visus',
     },
     columns: {
-      description: 'Články k častým otázkám tchajwanského práva.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Raksti par biežiem Taivānas tiesību jautājumiem.',
+      viewAllLabel: 'Rādīt visus',
     },
     lawyers: {
-      description: 'Představení advokátek a advokátů a způsobů kontaktu.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Advokāšu un advokātu, kā arī saziņas veidu iepazīstināšana.',
+      viewAllLabel: 'Rādīt visus',
     },
     pricing: {
-      description: 'Tato stránka vysvětluje rozsah práce a způsob ujasnění nákladů.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Šī lapa izskaidro darba apjomu un to, kā tiek noskaidrotas izmaksas.',
+      viewAllLabel: 'Rādīt visus',
     },
     faq: {
-      description: 'Časté otázky k práci kanceláře na Tchaj-wanu.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Bieži jautājumi par biroja darbu Taivānā.',
+      viewAllLabel: 'Rādīt visus',
     },
   },
-  notFoundTitle: 'Stránka nenalezena',
+  notFoundTitle: 'Lapa nav atrasta',
   notFoundText:
-    'Hledaná stránka neexistuje nebo byla přesunuta. Můžete se vrátit na českou úvodní stránku a prohlédnout si dostupné informace.',
-  backHomeLabel: 'Na úvodní stránku',
-  readSourceLabel: 'Otevřít seznam článků v původním jazyce',
+    'Meklētā lapa nepastāv vai ir pārvietota. Varat atgriezties pie latviešu sākumlapas un apskatīt pieejamo informāciju.',
+  backHomeLabel: 'Uz sākumlapu',
+  readSourceLabel: 'Atvērt rakstu sarakstu sākotnējā valodā',
   home: {
-    heroScrollLabel: 'Posunout dolů',
-    heroColumnsCtaLabel: 'Zobrazit články',
-    servicesDetailLabel: 'Zobrazit podrobnosti',
-    servicesAssistanceBefore: 'Není-li zřejmé, do které agendy Vaše věc patří, stránka ',
-    servicesAssistanceLinkLabel: 'Kontakt',
-    servicesAssistanceAfter: ' vysvětluje, jak sestavit shrnutí, které advokátka nebo advokát posoudí.',
-    columnsViewAllLabel: 'Zobrazit všechny články',
-    columnsReadMoreLabel: 'Číst dál',
-    columnsReviewLabel: 'Posoudila advokátka Wei Tseng',
-    columnsOriginalLanguageBadge: 'Původní jazyk',
+    heroScrollLabel: 'Ritināt lejup',
+    heroColumnsCtaLabel: 'Skatīt rakstus',
+    servicesDetailLabel: 'Skatīt sīkāku informāciju',
+    servicesAssistanceBefore: 'Ja nav skaidrs, kurai jomai Jūsu lieta pieder, lapa ',
+    servicesAssistanceLinkLabel: 'Saziņa',
+    servicesAssistanceAfter: ' izskaidro, kā sagatavot kopsavilkumu, ko izvērtēs advokāte vai advokāts.',
+    columnsViewAllLabel: 'Skatīt visus rakstus',
+    columnsReadMoreLabel: 'Lasīt tālāk',
+    columnsReviewLabel: 'Pārbaudījusi advokāte Wei Tseng',
+    columnsOriginalLanguageBadge: 'Sākotnējā valoda',
     columnsOriginalLanguageNote:
-      'Následující články zatím nejsou k dispozici v češtině. Seznam zůstává v původním jazyce a otevře příslušnou jazykovou stránku; obsah se automaticky nepřekládá.',
-    imageBandAlt: 'Tradiční tchajwanský dvorec sanheyuan (三合院) a moderní pavilon za denního světla',
-    videoPauseLabel: 'Pozastavit video',
-    videoPlayLabel: 'Přehrát video',
-    videoReplayLabel: 'Přehrát video znovu',
+      'Turpmākie raksti latviešu valodā vēl nav pieejami. Saraksts paliek sākotnējā valodā un atver attiecīgo valodas lapu; saturs netiek tulkots automātiski.',
+    imageBandAlt: 'Tradicionāla Taivānas sanheyuan (三合院) sēta un mūsdienīgs paviljons dienasgaismā',
+    videoPauseLabel: 'Apturēt video',
+    videoPlayLabel: 'Atskaņot video',
+    videoReplayLabel: 'Atskaņot video no sākuma',
   },
   pages: {
     home: {
-      eyebrow: 'INFORMACE',
-      title: 'Právní služby na Tchaj-wanu — informace v češtině',
+      eyebrow: 'INFORMĀCIJA',
+      title: 'Juridiskie pakalpojumi Taivānā — informācija latviešu valodā',
       description:
-        'Obecné vysvětlení v češtině o rozsahu práce Hovering International Law Firm na Tchaj-wanu, o jazycích konzultace a o prvním kontaktu.',
+        'Vispārīgs skaidrojums latviešu valodā par Hovering International Law Firm darba jomu Taivānā, par konsultācijas valodām un par pirmo saziņu.',
       intro:
-        'Hovering International Law Firm zastupuje zahraniční klienty, včetně osob s vazbou na Tchaj-wan, ve věcech tchajwanského práva: investice a zakládání společností, občanskoprávní spory, manželství, rodina a dědictví, pracovní právo, trestní věci a duševní vlastnictví. Tato česká část Vám pomůže rozpoznat, která práce spadá do našeho rozsahu, co si připravit a jak nás oslovit. Jde o obecné informace, nikoli o právní radu k Vašemu případu.',
+        'Hovering International Law Firm palīdz ārvalstu klientiem, arī tiem, kam ir saikne ar Taivānu, lietās saskaņā ar Taivānas tiesībām: ieguldījumi un sabiedrību dibināšana, civillietas, laulība, ģimene un mantojums, darba tiesības, krimināllietas un intelektuālais īpašums. Šī latviešu daļa palīdz Jums saprast, kurš darbs ietilpst mūsu jomā, kas jāsagatavo un kā mūs sasniegt. Tā ir vispārīga informācija, nevis juridisks padoms Jūsu lietā.',
       sections: [
         {
-          heading: 'Čím se zabýváme',
+          heading: 'Ko mēs darām',
           paragraphs: [
-            'Hovering International Law Firm je advokátní kancelář se sídlem na Tchaj-wanu. Pracuje podle tchajwanského práva a má pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pching-tungu (屏東). Radíme podnikům, vedeme soudní řízení a zastupujeme zahraniční klienty v krocích, které je na Tchaj-wanu třeba učinit.',
-            'Celý zdejší obsah je obecný. Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku. Tyto informace nenahrazují konzultaci s advokátkou nebo advokátem nad Vašimi dokumenty.',
+            'Hovering International Law Firm ir advokātu birojs, kas dibināts Taivānā. Tas strādā saskaņā ar Taivānas tiesībām un uztur birojus Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) un Pingtung (屏東). Mēs konsultējam uzņēmumus, vedam tiesvedību un palīdzam ārvalstu klientiem veikt soļus, kas Taivānā ir nepieciešami.',
+            'Viss šeit sniegtais saturs ir vispārīgs. Lietas iznākums ir atkarīgs no faktiem, piemērojamajiem noteikumiem un laika. Šī informācija neaizstāj pārrunas ar advokāti vai advokātu par Jūsu dokumentiem.',
           ],
         },
         {
-          heading: 'Jazyk stránky a jazyk konzultace nejsou totéž',
+          heading: 'Lapas valoda un konsultācijas valoda nav viens un tas pats',
           paragraphs: [
-            'Tato stránka je psána česky, ale konzultace s advokátkou nebo advokátem probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky. Čtení informací v češtině neznamená, že konzultace s advokátkou nebo advokátem proběhne česky.',
-            'Neslibujeme tlumočníka, lhůtu k odpovědi ani schůzku prostřednictvím této stránky. Pokud neovládáte žádný ze čtyř jazyků konzultace, stránka „Kontakt“ vysvětluje, jak posuzujeme způsob komunikace.',
+            'Šī lapa ir rakstīta latviešu valodā, bet konsultācija ar advokāti vai advokātu notiek tikai četrās valodās: angļu, ķīniešu (中文), japāņu un korejiešu. Tas, ka lasāt informāciju latviešu valodā, nenozīmē, ka saruna ar advokāti vai advokātu notiks latviski.',
+            'Mēs nesolām tulku, atbildes termiņu un tikšanos, izmantojot šo lapu. Ja nevarat lietot nevienu no četrām konsultācijas valodām, lapa „Saziņa“ izskaidro, kā mēs izvērtējam saziņas veidu.',
           ],
         },
         {
-          heading: 'Agendy kanceláře',
+          heading: 'Biroja jomas',
           paragraphs: [
-            'Rozsah práce zahrnuje následujících šest agend. Stránka „Služby“ popisuje každou z nich přesněji a uvádí, co se neslibuje.',
+            'Darba joma aptver šīs sešas grupas. Lapa „Pakalpojumi“ katru no tām apraksta precīzāk un nosauc to, kas netiek solīts.',
           ],
           items: [
-            'Investice a zakládání společností na Tchaj-wanu',
-            'Občanskoprávní spory a náhrada škody',
-            'Manželství, rodina a dědictví',
-            'Pracovněprávní spory',
-            'Trestní věci',
-            'Duševní vlastnictví: ochranné známky, patenty a autorské právo',
+            'Ieguldījumi un sabiedrību dibināšana Taivānā',
+            'Civillietas un zaudējumu atlīdzība',
+            'Laulība, ģimene un mantojums',
+            'Darba strīdi',
+            'Krimināllietas',
+            'Intelektuālais īpašums: preču zīmes, patenti un autortiesības',
           ],
         },
         {
-          heading: 'Kde začít',
+          heading: 'Kur sākt',
           paragraphs: [
-            'Přečtěte si stránku „Služby“ a ověřte, zda Vaše věc spadá do našeho rozsahu, poté „Náklady“ a „Kontakt“, abyste věděli, jak se stanoví rozsah a jak se náklady potvrzují před zahájením práce.',
-            'Při odeslání zprávy můžete shrnutí napsat ve svém jazyce. Původní text se uchová přesně tak, jak jste jej napsali, a automaticky se nepřekládá. Odeslaná zpráva je žádostí čekající na posouzení: není to ještě porada ani potvrzená schůzka.',
+            'Izlasiet lapu „Pakalpojumi“ un pārbaudiet, vai Jūsu lieta ietilpst mūsu jomā, pēc tam „Izmaksas“ un „Saziņa“, lai saprastu, kā tiek noteikts apjoms un kā izmaksas apstiprina pirms darba sākšanas.',
+            'Nosūtot ziņojumu, kopsavilkumu varat rakstīt savā valodā. Sākotnējais teksts tiek saglabāts tieši tā, kā to uzrakstījāt, un netiek tulkots automātiski. Nosūtīts ziņojums ir pieteikums, kas gaida izvērtējumu: tā vēl nav konsultācija un nav apstiprināta tikšanās.',
           ],
         },
       ],
     },
     services: {
-      eyebrow: 'SLUŽBY',
-      title: 'V čem klienty zastupujeme',
+      eyebrow: 'PAKALPOJUMI',
+      title: 'Kādās lietās mēs palīdzam',
       description:
-        'Šest agend, které kancelář na Tchaj-wanu vede, a hranice, které je užitečné znát nejdříve.',
+        'Sešas jomas, kurās birojs strādā Taivānā, un robežas, kas vispirms ir noderīgi zināt.',
       intro:
-        'Níže jsou agendy, které skutečně vedeme, a otázky, jež se v počáteční fázi kladou nejčastěji. Výklad Vám pomůže posoudit, zda Vaše věc spadá do našeho rozsahu; je obecný a není právním rozborem jednotlivého spisu.',
+        'Zemāk ir jomas, kurās mēs patiešām strādājam, un jautājumi, kas sākumposmā tiek uzdoti visbiežāk. Izklāsts palīdz novērtēt, vai Jūsu lieta ietilpst mūsu jomā; tas ir vispārīgs un nav atsevišķas lietas juridiskā analīze.',
       sections: [
         {
-          heading: 'Investice a zakládání společností na Tchaj-wanu',
+          heading: 'Ieguldījumi un sabiedrību dibināšana Taivānā',
           paragraphs: [
-            'Zastupujeme zahraniční investory a podniky při založení nebo vedení společnosti na Tchaj-wanu: volba právní formy, příprava a podání dokumentů, vklad kapitálu, bankovní otázky, posouzení sídla a odvětvové požadavky. Podporujeme také účetnictví a daně, které ze založení a z provozu na Tchaj-wanu vyplývají.',
-            'Postup a lhůty se liší podle formy, investora, odvětví, banky a podle již dostupných dokumentů. Založení společnosti samo o sobě nevede k pobytovému oprávnění (居留) ani k pracovnímu povolení (工作許可): jde o samostatná řízení posuzovaná podle situace konkrétní osoby.',
+            'Mēs palīdzam ārvalstu ieguldītājiem un uzņēmumiem dibināt vai vadīt sabiedrību Taivānā: tiesiskās formas izvēle, dokumentu sagatavošana un iesniegšana, kapitāla iemaksa, bankas jautājumi, atrašanās vietas izvērtējums un nozares prasības. Atbalstām arī grāmatvedību un nodokļus, kas izriet no dibināšanas un darbības Taivānā.',
+            'Gaita un termiņi atšķiras pēc formas, ieguldītāja, nozares, bankas un jau pieejamajiem dokumentiem. Sabiedrības dibināšana pati par sevi nenodrošina uzturēšanās atļauju (居留) un darba atļauju (工作許可): tās ir atsevišķas procedūras, ko izvērtē pēc konkrētās personas situācijas.',
           ],
         },
         {
-          heading: 'Občanskoprávní spory a náhrada škody',
+          heading: 'Civillietas un zaudējumu atlīdzība',
           paragraphs: [
-            'Tato agenda zahrnuje spory ze smluv, náhradu škody z protiprávního jednání a spotřebitelské spory. Práce zpravidla začíná časovou osou, posouzením dokumentů a existujících důkazů a teprve poté následují další kroky.',
-            'Průběh určují lhůty, včetně promlčecích, a úplnost důkazů. Uveďte proto známá data co nejdříve. Uschovejte smlouvy, zprávy, doklady o platbě nebo fotografie stavu na místě a zmiňte je v první zprávě.',
+            'Šī joma aptver strīdus no līgumiem, zaudējumu atlīdzību no prettiesiskas rīcības un patērētāju strīdus. Darbs parasti sākas ar hronoloģiju, dokumentu un jau esošo pierādījumu izvērtējumu, un tikai pēc tam seko nākamie soļi.',
+            'Gaitu nosaka termiņi, tostarp noilgums, un pierādījumu pilnīgums. Tāpēc zināmos datumus nosauciet pēc iespējas agri. Saglabājiet līgumus, ziņojumus, maksājumu apliecinājumus vai vietas fotogrāfijas un miniet tos pirmajā ziņojumā.',
           ],
         },
         {
-          heading: 'Manželství, rodina a dědictví',
+          heading: 'Laulība, ģimene un mantojums',
           paragraphs: [
-            'Vedeme rozvod (離婚), vypořádání majetku, výkon a převzetí práv a povinností k nezletilým dětem (未成年子女權利義務之行使或負擔), styk s dítětem (會面交往) a dědictví (繼承), a to i tehdy, nacházejí-li se strany nebo majetek v různých státech. Přeshraniční rodinné věci často vyžadují další posouzení matričních záznamů (戶籍), formy listin a jejich průkaznosti na Tchaj-wanu.',
-            'Protože rodinné věci s sebou často nesou lhůty a souběžná řízení, mělo by první shrnutí uvést vztah mezi stranami, současné bydliště a již probíhající řízení.',
+            'Mēs vedam laulības šķiršanu (離婚), mantas sadali, aizgādību un vecāku atbildību par nepilngadīgiem bērniem (未成年子女權利義務之行使或負擔), saskarsmes tiesības (會面交往) un mantojumu (繼承), arī tad, ja puses vai manta atrodas dažādās valstīs. Pārrobežu ģimenes lietās bieži vajadzīgs papildu izvērtējums mājsaimniecības reģistra (戶籍) ierakstiem, aktu formai un to pierādīšanas spējai Taivānā.',
+            'Tā kā ģimenes lietām bieži ir termiņi un paralēlas procedūras, pirmajam kopsavilkumam jānorāda pušu attiecības, pašreizējā dzīvesvieta un jau notiekošās procedūras.',
           ],
         },
         {
-          heading: 'Pracovněprávní spory',
+          heading: 'Darba strīdi',
           paragraphs: [
-            'Tato agenda zahrnuje skončení pracovního poměru, odstupné podle tchajwanského práva (資遣費; nelze je ztotožňovat s obdobnými instituty jiných států), odměnu a spory z pracovní smlouvy (勞動契約), a to jak na straně zaměstnance, tak na straně zaměstnavatele. Při posouzení odlišujeme důvod skončení od otázek výpovědní doby, výplaty a lhůt.',
-            'Rozhodujícími dokumenty bývají pracovní smlouva, vnitřní pracovní řád (工作規則), výplatní pásky a korespondence stran. Máte-li je stále k dispozici, zmiňte to ve shrnutí.',
+            'Šī joma aptver darba attiecību izbeigšanu, likumā noteikto atlaišanas pabalstu saskaņā ar Taivānas tiesībām (資遣費; to nedrīkst pielīdzināt līdzīgiem institūtiem citās valstīs), atlīdzību un strīdus no darba līguma (勞動契約), gan darbinieka, gan darba devēja pusē. Izvērtējumā nošķiram izbeigšanas iemeslu no uzteikuma, izmaksas un termiņu jautājumiem.',
+            'Bieži izšķirošie dokumenti ir darba līgums, iekšējie darba noteikumi (工作規則), algas lapiņas un pušu sarakste. Ja tie Jums joprojām ir, miniet to kopsavilkumā.',
           ],
         },
         {
-          heading: 'Trestní věci',
+          heading: 'Krimināllietas',
           paragraphs: [
-            'Zastupujeme v přípravném řízení i před soudem podezřelé a obviněné i poškozené a posuzujeme trestní rizika podnikatelské činnosti.',
-            'Trestní věci mívají krátké lhůty a pevně stanovené fáze. Obdrželi-li jste již písemnost orgánu činného v trestním řízení nebo soudu, uveďte datum na písemnosti včas, aby byl obsah posouzen ve správném pořadí.',
+            'Mēs pārstāvam aizdomās turētos un apsūdzētos, kā arī cietušos pirmstiesas izmeklēšanā un tiesā un izvērtējam uzņēmējdarbības krimināltiesiskos riskus.',
+            'Krimināllietām bieži ir īsi termiņi un noteikti posmi. Ja jau esat saņēmuši kriminālprocesa iestādes vai tiesas rakstu, nosauciet rakstā norādīto datumu laikus, lai saturu izvērtētu pareizā secībā.',
           ],
         },
         {
-          heading: 'Duševní vlastnictví',
+          heading: 'Intelektuālais īpašums',
           paragraphs: [
-            'Podporujeme zápis ochranných známek (商標) a patentů (專利), autorské právo a spory o tato práva na Tchaj-wanu.',
-            'V této agendě rozhoduje pořadí kroků: rozsah ochrany, okamžik podání přihlášky a skutečné užívání ovlivňují volbu. Podání přihlášky samo o sobě neznamená, že jí bude vyhověno.',
+            'Mēs atbalstām preču zīmju (商標) un patentu (專利) reģistrāciju, autortiesības un strīdus par šīm tiesībām Taivānā.',
+            'Šajā jomā izšķir soļu secība: aizsardzības apjoms, pieteikuma iesniegšanas brīdis un faktiskā lietošana ietekmē izvēli. Pieteikuma iesniegšana pati par sevi nenozīmē, ka tas tiks apstiprināts.',
           ],
         },
         {
-          heading: 'Rozsah a jeho potvrzení',
+          heading: 'Apjoms un tā apstiprināšana',
           paragraphs: [
-            'Kancelář pracuje podle tchajwanského práva a vede věci z výše uvedených agend. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí Vaši zprávu.',
-            'Pobytový status, pracovní povolení a obdobné otázky se posuzují podle dokumentů a podle situace konkrétní osoby, nikoli podle státní příslušnosti. Dotýká-li se část Vaší věci těchto bodů, uveďte to při kontaktu. Tato stránka neslibuje výsledek ani lhůtu k odpovědi.',
+            'Birojs strādā saskaņā ar Taivānas tiesībām un ved lietas no iepriekš minētajām jomām. Katra lietas apjoms tiek apstiprināts atsevišķi pēc tam, kad advokāte vai advokāts ir izvērtējis Jūsu ziņojumu.',
+            'Uzturēšanās statusu, darba atļauju un līdzīgus jautājumus izvērtē pēc dokumentiem un konkrētās personas situācijas, nevis pēc valstspiederības. Ja daļa Jūsu lietas skar šos punktus, miniet to, sazinoties ar mums. Šī lapa nesola iznākumu un atbildes termiņu.',
           ],
         },
       ],
     },
     about: {
-      eyebrow: 'KANCELÁŘ',
-      title: 'O Hovering International Law Firm',
+      eyebrow: 'BIROJS',
+      title: 'Par Hovering International Law Firm',
       description:
-        'Základní údaje o této tchajwanské advokátní kanceláři, o jejích pobočkách a o práci se zahraničními stranami.',
+        'Pamatinformācija par šo Taivānas advokātu biroju, tā birojiem un darbu ar ārvalstu pusēm.',
       intro:
-        'Hovering International Law Firm je advokátní kancelář na Tchaj-wanu. Advokátky a advokáti pracují od poradenství podnikům až po soudní řízení. Tato část popisuje vznik kanceláře, sídla a práci se zahraničními stranami.',
+        'Hovering International Law Firm ir advokātu birojs Taivānā. Advokātes un advokāti strādā no uzņēmumu konsultācijām līdz tiesvedībai. Šī daļa apraksta biroja izveidi, atrašanās vietas un darbu ar ārvalstu pusēm.',
       sections: [
         {
-          heading: 'Založení a struktura',
+          heading: 'Dibināšana un uzbūve',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) byla založena v roce 2016 advokátkami a advokáty, kteří studovali na National Taiwan University (國立臺灣大學). Čínský název 昊鼎 spojuje znak 昊 („širé nebe“) se znakem 鼎 („pevný základ“) a vystihuje zaměření kanceláře od jejího založení.',
-            'Máme pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pching-tungu (屏東). Pobočka v Kao-siungu se soustředí na vedení podniků a vede občanskoprávní, trestní a správní spory. Pobočka v Tchaj-čungu vede stavební věci, duševní vlastnictví a věci s vazbou na Koreu a Japonsko. Pobočka v Pching-tungu byla otevřena v roce 2017 pro místní potřebu.',
-            'Vedle advokátní práce působí od roku 2020 také Hovering Accounting Office, která nabízí účetnictví a daňové plánování podnikatelům a soukromým osobám s majetkem.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) 2016. gadā dibināja advokātes un advokāti, kuri studēja National Taiwan University (國立臺灣大學). Ķīniešu nosaukums 昊鼎 savieno zīmi 昊 („plašās debesis“) ar zīmi 鼎 („stabils pamats“) un raksturo biroja ievirzi kopš dibināšanas.',
+            'Mums ir biroji Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) un Pingtung (屏東). Kaohsiung birojs koncentrējas uz uzņēmumu vadību un ved civillietas, krimināllietas un administratīvos strīdus. Taichung birojs ved būvniecības lietas, intelektuālo īpašumu un lietas ar saikni ar Koreju un Japānu. Pingtung birojs tika atvērts 2017. gadā vietējām vajadzībām.',
+            'Līdzās advokātu darbam kopš 2020. gada darbojas arī Hovering Accounting Office, kas piedāvā grāmatvedību un nodokļu plānošanu uzņēmējiem un privātpersonām ar mantu.',
           ],
         },
         {
-          heading: 'Práce se zahraničními stranami',
+          heading: 'Darbs ar ārvalstu pusēm',
           paragraphs: [
-            'Přeshraniční práce zahrnuje zakládání společností, víza, přihlášky ochranných známek a patentů, posouzení právního rizika a daňové poradenství podnikům. Pobočka v Tchaj-čungu vede zejména stavební věci, duševní vlastnictví a věci s vazbou na Koreu a Japonsko. Advokátka Wei Tseng (曾雋崴) zastupuje klienty z Koreje, z Japonska a další mezinárodní klienty v uvedených agendách.',
-            'Zda můžeme věc převzít, závisí na obsahu a na jazyku komunikace. Spadá-li Vaše věc do uvedených agend a lze-li ji projednat v některém ze čtyř jazyků konzultace, můžete zaslat shrnutí k posouzení.',
+            'Pārrobežu darbs aptver sabiedrību dibināšanu, vīzas, preču zīmju un patentu pieteikumus, tiesiskā riska izvērtējumu un nodokļu konsultācijas uzņēmumiem. Taichung birojs jo īpaši ved būvniecības lietas, intelektuālo īpašumu un lietas ar saikni ar Koreju un Japānu. Advokāte Wei Tseng (曾雋崴) palīdz klientiem no Korejas, no Japānas un citiem starptautiskiem klientiem minētajās jomās.',
+            'Vai lietu varam uzņemties, ir atkarīgs no satura un saziņas valodas. Ja Jūsu lieta ietilpst minētajās jomās un to var pārrunāt kādā no četrām konsultācijas valodām, varat nosūtīt kopsavilkumu izvērtēšanai.',
           ],
         },
         {
-          heading: 'Když nás oslovíte',
+          heading: 'Kad sazināties ar mums',
           paragraphs: [
-            'Po doručení Vašeho shrnutí posoudí advokátka nebo advokát obsah a poté hovoří o možném rozsahu práce, o dosud potřebných dokumentech a o dalších krocích. U daňových nebo účetních otázek může kancelář postupovat s účetním úsekem v jednom navazujícím postupu.',
-            'Výsledek každé věci závisí na skutkovém stavu a na dostupných dokumentech; výsledek neslibujeme. Potřebujete-li závaznou odpověď pro svou situaci, musí být dokumenty projednány s advokátkou nebo advokátem v některém ze čtyř jazyků konzultace.',
+            'Pēc Jūsu kopsavilkuma saņemšanas advokāte vai advokāts izvērtē saturu un pēc tam runā par iespējamo darba apjomu, vēl vajadzīgajiem dokumentiem un nākamajiem soļiem. Nodokļu vai grāmatvedības jautājumos birojs var rīkoties kopā ar grāmatvedības daļu vienā secīgā gaitā.',
+            'Katra lietas iznākums ir atkarīgs no faktiem un pieejamajiem dokumentiem; iznākumu nesolām. Ja Jums vajadzīga saistoša atbilde savai situācijai, dokumenti jāpārrunā ar advokāti vai advokātu kādā no četrām konsultācijas valodām.',
           ],
         },
       ],
     },
     lawyers: {
-      eyebrow: 'ADVOKÁTI',
-      title: 'Mezinárodní tým Hovering',
-      description: 'Profily advokátek a advokátů, provozního vedení a přidruženého účetnictví a auditu Hovering.',
+      eyebrow: 'ADVOKĀTI',
+      title: 'Hovering starptautiskā komanda',
+      description: 'Hovering advokāšu un advokātu, darbības vadības un partnera grāmatvedības un revīzijas profili.',
       intro: '',
       sections: [],
     },
     pricing: {
-      eyebrow: 'NÁKLADY',
-      title: 'Jak se stanoví rozsah práce a náklady',
+      eyebrow: 'IZMAKSAS',
+      title: 'Kā nosaka darba apjomu un izmaksas',
       description:
-        'Vysvětlení pořadí: nejprve rozsah práce, poté potvrzení nákladů, a proč tato stránka neobsahuje ceník.',
+        'Skaidrojums par secību: vispirms darba apjoms, pēc tam izmaksu apstiprinājums, un kāpēc šajā lapā nav cenrāža.',
       intro:
-        'Tato stránka vysvětluje, jak se náklady stanoví, nikoli jejich výši. Výše závisí na rozsahu práce v jednotlivé věci a má smysl teprve tehdy, je-li tento rozsah zřejmý.',
+        'Šī lapa izskaidro, kā izmaksas nosaka, nevis to apmēru. Apmērs ir atkarīgs no darba apjoma konkrētajā lietā un ir jēgpilns tikai tad, kad šis apjoms ir skaidrs.',
       sections: [
         {
-          heading: 'Nejprve se stanoví rozsah práce',
+          heading: 'Vispirms nosaka darba apjomu',
           paragraphs: [
-            'Věci téhož druhu mohou vyžadovat velmi rozdílné úsilí, podle počtu stran, dostupných dokumentů, lhůt, které je třeba dodržet, a podle toho, zda již bylo zahájeno řízení. Prvním krokem je proto vždy stanovit, co do práce patří a co nikoli.',
-            'Shrnutí, které na začátku zašlete, je základem tohoto rozsahu. Čím jasněji popisuje průběh, Váš požadavek a lhůty, tím přesněji lze rozsah určit.',
+            'Viena veida lietas var prasīt ļoti atšķirīgu piepūli atkarībā no pušu skaita, pieejamajiem dokumentiem, termiņiem, kas jāievēro, un no tā, vai procedūra jau ir sākusies. Tāpēc pirmais solis vienmēr ir noteikt, kas darbā ietilpst un kas ne.',
+            'Kopsavilkums, ko nosūtāt sākumā, ir šā apjoma pamats. Jo skaidrāk tas apraksta gaitu, Jūsu lūgumu un termiņus, jo precīzāk apjomu var noteikt.',
           ],
         },
         {
-          heading: 'Náklady se potvrzují před zahájením práce',
+          heading: 'Izmaksas apstiprina pirms darba sākšanas',
           paragraphs: [
-            'Je-li rozsah práce zřejmý, výše a způsob výpočtu nákladů se s Vámi projedná a potvrdí dříve, než práce začne. Změní-li se rozsah v průběhu, musí být potvrzen znovu.',
-            'Tato stránka není cenovou nabídkou a nezakládá povinnost k platbě.',
+            'Kad darba apjoms ir skaidrs, izmaksu apmēru un aprēķina veidu ar Jums pārrunā un apstiprina, pirms darbs sākas. Ja apjoms gaitā mainās, tas jāapstiprina no jauna.',
+            'Šī lapa nav cenu piedāvājums un nerada maksāšanas pienākumu.',
           ],
         },
         {
-          heading: 'Porada může být úplatná',
+          heading: 'Konsultācija var būt pret samaksu',
           paragraphs: [
-            'Porada s advokátkou nebo advokátem může být úplatnou službou. Tato stránka neříká, že první konzultace je bezplatná, a žádnou její část nelze v tomto smyslu vykládat.',
-            'Je-li porada úplatná, sdělí se výše a způsob platby dříve, než se porada uskuteční.',
+            'Konsultācija ar advokāti vai advokātu var būt maksas pakalpojums. Šī lapa nesaka, ka pirmā konsultācija ir bez maksas, un nevienu tās daļu nedrīkst tā saprast.',
+            'Ja konsultācija ir pret samaksu, apmēru un maksāšanas veidu paziņo, pirms tā notiek.',
           ],
         },
         {
-          heading: 'Proč tato stránka neuvádí sazby',
+          heading: 'Kāpēc šajā lapā nav tarifu',
           paragraphs: [
-            'Náklady závisejí na věci samé: na úsilí, počtu stran, dokumentech, lhůtách a na tom, zda již řízení probíhá. Číslo stanovené předem by náklady Vašeho spisu neukázalo. Proto nejprve stanovíme rozsah práce a náklady Vám sdělíme poté, dříve než práce začne.',
-            'Vedle odměny mohou vzniknout soudní poplatky, náklady orgánů nebo třetích osob. Ty jsou od odměny oddělené a závisejí na příslušném řízení.',
+            'Izmaksas ir atkarīgas no lietas pašas: no piepūles, pušu skaita, dokumentiem, termiņiem un no tā, vai procedūra jau notiek. Iepriekš noteikts skaitlis Jūsu lietas izmaksas neparādītu. Tāpēc vispirms nosakām darba apjomu un pēc tam paziņojam Jums izmaksas, pirms darbs sākas.',
+            'Līdzās honorāram var rasties tiesas nodevas, iestāžu vai trešo personu izmaksas. Tās ir nošķirtas no honorāra un ir atkarīgas no attiecīgās procedūras.',
           ],
         },
       ],
     },
     contact: {
-      eyebrow: 'KONTAKT',
-      title: 'Jak kancelář oslovit',
+      eyebrow: 'SAZIŅA',
+      title: 'Kā sazināties ar biroju',
       description:
-        'Jazyk stránky, jazyky konzultace, postup pro případ, že neovládáte žádný ze čtyř jazyků, a co tato stránka neslibuje.',
+        'Lapas valoda, konsultācijas valodas, rīcība, ja nevarat lietot nevienu no četrām valodām, un tas, ko šī lapa nesola.',
       intro:
-        'Než nám napíšete, rozlište následující tři body. Bývají směšovány, ale znamenají různé věci.',
+        'Pirms mums rakstāt, nošķiriet šos trīs punktus. Tos bieži sajauc, taču tie nozīmē atšķirīgas lietas.',
       sections: [
         {
-          heading: 'Tři věci, které je třeba držet odděleně',
+          heading: 'Trīs lietas, kas jātur nošķirti',
           paragraphs: [
-            'Jazyk zobrazení stránky, jazyk konzultace s advokátkou nebo advokátem a jazyk, v němž píšete, jsou tři různé věci.',
+            'Lapas attēlošanas valoda, konsultācijas valoda ar advokāti vai advokātu un valoda, kurā rakstāt, ir trīs atšķirīgas lietas.',
           ],
           items: [
-            'Jazyk stránky: tyto informace jsou psány česky.',
-            'Jazyk konzultace: porada probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
-            'Váš jazyk psaní: shrnutí můžete napsat ve svém jazyce; původní text se uchová beze změny.',
+            'Lapas valoda: šī informācija ir rakstīta latviešu valodā.',
+            'Konsultācijas valoda: konsultācija notiek tikai angļu, ķīniešu (中文), japāņu un korejiešu valodā.',
+            'Jūsu rakstīšanas valoda: kopsavilkumu varat rakstīt savā valodā; sākotnējais teksts tiek saglabāts bez izmaiņām.',
           ],
         },
         {
-          heading: 'Pokud neovládáte žádný ze čtyř jazyků konzultace',
+          heading: 'Ja nevarat lietot nevienu no četrām konsultācijas valodām',
           paragraphs: [
-            'V kontaktním formuláři můžete zvolit „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
-            'Jde pouze o krok posouzení, nikoli o příslib. Neslibujeme tlumočníka, službu v češtině ani v jiném jazyce mimo čtyři uvedené jazyky, ani to, že každou věc přijmeme.',
+            'Saziņas veidlapā varat izvēlēties „Saziņas veids ir jāapstiprina“. Mēs atbildēsim, lai izvērtētu, vai pastāv izmantojams saziņas veids; pakalpojums citā valodā nav garantēts, un atbildes termiņš netiek solīts.',
+            'Tas ir tikai izvērtēšanas solis, nevis solījums. Mēs nesolām tulku, pakalpojumu latviešu valodā vai citā valodā ārpus četrām minētajām valodām un nesolām, ka pieņemsim katru lietu.',
           ],
         },
         {
-          heading: 'Co by měla obsahovat první zpráva',
+          heading: 'Kas jāietver pirmajā ziņojumā',
           paragraphs: [
-            'Uveďte, co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. Obdrželi-li jste již písemnost soudu nebo úřadu, uveďte datum na písemnosti.',
-            'V počáteční fázi zatím nemusíte zasílat číslo pasu, číslo dokladu, údaje o účtu, zdravotní dokumentaci ani soubor důkazů. Vyčkejte pokynů advokátky nebo advokáta a citlivé dokumenty zašlete až poté bezpečnou cestou.',
+            'Nosauciet, kas ir noticis, kāda palīdzība Jums vajadzīga, kāda saikne lietai ir ar Taivānu, un termiņu, ja to zināt. Ja jau esat saņēmuši tiesas vai iestādes rakstu, nosauciet rakstā norādīto datumu.',
+            'Sākumposmā vēl nav jānosūta pases numurs, personas dokumenta numurs, konta dati, medicīniskā dokumentācija vai visa pierādījumu kopa. Gaidiet advokātes vai advokāta norādījumus un sensitīvos dokumentus pēc tam sūtiet drošā ceļā.',
           ],
         },
         {
-          heading: 'Co tato stránka neslibuje',
+          heading: 'Ko šī lapa nesola',
           paragraphs: [
-            'Neslibujeme lhůtu k odpovědi, nepotvrzujeme schůzku prostřednictvím této stránky, neslibujeme určitou advokátku ani určitého advokáta a neposkytujeme tlumočníka. Písemný překlad je něco jiného: Vaše zpráva se automaticky nepřekládá.',
-            'Odešlete-li žádost, obsah se uchová a čeká na posouzení. Neobdržíte-li po nějaké době odpověď, můžete napsat znovu na e-mailovou adresu uvedenou na kontaktní stránce.',
+            'Mēs nesolām atbildes termiņu, neapstiprinām tikšanos, izmantojot šo lapu, nesolām konkrētu advokāti vai konkrētu advokātu un nenodrošinām tulku. Rakstisks tulkojums ir kas cits: Jūsu ziņojums netiek tulkots automātiski.',
+            'Ja nosūtāt pieteikumu, saturs tiek saglabāts un gaida izvērtējumu. Ja pēc kāda laika atbildi nesaņemat, varat rakstīt no jauna uz e-pasta adresi, kas norādīta saziņas lapā.',
           ],
         },
       ],
     },
     faq: {
-      eyebrow: 'OTÁZKY',
-      title: 'Časté otázky',
+      eyebrow: 'JAUTĀJUMI',
+      title: 'Bieži uzdotie jautājumi',
       description:
-        'Vysvětlení k rozsahu práce, přípravě, jazykům, nákladům a k tomu, co znamená odeslaná žádost.',
+        'Skaidrojumi par darba jomu, sagatavošanos, valodām, izmaksām un to, ko nozīmē nosūtīts pieteikums.',
       intro:
-        'Následující otázky jsou zodpovězeny na úrovni obecných informací. Odpověď pro Váš případ je možná teprve poté, co advokátka nebo advokát posoudí dokumenty.',
+        'Turpmākie jautājumi ir atbildēti vispārīgas informācijas līmenī. Atbilde Jūsu lietai ir iespējama tikai pēc tam, kad advokāte vai advokāts ir izvērtējis dokumentus.',
       sections: [
         {
-          heading: 'Jak tuto část užívat',
+          heading: 'Kā lietot šo daļu',
           paragraphs: [
-            'Nenajdete-li odpověď pro svou situaci, závisí odpověď zpravidla na zvláštních skutečnostech. Napište je proto do shrnutí, namísto abyste je dovozovali z této stránky.',
+            'Ja neatrodat atbildi savai situācijai, atbilde parasti ir atkarīga no īpašiem faktiem. Tāpēc ierakstiet tos kopsavilkumā, nevis izseciniet tos no šīs lapas.',
           ],
         },
       ],
       faqs: [
         {
-          question: 'Které věci kancelář vede?',
+          question: 'Kādas lietas birojs ved?',
           answer:
-            'Vedeme šest agend: investice a zakládání společností na Tchaj-wanu, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Zda bude věc přijata, se rozhodne po posouzení obsahu.',
+            'Mēs vedam sešas jomas: ieguldījumus un sabiedrību dibināšanu Taivānā, civillietas un zaudējumu atlīdzību, laulību, ģimeni un mantojumu, darba strīdus, krimināllietas un intelektuālo īpašumu. Vai lieta tiks pieņemta, izlemj pēc satura izvērtējuma.',
         },
         {
-          question: 'Co si připravit před kontaktem?',
+          question: 'Kas jāsagatavo pirms saziņas?',
           answer:
-            'Připravte si krátké shrnutí průběhu, svého požadavku, vazby na Tchaj-wan a lhůty, existuje-li nějaká. Je-li již k dispozici písemnost soudu nebo úřadu, uveďte datum. V této fázi zatím nemusíte zasílat doklady totožnosti ani soubor důkazů.',
+            'Sagatavojiet īsu kopsavilkumu par gaitu, savu lūgumu, saikni ar Taivānu un termiņu, ja tāds ir. Ja jau ir tiesas vai iestādes raksts, nosauciet datumu. Šajā posmā vēl nav jānosūta personas dokumenti vai visa pierādījumu kopa.',
         },
         {
-          question: 'Je možná porada v češtině?',
+          question: 'Vai konsultācija ir iespējama latviešu valodā?',
           answer:
-            'Ne. Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky. Neslibujeme ani tlumočníka. Písemný překlad je něco jiného: původní text, který napíšete, se uchová tak, jak je, a automaticky se nepřekládá.',
+            'Nē. Šī informācija ir rakstīta latviešu valodā, bet konsultācija ar advokāti vai advokātu notiek tikai angļu, ķīniešu (中文), japāņu un korejiešu valodā. Mēs nesolām arī tulku. Rakstisks tulkojums ir kas cits: sākotnējais teksts, ko uzrakstāt, tiek saglabāts tāds, kāds tas ir, un netiek tulkots automātiski.',
         },
         {
-          question: 'Co dělat, nemohu-li užít žádný ze čtyř jazyků?',
+          question: 'Ko darīt, ja nevaru lietot nevienu no četrām valodām?',
           answer:
-            'Při odeslání žádosti zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili způsob komunikace, ale služba v jiném jazyce zaručena není. Jde o krok posouzení, nikoli o příslib, že můžeme pracovat v jiném jazyce.',
+            'Nosūtot pieteikumu, izvēlieties „Saziņas veids ir jāapstiprina“. Mēs atbildēsim, lai izvērtētu saziņas veidu, taču pakalpojums citā valodā nav garantēts. Tas ir izvērtēšanas solis, nevis solījums, ka varam strādāt citā valodā.',
         },
         {
-          question: 'Jak se nakládá s mým textem v češtině?',
+          question: 'Kā rīkojas ar manu tekstu latviešu valodā?',
           answer:
-            'Původní text, který napíšete, se uchová tak, jak je, a automaticky se nepřekládá. Je-li to potřeba, jazyk další komunikace se s Vámi potvrdí.',
+            'Sākotnējais teksts, ko uzrakstāt, tiek saglabāts tāds, kāds tas ir, un netiek tulkots automātiski. Ja tas ir vajadzīgs, turpmākās saziņas valodu apstiprina ar Jums.',
         },
         {
-          question: 'Proběhla porada již tím, že je žádost odeslána?',
+          question: 'Vai konsultācija jau ir notikusi, ja pieteikums ir nosūtīts?',
           answer:
-            'Ne. Odeslaná žádost čeká na posouzení advokátkou nebo advokátem. Není to právní stanovisko, není to potvrzená schůzka a samotné odeslání nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
+            'Nē. Nosūtīts pieteikums gaida advokātes vai advokāta izvērtējumu. Tas nav juridisks atzinums, nav apstiprināta tikšanās, un pats nosūtījums nerada attiecības starp advokāti vai advokātu un klientu.',
         },
         {
-          question: 'Jak se počítají náklady?',
+          question: 'Kā aprēķina izmaksas?',
           answer:
-            'Nejprve se stanoví rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu nákladů, dříve než práce začne. Tato stránka neuvádí částky a neříká, že první konzultace je bezplatná.',
+            'Vispirms nosaka darba apjomu, pēc tam ar Jums apstiprina izmaksu apmēru un aprēķina veidu, pirms darbs sākas. Šī lapa nenosauc summas un nesaka, ka pirmā konsultācija ir bez maksas.',
         },
         {
-          question: 'Co dělat, je-li má věc velmi naléhavá?',
+          question: 'Ko darīt, ja mana lieta ir ļoti steidzama?',
           answer:
-            'Uveďte lhůtu nebo datum z úřední písemnosti hned na začátku shrnutí, aby byla tato data při posouzení vidět. Tato stránka nemá nouzový kanál a nezajišťuje lhůtu k odpovědi; nesnese-li Vaše věc odkladu, měli byste souběžně hledat další cesty ve svém místě.',
+            'Nosauciet termiņu vai datumu no iestādes raksta tūlīt kopsavilkuma sākumā, lai šie datumi izvērtējumā būtu redzami. Šai lapai nav ārkārtas kanāla, un tā nenodrošina atbildes termiņu; ja Jūsu lieta nevar gaidīt, Jums paralēli jāmeklē citi ceļi savā vietā.',
         },
       ],
     },
     privacy: {
-      eyebrow: 'SOUKROMÍ',
-      title: 'Údaje sbírané kontaktním formulářem',
+      eyebrow: 'PRIVĀTUMS',
+      title: 'Dati, ko vāc saziņas veidlapa',
       description:
-        'Co sbírá kontaktní formulář v této české části, jak se nakládá s původním textem a jak nás oslovit ohledně Vašich údajů.',
+        'Ko vāc saziņas veidlapa šajā latviešu daļā, kā rīkojas ar sākotnējo tekstu un kā mūs sasniegt par Jūsu datiem.',
       intro:
-        'Tato část se týká pouze kontaktního formuláře na těchto informačních stránkách. Popisuje nakládání s údaji, nikoli technickou záruku.',
+        'Šī daļa attiecas tikai uz saziņas veidlapu šajās informatīvajās lapās. Tā apraksta rīcību ar datiem, nevis tehnisku garantiju.',
       sections: [
         {
-          heading: 'Které údaje se sbírají',
+          heading: 'Kādus datus vāc',
           paragraphs: [
-            'Odešlete-li žádost prostřednictvím formuláře v této části, zaznamenají se tyto údaje:',
+            'Ja nosūtāt pieteikumu, izmantojot veidlapu šajā daļā, tiek fiksēti šādi dati:',
           ],
           items: [
-            'Jméno, které uvedete',
-            'E-mailová adresa pro odpověď',
-            'Jazyk zobrazení stránky v okamžiku odeslání',
-            'Jazyk, v němž jste psali',
-            'Jazyk konzultace, který si přejete',
-            'Původní text, který jste napsali',
-            'Váš souhlas s odesláním žádosti',
-            'Číslo podání pro dohledání žádosti',
+            'Vārds, ko norādāt',
+            'E-pasta adrese atbildei',
+            'Lapas attēlošanas valoda nosūtīšanas brīdī',
+            'Valoda, kurā rakstījāt',
+            'Konsultācijas valoda, ko vēlaties',
+            'Sākotnējais teksts, ko uzrakstījāt',
+            'Jūsu piekrišana pieteikuma nosūtīšanai',
+            'Iesnieguma numurs pieteikuma atrašanai',
           ],
         },
         {
-          heading: 'Původní text se uchová beze změny',
+          heading: 'Sākotnējais teksts tiek saglabāts bez izmaiņām',
           paragraphs: [
-            'Váš text se uchová přesně tak, jak jste jej napsali, a automaticky se nepřekládá. Je-li pro vyřízení potřebný překlad, projedná se to s Vámi zvlášť.',
-            'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+            'Jūsu teksts tiek saglabāts tieši tā, kā to uzrakstījāt, un netiek tulkots automātiski. Ja izskatīšanai vajadzīgs tulkojums, to ar Jums pārrunā atsevišķi.',
+            'Tā kā sākotnējais teksts tiek saglabāts, sākumposmā nerakstiet to, kas vēl nav vajadzīgs, piemēram, pases numuru, personas dokumenta numuru vai konta datus.',
           ],
         },
         {
-          heading: 'Místo uchování a přístup',
+          heading: 'Glabāšanas vieta un piekļuve',
           paragraphs: [
-            'Obsah Vašeho podání se uchovává na místě, které není veřejně přístupné. Přístup k němu mají pouze oprávněné osoby v kanceláři, a to za účelem vyřízení žádosti.',
-            'Tato stránka nedává absolutní záruku bezpečnosti. Žádná cesta přenosu a žádné místo uchování není zcela bezpečné; citlivé dokumenty by proto měly být zasílány až po zvláštním pokynu advokátky nebo advokáta.',
+            'Jūsu iesnieguma saturs tiek glabāts vietā, kas nav publiski pieejama. Tam drīkst piekļūt tikai pilnvarotas personas birojā, lai izskatītu pieteikumu.',
+            'Šī lapa nedod absolūtu drošības garantiju. Neviens pārraides ceļš un neviena glabāšanas vieta nav pilnīgi droša; tāpēc sensitīvie dokumenti jāsūta tikai pēc īpaša advokātes vai advokāta norādījuma.',
           ],
         },
         {
-          heading: 'Účel užití',
+          heading: 'Izmantošanas mērķis',
           paragraphs: [
-            'Odeslané údaje slouží k posouzení žádosti, k odpovědi Vám, k ujasnění způsobu komunikace a k vyřízení, je-li práce převzata.',
-            'Údaje se bez zvláštního souhlasu neužívají k marketingu.',
+            'Nosūtītie dati kalpo pieteikuma izvērtēšanai, atbildei Jums, saziņas veida noskaidrošanai un izskatīšanai, ja darbs tiek uzņemts.',
+            'Datus bez atsevišķas piekrišanas neizmanto mārketingam.',
           ],
         },
         {
-          heading: 'Oznámení a číslo podání',
+          heading: 'Paziņojums un iesnieguma numurs',
           paragraphs: [
-            'Je-li žádost úspěšně odeslána, systém uvědomí kancelář. Není-li toto oznámení zatím potvrzeno, Váš text zůstává uchován a neztrácí se.',
-            'Číslo podání slouží k dohledání Vaší žádosti v našich záznamech. Zobrazí se po uložení; můžete je uvést při novém kontaktu.',
+            'Ja pieteikums ir sekmīgi nosūtīts, sistēma paziņo birojam. Ja šis paziņojums vēl nav saņemts, Jūsu teksts paliek saglabāts un nezūd.',
+            'Iesnieguma numurs kalpo Jūsu pieteikuma atrašanai mūsu uzskaitē. Tas parādās pēc saglabāšanas; varat to minēt, sazinoties no jauna.',
           ],
         },
         {
-          heading: 'Vaše práva a cesta ke kontaktu',
+          heading: 'Jūsu tiesības un saziņas ceļš',
           paragraphs: [
-            'Můžete žádat o přístup ke svým údajům, o jejich opravu nebo výmaz, případně odvolat souhlas, a to prostřednictvím e-mailové adresy uvedené na kontaktní stránce. Existuje-li zákonná nebo procesní povinnost uchování, vysvětlíme omezení.',
-            'Tato stránka neuvádí pevnou dobu uchování, protože skutečná doba závisí na dalším průběhu věci a na souvisejících povinnostech. Přejete-li si dřívější výmaz, sdělte to při kontaktu.',
+            'Varat lūgt piekļuvi saviem datiem, to labošanu vai dzēšanu, vai atsaukt piekrišanu, izmantojot e-pasta adresi, kas norādīta saziņas lapā. Ja pastāv likumā vai procesā noteikts glabāšanas pienākums, izskaidrosim ierobežojumu.',
+            'Šī lapa nenosauc fiksētu glabāšanas termiņu, jo faktiskais ilgums ir atkarīgs no lietas tālākās gaitas un saistītajiem pienākumiem. Ja vēlaties agrāku dzēšanu, pasakiet to, sazinoties ar mums.',
           ],
         },
         {
-          heading: 'Místo uchování a poskytovatelé',
+          heading: 'Glabāšanas vieta un pakalpojumu sniedzēji',
           paragraphs: [
-            'Tyto stránky jsou hostovány u společnosti Vercel a Vaše podání se uchovává v neveřejném objektovém úložišti této služby. E-maily se odesílají poštovní službou, kterou kancelář užívá.',
-            'Servery jednotlivých poskytovatelů se mohou nacházet mimo Tchaj-wan, takže Vaše údaje tam mohou být uchovávány a zpracovávány. Je-li účel uchování naplněn, údaje se bez zbytečného odkladu vymažou; údaje, které je třeba uchovávat podle použitelných předpisů, zůstávají po tuto dobu. Žádosti o osobní údaje přijímá wei@hoveringlaw.com.tw.',
+            'Šīs vietnes mitināšanu nodrošina Vercel, un Jūsu iesniegums tiek glabāts šā pakalpojuma nepubliskā objektu krātuvē. E-pastus sūta pasta pakalpojums, ko birojs lieto.',
+            'Atsevišķu pakalpojumu sniedzēju serveri var atrasties ārpus Taivānas, tāpēc Jūsu datus tur var glabāt un apstrādāt. Kad glabāšanas mērķis ir izpildīts, datus dzēš bez liekas kavēšanās; dati, kas jāglabā saskaņā ar piemērojamiem noteikumiem, paliek šajā laikā. Personu datu pieprasījumus pieņem wei@hoveringlaw.com.tw.',
           ],
         },
       ],
     },
     disclaimer: {
-      eyebrow: 'UPOZORNĚNÍ',
-      title: 'Rozsah a hranice informací na této stránce',
+      eyebrow: 'ATRUNA',
+      title: 'Informācijas apjoms un robežas šajā lapā',
       description:
-        'Obecná povaha informací, právní rámec a předpoklady vzniku vztahu mezi advokátkou nebo advokátem a klientem.',
+        'Informācijas vispārīgais raksturs, tiesiskais ietvars un priekšnoteikumi attiecībām starp advokāti vai advokātu un klientu.',
       intro:
-        'Tato část objasňuje, co pro Vás tyto české informační stránky mohou udělat a co nikoli.',
+        'Šī daļa skaidro, ko šīs latviešu informatīvās lapas Jums var darīt un ko ne.',
       sections: [
         {
-          heading: 'Pouze obecné informace',
+          heading: 'Tikai vispārīga informācija',
           paragraphs: [
-            'Obsah těchto stránek je psán jako obecná informace. Není právní radou k Vašemu případu a nenahrazuje posouzení Vašich dokumentů.',
-            'Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku; dvě zdánlivě podobné situace mohou skončit různě.',
+            'Šo lapu saturs ir rakstīts kā vispārīga informācija. Tas nav juridisks padoms Jūsu lietā un neaizstāj Jūsu dokumentu izvērtējumu.',
+            'Lietas iznākums ir atkarīgs no faktiem, piemērojamajiem noteikumiem un laika; divas šķietami līdzīgas situācijas var beigties atšķirīgi.',
           ],
         },
         {
-          heading: 'Právní rámec',
+          heading: 'Tiesiskais ietvars',
           paragraphs: [
-            'Kancelář působí podle tchajwanského práva a tato stránka hovoří pouze o práci v tomto rámci.',
-            'Obsah není poradenstvím podle práva jiného řádu než tchajwanského, včetně práva místa Vašeho pobytu. Týká-li se část Vaší věci jiného právního řádu, ujasníme s Vámi, jaká kvalifikovaná osoba je pro tuto část potřebná.',
+            'Birojs darbojas saskaņā ar Taivānas tiesībām, un šī lapa runā tikai par darbu šajā ietvarā.',
+            'Saturs nav konsultācija saskaņā ar citas kārtības tiesībām, izņemot Taivānas, tostarp Jūsu uzturēšanās vietas tiesībām. Ja daļa Jūsu lietas skar citu tiesību kārtību, ar Jums noskaidrosim, kāds kvalificēts speciālists šai daļai ir vajadzīgs.',
           ],
         },
         {
-          heading: 'Vztah mezi advokátkou nebo advokátem a klientem nevzniká sám od sebe',
+          heading: 'Attiecības starp advokāti vai advokātu un klientu nerodas pašas no sevis',
           paragraphs: [
-            'Přečtení této stránky, odeslání formuláře nebo e-mailu samo o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
-            'Tento vztah vzniká teprve poté, co byla věc posouzena a obě strany potvrdily převzetí práce.',
+            'Šīs lapas izlasīšana, veidlapas vai e-pasta nosūtīšana pati par sevi nerada attiecības starp advokāti vai advokātu un klientu.',
+            'Šīs attiecības rodas tikai pēc tam, kad lieta ir izvērtēta un abas puses ir apstiprinājušas darba uzņemšanos.',
           ],
         },
         {
-          heading: 'Žádný příslib výsledku',
+          heading: 'Nekāds iznākuma solījums',
           paragraphs: [
-            'Žádná část této stránky není příslibem ohledně výsledku věci, vyhovění přihlášce nebo žádosti či ohledně pobytového a pracovního statusu.',
-            'Vnější odkazy slouží k orientaci; neslibujeme správnost ani aktuálnost obsahu třetích osob.',
+            'Neviena šīs lapas daļa nav solījums par lietas iznākumu, pieteikuma apstiprināšanu vai uzturēšanās un darba statusu.',
+            'Ārējās saites kalpo orientācijai; mēs negarantējam trešo personu satura pareizību un aktualitāti.',
           ],
         },
       ],
     },
     columns: {
-      eyebrow: 'ČLÁNKY',
-      title: 'Články o tchajwanském právu',
+      eyebrow: 'RAKSTI',
+      title: 'Raksti par Taivānas tiesībām',
       description:
-        'Články v češtině k častým otázkám tchajwanského práva. Obsah je obecnou informací k okamžiku zveřejnění, nikoli právní radou k Vašemu případu.',
+        'Raksti latviešu valodā par biežiem Taivānas tiesību jautājumiem. Saturs ir vispārīga informācija publicēšanas brīdī, nevis juridisks padoms Jūsu lietā.',
       intro:
-        'Kancelář zveřejňuje články k častým otázkám tchajwanského práva. Články dostupné v češtině jsou na této stránce; vedle nich jsou čtyři odkazy, z nichž každý otevře seznam článků v jednom původním jazyce.',
+        'Birojs publicē rakstus par biežiem Taivānas tiesību jautājumiem. Raksti, kas pieejami latviešu valodā, ir šajā lapā; blakus ir četras saites, no kurām katra atver rakstu sarakstu vienā sākotnējā valodā.',
       sections: [
         {
-          heading: 'Čtyři seznamy podle jazyka',
+          heading: 'Četri saraksti pēc valodas',
           paragraphs: [
-            'Tato část obsahuje čtyři odkazy: seznam článků v korejštině, v čínštině, v angličtině a v japonštině. Každý odkaz uvádí jazyk seznamu, takže předem víte, v jakém jazyce se obsah otevře.',
-            'Tyto čtyři seznamy jsou seznamy podle původního jazyka článků, nikoli seznamy překladů. Články dostupné v češtině jsou zvlášť na této stránce.',
+            'Šajā daļā ir četras saites: rakstu saraksts korejiešu, ķīniešu, angļu un japāņu valodā. Katra saite nosauc saraksta valodu, lai Jūs iepriekš zinātu, kādā valodā saturs atvērsies.',
+            'Šie četri saraksti ir saraksti pēc rakstu sākotnējās valodas, nevis tulkojumu saraksti. Raksti, kas pieejami latviešu valodā, ir atsevišķi šajā lapā.',
           ],
         },
         {
-          heading: 'Kam odkazy vedou',
+          heading: 'Kur saites ved',
           paragraphs: [
-            'Zvolíte-li jeden ze čtyř odkazů, otevře se seznam článků v daném jazyce. Ze seznamu si text vyberete sami; celý obsah se zobrazí v původním jazyce článku.',
-            'Tato stránka obsah článků neshrnuje a nezaručuje, že určité téma je k dispozici ve všech čtyřech jazycích. Každý seznam obsahuje pouze texty zveřejněné v daném jazyce.',
+            'Ja izvēlaties vienu no četrām saitēm, atveras rakstu saraksts attiecīgajā valodā. No saraksta tekstu izvēlaties paši; viss saturs parādās raksta sākotnējā valodā.',
+            'Šī lapa rakstu saturu neapkopo un negarantē, ka kāds temats ir pieejams visās četrās valodās. Katrā sarakstā ir tikai teksti, kas publicēti attiecīgajā valodā.',
           ],
         },
         {
-          heading: 'Nakolik může článek sloužit k orientaci',
+          heading: 'Cik tālu raksts var kalpot orientācijai',
           paragraphs: [
-            'Články jsou obecnými informacemi k okamžiku zveřejnění. Předpisy a jejich používání se mohou změnit a článek neobsahuje všechny okolnosti Vašeho případu.',
-            'Nezakládejte proto postup ve skutečné věci pouze na článku. Užijte jej k přehledu a své dokumenty projednejte zvlášť s advokátkou nebo advokátem; tato stránka není krokem porady.',
+            'Raksti ir vispārīga informācija publicēšanas brīdī. Noteikumi un to piemērošana var mainīties, un raksts neietver visus Jūsu lietas apstākļus.',
+            'Tāpēc nerīkojieties īstā lietā, balstoties tikai uz rakstu. Izmantojiet to pārskatam un savus dokumentus pārrunājiet atsevišķi ar advokāti vai advokātu; šī lapa nav konsultācijas solis.',
           ],
         },
       ],

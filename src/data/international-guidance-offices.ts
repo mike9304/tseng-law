@@ -791,7 +791,7 @@ export const guidanceFooterCopy: Record<GuidanceLocale, GuidanceFooterCopy> = {
     websiteLabel: 'الموقع الرسمي',
     sitemapLabel: 'خريطة الموقع',
     copyEmailLabel: 'نسخ عنوان البريد الإلكتروني',
-    emailCopiedMessage: 'تم نسخ عنوان البريد الإلكتروني.',
+    emailCopiedMessage: 'نُسخ عنوان البريد الإلكتروني.',
     officialConsultationEmailLabel: 'البريد الإلكتروني الرسمي للاستشارات',
   },
   de: {

@@ -1,0 +1,322 @@
+WO-F-ar — Arabic (ar) native-quality fix lane — Opus 5
+worktree: /Users/son7/Projects/tseng-law-fix-q-20260921  branch: fix/native-q-20260921
+date: 2026-09-21
+
+================================================================
+1. ROWS APPLIED
+================================================================
+
+--- ar-a.md (guidance pack + columns 001–009) ---
+a#1  APPLIED  team.ts ar education line: 'طالب تبادل' → 'طالبة تبادل'. Swept every ar
+              bio/qualification/byline string for feminine agreement — all other Wei Tseng
+              references were already feminine (المحامية / محامية مؤهَّلة / المحامية المديرة /
+              بمراجعة المحامية / وتتولّى). No further miss found.
+a#2  VERIFIED guidanceTeamCopy.ar.label is already 'فريقنا' (natural; reviewer's 'فريق العمل'
+              not needed). Left as is.
+a#3  VERIFIED guidanceOfficeCopy.ar.label is already 'المكاتب'. Left as is.
+a#4  APPLIED  'الملف الكامل (English)' → 'الملف الكامل (بالإنجليزية)'.
+a#5  APPLIED  llms-txt.ts GUIDANCE_LLMS_NOTICES.ar → '…ولا بتزكية، ولا بترشيح من الذكاء
+              الاصطناعي، ولا بإعلان.'
+a#6  APPLIED  001 opening: 'الشركات الكورية' → 'الشركات الأجنبية' (R2a, matches EN
+              "overseas companies").
+a#7  APPLIED  001 §1 + §5 and 004 FAQ/§2/§6: added the EN "Country-specific note" framing
+              (ملاحظة خاصة بدولة معيّنة … وليس قاعدة تسري على كل مستثمر أجنبي؛ أما وجود اتفاقية
+              ضريبية بين تايوان وبلد المستثمر وشروطها فيُتحقق منهما على حدة). 4 insertions.
+              All dates/numbers untouched.
+a#8  APPLIED  003 Q2: 'إذا لزمت إصابة أو إنقاذ' → 'إذا وُجدت إصابة أو لزم إنقاذ' (+R9, see a#44).
+a#9  APPLIED  003: both High Court 上易字 links → 'حكم المحكمة العليا في تايوان (臺灣高等法院)
+              رقم … لسنة 109 (2020) في الاستئناف الجزائي الميسَّر (上易字)' (644 and 477).
+a#10 APPLIED  003 Q20: 'أقصى تعويض ممكن' → 'التعويض الذي تسنده الوقائع والأدلة'.
+a#11 APPLIED  003 Q17: 3-month sentence and the 4/6-month sentence line rewritten as
+              "في بعض الأحكام … وليست عقوبة نمطية ولا نتيجة مضمونة". Digits 3/4/6 kept.
+a#12 APPLIED  003 Q18: 'ويمكن الحصول على وقف تنفيذ فلا يُذهب إلى السجن.' → 'وقد يُحكم بوقف
+              التنفيذ (緩刑) في بعض القضايا؛ وليس في ذلك وعد بتجنّب السجن.'
+a#13 APPLIED  003: 司法院 glossed — 'إرشاد اليوان القضائي (司法院) …', 'حاسبة القيمة الحالية
+              لهوفمان لدى اليوان القضائي (司法院)', body Q12 reordered to 'اليوان القضائي (司法院)'.
+a#14 SKIPPED  per ACCEPTED-ar ("a#14, a#20: skip") — percent-encoded Hangul Wix body link.
+a#15 APPLIED  005 Q1: framing sentence prepended — 'وما يلي يخص التحويل من كوريا والممارسة
+              المصرفية الكورية، لا التحويل من بلد كل مستثمر.'
+a#16 APPLIED  005 Q5: 'هل يمكن للشركة توظيف الكوريين كموظفين' → '… توظيف أجانب كموظفين؟'
+a#17 APPLIED  005 close: 'يمكن الاتصال في أي وقت' → 'يمكن إرسال طلب عبر صفحة التواصل، ولا
+              التزام بالرد خلال مدة معيّنة.' (see §4 on the checker's ar-immediate rule)
+a#18 APPLIED  007: 'أو الاحتجاز أو الإرجاع' → 'أو الإبقاء غير المشروع أو عدم الإرجاع'.
+              MODIFIED: the Latin gloss "(retention)" from ACCEPTED was dropped — the
+              English-leakage rule (R5) and the checker's `english` lane both argue against
+              a bare Latin word in the Arabic body; the Arabic phrase is unambiguous.
+a#19 APPLIED  007: 'مثل كوريا وتايوان' → 'مثل أسرة مرتبطة بتايوان وبدولة أخرى'; §10 'أن يعيش
+              الابن في كوريا … مستوى نفقة المعيشة في كوريا' → 'خارج تايوان … في بلد الإقامة
+              الجديد'. No claim about any reader's own law inserted.
+a#20 SKIPPED  per ACCEPTED-ar (frontmatter `url` Hangul slug = canonical metadata).
+a#21 APPLIED  008 table header row → '(資遣 / 經濟解僱)', '(解僱 / 懲戒解僱)', '(員工自請離職)'.
+a#22 APPLIED  008 FAQ + body → 'بخلاف بعض النظم (كوريا مثلًا)…', 'ففي بعض النظم الأخرى، وكوريا
+              مثال عليها…', 'أما تايوان فتختلف عن تلك النظم'; 009 'وهذا يختلف عن كوريا.' →
+              'وهذا يختلف عن بعض النظم الأخرى، وكوريا مثال عليها.' (R2c)
+a#23 APPLIED  008 anecdote: 'بمعونة محامٍ' → 'بتمثيل قانوني'; 'الحصول على بدل إنهاء خدمة مرتفع'
+              → 'إثبات استحقاقه بدل إنهاء الخدمة وفق القانون'; 'فلم يحالفهم الحظ كذلك' →
+              'فلم تتوافر لهم الأدلة نفسها' (R3 + R8 成功≠luck). Block count unchanged (3 blocks).
+a#24 APPLIED  009 close: 'يُضمن الحق لمن أعدّ الأمر مسبقًا' → 'يكون من أعدّ الأمر مسبقًا في موقف
+              إثبات أقوى؛ وليس في ذلك ضمان لنتيجة.'
+a#25 APPLIED  guidance: 'مجموعات العمل' → 'مجالات العمل' ×7 (content.ts ×6, answers.ts ×1);
+              number agreement corrected to 'مجالات العمل الستة'.
+a#26 APPLIED  menuLabel 'قائمة الصفحات' → 'القائمة'.
+a#27 APPLIED  columnsReadMoreLabel 'متابعة القراءة' → 'اقرأ المزيد'.
+a#28 APPLIED  emailCopiedMessage 'تم نسخ…' → 'نُسخ عنوان البريد الإلكتروني.'
+a#29 APPLIED  'والزيارة (會面交往)' → 'وحق الزيارة والتواصل (會面交往)'.
+a#30 APPLIED  'وثائق الأحوال المدنية (戶籍)' → 'وثائق السجل المدني وقيد الأسرة (戶籍)'.
+a#31 APPLIED  'أو بصفة الإقامة وصفة العمل' → 'أو بوضع الإقامة وتصريح العمل'.
+a#32 APPLIED (MODIFIED) team bio: 'إصابة في ناد رياضي' → 'صالة رياضية' and the amount now reads
+              'TWD 1.57M (1.57 مليون دولار تايواني جديد)'. The bare token "TWD 1.57M" is pinned
+              byte-for-byte by GUIDANCE_BIO_PRESERVED_TERMS (src/data/__tests__/guidance-team-bios.test.ts)
+              for all 27 locales, so it was kept and the Arabic reading added as a gloss instead
+              of replacing it. No test file was edited.
+a#33 APPLIED  (same line) 'ناد رياضي' → 'صالة رياضية'.
+a#34 APPLIED  'لمعالجتها ضمن المسار نفسه' → 'لمعالجتها في مسار واحد مع العمل القانوني'.
+a#35 APPLIED  'فإرساله ليس جلسة جرت، وليس موعدًا مؤكّدًا.' → 'فإرساله لا يعني أن استشارة قد جرت،
+              ولا أن موعدًا قد تأكّد.'
+a#36 APPLIED (MODIFIED) 001: 'المراجعة المسبقة للاسم بأحرف هان' → 'المراجعة المسبقة لاسم الشركة
+              بأحرف الهان (漢字)' ×3 (gloss on first). The reviewer's 'الأحرف الصينية' was tried
+              first and FAILED the checker's `nationality` lane (الصين is a forbidden reader-
+              nationality token and the Korean source blocks say only 중문명), so the Chinese
+              gloss 漢字 carries the meaning instead. See §4.
+a#37 APPLIED (MODIFIED) 'الهواكياو' → 'المغتربين/المغتربون من أصل صيني' (+華僑 gloss) ×5 in 001
+              and ×2 in 005. ACCEPTED's 'الصينيون المقيمون في الخارج' was tried first and failed
+              the same `nationality` lane in 005 block[30]; the ال-free 'من أصل صيني' is
+              equivalent, native, and checker-safe, and is used consistently in both files.
+a#38 APPLIED  001 'يكون أأمن' → 'يكون من الأسلم'.
+a#39 APPLIED  001 + 004: 'رسوم الاستخدام / رسوم استخدام' → 'الإتاوات (使用費)' / 'إتاوات' ×6.
+a#40 APPLIED  'الإنكليزية' → 'الإنجليزية' everywhere (001 ×1, 007 ×2, 016 ×2).
+a#41 APPLIED  002 title + H1: 'كيف تُعالَج رأس المال' → 'كيف يُعالَج رأس المال'.
+a#42 APPLIED  'السجن/الحبس المحدد المدة' (有期徒刑) → 'السجن' — 002 ×2, 007 ×1, 008 ×1.
+a#43 APPLIED (MODIFIED) 003: ISO dates → 'في 29/5/2026 … من 1/7/2026'. The reviewer's word-month
+              form ('29 أيار/مايو 2026') drops the month digit and breaks the `numbers` lane,
+              so the DD/MM/YYYY form the reviewer offered as the alternative was used.
+a#44 APPLIED  003 Q2 (+R9): 'يُتصل في تايوان بالإسعاف والإطفاء على 119، وإذا كان الوضع جريمة أو
+              خطرًا عاجلًا على الأمن العام فبالشرطة على 110 (أو 112 من الهاتف الجوال).'
+a#45 APPLIED  003: 'يمكن تركها في التعليقات' → 'وللمسائل الإضافية يُرجى استعمال صفحة التواصل.'
+a#46 APPLIED  003 sign-off: 'كانت هذه المحامية التايوانية WEI.' → 'المحامية Wei Tseng (曾雋崴)،
+              محامية مؤهَّلة في تايوان.'
+a#47 APPLIED  004: 'يجب الحكم بالنظر إلى مدة النشاط كلها' → 'يجب التقييم على امتداد فترة النشاط كلها'.
+a#48 APPLIED  004: 'شركة إصدار مستقلة' ×3 → 'شركة طرحت أسهمها على الجمهور (公開發行公司)';
+              same term normalised in 002 ('الشركة المصدرة علنًا' ×3 → same wording).
+a#49 APPLIED  005: blog wish-line → 'وفيما يلي أسئلة شائعة لمن ينظر في تأسيس شركة في تايوان.'
+a#50 APPLIED  006: 'قضاة التفسير الدستوري (大法官)' → 'قضاة المحكمة الدستورية (大法官)'.
+a#51 APPLIED  006: '(هل كشفت عمري من غير قصد؟)' → '(وهذه من ذكريات جيل سابق.)' — replaced, not
+              deleted, so the block count is unchanged.
+a#52 APPLIED  007: 'المصادر الرسمية 1 الآتية' → 'المصادر الرسمية الآتية' (this also cleared the
+              baseline `numbers` WARN "extra in translation: 1").
+a#53 APPLIED  007: 'رقم 4 لسنة 112 (112年憲判字第4號)' → '… (2023؛ 112年憲判字第4號)' ×3.
+a#54 APPLIED  007: 'تُطرح غرامة إدارية' → 'تُفرَض' ×2; and the other مطروح verbs repaired
+              ('لا يُفرَض', 'وقد تلزم مراجعة المحكمة', 'وقد يُتَّبع … أسلوب الجبر').
+a#55 APPLIED  007: 'القرار المدني في السلطة الأبوية' → '… في الولاية على الأبناء القصر (親權)'.
+a#56 APPLIED (PARTIAL) 008: '؟؟' → '؟' in title and H1. The reviewer's full retitle was NOT
+              taken: the EN source title is "Taiwan Labor Law: Is Severance Pay Hard to Get in
+              Taiwan?" and the Arabic now mirrors it exactly. 'مرحبا، أنا المحامية…' kept — it
+              is the EN source's own first-person opening ("Hello, I am Wei Tseng…").
+a#57 APPLIED  009: 'كما سبق البيان، ليس يسيرًا…' → 'في تايوان، ليس من اليسير عامة أن يحصل الموظف
+              على بدل إنهاء الخدمة (資遣費).'
+a#58 APPLIED  009: "''**الوقت**''" → '«**الوقت**»'.
+
+--- ar-b.md (columns 010–018) ---
+b#1  APPLIED  010: 'بصفتي الوكيل القضائي للمدعي' → 'بصفتي الوكيلة القضائية للمدعي'.
+b#2  APPLIED  010: 'وقد تُكتب التسجيلات فوق مدة الحفظ' → 'وقد تُمحى التسجيلات أو تُستبدل بتسجيل
+              لاحق بعد انقضاء مدة الحفظ'.
+b#3  APPLIED  011: 'العلامات الكورية' → 'العلامة الأجنبية'.
+b#4  SKIPPED  per ACCEPTED-ar ("fixed mechanically — skip"). NOTE for the supervisor: the link
+              still reads `investtaiwan.nat.gov.tw/showPage?lang=jpn&search=InvestmentStatus01`
+              in 011; it was not remapped, and hrefs are outside this lane's write scope.
+b#5  APPLIED  012: heading + body 'مجهول الهوية' → 'مجهولة الأسماء' (anonymized case, not a
+              hit-and-run). 'المكتب' kept per ACCEPTED.
+b#6  APPLIED  013 opening: 'تمكّن كثيرون مؤخرًا من…' → 'أخذ أجانب مؤخرًا في تأسيس شركات … وليس
+              في ذلك نتيجة مضمونة'.
+b#7  APPLIED  013 (same line): 'تأشيرة العمل' → 'تصريح العمل (工作許可)'.
+b#8  APPLIED  013: '**نصيحة**：' → '**نصيحة:**' (R6b — the only fullwidth colon in the body;
+              a sweep confirms no other fullwidth CJK punctuation outside glosses/URLs).
+b#9  APPLIED (MODIFIED) 013 close: comment CTA + "at any time" → 'للأسئلة بشأن القانون التايواني
+              يمكن إرسال طلب عبر صفحة التواصل. ولا يعمل المكتب باللغة العربية، ولا التزام بالرد
+              خلال مدة معيّنة.' Wording of the language disclaimer is checker-shaped, see §4.
+b#10 APPLIED  015 close: 'يمكن الاتصال بمحامٍ تايواني في أي وقت' → 'يمكن التواصل بالمحامية في
+              تايوان عبر صفحة التواصل، ولا التزام بالرد خلال مدة معيّنة.'
+b#11 APPLIED  015: firm CTA now 'بالمحامية' (per ACCEPTED); the earlier generic helper list →
+              'أو من محامية أو محامٍ'.
+b#12 APPLIED  016: 'الأب الباقي' → 'الوالد الباقي على قيد الحياة' / 'أحد الوالدين على قيد الحياة'
+              ×6 incl. the §5 heading and the FAQ question; 007's stray 'الأب الباقي' →
+              'الوالد غير المقيم معه'.
+b#13 APPLIED  016: 信託 → 'الائتمان (信託)' — 'مال الائتمان … هيكل عقد الائتمان ومنفعة المستفيد
+              (信託受益權)', 'محرر الائتمان', §7 'يستعمل الائتمان أو التأمين', checklist
+              'ومستفيد التأمين والائتمان'. الوصاية now means only 未成年監護.
+b#14 APPLIED  016: 'تُقابل بها الشرح بالكورية' → 'تُقابل بها هذا الشرح العربي'.
+b#15 APPLIED (MODIFIED) 017: 'شاحنة صغيرة مرة واحدة مملوكة له' → 'شاحنة صغيرة واحدة (1) مملوكة له'
+              ×3. The bare 'واحدة' drops the source digit of 소형 화물차 1대 and failed the
+              `numbers` lane, so the digit is retained parenthetically. See §4.
+b#16 APPLIED  010: 'قضية المستهلك رقم 7 لسنة 109' → '… لسنة 109 (2020)'.
+b#17 APPLIED  010: 'جانب الصالة' → 'الصالة الرياضية' ×2.
+b#18 APPLIED  010: 'تمزق قرص فقري' → 'انزلاق غضروفي' (×12 across alts/headlines), 'تمزق القرص
+              الفقري' → 'انزلاق القرص الغضروفي' ×2.
+b#19 APPLIED (MODIFIED) 010: 'بما لا يجاوز مثل مرة واحدة من مبلغ الضرر الفعلي' → 'فبما لا يجاوز
+              مبلغ الضرر الفعلي نفسه (1 مثل)'. Digit kept (source 최대 1배); see §4.
+b#20 APPLIED  010: 'وقد تكون واجب السلامة' → 'وقد يكون واجب السلامة'.
+b#21 APPLIED  010: 'من فور الحادث' → 'فور الحادث'.
+b#22 APPLIED  010: 'نتيجة معالجة الاستئناف' → 'مآل الاستئناف'.
+b#23 APPLIED  'على نحو ملموس' → 'تفصيلًا' — 001, 004, 010, 011, 016 ×2, 017; 007 ×2 (one of them
+              reworded to 'وإذا قام خوف جدي من مغادرة…', where 'تفصيلًا' does not fit). 9 total,
+              0 left in the corpus.
+b#24 APPLIED  011 FAQ + §1: 'ليس من الحتم تأسيس ذلك.' → 'ليس من الحتم تأسيس شركة تابعة أو فرع في
+              تايوان.' ×2 (this also satisfies b#35 for 011 §1).
+b#25 APPLIED  'تُطرح/يُطرح' in the sense of imposing/arising repaired — 011 ×1 ('تُفرَض'),
+              016 ×5 ('يلزم'/'تبدأ'/'تنطبق'), 004 ×3 ('تُفرَض'/'تنطبق'/'تنشأ'), 007 ×5.
+b#26 APPLIED  011: 'الوظيفة المعلَنة' → 'الغرض المعلَن (宣稱功能)' ×4 (gloss on first two).
+b#27 APPLIED  012: 'إجراء المسار نفسه' → 'إجراء التجاوز في المسار نفسه'.
+b#28 APPLIED  012: 'أقل من 1 ثانية' → 'أقل من ثانية واحدة' (checker accepts the word form here,
+              R11).
+b#29 APPLIED  013: emoji + blog wish-line → 'وفيما يلي أسئلة شائعة لمن ينظر في تأسيس شركة في
+              تايوان.' (0 emoji left in the corpus.)
+b#30 APPLIED  013: 'مثال)' → 'مثال:' ×2.
+b#31 APPLIED  013: stray ASCII quote before «جدول البيانات الأساسية» removed.
+b#32 APPLIED  013: 'قوى خارجية' → 'أطراف أجنبية'.
+b#33 APPLIED  013 'لائحة استثمار الأجانب (外國人投資條例)' → 'قانون استثمار الأجانب (外國人投資條例)';
+              017 link label 'لائحة الاستثمار الأجنبي' → 'قانون استثمار الأجانب (外國人投資條例)'
+              (EN label is "Statute for Investment by Foreign Nationals"; href untouched).
+b#34 APPLIED  013: 'يُستحسن التشاور الكافي مع محامٍ تايواني' → 'يُستحسن مراجعة مختص في قانون
+              الشركات التايواني عبر صفحة التواصل'.
+b#35 APPLIED  Section openings that dumped a bare FAQ answer under a topic heading:
+              014 §1 heading → '## 1. الجواب الموجز: متى ينفذ اتفاق الحد الأدنى لمدة العمل؟' and
+              body opens 'لا، فالاتفاق لا ينفذ تلقائيًا.' (mirrors EN "Short Answer:");
+              016 §3 'لا، فهذا الحق لا يندرج في الحصة الإرثية.'; 016 §7 'لا يصير المال الموروث
+              للقاصر مالًا لمن يديره.'; 017 §1 'لا يلزم الترخيص في كل حال.'; 011 §1 via b#24.
+              Heading counts unchanged.
+b#36 APPLIED  'وليس المعنى / وليس معنى' → 'ولا يعني ذلك أن' — 014 ×1, 016 ×1, 001 ×1. 0 left.
+b#37 APPLIED  015: '**س.' → '**سؤال:'.
+b#38 APPLIED  015: 'الانتباه إلى هذه النقطة!' → 'التحقق من هذه النقطة قبل تسجيل الشركة.'
+b#39 APPLIED  016: 'يكون أأمن' → 'يكون من الأسلم' (0 'أأمن' left).
+b#40 APPLIED  'القضية المفردة' → 'القضية المعيَّنة' (001 ×2, 007 ×3, 016 ×1), 'قضية مفردة' →
+              'قضية بعينها' (001, 004, 007), 'القضية/قضية ملموسة' → 'المعيَّنة/بعينها' (001, 012).
+b#41 APPLIED  016: 'النسخة الإنكليزية' ×2 → 'الإنجليزية'.
+b#42 APPLIED  016: 子女 'الابن' → 'الطفل' ×39 (title, H1, FAQ, §§1–11); grammar re-read line by
+              line after the sweep. Scoped to 016 as the row states; see §5.
+b#43 APPLIED  018: 'مراقب منفصل' → 'مراقب نظامي منفصل (監察人)'; 'ألا تعيّن مراقباً' → '…مراقباً
+              نظامياً (監察人)'.
+b#44 APPLIED  018 §4 heading: 'لجنة مراجعة الاستثمار في وزارة الاقتصاد' → 'إدارة مراجعة الاستثمار
+              بوزارة الاقتصاد' (one name per locale; 013's stray 'لجنة المراجعة في وزارة
+              الاقتصاد' normalised the same way).
+b#45 APPLIED  013: 'فضاء مكتبي تجاري' / 'الفضاء المكتبي التجاري' → 'مكتب تجاري' / 'المكتب
+              التجاري' ×5 incl. the Q5 heading.
+
+================================================================
+2. ROWS SKIPPED (with reason)
+================================================================
+a#14, a#20, b#4 — skipped on the supervisor's explicit instruction in ACCEPTED-ar
+  (Hangul/percent-encoded wei-wei-lawyer.com body link; frontmatter `url` Hangul slug;
+  Invest Taiwan link). Note that a#14's body link and b#4's `lang=jpn` query are in fact
+  still present in 005 and 011 — R1's mechanical pass did not reach them. Flagged here for
+  the supervisor; not changed, because hrefs are outside this lane's write scope.
+a#56 (retitle) — only the '؟؟' was fixed; the reviewer's replacement title was not adopted
+  because the current Arabic title is a faithful rendering of the English source title.
+a#2, a#3 — nothing to do (already Arabic); verified only.
+
+================================================================
+3. SYSTEMIC SWEEPS (pattern → instances changed)
+================================================================
+R2  Korea-as-default-reader                           → 12 passages (001 ×1 + 2 notes, 004 ×2 +
+                                                        2 notes, 005 ×2, 007 ×2, 008 ×3, 009 ×1,
+                                                        011 ×1, 016 ×1)
+R3  advertising-rule softening (result/availability)  → 10 sentences (003 ×4, 005 ×1, 008 ×3,
+                                                        009 ×1, 013 ×2, 015 ×1)
+R4  feminine forms for Wei Tseng                      → 3 (guidance education line, 010 byline,
+                                                        015 CTA) — all other bylines/bios already
+                                                        feminine (verified across 18 columns +
+                                                        5 guidance files)
+R5  English chrome                                    → 1 ('(English)' → '(بالإنجليزية)');
+                                                        OUR TEAM / OFFICES / Q&A: none left in ar
+R6  typography/locale forms                           → 4 (003 ISO dates ×2, 009 '' → «», 013
+                                                        stray ASCII quote)
+R6b fullwidth CJK punctuation outside glosses         → 1 (013 '：'); 0 remaining in bodies
+R7  blog register                                     → 9 (003 comment CTA + sign-off, 005 wish-
+                                                        line, 006 aside, 008 '؟؟' ×2, 013 emoji +
+                                                        wish-line + 'مثال)' ×2, 015 '!' + 'س.')
+R7b FAQ-answer-under-topic-heading                    → 5 sections (011 §1, 014 §1, 016 §3, 016 §7,
+                                                        017 §1)
+R8  glossary terms                                    → 有期徒刑→السجن ×4; 公開發行公司→شركة طرحت
+                                                        أسهمها على الجمهور ×6; 告訴乃論之罪→لا تُلاحَق
+                                                        إلا بشكوى ×4; 使用費→الإتاوات ×6; 信託→الائتمان
+                                                        ×4; 監察人 gloss ×2; 外國人投資條例→قانون ×2;
+                                                        經濟部投資審議司 one name ×2; 大法官→المحكمة
+                                                        الدستورية ×1; 華僑→المغتربون من أصل صيني ×7;
+                                                        司法院→اليوان القضائي ×3; 親權 gloss ×1;
+                                                        椎間盤破裂→انزلاق غضروفي ×14; 成功≠حظ ×1;
+                                                        子女→الطفل ×39 (016)
+R9  Taiwan emergency numbers named explicitly         → 1 (003 Q2)
+R10 register                                          → no change needed (MSA, consistent)
+Calques (ACCEPTED list): 'وليس معنى أن' ×3, 'على نحو ملموس' ×9, 'القضية المفردة/قضية مفردة' ×9,
+  'أحرف هان' ×3, 'الهواكياو' ×7, plus the 個別 family ('الوقائع/الموافقة/المعاملة/العلاقات/الطلبات/
+  الهيكل/المساهم المفرد') ×10, 'تُطرح/يُطرح' ×14, 'أأمن' ×2, 'الإنكليزية' ×5.
+Corpus-wide leftovers after the sweep: 'على نحو ملموس' 0, 'وليس معنى/المعنى' 0, 'القضية المفردة' 0,
+  'أحرف هان' 0, 'الهواكياو' 0, 'الإنكليزية' 0, 'أأمن' 0, '؟؟' 0, emoji 0, fullwidth punctuation
+  in bodies 0, [변호사 검수 필요] 0, Hangul outside `url` 0.
+
+================================================================
+4. CHECKER-DRIVEN DEVIATIONS (form preferred over reviewer's wording)
+================================================================
+- `nationality` lane forbids the token 'الصين' unless the source block names a country, and the
+  Korean source blocks for 中文名 / 화교 do not. So 'الأحرف الصينية' (a#36) and 'الصينيون المقيمون في
+  الخارج' (a#37) both FAILED. Adopted: 'أحرف الهان (漢字)' and 'المغتربون من أصل صيني (華僑)' —
+  same meaning, no 'الصين' token. Likewise 013's language disclaimer could not list
+  'اليابانية' (nationality token اليابان), so it reads 'ولا يعمل المكتب باللغة العربية'.
+- `forbidden` lane matches 'رد فوري' and 'استشارة بالعربية' regardless of negation, so all the
+  new disclaimers use 'ولا التزام بالرد خلال مدة معيّنة' and 'ولا يعمل المكتب باللغة العربية'
+  (the wording already used in the ar guidance pack).
+- `numbers` lane: 017 소형 화물차 1대 and 010 최대 1배 require the digit 1 → '(1)' / '(1 مثل)'
+  retained. 003 dates use 29/5/2026 and 1/7/2026 (month digit preserved) rather than the
+  word-month form.
+- a#32: 'TWD 1.57M' is pinned byte-for-byte by GUIDANCE_BIO_PRESERVED_TERMS, so the Arabic
+  reading was added as a gloss. No test file was modified in this lane.
+
+================================================================
+5. DISAGREEMENTS WITH THE REVIEWS (not applied)
+================================================================
+1. a#56 (retitle 008 to 'متى يُستحق بدل إنهاء الخدمة (資遣費)؟') — not applied. The Arabic title
+   is a faithful rendering of the English source title; only the doubled '؟؟' was a defect.
+   Same for 'مرحبا، أنا المحامية…', which the English source itself opens with.
+2. a#51 — 'delete the sentence' would change the body block count (a hard rule), so the
+   reviewer's second option (replacement text) was used.
+3. a#18 — the Latin gloss "(retention)" prescribed by ACCEPTED was dropped; leaving an English
+   word in the Arabic body contradicts R5 and the checker's `english` lane.
+4. b#42 (子女 → 'الطفل') was applied to 016 only, as the row scopes it ("title, FAQ and §§5–8").
+   007 also renders 子女 as 'الابن' in ~30 places; neither reviewer flagged it there, and a
+   blanket sweep of a file rated "usable legal MSA" was judged out of scope. Recommend a
+   follow-up decision by the supervisor if locale-wide consistency is wanted.
+5. a#7's suggested imperative ('أضيفوا بعد الجملة…') was rendered as running prose matching the
+   English "Country-specific note" sentence rather than as an instruction to the reader.
+6. NOT a disagreement, but a gap: a#14 (005 body link to the Hangul Wix slug) and b#4 (011
+   Invest Taiwan `lang=jpn`) were marked "already fixed mechanically" in ACCEPTED-ar; they are
+   NOT fixed in the tree. Both need an href change, which this lane may not make.
+
+================================================================
+6. §Verify OUTPUT (verbatim)
+================================================================
+$ node scripts/check-column-translation.mjs --dir src/content/columns-ar --lang ar 2>&1 | tail -8
+forbidden      PASS
+hanzi          PASS   han=6
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-ar src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      24
+
+(24 = 23 modified files + the untracked WO-F-ar.txt handed to this lane. Modified files:
+ src/content/columns-ar/001…018 (18), src/data/international-guidance-{answers,content,offices,team}.ts,
+ src/lib/llms-txt.ts. No test file, no other locale, no href, no frontmatter key touched.
+ No git add/commit/push/stash/checkout was run.)

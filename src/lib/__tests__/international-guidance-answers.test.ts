@@ -138,6 +138,7 @@ const CONSULTATION_LANGUAGE_TERMS: Record<string, readonly string[]> = {
   km: ['ภาษาอังกฤษ', 'ภาษาจีน', 'ภาษาญี่ปุ่น', 'ภาษาเกาหลี'], // PLACEHOLDER(th) until the km lane is integrated
   ne: ['अङ्ग्रेजी', 'चिनियाँ', 'जापानी', 'कोरियाली'],
   mn: ['английском', 'китайском', 'японском', 'корейском'], // PLACEHOLDER(ru) until the mn lane is integrated
+  is: ['ensku', 'kínversku', 'japönsku', 'kóresku'],
 };
 
 /**
@@ -304,7 +305,7 @@ const SERVICES_SCOPE_TERMS: Record<string, readonly [string, RegExp]> = {
   km: ['ขอบเขต', /ขอบเขต/], // PLACEHOLDER(th)
   ne: ['दायरा', /दायरा/],
   mn: ['Объём', /Объём/], // PLACEHOLDER(ru)
-  is: ['rozsah', /rozsah/i], // PLACEHOLDER(cs)
+  is: ['Umfang', /umfang/i],
 };
 
 const SERVICES_ACCEPTANCE_PATTERNS: Record<
@@ -445,10 +446,7 @@ const SERVICES_ACCEPTANCE_PATTERNS: Record<
     ['не юридическая консультация', /не юридическая консультация/],
     ['не подтверждённая запись', /не подтверждённая запись/],
   ],
-  is: [
-    ['bude věc přijata', /bude věc přijata/i],
-    ['rozhodne', /rozhodne/i],
-  ],
+  is: [['bíður mats', /bíður mats/i], ['ekki lögfræðilegt álit', /ekki lögfræðilegt álit/i]],
 };
 
 /** Every site-internal path an answer may cite. */

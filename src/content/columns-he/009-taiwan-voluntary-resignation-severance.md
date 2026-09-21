@@ -21,7 +21,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 אין הוא יכול לקבל דמי פיטורים (資遣費) (סעיף 18 לחוק תקני העבודה),
 
-וזה שונה מקוריאה.
+בכך שונה טאיוואן מחלק מהמדינות (קוריאה, למשל).
 
 ​
 
@@ -89,7 +89,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 לכן בסכסוכי עבודה (勞資糾紛) בטאיוואן
 
-«**הזמן**» חשוב מאוד.
+"**הזמן**" חשוב מאוד.
 
 ברוב המקרים מי שהתכונן מראש זוכה להגנת זכותו.
 

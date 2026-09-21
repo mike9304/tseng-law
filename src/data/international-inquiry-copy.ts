@@ -1594,7 +1594,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'הייעוץ מתקיים בארבע שפות: אנגלית, סינית (中文), יפנית וקוריאנית.',
     methodConfirmationNotice:
-      'אם אינכם יכולים להשתמש באף אחת מארבע השפות, בחרו «יש לאשר את דרך התקשורת». אנו משיבים כדי לבחון דרך תקשורת מעשית, אם קיימת; שירות בשפה אחרת אינו מובטח ומועד למענה אינו מובטח.',
+      'אם אינכם יכולים להשתמש באף אחת מארבע השפות, בחרו "יש לאשר את דרך התקשורת". אנו משיבים כדי לבחון דרך תקשורת מעשית, אם קיימת; שירות בשפה אחרת אינו מובטח ומועד למענה אינו מובטח.',
     preparationNotice:
       'אפשר לכתוב את התקציר בשפתכם. הטקסט המקורי נשמר כפי שכתבתם ואינו מתורגם אוטומטית.',
     heading: 'שליחת פנייה לבדיקה',
@@ -1603,7 +1603,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     submitLabel: 'שליחת פנייה',
     submittingLabel: 'שולח…',
     successMessage:
-      'קיבלנו את פנייתכם; היא ממתינה לבדיקה. אין משמע הדבר שהייעוץ התקיים או שאושרה פגישה.',
+      'קיבלנו את פנייתכם; היא ממתינה לבדיקה. אין פירוש הדבר שהייעוץ התקיים או שאושרה פגישה.',
     savedNotificationPendingMessage:
       'פנייתכם נשמרה, אך ההודעה למשרד טרם אושרה. מה שכתבתם אינו אובד. אם לא תקבלו מענה, אפשר לכתוב גם לכתובת הדואר האלקטרוני שבעמוד יצירת הקשר.',
     receiptIdLabel: 'מספר קליטה',
@@ -1619,7 +1619,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     nameLabel: 'שם',
     emailLabel: 'דואר אלקטרוני',
     consentLabel:
-      'קראתי את עמוד הפרטיות ואני מסכים לשליחת פנייה זו.',
+      'קראתי את עמוד הפרטיות והסכמתי לשליחת פנייה זו.',
     privacyLinkLabel: 'פרטיות',
     requiredMessage: 'שדה זה הוא חובה.',
     invalidEmailMessage: 'הזינו כתובת דואר אלקטרוני תקינה.',

@@ -1,0 +1,162 @@
+# WO-F-he — Hebrew (he) native-quality fix lane — Opus 5 worker log
+date: 2026-09-21 · worktree: /Users/son7/Projects/tseng-law-fix-h-20260921
+inputs: RULEBOOK-FIX.md (R2–R10) · ACCEPTED-he.md · reviews/native/he-a.md · he-b.md
+scope touched: src/data/international-guidance-{eastern,answers,offices,team}.ts,
+src/data/international-inquiry-copy.ts, src/content/columns-he/*.md (18 files).
+src/lib/llms-txt.ts GUIDANCE_LLMS_NOTICES.he inspected — no defect found, unchanged.
+No test file needed editing (no pinned Hebrew string was changed).
+
+## 1. Rows applied
+
+### he-a (guidance pack + columns 001–009)
+APPLIED: a#1 a#2 a#3 a#4 a#5 a#6 a#7 a#8 a#9 a#10 a#14 a#15 a#16 a#17 a#18 a#19
+a#20 a#21 a#22 a#23 a#24 a#25 a#26 a#27 a#28 a#29 a#30 a#31 a#32 a#33 a#35 a#37
+a#38 a#39 a#40 a#41 a#42 a#43 a#44 a#45 a#46 a#47 a#48
+  - a#14/a#15/a#38/a#39/a#40 applied as R2 neutral generalisation (investor's home
+    country / another country / "some jurisdictions (Korea, for example)"), never
+    "Israel" — per ACCEPTED-he and the checker's `nationality` gate.
+  - a#15 + 004 §6 additionally carry the R2b country-specific framing sentence that
+    the English source has ("הערה ייחודית למדינה — …; אין זה כלל החל על משקיעים מכל
+    העולם. אם קיים הסכם מס בין טאיוואן למדינת המושב שלכם … יש לבדוק בנפרד").
+  - a#4 reviewCountWord חוות דעת → ביקורות (guidanceOfficeCopy.he).
+  - a#7/a#8/a#9/a#10 + R3: "הפיצוי הגבוה ביותר" → "מיצוי הפיצוי המגיע לפי הדין
+    והראיות"; typical-sentence talk → "בחלק מפסקי הדין … אין עונש טיפוסי"; "בכל עת"
+    → contact-form wording; 008 anecdote → "בייצוג משפטי … לבסס את זכאותו לפי הדין"
+    (and 成功≠luck: "לא זכו למזל כזה" → "לא שמרו ראיות דומות").
+  - R9: 003 emergency numbers now say "בטאיוואן … 119 … משטרת טאיוואן 110 (או 112
+    מטלפון נייד)".
+  - a#43 ROC year 112 now glossed "(2023; 112年憲判字第4號)" in the two running-text
+    occurrences; the two source-list link labels left untouched (link-label churn).
+PARTIAL: a#34 (see §3) · a#36, a#47 (register/claims/CTA/title fixed; the one-line
+  chopped paragraphs were NOT merged — block-count parity is a hard rule).
+SKIPPED: a#11, a#12 (per ACCEPTED: R1 already remapped /ko/ links and relabelled the
+  "Korean-speaking lawyer" CTAs — verified: 0 `](/ko/` and 0 "דוברת קוריאנית" left).
+  a#13 skipped per ACCEPTED (see §4 residual).
+
+### he-b (columns 010–018)
+APPLIED: b#1 b#2 b#3 b#4 b#5 b#6 b#8 b#9 b#10 b#11 b#12 b#13 b#14 b#15 b#16 b#17
+b#19 b#20 b#21 b#22 b#23 b#24 b#25 b#26 b#28 b#29 b#30 b#31 b#32 b#34 b#35 b#36
+b#37 b#38 b#39 b#40 b#41 b#42 b#43 b#44 b#45 b#46
+  - b#3 貨主 → בעל המטען (8 places); משלח kept only where 承攬運送/intermediary.
+  - b#4 → "לא כל חברה בעלת מניות (股份有限公司) חייבת לעבור ביקורת רואה חשבון
+    (會計師查核簽證) על הדוחות השנתיים".
+  - b#9/b#10 CTAs now name the contact form, state the four consultation languages
+    and say "אין התחייבות למועד המענה" (the literal "אין הבטחה למענה מיידי" trips the
+    checker's he-immediate forbidden pattern, so that wording was avoided).
+  - b#36 + R7b: 014 §1, 016 §3, 016 §7, 007 §6, 017 §3 no longer open with a bare
+    "לא."; the frontmatter FAQ answers keep "לא." (they answer a yes/no question).
+  - b#46 監察人 → "מפקח סטטוטורי (監察人)".
+PARTIAL: b#18, b#27 (see §3).
+NOT APPLIED: b#33 (see §3).
+SKIPPED: b#7 per ACCEPTED (see §4 residual).
+
+## 2. Systemic sweeps (pattern → instances changed)
+- "אינה משמעה / אינו משמעו / אינן משמען / אינם משמעם / אין משמע הדבר" →
+  "אין פירושה / אין פירושו / אין פירושן / אין פירושם / אין פירוש הדבר" — 24
+  (23 in columns 001–018, 1 in internationalInquiryCopy.he.successMessage).
+- French guillemets «…» → Hebrew straight quotes "…" — 40 pairs
+  (30 columns, 9 hebrewGuidanceContent, 1 inquiry copy). In YAML frontmatter the
+  two inner quotes became ״…״ (gershayim) so the scalar stays parseable — 017 L12.
+- 第三人 / 제3자 "צד 3" → "צד שלישי" — 17.
+- 1심/2심 "ערכאה 1 / ערכאה 2" → "ערכאה ראשונה / ערכאה שנייה" — 15 (003, 010),
+  incl. frontmatter title, H1, image alts and link labels of 010.
+- "קבוצות העבודה / קבוצה" (practice-groups calque) → "תחומי העיסוק / תחום" — 16
+  (14 hebrewGuidanceContent, 2 guidanceAnswers.he).
+- "ביקורת (ה)חשבונות השותפה" → "רואה חשבון שותף / רואה החשבון השותף" — 4
+  (guidanceTeamCopy.he.partnerTitle + description, pages.lawyers.description, answers).
+- 業者 "יזם" → "מפעיל" in 017 — 13.
+- 貨主 "משלח" → "בעל המטען" in 017 — 8.
+- 遺產 "עיזבון הירושה" → "העיזבון" in 016 — 9.
+- 代位繼承 "ירושה במקום" → "ירושה בדרך של החלפה" in 016 — 5.
+- "טובת הילד המיטבית" → "טובת הילד" in 016 — 4.
+- "קרע דיסק / נקרע הדיסק" → "פריצת דיסק" in 010 — 16.
+- "נזק לא-רכושי" → "נזק לא ממוני" — 2.
+- 宣稱功能 "פונקציה מוצהרת" → "ייעוד מוצהר" in 011 — 4.
+- "קאוסיונג" → "קאושיונג" — 5 (guidance content, officeTitles, answers).
+- "הגשות של סימני מסחר ופטנטים" → "רישום סימני מסחר ופטנטים" — 2
+  (about page + guidancePracticeAreaNames.he).
+- "אנו תומכים ב…" → "אנו מלווים ב…" — 2.
+- R4 feminine for Wei Tseng — 4: bio education lines "מוסמך/בוגר" → "מוסמכת/בוגרת";
+  003 "איני ממליץ"→"איני ממליצה", "אני מסיים"→"אני מסיימת"; 006 "איני חושף"→"איני
+  חושפת"; 015 CTA "לעורך דין" → "לעורכת דין או לעורך דין" (2).
+- R5 English chrome — 3: fullProfileLabel "(English)" → "(באנגלית)"; "שאלות ותשובות
+  (Q&A)" → "השאלות והתשובות" in 005 and 013. (label "הצוות שלנו"/"משרדים" already Hebrew.)
+- R6b fullwidth CJK punctuation outside Chinese glosses — 1 (013 "**עצה**：" → "**עצה:**").
+  A full scan found no other instance except inside the frontmatter `url` values, which
+  must not be touched.
+- R6 ISO date in running text → Israeli DD/MM/YYYY — 2 (003: 2026-05-29, 2026-07-01).
+
+## 3. Checker-constrained deviations (checker beats the reviewer's wording)
+The `numbers` gate compares digit tokens against the Korean source. Korean numerals
+(1년 · 1개월 · 1순위 · 자연인 1인 · 이사 1~2인 · 주주 1인/1개 의결권 · 1호/2호 차량 ·
+1초 · 1대) are counted, so writing them as Hebrew words FAILs the file. Verified by
+experiment on 001, 010, 012, 013, 016, 018 — each conversion produced
+"numbers FAIL missing from translation". Therefore:
+- a#34 "פחות מ-1 שנה": digit kept; only the appositive punctuation was improved
+  ("אם המעסיק — חברה או סניף — קיים פחות מ-1 שנה"). Same for 002/008/013/014/017
+  "1 שנה / 1 חודש", 016 "דרגה 1", 018 "אדם טבעי 1 / דירקטור 1 או 2 / בעל מניות 1
+  יש 1 קול", 017 "1 משאית".
+- b#18 "עד פי 1": rewritten to "ואם רשלנות — עד מלוא סכום הנזק בפועל (פי 1)" — natural
+  clause plus the digit the gate needs.
+- b#27 "רכב 1 / רכב 2": rewritten to "רכב מס׳ 1 / רכב מס׳ 2" (digit kept, reads as a
+  numbered narrative). "פחות מ-1 שנייה" kept as "בתוך פחות מ-1 שנייה".
+  The parts of b#27 whose Korean source used words WERE applied:
+  "צופר 2 פעמים … פנסי החזית 1 פעם" → "צופר פעמיים … פנסי החזית פעם אחת";
+  "הוחמץ 1 פעם" → "הוחמץ פעם אחת".
+- b#33 not applied for the same reason.
+- a#43 / b#14 (ROC-year glosses "2023;" / "2020;") are applied; they raise the
+  `numbers` check on 007 and 010 to WARN ("extra in translation"), never FAIL.
+- The `forbidden` gate rejects the literal strings "הבטחת תוצאה" and "מענה מיידי" even
+  inside a negation, so the R3/R7 disclaimers use "אין ללמוד מהם על התוצאה בעניין
+  מסוים" and "אין התחייבות למועד המענה" instead.
+
+## 4. Residual items I did NOT touch (ACCEPTED told me to skip; supervisor please note)
+- a#13: 005 L16 still links to the percent-encoded Hangul post
+  https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-…-%EC%8B%AC%ED%99%94%ED%8E%B8-1
+  (the "advanced part 1" article). The "basics" link in the same sentence was remapped
+  by R1; this second one was not. Changing a link is a hard-rule violation, so it stands.
+- b#7: 011 L129 Invest Taiwan link still carries `lang=jpn`. ACCEPTED says it was fixed
+  mechanically; it is still there. Same reason — untouched.
+- 008 frontmatter `url:` still contains Hangul and a fullwidth colon; that is the
+  canonical source URL and is explicitly out of scope.
+
+## 5. Things in the reviews I believe are wrong (not applied)
+- a#39 suggested "כגון ישראל וטאיוואן" and a#40 suggested contrasting Israeli
+  פיצויי פיטורים. Both would assert the law of the reader's country, which the
+  rulebook forbids and which the checker's `nationality` list for he
+  ('ישראל', 'ישראלי', 'אזרחות ישראלית') blocks outright. Applied as R2 neutral instead.
+- a#36 / a#47 / b#29 ask for the Korean-blog one-sentence-per-line layout to be
+  restored to a normal register. Merging or splitting blocks breaks the `blocks`
+  parity gate and the WO's hard rule, so only the wording inside each block was fixed.
+- a#5 reads טאיצ׳ונג's practice as "Bausachen" (construction). I applied
+  "ענייני בנייה", but flag it: the English canonical says "engineering and
+  construction matters" — if the firm means engineering, revert to "ענייני הנדסה".
+- b#40 suggested "ירושה בדרך של החלפה" for 代位繼承. Israeli law would say
+  "ירושה מכוח ייצוג / חליפין"; I used the reviewer's wording for consistency with the
+  Chinese gloss, but an attorney review may prefer "ירושה מכוח ייצוג (代位繼承)".
+
+## 6. §Verify output (verbatim)
+$ node scripts/check-column-translation.mjs --dir src/content/columns-he --lang he 2>&1 | tail -8
+forbidden      PASS   
+hanzi          PASS   han=71
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-he src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      24
+
+PASS criteria: checker summary PASS 18/18 · markers 0 · TSC_OK · 2770 tests passed. All met.

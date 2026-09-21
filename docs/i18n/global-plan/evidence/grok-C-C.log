@@ -1,0 +1,141 @@
+[WO-C-C 시작 Sun Sep 20 20:27:22 KST 2026]
+[WO-C-C 완료 Sun Sep 20 21:10:00 KST 2026]
+agent: grok
+worktree: /Users/son7/Projects/tseng-law-columns-c-20260920
+git: no add/commit/push (per WO)
+
+## 언어별 파일 수
+- columns-pl: 18
+- columns-hi: 18
+- columns-sv: 18
+- [변호사 검수 필요]: 0
+- hangul in body: 0 (all three dirs)
+- hi Devanagari present: 18/18 files
+
+## §5 명령 출력 그대로
+
+### git status --short | wc -l
+      56
+
+### node scripts/check-column-translation.mjs --dir src/content/columns-pl --lang pl 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-columns-c-20260920/src/content/columns-pl/018-taiwan-semiconductor-market-entry.md  lang=pl
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=66
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+### node scripts/check-column-translation.mjs --dir src/content/columns-hi --lang hi 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-columns-c-20260920/src/content/columns-hi/018-taiwan-semiconductor-market-entry.md  lang=hi
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=61
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+### node scripts/check-column-translation.mjs --dir src/content/columns-sv --lang sv 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-columns-c-20260920/src/content/columns-sv/018-taiwan-semiconductor-market-entry.md  lang=sv
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=61
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+### grep -rn "\[변호사 검수 필요\]" src/content/columns-pl src/content/columns-hi src/content/columns-sv | wc -l
+       0
+
+### ls src/content/columns-pl/*.md | wc -l; ls src/content/columns-hi/*.md | wc -l; ls src/content/columns-sv/*.md | wc -l
+      18
+      18
+      18
+
+git status --short = 56 = 54 column md + WO-C-C.txt + this log. No extra writes.
+
+## 용어 선택에서 망설인 지점
+1. 제N항/제N호/제N심/제3자 — pl/hi/sv 체커에 ordinal matcher가 없어 수사미해석 WARN. 숫자는 아라비아로 유지해 sourceCount=targetCount. FAIL 아님. FR/DE와 동형.
+2. 3분의 1 — 낱말 분수(jedna trzecia / एक तिहाई / en tredjedel)는 렉시콘 가산 위험이 있어 `1/3`로 통일 (WO: 숫자를 낱말로 풀지 말 것).
+3. 한국 기업 — FR/DE 선례대로 외국 기업/개인사업자로 일반화. Polska/भारत/Sverige 삽입 없음. 대만–한국 소득세협정은 원본 법률사실이므로 Tajwan–Korea / ताइवान–कोरिया / Taiwan–Korea 유지.
+4. pl 직함 — G2-3 WO: 명사 adwokat(남성형) + 여성 동사. 서명선은 **Adwokat Wei Tseng (曾雋崴)**. adwokatka 0.
+5. hi 금지 부분문자열 गारंटी — 부정문에도 쓰면 FAIL. 결과 미약속은 वचन/आश्वासन नहीं देता 로만 씀.
+6. pl bezpłatn* — 어간 전체가 금지. 무료 상담 부정면제조차 본문에 넣지 않음 (원본에도 없음).
+7. 천단위 — pl/sv 점(TWD 500.000), hi 쉼표(TWD 500,000). hi는 लाख/करोड़ 미사용 (magnitude table 없음).
+8. 한자 병기 — hi도 데바나가리 음역 없이 번체 괄호. 工作許可, 外僑居留證, 資遣費, 勞動契約 등 FR과 동일 위치.
+9. 링크 — /ko/contact → /{lang}/contact, /ko/columns… → /{lang}/columns…. /ko/services/investment·labor·family 및 /ko/lawyers, /ko/guides, /ko/korean-lawyer-in-taiwan 은 원본 유지.
+
+## 미해결
+- numbers WARN(수사미해석 제N항/제3자/1심 등): 세 언어 모두 FAIL 아님. 체커에 pl/hi/sv ordinal spec이 없음.
+- 원어민 문장 품질·광고규정 의미 검수는 기계 게이트(이 체커)만 통과. 독립 원어민 리뷰 없음.
+- git add/commit/push 하지 않음 (WO).
+WO-C-C is done. All three guidance locales pass the column checker. Git was not touched.
+
+**Files:** `columns-pl` 18 · `columns-hi` 18 · `columns-sv` 18  
+**Marker `[변호사 검수 필요]`:** 0  
+**Checker:** `summary PASS 18/18 files` for pl, hi, and sv
+
+§5 tails (verbatim):
+
+```
+git status --short | wc -l
+      56
+
+…/columns-pl/018-…  → summary  PASS  18/18 files
+…/columns-hi/018-…  → summary  PASS  18/18 files
+…/columns-sv/018-…  → summary  PASS  18/18 files
+
+grep … [변호사 검수 필요] | wc -l
+       0
+
+ls … | wc -l
+      18
+      18
+      18
+```
+
+`56` is 54 new column files + `WO-C-C.txt` + the evidence log. Nothing else was written.
+
+French was the structural template (same blocks, lists, tables, ZWSP). Korean was the meaning source. Consultation-language lock held: no pl/hi/sv consult, interpreter, 24/7, free-consult, or result-guarantee wording.
+
+Hesitations (also in `docs/i18n/global-plan/evidence/grok-C-C.log`): `1/3` instead of spelled fractions; 「한국 기업」 generalized like FR/DE; Hindi never uses `गारंटी` (even in negation); Polish title is `Adwokat` not `adwokatka`. Remaining `numbers` WARNs are Korean ordinals (`제1항`, `제3자`, `1심`) — these three langs have no ordinal matcher; counts still match. No native-speaker review.
+=== WO-C-C 종료 code=0 Sun Sep 20 20:50:37 KST 2026 ===

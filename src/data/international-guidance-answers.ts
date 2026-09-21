@@ -1160,36 +1160,36 @@ export const guidanceAnswers: Record<
       sources: ['/ru/contact', '/ru/services'],
     },
   },
-  sk: { // SCAFFOLD(cs)
+  sk: {
     services: {
       answer:
-        'Kancelář vede šest agend podle tchajwanského práva: investice a zakládání společností, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí zaslaný obsah. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/faq', '/cs/contact'],
+        'Kancelária vedie šesť oblastí podľa taiwanského práva: investície a zakladanie spoločností, občianskoprávne spory a náhradu škody, manželstvo, rodinu a dedenie, pracovnoprávne spory, trestné veci a duševné vlastníctvo. Rozsah každej veci sa potvrdzuje osobitne potom, čo advokátka alebo advokát posúdi zaslaný obsah. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.',
+      sources: ['/sk/faq', '/sk/contact'],
     },
     about: {
       answer:
-        'Hovering International Law Firm je tchajwanská advokátní kancelář, kterou v roce 2016 založili absolventi National Taiwan University (國立臺灣大學), s pobočkami v Tchaj-peji, Kao-siungu, Tchaj-čungu a Pching-tungu. Od roku 2020 působí i účetní úsek; pobočka v Tchaj-čungu vede věci s vazbou na Koreu a Japonsko. Kancelář neslibuje výsledek. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/lawyers', '/cs/services'],
+        'Hovering International Law Firm je taiwanská advokátska kancelária, ktorú v roku 2016 založili absolventi National Taiwan University (國立臺灣大學), so sídlami v Taipeji, Kaohsiungu, Taichungu a Pingtungu. Od roku 2020 pôsobí aj účtovný úsek; sídlo v Taichungu vedie veci s väzbou na Kóreu a Japonsko. Kancelária nesľubuje výsledok. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.',
+      sources: ['/sk/lawyers', '/sk/services'],
     },
     lawyers: {
       answer:
-        'Tato stránka ukazuje profily advokátek a advokátů Hovering, provozního vedení a přidruženého účetnictví a auditu. Advokátka Wei Tseng (曾雋崴) je oprávněna vykonávat advokacii na Tchaj-wanu a je řídící advokátkou kanceláře; pracuje s klienty z Koreje, z Japonska a s dalšími mezinárodními klienty. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/about', '/cs/contact'],
+        'Táto stránka ukazuje profily advokátok a advokátov Hovering, prevádzkového vedenia a pridruženého účtovníctva a auditu. Advokátka Wei Tseng (曾雋崴) je oprávnená vykonávať advokáciu na Taiwane a je riadiacou advokátkou kancelárie; pracuje s klientmi z Kórey, z Japonska a s ďalšími medzinárodnými klientmi. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.',
+      sources: ['/sk/about', '/sk/contact'],
     },
     pricing: {
       answer:
-        'Tato stránka nezveřejňuje ceník. Nejprve se z Vašeho shrnutí potvrdí rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu, dříve než práce začne. Konzultace s advokátkou nebo advokátem může být úplatná; vedle odměny mohou vzniknout soudní nebo správní poplatky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/contact', '/cs/faq'],
+        'Táto stránka nezverejňuje cenník. Najprv sa z Vášho zhrnutia potvrdí rozsah práce, potom sa s Vami potvrdí výška a spôsob výpočtu, skôr než práca začne. Konzultácia s advokátkou alebo advokátom môže byť odplatná; okrem odmeny môžu vzniknúť súdne alebo správne poplatky. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.',
+      sources: ['/sk/contact', '/sk/faq'],
     },
     contact: {
       answer:
-        'Zašlete shrnutí kontaktním formulářem: co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. V počáteční fázi zatím není třeba zasílat doklady totožnosti ani celý důkazní materiál. Kancelář neslibuje lhůtu k odpovědi a nepotvrzuje schůzku prostřednictvím této stránky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/faq', '/cs/pricing'],
+        'Zašlite zhrnutie kontaktným formulárom: čo sa stalo, akú pomoc potrebujete, akú väzbu má vec na Taiwan a lehotu, ak ju poznáte. V počiatočnej fáze zatiaľ nie je treba zasielať doklady totožnosti ani celý dôkazný materiál. Kancelária nesľubuje lehotu na odpoveď a nepotvrdzuje stretnutie prostredníctvom tejto stránky. Konzultácia prebieha iba anglicky, čínsky, japonsky a kórejsky.',
+      sources: ['/sk/faq', '/sk/pricing'],
     },
     faq: {
       answer:
-        'Tato část odpovídá na časté otázky na úrovni obecných informací: šest agend kanceláře, příprava před kontaktem, potvrzení nákladů a význam odeslané zprávy. Odeslaná zpráva čeká na posouzení, není právním stanoviskem ani potvrzenou schůzkou a sama o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem. Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/services', '/cs/contact'],
+        'Táto časť odpovedá na časté otázky na úrovni všeobecných informácií: šesť oblastí kancelárie, príprava pred kontaktom, potvrdenie nákladov a význam odoslanej správy. Odoslaná správa čaká na posúdenie, nie je právnym stanoviskom ani potvrdeným stretnutím a sama osebe nezakladá vzťah medzi advokátkou alebo advokátom a klientom. Konzultácia prebieha iba v štyroch jazykoch: anglicky, čínsky, japonsky a kórejsky.',
+      sources: ['/sk/services', '/sk/contact'],
     },
   },
   bg: {

@@ -1,3 +1,11 @@
 [WO start 2026-09-22 07:02:49]
 Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
 Retry attempt 1...
+WO-N-my-a is complete: **9 Burmese columns** in `src/content/columns-my/`, checker **PASS 9/9**, markers **0**. Log: `docs/i18n/global-plan/evidence/grok-N-my-a.log`. No git.
+
+Byline is **ရှေ့နေမ Wei Tseng (曾雋崴)**; first-person narration uses ကျွန်မ. Consultation languages are not implied in Burmese.
+
+Key glosses include အလုပ်လုပ်ခွင့် (工作許可), နုတ်ထွက်ကြေး (資遣費), ကာလတို ချုပ်နှောင်ဒဏ် (拘役), ဆိုင်းငံ့ပြစ်ဒဏ် (緩刑).
+
+One numbers WARN remains on 007: Korean `제4호` in `112年憲判字第4號` is a judgment number (`စီရင်ချက် အမှတ် 4`), not a statute item, so it was left unmatched on purpose.
+=== end code=0 2026-09-22 07:45:45 ===

@@ -1,9 +1,78 @@
-[WO start 2026-09-22 05:17:41]
-Slovak `sk` copy is in. Every `SCAFFOLD(cs)` marker for this locale is gone; the guidance pack, team/offices/answers/inquiry, and chrome strings now read as Slovak for readers in Slovakia, not as a Czech calque.
+WO-P-sk — Slovak guidance pack + UI strings (Grok 4.6, 2026-09-22)
 
-**Verify:** `SCAFFOLD sk` count **0**, **TSC_OK**. Vitest: **1096 passed**, 5 failed — all from other new locales still cloned (answers locale list 27 vs 45, shared llms notices, root `llms.txt` over 8 KiB). No failure was an `sk` row.
+Workspace: /Users/son7/Projects/tseng-law-new-sk-20260922
+No git add/commit/push/stash/checkout. Helpers stayed in .tmp-sk/ only.
 
-**Kept as specified:** consultation only in English, Chinese (中文), Japanese, Korean; Wei Tseng feminine; `TWD 1.57M` and institution names unchanged; all nav labels ≤ 14 characters.
+## Files touched
+src/data/international-guidance-central-europe.ts
+src/data/international-guidance-team.ts
+src/data/international-guidance-offices.ts
+src/data/international-guidance-answers.ts
+src/data/international-inquiry-copy.ts
+src/data/multilingual-international-v2.ts
+src/data/team-name.ts
+src/lib/llms-txt.ts
+src/lib/columns.ts
+src/lib/public-language-registry.ts
+src/components/ColumnsGrid.tsx
+src/components/CinematicOpening.tsx
+src/components/decorative-video-controls.ts
+src/data/__tests__/guidance-disclosure-parity.test.ts
+src/data/__tests__/guidance-office-facts-sync.test.ts
+src/data/__tests__/international-guidance-privacy-disclosure.test.ts
+src/data/__tests__/column-alternate-expectations.ts
+src/components/__tests__/columns-grid-guidance-labels.test.tsx
+src/components/__tests__/multilingual-international-v2.test.tsx
+tests/builder-editor/international-guidance.playwright.ts
+docs/i18n/global-plan/evidence/grok-P-sk.log
 
-Full file list, verbatim verify output, and glossary: `docs/i18n/global-plan/evidence/grok-P-sk.log`. No git add/commit/push.
-=== end code=0 2026-09-22 05:48:53 ===
+## §Verify (verbatim)
+
+cd /Users/son7/Projects/tseng-law-new-sk-20260922 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+grep -rn "SCAFFOLD" src tests | grep -cE "^\S+:[0-9]+:\s*'?sk'?:|locale sk"
+0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/data/__tests__/ src/lib/__tests__/guidance-chrome-language.test.ts src/lib/__tests__/international-guidance-answers.test.ts "src/app/[locale]/__tests__/llms-discovery.test.tsx" src/components/__tests__/columns-grid-guidance-labels.test.tsx src/components/__tests__/multilingual-international-v2.test.tsx --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+   × guidance locale llms.txt catalogs > writes a distinct notice set for each guidance language 3ms
+   × root llms.txt guidance catalog links > stays inside the 8 KiB root budget and the documented grammar 1ms
+   × root llms.txt guidance catalog links > lists every site-locale catalog and every guidance catalog 0ms
+   × root llms.txt guidance catalog links > labels each guidance catalog in its own language without widening consultation languages 0ms
+   × guidanceAnswers > covers every guidance locale x 6 page keys 3ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+ Test Files  2 failed | 45 passed (47)
+      Tests  5 failed | 1096 passed (1101)
+
+git status --short | wc -l
+      22
+
+## Failures not on sk wording (other new locales still scaffolded)
+- llms-discovery “distinct notice set”: GUIDANCE_LOCALES_4.length * 3 = 135, unique notices = 84 because bg/hr/sr/sl/lt/lv/et/ca/is still share cloned Czech/Russian notice triples. sk notices are unique (consultationNotice names slovenčina).
+- root llms.txt 8 KiB budget: buildRootLlmsTxt throws because the already-wired 45-locale catalog exceeds 8192 bytes (pre-existing batch size, not an sk-string defect).
+- guidanceAnswers “covers every guidance locale”: test GUIDANCE_LOCALES is still the old 27-locale list vs GUIDANCE_LOCALES_4 / guidanceAnswers keys of 45. sk answers are present and within 40–80 words.
+
+No failing assertion named an sk row after the columns-grid source list was extended to international-guidance-central-europe.ts.
+
+## Terminology (Slovak + Chinese gloss kept byte-identical)
+- pracovné povolenie (工作許可)
+- pobytové oprávnenie (居留)
+- odstupné podľa taiwanského práva (資遣費)
+- výkon a prevzatie práv a povinností k maloletým deťom (未成年子女權利義務之行使或負擔)
+- styk s dieťaťom (會面交往)
+- vnútorný pracovný poriadok (工作規則)
+- matričné záznamy (戶籍)
+- ochranné známky (商標) / patenty (專利)
+- rozvod (離婚) / dedenie (繼承)
+- Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), Pingtung (屏東)
+
+Register: formal Vy; quotes „ “; country name Taiwan / taiwanský (not Czech Tchaj-wan); Kórea/kórejčina/kórejsky; odplatná (not Czech úplatná, which in Slovak reads as “bribable”); lehota; tlmočník; stretnutie; prísľub. Wei Tseng is feminine throughout (advokátka, riadiaca, oprávnená, posúdila, zastupovala). Consultation languages EN / 中文 / JA / KO only; FAQ “Je možná porada v slovenčine?” opens “Nie.”
+
+## Could not fit / notes
+- All nav.* labels ≤ 14: Domov 5, Právne služby 13, Kancelária 10, Náš tím 7, Náklady práce 13, Napíšte nám 11, Časté otázky 12, Súkromie 8, Upozornenie 11, Príspevky 9. menuLabel = Prehľad stránok (not “Menu”).
+- Unavoidable Czech/Slovak cognates left as the natural Slovak word: čínština; picker lines Angličtina (English) and Čínština (中文); E-mail; Paralegal (English job title kept).
+- Eyebrows: team NÁŠ TÍM, offices SÍDLA (uppercase short nouns).
+- Bio keeps TWD 1.57M and GUIDANCE_BIO_PRESERVED_TERMS byte-identical. lawyers title/description = guidanceTeamCopy.sk.
+- columns.ts category labels = ColumnsGrid tables; home.columnsReadMoreLabel = ColumnsGrid read-more = Čítať ďalej; filter All = Všetky.
+- languageName / autonym: Slovenčina. llms English name: Slovak. og:locale fixture: sk_SK. hreflang: sk.

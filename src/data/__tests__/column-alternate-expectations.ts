@@ -61,7 +61,7 @@ const HREFLANG_TAG_BY_LOCALE: Record<PublicLocale8, string> = {
   ne: 'hi', // SCAFFOLD(hi)
   km: 'th', // SCAFFOLD(th)
   mn: 'ru', // SCAFFOLD(ru)
-  sk: 'cs', // SCAFFOLD(cs)
+  sk: 'sk',
   bg: 'bg',
   hr: 'hr',
   sr: 'sr',

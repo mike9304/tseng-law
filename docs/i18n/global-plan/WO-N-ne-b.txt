@@ -1,0 +1,34 @@
+WO-N-ne-b — Translate columns 010–018 into Nepali for tseng-law.com (new locale `ne`, readers in Nepal)
+
+Workspace (yours alone): /Users/son7/Projects/tseng-law-new-ne-20260922
+Do NOT git add/commit/push/stash/checkout. Do not open .env or customer files. Helper scripts only inside /Users/son7/Projects/tseng-law-new-ne-20260922/.tmp-ne/.
+node: export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+## Output
+`src/content/columns-ne/` — 9 files, same file names as the Korean source `src/content/columns/` (010-taiwan-gym-injury-lawsuit.md 011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md 012-taiwan-overtaking-accident-liability.md 013-taiwan-company-establishment-advanced-1.md 014-taiwan-mandatory-employment-period.md 015-taiwan-company-setup-pitch-location.md 016-taiwan-inheritance-custody-analysis.md 017-taiwan-logistics-business-setup.md 018-taiwan-semiconductor-market-entry.md ).
+Write ONLY these files (and your log). The guidance pack and every other locale are off limits.
+
+## Sources and references
+- Structure/parity source (the checker compares against it): the Korean file `src/content/columns/<same name>` — frontmatter keys and order, `url`/`lastmod`/`featured_image` byte-identical, `faq` count, body block count and order, images (translate alt text only), numbers (same set of numerals; thousands separators per Nepali convention: 100,000; dates as 13 सेप्टेम्बर 2025).
+- Meaning reference: `src/content/columns-en/<same name>` (attorney-reviewed English).
+- Register/adaptation reference (already native-reviewed and fixed — imitate its choices, not its words): `src/content/columns-hi/<same name>`. It shows how Korea-centric passages were generalized (R2), how advertising-risk sentences were softened (R3), how blog leftovers were removed (R7), how orphan FAQ answers were made self-standing (R7b) and how Taiwan legal terms are glossed (R8). Apply the same decisions in Nepali.
+- Links: internal links map to `/ne/...` exactly as in the hi file (`/ko/columns|contact|services|faq|pricing` → `/ne/...`; the Korean landing/detail links → the ne core pages with that page's title from the ne guidance pack as the label; Korean-blog body links → `/ne/columns/<slug>`; the Invest Taiwan link with `lang=eng`). External links otherwise byte-identical to the source.
+
+## Quality standard — read docs/i18n/global-plan/reviews/native/RULEBOOK-FIX.md first (R2–R10 apply from the start)
+- Write as a Nepali legal editor for readers in Nepal: natural syntax, no calques from English/Korean/hi, the locale's quotation marks and typography, formal address of Nepali.
+- Product facts: consultation only in English, Chinese (中文), Japanese, Korean; never imply Nepali consultation, interpreter, reply time, free consultation, 24/7, results, win rates, "best/only". Attorney Wei Tseng (曾雋崴) is a woman — feminine forms in every first-person passage and byline (`**<Attorney title, feminine> Wei Tseng (曾雋崴)**`). Keep the Latin name; never transliterate it.
+- Taiwan legal terms: Nepali term + Traditional-Chinese gloss in parentheses on first use (工作許可, 資遣費, 外僑居留證, 勞動基準法, 拘役, 緩刑, 監察人, 股東 …). Do not name the reader's country or state its law (the checker's nationality gate fails on नेपाल); generalize to "a foreign investor / the investor's home country"; Korea stays only as a labelled example.
+- `date_display` in Nepali (13 सेप्टेम्बर 2025); `read_time` in Nepali ("N min" form of Nepali); `categories` value must be exactly one of the three labels in `src/lib/columns.ts` for `ne` (formation/legal/case — pick the one the English file's category maps to).
+- No Korean characters outside the `url` value; no untranslated hi/English sentences; no `[변호사 검수 필요]` markers; no comment CTAs or emoji.
+
+## Verify (run after EVERY file, then all together; paste the final output into your log)
+cd /Users/son7/Projects/tseng-law-new-ne-20260922 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+ls src/content/columns-ne/*.md | wc -l
+node scripts/check-column-translation.mjs --dir src/content/columns-ne --lang ne 2>&1 | tail -20
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ne | wc -l
+git status --short | wc -l
+
+Pass criteria: `summary PASS 9/9 files` for your files (the other part's files may be absent — that is fine), markers 0. Do not report while any file FAILs; fix and rerun. Finish file 001 (or 010) first and run the checker before continuing.
+
+## Report
+docs/i18n/global-plan/evidence/grok-N-ne-b.log only: file count, §Verify output verbatim, 5–10 key term choices with the Chinese gloss, unresolved points.

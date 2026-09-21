@@ -86,7 +86,7 @@ const ELEMENTS = {
     ne: /व्यावहारिक|व्यवहार्य/, // SCAFFOLD(hi)
     km: /เป็นไปได้/, // SCAFFOLD(th)
     mn: /возможн/, // SCAFFOLD(ru)
-    sk: /schůdný/, // SCAFFOLD(cs)
+    sk: /schodný/,
     bg: /приложим начин/,
     hr: /provediv/,
     sr: /izvodljiv/,
@@ -134,7 +134,7 @@ const ELEMENTS = {
     ne: /अन्य भाषा/, // SCAFFOLD(hi)
     km: /ภาษาอื่น/, // SCAFFOLD(th)
     mn: /друг(?:ом|ого) язык/, // SCAFFOLD(ru)
-    sk: /v jiném jazyce zaručena není/, // SCAFFOLD(cs)
+    sk: /v inom jazyku zaručená nie je/,
     bg: /друг език/,
     hr: /na drugom jeziku nije zajamčena/,
     sr: /na drugom jeziku nije zagarantovana/,
@@ -182,7 +182,7 @@ const ELEMENTS = {
     ne: /उत्तर की समयसीमा/, // SCAFFOLD(hi)
     km: /ระยะเวลา(ในการ)?ตอบกลับ/, // SCAFFOLD(th)
     mn: /срок[а]? ответа/, // SCAFFOLD(ru)
-    sk: /lhůtu k odpovědi|lhůta k odpovědi/, // SCAFFOLD(cs)
+    sk: /lehotu na odpoveď|lehota na odpoveď/,
     bg: /срок за отговор/,
     hr: /rok za odgovor/,
     sr: /rok za odgovor/,
@@ -230,7 +230,7 @@ const ELEMENTS = {
     ne: /वादा नहीं/, // SCAFFOLD(hi)
     km: /ไม่ใช่คำมั่น/, // SCAFFOLD(th)
     mn: /не обещание/, // SCAFFOLD(ru)
-    sk: /příslib/, // SCAFFOLD(cs)
+    sk: /prísľub/,
     bg: /не обещание/,
     hr: /ne o obećanju|nije obećanje/,
     sr: /nije obećanje/,
@@ -278,7 +278,7 @@ const ELEMENTS = {
     ne: /दुभाषि/, // SCAFFOLD(hi)
     km: /ล่าม/, // SCAFFOLD(th)
     mn: /переводчик/, // SCAFFOLD(ru)
-    sk: /tlumočník/, // SCAFFOLD(cs)
+    sk: /tlmočník/,
     bg: /преводач/,
     hr: /tumač/,
     sr: /tumača/,
@@ -326,7 +326,7 @@ const ELEMENTS = {
     ne: /प्रत्येक मामला/, // SCAFFOLD(hi)
     km: /ได้ทุกเรื่อง/, // SCAFFOLD(th)
     mn: /каждое дело/, // SCAFFOLD(ru)
-    sk: /každou věc/, // SCAFFOLD(cs)
+    sk: /každú vec/,
     bg: /всяко дело/,
     hr: /svaki predmet/,
     sr: /svaku stvar/,
@@ -374,7 +374,7 @@ const ELEMENTS = {
     ne: /परिणाम/, // SCAFFOLD(hi)
     km: /รับประกันผล/, // SCAFFOLD(th)
     mn: /результат/, // SCAFFOLD(ru)
-    sk: /výsledek/, // SCAFFOLD(cs)
+    sk: /výsledok/,
     bg: /резултат/,
     hr: /ishod/,
     sr: /ishod/,
@@ -422,7 +422,7 @@ const ELEMENTS = {
     ne: /चार परामर्श भाषा/, // SCAFFOLD(hi)
     km: /4 ภาษาที่ใช้ให้คำปรึกษา/, // SCAFFOLD(th)
     mn: /четырёх язык/, // SCAFFOLD(ru)
-    sk: /čtyř/, // SCAFFOLD(cs)
+    sk: /štyroch/,
     bg: /четирите езика за консултация/,
     hr: /četiri/,
     sr: /četiri jezika/,
@@ -470,7 +470,7 @@ const ELEMENTS = {
     ne: /परामर्श चरण/, // SCAFFOLD(hi)
     km: /ขั้นตอนการให้คำปรึกษา/, // SCAFFOLD(th)
     mn: /шагом консультации/, // SCAFFOLD(ru)
-    sk: /krokem porady|krok porady/, // SCAFFOLD(cs)
+    sk: /krokom porady|krok porady/,
     bg: /стъпка от консултацията/,
     hr: /korak savjetovanja/,
     sr: /korak konsultacije/,
@@ -518,7 +518,7 @@ const ELEMENTS = {
     ne: /कानूनी राय/, // SCAFFOLD(hi)
     km: /ความเห็นทางกฎหมาย/, // SCAFFOLD(th)
     mn: /юридическ/, // SCAFFOLD(ru)
-    sk: /právní\w* stanovisk/, // SCAFFOLD(cs)
+    sk: /právn\w* stanovisk/,
     bg: /правна консултация/,
     hr: /pravn\w* mišljenj/,
     sr: /pravno mišljenje/,
@@ -566,7 +566,7 @@ const ELEMENTS = {
     ne: /नियुक्ति/, // SCAFFOLD(hi)
     km: /การนัดหมาย/, // SCAFFOLD(th)
     mn: /запись/, // SCAFFOLD(ru)
-    sk: /schůzk/, // SCAFFOLD(cs)
+    sk: /stretnut/,
     bg: /среща/,
     hr: /sastanak/,
     sr: /sastanak/,
@@ -614,7 +614,7 @@ const ELEMENTS = {
     ne: /अधिवक्ता तथा मुवक्किल/, // SCAFFOLD(hi)
     km: /ความสัมพันธ์ระหว่างทนายความ/, // SCAFFOLD(th)
     mn: /отношений между адвокатом/, // SCAFFOLD(ru)
-    sk: /vztah mezi advokát/, // SCAFFOLD(cs)
+    sk: /vzťah medzi advokát/,
     bg: /отношения между адвокатка или адвокат и клиент/,
     hr: /odnos između odvjetnic/,
     sr: /odnos između advokat/,
@@ -662,7 +662,7 @@ const ELEMENTS = {
     ne: /स्वचालित/, // SCAFFOLD(hi)
     km: /แปลโดยอัตโนมัติ/, // SCAFFOLD(th)
     mn: /автоматически не переводится/, // SCAFFOLD(ru)
-    sk: /automaticky/, // SCAFFOLD(cs)
+    sk: /automaticky/,
     bg: /не се превежда автоматично/,
     hr: /automatski/,
     sr: /automatski/,
@@ -710,7 +710,7 @@ const ELEMENTS = {
     ne: /विवाह/, // SCAFFOLD(hi)
     km: /การสมรส/, // SCAFFOLD(th)
     mn: /брак/i, // SCAFFOLD(ru)
-    sk: /manželství/i, // SCAFFOLD(cs)
+    sk: /manželstvo/i,
     bg: /брак/i,
     hr: /brak/i,
     sr: /brak/i,
@@ -758,7 +758,7 @@ const ELEMENTS = {
     ne: /शुल्क/, // SCAFFOLD(hi)
     km: /บริการที่มีค่าใช้จ่าย/, // SCAFFOLD(th)
     mn: /возмездн/, // SCAFFOLD(ru)
-    sk: /úplatn/, // SCAFFOLD(cs)
+    sk: /odplatn/,
     bg: /платен/,
     hr: /naplatn/,
     sr: /uz naknadu/,

@@ -177,7 +177,7 @@ export const DECORATIVE_VIDEO_CONTROL_LABELS = {
     play: 'Воспроизвести видео',
     replay: 'Воспроизвести видео снова',
   },
-  sk: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)
+  sk: { pause: 'Pozastaviť video', play: 'Prehrať video', replay: 'Prehrať video znova' },
   bg: {
     pause: 'Пауза на видеото',
     play: 'Пуснете видеото',

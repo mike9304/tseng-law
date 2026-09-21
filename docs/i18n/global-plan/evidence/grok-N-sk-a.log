@@ -1,1 +1,81 @@
-[WO start 2026-09-22 06:20:44]
+WO-N-sk-a — Slovak columns 001–009
+workspace: /Users/son7/Projects/tseng-law-new-sk-20260922
+agent: grok
+date: 2026-09-22
+
+## File count
+9 files in src/content/columns-sk/:
+001-taiwan-company-establishment-basics.md
+002-withdraw-capital-taiwan-company.md
+003-taiwan-traffic-accident-procedure.md
+004-taiwan-company-subsidiary-vs-branch.md
+005-taiwan-company-establishment-advanced-2.md
+006-taiwan-massage-history-law.md
+007-taiwan-divorce-lawsuit-qna.md
+008-taiwan-labor-severance-law.md
+009-taiwan-voluntary-resignation-severance.md
+
+## §Verify output (verbatim)
+
+```
+       9
+
+PASS  /Users/son7/Projects/tseng-law-new-sk-20260922/src/content/columns-sk/009-taiwan-voluntary-resignation-severance.md  lang=sk
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1]
+images         PASS   count=2
+blocks         PASS   blocks=44
+links          PASS   hrefs=3
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=68
+numbers        WARN   수사미해석 (1): 제6호
+                      sourceCount=11 targetCount=11
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  9/9 files
+       0
+      34
+```
+
+Commands:
+cd /Users/son7/Projects/tseng-law-new-sk-20260922 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+ls src/content/columns-sk/*.md | wc -l
+node scripts/check-column-translation.mjs --dir src/content/columns-sk --lang sk 2>&1 | tail -20
+grep -rn "\[변호사 검수 필요\]" src/content/columns-sk | wc -l
+git status --short | wc -l
+
+Result: summary PASS 9/9 files; markers 0.
+
+## Key term choices (Slovak + Traditional-Chinese gloss)
+
+1. pracovné povolenie (工作許可)
+2. preukaz na pobyt cudzinca (外僑居留證)
+3. odstupné (資遣費)
+4. zákon o pracovných normách (勞動基準法)
+5. akcionári (股東)
+6. dcérska spoločnosť (子公司) / pobočka (分公司)
+7. zodpovedná osoba (負責人)
+8. stála prevádzkareň (常設機構, PE)
+9. podmienečný odklad výkonu trestu (緩刑)
+10. rozvod dohodou (兩願離婚); výkon a nesenie práv a povinností voči maloletému dieťaťu (未成年子女權利義務之行使或負擔); osobný styk (會面交往)
+
+Byline / first person: **Advokátka Wei Tseng (曾雋崴)** — feminine; Latin name kept.
+Consultation languages: English, Chinese (中文), Japanese, Korean only.
+date_display: 13. septembra 2025; read_time: „N min čítania“; thousands: 1.000.000.
+Quotes: „ … “. Formal address: Vy.
+R2: Korea only as labelled example; investor’s home country / foreign investor; 007 family = two or more countries (Taiwan and another country).
+R2c 008/009: „Na rozdiel od niektorých jurisdikcií (napríklad Kórey)“.
+R3: no Slovak consultation, interpreter, reply-time, free consult, 24/7, results, win rates, best/only.
+Links remapped /sk/... as in cs (services/lawyers/contact/pricing/about/columns). Invest Taiwan kept lang=eng.
+
+## Unresolved
+
+- numbers WARN only (not FAIL): Korean 제N항 / 제N호 / 제N심 / 1일로 unparsed because the checker has no Slovak ordinal specs. Digit sets match.
+- 003 and 007 still carry some Czech syntactic residue after CS→SK adaptation (e.g. leftover agreement/word-order a native legal editor would tighten). langid PASS; nationality PASS (no Slovensko).
+- git status --short count 34 includes pre-existing dirty files outside this WO; this WO added the 9 columns-sk files and .tmp-sk helper only (no git add/commit/push).

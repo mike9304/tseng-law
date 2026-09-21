@@ -149,7 +149,7 @@ const GUIDANCE_FILTER_ALL_LABEL: Record<GuidanceLocale4, string> = {
   ne: 'सभी', // SCAFFOLD(hi)
   km: 'ทั้งหมด', // SCAFFOLD(th)
   mn: 'Все', // SCAFFOLD(ru)
-  sk: 'Vše', // SCAFFOLD(cs)
+  sk: 'Všetky',
   bg: 'Всички',
   hr: 'Sve',
   sr: 'Sve',
@@ -338,10 +338,10 @@ const GUIDANCE_FILTER_CATEGORY_LABEL: Record<GuidanceLocale4, Record<ColumnCateg
     legal: 'Правовая информация о Тайване',
     case: 'Анализ дел',
   },
-  sk: { // SCAFFOLD(cs)
-    formation: 'Zakládání společností na Tchaj-wanu',
-    legal: 'Právní informace o Tchaj-wanu',
-    case: 'Rozbor případu',
+  sk: {
+    formation: 'Zakladanie spoločností na Taiwane',
+    legal: 'Právne informácie o Taiwane',
+    case: 'Rozbor prípadu',
   },
   bg: {
     formation: 'Учредяване на дружество в Тайван',
@@ -427,7 +427,7 @@ const GUIDANCE_CARD_READ_MORE_LABEL: Record<GuidanceLocale4, string> = {
   ne: 'आगे पढ़ें', // SCAFFOLD(hi)
   km: 'อ่านต่อ', // SCAFFOLD(th)
   mn: 'Читать далее', // SCAFFOLD(ru)
-  sk: 'Číst dál', // SCAFFOLD(cs)
+  sk: 'Čítať ďalej',
   bg: 'Прочети още',
   hr: 'Čitajte dalje',
   sr: 'Čitajte dalje',

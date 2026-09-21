@@ -376,7 +376,7 @@ const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
   ne: 'Hindi', // SCAFFOLD(hi)
   km: 'Thai', // SCAFFOLD(th)
   mn: 'Russian', // SCAFFOLD(ru)
-  sk: 'Czech', // SCAFFOLD(cs)
+  sk: 'Slovak',
   bg: 'Bulgarian',
   hr: 'Croatian',
   sr: 'Serbian',
@@ -830,13 +830,13 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     confidentialNotice:
       'Поскольку исходный текст сохраняется, на первом этапе не пишите то, что ещё не нужно: номер паспорта, номер удостоверения или данные счёта.',
   },
-  sk: { // SCAFFOLD(cs)
+  sk: {
     consultationNotice:
-      'Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
+      'Tieto informácie sú napísané po slovensky, ale porada s advokátkou alebo advokátom prebieha iba anglicky, čínsky (中文), japonsky a kórejsky.',
     discoveryNotice:
-      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, podporu, doporučení umělé inteligence ani viditelnost.',
+      'Súbor llms.txt je iba mapou na nájdenie verejných stránok; nesľubuje poradie vo vyhľadávaní, podporu, odporúčanie umelej inteligencie ani viditeľnosť.',
     confidentialNotice:
-      'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+      'Pretože sa pôvodný text uchováva, nepíšte v počiatočnej fáze to, čo zatiaľ nie je potrebné, napríklad číslo pasu, číslo dokladu alebo údaje o účte.',
   },
   bg: {
     consultationNotice:

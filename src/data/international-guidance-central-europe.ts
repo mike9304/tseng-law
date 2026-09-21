@@ -2,487 +2,486 @@ import type { GuidanceLocaleContent } from './international-guidance-content';
 
 // SCAFFOLD: sk, bg, hr, sr, sl — cloned from template packs; every string must be translated and the SCAFFOLD markers removed.
 
-// SCAFFOLD(cs) locale sk
 export const slovakGuidanceContent: GuidanceLocaleContent = {
-  languageName: 'Čeština',
+  languageName: 'Slovenčina',
   nav: {
-    home: 'Úvod',
-    services: 'Služby',
-    about: 'Kancelář',
-    lawyers: 'Advokáti',
-    pricing: 'Náklady',
-    contact: 'Kontakt',
-    faq: 'Otázky',
-    privacy: 'Soukromí',
-    disclaimer: 'Upozornění',
-    columns: 'Články',
+    home: 'Domov',
+    services: 'Právne služby',
+    about: 'Kancelária',
+    lawyers: 'Náš tím',
+    pricing: 'Náklady práce',
+    contact: 'Napíšte nám',
+    faq: 'Časté otázky',
+    privacy: 'Súkromie',
+    disclaimer: 'Upozornenie',
+    columns: 'Príspevky',
   },
-  contactCta: 'Odeslat žádost o posouzení',
+  contactCta: 'Odoslať žiadosť o posúdenie',
   footerNotice:
-    'Tato česká stránka obsahuje pouze obecné informace o práci kanceláře podle tchajwanského práva. Není právní radou k jednotlivému případu a samotné odeslání zprávy nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
-  skipLink: 'Přeskočit navigaci a přejít k obsahu',
-  menuLabel: 'Přehled stránek',
-  languageLabel: 'Jazyk zobrazení',
+    'Táto slovenská stránka prináša iba všeobecné informácie o práci kancelárie podľa taiwanského práva. Nie je právnou radou k jednotlivému prípadu a samotné odoslanie správy nezakladá vzťah medzi advokátkou alebo advokátom a klientom.',
+  skipLink: 'Preskočiť navigáciu a prejsť k obsahu',
+  menuLabel: 'Prehľad stránok',
+  languageLabel: 'Jazyk zobrazenia',
   mega: {
     services: {
-      description: 'Kancelář se zabývá hlavními agendami tchajwanského práva.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Kancelária sa venuje hlavným oblastiam taiwanského práva.',
+      viewAllLabel: 'Zobraziť všetky',
     },
     columns: {
-      description: 'Články k častým otázkám tchajwanského práva.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Príspevky k častým otázkam taiwanského práva.',
+      viewAllLabel: 'Zobraziť všetky',
     },
     lawyers: {
-      description: 'Představení advokátek a advokátů a způsobů kontaktu.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Predstavenie advokátok a advokátov a spôsobov, ako nás osloviť.',
+      viewAllLabel: 'Zobraziť všetky',
     },
     pricing: {
-      description: 'Tato stránka vysvětluje rozsah práce a způsob ujasnění nákladů.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Táto stránka objasňuje rozsah práce a to, ako sa ujasňujú náklady.',
+      viewAllLabel: 'Zobraziť všetky',
     },
     faq: {
-      description: 'Časté otázky k práci kanceláře na Tchaj-wanu.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Časté otázky o práci kancelárie na Taiwane.',
+      viewAllLabel: 'Zobraziť všetky',
     },
   },
-  notFoundTitle: 'Stránka nenalezena',
+  notFoundTitle: 'Stránka sa nenašla',
   notFoundText:
-    'Hledaná stránka neexistuje nebo byla přesunuta. Můžete se vrátit na českou úvodní stránku a prohlédnout si dostupné informace.',
-  backHomeLabel: 'Na úvodní stránku',
-  readSourceLabel: 'Otevřít seznam článků v původním jazyce',
+    'Hľadaná stránka neexistuje alebo bola presunutá. Môžete sa vrátiť na slovenskú úvodnú stránku a pozrieť si dostupné informácie.',
+  backHomeLabel: 'Na úvodnú stránku',
+  readSourceLabel: 'Otvoriť zoznam príspevkov v pôvodnom jazyku',
   home: {
-    heroScrollLabel: 'Posunout dolů',
-    heroColumnsCtaLabel: 'Zobrazit články',
-    servicesDetailLabel: 'Zobrazit podrobnosti',
-    servicesAssistanceBefore: 'Není-li zřejmé, do které agendy Vaše věc patří, stránka ',
-    servicesAssistanceLinkLabel: 'Kontakt',
-    servicesAssistanceAfter: ' vysvětluje, jak sestavit shrnutí, které advokátka nebo advokát posoudí.',
-    columnsViewAllLabel: 'Zobrazit všechny články',
-    columnsReadMoreLabel: 'Číst dál',
-    columnsReviewLabel: 'Posoudila advokátka Wei Tseng',
-    columnsOriginalLanguageBadge: 'Původní jazyk',
+    heroScrollLabel: 'Posunúť nadol',
+    heroColumnsCtaLabel: 'Zobraziť príspevky',
+    servicesDetailLabel: 'Zobraziť podrobnosti',
+    servicesAssistanceBefore: 'Ak nie je zrejmé, do ktorej oblasti Vaša vec patrí, stránka ',
+    servicesAssistanceLinkLabel: 'Napíšte nám',
+    servicesAssistanceAfter: ' vysvetľuje, ako zostaviť zhrnutie, ktoré advokátka alebo advokát posúdi.',
+    columnsViewAllLabel: 'Zobraziť všetky príspevky',
+    columnsReadMoreLabel: 'Čítať ďalej',
+    columnsReviewLabel: 'Posúdila advokátka Wei Tseng',
+    columnsOriginalLanguageBadge: 'Pôvodný jazyk',
     columnsOriginalLanguageNote:
-      'Následující články zatím nejsou k dispozici v češtině. Seznam zůstává v původním jazyce a otevře příslušnou jazykovou stránku; obsah se automaticky nepřekládá.',
-    imageBandAlt: 'Tradiční tchajwanský dvorec sanheyuan (三合院) a moderní pavilon za denního světla',
-    videoPauseLabel: 'Pozastavit video',
-    videoPlayLabel: 'Přehrát video',
-    videoReplayLabel: 'Přehrát video znovu',
+      'Nasledujúce príspevky zatiaľ nie sú k dispozícii v slovenčine. Zoznam ostáva v pôvodnom jazyku a otvorí príslušnú jazykovú stránku; obsah sa automaticky neprekladá.',
+    imageBandAlt: 'Tradičný taiwanský dvor sanheyuan (三合院) a moderný pavilón za denného svetla',
+    videoPauseLabel: 'Pozastaviť video',
+    videoPlayLabel: 'Prehrať video',
+    videoReplayLabel: 'Prehrať video znova',
   },
   pages: {
     home: {
-      eyebrow: 'INFORMACE',
-      title: 'Právní služby na Tchaj-wanu — informace v češtině',
+      eyebrow: 'INFORMÁCIE',
+      title: 'Právne služby na Taiwane — informácie v slovenčine',
       description:
-        'Obecné vysvětlení v češtině o rozsahu práce Hovering International Law Firm na Tchaj-wanu, o jazycích konzultace a o prvním kontaktu.',
+        'Všeobecné vysvetlenie v slovenčine o rozsahu práce Hovering International Law Firm na Taiwane, o jazykoch konzultácie a o prvom kontakte.',
       intro:
-        'Hovering International Law Firm zastupuje zahraniční klienty, včetně osob s vazbou na Tchaj-wan, ve věcech tchajwanského práva: investice a zakládání společností, občanskoprávní spory, manželství, rodina a dědictví, pracovní právo, trestní věci a duševní vlastnictví. Tato česká část Vám pomůže rozpoznat, která práce spadá do našeho rozsahu, co si připravit a jak nás oslovit. Jde o obecné informace, nikoli o právní radu k Vašemu případu.',
+        'Hovering International Law Firm zastupuje zahraničných klientov, vrátane osôb s väzbou na Taiwan, vo veciach taiwanského práva: investície a zakladanie spoločností, občianskoprávne spory, manželstvo, rodina a dedenie, pracovné právo, trestné veci a duševné vlastníctvo. Táto slovenská časť Vám pomôže rozpoznať, ktorá práca spadá do nášho rozsahu, čo si pripraviť a ako nás osloviť. Ide o všeobecné informácie, nie o právnu radu k Vašemu prípadu.',
       sections: [
         {
-          heading: 'Čím se zabýváme',
+          heading: 'Čím sa zaoberáme',
           paragraphs: [
-            'Hovering International Law Firm je advokátní kancelář se sídlem na Tchaj-wanu. Pracuje podle tchajwanského práva a má pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pching-tungu (屏東). Radíme podnikům, vedeme soudní řízení a zastupujeme zahraniční klienty v krocích, které je na Tchaj-wanu třeba učinit.',
-            'Celý zdejší obsah je obecný. Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku. Tyto informace nenahrazují konzultaci s advokátkou nebo advokátem nad Vašimi dokumenty.',
+            'Hovering International Law Firm je advokátska kancelária so sídlom na Taiwane. Pracuje podľa taiwanského práva a má sídla v Taipeji (臺北), Kaohsiungu (高雄), Taichungu (臺中) a Pingtungu (屏東). Radíme podnikom, vedieme súdne konania a zastupujeme zahraničných klientov v krokoch, ktoré je na Taiwane potrebné urobiť.',
+            'Celý tu uvedený obsah je všeobecný. Výsledok veci závisí od skutkového stavu, od použiteľných predpisov a od okamihu. Tieto informácie nenahrádzajú konzultáciu s advokátkou alebo advokátom nad Vašimi dokumentmi.',
           ],
         },
         {
-          heading: 'Jazyk stránky a jazyk konzultace nejsou totéž',
+          heading: 'Jazyk stránky a jazyk konzultácie nie sú to isté',
           paragraphs: [
-            'Tato stránka je psána česky, ale konzultace s advokátkou nebo advokátem probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky. Čtení informací v češtině neznamená, že konzultace s advokátkou nebo advokátem proběhne česky.',
-            'Neslibujeme tlumočníka, lhůtu k odpovědi ani schůzku prostřednictvím této stránky. Pokud neovládáte žádný ze čtyř jazyků konzultace, stránka „Kontakt“ vysvětluje, jak posuzujeme způsob komunikace.',
+            'Táto stránka je napísaná po slovensky, ale konzultácia s advokátkou alebo advokátom prebieha iba v štyroch jazykoch: anglicky, čínsky (中文), japonsky a kórejsky. Čítanie informácií v slovenčine neznamená, že konzultácia s advokátkou alebo advokátom prebehne po slovensky.',
+            'Nesľubujeme tlmočníka, lehotu na odpoveď ani stretnutie prostredníctvom tejto stránky. Ak neovládate žiadny zo štyroch jazykov konzultácie, stránka „Napíšte nám“ vysvetľuje, ako posudzujeme spôsob komunikácie.',
           ],
         },
         {
-          heading: 'Agendy kanceláře',
+          heading: 'Oblasti práce kancelárie',
           paragraphs: [
-            'Rozsah práce zahrnuje následujících šest agend. Stránka „Služby“ popisuje každou z nich přesněji a uvádí, co se neslibuje.',
+            'Rozsah práce zahŕňa nasledujúcich šesť oblastí. Stránka „Právne služby“ opisuje každú z nich presnejšie a uvádza, čo sa nesľubuje.',
           ],
           items: [
-            'Investice a zakládání společností na Tchaj-wanu',
-            'Občanskoprávní spory a náhrada škody',
-            'Manželství, rodina a dědictví',
-            'Pracovněprávní spory',
-            'Trestní věci',
-            'Duševní vlastnictví: ochranné známky, patenty a autorské právo',
+            'Investície a zakladanie spoločností na Taiwane',
+            'Občianskoprávne spory a náhrada škody',
+            'Manželstvo, rodina a dedenie',
+            'Pracovnoprávne spory',
+            'Trestné veci',
+            'Duševné vlastníctvo: ochranné známky, patenty a autorské právo',
           ],
         },
         {
-          heading: 'Kde začít',
+          heading: 'Kde začať',
           paragraphs: [
-            'Přečtěte si stránku „Služby“ a ověřte, zda Vaše věc spadá do našeho rozsahu, poté „Náklady“ a „Kontakt“, abyste věděli, jak se stanoví rozsah a jak se náklady potvrzují před zahájením práce.',
-            'Při odeslání zprávy můžete shrnutí napsat ve svém jazyce. Původní text se uchová přesně tak, jak jste jej napsali, a automaticky se nepřekládá. Odeslaná zpráva je žádostí čekající na posouzení: není to ještě porada ani potvrzená schůzka.',
+            'Prečítajte si stránku „Právne služby“ a overte, či Vaša vec spadá do nášho rozsahu, potom „Náklady práce“ a „Napíšte nám“, aby ste vedeli, ako sa stanoví rozsah a ako sa náklady potvrdzujú pred začatím práce.',
+            'Pri odoslaní správy môžete zhrnutie napísať vo svojom jazyku. Pôvodný text sa uchová presne tak, ako ste ho napísali, a automaticky sa neprekladá. Odoslaná správa je žiadosťou čakajúcou na posúdenie: nie je to ešte porada ani potvrdené stretnutie.',
           ],
         },
       ],
     },
     services: {
-      eyebrow: 'SLUŽBY',
-      title: 'V čem klienty zastupujeme',
+      eyebrow: 'PRÁVNE SLUŽBY',
+      title: 'V čom klientov zastupujeme',
       description:
-        'Šest agend, které kancelář na Tchaj-wanu vede, a hranice, které je užitečné znát nejdříve.',
+        'Šesť oblastí, ktoré kancelária na Taiwane vedie, a hranice, ktoré je užitočné poznať ako prvé.',
       intro:
-        'Níže jsou agendy, které skutečně vedeme, a otázky, jež se v počáteční fázi kladou nejčastěji. Výklad Vám pomůže posoudit, zda Vaše věc spadá do našeho rozsahu; je obecný a není právním rozborem jednotlivého spisu.',
+        'Nižšie sú oblasti, ktoré skutočne vedieme, a otázky, ktoré sa v počiatočnej fáze kladú najčastejšie. Výklad Vám pomôže posúdiť, či Vaša vec spadá do nášho rozsahu; je všeobecný a nie je právnym rozborom jednotlivého spisu.',
       sections: [
         {
-          heading: 'Investice a zakládání společností na Tchaj-wanu',
+          heading: 'Investície a zakladanie spoločností na Taiwane',
           paragraphs: [
-            'Zastupujeme zahraniční investory a podniky při založení nebo vedení společnosti na Tchaj-wanu: volba právní formy, příprava a podání dokumentů, vklad kapitálu, bankovní otázky, posouzení sídla a odvětvové požadavky. Podporujeme také účetnictví a daně, které ze založení a z provozu na Tchaj-wanu vyplývají.',
-            'Postup a lhůty se liší podle formy, investora, odvětví, banky a podle již dostupných dokumentů. Založení společnosti samo o sobě nevede k pobytovému oprávnění (居留) ani k pracovnímu povolení (工作許可): jde o samostatná řízení posuzovaná podle situace konkrétní osoby.',
+            'Zastupujeme zahraničných investorov a podniky pri založení alebo vedení spoločnosti na Taiwane: voľba právnej formy, príprava a podanie dokumentov, vklad kapitálu, bankové otázky, posúdenie sídla a odvetvové požiadavky. Podporujeme tiež účtovníctvo a dane, ktoré zo založenia a z prevádzky na Taiwane vyplývajú.',
+            'Postup a lehoty sa líšia podľa formy, investora, odvetvia, banky a podľa už dostupných dokumentov. Založenie spoločnosti samo osebe nevedie k pobytovému oprávneniu (居留) ani k pracovnému povoleniu (工作許可): ide o samostatné konania posudzované podľa situácie konkrétnej osoby.',
           ],
         },
         {
-          heading: 'Občanskoprávní spory a náhrada škody',
+          heading: 'Občianskoprávne spory a náhrada škody',
           paragraphs: [
-            'Tato agenda zahrnuje spory ze smluv, náhradu škody z protiprávního jednání a spotřebitelské spory. Práce zpravidla začíná časovou osou, posouzením dokumentů a existujících důkazů a teprve poté následují další kroky.',
-            'Průběh určují lhůty, včetně promlčecích, a úplnost důkazů. Uveďte proto známá data co nejdříve. Uschovejte smlouvy, zprávy, doklady o platbě nebo fotografie stavu na místě a zmiňte je v první zprávě.',
+            'Táto oblasť zahŕňa spory zo zmlúv, náhradu škody z protiprávneho konania a spotrebiteľské spory. Práca spravidla začína časovou osou, posúdením dokumentov a existujúcich dôkazov a až potom nasledujú ďalšie kroky.',
+            'Priebeh určujú lehoty, vrátane premlčacích, a úplnosť dôkazov. Uveďte preto známe dátumy čo najskôr. Uschovajte zmluvy, správy, doklady o platbe alebo fotografie stavu na mieste a spomeňte ich v prvej správe.',
           ],
         },
         {
-          heading: 'Manželství, rodina a dědictví',
+          heading: 'Manželstvo, rodina a dedenie',
           paragraphs: [
-            'Vedeme rozvod (離婚), vypořádání majetku, výkon a převzetí práv a povinností k nezletilým dětem (未成年子女權利義務之行使或負擔), styk s dítětem (會面交往) a dědictví (繼承), a to i tehdy, nacházejí-li se strany nebo majetek v různých státech. Přeshraniční rodinné věci často vyžadují další posouzení matričních záznamů (戶籍), formy listin a jejich průkaznosti na Tchaj-wanu.',
-            'Protože rodinné věci s sebou často nesou lhůty a souběžná řízení, mělo by první shrnutí uvést vztah mezi stranami, současné bydliště a již probíhající řízení.',
+            'Vedeme rozvod (離婚), vysporiadanie majetku, výkon a prevzatie práv a povinností k maloletým deťom (未成年子女權利義務之行使或負擔), styk s dieťaťom (會面交往) a dedenie (繼承), a to aj vtedy, ak sa strany alebo majetok nachádzajú v rôznych štátoch. Cezhraničné rodinné veci často vyžadujú ďalšie posúdenie matričných záznamov (戶籍), formy listín a ich preukaznosti na Taiwane.',
+            'Pretože rodinné veci so sebou často nesú lehoty a súbežné konania, prvé zhrnutie by malo uviesť vzťah medzi stranami, súčasné bydlisko a už prebiehajúce konania.',
           ],
         },
         {
-          heading: 'Pracovněprávní spory',
+          heading: 'Pracovnoprávne spory',
           paragraphs: [
-            'Tato agenda zahrnuje skončení pracovního poměru, odstupné podle tchajwanského práva (資遣費; nelze je ztotožňovat s obdobnými instituty jiných států), odměnu a spory z pracovní smlouvy (勞動契約), a to jak na straně zaměstnance, tak na straně zaměstnavatele. Při posouzení odlišujeme důvod skončení od otázek výpovědní doby, výplaty a lhůt.',
-            'Rozhodujícími dokumenty bývají pracovní smlouva, vnitřní pracovní řád (工作規則), výplatní pásky a korespondence stran. Máte-li je stále k dispozici, zmiňte to ve shrnutí.',
+            'Táto oblasť zahŕňa skončenie pracovného pomeru, odstupné podľa taiwanského práva (資遣費; nemožno ho stotožňovať s obdobnými inštitútmi iných štátov), odmenu a spory z pracovnej zmluvy (勞動契約), a to tak na strane zamestnanca, ako aj na strane zamestnávateľa. Pri posúdení odlišujeme dôvod skončenia od otázok výpovednej doby, výplaty a lehôt.',
+            'Rozhodujúcimi dokumentmi bývajú pracovná zmluva, vnútorný pracovný poriadok (工作規則), výplatné pásky a korešpondencia strán. Ak ich máte stále k dispozícii, spomeňte to v zhrnutí.',
           ],
         },
         {
-          heading: 'Trestní věci',
+          heading: 'Trestné veci',
           paragraphs: [
-            'Zastupujeme v přípravném řízení i před soudem podezřelé a obviněné i poškozené a posuzujeme trestní rizika podnikatelské činnosti.',
-            'Trestní věci mívají krátké lhůty a pevně stanovené fáze. Obdrželi-li jste již písemnost orgánu činného v trestním řízení nebo soudu, uveďte datum na písemnosti včas, aby byl obsah posouzen ve správném pořadí.',
+            'Zastupujeme v prípravnom konaní aj pred súdom podozrivých a obvinených i poškodených a posudzujeme trestné riziká podnikateľskej činnosti.',
+            'Trestné veci mávajú krátke lehoty a pevne stanovené fázy. Ak ste už dostali písomnosť orgánu činného v trestnom konaní alebo súdu, uveďte dátum na písomnosti včas, aby sa obsah posúdil v správnom poradí.',
           ],
         },
         {
-          heading: 'Duševní vlastnictví',
+          heading: 'Duševné vlastníctvo',
           paragraphs: [
-            'Podporujeme zápis ochranných známek (商標) a patentů (專利), autorské právo a spory o tato práva na Tchaj-wanu.',
-            'V této agendě rozhoduje pořadí kroků: rozsah ochrany, okamžik podání přihlášky a skutečné užívání ovlivňují volbu. Podání přihlášky samo o sobě neznamená, že jí bude vyhověno.',
+            'Podporujeme zápis ochranných známok (商標) a patentov (專利), autorské právo a spory o tieto práva na Taiwane.',
+            'V tejto oblasti rozhoduje poradie krokov: rozsah ochrany, okamih podania prihlášky a skutočné užívanie ovplyvňujú voľbu. Podanie prihlášky samo osebe neznamená, že jej bude vyhovené.',
           ],
         },
         {
-          heading: 'Rozsah a jeho potvrzení',
+          heading: 'Rozsah a jeho potvrdenie',
           paragraphs: [
-            'Kancelář pracuje podle tchajwanského práva a vede věci z výše uvedených agend. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí Vaši zprávu.',
-            'Pobytový status, pracovní povolení a obdobné otázky se posuzují podle dokumentů a podle situace konkrétní osoby, nikoli podle státní příslušnosti. Dotýká-li se část Vaší věci těchto bodů, uveďte to při kontaktu. Tato stránka neslibuje výsledek ani lhůtu k odpovědi.',
+            'Kancelária pracuje podľa taiwanského práva a vedie veci z vyššie uvedených oblastí. Rozsah každej veci sa potvrdzuje osobitne potom, čo advokátka alebo advokát posúdi Vašu správu.',
+            'Pobytový status, pracovné povolenie a obdobné otázky sa posudzujú podľa dokumentov a podľa situácie konkrétnej osoby, nie podľa štátnej príslušnosti. Ak sa časť Vašej veci týchto bodov dotýka, uveďte to pri kontakte. Táto stránka nesľubuje výsledok ani lehotu na odpoveď.',
           ],
         },
       ],
     },
     about: {
-      eyebrow: 'KANCELÁŘ',
+      eyebrow: 'KANCELÁRIA',
       title: 'O Hovering International Law Firm',
       description:
-        'Základní údaje o této tchajwanské advokátní kanceláři, o jejích pobočkách a o práci se zahraničními stranami.',
+        'Základné údaje o tejto taiwanskej advokátskej kancelárii, o jej sídlach a o práci so zahraničnými stranami.',
       intro:
-        'Hovering International Law Firm je advokátní kancelář na Tchaj-wanu. Advokátky a advokáti pracují od poradenství podnikům až po soudní řízení. Tato část popisuje vznik kanceláře, sídla a práci se zahraničními stranami.',
+        'Hovering International Law Firm je advokátska kancelária na Taiwane. Advokátky a advokáti pracujú od poradenstva podnikom až po súdne konania. Táto časť opisuje vznik kancelárie, sídla a prácu so zahraničnými stranami.',
       sections: [
         {
-          heading: 'Založení a struktura',
+          heading: 'Založenie a štruktúra',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) byla založena v roce 2016 advokátkami a advokáty, kteří studovali na National Taiwan University (國立臺灣大學). Čínský název 昊鼎 spojuje znak 昊 („širé nebe“) se znakem 鼎 („pevný základ“) a vystihuje zaměření kanceláře od jejího založení.',
-            'Máme pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pching-tungu (屏東). Pobočka v Kao-siungu se soustředí na vedení podniků a vede občanskoprávní, trestní a správní spory. Pobočka v Tchaj-čungu vede stavební věci, duševní vlastnictví a věci s vazbou na Koreu a Japonsko. Pobočka v Pching-tungu byla otevřena v roce 2017 pro místní potřebu.',
-            'Vedle advokátní práce působí od roku 2020 také Hovering Accounting Office, která nabízí účetnictví a daňové plánování podnikatelům a soukromým osobám s majetkem.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) bola založená v roku 2016 advokátkami a advokátmi, ktorí študovali na National Taiwan University (國立臺灣大學). Čínsky názov 昊鼎 spája znak 昊 („širé nebo“) so znakom 鼎 („pevný základ“) a vystihuje zameranie kancelárie od jej založenia.',
+            'Máme sídla v Taipeji (臺北), Kaohsiungu (高雄), Taichungu (臺中) a Pingtungu (屏東). Sídlo v Kaohsiungu sa sústreďuje na vedenie podnikov a vedie občianskoprávne, trestné a správne spory. Sídlo v Taichungu vedie stavebné veci, duševné vlastníctvo a veci s väzbou na Kóreu a Japonsko. Sídlo v Pingtungu bolo otvorené v roku 2017 pre miestnu potrebu.',
+            'Vedľa advokátskej práce pôsobí od roku 2020 aj Hovering Accounting Office, ktorá ponúka účtovníctvo a daňové plánovanie podnikateľom a súkromným osobám s majetkom.',
           ],
         },
         {
-          heading: 'Práce se zahraničními stranami',
+          heading: 'Práca so zahraničnými stranami',
           paragraphs: [
-            'Přeshraniční práce zahrnuje zakládání společností, víza, přihlášky ochranných známek a patentů, posouzení právního rizika a daňové poradenství podnikům. Pobočka v Tchaj-čungu vede zejména stavební věci, duševní vlastnictví a věci s vazbou na Koreu a Japonsko. Advokátka Wei Tseng (曾雋崴) zastupuje klienty z Koreje, z Japonska a další mezinárodní klienty v uvedených agendách.',
-            'Zda můžeme věc převzít, závisí na obsahu a na jazyku komunikace. Spadá-li Vaše věc do uvedených agend a lze-li ji projednat v některém ze čtyř jazyků konzultace, můžete zaslat shrnutí k posouzení.',
+            'Cezhraničná práca zahŕňa zakladanie spoločností, víza, prihlášky ochranných známok a patentov, posúdenie právneho rizika a daňové poradenstvo podnikom. Sídlo v Taichungu vedie najmä stavebné veci, duševné vlastníctvo a veci s väzbou na Kóreu a Japonsko. Advokátka Wei Tseng (曾雋崴) zastupuje klientov z Kórey, z Japonska a ďalších medzinárodných klientov v uvedených oblastiach.',
+            'Či môžeme vec prevziať, závisí od obsahu a od jazyka komunikácie. Ak Vaša vec spadá do uvedených oblastí a možno ju prebrať v niektorom zo štyroch jazykov konzultácie, môžete zaslať zhrnutie na posúdenie.',
           ],
         },
         {
-          heading: 'Když nás oslovíte',
+          heading: 'Keď nás oslovíte',
           paragraphs: [
-            'Po doručení Vašeho shrnutí posoudí advokátka nebo advokát obsah a poté hovoří o možném rozsahu práce, o dosud potřebných dokumentech a o dalších krocích. U daňových nebo účetních otázek může kancelář postupovat s účetním úsekem v jednom navazujícím postupu.',
-            'Výsledek každé věci závisí na skutkovém stavu a na dostupných dokumentech; výsledek neslibujeme. Potřebujete-li závaznou odpověď pro svou situaci, musí být dokumenty projednány s advokátkou nebo advokátem v některém ze čtyř jazyků konzultace.',
+            'Po doručení Vášho zhrnutia posúdi advokátka alebo advokát obsah a potom hovorí o možnom rozsahu práce, o doteraz potrebných dokumentoch a o ďalších krokoch. Pri daňových alebo účtovných otázkach môže kancelária postupovať s účtovným úsekom v jednom nadväzujúcom postupe.',
+            'Výsledok každej veci závisí od skutkového stavu a od dostupných dokumentov; výsledok nesľubujeme. Ak potrebujete záväznú odpoveď pre svoju situáciu, dokumenty treba prebrať s advokátkou alebo advokátom v niektorom zo štyroch jazykov konzultácie.',
           ],
         },
       ],
     },
     lawyers: {
-      eyebrow: 'ADVOKÁTI',
-      title: 'Mezinárodní tým Hovering',
-      description: 'Profily advokátek a advokátů, provozního vedení a přidruženého účetnictví a auditu Hovering.',
+      eyebrow: 'NÁŠ TÍM',
+      title: 'Medzinárodný tím Hovering',
+      description: 'Profily advokátok a advokátov, prevádzkového vedenia a pridruženého účtovníctva a auditu Hovering.',
       intro: '',
       sections: [],
     },
     pricing: {
-      eyebrow: 'NÁKLADY',
-      title: 'Jak se stanoví rozsah práce a náklady',
+      eyebrow: 'NÁKLADY PRÁCE',
+      title: 'Ako sa stanoví rozsah práce a náklady',
       description:
-        'Vysvětlení pořadí: nejprve rozsah práce, poté potvrzení nákladů, a proč tato stránka neobsahuje ceník.',
+        'Vysvetlenie poradia: najprv rozsah práce, potom potvrdenie nákladov, a prečo táto stránka neobsahuje cenník.',
       intro:
-        'Tato stránka vysvětluje, jak se náklady stanoví, nikoli jejich výši. Výše závisí na rozsahu práce v jednotlivé věci a má smysl teprve tehdy, je-li tento rozsah zřejmý.',
+        'Táto stránka vysvetľuje, ako sa náklady stanovujú, nie ich výšku. Výška závisí od rozsahu práce v jednotlivej veci a má zmysel až vtedy, keď je tento rozsah zrejmý.',
       sections: [
         {
-          heading: 'Nejprve se stanoví rozsah práce',
+          heading: 'Najprv sa stanoví rozsah práce',
           paragraphs: [
-            'Věci téhož druhu mohou vyžadovat velmi rozdílné úsilí, podle počtu stran, dostupných dokumentů, lhůt, které je třeba dodržet, a podle toho, zda již bylo zahájeno řízení. Prvním krokem je proto vždy stanovit, co do práce patří a co nikoli.',
-            'Shrnutí, které na začátku zašlete, je základem tohoto rozsahu. Čím jasněji popisuje průběh, Váš požadavek a lhůty, tím přesněji lze rozsah určit.',
+            'Veci toho istého druhu môžu vyžadovať veľmi rozdielne úsilie, podľa počtu strán, dostupných dokumentov, lehôt, ktoré treba dodržať, a podľa toho, či už bolo začaté konanie. Prvým krokom je preto vždy stanoviť, čo do práce patrí a čo nie.',
+            'Zhrnutie, ktoré na začiatku zašlete, je základom tohto rozsahu. Čím jasnejšie opisuje priebeh, Vašu požiadavku a lehoty, tým presnejšie možno rozsah určiť.',
           ],
         },
         {
-          heading: 'Náklady se potvrzují před zahájením práce',
+          heading: 'Náklady sa potvrdzujú pred začatím práce',
           paragraphs: [
-            'Je-li rozsah práce zřejmý, výše a způsob výpočtu nákladů se s Vámi projedná a potvrdí dříve, než práce začne. Změní-li se rozsah v průběhu, musí být potvrzen znovu.',
-            'Tato stránka není cenovou nabídkou a nezakládá povinnost k platbě.',
+            'Ak je rozsah práce zrejmý, výška a spôsob výpočtu nákladov sa s Vami preberú a potvrdia skôr, než práca začne. Ak sa rozsah v priebehu zmení, musí sa potvrdiť znova.',
+            'Táto stránka nie je cenovou ponukou a nezakladá povinnosť na platbu.',
           ],
         },
         {
-          heading: 'Porada může být úplatná',
+          heading: 'Porada môže byť odplatná',
           paragraphs: [
-            'Porada s advokátkou nebo advokátem může být úplatnou službou. Tato stránka neříká, že první konzultace je bezplatná, a žádnou její část nelze v tomto smyslu vykládat.',
-            'Je-li porada úplatná, sdělí se výše a způsob platby dříve, než se porada uskuteční.',
+            'Porada s advokátkou alebo advokátom môže byť odplatnou službou. Táto stránka nehovorí, že prvá konzultácia je bezplatná, a žiadnu jej časť nemožno v tomto zmysle vykladať.',
+            'Ak je porada odplatná, výška a spôsob platby sa oznámia skôr, než sa porada uskutoční.',
           ],
         },
         {
-          heading: 'Proč tato stránka neuvádí sazby',
+          heading: 'Prečo táto stránka neuvádza sadzby',
           paragraphs: [
-            'Náklady závisejí na věci samé: na úsilí, počtu stran, dokumentech, lhůtách a na tom, zda již řízení probíhá. Číslo stanovené předem by náklady Vašeho spisu neukázalo. Proto nejprve stanovíme rozsah práce a náklady Vám sdělíme poté, dříve než práce začne.',
-            'Vedle odměny mohou vzniknout soudní poplatky, náklady orgánů nebo třetích osob. Ty jsou od odměny oddělené a závisejí na příslušném řízení.',
+            'Náklady závisia od veci samej: od úsilia, počtu strán, dokumentov, lehôt a od toho, či už konanie prebieha. Číslo stanovené vopred by náklady Vášho spisu neukázalo. Preto najprv stanovíme rozsah práce a náklady Vám oznámime potom, skôr než práca začne.',
+            'Okrem odmeny môžu vzniknúť súdne poplatky, náklady orgánov alebo tretích osôb. Tie sú od odmeny oddelené a závisia od príslušného konania.',
           ],
         },
       ],
     },
     contact: {
-      eyebrow: 'KONTAKT',
-      title: 'Jak kancelář oslovit',
+      eyebrow: 'NAPÍŠTE NÁM',
+      title: 'Ako kanceláriu osloviť',
       description:
-        'Jazyk stránky, jazyky konzultace, postup pro případ, že neovládáte žádný ze čtyř jazyků, a co tato stránka neslibuje.',
+        'Jazyk stránky, jazyky konzultácie, postup pre prípad, že neovládate žiadny zo štyroch jazykov, a čo táto stránka nesľubuje.',
       intro:
-        'Než nám napíšete, rozlište následující tři body. Bývají směšovány, ale znamenají různé věci.',
+        'Skôr než nám napíšete, rozlíšte nasledujúce tri body. Bývajú zamenené, ale znamenajú rôzne veci.',
       sections: [
         {
-          heading: 'Tři věci, které je třeba držet odděleně',
+          heading: 'Tri veci, ktoré treba držať oddelene',
           paragraphs: [
-            'Jazyk zobrazení stránky, jazyk konzultace s advokátkou nebo advokátem a jazyk, v němž píšete, jsou tři různé věci.',
+            'Jazyk zobrazenia stránky, jazyk konzultácie s advokátkou alebo advokátom a jazyk, v ktorom píšete, sú tri rôzne veci.',
           ],
           items: [
-            'Jazyk stránky: tyto informace jsou psány česky.',
-            'Jazyk konzultace: porada probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
-            'Váš jazyk psaní: shrnutí můžete napsat ve svém jazyce; původní text se uchová beze změny.',
+            'Jazyk stránky: tieto informácie sú napísané po slovensky.',
+            'Jazyk konzultácie: porada prebieha iba anglicky, čínsky (中文), japonsky a kórejsky.',
+            'Váš jazyk písania: zhrnutie môžete napísať vo svojom jazyku; pôvodný text sa uchová bez zmeny.',
           ],
         },
         {
-          heading: 'Pokud neovládáte žádný ze čtyř jazyků konzultace',
+          heading: 'Ak neovládate žiadny zo štyroch jazykov konzultácie',
           paragraphs: [
-            'V kontaktním formuláři můžete zvolit „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
-            'Jde pouze o krok posouzení, nikoli o příslib. Neslibujeme tlumočníka, službu v češtině ani v jiném jazyce mimo čtyři uvedené jazyky, ani to, že každou věc přijmeme.',
+            'V kontaktnom formulári môžete zvoliť „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili schodný spôsob komunikácie, ak taký existuje; služba v inom jazyku zaručená nie je a lehota na odpoveď sa nesľubuje.',
+            'Ide iba o krok posúdenia, nie o prísľub. Nesľubujeme tlmočníka, službu v slovenčine ani v inom jazyku mimo štyroch uvedených jazykov, ani to, že prijmeme každú vec.',
           ],
         },
         {
-          heading: 'Co by měla obsahovat první zpráva',
+          heading: 'Čo by mala obsahovať prvá správa',
           paragraphs: [
-            'Uveďte, co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. Obdrželi-li jste již písemnost soudu nebo úřadu, uveďte datum na písemnosti.',
-            'V počáteční fázi zatím nemusíte zasílat číslo pasu, číslo dokladu, údaje o účtu, zdravotní dokumentaci ani soubor důkazů. Vyčkejte pokynů advokátky nebo advokáta a citlivé dokumenty zašlete až poté bezpečnou cestou.',
+            'Uveďte, čo sa stalo, akú pomoc potrebujete, akú väzbu má vec na Taiwan a lehotu, ak ju poznáte. Ak ste už dostali písomnosť súdu alebo úradu, uveďte dátum na písomnosti.',
+            'V počiatočnej fáze zatiaľ nemusíte zasielať číslo pasu, číslo dokladu, údaje o účte, zdravotnú dokumentáciu ani súbor dôkazov. Vyčkajte pokynov advokátky alebo advokáta a citlivé dokumenty zašlite až potom bezpečnou cestou.',
           ],
         },
         {
-          heading: 'Co tato stránka neslibuje',
+          heading: 'Čo táto stránka nesľubuje',
           paragraphs: [
-            'Neslibujeme lhůtu k odpovědi, nepotvrzujeme schůzku prostřednictvím této stránky, neslibujeme určitou advokátku ani určitého advokáta a neposkytujeme tlumočníka. Písemný překlad je něco jiného: Vaše zpráva se automaticky nepřekládá.',
-            'Odešlete-li žádost, obsah se uchová a čeká na posouzení. Neobdržíte-li po nějaké době odpověď, můžete napsat znovu na e-mailovou adresu uvedenou na kontaktní stránce.',
+            'Nesľubujeme lehotu na odpoveď, nepotvrdzujeme stretnutie prostredníctvom tejto stránky, nesľubujeme konkrétnu advokátku ani konkrétneho advokáta a neposkytujeme tlmočníka. Písomný preklad je niečo iné: Vaša správa sa automaticky neprekladá.',
+            'Ak odošlete žiadosť, obsah sa uchová a čaká na posúdenie. Ak po určitom čase nedostanete odpoveď, môžete napísať znova na e-mailovú adresu uvedenú na kontaktnej stránke.',
           ],
         },
       ],
     },
     faq: {
-      eyebrow: 'OTÁZKY',
+      eyebrow: 'ČASTÉ OTÁZKY',
       title: 'Časté otázky',
       description:
-        'Vysvětlení k rozsahu práce, přípravě, jazykům, nákladům a k tomu, co znamená odeslaná žádost.',
+        'Vysvetlenie k rozsahu práce, príprave, jazykom, nákladom a k tomu, čo znamená odoslaná žiadosť.',
       intro:
-        'Následující otázky jsou zodpovězeny na úrovni obecných informací. Odpověď pro Váš případ je možná teprve poté, co advokátka nebo advokát posoudí dokumenty.',
+        'Nasledujúce otázky sú zodpovedané na úrovni všeobecných informácií. Odpoveď pre Váš prípad je možná až potom, čo advokátka alebo advokát posúdi dokumenty.',
       sections: [
         {
-          heading: 'Jak tuto část užívat',
+          heading: 'Ako túto časť používať',
           paragraphs: [
-            'Nenajdete-li odpověď pro svou situaci, závisí odpověď zpravidla na zvláštních skutečnostech. Napište je proto do shrnutí, namísto abyste je dovozovali z této stránky.',
+            'Ak nenájdete odpoveď pre svoju situáciu, odpoveď spravidla závisí od osobitných skutočností. Napíšte ich preto do zhrnutia, namiesto toho, aby ste ich odvodzovali z tejto stránky.',
           ],
         },
       ],
       faqs: [
         {
-          question: 'Které věci kancelář vede?',
+          question: 'Ktoré veci kancelária vedie?',
           answer:
-            'Vedeme šest agend: investice a zakládání společností na Tchaj-wanu, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Zda bude věc přijata, se rozhodne po posouzení obsahu.',
+            'Vedieme šesť oblastí: investície a zakladanie spoločností na Taiwane, občianskoprávne spory a náhradu škody, manželstvo, rodinu a dedenie, pracovnoprávne spory, trestné veci a duševné vlastníctvo. Či bude vec prijatá, sa rozhodne po posúdení obsahu.',
         },
         {
-          question: 'Co si připravit před kontaktem?',
+          question: 'Čo si pripraviť pred kontaktom?',
           answer:
-            'Připravte si krátké shrnutí průběhu, svého požadavku, vazby na Tchaj-wan a lhůty, existuje-li nějaká. Je-li již k dispozici písemnost soudu nebo úřadu, uveďte datum. V této fázi zatím nemusíte zasílat doklady totožnosti ani soubor důkazů.',
+            'Pripravte si krátke zhrnutie priebehu, svojej požiadavky, väzby na Taiwan a lehoty, ak nejaká existuje. Ak je už k dispozícii písomnosť súdu alebo úradu, uveďte dátum. V tejto fáze zatiaľ nemusíte zasielať doklady totožnosti ani súbor dôkazov.',
         },
         {
-          question: 'Je možná porada v češtině?',
+          question: 'Je možná porada v slovenčine?',
           answer:
-            'Ne. Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky. Neslibujeme ani tlumočníka. Písemný překlad je něco jiného: původní text, který napíšete, se uchová tak, jak je, a automaticky se nepřekládá.',
+            'Nie. Tieto informácie sú napísané po slovensky, ale porada s advokátkou alebo advokátom prebieha iba anglicky, čínsky (中文), japonsky a kórejsky. Nesľubujeme ani tlmočníka. Písomný preklad je niečo iné: pôvodný text, ktorý napíšete, sa uchová tak, ako je, a automaticky sa neprekladá.',
         },
         {
-          question: 'Co dělat, nemohu-li užít žádný ze čtyř jazyků?',
+          question: 'Čo robiť, ak nemôžem použiť žiadny zo štyroch jazykov?',
           answer:
-            'Při odeslání žádosti zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili způsob komunikace, ale služba v jiném jazyce zaručena není. Jde o krok posouzení, nikoli o příslib, že můžeme pracovat v jiném jazyce.',
+            'Pri odoslaní žiadosti zvoľte „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili spôsob komunikácie, ale služba v inom jazyku zaručená nie je. Ide o krok posúdenia, nie o prísľub, že môžeme pracovať v inom jazyku.',
         },
         {
-          question: 'Jak se nakládá s mým textem v češtině?',
+          question: 'Ako sa nakladá s mojím textom v slovenčine?',
           answer:
-            'Původní text, který napíšete, se uchová tak, jak je, a automaticky se nepřekládá. Je-li to potřeba, jazyk další komunikace se s Vámi potvrdí.',
+            'Pôvodný text, ktorý napíšete, sa uchová tak, ako je, a automaticky sa neprekladá. Ak je to potrebné, jazyk ďalšej komunikácie sa s Vami potvrdí.',
         },
         {
-          question: 'Proběhla porada již tím, že je žádost odeslána?',
+          question: 'Prebehla porada už tým, že je žiadosť odoslaná?',
           answer:
-            'Ne. Odeslaná žádost čeká na posouzení advokátkou nebo advokátem. Není to právní stanovisko, není to potvrzená schůzka a samotné odeslání nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
+            'Nie. Odoslaná žiadosť čaká na posúdenie advokátkou alebo advokátom. Nie je to právne stanovisko, nie je to potvrdené stretnutie a samotné odoslanie nezakladá vzťah medzi advokátkou alebo advokátom a klientom.',
         },
         {
-          question: 'Jak se počítají náklady?',
+          question: 'Ako sa počítajú náklady?',
           answer:
-            'Nejprve se stanoví rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu nákladů, dříve než práce začne. Tato stránka neuvádí částky a neříká, že první konzultace je bezplatná.',
+            'Najprv sa stanoví rozsah práce, potom sa s Vami potvrdí výška a spôsob výpočtu nákladov, skôr než práca začne. Táto stránka neuvádza sumy a nehovorí, že prvá konzultácia je bezplatná.',
         },
         {
-          question: 'Co dělat, je-li má věc velmi naléhavá?',
+          question: 'Čo robiť, ak je moja vec veľmi naliehavá?',
           answer:
-            'Uveďte lhůtu nebo datum z úřední písemnosti hned na začátku shrnutí, aby byla tato data při posouzení vidět. Tato stránka nemá nouzový kanál a nezajišťuje lhůtu k odpovědi; nesnese-li Vaše věc odkladu, měli byste souběžně hledat další cesty ve svém místě.',
+            'Uveďte lehotu alebo dátum z úradnej písomnosti hneď na začiatku zhrnutia, aby boli tieto dátumy pri posúdení viditeľné. Táto stránka nemá núdzový kanál a nezabezpečuje lehotu na odpoveď; ak Vaša vec neznesie odklad, mali by ste súbežne hľadať ďalšie cesty vo svojom mieste.',
         },
       ],
     },
     privacy: {
-      eyebrow: 'SOUKROMÍ',
-      title: 'Údaje sbírané kontaktním formulářem',
+      eyebrow: 'SÚKROMIE',
+      title: 'Údaje zbierané kontaktným formulárom',
       description:
-        'Co sbírá kontaktní formulář v této české části, jak se nakládá s původním textem a jak nás oslovit ohledně Vašich údajů.',
+        'Čo zbiera kontaktný formulár v tejto slovenskej časti, ako sa nakladá s pôvodným textom a ako nás osloviť vo veci Vašich údajov.',
       intro:
-        'Tato část se týká pouze kontaktního formuláře na těchto informačních stránkách. Popisuje nakládání s údaji, nikoli technickou záruku.',
+        'Táto časť sa týka iba kontaktného formulára na týchto informačných stránkach. Opisuje nakladanie s údajmi, nie technickú záruku.',
       sections: [
         {
-          heading: 'Které údaje se sbírají',
+          heading: 'Ktoré údaje sa zbierajú',
           paragraphs: [
-            'Odešlete-li žádost prostřednictvím formuláře v této části, zaznamenají se tyto údaje:',
+            'Ak odošlete žiadosť prostredníctvom formulára v tejto časti, zaznamenajú sa tieto údaje:',
           ],
           items: [
-            'Jméno, které uvedete',
-            'E-mailová adresa pro odpověď',
-            'Jazyk zobrazení stránky v okamžiku odeslání',
-            'Jazyk, v němž jste psali',
-            'Jazyk konzultace, který si přejete',
-            'Původní text, který jste napsali',
-            'Váš souhlas s odesláním žádosti',
-            'Číslo podání pro dohledání žádosti',
+            'Meno, ktoré uvediete',
+            'E-mailová adresa na odpoveď',
+            'Jazyk zobrazenia stránky v okamihu odoslania',
+            'Jazyk, v ktorom ste písali',
+            'Jazyk konzultácie, ktorý si želáte',
+            'Pôvodný text, ktorý ste napísali',
+            'Váš súhlas s odoslaním žiadosti',
+            'Číslo podania na dohľadanie žiadosti',
           ],
         },
         {
-          heading: 'Původní text se uchová beze změny',
+          heading: 'Pôvodný text sa uchová bez zmeny',
           paragraphs: [
-            'Váš text se uchová přesně tak, jak jste jej napsali, a automaticky se nepřekládá. Je-li pro vyřízení potřebný překlad, projedná se to s Vámi zvlášť.',
-            'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+            'Váš text sa uchová presne tak, ako ste ho napísali, a automaticky sa neprekladá. Ak je na vybavenie potrebný preklad, preberie sa to s Vami osobitne.',
+            'Pretože sa pôvodný text uchováva, nepíšte v počiatočnej fáze to, čo zatiaľ nie je potrebné, napríklad číslo pasu, číslo dokladu alebo údaje o účte.',
           ],
         },
         {
-          heading: 'Místo uchování a přístup',
+          heading: 'Miesto uchovania a prístup',
           paragraphs: [
-            'Obsah Vašeho podání se uchovává na místě, které není veřejně přístupné. Přístup k němu mají pouze oprávněné osoby v kanceláři, a to za účelem vyřízení žádosti.',
-            'Tato stránka nedává absolutní záruku bezpečnosti. Žádná cesta přenosu a žádné místo uchování není zcela bezpečné; citlivé dokumenty by proto měly být zasílány až po zvláštním pokynu advokátky nebo advokáta.',
+            'Obsah Vášho podania sa uchováva na mieste, ktoré nie je verejne prístupné. Prístup k nemu majú iba oprávnené osoby v kancelárii, a to na účel vybavenia žiadosti.',
+            'Táto stránka nedáva absolútnu záruku bezpečnosti. Žiadna cesta prenosu a žiadne miesto uchovania nie je úplne bezpečné; citlivé dokumenty by preto mali byť zasielané až po osobitnom pokyne advokátky alebo advokáta.',
           ],
         },
         {
-          heading: 'Účel užití',
+          heading: 'Účel použitia',
           paragraphs: [
-            'Odeslané údaje slouží k posouzení žádosti, k odpovědi Vám, k ujasnění způsobu komunikace a k vyřízení, je-li práce převzata.',
-            'Údaje se bez zvláštního souhlasu neužívají k marketingu.',
+            'Odoslané údaje slúžia na posúdenie žiadosti, na odpoveď Vám, na ujasnenie spôsobu komunikácie a na vybavenie, ak je práca prevzatá.',
+            'Údaje sa bez osobitného súhlasu nepoužívajú na marketing.',
           ],
         },
         {
-          heading: 'Oznámení a číslo podání',
+          heading: 'Oznámenie a číslo podania',
           paragraphs: [
-            'Je-li žádost úspěšně odeslána, systém uvědomí kancelář. Není-li toto oznámení zatím potvrzeno, Váš text zůstává uchován a neztrácí se.',
-            'Číslo podání slouží k dohledání Vaší žádosti v našich záznamech. Zobrazí se po uložení; můžete je uvést při novém kontaktu.',
+            'Ak je žiadosť úspešne odoslaná, systém upozorní kanceláriu. Ak doručenie tohto upozornenia ešte nie je overené, Váš text ostáva uložený a nestratí sa.',
+            'Číslo podania slúži na dohľadanie Vašej žiadosti v našich záznamoch. Zobrazí sa po uložení; môžete ho uviesť pri novom kontakte.',
           ],
         },
         {
-          heading: 'Vaše práva a cesta ke kontaktu',
+          heading: 'Vaše práva a cesta na kontakt',
           paragraphs: [
-            'Můžete žádat o přístup ke svým údajům, o jejich opravu nebo výmaz, případně odvolat souhlas, a to prostřednictvím e-mailové adresy uvedené na kontaktní stránce. Existuje-li zákonná nebo procesní povinnost uchování, vysvětlíme omezení.',
-            'Tato stránka neuvádí pevnou dobu uchování, protože skutečná doba závisí na dalším průběhu věci a na souvisejících povinnostech. Přejete-li si dřívější výmaz, sdělte to při kontaktu.',
+            'Môžete žiadať o prístup k svojim údajom, o ich opravu alebo výmaz, prípadne odvolať súhlas, a to prostredníctvom e-mailovej adresy uvedenej na kontaktnej stránke. Ak existuje zákonná alebo procesná povinnosť uchovania, vysvetlíme obmedzenia.',
+            'Táto stránka neuvádza pevnú dobu uchovania, pretože skutočná doba závisí od ďalšieho priebehu veci a od súvisiacich povinností. Ak si želáte skorší výmaz, oznámte to pri kontakte.',
           ],
         },
         {
-          heading: 'Místo uchování a poskytovatelé',
+          heading: 'Miesto uchovania a poskytovatelia',
           paragraphs: [
-            'Tyto stránky jsou hostovány u společnosti Vercel a Vaše podání se uchovává v neveřejném objektovém úložišti této služby. E-maily se odesílají poštovní službou, kterou kancelář užívá.',
-            'Servery jednotlivých poskytovatelů se mohou nacházet mimo Tchaj-wan, takže Vaše údaje tam mohou být uchovávány a zpracovávány. Je-li účel uchování naplněn, údaje se bez zbytečného odkladu vymažou; údaje, které je třeba uchovávat podle použitelných předpisů, zůstávají po tuto dobu. Žádosti o osobní údaje přijímá wei@hoveringlaw.com.tw.',
+            'Tieto stránky sú hostované u spoločnosti Vercel a Vaše podanie sa uchováva v neverejnom objektovom úložisku tejto služby. E-maily sa odosielajú poštovou službou, ktorú kancelária používa.',
+            'Servery jednotlivých poskytovateľov sa môžu nachádzať mimo Taiwanu, takže Vaše údaje tam môžu byť uchovávané a spracúvané. Ak je účel uchovania naplnený, údaje sa bez zbytočného odkladu vymažú; údaje, ktoré treba uchovávať podľa použiteľných predpisov, ostávajú po túto dobu. Žiadosti o osobné údaje prijíma wei@hoveringlaw.com.tw.',
           ],
         },
       ],
     },
     disclaimer: {
-      eyebrow: 'UPOZORNĚNÍ',
-      title: 'Rozsah a hranice informací na této stránce',
+      eyebrow: 'UPOZORNENIE',
+      title: 'Rozsah a hranice informácií na tejto stránke',
       description:
-        'Obecná povaha informací, právní rámec a předpoklady vzniku vztahu mezi advokátkou nebo advokátem a klientem.',
+        'Všeobecná povaha informácií, právny rámec a predpoklady vzniku vzťahu medzi advokátkou alebo advokátom a klientom.',
       intro:
-        'Tato část objasňuje, co pro Vás tyto české informační stránky mohou udělat a co nikoli.',
+        'Táto časť objasňuje, čo pre Vás tieto slovenské informačné stránky môžu urobiť a čo nie.',
       sections: [
         {
-          heading: 'Pouze obecné informace',
+          heading: 'Iba všeobecné informácie',
           paragraphs: [
-            'Obsah těchto stránek je psán jako obecná informace. Není právní radou k Vašemu případu a nenahrazuje posouzení Vašich dokumentů.',
-            'Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku; dvě zdánlivě podobné situace mohou skončit různě.',
+            'Obsah týchto stránok je napísaný ako všeobecná informácia. Nie je právnou radou k Vášmu prípadu a nenahrádza posúdenie Vašich dokumentov.',
+            'Výsledok veci závisí od skutkového stavu, od použiteľných predpisov a od okamihu; dve zdanlivo podobné situácie môžu skončiť rôzne.',
           ],
         },
         {
-          heading: 'Právní rámec',
+          heading: 'Právny rámec',
           paragraphs: [
-            'Kancelář působí podle tchajwanského práva a tato stránka hovoří pouze o práci v tomto rámci.',
-            'Obsah není poradenstvím podle práva jiného řádu než tchajwanského, včetně práva místa Vašeho pobytu. Týká-li se část Vaší věci jiného právního řádu, ujasníme s Vámi, jaká kvalifikovaná osoba je pro tuto část potřebná.',
+            'Kancelária pôsobí podľa taiwanského práva a táto stránka hovorí iba o práci v tomto rámci.',
+            'Obsah nie je poradenstvom podľa práva iného poriadku než taiwanského, vrátane práva miesta Vášho pobytu. Ak sa časť Vašej veci týka iného právneho poriadku, ujasníme s Vami, aká kvalifikovaná osoba je pre túto časť potrebná.',
           ],
         },
         {
-          heading: 'Vztah mezi advokátkou nebo advokátem a klientem nevzniká sám od sebe',
+          heading: 'Vzťah medzi advokátkou alebo advokátom a klientom nevzniká sám od seba',
           paragraphs: [
-            'Přečtení této stránky, odeslání formuláře nebo e-mailu samo o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
-            'Tento vztah vzniká teprve poté, co byla věc posouzena a obě strany potvrdily převzetí práce.',
+            'Prečítanie tejto stránky, odoslanie formulára alebo e-mailu samo osebe nezakladá vzťah medzi advokátkou alebo advokátom a klientom.',
+            'Tento vzťah vzniká až potom, čo bola vec posúdená a obe strany potvrdili prevzatie práce.',
           ],
         },
         {
-          heading: 'Žádný příslib výsledku',
+          heading: 'Žiadny prísľub výsledku',
           paragraphs: [
-            'Žádná část této stránky není příslibem ohledně výsledku věci, vyhovění přihlášce nebo žádosti či ohledně pobytového a pracovního statusu.',
-            'Vnější odkazy slouží k orientaci; neslibujeme správnost ani aktuálnost obsahu třetích osob.',
+            'Žiadna časť tejto stránky nie je prísľubom ohľadom výsledku veci, vyhovenia prihláške alebo žiadosti či ohľadom pobytového a pracovného statusu.',
+            'Vonkajšie odkazy slúžia na orientáciu; nesľubujeme správnosť ani aktuálnosť obsahu tretích osôb.',
           ],
         },
       ],
     },
     columns: {
-      eyebrow: 'ČLÁNKY',
-      title: 'Články o tchajwanském právu',
+      eyebrow: 'PRÍSPEVKY',
+      title: 'Príspevky o taiwanskom práve',
       description:
-        'Články v češtině k častým otázkám tchajwanského práva. Obsah je obecnou informací k okamžiku zveřejnění, nikoli právní radou k Vašemu případu.',
+        'Príspevky v slovenčine k častým otázkam taiwanského práva. Obsah je všeobecnou informáciou k okamihu zverejnenia, nie právnou radou k Vášmu prípadu.',
       intro:
-        'Kancelář zveřejňuje články k častým otázkám tchajwanského práva. Články dostupné v češtině jsou na této stránce; vedle nich jsou čtyři odkazy, z nichž každý otevře seznam článků v jednom původním jazyce.',
+        'Kancelária zverejňuje príspevky k častým otázkam taiwanského práva. Príspevky dostupné v slovenčine sú na tejto stránke; vedľa nich sú štyri odkazy, z ktorých každý otvorí zoznam príspevkov v jednom pôvodnom jazyku.',
       sections: [
         {
-          heading: 'Čtyři seznamy podle jazyka',
+          heading: 'Štyri zoznamy podľa jazyka',
           paragraphs: [
-            'Tato část obsahuje čtyři odkazy: seznam článků v korejštině, v čínštině, v angličtině a v japonštině. Každý odkaz uvádí jazyk seznamu, takže předem víte, v jakém jazyce se obsah otevře.',
-            'Tyto čtyři seznamy jsou seznamy podle původního jazyka článků, nikoli seznamy překladů. Články dostupné v češtině jsou zvlášť na této stránce.',
+            'Táto časť obsahuje štyri odkazy: zoznam príspevkov v kórejčine, v čínštine, v angličtine a v japončine. Každý odkaz uvádza jazyk zoznamu, takže vopred viete, v akom jazyku sa obsah otvorí.',
+            'Tieto štyri zoznamy sú zoznamy podľa pôvodného jazyka príspevkov, nie zoznamy prekladov. Príspevky dostupné v slovenčine sú osobitne na tejto stránke.',
           ],
         },
         {
-          heading: 'Kam odkazy vedou',
+          heading: 'Kam odkazy vedú',
           paragraphs: [
-            'Zvolíte-li jeden ze čtyř odkazů, otevře se seznam článků v daném jazyce. Ze seznamu si text vyberete sami; celý obsah se zobrazí v původním jazyce článku.',
-            'Tato stránka obsah článků neshrnuje a nezaručuje, že určité téma je k dispozici ve všech čtyřech jazycích. Každý seznam obsahuje pouze texty zveřejněné v daném jazyce.',
+            'Ak zvolíte jeden zo štyroch odkazov, otvorí sa zoznam príspevkov v danom jazyku. Zo zoznamu si text vyberiete sami; celý obsah sa zobrazí v pôvodnom jazyku príspevku.',
+            'Táto stránka obsah príspevkov nezhrňuje a nezaručuje, že určité téma je k dispozícii vo všetkých štyroch jazykoch. Každý zoznam obsahuje iba texty zverejnené v danom jazyku.',
           ],
         },
         {
-          heading: 'Nakolik může článek sloužit k orientaci',
+          heading: 'Nakoľko môže príspevok slúžiť na orientáciu',
           paragraphs: [
-            'Články jsou obecnými informacemi k okamžiku zveřejnění. Předpisy a jejich používání se mohou změnit a článek neobsahuje všechny okolnosti Vašeho případu.',
-            'Nezakládejte proto postup ve skutečné věci pouze na článku. Užijte jej k přehledu a své dokumenty projednejte zvlášť s advokátkou nebo advokátem; tato stránka není krokem porady.',
+            'Príspevky sú všeobecnými informáciami k okamihu zverejnenia. Predpisy a ich používanie sa môžu zmeniť a príspevok neobsahuje všetky okolnosti Vášho prípadu.',
+            'Nezakladajte preto postup v skutočnej veci iba na príspevku. Použite ho na prehľad a svoje dokumenty preberte osobitne s advokátkou alebo advokátom; táto stránka nie je krokom porady.',
           ],
         },
       ],

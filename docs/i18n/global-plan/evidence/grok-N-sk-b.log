@@ -1,3 +1,81 @@
-[WO start 2026-09-22 07:06:55]
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
-Retry attempt 1...
+WO-N-sk-b — Slovak columns 010–018
+workspace: /Users/son7/Projects/tseng-law-new-sk-20260922
+agent: grok
+date: 2026-09-22
+
+## File count
+9 files written in src/content/columns-sk/ (010–018). Directory now has 18 md files (001–009 from WO-N-sk-a + these 9):
+010-taiwan-gym-injury-lawsuit.md
+011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md
+012-taiwan-overtaking-accident-liability.md
+013-taiwan-company-establishment-advanced-1.md
+014-taiwan-mandatory-employment-period.md
+015-taiwan-company-setup-pitch-location.md
+016-taiwan-inheritance-custody-analysis.md
+017-taiwan-logistics-business-setup.md
+018-taiwan-semiconductor-market-entry.md
+
+## §Verify output (verbatim)
+
+```
+      18
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-sk-20260922/src/content/columns-sk/018-taiwan-semiconductor-market-entry.md  lang=sk
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=50
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+      45
+```
+
+Commands:
+cd /Users/son7/Projects/tseng-law-new-sk-20260922 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+ls src/content/columns-sk/*.md | wc -l
+node scripts/check-column-translation.mjs --dir src/content/columns-sk --lang sk 2>&1 | tail -20
+grep -rn "\[변호사 검수 필요\]" src/content/columns-sk | wc -l
+git status --short | wc -l
+
+Result: summary PASS 18/18 files (includes 001–009 from WO-N-sk-a; all 010–018 PASS); markers 0.
+
+## Key term choices (Slovak + Traditional-Chinese gloss)
+
+1. nákladná automobilová doprava (汽車貨運業); zasielateľstvo (運送承攬); odosielateľ (貨主); dopravca (運送人)
+2. zákon o cestách (公路法); povolenie na prípravu založenia (籌設許可); prevádzková licencia (營業執照); odvetvové združenie (同業公會)
+3. evidenčné značky na obchodné použitie (營業用車輛牌照); požičanie licencie (借牌); evidencia obyvateľov (戶籍)
+4. pracovné povolenie (工作許可); príkaz opustiť Taiwan (限令出國); zákaz vstupu (禁止入國)
+5. Odbor preskúmania investícií Ministerstva hospodárstva (經濟部投資審議司) — same name as 011/013/018
+6. minimálna doba služby (最低服務年限); odborné technické školenie (專業技術培訓) — 014
+7. notárska autentifikácia (認證) vs. overenie závetu (檢認); práva na výnosy zo zverenectva (信託受益權); zverenecký správca (受託人) — 016
+8. dozorná osoba (監察人) — not auditor; akcionári/spoločníci (股東) — 018
+9. trest krátkodobého väzenia (拘役); podmienečný odklad výkonu trestu (緩刑) — 012
+10. Byline: **Advokátka Wei Tseng (曾雋崴)** — feminine; Latin name kept. Consultation languages: English, Chinese (中文), Japanese, Korean only.
+
+date_display: 13. septembra 2025 (018: 17. septembra 2026); read_time: „N min čítania“; thousands: 25.000.000.
+Quotes: „ … “. Formal address: Vy / impersonal treba.
+R2: no Slovensko; foreign investor / investor’s home country; Korea only as labelled example.
+R3: no Slovak consultation, interpreter, reply-time, free consult, 24/7, results, win rates, best/only. 018 FAQ: „subjekt, ktorý týmto skutočnostiam zodpovedá“ (not „najvhodnejší“).
+R7: no comment CTAs or emoji. R7b: orphan FAQ bodies made self-standing (010/014/016/017 section leads).
+Links remapped /sk/... as in cs. Invest Taiwan kept lang=eng.
+
+## Unresolved
+
+- numbers WARN only (not FAIL) on several files: Korean 제N항 / 제N호 / 제3자 unparsed because the checker has no Slovak ordinal specs. Digit sets match. R11: 제3자 written as „tretej osobe“.
+- English-check trap: latin-only sentences ≥12 words with 3+ of časť/čas/iné/iný/to/atď after stripping diacritics. Rewrote those to diel/lehota/ďalší/odlišný/a podobne where needed (010, 014).
+- 營業執照 used for the motor-freight operating licence, following the cs adaptation (R8 also lists 經營許可 for a transport operating permit; this article’s Korean source uses 영업면허 and cs glosses 營業執照).
+- 018 Korean source has no `url` key; SK omits it to keep frontmatter parity.
+- git status --short count 45 includes pre-existing dirty files outside this WO; this WO wrote the 9 columns-sk files (010–018) and this log only (no git add/commit/push).

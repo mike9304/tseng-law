@@ -1104,32 +1104,32 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'huang-shengping': 'Партнёр-бухгалтер (Partner CPA)',
     },
   },
-  sk: { // SCAFFOLD(cs)
-    label: 'NÁŠ TÝM',
-    title: 'Mezinárodní tým Hovering',
+  sk: {
+    label: 'NÁŠ TÍM',
+    title: 'Medzinárodný tím Hovering',
     description:
-      'Profily advokátek a advokátů, provozního vedení a přidruženého účetnictví a auditu Hovering.',
-    representativeTitle: 'Řídící advokátka',
-    teamTitle: 'Advokáti a spolupracovníci',
-    partnerTitle: 'Přidružené účetnictví',
-    introLabel: 'Představení',
-    educationLabel: 'Vzdělání',
-    experienceLabel: 'Praxe',
-    photoAltPrefix: 'Fotografie',
-    workingLanguagesLabel: 'Pracovní jazyky',
-    fullProfileLabel: 'Úplný profil (v angličtině)',
-    keyFactsHeading: 'Advokátka Wei Tseng — Základní údaje',
-    qualificationLabel: 'Oprávnění a kancelář',
+      'Profily advokátok a advokátov, prevádzkového vedenia a pridruženého účtovníctva a auditu Hovering.',
+    representativeTitle: 'Riadiaca advokátka',
+    teamTitle: 'Právnici a spolupracovníci',
+    partnerTitle: 'Pridružené účtovníctvo',
+    introLabel: 'Predstavenie',
+    educationLabel: 'Vzdelanie',
+    experienceLabel: 'Prax',
+    photoAltPrefix: 'Portrét',
+    workingLanguagesLabel: 'Pracovné jazyky',
+    fullProfileLabel: 'Úplný profil (v angličtine)',
+    keyFactsHeading: 'Advokátka Wei Tseng — Základné údaje',
+    qualificationLabel: 'Oprávnenie a kancelária',
     qualificationSentence:
-      '{name} je oprávněna vykonávat advokacii na Tchaj-wanu a je řídící advokátkou {firm}.',
-    practiceLabel: 'Hlavní oblasti',
-    consultationLanguagesLabel: 'Jazyky konzultace',
+      '{name} je oprávnená vykonávať advokáciu na Taiwane a je riadiacou advokátkou {firm}.',
+    practiceLabel: 'Hlavné oblasti',
+    consultationLanguagesLabel: 'Jazyky konzultácie',
     roles: {
-      'tseng-junwei': 'Řídící advokátka na Tchaj-wanu (Managing Attorney)',
-      'chang-rongxuan': 'Advokát na Tchaj-wanu (Taiwan Attorney)',
+      'tseng-junwei': 'Riadiaca advokátka na Taiwane (Managing Attorney)',
+      'chang-rongxuan': 'Advokát na Taiwane (Taiwan Attorney)',
       'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Vedení provozu v Koreji (Korea Operations Manager)',
-      'huang-shengping': 'Partnerský účetní (Partner CPA)',
+      'son-jungmin': 'Vedenie prevádzky v Kórei (Korea Operations Manager)',
+      'huang-shengping': 'Partnerský účtovník (Partner CPA)',
     },
   },
   bg: {
@@ -1431,7 +1431,7 @@ export const guidanceLanguageNames: Record<GuidanceLocale, Record<string, string
   ne: { Korean: 'कोरियाई', Chinese: 'चीनी', Japanese: 'जापानी' }, // SCAFFOLD(hi)
   km: { Korean: 'ภาษาเกาหลี', Chinese: 'ภาษาจีน', Japanese: 'ภาษาญี่ปุ่น' }, // SCAFFOLD(th)
   mn: { Korean: 'корейский', Chinese: 'китайский', Japanese: 'японский' }, // SCAFFOLD(ru)
-  sk: { Korean: 'korejština', Chinese: 'čínština', Japanese: 'japonština' }, // SCAFFOLD(cs)
+  sk: { Korean: 'kórejčina', Chinese: 'čínština', Japanese: 'japončina' },
   bg: { Korean: 'корейски', Chinese: 'китайски', Japanese: 'японски' },
   hr: { Korean: 'korejski', Chinese: 'kineski', Japanese: 'japanski' },
   sr: { Korean: 'korejski', Chinese: 'kineski', Japanese: 'japanski' },
@@ -1743,13 +1743,13 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Visa and residency': 'Виза и пребывание',
     'Family and labor disputes': 'Семейные и трудовые споры',
   },
-  sk: { // SCAFFOLD(cs)
-    'Taiwan company setup': 'Zakládání společností na Tchaj-wanu',
-    'Taiwan investment counsel': 'Poradenství k investicím na Tchaj-wanu',
-    'Civil litigation and damages': 'Občanskoprávní spory a náhrada škody',
-    'Trademark and patent filings': 'Přihlášky ochranných známek a patentů',
+  sk: {
+    'Taiwan company setup': 'Zakladanie spoločností na Taiwane',
+    'Taiwan investment counsel': 'Poradenstvo k investíciám na Taiwane',
+    'Civil litigation and damages': 'Občianskoprávne spory a náhrada škody',
+    'Trademark and patent filings': 'Prihlášky ochranných známok a patentov',
     'Visa and residency': 'Vízum a pobyt',
-    'Family and labor disputes': 'Rodinné a pracovněprávní spory',
+    'Family and labor disputes': 'Rodinné a pracovnoprávne spory',
   },
   bg: {
     'Taiwan company setup': 'Учредяване на дружество в Тайван',
@@ -4007,16 +4007,16 @@ export const guidanceTeamBios: Record<
       experience: ['Chinshin CPA Firm'],
     },
   },
-  sk: { // SCAFFOLD(cs)
+  sk: {
     'tseng-junwei': {
       intro: [
-        'Kancelář vede věci podniků a soukromých osob na Tchaj-wanu v angličtině, japonštině, korejštině a čínštině.',
-        'Zastupovala korejského studenta v nároku na náhradu škody za úraz v posilovně a dosáhla rozsudku prvního stupně ve výši 1,57 mil. TWD.',
+        'Kancelária vedie veci podnikov a súkromných osôb na Taiwane v angličtine, japončine, kórejčine a čínštine.',
+        'Zastupovala kórejského študenta v nároku na náhradu škody za úraz v posilňovni a dosiahla rozsudok prvého stupňa vo výške TWD 1.57M.',
       ],
       education: [
-        'Magistr (M.S.), Institute of Finance, National Taiwan University',
-        'Bakalář (B.A.) v dvojím programu práva a financí, National Chengchi University',
-        'Výměnné studium na Kobe University a Waseda University',
+        'Magister (M.S.), Institute of Finance, National Taiwan University',
+        'Bakalár (B.A.) v dvojodborovom programe práva a financií, National Chengchi University',
+        'Výmenné štúdium na Kobe University a Waseda University',
       ],
       experience: [
         'Trend Law Office',
@@ -4026,11 +4026,11 @@ export const guidanceTeamBios: Record<
     },
     'chang-rongxuan': {
       intro: [
-        'Dříve na Ministry of Education, Legal Affairs Division, se zaměřením na správní a občanskoprávní věci.',
-        'Zkušenost s věcmi univerzit, práv pedagogů a správních odvolání.',
+        'Predtým pôsobil na Ministry of Education, Legal Affairs Division, so zameraním na správne a občianskoprávne veci.',
+        'Skúsenosť s vecami univerzít, práv pedagógov a správnych odvolaní.',
       ],
       education: [
-        'Bakalář práv (LL.B.), National Chung Hsing University',
+        'Bakalár práv (LL.B.), National Chung Hsing University',
       ],
       experience: [
         'Ministry of Education, Legal Affairs Division',
@@ -4039,11 +4039,11 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal s dlouholetou praxí; dříve senior paralegal ve více advokátních kancelářích, se zaměřením na procesní podporu, korporátní agendu a zahraniční investice.',
-        'Podpora v soudních řízeních, při zakládání společností, u povolení zahraničních investic, u žádostí o licence a při komunikaci mezi Koreou a Tchaj-wanem.',
+        'Paralegal s dlhoročnou praxou; predtým senior paralegal vo viacerých advokátskych kanceláriách, so zameraním na procesnú podporu, korporátnu agendu a zahraničné investície.',
+        'Podpora v súdnych konaniach, pri zakladaní spoločností, pri povoleniach zahraničných investícií, pri žiadostiach o licencie a pri komunikácii medzi Kóreou a Taiwanom.',
       ],
       education: [
-        'Bakalář práv (LL.B.), Tunghai University',
+        'Bakalár práv (LL.B.), Tunghai University',
       ],
       experience: [
         'Senior Paralegal, Boyin Law Firm',
@@ -4052,24 +4052,24 @@ export const guidanceTeamBios: Record<
     },
     'son-jungmin': {
       intro: [
-        'Koordinuje termíny porad a komunikaci pro klienty z Koreje.',
-        'Podporuje meziregionální výměnu prostřednictvím systémů dokumentů a pracovních postupů, na základě informatiky.',
+        'Koordinuje termíny porád a komunikáciu pre klientov z Kórey.',
+        'Podporuje medziregionálnu výmenu prostredníctvom systémov dokumentov a pracovných postupov, na základe informatiky.',
       ],
       education: [
-        'Bakalář (B.S.) v informatice, National Cheng Kung University',
+        'Bakalár (B.S.) v informatike, National Cheng Kung University',
       ],
       experience: [
-        'Úsek korejských operací, Hovering International Law Firm',
+        'Úsek kórejských operácií, Hovering International Law Firm',
       ],
     },
     'huang-shengping': {
       intro: [
-        'Absolvoval bakalářský a magisterský program účetnictví na National Chengchi University a nyní vede účetní kancelář.',
-        'Podporuje integrovanou analýzu právních, daňových a finančních rizik pro firemní klienty.',
+        'Absolvoval bakalársky a magisterský program účtovníctva na National Chengchi University a teraz vedie účtovnú kanceláriu.',
+        'Podporuje integrovanú analýzu právnych, daňových a finančných rizík pre firemných klientov.',
       ],
       education: [
-        'Magistr (M.A.) v účetnictví, National Chengchi University',
-        'Bakalář (B.A.) v účetnictví, National Chengchi University',
+        'Magister (M.A.) v účtovníctve, National Chengchi University',
+        'Bakalár (B.A.) v účtovníctve, National Chengchi University',
       ],
       experience: [
         'Chinshin CPA Firm',

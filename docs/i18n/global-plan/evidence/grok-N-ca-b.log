@@ -1,1 +1,5 @@
 [WO start 2026-09-22 07:17:37]
+Columns **010–018** are in `src/content/columns-ca/`. Checker: **summary PASS 18/18 files** (001–009 from the earlier batch plus these nine). Markers: **0**.
+
+Log: `docs/i18n/global-plan/evidence/grok-N-ca-b.log`. No git operations.
+=== end code=0 2026-09-22 07:46:41 ===

@@ -1,1 +1,25 @@
 [WO start 2026-09-21 16:45:54]
+Native review of columns 010–018 is in `docs/i18n/global-plan/reviews/native/de-b.md`. Guidance pack and 001–009 were out of scope.
+
+**Verdict:** columns **3/5**. **012** is the strongest legal German; **018** should not go live as written (English company-form names, *Investment Commission*, *Erstberatung*). Gender: masculine *Prozessbevollmächtigter* for Wei Tseng in **010**. 47 findings (15 P1, 32 P2).
+
+Last 15 lines of the output file:
+
+```
+| 33 | P2 | C | columns-de/015-taiwan-company-setup-pitch-location.md | "Soweit der Hinweis; bei weiteren Fragen können Sie sich an eine taiwanische Anwältin" | Blog closer “this concludes the guide” plus open invite with no reply-time caveat. | Das ist der Hinweis. Bei weiteren Fragen können Sie über die Seite Kontakt schreiben; eine Antwortfrist wird nicht zugesagt. |
+| 34 | P2 | G | columns-de/015-taiwan-company-setup-pitch-location.md | "**Q. Müssen alle Branchen über das System" | English/blog “Q.” leftover on a German heading. | **Müssen alle Branchen über das System der „Vorabprüfung des Geschäftsorts“ prüfen, ob der Betrieb zulässig ist?** |
+| 35 | P2 | C | columns-de/015-taiwan-company-setup-pitch-location.md | "Bitte beachten Sie dies daher!" | Chatty blog imperative a DACH firm page would not use. | Das ist bei der späteren Eintragung zu berücksichtigen. |
+| 36 | P2 | C | columns-de/016-taiwan-inheritance-custody-analysis.md | "Nein. Der Anspruch auf Ausgleich der Restvermögensdifferenz" | Bare “Nein” under the topic heading (is it the same as the inheritance share?). Also §7. | Der Anspruch ist nicht dasselbe Recht wie die Erbquote. Der Anspruch auf Ausgleich der Restvermögensdifferenz (剩餘財產差額分配) |
+| 37 | P2 | A | columns-de/016-taiwan-inheritance-custody-analysis.md | "Beglaubigung (認證) sowie Nachlassverfahren (檢認)" | 檢認 is probate/verification of a will, not the whole estate proceeding. | Beglaubigung (認證) sowie Testamentsprüfung (檢認) |
+| 38 | P2 | C | columns-de/016-taiwan-inheritance-custody-analysis.md | "Formulare des Justizyuans" | Unadapted transliteration of 司法院; DACH copy says *Justiz-Yuan* or names the Judicial Yuan. | Formulare des Justiz-Yuan (司法院) |
+| 39 | P2 | C | columns-de/016-taiwan-inheritance-custody-analysis.md | "allgemeinen Erläuterung der Institute Erbrecht, Ehegüterstand" | *Institute* without *Rechts-* is read as organisations. | allgemeinen Erläuterung der Rechtsinstitute Erbrecht, Ehegüterstand |
+| 40 | P2 | C | columns-de/017-taiwan-logistics-business-setup.md | "ein mit Zustellung zusammenhängendes Geschäft planen" | On a law-firm page *Zustellung* is service of process; English is delivery operations. | ein mit Warenbeförderung zusammenhängendes Geschäft planen |
+| 41 | P2 | G | columns-de/017-taiwan-logistics-business-setup.md | "Change-of-Control-Klauseln im Vertrag" | English deal term left in running German. Also §3 checklist. | Kontrollwechselklauseln im Vertrag |
+| 42 | P2 | A | columns-de/017-taiwan-logistics-business-setup.md | "Meldewesen (戶籍) im zuständigen Bezirk" | 戶籍 is household registration, not the German *Meldewesen* as a system. | Eintrag im Haushaltsregister (戶籍) im zuständigen Bezirk |
+| 43 | P2 | G | columns-de/018-taiwan-semiconductor-market-entry.md | "Gewährleistung und After-Sales klären" | English leftover; also `Supervisor`, `Board`, `Department of Commerce`, `CPA-Kapitalprüfung`, `Governance`. | Gewährleistung und Kundendienst klären |
+| 44 | P2 | D | columns-de/018-taiwan-semiconductor-market-entry.md | "NT$ 30.000.000" | Rest of the German columns use TWD; mixed NT$ on a DACH page. Do not change the amount. | 30.000.000 TWD |
+| 45 | P2 | D | columns-de/018-taiwan-semiconductor-market-entry.md | "8 Min. Lesezeit" | English source is “10 min read”; other German columns write *Minuten Lesezeit*. | 10 Minuten Lesezeit |
+| 46 | P2 | B | columns-de/018-taiwan-semiconductor-market-entry.md | "als zu häufigem Kapitalaufnahme oder Anteilshandel" | *Aufnahme* is feminine; needs *häufiger*. | als zu häufiger Kapitalaufnahme oder zu häufigem Anteilshandel |
+| 47 | P2 | C | columns-de/018-taiwan-semiconductor-market-entry.md | "Reisen Mitarbeiter der Zentrale ein, wird in Taiwan eingestellt" | Telegram table German copied from English; missing articles and *ob*. | Reisen Mitarbeiterinnen und Mitarbeiter der Zentrale ein, wird vor Ort eingestellt, oder wird ein externer Dienstleister beauftragt? |
+```
+=== end code=0 2026-09-21 16:52:32 ===

@@ -1,5 +1,5 @@
 ---
-title: "Q&A sur le traitement des accidents de la circulation à Taïwan : mesures sur les lieux, faute, transaction et dommages-intérêts"
+title: "Questions-réponses sur le traitement des accidents de la circulation à Taïwan : mesures sur les lieux, faute, transaction et dommages-intérêts"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
 date_display: "13 septembre 2025"
@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 ---
 
-# Q&A sur le traitement des accidents de la circulation à Taïwan : mesures sur les lieux, faute, transaction et dommages-intérêts
+# Questions-réponses sur le traitement des accidents de la circulation à Taïwan : mesures sur les lieux, faute, transaction et dommages-intérêts
 
 ![Image expliquant les mesures de sécurité sur les lieux et la conservation des preuves juste après un accident de la circulation à Taïwan](../images/003-taiwan-traffic-accident-procedure/featured-01.jpg)
 
@@ -29,7 +29,7 @@ L’article 185-4 du Code pénal de Taïwan (刑法) régit la responsabilité p
 
 ## Q2. Quelles preuves faut-il conserver en premier ?
 
-Assurez d’abord la sécurité personnelle et les signaux d’avertissement ; s’il y a des blessés ou un besoin de sauvetage, appelez le 119, et s’il y a une infraction ou une situation de sécurité urgente, le 110 ou le 112. Effectuez aussi le signalement à la police selon les circonstances de l’accident de la circulation.
+Assurez d’abord la sécurité personnelle et les signaux d’avertissement ; s’il y a des blessés ou un besoin de sauvetage, appelez à Taïwan le 119 (secours et pompiers) et, s’il y a une infraction ou une situation de sécurité urgente, le 110 (police) ou, depuis un mobile, le 112. Effectuez aussi le signalement à la police selon les circonstances de l’accident de la circulation.
 
 Une fois la sécurité assurée, prenez des photographies d’ensemble et de détail pour enregistrer la position et les dommages des véhicules, les marques routières, les feux et les conditions météorologiques. Il convient de ne pas omettre les coordonnées des témoins, la demande de conservation des images de CCTV (監視器影像) et de la caméra de bord (行車紀錄器), les données des parties, du véhicule et de l’assurance, et le dossier médical (病歷). Les photos personnelles sont utiles, mais elles ne se substituent pas à l’intervention policière exigée en cas d’accident avec blessures ou décès.
 
@@ -37,11 +37,11 @@ Quant aux documents de police, sur les lieux de l’accident vous pouvez recevoi
 
 ## Q3. En cas de blessures, quelles réclamations et quels délais faut-il vérifier ?
 
-L’article 284 du Code pénal régit les lésions par imprudence (過失傷害) et les lésions graves par imprudence (過失致重傷). Comme, selon l’article 287 du Code pénal, il s’agit d’une infraction poursuivie sur plainte (告訴乃論之罪), conformément à l’article 237 du Code de procédure pénale de Taïwan (刑事訴訟法) la plainte doit en principe être déposée dans les 6 mois suivant le jour où l’auteur a été connu.
+L’article 284 du Code pénal régit les blessures involontaires (過失傷害) et les blessures involontaires graves (過失致重傷). Comme, selon l’article 287 du Code pénal, il s’agit d’une infraction poursuivie sur plainte (告訴乃論之罪), conformément à l’article 237 du Code de procédure pénale de Taïwan (刑事訴訟法) la plainte doit en principe être déposée dans les 6 mois suivant le jour où l’auteur a été connu.
 
 En matière d’indemnisation civile des dommages (損害賠償), selon l’article 197 du Code civil de Taïwan (民法) la réclamation n’est plus possible une fois écoulés 2 ans à compter du jour où le dommage et le débiteur de l’indemnisation ont été connus, ou 10 ans à compter du jour de l’acte illicite. Quels faits influent sur la prescription (消滅時效) doit s’examiner séparément.
 
-Quiconque subit un dommage du fait d’une infraction peut, selon l’article 487 du Code de procédure pénale, former une action civile accessoire à l’instance pénale (刑事附帶民事訴訟). Tant que l’instance pénale est en cours, cette action peut être formée jusqu’avant la clôture des débats oraux (言詞辯論終結) de la deuxième instance, selon l’article 488 du Code de procédure pénale, mais elle ne peut pas être formée après la clôture des débats oraux de la première instance et avant l’interjection du recours. En général, le paiement de frais de justice (裁判費) distincts peut être évité, mais tous les résultats ne s’achèvent pas sans coût. Par exemple, si l’affaire pénale est rejetée et, à la demande du demandeur, renvoyée au tribunal civil, selon l’article 503 du Code de procédure pénale les dépens peuvent être imposés, et il faut aussi vérifier les règles de renvoi et de procédure de l’article 504.
+Quiconque subit un dommage du fait d’une infraction peut, selon l’article 487 du Code de procédure pénale, former une action civile accessoire à l’instance pénale (刑事附帶民事訴訟). Tant que l’instance pénale est en cours, cette action peut être formée jusqu’avant la clôture des débats en deuxième instance (言詞辯論終結), selon l’article 488 du Code de procédure pénale, mais elle ne peut pas être formée après la clôture des débats en première instance et avant l’interjection du recours. En général, le paiement de frais de justice (裁判費) distincts peut être évité, mais tous les résultats ne s’achèvent pas sans coût. Par exemple, si l’affaire pénale est rejetée et, à la demande du demandeur, renvoyée au tribunal civil, selon l’article 503 du Code de procédure pénale les dépens peuvent être imposés, et il faut aussi vérifier les règles de renvoi et de procédure de l’article 504.
 
 Le choix varie selon l’interruption de la prescription (時效中斷), le cercle des défendeurs, les preuves, l’assurance et la compétence. Il n’existe donc pas de procédure uniformément préférable pour toutes les affaires.
 
@@ -51,7 +51,7 @@ La responsabilité pénale ne peut être retenue que lorsque sont reconnus le ma
 
 Sur le plan civil, selon l’article 217 du Code civil, si la personne lésée a une faute qui a contribué à causer ou à aggraver le dommage (與有過失), le tribunal peut réduire ou exempter l’indemnisation. Par exemple, si le dommage reconnu en nouveau dollar de Taïwan (新臺幣, TWD) est TWD 1.000.000 et que la faute de la personne lésée est évaluée à 50 %, le montant peut être réduit à TWD 500.000 avant d’autres ajustements.
 
-L’expertise (鑑定) ou le tableau d’analyse préliminaire peuvent être des pièces importantes, mais elles ne lient pas le tribunal de façon mécanique. Le tribunal examine l’ensemble des preuves, y compris les déclarations, les images et l’état des véhicules.
+L’expertise (鑑定) ou le tableau d’analyse préliminaire peuvent être des pièces importantes, mais elles ne lient pas le tribunal mécaniquement. Le tribunal examine l’ensemble des preuves, y compris les déclarations, les images et l’état des véhicules.
 
 ## Q5. Que faut-il inclure dans l’acte de transaction ?
 
@@ -59,14 +59,14 @@ Dans l’acte de transaction (和解書), il convient d’individualiser la date
 
 La transaction (和解) de l’article 736 du Code civil est un contrat dans lequel les parties cèdent réciproquement pour mettre fin à un litige ou l’éviter. Selon l’article 737 du Code civil, l’étendue dans laquelle les droits s’éteignent s’apprécie aussi seulement dans les limites de ce qui a été abandonné dans l’acte de transaction. On ne doit donc pas affirmer, sans examiner le texte, que toutes les réclamations futures disparaissent.
 
-S’il s’agit d’une infraction poursuivie sur plainte, selon l’article 238 du Code de procédure pénale la plainte peut être retirée jusqu’avant la clôture des débats oraux de la première instance, et une fois retirée elle ne peut pas être déposée de nouveau. Toutefois, dans une infraction qui n’est pas poursuivie sur plainte, l’accusation ne prend pas fin automatiquement par une transaction privée, et le fait d’avoir transigé n’oblige pas toujours à se désister de la plainte.
+S’il s’agit d’une infraction poursuivie sur plainte, selon l’article 238 du Code de procédure pénale la plainte peut être retirée jusqu’avant la clôture des débats en première instance, et une fois retirée elle ne peut pas être déposée de nouveau. Toutefois, dans une infraction qui n’est pas poursuivie sur plainte, l’accusation ne prend pas fin automatiquement par une transaction privée, et le fait d’avoir transigé n’oblige pas toujours à se désister de la plainte.
 
 ### Fondements officiels de Q1–Q5
 
 - [Règlement de gestion et de sanctions de la circulation routière (道路交通管理處罰條例), article 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
-- [Code pénal de la République de Chine, article 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
-- [Code pénal de la République de Chine, article 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
-- [Code pénal de la République de Chine, article 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
+- [Code pénal de Taïwan (中華民國刑法), article 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
+- [Code pénal de Taïwan (中華民國刑法), article 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [Code pénal de Taïwan (中華民國刑法), article 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
 - [Code de procédure pénale de Taïwan, article 237](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001)
 - [Code de procédure pénale, article 238](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=238&pcode=C0010001)
 - [Code de procédure pénale, article 487](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=487&pcode=C0010001)
@@ -85,7 +85,7 @@ S’il s’agit d’une infraction poursuivie sur plainte, selon l’article 238
 
 Le tableau d’analyse préliminaire de l’accident de la circulation établi par la police est une analyse préalable fondée sur les pièces des lieux. Ce n’est pas un jugement, il ne lie pas le tribunal et il ne fixe pas la proportion de faute (過失比例). Comme les pièces nécessaires et l’étendue de la controverse varient selon l’accident, ce tableau, l’expertise légale et le réexamen (覆議) ne sont ni une procédure automatique ni une étape obligatoire.
 
-Selon les règles applicables, la partie légitimée peut demander une expertise d’accident de véhicules (車輛行車事故鑑定) ; l’organe qui instruit l’affaire peut la transmettre et l’autorité judiciaire peut la commander. La demande de la partie se présente, en général, dans les 6 mois suivant la date de l’accident ; dans les affaires déjà en enquête ou en jugement, l’expertise se déroule par commande de l’autorité judiciaire et non par une nouvelle demande directe.
+Selon les règles applicables, la partie qui y a qualité peut demander une expertise d’accident de véhicules (車輛行車事故鑑定) ; l’organe qui instruit l’affaire peut la transmettre et l’autorité judiciaire peut la commander. La demande de la partie se présente, en général, dans les 6 mois suivant la date de l’accident ; dans les affaires déjà en enquête ou en jugement, l’expertise se déroule par commande de l’autorité judiciaire et non par une nouvelle demande directe.
 
 En cas de désaccord avec l’avis d’expertise, un réexamen peut être demandé, mais le réexamen se limite à une unique fois. L’avis d’expertise et celui de réexamen sont une preuve ou une pièce de référence, et le tribunal apprécie de façon indépendante l’ensemble du dossier, y compris les déclarations, les images et les procès-verbaux des lieux.
 
@@ -147,7 +147,7 @@ La circonstance d’avoir continué à travailler ou d’avoir perçu le salaire
 
 Le dommage par diminution de la capacité de travail se distingue des revenus réellement réduits pendant la période de rétablissement de la Q11. Selon les articles 193 et 216 du Code civil s’examinent ensemble le lien de causalité avec l’accident, le trouble fonctionnel persistant (持續功能障礙), la profession et les aptitudes de la personne lésée, les revenus que l’on peut habituellement attendre et le fondement et la preuve relatifs à la période de capacité de travail.
 
-Le fait que le salaire actuel se maintienne sans variation n’exclut pas automatiquement la réclamation. À l’inverse, le montant du dommage ne se fixe pas non plus de façon mécanique seulement avec le pourcentage d’invalidité ou avec le salaire actuel.
+Le fait que le salaire actuel se maintienne sans variation n’exclut pas automatiquement la réclamation. À l’inverse, le montant du dommage ne se fixe pas non plus mécaniquement seulement avec le pourcentage d’invalidité ou avec le salaire actuel.
 
 Si le trouble fonctionnel persistant est contesté de façon substantielle, une expertise médicale peut être utile, mais elle n’est pas obligatoire dans toutes les affaires. S’examinent aussi la compensation des fautes de l’article 217 du Code civil et d’autres motifs d’ajustement.
 
@@ -163,7 +163,7 @@ Le tribunal examine les circonstances de chaque affaire en appréciant dans leur
 
 L’article 188 du Code civil régit le cas dans lequel l’employé cause un dommage illicite à autrui pendant l’exercice de ses fonctions. Le lien avec les fonctions n’est pas reconnu automatiquement du seul fait de l’horaire de travail, de sorte qu’il faut vérifier le lien entre le travail réel et l’accident.
 
-L’employeur peut alléguer qu’il a observé la diligence due dans la sélection et la surveillance de l’employé, ou que le dommage n’aurait pas pu être évité même en observant cette diligence. On peut envisager de réclamer l’indemnisation de façon conjointe contre l’employeur et l’employé. Après avoir indemnisé, l’employeur peut exercer un recours contre l’employé.
+L’employeur peut alléguer qu’il a observé la diligence due dans la sélection et la surveillance de l’employé, ou que le dommage n’aurait pas pu être évité même en observant cette diligence. On peut envisager de réclamer l’indemnisation conjointement contre l’employeur et l’employé. Après avoir indemnisé, l’employeur peut exercer un recours contre l’employé.
 
 Si l’employeur prouve ces conditions d’exonération et que la personne lésée n’obtient pas l’indemnisation de l’alinéa 1, le tribunal, selon l’article 188, alinéa 2, du Code civil, peut ordonner une indemnisation totale ou partielle en tenant compte de la situation économique de l’employeur et de la personne lésée.
 
@@ -190,7 +190,7 @@ L’assurance de responsabilité civile envers les tiers (第三人責任險), l
 - [Code civil, article 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
 - [Arrêt du tribunal de district de Taoyuan, année 112, affaire 壢簡字 numéro 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Code civil, article 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
-- [Code pénal de la République de Chine, article 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [Code pénal de Taïwan (中華民國刑法), article 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Loi sur l’assurance obligatoire de responsabilité civile automobile](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
 - [Barème de prestations de l’assurance obligatoire de responsabilité civile automobile](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Contrat type d’assurance automobile d’usage particulier de la Commission de supervision financière (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
@@ -231,11 +231,11 @@ Si l’on confie le dossier à l’assureur, il faut suivre de façon continue l
 
 ​
 
-Q17. Quelle est la responsabilité pénale pour lésions par imprudence de l’auteur d’un accident de la circulation ?
+Q17. Quelle est la responsabilité pénale pour blessures involontaires de l’auteur d’un accident de la circulation ?
 
 ​
 
-En cas de lésions par imprudence, les tribunaux infligent actuellement une peine d’environ 3 mois.
+En cas de blessures involontaires, une peine d’environ 3 mois a été prononcée dans certains jugements ; il n’existe ni résultat typique ni résultat garanti.
 
 ​
 
@@ -247,7 +247,7 @@ Si elle est convertie en amende (易科罰金), l’article 41, alinéa 1, du Co
 
 ​
 
-Pour les lésions graves par imprudence, une peine de 4 mois est habituellement infligée, et pour la mort par imprudence (過失致死) une peine de 6 mois est habituellement infligée.
+Pour les blessures involontaires graves, une peine de 4 mois a été prononcée dans certains jugements, et une peine de 6 mois pour l’homicide involontaire (過失致死) ; là encore, aucun résultat n’est garanti.
 
 ​
 
@@ -259,15 +259,15 @@ Q18. Si l’on transige avec l’autre partie, peut-on se désister de la plaint
 
 ​
 
-Les lésions par imprudence et les lésions graves par imprudence sont une infraction poursuivie sur plainte (告訴乃論之罪), de sorte que l’on peut se désister de la plainte pénale.
+Les blessures involontaires et les blessures involontaires graves sont une infraction poursuivie sur plainte (告訴乃論之罪), de sorte que l’on peut se désister de la plainte pénale.
 
 ​
 
-Dans la mort par imprudence, le désistement de la plainte n’est pas possible ; toutefois, si l’on transige avec la famille de l’autre partie, le tribunal peut alléger la peine.
+Dans l’homicide involontaire, le désistement de la plainte n’est pas possible ; toutefois, si l’on transige avec la famille de l’autre partie, le tribunal peut alléger la peine.
 
 ​
 
-Il peut y avoir un sursis (緩刑) et ne pas aller en prison.
+Dans certains cas, un sursis (緩刑) peut être prononcé ; ce n’est pas une promesse d’éviter la prison.
 
 ​
 
@@ -307,7 +307,7 @@ L’important alors est le soin et l’honnêteté de l’avocat.
 
 ​
 
-Il importe que l’avocat examine avec attention tous les postes de la réclamation et s’emploie à ce que soit obtenue l’indemnisation la plus élevée possible.
+Il importe que l’avocat examine avec attention tous les postes de la réclamation et s’emploie à demander l’indemnisation que les faits et les preuves permettent de soutenir.
 
 ​
 
@@ -359,7 +359,7 @@ Ce point ne doit donc absolument pas être négligé, et il convient de consulte
 
 ​
 
-Si vous avez d’autres questions, laissez-les dans les commentaires.
+Si vous avez d’autres questions, vous pouvez écrire depuis la page Contact. Aucun délai de réponse n’est promis.
 
 ​
 

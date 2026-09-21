@@ -642,7 +642,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Cette page est rédigée en français comme orientation générale, non comme avis juridique pour votre propre affaire.',
     consultationNotice:
-      'La consultation a lieu en quatre langues : anglais, chinois (中文), japonais et coréen.',
+      'La consultation a lieu seulement dans quatre langues : anglais, chinois (中文), japonais et coréen.',
     methodConfirmationNotice:
       'Si vous ne pouvez utiliser aucune des quatre langues, choisissez « La manière de communiquer doit être confirmée ». Nous répondons pour examiner une manière possible de communiquer lorsqu’il en existe une ; une prestation dans une autre langue n’est pas assurée et aucun délai de réponse n’est promis.',
     preparationNotice:
@@ -655,10 +655,10 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     successMessage:
       'Nous avons reçu votre demande ; elle attend un examen. Cela ne signifie pas que la consultation a eu lieu ni qu’un rendez-vous est confirmé.',
     savedNotificationPendingMessage:
-      'Votre demande est conservée, mais l’avis au cabinet n’est pas encore confirmé. Ce que vous avez écrit n’est pas perdu. Si vous ne recevez pas de réponse, vous pouvez aussi écrire à l’adresse de courrier de la page de contact.',
+      'Votre demande est conservée, mais l’avis au cabinet n’est pas encore confirmé. Ce que vous avez écrit n’est pas perdu. Si vous ne recevez pas de réponse, vous pouvez aussi écrire à l’adresse e-mail de la page de contact.',
     receiptIdLabel: 'Numéro de réception',
     failureMessage:
-      'Votre demande n’a pas pu être envoyée. Veuillez réessayer ou écrire à l’adresse de courrier de la page de contact.',
+      'Votre demande n’a pas pu être envoyée. Veuillez réessayer ou écrire à l’adresse e-mail de la page de contact.',
     originalLanguageLabel: 'Langue dans laquelle vous écrivez',
     originalLanguagePlaceholder:
       'Par exemple : français, allemand, espagnol ou une autre langue',
@@ -667,12 +667,12 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     originalTextPlaceholder:
       'Indiquez ce qui s’est passé, l’aide dont vous avez besoin et le délai s’il en existe un. N’écrivez pas de numéro de passeport, de numéro d’identité ni de données de compte.',
     nameLabel: 'Nom',
-    emailLabel: 'Courrier',
+    emailLabel: 'E-mail',
     consentLabel:
       'J’ai lu la page de confidentialité et j’accepte l’envoi de cette demande.',
     privacyLinkLabel: 'Confidentialité',
     requiredMessage: 'Ce champ est obligatoire.',
-    invalidEmailMessage: 'Veuillez indiquer une adresse de courrier valable.',
+    invalidEmailMessage: 'Veuillez indiquer une adresse e-mail valable.',
     tooLongMessage: 'Le texte est trop long. Raccourcissez-le et renvoyez-le.',
     sourceLanguageNotice:
       'Cet article n’est publié qu’en {language} ; le lien ouvre la page d’origine.',

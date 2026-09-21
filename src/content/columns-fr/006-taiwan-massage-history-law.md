@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Avez-vous connu l’époque des salons de coiffure traditionnels (理髮廳) aux origines de Taïwan ?
+Vous souvenez-vous de l’époque des salons de coiffure traditionnels (理髮廳) à Taïwan ?
 
 La façon de laver les cheveux dans ces salons était très particulière.
 
@@ -79,9 +79,9 @@ Dans le débat sur les droits professionnels des personnes avec et sans handicap
 
 On se demanda par exemple si la règle écrite qui n’autorisait que les personnes en situation de handicap visuel à exercer le massage n’était pas une discrimination envers les personnes sans handicap visuel,
 
-et l’on mit en doute que cette règle eût réellement contribué à protéger l’emploi et la subsistence des personnes en situation de handicap visuel.
+et l’on mit en doute que cette règle eût réellement contribué à protéger l’emploi et la subsistance des personnes en situation de handicap visuel.
 
-Finalement, les Grands Juges (大法官) déclarèrent inconstitutionnelle (違憲) la disposition qui n’autorisait que les personnes en situation de handicap visuel à exercer le métier de massage.
+Finalement, la Cour constitutionnelle (大法官) déclara inconstitutionnelle (違憲) la disposition qui n’autorisait que les personnes en situation de handicap visuel à exercer le métier de massage.
 
 ​
 
@@ -125,4 +125,4 @@ communiquez-le immédiatement ou demandez que l’on s’arrête, afin de vous p
 
 Si vous estimez avoir subi un harcèlement sexuel,
 
-rendez-vous au commissariat avec un ami de confiance ou avec un avocat de Taïwan (律師) pour porter plainte.
+rendez-vous au commissariat avec une personne de confiance ou avec une avocate ou un avocat de Taïwan (律師) pour porter plainte.

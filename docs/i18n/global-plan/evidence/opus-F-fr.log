@@ -1,0 +1,318 @@
+# WO-F-fr — French (fr) native-quality fix lane — Opus 5
+worktree: /Users/son7/Projects/tseng-law-fix-t-20260921
+date: 2026-09-21
+scope: src/content/columns-fr/*.md (18), src/data/international-guidance-western.ts (frenchGuidanceContent),
+       -answers.ts, -offices.ts, -team.ts (fr keys only), international-inquiry-copy.ts (fr), src/lib/llms-txt.ts (fr)
+no git add/commit/push. no other locale's strings touched.
+
+================================================================
+1. ROWS APPLIED
+================================================================
+-- fr-a.md --
+a#1  llms discoveryNotice -> "ni classement dans les moteurs de recherche, ni approbation, ni recommandation
+     par une intelligence artificielle, ni insertion publicitaire." (reviewer's doubled "recommandation"
+     replaced by "approbation" = endorsement; matches the de/ko source terms)
+a#2  002 拘役 -> "une courte peine privative de liberté (拘役)" (x2); "emprisonnement à temps" -> "emprisonnement"
+     (002 x2, 007 x1, 008 x1) = 4 instances, see systemic sweep S3
+a#3  007 "comme droit de conflit" -> "au titre du droit international privé (conflit de lois)"
+a#4  003 "l'indemnisation la plus élevée possible" -> "l'indemnisation que les faits et les preuves permettent
+     de soutenir"
+a#5  003 "les tribunaux infligent actuellement une peine d'environ 3 mois" -> "une peine d'environ 3 mois a été
+     prononcée dans certains jugements ; il n'existe ni résultat typique ni résultat garanti"; same for the
+     4-mois / 6-mois sentence ("là encore, aucun résultat n'est garanti")
+a#6  003 sursis -> "Dans certains cas, un sursis (緩刑) peut être prononcé ; ce n'est pas une promesse d'éviter
+     la prison."
+a#7  005 "nous contacter à tout moment" -> "écrire depuis la page Contact ; aucun délai de réponse n'est promis"
+a#8  008 "percevoir une indemnité de licenciement élevée" -> "faire reconnaître le droit à l'indemnité de
+     licenciement prévue par la loi"; "avec l'aide d'une avocate" -> "avec l'assistance d'une avocate";
+     "n'ont pas eu autant de chance" -> "n'ont pas pu en faire autant" (R8: 成功 never 'luck')
+a#9  R2b country note added in 001 (body §1 treaty para, prefixed "Note propre à un pays — accord d'impôt sur le
+     revenu Taïwan–Corée :" + closing "Ce développement sur l'accord vaut pour un cas de figure lié à la Corée
+     qui en remplit les conditions ; ce n'est pas une règle applicable à tout investisseur étranger.") and again
+     at §5; in 004 in the §6 opening paragraph and in the tax FAQ answer. No digits/dates changed.
+a#10 004 "Même lorsqu'une société mère coréenne entre à Taïwan" -> "Lorsqu'une société mère établie hors de
+     Taïwan entre à Taïwan ... La Corée n'est, plus loin dans cet article, qu'un exemple identifié comme tel,
+     et non le seul pays d'origine possible." (mirrors the EN sentence); "Du côté de la Corée" -> "Du côté coréen"
+a#11 005 Q1 heading -> "depuis l'étranger ... (les règles bancaires et de change de la Corée exposées ci-dessous
+     ne sont qu'un exemple)"; "votre banque principale en Corée" -> "dans votre pays d'origine"
+a#12 005 Q5 -> "La société peut-elle embaucher des salariés de nationalité étrangère ?"
+a#13 007 "pour une famille liée, comme la Corée et Taïwan, à deux États" -> "pour une famille liée à deux États
+     ou territoires ou plus — Taïwan et un autre pays, par exemple —"
+a#14 007 "l'enfant vivra en Corée ... niveau de vie coréen" -> "l'enfant vivra hors de Taïwan ... niveau de vie
+     de cet État"
+a#15 008 FAQ + body + 009: "Contrairement à la Corée" -> "Contrairement à certains droits — par exemple la
+     Corée —"; 008 "c'est toutefois différent de la Corée" -> "la règle est toutefois différente"; 008 opening
+     "En Corée, la société doit verser..." -> "Dans certains autres droits — la Corée en est un exemple —, ..."
+     (matches EN); 009 "cela diffère de la Corée" -> "cela diffère de certains autres droits, par exemple celui
+     de la Corée"
+a#16 003 (R9) -> "appelez à Taïwan le 119 (secours et pompiers) et, s'il y a une infraction ou une situation de
+     sécurité urgente, le 110 (police) ou, depuis un mobile, le 112." (119/110/112 kept)
+a#17 guidanceTeamCopy.fr.label was ALREADY 'NOTRE ÉQUIPE' in the source (the dump is stale) — verified, no change
+a#18 guidanceOfficeCopy.fr.label was ALREADY 'BUREAUX' — verified, no change
+a#19 fullProfileLabel -> 'Profil complet (en anglais)'
+a#23 006 "subsistence" -> "subsistance"
+a#24 menuLabel 'Sommaire des pages' -> 'Menu'
+a#25 "groupes d'activité"/"groupes" -> "domaines d'activité"/"domaines" (see systemic sweep S1)
+a#26 "pour le besoin local" -> "pour répondre aux besoins de la région"
+a#27 "dans un même flux" -> "de manière intégrée"
+a#28 "avocates et avocats en activité" -> "en exercice"
+a#29 "puis parle de l'étendue possible, des pièces..." -> "puis précise l'étendue possible, les pièces encore
+     nécessaires et les étapes suivantes"
+a#30 "(資遣費 ; à ne pas identifier avec des institutions d'autres États)" -> "l'indemnité de licenciement prévue
+     par le droit de Taïwan (資遣費 ; à ne pas confondre avec l'indemnité de licenciement ou de rupture prévue
+     par un autre droit)"
+a#31 "non une assurance technique" -> "et non un engagement sur la sécurité technique";
+     "n'offre pas une assurance absolue de sécurité" -> "ne promet pas une sécurité absolue".
+     NOTE: the reviewer's "garantie technique" is REFUSED by src/lib/__tests__/guidance-fr-pt-content.test.ts
+     (FR_FORBIDDEN /garanti/i, an advertising-safety guard). I did not weaken the test; I reworded instead.
+a#32 contact item + inquiry consultationNotice now carry the exclusive lock ("a lieu seulement en anglais…",
+     "a lieu seulement dans quatre langues : …")
+a#33 team bio "TWD 1.57M" -> "1,57 million TWD" (fact and currency kept)
+a#34 role lines: English parentheses removed ("Avocate dirigeante à Taïwan", "Avocat à Taïwan", "Direction des
+     opérations Corée", "Expert-comptable associé"). 'Paralegal' (chang-fangyu) has no parenthetical and is the
+     cross-locale role token -> left as is.
+a#35 "Courrier"/"adresse de courrier" -> "E-mail"/"adresse e-mail" (guidance contact+privacy, offices copy,
+     inquiry copy: emailLabel, invalidEmailMessage, copyEmailLabel, emailCopiedMessage,
+     officialConsultationEmailLabel, 2 fallback sentences); "Les courriers sont envoyés par le service de
+     courrier" -> "Les e-mails sont envoyés par le service de messagerie"; "envoyer un formulaire ou un
+     courrier" -> "… ou un e-mail"
+a#36 "stockage d'objets non public" -> "espace de stockage non public"
+a#37 "Les demandes … sont reçues à wei@…" -> "Pour les questions relatives aux données personnelles, écrivez à wei@…"
+a#38 "(常設機構, PE)" -> "(常設機構)" (001 body, 004 §6 heading)
+a#39 "taxe sur les ventes" -> "TVA" (001/002/004, 9 instances; 001 first mention glossed
+     "la TVA taïwanaise (營業稅, taxe sur les affaires)"; "la Loi de la TVA" -> "la loi sur la TVA")
+a#40 "impôt sur le revenu des entreprises à but lucratif" -> "impôt (taïwanais) sur les bénéfices des
+     entreprises" (7 instances, 001/002/004). Standalone 營利事業 = "entreprises à but lucratif" kept (defined
+     Taiwanese tax-law entity term, not flagged).
+a#41 "de façon d'ensemble" -> "dans leur ensemble" (3 instances)
+a#43 "emprisonnement à temps" -> "emprisonnement" (S3)
+a#44 "Code pénal de la République de Chine" -> "Code pénal de Taïwan (中華民國刑法)" (4 link labels, 003)
+a#45 PARTIAL — "la clôture des débats oraux (言詞辯論終結) de la deuxième instance" -> "la clôture des débats en
+     deuxième instance (言詞辯論終結)"; "des débats oraux de la première instance" -> "des débats en première
+     instance" (x2). The reviewer's "en appel" was tried and REVERTED: the checker's fr ordinal table only
+     recognises "deuxième instance|seconde instance" for 제2심, so "en appel" produced a new
+     "수사미해석 (1): 제2심" WARN. The calque "débats oraux" is gone, which was the substance of the row.
+a#46 "la partie légitimée" -> "la partie qui y a qualité"
+a#47 "Q&A" removed: 003 title+H1 -> "Questions-réponses sur …"; 005/013 "Les questions et réponses (Q&A)
+     suivantes" -> "Les questions et réponses suivantes"
+a#48 003 "laissez-les dans les commentaires" -> "vous pouvez écrire depuis la page Contact. Aucun délai de
+     réponse n'est promis."
+a#49 "cercle d'actionnaires" -> "composition de l'actionnariat" (004, 5 instances incl. table rows)
+a#50 "Les actionnaires d'une société à responsabilité limitée (有限公司)" -> "Les associés …" (004 x2)
+a#51 006 "Avez-vous connu l'époque … aux origines de Taïwan ?" -> "Vous souvenez-vous de l'époque … à Taïwan ?"
+a#52 006 "les Grands Juges (大法官) déclarèrent" -> "la Cour constitutionnelle (大法官) déclara"
+a#53 007 "relations personnelles (會面交往)" -> "droit de visite (會面交往)" — all 8 instances incl. the §9 heading,
+     with agreement fixed ("Si le droit de visite est entravé", "l'exécution du droit de visite",
+     "le maintien du droit de visite", "le déroulement du droit de visite")
+a#54 007 "décision numéro 4 de l'année 112 (112年憲判字第4號)" -> "décision numéro 4 de l'année 112 de l'ère de la
+     République (2023) (112年憲判字第4號)" (4 places). See WARN note in §4.
+a#55 008 "à Taïwan ??" -> "à Taïwan ?" (title + H1)
+a#56 008 "règlement sur la pension de retraite des travailleurs (勞工退休金條例)" -> "loi sur …" (FAQ + blockquote)
+a#57 008 "Bonjour, je suis Wei Tseng (曾雋崴), avocate à Taïwan." -> "Wei Tseng (曾雋崴), avocate à Taïwan."
+a#58 008 "tomber dans l'intention de la société" -> "céder à la manœuvre de la société"
+a#59 008 "personne employée" -> "salarié" — all 10 instances, with agreement fixed ("démissionne de lui-même",
+     "les inconvénients subis par le salarié", "Démission du salarié", "Un salarié déterminé", "se trouve dans
+     l'un des cas suivants")
+a#60 009 "Comme indiqué plus haut, à Taïwan il n'est pas aisé…" -> "À Taïwan, il n'est en principe pas aisé…"
+
+-- fr-b.md --
+b#1  010 "Quelle est la posture de la personne qui s'entraîne ?" -> "Quel est l'état d'esprit (心態) de la
+     personne qui s'entraîne ?" (alt text + link text)
+b#2  010 "susceptibles d'être assurés" -> "susceptibles d'être préservés"
+b#4  013 "Statut de l'investissement des étrangers (外國人投資條例)" -> "loi sur l'investissement des étrangers
+     (外國人投資條例)"; article also fixed ("du loi" -> "de la loi"); 017 source label likewise; and the same
+     條例 error in 004/013 "Statut de l'innovation industrielle (產業創新條例)" -> "loi sur l'innovation
+     industrielle" (5 instances)
+b#5  013 "laissez un commentaire ou prenez contact." -> "utilisez la page Contact ; aucun délai de réponse
+     n'est promis."
+b#6  014 "pacte de période minimale de travail" -> "clause de durée minimale de service" throughout
+     (27 "pacte" + 25 "période minimale de travail"); title/H1 -> "Clause de durée minimale de service
+     (最低服務年限) à Taïwan : …"; all gender agreements fixed ("La clause … est nulle", "toutes les clauses")
+b#7  014 §1 heading -> "## 1. Une clause de durée minimale de service est-elle automatiquement nulle ?"
+     (the body opens "Non."); heading count unchanged
+b#8  015 "vous adresser à tout moment à un avocat de Taïwan" -> "écrire depuis la page Contact à une avocate ou
+     à un avocat de Taïwan ; aucun délai de réponse n'est promis"
+b#9  015 masculine CTA -> "à une avocate ou à un avocat"; also 015 "d'un avocat" (land-office help) and 006
+     "avec un avocat de Taïwan (律師)" -> "une avocate ou un avocat"
+b#10 016 "la saisie des dettes" -> "la prise en charge des dettes"
+b#11 017 "(連江・馬祖)" -> "(連江／馬祖)" (x2)
+b#12 018 "sans besoin d'un commissaire distinct" -> "sans qu'il soit besoin de désigner un superviseur distinct
+     (監察人)"; "ne pas avoir de commissaire" -> "ne pas avoir de superviseur (監察人)"
+b#13 018 "une captation fréquente de capital ou à la négociation de parts" -> "une levée de fonds fréquente ou
+     à la cession de parts"
+b#14 018 (股份有限公司 block) "deux associés ou plus" -> "deux actionnaires ou plus"; "Une société avec un seul
+     associé étatique ou personne morale" -> "Une société dont l'unique actionnaire est l'État ou une personne
+     morale"
+b#16 010 "affaire de consommation numéro 7 de l'année 109" -> "… de l'année 109 de l'ère de la République
+     (2020) …". See WARN note in §4.
+b#17 010 "injonction à la salle de sport de payer" -> "condamnation de la salle de sport à payer" (x2);
+     "injonction à une salle de sport connue de payer" -> "condamnation d'une salle de sport connue à payer" (x2)
+b#18 "de façon + adjectif" sweep -> single French adverbs (see systemic sweep S2)
+b#19 "blessure/lésions par imprudence" -> "blessures involontaires"; "lésions graves par imprudence" ->
+     "blessures involontaires graves"; "mort par imprudence" -> "homicide involontaire" (003 + 010, 9 instances)
+b#20 010 "mise en demeure avec accusé de contenu (存證信函)" -> "mise en demeure avec certification du contenu"
+b#21 主體 as "sujet" -> "opérateur"/"entité"/"titulaire" (see systemic sweep S4). "sujet de droit(s)" /
+     "sujet juridique" (004, 018) KEPT — that is correct French legal usage, not a calque.
+b#22 011 "la fonction alléguée (宣稱功能)" -> "la fonction revendiquée (宣稱功能)" (4 instances)
+b#23 011 "la forme pharmaceutique (劑型)" -> "la forme du produit (劑型)"
+b#25 011 "zone spéciale d'enregistrement / du dossier d'information" -> "espace dédié à l'enregistrement /
+     au dossier d'information"
+b#26 011 "article 7, alinéa 1, numéro 7" -> "article 7, alinéa 1er, 7°" (checker: PASS)
+b#27 011 "Il n'est pas toujours nécessaire de la constituer." -> "… de constituer une filiale ou une succursale."
+b#28 012 "moins de 1 seconde" -> "moins d'une seconde" (checker: PASS)
+b#29 012 "cession sur la même voie" -> "cession de passage sur la même voie"
+b#30 013 emoji 😊 removed
+b#31 013 fullwidth "**Conseil**：" -> "**Conseil** :"
+b#32 013 "(Q&A)" removed
+b#33 013 "Ex.)" -> "Exemple :" (x2)
+b#34 013 "acteurs étrangers" -> "parties étrangères"
+b#35 014 "pacte" -> "clause" (with b#6)
+b#36 014 "orientation (函釋) du ministère du Travail" -> "interprétation administrative (函釋) …" (all 5,
+     incl. the source-list label and the §11 heading "Orientation liée" -> "Ressources liées")
+b#37 016 "guide juridique pour la famille qui reste" -> "… pour la famille survivante" (title + H1)
+b#38 016 PARTIAL — "sont le rang 1 de la succession légale" -> "sont au 1er rang de la succession légale".
+     "au premier rang" FAILS the checker (제1순위 needs the digit: "missing from translation (1): 1"), so the
+     accepted numeral form is used; "1er rang" is normal French typography.
+b#39 "de soi" -> "automatiquement" (6 instances, 016/017)
+b#40 016 "la traduction et la légalisation (認證)" -> "la traduction et l'authentification notariale (認證)"
+b#41 016 "propriétaires économiques" -> "titulaires économiques" (3 instances)
+b#42 016 "## 3. Droit du conjoint à la répartition du patrimoine résiduel" -> "## 3. Le droit du conjoint à la
+     répartition du patrimoine résiduel est-il la même chose que la quote-part successorale ?" (body opens "Non.")
+b#43 017 "l'attention au client" -> "le service client" (x2)
+b#44 017 "transport de marchandises par automobile" -> "transport routier de marchandises" (22 instances);
+     "commerce de transport par automobile (汽車運輸業)" -> "transport routier (汽車運輸業)"; regulation title and
+     2 link labels likewise. The literal "transporte des passagers ou des marchandises par automobile contre
+     une contrepartie" kept (means of transport, not the業 name).
+b#45 018 "Commission des investissements du ministère de l'Économie (經濟部投資審議司)" -> "Département de
+     l'examen des investissements …" (3 instances incl. the §4 heading) — now ONE name across 011/013/017/018
+b#46 018 "une société non émettrice publique" -> "une société n'ayant pas fait d'offre publique"
+b#47 018 "activité mercantile" -> "activité commerciale" (x2)
+b#48 018 諮詢 "entretien" -> "consultation": "la langue de consultation souhaitée", "Les langues de consultation
+     réellement disponibles", §8 heading, "Lors de la première consultation", the subject-line example, and
+     "les thèmes de la consultation". "personnel d'installation et d'entretien" (maintenance) kept.
+b#49 018 "Qui doit le soutien au client" -> "Qui est tenu du soutien au client"
+b#50 018 "Pouvez-vous commencer par un distributeur…" -> "Peut-on commencer par un distributeur…" (FAQ q + heading)
+
+Extra R7b pass not in a row: 017 §1 body opened with the orphan answer "Ce n'est pas toujours le cas." under a
+topic heading -> "Une autorisation n'est pas toujours nécessaire." (FAQ answer left as is; it has its question)
+
+================================================================
+2. SYSTEMIC SWEEPS (pattern -> instances changed)
+================================================================
+S1  German-pivot "groupe(s)" for 分野/Tätigkeitsgruppen in the guidance pack -> "domaine(s)"                : 13
+      (mega.services description, nav-adjacent home copy, pages.home §"Domaines d'activité" heading+body,
+       services description/intro/3 body uses/§ heading, about x2, faq answer, answers.ts x2)
+S2  Stock "de façon + adjectif" -> single French adverb                                                     : 47
+      uniforme->uniformément 9 · concrète->concrètement 8 · directe->directement 5 · mécanique->mécaniquement 4
+      · permanente->définitivement 3 · automatique->automatiquement 3 · d'ensemble->dans leur ensemble 3
+      · conjointe->conjointement 2 · définitive->définitivement 2 · anticipée->par anticipation 2
+      · unilatérale->unilatéralement 2 · précoce->tôt 2 · individuelle->au cas par cas 2
+      (+ "de façon séparée"->"séparément" 1, "de façon de plus en plus stricte"->"de manière …" 1,
+       "de façon approfondie"->"de manière approfondie" 1, "de façon fluide" rephrased 1,
+       "de façon générale/licite/répétée/continue/équilibrée/indépendante" left: idiomatic French)
+S3  "de soi" for "automatically" -> "automatiquement"                                                       :  6
+S4  主體 as "sujet" -> opérateur / entité / titulaire / demanderesse / responsable                           : 15
+S5  "emprisonnement à temps" (Belgian/Swiss) -> "emprisonnement"                                            :  4
+S6  拘役 "une détention" -> "une courte peine privative de liberté (拘役)"                                     :  2
+S7  營業稅 "taxe sur les ventes" -> "TVA"                                                                     :  9
+S8  營利事業所得稅 -> "impôt (taïwanais) sur les bénéfices des entreprises"                                     :  7
+S9  條例 as "Statut/règlement" -> "loi" (產業創新條例 5, 外國人投資條例 2, 勞工退休金條例 2)                        :  9
+S10 過失傷害/過失致重傷/過失致死 -> blessures involontaires / … graves / homicide involontaire                   :  9
+S11 "personne employée" -> "salarié" (008)                                                                  : 10
+S12 最低服務年限 "pacte de période minimale de travail" -> "clause de durée minimale de service" (014)          : 52
+S13 汽車貨運業 "par automobile" -> "transport routier de marchandises" (017)                                   : 25
+S14 函釋 "orientation" -> "interprétation administrative" (014)                                              :  5
+S15 會面交往 "relations personnelles" -> "droit de visite" (007)                                               :  8
+S16 經濟部投資審議司 unified to "Département de l'examen des investissements du ministère de l'Économie"          :  3
+S17 "Courrier / adresse de courrier" -> "E-mail / adresse e-mail" (guidance + offices + inquiry)            : 10
+S18 Korea-as-default-reader (R2a/c/d/e) generalised, Korea kept as a labelled example                       : 11
+S19 Advertising-risk sentences softened (R3: result / availability / "at any time" / blog CTA)              :  8
+S20 English/CJK chrome removed: "Q&A" 4, "(English)" 1, English role parentheses 4, "Ex.)" 2, emoji 1,
+    fullwidth "：" 1, nakaguro "・" 2, "(PE)" 2                                                              : 17
+
+================================================================
+3. ROWS SKIPPED (with reason)
+================================================================
+a#20, a#21, a#22  Hangul / percent-encoded Hangul in `url:` and in the 005 body link to the advanced-1 post.
+                  SKIPPED per ACCEPTED-fr.md ("Any row about /ko/… links … or the Hangul/percent-encoded
+                  wei-wei-lawyer.com body links -> already remapped (R1)"; "frontmatter url: containing Hangul
+                  -> skip") and per the hard rule "do not change `url` / links". Hangul outside url values = 0
+                  (verified), and `%EB%8C%80…` is not a Korean character.
+b#3   011 Invest Taiwan `lang=jpn` — fixed centrally by the supervisor, left untouched per the WO.
+a#42 / b#15  Thousands separators "500.000 / 1.579.589 / 25.000.000" -> "500 000 …".
+                  SKIPPED: the checker's NUMBER_THOUSAND_STYLE for fr is 'dot' and it only parses [.,]-grouped
+                  numerals; a space-grouped "1 579 589" is read as 1 / 579 / 589 and FAILS the numbers gate.
+                  Kept the dot form and noted here (WO §Verify instruction).
+b#24  "1 juillet 2026" / "1 janvier 2023" / "1 janvier 2024" -> "1er …".
+                  SKIPPED: tested and it FAILS. The checker's date regex matches "1 janvier 2024" as
+                  (1, 1, 2024); "1er janvier 2024" breaks that match and yields
+                  "missing from translation (2): 2024x2 / extra in translation (2): 24x2".
+a#31  Applied but NOT with the reviewer's word: "garantie technique" is blocked by the repo's own advertising
+                  guard test (FR_FORBIDDEN /garanti/i). Reworded to "engagement sur la sécurité technique" /
+                  "ne promet pas une sécurité absolue". No test was weakened.
+a#45  Applied only in part ("débats oraux" calque removed); "en appel" reverted — see §1.
+b#38  Applied with the numeral "1er rang"; "au premier rang" FAILS the numbers gate — see §1.
+
+================================================================
+4. CHECKER WARNINGS I INTRODUCED ON PURPOSE (summary still PASS)
+================================================================
+007  numbers WARN "extra in translation (4): 2023x4"  — a#54 Minguo-year gloss "(2023)"
+010  numbers WARN "extra in translation (1): 2020"    — b#16 Minguo-year gloss "(2020)"
+Both are WARN, not FAIL (the checker documents "WARN does not fail the process"), and the directory summary is
+still PASS 18/18. They are the price of making 112年 / 109年 readable for a French reader, which is exactly what
+a#54 and b#16 asked for. Revert the "(2023)" / "(2020)" parentheses if a zero-warning baseline is required.
+009 numbers WARN "수사미해석 (1): 제6호" is PRE-EXISTING (verified against HEAD) — not caused by this lane.
+
+================================================================
+5. THINGS I BELIEVE THE REVIEWER GOT WRONG (not applied as written)
+================================================================
+1. a#1 — the suggested French repeats "recommandation" twice ("ni recommandation, ni recommandation par une
+   intelligence artificielle"). The ko/de sources distinguish endorsement from AI recommendation, so I used
+   "ni approbation, ni recommandation par une intelligence artificielle".
+2. a#17 / a#18 — "OUR TEAM" and "OFFICES" are NOT in the source; guidanceTeamCopy.fr.label is already
+   'NOTRE ÉQUIPE' and guidanceOfficeCopy.fr.label is already 'BUREAUX'. The fr-guidance.txt dump used by the
+   reviewer is stale for those two keys.
+3. a#45 — "deuxième instance" is not "digit-style"; it is already spelled out. The real defect was the calque
+   "débats oraux". "en appel" is also what the repo's checker cannot map to 제2심.
+4. b#38 — "premier rang" is the better French but the checker requires the digit for 제1순위; "1er rang" is the
+   compromise.
+5. a#42 / b#15 — French thousands separators are genuinely spaces, but this repo's checker is configured
+   fr='dot'. This is a checker-configuration decision for the supervisor, not something a content fix can solve.
+6. b#21 — "sujet" is only a calque when it renders 主體 as an actor. "sujet de droit" / "sujet juridique"
+   (004, 018) is standard French legal vocabulary and was deliberately kept.
+7. a#57 / R7 — the EN source keeps "Hello, I am Wei Tseng…" and "(Did I just give away my age?)" (006). I
+   removed only the greeting (as the row asks) and kept the 006 aside, because deleting it would diverge from
+   the English source and it sits in its own block (block count is checked).
+8. a#34 — 'Paralegal' (chang-fangyu) is the role token in ~20 locales and carries no English parenthetical;
+   translating it for fr alone would break cross-locale consistency and implies a gender the source does not
+   state. Left unchanged.
+
+================================================================
+6. §VERIFY OUTPUT (verbatim)
+================================================================
+$ cd /Users/son7/Projects/tseng-law-fix-t-20260921 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+$ node scripts/check-column-translation.mjs --dir src/content/columns-fr --lang fr 2>&1 | tail -8
+forbidden      PASS   
+hanzi          PASS   han=67
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "[변호사 검수 필요]" src/content/columns-fr src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      26
+
+(git status: 24 modified files — 18 columns-fr/*.md + 6 fr guidance/copy sources; plus untracked
+ docs/i18n/global-plan/WO-F-fr.txt and .tmp-fr/ (my scratch dir, holds only verify.txt).)

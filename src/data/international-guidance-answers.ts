@@ -267,7 +267,7 @@ export const guidanceAnswers: Record<
   fr: {
     services: {
       answer:
-        'Le cabinet traite six groupes de travail selon le droit de Taïwan : investissement et constitution de sociétés, affaires civiles et dommages-intérêts, mariage, famille et successions, droit du travail, affaires pénales et propriété intellectuelle. L’étendue de chaque affaire est confirmée séparément après qu’une avocate ou un avocat a examiné le contenu que vous envoyez. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.',
+        'Le cabinet traite six domaines de travail selon le droit de Taïwan : investissement et constitution de sociétés, affaires civiles et dommages-intérêts, mariage, famille et successions, droit du travail, affaires pénales et propriété intellectuelle. L’étendue de chaque affaire est confirmée séparément après qu’une avocate ou un avocat a examiné le contenu que vous envoyez. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.',
       sources: ['/fr/faq', '/fr/contact'],
     },
     about: {
@@ -292,7 +292,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Cette partie répond à des questions fréquentes : les six groupes de travail, la préparation avant le contact, le mode de fixation des honoraires et le sens d’un message envoyé. Une demande envoyée attend l’examen d’une avocate ou d’un avocat ; ce n’est pas un avis juridique, ce n’est pas un rendez-vous, et cela ne crée pas de relation entre avocate ou avocat et client. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.',
+        'Cette partie répond à des questions fréquentes : les six domaines de travail, la préparation avant le contact, le mode de fixation des honoraires et le sens d’un message envoyé. Une demande envoyée attend l’examen d’une avocate ou d’un avocat ; ce n’est pas un avis juridique, ce n’est pas un rendez-vous, et cela ne crée pas de relation entre avocate ou avocat et client. La consultation a lieu seulement en anglais, en chinois, en japonais et en coréen.',
       sources: ['/fr/contact', '/fr/services'],
     },
   },

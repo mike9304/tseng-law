@@ -1,5 +1,5 @@
 ---
-title: "Droit du travail à Taïwan : l’indemnité de licenciement est-elle vraiment difficile à obtenir à Taïwan ??"
+title: "Droit du travail à Taïwan : l’indemnité de licenciement est-elle vraiment difficile à obtenir à Taïwan ?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
 lastmod: "2026-09-10"
 date_display: "13 septembre 2025"
@@ -9,18 +9,18 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "À Taïwan, les salariés perçoivent-ils une indemnité de licenciement s’ils démissionnent d’eux-mêmes ?"
-    a: "Non. Contrairement à la Corée, à Taïwan l’obligation de verser l’indemnité de licenciement (資遣費) ne naît que lorsque la société licencie la personne employée ; si la personne employée démissionne elle-même, la société n’a pas à verser d’indemnité de licenciement."
+    a: "Non. Contrairement à certains droits — par exemple la Corée —, à Taïwan l’obligation de verser l’indemnité de licenciement (資遣費) ne naît que lorsque la société licencie le salarié ; si le salarié démissionne de lui-même, la société n’a pas à verser d’indemnité de licenciement."
   - q: "La société doit-elle aussi verser une indemnité de licenciement en cas de licenciement disciplinaire ?"
-    a: "Non. Si la personne employée commet un acte illicite, viole le règlement intérieur ou s’absente sans motif légitime 3 jours de suite (article 12 de la loi sur les normes du travail, 勞動基準法第12條), la société peut licencier sans préavis et n’a pas à verser d’indemnité de licenciement. En revanche, un licenciement économique (article 11) exige un préavis préalable et le versement de l’indemnité de licenciement."
+    a: "Non. Si le salarié commet un acte illicite, viole le règlement intérieur ou s’absente sans motif légitime 3 jours de suite (article 12 de la loi sur les normes du travail, 勞動基準法第12條), la société peut licencier sans préavis et n’a pas à verser d’indemnité de licenciement. En revanche, un licenciement économique (article 11) exige un préavis préalable et le versement de l’indemnité de licenciement."
   - q: "Comment l’indemnité de licenciement se calcule-t-elle à Taïwan ?"
-    a: "Pour chaque 1 année d’ancienneté accomplie, l’employeur doit verser 0,5 mois de salaire moyen à titre d’indemnité de licenciement, au plus 6 mois de salaire. Cette formule s’applique à l’ancienneté à laquelle l’article 12 du règlement sur la pension de retraite des travailleurs (勞工退休金條例) s’applique ; pour l’ancienneté à laquelle l’article 17 de la loi sur les normes du travail (勞動基準法) s’applique, 1 mois de salaire moyen est versé par 1 année, sans plafond."
+    a: "Pour chaque 1 année d’ancienneté accomplie, l’employeur doit verser 0,5 mois de salaire moyen à titre d’indemnité de licenciement, au plus 6 mois de salaire. Cette formule s’applique à l’ancienneté à laquelle l’article 12 de la loi sur la pension de retraite des travailleurs (勞工退休金條例) s’applique ; pour l’ancienneté à laquelle l’article 17 de la loi sur les normes du travail (勞動基準法) s’applique, 1 mois de salaire moyen est versé par 1 année, sans plafond."
 ---
 
-# Droit du travail à Taïwan : l’indemnité de licenciement est-elle vraiment difficile à obtenir à Taïwan ??
+# Droit du travail à Taïwan : l’indemnité de licenciement est-elle vraiment difficile à obtenir à Taïwan ?
 
 ![Image principale](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Bonjour, je suis Wei Tseng (曾雋崴), avocate à Taïwan.
+Wei Tseng (曾雋崴), avocate à Taïwan.
 
 Aujourd’hui, je voudrais parler avec vous de l’indemnité de licenciement (資遣費) à Taïwan.
 
@@ -28,17 +28,17 @@ Aujourd’hui, je voudrais parler avec vous de l’indemnité de licenciement (�
 
 Beaucoup d’entre vous le savent déjà.
 
-En Corée, la société doit verser une indemnité de départ lorsque les salariés quittent l’entreprise
+Dans certains autres droits — la Corée en est un exemple —, la société doit verser une indemnité de départ lorsque les salariés quittent l’entreprise
 
-À Taïwan, c’est toutefois différent de la Corée :
+À Taïwan, la règle est toutefois différente :
 
-L’obligation de verser l’indemnité de licenciement ne naît que lorsque la société licencie la personne employée.
+L’obligation de verser l’indemnité de licenciement ne naît que lorsque la société licencie le salarié.
 
-Si la personne employée démissionne elle-même, la société n’a pas à verser d’indemnité de licenciement.
+Si le salarié démissionne de lui-même, la société n’a pas à verser d’indemnité de licenciement.
 
 ​
 
-Si la personne employée commet toutefois un acte illicite,
+Si le salarié commet toutefois un acte illicite,
 
 **viole le règlement intérieur (工作規則),**
 
@@ -52,21 +52,21 @@ Je vous résume cela dans un tableau simple.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Type** | **Licenciement économique**  **資遣** **員工(經濟解僱)** | **Licenciement disciplinaire**  **解僱** **員工(懲戒解僱)** | **Démission propre de la personne employée**  **員工自請離職** |
-| Signification | S’il existe, chez l’employeur, un besoin d’ajustement du personnel en raison de la situation de l’entreprise, le motif se situe dans le domaine entrepreneurial de l’employeur et non dans la responsabilité de la personne employée. C’est pourquoi l’employeur doit respecter le délai de préavis (預告期間) et verser une indemnité de licenciement, afin de compenser de façon équilibrée les inconvénients de la personne employée. | Si la personne employée commet un acte illicite ou inapproprié, l’employeur peut mettre fin immédiatement au contrat de travail (勞動契約) sans préavis préalable et n’a pas à verser d’indemnité de licenciement. C’est l’une des prérogatives disciplinaires de l’employeur. | La personne employée est libre de mettre fin au contrat à tout moment, mais doit, selon la durée d’emploi, respecter le délai de préavis, afin que l’employeur puisse procéder à la passation et à la recherche d’un remplaçant. |
+| **Type** | **Licenciement économique**  **資遣** **員工(經濟解僱)** | **Licenciement disciplinaire**  **解僱** **員工(懲戒解僱)** | **Démission du salarié**  **員工自請離職** |
+| Signification | S’il existe, chez l’employeur, un besoin d’ajustement du personnel en raison de la situation de l’entreprise, le motif se situe dans le domaine entrepreneurial de l’employeur et non dans la responsabilité du salarié. C’est pourquoi l’employeur doit respecter le délai de préavis (預告期間) et verser une indemnité de licenciement, afin de compenser de manière équilibrée les inconvénients subis par le salarié. | Si le salarié commet un acte illicite ou inapproprié, l’employeur peut mettre fin immédiatement au contrat de travail (勞動契約) sans préavis préalable et n’a pas à verser d’indemnité de licenciement. C’est l’une des prérogatives disciplinaires de l’employeur. | Le salarié est libre de mettre fin au contrat à tout moment, mais doit, selon la durée d’emploi, respecter le délai de préavis, afin que l’employeur puisse procéder à la passation et à la recherche d’un remplaçant. |
 | Conditions | Présentes  (article 11 de la loi taïwanaise sur les normes du travail) | Présentes  (article 12 de la loi taïwanaise sur les normes du travail) | Aucune |
 | Préavis préalable | Requis | Non requis | Requis |
 | Difficulté | Simple | Difficile | Simple |
 | Si la société doit verser l’indemnité de licenciement (資遣費) | Requis | Non requis | Non requis |
-|  | Loi taïwanaise sur les normes du travail, article 11 (勞動基準法第11條) : Sauf si l’un des cas suivants se produit, l’employeur ne peut pas mettre fin au contrat de travail, même après notification préalable à la personne employée.  1. Cessation d’activité (歇業) ou cession d’entreprise (轉讓)  2. Pertes (虧損) ou contraction de l’activité (業務緊縮)  3. Un cas de force majeure exige une interruption d’activité de 1 mois ou plus  4. La nature de l’activité exige une réduction de personnel, et la personne licenciée ne peut pas être mutée à un autre poste approprié  5. Une personne employée déterminée ne peut pas accomplir de façon satisfaisante le travail exigé par le poste | Loi taïwanaise sur les normes du travail, article 12 (勞動基準法第12條) : L’employeur peut licencier sans notification préalable si la personne employée tombe dans l’un des cas suivants.  1. Qui, lors de la conclusion du contrat de travail, fait des déclarations inexactes, induit l’employeur en erreur et fait courir un risque de préjudice à l’entreprise  2. Qui exerce des violences ou insulte gravement l’employeur, sa famille, son représentant (代理人) ou d’autres collègues  3. Qui a été définitivement condamné à une peine d’emprisonnement à temps (有期徒刑) ou à une peine plus lourde, sans que le sursis (緩刑) ait été prononcé ni que la conversion en amende (易科罰金) ait été autorisée  4. Violation grave du contrat de travail ou des règles de travail  5. Qui consomme intentionnellement des machines, outils, matières premières, produits ou autres biens de l’employeur, ou révèle intentionnellement des secrets techniques et commerciaux de l’employeur, et cause un préjudice à l’employeur  6. Absence injustifiée (曠工) sans motif légitime pendant 3 jours consécutifs, ou pendant 6 jours ou plus dans un mois |  |
+|  | Loi taïwanaise sur les normes du travail, article 11 (勞動基準法第11條) : Sauf si l’un des cas suivants se produit, l’employeur ne peut pas mettre fin au contrat de travail, même après notification préalable au salarié.  1. Cessation d’activité (歇業) ou cession d’entreprise (轉讓)  2. Pertes (虧損) ou contraction de l’activité (業務緊縮)  3. Un cas de force majeure exige une interruption d’activité de 1 mois ou plus  4. La nature de l’activité exige une réduction de personnel, et la personne licenciée ne peut pas être mutée à un autre poste approprié  5. Un salarié déterminé ne peut pas accomplir de façon satisfaisante le travail exigé par le poste | Loi taïwanaise sur les normes du travail, article 12 (勞動基準法第12條) : L’employeur peut licencier sans notification préalable si le salarié se trouve dans l’un des cas suivants.  1. Qui, lors de la conclusion du contrat de travail, fait des déclarations inexactes, induit l’employeur en erreur et fait courir un risque de préjudice à l’entreprise  2. Qui exerce des violences ou insulte gravement l’employeur, sa famille, son représentant (代理人) ou d’autres collègues  3. Qui a été définitivement condamné à une peine d’emprisonnement (有期徒刑) ou à une peine plus lourde, sans que le sursis (緩刑) ait été prononcé ni que la conversion en amende (易科罰金) ait été autorisée  4. Violation grave du contrat de travail ou des règles de travail  5. Qui consomme intentionnellement des machines, outils, matières premières, produits ou autres biens de l’employeur, ou révèle intentionnellement des secrets techniques et commerciaux de l’employeur, et cause un préjudice à l’employeur  6. Absence injustifiée (曠工) sans motif légitime pendant 3 jours consécutifs, ou pendant 6 jours ou plus dans un mois |  |
 
 > À Taïwan, pour chaque 1 année d’ancienneté (年資) accomplie,
 > l’employeur doit verser 0,5 mois de salaire moyen (平均工資) à titre d’indemnité de licenciement.
-> (au plus 6 mois de salaire) Cette formule s’applique à l’ancienneté à laquelle l’article 12 du règlement sur la pension de retraite des travailleurs (勞工退休金條例) s’applique ; pour l’ancienneté à laquelle l’article 17 de la loi sur les normes du travail (勞動基準法) s’applique, 1 mois de salaire moyen est versé par 1 année, sans plafond.
+> (au plus 6 mois de salaire) Cette formule s’applique à l’ancienneté à laquelle l’article 12 de la loi sur la pension de retraite des travailleurs (勞工退休金條例) s’applique ; pour l’ancienneté à laquelle l’article 17 de la loi sur les normes du travail (勞動基準法) s’applique, 1 mois de salaire moyen est versé par 1 année, sans plafond.
 
 ​
 
-Si le salaire de la personne employée est élevé et qu’une certaine ancienneté est atteinte,
+Si le salaire du salarié est élevé et qu’une certaine ancienneté est atteinte,
 
 l’indemnité de licenciement est aussi relativement plus élevée.
 
@@ -78,7 +78,7 @@ et poussent les salariés à démissionner eux-mêmes.
 
 Les salariés doivent être prudents
 
-et veiller à ne pas tomber dans l’intention de la société.
+et veiller à ne pas céder à la manœuvre de la société.
 
 ​
 
@@ -172,11 +172,11 @@ enregistré tout le déroulement avec le téléphone mobile
 
 et a pu prouver qu’il n’avait pas démissionné lui-même.
 
-C’est pourquoi il a pu, plus tard, avec l’aide d’une avocate,
+C’est pourquoi il a pu, plus tard, avec l’assistance d’une avocate,
 
-percevoir une indemnité de licenciement élevée,
+faire reconnaître le droit à l’indemnité de licenciement prévue par la loi,
 
-alors que les autres salariés partis n’ont pas eu autant de chance.
+alors que les autres salariés partis n’ont pas pu en faire autant.
 
 ​
 
@@ -218,7 +218,7 @@ et veillez à ce que la société ne vous licencie pas de façon inappropriée
 
 ni ne vous pousse à démissionner vous-même
 
-L’indemnité de licenciement est un droit légal de la personne employée,
+L’indemnité de licenciement est un droit légal du salarié,
 
 et la société doit évidemment la verser.
 

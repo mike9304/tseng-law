@@ -29,7 +29,7 @@ Le véhicule de derrière ne peut dépasser qu’après que le véhicule de deva
 
 Ensuite, le véhicule qui dépasse doit allumer le clignotant gauche, passer à gauche en maintenant une distance d’au moins 0,5 mètre par rapport au véhicule de devant et, une distance de sécurité une fois assurée, allumer le clignotant droit et revenir en sécurité sur la voie d’origine.
 
-Cet ordre de signaux et de cession sur la même voie ne signifie pas que le dépassement serait autorisé en un lieu ou dans une condition interdits. Avant de commencer le dépassement, toutes les conditions de l’article 101 doivent être appréciées ensemble.
+Cet ordre de signaux et de cession de passage sur la même voie ne signifie pas que le dépassement serait autorisé en un lieu ou dans une condition interdits. Avant de commencer le dépassement, toutes les conditions de l’article 101 doivent être appréciées ensemble.
 
 ## Cas d’accident anonymisé traité par ce cabinet
 
@@ -37,7 +37,7 @@ Dans une affaire anonymisée traitée par ce cabinet, le motocycliste A circulai
 
 ![Schéma d’accident montrant la trajectoire de dépassement de la motocyclette et des deux véhicules de devant sur une route de montagne](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A tenta de dépasser les deux véhicules, s’engagea sur la voie opposée et accéléra. Le véhicule n° 2 se préparait aussi à dépasser le véhicule n° 1 : moins de 1 seconde après avoir allumé le clignotant, il s’engagea sur la voie opposée. La motocyclette n’avait pas de marge de freinage suffisante et entra en collision avec le véhicule n° 2.
+A tenta de dépasser les deux véhicules, s’engagea sur la voie opposée et accéléra. Le véhicule n° 2 se préparait aussi à dépasser le véhicule n° 1 : moins d’une seconde après avoir allumé le clignotant, il s’engagea sur la voie opposée. La motocyclette n’avait pas de marge de freinage suffisante et entra en collision avec le véhicule n° 2.
 
 B subit de graves lésions à la tête et décéda sur place ; A perdit conscience et fut transporté à l’hôpital.
 

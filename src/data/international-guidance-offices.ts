@@ -823,9 +823,9 @@ export const guidanceFooterCopy: Record<GuidanceLocale, GuidanceFooterCopy> = {
     blogLabel: 'Blog',
     websiteLabel: 'Site officiel',
     sitemapLabel: 'Plan du site',
-    copyEmailLabel: 'Copier l’adresse de courrier',
-    emailCopiedMessage: 'L’adresse de courrier a été copiée.',
-    officialConsultationEmailLabel: 'Courrier officiel pour la consultation',
+    copyEmailLabel: 'Copier l’adresse e-mail',
+    emailCopiedMessage: 'L’adresse e-mail a été copiée.',
+    officialConsultationEmailLabel: 'Adresse e-mail officielle pour la consultation',
   },
   pt: {
     officeLabel: 'Escritórios',

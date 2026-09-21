@@ -90,6 +90,24 @@ describe('LocaleFlagSwitcher', () => {
       ['uk', 'Українська'],
       ['el', 'Ελληνικά'],
       ['he', 'עברית'],
+      ['bn', 'বাংলা'],
+      ['ur', 'اردو'],
+      ['fa', 'فارسی'],
+      ['my', 'မြန်မာ'],
+      ['ta', 'தமிழ்'],
+      ['ne', 'नेपाली'],
+      ['km', 'ខ្មែរ'],
+      ['mn', 'Монгол'],
+      ['sk', 'Slovenčina'],
+      ['bg', 'Български'],
+      ['hr', 'Hrvatski'],
+      ['sr', 'Srpski'],
+      ['sl', 'Slovenščina'],
+      ['lt', 'Lietuvių'],
+      ['lv', 'Latviešu'],
+      ['et', 'Eesti'],
+      ['ca', 'Català'],
+      ['is', 'Íslenska'],
     ]);
     expect(LOCALE_FLAG_OPTIONS.map((option) => option.locale)).toEqual([...PUBLIC_LOCALES_8]);
 
@@ -241,7 +259,7 @@ describe('LocaleFlagSwitcher', () => {
       );
       element.props.onClick?.();
     });
-    expect(onLocaleSelect.mock.calls.map(([target]) => target)).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi', 'cs', 'hu', 'ro', 'uk', 'el', 'he']);
+    expect(onLocaleSelect.mock.calls.map(([target]) => target)).toEqual(['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi', 'cs', 'hu', 'ro', 'uk', 'el', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne', 'km', 'mn', 'sk', 'bg', 'hr', 'sr', 'sl', 'lt', 'lv', 'et', 'ca', 'is']);
     const guidanceColumnsHref = new RegExp(
       `href="/(${GUIDANCE_LOCALES_4.join('|')})/columns/`,
     );

@@ -440,11 +440,11 @@ export const GUIDANCE_HOME_PATHS: Record<GuidanceLocale, GuidanceHomePaths> = {
   my: { // SCAFFOLD(th)
     setup: {
       label: 'ข้อมูลการจัดตั้งบริษัทในไต้หวัน',
-      href: '/th/services',
+      href: '/my/services',
     },
     legal: {
       label: 'ข้อมูลปัญหาทางกฎหมายในไต้หวัน',
-      href: '/th/faq',
+      href: '/my/faq',
     },
     ariaLabel: 'สองเส้นทางข้อมูล',
   },
@@ -462,33 +462,33 @@ export const GUIDANCE_HOME_PATHS: Record<GuidanceLocale, GuidanceHomePaths> = {
   ne: { // SCAFFOLD(hi)
     setup: {
       label: 'ताइवान में कंपनी स्थापना की जानकारी',
-      href: '/hi/services',
+      href: '/ne/services',
     },
     legal: {
       label: 'ताइवान कानूनी जानकारी',
-      href: '/hi/faq',
+      href: '/ne/faq',
     },
     ariaLabel: 'जानकारी के दो मार्ग',
   },
   km: { // SCAFFOLD(th)
     setup: {
       label: 'ข้อมูลการจัดตั้งบริษัทในไต้หวัน',
-      href: '/th/services',
+      href: '/km/services',
     },
     legal: {
       label: 'ข้อมูลปัญหาทางกฎหมายในไต้หวัน',
-      href: '/th/faq',
+      href: '/km/faq',
     },
     ariaLabel: 'สองเส้นทางข้อมูล',
   },
   mn: { // SCAFFOLD(ru)
     setup: {
       label: 'Информация о регистрации компании на Тайване',
-      href: '/ru/services',
+      href: '/mn/services',
     },
     legal: {
       label: 'Информация по правовым вопросам Тайваня',
-      href: '/ru/faq',
+      href: '/mn/faq',
     },
     ariaLabel: 'Два пути к информации',
   },
@@ -594,11 +594,11 @@ export const GUIDANCE_HOME_PATHS: Record<GuidanceLocale, GuidanceHomePaths> = {
   is: { // SCAFFOLD(cs)
     setup: {
       label: 'Informace o zakládání společností na Tchaj-wanu',
-      href: '/cs/services',
+      href: '/is/services',
     },
     legal: {
       label: 'Právní informace o Tchaj-wanu',
-      href: '/cs/faq',
+      href: '/is/faq',
     },
     ariaLabel: 'Dvě informační cesty',
   },

@@ -143,9 +143,9 @@ describe('guidance home matches the English home composition', () => {
         .replace(new RegExp(`"/${locale}/`, 'g'), '"/{locale}/')
         .replace(new RegExp(`(data-locale|lang)="${locale}"`, 'g'), '$1="{locale}"'),
     );
-    for (const shape of shapes) {
-      expect(shape).toEqual(shapes[0]);
-    }
+    shapes.forEach((shape, index) => {
+      expect(shape, `guidance home of ${GUIDANCE_LOCALES_4[index]} differs structurally from ${GUIDANCE_LOCALES_4[0]}`).toEqual(shapes[0]);
+    });
   });
 
   it('labels source-language columns instead of presenting them as translated', () => {

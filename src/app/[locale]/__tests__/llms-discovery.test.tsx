@@ -218,7 +218,7 @@ describe('/[locale]/llms.txt route — guidance locales', () => {
 });
 
 describe('root llms.txt guidance catalog links', () => {
-  it('stays inside the 8 KiB root budget and the documented grammar', () => {
+  it('stays inside the 16 KiB root budget and the documented grammar', () => {
     const body = buildRootLlmsTxt();
 
     expect(new TextEncoder().encode(body).byteLength).toBeLessThanOrEqual(ROOT_LLMS_TXT_MAX_BYTES);

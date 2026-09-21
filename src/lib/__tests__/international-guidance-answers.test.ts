@@ -45,6 +45,24 @@ const GUIDANCE_LOCALES = [
   'uk',
   'el',
   'he',
+  'bn',
+  'ur',
+  'fa',
+  'my',
+  'ta',
+  'ne',
+  'km',
+  'mn',
+  'sk',
+  'bg',
+  'hr',
+  'sr',
+  'sl',
+  'lt',
+  'lv',
+  'et',
+  'ca',
+  'is',
 ] as const satisfies readonly GuidanceLocale[];
 
 /**
@@ -103,6 +121,23 @@ const CONSULTATION_LANGUAGE_TERMS: Record<string, readonly string[]> = {
   da: ['engelsk', 'kinesisk', 'japansk', 'koreansk'],
   nb: ['engelsk', 'kinesisk', 'japansk', 'koreansk'],
   fi: ['englanniksi', 'kiinaksi', 'japaniksi', 'koreaksi'],
+  bn: ['ইংরেজি', 'চীনা', 'জাপানি', 'কোরীয়'],
+  ur: ['انگریزی', 'چینی', 'جاپانی', 'کوریائی'],
+  fa: ['انگلیسی', 'چینی', 'ژاپنی', 'کره‌ای'],
+  ta: ['ஆங்கிலம்', 'சீனம்', 'ஜப்பானியம்', 'கொரியன்'],
+  sk: ['anglicky', 'čínsky', 'japonsky', 'kórejsky'],
+  bg: ['английски', 'китайски', 'японски', 'корейски'],
+  hr: ['engleskom', 'kineskom', 'japanskom', 'korejskom'],
+  sr: ['engleskom', 'kineskom', 'japanskom', 'korejskom'],
+  sl: ['angleščini', 'kitajščini', 'japonščini', 'korejščini'],
+  lt: ['anglų', 'kinų', 'japonų', 'korėjiečių'],
+  lv: ['angļu', 'ķīniešu', 'japāņu', 'korejiešu'],
+  et: ['inglise', 'hiina', 'jaapani', 'korea'],
+  ca: ['anglès', 'xinès', 'japonès', 'coreà'],
+  my: ['ภาษาอังกฤษ', 'ภาษาจีน', 'ภาษาญี่ปุ่น', 'ภาษาเกาหลี'], // PLACEHOLDER(th) until the my lane is integrated
+  km: ['ภาษาอังกฤษ', 'ภาษาจีน', 'ภาษาญี่ปุ่น', 'ภาษาเกาหลี'], // PLACEHOLDER(th) until the km lane is integrated
+  ne: ['अंग्रेज़ी', 'चीनी', 'जापानी', 'कोरियाई'], // PLACEHOLDER(hi) until the ne lane is integrated
+  mn: ['английском', 'китайском', 'японском', 'корейском'], // PLACEHOLDER(ru) until the mn lane is integrated
 };
 
 /**
@@ -252,6 +287,24 @@ const SERVICES_SCOPE_TERMS: Record<string, readonly [string, RegExp]> = {
   uk: ['обсяг', /обсяг/i],
   el: ['εύρος', /εύρος/i],
   he: ['היקף', /היקף/],
+  bn: ['পরিধি', /পরিধি/],
+  ur: ['دائرہ', /دائرہ/],
+  fa: ['محدودهٔ', /محدوده/],
+  ta: ['எல்லை', /எல்லை/],
+  sk: ['Rozsah', /rozsah/i],
+  bg: ['Обхват', /обхват/i],
+  hr: ['Opseg', /opseg/i],
+  sr: ['Obim', /obim/i],
+  sl: ['Obseg', /obseg/i],
+  lt: ['apimtis', /apimtis/i],
+  lv: ['apjoms', /apjoms/i],
+  et: ['ulatus', /ulatus/i],
+  ca: ['abast', /abast/i],
+  my: ['ขอบเขต', /ขอบเขต/], // PLACEHOLDER(th)
+  km: ['ขอบเขต', /ขอบเขต/], // PLACEHOLDER(th)
+  ne: ['दायरा', /दायरा/], // PLACEHOLDER(hi)
+  mn: ['Объём', /Объём/], // PLACEHOLDER(ru)
+  is: ['rozsah', /rozsah/i], // PLACEHOLDER(cs)
 };
 
 const SERVICES_ACCEPTANCE_PATTERNS: Record<
@@ -366,6 +419,39 @@ const SERVICES_ACCEPTANCE_PATTERNS: Record<
     ['יתקבל', /יתקבל/],
     ['נקבע', /נקבע/],
   ],
+  bn: [['যাচাইয়ের অপেক্ষা', /যাচাইয়ের অপেক্ষা/], ['আইনি মতামত নয়', /আইনি মতামত নয়/]],
+  ur: [['جانچ کا انتظار', /جانچ کا انتظار/], ['قانونی رائے نہیں', /قانونی رائے نہیں/]],
+  fa: [['در انتظار بررسی', /در انتظار بررسی/], ['نظر حقوقی نیست', /نظر حقوقی نیست/]],
+  ta: [['ஆய்வுக்காகக் காத்திருக்', /ஆய்வுக்காகக் காத்திருக்/], ['சட்டக் கருத்து அல்ல', /சட்டக? கருத்து அல்ல/]],
+  sk: [['čaká na posúdenie', /čaká na posúdenie/i], ['nie je právnym stanoviskom', /nie je právnym stanoviskom/i]],
+  bg: [['чака преглед', /чака преглед/i], ['не е правно становище', /не е правно становище/i]],
+  hr: [['čeka pregled', /čeka pregled/i], ['nije pravno mišljenje', /nije pravno mišljenje/i]],
+  sr: [['čeka ocenu', /čeka ocenu/i], ['nije pravno mišljenje', /nije pravno mišljenje/i]],
+  sl: [['čaka na oceno', /čaka na oceno/i], ['ni pravno mnenje', /ni pravno mnenje/i]],
+  lt: [['laukia įvertinimo', /laukia įvertinimo/i], ['nėra teisinė nuomonė', /nėra teisinė nuomonė/i]],
+  lv: [['gaida izvērtējumu', /gaida izvērtējumu/i], ['nav juridisks atzinums', /nav juridisks atzinums/i]],
+  et: [['ootab läbivaatamist', /ootab läbivaatamist/i], ['ei ole õiguslik seisukoht', /ei ole õiguslik seisukoht/i]],
+  ca: [['espera revisió', /espera revisió/i], ['no és assessorament jurídic', /no és assessorament jurídic/i]],
+  my: [
+    ['รับเรื่องใดเรื่องหนึ่ง', /รับเรื่องใดเรื่องหนึ่ง/],
+    ['พิจารณาหลังจาก', /พิจารณาหลังจาก/],
+  ],
+  km: [
+    ['รับเรื่องใดเรื่องหนึ่ง', /รับเรื่องใดเรื่องหนึ่ง/],
+    ['พิจารณาหลังจาก', /พิจารณาหลังจาก/],
+  ],
+  ne: [
+    ['मामला स्वीकार', /मामला स्वीकार/],
+    ['स्वीकृति का निर्णय', /स्वीकृति का निर्णय/],
+  ],
+  mn: [
+    ['не юридическая консультация', /не юридическая консультация/],
+    ['не подтверждённая запись', /не подтверждённая запись/],
+  ],
+  is: [
+    ['bude věc přijata', /bude věc přijata/i],
+    ['rozhodne', /rozhodne/i],
+  ],
 };
 
 /** Every site-internal path an answer may cite. */
@@ -381,7 +467,7 @@ const ALLOWED_SOURCES = new Set<string>([
  * as a single sentence — a stricter check than splitting would give.
  */
 function sentencesOf(locale: string, text: string): string[] {
-  if (locale === 'th' || locale === 'zh-hans') return [text];
+  if (locale === 'th' || locale === 'my' || locale === 'km' || locale === 'zh-hans') return [text];
   return text.split(/(?<=[.!?])\s+/).filter((part) => part.trim().length > 0);
 }
 
@@ -427,7 +513,7 @@ describe('guidanceAnswers', () => {
   it('keeps every answer inside its length window', () => {
     for (const { locale, key, entry } of entries) {
       const answer = entry?.answer ?? '';
-      if (locale === 'th') {
+      if (locale === 'th' || locale === 'my' || locale === 'km') {
         const chars = [...answer].length;
         expect(chars, `${locale}/${key} chars=${chars}`).toBeGreaterThanOrEqual(MIN_THAI_CHARS);
         expect(chars, `${locale}/${key} chars=${chars}`).toBeLessThanOrEqual(MAX_THAI_CHARS);

@@ -1,0 +1,50 @@
+WO-R-ms-a — Native-quality review of the Malay public content on tseng-law.com (read-only review, part a)
+
+You are a senior Malay legal editor / translator working for readers in Malaysia. You are NOT the author. Your job is to find what a native reader would notice as wrong, machine-like, or foreign, and to propose the natural Malay wording. Be strict: this text will be read by real clients of a Taiwanese law firm.
+
+Workspace: /Users/son7/Projects/tseng-law-global-picker-20260918 (read only, except your single output file below)
+Do NOT edit any source file. Do NOT run git. Do NOT install anything. Write ONLY: docs/i18n/global-plan/reviews/native/ms-a.md
+
+## What to review (in this order)
+1. Guidance pack strings: docs/i18n/global-plan/reviews/native/input/ms-guidance.txt (path → text; 365 strings — these are the site's 10 guidance pages: home, services, about, lawyers, pricing, contact, faq, privacy, disclaimer, columns index, plus team bios, inquiry form copy, FAQ answers, llms.txt notice).
+2. Columns 001–009 in src/content/columns-ms/ : 001-taiwan-company-establishment-basics.md, 002-withdraw-capital-taiwan-company.md, 003-taiwan-traffic-accident-procedure.md, 004-taiwan-company-subsidiary-vs-branch.md, 005-taiwan-company-establishment-advanced-2.md, 006-taiwan-massage-history-law.md, 007-taiwan-divorce-lawsuit-qna.md, 008-taiwan-labor-severance-law.md, 009-taiwan-voluntary-resignation-severance.md
+
+Reference for meaning: the English versions in src/content/columns-en/<same file name>. Open the English file only when a Malay sentence seems off; do not translate the whole thing again. For the guidance pack, the German dump docs/i18n/global-plan/reviews/native/input/de-guidance.txt has the same paths and can serve as a meaning reference.
+
+## Product facts you must respect (do not "fix" these — they are deliberate)
+- The firm (Hovering International Law Firm, Taiwan) consults ONLY in English, Chinese (中文), Japanese and Korean. Malay pages are guidance only. Sentences saying "no consultation in Malay, no interpreter promised, no reply-time promise, no free first meeting, no guarantee of result" are intentional and must stay negative — but you may fix their wording if it reads unnaturally.
+- The lead attorney Wei Tseng (曾雋崴) is a woman. Report any masculine form, pronoun, or title used for her.
+- Taiwanese legal terms are given with Traditional Chinese in parentheses (e.g. 工作許可). Keep that convention; report only wrong or missing glosses.
+- Taiwan attorney advertising rules forbid win rates, guarantees, "best/only" claims. Report any such wording as P1.
+- Company/product names, URLs, image paths, frontmatter keys, numbers and dates must not be changed; do report a wrong date/number/currency format for Malaysia.
+
+## What to look for (categories)
+A  Mistranslation / meaning shifted or lost vs. English / legal term wrong.
+B  Grammar, spelling, case/gender/agreement, punctuation and typography rules of Malay (quotes, spaces before punctuation, decimal/thousand separators, capitalization).
+C  Machine-translation feel: calques from English/Korean/Chinese, word order copied from the source, repeated stock phrases, overly formal or oddly informal register, sentences no native would write. This category matters most.
+D  Localization gaps: things a Malaysia reader expects to be adapted (how "Korean companies" was generalized to "foreign companies", currency/date/number presentation, forms of address, how the four consultation languages are named, country or nationality references that don't fit the reader).
+E  Rule violations: consultation in Malay implied, interpreter/free consult/24-7/reply-time promises, win rates, guarantees, "best/only".
+F  Gender: masculine forms for attorney Wei Tseng.
+G  Language mix-ups: sentences or words left in another language (Korean, English, Chinese where not a gloss, German, a neighbouring language), or wrong script variety (e.g. Traditional vs Simplified, Bokmål vs Nynorsk, European vs Brazilian Portuguese inconsistency).
+
+Severity: P1 = must fix before a client sees it (A, E, F, G, or a B/D error that changes meaning). P2 = clearly non-native or wrong, fix soon (most C and B). P3 = polish.
+
+## Output file format (write it incrementally — after the guidance pack, then after every 3 columns, overwrite the file with everything so far; if you run out of steps, what is on disk still counts)
+```
+# Malay native review — part a (ms)
+reviewer: Grok 4.6 · date: 2026-09-21 · scope: <list files actually reviewed>
+
+## Verdict
+naturalness (1 = machine, 5 = native professional): N/5 for guidance pack, N/5 for columns
+variety used: <e.g. European Portuguese, consistent / mixed with Brazilian in files 003, 007>
+systemic patterns (max 6, each one line, with 1 example quote):
+- ...
+
+## Findings
+| # | sev | cat | file | quote (≤120 chars, verbatim) | problem (English, one line) | suggested Malay rewrite |
+|---|-----|-----|------|------|------|------|
+| 1 | P1 | A | columns-ms/003-... | "..." | ... | ... |
+```
+Rules for findings: cite verbatim so the quote can be found with grep; one row per distinct problem (if a wrong term repeats, one row + "also in files …"); max 80 rows per part, ordered P1 → P2 → P3; do not list P3 unless you have fewer than 40 P1/P2 rows. Do not invent problems to fill the table; if a file is genuinely good, say so in the verdict.
+
+Finish by printing the last 15 lines of your output file.

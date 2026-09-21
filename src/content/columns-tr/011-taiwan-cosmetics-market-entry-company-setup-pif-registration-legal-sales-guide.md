@@ -111,7 +111,7 @@ Tayvan satış hazırlığı aşağıdaki sırayla denetlenirse bir rejimin diğ
 5. Etiketi, satış sayfasını, reklamı ve işbirliği paylaşımlarını bütün sunum ölçütüne göre inceleyin.
 6. Denetim ve düzeltme taleplerine, şikâyetlere, güvenlik bilgisine ve gereken izlemeye yanıt verecek usulü işletin.
 
-Şirket ve şubenin temel yapısı [Tayvan’da şirket kuruluşunun temelleri](/tr/columns/taiwan-company-establishment-basics) yazısında, bağlı destek kapsamı [Tayvan yatırım ve şirket kuruluşu hizmetleri](/ko/services/investment) sayfasında, sorumlu avukat bilgisi [Avukat Wei Tseng profili](/ko/lawyers/wei-tseng) sayfasında görülebilir.
+Şirket ve şubenin temel yapısı [Tayvan’da şirket kuruluşunun temelleri](/tr/columns/taiwan-company-establishment-basics) yazısında, bağlı destek kapsamı [Hangi işleri yürütürüz](/tr/services) sayfasında, sorumlu avukat bilgisi [Hovering uluslararası ekibi](/tr/lawyers) sayfasında görülebilir.
 
 ### Resmi kaynaklar
 

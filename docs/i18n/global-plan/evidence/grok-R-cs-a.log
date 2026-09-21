@@ -1,0 +1,25 @@
+[WO start 2026-09-21 16:08:36]
+Native review is in `docs/i18n/global-plan/reviews/native/cs-a.md` (guidance pack + columns 001–009). Naturalness: **3/5 guidance**, **2/5 columns**. Wei Tseng is consistently feminine — no gender finding.
+
+Hardest P1s: Polish leak `Kierující advokátka`; leftover `OUR TEAM` / `OFFICES`; Hangul URLs and `/ko/` links; `vazba` for 拘役; `zpronevěra` for 背信; `apelující na veřejnou nabídku` for 公開發行公司; Korea-treaty caveat dropped in 001.
+
+Last 15 lines of the file:
+
+```
+| 46 | P2 | C | columns-cs/009-taiwan-voluntary-resignation-severance.md | "Ve většině případů ten, kdo se připravil předem, má chráněná práva." | Slogan-like and slightly fatalistic; not how a Czech labour note should close. | Ve sporech o odstupné proto rozhoduje, která strana dříve ukončí smlouvu s řádným důvodem a s důkazy. |
+| 47 | P2 | D | cs-guidance.txt | "pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pchingtungu (屏東)" | Pchingtung is English Pingtung with a Czech ending; standard transcription is Pching-tung. also officeTitles.pingtung, answers.about | … a Pching-tungu (屏東) |
+| 48 | P2 | D | cs-guidance.txt | "podle taiwanského práva" | Guidance uses taiwanský; columns use tchajwanský — Institute of Czech prefers tchajwanský next to Tchaj-wan. | podle tchajwanského práva |
+| 49 | P2 | D | cs-guidance.txt | "dosáhla rozsudku prvního stupně ve výši TWD 1.57M" | English decimal and M-abbreviation; Czech uses comma and million. (Amount itself is a product fact — report format only.) | dosáhla rozsudku prvního stupně ve výši 1,57 mil. TWD |
+| 50 | P2 | D | columns-cs/001-taiwan-company-establishment-basics.md | "nejméně TWD 500.000 (新臺幣)" | Period as thousands separator is German; Czech uses a space. systemic in 001–007 | nejméně 500 000 TWD (新臺幣) |
+| 51 | P2 | D | columns-cs/003-taiwan-traffic-accident-procedure.md | "Sazebník plnění (…) změněný 2026-05-29 se uplatní na nehody, které nastaly od 2026-07-01" | ISO dates on a Czech page; 007 by contrast already uses 25. 7. 2026. | Sazebník plnění změněný 29. 5. 2026 se uplatní na nehody od 1. 7. 2026 |
+| 52 | P2 | D | columns-cs/005-taiwan-company-establishment-advanced-2.md | "Na co dát pozor při převodu kapitálu (資本額) z Koreje" | Point 1 is honestly labelled as Korean banking; Q5 then asks only about hiring Korean nationals as if that were the general foreign-staff rule. | 5. Může společnost zaměstnávat cizince (včetně osob s korejskou státní příslušností)? |
+| 53 | P2 | D | columns-cs/008-taiwan-labor-severance-law.md | "Dobrý den, jsem Wei Tseng (曾雋崴), advokátka na Tchaj-wanu." | Informal blog greeting plus lowercase s vámi on a site that otherwise viká with Vaše. | (Drop the greeting.) Advokátka Wei Tseng (曾雋崴) níže shrnuje pravidla odstupného (資遣費) na Tchaj-wanu. |
+| 54 | P2 | E | cs-guidance.txt | "Porada probíhá ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky." | Inquiry banner lists four languages without the exclusive pouze used in the FAQ/llms lock. also answers.faq | Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky. |
+| 55 | P2 | G | columns-cs/003-taiwan-traffic-accident-procedure.md | "Q&A k postupu po dopravních nehodách na Tchaj-wanu" | English Q&A left in Czech titles. also 005 “otázky a odpovědi (Q&A)”, 007 title | Otázky a odpovědi k postupu po dopravních nehodách na Tchaj-wanu |
+| 56 | P2 | C | columns-cs/001-taiwan-company-establishment-basics.md | "Minimální kapitál vlastní odvětví, přiměřenost podnikatelského plánu, bankovní přezkum" | vlastní can be read as the verb “owns”; the English list (“industry-specific minimum capital, …”) collapses. also FAQ answer | Minimální kapitál daného odvětví, přiměřenost podnikatelského plánu, bankovní přezkum |
+| 57 | P2 | C | columns-cs/001-taiwan-company-establishment-basics.md | "Mezi těmito případy, existuje-li zaměstnavatel, společnost nebo pobočka, méně než 1 rok" | Punctuation copies Chinese/English so the time condition hangs. | Existuje-li v těchto případech zaměstnavatel — společnost nebo pobočka — méně než 1 rok |
+| 58 | P2 | C | cs-guidance.txt | "Nemůžete-li užít žádný ze čtyř jazyků" | užít jazyk is stilted; Czech says neovládat / nemluvit. systemic in contact/FAQ/inquiry | Pokud neovládáte žádný ze čtyř jazyků konzultace |
+| 59 | P2 | C | columns-cs/003-taiwan-traffic-accident-procedure.md | "usiloval o to, aby byla získána náhrada pokud možno nejvyšší" | English “maximum compensation” copied in a lawyer-shopping paragraph; word order is machine-like (not a firm “best” claim). | a usiloval o náhradu v plné výši, kterou lze v dané věci odůvodnit |
+| 60 | P2 | C | columns-cs/008-taiwan-labor-severance-law.md | "získat vysoké odstupné, zatímco jiní odešlí zaměstnanci tolik štěstí neměli" | Case anecdote framed as luck versus a legal standard; register is tabloid, not a firm column. | a později s pomocí advokáta vymoci odstupné; ostatní zaměstnanci, kteří odešli bez důkazů, stejný nárok neprosadili |
+```
+=== end code=0 2026-09-21 16:16:53 ===

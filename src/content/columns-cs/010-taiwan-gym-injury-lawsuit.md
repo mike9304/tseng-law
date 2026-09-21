@@ -114,6 +114,6 @@ Pád na podlaze provozovny, zdravotní újma jídlem a úraz při využívání 
 ---
 
 > Další čtení:
-> - [Průvodce procesní advokátkou na Tchaj-wanu](/ko/taiwan-litigation-lawyer)
-> - [Advokátka na Tchaj-wanu hovořící korejsky](/ko/korean-lawyer-in-taiwan)
-> - [Průvodce vyhledáním advokáta na Tchaj-wanu](/ko/taiwan-lawyer)
+> - [Jak se stanoví rozsah práce a náklady](/cs/pricing)
+> - [Mezinárodní tým Hovering](/cs/lawyers)
+> - [O Hovering International Law Firm](/cs/about)

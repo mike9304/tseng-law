@@ -140,8 +140,8 @@ faq:
 
 ## Связанные разъяснения
 
-- [Услуги по инвестициям и созданию компании на Тайване](/ko/services/investment)
-- [Профиль адвоката Wei Tseng](/ko/lawyers/wei-tseng)
+- [Какие дела мы ведём](/ru/services)
+- [Международная команда Hovering](/ru/lawyers)
 - [Контакты](/ru/contact)
 
 ---

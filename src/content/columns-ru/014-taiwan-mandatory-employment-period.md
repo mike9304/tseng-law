@@ -183,7 +183,7 @@ faq:
 
 ## 11. Связанные материалы
 
-- [Услуги по трудовому праву Тайваня](/ko/services/labor)
+- [Какие дела мы ведём](/ru/services)
 - [Указания о добровольном уходе и исключениях по выходному пособию](/ru/columns/taiwan-voluntary-resignation-severance)
 - [Контакты](/ru/contact)
 

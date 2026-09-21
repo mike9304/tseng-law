@@ -138,7 +138,7 @@ Anlaşmanın sınırlı oranı, yalnızca bir anlaşma var diye kendiliğinden u
 - [Tayvan Göç İdaresinin (內政部移民署) sürekli oturmaya ilişkin açıklaması](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Taipei kentinin faaliyet yeri ön sorgulamasına ilişkin açıklaması](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-İlgili çalışma kapsamı [Tayvan’da yatırım ve şirket kuruluşu hizmetleri](/ko/services/investment) sayfasında, görevli avukatın geçmişi ve dilleri [Avukat Wei Tseng profili](/ko/lawyers/wei-tseng) sayfasında görülebilir. Somut bir dosyaya ilişkin sorular için [İletişim](/tr/contact) yolunu kullanınız.
+İlgili çalışma kapsamı [Hangi işleri yürütürüz](/tr/services) sayfasında, görevli avukatın geçmişi ve dilleri [Hovering uluslararası ekibi](/tr/lawyers) sayfasında görülebilir. Somut bir dosyaya ilişkin sorular için [İletişim](/tr/contact) yolunu kullanınız.
 
 Bu yazı, Tayvan’da şirket kuruluşu ve ilgili kurallar hakkında eğitim amacıyla genel bilgi belgesidir; somut bir dosyada hukuki veya mali görüş değildir ve belirli bir sonuç vaat etmez. Gereken usuller ve sonuçlar yatırım yapısına, sektöre, başvuranın uyruğuna ve oturma statüsüne ile yetkili merciin en güncel uygulamasına göre değişebilir; bir yatırım, sözleşme veya istihdam yürütülmeden önce en güncel resmi kaynaklar ve dosyanın kendi olguları incelenmelidir.
 

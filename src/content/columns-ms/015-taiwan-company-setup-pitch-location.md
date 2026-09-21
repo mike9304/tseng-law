@@ -78,6 +78,6 @@ Peraturan pihak berkuasa pentadbiran boleh berubah kerap; sebelum pendaftaran ba
 ---
 
 > Lihat juga:
-> - [Panduan umum penubuhan syarikat di Taiwan — prosedur, kos dan bentuk undang-undang](/ko/guides/taiwan-company-setup)
-> - [Peguam di Taiwan yang boleh berbahasa Korea](/ko/korean-lawyer-in-taiwan)
-> - [Rujukan mengenai peguam bagi badan undang-undang dan penubuhan syarikat di Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Hal yang kami kendalikan](/ms/services)
+> - [Pasukan antarabangsa Hovering](/ms/lawyers)
+> - [Bagaimana anda menghubungi firma](/ms/contact)

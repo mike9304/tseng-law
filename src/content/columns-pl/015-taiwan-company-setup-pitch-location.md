@@ -78,6 +78,6 @@ Reguły organów administracyjnych mogą często się zmieniać; przed rejestrac
 ---
 
 > Zobacz także:
-> - [Ogólny przewodnik po zakładaniu spółki na Tajwanie — procedury, koszty i formy prawne](/ko/guides/taiwan-company-setup)
-> - [adwokat na Tajwanie mówiąca po koreańsku](/ko/korean-lawyer-in-taiwan)
-> - [Wskazówki adwokata ds. osób prawnych i zakładania spółki na Tajwanie](/ko/taiwan-company-setup-lawyer)
+> - [Jakie sprawy prowadzimy](/pl/services)
+> - [Międzynarodowy zespół Hovering](/pl/lawyers)
+> - [Jak skontaktować się z kancelarią](/pl/contact)

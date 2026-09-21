@@ -58,8 +58,8 @@ Ca supliment, puteți consulta [ilustrarea regulilor și a procedurii de depăș
 ---
 
 > Vezi și:
-> - [Repere asupra avocatei de litigii pe Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Avocată pe Taiwan care se poate exprima în coreeană](/ko/korean-lawyer-in-taiwan)
+> - [Cum se stabilesc întinderea lucrării și costurile](/ro/pricing)
+> - [Echipa internațională Hovering](/ro/lawyers)
 > - [Procedura de tratare a accidentelor de circulație pe Taiwan](/ro/columns/taiwan-traffic-accident-procedure)
 
 Prezentul text este o informație juridică generală despre regulile de depășire și aprecierea răspunderii accidentelor pe Taiwan; nu constituie un sfat pentru o cauză concretă și nu promite un rezultat determinat. Răspunderea reală poate varia după locul accidentului, mișcarea vehiculelor, viteză, semnale, probe, expertiză (鑑定) și dreptul în vigoare; cauzele concrete trebuie examinate separat pe baza actelor pertinente.

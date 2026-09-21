@@ -368,6 +368,6 @@ Wei Tseng (曾雋崴), abogada de Taiwán.
 ---
 
 > Véase también:
-> - [Guía del abogado litigante en Taiwán](/ko/taiwan-litigation-lawyer)
-> - [Abogada de Taiwán que habla coreano](/ko/korean-lawyer-in-taiwan)
-> - [Guía para buscar abogado en Taiwán](/ko/taiwan-lawyer)
+> - [Cómo se fijan el alcance del trabajo y los honorarios](/es/pricing)
+> - [Equipo internacional de Hovering](/es/lawyers)
+> - [Sobre Hovering International Law Firm](/es/about)

@@ -58,8 +58,8 @@ Täydennykseksi Te voitte tutustua [kuvaan ohitussäännöistä ja -menettelyst�
 ---
 
 > Katso myös:
-> - [Opas oikeudenkäyntiasianajajasta Taiwanissa](/ko/taiwan-litigation-lawyer)
-> - [Taiwanilainen asianajaja, joka puhuu koreaa](/ko/korean-lawyer-in-taiwan)
+> - [Miten työn laajuus ja kulut vahvistetaan](/fi/pricing)
+> - [Hoveringin kansainvälinen tiimi](/fi/lawyers)
 > - [Menettely liikenneonnettomuudessa Taiwanissa](/fi/columns/taiwan-traffic-accident-procedure)
 
 Tämä teksti on yleistä oikeudellista tietoa ohitusjärjestelmästä ja onnettomuusvastuun arvioinnista Taiwanissa (超車); se ei ole neuvontaa konkreettisesta asiasta eikä lupaus tietystä tuloksesta. Todellinen vastuu voi poiketa onnettomuuspaikan, ajoneuvon liikkeen, nopeuden, merkkien, todisteiden, asiantuntijatutkimuksen (鑑定) ja uusimman oikeuden mukaan; konkreettiset asiat on tutkittava erikseen asianomaisten asiakirjojen perusteella.

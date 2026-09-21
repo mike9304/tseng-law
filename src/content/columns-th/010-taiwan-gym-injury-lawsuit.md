@@ -114,6 +114,6 @@ featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 
 > อ่านเพิ่มเติม:
-> - [แนวทางเกี่ยวกับทนายความคดีความในไต้หวัน](/ko/taiwan-litigation-lawyer)
-> - [ทนายความไต้หวันที่ใช้ภาษาเกาหลีได้](/ko/korean-lawyer-in-taiwan)
-> - [คู่มือการค้นหาทนายความในไต้หวัน](/ko/taiwan-lawyer)
+> - [การกำหนดขอบเขตงานและค่าใช้จ่าย](/th/pricing)
+> - [ทีมงานระหว่างประเทศ Hovering](/th/lawyers)
+> - [เกี่ยวกับ Hovering International Law Firm](/th/about)

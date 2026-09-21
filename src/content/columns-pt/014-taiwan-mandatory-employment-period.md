@@ -183,7 +183,7 @@ Ao ordenar os documentos em ordem temporal, convém indicar em conjunto a data d
 
 ## 11. Orientação ligada
 
-- [Serviço de direito do trabalho em Taiwan](/ko/services/labor)
+- [Assuntos que tratamos](/pt/services)
 - [Orientação sobre a demissão voluntária e as exceções de indemnização de despedimento](/pt/columns/taiwan-voluntary-resignation-severance)
 - [Contacto](/pt/contact)
 

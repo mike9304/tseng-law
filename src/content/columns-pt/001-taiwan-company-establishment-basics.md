@@ -138,7 +138,7 @@ A taxa limitada do acordo não se aplica automaticamente pelo só facto de exist
 - [Indicação da Administração da Imigração de Taiwan (內政部移民署) sobre a residência permanente](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Indicação da cidade de Taipé sobre o exame prévio do local de atividade](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-Pode consultar-se o âmbito de atividade respetivo em [Serviços de investimento e constituição de sociedades em Taiwan](/ko/services/investment), o percurso e as línguas da advogada competente em [Perfil da advogada Wei Tseng](/ko/lawyers/wei-tseng). Para as questões relativas a um assunto concreto, utilize [Contacto](/pt/contact).
+Pode consultar-se o âmbito de atividade respetivo em [Assuntos que tratamos](/pt/services), o percurso e as línguas da advogada competente em [Equipa internacional de Hovering](/pt/lawyers). Para as questões relativas a um assunto concreto, utilize [Contacto](/pt/contact).
 
 O presente artigo é um documento de informação geral para fins educativos sobre a constituição de sociedade em Taiwan e as regras conexas; não constitui um conselho jurídico ou fiscal num assunto concreto e não promete um resultado determinado. Os procedimentos necessários e os resultados podem variar segundo a estrutura de investimento, o setor, a nacionalidade e o estatuto de residência do requerente, bem como a prática mais recente da autoridade competente; antes de executar um investimento, um contrato ou um emprego, convém examinar as fontes oficiais mais recentes e as circunstâncias próprias do assunto.
 

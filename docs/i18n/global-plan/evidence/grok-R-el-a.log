@@ -1,0 +1,22 @@
+[WO start 2026-09-21 16:08:36]
+Review is in `docs/i18n/global-plan/reviews/native/el-a.md`: 56 findings (15 P1, 41 P2). Guidance pack **3/5**, columns **2/5**. Wei Tseng is consistently feminine in this scope.
+
+Last 15 lines of the output file:
+
+```
+| 43 | P2 | B | columns-el/003-taiwan-traffic-accident-procedure.md | "των επιβατών ή 3ου προσώπου (第三人)" | Digit-ordinal mix; write τρίτου. Also «3ο πρόσωπο» in 004, 007. | των επιβατών ή τρίτου προσώπου (第三人) |
+| 44 | P2 | C | columns-el/003-taiwan-traffic-accident-procedure.md | "γενικός δικηγόρος δικών που έχει συσσωρεύσει μερικά έτη" | «δικηγόρος δικών» is not a Greek professional label. | δικηγόρος με πείρα στις δίκες και μερικά έτη πρακτικής |
+| 45 | P2 | D | columns-el/003-taiwan-traffic-accident-procedure.md | "αφήστε τα στα σχόλια." | Blog leftover; the Greek site page has no comment box for clients. | Αν έχετε περαιτέρω ερωτήματα, χρησιμοποιήστε τη σελίδα Επικοινωνία. |
+| 46 | P2 | C | columns-el/004-taiwan-company-subsidiary-vs-branch.md | "Από κοινού επένδυση 3ου προσώπου [...] Διαρρυθμίσιμη με το καταστατικό" | «Διαρρυθμίσιμη» is not a word a Greek lawyer uses (German gestaltbar). | Μπορεί να ρυθμιστεί με το καταστατικό, τον κύκλο μετόχων και σύμφωνο μετόχων |
+| 47 | P2 | C | columns-el/004-taiwan-company-subsidiary-vs-branch.md | "Πρέπει να επικολληθούν επ’ αυτών η εγγύηση, η αδικοπραξία" | «επικολληθούν» = to be glued on; meant “add/attach in the analysis”. | Πρέπει να συνεκτιμηθούν επ’ αυτών η εγγύηση, η αδικοπραξία |
+| 48 | P2 | C | columns-el/006-taiwan-massage-history-law.md | "υπάρχουν στην Ταϊβάν και πολλές οδοί μασάζ." | «οδοί μασάζ» copies Korean “massage streets”; Greek needs shops/districts. | υπάρχουν στην Ταϊβάν και πολλοί δρόμοι με καταστήματα μασάζ. |
+| 49 | P2 | B | columns-el/006-taiwan-massage-history-law.md | "ο νομοθέτης προσπαθεί να εύρει σχετικά ισορροπημένη λύση" | Wrong verb form; modern Greek is να βρει. | ο νομοθέτης προσπαθεί να βρει μια σχετικά ισορροπημένη λύση |
+| 50 | P2 | D | columns-el/006-taiwan-massage-history-law.md | "Κατ’ ανάλογο τρόπο, στην Κορέα, όπου πολλά πρόσωπα με οπτική αναπηρία" | Long Korea-law comparison with no frame that it is an example, not the reader’s law. | Κατ’ ανάλογο τρόπο, σε άλλες έννομες τάξεις — για παράδειγμα στην Κορέα — |
+| 51 | P2 | C | columns-el/008-taiwan-labor-severance-law.md | "Χαίρετε, είμαι η δικηγόρος Wei Tseng" | Katharevousa greeting + chatty blog voice on a client article; gender of Wei is correct. | Είμαι η δικηγόρος Wei Tseng (曾雋崴) στην Ταϊβάν. |
+| 52 | P2 | B | columns-el/008-taiwan-labor-severance-law.md | "είναι πράγματι δύσκολο να λάβει κανείς αποζημίωση απολύσεως στην Ταϊβάν;;" | Double question mark in the title. | είναι πράγματι δύσκολο να λάβει κανείς αποζημίωση απόλυσης στην Ταϊβάν; |
+| 53 | P2 | C | columns-el/008-taiwan-labor-severance-law.md | "και ήταν ο εμπορικός με το καλύτερο αποτέλεσμα" | «ο εμπορικός» is incomplete (salesman leftover). | και ήταν ο πωλητής με τις καλύτερες επιδόσεις |
+| 54 | P2 | D | columns-el/009-taiwan-voluntary-resignation-severance.md | "και τούτο διαφέρει από την Κορέα." | Same Korea-as-home-law frame as 008; English still says “unlike in Korea” but a Greek page needs a labelled example. | και τούτο διαφέρει από έννομες τάξεις όπως η Κορέα, όπου η αποζημίωση καταβάλλεται και σε οικειοθελή αποχώρηση. |
+| 55 | P2 | C | columns-el/009-taiwan-voluntary-resignation-severance.md | "Όπως εξετέθη ανωτέρω, στην Ταϊβάν δεν είναι εύκολο" | Sequel opener in katharevousa; standalone Greek page should not assume “as set out above”. | Όπως εξηγείται και στο άρθρο για την αποζημίωση απόλυσης, στην Ταϊβάν δεν είναι εύκολο |
+| 56 | P2 | C | columns-el/009-taiwan-voluntary-resignation-severance.md | "όταν ο εργοδότης λέγει στον μισθωτό" | «λέγει» is katharevousa; next to a practical list it jars. | όταν ο εργοδότης λέει στον μισθωτό |
+```
+=== end code=0 2026-09-21 16:17:50 ===

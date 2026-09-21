@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Заглавное изображение](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Тем, кто ознакомился с материалами [Создание компании на Тайване — основы](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) и [Создание компании на Тайване — углублённая часть 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1), можно также посмотреть Создание компании на Тайване — углублённая часть 2 (公司設立).
+Тем, кто ознакомился с материалами [Создание компании на Тайване — основы](/ru/columns/taiwan-company-establishment-basics) и [Создание компании на Тайване — углублённая часть 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1), можно также посмотреть Создание компании на Тайване — углублённая часть 2 (公司設立).
 
 ​
 
@@ -82,6 +82,6 @@ B. Со второго работника имеются ограничения 
 ---
 
 > См. также:
-> - [Общее руководство по созданию компании на Тайване — процедура, расходы и формы юридических лиц](/ko/guides/taiwan-company-setup)
-> - [Адвокат Тайваня, владеющий корейским языком](/ko/korean-lawyer-in-taiwan)
-> - [Справка об адвокате по созданию юридического лица и компании на Тайване](/ko/taiwan-company-setup-lawyer)
+> - [Какие дела мы ведём](/ru/services)
+> - [Международная команда Hovering](/ru/lawyers)
+> - [Как связаться с фирмой](/ru/contact)

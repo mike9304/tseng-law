@@ -78,6 +78,6 @@ Quy định của các cơ quan hành chính có thể thay đổi thường xuy
 ---
 
 > Xem thêm:
-> - [Hướng dẫn tổng hợp về thành lập công ty tại Đài Loan — thủ tục, chi phí và các loại hình pháp nhân](/ko/guides/taiwan-company-setup)
-> - [Luật sư Đài Loan có thể giao tiếp bằng tiếng Hàn](/ko/korean-lawyer-in-taiwan)
-> - [Hướng dẫn về luật sư phụ trách thành lập pháp nhân và thành lập công ty tại Đài Loan](/ko/taiwan-company-setup-lawyer)
+> - [Các lĩnh vực mà văn phòng nhận xử lý](/vi/services)
+> - [Đội ngũ quốc tế Hovering](/vi/lawyers)
+> - [Cách liên hệ với văn phòng](/vi/contact)

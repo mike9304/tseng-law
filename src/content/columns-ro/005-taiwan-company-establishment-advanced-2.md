@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Imagine principală](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Cei care au citit [Înființarea unei societăți în Taiwan – bazele](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) și [Înființarea unei societăți în Taiwan – partea aprofundată 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) pot consulta și Înființarea unei societăți în Taiwan – partea aprofundată 2 (公司設立).
+Cei care au citit [Înființarea unei societăți în Taiwan – bazele](/ro/columns/taiwan-company-establishment-basics) și [Înființarea unei societăți în Taiwan – partea aprofundată 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) pot consulta și Înființarea unei societăți în Taiwan – partea aprofundată 2 (公司設立).
 
 ​
 
@@ -82,6 +82,6 @@ Dacă aveți alte întrebări, ne puteți contacta.
 ---
 
 > Vezi și:
-> - [Ghid general de înființare a unei societăți în Taiwan — proceduri, costuri și forme juridice](/ko/guides/taiwan-company-setup)
-> - [Avocata din Taiwan care se poate exprima în coreeană](/ko/korean-lawyer-in-taiwan)
-> - [Repere despre avocata pentru persoane juridice și înființarea de societăți în Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Ce cauze tratăm](/ro/services)
+> - [Echipa internațională Hovering](/ro/lawyers)
+> - [Cum puteți contacta cabinetul](/ro/contact)

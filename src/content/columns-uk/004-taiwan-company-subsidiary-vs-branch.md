@@ -184,7 +184,7 @@ faq:
 
 ## Пов’язані гіди
 
-- [Послуги з інвестицій і заснування товариства на Тайвані](/ko/services/investment)
+- [Які справи ми ведемо](/uk/services)
 - [Основи заснування товариства на Тайвані](/uk/columns/taiwan-company-establishment-basics)
 - [Контакт](/uk/contact)
 

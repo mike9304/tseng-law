@@ -78,6 +78,6 @@ Le regole delle autorità amministrative possono cambiare di frequente; prima de
 ---
 
 > Vedere anche:
-> - [Guida generale della costituzione di società a Taiwan — procedure, costi e forme giuridiche](/ko/guides/taiwan-company-setup)
-> - [Avvocata taiwanese che parla coreano](/ko/korean-lawyer-in-taiwan)
-> - [Riferimenti sull’avvocata per le persone giuridiche e la costituzione di società a Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Quali questioni trattiamo](/it/services)
+> - [Team internazionale di Hovering](/it/lawyers)
+> - [Come raggiungere lo studio](/it/contact)

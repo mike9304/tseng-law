@@ -96,6 +96,6 @@ Useimmissa tapauksissa suojataan se puoli, joka on valmistautunut etukäteen.
 ---
 
 > Katso myös:
-> - [Opas Taiwanin oikeudenkäyntiasianajajaan](/ko/taiwan-litigation-lawyer)
-> - [Taiwanilainen asianajaja, joka puhuu koreaa](/ko/korean-lawyer-in-taiwan)
-> - [Toimialat — työvoima](/ko/services/labor)
+> - [Miten työn laajuus ja kulut vahvistetaan](/fi/pricing)
+> - [Hoveringin kansainvälinen tiimi](/fi/lawyers)
+> - [Mitä asioita käsittelemme](/fi/services)

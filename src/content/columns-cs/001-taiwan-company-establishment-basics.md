@@ -138,7 +138,7 @@ Omezená sazba dohody se neuplatní automaticky ze samotné skutečnosti, že do
 - [Pokyn Imigrační správy Tchaj-wanu (內政部移民署) o trvalém pobytu](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Pokyn města Tchaj-pej o předběžném posouzení místa činnosti](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-Rozsah příslušné činnosti můžete vidět v [Služby investic a založení společnosti na Tchaj-wanu](/ko/services/investment), průběh a jazyky příslušné advokátky v [Profil advokátky Wei Tseng](/ko/lawyers/wei-tseng). Ve věcech týkajících se konkrétní věci využijte [Kontakt](/cs/contact).
+Rozsah příslušné činnosti můžete vidět v [Které věci vedeme](/cs/services), průběh a jazyky příslušné advokátky v [Mezinárodní tým Hovering](/cs/lawyers). Ve věcech týkajících se konkrétní věci využijte [Kontakt](/cs/contact).
 
 Tento článek je dokumentem obecné informace vzdělávací povahy o založení společnosti na Tchaj-wanu a souvisejících pravidlech; není právním ani daňovým poradenstvím v konkrétní věci a neslibuje určený výsledek. Potřebné postupy a výsledky se mohou lišit podle struktury investice, odvětví, státní příslušnosti a pobytového statusu žadatele a nejnovější praxe kompetentního orgánu; před provedením investice, smlouvy nebo zaměstnání je třeba posoudit nejnovější oficiální zdroje a okolnosti vlastní věci.
 

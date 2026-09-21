@@ -140,8 +140,8 @@ faq:
 
 ## Пов’язані орієнтири
 
-- [Послуги з інвестицій і заснування товариства на Тайвані](/ko/services/investment)
-- [Профіль адвокатки Wei Tseng](/ko/lawyers/wei-tseng)
+- [Які справи ми ведемо](/uk/services)
+- [Міжнародна команда Hovering](/uk/lawyers)
 - [Контакт](/uk/contact)
 
 ---

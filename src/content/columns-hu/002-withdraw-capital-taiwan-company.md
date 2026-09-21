@@ -139,7 +139,7 @@ Minél tovább tart a szüneteltetés, annál inkább bonyolódhat a későbbi m
 
 ## Kapcsolódó útmutatók
 
-1. [Tajvani beruházási és társaságalapítási szolgáltatások](/ko/services/investment)
+1. [Milyen ügyeket viszünk](/hu/services)
 2. [Társaságalapítás Tajvanon: alapok](/hu/columns/taiwan-company-establishment-basics)
 3. [Kapcsolat](/hu/contact)
 

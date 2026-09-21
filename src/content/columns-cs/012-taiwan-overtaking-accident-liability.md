@@ -58,8 +58,8 @@ Jako doplněk lze nahlédnout [ilustraci pravidel a postupu předjíždění](ht
 ---
 
 > Další čtení:
-> - [Průvodce procesní advokátkou na Tchaj-wanu](/ko/taiwan-litigation-lawyer)
-> - [Advokátka na Tchaj-wanu hovořící korejsky](/ko/korean-lawyer-in-taiwan)
+> - [Jak se stanoví rozsah práce a náklady](/cs/pricing)
+> - [Mezinárodní tým Hovering](/cs/lawyers)
 > - [Postup při dopravních nehodách na Tchaj-wanu](/cs/columns/taiwan-traffic-accident-procedure)
 
 Tento text je obecnou právní informací o pravidlech předjíždění a posuzování odpovědnosti za nehody na Tchaj-wanu; není radou ke konkrétní věci a neslibuje určený výsledek. Skutečná odpovědnost se může lišit podle místa nehody, pohybu vozidel, rychlosti, signálů, důkazů, posudku (鑑定) a aktuálního práva; konkrétní věci je třeba posoudit zvlášť na základě příslušných podkladů.

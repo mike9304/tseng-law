@@ -188,8 +188,8 @@ Le fonti primarie (1.º livello) seguenti sono il punto di partenza per verifica
 
 ## 13. Indicazioni connesse
 
-- [Servizi di diritto della famiglia a Taiwan](/ko/services/family)
-- [Guida dell'avvocata litigante a Taiwan](/ko/taiwan-litigation-lawyer)
+- [Quali questioni trattiamo](/it/services)
+- [Come si fissano ambito di lavoro e costi](/it/pricing)
 - [Contatto](/it/contact)
 
 ---

@@ -184,7 +184,7 @@ Konečná volba je bezpečnější, posoudí-li ji odborníci na Tchaj-wanu a v 
 
 ## Související průvodce
 
-- [Služby investic a zakládání společností na Tchaj-wanu](/ko/services/investment)
+- [Které věci vedeme](/cs/services)
 - [Základy založení společnosti na Tchaj-wanu](/cs/columns/taiwan-company-establishment-basics)
 - [Kontakt](/cs/contact)
 

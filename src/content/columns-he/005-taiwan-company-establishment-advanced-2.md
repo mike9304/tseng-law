@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![תמונה ראשית](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-מי שקרא את [הקמת חברה בטאיוואן – יסודות](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) ואת [הקמת חברה בטאיוואן – חלק מעמיק 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) יכול לעיין גם בהקמת חברה בטאיוואן – חלק מעמיק 2 (公司設立).
+מי שקרא את [הקמת חברה בטאיוואן – יסודות](/he/columns/taiwan-company-establishment-basics) ואת [הקמת חברה בטאיוואן – חלק מעמיק 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) יכול לעיין גם בהקמת חברה בטאיוואן – חלק מעמיק 2 (公司設立).
 
 ​
 
@@ -82,6 +82,6 @@ B. מהעובד השני ואילך קיימות הגבלות: אם מספר ה�
 ---
 
 > ראו גם:
-> - [מדריך כללי להקמת חברה בטאיוואן — הליכים, עלויות וצורות משפטיות](/ko/guides/taiwan-company-setup)
-> - [עורכת דין בטאיוואן הדוברת קוריאנית](/ko/korean-lawyer-in-taiwan)
-> - [הנחיות על עורכת הדין לאישיות משפטית ולהקמת חברה בטאיוואן](/ko/taiwan-company-setup-lawyer)
+> - [באילו עניינים אנו מטפלים](/he/services)
+> - [הצוות הבין־לאומי של Hovering](/he/lawyers)
+> - [כיצד לפנות אל המשרד](/he/contact)

@@ -368,6 +368,6 @@ Q20. 交通事故如何寻找律师？
 ---
 
 > 另见：
-> - [台湾诉讼律师指南](/ko/taiwan-litigation-lawyer)
-> - [会说韩语的台湾律师](/ko/korean-lawyer-in-taiwan)
-> - [在台湾寻找律师指南](/ko/taiwan-lawyer)
+> - [工作范围与费用如何确定](/zh-hans/pricing)
+> - [Hovering 国际团队](/zh-hans/lawyers)
+> - [关于 Hovering International Law Firm](/zh-hans/about)

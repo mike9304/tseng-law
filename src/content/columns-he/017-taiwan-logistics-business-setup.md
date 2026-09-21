@@ -140,8 +140,8 @@ faq:
 
 ## הנחיות קשורות
 
-- [שירותי השקעה והקמת חברה בטאיוואן](/ko/services/investment)
-- [פרופיל של עורכת הדין Wei Tseng](/ko/lawyers/wei-tseng)
+- [באילו עניינים אנו מטפלים](/he/services)
+- [הצוות הבין־לאומי של Hovering](/he/lawyers)
 - [יצירת קשר](/he/contact)
 
 ---

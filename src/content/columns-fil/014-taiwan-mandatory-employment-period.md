@@ -183,7 +183,7 @@ Sa pag-aayos ng mga dokumento ayon sa panahon, mabuting sabay na ipakita ang pet
 
 ## 11. Kaugnay na Gabay
 
-- [Serbisyo sa batas sa paggawa ng Taiwan](/ko/services/labor)
+- [Mga usaping hinahawakan ng tanggapan](/fil/services)
 - [Gabay sa boluntaryong pagbibitiw at sa mga eksepsiyon sa separation pay (資遣費)](/fil/columns/taiwan-voluntary-resignation-severance)
 - [Pagtatanong para sa konsultasyon](/fil/contact)
 

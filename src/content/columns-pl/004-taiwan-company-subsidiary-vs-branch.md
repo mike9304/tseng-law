@@ -184,7 +184,7 @@ Wybór końcowy jest bezpieczniejszy, jeżeli zbadają go specjaliści na Tajwan
 
 ## Przewodniki pokrewne
 
-- [Usługi inwestycji i tworzenia spółek na Tajwanie](/ko/services/investment)
+- [Jakie sprawy prowadzimy](/pl/services)
 - [Podstawy zakładania spółki na Tajwanie](/pl/columns/taiwan-company-establishment-basics)
 - [Kontakt](/pl/contact)
 

@@ -78,6 +78,6 @@ Myndighedernes regler kan ofte ændres; før registreringen af den juridiske per
 ---
 
 > Se også:
-> - [Almindelig vejledning om selskabsstiftelse i Taiwan — procedurer, omkostninger og selskabsformer](/ko/guides/taiwan-company-setup)
-> - [Taiwansk advokat, der taler koreansk](/ko/korean-lawyer-in-taiwan)
-> - [Vejledning om advokaten for juridiske personer og selskabsstiftelse i Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Hvilke sager vi behandler](/da/services)
+> - [Hoverings internationale team](/da/lawyers)
+> - [Hvordan De når kontoret](/da/contact)

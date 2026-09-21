@@ -111,7 +111,7 @@ Pregătirea vânzării pe Taiwan, dacă se verifică în ordinea următoare, poa
 5. Revizuirea etichetei, a paginii de vânzare, a publicității și a publicațiilor de colaborare după criteriul ansamblului prezentării.
 6. Operarea procedurii pentru a răspunde inspecțiilor și cererilor de corecție, reclamațiilor, informațiilor de siguranță și urmăririi necesare.
 
-Structura de bază a societății și a sucursalei se poate vedea în [Bazele înființării de societăți pe Taiwan](/ro/columns/taiwan-company-establishment-basics), întinderea sprijinului legat în [Servicii de investiție și înființare de societăți pe Taiwan](/ko/services/investment), și informațiile avocatei responsabile în [Profilul avocatei Wei Tseng](/ko/lawyers/wei-tseng).
+Structura de bază a societății și a sucursalei se poate vedea în [Bazele înființării de societăți pe Taiwan](/ro/columns/taiwan-company-establishment-basics), întinderea sprijinului legat în [Ce cauze tratăm](/ro/services), și informațiile avocatei responsabile în [Echipa internațională Hovering](/ro/lawyers).
 
 ### Surse oficiale
 

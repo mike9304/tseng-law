@@ -183,7 +183,7 @@ Při uspořádání podkladů v časovém pořadí je vhodné společně uvést 
 
 ## 11. Související vodítka
 
-- [Služba pracovního práva na Tchaj-wanu](/ko/services/labor)
+- [Které věci vedeme](/cs/services)
 - [Vodítka k dobrovolnému odchodu a výjimkám odstupného](/cs/columns/taiwan-voluntary-resignation-severance)
 - [Kontakt](/cs/contact)
 

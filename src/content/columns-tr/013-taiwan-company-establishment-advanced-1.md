@@ -17,7 +17,7 @@ Son dönemde pek çok kişi Tayvan’da başarıyla şirket (公司) kurmuş, ç
 
 ve kuruluş sırasında sıkça sorulan sorular aşağıda toplanmıştır.
 
-[**Şirket kuruluşunun temel bölümünü**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) okuyanlar ardından bu daha ayrıntılı derinlemesine bölüme de bakabilir.
+[**Şirket kuruluşunun temel bölümünü**](/tr/columns/taiwan-company-establishment-basics) okuyanlar ardından bu daha ayrıntılı derinlemesine bölüme de bakabilir.
 
 Aşağıdaki soru ve yanıtlar (Q&A), Tayvan’da şirket kurmayı düşünenlere yardımcı olmayı amaçlar. 😊
 
@@ -128,6 +128,6 @@ imzalanmadan önce önceden doğrulanmalıdır.
 ---
 
 > Daha fazla:
-> - [Tayvan’da şirket kuruluşu genel rehberi — usul, maliyet ve tüzel kişi biçimleri](/ko/guides/taiwan-company-setup)
-> - [Korece konuşan Tayvan avukatı](/ko/korean-lawyer-in-taiwan)
-> - [Tayvan’da tüzel kişi ve şirket kuruluşu avukatı rehberi](/ko/taiwan-company-setup-lawyer)
+> - [Hangi işleri yürütürüz](/tr/services)
+> - [Hovering uluslararası ekibi](/tr/lawyers)
+> - [Büroya nasıl ulaşırsınız](/tr/contact)

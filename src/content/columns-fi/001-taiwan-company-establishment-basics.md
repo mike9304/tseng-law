@@ -138,7 +138,7 @@ Sopimuksen rajoitettu verokanta ei päde automaattisesti pelkästään siksi, et
 - [Taiwanin maahanmuuttoviranomaisen (內政部移民署) opas pysyvään oleskeluun](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Taipein kaupungin opas toimipaikan ennakkokyselyyn](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-Kyseisen työalueen näette kohdasta [Palvelut Taiwanin investointeihin ja yhtiön perustamiseen](/ko/services/investment), vastuullisen asianajajan ura ja kielet kohdasta [Asianajaja Wei Tsengin profiili](/ko/lawyers/wei-tseng). Kysymyksissä yksittäisestä asiasta käyttäkää [Yhteydenotto](/fi/contact).
+Kyseisen työalueen näette kohdasta [Mitä asioita käsittelemme](/fi/services), vastuullisen asianajajan ura ja kielet kohdasta [Hoveringin kansainvälinen tiimi](/fi/lawyers). Kysymyksissä yksittäisestä asiasta käyttäkää [Yhteydenotto](/fi/contact).
 
 Tämä artikkeli on yleinen opetusaineisto yhtiön perustamisesta Taiwanissa (公司設立) ja siihen liittyvistä järjestelyistä; se ei ole oikeudellista tai verotuksellista neuvontaa yksittäisessä asiassa eikä lupaa tiettyä tulosta. Tarvittavat menettelyt ja lopputulokset voivat poiketa sijoitusrakenteen, toimialan, hakijan kansallisuuden ja oleskeluaseman sekä toimivaltaisen viranomaisen uusimman käytännön mukaan; ennen sijoituksen, sopimuksen tai työllistämisen toteuttamista on tutkittava uusimmat viralliset lähteet ja omat olosuhteet.
 

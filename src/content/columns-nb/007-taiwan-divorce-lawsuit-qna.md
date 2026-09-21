@@ -188,8 +188,8 @@ De følgende primære kilder (nivå 1) er utgangspunkt for ettergang av denne ar
 
 ## 13. Beslektede veiledninger
 
-- [Familiesaker i Taiwan](/ko/services/family)
-- [Veiledning om procesadvokaten i Taiwan](/ko/taiwan-litigation-lawyer)
+- [Hvilke saker vi behandler](/nb/services)
+- [Hvordan arbeidsomfang og kostnader fastsettes](/nb/pricing)
 - [Kontakt](/nb/contact)
 
 ---

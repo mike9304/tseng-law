@@ -188,8 +188,8 @@ Sumber primer (peringkat 1) berikut ialah titik permulaan untuk menyemak struktu
 
 ## 13. Petunjuk berkaitan
 
-- [Perkhidmatan undang-undang keluarga di Taiwan](/ko/services/family)
-- [Panduan peguam litigasi di Taiwan](/ko/taiwan-litigation-lawyer)
+- [Hal yang kami kendalikan](/ms/services)
+- [Bagaimana skop kerja dan kos ditetapkan](/ms/pricing)
 - [Hubungi](/ms/contact)
 
 ---

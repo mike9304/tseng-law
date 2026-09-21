@@ -143,8 +143,8 @@ Sur les pages officielles de réglementation, vous confirmez la date de réforme
 
 ## 11. Orientations liées
 
-- [Service de contentieux familial à Taïwan](/ko/services/family)
-- [Guide de l’avocat plaidant à Taïwan](/ko/taiwan-litigation-lawyer)
+- [Affaires que nous traitons](/fr/services)
+- [Comment l’étendue du travail et les honoraires sont fixés](/fr/pricing)
 - [Contact](/fr/contact)
 
 ---

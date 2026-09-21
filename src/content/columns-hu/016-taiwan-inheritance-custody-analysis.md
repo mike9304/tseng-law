@@ -143,8 +143,8 @@ A hivatalos jogszabályi oldalakon a cikk módosítási és hatálybalépési na
 
 ## 11. Kapcsolódó útmutatók
 
-- [Tajvani családjogi peres szolgáltatás](/ko/services/family)
-- [Tajvani peres ügyvéd útmutató](/ko/taiwan-litigation-lawyer)
+- [Milyen ügyeket viszünk](/hu/services)
+- [Hogyan rögzítjük a munka terjedelmét és a költségeket](/hu/pricing)
 - [Kapcsolat](/hu/contact)
 
 ---

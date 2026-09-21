@@ -188,8 +188,8 @@ Aşağıdaki 1. düzey birincil kaynaklar, 25 Temmuz 2026 itibarıyla bu yazın�
 
 ## 13. İlgili rehberler
 
-- [Tayvan aile hukuku hizmetleri](/ko/services/family)
-- [Tayvan dava avukatı rehberi](/ko/taiwan-litigation-lawyer)
+- [Hangi işleri yürütürüz](/tr/services)
+- [Çalışma kapsamı ve ücret nasıl belirlenir](/tr/pricing)
 - [İletişim](/tr/contact)
 
 ---

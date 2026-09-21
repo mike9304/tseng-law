@@ -96,6 +96,6 @@ I de flesta fall får den som förberett sig i förväg sina rättigheter skydda
 ---
 
 > Se också:
-> - [Vägledning om processadvokat i Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Taiwanadvokat som kan koreanska](/ko/korean-lawyer-in-taiwan)
-> - [Verksamhetsområden — arbete](/ko/services/labor)
+> - [Hur arbetsomfattning och kostnader fastställs](/sv/pricing)
+> - [Hoverings internationella team](/sv/lawyers)
+> - [Vilka ärenden vi behandlar](/sv/services)

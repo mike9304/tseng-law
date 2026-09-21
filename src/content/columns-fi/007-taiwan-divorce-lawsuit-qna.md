@@ -188,8 +188,8 @@ Seuraavat ensisijaiset lähteet (taso 1) ovat lähtökohta tämän artikkelin oi
 
 ## 13. Liittyvät oppaat
 
-- [Perheasiat Taiwanissa](/ko/services/family)
-- [Opas prosessiasianajajasta Taiwanissa](/ko/taiwan-litigation-lawyer)
+- [Mitä asioita käsittelemme](/fi/services)
+- [Miten työn laajuus ja kulut vahvistetaan](/fi/pricing)
 - [Yhteydenotto](/fi/contact)
 
 ---

@@ -1,0 +1,1096 @@
+# hu guidance pack strings (path → text). Generated 2026-09-21
+
+guidanceContent.hu.languageName
+    Magyar
+
+guidanceContent.hu.nav.home
+    Kezdőlap
+
+guidanceContent.hu.nav.services
+    Szolgáltatások
+
+guidanceContent.hu.nav.about
+    Az iroda
+
+guidanceContent.hu.nav.lawyers
+    Ügyvédek
+
+guidanceContent.hu.nav.pricing
+    Költségek
+
+guidanceContent.hu.nav.contact
+    Kapcsolat
+
+guidanceContent.hu.nav.faq
+    Kérdések
+
+guidanceContent.hu.nav.privacy
+    Adatvédelem
+
+guidanceContent.hu.nav.disclaimer
+    Jogi közlemény
+
+guidanceContent.hu.nav.columns
+    Cikkek
+
+guidanceContent.hu.contactCta
+    Megkeresés elküldése
+
+guidanceContent.hu.footerNotice
+    Ez a magyar oldal csak általános tájékoztatást ad az iroda tajvani jog szerinti munkájáról. Nem jogi tanácsadás egyedi ügyben, és egy üzenet elküldése önmagában nem hoz létre ügyvéd–ügyfél viszonyt.
+
+guidanceContent.hu.skipLink
+    A navigáció átugrása, ugrás a tartalomra
+
+guidanceContent.hu.menuLabel
+    Oldalak áttekintése
+
+guidanceContent.hu.languageLabel
+    Megjelenítés nyelve
+
+guidanceContent.hu.mega.services.description
+    Az iroda a tajvani jog szerinti fő ügycsoportokat viszi.
+
+guidanceContent.hu.mega.services.viewAllLabel
+    Összes megtekintése
+
+guidanceContent.hu.mega.columns.description
+    Cikkek a tajvani jog gyakori kérdéseiről.
+
+guidanceContent.hu.mega.columns.viewAllLabel
+    Összes megtekintése
+
+guidanceContent.hu.mega.lawyers.description
+    Az ügyvédek bemutatása és a kapcsolatfelvétel módjai.
+
+guidanceContent.hu.mega.lawyers.viewAllLabel
+    Összes megtekintése
+
+guidanceContent.hu.mega.pricing.description
+    Ez az oldal a munka terjedelmét és a költségek tisztázását ismerteti.
+
+guidanceContent.hu.mega.pricing.viewAllLabel
+    Összes megtekintése
+
+guidanceContent.hu.mega.faq.description
+    Gyakori kérdések az iroda tajvani munkájáról.
+
+guidanceContent.hu.mega.faq.viewAllLabel
+    Összes megtekintése
+
+guidanceContent.hu.notFoundTitle
+    Az oldal nem található
+
+guidanceContent.hu.notFoundText
+    A keresett oldal nem létezik, vagy áthelyezték. Visszatérhet a magyar kezdőlapra, és megtekintheti az elérhető tájékoztatást.
+
+guidanceContent.hu.backHomeLabel
+    A kezdőlapra
+
+guidanceContent.hu.readSourceLabel
+    A cikkek listájának megnyitása az eredeti nyelven
+
+guidanceContent.hu.home.heroScrollLabel
+    Görgetés lefelé
+
+guidanceContent.hu.home.heroColumnsCtaLabel
+    Cikkek megtekintése
+
+guidanceContent.hu.home.servicesDetailLabel
+    Részletek megtekintése
+
+guidanceContent.hu.home.servicesAssistanceBefore
+    Ha nem egyértelmű, melyik csoportba tartozik az ügye, a 
+
+guidanceContent.hu.home.servicesAssistanceLinkLabel
+    Kapcsolat
+
+guidanceContent.hu.home.servicesAssistanceAfter
+     oldal elmagyarázza, hogyan készítsen olyan összefoglalót, amelyet egy ügyvéd megvizsgál.
+
+guidanceContent.hu.home.columnsViewAllLabel
+    Az összes cikk megtekintése
+
+guidanceContent.hu.home.columnsReadMoreLabel
+    Tovább olvasom
+
+guidanceContent.hu.home.columnsReviewLabel
+    Ellenőrizte Wei Tseng ügyvéd
+
+guidanceContent.hu.home.columnsOriginalLanguageBadge
+    Eredeti nyelv
+
+guidanceContent.hu.home.columnsOriginalLanguageNote
+    A következő cikkek magyarul még nem érhetők el. A lista az eredeti nyelven marad, és a megfelelő nyelvi oldalt nyitja meg; a tartalom automatikusan nem kerül fordításra.
+
+guidanceContent.hu.home.imageBandAlt
+    Hagyományos tajvani sanheyuan udvarház (三合院) és egy modern pavilon nappali fényben
+
+guidanceContent.hu.home.videoPauseLabel
+    Videó szüneteltetése
+
+guidanceContent.hu.home.videoPlayLabel
+    Videó lejátszása
+
+guidanceContent.hu.home.videoReplayLabel
+    Videó újrajátszása
+
+guidanceContent.hu.pages.home.eyebrow
+    TÁJÉKOZTATÁS
+
+guidanceContent.hu.pages.home.title
+    Jogi szolgáltatások Tajvanon — magyar nyelvű tájékoztatás
+
+guidanceContent.hu.pages.home.description
+    Általános magyar nyelvű ismertetés a Hovering International Law Firm tajvani munkájának köréről, a tanácsadás nyelveiről és az első kapcsolatfelvételről.
+
+guidanceContent.hu.pages.home.intro
+    A Hovering International Law Firm külföldi ügyfeleket kísér — köztük tajvani kötődésűeket — tajvani jogi ügyekben: befektetés és cégalapítás, polgári jogi jogviták, házasság, család és öröklés, munkajog, büntetőügyek és szellemi tulajdon. Ez a magyar rész abban segít, hogy felismerje, milyen munka tartozik a körünkbe, mit készítsen elő, és hogyan érhet el minket. Általános tájékoztatás, nem az Ön ügyére szabott jogi tanácsadás.
+
+guidanceContent.hu.pages.home.sections[0].heading
+    Mivel foglalkozunk
+
+guidanceContent.hu.pages.home.sections[0].paragraphs[0]
+    A Hovering International Law Firm Tajvanon bejegyzett ügyvédi iroda. Tajvani jog szerint dolgozik, irodái Tajpejben (臺北), Kaohsiungban (高雄), Taicsungban (臺中) és Pingtungban (屏東) működnek. Vállalatoknak adunk tanácsot, peres eljárásokat viszünk, és külföldi ügyfeleket kísérünk a Tajvanon szükséges lépésekben.
+
+guidanceContent.hu.pages.home.sections[0].paragraphs[1]
+    Az itteni tartalom mind általános. Egy ügy kimenetele a tényektől, az alkalmazandó szabályoktól és az időponttól függ. Ez a tájékoztatás nem pótolja az ügyvéddel folytatott, az Ön iratain alapuló megbeszélést.
+
+guidanceContent.hu.pages.home.sections[1].heading
+    Az oldal nyelve és a tanácsadás nyelve nem ugyanaz
+
+guidanceContent.hu.pages.home.sections[1].paragraphs[0]
+    Ez az oldal magyarul készült, de az ügyvéddel folytatott tanácsadás kizárólag a négy tanácsadási nyelven zajlik: angolul, kínaiul (中文), japánul és koreaiul. A magyar tájékoztatás olvasása nem jelenti azt, hogy az ügyvéddel folytatott megbeszélés magyarul történik.
+
+guidanceContent.hu.pages.home.sections[1].paragraphs[1]
+    Nem ígérünk tolmácsot, válaszadási határidőt és ezen az oldalon keresztül időpontot sem. Ha a négy nyelv egyikét sem tudja használni, a «Kapcsolat» oldal elmagyarázza, hogyan vizsgáljuk meg a kommunikáció módját.
+
+guidanceContent.hu.pages.home.sections[2].heading
+    Ügycsoportok
+
+guidanceContent.hu.pages.home.sections[2].paragraphs[0]
+    A munka köre az alábbi hat csoportot foglalja magában. A «Szolgáltatások» oldal mindegyiket pontosabban írja le, és megjelöli, mit nem ígérünk.
+
+guidanceContent.hu.pages.home.sections[2].items[0]
+    Befektetés és cégalapítás Tajvanon
+
+guidanceContent.hu.pages.home.sections[2].items[1]
+    Polgári jogi jogviták és kártérítés
+
+guidanceContent.hu.pages.home.sections[2].items[2]
+    Házasság, család és öröklés
+
+guidanceContent.hu.pages.home.sections[2].items[3]
+    Munkaügyi jogviták
+
+guidanceContent.hu.pages.home.sections[2].items[4]
+    Büntetőügyek
+
+guidanceContent.hu.pages.home.sections[2].items[5]
+    Szellemi tulajdon: védjegy, szabadalom és szerzői jog
+
+guidanceContent.hu.pages.home.sections[3].heading
+    Hol kezdje
+
+guidanceContent.hu.pages.home.sections[3].paragraphs[0]
+    Olvassa el a «Szolgáltatások» oldalt annak ellenőrzésére, hogy ügye a körünkbe tartozik-e, majd a «Költségek» és a «Kapcsolat» oldalt, hogy megtudja, hogyan rögzítjük a terjedelmet, és hogyan erősítjük meg a költségeket a munka megkezdése előtt.
+
+guidanceContent.hu.pages.home.sections[3].paragraphs[1]
+    Az üzenet küldésekor az összefoglalót a saját nyelvén is megírhatja. Az eredeti szöveget úgy őrizzük meg, ahogyan megírta, és automatikusan nem fordítjuk le. Az elküldött üzenet vizsgálatra váró megkeresés: még nem tanácsadás és nem megerősített időpont.
+
+guidanceContent.hu.pages.services.eyebrow
+    SZOLGÁLTATÁSOK
+
+guidanceContent.hu.pages.services.title
+    Milyen ügyeket viszünk
+
+guidanceContent.hu.pages.services.description
+    Az iroda hat tajvani ügycsoportja és azok a korlátok, amelyeket érdemes elsőként ismerni.
+
+guidanceContent.hu.pages.services.intro
+    Az alábbiakban azok a csoportok szerepelnek, amelyeket ténylegesen viszünk, és azok a kérdések, amelyek a kezdeti szakaszban gyakran felmerülnek. A leírás abban segít, hogy megítélje, ügye a körünkbe tartozik-e; általános, és nem egyedi ügy jogi elemzése.
+
+guidanceContent.hu.pages.services.sections[0].heading
+    Befektetés és cégalapítás Tajvanon
+
+guidanceContent.hu.pages.services.sections[0].paragraphs[0]
+    Külföldi befektetőket és vállalkozásokat kísérünk tajvani társaság alapításában vagy működtetésében: társasági forma megválasztása, iratok előkészítése és benyújtása, tőke befizetése, banki kérdések, a székhely vizsgálata és ágazati követelmények. Támogatjuk a Tajvanon történő alapításból és működésből eredő könyvviteli és adózási feladatokat is.
+
+guidanceContent.hu.pages.services.sections[0].paragraphs[1]
+    Az eljárás menete és a határidők a formától, a befektetőtől, az ágazattól, a banktól és a már rendelkezésre álló iratoktól függően eltérnek. A cégalapítás önmagában nem vezet tartózkodási engedélyhez (居留) vagy munkavállalási engedélyhez (工作許可): ezek külön eljárások, amelyeket az adott személy helyzete alapján bírálnak el.
+
+guidanceContent.hu.pages.services.sections[1].heading
+    Polgári jogi jogviták és kártérítés
+
+guidanceContent.hu.pages.services.sections[1].paragraphs[0]
+    Ez a csoport szerződéses jogvitákat, jogellenes károkozásból eredő kártérítést és fogyasztói jogvitákat foglal magában. A munka rendszerint az események időrendjével, az iratok és a meglévő bizonyítékok áttekintésével kezdődik, és csak ezután következnek a további lépések.
+
+guidanceContent.hu.pages.services.sections[1].paragraphs[1]
+    A menetet a határidők — köztük az elévülés — és a bizonyítékok teljessége szabják meg. Ezért az ismert dátumokat minél előbb adja meg. Őrizze meg a szerződéseket, üzeneteket, fizetési bizonylatokat vagy a helyszínről készült fényképeket, és említse meg őket az első üzenetben.
+
+guidanceContent.hu.pages.services.sections[2].heading
+    Házasság, család és öröklés
+
+guidanceContent.hu.pages.services.sections[2].paragraphs[0]
+    Válást (離婚), vagyonmegosztást, a kiskorú gyermekkel kapcsolatos jogok és kötelezettségek gyakorlását és viselését (未成年子女權利義務之行使或負擔), a kapcsolattartást (會面交往) és az öröklést (繼承) visszük, akkor is, ha a felek vagy a vagyon különböző államokban vannak. A határon átnyúló családi ügyek gyakran igénylik az anyakönyvi nyilvántartás (戶籍), az okiratok alakjának és tajvani bizonyító erejének további vizsgálatát.
+
+guidanceContent.hu.pages.services.sections[2].paragraphs[1]
+    Mivel a családi ügyekhez gyakran határidők és párhuzamos eljárások társulnak, az első összefoglalónak meg kell jelölnie a felek viszonyát, a jelenlegi lakóhelyet és a már folyamatban lévő eljárásokat.
+
+guidanceContent.hu.pages.services.sections[3].heading
+    Munkaügyi jogviták
+
+guidanceContent.hu.pages.services.sections[3].paragraphs[0]
+    Ez a csoport a munkaviszony megszűnését, a tajvani jog szerinti végkielégítést (資遣費; nem azonosítható más államok hasonló jogintézményeivel), a díjazást és a munkaszerződésből (勞動契約) eredő jogvitákat foglalja magában, munkavállalói és munkáltatói oldalon egyaránt. A vizsgálat során elkülönítjük a megszűnés okát a felmondási idő, a kifizetés és a határidők kérdéseitől.
+
+guidanceContent.hu.pages.services.sections[3].paragraphs[1]
+    A döntő iratok rendszerint a munkaszerződés, a belső munkarend (工作規則), a bérjegyzékek és a felek levelezése. Ha ezek még megvannak, említse meg az összefoglalóban.
+
+guidanceContent.hu.pages.services.sections[4].heading
+    Büntetőügyek
+
+guidanceContent.hu.pages.services.sections[4].paragraphs[0]
+    A nyomozási szakaszban és a bíróság előtt egyaránt kísérünk, gyanúsítottakat és vádlottakat éppúgy, mint sértetteket, és vizsgáljuk az üzleti tevékenység büntetőjogi kockázatait.
+
+guidanceContent.hu.pages.services.sections[4].paragraphs[1]
+    A büntetőügyekben gyakran rövidek a határidők, és a szakaszok kötöttek. Ha már kapott iratot a nyomozó hatóságtól vagy a bíróságtól, adja meg időben az iraton szereplő dátumot, hogy a tartalom a megfelelő sorrendben kerüljön vizsgálatra.
+
+guidanceContent.hu.pages.services.sections[5].heading
+    Szellemi tulajdon
+
+guidanceContent.hu.pages.services.sections[5].paragraphs[0]
+    Támogatjuk a védjegyek (商標) és szabadalmak (專利) bejegyzését, a szerzői jogot és az e jogokkal kapcsolatos tajvani jogvitákat.
+
+guidanceContent.hu.pages.services.sections[5].paragraphs[1]
+    Ebben a csoportban a lépések sorrendje dönt: az oltalom terjedelme, a bejelentés időpontja és a tényleges használat befolyásolja a választást. A bejelentés benyújtása önmagában nem jelenti, hogy annak helyt is adnak.
+
+guidanceContent.hu.pages.services.sections[6].heading
+    A terjedelem és annak megerősítése
+
+guidanceContent.hu.pages.services.sections[6].paragraphs[0]
+    Az iroda tajvani jog szerint dolgozik, és a fenti csoportokba tartozó ügyeket viszi. Az egyes ügyek terjedelmét külön erősítjük meg azt követően, hogy egy ügyvéd megvizsgálta az üzenetét.
+
+guidanceContent.hu.pages.services.sections[6].paragraphs[1]
+    A tartózkodási jogállást, a munkavállalási engedélyt és a hasonló kérdéseket az iratok és az adott személy helyzete alapján ítélik meg, nem az állampolgárság alapján. Ha ügyének egy része ezeket érinti, jelezze a kapcsolatfelvételkor. Ez az oldal nem ígér eredményt és válaszadási határidőt sem.
+
+guidanceContent.hu.pages.about.eyebrow
+    AZ IRODA
+
+guidanceContent.hu.pages.about.title
+    A Hovering International Law Firmről
+
+guidanceContent.hu.pages.about.description
+    Alapadatok erről a tajvani ügyvédi irodáról, annak irodáiról és a külföldi felekkel végzett munkáról.
+
+guidanceContent.hu.pages.about.intro
+    A Hovering International Law Firm tajvani ügyvédi iroda. Ügyvédei a vállalati tanácsadástól a peres eljárásig dolgoznak. Ez a rész az iroda létrejöttét, székhelyeit és a külföldi felekkel végzett munkát mutatja be.
+
+guidanceContent.hu.pages.about.sections[0].heading
+    Alapítás és felépítés
+
+guidanceContent.hu.pages.about.sections[0].paragraphs[0]
+    A Hovering International Law Firmet (昊鼎國際法律事務所) 2016-ban alapították a National Taiwan University (國立臺灣大學) egyetemen végzett ügyvédek. A kínai név, a 昊鼎, a 昊 («tágas ég») írásjegyet köti össze a 鼎 («szilárd alap») írásjeggyel, és az iroda alapítás óta követett irányát fejezi ki.
+
+guidanceContent.hu.pages.about.sections[0].paragraphs[1]
+    Irodáink Tajpejben (臺北), Kaohsiungban (高雄), Taicsungban (臺中) és Pingtungban (屏東) működnek. A kaohsiungi iroda a vállalatvezetésre összpontosít, és polgári, büntető- és közigazgatási jogvitákat visz. A taicsungi iroda építési ügyekkel, szellemi tulajdonnal, valamint koreai és japán kötődésű ügyekkel foglalkozik. A pingtungi irodát 2017-ben nyitottuk a helyi igények miatt.
+
+guidanceContent.hu.pages.about.sections[0].paragraphs[2]
+    Az ügyvédi munka mellett 2020 óta működik a Hovering Accounting Office is, amely könyvvitelt és adótervezést kínál vállalkozóknak és vagyonnal rendelkező magánszemélyeknek.
+
+guidanceContent.hu.pages.about.sections[1].heading
+    Munka külföldi felekkel
+
+guidanceContent.hu.pages.about.sections[1].paragraphs[0]
+    A határon átnyúló munka cégalapítást, vízumokat, védjegy- és szabadalmi bejelentéseket, jogi kockázatvizsgálatot és vállalati adótanácsadást foglal magában. A taicsungi iroda különösen építési ügyekkel, szellemi tulajdonnal, valamint koreai és japán kötődésű ügyekkel foglalkozik. Wei Tseng ügyvéd (曾雋崴) koreai, japán és további nemzetközi ügyfeleket kísér a megjelölt csoportokban.
+
+guidanceContent.hu.pages.about.sections[1].paragraphs[1]
+    Hogy elvállalhatunk-e egy ügyet, a tartalomtól és a kommunikáció nyelvétől függ. Ha ügye a megjelölt csoportokba tartozik, és a négy tanácsadási nyelv valamelyikén megtárgyalható, összefoglalót küldhet vizsgálatra.
+
+guidanceContent.hu.pages.about.sections[2].heading
+    Amikor megkeres minket
+
+guidanceContent.hu.pages.about.sections[2].paragraphs[0]
+    Az összefoglaló beérkezése után egy ügyvéd megvizsgálja a tartalmat, majd beszél a munka lehetséges terjedelméről, a még szükséges iratokról és a következő lépésekről. Adó- vagy könyvviteli kérdésekben az iroda egyetlen folyamatban dolgozhat együtt a könyvviteli résszel.
+
+guidanceContent.hu.pages.about.sections[2].paragraphs[1]
+    Minden ügy kimenetele a tényektől és a rendelkezésre álló iratoktól függ; eredményt nem ígérünk. Ha helyzetére kötelező erejű választ kíván, az iratokat a négy tanácsadási nyelv valamelyikén kell megtárgyalni egy ügyvéddel.
+
+guidanceContent.hu.pages.lawyers.eyebrow
+    ÜGYVÉDEK
+
+guidanceContent.hu.pages.lawyers.title
+    A Hovering nemzetközi csapata
+
+guidanceContent.hu.pages.lawyers.description
+    A Hovering ügyvédeinek, működési vezetésének és társult könyvvizsgálatának bemutatása.
+
+guidanceContent.hu.pages.lawyers.intro
+    
+
+guidanceContent.hu.pages.pricing.eyebrow
+    KÖLTSÉGEK
+
+guidanceContent.hu.pages.pricing.title
+    Hogyan rögzítjük a munka terjedelmét és a költségeket
+
+guidanceContent.hu.pages.pricing.description
+    A sorrend ismertetése: előbb a munka terjedelme, majd a költségek megerősítése, és hogy ez az oldal miért nem tartalmaz árlistát.
+
+guidanceContent.hu.pages.pricing.intro
+    Ez az oldal azt ismerteti, hogyan alakulnak a költségek, nem pedig azok összegét. Az összeg az adott ügy munkaterjedelmétől függ, és csak akkor mond valamit, ha ez a terjedelem világos.
+
+guidanceContent.hu.pages.pricing.sections[0].heading
+    Először a munka terjedelmét rögzítjük
+
+guidanceContent.hu.pages.pricing.sections[0].paragraphs[0]
+    Az azonos típusú ügyek nagyon eltérő ráfordítást igényelhetnek a felek számától, a rendelkezésre álló iratoktól, a betartandó határidőktől és attól függően, hogy megindult-e már eljárás. Ezért az első lépés mindig annak rögzítése, mi tartozik a munkába és mi nem.
+
+guidanceContent.hu.pages.pricing.sections[0].paragraphs[1]
+    Az elején küldött összefoglaló ennek a terjedelemnek az alapja. Minél világosabban írja le az eseményeket, a kérését és a határidőket, annál pontosabban határozható meg a terjedelem.
+
+guidanceContent.hu.pages.pricing.sections[1].heading
+    A költségeket a munka megkezdése előtt erősítjük meg
+
+guidanceContent.hu.pages.pricing.sections[1].paragraphs[0]
+    Ha a munka terjedelme világos, a költségek összegét és számítási módját a munka megkezdése előtt megbeszéljük és megerősítjük Önnel. Ha a terjedelem közben változik, azt újból meg kell erősíteni.
+
+guidanceContent.hu.pages.pricing.sections[1].paragraphs[1]
+    Ez az oldal nem árajánlat, és nem keletkeztet fizetési kötelezettséget.
+
+guidanceContent.hu.pages.pricing.sections[2].heading
+    A tanácsadás díjköteles lehet
+
+guidanceContent.hu.pages.pricing.sections[2].paragraphs[0]
+    Az ügyvéddel folytatott tanácsadás díjköteles szolgáltatás lehet. Ez az oldal nem állítja, hogy az első beszélgetés ingyenes, és egyetlen része sem értelmezhető így.
+
+guidanceContent.hu.pages.pricing.sections[2].paragraphs[1]
+    Ha a tanácsadás díjköteles, annak összegét és a fizetés módját a tanácsadás előtt közöljük.
+
+guidanceContent.hu.pages.pricing.sections[3].heading
+    Miért nem szerepelnek itt díjszabások
+
+guidanceContent.hu.pages.pricing.sections[3].paragraphs[0]
+    A költségek magától az ügytől függenek: a ráfordítástól, a felek számától, az iratoktól, a határidőktől és attól, hogy folyik-e már eljárás. Egy előre rögzített szám nem mutatná meg az Ön ügyének költségeit. Ezért előbb a munka terjedelmét rögzítjük, és a költségeket azután, a munka megkezdése előtt közöljük.
+
+guidanceContent.hu.pages.pricing.sections[3].paragraphs[1]
+    A munkadíjon felül bírósági, hatósági vagy harmadik személyeknél felmerülő költségek keletkezhetnek. Ezek a munkadíjtól elkülönülnek, és az adott eljárástól függenek.
+
+guidanceContent.hu.pages.contact.eyebrow
+    KAPCSOLAT
+
+guidanceContent.hu.pages.contact.title
+    Hogyan érheti el az irodát
+
+guidanceContent.hu.pages.contact.description
+    Az oldal nyelve, a tanácsadás nyelvei, a teendő akkor, ha a négy nyelv egyikét sem tudja használni, és amit ez az oldal nem ígér.
+
+guidanceContent.hu.pages.contact.intro
+    Mielőtt írna nekünk, különítse el az alábbi három dolgot. Gyakran keverednek, pedig mást jelentenek.
+
+guidanceContent.hu.pages.contact.sections[0].heading
+    Három dolog, amelyet külön kell tartani
+
+guidanceContent.hu.pages.contact.sections[0].paragraphs[0]
+    Az oldal megjelenítési nyelve, az ügyvéddel folytatott tanácsadás nyelve és az a nyelv, amelyen ír, három különböző dolog.
+
+guidanceContent.hu.pages.contact.sections[0].items[0]
+    Az oldal nyelve: ez a tájékoztatás magyarul készült.
+
+guidanceContent.hu.pages.contact.sections[0].items[1]
+    A tanácsadás nyelve: a tanácsadás angolul, kínaiul (中文), japánul és koreaiul zajlik.
+
+guidanceContent.hu.pages.contact.sections[0].items[2]
+    Az Ön írásának nyelve: az összefoglalót a saját nyelvén írhatja; az eredeti szöveg változatlanul megmarad.
+
+guidanceContent.hu.pages.contact.sections[1].heading
+    Ha a négy tanácsadási nyelv egyikét sem tudja használni
+
+guidanceContent.hu.pages.contact.sections[1].paragraphs[0]
+    A kapcsolatfelvételi űrlapon választhatja azt, hogy «A kommunikáció módját meg kell erősíteni». Válaszolunk, hogy megvizsgáljuk a kommunikáció járható módját, ha van ilyen; más nyelvű szolgáltatás nem garantált, és válaszadási határidőt nem ígérünk.
+
+guidanceContent.hu.pages.contact.sections[1].paragraphs[1]
+    Ez csak vizsgálati lépés, nem ígéret. Nem ígérünk tolmácsot, magyar vagy a négy megjelölt nyelven kívüli más nyelvű szolgáltatást, és azt sem, hogy minden ügyet elvállalunk.
+
+guidanceContent.hu.pages.contact.sections[2].heading
+    Mit tartalmazzon az első üzenet
+
+guidanceContent.hu.pages.contact.sections[2].paragraphs[0]
+    Adja meg, mi történt, milyen segítségre van szüksége, milyen kötődése van az ügynek Tajvanhoz, és a határidőt, ha ismer ilyet. Ha már kapott bírósági vagy hatósági iratot, adja meg az iraton szereplő dátumot.
+
+guidanceContent.hu.pages.contact.sections[2].paragraphs[1]
+    A kezdeti szakaszban még nem kell útlevélszámot, okmányszámot, számlaadatokat, egészségügyi dokumentációt vagy a bizonyítékok összességét elküldenie. Várja meg az ügyvéd útmutatását, és az érzékeny iratokat csak azután, biztonságos úton küldje el.
+
+guidanceContent.hu.pages.contact.sections[3].heading
+    Amit ez az oldal nem ígér
+
+guidanceContent.hu.pages.contact.sections[3].paragraphs[0]
+    Nem ígérünk válaszadási határidőt, ezen az oldalon keresztül nem erősítünk meg időpontot, nem ígérünk meghatározott ügyvédet, és tolmácsot sem biztosítunk. Az írásbeli fordítás más kérdés: az üzenetét automatikusan nem fordítjuk le.
+
+guidanceContent.hu.pages.contact.sections[3].paragraphs[1]
+    Ha megkeresést küld, a tartalom megőrzésre kerül, és vizsgálatra vár. Ha egy idő után nem kap választ, újra írhat a kapcsolatfelvételi oldalon megadott e-mail-címre.
+
+guidanceContent.hu.pages.faq.eyebrow
+    KÉRDÉSEK
+
+guidanceContent.hu.pages.faq.title
+    Gyakori kérdések
+
+guidanceContent.hu.pages.faq.description
+    Magyarázatok a munka köréről, az előkészületekről, a nyelvekről, a költségekről és arról, mit jelent egy elküldött megkeresés.
+
+guidanceContent.hu.pages.faq.intro
+    Az alábbi kérdésekre általános tájékoztatás szintjén válaszolunk. Az Ön ügyére szabott válasz csak azután lehetséges, hogy egy ügyvéd megvizsgálta az iratokat.
+
+guidanceContent.hu.pages.faq.sections[0].heading
+    Hogyan használja ezt a részt
+
+guidanceContent.hu.pages.faq.sections[0].paragraphs[0]
+    Ha nem talál választ a saját helyzetére, a válasz rendszerint különös tényektől függ. Ezeket írja bele az összefoglalóba ahelyett, hogy ebből az oldalból következtetne rájuk.
+
+guidanceContent.hu.pages.faq.faqs[0].question
+    Milyen ügyeket visz az iroda?
+
+guidanceContent.hu.pages.faq.faqs[0].answer
+    Hat csoportot viszünk: befektetés és cégalapítás Tajvanon, polgári jogi jogviták és kártérítés, házasság, család és öröklés, munkaügyi jogviták, büntetőügyek és szellemi tulajdon. Hogy egy ügyet elvállalunk-e, a tartalom vizsgálata után dől el.
+
+guidanceContent.hu.pages.faq.faqs[1].question
+    Mit készítsek elő a kapcsolatfelvétel előtt?
+
+guidanceContent.hu.pages.faq.faqs[1].answer
+    Készítsen rövid összefoglalót az eseményekről, a kéréséről, a Tajvanhoz fűződő kapcsolatról és a határidőről, ha van ilyen. Ha már van bírósági vagy hatósági irat, adja meg a dátumot. Ebben a szakaszban még nem kell személyazonosító okmányokat vagy a bizonyítékok összességét elküldenie.
+
+guidanceContent.hu.pages.faq.faqs[2].question
+    Lehetséges magyar nyelvű tanácsadás?
+
+guidanceContent.hu.pages.faq.faqs[2].answer
+    Nem. Ez a tájékoztatás magyarul készült, de az ügyvéddel folytatott tanácsadás kizárólag angolul, kínaiul (中文), japánul és koreaiul zajlik. Tolmácsot sem ígérünk. Az írásbeli fordítás más kérdés: az eredeti szöveget, amelyet ír, úgy őrizzük meg, és automatikusan nem fordítjuk le.
+
+guidanceContent.hu.pages.faq.faqs[3].question
+    Mi a teendő, ha a négy nyelv egyikét sem tudom használni?
+
+guidanceContent.hu.pages.faq.faqs[3].answer
+    A megkeresés küldésekor válassza azt, hogy «A kommunikáció módját meg kell erősíteni». Válaszolunk, hogy megvizsgáljuk a kommunikáció módját, de más nyelvű szolgáltatás nem garantált. Ez vizsgálati lépés, nem ígéret arra, hogy más nyelven tudunk dolgozni.
+
+guidanceContent.hu.pages.faq.faqs[4].question
+    Mi történik a magyar nyelvű szövegemmel?
+
+guidanceContent.hu.pages.faq.faqs[4].answer
+    Az eredeti szöveget, amelyet ír, úgy őrizzük meg, ahogyan van, és automatikusan nem fordítjuk le. Ha szükséges, a további kommunikáció nyelvét megerősítjük Önnel.
+
+guidanceContent.hu.pages.faq.faqs[5].question
+    Megtörtént-e már a tanácsadás azzal, hogy a megkeresés elment?
+
+guidanceContent.hu.pages.faq.faqs[5].answer
+    Nem. Az elküldött megkeresés ügyvédi vizsgálatra vár. Nem jogi állásfoglalás, nem megerősített időpont, és az elküldés önmagában nem hoz létre ügyvéd–ügyfél viszonyt.
+
+guidanceContent.hu.pages.faq.faqs[6].question
+    Hogyan számítják a költségeket?
+
+guidanceContent.hu.pages.faq.faqs[6].answer
+    Először a munka terjedelmét rögzítjük, majd a költségek összegét és számítási módját a munka megkezdése előtt megerősítjük Önnel. Ez az oldal nem ad meg összegeket, és nem állítja, hogy az első beszélgetés ingyenes.
+
+guidanceContent.hu.pages.faq.faqs[7].question
+    Mi a teendő, ha az ügyem nagyon sürgős?
+
+guidanceContent.hu.pages.faq.faqs[7].answer
+    A határidőt vagy a hivatalos iraton szereplő dátumot írja az összefoglaló elejére, hogy ezek a dátumok a vizsgálatkor láthatók legyenek. Ennek az oldalnak nincs sürgősségi csatornája, és nem biztosít válaszadási határidőt; ha ügye nem tűr halasztást, párhuzamosan keressen más utakat a lakóhelyén.
+
+guidanceContent.hu.pages.privacy.eyebrow
+    ADATVÉDELEM
+
+guidanceContent.hu.pages.privacy.title
+    A kapcsolatfelvételi űrlapon gyűjtött adatok
+
+guidanceContent.hu.pages.privacy.description
+    Mit gyűjt a kapcsolatfelvételi űrlap ebben a magyar részben, hogyan kezeljük az eredeti szöveget, és hogyan érhet el minket az adataival kapcsolatban.
+
+guidanceContent.hu.pages.privacy.intro
+    Ez a rész csak az e tájékoztató oldalakon található kapcsolatfelvételi űrlapra vonatkozik. Az adatkezelést írja le, nem műszaki garanciát.
+
+guidanceContent.hu.pages.privacy.sections[0].heading
+    Milyen adatokat gyűjtünk
+
+guidanceContent.hu.pages.privacy.sections[0].paragraphs[0]
+    Ha ebben a részben az űrlapon keresztül megkeresést küld, a következő adatokat rögzítjük:
+
+guidanceContent.hu.pages.privacy.sections[0].items[0]
+    Az Ön által megadott név
+
+guidanceContent.hu.pages.privacy.sections[0].items[1]
+    A válaszhoz használt e-mail-cím
+
+guidanceContent.hu.pages.privacy.sections[0].items[2]
+    Az oldal megjelenítési nyelve a küldés pillanatában
+
+guidanceContent.hu.pages.privacy.sections[0].items[3]
+    Az a nyelv, amelyen írt
+
+guidanceContent.hu.pages.privacy.sections[0].items[4]
+    Az Ön által kívánt tanácsadási nyelv
+
+guidanceContent.hu.pages.privacy.sections[0].items[5]
+    Az eredeti szöveg, amelyet írt
+
+guidanceContent.hu.pages.privacy.sections[0].items[6]
+    Az Ön hozzájárulása a megkeresés elküldéséhez
+
+guidanceContent.hu.pages.privacy.sections[0].items[7]
+    Egy iktatószám a megkeresés visszakereséséhez
+
+guidanceContent.hu.pages.privacy.sections[1].heading
+    Az eredeti szöveg változatlanul marad
+
+guidanceContent.hu.pages.privacy.sections[1].paragraphs[0]
+    A szövegét pontosan úgy őrizzük meg, ahogyan megírta, és automatikusan nem fordítjuk le. Ha az ügyintézéshez fordítás szükséges, azt külön megbeszéljük Önnel.
+
+guidanceContent.hu.pages.privacy.sections[1].paragraphs[1]
+    Mivel az eredeti szöveget megőrizzük, a kezdeti szakaszban ne írja le azt, ami még nem szükséges, például az útlevélszámot, az okmányszámot vagy a számlaadatokat.
+
+guidanceContent.hu.pages.privacy.sections[2].heading
+    A tárolás helye és a hozzáférés
+
+guidanceContent.hu.pages.privacy.sections[2].paragraphs[0]
+    A küldemény tartalmát nyilvánosan nem hozzáférhető helyen tároljuk. Csak az irodán belüli jogosult személyek férhetnek hozzá, a megkeresés intézése céljából.
+
+guidanceContent.hu.pages.privacy.sections[2].paragraphs[1]
+    Ez az oldal nem ad feltétlen biztonsági garanciát. Egyetlen továbbítási út és egyetlen tárolási hely sem teljesen biztonságos; az érzékeny iratokat ezért csak az ügyvéd külön útmutatása után küldje el.
+
+guidanceContent.hu.pages.privacy.sections[3].heading
+    A felhasználás célja
+
+guidanceContent.hu.pages.privacy.sections[3].paragraphs[0]
+    Az elküldött adatok a megkeresés vizsgálatát, az Önnek adott választ, a kommunikáció módjának tisztázását és — ha a munkát elvállaljuk — az ügyintézést szolgálják.
+
+guidanceContent.hu.pages.privacy.sections[3].paragraphs[1]
+    Az adatokat külön hozzájárulás nélkül nem használjuk marketingre.
+
+guidanceContent.hu.pages.privacy.sections[4].heading
+    Értesítés és iktatószám
+
+guidanceContent.hu.pages.privacy.sections[4].paragraphs[0]
+    Ha a megkeresés sikeresen elment, a rendszer értesíti az irodát. Ha ez az értesítés nem jut el az irodához, a szövege akkor is tárolva marad, és nem vész el.
+
+guidanceContent.hu.pages.privacy.sections[4].paragraphs[1]
+    Az iktatószám a megkeresés visszakeresésére szolgál a nyilvántartásunkban. A mentés után jelenik meg; új kapcsolatfelvételkor megadhatja.
+
+guidanceContent.hu.pages.privacy.sections[5].heading
+    Az Ön jogai és a kapcsolatfelvétel útja
+
+guidanceContent.hu.pages.privacy.sections[5].paragraphs[0]
+    Kérheti adataihoz a hozzáférést, azok helyesbítését vagy törlését, illetve visszavonhatja a hozzájárulást a kapcsolatfelvételi oldalon megadott e-mail-címen. Ha jogszabályi vagy eljárási megőrzési kötelezettség áll fenn, elmagyarázzuk a korlátozást.
+
+guidanceContent.hu.pages.privacy.sections[5].paragraphs[1]
+    Ez az oldal nem ad meg rögzített megőrzési időt, mert a tényleges időtartam az ügy további alakulásától és a kapcsolódó kötelezettségektől függ. Ha korábbi törlést kíván, jelezze a kapcsolatfelvételkor.
+
+guidanceContent.hu.pages.privacy.sections[6].heading
+    Tárolási hely és szolgáltatók
+
+guidanceContent.hu.pages.privacy.sections[6].paragraphs[0]
+    Ezt a webhelyet a Vercel szolgáltatja, és a küldeménye e szolgáltatás nem nyilvános objektumtárolójában marad. Az e-maileket az iroda által használt levelezőszolgáltatáson keresztül küldjük.
+
+guidanceContent.hu.pages.privacy.sections[6].paragraphs[1]
+    Egyes szolgáltatók kiszolgálói Tajvanon kívül is lehetnek, így adatai ott is tárolhatók és kezelhetők. Ha a tárolás célja teljesült, az adatokat késedelem nélkül töröljük; azok az adatok, amelyeket az alkalmazandó szabályok szerint meg kell őrizni, erre az időre megmaradnak. A személyes adatokkal kapcsolatos kéréseket a wei@hoveringlaw.com.tw címen fogadjuk.
+
+guidanceContent.hu.pages.disclaimer.eyebrow
+    JOGI KÖZLEMÉNY
+
+guidanceContent.hu.pages.disclaimer.title
+    Az oldalon szereplő tájékoztatás köre és korlátai
+
+guidanceContent.hu.pages.disclaimer.description
+    A tájékoztatás általános jellege, a jogi keret, és az ügyvéd–ügyfél viszony létrejöttének feltételei.
+
+guidanceContent.hu.pages.disclaimer.intro
+    Ez a rész tisztázza, mit tudnak ezek a magyar tájékoztató oldalak megtenni Önért, és mit nem.
+
+guidanceContent.hu.pages.disclaimer.sections[0].heading
+    Csak általános tájékoztatás
+
+guidanceContent.hu.pages.disclaimer.sections[0].paragraphs[0]
+    Ezeknek az oldalaknak a tartalma általános tájékoztatásként készült. Nem jogi tanácsadás az Ön ügyében, és nem pótolja iratainak vizsgálatát.
+
+guidanceContent.hu.pages.disclaimer.sections[0].paragraphs[1]
+    Egy ügy kimenetele a tényektől, az alkalmazandó szabályoktól és az időponttól függ; két látszólag hasonló helyzet eltérően végződhet.
+
+guidanceContent.hu.pages.disclaimer.sections[1].heading
+    Jogi keret
+
+guidanceContent.hu.pages.disclaimer.sections[1].paragraphs[0]
+    Az iroda tajvani jog szerint működik, és ez az oldal csak az e keretben végzett munkáról szól.
+
+guidanceContent.hu.pages.disclaimer.sections[1].paragraphs[1]
+    A tartalom nem tanácsadás a tajvanitól eltérő más jogrend szerint, ideértve az Ön lakóhelyének jogát is. Ha ügyének egy része más jogrendet érint, tisztázzuk Önnel, milyen szakképzett személy szükséges ahhoz a részhez.
+
+guidanceContent.hu.pages.disclaimer.sections[2].heading
+    Az ügyvéd–ügyfél viszony nem jön létre magától
+
+guidanceContent.hu.pages.disclaimer.sections[2].paragraphs[0]
+    Ennek az oldalnak az elolvasása, egy űrlap vagy e-mail elküldése önmagában nem hoz létre ügyvéd–ügyfél viszonyt.
+
+guidanceContent.hu.pages.disclaimer.sections[2].paragraphs[1]
+    Ez a viszony csak azt követően jön létre, hogy az ügyet megvizsgálták, és mindkét fél megerősítette a munka elvállalását.
+
+guidanceContent.hu.pages.disclaimer.sections[3].heading
+    Nincs ígéret az eredményre
+
+guidanceContent.hu.pages.disclaimer.sections[3].paragraphs[0]
+    Ennek az oldalnak egyetlen része sem ígéret egy ügy kimenetelére, egy bejelentés vagy kérelem elfogadására, illetve a tartózkodási és munkavállalási jogállásra.
+
+guidanceContent.hu.pages.disclaimer.sections[3].paragraphs[1]
+    A külső hivatkozások tájékozódást szolgálnak; harmadik személyek tartalmának sem helyességét, sem naprakészségét nem ígérjük.
+
+guidanceContent.hu.pages.columns.eyebrow
+    CIKKEK
+
+guidanceContent.hu.pages.columns.title
+    Cikkek a tajvani jogról
+
+guidanceContent.hu.pages.columns.description
+    Magyar nyelvű cikkek a tajvani jog gyakori kérdéseiről. A tartalom a közzététel időpontjában érvényes általános tájékoztatás, nem az Ön ügyére szabott jogi tanácsadás.
+
+guidanceContent.hu.pages.columns.intro
+    Az iroda cikkeket tesz közzé a tajvani jog gyakori kérdéseiről. A magyarul elérhető cikkek ezen az oldalon vannak; mellettük négy hivatkozás található, amelyek egy-egy eredeti nyelv cikklistáját nyitják meg.
+
+guidanceContent.hu.pages.columns.sections[0].heading
+    Négy lista nyelvenként
+
+guidanceContent.hu.pages.columns.sections[0].paragraphs[0]
+    Ez a rész négy hivatkozást tartalmaz: a koreai, a kínai, az angol és a japán nyelvű cikkek listáját. Mindegyik hivatkozás megjelöli a lista nyelvét, így előre tudja, milyen nyelven nyílik meg a tartalom.
+
+guidanceContent.hu.pages.columns.sections[0].paragraphs[1]
+    Ez a négy lista a cikkek eredeti nyelve szerinti lista, nem fordítási lista. A magyarul elérhető cikkek külön, ezen az oldalon találhatók.
+
+guidanceContent.hu.pages.columns.sections[1].heading
+    Hová vezetnek a hivatkozások
+
+guidanceContent.hu.pages.columns.sections[1].paragraphs[0]
+    Ha a négy hivatkozás egyikét választja, az adott nyelv cikklistája nyílik meg. A listából Ön választja ki a szöveget; a teljes tartalom a cikk eredeti nyelvén jelenik meg.
+
+guidanceContent.hu.pages.columns.sections[1].paragraphs[1]
+    Ez az oldal nem foglalja össze a cikkek tartalmát, és nem garantálja, hogy egy téma mind a négy nyelven elérhető. Minden lista csak az adott nyelven közzétett szövegeket tartalmazza.
+
+guidanceContent.hu.pages.columns.sections[2].heading
+    Mennyiben szolgálhat egy cikk tájékozódásul
+
+guidanceContent.hu.pages.columns.sections[2].paragraphs[0]
+    A cikkek a közzététel időpontjában érvényes általános tájékoztatást adnak. A szabályok és azok alkalmazása változhat, és egy cikk nem tartalmazza az Ön ügyének minden körülményét.
+
+guidanceContent.hu.pages.columns.sections[2].paragraphs[1]
+    Ezért valós ügyben ne alapozzon eljárást pusztán egy cikkre. Használja áttekintésre, és iratait külön beszélje meg egy ügyvéddel; ez az oldal nem a tanácsadás lépése.
+
+guidanceTeamCopy.hu.label
+    OUR TEAM
+
+guidanceTeamCopy.hu.title
+    A Hovering nemzetközi csapata
+
+guidanceTeamCopy.hu.description
+    A Hovering ügyvédeinek, működési vezetésének és társult könyvvizsgálatának profiljai.
+
+guidanceTeamCopy.hu.representativeTitle
+    Vezető ügyvéd
+
+guidanceTeamCopy.hu.teamTitle
+    Ügyvédek és munkatársak
+
+guidanceTeamCopy.hu.partnerTitle
+    Társult könyvvizsgálat
+
+guidanceTeamCopy.hu.introLabel
+    Bemutatkozás
+
+guidanceTeamCopy.hu.educationLabel
+    Tanulmányok
+
+guidanceTeamCopy.hu.experienceLabel
+    Tapasztalat
+
+guidanceTeamCopy.hu.photoAltPrefix
+    Fénykép
+
+guidanceTeamCopy.hu.workingLanguagesLabel
+    Munkanyelvek
+
+guidanceTeamCopy.hu.fullProfileLabel
+    Teljes profil (English)
+
+guidanceTeamCopy.hu.keyFactsHeading
+    Wei Tseng ügyvéd — Fő adatok
+
+guidanceTeamCopy.hu.qualificationLabel
+    Képesítés és iroda
+
+guidanceTeamCopy.hu.qualificationSentence
+    {name} jogosult Tajvanon ügyvédi tevékenységet folytatni, és a(z) {firm} vezető ügyvédje.
+
+guidanceTeamCopy.hu.practiceLabel
+    Fő területek
+
+guidanceTeamCopy.hu.consultationLanguagesLabel
+    Tanácsadási nyelvek
+
+guidanceTeamCopy.hu.roles.tseng-junwei
+    Vezető ügyvéd Tajvanon (Managing Attorney)
+
+guidanceTeamCopy.hu.roles.chang-rongxuan
+    Ügyvéd Tajvanon (Taiwan Attorney)
+
+guidanceTeamCopy.hu.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.hu.roles.son-jungmin
+    Koreai működésvezetés (Korea Operations Manager)
+
+guidanceTeamCopy.hu.roles.huang-shengping
+    Társult könyvvizsgáló (Partner CPA)
+
+guidanceTeamBios.hu.tseng-junwei.intro[0]
+    Az iroda vállalatok és magánszemélyek tajvani ügyeit viszi angolul, japánul, koreaiul és kínaiul.
+
+guidanceTeamBios.hu.tseng-junwei.intro[1]
+    Koreai hallgatót képviselt edzőtermi sérülés miatti kártérítési igényben, és első fokon TWD 1.57M összegű ítéletet ért el.
+
+guidanceTeamBios.hu.tseng-junwei.education[0]
+    Mesterfokozat (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.hu.tseng-junwei.education[1]
+    Alapfokozat (B.A.) jogi és pénzügyi kettős képzésben, National Chengchi University
+
+guidanceTeamBios.hu.tseng-junwei.education[2]
+    Csereösztöndíj a Kobe Universityn és a Waseda Universityn
+
+guidanceTeamBios.hu.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.hu.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.hu.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.hu.chang-rongxuan.intro[0]
+    Korábban a Ministry of Education, Legal Affairs Division munkatársa, közigazgatási és polgári ügyekre összpontosítva.
+
+guidanceTeamBios.hu.chang-rongxuan.intro[1]
+    Tapasztalat egyetemeket, oktatói jogokat és közigazgatási fellebbezéseket érintő ügyekben.
+
+guidanceTeamBios.hu.chang-rongxuan.education[0]
+    Jogi alapfokozat (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.hu.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.hu.chang-rongxuan.experience[1]
+    Ügyvéd, Hovering International Law Firm
+
+guidanceTeamBios.hu.chang-fangyu.intro[0]
+    Paralegal, aki több irodában dolgozott vezető paralegalként, eljárási támogatásért, társasági jogért és külföldi befektetésekért felelve.
+
+guidanceTeamBios.hu.chang-fangyu.intro[1]
+    Támogatás eljárásokban, cégalapításban, külföldi befektetési engedélyekben, engedélykérelmekben, valamint a koreai–tajvani kapcsolatokban.
+
+guidanceTeamBios.hu.chang-fangyu.education[0]
+    Jogi alapfokozat (LL.B.), Tunghai University
+
+guidanceTeamBios.hu.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.hu.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.hu.son-jungmin.intro[0]
+    Egyezteti a tanácsadási időpontokat és a kommunikációt a koreai ügyfelek számára.
+
+guidanceTeamBios.hu.son-jungmin.intro[1]
+    Dokumentumrendszerekkel és munkafolyamatokkal támogatja a régiók közötti együttműködést, informatikai háttérrel.
+
+guidanceTeamBios.hu.son-jungmin.education[0]
+    Alapfokozat (B.S.) informatikából, National Cheng Kung University
+
+guidanceTeamBios.hu.son-jungmin.experience[0]
+    Koreai működési terület, Hovering International Law Firm
+
+guidanceTeamBios.hu.huang-shengping.intro[0]
+    A National Chengchi University számviteli alap- és mesterképzését végezte el, jelenleg könyvelőirodát vezet.
+
+guidanceTeamBios.hu.huang-shengping.intro[1]
+    Vállalati ügyfeleknek jogi, adózási és pénzügyi kockázatok együttes elemzését támogatja.
+
+guidanceTeamBios.hu.huang-shengping.education[0]
+    Mesterfokozat (M.A.) számvitelből, National Chengchi University
+
+guidanceTeamBios.hu.huang-shengping.education[1]
+    Alapfokozat (B.A.) számvitelből, National Chengchi University
+
+guidanceTeamBios.hu.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.hu.Korean
+    koreai
+
+guidanceLanguageNames.hu.Chinese
+    kínai
+
+guidanceLanguageNames.hu.Japanese
+    japán
+
+guidancePracticeAreaNames.hu.Taiwan company setup
+    Cégalapítás Tajvanon
+
+guidancePracticeAreaNames.hu.Taiwan investment counsel
+    Tajvani befektetési tanácsadás
+
+guidancePracticeAreaNames.hu.Civil litigation and damages
+    Polgári perek és kártérítés
+
+guidancePracticeAreaNames.hu.Trademark and patent filings
+    Védjegy- és szabadalmi bejelentések
+
+guidancePracticeAreaNames.hu.Visa and residency
+    Vízum és tartózkodás
+
+guidancePracticeAreaNames.hu.Family and labor disputes
+    Családi és munkaügyi jogviták
+
+guidanceOfficeCopy.hu.label
+    OFFICES
+
+guidanceOfficeCopy.hu.title
+    Irodák
+
+guidanceOfficeCopy.hu.description
+    A Hovering International Law Firm tajvani irodáinak címei.
+
+guidanceOfficeCopy.hu.officeLabel
+    Iroda
+
+guidanceOfficeCopy.hu.mapPreviewLabel
+    Térkép előnézete
+
+guidanceOfficeCopy.hu.koreaOfficeTitle
+    Koreai iroda
+
+guidanceOfficeCopy.hu.koreaAddressCardLabel
+    A koreai iroda címe
+
+guidanceOfficeCopy.hu.koreaMapLinkLabel
+    Megtekintés a Naver Mapen
+
+guidanceOfficeCopy.hu.reviewCountWord
+    értékelés
+
+guidanceOfficeCopy.hu.phoneLabel
+    Telefon
+
+guidanceOfficeCopy.hu.faxLabel
+    Fax
+
+guidanceOfficeCopy.hu.mapLinkLabel
+    Megtekintés a térképen
+
+guidanceOfficeCopy.hu.photoAlts[0]
+    A tajpeji iroda fogadótere, Hovering International Law Firm
+
+guidanceOfficeCopy.hu.photoAlts[1]
+    Ügyvédi szoba a tajpeji irodában, Hovering International Law Firm
+
+guidanceOfficeCopy.hu.photoAlts[2]
+    Tárgyaló a tajpeji irodában, Hovering International Law Firm
+
+guidanceOfficeCopy.hu.officeTitles.taipei
+    Tajpej
+
+guidanceOfficeCopy.hu.officeTitles.taichung
+    Taicsung
+
+guidanceOfficeCopy.hu.officeTitles.kaohsiung
+    Kaohsiung
+
+guidanceOfficeCopy.hu.officeTitles.pingtung
+    Pingtung
+
+guidanceFooterCopy.hu.officeLabel
+    Irodák
+
+guidanceFooterCopy.hu.officeQuickLinksLabel
+    Gyors hivatkozások az irodákhoz
+
+guidanceFooterCopy.hu.followLabel
+    Kövessen minket
+
+guidanceFooterCopy.hu.blogLabel
+    Blog
+
+guidanceFooterCopy.hu.websiteLabel
+    Hivatalos honlap
+
+guidanceFooterCopy.hu.sitemapLabel
+    Oldaltérkép
+
+guidanceFooterCopy.hu.copyEmailLabel
+    E-mail-cím másolása
+
+guidanceFooterCopy.hu.emailCopiedMessage
+    Az e-mail-cím másolva.
+
+guidanceFooterCopy.hu.officialConsultationEmailLabel
+    Hivatalos e-mail a megkeresésekhez
+
+internationalInquiryCopy.hu.guidanceNotice
+    Ez az oldal magyarul készült általános tájékozódás céljából, nem az Ön ügyére szabott jogi tanácsadásként.
+
+internationalInquiryCopy.hu.consultationNotice
+    A tanácsadás négy nyelven zajlik: angolul, kínaiul (中文), japánul és koreaiul.
+
+internationalInquiryCopy.hu.methodConfirmationNotice
+    Ha a négy nyelv egyikét sem tudja használni, válassza azt, hogy «A kommunikáció módját meg kell erősíteni». Válaszolunk, hogy megvizsgáljuk a kommunikáció járható módját, ha van ilyen; más nyelvű szolgáltatás nem garantált, és válaszadási határidőt nem ígérünk.
+
+internationalInquiryCopy.hu.preparationNotice
+    Az összefoglalót a saját nyelvén írhatja. Az eredeti szöveget úgy őrizzük meg, ahogyan megírta, és automatikusan nem fordítjuk le.
+
+internationalInquiryCopy.hu.heading
+    Megkeresés elküldése
+
+internationalInquiryCopy.hu.intro
+    Írja le röviden az ügyét. Egy ügyvéd megvizsgálja a tartalmat, mielőtt a következő lépésre kerülne sor.
+
+internationalInquiryCopy.hu.submitLabel
+    Megkeresés elküldése
+
+internationalInquiryCopy.hu.submittingLabel
+    Küldés folyamatban…
+
+internationalInquiryCopy.hu.successMessage
+    Megkapta a megkeresését; vizsgálatra vár. Ez nem jelenti azt, hogy a tanácsadás megtörtént vagy hogy időpontot erősítettünk meg.
+
+internationalInquiryCopy.hu.savedNotificationPendingMessage
+    A megkeresését elmentettük, de az irodának szóló értesítés még nincs megerősítve. Amit írt, nem vész el. Ha nem kap választ, a kapcsolatfelvételi oldal e-mail-címére is írhat.
+
+internationalInquiryCopy.hu.receiptIdLabel
+    Iktatószám
+
+internationalInquiryCopy.hu.failureMessage
+    A megkeresését nem sikerült elküldeni. Próbálja újra, vagy írjon a kapcsolatfelvételi oldal e-mail-címére.
+
+internationalInquiryCopy.hu.originalLanguageLabel
+    Az a nyelv, amelyen ír
+
+internationalInquiryCopy.hu.originalLanguagePlaceholder
+    Például magyar, angol, kínai vagy más nyelv
+
+internationalInquiryCopy.hu.preferredConsultationLanguageLabel
+    A tanácsadáshoz kívánt nyelv
+
+internationalInquiryCopy.hu.originalTextLabel
+    Az ügy rövid leírása (a saját nyelvén)
+
+internationalInquiryCopy.hu.originalTextPlaceholder
+    Írja le, mi történt, milyen segítségre van szüksége, és a határidőt, ha van. Ne írjon útlevélszámot, okmányszámot vagy számlaadatokat.
+
+internationalInquiryCopy.hu.nameLabel
+    Név
+
+internationalInquiryCopy.hu.emailLabel
+    E-mail
+
+internationalInquiryCopy.hu.consentLabel
+    Elolvastam az adatvédelmi oldalt, és hozzájárulok a megkeresés elküldéséhez.
+
+internationalInquiryCopy.hu.privacyLinkLabel
+    Adatvédelem
+
+internationalInquiryCopy.hu.requiredMessage
+    Ez a mező kötelező.
+
+internationalInquiryCopy.hu.invalidEmailMessage
+    Adjon meg érvényes e-mail-címet.
+
+internationalInquiryCopy.hu.tooLongMessage
+    A szöveg túl hosszú. Rövidítse le, és küldje el újra.
+
+internationalInquiryCopy.hu.sourceLanguageNotice
+    Ez a cikk csak {language} nyelven jelent meg; a hivatkozás az eredeti oldalt nyitja meg.
+
+internationalInquiryCopy.hu.unavailableTranslationNotice
+    Ez a rész még nem érhető el ennek az oldalnak a nyelvén. Az eredeti nyelvű hivatkozás az eredeti szöveget nyitja meg.
+
+internationalInquiryCopy.hu.unavailableLanguageNotice
+    Ezt az oldalt nem kínáljuk {language} nyelven.
+
+internationalInquiryCopy.hu.languageOptions.en
+    Angol (English)
+
+internationalInquiryCopy.hu.languageOptions.zh-hant
+    Kínai (中文)
+
+internationalInquiryCopy.hu.languageOptions.ja
+    Japán (日本語)
+
+internationalInquiryCopy.hu.languageOptions.ko
+    Koreai (한국어)
+
+internationalInquiryCopy.hu.languageOptions.needs-method-confirmation
+    A négy nyelv egyike sem használható — a kommunikáció módját meg kell erősíteni
+
+guidanceAnswers.hu.services.answer
+    Az iroda hat csoportot visz a tajvani jog szerint: befektetés és cégalapítás, polgári jogi jogviták és kártérítés, házasság, család és öröklés, munkaügy, büntetőügyek és szellemi tulajdon. Az egyes ügyek terjedelmét külön erősítjük meg azt követően, hogy egy ügyvéd megvizsgálta a beküldött tartalmat. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.
+
+guidanceAnswers.hu.services.sources[0]
+    /hu/faq
+
+guidanceAnswers.hu.services.sources[1]
+    /hu/contact
+
+guidanceAnswers.hu.about.answer
+    A Hovering International Law Firm tajvani ügyvédi iroda, amelyet 2016-ban a National Taiwan University (國立臺灣大學) végzettjei alapítottak, irodákkal Tajpejben, Kaohsiungban, Taicsungban és Pingtungban. 2020 óta könyvviteli részleg is működik; a taicsungi iroda koreai és japán kötődésű ügyeket visz. Az iroda nem ígér eredményt. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.
+
+guidanceAnswers.hu.about.sources[0]
+    /hu/lawyers
+
+guidanceAnswers.hu.about.sources[1]
+    /hu/services
+
+guidanceAnswers.hu.lawyers.answer
+    Ez az oldal a Hovering ügyvédeinek, működési vezetésének és társult könyvvizsgálatának profiljait mutatja. Wei Tseng ügyvéd (曾雋崴) Tajvanon jogosult, és az iroda vezető ügyvédje; koreai, japán és további nemzetközi ügyfelekkel dolgozik. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.
+
+guidanceAnswers.hu.lawyers.sources[0]
+    /hu/about
+
+guidanceAnswers.hu.lawyers.sources[1]
+    /hu/contact
+
+guidanceAnswers.hu.pricing.answer
+    Ez az oldal nem tesz közzé árlistát. Előbb az összefoglalóból rögzítjük a munka terjedelmét, majd az összeget és a számítás módját erősítjük meg Önnel, a munka megkezdése előtt. Az ügyvéddel folytatott beszélgetés díjköteles lehet; a munkadíjon felül bírósági vagy hatósági költségek merülhetnek fel. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.
+
+guidanceAnswers.hu.pricing.sources[0]
+    /hu/contact
+
+guidanceAnswers.hu.pricing.sources[1]
+    /hu/faq
+
+guidanceAnswers.hu.contact.answer
+    Küldjön összefoglalót a kapcsolatfelvételi űrlapon: mi történt, milyen segítségre van szüksége, milyen kötődése van az ügynek Tajvanhoz, és a határidő, ha ismeri. A kezdeti szakaszban még nem kell személyazonosító okmányokat vagy a teljes bizonyítékanyagot beküldeni. Az iroda nem ígér válaszadási határidőt, és nem erősít meg időpontot ezen az oldalon keresztül. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.
+
+guidanceAnswers.hu.contact.sources[0]
+    /hu/faq
+
+guidanceAnswers.hu.contact.sources[1]
+    /hu/pricing
+
+guidanceAnswers.hu.faq.answer
+    Ez a rész gyakori kérdésekre válaszol általános tájékoztatás szintjén: a hat ügycsoport, a kapcsolatfelvétel előtti előkészület, a költségek megerősítése és az elküldött üzenet jelentése. Az elküldött üzenet vizsgálatra vár, nem jogi állásfoglalás és nem megerősített időpont, és önmagában nem hoz létre ügyvéd–ügyfél viszonyt. A tanácsadás négy nyelven zajlik: angolul, kínaiul, japánul és koreaiul.
+
+guidanceAnswers.hu.faq.sources[0]
+    /hu/services
+
+guidanceAnswers.hu.faq.sources[1]
+    /hu/contact
+
+GUIDANCE_LLMS_NOTICES.hu.consultationNotice
+    Ez a tájékoztatás magyarul készült, de az ügyvéddel folytatott tanácsadás kizárólag angolul, kínaiul (中文), japánul és koreaiul zajlik.
+
+GUIDANCE_LLMS_NOTICES.hu.discoveryNotice
+    Az llms.txt fájl csak térkép a nyilvános oldalak megtalálásához; nem ígér keresési helyezést, támogatást, mesterséges intelligencia általi ajánlást és láthatóságot sem.
+
+GUIDANCE_LLMS_NOTICES.hu.confidentialNotice
+    Mivel az eredeti szöveget megőrizzük, a kezdeti szakaszban ne írja le azt, ami még nem szükséges, például az útlevélszámot, az okmányszámot vagy a számlaadatokat.

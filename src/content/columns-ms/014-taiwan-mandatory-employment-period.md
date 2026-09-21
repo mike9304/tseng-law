@@ -183,7 +183,7 @@ Dengan menyusun dokumen dalam tertib masa, sesuai menyatakan bersama tarikh peme
 
 ## 11. Orientasi berkaitan
 
-- [Perkhidmatan undang-undang buruh di Taiwan](/ko/services/labor)
+- [Hal yang kami kendalikan](/ms/services)
 - [Orientasi mengenai peletakan jawatan sukarela dan pengecualian pampasan pemberhentian](/ms/columns/taiwan-voluntary-resignation-severance)
 - [Hubungi](/ms/contact)
 

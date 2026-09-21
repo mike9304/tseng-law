@@ -17,7 +17,7 @@ Gần đây, nhiều người đã thành lập công ty thành công tại Đà
 
 nên tôi xin tổng hợp lại những câu hỏi mà nhiều người thường thắc mắc trong quá trình thành lập công ty.
 
-Quý vị nào đã đọc [**Cơ bản về thành lập công ty**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) thì xin tham khảo tiếp phần chuyên sâu chi tiết dưới đây.
+Quý vị nào đã đọc [**Cơ bản về thành lập công ty**](/vi/columns/taiwan-company-establishment-basics) thì xin tham khảo tiếp phần chuyên sâu chi tiết dưới đây.
 
 Mong rằng phần Hỏi–Đáp dưới đây sẽ hữu ích cho quý vị đang cân nhắc thành lập công ty tại Đài Loan. 😊
 
@@ -128,6 +128,6 @@ quý vị hãy xác nhận trước điều này.
 ---
 
 > Xem thêm:
-> - [Hướng dẫn tổng hợp về thành lập công ty tại Đài Loan — thủ tục, chi phí và các hình thức pháp nhân](/ko/guides/taiwan-company-setup)
-> - [Luật sư Đài Loan có thể giao tiếp bằng tiếng Hàn](/ko/korean-lawyer-in-taiwan)
-> - [Hướng dẫn về luật sư thành lập pháp nhân, thành lập công ty tại Đài Loan](/ko/taiwan-company-setup-lawyer)
+> - [Các lĩnh vực mà văn phòng nhận xử lý](/vi/services)
+> - [Đội ngũ quốc tế Hovering](/vi/lawyers)
+> - [Cách liên hệ với văn phòng](/vi/contact)

@@ -78,6 +78,6 @@ Förvaltningsmyndigheternas regler kan ändras ofta; före registrering av den j
 ---
 
 > Se även:
-> - [Allmän guide till bolagsbildning i Taiwan — förfaranden, kostnader och bolagsformer](/ko/guides/taiwan-company-setup)
-> - [Taiwanesisk advokat med koreanska kunskaper](/ko/korean-lawyer-in-taiwan)
-> - [Hållpunkter om advokat för juridiska personer och bolagsbildning i Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Vilka ärenden vi behandlar](/sv/services)
+> - [Hoverings internationella team](/sv/lawyers)
+> - [Hur ni når byrån](/sv/contact)

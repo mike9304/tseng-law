@@ -139,7 +139,7 @@ Trạng thái tạm ngừng kinh doanh càng kéo dài thì thủ tục chấm d
 
 ## Thông tin liên quan
 
-1. [Dịch vụ đầu tư và thành lập công ty tại Đài Loan](/ko/services/investment)
+1. [Các lĩnh vực mà văn phòng nhận xử lý](/vi/services)
 2. [Cơ bản về thành lập công ty tại Đài Loan](/vi/columns/taiwan-company-establishment-basics)
 3. [Liên hệ](/vi/contact)
 

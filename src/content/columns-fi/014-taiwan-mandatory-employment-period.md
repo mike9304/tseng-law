@@ -183,7 +183,7 @@ Liitteitä aikajärjestykseen järjestettäessä olisi yhdessä ilmoitettava sop
 
 ## 11. Liittyvät oppaat
 
-- [Palvelu työoikeudesta Taiwanissa](/ko/services/labor)
+- [Mitä asioita käsittelemme](/fi/services)
 - [Opas vapaaehtoisesta irtisanoutumisesta ja poikkeuksista erorahaan](/fi/columns/taiwan-voluntary-resignation-severance)
 - [Yhteydenotto](/fi/contact)
 

@@ -58,8 +58,8 @@ A与B的亲属起初将第2号车辆突然变换车道视为碰撞主因。案�
 ---
 
 > 另见：
-> - [台湾诉讼律师要点](/ko/taiwan-litigation-lawyer)
-> - [能以韩语沟通的台湾律师](/ko/korean-lawyer-in-taiwan)
+> - [工作范围与费用如何确定](/zh-hans/pricing)
+> - [Hovering 国际团队](/zh-hans/lawyers)
 > - [台湾交通事故处理程序](/zh-hans/columns/taiwan-traffic-accident-procedure)
 
 本文为关于台湾超车规则与事故责任判断的一般法律资讯；并非针对具体案件的咨询，也不承诺特定结果。实际责任可能因事故地点、车辆动态、速度、信号、证据、鉴定及现行法律而异；具体案件须依相关资料分别检视。

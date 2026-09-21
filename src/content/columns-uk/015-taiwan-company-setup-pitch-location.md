@@ -78,6 +78,6 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 ---
 
 > Див. також:
-> - [Загальний гід із заснування товариства на Тайвані — процедури, витрати та організаційно-правові форми](/ko/guides/taiwan-company-setup)
-> - [Адвокатка на Тайвані, яка може спілкуватися корейською](/ko/korean-lawyer-in-taiwan)
-> - [Орієнтири щодо адвокатки для юридичних осіб і заснування товариства на Тайвані](/ko/taiwan-company-setup-lawyer)
+> - [Які справи ми ведемо](/uk/services)
+> - [Міжнародна команда Hovering](/uk/lawyers)
+> - [Як звернутися до фірми](/uk/contact)

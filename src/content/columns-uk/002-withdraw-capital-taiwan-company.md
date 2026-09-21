@@ -139,7 +139,7 @@ faq:
 
 ## Пов’язані вказівки
 
-1. [Послуги з інвестицій і заснування товариства на Тайвані](/ko/services/investment)
+1. [Які справи ми ведемо](/uk/services)
 2. [Основи заснування товариства на Тайвані](/uk/columns/taiwan-company-establishment-basics)
 3. [Контакт](/uk/contact)
 

@@ -1,0 +1,27 @@
+[WO start 2026-09-21 16:08:36]
+Native review is in `docs/i18n/global-plan/reviews/native/sv-a.md` (guidance pack + columns 001–009). No source files were changed.
+
+**Verdict:** guidance **3/5**, columns **2/5**. Sweden Swedish throughout, but pivoted off German (*anvisningar*, *Ni*, *läge*) with Korean-reader leftovers (`/ko/` links, Taiwan–Korea 10 % treaty, “advokat som kan koreanska”). Wei Tseng is correctly *hon* / *jag*; no masculine forms.
+
+**55 findings** (18 P1, 37 P2): exclusive “endast” missing on the inquiry notice; “svara för” reads as a guarantee; “lägen” = apartments; English `OUR TEAM`/`OFFICES`; Hangul slugs in 005/008/009; “högsta möjliga ersättningen” as a results claim.
+
+Last 15 lines of the output file:
+
+```
+| 41 | P2 | D | columns-sv/003-taiwan-traffic-accident-procedure.md | "Om ni har ytterligare frågor, lämna dem i kommentarerna." | Blog-comment CTA; this site has no comment thread. | Har du fler frågor, använd [Kontakt](/sv/contact). |
+| 42 | P2 | D | columns-sv/003-taiwan-traffic-accident-procedure.md | "Dom från Taiwans hovrätt, år 109, ärende 上易字 nummer 644" | ROC year 109 is opaque in Sweden (2020). Also 007: "domen nummer 4 för år 112". | Dom från Taiwans hovrätt, år 109 (2020), mål 上易字 nr 644 |
+| 43 | P2 | C | columns-sv/003-taiwan-traffic-accident-procedure.md | "passagerare eller 3:e man (第三人) utanför fordonet" | Digit ordinal "3:e man" is English/German UI style; Swedish legal prose writes "tredje man". Also 004 "en 3:e part". | passagerare eller tredje man (第三人) utanför fordonet |
+| 44 | P2 | C | columns-sv/004-taiwan-company-subsidiary-vs-branch.md | "Överföringen till huvudkontoret, av ett utländskt bolags taiwanesiska filial, av vinsten efter skatt" | German nested-comma word order; a native would not park two "av"-phrases like this. Also in the FAQ answer. | När en taiwanesisk filial för över vinst efter skatt till det utländska huvudkontoret är det inte utdelning, så ytterligare källskatt tas i princip inte ut. |
+| 45 | P2 | B | columns-sv/004-taiwan-company-subsidiary-vs-branch.md | "Kan en taiwanes eller en taiwanesisk juridisk person delta som aktieägare" | "taiwanes" is not a Swedish noun (German *Taiwanese*). | Kan en taiwanesisk medborgare eller en taiwanesisk juridisk person ingå som delägare |
+| 46 | P2 | C | columns-sv/006-taiwan-massage-history-law.md | "finns det också i Taiwan många massagegenomfarter" | "Genomfart" is a through-road; machine reading of 按摩街 / massage alleys. | finns det också i Taiwan många massagestråk |
+| 47 | P2 | C | columns-sv/006-taiwan-massage-history-law.md | "Slutligen förklarade de stora domarna (大法官)" | "the big judges" is comic; 大法官 are the Grand Justices. | Slutligen förklarade Justitieyuanets stora domare (大法官) |
+| 48 | P2 | B | columns-sv/007-taiwan-divorce-lawsuit-qna.md | "I ett skilsmässaärende i Taiwan" | Missing linking -o- (*skilsmässoärende*). | I ett skilsmässoärende i Taiwan |
+| 49 | P2 | A | columns-sv/007-taiwan-divorce-lawsuit-qna.md | "nödunderhåll (贍養費) till den felfria maken eller makan enligt artikel 1057" | Swedish *nödunderhåll* is emergency support; 贍養費 is post-divorce spousal maintenance. | underhåll efter skilsmässa (贍養費) till den make eller maka som är utan skuld enligt artikel 1057 |
+| 50 | P2 | B | columns-sv/008-taiwan-labor-severance-law.md | "är avgångsvederlaget verkligen svårt att få i Taiwan??" | Double question mark and blog clickbait on a client-facing legal article. | Avgångsvederlag i Taiwan: när det utgår och när det inte gör det |
+| 51 | P2 | G | columns-sv/008-taiwan-labor-severance-law.md | "3. Force majeure kräver avbrott i verksamheten i 1 månad eller mer" | French/English *force majeure* dropped into a Swedish statute paraphrase (勞動基準法 art. 11). | 3. En extraordinär händelse (不可抗力) kräver avbrott i verksamheten i en månad eller mer |
+| 52 | P2 | A | columns-sv/009-taiwan-voluntary-resignation-severance.md | "kan avgångsvederlag (資遣費) inte tas ut" | "tas ut" = withdraw/levy a charge; the employee does not "levy" severance. | kan den anställda inte få avgångsvederlag (資遣費) |
+| 53 | P2 | D | columns-sv/001-taiwan-company-establishment-basics.md | "inbetalt kapital eller rörelsekapital i Taiwan (在臺營運資金) om minst TWD 500.000" | Thousand separator `.` is German/Norwegian; Swedish is space (or thin space). Throughout 001–004, 007 (TWD 3.000.000, 1.000.000, 30.000, 200.000, 2.500.000). | minst 500 000 TWD (新臺幣) |
+| 54 | P2 | C | columns-sv/008-taiwan-labor-severance-law.md | "Hej, jag är Wei Tseng (曾雋崴), advokat i Taiwan." | Sudden informal blog voice after the rest of the Swedish site’s stiff "Ni"-register; 003 Q16–Q20 and 006 have the same first-person shift. | (Keep first person if this is a signed column, but drop "Hej," and match the surrounding professional tone:) Jag heter Wei Tseng (曾雋崴) och är advokat i Taiwan. |
+| 55 | P2 | C | sv-guidance.txt | "Stöd därför ingen handling i ett verkligt ärende enbart på en artikel." | German *stützen Sie keine Handlung auf*; Swedish *stöd på* is not “rely on”. | Grunda därför inte ett beslut i ett verkligt ärende enbart på en artikel. |
+```
+=== end code=0 2026-09-21 16:17:00 ===

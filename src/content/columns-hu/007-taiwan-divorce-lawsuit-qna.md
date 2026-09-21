@@ -188,8 +188,8 @@ A következő elsődleges források (1. szint) a cikk jogi szerkezetének és el
 
 ## 13. Kapcsolódó útmutatók
 
-- [Tajvani családjogi szolgáltatások](/ko/services/family)
-- [Útmutató a tajvani peres ügyvédhez](/ko/taiwan-litigation-lawyer)
+- [Milyen ügyeket viszünk](/hu/services)
+- [Hogyan rögzítjük a munka terjedelmét és a költségeket](/hu/pricing)
 - [Kapcsolat](/hu/contact)
 
 ---

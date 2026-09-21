@@ -183,7 +183,7 @@ faq:
 
 ## 11. הנחיות קשורות
 
-- [שירות דיני עבודה בטאיוואן](/ko/services/labor)
+- [באילו עניינים אנו מטפלים](/he/services)
 - [הנחיה על הפסקה מרצון וחריגי דמי פיטורים](/he/columns/taiwan-voluntary-resignation-severance)
 - [יצירת קשר](/he/contact)
 

@@ -139,7 +139,7 @@ Je länger die Betriebsruhe dauert, desto verwickelter kann das spätere Beendig
 
 ## Zugehörige Hinweise
 
-1. [Dienstleistungen zu Investition und Gesellschaftsgründung in Taiwan](/ko/services/investment)
+1. [Welche Angelegenheiten wir bearbeiten](/de/services)
 2. [Grundlagen der Gesellschaftsgründung in Taiwan](/de/columns/taiwan-company-establishment-basics)
 3. [Kontakt](/de/contact)
 

@@ -183,7 +183,7 @@ faq:
 
 ## 11. إرشاد ذو صلة
 
-- [خدمات قانون العمل في تايوان](/ko/services/labor)
+- [المجالات التي يقبلها المكتب](/ar/services)
 - [إرشاد الاستقالة من تلقاء النفس والاستثناء في بدل إنهاء الخدمة](/ar/columns/taiwan-voluntary-resignation-severance)
 - [طلب الاستشارة](/ar/contact)
 

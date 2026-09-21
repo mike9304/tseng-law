@@ -1,0 +1,1096 @@
+# ms guidance pack strings (path → text). Generated 2026-09-21
+
+guidanceContent.ms.languageName
+    Bahasa Melayu
+
+guidanceContent.ms.nav.home
+    Laman utama
+
+guidanceContent.ms.nav.services
+    Bidang kerja
+
+guidanceContent.ms.nav.about
+    Firma
+
+guidanceContent.ms.nav.lawyers
+    Peguam
+
+guidanceContent.ms.nav.pricing
+    Skop dan kos
+
+guidanceContent.ms.nav.contact
+    Hubungi
+
+guidanceContent.ms.nav.faq
+    Soalan lazim
+
+guidanceContent.ms.nav.privacy
+    Privasi
+
+guidanceContent.ms.nav.disclaimer
+    Penafian
+
+guidanceContent.ms.nav.columns
+    Rencana
+
+guidanceContent.ms.contactCta
+    Hantar permintaan perundingan
+
+guidanceContent.ms.footerNotice
+    Halaman bahasa Melayu ini hanya memberikan maklumat am tentang kerja firma menurut undang-undang Taiwan. Ia bukan nasihat undang-undang bagi suatu kes tertentu, dan penghantaran mesej dengan sendirinya tidak mewujudkan hubungan antara peguam dan klien.
+
+guidanceContent.ms.skipLink
+    Langkau navigasi dan pergi ke kandungan
+
+guidanceContent.ms.menuLabel
+    Direktori halaman
+
+guidanceContent.ms.languageLabel
+    Bahasa paparan
+
+guidanceContent.ms.mega.services.description
+    Firma mengendalikan kumpulan kerja utama menurut undang-undang Taiwan.
+
+guidanceContent.ms.mega.services.viewAllLabel
+    Lihat semua
+
+guidanceContent.ms.mega.columns.description
+    Rencana tentang soalan undang-undang Taiwan yang kerap timbul.
+
+guidanceContent.ms.mega.columns.viewAllLabel
+    Lihat semua
+
+guidanceContent.ms.mega.lawyers.description
+    Pengenalan peguam yang bertugas dan cara menghubungi mereka.
+
+guidanceContent.ms.mega.lawyers.viewAllLabel
+    Lihat semua
+
+guidanceContent.ms.mega.pricing.description
+    Halaman ini menerangkan skop kerja dan bagaimana kos ditentukan.
+
+guidanceContent.ms.mega.pricing.viewAllLabel
+    Lihat semua
+
+guidanceContent.ms.mega.faq.description
+    Soalan lazim tentang kerja firma di Taiwan.
+
+guidanceContent.ms.mega.faq.viewAllLabel
+    Lihat semua
+
+guidanceContent.ms.notFoundTitle
+    Halaman tidak dijumpai
+
+guidanceContent.ms.notFoundText
+    Halaman yang anda cari tidak wujud atau telah dipindahkan. anda boleh kembali ke laman utama bahasa Melayu untuk melihat maklumat yang ada.
+
+guidanceContent.ms.backHomeLabel
+    Ke laman utama
+
+guidanceContent.ms.readSourceLabel
+    Buka senarai rencana dalam bahasa asal
+
+guidanceContent.ms.home.heroScrollLabel
+    Tatal ke bawah
+
+guidanceContent.ms.home.heroColumnsCtaLabel
+    Lihat rencana
+
+guidanceContent.ms.home.servicesDetailLabel
+    Lihat butiran
+
+guidanceContent.ms.home.servicesAssistanceBefore
+    Jika tidak jelas kumpulan mana yang merangkumi hal anda, halaman 
+
+guidanceContent.ms.home.servicesAssistanceLinkLabel
+    Hubungi
+
+guidanceContent.ms.home.servicesAssistanceAfter
+     menerangkan bagaimana anda merumuskan ringkasan untuk disemak oleh peguam.
+
+guidanceContent.ms.home.columnsViewAllLabel
+    Lihat semua rencana
+
+guidanceContent.ms.home.columnsReadMoreLabel
+    Baca selanjutnya
+
+guidanceContent.ms.home.columnsReviewLabel
+    Disemak oleh peguam Wei Tseng
+
+guidanceContent.ms.home.columnsOriginalLanguageBadge
+    Bahasa asal
+
+guidanceContent.ms.home.columnsOriginalLanguageNote
+    Rencana berikut belum tersedia dalam bahasa Melayu. Senarai kekal dalam bahasa asal dan membuka halaman bahasa berkenaan; kandungannya tidak diterjemah secara automatik.
+
+guidanceContent.ms.home.imageBandAlt
+    Sanheyuan tradisional Taiwan (三合院) dan pavilion moden pada waktu siang
+
+guidanceContent.ms.home.videoPauseLabel
+    Jeda video
+
+guidanceContent.ms.home.videoPlayLabel
+    Mainkan video
+
+guidanceContent.ms.home.videoReplayLabel
+    Mainkan semula video
+
+guidanceContent.ms.pages.home.eyebrow
+    MAKLUMAT
+
+guidanceContent.ms.pages.home.title
+    Perkhidmatan undang-undang di Taiwan — maklumat dalam bahasa Melayu
+
+guidanceContent.ms.pages.home.description
+    Penjelasan am dalam bahasa Melayu tentang bidang kerja Hovering International Law Firm di Taiwan, bahasa perundingan, dan hubungan pertama.
+
+guidanceContent.ms.pages.home.intro
+    Hovering International Law Firm menemani klien dari luar negara, termasuk yang berkaitan dengan Taiwan, dalam hal menurut undang-undang Taiwan: pelaburan dan penubuhan syarikat, pertikaian sivil, perkahwinan, keluarga dan pusaka, buruh, jenayah dan harta intelek. Bahagian bahasa Melayu ini membantu anda melihat kerja mana yang termasuk dalam skop kami, apa yang perlu disediakan, dan bagaimana menghubungi kami. Ini ialah maklumat am, bukan nasihat undang-undang bagi kes anda sendiri.
+
+guidanceContent.ms.pages.home.sections[0].heading
+    Apa yang kami lakukan
+
+guidanceContent.ms.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm ialah firma peguam yang ditubuhkan di Taiwan. Firma bekerja menurut undang-undang Taiwan dan mempunyai pejabat di Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) dan Pingtung (屏東). Kami menasihati syarikat, menjalankan prosedur di mahkamah, dan menemani klien dari luar negara melalui langkah yang diperlukan di Taiwan.
+
+guidanceContent.ms.pages.home.sections[0].paragraphs[1]
+    Semua kandungan di sini bersifat am. Hasil suatu hal bergantung pada fakta, peraturan yang terpakai, dan masa. Maklumat ini tidak menggantikan perbualan dengan peguam tentang dokumen anda.
+
+guidanceContent.ms.pages.home.sections[1].heading
+    Bahasa halaman dan bahasa perundingan bukan perkara yang sama
+
+guidanceContent.ms.pages.home.sections[1].paragraphs[0]
+    Halaman ini ditulis dalam bahasa Melayu, tetapi perundingan dengan peguam hanya dijalankan dalam empat bahasa perundingan: Inggeris, Cina (中文), Jepun dan Korea. Membaca maklumat bahasa Melayu tidak bermakna perbualan dengan peguam akan berlangsung dalam bahasa Melayu.
+
+guidanceContent.ms.pages.home.sections[1].paragraphs[1]
+    Kami tidak menjanjikan jurubahasa, tempoh jawapan, atau janji temu melalui halaman ini. Jika anda tidak dapat menggunakan mana-mana daripada empat bahasa itu, halaman Hubungi menerangkan bagaimana kami meneliti cara berkomunikasi.
+
+guidanceContent.ms.pages.home.sections[2].heading
+    Kumpulan kerja
+
+guidanceContent.ms.pages.home.sections[2].paragraphs[0]
+    Skop kerja merangkumi enam kumpulan berikut. Halaman Bidang kerja menerangkan setiap kumpulan dengan lebih lanjut dan menyatakan apa yang tidak dijanjikan.
+
+guidanceContent.ms.pages.home.sections[2].items[0]
+    Pelaburan dan penubuhan syarikat di Taiwan
+
+guidanceContent.ms.pages.home.sections[2].items[1]
+    Hal sivil dan ganti rugi
+
+guidanceContent.ms.pages.home.sections[2].items[2]
+    Perkahwinan, keluarga dan pusaka
+
+guidanceContent.ms.pages.home.sections[2].items[3]
+    Pertikaian buruh
+
+guidanceContent.ms.pages.home.sections[2].items[4]
+    Hal jenayah
+
+guidanceContent.ms.pages.home.sections[2].items[5]
+    Harta intelek: cap dagangan, paten dan hak cipta
+
+guidanceContent.ms.pages.home.sections[3].heading
+    Di mana anda sepatutnya bermula
+
+guidanceContent.ms.pages.home.sections[3].paragraphs[0]
+    Baca halaman Bidang kerja untuk menilai sama ada hal anda termasuk dalam skop kami, kemudian Skop dan kos serta Hubungi, untuk mengetahui bagaimana skop ditetapkan dan kos disahkan sebelum kerja bermula.
+
+guidanceContent.ms.pages.home.sections[3].paragraphs[1]
+    Apabila menghantar mesej, anda boleh menulis ringkasan dalam bahasa anda sendiri. Teks asal disimpan sebagaimana anda menulisnya, dan tidak diterjemah secara automatik. Mesej yang dihantar ialah permintaan yang menunggu semakan: itu belum perundingan dan belum janji temu yang disahkan.
+
+guidanceContent.ms.pages.services.eyebrow
+    BIDANG KERJA
+
+guidanceContent.ms.pages.services.title
+    Hal yang kami kendalikan
+
+guidanceContent.ms.pages.services.description
+    Enam kumpulan kerja firma di Taiwan dan batas yang anda perlu ketahui dahulu.
+
+guidanceContent.ms.pages.services.intro
+    Berikut ialah kumpulan yang kami kendalikan secara sebenar, dan soalan yang kerap timbul pada peringkat awal. Paparan ini membantu anda menilai sama ada hal anda termasuk dalam skop kami; ia bersifat am dan bukan analisis undang-undang bagi suatu urusan tunggal.
+
+guidanceContent.ms.pages.services.sections[0].heading
+    Pelaburan dan penubuhan syarikat di Taiwan
+
+guidanceContent.ms.pages.services.sections[0].paragraphs[0]
+    Kami menemani pelabur dan syarikat asing dalam penubuhan atau pengoperasian syarikat di Taiwan: pemilihan bentuk undang-undang, penyediaan dan penyerahan dokumen, modal masuk, urusan bank, semakan tempat operasi, serta keperluan khusus industri. Kami juga membantu perakaunan dan cukai yang timbul daripada penubuhan dan pengoperasian di Taiwan.
+
+guidanceContent.ms.pages.services.sections[0].paragraphs[1]
+    Aliran dan tempoh berbeza mengikut bentuk undang-undang, pelabur, industri, bank dan dokumen yang ada. Penubuhan syarikat tidak dengan sendirinya membawa permit tinggal (居留) atau permit kerja (工作許可): itu prosedur berasingan yang dinilai menurut keadaan orang berkenaan.
+
+guidanceContent.ms.pages.services.sections[1].heading
+    Hal sivil dan ganti rugi
+
+guidanceContent.ms.pages.services.sections[1].paragraphs[0]
+    Kumpulan ini merangkumi pertikaian kontrak, ganti rugi daripada perbuatan salah, dan pertikaian pengguna. Kerja biasanya bermula dengan kronologi, semakan dokumen dan bukti yang ada, dan hanya kemudian langkah seterusnya.
+
+guidanceContent.ms.pages.services.sections[1].paragraphs[1]
+    Tempoh, termasuk tempoh saman berkanun, dan kelengkapan bukti membentuk perjalanan. Oleh itu nyatakan tarikh yang diketahui seawal mungkin. Simpan kontrak, mesej, resit bayaran atau foto keadaan di tempat, dan sebutkannya dalam mesej pertama.
+
+guidanceContent.ms.pages.services.sections[2].heading
+    Perkahwinan, keluarga dan pusaka
+
+guidanceContent.ms.pages.services.sections[2].paragraphs[0]
+    Kami mengendalikan penceraian (離婚), pembahagian harta, pelaksanaan dan tanggungjawab hak dan kewajipan terhadap anak bawah umur (未成年子女權利義務之行使或負擔), kunjungan (會面交往) dan pusaka (繼承), termasuk jika pihak atau harta berada di negara berlainan. Hal keluarga merentas sempadan sering memerlukan semakan tambahan dokumen daftar isi rumah (戶籍), bentuk surat cara, dan kebolehbuktiannya di Taiwan.
+
+guidanceContent.ms.pages.services.sections[2].paragraphs[1]
+    Kerana hal keluarga kerap membawa tempoh dan prosedur selari, ringkasan pertama sepatutnya menyatakan hubungan pihak, tempat tinggal semasa, dan prosedur yang sudah berjalan.
+
+guidanceContent.ms.pages.services.sections[3].heading
+    Pertikaian buruh
+
+guidanceContent.ms.pages.services.sections[3].paragraphs[0]
+    Kumpulan ini merangkumi penamatan hubungan pekerjaan, bayaran pemberhentian menurut undang-undang Taiwan (資遣費; tidak disamakan dengan institusi negara lain), upah, dan pertikaian daripada kontrak buruh (勞動契約), sama ada di pihak pekerja atau majikan. Semasa semakan kami memisahkan sebab penamatan daripada soalan notis, bayaran dan tempoh.
+
+guidanceContent.ms.pages.services.sections[3].paragraphs[1]
+    Kontrak buruh, peraturan kerja (工作規則), slip gaji dan surat-menyurat pihak biasanya dokumen yang menentukan. Jika anda masih menyimpannya, sebutkan dalam ringkasan.
+
+guidanceContent.ms.pages.services.sections[4].heading
+    Hal jenayah
+
+guidanceContent.ms.pages.services.sections[4].paragraphs[0]
+    Kami menemani dalam siasatan dan di mahkamah, bagi tertuduh atau terdakwa serta bagi orang yang tercedera, dan menilai risiko jenayah aktiviti perniagaan.
+
+guidanceContent.ms.pages.services.sections[4].paragraphs[1]
+    Hal jenayah kerap mempunyai tempoh pendek dan peringkat yang ditetapkan. Jika anda sudah menerima surat daripada pihak pendakwaan atau mahkamah, nyatakan tarikh pada surat itu awal, supaya kandungannya disemak dalam urutan yang betul.
+
+guidanceContent.ms.pages.services.sections[5].heading
+    Harta intelek
+
+guidanceContent.ms.pages.services.sections[5].paragraphs[0]
+    Kami membantu pendaftaran cap dagangan (商標) dan paten (專利), hak cipta, dan pertikaian tentang hak ini di Taiwan.
+
+guidanceContent.ms.pages.services.sections[5].paragraphs[1]
+    Dalam kumpulan ini urutan langkah menentukan: skop perlindungan, masa pemfailan dan penggunaan sebenar mempengaruhi pilihan. Penyerahan permohonan tidak dengan sendirinya bermakna ia diluluskan.
+
+guidanceContent.ms.pages.services.sections[6].heading
+    Skop dan pengesahannya
+
+guidanceContent.ms.pages.services.sections[6].paragraphs[0]
+    Firma bekerja menurut undang-undang Taiwan dan mengendalikan hal dalam kumpulan di atas. Skop setiap hal disahkan secara berasingan selepas peguam menyemak mesej anda.
+
+guidanceContent.ms.pages.services.sections[6].paragraphs[1]
+    Status tinggal, permit kerja dan soalan sebanding dinilai daripada dokumen dan keadaan orang berkenaan, bukan daripada kewarganegaraan. Jika sebahagian hal anda menyentuh soalan demikian, nyatakan semasa menghubungi. Halaman ini tidak menjanjikan hasil mahupun tempoh jawapan.
+
+guidanceContent.ms.pages.about.eyebrow
+    FIRMA
+
+guidanceContent.ms.pages.about.title
+    Tentang Hovering International Law Firm
+
+guidanceContent.ms.pages.about.description
+    Maklumat asas tentang firma peguam Taiwan ini, pejabatnya, dan kerja dengan pihak asing.
+
+guidanceContent.ms.pages.about.intro
+    Hovering International Law Firm ialah firma peguam di Taiwan. Peguam bekerja dari nasihat syarikat hingga prosedur mahkamah. Bahagian ini menerangkan penubuhan firma, lokasi, dan kerja dengan pihak asing.
+
+guidanceContent.ms.pages.about.sections[0].heading
+    Penubuhan dan struktur
+
+guidanceContent.ms.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) ditubuhkan pada 2016 oleh peguam yang belajar di National Taiwan University (國立臺灣大學). Nama Cina 昊鼎 menggabungkan aksara 昊 (“langit luas”) dengan 鼎 (“asas kukuh”) dan menggambarkan hala tuju firma sejak penubuhan.
+
+guidanceContent.ms.pages.about.sections[0].paragraphs[1]
+    Kami mempunyai pejabat di Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) dan Pingtung (屏東). Pejabat Kaohsiung menumpukan tadbir urus syarikat dan mengendalikan pertikaian sivil, jenayah dan pentadbiran. Pejabat Taichung mengendalikan hal pembinaan, harta intelek, dan hal yang berkaitan dengan Korea dan Jepun. Pejabat Pingtung dibuka pada 2017 untuk keperluan setempat.
+
+guidanceContent.ms.pages.about.sections[0].paragraphs[2]
+    Selain kerja peguam, sejak 2020 wujud juga Hovering Accounting Office, yang menawarkan perakaunan dan perancangan cukai untuk usahawan dan individu beraset tinggi.
+
+guidanceContent.ms.pages.about.sections[1].heading
+    Kerja dengan pihak asing
+
+guidanceContent.ms.pages.about.sections[1].paragraphs[0]
+    Kerja merentas sempadan merangkumi penubuhan syarikat, visa, pemfailan cap dagangan dan paten, semakan risiko undang-undang, dan nasihat cukai syarikat. Pejabat Taichung khususnya mengendalikan hal pembinaan, harta intelek, dan hal yang berkaitan dengan Korea dan Jepun. Peguam Wei Tseng (曾雋崴) menemani klien dari Korea, Jepun dan klien antarabangsa lain dalam kumpulan tersebut.
+
+guidanceContent.ms.pages.about.sections[1].paragraphs[1]
+    Sama ada kami dapat menerima suatu hal bergantung pada kandungan dan bahasa komunikasi. Jika hal anda termasuk dalam kumpulan tersebut dan boleh dibincangkan dalam salah satu daripada empat bahasa perundingan, anda boleh menghantar ringkasan untuk disemak.
+
+guidanceContent.ms.pages.about.sections[2].heading
+    Apabila anda menghubungi kami
+
+guidanceContent.ms.pages.about.sections[2].paragraphs[0]
+    Selepas ringkasan anda tiba, peguam menyemak kandungannya, kemudian membincangkan skop kerja yang mungkin, dokumen yang masih diperlukan, dan langkah seterusnya. Bagi soalan cukai atau perakaunan, firma boleh bekerja dengan bahagian perakaunan dalam satu aliran.
+
+guidanceContent.ms.pages.about.sections[2].paragraphs[1]
+    Hasil setiap hal bergantung pada fakta dan dokumen yang ada; kami tidak menjanjikan hasil. Jika anda memerlukan jawapan yang mengikat bagi keadaan anda, dokumen mesti dibincangkan dengan peguam dalam salah satu daripada empat bahasa perundingan.
+
+guidanceContent.ms.pages.lawyers.eyebrow
+    PEGUAM
+
+guidanceContent.ms.pages.lawyers.title
+    Pasukan antarabangsa Hovering
+
+guidanceContent.ms.pages.lawyers.description
+    Profil peguam, pengurusan operasi dan perakaunan rakan kongsi Hovering.
+
+guidanceContent.ms.pages.lawyers.intro
+    
+
+guidanceContent.ms.pages.pricing.eyebrow
+    SKOP DAN KOS
+
+guidanceContent.ms.pages.pricing.title
+    Bagaimana skop kerja dan kos ditetapkan
+
+guidanceContent.ms.pages.pricing.description
+    Penjelasan urutan: dahulu skop kerja, kemudian pengesahan kos, dan mengapa halaman ini tidak mengandungi senarai harga.
+
+guidanceContent.ms.pages.pricing.intro
+    Halaman ini menerangkan bagaimana kos ditetapkan, bukan jumlahnya. Jumlah bergantung pada skop kerja hal berkenaan dan hanya bermakna apabila skop itu jelas.
+
+guidanceContent.ms.pages.pricing.sections[0].heading
+    Skop kerja ditetapkan dahulu
+
+guidanceContent.ms.pages.pricing.sections[0].paragraphs[0]
+    Hal yang kelihatan sejenis boleh mempunyai usaha yang sangat berbeza, mengikut bilangan pihak, dokumen yang ada, tempoh yang mesti dipatuhi, dan sama ada prosedur sudah bermula. Oleh itu langkah pertama sentiasa menetapkan apa yang termasuk dalam kerja dan apa yang tidak.
+
+guidanceContent.ms.pages.pricing.sections[0].paragraphs[1]
+    Ringkasan yang anda hantar pada permulaan ialah asas bagi skop ini. Semakin jelas ia menerangkan perjalanan, keperluan anda dan tempoh, semakin tepat skop dapat ditentukan.
+
+guidanceContent.ms.pages.pricing.sections[1].heading
+    Kos disahkan sebelum kerja bermula
+
+guidanceContent.ms.pages.pricing.sections[1].paragraphs[0]
+    Apabila skop kerja jelas, jumlah dan cara pengiraan kos dibincangkan dan disahkan dengan anda sebelum kerja bermula. Jika skop berubah di tengah jalan, ia mesti disahkan semula.
+
+guidanceContent.ms.pages.pricing.sections[1].paragraphs[1]
+    Halaman ini bukan tawaran harga dan tidak mewujudkan kewajipan membayar. Penghantaran permintaan melalui halaman ini juga tanpa bayaran.
+
+guidanceContent.ms.pages.pricing.sections[2].heading
+    Perundingan boleh menjadi perkhidmatan berbayar
+
+guidanceContent.ms.pages.pricing.sections[2].paragraphs[0]
+    Perundingan dengan peguam boleh menjadi perkhidmatan berbayar. Halaman ini tidak menyatakan bahawa perbualan pertama tanpa bayaran, dan tiada bahagian boleh dibaca sedemikian.
+
+guidanceContent.ms.pages.pricing.sections[2].paragraphs[1]
+    Jika perundingan berbayar, jumlah dan cara bayaran dimaklumkan sebelum ia berlangsung.
+
+guidanceContent.ms.pages.pricing.sections[3].heading
+    Mengapa halaman ini tidak menyebut tarif
+
+guidanceContent.ms.pages.pricing.sections[3].paragraphs[0]
+    Kos bergantung pada hal itu sendiri: usaha, bilangan pihak, dokumen, tempoh, dan sama ada prosedur sudah berjalan. Angka yang ditetapkan lebih awal tidak akan menunjukkan kos bagi urusan anda. Oleh itu kami menetapkan skop kerja dahulu, kemudian memaklumkan kos kepada anda sebelum kerja bermula.
+
+guidanceContent.ms.pages.pricing.sections[3].paragraphs[1]
+    Selain yuran peguam, kos mahkamah, pihak berkuasa atau pihak ketiga boleh timbul. Ini berasingan daripada yuran dan bergantung pada prosedur berkenaan.
+
+guidanceContent.ms.pages.contact.eyebrow
+    HUBUNGI
+
+guidanceContent.ms.pages.contact.title
+    Bagaimana anda menghubungi firma
+
+guidanceContent.ms.pages.contact.description
+    Bahasa halaman, bahasa perundingan, apa yang berlaku jika anda tidak dapat menggunakan mana-mana daripada empat bahasa, dan apa yang halaman ini tidak janjikan.
+
+guidanceContent.ms.pages.contact.intro
+    Sebelum anda menulis, sila bezakan tiga perkara berikut. Ia kerap dicampur, tetapi bermakna perkara yang berbeza.
+
+guidanceContent.ms.pages.contact.sections[0].heading
+    Tiga perkara yang mesti kekal berasingan
+
+guidanceContent.ms.pages.contact.sections[0].paragraphs[0]
+    Bahasa paparan halaman, bahasa perundingan dengan peguam, dan bahasa yang anda gunakan untuk menulis ialah tiga perkara yang berasingan.
+
+guidanceContent.ms.pages.contact.sections[0].items[0]
+    Bahasa halaman: Maklumat ini ditulis dalam bahasa Melayu.
+
+guidanceContent.ms.pages.contact.sections[0].items[1]
+    Bahasa perundingan: Perundingan dijalankan dalam bahasa Inggeris, Cina (中文), Jepun dan Korea.
+
+guidanceContent.ms.pages.contact.sections[0].items[2]
+    Bahasa tulisan anda: anda boleh menulis ringkasan dalam bahasa anda sendiri; teks asal disimpan tanpa diubah.
+
+guidanceContent.ms.pages.contact.sections[1].heading
+    Jika anda tidak dapat menggunakan mana-mana daripada empat bahasa perundingan
+
+guidanceContent.ms.pages.contact.sections[1].paragraphs[0]
+    Dalam borang hubungan anda boleh memilih “Cara berkomunikasi mesti disahkan”. Kami menjawab untuk meneliti cara berkomunikasi yang boleh digunakan jika ada cara yang boleh digunakan; perkhidmatan dalam bahasa lain tidak dijanjikan dan tempoh jawapan tidak dijanjikan.
+
+guidanceContent.ms.pages.contact.sections[1].paragraphs[1]
+    Ini hanya langkah semakan, bukan janji. Kami tidak menjanjikan jurubahasa, tidak menjanjikan perkhidmatan dalam bahasa Melayu atau bahasa lain di luar empat bahasa tersebut, dan tidak menjanjikan bahawa kami menerima setiap hal.
+
+guidanceContent.ms.pages.contact.sections[2].heading
+    Apa yang sepatutnya ada dalam mesej pertama
+
+guidanceContent.ms.pages.contact.sections[2].paragraphs[0]
+    Nyatakan apa yang berlaku, bantuan yang anda perlukan, kaitan hal itu dengan Taiwan, dan tempoh jika anda mengetahuinya. Jika anda sudah menerima surat mahkamah atau pihak berkuasa, nyatakan tarikh pada surat itu.
+
+guidanceContent.ms.pages.contact.sections[2].paragraphs[1]
+    Pada peringkat awal anda belum perlu menghantar nombor pasport, nombor pengenalan, data akaun, rekod perubatan atau seluruh bukti. Tunggu arahan peguam, kemudian hantar dokumen sensitif melalui cara yang selamat.
+
+guidanceContent.ms.pages.contact.sections[3].heading
+    Apa yang halaman ini tidak janjikan
+
+guidanceContent.ms.pages.contact.sections[3].paragraphs[0]
+    Kami tidak menjanjikan tempoh jawapan, tidak mengesahkan janji temu melalui halaman ini, tidak menjanjikan peguam tertentu, dan tidak menyediakan jurubahasa. Terjemahan bertulis ialah perkara lain: mesej anda tidak diterjemah secara automatik.
+
+guidanceContent.ms.pages.contact.sections[3].paragraphs[1]
+    Jika anda menghantar permintaan, kandungannya disimpan dan menunggu semakan. Jika selepas beberapa masa anda tidak menerima jawapan, anda boleh menulis semula ke alamat e-mel yang dinyatakan pada halaman hubungan.
+
+guidanceContent.ms.pages.faq.eyebrow
+    SOALAN LAZIM
+
+guidanceContent.ms.pages.faq.title
+    Soalan yang kerap ditanya
+
+guidanceContent.ms.pages.faq.description
+    Penjelasan tentang skop kerja, persediaan, bahasa, kos, dan makna permintaan yang telah dihantar.
+
+guidanceContent.ms.pages.faq.intro
+    Soalan berikut dijawab pada tahap maklumat am. Jawapan bagi kes anda sendiri hanya mungkin selepas peguam menyemak dokumen.
+
+guidanceContent.ms.pages.faq.sections[0].heading
+    Bagaimana anda menggunakan bahagian ini
+
+guidanceContent.ms.pages.faq.sections[0].paragraphs[0]
+    Jika anda tidak menemui jawapan bagi keadaan anda, jawapan biasanya bergantung pada fakta khas. Tuliskan fakta itu dalam ringkasan, dan jangan meneka sendiri daripada halaman ini.
+
+guidanceContent.ms.pages.faq.faqs[0].question
+    Hal apa yang dikendalikan oleh firma?
+
+guidanceContent.ms.pages.faq.faqs[0].answer
+    Kami mengendalikan enam kumpulan: pelaburan dan penubuhan syarikat di Taiwan, hal sivil dan ganti rugi, perkahwinan, keluarga dan pusaka, pertikaian buruh, hal jenayah dan harta intelek. Sama ada suatu hal diterima diputuskan selepas kandungan disemak.
+
+guidanceContent.ms.pages.faq.faqs[1].question
+    Apa yang patut saya sediakan sebelum menghubungi?
+
+guidanceContent.ms.pages.faq.faqs[1].answer
+    Sediakan ringkasan pendek tentang perjalanan, keperluan anda, kaitan dengan Taiwan, dan tempoh jika ada. Jika sudah ada surat mahkamah atau pihak berkuasa, nyatakan tarikhnya. Pada peringkat ini anda belum perlu menghantar dokumen pengenalan atau seluruh bukti.
+
+guidanceContent.ms.pages.faq.faqs[2].question
+    Bolehkah saya berunding dalam bahasa Melayu?
+
+guidanceContent.ms.pages.faq.faqs[2].answer
+    Tidak. Maklumat ini ditulis dalam bahasa Melayu, tetapi perundingan dengan peguam hanya dijalankan dalam bahasa Inggeris, Cina (中文), Jepun dan Korea. Kami juga tidak menjanjikan jurubahasa. Terjemahan bertulis ialah perkara lain: teks asal yang anda tulis disimpan sebagaimana adanya dan tidak diterjemah secara automatik.
+
+guidanceContent.ms.pages.faq.faqs[3].question
+    Apa jika saya tidak dapat menggunakan mana-mana daripada empat bahasa itu?
+
+guidanceContent.ms.pages.faq.faqs[3].answer
+    Apabila menghantar permintaan, pilih “Cara berkomunikasi mesti disahkan”. Kami menjawab untuk meneliti cara berkomunikasi, tetapi perkhidmatan dalam bahasa lain tidak dijanjikan. Ini langkah semakan, bukan janji bahawa kami dapat bekerja dalam bahasa lain.
+
+guidanceContent.ms.pages.faq.faqs[4].question
+    Bagaimana teks bahasa Melayu saya dilayan?
+
+guidanceContent.ms.pages.faq.faqs[4].answer
+    Teks asal yang anda tulis disimpan sebagaimana adanya, dan tidak diterjemah secara automatik. Jika perlu, bahasa komunikasi seterusnya disahkan bersama anda.
+
+guidanceContent.ms.pages.faq.faqs[5].question
+    Adakah perundingan sudah berlaku apabila permintaan dihantar?
+
+guidanceContent.ms.pages.faq.faqs[5].answer
+    Tidak. Permintaan yang dihantar menunggu semakan peguam. Itu bukan nasihat undang-undang, bukan janji temu yang disahkan, dan penghantaran dengan sendirinya tidak mewujudkan hubungan antara peguam dan klien.
+
+guidanceContent.ms.pages.faq.faqs[6].question
+    Bagaimana kos dikira?
+
+guidanceContent.ms.pages.faq.faqs[6].answer
+    Dahulu skop kerja ditetapkan, kemudian jumlah dan cara pengiraan kos disahkan dengan anda sebelum kerja bermula. Halaman ini tidak menyebut angka dan tidak menyatakan bahawa perbualan pertama tanpa bayaran.
+
+guidanceContent.ms.pages.faq.faqs[7].question
+    Apa jika hal saya sangat mendesak?
+
+guidanceContent.ms.pages.faq.faqs[7].answer
+    Nyatakan tempoh atau tarikh pada surat rasmi di awal ringkasan anda, supaya tarikh itu kelihatan semasa semakan. Halaman ini tidak mempunyai saluran kecemasan dan tidak menjanjikan tempoh jawapan; jika hal anda tidak boleh menunggu, anda sepatutnya mencari jalan lain di tempat anda secara selari.
+
+guidanceContent.ms.pages.privacy.eyebrow
+    PRIVASI
+
+guidanceContent.ms.pages.privacy.title
+    Data yang dikumpul melalui borang hubungan
+
+guidanceContent.ms.pages.privacy.description
+    Apa yang borang hubungan dalam bahagian bahasa Melayu ini kumpul, bagaimana teks asal dilayan, dan bagaimana anda menghubungi kami tentang data anda.
+
+guidanceContent.ms.pages.privacy.intro
+    Bahagian ini hanya merangkumi borang hubungan pada halaman maklumat ini. Ia menerangkan pengendalian data, bukan jaminan teknikal.
+
+guidanceContent.ms.pages.privacy.sections[0].heading
+    Data apa yang dikumpul
+
+guidanceContent.ms.pages.privacy.sections[0].paragraphs[0]
+    Apabila anda menghantar permintaan melalui borang dalam bahagian ini, maklumat berikut dicatat:
+
+guidanceContent.ms.pages.privacy.sections[0].items[0]
+    Nama yang anda nyatakan
+
+guidanceContent.ms.pages.privacy.sections[0].items[1]
+    Alamat e-mel untuk jawapan
+
+guidanceContent.ms.pages.privacy.sections[0].items[2]
+    Bahasa paparan halaman semasa penghantaran
+
+guidanceContent.ms.pages.privacy.sections[0].items[3]
+    Bahasa yang anda gunakan untuk menulis
+
+guidanceContent.ms.pages.privacy.sections[0].items[4]
+    Bahasa perundingan yang anda inginkan
+
+guidanceContent.ms.pages.privacy.sections[0].items[5]
+    Teks asal yang anda tulis
+
+guidanceContent.ms.pages.privacy.sections[0].items[6]
+    Persetujuan anda untuk menghantar permintaan
+
+guidanceContent.ms.pages.privacy.sections[0].items[7]
+    Nombor penerimaan untuk mencari semula permintaan itu
+
+guidanceContent.ms.pages.privacy.sections[1].heading
+    Teks asal disimpan tanpa diubah
+
+guidanceContent.ms.pages.privacy.sections[1].paragraphs[0]
+    Teks anda disimpan tepat sebagaimana anda menulisnya, dan tidak diterjemah secara automatik. Jika terjemahan diperlukan untuk pemprosesan, itu dibincangkan secara berasingan dengan anda.
+
+guidanceContent.ms.pages.privacy.sections[1].paragraphs[1]
+    Kerana teks asal disimpan, pada peringkat awal jangan tulis apa yang belum diperlukan, misalnya nombor pasport, nombor pengenalan atau data akaun.
+
+guidanceContent.ms.pages.privacy.sections[2].heading
+    Tempat simpanan dan akses
+
+guidanceContent.ms.pages.privacy.sections[2].paragraphs[0]
+    Kandungan penghantaran anda disimpan di tempat yang tidak boleh diakses secara awam. Hanya orang yang diberi kuasa dalam firma boleh mengaksesnya untuk memproses permintaan.
+
+guidanceContent.ms.pages.privacy.sections[2].paragraphs[1]
+    Halaman ini tidak memberi janji keselamatan mutlak. Tiada laluan penghantaran dan tiada tempat simpanan yang sepenuhnya selamat; oleh itu dokumen sensitif sepatutnya dihantar hanya selepas arahan khas peguam.
+
+guidanceContent.ms.pages.privacy.sections[3].heading
+    Tujuan penggunaan
+
+guidanceContent.ms.pages.privacy.sections[3].paragraphs[0]
+    Data yang dihantar digunakan untuk menyemak permintaan, membalas anda, menjelaskan cara berkomunikasi, dan memproses jika kerja dimulakan.
+
+guidanceContent.ms.pages.privacy.sections[3].paragraphs[1]
+    Data tidak digunakan untuk pemasaran tanpa persetujuan yang berasingan.
+
+guidanceContent.ms.pages.privacy.sections[4].heading
+    Pemberitahuan dan nombor penerimaan
+
+guidanceContent.ms.pages.privacy.sections[4].paragraphs[0]
+    Jika permintaan berjaya dihantar, sistem memberitahu firma. Jika pemberitahuan ini belum disahkan, teks anda kekal disimpan dan tidak hilang.
+
+guidanceContent.ms.pages.privacy.sections[4].paragraphs[1]
+    Nombor penerimaan digunakan untuk mencari semula permintaan anda dalam rekod kami. Ia dipaparkan selepas disimpan; anda boleh menyebutnya apabila menghubungi semula.
+
+guidanceContent.ms.pages.privacy.sections[5].heading
+    Hak anda dan cara menghubungi
+
+guidanceContent.ms.pages.privacy.sections[5].paragraphs[0]
+    anda boleh meminta maklumat, pembetulan atau penghapusan data anda, atau menarik balik persetujuan, melalui alamat e-mel yang dinyatakan pada halaman hubungan. Jika wujud kewajipan simpanan menurut undang-undang atau prosedur, kami menerangkan batasannya.
+
+guidanceContent.ms.pages.privacy.sections[5].paragraphs[1]
+    Halaman ini tidak menyebut tempoh simpanan yang tetap, kerana tempoh sebenar bergantung pada sama ada hal diteruskan dan pada kewajipan yang berkaitan. Jika anda mahu penghapusan lebih awal, nyatakan semasa menghubungi.
+
+guidanceContent.ms.pages.privacy.sections[6].heading
+    Tempat simpanan dan pembekal perkhidmatan
+
+guidanceContent.ms.pages.privacy.sections[6].paragraphs[0]
+    Laman web ini dihoskan di Vercel, dan penghantaran anda disimpan dalam storan objek bukan awam perkhidmatan itu. E-mel dihantar melalui perkhidmatan e-mel yang digunakan oleh firma.
+
+guidanceContent.ms.pages.privacy.sections[6].paragraphs[1]
+    Pelayan pembekal individu boleh berada di luar Taiwan, jadi data anda boleh disimpan dan diproses di situ. Apabila tujuan simpanan selesai, data dihapuskan tanpa kelewatan; data yang mesti disimpan menurut peraturan yang terpakai kekal untuk tempoh itu. Pertanyaan tentang data peribadi diterima di wei@hoveringlaw.com.tw.
+
+guidanceContent.ms.pages.disclaimer.eyebrow
+    PENAFIAN
+
+guidanceContent.ms.pages.disclaimer.title
+    Skop dan batas maklumat pada halaman ini
+
+guidanceContent.ms.pages.disclaimer.description
+    Sifat am maklumat, skop undang-undang yang terpakai, dan syarat hubungan antara peguam dan klien.
+
+guidanceContent.ms.pages.disclaimer.intro
+    Bahagian ini menjelaskan apa yang halaman maklumat bahasa Melayu ini dapat dan tidak dapat lakukan untuk anda.
+
+guidanceContent.ms.pages.disclaimer.sections[0].heading
+    Hanya maklumat am
+
+guidanceContent.ms.pages.disclaimer.sections[0].paragraphs[0]
+    Kandungan halaman ini ditulis sebagai maklumat am. Ia bukan nasihat undang-undang bagi kes anda dan tidak menggantikan semakan dokumen anda sendiri.
+
+guidanceContent.ms.pages.disclaimer.sections[0].paragraphs[1]
+    Hasil suatu hal bergantung pada fakta, peraturan yang terpakai dan masa; dua keadaan yang kelihatan serupa boleh berakhir berbeza.
+
+guidanceContent.ms.pages.disclaimer.sections[1].heading
+    Skop undang-undang yang terpakai
+
+guidanceContent.ms.pages.disclaimer.sections[1].paragraphs[0]
+    Firma mengamalkan menurut undang-undang Taiwan, dan halaman ini hanya berbicara tentang kerja dalam rangka itu.
+
+guidanceContent.ms.pages.disclaimer.sections[1].paragraphs[1]
+    Kandungan bukan nasihat menurut undang-undang suatu bidang kuasa selain Taiwan, termasuk undang-undang tempat anda tinggal. Jika sebahagian hal anda menyentuh bidang kuasa lain, kami jelaskan bersama anda profesional berkelayakan mana yang diperlukan bagi bahagian itu.
+
+guidanceContent.ms.pages.disclaimer.sections[2].heading
+    Hubungan antara peguam dan klien tidak timbul dengan sendirinya
+
+guidanceContent.ms.pages.disclaimer.sections[2].paragraphs[0]
+    Membaca halaman ini, menghantar borang atau e-mel dengan sendirinya tidak mewujudkan hubungan antara peguam dan klien.
+
+guidanceContent.ms.pages.disclaimer.sections[2].paragraphs[1]
+    Hubungan ini timbul hanya selepas hal disemak dan kedua-dua pihak mengesahkan penerimaan kerja.
+
+guidanceContent.ms.pages.disclaimer.sections[3].heading
+    Tiada janji hasil
+
+guidanceContent.ms.pages.disclaimer.sections[3].paragraphs[0]
+    Tiada bahagian halaman ini merupakan janji tentang hasil suatu hal, kelulusan permohonan, atau status tinggal dan kerja.
+
+guidanceContent.ms.pages.disclaimer.sections[3].paragraphs[1]
+    Pautan luaran adalah untuk orientasi; kami tidak menjanjikan ketepatan mahupun kemas kini kandungan pihak ketiga.
+
+guidanceContent.ms.pages.columns.eyebrow
+    RENCANA
+
+guidanceContent.ms.pages.columns.title
+    Rencana tentang undang-undang Taiwan
+
+guidanceContent.ms.pages.columns.description
+    Rencana bahasa Melayu tentang soalan undang-undang Taiwan yang kerap timbul. Kandungan ialah maklumat am pada masa penerbitan, bukan nasihat undang-undang bagi kes anda.
+
+guidanceContent.ms.pages.columns.intro
+    Firma menerbitkan rencana tentang soalan undang-undang Taiwan yang kerap timbul. Rencana yang ada dalam bahasa Melayu berada pada halaman ini; di samping itu terdapat empat pautan yang masing-masing membuka senarai rencana suatu bahasa asal.
+
+guidanceContent.ms.pages.columns.sections[0].heading
+    Empat senarai mengikut bahasa
+
+guidanceContent.ms.pages.columns.sections[0].paragraphs[0]
+    Bahagian ini mengandungi empat pautan: senarai rencana dalam bahasa Korea, Cina, Inggeris dan Jepun. Setiap pautan menyatakan bahasa senarai itu, supaya anda tahu terlebih dahulu dalam bahasa mana kandungan akan dibuka.
+
+guidanceContent.ms.pages.columns.sections[0].paragraphs[1]
+    Empat senarai ini ialah senarai mengikut bahasa asal rencana, bukan senarai terjemahan. Rencana yang ada dalam bahasa Melayu disenaraikan secara berasingan pada halaman ini.
+
+guidanceContent.ms.pages.columns.sections[1].heading
+    Ke mana pautan itu membawa
+
+guidanceContent.ms.pages.columns.sections[1].paragraphs[0]
+    Apabila anda memilih salah satu daripada empat pautan, senarai rencana bahasa itu dibuka. Daripada senarai itu anda sendiri memilih teks; seluruh kandungan muncul dalam bahasa asal rencana.
+
+guidanceContent.ms.pages.columns.sections[1].paragraphs[1]
+    Halaman ini tidak merumuskan kandungan rencana dan tidak menjanjikan bahawa suatu topik wujud dalam keempat-empat bahasa. Setiap senarai hanya mengandungi teks yang diterbitkan dalam bahasa itu.
+
+guidanceContent.ms.pages.columns.sections[2].heading
+    Sejauh mana suatu rencana boleh menjadi panduan
+
+guidanceContent.ms.pages.columns.sections[2].paragraphs[0]
+    Rencana ialah maklumat am pada masa penerbitan. Peraturan dan penerapannya boleh berubah, dan suatu rencana tidak mengandungi semua keadaan kes anda.
+
+guidanceContent.ms.pages.columns.sections[2].paragraphs[1]
+    Oleh itu jangan jadikan suatu rencana sebagai asas tindakan dalam hal sebenar. Gunakannya untuk gambaran keseluruhan dan bincangkan dokumen anda secara berasingan dengan peguam; halaman ini bukan langkah perundingan.
+
+guidanceTeamCopy.ms.label
+    OUR TEAM
+
+guidanceTeamCopy.ms.title
+    Pasukan antarabangsa Hovering
+
+guidanceTeamCopy.ms.description
+    Profil peguam, pengurusan operasi dan perakaunan rakan kongsi Hovering.
+
+guidanceTeamCopy.ms.representativeTitle
+    Peguam pengarah
+
+guidanceTeamCopy.ms.teamTitle
+    Peguam dan rakan sekerja
+
+guidanceTeamCopy.ms.partnerTitle
+    Perakaunan rakan kongsi
+
+guidanceTeamCopy.ms.introLabel
+    Pengenalan
+
+guidanceTeamCopy.ms.educationLabel
+    Pendidikan
+
+guidanceTeamCopy.ms.experienceLabel
+    Pengalaman
+
+guidanceTeamCopy.ms.photoAltPrefix
+    Foto
+
+guidanceTeamCopy.ms.workingLanguagesLabel
+    Bahasa kerja
+
+guidanceTeamCopy.ms.fullProfileLabel
+    Profil penuh (English)
+
+guidanceTeamCopy.ms.keyFactsHeading
+    Peguam Wei Tseng — Petunjuk utama
+
+guidanceTeamCopy.ms.qualificationLabel
+    Kelayakan dan firma
+
+guidanceTeamCopy.ms.qualificationSentence
+    {name} ialah peguam yang layak beramal di Taiwan dan peguam pengarah {firm}.
+
+guidanceTeamCopy.ms.practiceLabel
+    Bidang utama
+
+guidanceTeamCopy.ms.consultationLanguagesLabel
+    Bahasa perundingan
+
+guidanceTeamCopy.ms.roles.tseng-junwei
+    Peguam pengarah di Taiwan (Managing Attorney)
+
+guidanceTeamCopy.ms.roles.chang-rongxuan
+    Peguam di Taiwan (Taiwan Attorney)
+
+guidanceTeamCopy.ms.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.ms.roles.son-jungmin
+    Pengurusan operasi Korea (Korea Operations Manager)
+
+guidanceTeamCopy.ms.roles.huang-shengping
+    Perakaunan rakan kongsi (Partner CPA)
+
+guidanceTeamBios.ms.tseng-junwei.intro[0]
+    Firma mengendalikan hal syarikat dan individu di Taiwan dalam bahasa Inggeris, Jepun, Korea dan Cina.
+
+guidanceTeamBios.ms.tseng-junwei.intro[1]
+    Mewakili seorang pelajar Korea dalam tuntutan ganti rugi kerana kecederaan di gimnasium dan memperoleh penghakiman peringkat pertama sebanyak TWD 1.57M.
+
+guidanceTeamBios.ms.tseng-junwei.education[0]
+    Sarjana (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.ms.tseng-junwei.education[1]
+    Ijazah (B.A.) dengan pengajian berganda undang-undang dan kewangan, National Chengchi University
+
+guidanceTeamBios.ms.tseng-junwei.education[2]
+    Pelajar pertukaran di Kobe University dan Waseda University
+
+guidanceTeamBios.ms.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.ms.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.ms.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.ms.chang-rongxuan.intro[0]
+    Sebelum ini di Ministry of Education, Legal Affairs Division, dengan tumpuan pada hal pentadbiran dan sivil.
+
+guidanceTeamBios.ms.chang-rongxuan.intro[1]
+    Pengalaman dalam hal universiti, hak tenaga pengajar dan rayuan pentadbiran.
+
+guidanceTeamBios.ms.chang-rongxuan.education[0]
+    Ijazah Undang-undang (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.ms.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.ms.chang-rongxuan.experience[1]
+    Peguam, Hovering International Law Firm
+
+guidanceTeamBios.ms.chang-fangyu.intro[0]
+    Paralegal dengan bertahun-tahun sebagai paralegal kanan di beberapa firma, bertanggungjawab atas sokongan prosedur, undang-undang syarikat dan pelaburan asing.
+
+guidanceTeamBios.ms.chang-fangyu.intro[1]
+    Sokongan bagi prosedur, penubuhan syarikat, kelulusan pelaburan asing, permohonan lesen dan pertukaran antara Korea dan Taiwan.
+
+guidanceTeamBios.ms.chang-fangyu.education[0]
+    Ijazah Undang-undang (LL.B.), Tunghai University
+
+guidanceTeamBios.ms.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.ms.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.ms.son-jungmin.intro[0]
+    Menyelaras janji temu perundingan dan komunikasi untuk klien dari Korea.
+
+guidanceTeamBios.ms.son-jungmin.intro[1]
+    Menyokong pertukaran antara pasukan melalui sistem dokumen dan aliran kerja, berasaskan sains komputer.
+
+guidanceTeamBios.ms.son-jungmin.education[0]
+    Ijazah (B.S.) sains komputer, National Cheng Kung University
+
+guidanceTeamBios.ms.son-jungmin.experience[0]
+    Bahagian operasi Korea, Hovering International Law Firm
+
+guidanceTeamBios.ms.huang-shengping.intro[0]
+    Telah menamatkan program ijazah dan sarjana perakaunan di National Chengchi University dan kini mengetuai sebuah firma perakaunan.
+
+guidanceTeamBios.ms.huang-shengping.intro[1]
+    Menyokong analisis bersepadu risiko undang-undang, cukai dan kewangan untuk klien syarikat.
+
+guidanceTeamBios.ms.huang-shengping.education[0]
+    Sarjana (M.A.) perakaunan, National Chengchi University
+
+guidanceTeamBios.ms.huang-shengping.education[1]
+    Ijazah (B.A.) perakaunan, National Chengchi University
+
+guidanceTeamBios.ms.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.ms.Korean
+    bahasa Korea
+
+guidanceLanguageNames.ms.Chinese
+    bahasa Cina
+
+guidanceLanguageNames.ms.Japanese
+    bahasa Jepun
+
+guidancePracticeAreaNames.ms.Taiwan company setup
+    Penubuhan syarikat di Taiwan
+
+guidancePracticeAreaNames.ms.Taiwan investment counsel
+    Nasihat undang-undang pelaburan di Taiwan
+
+guidancePracticeAreaNames.ms.Civil litigation and damages
+    Litigasi sivil dan ganti rugi
+
+guidancePracticeAreaNames.ms.Trademark and patent filings
+    Pemfailan cap dagangan dan paten
+
+guidancePracticeAreaNames.ms.Visa and residency
+    Visa dan residensi
+
+guidancePracticeAreaNames.ms.Family and labor disputes
+    Pertikaian keluarga dan buruh
+
+guidanceOfficeCopy.ms.label
+    OFFICES
+
+guidanceOfficeCopy.ms.title
+    Pejabat
+
+guidanceOfficeCopy.ms.description
+    Alamat pejabat Hovering International Law Firm di Taiwan.
+
+guidanceOfficeCopy.ms.officeLabel
+    Pejabat
+
+guidanceOfficeCopy.ms.mapPreviewLabel
+    Pratonton peta
+
+guidanceOfficeCopy.ms.koreaOfficeTitle
+    Pejabat Korea
+
+guidanceOfficeCopy.ms.koreaAddressCardLabel
+    Alamat pejabat Korea
+
+guidanceOfficeCopy.ms.koreaMapLinkLabel
+    Lihat di Naver Map
+
+guidanceOfficeCopy.ms.reviewCountWord
+    ulasan
+
+guidanceOfficeCopy.ms.phoneLabel
+    Telefon
+
+guidanceOfficeCopy.ms.faxLabel
+    Faks
+
+guidanceOfficeCopy.ms.mapLinkLabel
+    Lihat di peta
+
+guidanceOfficeCopy.ms.photoAlts[0]
+    Bilik penerimaan pejabat Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.ms.photoAlts[1]
+    Bilik peguam di pejabat Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.ms.photoAlts[2]
+    Bilik mesyuarat pejabat Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.ms.officeTitles.taipei
+    Taipei
+
+guidanceOfficeCopy.ms.officeTitles.taichung
+    Taichung
+
+guidanceOfficeCopy.ms.officeTitles.kaohsiung
+    Kaohsiung
+
+guidanceOfficeCopy.ms.officeTitles.pingtung
+    Pingtung
+
+guidanceFooterCopy.ms.officeLabel
+    Pejabat
+
+guidanceFooterCopy.ms.officeQuickLinksLabel
+    Pautan pantas ke pejabat
+
+guidanceFooterCopy.ms.followLabel
+    Ikuti
+
+guidanceFooterCopy.ms.blogLabel
+    Blog
+
+guidanceFooterCopy.ms.websiteLabel
+    Laman rasmi
+
+guidanceFooterCopy.ms.sitemapLabel
+    Peta laman
+
+guidanceFooterCopy.ms.copyEmailLabel
+    Salin alamat e-mel
+
+guidanceFooterCopy.ms.emailCopiedMessage
+    Alamat e-mel telah disalin.
+
+guidanceFooterCopy.ms.officialConsultationEmailLabel
+    E-mel rasmi untuk perundingan
+
+internationalInquiryCopy.ms.guidanceNotice
+    Halaman ini ditulis dalam bahasa Melayu sebagai maklumat am, bukan sebagai nasihat undang-undang bagi kes anda sendiri.
+
+internationalInquiryCopy.ms.consultationNotice
+    Perundingan hanya dijalankan dalam empat bahasa: Inggeris, Cina (中文), Jepun dan Korea.
+
+internationalInquiryCopy.ms.methodConfirmationNotice
+    Jika anda tidak dapat menggunakan mana-mana daripada empat bahasa itu, pilih “Cara berkomunikasi mesti disahkan”. Kami menjawab untuk meneliti cara berkomunikasi yang boleh digunakan jika ada cara yang boleh digunakan; perkhidmatan dalam bahasa lain tidak dijanjikan dan tempoh jawapan tidak dijanjikan.
+
+internationalInquiryCopy.ms.preparationNotice
+    anda boleh menulis ringkasan hal anda dalam bahasa anda sendiri. Teks asal disimpan sebagaimana anda menulisnya dan tidak diterjemah secara automatik.
+
+internationalInquiryCopy.ms.heading
+    Hantar permintaan perundingan
+
+internationalInquiryCopy.ms.intro
+    Terangkan hal anda secara ringkas. Seorang peguam menyemak kandungan sebelum langkah seterusnya dibincangkan.
+
+internationalInquiryCopy.ms.submitLabel
+    Hantar permintaan
+
+internationalInquiryCopy.ms.submittingLabel
+    Sedang dihantar…
+
+internationalInquiryCopy.ms.successMessage
+    Kami telah menerima permintaan anda; ia menunggu semakan. Ini tidak bermakna perundingan telah berlaku atau janji temu telah disahkan.
+
+internationalInquiryCopy.ms.savedNotificationPendingMessage
+    Permintaan anda disimpan, tetapi pemberitahuan kepada firma belum disahkan. Apa yang anda tulis tidak hilang. Jika anda tidak menerima jawapan, anda juga boleh menulis ke alamat e-mel halaman hubungan.
+
+internationalInquiryCopy.ms.receiptIdLabel
+    Nombor penerimaan
+
+internationalInquiryCopy.ms.failureMessage
+    Permintaan anda tidak dapat dihantar. Sila cuba lagi atau tulis ke alamat e-mel halaman hubungan.
+
+internationalInquiryCopy.ms.originalLanguageLabel
+    Bahasa yang anda gunakan untuk menulis
+
+internationalInquiryCopy.ms.originalLanguagePlaceholder
+    Contoh: bahasa Melayu, Inggeris, Cina atau bahasa lain
+
+internationalInquiryCopy.ms.preferredConsultationLanguageLabel
+    Bahasa yang anda inginkan untuk perundingan
+
+internationalInquiryCopy.ms.originalTextLabel
+    Ringkasan ringkas hal (dalam bahasa anda)
+
+internationalInquiryCopy.ms.originalTextPlaceholder
+    Nyatakan apa yang berlaku, bantuan yang anda perlukan dan tempoh jika ada. Jangan tulis nombor pasport, nombor pengenalan atau data akaun bank.
+
+internationalInquiryCopy.ms.nameLabel
+    Nama
+
+internationalInquiryCopy.ms.emailLabel
+    E-mel
+
+internationalInquiryCopy.ms.consentLabel
+    Saya telah membaca halaman privasi dan bersetuju menghantar permintaan ini.
+
+internationalInquiryCopy.ms.privacyLinkLabel
+    Privasi
+
+internationalInquiryCopy.ms.requiredMessage
+    Medan ini wajib diisi.
+
+internationalInquiryCopy.ms.invalidEmailMessage
+    Sila masukkan alamat e-mel yang sah.
+
+internationalInquiryCopy.ms.tooLongMessage
+    Teks terlalu panjang. Pendekkan dan hantar semula.
+
+internationalInquiryCopy.ms.sourceLanguageNotice
+    Rencana ini hanya diterbitkan dalam {language}, dan pautan membuka halaman asal itu.
+
+internationalInquiryCopy.ms.unavailableTranslationNotice
+    Unsur ini belum diterjemah ke bahasa halaman ini. Pautan yang menyatakan bahasa asal membuka teks asal.
+
+internationalInquiryCopy.ms.unavailableLanguageNotice
+    Halaman ini tidak ditawarkan dalam {language}.
+
+internationalInquiryCopy.ms.languageOptions.en
+    Inggeris (English)
+
+internationalInquiryCopy.ms.languageOptions.zh-hant
+    Cina (中文)
+
+internationalInquiryCopy.ms.languageOptions.ja
+    Jepun (日本語)
+
+internationalInquiryCopy.ms.languageOptions.ko
+    Korea (한국어)
+
+internationalInquiryCopy.ms.languageOptions.needs-method-confirmation
+    Saya tidak dapat menggunakan mana-mana daripada empat bahasa — cara berkomunikasi mesti disahkan
+
+guidanceAnswers.ms.services.answer
+    Firma mengendalikan enam kumpulan kerja menurut undang-undang Taiwan: pelaburan dan penubuhan syarikat, pertikaian sivil dan ganti rugi, perkahwinan, keluarga dan pusaka, pertikaian buruh, jenayah dan harta intelek. Skop setiap hal disahkan secara berasingan selepas peguam menyemak kandungan yang anda hantar. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.
+
+guidanceAnswers.ms.services.sources[0]
+    /ms/faq
+
+guidanceAnswers.ms.services.sources[1]
+    /ms/contact
+
+guidanceAnswers.ms.about.answer
+    Hovering International Law Firm ialah firma peguam di Taiwan, ditubuhkan pada 2016 oleh graduan National Taiwan University (國立臺灣大學), dengan pejabat di Taipei, Kaohsiung, Taichung dan Pingtung. Sejak 2020 terdapat bahagian perakaunan; pejabat Taichung mengendalikan hal yang berkaitan dengan Korea dan Jepun. Firma tidak menjanjikan hasil. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.
+
+guidanceAnswers.ms.about.sources[0]
+    /ms/lawyers
+
+guidanceAnswers.ms.about.sources[1]
+    /ms/services
+
+guidanceAnswers.ms.lawyers.answer
+    Halaman ini memperkenalkan peguam, pengurusan operasi dan perakaunan rakan kongsi Hovering. Peguam Wei Tseng (曾雋崴) mempunyai kelayakan untuk beramal di Taiwan dan ialah peguam pengarah firma; beliau bekerja dengan klien dari Korea, Jepun dan klien antarabangsa lain. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.
+
+guidanceAnswers.ms.lawyers.sources[0]
+    /ms/about
+
+guidanceAnswers.ms.lawyers.sources[1]
+    /ms/contact
+
+guidanceAnswers.ms.pricing.answer
+    Halaman ini tidak menerbitkan senarai harga. Skop kerja ditetapkan dahulu daripada ringkasan yang anda hantar, kemudian jumlah dan cara pengiraan disahkan dengan anda sebelum kerja bermula. Perundingan dengan peguam boleh menjadi perkhidmatan berbayar; selain yuran, kos mahkamah atau pihak berkuasa boleh timbul. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.
+
+guidanceAnswers.ms.pricing.sources[0]
+    /ms/contact
+
+guidanceAnswers.ms.pricing.sources[1]
+    /ms/faq
+
+guidanceAnswers.ms.contact.answer
+    Hantar ringkasan melalui borang hubungan: apa yang berlaku, bantuan yang diperlukan, kaitan dengan Taiwan dan tempoh jika ada. Pada peringkat ini belum perlu menghantar dokumen pengenalan atau seluruh bukti. Firma tidak menjanjikan tempoh jawapan dan tidak mengesahkan janji temu melalui halaman ini. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.
+
+guidanceAnswers.ms.contact.sources[0]
+    /ms/faq
+
+guidanceAnswers.ms.contact.sources[1]
+    /ms/pricing
+
+guidanceAnswers.ms.faq.answer
+    Bahagian soalan menjawab pada tahap maklumat am: enam kumpulan kerja, persediaan sebelum hubungan, cara menetapkan yuran dan makna mesej yang dihantar. Permintaan yang dihantar menunggu semakan peguam; bukan nasihat undang-undang, bukan janji temu, dan tidak mewujudkan hubungan antara peguam dan klien. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.
+
+guidanceAnswers.ms.faq.sources[0]
+    /ms/contact
+
+guidanceAnswers.ms.faq.sources[1]
+    /ms/services
+
+GUIDANCE_LLMS_NOTICES.ms.consultationNotice
+    Maklumat ini ditulis dalam bahasa Melayu, tetapi perundingan dengan peguam hanya dijalankan dalam bahasa Inggeris, Cina (中文), Jepun dan Korea.
+
+GUIDANCE_LLMS_NOTICES.ms.discoveryNotice
+    Fail llms.txt ini hanyalah peta untuk mencari halaman awam; ia tidak menjanjikan kedudukan carian, sokongan, cadangan AI atau paparan.
+
+GUIDANCE_LLMS_NOTICES.ms.confidentialNotice
+    Kerana teks asal disimpan, pada peringkat awal jangan tulis apa yang belum diperlukan, misalnya nombor pasport, nombor pengenalan atau data akaun.

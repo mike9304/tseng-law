@@ -17,7 +17,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 设立时常见问题汇总如下。
 
-读过[**公司设立基础篇**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8)的人，可接着参阅这篇更详细的深入篇。
+读过[**公司设立基础篇**](/zh-hans/columns/taiwan-company-establishment-basics)的人，可接着参阅这篇更详细的深入篇。
 
 以下问答（Q&A）旨在协助考虑在台湾设立公司的人。 😊
 
@@ -128,6 +128,6 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 ---
 
 > 另见：
-> - [在台湾设立公司总指南 — 程序、费用与法律形态](/ko/guides/taiwan-company-setup)
-> - [能以韩语沟通的台湾律师](/ko/korean-lawyer-in-taiwan)
-> - [台湾法人与公司设立律师指南](/ko/taiwan-company-setup-lawyer)
+> - [我们处理哪些事项](/zh-hans/services)
+> - [Hovering 国际团队](/zh-hans/lawyers)
+> - [如何联系事务所](/zh-hans/contact)

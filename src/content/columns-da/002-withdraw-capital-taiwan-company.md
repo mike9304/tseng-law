@@ -139,7 +139,7 @@ Jo længere driftsstilstanden varer, desto mere kan den senere ophørsprocedure 
 
 ## Relaterede vejledninger
 
-1. [Tjenester vedrørende investering og selskabsstiftelse i Taiwan](/ko/services/investment)
+1. [Hvilke sager vi behandler](/da/services)
 2. [Grundlaget for selskabsstiftelse i Taiwan](/da/columns/taiwan-company-establishment-basics)
 3. [Kontakt](/da/contact)
 

@@ -139,7 +139,7 @@ Lebih lama penggantungan aktiviti berlangsung, lebih prosedur penamatan kemudian
 
 ## Petunjuk berkaitan
 
-1. [Perkhidmatan pelaburan dan penubuhan syarikat di Taiwan](/ko/services/investment)
+1. [Hal yang kami kendalikan](/ms/services)
 2. [Asas penubuhan syarikat di Taiwan](/ms/columns/taiwan-company-establishment-basics)
 3. [Hubungi](/ms/contact)
 

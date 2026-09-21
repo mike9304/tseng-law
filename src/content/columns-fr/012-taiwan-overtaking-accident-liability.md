@@ -58,8 +58,8 @@ Le respect de l’article 101 est important, mais il n’assure à lui seul ni d
 ---
 
 > Voir aussi :
-> - [Repères sur l’avocat plaidant à Taïwan](/ko/taiwan-litigation-lawyer)
-> - [Avocate de Taïwan pouvant s’exprimer en coréen](/ko/korean-lawyer-in-taiwan)
+> - [Comment l’étendue du travail et les honoraires sont fixés](/fr/pricing)
+> - [Équipe internationale de Hovering](/fr/lawyers)
 > - [Procédure de traitement des accidents de la circulation à Taïwan](/fr/columns/taiwan-traffic-accident-procedure)
 
 Le présent texte est une information juridique générale sur les règles de dépassement et l’appréciation de la responsabilité des accidents à Taïwan ; il ne constitue pas un conseil pour une affaire concrète ni une promesse quant à un résultat déterminé. La responsabilité réelle peut varier selon le lieu de l’accident, le mouvement des véhicules, la vitesse, les signaux, les preuves, l’expertise (鑑定) et le droit en vigueur ; les affaires concrètes doivent être examinées séparément à partir des pièces pertinentes.

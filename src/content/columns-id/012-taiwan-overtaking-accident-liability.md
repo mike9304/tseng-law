@@ -58,8 +58,8 @@ Sebagai bahan tambahan, Anda dapat merujuk pada [ilustrasi peraturan dan langkah
 ---
 
 > Baca juga:
-> - [Panduan Pengacara Litigasi Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Pengacara Taiwan yang Berbahasa Korea](/ko/korean-lawyer-in-taiwan)
+> - [Bagaimana lingkup pekerjaan dan biaya ditetapkan](/id/pricing)
+> - [Tim Internasional Hovering](/id/lawyers)
 > - [Prosedur Penanganan Kecelakaan Lalu Lintas di Taiwan](/id/columns/taiwan-traffic-accident-procedure)
 
 Tulisan ini merupakan informasi hukum umum mengenai peraturan mendahului di Taiwan dan penilaian tanggung jawab kecelakaan, bukan nasihat hukum untuk perkara tertentu maupun jaminan atas suatu hasil. Tanggung jawab yang sesungguhnya dapat berbeda menurut lokasi kecelakaan, gerakan kendaraan, kecepatan, isyarat, bukti, hasil penilaian ahli, serta peraturan perundang-undangan yang terbaru, sehingga perkara yang konkret harus ditelaah secara tersendiri berdasarkan bahan-bahan yang terkait.

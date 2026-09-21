@@ -368,6 +368,6 @@ Q20. จะหาทนายความคดีอุบัติเหตุ
 ---
 
 > อ่านเพิ่มเติม:
-> - [คู่มือทนายความคดีความในไต้หวัน](/ko/taiwan-litigation-lawyer)
-> - [ทนายความไต้หวันที่สื่อสารภาษาเกาหลีได้](/ko/korean-lawyer-in-taiwan)
-> - [คู่มือการค้นหาทนายความไต้หวัน](/ko/taiwan-lawyer)
+> - [การกำหนดขอบเขตงานและค่าใช้จ่าย](/th/pricing)
+> - [ทีมงานระหว่างประเทศ Hovering](/th/lawyers)
+> - [เกี่ยวกับ Hovering International Law Firm](/th/about)

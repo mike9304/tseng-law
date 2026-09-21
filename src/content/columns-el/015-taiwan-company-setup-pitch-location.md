@@ -78,6 +78,6 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 ---
 
 > Δείτε επίσης:
-> - [Γενικός οδηγός συστάσεως εταιρείας στην Ταϊβάν — διαδικασίες, κόστος και νομικές μορφές](/ko/guides/taiwan-company-setup)
-> - [Δικηγόρος στην Ταϊβάν που μπορεί να εκφρασθεί στα κορεατικά](/ko/korean-lawyer-in-taiwan)
-> - [Σημεία αναφοράς για τη δικηγόρο επί νομικών προσώπων και συστάσεως εταιρείας στην Ταϊβάν](/ko/taiwan-company-setup-lawyer)
+> - [Ποιες υποθέσεις χειριζόμαστε](/el/services)
+> - [Η διεθνής ομάδα της Hovering](/el/lawyers)
+> - [Πώς να προσεγγίσετε το γραφείο](/el/contact)

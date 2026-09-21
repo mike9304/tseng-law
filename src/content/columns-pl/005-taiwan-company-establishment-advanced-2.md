@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Obraz wyróżniający](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Osoby, które przeczytały [Zakładanie spółki na Tajwanie – podstawy](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) oraz [Zakładanie spółki na Tajwanie – część pogłębiona 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1), mogą również zapoznać się z Zakładanie spółki na Tajwanie – część pogłębiona 2 (公司設立).
+Osoby, które przeczytały [Zakładanie spółki na Tajwanie – podstawy](/pl/columns/taiwan-company-establishment-basics) oraz [Zakładanie spółki na Tajwanie – część pogłębiona 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1), mogą również zapoznać się z Zakładanie spółki na Tajwanie – część pogłębiona 2 (公司設立).
 
 ​
 
@@ -82,6 +82,6 @@ Jeżeli mają państwo dalsze pytania, mogą państwo się z nami skontaktować.
 ---
 
 > Zobacz także:
-> - [Ogólny przewodnik po zakładaniu spółki na Tajwanie — procedury, koszty i formy prawne](/ko/guides/taiwan-company-setup)
-> - [Adwokat na Tajwanie mówiąca po koreańsku](/ko/korean-lawyer-in-taiwan)
-> - [Wskazówki dotyczące adwokata do spraw osób prawnych i zakładania spółki na Tajwanie](/ko/taiwan-company-setup-lawyer)
+> - [Jakie sprawy prowadzimy](/pl/services)
+> - [Międzynarodowy zespół Hovering](/pl/lawyers)
+> - [Jak skontaktować się z kancelarią](/pl/contact)

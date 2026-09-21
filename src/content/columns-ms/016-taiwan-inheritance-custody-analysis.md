@@ -143,8 +143,8 @@ Di halaman rasmi peraturan, anda mengesahkan tarikh pembaharuan dan tarikh berku
 
 ## 11. Orientasi berkaitan
 
-- [Perkhidmatan litigasi keluarga di Taiwan](/ko/services/family)
-- [Panduan peguam litigasi di Taiwan](/ko/taiwan-litigation-lawyer)
+- [Hal yang kami kendalikan](/ms/services)
+- [Bagaimana skop kerja dan kos ditetapkan](/ms/pricing)
 - [Hubungi](/ms/contact)
 
 ---

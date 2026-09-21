@@ -1,0 +1,1096 @@
+# tr guidance pack strings (path → text). Generated 2026-09-21
+
+guidanceContent.tr.languageName
+    Türkçe
+
+guidanceContent.tr.nav.home
+    Ana sayfa
+
+guidanceContent.tr.nav.services
+    Çalışma alanları
+
+guidanceContent.tr.nav.about
+    Büro
+
+guidanceContent.tr.nav.lawyers
+    Avukatlar
+
+guidanceContent.tr.nav.pricing
+    Kapsam ve ücret
+
+guidanceContent.tr.nav.contact
+    İletişim
+
+guidanceContent.tr.nav.faq
+    Sık sorulan sorular
+
+guidanceContent.tr.nav.privacy
+    Gizlilik
+
+guidanceContent.tr.nav.disclaimer
+    Sorumluluk reddi
+
+guidanceContent.tr.nav.columns
+    Yazılar
+
+guidanceContent.tr.contactCta
+    Görüşme talebi gönderin
+
+guidanceContent.tr.footerNotice
+    Bu Türkçe sayfa, firmanın Tayvan hukukuna göre yürüttüğü çalışma hakkında yalnızca genel bilgi verir. Belirli bir dosya için hukuki görüş değildir ve bir ileti göndermek kendi başına avukat ile müvekkil arasında ilişki kurmaz.
+
+guidanceContent.tr.skipLink
+    Gezinmeyi atlayıp içeriğe geçin
+
+guidanceContent.tr.menuLabel
+    Sayfa dizini
+
+guidanceContent.tr.languageLabel
+    Görüntüleme dili
+
+guidanceContent.tr.mega.services.description
+    Büro, Tayvan hukukuna göre başlıca çalışma gruplarını yürütür.
+
+guidanceContent.tr.mega.services.viewAllLabel
+    Tümünü göster
+
+guidanceContent.tr.mega.columns.description
+    Sık karşılaşılan Tayvan hukuku konularına ilişkin yazılar.
+
+guidanceContent.tr.mega.columns.viewAllLabel
+    Tümünü göster
+
+guidanceContent.tr.mega.lawyers.description
+    Görevli avukatların tanıtımı ve iletişim yolları.
+
+guidanceContent.tr.mega.lawyers.viewAllLabel
+    Tümünü göster
+
+guidanceContent.tr.mega.pricing.description
+    Bu sayfa çalışma kapsamını ve ücretin nasıl belirlendiğini açıklar.
+
+guidanceContent.tr.mega.pricing.viewAllLabel
+    Tümünü göster
+
+guidanceContent.tr.mega.faq.description
+    Firmanın Tayvan’daki çalışmasına ilişkin sık sorulan sorular.
+
+guidanceContent.tr.mega.faq.viewAllLabel
+    Tümünü göster
+
+guidanceContent.tr.notFoundTitle
+    Sayfa bulunamadı
+
+guidanceContent.tr.notFoundText
+    Aradığınız sayfa yok veya taşınmış. Mevcut bilgileri görmek için Türkçe ana sayfaya dönebilirsiniz.
+
+guidanceContent.tr.backHomeLabel
+    Ana sayfaya
+
+guidanceContent.tr.readSourceLabel
+    Özgün dildeki yazı listesini açın
+
+guidanceContent.tr.home.heroScrollLabel
+    Aşağı kaydırın
+
+guidanceContent.tr.home.heroColumnsCtaLabel
+    Yazılara bakın
+
+guidanceContent.tr.home.servicesDetailLabel
+    Ayrıntılara bakın
+
+guidanceContent.tr.home.servicesAssistanceBefore
+    Konunuzun hangi gruba girdiği belirsizse, 
+
+guidanceContent.tr.home.servicesAssistanceLinkLabel
+    İletişim
+
+guidanceContent.tr.home.servicesAssistanceAfter
+     sayfası, bir avukatın inceleyeceği özeti nasıl yazacağınızı açıklar.
+
+guidanceContent.tr.home.columnsViewAllLabel
+    Tüm yazılara bakın
+
+guidanceContent.tr.home.columnsReadMoreLabel
+    Devamını oku
+
+guidanceContent.tr.home.columnsReviewLabel
+    Avukat Wei Tseng tarafından incelendi
+
+guidanceContent.tr.home.columnsOriginalLanguageBadge
+    Özgün dil
+
+guidanceContent.tr.home.columnsOriginalLanguageNote
+    Aşağıdaki yazılar henüz Türkçe hazır değildir. Liste özgün dilde kalır ve ilgili dil sayfasını açar; içerik kendiliğinden çevrilmez.
+
+guidanceContent.tr.home.imageBandAlt
+    Gündüz ışığında geleneksel Tayvan sanheyuanı (三合院) ve modern bir köşk
+
+guidanceContent.tr.home.videoPauseLabel
+    Videoyu duraklat
+
+guidanceContent.tr.home.videoPlayLabel
+    Videoyu oynat
+
+guidanceContent.tr.home.videoReplayLabel
+    Videoyu yeniden oynat
+
+guidanceContent.tr.pages.home.eyebrow
+    BİLGİ
+
+guidanceContent.tr.pages.home.title
+    Tayvan’da hukuki hizmetler — Türkçe bilgi
+
+guidanceContent.tr.pages.home.description
+    Hovering International Law Firm’in Tayvan’daki çalışma alanı, görüşme dilleri ve ilk iletişim hakkında Türkçe genel açıklama.
+
+guidanceContent.tr.pages.home.intro
+    Hovering International Law Firm, yurt dışından gelen ve Tayvan ile bağlantısı olan müvekkilleri Tayvan hukukuna göre yatırım ve şirket kuruluşu, hukuk uyuşmazlıkları, evlilik, aile ve miras, iş hukuku, ceza ve fikri mülkiyet konularında destekler. Bu Türkçe bölüm, hangi işin kapsamımıza girdiğini, neyin hazırlanması gerektiğini ve bize nasıl ulaşılacağını görmenize yardımcı olur. Bunlar genel bilgilerdir; sizin dosyanız için hukuki görüş değildir.
+
+guidanceContent.tr.pages.home.sections[0].heading
+    Ne yapıyoruz
+
+guidanceContent.tr.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm, Tayvan’da kurulmuş bir avukatlık bürosudur. Tayvan hukukuna göre çalışır ve Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) ile Pingtung (屏東) ofisleri vardır. Şirketlere danışmanlık verir, mahkemede usul yürütür ve yurt dışından gelen müvekkilleri Tayvan’da gereken adımlarda destekler.
+
+guidanceContent.tr.pages.home.sections[0].paragraphs[1]
+    Buradaki tüm içerik geneldir. Bir işin sonucu olgulara, uygulanacak kurallara ve zamana bağlıdır. Bu bilgiler, belgeleriniz hakkında bir avukatla konuşmanın yerine geçmez.
+
+guidanceContent.tr.pages.home.sections[1].heading
+    Sayfa dili ile görüşme dili aynı şey değildir
+
+guidanceContent.tr.pages.home.sections[1].paragraphs[0]
+    Bu sayfa Türkçe yazılmıştır; ancak avukatla görüşme yalnızca dört görüşme dilinde yapılır: İngilizce, Çince (中文), Japonca ve Korece. Türkçe bilgileri okumak, avukatla konuşmanın Türkçe olacağı anlamına gelmez.
+
+guidanceContent.tr.pages.home.sections[1].paragraphs[1]
+    Bu sayfa üzerinden tercüman, yanıt süresi veya randevu vaat etmeyiz. Dört dilden hiçbirini kullanamıyorsanız, İletişim sayfası iletişim yolunu nasıl incelediğimizi açıklar.
+
+guidanceContent.tr.pages.home.sections[2].heading
+    Çalışma grupları
+
+guidanceContent.tr.pages.home.sections[2].paragraphs[0]
+    Çalışma alanı aşağıdaki altı grubu kapsar. Çalışma alanları sayfası her grubu daha ayrıntılı anlatır ve nelerin vaat edilmediğini belirtir.
+
+guidanceContent.tr.pages.home.sections[2].items[0]
+    Tayvan’da yatırım ve şirket kuruluşu
+
+guidanceContent.tr.pages.home.sections[2].items[1]
+    Hukuk davaları ve tazminat
+
+guidanceContent.tr.pages.home.sections[2].items[2]
+    Evlilik, aile ve miras
+
+guidanceContent.tr.pages.home.sections[2].items[3]
+    İş uyuşmazlıkları
+
+guidanceContent.tr.pages.home.sections[2].items[4]
+    Ceza işleri
+
+guidanceContent.tr.pages.home.sections[2].items[5]
+    Fikri mülkiyet: marka, patent ve telif
+
+guidanceContent.tr.pages.home.sections[3].heading
+    Nereden başlamalısınız
+
+guidanceContent.tr.pages.home.sections[3].paragraphs[0]
+    Konunuzun kapsamımıza girip girmediğini değerlendirmek için Çalışma alanları sayfasını, ardından kapsamın nasıl belirlendiğini ve ücretin işe başlamadan önce nasıl doğrulandığını öğrenmek için Kapsam ve ücret ile İletişim sayfalarını okuyun.
+
+guidanceContent.tr.pages.home.sections[3].paragraphs[1]
+    İleti gönderirken özeti kendi dilinizde yazabilirsiniz. Özgün metin yazdığınız gibi saklanır ve kendiliğinden çevrilmez. Gönderilen ileti, inceleme bekleyen bir taleptir: henüz görüşme değildir ve henüz doğrulanmış bir randevu değildir.
+
+guidanceContent.tr.pages.services.eyebrow
+    ÇALIŞMA ALANLARI
+
+guidanceContent.tr.pages.services.title
+    Hangi işleri yürütürüz
+
+guidanceContent.tr.pages.services.description
+    Firmanın Tayvan’daki altı çalışma grubu ve önce bilmeniz gereken sınırlar.
+
+guidanceContent.tr.pages.services.intro
+    Aşağıda gerçekten yürüttüğümüz gruplar ve ilk aşamada sık sorulan sorular yer alır. Anlatım, konunuzun kapsamımıza girip girmediğini değerlendirmenize yardımcı olur; geneldir ve ayrı bir dosyanın hukuki çözümlemesi değildir.
+
+guidanceContent.tr.pages.services.sections[0].heading
+    Tayvan’da yatırım ve şirket kuruluşu
+
+guidanceContent.tr.pages.services.sections[0].paragraphs[0]
+    Yabancı yatırımcıları ve şirketleri Tayvan’da şirket kurma veya işletmede destekleriz: hukuk biçiminin seçimi, belgelerin hazırlanması ve sunulması, sermaye koyma, banka işleri, işyerinin incelenmesi ve sektöre özgü gerekler. Tayvan’da kuruluş ve işletmeden doğan muhasebe ve vergi konularında da yardımcı oluruz.
+
+guidanceContent.tr.pages.services.sections[0].paragraphs[1]
+    Akış ve süre, hukuk biçimine, yatırımcıya, sektöre, bankaya ve eldeki belgelere göre değişir. Şirket kuruluşu kendiliğinden oturma iznine (居留) veya çalışma iznine (工作許可) götürmez: bunlar, ilgili kişinin durumuna göre değerlendirilen ayrı usullerdir.
+
+guidanceContent.tr.pages.services.sections[1].heading
+    Hukuk davaları ve tazminat
+
+guidanceContent.tr.pages.services.sections[1].paragraphs[0]
+    Bu grup sözleşme uyuşmazlıklarını, haksız fiilden doğan tazminatı ve tüketici uyuşmazlıklarını kapsar. Çalışma genellikle bir zaman dizisi, eldeki belge ve kanıtların incelenmesi ve ancak ondan sonra sonraki adımlarla başlar.
+
+guidanceContent.tr.pages.services.sections[1].paragraphs[1]
+    Süreler, yasal dava süreleri dâhil, ve kanıtların tamlığı seyri biçimlendirir. Bu yüzden bilinen tarihleri mümkün olduğunca erken belirtin. Sözleşmeleri, iletileri, ödeme belgelerini veya yerindeki durumun fotoğraflarını saklayın ve ilk iletide anın.
+
+guidanceContent.tr.pages.services.sections[2].heading
+    Evlilik, aile ve miras
+
+guidanceContent.tr.pages.services.sections[2].paragraphs[0]
+    Boşanma (離婚), mal paylaşımı, reşit olmayan çocuklara ilişkin hak ve yükümlülüklerin kullanılması veya yüklenilmesi (未成年子女權利義務之行使或負擔), görüşme (會面交往) ve miras (繼承) işlerini yürütürüz; taraflar veya malvarlığı farklı devletlerde olsa da. Sınır aşan aile işleri çoğu zaman hane kaydı belgelerinin (戶籍), belgenin biçiminin ve Tayvan’daki ispat gücünün ek incelenmesini gerektirir.
+
+guidanceContent.tr.pages.services.sections[2].paragraphs[1]
+    Aile işleri sık sık süreler ve paralel usuller getirdiğinden, ilk özet tarafların ilişkisini, güncel oturma yerini ve hâlihazırda yürüyen usulleri belirtmelidir.
+
+guidanceContent.tr.pages.services.sections[3].heading
+    İş uyuşmazlıkları
+
+guidanceContent.tr.pages.services.sections[3].paragraphs[0]
+    Bu grup iş ilişkisinin sona ermesini, Tayvan hukukuna göre kıdem tazminatını (資遣費; başka devletlerin kurumlarıyla aynı tutulmamalıdır), ücreti ve iş sözleşmesinden (勞動契約) doğan uyuşmazlıkları kapsar; işçi veya işveren tarafında. İncelemede sona erme sebebini bildirim, ödeme ve süre sorularından ayırırız.
+
+guidanceContent.tr.pages.services.sections[3].paragraphs[1]
+    İş sözleşmesi, iş kuralları (工作規則), ücret bordroları ve tarafların yazışması çoğu zaman belirleyici belgelerdir. Hâlâ elinizdeyse özetinizde belirtin.
+
+guidanceContent.tr.pages.services.sections[4].heading
+    Ceza işleri
+
+guidanceContent.tr.pages.services.sections[4].paragraphs[0]
+    Soruşturmada ve mahkemede, şüpheli veya sanık için olduğu kadar mağdur için de destekleriz ve ticari faaliyetin ceza risklerini değerlendiririz.
+
+guidanceContent.tr.pages.services.sections[4].paragraphs[1]
+    Ceza işlerinin çoğu zaman kısa süreleri ve belirlenmiş aşamaları vardır. Savcılık veya mahkemeden bir yazı aldıysanız, içeriğin doğru sırada incelenmesi için yazıdaki tarihi erken belirtin.
+
+guidanceContent.tr.pages.services.sections[5].heading
+    Fikri mülkiyet
+
+guidanceContent.tr.pages.services.sections[5].paragraphs[0]
+    Tayvan’da marka (商標) ve patent (專利) tescilinde, telifte ve bu haklara ilişkin uyuşmazlıklarda yardımcı oluruz.
+
+guidanceContent.tr.pages.services.sections[5].paragraphs[1]
+    Bu grupta adımların sırası belirleyicidir: koruma kapsamı, başvuru anı ve fiilî kullanım seçimi etkiler. Bir başvurunun sunulması, kendiliğinden onaylandığı anlamına gelmez.
+
+guidanceContent.tr.pages.services.sections[6].heading
+    Kapsam ve doğrulanması
+
+guidanceContent.tr.pages.services.sections[6].paragraphs[0]
+    Büro Tayvan hukukuna göre çalışır ve yukarıdaki gruplardaki işleri yürütür. Her işin kapsamı, bir avukat iletinizi inceledikten sonra ayrıca doğrulanır.
+
+guidanceContent.tr.pages.services.sections[6].paragraphs[1]
+    Oturma durumu, çalışma izni ve benzeri sorular uyruktan değil, belgelerden ve ilgili kişinin durumundan değerlendirilir. Konunuzun bir kısmı bu soruları ilgilendiriyorsa, iletişimde belirtin. Bu sayfa ne sonuç ne de yanıt süresi vaat eder.
+
+guidanceContent.tr.pages.about.eyebrow
+    BÜRO
+
+guidanceContent.tr.pages.about.title
+    Hovering International Law Firm hakkında
+
+guidanceContent.tr.pages.about.description
+    Bu Tayvan avukatlık bürosuna, ofislerine ve yabancı taraflarla çalışmaya ilişkin temel bilgiler.
+
+guidanceContent.tr.pages.about.intro
+    Hovering International Law Firm, Tayvan’da bir avukatlık bürosudur. Avukatlar şirket danışmanlığından mahkeme usulüne kadar çalışır. Bu bölüm firmanın kuruluşunu, yerleri ve yabancı taraflarla çalışmayı anlatır.
+
+guidanceContent.tr.pages.about.sections[0].heading
+    Kuruluş ve yapı
+
+guidanceContent.tr.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所), 2016 yılında National Taiwan University’de (國立臺灣大學) öğrenim görmüş avukatlar tarafından kuruldu. Çin adı 昊鼎, 昊 (“geniş gök”) işaretini 鼎 (“sağlam temel”) ile birleştirir ve firmanın kuruluşundan beri yönünü anlatır.
+
+guidanceContent.tr.pages.about.sections[0].paragraphs[1]
+    Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) ve Pingtung (屏東) ofislerimiz vardır. Kaohsiung ofisi şirket yönetimine odaklanır ve hukuk, ceza ve idare uyuşmazlıklarını yürütür. Taichung ofisi inşaat işleri, fikri mülkiyet ve Kore ile Japonya bağlantılı işleri yürütür. Pingtung ofisi 2017’de yerel gereksinim için açıldı.
+
+guidanceContent.tr.pages.about.sections[0].paragraphs[2]
+    Avukatlık çalışmasının yanında 2020’den beri Hovering Accounting Office da vardır; girişimcilere ve varlıklı kişilere muhasebe ve vergi planlaması sunar.
+
+guidanceContent.tr.pages.about.sections[1].heading
+    Yabancı taraflarla çalışma
+
+guidanceContent.tr.pages.about.sections[1].paragraphs[0]
+    Sınır aşan çalışma şirket kuruluşunu, vizeleri, marka ve patent başvurularını, hukuki risk incelemesini ve şirketlere vergi danışmanlığını kapsar. Taichung ofisi özellikle inşaat işleri, fikri mülkiyet ve Kore ile Japonya bağlantılı işleri yürütür. Avukat Wei Tseng (曾雋崴), anılan gruplarda Kore, Japonya ve diğer uluslararası müvekkilleri destekler.
+
+guidanceContent.tr.pages.about.sections[1].paragraphs[1]
+    Bir işi alıp alamayacağımız içeriğe ve iletişim diline bağlıdır. Konunuz anılan gruplara giriyorsa ve dört görüşme dilinden birinde konuşulabiliyorsa, inceleme için bir özet gönderebilirsiniz.
+
+guidanceContent.tr.pages.about.sections[2].heading
+    Bizimle iletişime geçtiğinizde
+
+guidanceContent.tr.pages.about.sections[2].paragraphs[0]
+    Özetiniz geldikten sonra bir avukat içeriği inceler, ardından olası çalışma kapsamını, hâlâ gereken belgeleri ve sonraki adımları konuşur. Vergi veya muhasebe sorularında büro, muhasebe birimiyle aynı akışta çalışabilir.
+
+guidanceContent.tr.pages.about.sections[2].paragraphs[1]
+    Her işin sonucu olgulara ve eldeki belgelere bağlıdır; sonuç vaat etmeyiz. Durumunuz için bağlayıcı bir yanıt gerekiyorsa, belgeler dört görüşme dilinden birinde bir avukatla konuşulmalıdır.
+
+guidanceContent.tr.pages.lawyers.eyebrow
+    AVUKATLAR
+
+guidanceContent.tr.pages.lawyers.title
+    Hovering uluslararası ekibi
+
+guidanceContent.tr.pages.lawyers.description
+    Hovering avukatlarının, operasyon yönetiminin ve ortak muhasebenin profilleri.
+
+guidanceContent.tr.pages.lawyers.intro
+    
+
+guidanceContent.tr.pages.pricing.eyebrow
+    KAPSAM VE ÜCRET
+
+guidanceContent.tr.pages.pricing.title
+    Çalışma kapsamı ve ücret nasıl belirlenir
+
+guidanceContent.tr.pages.pricing.description
+    Sıranın açıklaması: önce çalışma kapsamı, sonra ücretin doğrulanması ve bu sayfada neden fiyat listesi olmadığı.
+
+guidanceContent.tr.pages.pricing.intro
+    Bu sayfa ücretin nasıl belirlendiğini açıklar, tutarını değil. Tutar, ilgili işin çalışma kapsamına bağlıdır ve bu kapsam açık olmadan anlamlı değildir.
+
+guidanceContent.tr.pages.pricing.sections[0].heading
+    Önce çalışma kapsamı belirlenir
+
+guidanceContent.tr.pages.pricing.sections[0].paragraphs[0]
+    Aynı tür işler, taraf sayısına, eldeki belgelere, uyulması gereken sürelere ve bir usulün başlayıp başlamadığına göre çok farklı emek gerektirebilir. Bu yüzden ilk adım her zaman işe neyin girip neyin girmediğini belirlemektir.
+
+guidanceContent.tr.pages.pricing.sections[0].paragraphs[1]
+    Başta gönderdiğiniz özet, bu kapsamın temelidir. Olay akışını, isteğinizi ve süreleri ne kadar açık anlatırsa kapsam o kadar kesin belirlenebilir.
+
+guidanceContent.tr.pages.pricing.sections[1].heading
+    Ücret, işe başlamadan önce doğrulanır
+
+guidanceContent.tr.pages.pricing.sections[1].paragraphs[0]
+    Çalışma kapsamı açık olduğunda ücretin tutarı ve hesaplanma biçimi, işe başlamadan önce sizinle konuşulur ve doğrulanır. Kapsam yolda değişirse yeniden doğrulanmalıdır.
+
+guidanceContent.tr.pages.pricing.sections[1].paragraphs[1]
+    Bu sayfa bir fiyat önerisi değildir ve ödeme yükümlülüğü doğurmaz. Bu sayfa üzerinden talep göndermek de ücret gerektirmez.
+
+guidanceContent.tr.pages.pricing.sections[2].heading
+    Görüşme ücretli bir hizmet olabilir
+
+guidanceContent.tr.pages.pricing.sections[2].paragraphs[0]
+    Bir avukatla görüşme ücretli bir hizmet olabilir. Bu sayfa ilk konuşmanın ücretsiz olduğunu söylemez ve hiçbir bölüm böyle okunmamalıdır.
+
+guidanceContent.tr.pages.pricing.sections[2].paragraphs[1]
+    Görüşme ücretliyse tutar ve ödeme biçimi, görüşme yapılmadan önce bildirilir.
+
+guidanceContent.tr.pages.pricing.sections[3].heading
+    Bu sayfa neden tarife belirtmez
+
+guidanceContent.tr.pages.pricing.sections[3].paragraphs[0]
+    Ücret işin kendisine bağlıdır: emeğe, taraf sayısına, belgelere, sürelere ve bir usulün yürüyüp yürümediğine. Önceden konmuş bir sayı, sizin işinizin ücretini göstermez. Bu yüzden önce çalışma kapsamını belirler, sonra işe başlamadan önce ücreti size bildiririz.
+
+guidanceContent.tr.pages.pricing.sections[3].paragraphs[1]
+    Avukatlık ücretinin yanında mahkeme, idare veya üçüncü kişi giderleri doğabilir. Bunlar ücretten ayrıdır ve ilgili usule bağlıdır.
+
+guidanceContent.tr.pages.contact.eyebrow
+    İLETİŞİM
+
+guidanceContent.tr.pages.contact.title
+    Büroya nasıl ulaşırsınız
+
+guidanceContent.tr.pages.contact.description
+    Sayfa dili, görüşme dilleri, dört dilden hiçbirini kullanamıyorsanız izlenecek yol ve bu sayfanın vaat etmediği şeyler.
+
+guidanceContent.tr.pages.contact.intro
+    Yazmadan önce lütfen aşağıdaki üç noktayı ayırın. Sıkça karıştırılırlar ama farklı şeyler anlamına gelirler.
+
+guidanceContent.tr.pages.contact.sections[0].heading
+    Ayrı tutulması gereken üç şey
+
+guidanceContent.tr.pages.contact.sections[0].paragraphs[0]
+    Sayfanın görüntüleme dili, avukatla görüşme dili ve yazdığınız dil üç ayrı şeydir.
+
+guidanceContent.tr.pages.contact.sections[0].items[0]
+    Sayfa dili: Bu bilgiler Türkçe yazılmıştır.
+
+guidanceContent.tr.pages.contact.sections[0].items[1]
+    Görüşme dili: Görüşme İngilizce, Çince (中文), Japonca ve Korece yapılır.
+
+guidanceContent.tr.pages.contact.sections[0].items[2]
+    Yazma diliniz: Özeti kendi dilinizde yazabilirsiniz; özgün metin değiştirilmeden saklanır.
+
+guidanceContent.tr.pages.contact.sections[1].heading
+    Dört görüşme dilinden hiçbirini kullanamıyorsanız
+
+guidanceContent.tr.pages.contact.sections[1].paragraphs[0]
+    İletişim formunda «İletişim yolunun doğrulanması gerekir» seçeneğini seçebilirsiniz. Kullanılabilir bir yol varsa, o yolu incelemek için yanıtlarız; başka dilde hizmet sağlanmaz ve yanıt süresi vaat edilmez.
+
+guidanceContent.tr.pages.contact.sections[1].paragraphs[1]
+    Bu yalnızca bir inceleme adımıdır, bir vaat değildir. Tercüman vaat etmeyiz, dört dilin dışında Türkçe veya başka dilde hizmet vaat etmeyiz ve her işi kabul edeceğimizi vaat etmeyiz.
+
+guidanceContent.tr.pages.contact.sections[2].heading
+    İlk iletide neler olmalıdır
+
+guidanceContent.tr.pages.contact.sections[2].paragraphs[0]
+    Ne olduğunu, ne yardıma gereksinim duyduğunuzu, işin Tayvan ile ilişkisini ve biliyorsanız süreyi belirtin. Mahkemeden veya bir idareden yazı aldıysanız, yazıdaki tarihi belirtin.
+
+guidanceContent.tr.pages.contact.sections[2].paragraphs[1]
+    İlk aşamada henüz pasaport numarası, kimlik numarası, hesap bilgisi, sağlık kaydı veya tüm kanıtları göndermeniz gerekmez. Avukatın yönlendirmesini bekleyin ve duyarlı belgeleri o zaman güvenli bir yolla gönderin.
+
+guidanceContent.tr.pages.contact.sections[3].heading
+    Bu sayfanın vaat etmediği şeyler
+
+guidanceContent.tr.pages.contact.sections[3].paragraphs[0]
+    Yanıt süresi vaat etmeyiz, bu sayfa üzerinden randevu doğrulamayız, belirli bir avukat vaat etmeyiz ve tercüman sağlamayız. Yazılı çeviri başka bir şeydir: iletiniz kendiliğinden çevrilmez.
+
+guidanceContent.tr.pages.contact.sections[3].paragraphs[1]
+    Talep gönderirseniz içerik saklanır ve inceleme bekler. Bir süre sonra yanıt almazsanız, iletişim sayfasında belirtilen e-posta adresine yeniden yazabilirsiniz.
+
+guidanceContent.tr.pages.faq.eyebrow
+    SIK SORULAN SORULAR
+
+guidanceContent.tr.pages.faq.title
+    Sık sorulan sorular
+
+guidanceContent.tr.pages.faq.description
+    Çalışma alanı, hazırlık, diller, ücret ve gönderilmiş bir talebin anlamı hakkında açıklamalar.
+
+guidanceContent.tr.pages.faq.intro
+    Aşağıdaki sorular genel bilgi düzeyinde yanıtlanır. Sizin dosyanız için bir yanıt, bir avukat belgeleri inceledikten sonra mümkün olur.
+
+guidanceContent.tr.pages.faq.sections[0].heading
+    Bu bölümü nasıl kullanırsınız
+
+guidanceContent.tr.pages.faq.sections[0].paragraphs[0]
+    Durumunuza yanıt bulamazsanız, yanıt çoğu zaman özel olgulara bağlıdır. O olguları bu sayfadan kendiniz çıkarmak yerine özetinize yazın.
+
+guidanceContent.tr.pages.faq.faqs[0].question
+    Büro hangi işleri yürütür?
+
+guidanceContent.tr.pages.faq.faqs[0].answer
+    Altı grup yürütürüz: Tayvan’da yatırım ve şirket kuruluşu, hukuk davaları ve tazminat, evlilik, aile ve miras, iş uyuşmazlıkları, ceza işleri ve fikri mülkiyet. Bir işin alınıp alınmayacağı içerik incelendikten sonra kararlaştırılır.
+
+guidanceContent.tr.pages.faq.faqs[1].question
+    İletişimden önce ne hazırlamalıyım?
+
+guidanceContent.tr.pages.faq.faqs[1].answer
+    Olay akışının, isteğinizin, Tayvan ile ilişkinin ve varsa sürenin kısa bir özetini hazırlayın. Mahkeme veya idare yazısı varsa tarihi belirtin. Bu aşamada henüz kimlik belgesi veya tüm kanıtları göndermeniz gerekmez.
+
+guidanceContent.tr.pages.faq.faqs[2].question
+    Türkçe danışma mümkün mü?
+
+guidanceContent.tr.pages.faq.faqs[2].answer
+    Hayır. Bu bilgiler Türkçe yazılmıştır; ancak avukatla görüşme yalnızca İngilizce, Çince (中文), Japonca ve Korece yapılır. Tercüman da vaat etmeyiz. Yazılı çeviri başka bir şeydir: yazdığınız özgün metin olduğu gibi saklanır ve kendiliğinden çevrilmez.
+
+guidanceContent.tr.pages.faq.faqs[3].question
+    Dört dilden hiçbirini kullanamazsam ne olur?
+
+guidanceContent.tr.pages.faq.faqs[3].answer
+    Talebi gönderirken «İletişim yolunun doğrulanması gerekir» seçeneğini seçin. İletişim yolunu incelemek için yanıtlarız, ancak başka dilde hizmet sağlanmaz. Bu bir inceleme adımıdır, başka dilde çalışabileceğimize dair bir vaat değildir.
+
+guidanceContent.tr.pages.faq.faqs[4].question
+    Türkçe metnim nasıl ele alınır?
+
+guidanceContent.tr.pages.faq.faqs[4].answer
+    Yazdığınız özgün metin olduğu gibi saklanır ve kendiliğinden çevrilmez. Gerekirse sonraki iletişimin dili sizinle birlikte doğrulanır.
+
+guidanceContent.tr.pages.faq.faqs[5].question
+    Talep gönderildiğinde görüşme yapılmış mı olur?
+
+guidanceContent.tr.pages.faq.faqs[5].answer
+    Hayır. Gönderilen talep bir avukatın incelemesini bekler. Bu hukuki görüş değildir, doğrulanmış randevu değildir ve göndermek kendi başına avukat ile müvekkil arasında ilişki kurmaz.
+
+guidanceContent.tr.pages.faq.faqs[6].question
+    Ücret nasıl hesaplanır?
+
+guidanceContent.tr.pages.faq.faqs[6].answer
+    Önce çalışma kapsamı belirlenir, sonra ücretin tutarı ve hesaplanma biçimi işe başlamadan önce sizinle doğrulanır. Bu sayfa sayı vermez ve ilk konuşmanın ücretsiz olduğunu söylemez.
+
+guidanceContent.tr.pages.faq.faqs[7].question
+    Konum çok ivediyse ne olur?
+
+guidanceContent.tr.pages.faq.faqs[7].answer
+    Süreyi veya resmi bir yazıdaki tarihi özetinizin başında belirtin ki incelemede görülsün. Bu sayfanın ivedi bir kanalı yoktur ve yanıt süresi sağlanmaz; konum bekleyemiyorsa bulunduğunuz yerde paralel başka yollar aramalısınız.
+
+guidanceContent.tr.pages.privacy.eyebrow
+    GİZLİLİK
+
+guidanceContent.tr.pages.privacy.title
+    İletişim formuyla toplanan veriler
+
+guidanceContent.tr.pages.privacy.description
+    Bu Türkçe bölümdeki iletişim formunun neleri topladığı, özgün metnin nasıl ele alındığı ve verileriniz için bize nasıl ulaşacağınız.
+
+guidanceContent.tr.pages.privacy.intro
+    Bu bölüm yalnızca bu bilgi sayfalarındaki iletişim formunu kapsar. Veri işlemeyi anlatır, teknik bir mutlak koruma vaadi değildir.
+
+guidanceContent.tr.pages.privacy.sections[0].heading
+    Hangi veriler toplanır
+
+guidanceContent.tr.pages.privacy.sections[0].paragraphs[0]
+    Bu bölümdeki form üzerinden talep gönderdiğinizde aşağıdaki bilgiler kaydedilir:
+
+guidanceContent.tr.pages.privacy.sections[0].items[0]
+    Belirttiğiniz ad
+
+guidanceContent.tr.pages.privacy.sections[0].items[1]
+    Yanıt için e-posta adresi
+
+guidanceContent.tr.pages.privacy.sections[0].items[2]
+    Gönderim anındaki sayfa görüntüleme dili
+
+guidanceContent.tr.pages.privacy.sections[0].items[3]
+    Yazdığınız dil
+
+guidanceContent.tr.pages.privacy.sections[0].items[4]
+    İstediğiniz görüşme dili
+
+guidanceContent.tr.pages.privacy.sections[0].items[5]
+    Yazdığınız özgün metin
+
+guidanceContent.tr.pages.privacy.sections[0].items[6]
+    Talebi göndermeye verdiğiniz onay
+
+guidanceContent.tr.pages.privacy.sections[0].items[7]
+    Talebi yeniden bulmak için bir alındı numarası
+
+guidanceContent.tr.pages.privacy.sections[1].heading
+    Özgün metin değiştirilmeden saklanır
+
+guidanceContent.tr.pages.privacy.sections[1].paragraphs[0]
+    Metniniz yazdığınız gibi saklanır ve kendiliğinden çevrilmez. İşleme için çeviri gerekirse bu sizinle ayrıca konuşulur.
+
+guidanceContent.tr.pages.privacy.sections[1].paragraphs[1]
+    Özgün metin saklandığı için ilk aşamada henüz gerekmeyen şeyleri yazmayın; örneğin pasaport numarası, kimlik numarası veya hesap bilgileri.
+
+guidanceContent.tr.pages.privacy.sections[2].heading
+    Saklama yeri ve erişim
+
+guidanceContent.tr.pages.privacy.sections[2].paragraphs[0]
+    Gönderinizin içeriği kamuya açık olmayan bir yerde saklanır. Yalnızca büroda yetkili kişiler talebi işlemek için erişebilir.
+
+guidanceContent.tr.pages.privacy.sections[2].paragraphs[1]
+    Bu sayfa mutlak bir güvenlik vaadi vermez. Hiçbir iletim yolu ve hiçbir saklama yeri tümüyle güvenli değildir; bu yüzden duyarlı belgeler yalnızca avukatın özel yönlendirmesinden sonra gönderilmelidir.
+
+guidanceContent.tr.pages.privacy.sections[3].heading
+    Kullanım amacı
+
+guidanceContent.tr.pages.privacy.sections[3].paragraphs[0]
+    Gönderilen veriler talebin incelenmesine, size yanıt verilmesine, iletişim yolunun açıklığa kavuşturulmasına ve işe başlanırsa işlemeye hizmet eder.
+
+guidanceContent.tr.pages.privacy.sections[3].paragraphs[1]
+    Veriler, ayrı bir onay olmadan pazarlama için kullanılmaz.
+
+guidanceContent.tr.pages.privacy.sections[4].heading
+    Bildirim ve alındı numarası
+
+guidanceContent.tr.pages.privacy.sections[4].paragraphs[0]
+    Bir talep başarıyla gönderilirse sistem büroyu bilgilendirir. Bu bildirim henüz doğrulanmamışsa metniniz saklı kalır ve kaybolmaz.
+
+guidanceContent.tr.pages.privacy.sections[4].paragraphs[1]
+    Alındı numarası, talebinizi kayıtlarımızda yeniden bulmaya yarar. Saklandıktan sonra gösterilir; yeniden iletişimde belirtebilirsiniz.
+
+guidanceContent.tr.pages.privacy.sections[5].heading
+    Haklarınız ve iletişim yolu
+
+guidanceContent.tr.pages.privacy.sections[5].paragraphs[0]
+    Verilerinizin bilgisine, düzeltilmesine veya silinmesine ilişkin talepte bulunabilir veya onayı, iletişim sayfasında belirtilen e-posta adresi üzerinden geri çekebilirsiniz. Yasal veya usule bağlı bir saklama yükümlülüğü varsa sınırlamayı açıklarız.
+
+guidanceContent.tr.pages.privacy.sections[5].paragraphs[1]
+    Bu sayfa sabit bir saklama süresi belirtmez, çünkü fiilî süre işin sürdürülüp sürdürülmediğine ve buna bağlı yükümlülüklere bağlıdır. Daha erken silme isterseniz bunu iletişimde belirtin.
+
+guidanceContent.tr.pages.privacy.sections[6].heading
+    Saklama yeri ve hizmet sağlayıcılar
+
+guidanceContent.tr.pages.privacy.sections[6].paragraphs[0]
+    Bu site Vercel’de barındırılır ve gönderiniz bu hizmetin kamuya açık olmayan nesne depolamasında saklanır. E-postalar büronun kullandığı e-posta hizmeti üzerinden gönderilir.
+
+guidanceContent.tr.pages.privacy.sections[6].paragraphs[1]
+    Bazı sağlayıcıların sunucuları Tayvan dışında olabilir, bu yüzden verileriniz orada saklanıp işlenebilir. Saklama amacı dolunca veriler gecikmeksizin silinir; yürürlükteki kurallara göre saklanması gereken veriler bu süre boyunca kalır. Kişisel verilere ilişkin soruları wei@hoveringlaw.com.tw alır.
+
+guidanceContent.tr.pages.disclaimer.eyebrow
+    SORUMLULUK REDDİ
+
+guidanceContent.tr.pages.disclaimer.title
+    Bu sayfadaki bilgilerin kapsamı ve sınırları
+
+guidanceContent.tr.pages.disclaimer.description
+    Bilgilerin genel niteliği, hukuki uygulama alanı ve avukat–müvekkil ilişkisinin koşulları.
+
+guidanceContent.tr.pages.disclaimer.intro
+    Bu bölüm, bu Türkçe bilgi sayfalarının sizin için ne yapabileceğini ve ne yapamayacağını açıklar.
+
+guidanceContent.tr.pages.disclaimer.sections[0].heading
+    Yalnızca genel bilgi
+
+guidanceContent.tr.pages.disclaimer.sections[0].paragraphs[0]
+    Bu sayfaların içeriği genel bilgi olarak yazılmıştır. Dosyanız için hukuki görüş değildir ve kendi belgelerinizin incelenmesinin yerine geçmez.
+
+guidanceContent.tr.pages.disclaimer.sections[0].paragraphs[1]
+    Bir işin sonucu olgulara, uygulanacak kurallara ve zamana bağlıdır; benzer görünen iki durum farklı bitebilir.
+
+guidanceContent.tr.pages.disclaimer.sections[1].heading
+    Hukuki uygulama alanı
+
+guidanceContent.tr.pages.disclaimer.sections[1].paragraphs[0]
+    Büro Tayvan hukukuna göre meslek yürütür ve bu sayfa yalnızca bu çerçevedeki çalışmadan söz eder.
+
+guidanceContent.tr.pages.disclaimer.sections[1].paragraphs[1]
+    İçerik, oturduğunuz yerin hukuku dâhil, Tayvan dışındaki bir hukuk düzenine göre görüş değildir. İşinizin bir kısmı başka bir hukuk düzenini ilgilendiriyorsa, o kısım için hangi nitelikli uzmanın gerektiğini sizinle netleştiririz.
+
+guidanceContent.tr.pages.disclaimer.sections[2].heading
+    Avukat–müvekkil ilişkisi kendiliğinden doğmaz
+
+guidanceContent.tr.pages.disclaimer.sections[2].paragraphs[0]
+    Bu sayfayı okumak, bir form veya e-posta göndermek kendi başına avukat ile müvekkil arasında ilişki kurmaz.
+
+guidanceContent.tr.pages.disclaimer.sections[2].paragraphs[1]
+    Bu ilişki ancak iş incelendikten ve her iki taraf çalışmanın üstlenilmesini doğruladıktan sonra doğar.
+
+guidanceContent.tr.pages.disclaimer.sections[3].heading
+    Sonuç vaadi yoktur
+
+guidanceContent.tr.pages.disclaimer.sections[3].paragraphs[0]
+    Bu sayfanın hiçbir bölümü bir işin sonucu, bir başvurunun onayı veya oturma ve çalışma durumu hakkında vaat değildir.
+
+guidanceContent.tr.pages.disclaimer.sections[3].paragraphs[1]
+    Dış bağlantılar yönlendirme içindir; üçüncü kişi içeriğinin doğruluğunu veya güncelliğini vaat etmeyiz.
+
+guidanceContent.tr.pages.columns.eyebrow
+    YAZILAR
+
+guidanceContent.tr.pages.columns.title
+    Tayvan hukukuna ilişkin yazılar
+
+guidanceContent.tr.pages.columns.description
+    Sık karşılaşılan Tayvan hukuku konularına ilişkin Türkçe yazılar. İçerik, yayımlanma anındaki genel bilgidir; dosyanız için hukuki görüş değildir.
+
+guidanceContent.tr.pages.columns.intro
+    Büro, sık karşılaşılan Tayvan hukuku konularına ilişkin yazılar yayımlar. Türkçe olan yazılar bu sayfadadır; yanında her biri bir özgün dilin yazı listesini açan dört bağlantı vardır.
+
+guidanceContent.tr.pages.columns.sections[0].heading
+    Dile göre dört liste
+
+guidanceContent.tr.pages.columns.sections[0].paragraphs[0]
+    Bu bölümde dört bağlantı vardır: Korece, Çince, İngilizce ve Japonca yazı listesi. Her bağlantı listenin dilini belirtir, böylece içeriğin hangi dilde açılacağını önceden bilirsiniz.
+
+guidanceContent.tr.pages.columns.sections[0].paragraphs[1]
+    Bu dört liste, yazıların özgün diline göre listelerdir, çeviri listeleri değildir. Türkçe olan yazılar bu sayfada ayrıca yer alır.
+
+guidanceContent.tr.pages.columns.sections[1].heading
+    Bağlantılar nereye gider
+
+guidanceContent.tr.pages.columns.sections[1].paragraphs[0]
+    Dört bağlantıdan birini seçtiğinizde o dilin yazı listesi açılır. Listeden metni siz seçersiniz; tüm içerik yazının özgün dilinde görünür.
+
+guidanceContent.tr.pages.columns.sections[1].paragraphs[1]
+    Bu sayfa yazıların içeriğini özetlemez ve bir konunun dört dilde de bulunduğunu vaat etmez. Her liste yalnızca o dilde yayımlanmış metinleri içerir.
+
+guidanceContent.tr.pages.columns.sections[2].heading
+    Bir yazının yol göstericiliği ne kadardır
+
+guidanceContent.tr.pages.columns.sections[2].paragraphs[0]
+    Yazılar, yayımlanma anındaki genel bilgilerdir. Kurallar ve uygulanışları değişebilir ve bir yazı dosyanızın tüm koşullarını içermez.
+
+guidanceContent.tr.pages.columns.sections[2].paragraphs[1]
+    Bu yüzden gerçek bir işte eyleminizi yalnızca bir yazıya dayandırmayın. Genel bakış için kullanın ve belgelerinizi ayrı olarak bir avukatla konuşun; bu sayfa görüşme adımı değildir.
+
+guidanceTeamCopy.tr.label
+    OUR TEAM
+
+guidanceTeamCopy.tr.title
+    Hovering uluslararası ekibi
+
+guidanceTeamCopy.tr.description
+    Hovering avukatlarının, operasyon yönetiminin ve ortak muhasebenin profilleri.
+
+guidanceTeamCopy.tr.representativeTitle
+    Yönetici avukat
+
+guidanceTeamCopy.tr.teamTitle
+    Avukatlar ve çalışanlar
+
+guidanceTeamCopy.tr.partnerTitle
+    Ortak muhasebe
+
+guidanceTeamCopy.tr.introLabel
+    Tanıtım
+
+guidanceTeamCopy.tr.educationLabel
+    Eğitim
+
+guidanceTeamCopy.tr.experienceLabel
+    Deneyim
+
+guidanceTeamCopy.tr.photoAltPrefix
+    Fotoğraf
+
+guidanceTeamCopy.tr.workingLanguagesLabel
+    Çalışma dilleri
+
+guidanceTeamCopy.tr.fullProfileLabel
+    Tam profil (English)
+
+guidanceTeamCopy.tr.keyFactsHeading
+    Avukat Wei Tseng — Temel bilgiler
+
+guidanceTeamCopy.tr.qualificationLabel
+    Yetki ve büro
+
+guidanceTeamCopy.tr.qualificationSentence
+    {name}, Tayvan’da meslek yürütmeye yetkilidir ve {firm} yönetici avukatıdır.
+
+guidanceTeamCopy.tr.practiceLabel
+    Başlıca alanlar
+
+guidanceTeamCopy.tr.consultationLanguagesLabel
+    Görüşme dilleri
+
+guidanceTeamCopy.tr.roles.tseng-junwei
+    Tayvan’da yönetici avukat (Managing Attorney)
+
+guidanceTeamCopy.tr.roles.chang-rongxuan
+    Tayvan avukatı (Taiwan Attorney)
+
+guidanceTeamCopy.tr.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.tr.roles.son-jungmin
+    Kore operasyon yönetimi (Korea Operations Manager)
+
+guidanceTeamCopy.tr.roles.huang-shengping
+    Ortak muhasebeci (Partner CPA)
+
+guidanceTeamBios.tr.tseng-junwei.intro[0]
+    Büro, Tayvan’da şirket ve kişi işlerini İngilizce, Japonca, Korece ve Çince yürütür.
+
+guidanceTeamBios.tr.tseng-junwei.intro[1]
+    Spor salonunda yaralanma nedeniyle bir Koreli öğrenciyi tazminat isteminde temsil etti ve TWD 1.57M tutarında ilk derece kararı aldı.
+
+guidanceTeamBios.tr.tseng-junwei.education[0]
+    Yüksek lisans (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.tr.tseng-junwei.education[1]
+    Lisans (B.A.), National Chengchi University’de hukuk ve finans çift programı
+
+guidanceTeamBios.tr.tseng-junwei.education[2]
+    Kobe University ve Waseda University’de değişim öğrencisi
+
+guidanceTeamBios.tr.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.tr.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.tr.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.tr.chang-rongxuan.intro[0]
+    Daha önce Ministry of Education, Legal Affairs Division’da, idare ve hukuk işlerine odaklanarak çalıştı.
+
+guidanceTeamBios.tr.chang-rongxuan.intro[1]
+    Üniversiteler, öğretim elemanı hakları ve idari başvurular konusunda deneyimi vardır.
+
+guidanceTeamBios.tr.chang-rongxuan.education[0]
+    Hukuk lisansı (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.tr.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.tr.chang-rongxuan.experience[1]
+    Avukat, Hovering International Law Firm
+
+guidanceTeamBios.tr.chang-fangyu.intro[0]
+    Birden fazla büroda kıdemli paralegal olarak uzun yıllar çalışmış, usul desteği, şirket hukuku ve yabancı yatırımından sorumlu paralegal.
+
+guidanceTeamBios.tr.chang-fangyu.intro[1]
+    Usullere, şirket kuruluşuna, yabancı yatırım onaylarına, ruhsat başvurularına ve Kore ile Tayvan arasındaki alışverişe destek verir.
+
+guidanceTeamBios.tr.chang-fangyu.education[0]
+    Hukuk lisansı (LL.B.), Tunghai University
+
+guidanceTeamBios.tr.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.tr.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.tr.son-jungmin.intro[0]
+    Kore’den gelen müvekkiller için görüşme randevularını ve iletişimi koordine eder.
+
+guidanceTeamBios.tr.son-jungmin.intro[1]
+    Bilgisayar bilimine dayalı olarak, belge sistemleri ve iş akışları üzerinden ekipler arası alışverişi destekler.
+
+guidanceTeamBios.tr.son-jungmin.education[0]
+    Lisans (B.S.) bilgisayar bilimi, National Cheng Kung University
+
+guidanceTeamBios.tr.son-jungmin.experience[0]
+    Kore operasyonları alanı, Hovering International Law Firm
+
+guidanceTeamBios.tr.huang-shengping.intro[0]
+    National Chengchi University’de muhasebe lisans ve yüksek lisans programlarını tamamladı ve şu anda bir muhasebe bürosu yönetmektedir.
+
+guidanceTeamBios.tr.huang-shengping.intro[1]
+    Kurumsal müvekkiller için hukuki, vergi ve mali risklerin bütünleşik analizini destekler.
+
+guidanceTeamBios.tr.huang-shengping.education[0]
+    Yüksek lisans (M.A.) muhasebe, National Chengchi University
+
+guidanceTeamBios.tr.huang-shengping.education[1]
+    Lisans (B.A.) muhasebe, National Chengchi University
+
+guidanceTeamBios.tr.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.tr.Korean
+    Korece
+
+guidanceLanguageNames.tr.Chinese
+    Çince
+
+guidanceLanguageNames.tr.Japanese
+    Japonca
+
+guidancePracticeAreaNames.tr.Taiwan company setup
+    Tayvan’da şirket kuruluşu
+
+guidancePracticeAreaNames.tr.Taiwan investment counsel
+    Tayvan yatırımı için hukuki danışmanlık
+
+guidancePracticeAreaNames.tr.Civil litigation and damages
+    Hukuk davaları ve tazminat
+
+guidancePracticeAreaNames.tr.Trademark and patent filings
+    Marka ve patent başvuruları
+
+guidancePracticeAreaNames.tr.Visa and residency
+    Vize ve oturma
+
+guidancePracticeAreaNames.tr.Family and labor disputes
+    Aile ve iş uyuşmazlıkları
+
+guidanceOfficeCopy.tr.label
+    OFFICES
+
+guidanceOfficeCopy.tr.title
+    Ofisler
+
+guidanceOfficeCopy.tr.description
+    Hovering International Law Firm’in Tayvan’daki ofis adresleri.
+
+guidanceOfficeCopy.tr.officeLabel
+    Ofis
+
+guidanceOfficeCopy.tr.mapPreviewLabel
+    Harita önizlemesi
+
+guidanceOfficeCopy.tr.koreaOfficeTitle
+    Kore ofisi
+
+guidanceOfficeCopy.tr.koreaAddressCardLabel
+    Kore ofisinin adresi
+
+guidanceOfficeCopy.tr.koreaMapLinkLabel
+    Naver Map’te görün
+
+guidanceOfficeCopy.tr.reviewCountWord
+    değerlendirme
+
+guidanceOfficeCopy.tr.phoneLabel
+    Telefon
+
+guidanceOfficeCopy.tr.faxLabel
+    Faks
+
+guidanceOfficeCopy.tr.mapLinkLabel
+    Haritada görün
+
+guidanceOfficeCopy.tr.photoAlts[0]
+    Taipei ofisinin kabul salonu, Hovering International Law Firm
+
+guidanceOfficeCopy.tr.photoAlts[1]
+    Taipei ofisindeki avukat odası, Hovering International Law Firm
+
+guidanceOfficeCopy.tr.photoAlts[2]
+    Taipei ofisinin toplantı salonu, Hovering International Law Firm
+
+guidanceOfficeCopy.tr.officeTitles.taipei
+    Taipei
+
+guidanceOfficeCopy.tr.officeTitles.taichung
+    Taichung
+
+guidanceOfficeCopy.tr.officeTitles.kaohsiung
+    Kaohsiung
+
+guidanceOfficeCopy.tr.officeTitles.pingtung
+    Pingtung
+
+guidanceFooterCopy.tr.officeLabel
+    Ofisler
+
+guidanceFooterCopy.tr.officeQuickLinksLabel
+    Ofislere hızlı bağlantılar
+
+guidanceFooterCopy.tr.followLabel
+    Takip
+
+guidanceFooterCopy.tr.blogLabel
+    Blog
+
+guidanceFooterCopy.tr.websiteLabel
+    Resmi site
+
+guidanceFooterCopy.tr.sitemapLabel
+    Site haritası
+
+guidanceFooterCopy.tr.copyEmailLabel
+    E-posta adresini kopyalayın
+
+guidanceFooterCopy.tr.emailCopiedMessage
+    E-posta adresi kopyalandı.
+
+guidanceFooterCopy.tr.officialConsultationEmailLabel
+    Görüşme için resmi e-posta
+
+internationalInquiryCopy.tr.guidanceNotice
+    Bu sayfa genel bilgi olarak Türkçe yazılmıştır; sizin dosyanız için hukuki görüş değildir.
+
+internationalInquiryCopy.tr.consultationNotice
+    Görüşme yalnızca dört dilde yapılır: İngilizce, Çince (中文), Japonca ve Korece.
+
+internationalInquiryCopy.tr.methodConfirmationNotice
+    Dört dilden hiçbirini kullanamıyorsanız «İletişim yolunun doğrulanması gerekir» seçeneğini seçin. Kullanılabilir bir yol varsa, o yolu incelemek için yanıtlarız; başka dilde hizmet sağlanmaz ve yanıt süresi vaat edilmez.
+
+internationalInquiryCopy.tr.preparationNotice
+    İşinizin özetini kendi dilinizde yazabilirsiniz. Özgün metin yazdığınız gibi saklanır ve kendiliğinden çevrilmez.
+
+internationalInquiryCopy.tr.heading
+    Görüşme talebi gönderin
+
+internationalInquiryCopy.tr.intro
+    İşinizi kısaca anlatın. Bir avukat, sonraki adım konuşulmadan önce içeriği inceler.
+
+internationalInquiryCopy.tr.submitLabel
+    Talebi gönderin
+
+internationalInquiryCopy.tr.submittingLabel
+    Gönderiliyor…
+
+internationalInquiryCopy.tr.successMessage
+    Talebinizi aldık; inceleme bekliyor. Bu, görüşmenin yapıldığı veya bir randevunun doğrulandığı anlamına gelmez.
+
+internationalInquiryCopy.tr.savedNotificationPendingMessage
+    Talebiniz saklandı, ancak büroya bildirim henüz doğrulanmadı. Yazdıklarınız kaybolmaz. Yanıt almazsanız iletişim sayfasındaki e-posta adresine de yazabilirsiniz.
+
+internationalInquiryCopy.tr.receiptIdLabel
+    Alındı numarası
+
+internationalInquiryCopy.tr.failureMessage
+    Talebiniz gönderilemedi. Yeniden deneyin veya iletişim sayfasındaki e-posta adresine yazın.
+
+internationalInquiryCopy.tr.originalLanguageLabel
+    Yazdığınız dil
+
+internationalInquiryCopy.tr.originalLanguagePlaceholder
+    Örneğin: Türkçe, İngilizce, Çince veya başka bir dil
+
+internationalInquiryCopy.tr.preferredConsultationLanguageLabel
+    Görüşme için istediğiniz dil
+
+internationalInquiryCopy.tr.originalTextLabel
+    İşin kısa özeti (kendi dilinizde)
+
+internationalInquiryCopy.tr.originalTextPlaceholder
+    Ne olduğunu, ne yardıma gereksinim duyduğunuzu ve varsa süreyi belirtin. Pasaport numarası, kimlik numarası veya hesap bilgisi yazmayın.
+
+internationalInquiryCopy.tr.nameLabel
+    Ad
+
+internationalInquiryCopy.tr.emailLabel
+    E-posta
+
+internationalInquiryCopy.tr.consentLabel
+    Gizlilik sayfasını okudum ve bu talebin gönderilmesini kabul ediyorum.
+
+internationalInquiryCopy.tr.privacyLinkLabel
+    Gizlilik
+
+internationalInquiryCopy.tr.requiredMessage
+    Bu alan zorunludur.
+
+internationalInquiryCopy.tr.invalidEmailMessage
+    Geçerli bir e-posta adresi girin.
+
+internationalInquiryCopy.tr.tooLongMessage
+    Metin çok uzun. Kısaltıp yeniden gönderin.
+
+internationalInquiryCopy.tr.sourceLanguageNotice
+    Bu yazı yalnızca {language} dilinde yayımlanmıştır ve bağlantı o özgün sayfayı açar.
+
+internationalInquiryCopy.tr.unavailableTranslationNotice
+    Bu öğe henüz bu sayfanın diline çevrilmemiştir. Özgün dili belirten bir bağlantı özgün metni açar.
+
+internationalInquiryCopy.tr.unavailableLanguageNotice
+    Bu sayfa {language} dilinde sunulmaz.
+
+internationalInquiryCopy.tr.languageOptions.en
+    İngilizce (English)
+
+internationalInquiryCopy.tr.languageOptions.zh-hant
+    Çince (中文)
+
+internationalInquiryCopy.tr.languageOptions.ja
+    Japonca (日本語)
+
+internationalInquiryCopy.tr.languageOptions.ko
+    Korece (한국어)
+
+internationalInquiryCopy.tr.languageOptions.needs-method-confirmation
+    Dört dilden hiçbirini kullanamıyorum — iletişim yolunun doğrulanması gerekir
+
+guidanceAnswers.tr.services.answer
+    Büro, Tayvan hukukuna göre altı çalışma grubu yürütür: yatırım ve şirket kuruluşu, hukuk davaları ve tazminat, evlilik, aile ve miras, iş hukuku, ceza ve fikri mülkiyet. Her işin kapsamı, bir avukat gönderdiğiniz içeriği inceledikten sonra ayrıca doğrulanır. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.
+
+guidanceAnswers.tr.services.sources[0]
+    /tr/faq
+
+guidanceAnswers.tr.services.sources[1]
+    /tr/contact
+
+guidanceAnswers.tr.about.answer
+    Hovering International Law Firm, 2016 yılında National Taiwan University (國立臺灣大學) mezunları tarafından kurulmuş, Taipei, Kaohsiung, Taichung ve Pingtung ofisleri olan bir Tayvan avukatlık bürosudur. 2020’den beri bir muhasebe birimi vardır; Taichung ofisi Kore ve Japonya bağlantılı işleri yürütür. Büro sonuç vaat etmez. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.
+
+guidanceAnswers.tr.about.sources[0]
+    /tr/lawyers
+
+guidanceAnswers.tr.about.sources[1]
+    /tr/services
+
+guidanceAnswers.tr.lawyers.answer
+    Bu sayfa Hovering avukatlarının, operasyon yönetiminin ve ortak muhasebenin profillerini gösterir. Avukat Wei Tseng (曾雋崴) Tayvan’da meslek yürütmeye yetkilidir ve büronun yönetici avukatıdır; Kore, Japonya ve diğer uluslararası müvekkillerle çalışır. Büro bir sonuç vaat etmez. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.
+
+guidanceAnswers.tr.lawyers.sources[0]
+    /tr/about
+
+guidanceAnswers.tr.lawyers.sources[1]
+    /tr/contact
+
+guidanceAnswers.tr.pricing.answer
+    Bu sayfa fiyat listesi yayımlamaz. Çalışma kapsamı önce gönderdiğiniz özete göre belirlenir, sonra tutar ve hesaplanma biçimi işe başlamadan önce sizinle doğrulanır. Avukatla görüşme ücretli bir hizmet olabilir; ücretin yanında mahkeme veya idare giderleri doğabilir. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.
+
+guidanceAnswers.tr.pricing.sources[0]
+    /tr/contact
+
+guidanceAnswers.tr.pricing.sources[1]
+    /tr/faq
+
+guidanceAnswers.tr.contact.answer
+    Özetinizi iletişim formu üzerinden gönderin: ne olduğu, ne yardıma gereksinim duyduğunuz, işin Tayvan ile ilişkisi ve varsa süre. Bu ilk aşamada kimlik belgesi veya tüm kanıtları göndermeniz gerekmez. Büro yanıt süresi vaat etmez ve bu sayfa üzerinden randevu doğrulamaz. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.
+
+guidanceAnswers.tr.contact.sources[0]
+    /tr/faq
+
+guidanceAnswers.tr.contact.sources[1]
+    /tr/pricing
+
+guidanceAnswers.tr.faq.answer
+    Bu bölüm sık sorulan soruları genel bilgi düzleminde yanıtlar: altı çalışma grubu, iletişimden önce hazırlık, ücretin belirlenme biçimi ve bir ileti göndermenin anlamı. Gönderilen talep bir avukatın incelemesini bekler; hukuki görüş değildir, randevu değildir ve avukat ile müvekkil arasında ilişki kurmaz. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.
+
+guidanceAnswers.tr.faq.sources[0]
+    /tr/contact
+
+guidanceAnswers.tr.faq.sources[1]
+    /tr/services
+
+GUIDANCE_LLMS_NOTICES.tr.consultationNotice
+    Bu bilgiler Türkçe yazılmıştır; ancak avukatla görüşme yalnızca İngilizce, Çince (中文), Japonca ve Korece yapılır.
+
+GUIDANCE_LLMS_NOTICES.tr.discoveryNotice
+    llms.txt dosyası yalnızca kamuya açık sayfaları bulmak için bir haritadır; arama sırası, destek, yapay zekâ önerisi veya görünürlük vaat etmez.
+
+GUIDANCE_LLMS_NOTICES.tr.confidentialNotice
+    Özgün metin saklandığı için ilk aşamada henüz gerekmeyen şeyleri yazmayın; örneğin pasaport numarası, kimlik numarası veya hesap bilgileri.

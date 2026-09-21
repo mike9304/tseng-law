@@ -58,8 +58,8 @@ A titolo di complemento, può consultarsi [l'illustrazione delle regole e della 
 ---
 
 > Vedere anche:
-> - [Riferimenti sull'avvocata litigante a Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Avvocata taiwanese che parla coreano](/ko/korean-lawyer-in-taiwan)
+> - [Come si fissano ambito di lavoro e costi](/it/pricing)
+> - [Team internazionale di Hovering](/it/lawyers)
 > - [Procedura di trattamento degli incidenti stradali a Taiwan](/it/columns/taiwan-traffic-accident-procedure)
 
 Il presente testo è un'informazione giuridica generale sulle regole di sorpasso e l'apprezzamento della responsabilità degli incidenti a Taiwan; non costituisce un consiglio per un affare concreto né una promessa quanto a un esito determinato. La responsabilità reale può variare secondo il luogo dell'incidente, il movimento dei veicoli, la velocità, i segnali, le prove, la perizia (鑑定) e il diritto in vigore; gli affari concreti devono essere esaminati separatamente a partire dai pezzi pertinenti.

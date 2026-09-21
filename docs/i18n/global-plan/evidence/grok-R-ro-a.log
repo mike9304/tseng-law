@@ -1,0 +1,27 @@
+[WO start 2026-09-21 16:08:36]
+Review written to `docs/i18n/global-plan/reviews/native/ro-a.md`.
+
+**Verdict:** guidance pack **3/5**, columns **2/5**. Romanian of Romania, consistent. No masculine forms for Wei Tseng. The guidance pack reads like German-pivot site chrome (`grupe de lucrări`, `întinderea lucrării`); columns 001–004 and 007 read like French legal translation (`societate fiică` instead of `filială`, `piesele`, `convine să se`).
+
+**11 P1 rows** include advertising (`despăgubirea cea mai ridicată posibil`, the TWD 1.57M bio), leftover English `OUR TEAM` / `OFFICES`, `/ko/` and Hangul links, the dropped Korea-treaty disclaimer, and `să fi șezut` (sat down, not resided). Column 006 is the most natural of the nine.
+
+Last 15 lines of the file:
+
+```
+| 46 | P2 | E | columns-ro/003-taiwan-traffic-accident-procedure.md | "tribunalele pronunță în prezent o pedeapsă de aproximativ 3 luni" | Typical-sentence advertising presented as current court practice. | în practică, pedepsele cu închisoarea de scurtă durată sunt frecvente; cuantumul îl fixează instanța în fiecare cauză |
+| 47 | P2 | E | columns-ro/003-taiwan-traffic-accident-procedure.md | "Poate exista un sursis (緩刑) și să nu se meargă la închisoare." | Reads as a promise of suspended sentence. | Instanța poate dispune sursisul (緩刑); aceasta nu este o regulă și nu se promite |
+| 48 | P2 | C | columns-ro/003-taiwan-traffic-accident-procedure.md | "Dacă aveți alte întrebări, lăsați-le în comentarii." | Leftover blog CTA; tseng-law.com has no comments. | Pentru întrebări folosiți pagina Contact |
+| 49 | P2 | B | columns-ro/007-taiwan-divorce-lawsuit-qna.md | "să soma unei părți sau unui reprezentant legal să se prezinte personal" | "A soma" takes the accusative; dative is a French calque. | să someze o parte sau un reprezentant legal să se prezinte personal |
+| 50 | P2 | C | columns-ro/007-taiwan-divorce-lawsuit-qna.md | "A ști dacă trebuie neapărat mediat împreună în același spațiu" | Fr. Savoir si as a sentence; Romanian would ask the question directly. | Dacă medierea trebuie să aibă loc neapărat împreună, în același spațiu, se verifică după instanță și după cauză |
+| 51 | P2 | C | columns-ro/006-taiwan-massage-history-law.md | "Marii Judecători (大法官) au declarat neconstituțională" | Calque of 大法官; Romanian says judecătorii constituționali / Curtea Constituțională. | Judecătorii constituționali (大法官) au declarat neconstituțională |
+| 52 | P2 | B | columns-ro/008-taiwan-labor-severance-law.md | "este cu adevărat greu de obținut indemnizația de concediere în Taiwan??" | Double question mark and blog clickbait on a legal title. | Indemnizația de concediere (資遣費) în Taiwan: când se datorează |
+| 53 | P2 | B | columns-ro/008-taiwan-labor-severance-law.md | "când salariații părăsesc întreprinderea" | Sentence left without a full stop before the next line. | când salariații părăsesc întreprinderea. |
+| 54 | P2 | C | columns-ro/009-taiwan-voluntary-resignation-severance.md | "După cum s-a arătat mai sus, în Taiwan nu este ușor" | "Mai sus" refers to another article; this file opens with a dangling cross-reference. | În Taiwan, indemnizația de concediere (資遣費) nu se datorează, de regulă, la demisia salariatului |
+| 55 | P2 | C | columns-ro/009-taiwan-voluntary-resignation-severance.md | "cel care s-a pregătit din timp își vede drepturile protejate" | Stock pep-talk; slightly promises that preparation protects rights. | cine documentează din timp faptele își poate valorifica mai bine drepturile; rezultatul nu este garantat |
+| 56 | P2 | C | columns-ro/003-taiwan-traffic-accident-procedure.md | "veniturile pe care se pot aștepta în mod obișnuit" | Broken relative clause (missing "la" / wrong "pe care"). | veniturile la care se poate aștepta în mod obișnuit |
+| 57 | P2 | C | columns-ro/001-taiwan-company-establishment-basics.md | "întreprinderilor cu scop lucrativ (營利事業所得稅)" | French à but lucratif; for 營利事業 Romanian tax writing says societăți comerciale / întreprinderi. also in 004 | impozitului pe venitul societăților (營利事業所得稅) |
+| 58 | P2 | C | columns-ro/004-taiwan-company-subsidiary-vs-branch.md | "intenționează să exercite în mod continuu în Taiwan" | "A exercita" without object (Fr. exercer) is incomplete; Romanian wants "să desfășoare activitate". | intenționează să desfășoare o activitate continuă în Taiwan |
+| 59 | P2 | C | columns-ro/007-taiwan-divorce-lawsuit-qna.md | "pentru o familie legată, precum Coreea și Taiwan, de două state" | Korea named as the typical family pattern for a Romania reader. | pentru o familie legată de două state sau teritorii (de exemplu România și Taiwan) |
+| 60 | P2 | C | ro-guidance.txt | "Săriți navigarea și mergeți la conținut" | Skip-link calque; native a11y copy is "Treci la conținut". | Treceți la conținut |
+```
+=== end code=0 2026-09-21 16:16:28 ===

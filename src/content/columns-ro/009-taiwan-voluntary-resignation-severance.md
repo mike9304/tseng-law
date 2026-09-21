@@ -96,6 +96,6 @@ De aceea, în conflictele de muncă (勞資糾紛) din Taiwan,
 ---
 
 > Vezi și:
-> - [Repere despre avocatul pledant din Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Avocata din Taiwan care se poate exprima în coreeană](/ko/korean-lawyer-in-taiwan)
-> - [Domenii de activitate — muncă](/ko/services/labor)
+> - [Cum se stabilesc întinderea lucrării și costurile](/ro/pricing)
+> - [Echipa internațională Hovering](/ro/lawyers)
+> - [Ce cauze tratăm](/ro/services)

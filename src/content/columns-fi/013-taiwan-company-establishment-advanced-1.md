@@ -17,7 +17,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ja perustamisen yhteydessä usein esitetyt kysymykset on koottu jäljempänä.
 
-Se, joka on lukenut [**yhtiön perustamisen perusteen**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8), voi sen jälkeen tutustua myös tähän seikkaperäisempään syventävään osaan.
+Se, joka on lukenut [**yhtiön perustamisen perusteen**](/fi/columns/taiwan-company-establishment-basics), voi sen jälkeen tutustua myös tähän seikkaperäisempään syventävään osaan.
 
 Seuraavat kysymykset ja vastaukset (Q&A) tähtäävät auttamaan henkilöitä, jotka harkitsevat yhtiön perustamista Taiwanissa. 😊
 
@@ -128,6 +128,6 @@ Teidän tulisi tarkistaa tämä etukäteen.
 ---
 
 > Katso myös:
-> - [Yhteenvedetty opas yhtiön perustamisesta Taiwanissa — menettelyt, kustannukset ja yhtiömuodot](/ko/guides/taiwan-company-setup)
-> - [Taiwanilainen asianajaja, joka puhuu koreaa](/ko/korean-lawyer-in-taiwan)
-> - [Opas oikeushenkilöiden ja yhtiön perustamisen asianajajasta Taiwanissa](/ko/taiwan-company-setup-lawyer)
+> - [Mitä asioita käsittelemme](/fi/services)
+> - [Hoveringin kansainvälinen tiimi](/fi/lawyers)
+> - [Miten tavoitatte toimiston](/fi/contact)

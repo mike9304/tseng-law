@@ -78,6 +78,6 @@ Peraturan instansi administratif dapat sering berubah, sehingga sebaiknya Anda m
 ---
 
 > Baca juga:
-> - [Panduan Lengkap Pendirian Perusahaan di Taiwan — Prosedur, Biaya, dan Bentuk Badan Usaha](/ko/guides/taiwan-company-setup)
-> - [Pengacara Taiwan yang Dapat Berbahasa Korea](/ko/korean-lawyer-in-taiwan)
-> - [Panduan Pengacara Pendirian Badan Hukum dan Perusahaan di Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Bidang perkara yang kami tangani](/id/services)
+> - [Tim Internasional Hovering](/id/lawyers)
+> - [Cara menghubungi kantor kami](/id/contact)

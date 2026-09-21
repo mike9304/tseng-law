@@ -188,8 +188,8 @@ Sursele primare (nivelul 1) următoare sunt punctul de plecare pentru a verifica
 
 ## 13. Indicații conexe
 
-- [Servicii de drept al familiei în Taiwan](/ko/services/family)
-- [Ghidul avocatului pledant din Taiwan](/ko/taiwan-litigation-lawyer)
+- [Ce cauze tratăm](/ro/services)
+- [Cum se stabilesc întinderea lucrării și costurile](/ro/pricing)
 - [Contact](/ro/contact)
 
 ---

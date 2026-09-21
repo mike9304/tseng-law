@@ -78,6 +78,6 @@ Regulile autorităților administrative se pot schimba des; înainte de înregis
 ---
 
 > Vezi și:
-> - [Ghid general de înființare a unei societăți pe Taiwan — proceduri, costuri și forme juridice](/ko/guides/taiwan-company-setup)
-> - [Avocată pe Taiwan care se poate exprima în coreeană](/ko/korean-lawyer-in-taiwan)
-> - [Repere asupra avocatei pentru persoanele juridice și înființarea de societăți pe Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Ce cauze tratăm](/ro/services)
+> - [Echipa internațională Hovering](/ro/lawyers)
+> - [Cum puteți contacta cabinetul](/ro/contact)

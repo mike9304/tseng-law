@@ -188,8 +188,8 @@ Följande primärkällor (nivå 1) är utgångspunkten för att kontrollera denn
 
 ## 13. Relaterad vägledning
 
-- [Familjerättsliga tjänster i Taiwan](/ko/services/family)
-- [Vägledning om processadvokat i Taiwan](/ko/taiwan-litigation-lawyer)
+- [Vilka ärenden vi behandlar](/sv/services)
+- [Hur arbetsomfattning och kostnader fastställs](/sv/pricing)
 - [Kontakt](/sv/contact)
 
 ---

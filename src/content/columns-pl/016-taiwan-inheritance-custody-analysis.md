@@ -143,8 +143,8 @@ Na oficjalnych stronach regulacji potwierdzają Państwo datę nowelizacji i dat
 
 ## 11. Wskazówki związane
 
-- [Usługa sporów rodzinnych na Tajwanie](/ko/services/family)
-- [Przewodnik adwokata procesowego na Tajwanie](/ko/taiwan-litigation-lawyer)
+- [Jakie sprawy prowadzimy](/pl/services)
+- [Jak ustala się zakres pracy i koszty](/pl/pricing)
 - [Kontakt](/pl/contact)
 
 ---

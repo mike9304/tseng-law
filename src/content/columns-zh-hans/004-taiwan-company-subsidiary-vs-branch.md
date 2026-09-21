@@ -184,7 +184,7 @@ faq:
 
 ## 相关指南
 
-- [台湾投资与公司设立服务](/ko/services/investment)
+- [我们处理哪些事项](/zh-hans/services)
 - [在台湾设立公司基础](/zh-hans/columns/taiwan-company-establishment-basics)
 - [联系我们](/zh-hans/contact)
 

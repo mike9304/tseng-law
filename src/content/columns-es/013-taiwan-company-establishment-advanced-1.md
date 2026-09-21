@@ -17,7 +17,7 @@ Recientemente muchas personas han constituido con éxito una sociedad en Taiwán
 
 y a continuación se recogen las preguntas que más se plantean en el momento de la constitución.
 
-Quienes hayan leído [**la parte básica de constitución de sociedades**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) pueden continuar con esta parte avanzada más detallada.
+Quienes hayan leído [**la parte básica de constitución de sociedades**](/es/columns/taiwan-company-establishment-basics) pueden continuar con esta parte avanzada más detallada.
 
 Se espera que las preguntas y respuestas siguientes sean de utilidad para quienes consideran constituir una sociedad en Taiwán. 😊
 
@@ -128,6 +128,6 @@ Antes de firmar el contrato, confírmelo de antemano.
 ---
 
 > Véase también:
-> - [Guía general de constitución de sociedades en Taiwán — trámites, costes y formas jurídicas](/ko/guides/taiwan-company-setup)
-> - [Abogada en Taiwán que puede atender en coreano](/ko/korean-lawyer-in-taiwan)
-> - [Guía del abogado de constitución de personas jurídicas y sociedades en Taiwán](/ko/taiwan-company-setup-lawyer)
+> - [Asuntos que atendemos](/es/services)
+> - [Equipo internacional de Hovering](/es/lawyers)
+> - [Cómo contactar con el despacho](/es/contact)

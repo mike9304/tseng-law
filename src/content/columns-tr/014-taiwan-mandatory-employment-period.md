@@ -183,7 +183,7 @@ Belgeler zaman sırasına göre derlenirken sözleşme kurulma günü, eğitimin
 
 ## 11. İlgili rehber
 
-- [Tayvan iş hukuku hizmeti](/ko/services/labor)
+- [Hangi işleri yürütürüz](/tr/services)
 - [Kendi isteğiyle ayrılış ve kıdem tazminatı istisnaları rehberi](/tr/columns/taiwan-voluntary-resignation-severance)
 - [İletişim](/tr/contact)
 

@@ -143,8 +143,8 @@ Auf den amtlichen Gesetzesseiten sind Änderungs- und Inkrafttretensdatum der Vo
 
 ## 11. Zugehörige Hinweise
 
-- [Familienrechtliche Dienstleistungen in Taiwan](/ko/services/family)
-- [Leitfaden zum Prozessanwalt in Taiwan](/ko/taiwan-litigation-lawyer)
+- [Welche Angelegenheiten wir bearbeiten](/de/services)
+- [Wie Arbeitsumfang und Kosten festgelegt werden](/de/pricing)
 - [Kontakt](/de/contact)
 
 ---

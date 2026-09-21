@@ -143,8 +143,8 @@ faq:
 
 ## 11. 相关指引
 
-- [台湾家事诉讼服务](/ko/services/family)
-- [台湾诉讼律师指南](/ko/taiwan-litigation-lawyer)
+- [我们处理哪些事项](/zh-hans/services)
+- [工作范围与费用如何确定](/zh-hans/pricing)
 - [联系](/zh-hans/contact)
 
 ---

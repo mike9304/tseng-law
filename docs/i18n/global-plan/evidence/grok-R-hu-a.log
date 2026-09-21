@@ -1,0 +1,22 @@
+[WO start 2026-09-21 16:08:36]
+Native Hungarian review is in `docs/i18n/global-plan/reviews/native/hu-a.md` (guidance pack + columns 001–009). Naturalness: **3/5** guidance, **2/5** columns. No masculine forms for Wei Tseng. Strongest P1s: English leftovers (`OUR TEAM` / `OFFICES`), Hangul URLs, Korean-audience copy recast as if it were for Hungary, the missing “not a worldwide investor rule” caveat on the Taiwan–Korea treaty, and 緩刑 rendered as civil “végrehajtás felfüggesztése” plus a dropped “may”.
+
+Last 15 lines of the output file:
+
+```
+| 39 | P2 | C | columns-hu/004-taiwan-company-subsidiary-vs-branch.md | fogadhatók-e 3. személyek hozzájárulásai | 3. személy is table-speak; HU legal prose: harmadik személy. Systemic in 003–007. | fogadhatók-e harmadik személyek hozzájárulásai |
+| 40 | P2 | C | columns-hu/005-taiwan-company-establishment-advanced-2.md | Ha további kérdése van, kapcsolatba léphet velünk. | Bare contact invite on a page with no language lock; keep outreach, add the four-language limit. | Ha további kérdése van, a Kapcsolat oldalon küldhet megkeresést. A tanácsadás nem magyarul zajlik. |
+| 41 | P2 | C | columns-hu/006-taiwan-massage-history-law.md | Emlékeznek a hagyományos fodrászszalonok (理髮廳) korára Tajvan kezdetein? | Blog ők + Tajvan kezdetein is empty; rest of the site is ön. | Emlékszik még a hagyományos tajvani fodrászszalonok (理髮廳) időszakára? |
+| 42 | P2 | D | columns-hu/006-taiwan-massage-history-law.md | Hasonlóképpen Koreában, ahol sok látássérült személy masszázsból tartja fenn magát | Comparative Korea block is leftover audience copy; frame it as a foreign example. | Összehasonlításképpen: Koreában — ez csak példa, nem a magyar olvasó állama — elvben csak képesített látássérült személyek végezhetik a masszázst. |
+| 43 | P2 | B | columns-hu/007-taiwan-divorce-lawsuit-qna.md | a döntő a ítélet jogerőre emelkedése | Missing az before vowel. | a döntő az ítélet jogerőre emelkedése |
+| 44 | P2 | C | columns-hu/007-taiwan-divorce-lawsuit-qna.md | a vétlen házastárs az ítélettel való válás miatt az élet hiányába esik | Calque of 陷於生活困難; HU: létfenntartási nehézség. | a vétlen házastárs az ítélettel való válás miatt létfenntartási nehézségbe kerül |
+| 45 | P2 | B | columns-hu/007-taiwan-divorce-lawsuit-qna.md | a gyermek akarata, biztonsága és élet terve szerint | Split compound; életterve is one word. | a gyermek akarata, biztonsága és életterve szerint |
+| 46 | P2 | D | columns-hu/007-taiwan-divorce-lawsuit-qna.md | Önmagában az a megállapodás, hogy a gyermek Koreában fog lakni | Korea still the default relocation country for a HU reader. | Önmagában az a megállapodás, hogy a gyermek egy másik államban fog lakni |
+| 47 | P2 | C | columns-hu/008-taiwan-labor-severance-law.md | Akkor az én felem, B úr, több mint 10 éve volt foglalkoztatva | felem is a calque of “my party”; native: ügyfelem / az általam képviselt fél. | Akkor az ügyfelem, B úr, több mint tíz éve dolgozott az A társaságnál |
+| 48 | P2 | C | columns-hu/008-taiwan-labor-severance-law.md | és ügyelniük kell, hogy ne essenek a társaság szándékába | Not Hungarian; trap/csapda or belemenni a szándékba. | és ügyelniük kell, hogy ne essenek a társaság csapdájába |
+| 49 | P2 | C | columns-hu/008-taiwan-labor-severance-law.md | a munkaügyi normákról szóló törvény 12. cikke | Calque of Labor Standards Act; HU has no “munkaügyi normák” statute name. Also 009. | a tajvani munkaügyi törvény (勞動基準法) 12. cikke |
+| 50 | P2 | B | columns-hu/008-taiwan-labor-severance-law.md | valóban nehéz Tajvanon végkielégítést kapni?? | Double question mark is chat/blog, not a law-firm heading. | Valóban nehéz Tajvanon végkielégítést kapni? |
+| 51 | P2 | C | columns-hu/009-taiwan-voluntary-resignation-severance.md | a «**idő**» nagyon fontos. | Scare-quoted idő plus French quotes; a native would just say the deadline. | a határidő döntő. |
+| 52 | P2 | C | hu-guidance.txt | ez az oldal nem a tanácsadás lépése | Meaning: this page is not a step in the consultation; current HU is opaque. | ez az oldal nem helyettesíti a tanácsadást |
+```
+=== end code=0 2026-09-21 16:17:19 ===

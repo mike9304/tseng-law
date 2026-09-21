@@ -58,8 +58,8 @@ Sebagai pelengkap, anda boleh merujuk [ilustrasi peraturan dan prosedur memotong
 ---
 
 > Lihat juga:
-> - [Rujukan mengenai peguam litigasi di Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Peguam Taiwan yang boleh berbahasa Korea](/ko/korean-lawyer-in-taiwan)
+> - [Bagaimana skop kerja dan kos ditetapkan](/ms/pricing)
+> - [Pasukan antarabangsa Hovering](/ms/lawyers)
 > - [Prosedur rawatan kemalangan lalu lintas di Taiwan](/ms/columns/taiwan-traffic-accident-procedure)
 
 Teks ini ialah maklumat undang-undang umum mengenai peraturan memotong dan penilaian tanggungjawab kemalangan di Taiwan; ia tidak merupakan nasihat untuk kes konkret mahupun janji mengenai hasil tertentu. Tanggungjawab sebenar boleh berbeza menurut tempat kemalangan, pergerakan kenderaan, kelajuan, isyarat, bukti, kepakaran (鑑定) dan undang-undang yang berkuat kuasa; kes konkret mesti diteliti secara berasingan daripada dokumen berkenaan.

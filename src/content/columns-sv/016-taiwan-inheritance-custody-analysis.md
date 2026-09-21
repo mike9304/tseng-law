@@ -143,8 +143,8 @@ På de officiella lagsidorna bekräftar ni stadgandets ändringsdag och ikrafttr
 
 ## 11. Relaterad vägledning
 
-- [Tjänster för familjerättsliga tvister i Taiwan](/ko/services/family)
-- [Vägledning om processadvokat i Taiwan](/ko/taiwan-litigation-lawyer)
+- [Vilka ärenden vi behandlar](/sv/services)
+- [Hur arbetsomfattning och kostnader fastställs](/sv/pricing)
 - [Kontakt](/sv/contact)
 
 ---

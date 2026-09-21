@@ -183,7 +183,7 @@ Beim zeitlichen Ordnen der Unterlagen sollten Vertragsschlussdatum, Schulungsbeg
 
 ## 11. Zugehörige Hinweise
 
-- [Dienstleistungen zum taiwanesischen Arbeitsrecht](/ko/services/labor)
+- [Welche Angelegenheiten wir bearbeiten](/de/services)
 - [Hinweise zu eigener Kündigung und Ausnahmen bei der Abfindung](/de/columns/taiwan-voluntary-resignation-severance)
 - [Kontakt](/de/contact)
 

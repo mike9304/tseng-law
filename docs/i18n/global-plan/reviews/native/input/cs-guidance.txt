@@ -1,0 +1,1096 @@
+# cs guidance pack strings (path → text). Generated 2026-09-21
+
+guidanceContent.cs.languageName
+    Čeština
+
+guidanceContent.cs.nav.home
+    Úvod
+
+guidanceContent.cs.nav.services
+    Služby
+
+guidanceContent.cs.nav.about
+    Kancelář
+
+guidanceContent.cs.nav.lawyers
+    Advokáti
+
+guidanceContent.cs.nav.pricing
+    Náklady
+
+guidanceContent.cs.nav.contact
+    Kontakt
+
+guidanceContent.cs.nav.faq
+    Otázky
+
+guidanceContent.cs.nav.privacy
+    Soukromí
+
+guidanceContent.cs.nav.disclaimer
+    Upozornění
+
+guidanceContent.cs.nav.columns
+    Články
+
+guidanceContent.cs.contactCta
+    Odeslat žádost o posouzení
+
+guidanceContent.cs.footerNotice
+    Tato česká stránka obsahuje pouze obecné informace o práci kanceláře podle taiwanského práva. Není právní radou k jednotlivému případu a samotné odeslání zprávy nezakládá vztah mezi advokátkou nebo advokátem a klientem.
+
+guidanceContent.cs.skipLink
+    Přeskočit navigaci a přejít k obsahu
+
+guidanceContent.cs.menuLabel
+    Přehled stránek
+
+guidanceContent.cs.languageLabel
+    Jazyk zobrazení
+
+guidanceContent.cs.mega.services.description
+    Kancelář vede základní skupiny věcí podle taiwanského práva.
+
+guidanceContent.cs.mega.services.viewAllLabel
+    Zobrazit vše
+
+guidanceContent.cs.mega.columns.description
+    Články k častým otázkám taiwanského práva.
+
+guidanceContent.cs.mega.columns.viewAllLabel
+    Zobrazit vše
+
+guidanceContent.cs.mega.lawyers.description
+    Představení advokátek a advokátů a způsobů kontaktu.
+
+guidanceContent.cs.mega.lawyers.viewAllLabel
+    Zobrazit vše
+
+guidanceContent.cs.mega.pricing.description
+    Tato stránka vysvětluje rozsah práce a způsob ujasnění nákladů.
+
+guidanceContent.cs.mega.pricing.viewAllLabel
+    Zobrazit vše
+
+guidanceContent.cs.mega.faq.description
+    Časté otázky k práci kanceláře na Tchaj-wanu.
+
+guidanceContent.cs.mega.faq.viewAllLabel
+    Zobrazit vše
+
+guidanceContent.cs.notFoundTitle
+    Stránka nenalezena
+
+guidanceContent.cs.notFoundText
+    Hledaná stránka neexistuje nebo byla přesunuta. Můžete se vrátit na českou úvodní stránku a prohlédnout si dostupné informace.
+
+guidanceContent.cs.backHomeLabel
+    Na úvodní stránku
+
+guidanceContent.cs.readSourceLabel
+    Otevřít seznam článků v původním jazyce
+
+guidanceContent.cs.home.heroScrollLabel
+    Posunout dolů
+
+guidanceContent.cs.home.heroColumnsCtaLabel
+    Zobrazit články
+
+guidanceContent.cs.home.servicesDetailLabel
+    Zobrazit podrobnosti
+
+guidanceContent.cs.home.servicesAssistanceBefore
+    Není-li zřejmé, do které skupiny Vaše věc patří, stránka 
+
+guidanceContent.cs.home.servicesAssistanceLinkLabel
+    Kontakt
+
+guidanceContent.cs.home.servicesAssistanceAfter
+     vysvětluje, jak sestavit shrnutí, které advokátka nebo advokát posoudí.
+
+guidanceContent.cs.home.columnsViewAllLabel
+    Zobrazit všechny články
+
+guidanceContent.cs.home.columnsReadMoreLabel
+    Číst dál
+
+guidanceContent.cs.home.columnsReviewLabel
+    Posoudila advokátka Wei Tseng
+
+guidanceContent.cs.home.columnsOriginalLanguageBadge
+    Původní jazyk
+
+guidanceContent.cs.home.columnsOriginalLanguageNote
+    Následující články zatím nejsou k dispozici v češtině. Seznam zůstává v původním jazyce a otevře příslušnou jazykovou stránku; obsah se automaticky nepřekládá.
+
+guidanceContent.cs.home.imageBandAlt
+    Tradiční taiwanský dvorec sanheyuan (三合院) a moderní pavilon za denního světla
+
+guidanceContent.cs.home.videoPauseLabel
+    Pozastavit video
+
+guidanceContent.cs.home.videoPlayLabel
+    Přehrát video
+
+guidanceContent.cs.home.videoReplayLabel
+    Přehrát video znovu
+
+guidanceContent.cs.pages.home.eyebrow
+    INFORMACE
+
+guidanceContent.cs.pages.home.title
+    Právní služby na Tchaj-wanu — informace v češtině
+
+guidanceContent.cs.pages.home.description
+    Obecné vysvětlení v češtině o rozsahu práce Hovering International Law Firm na Tchaj-wanu, o jazycích porady a o prvním kontaktu.
+
+guidanceContent.cs.pages.home.intro
+    Hovering International Law Firm doprovází klienty ze zahraničí, včetně těch s vazbou na Tchaj-wan, ve věcech taiwanského práva: investice a zakládání společností, občanskoprávní spory, manželství, rodina a dědictví, pracovní právo, trestní věci a duševní vlastnictví. Tato česká část Vám pomůže rozpoznat, která práce spadá do našeho rozsahu, co si připravit a jak nás oslovit. Jde o obecné informace, nikoli o právní radu k Vašemu případu.
+
+guidanceContent.cs.pages.home.sections[0].heading
+    Čím se zabýváme
+
+guidanceContent.cs.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm je advokátní kancelář se sídlem na Tchaj-wanu. Pracuje podle taiwanského práva a má pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pchingtungu (屏東). Radíme podnikům, vedeme soudní řízení a doprovázíme klienty ze zahraničí v krocích potřebných na Tchaj-wanu.
+
+guidanceContent.cs.pages.home.sections[0].paragraphs[1]
+    Celý zdejší obsah je obecný. Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku. Tyto informace nenahrazují rozhovor s advokátkou nebo advokátem nad Vašimi dokumenty.
+
+guidanceContent.cs.pages.home.sections[1].heading
+    Jazyk stránky a jazyk porady nejsou totéž
+
+guidanceContent.cs.pages.home.sections[1].paragraphs[0]
+    Tato stránka je psána česky, ale porada s advokátkou nebo advokátem probíhá pouze ve čtyřech jazycích porady: anglicky, čínsky (中文), japonsky a korejsky. Čtení informací v češtině neznamená, že rozhovor s advokátkou nebo advokátem proběhne česky.
+
+guidanceContent.cs.pages.home.sections[1].paragraphs[1]
+    Neslibujeme tlumočníka, lhůtu k odpovědi ani schůzku prostřednictvím této stránky. Nemůžete-li užít žádný ze čtyř jazyků, stránka «Kontakt» vysvětluje, jak posuzujeme způsob komunikace.
+
+guidanceContent.cs.pages.home.sections[2].heading
+    Skupiny věcí
+
+guidanceContent.cs.pages.home.sections[2].paragraphs[0]
+    Rozsah práce zahrnuje následujících šest skupin. Stránka «Služby» popisuje každou skupinu přesněji a uvádí, co se neslibuje.
+
+guidanceContent.cs.pages.home.sections[2].items[0]
+    Investice a zakládání společností na Tchaj-wanu
+
+guidanceContent.cs.pages.home.sections[2].items[1]
+    Občanskoprávní spory a náhrada škody
+
+guidanceContent.cs.pages.home.sections[2].items[2]
+    Manželství, rodina a dědictví
+
+guidanceContent.cs.pages.home.sections[2].items[3]
+    Pracovněprávní spory
+
+guidanceContent.cs.pages.home.sections[2].items[4]
+    Trestní věci
+
+guidanceContent.cs.pages.home.sections[2].items[5]
+    Duševní vlastnictví: ochranné známky, patenty a autorské právo
+
+guidanceContent.cs.pages.home.sections[3].heading
+    Kde začít
+
+guidanceContent.cs.pages.home.sections[3].paragraphs[0]
+    Přečtěte si stránku «Služby» a ověřte, zda Vaše věc spadá do našeho rozsahu, poté «Náklady» a «Kontakt», abyste věděli, jak se stanoví rozsah a jak se náklady potvrzují před zahájením práce.
+
+guidanceContent.cs.pages.home.sections[3].paragraphs[1]
+    Při odeslání zprávy můžete shrnutí napsat ve svém jazyce. Původní text se uchová přesně tak, jak jste jej napsali, a automaticky se nepřekládá. Odeslaná zpráva je žádostí čekající na posouzení: není to ještě porada ani potvrzená schůzka.
+
+guidanceContent.cs.pages.services.eyebrow
+    SLUŽBY
+
+guidanceContent.cs.pages.services.title
+    Které věci vedeme
+
+guidanceContent.cs.pages.services.description
+    Šest skupin práce kanceláře na Tchaj-wanu a hranice, které je užitečné znát nejdříve.
+
+guidanceContent.cs.pages.services.intro
+    Níže jsou skupiny, které skutečně vedeme, a otázky, jež se v počáteční fázi kladou nejčastěji. Výklad Vám pomůže posoudit, zda Vaše věc spadá do našeho rozsahu; je obecný a není právním rozborem jednotlivého spisu.
+
+guidanceContent.cs.pages.services.sections[0].heading
+    Investice a zakládání společností na Tchaj-wanu
+
+guidanceContent.cs.pages.services.sections[0].paragraphs[0]
+    Doprovázíme zahraniční investory a podniky při založení nebo vedení společnosti na Tchaj-wanu: volba právní formy, příprava a podání dokumentů, vklad kapitálu, bankovní otázky, posouzení sídla a odvětvové požadavky. Podporujeme také účetnictví a daně, které ze založení a z provozu na Tchaj-wanu vyplývají.
+
+guidanceContent.cs.pages.services.sections[0].paragraphs[1]
+    Postup a lhůty se liší podle formy, investora, odvětví, banky a podle již dostupných dokumentů. Založení společnosti samo o sobě nevede k pobytovému oprávnění (居留) ani k pracovnímu povolení (工作許可): jde o samostatná řízení posuzovaná podle situace konkrétní osoby.
+
+guidanceContent.cs.pages.services.sections[1].heading
+    Občanskoprávní spory a náhrada škody
+
+guidanceContent.cs.pages.services.sections[1].paragraphs[0]
+    Tato skupina zahrnuje spory ze smluv, náhradu škody z protiprávního jednání a spotřebitelské spory. Práce zpravidla začíná časovou osou, posouzením dokumentů a existujících důkazů a teprve poté následují další kroky.
+
+guidanceContent.cs.pages.services.sections[1].paragraphs[1]
+    Průběh určují lhůty, včetně promlčecích, a úplnost důkazů. Uveďte proto známá data co nejdříve. Uschovejte smlouvy, zprávy, doklady o platbě nebo fotografie stavu na místě a zmiňte je v první zprávě.
+
+guidanceContent.cs.pages.services.sections[2].heading
+    Manželství, rodina a dědictví
+
+guidanceContent.cs.pages.services.sections[2].paragraphs[0]
+    Vedeme rozvod (離婚), vypořádání majetku, výkon a převzetí práv a povinností k nezletilým dětem (未成年子女權利義務之行使或負擔), styk s dítětem (會面交往) a dědictví (繼承), a to i tehdy, nacházejí-li se strany nebo majetek v různých státech. Přeshraniční rodinné věci často vyžadují další posouzení matričních záznamů (戶籍), formy listin a jejich průkaznosti na Tchaj-wanu.
+
+guidanceContent.cs.pages.services.sections[2].paragraphs[1]
+    Protože rodinné věci s sebou často nesou lhůty a souběžná řízení, mělo by první shrnutí uvést vztah mezi stranami, současné bydliště a již probíhající řízení.
+
+guidanceContent.cs.pages.services.sections[3].heading
+    Pracovněprávní spory
+
+guidanceContent.cs.pages.services.sections[3].paragraphs[0]
+    Tato skupina zahrnuje skončení pracovního poměru, odstupné podle taiwanského práva (資遣費; nelze je ztotožňovat s obdobnými instituty jiných států), odměnu a spory z pracovní smlouvy (勞動契約), a to jak na straně zaměstnance, tak na straně zaměstnavatele. Při posouzení odlišujeme důvod skončení od otázek výpovědní doby, výplaty a lhůt.
+
+guidanceContent.cs.pages.services.sections[3].paragraphs[1]
+    Rozhodujícími dokumenty bývají pracovní smlouva, vnitřní pracovní řád (工作規則), výplatní pásky a korespondence stran. Máte-li je stále k dispozici, zmiňte to ve shrnutí.
+
+guidanceContent.cs.pages.services.sections[4].heading
+    Trestní věci
+
+guidanceContent.cs.pages.services.sections[4].paragraphs[0]
+    Doprovázíme v přípravném řízení i před soudem, jak podezřelé a obviněné, tak poškozené, a posuzujeme trestní rizika podnikatelské činnosti.
+
+guidanceContent.cs.pages.services.sections[4].paragraphs[1]
+    Trestní věci mívají krátké lhůty a pevně stanovené fáze. Obdrželi-li jste již písemnost orgánu činného v trestním řízení nebo soudu, uveďte datum na písemnosti včas, aby byl obsah posouzen ve správném pořadí.
+
+guidanceContent.cs.pages.services.sections[5].heading
+    Duševní vlastnictví
+
+guidanceContent.cs.pages.services.sections[5].paragraphs[0]
+    Podporujeme zápis ochranných známek (商標) a patentů (專利), autorské právo a spory o tato práva na Tchaj-wanu.
+
+guidanceContent.cs.pages.services.sections[5].paragraphs[1]
+    V této skupině rozhoduje pořadí kroků: rozsah ochrany, okamžik podání přihlášky a skutečné užívání ovlivňují volbu. Podání přihlášky samo o sobě neznamená, že jí bude vyhověno.
+
+guidanceContent.cs.pages.services.sections[6].heading
+    Rozsah a jeho potvrzení
+
+guidanceContent.cs.pages.services.sections[6].paragraphs[0]
+    Kancelář pracuje podle taiwanského práva a vede věci z výše uvedených skupin. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí Vaši zprávu.
+
+guidanceContent.cs.pages.services.sections[6].paragraphs[1]
+    Pobytový status, pracovní povolení a obdobné otázky se posuzují podle dokumentů a podle situace konkrétní osoby, nikoli podle státní příslušnosti. Dotýká-li se část Vaší věci těchto bodů, uveďte to při kontaktu. Tato stránka neslibuje výsledek ani lhůtu k odpovědi.
+
+guidanceContent.cs.pages.about.eyebrow
+    KANCELÁŘ
+
+guidanceContent.cs.pages.about.title
+    O Hovering International Law Firm
+
+guidanceContent.cs.pages.about.description
+    Základní údaje o této taiwanské advokátní kanceláři, o jejích pobočkách a o práci se zahraničními stranami.
+
+guidanceContent.cs.pages.about.intro
+    Hovering International Law Firm je advokátní kancelář na Tchaj-wanu. Advokátky a advokáti pracují od poradenství podnikům až po soudní řízení. Tato část popisuje vznik kanceláře, sídla a práci se zahraničními stranami.
+
+guidanceContent.cs.pages.about.sections[0].heading
+    Založení a struktura
+
+guidanceContent.cs.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) byla založena v roce 2016 advokátkami a advokáty, kteří studovali na National Taiwan University (國立臺灣大學). Čínský název 昊鼎 spojuje znak 昊 («širé nebe») se znakem 鼎 («pevný základ») a vystihuje zaměření kanceláře od jejího založení.
+
+guidanceContent.cs.pages.about.sections[0].paragraphs[1]
+    Máme pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pchingtungu (屏東). Pobočka v Kao-siungu se soustředí na vedení podniků a vede občanskoprávní, trestní a správní spory. Pobočka v Tchaj-čungu vede stavební věci, duševní vlastnictví a věci s vazbou na Koreu a Japonsko. Pobočka v Pchingtungu byla otevřena v roce 2017 pro místní potřebu.
+
+guidanceContent.cs.pages.about.sections[0].paragraphs[2]
+    Vedle advokátní práce působí od roku 2020 také Hovering Accounting Office, která nabízí účetnictví a daňové plánování podnikatelům a soukromým osobám s majetkem.
+
+guidanceContent.cs.pages.about.sections[1].heading
+    Práce se zahraničními stranami
+
+guidanceContent.cs.pages.about.sections[1].paragraphs[0]
+    Přeshraniční práce zahrnuje zakládání společností, víza, přihlášky ochranných známek a patentů, posouzení právního rizika a daňové poradenství podnikům. Pobočka v Tchaj-čungu vede zejména stavební věci, duševní vlastnictví a věci s vazbou na Koreu a Japonsko. Advokátka Wei Tseng (曾雋崴) doprovází klienty z Koreje, z Japonska a další mezinárodní klienty v uvedených skupinách.
+
+guidanceContent.cs.pages.about.sections[1].paragraphs[1]
+    Zda můžeme věc převzít, závisí na obsahu a na jazyku komunikace. Spadá-li Vaše věc do uvedených skupin a lze-li ji projednat v některém ze čtyř jazyků porady, můžete zaslat shrnutí k posouzení.
+
+guidanceContent.cs.pages.about.sections[2].heading
+    Když nás oslovíte
+
+guidanceContent.cs.pages.about.sections[2].paragraphs[0]
+    Po doručení Vašeho shrnutí posoudí advokátka nebo advokát obsah a poté hovoří o možném rozsahu práce, o dosud potřebných dokumentech a o dalších krocích. U daňových nebo účetních otázek může kancelář pracovat s účetním úsekem v jednom toku.
+
+guidanceContent.cs.pages.about.sections[2].paragraphs[1]
+    Výsledek každé věci závisí na skutkovém stavu a na dostupných dokumentech; výsledek neslibujeme. Potřebujete-li závaznou odpověď pro svou situaci, musí být dokumenty projednány v některém ze čtyř jazyků porady s advokátkou nebo advokátem.
+
+guidanceContent.cs.pages.lawyers.eyebrow
+    ADVOKÁTI
+
+guidanceContent.cs.pages.lawyers.title
+    Mezinárodní tým Hovering
+
+guidanceContent.cs.pages.lawyers.description
+    Profily advokátek a advokátů, provozního vedení a přidružené účetní revize Hovering.
+
+guidanceContent.cs.pages.lawyers.intro
+    
+
+guidanceContent.cs.pages.pricing.eyebrow
+    NÁKLADY
+
+guidanceContent.cs.pages.pricing.title
+    Jak se stanoví rozsah práce a náklady
+
+guidanceContent.cs.pages.pricing.description
+    Vysvětlení pořadí: nejprve rozsah práce, poté potvrzení nákladů, a proč tato stránka neobsahuje ceník.
+
+guidanceContent.cs.pages.pricing.intro
+    Tato stránka vysvětluje, jak se náklady stanoví, nikoli jejich výši. Výše závisí na rozsahu práce v jednotlivé věci a má smysl teprve tehdy, je-li tento rozsah zřejmý.
+
+guidanceContent.cs.pages.pricing.sections[0].heading
+    Nejprve se stanoví rozsah práce
+
+guidanceContent.cs.pages.pricing.sections[0].paragraphs[0]
+    Věci téhož druhu mohou vyžadovat velmi rozdílné úsilí, podle počtu stran, dostupných dokumentů, lhůt, které je třeba dodržet, a podle toho, zda již bylo zahájeno řízení. Prvním krokem je proto vždy stanovit, co do práce patří a co nikoli.
+
+guidanceContent.cs.pages.pricing.sections[0].paragraphs[1]
+    Shrnutí, které na začátku zašlete, je základem tohoto rozsahu. Čím jasněji popisuje průběh, Váš požadavek a lhůty, tím přesněji lze rozsah určit.
+
+guidanceContent.cs.pages.pricing.sections[1].heading
+    Náklady se potvrzují před zahájením práce
+
+guidanceContent.cs.pages.pricing.sections[1].paragraphs[0]
+    Je-li rozsah práce zřejmý, výše a způsob výpočtu nákladů se s Vámi projedná a potvrdí dříve, než práce začne. Změní-li se rozsah v průběhu, musí být potvrzen znovu.
+
+guidanceContent.cs.pages.pricing.sections[1].paragraphs[1]
+    Tato stránka není cenovou nabídkou a nezakládá povinnost k platbě.
+
+guidanceContent.cs.pages.pricing.sections[2].heading
+    Porada může být úplatná
+
+guidanceContent.cs.pages.pricing.sections[2].paragraphs[0]
+    Porada s advokátkou nebo advokátem může být úplatnou službou. Tato stránka neříká, že první rozhovor je bezplatný, a žádnou její část nelze v tomto smyslu vykládat.
+
+guidanceContent.cs.pages.pricing.sections[2].paragraphs[1]
+    Je-li porada úplatná, sdělí se výše a způsob platby dříve, než se porada uskuteční.
+
+guidanceContent.cs.pages.pricing.sections[3].heading
+    Proč tato stránka neuvádí sazby
+
+guidanceContent.cs.pages.pricing.sections[3].paragraphs[0]
+    Náklady závisejí na věci samé: na úsilí, počtu stran, dokumentech, lhůtách a na tom, zda již řízení probíhá. Číslo stanovené předem by náklady Vašeho spisu neukázalo. Proto nejprve stanovíme rozsah práce a náklady Vám sdělíme poté, dříve než práce začne.
+
+guidanceContent.cs.pages.pricing.sections[3].paragraphs[1]
+    Vedle odměny mohou vzniknout soudní poplatky, náklady orgánů nebo třetích osob. Ty jsou od odměny oddělené a závisejí na příslušném řízení.
+
+guidanceContent.cs.pages.contact.eyebrow
+    KONTAKT
+
+guidanceContent.cs.pages.contact.title
+    Jak kancelář oslovit
+
+guidanceContent.cs.pages.contact.description
+    Jazyk stránky, jazyky porady, postup pro případ, že nemůžete užít žádný ze čtyř jazyků, a co tato stránka neslibuje.
+
+guidanceContent.cs.pages.contact.intro
+    Než nám napíšete, rozlište následující tři body. Bývají směšovány, ale znamenají různé věci.
+
+guidanceContent.cs.pages.contact.sections[0].heading
+    Tři věci, které je třeba držet odděleně
+
+guidanceContent.cs.pages.contact.sections[0].paragraphs[0]
+    Jazyk zobrazení stránky, jazyk porady s advokátkou nebo advokátem a jazyk, v němž píšete, jsou tři různé věci.
+
+guidanceContent.cs.pages.contact.sections[0].items[0]
+    Jazyk stránky: tyto informace jsou psány česky.
+
+guidanceContent.cs.pages.contact.sections[0].items[1]
+    Jazyk porady: porada probíhá anglicky, čínsky (中文), japonsky a korejsky.
+
+guidanceContent.cs.pages.contact.sections[0].items[2]
+    Váš jazyk psaní: shrnutí můžete napsat ve svém jazyce; původní text se uchová beze změny.
+
+guidanceContent.cs.pages.contact.sections[1].heading
+    Nemůžete-li užít žádný ze čtyř jazyků porady
+
+guidanceContent.cs.pages.contact.sections[1].paragraphs[0]
+    V kontaktním formuláři můžete zvolit «Způsob komunikace je třeba potvrdit». Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.
+
+guidanceContent.cs.pages.contact.sections[1].paragraphs[1]
+    Jde pouze o krok posouzení, nikoli o příslib. Neslibujeme tlumočníka, službu v češtině ani v jiném jazyce mimo čtyři uvedené jazyky, ani to, že každou věc přijmeme.
+
+guidanceContent.cs.pages.contact.sections[2].heading
+    Co by měla obsahovat první zpráva
+
+guidanceContent.cs.pages.contact.sections[2].paragraphs[0]
+    Uveďte, co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. Obdrželi-li jste již písemnost soudu nebo úřadu, uveďte datum na písemnosti.
+
+guidanceContent.cs.pages.contact.sections[2].paragraphs[1]
+    V počáteční fázi zatím nemusíte zasílat číslo pasu, číslo dokladu, údaje o účtu, zdravotní dokumentaci ani soubor důkazů. Vyčkejte pokynů advokátky nebo advokáta a citlivé dokumenty zašlete až poté bezpečnou cestou.
+
+guidanceContent.cs.pages.contact.sections[3].heading
+    Co tato stránka neslibuje
+
+guidanceContent.cs.pages.contact.sections[3].paragraphs[0]
+    Neslibujeme lhůtu k odpovědi, nepotvrzujeme schůzku prostřednictvím této stránky, neslibujeme určitou advokátku ani určitého advokáta a neposkytujeme tlumočníka. Písemný překlad je něco jiného: Vaše zpráva se automaticky nepřekládá.
+
+guidanceContent.cs.pages.contact.sections[3].paragraphs[1]
+    Odešlete-li žádost, obsah se uchová a čeká na posouzení. Neobdržíte-li po nějaké době odpověď, můžete napsat znovu na e-mailovou adresu uvedenou na kontaktní stránce.
+
+guidanceContent.cs.pages.faq.eyebrow
+    OTÁZKY
+
+guidanceContent.cs.pages.faq.title
+    Časté otázky
+
+guidanceContent.cs.pages.faq.description
+    Vysvětlení k rozsahu práce, přípravě, jazykům, nákladům a k tomu, co znamená odeslaná žádost.
+
+guidanceContent.cs.pages.faq.intro
+    Následující otázky jsou zodpovězeny na úrovni obecných informací. Odpověď pro Váš případ je možná teprve poté, co advokátka nebo advokát posoudí dokumenty.
+
+guidanceContent.cs.pages.faq.sections[0].heading
+    Jak tuto část užívat
+
+guidanceContent.cs.pages.faq.sections[0].paragraphs[0]
+    Nenajdete-li odpověď pro svou situaci, závisí odpověď zpravidla na zvláštních skutečnostech. Napište je proto do shrnutí, namísto abyste je dovozovali z této stránky.
+
+guidanceContent.cs.pages.faq.faqs[0].question
+    Které věci kancelář vede?
+
+guidanceContent.cs.pages.faq.faqs[0].answer
+    Vedeme šest skupin: investice a zakládání společností na Tchaj-wanu, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Zda bude věc přijata, se rozhodne po posouzení obsahu.
+
+guidanceContent.cs.pages.faq.faqs[1].question
+    Co bych si měl připravit před kontaktem?
+
+guidanceContent.cs.pages.faq.faqs[1].answer
+    Připravte si krátké shrnutí průběhu, svého požadavku, vazby na Tchaj-wan a lhůty, existuje-li nějaká. Je-li již k dispozici písemnost soudu nebo úřadu, uveďte datum. V této fázi zatím nemusíte zasílat doklady totožnosti ani soubor důkazů.
+
+guidanceContent.cs.pages.faq.faqs[2].question
+    Je možná porada v češtině?
+
+guidanceContent.cs.pages.faq.faqs[2].answer
+    Ne. Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky. Neslibujeme ani tlumočníka. Písemný překlad je něco jiného: původní text, který napíšete, se uchová tak, jak je, a automaticky se nepřekládá.
+
+guidanceContent.cs.pages.faq.faqs[3].question
+    Co dělat, nemohu-li užít žádný ze čtyř jazyků?
+
+guidanceContent.cs.pages.faq.faqs[3].answer
+    Při odeslání žádosti zvolte «Způsob komunikace je třeba potvrdit». Odpovíme, abychom posoudili způsob komunikace, ale služba v jiném jazyce zaručena není. Jde o krok posouzení, nikoli o příslib, že můžeme pracovat v jiném jazyce.
+
+guidanceContent.cs.pages.faq.faqs[4].question
+    Jak se nakládá s mým textem v češtině?
+
+guidanceContent.cs.pages.faq.faqs[4].answer
+    Původní text, který napíšete, se uchová tak, jak je, a automaticky se nepřekládá. Je-li to potřeba, jazyk další komunikace se s Vámi potvrdí.
+
+guidanceContent.cs.pages.faq.faqs[5].question
+    Proběhla porada již tím, že je žádost odeslána?
+
+guidanceContent.cs.pages.faq.faqs[5].answer
+    Ne. Odeslaná žádost čeká na posouzení advokátkou nebo advokátem. Není to právní stanovisko, není to potvrzená schůzka a samotné odeslání nezakládá vztah mezi advokátkou nebo advokátem a klientem.
+
+guidanceContent.cs.pages.faq.faqs[6].question
+    Jak se počítají náklady?
+
+guidanceContent.cs.pages.faq.faqs[6].answer
+    Nejprve se stanoví rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu nákladů, dříve než práce začne. Tato stránka neuvádí částky a neříká, že první rozhovor je bezplatný.
+
+guidanceContent.cs.pages.faq.faqs[7].question
+    Co dělat, je-li má věc velmi naléhavá?
+
+guidanceContent.cs.pages.faq.faqs[7].answer
+    Uveďte lhůtu nebo datum z úřední písemnosti hned na začátku shrnutí, aby byla tato data při posouzení vidět. Tato stránka nemá nouzový kanál a nezajišťuje lhůtu k odpovědi; nesnese-li Vaše věc odkladu, měli byste souběžně hledat další cesty ve svém místě.
+
+guidanceContent.cs.pages.privacy.eyebrow
+    SOUKROMÍ
+
+guidanceContent.cs.pages.privacy.title
+    Údaje sbírané kontaktním formulářem
+
+guidanceContent.cs.pages.privacy.description
+    Co sbírá kontaktní formulář v této české části, jak se nakládá s původním textem a jak nás oslovit ohledně Vašich údajů.
+
+guidanceContent.cs.pages.privacy.intro
+    Tato část se týká pouze kontaktního formuláře na těchto informačních stránkách. Popisuje nakládání s údaji, nikoli technickou záruku.
+
+guidanceContent.cs.pages.privacy.sections[0].heading
+    Které údaje se sbírají
+
+guidanceContent.cs.pages.privacy.sections[0].paragraphs[0]
+    Odešlete-li žádost prostřednictvím formuláře v této části, zaznamenají se tyto údaje:
+
+guidanceContent.cs.pages.privacy.sections[0].items[0]
+    Jméno, které uvedete
+
+guidanceContent.cs.pages.privacy.sections[0].items[1]
+    E-mailová adresa pro odpověď
+
+guidanceContent.cs.pages.privacy.sections[0].items[2]
+    Jazyk zobrazení stránky v okamžiku odeslání
+
+guidanceContent.cs.pages.privacy.sections[0].items[3]
+    Jazyk, v němž jste psali
+
+guidanceContent.cs.pages.privacy.sections[0].items[4]
+    Jazyk porady, který si přejete
+
+guidanceContent.cs.pages.privacy.sections[0].items[5]
+    Původní text, který jste napsali
+
+guidanceContent.cs.pages.privacy.sections[0].items[6]
+    Váš souhlas s odesláním žádosti
+
+guidanceContent.cs.pages.privacy.sections[0].items[7]
+    Číslo podání pro dohledání žádosti
+
+guidanceContent.cs.pages.privacy.sections[1].heading
+    Původní text se uchová beze změny
+
+guidanceContent.cs.pages.privacy.sections[1].paragraphs[0]
+    Váš text se uchová přesně tak, jak jste jej napsali, a automaticky se nepřekládá. Je-li pro vyřízení potřebný překlad, projedná se to s Vámi zvlášť.
+
+guidanceContent.cs.pages.privacy.sections[1].paragraphs[1]
+    Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.
+
+guidanceContent.cs.pages.privacy.sections[2].heading
+    Místo uchování a přístup
+
+guidanceContent.cs.pages.privacy.sections[2].paragraphs[0]
+    Obsah Vašeho podání se uchovává na místě, které není veřejně přístupné. Přístup k němu mají pouze oprávněné osoby v kanceláři, a to za účelem vyřízení žádosti.
+
+guidanceContent.cs.pages.privacy.sections[2].paragraphs[1]
+    Tato stránka nedává absolutní záruku bezpečnosti. Žádná cesta přenosu a žádné místo uchování není zcela bezpečné; citlivé dokumenty by proto měly být zasílány až po zvláštním pokynu advokátky nebo advokáta.
+
+guidanceContent.cs.pages.privacy.sections[3].heading
+    Účel užití
+
+guidanceContent.cs.pages.privacy.sections[3].paragraphs[0]
+    Odeslané údaje slouží k posouzení žádosti, k odpovědi Vám, k ujasnění způsobu komunikace a k vyřízení, je-li práce převzata.
+
+guidanceContent.cs.pages.privacy.sections[3].paragraphs[1]
+    Údaje se bez zvláštního souhlasu neužívají k marketingu.
+
+guidanceContent.cs.pages.privacy.sections[4].heading
+    Oznámení a číslo podání
+
+guidanceContent.cs.pages.privacy.sections[4].paragraphs[0]
+    Je-li žádost úspěšně odeslána, systém uvědomí kancelář. Není-li toto oznámení zatím potvrzeno, Váš text zůstává uchován a neztrácí se.
+
+guidanceContent.cs.pages.privacy.sections[4].paragraphs[1]
+    Číslo podání slouží k dohledání Vaší žádosti v našich záznamech. Zobrazí se po uložení; můžete je uvést při novém kontaktu.
+
+guidanceContent.cs.pages.privacy.sections[5].heading
+    Vaše práva a cesta ke kontaktu
+
+guidanceContent.cs.pages.privacy.sections[5].paragraphs[0]
+    Můžete žádat o přístup ke svým údajům, o jejich opravu nebo výmaz, případně odvolat souhlas, a to prostřednictvím e-mailové adresy uvedené na kontaktní stránce. Existuje-li zákonná nebo procesní povinnost uchování, vysvětlíme omezení.
+
+guidanceContent.cs.pages.privacy.sections[5].paragraphs[1]
+    Tato stránka neuvádí pevnou dobu uchování, protože skutečná doba závisí na dalším průběhu věci a na souvisejících povinnostech. Přejete-li si dřívější výmaz, sdělte to při kontaktu.
+
+guidanceContent.cs.pages.privacy.sections[6].heading
+    Místo uchování a poskytovatelé
+
+guidanceContent.cs.pages.privacy.sections[6].paragraphs[0]
+    Tyto stránky jsou hostovány u společnosti Vercel a Vaše podání se uchovává v neveřejném objektovém úložišti této služby. E-maily se odesílají poštovní službou, kterou kancelář užívá.
+
+guidanceContent.cs.pages.privacy.sections[6].paragraphs[1]
+    Servery jednotlivých poskytovatelů se mohou nacházet mimo Tchaj-wan, takže Vaše údaje tam mohou být uchovávány a zpracovávány. Je-li účel uchování naplněn, údaje se bez zbytečného odkladu vymažou; údaje, které je třeba uchovávat podle použitelných předpisů, zůstávají po tuto dobu. Žádosti o osobní údaje přijímá wei@hoveringlaw.com.tw.
+
+guidanceContent.cs.pages.disclaimer.eyebrow
+    UPOZORNĚNÍ
+
+guidanceContent.cs.pages.disclaimer.title
+    Rozsah a hranice informací na této stránce
+
+guidanceContent.cs.pages.disclaimer.description
+    Obecná povaha informací, právní rámec a předpoklady vzniku vztahu mezi advokátkou nebo advokátem a klientem.
+
+guidanceContent.cs.pages.disclaimer.intro
+    Tato část objasňuje, co pro Vás tyto české informační stránky mohou udělat a co nikoli.
+
+guidanceContent.cs.pages.disclaimer.sections[0].heading
+    Pouze obecné informace
+
+guidanceContent.cs.pages.disclaimer.sections[0].paragraphs[0]
+    Obsah těchto stránek je psán jako obecná informace. Není právní radou k Vašemu případu a nenahrazuje posouzení Vašich dokumentů.
+
+guidanceContent.cs.pages.disclaimer.sections[0].paragraphs[1]
+    Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku; dvě zdánlivě podobné situace mohou skončit různě.
+
+guidanceContent.cs.pages.disclaimer.sections[1].heading
+    Právní rámec
+
+guidanceContent.cs.pages.disclaimer.sections[1].paragraphs[0]
+    Kancelář působí podle taiwanského práva a tato stránka hovoří pouze o práci v tomto rámci.
+
+guidanceContent.cs.pages.disclaimer.sections[1].paragraphs[1]
+    Obsah není poradenstvím podle práva jiného řádu než taiwanského, včetně práva místa Vašeho pobytu. Týká-li se část Vaší věci jiného právního řádu, ujasníme s Vámi, jaká kvalifikovaná osoba je pro tuto část potřebná.
+
+guidanceContent.cs.pages.disclaimer.sections[2].heading
+    Vztah mezi advokátkou nebo advokátem a klientem nevzniká sám od sebe
+
+guidanceContent.cs.pages.disclaimer.sections[2].paragraphs[0]
+    Přečtení této stránky, odeslání formuláře nebo e-mailu samo o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem.
+
+guidanceContent.cs.pages.disclaimer.sections[2].paragraphs[1]
+    Tento vztah vzniká teprve poté, co byla věc posouzena a obě strany potvrdily převzetí práce.
+
+guidanceContent.cs.pages.disclaimer.sections[3].heading
+    Žádný příslib výsledku
+
+guidanceContent.cs.pages.disclaimer.sections[3].paragraphs[0]
+    Žádná část této stránky není příslibem ohledně výsledku věci, vyhovění přihlášce nebo žádosti či ohledně pobytového a pracovního statusu.
+
+guidanceContent.cs.pages.disclaimer.sections[3].paragraphs[1]
+    Vnější odkazy slouží k orientaci; neslibujeme správnost ani aktuálnost obsahu třetích osob.
+
+guidanceContent.cs.pages.columns.eyebrow
+    ČLÁNKY
+
+guidanceContent.cs.pages.columns.title
+    Články o taiwanském právu
+
+guidanceContent.cs.pages.columns.description
+    Články v češtině k častým otázkám taiwanského práva. Obsah je obecnou informací k okamžiku zveřejnění, nikoli právní radou k Vašemu případu.
+
+guidanceContent.cs.pages.columns.intro
+    Kancelář zveřejňuje články k častým otázkám taiwanského práva. Články dostupné v češtině jsou na této stránce; vedle nich jsou čtyři odkazy, z nichž každý otevře seznam článků v jednom původním jazyce.
+
+guidanceContent.cs.pages.columns.sections[0].heading
+    Čtyři seznamy podle jazyka
+
+guidanceContent.cs.pages.columns.sections[0].paragraphs[0]
+    Tato část obsahuje čtyři odkazy: seznam článků v korejštině, v čínštině, v angličtině a v japonštině. Každý odkaz uvádí jazyk seznamu, takže předem víte, v jakém jazyce se obsah otevře.
+
+guidanceContent.cs.pages.columns.sections[0].paragraphs[1]
+    Tyto čtyři seznamy jsou seznamy podle původního jazyka článků, nikoli seznamy překladů. Články dostupné v češtině jsou zvlášť na této stránce.
+
+guidanceContent.cs.pages.columns.sections[1].heading
+    Kam odkazy vedou
+
+guidanceContent.cs.pages.columns.sections[1].paragraphs[0]
+    Zvolíte-li jeden ze čtyř odkazů, otevře se seznam článků v daném jazyce. Ze seznamu si text vyberete sami; celý obsah se zobrazí v původním jazyce článku.
+
+guidanceContent.cs.pages.columns.sections[1].paragraphs[1]
+    Tato stránka obsah článků neshrnuje a nezaručuje, že určité téma je k dispozici ve všech čtyřech jazycích. Každý seznam obsahuje pouze texty zveřejněné v daném jazyce.
+
+guidanceContent.cs.pages.columns.sections[2].heading
+    Nakolik může článek sloužit k orientaci
+
+guidanceContent.cs.pages.columns.sections[2].paragraphs[0]
+    Články jsou obecnými informacemi k okamžiku zveřejnění. Předpisy a jejich používání se mohou změnit a článek neobsahuje všechny okolnosti Vašeho případu.
+
+guidanceContent.cs.pages.columns.sections[2].paragraphs[1]
+    Nezakládejte proto postup ve skutečné věci pouze na článku. Užijte jej k přehledu a své dokumenty projednejte zvlášť s advokátkou nebo advokátem; tato stránka není krokem porady.
+
+guidanceTeamCopy.cs.label
+    OUR TEAM
+
+guidanceTeamCopy.cs.title
+    Mezinárodní tým Hovering
+
+guidanceTeamCopy.cs.description
+    Profily advokátek a advokátů, provozního vedení a přidružené účetní revize Hovering.
+
+guidanceTeamCopy.cs.representativeTitle
+    Kierující advokátka
+
+guidanceTeamCopy.cs.teamTitle
+    Advokáti a spolupracovníci
+
+guidanceTeamCopy.cs.partnerTitle
+    Přidružené účetnictví
+
+guidanceTeamCopy.cs.introLabel
+    Představení
+
+guidanceTeamCopy.cs.educationLabel
+    Vzdělání
+
+guidanceTeamCopy.cs.experienceLabel
+    Praxe
+
+guidanceTeamCopy.cs.photoAltPrefix
+    Fotografie
+
+guidanceTeamCopy.cs.workingLanguagesLabel
+    Pracovní jazyky
+
+guidanceTeamCopy.cs.fullProfileLabel
+    Úplný profil (English)
+
+guidanceTeamCopy.cs.keyFactsHeading
+    Advokátka Wei Tseng — Základní údaje
+
+guidanceTeamCopy.cs.qualificationLabel
+    Oprávnění a kancelář
+
+guidanceTeamCopy.cs.qualificationSentence
+    {name} je oprávněna vykonávat advokacii na Tchaj-wanu a je řídící advokátkou {firm}.
+
+guidanceTeamCopy.cs.practiceLabel
+    Hlavní oblasti
+
+guidanceTeamCopy.cs.consultationLanguagesLabel
+    Jazyky porady
+
+guidanceTeamCopy.cs.roles.tseng-junwei
+    Řídící advokátka na Tchaj-wanu (Managing Attorney)
+
+guidanceTeamCopy.cs.roles.chang-rongxuan
+    Advokát na Tchaj-wanu (Taiwan Attorney)
+
+guidanceTeamCopy.cs.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.cs.roles.son-jungmin
+    Vedení provozu v Koreji (Korea Operations Manager)
+
+guidanceTeamCopy.cs.roles.huang-shengping
+    Partnerský účetní (Partner CPA)
+
+guidanceTeamBios.cs.tseng-junwei.intro[0]
+    Kancelář vede věci podniků a soukromých osob na Tchaj-wanu v angličtině, japonštině, korejštině a čínštině.
+
+guidanceTeamBios.cs.tseng-junwei.intro[1]
+    Zastupovala korejského studenta v nároku na náhradu škody za úraz v posilovně a dosáhla rozsudku prvního stupně ve výši TWD 1.57M.
+
+guidanceTeamBios.cs.tseng-junwei.education[0]
+    Magistr (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.cs.tseng-junwei.education[1]
+    Bakalář (B.A.) v dvojím programu práva a financí, National Chengchi University
+
+guidanceTeamBios.cs.tseng-junwei.education[2]
+    Výměnné studium na Kobe University a Waseda University
+
+guidanceTeamBios.cs.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.cs.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.cs.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.cs.chang-rongxuan.intro[0]
+    Dříve na Ministry of Education, Legal Affairs Division, se zaměřením na správní a občanskoprávní věci.
+
+guidanceTeamBios.cs.chang-rongxuan.intro[1]
+    Zkušenost s věcmi univerzit, práv pedagogů a správních odvolání.
+
+guidanceTeamBios.cs.chang-rongxuan.education[0]
+    Bakalář práv (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.cs.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.cs.chang-rongxuan.experience[1]
+    Advokát, Hovering International Law Firm
+
+guidanceTeamBios.cs.chang-fangyu.intro[0]
+    Paralegal s dlouhou praxí jako senior paralegal ve více kancelářích, odpovědný za procesní podporu, právo obchodních společností a zahraniční investice.
+
+guidanceTeamBios.cs.chang-fangyu.intro[1]
+    Podpora v řízeních, při zakládání společností, u povolení zahraničních investic, u žádostí o licence a při výměně mezi Koreou a Tchaj-wanem.
+
+guidanceTeamBios.cs.chang-fangyu.education[0]
+    Bakalář práv (LL.B.), Tunghai University
+
+guidanceTeamBios.cs.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.cs.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.cs.son-jungmin.intro[0]
+    Koordinuje termíny porad a komunikaci pro klienty z Koreje.
+
+guidanceTeamBios.cs.son-jungmin.intro[1]
+    Podporuje meziregionální výměnu prostřednictvím systémů dokumentů a pracovních postupů, na základě informatiky.
+
+guidanceTeamBios.cs.son-jungmin.education[0]
+    Bakalář (B.S.) v informatice, National Cheng Kung University
+
+guidanceTeamBios.cs.son-jungmin.experience[0]
+    Úsek korejských operací, Hovering International Law Firm
+
+guidanceTeamBios.cs.huang-shengping.intro[0]
+    Absolvoval bakalářský a magisterský program účetnictví na National Chengchi University a nyní vede účetní kancelář.
+
+guidanceTeamBios.cs.huang-shengping.intro[1]
+    Podporuje integrovanou analýzu právních, daňových a finančních rizik pro firemní klienty.
+
+guidanceTeamBios.cs.huang-shengping.education[0]
+    Magistr (M.A.) v účetnictví, National Chengchi University
+
+guidanceTeamBios.cs.huang-shengping.education[1]
+    Bakalář (B.A.) v účetnictví, National Chengchi University
+
+guidanceTeamBios.cs.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.cs.Korean
+    korejština
+
+guidanceLanguageNames.cs.Chinese
+    čínština
+
+guidanceLanguageNames.cs.Japanese
+    japonština
+
+guidancePracticeAreaNames.cs.Taiwan company setup
+    Zakládání společností na Tchaj-wanu
+
+guidancePracticeAreaNames.cs.Taiwan investment counsel
+    Poradenství k investicím na Tchaj-wanu
+
+guidancePracticeAreaNames.cs.Civil litigation and damages
+    Občanskoprávní spory a náhrada škody
+
+guidancePracticeAreaNames.cs.Trademark and patent filings
+    Přihlášky ochranných známek a patentů
+
+guidancePracticeAreaNames.cs.Visa and residency
+    Vízum a pobyt
+
+guidancePracticeAreaNames.cs.Family and labor disputes
+    Rodinné a pracovněprávní spory
+
+guidanceOfficeCopy.cs.label
+    OFFICES
+
+guidanceOfficeCopy.cs.title
+    Pobočky
+
+guidanceOfficeCopy.cs.description
+    Adresy taiwanských poboček Hovering International Law Firm.
+
+guidanceOfficeCopy.cs.officeLabel
+    Pobočka
+
+guidanceOfficeCopy.cs.mapPreviewLabel
+    Náhled mapy
+
+guidanceOfficeCopy.cs.koreaOfficeTitle
+    Korejská pobočka
+
+guidanceOfficeCopy.cs.koreaAddressCardLabel
+    Adresa korejské pobočky
+
+guidanceOfficeCopy.cs.koreaMapLinkLabel
+    Zobrazit na Naver Map
+
+guidanceOfficeCopy.cs.reviewCountWord
+    hodnocení
+
+guidanceOfficeCopy.cs.phoneLabel
+    Telefon
+
+guidanceOfficeCopy.cs.faxLabel
+    Fax
+
+guidanceOfficeCopy.cs.mapLinkLabel
+    Zobrazit na mapě
+
+guidanceOfficeCopy.cs.photoAlts[0]
+    Recepce pobočky v Tchaj-peji, Hovering International Law Firm
+
+guidanceOfficeCopy.cs.photoAlts[1]
+    Kancelář advokátky v pobočce v Tchaj-peji, Hovering International Law Firm
+
+guidanceOfficeCopy.cs.photoAlts[2]
+    Jednací místnost v pobočce v Tchaj-peji, Hovering International Law Firm
+
+guidanceOfficeCopy.cs.officeTitles.taipei
+    Tchaj-pej
+
+guidanceOfficeCopy.cs.officeTitles.taichung
+    Tchaj-čung
+
+guidanceOfficeCopy.cs.officeTitles.kaohsiung
+    Kao-siung
+
+guidanceOfficeCopy.cs.officeTitles.pingtung
+    Pchingtung
+
+guidanceFooterCopy.cs.officeLabel
+    Pobočky
+
+guidanceFooterCopy.cs.officeQuickLinksLabel
+    Rychlé odkazy na pobočky
+
+guidanceFooterCopy.cs.followLabel
+    Sledujte nás
+
+guidanceFooterCopy.cs.blogLabel
+    Blog
+
+guidanceFooterCopy.cs.websiteLabel
+    Oficiální web
+
+guidanceFooterCopy.cs.sitemapLabel
+    Mapa stránek
+
+guidanceFooterCopy.cs.copyEmailLabel
+    Zkopírovat e-mailovou adresu
+
+guidanceFooterCopy.cs.emailCopiedMessage
+    E-mailová adresa byla zkopírována.
+
+guidanceFooterCopy.cs.officialConsultationEmailLabel
+    Oficiální e-mail pro dotazy
+
+internationalInquiryCopy.cs.guidanceNotice
+    Tato stránka je psána česky jako obecná orientace, nikoli jako právní rada ve Vaší věci.
+
+internationalInquiryCopy.cs.consultationNotice
+    Porada probíhá ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky.
+
+internationalInquiryCopy.cs.methodConfirmationNotice
+    Nemůžete-li užít žádný ze čtyř jazyků, zvolte «Způsob komunikace je třeba potvrdit». Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.
+
+internationalInquiryCopy.cs.preparationNotice
+    Shrnutí můžete napsat ve svém jazyce. Původní text se uchová tak, jak jste jej napsali, a automaticky se nepřekládá.
+
+internationalInquiryCopy.cs.heading
+    Odeslat žádost o posouzení
+
+internationalInquiryCopy.cs.intro
+    Popište svou věc stručně. Advokátka nebo advokát posoudí obsah, než se přistoupí k dalšímu kroku.
+
+internationalInquiryCopy.cs.submitLabel
+    Odeslat žádost
+
+internationalInquiryCopy.cs.submittingLabel
+    Odesílá se…
+
+internationalInquiryCopy.cs.successMessage
+    Obdrželi jsme Vaši žádost; čeká na posouzení. Neznamená to, že porada proběhla nebo že byla potvrzena schůzka.
+
+internationalInquiryCopy.cs.savedNotificationPendingMessage
+    Vaše žádost byla uložena, ale oznámení kanceláři zatím není potvrzeno. Co jste napsali, se neztratí. Neobdržíte-li odpověď, můžete napsat i na e-mailovou adresu z kontaktní stránky.
+
+internationalInquiryCopy.cs.receiptIdLabel
+    Číslo podání
+
+internationalInquiryCopy.cs.failureMessage
+    Vaši žádost se nepodařilo odeslat. Zkuste to znovu nebo napište na e-mailovou adresu z kontaktní stránky.
+
+internationalInquiryCopy.cs.originalLanguageLabel
+    Jazyk, v němž píšete
+
+internationalInquiryCopy.cs.originalLanguagePlaceholder
+    Například čeština, angličtina, čínština nebo jiný jazyk
+
+internationalInquiryCopy.cs.preferredConsultationLanguageLabel
+    Jazyk, který si přejete pro poradu
+
+internationalInquiryCopy.cs.originalTextLabel
+    Krátký popis věci (ve Vašem jazyce)
+
+internationalInquiryCopy.cs.originalTextPlaceholder
+    Napište, co se stalo, jakou pomoc potřebujete a lhůtu, existuje-li. Nepište číslo pasu, číslo dokladu ani údaje o účtu.
+
+internationalInquiryCopy.cs.nameLabel
+    Jméno
+
+internationalInquiryCopy.cs.emailLabel
+    E-mail
+
+internationalInquiryCopy.cs.consentLabel
+    Přečetl(a) jsem stránku o soukromí a souhlasím s odesláním této žádosti.
+
+internationalInquiryCopy.cs.privacyLinkLabel
+    Soukromí
+
+internationalInquiryCopy.cs.requiredMessage
+    Toto pole je povinné.
+
+internationalInquiryCopy.cs.invalidEmailMessage
+    Zadejte platnou e-mailovou adresu.
+
+internationalInquiryCopy.cs.tooLongMessage
+    Text je příliš dlouhý. Zkraťte jej a odešlete znovu.
+
+internationalInquiryCopy.cs.sourceLanguageNotice
+    Tento článek je zveřejněn pouze v jazyce {language}; odkaz otevře původní stránku.
+
+internationalInquiryCopy.cs.unavailableTranslationNotice
+    Tato část zatím není k dispozici v jazyce této stránky. Odkaz v původním jazyce otevře původní text.
+
+internationalInquiryCopy.cs.unavailableLanguageNotice
+    Tato stránka se v jazyce {language} nenabízí.
+
+internationalInquiryCopy.cs.languageOptions.en
+    Angličtina (English)
+
+internationalInquiryCopy.cs.languageOptions.zh-hant
+    Čínština (中文)
+
+internationalInquiryCopy.cs.languageOptions.ja
+    Japonština (日本語)
+
+internationalInquiryCopy.cs.languageOptions.ko
+    Korejština (한국어)
+
+internationalInquiryCopy.cs.languageOptions.needs-method-confirmation
+    Žádný ze čtyř jazyků není použitelný — způsob komunikace je třeba potvrdit
+
+guidanceAnswers.cs.services.answer
+    Kancelář vede šest skupin podle taiwanského práva: investice a zakládání společností, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, práci, trestní věci a duševní vlastnictví. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí zaslaný obsah. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.
+
+guidanceAnswers.cs.services.sources[0]
+    /cs/faq
+
+guidanceAnswers.cs.services.sources[1]
+    /cs/contact
+
+guidanceAnswers.cs.about.answer
+    Hovering International Law Firm je taiwanská advokátní kancelář, kterou v roce 2016 založili absolventi National Taiwan University (國立臺灣大學), s pobočkami v Tchaj-peji, Kao-siungu, Tchaj-čungu a Pchingtungu. Od roku 2020 působí i účetní úsek; pobočka v Tchaj-čungu vede věci s vazbou na Koreu a Japonsko. Kancelář neslibuje výsledek. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.
+
+guidanceAnswers.cs.about.sources[0]
+    /cs/lawyers
+
+guidanceAnswers.cs.about.sources[1]
+    /cs/services
+
+guidanceAnswers.cs.lawyers.answer
+    Tato stránka ukazuje profily advokátek a advokátů Hovering, provozního vedení a přidružené účetní revize. Advokátka Wei Tseng (曾雋崴) je oprávněna na Tchaj-wanu a je řídící advokátkou kanceláře; pracuje s klienty z Koreje, z Japonska a s dalšími mezinárodními klienty. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.
+
+guidanceAnswers.cs.lawyers.sources[0]
+    /cs/about
+
+guidanceAnswers.cs.lawyers.sources[1]
+    /cs/contact
+
+guidanceAnswers.cs.pricing.answer
+    Tato stránka nezveřejňuje ceník. Nejprve se z Vašeho shrnutí potvrdí rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu, dříve než práce začne. Rozhovor s advokátkou nebo advokátem může být úplatný; vedle odměny mohou vzniknout soudní nebo správní poplatky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.
+
+guidanceAnswers.cs.pricing.sources[0]
+    /cs/contact
+
+guidanceAnswers.cs.pricing.sources[1]
+    /cs/faq
+
+guidanceAnswers.cs.contact.answer
+    Zašlete shrnutí kontaktním formulářem: co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. V počáteční fázi zatím není třeba zasílat doklady totožnosti ani celý důkazní materiál. Kancelář neslibuje lhůtu k odpovědi a nepotvrzuje schůzku prostřednictvím této stránky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.
+
+guidanceAnswers.cs.contact.sources[0]
+    /cs/faq
+
+guidanceAnswers.cs.contact.sources[1]
+    /cs/pricing
+
+guidanceAnswers.cs.faq.answer
+    Tato část odpovídá na časté otázky na úrovni obecných informací: šest skupin práce, příprava před kontaktem, potvrzení nákladů a význam odeslané zprávy. Odeslaná zpráva čeká na posouzení, není právním stanoviskem ani potvrzenou schůzkou a sama o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem. Porada probíhá ve čtyřech jazycích: anglicky, čínsky, japonsky a korejsky.
+
+guidanceAnswers.cs.faq.sources[0]
+    /cs/services
+
+guidanceAnswers.cs.faq.sources[1]
+    /cs/contact
+
+GUIDANCE_LLMS_NOTICES.cs.consultationNotice
+    Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.
+
+GUIDANCE_LLMS_NOTICES.cs.discoveryNotice
+    Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, podporu, doporučení umělé inteligence ani viditelnost.
+
+GUIDANCE_LLMS_NOTICES.cs.confidentialNotice
+    Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.

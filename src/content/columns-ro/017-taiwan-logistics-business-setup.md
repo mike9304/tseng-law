@@ -140,8 +140,8 @@ La lucrul fără permis se pot aplica o amendă administrativă și un ordin de 
 
 ## Orientări legate
 
-- [Servicii de investiție și de constituire de societăți pe Taiwan](/ko/services/investment)
-- [Profilul avocatei Wei Tseng](/ko/lawyers/wei-tseng)
+- [Ce cauze tratăm](/ro/services)
+- [Echipa internațională Hovering](/ro/lawyers)
 - [Contact](/ro/contact)
 
 ---

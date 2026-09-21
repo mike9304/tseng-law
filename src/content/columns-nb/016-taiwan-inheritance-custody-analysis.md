@@ -143,8 +143,8 @@ På de offisielle forskriftssidene bekrefter man forskriftens endringsdato og ik
 
 ## 11. Tilknyttede veiledninger
 
-- [Tjeneste vedrørende familierett i Taiwan](/ko/services/family)
-- [Veiledning om prosessadvokaten i Taiwan](/ko/taiwan-litigation-lawyer)
+- [Hvilke saker vi behandler](/nb/services)
+- [Hvordan arbeidsomfang og kostnader fastsettes](/nb/pricing)
 - [Kontakt](/nb/contact)
 
 ---

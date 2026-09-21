@@ -111,7 +111,7 @@ Salgsforberedelsen i Taiwan, hvis man verifiserer den i den følgende rekkefølg
 5. Gjennomgå etiketten, salgssiden, reklameringen og samarbeidsoffentliggjøringene etter målestokken for helheten av fremstillingen.
 6. Føre prosedyren for å reagere på inspeksjoner og avhjelpingsanmodninger, klager, sikkerhetsopplysninger og den nødvendige oppfølgingen.
 
-Grunnstrukturen for selskap og filial (分公司) kan ses i [Grunnlaget for selskapsstiftelse i Taiwan](/nb/columns/taiwan-company-establishment-basics), omfanget av den tilknyttede støtten i [Tjenester vedrørende investering og selskapsstiftelse i Taiwan](/ko/services/investment), og opplysningene om den ansvarlige advokaten i [Profil for advokat Wei Tseng](/ko/lawyers/wei-tseng).
+Grunnstrukturen for selskap og filial (分公司) kan ses i [Grunnlaget for selskapsstiftelse i Taiwan](/nb/columns/taiwan-company-establishment-basics), omfanget av den tilknyttede støtten i [Hvilke saker vi behandler](/nb/services), og opplysningene om den ansvarlige advokaten i [Hoverings internasjonale team](/nb/lawyers).
 
 ### Offisielle kilder
 

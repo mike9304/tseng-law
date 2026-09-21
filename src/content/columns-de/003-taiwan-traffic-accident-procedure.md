@@ -368,6 +368,6 @@ Ich war WEI, taiwanesische Anwältin (曾雋崴).
 ---
 
 > Siehe auch:
-> - [Leitfaden zum Prozessanwalt in Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Taiwanesische Anwältin mit Koreanischkenntnissen](/ko/korean-lawyer-in-taiwan)
-> - [Leitfaden zur Anwaltssuche in Taiwan](/ko/taiwan-lawyer)
+> - [Wie Arbeitsumfang und Kosten festgelegt werden](/de/pricing)
+> - [Internationales Team von Hovering](/de/lawyers)
+> - [Über Hovering International Law Firm](/de/about)

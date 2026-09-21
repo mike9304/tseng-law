@@ -58,8 +58,8 @@ Som supplement kan De konsultere [bildet av forbikjøringsreglene og -prosedyren
 ---
 
 > Se også:
-> - [Veiledning om prosessadvokaten i Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Taiwansk advokat som taler koreansk](/ko/korean-lawyer-in-taiwan)
+> - [Hvordan arbeidsomfang og kostnader fastsettes](/nb/pricing)
+> - [Hoverings internasjonale team](/nb/lawyers)
 > - [Prosedyre ved ferdselsuhell i Taiwan](/nb/columns/taiwan-traffic-accident-procedure)
 
 Dette stykket er allmenn juridisk informasjon om forbikjøringsordningen og vurderingen av ulykkesansvaret i Taiwan (超車); det er ikke rådgivning om en konkret sak og heller ikke et løfte om et bestemt resultat. Det faktiske ansvaret kan avvike etter ulykkessted, kjøretøybevegelse, hastighet, signaler, bevis, sakkyndig undersøkelse (鑑定) og den nyeste rett; konkrete saker skal undersøkes særskilt på grunnlag av de gjeldende dokumentene.

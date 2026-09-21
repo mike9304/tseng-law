@@ -139,7 +139,7 @@ Plus la suspension d’activité dure, plus la procédure de cessation ultérieu
 
 ## Indications connexes
 
-1. [Services d’investissement et de création de société à Taïwan](/ko/services/investment)
+1. [Affaires que nous traitons](/fr/services)
 2. [Fondamentaux de la création de société à Taïwan](/fr/columns/taiwan-company-establishment-basics)
 3. [Contact](/fr/contact)
 

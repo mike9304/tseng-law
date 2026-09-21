@@ -139,7 +139,7 @@ Cu cât suspendarea activității durează mai mult, cu atât procedura de înce
 
 ## Indicații conexe
 
-1. [Servicii de investiții și de înființare de societăți în Taiwan](/ko/services/investment)
+1. [Ce cauze tratăm](/ro/services)
 2. [Bazele înființării unei societăți în Taiwan](/ro/columns/taiwan-company-establishment-basics)
 3. [Contact](/ro/contact)
 

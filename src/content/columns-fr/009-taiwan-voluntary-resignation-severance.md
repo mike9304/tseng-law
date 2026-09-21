@@ -96,6 +96,6 @@ Dans la plupart des cas, celui qui s’est préparé à l’avance voit ses droi
 ---
 
 > Voir aussi :
-> - [Repères sur l’avocat plaidant à Taïwan](/ko/taiwan-litigation-lawyer)
-> - [Avocate de Taïwan pouvant s’exprimer en coréen](/ko/korean-lawyer-in-taiwan)
-> - [Domaines d’activité — travail](/ko/services/labor)
+> - [Comment l’étendue du travail et les honoraires sont fixés](/fr/pricing)
+> - [Équipe internationale de Hovering](/fr/lawyers)
+> - [Affaires que nous traitons](/fr/services)

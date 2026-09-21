@@ -78,6 +78,6 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 ---
 
 > 另见：
-> - [在台湾设立公司总指南 — 程序、费用与法律形态](/ko/guides/taiwan-company-setup)
-> - [能以韩语沟通的台湾律师](/ko/korean-lawyer-in-taiwan)
-> - [台湾法人与公司设立律师要点](/ko/taiwan-company-setup-lawyer)
+> - [我们处理哪些事项](/zh-hans/services)
+> - [Hovering 国际团队](/zh-hans/lawyers)
+> - [如何联系事务所](/zh-hans/contact)

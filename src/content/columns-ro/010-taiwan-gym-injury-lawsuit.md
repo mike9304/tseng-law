@@ -114,6 +114,6 @@ O cădere pe podeaua unui local, un prejudiciu asupra sănătății prin aliment
 ---
 
 > Vezi și:
-> - [Ghidul avocatei de litigii pe Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Avocată pe Taiwan care se poate exprima în coreeană](/ko/korean-lawyer-in-taiwan)
-> - [Ghid pentru a căuta un avocat pe Taiwan](/ko/taiwan-lawyer)
+> - [Cum se stabilesc întinderea lucrării și costurile](/ro/pricing)
+> - [Echipa internațională Hovering](/ro/lawyers)
+> - [Despre Hovering International Law Firm](/ro/about)

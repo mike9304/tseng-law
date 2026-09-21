@@ -183,7 +183,7 @@ Bij het ordenen van de stukken in tijdsvolgorde dient men samen de datum van con
 
 ## 11. Verbonden toelichting
 
-- [Dienst van arbeidsrecht in Taiwan](/ko/services/labor)
+- [Welke zaken wij behandelen](/nl/services)
 - [Toelichting over het vrijwillig ontslag en de uitzonderingen op de ontslagvergoeding](/nl/columns/taiwan-voluntary-resignation-severance)
 - [Contact](/nl/contact)
 

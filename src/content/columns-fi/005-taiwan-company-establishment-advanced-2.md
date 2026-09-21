@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Valittu kuva](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Ne, jotka ovat lukeneet [Yhtiön perustaminen Taiwanissa – perusteet](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) ja [Yhtiön perustaminen Taiwanissa – syventävä osa 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1), voivat samoin tutustua tekstiin Yhtiön perustaminen Taiwanissa – syventävä osa 2 (公司設立).
+Ne, jotka ovat lukeneet [Yhtiön perustaminen Taiwanissa – perusteet](/fi/columns/taiwan-company-establishment-basics) ja [Yhtiön perustaminen Taiwanissa – syventävä osa 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1), voivat samoin tutustua tekstiin Yhtiön perustaminen Taiwanissa – syventävä osa 2 (公司設立).
 
 ​
 
@@ -82,6 +82,6 @@ Jos teillä on muita kysymyksiä, voitte ottaa meihin yhteyttä.
 ---
 
 > Katso myös:
-> - [Yleinen opas yhtiön perustamiseen Taiwanissa — menettelyt, kustannukset ja yhtiömuodot](/ko/guides/taiwan-company-setup)
-> - [Koreaa puhuva taiwanilainen asianajaja](/ko/korean-lawyer-in-taiwan)
-> - [Ohjeita asianajajasta oikeushenkilöitä ja yhtiön perustamista varten Taiwanissa](/ko/taiwan-company-setup-lawyer)
+> - [Mitä asioita käsittelemme](/fi/services)
+> - [Hoveringin kansainvälinen tiimi](/fi/lawyers)
+> - [Miten tavoitatte toimiston](/fi/contact)

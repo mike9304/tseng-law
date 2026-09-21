@@ -114,6 +114,6 @@ Ett fall på ett verksamhetsgolv, hälsoskada av livsmedel och en skada som upps
 ---
 
 > Se också:
-> - [Vägledning om processadvokat i Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Taiwanadvokat som kan koreanska](/ko/korean-lawyer-in-taiwan)
-> - [Guide för att söka advokat i Taiwan](/ko/taiwan-lawyer)
+> - [Hur arbetsomfattning och kostnader fastställs](/sv/pricing)
+> - [Hoverings internationella team](/sv/lawyers)
+> - [Om Hovering International Law Firm](/sv/about)

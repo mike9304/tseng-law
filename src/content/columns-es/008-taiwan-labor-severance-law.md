@@ -227,6 +227,6 @@ Ustedes también deben proteger sus derechos en Taiwán.
 ---
 
 > Véase también:
-> - [Guía del abogado litigante en Taiwán](/ko/taiwan-litigation-lawyer)
-> - [Abogada de Taiwán que habla coreano](/ko/korean-lawyer-in-taiwan)
-> - [Áreas de práctica — trabajo](/ko/services/labor)
+> - [Cómo se fijan el alcance del trabajo y los honorarios](/es/pricing)
+> - [Equipo internacional de Hovering](/es/lawyers)
+> - [Asuntos que atendemos](/es/services)

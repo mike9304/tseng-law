@@ -17,7 +17,7 @@ For nylig har tallrike personer med hell stiftet et selskap (公司) i Taiwan og
 
 og de spørsmålene som ofte stilles ved stiftelsen, er samlet nedenfor.
 
-Den som har lest [**grunnlaget for selskapsstiftelsen**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8), kan deretter også konsultere denne utførligere fordypningen.
+Den som har lest [**grunnlaget for selskapsstiftelsen**](/nb/columns/taiwan-company-establishment-basics), kan deretter også konsultere denne utførligere fordypningen.
 
 De følgende spørsmål og svar (Q&A) sikter mot å hjelpe personer som vurderer en selskapsstiftelse i Taiwan. 😊
 
@@ -128,6 +128,6 @@ bør De kontrollere dette på forhånd.
 ---
 
 > Se også:
-> - [Samlet veiledning om selskapsstiftelse i Taiwan — prosedyrer, kostnader og selskapsformer](/ko/guides/taiwan-company-setup)
-> - [Taiwansk advokat som taler koreansk](/ko/korean-lawyer-in-taiwan)
-> - [Veiledning om advokaten for juridiske personer og selskapsstiftelse i Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Hvilke saker vi behandler](/nb/services)
+> - [Hoverings internasjonale team](/nb/lawyers)
+> - [Hvordan De når kontoret](/nb/contact)

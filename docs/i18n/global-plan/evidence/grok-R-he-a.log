@@ -1,0 +1,25 @@
+[WO start 2026-09-21 16:08:36]
+Review is in `docs/i18n/global-plan/reviews/native/he-a.md`. Naturalness: **3/5** guidance, **2/5** columns. 48 findings (15 P1, 33 P2). Titles for Wei Tseng in the guidance pack are feminine; the P1 gender hits are her degree lines and first-person blog columns.
+
+Must-fix before a client sees it: masculine `מוסמך`/`בוגר`/`איני ממליץ` for Wei Tseng; broken intake sentence `אם נוכל לקבל עניין תלוי`; `חוות דעת` used for Google reviews; `/ko/` and Hangul leftovers; “highest possible” compensation and typical-sentence talk; Korea still treated as the default reader.
+
+Last 15 lines of the output file:
+
+```
+| 34 | P2 | C | columns-he/001-taiwan-company-establishment-basics.md | "אם המעסיק, חברה או סניף, קיים פחות מ-1 שנה" | "1 שנה / 1 השנה / ממוצע 3 השנים" is spreadsheet Hebrew. Systemic in 001–009. | אם המעסיק — חברה או סניף — קיים פחות משנה |
+| 35 | P2 | C | columns-he/003-taiwan-traffic-accident-procedure.md | "בערכאה 2" | "Instance 2" / "ערכאה 1" copied from numbered source. | בערכאה השנייה |
+| 36 | P2 | C | columns-he/003-taiwan-traffic-accident-procedure.md | "Q16. לאחר התאונה, האם ניתן להשאיר הכול בידי המבטח?" | Q16–Q20 drop the professional register of Q1–Q15: first-person blog, empty lines, comment CTA. | Restore the Q1–Q15 register; drop "השאירו אותן בתגובות". |
+| 37 | P2 | D | columns-he/003-taiwan-traffic-accident-procedure.md | "התקשרו ל-119, ואם יש עבירה או מצב ביטחון דחוף, ל-110 או ל-112." | Taiwan emergency numbers without saying so; 112 is EU/Israel-adjacent and will mislead. | התקשרו בטאיוואן למוקד ההצלה 119, ולמשטרה 110 (או 112 בנייד) |
+| 38 | P2 | D | columns-he/004-taiwan-company-subsidiary-vs-branch.md | "גם כאשר חברה אם קוריאנית נכנסת לטאיוואן" | Parent-company example still Korean; §2 tax and §Korea-side credits stay Korea-only. | גם כאשר חברה אם זרה נכנסת לטאיוואן |
+| 39 | P2 | D | columns-he/007-taiwan-divorce-lawsuit-qna.md | "כגון קוריאה וטאיוואן" | Cross-border family example is still Korea–Taiwan, not Israel–Taiwan. | כגון ישראל וטאיוואן |
+| 40 | P2 | D | columns-he/008-taiwan-labor-severance-law.md | "בטאיוואן, שלא כמו בקוריאה" | Labor explainers still contrast Korea (퇴직금), not Israeli פיצויי פיטורים. Also 009 "וזה שונה מקוריאה". | בטאיוואן, שלא כמו במדינות שבהן משתלם מענק גם בהפסקה מרצון |
+| 41 | P2 | B | columns-he/007-taiwan-divorce-lawsuit-qna.md | "זהו נקודת מוצא לסיווג ולהוכחה בחישוב המשטר" | Gender clash: זהו (m.) + נקודת (f.). | זו נקודת מוצא לסיווג ולהוכחה בחישוב המשטר |
+| 42 | P2 | B | columns-he/007-taiwan-divorce-lawsuit-qna.md | "גם בקשה לאחר עבור תקופת הבקשה חייבת להתקבל" | "לאחר עבור" is not Hebrew (calque of 經過). | גם בקשה לאחר שעברה תקופת הבקשה חייבת להתקבל |
+| 43 | P2 | D | columns-he/007-taiwan-divorce-lawsuit-qna.md | "פסק החוקה מספר 4 לשנת 112 (112年憲判字第4號)" | ROC year 112 is unexplained; Israeli reader needs 2023. | פסק החוקה מספר 4 לשנת 112 (2023; 112年憲判字第4號) |
+| 44 | P2 | C | columns-he/004-taiwan-company-subsidiary-vs-branch.md | "יש לשפוט על כל משך הפעילות." | Broken preposition; native לשפוט לאורך / לאור כל תקופת הפעילות. | יש לשפוט לאור כל תקופת הפעילות. |
+| 45 | P2 | C | columns-he/001-taiwan-company-establishment-basics.md | "את היקף העבודה הנוגע בדבר ניתן לעיין ב" | את + לעיין is ungrammatical. | בהיקף העבודה הנוגע בדבר ניתן לעיין ב |
+| 46 | P2 | G | columns-he/008-taiwan-labor-severance-law.md | "פיטורים כלכליים  **資遣** **員工(經濟解僱)**" | Raw Chinese stacked in the table cell, not a parenthetical gloss. | פיטורים כלכליים (資遣 / 經濟解僱) |
+| 47 | P2 | C | columns-he/008-taiwan-labor-severance-law.md | "האם באמת קשה לקבל דמי פיטורים בטאיוואן??" | Blog title with double ?? and chopped one-line paragraphs; 005/006/009 share the Korean-blog layout. | דיני עבודה בטאיוואן: מתי משתלמים דמי פיטורים (資遣費)? |
+| 48 | P2 | C | he-guidance.txt | "אם אין זה ברור לאיזו קבוצה שייך העניין שלכם" | Literary "אם אין זה ברור"; native אם אינכם בטוחים. | אם אינכם בטוחים לאיזו קבוצה שייך העניין שלכם |
+```
+=== end code=0 2026-09-21 16:15:33 ===

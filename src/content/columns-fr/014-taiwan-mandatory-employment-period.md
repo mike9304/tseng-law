@@ -183,7 +183,7 @@ En ordonnant les documents en ordre temporel, il convient d’indiquer ensemble 
 
 ## 11. Orientation liée
 
-- [Service de droit du travail à Taïwan](/ko/services/labor)
+- [Affaires que nous traitons](/fr/services)
 - [Orientation sur la démission volontaire et les exceptions d’indemnité de licenciement](/fr/columns/taiwan-voluntary-resignation-severance)
 - [Contact](/fr/contact)
 

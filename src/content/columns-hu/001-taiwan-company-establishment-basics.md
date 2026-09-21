@@ -138,7 +138,7 @@ Az egyezmény korlátozott kulcsa nem alkalmazandó automatikusan pusztán azér
 - [A tajvani Bevándorlási Hivatal (內政部移民署) útmutatója az állandó tartózkodásról](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Tajpej város útmutatója a telephely előzetes vizsgálatához](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-A vonatkozó tevékenységi kört a [tajvani beruházási és társaságalapítási szolgáltatások](/ko/services/investment) alatt, az illetékes ügyvéd pályáját és nyelveit a [Wei Tseng ügyvéd profilja](/ko/lawyers/wei-tseng) alatt tekintheti meg. Konkrét ügyre vonatkozó kérdéshez használja a [kapcsolat](/hu/contact) oldalt.
+A vonatkozó tevékenységi kört a [Milyen ügyeket viszünk](/hu/services) alatt, az illetékes ügyvéd pályáját és nyelveit a [A Hovering nemzetközi csapata](/hu/lawyers) alatt tekintheti meg. Konkrét ügyre vonatkozó kérdéshez használja a [kapcsolat](/hu/contact) oldalt.
 
 Ez a cikk a tajvani társaságalapításról és a kapcsolódó szabályokról szóló általános, oktatási célú tájékoztató; nem minősül konkrét ügyben adott jogi vagy adóügyi tanácsnak, és nem ígér meghatározott eredményt. A szükséges eljárások és eredmények a beruházási szerkezet, az ágazat, a kérelmező állampolgársága és tartózkodási státusza, valamint az illetékes szerv legújabb gyakorlata szerint különbözhetnek; beruházás, szerződés vagy foglalkoztatás végrehajtása előtt a legújabb hivatalos forrásokat és az ügy saját körülményeit kell vizsgálni.
 

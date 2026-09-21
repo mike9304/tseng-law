@@ -138,7 +138,7 @@ Den begrænsede overenskomstsats gælder ikke automatisk alene fordi en overensk
 - [Vejledning fra Taiwans immigrationsmyndighed (內政部移民署) om varigt ophold](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Vejledning fra byen Taipei om den forudgående forespørgsel om forretningsstedet](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-De kan se det pågældende arbejdsområde under [Tjenester vedrørende investering og selskabsstiftelse i Taiwan](/ko/services/investment), den ansvarlige advokats forløb og sprog under [Profil for advokat Wei Tseng](/ko/lawyers/wei-tseng). Ved spørgsmål om en konkret sag bedes De bruge [Kontakt](/da/contact).
+De kan se det pågældende arbejdsområde under [Hvilke sager vi behandler](/da/services), den ansvarlige advokats forløb og sprog under [Hoverings internationale team](/da/lawyers). Ved spørgsmål om en konkret sag bedes De bruge [Kontakt](/da/contact).
 
 Denne artikel er almindeligt informerende materiale til undervisningsformål om selskabsstiftelse i Taiwan (公司設立) og de dermed sammenhængende ordninger; den er ikke juridisk eller skattemæssig rådgivning i en konkret sag og lover ikke et bestemt resultat. Nødvendige procedurer og udfald kan afvige efter investeringsstruktur, branche, ansøgerens nationalitet og opholdsstatus samt den kompetente myndigheds nyeste praksis; før gennemførelse af investering, kontrakt eller beskæftigelse skal de nyeste officielle kilder og de egne omstændigheder undersøges.
 

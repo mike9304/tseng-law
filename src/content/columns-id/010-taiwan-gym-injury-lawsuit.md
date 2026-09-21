@@ -114,6 +114,6 @@ Terjatuh di lantai tempat usaha, gangguan kesehatan akibat makanan, dan cedera y
 ---
 
 > Baca juga:
-> - [Panduan Pengacara Litigasi Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Pengacara Taiwan yang Dapat Berbahasa Korea](/ko/korean-lawyer-in-taiwan)
-> - [Panduan Mencari Pengacara di Taiwan](/ko/taiwan-lawyer)
+> - [Bagaimana lingkup pekerjaan dan biaya ditetapkan](/id/pricing)
+> - [Tim Internasional Hovering](/id/lawyers)
+> - [Tentang Hovering International Law Firm](/id/about)

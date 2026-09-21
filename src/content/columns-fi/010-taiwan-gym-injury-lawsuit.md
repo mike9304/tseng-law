@@ -114,6 +114,6 @@ Putoaminen lattialle yrityksessä, terveysvahinko elintarvikkeista ja vamma amma
 ---
 
 > Katso myös:
-> - [Opas Taiwanin oikeudenkäyntiasianajajaan](/ko/taiwan-litigation-lawyer)
-> - [Taiwanilainen asianajaja, joka puhuu koreaa](/ko/korean-lawyer-in-taiwan)
-> - [Opas asianajajan löytämiseen Taiwanissa](/ko/taiwan-lawyer)
+> - [Miten työn laajuus ja kulut vahvistetaan](/fi/pricing)
+> - [Hoveringin kansainvälinen tiimi](/fi/lawyers)
+> - [Hovering International Law Firmistä](/fi/about)

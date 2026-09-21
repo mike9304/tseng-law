@@ -138,7 +138,7 @@ Tarif terbatas menurut perjanjian tidak diterapkan secara otomatis hanya karena 
 - [Panduan izin tinggal tetap dari Badan Imigrasi Kementerian Dalam Negeri Taiwan (內政部移民署)](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Panduan pemeriksaan awal lokasi usaha Kota Taipei](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-Cakupan pekerjaan yang berkaitan dapat Anda periksa pada [Layanan investasi dan pendirian perusahaan di Taiwan](/ko/services/investment), sedangkan pengalaman dan bahasa yang dikuasai pengacara yang menangani dapat Anda periksa pada [Profil Pengacara Wei Tseng](/ko/lawyers/wei-tseng). Untuk pertanyaan mengenai perkara yang konkret, silakan gunakan [Hubungi kami](/id/contact).
+Cakupan pekerjaan yang berkaitan dapat Anda periksa pada [Bidang perkara yang kami tangani](/id/services), sedangkan pengalaman dan bahasa yang dikuasai pengacara yang menangani dapat Anda periksa pada [Tim Internasional Hovering](/id/lawyers). Untuk pertanyaan mengenai perkara yang konkret, silakan gunakan [Hubungi kami](/id/contact).
 
 Tulisan ini merupakan bahan yang bertujuan mendidik dan menjelaskan secara umum pendirian perusahaan di Taiwan beserta sistem yang berkaitan dengannya, dan bukan nasihat hukum atau nasihat perpajakan untuk perkara tertentu. Karena prosedur yang diperlukan dan hasilnya dapat berbeda menurut struktur investasi, bidang usaha, kewarganegaraan dan status tinggal pemohon, serta praktik terbaru instansi yang berwenang, sebaiknya Anda memastikan sumber resmi terbaru dan keadaan perkara Anda sendiri sebelum melaksanakan investasi, perjanjian, atau perekrutan.
 

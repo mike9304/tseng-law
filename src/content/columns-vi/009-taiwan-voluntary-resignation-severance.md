@@ -96,6 +96,6 @@ Trong phần lớn trường hợp, bên nào chuẩn bị trước thì bên đ
 ---
 
 > Xem thêm:
-> - [Hướng dẫn về luật sư tố tụng Đài Loan](/ko/taiwan-litigation-lawyer)
-> - [Luật sư Đài Loan có thể giao tiếp bằng tiếng Hàn](/ko/korean-lawyer-in-taiwan)
-> - [Lĩnh vực hoạt động — Lao động](/ko/services/labor)
+> - [Cách xác định phạm vi công việc và chi phí](/vi/pricing)
+> - [Đội ngũ quốc tế Hovering](/vi/lawyers)
+> - [Các lĩnh vực mà văn phòng nhận xử lý](/vi/services)

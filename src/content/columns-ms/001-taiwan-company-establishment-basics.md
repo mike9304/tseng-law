@@ -138,7 +138,7 @@ Kadar terhad perjanjian tidak terpakai secara automatik semata-mata kerana perja
 - [Petunjuk Pentadbiran Imigresen Taiwan (內政部移民署) mengenai kediaman tetap](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Petunjuk bandar Taipei mengenai semakan awal tempat aktiviti](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-Anda boleh merujuk skop aktiviti yang berkenaan di bawah [Perkhidmatan pelaburan dan penubuhan syarikat di Taiwan](/ko/services/investment), latar belakang dan bahasa peguam yang kompeten di bawah [Profil Peguam Wei Tseng](/ko/lawyers/wei-tseng). Untuk soalan mengenai kes konkret, sila gunakan [Hubungi](/ms/contact).
+Anda boleh merujuk skop aktiviti yang berkenaan di bawah [Hal yang kami kendalikan](/ms/services), latar belakang dan bahasa peguam yang kompeten di bawah [Pasukan antarabangsa Hovering](/ms/lawyers). Untuk soalan mengenai kes konkret, sila gunakan [Hubungi](/ms/contact).
 
 Artikel ini ialah dokumen maklumat umum untuk tujuan pendidikan mengenai penubuhan syarikat di Taiwan dan peraturan berkaitan; ia bukan nasihat undang-undang atau cukai dalam kes konkret dan tidak menjanjikan hasil tertentu. Prosedur yang diperlukan dan hasil boleh berbeza menurut struktur pelaburan, sektor, kewarganegaraan dan status kediaman pemohon serta amalan terbaharu pihak berkuasa kompeten; sebelum melaksanakan pelaburan, kontrak atau pekerjaan, sumber rasmi terbaharu dan keadaan khusus kes patut diteliti.
 

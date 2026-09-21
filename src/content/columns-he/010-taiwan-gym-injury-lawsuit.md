@@ -114,6 +114,6 @@ featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 
 > ראו גם:
-> - [מדריך לעורך דין להתדיינות בטאיוואן](/ko/taiwan-litigation-lawyer)
-> - [עורכת דין בטאיוואן הדוברת קוריאנית](/ko/korean-lawyer-in-taiwan)
-> - [מדריך חיפוש עורך דין בטאיוואן](/ko/taiwan-lawyer)
+> - [כיצד נקבעים היקף העבודה והעלויות](/he/pricing)
+> - [הצוות הבין־לאומי של Hovering](/he/lawyers)
+> - [על Hovering International Law Firm](/he/about)

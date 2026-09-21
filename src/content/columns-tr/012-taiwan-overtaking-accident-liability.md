@@ -58,8 +58,8 @@ Ek olarak [sollama kuralları ve usulünün şemasına](https://gonews.com.tw/ca
 ---
 
 > Ayrıca bakınız:
-> - [Tayvan dava avukatı rehberi](/ko/taiwan-litigation-lawyer)
-> - [Korece konuşan Tayvan avukatı](/ko/korean-lawyer-in-taiwan)
+> - [Çalışma kapsamı ve ücret nasıl belirlenir](/tr/pricing)
+> - [Hovering uluslararası ekibi](/tr/lawyers)
 > - [Tayvan’da trafik kazası işlem usulü](/tr/columns/taiwan-traffic-accident-procedure)
 
 Bu yazı, Tayvan’daki sollama kuralları ve kaza sorumluluğunun değerlendirilmesine ilişkin genel hukuki bilgidir; somut bir işe ilişkin görüş veya belirli bir sonuca dair vaat değildir. Gerçek sorumluluk kaza yerine, araç hareketine, hıza, işaretlere, delillere, bilirkişiliğe (鑑定) ve yürürlükteki hukuka göre değişebilir; somut işler ilgili belgelere göre ayrı incelenmelidir.

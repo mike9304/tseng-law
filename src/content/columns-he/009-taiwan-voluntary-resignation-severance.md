@@ -96,6 +96,6 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 ---
 
 > ראו גם:
-> - [מדריך לעורך דין להתדיינות בטאיוואן](/ko/taiwan-litigation-lawyer)
-> - [עורכת דין בטאיוואן הדוברת קוריאנית](/ko/korean-lawyer-in-taiwan)
-> - [תחומי פעילות — עבודה](/ko/services/labor)
+> - [כיצד נקבעים היקף העבודה והעלויות](/he/pricing)
+> - [הצוות הבין־לאומי של Hovering](/he/lawyers)
+> - [באילו עניינים אנו מטפלים](/he/services)

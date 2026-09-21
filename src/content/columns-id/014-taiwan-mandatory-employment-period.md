@@ -183,7 +183,7 @@ Ketika menyusun dokumen menurut urutan waktu, sebaiknya Anda mencantumkan sekali
 
 ## 11. Informasi terkait
 
-- [Layanan hukum ketenagakerjaan Taiwan](/ko/services/labor)
+- [Bidang perkara yang kami tangani](/id/services)
 - [Penjelasan pengunduran diri sukarela dan pengecualian pesangon (資遣費)](/id/columns/taiwan-voluntary-resignation-severance)
 - [Hubungi kami](/id/contact)
 

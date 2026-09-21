@@ -1,0 +1,1096 @@
+# th guidance pack strings (path → text). Generated 2026-09-21
+
+guidanceContent.th.languageName
+    ภาษาไทย
+
+guidanceContent.th.nav.home
+    หน้าแรก
+
+guidanceContent.th.nav.services
+    งานที่รับดำเนินการ
+
+guidanceContent.th.nav.about
+    เกี่ยวกับสำนักงาน
+
+guidanceContent.th.nav.lawyers
+    ทนายความ
+
+guidanceContent.th.nav.pricing
+    ขอบเขตและค่าใช้จ่าย
+
+guidanceContent.th.nav.contact
+    ติดต่อ
+
+guidanceContent.th.nav.faq
+    คำถามที่พบบ่อย
+
+guidanceContent.th.nav.privacy
+    ความเป็นส่วนตัว
+
+guidanceContent.th.nav.disclaimer
+    ข้อจำกัดความรับผิด
+
+guidanceContent.th.nav.columns
+    บทความ
+
+guidanceContent.th.contactCta
+    ส่งเรื่องเพื่อขอคำปรึกษา
+
+guidanceContent.th.footerNotice
+    หน้าภาษาไทยนี้เป็นข้อมูลแนะนำทั่วไปเกี่ยวกับงานของสำนักงานภายใต้กฎหมายไต้หวันเท่านั้น ไม่ใช่ความเห็นทางกฎหมายสำหรับเรื่องเฉพาะราย และการส่งข้อความผ่านหน้านี้ไม่ได้ทำให้เกิดความสัมพันธ์ระหว่างทนายความกับลูกความโดยอัตโนมัติ
+
+guidanceContent.th.skipLink
+    ข้ามเมนู ไปยังเนื้อหาหลัก
+
+guidanceContent.th.menuLabel
+    รายการหน้า
+
+guidanceContent.th.languageLabel
+    ภาษาที่แสดง
+
+guidanceContent.th.mega.services.description
+    สำนักงานรับงานหลักตามกฎหมายไต้หวันตามกลุ่มงานที่ระบุไว้
+
+guidanceContent.th.mega.services.viewAllLabel
+    ดูทั้งหมด
+
+guidanceContent.th.mega.columns.description
+    บทความอธิบายหัวข้อกฎหมายไต้หวันที่พบบ่อย
+
+guidanceContent.th.mega.columns.viewAllLabel
+    ดูทั้งหมด
+
+guidanceContent.th.mega.lawyers.description
+    แนะนำทนายความผู้รับผิดชอบและช่องทางติดต่อสำนักงาน
+
+guidanceContent.th.mega.lawyers.viewAllLabel
+    ดูทั้งหมด
+
+guidanceContent.th.mega.pricing.description
+    หน้านี้อธิบายขอบเขตงานและวิธีสอบถามค่าใช้จ่าย
+
+guidanceContent.th.mega.pricing.viewAllLabel
+    ดูทั้งหมด
+
+guidanceContent.th.mega.faq.description
+    คำถามที่พบบ่อยเกี่ยวกับงานของสำนักงานในไต้หวัน
+
+guidanceContent.th.mega.faq.viewAllLabel
+    ดูทั้งหมด
+
+guidanceContent.th.notFoundTitle
+    ไม่พบหน้าที่ต้องการ
+
+guidanceContent.th.notFoundText
+    หน้าที่ท่านกำลังค้นหาไม่มีอยู่ หรือถูกย้ายไปยังที่อยู่อื่นแล้ว ท่านสามารถกลับไปยังหน้าแรกภาษาไทยเพื่อดูหัวข้อแนะนำที่มีอยู่ในขณะนี้
+
+guidanceContent.th.backHomeLabel
+    กลับไปหน้าแรก
+
+guidanceContent.th.readSourceLabel
+    เปิดสารบัญบทความในภาษาต้นฉบับ
+
+guidanceContent.th.home.heroScrollLabel
+    เลื่อนลง
+
+guidanceContent.th.home.heroColumnsCtaLabel
+    ดูบทความ
+
+guidanceContent.th.home.servicesDetailLabel
+    ดูรายละเอียด
+
+guidanceContent.th.home.servicesAssistanceBefore
+    หากยังไม่แน่ใจว่าเรื่องของท่านอยู่ในกลุ่มงานใด หน้า 
+
+guidanceContent.th.home.servicesAssistanceLinkLabel
+    ติดต่อ
+
+guidanceContent.th.home.servicesAssistanceAfter
+     อธิบายวิธีเขียนสรุปเรื่องเพื่อให้ทนายความพิจารณา
+
+guidanceContent.th.home.columnsViewAllLabel
+    ดูบทความทั้งหมด
+
+guidanceContent.th.home.columnsReadMoreLabel
+    อ่านต่อ
+
+guidanceContent.th.home.columnsReviewLabel
+    ตรวจสอบโดยทนายความ Wei Tseng
+
+guidanceContent.th.home.columnsOriginalLanguageBadge
+    ภาษาต้นฉบับ
+
+guidanceContent.th.home.columnsOriginalLanguageNote
+    บทความด้านล่างยังไม่มีฉบับภาษาไทย รายการนี้คงไว้ตามภาษาต้นฉบับและจะเปิดหน้าในภาษานั้น เนื้อหาไม่ได้ผ่านการแปลอัตโนมัติ
+
+guidanceContent.th.home.imageBandAlt
+    บ้านลานสามด้านแบบดั้งเดิมของไต้หวัน (三合院) และศาลาสมัยใหม่ในแสงกลางวัน
+
+guidanceContent.th.home.videoPauseLabel
+    หยุดวิดีโอชั่วคราว
+
+guidanceContent.th.home.videoPlayLabel
+    เล่นวิดีโอ
+
+guidanceContent.th.home.videoReplayLabel
+    เล่นวิดีโออีกครั้ง
+
+guidanceContent.th.pages.home.eyebrow
+    ข้อมูลแนะนำ
+
+guidanceContent.th.pages.home.title
+    บริการทางกฎหมายในไต้หวัน — ข้อมูลแนะนำภาษาไทย
+
+guidanceContent.th.pages.home.description
+    คำอธิบายทั่วไปเป็นภาษาไทยเกี่ยวกับขอบเขตงานของ Hovering International Law Firm ในไต้หวัน ภาษาที่ใช้ให้คำปรึกษา และวิธีเริ่มต้นติดต่อ
+
+guidanceContent.th.pages.home.intro
+    Hovering International Law Firm ให้ความช่วยเหลือแก่ลูกความจากต่างประเทศ รวมถึงผู้ที่อยู่ในไต้หวัน ในเรื่องที่อยู่ภายใต้กฎหมายไต้หวัน ได้แก่ การลงทุนและการจัดตั้งบริษัท ข้อพิพาททางแพ่ง คดีการสมรสและครอบครัว ข้อพิพาทแรงงาน คดีอาญา และทรัพย์สินทางปัญญา ส่วนภาษาไทยนี้ช่วยให้ท่านทราบว่างานใดอยู่ในขอบเขตที่เรารับดำเนินการ ควรเตรียมสิ่งใด และติดต่อได้อย่างไร เนื้อหานี้เป็นข้อมูลทั่วไป ไม่ใช่ความเห็นทางกฎหมายสำหรับเรื่องเฉพาะของท่าน
+
+guidanceContent.th.pages.home.sections[0].heading
+    สำนักงานให้ความช่วยเหลือด้านใดบ้าง
+
+guidanceContent.th.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm เป็นสำนักงานกฎหมายที่ตั้งอยู่ในไต้หวัน ทำงานภายใต้กฎหมายไต้หวัน และมีที่ทำการที่ไทเป (臺北) เกาสง (高雄) ไถจง (臺中) และผิงตง (屏東) สำนักงานรับทั้งงานที่ปรึกษาสำหรับองค์กรธุรกิจและงานคดีในศาล พร้อมทั้งช่วยเหลือลูกความจากต่างประเทศในกระบวนการที่ต้องดำเนินการในไต้หวัน
+
+guidanceContent.th.pages.home.sections[0].paragraphs[1]
+    เนื้อหาทั้งหมดในหน้านี้เป็นข้อมูลทั่วไป ผลของแต่ละเรื่องขึ้นอยู่กับข้อเท็จจริง กฎเกณฑ์ที่ใช้บังคับ และช่วงเวลาที่เกิดเหตุ ข้อมูลแนะนำนี้จึงไม่อาจใช้แทนการพูดคุยกับทนายความเกี่ยวกับเอกสารและข้อเท็จจริงของท่านโดยตรง
+
+guidanceContent.th.pages.home.sections[1].heading
+    ภาษาของหน้าเว็บกับภาษาที่ใช้ให้คำปรึกษาเป็นคนละเรื่องกัน
+
+guidanceContent.th.pages.home.sections[1].paragraphs[0]
+    หน้านี้เขียนเป็นภาษาไทย แต่การให้คำปรึกษาจริงกับทนายความดำเนินการเพียง 4 ภาษา ได้แก่ ภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี การที่ท่านอ่านข้อมูลแนะนำเป็นภาษาไทยได้ ไม่ได้หมายความว่าการปรึกษาจะดำเนินเป็นภาษาไทย
+
+guidanceContent.th.pages.home.sections[1].paragraphs[1]
+    เราไม่รับประกันว่าจะจัดล่ามให้ ไม่รับประกันว่าจะตอบกลับภายในระยะเวลาใด และไม่ได้ยืนยันการนัดหมายผ่านหน้านี้ หากท่านไม่สะดวกทั้ง 4 ภาษาข้างต้น หน้า “ติดต่อ” อธิบายวิธีที่เราจะยืนยันช่องทางการสื่อสารร่วมกับท่าน
+
+guidanceContent.th.pages.home.sections[2].heading
+    ประเภทงานที่สำนักงานรับดำเนินการ
+
+guidanceContent.th.pages.home.sections[2].paragraphs[0]
+    ขอบเขตงานของสำนักงานประกอบด้วย 6 กลุ่มต่อไปนี้ หน้า “งานที่รับดำเนินการ” อธิบายแต่ละกลุ่มโดยละเอียดขึ้น พร้อมระบุสิ่งที่ไม่ได้รับประกันไว้ด้วย
+
+guidanceContent.th.pages.home.sections[2].items[0]
+    การลงทุนและการจัดตั้งบริษัทในไต้หวัน
+
+guidanceContent.th.pages.home.sections[2].items[1]
+    ข้อพิพาททางแพ่งและการเรียกค่าสินไหมทดแทน
+
+guidanceContent.th.pages.home.sections[2].items[2]
+    คดีการสมรส ครอบครัว และมรดก
+
+guidanceContent.th.pages.home.sections[2].items[3]
+    ข้อพิพาทแรงงานและการจ้างงาน
+
+guidanceContent.th.pages.home.sections[2].items[4]
+    คดีอาญา
+
+guidanceContent.th.pages.home.sections[2].items[5]
+    ทรัพย์สินทางปัญญา ได้แก่ เครื่องหมายการค้า สิทธิบัตร และลิขสิทธิ์
+
+guidanceContent.th.pages.home.sections[3].heading
+    ควรเริ่มต้นอย่างไร
+
+guidanceContent.th.pages.home.sections[3].paragraphs[0]
+    ขอแนะนำให้อ่านหน้า “งานที่รับดำเนินการ” เพื่อดูว่าเรื่องของท่านอยู่ในขอบเขตที่สำนักงานรับดำเนินการหรือไม่ จากนั้นจึงดูหน้า “ขอบเขตและค่าใช้จ่าย” และหน้า “ติดต่อ” เพื่อทราบวิธีกำหนดขอบเขตงานและยืนยันค่าใช้จ่ายก่อนเริ่มงาน
+
+guidanceContent.th.pages.home.sections[3].paragraphs[1]
+    เมื่อส่งเรื่องเข้ามา ท่านจะเขียนสรุปด้วยภาษาของท่านเองก็ได้ ข้อความต้นฉบับจะถูกเก็บไว้ตามที่ท่านเขียนและไม่มีการแปลโดยอัตโนมัติ เรื่องที่ส่งแล้วคือเรื่องที่รอการตรวจสอบ ยังไม่ใช่การปรึกษาที่เสร็จสิ้น และยังไม่ใช่การนัดหมายที่ได้รับการยืนยัน
+
+guidanceContent.th.pages.services.eyebrow
+    งานที่รับดำเนินการ
+
+guidanceContent.th.pages.services.title
+    ประเภทเรื่องที่สำนักงานรับดำเนินการ
+
+guidanceContent.th.pages.services.description
+    งาน 6 กลุ่มที่อยู่ในขอบเขตการให้บริการของสำนักงานในไต้หวัน พร้อมข้อจำกัดที่ควรทราบไว้ก่อนติดต่อ
+
+guidanceContent.th.pages.services.intro
+    ต่อไปนี้คือกลุ่มงานที่สำนักงานรับดำเนินการจริง พร้อมประเด็นที่มักถูกถามในช่วงแรก คำอธิบายนี้ช่วยให้ท่านพิจารณาว่าเรื่องของท่านอยู่ในขอบเขตที่เรารับดำเนินการหรือไม่ โดยเป็นข้อมูลทั่วไป ไม่ใช่การวิเคราะห์ทางกฎหมายสำหรับเอกสารเฉพาะเรื่องใดเรื่องหนึ่ง
+
+guidanceContent.th.pages.services.sections[0].heading
+    การลงทุนและการจัดตั้งบริษัทในไต้หวัน
+
+guidanceContent.th.pages.services.sections[0].paragraphs[0]
+    สำนักงานให้ความช่วยเหลือแก่นักลงทุนและบริษัทต่างชาติที่จัดตั้งหรือดำเนินกิจการในไต้หวัน ทั้งการเลือกรูปแบบนิติบุคคล การเตรียมและยื่นเอกสาร การนำเงินลงทุนเข้าประเทศ การดำเนินการกับธนาคาร การพิจารณาสถานประกอบการ และเงื่อนไขเฉพาะของแต่ละประเภทธุรกิจ นอกจากนี้ยังช่วยดูแลเรื่องบัญชีและภาษีที่เกิดจากการจัดตั้งและการดำเนินกิจการในไต้หวันด้วย
+
+guidanceContent.th.pages.services.sections[0].paragraphs[1]
+    ลำดับขั้นตอนและระยะเวลาแตกต่างกันไปตามรูปแบบนิติบุคคลที่เลือก ผู้ลงทุน ประเภทธุรกิจ ธนาคารที่เกี่ยวข้อง และเอกสารที่มีอยู่ ทั้งนี้ การจัดตั้งบริษัทไม่ได้ทำให้ได้สถานะการมีถิ่นที่อยู่ (居留) หรือใบอนุญาตทำงาน (工作許可) โดยอัตโนมัติ เพราะเป็นคนละกระบวนการกัน และต้องพิจารณาเป็นรายกรณี
+
+guidanceContent.th.pages.services.sections[1].heading
+    ข้อพิพาททางแพ่งและการเรียกค่าสินไหมทดแทน
+
+guidanceContent.th.pages.services.sections[1].paragraphs[0]
+    กลุ่มนี้ครอบคลุมข้อพิพาทตามสัญญา การเรียกค่าสินไหมทดแทนจากการละเมิด และข้อพิพาทของผู้บริโภค งานมักเริ่มจากการจัดลำดับเหตุการณ์ตามเวลา ตรวจดูเอกสารและพยานหลักฐานที่มีอยู่ แล้วจึงพิจารณาแนวทางดำเนินการ
+
+guidanceContent.th.pages.services.sections[1].paragraphs[1]
+    อายุความตามกฎหมายและความครบถ้วนของพยานหลักฐานมีผลอย่างมากต่อการดำเนินคดีแพ่ง ท่านจึงควรแจ้งวันที่ต่าง ๆ ที่ทราบตั้งแต่ต้น หากท่านยังเก็บสัญญา ข้อความที่ติดต่อกัน หลักฐานการชำระเงิน หรือภาพถ่ายเหตุการณ์ไว้ โปรดแจ้งให้ทราบตั้งแต่แรก
+
+guidanceContent.th.pages.services.sections[2].heading
+    คดีการสมรส ครอบครัว และมรดก
+
+guidanceContent.th.pages.services.sections[2].paragraphs[0]
+    สำนักงานรับดำเนินการเรื่องการหย่า (離婚) การแบ่งทรัพย์สิน การใช้และการรับภาระสิทธิและหน้าที่ต่อบุตรผู้เยาว์ (未成年子女權利義務之行使或負擔) การพบและติดต่อกับบุตร (會面交往) และมรดก (繼承) รวมถึงกรณีที่คู่กรณีหรือทรัพย์สินอยู่คนละประเทศ คดีครอบครัวที่มีองค์ประกอบต่างประเทศมักต้องตรวจสอบเพิ่มเติมเกี่ยวกับเอกสารทะเบียนราษฎร (戶籍) รูปแบบของเอกสาร และวิธีพิสูจน์ในไต้หวัน
+
+guidanceContent.th.pages.services.sections[2].paragraphs[1]
+    เนื่องจากเรื่องครอบครัวมักมีกำหนดเวลาและมีหลายกระบวนการดำเนินไปพร้อมกัน สรุปเรื่องในครั้งแรกจึงควรระบุความสัมพันธ์ระหว่างคู่กรณี ที่อยู่ปัจจุบัน และกระบวนการที่ดำเนินไปแล้วหรือกำลังดำเนินอยู่
+
+guidanceContent.th.pages.services.sections[3].heading
+    ข้อพิพาทแรงงานและการจ้างงาน
+
+guidanceContent.th.pages.services.sections[3].paragraphs[0]
+    กลุ่มนี้ครอบคลุมการเลิกจ้าง ค่าชดเชยตามกฎหมายไต้หวัน (資遣費 ซึ่งไม่ควรถือว่าเหมือนกับระบบทำนองเดียวกันของประเทศอื่น) ค่าจ้าง และข้อพิพาทที่เกิดจากข้อกำหนดในสัญญาจ้างแรงงาน (勞動契約) ทั้งในฝ่ายลูกจ้างและฝ่ายนายจ้าง ในการตรวจสอบ เราจะแยกเหตุแห่งการเลิกจ้างออกจากประเด็นเรื่องการบอกกล่าว เงินที่ต้องจ่าย และกำหนดเวลา
+
+guidanceContent.th.pages.services.sections[3].paragraphs[1]
+    สัญญาจ้างแรงงาน ข้อบังคับเกี่ยวกับการทำงาน (工作規則) สลิปเงินเดือน และข้อความที่ติดต่อกันระหว่างสองฝ่าย มักเป็นเอกสารสำคัญ หากท่านยังเก็บเอกสารเหล่านี้ไว้ โปรดระบุไว้ในสรุปเรื่องด้วย เพื่อให้การตรวจสอบเบื้องต้นแม่นยำขึ้น
+
+guidanceContent.th.pages.services.sections[4].heading
+    คดีอาญา
+
+guidanceContent.th.pages.services.sections[4].paragraphs[0]
+    สำนักงานให้ความช่วยเหลือทั้งในชั้นสอบสวนและชั้นพิจารณาของศาล ทั้งฝ่ายผู้ถูกกล่าวหาหรือจำเลย และฝ่ายผู้เสียหาย รวมถึงการประเมินความเสี่ยงทางอาญาที่เกิดขึ้นในการประกอบธุรกิจ
+
+guidanceContent.th.pages.services.sections[4].paragraphs[1]
+    คดีอาญามักมีกำหนดเวลาสั้นและมีขั้นตอนที่กำหนดไว้แน่นอน หากท่านได้รับหมายหรือหนังสือจากเจ้าพนักงานแล้ว โปรดแจ้งวันที่ปรากฏในเอกสารนั้นตั้งแต่ต้น เพื่อให้เรื่องได้รับการตรวจสอบตามลำดับความเร่งด่วน
+
+guidanceContent.th.pages.services.sections[5].heading
+    ทรัพย์สินทางปัญญา
+
+guidanceContent.th.pages.services.sections[5].paragraphs[0]
+    สำนักงานช่วยดำเนินการจดทะเบียนเครื่องหมายการค้า (商標) และสิทธิบัตร (專利) เรื่องเกี่ยวกับลิขสิทธิ์ ตลอดจนข้อพิพาทที่เกี่ยวข้องกับสิทธิเหล่านี้ในไต้หวัน
+
+guidanceContent.th.pages.services.sections[5].paragraphs[1]
+    งานกลุ่มนี้ลำดับการดำเนินการมีความสำคัญมาก ทั้งขอบเขตความคุ้มครอง ช่วงเวลาที่ยื่นคำขอ และสภาพการใช้งานจริง ล้วนมีผลต่อแนวทางที่เลือก ทั้งนี้ การยื่นคำขอไม่ได้เป็นหลักประกันว่าคำขอนั้นจะได้รับอนุมัติ
+
+guidanceContent.th.pages.services.sections[6].heading
+    ขอบเขตและการยืนยัน
+
+guidanceContent.th.pages.services.sections[6].paragraphs[0]
+    สำนักงานทำงานภายใต้กฎหมายไต้หวัน และรับเรื่องที่อยู่ในกลุ่มงานข้างต้น ส่วนขอบเขตของแต่ละเรื่องจะได้รับการยืนยันเป็นการเฉพาะ หลังจากทนายความตรวจสอบเนื้อหาที่ท่านส่งมาแล้ว
+
+guidanceContent.th.pages.services.sections[6].paragraphs[1]
+    สถานะการพำนัก ใบอนุญาตทำงาน และเรื่องทำนองเดียวกัน พิจารณาจากเอกสารและข้อเท็จจริงของแต่ละราย ไม่ได้อนุมานจากสัญชาติ หากเรื่องของท่านมีส่วนที่เกี่ยวข้องกับประเด็นเหล่านี้ โปรดระบุไว้เมื่อติดต่อเข้ามา เพื่อให้ทนายความพิจารณาได้ว่าเรื่องของท่านอยู่ในกลุ่มงานใด ทั้งนี้ หน้านี้ไม่รับประกันผลและไม่รับประกันระยะเวลาตอบกลับ
+
+guidanceContent.th.pages.about.eyebrow
+    เกี่ยวกับสำนักงาน
+
+guidanceContent.th.pages.about.title
+    เกี่ยวกับ Hovering International Law Firm
+
+guidanceContent.th.pages.about.description
+    ข้อมูลพื้นฐานเกี่ยวกับสำนักงานกฎหมายในไต้หวันแห่งนี้ สำนักงานสาขา และงานที่เกี่ยวข้องกับต่างประเทศ
+
+guidanceContent.th.pages.about.intro
+    Hovering International Law Firm เป็นสำนักงานกฎหมายในไต้หวัน โดยมีทนายความที่ทำงานในหลากหลายสาขา ตั้งแต่งานที่ปรึกษาสำหรับองค์กรธุรกิจไปจนถึงงานคดีในศาล ส่วนนี้อธิบายความเป็นมาของสำนักงาน สำนักงานสาขา และงานที่เกี่ยวข้องกับต่างประเทศ
+
+guidanceContent.th.pages.about.sections[0].heading
+    การก่อตั้งและโครงสร้าง
+
+guidanceContent.th.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) ก่อตั้งขึ้นในปี 2016 โดยกลุ่มทนายความที่จบการศึกษาจากมหาวิทยาลัยแห่งชาติไต้หวัน (國立臺灣大學) ชื่อภาษาจีนของสำนักงานประกอบด้วยอักษรสองตัว คือ 昊 หมายถึงท้องฟ้าอันกว้างใหญ่ และ 鼎 หมายถึงรากฐานอันมั่นคง ซึ่งสะท้อนแนวทางของสำนักงานตั้งแต่เริ่มก่อตั้ง
+
+guidanceContent.th.pages.about.sections[0].paragraphs[1]
+    สำนักงานมีที่ทำการที่ไทเป (臺北) เกาสง (高雄) ไถจง (臺中) และผิงตง (屏東) สาขาเกาสงเน้นงานด้านการกำกับดูแลกิจการ พร้อมทั้งรับข้อพิพาททางแพ่ง อาญา และปกครองทั่วไป สาขาไถจงรับงานก่อสร้าง ทรัพย์สินทางปัญญา และงานที่เกี่ยวข้องกับเกาหลีและญี่ปุ่น ส่วนสาขาผิงตงเปิดขึ้นในปี 2017 เพื่อรองรับความต้องการในพื้นที่
+
+guidanceContent.th.pages.about.sections[0].paragraphs[2]
+    นอกจากงานด้านทนายความแล้ว ในปี 2020 ได้มีการก่อตั้ง Hovering Accounting Office ซึ่งให้บริการด้านบัญชีและการวางแผนภาษีแก่เจ้าของกิจการและบุคคลที่มีสินทรัพย์สูง
+
+guidanceContent.th.pages.about.sections[1].heading
+    งานที่เกี่ยวข้องกับต่างประเทศ
+
+guidanceContent.th.pages.about.sections[1].paragraphs[0]
+    งานที่เกี่ยวข้องกับต่างประเทศของสำนักงานประกอบด้วยการจัดตั้งบริษัท การยื่นขอวีซ่า การจดทะเบียนเครื่องหมายการค้าและสิทธิบัตร การประเมินความเสี่ยงทางกฎหมาย และการให้คำปรึกษาด้านภาษีนิติบุคคล โดยสาขาไถจงรับงานก่อสร้าง ทรัพย์สินทางปัญญา และงานที่เกี่ยวข้องกับเกาหลีและญี่ปุ่นเป็นการเฉพาะ ส่วนทนายความ Wei Tseng (曾雋崴) ดูแลลูกความชาวเกาหลี ชาวญี่ปุ่น และลูกความต่างชาติอื่น ๆ ในกลุ่มงานข้างต้น
+
+guidanceContent.th.pages.about.sections[1].paragraphs[1]
+    การที่เราจะรับดำเนินการเรื่องใดได้หรือไม่ ขึ้นอยู่กับเนื้อหาของเรื่องนั้นและภาษาที่ใช้สื่อสาร หากเรื่องของท่านอยู่ในกลุ่มงานข้างต้น และสื่อสารกันได้ด้วยภาษาใดภาษาหนึ่งใน 4 ภาษาที่ใช้ให้คำปรึกษา ท่านสามารถส่งสรุปเรื่องเข้ามาเพื่อให้ทนายความตรวจสอบได้
+
+guidanceContent.th.pages.about.sections[2].heading
+    เมื่อท่านติดต่อเข้ามา
+
+guidanceContent.th.pages.about.sections[2].paragraphs[0]
+    เมื่อได้รับสรุปเรื่องของท่านแล้ว ทนายความจะตรวจสอบเนื้อหา จากนั้นจึงหารือเกี่ยวกับขอบเขตงานที่ดำเนินการได้ เอกสารที่ยังต้องเพิ่มเติม และขั้นตอนถัดไป สำหรับเรื่องที่มีประเด็นด้านบัญชีหรือภาษี สำนักงานสามารถทำงานร่วมกับส่วนงานบัญชีในกระบวนการเดียวกันได้
+
+guidanceContent.th.pages.about.sections[2].paragraphs[1]
+    ผลของแต่ละเรื่องขึ้นอยู่กับข้อเท็จจริงและเอกสารเฉพาะราย เราจึงไม่รับประกันผล หากท่านต้องการคำตอบที่แน่นอนสำหรับกรณีของท่าน วิธีเดียวคือการปรึกษาทนายความโดยตรงจากเอกสารและข้อเท็จจริงนั้น ในภาษาใดภาษาหนึ่งจาก 4 ภาษาที่ใช้ให้คำปรึกษา
+
+guidanceContent.th.pages.lawyers.eyebrow
+    ทนายความ
+
+guidanceContent.th.pages.lawyers.title
+    ทีมงานระหว่างประเทศ Hovering
+
+guidanceContent.th.pages.lawyers.description
+    ประวัติของทนายความ ผู้จัดการงาน และผู้สอบบัญชีพันธมิตรของ Hovering
+
+guidanceContent.th.pages.lawyers.intro
+    
+
+guidanceContent.th.pages.pricing.eyebrow
+    ขอบเขตและค่าใช้จ่าย
+
+guidanceContent.th.pages.pricing.title
+    การกำหนดขอบเขตงานและค่าใช้จ่าย
+
+guidanceContent.th.pages.pricing.description
+    คำอธิบายลำดับการกำหนดขอบเขตงาน การยืนยันค่าใช้จ่าย และเหตุผลที่หน้านี้ไม่ได้แสดงอัตราค่าบริการ
+
+guidanceContent.th.pages.pricing.intro
+    หน้านี้อธิบายวิธีกำหนดค่าใช้จ่าย ไม่ได้ระบุตัวเลข จำนวนค่าใช้จ่ายขึ้นอยู่กับขอบเขตงานของแต่ละเรื่อง และจะมีความหมายก็ต่อเมื่อขอบเขตดังกล่าวชัดเจนแล้ว
+
+guidanceContent.th.pages.pricing.sections[0].heading
+    ขั้นแรกคือการกำหนดขอบเขตงาน
+
+guidanceContent.th.pages.pricing.sections[0].paragraphs[0]
+    เรื่องประเภทเดียวกันอาจมีปริมาณงานต่างกันมาก ขึ้นอยู่กับจำนวนคู่กรณี เอกสารที่มีอยู่ กำหนดเวลาที่ต้องปฏิบัติตาม และการที่กระบวนการได้เริ่มไปแล้วหรือยัง ด้วยเหตุนี้ ขั้นตอนแรกจึงเป็นการทำให้ชัดเจนว่างานที่จะดำเนินการรวมถึงอะไรบ้าง และไม่รวมอะไรบ้าง
+
+guidanceContent.th.pages.pricing.sections[0].paragraphs[1]
+    สรุปเรื่องที่ท่านส่งมาในตอนแรกคือพื้นฐานของการกำหนดขอบเขตนี้ ยิ่งสรุปชัดเจนว่าเกิดอะไรขึ้น ท่านต้องการอะไร และมีกำหนดเวลาใด การกำหนดขอบเขตก็ยิ่งแม่นยำ
+
+guidanceContent.th.pages.pricing.sections[1].heading
+    ค่าใช้จ่ายจะได้รับการยืนยันก่อนเริ่มงาน
+
+guidanceContent.th.pages.pricing.sections[1].paragraphs[0]
+    เมื่อขอบเขตงานชัดเจนแล้ว จำนวนเงินและวิธีคิดค่าใช้จ่ายจะได้รับการหารือและยืนยันกับท่านก่อนเริ่มงาน หากขอบเขตงานเปลี่ยนแปลงระหว่างดำเนินการ ส่วนที่เปลี่ยนแปลงนั้นก็ต้องได้รับการยืนยันใหม่เช่นกัน
+
+guidanceContent.th.pages.pricing.sections[1].paragraphs[1]
+    หน้านี้ไม่ใช่ใบเสนอราคา และไม่ก่อให้เกิดภาระการชำระเงินใด ๆ การส่งเรื่องเข้ามาผ่านหน้านี้ก็ไม่มีค่าใช้จ่าย
+
+guidanceContent.th.pages.pricing.sections[2].heading
+    การปรึกษาอาจเป็นบริการที่มีค่าใช้จ่าย
+
+guidanceContent.th.pages.pricing.sections[2].paragraphs[0]
+    การปรึกษากับทนายความอาจเป็นบริการที่มีค่าใช้จ่าย หน้านี้ไม่ได้ระบุว่าการปรึกษาครั้งแรกไม่เสียค่าใช้จ่าย และไม่ควรตีความข้อความใดในหน้านี้ไปในความหมายนั้น
+
+guidanceContent.th.pages.pricing.sections[2].paragraphs[1]
+    หากการปรึกษามีค่าใช้จ่าย จำนวนเงินและวิธีชำระจะได้รับการแจ้งให้ทราบก่อนการปรึกษาจะเริ่มขึ้น
+
+guidanceContent.th.pages.pricing.sections[3].heading
+    เหตุใดหน้านี้จึงไม่แสดงอัตราค่าบริการ
+
+guidanceContent.th.pages.pricing.sections[3].paragraphs[0]
+    ค่าใช้จ่ายขึ้นอยู่กับแต่ละเรื่อง ทั้งปริมาณงานที่ต้องทำ จำนวนคู่กรณี เอกสารที่มีอยู่ กำหนดเวลาที่ต้องปฏิบัติตาม และการที่กระบวนการได้เริ่มไปแล้วหรือยัง ตัวเลขที่ประกาศไว้ล่วงหน้าจึงไม่อาจบอกค่าใช้จ่ายสำหรับเรื่องของท่านได้ ด้วยเหตุนี้ แทนที่จะแสดงอัตราค่าบริการ เราจะกำหนดขอบเขตงานของเรื่องของท่านก่อน แล้วจึงแจ้งค่าใช้จ่ายที่ตรงกับขอบเขตนั้น เพื่อให้ท่านพิจารณาก่อนเริ่มงาน
+
+guidanceContent.th.pages.pricing.sections[3].paragraphs[1]
+    นอกจากค่าทนายความแล้ว เรื่องหนึ่ง ๆ ยังอาจมีค่าธรรมเนียมที่ต้องชำระต่อศาล หน่วยงานของรัฐ หรือบุคคลภายนอก ค่าใช้จ่ายส่วนนี้แยกต่างหากจากค่าทนายความ และขึ้นอยู่กับกระบวนการที่ดำเนินการ
+
+guidanceContent.th.pages.contact.eyebrow
+    ติดต่อ
+
+guidanceContent.th.pages.contact.title
+    วิธีติดต่อสำนักงาน
+
+guidanceContent.th.pages.contact.description
+    ภาษาของหน้าเว็บ ภาษาที่ใช้ให้คำปรึกษา แนวทางเมื่อท่านไม่สะดวกทั้ง 4 ภาษา และสิ่งที่ไม่ได้รับประกัน
+
+guidanceContent.th.pages.contact.intro
+    ก่อนติดต่อเข้ามา โปรดแยกแยะ 3 เรื่องต่อไปนี้ออกจากกัน ทั้งสามเรื่องมักถูกเข้าใจปะปนกัน ทั้งที่มีความหมายต่างกัน
+
+guidanceContent.th.pages.contact.sections[0].heading
+    3 เรื่องที่ต้องแยกจากกัน
+
+guidanceContent.th.pages.contact.sections[0].paragraphs[0]
+    ภาษาที่ใช้แสดงหน้าเว็บ ภาษาที่ใช้ปรึกษากับทนายความ และภาษาที่ท่านใช้เขียนข้อความ เป็นสามเรื่องที่เป็นอิสระจากกัน
+
+guidanceContent.th.pages.contact.sections[0].items[0]
+    ภาษาของหน้าเว็บ: ข้อมูลแนะนำส่วนนี้จัดทำเป็นภาษาไทย
+
+guidanceContent.th.pages.contact.sections[0].items[1]
+    ภาษาที่ใช้ให้คำปรึกษา: การปรึกษากับทนายความดำเนินการเป็นภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี
+
+guidanceContent.th.pages.contact.sections[0].items[2]
+    ภาษาที่ท่านเขียน: ท่านเขียนสรุปเรื่องด้วยภาษาของท่านเองได้ และข้อความต้นฉบับจะถูกเก็บไว้ตามเดิม
+
+guidanceContent.th.pages.contact.sections[1].heading
+    หากท่านไม่สะดวกทั้ง 4 ภาษาที่ใช้ให้คำปรึกษา
+
+guidanceContent.th.pages.contact.sections[1].paragraphs[0]
+    ในแบบฟอร์มติดต่อ ท่านสามารถเลือก “ต้องยืนยันวิธีติดต่อ” ได้ จากนั้นเราจะตอบกลับเพื่อยืนยันวิธีสื่อสารที่เป็นไปได้ร่วมกับท่าน ทั้งนี้ เราไม่รับประกันว่าจะรองรับภาษาอื่นได้ และไม่รับประกันระยะเวลาตอบกลับ
+
+guidanceContent.th.pages.contact.sections[1].paragraphs[1]
+    ขั้นตอนนี้เป็นเพียงการยืนยัน ไม่ใช่คำมั่นสัญญา เราไม่รับประกันว่าจะจัดล่ามให้ ไม่รับประกันว่าจะให้บริการเป็นภาษาไทยหรือภาษาอื่นนอกเหนือจาก 4 ภาษาข้างต้น และไม่รับประกันว่าจะรับดำเนินการได้ทุกเรื่อง
+
+guidanceContent.th.pages.contact.sections[2].heading
+    ควรเขียนอะไรในข้อความแรก
+
+guidanceContent.th.pages.contact.sections[2].paragraphs[0]
+    ควรระบุว่าเกิดอะไรขึ้น ท่านต้องการความช่วยเหลือด้านใด เรื่องนี้เกี่ยวข้องกับไต้หวันอย่างไร และมีกำหนดเวลาหรือไม่หากท่านทราบ หากได้รับหมายหรือหนังสือจากศาลหรือหน่วยงานของรัฐแล้ว โปรดแจ้งวันที่ปรากฏในเอกสารนั้นด้วย
+
+guidanceContent.th.pages.contact.sections[2].paragraphs[1]
+    ในขั้นแรกยังไม่จำเป็นต้องส่งเลขหนังสือเดินทาง เลขบัตรประจำตัว ข้อมูลบัญชีธนาคาร เวชระเบียน หรือแฟ้มพยานหลักฐานทั้งหมด โปรดรอคำแนะนำจากทนายความ แล้วจึงส่งเอกสารที่มีความอ่อนไหวด้วยวิธีที่ปลอดภัย
+
+guidanceContent.th.pages.contact.sections[3].heading
+    สิ่งที่หน้านี้ไม่ได้รับประกัน
+
+guidanceContent.th.pages.contact.sections[3].paragraphs[0]
+    เราไม่รับประกันระยะเวลาในการตอบกลับ ไม่ได้ยืนยันการนัดหมายผ่านหน้านี้ ไม่รับประกันว่าทนายความคนใดจะเป็นผู้รับผิดชอบเรื่อง และไม่ได้จัดล่ามให้ ส่วนการแปลข้อความเป็นคนละเรื่องกัน ข้อความที่ท่านส่งมาจะไม่ถูกแปลโดยอัตโนมัติ
+
+guidanceContent.th.pages.contact.sections[3].paragraphs[1]
+    เมื่อท่านส่งเรื่องเข้ามา เนื้อหาจะถูกบันทึกไว้และรอการตรวจสอบ หากผ่านไประยะหนึ่งแล้วท่านยังไม่ได้รับการติดต่อกลับ ท่านสามารถส่งเรื่องซ้ำได้ทางอีเมลตามที่อยู่ในหน้าติดต่อ
+
+guidanceContent.th.pages.faq.eyebrow
+    คำถามที่พบบ่อย
+
+guidanceContent.th.pages.faq.title
+    คำถามที่พบบ่อย
+
+guidanceContent.th.pages.faq.description
+    คำอธิบายเกี่ยวกับขอบเขตงาน การเตรียมตัว ภาษา ค่าใช้จ่าย และความหมายของการส่งเรื่องเข้ามา
+
+guidanceContent.th.pages.faq.intro
+    คำถามด้านล่างนี้ตอบไว้ในระดับข้อมูลทั่วไป คำตอบสำหรับเรื่องเฉพาะของท่านจะให้ได้ก็ต่อเมื่อทนายความได้ตรวจสอบเอกสารและข้อเท็จจริงแล้ว
+
+guidanceContent.th.pages.faq.sections[0].heading
+    วิธีใช้ส่วนนี้
+
+guidanceContent.th.pages.faq.sections[0].paragraphs[0]
+    หากท่านไม่พบคำตอบสำหรับสถานการณ์ของท่าน โดยทั่วไปนั่นเป็นสัญญาณว่าคำตอบขึ้นอยู่กับข้อเท็จจริงเฉพาะราย ในกรณีเช่นนี้ โปรดเขียนข้อเท็จจริงดังกล่าวไว้ในสรุปเรื่องเมื่อติดต่อเข้ามา แทนการอนุมานเอาเองจากเนื้อหาในหน้านี้
+
+guidanceContent.th.pages.faq.faqs[0].question
+    สำนักงานรับเรื่องประเภทใดบ้าง
+
+guidanceContent.th.pages.faq.faqs[0].answer
+    สำนักงานรับงาน 6 กลุ่ม ได้แก่ การลงทุนและการจัดตั้งบริษัทในไต้หวัน ข้อพิพาททางแพ่งและการเรียกค่าสินไหมทดแทน คดีการสมรส ครอบครัว และมรดก ข้อพิพาทแรงงาน คดีอาญา และทรัพย์สินทางปัญญา ส่วนการจะรับเรื่องใดเรื่องหนึ่งหรือไม่ จะพิจารณาหลังตรวจสอบเนื้อหาแล้ว
+
+guidanceContent.th.pages.faq.faqs[1].question
+    ควรเตรียมอะไรก่อนติดต่อ
+
+guidanceContent.th.pages.faq.faqs[1].answer
+    โปรดเตรียมสรุปสั้น ๆ เกี่ยวกับลำดับเหตุการณ์ สิ่งที่ท่านต้องการ ความเกี่ยวข้องของเรื่องกับไต้หวัน และกำหนดเวลาหากมี หากมีหมายหรือหนังสือจากศาลหรือหน่วยงานของรัฐแล้ว โปรดแจ้งวันที่ในเอกสารด้วย ในขั้นนี้ยังไม่จำเป็นต้องส่งเอกสารแสดงตนหรือพยานหลักฐานทั้งหมด
+
+guidanceContent.th.pages.faq.faqs[2].question
+    ปรึกษาเป็นภาษาไทยได้หรือไม่
+
+guidanceContent.th.pages.faq.faqs[2].answer
+    ไม่ได้ ข้อมูลแนะนำส่วนนี้จัดทำเป็นภาษาไทย แต่การปรึกษากับทนายความดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี ทั้งนี้ สำนักงานไม่ได้จัดล่ามให้ ส่วนการแปลข้อความเป็นคนละเรื่องกัน ข้อความต้นฉบับที่ท่านเขียนจะถูกเก็บไว้ตามเดิมและไม่มีการแปลโดยอัตโนมัติ
+
+guidanceContent.th.pages.faq.faqs[3].question
+    หากไม่สะดวกทั้ง 4 ภาษานั้นจะทำอย่างไร
+
+guidanceContent.th.pages.faq.faqs[3].answer
+    โปรดเลือก “ต้องยืนยันวิธีติดต่อ” เมื่อส่งเรื่องเข้ามา เราจะตอบกลับเพื่อยืนยันวิธีสื่อสารที่เป็นไปได้ร่วมกับท่าน ขั้นตอนนี้เป็นการยืนยัน ไม่ใช่คำมั่นว่าเราจะให้บริการเป็นภาษาอื่นได้
+
+guidanceContent.th.pages.faq.faqs[4].question
+    ข้อความที่เขียนเป็นภาษาไทยจะถูกจัดการอย่างไร
+
+guidanceContent.th.pages.faq.faqs[4].answer
+    ข้อความต้นฉบับที่ท่านเขียนจะถูกเก็บไว้ตามเดิมและไม่มีการแปลโดยอัตโนมัติ หากจำเป็น ภาษาที่จะใช้สื่อสารในขั้นถัดไปจะยืนยันร่วมกับท่าน
+
+guidanceContent.th.pages.faq.faqs[5].question
+    ส่งเรื่องแล้วถือว่าได้รับคำปรึกษาแล้วหรือไม่
+
+guidanceContent.th.pages.faq.faqs[5].answer
+    ยังไม่ถือว่าได้รับ เรื่องที่ส่งแล้วคือเรื่องที่รอทนายความตรวจสอบ ไม่ใช่ความเห็นทางกฎหมาย ไม่ใช่การนัดหมายที่ยืนยันแล้ว และการส่งเรื่องเองก็ไม่ได้ทำให้เกิดความสัมพันธ์ระหว่างทนายความกับลูกความ
+
+guidanceContent.th.pages.faq.faqs[6].question
+    ค่าใช้จ่ายคิดอย่างไร
+
+guidanceContent.th.pages.faq.faqs[6].answer
+    จะกำหนดขอบเขตงานก่อน จากนั้นจำนวนเงินและวิธีคิดค่าใช้จ่ายจะได้รับการยืนยันกับท่านก่อนเริ่มงาน หน้านี้ไม่ได้แสดงตัวเลข และไม่ได้ระบุว่าการปรึกษาครั้งแรกไม่เสียค่าใช้จ่าย
+
+guidanceContent.th.pages.faq.faqs[7].question
+    หากเรื่องของท่านเร่งด่วนมากจะทำอย่างไร
+
+guidanceContent.th.pages.faq.faqs[7].answer
+    โปรดระบุกำหนดเวลา หรือวันที่ปรากฏในเอกสารทางการ ไว้ตั้งแต่ต้นของสรุปเรื่อง เพื่อให้ทนายความเห็นกำหนดเวลาเหล่านั้นเมื่อตรวจสอบ ทั้งนี้ หน้านี้ไม่มีสายด่วนและไม่รับประกันระยะเวลาตอบกลับ หากเรื่องเร่งด่วนจนรอไม่ได้ ท่านควรหาช่องทางอื่นในพื้นที่ของท่านควบคู่ไปด้วย
+
+guidanceContent.th.pages.privacy.eyebrow
+    ความเป็นส่วนตัว
+
+guidanceContent.th.pages.privacy.title
+    ข้อมูลที่เก็บผ่านแบบฟอร์มติดต่อ
+
+guidanceContent.th.pages.privacy.description
+    แบบฟอร์มติดต่อในส่วนภาษาไทยเก็บข้อมูลใดบ้าง ข้อความต้นฉบับได้รับการจัดการอย่างไร และท่านติดต่อเรื่องข้อมูลของท่านได้อย่างไร
+
+guidanceContent.th.pages.privacy.intro
+    ส่วนนี้กล่าวถึงเฉพาะแบบฟอร์มติดต่อในหน้าข้อมูลแนะนำเหล่านี้ เนื้อหาที่ระบุไว้เป็นคำอธิบายวิธีจัดการข้อมูล ไม่ใช่คำรับประกันทางเทคนิค
+
+guidanceContent.th.pages.privacy.sections[0].heading
+    ข้อมูลที่เก็บ
+
+guidanceContent.th.pages.privacy.sections[0].paragraphs[0]
+    เมื่อท่านส่งเรื่องผ่านแบบฟอร์มในส่วนนี้ ระบบจะบันทึกข้อมูลต่อไปนี้
+
+guidanceContent.th.pages.privacy.sections[0].items[0]
+    ชื่อที่ท่านกรอก
+
+guidanceContent.th.pages.privacy.sections[0].items[1]
+    ที่อยู่อีเมลสำหรับติดต่อกลับ
+
+guidanceContent.th.pages.privacy.sections[0].items[2]
+    ภาษาที่แสดงบนหน้าเว็บขณะที่ท่านส่ง
+
+guidanceContent.th.pages.privacy.sections[0].items[3]
+    ภาษาที่ท่านใช้เขียน
+
+guidanceContent.th.pages.privacy.sections[0].items[4]
+    ภาษาที่ท่านต้องการใช้ในการปรึกษา
+
+guidanceContent.th.pages.privacy.sections[0].items[5]
+    ข้อความต้นฉบับที่ท่านเขียน
+
+guidanceContent.th.pages.privacy.sections[0].items[6]
+    การให้ความยินยอมส่งเรื่องของท่าน
+
+guidanceContent.th.pages.privacy.sections[0].items[7]
+    หมายเลขรับเรื่องสำหรับใช้ค้นหาเรื่องของท่าน
+
+guidanceContent.th.pages.privacy.sections[1].heading
+    ข้อความต้นฉบับถูกเก็บไว้ตามเดิม
+
+guidanceContent.th.pages.privacy.sections[1].paragraphs[0]
+    ข้อความที่ท่านเขียนจะถูกเก็บไว้ตามที่ท่านเขียนทุกประการ และไม่มีการแปลโดยอัตโนมัติ หากจำเป็นต้องมีคำแปลเพื่อดำเนินเรื่อง เราจะหารือกับท่านเป็นการเฉพาะ
+
+guidanceContent.th.pages.privacy.sections[1].paragraphs[1]
+    เนื่องจากข้อความต้นฉบับถูกเก็บไว้ จึงขอความกรุณาอย่าเขียนข้อมูลที่ยังไม่จำเป็นในขั้นแรก เช่น เลขหนังสือเดินทาง เลขบัตรประจำตัว หรือข้อมูลบัญชีธนาคาร
+
+guidanceContent.th.pages.privacy.sections[2].heading
+    จัดเก็บไว้ที่ใดและใครเข้าถึงได้
+
+guidanceContent.th.pages.privacy.sections[2].paragraphs[0]
+    เนื้อหาที่ท่านส่งมาจะถูกจัดเก็บในพื้นที่ที่ไม่เปิดเผยต่อสาธารณะ และมีเพียงผู้ที่ได้รับมอบหมายในสำนักงานเท่านั้นที่เข้าถึงได้เพื่อดำเนินการกับเรื่องดังกล่าว
+
+guidanceContent.th.pages.privacy.sections[2].paragraphs[1]
+    หน้านี้ไม่ได้ให้คำรับประกันความปลอดภัยอย่างเด็ดขาด ไม่มีช่องทางส่งหรือระบบจัดเก็บใดปลอดภัยโดยสมบูรณ์ ดังนั้นเอกสารที่มีความอ่อนไหวจึงควรส่งตามคำแนะนำเฉพาะของทนายความเท่านั้น
+
+guidanceContent.th.pages.privacy.sections[3].heading
+    วัตถุประสงค์ในการใช้
+
+guidanceContent.th.pages.privacy.sections[3].paragraphs[0]
+    ข้อมูลที่ท่านส่งมาจะใช้เพื่อตรวจสอบเรื่อง ติดต่อกลับหาท่าน ยืนยันวิธีสื่อสาร และดำเนินการกับเรื่องนั้นหากมีการเริ่มงานจริง
+
+guidanceContent.th.pages.privacy.sections[3].paragraphs[1]
+    ข้อมูลนี้จะไม่ถูกนำไปใช้เพื่อการตลาด หากท่านไม่ได้ให้ความยินยอมสำหรับวัตถุประสงค์ดังกล่าวเป็นการเฉพาะ
+
+guidanceContent.th.pages.privacy.sections[4].heading
+    การแจ้งเตือนและหมายเลขรับเรื่อง
+
+guidanceContent.th.pages.privacy.sections[4].paragraphs[0]
+    เมื่อส่งเรื่องสำเร็จ ระบบจะแจ้งไปยังสำนักงาน หากการแจ้งเตือนนั้นยังยืนยันไม่ได้ ข้อความที่ท่านเขียนยังคงถูกบันทึกไว้และไม่สูญหาย
+
+guidanceContent.th.pages.privacy.sections[4].paragraphs[1]
+    หมายเลขรับเรื่องสร้างขึ้นเพื่อใช้ค้นหาเรื่องของท่านในบันทึกของเรา โดยจะแสดงให้เห็นหลังจากบันทึกเรื่องแล้ว และท่านสามารถแจ้งหมายเลขนี้เมื่อติดต่อกลับมาอีกครั้ง เพื่อให้เราค้นหาเรื่องที่ท่านส่งได้ถูกต้อง
+
+guidanceContent.th.pages.privacy.sections[5].heading
+    สิทธิของท่านและช่องทางติดต่อ
+
+guidanceContent.th.pages.privacy.sections[5].paragraphs[0]
+    ท่านสามารถขอเข้าถึง แก้ไข หรือลบข้อมูลของท่าน หรือถอนความยินยอม ได้ทางอีเมลตามที่อยู่ในหน้าติดต่อ หากมีหน้าที่ต้องเก็บรักษาตามกฎเกณฑ์ที่ใช้บังคับ หรือเนื่องจากมีเรื่องที่กำลังดำเนินอยู่ เราจะชี้แจงเหตุผลของข้อจำกัดนั้น
+
+guidanceContent.th.pages.privacy.sections[5].paragraphs[1]
+    หน้านี้ไม่ได้ระบุระยะเวลาเก็บรักษาที่ตายตัว เพราะระยะเวลาจริงขึ้นอยู่กับว่าเรื่องนั้นดำเนินต่อไปหรือไม่ และหน้าที่ในการเก็บรักษาที่เกี่ยวข้อง หากท่านประสงค์ให้ลบข้อมูลของท่านเร็วกว่านั้น โปรดแจ้งความประสงค์ดังกล่าวเมื่อติดต่อเข้ามา
+
+guidanceContent.th.pages.privacy.sections[6].heading
+    สถานที่จัดเก็บข้อมูลและผู้ให้บริการ
+
+guidanceContent.th.pages.privacy.sections[6].paragraphs[0]
+    เว็บไซต์นี้ใช้บริการโฮสติงของ Vercel และเรื่องที่ท่านส่งมาจะถูกเก็บไว้ในพื้นที่จัดเก็บข้อมูลแบบไม่เปิดเผยต่อสาธารณะของบริการดังกล่าว ส่วนอีเมลจะถูกส่งผ่านบริการอีเมลที่สำนักงานใช้อยู่
+
+guidanceContent.th.pages.privacy.sections[6].paragraphs[1]
+    เซิร์ฟเวอร์ของผู้ให้บริการบางรายอาจตั้งอยู่นอกไต้หวัน ซึ่งในกรณีนั้นข้อมูลของท่านอาจถูกจัดเก็บและประมวลผลในพื้นที่ดังกล่าว เมื่อบรรลุวัตถุประสงค์ของการเก็บรักษาแล้ว ข้อมูลจะถูกลบโดยไม่ชักช้า ส่วนข้อมูลที่มีหน้าที่ต้องเก็บรักษาตามกฎเกณฑ์ที่ใช้บังคับจะถูกเก็บไว้ตลอดระยะเวลาดังกล่าว คำขอที่เกี่ยวกับข้อมูลส่วนบุคคลสามารถส่งได้ที่ wei@hoveringlaw.com.tw
+
+guidanceContent.th.pages.disclaimer.eyebrow
+    ข้อจำกัดความรับผิด
+
+guidanceContent.th.pages.disclaimer.title
+    ขอบเขตและข้อจำกัดของข้อมูลในหน้านี้
+
+guidanceContent.th.pages.disclaimer.description
+    ลักษณะของข้อมูลทั่วไป ขอบเขตของกฎหมายที่ใช้บังคับ และเงื่อนไขการเกิดความสัมพันธ์ระหว่างทนายความกับลูกความ
+
+guidanceContent.th.pages.disclaimer.intro
+    ส่วนนี้ระบุให้ชัดเจนว่าหน้าข้อมูลแนะนำภาษาไทยเหล่านี้ทำอะไรให้ท่านได้ และทำอะไรให้ไม่ได้
+
+guidanceContent.th.pages.disclaimer.sections[0].heading
+    เป็นข้อมูลทั่วไปเท่านั้น
+
+guidanceContent.th.pages.disclaimer.sections[0].paragraphs[0]
+    เนื้อหาในหน้าเหล่านี้เขียนขึ้นเพื่อให้ข้อมูลทั่วไป ไม่ใช่ความเห็นทางกฎหมายสำหรับเรื่องของท่าน และไม่อาจใช้แทนการตรวจสอบเอกสารและข้อเท็จจริงเฉพาะรายได้
+
+guidanceContent.th.pages.disclaimer.sections[0].paragraphs[1]
+    ผลของแต่ละเรื่องขึ้นอยู่กับข้อเท็จจริง กฎเกณฑ์ที่ใช้บังคับ และช่วงเวลา ดังนั้นสองสถานการณ์ที่ดูคล้ายกันจึงอาจมีผลต่างกันได้
+
+guidanceContent.th.pages.disclaimer.sections[1].heading
+    ขอบเขตของกฎหมาย
+
+guidanceContent.th.pages.disclaimer.sections[1].paragraphs[0]
+    สำนักงานประกอบวิชาชีพภายใต้กฎหมายไต้หวัน และหน้าเหล่านี้กล่าวถึงงานภายในขอบเขตดังกล่าวเท่านั้น
+
+guidanceContent.th.pages.disclaimer.sections[1].paragraphs[1]
+    เนื้อหาในหน้าเหล่านี้ไม่ใช่ความเห็นตามกฎหมายของเขตอำนาจอื่นใดนอกจากไต้หวัน รวมถึงกฎหมายของประเทศที่ท่านพำนักอยู่ หากเรื่องของท่านมีส่วนที่อยู่ภายใต้เขตอำนาจอื่น เราจะยืนยันร่วมกับท่านว่าส่วนนั้นต้องอาศัยผู้เชี่ยวชาญที่มีคุณสมบัติเหมาะสมด้านใด
+
+guidanceContent.th.pages.disclaimer.sections[2].heading
+    ความสัมพันธ์ระหว่างทนายความกับลูกความไม่เกิดขึ้นโดยอัตโนมัติ
+
+guidanceContent.th.pages.disclaimer.sections[2].paragraphs[0]
+    การอ่านหน้านี้ การส่งแบบฟอร์ม หรือการส่งอีเมล เพียงอย่างเดียวไม่ได้ทำให้เกิดความสัมพันธ์ระหว่างทนายความกับลูกความ
+
+guidanceContent.th.pages.disclaimer.sections[2].paragraphs[1]
+    ความสัมพันธ์ดังกล่าวเกิดขึ้นเมื่อได้ตรวจสอบเรื่องแล้ว และทั้งสองฝ่ายยืนยันการรับดำเนินการร่วมกันเท่านั้น
+
+guidanceContent.th.pages.disclaimer.sections[3].heading
+    ไม่มีการรับประกันผล
+
+guidanceContent.th.pages.disclaimer.sections[3].paragraphs[0]
+    ไม่มีข้อความใดในหน้าเหล่านี้ที่เป็นคำมั่นเกี่ยวกับผลของเรื่องใดเรื่องหนึ่ง การอนุมัติคำขอ หรือสถานะการพำนักและสถานะการทำงาน
+
+guidanceContent.th.pages.disclaimer.sections[3].paragraphs[1]
+    ลิงก์ไปยังเว็บไซต์ภายนอกจัดไว้เพื่อความสะดวกของท่าน เราไม่รับประกันความถูกต้องหรือความเป็นปัจจุบันของเนื้อหาที่บุคคลภายนอกเผยแพร่
+
+guidanceContent.th.pages.columns.eyebrow
+    บทความ
+
+guidanceContent.th.pages.columns.title
+    บทความเกี่ยวกับกฎหมายไต้หวัน
+
+guidanceContent.th.pages.columns.description
+    บทความภาษาไทยที่อธิบายหัวข้อกฎหมายไต้หวันซึ่งมีผู้สอบถามบ่อย เป็นข้อมูลทั่วไป ณ เวลาที่เผยแพร่ ไม่ใช่ความเห็นทางกฎหมายสำหรับเรื่องของท่าน
+
+guidanceContent.th.pages.columns.intro
+    สำนักงานเผยแพร่บทความอธิบายหัวข้อกฎหมายไต้หวันที่มีผู้สอบถามบ่อย บทความที่มีฉบับภาษาไทยแล้วจะแสดงอยู่ในหน้านี้ นอกจากนี้ยังมีลิงก์ 4 รายการ โดยแต่ละลิงก์จะเปิดสารบัญบทความของภาษาต้นฉบับหนึ่งภาษา
+
+guidanceContent.th.pages.columns.sections[0].heading
+    สารบัญ 4 ภาษา
+
+guidanceContent.th.pages.columns.sections[0].paragraphs[0]
+    ส่วนนี้ประกอบด้วยลิงก์ 4 รายการ ได้แก่ สารบัญบทความภาษาเกาหลี สารบัญภาษาจีน สารบัญภาษาอังกฤษ และสารบัญภาษาญี่ปุ่น แต่ละลิงก์ระบุภาษาของสารบัญนั้นไว้ เพื่อให้ท่านทราบล่วงหน้าว่ากำลังจะเปิดเนื้อหาในภาษาใด
+
+guidanceContent.th.pages.columns.sections[0].paragraphs[1]
+    สารบัญทั้ง 4 รายการนี้เป็นสารบัญตามภาษาต้นฉบับ ไม่ใช่รายการคำแปล ส่วนบทความที่มีฉบับภาษาไทยแล้วจะแสดงแยกไว้ในหน้านี้
+
+guidanceContent.th.pages.columns.sections[1].heading
+    ลิงก์จะพาท่านไปที่ใด
+
+guidanceContent.th.pages.columns.sections[1].paragraphs[0]
+    เมื่อท่านเลือกลิงก์ใดลิงก์หนึ่งใน 4 รายการ สารบัญบทความของภาษานั้นจะเปิดขึ้น จากสารบัญ ท่านเลือกบทความที่ต้องการอ่านได้เอง โดยเนื้อหาทั้งหมดจะแสดงเป็นภาษาต้นฉบับของบทความ
+
+guidanceContent.th.pages.columns.sections[1].paragraphs[1]
+    หน้านี้ไม่ได้สรุปเนื้อหาของบทความ และไม่รับประกันว่าหัวข้อหนึ่ง ๆ จะมีอยู่ครบทั้ง 4 ภาษา สารบัญแต่ละภาษาบรรจุเฉพาะบทความที่เผยแพร่ในภาษานั้น
+
+guidanceContent.th.pages.columns.sections[2].heading
+    บทความใช้อ้างอิงได้เพียงใด
+
+guidanceContent.th.pages.columns.sections[2].paragraphs[0]
+    บทความเขียนขึ้นเพื่อให้ข้อมูลทั่วไป ณ เวลาที่เผยแพร่ กฎเกณฑ์และแนวทางการปรับใช้อาจเปลี่ยนแปลงได้ และบทความหนึ่งย่อมไม่ครอบคลุมข้อเท็จจริงทั้งหมดในเรื่องของท่าน
+
+guidanceContent.th.pages.columns.sections[2].paragraphs[1]
+    ด้วยเหตุนี้ โปรดอย่าใช้บทความเป็นเกณฑ์ตัดสินใจดำเนินการในเรื่องจริง ขอให้ใช้บทความเพื่อทำความเข้าใจภาพรวม แล้วจึงปรึกษาเกี่ยวกับเอกสารและข้อเท็จจริงของท่านเป็นการเฉพาะ ทั้งนี้ หน้านี้ไม่ใช่ขั้นตอนการให้คำปรึกษา
+
+guidanceTeamCopy.th.label
+    OUR TEAM
+
+guidanceTeamCopy.th.title
+    ทีมงานระหว่างประเทศ Hovering
+
+guidanceTeamCopy.th.description
+    ประวัติของทนายความ ผู้จัดการงาน และผู้สอบบัญชีพันธมิตรของ Hovering
+
+guidanceTeamCopy.th.representativeTitle
+    ทนายความผู้บริหาร
+
+guidanceTeamCopy.th.teamTitle
+    ทนายความและเจ้าหน้าที่
+
+guidanceTeamCopy.th.partnerTitle
+    ผู้สอบบัญชีพันธมิตร
+
+guidanceTeamCopy.th.introLabel
+    แนะนำ
+
+guidanceTeamCopy.th.educationLabel
+    การศึกษา
+
+guidanceTeamCopy.th.experienceLabel
+    ประสบการณ์
+
+guidanceTeamCopy.th.photoAltPrefix
+    ภาพ
+
+guidanceTeamCopy.th.workingLanguagesLabel
+    ภาษาที่ใช้ทำงาน
+
+guidanceTeamCopy.th.fullProfileLabel
+    ประวัติฉบับเต็ม (English)
+
+guidanceTeamCopy.th.keyFactsHeading
+    ทนายความ Wei Tseng — ข้อมูลพื้นฐาน
+
+guidanceTeamCopy.th.qualificationLabel
+    คุณสมบัติและสังกัด
+
+guidanceTeamCopy.th.qualificationSentence
+    {name} เป็นทนายความที่มีคุณสมบัติประกอบวิชาชีพในไต้หวัน และเป็นทนายความผู้บริหารของ {firm}
+
+guidanceTeamCopy.th.practiceLabel
+    สาขาที่รับดำเนินการหลัก
+
+guidanceTeamCopy.th.consultationLanguagesLabel
+    ภาษาที่ใช้ให้คำปรึกษา
+
+guidanceTeamCopy.th.roles.tseng-junwei
+    ทนายความผู้บริหารในไต้หวัน (Managing Attorney)
+
+guidanceTeamCopy.th.roles.chang-rongxuan
+    ทนายความในไต้หวัน (Taiwan Attorney)
+
+guidanceTeamCopy.th.roles.chang-fangyu
+    ผู้ช่วยงานกฎหมาย (Paralegal)
+
+guidanceTeamCopy.th.roles.son-jungmin
+    ผู้จัดการงานประเทศเกาหลี (Korea Operations Manager)
+
+guidanceTeamCopy.th.roles.huang-shengping
+    ผู้สอบบัญชีพันธมิตร (Partner CPA)
+
+guidanceTeamBios.th.tseng-junwei.intro[0]
+    สำนักงานรับดำเนินการเรื่องของบริษัทและบุคคลในไต้หวัน โดยใช้ภาษาอังกฤษ ภาษาญี่ปุ่น ภาษาเกาหลี และภาษาจีน
+
+guidanceTeamBios.th.tseng-junwei.intro[1]
+    เคยเป็นผู้แทนนักศึกษาชาวเกาหลีในคดีเรียกค่าเสียหายจากการบาดเจ็บในฟิตเนส และได้รับคำพิพากษาศาลชั้นต้นให้ชดใช้ค่าเสียหาย TWD 1.57M
+
+guidanceTeamBios.th.tseng-junwei.education[0]
+    ปริญญาโท (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.th.tseng-junwei.education[1]
+    ปริญญาตรี (B.A.) สองสาขาวิชา ด้านกฎหมายและการเงิน, National Chengchi University
+
+guidanceTeamBios.th.tseng-junwei.education[2]
+    นักศึกษาแลกเปลี่ยน, Kobe University และ Waseda University
+
+guidanceTeamBios.th.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.th.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.th.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.th.chang-rongxuan.intro[0]
+    เคยปฏิบัติงานที่ Ministry of Education, Legal Affairs Division โดยเน้นข้อพิพาททางปกครองและทางแพ่ง
+
+guidanceTeamBios.th.chang-rongxuan.intro[1]
+    มีประสบการณ์ในเรื่องที่เกี่ยวกับมหาวิทยาลัย สิทธิของอาจารย์ และการร้องทุกข์ทางปกครอง
+
+guidanceTeamBios.th.chang-rongxuan.education[0]
+    นิติศาสตรบัณฑิต (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.th.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.th.chang-rongxuan.experience[1]
+    ทนายความ, Hovering International Law Firm
+
+guidanceTeamBios.th.chang-fangyu.intro[0]
+    ผู้ช่วยงานกฎหมายที่มีประสบการณ์ยาวนานในตำแหน่งผู้ช่วยงานกฎหมายอาวุโสของสำนักงานกฎหมายหลายแห่ง ครอบคลุมงานสนับสนุนคดี งานกฎหมายบริษัท และเรื่องการลงทุนจากต่างประเทศ
+
+guidanceTeamBios.th.chang-fangyu.intro[1]
+    สนับสนุนงานคดี การจัดตั้งบริษัท การขออนุมัติการลงทุนจากต่างประเทศ การยื่นขอใบอนุญาต และการติดต่อสื่อสารระหว่างเกาหลีกับไต้หวัน
+
+guidanceTeamBios.th.chang-fangyu.education[0]
+    นิติศาสตรบัณฑิต (LL.B.), Tunghai University
+
+guidanceTeamBios.th.chang-fangyu.experience[0]
+    ผู้ช่วยงานกฎหมายอาวุโส, Boyin Law Firm
+
+guidanceTeamBios.th.chang-fangyu.experience[1]
+    ผู้ช่วยงานกฎหมายอาวุโส, Muyang International Law Firm
+
+guidanceTeamBios.th.son-jungmin.intro[0]
+    ประสานการนัดหมายให้คำปรึกษาและการติดต่อสื่อสารสำหรับลูกความชาวเกาหลี
+
+guidanceTeamBios.th.son-jungmin.intro[1]
+    สนับสนุนการสื่อสารระหว่างทีมด้วยระบบเอกสารและระบบงาน โดยอาศัยพื้นฐานด้านวิทยาการคอมพิวเตอร์
+
+guidanceTeamBios.th.son-jungmin.education[0]
+    วิทยาศาสตรบัณฑิต (B.S.) สาขาวิทยาการคอมพิวเตอร์, National Cheng Kung University
+
+guidanceTeamBios.th.son-jungmin.experience[0]
+    ทีมงานธุรกิจเกาหลี, Hovering International Law Firm
+
+guidanceTeamBios.th.huang-shengping.intro[0]
+    สำเร็จการศึกษาระดับปริญญาตรีและปริญญาโทด้านการบัญชีจาก National Chengchi University และปัจจุบันบริหารสำนักงานบัญชีแห่งหนึ่ง
+
+guidanceTeamBios.th.huang-shengping.intro[1]
+    สนับสนุนการวิเคราะห์ความเสี่ยงด้านกฎหมาย ภาษี และการเงินอย่างครบวงจรให้แก่ลูกความที่เป็นองค์กรธุรกิจ
+
+guidanceTeamBios.th.huang-shengping.education[0]
+    ปริญญาโท (M.A.) การบัญชี, National Chengchi University
+
+guidanceTeamBios.th.huang-shengping.education[1]
+    ปริญญาตรี (B.A.) การบัญชี, National Chengchi University
+
+guidanceTeamBios.th.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.th.Korean
+    ภาษาเกาหลี
+
+guidanceLanguageNames.th.Chinese
+    ภาษาจีน
+
+guidanceLanguageNames.th.Japanese
+    ภาษาญี่ปุ่น
+
+guidancePracticeAreaNames.th.Taiwan company setup
+    การจัดตั้งบริษัทในไต้หวัน
+
+guidancePracticeAreaNames.th.Taiwan investment counsel
+    ที่ปรึกษากฎหมายด้านการลงทุนในไต้หวัน
+
+guidancePracticeAreaNames.th.Civil litigation and damages
+    คดีแพ่งและค่าสินไหมทดแทน
+
+guidancePracticeAreaNames.th.Trademark and patent filings
+    การยื่นจดทะเบียนเครื่องหมายการค้าและสิทธิบัตร
+
+guidancePracticeAreaNames.th.Visa and residency
+    วีซ่าและการมีถิ่นที่อยู่
+
+guidancePracticeAreaNames.th.Family and labor disputes
+    ข้อพิพาทครอบครัวและแรงงาน
+
+guidanceOfficeCopy.th.label
+    OFFICES
+
+guidanceOfficeCopy.th.title
+    สำนักงาน
+
+guidanceOfficeCopy.th.description
+    ที่อยู่สำนักงานของ Hovering International Law Firm ในไต้หวัน
+
+guidanceOfficeCopy.th.officeLabel
+    สำนักงาน
+
+guidanceOfficeCopy.th.mapPreviewLabel
+    ตัวอย่างแผนที่
+
+guidanceOfficeCopy.th.koreaOfficeTitle
+    สำนักงานเกาหลี
+
+guidanceOfficeCopy.th.koreaAddressCardLabel
+    ที่อยู่สำนักงานเกาหลี
+
+guidanceOfficeCopy.th.koreaMapLinkLabel
+    ดูบน Naver Map
+
+guidanceOfficeCopy.th.reviewCountWord
+    รีวิว
+
+guidanceOfficeCopy.th.phoneLabel
+    โทรศัพท์
+
+guidanceOfficeCopy.th.faxLabel
+    โทรสาร
+
+guidanceOfficeCopy.th.mapLinkLabel
+    ดูบนแผนที่
+
+guidanceOfficeCopy.th.photoAlts[0]
+    ห้องรับรองของสำนักงานไทเป Hovering International Law Firm
+
+guidanceOfficeCopy.th.photoAlts[1]
+    ห้องทำงานของทนายความที่สำนักงานไทเป Hovering International Law Firm
+
+guidanceOfficeCopy.th.photoAlts[2]
+    ห้องประชุมของสำนักงานไทเป Hovering International Law Firm
+
+guidanceOfficeCopy.th.officeTitles.taipei
+    ไทเป
+
+guidanceOfficeCopy.th.officeTitles.taichung
+    ไถจง
+
+guidanceOfficeCopy.th.officeTitles.kaohsiung
+    เกาสง
+
+guidanceOfficeCopy.th.officeTitles.pingtung
+    ผิงตง
+
+guidanceFooterCopy.th.officeLabel
+    สำนักงาน
+
+guidanceFooterCopy.th.officeQuickLinksLabel
+    ลิงก์ลัดไปยังที่ตั้งสำนักงาน
+
+guidanceFooterCopy.th.followLabel
+    ติดตาม
+
+guidanceFooterCopy.th.blogLabel
+    บล็อก
+
+guidanceFooterCopy.th.websiteLabel
+    เว็บไซต์ทางการ
+
+guidanceFooterCopy.th.sitemapLabel
+    แผนผังเว็บไซต์
+
+guidanceFooterCopy.th.copyEmailLabel
+    คัดลอกที่อยู่อีเมล
+
+guidanceFooterCopy.th.emailCopiedMessage
+    คัดลอกที่อยู่อีเมลแล้ว
+
+guidanceFooterCopy.th.officialConsultationEmailLabel
+    อีเมลทางการสำหรับการปรึกษา
+
+internationalInquiryCopy.th.guidanceNotice
+    หน้านี้จัดทำเป็นภาษาไทยเพื่อเป็นข้อมูลแนะนำทั่วไป ไม่ใช่ความเห็นทางกฎหมายสำหรับเรื่องเฉพาะของท่าน
+
+internationalInquiryCopy.th.consultationNotice
+    การให้คำปรึกษาจริงดำเนินการใน 4 ภาษา ได้แก่ ภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี
+
+internationalInquiryCopy.th.methodConfirmationNotice
+    หากท่านไม่สะดวกทั้ง 4 ภาษา กรุณาเลือก “ต้องยืนยันวิธีติดต่อ” เราจะตอบกลับเพื่อยืนยันวิธีการสื่อสารที่เป็นไปได้ แต่ไม่รับประกันว่าจะรองรับภาษาอื่นได้ และไม่รับประกันระยะเวลาตอบกลับ
+
+internationalInquiryCopy.th.preparationNotice
+    ท่านเขียนสรุปเรื่องด้วยภาษาของท่านเองได้ ข้อความต้นฉบับที่ท่านเขียนจะถูกเก็บไว้ตามเดิม และไม่มีการแปลโดยอัตโนมัติ
+
+internationalInquiryCopy.th.heading
+    ส่งเรื่องเพื่อขอคำปรึกษา
+
+internationalInquiryCopy.th.intro
+    กรุณาอธิบายเรื่องของท่านโดยย่อ ทนายความจะตรวจสอบเนื้อหาก่อนแจ้งขั้นตอนต่อไป
+
+internationalInquiryCopy.th.submitLabel
+    ส่งเรื่อง
+
+internationalInquiryCopy.th.submittingLabel
+    กำลังส่ง…
+
+internationalInquiryCopy.th.successMessage
+    เราได้รับเรื่องของท่านไว้และอยู่ระหว่างรอการตรวจสอบ ทั้งนี้ไม่ได้หมายความว่าการปรึกษาเสร็จสิ้นแล้วหรือมีการยืนยันนัดหมายแล้ว
+
+internationalInquiryCopy.th.savedNotificationPendingMessage
+    เรื่องของท่านถูกบันทึกไว้แล้ว แต่ยังยืนยันไม่ได้ว่าการแจ้งเตือนไปถึงสำนักงานแล้วหรือไม่ ข้อความที่ท่านเขียนไม่ได้สูญหาย หากยังไม่ได้รับการติดต่อกลับ ท่านสามารถส่งอีเมลตามที่อยู่ในหน้าติดต่อได้เช่นกัน
+
+internationalInquiryCopy.th.receiptIdLabel
+    หมายเลขรับเรื่อง
+
+internationalInquiryCopy.th.failureMessage
+    ส่งเรื่องของท่านไม่สำเร็จ กรุณาลองใหม่อีกครั้ง หรือส่งอีเมลตามที่อยู่ในหน้าติดต่อ
+
+internationalInquiryCopy.th.originalLanguageLabel
+    ภาษาที่ท่านใช้เขียน
+
+internationalInquiryCopy.th.originalLanguagePlaceholder
+    เช่น ภาษาไทย ภาษาเวียดนาม ภาษาอินโดนีเซีย ภาษาฟิลิปิโน หรือภาษาอื่น
+
+internationalInquiryCopy.th.preferredConsultationLanguageLabel
+    ภาษาที่ท่านต้องการใช้ในการปรึกษา
+
+internationalInquiryCopy.th.originalTextLabel
+    สรุปเรื่องของท่าน (เขียนด้วยภาษาของท่านเองได้)
+
+internationalInquiryCopy.th.originalTextPlaceholder
+    กรุณาระบุว่าเกิดอะไรขึ้น ท่านต้องการความช่วยเหลือด้านใด และมีกำหนดเวลาหรือไม่ กรุณาอย่าระบุเลขหนังสือเดินทาง เลขบัตรประจำตัว หรือข้อมูลบัญชีธนาคาร
+
+internationalInquiryCopy.th.nameLabel
+    ชื่อ
+
+internationalInquiryCopy.th.emailLabel
+    อีเมล
+
+internationalInquiryCopy.th.consentLabel
+    ข้าพเจ้าได้อ่านนโยบายความเป็นส่วนตัวแล้ว และยินยอมส่งเรื่องนี้
+
+internationalInquiryCopy.th.privacyLinkLabel
+    นโยบายความเป็นส่วนตัว
+
+internationalInquiryCopy.th.requiredMessage
+    กรุณากรอกช่องนี้
+
+internationalInquiryCopy.th.invalidEmailMessage
+    กรุณากรอกที่อยู่อีเมลให้ถูกต้อง
+
+internationalInquiryCopy.th.tooLongMessage
+    ข้อความยาวเกินไป กรุณาย่อให้สั้นลงแล้วส่งใหม่
+
+internationalInquiryCopy.th.sourceLanguageNotice
+    บทความนี้มีเฉพาะภาษา {language} เท่านั้น และลิงก์จะเปิดหน้าต้นฉบับนั้น
+
+internationalInquiryCopy.th.unavailableTranslationNotice
+    บทความนี้ยังไม่ได้แปลเป็นภาษาของหน้านี้ ลิงก์ที่ระบุภาษาต้นฉบับไว้ชัดเจนจะเปิดหน้าต้นฉบับให้ท่านอ่าน
+
+internationalInquiryCopy.th.unavailableLanguageNotice
+    หน้านี้ไม่มีให้บริการเป็นภาษา {language}
+
+internationalInquiryCopy.th.languageOptions.en
+    ภาษาอังกฤษ (English)
+
+internationalInquiryCopy.th.languageOptions.zh-hant
+    ภาษาจีน (中文)
+
+internationalInquiryCopy.th.languageOptions.ja
+    ภาษาญี่ปุ่น (日本語)
+
+internationalInquiryCopy.th.languageOptions.ko
+    ภาษาเกาหลี (한국어)
+
+internationalInquiryCopy.th.languageOptions.needs-method-confirmation
+    ใช้ภาษาใดใน 4 ภาษานี้ไม่ได้ — ต้องยืนยันวิธีติดต่อ
+
+guidanceAnswers.th.services.answer
+    สำนักงานรับดำเนินการงาน 6 กลุ่มภายใต้กฎหมายไต้หวัน ได้แก่ การลงทุนและการจัดตั้งบริษัทในไต้หวัน ข้อพิพาททางแพ่งและการเรียกค่าสินไหมทดแทน คดีการสมรส ครอบครัว และมรดก ข้อพิพาทแรงงาน คดีอาญา และทรัพย์สินทางปัญญา ส่วนขอบเขตของแต่ละเรื่องจะได้รับการยืนยันเป็นการเฉพาะ หลังจากทนายความตรวจสอบเนื้อหาที่ท่านส่งมาแล้ว การให้คำปรึกษาดำเนินการเป็นภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี
+
+guidanceAnswers.th.services.sources[0]
+    /th/faq
+
+guidanceAnswers.th.services.sources[1]
+    /th/contact
+
+guidanceAnswers.th.about.answer
+    Hovering International Law Firm เป็นสำนักงานกฎหมายในไต้หวัน ก่อตั้งขึ้นในปี 2016 โดยกลุ่มทนายความที่จบการศึกษาจากมหาวิทยาลัยแห่งชาติไต้หวัน (國立臺灣大學) มีที่ทำการที่ไทเป เกาสง ไถจง และผิงตง และมีส่วนงานบัญชีตั้งแต่ปี 2020 โดยสาขาไถจงรับงานที่เกี่ยวข้องกับเกาหลีและญี่ปุ่น ทั้งนี้ เราไม่รับประกันผล การให้คำปรึกษาดำเนินการเป็นภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี
+
+guidanceAnswers.th.about.sources[0]
+    /th/lawyers
+
+guidanceAnswers.th.about.sources[1]
+    /th/services
+
+guidanceAnswers.th.lawyers.answer
+    หน้านี้แนะนำประวัติของทนายความ ผู้จัดการงาน และผู้สอบบัญชีพันธมิตรของ Hovering โดย Wei Tseng (曾雋崴) เป็นทนายความที่มีคุณสมบัติประกอบวิชาชีพในไต้หวัน และเป็นทนายความผู้บริหารของสำนักงาน ทำงานให้แก่ลูกความชาวเกาหลี ชาวญี่ปุ่น และลูกความต่างชาติรายอื่น การให้คำปรึกษาของสำนักงานดำเนินการใน 4 ภาษา ได้แก่ ภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี
+
+guidanceAnswers.th.lawyers.sources[0]
+    /th/about
+
+guidanceAnswers.th.lawyers.sources[1]
+    /th/contact
+
+guidanceAnswers.th.pricing.answer
+    หน้านี้ไม่แสดงอัตราค่าบริการ สำนักงานจะกำหนดขอบเขตงานก่อนจากสรุปเรื่องที่ท่านส่งมา จากนั้นจำนวนเงินและวิธีคิดค่าใช้จ่ายจะได้รับการยืนยันกับท่านก่อนเริ่มงาน การพบทนายความอาจเป็นบริการที่มีค่าใช้จ่าย และนอกจากค่าทนายความยังอาจมีค่าธรรมเนียมที่ต้องชำระต่อศาลหรือหน่วยงานของรัฐ การให้คำปรึกษาดำเนินการเป็นภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี
+
+guidanceAnswers.th.pricing.sources[0]
+    /th/contact
+
+guidanceAnswers.th.pricing.sources[1]
+    /th/faq
+
+guidanceAnswers.th.contact.answer
+    โปรดส่งสรุปเรื่องผ่านแบบฟอร์มติดต่อ โดยระบุว่าเกิดอะไรขึ้น ท่านต้องการความช่วยเหลือด้านใด เรื่องนี้เกี่ยวข้องกับไต้หวันอย่างไร และมีกำหนดเวลาหรือไม่ ในขั้นแรกยังไม่จำเป็นต้องส่งเอกสารแสดงตนหรือพยานหลักฐานทั้งหมด สำนักงานไม่รับประกันระยะเวลาตอบกลับและไม่ได้ยืนยันการนัดหมายผ่านหน้านี้ การให้คำปรึกษาดำเนินการเป็นภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี
+
+guidanceAnswers.th.contact.sources[0]
+    /th/faq
+
+guidanceAnswers.th.contact.sources[1]
+    /th/pricing
+
+guidanceAnswers.th.faq.answer
+    ส่วนคำถามที่พบบ่อยตอบไว้ในระดับข้อมูลทั่วไป ทั้งกลุ่มงาน 6 กลุ่ม การเตรียมตัวก่อนติดต่อ วิธีกำหนดค่าใช้จ่าย และความหมายของการส่งเรื่องเข้ามา เรื่องที่ส่งแล้วคือเรื่องที่รอทนายความตรวจสอบ ไม่ใช่ความเห็นทางกฎหมาย ไม่ใช่การนัดหมาย และไม่ได้ทำให้เกิดความสัมพันธ์ระหว่างทนายความกับลูกความ การให้คำปรึกษาดำเนินการเป็นภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี
+
+guidanceAnswers.th.faq.sources[0]
+    /th/contact
+
+guidanceAnswers.th.faq.sources[1]
+    /th/services
+
+GUIDANCE_LLMS_NOTICES.th.consultationNotice
+    ข้อมูลแนะนำส่วนนี้จัดทำเป็นภาษาไทย แต่การปรึกษากับทนายความดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน ภาษาญี่ปุ่น และภาษาเกาหลี
+
+GUIDANCE_LLMS_NOTICES.th.discoveryNotice
+    ไฟล์ llms.txt นี้เป็นเพียงแผนผังสำหรับค้นหน้าเว็บสาธารณะ ไม่ได้รับประกันอันดับการค้นหา การรับรอง การแนะนำโดย AI หรือการแสดงผล
+
+GUIDANCE_LLMS_NOTICES.th.confidentialNotice
+    เนื่องจากข้อความต้นฉบับถูกเก็บไว้ จึงขอความกรุณาอย่าเขียนข้อมูลที่ยังไม่จำเป็นในขั้นแรก เช่น เลขหนังสือเดินทาง เลขบัตรประจำตัว หรือข้อมูลบัญชีธนาคาร

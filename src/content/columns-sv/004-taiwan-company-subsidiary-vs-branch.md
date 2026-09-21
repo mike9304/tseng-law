@@ -184,7 +184,7 @@ Det slutliga valet är säkrare om det prövas av sakkunniga i Taiwan och på hu
 
 ## Relaterade guider
 
-- [Tjänster för investering och bolagsbildning i Taiwan](/ko/services/investment)
+- [Vilka ärenden vi behandlar](/sv/services)
 - [Grunderna för bolagsbildning i Taiwan](/sv/columns/taiwan-company-establishment-basics)
 - [Kontakt](/sv/contact)
 

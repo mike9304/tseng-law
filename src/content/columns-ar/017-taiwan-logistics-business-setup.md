@@ -140,8 +140,8 @@ faq:
 
 ## إرشاد ذو صلة
 
-- [خدمات الاستثمار وتأسيس الشركات في تايوان](/ko/services/investment)
-- [ملف المحامية Wei Tseng](/ko/lawyers/wei-tseng)
+- [المجالات التي يقبلها المكتب](/ar/services)
+- [فريق Hovering الدولي](/ar/lawyers)
 - [طلب الاستشارة](/ar/contact)
 
 ---

@@ -111,7 +111,7 @@ Die Verkaufsvorbereitung in Taiwan in der folgenden Reihenfolge zu prüfen, verm
 5. Prüfen Sie Etikett, Verkaufsseite, Werbung und Kooperationsbeiträge nach dem Maßstab des gesamten Ausdrucks.
 6. Führen Sie Verfahren zur Reaktion auf Prüfung und Abhilfeaufforderung, Beschwerden, Sicherheitsinformationen und erforderliche Folgemaßnahmen.
 
-Die Grundstruktur von Gesellschaft und Zweigniederlassung können Sie unter [Grundlagen der Gesellschaftsgründung in Taiwan](/de/columns/taiwan-company-establishment-basics) einsehen, den einschlägigen Unterstützungsrahmen unter [Dienstleistungen zu Investition und Gesellschaftsgründung in Taiwan](/ko/services/investment), Angaben zur zuständigen Anwältin unter [Profil der Rechtsanwältin Wei Tseng](/ko/lawyers/wei-tseng).
+Die Grundstruktur von Gesellschaft und Zweigniederlassung können Sie unter [Grundlagen der Gesellschaftsgründung in Taiwan](/de/columns/taiwan-company-establishment-basics) einsehen, den einschlägigen Unterstützungsrahmen unter [Welche Angelegenheiten wir bearbeiten](/de/services), Angaben zur zuständigen Anwältin unter [Internationales Team von Hovering](/de/lawyers).
 
 ### Amtliche Quellen
 

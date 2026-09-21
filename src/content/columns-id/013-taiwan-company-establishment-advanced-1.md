@@ -17,7 +17,7 @@ Belakangan ini banyak orang telah berhasil mendirikan perusahaan di Taiwan serta
 
 dan berikut ini saya rangkumkan pertanyaan-pertanyaan yang banyak ditanyakan pada saat pendirian perusahaan.
 
-Bagi Anda yang telah membaca [**Dasar Pendirian Perusahaan**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8), silakan lanjutkan pula ke panduan lanjutan yang lebih rinci ini.
+Bagi Anda yang telah membaca [**Dasar Pendirian Perusahaan**](/id/columns/taiwan-company-establishment-basics), silakan lanjutkan pula ke panduan lanjutan yang lebih rinci ini.
 
 Semoga tanya jawab di bawah ini bermanfaat bagi Anda yang sedang mempertimbangkan untuk mendirikan perusahaan di Taiwan. 😊
 
@@ -128,6 +128,6 @@ perjanjian sewa, sebaiknya Anda memastikannya terlebih dahulu.
 ---
 
 > Bacaan lain:
-> - [Panduan Menyeluruh Pendirian Perusahaan di Taiwan — Prosedur, Biaya, dan Bentuk Badan Hukum](/ko/guides/taiwan-company-setup)
-> - [Pengacara Taiwan yang Dapat Berbahasa Korea](/ko/korean-lawyer-in-taiwan)
-> - [Panduan Pengacara Pendirian Badan Hukum dan Perusahaan di Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Bidang perkara yang kami tangani](/id/services)
+> - [Tim Internasional Hovering](/id/lawyers)
+> - [Cara menghubungi kantor kami](/id/contact)

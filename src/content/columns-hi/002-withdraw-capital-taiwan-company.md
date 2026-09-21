@@ -139,7 +139,7 @@ faq:
 
 ## संबंधित संकेत
 
-1. [ताइवान निवेश और कंपनी स्थापना सेवाएँ](/ko/services/investment)
+1. [हम किन मामलों का कार्य करते हैं](/hi/services)
 2. [ताइवान में कंपनी स्थापना की मूल बातें](/hi/columns/taiwan-company-establishment-basics)
 3. [संपर्क](/hi/contact)
 

@@ -140,8 +140,8 @@ Az engedély nélküli munkára közigazgatási bírság és kiutazási intézke
 
 ## Kapcsolódó útmutatók
 
-- [Tajvani beruházási és társaságalapítási szolgáltatások](/ko/services/investment)
-- [Ügyvéd Wei Tseng profilja](/ko/lawyers/wei-tseng)
+- [Milyen ügyeket viszünk](/hu/services)
+- [A Hovering nemzetközi csapata](/hu/lawyers)
 - [Kapcsolat](/hu/contact)
 
 ---

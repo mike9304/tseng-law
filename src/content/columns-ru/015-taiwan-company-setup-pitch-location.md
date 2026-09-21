@@ -78,6 +78,6 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 ---
 
 > См. также:
-> - [Сводное руководство по созданию компании на Тайване — процедуры, расходы и формы юридических лиц](/ko/guides/taiwan-company-setup)
-> - [Адвокат на Тайване, владеющая корейским языком](/ko/korean-lawyer-in-taiwan)
-> - [Справка адвоката по созданию юридического лица и компании на Тайване](/ko/taiwan-company-setup-lawyer)
+> - [Какие дела мы ведём](/ru/services)
+> - [Международная команда Hovering](/ru/lawyers)
+> - [Как связаться с фирмой](/ru/contact)

@@ -114,6 +114,6 @@ Une chute sur le sol d’un établissement, un préjudice à la santé par des a
 ---
 
 > Voir aussi :
-> - [Guide de l’avocat plaidant à Taïwan](/ko/taiwan-litigation-lawyer)
-> - [Avocate de Taïwan parlant coréen](/ko/korean-lawyer-in-taiwan)
-> - [Guide pour chercher un avocat à Taïwan](/ko/taiwan-lawyer)
+> - [Comment l’étendue du travail et les honoraires sont fixés](/fr/pricing)
+> - [Équipe internationale de Hovering](/fr/lawyers)
+> - [À propos de Hovering International Law Firm](/fr/about)

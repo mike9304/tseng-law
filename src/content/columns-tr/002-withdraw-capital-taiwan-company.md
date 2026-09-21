@@ -139,7 +139,7 @@ Faaliyet durması uzadıkça, yetkili kişinin değişmesi, belge kaybı, adres 
 
 ## İlgili açıklamalar
 
-1. [Tayvan’da yatırım ve şirket kuruluşu hizmetleri](/ko/services/investment)
+1. [Hangi işleri yürütürüz](/tr/services)
 2. [Tayvan’da şirket kuruluşunun temelleri](/tr/columns/taiwan-company-establishment-basics)
 3. [İletişim](/tr/contact)
 

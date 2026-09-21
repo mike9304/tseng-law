@@ -140,8 +140,8 @@ På arbeid uten tillatelse kan en administrativ bot og et påbud om å forlate T
 
 ## Tilknyttede veiledninger
 
-- [Tjenester vedrørende investering og selskapsstiftelse i Taiwan](/ko/services/investment)
-- [Profil for advokat Wei Tseng](/ko/lawyers/wei-tseng)
+- [Hvilke saker vi behandler](/nb/services)
+- [Hoverings internasjonale team](/nb/lawyers)
 - [Kontakt](/nb/contact)
 
 ---

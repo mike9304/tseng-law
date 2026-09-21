@@ -368,6 +368,6 @@ Wei Tseng (曾雋崴), avocată din Taiwan.
 ---
 
 > Vezi și:
-> - [Ghidul avocatului pledant din Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Avocata din Taiwan care se poate exprima în coreeană](/ko/korean-lawyer-in-taiwan)
-> - [Ghid pentru a căuta un avocat în Taiwan](/ko/taiwan-lawyer)
+> - [Cum se stabilesc întinderea lucrării și costurile](/ro/pricing)
+> - [Echipa internațională Hovering](/ro/lawyers)
+> - [Despre Hovering International Law Firm](/ro/about)

@@ -96,6 +96,6 @@ In den meisten Fällen wird die Seite geschützt, die sich vorher vorbereitet ha
 ---
 
 > Siehe auch:
-> - [Leitfaden zum Prozessanwalt in Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Taiwanesische Anwältin mit Koreanischkenntnissen](/ko/korean-lawyer-in-taiwan)
-> - [Tätigkeitsfelder — Arbeit](/ko/services/labor)
+> - [Wie Arbeitsumfang und Kosten festgelegt werden](/de/pricing)
+> - [Internationales Team von Hovering](/de/lawyers)
+> - [Welche Angelegenheiten wir bearbeiten](/de/services)

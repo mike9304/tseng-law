@@ -184,7 +184,7 @@ Le choix final est plus sûr s’il est examiné par des spécialistes à Taïwa
 
 ## Guides connexes
 
-- [Services d’investissement et de constitution de sociétés à Taïwan](/ko/services/investment)
+- [Affaires que nous traitons](/fr/services)
 - [Fondamentaux de la création de société à Taïwan](/fr/columns/taiwan-company-establishment-basics)
 - [Contact](/fr/contact)
 

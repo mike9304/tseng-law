@@ -140,8 +140,8 @@ Ungenehmigte Arbeit kann Verwaltungsbuße und Ausreiseanordnung (限令出國) n
 
 ## Zugehörige Hinweise
 
-- [Dienstleistungen zu Investition und Gesellschaftsgründung in Taiwan](/ko/services/investment)
-- [Profil der Rechtsanwältin Wei Tseng](/ko/lawyers/wei-tseng)
+- [Welche Angelegenheiten wir bearbeiten](/de/services)
+- [Internationales Team von Hovering](/de/lawyers)
 - [Kontakt](/de/contact)
 
 ---

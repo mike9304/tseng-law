@@ -1,0 +1,1096 @@
+# pl guidance pack strings (path → text). Generated 2026-09-21
+
+guidanceContent.pl.languageName
+    Polski
+
+guidanceContent.pl.nav.home
+    Start
+
+guidanceContent.pl.nav.services
+    Usługi
+
+guidanceContent.pl.nav.about
+    Kancelaria
+
+guidanceContent.pl.nav.lawyers
+    Adwokaci
+
+guidanceContent.pl.nav.pricing
+    Koszty
+
+guidanceContent.pl.nav.contact
+    Kontakt
+
+guidanceContent.pl.nav.faq
+    Pytania
+
+guidanceContent.pl.nav.privacy
+    Prywatność
+
+guidanceContent.pl.nav.disclaimer
+    Zastrzeżenia
+
+guidanceContent.pl.nav.columns
+    Artykuły
+
+guidanceContent.pl.contactCta
+    Wysłać wniosek o konsultację
+
+guidanceContent.pl.footerNotice
+    Ta strona po polsku zawiera jedynie ogólne informacje o pracy kancelarii według prawa Tajwanu. Nie jest poradą prawną w konkretnej sprawie, a wysłanie wiadomości samo w sobie nie tworzy stosunku między adwokatem a klientem.
+
+guidanceContent.pl.skipLink
+    Pominąć nawigację i przejść do treści
+
+guidanceContent.pl.menuLabel
+    Spis stron
+
+guidanceContent.pl.languageLabel
+    Język wyświetlania
+
+guidanceContent.pl.mega.services.description
+    Kancelaria prowadzi zasadnicze grupy spraw według prawa Tajwanu.
+
+guidanceContent.pl.mega.services.viewAllLabel
+    Pokaż wszystkie
+
+guidanceContent.pl.mega.columns.description
+    Artykuły o częstych pytaniach z zakresu prawa Tajwanu.
+
+guidanceContent.pl.mega.columns.viewAllLabel
+    Pokaż wszystkie
+
+guidanceContent.pl.mega.lawyers.description
+    Przedstawienie adwokatów i sposobów kontaktu.
+
+guidanceContent.pl.mega.lawyers.viewAllLabel
+    Pokaż wszystkie
+
+guidanceContent.pl.mega.pricing.description
+    Ta strona wyjaśnia zakres pracy i to, jak ustala się koszty.
+
+guidanceContent.pl.mega.pricing.viewAllLabel
+    Pokaż wszystkie
+
+guidanceContent.pl.mega.faq.description
+    Częste pytania o pracę kancelarii na Tajwanie.
+
+guidanceContent.pl.mega.faq.viewAllLabel
+    Pokaż wszystkie
+
+guidanceContent.pl.notFoundTitle
+    Nie znaleziono strony
+
+guidanceContent.pl.notFoundText
+    Szukana strona nie istnieje albo została przeniesiona. Można wrócić na polską stronę główną, aby zobaczyć dostępne informacje.
+
+guidanceContent.pl.backHomeLabel
+    Na stronę główną
+
+guidanceContent.pl.readSourceLabel
+    Otworzyć listę artykułów w języku oryginału
+
+guidanceContent.pl.home.heroScrollLabel
+    Przewinąć w dół
+
+guidanceContent.pl.home.heroColumnsCtaLabel
+    Zobaczyć artykuły
+
+guidanceContent.pl.home.servicesDetailLabel
+    Zobaczyć szczegóły
+
+guidanceContent.pl.home.servicesAssistanceBefore
+    Jeśli nie jest jasne, do której grupy należy sprawa, strona 
+
+guidanceContent.pl.home.servicesAssistanceLinkLabel
+    Kontakt
+
+guidanceContent.pl.home.servicesAssistanceAfter
+     wyjaśnia, jak sformułować streszczenie, które adwokat rozpatruje.
+
+guidanceContent.pl.home.columnsViewAllLabel
+    Zobaczyć wszystkie artykuły
+
+guidanceContent.pl.home.columnsReadMoreLabel
+    Czytaj dalej
+
+guidanceContent.pl.home.columnsReviewLabel
+    Sprawdziła adwokat Wei Tseng
+
+guidanceContent.pl.home.columnsOriginalLanguageBadge
+    Język oryginału
+
+guidanceContent.pl.home.columnsOriginalLanguageNote
+    Poniższe artykuły nie są jeszcze dostępne po polsku. Lista pozostaje w języku oryginału i otwiera odpowiednią stronę językową; treść nie jest tłumaczona automatycznie.
+
+guidanceContent.pl.home.imageBandAlt
+    Tradycyjny tajwański sanheyuan (三合院) i nowoczesny pawilon w świetle dziennym
+
+guidanceContent.pl.home.videoPauseLabel
+    Wstrzymać wideo
+
+guidanceContent.pl.home.videoPlayLabel
+    Odtworzyć wideo
+
+guidanceContent.pl.home.videoReplayLabel
+    Odtworzyć wideo ponownie
+
+guidanceContent.pl.pages.home.eyebrow
+    INFORMACJE
+
+guidanceContent.pl.pages.home.title
+    Usługi prawne na Tajwanie — informacje po polsku
+
+guidanceContent.pl.pages.home.description
+    Ogólne wyjaśnienia po polsku o zakresie pracy Hovering International Law Firm na Tajwanie, o językach konsultacji i o pierwszym kontakcie.
+
+guidanceContent.pl.pages.home.intro
+    Hovering International Law Firm prowadzi sprawy klientów z zagranicy, także z powiązaniem z Tajwanem, według prawa Tajwanu: inwestycje i zakładanie spółek, spory cywilne, małżeństwo, rodzina i spadki, prawo pracy, sprawy karne oraz własność intelektualna. Ta polska część pomaga rozpoznać, jaka praca wchodzi w nasz zakres, co przygotować i jak się z nami skontaktować. Są to informacje ogólne, a nie porada prawna w Państwa sprawie.
+
+guidanceContent.pl.pages.home.sections[0].heading
+    Czym się zajmujemy
+
+guidanceContent.pl.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm jest kancelarią adwokacką z siedzibą na Tajwanie. Pracuje według prawa Tajwanu i ma biura w Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) i Pingtung (屏東). Doradzamy przedsiębiorstwom i prowadzimy postępowania przed sądem oraz towarzyszymy klientom z zagranicy w krokach wymaganych na Tajwanie.
+
+guidanceContent.pl.pages.home.sections[0].paragraphs[1]
+    Cała treść tutaj jest ogólna. Wynik sprawy zależy od faktów, od stosowanych przepisów i od chwili. Te informacje nie zastępują rozmowy z adwokatem o Państwa dokumentach.
+
+guidanceContent.pl.pages.home.sections[1].heading
+    Język strony i język konsultacji to nie to samo
+
+guidanceContent.pl.pages.home.sections[1].paragraphs[0]
+    Ta strona jest napisana po polsku, ale konsultacja z adwokatem odbywa się wyłącznie w czterech językach konsultacji: angielskim, chińskim (中文), japońskim i koreańskim. Czytanie informacji po polsku nie oznacza, że rozmowa z adwokatem odbywa się po polsku.
+
+guidanceContent.pl.pages.home.sections[1].paragraphs[1]
+    Nie obiecujemy tłumacza ustnego, terminu odpowiedzi ani spotkania za pośrednictwem tej strony. Jeśli nie można korzystać z żadnego z czterech języków, strona «Kontakt» wyjaśnia, jak badamy sposób komunikacji.
+
+guidanceContent.pl.pages.home.sections[2].heading
+    Grupy spraw
+
+guidanceContent.pl.pages.home.sections[2].paragraphs[0]
+    Zakres pracy obejmuje następujące sześć grup. Strona «Usługi» opisuje każdą grupę dokładniej i wskazuje, czego się nie obiecuje.
+
+guidanceContent.pl.pages.home.sections[2].items[0]
+    Inwestycje i zakładanie spółki na Tajwanie
+
+guidanceContent.pl.pages.home.sections[2].items[1]
+    Sprawy cywilne i odszkodowania
+
+guidanceContent.pl.pages.home.sections[2].items[2]
+    Małżeństwo, rodzina i spadki
+
+guidanceContent.pl.pages.home.sections[2].items[3]
+    Spory ze stosunku pracy
+
+guidanceContent.pl.pages.home.sections[2].items[4]
+    Sprawy karne
+
+guidanceContent.pl.pages.home.sections[2].items[5]
+    Własność intelektualna: znaki towarowe, patenty i prawo autorskie
+
+guidanceContent.pl.pages.home.sections[3].heading
+    Od czego zacząć
+
+guidanceContent.pl.pages.home.sections[3].paragraphs[0]
+    Prosimy przeczytać stronę «Usługi», aby sprawdzić, czy sprawa wchodzi w nasz zakres, a następnie «Koszty» i «Kontakt», aby dowiedzieć się, jak ustala się zakres i jak koszty są potwierdzane przed rozpoczęciem pracy.
+
+guidanceContent.pl.pages.home.sections[3].paragraphs[1]
+    Przy wysyłaniu wiadomości można napisać streszczenie we własnym języku. Oryginalny tekst jest zapisywany tak, jak został napisany, i nie jest tłumaczony automatycznie. Wysłana wiadomość jest wnioskiem oczekującym na rozpatrzenie: to jeszcze nie konsultacja i jeszcze nie potwierdzony termin.
+
+guidanceContent.pl.pages.services.eyebrow
+    USŁUGI
+
+guidanceContent.pl.pages.services.title
+    Jakie sprawy prowadzimy
+
+guidanceContent.pl.pages.services.description
+    Sześć grup spraw kancelarii na Tajwanie i granice, które warto znać najpierw.
+
+guidanceContent.pl.pages.services.intro
+    Poniżej grupy, które rzeczywiście prowadzimy, oraz pytania często zadawane na początku. Opis pomaga ocenić, czy sprawa wchodzi w nasz zakres; jest ogólny i nie jest analizą prawną jednego akt.
+
+guidanceContent.pl.pages.services.sections[0].heading
+    Inwestycje i zakładanie spółki na Tajwanie
+
+guidanceContent.pl.pages.services.sections[0].paragraphs[0]
+    Towarzyszymy zagranicznym inwestorom i przedsiębiorstwom przy zakładaniu lub prowadzeniu spółki na Tajwanie: wybór formy prawnej, przygotowanie i złożenie dokumentów, wniesienie kapitału, sprawy bankowe, ocena siedziby oraz wymagania branżowe. Wspieramy także księgowość i podatki wynikające z założenia i prowadzenia działalności na Tajwanie.
+
+guidanceContent.pl.pages.services.sections[0].paragraphs[1]
+    Przebieg i czas różnią się według formy, inwestora, branży, banku i posiadanych dokumentów. Założenie spółki samo w sobie nie prowadzi do tytułu pobytu (居留) ani zezwolenia na pracę (工作許可): to odrębne postępowania, oceniane według sytuacji danej osoby.
+
+guidanceContent.pl.pages.services.sections[1].heading
+    Sprawy cywilne i odszkodowania
+
+guidanceContent.pl.pages.services.sections[1].paragraphs[0]
+    Ta grupa obejmuje spory umowne, odszkodowania z czynu niedozwolonego i spory konsumenckie. Praca zaczyna się zwykle od chronologii, oceny posiadanych dokumentów i dowodów, a dopiero potem od kolejnych kroków.
+
+guidanceContent.pl.pages.services.sections[1].paragraphs[1]
+    Terminy, w tym ustawowe terminy do wytoczenia powództwa, oraz kompletność dowodów kształtują przebieg. Dlatego znane daty należy podać jak najwcześniej. Prosimy zachować umowy, wiadomości, dowody zapłaty lub zdjęcia sytuacji na miejscu i wymienić je w pierwszej wiadomości.
+
+guidanceContent.pl.pages.services.sections[2].heading
+    Małżeństwo, rodzina i spadki
+
+guidanceContent.pl.pages.services.sections[2].paragraphs[0]
+    Prowadzimy sprawy o rozwód (離婚), podział majątku, wykonywanie i ponoszenie praw i obowiązków wobec małoletnich dzieci (未成年子女權利義務之行使或負擔), kontakty (會面交往) i spadki (繼承), także gdy strony lub majątek znajdują się w różnych państwach. Transgraniczne sprawy rodzinne często wymagają dodatkowego badania rejestrów gospodarstw (戶籍), formy dokumentów i ich dowodowości na Tajwanie.
+
+guidanceContent.pl.pages.services.sections[2].paragraphs[1]
+    Ponieważ sprawy rodzinne często niosą terminy i równoległe postępowania, pierwsze streszczenie powinno wskazać stosunek stron, aktualne miejsce zamieszkania i już toczące się postępowania.
+
+guidanceContent.pl.pages.services.sections[3].heading
+    Spory ze stosunku pracy
+
+guidanceContent.pl.pages.services.sections[3].paragraphs[0]
+    Ta grupa obejmuje rozwiązanie stosunku pracy, odprawę według prawa Tajwanu (資遣費; nie należy jej utożsamiać z instytucjami innych państw), wynagrodzenie i spory z umowy o pracę (勞動契約), zarówno po stronie pracownika, jak i pracodawcy. Przy ocenie oddzielamy przyczynę rozwiązania od kwestii wypowiedzenia, zapłaty i terminów.
+
+guidanceContent.pl.pages.services.sections[3].paragraphs[1]
+    Umowa o pracę, regulamin pracy (工作規則), paski wynagrodzeń i korespondencja stron są zwykle dokumentami rozstrzygającymi. Jeśli nadal je Państwo mają, prosimy o wzmiankę w streszczeniu.
+
+guidanceContent.pl.pages.services.sections[4].heading
+    Sprawy karne
+
+guidanceContent.pl.pages.services.sections[4].paragraphs[0]
+    Towarzyszymy w postępowaniu przygotowawczym i przed sądem, zarówno dla podejrzanych lub oskarżonych, jak i dla pokrzywdzonych, oraz oceniamy ryzyko karne działalności przedsiębiorstwa.
+
+guidanceContent.pl.pages.services.sections[4].paragraphs[1]
+    Sprawy karne mają często krótkie terminy i ustalone etapy. Jeśli otrzymano już pismo organu ścigania lub sądu, prosimy wcześnie podać datę na piśmie, aby treść została rozpatrzona we właściwej kolejności.
+
+guidanceContent.pl.pages.services.sections[5].heading
+    Własność intelektualna
+
+guidanceContent.pl.pages.services.sections[5].paragraphs[0]
+    Wspieramy przy zgłoszeniu znaków towarowych (商標) i patentów (專利), przy prawie autorskim i przy sporach o te prawa na Tajwanie.
+
+guidanceContent.pl.pages.services.sections[5].paragraphs[1]
+    W tej grupie decyduje kolejność kroków: zakres ochrony, chwila zgłoszenia i faktyczne używanie wpływają na wybór. Złożenie wniosku samo w sobie nie oznacza, że zostanie on uwzględniony.
+
+guidanceContent.pl.pages.services.sections[6].heading
+    Zakres i jego potwierdzenie
+
+guidanceContent.pl.pages.services.sections[6].paragraphs[0]
+    Kancelaria pracuje według prawa Tajwanu i prowadzi sprawy wymienionych grup. Zakres każdej sprawy jest potwierdzany osobno po tym, jak adwokat rozpatrzy wiadomość.
+
+guidanceContent.pl.pages.services.sections[6].paragraphs[1]
+    Status pobytu, zezwolenie na pracę i podobne kwestie ocenia się na podstawie dokumentów i sytuacji danej osoby, a nie obywatelstwa. Jeśli część sprawy dotyczy takich kwestii, prosimy o wzmiankę przy kontakcie. Ta strona nie obiecuje wyniku ani terminu odpowiedzi.
+
+guidanceContent.pl.pages.about.eyebrow
+    KANCELARIA
+
+guidanceContent.pl.pages.about.title
+    O Hovering International Law Firm
+
+guidanceContent.pl.pages.about.description
+    Podstawowe dane o tej tajwańskiej kancelarii adwokackiej, jej biurach i pracy z podmiotami zagranicznymi.
+
+guidanceContent.pl.pages.about.intro
+    Hovering International Law Firm jest kancelarią adwokacką na Tajwanie. Adwokaci pracują od doradztwa dla przedsiębiorstw po postępowanie sądowe. Ta część opisuje powstanie kancelarii, siedziby i pracę z podmiotami zagranicznymi.
+
+guidanceContent.pl.pages.about.sections[0].heading
+    Założenie i struktura
+
+guidanceContent.pl.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) została założona w 2016 r. przez adwokatów, którzy studiowali na National Taiwan University (國立臺灣大學). Chińska nazwa 昊鼎 łączy znak 昊 («szerokie niebo») ze znakiem 鼎 («trwała podstawa») i opisuje kierunek kancelarii od założenia.
+
+guidanceContent.pl.pages.about.sections[0].paragraphs[1]
+    Mamy biura w Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) i Pingtung (屏東). Biuro w Kaohsiung koncentruje się na zarządzaniu przedsiębiorstwem i prowadzi spory cywilne, karne i administracyjne. Biuro w Taichung prowadzi sprawy budowlane, własność intelektualną oraz sprawy związane z Koreą i Japonią. Biuro w Pingtung otwarto w 2017 r. na potrzeby lokalne.
+
+guidanceContent.pl.pages.about.sections[0].paragraphs[2]
+    Oprócz pracy adwokackiej od 2020 r. istnieje także Hovering Accounting Office, które oferuje księgowość i planowanie podatkowe przedsiębiorcom i osobom z majątkiem.
+
+guidanceContent.pl.pages.about.sections[1].heading
+    Praca z podmiotami zagranicznymi
+
+guidanceContent.pl.pages.about.sections[1].paragraphs[0]
+    Praca transgraniczna obejmuje zakładanie spółek, wizy, zgłoszenia znaków towarowych i patentów, ocenę ryzyka prawnego oraz doradztwo podatkowe przedsiębiorstw. Biuro w Taichung prowadzi zwłaszcza sprawy budowlane, własność intelektualną oraz sprawy związane z Koreą i Japonią. Adwokat Wei Tseng (曾雋崴) towarzyszy klientom z Korei, Japonii i innym klientom międzynarodowym w wskazanych grupach.
+
+guidanceContent.pl.pages.about.sections[1].paragraphs[1]
+    Czy możemy przyjąć sprawę, zależy od treści i od języka komunikacji. Jeśli sprawa wchodzi w wskazane grupy i można ją omówić w jednym z czterech języków konsultacji, można wysłać streszczenie do rozpatrzenia.
+
+guidanceContent.pl.pages.about.sections[2].heading
+    Gdy Państwo się z nami kontaktują
+
+guidanceContent.pl.pages.about.sections[2].paragraphs[0]
+    Po wpłynięciu streszczenia adwokat rozpatruje treść, a następnie omawia możliwy zakres pracy, jeszcze potrzebne dokumenty i kolejne kroki. W sprawach podatkowych lub księgowych kancelaria może pracować z działem księgowości w jednym biegu.
+
+guidanceContent.pl.pages.about.sections[2].paragraphs[1]
+    Wynik każdej sprawy zależy od faktów i posiadanych dokumentów; nie obiecujemy wyniku. Jeśli potrzebna jest wiążąca odpowiedź dla danej sytuacji, dokumenty muszą być omówione w jednym z czterech języków konsultacji z adwokatem.
+
+guidanceContent.pl.pages.lawyers.eyebrow
+    ADWOKACI
+
+guidanceContent.pl.pages.lawyers.title
+    Międzynarodowy zespół Hovering
+
+guidanceContent.pl.pages.lawyers.description
+    Profile adwokatów, kierownictwa operacyjnego i partnerskiego biura rachunkowego Hovering.
+
+guidanceContent.pl.pages.lawyers.intro
+    
+
+guidanceContent.pl.pages.pricing.eyebrow
+    KOSZTY
+
+guidanceContent.pl.pages.pricing.title
+    Jak ustala się zakres pracy i koszty
+
+guidanceContent.pl.pages.pricing.description
+    Wyjaśnienie kolejności: najpierw zakres pracy, potem potwierdzenie kosztów, i dlaczego ta strona nie zawiera cennika.
+
+guidanceContent.pl.pages.pricing.intro
+    Ta strona wyjaśnia, jak ustala się koszty, a nie ich wysokość. Wysokość zależy od zakresu pracy danej sprawy i ma sens dopiero wtedy, gdy ten zakres jest jasny.
+
+guidanceContent.pl.pages.pricing.sections[0].heading
+    Najpierw ustala się zakres pracy
+
+guidanceContent.pl.pages.pricing.sections[0].paragraphs[0]
+    Sprawy tego samego rodzaju mogą wymagać bardzo różnego nakładu, zależnie od liczby stron, posiadanych dokumentów, terminów do zachowania i od tego, czy postępowanie już się zaczęło. Dlatego pierwszym krokiem jest zawsze ustalenie, co należy do pracy, a co nie.
+
+guidanceContent.pl.pages.pricing.sections[0].paragraphs[1]
+    Streszczenie wysłane na początku jest podstawą tego zakresu. Im jaśniej opisuje przebieg, żądanie i terminy, tym dokładniej można określić zakres.
+
+guidanceContent.pl.pages.pricing.sections[1].heading
+    Koszty potwierdza się przed rozpoczęciem pracy
+
+guidanceContent.pl.pages.pricing.sections[1].paragraphs[0]
+    Gdy zakres pracy jest jasny, wysokość i sposób obliczania kosztów omawia się i potwierdza z Państwem, zanim praca się zacznie. Jeśli zakres zmieni się w trakcie, trzeba to potwierdzić ponownie.
+
+guidanceContent.pl.pages.pricing.sections[1].paragraphs[1]
+    Ta strona nie jest ofertą cenową i nie tworzy obowiązku zapłaty.
+
+guidanceContent.pl.pages.pricing.sections[2].heading
+    Konsultacja może być odpłatna
+
+guidanceContent.pl.pages.pricing.sections[2].paragraphs[0]
+    Konsultacja z adwokatem może być świadczeniem odpłatnym. Ta strona nie mówi, że pierwsza rozmowa jest bezpłatna, i żadna część nie może być tak odczytana.
+
+guidanceContent.pl.pages.pricing.sections[2].paragraphs[1]
+    Jeśli konsultacja jest odpłatna, wysokość i sposób zapłaty podaje się, zanim do niej dojdzie.
+
+guidanceContent.pl.pages.pricing.sections[3].heading
+    Dlaczego ta strona nie podaje stawek
+
+guidanceContent.pl.pages.pricing.sections[3].paragraphs[0]
+    Koszty zależą od samej sprawy: od nakładu, liczby stron, dokumentów, terminów i od tego, czy postępowanie już trwa. Liczba ustalona z góry nie pokazałaby kosztów Państwa akt. Dlatego najpierw ustalamy zakres pracy, a następnie podajemy koszty, zanim praca się zacznie.
+
+guidanceContent.pl.pages.pricing.sections[3].paragraphs[1]
+    Obok honorarium adwokackiego mogą powstać koszty sądowe, urzędowe lub osób trzecich. Są one oddzielone od honorarium i zależą od danego postępowania.
+
+guidanceContent.pl.pages.contact.eyebrow
+    KONTAKT
+
+guidanceContent.pl.pages.contact.title
+    Jak skontaktować się z kancelarią
+
+guidanceContent.pl.pages.contact.description
+    Język strony, języki konsultacji, postępowanie, gdy nie można korzystać z żadnego z czterech języków, oraz to, czego ta strona nie obiecuje.
+
+guidanceContent.pl.pages.contact.intro
+    Zanim Państwo do nas napiszą, prosimy rozróżnić trzy poniższe punkty. Często się je miesza, ale oznaczają coś innego.
+
+guidanceContent.pl.pages.contact.sections[0].heading
+    Trzy rzeczy, które muszą pozostać rozdzielone
+
+guidanceContent.pl.pages.contact.sections[0].paragraphs[0]
+    Język wyświetlania strony, język konsultacji z adwokatem i język, w którym Państwo piszą, to trzy osobne rzeczy.
+
+guidanceContent.pl.pages.contact.sections[0].items[0]
+    Język strony: te informacje są napisane po polsku.
+
+guidanceContent.pl.pages.contact.sections[0].items[1]
+    Język konsultacji: konsultacja odbywa się po angielsku, chińsku (中文), japońsku i koreańsku.
+
+guidanceContent.pl.pages.contact.sections[0].items[2]
+    Język pisania: można napisać streszczenie we własnym języku; oryginalny tekst jest zapisywany bez zmian.
+
+guidanceContent.pl.pages.contact.sections[1].heading
+    Jeśli nie można korzystać z żadnego z czterech języków konsultacji
+
+guidanceContent.pl.pages.contact.sections[1].paragraphs[0]
+    W formularzu kontaktowym można wybrać «Sposób komunikacji musi zostać potwierdzony». Odpowiadamy, aby zbadać możliwy sposób komunikacji, jeśli taki sposób istnieje; świadczenie w innym języku nie jest zapewniane, a termin odpowiedzi nie jest obiecany.
+
+guidanceContent.pl.pages.contact.sections[1].paragraphs[1]
+    To tylko krok badania, nie jest obietnicą. Nie obiecujemy tłumacza ustnego, świadczenia po polsku ani w innym języku poza czterema wskazanymi językami, i nie obiecujemy, że przyjmiemy każdą sprawę.
+
+guidanceContent.pl.pages.contact.sections[2].heading
+    Co powinno znaleźć się w pierwszej wiadomości
+
+guidanceContent.pl.pages.contact.sections[2].paragraphs[0]
+    Prosimy podać, co się stało, jakiej pomocy potrzeba, jaki związek ma sprawa z Tajwanem oraz termin, jeśli jest znany. Jeśli otrzymano już pismo sądu lub urzędu, prosimy podać datę na piśmie.
+
+guidanceContent.pl.pages.contact.sections[2].paragraphs[1]
+    Na początku nie trzeba jeszcze wysyłać numeru paszportu, numeru dokumentu tożsamości, danych rachunku, dokumentacji medycznej ani całości dowodów. Prosimy czekać na wskazówki adwokata i dopiero wtedy wysłać wrażliwe dokumenty bezpieczną drogą.
+
+guidanceContent.pl.pages.contact.sections[3].heading
+    Czego ta strona nie obiecuje
+
+guidanceContent.pl.pages.contact.sections[3].paragraphs[0]
+    Nie obiecujemy terminu odpowiedzi, nie potwierdzamy spotkania za pośrednictwem tej strony, nie obiecujemy konkretnego adwokata i nie zapewniamy tłumacza ustnego. Tłumaczenie pisemne to coś innego: wiadomość nie jest tłumaczona automatycznie.
+
+guidanceContent.pl.pages.contact.sections[3].paragraphs[1]
+    Jeśli Państwo wyślą wniosek, treść jest zapisywana i czeka na rozpatrzenie. Jeśli po pewnym czasie nie ma odpowiedzi, można ponownie napisać na adres poczty elektronicznej podany na stronie kontaktu.
+
+guidanceContent.pl.pages.faq.eyebrow
+    PYTANIA
+
+guidanceContent.pl.pages.faq.title
+    Często zadawane pytania
+
+guidanceContent.pl.pages.faq.description
+    Wyjaśnienia o zakresie pracy, przygotowaniu, językach, kosztach i znaczeniu wysłanego wniosku.
+
+guidanceContent.pl.pages.faq.intro
+    Poniższe pytania są odpowiedziami na poziomie informacji ogólnych. Odpowiedź w Państwa sprawie jest możliwa dopiero po rozpatrzeniu dokumentów przez adwokata.
+
+guidanceContent.pl.pages.faq.sections[0].heading
+    Jak korzystać z tej części
+
+guidanceContent.pl.pages.faq.sections[0].paragraphs[0]
+    Jeśli nie ma odpowiedzi na daną sytuację, odpowiedź zwykle zależy od szczególnych faktów. Prosimy wtedy wpisać te fakty w streszczeniu, zamiast wyprowadzać je samodzielnie z tej strony.
+
+guidanceContent.pl.pages.faq.faqs[0].question
+    Jakie sprawy prowadzi kancelaria?
+
+guidanceContent.pl.pages.faq.faqs[0].answer
+    Prowadzimy sześć grup: inwestycje i zakładanie spółki na Tajwanie, sprawy cywilne i odszkodowania, małżeństwo, rodzina i spadki, spory ze stosunku pracy, sprawy karne oraz własność intelektualną. Czy sprawa zostanie przyjęta, rozstrzyga się po rozpatrzeniu treści.
+
+guidanceContent.pl.pages.faq.faqs[1].question
+    Co przygotować przed kontaktem?
+
+guidanceContent.pl.pages.faq.faqs[1].answer
+    Prosimy przygotować krótkie streszczenie przebiegu, żądania, związku z Tajwanem i terminu, jeśli istnieje. Jeśli jest już pismo sądu lub urzędu, prosimy podać datę. Na tym etapie nie trzeba jeszcze wysyłać dokumentów tożsamości ani całości dowodów.
+
+guidanceContent.pl.pages.faq.faqs[2].question
+    Czy możliwa jest konsultacja po polsku?
+
+guidanceContent.pl.pages.faq.faqs[2].answer
+    Nie. Te informacje są napisane po polsku, ale konsultacja z adwokatem odbywa się wyłącznie w języku angielskim, chińskim (中文), japońskim i koreańskim. Nie obiecujemy też tłumacza ustnego. Tłumaczenie pisemne to coś innego: oryginalny tekst, który Państwo napiszą, jest zapisywany tak i nie jest tłumaczony automatycznie.
+
+guidanceContent.pl.pages.faq.faqs[3].question
+    Co, jeśli nie można korzystać z żadnego z czterech języków?
+
+guidanceContent.pl.pages.faq.faqs[3].answer
+    Przy wysyłaniu wniosku prosimy wybrać «Sposób komunikacji musi zostać potwierdzony». Odpowiadamy, aby zbadać sposób komunikacji, ale świadczenie w innym języku nie jest zapewniane. To krok badania, nie jest obietnicą, że możemy pracować w innym języku.
+
+guidanceContent.pl.pages.faq.faqs[4].question
+    Jak traktowany jest mój tekst po polsku?
+
+guidanceContent.pl.pages.faq.faqs[4].answer
+    Oryginalny tekst, który Państwo napiszą, jest zapisywany taki, jaki jest, i nie jest tłumaczony automatycznie. W razie potrzeby język dalszej komunikacji zostanie z Państwem potwierdzony.
+
+guidanceContent.pl.pages.faq.faqs[5].question
+    Czy konsultacja już się odbyła, gdy wniosek został wysłany?
+
+guidanceContent.pl.pages.faq.faqs[5].answer
+    Nie. Wysłany wniosek czeka na rozpatrzenie przez adwokata. To nie jest porada prawna, nie jest potwierdzonym terminem, a wysłanie samo w sobie nie tworzy stosunku między adwokatem a klientem.
+
+guidanceContent.pl.pages.faq.faqs[6].question
+    Jak oblicza się koszty?
+
+guidanceContent.pl.pages.faq.faqs[6].answer
+    Najpierw ustala się zakres pracy, a następnie wysokość i sposób obliczania kosztów potwierdza się z Państwem, zanim praca się zacznie. Ta strona nie podaje liczb i nie mówi, że pierwsza rozmowa jest bezpłatna.
+
+guidanceContent.pl.pages.faq.faqs[7].question
+    Co, jeśli sprawa jest bardzo pilna?
+
+guidanceContent.pl.pages.faq.faqs[7].answer
+    Prosimy podać termin lub datę na piśmie urzędowym na początku streszczenia, aby te daty były widoczne przy rozpatrzeniu. Ta strona nie ma kanału awaryjnego i nie zapewnia terminu odpowiedzi; jeśli sprawa nie może czekać, należy równolegle szukać innych dróg w swoim miejscu.
+
+guidanceContent.pl.pages.privacy.eyebrow
+    PRYWATNOŚĆ
+
+guidanceContent.pl.pages.privacy.title
+    Dane zbierane przez formularz kontaktowy
+
+guidanceContent.pl.pages.privacy.description
+    Co zbiera formularz kontaktowy w tej polskiej części, jak traktowany jest oryginalny tekst i jak skontaktować się z nami w sprawie Państwa danych.
+
+guidanceContent.pl.pages.privacy.intro
+    Ta część dotyczy wyłącznie formularza kontaktowego na tych stronach informacyjnych. Opisuje postępowanie z danymi, a nie gwarancję techniczną.
+
+guidanceContent.pl.pages.privacy.sections[0].heading
+    Jakie dane są zbierane
+
+guidanceContent.pl.pages.privacy.sections[0].paragraphs[0]
+    Gdy za pośrednictwem formularza w tej części wysyłany jest wniosek, rejestrowane są następujące dane:
+
+guidanceContent.pl.pages.privacy.sections[0].items[0]
+    Podane imię i nazwisko
+
+guidanceContent.pl.pages.privacy.sections[0].items[1]
+    Adres poczty elektronicznej do odpowiedzi
+
+guidanceContent.pl.pages.privacy.sections[0].items[2]
+    Język wyświetlania strony w chwili wysłania
+
+guidanceContent.pl.pages.privacy.sections[0].items[3]
+    Język, w którym napisano
+
+guidanceContent.pl.pages.privacy.sections[0].items[4]
+    Żądany język konsultacji
+
+guidanceContent.pl.pages.privacy.sections[0].items[5]
+    Oryginalny tekst, który napisano
+
+guidanceContent.pl.pages.privacy.sections[0].items[6]
+    Zgoda na wysłanie wniosku
+
+guidanceContent.pl.pages.privacy.sections[0].items[7]
+    Numer odbioru, aby odnaleźć wniosek
+
+guidanceContent.pl.pages.privacy.sections[1].heading
+    Oryginalny tekst jest zapisywany bez zmian
+
+guidanceContent.pl.pages.privacy.sections[1].paragraphs[0]
+    Tekst jest zapisywany dokładnie tak, jak został napisany, i nie jest tłumaczony automatycznie. Jeśli do opracowania potrzebne jest tłumaczenie, omawia się to z Państwem osobno.
+
+guidanceContent.pl.pages.privacy.sections[1].paragraphs[1]
+    Ponieważ oryginalny tekst jest zapisywany, na pierwszym etapie nie należy wpisywać tego, co jeszcze nie jest potrzebne, na przykład numeru paszportu, numeru dokumentu tożsamości ani danych rachunku.
+
+guidanceContent.pl.pages.privacy.sections[2].heading
+    Miejsce przechowywania i dostęp
+
+guidanceContent.pl.pages.privacy.sections[2].paragraphs[0]
+    Treść wysyłki jest przechowywana w miejscu niedostępnym publicznie. Tylko uprawnione osoby w kancelarii mogą z niej korzystać, aby opracować wniosek.
+
+guidanceContent.pl.pages.privacy.sections[2].paragraphs[1]
+    Ta strona nie daje bezwzględnej gwarancji bezpieczeństwa. Żadna droga przesyłu i żadne miejsce przechowywania nie jest całkowicie bezpieczne; wrażliwe dokumenty należy więc wysyłać dopiero po szczególnym wskazaniu adwokata.
+
+guidanceContent.pl.pages.privacy.sections[3].heading
+    Cel wykorzystania
+
+guidanceContent.pl.pages.privacy.sections[3].paragraphs[0]
+    Wysłane dane służą rozpatrzeniu wniosku, odpowiedzi, wyjaśnieniu sposobu komunikacji oraz opracowaniu, jeśli praca zostanie podjęta.
+
+guidanceContent.pl.pages.privacy.sections[3].paragraphs[1]
+    Dane nie są wykorzystywane do marketingu bez odrębnej zgody.
+
+guidanceContent.pl.pages.privacy.sections[4].heading
+    Powiadomienie i numer odbioru
+
+guidanceContent.pl.pages.privacy.sections[4].paragraphs[0]
+    Jeśli wniosek zostanie pomyślnie wysłany, system powiadamia kancelarię. Jeśli to powiadomienie nie jest jeszcze potwierdzone, tekst pozostaje zapisany i nie ginie.
+
+guidanceContent.pl.pages.privacy.sections[4].paragraphs[1]
+    Numer odbioru służy do odnalezienia wniosku w naszych aktach. Jest pokazywany po zapisaniu; można go podać przy ponownym kontakcie.
+
+guidanceContent.pl.pages.privacy.sections[5].heading
+    Państwa prawa i droga kontaktu
+
+guidanceContent.pl.pages.privacy.sections[5].paragraphs[0]
+    Można żądać dostępu, sprostowania lub usunięcia danych albo odwołać zgodę, za pośrednictwem adresu poczty elektronicznej podanego na stronie kontaktu. Jeśli istnieje ustawowy lub procesowy obowiązek przechowywania, wyjaśniamy ograniczenie.
+
+guidanceContent.pl.pages.privacy.sections[5].paragraphs[1]
+    Ta strona nie podaje stałego terminu przechowywania, ponieważ faktyczny czas zależy od tego, czy sprawa jest kontynuowana, oraz od związanych z tym obowiązków. Jeśli Państwo życzą sobie wcześniejszego usunięcia, prosimy o informację przy kontakcie.
+
+guidanceContent.pl.pages.privacy.sections[6].heading
+    Miejsce przechowywania i dostawcy
+
+guidanceContent.pl.pages.privacy.sections[6].paragraphs[0]
+    Ta witryna jest hostowana u Vercel, a wysyłka jest przechowywana w niepublicznym magazynie obiektów tej usługi. Poczta elektroniczna jest wysyłana przez usługę poczty używaną przez kancelarię.
+
+guidanceContent.pl.pages.privacy.sections[6].paragraphs[1]
+    Serwery poszczególnych dostawców mogą znajdować się poza Tajwanem, więc dane mogą tam być przechowywane i przetwarzane. Gdy cel przechowywania zostanie spełniony, dane usuwa się bez zwłoki; dane, które według stosowanych przepisów muszą być przechowywane, pozostają przez ten czas. Wnioski dotyczące danych osobowych przyjmuje wei@hoveringlaw.com.tw.
+
+guidanceContent.pl.pages.disclaimer.eyebrow
+    ZASTRZEŻENIA
+
+guidanceContent.pl.pages.disclaimer.title
+    Zakres i granice informacji na tej stronie
+
+guidanceContent.pl.pages.disclaimer.description
+    Ogólny charakter informacji, zakres prawny oraz przesłanki stosunku między adwokatem a klientem.
+
+guidanceContent.pl.pages.disclaimer.intro
+    Ta część wyjaśnia, co te polskie strony informacyjne mogą dla Państwa zrobić, a czego nie.
+
+guidanceContent.pl.pages.disclaimer.sections[0].heading
+    Tylko informacje ogólne
+
+guidanceContent.pl.pages.disclaimer.sections[0].paragraphs[0]
+    Treść tych stron jest napisana jako informacja ogólna. Nie jest poradą prawną w Państwa sprawie i nie zastępuje oceny własnych dokumentów.
+
+guidanceContent.pl.pages.disclaimer.sections[0].paragraphs[1]
+    Wynik sprawy zależy od faktów, stosowanych przepisów i chwili; dwie pozornie podobne sytuacje mogą zakończyć się inaczej.
+
+guidanceContent.pl.pages.disclaimer.sections[1].heading
+    Zakres prawny
+
+guidanceContent.pl.pages.disclaimer.sections[1].paragraphs[0]
+    Kancelaria praktykuje według prawa Tajwanu, a ta strona mówi wyłącznie o pracy w tym ramach.
+
+guidanceContent.pl.pages.disclaimer.sections[1].paragraphs[1]
+    Treść nie jest doradztwem według prawa innego porządku niż Tajwan, w tym prawa miejsca zamieszkania. Jeśli część sprawy dotyczy innego porządku prawnego, wyjaśnimy z Państwem, jaka wykwalifikowana osoba jest potrzebna do tej części.
+
+guidanceContent.pl.pages.disclaimer.sections[2].heading
+    Stosunek między adwokatem a klientem nie powstaje sam
+
+guidanceContent.pl.pages.disclaimer.sections[2].paragraphs[0]
+    Czytanie tej strony, wysłanie formularza lub wiadomości elektronicznej samo w sobie nie tworzy stosunku między adwokatem a klientem.
+
+guidanceContent.pl.pages.disclaimer.sections[2].paragraphs[1]
+    Ten stosunek powstaje dopiero po rozpatrzeniu sprawy i po tym, jak obie strony potwierdzą podjęcie pracy.
+
+guidanceContent.pl.pages.disclaimer.sections[3].heading
+    Brak obietnicy wyniku
+
+guidanceContent.pl.pages.disclaimer.sections[3].paragraphs[0]
+    Żadna część tej strony nie jest obietnicą wyniku sprawy, uwzględnienia wniosku ani statusu pobytu i pracy.
+
+guidanceContent.pl.pages.disclaimer.sections[3].paragraphs[1]
+    Łącza zewnętrzne służą orientacji; nie zapewniamy ani poprawności, ani aktualności treści osób trzecich.
+
+guidanceContent.pl.pages.columns.eyebrow
+    ARTYKUŁY
+
+guidanceContent.pl.pages.columns.title
+    Artykuły o prawie Tajwanu
+
+guidanceContent.pl.pages.columns.description
+    Polskie artykuły o częstych pytaniach z zakresu prawa Tajwanu. Treść jest informacją ogólną w chwili publikacji, a nie poradą prawną w Państwa sprawie.
+
+guidanceContent.pl.pages.columns.intro
+    Kancelaria publikuje artykuły o częstych pytaniach z zakresu prawa Tajwanu. Artykuły dostępne po polsku znajdują się na tej stronie; obok są cztery łącza, z których każde otwiera listę artykułów w jednym języku oryginału.
+
+guidanceContent.pl.pages.columns.sections[0].heading
+    Cztery listy według języka
+
+guidanceContent.pl.pages.columns.sections[0].paragraphs[0]
+    Ta część zawiera cztery łącza: listę artykułów po koreańsku, po chińsku, po angielsku i po japońsku. Każde łącze podaje język listy, aby było wiadomo z góry, w jakim języku otworzy się treść.
+
+guidanceContent.pl.pages.columns.sections[0].paragraphs[1]
+    Te cztery listy są listami według języka oryginału artykułów, a nie listami tłumaczeń. Artykuły dostępne po polsku znajdują się osobno na tej stronie.
+
+guidanceContent.pl.pages.columns.sections[1].heading
+    Dokąd prowadzą łącza
+
+guidanceContent.pl.pages.columns.sections[1].paragraphs[0]
+    Gdy wybiorą Państwo jedno z czterech łączy, otwiera się lista artykułów w tym języku. Z listy wybierają Państwo tekst; cała treść ukazuje się w języku oryginału artykułu.
+
+guidanceContent.pl.pages.columns.sections[1].paragraphs[1]
+    Ta strona nie streszcza treści artykułów i nie zapewnia, że temat jest dostępny we wszystkich czterech językach. Każda lista zawiera tylko teksty opublikowane w tym języku.
+
+guidanceContent.pl.pages.columns.sections[2].heading
+    Jak dalece artykuł może służyć orientacji
+
+guidanceContent.pl.pages.columns.sections[2].paragraphs[0]
+    Artykuły są informacjami ogólnymi w chwili publikacji. Przepisy i ich stosowanie mogą się zmieniać, a artykuł nie zawiera wszystkich okoliczności Państwa sprawy.
+
+guidanceContent.pl.pages.columns.sections[2].paragraphs[1]
+    Dlatego prosimy nie opierać działania w prawdziwej sprawie wyłącznie na artykule. Prosimy użyć go do przeglądu i omówić dokumenty osobno z adwokatem; ta strona nie jest etapem konsultacji.
+
+guidanceTeamCopy.pl.label
+    OUR TEAM
+
+guidanceTeamCopy.pl.title
+    Międzynarodowy zespół Hovering
+
+guidanceTeamCopy.pl.description
+    Profile adwokatów, kierownictwa operacyjnego i partnerskiego biura rachunkowego Hovering.
+
+guidanceTeamCopy.pl.representativeTitle
+    Adwokat kierujący
+
+guidanceTeamCopy.pl.teamTitle
+    Adwokaci i współpracownicy
+
+guidanceTeamCopy.pl.partnerTitle
+    Partnerskie biuro rachunkowe
+
+guidanceTeamCopy.pl.introLabel
+    Przedstawienie
+
+guidanceTeamCopy.pl.educationLabel
+    Wykształcenie
+
+guidanceTeamCopy.pl.experienceLabel
+    Doświadczenie
+
+guidanceTeamCopy.pl.photoAltPrefix
+    Zdjęcie
+
+guidanceTeamCopy.pl.workingLanguagesLabel
+    Języki pracy
+
+guidanceTeamCopy.pl.fullProfileLabel
+    Pełny profil (English)
+
+guidanceTeamCopy.pl.keyFactsHeading
+    Adwokat Wei Tseng — Dane zasadnicze
+
+guidanceTeamCopy.pl.qualificationLabel
+    Uprawnienie i kancelaria
+
+guidanceTeamCopy.pl.qualificationSentence
+    {name} jest uprawniona do wykonywania zawodu adwokata na Tajwanie i jest adwokatem kierującym {firm}.
+
+guidanceTeamCopy.pl.practiceLabel
+    Główne dziedziny
+
+guidanceTeamCopy.pl.consultationLanguagesLabel
+    Języki konsultacji
+
+guidanceTeamCopy.pl.roles.tseng-junwei
+    Adwokat kierujący na Tajwanie (Managing Attorney)
+
+guidanceTeamCopy.pl.roles.chang-rongxuan
+    Adwokat na Tajwanie (Taiwan Attorney)
+
+guidanceTeamCopy.pl.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.pl.roles.son-jungmin
+    Kierownictwo operacyjne Korei (Korea Operations Manager)
+
+guidanceTeamCopy.pl.roles.huang-shengping
+    Partner-księgowy (Partner CPA)
+
+guidanceTeamBios.pl.tseng-junwei.intro[0]
+    Kancelaria prowadzi sprawy przedsiębiorstw i osób prywatnych na Tajwanie po angielsku, japońsku, koreańsku i chińsku.
+
+guidanceTeamBios.pl.tseng-junwei.intro[1]
+    Reprezentowała koreańskiego studenta w żądaniu odszkodowania z powodu urazu na siłowni i uzyskała wyrok pierwszej instancji na TWD 1.57M.
+
+guidanceTeamBios.pl.tseng-junwei.education[0]
+    Magister (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.pl.tseng-junwei.education[1]
+    Licencjat (B.A.) z podwójnym tokiem prawo i finanse, National Chengchi University
+
+guidanceTeamBios.pl.tseng-junwei.education[2]
+    Studentka wymiany na Kobe University i Waseda University
+
+guidanceTeamBios.pl.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.pl.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.pl.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.pl.chang-rongxuan.intro[0]
+    Wcześniej w Ministry of Education, Legal Affairs Division, ze szczególnym uwzględnieniem spraw administracyjnych i cywilnych.
+
+guidanceTeamBios.pl.chang-rongxuan.intro[1]
+    Doświadczenie w sprawach uczelni, praw nauczycieli i skarg administracyjnych.
+
+guidanceTeamBios.pl.chang-rongxuan.education[0]
+    Licencjat prawa (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.pl.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.pl.chang-rongxuan.experience[1]
+    Adwokat, Hovering International Law Firm
+
+guidanceTeamBios.pl.chang-fangyu.intro[0]
+    Paralegal z wieloletnią pracą jako starszy paralegal w kilku kancelariach, odpowiedzialny za wsparcie procesowe, prawo spółek i inwestycje zagraniczne.
+
+guidanceTeamBios.pl.chang-fangyu.intro[1]
+    Wsparcie postępowań, zakładania spółek, zezwoleń na inwestycje zagraniczne, wniosków o licencje oraz wymiany między Koreą a Tajwanem.
+
+guidanceTeamBios.pl.chang-fangyu.education[0]
+    Licencjat prawa (LL.B.), Tunghai University
+
+guidanceTeamBios.pl.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.pl.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.pl.son-jungmin.intro[0]
+    Koordynuje terminy konsultacji i komunikację dla klientów z Korei.
+
+guidanceTeamBios.pl.son-jungmin.intro[1]
+    Wspiera wymianę między działami przez systemy dokumentów i tok pracy, na podstawie informatyki.
+
+guidanceTeamBios.pl.son-jungmin.education[0]
+    Licencjat (B.S.) informatyki, National Cheng Kung University
+
+guidanceTeamBios.pl.son-jungmin.experience[0]
+    Obszar operacji Korei, Hovering International Law Firm
+
+guidanceTeamBios.pl.huang-shengping.intro[0]
+    Ukończył programy licencjackie i magisterskie z rachunkowości na National Chengchi University i obecnie kieruje biurem rachunkowym.
+
+guidanceTeamBios.pl.huang-shengping.intro[1]
+    Wspiera zintegrowaną analizę ryzyka prawnego, podatkowego i finansowego dla klientów korporacyjnych.
+
+guidanceTeamBios.pl.huang-shengping.education[0]
+    Magister (M.A.) rachunkowości, National Chengchi University
+
+guidanceTeamBios.pl.huang-shengping.education[1]
+    Licencjat (B.A.) rachunkowości, National Chengchi University
+
+guidanceTeamBios.pl.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.pl.Korean
+    koreański
+
+guidanceLanguageNames.pl.Chinese
+    chiński
+
+guidanceLanguageNames.pl.Japanese
+    japoński
+
+guidancePracticeAreaNames.pl.Taiwan company setup
+    Zakładanie spółki na Tajwanie
+
+guidancePracticeAreaNames.pl.Taiwan investment counsel
+    Doradztwo prawne przy inwestycjach na Tajwanie
+
+guidancePracticeAreaNames.pl.Civil litigation and damages
+    Sprawy cywilne i odszkodowania
+
+guidancePracticeAreaNames.pl.Trademark and patent filings
+    Zgłoszenia znaków towarowych i patentów
+
+guidancePracticeAreaNames.pl.Visa and residency
+    Wiza i pobyt
+
+guidancePracticeAreaNames.pl.Family and labor disputes
+    Spory rodzinne i ze stosunku pracy
+
+guidanceOfficeCopy.pl.label
+    OFFICES
+
+guidanceOfficeCopy.pl.title
+    Biura
+
+guidanceOfficeCopy.pl.description
+    Adresy biur Hovering International Law Firm na Tajwanie.
+
+guidanceOfficeCopy.pl.officeLabel
+    Biuro
+
+guidanceOfficeCopy.pl.mapPreviewLabel
+    Podgląd mapy
+
+guidanceOfficeCopy.pl.koreaOfficeTitle
+    Biuro w Korei
+
+guidanceOfficeCopy.pl.koreaAddressCardLabel
+    Adres biura w Korei
+
+guidanceOfficeCopy.pl.koreaMapLinkLabel
+    Zobaczyć w Naver Map
+
+guidanceOfficeCopy.pl.reviewCountWord
+    opinii
+
+guidanceOfficeCopy.pl.phoneLabel
+    Telefon
+
+guidanceOfficeCopy.pl.faxLabel
+    Faks
+
+guidanceOfficeCopy.pl.mapLinkLabel
+    Zobaczyć na mapie
+
+guidanceOfficeCopy.pl.photoAlts[0]
+    Hol przyjęć biura Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.pl.photoAlts[1]
+    Gabinet adwokata w biurze Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.pl.photoAlts[2]
+    Sala konferencyjna biura Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.pl.officeTitles.taipei
+    Taipei
+
+guidanceOfficeCopy.pl.officeTitles.taichung
+    Taichung
+
+guidanceOfficeCopy.pl.officeTitles.kaohsiung
+    Kaohsiung
+
+guidanceOfficeCopy.pl.officeTitles.pingtung
+    Pingtung
+
+guidanceFooterCopy.pl.officeLabel
+    Biura
+
+guidanceFooterCopy.pl.officeQuickLinksLabel
+    Szybkie łącza do biur
+
+guidanceFooterCopy.pl.followLabel
+    Obserwuj
+
+guidanceFooterCopy.pl.blogLabel
+    Blog
+
+guidanceFooterCopy.pl.websiteLabel
+    Oficjalna strona
+
+guidanceFooterCopy.pl.sitemapLabel
+    Mapa witryny
+
+guidanceFooterCopy.pl.copyEmailLabel
+    Skopiować adres poczty elektronicznej
+
+guidanceFooterCopy.pl.emailCopiedMessage
+    Adres poczty elektronicznej został skopiowany.
+
+guidanceFooterCopy.pl.officialConsultationEmailLabel
+    Oficjalna poczta do konsultacji
+
+internationalInquiryCopy.pl.guidanceNotice
+    Ta strona jest napisana po polsku jako ogólna orientacja, a nie jako porada prawna w Państwa sprawie.
+
+internationalInquiryCopy.pl.consultationNotice
+    Konsultacja odbywa się wyłącznie w czterech językach: angielskim, chińskim (中文), japońskim i koreańskim.
+
+internationalInquiryCopy.pl.methodConfirmationNotice
+    Jeśli nie można korzystać z żadnego z czterech języków, prosimy wybrać «Sposób komunikacji musi zostać potwierdzony». Odpowiadamy, aby zbadać możliwy sposób komunikacji, jeśli taki sposób istnieje; świadczenie w innym języku nie jest zapewniane, a termin odpowiedzi nie jest obiecany.
+
+internationalInquiryCopy.pl.preparationNotice
+    Można napisać streszczenie we własnym języku. Oryginalny tekst jest zapisywany tak, jak został napisany, i nie jest tłumaczony automatycznie.
+
+internationalInquiryCopy.pl.heading
+    Wysłać wniosek o konsultację
+
+internationalInquiryCopy.pl.intro
+    Prosimy krótko opisać sprawę. Adwokat rozpatruje treść, zanim omawia się kolejny krok.
+
+internationalInquiryCopy.pl.submitLabel
+    Wysłać wniosek
+
+internationalInquiryCopy.pl.submittingLabel
+    Wysyłanie…
+
+internationalInquiryCopy.pl.successMessage
+    Otrzymaliśmy wniosek; czeka na rozpatrzenie. To nie oznacza, że konsultacja się odbyła ani że termin został potwierdzony.
+
+internationalInquiryCopy.pl.savedNotificationPendingMessage
+    Wniosek jest zapisany, ale powiadomienie kancelarii nie jest jeszcze potwierdzone. Napisane nie ginie. Jeśli nie ma odpowiedzi, można też napisać na adres poczty elektronicznej strony kontaktu.
+
+internationalInquiryCopy.pl.receiptIdLabel
+    Numer odbioru
+
+internationalInquiryCopy.pl.failureMessage
+    Nie udało się wysłać wniosku. Prosimy spróbować ponownie albo napisać na adres poczty elektronicznej strony kontaktu.
+
+internationalInquiryCopy.pl.originalLanguageLabel
+    Język, w którym Państwo piszą
+
+internationalInquiryCopy.pl.originalLanguagePlaceholder
+    Na przykład polski, angielski, chiński lub inny język
+
+internationalInquiryCopy.pl.preferredConsultationLanguageLabel
+    Język, którego Państwo życzą sobie do konsultacji
+
+internationalInquiryCopy.pl.originalTextLabel
+    Krótki opis sprawy (we własnym języku)
+
+internationalInquiryCopy.pl.originalTextPlaceholder
+    Prosimy podać, co się stało, jakiej pomocy potrzeba i termin, jeśli istnieje. Prosimy nie wpisywać numeru paszportu, numeru dokumentu ani danych rachunku.
+
+internationalInquiryCopy.pl.nameLabel
+    Imię i nazwisko
+
+internationalInquiryCopy.pl.emailLabel
+    Poczta elektroniczna
+
+internationalInquiryCopy.pl.consentLabel
+    Przeczytałem(-am) stronę o prywatności i wyrażam zgodę na wysłanie tego wniosku.
+
+internationalInquiryCopy.pl.privacyLinkLabel
+    Prywatność
+
+internationalInquiryCopy.pl.requiredMessage
+    To pole jest wymagane.
+
+internationalInquiryCopy.pl.invalidEmailMessage
+    Prosimy podać prawidłowy adres poczty elektronicznej.
+
+internationalInquiryCopy.pl.tooLongMessage
+    Tekst jest zbyt długi. Prosimy skrócić i wysłać ponownie.
+
+internationalInquiryCopy.pl.sourceLanguageNotice
+    Ten artykuł jest opublikowany tylko w języku {language}; łącze otwiera stronę oryginalną.
+
+internationalInquiryCopy.pl.unavailableTranslationNotice
+    Ten punkt nie jest jeszcze dostępny w języku tej strony. Łącze z językiem oryginału otwiera tekst oryginalny.
+
+internationalInquiryCopy.pl.unavailableLanguageNotice
+    Ta strona nie jest oferowana w języku {language}.
+
+internationalInquiryCopy.pl.languageOptions.en
+    Angielski (English)
+
+internationalInquiryCopy.pl.languageOptions.zh-hant
+    Chiński (中文)
+
+internationalInquiryCopy.pl.languageOptions.ja
+    Japoński (日本語)
+
+internationalInquiryCopy.pl.languageOptions.ko
+    Koreański (한국어)
+
+internationalInquiryCopy.pl.languageOptions.needs-method-confirmation
+    Żaden z czterech języków nie jest dostępny — sposób komunikacji musi zostać potwierdzony
+
+guidanceAnswers.pl.services.answer
+    Kancelaria prowadzi sześć grup spraw według prawa Tajwanu: inwestycje i zakładanie spółek, sprawy cywilne i odszkodowania, małżeństwo, rodzina i spadki, prawo pracy, sprawy karne oraz własność intelektualną. Zakres każdej sprawy jest potwierdzany osobno po tym, jak adwokat rozpatrzy treść, którą Państwo wysyłają. Konsultacja odbywa się wyłącznie po angielsku, chińsku, japońsku i koreańsku.
+
+guidanceAnswers.pl.services.sources[0]
+    /pl/faq
+
+guidanceAnswers.pl.services.sources[1]
+    /pl/contact
+
+guidanceAnswers.pl.about.answer
+    Hovering International Law Firm jest kancelarią adwokacką na Tajwanie, założoną w 2016 r. przez absolwentów National Taiwan University (國立臺灣大學), z biurami w Taipei, Kaohsiung, Taichung i Pingtung. Od 2020 r. istnieje dział księgowości; biuro w Taichung prowadzi sprawy związane z Koreą i Japonią. Kancelaria nie obiecuje wyniku. Konsultacja odbywa się wyłącznie po angielsku, chińsku, japońsku i koreańsku.
+
+guidanceAnswers.pl.about.sources[0]
+    /pl/lawyers
+
+guidanceAnswers.pl.about.sources[1]
+    /pl/services
+
+guidanceAnswers.pl.lawyers.answer
+    Ta strona pokazuje profile adwokatów, kierownictwa operacyjnego i partnerskiego biura rachunkowego Hovering. Adwokat Wei Tseng (曾雋崴) jest uprawniona do wykonywania zawodu na Tajwanie i jest adwokatem kierującym kancelarią; pracuje z klientami z Korei, Japonii i innymi klientami międzynarodowymi. Konsultacja odbywa się wyłącznie po angielsku, chińsku, japońsku i koreańsku.
+
+guidanceAnswers.pl.lawyers.sources[0]
+    /pl/about
+
+guidanceAnswers.pl.lawyers.sources[1]
+    /pl/contact
+
+guidanceAnswers.pl.pricing.answer
+    Ta strona nie publikuje cennika. Najpierw ustala się zakres pracy ze streszczenia, które Państwo wysyłają, a następnie wysokość i sposób obliczania kosztów potwierdza się z Państwem, zanim praca się zacznie. Rozmowa z adwokatem może być odpłatna; obok honorarium mogą powstać koszty sądowe lub urzędowe. Konsultacja odbywa się wyłącznie po angielsku, chińsku, japońsku i koreańsku.
+
+guidanceAnswers.pl.pricing.sources[0]
+    /pl/contact
+
+guidanceAnswers.pl.pricing.sources[1]
+    /pl/faq
+
+guidanceAnswers.pl.contact.answer
+    Prosimy wysłać streszczenie przez formularz kontaktowy: co się stało, jakiej pomocy potrzeba, jaki związek ma sprawa z Tajwanem oraz termin, jeśli jest znany. Na początku nie trzeba jeszcze wysyłać dokumentów tożsamości ani całości dowodów. Kancelaria nie obiecuje terminu odpowiedzi i nie potwierdza spotkania za pośrednictwem tej strony. Konsultacja odbywa się wyłącznie po angielsku, chińsku, japońsku i koreańsku.
+
+guidanceAnswers.pl.contact.sources[0]
+    /pl/faq
+
+guidanceAnswers.pl.contact.sources[1]
+    /pl/pricing
+
+guidanceAnswers.pl.faq.answer
+    Ta część odpowiada na częste pytania na poziomie informacji ogólnych: sześć grup spraw, przygotowanie przed kontaktem, ustalanie kosztów i znaczenie wysłanej wiadomości. Wysłany wniosek czeka na rozpatrzenie przez adwokata; nie jest poradą prawną, nie jest terminem i nie tworzy stosunku między adwokatem a klientem. Konsultacja odbywa się wyłącznie po angielsku, chińsku, japońsku i koreańsku.
+
+guidanceAnswers.pl.faq.sources[0]
+    /pl/contact
+
+guidanceAnswers.pl.faq.sources[1]
+    /pl/services
+
+GUIDANCE_LLMS_NOTICES.pl.consultationNotice
+    Te informacje są napisane po polsku, ale konsultacja z adwokatem odbywa się wyłącznie w języku angielskim, chińskim (中文), japońskim i koreańskim.
+
+GUIDANCE_LLMS_NOTICES.pl.discoveryNotice
+    Plik llms.txt jest jedynie mapą do znajdowania stron publicznych; nie obiecuje miejsca w wyszukiwaniu, poparcia, rekomendacji sztucznej inteligencji ani wyświetlenia.
+
+GUIDANCE_LLMS_NOTICES.pl.confidentialNotice
+    Ponieważ oryginalny tekst jest zapisywany, na pierwszym etapie nie należy wpisywać tego, co jeszcze nie jest potrzebne, na przykład numeru paszportu, numeru dokumentu tożsamości ani danych rachunku.

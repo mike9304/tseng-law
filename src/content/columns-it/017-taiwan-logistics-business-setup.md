@@ -140,8 +140,8 @@ Al lavoro senza autorizzazione possono applicarsi una sanzione amministrativa e 
 
 ## Orientamenti legati
 
-- [Servizi di investimento e di costituzione di società a Taiwan](/ko/services/investment)
-- [Profilo dell’avvocata Wei Tseng](/ko/lawyers/wei-tseng)
+- [Quali questioni trattiamo](/it/services)
+- [Team internazionale di Hovering](/it/lawyers)
 - [Contatti](/it/contact)
 
 ---

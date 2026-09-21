@@ -184,7 +184,7 @@ Pilihan akhir lebih selamat jika diteliti oleh pakar di Taiwan dan di tempat pej
 
 ## Panduan berkaitan
 
-- [Perkhidmatan pelaburan dan penubuhan syarikat di Taiwan](/ko/services/investment)
+- [Hal yang kami kendalikan](/ms/services)
 - [Asas penubuhan syarikat di Taiwan](/ms/columns/taiwan-company-establishment-basics)
 - [Hubungi](/ms/contact)
 

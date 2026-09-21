@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Imej utama](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Mereka yang telah membaca [Penubuhan syarikat di Taiwan – asas](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) dan [Penubuhan syarikat di Taiwan – bahagian mendalam 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) juga boleh merujuk Penubuhan syarikat di Taiwan – bahagian mendalam 2 (公司設立).
+Mereka yang telah membaca [Penubuhan syarikat di Taiwan – asas](/ms/columns/taiwan-company-establishment-basics) dan [Penubuhan syarikat di Taiwan – bahagian mendalam 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) juga boleh merujuk Penubuhan syarikat di Taiwan – bahagian mendalam 2 (公司設立).
 
 ​
 
@@ -82,6 +82,6 @@ Jika anda mempunyai soalan lain, anda boleh menghubungi kami pada bila-bila masa
 ---
 
 > Lihat juga:
-> - [Panduan umum penubuhan syarikat di Taiwan — prosedur, kos dan bentuk undang-undang](/ko/guides/taiwan-company-setup)
-> - [Peguam di Taiwan yang boleh bertutur Korea](/ko/korean-lawyer-in-taiwan)
-> - [Rujukan mengenai peguam bagi badan undang-undang dan penubuhan syarikat di Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Hal yang kami kendalikan](/ms/services)
+> - [Pasukan antarabangsa Hovering](/ms/lawyers)
+> - [Bagaimana anda menghubungi firma](/ms/contact)

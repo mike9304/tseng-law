@@ -184,7 +184,7 @@ De eindkeuze is veiliger te onderzoeken indien vakmensen in Taiwan en op de zete
 
 ## Verbonden aanwijzingen
 
-- [Diensten inzake investering en vennootschapsoprichting in Taiwan](/ko/services/investment)
+- [Welke zaken wij behandelen](/nl/services)
 - [Grondslagen van vennootschapsoprichting in Taiwan](/nl/columns/taiwan-company-establishment-basics)
 - [Contact](/nl/contact)
 

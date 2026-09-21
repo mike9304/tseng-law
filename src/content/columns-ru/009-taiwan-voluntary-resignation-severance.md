@@ -96,6 +96,6 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 ---
 
 > См. также:
-> - [Руководство об адвокате по судебным делам на Тайване](/ko/taiwan-litigation-lawyer)
-> - [Адвокат Тайваня, владеющий корейским языком](/ko/korean-lawyer-in-taiwan)
-> - [Направления деятельности — труд](/ko/services/labor)
+> - [Как определяются объём работы и стоимость](/ru/pricing)
+> - [Международная команда Hovering](/ru/lawyers)
+> - [Какие дела мы ведём](/ru/services)

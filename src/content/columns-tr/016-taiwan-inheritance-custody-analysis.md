@@ -143,8 +143,8 @@ Resmi mevzuat sayfalarında hükmün değişiklik günü ve yürürlük günü d
 
 ## 11. İlgili rehber
 
-- [Tayvan aile yargılaması hizmeti](/ko/services/family)
-- [Tayvan dava avukatı rehberi](/ko/taiwan-litigation-lawyer)
+- [Hangi işleri yürütürüz](/tr/services)
+- [Çalışma kapsamı ve ücret nasıl belirlenir](/tr/pricing)
 - [İletişim](/tr/contact)
 
 ---

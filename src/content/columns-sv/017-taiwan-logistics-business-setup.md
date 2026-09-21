@@ -140,8 +140,8 @@ Vid arbete utan tillstånd kan administrativ böter och utreseorder (限令出�
 
 ## Relaterad vägledning
 
-- [Tjänster för investering och bolagsbildning i Taiwan](/ko/services/investment)
-- [Profil för advokat Wei Tseng](/ko/lawyers/wei-tseng)
+- [Vilka ärenden vi behandlar](/sv/services)
+- [Hoverings internationella team](/sv/lawyers)
 - [Kontakt](/sv/contact)
 
 ---

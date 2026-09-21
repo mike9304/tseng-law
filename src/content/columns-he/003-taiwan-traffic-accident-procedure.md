@@ -368,6 +368,6 @@ Wei Tseng (曾雋崴), עורכת דין של טאיוואן.
 ---
 
 > ראו גם:
-> - [מדריך לעורך דין מתדיין בטאיוואן](/ko/taiwan-litigation-lawyer)
-> - [עורכת דין בטאיוואן הדוברת קוריאנית](/ko/korean-lawyer-in-taiwan)
-> - [מדריך לחיפוש עורך דין בטאיוואן](/ko/taiwan-lawyer)
+> - [כיצד נקבעים היקף העבודה והעלויות](/he/pricing)
+> - [הצוות הבין־לאומי של Hovering](/he/lawyers)
+> - [על Hovering International Law Firm](/he/about)

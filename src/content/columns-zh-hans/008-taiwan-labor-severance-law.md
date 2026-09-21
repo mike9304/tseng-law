@@ -227,6 +227,6 @@ B在前往面谈当日，
 ---
 
 > 另见：
-> - [台湾诉讼律师指南](/ko/taiwan-litigation-lawyer)
-> - [会说韩语的台湾律师](/ko/korean-lawyer-in-taiwan)
-> - [业务领域 — 劳动](/ko/services/labor)
+> - [工作范围与费用如何确定](/zh-hans/pricing)
+> - [Hovering 国际团队](/zh-hans/lawyers)
+> - [我们处理哪些事项](/zh-hans/services)

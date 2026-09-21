@@ -111,7 +111,7 @@ Przygotowanie sprzedaży na Tajwanie, jeśli sprawdza się je w następującej k
 5. Przejrzeć etykietę, stronę sprzedaży, reklamę i publikacje współpracy według kryterium całości przekazu.
 6. Prowadzić procedurę odpowiedzi na inspekcje i żądania korekty, reklamacje, informacje o bezpieczeństwie i potrzebne działania następcze.
 
-Podstawową strukturę spółki i oddziału można zobaczyć w [Podstawy zakładania spółek na Tajwanie](/pl/columns/taiwan-company-establishment-basics), zakres powiązanego wsparcia w [Usługi inwestycji i zakładania spółek na Tajwanie](/ko/services/investment), a informacje o adwokacie prowadzącym w [Profil adwokata Wei Tseng](/ko/lawyers/wei-tseng).
+Podstawową strukturę spółki i oddziału można zobaczyć w [Podstawy zakładania spółek na Tajwanie](/pl/columns/taiwan-company-establishment-basics), zakres powiązanego wsparcia w [Jakie sprawy prowadzimy](/pl/services), a informacje o adwokacie prowadzącym w [Międzynarodowy zespół Hovering](/pl/lawyers).
 
 ### Źródła urzędowe
 

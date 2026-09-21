@@ -140,8 +140,8 @@ På arbejde uden tilladelse kan en administrativ bøde og et påbud om at forlad
 
 ## Tilknyttede vejledninger
 
-- [Tjenester vedrørende investering og selskabsstiftelse i Taiwan](/ko/services/investment)
-- [Profil for advokat Wei Tseng](/ko/lawyers/wei-tseng)
+- [Hvilke sager vi behandler](/da/services)
+- [Hoverings internationale team](/da/lawyers)
 - [Kontakt](/da/contact)
 
 ---

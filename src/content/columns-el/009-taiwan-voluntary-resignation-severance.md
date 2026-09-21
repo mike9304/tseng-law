@@ -96,6 +96,6 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 ---
 
 > Δείτε επίσης:
-> - [Οδηγός δικηγόρου δικών στην Ταϊβάν](/ko/taiwan-litigation-lawyer)
-> - [Δικηγόρος της Ταϊβάν που ομιλεί κορεατικά](/ko/korean-lawyer-in-taiwan)
-> - [Τομείς δραστηριότητας — εργασία](/ko/services/labor)
+> - [Πώς καθορίζονται το εύρος της εργασίας και το κόστος](/el/pricing)
+> - [Η διεθνής ομάδα της Hovering](/el/lawyers)
+> - [Ποιες υποθέσεις χειριζόμαστε](/el/services)

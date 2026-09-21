@@ -188,8 +188,8 @@ Następujące źródła pierwotne (1. poziom) są punktem wyjścia do sprawdzeni
 
 ## 13. Powiązane wskazówki
 
-- [Usługi prawa rodzinnego na Tajwanie](/ko/services/family)
-- [Przewodnik po adwokacie procesowym na Tajwanie](/ko/taiwan-litigation-lawyer)
+- [Jakie sprawy prowadzimy](/pl/services)
+- [Jak ustala się zakres pracy i koszty](/pl/pricing)
 - [Kontakt](/pl/contact)
 
 ---

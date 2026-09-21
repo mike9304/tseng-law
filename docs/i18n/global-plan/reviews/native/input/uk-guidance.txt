@@ -1,0 +1,1096 @@
+# uk guidance pack strings (path → text). Generated 2026-09-21
+
+guidanceContent.uk.languageName
+    Українська
+
+guidanceContent.uk.nav.home
+    Головна
+
+guidanceContent.uk.nav.services
+    Послуги
+
+guidanceContent.uk.nav.about
+    Фірма
+
+guidanceContent.uk.nav.lawyers
+    Адвокати
+
+guidanceContent.uk.nav.pricing
+    Витрати
+
+guidanceContent.uk.nav.contact
+    Контакти
+
+guidanceContent.uk.nav.faq
+    Питання
+
+guidanceContent.uk.nav.privacy
+    Приватність
+
+guidanceContent.uk.nav.disclaimer
+    Застереження
+
+guidanceContent.uk.nav.columns
+    Статті
+
+guidanceContent.uk.contactCta
+    Надіслати запит на розгляд
+
+guidanceContent.uk.footerNotice
+    Ця сторінка українською містить лише загальні відомості про роботу фірми за правом Тайваню. Це не юридична консультація в конкретній справі, і саме лише надсилання повідомлення не створює відносин між адвокатом і клієнтом.
+
+guidanceContent.uk.skipLink
+    Пропустити навігацію та перейти до змісту
+
+guidanceContent.uk.menuLabel
+    Перелік сторінок
+
+guidanceContent.uk.languageLabel
+    Мова відображення
+
+guidanceContent.uk.mega.services.description
+    Фірма веде основні групи справ за правом Тайваню.
+
+guidanceContent.uk.mega.services.viewAllLabel
+    Показати все
+
+guidanceContent.uk.mega.columns.description
+    Статті про часті питання права Тайваню.
+
+guidanceContent.uk.mega.columns.viewAllLabel
+    Показати все
+
+guidanceContent.uk.mega.lawyers.description
+    Представлення адвокатів і способів звернення.
+
+guidanceContent.uk.mega.lawyers.viewAllLabel
+    Показати все
+
+guidanceContent.uk.mega.pricing.description
+    Ця сторінка пояснює обсяг роботи та порядок з’ясування витрат.
+
+guidanceContent.uk.mega.pricing.viewAllLabel
+    Показати все
+
+guidanceContent.uk.mega.faq.description
+    Часті питання про роботу фірми на Тайвані.
+
+guidanceContent.uk.mega.faq.viewAllLabel
+    Показати все
+
+guidanceContent.uk.notFoundTitle
+    Сторінку не знайдено
+
+guidanceContent.uk.notFoundText
+    Шуканої сторінки немає або її переміщено. Ви можете повернутися на головну сторінку українською та переглянути доступні відомості.
+
+guidanceContent.uk.backHomeLabel
+    На головну сторінку
+
+guidanceContent.uk.readSourceLabel
+    Відкрити перелік статей мовою оригіналу
+
+guidanceContent.uk.home.heroScrollLabel
+    Прогорнути вниз
+
+guidanceContent.uk.home.heroColumnsCtaLabel
+    Переглянути статті
+
+guidanceContent.uk.home.servicesDetailLabel
+    Переглянути подробиці
+
+guidanceContent.uk.home.servicesAssistanceBefore
+    Якщо не зрозуміло, до якої групи належить Ваша справа, сторінка 
+
+guidanceContent.uk.home.servicesAssistanceLinkLabel
+    Контакти
+
+guidanceContent.uk.home.servicesAssistanceAfter
+     пояснює, як скласти виклад, який розгляне адвокат.
+
+guidanceContent.uk.home.columnsViewAllLabel
+    Переглянути всі статті
+
+guidanceContent.uk.home.columnsReadMoreLabel
+    Читати далі
+
+guidanceContent.uk.home.columnsReviewLabel
+    Перевірила адвокат Wei Tseng
+
+guidanceContent.uk.home.columnsOriginalLanguageBadge
+    Мова оригіналу
+
+guidanceContent.uk.home.columnsOriginalLanguageNote
+    Наступні статті ще не доступні українською. Перелік залишається мовою оригіналу та відкриває відповідну мовну сторінку; зміст не перекладається автоматично.
+
+guidanceContent.uk.home.imageBandAlt
+    Традиційна тайванська садиба саньхеюань (三合院) і сучасний павільйон у денному світлі
+
+guidanceContent.uk.home.videoPauseLabel
+    Зупинити відео
+
+guidanceContent.uk.home.videoPlayLabel
+    Відтворити відео
+
+guidanceContent.uk.home.videoReplayLabel
+    Відтворити відео ще раз
+
+guidanceContent.uk.pages.home.eyebrow
+    ВІДОМОСТІ
+
+guidanceContent.uk.pages.home.title
+    Юридичні послуги на Тайвані — відомості українською
+
+guidanceContent.uk.pages.home.description
+    Загальні пояснення українською про обсяг роботи Hovering International Law Firm на Тайвані, про мови консультації та про перше звернення.
+
+guidanceContent.uk.pages.home.intro
+    Hovering International Law Firm супроводжує клієнтів з-за кордону, зокрема тих, хто має зв’язок із Тайванем, у справах за правом Тайваню: інвестиції та створення товариств, цивільні спори, шлюб, сім’я та спадкування, трудове право, кримінальні справи та інтелектуальна власність. Ця українська частина допоможе Вам зрозуміти, яка робота належить до нашого обсягу, що підготувати та як до нас звернутися. Це загальні відомості, а не юридична консультація у Вашій справі.
+
+guidanceContent.uk.pages.home.sections[0].heading
+    Чим ми займаємося
+
+guidanceContent.uk.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm — адвокатська фірма, заснована на Тайвані. Вона працює за правом Тайваню та має офіси в містах Тайбей (臺北), Гаосюн (高雄), Тайчжун (臺中) і Піндун (屏東). Ми консультуємо підприємства, ведемо судові процеси та супроводжуємо клієнтів з-за кордону в потрібних на Тайвані кроках.
+
+guidanceContent.uk.pages.home.sections[0].paragraphs[1]
+    Увесь тутешній зміст є загальним. Результат справи залежить від обставин, від застосовних приписів і від моменту. Ці відомості не замінюють розмови з адвокатом над Вашими документами.
+
+guidanceContent.uk.pages.home.sections[1].heading
+    Мова сторінки й мова консультації — не те саме
+
+guidanceContent.uk.pages.home.sections[1].paragraphs[0]
+    Ця сторінка написана українською, але консультація з адвокатом відбувається лише чотирма мовами консультації: англійською, китайською (中文), японською та корейською. Читання відомостей українською не означає, що розмова з адвокатом відбудеться українською.
+
+guidanceContent.uk.pages.home.sections[1].paragraphs[1]
+    Ми не обіцяємо перекладача, строку відповіді та зустрічі через цю сторінку. Якщо Ви не можете скористатися жодною з чотирьох мов, сторінка «Контакти» пояснює, як ми розглядаємо спосіб спілкування.
+
+guidanceContent.uk.pages.home.sections[2].heading
+    Групи справ
+
+guidanceContent.uk.pages.home.sections[2].paragraphs[0]
+    Обсяг роботи охоплює такі шість груп. Сторінка «Послуги» описує кожну групу докладніше та зазначає, чого не обіцяно.
+
+guidanceContent.uk.pages.home.sections[2].items[0]
+    Інвестиції та створення товариств на Тайвані
+
+guidanceContent.uk.pages.home.sections[2].items[1]
+    Цивільні спори та відшкодування шкоди
+
+guidanceContent.uk.pages.home.sections[2].items[2]
+    Шлюб, сім’я та спадкування
+
+guidanceContent.uk.pages.home.sections[2].items[3]
+    Трудові спори
+
+guidanceContent.uk.pages.home.sections[2].items[4]
+    Кримінальні справи
+
+guidanceContent.uk.pages.home.sections[2].items[5]
+    Інтелектуальна власність: торговельні марки, патенти та авторське право
+
+guidanceContent.uk.pages.home.sections[3].heading
+    З чого почати
+
+guidanceContent.uk.pages.home.sections[3].paragraphs[0]
+    Прочитайте сторінку «Послуги», щоб перевірити, чи належить Ваша справа до нашого обсягу, потім «Витрати» і «Контакти», щоб дізнатися, як визначається обсяг і як витрати підтверджуються до початку роботи.
+
+guidanceContent.uk.pages.home.sections[3].paragraphs[1]
+    Надсилаючи повідомлення, виклад Ви можете написати своєю мовою. Первинний текст зберігається саме таким, яким Ви його написали, і не перекладається автоматично. Надіслане повідомлення — це запит, що очікує розгляду: це ще не консультація і не підтверджена зустріч.
+
+guidanceContent.uk.pages.services.eyebrow
+    ПОСЛУГИ
+
+guidanceContent.uk.pages.services.title
+    Які справи ми ведемо
+
+guidanceContent.uk.pages.services.description
+    Шість груп роботи фірми на Тайвані та межі, які варто знати насамперед.
+
+guidanceContent.uk.pages.services.intro
+    Нижче наведено групи, які ми справді ведемо, і питання, що найчастіше виникають на початковому етапі. Виклад допоможе Вам оцінити, чи належить Ваша справа до нашого обсягу; він загальний і не є юридичним аналізом окремої справи.
+
+guidanceContent.uk.pages.services.sections[0].heading
+    Інвестиції та створення товариств на Тайвані
+
+guidanceContent.uk.pages.services.sections[0].paragraphs[0]
+    Ми супроводжуємо іноземних інвесторів і підприємства у створенні або веденні товариства на Тайвані: вибір організаційно-правової форми, підготовка та подання документів, внесення капіталу, банківські питання, перевірка місцезнаходження та галузеві вимоги. Ми також підтримуємо бухгалтерський облік і податки, що випливають зі створення та діяльності на Тайвані.
+
+guidanceContent.uk.pages.services.sections[0].paragraphs[1]
+    Перебіг і строки різняться залежно від форми, інвестора, галузі, банку та вже наявних документів. Створення товариства саме по собі не веде до дозволу на проживання (居留) чи дозволу на роботу (工作許可): це окремі провадження, які оцінюють за становищем конкретної особи.
+
+guidanceContent.uk.pages.services.sections[1].heading
+    Цивільні спори та відшкодування шкоди
+
+guidanceContent.uk.pages.services.sections[1].paragraphs[0]
+    Ця група охоплює спори з договорів, відшкодування шкоди з деліктів і споживчі спори. Робота зазвичай починається з хронології, перевірки документів і наявних доказів, і лише потім настають подальші кроки.
+
+guidanceContent.uk.pages.services.sections[1].paragraphs[1]
+    Перебіг визначають строки, зокрема позовна давність, і повнота доказів. Тому зазначайте відомі дати якнайраніше. Збережіть договори, повідомлення, підтвердження платежів або світлини стану на місці та згадайте про них у першому повідомленні.
+
+guidanceContent.uk.pages.services.sections[2].heading
+    Шлюб, сім’я та спадкування
+
+guidanceContent.uk.pages.services.sections[2].paragraphs[0]
+    Ми ведемо розірвання шлюбу (離婚), поділ майна, здійснення та виконання прав і обов’язків щодо неповнолітніх дітей (未成年子女權利義務之行使或負擔), спілкування з дитиною (會面交往) і спадкування (繼承), зокрема й тоді, коли сторони або майно перебувають у різних державах. Транскордонні сімейні справи часто потребують додаткової перевірки записів обліку населення (戶籍), форми документів і їхньої доказової сили на Тайвані.
+
+guidanceContent.uk.pages.services.sections[2].paragraphs[1]
+    Оскільки сімейні справи часто мають строки та паралельні провадження, перший виклад має зазначати відносини між сторонами, теперішнє місце проживання та вже розпочаті провадження.
+
+guidanceContent.uk.pages.services.sections[3].heading
+    Трудові спори
+
+guidanceContent.uk.pages.services.sections[3].paragraphs[0]
+    Ця група охоплює припинення трудових відносин, вихідну допомогу за правом Тайваню (資遣費; її не можна ототожнювати з подібними інститутами інших держав), оплату праці та спори з трудового договору (勞動契約) — як з боку працівника, так і з боку роботодавця. Під час розгляду ми відрізняємо підставу припинення від питань попередження, виплати та строків.
+
+guidanceContent.uk.pages.services.sections[3].paragraphs[1]
+    Вирішальними документами зазвичай є трудовий договір, правила внутрішнього трудового розпорядку (工作規則), розрахункові листки та листування сторін. Якщо вони у Вас збереглися, згадайте про це у викладі.
+
+guidanceContent.uk.pages.services.sections[4].heading
+    Кримінальні справи
+
+guidanceContent.uk.pages.services.sections[4].paragraphs[0]
+    Ми супроводжуємо на стадії досудового розслідування та в суді — як підозрюваних і обвинувачених, так і потерпілих, — і оцінюємо кримінальні ризики господарської діяльності.
+
+guidanceContent.uk.pages.services.sections[4].paragraphs[1]
+    Кримінальні справи часто мають короткі строки та усталені стадії. Якщо Ви вже одержали документ від органу розслідування чи суду, зазначте дату на документі завчасно, щоб зміст розглянули в належному порядку.
+
+guidanceContent.uk.pages.services.sections[5].heading
+    Інтелектуальна власність
+
+guidanceContent.uk.pages.services.sections[5].paragraphs[0]
+    Ми підтримуємо реєстрацію торговельних марок (商標) і патентів (專利), авторське право та спори про ці права на Тайвані.
+
+guidanceContent.uk.pages.services.sections[5].paragraphs[1]
+    У цій групі вирішує послідовність кроків: обсяг охорони, момент подання та фактичне використання впливають на вибір. Подання заявки саме по собі не означає, що її буде задоволено.
+
+guidanceContent.uk.pages.services.sections[6].heading
+    Обсяг роботи та його підтвердження
+
+guidanceContent.uk.pages.services.sections[6].paragraphs[0]
+    Фірма працює за правом Тайваню та веде справи з наведених вище груп. Обсяг кожної справи підтверджують окремо після того, як адвокат розгляне Ваше повідомлення.
+
+guidanceContent.uk.pages.services.sections[6].paragraphs[1]
+    Статус перебування, дозвіл на роботу та подібні питання оцінюють за документами та за становищем конкретної особи, а не за громадянством. Якщо частина Вашої справи стосується цих питань, зазначте це у зверненні. Ця сторінка не обіцяє ані результату, ані строку відповіді.
+
+guidanceContent.uk.pages.about.eyebrow
+    ФІРМА
+
+guidanceContent.uk.pages.about.title
+    Про Hovering International Law Firm
+
+guidanceContent.uk.pages.about.description
+    Основні відомості про цю тайванську адвокатську фірму, її офіси та роботу з іноземними сторонами.
+
+guidanceContent.uk.pages.about.intro
+    Hovering International Law Firm — адвокатська фірма на Тайвані. Її адвокати працюють від консультування підприємств до ведення судових справ. Ця частина описує виникнення фірми, її осідки та роботу з іноземними сторонами.
+
+guidanceContent.uk.pages.about.sections[0].heading
+    Заснування та будова
+
+guidanceContent.uk.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) заснували 2016 року адвокати, які навчалися в National Taiwan University (國立臺灣大學). Китайська назва 昊鼎 поєднує знак 昊 («широке небо») зі знаком 鼎 («міцна основа») й описує спрямування фірми від заснування.
+
+guidanceContent.uk.pages.about.sections[0].paragraphs[1]
+    Ми маємо офіси в містах Тайбей (臺北), Гаосюн (高雄), Тайчжун (臺中) і Піндун (屏東). Офіс у місті Гаосюн зосереджений на веденні підприємств і провадить цивільні, кримінальні та адміністративні спори. Офіс у місті Тайчжун веде будівельні справи, інтелектуальну власність і справи, пов’язані з Кореєю та Японією. Офіс у місті Піндун відкрито 2017 року для місцевих потреб.
+
+guidanceContent.uk.pages.about.sections[0].paragraphs[2]
+    Крім адвокатської роботи, від 2020 року діє також Hovering Accounting Office, що пропонує бухгалтерський облік і податкове планування підприємцям і приватним особам із майном.
+
+guidanceContent.uk.pages.about.sections[1].heading
+    Робота з іноземними сторонами
+
+guidanceContent.uk.pages.about.sections[1].paragraphs[0]
+    Транскордонна робота охоплює створення товариств, візи, подання заявок на марки та патенти, перевірку правового ризику та податкове консультування підприємств. Офіс у місті Тайчжун веде передусім будівельні справи, інтелектуальну власність і справи, пов’язані з Кореєю та Японією. Адвокат Wei Tseng (曾雋崴) супроводжує клієнтів з Кореї, Японії та інших країн у зазначених групах.
+
+guidanceContent.uk.pages.about.sections[1].paragraphs[1]
+    Чи можемо ми взяти справу, залежить від змісту та від мови спілкування. Якщо Ваша справа належить до зазначених груп і її можна обговорити однією з чотирьох мов консультації, Ви можете надіслати виклад на розгляд.
+
+guidanceContent.uk.pages.about.sections[2].heading
+    Коли Ви до нас звертаєтеся
+
+guidanceContent.uk.pages.about.sections[2].paragraphs[0]
+    Після надходження Вашого викладу адвокат розглядає зміст, а потім говорить про можливий обсяг роботи, про ще потрібні документи та про подальші кроки. У податкових або бухгалтерських питаннях фірма може працювати разом із бухгалтерським відділом одним потоком.
+
+guidanceContent.uk.pages.about.sections[2].paragraphs[1]
+    Результат кожної справи залежить від обставин і наявних документів; результату ми не обіцяємо. Якщо Вам потрібна обов’язкова відповідь для Вашого становища, документи слід обговорити однією з чотирьох мов консультації з адвокатом.
+
+guidanceContent.uk.pages.lawyers.eyebrow
+    АДВОКАТИ
+
+guidanceContent.uk.pages.lawyers.title
+    Міжнародна команда Hovering
+
+guidanceContent.uk.pages.lawyers.description
+    Профілі адвокатів, операційного керівництва та партнерської бухгалтерії Hovering.
+
+guidanceContent.uk.pages.lawyers.intro
+    
+
+guidanceContent.uk.pages.pricing.eyebrow
+    ВИТРАТИ
+
+guidanceContent.uk.pages.pricing.title
+    Як визначають обсяг роботи та витрати
+
+guidanceContent.uk.pages.pricing.description
+    Пояснення послідовності: спершу обсяг роботи, потім підтвердження витрат, і чому на цій сторінці немає переліку цін.
+
+guidanceContent.uk.pages.pricing.intro
+    Ця сторінка пояснює, як визначають витрати, а не їхній розмір. Розмір залежить від обсягу роботи в окремій справі й має значення лише тоді, коли цей обсяг зрозумілий.
+
+guidanceContent.uk.pages.pricing.sections[0].heading
+    Спершу визначають обсяг роботи
+
+guidanceContent.uk.pages.pricing.sections[0].paragraphs[0]
+    Справи одного виду можуть потребувати дуже різних зусиль — залежно від кількості сторін, наявних документів, строків, яких треба додержати, і від того, чи вже розпочато провадження. Тому першим кроком завжди є визначення того, що належить до роботи, а що ні.
+
+guidanceContent.uk.pages.pricing.sections[0].paragraphs[1]
+    Виклад, який Ви надсилаєте на початку, є основою цього обсягу. Що ясніше він описує перебіг, Ваше прохання та строки, то точніше можна визначити обсяг.
+
+guidanceContent.uk.pages.pricing.sections[1].heading
+    Витрати підтверджують до початку роботи
+
+guidanceContent.uk.pages.pricing.sections[1].paragraphs[0]
+    Коли обсяг роботи зрозумілий, розмір і спосіб обчислення витрат обговорюють і підтверджують із Вами до того, як робота почнеться. Якщо обсяг змінюється в перебігу, це треба підтвердити знову.
+
+guidanceContent.uk.pages.pricing.sections[1].paragraphs[1]
+    Ця сторінка не є ціновою пропозицією і не створює обов’язку платити.
+
+guidanceContent.uk.pages.pricing.sections[2].heading
+    Консультація може бути платною
+
+guidanceContent.uk.pages.pricing.sections[2].paragraphs[0]
+    Консультація з адвокатом може бути платною послугою. Ця сторінка не каже, що перша розмова безоплатна, і жодну її частину не можна тлумачити в цьому розумінні.
+
+guidanceContent.uk.pages.pricing.sections[2].paragraphs[1]
+    Якщо консультація платна, розмір і спосіб оплати повідомляють до того, як вона відбудеться.
+
+guidanceContent.uk.pages.pricing.sections[3].heading
+    Чому на цій сторінці немає тарифів
+
+guidanceContent.uk.pages.pricing.sections[3].paragraphs[0]
+    Витрати залежать від самої справи: від зусиль, кількості сторін, документів, строків і від того, чи вже триває провадження. Наперед визначене число не показало б витрат Вашої справи. Тому ми спершу визначаємо обсяг роботи, а витрати повідомляємо потім, до початку роботи.
+
+guidanceContent.uk.pages.pricing.sections[3].paragraphs[1]
+    Крім гонорару можуть виникнути судові збори, витрати органів влади чи третіх осіб. Вони відокремлені від гонорару та залежать від відповідного провадження.
+
+guidanceContent.uk.pages.contact.eyebrow
+    КОНТАКТИ
+
+guidanceContent.uk.pages.contact.title
+    Як звернутися до фірми
+
+guidanceContent.uk.pages.contact.description
+    Мова сторінки, мови консультації, що робити, якщо Ви не можете скористатися жодною з чотирьох мов, і чого ця сторінка не обіцяє.
+
+guidanceContent.uk.pages.contact.intro
+    Перш ніж написати нам, розрізніть такі три речі. Їх часто змішують, але вони означають різне.
+
+guidanceContent.uk.pages.contact.sections[0].heading
+    Три речі, які треба тримати окремо
+
+guidanceContent.uk.pages.contact.sections[0].paragraphs[0]
+    Мова відображення сторінки, мова консультації з адвокатом і мова, якою Ви пишете, — це три різні речі.
+
+guidanceContent.uk.pages.contact.sections[0].items[0]
+    Мова сторінки: ці відомості написано українською.
+
+guidanceContent.uk.pages.contact.sections[0].items[1]
+    Мова консультації: консультація відбувається англійською, китайською (中文), японською та корейською.
+
+guidanceContent.uk.pages.contact.sections[0].items[2]
+    Ваша мова письма: виклад Ви можете написати своєю мовою; первинний текст зберігається без змін.
+
+guidanceContent.uk.pages.contact.sections[1].heading
+    Якщо Ви не можете скористатися жодною з чотирьох мов консультації
+
+guidanceContent.uk.pages.contact.sections[1].paragraphs[0]
+    У формі звернення Ви можете обрати «Спосіб спілкування потребує підтвердження». Ми відповідаємо, щоб розглянути придатний спосіб спілкування, якщо такий є; послуги іншою мовою не гарантовано, а строку відповіді не обіцяно.
+
+guidanceContent.uk.pages.contact.sections[1].paragraphs[1]
+    Це лише крок розгляду, а не обіцянка. Ми не обіцяємо перекладача, послуги українською чи іншою мовою поза чотирма зазначеними, і не обіцяємо, що візьмемо кожну справу.
+
+guidanceContent.uk.pages.contact.sections[2].heading
+    Що має містити перше повідомлення
+
+guidanceContent.uk.pages.contact.sections[2].paragraphs[0]
+    Зазначте, що сталося, якої допомоги Ви потребуєте, який зв’язок справа має з Тайванем, і строк, якщо Ви його знаєте. Якщо Ви вже одержали документ суду чи органу влади, зазначте дату на документі.
+
+guidanceContent.uk.pages.contact.sections[2].paragraphs[1]
+    На початковому етапі Вам ще не потрібно надсилати номер паспорта, номер документа, дані рахунку, медичні документи чи всю сукупність доказів. Дочекайтеся вказівок адвоката та надішліть чутливі документи лише після цього безпечним способом.
+
+guidanceContent.uk.pages.contact.sections[3].heading
+    Чого ця сторінка не обіцяє
+
+guidanceContent.uk.pages.contact.sections[3].paragraphs[0]
+    Ми не обіцяємо строку відповіді, не підтверджуємо зустріч через цю сторінку, не обіцяємо певного адвоката і не надаємо перекладача. Письмовий переклад — це інше: Ваше повідомлення не перекладається автоматично.
+
+guidanceContent.uk.pages.contact.sections[3].paragraphs[1]
+    Якщо Ви надішлете запит, зміст збережеться й очікуватиме розгляду. Якщо через деякий час Ви не одержите відповіді, можете написати ще раз на адресу електронної пошти, зазначену на сторінці контактів.
+
+guidanceContent.uk.pages.faq.eyebrow
+    ПИТАННЯ
+
+guidanceContent.uk.pages.faq.title
+    Часті питання
+
+guidanceContent.uk.pages.faq.description
+    Пояснення щодо обсягу роботи, підготовки, мов, витрат і того, що означає надісланий запит.
+
+guidanceContent.uk.pages.faq.intro
+    На наведені нижче питання відповідають на рівні загальних відомостей. Відповідь для Вашої справи можлива лише після того, як адвокат розгляне документи.
+
+guidanceContent.uk.pages.faq.sections[0].heading
+    Як користуватися цією частиною
+
+guidanceContent.uk.pages.faq.sections[0].paragraphs[0]
+    Якщо Ви не знайдете відповіді для свого становища, відповідь зазвичай залежить від особливих обставин. Тоді напишіть їх у викладі, замість того щоб виводити їх із цієї сторінки.
+
+guidanceContent.uk.pages.faq.faqs[0].question
+    Які справи веде фірма?
+
+guidanceContent.uk.pages.faq.faqs[0].answer
+    Ми ведемо шість груп: інвестиції та створення товариств на Тайвані, цивільні спори та відшкодування шкоди, шлюб, сім’я та спадкування, трудові спори, кримінальні справи та інтелектуальна власність. Чи буде справу прийнято, вирішують після розгляду змісту.
+
+guidanceContent.uk.pages.faq.faqs[1].question
+    Що підготувати перед зверненням?
+
+guidanceContent.uk.pages.faq.faqs[1].answer
+    Підготуйте короткий виклад перебігу, Вашого прохання, зв’язку з Тайванем і строку, якщо він є. Якщо вже є документ суду чи органу влади, зазначте дату. На цьому етапі Вам ще не потрібно надсилати документи, що посвідчують особу, чи всю сукупність доказів.
+
+guidanceContent.uk.pages.faq.faqs[2].question
+    Чи можлива консультація українською?
+
+guidanceContent.uk.pages.faq.faqs[2].answer
+    Ні. Ці відомості написано українською, але консультація з адвокатом відбувається лише англійською, китайською (中文), японською та корейською. Перекладача ми теж не обіцяємо. Письмовий переклад — це інше: первинний текст, який Ви пишете, зберігається таким, як є, і не перекладається автоматично.
+
+guidanceContent.uk.pages.faq.faqs[3].question
+    Що робити, якщо я не можу скористатися жодною з чотирьох мов?
+
+guidanceContent.uk.pages.faq.faqs[3].answer
+    Надсилаючи запит, оберіть «Спосіб спілкування потребує підтвердження». Ми відповідаємо, щоб розглянути спосіб спілкування, але послуги іншою мовою не гарантовано. Це крок розгляду, а не обіцянка, що ми зможемо працювати іншою мовою.
+
+guidanceContent.uk.pages.faq.faqs[4].question
+    Як опрацьовують мій текст українською?
+
+guidanceContent.uk.pages.faq.faqs[4].answer
+    Первинний текст, який Ви пишете, зберігається таким, як є, і не перекладається автоматично. За потреби мову подальшого спілкування підтверджують із Вами.
+
+guidanceContent.uk.pages.faq.faqs[5].question
+    Чи консультація вже відбулася, якщо запит надіслано?
+
+guidanceContent.uk.pages.faq.faqs[5].answer
+    Ні. Надісланий запит очікує розгляду адвокатом. Це не юридичний висновок, не підтверджена зустріч, і саме лише надсилання не створює відносин між адвокатом і клієнтом.
+
+guidanceContent.uk.pages.faq.faqs[6].question
+    Як обчислюють витрати?
+
+guidanceContent.uk.pages.faq.faqs[6].answer
+    Спершу визначають обсяг роботи, потім розмір і спосіб обчислення витрат підтверджують із Вами до початку роботи. Ця сторінка не наводить сум і не каже, що перша розмова безоплатна.
+
+guidanceContent.uk.pages.faq.faqs[7].question
+    Що робити, якщо моя справа дуже нагальна?
+
+guidanceContent.uk.pages.faq.faqs[7].answer
+    Зазначте строк або дату з офіційного документа на самому початку викладу, щоб ці дати були видні під час розгляду. Ця сторінка не має каналу для невідкладних звернень і не забезпечує строку відповіді; якщо Ваша справа не терпить зволікання, Вам варто паралельно шукати інші шляхи за місцем перебування.
+
+guidanceContent.uk.pages.privacy.eyebrow
+    ПРИВАТНІСТЬ
+
+guidanceContent.uk.pages.privacy.title
+    Дані, які збирає форма звернення
+
+guidanceContent.uk.pages.privacy.description
+    Що збирає форма звернення в цій українській частині, як опрацьовують первинний текст і як звернутися до нас щодо Ваших даних.
+
+guidanceContent.uk.pages.privacy.intro
+    Ця частина стосується лише форми звернення на цих сторінках з відомостями. Вона описує поводження з даними, а не технічну гарантію.
+
+guidanceContent.uk.pages.privacy.sections[0].heading
+    Які дані збирають
+
+guidanceContent.uk.pages.privacy.sections[0].paragraphs[0]
+    Коли Ви надсилаєте запит через форму в цій частині, записують такі дані:
+
+guidanceContent.uk.pages.privacy.sections[0].items[0]
+    Ім’я, яке Ви зазначаєте
+
+guidanceContent.uk.pages.privacy.sections[0].items[1]
+    Адресу електронної пошти для відповіді
+
+guidanceContent.uk.pages.privacy.sections[0].items[2]
+    Мову відображення сторінки в момент надсилання
+
+guidanceContent.uk.pages.privacy.sections[0].items[3]
+    Мову, якою Ви писали
+
+guidanceContent.uk.pages.privacy.sections[0].items[4]
+    Мову консультації, якої Ви бажаєте
+
+guidanceContent.uk.pages.privacy.sections[0].items[5]
+    Первинний текст, який Ви написали
+
+guidanceContent.uk.pages.privacy.sections[0].items[6]
+    Вашу згоду на надсилання запиту
+
+guidanceContent.uk.pages.privacy.sections[0].items[7]
+    Реєстраційний номер для віднайдення запиту
+
+guidanceContent.uk.pages.privacy.sections[1].heading
+    Первинний текст зберігається без змін
+
+guidanceContent.uk.pages.privacy.sections[1].paragraphs[0]
+    Ваш текст зберігається саме таким, яким Ви його написали, і не перекладається автоматично. Якщо для опрацювання потрібен переклад, це обговорюють із Вами окремо.
+
+guidanceContent.uk.pages.privacy.sections[1].paragraphs[1]
+    Оскільки первинний текст зберігається, на початковому етапі не пишіть того, що ще не потрібне, наприклад номера паспорта, номера документа чи даних рахунку.
+
+guidanceContent.uk.pages.privacy.sections[2].heading
+    Місце зберігання та доступ
+
+guidanceContent.uk.pages.privacy.sections[2].paragraphs[0]
+    Зміст Вашого надсилання зберігають у місці, що не є загальнодоступним. Доступ до нього мають лише уповноважені особи у фірмі — для опрацювання запиту.
+
+guidanceContent.uk.pages.privacy.sections[2].paragraphs[1]
+    Ця сторінка не дає безумовної гарантії безпеки. Жоден шлях передавання та жодне місце зберігання не є цілком безпечними; тому чутливі документи слід надсилати лише після окремої вказівки адвоката.
+
+guidanceContent.uk.pages.privacy.sections[3].heading
+    Мета використання
+
+guidanceContent.uk.pages.privacy.sections[3].paragraphs[0]
+    Надіслані дані слугують розглядові запиту, відповіді Вам, з’ясуванню способу спілкування та опрацюванню, якщо роботу буде взято.
+
+guidanceContent.uk.pages.privacy.sections[3].paragraphs[1]
+    Дані не використовують для маркетингу без окремої згоди.
+
+guidanceContent.uk.pages.privacy.sections[4].heading
+    Сповіщення та реєстраційний номер
+
+guidanceContent.uk.pages.privacy.sections[4].paragraphs[0]
+    Якщо запит надіслано успішно, система сповіщає фірму. Якщо це сповіщення не надійде до фірми, Ваш текст залишається збереженим і не втрачається.
+
+guidanceContent.uk.pages.privacy.sections[4].paragraphs[1]
+    Реєстраційний номер слугує для віднайдення Вашого запиту в наших записах. Його показують після збереження; Ви можете зазначити його при новому зверненні.
+
+guidanceContent.uk.pages.privacy.sections[5].heading
+    Ваші права та шлях звернення
+
+guidanceContent.uk.pages.privacy.sections[5].paragraphs[0]
+    Ви можете вимагати доступу до своїх даних, їх виправлення або видалення чи відкликати згоду — через адресу електронної пошти, зазначену на сторінці контактів. Якщо існує законний або процесуальний обов’язок зберігання, ми пояснюємо обмеження.
+
+guidanceContent.uk.pages.privacy.sections[5].paragraphs[1]
+    Ця сторінка не зазначає твердого строку зберігання, бо дійсна тривалість залежить від подальшого перебігу справи та пов’язаних обов’язків. Якщо Ви бажаєте раннішого видалення, повідомте про це при зверненні.
+
+guidanceContent.uk.pages.privacy.sections[6].heading
+    Місце зберігання та надавачі послуг
+
+guidanceContent.uk.pages.privacy.sections[6].paragraphs[0]
+    Цей сайт розміщено у Vercel, і Ваше надсилання зберігається в непублічному об’єктному сховищі цієї служби. Листи надсилають через поштову службу, якою користується фірма.
+
+guidanceContent.uk.pages.privacy.sections[6].paragraphs[1]
+    Сервери окремих надавачів можуть перебувати поза Тайванем, тож Ваші дані можуть зберігатися й опрацьовуватися там. Коли мету зберігання досягнуто, дані видаляють без зволікання; дані, які треба зберігати за застосовними приписами, залишаються на цей строк. Запити щодо персональних даних приймають на wei@hoveringlaw.com.tw.
+
+guidanceContent.uk.pages.disclaimer.eyebrow
+    ЗАСТЕРЕЖЕННЯ
+
+guidanceContent.uk.pages.disclaimer.title
+    Обсяг і межі відомостей на цій сторінці
+
+guidanceContent.uk.pages.disclaimer.description
+    Загальний характер відомостей, правові рамки та передумови виникнення відносин між адвокатом і клієнтом.
+
+guidanceContent.uk.pages.disclaimer.intro
+    Ця частина з’ясовує, що ці українські сторінки з відомостями можуть для Вас зробити, а чого — ні.
+
+guidanceContent.uk.pages.disclaimer.sections[0].heading
+    Лише загальні відомості
+
+guidanceContent.uk.pages.disclaimer.sections[0].paragraphs[0]
+    Зміст цих сторінок написано як загальну інформацію. Це не юридична консультація у Вашій справі й не заміна перевірки Ваших документів.
+
+guidanceContent.uk.pages.disclaimer.sections[0].paragraphs[1]
+    Результат справи залежить від обставин, від застосовних приписів і від моменту; дві на вигляд подібні ситуації можуть скінчитися по-різному.
+
+guidanceContent.uk.pages.disclaimer.sections[1].heading
+    Правові рамки
+
+guidanceContent.uk.pages.disclaimer.sections[1].paragraphs[0]
+    Фірма діє за правом Тайваню, і ця сторінка говорить лише про роботу в цих рамках.
+
+guidanceContent.uk.pages.disclaimer.sections[1].paragraphs[1]
+    Зміст не є консультацією за правом іншого правопорядку, ніж тайванський, зокрема за правом місця Вашого перебування. Якщо частина Вашої справи стосується іншого правопорядку, ми з’ясуємо з Вами, яка кваліфікована особа потрібна для цієї частини.
+
+guidanceContent.uk.pages.disclaimer.sections[2].heading
+    Відносини між адвокатом і клієнтом не виникають самі собою
+
+guidanceContent.uk.pages.disclaimer.sections[2].paragraphs[0]
+    Читання цієї сторінки, надсилання форми чи листа саме по собі не створює відносин між адвокатом і клієнтом.
+
+guidanceContent.uk.pages.disclaimer.sections[2].paragraphs[1]
+    Ці відносини виникають лише після того, як справу розглянуто й обидві сторони підтвердили взяття роботи.
+
+guidanceContent.uk.pages.disclaimer.sections[3].heading
+    Жодної обіцянки результату
+
+guidanceContent.uk.pages.disclaimer.sections[3].paragraphs[0]
+    Жодна частина цієї сторінки не є обіцянкою щодо результату справи, задоволення заявки чи щодо статусу перебування та роботи.
+
+guidanceContent.uk.pages.disclaimer.sections[3].paragraphs[1]
+    Зовнішні посилання слугують орієнтуванню; ми не обіцяємо ані правильності, ані актуальності змісту третіх осіб.
+
+guidanceContent.uk.pages.columns.eyebrow
+    СТАТТІ
+
+guidanceContent.uk.pages.columns.title
+    Статті про право Тайваню
+
+guidanceContent.uk.pages.columns.description
+    Статті українською про часті питання права Тайваню. Зміст є загальною інформацією на момент оприлюднення, а не юридичною консультацією у Вашій справі.
+
+guidanceContent.uk.pages.columns.intro
+    Фірма оприлюднює статті про часті питання права Тайваню. Статті, доступні українською, розміщено на цій сторінці; поряд є чотири посилання, кожне з яких відкриває перелік статей однією мовою оригіналу.
+
+guidanceContent.uk.pages.columns.sections[0].heading
+    Чотири переліки за мовами
+
+guidanceContent.uk.pages.columns.sections[0].paragraphs[0]
+    Ця частина містить чотири посилання: перелік статей корейською, китайською, англійською та японською. Кожне посилання зазначає мову переліку, тож Ви наперед знаєте, якою мовою відкриється зміст.
+
+guidanceContent.uk.pages.columns.sections[0].paragraphs[1]
+    Ці чотири переліки — це переліки за мовою оригіналу статей, а не переліки перекладів. Статті, доступні українською, розміщено окремо на цій сторінці.
+
+guidanceContent.uk.pages.columns.sections[1].heading
+    Куди ведуть посилання
+
+guidanceContent.uk.pages.columns.sections[1].paragraphs[0]
+    Якщо Ви оберете одне з чотирьох посилань, відкриється перелік статей тією мовою. З переліку текст обираєте Ви самі; увесь зміст з’являється мовою оригіналу статті.
+
+guidanceContent.uk.pages.columns.sections[1].paragraphs[1]
+    Ця сторінка не переказує змісту статей і не гарантує, що тема доступна всіма чотирма мовами. Кожен перелік містить лише тексти, оприлюднені тією мовою.
+
+guidanceContent.uk.pages.columns.sections[2].heading
+    Наскільки стаття може слугувати орієнтиром
+
+guidanceContent.uk.pages.columns.sections[2].paragraphs[0]
+    Статті — це загальні відомості на момент оприлюднення. Приписи та їх застосування можуть змінитися, і стаття не містить усіх обставин Вашої справи.
+
+guidanceContent.uk.pages.columns.sections[2].paragraphs[1]
+    Тому не засновуйте дій у справжній справі лише на статті. Користуйтеся нею для загального огляду та обговоріть свої документи окремо з адвокатом; ця сторінка не є кроком консультації.
+
+guidanceTeamCopy.uk.label
+    OUR TEAM
+
+guidanceTeamCopy.uk.title
+    Міжнародна команда Hovering
+
+guidanceTeamCopy.uk.description
+    Профілі адвокатів, операційного керівництва та партнерської бухгалтерії Hovering.
+
+guidanceTeamCopy.uk.representativeTitle
+    Керівний адвокат
+
+guidanceTeamCopy.uk.teamTitle
+    Адвокати та співробітники
+
+guidanceTeamCopy.uk.partnerTitle
+    Партнерська бухгалтерія
+
+guidanceTeamCopy.uk.introLabel
+    Представлення
+
+guidanceTeamCopy.uk.educationLabel
+    Освіта
+
+guidanceTeamCopy.uk.experienceLabel
+    Досвід
+
+guidanceTeamCopy.uk.photoAltPrefix
+    Світлина
+
+guidanceTeamCopy.uk.workingLanguagesLabel
+    Робочі мови
+
+guidanceTeamCopy.uk.fullProfileLabel
+    Повний профіль (English)
+
+guidanceTeamCopy.uk.keyFactsHeading
+    Адвокат Wei Tseng — Основні відомості
+
+guidanceTeamCopy.uk.qualificationLabel
+    Кваліфікація та фірма
+
+guidanceTeamCopy.uk.qualificationSentence
+    {name} уповноважена провадити адвокатську діяльність на Тайвані та є керівним адвокатом {firm}.
+
+guidanceTeamCopy.uk.practiceLabel
+    Основні напрями
+
+guidanceTeamCopy.uk.consultationLanguagesLabel
+    Мови консультації
+
+guidanceTeamCopy.uk.roles.tseng-junwei
+    Керівний адвокат на Тайвані (Managing Attorney)
+
+guidanceTeamCopy.uk.roles.chang-rongxuan
+    Адвокат на Тайвані (Taiwan Attorney)
+
+guidanceTeamCopy.uk.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.uk.roles.son-jungmin
+    Керівництво операціями в Кореї (Korea Operations Manager)
+
+guidanceTeamCopy.uk.roles.huang-shengping
+    Партнерський бухгалтер (Partner CPA)
+
+guidanceTeamBios.uk.tseng-junwei.intro[0]
+    Фірма веде справи підприємств і приватних осіб на Тайвані англійською, японською, корейською та китайською.
+
+guidanceTeamBios.uk.tseng-junwei.intro[1]
+    Представляла корейського студента у вимозі про відшкодування шкоди через травму в спортзалі та здобула рішення першої інстанції на TWD 1.57M.
+
+guidanceTeamBios.uk.tseng-junwei.education[0]
+    Магістр (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.uk.tseng-junwei.education[1]
+    Бакалавр (B.A.) подвійної програми права та фінансів, National Chengchi University
+
+guidanceTeamBios.uk.tseng-junwei.education[2]
+    Навчання за обміном у Kobe University та Waseda University
+
+guidanceTeamBios.uk.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.uk.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.uk.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.uk.chang-rongxuan.intro[0]
+    Раніше в Ministry of Education, Legal Affairs Division, з акцентом на адміністративні та цивільні справи.
+
+guidanceTeamBios.uk.chang-rongxuan.intro[1]
+    Досвід у справах щодо університетів, прав викладачів та адміністративних оскаржень.
+
+guidanceTeamBios.uk.chang-rongxuan.education[0]
+    Бакалавр права (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.uk.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.uk.chang-rongxuan.experience[1]
+    Адвокат, Hovering International Law Firm
+
+guidanceTeamBios.uk.chang-fangyu.intro[0]
+    Paralegal із тривалою працею старшим paralegal у кількох фірмах, відповідальний за процесуальну підтримку, корпоративне право та іноземні інвестиції.
+
+guidanceTeamBios.uk.chang-fangyu.intro[1]
+    Підтримка в провадженнях, у створенні товариств, у погодженнях іноземних інвестицій, у заявах на ліцензії та в обміні між Кореєю і Тайванем.
+
+guidanceTeamBios.uk.chang-fangyu.education[0]
+    Бакалавр права (LL.B.), Tunghai University
+
+guidanceTeamBios.uk.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.uk.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.uk.son-jungmin.intro[0]
+    Узгоджує час консультацій і спілкування для клієнтів із Кореї.
+
+guidanceTeamBios.uk.son-jungmin.intro[1]
+    Підтримує міжрегіональний обмін через системи документів і робочі процеси, маючи підготовку з інформатики.
+
+guidanceTeamBios.uk.son-jungmin.education[0]
+    Бакалавр (B.S.) з інформатики, National Cheng Kung University
+
+guidanceTeamBios.uk.son-jungmin.experience[0]
+    Напрям корейських операцій, Hovering International Law Firm
+
+guidanceTeamBios.uk.huang-shengping.intro[0]
+    Закінчив бакалаврську та магістерську програми з бухгалтерського обліку в National Chengchi University і нині керує бухгалтерською фірмою.
+
+guidanceTeamBios.uk.huang-shengping.intro[1]
+    Підтримує цілісний аналіз правових, податкових і фінансових ризиків для корпоративних клієнтів.
+
+guidanceTeamBios.uk.huang-shengping.education[0]
+    Магістр (M.A.) з бухгалтерського обліку, National Chengchi University
+
+guidanceTeamBios.uk.huang-shengping.education[1]
+    Бакалавр (B.A.) з бухгалтерського обліку, National Chengchi University
+
+guidanceTeamBios.uk.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.uk.Korean
+    корейська
+
+guidanceLanguageNames.uk.Chinese
+    китайська
+
+guidanceLanguageNames.uk.Japanese
+    японська
+
+guidancePracticeAreaNames.uk.Taiwan company setup
+    Створення товариств на Тайвані
+
+guidancePracticeAreaNames.uk.Taiwan investment counsel
+    Консультування щодо інвестицій на Тайвані
+
+guidancePracticeAreaNames.uk.Civil litigation and damages
+    Цивільні спори та відшкодування шкоди
+
+guidancePracticeAreaNames.uk.Trademark and patent filings
+    Заявки на марки та патенти
+
+guidancePracticeAreaNames.uk.Visa and residency
+    Віза та проживання
+
+guidancePracticeAreaNames.uk.Family and labor disputes
+    Сімейні та трудові спори
+
+guidanceOfficeCopy.uk.label
+    OFFICES
+
+guidanceOfficeCopy.uk.title
+    Офіси
+
+guidanceOfficeCopy.uk.description
+    Адреси тайванських офісів Hovering International Law Firm.
+
+guidanceOfficeCopy.uk.officeLabel
+    Офіс
+
+guidanceOfficeCopy.uk.mapPreviewLabel
+    Попередній перегляд карти
+
+guidanceOfficeCopy.uk.koreaOfficeTitle
+    Офіс у Кореї
+
+guidanceOfficeCopy.uk.koreaAddressCardLabel
+    Адреса офісу в Кореї
+
+guidanceOfficeCopy.uk.koreaMapLinkLabel
+    Показати на Naver Map
+
+guidanceOfficeCopy.uk.reviewCountWord
+    відгуків
+
+guidanceOfficeCopy.uk.phoneLabel
+    Телефон
+
+guidanceOfficeCopy.uk.faxLabel
+    Факс
+
+guidanceOfficeCopy.uk.mapLinkLabel
+    Показати на карті
+
+guidanceOfficeCopy.uk.photoAlts[0]
+    Приймальня офісу в Тайбеї, Hovering International Law Firm
+
+guidanceOfficeCopy.uk.photoAlts[1]
+    Кабінет адвоката в офісі в Тайбеї, Hovering International Law Firm
+
+guidanceOfficeCopy.uk.photoAlts[2]
+    Переговорна офісу в Тайбеї, Hovering International Law Firm
+
+guidanceOfficeCopy.uk.officeTitles.taipei
+    Тайбей
+
+guidanceOfficeCopy.uk.officeTitles.taichung
+    Тайчжун
+
+guidanceOfficeCopy.uk.officeTitles.kaohsiung
+    Гаосюн
+
+guidanceOfficeCopy.uk.officeTitles.pingtung
+    Піндун
+
+guidanceFooterCopy.uk.officeLabel
+    Офіси
+
+guidanceFooterCopy.uk.officeQuickLinksLabel
+    Швидкі посилання на офіси
+
+guidanceFooterCopy.uk.followLabel
+    Стежте за нами
+
+guidanceFooterCopy.uk.blogLabel
+    Блог
+
+guidanceFooterCopy.uk.websiteLabel
+    Офіційний сайт
+
+guidanceFooterCopy.uk.sitemapLabel
+    Мапа сайту
+
+guidanceFooterCopy.uk.copyEmailLabel
+    Скопіювати адресу електронної пошти
+
+guidanceFooterCopy.uk.emailCopiedMessage
+    Адресу електронної пошти скопійовано.
+
+guidanceFooterCopy.uk.officialConsultationEmailLabel
+    Офіційна пошта для звернень
+
+internationalInquiryCopy.uk.guidanceNotice
+    Цю сторінку написано українською як загальний орієнтир, а не як юридичну консультацію у Вашій справі.
+
+internationalInquiryCopy.uk.consultationNotice
+    Консультація відбувається чотирма мовами: англійською, китайською (中文), японською та корейською.
+
+internationalInquiryCopy.uk.methodConfirmationNotice
+    Якщо Ви не можете скористатися жодною з чотирьох мов, оберіть «Спосіб спілкування потребує підтвердження». Ми відповідаємо, щоб розглянути придатний спосіб спілкування, якщо такий є; послуги іншою мовою не гарантовано, а строку відповіді не обіцяно.
+
+internationalInquiryCopy.uk.preparationNotice
+    Виклад Ви можете написати своєю мовою. Первинний текст зберігається таким, яким Ви його написали, і не перекладається автоматично.
+
+internationalInquiryCopy.uk.heading
+    Надіслати запит на розгляд
+
+internationalInquiryCopy.uk.intro
+    Стисло опишіть свою справу. Адвокат розгляне зміст, перш ніж переходити до наступного кроку.
+
+internationalInquiryCopy.uk.submitLabel
+    Надіслати запит
+
+internationalInquiryCopy.uk.submittingLabel
+    Надсилання…
+
+internationalInquiryCopy.uk.successMessage
+    Ми отримали Ваш запит; він очікує розгляду. Це не означає, що консультація відбулася або що зустріч підтверджено.
+
+internationalInquiryCopy.uk.savedNotificationPendingMessage
+    Ваш запит збережено, але сповіщення фірмі ще не підтверджено. Написане не втрачається. Якщо Ви не отримаєте відповіді, можете написати також на адресу електронної пошти зі сторінки контактів.
+
+internationalInquiryCopy.uk.receiptIdLabel
+    Реєстраційний номер
+
+internationalInquiryCopy.uk.failureMessage
+    Ваш запит не вдалося надіслати. Спробуйте ще раз або напишіть на адресу електронної пошти зі сторінки контактів.
+
+internationalInquiryCopy.uk.originalLanguageLabel
+    Мова, якою Ви пишете
+
+internationalInquiryCopy.uk.originalLanguagePlaceholder
+    Наприклад українська, англійська, китайська чи інша мова
+
+internationalInquiryCopy.uk.preferredConsultationLanguageLabel
+    Мова, якої Ви бажаєте для консультації
+
+internationalInquiryCopy.uk.originalTextLabel
+    Стислий опис справи (Вашою мовою)
+
+internationalInquiryCopy.uk.originalTextPlaceholder
+    Напишіть, що сталося, якої допомоги потребуєте, і строк, якщо він є. Не пишіть номера паспорта, номера документа чи даних рахунку.
+
+internationalInquiryCopy.uk.nameLabel
+    Ім’я
+
+internationalInquiryCopy.uk.emailLabel
+    Електронна пошта
+
+internationalInquiryCopy.uk.consentLabel
+    Я прочитав(ла) сторінку про приватність і погоджуюся на надсилання цього запиту.
+
+internationalInquiryCopy.uk.privacyLinkLabel
+    Приватність
+
+internationalInquiryCopy.uk.requiredMessage
+    Це поле обов’язкове.
+
+internationalInquiryCopy.uk.invalidEmailMessage
+    Введіть дійсну адресу електронної пошти.
+
+internationalInquiryCopy.uk.tooLongMessage
+    Текст задовгий. Скоротіть його та надішліть ще раз.
+
+internationalInquiryCopy.uk.sourceLanguageNotice
+    Цю статтю оприлюднено лише мовою {language}; посилання відкриє первинну сторінку.
+
+internationalInquiryCopy.uk.unavailableTranslationNotice
+    Ця частина ще не доступна мовою цієї сторінки. Посилання мовою оригіналу відкриє первинний текст.
+
+internationalInquiryCopy.uk.unavailableLanguageNotice
+    Ця сторінка не пропонується мовою {language}.
+
+internationalInquiryCopy.uk.languageOptions.en
+    Англійська (English)
+
+internationalInquiryCopy.uk.languageOptions.zh-hant
+    Китайська (中文)
+
+internationalInquiryCopy.uk.languageOptions.ja
+    Японська (日本語)
+
+internationalInquiryCopy.uk.languageOptions.ko
+    Корейська (한국어)
+
+internationalInquiryCopy.uk.languageOptions.needs-method-confirmation
+    Жодна з чотирьох мов не підходить — спосіб спілкування потребує підтвердження
+
+guidanceAnswers.uk.services.answer
+    Фірма веде шість груп за правом Тайваню: інвестиції та створення товариств, цивільні спори та відшкодування шкоди, шлюб, сім’я та спадкування, праця, кримінальні справи та інтелектуальна власність. Обсяг кожної справи підтверджують окремо після того, як адвокат розгляне надісланий зміст. Консультація відбувається лише англійською, китайською, японською та корейською.
+
+guidanceAnswers.uk.services.sources[0]
+    /uk/faq
+
+guidanceAnswers.uk.services.sources[1]
+    /uk/contact
+
+guidanceAnswers.uk.about.answer
+    Hovering International Law Firm — тайванська адвокатська фірма, заснована 2016 року випускниками National Taiwan University (國立臺灣大學), з офісами в містах Тайбей, Гаосюн, Тайчжун і Піндун. Від 2020 року діє й бухгалтерський відділ; офіс у Тайчжуні веде справи з вазкою на Корею та Японію. Фірма не обіцяє результату. Консультація відбувається лише англійською, китайською, японською та корейською.
+
+guidanceAnswers.uk.about.sources[0]
+    /uk/lawyers
+
+guidanceAnswers.uk.about.sources[1]
+    /uk/services
+
+guidanceAnswers.uk.lawyers.answer
+    Ця сторінка показує профілі адвокатів Hovering, операційного керівництва та партнерської бухгалтерії. Адвокат Wei Tseng (曾雋崴) уповноважена на Тайвані та є керівним адвокатом фірми; вона працює з клієнтами з Кореї, Японії та іншими міжнародними клієнтами. Консультація відбувається лише англійською, китайською, японською та корейською.
+
+guidanceAnswers.uk.lawyers.sources[0]
+    /uk/about
+
+guidanceAnswers.uk.lawyers.sources[1]
+    /uk/contact
+
+guidanceAnswers.uk.pricing.answer
+    Ця сторінка не оприлюднює переліку цін. Спершу з Вашого викладу підтверджують обсяг роботи, потім розмір і спосіб обчислення підтверджують із Вами до початку роботи. Розмова з адвокатом може бути платною; крім гонорару можуть виникнути судові або адміністративні збори. Консультація відбувається лише англійською, китайською, японською та корейською.
+
+guidanceAnswers.uk.pricing.sources[0]
+    /uk/contact
+
+guidanceAnswers.uk.pricing.sources[1]
+    /uk/faq
+
+guidanceAnswers.uk.contact.answer
+    Надішліть виклад через форму звернення: що сталося, якої допомоги потребуєте, який зв’язок справа має з Тайванем, і строк, якщо Ви його знаєте. На початковому етапі ще не потрібно надсилати документи, що посвідчують особу, чи весь доказовий матеріал. Фірма не обіцяє строку відповіді та не підтверджує зустріч через цю сторінку. Консультація відбувається лише англійською, китайською, японською та корейською.
+
+guidanceAnswers.uk.contact.sources[0]
+    /uk/faq
+
+guidanceAnswers.uk.contact.sources[1]
+    /uk/pricing
+
+guidanceAnswers.uk.faq.answer
+    Ця частина відповідає на часті питання на рівні загальних відомостей: шість груп роботи, підготовка перед зверненням, підтвердження витрат і значення надісланого повідомлення. Надіслане повідомлення очікує розгляду, не є юридичним висновком і не є підтвердженою зустріччю, а саме лише надсилання не створює відносин між адвокатом і клієнтом. Консультація відбувається чотирма мовами: англійською, китайською, японською та корейською.
+
+guidanceAnswers.uk.faq.sources[0]
+    /uk/services
+
+guidanceAnswers.uk.faq.sources[1]
+    /uk/contact
+
+GUIDANCE_LLMS_NOTICES.uk.consultationNotice
+    Ці відомості написано українською, але консультація з адвокатом відбувається лише англійською, китайською (中文), японською та корейською.
+
+GUIDANCE_LLMS_NOTICES.uk.discoveryNotice
+    Файл llms.txt — це лише мапа для пошуку публічних сторінок; він не обіцяє місця в пошуку, підтримки, рекомендації штучного інтелекту чи видимості.
+
+GUIDANCE_LLMS_NOTICES.uk.confidentialNotice
+    Оскільки первинний текст зберігається, на початковому етапі не пишіть того, що ще не потрібне, наприклад номера паспорта, номера документа чи даних рахунку.

@@ -143,8 +143,8 @@ Pe paginile oficiale de reglementare, confirmați data reformei și cea de intra
 
 ## 11. Orientări legate
 
-- [Serviciu de contencios familial pe Taiwan](/ko/services/family)
-- [Ghidul avocatei de litigii pe Taiwan](/ko/taiwan-litigation-lawyer)
+- [Ce cauze tratăm](/ro/services)
+- [Cum se stabilesc întinderea lucrării și costurile](/ro/pricing)
 - [Contact](/ro/contact)
 
 ---

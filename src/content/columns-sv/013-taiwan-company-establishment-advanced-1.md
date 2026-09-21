@@ -17,7 +17,7 @@ På senare tid har många personer bildat bolag (公司) i Taiwan och fått arbe
 
 och de frågor som ofta ställs vid bildandet samlas nedan.
 
-De som har läst [**grunderna i bolagsbildning**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) kan därefter också ta del av denna mer detaljerade fördjupning.
+De som har läst [**grunderna i bolagsbildning**](/sv/columns/taiwan-company-establishment-basics) kan därefter också ta del av denna mer detaljerade fördjupning.
 
 Följande frågor och svar (Q&A) syftar till att hjälpa personer som överväger att bilda bolag i Taiwan. 😊
 
@@ -128,6 +128,6 @@ bör ni kontrollera detta i förväg.
 ---
 
 > Se även:
-> - [Översiktsguide till bolagsbildning i Taiwan — förfaranden, kostnader och bolagsformer](/ko/guides/taiwan-company-setup)
-> - [Taiwanesisk advokat med koreanska kunskaper](/ko/korean-lawyer-in-taiwan)
-> - [Vägledning om advokat för juridiska personer och bolagsbildning i Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Vilka ärenden vi behandlar](/sv/services)
+> - [Hoverings internationella team](/sv/lawyers)
+> - [Hur ni når byrån](/sv/contact)

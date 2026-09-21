@@ -1,0 +1,1096 @@
+# nb guidance pack strings (path → text). Generated 2026-09-21
+
+guidanceContent.nb.languageName
+    Norsk
+
+guidanceContent.nb.nav.home
+    Hjem
+
+guidanceContent.nb.nav.services
+    Tjenester
+
+guidanceContent.nb.nav.about
+    Kontoret
+
+guidanceContent.nb.nav.lawyers
+    Advokater
+
+guidanceContent.nb.nav.pricing
+    Kostnader
+
+guidanceContent.nb.nav.contact
+    Kontakt
+
+guidanceContent.nb.nav.faq
+    Spørsmål
+
+guidanceContent.nb.nav.privacy
+    Personvern
+
+guidanceContent.nb.nav.disclaimer
+    Forbehold
+
+guidanceContent.nb.nav.columns
+    Artikler
+
+guidanceContent.nb.contactCta
+    Send en forespørsel om rådgivning
+
+guidanceContent.nb.footerNotice
+    Denne siden på norsk inneholder bare alminnelige veiledninger om kontorets arbeid etter Taiwans rett. Den er ikke juridisk rådgivning for en konkret sak, og å sende en melding skaper i seg selv ikke et forhold mellom advokat og klient.
+
+guidanceContent.nb.skipLink
+    Hopp over navigasjonen og gå til innholdet
+
+guidanceContent.nb.menuLabel
+    Sidefortegnelse
+
+guidanceContent.nb.languageLabel
+    Visningsspråk
+
+guidanceContent.nb.mega.services.description
+    Kontoret behandler de vesentlige arbeidsgruppene etter Taiwans rett.
+
+guidanceContent.nb.mega.services.viewAllLabel
+    Vis alle
+
+guidanceContent.nb.mega.columns.description
+    Artikler om vanlige spørsmål i Taiwans rett.
+
+guidanceContent.nb.mega.columns.viewAllLabel
+    Vis alle
+
+guidanceContent.nb.mega.lawyers.description
+    Presentasjon av de virkende advokatene og kontaktveiene.
+
+guidanceContent.nb.mega.lawyers.viewAllLabel
+    Vis alle
+
+guidanceContent.nb.mega.pricing.description
+    Denne siden forklarer arbeidets omfang og hvordan kostnadene fastsettes.
+
+guidanceContent.nb.mega.pricing.viewAllLabel
+    Vis alle
+
+guidanceContent.nb.mega.faq.description
+    Vanlige spørsmål om kontorets arbeid i Taiwan.
+
+guidanceContent.nb.mega.faq.viewAllLabel
+    Vis alle
+
+guidanceContent.nb.notFoundTitle
+    Siden ble ikke funnet
+
+guidanceContent.nb.notFoundText
+    Den søkte siden finnes ikke eller er flyttet. De kan gå tilbake til startsiden på norsk for å se de veiledningene som finnes.
+
+guidanceContent.nb.backHomeLabel
+    Til startsiden
+
+guidanceContent.nb.readSourceLabel
+    Åpne artikellisten på originalspråket
+
+guidanceContent.nb.home.heroScrollLabel
+    Rull nedover
+
+guidanceContent.nb.home.heroColumnsCtaLabel
+    Se artiklene
+
+guidanceContent.nb.home.servicesDetailLabel
+    Se detaljene
+
+guidanceContent.nb.home.servicesAssistanceBefore
+    Hvis det er uklart hvilken gruppe Deres sak tilhører, forklarer siden 
+
+guidanceContent.nb.home.servicesAssistanceLinkLabel
+    Kontakt
+
+guidanceContent.nb.home.servicesAssistanceAfter
+     hvordan De formulerer et sammendrag som en advokat vurderer.
+
+guidanceContent.nb.home.columnsViewAllLabel
+    Se alle artikler
+
+guidanceContent.nb.home.columnsReadMoreLabel
+    Les videre
+
+guidanceContent.nb.home.columnsReviewLabel
+    Vurdert av advokat Wei Tseng
+
+guidanceContent.nb.home.columnsOriginalLanguageBadge
+    Originalspråk
+
+guidanceContent.nb.home.columnsOriginalLanguageNote
+    Følgende artikler finnes ennå ikke på norsk. Listen blir på originalspråket og åpner den aktuelle språksiden; innholdet oversettes ikke automatisk.
+
+guidanceContent.nb.home.imageBandAlt
+    Tradisjonell taiwansk sanheyuan (三合院) og en moderne paviljong i dagslys
+
+guidanceContent.nb.home.videoPauseLabel
+    Sett videoen på pause
+
+guidanceContent.nb.home.videoPlayLabel
+    Spill av videoen
+
+guidanceContent.nb.home.videoReplayLabel
+    Spill av videoen på nytt
+
+guidanceContent.nb.pages.home.eyebrow
+    VEILEDNINGER
+
+guidanceContent.nb.pages.home.title
+    Juridiske tjenester i Taiwan — veiledninger på norsk
+
+guidanceContent.nb.pages.home.description
+    Alminnelige forklaringer på norsk om Hovering International Law Firms arbeidsområde i Taiwan, rådgivningsspråkene og den første kontakten.
+
+guidanceContent.nb.pages.home.intro
+    Hovering International Law Firm følger klienter fra utlandet, også med tilknytning til Taiwan, i saker etter Taiwans rett: investering og selskapsstiftelse, sivile tvister, ekteskap, familie og arv, arbeidsrett, strafferett og immaterialrett. Denne norske delen hjelper Dem med å se hvilket arbeid som faller innenfor vårt område, hva som skal forberedes, og hvordan De når oss. Det er alminnelige opplysninger, ikke juridisk rådgivning for Deres egen sak.
+
+guidanceContent.nb.pages.home.sections[0].heading
+    Hva vi gjør
+
+guidanceContent.nb.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm er et advokatkontor etablert i Taiwan. Det arbeider etter Taiwans rett og har kontorer i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Vi rådgir virksomheter og fører saker for retten og følger klienter fra utlandet gjennom de skrittene som kreves i Taiwan.
+
+guidanceContent.nb.pages.home.sections[0].paragraphs[1]
+    Hele innholdet her er alminnelig. Utfallet av en sak avhenger av fakta, de gjeldende reglene og tidspunktet. Disse veiledningene erstatter ikke samtalen med en advokat om Deres dokumenter.
+
+guidanceContent.nb.pages.home.sections[1].heading
+    Sidens språk og rådgivningsspråket er ikke det samme
+
+guidanceContent.nb.pages.home.sections[1].paragraphs[0]
+    Denne siden er skrevet på norsk, men rådgivningen med en advokat foregår bare på de fire rådgivningsspråkene engelsk, kinesisk (中文), japansk og koreansk. Å lese veiledningene på norsk betyr ikke at samtalen med advokaten foregår på norsk.
+
+guidanceContent.nb.pages.home.sections[1].paragraphs[1]
+    Vi lover ikke en tolk, en svartid eller en time via denne siden. Hvis De ikke kan bruke noe av de fire språkene, forklarer siden «Kontakt» hvordan vi prøver en kommunikasjonsvei.
+
+guidanceContent.nb.pages.home.sections[2].heading
+    Arbeidsgrupper
+
+guidanceContent.nb.pages.home.sections[2].paragraphs[0]
+    Arbeidsområdet omfatter følgende seks grupper. Siden «Tjenester» beskriver hver gruppe nøyere og angir hva som ikke utloves.
+
+guidanceContent.nb.pages.home.sections[2].items[0]
+    Investering og selskapsstiftelse i Taiwan
+
+guidanceContent.nb.pages.home.sections[2].items[1]
+    Sivile tvister og erstatning
+
+guidanceContent.nb.pages.home.sections[2].items[2]
+    Ekteskap, familie og arv
+
+guidanceContent.nb.pages.home.sections[2].items[3]
+    Arbeidsrettslige tvister
+
+guidanceContent.nb.pages.home.sections[2].items[4]
+    Strafferettslige saker
+
+guidanceContent.nb.pages.home.sections[2].items[5]
+    Immaterialrett: varemerker, patenter og opphavsrett
+
+guidanceContent.nb.pages.home.sections[3].heading
+    Hvor De bør begynne
+
+guidanceContent.nb.pages.home.sections[3].paragraphs[0]
+    Les siden «Tjenester» for å se om Deres sak faller innenfor vårt område, deretter «Kostnader» og «Kontakt» for å vite hvordan omfanget fastsettes, og hvordan kostnadene bekreftes før arbeidet begynner.
+
+guidanceContent.nb.pages.home.sections[3].paragraphs[1]
+    Når De sender en melding, kan De skrive sammendraget på Deres eget språk. Originalteksten lagres slik De skrev den, og oversettes ikke automatisk. En sendt melding er en forespørsel som venter på vurdering: det er ennå ikke rådgivning og ikke en bekreftet time.
+
+guidanceContent.nb.pages.services.eyebrow
+    TJENESTER
+
+guidanceContent.nb.pages.services.title
+    Hvilke saker vi behandler
+
+guidanceContent.nb.pages.services.description
+    Seks arbeidsgrupper hos kontoret i Taiwan og de grensene De først bør kjenne.
+
+guidanceContent.nb.pages.services.intro
+    Nedenfor de gruppene vi faktisk behandler, og spørsmål som ofte stilles i begynnelsen. Fremstillingen hjelper Dem med å vurdere om Deres sak faller innenfor vårt område; den er alminnelig og ikke en juridisk analyse av en enkelt sak.
+
+guidanceContent.nb.pages.services.sections[0].heading
+    Investering og selskapsstiftelse i Taiwan
+
+guidanceContent.nb.pages.services.sections[0].paragraphs[0]
+    Vi følger utenlandske investorer og virksomheter ved stiftelse eller drift av et selskap i Taiwan: valg av rettsform, forberedelse og innlevering av dokumenter, kapitalinnskudd, bankspørsmål, prøving av lokalet samt bransjekrav. Vi støtter også bokføring og skatt som følger av stiftelse og drift i Taiwan.
+
+guidanceContent.nb.pages.services.sections[0].paragraphs[1]
+    Forløp og tid skiller seg etter form, investor, bransje, bank og allerede tilgjengelige dokumenter. En selskapsstiftelse fører ikke av seg selv til oppholdstillatelse (居留) eller arbeidstillatelse (工作許可): det er særskilte forløp som vurderes etter personens situasjon.
+
+guidanceContent.nb.pages.services.sections[1].heading
+    Sivile tvister og erstatning
+
+guidanceContent.nb.pages.services.sections[1].paragraphs[0]
+    Denne gruppen omfatter kontrakts tvister, erstatning fra rettsstridig handling og forbrukertvister. Arbeidet begynner som regel med en kronologi, gjennomgang av eksisterende dokumenter og bevis og først deretter med de neste skrittene.
+
+guidanceContent.nb.pages.services.sections[1].paragraphs[1]
+    Frister, herunder foreldelse, og bevisenes fullstendighet preger forløpet. Angi derfor kjente datoer så tidlig som mulig. Bevar kontrakter, meldinger, betalingskvitteringer eller foto av situasjonen på stedet og nevn dem i den første meldingen.
+
+guidanceContent.nb.pages.services.sections[2].heading
+    Ekteskap, familie og arv
+
+guidanceContent.nb.pages.services.sections[2].paragraphs[0]
+    Vi behandler skilsmisse (離婚), likedeling av formue, utøvelse og bæring av rettigheter og plikter overfor mindreårige barn (未成年子女權利義務之行使或負擔), samvær (會面交往) og arv (繼承), også når parter eller formue finnes i ulike stater. Grenseoverskridende familiesaker krever ofte ytterligere prøving av folkeregister (戶籍), dokumenters form og deres bevisverdi i Taiwan.
+
+guidanceContent.nb.pages.services.sections[2].paragraphs[1]
+    Fordi familiesaker ofte medfører frister og parallelle forløp, bør det første sammendraget nevne partenes forhold, nåværende bosted og allerede pågående forløp.
+
+guidanceContent.nb.pages.services.sections[3].heading
+    Arbeidsrettslige tvister
+
+guidanceContent.nb.pages.services.sections[3].paragraphs[0]
+    Denne gruppen omfatter opphør av ansettelse, sluttvederlag etter Taiwans rett (資遣費; ikke å likestille med institutter i andre stater), lønn og tvister fra arbeidsavtalen (勞動契約), både på arbeidstaker- og arbeidsgiversiden. Ved prøvingen skiller vi opphørsgrunnen fra spørsmål om varsel, betaling og frister.
+
+guidanceContent.nb.pages.services.sections[3].paragraphs[1]
+    Arbeidsavtale, arbeidsordning (工作規則), lønnssedler og partenes korrespondanse er oftest de avgjørende dokumentene. Hvis De fortsatt har dem, nevn det i sammendraget.
+
+guidanceContent.nb.pages.services.sections[4].heading
+    Strafferettslige saker
+
+guidanceContent.nb.pages.services.sections[4].paragraphs[0]
+    Vi følger i etterforskningen og for retten, for siktede eller tiltalte like så vel som for fornærmede, og vurderer strafferettslige risikoer ved næringsvirksomhet.
+
+guidanceContent.nb.pages.services.sections[4].paragraphs[1]
+    Strafferettslige saker har ofte korte frister og fastlagte trinn. Hvis De allerede har fått en skrivelse fra påtalemyndighet eller rett, nevn datoen på skrivelsen tidlig, slik at innholdet prøves i riktig rekkefølge.
+
+guidanceContent.nb.pages.services.sections[5].heading
+    Immaterialrett
+
+guidanceContent.nb.pages.services.sections[5].paragraphs[0]
+    Vi støtter ved registrering av varemerker (商標) og patenter (專利), ved opphavsrett og ved tvister om disse rettighetene i Taiwan.
+
+guidanceContent.nb.pages.services.sections[5].paragraphs[1]
+    I denne gruppen avgjør rekkefølgen av skrittene: beskyttelsesomfang, søknadstidspunkt og faktisk bruk påvirker valget. Å sende inn en søknad betyr ikke av seg selv at den innvilges.
+
+guidanceContent.nb.pages.services.sections[6].heading
+    Omfang og dets bekreftelse
+
+guidanceContent.nb.pages.services.sections[6].paragraphs[0]
+    Kontoret arbeider etter Taiwans rett og behandler saker i de nevnte gruppene. Omfanget av hver sak bekreftes særskilt etter at en advokat har vurdert Deres melding.
+
+guidanceContent.nb.pages.services.sections[6].paragraphs[1]
+    Oppholdsstatus, arbeidstillatelse og sammenlignbare spørsmål vurderes ut fra dokumentene og personens situasjon, ikke ut fra statsborgerskapet. Hvis en del av Deres sak rører slike spørsmål, nevn det ved kontakten. Denne siden lover verken et resultat eller en svartid.
+
+guidanceContent.nb.pages.about.eyebrow
+    KONTORET
+
+guidanceContent.nb.pages.about.title
+    Om Hovering International Law Firm
+
+guidanceContent.nb.pages.about.description
+    Grunnopplysninger om dette taiwanske advokatkontoret, dets kontorer og arbeidet med utenlandske parter.
+
+guidanceContent.nb.pages.about.intro
+    Hovering International Law Firm er et advokatkontor i Taiwan. Advokatene arbeider fra virksomhetsrådgivning til rettssak. Denne delen beskriver kontorets tilblivelse, stedene og arbeidet med utenlandske parter.
+
+guidanceContent.nb.pages.about.sections[0].heading
+    Stiftelse og oppbygning
+
+guidanceContent.nb.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) ble stiftet i 2016 av advokater som har studert ved National Taiwan University (國立臺灣大學). Det kinesiske navnet 昊鼎 forener tegnet 昊 («vid himmel») med 鼎 («fast grunn») og beskriver kontorets retning siden stiftelsen.
+
+guidanceContent.nb.pages.about.sections[0].paragraphs[1]
+    Vi har kontorer i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Kontoret i Kaohsiung er innrettet på virksomhetsledelse og behandler sivile, strafferettslige og forvaltningsrettslige tvister. Kontoret i Taichung behandler byggesaker, immaterialrett og saker med tilknytning til Korea og Japan. Kontoret i Pingtung ble åpnet i 2017 for det lokale behovet.
+
+guidanceContent.nb.pages.about.sections[0].paragraphs[2]
+    Ved siden av det advokatmessige arbeidet finnes siden 2020 også Hovering Accounting Office, som tilbyr bokføring og skatteplanlegging for næringsdrivende og formuende privatpersoner.
+
+guidanceContent.nb.pages.about.sections[1].heading
+    Arbeid med utenlandske parter
+
+guidanceContent.nb.pages.about.sections[1].paragraphs[0]
+    Det grenseoverskridende arbeidet omfatter selskapsstiftelse, visum, varemerke- og patentsøknader, juridisk risikovurdering og skatterådgivning for virksomheter. Kontoret i Taichung behandler særlig byggesaker, immaterialrett og saker med tilknytning til Korea og Japan. Advokat Wei Tseng (曾雋崴) følger klienter fra Korea, Japan og andre internasjonale klienter i de nevnte gruppene.
+
+guidanceContent.nb.pages.about.sections[1].paragraphs[1]
+    Om vi kan ta en sak avhenger av innholdet og av kommunikasjonens språk. Faller Deres sak innenfor de nevnte gruppene og kan den drøftes på et av de fire rådgivningsspråkene, kan De sende et sammendrag til vurdering.
+
+guidanceContent.nb.pages.about.sections[2].heading
+    Når De kontakter oss
+
+guidanceContent.nb.pages.about.sections[2].paragraphs[0]
+    Når Deres sammendrag er kommet inn, vurderer en advokat innholdet og taler deretter om det mulige arbeidsomfanget, enda nødvendige dokumenter og de neste skrittene. Ved skatte- eller bokføringsspørsmål kan kontoret arbeide med bokføringsavdelingen i ett forløp.
+
+guidanceContent.nb.pages.about.sections[2].paragraphs[1]
+    Resultatet av hver sak avhenger av fakta og de dokumentene som finnes; vi lover intet resultat. Hvis De trenger et bindende svar for Deres situasjon, må dokumentene drøftes med en advokat på et av de fire rådgivningsspråkene.
+
+guidanceContent.nb.pages.lawyers.eyebrow
+    ADVOKATER
+
+guidanceContent.nb.pages.lawyers.title
+    Hoverings internasjonale team
+
+guidanceContent.nb.pages.lawyers.description
+    Profiler for advokater, driftsledelse og partnerrevisjon hos Hovering.
+
+guidanceContent.nb.pages.lawyers.intro
+    
+
+guidanceContent.nb.pages.pricing.eyebrow
+    KOSTNADER
+
+guidanceContent.nb.pages.pricing.title
+    Hvordan arbeidsomfang og kostnader fastsettes
+
+guidanceContent.nb.pages.pricing.description
+    Forklaring av rekkefølgen: først arbeidsomfanget, deretter kostnadsbekreftelsen, og hvorfor denne siden ikke inneholder en prisliste.
+
+guidanceContent.nb.pages.pricing.intro
+    Denne siden forklarer hvordan kostnader fastsettes, ikke beløpet. Beløpet avhenger av arbeidsomfanget i den enkelte sak og er meningsfullt først når det omfanget er klart.
+
+guidanceContent.nb.pages.pricing.sections[0].heading
+    Først fastsettes arbeidsomfanget
+
+guidanceContent.nb.pages.pricing.sections[0].paragraphs[0]
+    Saker av samme slag kan ha svært ulik innsats, avhengig av antallet parter, tilgjengelige dokumenter, frister som skal overholdes, og om et forløp allerede har begynt. Derfor er det første skrittet alltid å fastsette hva som hører til arbeidet, og hva som ikke gjør det.
+
+guidanceContent.nb.pages.pricing.sections[0].paragraphs[1]
+    Sammendraget De sender i begynnelsen, er grunnlaget for det omfanget. Jo klarere det beskriver forløpet, Deres forespørsel og fristene, desto mer presist kan omfanget bestemmes.
+
+guidanceContent.nb.pages.pricing.sections[1].heading
+    Kostnadene bekreftes før arbeidet begynner
+
+guidanceContent.nb.pages.pricing.sections[1].paragraphs[0]
+    Når arbeidsomfanget er klart, drøftes beløp og beregningsmåte med Dem og bekreftes før arbeidet begynner. Endrer omfanget seg underveis, må det bekreftes på nytt.
+
+guidanceContent.nb.pages.pricing.sections[1].paragraphs[1]
+    Denne siden er ikke et pristilbud og skaper ingen betalingsplikt.
+
+guidanceContent.nb.pages.pricing.sections[2].heading
+    Rådgivningen kan være mot betaling
+
+guidanceContent.nb.pages.pricing.sections[2].paragraphs[0]
+    Rådgivningen med en advokat kan være en ytelse mot betaling. Denne siden sier ikke at den første samtalen er uten betaling, og ingen del må leses på den måten.
+
+guidanceContent.nb.pages.pricing.sections[2].paragraphs[1]
+    Hvis rådgivningen er mot betaling, meddeles beløp og betalingsmåte før den finner sted.
+
+guidanceContent.nb.pages.pricing.sections[3].heading
+    Hvorfor denne siden ikke angir takster
+
+guidanceContent.nb.pages.pricing.sections[3].paragraphs[0]
+    Kostnadene avhenger av saken selv: av innsatsen, antallet parter, dokumentene, fristene og om et forløp allerede pågår. Et tall satt på forhånd ville ikke vise kostnadene for Deres sak. Derfor fastsetter vi først arbeidsomfanget og meddeler Dem deretter kostnadene, før arbeidet begynner.
+
+guidanceContent.nb.pages.pricing.sections[3].paragraphs[1]
+    Ved siden av advokathonoraret kan retts-, myndighets- eller tredjepartskostnader oppstå. De er skilt fra honoraret og avhenger av det aktuelle forløpet.
+
+guidanceContent.nb.pages.contact.eyebrow
+    KONTAKT
+
+guidanceContent.nb.pages.contact.title
+    Hvordan De når kontoret
+
+guidanceContent.nb.pages.contact.description
+    Sidens språk, rådgivningsspråkene, fremgangsmåten hvis De ikke kan bruke noe av de fire språkene, og hva denne siden ikke utlover.
+
+guidanceContent.nb.pages.contact.intro
+    Før De skriver til oss, skill mellom følgende tre punkter. De blandes ofte, men betyr ulike ting.
+
+guidanceContent.nb.pages.contact.sections[0].heading
+    Tre ting som må holdes atskilt
+
+guidanceContent.nb.pages.contact.sections[0].paragraphs[0]
+    Sidens visningsspråk, rådgivningsspråket med advokaten og språket De skriver på, er tre atskilte ting.
+
+guidanceContent.nb.pages.contact.sections[0].items[0]
+    Sidens språk: Disse veiledningene er skrevet på norsk.
+
+guidanceContent.nb.pages.contact.sections[0].items[1]
+    Rådgivningsspråk: Rådgivningen foregår på engelsk, kinesisk (中文), japansk og koreansk.
+
+guidanceContent.nb.pages.contact.sections[0].items[2]
+    Deres skriftspråk: De kan skrive sammendraget på Deres eget språk; originalteksten lagres uendret.
+
+guidanceContent.nb.pages.contact.sections[1].heading
+    Hvis De ikke kan bruke noe av de fire rådgivningsspråkene
+
+guidanceContent.nb.pages.contact.sections[1].paragraphs[0]
+    I kontaktskjemaet kan De velge «Kommunikasjonsmåten må bekreftes». Vi svarer for å prøve en farbar kommunikasjonsvei, hvis en slik finnes; en ytelse på et annet språk utloves ikke, og en svartid utloves ikke.
+
+guidanceContent.nb.pages.contact.sections[1].paragraphs[1]
+    Det er bare et prøvingsskritt, ikke et løfte. Vi lover ikke en tolk, ikke en ytelse på norsk eller på et annet språk utenfor de fire nevnte språkene, og ikke at vi tar imot hver sak.
+
+guidanceContent.nb.pages.contact.sections[2].heading
+    Hva som bør stå i den første meldingen
+
+guidanceContent.nb.pages.contact.sections[2].paragraphs[0]
+    Angi hva som har skjedd, hvilken hjelp De trenger, hvilken tilknytning saken har til Taiwan, og fristen, hvis De kjenner en. Hvis De allerede har fått en skrivelse fra en rett eller en myndighet, nevn datoen på skrivelsen.
+
+guidanceContent.nb.pages.contact.sections[2].paragraphs[1]
+    I begynnelsen trenger De ennå ikke sende passnummer, identitetsnummer, kontoopplysninger, journaler eller hele beviset. Vent på anvisninger fra advokaten og send da sensitive dokumenter på en sikker vei.
+
+guidanceContent.nb.pages.contact.sections[3].heading
+    Hva denne siden ikke utlover
+
+guidanceContent.nb.pages.contact.sections[3].paragraphs[0]
+    Vi lover ingen svartid, bekrefter ingen time via denne siden, lover ikke en bestemt advokat og stiller ikke en tolk. Skriftlig oversettelse er noe annet: Deres melding oversettes ikke automatisk.
+
+guidanceContent.nb.pages.contact.sections[3].paragraphs[1]
+    Når De sender en forespørsel, lagres innholdet og venter på vurdering. Hvis De etter en tid ikke får svar, kan De skrive på nytt til e-postadressen som er angitt på kontaktsiden.
+
+guidanceContent.nb.pages.faq.eyebrow
+    SPØRSMÅL
+
+guidanceContent.nb.pages.faq.title
+    Ofte stilte spørsmål
+
+guidanceContent.nb.pages.faq.description
+    Forklaringer om arbeidsområde, forberedelse, språk, kostnader og betydningen av en sendt forespørsel.
+
+guidanceContent.nb.pages.faq.intro
+    De følgende spørsmålene besvares på nivået alminnelige opplysninger. Et svar for Deres egen sak er først mulig etter at en advokat har vurdert dokumentene.
+
+guidanceContent.nb.pages.faq.sections[0].heading
+    Hvordan De bruker denne delen
+
+guidanceContent.nb.pages.faq.sections[0].paragraphs[0]
+    Finner De intet svar for Deres situasjon, avhenger svaret oftest av særlige fakta. Skriv da disse faktaene i sammendraget i stedet for selv å utlede dem fra denne siden.
+
+guidanceContent.nb.pages.faq.faqs[0].question
+    Hvilke saker behandler kontoret?
+
+guidanceContent.nb.pages.faq.faqs[0].answer
+    Vi behandler seks grupper: investering og selskapsstiftelse i Taiwan, sivile tvister og erstatning, ekteskap, familie og arv, arbeidsrettslige tvister, strafferettslige saker og immaterialrett. Om en sak tas imot avgjøres etter vurdering av innholdet.
+
+guidanceContent.nb.pages.faq.faqs[1].question
+    Hva bør jeg forberede før kontakten?
+
+guidanceContent.nb.pages.faq.faqs[1].answer
+    Forbered et kort sammendrag av forløpet, Deres forespørsel, tilknytningen til Taiwan og fristen, hvis en finnes. Finnes allerede en skrivelse fra en rett eller en myndighet, nevn datoen. I dette stadiet trenger De ennå ikke sende identitetsdokumenter eller hele beviset.
+
+guidanceContent.nb.pages.faq.faqs[2].question
+    Kan jeg få rådgivning på norsk?
+
+guidanceContent.nb.pages.faq.faqs[2].answer
+    Nei. Disse veiledningene er skrevet på norsk, men rådgivningen med en advokat foregår bare på engelsk, kinesisk (中文), japansk og koreansk. Vi lover heller ikke en tolk. Skriftlig oversettelse er noe annet: den opprinnelige teksten De skriver, lagres slik den er og oversettes ikke automatisk.
+
+guidanceContent.nb.pages.faq.faqs[3].question
+    Hva hvis jeg ikke kan bruke noe av de fire språkene?
+
+guidanceContent.nb.pages.faq.faqs[3].answer
+    Velg ved sendingen «Kommunikasjonsmåten må bekreftes». Vi svarer for å prøve en kommunikasjonsmåte, men en ytelse på et annet språk utloves ikke. Det er et prøvingsskritt, ikke et løfte om at vi kan arbeide på et annet språk.
+
+guidanceContent.nb.pages.faq.faqs[4].question
+    Hvordan behandles min norske tekst?
+
+guidanceContent.nb.pages.faq.faqs[4].answer
+    Originalteksten De skriver, lagres slik den er og oversettes ikke automatisk. Hvis det er nødvendig, bekreftes språket for den videre kommunikasjonen med Dem.
+
+guidanceContent.nb.pages.faq.faqs[5].question
+    Har rådgivningen allerede skjedd når forespørselen er sendt?
+
+guidanceContent.nb.pages.faq.faqs[5].answer
+    Nei. En sendt forespørsel venter på vurdering av en advokat. Det er ikke juridisk rådgivning, ikke en bekreftet time, og sendingen skaper i seg selv ikke et forhold mellom advokat og klient.
+
+guidanceContent.nb.pages.faq.faqs[6].question
+    Hvordan beregnes kostnadene?
+
+guidanceContent.nb.pages.faq.faqs[6].answer
+    Først fastsettes arbeidsomfanget, deretter bekreftes beløp og beregningsmåte med Dem før arbeidet begynner. Denne siden angir ingen tall og sier ikke at den første samtalen er uten betaling.
+
+guidanceContent.nb.pages.faq.faqs[7].question
+    Hva hvis saken min er svært hastende?
+
+guidanceContent.nb.pages.faq.faqs[7].answer
+    Angi fristen eller datoen på en offisiell skrivelse i begynnelsen av Deres sammendrag, slik at disse dataene er synlige ved vurderingen. Denne siden har ingen nødkanal og utlover ingen svartid; hvis Deres sak ikke kan vente, bør De parallelt søke andre veier på Deres sted.
+
+guidanceContent.nb.pages.privacy.eyebrow
+    PERSONVERN
+
+guidanceContent.nb.pages.privacy.title
+    Data som samles inn via kontaktskjemaet
+
+guidanceContent.nb.pages.privacy.description
+    Hva kontaktskjemaet i denne norske delen samler inn, hvordan originalteksten behandles, og hvordan De når oss om Deres data.
+
+guidanceContent.nb.pages.privacy.intro
+    Denne delen gjelder bare kontaktskjemaet på disse veiledningssidene. Den beskriver behandlingen av data, ikke et teknisk løfte.
+
+guidanceContent.nb.pages.privacy.sections[0].heading
+    Hvilke data som samles inn
+
+guidanceContent.nb.pages.privacy.sections[0].paragraphs[0]
+    Når De sender en forespørsel via skjemaet i denne delen, registreres følgende:
+
+guidanceContent.nb.pages.privacy.sections[0].items[0]
+    Navnet De oppgir
+
+guidanceContent.nb.pages.privacy.sections[0].items[1]
+    E-postadressen for svaret
+
+guidanceContent.nb.pages.privacy.sections[0].items[2]
+    Sidens visningsspråk ved sendingen
+
+guidanceContent.nb.pages.privacy.sections[0].items[3]
+    Språket De skrev på
+
+guidanceContent.nb.pages.privacy.sections[0].items[4]
+    Rådgivningsspråket De ønsker
+
+guidanceContent.nb.pages.privacy.sections[0].items[5]
+    Originalteksten De skrev
+
+guidanceContent.nb.pages.privacy.sections[0].items[6]
+    Deres samtykke til å sende forespørselen
+
+guidanceContent.nb.pages.privacy.sections[0].items[7]
+    Et mottaksnummer for å finne forespørselen igjen
+
+guidanceContent.nb.pages.privacy.sections[1].heading
+    Originalteksten lagres uendret
+
+guidanceContent.nb.pages.privacy.sections[1].paragraphs[0]
+    Deres tekst lagres nøyaktig slik De skrev den, og oversettes ikke automatisk. Trengs en oversettelse for behandlingen, tas det opp særskilt med Dem.
+
+guidanceContent.nb.pages.privacy.sections[1].paragraphs[1]
+    Fordi originalteksten lagres, skriv i begynnelsen ikke noe som ennå ikke trengs, for eksempel passnummer, identitetsnummer eller kontoopplysninger.
+
+guidanceContent.nb.pages.privacy.sections[2].heading
+    Lagringssted og tilgang
+
+guidanceContent.nb.pages.privacy.sections[2].paragraphs[0]
+    Innholdet i Deres sending lagres på et sted som ikke er offentlig tilgjengelig. Bare berettigede personer på kontoret får tilgang for å behandle forespørselen.
+
+guidanceContent.nb.pages.privacy.sections[2].paragraphs[1]
+    Denne siden gir intet absolutt sikkerhetsløfte. Ingen overføringsvei og intet lagringssted er helt sikkert; sensitive dokumenter bør derfor bare sendes etter særlig anvisning fra advokaten.
+
+guidanceContent.nb.pages.privacy.sections[3].heading
+    Formålet med bruken
+
+guidanceContent.nb.pages.privacy.sections[3].paragraphs[0]
+    De sendte dataene tjener til å vurdere forespørselen, gi Dem tilbakemelding, avklare kommunikasjonsmåten og behandle saken hvis arbeidet tas opp.
+
+guidanceContent.nb.pages.privacy.sections[3].paragraphs[1]
+    Dataene brukes ikke til markedsføring uten et særskilt samtykke.
+
+guidanceContent.nb.pages.privacy.sections[4].heading
+    Underretning og mottaksnummer
+
+guidanceContent.nb.pages.privacy.sections[4].paragraphs[0]
+    Sendes en forespørsel med hell, underretter systemet kontoret. Er denne underretningen ennå ikke bekreftet, blir Deres tekst liggende lagret og går ikke tapt.
+
+guidanceContent.nb.pages.privacy.sections[4].paragraphs[1]
+    Mottaksnummeret tjener til å finne Deres forespørsel igjen i våre akter. Det vises etter lagringen; De kan angi det ved en ny kontakt.
+
+guidanceContent.nb.pages.privacy.sections[5].heading
+    Deres rettigheter og kontaktveien
+
+guidanceContent.nb.pages.privacy.sections[5].paragraphs[0]
+    De kan be om innsyn, retting eller sletting av Deres data eller tilbakekalle samtykket via e-postadressen som er angitt på kontaktsiden. Finnes en lovlig eller prosessuell plikt til å bevare, forklarer vi begrensningen.
+
+guidanceContent.nb.pages.privacy.sections[5].paragraphs[1]
+    Denne siden angir ingen fast bevaringsfrist, fordi den faktiske tiden avhenger av om saken fortsettes, og av de pliktene som følger. Ønsker De en tidligere sletting, meddel det ved kontakten.
+
+guidanceContent.nb.pages.privacy.sections[6].heading
+    Lagringssted og leverandører
+
+guidanceContent.nb.pages.privacy.sections[6].paragraphs[0]
+    Dette nettstedet hostes hos Vercel, og Deres sending lagres i et ikke-offentlig objektlager hos denne tjenesten. E-post sendes via e-posttjenesten kontoret bruker.
+
+guidanceContent.nb.pages.privacy.sections[6].paragraphs[1]
+    Enkelte leverandørers tjenere kan stå utenfor Taiwan, slik at Deres data kan lagres og behandles der. Når lagringsformålet er oppfylt, slettes dataene uten opphold; data som må bevares etter gjeldende regler, blir i den tiden. Forespørsler om persondata tas imot av wei@hoveringlaw.com.tw.
+
+guidanceContent.nb.pages.disclaimer.eyebrow
+    FORBEHOLD
+
+guidanceContent.nb.pages.disclaimer.title
+    Omfang og grenser for opplysningene på denne siden
+
+guidanceContent.nb.pages.disclaimer.description
+    Opplysningenes alminnelige karakter, det rettslige anvendelsesområdet og forutsetningene for et forhold mellom advokat og klient.
+
+guidanceContent.nb.pages.disclaimer.intro
+    Denne delen gjør klart hva disse norske veiledningssidene kan gjøre for Dem, og hva de ikke kan.
+
+guidanceContent.nb.pages.disclaimer.sections[0].heading
+    Bare alminnelige opplysninger
+
+guidanceContent.nb.pages.disclaimer.sections[0].paragraphs[0]
+    Innholdet på disse sidene er skrevet som alminnelig informasjon. Det er ikke juridisk rådgivning for Deres sak og erstatter ikke vurderingen av Deres egne dokumenter.
+
+guidanceContent.nb.pages.disclaimer.sections[0].paragraphs[1]
+    Utfallet av en sak avhenger av fakta, de gjeldende reglene og tidspunktet; to tilsynelatende like situasjoner kan ende ulikt.
+
+guidanceContent.nb.pages.disclaimer.sections[1].heading
+    Rettslig anvendelsesområde
+
+guidanceContent.nb.pages.disclaimer.sections[1].paragraphs[0]
+    Kontoret virker etter Taiwans rett, og denne siden taler bare om arbeid innenfor den rammen.
+
+guidanceContent.nb.pages.disclaimer.sections[1].paragraphs[1]
+    Innholdet er ikke rådgivning etter retten i en annen rettsorden enn Taiwan, herunder retten på Deres bosted. Rører en del av Deres sak en annen rettsorden, avklarer vi med Dem hvilken kvalifisert fagperson som trengs for den delen.
+
+guidanceContent.nb.pages.disclaimer.sections[2].heading
+    Et forhold mellom advokat og klient oppstår ikke av seg selv
+
+guidanceContent.nb.pages.disclaimer.sections[2].paragraphs[0]
+    Å lese denne siden, å sende et skjema eller en e-post skaper i seg selv ikke et forhold mellom advokat og klient.
+
+guidanceContent.nb.pages.disclaimer.sections[2].paragraphs[1]
+    Dette forholdet oppstår først etter at saken er vurdert, og begge sider har bekreftet at arbeidet tas opp.
+
+guidanceContent.nb.pages.disclaimer.sections[3].heading
+    Intet løfte om resultat
+
+guidanceContent.nb.pages.disclaimer.sections[3].paragraphs[0]
+    Ingen del av denne siden er et løfte om resultatet av en sak, om innvilgelse av en søknad eller om oppholds- og arbeidsstatus.
+
+guidanceContent.nb.pages.disclaimer.sections[3].paragraphs[1]
+    Eksterne lenker tjener til orientering; vi utlover verken riktigheten eller aktualiteten i tredjeparts innhold.
+
+guidanceContent.nb.pages.columns.eyebrow
+    ARTIKLER
+
+guidanceContent.nb.pages.columns.title
+    Artikler om Taiwans rett
+
+guidanceContent.nb.pages.columns.description
+    Artikler på norsk om vanlige spørsmål i Taiwans rett. Innholdet er alminnelig informasjon på tidspunktet for offentliggjøringen, ikke juridisk rådgivning for Deres sak.
+
+guidanceContent.nb.pages.columns.intro
+    Kontoret offentliggjør artikler om vanlige spørsmål i Taiwans rett. Artikler som finnes på norsk, står på denne siden; i tillegg er det fire lenker som hver åpner artikellisten for et originalspråk.
+
+guidanceContent.nb.pages.columns.sections[0].heading
+    Fire lister etter språk
+
+guidanceContent.nb.pages.columns.sections[0].paragraphs[0]
+    Denne delen inneholder fire lenker: artikellisten på koreansk, på kinesisk, på engelsk og på japansk. Hver lenke angir listen språk, slik at De på forhånd vet på hvilket språk innholdet åpnes.
+
+guidanceContent.nb.pages.columns.sections[0].paragraphs[1]
+    Disse fire listene er lister etter artiklenes originalspråk, ikke oversettelseslister. Artikler som finnes på norsk, står særskilt på denne siden.
+
+guidanceContent.nb.pages.columns.sections[1].heading
+    Hvor lenkene fører
+
+guidanceContent.nb.pages.columns.sections[1].paragraphs[0]
+    Når De velger en av de fire lenkene, åpnes artikellisten for det språket. Fra listen velger De selv teksten; hele innholdet vises på artikkelens originalspråk.
+
+guidanceContent.nb.pages.columns.sections[1].paragraphs[1]
+    Denne siden sammenfatter ikke artiklenes innhold og utlover ikke at et emne finnes på alle fire språkene. Hver liste inneholder bare tekster som er offentliggjort på det språket.
+
+guidanceContent.nb.pages.columns.sections[2].heading
+    Hvor langt en artikkel kan tjene som orientering
+
+guidanceContent.nb.pages.columns.sections[2].paragraphs[0]
+    Artikler er alminnelige opplysninger på tidspunktet for offentliggjøringen. Regler og deres anvendelse kan endre seg, og en artikkel inneholder ikke alle omstendighetene i Deres sak.
+
+guidanceContent.nb.pages.columns.sections[2].paragraphs[1]
+    Støtt derfor ingen handling i en virkelig sak alene på en artikkel. Bruk den til oversikt og drøft Deres dokumenter særskilt med en advokat; denne siden er ikke rådgivningssteget.
+
+guidanceTeamCopy.nb.label
+    OUR TEAM
+
+guidanceTeamCopy.nb.title
+    Hoverings internasjonale team
+
+guidanceTeamCopy.nb.description
+    Profiler for Hoverings advokater, operative ledelse og tilknyttede revisjon.
+
+guidanceTeamCopy.nb.representativeTitle
+    Ledende advokat
+
+guidanceTeamCopy.nb.teamTitle
+    Advokater og medarbeidere
+
+guidanceTeamCopy.nb.partnerTitle
+    Tilknyttet revisjon
+
+guidanceTeamCopy.nb.introLabel
+    Presentasjon
+
+guidanceTeamCopy.nb.educationLabel
+    Utdanning
+
+guidanceTeamCopy.nb.experienceLabel
+    Erfaring
+
+guidanceTeamCopy.nb.photoAltPrefix
+    Foto
+
+guidanceTeamCopy.nb.workingLanguagesLabel
+    Arbeidsspråk
+
+guidanceTeamCopy.nb.fullProfileLabel
+    Fullstendig profil (English)
+
+guidanceTeamCopy.nb.keyFactsHeading
+    Advokat Wei Tseng — Kjerneopplysninger
+
+guidanceTeamCopy.nb.qualificationLabel
+    Bevilling og kontor
+
+guidanceTeamCopy.nb.qualificationSentence
+    {name} er berettiget til å utøve advokatyrket i Taiwan og er ledende advokat ved {firm}.
+
+guidanceTeamCopy.nb.practiceLabel
+    Hovedområder
+
+guidanceTeamCopy.nb.consultationLanguagesLabel
+    Rådgivningsspråk
+
+guidanceTeamCopy.nb.roles.tseng-junwei
+    Ledende advokat i Taiwan (Managing Attorney)
+
+guidanceTeamCopy.nb.roles.chang-rongxuan
+    Advokat i Taiwan (Taiwan Attorney)
+
+guidanceTeamCopy.nb.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.nb.roles.son-jungmin
+    Operativ ledelse Korea (Korea Operations Manager)
+
+guidanceTeamCopy.nb.roles.huang-shengping
+    Tilknyttet revisor (Partner CPA)
+
+guidanceTeamBios.nb.tseng-junwei.intro[0]
+    Kontoret behandler virksomhets- og individuelle saker i Taiwan på engelsk, japansk, koreansk og kinesisk.
+
+guidanceTeamBios.nb.tseng-junwei.intro[1]
+    Hun representerte en koreansk student i et erstatningskrav etter en skade i et treningssenter og oppnådde en dom i første instans på TWD 1.57M.
+
+guidanceTeamBios.nb.tseng-junwei.education[0]
+    Master (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.nb.tseng-junwei.education[1]
+    Bachelor (B.A.) med dobbelt løp rett og finans, National Chengchi University
+
+guidanceTeamBios.nb.tseng-junwei.education[2]
+    Utvekslingsstudent ved Kobe University og Waseda University
+
+guidanceTeamBios.nb.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.nb.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.nb.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.nb.chang-rongxuan.intro[0]
+    Tidligere ved Ministry of Education, Legal Affairs Division, med vekt på forvaltnings- og sivilrettslige saker.
+
+guidanceTeamBios.nb.chang-rongxuan.intro[1]
+    Erfaring med saker om universiteter, undervisningspersonalets rettigheter og forvaltningsrettslige klager.
+
+guidanceTeamBios.nb.chang-rongxuan.education[0]
+    Juridisk bachelor (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.nb.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.nb.chang-rongxuan.experience[1]
+    Advokat, Hovering International Law Firm
+
+guidanceTeamBios.nb.chang-fangyu.intro[0]
+    Paralegal med lang virksomhet som senior paralegal ved flere kontorer, ansvarlig for prosessuell støtte, selskapsrett og utenlandske investeringer.
+
+guidanceTeamBios.nb.chang-fangyu.intro[1]
+    Støtte ved prosedyrer, selskapsstiftelse, tillatelser til utenlandske investeringer, lisenssøknader og utvekslingen mellom Korea og Taiwan.
+
+guidanceTeamBios.nb.chang-fangyu.education[0]
+    Juridisk bachelor (LL.B.), Tunghai University
+
+guidanceTeamBios.nb.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.nb.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.nb.son-jungmin.intro[0]
+    Koordinerer rådgivningstider og kommunikasjonen for klienter fra Korea.
+
+guidanceTeamBios.nb.son-jungmin.intro[1]
+    Støtter utvekslingen mellom områder via dokumentsystemer og arbeidsflyter, på grunnlag av informatikk.
+
+guidanceTeamBios.nb.son-jungmin.education[0]
+    Bachelor (B.S.) i informatikk, National Cheng Kung University
+
+guidanceTeamBios.nb.son-jungmin.experience[0]
+    Område Korea-drift, Hovering International Law Firm
+
+guidanceTeamBios.nb.huang-shengping.intro[0]
+    Har fullført bachelor- og masterprogrammer i regnskap ved National Chengchi University og leder nå et revisjonskontor.
+
+guidanceTeamBios.nb.huang-shengping.intro[1]
+    Støtter den integrerte analysen av juridiske, skattemessige og finansielle risikoer for virksomhetsklienter.
+
+guidanceTeamBios.nb.huang-shengping.education[0]
+    Master (M.A.) i regnskap, National Chengchi University
+
+guidanceTeamBios.nb.huang-shengping.education[1]
+    Bachelor (B.A.) i regnskap, National Chengchi University
+
+guidanceTeamBios.nb.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.nb.Korean
+    koreansk
+
+guidanceLanguageNames.nb.Chinese
+    kinesisk
+
+guidanceLanguageNames.nb.Japanese
+    japansk
+
+guidancePracticeAreaNames.nb.Taiwan company setup
+    Selskapsstiftelse i Taiwan
+
+guidancePracticeAreaNames.nb.Taiwan investment counsel
+    Juridisk rådgivning om investering i Taiwan
+
+guidancePracticeAreaNames.nb.Civil litigation and damages
+    Sivile saker og erstatning
+
+guidancePracticeAreaNames.nb.Trademark and patent filings
+    Varemerke- og patentsøknader
+
+guidancePracticeAreaNames.nb.Visa and residency
+    Visum og opphold
+
+guidancePracticeAreaNames.nb.Family and labor disputes
+    Familie- og arbeidssaker
+
+guidanceOfficeCopy.nb.label
+    OFFICES
+
+guidanceOfficeCopy.nb.title
+    Kontorer
+
+guidanceOfficeCopy.nb.description
+    Adresser til Hovering International Law Firms kontorer i Taiwan.
+
+guidanceOfficeCopy.nb.officeLabel
+    Kontor
+
+guidanceOfficeCopy.nb.mapPreviewLabel
+    Kartforhåndsvisning
+
+guidanceOfficeCopy.nb.koreaOfficeTitle
+    Kontor Korea
+
+guidanceOfficeCopy.nb.koreaAddressCardLabel
+    Adresse til kontoret i Korea
+
+guidanceOfficeCopy.nb.koreaMapLinkLabel
+    Se i Naver Map
+
+guidanceOfficeCopy.nb.reviewCountWord
+    omtaler
+
+guidanceOfficeCopy.nb.phoneLabel
+    Telefon
+
+guidanceOfficeCopy.nb.faxLabel
+    Faks
+
+guidanceOfficeCopy.nb.mapLinkLabel
+    Se på kartet
+
+guidanceOfficeCopy.nb.photoAlts[0]
+    Mottakelsesrommet på kontoret i Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.nb.photoAlts[1]
+    Advokatrommet på kontoret i Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.nb.photoAlts[2]
+    Møterommet på kontoret i Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.nb.officeTitles.taipei
+    Taipei
+
+guidanceOfficeCopy.nb.officeTitles.taichung
+    Taichung
+
+guidanceOfficeCopy.nb.officeTitles.kaohsiung
+    Kaohsiung
+
+guidanceOfficeCopy.nb.officeTitles.pingtung
+    Pingtung
+
+guidanceFooterCopy.nb.officeLabel
+    Kontorer
+
+guidanceFooterCopy.nb.officeQuickLinksLabel
+    Hurtiglenker til kontorene
+
+guidanceFooterCopy.nb.followLabel
+    Følg
+
+guidanceFooterCopy.nb.blogLabel
+    Blogg
+
+guidanceFooterCopy.nb.websiteLabel
+    Offisiell nettside
+
+guidanceFooterCopy.nb.sitemapLabel
+    Nettstedskart
+
+guidanceFooterCopy.nb.copyEmailLabel
+    Kopier e-postadressen
+
+guidanceFooterCopy.nb.emailCopiedMessage
+    E-postadressen er kopiert.
+
+guidanceFooterCopy.nb.officialConsultationEmailLabel
+    Offisiell e-post for rådgivning
+
+internationalInquiryCopy.nb.guidanceNotice
+    Denne siden er skrevet på norsk som alminnelig orientering, ikke som juridisk rådgivning for Deres sak.
+
+internationalInquiryCopy.nb.consultationNotice
+    Rådgivningen foregår på fire språk: engelsk, kinesisk (中文), japansk og koreansk.
+
+internationalInquiryCopy.nb.methodConfirmationNotice
+    Hvis De ikke kan bruke noe av de fire språkene, velg «Kommunikasjonsveien må bekreftes». Vi svarer for å undersøke en brukbar kommunikasjonsvei, hvis en slik vei finnes; en ytelse på et annet språk sikres ikke, og en svartid loves ikke.
+
+internationalInquiryCopy.nb.preparationNotice
+    De kan skrive sammendraget på Deres eget språk. Originalteksten lagres slik De har skrevet den, og oversettes ikke automatisk.
+
+internationalInquiryCopy.nb.heading
+    Send en forespørsel om rådgivning
+
+internationalInquiryCopy.nb.intro
+    Beskriv Deres sak kort. En advokat gjennomgår innholdet før neste skritt diskuteres.
+
+internationalInquiryCopy.nb.submitLabel
+    Send forespørselen
+
+internationalInquiryCopy.nb.submittingLabel
+    Sendes…
+
+internationalInquiryCopy.nb.successMessage
+    Vi har mottatt Deres forespørsel; den venter på gjennomgang. Det betyr ikke at rådgivningen har funnet sted, eller at en time er bekreftet.
+
+internationalInquiryCopy.nb.savedNotificationPendingMessage
+    Deres forespørsel er lagret, men underretningen til kontoret er ennå ikke bekreftet. Det De har skrevet, går ikke tapt. Hvis De ikke får svar, kan De også skrive til e-postadressen på kontaktsiden.
+
+internationalInquiryCopy.nb.receiptIdLabel
+    Mottakelsesnummer
+
+internationalInquiryCopy.nb.failureMessage
+    Deres forespørsel kunne ikke sendes. Prøv igjen, eller skriv til e-postadressen på kontaktsiden.
+
+internationalInquiryCopy.nb.originalLanguageLabel
+    Språk De skriver på
+
+internationalInquiryCopy.nb.originalLanguagePlaceholder
+    For eksempel norsk, engelsk, kinesisk eller et annet språk
+
+internationalInquiryCopy.nb.preferredConsultationLanguageLabel
+    Språk De ønsker til rådgivningen
+
+internationalInquiryCopy.nb.originalTextLabel
+    Kort fremstilling av saken (på Deres språk)
+
+internationalInquiryCopy.nb.originalTextPlaceholder
+    Oppgi hva som har skjedd, hvilken hjelp De trenger, og fristen hvis det finnes en. Oppgi ikke passnummer, identitetsnummer eller kontoopplysninger.
+
+internationalInquiryCopy.nb.nameLabel
+    Navn
+
+internationalInquiryCopy.nb.emailLabel
+    E-post
+
+internationalInquiryCopy.nb.consentLabel
+    Jeg har lest personvernsiden og samtykker i at denne forespørselen sendes.
+
+internationalInquiryCopy.nb.privacyLinkLabel
+    Personvern
+
+internationalInquiryCopy.nb.requiredMessage
+    Dette feltet er obligatorisk.
+
+internationalInquiryCopy.nb.invalidEmailMessage
+    Oppgi en gyldig e-postadresse.
+
+internationalInquiryCopy.nb.tooLongMessage
+    Teksten er for lang. Kort den ned og send på nytt.
+
+internationalInquiryCopy.nb.sourceLanguageNotice
+    Denne artikkelen er publisert bare på {language}; lenken åpner originalsiden.
+
+internationalInquiryCopy.nb.unavailableTranslationNotice
+    Dette punktet er ennå ikke tilgjengelig på sidens språk. En lenke med originalspråket åpner originalteksten.
+
+internationalInquiryCopy.nb.unavailableLanguageNotice
+    Denne siden tilbys ikke på {language}.
+
+internationalInquiryCopy.nb.languageOptions.en
+    Engelsk (English)
+
+internationalInquiryCopy.nb.languageOptions.zh-hant
+    Kinesisk (中文)
+
+internationalInquiryCopy.nb.languageOptions.ja
+    Japansk (日本語)
+
+internationalInquiryCopy.nb.languageOptions.ko
+    Koreansk (한국어)
+
+internationalInquiryCopy.nb.languageOptions.needs-method-confirmation
+    Ingen av de fire språkene er brukbare — kommunikasjonsveien må bekreftes
+
+guidanceAnswers.nb.services.answer
+    Kontoret behandler seks arbeidsgrupper etter Taiwans rett: investering og selskapsstiftelse, sivile tvister og erstatning, ekteskap, familie og arv, arbeid, strafferett samt immaterialrett. Omfanget av hver sak bekreftes separat etter at en advokat har gjennomgått innholdet De sender. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.
+
+guidanceAnswers.nb.services.sources[0]
+    /nb/faq
+
+guidanceAnswers.nb.services.sources[1]
+    /nb/contact
+
+guidanceAnswers.nb.about.answer
+    Hovering International Law Firm er et advokatkontor i Taiwan, grunnlagt i 2016 av uteksaminerte fra National Taiwan University (國立臺灣大學), med kontorer i Taipei, Kaohsiung, Taichung og Pingtung. Siden 2020 finnes en regnskapsavdeling; kontoret i Taichung behandler saker med tilknytning til Korea og Japan. Kontoret lover ikke et resultat. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.
+
+guidanceAnswers.nb.about.sources[0]
+    /nb/lawyers
+
+guidanceAnswers.nb.about.sources[1]
+    /nb/services
+
+guidanceAnswers.nb.lawyers.answer
+    Denne siden viser profiler for Hoverings advokater, operative ledelse og tilknyttede revisjon. Advokat Wei Tseng (曾雋崴) er berettiget i Taiwan og er kontorets ledende advokat; hun arbeider med klienter fra Korea, Japan og andre internasjonale klienter. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.
+
+guidanceAnswers.nb.lawyers.sources[0]
+    /nb/about
+
+guidanceAnswers.nb.lawyers.sources[1]
+    /nb/contact
+
+guidanceAnswers.nb.pricing.answer
+    Denne siden publiserer ingen prisliste. Først fastsettes arbeidets omfang ut fra sammendraget De sender, deretter bekreftes beløp og beregningsmåte med Dem før arbeidet begynner. Samtalen med en advokat kan være mot betaling; i tillegg til honoraret kan retts- eller myndighetskostnader oppstå. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.
+
+guidanceAnswers.nb.pricing.sources[0]
+    /nb/contact
+
+guidanceAnswers.nb.pricing.sources[1]
+    /nb/faq
+
+guidanceAnswers.nb.contact.answer
+    Send Deres sammendrag via kontaktskjemaet: hva som har skjedd, hvilken hjelp De trenger, hvilken sammenheng saken har med Taiwan, og fristen hvis De kjenner den. I det første trinnet trenger De ennå ikke sende identitetsdokumenter eller hele beviset. Kontoret lover ingen svartid og bekrefter ingen time via denne siden. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.
+
+guidanceAnswers.nb.contact.sources[0]
+    /nb/faq
+
+guidanceAnswers.nb.contact.sources[1]
+    /nb/pricing
+
+guidanceAnswers.nb.faq.answer
+    Denne delen besvarer vanlige spørsmål på nivået alminnelig informasjon: de seks arbeidsgruppene, forberedelsen før kontakten, hvordan kostnadene fastsettes, og hva en sendt melding betyr. En sendt forespørsel venter på en advokats gjennomgang; den er ikke en juridisk uttalelse, ikke en time og skaper ikke et forhold mellom advokat og klient. Rådgivningen foregår bare på engelsk, kinesisk, japansk og koreansk.
+
+guidanceAnswers.nb.faq.sources[0]
+    /nb/contact
+
+guidanceAnswers.nb.faq.sources[1]
+    /nb/services
+
+GUIDANCE_LLMS_NOTICES.nb.consultationNotice
+    Disse veiledningene er skrevet på norsk, men rådgivningen med en advokat foregår bare på engelsk, kinesisk (中文), japansk og koreansk.
+
+GUIDANCE_LLMS_NOTICES.nb.discoveryNotice
+    Filen llms.txt er bare et kart for å finne offentlige sider; den lover ikke søkeplassering, støtte, anbefaling fra kunstig intelligens eller synlighet.
+
+GUIDANCE_LLMS_NOTICES.nb.confidentialNotice
+    Fordi originalteksten lagres, skriv i begynnelsen ikke noe som ennå ikke trengs, for eksempel passnummer, identitetsnummer eller kontoopplysninger.

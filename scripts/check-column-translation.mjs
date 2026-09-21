@@ -1749,7 +1749,31 @@ export function countListItems(body) {
   return body.split('\n').filter((line) => /^\s*(?:[-*+]|\d+\.)\s+\S/.test(line)).length;
 }
 
+/**
+ * Guidance locales have only the ten core pages, so Korean landing/detail links
+ * in the source are remapped onto the nearest core page of that locale. The map
+ * is chosen so that links which share a related-links block in the Korean
+ * source land on distinct pages. `scripts/localize-guidance-column-links.mts`
+ * applies the same map to the content.
+ */
+export const GUIDANCE_HREF_TRANSFORMS = [
+  { id: 'korean-lawyer', from: /^\/ko\/korean-lawyer-in-taiwan$/, to: (lang) => `/${lang}/lawyers` },
+  { id: 'wei-tseng', from: /^\/ko\/lawyers\/wei-tseng$/, to: (lang) => `/${lang}/lawyers` },
+  { id: 'taiwan-lawyer', from: /^\/ko\/taiwan-lawyer$/, to: (lang) => `/${lang}/about` },
+  { id: 'litigation-lawyer', from: /^\/ko\/taiwan-litigation-lawyer$/, to: (lang) => `/${lang}/pricing` },
+  { id: 'service-detail', from: /^\/ko\/services\/[a-z-]+$/, to: (lang) => `/${lang}/services` },
+  { id: 'setup-guide', from: /^\/ko\/guides\/taiwan-company-setup$/, to: (lang) => `/${lang}/services` },
+  { id: 'setup-lawyer', from: /^\/ko\/taiwan-company-setup-lawyer$/, to: (lang) => `/${lang}/contact` },
+  // Korean-blog cross-link to the basics article (대만 회사설립 기초편) → the locale's own column 001.
+  { id: 'blog-basics', from: /^https:\/\/www\.wei-wei-lawyer\.com\/post\/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8$/, to: (lang) => `/${lang}/columns/taiwan-company-establishment-basics` },
+];
+
 export function swapAllowedHref(href, lang) {
+  if (GUIDANCE_LANGS.includes(lang)) {
+    for (const rule of GUIDANCE_HREF_TRANSFORMS) {
+      if (rule.from.test(href)) return rule.to(lang);
+    }
+  }
   for (const rule of ALLOWED_HREF_TRANSFORMS) {
     const match = href.match(rule.from);
     if (match) return rule.to(lang, match);
@@ -2896,7 +2920,12 @@ export function checkNumbers(source, target, lang) {
   const ordinal = matchOrdinalExpressions(sourceTextRaw, targetTextRaw, lang);
   const sourceText = ordinal.sourceText;
   const targetText = ordinal.targetText;
-  const sourceAnalysis = analyzeNumbers(sourceText, 'ko');
+  // Korean lexical items that carry a digit but are words in every target
+  // language (third party, first/second/third instance, third country). They
+  // must not force a bare digit into the translation; a digit there is still
+  // tolerated (counted as an extra, i.e. a WARN).
+  const lexicalSource = sourceText.replace(/제\s?3\s?자|제삼자|제\s?3\s?국|(?<![\d.,])[123]심(?![\d])/g, ' ');
+  const sourceAnalysis = analyzeNumbers(lexicalSource, 'ko');
   const targetAnalysis = analyzeNumbers(targetText, lang);
   const sourceBag = countMap(sourceAnalysis.tokens);
   const targetBag = collapseHanziDupes(sourceBag, targetAnalysis.tokens);

@@ -1,0 +1,97 @@
+# en guidance pack strings (path → text). Generated 2026-09-21
+
+internationalInquiryCopy.en.guidanceNotice
+    This page is written in English as general guidance. It is not advice on your specific matter.
+
+internationalInquiryCopy.en.consultationNotice
+    Consultations are handled in four languages: English, Chinese, Korean, and Japanese.
+
+internationalInquiryCopy.en.methodConfirmationNotice
+    If none of those four languages works for you, choose “Contact method needs to be confirmed”. We will reply to confirm how we can communicate; service in any other language is not guaranteed.
+
+internationalInquiryCopy.en.preparationNotice
+    You may write the summary of your matter in your own language. Your original text is kept exactly as you wrote it and is not translated automatically.
+
+internationalInquiryCopy.en.heading
+    Send your inquiry
+
+internationalInquiryCopy.en.intro
+    Describe your matter briefly. An attorney reviews what you send before the next step is discussed.
+
+internationalInquiryCopy.en.submitLabel
+    Send inquiry
+
+internationalInquiryCopy.en.submittingLabel
+    Sending…
+
+internationalInquiryCopy.en.successMessage
+    Your inquiry has been received and is waiting for review. This does not mean a consultation has taken place or that an appointment is confirmed.
+
+internationalInquiryCopy.en.savedNotificationPendingMessage
+    Your inquiry has been saved, but the notification to the office has not been confirmed yet. Nothing you wrote was lost. If you do not hear back, you can also write to the email address on the contact page.
+
+internationalInquiryCopy.en.receiptIdLabel
+    Reference number
+
+internationalInquiryCopy.en.failureMessage
+    Your inquiry could not be sent. Please try again, or send it to the email address on the contact page.
+
+internationalInquiryCopy.en.originalLanguageLabel
+    Language you are writing in
+
+internationalInquiryCopy.en.originalLanguagePlaceholder
+    For example: Vietnamese, Indonesian, Thai, Filipino, or another language
+
+internationalInquiryCopy.en.preferredConsultationLanguageLabel
+    Preferred consultation language
+
+internationalInquiryCopy.en.originalTextLabel
+    Summary of your matter (in your own language)
+
+internationalInquiryCopy.en.originalTextPlaceholder
+    Tell us what happened, what you need help with, and any deadline you know of. Please do not include passport numbers, identification numbers, or bank account details.
+
+internationalInquiryCopy.en.nameLabel
+    Name
+
+internationalInquiryCopy.en.emailLabel
+    Email
+
+internationalInquiryCopy.en.consentLabel
+    I have read the privacy policy and agree to send this inquiry.
+
+internationalInquiryCopy.en.privacyLinkLabel
+    Privacy policy
+
+internationalInquiryCopy.en.requiredMessage
+    This field is required.
+
+internationalInquiryCopy.en.invalidEmailMessage
+    Enter a valid email address.
+
+internationalInquiryCopy.en.tooLongMessage
+    This text is too long. Please shorten it and send it again.
+
+internationalInquiryCopy.en.sourceLanguageNotice
+    This article is available only in {language}, and the link opens that original page.
+
+internationalInquiryCopy.en.unavailableTranslationNotice
+    This item has not been translated into the language of this page. A clearly labelled link opens the original in its source language.
+
+internationalInquiryCopy.en.unavailableLanguageNotice
+    This page is not available in {language}.
+
+internationalInquiryCopy.en.languageOptions.en
+    English
+
+internationalInquiryCopy.en.languageOptions.zh-hant
+    Chinese (中文)
+
+internationalInquiryCopy.en.languageOptions.ja
+    Japanese (日本語)
+
+internationalInquiryCopy.en.languageOptions.ko
+    Korean (한국어)
+
+internationalInquiryCopy.en.languageOptions.needs-method-confirmation
+    None of these four — contact method needs to be confirmed

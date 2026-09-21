@@ -184,7 +184,7 @@ Lopullinen valinta on varmempi tutkia, jos Taiwanin ja päätoimipaikan sijainti
 
 ## Liittyvät oppaat
 
-- [Palvelut sijoituksesta ja yhtiön perustamisesta Taiwanissa](/ko/services/investment)
+- [Mitä asioita käsittelemme](/fi/services)
 - [Yhtiön perustamisen perusteet Taiwanissa](/fi/columns/taiwan-company-establishment-basics)
 - [Yhteydenotto](/fi/contact)
 

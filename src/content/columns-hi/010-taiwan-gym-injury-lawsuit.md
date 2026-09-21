@@ -114,6 +114,6 @@ featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 
 > और देखें:
-> - [ताइवान मुकदमा अधिवक्ता संबंधी मार्गदर्शन](/ko/taiwan-litigation-lawyer)
-> - [कोरियाई बोल सकने वाले ताइवान अधिवक्ता](/ko/korean-lawyer-in-taiwan)
-> - [ताइवान अधिवक्ता खोज मार्गदर्शिका](/ko/taiwan-lawyer)
+> - [कार्य-दायरा और लागत कैसे तय होते हैं](/hi/pricing)
+> - [Hovering की अंतरराष्ट्रीय टीम](/hi/lawyers)
+> - [Hovering International Law Firm के बारे में](/hi/about)

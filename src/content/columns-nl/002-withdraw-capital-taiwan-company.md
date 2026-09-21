@@ -139,7 +139,7 @@ Hoe langer de bedrijfsstilstand duurt, des te meer kan de latere beëindigingspr
 
 ## Verbonden aanwijzingen
 
-1. [Diensten inzake investering en vennootschapsoprichting in Taiwan](/ko/services/investment)
+1. [Welke zaken wij behandelen](/nl/services)
 2. [Grondslagen van vennootschapsoprichting in Taiwan](/nl/columns/taiwan-company-establishment-basics)
 3. [Contact](/nl/contact)
 

@@ -114,6 +114,6 @@ Jatuh di lantai premis, kerugian kesihatan kerana makanan dan kecederaan yang be
 ---
 
 > Lihat juga:
-> - [Panduan peguam litigasi di Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Peguam Taiwan yang boleh berbahasa Korea](/ko/korean-lawyer-in-taiwan)
-> - [Panduan mencari peguam di Taiwan](/ko/taiwan-lawyer)
+> - [Bagaimana skop kerja dan kos ditetapkan](/ms/pricing)
+> - [Pasukan antarabangsa Hovering](/ms/lawyers)
+> - [Tentang Hovering International Law Firm](/ms/about)

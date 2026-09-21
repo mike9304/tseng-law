@@ -1,0 +1,1096 @@
+# ar guidance pack strings (path → text). Generated 2026-09-21
+
+guidanceContent.ar.languageName
+    العربية
+
+guidanceContent.ar.nav.home
+    الصفحة الرئيسية
+
+guidanceContent.ar.nav.services
+    مجالات الخدمات
+
+guidanceContent.ar.nav.about
+    عن المكتب
+
+guidanceContent.ar.nav.lawyers
+    المحامون
+
+guidanceContent.ar.nav.pricing
+    النطاق والأتعاب
+
+guidanceContent.ar.nav.contact
+    التواصل
+
+guidanceContent.ar.nav.faq
+    الأسئلة الشائعة
+
+guidanceContent.ar.nav.privacy
+    سياسة الخصوصية
+
+guidanceContent.ar.nav.disclaimer
+    إخلاء المسؤولية
+
+guidanceContent.ar.nav.columns
+    المقالات
+
+guidanceContent.ar.contactCta
+    إرسال طلب استشارة
+
+guidanceContent.ar.footerNotice
+    هذه الصفحة العربية تقدّم إرشادًا عامًا فقط عن عمل المكتب وفق القانون التايواني. وهي ليست رأيًا قانونيًا في قضية بعينها، كما أن إرسال معلومات عبر هذه الصفحة لا يُنشئ بذاته علاقة بين المحامي والموكّل.
+
+guidanceContent.ar.skipLink
+    تخطَّ شريط التنقل وانتقل إلى المحتوى الرئيسي
+
+guidanceContent.ar.menuLabel
+    قائمة الصفحات
+
+guidanceContent.ar.languageLabel
+    لغة العرض
+
+guidanceContent.ar.mega.services.description
+    يتولّى المكتب مجموعات العمل الرئيسية وفق القانون التايواني.
+
+guidanceContent.ar.mega.services.viewAllLabel
+    عرض الكل
+
+guidanceContent.ar.mega.columns.description
+    مقالات تشرح موضوعات شائعة في القانون التايواني.
+
+guidanceContent.ar.mega.columns.viewAllLabel
+    عرض الكل
+
+guidanceContent.ar.mega.lawyers.description
+    تعريف بالمحامية المسؤولة وبطريقة التواصل مع المكتب.
+
+guidanceContent.ar.mega.lawyers.viewAllLabel
+    عرض الكل
+
+guidanceContent.ar.mega.pricing.description
+    تشرح هذه الصفحة نطاق العمل وطريقة التفاهم على الأتعاب.
+
+guidanceContent.ar.mega.pricing.viewAllLabel
+    عرض الكل
+
+guidanceContent.ar.mega.faq.description
+    أسئلة تتكرر عن عمل المكتب في تايوان.
+
+guidanceContent.ar.mega.faq.viewAllLabel
+    عرض الكل
+
+guidanceContent.ar.notFoundTitle
+    الصفحة غير موجودة
+
+guidanceContent.ar.notFoundText
+    الصفحة التي تبحث عنها غير موجودة أو انتقلت إلى عنوان آخر. ويمكنك العودة إلى الصفحة الرئيسية العربية للاطلاع على أقسام الإرشاد المتاحة.
+
+guidanceContent.ar.backHomeLabel
+    العودة إلى الصفحة الرئيسية
+
+guidanceContent.ar.readSourceLabel
+    فتح فهرس المقالات بلغته الأصلية
+
+guidanceContent.ar.home.heroScrollLabel
+    انتقل إلى الأسفل
+
+guidanceContent.ar.home.heroColumnsCtaLabel
+    تصفّح المقالات
+
+guidanceContent.ar.home.servicesDetailLabel
+    عرض التفاصيل
+
+guidanceContent.ar.home.servicesAssistanceBefore
+    إذا لم يتّضح لك إلى أي مجموعة تنتمي قضيتك، فإن صفحة 
+
+guidanceContent.ar.home.servicesAssistanceLinkLabel
+    التواصل
+
+guidanceContent.ar.home.servicesAssistanceAfter
+     تشرح كيفية كتابة الملخّص ليطّلع عليه المحامي.
+
+guidanceContent.ar.home.columnsViewAllLabel
+    عرض جميع المقالات
+
+guidanceContent.ar.home.columnsReadMoreLabel
+    متابعة القراءة
+
+guidanceContent.ar.home.columnsReviewLabel
+    بمراجعة المحامية Wei Tseng
+
+guidanceContent.ar.home.columnsOriginalLanguageBadge
+    اللغة الأصلية
+
+guidanceContent.ar.home.columnsOriginalLanguageNote
+    بعض المقالات متاحة بالعربية، وما لا نسخة عربية له يبقى بلغته الأصلية. والمقالات أدناه معروضة بلغتها الأصلية وتفتح الصفحة بتلك اللغة؛ ولا يُترجَم المحتوى ترجمة آلية.
+
+guidanceContent.ar.home.imageBandAlt
+    بيت تايواني تقليدي ثلاثي الأجنحة (三合院) إلى جانب جناح حديث في ضوء النهار
+
+guidanceContent.ar.home.videoPauseLabel
+    إيقاف الفيديو مؤقتًا
+
+guidanceContent.ar.home.videoPlayLabel
+    تشغيل الفيديو
+
+guidanceContent.ar.home.videoReplayLabel
+    إعادة تشغيل الفيديو
+
+guidanceContent.ar.pages.home.eyebrow
+    إرشاد
+
+guidanceContent.ar.pages.home.title
+    الخدمات القانونية في تايوان — إرشاد باللغة العربية
+
+guidanceContent.ar.pages.home.description
+    صفحة إرشادية عربية. تعريف عام بنطاق عمل Hovering International Law Firm في تايوان، وبلغات الاستشارة، وبكيفية بدء التواصل.
+
+guidanceContent.ar.pages.home.intro
+    يساعد Hovering International Law Firm الموكّلين الأجانب، بمن فيهم المقيمون في تايوان، في القضايا الخاضعة للقانون التايواني: الاستثمار وتأسيس الشركات، والمنازعات المدنية، وشؤون الزواج والأسرة، والعمل، والقضايا الجزائية (الجنائية)، والملكية الفكرية. ويساعدك هذا القسم العربي على معرفة الأعمال التي تدخل في نطاق المساعدة، وما يلزم تحضيره، وكيفية التواصل. وهذه معلومات عامة، وليست رأيًا قانونيًا في قضيتك الخاصة.
+
+guidanceContent.ar.pages.home.sections[0].heading
+    ما الذي يتولّاه المكتب
+
+guidanceContent.ar.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm مكتب محاماة مقرّه تايوان، يمارس العمل وفق القانون التايواني، وله مكاتب في تايبيه (臺北) وكاوهسيونغ (高雄) وتايتشونغ (臺中) وبينغتونغ (屏東). ويقبل المكتب أعمال الاستشارة للشركات وقضايا التقاضي على السواء، ويساعد الموكّلين الأجانب في الإجراءات التي تُنفَّذ في تايوان.
+
+guidanceContent.ar.pages.home.sections[0].paragraphs[1]
+    وجميع ما يرد هنا للاسترشاد العام. فنتيجة أي قضية تتوقف على وقائعها وعلى الأحكام المطبَّقة وعلى وقت نشوئها، ولذلك لا يغني هذا الإرشاد عن التحدّث مباشرة مع محامٍ بشأن ملفك.
+
+guidanceContent.ar.pages.home.sections[1].heading
+    لغة الصفحة ولغة الاستشارة أمران مختلفان
+
+guidanceContent.ar.pages.home.sections[1].paragraphs[0]
+    كُتبت هذه الصفحة بالعربية. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية، ولغة صفحة الإرشاد لا تحدّد اللغة التي يجري بها الحديث مع المحامي.
+
+guidanceContent.ar.pages.home.sections[1].paragraphs[1]
+    ولا نلتزم بتوفير ترجمة فورية، ولا نلتزم بالرد خلال مدة معيّنة، ولا نؤكّد المواعيد عبر هذه الصفحة. وإذا لم تكن تستخدم أيًّا من اللغات الأربع المذكورة، فإن صفحة «التواصل» تشرح كيف نؤكّد طريقة التواصل.
+
+guidanceContent.ar.pages.home.sections[2].heading
+    مجموعات العمل التي يقبلها المكتب
+
+guidanceContent.ar.pages.home.sections[2].paragraphs[0]
+    يشمل نطاق عمل المكتب المجموعات الست الآتية. وتعرض صفحة «مجالات الخدمات» تفصيلًا أوفى لكل مجموعة وتبيّن ما لا يمكن ضمانه.
+
+guidanceContent.ar.pages.home.sections[2].items[0]
+    الاستثمار وتأسيس الشركات في تايوان
+
+guidanceContent.ar.pages.home.sections[2].items[1]
+    المنازعات المدنية ودعاوى التعويض
+
+guidanceContent.ar.pages.home.sections[2].items[2]
+    قضايا الزواج والأسرة والميراث
+
+guidanceContent.ar.pages.home.sections[2].items[3]
+    منازعات العمل والتوظيف
+
+guidanceContent.ar.pages.home.sections[2].items[4]
+    القضايا الجزائية
+
+guidanceContent.ar.pages.home.sections[2].items[5]
+    الملكية الفكرية: العلامات التجارية وبراءات الاختراع وحقوق المؤلف
+
+guidanceContent.ar.pages.home.sections[3].heading
+    كيف تبدأ
+
+guidanceContent.ar.pages.home.sections[3].paragraphs[0]
+    يُستحسن أن تقرأ صفحة «مجالات الخدمات» لتعرف إن كانت قضيتك تدخل في نطاق العمل، ثم تطّلع على صفحتَي «النطاق والأتعاب» و«التواصل» لمعرفة كيفية تحديد النطاق وتأكيد الأتعاب قبل بدء العمل.
+
+guidanceContent.ar.pages.home.sections[3].paragraphs[1]
+    وعند إرسال الطلب يمكنك كتابة الملخّص بلغتك. ويُحفَظ النص الأصلي كما كتبته ولا يُترجَم ترجمة آلية. والطلب المُرسَل طلب ينتظر المراجعة: فإرساله ليس جلسة جرت، وليس موعدًا مؤكّدًا.
+
+guidanceContent.ar.pages.services.eyebrow
+    مجالات الخدمات
+
+guidanceContent.ar.pages.services.title
+    المجالات التي يقبلها المكتب
+
+guidanceContent.ar.pages.services.description
+    مجموعات العمل الست التي تدخل في نطاق خدمات المكتب في تايوان، مع الحدود التي ينبغي معرفتها قبل التواصل.
+
+guidanceContent.ar.pages.services.intro
+    فيما يلي مجموعات العمل التي يقبلها المكتب فعليًا، مع النقاط التي يكثر السؤال عنها في المرحلة الأولى. ويساعدك هذا العرض على تحديد ما إذا كانت قضيتك تدخل في نطاق المساعدة؛ وهو معلومات عامة، وليس تحليلًا قانونيًا لملف بعينه.
+
+guidanceContent.ar.pages.services.sections[0].heading
+    الاستثمار وتأسيس الشركات في تايوان
+
+guidanceContent.ar.pages.services.sections[0].paragraphs[0]
+    يساعد المكتب المستثمرين والشركات الأجنبية عند تأسيس كيان في تايوان أو تشغيله: اختيار الشكل القانوني للكيان، وإعداد الملفات وتقديمها، وتحويل رأس المال، والإجراءات المصرفية، ومراجعة موقع النشاط، والمتطلبات الخاصة بكل قطاع. كما يساعد المكتب في المسائل المحاسبية والضريبية الناشئة عن تأسيس الشركة وتشغيلها في تايوان.
+
+guidanceContent.ar.pages.services.sections[0].paragraphs[1]
+    وتختلف الخطوات ومددها باختلاف الشكل القانوني المختار، وباختلاف المستثمر والقطاع والمصرف المعني والمستندات المتوفرة. وتأسيس شركة لا يُنشئ تلقائيًا صفة الإقامة (居留) أو تصريح العمل (工作許可): فهذه إجراءات مستقلة تُبحَث في كل ملف على حدة.
+
+guidanceContent.ar.pages.services.sections[1].heading
+    المنازعات المدنية ودعاوى التعويض
+
+guidanceContent.ar.pages.services.sections[1].paragraphs[0]
+    تشمل هذه المجموعة منازعات العقود، ودعاوى التعويض عن الضرر خارج نطاق العقد، ومنازعات المستهلك. ويبدأ العمل عادةً بترتيب مجريات الواقعة، وتحديد المستندات والأدلة المتوفرة، ثم بحث الخيارات المتاحة.
+
+guidanceContent.ar.pages.services.sections[1].paragraphs[1]
+    وتؤثّر المواعيد (بما فيها مدة التقادم) ومدى اكتمال الأدلة تأثيرًا كبيرًا في سير القضية المدنية، لذا يُستحسن أن تذكر مبكّرًا التواريخ التي تعرفها. وإن كنت تحتفظ بالعقود أو الرسائل المتبادلة أو إيصالات الدفع أو صور الموقع، فاذكر ذلك منذ البداية.
+
+guidanceContent.ar.pages.services.sections[2].heading
+    الزواج والأسرة والميراث
+
+guidanceContent.ar.pages.services.sections[2].paragraphs[0]
+    يقبل المكتب قضايا الطلاق (離婚)، وتقسيم الأموال، وممارسة الحقوق والواجبات تجاه الأبناء القاصرين وتحمّلها (未成年子女權利義務之行使或負擔)، والزيارة (會面交往)، والميراث (繼承)، بما في ذلك الحالات التي يوجد فيها الأطراف أو الأموال في دول متعددة. والقضايا ذات العنصر الأجنبي تحتاج غالبًا إلى بحث إضافي في وثائق الأحوال المدنية (戶籍) وفي شكل المحررات وطريقة إثباتها في تايوان.
+
+guidanceContent.ar.pages.services.sections[2].paragraphs[1]
+    ولأن مسائل الأسرة ترتبط عادةً بمواعيد وبإجراءات متوازية متعددة، يُستحسن أن يوضّح الملخّص الأول صلة الأطراف بعضهم ببعض، ومحل الإقامة الحالي، والإجراءات التي تمّت أو الجارية.
+
+guidanceContent.ar.pages.services.sections[3].heading
+    منازعات العمل والتوظيف
+
+guidanceContent.ar.pages.services.sections[3].paragraphs[0]
+    تشمل هذه المجموعة إنهاء عقد العمل (勞動契約)، وبدل إنهاء الخدمة وفق القانون التايواني (資遣費؛ ويُرجى عدم اعتباره مطابقًا لأنظمة مشابهة في دول أخرى)، والأجور، والمنازعات الناشئة عن بنود عقد العمل، سواء من جانب العامل أو من جانب صاحب العمل. وعند المراجعة نفصل بين سبب إنهاء علاقة العمل وبين مسائل الإشعار والمستحقات والمواعيد.
+
+guidanceContent.ar.pages.services.sections[3].paragraphs[1]
+    وغالبًا ما تكون عقود العمل ولوائح العمل (工作規則) وكشوف الأجور والمراسلات بين الطرفين مستندات حاسمة. فإن كنت تحتفظ بها فاذكرها في الملخّص لتكون المراجعة الأولى أدقّ.
+
+guidanceContent.ar.pages.services.sections[4].heading
+    القضايا الجزائية
+
+guidanceContent.ar.pages.services.sections[4].paragraphs[0]
+    يساعد المكتب في مرحلة التحقيق وفي مرحلة المحاكمة، للمشتبه به أو المتهم وللمجني عليه على السواء، كما يساعد في تقدير المخاطر الجزائية الناشئة عن النشاط التجاري.
+
+guidanceContent.ar.pages.services.sections[4].paragraphs[1]
+    وللقضايا الجزائية عادةً مواعيد قصيرة ومحطات إجرائية ثابتة، فإذا كنت قد تسلّمت ورقة من جهة مختصة فاذكر التاريخ المدوّن عليها فور التواصل ليُنظَر في الأمر بترتيب أولويته الصحيح.
+
+guidanceContent.ar.pages.services.sections[5].heading
+    الملكية الفكرية
+
+guidanceContent.ar.pages.services.sections[5].paragraphs[0]
+    يساعد المكتب في تسجيل العلامات التجارية (商標) وبراءات الاختراع (專利)، وفي مسائل حقوق المؤلف، وكذلك في المنازعات المتعلقة بهذه الحقوق في تايوان.
+
+guidanceContent.ar.pages.services.sections[5].paragraphs[1]
+    وفي هذه المجموعة يكون الترتيب مهمًا: فنطاق الحماية ووقت تقديم الطلب وواقع الاستخدام الفعلي كلها تؤثّر في الخيارات المتاحة. وتقديم الطلب لا يضمن بذاته صدور سند الحماية.
+
+guidanceContent.ar.pages.services.sections[6].heading
+    النطاق وكيفية تأكيده
+
+guidanceContent.ar.pages.services.sections[6].paragraphs[0]
+    يعمل المكتب وفق القانون التايواني ويقبل القضايا الداخلة في المجموعات المذكورة أعلاه. ويُؤكَّد نطاق كل قضية على حدة بعد مراجعة المحامي لما ترسله.
+
+guidanceContent.ar.pages.services.sections[6].paragraphs[1]
+    أما صفة الإقامة وتصريح العمل وما شابههما فتُبحَث على أساس ملف كل شخص ووقائعه، لا استنادًا إلى الجنسية. وإذا كان في قضيتك شقّ يتصل بهذه المسائل فاذكره بوضوح عند التواصل ليحدّد المحامي مجموعة العمل الصحيحة؛ ولا تتضمّن هذه الصفحة أي التزام بنتيجة أو بمدة للرد.
+
+guidanceContent.ar.pages.about.eyebrow
+    عن المكتب
+
+guidanceContent.ar.pages.about.title
+    عن Hovering International Law Firm
+
+guidanceContent.ar.pages.about.description
+    معلومات أساسية عن مكتب المحاماة في تايوان، وعن مكاتبه، وعن أعماله ذات العنصر الأجنبي.
+
+guidanceContent.ar.pages.about.intro
+    Hovering International Law Firm مكتب محاماة في تايوان يضم محامين يعملون في مجالات متعددة، من استشارات الشركات إلى التقاضي. ويعرّف هذا القسم بنشأة المكتب ومكاتبه وبمجال أعماله ذات العنصر الأجنبي.
+
+guidanceContent.ar.pages.about.sections[0].heading
+    النشأة والهيكل
+
+guidanceContent.ar.pages.about.sections[0].paragraphs[0]
+    تأسّس Hovering International Law Firm (昊鼎國際法律事務所) عام 2016 على يد محامين من خرّيجي الجامعة الوطنية التايوانية (國立臺灣大學). ويجمع الاسم الصيني حرف 昊 بمعنى «السماء الواسعة» وحرف 鼎 بمعنى «الأساس الراسخ»، وهو ما يعبّر عن توجّه المكتب عند تأسيسه.
+
+guidanceContent.ar.pages.about.sections[0].paragraphs[1]
+    وللمكتب مكاتب في تايبيه (臺北) وكاوهسيونغ (高雄) وتايتشونغ (臺中) وبينغتونغ (屏東). ويركّز مكتب كاوهسيونغ على حوكمة الشركات وعلى المنازعات المدنية والجزائية والإدارية المعتادة. ويتولّى مكتب تايتشونغ قضايا البناء والملكية الفكرية والأعمال المتصلة بكوريا واليابان. وافتُتح مكتب بينغتونغ عام 2017 لتلبية احتياجات المنطقة.
+
+guidanceContent.ar.pages.about.sections[0].paragraphs[2]
+    وإلى جانب نشاط المحاماة، أُنشئ عام 2020 مكتب المحاسبة Hovering Accounting Office الذي يقدّم خدمات المحاسبة والتخطيط الضريبي لأصحاب الأعمال وللأفراد ذوي الثروات الكبيرة.
+
+guidanceContent.ar.pages.about.sections[1].heading
+    الأعمال ذات العنصر الأجنبي
+
+guidanceContent.ar.pages.about.sections[1].paragraphs[0]
+    تشمل أعمال المكتب ذات العنصر الأجنبي تأسيس الشركات، وملفات التأشيرات، وتسجيل العلامات التجارية وبراءات الاختراع، وتقدير المخاطر القانونية، والاستشارات الضريبية للشركات. ويختصّ مكتب تايتشونغ بقضايا البناء والملكية الفكرية والأعمال المتصلة بكوريا واليابان. وتتولّى المحامية Wei Tseng (曾雋崴) العملاء من كوريا واليابان وسائر العملاء الدوليين في مجموعات العمل المذكورة.
+
+guidanceContent.ar.pages.about.sections[1].paragraphs[1]
+    وقبولنا لقضية ما يتوقف على موضوعها وعلى لغة التواصل. فإذا كانت قضيتك ضمن مجموعات العمل المذكورة وأمكن التواصل بإحدى اللغات الأربع المعتمدة، فيمكنك إرسال ملخّص ليطّلع عليه المحامي.
+
+guidanceContent.ar.pages.about.sections[2].heading
+    عند تواصلك مع المكتب
+
+guidanceContent.ar.pages.about.sections[2].paragraphs[0]
+    بعد تسلّم ملخّصك، يراجع المحامي محتواه ثم يتحدث معك عن نطاق العمل الممكن، وعن المستندات اللازمة، وعن الخطوات التالية. وفي القضايا التي تنشأ فيها مسائل محاسبية أو ضريبية، يمكن أن يعمل المكتب مع قسم المحاسبة لمعالجتها ضمن المسار نفسه.
+
+guidanceContent.ar.pages.about.sections[2].paragraphs[1]
+    وتتوقف نتيجة كل قضية على وقائعها وملفها، ولذلك لا نقدّم أي التزام بالنتيجة. وإذا احتجت إلى جواب مؤكّد عن حالتك، فلا بدّ من التحدث مباشرة مع المحامي عن ذلك الملف بإحدى اللغات الأربع المعتمدة.
+
+guidanceContent.ar.pages.lawyers.eyebrow
+    المحامون
+
+guidanceContent.ar.pages.lawyers.title
+    فريق Hovering الدولي
+
+guidanceContent.ar.pages.lawyers.description
+    ملفات المحامين ومديري الأعمال والمحاسب الشريك في Hovering.
+
+guidanceContent.ar.pages.lawyers.intro
+    
+
+guidanceContent.ar.pages.pricing.eyebrow
+    النطاق والأتعاب
+
+guidanceContent.ar.pages.pricing.title
+    كيف يُحدَّد نطاق العمل وتُحدَّد الأتعاب
+
+guidanceContent.ar.pages.pricing.description
+    شرح لترتيب تحديد نطاق العمل وتأكيد الأتعاب، ولسبب عدم نشر قائمة أسعار في هذه الصفحة.
+
+guidanceContent.ar.pages.pricing.intro
+    تشرح هذه الصفحة كيف تُحدَّد الأتعاب، ولا تذكر أرقامًا. فمقدار الأتعاب يتوقف على نطاق العمل في كل قضية، ولا يكون له معنى إلا بعد تحديد ذلك النطاق بوضوح.
+
+guidanceContent.ar.pages.pricing.sections[0].heading
+    أولًا: تحديد نطاق العمل
+
+guidanceContent.ar.pages.pricing.sections[0].paragraphs[0]
+    القضايا من النوع نفسه قد تختلف اختلافًا كبيرًا في حجم العمل، بحسب عدد الأطراف والمستندات المتوفرة والمواعيد الواجب التقيّد بها وما إذا كانت الإجراءات قد بدأت أم لا. ولذلك تكون الخطوة الأولى دائمًا توضيح ما يشمله العمل وما لا يشمله.
+
+guidanceContent.ar.pages.pricing.sections[0].paragraphs[1]
+    والملخّص الذي ترسله في الخطوة الأولى هو أساس تحديد هذا النطاق. وكلما كان الملخّص أوضح في سرد الوقائع والمطلوب والمواعيد، كان تحديد النطاق أدقّ.
+
+guidanceContent.ar.pages.pricing.sections[1].heading
+    تُؤكَّد الأتعاب قبل بدء العمل
+
+guidanceContent.ar.pages.pricing.sections[1].paragraphs[0]
+    بعد وضوح نطاق العمل، تُبحَث الأتعاب وطريقة احتسابها وتُؤكَّد معك قبل بدء العمل. وإذا تغيّر النطاق أثناء التنفيذ، وجب تأكيد ذلك التغيير من جديد.
+
+guidanceContent.ar.pages.pricing.sections[1].paragraphs[1]
+    وهذه الصفحة ليست عرض أسعار ولا تُنشئ أي التزام بالدفع. كما أن إرسال طلب عبر هذه الصفحة لا تترتب عليه أي تكلفة.
+
+guidanceContent.ar.pages.pricing.sections[2].heading
+    قد تكون الجلسة مع المحامي خدمة بمقابل
+
+guidanceContent.ar.pages.pricing.sections[2].paragraphs[0]
+    قد تكون الجلسة مع المحامي خدمة بمقابل. ولا تذكر هذه الصفحة أن الجلسة الأولى مجانية، ولا ينبغي فهم أي عبارة هنا على هذا المعنى.
+
+guidanceContent.ar.pages.pricing.sections[2].paragraphs[1]
+    وإذا كانت الجلسة بمقابل، يُوضَّح المبلغ وطريقة السداد قبل انعقادها.
+
+guidanceContent.ar.pages.pricing.sections[3].heading
+    لماذا لا تنشر هذه الصفحة قائمة أسعار
+
+guidanceContent.ar.pages.pricing.sections[3].paragraphs[0]
+    تتوقف التكلفة على كل قضية: حجم العمل المطلوب، وعدد الأطراف، والمستندات المتوفرة، والمواعيد الواجب التقيّد بها، وما إذا كانت الإجراءات قد بدأت. ورقم منشور مسبقًا لن يعبّر عن تكلفة ملفك، ولذلك نحدّد نطاق العمل لكل قضية ثم نعرض الأتعاب المقابلة لتنظر فيها قبل بدء العمل، بدلًا من نشر قائمة أسعار.
+
+guidanceContent.ar.pages.pricing.sections[3].paragraphs[1]
+    وإلى جانب أتعاب المحاماة، قد تنشأ في القضية مبالغ تُدفَع للمحكمة أو لجهة حكومية أو لطرف ثالث. وهذه المبالغ منفصلة عن أتعاب المحاماة وتتوقف على كل إجراء بعينه.
+
+guidanceContent.ar.pages.contact.eyebrow
+    التواصل
+
+guidanceContent.ar.pages.contact.title
+    كيفية التواصل مع المكتب
+
+guidanceContent.ar.pages.contact.description
+    لغة الصفحة، ولغات الاستشارة، وما يحدث إذا لم تكن تستخدم تلك اللغات الأربع، وما لا يمكن ضمانه.
+
+guidanceContent.ar.pages.contact.intro
+    قبل التواصل، يُرجى الانتباه إلى ثلاثة أمور منفصلة. يسهل الخلط بينها، لكن لكل واحد منها معنى خاص به.
+
+guidanceContent.ar.pages.contact.sections[0].heading
+    ثلاثة أمور ينبغي التمييز بينها
+
+guidanceContent.ar.pages.contact.sections[0].paragraphs[0]
+    لغة عرض الصفحة، ولغة الجلسة مع المحامي، واللغة التي تكتب بها رسالتك، ثلاثة أمور مستقلّ بعضها عن بعض.
+
+guidanceContent.ar.pages.contact.sections[0].items[0]
+    لغة الصفحة: هذا القسم الإرشادي مكتوب بالعربية.
+
+guidanceContent.ar.pages.contact.sections[0].items[1]
+    لغة الاستشارة: الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.
+
+guidanceContent.ar.pages.contact.sections[0].items[2]
+    لغة كتابتك: يمكنك كتابة الملخّص بلغتك، ويُحفَظ النص الأصلي كما هو.
+
+guidanceContent.ar.pages.contact.sections[1].heading
+    إذا لم تكن تستخدم أيًّا من اللغات الأربع
+
+guidanceContent.ar.pages.contact.sections[1].paragraphs[0]
+    يمكنك في نموذج التواصل اختيار بند «يلزم تأكيد طريقة التواصل». وسيستخدم المكتب رسالة الرد لتأكيد طريقة التواصل إن وُجدت طريقة ممكنة؛ وهذا ليس التزامًا بوجود طريقة مناسبة، ولا التزامًا بمدة للرد.
+
+guidanceContent.ar.pages.contact.sections[1].paragraphs[1]
+    وهذه خطوة تأكيد لا وعد. فنحن لا نلتزم بتوفير ترجمة فورية، ولا نلتزم بتقديم الدعم بأي لغة أخرى غير اللغات الأربع المذكورة، ولا نلتزم بقبول كل قضية.
+
+guidanceContent.ar.pages.contact.sections[2].heading
+    ماذا تكتب في رسالتك الأولى
+
+guidanceContent.ar.pages.contact.sections[2].paragraphs[0]
+    يُستحسن أن تذكر: ما الذي حدث، وما المساعدة التي تريدها، وما صلة القضية بتايوان، والمواعيد إن كنت تعرفها. وإذا تسلّمت ورقة من محكمة أو من جهة حكومية فاذكر التاريخ المدوّن عليها.
+
+guidanceContent.ar.pages.contact.sections[2].paragraphs[1]
+    ولا حاجة في هذه المرحلة إلى إرسال رقم جواز السفر أو رقم الهوية أو بيانات الحساب المصرفي أو السجلات الطبية أو ملف الأدلة كاملًا. انتظر إرشاد المحامي ثم أرسل المستندات الحسّاسة بطريقة آمنة.
+
+guidanceContent.ar.pages.contact.sections[3].heading
+    ما لا تضمنه هذه الصفحة
+
+guidanceContent.ar.pages.contact.sections[3].paragraphs[0]
+    لا نلتزم بمدة للرد، ولا نؤكّد المواعيد عبر هذه الصفحة، ولا نلتزم بأن يتولّى القضية محامٍ بعينه، ولا نوفّر ترجمة فورية. وترجمة النصوص مسألة منفصلة: فالرسالة التي ترسلها لا تُترجَم ترجمة آلية.
+
+guidanceContent.ar.pages.contact.sections[3].paragraphs[1]
+    وعند إرسال طلبك يُحفَظ محتواه وينتظر المراجعة. وإذا لم تتلقَّ ردًا بعد مدة، فيمكنك إعادة الإرسال إلى عنوان البريد الإلكتروني المذكور في صفحة التواصل.
+
+guidanceContent.ar.pages.faq.eyebrow
+    الأسئلة الشائعة
+
+guidanceContent.ar.pages.faq.title
+    الأسئلة الشائعة
+
+guidanceContent.ar.pages.faq.description
+    إجابات عن نطاق العمل، والتحضير، واللغة، والتكلفة، ومعنى إرسال الطلب.
+
+guidanceContent.ar.pages.faq.intro
+    الأسئلة الآتية مُجاب عنها على مستوى المعلومات العامة. أما الجواب عن قضيتك بعينها فلا يمكن تقديمه إلا بعد مراجعة المحامي للملف.
+
+guidanceContent.ar.pages.faq.sections[0].heading
+    كيفية استخدام هذا القسم
+
+guidanceContent.ar.pages.faq.sections[0].paragraphs[0]
+    إذا لم تجد جوابًا يناسب حالتك، فذلك غالبًا مؤشّر على أن الجواب يتوقف على وقائع بعينها. وفي هذه الحالة اذكر تلك الوقائع في الملخّص عند التواصل، بدلًا من الاستنتاج مما ورد هنا.
+
+guidanceContent.ar.pages.faq.faqs[0].question
+    ما أنواع القضايا التي يقبلها المكتب؟
+
+guidanceContent.ar.pages.faq.faqs[0].answer
+    يقبل المكتب القضايا الداخلة في ست مجموعات: الاستثمار وتأسيس الشركات في تايوان، والمنازعات المدنية ودعاوى التعويض، وقضايا الزواج والأسرة والميراث، ومنازعات العمل، والقضايا الجزائية، والملكية الفكرية. أما قبول قضية بعينها فيتقرّر بعد مراجعة محتواها.
+
+guidanceContent.ar.pages.faq.faqs[1].question
+    بماذا أستعدّ قبل التواصل؟
+
+guidanceContent.ar.pages.faq.faqs[1].answer
+    جهّز ملخّصًا قصيرًا لمجريات الواقعة، وما تريده، وصلة القضية بتايوان، والمواعيد إن وُجدت. وإذا كانت لديك أوراق من محكمة أو من جهة حكومية فاذكر التاريخ المدوّن عليها. ولا حاجة في هذه المرحلة إلى إرسال وثائق الهوية أو ملف الأدلة كاملًا.
+
+guidanceContent.ar.pages.faq.faqs[2].question
+    هل تجري الجلسة مع المحامي بلغة هذه الصفحة؟
+
+guidanceContent.ar.pages.faq.faqs[2].answer
+    لا. هذه الصفحة الإرشادية مكتوبة بالعربية. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية، ولا نلتزم بتوفير ترجمة فورية. وترجمة النصوص مسألة منفصلة: يُحفَظ النص الأصلي الذي تكتبه كما هو ولا يُترجَم ترجمة آلية.
+
+guidanceContent.ar.pages.faq.faqs[3].question
+    ماذا لو لم أكن أستخدم أيًّا من تلك اللغات الأربع؟
+
+guidanceContent.ar.pages.faq.faqs[3].answer
+    اختر بند «يلزم تأكيد طريقة التواصل» عند إرسال الطلب. وسيستخدم المكتب رسالة الرد لتأكيد طريقة التواصل إن وُجدت طريقة ممكنة. وهذه خطوة تأكيد، لا التزامًا بأن نتمكّن من تقديم الدعم بلغة أخرى.
+
+guidanceContent.ar.pages.faq.faqs[4].question
+    كيف يُعالَج ما أكتبه بلغتي؟
+
+guidanceContent.ar.pages.faq.faqs[4].answer
+    يُحفَظ النص الأصلي الذي تكتبه كما هو ولا يُترجَم ترجمة آلية. وعند الحاجة، تُؤكَّد معك لغة التواصل في الخطوة التالية.
+
+guidanceContent.ar.pages.faq.faqs[5].question
+    هل يعني إرسالي الطلب أن الجلسة قد تمّت؟
+
+guidanceContent.ar.pages.faq.faqs[5].answer
+    لا. الطلب المُرسَل طلب ينتظر مراجعة المحامي. وهو ليس رأيًا قانونيًا، وليس موعدًا مؤكّدًا، وإرساله بذاته لا يُنشئ علاقة بين المحامي والموكّل.
+
+guidanceContent.ar.pages.faq.faqs[6].question
+    كيف تُحتسَب التكلفة؟
+
+guidanceContent.ar.pages.faq.faqs[6].answer
+    يُحدَّد نطاق العمل أولًا، ثم تُؤكَّد معك الأتعاب وطريقة احتسابها قبل بدء العمل. ولا تنشر هذه الصفحة أرقامًا محدّدة، ولا تذكر أن الجلسة الأولى مجانية.
+
+guidanceContent.ar.pages.faq.faqs[7].question
+    ماذا أفعل إذا كانت قضيتي عاجلة جدًا؟
+
+guidanceContent.ar.pages.faq.faqs[7].answer
+    اذكر الموعد النهائي أو التاريخ المدوّن على الورقة في أول الملخّص ليرى المحامي تلك المواعيد عند المراجعة. ولا يوجد في هذه الصفحة خط ساخن، ولا ضمان لمدة الرد؛ وإذا كان الأمر عاجلًا إلى حدّ لا يحتمل الانتظار، فينبغي أن تبحث في الوقت نفسه عن خيار آخر في المكان الذي أنت فيه.
+
+guidanceContent.ar.pages.privacy.eyebrow
+    الخصوصية
+
+guidanceContent.ar.pages.privacy.title
+    المعلومات التي تُجمَع عبر نموذج التواصل
+
+guidanceContent.ar.pages.privacy.description
+    ما يجمعه نموذج التواصل في القسم العربي، وكيفية التعامل مع النص الأصلي، وكيفية التواصل بشأن بياناتك.
+
+guidanceContent.ar.pages.privacy.intro
+    يتناول هذا القسم نموذج التواصل في صفحات الإرشاد هذه فقط. وما يرد هنا وصف لكيفية معالجة المعلومات، لا التزام تقني.
+
+guidanceContent.ar.pages.privacy.sections[0].heading
+    المعلومات التي تُجمَع
+
+guidanceContent.ar.pages.privacy.sections[0].paragraphs[0]
+    عند إرسال طلب عبر النموذج في هذا القسم، تُسجَّل المعلومات الآتية:
+
+guidanceContent.ar.pages.privacy.sections[0].items[0]
+    الاسم الذي تقدّمه
+
+guidanceContent.ar.pages.privacy.sections[0].items[1]
+    عنوان البريد الإلكتروني للرد عليك
+
+guidanceContent.ar.pages.privacy.sections[0].items[2]
+    لغة عرض الصفحة وقت الإرسال
+
+guidanceContent.ar.pages.privacy.sections[0].items[3]
+    اللغة التي كتبت بها المحتوى
+
+guidanceContent.ar.pages.privacy.sections[0].items[4]
+    اللغة التي تفضّلها للاستشارة
+
+guidanceContent.ar.pages.privacy.sections[0].items[5]
+    النص الأصلي الذي كتبته
+
+guidanceContent.ar.pages.privacy.sections[0].items[6]
+    موافقتك على إرسال الطلب
+
+guidanceContent.ar.pages.privacy.sections[0].items[7]
+    رقم الاستلام المستخدَم لاسترجاع طلبك
+
+guidanceContent.ar.pages.privacy.sections[1].heading
+    يُحفَظ النص الأصلي كما هو
+
+guidanceContent.ar.pages.privacy.sections[1].paragraphs[0]
+    يُحفَظ ما تكتبه كما كتبته تمامًا ولا يُترجَم ترجمة آلية. وإذا لزمت ترجمة لمعالجة القضية، فإن ذلك يُبحَث معك على حدة.
+
+guidanceContent.ar.pages.privacy.sections[1].paragraphs[1]
+    ولأن النص الأصلي محفوظ، يُرجى عدم كتابة معلومات لا حاجة إليها في المرحلة الأولى، مثل رقم جواز السفر أو رقم الهوية أو بيانات الحساب المصرفي.
+
+guidanceContent.ar.pages.privacy.sections[2].heading
+    مكان الحفظ ومن يمكنه الاطلاع
+
+guidanceContent.ar.pages.privacy.sections[2].paragraphs[0]
+    يُحفَظ ما ترسله في نطاق غير علني، ولا يُسمح بالاطلاع عليه إلا للأشخاص المخوّلين في المكتب لغرض معالجة الطلب.
+
+guidanceContent.ar.pages.privacy.sections[2].paragraphs[1]
+    ولا تقدّم هذه الصفحة ضمانًا مطلقًا لأمن المعلومات. فلا يوجد نظام نقل وتخزين آمن أمانًا مطلقًا، ولذلك ينبغي ألا تُرسَل المستندات الحسّاسة إلا وفق إرشاد المحامي الخاص.
+
+guidanceContent.ar.pages.privacy.sections[3].heading
+    الغرض من الاستخدام
+
+guidanceContent.ar.pages.privacy.sections[3].paragraphs[0]
+    تُستخدَم المعلومات التي ترسلها لمراجعة الطلب، وللرد عليك، ولتأكيد طريقة التواصل، ولمعالجة القضية إذا بدأ العمل.
+
+guidanceContent.ar.pages.privacy.sections[3].paragraphs[1]
+    ولا تُستخدَم هذه المعلومات لأغراض تسويقية ما لم توافق على ذلك على حدة.
+
+guidanceContent.ar.pages.privacy.sections[4].heading
+    الإشعار ورقم الاستلام
+
+guidanceContent.ar.pages.privacy.sections[4].paragraphs[0]
+    عند إرسال طلب بنجاح، يُشعِر النظام المكتب بذلك. وإذا لم يتأكّد الإشعار، يبقى ما كتبته محفوظًا ولا يُفقَد.
+
+guidanceContent.ar.pages.privacy.sections[4].paragraphs[1]
+    ويُنشَأ رقم الاستلام لاسترجاع طلبك في السجلات. ويظهر هذا الرقم بعد حفظ الطلب، ويمكنك ذكره عند التواصل لنعثر على ما أرسلته بالضبط.
+
+guidanceContent.ar.pages.privacy.sections[5].heading
+    حقوقك وكيفية التواصل
+
+guidanceContent.ar.pages.privacy.sections[5].paragraphs[0]
+    يمكنك طلب الاطلاع على معلوماتك أو تصحيحها أو حذفها، أو سحب موافقتك، بالتواصل عبر عنوان البريد الإلكتروني المذكور في صفحة التواصل. وإذا وُجد التزام بالحفظ بحكم النظام أو بسبب قضية جارية، فسنبيّن سبب التقييد.
+
+guidanceContent.ar.pages.privacy.sections[5].paragraphs[1]
+    ولا تذكر هذه الصفحة مدة حفظ ثابتة، لأن المدة الفعلية تتوقف على استمرار القضية من عدمه وعلى التزامات الحفظ ذات الصلة. وإذا رغبت في حذف معلوماتك في وقت أبكر، فاذكر ذلك عند التواصل.
+
+guidanceContent.ar.pages.privacy.sections[6].heading
+    مكان تخزين البيانات ومقدّمو الخدمات
+
+guidanceContent.ar.pages.privacy.sections[6].paragraphs[0]
+    هذا الموقع مستضاف على Vercel، ويُحفَظ ما ترسله في مخزن الكائنات غير العلني لتلك الخدمة. ويُرسَل البريد الإلكتروني عبر خدمة البريد التي يستخدمها المكتب.
+
+guidanceContent.ar.pages.privacy.sections[6].paragraphs[1]
+    وقد تكون خوادم بعض مقدّمي الخدمات خارج تايوان، وعندئذٍ قد تُحفَظ معلوماتك وتُعالَج هناك. وعند تحقّق الغرض من الحفظ تُحذَف المعلومات دون تأخير؛ أما المعلومات التي يوجد التزام بحفظها بحكم النظام فتُحفَظ للمدة المقابلة. وتُستقبَل جميع الطلبات المتعلقة بالبيانات الشخصية على wei@hoveringlaw.com.tw.
+
+guidanceContent.ar.pages.disclaimer.eyebrow
+    إخلاء المسؤولية
+
+guidanceContent.ar.pages.disclaimer.title
+    نطاق المعلومات الواردة في هذه الصفحة وحدودها
+
+guidanceContent.ar.pages.disclaimer.description
+    طبيعة المعلومات العامة، ونطاق القانون المطبَّق، وشروط نشوء العلاقة بين المحامي والموكّل.
+
+guidanceContent.ar.pages.disclaimer.intro
+    يبيّن هذا القسم ما تستطيع صفحات الإرشاد العربية تقديمه لك وما لا تستطيع تقديمه.
+
+guidanceContent.ar.pages.disclaimer.sections[0].heading
+    معلومات عامة فقط
+
+guidanceContent.ar.pages.disclaimer.sections[0].paragraphs[0]
+    كُتب محتوى هذه الصفحات لتقديم معلومات عامة. وهو ليس رأيًا قانونيًا في قضيتك، ولا يغني عن مراجعة ملف بعينه.
+
+guidanceContent.ar.pages.disclaimer.sections[0].paragraphs[1]
+    وتتوقف نتيجة أي قضية على وقائعها وعلى الأحكام المطبَّقة وعلى وقتها، ولذلك قد تؤدي حالتان متشابهتان في الظاهر إلى نتيجتين مختلفتين.
+
+guidanceContent.ar.pages.disclaimer.sections[1].heading
+    نطاق القانون
+
+guidanceContent.ar.pages.disclaimer.sections[1].paragraphs[0]
+    يمارس المكتب العمل وفق القانون التايواني، وهذه الصفحات لا تتحدث إلا عن العمل في ذلك النطاق.
+
+guidanceContent.ar.pages.disclaimer.sections[1].paragraphs[1]
+    ومحتوى هذه الصفحات ليس رأيًا قانونيًا وفق قانون أي ولاية قضائية أخرى غير تايوان، بما في ذلك قانون مكان إقامتك. وإذا كان في قضيتك شقّ يخضع لاختصاص دولة أخرى، فسنؤكّد معك أي مختص مؤهَّل يلزم لذلك الشقّ.
+
+guidanceContent.ar.pages.disclaimer.sections[2].heading
+    لا تنشأ العلاقة بين المحامي والموكّل تلقائيًا
+
+guidanceContent.ar.pages.disclaimer.sections[2].paragraphs[0]
+    قراءة هذه الصفحة أو إرسال النموذج أو إرسال بريد إلكتروني لا يُنشئ بذاته علاقة بين المحامي والموكّل.
+
+guidanceContent.ar.pages.disclaimer.sections[2].paragraphs[1]
+    ولا تنشأ تلك العلاقة إلا بعد مراجعة القضية وتأكيد الطرفين قبول تولّي العمل.
+
+guidanceContent.ar.pages.disclaimer.sections[3].heading
+    لا ضمان للنتيجة
+
+guidanceContent.ar.pages.disclaimer.sections[3].paragraphs[0]
+    ليس في هذه الصفحات ما يُعدّ التزامًا بنتيجة قضية، أو بقبول ملف، أو بصفة الإقامة وصفة العمل.
+
+guidanceContent.ar.pages.disclaimer.sections[3].paragraphs[1]
+    والروابط الخارجية مقدَّمة لتيسير الاطلاع؛ ولا نضمن دقة المحتوى الذي ينشره طرف ثالث ولا حداثته.
+
+guidanceContent.ar.pages.columns.eyebrow
+    المقالات
+
+guidanceContent.ar.pages.columns.title
+    مقالات عن القانون التايواني
+
+guidanceContent.ar.pages.columns.description
+    مقالات تشرح موضوعات شائعة في القانون التايواني. بعضها منشور بالعربية على هذه الصفحة، وتُفتَح بقيتها بلغتها الأصلية عبر روابط؛ والمحتوى معلومات عامة وقت النشر، وليس رأيًا قانونيًا في قضيتك.
+
+guidanceContent.ar.pages.columns.intro
+    ينشر المكتب مقالات تشرح موضوعات شائعة في القانون التايواني. والمقالات المتاحة بالعربية مدرجة في هذه الصفحة مباشرة؛ وإلى جانبها أربعة روابط، يفتح كل رابط منها فهرس المقالات بإحدى اللغات الأصلية. وتُدرَج النسخة العربية من أي مقال في هذه الصفحة عند توفّرها.
+
+guidanceContent.ar.pages.columns.sections[0].heading
+    أربعة فهارس بحسب اللغة
+
+guidanceContent.ar.pages.columns.sections[0].paragraphs[0]
+    يضم هذا القسم أربعة روابط: فهرس المقالات بالكورية، وفهرس بالصينية، وفهرس بالإنجليزية، وفهرس باليابانية. ويذكر كل رابط لغة فهرسه بوضوح لتعرف مسبقًا بأي لغة سيُفتَح المحتوى.
+
+guidanceContent.ar.pages.columns.sections[0].paragraphs[1]
+    وهذه الفهارس الأربعة فهارس باللغة الأصلية، لا قوائم ترجمات. أما المقالات المتاحة بالعربية فمدرجة على حدة في هذه الصفحة نفسها.
+
+guidanceContent.ar.pages.columns.sections[1].heading
+    إلى أين تؤدي الروابط
+
+guidanceContent.ar.pages.columns.sections[1].paragraphs[0]
+    عند اختيار أحد الروابط الأربعة يُفتَح فهرس المقالات بتلك اللغة. ومن الفهرس تختار المقال الذي تريد قراءته، ويُعرَض المحتوى كاملًا بلغة المقال الأصلية.
+
+guidanceContent.ar.pages.columns.sections[1].paragraphs[1]
+    ولا تلخّص هذه الصفحة محتوى المقالات، ولا تضمن وجود موضوع بعينه في اللغات الأربع جميعها. فكل فهرس لا يضم إلا المقالات المنشورة بتلك اللغة.
+
+guidanceContent.ar.pages.columns.sections[2].heading
+    القيمة الاسترشادية للمقالات
+
+guidanceContent.ar.pages.columns.sections[2].paragraphs[0]
+    أُعدّت المقالات لتقديم معلومات عامة وقت نشرها. وقد تتغيّر الأحكام وطريقة تطبيقها، ولا يعكس المقال كامل وقائع قضيتك.
+
+guidanceContent.ar.pages.columns.sections[2].paragraphs[1]
+    ولذلك يُرجى عدم الاعتماد على مقال لاتخاذ قرار في قضية حقيقية. استخدم المقال لفهم السياق العام؛ أما القرار في قضية حقيقية فيحتاج إلى حديث خاص مع المحامي عن ذلك الملف، وهذه الصفحة ليست خطوة استشارة.
+
+guidanceTeamCopy.ar.label
+    OUR TEAM
+
+guidanceTeamCopy.ar.title
+    فريق Hovering الدولي
+
+guidanceTeamCopy.ar.description
+    ملفات المحامين ومديري الأعمال والمحاسب الشريك في Hovering.
+
+guidanceTeamCopy.ar.representativeTitle
+    المحامية المديرة
+
+guidanceTeamCopy.ar.teamTitle
+    المحامون والموظفون
+
+guidanceTeamCopy.ar.partnerTitle
+    المحاسب الشريك
+
+guidanceTeamCopy.ar.introLabel
+    تعريف
+
+guidanceTeamCopy.ar.educationLabel
+    التعليم
+
+guidanceTeamCopy.ar.experienceLabel
+    الخبرة
+
+guidanceTeamCopy.ar.photoAltPrefix
+    صورة
+
+guidanceTeamCopy.ar.workingLanguagesLabel
+    لغات العمل
+
+guidanceTeamCopy.ar.fullProfileLabel
+    الملف الكامل (English)
+
+guidanceTeamCopy.ar.keyFactsHeading
+    المحامية Wei Tseng — معلومات أساسية
+
+guidanceTeamCopy.ar.qualificationLabel
+    المؤهل وجهة العمل
+
+guidanceTeamCopy.ar.qualificationSentence
+    {name} محامية مؤهَّلة لمزاولة المهنة في تايوان والمحامية المديرة في {firm}.
+
+guidanceTeamCopy.ar.practiceLabel
+    المجالات الرئيسية
+
+guidanceTeamCopy.ar.consultationLanguagesLabel
+    لغات الاستشارة
+
+guidanceTeamCopy.ar.roles.tseng-junwei
+    المحامية المديرة في تايوان (Managing Attorney)
+
+guidanceTeamCopy.ar.roles.chang-rongxuan
+    محامٍ في تايوان (Taiwan Attorney)
+
+guidanceTeamCopy.ar.roles.chang-fangyu
+    مساعد قانوني (Paralegal)
+
+guidanceTeamCopy.ar.roles.son-jungmin
+    مدير عمليات كوريا (Korea Operations Manager)
+
+guidanceTeamCopy.ar.roles.huang-shengping
+    محاسب قانوني شريك (Partner CPA)
+
+guidanceTeamBios.ar.tseng-junwei.intro[0]
+    يتولّى المكتب قضايا الشركات والأفراد في تايوان، ويعمل بالإنجليزية واليابانية والكورية والصينية.
+
+guidanceTeamBios.ar.tseng-junwei.intro[1]
+    مثَّلت طالبًا كوريًا في دعوى تعويض عن إصابة في ناد رياضي، وصدر حكم ابتدائي بالتعويض بمبلغ TWD 1.57M.
+
+guidanceTeamBios.ar.tseng-junwei.education[0]
+    ماجستير (M.S.)، Institute of Finance, National Taiwan University
+
+guidanceTeamBios.ar.tseng-junwei.education[1]
+    بكالوريوس (B.A.) بتخصص مزدوج في القانون والتمويل، National Chengchi University
+
+guidanceTeamBios.ar.tseng-junwei.education[2]
+    طالب تبادل في Kobe University و Waseda University
+
+guidanceTeamBios.ar.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.ar.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.ar.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.ar.chang-rongxuan.intro[0]
+    عمل سابقًا في Ministry of Education, Legal Affairs Division، وركّز على المنازعات الإدارية والمدنية.
+
+guidanceTeamBios.ar.chang-rongxuan.intro[1]
+    لديه خبرة في القضايا المتعلقة بالجامعات وبحقوق أعضاء هيئة التدريس وبالتظلمات الإدارية.
+
+guidanceTeamBios.ar.chang-rongxuan.education[0]
+    بكالوريوس في القانون (LL.B.)، National Chung Hsing University
+
+guidanceTeamBios.ar.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.ar.chang-rongxuan.experience[1]
+    محامٍ، Hovering International Law Firm
+
+guidanceTeamBios.ar.chang-fangyu.intro[0]
+    خبرة تمتد سنوات طويلة في وظيفة مساعد قانوني أول في عدة مكاتب محاماة، تشمل دعم التقاضي والشؤون القانونية للشركات وقضايا الاستثمار الأجنبي.
+
+guidanceTeamBios.ar.chang-fangyu.intro[1]
+    يشمل نطاق العمل دعم التقاضي وتأسيس الشركات وإجراءات الموافقة على الاستثمار الأجنبي وطلبات التراخيص والتواصل بين كوريا وتايوان.
+
+guidanceTeamBios.ar.chang-fangyu.education[0]
+    بكالوريوس في القانون (LL.B.)، Tunghai University
+
+guidanceTeamBios.ar.chang-fangyu.experience[0]
+    مساعد قانوني أول، Boyin Law Firm
+
+guidanceTeamBios.ar.chang-fangyu.experience[1]
+    مساعد قانوني أول، Muyang International Law Firm
+
+guidanceTeamBios.ar.son-jungmin.intro[0]
+    ينسّق مواعيد الجلسات والتواصل للعملاء من كوريا.
+
+guidanceTeamBios.ar.son-jungmin.intro[1]
+    يدعم التواصل بين الفرق عبر أنظمة التوثيق وسير العمل، انطلاقًا من خلفية في علوم الحاسب.
+
+guidanceTeamBios.ar.son-jungmin.education[0]
+    بكالوريوس (B.S.) في علوم الحاسب، National Cheng Kung University
+
+guidanceTeamBios.ar.son-jungmin.experience[0]
+    قسم الأعمال الكورية، Hovering International Law Firm
+
+guidanceTeamBios.ar.huang-shengping.intro[0]
+    أنهى برنامجَي البكالوريوس والماجستير في المحاسبة في National Chengchi University، ويدير حاليًا مكتب محاسبة.
+
+guidanceTeamBios.ar.huang-shengping.intro[1]
+    يدعم التحليل المتكامل للمخاطر القانونية والضريبية والمالية للعملاء من الشركات.
+
+guidanceTeamBios.ar.huang-shengping.education[0]
+    ماجستير (M.A.) في المحاسبة، National Chengchi University
+
+guidanceTeamBios.ar.huang-shengping.education[1]
+    بكالوريوس (B.A.) في المحاسبة، National Chengchi University
+
+guidanceTeamBios.ar.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.ar.Korean
+    الكورية
+
+guidanceLanguageNames.ar.Chinese
+    الصينية
+
+guidanceLanguageNames.ar.Japanese
+    اليابانية
+
+guidancePracticeAreaNames.ar.Taiwan company setup
+    تأسيس الشركات في تايوان
+
+guidancePracticeAreaNames.ar.Taiwan investment counsel
+    الاستشارات القانونية للاستثمار في تايوان
+
+guidancePracticeAreaNames.ar.Civil litigation and damages
+    التقاضي المدني ودعاوى التعويض
+
+guidancePracticeAreaNames.ar.Trademark and patent filings
+    تسجيل العلامات التجارية وبراءات الاختراع
+
+guidancePracticeAreaNames.ar.Visa and residency
+    التأشيرات والإقامة
+
+guidancePracticeAreaNames.ar.Family and labor disputes
+    منازعات الأسرة والعمل
+
+guidanceOfficeCopy.ar.label
+    OFFICES
+
+guidanceOfficeCopy.ar.title
+    المكاتب
+
+guidanceOfficeCopy.ar.description
+    عناوين مكاتب Hovering International Law Firm في تايوان.
+
+guidanceOfficeCopy.ar.officeLabel
+    مكتب
+
+guidanceOfficeCopy.ar.mapPreviewLabel
+    معاينة الخريطة
+
+guidanceOfficeCopy.ar.koreaOfficeTitle
+    مكتب كوريا
+
+guidanceOfficeCopy.ar.koreaAddressCardLabel
+    عنوان مكتب كوريا
+
+guidanceOfficeCopy.ar.koreaMapLinkLabel
+    عرض على Naver Map
+
+guidanceOfficeCopy.ar.reviewCountWord
+    تقييمات
+
+guidanceOfficeCopy.ar.phoneLabel
+    الهاتف
+
+guidanceOfficeCopy.ar.faxLabel
+    الفاكس
+
+guidanceOfficeCopy.ar.mapLinkLabel
+    عرض على الخريطة
+
+guidanceOfficeCopy.ar.photoAlts[0]
+    غرفة استقبال مكتب تايبيه، Hovering International Law Firm
+
+guidanceOfficeCopy.ar.photoAlts[1]
+    غرفة عمل المحامين في مكتب تايبيه، Hovering International Law Firm
+
+guidanceOfficeCopy.ar.photoAlts[2]
+    قاعة الاجتماعات في مكتب تايبيه، Hovering International Law Firm
+
+guidanceOfficeCopy.ar.officeTitles.taipei
+    تايبيه
+
+guidanceOfficeCopy.ar.officeTitles.taichung
+    تايتشونغ
+
+guidanceOfficeCopy.ar.officeTitles.kaohsiung
+    كاوهسيونغ
+
+guidanceOfficeCopy.ar.officeTitles.pingtung
+    بينغتونغ
+
+guidanceFooterCopy.ar.officeLabel
+    المكاتب
+
+guidanceFooterCopy.ar.officeQuickLinksLabel
+    روابط سريعة إلى مواقع المكاتب
+
+guidanceFooterCopy.ar.followLabel
+    تابعنا
+
+guidanceFooterCopy.ar.blogLabel
+    المدونة
+
+guidanceFooterCopy.ar.websiteLabel
+    الموقع الرسمي
+
+guidanceFooterCopy.ar.sitemapLabel
+    خريطة الموقع
+
+guidanceFooterCopy.ar.copyEmailLabel
+    نسخ عنوان البريد الإلكتروني
+
+guidanceFooterCopy.ar.emailCopiedMessage
+    تم نسخ عنوان البريد الإلكتروني.
+
+guidanceFooterCopy.ar.officialConsultationEmailLabel
+    البريد الإلكتروني الرسمي للاستشارات
+
+internationalInquiryCopy.ar.guidanceNotice
+    هذه الصفحة مكتوبة بالعربية بوصفها إرشادًا عامًا. وهي ليست رأيًا قانونيًا في قضيتك بعينها.
+
+internationalInquiryCopy.ar.consultationNotice
+    الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.
+
+internationalInquiryCopy.ar.methodConfirmationNotice
+    إذا لم تكن تستخدم أيًّا من هذه اللغات الأربع، فاختر «يلزم تأكيد طريقة التواصل». يؤكّد المكتب طريقة التواصل برسالة رد عند وجود طريقة ممكنة؛ ولا يضمن تقديم الخدمة بأي لغة أخرى، ولا يلتزم بمدة للرد.
+
+internationalInquiryCopy.ar.preparationNotice
+    يمكنك كتابة ملخّص قضيتك بلغتك. ويُحفَظ النص الأصلي كما كتبته ولا يُترجَم ترجمة آلية.
+
+internationalInquiryCopy.ar.heading
+    إرسال طلب استشارة
+
+internationalInquiryCopy.ar.intro
+    يُرجى وصف قضيتك باختصار. يراجع المحامي المحتوى ثم يوضّح الخطوة التالية.
+
+internationalInquiryCopy.ar.submitLabel
+    إرسال الطلب
+
+internationalInquiryCopy.ar.submittingLabel
+    جارٍ الإرسال…
+
+internationalInquiryCopy.ar.successMessage
+    وصلنا طلبك وهو بانتظار المراجعة. وهذا لا يعني أن الجلسة قد تمّت أو أن الموعد قد تأكّد.
+
+internationalInquiryCopy.ar.savedNotificationPendingMessage
+    حُفِظ طلبك، غير أن إشعار المكتب لم يتأكّد بعد. ولم يُفقَد ما كتبته. وإذا لم يصلك رد، فيمكنك أيضًا المراسلة على عنوان البريد الإلكتروني المذكور في صفحة التواصل.
+
+internationalInquiryCopy.ar.receiptIdLabel
+    رقم الاستلام
+
+internationalInquiryCopy.ar.failureMessage
+    تعذّر إرسال طلبك. يُرجى المحاولة مرة أخرى، أو الإرسال إلى عنوان البريد الإلكتروني المذكور في صفحة التواصل.
+
+internationalInquiryCopy.ar.originalLanguageLabel
+    اللغة التي تكتب بها
+
+internationalInquiryCopy.ar.originalLanguagePlaceholder
+    مثال: العربية أو الفرنسية أو الفارسية أو التركية أو لغة أخرى
+
+internationalInquiryCopy.ar.preferredConsultationLanguageLabel
+    اللغة التي تفضّلها للاستشارة
+
+internationalInquiryCopy.ar.originalTextLabel
+    ملخّص القضية (بلغتك)
+
+internationalInquiryCopy.ar.originalTextPlaceholder
+    اذكر ما الذي حدث، وما المساعدة التي تحتاج إليها، والموعد النهائي إن وُجد. ويُرجى عدم كتابة رقم جواز السفر أو رقم الهوية أو بيانات الحساب المصرفي.
+
+internationalInquiryCopy.ar.nameLabel
+    الاسم
+
+internationalInquiryCopy.ar.emailLabel
+    البريد الإلكتروني
+
+internationalInquiryCopy.ar.consentLabel
+    اطّلعتُ على سياسة الخصوصية وأوافق على إرسال هذا الطلب.
+
+internationalInquiryCopy.ar.privacyLinkLabel
+    سياسة الخصوصية
+
+internationalInquiryCopy.ar.requiredMessage
+    هذا الحقل مطلوب.
+
+internationalInquiryCopy.ar.invalidEmailMessage
+    يُرجى إدخال عنوان بريد إلكتروني صحيح.
+
+internationalInquiryCopy.ar.tooLongMessage
+    النص طويل جدًا. يُرجى اختصاره ثم إعادة الإرسال.
+
+internationalInquiryCopy.ar.sourceLanguageNotice
+    هذا المقال متاح بـ{language} فقط، والرابط يفتح الصفحة الأصلية بتلك اللغة.
+
+internationalInquiryCopy.ar.unavailableTranslationNotice
+    هذا العنصر غير مترجَم بعد إلى لغة هذه الصفحة. اضغط الرابط الذي يذكر اللغة الأصلية لقراءة النص الأصلي.
+
+internationalInquiryCopy.ar.unavailableLanguageNotice
+    هذه الصفحة غير متاحة بـ{language}.
+
+internationalInquiryCopy.ar.languageOptions.en
+    الإنجليزية (English)
+
+internationalInquiryCopy.ar.languageOptions.zh-hant
+    الصينية (中文)
+
+internationalInquiryCopy.ar.languageOptions.ja
+    اليابانية (日本語)
+
+internationalInquiryCopy.ar.languageOptions.ko
+    الكورية (한국어)
+
+internationalInquiryCopy.ar.languageOptions.needs-method-confirmation
+    لا أستطيع استخدام أي من اللغات الأربع — يلزم تأكيد طريقة التواصل
+
+guidanceAnswers.ar.services.answer
+    يتولّى المكتب ست مجموعات من القضايا وفق القانون التايواني: الاستثمار وتأسيس الشركات في تايوان، والمنازعات المدنية ودعاوى التعويض، وقضايا الزواج والأسرة والميراث، ومنازعات العمل، والقضايا الجزائية، والملكية الفكرية. ويُؤكَّد نطاق كل قضية على حدة بعد مراجعة المحامي لما ترسله. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.
+
+guidanceAnswers.ar.services.sources[0]
+    /ar/faq
+
+guidanceAnswers.ar.services.sources[1]
+    /ar/contact
+
+guidanceAnswers.ar.about.answer
+    Hovering International Law Firm مكتب محاماة في تايوان، تأسّس عام 2016 على يد محامين من خرّيجي الجامعة الوطنية التايوانية (國立臺灣大學)، وله مكاتب في تايبيه وكاوهسيونغ وتايتشونغ وبينغتونغ. ومنذ عام 2020 يضم قسمًا للمحاسبة، ويتولّى مكتب تايتشونغ الأعمال المتصلة بكوريا واليابان. ولا يقدّم المكتب أي التزام بالنتيجة. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.
+
+guidanceAnswers.ar.about.sources[0]
+    /ar/lawyers
+
+guidanceAnswers.ar.about.sources[1]
+    /ar/services
+
+guidanceAnswers.ar.lawyers.answer
+    تعرض هذه الصفحة ملفات المحامين ومديري الأعمال والمحاسب الشريك في Hovering. والمحامية Wei Tseng (曾雋崴) محامية مؤهَّلة لمزاولة المهنة في تايوان والمحامية المديرة في المكتب، وتعمل مع العملاء من كوريا واليابان وسائر العملاء الدوليين. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.
+
+guidanceAnswers.ar.lawyers.sources[0]
+    /ar/about
+
+guidanceAnswers.ar.lawyers.sources[1]
+    /ar/contact
+
+guidanceAnswers.ar.pricing.answer
+    لا تنشر هذه الصفحة قائمة أسعار. يُحدَّد نطاق العمل أولًا من الملخّص الذي ترسله، ثم تُؤكَّد معك الأتعاب وطريقة احتسابها قبل بدء العمل. وقد تكون الجلسة مع المحامي خدمة بمقابل، وقد تنشأ إلى جانب أتعاب المحاماة مبالغ تُدفَع للمحكمة أو لجهة حكومية. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.
+
+guidanceAnswers.ar.pricing.sources[0]
+    /ar/contact
+
+guidanceAnswers.ar.pricing.sources[1]
+    /ar/faq
+
+guidanceAnswers.ar.contact.answer
+    أرسل ملخّصك عبر نموذج التواصل: ما الذي حدث، وما المساعدة التي تحتاج إليها، وما صلة القضية بتايوان، والمواعيد إن كنت تعرفها. ولا حاجة في المرحلة الأولى إلى إرسال وثائق الهوية أو ملف الأدلة كاملًا. ولا يلتزم المكتب بمدة للرد، ولا يؤكّد المواعيد عبر هذه الصفحة. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.
+
+guidanceAnswers.ar.contact.sources[0]
+    /ar/faq
+
+guidanceAnswers.ar.contact.sources[1]
+    /ar/pricing
+
+guidanceAnswers.ar.faq.answer
+    يجيب قسم الأسئلة الشائعة على مستوى المعلومات العامة: مجموعات العمل الست، وكيفية تحضير الملخّص، وطريقة تحديد التكلفة، ومعنى إرسال الطلب. والطلب المُرسَل ينتظر مراجعة المحامي؛ فهو ليس رأيًا قانونيًا، وليس موعدًا مؤكّدًا، ولا يُنشئ علاقة بين المحامي والموكّل. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.
+
+guidanceAnswers.ar.faq.sources[0]
+    /ar/contact
+
+guidanceAnswers.ar.faq.sources[1]
+    /ar/services
+
+GUIDANCE_LLMS_NOTICES.ar.consultationNotice
+    هذه الصفحة الإرشادية مكتوبة بالعربية. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية، ولا نلتزم بتوفير ترجمة فورية.
+
+GUIDANCE_LLMS_NOTICES.ar.discoveryNotice
+    ملف llms.txt هذا ليس إلا خريطة للاستدلال على الصفحات العامة؛ وهو لا يَعِد بترتيب في نتائج البحث ولا باعتماد ولا بترشيح من الذكاء الاصطناعي ولا بظهور مضمون.
+
+GUIDANCE_LLMS_NOTICES.ar.confidentialNotice
+    لأن النص الأصلي محفوظ، يُرجى عدم كتابة معلومات لا حاجة إليها في المرحلة الأولى، مثل رقم جواز السفر أو رقم الهوية أو بيانات الحساب المصرفي.

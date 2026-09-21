@@ -140,8 +140,8 @@ Al trabajo sin permiso pueden aplicarse multa administrativa y orden de salida d
 
 ## Guías relacionadas
 
-- [Servicios de inversión y constitución de sociedades en Taiwán](/ko/services/investment)
-- [Perfil de la abogada Wei Tseng](/ko/lawyers/wei-tseng)
+- [Asuntos que atendemos](/es/services)
+- [Equipo internacional de Hovering](/es/lawyers)
 - [Contacto](/es/contact)
 
 ---

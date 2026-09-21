@@ -96,6 +96,6 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 ---
 
 > اقرأ أيضًا:
-> - [إرشاد محامي التقاضي في تايوان](/ko/taiwan-litigation-lawyer)
-> - [محامٍ تايواني يمكنه الاستشارة بالكورية](/ko/korean-lawyer-in-taiwan)
-> - [مجالات العمل — العمل](/ko/services/labor)
+> - [كيف يُحدَّد نطاق العمل وتُحدَّد الأتعاب](/ar/pricing)
+> - [فريق Hovering الدولي](/ar/lawyers)
+> - [المجالات التي يقبلها المكتب](/ar/services)

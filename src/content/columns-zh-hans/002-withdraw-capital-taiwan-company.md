@@ -139,7 +139,7 @@ faq:
 
 ## 相关说明
 
-1. [台湾投资与公司设立服务](/ko/services/investment)
+1. [我们处理哪些事项](/zh-hans/services)
 2. [在台湾设立公司基础](/zh-hans/columns/taiwan-company-establishment-basics)
 3. [联系我们](/zh-hans/contact)
 

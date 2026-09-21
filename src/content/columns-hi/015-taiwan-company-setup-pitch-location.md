@@ -78,6 +78,6 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 ---
 
 > और देखें:
-> - [ताइवान में कंपनी स्थापना की सामान्य मार्गदर्शिका — प्रक्रिया, लागत और कानूनी रूप](/ko/guides/taiwan-company-setup)
-> - [कोरियाई बोल सकने वाले ताइवान अधिवक्ता](/ko/korean-lawyer-in-taiwan)
-> - [ताइवान में कानूनी व्यक्ति और कंपनी स्थापना के अधिवक्ता संबंधी संकेत](/ko/taiwan-company-setup-lawyer)
+> - [हम किन मामलों का कार्य करते हैं](/hi/services)
+> - [Hovering की अंतरराष्ट्रीय टीम](/hi/lawyers)
+> - [कार्यालय तक कैसे पहुँचें](/hi/contact)

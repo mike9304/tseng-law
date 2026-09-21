@@ -114,6 +114,6 @@ Et fald på gulvet i en virksomhed, helbredsskade ved fødevarer og en skade ved
 ---
 
 > Se også:
-> - [Vejledning om processadvokaten i Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Taiwansk advokat, der taler koreansk](/ko/korean-lawyer-in-taiwan)
-> - [Vejledning til at finde en advokat i Taiwan](/ko/taiwan-lawyer)
+> - [Hvordan arbejdsomfang og omkostninger fastlægges](/da/pricing)
+> - [Hoverings internationale team](/da/lawyers)
+> - [Om Hovering International Law Firm](/da/about)

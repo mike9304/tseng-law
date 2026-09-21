@@ -188,8 +188,8 @@ De volgende primaire bronnen (niveau 1) zijn uitgangspunt tot nagaan van de rech
 
 ## 13. Verwante aanwijzingen
 
-- [Familierechtelijke diensten in Taiwan](/ko/services/family)
-- [Gids van de procesadvocaat in Taiwan](/ko/taiwan-litigation-lawyer)
+- [Welke zaken wij behandelen](/nl/services)
+- [Hoe omvang van het werk en kosten worden vastgesteld](/nl/pricing)
 - [Contact](/nl/contact)
 
 ---

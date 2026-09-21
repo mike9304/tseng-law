@@ -78,6 +78,6 @@ Les règles des autorités administratives peuvent changer souvent ; avant l’
 ---
 
 > Voir aussi :
-> - [Guide général de création de société à Taïwan — procédures, coûts et formes juridiques](/ko/guides/taiwan-company-setup)
-> - [Avocate à Taïwan pouvant s’exprimer en coréen](/ko/korean-lawyer-in-taiwan)
-> - [Repères sur l’avocate pour les personnes morales et la création de société à Taïwan](/ko/taiwan-company-setup-lawyer)
+> - [Affaires que nous traitons](/fr/services)
+> - [Équipe internationale de Hovering](/fr/lawyers)
+> - [Comment joindre le cabinet](/fr/contact)

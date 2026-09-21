@@ -184,7 +184,7 @@ Die endgültige Wahl ist sicherer zu prüfen, wenn Fachleute in Taiwan und am Si
 
 ## Zugehörige Hinweise
 
-- [Dienstleistungen zu Investition und Gesellschaftsgründung in Taiwan](/ko/services/investment)
+- [Welche Angelegenheiten wir bearbeiten](/de/services)
 - [Grundlagen der Gesellschaftsgründung in Taiwan](/de/columns/taiwan-company-establishment-basics)
 - [Kontakt](/de/contact)
 

@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Κεντρική εικόνα](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Όσοι έχουν αναγνώσει τα [Σύσταση εταιρείας στην Ταϊβάν – βασικά](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) και [Σύσταση εταιρείας στην Ταϊβάν – μέρος εμβάθυνσης 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) μπορούν επίσης να εξετάσουν το Σύσταση εταιρείας στην Ταϊβάν – μέρος εμβάθυνσης 2 (公司設立).
+Όσοι έχουν αναγνώσει τα [Σύσταση εταιρείας στην Ταϊβάν – βασικά](/el/columns/taiwan-company-establishment-basics) και [Σύσταση εταιρείας στην Ταϊβάν – μέρος εμβάθυνσης 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) μπορούν επίσης να εξετάσουν το Σύσταση εταιρείας στην Ταϊβάν – μέρος εμβάθυνσης 2 (公司設立).
 
 ​
 
@@ -82,6 +82,6 @@ B. Από τον δεύτερο μισθωτό υπάρχουν περιορισ
 ---
 
 > Δείτε επίσης:
-> - [Γενικός οδηγός συστάσεως εταιρείας στην Ταϊβάν — διαδικασίες, κόστος και νομικές μορφές](/ko/guides/taiwan-company-setup)
-> - [Δικηγόρος στην Ταϊβάν που μπορεί να εκφρασθεί στα κορεατικά](/ko/korean-lawyer-in-taiwan)
-> - [Σημεία αναφοράς για τη δικηγόρο επί νομικών προσώπων και συστάσεως εταιρείας στην Ταϊβάν](/ko/taiwan-company-setup-lawyer)
+> - [Ποιες υποθέσεις χειριζόμαστε](/el/services)
+> - [Η διεθνής ομάδα της Hovering](/el/lawyers)
+> - [Πώς να προσεγγίσετε το γραφείο](/el/contact)

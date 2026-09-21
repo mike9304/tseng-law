@@ -138,7 +138,7 @@ Der beschränkte Abkommenssatz gilt nicht automatisch allein deshalb, weil ein A
 - [Hinweis der taiwanischen Einwanderungsbehörde (內政部移民署) zum Daueraufenthalt](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Hinweis der Stadt Taipeh zur Vorabprüfung des Geschäftsorts](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-Den einschlägigen Arbeitsbereich können Sie unter [Dienstleistungen zu Investition und Gesellschaftsgründung in Taiwan](/ko/services/investment) einsehen, Werdegang und Sprachen der zuständigen Anwältin unter [Profil der Rechtsanwältin Wei Tseng](/ko/lawyers/wei-tseng). Für Fragen zu einem konkreten Sachverhalt nutzen Sie bitte [Kontakt](/de/contact).
+Den einschlägigen Arbeitsbereich können Sie unter [Welche Angelegenheiten wir bearbeiten](/de/services) einsehen, Werdegang und Sprachen der zuständigen Anwältin unter [Internationales Team von Hovering](/de/lawyers). Für Fragen zu einem konkreten Sachverhalt nutzen Sie bitte [Kontakt](/de/contact).
 
 Dieser Beitrag ist allgemeines Informationsmaterial zu Bildungszwecken über die Gesellschaftsgründung in Taiwan und die damit zusammenhängenden Regelungen; er ist keine Rechts- oder Steuerberatung in einem konkreten Fall und sichert kein bestimmtes Ergebnis zu. Erforderliche Verfahren und Ergebnisse können je nach Investitionsstruktur, Branche, Staatsangehörigkeit und Aufenthaltsstatus der antragstellenden Person sowie der neuesten Praxis der zuständigen Behörde abweichen; vor Durchführung von Investition, Vertrag oder Beschäftigung sind die neuesten amtlichen Quellen und die eigenen Umstände zu prüfen.
 

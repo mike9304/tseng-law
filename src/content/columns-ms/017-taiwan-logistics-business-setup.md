@@ -140,8 +140,8 @@ Kepada kerja tanpa lesen boleh terpakai denda pentadbiran dan perintah meninggal
 
 ## Orientasi berkaitan
 
-- [Perkhidmatan pelaburan dan penubuhan syarikat di Taiwan](/ko/services/investment)
-- [Profil peguam Wei Tseng](/ko/lawyers/wei-tseng)
+- [Hal yang kami kendalikan](/ms/services)
+- [Pasukan antarabangsa Hovering](/ms/lawyers)
 - [Hubungi](/ms/contact)
 
 ---

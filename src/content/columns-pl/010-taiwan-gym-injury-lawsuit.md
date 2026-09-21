@@ -114,6 +114,6 @@ Upadek na podłodze zakładu, szkoda zdrowotna przez żywność i uraz przy korz
 ---
 
 > Zobacz też:
-> - [Przewodnik po adwokacie procesowym na Tajwanie](/ko/taiwan-litigation-lawyer)
-> - [Adwokat na Tajwanie mówiący po koreańsku](/ko/korean-lawyer-in-taiwan)
-> - [Przewodnik wyszukiwania adwokata na Tajwanie](/ko/taiwan-lawyer)
+> - [Jak ustala się zakres pracy i koszty](/pl/pricing)
+> - [Międzynarodowy zespół Hovering](/pl/lawyers)
+> - [O Hovering International Law Firm](/pl/about)

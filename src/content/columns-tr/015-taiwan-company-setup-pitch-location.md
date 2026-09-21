@@ -78,6 +78,6 @@ Restoran işletmesinin imkânsız olduğu yerde açılış yapılırsa, daha son
 ---
 
 > Daha fazla:
-> - [Tayvan’da şirket kuruluşu genel rehberi — usul, maliyet ve tüzel kişi biçimleri](/ko/guides/taiwan-company-setup)
-> - [Korece konuşan Tayvan avukatı](/ko/korean-lawyer-in-taiwan)
-> - [Tayvan’da tüzel kişi ve şirket kuruluşu avukatı rehberi](/ko/taiwan-company-setup-lawyer)
+> - [Hangi işleri yürütürüz](/tr/services)
+> - [Hovering uluslararası ekibi](/tr/lawyers)
+> - [Büroya nasıl ulaşırsınız](/tr/contact)

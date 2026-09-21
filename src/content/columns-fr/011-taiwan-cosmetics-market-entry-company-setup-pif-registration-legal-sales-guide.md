@@ -111,7 +111,7 @@ La préparation de la vente à Taïwan, si on la vérifie dans l’ordre suivant
 5. Revoir l’étiquette, la page de vente, la publicité et les publications de collaboration selon le critère de l’ensemble de la présentation.
 6. Opérer la procédure pour répondre aux inspections et aux demandes de correction, aux réclamations, aux informations de sécurité et au suivi nécessaire.
 
-La structure de base de la société et de la succursale peut se voir dans [Fondements de la constitution de sociétés à Taïwan](/fr/columns/taiwan-company-establishment-basics), l’étendue de l’appui lié dans [Services d’investissement et de constitution de sociétés à Taïwan](/ko/services/investment), et les informations de l’avocate responsable dans [Profil de l’avocate Wei Tseng](/ko/lawyers/wei-tseng).
+La structure de base de la société et de la succursale peut se voir dans [Fondements de la constitution de sociétés à Taïwan](/fr/columns/taiwan-company-establishment-basics), l’étendue de l’appui lié dans [Affaires que nous traitons](/fr/services), et les informations de l’avocate responsable dans [Équipe internationale de Hovering](/fr/lawyers).
 
 ### Sources officielles
 

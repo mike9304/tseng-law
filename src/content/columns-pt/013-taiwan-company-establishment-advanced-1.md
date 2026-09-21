@@ -17,7 +17,7 @@ Recentemente, numerosas pessoas constituíram com êxito uma sociedade (公司) 
 
 e as perguntas formuladas com frequência no momento da constituição estão reunidas abaixo.
 
-Quem leu [**os fundamentos da constituição de sociedades**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) pode em seguida reportar-se também a esta parte aprofundada mais pormenorizada.
+Quem leu [**os fundamentos da constituição de sociedades**](/pt/columns/taiwan-company-establishment-basics) pode em seguida reportar-se também a esta parte aprofundada mais pormenorizada.
 
 As perguntas e respostas (Q&A) seguintes visam ajudar as pessoas que ponderam constituir uma sociedade em Taiwan. 😊
 
@@ -128,6 +128,6 @@ convém verificá-lo previamente.
 ---
 
 > Ver também:
-> - [Guia de conjunto da constituição de sociedades em Taiwan — procedimentos, custos e formas jurídicas](/ko/guides/taiwan-company-setup)
-> - [Advogada de Taiwan que se pode exprimir em coreano](/ko/korean-lawyer-in-taiwan)
-> - [Guia da advogada para a constituição de pessoas coletivas e de sociedades em Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Assuntos que tratamos](/pt/services)
+> - [Equipa internacional de Hovering](/pt/lawyers)
+> - [Como contactar o escritório](/pt/contact)

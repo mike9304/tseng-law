@@ -143,8 +143,8 @@ Pada halaman peraturan resmi, tanggal perubahan dan tanggal mulai berlakunya pas
 
 ## 11. Panduan Terkait
 
-- [Layanan Perkara Keluarga di Taiwan](/ko/services/family)
-- [Panduan Pengacara Litigasi Taiwan](/ko/taiwan-litigation-lawyer)
+- [Bidang perkara yang kami tangani](/id/services)
+- [Bagaimana lingkup pekerjaan dan biaya ditetapkan](/id/pricing)
 - [Hubungi Kami](/id/contact)
 
 ---

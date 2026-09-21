@@ -184,7 +184,7 @@ faq:
 
 ## Связанные материалы
 
-- [Услуги по инвестициям и созданию компании на Тайване](/ko/services/investment)
+- [Какие дела мы ведём](/ru/services)
 - [Основы создания компании на Тайване](/ru/columns/taiwan-company-establishment-basics)
 - [Контакты](/ru/contact)
 

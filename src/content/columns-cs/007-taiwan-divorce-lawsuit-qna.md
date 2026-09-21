@@ -188,8 +188,8 @@ Následující primární prameny (1. úroveň) jsou výchozím bodem k ověřen
 
 ## 13. Související pokyny
 
-- [Služby rodinného práva na Tchaj-wanu](/ko/services/family)
-- [Průvodce procesním advokátem na Tchaj-wanu](/ko/taiwan-litigation-lawyer)
+- [Které věci vedeme](/cs/services)
+- [Jak se stanoví rozsah práce a náklady](/cs/pricing)
 - [Kontakt](/cs/contact)
 
 ---

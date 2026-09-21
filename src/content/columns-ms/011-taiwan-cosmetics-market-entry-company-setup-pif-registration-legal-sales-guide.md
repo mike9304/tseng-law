@@ -111,7 +111,7 @@ Persediaan jualan di Taiwan, jika disahkan dalam urutan berikut, boleh mengurang
 5. Semak label, halaman jualan, pengiklanan dan terbitan kerjasama menurut kriteria keseluruhan pembentangan.
 6. Jalankan prosedur untuk menjawab pemeriksaan dan permintaan pembetulan, aduan, maklumat keselamatan dan susulan yang diperlukan.
 
-Struktur asas syarikat dan cawangan boleh dilihat dalam [Asas penubuhan syarikat di Taiwan](/ms/columns/taiwan-company-establishment-basics), skop sokongan berkaitan dalam [Perkhidmatan pelaburan dan penubuhan syarikat di Taiwan](/ko/services/investment), dan maklumat peguam yang bertanggungjawab dalam [Profil peguam Wei Tseng](/ko/lawyers/wei-tseng).
+Struktur asas syarikat dan cawangan boleh dilihat dalam [Asas penubuhan syarikat di Taiwan](/ms/columns/taiwan-company-establishment-basics), skop sokongan berkaitan dalam [Hal yang kami kendalikan](/ms/services), dan maklumat peguam yang bertanggungjawab dalam [Pasukan antarabangsa Hovering](/ms/lawyers).
 
 ### Sumber rasmi
 

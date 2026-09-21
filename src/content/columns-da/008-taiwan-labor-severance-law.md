@@ -227,6 +227,6 @@ Også De skal i Taiwan beskytte Deres rettigheder.
 ---
 
 > Se også:
-> - [Vejledning om procesadvokaten i Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Taiwansk advokat, der taler koreansk](/ko/korean-lawyer-in-taiwan)
-> - [Arbejdsområder — arbejdskraft](/ko/services/labor)
+> - [Hvordan arbejdsomfang og omkostninger fastlægges](/da/pricing)
+> - [Hoverings internationale team](/da/lawyers)
+> - [Hvilke sager vi behandler](/da/services)

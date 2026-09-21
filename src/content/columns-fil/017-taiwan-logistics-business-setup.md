@@ -140,8 +140,8 @@ Sa pagtatrabaho nang walang pahintulot ay maaaring ipataw ang administrative fin
 
 ## Kaugnay na Gabay
 
-- [Mga serbisyo sa pamumuhunan at pagtatatag ng kompanya sa Taiwan](/ko/services/investment)
-- [Profile ni Abogada Wei Tseng](/ko/lawyers/wei-tseng)
+- [Mga usaping hinahawakan ng tanggapan](/fil/services)
+- [Pandaigdigang koponan ng Hovering](/fil/lawyers)
 - [Konsultasyon at katanungan](/fil/contact)
 
 ---

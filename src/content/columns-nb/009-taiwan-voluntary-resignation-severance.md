@@ -96,6 +96,6 @@ I de fleste tilfeller beskyttes den siden som har forberedt seg på forhånd.
 ---
 
 > Se også:
-> - [Veiledning om prosessadvokaten i Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Taiwansk advokat som taler koreansk](/ko/korean-lawyer-in-taiwan)
-> - [Arbeidsområder — arbeidskraft](/ko/services/labor)
+> - [Hvordan arbeidsomfang og kostnader fastsettes](/nb/pricing)
+> - [Hoverings internasjonale team](/nb/lawyers)
+> - [Hvilke saker vi behandler](/nb/services)

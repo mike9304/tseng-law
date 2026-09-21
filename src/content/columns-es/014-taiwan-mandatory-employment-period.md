@@ -183,7 +183,7 @@ Al ordenar los datos en orden temporal, conviene indicar juntos la fecha de cele
 
 ## 11. Orientación relacionada
 
-- [Servicio de Derecho laboral de Taiwán](/ko/services/labor)
+- [Asuntos que atendemos](/es/services)
 - [Orientación sobre dimisión voluntaria y excepciones de indemnización por despido](/es/columns/taiwan-voluntary-resignation-severance)
 - [Consulta](/es/contact)
 

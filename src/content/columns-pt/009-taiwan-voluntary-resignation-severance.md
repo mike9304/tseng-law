@@ -96,6 +96,6 @@ Na maior parte dos casos, aquele que se preparou de antemão vê os seus direito
 ---
 
 > Ver também:
-> - [Referências sobre o advogado litigante em Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Advogada de Taiwan que pode exprimir-se em coreano](/ko/korean-lawyer-in-taiwan)
-> - [Áreas de atividade — trabalho](/ko/services/labor)
+> - [Como se fixam o âmbito do trabalho e os honorários](/pt/pricing)
+> - [Equipa internacional de Hovering](/pt/lawyers)
+> - [Assuntos que tratamos](/pt/services)

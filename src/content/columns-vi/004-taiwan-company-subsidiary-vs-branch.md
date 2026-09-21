@@ -184,7 +184,7 @@ Lựa chọn cuối cùng sẽ an toàn hơn nếu được xem xét trong đi�
 
 ## Hướng dẫn liên quan
 
-- [Dịch vụ đầu tư và thành lập công ty tại Đài Loan](/ko/services/investment)
+- [Các lĩnh vực mà văn phòng nhận xử lý](/vi/services)
 - [Cơ bản về thành lập công ty tại Đài Loan](/vi/columns/taiwan-company-establishment-basics)
 - [Liên hệ trao đổi vụ việc](/vi/contact)
 

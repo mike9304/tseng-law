@@ -96,6 +96,6 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 ---
 
 > और देखें:
-> - [ताइवान मुकदमा अधिवक्ता संबंधी मार्गदर्शन](/ko/taiwan-litigation-lawyer)
-> - [कोरियाई बोल सकने वाले ताइवान अधिवक्ता](/ko/korean-lawyer-in-taiwan)
-> - [कार्य क्षेत्र — श्रम](/ko/services/labor)
+> - [कार्य-दायरा और लागत कैसे तय होते हैं](/hi/pricing)
+> - [Hovering की अंतरराष्ट्रीय टीम](/hi/lawyers)
+> - [हम किन मामलों का कार्य करते हैं](/hi/services)

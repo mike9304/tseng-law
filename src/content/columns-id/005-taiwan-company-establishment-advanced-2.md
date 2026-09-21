@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Gambar utama](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Bagi Anda yang telah membaca [Pendirian Perusahaan di Taiwan – Dasar](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) dan [Pendirian Perusahaan di Taiwan – Bagian Lanjutan 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1), tulisan Pendirian Perusahaan di Taiwan – Bagian Lanjutan 2 ini pun dapat Anda simak.
+Bagi Anda yang telah membaca [Pendirian Perusahaan di Taiwan – Dasar](/id/columns/taiwan-company-establishment-basics) dan [Pendirian Perusahaan di Taiwan – Bagian Lanjutan 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1), tulisan Pendirian Perusahaan di Taiwan – Bagian Lanjutan 2 ini pun dapat Anda simak.
 
 ​
 
@@ -82,6 +82,6 @@ Apabila Anda memiliki pertanyaan tambahan, silakan menghubungi kami kapan saja.
 ---
 
 > Baca juga:
-> - [Panduan Menyeluruh Pendirian Perusahaan di Taiwan — Prosedur, Biaya, dan Bentuk Badan Hukum](/ko/guides/taiwan-company-setup)
-> - [Pengacara Taiwan yang Menguasai Bahasa Korea](/ko/korean-lawyer-in-taiwan)
-> - [Panduan Pengacara Pendirian Badan Hukum dan Perusahaan di Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Bidang perkara yang kami tangani](/id/services)
+> - [Tim Internasional Hovering](/id/lawyers)
+> - [Cara menghubungi kantor kami](/id/contact)

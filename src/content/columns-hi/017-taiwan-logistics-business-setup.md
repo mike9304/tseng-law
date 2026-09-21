@@ -140,8 +140,8 @@ faq:
 
 ## संबंधित मार्गदर्शन
 
-- [ताइवान निवेश और कंपनी स्थापना सेवाएँ](/ko/services/investment)
-- [अधिवक्ता Wei Tseng का प्रोफ़ाइल](/ko/lawyers/wei-tseng)
+- [हम किन मामलों का कार्य करते हैं](/hi/services)
+- [Hovering की अंतरराष्ट्रीय टीम](/hi/lawyers)
 - [संपर्क](/hi/contact)
 
 ---

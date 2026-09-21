@@ -114,6 +114,6 @@ featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 
 > Див. також:
-> - [Гід процесуального адвоката на Тайвані](/ko/taiwan-litigation-lawyer)
-> - [Адвокатка Тайваню, яка може спілкуватися корейською](/ko/korean-lawyer-in-taiwan)
-> - [Гід для пошуку адвоката на Тайвані](/ko/taiwan-lawyer)
+> - [Як визначають обсяг роботи та витрати](/uk/pricing)
+> - [Міжнародна команда Hovering](/uk/lawyers)
+> - [Про Hovering International Law Firm](/uk/about)

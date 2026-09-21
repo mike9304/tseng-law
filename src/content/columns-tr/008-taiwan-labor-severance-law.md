@@ -227,6 +227,6 @@ Tayvan’da haklarınızı da korumalısınız.
 ---
 
 > Ayrıca bakınız:
-> - [Tayvan dava avukatı rehberi](/ko/taiwan-litigation-lawyer)
-> - [Korece konuşan Tayvan avukatı](/ko/korean-lawyer-in-taiwan)
-> - [Faaliyet alanları — iş](/ko/services/labor)
+> - [Çalışma kapsamı ve ücret nasıl belirlenir](/tr/pricing)
+> - [Hovering uluslararası ekibi](/tr/lawyers)
+> - [Hangi işleri yürütürüz](/tr/services)

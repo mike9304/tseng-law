@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Image à la une](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Ceux qui ont lu [Création de société à Taïwan – fondamentaux](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) et [Création de société à Taïwan – partie approfondie 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) peuvent également consulter Création de société à Taïwan – partie approfondie 2 (公司設立).
+Ceux qui ont lu [Création de société à Taïwan – fondamentaux](/fr/columns/taiwan-company-establishment-basics) et [Création de société à Taïwan – partie approfondie 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) peuvent également consulter Création de société à Taïwan – partie approfondie 2 (公司設立).
 
 ​
 
@@ -82,6 +82,6 @@ Si vous avez d’autres questions, vous pouvez nous contacter à tout moment.
 ---
 
 > Voir aussi :
-> - [Guide général de création de société à Taïwan — procédures, coûts et formes juridiques](/ko/guides/taiwan-company-setup)
-> - [Avocate à Taïwan pouvant s’exprimer en coréen](/ko/korean-lawyer-in-taiwan)
-> - [Repères sur l’avocate pour les personnes morales et la création de société à Taïwan](/ko/taiwan-company-setup-lawyer)
+> - [Affaires que nous traitons](/fr/services)
+> - [Équipe internationale de Hovering](/fr/lawyers)
+> - [Comment joindre le cabinet](/fr/contact)

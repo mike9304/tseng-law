@@ -368,6 +368,6 @@ Wei Tseng (曾雋崴), ताइवान अधिवक्ता।
 ---
 
 > यह भी देखें:
-> - [ताइवान मुकदमेबाजी अधिवक्ता मार्गदर्शिका](/ko/taiwan-litigation-lawyer)
-> - [कोरियाई बोल सकने वाली ताइवान अधिवक्ता](/ko/korean-lawyer-in-taiwan)
-> - [ताइवान में अधिवक्ता खोजने की मार्गदर्शिका](/ko/taiwan-lawyer)
+> - [कार्य-दायरा और लागत कैसे तय होते हैं](/hi/pricing)
+> - [Hovering की अंतरराष्ट्रीय टीम](/hi/lawyers)
+> - [Hovering International Law Firm के बारे में](/hi/about)

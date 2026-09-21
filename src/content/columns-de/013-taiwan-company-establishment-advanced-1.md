@@ -17,7 +17,7 @@ In jüngerer Zeit haben viele Personen in Taiwan eine Gesellschaft (公司) gegr
 
 und die Fragen, die bei der Gründung häufig gestellt werden, sind im Folgenden zusammengestellt.
 
-Wer den Beitrag [**Grundlagen der Gesellschaftsgründung**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) gelesen hat, kann anschließend auch diese ausführlichere Vertiefung heranziehen.
+Wer den Beitrag [**Grundlagen der Gesellschaftsgründung**](/de/columns/taiwan-company-establishment-basics) gelesen hat, kann anschließend auch diese ausführlichere Vertiefung heranziehen.
 
 Die folgenden Fragen und Antworten (Q&A) sollen Personen helfen, die eine Gesellschaftsgründung in Taiwan erwägen. 😊
 
@@ -128,6 +128,6 @@ sollten Sie dies vorab prüfen.
 ---
 
 > Siehe auch:
-> - [Gesamtleitfaden zur Gesellschaftsgründung in Taiwan — Verfahren, Kosten und Gesellschaftsformen](/ko/guides/taiwan-company-setup)
-> - [Taiwanische Anwältin mit Koreanischkenntnissen](/ko/korean-lawyer-in-taiwan)
-> - [Hinweis zur Anwaltschaft für juristische Personen und Gesellschaftsgründung in Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Welche Angelegenheiten wir bearbeiten](/de/services)
+> - [Internationales Team von Hovering](/de/lawyers)
+> - [Wie Sie die Kanzlei erreichen](/de/contact)

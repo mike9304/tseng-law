@@ -111,7 +111,7 @@ La preparazione della vendita a Taiwan, se si verifica nell'ordine seguente, pu�
 5. Rivedere l'etichetta, la pagina di vendita, la pubblicità e le pubblicazioni di collaborazione secondo il criterio dell'insieme della presentazione.
 6. Operare la procedura per rispondere alle ispezioni e alle domande di correzione, ai reclami, alle informazioni di sicurezza e al seguito necessario.
 
-La struttura di base della società e della succursale (分公司) può vedersi in [Fondamenti della costituzione di società a Taiwan](/it/columns/taiwan-company-establishment-basics), l'estensione del sostegno legato in [Servizi di investimento e di costituzione di società a Taiwan](/ko/services/investment), e le informazioni dell'avvocata responsabile in [Profilo dell'avvocata Wei Tseng (曾雋崴)](/ko/lawyers/wei-tseng).
+La struttura di base della società e della succursale (分公司) può vedersi in [Fondamenti della costituzione di società a Taiwan](/it/columns/taiwan-company-establishment-basics), l'estensione del sostegno legato in [Quali questioni trattiamo](/it/services), e le informazioni dell'avvocata responsabile in [Team internazionale di Hovering](/it/lawyers).
 
 ### Fonti ufficiali
 

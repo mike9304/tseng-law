@@ -58,8 +58,8 @@ Como material complementario puede consultarse [la ilustración de las normas y 
 ---
 
 > Véase también:
-> - [Guía del abogado litigante en Taiwán](/ko/taiwan-litigation-lawyer)
-> - [Abogada de Taiwán que habla coreano](/ko/korean-lawyer-in-taiwan)
+> - [Cómo se fijan el alcance del trabajo y los honorarios](/es/pricing)
+> - [Equipo internacional de Hovering](/es/lawyers)
 > - [Procedimiento de tramitación de accidentes de tráfico en Taiwán](/es/columns/taiwan-traffic-accident-procedure)
 
 Este artículo es información jurídica general sobre las normas de adelantamiento en Taiwán y la valoración de la responsabilidad en accidentes; no constituye asesoramiento para un asunto concreto ni una promesa sobre el desenlace. La responsabilidad real puede variar según el lugar del accidente, el movimiento de los vehículos, la velocidad, las señales, las pruebas, el peritaje y la normativa más reciente, de modo que el asunto concreto debe examinarse de forma individual a partir de los materiales pertinentes.

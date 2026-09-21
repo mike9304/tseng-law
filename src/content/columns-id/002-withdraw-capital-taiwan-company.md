@@ -139,7 +139,7 @@ Semakin lama keadaan penghentian sementara berlangsung, prosedur penutupan di ke
 
 ## Informasi Terkait
 
-1. [Layanan investasi dan pendirian perusahaan di Taiwan](/ko/services/investment)
+1. [Bidang perkara yang kami tangani](/id/services)
 2. [Dasar pendirian perusahaan di Taiwan](/id/columns/taiwan-company-establishment-basics)
 3. [Hubungi kami](/id/contact)
 

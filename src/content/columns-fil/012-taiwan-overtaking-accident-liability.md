@@ -58,8 +58,8 @@ Bilang karagdagang babasahin ay maaaring sumangguni sa [ilustradong gabay sa mga
 ---
 
 > Iba pang babasahin:
-> - [Gabay sa abogado para sa paglilitis sa Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Abogadang Taiwanese na nakakapagsalita ng Koreano](/ko/korean-lawyer-in-taiwan)
+> - [Paano itinatakda ang saklaw ng trabaho at ang bayarin](/fil/pricing)
+> - [Pandaigdigang koponan ng Hovering](/fil/lawyers)
 > - [Pamamaraan sa paghawak ng aksidente sa trapiko sa Taiwan](/fil/columns/taiwan-traffic-accident-procedure)
 
 Ang artikulong ito ay pangkalahatang impormasyong legal hinggil sa mga alituntunin sa paglampas sa Taiwan pati sa paghusga ng pananagutan sa aksidente; hindi ito payong legal para sa isang tiyak na kaso ni pangako ng anumang resulta. Maaaring mag-iba ang aktuwal na pananagutan depende sa lugar ng aksidente, sa galaw ng mga sasakyan, sa bilis, sa mga senyas, sa ebidensya, sa expert appraisal, gayundin sa kasalukuyang mga regulasyon, kaya kailangang isa-isang suriin ang tiyak na kaso batay sa mga kaugnay na materyal.

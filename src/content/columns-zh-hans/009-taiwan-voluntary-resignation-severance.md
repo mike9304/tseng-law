@@ -96,6 +96,6 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 ---
 
 > 另见：
-> - [台湾诉讼律师要点](/ko/taiwan-litigation-lawyer)
-> - [能以韩语沟通的台湾律师](/ko/korean-lawyer-in-taiwan)
-> - [业务领域 — 劳动](/ko/services/labor)
+> - [工作范围与费用如何确定](/zh-hans/pricing)
+> - [Hovering 国际团队](/zh-hans/lawyers)
+> - [我们处理哪些事项](/zh-hans/services)

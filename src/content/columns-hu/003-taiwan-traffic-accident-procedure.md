@@ -368,6 +368,6 @@ Wei Tseng (曾雋崴), ügyvéd Tajvanon.
 ---
 
 > Lásd még:
-> - [Tajvani peres ügyvéd útmutatója](/ko/taiwan-litigation-lawyer)
-> - [Koreaiul beszélő tajvani ügyvéd](/ko/korean-lawyer-in-taiwan)
-> - [Útmutató tajvani ügyvéd kereséséhez](/ko/taiwan-lawyer)
+> - [Hogyan rögzítjük a munka terjedelmét és a költségeket](/hu/pricing)
+> - [A Hovering nemzetközi csapata](/hu/lawyers)
+> - [A Hovering International Law Firmről](/hu/about)

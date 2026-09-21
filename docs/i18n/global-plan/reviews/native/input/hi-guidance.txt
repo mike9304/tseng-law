@@ -1,0 +1,1096 @@
+# hi guidance pack strings (path → text). Generated 2026-09-21
+
+guidanceContent.hi.languageName
+    हिन्दी
+
+guidanceContent.hi.nav.home
+    होम
+
+guidanceContent.hi.nav.services
+    सेवाएँ
+
+guidanceContent.hi.nav.about
+    कार्यालय
+
+guidanceContent.hi.nav.lawyers
+    अधिवक्ता
+
+guidanceContent.hi.nav.pricing
+    लागत
+
+guidanceContent.hi.nav.contact
+    संपर्क
+
+guidanceContent.hi.nav.faq
+    प्रश्न
+
+guidanceContent.hi.nav.privacy
+    गोपनीयता
+
+guidanceContent.hi.nav.disclaimer
+    अस्वीकरण
+
+guidanceContent.hi.nav.columns
+    लेख
+
+guidanceContent.hi.contactCta
+    परामर्श अनुरोध भेजें
+
+guidanceContent.hi.footerNotice
+    यह हिन्दी पृष्ठ ताइवान के विधि के अनुसार कार्यालय के कार्य की केवल सामान्य जानकारी देता है। यह किसी ठोस मामले की कानूनी राय नहीं है, और संदेश भेजना अपने आप अधिवक्ता और मुवक्किल के बीच संबंध नहीं बनाता।
+
+guidanceContent.hi.skipLink
+    नेविगेशन छोड़कर मुख्य सामग्री पर जाएँ
+
+guidanceContent.hi.menuLabel
+    पृष्ठ सूची
+
+guidanceContent.hi.languageLabel
+    प्रदर्शन भाषा
+
+guidanceContent.hi.mega.services.description
+    कार्यालय ताइवान के विधि के अनुसार मुख्य कार्य-समूहों का कार्य करता है।
+
+guidanceContent.hi.mega.services.viewAllLabel
+    सभी देखें
+
+guidanceContent.hi.mega.columns.description
+    ताइवान के विधि के सामान्य प्रश्नों पर लेख।
+
+guidanceContent.hi.mega.columns.viewAllLabel
+    सभी देखें
+
+guidanceContent.hi.mega.lawyers.description
+    कार्यरत अधिवक्ताओं और संपर्क मार्गों का परिचय।
+
+guidanceContent.hi.mega.lawyers.viewAllLabel
+    सभी देखें
+
+guidanceContent.hi.mega.pricing.description
+    यह पृष्ठ कार्य के दायरे और लागत तय होने का तरीका बताता है।
+
+guidanceContent.hi.mega.pricing.viewAllLabel
+    सभी देखें
+
+guidanceContent.hi.mega.faq.description
+    ताइवान में कार्यालय के कार्य से जुड़े सामान्य प्रश्न।
+
+guidanceContent.hi.mega.faq.viewAllLabel
+    सभी देखें
+
+guidanceContent.hi.notFoundTitle
+    पृष्ठ नहीं मिला
+
+guidanceContent.hi.notFoundText
+    आप जिस पृष्ठ की खोज कर रहे हैं वह मौजूद नहीं है या स्थानांतरित हो गया है। उपलब्ध जानकारी देखने के लिए आप हिन्दी मुखपृष्ठ पर लौट सकते हैं।
+
+guidanceContent.hi.backHomeLabel
+    मुखपृष्ठ पर जाएँ
+
+guidanceContent.hi.readSourceLabel
+    मूल भाषा में लेख सूची खोलें
+
+guidanceContent.hi.home.heroScrollLabel
+    नीचे स्क्रॉल करें
+
+guidanceContent.hi.home.heroColumnsCtaLabel
+    लेख देखें
+
+guidanceContent.hi.home.servicesDetailLabel
+    विवरण देखें
+
+guidanceContent.hi.home.servicesAssistanceBefore
+    यदि यह स्पष्ट नहीं है कि आपका मामला किस समूह में आता है, तो पृष्ठ 
+
+guidanceContent.hi.home.servicesAssistanceLinkLabel
+    संपर्क
+
+guidanceContent.hi.home.servicesAssistanceAfter
+     बताता है कि आप ऐसा सार कैसे लिखें जिसे कोई अधिवक्ता जाँचे।
+
+guidanceContent.hi.home.columnsViewAllLabel
+    सभी लेख देखें
+
+guidanceContent.hi.home.columnsReadMoreLabel
+    आगे पढ़ें
+
+guidanceContent.hi.home.columnsReviewLabel
+    अधिवक्ता Wei Tseng द्वारा जाँचा गया
+
+guidanceContent.hi.home.columnsOriginalLanguageBadge
+    मूल भाषा
+
+guidanceContent.hi.home.columnsOriginalLanguageNote
+    निम्नलिखित लेख अभी हिन्दी में उपलब्ध नहीं हैं। सूची मूल भाषा में रहती है और संबंधित भाषा पृष्ठ खोलती है; सामग्री का स्वचालित अनुवाद नहीं होता।
+
+guidanceContent.hi.home.imageBandAlt
+    दिन के प्रकाश में पारंपरिक ताइवानी सानहेयुआन (三合院) और एक आधुनिक मंडप
+
+guidanceContent.hi.home.videoPauseLabel
+    वीडियो रोकें
+
+guidanceContent.hi.home.videoPlayLabel
+    वीडियो चलाएँ
+
+guidanceContent.hi.home.videoReplayLabel
+    वीडियो फिर चलाएँ
+
+guidanceContent.hi.pages.home.eyebrow
+    जानकारी
+
+guidanceContent.hi.pages.home.title
+    ताइवान में कानूनी सेवाएँ — हिन्दी में जानकारी
+
+guidanceContent.hi.pages.home.description
+    Hovering International Law Firm के ताइवान में कार्य-क्षेत्र, परामर्श भाषाओं और प्रथम संपर्क पर हिन्दी में सामान्य स्पष्टीकरण।
+
+guidanceContent.hi.pages.home.intro
+    Hovering International Law Firm विदेश से आने वाले मुवक्किलों, जिनमें ताइवान से संबंध रखने वाले भी शामिल हैं, का ताइवान के विधि के अनुसार साथ देती है: निवेश और कंपनी स्थापना, दीवानी विवाद, विवाह, परिवार और उत्तराधिकार, श्रम विधि, आपराधिक मामले और बौद्धिक संपदा। यह हिन्दी भाग आपको यह पहचानने में सहायता करता है कि कौन-सा कार्य हमारे दायरे में आता है, क्या तैयार करना है और हम तक कैसे पहुँचें। यह सामान्य जानकारी है, आपके अपने मामले की कानूनी राय नहीं।
+
+guidanceContent.hi.pages.home.sections[0].heading
+    हम क्या करते हैं
+
+guidanceContent.hi.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm ताइवान में स्थापित एक कानून कार्यालय है। यह ताइवान के विधि के अनुसार कार्य करता है और ताइपेई (臺北), काओश्युंग (高雄), ताइचुंग (臺中) तथा पिंगतुंग (屏東) में कार्यालय रखता है। हम उद्यमों को सलाह देते हैं, न्यायालय में कार्यवाही चलाते हैं और विदेश से आए मुवक्किलों को ताइवान में आवश्यक चरणों में साथ देते हैं।
+
+guidanceContent.hi.pages.home.sections[0].paragraphs[1]
+    यहाँ की सारी सामग्री सामान्य है। किसी मामले का परिणाम तथ्यों, लागू नियमों और समय पर निर्भर करता है। यह जानकारी आपके कागजात पर अधिवक्ता से बातचीत का स्थान नहीं लेती।
+
+guidanceContent.hi.pages.home.sections[1].heading
+    पृष्ठ की भाषा और परामर्श भाषा एक नहीं हैं
+
+guidanceContent.hi.pages.home.sections[1].paragraphs[0]
+    यह पृष्ठ हिन्दी में लिखा गया है, किंतु अधिवक्ता से परामर्श केवल चार परामर्श भाषाओं — अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई — में होता है। हिन्दी में जानकारी पढ़ने का अर्थ यह नहीं कि अधिवक्ता से बातचीत हिन्दी में होगी।
+
+guidanceContent.hi.pages.home.sections[1].paragraphs[1]
+    हम इस पृष्ठ के माध्यम से दुभाषिए, उत्तर की समयसीमा या नियुक्ति का वादा नहीं करते। यदि आप चार भाषाओं में से किसी का उपयोग नहीं कर सकते, तो पृष्ठ «संपर्क» बताता है कि हम संचार मार्ग कैसे जाँचते हैं।
+
+guidanceContent.hi.pages.home.sections[2].heading
+    कार्य-समूह
+
+guidanceContent.hi.pages.home.sections[2].paragraphs[0]
+    कार्य-क्षेत्र में निम्नलिखित छह समूह हैं। पृष्ठ «सेवाएँ» प्रत्येक समूह का अधिक सटीक वर्णन करता है और बताता है कि क्या वादा नहीं किया जाता।
+
+guidanceContent.hi.pages.home.sections[2].items[0]
+    ताइवान में निवेश और कंपनी स्थापना
+
+guidanceContent.hi.pages.home.sections[2].items[1]
+    दीवानी विवाद और क्षतिपूर्ति
+
+guidanceContent.hi.pages.home.sections[2].items[2]
+    विवाह, परिवार और उत्तराधिकार
+
+guidanceContent.hi.pages.home.sections[2].items[3]
+    श्रम संबंधी विवाद
+
+guidanceContent.hi.pages.home.sections[2].items[4]
+    आपराधिक मामले
+
+guidanceContent.hi.pages.home.sections[2].items[5]
+    बौद्धिक संपदा: चिह्न, पेटेंट और कॉपीराइट
+
+guidanceContent.hi.pages.home.sections[3].heading
+    आपको कहाँ से आरंभ करना चाहिए
+
+guidanceContent.hi.pages.home.sections[3].paragraphs[0]
+    यह देखने के लिए कि आपका मामला हमारे दायरे में आता है या नहीं, पृष्ठ «सेवाएँ» पढ़ें; फिर «लागत» और «संपर्क» पढ़ें ताकि पता चले कि दायरा कैसे तय होता है और कार्य आरंभ होने से पहले लागत कैसे पुष्ट होती है।
+
+guidanceContent.hi.pages.home.sections[3].paragraphs[1]
+    संदेश भेजते समय आप सार अपनी भाषा में लिख सकते हैं। मूल पाठ उसी रूप में रखा जाता है जैसा आपने लिखा और स्वचालित रूप से अनुवाद नहीं किया जाता। भेजा गया संदेश जाँच की प्रतीक्षा करने वाला अनुरोध है: यह अभी परामर्श नहीं है और पुष्ट नियुक्ति भी नहीं है।
+
+guidanceContent.hi.pages.services.eyebrow
+    सेवाएँ
+
+guidanceContent.hi.pages.services.title
+    हम किन मामलों का कार्य करते हैं
+
+guidanceContent.hi.pages.services.description
+    ताइवान में कार्यालय के छह कार्य-समूह और वे सीमाएँ जिन्हें पहले जानना उपयोगी है।
+
+guidanceContent.hi.pages.services.intro
+    नीचे वे समूह हैं जिनका हम वास्तव में कार्य करते हैं, और वे प्रश्न जो आरंभिक चरण में प्रायः पूछे जाते हैं। यह विवरण आपको यह आँकने में सहायता करता है कि आपका मामला हमारे दायरे में आता है या नहीं; यह सामान्य है और किसी एक फ़ाइल का कानूनी विश्लेषण नहीं है।
+
+guidanceContent.hi.pages.services.sections[0].heading
+    ताइवान में निवेश और कंपनी स्थापना
+
+guidanceContent.hi.pages.services.sections[0].paragraphs[0]
+    हम विदेशी निवेशकों और उद्यमों को ताइवान में कंपनी स्थापित करने या चलाने में साथ देते हैं: कानूनी रूप का चयन, कागजात तैयार करना और जमा करना, पूँजी लगाना, बैंक संबंधी प्रश्न, स्थल की जाँच तथा क्षेत्र की अपेक्षाएँ। हम ताइवान में स्थापना और संचालन से उत्पन्न लेखांकन और कर में भी सहायता करते हैं।
+
+guidanceContent.hi.pages.services.sections[0].paragraphs[1]
+    प्रक्रिया और समय रूप, निवेशक, क्षेत्र, बैंक और उपलब्ध कागजात के अनुसार भिन्न होते हैं। कंपनी स्थापना अपने आप निवास अनुमति (居留) या कार्य अनुमति (工作許可) नहीं देती: ये अलग प्रक्रियाएँ हैं, जिन्हें व्यक्ति की स्थिति के अनुसार देखा जाता है।
+
+guidanceContent.hi.pages.services.sections[1].heading
+    दीवानी विवाद और क्षतिपूर्ति
+
+guidanceContent.hi.pages.services.sections[1].paragraphs[0]
+    इस समूह में संविदा विवाद, अवैध कृत्य से क्षतिपूर्ति और उपभोक्ता विवाद आते हैं। कार्य सामान्यतः कालक्रम, विद्यमान कागजात और प्रमाण की जाँच से आरंभ होता है और उसके बाद ही अगले चरण आते हैं।
+
+guidanceContent.hi.pages.services.sections[1].paragraphs[1]
+    समयसीमाएँ, जिनमें परिसीमा भी शामिल है, और प्रमाण की पूर्णता मार्ग तय करती हैं। अतः ज्ञात तिथियाँ यथासंभव शीघ्र बताएँ। संविदाएँ, संदेश, भुगतान रसीदें या स्थल की स्थिति के चित्र सुरक्षित रखें और प्रथम संदेश में उनका उल्लेख करें।
+
+guidanceContent.hi.pages.services.sections[2].heading
+    विवाह, परिवार और उत्तराधिकार
+
+guidanceContent.hi.pages.services.sections[2].paragraphs[0]
+    हम तलाक (離婚), संपत्ति विभाजन, अवयस्क संतानों के प्रति अधिकारों और कर्तव्यों का प्रयोग तथा वहन (未成年子女權利義務之行使或負擔), भेंट-मिलन (會面交往) और उत्तराधिकार (繼承) का कार्य करते हैं, तब भी जब पक्ष या संपत्ति भिन्न राज्यों में हों। सीमा-पार पारिवारिक मामलों में प्रायः परिवार रजिस्टर (戶籍), दस्तावेज़ों के रूप और ताइवान में उनकी प्रमाणिकता की अतिरिक्त जाँच चाहिए।
+
+guidanceContent.hi.pages.services.sections[2].paragraphs[1]
+    क्योंकि पारिवारिक मामलों में प्रायः समयसीमाएँ और समानांतर प्रक्रियाएँ होती हैं, प्रथम सार में पक्षों का संबंध, वर्तमान निवास और पहले से चल रही प्रक्रियाएँ बतानी चाहिए।
+
+guidanceContent.hi.pages.services.sections[3].heading
+    श्रम संबंधी विवाद
+
+guidanceContent.hi.pages.services.sections[3].paragraphs[0]
+    इस समूह में सेवा समाप्ति, ताइवान के विधि के अनुसार विच्छेद राशि (資遣費; अन्य राज्यों की संस्थाओं के समान नहीं मानी जाती), वेतन और श्रम संविदा (勞動契約) से विवाद आते हैं, कर्मचारी और नियोक्ता दोनों पक्षों पर। जाँच में हम समाप्ति के कारण को सूचना, भुगतान और समयसीमा के प्रश्नों से अलग रखते हैं।
+
+guidanceContent.hi.pages.services.sections[3].paragraphs[1]
+    श्रम संविदा, कार्य नियम (工作規則), वेतन पर्ची और पक्षों का पत्र-व्यवहार प्रायः निर्णायक कागजात होते हैं। यदि वे अभी आपके पास हैं, तो सार में बताएँ।
+
+guidanceContent.hi.pages.services.sections[4].heading
+    आपराधिक मामले
+
+guidanceContent.hi.pages.services.sections[4].paragraphs[0]
+    हम अन्वेषण और न्यायालय में साथ देते हैं, अभियुक्त या आरोपी के लिए तथा पीड़ित के लिए भी, और उद्यम गतिविधि के आपराधिक जोखिमों का आकलन करते हैं।
+
+guidanceContent.hi.pages.services.sections[4].paragraphs[1]
+    आपराधिक मामलों में प्रायः छोटी समयसीमाएँ और निर्धारित चरण होते हैं। यदि आपको अभियोजन या न्यायालय का पत्र पहले ही मिल चुका है, तो पत्र की तिथि शीघ्र बताएँ ताकि सामग्री सही क्रम में जाँची जाए।
+
+guidanceContent.hi.pages.services.sections[5].heading
+    बौद्धिक संपदा
+
+guidanceContent.hi.pages.services.sections[5].paragraphs[0]
+    हम चिह्न (商標) और पेटेंट (專利) के पंजीकरण, कॉपीराइट तथा ताइवान में इन अधिकारों के विवादों में सहायता करते हैं।
+
+guidanceContent.hi.pages.services.sections[5].paragraphs[1]
+    इस समूह में चरणों का क्रम निर्णायक होता है: संरक्षण का दायरा, आवेदन का समय और वास्तविक उपयोग चयन को प्रभावित करते हैं। आवेदन जमा करना अपने आप यह नहीं दर्शाता कि वह स्वीकृत होगा।
+
+guidanceContent.hi.pages.services.sections[6].heading
+    दायरा और उसकी पुष्टि
+
+guidanceContent.hi.pages.services.sections[6].paragraphs[0]
+    कार्यालय ताइवान के विधि के अनुसार कार्य करता है और उपर्युक्त समूहों के मामलों का कार्य करता है। प्रत्येक मामले का दायरा अलग से पुष्ट होता है, जब कोई अधिवक्ता आपके संदेश की जाँच कर लेता है।
+
+guidanceContent.hi.pages.services.sections[6].paragraphs[1]
+    निवास स्थिति, कार्य अनुमति और तुलनीय प्रश्न कागजात और व्यक्ति की स्थिति से आँके जाते हैं, नागरिकता से नहीं। यदि आपके मामले का कोई भाग ऐसे प्रश्नों से जुड़ता है, तो संपर्क करते समय बताएँ। यह पृष्ठ न परिणाम का वादा करता है और न उत्तर की समयसीमा का।
+
+guidanceContent.hi.pages.about.eyebrow
+    कार्यालय
+
+guidanceContent.hi.pages.about.title
+    Hovering International Law Firm के बारे में
+
+guidanceContent.hi.pages.about.description
+    इस ताइवानी कानून कार्यालय, उसके कार्यालयों और विदेशी पक्षों के साथ कार्य की मूल जानकारी।
+
+guidanceContent.hi.pages.about.intro
+    Hovering International Law Firm ताइवान का एक कानून कार्यालय है। अधिवक्ता उद्यम सलाह से न्यायालय की कार्यवाही तक कार्य करते हैं। यह भाग कार्यालय की स्थापना, स्थानों और विदेशी पक्षों के साथ कार्य का वर्णन करता है।
+
+guidanceContent.hi.pages.about.sections[0].heading
+    स्थापना और संरचना
+
+guidanceContent.hi.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) की स्थापना 2016 में उन अधिवक्ताओं ने की जो National Taiwan University (國立臺灣大學) में पढ़े। चीनी नाम 昊鼎 अक्षर 昊 («विस्तृत आकाश») को 鼎 («दृढ़ आधार») से जोड़ता है और स्थापना से कार्यालय की दिशा बताता है।
+
+guidanceContent.hi.pages.about.sections[0].paragraphs[1]
+    हमारे कार्यालय ताइपेई (臺北), काओश्युंग (高雄), ताइचुंग (臺中) और पिंगतुंग (屏東) में हैं। काओश्युंग कार्यालय उद्यम संचालन पर केंद्रित है और दीवानी, आपराधिक तथा प्रशासनिक विवादों का कार्य करता है। ताइचुंग कार्यालय निर्माण, बौद्धिक संपदा तथा कोरिया और जापान से जुड़े मामलों का कार्य करता है। पिंगतुंग कार्यालय 2017 में स्थानीय आवश्यकता के लिए खोला गया।
+
+guidanceContent.hi.pages.about.sections[0].paragraphs[2]
+    अधिवक्ता कार्य के अतिरिक्त 2020 से Hovering Accounting Office भी है, जो उद्यमियों और संपन्न निजी व्यक्तियों के लिए लेखांकन और कर योजना देता है।
+
+guidanceContent.hi.pages.about.sections[1].heading
+    विदेशी पक्षों के साथ कार्य
+
+guidanceContent.hi.pages.about.sections[1].paragraphs[0]
+    सीमा-पार कार्य में कंपनी स्थापना, वीज़ा, चिह्न और पेटेंट आवेदन, कानूनी जोखिम जाँच और उद्यमों की कर सलाह शामिल है। ताइचुंग कार्यालय विशेष रूप से निर्माण, बौद्धिक संपदा तथा कोरिया और जापान से जुड़े मामलों का कार्य करता है। अधिवक्ता Wei Tseng (曾雋崴) कोरिया, जापान और अन्य अंतरराष्ट्रीय मुवक्किलों का उपर्युक्त समूहों में साथ देती हैं।
+
+guidanceContent.hi.pages.about.sections[1].paragraphs[1]
+    क्या हम कोई मामला ले सकते हैं, यह सामग्री और संचार की भाषा पर निर्भर करता है। यदि आपका मामला उपर्युक्त समूहों में आता है और चार परामर्श भाषाओं में से किसी में चर्चा हो सकती है, तो आप जाँच के लिए सार भेज सकते हैं।
+
+guidanceContent.hi.pages.about.sections[2].heading
+    जब आप हमसे संपर्क करते हैं
+
+guidanceContent.hi.pages.about.sections[2].paragraphs[0]
+    आपका सार आने के बाद कोई अधिवक्ता सामग्री जाँचता है और फिर संभावित कार्य-दायरे, अभी आवश्यक कागजात और अगले चरणों पर बात करता है। कर या लेखांकन प्रश्नों में कार्यालय लेखांकन विभाग के साथ एक ही प्रवाह में कार्य कर सकता है।
+
+guidanceContent.hi.pages.about.sections[2].paragraphs[1]
+    प्रत्येक मामले का परिणाम तथ्यों और उपलब्ध कागजात पर निर्भर करता है; हम परिणाम का वादा नहीं करते। यदि आपको अपनी स्थिति के लिए बाध्यकारी उत्तर चाहिए, तो कागजात चार परामर्श भाषाओं में से किसी में अधिवक्ता से चर्चा करने होंगे।
+
+guidanceContent.hi.pages.lawyers.eyebrow
+    अधिवक्ता
+
+guidanceContent.hi.pages.lawyers.title
+    Hovering की अंतरराष्ट्रीय टीम
+
+guidanceContent.hi.pages.lawyers.description
+    Hovering के अधिवक्ताओं, संचालन नेतृत्व और साझेदार लेखापरीक्षा की रूपरेखा।
+
+guidanceContent.hi.pages.lawyers.intro
+    
+
+guidanceContent.hi.pages.pricing.eyebrow
+    लागत
+
+guidanceContent.hi.pages.pricing.title
+    कार्य-दायरा और लागत कैसे तय होते हैं
+
+guidanceContent.hi.pages.pricing.description
+    क्रम की व्याख्या: पहले कार्य-दायरा, फिर लागत की पुष्टि, और यह पृष्ठ मूल्य सूची क्यों नहीं रखता।
+
+guidanceContent.hi.pages.pricing.intro
+    यह पृष्ठ बताता है कि लागत कैसे तय होती है, उसकी राशि नहीं। राशि प्रत्येक मामले के कार्य-दायरे पर निर्भर करती है और तभी सार्थक है जब वह दायरा स्पष्ट हो।
+
+guidanceContent.hi.pages.pricing.sections[0].heading
+    पहले कार्य-दायरा तय होता है
+
+guidanceContent.hi.pages.pricing.sections[0].paragraphs[0]
+    एक ही प्रकार के मामलों में श्रम बहुत भिन्न हो सकता है, पक्षों की संख्या, उपलब्ध कागजात, पालन की जाने वाली समयसीमाओं और इस पर निर्भर कि प्रक्रिया पहले ही आरंभ हो चुकी है या नहीं। इसलिए पहला चरण सदा यह तय करना है कि कार्य में क्या आता है और क्या नहीं।
+
+guidanceContent.hi.pages.pricing.sections[0].paragraphs[1]
+    आरंभ में आपके द्वारा भेजा सार इसी दायरे का आधार है। जितना स्पष्ट वह क्रम, आपकी माँग और समयसीमाएँ बताए, उतना ही सटीक दायरा निर्धारित हो सकता है।
+
+guidanceContent.hi.pages.pricing.sections[1].heading
+    कार्य आरंभ होने से पहले लागत पुष्ट होती है
+
+guidanceContent.hi.pages.pricing.sections[1].paragraphs[0]
+    जब कार्य-दायरा स्पष्ट हो, तो राशि और गणना का तरीका आपके साथ चर्चा करके कार्य आरंभ होने से पहले पुष्ट किया जाता है। मार्ग में दायरा बदलने पर उसे फिर पुष्ट करना होता है।
+
+guidanceContent.hi.pages.pricing.sections[1].paragraphs[1]
+    यह पृष्ठ मूल्य प्रस्ताव नहीं है और भुगतान का दायित्व नहीं बनाता।
+
+guidanceContent.hi.pages.pricing.sections[2].heading
+    परामर्श सशुल्क हो सकता है
+
+guidanceContent.hi.pages.pricing.sections[2].paragraphs[0]
+    अधिवक्ता से परामर्श सशुल्क सेवा हो सकती है। यह पृष्ठ यह नहीं कहता कि पहली बातचीत निःशुल्क है, और कोई भाग इस अर्थ में नहीं पढ़ा जाना चाहिए।
+
+guidanceContent.hi.pages.pricing.sections[2].paragraphs[1]
+    यदि परामर्श सशुल्क है, तो राशि और भुगतान का तरीका उसके होने से पहले बताया जाता है।
+
+guidanceContent.hi.pages.pricing.sections[3].heading
+    यह पृष्ठ दरें क्यों नहीं बताता
+
+guidanceContent.hi.pages.pricing.sections[3].paragraphs[0]
+    लागत मामले पर ही निर्भर करती है: श्रम, पक्षों की संख्या, कागजात, समयसीमाएँ और इस पर कि प्रक्रिया पहले से चल रही है या नहीं। पहले से तय संख्या आपके मामले की लागत नहीं दिखाएगी। इसलिए हम पहले कार्य-दायरा तय करते हैं और फिर कार्य आरंभ होने से पहले आपको लागत बताते हैं।
+
+guidanceContent.hi.pages.pricing.sections[3].paragraphs[1]
+    अधिवक्ता शुल्क के अतिरिक्त न्यायालय, प्राधिकरण या तीसरे पक्ष की लागतें उत्पन्न हो सकती हैं। ये शुल्क से अलग हैं और संबंधित प्रक्रिया पर निर्भर करती हैं।
+
+guidanceContent.hi.pages.contact.eyebrow
+    संपर्क
+
+guidanceContent.hi.pages.contact.title
+    कार्यालय तक कैसे पहुँचें
+
+guidanceContent.hi.pages.contact.description
+    पृष्ठ की भाषा, परामर्श भाषाएँ, वह मार्ग जब आप चार भाषाओं में से किसी का उपयोग न कर सकें, और यह पृष्ठ क्या नहीं कहता।
+
+guidanceContent.hi.pages.contact.intro
+    लिखने से पहले निम्नलिखित तीन बिंदु अलग रखें। इन्हें प्रायः मिला दिया जाता है, किंतु अर्थ भिन्न हैं।
+
+guidanceContent.hi.pages.contact.sections[0].heading
+    तीन बातें जो अलग रहनी चाहिए
+
+guidanceContent.hi.pages.contact.sections[0].paragraphs[0]
+    पृष्ठ की प्रदर्शन भाषा, अधिवक्ता से परामर्श भाषा और वह भाषा जिसमें आप लिखते हैं — ये तीन अलग बातें हैं।
+
+guidanceContent.hi.pages.contact.sections[0].items[0]
+    पृष्ठ भाषा: यह जानकारी हिन्दी में लिखी गई है।
+
+guidanceContent.hi.pages.contact.sections[0].items[1]
+    परामर्श भाषा: परामर्श अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई में होता है।
+
+guidanceContent.hi.pages.contact.sections[0].items[2]
+    आपकी लेखन भाषा: आप सार अपनी भाषा में लिख सकते हैं; मूल पाठ अपरिवर्तित रखा जाता है।
+
+guidanceContent.hi.pages.contact.sections[1].heading
+    यदि आप चार परामर्श भाषाओं में से किसी का उपयोग नहीं कर सकते
+
+guidanceContent.hi.pages.contact.sections[1].paragraphs[0]
+    संपर्क फ़ॉर्म में आप «संचार मार्ग की पुष्टि आवश्यक है» चुन सकते हैं। हम उत्तर देते हैं ताकि व्यावहारिक संचार मार्ग जाँचा जा सके, यदि ऐसा मार्ग हो; अन्य भाषा में सेवा नहीं दी जाती और उत्तर की समयसीमा नहीं कही जाती।
+
+guidanceContent.hi.pages.contact.sections[1].paragraphs[1]
+    यह केवल जाँच का चरण है, वादा नहीं। हम दुभाषिए का वादा नहीं करते, हिन्दी या चार कही गई भाषाओं के बाहर किसी अन्य भाषा में सेवा का वादा नहीं करते, और यह भी नहीं कहते कि हम प्रत्येक मामला लेंगे।
+
+guidanceContent.hi.pages.contact.sections[2].heading
+    प्रथम संदेश में क्या होना चाहिए
+
+guidanceContent.hi.pages.contact.sections[2].paragraphs[0]
+    बताएँ कि क्या हुआ, आपको किस सहायता की आवश्यकता है, मामले का ताइवान से क्या संबंध है और समयसीमा, यदि आप जानते हैं। यदि आपको न्यायालय या प्राधिकरण का पत्र पहले ही मिल चुका है, तो पत्र की तिथि बताएँ।
+
+guidanceContent.hi.pages.contact.sections[2].paragraphs[1]
+    आरंभिक चरण में आपको अभी पासपोर्ट संख्या, पहचान संख्या, खाता विवरण, चिकित्सा अभिलेख या संपूर्ण प्रमाण नहीं भेजने होते। अधिवक्ता के संकेत की प्रतीक्षा करें और तब संवेदनशील कागजात सुरक्षित मार्ग से भेजें।
+
+guidanceContent.hi.pages.contact.sections[3].heading
+    यह पृष्ठ क्या नहीं कहता
+
+guidanceContent.hi.pages.contact.sections[3].paragraphs[0]
+    हम उत्तर की समयसीमा नहीं कहते, इस पृष्ठ से नियुक्ति पुष्ट नहीं करते, किसी निश्चित अधिवक्ता का वादा नहीं करते और दुभाषिया नहीं देते। लिखित अनुवाद अलग बात है: आपके संदेश का स्वचालित अनुवाद नहीं होता।
+
+guidanceContent.hi.pages.contact.sections[3].paragraphs[1]
+    जब आप अनुरोध भेजते हैं, सामग्री रखी जाती है और जाँच की प्रतीक्षा करती है। यदि कुछ समय बाद उत्तर न आए, तो आप संपर्क पृष्ठ पर बताए गए ई-मेल पते पर फिर लिख सकते हैं।
+
+guidanceContent.hi.pages.faq.eyebrow
+    प्रश्न
+
+guidanceContent.hi.pages.faq.title
+    अक्सर पूछे जाने वाले प्रश्न
+
+guidanceContent.hi.pages.faq.description
+    कार्य-क्षेत्र, तैयारी, भाषाओं, लागत और भेजे गए अनुरोध के अर्थ पर स्पष्टीकरण।
+
+guidanceContent.hi.pages.faq.intro
+    निम्नलिखित प्रश्नों का उत्तर सामान्य जानकारी के स्तर पर दिया जाता है। आपके अपने मामले का उत्तर तभी संभव है जब कोई अधिवक्ता कागजात जाँच ले।
+
+guidanceContent.hi.pages.faq.sections[0].heading
+    इस भाग का उपयोग कैसे करें
+
+guidanceContent.hi.pages.faq.sections[0].paragraphs[0]
+    यदि आपको अपनी स्थिति का उत्तर नहीं मिलता, तो उत्तर प्रायः विशेष तथ्यों पर निर्भर करता है। तब वे तथ्य सार में लिखें, इस पृष्ठ से स्वयं निष्कर्ष निकालने के स्थान पर।
+
+guidanceContent.hi.pages.faq.faqs[0].question
+    कार्यालय किन मामलों का कार्य करता है?
+
+guidanceContent.hi.pages.faq.faqs[0].answer
+    हम छह समूहों का कार्य करते हैं: ताइवान में निवेश और कंपनी स्थापना, दीवानी विवाद और क्षतिपूर्ति, विवाह, परिवार और उत्तराधिकार, श्रम संबंधी विवाद, आपराधिक मामले और बौद्धिक संपदा। कोई मामला लिया जाएगा या नहीं, यह सामग्री की जाँच के बाद तय होता है।
+
+guidanceContent.hi.pages.faq.faqs[1].question
+    संपर्क से पहले मुझे क्या तैयार करना चाहिए?
+
+guidanceContent.hi.pages.faq.faqs[1].answer
+    क्रम, अपनी माँग, ताइवान से संबंध और समयसीमा, यदि हो, का संक्षिप्त सार तैयार करें। यदि न्यायालय या प्राधिकरण का पत्र पहले से है, तो तिथि बताएँ। इस चरण में आपको अभी पहचान पत्र या संपूर्ण प्रमाण नहीं भेजने होते।
+
+guidanceContent.hi.pages.faq.faqs[2].question
+    क्या हिंदी में परामर्श संभव है?
+
+guidanceContent.hi.pages.faq.faqs[2].answer
+    नहीं। ये निर्देश हिंदी में लिखे गए हैं, लेकिन अधिवक्ता से परामर्श केवल अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई में होता है। हम दुभाषिए का भी वादा नहीं करते। लिखित अनुवाद अलग बात है: आपके लिखे मूल पाठ को वैसे ही रखा जाता है और स्वचालित रूप से अनुवाद नहीं किया जाता।
+
+guidanceContent.hi.pages.faq.faqs[3].question
+    यदि मैं चार भाषाओं में से किसी का उपयोग न कर सकूँ तो क्या?
+
+guidanceContent.hi.pages.faq.faqs[3].answer
+    अनुरोध भेजते समय «संचार मार्ग की पुष्टि आवश्यक है» चुनें। हम संचार मार्ग जाँचने के लिए उत्तर देते हैं, किंतु अन्य भाषा में सेवा नहीं दी जाती। यह जाँच का चरण है, यह वादा नहीं कि हम अन्य भाषा में कार्य कर सकते हैं।
+
+guidanceContent.hi.pages.faq.faqs[4].question
+    मेरे हिन्दी पाठ का क्या होता है?
+
+guidanceContent.hi.pages.faq.faqs[4].answer
+    आपके लिखे मूल पाठ को वैसे ही रखा जाता है और स्वचालित रूप से अनुवाद नहीं किया जाता। आवश्यकता होने पर आगे के संचार की भाषा आपके साथ पुष्ट की जाती है।
+
+guidanceContent.hi.pages.faq.faqs[5].question
+    क्या अनुरोध भेजते ही परामर्श हो चुका माना जाता है?
+
+guidanceContent.hi.pages.faq.faqs[5].answer
+    नहीं। भेजा गया अनुरोध अधिवक्ता की जाँच की प्रतीक्षा करता है। यह कानूनी राय नहीं है, पुष्ट नियुक्ति नहीं है, और भेजना अपने आप अधिवक्ता और मुवक्किल के बीच संबंध नहीं बनाता।
+
+guidanceContent.hi.pages.faq.faqs[6].question
+    लागत कैसे निकाली जाती है?
+
+guidanceContent.hi.pages.faq.faqs[6].answer
+    पहले कार्य-दायरा तय होता है, उसके बाद राशि और गणना का तरीका आपके साथ पुष्ट होता है, कार्य आरंभ होने से पहले। यह पृष्ठ संख्याएँ नहीं बताता और यह नहीं कहता कि पहली बातचीत निःशुल्क है।
+
+guidanceContent.hi.pages.faq.faqs[7].question
+    यदि मेरा मामला अत्यंत तात्कालिक हो तो क्या?
+
+guidanceContent.hi.pages.faq.faqs[7].answer
+    समयसीमा या आधिकारिक पत्र की तिथि अपने सार के आरंभ में बताएँ, ताकि जाँच में ये तिथियाँ दिखें। इस पृष्ठ पर आपात मार्ग नहीं है और उत्तर की समयसीमा नहीं कही जाती; यदि आपका मामला प्रतीक्षा नहीं कर सकता, तो आपको अपने स्थान पर समानांतर अन्य मार्ग भी देखने चाहिए।
+
+guidanceContent.hi.pages.privacy.eyebrow
+    गोपनीयता
+
+guidanceContent.hi.pages.privacy.title
+    संपर्क फ़ॉर्म से एकत्र किए जाने वाले आँकड़े
+
+guidanceContent.hi.pages.privacy.description
+    इस हिन्दी भाग का संपर्क फ़ॉर्म क्या एकत्र करता है, मूल पाठ का कैसे व्यवहार होता है, और अपने आँकड़ों के लिए आप हम तक कैसे पहुँचें।
+
+guidanceContent.hi.pages.privacy.intro
+    यह भाग केवल इन जानकारी पृष्ठों के संपर्क फ़ॉर्म से संबंधित है। यह आँकड़ों के व्यवहार का वर्णन करता है, तकनीकी वादा नहीं।
+
+guidanceContent.hi.pages.privacy.sections[0].heading
+    कौन-से आँकड़े एकत्र होते हैं
+
+guidanceContent.hi.pages.privacy.sections[0].paragraphs[0]
+    जब आप इस भाग के फ़ॉर्म से अनुरोध भेजते हैं, निम्नलिखित दर्ज किए जाते हैं:
+
+guidanceContent.hi.pages.privacy.sections[0].items[0]
+    आपके द्वारा बताया गया नाम
+
+guidanceContent.hi.pages.privacy.sections[0].items[1]
+    उत्तर के लिए ई-मेल पता
+
+guidanceContent.hi.pages.privacy.sections[0].items[2]
+    भेजते समय पृष्ठ की प्रदर्शन भाषा
+
+guidanceContent.hi.pages.privacy.sections[0].items[3]
+    वह भाषा जिसमें आपने लिखा
+
+guidanceContent.hi.pages.privacy.sections[0].items[4]
+    आपकी इच्छित परामर्श भाषा
+
+guidanceContent.hi.pages.privacy.sections[0].items[5]
+    आपके द्वारा लिखा मूल पाठ
+
+guidanceContent.hi.pages.privacy.sections[0].items[6]
+    अनुरोध भेजने की आपकी सहमति
+
+guidanceContent.hi.pages.privacy.sections[0].items[7]
+    अनुरोध पुनः खोजने के लिए प्राप्ति संख्या
+
+guidanceContent.hi.pages.privacy.sections[1].heading
+    मूल पाठ अपरिवर्तित रखा जाता है
+
+guidanceContent.hi.pages.privacy.sections[1].paragraphs[0]
+    आपका पाठ ठीक उसी रूप में रखा जाता है जैसा आपने लिखा और स्वचालित रूप से अनुवाद नहीं किया जाता। यदि कार्य के लिए अनुवाद आवश्यक हो, तो यह आपके साथ अलग से चर्चा की जाती है।
+
+guidanceContent.hi.pages.privacy.sections[1].paragraphs[1]
+    क्योंकि मूल पाठ रखा जाता है, आरंभिक चरण में वह न लिखें जिसकी अभी आवश्यकता नहीं, जैसे पासपोर्ट संख्या, पहचान संख्या या खाता विवरण।
+
+guidanceContent.hi.pages.privacy.sections[2].heading
+    संग्रह स्थान और पहुँच
+
+guidanceContent.hi.pages.privacy.sections[2].paragraphs[0]
+    आपके प्रेषण की सामग्री ऐसे स्थान पर रखी जाती है जो सार्वजनिक रूप से उपलब्ध नहीं है। केवल कार्यालय के अधिकृत व्यक्ति अनुरोध का कार्य करने के लिए उस तक पहुँच सकते हैं।
+
+guidanceContent.hi.pages.privacy.sections[2].paragraphs[1]
+    यह पृष्ठ पूर्ण सुरक्षा का वादा नहीं करता। कोई भी संचरण मार्ग और कोई भी संग्रह स्थान पूरी तरह सुरक्षित नहीं; अतः संवेदनशील कागजात अधिवक्ता के विशेष संकेत के बाद ही भेजने चाहिए।
+
+guidanceContent.hi.pages.privacy.sections[3].heading
+    उपयोग का उद्देश्य
+
+guidanceContent.hi.pages.privacy.sections[3].paragraphs[0]
+    भेजे गए आँकड़े अनुरोध की जाँच, आपको उत्तर, संचार मार्ग स्पष्ट करने और यदि कार्य लिया जाए तो उसके संचालन के लिए हैं।
+
+guidanceContent.hi.pages.privacy.sections[3].paragraphs[1]
+    आँकड़ों का विपणन के लिए उपयोग अलग सहमति के बिना नहीं होता।
+
+guidanceContent.hi.pages.privacy.sections[4].heading
+    सूचना और प्राप्ति संख्या
+
+guidanceContent.hi.pages.privacy.sections[4].paragraphs[0]
+    अनुरोध सफलतापूर्वक भेजे जाने पर प्रणाली कार्यालय को सूचित करती है। यदि यह सूचना अभी पुष्ट नहीं हुई, तो आपका पाठ रखा रहता है और खोता नहीं।
+
+guidanceContent.hi.pages.privacy.sections[4].paragraphs[1]
+    प्राप्ति संख्या हमारे अभिलेखों में आपका अनुरोध खोजने के लिए है। संग्रह के बाद यह दिखाई जाती है; नई संपर्क में आप इसे बता सकते हैं।
+
+guidanceContent.hi.pages.privacy.sections[5].heading
+    आपके अधिकार और संपर्क मार्ग
+
+guidanceContent.hi.pages.privacy.sections[5].paragraphs[0]
+    आप संपर्क पृष्ठ पर बताए गए ई-मेल पते से अपने आँकड़ों की जानकारी, सुधार या विलोपन माँग सकते हैं या सहमति वापस ले सकते हैं। यदि कानूनी या प्रक्रियात्मक संग्रह कर्तव्य हो, तो हम सीमा समझाते हैं।
+
+guidanceContent.hi.pages.privacy.sections[5].paragraphs[1]
+    यह पृष्ठ निश्चित संग्रह अवधि नहीं बताता, क्योंकि वास्तविक अवधि इस पर निर्भर करती है कि मामला आगे बढ़ता है या नहीं, और उससे जुड़े कर्तव्यों पर। यदि आप पहले विलोपन चाहते हैं, तो संपर्क में बताएँ।
+
+guidanceContent.hi.pages.privacy.sections[6].heading
+    संग्रह स्थान और सेवा प्रदाता
+
+guidanceContent.hi.pages.privacy.sections[6].paragraphs[0]
+    यह जालस्थल Vercel पर होस्ट है, और आपका प्रेषण इस सेवा के गैर-सार्वजनिक वस्तु संग्रह में रखा जाता है। ई-मेल कार्यालय द्वारा प्रयुक्त ई-मेल सेवा से भेजे जाते हैं।
+
+guidanceContent.hi.pages.privacy.sections[6].paragraphs[1]
+    कुछ सेवा प्रदाताओं के सर्वर ताइवान के बाहर हो सकते हैं, जिससे आपके आँकड़े वहाँ रखे और संसाधित हो सकते हैं। जब संग्रह का उद्देश्य पूरा हो जाता है, आँकड़े बिना विलंब मिटाए जाते हैं; लागू नियमों के अनुसार रखे जाने वाले आँकड़े उस अवधि तक रहते हैं। व्यक्तिगत आँकड़ों के अनुरोध wei@hoveringlaw.com.tw ग्रहण करता है।
+
+guidanceContent.hi.pages.disclaimer.eyebrow
+    अस्वीकरण
+
+guidanceContent.hi.pages.disclaimer.title
+    इस पृष्ठ की जानकारी का दायरा और सीमाएँ
+
+guidanceContent.hi.pages.disclaimer.description
+    जानकारी का सामान्य स्वरूप, कानूनी लागू क्षेत्र और अधिवक्ता-मुवक्किल संबंध की शर्तें।
+
+guidanceContent.hi.pages.disclaimer.intro
+    यह भाग स्पष्ट करता है कि ये हिन्दी जानकारी पृष्ठ आपके लिए क्या कर सकते हैं और क्या नहीं।
+
+guidanceContent.hi.pages.disclaimer.sections[0].heading
+    केवल सामान्य जानकारी
+
+guidanceContent.hi.pages.disclaimer.sections[0].paragraphs[0]
+    इन पृष्ठों की सामग्री सामान्य जानकारी के रूप में लिखी गई है। यह आपके मामले की कानूनी राय नहीं है और आपके अपने कागजात की जाँच का स्थान नहीं लेती।
+
+guidanceContent.hi.pages.disclaimer.sections[0].paragraphs[1]
+    किसी मामले का परिणाम तथ्यों, लागू नियमों और समय पर निर्भर करता है; दो समान दिखने वाली स्थितियाँ भिन्न समाप्त हो सकती हैं।
+
+guidanceContent.hi.pages.disclaimer.sections[1].heading
+    कानूनी लागू क्षेत्र
+
+guidanceContent.hi.pages.disclaimer.sections[1].paragraphs[0]
+    कार्यालय ताइवान के विधि के अनुसार कार्य करता है, और यह पृष्ठ केवल इसी ढाँचे में कार्य की बात करता है।
+
+guidanceContent.hi.pages.disclaimer.sections[1].paragraphs[1]
+    सामग्री ताइवान से भिन्न किसी अन्य व्यवस्था के विधि के अनुसार सलाह नहीं है, जिसमें आपके निवास स्थान का विधि भी शामिल है। यदि आपके मामले का कोई भाग अन्य व्यवस्था से जुड़ता है, तो हम आपके साथ स्पष्ट करेंगे कि उस भाग के लिए कौन-सा योग्य विशेषज्ञ आवश्यक है।
+
+guidanceContent.hi.pages.disclaimer.sections[2].heading
+    अधिवक्ता और मुवक्किल का संबंध अपने आप नहीं बनता
+
+guidanceContent.hi.pages.disclaimer.sections[2].paragraphs[0]
+    इस पृष्ठ को पढ़ना, फ़ॉर्म या ई-मेल भेजना अपने आप अधिवक्ता और मुवक्किल के बीच संबंध नहीं बनाता।
+
+guidanceContent.hi.pages.disclaimer.sections[2].paragraphs[1]
+    यह संबंध तभी बनता है जब मामला जाँच लिया गया हो और दोनों पक्षों ने कार्य लेने की पुष्टि कर दी हो।
+
+guidanceContent.hi.pages.disclaimer.sections[3].heading
+    परिणाम का कोई वादा नहीं
+
+guidanceContent.hi.pages.disclaimer.sections[3].paragraphs[0]
+    इस पृष्ठ का कोई भाग किसी मामले के परिणाम, आवेदन की स्वीकृति या निवास तथा कार्य स्थिति का वादा नहीं है।
+
+guidanceContent.hi.pages.disclaimer.sections[3].paragraphs[1]
+    बाहरी कड़ियाँ दिशा के लिए हैं; हम तीसरे पक्ष की सामग्री की शुद्धता या अद्यतनता नहीं कहते।
+
+guidanceContent.hi.pages.columns.eyebrow
+    लेख
+
+guidanceContent.hi.pages.columns.title
+    ताइवान के विधि पर लेख
+
+guidanceContent.hi.pages.columns.description
+    ताइवान के विधि के सामान्य प्रश्नों पर हिन्दी लेख। सामग्री प्रकाशन के समय की सामान्य जानकारी है, आपके मामले की कानूनी राय नहीं।
+
+guidanceContent.hi.pages.columns.intro
+    कार्यालय ताइवान के विधि के सामान्य प्रश्नों पर लेख प्रकाशित करता है। हिन्दी में उपलब्ध लेख इस पृष्ठ पर हैं; साथ में चार कड़ियाँ हैं जो प्रत्येक एक मूल भाषा की लेख सूची खोलती हैं।
+
+guidanceContent.hi.pages.columns.sections[0].heading
+    भाषा के अनुसार चार सूचियाँ
+
+guidanceContent.hi.pages.columns.sections[0].paragraphs[0]
+    इस भाग में चार कड़ियाँ हैं: कोरियाई, चीनी, अंग्रेज़ी और जापानी में लेख सूची। प्रत्येक कड़ी सूची की भाषा बताती है, ताकि आप पहले से जान सकें कि सामग्री किस भाषा में खुलेगी।
+
+guidanceContent.hi.pages.columns.sections[0].paragraphs[1]
+    ये चार सूचियाँ लेखों की मूल भाषा के अनुसार सूचियाँ हैं, अनुवाद सूचियाँ नहीं। हिन्दी में उपलब्ध लेख इस पृष्ठ पर अलग हैं।
+
+guidanceContent.hi.pages.columns.sections[1].heading
+    कड़ियाँ कहाँ ले जाती हैं
+
+guidanceContent.hi.pages.columns.sections[1].paragraphs[0]
+    जब आप चार कड़ियों में से एक चुनते हैं, उस भाषा की लेख सूची खुलती है। सूची से आप स्वयं पाठ चुनते हैं; पूरी सामग्री लेख की मूल भाषा में दिखाई देती है।
+
+guidanceContent.hi.pages.columns.sections[1].paragraphs[1]
+    यह पृष्ठ लेखों की सामग्री का सार नहीं देता और यह नहीं कहता कि कोई विषय चारों भाषाओं में उपलब्ध है। प्रत्येक सूची में केवल वे पाठ हैं जो उस भाषा में प्रकाशित हैं।
+
+guidanceContent.hi.pages.columns.sections[2].heading
+    लेख दिशा के रूप में कहाँ तक काम आ सकता है
+
+guidanceContent.hi.pages.columns.sections[2].paragraphs[0]
+    लेख प्रकाशन के समय की सामान्य जानकारी हैं। नियम और उनका प्रयोग बदल सकते हैं, और कोई लेख आपके मामले की सभी परिस्थितियों को नहीं समेटता।
+
+guidanceContent.hi.pages.columns.sections[2].paragraphs[1]
+    इसलिए वास्तविक मामले में कोई कदम केवल लेख पर आधारित न करें। उसे अवलोकन के लिए उपयोग करें और अपने कागजात अधिवक्ता से अलग चर्चा करें; यह पृष्ठ परामर्श चरण नहीं है।
+
+guidanceTeamCopy.hi.label
+    OUR TEAM
+
+guidanceTeamCopy.hi.title
+    Hovering की अंतरराष्ट्रीय टीम
+
+guidanceTeamCopy.hi.description
+    Hovering के अधिवक्ताओं, संचालन प्रबंधन और सहभागी लेखा परीक्षा की प्रोफ़ाइलें।
+
+guidanceTeamCopy.hi.representativeTitle
+    प्रबंध अधिवक्ता
+
+guidanceTeamCopy.hi.teamTitle
+    अधिवक्ता और सहयोगी
+
+guidanceTeamCopy.hi.partnerTitle
+    सहभागी लेखा परीक्षा
+
+guidanceTeamCopy.hi.introLabel
+    परिचय
+
+guidanceTeamCopy.hi.educationLabel
+    शिक्षा
+
+guidanceTeamCopy.hi.experienceLabel
+    अनुभव
+
+guidanceTeamCopy.hi.photoAltPrefix
+    फ़ोटो
+
+guidanceTeamCopy.hi.workingLanguagesLabel
+    कार्य भाषाएँ
+
+guidanceTeamCopy.hi.fullProfileLabel
+    पूर्ण प्रोफ़ाइल (English)
+
+guidanceTeamCopy.hi.keyFactsHeading
+    अधिवक्ता Wei Tseng — मुख्य तथ्य
+
+guidanceTeamCopy.hi.qualificationLabel
+    योग्यता और कार्यालय
+
+guidanceTeamCopy.hi.qualificationSentence
+    {name} ताइवान में व्यवसाय करने के लिए अधिकृत हैं और {firm} की प्रबंध अधिवक्ता हैं।
+
+guidanceTeamCopy.hi.practiceLabel
+    मुख्य क्षेत्र
+
+guidanceTeamCopy.hi.consultationLanguagesLabel
+    परामर्श भाषाएँ
+
+guidanceTeamCopy.hi.roles.tseng-junwei
+    ताइवान में प्रबंध अधिवक्ता (Managing Attorney)
+
+guidanceTeamCopy.hi.roles.chang-rongxuan
+    ताइवान अधिवक्ता (Taiwan Attorney)
+
+guidanceTeamCopy.hi.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.hi.roles.son-jungmin
+    कोरिया संचालन प्रबंधन (Korea Operations Manager)
+
+guidanceTeamCopy.hi.roles.huang-shengping
+    सहभागी लेखाकार (Partner CPA)
+
+guidanceTeamBios.hi.tseng-junwei.intro[0]
+    कार्यालय ताइवान में उद्यमों और व्यक्तियों के मामलों का अंग्रेज़ी, जापानी, कोरियाई और चीनी में कार्य करता है।
+
+guidanceTeamBios.hi.tseng-junwei.intro[1]
+    उन्होंने एक कोरियाई छात्र का व्यायामशाला में चोट के हर्जाने के दावे में प्रतिनिधित्व किया और प्रथम न्यायाधीश में TWD 1.57M का निर्णय प्राप्त किया।
+
+guidanceTeamBios.hi.tseng-junwei.education[0]
+    स्नातकोत्तर (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.hi.tseng-junwei.education[1]
+    स्नातक (B.A.) विधि और वित्त के दोहरे पथ के साथ, National Chengchi University
+
+guidanceTeamBios.hi.tseng-junwei.education[2]
+    Kobe University और Waseda University में विनिमय छात्रा
+
+guidanceTeamBios.hi.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.hi.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.hi.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.hi.chang-rongxuan.intro[0]
+    पहले Ministry of Education, Legal Affairs Division में, प्रशासनिक और दीवानी मामलों पर ध्यान के साथ।
+
+guidanceTeamBios.hi.chang-rongxuan.intro[1]
+    विश्वविद्यालयों, शिक्षण कर्मचारियों के अधिकारों और प्रशासनिक अपीलों से जुड़े मामलों का अनुभव।
+
+guidanceTeamBios.hi.chang-rongxuan.education[0]
+    विधि स्नातक (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.hi.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.hi.chang-rongxuan.experience[1]
+    अधिवक्ता, Hovering International Law Firm
+
+guidanceTeamBios.hi.chang-fangyu.intro[0]
+    Paralegal जिन्होंने कई कार्यालयों में वरिष्ठ paralegal के रूप में लंबे समय तक कार्य किया, प्रक्रिया सहायता, कंपनी विधि और विदेशी निवेश के लिए उत्तरदायी।
+
+guidanceTeamBios.hi.chang-fangyu.intro[1]
+    कार्यवाही, कंपनी स्थापना, विदेशी निवेश अनुमति, लाइसेंस आवेदन तथा कोरिया और ताइवान के बीच आदान-प्रदान में सहायता।
+
+guidanceTeamBios.hi.chang-fangyu.education[0]
+    विधि स्नातक (LL.B.), Tunghai University
+
+guidanceTeamBios.hi.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.hi.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.hi.son-jungmin.intro[0]
+    कोरिया से आए मुवक्किलों के परामर्श समय और संचार का समन्वय करते हैं।
+
+guidanceTeamBios.hi.son-jungmin.intro[1]
+    सूचना विज्ञान के आधार पर दस्तावेज़ प्रणालियों और कार्य प्रवाह से क्षेत्रों के बीच आदान-प्रदान का समर्थन करते हैं।
+
+guidanceTeamBios.hi.son-jungmin.education[0]
+    स्नातक (B.S.) सूचना विज्ञान, National Cheng Kung University
+
+guidanceTeamBios.hi.son-jungmin.experience[0]
+    कोरिया संचालन क्षेत्र, Hovering International Law Firm
+
+guidanceTeamBios.hi.huang-shengping.intro[0]
+    National Chengchi University से लेखा में स्नातक और स्नातकोत्तर कार्यक्रम पूरे किए और वर्तमान में एक लेखा कार्यालय का नेतृत्व करते हैं।
+
+guidanceTeamBios.hi.huang-shengping.intro[1]
+    उद्यमी मुवक्किलों के लिए कानूनी, कर और वित्तीय जोखिमों का एकीकृत विश्लेषण समर्थन करते हैं।
+
+guidanceTeamBios.hi.huang-shengping.education[0]
+    स्नातकोत्तर (M.A.) लेखा, National Chengchi University
+
+guidanceTeamBios.hi.huang-shengping.education[1]
+    स्नातक (B.A.) लेखा, National Chengchi University
+
+guidanceTeamBios.hi.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.hi.Korean
+    कोरियाई
+
+guidanceLanguageNames.hi.Chinese
+    चीनी
+
+guidanceLanguageNames.hi.Japanese
+    जापानी
+
+guidancePracticeAreaNames.hi.Taiwan company setup
+    ताइवान में कंपनी स्थापना
+
+guidancePracticeAreaNames.hi.Taiwan investment counsel
+    ताइवान निवेश के लिए कानूनी सलाह
+
+guidancePracticeAreaNames.hi.Civil litigation and damages
+    दीवानी मुकदमे और हर्जाना
+
+guidancePracticeAreaNames.hi.Trademark and patent filings
+    चिह्न और पेटेंट आवेदन
+
+guidancePracticeAreaNames.hi.Visa and residency
+    वीज़ा और निवास
+
+guidancePracticeAreaNames.hi.Family and labor disputes
+    परिवार और श्रम विवाद
+
+guidanceOfficeCopy.hi.label
+    OFFICES
+
+guidanceOfficeCopy.hi.title
+    कार्यालय
+
+guidanceOfficeCopy.hi.description
+    Hovering International Law Firm के ताइवान स्थित कार्यालयों के पते।
+
+guidanceOfficeCopy.hi.officeLabel
+    कार्यालय
+
+guidanceOfficeCopy.hi.mapPreviewLabel
+    मानचित्र पूर्वावलोकन
+
+guidanceOfficeCopy.hi.koreaOfficeTitle
+    कोरिया कार्यालय
+
+guidanceOfficeCopy.hi.koreaAddressCardLabel
+    कोरिया कार्यालय का पता
+
+guidanceOfficeCopy.hi.koreaMapLinkLabel
+    Naver Map पर देखें
+
+guidanceOfficeCopy.hi.reviewCountWord
+    समीक्षाएँ
+
+guidanceOfficeCopy.hi.phoneLabel
+    दूरभाष
+
+guidanceOfficeCopy.hi.faxLabel
+    फैक्स
+
+guidanceOfficeCopy.hi.mapLinkLabel
+    मानचित्र पर देखें
+
+guidanceOfficeCopy.hi.photoAlts[0]
+    ताइपेई कार्यालय का स्वागत कक्ष, Hovering International Law Firm
+
+guidanceOfficeCopy.hi.photoAlts[1]
+    ताइपेई कार्यालय में अधिवक्ता का कक्ष, Hovering International Law Firm
+
+guidanceOfficeCopy.hi.photoAlts[2]
+    ताइपेई कार्यालय का बैठक कक्ष, Hovering International Law Firm
+
+guidanceOfficeCopy.hi.officeTitles.taipei
+    ताइपेई
+
+guidanceOfficeCopy.hi.officeTitles.taichung
+    ताइचुंग
+
+guidanceOfficeCopy.hi.officeTitles.kaohsiung
+    काओश्युंग
+
+guidanceOfficeCopy.hi.officeTitles.pingtung
+    पिंगतुंग
+
+guidanceFooterCopy.hi.officeLabel
+    कार्यालय
+
+guidanceFooterCopy.hi.officeQuickLinksLabel
+    कार्यालयों के त्वरित लिंक
+
+guidanceFooterCopy.hi.followLabel
+    अनुसरण करें
+
+guidanceFooterCopy.hi.blogLabel
+    ब्लॉग
+
+guidanceFooterCopy.hi.websiteLabel
+    आधिकारिक वेबसाइट
+
+guidanceFooterCopy.hi.sitemapLabel
+    साइट मानचित्र
+
+guidanceFooterCopy.hi.copyEmailLabel
+    ईमेल पता कॉपी करें
+
+guidanceFooterCopy.hi.emailCopiedMessage
+    ईमेल पता कॉपी हो गया।
+
+guidanceFooterCopy.hi.officialConsultationEmailLabel
+    परामर्श के लिए आधिकारिक ईमेल
+
+internationalInquiryCopy.hi.guidanceNotice
+    यह पृष्ठ हिन्दी में सामान्य जानकारी के रूप में लिखा गया है, आपके मामले की कानूनी राय के रूप में नहीं।
+
+internationalInquiryCopy.hi.consultationNotice
+    परामर्श चार भाषाओं में होता है: अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई।
+
+internationalInquiryCopy.hi.methodConfirmationNotice
+    यदि आप चार भाषाओं में से किसी का उपयोग न कर सकें, तो «संचार मार्ग की पुष्टि आवश्यक है» चुनें। हम व्यवहार्य संचार मार्ग जाँचने के लिए उत्तर देते हैं, यदि ऐसा मार्ग हो; अन्य भाषा में सेवा सुनिश्चित नहीं है और उत्तर की समयसीमा का वादा नहीं है।
+
+internationalInquiryCopy.hi.preparationNotice
+    आप सार अपनी भाषा में लिख सकते हैं। मूल पाठ वैसे ही रखा जाता है जैसा आपने लिखा और स्वचालित रूप से अनुवाद नहीं किया जाता।
+
+internationalInquiryCopy.hi.heading
+    परामर्श अनुरोध भेजें
+
+internationalInquiryCopy.hi.intro
+    अपने मामले का संक्षेप में वर्णन करें। अगले चरण की चर्चा से पहले अधिवक्ता सामग्री की जाँच करते हैं।
+
+internationalInquiryCopy.hi.submitLabel
+    अनुरोध भेजें
+
+internationalInquiryCopy.hi.submittingLabel
+    भेजा जा रहा है…
+
+internationalInquiryCopy.hi.successMessage
+    हमने आपका अनुरोध प्राप्त कर लिया; वह जाँच की प्रतीक्षा करता है। इसका अर्थ यह नहीं कि परामर्श हो चुका या नियुक्ति पुष्ट हुई।
+
+internationalInquiryCopy.hi.savedNotificationPendingMessage
+    आपका अनुरोध सुरक्षित है, लेकिन कार्यालय को सूचना अभी पुष्ट नहीं हुई। जो आपने लिखा वह नहीं खोता। यदि उत्तर न मिले, तो संपर्क पृष्ठ के ईमेल पते पर भी लिख सकते हैं।
+
+internationalInquiryCopy.hi.receiptIdLabel
+    प्राप्ति संख्या
+
+internationalInquiryCopy.hi.failureMessage
+    आपका अनुरोध नहीं भेजा जा सका। पुनः प्रयास करें या संपर्क पृष्ठ के ईमेल पते पर लिखें।
+
+internationalInquiryCopy.hi.originalLanguageLabel
+    जिस भाषा में आप लिखते हैं
+
+internationalInquiryCopy.hi.originalLanguagePlaceholder
+    उदाहरण के लिए हिन्दी, अंग्रेज़ी, चीनी या कोई अन्य भाषा
+
+internationalInquiryCopy.hi.preferredConsultationLanguageLabel
+    परामर्श के लिए इच्छित भाषा
+
+internationalInquiryCopy.hi.originalTextLabel
+    मामले का संक्षिप्त विवरण (अपनी भाषा में)
+
+internationalInquiryCopy.hi.originalTextPlaceholder
+    बताएँ क्या हुआ, किस सहायता की आवश्यकता है और यदि हो तो समयसीमा। पासपोर्ट संख्या, पहचान संख्या या खाता विवरण न लिखें।
+
+internationalInquiryCopy.hi.nameLabel
+    नाम
+
+internationalInquiryCopy.hi.emailLabel
+    ईमेल
+
+internationalInquiryCopy.hi.consentLabel
+    मैंने गोपनीयता पृष्ठ पढ़ लिया है और इस अनुरोध को भेजने की सहमति देता/देती हूँ।
+
+internationalInquiryCopy.hi.privacyLinkLabel
+    गोपनीयता
+
+internationalInquiryCopy.hi.requiredMessage
+    यह फ़ील्ड आवश्यक है।
+
+internationalInquiryCopy.hi.invalidEmailMessage
+    कृपया मान्य ईमेल पता दें।
+
+internationalInquiryCopy.hi.tooLongMessage
+    पाठ बहुत लंबा है। उसे छोटा कर फिर भेजें।
+
+internationalInquiryCopy.hi.sourceLanguageNotice
+    यह लेख केवल {language} में प्रकाशित है; लिंक मूल पृष्ठ खोलता है।
+
+internationalInquiryCopy.hi.unavailableTranslationNotice
+    यह बिंदु इस पृष्ठ की भाषा में अभी उपलब्ध नहीं है। मूल भाषा का लिंक मूल पाठ खोलता है।
+
+internationalInquiryCopy.hi.unavailableLanguageNotice
+    यह पृष्ठ {language} में उपलब्ध नहीं है।
+
+internationalInquiryCopy.hi.languageOptions.en
+    अंग्रेज़ी (English)
+
+internationalInquiryCopy.hi.languageOptions.zh-hant
+    चीनी (中文)
+
+internationalInquiryCopy.hi.languageOptions.ja
+    जापानी (日本語)
+
+internationalInquiryCopy.hi.languageOptions.ko
+    कोरियाई (한국어)
+
+internationalInquiryCopy.hi.languageOptions.needs-method-confirmation
+    चार भाषाओं में से कोई उपयोगी नहीं — संचार मार्ग की पुष्टि आवश्यक है
+
+guidanceAnswers.hi.services.answer
+    कार्यालय ताइवान के विधि के अनुसार छह कार्य-समूहों का कार्य करता है: निवेश और कंपनी स्थापना, दीवानी विवाद और हर्जाना, विवाह, परिवार और उत्तराधिकार, श्रम, आपराधिक तथा बौद्धिक संपदा। प्रत्येक मामले का दायरा उस सामग्री की जाँच के बाद अलग से पुष्टि होता है जिसे आप भेजते हैं। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।
+
+guidanceAnswers.hi.services.sources[0]
+    /hi/faq
+
+guidanceAnswers.hi.services.sources[1]
+    /hi/contact
+
+guidanceAnswers.hi.about.answer
+    Hovering International Law Firm ताइवान का एक कानून कार्यालय है, 2016 में National Taiwan University (國立臺灣大學) के स्नातकों द्वारा स्थापित, ताइपेई, काओश्युंग, ताइचुंग और पिंगतुंग में कार्यालयों के साथ। 2020 से लेखा विभाग है; ताइचुंग कार्यालय कोरिया और जापान से जुड़े मामलों का कार्य करता है। कार्यालय परिणाम का वादा नहीं करता। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।
+
+guidanceAnswers.hi.about.sources[0]
+    /hi/lawyers
+
+guidanceAnswers.hi.about.sources[1]
+    /hi/services
+
+guidanceAnswers.hi.lawyers.answer
+    यह पृष्ठ Hovering के अधिवक्ताओं, संचालन प्रबंधन और सहभागी लेखा की प्रोफ़ाइलें दिखाता है। अधिवक्ता Wei Tseng (曾雋崴) ताइवान में अधिकृत हैं और कार्यालय की प्रबंध अधिवक्ता हैं; वह कोरिया, जापान और अन्य अंतरराष्ट्रीय मुवक्किलों के साथ कार्य करती हैं। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।
+
+guidanceAnswers.hi.lawyers.sources[0]
+    /hi/about
+
+guidanceAnswers.hi.lawyers.sources[1]
+    /hi/contact
+
+guidanceAnswers.hi.pricing.answer
+    यह पृष्ठ मूल्य सूची प्रकाशित नहीं करता। पहले आपके भेजे सार से कार्य का दायरा तय होता है, फिर लागत की राशि और गणना का तरीका कार्य शुरू होने से पहले आपके साथ पुष्टि होता है। अधिवक्ता से बात शुल्क सहित हो सकती है; मानदेय के अतिरिक्त न्यायालय या प्राधिकरण की लागतें भी उठ सकती हैं। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।
+
+guidanceAnswers.hi.pricing.sources[0]
+    /hi/contact
+
+guidanceAnswers.hi.pricing.sources[1]
+    /hi/faq
+
+guidanceAnswers.hi.contact.answer
+    संपर्क फ़ॉर्म से अपना सार भेजें: क्या हुआ, किस सहायता की आवश्यकता है, मामले का ताइवान से क्या संबंध है और यदि ज्ञात हो तो समयसीमा। आरंभ में पहचान पत्र या संपूर्ण प्रमाण भेजना आवश्यक नहीं। कार्यालय उत्तर की समयसीमा का वादा नहीं करता और इस पृष्ठ से नियुक्ति की पुष्टि नहीं करता। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।
+
+guidanceAnswers.hi.contact.sources[0]
+    /hi/faq
+
+guidanceAnswers.hi.contact.sources[1]
+    /hi/pricing
+
+guidanceAnswers.hi.faq.answer
+    यह भाग सामान्य जानकारी के स्तर पर बार-बार पूछे जाने वाले प्रश्नों का उत्तर देता है: छह कार्य-समूह, संपर्क से पहले तैयारी, लागत तय होने का तरीका और भेजे गए संदेश का अर्थ। भेजा गया अनुरोध अधिवक्ता की जाँच की प्रतीक्षा करता है; यह कानूनी राय नहीं है, नियुक्ति नहीं है और अधिवक्ता तथा मुवक्किल के बीच संबंध नहीं बनाता। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।
+
+guidanceAnswers.hi.faq.sources[0]
+    /hi/contact
+
+guidanceAnswers.hi.faq.sources[1]
+    /hi/services
+
+GUIDANCE_LLMS_NOTICES.hi.consultationNotice
+    ये निर्देश हिंदी में लिखे गए हैं, लेकिन अधिवक्ता से परामर्श केवल अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई में होता है।
+
+GUIDANCE_LLMS_NOTICES.hi.discoveryNotice
+    llms.txt फ़ाइल केवल सार्वजनिक पृष्ठ खोजने का मानचित्र है; यह खोज क्रम, समर्थन, कृत्रिम बुद्धि की अनुशंसा या दृश्यता का वादा नहीं करती।
+
+GUIDANCE_LLMS_NOTICES.hi.confidentialNotice
+    क्योंकि मूल पाठ रखा जाता है, आरंभिक चरण में वह न लिखें जिसकी अभी आवश्यकता नहीं, जैसे पासपोर्ट संख्या, पहचान संख्या या खाता विवरण।

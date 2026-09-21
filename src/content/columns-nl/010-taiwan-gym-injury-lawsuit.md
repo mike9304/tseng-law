@@ -114,6 +114,6 @@ Een val op de vloer van een vestiging, gezondheidsschade door voedingsmiddelen e
 ---
 
 > Zie ook:
-> - [Gids van de procesadvocaat in Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Taiwanese advocaat die Koreaans spreekt](/ko/korean-lawyer-in-taiwan)
-> - [Gids om een advocaat in Taiwan te zoeken](/ko/taiwan-lawyer)
+> - [Hoe omvang van het werk en kosten worden vastgesteld](/nl/pricing)
+> - [Internationaal team van Hovering](/nl/lawyers)
+> - [Over Hovering International Law Firm](/nl/about)

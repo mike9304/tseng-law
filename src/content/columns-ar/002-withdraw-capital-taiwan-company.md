@@ -139,7 +139,7 @@ faq:
 
 ## إرشاد ذو صلة
 
-1. [خدمات الاستثمار وتأسيس الشركات في تايوان](/ko/services/investment)
+1. [المجالات التي يقبلها المكتب](/ar/services)
 2. [أساسيات تأسيس الشركات في تايوان](/ar/columns/taiwan-company-establishment-basics)
 3. [طلب الاستشارة](/ar/contact)
 

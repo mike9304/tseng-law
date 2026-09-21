@@ -111,7 +111,7 @@ Förberedelsen av försäljning i Taiwan, om den kontrolleras i följande ordnin
 5. Se över etikett, säljsida, reklam och samarbetsinlägg enligt måttstocken för hela framställningen.
 6. Driva förfarandet för att svara på inspektioner och rättelsekrav, klagomål, säkerhetsinformation och nödvändig uppföljning.
 
-Bolagets och filialens grundstruktur kan ses i [Grunderna för bolagsbildning i Taiwan](/sv/columns/taiwan-company-establishment-basics), omfattningen av relaterat stöd i [Tjänster för investering och bolagsbildning i Taiwan](/ko/services/investment), och uppgifter om den ansvariga advokaten i [Profil för Advokat Wei Tseng](/ko/lawyers/wei-tseng).
+Bolagets och filialens grundstruktur kan ses i [Grunderna för bolagsbildning i Taiwan](/sv/columns/taiwan-company-establishment-basics), omfattningen av relaterat stöd i [Vilka ärenden vi behandlar](/sv/services), och uppgifter om den ansvariga advokaten i [Hoverings internationella team](/sv/lawyers).
 
 ### Officiella källor
 

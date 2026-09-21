@@ -58,8 +58,8 @@ Về tài liệu bổ sung, quý vị có thể tham khảo [bài giải thích 
 ---
 
 > Đọc thêm:
-> - [Hướng dẫn về luật sư tố tụng tại Đài Loan](/ko/taiwan-litigation-lawyer)
-> - [Luật sư Đài Loan có thể giao tiếp bằng tiếng Hàn](/ko/korean-lawyer-in-taiwan)
+> - [Cách xác định phạm vi công việc và chi phí](/vi/pricing)
+> - [Đội ngũ quốc tế Hovering](/vi/lawyers)
 > - [Thủ tục xử lý tai nạn giao thông tại Đài Loan](/vi/columns/taiwan-traffic-accident-procedure)
 
 Bài viết này chỉ cung cấp thông tin pháp luật chung về quy định vượt xe tại Đài Loan và cách phán định trách nhiệm trong vụ tai nạn, không phải ý kiến pháp lý cho một vụ việc cụ thể và cũng không bảo đảm bất kỳ kết quả nào. Trách nhiệm trên thực tế có thể khác nhau tùy theo địa điểm xảy ra tai nạn, chuyển động của xe, tốc độ, tín hiệu, chứng cứ, kết quả giám định và quy định pháp luật hiện hành mới nhất, nên vụ việc cụ thể phải được xem xét riêng trên cơ sở các tài liệu liên quan.

@@ -139,7 +139,7 @@ Cuanto más se prolongue el estado de suspensión, más puede complicarse el pro
 
 ## Guías relacionadas
 
-1. [Servicios de inversión y constitución de sociedades en Taiwán](/ko/services/investment)
+1. [Asuntos que atendemos](/es/services)
 2. [Fundamentos de la constitución de sociedades en Taiwán](/es/columns/taiwan-company-establishment-basics)
 3. [Contacto](/es/contact)
 

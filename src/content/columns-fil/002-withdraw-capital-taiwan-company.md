@@ -139,7 +139,7 @@ Habang tumatagal ang kalagayan ng paghinto, maaaring lalong maging masalimuot an
 
 ## Kaugnay na Impormasyon
 
-1. [Mga Serbisyo sa Pamumuhunan at Pagtatatag ng Kompanya sa Taiwan](/ko/services/investment)
+1. [Mga usaping hinahawakan ng tanggapan](/fil/services)
 2. [Mga Batayan sa Pagtatatag ng Kompanya sa Taiwan](/fil/columns/taiwan-company-establishment-basics)
 3. [Pagtatanong](/fil/contact)
 

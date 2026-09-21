@@ -1,0 +1,1096 @@
+# da guidance pack strings (path → text). Generated 2026-09-21
+
+guidanceContent.da.languageName
+    Dansk
+
+guidanceContent.da.nav.home
+    Hjem
+
+guidanceContent.da.nav.services
+    Ydelser
+
+guidanceContent.da.nav.about
+    Kontoret
+
+guidanceContent.da.nav.lawyers
+    Advokater
+
+guidanceContent.da.nav.pricing
+    Omkostninger
+
+guidanceContent.da.nav.contact
+    Kontakt
+
+guidanceContent.da.nav.faq
+    Spørgsmål
+
+guidanceContent.da.nav.privacy
+    Privatliv
+
+guidanceContent.da.nav.disclaimer
+    Forbehold
+
+guidanceContent.da.nav.columns
+    Artikler
+
+guidanceContent.da.contactCta
+    Send en anmodning om rådgivning
+
+guidanceContent.da.footerNotice
+    Denne side på dansk indeholder kun almindelige vejledninger om kontorets arbejde efter Taiwans ret. Den er ikke juridisk rådgivning for en konkret sag, og afsendelse af en meddelelse skaber i sig selv ikke et forhold mellem advokat og klient.
+
+guidanceContent.da.skipLink
+    Spring navigeringen over og gå til indholdet
+
+guidanceContent.da.menuLabel
+    Sidefortegnelse
+
+guidanceContent.da.languageLabel
+    Visningssprog
+
+guidanceContent.da.mega.services.description
+    Kontoret behandler de væsentlige arbejdsgrupper efter Taiwans ret.
+
+guidanceContent.da.mega.services.viewAllLabel
+    Vis alle
+
+guidanceContent.da.mega.columns.description
+    Artikler om hyppige spørgsmål i Taiwans ret.
+
+guidanceContent.da.mega.columns.viewAllLabel
+    Vis alle
+
+guidanceContent.da.mega.lawyers.description
+    Præsentation af de virkende advokater og kontaktveje.
+
+guidanceContent.da.mega.lawyers.viewAllLabel
+    Vis alle
+
+guidanceContent.da.mega.pricing.description
+    Denne side forklarer arbejdets omfang og, hvordan omkostningerne fastlægges.
+
+guidanceContent.da.mega.pricing.viewAllLabel
+    Vis alle
+
+guidanceContent.da.mega.faq.description
+    Hyppige spørgsmål om kontorets arbejde i Taiwan.
+
+guidanceContent.da.mega.faq.viewAllLabel
+    Vis alle
+
+guidanceContent.da.notFoundTitle
+    Siden blev ikke fundet
+
+guidanceContent.da.notFoundText
+    Den søgte side findes ikke eller er flyttet. De kan vende tilbage til startsiden på dansk for at se de vejledninger, der findes.
+
+guidanceContent.da.backHomeLabel
+    Til startsiden
+
+guidanceContent.da.readSourceLabel
+    Åbn artikellisten på originalsproget
+
+guidanceContent.da.home.heroScrollLabel
+    Rul nedad
+
+guidanceContent.da.home.heroColumnsCtaLabel
+    Se artiklerne
+
+guidanceContent.da.home.servicesDetailLabel
+    Se detaljerne
+
+guidanceContent.da.home.servicesAssistanceBefore
+    Hvis det er uklart, hvilken gruppe Deres sag tilhører, forklarer siden 
+
+guidanceContent.da.home.servicesAssistanceLinkLabel
+    Kontakt
+
+guidanceContent.da.home.servicesAssistanceAfter
+     hvordan De formulerer et resumé, som en advokat gennemgår.
+
+guidanceContent.da.home.columnsViewAllLabel
+    Se alle artikler
+
+guidanceContent.da.home.columnsReadMoreLabel
+    Læs videre
+
+guidanceContent.da.home.columnsReviewLabel
+    Gennemgået af advokat Wei Tseng
+
+guidanceContent.da.home.columnsOriginalLanguageBadge
+    Originalsprog
+
+guidanceContent.da.home.columnsOriginalLanguageNote
+    Følgende artikler findes endnu ikke på dansk. Listen bliver på originalsproget og åbner den pågældende sprogside; indholdet oversættes ikke automatisk.
+
+guidanceContent.da.home.imageBandAlt
+    Traditionel taiwansk sanheyuan (三合院) og en moderne pavillon i dagslys
+
+guidanceContent.da.home.videoPauseLabel
+    Sæt videoen på pause
+
+guidanceContent.da.home.videoPlayLabel
+    Afspil videoen
+
+guidanceContent.da.home.videoReplayLabel
+    Afspil videoen igen
+
+guidanceContent.da.pages.home.eyebrow
+    VEJLEDNINGER
+
+guidanceContent.da.pages.home.title
+    Juridiske tjenester i Taiwan — vejledninger på dansk
+
+guidanceContent.da.pages.home.description
+    Almindelige forklaringer på dansk om Hovering International Law Firms arbejdsområde i Taiwan, rådgivningssprogene og den første kontakt.
+
+guidanceContent.da.pages.home.intro
+    Hovering International Law Firm ledsager klienter fra udlandet, også med tilknytning til Taiwan, i sager efter Taiwans ret: investering og selskabsstiftelse, civile tvister, ægteskab, familie og arv, arbejdsret, strafferet og immaterialret. Denne danske del hjælper Dem med at se, hvilket arbejde der falder inden for vores område, hvad der skal forberedes, og hvordan De når os. Det er almindelige oplysninger, ikke juridisk rådgivning for Deres egen sag.
+
+guidanceContent.da.pages.home.sections[0].heading
+    Hvad vi gør
+
+guidanceContent.da.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm er et advokatkontor etableret i Taiwan. Det arbejder efter Taiwans ret og har kontorer i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Vi rådgiver virksomheder og fører sager for retten og ledsager klienter fra udlandet gennem de skridt, der kræves i Taiwan.
+
+guidanceContent.da.pages.home.sections[0].paragraphs[1]
+    Hele indholdet her er almindeligt. Udfaldet af en sag afhænger af fakta, de gældende regler og tidspunktet. Disse vejledninger erstatter ikke samtalen med en advokat om Deres dokumenter.
+
+guidanceContent.da.pages.home.sections[1].heading
+    Sidens sprog og rådgivningssproget er ikke det samme
+
+guidanceContent.da.pages.home.sections[1].paragraphs[0]
+    Denne side er skrevet på dansk, men rådgivningen med en advokat foregår kun på de fire rådgivningssprog engelsk, kinesisk (中文), japansk og koreansk. At læse vejledningerne på dansk betyder ikke, at samtalen med advokaten foregår på dansk.
+
+guidanceContent.da.pages.home.sections[1].paragraphs[1]
+    Vi lover ikke en tolk, en svartid eller en tid via denne side. Hvis De ikke kan bruge noget af de fire sprog, forklarer siden »Kontakt«, hvordan vi prøver en kommunikationsvej.
+
+guidanceContent.da.pages.home.sections[2].heading
+    Arbejdsgrupper
+
+guidanceContent.da.pages.home.sections[2].paragraphs[0]
+    Arbejdsområdet omfatter følgende seks grupper. Siden »Ydelser« beskriver hver gruppe nøjere og angiver, hvad der ikke udlovés.
+
+guidanceContent.da.pages.home.sections[2].items[0]
+    Investering og selskabsstiftelse i Taiwan
+
+guidanceContent.da.pages.home.sections[2].items[1]
+    Civile tvister og erstatning
+
+guidanceContent.da.pages.home.sections[2].items[2]
+    Ægteskab, familie og arv
+
+guidanceContent.da.pages.home.sections[2].items[3]
+    Arbejdsretlige tvister
+
+guidanceContent.da.pages.home.sections[2].items[4]
+    Strafferetlige sager
+
+guidanceContent.da.pages.home.sections[2].items[5]
+    Immaterialret: varemærker, patenter og ophavsret
+
+guidanceContent.da.pages.home.sections[3].heading
+    Hvor De bør begynde
+
+guidanceContent.da.pages.home.sections[3].paragraphs[0]
+    Læs siden »Ydelser« for at se, om Deres sag falder inden for vores område, derefter »Omkostninger« og »Kontakt« for at vide, hvordan omfanget fastlægges, og hvordan omkostningerne bekræftes, før arbejdet begynder.
+
+guidanceContent.da.pages.home.sections[3].paragraphs[1]
+    Når De sender en meddelelse, må De skrive resuméet på Deres eget sprog. Originalteksten gemmes, som De skrev den, og oversættes ikke automatisk. En sendt meddelelse er en anmodning, der venter på gennemgang: det er endnu ikke rådgivning og ikke en bekræftet tid.
+
+guidanceContent.da.pages.services.eyebrow
+    YDELSER
+
+guidanceContent.da.pages.services.title
+    Hvilke sager vi behandler
+
+guidanceContent.da.pages.services.description
+    Seks arbejdsgrupper hos kontoret i Taiwan og de grænser, De først bør kende.
+
+guidanceContent.da.pages.services.intro
+    Nedenfor de grupper, vi faktisk behandler, og spørgsmål, der ofte stilles i begyndelsen. Fremstillingen hjælper Dem med at vurdere, om Deres sag falder inden for vores område; den er almindelig og ikke en juridisk analyse af en enkelt sag.
+
+guidanceContent.da.pages.services.sections[0].heading
+    Investering og selskabsstiftelse i Taiwan
+
+guidanceContent.da.pages.services.sections[0].paragraphs[0]
+    Vi ledsager udenlandske investorer og virksomheder ved stiftelse eller drift af et selskab i Taiwan: valg af retsform, forberedelse og indgivelse af dokumenter, kapitalindskud, bankspørgsmål, prøvelse af lokalet samt branchekrav. Vi støtter også bogføring og skat, der følger af stiftelse og drift i Taiwan.
+
+guidanceContent.da.pages.services.sections[0].paragraphs[1]
+    Forløb og tid adskiller sig efter form, investor, branche, bank og allerede tilgængelige dokumenter. En selskabsstiftelse fører ikke af sig selv til opholdstilladelse (居留) eller arbejdstilladelse (工作許可): det er særskilte forløb, der vurderes efter personens situation.
+
+guidanceContent.da.pages.services.sections[1].heading
+    Civile tvister og erstatning
+
+guidanceContent.da.pages.services.sections[1].paragraphs[0]
+    Denne gruppe omfatter kontrakt tvister, erstatning fra retsstridig handling og forbrugertvister. Arbejdet begynder som regel med en kronologi, gennemgang af eksisterende dokumenter og beviser og først derefter med de næste skridt.
+
+guidanceContent.da.pages.services.sections[1].paragraphs[1]
+    Frister, herunder forældelse, og bevisernes fuldstændighed præger forløbet. Angiv derfor kendte datoer så tidligt som muligt. Bevar kontrakter, meddelelser, betalingskvitteringer eller fotos af situationen på stedet og nævn dem i den første meddelelse.
+
+guidanceContent.da.pages.services.sections[2].heading
+    Ægteskab, familie og arv
+
+guidanceContent.da.pages.services.sections[2].paragraphs[0]
+    Vi behandler skilsmisse (離婚), bodeling, udøvelse og bæring af rettigheder og pligter over for mindreårige børn (未成年子女權利義務之行使或負擔), samvær (會面交往) og arv (繼承), også når parter eller formue findes i forskellige stater. Grænseoverskridende familiesager kræver ofte yderligere prøvelse af folkeregister (戶籍), dokumenters form og deres bevisværdi i Taiwan.
+
+guidanceContent.da.pages.services.sections[2].paragraphs[1]
+    Fordi familiesager ofte medfører frister og parallelle forløb, bør det første resumé nævne parternes forhold, den aktuelle bopæl og allerede igangværende forløb.
+
+guidanceContent.da.pages.services.sections[3].heading
+    Arbejdsretlige tvister
+
+guidanceContent.da.pages.services.sections[3].paragraphs[0]
+    Denne gruppe omfatter ophør af ansættelse, fratrædelsesgodtgørelse efter Taiwans ret (資遣費; ikke atligestille med institutter i andre stater), løn og tvister ur ansættelseskontrakten (勞動契約), både på arbejdstager- og arbejdsgiverside. Ved prøvelsen adskiller vi ophørsgrunden fra spørgsmål om varsel, betaling og frister.
+
+guidanceContent.da.pages.services.sections[3].paragraphs[1]
+    Ansættelseskontrakt, arbejdsordning (工作規則), lønsedler og parternes korrespondance er oftest de afgørende dokumenter. Hvis De stadig har dem, nævn det i resuméet.
+
+guidanceContent.da.pages.services.sections[4].heading
+    Strafferetlige sager
+
+guidanceContent.da.pages.services.sections[4].paragraphs[0]
+    Vi ledsager i efterforskningen og for retten, for sigtede eller tiltalte såvel som for forurettede, og vurderer strafferetlige risici ved erhvervsvirksomhed.
+
+guidanceContent.da.pages.services.sections[4].paragraphs[1]
+    Strafferetlige sager har ofte korte frister og fastlagte trin. Hvis De allerede har fået en skrivelse fra anklagemyndighed eller ret, nævn datoen på skrivelsen tidligt, så indholdet prøves i den rigtige rækkefølge.
+
+guidanceContent.da.pages.services.sections[5].heading
+    Immaterialret
+
+guidanceContent.da.pages.services.sections[5].paragraphs[0]
+    Vi støtter ved registrering af varemærker (商標) og patenter (專利), ved ophavsret og ved tvister om disse rettigheder i Taiwan.
+
+guidanceContent.da.pages.services.sections[5].paragraphs[1]
+    I denne gruppe afgør rækkefølgen af skridtene: beskyttelsesomfang, ansøgningstidspunkt og faktisk brug påvirker valget. At indgive en ansøgning betyder ikke af sig selv, at den imødekommes.
+
+guidanceContent.da.pages.services.sections[6].heading
+    Omfang og dets bekræftelse
+
+guidanceContent.da.pages.services.sections[6].paragraphs[0]
+    Kontoret arbejder efter Taiwans ret og behandler sager i de nævnte grupper. Omfanget af hver sag bekræftes særskilt, efter at en advokat har gennemgået Deres meddelelse.
+
+guidanceContent.da.pages.services.sections[6].paragraphs[1]
+    Opholdsstatus, arbejdstilladelse og sammenlignelige spørgsmål vurderes ud fra dokumenterne og personens situation, ikke ud fra statsborgerskabet. Hvis en del af Deres sag rører sådanne spørgsmål, nævn det ved kontakten. Denne side lover hverken et resultat eller en svartid.
+
+guidanceContent.da.pages.about.eyebrow
+    KONTORET
+
+guidanceContent.da.pages.about.title
+    Om Hovering International Law Firm
+
+guidanceContent.da.pages.about.description
+    Grundoplysninger om dette taiwanske advokatkontor, dets kontorer og arbejdet med udenlandske parter.
+
+guidanceContent.da.pages.about.intro
+    Hovering International Law Firm er et advokatkontor i Taiwan. Advokaterne arbejder fra virksomhedsrådgivning til retssag. Denne del beskriver kontorets tilblivelse, stederne og arbejdet med udenlandske parter.
+
+guidanceContent.da.pages.about.sections[0].heading
+    Stiftelse og opbygning
+
+guidanceContent.da.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) blev stiftet i 2016 af advokater, der har studeret ved National Taiwan University (國立臺灣大學). Det kinesiske navn 昊鼎 forener tegnet 昊 (»vid himmel«) med 鼎 (»fast grund«) og beskriver kontorets retning siden stiftelsen.
+
+guidanceContent.da.pages.about.sections[0].paragraphs[1]
+    Vi har kontorer i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Kontoret i Kaohsiung er indrettet på virksomhedsledelse og behandler civile, strafferetlige og forvaltningsretlige tvister. Kontoret i Taichung behandler byggesager, immaterialret og sager med tilknytning til Korea og Japan. Kontoret i Pingtung blev åbnet i 2017 til det lokale behov.
+
+guidanceContent.da.pages.about.sections[0].paragraphs[2]
+    Ved siden af det advokatmæssige arbejde findes siden 2020 også Hovering Accounting Office, som tilbyder bogføring og skatteplanlægning for erhvervsdrivende og formuende privatpersoner.
+
+guidanceContent.da.pages.about.sections[1].heading
+    Arbejde med udenlandske parter
+
+guidanceContent.da.pages.about.sections[1].paragraphs[0]
+    Det grænseoverskridende arbejde omfatter selskabsstiftelse, visum, varemærke- og patentansøgninger, juridisk risikovurdering og skatterådgivning for virksomheder. Kontoret i Taichung behandler navnlig byggesager, immaterialret og sager med tilknytning til Korea og Japan. Advokat Wei Tseng (曾雋崴) ledsager klienter fra Korea, Japan og andre internationale klienter i de nævnte grupper.
+
+guidanceContent.da.pages.about.sections[1].paragraphs[1]
+    Om vi kan tage en sag afhænger af indholdet og af kommunikationens sprog. Falder Deres sag inden for de nævnte grupper og kan den drøftes på et af de fire rådgivningssprog, kan De sende et resumé til gennemgang.
+
+guidanceContent.da.pages.about.sections[2].heading
+    Når De kontakter os
+
+guidanceContent.da.pages.about.sections[2].paragraphs[0]
+    Når Deres resumé er kommet ind, gennemgår en advokat indholdet og taler derefter om det mulige arbejdsomfang, endnu nødvendige dokumenter og de næste skridt. Ved skatte- eller bogføringsspørgsmål kan kontoret arbejde med bogføringsafdelingen i ét forløb.
+
+guidanceContent.da.pages.about.sections[2].paragraphs[1]
+    Resultatet af hver sag afhænger af fakta og de dokumenter, der findes; vi lover intet resultat. Hvis De har brug for et bindende svar for Deres situation, skal dokumenterne drøftes med en advokat på et af de fire rådgivningssprog.
+
+guidanceContent.da.pages.lawyers.eyebrow
+    ADVOKATER
+
+guidanceContent.da.pages.lawyers.title
+    Hoverings internationale team
+
+guidanceContent.da.pages.lawyers.description
+    Profiler for advokater, driftsledelse og partnerrevision hos Hovering.
+
+guidanceContent.da.pages.lawyers.intro
+    
+
+guidanceContent.da.pages.pricing.eyebrow
+    OMKOSTNINGER
+
+guidanceContent.da.pages.pricing.title
+    Hvordan arbejdsomfang og omkostninger fastlægges
+
+guidanceContent.da.pages.pricing.description
+    Forklaring af rækkefølgen: først arbejdsomfanget, derefter omkostningsbekræftelsen, og hvorfor denne side ikke indeholder en prisliste.
+
+guidanceContent.da.pages.pricing.intro
+    Denne side forklarer, hvordan omkostninger fastlægges, ikke deres beløb. Beløbet afhænger af arbejdsomfanget i den enkelte sag og er meningsfuldt først, når det omfang er klart.
+
+guidanceContent.da.pages.pricing.sections[0].heading
+    Først fastlægges arbejdsomfanget
+
+guidanceContent.da.pages.pricing.sections[0].paragraphs[0]
+    Sager af samme slags kan have meget forskellig indsats, afhængigt af antallet af parter, tilgængelige dokumenter, frister der skal overholdes, og om et forløb allerede er begyndt. Derfor er det første skridt altid at fastlægge, hvad der hører til arbejdet, og hvad der ikke gør det.
+
+guidanceContent.da.pages.pricing.sections[0].paragraphs[1]
+    Resuméet, De sender i begyndelsen, er grundlaget for det omfang. Jo klarere det beskriver forløbet, Deres anmodning og fristerne, desto mere præcist kan omfanget bestemmes.
+
+guidanceContent.da.pages.pricing.sections[1].heading
+    Omkostningerne bekræftes, før arbejdet begynder
+
+guidanceContent.da.pages.pricing.sections[1].paragraphs[0]
+    Når arbejdsomfanget er klart, drøftes beløb og beregningsmåde med Dem og bekræftes, før arbejdet begynder. Ændrer omfanget sig undervejs, skal det bekræftes på ny.
+
+guidanceContent.da.pages.pricing.sections[1].paragraphs[1]
+    Denne side er ikke et pristilbud og skaber ingen betalingspligt.
+
+guidanceContent.da.pages.pricing.sections[2].heading
+    Rådgivningen kan være mod betaling
+
+guidanceContent.da.pages.pricing.sections[2].paragraphs[0]
+    Rådgivningen med en advokat kan være en ydelse mod betaling. Denne side siger ikke, at den første samtale er uden betaling, og ingen del må læses på den måde.
+
+guidanceContent.da.pages.pricing.sections[2].paragraphs[1]
+    Hvis rådgivningen er mod betaling, meddeles beløb og betalingsmåde, før den finder sted.
+
+guidanceContent.da.pages.pricing.sections[3].heading
+    Hvorfor denne side ikke angiver takster
+
+guidanceContent.da.pages.pricing.sections[3].paragraphs[0]
+    Omkostningerne afhænger af sagen selv: af indsatsen, antallet af parter, dokumenterne, fristerne og om et forløb allerede er i gang. Et tal sat på forhånd ville ikke vise omkostningerne for Deres sag. Derfor fastlægger vi først arbejdsomfanget og meddeler Dem derefter omkostningerne, før arbejdet begynder.
+
+guidanceContent.da.pages.pricing.sections[3].paragraphs[1]
+    Udover advokathonoraret kan rets-, myndigheds- eller tredjepartsomkostninger opstå. De er adskilt fra honoraret og afhænger af det pågældende forløb.
+
+guidanceContent.da.pages.contact.eyebrow
+    KONTAKT
+
+guidanceContent.da.pages.contact.title
+    Hvordan De når kontoret
+
+guidanceContent.da.pages.contact.description
+    Sidens sprog, rådgivningssprogene, fremgangsmåden, hvis De ikke kan bruge noget af de fire sprog, og hvad denne side ikke udlover.
+
+guidanceContent.da.pages.contact.intro
+    Før De skriver til os, adskil følgende tre punkter. De blandes ofte, men betyder forskellige ting.
+
+guidanceContent.da.pages.contact.sections[0].heading
+    Tre ting, der skal holdes adskilt
+
+guidanceContent.da.pages.contact.sections[0].paragraphs[0]
+    Sidens visningssprog, rådgivningssproget med advokaten og det sprog, De skriver på, er tre adskilte ting.
+
+guidanceContent.da.pages.contact.sections[0].items[0]
+    Sidens sprog: Disse vejledninger er skrevet på dansk.
+
+guidanceContent.da.pages.contact.sections[0].items[1]
+    Rådgivningssprog: Rådgivningen foregår på engelsk, kinesisk (中文), japansk og koreansk.
+
+guidanceContent.da.pages.contact.sections[0].items[2]
+    Deres skriftsprog: De må skrive resuméet på Deres eget sprog; originalteksten gemmes uændret.
+
+guidanceContent.da.pages.contact.sections[1].heading
+    Hvis De ikke kan bruge noget af de fire rådgivningssprog
+
+guidanceContent.da.pages.contact.sections[1].paragraphs[0]
+    I kontaktformularen kan De vælge »Kommunikationsmåden skal bekræftes«. Vi svarer for at prøve en farbar kommunikationsvej, hvis en sådan findes; en ydelse på et andet sprog udlovés ikke, og en svartid udlovés ikke.
+
+guidanceContent.da.pages.contact.sections[1].paragraphs[1]
+    Det er kun et prøvelsesskridt, ikke et løfte. Vi lover ikke en tolk, ikke en ydelse på dansk eller på et andet sprog uden for de fire nævnte sprog, og ikke at vi tager imod hver sag.
+
+guidanceContent.da.pages.contact.sections[2].heading
+    Hvad der bør stå i den første meddelelse
+
+guidanceContent.da.pages.contact.sections[2].paragraphs[0]
+    Angiv, hvad der er sket, hvilken hjælp De har brug for, hvilket forhold sagen har til Taiwan, og fristen, hvis De kender en. Hvis De allerede har fået en skrivelse fra en ret eller en myndighed, nævn datoen på skrivelsen.
+
+guidanceContent.da.pages.contact.sections[2].paragraphs[1]
+    I begyndelsen behøver De endnu ikke sende pasnummer, identitetsnummer, kontooplysninger, journaler eller hele beviset. Vent på anvisninger fra advokaten og send da følsomme dokumenter ad en sikker vej.
+
+guidanceContent.da.pages.contact.sections[3].heading
+    Hvad denne side ikke udlover
+
+guidanceContent.da.pages.contact.sections[3].paragraphs[0]
+    Vi lover ingen svartid, bekræfter ingen tid via denne side, lover ikke en bestemt advokat og stiller ikke en tolk. Skriftlig oversættelse er noget andet: Deres meddelelse oversættes ikke automatisk.
+
+guidanceContent.da.pages.contact.sections[3].paragraphs[1]
+    Når De sender en anmodning, gemmes indholdet og venter på gennemgang. Hvis De efter nogen tid ikke får svar, kan De skrive på ny til den e-mailadresse, der er angivet på kontaktsiden.
+
+guidanceContent.da.pages.faq.eyebrow
+    SPØRGSMÅL
+
+guidanceContent.da.pages.faq.title
+    Ofte stillede spørgsmål
+
+guidanceContent.da.pages.faq.description
+    Forklaringer om arbejdsområde, forberedelse, sprog, omkostninger og betydningen af en sendt anmodning.
+
+guidanceContent.da.pages.faq.intro
+    De følgende spørgsmål besvares på niveauet almindelige oplysninger. Et svar for Deres egen sag er først muligt, efter at en advokat har gennemgået dokumenterne.
+
+guidanceContent.da.pages.faq.sections[0].heading
+    Hvordan De bruger denne del
+
+guidanceContent.da.pages.faq.sections[0].paragraphs[0]
+    Finder De intet svar for Deres situation, afhænger svaret oftest af særlige fakta. Skriv da disse fakta i resuméet i stedet for selv at udlede dem fra denne side.
+
+guidanceContent.da.pages.faq.faqs[0].question
+    Hvilke sager behandler kontoret?
+
+guidanceContent.da.pages.faq.faqs[0].answer
+    Vi behandler seks grupper: investering og selskabsstiftelse i Taiwan, civile tvister og erstatning, ægteskab, familie og arv, arbejdsretlige tvister, strafferetlige sager og immaterialret. Om en sag tages imod afgøres efter gennemgang af indholdet.
+
+guidanceContent.da.pages.faq.faqs[1].question
+    Hvad bør jeg forberede før kontakten?
+
+guidanceContent.da.pages.faq.faqs[1].answer
+    Forbered et kort resumé af forløbet, Deres anmodning, forholdet til Taiwan og fristen, hvis en findes. Findes allerede en skrivelse fra en ret eller en myndighed, nævn datoen. I dette stadium behøver De endnu ikke sende identitetsdokumenter eller hele beviset.
+
+guidanceContent.da.pages.faq.faqs[2].question
+    Kan jeg få rådgivning på dansk?
+
+guidanceContent.da.pages.faq.faqs[2].answer
+    Nej. Disse vejledninger er skrevet på dansk, men rådgivningen med en advokat foregår kun på engelsk, kinesisk (中文), japansk og koreansk. Vi lover heller ikke en tolk. Skriftlig oversættelse er noget andet: den oprindelige tekst, De skriver, gemmes som den er og oversættes ikke automatisk.
+
+guidanceContent.da.pages.faq.faqs[3].question
+    Hvad hvis jeg ikke kan bruge noget af de fire sprog?
+
+guidanceContent.da.pages.faq.faqs[3].answer
+    Vælg ved afsendelsen »Kommunikationsmåden skal bekræftes«. Vi svarer for at prøve en kommunikationsmåde, men en ydelse på et andet sprog udlovés ikke. Det er et prøvelsesskridt, ikke et løfte om at vi kan arbejde på et andet sprog.
+
+guidanceContent.da.pages.faq.faqs[4].question
+    Hvordan behandles min danske tekst?
+
+guidanceContent.da.pages.faq.faqs[4].answer
+    Originalteksten, De skriver, gemmes som den er og oversættes ikke automatisk. Hvis det er nødvendigt, bekræftes sproget for den videre kommunikation med Dem.
+
+guidanceContent.da.pages.faq.faqs[5].question
+    Er rådgivningen allerede sket, når anmodningen er sendt?
+
+guidanceContent.da.pages.faq.faqs[5].answer
+    Nej. En sendt anmodning venter på gennemgang af en advokat. Det er ikke juridisk rådgivning, ikke en bekræftet tid, og afsendelsen skaber i sig selv ikke et forhold mellem advokat og klient.
+
+guidanceContent.da.pages.faq.faqs[6].question
+    Hvordan beregnes omkostningerne?
+
+guidanceContent.da.pages.faq.faqs[6].answer
+    Først fastlægges arbejdsomfanget, derefter bekræftes beløb og beregningsmåde med Dem, før arbejdet begynder. Denne side angiver ingen tal og siger ikke, at den første samtale er uden betaling.
+
+guidanceContent.da.pages.faq.faqs[7].question
+    Hvad hvis min sag er meget hastende?
+
+guidanceContent.da.pages.faq.faqs[7].answer
+    Angiv fristen eller datoen på en officiel skrivelse i begyndelsen af Deres resumé, så disse data er synlige ved gennemgangen. Denne side har ingen nødkanal og udlover ingen svartid; hvis Deres sag ikke kan vente, bør De parallelt søge andre veje på Deres sted.
+
+guidanceContent.da.pages.privacy.eyebrow
+    PRIVATLIV
+
+guidanceContent.da.pages.privacy.title
+    Data, der indsamles via kontaktformularen
+
+guidanceContent.da.pages.privacy.description
+    Hvad kontaktformularen i denne danske del indsamler, hvordan originalteksten behandles, og hvordan De når os om Deres data.
+
+guidanceContent.da.pages.privacy.intro
+    Denne del vedrører kun kontaktformularen på disse vejledningssider. Den beskriver behandlingen af data, ikke et teknisk løfte.
+
+guidanceContent.da.pages.privacy.sections[0].heading
+    Hvilke data der indsamles
+
+guidanceContent.da.pages.privacy.sections[0].paragraphs[0]
+    Når De sender en anmodning via formularen i denne del, registreres følgende:
+
+guidanceContent.da.pages.privacy.sections[0].items[0]
+    Det navn, De opgiver
+
+guidanceContent.da.pages.privacy.sections[0].items[1]
+    E-mailadressen til svaret
+
+guidanceContent.da.pages.privacy.sections[0].items[2]
+    Sidens visningssprog ved afsendelsen
+
+guidanceContent.da.pages.privacy.sections[0].items[3]
+    Det sprog, De skrev på
+
+guidanceContent.da.pages.privacy.sections[0].items[4]
+    Det rådgivningssprog, De ønsker
+
+guidanceContent.da.pages.privacy.sections[0].items[5]
+    Originalteksten, De skrev
+
+guidanceContent.da.pages.privacy.sections[0].items[6]
+    Deres samtykke til at sende anmodningen
+
+guidanceContent.da.pages.privacy.sections[0].items[7]
+    Et modtagelsesnummer for at genfinde anmodningen
+
+guidanceContent.da.pages.privacy.sections[1].heading
+    Originalteksten gemmes uændret
+
+guidanceContent.da.pages.privacy.sections[1].paragraphs[0]
+    Deres tekst gemmes præcis, som De skrev den, og oversættes ikke automatisk. Er en oversættelse nødvendig for behandlingen, tages det op særskilt med Dem.
+
+guidanceContent.da.pages.privacy.sections[1].paragraphs[1]
+    Fordi originalteksten gemmes, skriv i begyndelsen ikke noget, der endnu ikke er nødvendigt, for eksempel pasnummer, identitetsnummer eller kontooplysninger.
+
+guidanceContent.da.pages.privacy.sections[2].heading
+    Lagringssted og adgang
+
+guidanceContent.da.pages.privacy.sections[2].paragraphs[0]
+    Indholdet af Deres afsendelse gemmes et sted, der ikke er offentligt tilgængeligt. Kun berettigede personer på kontoret må få adgang for at behandle anmodningen.
+
+guidanceContent.da.pages.privacy.sections[2].paragraphs[1]
+    Denne side giver intet absolut sikkerhedsløfte. Ingen overførselsvej og intet lagringssted er helt sikkert; følsomme dokumenter bør derfor kun sendes efter særlig anvisning fra advokaten.
+
+guidanceContent.da.pages.privacy.sections[3].heading
+    Formålet med brugen
+
+guidanceContent.da.pages.privacy.sections[3].paragraphs[0]
+    De sendte data tjener til at gennemgå anmodningen, give Dem tilbagemelding, afklare kommunikationsmåden og behandle sagen, hvis arbejdet tages op.
+
+guidanceContent.da.pages.privacy.sections[3].paragraphs[1]
+    Dataene bruges ikke til markedsføring uden et særskilt samtykke.
+
+guidanceContent.da.pages.privacy.sections[4].heading
+    Underretning og modtagelsesnummer
+
+guidanceContent.da.pages.privacy.sections[4].paragraphs[0]
+    Sendes en anmodning med held, underretter systemet kontoret. Er denne underretning endnu ikke bekræftet, forbliver Deres tekst gemt og går ikke tabt.
+
+guidanceContent.da.pages.privacy.sections[4].paragraphs[1]
+    Modtagelsesnummeret tjener til at genfinde Deres anmodning i vore akter. Det vises efter gemningen; De kan angive det ved en ny kontakt.
+
+guidanceContent.da.pages.privacy.sections[5].heading
+    Deres rettigheder og kontaktvejen
+
+guidanceContent.da.pages.privacy.sections[5].paragraphs[0]
+    De kan begære indsigt, berigtigelse eller sletning af Deres data eller tilbagekalde samtykket via den e-mailadresse, der er angivet på kontaktsiden. Findes en lovlig eller processuel pligt til at bevare, forklarer vi begrænsningen.
+
+guidanceContent.da.pages.privacy.sections[5].paragraphs[1]
+    Denne side angiver ingen fast bevaringsfrist, fordi den faktiske tid afhænger af, om sagen fortsættes, og af de dertil hørende pligter. Ønsker De en tidligere sletning, meddel det ved kontakten.
+
+guidanceContent.da.pages.privacy.sections[6].heading
+    Lagringssted og leverandører
+
+guidanceContent.da.pages.privacy.sections[6].paragraphs[0]
+    Denne hjemmeside hostes hos Vercel, og Deres afsendelse gemmes i et ikke-offentligt objektlager hos denne tjeneste. E-mails sendes via den e-mailtjeneste, kontoret bruger.
+
+guidanceContent.da.pages.privacy.sections[6].paragraphs[1]
+    Enkelte leverandørers servere kan stå uden for Taiwan, så Deres data kan gemmes og behandles dér. Når lagringsformålet er opfyldt, slettes dataene uden forsinkelse; data, der skal bevares efter gældende regler, bliver i den tid. Forespørgsler om persondata tages imod af wei@hoveringlaw.com.tw.
+
+guidanceContent.da.pages.disclaimer.eyebrow
+    FORBEHOLD
+
+guidanceContent.da.pages.disclaimer.title
+    Omfang og grænser for oplysningerne på denne side
+
+guidanceContent.da.pages.disclaimer.description
+    Oplysningernes almindelige karakter, det retlige anvendelsesområde og forudsætningerne for et forhold mellem advokat og klient.
+
+guidanceContent.da.pages.disclaimer.intro
+    Denne del gør klart, hvad disse danske vejledningssider kan gøre for Dem, og hvad de ikke kan.
+
+guidanceContent.da.pages.disclaimer.sections[0].heading
+    Kun almindelige oplysninger
+
+guidanceContent.da.pages.disclaimer.sections[0].paragraphs[0]
+    Indholdet på disse sider er skrevet som almindelig information. Det er ikke juridisk rådgivning for Deres sag og erstatter ikke gennemgangen af Deres egne dokumenter.
+
+guidanceContent.da.pages.disclaimer.sections[0].paragraphs[1]
+    Udfaldet af en sag afhænger af fakta, de gældende regler og tidspunktet; to tilsyneladende ens situationer kan ende forskelligt.
+
+guidanceContent.da.pages.disclaimer.sections[1].heading
+    Retligt anvendelsesområde
+
+guidanceContent.da.pages.disclaimer.sections[1].paragraphs[0]
+    Kontoret virker efter Taiwans ret, og denne side taler kun om arbejde inden for den ramme.
+
+guidanceContent.da.pages.disclaimer.sections[1].paragraphs[1]
+    Indholdet er ikke rådgivning efter retten i en anden retsorden end Taiwan, herunder retten på Deres bopæl. Rører en del af Deres sag en anden retsorden, afklarer vi med Dem, hvilken kvalificeret fagperson der behøves til den del.
+
+guidanceContent.da.pages.disclaimer.sections[2].heading
+    Et forhold mellem advokat og klient opstår ikke af sig selv
+
+guidanceContent.da.pages.disclaimer.sections[2].paragraphs[0]
+    At læse denne side, at sende en formular eller en e-mail skaber i sig selv ikke et forhold mellem advokat og klient.
+
+guidanceContent.da.pages.disclaimer.sections[2].paragraphs[1]
+    Dette forhold opstår først, efter at sagen er gennemgået, og begge sider har bekræftet, at arbejdet tages op.
+
+guidanceContent.da.pages.disclaimer.sections[3].heading
+    Intet løfte om resultat
+
+guidanceContent.da.pages.disclaimer.sections[3].paragraphs[0]
+    Ingen del af denne side er et løfte om resultatet af en sag, om imødekommelse af en ansøgning eller om opholds- og arbejdsstatus.
+
+guidanceContent.da.pages.disclaimer.sections[3].paragraphs[1]
+    Eksterne links tjener til orientering; vi udlover hverken rigtigheden eller aktualiteten af tredjepartsindhold.
+
+guidanceContent.da.pages.columns.eyebrow
+    ARTIKLER
+
+guidanceContent.da.pages.columns.title
+    Artikler om Taiwans ret
+
+guidanceContent.da.pages.columns.description
+    Artikler på dansk om hyppige spørgsmål i Taiwans ret. Indholdet er almindelig information på tidspunktet for offentliggørelsen, ikke juridisk rådgivning for Deres sag.
+
+guidanceContent.da.pages.columns.intro
+    Kontoret offentliggør artikler om hyppige spørgsmål i Taiwans ret. Artikler, der findes på dansk, står på denne side; dertil er der fire links, som hver åbner artikellisten for et originalsprog.
+
+guidanceContent.da.pages.columns.sections[0].heading
+    Fire lister efter sprog
+
+guidanceContent.da.pages.columns.sections[0].paragraphs[0]
+    Denne del indeholder fire links: artikellisten på koreansk, på kinesisk, på engelsk og på japansk. Hvert link angiver listen sprog, så De på forhånd ved, på hvilket sprog indholdet åbnes.
+
+guidanceContent.da.pages.columns.sections[0].paragraphs[1]
+    Disse fire lister er lister efter artiklernes originalsprog, ikke oversættelseslister. Artikler, der findes på dansk, står særskilt på denne side.
+
+guidanceContent.da.pages.columns.sections[1].heading
+    Hvor linksene fører hen
+
+guidanceContent.da.pages.columns.sections[1].paragraphs[0]
+    Når De vælger et af de fire links, åbnes artikellisten for det sprog. Ud af listen vælger De selv teksten; hele indholdet vises på artikelns originalsprog.
+
+guidanceContent.da.pages.columns.sections[1].paragraphs[1]
+    Denne side sammenfatter ikke artiklernes indhold og udlover ikke, at et emne findes på alle fire sprog. Hver liste indeholder kun tekster, der er offentliggjort på det sprog.
+
+guidanceContent.da.pages.columns.sections[2].heading
+    Hvor langt en artikel kan tjene som orientering
+
+guidanceContent.da.pages.columns.sections[2].paragraphs[0]
+    Artikler er almindelige oplysninger på tidspunktet for offentliggørelsen. Regler og deres anvendelse kan ændre sig, og en artikel indeholder ikke alle omstændigheder i Deres sag.
+
+guidanceContent.da.pages.columns.sections[2].paragraphs[1]
+    Støt derfor ingen handling i en virkelig sag alene på en artikel. Brug den til overblik og drøft Deres dokumenter særskilt med en advokat; denne side er ikke rådgivningsskridtet.
+
+guidanceTeamCopy.da.label
+    OUR TEAM
+
+guidanceTeamCopy.da.title
+    Hoverings internationale team
+
+guidanceTeamCopy.da.description
+    Profiler for Hoverings advokater, operative ledelse og tilknyttede revision.
+
+guidanceTeamCopy.da.representativeTitle
+    Ledende advokat
+
+guidanceTeamCopy.da.teamTitle
+    Advokater og medarbejdere
+
+guidanceTeamCopy.da.partnerTitle
+    Tilknyttet revision
+
+guidanceTeamCopy.da.introLabel
+    Præsentation
+
+guidanceTeamCopy.da.educationLabel
+    Uddannelse
+
+guidanceTeamCopy.da.experienceLabel
+    Erfaring
+
+guidanceTeamCopy.da.photoAltPrefix
+    Foto
+
+guidanceTeamCopy.da.workingLanguagesLabel
+    Arbejdssprog
+
+guidanceTeamCopy.da.fullProfileLabel
+    Fuld profil (English)
+
+guidanceTeamCopy.da.keyFactsHeading
+    Advokat Wei Tseng — Kerneoplysninger
+
+guidanceTeamCopy.da.qualificationLabel
+    Bevilling og kontor
+
+guidanceTeamCopy.da.qualificationSentence
+    {name} er berettiget til at udøve advokaterhvervet i Taiwan og er ledende advokat ved {firm}.
+
+guidanceTeamCopy.da.practiceLabel
+    Hovedområder
+
+guidanceTeamCopy.da.consultationLanguagesLabel
+    Rådgivningssprog
+
+guidanceTeamCopy.da.roles.tseng-junwei
+    Ledende advokat i Taiwan (Managing Attorney)
+
+guidanceTeamCopy.da.roles.chang-rongxuan
+    Advokat i Taiwan (Taiwan Attorney)
+
+guidanceTeamCopy.da.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.da.roles.son-jungmin
+    Operativ ledelse Korea (Korea Operations Manager)
+
+guidanceTeamCopy.da.roles.huang-shengping
+    Tilknyttet revisor (Partner CPA)
+
+guidanceTeamBios.da.tseng-junwei.intro[0]
+    Kontoret behandler virksomheds- og individuelle sager i Taiwan på engelsk, japansk, koreansk og kinesisk.
+
+guidanceTeamBios.da.tseng-junwei.intro[1]
+    Hun repræsenterede en koreansk studerende i et erstatningskrav efter en skade i et fitnesscenter og opnåede en dom i første instans på TWD 1.57M.
+
+guidanceTeamBios.da.tseng-junwei.education[0]
+    Kandidat (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.da.tseng-junwei.education[1]
+    Bachelor (B.A.) med dobbelt spor ret og finans, National Chengchi University
+
+guidanceTeamBios.da.tseng-junwei.education[2]
+    Udvekslingsstuderende ved Kobe University og Waseda University
+
+guidanceTeamBios.da.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.da.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.da.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.da.chang-rongxuan.intro[0]
+    Tidligere ved Ministry of Education, Legal Affairs Division, med vægt på forvaltnings- og civilretlige sager.
+
+guidanceTeamBios.da.chang-rongxuan.intro[1]
+    Erfaring med sager om universiteter, undervisningspersonalets rettigheder og forvaltningsretlige klager.
+
+guidanceTeamBios.da.chang-rongxuan.education[0]
+    Juridisk bachelor (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.da.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.da.chang-rongxuan.experience[1]
+    Advokat, Hovering International Law Firm
+
+guidanceTeamBios.da.chang-fangyu.intro[0]
+    Paralegal med lang virksomhed som senior paralegal ved flere kontorer, ansvarlig for processuel støtte, selskabsret og udenlandske investeringer.
+
+guidanceTeamBios.da.chang-fangyu.intro[1]
+    Støtte ved procedurer, selskabsstiftelse, tilladelser til udenlandske investeringer, licensansøgninger og udvekslingen mellem Korea og Taiwan.
+
+guidanceTeamBios.da.chang-fangyu.education[0]
+    Juridisk bachelor (LL.B.), Tunghai University
+
+guidanceTeamBios.da.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.da.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.da.son-jungmin.intro[0]
+    Koordinerer rådgivningstider og kommunikationen for klienter fra Korea.
+
+guidanceTeamBios.da.son-jungmin.intro[1]
+    Støtter udvekslingen mellem områder via dokumentsystemer og arbejdsgange, på grundlag af datalogi.
+
+guidanceTeamBios.da.son-jungmin.education[0]
+    Bachelor (B.S.) i datalogi, National Cheng Kung University
+
+guidanceTeamBios.da.son-jungmin.experience[0]
+    Område Korea-drift, Hovering International Law Firm
+
+guidanceTeamBios.da.huang-shengping.intro[0]
+    Har afsluttet bachelor- og kandidatprogrammer i regnskab ved National Chengchi University og leder nu et revisionskontor.
+
+guidanceTeamBios.da.huang-shengping.intro[1]
+    Støtter den integrerede analyse af juridiske, skattemæssige og finansielle risici for virksomhedsklienter.
+
+guidanceTeamBios.da.huang-shengping.education[0]
+    Kandidat (M.A.) i regnskab, National Chengchi University
+
+guidanceTeamBios.da.huang-shengping.education[1]
+    Bachelor (B.A.) i regnskab, National Chengchi University
+
+guidanceTeamBios.da.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.da.Korean
+    koreansk
+
+guidanceLanguageNames.da.Chinese
+    kinesisk
+
+guidanceLanguageNames.da.Japanese
+    japansk
+
+guidancePracticeAreaNames.da.Taiwan company setup
+    Selskabsstiftelse i Taiwan
+
+guidancePracticeAreaNames.da.Taiwan investment counsel
+    Juridisk rådgivning om investering i Taiwan
+
+guidancePracticeAreaNames.da.Civil litigation and damages
+    Civile sager og erstatning
+
+guidancePracticeAreaNames.da.Trademark and patent filings
+    Varemærke- og patentansøgninger
+
+guidancePracticeAreaNames.da.Visa and residency
+    Visum og ophold
+
+guidancePracticeAreaNames.da.Family and labor disputes
+    Familie- og arbejdssager
+
+guidanceOfficeCopy.da.label
+    OFFICES
+
+guidanceOfficeCopy.da.title
+    Kontorer
+
+guidanceOfficeCopy.da.description
+    Adresser på Hovering International Law Firms kontorer i Taiwan.
+
+guidanceOfficeCopy.da.officeLabel
+    Kontor
+
+guidanceOfficeCopy.da.mapPreviewLabel
+    Kortforhåndsvisning
+
+guidanceOfficeCopy.da.koreaOfficeTitle
+    Kontor Korea
+
+guidanceOfficeCopy.da.koreaAddressCardLabel
+    Adresse på kontoret i Korea
+
+guidanceOfficeCopy.da.koreaMapLinkLabel
+    Se i Naver Map
+
+guidanceOfficeCopy.da.reviewCountWord
+    anmeldelser
+
+guidanceOfficeCopy.da.phoneLabel
+    Telefon
+
+guidanceOfficeCopy.da.faxLabel
+    Fax
+
+guidanceOfficeCopy.da.mapLinkLabel
+    Se på kortet
+
+guidanceOfficeCopy.da.photoAlts[0]
+    Modtagelsesrummet på kontoret i Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.da.photoAlts[1]
+    Advokatrummet på kontoret i Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.da.photoAlts[2]
+    Møderummet på kontoret i Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.da.officeTitles.taipei
+    Taipei
+
+guidanceOfficeCopy.da.officeTitles.taichung
+    Taichung
+
+guidanceOfficeCopy.da.officeTitles.kaohsiung
+    Kaohsiung
+
+guidanceOfficeCopy.da.officeTitles.pingtung
+    Pingtung
+
+guidanceFooterCopy.da.officeLabel
+    Kontorer
+
+guidanceFooterCopy.da.officeQuickLinksLabel
+    Hurtige links til kontorerne
+
+guidanceFooterCopy.da.followLabel
+    Følg
+
+guidanceFooterCopy.da.blogLabel
+    Blog
+
+guidanceFooterCopy.da.websiteLabel
+    Officiel hjemmeside
+
+guidanceFooterCopy.da.sitemapLabel
+    Sitemap
+
+guidanceFooterCopy.da.copyEmailLabel
+    Kopiér e-mailadressen
+
+guidanceFooterCopy.da.emailCopiedMessage
+    E-mailadressen er kopieret.
+
+guidanceFooterCopy.da.officialConsultationEmailLabel
+    Officiel e-mail til rådgivning
+
+internationalInquiryCopy.da.guidanceNotice
+    Denne side er skrevet på dansk som almindelig orientering, ikke som juridisk rådgivning for Deres sag.
+
+internationalInquiryCopy.da.consultationNotice
+    Rådgivningen foregår på fire sprog: engelsk, kinesisk (中文), japansk og koreansk.
+
+internationalInquiryCopy.da.methodConfirmationNotice
+    Hvis De ikke kan bruge noget af de fire sprog, skal De vælge «Kommunikationsvejen skal bekræftes». Vi svarer for at undersøge en brugbar kommunikationsvej, hvis en sådan vej findes; en ydelse på et andet sprog sikres ikke, og en svartid loves ikke.
+
+internationalInquiryCopy.da.preparationNotice
+    De må skrive resuméet på Deres eget sprog. Originalteksten gemmes, som De har skrevet den, og oversættes ikke automatisk.
+
+internationalInquiryCopy.da.heading
+    Send en anmodning om rådgivning
+
+internationalInquiryCopy.da.intro
+    Beskriv Deres sag kort. En advokat gennemgår indholdet, før det næste skridt drøftes.
+
+internationalInquiryCopy.da.submitLabel
+    Send anmodningen
+
+internationalInquiryCopy.da.submittingLabel
+    Sendes…
+
+internationalInquiryCopy.da.successMessage
+    Vi har modtaget Deres anmodning; den venter på gennemgang. Det betyder ikke, at rådgivningen har fundet sted, eller at en tid er bekræftet.
+
+internationalInquiryCopy.da.savedNotificationPendingMessage
+    Deres anmodning er gemt, men underretningen til kontoret er endnu ikke bekræftet. Det, De har skrevet, går ikke tabt. Hvis De ikke får svar, kan De også skrive til e-mailadressen på kontaktsiden.
+
+internationalInquiryCopy.da.receiptIdLabel
+    Modtagelsesnummer
+
+internationalInquiryCopy.da.failureMessage
+    Deres anmodning kunne ikke sendes. Prøv igen, eller skriv til e-mailadressen på kontaktsiden.
+
+internationalInquiryCopy.da.originalLanguageLabel
+    Sprog, De skriver på
+
+internationalInquiryCopy.da.originalLanguagePlaceholder
+    For eksempel dansk, engelsk, kinesisk eller et andet sprog
+
+internationalInquiryCopy.da.preferredConsultationLanguageLabel
+    Sprog, De ønsker til rådgivningen
+
+internationalInquiryCopy.da.originalTextLabel
+    Kort fremstilling af sagen (på Deres sprog)
+
+internationalInquiryCopy.da.originalTextPlaceholder
+    Angiv, hvad der er sket, hvilken hjælp De har brug for, og fristen, hvis der er en. Angiv ikke pasnummer, identitetsnummer eller kontooplysninger.
+
+internationalInquiryCopy.da.nameLabel
+    Navn
+
+internationalInquiryCopy.da.emailLabel
+    E-mail
+
+internationalInquiryCopy.da.consentLabel
+    Jeg har læst privatlivssiden og samtykker i, at denne anmodning sendes.
+
+internationalInquiryCopy.da.privacyLinkLabel
+    Privatliv
+
+internationalInquiryCopy.da.requiredMessage
+    Dette felt er obligatorisk.
+
+internationalInquiryCopy.da.invalidEmailMessage
+    Angiv en gyldig e-mailadresse.
+
+internationalInquiryCopy.da.tooLongMessage
+    Teksten er for lang. Forkort den og send igen.
+
+internationalInquiryCopy.da.sourceLanguageNotice
+    Denne artikel er kun offentliggjort på {language}; linket åbner originalsiden.
+
+internationalInquiryCopy.da.unavailableTranslationNotice
+    Dette punkt er endnu ikke tilgængeligt på sidens sprog. Et link med originalsproget åbner originalteksten.
+
+internationalInquiryCopy.da.unavailableLanguageNotice
+    Denne side tilbydes ikke på {language}.
+
+internationalInquiryCopy.da.languageOptions.en
+    Engelsk (English)
+
+internationalInquiryCopy.da.languageOptions.zh-hant
+    Kinesisk (中文)
+
+internationalInquiryCopy.da.languageOptions.ja
+    Japansk (日本語)
+
+internationalInquiryCopy.da.languageOptions.ko
+    Koreansk (한국어)
+
+internationalInquiryCopy.da.languageOptions.needs-method-confirmation
+    Ingen af de fire sprog er brugbare — kommunikationsvejen skal bekræftes
+
+guidanceAnswers.da.services.answer
+    Kontoret behandler seks arbejdsgrupper efter Taiwans ret: investering og selskabsstiftelse, civile tvister og erstatning, ægteskab, familie og arv, arbejde, strafferet samt immaterialret. Omfanget af hver sag bekræftes separat, efter at en advokat har gennemgået det indhold, De sender. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.
+
+guidanceAnswers.da.services.sources[0]
+    /da/faq
+
+guidanceAnswers.da.services.sources[1]
+    /da/contact
+
+guidanceAnswers.da.about.answer
+    Hovering International Law Firm er et advokatkontor i Taiwan, grundlagt i 2016 af dimittender fra National Taiwan University (國立臺灣大學), med kontorer i Taipei, Kaohsiung, Taichung og Pingtung. Siden 2020 findes en regnskabsafdeling; kontoret i Taichung behandler sager med tilknytning til Korea og Japan. Kontoret lover intet resultat. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.
+
+guidanceAnswers.da.about.sources[0]
+    /da/lawyers
+
+guidanceAnswers.da.about.sources[1]
+    /da/services
+
+guidanceAnswers.da.lawyers.answer
+    Denne side viser profiler for Hoverings advokater, operative ledelse og tilknyttede revision. Advokat Wei Tseng (曾雋崴) er berettiget i Taiwan og er kontorets ledende advokat; hun arbejder med klienter fra Korea, Japan og andre internationale klienter. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.
+
+guidanceAnswers.da.lawyers.sources[0]
+    /da/about
+
+guidanceAnswers.da.lawyers.sources[1]
+    /da/contact
+
+guidanceAnswers.da.pricing.answer
+    Denne side offentliggør ingen prisliste. Først fastlægges arbejdets omfang ud fra det resumé, De sender, derefter bekræftes beløb og beregningsmåde med Dem, før arbejdet begynder. Samtalen med en advokat kan være mod betaling; ud over honoraret kan rets- eller myndighedsomkostninger opstå. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.
+
+guidanceAnswers.da.pricing.sources[0]
+    /da/contact
+
+guidanceAnswers.da.pricing.sources[1]
+    /da/faq
+
+guidanceAnswers.da.contact.answer
+    Send Deres resumé via kontaktformularen: hvad der er sket, hvilken hjælp De har brug for, hvilken forbindelse sagen har med Taiwan, og fristen, hvis De kender den. I det første trin behøver De endnu ikke sende identitetsdokumenter eller hele beviset. Kontoret lover ingen svartid og bekræfter ingen tid via denne side. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.
+
+guidanceAnswers.da.contact.sources[0]
+    /da/faq
+
+guidanceAnswers.da.contact.sources[1]
+    /da/pricing
+
+guidanceAnswers.da.faq.answer
+    Denne del besvarer hyppige spørgsmål på niveauet almindelig information: de seks arbejdsgrupper, forberedelsen før kontakten, hvordan omkostningerne fastlægges, og hvad en sendt meddelelse betyder. En sendt anmodning venter på en advokats gennemgang; den er ikke en juridisk udtalelse, ikke en tid og skaber ikke et forhold mellem advokat og klient. Rådgivningen foregår kun på engelsk, kinesisk, japansk og koreansk.
+
+guidanceAnswers.da.faq.sources[0]
+    /da/contact
+
+guidanceAnswers.da.faq.sources[1]
+    /da/services
+
+GUIDANCE_LLMS_NOTICES.da.consultationNotice
+    Disse vejledninger er skrevet på dansk, men rådgivningen med en advokat foregår kun på engelsk, kinesisk (中文), japansk og koreansk.
+
+GUIDANCE_LLMS_NOTICES.da.discoveryNotice
+    Filen llms.txt er kun et kort til at finde offentlige sider; den lover ikke søgeplacering, støtte, anbefaling fra kunstig intelligens eller synlighed.
+
+GUIDANCE_LLMS_NOTICES.da.confidentialNotice
+    Fordi originalteksten gemmes, skriv i begyndelsen ikke noget, der endnu ikke er nødvendigt, for eksempel pasnummer, identitetsnummer eller kontooplysninger.

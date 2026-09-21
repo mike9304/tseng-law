@@ -78,6 +78,6 @@ Pravidla správních orgánů se mohou často měnit; před zápisem právnické
 ---
 
 > Další čtení:
-> - [Souhrnný průvodce založením společnosti na Tchaj-wanu — postupy, náklady a právní formy](/ko/guides/taiwan-company-setup)
-> - [Advokátka na Tchaj-wanu hovořící korejsky](/ko/korean-lawyer-in-taiwan)
-> - [Vodítka advokátky k právnickým osobám a založení společnosti na Tchaj-wanu](/ko/taiwan-company-setup-lawyer)
+> - [Které věci vedeme](/cs/services)
+> - [Mezinárodní tým Hovering](/cs/lawyers)
+> - [Jak kancelář oslovit](/cs/contact)

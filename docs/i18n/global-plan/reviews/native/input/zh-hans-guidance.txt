@@ -1,0 +1,1096 @@
+# zh-hans guidance pack strings (path → text). Generated 2026-09-21
+
+guidanceContent.zh-hans.languageName
+    简体中文
+
+guidanceContent.zh-hans.nav.home
+    首页
+
+guidanceContent.zh-hans.nav.services
+    业务领域
+
+guidanceContent.zh-hans.nav.about
+    事务所
+
+guidanceContent.zh-hans.nav.lawyers
+    律师
+
+guidanceContent.zh-hans.nav.pricing
+    范围与费用
+
+guidanceContent.zh-hans.nav.contact
+    联系
+
+guidanceContent.zh-hans.nav.faq
+    常见问题
+
+guidanceContent.zh-hans.nav.privacy
+    隐私
+
+guidanceContent.zh-hans.nav.disclaimer
+    免责声明
+
+guidanceContent.zh-hans.nav.columns
+    文章
+
+guidanceContent.zh-hans.contactCta
+    提交咨询请求
+
+guidanceContent.zh-hans.footerNotice
+    本简体中文页面仅提供关于本所依台湾法律所从事工作的一般说明。它不是针对具体案件的法律意见，仅提交信息本身并不成立律师与委托人关系。
+
+guidanceContent.zh-hans.skipLink
+    跳过导航，前往正文
+
+guidanceContent.zh-hans.menuLabel
+    页面目录
+
+guidanceContent.zh-hans.languageLabel
+    显示语言
+
+guidanceContent.zh-hans.mega.services.description
+    本所处理依台湾法律划分的主要业务类别。
+
+guidanceContent.zh-hans.mega.services.viewAllLabel
+    查看全部
+
+guidanceContent.zh-hans.mega.columns.description
+    说明常见台湾法律问题的文章。
+
+guidanceContent.zh-hans.mega.columns.viewAllLabel
+    查看全部
+
+guidanceContent.zh-hans.mega.lawyers.description
+    介绍在职律师与联系方式。
+
+guidanceContent.zh-hans.mega.lawyers.viewAllLabel
+    查看全部
+
+guidanceContent.zh-hans.mega.pricing.description
+    本页说明工作范围，以及费用如何确定。
+
+guidanceContent.zh-hans.mega.pricing.viewAllLabel
+    查看全部
+
+guidanceContent.zh-hans.mega.faq.description
+    关于本所在台湾工作的常见问题。
+
+guidanceContent.zh-hans.mega.faq.viewAllLabel
+    查看全部
+
+guidanceContent.zh-hans.notFoundTitle
+    找不到页面
+
+guidanceContent.zh-hans.notFoundText
+    您查找的页面不存在或已移动。您可以返回简体中文首页，查看现有说明。
+
+guidanceContent.zh-hans.backHomeLabel
+    返回首页
+
+guidanceContent.zh-hans.readSourceLabel
+    打开原文语言的文章列表
+
+guidanceContent.zh-hans.home.heroScrollLabel
+    向下滚动
+
+guidanceContent.zh-hans.home.heroColumnsCtaLabel
+    查看文章
+
+guidanceContent.zh-hans.home.servicesDetailLabel
+    查看详情
+
+guidanceContent.zh-hans.home.servicesAssistanceBefore
+    若不清楚您的事项属于哪一组，联系页面
+
+guidanceContent.zh-hans.home.servicesAssistanceLinkLabel
+    联系
+
+guidanceContent.zh-hans.home.servicesAssistanceAfter
+    说明如何撰写摘要，以便律师审阅。
+
+guidanceContent.zh-hans.home.columnsViewAllLabel
+    查看全部文章
+
+guidanceContent.zh-hans.home.columnsReadMoreLabel
+    继续阅读
+
+guidanceContent.zh-hans.home.columnsReviewLabel
+    由律师曾雋崴审阅
+
+guidanceContent.zh-hans.home.columnsOriginalLanguageBadge
+    原文语言
+
+guidanceContent.zh-hans.home.columnsOriginalLanguageNote
+    下列文章尚无简体中文版本。列表保持原文语言并打开相应语言页面；内容不会被自动翻译。
+
+guidanceContent.zh-hans.home.imageBandAlt
+    日光下的台湾传统三合院与现代亭阁
+
+guidanceContent.zh-hans.home.videoPauseLabel
+    暂停影片
+
+guidanceContent.zh-hans.home.videoPlayLabel
+    播放影片
+
+guidanceContent.zh-hans.home.videoReplayLabel
+    重新播放影片
+
+guidanceContent.zh-hans.pages.home.eyebrow
+    说明
+
+guidanceContent.zh-hans.pages.home.title
+    台湾法律服务 — 简体中文说明
+
+guidanceContent.zh-hans.pages.home.description
+    以简体中文说明 Hovering International Law Firm 在台湾的业务范围、咨询语言与初次联系。
+
+guidanceContent.zh-hans.pages.home.intro
+    Hovering International Law Firm 协助来自境外、亦包括与台湾有关的委托人处理依台湾法律的事项：投资与公司设立、民事争议、婚姻家庭与继承、劳动、刑事与智慧财产。本简体中文部分协助您判断哪些工作属于本所范围、需要准备什么、以及如何联系我们。此处为一般说明，不是针对您本人案件的法律意见。
+
+guidanceContent.zh-hans.pages.home.sections[0].heading
+    我们做什么
+
+guidanceContent.zh-hans.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm 是在台湾执业的律师事务所。本所依台湾法律工作，并在台北、高雄、台中与屏东设有办公室。我们为企业提供咨询、代理诉讼，并协助境外委托人完成在台湾所需的步骤。
+
+guidanceContent.zh-hans.pages.home.sections[0].paragraphs[1]
+    此处全部内容均为一般说明。个案结果取决于事实、适用规定与时间点。这些说明不能取代就您的文件与律师进行的讨论。
+
+guidanceContent.zh-hans.pages.home.sections[1].heading
+    页面语言与咨询语言
+
+guidanceContent.zh-hans.pages.home.sections[1].paragraphs[0]
+    本页面以简体中文撰写。律师咨询以英语、中文、日语和韩语进行。咨询时使用的中文包括普通话与书面中文。阅读本页并不等于某一次咨询将以某一种书面形式进行。
+
+guidanceContent.zh-hans.pages.home.sections[1].paragraphs[1]
+    本页不承诺口译、回复时限或预约。若您无法使用这四种咨询语言中的任何一种，联系页面说明我们将如何审视沟通方式。
+
+guidanceContent.zh-hans.pages.home.sections[2].heading
+    业务类别
+
+guidanceContent.zh-hans.pages.home.sections[2].paragraphs[0]
+    业务范围包括以下六组。业务领域页面更详细地说明每一组，并写明本所不承诺的事项。
+
+guidanceContent.zh-hans.pages.home.sections[2].items[0]
+    在台湾的投资与公司设立
+
+guidanceContent.zh-hans.pages.home.sections[2].items[1]
+    民事与损害赔偿
+
+guidanceContent.zh-hans.pages.home.sections[2].items[2]
+    婚姻、家庭与继承
+
+guidanceContent.zh-hans.pages.home.sections[2].items[3]
+    劳动争议
+
+guidanceContent.zh-hans.pages.home.sections[2].items[4]
+    刑事案件
+
+guidanceContent.zh-hans.pages.home.sections[2].items[5]
+    智慧财产：商标、专利与著作权
+
+guidanceContent.zh-hans.pages.home.sections[3].heading
+    建议从何处开始
+
+guidanceContent.zh-hans.pages.home.sections[3].paragraphs[0]
+    请先阅读业务领域页面，判断您的事项是否属于本所范围，再阅读范围与费用以及联系，了解工作范围如何确定、以及费用如何在开始工作前确认。
+
+guidanceContent.zh-hans.pages.home.sections[3].paragraphs[1]
+    发送信息时，您可以用自己的语言撰写摘要。原文会按您写下的内容保存，不会被自动翻译。已发送的信息是等待审阅的请求：这还不是咨询，也还不是已确认的预约。
+
+guidanceContent.zh-hans.pages.services.eyebrow
+    业务领域
+
+guidanceContent.zh-hans.pages.services.title
+    我们处理哪些事项
+
+guidanceContent.zh-hans.pages.services.description
+    本所在台湾的六组业务，以及您应首先了解的界限。
+
+guidanceContent.zh-hans.pages.services.intro
+    以下是本所实际处理的类别，以及初期常被问到的问题。说明协助您判断事项是否属于本所范围；它是一般性的，不是对单一案件的法律分析。
+
+guidanceContent.zh-hans.pages.services.sections[0].heading
+    在台湾的投资与公司设立
+
+guidanceContent.zh-hans.pages.services.sections[0].paragraphs[0]
+    我们协助境外投资人与企业在台湾设立或营运公司：选择组织形式、准备并提交文件、资本缴入、银行事项、营业场所审查以及行业特定要求。我们也协助因在台湾设立与营运而产生的会计与税务。
+
+guidanceContent.zh-hans.pages.services.sections[0].paragraphs[1]
+    流程与所需时间因组织形式、投资人、行业、银行与既有文件而异。公司设立本身并不会带来居留证（居留）或工作许可（工作许可）：那是另案程序，须依当事人情况另行判断。
+
+guidanceContent.zh-hans.pages.services.sections[1].heading
+    民事与损害赔偿
+
+guidanceContent.zh-hans.pages.services.sections[1].paragraphs[0]
+    本组包括合同争议、因侵权行为产生的损害赔偿以及消费者争议。工作通常先整理时序、审查现有文件与证据，然后再决定下一步。
+
+guidanceContent.zh-hans.pages.services.sections[1].paragraphs[1]
+    期限（包括法定起诉期间）与证据是否齐备会影响进程。因此请尽早告知已知日期。请保存合同、往来信息、付款凭证或现场照片，并在第一次信息中提及。
+
+guidanceContent.zh-hans.pages.services.sections[2].heading
+    婚姻、家庭与继承
+
+guidanceContent.zh-hans.pages.services.sections[2].paragraphs[0]
+    我们处理离婚（离婚）、财产分配、未成年子女权利义务之行使或负担、会面交往与继承（继承），即使当事人或财产位于不同国家。跨境家事案件往往需要额外审查户籍资料、文书形式及其在台湾的证明力。
+
+guidanceContent.zh-hans.pages.services.sections[2].paragraphs[1]
+    家事案件常伴随期限与并行程序，第一次摘要应写明当事人关系、目前居住地以及已经进行的程序。
+
+guidanceContent.zh-hans.pages.services.sections[3].heading
+    劳动争议
+
+guidanceContent.zh-hans.pages.services.sections[3].paragraphs[0]
+    本组包括劳动关系终止、依台湾法律的资遣费（资遣费；不可与其他法域的制度等同）、工资以及劳动契约争议，劳资双方均可能涉及。审查时，我们把终止原因与预告、给付及期限问题分开看待。
+
+guidanceContent.zh-hans.pages.services.sections[3].paragraphs[1]
+    劳动契约、工作规则、薪资单与当事人往来书面通常是关键文件。若您仍持有，请在摘要中提及。
+
+guidanceContent.zh-hans.pages.services.sections[4].heading
+    刑事案件
+
+guidanceContent.zh-hans.pages.services.sections[4].paragraphs[0]
+    我们在侦查与审判阶段提供协助，对象可以是犯罪嫌疑人或被告，也可以是被害人，并评估企业活动中的刑事风险。
+
+guidanceContent.zh-hans.pages.services.sections[4].paragraphs[1]
+    刑事案件往往期限短、阶段固定。若您已收到检警或法院文书，请尽早告知文书上的日期，以便按正确顺序审阅内容。
+
+guidanceContent.zh-hans.pages.services.sections[5].heading
+    智慧财产
+
+guidanceContent.zh-hans.pages.services.sections[5].paragraphs[0]
+    我们协助在台湾办理商标（商标）与专利（专利）登记、著作权以及这些权利的争议。
+
+guidanceContent.zh-hans.pages.services.sections[5].paragraphs[1]
+    本组中步骤顺序很重要：保护范围、申请时点与实际使用会影响选择。提交申请本身并不等于获得核准。
+
+guidanceContent.zh-hans.pages.services.sections[6].heading
+    范围及其确认
+
+guidanceContent.zh-hans.pages.services.sections[6].paragraphs[0]
+    本所依台湾法律执业，并处理上述各组事项。每一案件的范围会在律师审阅您的信息后另行确认。
+
+guidanceContent.zh-hans.pages.services.sections[6].paragraphs[1]
+    居留身份、工作许可及类似问题依各人文件与情况判断，而不是依国籍。若您的事项触及此类问题，请在联系时说明。本页既不承诺结果，也不承诺回复时限。
+
+guidanceContent.zh-hans.pages.about.eyebrow
+    事务所
+
+guidanceContent.zh-hans.pages.about.title
+    关于 Hovering International Law Firm
+
+guidanceContent.zh-hans.pages.about.description
+    关于这家台湾律师事务所、其办公室以及与境外当事人合作的基本说明。
+
+guidanceContent.zh-hans.pages.about.intro
+    Hovering International Law Firm 是台湾的律师事务所。律师的工作涵盖企业咨询至诉讼。本部分说明事务所的成立、地点以及与境外当事人的合作。
+
+guidanceContent.zh-hans.pages.about.sections[0].heading
+    成立与组织
+
+guidanceContent.zh-hans.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm（昊鼎國際法律事務所）于 2016 年由曾就读国立台湾大学（國立臺灣大學）的律师创立。中文名称昊鼎结合「昊」（广阔的天空）与「鼎」（稳固的根基），说明事务所自创立以来的方向。
+
+guidanceContent.zh-hans.pages.about.sections[0].paragraphs[1]
+    我们在台北、高雄、台中与屏东设有办公室。高雄办公室侧重企业治理，并处理民事、刑事与行政争议。台中办公室处理营建、智慧财产以及与韩国、日本有关的事项。屏东办公室于 2017 年为当地需求开设。
+
+guidanceContent.zh-hans.pages.about.sections[0].paragraphs[2]
+    除律师业务外，自 2020 年起另有 Hovering Accounting Office，为企业主与高净值个人提供会计与税务规划。
+
+guidanceContent.zh-hans.pages.about.sections[1].heading
+    与境外当事人的合作
+
+guidanceContent.zh-hans.pages.about.sections[1].paragraphs[0]
+    跨境工作包括公司设立、签证、商标与专利申请、法律风险审查以及企业税务咨询。台中办公室尤其处理营建、智慧财产以及与韩国、日本有关的事项。律师曾雋崴（Wei Tseng）在上述各组中协助来自韩国、日本及其他国际委托人。
+
+guidanceContent.zh-hans.pages.about.sections[1].paragraphs[1]
+    能否承接取决于内容与沟通语言。若您的事项属于上述各组，并可以四种咨询语言之一讨论，您可以提交摘要供审阅。
+
+guidanceContent.zh-hans.pages.about.sections[2].heading
+    当您联系我们时
+
+guidanceContent.zh-hans.pages.about.sections[2].paragraphs[0]
+    收到您的摘要后，律师会审阅内容，再讨论可能的工作范围、仍需的文件以及下一步。涉及税务或会计问题时，事务所可与会计部门在同一流程中合作。
+
+guidanceContent.zh-hans.pages.about.sections[2].paragraphs[1]
+    每一案件的结果取决于事实与现有文件；我们不承诺结果。若您需要针对自身情况的确定答复，必须用四种咨询语言之一，就文件与律师讨论。
+
+guidanceContent.zh-hans.pages.lawyers.eyebrow
+    律师
+
+guidanceContent.zh-hans.pages.lawyers.title
+    Hovering 国际团队
+
+guidanceContent.zh-hans.pages.lawyers.description
+    Hovering 律师、运营主管与合作会计师的简介。
+
+guidanceContent.zh-hans.pages.lawyers.intro
+    
+
+guidanceContent.zh-hans.pages.pricing.eyebrow
+    范围与费用
+
+guidanceContent.zh-hans.pages.pricing.title
+    工作范围与费用如何确定
+
+guidanceContent.zh-hans.pages.pricing.description
+    说明顺序：先确定工作范围，再确认费用，以及本页为何不含价目表。
+
+guidanceContent.zh-hans.pages.pricing.intro
+    本页说明费用如何确定，而不是金额。金额取决于各案工作范围，只有在该范围清楚之后才有意义。
+
+guidanceContent.zh-hans.pages.pricing.sections[0].heading
+    首先确定工作范围
+
+guidanceContent.zh-hans.pages.pricing.sections[0].paragraphs[0]
+    同类事项的工作量可能相差很大，取决于当事人人数、现有文件、须遵守的期限，以及程序是否已经开始。因此第一步始终是确定哪些属于工作、哪些不属于。
+
+guidanceContent.zh-hans.pages.pricing.sections[0].paragraphs[1]
+    您一开始提交的摘要是确定该范围的基础。摘要越清楚说明经过、您的需求与期限，范围就能定得越准确。
+
+guidanceContent.zh-hans.pages.pricing.sections[1].heading
+    费用在开始工作前确认
+
+guidanceContent.zh-hans.pages.pricing.sections[1].paragraphs[0]
+    工作范围清楚后，费用金额与计算方式会在开始工作前与您讨论并确认。若范围中途改变，必须再次确认。
+
+guidanceContent.zh-hans.pages.pricing.sections[1].paragraphs[1]
+    本页不是报价，也不产生付款义务。通过本页发送请求同样不收取费用。
+
+guidanceContent.zh-hans.pages.pricing.sections[2].heading
+    咨询可以是有偿服务
+
+guidanceContent.zh-hans.pages.pricing.sections[2].paragraphs[0]
+    与律师的咨询可以是有偿服务。本页并未说明第一次谈话不收取费用，任何部分都不应被如此理解。
+
+guidanceContent.zh-hans.pages.pricing.sections[2].paragraphs[1]
+    若咨询有偿，金额与付款方式会在咨询进行前告知。
+
+guidanceContent.zh-hans.pages.pricing.sections[3].heading
+    本页为何不列出费率
+
+guidanceContent.zh-hans.pages.pricing.sections[3].paragraphs[0]
+    费用取决于案件本身：工作量、当事人人数、文件、期限，以及程序是否已经进行。预先给出的数字无法反映您这一件的费用。因此我们先确定工作范围，再在开始工作前告知费用。
+
+guidanceContent.zh-hans.pages.pricing.sections[3].paragraphs[1]
+    除律师酬金外，还可能产生法院、行政机关或第三方费用。这些与酬金分开，并取决于各该程序。
+
+guidanceContent.zh-hans.pages.contact.eyebrow
+    联系
+
+guidanceContent.zh-hans.pages.contact.title
+    如何联系事务所
+
+guidanceContent.zh-hans.pages.contact.description
+    页面语言、咨询语言、当您无法使用四种语言时的做法，以及本页不承诺的事项。
+
+guidanceContent.zh-hans.pages.contact.intro
+    写信之前，请先区分以下三点。它们常被混在一起，但含义不同。
+
+guidanceContent.zh-hans.pages.contact.sections[0].heading
+    必须分开的三件事
+
+guidanceContent.zh-hans.pages.contact.sections[0].paragraphs[0]
+    页面的显示语言、与律师的咨询语言，以及您写信所用的语言，是三件分开的事。
+
+guidanceContent.zh-hans.pages.contact.sections[0].items[0]
+    页面语言：本说明以简体中文撰写。
+
+guidanceContent.zh-hans.pages.contact.sections[0].items[1]
+    咨询语言：咨询以英语、中文、日语和韩语进行。
+
+guidanceContent.zh-hans.pages.contact.sections[0].items[2]
+    您的书写语言：您可以用自己的语言撰写摘要；原文会按原样保存。
+
+guidanceContent.zh-hans.pages.contact.sections[1].heading
+    若您无法使用四种咨询语言中的任何一种
+
+guidanceContent.zh-hans.pages.contact.sections[1].paragraphs[0]
+    在联系表单中，您可以选择「沟通方式须待确认」。我们会回复，以审视是否存在可行的沟通方式；不以其他语言提供服务，也不承诺回复时限。
+
+guidanceContent.zh-hans.pages.contact.sections[1].paragraphs[1]
+    这只是审视步骤，不是承诺。我们不承诺口译、不以四种语言之外的语言提供服务，也不承诺受理每一件事项。
+
+guidanceContent.zh-hans.pages.contact.sections[2].heading
+    第一次信息应写什么
+
+guidanceContent.zh-hans.pages.contact.sections[2].paragraphs[0]
+    请说明发生了什么、您需要何种协助、事项与台湾的关联，以及您所知的期限。若已收到法院或行政机关文书，请写明文书上的日期。
+
+guidanceContent.zh-hans.pages.contact.sections[2].paragraphs[1]
+    初期不必发送护照号码、身份证号、账户资料、病历或全部证据。请等待律师指示，再以安全方式发送敏感文件。
+
+guidanceContent.zh-hans.pages.contact.sections[3].heading
+    本页不承诺的事项
+
+guidanceContent.zh-hans.pages.contact.sections[3].paragraphs[0]
+    我们不承诺回复时限，不通过本页确认预约，不指定特定律师，也不提供口译。书面翻译是另一回事：您的信息不会被自动翻译。
+
+guidanceContent.zh-hans.pages.contact.sections[3].paragraphs[1]
+    若您发送请求，内容会被保存并等待审阅。若一段时间没有回复，您可以再次写信至联系页所列的电子邮件地址。
+
+guidanceContent.zh-hans.pages.faq.eyebrow
+    常见问题
+
+guidanceContent.zh-hans.pages.faq.title
+    常见问题
+
+guidanceContent.zh-hans.pages.faq.description
+    关于业务范围、准备、语言、费用以及已发送请求含义的说明。
+
+guidanceContent.zh-hans.pages.faq.intro
+    下列问题在一般说明的层面回答。针对您本人案件的答复，须待律师审阅文件之后才有可能。
+
+guidanceContent.zh-hans.pages.faq.sections[0].heading
+    如何使用本部分
+
+guidanceContent.zh-hans.pages.faq.sections[0].paragraphs[0]
+    若找不到针对您情况的答案，答复通常取决于特殊事实。请把这些事实写进摘要，而不要从本页自行推论。
+
+guidanceContent.zh-hans.pages.faq.faqs[0].question
+    事务所处理哪些事项？
+
+guidanceContent.zh-hans.pages.faq.faqs[0].answer
+    我们处理六组：在台湾的投资与公司设立、民事与损害赔偿、婚姻家庭与继承、劳动争议、刑事与智慧财产。是否受理，须在审阅内容后决定。
+
+guidanceContent.zh-hans.pages.faq.faqs[1].question
+    联系前应准备什么？
+
+guidanceContent.zh-hans.pages.faq.faqs[1].answer
+    请准备经过、您的需求、与台湾的关联以及期限（若有）的简短摘要。若已有法院或行政机关文书，请写明日期。此阶段不必发送身份证件或全部证据。
+
+guidanceContent.zh-hans.pages.faq.faqs[2].question
+    可以用中文咨询吗？
+
+guidanceContent.zh-hans.pages.faq.faqs[2].answer
+    可以。律师咨询以英语、中文、日语和韩语进行。本页面以简体中文撰写，咨询时使用的中文包括普通话与书面中文。本页不承诺口译。书面翻译是另一回事：您写下的原文会按原样保存，不会被自动翻译。
+
+guidanceContent.zh-hans.pages.faq.faqs[3].question
+    若我无法使用这四种语言怎么办？
+
+guidanceContent.zh-hans.pages.faq.faqs[3].answer
+    发送请求时请选择「沟通方式须待确认」。我们会回复以审视沟通方式，但不以其他语言提供服务。这是审视步骤，不是能够以其他语言工作的承诺。
+
+guidanceContent.zh-hans.pages.faq.faqs[4].question
+    我写下的原文如何处理？
+
+guidanceContent.zh-hans.pages.faq.faqs[4].answer
+    您写下的原文会按原样保存，不会被自动翻译。如有需要，后续沟通所用的语言会与您确认。
+
+guidanceContent.zh-hans.pages.faq.faqs[5].question
+    请求发送后，咨询是否已经完成？
+
+guidanceContent.zh-hans.pages.faq.faqs[5].answer
+    否。已发送的请求正在等待律师审阅。这不是法律意见，不是已确认的预约，发送本身也不成立律师与委托人关系。
+
+guidanceContent.zh-hans.pages.faq.faqs[6].question
+    费用如何计算？
+
+guidanceContent.zh-hans.pages.faq.faqs[6].answer
+    首先确定工作范围，然后在开始工作前与您确认费用金额与计算方式。本页不列出数字，也未说明第一次谈话不收取费用。
+
+guidanceContent.zh-hans.pages.faq.faqs[7].question
+    若我的事项非常紧急怎么办？
+
+guidanceContent.zh-hans.pages.faq.faqs[7].answer
+    请在摘要开头写明期限或公文上的日期，以便审阅时看见这些日期。本页没有紧急通道，也不承诺回复时限；若事项不能等待，您应同时在所在地寻找其他途径。
+
+guidanceContent.zh-hans.pages.privacy.eyebrow
+    隐私
+
+guidanceContent.zh-hans.pages.privacy.title
+    通过联系表单收集的资料
+
+guidanceContent.zh-hans.pages.privacy.description
+    本简体中文部分的联系表单收集哪些资料、原文如何处理，以及您如何就资料联系我们。
+
+guidanceContent.zh-hans.pages.privacy.intro
+    本部分仅涉及这些说明页面上的联系表单。它描述资料处理，而不是技术上的绝对安全。
+
+guidanceContent.zh-hans.pages.privacy.sections[0].heading
+    收集哪些资料
+
+guidanceContent.zh-hans.pages.privacy.sections[0].paragraphs[0]
+    当您通过本部分的表单发送请求时，会记录下列资料：
+
+guidanceContent.zh-hans.pages.privacy.sections[0].items[0]
+    您填写的姓名
+
+guidanceContent.zh-hans.pages.privacy.sections[0].items[1]
+    用于回复的电子邮件地址
+
+guidanceContent.zh-hans.pages.privacy.sections[0].items[2]
+    发送时页面的显示语言
+
+guidanceContent.zh-hans.pages.privacy.sections[0].items[3]
+    您书写所用的语言
+
+guidanceContent.zh-hans.pages.privacy.sections[0].items[4]
+    您希望的咨询语言
+
+guidanceContent.zh-hans.pages.privacy.sections[0].items[5]
+    您写下的原文
+
+guidanceContent.zh-hans.pages.privacy.sections[0].items[6]
+    您对发送请求的同意
+
+guidanceContent.zh-hans.pages.privacy.sections[0].items[7]
+    用于找回该请求的收件编号
+
+guidanceContent.zh-hans.pages.privacy.sections[1].heading
+    原文按原样保存
+
+guidanceContent.zh-hans.pages.privacy.sections[1].paragraphs[0]
+    您的文本会按您写下的内容保存，不会被自动翻译。若处理需要翻译，会另行与您讨论。
+
+guidanceContent.zh-hans.pages.privacy.sections[1].paragraphs[1]
+    因为原文会被保存，初期请不要写下尚不需要的内容，例如护照号码、身份证号或账户资料。
+
+guidanceContent.zh-hans.pages.privacy.sections[2].heading
+    存放地点与访问
+
+guidanceContent.zh-hans.pages.privacy.sections[2].paragraphs[0]
+    您发送的内容存放在非公开场所。仅事务所内获授权的人员可为处理该请求而访问。
+
+guidanceContent.zh-hans.pages.privacy.sections[2].paragraphs[1]
+    本页不提供绝对安全承诺。任何传输途径与存放地点都不是完全安全的；因此敏感文件应仅在律师特别指示后再发送。
+
+guidanceContent.zh-hans.pages.privacy.sections[3].heading
+    使用目的
+
+guidanceContent.zh-hans.pages.privacy.sections[3].paragraphs[0]
+    所发送的资料用于审阅请求、回复您、厘清沟通方式，以及在开始工作后进行处理。
+
+guidanceContent.zh-hans.pages.privacy.sections[3].paragraphs[1]
+    未经另行同意，资料不会用于营销。
+
+guidanceContent.zh-hans.pages.privacy.sections[4].heading
+    通知与收件编号
+
+guidanceContent.zh-hans.pages.privacy.sections[4].paragraphs[0]
+    请求成功发送后，系统会通知事务所。若该通知尚未确认，您的文本仍会保存，不会丢失。
+
+guidanceContent.zh-hans.pages.privacy.sections[4].paragraphs[1]
+    收件编号用于在我们的记录中找回您的请求。保存后会显示；再次联系时您可以提及。
+
+guidanceContent.zh-hans.pages.privacy.sections[5].heading
+    您的权利与联系途径
+
+guidanceContent.zh-hans.pages.privacy.sections[5].paragraphs[0]
+    您可以通过联系页所列电子邮件地址，要求查阅、更正或删除您的资料，或撤回同意。若存在法定或程序上的保存义务，我们会说明限制。
+
+guidanceContent.zh-hans.pages.privacy.sections[5].paragraphs[1]
+    本页不列出固定保存期限，因为实际期间取决于事项是否继续以及相关义务。若您希望更早删除，请在联系时说明。
+
+guidanceContent.zh-hans.pages.privacy.sections[6].heading
+    存放地点与服务提供者
+
+guidanceContent.zh-hans.pages.privacy.sections[6].paragraphs[0]
+    本网站托管于 Vercel，您发送的内容存放在该服务的非公开对象存储中。电子邮件通过事务所使用的电子邮件服务发送。
+
+guidanceContent.zh-hans.pages.privacy.sections[6].paragraphs[1]
+    个别服务提供者的服务器可能位于台湾以外，您的资料可能在那里存放与处理。存放目的达成后，资料会立即删除；依法须保存的资料则在该期间内保留。个人资料相关询问请寄至 wei@hoveringlaw.com.tw。
+
+guidanceContent.zh-hans.pages.disclaimer.eyebrow
+    免责声明
+
+guidanceContent.zh-hans.pages.disclaimer.title
+    本页说明的范围与界限
+
+guidanceContent.zh-hans.pages.disclaimer.description
+    说明的一般性质、法律适用范围，以及律师与委托人关系成立的条件。
+
+guidanceContent.zh-hans.pages.disclaimer.intro
+    本部分说明这些简体中文说明页能为您做什么、不能做什么。
+
+guidanceContent.zh-hans.pages.disclaimer.sections[0].heading
+    仅一般说明
+
+guidanceContent.zh-hans.pages.disclaimer.sections[0].paragraphs[0]
+    这些页面的内容作为一般信息撰写。它不是针对您案件的法律意见，也不能取代对您本人文件的审查。
+
+guidanceContent.zh-hans.pages.disclaimer.sections[0].paragraphs[1]
+    个案结果取决于事实、适用规定与时间点；看起来相似的两种情况也可能有不同结局。
+
+guidanceContent.zh-hans.pages.disclaimer.sections[1].heading
+    法律适用范围
+
+guidanceContent.zh-hans.pages.disclaimer.sections[1].paragraphs[0]
+    本所依台湾法律执业，本页只讨论这一范围内的工作。
+
+guidanceContent.zh-hans.pages.disclaimer.sections[1].paragraphs[1]
+    内容不是依台湾以外其他法域（包括您居住地法律）所作的咨询。若您的事项有一部分涉及其他法域，我们会与您厘清该部分需要哪一类具备资格的专业人员。
+
+guidanceContent.zh-hans.pages.disclaimer.sections[2].heading
+    律师与委托人关系不会自行成立
+
+guidanceContent.zh-hans.pages.disclaimer.sections[2].paragraphs[0]
+    阅读本页、提交表单或发送电子邮件，本身并不成立律师与委托人关系。
+
+guidanceContent.zh-hans.pages.disclaimer.sections[2].paragraphs[1]
+    该关系须在事项经过审阅、双方确认承接工作之后才成立。
+
+guidanceContent.zh-hans.pages.disclaimer.sections[3].heading
+    不承诺结果
+
+guidanceContent.zh-hans.pages.disclaimer.sections[3].paragraphs[0]
+    本页任何部分都不是对案件结果、申请核准或居留与工作身份的承诺。
+
+guidanceContent.zh-hans.pages.disclaimer.sections[3].paragraphs[1]
+    外部链接仅供参考；我们不就第三方内容的正确性或时效性作出承诺。
+
+guidanceContent.zh-hans.pages.columns.eyebrow
+    文章
+
+guidanceContent.zh-hans.pages.columns.title
+    关于台湾法律的文章
+
+guidanceContent.zh-hans.pages.columns.description
+    关于常见台湾法律问题的简体中文文章。内容是发布当时的一般信息，不是针对您案件的法律意见。
+
+guidanceContent.zh-hans.pages.columns.intro
+    本所就常见台湾法律问题发布文章。已有简体中文的文章列于本页；另有四个链接，分别打开一种原文语言的文章列表。
+
+guidanceContent.zh-hans.pages.columns.sections[0].heading
+    依语言划分的四个列表
+
+guidanceContent.zh-hans.pages.columns.sections[0].paragraphs[0]
+    本部分含四个链接：韩文、中文、英文与日文的文章列表。每个链接写明列表语言，让您事先知道打开后是哪一种语言。
+
+guidanceContent.zh-hans.pages.columns.sections[0].paragraphs[1]
+    这四个列表是依文章原文语言划分的列表，不是翻译列表。已有简体中文的文章另行列于本页。
+
+guidanceContent.zh-hans.pages.columns.sections[1].heading
+    链接通向何处
+
+guidanceContent.zh-hans.pages.columns.sections[1].paragraphs[0]
+    选择四个链接之一，会打开该语言的文章列表。您再从列表中自行选择文本；全部内容以该文章的原文语言显示。
+
+guidanceContent.zh-hans.pages.columns.sections[1].paragraphs[1]
+    本页不摘要文章内容，也不承诺某一主题在四种语言中都有。每一列表只包含以该语言发布的文本。
+
+guidanceContent.zh-hans.pages.columns.sections[2].heading
+    文章能作为参考的限度
+
+guidanceContent.zh-hans.pages.columns.sections[2].paragraphs[0]
+    文章是发布当时的一般说明。规定及其适用可能改变，一篇文章也不包含您案件的全部情况。
+
+guidanceContent.zh-hans.pages.columns.sections[2].paragraphs[1]
+    因此请不要仅凭一篇文章在真实事项中采取行动。用它了解概览，并另行就您的文件与律师讨论；本页不是咨询步骤。
+
+guidanceTeamCopy.zh-hans.label
+    OUR TEAM
+
+guidanceTeamCopy.zh-hans.title
+    Hovering 国际团队
+
+guidanceTeamCopy.zh-hans.description
+    Hovering 律师、运营主管与合作会计师的简介。
+
+guidanceTeamCopy.zh-hans.representativeTitle
+    主持律师
+
+guidanceTeamCopy.zh-hans.teamTitle
+    律师与同事
+
+guidanceTeamCopy.zh-hans.partnerTitle
+    合作会计师
+
+guidanceTeamCopy.zh-hans.introLabel
+    简介
+
+guidanceTeamCopy.zh-hans.educationLabel
+    学历
+
+guidanceTeamCopy.zh-hans.experienceLabel
+    经历
+
+guidanceTeamCopy.zh-hans.photoAltPrefix
+    照片
+
+guidanceTeamCopy.zh-hans.workingLanguagesLabel
+    工作语言
+
+guidanceTeamCopy.zh-hans.fullProfileLabel
+    完整简介 (English)
+
+guidanceTeamCopy.zh-hans.keyFactsHeading
+    律师曾雋崴 — 要点
+
+guidanceTeamCopy.zh-hans.qualificationLabel
+    资格与事务所
+
+guidanceTeamCopy.zh-hans.qualificationSentence
+    {name} 具有台湾执业资格，为 {firm} 的主持律师。
+
+guidanceTeamCopy.zh-hans.practiceLabel
+    主要领域
+
+guidanceTeamCopy.zh-hans.consultationLanguagesLabel
+    咨询语言
+
+guidanceTeamCopy.zh-hans.roles.tseng-junwei
+    台湾主持律师 (Managing Attorney)
+
+guidanceTeamCopy.zh-hans.roles.chang-rongxuan
+    台湾律师 (Taiwan Attorney)
+
+guidanceTeamCopy.zh-hans.roles.chang-fangyu
+    律师助理
+
+guidanceTeamCopy.zh-hans.roles.son-jungmin
+    韩国运营主管 (Korea Operations Manager)
+
+guidanceTeamCopy.zh-hans.roles.huang-shengping
+    合作会计师 (Partner CPA)
+
+guidanceTeamBios.zh-hans.tseng-junwei.intro[0]
+    事务所在台湾以英语、日语、韩语和中文处理企业与个人事项。
+
+guidanceTeamBios.zh-hans.tseng-junwei.intro[1]
+    曾代理一名韩国学生因健身房受伤提出的损害赔偿，并取得新台币 157 万元的一审判决。
+
+guidanceTeamBios.zh-hans.tseng-junwei.education[0]
+    硕士（M.S.），Institute of Finance, National Taiwan University
+
+guidanceTeamBios.zh-hans.tseng-junwei.education[1]
+    学士（B.A.），政治大学法律与金融双主修
+
+guidanceTeamBios.zh-hans.tseng-junwei.education[2]
+    神户大学与早稻田大学交换学生
+
+guidanceTeamBios.zh-hans.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.zh-hans.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.zh-hans.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.zh-hans.chang-rongxuan.intro[0]
+    此前任职于教育部法制单位，侧重行政与民事事项。
+
+guidanceTeamBios.zh-hans.chang-rongxuan.intro[1]
+    具有高校、教师权利与行政救济方面的经验。
+
+guidanceTeamBios.zh-hans.chang-rongxuan.education[0]
+    法学学士（LL.B.），National Chung Hsing University
+
+guidanceTeamBios.zh-hans.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.zh-hans.chang-rongxuan.experience[1]
+    律师，Hovering International Law Firm
+
+guidanceTeamBios.zh-hans.chang-fangyu.intro[0]
+    律师助理，多年在多家事务所担任资深律师助理，负责诉讼支持、公司法与外资。
+
+guidanceTeamBios.zh-hans.chang-fangyu.intro[1]
+    协助程序、公司设立、外资核准、证照申请以及韩国与台湾之间的往来。
+
+guidanceTeamBios.zh-hans.chang-fangyu.education[0]
+    法学学士（LL.B.），Tunghai University
+
+guidanceTeamBios.zh-hans.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.zh-hans.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.zh-hans.son-jungmin.intro[0]
+    协调韩国委托人的咨询行程与沟通。
+
+guidanceTeamBios.zh-hans.son-jungmin.intro[1]
+    以信息科学为背景，通过文件系统与工作流程支持部门之间的往来。
+
+guidanceTeamBios.zh-hans.son-jungmin.education[0]
+    学士（B.S.）信息科学，National Cheng Kung University
+
+guidanceTeamBios.zh-hans.son-jungmin.experience[0]
+    韩国运营部门，Hovering International Law Firm
+
+guidanceTeamBios.zh-hans.huang-shengping.intro[0]
+    完成政治大学会计学学士与硕士课程，目前主持一家会计师事务所。
+
+guidanceTeamBios.zh-hans.huang-shengping.intro[1]
+    协助企业客户进行法律、税务与财务风险的综合分析。
+
+guidanceTeamBios.zh-hans.huang-shengping.education[0]
+    硕士（M.A.）会计，National Chengchi University
+
+guidanceTeamBios.zh-hans.huang-shengping.education[1]
+    学士（B.A.）会计，National Chengchi University
+
+guidanceTeamBios.zh-hans.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.zh-hans.Korean
+    韩语
+
+guidanceLanguageNames.zh-hans.Chinese
+    中文
+
+guidanceLanguageNames.zh-hans.Japanese
+    日语
+
+guidancePracticeAreaNames.zh-hans.Taiwan company setup
+    在台湾设立公司
+
+guidancePracticeAreaNames.zh-hans.Taiwan investment counsel
+    台湾投资法律咨询
+
+guidancePracticeAreaNames.zh-hans.Civil litigation and damages
+    民事诉讼与损害赔偿
+
+guidancePracticeAreaNames.zh-hans.Trademark and patent filings
+    商标与专利申请
+
+guidancePracticeAreaNames.zh-hans.Visa and residency
+    签证与居留
+
+guidancePracticeAreaNames.zh-hans.Family and labor disputes
+    家事与劳动争议
+
+guidanceOfficeCopy.zh-hans.label
+    OFFICES
+
+guidanceOfficeCopy.zh-hans.title
+    办公室
+
+guidanceOfficeCopy.zh-hans.description
+    Hovering International Law Firm 在台湾的办公室地址。
+
+guidanceOfficeCopy.zh-hans.officeLabel
+    办公室
+
+guidanceOfficeCopy.zh-hans.mapPreviewLabel
+    地图预览
+
+guidanceOfficeCopy.zh-hans.koreaOfficeTitle
+    韩国办公室
+
+guidanceOfficeCopy.zh-hans.koreaAddressCardLabel
+    韩国办公室地址
+
+guidanceOfficeCopy.zh-hans.koreaMapLinkLabel
+    在 Naver Map 查看
+
+guidanceOfficeCopy.zh-hans.reviewCountWord
+    评价
+
+guidanceOfficeCopy.zh-hans.phoneLabel
+    电话
+
+guidanceOfficeCopy.zh-hans.faxLabel
+    传真
+
+guidanceOfficeCopy.zh-hans.mapLinkLabel
+    在地图上查看
+
+guidanceOfficeCopy.zh-hans.photoAlts[0]
+    Hovering International Law Firm 台北办公室接待室
+
+guidanceOfficeCopy.zh-hans.photoAlts[1]
+    Hovering International Law Firm 台北办公室律师室
+
+guidanceOfficeCopy.zh-hans.photoAlts[2]
+    Hovering International Law Firm 台北办公室会议室
+
+guidanceOfficeCopy.zh-hans.officeTitles.taipei
+    台北
+
+guidanceOfficeCopy.zh-hans.officeTitles.taichung
+    台中
+
+guidanceOfficeCopy.zh-hans.officeTitles.kaohsiung
+    高雄
+
+guidanceOfficeCopy.zh-hans.officeTitles.pingtung
+    屏东
+
+guidanceFooterCopy.zh-hans.officeLabel
+    办公室
+
+guidanceFooterCopy.zh-hans.officeQuickLinksLabel
+    办公室快捷链接
+
+guidanceFooterCopy.zh-hans.followLabel
+    关注
+
+guidanceFooterCopy.zh-hans.blogLabel
+    博客
+
+guidanceFooterCopy.zh-hans.websiteLabel
+    官方网站
+
+guidanceFooterCopy.zh-hans.sitemapLabel
+    网站地图
+
+guidanceFooterCopy.zh-hans.copyEmailLabel
+    复制电子邮件地址
+
+guidanceFooterCopy.zh-hans.emailCopiedMessage
+    已复制电子邮件地址。
+
+guidanceFooterCopy.zh-hans.officialConsultationEmailLabel
+    正式咨询电子邮件
+
+internationalInquiryCopy.zh-hans.guidanceNotice
+    本页面以简体中文撰写，作为一般说明，不是针对您本人案件的法律意见。
+
+internationalInquiryCopy.zh-hans.consultationNotice
+    咨询以四种语言进行：英语、中文、日语和韩语。
+
+internationalInquiryCopy.zh-hans.methodConfirmationNotice
+    若您无法使用这四种语言中的任何一种，请选择「沟通方式须待确认」。我们会回复，以审视是否存在可行的沟通方式；不以其他语言提供服务，也不承诺回复时限。
+
+internationalInquiryCopy.zh-hans.preparationNotice
+    您可以用自己的语言撰写案情摘要。原文会按您写下的内容保存，不会被自动翻译。
+
+internationalInquiryCopy.zh-hans.heading
+    提交咨询请求
+
+internationalInquiryCopy.zh-hans.intro
+    请简要说明您的事项。律师会先审阅内容，再讨论下一步。
+
+internationalInquiryCopy.zh-hans.submitLabel
+    发送请求
+
+internationalInquiryCopy.zh-hans.submittingLabel
+    正在发送…
+
+internationalInquiryCopy.zh-hans.successMessage
+    我们已收到您的请求，正在等待审阅。这并不表示咨询已经进行，也不表示预约已经确认。
+
+internationalInquiryCopy.zh-hans.savedNotificationPendingMessage
+    您的请求已保存，但事务所尚未确认通知。您写下的内容没有丢失。若未收到回复，也可以写信至联系页的电子邮件地址。
+
+internationalInquiryCopy.zh-hans.receiptIdLabel
+    收件编号
+
+internationalInquiryCopy.zh-hans.failureMessage
+    您的请求未能发送。请再试一次，或写信至联系页的电子邮件地址。
+
+internationalInquiryCopy.zh-hans.originalLanguageLabel
+    您书写所用的语言
+
+internationalInquiryCopy.zh-hans.originalLanguagePlaceholder
+    例如：简体中文、英语、日语或其他语言
+
+internationalInquiryCopy.zh-hans.preferredConsultationLanguageLabel
+    您希望用于咨询的语言
+
+internationalInquiryCopy.zh-hans.originalTextLabel
+    事项的简短说明（用您的语言）
+
+internationalInquiryCopy.zh-hans.originalTextPlaceholder
+    请说明发生了什么、您需要何种协助，以及期限（若有）。请勿写下护照号码、身份证件号码或银行账户资料。
+
+internationalInquiryCopy.zh-hans.nameLabel
+    姓名
+
+internationalInquiryCopy.zh-hans.emailLabel
+    电子邮件
+
+internationalInquiryCopy.zh-hans.consentLabel
+    我已阅读隐私页面，并同意发送此请求。
+
+internationalInquiryCopy.zh-hans.privacyLinkLabel
+    隐私
+
+internationalInquiryCopy.zh-hans.requiredMessage
+    此栏为必填。
+
+internationalInquiryCopy.zh-hans.invalidEmailMessage
+    请填写有效的电子邮件地址。
+
+internationalInquiryCopy.zh-hans.tooLongMessage
+    文本过长。请缩短后再发送。
+
+internationalInquiryCopy.zh-hans.sourceLanguageNotice
+    此文章仅以{language}发布，链接会打开该原文页面。
+
+internationalInquiryCopy.zh-hans.unavailableTranslationNotice
+    此项目尚无本页语言的版本。标明原文语言的链接会打开原文。
+
+internationalInquiryCopy.zh-hans.unavailableLanguageNotice
+    本页不以{language}提供。
+
+internationalInquiryCopy.zh-hans.languageOptions.en
+    英语 (English)
+
+internationalInquiryCopy.zh-hans.languageOptions.zh-hant
+    中文 (中文)
+
+internationalInquiryCopy.zh-hans.languageOptions.ja
+    日语 (日本語)
+
+internationalInquiryCopy.zh-hans.languageOptions.ko
+    韩语 (한국어)
+
+internationalInquiryCopy.zh-hans.languageOptions.needs-method-confirmation
+    四种语言都无法使用 — 沟通方式须待确认
+
+guidanceAnswers.zh-hans.services.answer
+    事务所依台湾法律处理六组工作：投资与公司设立、民事与损害赔偿、婚姻家庭与继承、劳动、刑事与智慧财产。每一案件的范围在律师审阅您提交的内容后另行确认。咨询以英语、中文、日语和韩语进行。
+
+guidanceAnswers.zh-hans.services.sources[0]
+    /zh-hans/faq
+
+guidanceAnswers.zh-hans.services.sources[1]
+    /zh-hans/contact
+
+guidanceAnswers.zh-hans.about.answer
+    Hovering International Law Firm 是台湾律师事务所，2016 年由国立台湾大学（國立臺灣大學）出身的律师创立，办公室在台北、高雄、台中与屏东。自 2020 年起设有会计部门；台中办公室处理与韩国、日本有关的事项。事务所不承诺结果。咨询以英语、中文、日语和韩语进行。
+
+guidanceAnswers.zh-hans.about.sources[0]
+    /zh-hans/lawyers
+
+guidanceAnswers.zh-hans.about.sources[1]
+    /zh-hans/services
+
+guidanceAnswers.zh-hans.lawyers.answer
+    本页介绍 Hovering 的律师、运营主管与合作会计师。律师曾雋崴（Wei Tseng）具有台湾执业资格，为事务所主持律师，与来自韩国、日本及其他国际委托人合作。事务所的咨询以英语、中文、日语和韩语四种语言进行。
+
+guidanceAnswers.zh-hans.lawyers.sources[0]
+    /zh-hans/about
+
+guidanceAnswers.zh-hans.lawyers.sources[1]
+    /zh-hans/contact
+
+guidanceAnswers.zh-hans.pricing.answer
+    本页不公布价目表。工作范围先根据您提交的摘要确定，费用金额与计算方式在开始工作前与您确认。与律师的咨询可以是有偿服务。除律师酬金外，还可能产生法院或行政机关费用。咨询以英语、中文、日语和韩语进行。
+
+guidanceAnswers.zh-hans.pricing.sources[0]
+    /zh-hans/contact
+
+guidanceAnswers.zh-hans.pricing.sources[1]
+    /zh-hans/faq
+
+guidanceAnswers.zh-hans.contact.answer
+    请通过联系表单提交摘要：发生了什么、需要何种协助、事项与台湾的关联，以及期限（若有）。初期不必发送身份证件或全部证据。事务所不承诺回复时限，也不通过本页确认预约。咨询以英语、中文、日语和韩语进行。
+
+guidanceAnswers.zh-hans.contact.sources[0]
+    /zh-hans/faq
+
+guidanceAnswers.zh-hans.contact.sources[1]
+    /zh-hans/pricing
+
+guidanceAnswers.zh-hans.faq.answer
+    问答部分在一般说明的层面回答：六组工作、联系前如何准备、费用如何确定，以及发送请求的含义。已发送的请求正在等待律师审阅；不是法律意见，不是预约，也不成立律师与委托人关系。咨询以英语、中文、日语和韩语进行。
+
+guidanceAnswers.zh-hans.faq.sources[0]
+    /zh-hans/contact
+
+guidanceAnswers.zh-hans.faq.sources[1]
+    /zh-hans/services
+
+GUIDANCE_LLMS_NOTICES.zh-hans.consultationNotice
+    律师咨询以英语、中文、日语和韩语进行。本页面以简体中文撰写，咨询时使用的中文包括普通话与书面中文。
+
+GUIDANCE_LLMS_NOTICES.zh-hans.discoveryNotice
+    本 llms.txt 文件只是公开页面的检索地图；它不承诺搜索排名、背书、人工智能推荐或展示。
+
+GUIDANCE_LLMS_NOTICES.zh-hans.confidentialNotice
+    因为原文会被保存，初期请不要写下尚不需要的内容，例如护照号码、身份证号或账户资料。

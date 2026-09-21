@@ -227,6 +227,6 @@ Ook u moet in Taiwan uw rechten beschermen.
 ---
 
 > Zie ook:
-> - [Gids van de procesadvocaat in Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Taiwanese advocaat die Koreaans spreekt](/ko/korean-lawyer-in-taiwan)
-> - [Werkterreinen — arbeid](/ko/services/labor)
+> - [Hoe omvang van het werk en kosten worden vastgesteld](/nl/pricing)
+> - [Internationaal team van Hovering](/nl/lawyers)
+> - [Welke zaken wij behandelen](/nl/services)

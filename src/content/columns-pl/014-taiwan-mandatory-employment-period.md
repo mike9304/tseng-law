@@ -183,7 +183,7 @@ Porządkując dokumenty w porządku czasowym, należy łącznie wskazać datę z
 
 ## 11. Wskazówki związane
 
-- [Usługa prawa pracy na Tajwanie](/ko/services/labor)
+- [Jakie sprawy prowadzimy](/pl/services)
 - [Wskazówki o dobrowolnej rezygnacji i wyjątkach odprawy](/pl/columns/taiwan-voluntary-resignation-severance)
 - [Kontakt](/pl/contact)
 

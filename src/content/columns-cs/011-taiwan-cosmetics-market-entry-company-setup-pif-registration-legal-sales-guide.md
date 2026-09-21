@@ -111,7 +111,7 @@ Přípravu prodeje na Tchaj-wanu, ověří-li se v následujícím pořadí, lze
 5. Přezkoumat etiketu, prodejní stránku, reklamu a příspěvky ze spolupráce podle měřítka celého vyjádření.
 6. Provozovat postup k reakci na kontroly a požadavky na nápravu, stížnosti, bezpečnostní informace a potřebné následné kroky.
 
-Základní strukturu společnosti a pobočky lze vidět v [Základy založení společnosti na Tchaj-wanu](/cs/columns/taiwan-company-establishment-basics), rozsah související podpory v [Službách investic a založení společnosti na Tchaj-wanu](/ko/services/investment) a údaje o odpovědné advokátce v [Profilu advokátky Wei Tseng](/ko/lawyers/wei-tseng).
+Základní strukturu společnosti a pobočky lze vidět v [Základy založení společnosti na Tchaj-wanu](/cs/columns/taiwan-company-establishment-basics), rozsah související podpory v [Které věci vedeme](/cs/services) a údaje o odpovědné advokátce v [Mezinárodní tým Hovering](/cs/lawyers).
 
 ### Oficiální podklady
 

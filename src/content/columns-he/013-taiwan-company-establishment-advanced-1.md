@@ -17,7 +17,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ולהלן מרוכזות השאלות הנשאלות לעיתים קרובות בעת ההקמה.
 
-מי שקרא את [**יסודות הקמת החברה**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) יכול לעיין בהמשך גם בחלק מעמיק זה המפורט יותר.
+מי שקרא את [**יסודות הקמת החברה**](/he/columns/taiwan-company-establishment-basics) יכול לעיין בהמשך גם בחלק מעמיק זה המפורט יותר.
 
 שאלות ותשובות (Q&A) שלהלן נועדו לסייע למי ששוקל הקמת חברה בטאיוואן. 😊
 
@@ -128,6 +128,6 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 ---
 
 > ראו גם:
-> - [מדריך כולל להקמת חברה בטאיוואן — הליכים, עלויות וצורות משפטיות](/ko/guides/taiwan-company-setup)
-> - [עורכת דין בטאיוואן הדוברת קוריאנית](/ko/korean-lawyer-in-taiwan)
-> - [הנחיות על עורכת הדין לאישיות משפטית ולהקמת חברה בטאיוואן](/ko/taiwan-company-setup-lawyer)
+> - [באילו עניינים אנו מטפלים](/he/services)
+> - [הצוות הבין־לאומי של Hovering](/he/lawyers)
+> - [כיצד לפנות אל המשרד](/he/contact)

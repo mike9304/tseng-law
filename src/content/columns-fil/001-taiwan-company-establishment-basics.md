@@ -138,7 +138,7 @@ Hindi awtomatikong nalalapat ang pinaghihigpitang antas ng buwis sa ilalim ng ka
 - [Gabay sa permanent residence, National Immigration Agency (NIA, 內政部移民署) ng Taiwan](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Gabay sa prior inquiry sa business location, Lungsod ng Taipei](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-Makikita sa [Mga Serbisyo sa Pamumuhunan at Pagtatatag ng Kompanya sa Taiwan](/ko/services/investment) ang saklaw ng mga kaugnay na gawain, at sa [Profile ni Abogada Wei Tseng](/ko/lawyers/wei-tseng) ang karanasan at ang mga wikang ginagamit ng abogadang nangangasiwa. Para sa katanungan hinggil sa tiyak na usapin, mangyaring gamitin ang [Pagtatanong para sa konsultasyon](/fil/contact).
+Makikita sa [Mga usaping hinahawakan ng tanggapan](/fil/services) ang saklaw ng mga kaugnay na gawain, at sa [Pandaigdigang koponan ng Hovering](/fil/lawyers) ang karanasan at ang mga wikang ginagamit ng abogadang nangangasiwa. Para sa katanungan hinggil sa tiyak na usapin, mangyaring gamitin ang [Pagtatanong para sa konsultasyon](/fil/contact).
 
 Ang artikulong ito ay materyal na pang-edukasyon na naglalayong ipaliwanag sa pangkalahatan ang pagtatatag ng kompanya sa Taiwan at ang mga kaugnay na sistema, at hindi ito payong legal o payo sa buwis para sa isang tiyak na usapin. Dahil maaaring magbago ang kinakailangang hakbang at ang resulta depende sa istruktura ng pamumuhunan, sa uri ng negosyo, sa pagkamamamayan at katayuan ng pananatili ng nag-aaplay, at sa pinakabagong gawi ng ahensiyang may hurisdiksiyon, mangyaring tiyakin ninyo ang pinakabagong opisyal na sanggunian at ang inyong indibidwal na kalagayan bago magsagawa ng pamumuhunan, ng kontrata o ng pagtatrabaho.
 

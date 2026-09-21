@@ -1,0 +1,1096 @@
+# fi guidance pack strings (path → text). Generated 2026-09-21
+
+guidanceContent.fi.languageName
+    Suomi
+
+guidanceContent.fi.nav.home
+    Etusivu
+
+guidanceContent.fi.nav.services
+    Palvelut
+
+guidanceContent.fi.nav.about
+    Toimisto
+
+guidanceContent.fi.nav.lawyers
+    Asianajajat
+
+guidanceContent.fi.nav.pricing
+    Kulut
+
+guidanceContent.fi.nav.contact
+    Yhteys
+
+guidanceContent.fi.nav.faq
+    Kysymykset
+
+guidanceContent.fi.nav.privacy
+    Tietosuoja
+
+guidanceContent.fi.nav.disclaimer
+    Vastuuvapaus
+
+guidanceContent.fi.nav.columns
+    Artikkelit
+
+guidanceContent.fi.contactCta
+    Lähettäkää neuvontapyyntö
+
+guidanceContent.fi.footerNotice
+    Tämä suomenkielinen sivu sisältää vain yleisiä ohjeita toimiston työstä Taiwanin oikeuden mukaan. Se ei ole oikeudellista neuvontaa yksittäisessä asiassa, eikä viestin lähettäminen yksinään synnytä suhdetta asianajajan ja päämiehen välillä.
+
+guidanceContent.fi.skipLink
+    Ohittakaa navigointi ja siirtykää sisältöön
+
+guidanceContent.fi.menuLabel
+    Sivuhakemisto
+
+guidanceContent.fi.languageLabel
+    Näyttökieli
+
+guidanceContent.fi.mega.services.description
+    Toimisto käsittelee Taiwanin oikeuden mukaiset keskeiset työryhmät.
+
+guidanceContent.fi.mega.services.viewAllLabel
+    Näytä kaikki
+
+guidanceContent.fi.mega.columns.description
+    Artikkeleita Taiwanin oikeuden yleisistä kysymyksistä.
+
+guidanceContent.fi.mega.columns.viewAllLabel
+    Näytä kaikki
+
+guidanceContent.fi.mega.lawyers.description
+    Esittely toimivista asianajajista ja yhteystavoista.
+
+guidanceContent.fi.mega.lawyers.viewAllLabel
+    Näytä kaikki
+
+guidanceContent.fi.mega.pricing.description
+    Tämä sivu selittää työn laajuuden ja sen, miten kulut vahvistetaan.
+
+guidanceContent.fi.mega.pricing.viewAllLabel
+    Näytä kaikki
+
+guidanceContent.fi.mega.faq.description
+    Usein kysyttyä toimiston työstä Taiwanissa.
+
+guidanceContent.fi.mega.faq.viewAllLabel
+    Näytä kaikki
+
+guidanceContent.fi.notFoundTitle
+    Sivua ei löytynyt
+
+guidanceContent.fi.notFoundText
+    Etsittyä sivua ei ole tai se on siirretty. Voitte palata suomenkieliselle etusivulle nähdäksenne saatavilla olevat ohjeet.
+
+guidanceContent.fi.backHomeLabel
+    Etusivulle
+
+guidanceContent.fi.readSourceLabel
+    Avatkaa artikkeliluettelo alkuperäiskielellä
+
+guidanceContent.fi.home.heroScrollLabel
+    Vierittäkää alaspäin
+
+guidanceContent.fi.home.heroColumnsCtaLabel
+    Katsokaa artikkelit
+
+guidanceContent.fi.home.servicesDetailLabel
+    Katsokaa tiedot
+
+guidanceContent.fi.home.servicesAssistanceBefore
+    Jos on epäselvää, mihin ryhmään asianne kuuluu, sivu 
+
+guidanceContent.fi.home.servicesAssistanceLinkLabel
+    Yhteys
+
+guidanceContent.fi.home.servicesAssistanceAfter
+     selittää, miten laaditte yhteenvedon, jonka asianajaja tarkistaa.
+
+guidanceContent.fi.home.columnsViewAllLabel
+    Katsokaa kaikki artikkelit
+
+guidanceContent.fi.home.columnsReadMoreLabel
+    Lukekaa lisää
+
+guidanceContent.fi.home.columnsReviewLabel
+    Tarkistanut asianajaja Wei Tseng
+
+guidanceContent.fi.home.columnsOriginalLanguageBadge
+    Alkuperäiskieli
+
+guidanceContent.fi.home.columnsOriginalLanguageNote
+    Seuraavia artikkeleita ei ole vielä suomeksi. Luettelo pysyy alkuperäiskielellä ja avaa kyseisen kielisivun; sisältöä ei käännetä automaattisesti.
+
+guidanceContent.fi.home.imageBandAlt
+    Perinteinen taiwanilainen sanheyuan (三合院) ja nykyaikainen paviljonki päivänvalossa
+
+guidanceContent.fi.home.videoPauseLabel
+    Keskeyttäkää video
+
+guidanceContent.fi.home.videoPlayLabel
+    Toistakaa video
+
+guidanceContent.fi.home.videoReplayLabel
+    Toistakaa video uudelleen
+
+guidanceContent.fi.pages.home.eyebrow
+    OHJEET
+
+guidanceContent.fi.pages.home.title
+    Oikeudelliset palvelut Taiwanissa — ohjeita suomeksi
+
+guidanceContent.fi.pages.home.description
+    Yleisiä selityksiä suomeksi Hovering International Law Firm -toimiston työalasta Taiwanissa, neuvontakielistä ja ensimmäisestä yhteydenotosta.
+
+guidanceContent.fi.pages.home.intro
+    Hovering International Law Firm seuraa ulkomaisia päämiehiä, myös Taiwanin yhteyden omaavia, Taiwanin oikeuden mukaisissa asioissa: sijoittaminen ja yhtiön perustaminen, siviiliriidat, avioliitto, perhe ja perintö, työlainsäädäntö, rikosasiat ja immateriaalioikeus. Tämä suomenkielinen osa auttaa teitä näkemään, mikä työ kuuluu alaamme, mitä on valmisteltava ja miten tavoitatte meidät. Kyse on yleisistä tiedoista, ei oikeudellisesta neuvonnasta omassa asiassanne.
+
+guidanceContent.fi.pages.home.sections[0].heading
+    Mitä teemme
+
+guidanceContent.fi.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm on Taiwanissa perustettu asianajotoimisto. Se toimii Taiwanin oikeuden mukaan ja sillä on toimistot Taipeissa (臺北), Kaohsiungissa (高雄), Taichungissa (臺中) ja Pingtungissa (屏東). Neuvomme yrityksiä ja hoidamme menettelyjä tuomioistuimessa sekä seuraamme ulkomaisia päämiehiä Taiwanissa tarvittavissa vaiheissa.
+
+guidanceContent.fi.pages.home.sections[0].paragraphs[1]
+    Koko sisältö täällä on yleistä. Asian tulos riippuu tosiseikoista, sovellettavista säännöistä ja ajankohdasta. Nämä ohjeet eivät korvaa keskustelua asianajajan kanssa asiakirjoistanne.
+
+guidanceContent.fi.pages.home.sections[1].heading
+    Sivun kieli ja neuvontakieli eivät ole sama asia
+
+guidanceContent.fi.pages.home.sections[1].paragraphs[0]
+    Tämä sivu on kirjoitettu suomeksi, mutta neuvonta asianajajan kanssa tapahtuu vain neljällä neuvontakielellä: englanti, kiina (中文), japani ja korea. Ohjeiden lukeminen suomeksi ei tarkoita, että keskustelu asianajajan kanssa tapahtuisi suomeksi.
+
+guidanceContent.fi.pages.home.sections[1].paragraphs[1]
+    Emme lupaa tulkkia, vastausaikaa emmekä tapaamista tämän sivun kautta. Jos ette voi käyttää mitään neljästä kielestä, sivu »Yhteys« selittää, miten tutkimme viestintätapaa.
+
+guidanceContent.fi.pages.home.sections[2].heading
+    Työryhmät
+
+guidanceContent.fi.pages.home.sections[2].paragraphs[0]
+    Työalaan kuuluu seuraavat kuusi ryhmää. Sivu »Palvelut« kuvaa kunkin ryhmän tarkemmin ja kertoo, mitä ei luvata.
+
+guidanceContent.fi.pages.home.sections[2].items[0]
+    Sijoittaminen ja yhtiön perustaminen Taiwanissa
+
+guidanceContent.fi.pages.home.sections[2].items[1]
+    Siviiliriidat ja vahingonkorvaus
+
+guidanceContent.fi.pages.home.sections[2].items[2]
+    Avioliitto, perhe ja perintö
+
+guidanceContent.fi.pages.home.sections[2].items[3]
+    Työoikeudelliset riidat
+
+guidanceContent.fi.pages.home.sections[2].items[4]
+    Rikosasiat
+
+guidanceContent.fi.pages.home.sections[2].items[5]
+    Immateriaalioikeus: tavaramerkit, patentit ja tekijänoikeus
+
+guidanceContent.fi.pages.home.sections[3].heading
+    Mistä kannattaa aloittaa
+
+guidanceContent.fi.pages.home.sections[3].paragraphs[0]
+    Lukekaa sivu »Palvelut« nähdäksenne, kuuluuko asianne alaamme, sen jälkeen »Kulut« ja »Yhteys« tietääksenne, miten laajuus vahvistetaan ja miten kulut vahvistetaan ennen työn alkamista.
+
+guidanceContent.fi.pages.home.sections[3].paragraphs[1]
+    Viestiä lähettäessänne voitte kirjoittaa yhteenvedon omalla kielellänne. Alkuperäinen teksti säilytetään sellaisena kuin kirjoititte sen, eikä sitä käännetä automaattisesti. Lähetetty viesti on tarkistusta odottava pyyntö: se ei ole vielä neuvontaa eikä vahvistettu tapaaminen.
+
+guidanceContent.fi.pages.services.eyebrow
+    PALVELUT
+
+guidanceContent.fi.pages.services.title
+    Mitä asioita käsittelemme
+
+guidanceContent.fi.pages.services.description
+    Kuusi työryhmää Taiwanin toimistossa ja rajat, jotka teidän on hyvä tuntea ensin.
+
+guidanceContent.fi.pages.services.intro
+    Alla ryhmät, joita tosiasiassa käsittelemme, ja kysymykset, joita alkuvaiheessa usein esitetään. Esitys auttaa teitä arvioimaan, kuuluuko asianne alaamme; se on yleinen eikä yksittäisen asian oikeudellinen analyysi.
+
+guidanceContent.fi.pages.services.sections[0].heading
+    Sijoittaminen ja yhtiön perustaminen Taiwanissa
+
+guidanceContent.fi.pages.services.sections[0].paragraphs[0]
+    Seuraamme ulkomaisia sijoittajia ja yrityksiä yhtiön perustamisessa tai toiminnassa Taiwanissa: oikeudellisen muodon valinta, asiakirjojen valmistelu ja jättäminen, pääomansijoitus, pankkiasiat, toimitilan tarkastus sekä toimialavaatimukset. Tuemme myös kirjanpitoa ja veroja, jotka syntyvät perustamisesta ja toiminnasta Taiwanissa.
+
+guidanceContent.fi.pages.services.sections[0].paragraphs[1]
+    Kulku ja kesto eroavat muodon, sijoittajan, toimialan, pankin ja jo olemassa olevien asiakirjojen mukaan. Yhtiön perustaminen ei yksin johda oleskelulupaan (居留) tai työlupaan (工作許可): ne ovat erillisiä menettelyjä, jotka arvioidaan henkilön tilanteen mukaan.
+
+guidanceContent.fi.pages.services.sections[1].heading
+    Siviiliriidat ja vahingonkorvaus
+
+guidanceContent.fi.pages.services.sections[1].paragraphs[0]
+    Tähän ryhmään kuuluvat sopimusriidat, vahingonkorvaus oikeudenvastaisesta teosta ja kuluttajariidat. Työ alkaa yleensä aikajärjestyksellä, olemassa olevien asiakirjojen ja todisteiden tarkastuksella ja vasta sen jälkeen seuraavilla vaiheilla.
+
+guidanceContent.fi.pages.services.sections[1].paragraphs[1]
+    Määräajat, myös vanhentuminen, ja todisteiden täydellisyys leimaavat kulkua. Ilmoittakaa siksi tunnetut päivämäärät mahdollisimman varhain. Säilyttäkää sopimukset, viestit, maksutositteet tai valokuvat paikan tilanteesta ja mainitkaa ne ensimmäisessä viestissä.
+
+guidanceContent.fi.pages.services.sections[2].heading
+    Avioliitto, perhe ja perintö
+
+guidanceContent.fi.pages.services.sections[2].paragraphs[0]
+    Käsittelemme avioeroa (離婚), omaisuuden jakoa, oikeuksien ja velvollisuuksien käyttämistä ja kantamista alaikäisiä lapsia kohtaan (未成年子女權利義務之行使或負擔), tapaamista (會面交往) ja perintöä (繼承), myös kun osapuolet tai varallisuus ovat eri valtioissa. Rajat ylittävät perheasiat edellyttävät usein lisätarkastusta väestörekisteristä (戶籍), asiakirjojen muodosta ja niiden todistusarvosta Taiwanissa.
+
+guidanceContent.fi.pages.services.sections[2].paragraphs[1]
+    Koska perheasioihin liittyy usein määräaikoja ja rinnakkaisia menettelyjä, ensimmäisen yhteenvedon tulisi nimetä osapuolten suhde, nykyinen asuinpaikka ja jo käynnissä olevat menettelyt.
+
+guidanceContent.fi.pages.services.sections[3].heading
+    Työoikeudelliset riidat
+
+guidanceContent.fi.pages.services.sections[3].paragraphs[0]
+    Tähän ryhmään kuuluvat yhtymäsuhteen päättyminen, Taiwanin oikeuden mukainen irtisanomiskorvaus (資遣費; ei rinnastettavissa toisten valtioiden instituutteihin), palkka ja riidat työsopimuksesta (勞動契約), sekä työntekijän että työnantajan puolella. Tarkastuksessa erotamme päättämisperusteen ilmoitusta, maksua ja määräaikoja koskevista kysymyksistä.
+
+guidanceContent.fi.pages.services.sections[3].paragraphs[1]
+    Työsopimus, työjärjestys (工作規則), palkkalaskelmat ja osapuolten kirjeenvaihto ovat yleensä ratkaisevat asiakirjat. Jos teillä on ne vielä, mainitkaa se yhteenvedossa.
+
+guidanceContent.fi.pages.services.sections[4].heading
+    Rikosasiat
+
+guidanceContent.fi.pages.services.sections[4].paragraphs[0]
+    Seuraamme esitutkinnassa ja tuomioistuimessa, sekä epäiltyjen tai syytettyjen että asianomistajien puolesta, ja arvioimme yritystoiminnan rikosoikeudellisia riskejä.
+
+guidanceContent.fi.pages.services.sections[4].paragraphs[1]
+    Rikosasioissa on usein lyhyet määräajat ja määrätyt vaiheet. Jos olette jo saaneet kirjoituksen syyttäjältä tai tuomioistuimelta, mainitkaa kirjoituksen päivämäärä varhain, jotta sisältö tarkistetaan oikeassa järjestyksessä.
+
+guidanceContent.fi.pages.services.sections[5].heading
+    Immateriaalioikeus
+
+guidanceContent.fi.pages.services.sections[5].paragraphs[0]
+    Tuemme tavaramerkkien (商標) ja patenttien (專利) rekisteröinnissä, tekijänoikeudessa ja näitä oikeuksia koskevissa riidoissa Taiwanissa.
+
+guidanceContent.fi.pages.services.sections[5].paragraphs[1]
+    Tässä ryhmässä vaiheiden järjestys ratkaisee: suojan laajuus, hakemusajankohta ja tosiasiallinen käyttö vaikuttavat valintaan. Hakemuksen jättäminen ei yksin merkitse, että se hyväksytään.
+
+guidanceContent.fi.pages.services.sections[6].heading
+    Laajuus ja sen vahvistaminen
+
+guidanceContent.fi.pages.services.sections[6].paragraphs[0]
+    Toimisto toimii Taiwanin oikeuden mukaan ja käsittelee asioita edellä mainituissa ryhmissä. Kunkin asian laajuus vahvistetaan erikseen sen jälkeen, kun asianajaja on tarkistanut viestinne.
+
+guidanceContent.fi.pages.services.sections[6].paragraphs[1]
+    Oleskeluasema, työlupa ja vastaavat kysymykset arvioidaan asiakirjoista ja henkilön tilanteesta, ei kansalaisuudesta. Jos osa asiastanne koskee tällaisia kysymyksiä, mainitkaa se yhteydenotossa. Tämä sivu ei lupaa tulosta eikä vastausaikaa.
+
+guidanceContent.fi.pages.about.eyebrow
+    TOIMISTO
+
+guidanceContent.fi.pages.about.title
+    Hovering International Law Firmistä
+
+guidanceContent.fi.pages.about.description
+    Perustiedot tästä taiwanilaisesta asianajotoimistosta, sen toimistoista ja työstä ulkomaisten osapuolten kanssa.
+
+guidanceContent.fi.pages.about.intro
+    Hovering International Law Firm on asianajotoimisto Taiwanissa. Asianajajat toimivat yrityksen neuvonnasta oikeudenkäyntiin. Tämä osa kuvaa toimiston syntyä, paikkoja ja työtä ulkomaisten osapuolten kanssa.
+
+guidanceContent.fi.pages.about.sections[0].heading
+    Perustaminen ja rakentuminen
+
+guidanceContent.fi.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) perustettiin vuonna 2016 asianajajien toimesta, jotka ovat opiskelleet National Taiwan Universityssa (國立臺灣大學). Kiinankielinen nimi 昊鼎 yhdistää merkin 昊 (»laaja taivas«) merkkiin 鼎 (»luja perusta«) ja kuvaa toimiston suuntaa perustamisesta lähtien.
+
+guidanceContent.fi.pages.about.sections[0].paragraphs[1]
+    Meillä on toimistot Taipeissa (臺北), Kaohsiungissa (高雄), Taichungissa (臺中) ja Pingtungissa (屏東). Kaohsiungin toimisto keskittyy yrityksen johtamiseen ja käsittelee siviili-, rikos- ja hallinto-oikeudellisia riitoja. Taichungin toimisto käsittelee rakennusasioita, immateriaalioikeutta ja Korean ja Japanin yhteyden omaavia asioita. Pingtungin toimisto avattiin vuonna 2017 paikallista tarvetta varten.
+
+guidanceContent.fi.pages.about.sections[0].paragraphs[2]
+    Asianajotyön rinnalla on vuodesta 2020 myös Hovering Accounting Office, joka tarjoaa kirjanpitoa ja verosuunnittelua yrittäjille ja varakkaille yksityishenkilöille.
+
+guidanceContent.fi.pages.about.sections[1].heading
+    Työ ulkomaisten osapuolten kanssa
+
+guidanceContent.fi.pages.about.sections[1].paragraphs[0]
+    Rajat ylittävään työhön kuuluvat yhtiön perustaminen, viisumit, tavaramerkki- ja patenttihakemukset, oikeudellinen riskitarkastus ja yritysten veroneuvonta. Taichungin toimisto käsittelee erityisesti rakennusasioita, immateriaalioikeutta ja Korean ja Japanin yhteyden omaavia asioita. Asianajaja Wei Tseng (曾雋崴) seuraa päämiehiä Koreasta, Japanista ja muita kansainvälisiä päämiehiä mainituissa ryhmissä.
+
+guidanceContent.fi.pages.about.sections[1].paragraphs[1]
+    Voimmeko ottaa asian, riippuu sisällöstä ja viestinnän kielestä. Jos asianne kuuluu mainittuihin ryhmiin ja sitä voidaan käsitellä yhdellä neljästä neuvontakielestä, voitte lähettää yhteenvedon tarkistettavaksi.
+
+guidanceContent.fi.pages.about.sections[2].heading
+    Kun otatte meihin yhteyttä
+
+guidanceContent.fi.pages.about.sections[2].paragraphs[0]
+    Kun yhteenvedonne on saapunut, asianajaja tarkistaa sisällön ja puhuu sitten mahdollisesta työn laajuudesta, vielä tarvittavista asiakirjoista ja seuraavista vaiheista. Vero- tai kirjanpitokysymyksissä toimisto voi työskennellä kirjanpito-osaston kanssa yhdessä kulussa.
+
+guidanceContent.fi.pages.about.sections[2].paragraphs[1]
+    Kunkin asian tulos riippuu tosiseikoista ja olemassa olevista asiakirjoista; emme lupaa tulosta. Jos tarvitsette sitovan vastauksen tilanteeseenne, asiakirjat on käsiteltävä asianajajan kanssa yhdellä neljästä neuvontakielestä.
+
+guidanceContent.fi.pages.lawyers.eyebrow
+    ASIANAJAJAT
+
+guidanceContent.fi.pages.lawyers.title
+    Hoveringin kansainvälinen tiimi
+
+guidanceContent.fi.pages.lawyers.description
+    Hoveringin asianajajien, operatiivisen johdon ja kumppanitilintarkastuksen profiilit.
+
+guidanceContent.fi.pages.lawyers.intro
+    
+
+guidanceContent.fi.pages.pricing.eyebrow
+    KULUT
+
+guidanceContent.fi.pages.pricing.title
+    Miten työn laajuus ja kulut vahvistetaan
+
+guidanceContent.fi.pages.pricing.description
+    Selitys järjestyksestä: ensin työn laajuus, sitten kulujen vahvistaminen, ja miksi tällä sivulla ei ole hinnastoa.
+
+guidanceContent.fi.pages.pricing.intro
+    Tämä sivu selittää, miten kulut vahvistetaan, ei niiden määrää. Määrä riippuu yksittäisen asian työn laajuudesta ja on mielekäs vasta, kun tuo laajuus on selvä.
+
+guidanceContent.fi.pages.pricing.sections[0].heading
+    Ensin vahvistetaan työn laajuus
+
+guidanceContent.fi.pages.pricing.sections[0].paragraphs[0]
+    Samanlaisissa asioissa työmäärä voi olla hyvin erilainen osapuolten määrän, käytettävissä olevien asiakirjojen, noudatettavien määräaikojen ja sen mukaan, onko menettely jo alkanut. Siksi ensimmäinen vaihe on aina vahvistaa, mikä kuuluu työhön ja mikä ei.
+
+guidanceContent.fi.pages.pricing.sections[0].paragraphs[1]
+    Yhteenveto, jonka lähetätte alussa, on tämän laajuuden perusta. Mitä selkeämmin se kuvaa kulkua, pyyntöänne ja määräaikoja, sitä tarkemmin laajuus voidaan määrätä.
+
+guidanceContent.fi.pages.pricing.sections[1].heading
+    Kulut vahvistetaan ennen työn alkamista
+
+guidanceContent.fi.pages.pricing.sections[1].paragraphs[0]
+    Kun työn laajuus on selvä, määrästä ja laskentatavasta keskustellaan teidän kanssanne ja ne vahvistetaan ennen työn alkamista. Jos laajuus muuttuu matkan varrella, se on vahvistettava uudelleen.
+
+guidanceContent.fi.pages.pricing.sections[1].paragraphs[1]
+    Tämä sivu ei ole tarjous hinnasta eikä synnytä maksuvelvollisuutta.
+
+guidanceContent.fi.pages.pricing.sections[2].heading
+    Neuvonta voi olla maksullinen
+
+guidanceContent.fi.pages.pricing.sections[2].paragraphs[0]
+    Neuvonta asianajajan kanssa voi olla maksullinen suoritus. Tämä sivu ei sano, että ensimmäinen keskustelu olisi maksuton, eikä mitään osaa saa lukea niin.
+
+guidanceContent.fi.pages.pricing.sections[2].paragraphs[1]
+    Jos neuvonta on maksullinen, määrä ja maksutapa ilmoitetaan ennen sen tapahtumista.
+
+guidanceContent.fi.pages.pricing.sections[3].heading
+    Miksi tällä sivulla ei ole taksoja
+
+guidanceContent.fi.pages.pricing.sections[3].paragraphs[0]
+    Kulut riippuvat asiasta itsestään: työmäärästä, osapuolten määrästä, asiakirjoista, määräajoista ja siitä, onko menettely jo käynnissä. Ennakolta asetettu luku ei näyttäisi kuluja asiassanne. Siksi vahvistamme ensin työn laajuuden ja ilmoitamme teille sitten kulut, ennen kuin työ alkaa.
+
+guidanceContent.fi.pages.pricing.sections[3].paragraphs[1]
+    Asianajopalkkion lisäksi voi syntyä tuomioistuin-, viranomais- tai kolmannen osapuolen kuluja. Ne ovat erillisiä palkkiosta ja riippuvat kyseisestä menettelystä.
+
+guidanceContent.fi.pages.contact.eyebrow
+    YHTEYS
+
+guidanceContent.fi.pages.contact.title
+    Miten tavoitatte toimiston
+
+guidanceContent.fi.pages.contact.description
+    Sivun kieli, neuvontakielet, menettely, jos ette voi käyttää mitään neljästä kielestä, ja mitä tämä sivu ei lupaa.
+
+guidanceContent.fi.pages.contact.intro
+    Ennen kuin kirjoitatte meille, erottakaa seuraavat kolme seikkaa. Ne sekoitetaan usein, mutta merkitsevät eri asioita.
+
+guidanceContent.fi.pages.contact.sections[0].heading
+    Kolme asiaa, jotka on pidettävä erillään
+
+guidanceContent.fi.pages.contact.sections[0].paragraphs[0]
+    Sivun näyttökieli, neuvontakieli asianajajan kanssa ja kieli, jolla kirjoitatte, ovat kolme erillistä asiaa.
+
+guidanceContent.fi.pages.contact.sections[0].items[0]
+    Sivun kieli: Nämä ohjeet on kirjoitettu suomeksi.
+
+guidanceContent.fi.pages.contact.sections[0].items[1]
+    Neuvontakieli: Neuvonta tapahtuu englanniksi, kiinaksi (中文), japaniksi ja koreaksi.
+
+guidanceContent.fi.pages.contact.sections[0].items[2]
+    Kirjoituskielenne: Voitte kirjoittaa yhteenvedon omalla kielellänne; alkuperäinen teksti säilytetään muuttamattomana.
+
+guidanceContent.fi.pages.contact.sections[1].heading
+    Jos ette voi käyttää mitään neljästä neuvontakielestä
+
+guidanceContent.fi.pages.contact.sections[1].paragraphs[0]
+    Yhteydenottolomakkeessa voitte valita »Viestintätapa on vahvistettava«. Vastaamme tutkiaksemme käyttökelpoisen viestintätavan, jos sellainen on; suoritusta muulla kielellä ei luvata eikä vastausaikaa luvata.
+
+guidanceContent.fi.pages.contact.sections[1].paragraphs[1]
+    Tämä on vain tutkimisvaihe, ei lupaus. Emme lupaa tulkkia, emme suoritusta suomeksi tai muulla kielellä neljän mainitun kielen ulkopuolella, emmekä sitä, että otamme vastaan jokaista asiaa.
+
+guidanceContent.fi.pages.contact.sections[2].heading
+    Mitä ensimmäisessä viestissä tulisi olla
+
+guidanceContent.fi.pages.contact.sections[2].paragraphs[0]
+    Ilmoittakaa, mitä on tapahtunut, millaista apua tarvitsette, mikä yhteys asialla on Taiwaniin, ja määräaika, jos tunnette sen. Jos olette jo saaneet kirjoituksen tuomioistuimelta tai viranomaiselta, mainitkaa kirjoituksen päivämäärä.
+
+guidanceContent.fi.pages.contact.sections[2].paragraphs[1]
+    Alkuvaiheessa teidän ei vielä tarvitse lähettää passinumeroa, henkilötunnusta, tilitietoja, sairauskertomuksia tai koko todistusaineistoa. Odottakaa asianajajan ohjeita ja lähettäkää sitten arkaluonteiset asiakirjat turvallista tietä.
+
+guidanceContent.fi.pages.contact.sections[3].heading
+    Mitä tämä sivu ei lupaa
+
+guidanceContent.fi.pages.contact.sections[3].paragraphs[0]
+    Emme lupaa vastausaikaa, emme vahvista tapaamista tämän sivun kautta, emme lupaa tiettyä asianajajaa emmekä järjestä tulkkia. Kirjallinen käännös on eri asia: viestiänne ei käännetä automaattisesti.
+
+guidanceContent.fi.pages.contact.sections[3].paragraphs[1]
+    Kun lähetätte pyynnön, sisältö säilytetään ja odottaa tarkistusta. Jos ette jonkin ajan kuluttua saa vastausta, voitte kirjoittaa uudelleen yhteyssivulla ilmoitettuun sähköpostiosoitteeseen.
+
+guidanceContent.fi.pages.faq.eyebrow
+    KYSYMYKSET
+
+guidanceContent.fi.pages.faq.title
+    Usein kysytyt kysymykset
+
+guidanceContent.fi.pages.faq.description
+    Selityksiä työalasta, valmistelusta, kielistä, kuluista ja lähetetyn pyynnön merkityksestä.
+
+guidanceContent.fi.pages.faq.intro
+    Seuraaviin kysymyksiin vastataan yleisten tietojen tasolla. Vastaus omaan asiaanne on mahdollinen vasta sen jälkeen, kun asianajaja on tarkistanut asiakirjat.
+
+guidanceContent.fi.pages.faq.sections[0].heading
+    Miten käytätte tätä osaa
+
+guidanceContent.fi.pages.faq.sections[0].paragraphs[0]
+    Jos ette löydä vastausta tilanteeseenne, vastaus riippuu yleensä erityisistä tosiseikoista. Kirjoittakaa nämä tosiseikat yhteenvetoon sen sijaan, että johtaisitte ne itse tältä sivulta.
+
+guidanceContent.fi.pages.faq.faqs[0].question
+    Mitä asioita toimisto käsittelee?
+
+guidanceContent.fi.pages.faq.faqs[0].answer
+    Käsittelemme kuutta ryhmää: sijoittaminen ja yhtiön perustaminen Taiwanissa, siviiliriidat ja vahingonkorvaus, avioliitto, perhe ja perintö, työoikeudelliset riidat, rikosasiat ja immateriaalioikeus. Otetaanko asia vastaan, ratkeaa sisällön tarkistuksen jälkeen.
+
+guidanceContent.fi.pages.faq.faqs[1].question
+    Mitä minun tulisi valmistella ennen yhteydenottoa?
+
+guidanceContent.fi.pages.faq.faqs[1].answer
+    Valmistakaa lyhyt yhteenveto kulusta, pyynnöstänne, Taiwan-yhteydestä ja määräajasta, jos sellainen on. Jos tuomioistuimen tai viranomaisen kirjoitus on jo olemassa, mainitkaa päivämäärä. Tässä vaiheessa teidän ei vielä tarvitse lähettää henkilöllisyysasiakirjoja tai koko todistusaineistoa.
+
+guidanceContent.fi.pages.faq.faqs[2].question
+    Voinko saada neuvontaa suomeksi?
+
+guidanceContent.fi.pages.faq.faqs[2].answer
+    Ei. Nämä ohjeet on kirjoitettu suomeksi, mutta neuvonta asianajajan kanssa tapahtuu vain englanniksi, kiinaksi (中文), japaniksi ja koreaksi. Emme lupaa tulkkiakaan. Kirjallinen käännös on eri asia: alkuperäinen teksti, jonka kirjoitatte, säilytetään sellaisenaan eikä sitä käännetä automaattisesti.
+
+guidanceContent.fi.pages.faq.faqs[3].question
+    Entä jos en voi käyttää mitään neljästä kielestä?
+
+guidanceContent.fi.pages.faq.faqs[3].answer
+    Valitkaa lähettäessä »Viestintätapa on vahvistettava«. Vastaamme tutkiaksemme viestintätapaa, mutta suoritusta muulla kielellä ei luvata. Tämä on tutkimisvaihe, ei lupaus siitä, että voimme työskennellä muulla kielellä.
+
+guidanceContent.fi.pages.faq.faqs[4].question
+    Miten suomenkielistä tekstiäni käsitellään?
+
+guidanceContent.fi.pages.faq.faqs[4].answer
+    Alkuperäinen teksti, jonka kirjoitatte, säilytetään sellaisenaan eikä sitä käännetä automaattisesti. Tarvittaessa jatkoviestinnän kieli vahvistetaan teidän kanssanne.
+
+guidanceContent.fi.pages.faq.faqs[5].question
+    Onko neuvonta jo tapahtunut, kun pyyntö on lähetetty?
+
+guidanceContent.fi.pages.faq.faqs[5].answer
+    Ei. Lähetetty pyyntö odottaa asianajajan tarkistusta. Se ei ole oikeudellinen neuvo, ei vahvistettu tapaaminen, eikä lähettäminen yksinään synnytä suhdetta asianajajan ja päämiehen välillä.
+
+guidanceContent.fi.pages.faq.faqs[6].question
+    Miten kulut lasketaan?
+
+guidanceContent.fi.pages.faq.faqs[6].answer
+    Ensin vahvistetaan työn laajuus, sen jälkeen määrä ja laskentatapa vahvistetaan teidän kanssanne ennen työn alkamista. Tämä sivu ei ilmoita lukuja eikä sano, että ensimmäinen keskustelu olisi maksuton.
+
+guidanceContent.fi.pages.faq.faqs[7].question
+    Entä jos asiani on hyvin kiireellinen?
+
+guidanceContent.fi.pages.faq.faqs[7].answer
+    Ilmoittakaa määräaika tai virallisen kirjoituksen päivämäärä yhteenvedon alussa, jotta nämä tiedot näkyvät tarkistuksessa. Tällä sivulla ei ole hätäkanavaa eikä se lupaa vastausaikaa; jos asianne ei voi odottaa, teidän tulisi rinnakkain etsiä muita teitä paikkakunnallanne.
+
+guidanceContent.fi.pages.privacy.eyebrow
+    TIETOSUOJA
+
+guidanceContent.fi.pages.privacy.title
+    Yhteydenottolomakkeella kerättävät tiedot
+
+guidanceContent.fi.pages.privacy.description
+    Mitä yhteydenottolomake tässä suomenkielisessä osassa kerää, miten alkuperäinen teksti käsitellään ja miten tavoitatte meidät tietojanne koskien.
+
+guidanceContent.fi.pages.privacy.intro
+    Tämä osa koskee vain näiden ohjesivujen yhteydenottolomaketta. Se kuvaa tietojen käsittelyä, ei teknistä lupausta.
+
+guidanceContent.fi.pages.privacy.sections[0].heading
+    Mitä tietoja kerätään
+
+guidanceContent.fi.pages.privacy.sections[0].paragraphs[0]
+    Kun lähetätte pyynnön tämän osan lomakkeella, merkitään seuraavat tiedot:
+
+guidanceContent.fi.pages.privacy.sections[0].items[0]
+    Ilmoittamanne nimi
+
+guidanceContent.fi.pages.privacy.sections[0].items[1]
+    Sähköpostiosoite vastausta varten
+
+guidanceContent.fi.pages.privacy.sections[0].items[2]
+    Sivun näyttökieli lähettäessä
+
+guidanceContent.fi.pages.privacy.sections[0].items[3]
+    Kieli, jolla kirjoititte
+
+guidanceContent.fi.pages.privacy.sections[0].items[4]
+    Toivomanne neuvontakieli
+
+guidanceContent.fi.pages.privacy.sections[0].items[5]
+    Alkuperäinen teksti, jonka kirjoititte
+
+guidanceContent.fi.pages.privacy.sections[0].items[6]
+    Suostumuksenne pyynnön lähettämiseen
+
+guidanceContent.fi.pages.privacy.sections[0].items[7]
+    Vastaanottonumero pyynnön löytämiseksi
+
+guidanceContent.fi.pages.privacy.sections[1].heading
+    Alkuperäinen teksti säilytetään muuttamattomana
+
+guidanceContent.fi.pages.privacy.sections[1].paragraphs[0]
+    Tekstinne säilytetään juuri sellaisena kuin kirjoititte sen, eikä sitä käännetä automaattisesti. Jos käännös on tarpeen käsittelyä varten, se otetaan esiin erikseen teidän kanssanne.
+
+guidanceContent.fi.pages.privacy.sections[1].paragraphs[1]
+    Koska alkuperäinen teksti säilytetään, älkää alkuvaiheessa kirjoittako sellaista, mitä ei vielä tarvita, esimerkiksi passinumeroa, henkilötunnusta tai tilitietoja.
+
+guidanceContent.fi.pages.privacy.sections[2].heading
+    Säilytyspaikka ja pääsy
+
+guidanceContent.fi.pages.privacy.sections[2].paragraphs[0]
+    Lähetyksenne sisältö säilytetään paikassa, joka ei ole julkisesti saatavilla. Vain toimiston valtuutetut henkilöt saavat käyttää sitä pyynnön käsittelemiseksi.
+
+guidanceContent.fi.pages.privacy.sections[2].paragraphs[1]
+    Tämä sivu ei anna ehdotonta turvallisuuslupausta. Mikään siirtotie eikä mikään säilytyspaikka ole täysin turvallinen; arkaluonteiset asiakirjat tulisi siksi lähettää vain asianajajan erityisen ohjeen jälkeen.
+
+guidanceContent.fi.pages.privacy.sections[3].heading
+    Käytön tarkoitus
+
+guidanceContent.fi.pages.privacy.sections[3].paragraphs[0]
+    Lähetetyt tiedot palvelevat pyynnön tarkistusta, palautetta teille, viestintätavan selvittämistä ja käsittelyä, jos työ otetaan vastaan.
+
+guidanceContent.fi.pages.privacy.sections[3].paragraphs[1]
+    Tietoja ei käytetä markkinointiin ilman erillistä suostumusta.
+
+guidanceContent.fi.pages.privacy.sections[4].heading
+    Ilmoitus ja vastaanottonumero
+
+guidanceContent.fi.pages.privacy.sections[4].paragraphs[0]
+    Jos pyyntö lähetetään onnistuneesti, järjestelmä ilmoittaa toimistolle. Jos tätä ilmoitusta ei ole vielä vahvistettu, tekstinne jää säilytetyksi eikä katoa.
+
+guidanceContent.fi.pages.privacy.sections[4].paragraphs[1]
+    Vastaanottonumero palvelee pyyntönne löytämistä asiakirjoistamme. Se näytetään säilytyksen jälkeen; voitte ilmoittaa sen uudessa yhteydenotossa.
+
+guidanceContent.fi.pages.privacy.sections[5].heading
+    Oikeutenne ja yhteystie
+
+guidanceContent.fi.pages.privacy.sections[5].paragraphs[0]
+    Voitte pyytää tietojenne tarkastusta, oikaisua tai poistamista tai peruuttaa suostumuksen yhteyssivulla ilmoitetun sähköpostiosoitteen kautta. Jos on lakisääteinen tai menettelyyn liittyvä säilytysvelvollisuus, selitämme rajoituksen.
+
+guidanceContent.fi.pages.privacy.sections[5].paragraphs[1]
+    Tämä sivu ei ilmoita kiinteää säilytysaikaa, koska tosiasiallinen kesto riippuu siitä, jatketaanko asiaa, ja siihen liittyvistä velvollisuuksista. Jos toivotte aikaisempaa poistoa, ilmoittakaa se yhteydenotossa.
+
+guidanceContent.fi.pages.privacy.sections[6].heading
+    Säilytyspaikka ja palveluntarjoajat
+
+guidanceContent.fi.pages.privacy.sections[6].paragraphs[0]
+    Tätä sivustoa isännöi Vercel, ja lähetyksenne säilytetään tämän palvelun ei-julkisessa objektivarastossa. Sähköpostit lähetetään toimiston käyttämän sähköpostipalvelun kautta.
+
+guidanceContent.fi.pages.privacy.sections[6].paragraphs[1]
+    Yksittäisten palveluntarjoajien palvelimet voivat sijaita Taiwanin ulkopuolella, joten tietojanne voidaan säilyttää ja käsitellä siellä. Kun säilytystarkoitus on täytetty, tiedot poistetaan viivytyksettä; tiedot, jotka on säilytettävä sovellettavien sääntöjen mukaan, jäävät siksi ajaksi. Henkilötietopyynnöt ottaa vastaan wei@hoveringlaw.com.tw.
+
+guidanceContent.fi.pages.disclaimer.eyebrow
+    VASTUUVAPAUS
+
+guidanceContent.fi.pages.disclaimer.title
+    Tämän sivun tietojen laajuus ja rajat
+
+guidanceContent.fi.pages.disclaimer.description
+    Tietojen yleinen luonne, oikeudellinen soveltamisala ja edellytykset suhteelle asianajajan ja päämiehen välillä.
+
+guidanceContent.fi.pages.disclaimer.intro
+    Tämä osa tekee selväksi, mitä nämä suomenkieliset ohjesivut voivat tehdä teille ja mitä eivät.
+
+guidanceContent.fi.pages.disclaimer.sections[0].heading
+    Vain yleisiä tietoja
+
+guidanceContent.fi.pages.disclaimer.sections[0].paragraphs[0]
+    Näiden sivujen sisältö on kirjoitettu yleisenä tietona. Se ei ole oikeudellista neuvontaa asiassanne eikä korvaa omien asiakirjojenne tarkastusta.
+
+guidanceContent.fi.pages.disclaimer.sections[0].paragraphs[1]
+    Asian tulos riippuu tosiseikoista, sovellettavista säännöistä ja ajankohdasta; kaksi näennäisesti samanlaista tilannetta voi päättyä eri tavoin.
+
+guidanceContent.fi.pages.disclaimer.sections[1].heading
+    Oikeudellinen soveltamisala
+
+guidanceContent.fi.pages.disclaimer.sections[1].paragraphs[0]
+    Toimisto harjoittaa ammattia Taiwanin oikeuden mukaan, ja tämä sivu puhuu vain työstä tässä kehyksessä.
+
+guidanceContent.fi.pages.disclaimer.sections[1].paragraphs[1]
+    Sisältö ei ole neuvontaa muun oikeusjärjestyksen kuin Taiwanin mukaan, mukaan lukien asuinpaikkanne oikeus. Jos osa asiastanne koskee toista oikeusjärjestystä, selvitämme teidän kanssanne, mikä pätevä asiantuntija tarvitaan siihen osaan.
+
+guidanceContent.fi.pages.disclaimer.sections[2].heading
+    Suhde asianajajan ja päämiehen välillä ei synny itsestään
+
+guidanceContent.fi.pages.disclaimer.sections[2].paragraphs[0]
+    Tämän sivun lukeminen, lomakkeen tai sähköpostin lähettäminen ei yksinään synnytä suhdetta asianajajan ja päämiehen välillä.
+
+guidanceContent.fi.pages.disclaimer.sections[2].paragraphs[1]
+    Tämä suhde syntyy vasta sen jälkeen, kun asia on tarkistettu ja molemmat osapuolet ovat vahvistaneet työn vastaanottamisen.
+
+guidanceContent.fi.pages.disclaimer.sections[3].heading
+    Ei lupausta tuloksesta
+
+guidanceContent.fi.pages.disclaimer.sections[3].paragraphs[0]
+    Mikään osa tästä sivusta ei ole lupaus asian tuloksesta, hakemuksen hyväksymisestä tai oleskelu- ja työasemasta.
+
+guidanceContent.fi.pages.disclaimer.sections[3].paragraphs[1]
+    Ulkoiset linkit palvelevat suuntautumista; emme lupaa kolmansien sisältöjen oikeellisuutta emmekä ajantasaisuutta.
+
+guidanceContent.fi.pages.columns.eyebrow
+    ARTIKKELIT
+
+guidanceContent.fi.pages.columns.title
+    Artikkeleita Taiwanin oikeudesta
+
+guidanceContent.fi.pages.columns.description
+    Suomenkielisiä artikkeleita Taiwanin oikeuden yleisistä kysymyksistä. Sisältö on yleistä tietoa julkaisuajankohtana, ei oikeudellista neuvontaa asiassanne.
+
+guidanceContent.fi.pages.columns.intro
+    Toimisto julkaisee artikkeleita Taiwanin oikeuden yleisistä kysymyksistä. Suomenkieliset artikkelit ovat tällä sivulla; lisäksi on neljä linkkiä, joista kukin avaa yhden alkuperäiskielen artikkeliluettelon.
+
+guidanceContent.fi.pages.columns.sections[0].heading
+    Neljä luetteloa kielen mukaan
+
+guidanceContent.fi.pages.columns.sections[0].paragraphs[0]
+    Tässä osassa on neljä linkkiä: artikkeliluettelo koreaksi, kiinaksi, englanniksi ja japaniksi. Kukin linkki ilmoittaa luettelon kielen, jotta tiedätte etukäteen, millä kielellä sisältö avautuu.
+
+guidanceContent.fi.pages.columns.sections[0].paragraphs[1]
+    Nämä neljä luetteloa ovat luetteloita artikkeleiden alkuperäiskielen mukaan, eivät käännösluetteloita. Suomenkieliset artikkelit ovat erikseen tällä sivulla.
+
+guidanceContent.fi.pages.columns.sections[1].heading
+    Mihin linkit johtavat
+
+guidanceContent.fi.pages.columns.sections[1].paragraphs[0]
+    Kun valitsette yhden neljästä linkistä, kyseisen kielen artikkeliluettelo avautuu. Luettelosta valitsette itse tekstin; koko sisältö näkyy artikkelin alkuperäiskielellä.
+
+guidanceContent.fi.pages.columns.sections[1].paragraphs[1]
+    Tämä sivu ei tiivistä artikkeleiden sisältöä eikä lupaa, että aihe on saatavilla kaikilla neljällä kielellä. Kukin luettelo sisältää vain tekstejä, jotka on julkaistu sillä kielellä.
+
+guidanceContent.fi.pages.columns.sections[2].heading
+    Mihin asti artikkeli voi palvella suuntautumisena
+
+guidanceContent.fi.pages.columns.sections[2].paragraphs[0]
+    Artikkelit ovat yleisiä tietoja julkaisuajankohtana. Säännöt ja niiden soveltaminen voivat muuttua, eikä artikkeli sisällä kaikkia asianne olosuhteita.
+
+guidanceContent.fi.pages.columns.sections[2].paragraphs[1]
+    Älkää siksi perustako toimea todellisessa asiassa yksin artikkeliin. Käyttäkää sitä yleiskuvaan ja keskustelkaa asiakirjoistanne erikseen asianajajan kanssa; tämä sivu ei ole neuvontavaihe.
+
+guidanceTeamCopy.fi.label
+    OUR TEAM
+
+guidanceTeamCopy.fi.title
+    Hoveringin kansainvälinen tiimi
+
+guidanceTeamCopy.fi.description
+    Hoveringin asianajajien, operatiivisen johdon ja osakaskirjanpidon profiilit.
+
+guidanceTeamCopy.fi.representativeTitle
+    Johtava asianajaja
+
+guidanceTeamCopy.fi.teamTitle
+    Asianajajat ja työntekijät
+
+guidanceTeamCopy.fi.partnerTitle
+    Osakaskirjanpito
+
+guidanceTeamCopy.fi.introLabel
+    Esittely
+
+guidanceTeamCopy.fi.educationLabel
+    Koulutus
+
+guidanceTeamCopy.fi.experienceLabel
+    Kokemus
+
+guidanceTeamCopy.fi.photoAltPrefix
+    Valokuva
+
+guidanceTeamCopy.fi.workingLanguagesLabel
+    Työkielet
+
+guidanceTeamCopy.fi.fullProfileLabel
+    Täysi profiili (English)
+
+guidanceTeamCopy.fi.keyFactsHeading
+    Asianajaja Wei Tseng — Keskeiset tiedot
+
+guidanceTeamCopy.fi.qualificationLabel
+    Kelpoisuus ja toimisto
+
+guidanceTeamCopy.fi.qualificationSentence
+    {name} on kelpoinen harjoittamaan asianajajan ammattia Taiwanissa ja on {firm}in johtava asianajaja.
+
+guidanceTeamCopy.fi.practiceLabel
+    Pääalueet
+
+guidanceTeamCopy.fi.consultationLanguagesLabel
+    Neuvontakielet
+
+guidanceTeamCopy.fi.roles.tseng-junwei
+    Johtava asianajaja Taiwanissa (Managing Attorney)
+
+guidanceTeamCopy.fi.roles.chang-rongxuan
+    Asianajaja Taiwanissa (Taiwan Attorney)
+
+guidanceTeamCopy.fi.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.fi.roles.son-jungmin
+    Korean operatiivinen johto (Korea Operations Manager)
+
+guidanceTeamCopy.fi.roles.huang-shengping
+    Osakaskirjanpitäjä (Partner CPA)
+
+guidanceTeamBios.fi.tseng-junwei.intro[0]
+    Toimisto käsittelee yritysten ja yksityishenkilöiden asioita Taiwanissa englanniksi, japaniksi, koreaksi ja kiinaksi.
+
+guidanceTeamBios.fi.tseng-junwei.intro[1]
+    Hän edusti korealaista opiskelijaa vahingonkorvausvaatimuksessa kuntosalilla tapahtuneen vamman vuoksi ja sai ensimmäisen asteen tuomion TWD 1.57M.
+
+guidanceTeamBios.fi.tseng-junwei.education[0]
+    Maisteri (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.fi.tseng-junwei.education[1]
+    Kandidaatti (B.A.) kaksinkertaisella oikeuden ja rahoituksen polulla, National Chengchi University
+
+guidanceTeamBios.fi.tseng-junwei.education[2]
+    Vaihto-opiskelija Kobe Universityssä ja Waseda Universityssä
+
+guidanceTeamBios.fi.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.fi.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.fi.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.fi.chang-rongxuan.intro[0]
+    Aiemmin Ministry of Education, Legal Affairs Divisionissa, painotuksena hallinto- ja siviiliasiat.
+
+guidanceTeamBios.fi.chang-rongxuan.intro[1]
+    Kokemusta yliopistoja, opetushenkilöstön oikeuksia ja hallintovalituksia koskevista asioista.
+
+guidanceTeamBios.fi.chang-rongxuan.education[0]
+    Oikeustieteen kandidaatti (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.fi.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.fi.chang-rongxuan.experience[1]
+    Asianajaja, Hovering International Law Firm
+
+guidanceTeamBios.fi.chang-fangyu.intro[0]
+    Paralegal, jolla on pitkä toiminta vanhempana paralegalina useissa toimistoissa, vastuussa prosessituesta, yhtiöoikeudesta ja ulkomaisista investoinneista.
+
+guidanceTeamBios.fi.chang-fangyu.intro[1]
+    Tuki menettelyissä, yhtiön perustamisessa, ulkomaisten investointien luvissa, lupahakemuksissa sekä Korean ja Taiwanin vaihdossa.
+
+guidanceTeamBios.fi.chang-fangyu.education[0]
+    Oikeustieteen kandidaatti (LL.B.), Tunghai University
+
+guidanceTeamBios.fi.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.fi.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.fi.son-jungmin.intro[0]
+    Koordinoi neuvonta-aikoja ja viestintää Koreasta tuleville päämiehille.
+
+guidanceTeamBios.fi.son-jungmin.intro[1]
+    Tukee alueiden välistä vaihtoa asiakirjajärjestelmien ja työnkulkujen kautta, tietojenkäsittelytieteen pohjalta.
+
+guidanceTeamBios.fi.son-jungmin.education[0]
+    Kandidaatti (B.S.) tietojenkäsittelytieteessä, National Cheng Kung University
+
+guidanceTeamBios.fi.son-jungmin.experience[0]
+    Korean toimintojen alue, Hovering International Law Firm
+
+guidanceTeamBios.fi.huang-shengping.intro[0]
+    On suorittanut kandidaatti- ja maisteriohjelmat kirjanpidossa National Chengchi Universityssä ja johtaa nyt tilitoimistoa.
+
+guidanceTeamBios.fi.huang-shengping.intro[1]
+    Tukee oikeudellisten, verotuksellisten ja taloudellisten riskien integroitua analyysia yritysasiakkaille.
+
+guidanceTeamBios.fi.huang-shengping.education[0]
+    Maisteri (M.A.) kirjanpidossa, National Chengchi University
+
+guidanceTeamBios.fi.huang-shengping.education[1]
+    Kandidaatti (B.A.) kirjanpidossa, National Chengchi University
+
+guidanceTeamBios.fi.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.fi.Korean
+    korea
+
+guidanceLanguageNames.fi.Chinese
+    kiina
+
+guidanceLanguageNames.fi.Japanese
+    japani
+
+guidancePracticeAreaNames.fi.Taiwan company setup
+    Yhtiön perustaminen Taiwanissa
+
+guidancePracticeAreaNames.fi.Taiwan investment counsel
+    Oikeudellinen neuvonta Taiwanin investoinneissa
+
+guidancePracticeAreaNames.fi.Civil litigation and damages
+    Siviiliasiat ja vahingonkorvaus
+
+guidancePracticeAreaNames.fi.Trademark and patent filings
+    Tavaramerkki- ja patenttihakemukset
+
+guidancePracticeAreaNames.fi.Visa and residency
+    Viisumi ja oleskelu
+
+guidancePracticeAreaNames.fi.Family and labor disputes
+    Perhe- ja työriidat
+
+guidanceOfficeCopy.fi.label
+    OFFICES
+
+guidanceOfficeCopy.fi.title
+    Toimistot
+
+guidanceOfficeCopy.fi.description
+    Hovering International Law Firmin Taiwanin toimistojen osoitteet.
+
+guidanceOfficeCopy.fi.officeLabel
+    Toimisto
+
+guidanceOfficeCopy.fi.mapPreviewLabel
+    Kartan esikatselu
+
+guidanceOfficeCopy.fi.koreaOfficeTitle
+    Korean toimisto
+
+guidanceOfficeCopy.fi.koreaAddressCardLabel
+    Korean toimiston osoite
+
+guidanceOfficeCopy.fi.koreaMapLinkLabel
+    Näytä Naver Mapissa
+
+guidanceOfficeCopy.fi.reviewCountWord
+    arvostelua
+
+guidanceOfficeCopy.fi.phoneLabel
+    Puhelin
+
+guidanceOfficeCopy.fi.faxLabel
+    Faksi
+
+guidanceOfficeCopy.fi.mapLinkLabel
+    Näytä kartalla
+
+guidanceOfficeCopy.fi.photoAlts[0]
+    Taipein toimiston vastaanottotila, Hovering International Law Firm
+
+guidanceOfficeCopy.fi.photoAlts[1]
+    Asianajajan huone Taipein toimistossa, Hovering International Law Firm
+
+guidanceOfficeCopy.fi.photoAlts[2]
+    Kokoushuone Taipein toimistossa, Hovering International Law Firm
+
+guidanceOfficeCopy.fi.officeTitles.taipei
+    Taipei
+
+guidanceOfficeCopy.fi.officeTitles.taichung
+    Taichung
+
+guidanceOfficeCopy.fi.officeTitles.kaohsiung
+    Kaohsiung
+
+guidanceOfficeCopy.fi.officeTitles.pingtung
+    Pingtung
+
+guidanceFooterCopy.fi.officeLabel
+    Toimistot
+
+guidanceFooterCopy.fi.officeQuickLinksLabel
+    Pikalinkit toimistoihin
+
+guidanceFooterCopy.fi.followLabel
+    Seuratkaa
+
+guidanceFooterCopy.fi.blogLabel
+    Blogi
+
+guidanceFooterCopy.fi.websiteLabel
+    Virallinen sivusto
+
+guidanceFooterCopy.fi.sitemapLabel
+    Sivukartta
+
+guidanceFooterCopy.fi.copyEmailLabel
+    Kopioikaa sähköpostiosoite
+
+guidanceFooterCopy.fi.emailCopiedMessage
+    Sähköpostiosoite on kopioitu.
+
+guidanceFooterCopy.fi.officialConsultationEmailLabel
+    Virallinen sähköposti neuvontaa varten
+
+internationalInquiryCopy.fi.guidanceNotice
+    Tämä sivu on kirjoitettu suomeksi yleisenä orientaationa, ei oikeudellisena neuvontana asiassanne.
+
+internationalInquiryCopy.fi.consultationNotice
+    Neuvonta tapahtuu neljällä kielellä: englanniksi, kiinaksi (中文), japaniksi ja koreaksi.
+
+internationalInquiryCopy.fi.methodConfirmationNotice
+    Jos ette voi käyttää mitään neljästä kielestä, valitkaa «Viestintätapa on vahvistettava». Vastaamme tutkiaksemme käyttökelpoisen viestintätavan, jos sellainen tapa on; palvelua toisella kielellä ei varmisteta eikä vastausaikaa luvata.
+
+internationalInquiryCopy.fi.preparationNotice
+    Voitte kirjoittaa yhteenvedon omalla kielellänne. Alkuperäinen teksti säilytetään sellaisena kuin olette sen kirjoittaneet, eikä sitä käännetä automaattisesti.
+
+internationalInquiryCopy.fi.heading
+    Lähettäkää neuvontapyyntö
+
+internationalInquiryCopy.fi.intro
+    Kuvatkaa asianne lyhyesti. Asianajaja tarkastaa sisällön ennen kuin seuraavaa vaihetta käsitellään.
+
+internationalInquiryCopy.fi.submitLabel
+    Lähettäkää pyyntö
+
+internationalInquiryCopy.fi.submittingLabel
+    Lähetetään…
+
+internationalInquiryCopy.fi.successMessage
+    Olemme vastaanottaneet pyyntönne; se odottaa tarkastusta. Tämä ei merkitse, että neuvonta olisi tapahtunut tai että tapaaminen olisi vahvistettu.
+
+internationalInquiryCopy.fi.savedNotificationPendingMessage
+    Pyyntönne on tallennettu, mutta ilmoitus toimistolle ei ole vielä vahvistettu. Kirjoittamanne ei katoa. Jos ette saa vastausta, voitte myös kirjoittaa yhteyssivun sähköpostiosoitteeseen.
+
+internationalInquiryCopy.fi.receiptIdLabel
+    Vastaanotonumero
+
+internationalInquiryCopy.fi.failureMessage
+    Pyyntöänne ei voitu lähettää. Yrittäkää uudelleen tai kirjoittakaa yhteyssivun sähköpostiosoitteeseen.
+
+internationalInquiryCopy.fi.originalLanguageLabel
+    Kieli, jolla kirjoitatte
+
+internationalInquiryCopy.fi.originalLanguagePlaceholder
+    Esimerkiksi suomi, englanti, kiina tai muu kieli
+
+internationalInquiryCopy.fi.preferredConsultationLanguageLabel
+    Kieli, jota toivotte neuvontaan
+
+internationalInquiryCopy.fi.originalTextLabel
+    Lyhyt kuvaus asiasta (omalla kielellänne)
+
+internationalInquiryCopy.fi.originalTextPlaceholder
+    Kertokaa, mitä on tapahtunut, millaista apua tarvitsette, ja määräaika, jos sellainen on. Älkää kirjoittako passinumeroa, henkilötunnusta älkääkä tilitietoja.
+
+internationalInquiryCopy.fi.nameLabel
+    Nimi
+
+internationalInquiryCopy.fi.emailLabel
+    Sähköposti
+
+internationalInquiryCopy.fi.consentLabel
+    Olen lukenut tietosuojasivun ja suostun tämän pyynnön lähettämiseen.
+
+internationalInquiryCopy.fi.privacyLinkLabel
+    Tietosuoja
+
+internationalInquiryCopy.fi.requiredMessage
+    Tämä kenttä on pakollinen.
+
+internationalInquiryCopy.fi.invalidEmailMessage
+    Antakaa kelvollinen sähköpostiosoite.
+
+internationalInquiryCopy.fi.tooLongMessage
+    Teksti on liian pitkä. Lyhentäkää se ja lähettäkää uudelleen.
+
+internationalInquiryCopy.fi.sourceLanguageNotice
+    Tämä artikkeli on julkaistu vain kielellä {language}; linkki avaa alkuperäisen sivun.
+
+internationalInquiryCopy.fi.unavailableTranslationNotice
+    Tämä kohta ei ole vielä saatavilla tämän sivun kielellä. Linkki alkuperäiskielellä avaa alkuperäisen tekstin.
+
+internationalInquiryCopy.fi.unavailableLanguageNotice
+    Tätä sivua ei tarjota kielellä {language}.
+
+internationalInquiryCopy.fi.languageOptions.en
+    Englanti (English)
+
+internationalInquiryCopy.fi.languageOptions.zh-hant
+    Kiina (中文)
+
+internationalInquiryCopy.fi.languageOptions.ja
+    Japani (日本語)
+
+internationalInquiryCopy.fi.languageOptions.ko
+    Korea (한국어)
+
+internationalInquiryCopy.fi.languageOptions.needs-method-confirmation
+    Mikään neljästä kielestä ei ole käyttökelpoinen — viestintätapa on vahvistettava
+
+guidanceAnswers.fi.services.answer
+    Toimisto käsittelee kuutta työryhmää Taiwanin oikeuden mukaan: investointi ja yhtiön perustaminen, siviiliriidat ja vahingonkorvaus, avioliitto, perhe ja perintö, työ, rikosasiat sekä immateriaalioikeus. Kunkin asian laajuus vahvistetaan erikseen sen jälkeen, kun asianajaja on tarkastanut lähettämänne sisällön. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.
+
+guidanceAnswers.fi.services.sources[0]
+    /fi/faq
+
+guidanceAnswers.fi.services.sources[1]
+    /fi/contact
+
+guidanceAnswers.fi.about.answer
+    Hovering International Law Firm on taiwanilainen asianajotoimisto, jonka National Taiwan Universityn (國立臺灣大學) valmistuneet perustivat vuonna 2016, toimistoilla Taipeissa, Kaohsiungissa, Taichungissa ja Pingtungissa. Vuodesta 2020 on kirjanpito-osasto; Taichungin toimisto käsittelee Korean ja Japanin yhteyden omaavia asioita. Toimisto ei lupaa tulosta. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.
+
+guidanceAnswers.fi.about.sources[0]
+    /fi/lawyers
+
+guidanceAnswers.fi.about.sources[1]
+    /fi/services
+
+guidanceAnswers.fi.lawyers.answer
+    Tämä sivu näyttää Hoveringin asianajajien, operatiivisen johdon ja osakaskirjanpidon profiilit. Asianajaja Wei Tseng (曾雋崴) on kelpoinen Taiwanissa ja on toimiston johtava asianajaja; hän työskentelee päämiesten kanssa Koreasta, Japanista ja muiden kansainvälisten päämiesten kanssa. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.
+
+guidanceAnswers.fi.lawyers.sources[0]
+    /fi/about
+
+guidanceAnswers.fi.lawyers.sources[1]
+    /fi/contact
+
+guidanceAnswers.fi.pricing.answer
+    Tämä sivu ei julkaise hinnastoa. Ensin työn laajuus vahvistetaan lähettämästänne yhteenvedosta, sen jälkeen määrä ja laskentatapa vahvistetaan kanssanne ennen työn alkamista. Keskustelu asianajajan kanssa voi olla maksullinen; palkkion lisäksi voi syntyä tuomioistuin- tai viranomaiskuluja. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.
+
+guidanceAnswers.fi.pricing.sources[0]
+    /fi/contact
+
+guidanceAnswers.fi.pricing.sources[1]
+    /fi/faq
+
+guidanceAnswers.fi.contact.answer
+    Lähettäkää yhteenvedon yhteydenottolomakkeella: mitä on tapahtunut, millaista apua tarvitsette, mikä yhteys asialla on Taiwaniin, ja määräaika, jos tunnette sen. Ensimmäisessä vaiheessa ei vielä tarvitse lähettää henkilöllisyysasiakirjoja eikä koko näyttöä. Toimisto ei lupaa vastausaikaa eikä vahvista tapaamista tämän sivun kautta. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.
+
+guidanceAnswers.fi.contact.sources[0]
+    /fi/faq
+
+guidanceAnswers.fi.contact.sources[1]
+    /fi/pricing
+
+guidanceAnswers.fi.faq.answer
+    Tämä osa vastaa usein kysyttyihin kysymyksiin yleisen tiedon tasolla: kuusi työryhmää, valmistelu ennen yhteydenottoa, kulujen vahvistaminen ja lähetetyn viestin merkitys. Lähetetty pyyntö odottaa asianajajan tarkastusta; se ei ole oikeudellinen lausunto, ei tapaaminen eikä synnytä suhdetta asianajajan ja päämiehen välillä. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.
+
+guidanceAnswers.fi.faq.sources[0]
+    /fi/contact
+
+guidanceAnswers.fi.faq.sources[1]
+    /fi/services
+
+GUIDANCE_LLMS_NOTICES.fi.consultationNotice
+    Nämä ohjeet on kirjoitettu suomeksi, mutta neuvonta asianajajan kanssa tapahtuu vain englanniksi, kiinaksi (中文), japaniksi ja koreaksi.
+
+GUIDANCE_LLMS_NOTICES.fi.discoveryNotice
+    Tiedosto llms.txt on vain kartta julkisten sivujen löytämiseen; se ei lupaa hakusijaa, tukea, tekoälyn suositusta eikä näkyvyyttä.
+
+GUIDANCE_LLMS_NOTICES.fi.confidentialNotice
+    Koska alkuperäinen teksti säilytetään, älkää alkuvaiheessa kirjoittako sellaista, mitä ei vielä tarvita, esimerkiksi passinumeroa, henkilötunnusta tai tilitietoja.

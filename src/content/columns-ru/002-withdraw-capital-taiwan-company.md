@@ -139,7 +139,7 @@ faq:
 
 ## Связанные материалы
 
-1. [Услуги по инвестициям и созданию компании на Тайване](/ko/services/investment)
+1. [Какие дела мы ведём](/ru/services)
 2. [Основы создания компании на Тайване](/ru/columns/taiwan-company-establishment-basics)
 3. [Контакты](/ru/contact)
 

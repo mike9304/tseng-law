@@ -78,6 +78,6 @@ De regels van de bestuurlijke autoriteiten kunnen vaak wijzigen; vóór de insch
 ---
 
 > Zie ook:
-> - [Algemene leidraad voor vennootschapsoprichting in Taiwan — procedures, kosten en vennootschapsvormen](/ko/guides/taiwan-company-setup)
-> - [Taiwanese advocaat die Koreaans spreekt](/ko/korean-lawyer-in-taiwan)
-> - [Leidraad over de advocaat voor rechtspersonen en vennootschapsoprichting in Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Welke zaken wij behandelen](/nl/services)
+> - [Internationaal team van Hovering](/nl/lawyers)
+> - [Hoe u het kantoor bereikt](/nl/contact)

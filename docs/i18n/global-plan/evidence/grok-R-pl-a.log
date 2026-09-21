@@ -1,0 +1,23 @@
+[WO start 2026-09-21 16:10:54]
+Native review is in `docs/i18n/global-plan/reviews/native/pl-a.md` (56 findings: 20 P1, 36 P2). Naturalness: **3/5** guidance pack, **2/5** columns. Strongest P1s: masculine titles for Wei Tseng, leftover `OUR TEAM` / `OFFICES`, dropped Korea-treaty caveat, and Korea-audience copy still on the Polish pages.
+
+Last 15 lines of the output file:
+
+```
+| 42 | P2 | C | columns-pl/004-taiwan-company-subsidiary-vs-branch.md | należy orzekać na cały czas trwania działalności | "orzekać" = to adjudicate; EN is "judge/assess over the life of the business" | należy oceniać to na cały okres działalności |
+| 43 | P2 | B | columns-pl/005-taiwan-company-establishment-advanced-2.md | mogą również zapoznać się z Zakładanie spółki na Tajwanie – część pogłębiona 2 | Bare nominative after "z"; needs instrumental/inflected title | mogą również zapoznać się z częścią pogłębioną 2 artykułu o zakładaniu spółki na Tajwanie |
+| 44 | P2 | B | columns-pl/005-taiwan-company-establishment-advanced-2.md | czy bankowość internetową można używać od razu? | "używać" takes genitive | czy bankowości internetowej można używać od razu? |
+| 45 | P2 | A | columns-pl/006-taiwan-massage-history-law.md | Ostatecznie Wielcy Sędziowie (大法官) uznali za niekonstytucyjny | Calque of "Grand Justices"; in Polish this is the constitutional court | Ostatecznie sędziowie konstytucyjni (大法官) uznali ten przepis za niekonstytucyjny |
+| 46 | P2 | D | columns-pl/006-taiwan-massage-history-law.md | Podobnie w Korei, gdzie wiele osób z niepełnosprawnością wzroku utrzymuje się z masażu | Long Korea-only comparative block left as if the reader were Korean | Podobnie w niektórych państwach, w tym w Korei, masaż bywa zastrzeżony dla osób z niepełnosprawnością wzroku |
+| 47 | P2 | C | columns-pl/006-taiwan-massage-history-law.md | Czy państwo pamiętają czasy tradycyjnych salonów fryzjerskich (理髮廳) z początków Tajwanu? | Asks a Poland reader to "remember" early-Taiwan barbershops; lowercase państwo | Czy znane są Państwu dawne tajwańskie salony fryzjerskie (理髮廳)? |
+| 48 | P2 | B | columns-pl/007-taiwan-divorce-lawsuit-qna.md | Wnioski internetowe można używać tylko w ustawowym terminie wniosku | Same "używać" + accusative error as 005 | Z wniosków internetowych można korzystać tylko w ustawowym terminie |
+| 49 | P2 | B | columns-pl/007-taiwan-divorce-lawsuit-qna.md | potrzebne są materiały do dowieść najnowszych wydatków i zdolności zapłaty | "do dowieść" is not Polish | potrzebne są materiały, które wykażą najnowsze wydatki i zdolność zapłaty |
+| 50 | P2 | C | columns-pl/007-taiwan-divorce-lawsuit-qna.md | Nie zawsze. Sąd Tajwanu może, według charakteru sprawy rodzinnej | FAQ answer dumped under a heading without the question (same pattern: "Nie." in §6) | Mediacja nie zawsze wymaga wspólnego stawiennictwa. Sąd na Tajwanie może… |
+| 51 | P2 | C | columns-pl/008-taiwan-labor-severance-law.md | czy odprawę naprawdę trudno uzyskać na Tajwanie?? | Double question mark; title is blog-clickbait on a law-firm page | Prawo pracy na Tajwanie: kiedy przysługuje odprawa (資遣費) |
+| 52 | P2 | C | columns-pl/008-taiwan-labor-severance-law.md | Wasze zwykłe ewidencje obecności | Sudden ty/wy "Wasze" after "Państwo"; also the bold "zachowujcie" list | Proszę zachować ewidencję obecności |
+| 53 | P2 | B | columns-pl/008-taiwan-labor-severance-law.md | dał B kartkę A4 | Subject dropped; "dał" masculine after feminine "kadra kierownicza" / "spółka" | Kadra dała B kartkę A4 |
+| 54 | P2 | C | columns-pl/008-taiwan-labor-severance-law.md | Wówczas moja strona, pan B, była zatrudniona od ponad 10 lat | "strona" (feminine) disagrees with "pan B" | Mój klient, pan B, był zatrudniony w spółce A ponad 10 lat |
+| 55 | P2 | C | columns-pl/009-taiwan-voluntary-resignation-severance.md | «**czas**» jest bardzo ważny. | Guillemets + bold for a word a native would just write | czas ma tu kluczowe znaczenie. |
+| 56 | P2 | C | columns-pl/001-taiwan-company-establishment-basics.md | Profil Adwokat Wei Tseng | Uninflected title; also masculine "Adwokat" in the byline **Adwokat Wei Tseng (曾雋崴)** of 001–007 | Profil adwokatki Wei Tseng |
+```
+=== end code=0 2026-09-21 16:16:30 ===

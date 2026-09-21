@@ -368,6 +368,6 @@ Wei Tseng (曾雋崴), avvocata di Taiwan.
 ---
 
 > Vedere anche:
-> - [Guida dell’avvocato litigante a Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Avvocata taiwanese che parla coreano](/ko/korean-lawyer-in-taiwan)
-> - [Guida per cercare un avvocato a Taiwan](/ko/taiwan-lawyer)
+> - [Come si fissano ambito di lavoro e costi](/it/pricing)
+> - [Team internazionale di Hovering](/it/lawyers)
+> - [Su Hovering International Law Firm](/it/about)

@@ -139,7 +139,7 @@ Ju längre verksamhetsuppehållet varar, desto mer kan det senare avslutsförfar
 
 ## Relaterade anvisningar
 
-1. [Tjänster för investering och bolagsbildning i Taiwan](/ko/services/investment)
+1. [Vilka ärenden vi behandlar](/sv/services)
 2. [Grunderna för bolagsbildning i Taiwan](/sv/columns/taiwan-company-establishment-basics)
 3. [Kontakt](/sv/contact)
 

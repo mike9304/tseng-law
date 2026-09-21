@@ -111,7 +111,7 @@ De verkoopvoorbereiding in Taiwan, indien men haar in de volgende volgorde verif
 5. Het etiket, de verkooppagina, de reclame en de samenwerkingspublicaties herzien naar de maatstaf van het geheel van de presentatie.
 6. De procedure voeren om te reageren op inspecties en correctieverzoeken, klachten, veiligheidsinformatie en de nodige opvolging.
 
-De basisstructuur van vennootschap en bijkantoor (分公司) kan worden gezien in [Grondslagen van de vennootschapsoprichting in Taiwan](/nl/columns/taiwan-company-establishment-basics), de omvang van de verwante steun in [Diensten van investering en vennootschapsoprichting in Taiwan](/ko/services/investment), en de gegevens van de verantwoordelijke advocaat in [Profiel van advocaat Wei Tseng](/ko/lawyers/wei-tseng).
+De basisstructuur van vennootschap en bijkantoor (分公司) kan worden gezien in [Grondslagen van de vennootschapsoprichting in Taiwan](/nl/columns/taiwan-company-establishment-basics), de omvang van de verwante steun in [Welke zaken wij behandelen](/nl/services), en de gegevens van de verantwoordelijke advocaat in [Internationaal team van Hovering](/nl/lawyers).
 
 ### Officiële bronnen
 

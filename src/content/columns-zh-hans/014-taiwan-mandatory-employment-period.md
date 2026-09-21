@@ -183,7 +183,7 @@ faq:
 
 ## 11. 相关指引
 
-- [台湾劳动法服务](/ko/services/labor)
+- [我们处理哪些事项](/zh-hans/services)
 - [自愿辞职与资遣费例外指引](/zh-hans/columns/taiwan-voluntary-resignation-severance)
 - [联系](/zh-hans/contact)
 

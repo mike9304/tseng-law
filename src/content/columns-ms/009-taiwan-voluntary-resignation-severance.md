@@ -96,6 +96,6 @@ Dalam kebanyakan kes, orang yang bersedia terlebih dahulu melihat haknya dilindu
 ---
 
 > Lihat juga:
-> - [Rujukan mengenai peguam pliding di Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Peguam Taiwan yang boleh bertutur Korea](/ko/korean-lawyer-in-taiwan)
-> - [Bidang aktiviti — buruh](/ko/services/labor)
+> - [Bagaimana skop kerja dan kos ditetapkan](/ms/pricing)
+> - [Pasukan antarabangsa Hovering](/ms/lawyers)
+> - [Hal yang kami kendalikan](/ms/services)

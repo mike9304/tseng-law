@@ -78,6 +78,6 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 ---
 
 > ראו גם:
-> - [מדריך כולל להקמת חברה בטאיוואן — הליכים, עלויות וצורות משפטיות](/ko/guides/taiwan-company-setup)
-> - [עורכת דין בטאיוואן הדוברת קוריאנית](/ko/korean-lawyer-in-taiwan)
-> - [הנחיות על עורכת הדין לאישיות משפטית ולהקמת חברה בטאיוואן](/ko/taiwan-company-setup-lawyer)
+> - [באילו עניינים אנו מטפלים](/he/services)
+> - [הצוות הבין־לאומי של Hovering](/he/lawyers)
+> - [כיצד לפנות אל המשרד](/he/contact)

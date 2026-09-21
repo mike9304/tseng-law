@@ -111,7 +111,7 @@ A preparação da venda em Taiwan, se se verificar pela ordem seguinte, pode red
 5. Rever o rótulo, a página de venda, a publicidade e as publicações de colaboração segundo o critério do conjunto da apresentação.
 6. Operar o procedimento para responder às inspeções e aos pedidos de correção, às reclamações, às informações de segurança e ao seguimento necessário.
 
-A estrutura de base da sociedade e da sucursal pode ver-se em [Fundamentos da constituição de sociedades em Taiwan](/pt/columns/taiwan-company-establishment-basics), a extensão do apoio ligado em [Serviços de investimento e de constituição de sociedades em Taiwan](/ko/services/investment), e as informações da advogada responsável em [Perfil da advogada Wei Tseng](/ko/lawyers/wei-tseng).
+A estrutura de base da sociedade e da sucursal pode ver-se em [Fundamentos da constituição de sociedades em Taiwan](/pt/columns/taiwan-company-establishment-basics), a extensão do apoio ligado em [Assuntos que tratamos](/pt/services), e as informações da advogada responsável em [Equipa internacional de Hovering](/pt/lawyers).
 
 ### Fontes oficiais
 

@@ -58,8 +58,8 @@ Kiegészítésként az [előzési szabályok és eljárás ábrája](https://gon
 ---
 
 > További olvasmány:
-> - [Tajvani peres ügyvéd útmutató](/ko/taiwan-litigation-lawyer)
-> - [Koreaiul beszélő tajvani ügyvéd](/ko/korean-lawyer-in-taiwan)
+> - [Hogyan rögzítjük a munka terjedelmét és a költségeket](/hu/pricing)
+> - [A Hovering nemzetközi csapata](/hu/lawyers)
 > - [Tajvani közúti balesetek kezelési eljárása](/hu/columns/taiwan-traffic-accident-procedure)
 
 Ez a cikk a tajvani előzési szabályokról és a baleseti felelősség megítéléséről szóló általános jogi információ; nem tanács konkrét ügyre, és nem ígér meghatározott eredményt. A tényleges felelősség a baleset helye, a járművek mozgása, a sebesség, a jelzések, a bizonyítékok, a szakértői értékelés (鑑定) és a hatályos jog szerint változhat; a konkrét ügyeket a vonatkozó iratok alapján külön kell vizsgálni.

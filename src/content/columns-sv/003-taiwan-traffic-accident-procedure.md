@@ -368,6 +368,6 @@ Wei Tseng (曾雋崴), advokat i Taiwan.
 ---
 
 > Se också:
-> - [Guide till processadvokat i Taiwan](/ko/taiwan-litigation-lawyer)
-> - [taiwanesisk advokat som kan koreanska](/ko/korean-lawyer-in-taiwan)
-> - [Guide för att söka advokat i Taiwan](/ko/taiwan-lawyer)
+> - [Hur arbetsomfattning och kostnader fastställs](/sv/pricing)
+> - [Hoverings internationella team](/sv/lawyers)
+> - [Om Hovering International Law Firm](/sv/about)

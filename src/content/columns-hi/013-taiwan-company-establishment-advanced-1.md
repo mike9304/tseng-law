@@ -17,7 +17,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 और स्थापना के समय बार-बार पूछे जाने वाले प्रश्न नीचे संकलित हैं।
 
-जिन्होंने [**कंपनी स्थापना की मूल बातें**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) पढ़ी हैं, वे इसके बाद इस अधिक विस्तृत गहन भाग को भी देख सकते हैं।
+जिन्होंने [**कंपनी स्थापना की मूल बातें**](/hi/columns/taiwan-company-establishment-basics) पढ़ी हैं, वे इसके बाद इस अधिक विस्तृत गहन भाग को भी देख सकते हैं।
 
 निम्नलिखित प्रश्न-उत्तर (Q&A) उन लोगों की सहायता के लिए हैं जो ताइवान में कंपनी स्थापित करने पर विचार कर रहे हैं। 😊
 
@@ -128,6 +128,6 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 ---
 
 > और देखें:
-> - [ताइवान में कंपनी स्थापना की समग्र मार्गदर्शिका — प्रक्रिया, लागत और कानूनी रूप](/ko/guides/taiwan-company-setup)
-> - [कोरियाई बोल सकने वाले ताइवान अधिवक्ता](/ko/korean-lawyer-in-taiwan)
-> - [ताइवान में कानूनी व्यक्ति और कंपनी स्थापना के अधिवक्ता संबंधी जानकारी](/ko/taiwan-company-setup-lawyer)
+> - [हम किन मामलों का कार्य करते हैं](/hi/services)
+> - [Hovering की अंतरराष्ट्रीय टीम](/hi/lawyers)
+> - [कार्यालय तक कैसे पहुँचें](/hi/contact)

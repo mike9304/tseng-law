@@ -138,7 +138,7 @@ Avtalets begränsade sats gäller inte automatiskt enbart därför att ett avtal
 - [Anvisning från den taiwanesiska immigrationsmyndigheten (內政部移民署) om permanent vistelse](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Taipei stads anvisning om förhandsgranskning av verksamhetsstället](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-Ni kan se det berörda verksamhetsområdet under [Tjänster för investering och bolagsbildning i Taiwan](/ko/services/investment), och bakgrund och språk hos den ansvariga advokaten under [Profil för advokat Wei Tseng](/ko/lawyers/wei-tseng). För frågor om ett konkret ärende, vänligen använd [Kontakt](/sv/contact).
+Ni kan se det berörda verksamhetsområdet under [Vilka ärenden vi behandlar](/sv/services), och bakgrund och språk hos den ansvariga advokaten under [Hoverings internationella team](/sv/lawyers). För frågor om ett konkret ärende, vänligen använd [Kontakt](/sv/contact).
 
 Denna artikel är allmänt informationsmaterial i utbildningssyfte om bolagsbildning i Taiwan och tillhörande regler; den utgör inte juridisk eller skatterättslig rådgivning i ett konkret ärende och utlovar inget visst resultat. Nödvändiga förfaranden och utfall kan variera efter investeringsstruktur, bransch, sökandens nationalitet och vistelsestatus samt den behöriga myndighetens senaste praxis; före genomförande av investering, avtal eller anställning ska de senaste officiella källorna och de egna omständigheterna prövas.
 

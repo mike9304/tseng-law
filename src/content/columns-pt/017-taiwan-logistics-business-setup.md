@@ -140,8 +140,8 @@ Ao trabalho sem autorização podem aplicar-se uma coima administrativa e uma or
 
 ## Orientações ligadas
 
-- [Serviços de investimento e de constituição de sociedades em Taiwan](/ko/services/investment)
-- [Perfil da advogada Wei Tseng](/ko/lawyers/wei-tseng)
+- [Assuntos que tratamos](/pt/services)
+- [Equipa internacional de Hovering](/pt/lawyers)
 - [Contacto](/pt/contact)
 
 ---

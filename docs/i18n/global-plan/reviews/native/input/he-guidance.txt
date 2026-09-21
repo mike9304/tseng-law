@@ -1,0 +1,1096 @@
+# he guidance pack strings (path → text). Generated 2026-09-21
+
+guidanceContent.he.languageName
+    עברית
+
+guidanceContent.he.nav.home
+    ראשי
+
+guidanceContent.he.nav.services
+    תחומים
+
+guidanceContent.he.nav.about
+    המשרד
+
+guidanceContent.he.nav.lawyers
+    עורכי דין
+
+guidanceContent.he.nav.pricing
+    עלויות
+
+guidanceContent.he.nav.contact
+    יצירת קשר
+
+guidanceContent.he.nav.faq
+    שאלות
+
+guidanceContent.he.nav.privacy
+    פרטיות
+
+guidanceContent.he.nav.disclaimer
+    הסתייגויות
+
+guidanceContent.he.nav.columns
+    מאמרים
+
+guidanceContent.he.contactCta
+    שליחת פנייה לבדיקה
+
+guidanceContent.he.footerNotice
+    עמוד זה בעברית כולל מידע כללי בלבד על עבודת המשרד לפי דין טאיוואן. אין בו ייעוץ משפטי בעניין מסוים, ושליחת הודעה כשלעצמה אינה יוצרת יחסי עורך דין–לקוח.
+
+guidanceContent.he.skipLink
+    דילוג על הניווט ומעבר לתוכן
+
+guidanceContent.he.menuLabel
+    רשימת העמודים
+
+guidanceContent.he.languageLabel
+    שפת התצוגה
+
+guidanceContent.he.mega.services.description
+    המשרד מטפל בקבוצות העבודה המרכזיות לפי דין טאיוואן.
+
+guidanceContent.he.mega.services.viewAllLabel
+    הצגת הכול
+
+guidanceContent.he.mega.columns.description
+    מאמרים על שאלות נפוצות בדין טאיוואן.
+
+guidanceContent.he.mega.columns.viewAllLabel
+    הצגת הכול
+
+guidanceContent.he.mega.lawyers.description
+    הצגת עורכות ועורכי הדין ודרכי הפנייה.
+
+guidanceContent.he.mega.lawyers.viewAllLabel
+    הצגת הכול
+
+guidanceContent.he.mega.pricing.description
+    עמוד זה מסביר את היקף העבודה ואת אופן בירור העלויות.
+
+guidanceContent.he.mega.pricing.viewAllLabel
+    הצגת הכול
+
+guidanceContent.he.mega.faq.description
+    שאלות נפוצות על עבודת המשרד בטאיוואן.
+
+guidanceContent.he.mega.faq.viewAllLabel
+    הצגת הכול
+
+guidanceContent.he.notFoundTitle
+    העמוד לא נמצא
+
+guidanceContent.he.notFoundText
+    העמוד המבוקש אינו קיים או שהועבר. אפשר לחזור לעמוד הפתיחה בעברית ולעיין במידע הזמין.
+
+guidanceContent.he.backHomeLabel
+    לעמוד הפתיחה
+
+guidanceContent.he.readSourceLabel
+    פתיחת רשימת המאמרים בשפת המקור
+
+guidanceContent.he.home.heroScrollLabel
+    גלילה למטה
+
+guidanceContent.he.home.heroColumnsCtaLabel
+    הצגת המאמרים
+
+guidanceContent.he.home.servicesDetailLabel
+    הצגת פרטים
+
+guidanceContent.he.home.servicesAssistanceBefore
+    אם אין זה ברור לאיזו קבוצה שייך העניין שלכם, העמוד 
+
+guidanceContent.he.home.servicesAssistanceLinkLabel
+    יצירת קשר
+
+guidanceContent.he.home.servicesAssistanceAfter
+     מסביר כיצד לנסח תקציר שעורכת דין או עורך דין יבדקו.
+
+guidanceContent.he.home.columnsViewAllLabel
+    הצגת כל המאמרים
+
+guidanceContent.he.home.columnsReadMoreLabel
+    המשך קריאה
+
+guidanceContent.he.home.columnsReviewLabel
+    נבדק בידי עורכת הדין Wei Tseng
+
+guidanceContent.he.home.columnsOriginalLanguageBadge
+    שפת המקור
+
+guidanceContent.he.home.columnsOriginalLanguageNote
+    המאמרים הבאים אינם זמינים עדיין בעברית. הרשימה נשארת בשפת המקור ופותחת את עמוד השפה המתאים; התוכן אינו מתורגם אוטומטית.
+
+guidanceContent.he.home.imageBandAlt
+    חצר טאיוואנית מסורתית מסוג סאנהֶייוּאָן (三合院) וביתן מודרני באור יום
+
+guidanceContent.he.home.videoPauseLabel
+    השהיית הסרטון
+
+guidanceContent.he.home.videoPlayLabel
+    הפעלת הסרטון
+
+guidanceContent.he.home.videoReplayLabel
+    הפעלת הסרטון מחדש
+
+guidanceContent.he.pages.home.eyebrow
+    מידע
+
+guidanceContent.he.pages.home.title
+    שירותים משפטיים בטאיוואן — מידע בעברית
+
+guidanceContent.he.pages.home.description
+    הסברים כלליים בעברית על היקף עבודתה של Hovering International Law Firm בטאיוואן, על שפות הייעוץ ועל הפנייה הראשונה.
+
+guidanceContent.he.pages.home.intro
+    Hovering International Law Firm מלווה לקוחות מחוץ לטאיוואן, ובכללם בעלי זיקה לטאיוואן, בעניינים לפי דין טאיוואן: השקעה והקמת חברות, סכסוכים אזרחיים, נישואין, משפחה וירושה, דיני עבודה, עניינים פליליים וקניין רוחני. החלק הזה בעברית יסייע לכם לזהות איזו עבודה נכללת בהיקף שלנו, מה להכין וכיצד לפנות אלינו. זהו מידע כללי, ולא ייעוץ משפטי בעניין שלכם.
+
+guidanceContent.he.pages.home.sections[0].heading
+    במה אנו עוסקים
+
+guidanceContent.he.pages.home.sections[0].paragraphs[0]
+    Hovering International Law Firm הוא משרד עורכי דין הפועל בטאיוואן. הוא עובד לפי דין טאיוואן ולו סניפים בטאיפיי (臺北), בקאוסיונג (高雄), בטאיצ׳ונג (臺中) ובפינגטונג (屏東). אנו מייעצים לעסקים, מנהלים הליכים בבית המשפט ומלווים לקוחות מחוץ לטאיוואן בצעדים הנדרשים שם.
+
+guidanceContent.he.pages.home.sections[0].paragraphs[1]
+    כל התוכן כאן כללי. תוצאת עניין תלויה בעובדות, בכללים החלים ובעיתוי. מידע זה אינו מחליף שיחה עם עורכת דין או עורך דין על המסמכים שלכם.
+
+guidanceContent.he.pages.home.sections[1].heading
+    שפת העמוד ושפת הייעוץ אינן אותו דבר
+
+guidanceContent.he.pages.home.sections[1].paragraphs[0]
+    עמוד זה כתוב בעברית, אך הייעוץ עם עורכת דין או עורך דין מתקיים רק בארבע שפות הייעוץ: אנגלית, סינית (中文), יפנית וקוריאנית. קריאת המידע בעברית אינה אומרת שהשיחה עם עורכת הדין או עורך הדין תתקיים בעברית.
+
+guidanceContent.he.pages.home.sections[1].paragraphs[1]
+    איננו מבטיחים מתורגמן, מועד למענה ולא פגישה דרך עמוד זה. אם אינכם יכולים להשתמש באף אחת מארבע השפות, העמוד «יצירת קשר» מסביר כיצד אנו בוחנים דרך תקשורת.
+
+guidanceContent.he.pages.home.sections[2].heading
+    קבוצות העבודה
+
+guidanceContent.he.pages.home.sections[2].paragraphs[0]
+    היקף העבודה כולל את שש הקבוצות הבאות. העמוד «תחומים» מתאר כל קבוצה בדיוק רב יותר ומציין מה אינו מובטח.
+
+guidanceContent.he.pages.home.sections[2].items[0]
+    השקעה והקמת חברות בטאיוואן
+
+guidanceContent.he.pages.home.sections[2].items[1]
+    סכסוכים אזרחיים ופיצויים
+
+guidanceContent.he.pages.home.sections[2].items[2]
+    נישואין, משפחה וירושה
+
+guidanceContent.he.pages.home.sections[2].items[3]
+    סכסוכי עבודה
+
+guidanceContent.he.pages.home.sections[2].items[4]
+    עניינים פליליים
+
+guidanceContent.he.pages.home.sections[2].items[5]
+    קניין רוחני: סימני מסחר, פטנטים וזכויות יוצרים
+
+guidanceContent.he.pages.home.sections[3].heading
+    היכן להתחיל
+
+guidanceContent.he.pages.home.sections[3].paragraphs[0]
+    קראו את העמוד «תחומים» כדי לבדוק אם העניין שלכם נכלל בהיקף שלנו, ולאחר מכן את «עלויות» ואת «יצירת קשר», כדי לדעת כיצד נקבע ההיקף וכיצד מאושרות העלויות לפני תחילת העבודה.
+
+guidanceContent.he.pages.home.sections[3].paragraphs[1]
+    בשליחת ההודעה אפשר לכתוב את התקציר בשפתכם. הטקסט המקורי נשמר בדיוק כפי שנכתב ואינו מתורגם אוטומטית. הודעה שנשלחה היא פנייה הממתינה לבדיקה: אין זה ייעוץ ואין זו פגישה מאושרת.
+
+guidanceContent.he.pages.services.eyebrow
+    תחומים
+
+guidanceContent.he.pages.services.title
+    באילו עניינים אנו מטפלים
+
+guidanceContent.he.pages.services.description
+    שש קבוצות העבודה של המשרד בטאיוואן והגבולות שכדאי להכיר תחילה.
+
+guidanceContent.he.pages.services.intro
+    להלן הקבוצות שבהן אנו מטפלים בפועל והשאלות העולות לעיתים קרובות בשלב הראשון. התיאור יסייע לכם להעריך אם העניין שלכם נכלל בהיקף שלנו; הוא כללי ואינו ניתוח משפטי של תיק מסוים.
+
+guidanceContent.he.pages.services.sections[0].heading
+    השקעה והקמת חברות בטאיוואן
+
+guidanceContent.he.pages.services.sections[0].paragraphs[0]
+    אנו מלווים משקיעים ועסקים זרים בהקמת חברה בטאיוואן או בניהולה: בחירת צורת ההתאגדות, הכנת מסמכים והגשתם, הזרמת הון, עניינים בנקאיים, בדיקת מען העסק ודרישות ענפיות. אנו תומכים גם בהנהלת חשבונות ובמיסוי הנובעים מההקמה ומהפעילות בטאיוואן.
+
+guidanceContent.he.pages.services.sections[0].paragraphs[1]
+    המסלול והמועדים משתנים לפי צורת ההתאגדות, המשקיע, הענף, הבנק והמסמכים הקיימים. הקמת חברה אינה מובילה כשלעצמה לאישור שהייה (居留) או להיתר עבודה (工作許可): אלה הליכים נפרדים, הנבחנים לפי מצבו של כל אדם.
+
+guidanceContent.he.pages.services.sections[1].heading
+    סכסוכים אזרחיים ופיצויים
+
+guidanceContent.he.pages.services.sections[1].paragraphs[0]
+    קבוצה זו כוללת סכסוכים חוזיים, פיצויים בשל עוולה וסכסוכי צרכנות. העבודה מתחילה בדרך כלל בציר זמן, בבדיקת המסמכים והראיות הקיימות, ורק לאחר מכן באים הצעדים הבאים.
+
+guidanceContent.he.pages.services.sections[1].paragraphs[1]
+    המועדים, ובכללם ההתיישנות, ושלמות הראיות מכתיבים את המהלך. ציינו אפוא את התאריכים הידועים מוקדם ככל האפשר. שמרו חוזים, הודעות, אישורי תשלום או תצלומים של המצב בשטח, והזכירו אותם בהודעה הראשונה.
+
+guidanceContent.he.pages.services.sections[2].heading
+    נישואין, משפחה וירושה
+
+guidanceContent.he.pages.services.sections[2].paragraphs[0]
+    אנו מטפלים בגירושין (離婚), בחלוקת רכוש, בהפעלת הזכויות והחובות כלפי ילדים קטינים ובנשיאה בהן (未成年子女權利義務之行使或負擔), בקשר עם הילד (會面交往) ובירושה (繼承), גם כאשר הצדדים או הנכסים מצויים במדינות שונות. עניינים משפחתיים חוצי גבולות מצריכים לעיתים קרובות בדיקה נוספת של מרשם התושבים (戶籍), של צורת המסמכים ושל כוחם הראייתי בטאיוואן.
+
+guidanceContent.he.pages.services.sections[2].paragraphs[1]
+    מאחר שעניינים משפחתיים כרוכים לעיתים קרובות במועדים ובהליכים מקבילים, על התקציר הראשון לציין את הקשר בין הצדדים, את מקום המגורים הנוכחי ואת ההליכים שכבר מתנהלים.
+
+guidanceContent.he.pages.services.sections[3].heading
+    סכסוכי עבודה
+
+guidanceContent.he.pages.services.sections[3].paragraphs[0]
+    קבוצה זו כוללת סיום יחסי עבודה, פיצוי לפי דין טאיוואן (資遣費; אין להשוותו למוסדות דומים במדינות אחרות), שכר וסכסוכים מחוזה העבודה (勞動契約), הן מצד העובד והן מצד המעסיק. בבדיקה אנו מבחינים בין עילת הסיום לבין שאלות של הודעה מוקדמת, תשלום ומועדים.
+
+guidanceContent.he.pages.services.sections[3].paragraphs[1]
+    המסמכים המכריעים הם בדרך כלל חוזה העבודה, תקנון העבודה (工作規則), תלושי השכר והתכתובת בין הצדדים. אם הם עדיין ברשותכם, ציינו זאת בתקציר.
+
+guidanceContent.he.pages.services.sections[4].heading
+    עניינים פליליים
+
+guidanceContent.he.pages.services.sections[4].paragraphs[0]
+    אנו מלווים בהליך החקירה ובבית המשפט, הן חשודים ונאשמים והן נפגעי עבירה, ובוחנים סיכונים פליליים בפעילות עסקית.
+
+guidanceContent.he.pages.services.sections[4].paragraphs[1]
+    לעניינים פליליים יש לעיתים קרובות מועדים קצרים ושלבים קבועים. אם כבר קיבלתם מסמך מרשות החקירה או מבית המשפט, ציינו מוקדם את התאריך שעליו, כדי שהתוכן ייבדק בסדר הנכון.
+
+guidanceContent.he.pages.services.sections[5].heading
+    קניין רוחני
+
+guidanceContent.he.pages.services.sections[5].paragraphs[0]
+    אנו תומכים ברישום סימני מסחר (商標) ופטנטים (專利), בזכויות יוצרים ובסכסוכים על זכויות אלה בטאיוואן.
+
+guidanceContent.he.pages.services.sections[5].paragraphs[1]
+    בקבוצה זו סדר הצעדים מכריע: היקף ההגנה, מועד ההגשה והשימוש בפועל משפיעים על הבחירה. הגשת בקשה אינה אומרת כשלעצמה שהיא תתקבל.
+
+guidanceContent.he.pages.services.sections[6].heading
+    ההיקף ואישורו
+
+guidanceContent.he.pages.services.sections[6].paragraphs[0]
+    המשרד עובד לפי דין טאיוואן ומטפל בעניינים מהקבוצות שצוינו. היקף כל עניין מאושר בנפרד לאחר שעורכת דין או עורך דין בדקו את ההודעה שלכם.
+
+guidanceContent.he.pages.services.sections[6].paragraphs[1]
+    מעמד שהייה, היתר עבודה ושאלות דומות נבחנים לפי המסמכים ולפי מצבו של האדם, ולא לפי אזרחות. אם חלק מהעניין שלכם נוגע לנקודות אלה, ציינו זאת בפנייה. עמוד זה אינו מבטיח תוצאה ואינו מבטיח מועד למענה.
+
+guidanceContent.he.pages.about.eyebrow
+    המשרד
+
+guidanceContent.he.pages.about.title
+    על Hovering International Law Firm
+
+guidanceContent.he.pages.about.description
+    נתוני יסוד על משרד עורכי דין טאיוואני זה, על סניפיו ועל העבודה עם צדדים זרים.
+
+guidanceContent.he.pages.about.intro
+    Hovering International Law Firm הוא משרד עורכי דין בטאיוואן. עורכות ועורכי הדין עוסקים מייעוץ לעסקים ועד ניהול הליכים בבית המשפט. חלק זה מתאר את היווסדות המשרד, את מקומותיו ואת העבודה עם צדדים זרים.
+
+guidanceContent.he.pages.about.sections[0].heading
+    ייסוד ומבנה
+
+guidanceContent.he.pages.about.sections[0].paragraphs[0]
+    Hovering International Law Firm (昊鼎國際法律事務所) נוסד בשנת 2016 בידי עורכות ועורכי דין שלמדו ב־National Taiwan University (國立臺灣大學). השם הסיני 昊鼎 מחבר את הסימן 昊 («שמיים רחבים») עם הסימן 鼎 («יסוד איתן») ומתאר את כיוון המשרד מאז ייסודו.
+
+guidanceContent.he.pages.about.sections[0].paragraphs[1]
+    יש לנו סניפים בטאיפיי (臺北), בקאוסיונג (高雄), בטאיצ׳ונג (臺中) ובפינגטונג (屏東). הסניף בקאוסיונג מתמקד בניהול עסקים ומטפל בסכסוכים אזרחיים, פליליים ומנהליים. הסניף בטאיצ׳ונג מטפל בעניינים הנדסיים, בקניין רוחני ובעניינים בעלי זיקה לקוריאה וליפן. הסניף בפינגטונג נפתח בשנת 2017 לצרכים המקומיים.
+
+guidanceContent.he.pages.about.sections[0].paragraphs[2]
+    לצד העבודה המשפטית פועל מאז שנת 2020 גם Hovering Accounting Office, המציע הנהלת חשבונות ותכנון מס ליזמים וליחידים בעלי נכסים.
+
+guidanceContent.he.pages.about.sections[1].heading
+    עבודה עם צדדים זרים
+
+guidanceContent.he.pages.about.sections[1].paragraphs[0]
+    העבודה החוצה גבולות כוללת הקמת חברות, אשרות, הגשות של סימני מסחר ופטנטים, בדיקת סיכון משפטי וייעוץ מס לעסקים. הסניף בטאיצ׳ונג מטפל במיוחד בעניינים הנדסיים, בקניין רוחני ובעניינים בעלי זיקה לקוריאה וליפן. עורכת הדין Wei Tseng (曾雋崴) מלווה לקוחות מקוריאה, מיפן ולקוחות בין־לאומיים נוספים בקבוצות שצוינו.
+
+guidanceContent.he.pages.about.sections[1].paragraphs[1]
+    אם נוכל לקבל עניין תלוי בתוכן ובשפת התקשורת. אם העניין שלכם נכלל בקבוצות שצוינו וניתן לדון בו באחת מארבע שפות הייעוץ, אפשר לשלוח תקציר לבדיקה.
+
+guidanceContent.he.pages.about.sections[2].heading
+    כאשר אתם פונים אלינו
+
+guidanceContent.he.pages.about.sections[2].paragraphs[0]
+    לאחר קבלת התקציר שלכם בודקת עורכת דין או בודק עורך דין את התוכן, ולאחר מכן משוחחים על היקף העבודה האפשרי, על המסמכים הנדרשים עדיין ועל הצעדים הבאים. בעניינים של מס או הנהלת חשבונות יכול המשרד לעבוד עם מחלקת הנהלת החשבונות ברצף אחד.
+
+guidanceContent.he.pages.about.sections[2].paragraphs[1]
+    תוצאת כל עניין תלויה בעובדות ובמסמכים הקיימים; איננו מבטיחים תוצאה. אם דרושה לכם תשובה מחייבת למצבכם, יש לדון במסמכים באחת מארבע שפות הייעוץ עם עורכת דין או עורך דין.
+
+guidanceContent.he.pages.lawyers.eyebrow
+    עורכי דין
+
+guidanceContent.he.pages.lawyers.title
+    הצוות הבין־לאומי של Hovering
+
+guidanceContent.he.pages.lawyers.description
+    פרופילים של עורכות ועורכי הדין, של ההנהלה התפעולית ושל ביקורת החשבונות השותפה של Hovering.
+
+guidanceContent.he.pages.lawyers.intro
+    
+
+guidanceContent.he.pages.pricing.eyebrow
+    עלויות
+
+guidanceContent.he.pages.pricing.title
+    כיצד נקבעים היקף העבודה והעלויות
+
+guidanceContent.he.pages.pricing.description
+    הסבר הסדר: תחילה היקף העבודה, לאחר מכן אישור העלויות, ומדוע אין בעמוד זה מחירון.
+
+guidanceContent.he.pages.pricing.intro
+    עמוד זה מסביר כיצד נקבעות העלויות, ולא מה גובהן. הגובה תלוי בהיקף העבודה בעניין המסוים, ויש לו משמעות רק כאשר היקף זה ברור.
+
+guidanceContent.he.pages.pricing.sections[0].heading
+    תחילה נקבע היקף העבודה
+
+guidanceContent.he.pages.pricing.sections[0].paragraphs[0]
+    עניינים מאותו סוג עשויים לדרוש מאמץ שונה מאוד, לפי מספר הצדדים, המסמכים הקיימים, המועדים שיש לעמוד בהם והשאלה אם כבר החל הליך. לפיכך הצעד הראשון הוא תמיד לקבוע מה נכלל בעבודה ומה אינו נכלל.
+
+guidanceContent.he.pages.pricing.sections[0].paragraphs[1]
+    התקציר שאתם שולחים בתחילה הוא הבסיס להיקף זה. ככל שיתאר בבירור רב יותר את ההשתלשלות, את בקשתכם ואת המועדים, כך אפשר יהיה לקבוע את ההיקף בדיוק רב יותר.
+
+guidanceContent.he.pages.pricing.sections[1].heading
+    העלויות מאושרות לפני תחילת העבודה
+
+guidanceContent.he.pages.pricing.sections[1].paragraphs[0]
+    כאשר היקף העבודה ברור, גובה העלויות ואופן חישובן נדונים ומאושרים עמכם לפני שהעבודה מתחילה. אם ההיקף משתנה במהלך העבודה, יש לאשר זאת מחדש.
+
+guidanceContent.he.pages.pricing.sections[1].paragraphs[1]
+    עמוד זה אינו הצעת מחיר ואינו יוצר חובת תשלום.
+
+guidanceContent.he.pages.pricing.sections[2].heading
+    הייעוץ עשוי להיות בתשלום
+
+guidanceContent.he.pages.pricing.sections[2].paragraphs[0]
+    הייעוץ עם עורכת דין או עורך דין עשוי להיות שירות בתשלום. עמוד זה אינו אומר שהשיחה הראשונה היא ללא תשלום, ואין לקרוא אף חלק ממנו במובן זה.
+
+guidanceContent.he.pages.pricing.sections[2].paragraphs[1]
+    אם הייעוץ הוא בתשלום, גובהו ואופן התשלום נמסרים לפני שהוא מתקיים.
+
+guidanceContent.he.pages.pricing.sections[3].heading
+    מדוע אין בעמוד זה תעריפים
+
+guidanceContent.he.pages.pricing.sections[3].paragraphs[0]
+    העלויות תלויות בעניין עצמו: במאמץ, במספר הצדדים, במסמכים, במועדים ובשאלה אם כבר מתנהל הליך. מספר שנקבע מראש לא היה מראה את עלויות התיק שלכם. לפיכך אנו קובעים תחילה את היקף העבודה ומוסרים לכם את העלויות לאחר מכן, לפני שהעבודה מתחילה.
+
+guidanceContent.he.pages.pricing.sections[3].paragraphs[1]
+    מלבד שכר הטרחה עשויות להיווצר אגרות בית משפט, הוצאות רשויות או הוצאות של צדדים שלישיים. אלה נפרדות משכר הטרחה ותלויות בהליך הנוגע בדבר.
+
+guidanceContent.he.pages.contact.eyebrow
+    יצירת קשר
+
+guidanceContent.he.pages.contact.title
+    כיצד לפנות אל המשרד
+
+guidanceContent.he.pages.contact.description
+    שפת העמוד, שפות הייעוץ, מה לעשות אם אינכם יכולים להשתמש באף אחת מארבע השפות, ומה עמוד זה אינו מבטיח.
+
+guidanceContent.he.pages.contact.intro
+    לפני שתכתבו לנו, הבחינו בין שלוש הנקודות הבאות. הן מעורבבות לעיתים קרובות, אך משמעותן שונה.
+
+guidanceContent.he.pages.contact.sections[0].heading
+    שלושה דברים שיש להפריד ביניהם
+
+guidanceContent.he.pages.contact.sections[0].paragraphs[0]
+    שפת התצוגה של העמוד, שפת הייעוץ עם עורכת הדין או עורך הדין והשפה שבה אתם כותבים הן שלושה דברים נפרדים.
+
+guidanceContent.he.pages.contact.sections[0].items[0]
+    שפת העמוד: מידע זה כתוב בעברית.
+
+guidanceContent.he.pages.contact.sections[0].items[1]
+    שפת הייעוץ: הייעוץ מתקיים באנגלית, בסינית (中文), ביפנית ובקוריאנית.
+
+guidanceContent.he.pages.contact.sections[0].items[2]
+    שפת הכתיבה שלכם: אפשר לכתוב את התקציר בשפתכם; הטקסט המקורי נשמר ללא שינוי.
+
+guidanceContent.he.pages.contact.sections[1].heading
+    אם אינכם יכולים להשתמש באף אחת מארבע שפות הייעוץ
+
+guidanceContent.he.pages.contact.sections[1].paragraphs[0]
+    בטופס יצירת הקשר אפשר לבחור «יש לאשר את דרך התקשורת». אנו משיבים כדי לבחון דרך תקשורת מעשית, אם קיימת כזו; שירות בשפה אחרת אינו מובטח ומועד למענה אינו מובטח.
+
+guidanceContent.he.pages.contact.sections[1].paragraphs[1]
+    זהו צעד בדיקה בלבד, ולא הבטחה. איננו מבטיחים מתורגמן, שירות בעברית או בשפה אחרת מלבד ארבע השפות שצוינו, ואיננו מבטיחים שנקבל כל עניין.
+
+guidanceContent.he.pages.contact.sections[2].heading
+    מה צריכה לכלול ההודעה הראשונה
+
+guidanceContent.he.pages.contact.sections[2].paragraphs[0]
+    ציינו מה קרה, לאיזו עזרה אתם זקוקים, מהי זיקת העניין לטאיוואן, ואת המועד אם הוא ידוע לכם. אם כבר קיבלתם מסמך מבית משפט או מרשות, ציינו את התאריך שעליו.
+
+guidanceContent.he.pages.contact.sections[2].paragraphs[1]
+    בשלב הראשון אין צורך לשלוח עדיין מספר דרכון, מספר תעודה, פרטי חשבון, מסמכים רפואיים או את מכלול הראיות. המתינו להנחיית עורכת הדין או עורך הדין, ורק אז שלחו מסמכים רגישים בדרך מאובטחת.
+
+guidanceContent.he.pages.contact.sections[3].heading
+    מה עמוד זה אינו מבטיח
+
+guidanceContent.he.pages.contact.sections[3].paragraphs[0]
+    איננו מבטיחים מועד למענה, איננו מאשרים פגישה דרך עמוד זה, איננו מבטיחים עורכת דין או עורך דין מסוימים ואיננו מעמידים מתורגמן. תרגום בכתב הוא עניין אחר: ההודעה שלכם אינה מתורגמת אוטומטית.
+
+guidanceContent.he.pages.contact.sections[3].paragraphs[1]
+    אם תשלחו פנייה, התוכן יישמר וימתין לבדיקה. אם לאחר זמן מה לא תקבלו מענה, אפשר לכתוב שוב לכתובת הדואר האלקטרוני המצוינת בעמוד יצירת הקשר.
+
+guidanceContent.he.pages.faq.eyebrow
+    שאלות
+
+guidanceContent.he.pages.faq.title
+    שאלות נפוצות
+
+guidanceContent.he.pages.faq.description
+    הסברים על היקף העבודה, ההכנה, השפות, העלויות ועל משמעותה של פנייה שנשלחה.
+
+guidanceContent.he.pages.faq.intro
+    השאלות שלהלן נענות ברמת מידע כללי. מענה לעניין שלכם אפשרי רק לאחר שעורכת דין או עורך דין בדקו את המסמכים.
+
+guidanceContent.he.pages.faq.sections[0].heading
+    כיצד להשתמש בחלק זה
+
+guidanceContent.he.pages.faq.sections[0].paragraphs[0]
+    אם לא תמצאו מענה למצבכם, המענה תלוי בדרך כלל בעובדות מיוחדות. כתבו אותן אפוא בתקציר, במקום להסיקן מעמוד זה.
+
+guidanceContent.he.pages.faq.faqs[0].question
+    באילו עניינים מטפל המשרד?
+
+guidanceContent.he.pages.faq.faqs[0].answer
+    אנו מטפלים בשש קבוצות: השקעה והקמת חברות בטאיוואן, סכסוכים אזרחיים ופיצויים, נישואין, משפחה וירושה, סכסוכי עבודה, עניינים פליליים וקניין רוחני. אם עניין יתקבל — הדבר נקבע לאחר בדיקת התוכן.
+
+guidanceContent.he.pages.faq.faqs[1].question
+    מה עליי להכין לפני הפנייה?
+
+guidanceContent.he.pages.faq.faqs[1].answer
+    הכינו תקציר קצר של ההשתלשלות, של בקשתכם, של הזיקה לטאיוואן ושל המועד, אם קיים. אם כבר קיים מסמך של בית משפט או של רשות, ציינו את התאריך. בשלב זה אין צורך לשלוח עדיין מסמכי זיהוי או את מכלול הראיות.
+
+guidanceContent.he.pages.faq.faqs[2].question
+    האם אפשר לקבל ייעוץ בעברית?
+
+guidanceContent.he.pages.faq.faqs[2].answer
+    לא. מידע זה כתוב בעברית, אך הייעוץ עם עורכת דין או עורך דין מתקיים רק באנגלית, בסינית (中文), ביפנית ובקוריאנית. גם מתורגמן איננו מבטיחים. תרגום בכתב הוא עניין אחר: הטקסט המקורי שאתם כותבים נשמר כפי שהוא ואינו מתורגם אוטומטית.
+
+guidanceContent.he.pages.faq.faqs[3].question
+    מה לעשות אם איני יכול להשתמש באף אחת מארבע השפות?
+
+guidanceContent.he.pages.faq.faqs[3].answer
+    בשליחת הפנייה בחרו «יש לאשר את דרך התקשורת». אנו משיבים כדי לבחון דרך תקשורת, אך שירות בשפה אחרת אינו מובטח. זהו צעד בדיקה, ולא הבטחה שנוכל לעבוד בשפה אחרת.
+
+guidanceContent.he.pages.faq.faqs[4].question
+    כיצד מטופל הטקסט שלי בעברית?
+
+guidanceContent.he.pages.faq.faqs[4].answer
+    הטקסט המקורי שאתם כותבים נשמר כפי שהוא ואינו מתורגם אוטומטית. במידת הצורך, שפת ההתכתבות הבאה מאושרת עמכם.
+
+guidanceContent.he.pages.faq.faqs[5].question
+    האם הייעוץ כבר התקיים משנשלחה הפנייה?
+
+guidanceContent.he.pages.faq.faqs[5].answer
+    לא. פנייה שנשלחה ממתינה לבדיקת עורכת דין או עורך דין. אין זו חוות דעת משפטית, אין זו פגישה מאושרת, והשליחה כשלעצמה אינה יוצרת יחסי עורך דין–לקוח.
+
+guidanceContent.he.pages.faq.faqs[6].question
+    כיצד מחושבות העלויות?
+
+guidanceContent.he.pages.faq.faqs[6].answer
+    תחילה נקבע היקף העבודה, ולאחר מכן גובה העלויות ואופן חישובן מאושרים עמכם לפני שהעבודה מתחילה. עמוד זה אינו נוקב בסכומים ואינו אומר שהשיחה הראשונה היא ללא תשלום.
+
+guidanceContent.he.pages.faq.faqs[7].question
+    מה לעשות אם העניין שלי דחוף מאוד?
+
+guidanceContent.he.pages.faq.faqs[7].answer
+    ציינו את המועד או את התאריך שעל מסמך רשמי כבר בתחילת התקציר, כדי שתאריכים אלה יהיו גלויים בבדיקה. לעמוד זה אין ערוץ חירום והוא אינו מבטיח מועד למענה; אם העניין שלכם אינו סובל דיחוי, כדאי לחפש במקביל דרכים נוספות במקום מגוריכם.
+
+guidanceContent.he.pages.privacy.eyebrow
+    פרטיות
+
+guidanceContent.he.pages.privacy.title
+    נתונים הנאספים בטופס יצירת הקשר
+
+guidanceContent.he.pages.privacy.description
+    מה אוסף טופס יצירת הקשר בחלק זה בעברית, כיצד מטופל הטקסט המקורי וכיצד לפנות אלינו בעניין הנתונים שלכם.
+
+guidanceContent.he.pages.privacy.intro
+    חלק זה נוגע רק לטופס יצירת הקשר שבעמודי המידע האלה. הוא מתאר את הטיפול בנתונים, ולא ערובה טכנית.
+
+guidanceContent.he.pages.privacy.sections[0].heading
+    אילו נתונים נאספים
+
+guidanceContent.he.pages.privacy.sections[0].paragraphs[0]
+    כאשר אתם שולחים פנייה בטופס שבחלק זה, נרשמים הנתונים הבאים:
+
+guidanceContent.he.pages.privacy.sections[0].items[0]
+    השם שציינתם
+
+guidanceContent.he.pages.privacy.sections[0].items[1]
+    כתובת הדואר האלקטרוני למענה
+
+guidanceContent.he.pages.privacy.sections[0].items[2]
+    שפת התצוגה של העמוד בעת השליחה
+
+guidanceContent.he.pages.privacy.sections[0].items[3]
+    השפה שבה כתבתם
+
+guidanceContent.he.pages.privacy.sections[0].items[4]
+    שפת הייעוץ הרצויה לכם
+
+guidanceContent.he.pages.privacy.sections[0].items[5]
+    הטקסט המקורי שכתבתם
+
+guidanceContent.he.pages.privacy.sections[0].items[6]
+    הסכמתכם לשליחת הפנייה
+
+guidanceContent.he.pages.privacy.sections[0].items[7]
+    מספר קליטה לאיתור הפנייה
+
+guidanceContent.he.pages.privacy.sections[1].heading
+    הטקסט המקורי נשמר ללא שינוי
+
+guidanceContent.he.pages.privacy.sections[1].paragraphs[0]
+    הטקסט שלכם נשמר בדיוק כפי שנכתב ואינו מתורגם אוטומטית. אם דרוש תרגום לצורך הטיפול, הדבר נדון עמכם בנפרד.
+
+guidanceContent.he.pages.privacy.sections[1].paragraphs[1]
+    מאחר שהטקסט המקורי נשמר, אל תכתבו בשלב הראשון את מה שאינו נדרש עדיין, למשל מספר דרכון, מספר תעודה או פרטי חשבון.
+
+guidanceContent.he.pages.privacy.sections[2].heading
+    מקום השמירה והגישה
+
+guidanceContent.he.pages.privacy.sections[2].paragraphs[0]
+    תוכן המשלוח שלכם נשמר במקום שאינו נגיש לציבור. רק בעלי הרשאה במשרד יכולים לגשת אליו, לצורך הטיפול בפנייה.
+
+guidanceContent.he.pages.privacy.sections[2].paragraphs[1]
+    עמוד זה אינו נותן ערובה מוחלטת לאבטחה. שום דרך העברה ושום מקום אחסון אינם בטוחים לחלוטין; לפיכך יש לשלוח מסמכים רגישים רק לאחר הנחיה מיוחדת של עורכת הדין או עורך הדין.
+
+guidanceContent.he.pages.privacy.sections[3].heading
+    מטרת השימוש
+
+guidanceContent.he.pages.privacy.sections[3].paragraphs[0]
+    הנתונים הנשלחים משמשים לבדיקת הפנייה, למענה לכם, לבירור דרך התקשורת ולטיפול, אם העבודה מתקבלת.
+
+guidanceContent.he.pages.privacy.sections[3].paragraphs[1]
+    הנתונים אינם משמשים לשיווק ללא הסכמה נפרדת.
+
+guidanceContent.he.pages.privacy.sections[4].heading
+    הודעה ומספר קליטה
+
+guidanceContent.he.pages.privacy.sections[4].paragraphs[0]
+    אם פנייה נשלחה בהצלחה, המערכת מודיעה למשרד. אם הודעה זו אינה מגיעה אל המשרד, הטקסט שלכם נותר שמור ואינו אובד.
+
+guidanceContent.he.pages.privacy.sections[4].paragraphs[1]
+    מספר הקליטה משמש לאיתור הפנייה שלכם ברישומינו. הוא מוצג לאחר השמירה; אפשר לציינו בפנייה חוזרת.
+
+guidanceContent.he.pages.privacy.sections[5].heading
+    זכויותיכם ודרך הפנייה
+
+guidanceContent.he.pages.privacy.sections[5].paragraphs[0]
+    אפשר לבקש גישה לנתונים שלכם, תיקונם או מחיקתם, או לחזור בכם מן ההסכמה, באמצעות כתובת הדואר האלקטרוני המצוינת בעמוד יצירת הקשר. אם קיימת חובה חוקית או דיונית לשמירה, נסביר את ההגבלה.
+
+guidanceContent.he.pages.privacy.sections[5].paragraphs[1]
+    עמוד זה אינו נוקב בתקופת שמירה קבועה, משום שהמשך הזמן בפועל תלוי בהתפתחות העניין ובחובות הכרוכות בו. אם ברצונכם מחיקה מוקדמת יותר, ציינו זאת בפנייה.
+
+guidanceContent.he.pages.privacy.sections[6].heading
+    מקום השמירה וספקים
+
+guidanceContent.he.pages.privacy.sections[6].paragraphs[0]
+    אתר זה מתארח אצל Vercel, והמשלוח שלכם נשמר במאגר אובייקטים לא ציבורי של שירות זה. הודעות הדואר האלקטרוני נשלחות באמצעות שירות הדואר שבו משתמש המשרד.
+
+guidanceContent.he.pages.privacy.sections[6].paragraphs[1]
+    שרתיהם של ספקים מסוימים עשויים להימצא מחוץ לטאיוואן, ולפיכך ייתכן שהנתונים שלכם יישמרו ויעובדו שם. בהתמלא מטרת השמירה נמחקים הנתונים ללא דיחוי; נתונים שיש לשמור לפי הכללים החלים נותרים לאותה תקופה. פניות בעניין נתונים אישיים מתקבלות בכתובת wei@hoveringlaw.com.tw.
+
+guidanceContent.he.pages.disclaimer.eyebrow
+    הסתייגויות
+
+guidanceContent.he.pages.disclaimer.title
+    היקף המידע שבעמוד זה וגבולותיו
+
+guidanceContent.he.pages.disclaimer.description
+    אופיו הכללי של המידע, המסגרת המשפטית והתנאים להיווצרות יחסי עורך דין–לקוח.
+
+guidanceContent.he.pages.disclaimer.intro
+    חלק זה מבהיר מה יכולים עמודי המידע האלה בעברית לעשות עבורכם ומה לא.
+
+guidanceContent.he.pages.disclaimer.sections[0].heading
+    מידע כללי בלבד
+
+guidanceContent.he.pages.disclaimer.sections[0].paragraphs[0]
+    תוכן העמודים האלה כתוב כמידע כללי. אין בו ייעוץ משפטי לעניין שלכם ואין הוא מחליף בדיקה של המסמכים שלכם.
+
+guidanceContent.he.pages.disclaimer.sections[0].paragraphs[1]
+    תוצאת עניין תלויה בעובדות, בכללים החלים ובעיתוי; שני מצבים הנראים דומים עשויים להסתיים אחרת.
+
+guidanceContent.he.pages.disclaimer.sections[1].heading
+    המסגרת המשפטית
+
+guidanceContent.he.pages.disclaimer.sections[1].paragraphs[0]
+    המשרד פועל לפי דין טאיוואן, ועמוד זה מדבר רק על העבודה במסגרת זו.
+
+guidanceContent.he.pages.disclaimer.sections[1].paragraphs[1]
+    התוכן אינו ייעוץ לפי דין של שיטת משפט אחרת מזו של טאיוואן, ובכלל זה דין מקום מגוריכם. אם חלק מהעניין שלכם נוגע לשיטת משפט אחרת, נברר עמכם איזה בעל מקצוע מוסמך נדרש לאותו חלק.
+
+guidanceContent.he.pages.disclaimer.sections[2].heading
+    יחסי עורך דין–לקוח אינם נוצרים מאליהם
+
+guidanceContent.he.pages.disclaimer.sections[2].paragraphs[0]
+    קריאת עמוד זה, שליחת טופס או דואר אלקטרוני אינן יוצרות כשלעצמן יחסי עורך דין–לקוח.
+
+guidanceContent.he.pages.disclaimer.sections[2].paragraphs[1]
+    יחסים אלה נוצרים רק לאחר שהעניין נבדק ושני הצדדים אישרו את קבלת העבודה.
+
+guidanceContent.he.pages.disclaimer.sections[3].heading
+    אין הבטחת תוצאה
+
+guidanceContent.he.pages.disclaimer.sections[3].paragraphs[0]
+    אף חלק מעמוד זה אינו הבטחה בדבר תוצאת עניין, בדבר קבלת בקשה או בדבר מעמד שהייה ועבודה.
+
+guidanceContent.he.pages.disclaimer.sections[3].paragraphs[1]
+    קישורים חיצוניים משמשים להתמצאות; איננו מבטיחים את נכונותם או את עדכניותם של תכני צדדים שלישיים.
+
+guidanceContent.he.pages.columns.eyebrow
+    מאמרים
+
+guidanceContent.he.pages.columns.title
+    מאמרים על דין טאיוואן
+
+guidanceContent.he.pages.columns.description
+    מאמרים בעברית על שאלות נפוצות בדין טאיוואן. התוכן הוא מידע כללי נכון למועד הפרסום, ולא ייעוץ משפטי לעניין שלכם.
+
+guidanceContent.he.pages.columns.intro
+    המשרד מפרסם מאמרים על שאלות נפוצות בדין טאיוואן. המאמרים הזמינים בעברית נמצאים בעמוד זה; לצידם ארבעה קישורים, שכל אחד מהם פותח את רשימת המאמרים בשפת מקור אחת.
+
+guidanceContent.he.pages.columns.sections[0].heading
+    ארבע רשימות לפי שפה
+
+guidanceContent.he.pages.columns.sections[0].paragraphs[0]
+    חלק זה כולל ארבעה קישורים: רשימת המאמרים בקוריאנית, בסינית, באנגלית וביפנית. כל קישור מציין את שפת הרשימה, כך שתדעו מראש באיזו שפה ייפתח התוכן.
+
+guidanceContent.he.pages.columns.sections[0].paragraphs[1]
+    ארבע הרשימות האלה הן רשימות לפי שפת המקור של המאמרים, ולא רשימות תרגום. המאמרים הזמינים בעברית נמצאים בנפרד בעמוד זה.
+
+guidanceContent.he.pages.columns.sections[1].heading
+    לאן מובילים הקישורים
+
+guidanceContent.he.pages.columns.sections[1].paragraphs[0]
+    אם תבחרו באחד מארבעת הקישורים, תיפתח רשימת המאמרים באותה שפה. מתוך הרשימה אתם בוחרים את הטקסט; כל התוכן מופיע בשפת המקור של המאמר.
+
+guidanceContent.he.pages.columns.sections[1].paragraphs[1]
+    עמוד זה אינו מסכם את תוכן המאמרים ואינו מבטיח שנושא מסוים זמין בכל ארבע השפות. כל רשימה כוללת רק טקסטים שפורסמו באותה שפה.
+
+guidanceContent.he.pages.columns.sections[2].heading
+    עד כמה מאמר יכול לשמש להתמצאות
+
+guidanceContent.he.pages.columns.sections[2].paragraphs[0]
+    המאמרים הם מידע כללי נכון למועד הפרסום. הכללים ואופן יישומם עשויים להשתנות, ומאמר אינו כולל את כל נסיבות העניין שלכם.
+
+guidanceContent.he.pages.columns.sections[2].paragraphs[1]
+    לפיכך אל תבססו פעולה בעניין ממשי על מאמר בלבד. השתמשו בו לקבלת תמונה כללית ודונו במסמכים שלכם בנפרד עם עורכת דין או עורך דין; עמוד זה אינו שלב הייעוץ.
+
+guidanceTeamCopy.he.label
+    OUR TEAM
+
+guidanceTeamCopy.he.title
+    הצוות הבין־לאומי של Hovering
+
+guidanceTeamCopy.he.description
+    פרופילים של עורכות ועורכי הדין, של ההנהלה התפעולית ושל ביקורת החשבונות השותפה של Hovering.
+
+guidanceTeamCopy.he.representativeTitle
+    עורכת הדין המנהלת
+
+guidanceTeamCopy.he.teamTitle
+    עורכי דין ועובדים
+
+guidanceTeamCopy.he.partnerTitle
+    ביקורת חשבונות שותפה
+
+guidanceTeamCopy.he.introLabel
+    הצגה
+
+guidanceTeamCopy.he.educationLabel
+    השכלה
+
+guidanceTeamCopy.he.experienceLabel
+    ניסיון
+
+guidanceTeamCopy.he.photoAltPrefix
+    תצלום
+
+guidanceTeamCopy.he.workingLanguagesLabel
+    שפות עבודה
+
+guidanceTeamCopy.he.fullProfileLabel
+    פרופיל מלא (English)
+
+guidanceTeamCopy.he.keyFactsHeading
+    עורכת הדין Wei Tseng — נתונים עיקריים
+
+guidanceTeamCopy.he.qualificationLabel
+    הסמכה ומשרד
+
+guidanceTeamCopy.he.qualificationSentence
+    {name} מוסמכת לעסוק בעריכת דין בטאיוואן והיא עורכת הדין המנהלת של {firm}.
+
+guidanceTeamCopy.he.practiceLabel
+    תחומים עיקריים
+
+guidanceTeamCopy.he.consultationLanguagesLabel
+    שפות הייעוץ
+
+guidanceTeamCopy.he.roles.tseng-junwei
+    עורכת הדין המנהלת בטאיוואן (Managing Attorney)
+
+guidanceTeamCopy.he.roles.chang-rongxuan
+    עורך דין בטאיוואן (Taiwan Attorney)
+
+guidanceTeamCopy.he.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.he.roles.son-jungmin
+    ניהול הפעילות בקוריאה (Korea Operations Manager)
+
+guidanceTeamCopy.he.roles.huang-shengping
+    רואה חשבון שותף (Partner CPA)
+
+guidanceTeamBios.he.tseng-junwei.intro[0]
+    המשרד מטפל בעניינים של עסקים ושל יחידים בטאיוואן באנגלית, ביפנית, בקוריאנית ובסינית.
+
+guidanceTeamBios.he.tseng-junwei.intro[1]
+    ייצגה סטודנט קוריאני בתביעת פיצויים בשל פגיעה במכון כושר והשיגה פסק דין בערכאה ראשונה בסך TWD 1.57M.
+
+guidanceTeamBios.he.tseng-junwei.education[0]
+    מוסמך (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.he.tseng-junwei.education[1]
+    בוגר (B.A.) במסלול כפול של משפטים ומימון, National Chengchi University
+
+guidanceTeamBios.he.tseng-junwei.education[2]
+    לימודי חילופין ב־Kobe University וב־Waseda University
+
+guidanceTeamBios.he.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.he.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.he.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.he.chang-rongxuan.intro[0]
+    בעבר ב־Ministry of Education, Legal Affairs Division, בדגש על עניינים מנהליים ואזרחיים.
+
+guidanceTeamBios.he.chang-rongxuan.intro[1]
+    ניסיון בעניינים הנוגעים לאוניברסיטאות, לזכויות סגל ההוראה ולעררים מנהליים.
+
+guidanceTeamBios.he.chang-rongxuan.education[0]
+    בוגר משפטים (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.he.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.he.chang-rongxuan.experience[1]
+    עורך דין, Hovering International Law Firm
+
+guidanceTeamBios.he.chang-fangyu.intro[0]
+    Paralegal בעל ותק רב כ־paralegal בכיר בכמה משרדים, האחראי לתמיכה דיונית, לדיני חברות ולהשקעות זרות.
+
+guidanceTeamBios.he.chang-fangyu.intro[1]
+    תמיכה בהליכים, בהקמת חברות, באישורי השקעות זרות, בבקשות לרישיונות ובקשרים שבין קוריאה לטאיוואן.
+
+guidanceTeamBios.he.chang-fangyu.education[0]
+    בוגר משפטים (LL.B.), Tunghai University
+
+guidanceTeamBios.he.chang-fangyu.experience[0]
+    Senior Paralegal, Boyin Law Firm
+
+guidanceTeamBios.he.chang-fangyu.experience[1]
+    Senior Paralegal, Muyang International Law Firm
+
+guidanceTeamBios.he.son-jungmin.intro[0]
+    מתאם מועדי ייעוץ ותקשורת עבור לקוחות מקוריאה.
+
+guidanceTeamBios.he.son-jungmin.intro[1]
+    תומך בקשרים בין־אזוריים באמצעות מערכות מסמכים ותהליכי עבודה, על רקע מדעי המחשב.
+
+guidanceTeamBios.he.son-jungmin.education[0]
+    בוגר (B.S.) במדעי המחשב, National Cheng Kung University
+
+guidanceTeamBios.he.son-jungmin.experience[0]
+    תחום הפעילות בקוריאה, Hovering International Law Firm
+
+guidanceTeamBios.he.huang-shengping.intro[0]
+    סיים תוכניות בוגר ומוסמך בחשבונאות ב־National Chengchi University וכיום מנהל משרד ראיית חשבון.
+
+guidanceTeamBios.he.huang-shengping.intro[1]
+    תומך בניתוח משולב של סיכונים משפטיים, מיסויים ופיננסיים עבור לקוחות עסקיים.
+
+guidanceTeamBios.he.huang-shengping.education[0]
+    מוסמך (M.A.) בחשבונאות, National Chengchi University
+
+guidanceTeamBios.he.huang-shengping.education[1]
+    בוגר (B.A.) בחשבונאות, National Chengchi University
+
+guidanceTeamBios.he.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.he.Korean
+    קוריאנית
+
+guidanceLanguageNames.he.Chinese
+    סינית
+
+guidanceLanguageNames.he.Japanese
+    יפנית
+
+guidancePracticeAreaNames.he.Taiwan company setup
+    הקמת חברות בטאיוואן
+
+guidancePracticeAreaNames.he.Taiwan investment counsel
+    ייעוץ להשקעות בטאיוואן
+
+guidancePracticeAreaNames.he.Civil litigation and damages
+    תביעות אזרחיות ופיצויים
+
+guidancePracticeAreaNames.he.Trademark and patent filings
+    הגשות של סימני מסחר ופטנטים
+
+guidancePracticeAreaNames.he.Visa and residency
+    אשרה ושהייה
+
+guidancePracticeAreaNames.he.Family and labor disputes
+    סכסוכי משפחה ועבודה
+
+guidanceOfficeCopy.he.label
+    OFFICES
+
+guidanceOfficeCopy.he.title
+    סניפים
+
+guidanceOfficeCopy.he.description
+    כתובות סניפי Hovering International Law Firm בטאיוואן.
+
+guidanceOfficeCopy.he.officeLabel
+    סניף
+
+guidanceOfficeCopy.he.mapPreviewLabel
+    תצוגה מקדימה של המפה
+
+guidanceOfficeCopy.he.koreaOfficeTitle
+    הסניף בקוריאה
+
+guidanceOfficeCopy.he.koreaAddressCardLabel
+    כתובת הסניף בקוריאה
+
+guidanceOfficeCopy.he.koreaMapLinkLabel
+    הצגה ב־Naver Map
+
+guidanceOfficeCopy.he.reviewCountWord
+    חוות דעת
+
+guidanceOfficeCopy.he.phoneLabel
+    טלפון
+
+guidanceOfficeCopy.he.faxLabel
+    פקס
+
+guidanceOfficeCopy.he.mapLinkLabel
+    הצגה במפה
+
+guidanceOfficeCopy.he.photoAlts[0]
+    אזור הקבלה בסניף טאיפיי, Hovering International Law Firm
+
+guidanceOfficeCopy.he.photoAlts[1]
+    חדר עורכת דין בסניף טאיפיי, Hovering International Law Firm
+
+guidanceOfficeCopy.he.photoAlts[2]
+    חדר ישיבות בסניף טאיפיי, Hovering International Law Firm
+
+guidanceOfficeCopy.he.officeTitles.taipei
+    טאיפיי
+
+guidanceOfficeCopy.he.officeTitles.taichung
+    טאיצ׳ונג
+
+guidanceOfficeCopy.he.officeTitles.kaohsiung
+    קאוסיונג
+
+guidanceOfficeCopy.he.officeTitles.pingtung
+    פינגטונג
+
+guidanceFooterCopy.he.officeLabel
+    סניפים
+
+guidanceFooterCopy.he.officeQuickLinksLabel
+    קישורים מהירים לסניפים
+
+guidanceFooterCopy.he.followLabel
+    עקבו אחרינו
+
+guidanceFooterCopy.he.blogLabel
+    בלוג
+
+guidanceFooterCopy.he.websiteLabel
+    האתר הרשמי
+
+guidanceFooterCopy.he.sitemapLabel
+    מפת האתר
+
+guidanceFooterCopy.he.copyEmailLabel
+    העתקת כתובת הדואר האלקטרוני
+
+guidanceFooterCopy.he.emailCopiedMessage
+    כתובת הדואר האלקטרוני הועתקה.
+
+guidanceFooterCopy.he.officialConsultationEmailLabel
+    דואר אלקטרוני רשמי לפניות
+
+internationalInquiryCopy.he.guidanceNotice
+    עמוד זה כתוב בעברית כהתמצאות כללית, ולא כייעוץ משפטי בעניין שלכם.
+
+internationalInquiryCopy.he.consultationNotice
+    הייעוץ מתקיים בארבע שפות: אנגלית, סינית (中文), יפנית וקוריאנית.
+
+internationalInquiryCopy.he.methodConfirmationNotice
+    אם אינכם יכולים להשתמש באף אחת מארבע השפות, בחרו «יש לאשר את דרך התקשורת». אנו משיבים כדי לבחון דרך תקשורת מעשית, אם קיימת; שירות בשפה אחרת אינו מובטח ומועד למענה אינו מובטח.
+
+internationalInquiryCopy.he.preparationNotice
+    אפשר לכתוב את התקציר בשפתכם. הטקסט המקורי נשמר כפי שכתבתם ואינו מתורגם אוטומטית.
+
+internationalInquiryCopy.he.heading
+    שליחת פנייה לבדיקה
+
+internationalInquiryCopy.he.intro
+    תארו את עניינכם בקצרה. עורכת דין או עורך דין בודקים את התוכן לפני המעבר לשלב הבא.
+
+internationalInquiryCopy.he.submitLabel
+    שליחת פנייה
+
+internationalInquiryCopy.he.submittingLabel
+    שולח…
+
+internationalInquiryCopy.he.successMessage
+    קיבלנו את פנייתכם; היא ממתינה לבדיקה. אין משמע הדבר שהייעוץ התקיים או שאושרה פגישה.
+
+internationalInquiryCopy.he.savedNotificationPendingMessage
+    פנייתכם נשמרה, אך ההודעה למשרד טרם אושרה. מה שכתבתם אינו אובד. אם לא תקבלו מענה, אפשר לכתוב גם לכתובת הדואר האלקטרוני שבעמוד יצירת הקשר.
+
+internationalInquiryCopy.he.receiptIdLabel
+    מספר קליטה
+
+internationalInquiryCopy.he.failureMessage
+    לא ניתן היה לשלוח את פנייתכם. נסו שוב או כתבו לכתובת הדואר האלקטרוני שבעמוד יצירת הקשר.
+
+internationalInquiryCopy.he.originalLanguageLabel
+    השפה שבה אתם כותבים
+
+internationalInquiryCopy.he.originalLanguagePlaceholder
+    למשל עברית, אנגלית, סינית או שפה אחרת
+
+internationalInquiryCopy.he.preferredConsultationLanguageLabel
+    השפה הרצויה לכם לייעוץ
+
+internationalInquiryCopy.he.originalTextLabel
+    תיאור קצר של העניין (בשפתכם)
+
+internationalInquiryCopy.he.originalTextPlaceholder
+    כתבו מה קרה, לאיזו עזרה אתם זקוקים ואת המועד, אם קיים. אל תכתבו מספר דרכון, מספר תעודה או פרטי חשבון.
+
+internationalInquiryCopy.he.nameLabel
+    שם
+
+internationalInquiryCopy.he.emailLabel
+    דואר אלקטרוני
+
+internationalInquiryCopy.he.consentLabel
+    קראתי את עמוד הפרטיות ואני מסכים לשליחת פנייה זו.
+
+internationalInquiryCopy.he.privacyLinkLabel
+    פרטיות
+
+internationalInquiryCopy.he.requiredMessage
+    שדה זה הוא חובה.
+
+internationalInquiryCopy.he.invalidEmailMessage
+    הזינו כתובת דואר אלקטרוני תקינה.
+
+internationalInquiryCopy.he.tooLongMessage
+    הטקסט ארוך מדי. קצרו אותו ושלחו שוב.
+
+internationalInquiryCopy.he.sourceLanguageNotice
+    מאמר זה פורסם רק בשפה {language}; הקישור פותח את העמוד המקורי.
+
+internationalInquiryCopy.he.unavailableTranslationNotice
+    חלק זה אינו זמין עדיין בשפת עמוד זה. הקישור בשפת המקור פותח את הטקסט המקורי.
+
+internationalInquiryCopy.he.unavailableLanguageNotice
+    עמוד זה אינו מוצע בשפה {language}.
+
+internationalInquiryCopy.he.languageOptions.en
+    אנגלית (English)
+
+internationalInquiryCopy.he.languageOptions.zh-hant
+    סינית (中文)
+
+internationalInquiryCopy.he.languageOptions.ja
+    יפנית (日本語)
+
+internationalInquiryCopy.he.languageOptions.ko
+    קוריאנית (한국어)
+
+internationalInquiryCopy.he.languageOptions.needs-method-confirmation
+    אף אחת מארבע השפות אינה שמישה — יש לאשר את דרך התקשורת
+
+guidanceAnswers.he.services.answer
+    המשרד מטפל בשש קבוצות לפי דין טאיוואן: השקעה והקמת חברות, סכסוכים אזרחיים ופיצויים, נישואין, משפחה וירושה, עבודה, עניינים פליליים וקניין רוחני. היקף כל עניין מאושר בנפרד לאחר שעורכת דין או עורך דין בדקו את התוכן שנשלח. הייעוץ מתקיים רק באנגלית, בסינית, ביפנית ובקוריאנית.
+
+guidanceAnswers.he.services.sources[0]
+    /he/faq
+
+guidanceAnswers.he.services.sources[1]
+    /he/contact
+
+guidanceAnswers.he.about.answer
+    Hovering International Law Firm הוא משרד עורכי דין טאיוואני, שנוסד בשנת 2016 בידי בוגרי National Taiwan University (國立臺灣大學), ולו סניפים בטאיפיי, בקאוסיונג, בטאיצ׳ונג ובפינגטונג. משנת 2020 פועלת גם מחלקת הנהלת חשבונות; הסניף בטאיצ׳ונג מטפל בעניינים בעלי זיקה לקוריאה וליפן. המשרד אינו מבטיח תוצאה. הייעוץ מתקיים רק באנגלית, בסינית, ביפנית ובקוריאנית.
+
+guidanceAnswers.he.about.sources[0]
+    /he/lawyers
+
+guidanceAnswers.he.about.sources[1]
+    /he/services
+
+guidanceAnswers.he.lawyers.answer
+    עמוד זה מציג את הפרופילים של עורכות ועורכי הדין של Hovering, של ההנהלה התפעולית ושל ביקורת החשבונות השותפה. עורכת הדין Wei Tseng (曾雋崴) מוסמכת בטאיוואן והיא עורכת הדין המנהלת של המשרד; היא עובדת עם לקוחות מקוריאה, מיפן ועם לקוחות בין־לאומיים נוספים. הייעוץ מתקיים רק באנגלית, בסינית, ביפנית ובקוריאנית.
+
+guidanceAnswers.he.lawyers.sources[0]
+    /he/about
+
+guidanceAnswers.he.lawyers.sources[1]
+    /he/contact
+
+guidanceAnswers.he.pricing.answer
+    עמוד זה אינו מפרסם מחירון. תחילה מאושר היקף העבודה מתוך התקציר שלכם, ולאחר מכן הגובה ואופן החישוב מאושרים עמכם לפני שהעבודה מתחילה. שיחה עם עורכת דין או עורך דין עשויה להיות בתשלום; מלבד שכר הטרחה עשויות להיווצר אגרות בית משפט או הוצאות רשויות. הייעוץ מתקיים רק באנגלית, בסינית, ביפנית ובקוריאנית.
+
+guidanceAnswers.he.pricing.sources[0]
+    /he/contact
+
+guidanceAnswers.he.pricing.sources[1]
+    /he/faq
+
+guidanceAnswers.he.contact.answer
+    שלחו תקציר בטופס יצירת הקשר: מה קרה, לאיזו עזרה אתם זקוקים, מהי זיקת העניין לטאיוואן, והמועד אם הוא ידוע לכם. בשלב הראשון אין צורך לשלוח עדיין מסמכי זיהוי או את מכלול הראיות. המשרד אינו מבטיח מועד למענה ואינו מאשר פגישה דרך עמוד זה. הייעוץ מתקיים רק באנגלית, בסינית, ביפנית ובקוריאנית.
+
+guidanceAnswers.he.contact.sources[0]
+    /he/faq
+
+guidanceAnswers.he.contact.sources[1]
+    /he/pricing
+
+guidanceAnswers.he.faq.answer
+    חלק זה משיב על שאלות נפוצות ברמת מידע כללי: שש קבוצות העבודה, ההכנה לפני הפנייה, אישור העלויות ומשמעותה של הודעה שנשלחה. הודעה שנשלחה ממתינה לבדיקה, אינה חוות דעת משפטית ואינה פגישה מאושרת, ושליחתה כשלעצמה אינה יוצרת יחסי עורך דין–לקוח. הייעוץ מתקיים בארבע שפות: אנגלית, סינית, יפנית וקוריאנית.
+
+guidanceAnswers.he.faq.sources[0]
+    /he/services
+
+guidanceAnswers.he.faq.sources[1]
+    /he/contact
+
+GUIDANCE_LLMS_NOTICES.he.consultationNotice
+    מידע זה כתוב בעברית, אך הייעוץ עם עורכת דין או עורך דין מתקיים רק באנגלית, בסינית (中文), ביפנית ובקוריאנית.
+
+GUIDANCE_LLMS_NOTICES.he.discoveryNotice
+    הקובץ llms.txt הוא מפה בלבד לאיתור העמודים הפומביים; אין בו הבטחה לדירוג בחיפוש, לתמיכה, להמלצה של בינה מלאכותית או לחשיפה.
+
+GUIDANCE_LLMS_NOTICES.he.confidentialNotice
+    מאחר שהטקסט המקורי נשמר, אל תכתבו בשלב הראשון את מה שאינו נדרש עדיין, למשל מספר דרכון, מספר תעודה או פרטי חשבון.

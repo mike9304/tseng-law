@@ -368,6 +368,6 @@ Q20. كيف يُبحث عن محامي حادث مرور؟
 ---
 
 > اقرأ أيضًا:
-> - [إرشاد محامي التقاضي في تايوان](/ko/taiwan-litigation-lawyer)
-> - [محامٍ تايواني يمكنه الاستشارة بالكورية](/ko/korean-lawyer-in-taiwan)
-> - [دليل البحث عن محامٍ تايواني](/ko/taiwan-lawyer)
+> - [كيف يُحدَّد نطاق العمل وتُحدَّد الأتعاب](/ar/pricing)
+> - [فريق Hovering الدولي](/ar/lawyers)
+> - [عن Hovering International Law Firm](/ar/about)

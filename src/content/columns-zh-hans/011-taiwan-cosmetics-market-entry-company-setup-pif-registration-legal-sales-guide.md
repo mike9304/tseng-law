@@ -111,7 +111,7 @@ PIF制度曾按产品群分阶段适用。自2026年7月1日起，其余化妆�
 5. 依整体呈现标准审查标签、销售页、广告及合作帖文。
 6. 运作应对检查与改正要求、申诉、安全信息及必要后续的程序。
 
-公司与分公司的基本结构可见于[在台湾设立公司的基础](/zh-hans/columns/taiwan-company-establishment-basics)，相关支持范围见于[台湾投资与公司设立服务](/ko/services/investment)，负责律师信息见于[律师曾雋崴简介](/ko/lawyers/wei-tseng)。
+公司与分公司的基本结构可见于[在台湾设立公司的基础](/zh-hans/columns/taiwan-company-establishment-basics)，相关支持范围见于[我们处理哪些事项](/zh-hans/services)，负责律师信息见于[Hovering 国际团队](/zh-hans/lawyers)。
 
 ### 官方来源
 

@@ -139,7 +139,7 @@ faq:
 
 ## הנחיות קשורות
 
-1. [שירותי השקעה והקמת חברה בטאיוואן](/ko/services/investment)
+1. [באילו עניינים אנו מטפלים](/he/services)
 2. [יסודות הקמת חברה בטאיוואן](/he/columns/taiwan-company-establishment-basics)
 3. [יצירת קשר](/he/contact)
 

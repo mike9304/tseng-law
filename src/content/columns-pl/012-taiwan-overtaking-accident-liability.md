@@ -58,8 +58,8 @@ Jako uzupełnienie można zobaczyć [ilustrację przepisów i procedury wyprzedz
 ---
 
 > Zobacz też:
-> - [Przewodnik po adwokacie procesowym na Tajwanie](/ko/taiwan-litigation-lawyer)
-> - [Adwokat na Tajwanie mówiący po koreańsku](/ko/korean-lawyer-in-taiwan)
+> - [Jak ustala się zakres pracy i koszty](/pl/pricing)
+> - [Międzynarodowy zespół Hovering](/pl/lawyers)
 > - [Procedura postępowania w wypadkach drogowych na Tajwanie](/pl/columns/taiwan-traffic-accident-procedure)
 
 Niniejszy tekst jest ogólną informacją prawną o przepisach wyprzedzania i ocenie odpowiedzialności za wypadki na Tajwanie; nie stanowi porady w konkretnej sprawie ani obietnicy określonego wyniku. Rzeczywista odpowiedzialność może się różnić według miejsca wypadku, ruchu pojazdów, prędkości, sygnałów, dowodów, ekspertyzy (鑑定) i aktualnego prawa; konkretne sprawy należy badać osobno na podstawie odpowiednich materiałów.

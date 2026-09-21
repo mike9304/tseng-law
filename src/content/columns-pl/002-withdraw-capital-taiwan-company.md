@@ -139,7 +139,7 @@ Im dłużej trwa zawieszenie działalności, tym bardziej późniejsza procedura
 
 ## Wskazówki pokrewne
 
-1. [Usługi inwestycji i zakładania spółki na Tajwanie](/ko/services/investment)
+1. [Jakie sprawy prowadzimy](/pl/services)
 2. [Podstawy zakładania spółki na Tajwanie](/pl/columns/taiwan-company-establishment-basics)
 3. [Kontakt](/pl/contact)
 

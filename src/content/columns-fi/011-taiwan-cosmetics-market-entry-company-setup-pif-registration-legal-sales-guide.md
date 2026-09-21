@@ -111,7 +111,7 @@ Myynnin valmistelu Taiwanissa, jos se varmistetaan seuraavassa järjestyksessä,
 5. Tarkastaa etiketti, myyntisivu, mainonta ja yhteistyöjulkaisut esityksen kokonaisuuden mittapuun mukaan.
 6. Viedä menettely reagoida tarkastuksiin ja korjauspyyntöihin, valituksiin, turvallisuustietoihin ja tarvittavaan seurantaan.
 
-Yhtiön ja sivuliikkeen (分公司) perusrakenne voidaan nähdä [Yhtiön perustamisen perusteissa Taiwanissa](/fi/columns/taiwan-company-establishment-basics), liittyvän tuen laajuus [Palveluissa Taiwanin sijoituksesta ja yhtiön perustamisesta](/ko/services/investment), ja vastuullisen asianajajan tiedot [Asianajaja Wei Tsengin profiilissa](/ko/lawyers/wei-tseng).
+Yhtiön ja sivuliikkeen (分公司) perusrakenne voidaan nähdä [Yhtiön perustamisen perusteissa Taiwanissa](/fi/columns/taiwan-company-establishment-basics), liittyvän tuen laajuus [Mitä asioita käsittelemme](/fi/services), ja vastuullisen asianajajan tiedot [Hoveringin kansainvälinen tiimi](/fi/lawyers).
 
 ### Viralliset lähteet
 

@@ -183,7 +183,7 @@ Ved ordningen av bilagene i tidsfølge bør man sammen angi datoen for kontrakte
 
 ## 11. Tilknyttede veiledninger
 
-- [Tjeneste vedrørende arbeidsrett i Taiwan](/ko/services/labor)
+- [Hvilke saker vi behandler](/nb/services)
 - [Veiledning om frivillig fratreden og unntak fra fratredelsesgodtgjørelsen](/nb/columns/taiwan-voluntary-resignation-severance)
 - [Kontakt](/nb/contact)
 

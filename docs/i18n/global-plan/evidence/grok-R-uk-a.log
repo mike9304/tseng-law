@@ -1,0 +1,22 @@
+[WO start 2026-09-21 16:08:36]
+Native review is in `docs/i18n/global-plan/reviews/native/uk-a.md`. Guidance pack **3/5**, columns **2/5**. 21 P1 and 44 P2; strongest must-fixes: garbled **вазкою**, masculine **Адвокат** for Wei Tseng, **3 особою** for “third party”, Korea left as the default reader, and English leftovers (**OUR TEAM**, **Q&A**).
+
+Last 15 lines of the output file:
+
+```
+| 52 | P2 | D | columns-uk/003-taiwan-traffic-accident-procedure.md | "Якщо у Вас є додаткові запитання, залиште їх у коментарях." | Invites blog comments that the guidance site does not offer. | Якщо у Вас є додаткові запитання щодо Вашої справи, надішліть виклад через сторінку «Контакти». |
+| 53 | P2 | B | columns-uk/004-taiwan-company-subsidiary-vs-branch.md | "Немає власних акцій, часток ні структури акціонерів" | Missing ані…ані; ні is stranded. | Немає ні власних акцій чи часток, ні структури акціонерів |
+| 54 | P2 | C | columns-uk/005-taiwan-company-establishment-advanced-2.md | "(цей пункт стосується корейського режиму та банківської практики Кореї)" | The label is honest, but Q1 is still Korea-only capital-control advice on a UA page with no UA analogue. | (цей пункт — приклад корейського валютного контролю; читачам з України треба звіряти правила свого банку та валютного законодавства) |
+| 55 | P2 | C | columns-uk/006-taiwan-massage-history-law.md | "Чи доводилося Вам знати епоху традиційних перукарень" | доводилося знати is not a collocation; one knows a fact, remembers an era. | Чи пам’ятаєте Ви традиційні перукарні раннього Тайваню? |
+| 56 | P2 | D | columns-uk/006-taiwan-massage-history-law.md | "Подібним чином у Кореї, де чимало осіб з порушенням зору заробляють на життя масажем" | Long Korea comparative block with no bridge for a Ukraine reader. | Для порівняння: у деяких країнах (зокрема в Кореї) масаж і досі зарезервовано переважно за особами з порушенням зору |
+| 57 | P2 | C | columns-uk/007-taiwan-divorce-lawsuit-qna.md | "Особливо для сім’ї, пов’язаної, як Корея та Тайвань, із 2 або більше державами" | Korea named as the model cross-border family; UA readers need Ukraine in the example (EN used Korea only as "such as"). | Особливо для сім’ї, пов’язаної з двома чи більше державами чи територіями (наприклад Україною та Тайванем) |
+| 58 | P2 | C | columns-uk/007-taiwan-divorce-lawsuit-qna.md | "ці строки не слід як є переносити на інші вимоги" | як є is a Korean 그대로 / German als solches tic, repeated through 007. | ці строки не слід механічно переносити на інші вимоги |
+| 59 | P2 | D | columns-uk/007-taiwan-divorce-lawsuit-qna.md | "рішенні № 4 року 112 (112年憲判字第4號)" | ROC year 112 unexplained for a Ukraine reader; slash dates "25/7/2026" in the same file. | рішенні № 4 112 року календаря Китайської Республіки (2023; 112年憲判字第4號) |
+| 60 | P2 | C | columns-uk/007-taiwan-divorce-lawsuit-qna.md | "Сама лише угода, що дитина житиме в Кореї, не робить корейський рівень життя" | Relocation example still assumes Korea as the destination. | Сама лише угода, що дитина житиме за кордоном, не робить рівень життя тієї країни формулою аліментів |
+| 61 | P2 | C | columns-uk/008-taiwan-labor-severance-law.md | "Трудове право Тайваню: вихідну допомогу на Тайвані справді важко отримати??" | Double ?? and bloggy clickbait on a client-facing legal page. | Трудове право Тайваню: чи справді важко отримати вихідну допомогу? |
+| 62 | P2 | C | columns-uk/008-taiwan-labor-severance-law.md | "На той час моя сторона, пан B, працював у товаристві A" | моя сторона is courtroom jargon/calque; native bio would say мій клієнт. | На той час мій клієнт, пан B, працював у товаристві A |
+| 63 | P2 | G | columns-uk/008-taiwan-labor-severance-law.md | "**Економічне звільнення**  **資遣** **員工(經濟解僱)**" | Raw Chinese left inside table headers beyond a parenthetical gloss. | **Економічне звільнення (資遣)** |
+| 64 | P2 | B | columns-uk/009-taiwan-voluntary-resignation-severance.md | "якщо працівник іде з роботи зі власної ініціативи (自請離職)" | зі власної is the wrong preposition (власної starts with в → з власної). | якщо працівник іде з роботи з власної ініціативи (自請離職) |
+| 65 | P2 | C | columns-uk/009-taiwan-voluntary-resignation-severance.md | "Працівник повинен отже добре володіти строком." | отже + володіти строком is not something a labour lawyer in Ukraine would write. | Тому працівник має пильно стежити за цим строком. |
+```
+=== end code=0 2026-09-21 16:17:14 ===

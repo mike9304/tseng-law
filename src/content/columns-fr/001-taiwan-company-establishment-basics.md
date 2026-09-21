@@ -138,7 +138,7 @@ Le taux limité de l’accord ne s’applique pas automatiquement du seul fait q
 - [Indication de l’Administration de l’immigration de Taïwan (內政部移民署) sur le séjour permanent](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Indication de la ville de Taipei sur l’examen préalable du lieu d’activité](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-Vous pouvez consulter le champ d’activité concerné sous [Services d’investissement et de création de société à Taïwan](/ko/services/investment), le parcours et les langues de l’avocate compétente sous [Profil de l’avocate Wei Tseng](/ko/lawyers/wei-tseng). Pour les questions relatives à une affaire concrète, veuillez utiliser [Contact](/fr/contact).
+Vous pouvez consulter le champ d’activité concerné sous [Affaires que nous traitons](/fr/services), le parcours et les langues de l’avocate compétente sous [Équipe internationale de Hovering](/fr/lawyers). Pour les questions relatives à une affaire concrète, veuillez utiliser [Contact](/fr/contact).
 
 Le présent article est un document d’information générale à des fins éducatives sur la création de société à Taïwan et les règles connexes ; il ne constitue pas un conseil juridique ou fiscal dans une affaire concrète et ne promet pas un résultat déterminé. Les procédures nécessaires et les résultats peuvent varier selon la structure d’investissement, le secteur, la nationalité et le statut de séjour du demandeur ainsi que la pratique la plus récente de l’autorité compétente ; avant d’exécuter un investissement, un contrat ou un emploi, il convient d’examiner les sources officielles les plus récentes et les circonstances propres à l’affaire.
 

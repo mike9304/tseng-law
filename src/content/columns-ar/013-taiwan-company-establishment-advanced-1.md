@@ -17,7 +17,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 وفيما يلي ترتيب للأسئلة التي يكثر الاستفسار عنها عند التأسيس.
 
-من اطّلع على [**أساسيات تأسيس الشركات**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) يمكنه مواصلة الاطلاع على الجزء المتعمق المفصّل.
+من اطّلع على [**أساسيات تأسيس الشركات**](/ar/columns/taiwan-company-establishment-basics) يمكنه مواصلة الاطلاع على الجزء المتعمق المفصّل.
 
 ويُرجى أن تنفع الأسئلة والأجوبة أدناه من ينظر في تأسيس شركة في تايوان. 😊
 
@@ -128,6 +128,6 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 ---
 
 > اقرأ أيضًا:
-> - [دليل شامل لتأسيس الشركات في تايوان — الإجراءات والتكاليف وأشكال الكيان](/ko/guides/taiwan-company-setup)
-> - [محامٍ تايواني يمكنه الاستشارة بالكورية](/ko/korean-lawyer-in-taiwan)
-> - [إرشاد محامي تأسيس الكيانات والشركات في تايوان](/ko/taiwan-company-setup-lawyer)
+> - [المجالات التي يقبلها المكتب](/ar/services)
+> - [فريق Hovering الدولي](/ar/lawyers)
+> - [كيفية التواصل مع المكتب](/ar/contact)

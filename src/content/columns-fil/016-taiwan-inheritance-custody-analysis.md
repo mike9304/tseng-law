@@ -143,8 +143,8 @@ Sa opisyal na pahina ng mga batas, tiyakin ang petsa ng pagbabago at ang petsa n
 
 ## 11. Kaugnay na Gabay
 
-- [Serbisyo sa mga usaping pampamilya sa Taiwan](/ko/services/family)
-- [Gabay sa abogado para sa paglilitis sa Taiwan](/ko/taiwan-litigation-lawyer)
+- [Mga usaping hinahawakan ng tanggapan](/fil/services)
+- [Paano itinatakda ang saklaw ng trabaho at ang bayarin](/fil/pricing)
 - [Konsultasyon at katanungan](/fil/contact)
 
 ---

@@ -143,8 +143,8 @@ Op de officiële reglementeringspagina’s bevestigt men de hervormingsdatum en 
 
 ## 11. Verbonden toelichtingen
 
-- [Dienst van familierecht in Taiwan](/ko/services/family)
-- [Leidraad van de procesadvocaat in Taiwan](/ko/taiwan-litigation-lawyer)
+- [Welke zaken wij behandelen](/nl/services)
+- [Hoe omvang van het werk en kosten worden vastgesteld](/nl/pricing)
 - [Contact](/nl/contact)
 
 ---

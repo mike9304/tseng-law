@@ -184,7 +184,7 @@ faq:
 
 ## संबंधित मार्गदर्शिकाएँ
 
-- [ताइवान निवेश और कंपनी गठन सेवाएँ](/ko/services/investment)
+- [हम किन मामलों का कार्य करते हैं](/hi/services)
 - [ताइवान में कंपनी स्थापना की मूल बातें](/hi/columns/taiwan-company-establishment-basics)
 - [संपर्क](/hi/contact)
 

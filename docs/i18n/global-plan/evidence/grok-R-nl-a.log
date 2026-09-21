@@ -1,0 +1,27 @@
+[WO start 2026-09-21 16:10:54]
+Native review is in `docs/i18n/global-plan/reviews/native/nl-a.md`. Naturalness: **2/5** for the guidance pack and **2/5** for columns 001–009.
+
+The Dutch is grammatically mostly parsable, but a NL/BE client would read it as German legal Dutch with a Korean blog underneath. No masculine forms for Wei Tseng. The no-Dutch-consultation lines stay negative.
+
+**P1 (must fix):** the Taiwan–Korea 10% treaty is presented as a general rule (English disclaimer dropped); 004 puts a Korean parent company back as the default; `vennoten` for 股東 (in NL that means partnership, not a BV/NV); `Ik was WEI`; “grootst mogelijke vergoeding” and the high-severance success story; leftover `OUR TEAM` / `OFFICES`, `/ko/` links, Hangul slugs; 005 still written for a Korean remitter.
+
+Last 15 lines of the file:
+
+```
+| 46 | P2 | B | columns-nl/007-taiwan-divorce-lawsuit-qna.md | "Naar welk maatstaf beoordeelt de rechter in Taiwan aangelegenheden van minderjarige kinderen?" | *Maatstaf* is de-woord: *welke*, not *welk*. | Naar welke maatstaf beoordeelt de rechter in Taiwan aangelegenheden van minderjarige kinderen? |
+| 47 | P2 | B | columns-nl/007-taiwan-divorce-lawsuit-qna.md | "de personenstandsrechtelijke werking van de Taiwanees echtscheiding bij wederzijds verlangen" | Adjective must inflect: *de Taiwanese echtscheiding*. | de personenstandsrechtelijke werking van de Taiwanese echtscheiding bij wederzijds verlangen |
+| 48 | P2 | B | columns-nl/008-taiwan-labor-severance-law.md | "is de ontslagvergoeding in Taiwan werkelijk moeilijk te verkrijgen??" | Double question mark in the title (and again in the H1). | is de ontslagvergoeding in Taiwan werkelijk moeilijk te verkrijgen? |
+| 49 | P2 | A | columns-nl/006-taiwan-massage-history-law.md | "verklaarden de Grote Rechters (大法官) de bepaling" | *Grote Rechters* is a calque of Grand Justices; Dutch readers need the court. | verklaarde het Grondwettelijk Hof (大法官) de bepaling |
+| 50 | P2 | D | columns-nl/007-taiwan-divorce-lawsuit-qna.md | "Vooral bij gezinnen die, zoals Korea (韓國) en Taiwan (臺灣), met 2 of meer staten" | Faithful to English, but a NL/BE page should name the reader’s countries, not only Korea. | Vooral bij gezinnen die met twee of meer landen of gebieden zijn verbonden — bijvoorbeeld Nederland of België en Taiwan — |
+| 51 | P2 | D | columns-nl/007-taiwan-divorce-lawsuit-qna.md | "Alleen de overeenkomst dat het kind in Korea zal wonen" | Korea kept as the relocation example; add NL/BE or say “in het buitenland”. | Alleen de afspraak dat het kind in het buitenland — bijvoorbeeld in Korea — zal wonen |
+| 52 | P2 | D | columns-nl/006-taiwan-massage-history-law.md | "Op vergelijkbare wijze mogen in Korea, waar talrijke personen met een visuele beperking" | Long Korea-only comparative coda on a Dutch page; keep as comparative law, but signpost it. | Ter vergelijking: in Korea, waar veel mensen met een visuele beperking van massage leven, |
+| 53 | P2 | C | columns-nl/001-taiwan-company-establishment-basics.md | "een verdragsrechtelijke vaste inrichting (常設機構, PE) bestaat" | English abbreviation *PE* left in Dutch running text. | een verdragsrechtelijke vaste inrichting (常設機構) bestaat |
+| 54 | P2 | C | columns-nl/004-taiwan-company-subsidiary-vs-branch.md | "Gezamenlijke investering van een 3e (第三人)" | Digit *3e* for “third party” is Korean/German memo style; Dutch writes *derde*. Throughout 003–004. | Gezamenlijke investering van een derde (第三人) |
+| 55 | P2 | C | columns-nl/007-taiwan-divorce-lawsuit-qna.md | "Artikel 1030-1 van het Burgerlijk Wetboek (民法) is een instituut dat" | Same false friend as guidance *instituten*: here it means a statutory scheme, not an instituut. | Artikel 1030-1 van het Burgerlijk Wetboek (民法) is een wettelijke regeling die |
+| 56 | P2 | C | columns-nl/008-taiwan-labor-severance-law.md | "Goedendag, ik ben Wei Tseng (曾雋崴), Taiwanese advocaat." | Blog greeting clashes with the rest of the site’s formal u-register; fine as voice, but it reads imported. | Ik ben Wei Tseng (曾雋崴), advocaat in Taiwan. |
+| 57 | P2 | B | columns-nl/009-taiwan-voluntary-resignation-severance.md | "het ''**tijdstip**'' zeer belangrijk." | Mixed ASCII quotes around a bold word; looks unedited. | het **tijdstip** zeer belangrijk. |
+| 58 | P2 | C | nl-guidance.txt | "Paginataal en consultatietaal zijn niet hetzelfde" | *Paginataal* is a German *Seitensprache* coinage; Dutch: taal van de pagina. Recurs on contact. | De taal van de pagina is niet de taal van het adviesgesprek |
+| 59 | P2 | C | nl-guidance.txt | "Dit is alleen een toetsingsstap, geen belofte." | *Toetsingsstap* / *communicatieweg* are German compounds a client would not use. | Dit is alleen een controle, geen belofte. |
+| 60 | P2 | C | columns-nl/003-taiwan-traffic-accident-procedure.md | "Volgens mijn ervaring behandelt de verzekeringsmaatschappij de gevoelszijde" | First-person Korean-blog block (Q16–Q20) with empty `​` lines; English keeps the voice, but Dutch padding makes it look unedited. | Uit de praktijk blijkt dat de verzekeraar vaak weinig aandacht heeft voor wat de betrokkenen voelen. |
+```
+=== end code=0 2026-09-21 16:19:31 ===

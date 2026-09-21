@@ -140,8 +140,8 @@ Au travail sans permis peuvent s’appliquer une amende administrative et un ord
 
 ## Orientations liées
 
-- [Services d’investissement et de constitution de sociétés à Taïwan](/ko/services/investment)
-- [Profil de l’avocate Wei Tseng](/ko/lawyers/wei-tseng)
+- [Affaires que nous traitons](/fr/services)
+- [Équipe internationale de Hovering](/fr/lawyers)
 - [Contact](/fr/contact)
 
 ---

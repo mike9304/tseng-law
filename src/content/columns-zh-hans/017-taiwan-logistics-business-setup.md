@@ -140,8 +140,8 @@ faq:
 
 ## 相关指引
 
-- [台湾投资与公司设立服务](/ko/services/investment)
-- [律师曾雋崴简介](/ko/lawyers/wei-tseng)
+- [我们处理哪些事项](/zh-hans/services)
+- [Hovering 国际团队](/zh-hans/lawyers)
 - [联系](/zh-hans/contact)
 
 ---

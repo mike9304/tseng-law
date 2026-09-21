@@ -14,7 +14,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Ảnh đại diện](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Quý vị đã đọc [Thành lập công ty tại Đài Loan — Phần cơ bản](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) và [Thành lập công ty tại Đài Loan — Phần chuyên sâu 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) thì cũng có thể xem thêm Thành lập công ty tại Đài Loan — Phần chuyên sâu 2.
+Quý vị đã đọc [Thành lập công ty tại Đài Loan — Phần cơ bản](/vi/columns/taiwan-company-establishment-basics) và [Thành lập công ty tại Đài Loan — Phần chuyên sâu 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) thì cũng có thể xem thêm Thành lập công ty tại Đài Loan — Phần chuyên sâu 2.
 
 ​
 
@@ -83,6 +83,6 @@ Nếu quý vị có thêm câu hỏi, xin liên hệ với chúng tôi bất c�
 ---
 
 > Xem thêm:
-> - [Hướng dẫn tổng hợp về thành lập công ty tại Đài Loan — thủ tục, chi phí và các hình thức pháp nhân](/ko/guides/taiwan-company-setup)
-> - [Luật sư Đài Loan trao đổi được bằng tiếng Hàn](/ko/korean-lawyer-in-taiwan)
-> - [Giới thiệu luật sư về thành lập pháp nhân, thành lập công ty tại Đài Loan](/ko/taiwan-company-setup-lawyer)
+> - [Các lĩnh vực mà văn phòng nhận xử lý](/vi/services)
+> - [Đội ngũ quốc tế Hovering](/vi/lawyers)
+> - [Cách liên hệ với văn phòng](/vi/contact)

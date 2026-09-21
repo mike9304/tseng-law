@@ -96,6 +96,6 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 ---
 
 > อ่านเพิ่มเติม:
-> - [คู่มือทนายความคดีความในไต้หวัน](/ko/taiwan-litigation-lawyer)
-> - [ทนายความไต้หวันที่สื่อสารภาษาเกาหลีได้](/ko/korean-lawyer-in-taiwan)
-> - [ขอบเขตการให้บริการ — กฎหมายแรงงาน](/ko/services/labor)
+> - [การกำหนดขอบเขตงานและค่าใช้จ่าย](/th/pricing)
+> - [ทีมงานระหว่างประเทศ Hovering](/th/lawyers)
+> - [ประเภทเรื่องที่สำนักงานรับดำเนินการ](/th/services)

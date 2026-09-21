@@ -1,0 +1,23 @@
+[WO start 2026-09-21 16:12:22]
+Native review is in `docs/i18n/global-plan/reviews/native/zh-hans-a.md`. **3/5** for the guidance pack, **2/5** for columns 001–009: 65 rows (26 P1, 39 P2). The copy is Taiwanese Mandarin in Simplified characters; the worst client-facing issues are Simplified self-glosses instead of Traditional terms, leftover Korean URLs/CTAs, and typical-sentence / “maximize compensation” claims in column 003.
+
+Last 15 lines of the output file:
+
+```
+| 51 | P2 | C | columns-zh-hans/006-taiwan-massage-history-law.md | "请与可信任的友人或台湾律师一同前往派出所提出告诉。" | Sounds as if this firm will escort the reader to the police station. | 请在可信任的友人陪同下，前往派出所提出告诉；是否委任律师，请另循联系页确认。 |
+| 52 | P2 | C | columns-zh-hans/007-taiwan-divorce-lawsuit-qna.md | "下列1级原始资料" | Calque of “primary sources / 1급”; not mainland editorial Chinese. | 下列官方原始资料 |
+| 53 | P2 | C | columns-zh-hans/007-taiwan-divorce-lawsuit-qna.md | "不能给全部权利贴上自离婚日起单一5年期间" | Korean/English calque “stick a single five-year period onto all rights”. | 不能把所有权利都算成自离婚日起的同一个五年期间 |
+| 54 | P2 | C | columns-zh-hans/008-taiwan-labor-severance-law.md | "您好，我是台湾律师曾雋崴。" | Radio-host opening; the rest of 008/009 is telegram-style fragments without periods. | 本文说明台湾资遣费（資遣費）的发生时点与常见争议。 |
+| 55 | P2 | C | columns-zh-hans/008-taiwan-labor-severance-law.md | "在韩国，受雇人离开企业时，公司须给付离职金" | Missing period; Korea-default comparison; 离职金 is fine for Korea but the sentence is unfinished blog paste. | 在部分法域（例如韩国），受雇人离职时公司通常须给付离职金。 |
+| 56 | P2 | C | columns-zh-hans/009-taiwan-voluntary-resignation-severance.md | "如上所述，在台湾受雇人要取得资遣费并不容易。" | “如上所述” points at a previous Korean-blog post the mainland reader does not have. | 一般而言，在台湾受雇人要取得资遣费并不容易。 |
+| 57 | P2 | C | columns-zh-hans/001-taiwan-company-establishment-basics.md | "因此，从一开始就一并检视事业模式" | 检视 is the default verb in 001–004/007 (Korean 검토 / German prüfen); mainland legal prose uses 审查、核对、了解. | 因此，从一开始就一并审查商业模式 |
+| 58 | P2 | A | columns-zh-hans/002-withdraw-capital-taiwan-company.md | "新台币TWD 500,000以上 TWD 2,500,000以下罚金" | Currency jammed twice; missing 元; not mainland number style. | 新台币50万元以上、250万元以下罚金 |
+| 59 | P2 | A | columns-zh-hans/006-taiwan-massage-history-law.md | "被处新台币行政罚锾TWD 40,000、TWD 10,000 及 TWD 20,000。" | 罚锾 needs Traditional 罰鍰; amounts need 元 / 万元. | 被处行政罚锾（罰鍰）新台币4万元、1万元及2万元。 |
+| 60 | P2 | D | columns-zh-hans/007-taiwan-divorce-lawsuit-qna.md | "未成年子女权利义务之行使或负担及会面交往，依子女最佳利益标准评价" | Keep the Taiwan terms, but unpack once for mainland readers (亲权 / 探望). | 未成年子女权利义务之行使或负担（親權）及会面交往（會面交往；探望），依子女最佳利益标准评价 |
+| 61 | P2 | C | zh-hans-guidance.txt | "本所处理依台湾法律划分的主要业务类别。" | 依台湾法律划分 is a classification calque, not how a mainland firm would name practice groups. | 本所处理台湾法律下的主要业务类别。 |
+| 62 | P2 | C | zh-hans-guidance.txt | "用它了解概览，并另行就您的文件与律师讨论" | 了解概览 is not a collocation. | 可用作概览，具体问题仍须就您的文件与律师讨论 |
+| 63 | P2 | D | columns-zh-hans/005-taiwan-company-establishment-advanced-2.md | "公司能否雇用具韩国国籍的人作为受雇人？" | Q5 is Korea-nationality only; the rule is 侨外/外国人. | 公司能否雇用外国人（下文以韩国籍为例）作为员工？ |
+| 64 | P2 | B | columns-zh-hans/005-taiwan-company-establishment-advanced-2.md | "新台币（新台币, TWD）" | Self-gloss of the currency name. | 新台币（TWD） |
+| 65 | P2 | C | columns-zh-hans/004-taiwan-company-subsidiary-vs-branch.md | "责任比较最后不能只以「子公司安全、分公司危险」一句话结束。" | Fine meaning, but 「」 plus slogan tone; also 曝险 is finance-calque of exposure. | 责任比较不能简单说成“子公司就安全、分公司就危险”。 |
+```
+=== end code=0 2026-09-21 16:20:36 ===

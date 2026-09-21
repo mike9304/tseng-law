@@ -140,8 +140,8 @@ Op werk zonder vergunning kunnen een bestuurlijke boete en een bevel om Taiwan t
 
 ## Verbonden toelichtingen
 
-- [Diensten van investering en vennootschapsoprichting in Taiwan](/ko/services/investment)
-- [Profiel van advocaat Wei Tseng](/ko/lawyers/wei-tseng)
+- [Welke zaken wij behandelen](/nl/services)
+- [Internationaal team van Hovering](/nl/lawyers)
 - [Contact](/nl/contact)
 
 ---

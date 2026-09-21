@@ -17,7 +17,7 @@ Baru-baru ini, ramai orang telah menubuhkan dengan jayanya syarikat (公司) di 
 
 dan soalan yang kerap diajukan pada saat penubuhan dikumpulkan di bawah.
 
-Mereka yang telah membaca [**asas penubuhan syarikat**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) kemudian boleh merujuk juga kepada bahagian mendalam yang lebih terperinci ini.
+Mereka yang telah membaca [**asas penubuhan syarikat**](/ms/columns/taiwan-company-establishment-basics) kemudian boleh merujuk juga kepada bahagian mendalam yang lebih terperinci ini.
 
 Soalan dan jawapan (Q&A) berikut bertujuan membantu orang yang merancang menubuhkan syarikat di Taiwan. 😊
 
@@ -128,6 +128,6 @@ anda patut mengesahkannya terlebih dahulu.
 ---
 
 > Lihat juga:
-> - [Panduan keseluruhan penubuhan syarikat di Taiwan — prosedur, kos dan bentuk undang-undang](/ko/guides/taiwan-company-setup)
-> - [Peguam di Taiwan yang boleh berbahasa Korea](/ko/korean-lawyer-in-taiwan)
-> - [Panduan peguam bagi penubuhan badan undang-undang dan syarikat di Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Hal yang kami kendalikan](/ms/services)
+> - [Pasukan antarabangsa Hovering](/ms/lawyers)
+> - [Bagaimana anda menghubungi firma](/ms/contact)

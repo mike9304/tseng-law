@@ -17,7 +17,7 @@ Recent, multe persoane au înființat cu succes o societate (公司) pe Taiwan �
 
 iar întrebările puse frecvent la momentul înființării sunt adunate mai jos.
 
-Cei care au citit [**fundamentele înființării unei societăți**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) pot apoi să se refere și la această parte aprofundată mai detaliată.
+Cei care au citit [**fundamentele înființării unei societăți**](/ro/columns/taiwan-company-establishment-basics) pot apoi să se refere și la această parte aprofundată mai detaliată.
 
 Întrebările și răspunsurile (Q&A) următoare urmăresc să ajute persoanele care au în vedere să înființeze o societate pe Taiwan. 😊
 
@@ -128,6 +128,6 @@ ar trebui să verificați dinainte.
 ---
 
 > Vezi și:
-> - [Ghid de ansamblu al înființării unei societăți pe Taiwan — proceduri, costuri și forme juridice](/ko/guides/taiwan-company-setup)
-> - [Avocată pe Taiwan care se poate exprima în coreeană](/ko/korean-lawyer-in-taiwan)
-> - [Ghidul avocatei pentru constituirea persoanelor juridice și a societăților pe Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Ce cauze tratăm](/ro/services)
+> - [Echipa internațională Hovering](/ro/lawyers)
+> - [Cum puteți contacta cabinetul](/ro/contact)

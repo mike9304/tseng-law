@@ -184,7 +184,7 @@ Alegerea finală este mai sigură dacă este examinată de specialiști din Taiw
 
 ## Ghiduri conexe
 
-- [Servicii de investiții și de constituire de societăți în Taiwan](/ko/services/investment)
+- [Ce cauze tratăm](/ro/services)
 - [Bazele înființării unei societăți în Taiwan](/ro/columns/taiwan-company-establishment-basics)
 - [Contact](/ro/contact)
 

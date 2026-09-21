@@ -140,8 +140,8 @@ Työhön ilman lupaa voidaan soveltaa hallinnollista sakkoa ja määräystä lä
 
 ## Liittyvät oppaat
 
-- [Palvelut sijoituksesta ja yhtiön perustamisesta Taiwanissa](/ko/services/investment)
-- [Asianajaja Wei Tsengin profiili](/ko/lawyers/wei-tseng)
+- [Mitä asioita käsittelemme](/fi/services)
+- [Hoveringin kansainvälinen tiimi](/fi/lawyers)
 - [Yhteydenotto](/fi/contact)
 
 ---

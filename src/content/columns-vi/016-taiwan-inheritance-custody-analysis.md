@@ -143,8 +143,8 @@ Trên các trang pháp quy chính thức, quý vị hãy xác nhận ngày sửa
 
 ## 11. Hướng dẫn liên quan
 
-- [Dịch vụ tố tụng gia đình tại Đài Loan](/ko/services/family)
-- [Hướng dẫn về luật sư tố tụng tại Đài Loan](/ko/taiwan-litigation-lawyer)
+- [Các lĩnh vực mà văn phòng nhận xử lý](/vi/services)
+- [Cách xác định phạm vi công việc và chi phí](/vi/pricing)
 - [Liên hệ tư vấn](/vi/contact)
 
 ---

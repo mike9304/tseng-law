@@ -58,8 +58,8 @@ A título de complemento, pode consultar-se [a ilustração das regras e do proc
 ---
 
 > Ver também:
-> - [Referências sobre o advogado litigante em Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Advogada de Taiwan que pode exprimir-se em coreano](/ko/korean-lawyer-in-taiwan)
+> - [Como se fixam o âmbito do trabalho e os honorários](/pt/pricing)
+> - [Equipa internacional de Hovering](/pt/lawyers)
 > - [Procedimento de tratamento dos acidentes de viação em Taiwan](/pt/columns/taiwan-traffic-accident-procedure)
 
 O presente texto é uma informação jurídica geral sobre as regras de ultrapassagem e a apreciação da responsabilidade dos acidentes em Taiwan; não constitui um conselho para um assunto concreto nem uma promessa quanto a um resultado determinado. A responsabilidade real pode variar segundo o local do acidente, o movimento dos veículos, a velocidade, os sinais, as provas, a perícia (鑑定) e o direito em vigor; os assuntos concretos devem ser examinados separadamente a partir das peças pertinentes.

@@ -139,7 +139,7 @@ Před uplynutím přerušení činnosti je třeba rozhodnout, zda se činnost ob
 
 ## Související pokyny
 
-1. [Služby investic a založení společnosti na Tchaj-wanu](/ko/services/investment)
+1. [Které věci vedeme](/cs/services)
 2. [Základy založení společnosti na Tchaj-wanu](/cs/columns/taiwan-company-establishment-basics)
 3. [Kontakt](/cs/contact)
 

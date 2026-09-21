@@ -114,6 +114,6 @@ Maaari ding maging pangunahing usapin ang tungkulin sa kaligtasan, ang ugnayang 
 ---
 
 > Iba pang babasahin:
-> - [Gabay sa Abogado para sa Paglilitis sa Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Abogadang Taiwanese na Nakakapagsalita ng Koreano](/ko/korean-lawyer-in-taiwan)
-> - [Gabay sa Paghahanap ng Abogado sa Taiwan](/ko/taiwan-lawyer)
+> - [Paano itinatakda ang saklaw ng trabaho at ang bayarin](/fil/pricing)
+> - [Pandaigdigang koponan ng Hovering](/fil/lawyers)
+> - [Tungkol sa Hovering International Law Firm](/fil/about)

@@ -183,7 +183,7 @@ Nell’ordinare i documenti in ordine temporale, conviene indicare insieme la da
 
 ## 11. Orientamento legato
 
-- [Servizio di diritto del lavoro a Taiwan](/ko/services/labor)
+- [Quali questioni trattiamo](/it/services)
 - [Orientamento sulla dimissione volontaria e le eccezioni di indennità di licenziamento](/it/columns/taiwan-voluntary-resignation-severance)
 - [Contatti](/it/contact)
 

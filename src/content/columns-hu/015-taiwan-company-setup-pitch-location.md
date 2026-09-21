@@ -78,6 +78,6 @@ A közigazgatási szervek szabályai gyakran változhatnak; a jogi személy beje
 ---
 
 > További olvasmány:
-> - [A tajvani társaságalapítás átfogó útmutatója — eljárások, költségek és jogi formák](/ko/guides/taiwan-company-setup)
-> - [Koreaiul beszélő tajvani ügyvéd](/ko/korean-lawyer-in-taiwan)
-> - [Ügyvédi útmutató tajvani jogi személyek és társaságok alapításához](/ko/taiwan-company-setup-lawyer)
+> - [Milyen ügyeket viszünk](/hu/services)
+> - [A Hovering nemzetközi csapata](/hu/lawyers)
+> - [Hogyan érheti el az irodát](/hu/contact)

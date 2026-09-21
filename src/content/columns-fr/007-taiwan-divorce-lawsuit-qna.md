@@ -188,8 +188,8 @@ Les sources primaires (1er niveau) suivantes sont le point de départ pour véri
 
 ## 13. Indications connexes
 
-- [Services de droit de la famille à Taïwan](/ko/services/family)
-- [Guide de l’avocat plaidant à Taïwan](/ko/taiwan-litigation-lawyer)
+- [Affaires que nous traitons](/fr/services)
+- [Comment l’étendue du travail et les honoraires sont fixés](/fr/pricing)
 - [Contact](/fr/contact)
 
 ---

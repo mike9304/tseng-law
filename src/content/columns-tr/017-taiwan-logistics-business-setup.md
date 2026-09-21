@@ -140,8 +140,8 @@ Yabancı hedef şirketin ortağı veya yatırımcısı olsa bile bu olgu tek ba�
 
 ## İlgili rehber
 
-- [Tayvan yatırım ve şirket kuruluşu hizmeti](/ko/services/investment)
-- [Avukat Wei Tseng profili](/ko/lawyers/wei-tseng)
+- [Hangi işleri yürütürüz](/tr/services)
+- [Hovering uluslararası ekibi](/tr/lawyers)
 - [İletişim](/tr/contact)
 
 ---

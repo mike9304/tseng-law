@@ -368,6 +368,6 @@ Demikian dari saya, Wei Tseng (曾雋崴), pengacara Taiwan.
 ---
 
 > Baca juga:
-> - [Panduan Pengacara Litigasi Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Pengacara Taiwan yang Berbahasa Korea](/ko/korean-lawyer-in-taiwan)
-> - [Panduan Pencarian Pengacara Taiwan](/ko/taiwan-lawyer)
+> - [Bagaimana lingkup pekerjaan dan biaya ditetapkan](/id/pricing)
+> - [Tim Internasional Hovering](/id/lawyers)
+> - [Tentang Hovering International Law Firm](/id/about)

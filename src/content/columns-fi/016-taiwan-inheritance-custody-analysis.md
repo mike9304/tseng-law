@@ -143,8 +143,8 @@ Virallisilla säädössivuilla vahvistetaan säädöksen muutospäivä ja voimaa
 
 ## 11. Liittyvät oppaat
 
-- [Palvelu perheoikeudesta Taiwanissa](/ko/services/family)
-- [Opas oikeudenkäyntiasianajajasta Taiwanissa](/ko/taiwan-litigation-lawyer)
+- [Mitä asioita käsittelemme](/fi/services)
+- [Miten työn laajuus ja kulut vahvistetaan](/fi/pricing)
 - [Yhteydenotto](/fi/contact)
 
 ---

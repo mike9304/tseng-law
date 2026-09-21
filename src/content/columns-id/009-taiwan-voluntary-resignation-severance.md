@@ -96,6 +96,6 @@ Dalam sebagian besar kasus, pihak yang telah bersiap lebih dahulu yang haknya te
 ---
 
 > Baca juga:
-> - [Panduan Pengacara Litigasi Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Pengacara Taiwan yang Dapat Berbahasa Korea](/ko/korean-lawyer-in-taiwan)
-> - [Bidang Layanan — Ketenagakerjaan](/ko/services/labor)
+> - [Bagaimana lingkup pekerjaan dan biaya ditetapkan](/id/pricing)
+> - [Tim Internasional Hovering](/id/lawyers)
+> - [Bidang perkara yang kami tangani](/id/services)

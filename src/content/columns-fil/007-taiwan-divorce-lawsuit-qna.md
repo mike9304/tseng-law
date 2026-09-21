@@ -188,8 +188,8 @@ Ang sumusunod na pangunahing sanggunian ay ang panimulang punto sa pagtiyak sa l
 
 ## 13. Kaugnay na Gabay
 
-- [Serbisyo sa paglilitis ng usaping pampamilya sa Taiwan](/ko/services/family)
-- [Gabay sa abogado para sa paglilitis sa Taiwan](/ko/taiwan-litigation-lawyer)
+- [Mga usaping hinahawakan ng tanggapan](/fil/services)
+- [Paano itinatakda ang saklaw ng trabaho at ang bayarin](/fil/pricing)
 - [Pagtatanong para sa konsultasyon](/fil/contact)
 
 ---

@@ -138,7 +138,7 @@ Ograniczona stawka umowy nie stosuje się automatycznie z samego faktu istnienia
 - [Wskazówka Administracji Imigracyjnej Tajwanu (內政部移民署) w sprawie pobytu stałego](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Wskazówka miasta Tajpej w sprawie wstępnego badania miejsca działalności](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-Zakres odnośnej działalności mogą państwo zobaczyć w [Usługi inwestycji i zakładania spółki na Tajwanie](/ko/services/investment), przebieg i języki kompetentnego adwokata w [Profil Adwokat Wei Tseng](/ko/lawyers/wei-tseng). W sprawach dotyczących konkretnej sprawy proszę korzystać z [Kontakt](/pl/contact).
+Zakres odnośnej działalności mogą państwo zobaczyć w [Jakie sprawy prowadzimy](/pl/services), przebieg i języki kompetentnego adwokata w [Międzynarodowy zespół Hovering](/pl/lawyers). W sprawach dotyczących konkretnej sprawy proszę korzystać z [Kontakt](/pl/contact).
 
 Niniejszy artykuł jest dokumentem informacji ogólnej o charakterze edukacyjnym na temat zakładania spółki na Tajwanie i powiązanych reguł; nie stanowi porady prawnej ani podatkowej w konkretnej sprawie i nie obiecuje określonego wyniku. Potrzebne procedury i wyniki mogą się różnić w zależności od struktury inwestycji, branży, obywatelstwa i statusu pobytowego wnioskodawcy oraz najnowszej praktyki organu kompetentnego; przed wykonaniem inwestycji, umowy albo zatrudnienia należy zbadać najnowsze źródła oficjalne oraz okoliczności właściwe sprawie.
 

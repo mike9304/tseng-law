@@ -184,7 +184,7 @@ A végső választás biztonságosabb, ha Tajvanon és a székhely helyén, ugya
 
 ## Kapcsolódó útmutatók
 
-- [Tajvani beruházási és társaságalapítási szolgáltatások](/ko/services/investment)
+- [Milyen ügyeket viszünk](/hu/services)
 - [Társaságalapítás Tajvanon: alapok](/hu/columns/taiwan-company-establishment-basics)
 - [Kapcsolat](/hu/contact)
 

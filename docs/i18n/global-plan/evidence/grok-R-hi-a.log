@@ -1,0 +1,26 @@
+[WO start 2026-09-21 16:08:36]
+Native Hindi review is in `docs/i18n/global-plan/reviews/native/hi-a.md`.
+
+**Scores:** guidance pack **3/5**, columns **2/5**. Disclaimers (no Hindi consult, no interpreter, no reply-time, no free meeting, no result guarantee) stay correctly negative. Wei Tseng is feminine in third-person guidance copy; first-person columns are not.
+
+**Must-fix (P1):** masculine verbs for her (`करता` / `चाहता हूँ` / `बता रहा` in 003, 006, 008); `मध्य राष्ट्र दंड संहिता` for 中華民國; `सुनवाई 2` for second-instance court; Korea treaty sold as a general investor rule; typical 3-month sentences; Hindi pages linking to `/ko/`.
+
+Last 15 lines of the output file:
+
+```
+| 41 | P2 | D | hi-guidance.txt | "TWD 1.57M का निर्णय" | M = million is not an Indian format; body columns use 1,000,000 (Western) not 10,00,000 / लाख. | TWD 15,70,000 (लगभग 15.7 लाख नए ताइवान डॉलर) |
+| 42 | P2 | G | columns-hi/001-taiwan-company-establishment-basics.md | "Taipei नगर संबंधित कंपनी और वाणिज्य पंजीकरणों के लिए" | English Taipei while the rest of the site uses ताइपेई. | ताइपेई नगर संबंधित कंपनी और वाणिज्य पंजीकरणों के लिए |
+| 43 | P2 | G | columns-hi/008-taiwan-labor-severance-law.md | "ताइवान श्रम कानून：क्या ताइवान में विच्छेद भुगतान सचमुच कठिन है??" | CJK fullwidth colon and Korean-blog double ??; URL frontmatter still Hangul (do not change URL). | ताइवान श्रम कानून: क्या ताइवान में विच्छेद वेतन सचमुच कठिन है? |
+| 44 | P2 | D | columns-hi/003-taiwan-traffic-accident-procedure.md | "यदि घायल हों या बचाव चाहिए तो 119 पर कॉल करें, और यदि अपराध या आपात सुरक्षा स्थिति हो तो 110 या 112।" | 112 is India’s emergency number; without “ताइवान में” an India reader will misdial meaning. | ताइवान में: घायल/बचाव के लिए 119, पुलिस के लिए 110 (मोबाइल आपात 112) — ये भारत के नंबर नहीं हैं। |
+| 45 | P2 | D | columns-hi/003-taiwan-traffic-accident-procedure.md | "कोरियाई बोल सकने वाली ताइवान अधिवक्ता" | Hindi CTA still sells a Korean-speaking lawyer; also 005, 008, 009. | ताइवान अधिवक्ता (परामर्श अंग्रेज़ी, चीनी, जापानी, कोरियाई में) |
+| 46 | P2 | C | columns-hi/001-taiwan-company-establishment-basics.md | "प्रवासी चीनी या विदेशी निवेश उद्यम के विदेशी राष्ट्रीयता वाले उत्तरदायी की कार्य अनुमति" | Bare उत्तरदायी as a noun is a 負責人 calque; Indian legal Hindi wants प्रभारी/प्राधिकृत प्रतिनिधि. Also 002, 004, 005. | कंपनी के प्रभारी व्यक्ति (負責人) की कार्य अनुमति |
+| 47 | P2 | C | columns-hi/003-taiwan-traffic-accident-procedure.md | "पहले से जाँच या निर्णय में मामलों में विशेषज्ञ राय न्यायिक प्राधिकरण के आदेश से चलती है" | Broken calque of “if investigation or trial is already pending”. | यदि जाँच या विचारण पहले से चल रहा हो, तो विशेषज्ञ राय न्यायिक प्राधिकरण के आदेश से होती है |
+| 48 | P2 | C | columns-hi/002-withdraw-capital-taiwan-company.md | "गतिविधि स्थगन 1 बार में 1 वर्ष से अधिक नहीं हो सकता" | 1 बार में is Korean/Chinese numeral style; native would say एक बार में. Repeated 1 माह / 15 दिनों stacks. | गतिविधि स्थगन एक बार में एक वर्ष से अधिक नहीं हो सकता |
+| 49 | P2 | C | hi-guidance.txt | "व्यायामशाला में चोट के हर्जाने के दावे" | व्यायामशाला = school gymnasium, not a commercial gym (Fitnessstudio). | जिम में चोट के हर्जाने के दावे |
+| 50 | P2 | C | columns-hi/008-taiwan-labor-severance-law.md | "ताइवान के मध्य क्षेत्र के सर्वोच्च परिणाम वाले विक्रेता थे" | Stock blog hyperbole; “highest-performing” sits badly on a law-firm page even as case colour. | ताइवान के मध्य क्षेत्र में उच्च बिक्री वाले विक्रेता थे |
+| 51 | P2 | B | columns-hi/007-taiwan-divorce-lawsuit-qna.md | "संतान संबंधी बातें आंकता है।" | Missing nukta/candrabindu: आँकता; also आंकने elsewhere in 007. | संतान संबंधी बातें आँकता है। |
+| 52 | P2 | C | columns-hi/005-taiwan-company-establishment-advanced-2.md | "«विदेशी प्रत्यक्ष निवेश घोषणा» जमा करनी होती है" | Guillemets again; plus Korea-only filing named as if the reader must file it. | "विदेशी प्रत्यक्ष निवेश घोषणा" (यह कोरियाई विदेशी-मुद्रा नियम है) जमा करनी होती है |
+| 53 | P2 | C | columns-hi/006-taiwan-massage-history-law.md | "इसी प्रकार कोरिया में, जहाँ अनेक दृष्टिबाधित व्यक्ति मालिश से जीविका चलाते हैं" | Comparison still lectures an India reader about Korea’s massage licence regime with no India hook. | तुलना के लिए: कोरिया में आज भी प्रायः केवल लाइसेंसशुदा दृष्टिबाधित व्यक्ति ही मालिश का पेशा कर सकते हैं। |
+| 54 | P2 | A | columns-hi/003-taiwan-traffic-accident-procedure.md | "नैतिक क्षतिपूर्ति (慰撫金) कैसे आँकी जाती है?" | 慰撫金 is solatium / mental-agony damages; नैतिक क्षति is a French/German “moral damages” calque. | मानसिक पीड़ा / सांत्वना राशि (慰撫金) कैसे आँकी जाती है? |
+```
+=== end code=0 2026-09-21 16:16:28 ===

@@ -140,8 +140,8 @@ Na práci bez povolení se mohou uplatnit správní pokuta a příkaz opustit Tc
 
 ## Související vodítka
 
-- [Služby investic a založení společnosti na Tchaj-wanu](/ko/services/investment)
-- [Profil advokátky Wei Tseng](/ko/lawyers/wei-tseng)
+- [Které věci vedeme](/cs/services)
+- [Mezinárodní tým Hovering](/cs/lawyers)
 - [Kontakt](/cs/contact)
 
 ---

@@ -58,8 +58,8 @@ Som komplettering kan [illustrationen av omkörningsregler och -förfarande](htt
 ---
 
 > Se också:
-> - [Vägledning om processadvokat i Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Taiwanadvokat som kan koreanska](/ko/korean-lawyer-in-taiwan)
+> - [Hur arbetsomfattning och kostnader fastställs](/sv/pricing)
+> - [Hoverings internationella team](/sv/lawyers)
 > - [Förfarande vid trafikolycka i Taiwan](/sv/columns/taiwan-traffic-accident-procedure)
 
 Denna text är allmän juridisk information om omkörningsregler och bedömning av olycksansvar i Taiwan; den utgör inte råd för ett konkret ärende och inte heller ett löfte om ett visst resultat. Det faktiska ansvaret kan variera efter olycksplats, fordonsrörelser, fart, signaler, bevisning, sakkunnigbedömning (鑑定) och gällande rätt; konkreta ärenden måste granskas separat utifrån relevanta handlingar.

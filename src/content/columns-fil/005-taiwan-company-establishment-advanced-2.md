@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Pangunahing larawan](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Ang mga nakabasa na ng [Mga Batayan sa Pagtatatag ng Kompanya sa Taiwan](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) at ng [Pagtatatag ng Kompanya sa Taiwan — Masusing Bahagi 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) ay maaari ring tumingin sa Pagtatatag ng Kompanya sa Taiwan — Masusing Bahagi 2.
+Ang mga nakabasa na ng [Mga Batayan sa Pagtatatag ng Kompanya sa Taiwan](/fil/columns/taiwan-company-establishment-basics) at ng [Pagtatatag ng Kompanya sa Taiwan — Masusing Bahagi 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) ay maaari ring tumingin sa Pagtatatag ng Kompanya sa Taiwan — Masusing Bahagi 2.
 
 ​
 
@@ -82,6 +82,6 @@ Kung mayroon pa kayong karagdagang katanungan, mangyaring magtanong anumang oras
 ---
 
 > Karagdagang babasahin:
-> - [Komprehensibong Gabay sa Pagtatatag ng Kompanya sa Taiwan — Mga Hakbang, Gastos at Anyo ng Legal na Persona](/ko/guides/taiwan-company-setup)
-> - [Abogadang Taiwanese na Marunong ng Wikang Koreano](/ko/korean-lawyer-in-taiwan)
-> - [Gabay sa Abogado para sa Pagtatatag ng Kompanya at Legal na Persona sa Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Mga usaping hinahawakan ng tanggapan](/fil/services)
+> - [Pandaigdigang koponan ng Hovering](/fil/lawyers)
+> - [Paano makipag-ugnayan sa tanggapan](/fil/contact)

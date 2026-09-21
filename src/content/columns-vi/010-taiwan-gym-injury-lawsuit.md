@@ -114,6 +114,6 @@ Việc ngã trên sàn tại địa điểm kinh doanh, thiệt hại về sức
 ---
 
 > Xem thêm:
-> - [Hướng dẫn về luật sư tố tụng tại Đài Loan](/ko/taiwan-litigation-lawyer)
-> - [Luật sư Đài Loan có thể giao tiếp bằng tiếng Hàn](/ko/korean-lawyer-in-taiwan)
-> - [Hướng dẫn tìm luật sư tại Đài Loan](/ko/taiwan-lawyer)
+> - [Cách xác định phạm vi công việc và chi phí](/vi/pricing)
+> - [Đội ngũ quốc tế Hovering](/vi/lawyers)
+> - [Về Hovering International Law Firm](/vi/about)

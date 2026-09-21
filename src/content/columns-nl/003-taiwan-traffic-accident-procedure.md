@@ -368,6 +368,6 @@ Ik was WEI, Taiwanese advocaat (曾雋崴).
 ---
 
 > Zie ook:
-> - [Gids over de procesadvocaat in Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Taiwanese advocaat die Koreaans spreekt](/ko/korean-lawyer-in-taiwan)
-> - [Gids tot het zoeken van een advocaat in Taiwan](/ko/taiwan-lawyer)
+> - [Hoe omvang van het werk en kosten worden vastgesteld](/nl/pricing)
+> - [Internationaal team van Hovering](/nl/lawyers)
+> - [Over Hovering International Law Firm](/nl/about)

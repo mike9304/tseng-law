@@ -1,0 +1,1096 @@
+# fil guidance pack strings (path → text). Generated 2026-09-21
+
+guidanceContent.fil.languageName
+    Filipino
+
+guidanceContent.fil.nav.home
+    Unang pahina
+
+guidanceContent.fil.nav.services
+    Mga serbisyo
+
+guidanceContent.fil.nav.about
+    Tungkol sa tanggapan
+
+guidanceContent.fil.nav.lawyers
+    Mga abogado
+
+guidanceContent.fil.nav.pricing
+    Saklaw at bayarin
+
+guidanceContent.fil.nav.contact
+    Kontak
+
+guidanceContent.fil.nav.faq
+    Madalas itanong
+
+guidanceContent.fil.nav.privacy
+    Patakaran sa pribasiya
+
+guidanceContent.fil.nav.disclaimer
+    Paunawa at limitasyon
+
+guidanceContent.fil.nav.columns
+    Mga artikulo
+
+guidanceContent.fil.contactCta
+    Ipadala ang katanungan
+
+guidanceContent.fil.footerNotice
+    Ang pahinang ito sa Filipino ay pangkalahatang gabay lamang tungkol sa gawain ng tanggapan sa ilalim ng batas ng Taiwan. Hindi ito legal na payo para sa isang tiyak na usapin, at ang pagpapadala ng mensahe sa pahinang ito ay hindi bumubuo ng ugnayan ng abogado at kliyente.
+
+guidanceContent.fil.skipLink
+    Laktawan ang menu, dumiretso sa pangunahing nilalaman
+
+guidanceContent.fil.menuLabel
+    Menu ng mga pahina
+
+guidanceContent.fil.languageLabel
+    Wika ng pahina
+
+guidanceContent.fil.mega.services.description
+    Tinutulungan ng tanggapan ang mga pangunahing uri ng gawain sa ilalim ng batas ng Taiwan.
+
+guidanceContent.fil.mega.services.viewAllLabel
+    Tingnan lahat
+
+guidanceContent.fil.mega.columns.description
+    Mga artikulo na nagpapaliwanag ng madalas na paksa sa batas ng Taiwan.
+
+guidanceContent.fil.mega.columns.viewAllLabel
+    Tingnan lahat
+
+guidanceContent.fil.mega.lawyers.description
+    Pagpapakilala sa mga abogado at sa paraan ng pagkontak sa tanggapan.
+
+guidanceContent.fil.mega.lawyers.viewAllLabel
+    Tingnan lahat
+
+guidanceContent.fil.mega.pricing.description
+    Ipinapaliwanag ng pahinang ito ang saklaw ng gawain at kung paano itanong ang bayarin.
+
+guidanceContent.fil.mega.pricing.viewAllLabel
+    Tingnan lahat
+
+guidanceContent.fil.mega.faq.description
+    Mga madalas itanong tungkol sa gawain ng tanggapan sa Taiwan.
+
+guidanceContent.fil.mega.faq.viewAllLabel
+    Tingnan lahat
+
+guidanceContent.fil.notFoundTitle
+    Hindi natagpuan ang pahina
+
+guidanceContent.fil.notFoundText
+    Wala ang pahinang hinahanap ninyo, o inilipat na ito sa ibang address. Maaari kayong bumalik sa unang pahina sa Filipino upang makita ang mga gabay na nandito.
+
+guidanceContent.fil.backHomeLabel
+    Bumalik sa unang pahina
+
+guidanceContent.fil.readSourceLabel
+    Buksan ang talaan ng mga artikulo sa orihinal na wika
+
+guidanceContent.fil.home.heroScrollLabel
+    Mag-scroll pababa
+
+guidanceContent.fil.home.heroColumnsCtaLabel
+    Tingnan ang mga artikulo
+
+guidanceContent.fil.home.servicesDetailLabel
+    Tingnan ang detalye
+
+guidanceContent.fil.home.servicesAssistanceBefore
+    Kung hindi pa tiyak kung saang grupo nabibilang ang inyong usapin, ipinapaliwanag ng pahinang 
+
+guidanceContent.fil.home.servicesAssistanceLinkLabel
+    Kontak
+
+guidanceContent.fil.home.servicesAssistanceAfter
+     kung paano isulat ang buod na susuriin ng abogado.
+
+guidanceContent.fil.home.columnsViewAllLabel
+    Tingnan ang lahat ng artikulo
+
+guidanceContent.fil.home.columnsReadMoreLabel
+    Basahin pa
+
+guidanceContent.fil.home.columnsReviewLabel
+    Sinuri ni Abogada Wei Tseng
+
+guidanceContent.fil.home.columnsOriginalLanguageBadge
+    Orihinal na wika (original language)
+
+guidanceContent.fil.home.columnsOriginalLanguageNote
+    Wala pang bersyong Filipino ng mga artikulo sa ibaba. Nananatili sa orihinal na wika ang listahan at bubukas ito sa pahina sa wikang iyon; hindi ito awtomatikong isinasalin.
+
+guidanceContent.fil.home.imageBandAlt
+    Tradisyonal na sanheyuan ng Taiwan (三合院) at makabagong pabelyon sa liwanag ng araw
+
+guidanceContent.fil.home.videoPauseLabel
+    I-pause ang video
+
+guidanceContent.fil.home.videoPlayLabel
+    I-play ang video
+
+guidanceContent.fil.home.videoReplayLabel
+    I-play muli ang video
+
+guidanceContent.fil.pages.home.eyebrow
+    GABAY
+
+guidanceContent.fil.pages.home.title
+    Mga serbisyong legal sa Taiwan — gabay sa Filipino
+
+guidanceContent.fil.pages.home.description
+    Pangkalahatang paliwanag sa Filipino tungkol sa saklaw ng gawain ng Hovering International Law Firm sa Taiwan, ang mga wika ng konsultasyon, at kung paano magsimulang makipag-ugnayan.
+
+guidanceContent.fil.pages.home.intro
+    Tumutulong ang Hovering International Law Firm sa mga dayuhang kliyente, kabilang ang mga nasa Taiwan, para sa mga usaping nasa ilalim ng batas ng Taiwan: pamumuhunan at pagtatatag ng kompanya, sibil na alitan, usaping pag-aasawa at pampamilya, paggawa, kriminal, at intelektuwal na ari-arian. Tutulungan kayo ng bahaging Filipino na ito na malaman kung anong gawain ang saklaw namin, ano ang dapat ihanda, at paano makipag-ugnayan. Pangkalahatang impormasyon ito, hindi legal na payo para sa sarili ninyong usapin.
+
+guidanceContent.fil.pages.home.sections[0].heading
+    Ano ang tinutulungan namin
+
+guidanceContent.fil.pages.home.sections[0].paragraphs[0]
+    Ang Hovering International Law Firm ay tanggapan ng mga abogadong nakabase sa Taiwan, gumagawa sa ilalim ng batas ng Taiwan, at may mga tanggapan sa Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), at Pingtung (屏東). Humahawak kami ng gawaing pagpapayo para sa mga kompanya at gayundin ng mga usaping dinadala sa korte, at tumutulong kami sa mga dayuhang kliyente sa mga hakbang na kailangang gawin sa Taiwan.
+
+guidanceContent.fil.pages.home.sections[0].paragraphs[1]
+    Pangkalahatan ang lahat ng nilalaman dito. Ang kalalabasan ng isang usapin ay nakadepende sa mga totoong pangyayari, sa mga tuntuning umiiral, at sa panahong naganap ito. Kaya hindi kayang palitan ng gabay na ito ang tuwirang pag-uusap sa abogado tungkol sa mga dokumento ninyo.
+
+guidanceContent.fil.pages.home.sections[1].heading
+    Magkaibang bagay ang wika ng pahina at ang wika ng konsultasyon
+
+guidanceContent.fil.pages.home.sections[1].paragraphs[0]
+    Nakasulat sa Filipino ang pahinang ito, ngunit ang aktwal na konsultasyon sa abogado ay isinasagawa lamang sa apat na wika: Ingles, Tsino, Hapon, at Koreano. Ang pagkakabasa ninyo ng gabay sa Filipino ay hindi nangangahulugang sa Filipino gagawin ang pag-uusap sa abogado.
+
+guidanceContent.fil.pages.home.sections[1].paragraphs[1]
+    Hindi kami nangangako ng interpreter (tagapagsalin) para sa pag-uusap, hindi kami nangangako ng sagot sa loob ng takdang panahon, at hindi kinukumpirma ang appointment sa pahinang ito. Kung hindi ninyo magagamit ang apat na wikang nabanggit, ipinapaliwanag ng pahinang “Kontak” kung paano namin kinukumpirma ang paraan ng pakikipag-usap.
+
+guidanceContent.fil.pages.home.sections[2].heading
+    Mga uri ng usaping hinahawakan ng tanggapan
+
+guidanceContent.fil.pages.home.sections[2].paragraphs[0]
+    Anim na pangkat ang saklaw ng gawain ng tanggapan. Mas detalyadong ipinapaliwanag ng pahinang “Mga larangan ng serbisyo” ang bawat pangkat at ang mga bagay na hindi ginagarantiya.
+
+guidanceContent.fil.pages.home.sections[2].items[0]
+    Pamumuhunan at pagtatatag ng kompanya sa Taiwan
+
+guidanceContent.fil.pages.home.sections[2].items[1]
+    Sibil na alitan at paghahabol ng danyos
+
+guidanceContent.fil.pages.home.sections[2].items[2]
+    Usaping pag-aasawa, pampamilya, at pagmamana
+
+guidanceContent.fil.pages.home.sections[2].items[3]
+    Alitan sa paggawa at empleo
+
+guidanceContent.fil.pages.home.sections[2].items[4]
+    Usaping kriminal
+
+guidanceContent.fil.pages.home.sections[2].items[5]
+    Intelektuwal na ari-arian: trademark (marka ng kalakal), patent (patente), at copyright (karapatang-sipi)
+
+guidanceContent.fil.pages.home.sections[3].heading
+    Saan kayo dapat magsimula
+
+guidanceContent.fil.pages.home.sections[3].paragraphs[0]
+    Basahin muna ang pahinang “Mga larangan ng serbisyo” upang makita kung kabilang sa saklaw ng gawain ang usapin ninyo, saka ang pahinang “Saklaw at bayarin” at “Kontak” upang malaman kung paano itinatakda ang saklaw at kinukumpirma ang bayarin bago magsimula ang trabaho.
+
+guidanceContent.fil.pages.home.sections[3].paragraphs[1]
+    Kapag nagpadala kayo ng mensahe, maaari ninyong isulat ang buod sa sarili ninyong wika. Iniingatan ang orihinal na teksto gaya ng pagkakasulat ninyo at hindi ito awtomatikong isinasalin. Ang naipadalang mensahe ay isang usaping naghihintay ng pagsusuri: hindi pa ito natapos na konsultasyon, at hindi pa ito kumpirmadong appointment (takdang pagkikita).
+
+guidanceContent.fil.pages.services.eyebrow
+    MGA SERBISYO
+
+guidanceContent.fil.pages.services.title
+    Mga usaping hinahawakan ng tanggapan
+
+guidanceContent.fil.pages.services.description
+    Anim na pangkat ng gawaing saklaw ng serbisyo ng tanggapan sa Taiwan, kasama ang mga limitasyong dapat ninyong malaman nang maaga.
+
+guidanceContent.fil.pages.services.intro
+    Narito ang mga pangkat ng gawaing talagang hinahawakan ng tanggapan, kasama ang mga bagay na madalas itanong sa simula. Tinutulungan kayo ng paglalarawang ito na matantiya kung kabilang dito ang usapin ninyo; pangkalahatang impormasyon ito, hindi legal na pagsusuri sa isang tiyak na dokumento.
+
+guidanceContent.fil.pages.services.sections[0].heading
+    Pamumuhunan at pagtatatag ng kompanya sa Taiwan
+
+guidanceContent.fil.pages.services.sections[0].paragraphs[0]
+    Tumutulong ang tanggapan sa mga dayuhang mamumuhunan at kompanyang nagtatatag o nagpapatakbo ng negosyo sa Taiwan: pagpili ng anyo ng entidad, paghahanda at paghahain ng mga dokumento, pagpapadala ng puhunan, mga hakbang sa bangko, pagsusuri sa lugar ng negosyo, at ang mga kahingiang natatangi sa bawat uri ng industriya. Tumutulong din kami sa mga usaping pang-akawnting at pagbubuwis na nagmumula sa pagtatatag at pagpapatakbo ng kompanya sa Taiwan.
+
+guidanceContent.fil.pages.services.sections[0].paragraphs[1]
+    Nagkakaiba-iba ang pagkakasunod-sunod at haba ng proseso ayon sa napiling anyo ng entidad, sa mamumuhunan, sa uri ng negosyo, sa mga bangkong kasangkot, at sa mga dokumentong nasa kamay. Hindi awtomatikong nagbibigay ng karapatang manirahan (居留) o work permit (permit sa trabaho, 工作許可) ang pagtatatag ng kompanya: magkahiwalay na proseso ang mga ito at sinusuri nang isa-isa.
+
+guidanceContent.fil.pages.services.sections[1].heading
+    Sibil na alitan at paghahabol ng danyos
+
+guidanceContent.fil.pages.services.sections[1].paragraphs[0]
+    Kabilang dito ang mga alitan sa kontrata, paghahabol ng danyos dahil sa tort o pagkakasala sa labas ng kontrata, at mga alitan ng mamimili. Karaniwang nagsisimula ang trabaho sa muling pagsasaayos ng pagkakasunod-sunod ng mga pangyayari at sa pagtingin sa mga dokumento at ebidensiyang nasa kamay, saka lamang pag-uusapan ang paraan ng pagharap dito.
+
+guidanceContent.fil.pages.services.sections[1].paragraphs[1]
+    Malaki ang epekto ng mga takdang panahon, kasama ang panahong itinakda ng batas para maghain ng kaso, at ng kabuuan ng ebidensiya sa isang sibil na usapin, kaya banggitin agad ang mga petsang alam ninyo. Kung nasa inyo pa ang kontrata, ang mga palitan ng mensahe, ang patunay ng bayad, o mga larawan ng pangyayari, sabihin ninyo ito mula sa unang mensahe.
+
+guidanceContent.fil.pages.services.sections[2].heading
+    Usaping pag-aasawa, pampamilya, at pagmamana
+
+guidanceContent.fil.pages.services.sections[2].paragraphs[0]
+    Hinahawakan ng tanggapan ang mga usapin ng diborsiyo sa ilalim ng batas ng Taiwan (離婚), paghahati ng ari-arian, paggamit at pagtupad ng karapatan at tungkulin sa menor de edad na anak (未成年子女權利義務之行使或負擔), pagdalaw sa anak (會面交往), at pagmamana (繼承), pati na kapag nasa magkaibang bansa ang mga panig o ang ari-arian. Ang mga usaping pampamilyang may kaugnayan sa ibang bansa ay karaniwang nangangailangan ng dagdag na pagsusuri sa mga dokumento ng katayuang sibil (戶籍), sa anyo ng mga papeles, at sa paraan ng pagpapatunay ng mga ito sa Taiwan.
+
+guidanceContent.fil.pages.services.sections[2].paragraphs[1]
+    Dahil madalas may takdang panahon ang mga usaping pampamilya at sabay-sabay ang ilang hakbang, mabuting banggitin sa unang buod ang ugnayan ng mga panig, ang kasalukuyang tirahan, at ang mga hakbang na natapos o kasalukuyang isinasagawa.
+
+guidanceContent.fil.pages.services.sections[3].heading
+    Alitan sa paggawa at empleo
+
+guidanceContent.fil.pages.services.sections[3].paragraphs[0]
+    Kabilang dito ang pagtatapos ng empleo, ang separation pay sa ilalim ng batas ng Taiwan (資遣費, na huwag ituring na katumbas ng katulad na sistema sa ibang bansa), sahod, at mga alitang nagmumula sa mga probisyon ng kontrata sa trabaho (勞動契約), para man sa panig ng manggagawa o ng employer. Sa pagsusuri, hiwalay naming tinitingnan ang batayan ng pagtatapos ng empleo at ang mga usapin ng abiso, ng dapat bayaran, at ng takdang panahon.
+
+guidanceContent.fil.pages.services.sections[3].paragraphs[1]
+    Karaniwang ang kontrata sa trabaho, ang patakaran sa trabaho (工作規則), ang talaan ng sahod, at ang mga palitan ng mensahe ng dalawang panig ang nagpapasya sa usapin. Kung nasa inyo pa ang mga ito, banggitin ninyo sa buod upang mas maging tumpak ang paunang pagsusuri.
+
+guidanceContent.fil.pages.services.sections[4].heading
+    Usaping kriminal
+
+guidanceContent.fil.pages.services.sections[4].paragraphs[0]
+    Tumutulong ang tanggapan sa yugto ng imbestigasyon at sa yugto ng paglilitis, para sa panig ng pinararatangan o nasasakdal at para rin sa panig ng biktima, pati sa pagtaya ng panganib na kriminal na maaaring lumitaw sa pagnenegosyo.
+
+guidanceContent.fil.pages.services.sections[4].paragraphs[1]
+    Karaniwang maikli ang mga takdang panahon sa usaping kriminal at nakatakda ang mga yugto nito, kaya kung may natanggap na kayong papeles mula sa awtoridad, banggitin ninyo agad ang petsang nakasulat doon upang masuri ang usapin ayon sa pagkaapurahan nito.
+
+guidanceContent.fil.pages.services.sections[5].heading
+    Intelektuwal na ari-arian
+
+guidanceContent.fil.pages.services.sections[5].paragraphs[0]
+    Tumutulong ang tanggapan sa pagpaparehistro ng trademark (marka ng kalakal, 商標) at patent (patente, 專利), sa mga usapin ng copyright (karapatang-sipi), at sa mga alitang may kaugnayan sa mga karapatang ito sa Taiwan.
+
+guidanceContent.fil.pages.services.sections[5].paragraphs[1]
+    Sa pangkat na ito, mahalaga ang pagkakasunod-sunod ng mga hakbang: ang saklaw ng proteksiyon, ang panahon ng paghahain, at ang aktwal na paggamit ay pawang nakaaapekto sa pipiliing paraan. Ang paghahain ng aplikasyon ay hindi katiyakan na maaaprubahan ito.
+
+guidanceContent.fil.pages.services.sections[6].heading
+    Saklaw at kung paano ito kinukumpirma
+
+guidanceContent.fil.pages.services.sections[6].paragraphs[0]
+    Gumagawa ang tanggapan sa ilalim ng batas ng Taiwan at tumatanggap ng mga usaping kabilang sa mga pangkat sa itaas. Hiwalay na kinukumpirma ang saklaw ng bawat usapin matapos suriin ng abogado ang ipinadala ninyo.
+
+guidanceContent.fil.pages.services.sections[6].paragraphs[1]
+    Ang katayuan sa paninirahan, ang permiso sa trabaho, at ang mga katulad nito ay sinusuri batay sa mga dokumento at pangyayaring natatangi sa bawat tao, hindi hinuhugot sa pagkamamamayan. Kung may bahagi ng usapin ninyo na may kinalaman dito, banggitin ninyo kapag nakipag-ugnayan kayo upang matukoy ng abogado kung saang pangkat ng gawain kabilang ang usapin ninyo; walang ipinapangakong resulta at walang ipinapangakong panahon ng pagsagot ang pahinang ito.
+
+guidanceContent.fil.pages.about.eyebrow
+    TUNGKOL SA TANGGAPAN
+
+guidanceContent.fil.pages.about.title
+    Tungkol sa Hovering International Law Firm
+
+guidanceContent.fil.pages.about.description
+    Batayang impormasyon tungkol sa tanggapan ng mga abogado sa Taiwan, sa mga tanggapan nito, at sa gawaing may kaugnayan sa ibang bansa.
+
+guidanceContent.fil.pages.about.intro
+    Ang Hovering International Law Firm ay tanggapan ng mga abogado sa Taiwan na may mga abogadong gumagawa sa iba-ibang larangan, mula sa pagpapayo sa mga kompanya hanggang sa paglilitis sa korte. Ipinapaliwanag ng bahaging ito kung paano nabuo ang tanggapan, ang mga tanggapan nito, at ang gawaing may kaugnayan sa ibang bansa.
+
+guidanceContent.fil.pages.about.sections[0].heading
+    Pagkakatatag at kaayusan
+
+guidanceContent.fil.pages.about.sections[0].paragraphs[0]
+    Itinatag ang Hovering International Law Firm (昊鼎國際法律事務所) noong 2016 ng mga abogadong nagmula sa National Taiwan University (國立臺灣大學). Pinagsasama ng pangalang Tsino nito ang dalawang karakter na 昊 (“malawak na kalangitan”) at 鼎 (“matatag na pundasyon”), na sumasalamin sa direksiyon ng tanggapan mula sa simula.
+
+guidanceContent.fil.pages.about.sections[0].paragraphs[1]
+    May mga tanggapan ito sa Taipei (臺北), Kaohsiung (高雄), Taichung (臺中), at Pingtung (屏東). Nakatuon ang tanggapan sa Kaohsiung sa corporate governance (pamamahalang pangkorporasyon) at humahawak din ng karaniwang sibil, kriminal, at administratibong alitan; hinahawakan ng tanggapan sa Taichung ang mga usapin ng konstruksiyon, intelektuwal na ari-arian, at gawaing may kaugnayan sa Korea at Japan; binuksan naman noong 2017 ang tanggapan sa Pingtung para sa pangangailangan ng lugar na iyon.
+
+guidanceContent.fil.pages.about.sections[0].paragraphs[2]
+    Bukod sa gawaing legal, itinatag noong 2020 ang Hovering Accounting Office, na nagbibigay ng serbisyong pang-akawnting at pagpaplano sa buwis para sa mga may-ari ng negosyo at sa mga indibidwal na may malaking ari-arian.
+
+guidanceContent.fil.pages.about.sections[1].heading
+    Gawaing may kaugnayan sa ibang bansa
+
+guidanceContent.fil.pages.about.sections[1].paragraphs[0]
+    Kabilang sa gawain naming may kaugnayan sa ibang bansa ang pagtatatag ng kompanya, aplikasyon sa visa, pagpaparehistro ng marka ng kalakal at patente, pagtaya ng panganib na legal, at konsultasyon sa buwis ng kompanya. Natatanging hinahawakan ng tanggapan sa Taichung ang mga usapin ng konstruksiyon, intelektuwal na ari-arian, at ang mga may kaugnayan sa Korea at Japan. Si Abogada Wei Tseng (曾雋崴) naman ang tumutulong sa mga kliyenteng Koreano, Hapon, at sa iba pang internasyonal na kliyente sa mga pangkat ng gawaing nabanggit.
+
+guidanceContent.fil.pages.about.sections[1].paragraphs[1]
+    Nakadepende sa nilalaman ng usapin at sa wikang gagamitin kung matatanggap namin ito. Kung kabilang ang usapin ninyo sa mga pangkat ng gawain sa itaas at maipapaliwanag ito sa isa sa apat na wika ng konsultasyon, maaari ninyong ipadala ang buod nito upang suriin ng abogado.
+
+guidanceContent.fil.pages.about.sections[2].heading
+    Kapag nakipag-ugnayan kayo sa amin
+
+guidanceContent.fil.pages.about.sections[2].paragraphs[0]
+    Matapos matanggap ang buod ninyo, sinusuri ito ng abogado at saka pag-uusapan ang saklaw ng trabahong maaaring gawin, ang mga dokumentong kailangan pa, at ang susunod na hakbang. Sa mga usaping may kaakibat na tanong sa akawnting o buwis, maaaring makipagtulungan ang tanggapan sa bahaging pang-akawnting sa loob ng iisang daloy ng pagtatrabaho.
+
+guidanceContent.fil.pages.about.sections[2].paragraphs[1]
+    Nakadepende sa mga pangyayari at sa mga dokumento ang kalalabasan ng bawat usapin, kaya wala kaming ipinapangakong resulta. Kung kailangan ninyo ng tiyak na sagot para sa sitwasyon ninyo, ang tanging paraan ay ang tuwirang pag-uusap sa abogado batay sa mga dokumentong iyon, sa isa sa apat na wika ng konsultasyon.
+
+guidanceContent.fil.pages.lawyers.eyebrow
+    MGA ABOGADO
+
+guidanceContent.fil.pages.lawyers.title
+    Pandaigdigang koponan ng Hovering
+
+guidanceContent.fil.pages.lawyers.description
+    Mga profile ng mga abogado, tagapamahala ng operasyon, at kasosyong akawntant ng Hovering.
+
+guidanceContent.fil.pages.lawyers.intro
+    
+
+guidanceContent.fil.pages.pricing.eyebrow
+    SAKLAW AT BAYARIN
+
+guidanceContent.fil.pages.pricing.title
+    Paano itinatakda ang saklaw ng trabaho at ang bayarin
+
+guidanceContent.fil.pages.pricing.description
+    Paliwanag sa pagkakasunod-sunod ng pagtatakda ng saklaw, ng pagkumpirma ng bayarin, at ng dahilan kung bakit walang listahan ng presyo ang pahinang ito.
+
+guidanceContent.fil.pages.pricing.intro
+    Ipinapaliwanag ng pahinang ito kung paano itinatakda ang bayarin, hindi kung magkano ito. Nakadepende ang halaga sa saklaw ng trabaho sa bawat usapin, at may kabuluhan lamang ito kapag malinaw na ang saklaw na iyon.
+
+guidanceContent.fil.pages.pricing.sections[0].heading
+    Ang unang hakbang ay ang pagtatakda ng saklaw
+
+guidanceContent.fil.pages.pricing.sections[0].paragraphs[0]
+    Malaki ang maaaring pagkakaiba ng dami ng trabaho sa dalawang usaping magkatulad ang uri, depende sa bilang ng mga panig, sa mga dokumentong nasa kamay, sa mga takdang panahong dapat sundin, at sa nasimulan na o hindi pa ang isang hakbang. Kaya ang unang gawain ay ang paglilinaw kung ano ang kasama at kung ano ang hindi kasama sa trabaho.
+
+guidanceContent.fil.pages.pricing.sections[0].paragraphs[1]
+    Ang buod na ipinadala ninyo sa simula ang batayan ng pagtatakdang ito. Habang mas malinaw ang buod tungkol sa nangyari, sa hinihiling ninyo, at sa mga takdang panahon, mas tumpak ang maitatakdang saklaw.
+
+guidanceContent.fil.pages.pricing.sections[1].heading
+    Kinukumpirma ang bayarin bago magsimula ang trabaho
+
+guidanceContent.fil.pages.pricing.sections[1].paragraphs[0]
+    Kapag malinaw na ang saklaw, ang halaga at ang paraan ng pagkuwenta ng bayarin ay pinag-uusapan at kinukumpirma kasama kayo bago magsimula ang trabaho. Kung magbago ang saklaw habang isinasagawa ito, kailangan ding kumpirmahing muli ang pagbabagong iyon.
+
+guidanceContent.fil.pages.pricing.sections[1].paragraphs[1]
+    Hindi ito panukala ng presyo at wala itong nililikhang obligasyon sa pagbabayad. Wala ring bayad ang pagpapadala ng mensahe sa pahinang ito.
+
+guidanceContent.fil.pages.pricing.sections[2].heading
+    Maaaring bayad ang konsultasyon
+
+guidanceContent.fil.pages.pricing.sections[2].paragraphs[0]
+    Maaaring bayad na serbisyo ang konsultasyon sa abogado. Hindi sinasabi ng pahinang ito na libre ang unang konsultasyon, at walang bahagi rito ang dapat unawain sa ganoong kahulugan.
+
+guidanceContent.fil.pages.pricing.sections[2].paragraphs[1]
+    Kung may bayad ang konsultasyon, ipinaaalam ang halaga at ang paraan ng pagbabayad bago ito maganap.
+
+guidanceContent.fil.pages.pricing.sections[3].heading
+    Bakit walang listahan ng presyo dito
+
+guidanceContent.fil.pages.pricing.sections[3].paragraphs[0]
+    Nakadepende sa mismong usapin ang halaga: kung gaano karaming trabaho ang kailangan, ilan ang mga panig, anong mga dokumento ang nasa kamay, anong mga takdang panahon ang dapat sundin, at nasimulan na ba ang isang hakbang o hindi pa. Hindi masasabi ng isang nakapaskil na halaga kung magkano ang para sa usapin ninyo; kaya sa halip na maglathala ng listahan ng presyo, itinatakda muna namin ang saklaw ng trabaho para sa usapin ninyo at saka ipinaaalam ang katumbas nitong bayarin upang mapag-isipan ninyo bago magsimula ang trabaho.
+
+guidanceContent.fil.pages.pricing.sections[3].paragraphs[1]
+    Bukod sa bayad sa abogado, maaaring may mga singil ang isang usapin na babayaran sa korte, sa ahensiya ng pamahalaan, o sa ibang partido. Hiwalay ang mga ito sa bayad sa abogado at nakadepende sa hakbang na isasagawa.
+
+guidanceContent.fil.pages.contact.eyebrow
+    KONTAK
+
+guidanceContent.fil.pages.contact.title
+    Paano makipag-ugnayan sa tanggapan
+
+guidanceContent.fil.pages.contact.description
+    Ang wika ng pahina, ang mga wika ng konsultasyon, ang gagawin kung hindi ninyo magagamit ang apat na wikang iyon, at ang mga bagay na hindi ginagarantiya.
+
+guidanceContent.fil.pages.contact.intro
+    Bago kayo makipag-ugnayan, pansinin ang tatlong magkahiwalay na bagay sa ibaba. Madalas itong pinaghahalo, gayong magkaiba ang kahulugan ng bawat isa.
+
+guidanceContent.fil.pages.contact.sections[0].heading
+    Tatlong bagay na dapat paghiwalayin
+
+guidanceContent.fil.pages.contact.sections[0].paragraphs[0]
+    Magkahiwalay na bagay ang wika ng pahina, ang wika ng konsultasyon sa abogado, at ang wikang ginagamit ninyo sa pagsulat ng mensahe.
+
+guidanceContent.fil.pages.contact.sections[0].items[0]
+    Wika ng pahina: nakasulat sa Filipino ang gabay na ito.
+
+guidanceContent.fil.pages.contact.sections[0].items[1]
+    Wika ng konsultasyon: isinasagawa ang konsultasyon sa abogado sa Ingles, Tsino, Hapon, at Koreano.
+
+guidanceContent.fil.pages.contact.sections[0].items[2]
+    Wika ng pagsulat ninyo: maaari ninyong isulat ang buod sa sarili ninyong wika, at iniingatan ang orihinal na teksto gaya ng pagkakasulat ninyo.
+
+guidanceContent.fil.pages.contact.sections[1].heading
+    Kung hindi ninyo magagamit ang apat na wika ng konsultasyon
+
+guidanceContent.fil.pages.contact.sections[1].paragraphs[0]
+    Sa form ng kontak, maaari ninyong piliin ang “Kailangang kumpirmahin ang paraan ng pakikipag-ugnayan”. Sasagot kami upang magkasamang kumpirmahin kung paano tayo makakapag-usap kung may posibleng paraan, ngunit hindi garantisado ang serbisyo sa ibang wika at walang pangako sa panahon ng pagsagot.
+
+guidanceContent.fil.pages.contact.sections[1].paragraphs[1]
+    Hakbang lamang ito ng pagkumpirma, hindi pangako. Hindi kami nangangako ng interpreter para sa pasalitang pag-uusap, hindi kami nangangako ng serbisyo sa Filipino o sa alinmang wikang wala sa apat na nabanggit, at hindi kami nangangakong matatanggap ang bawat usapin.
+
+guidanceContent.fil.pages.contact.sections[2].heading
+    Ano ang dapat isulat sa unang mensahe
+
+guidanceContent.fil.pages.contact.sections[2].paragraphs[0]
+    Isulat kung ano ang nangyari, anong tulong ang kailangan ninyo, ano ang kaugnayan ng usapin sa Taiwan, at kung may takdang petsa na alam ninyo. Kung may natanggap na kayong papeles mula sa korte o sa ahensiya ng pamahalaan, banggitin ang petsang nakasulat doon.
+
+guidanceContent.fil.pages.contact.sections[2].paragraphs[1]
+    Sa unang yugto ay hindi pa ninyo kailangang ipadala ang numero ng pasaporte, numero ng ID, detalye ng bank account, talaang medikal, o buong hanay ng ebidensiya. Hintayin ang tagubilin ng abogado, at saka ipadala ang mga sensitibong dokumento sa ligtas na paraan.
+
+guidanceContent.fil.pages.contact.sections[3].heading
+    Ang mga hindi ginagarantiya ng pahinang ito
+
+guidanceContent.fil.pages.contact.sections[3].paragraphs[0]
+    Hindi kami nangangako ng panahon ng pagsagot, hindi namin kinukumpirma ang appointment sa pahinang ito, hindi namin ipinapangako kung sinong abogado ang hahawak ng usapin, at hindi kami nagbibigay ng interpreter (tagapagsalin) para sa pasalitang pag-uusap. Hiwalay dito ang usapin ng nakasulat na salin: hindi awtomatikong isinasalin ang mensaheng ipinadala ninyo.
+
+guidanceContent.fil.pages.contact.sections[3].paragraphs[1]
+    Kapag nagpadala kayo ng mensahe, naitatala ang nilalaman nito at naghihintay ng pagsusuri. Kung lumipas na ang ilang panahon at wala kayong natatanggap na sagot, maaari ninyo itong ipadalang muli sa email address na nasa pahina ng kontak.
+
+guidanceContent.fil.pages.faq.eyebrow
+    MGA MADALAS ITANONG
+
+guidanceContent.fil.pages.faq.title
+    Mga madalas itanong
+
+guidanceContent.fil.pages.faq.description
+    Paliwanag tungkol sa saklaw ng gawain, sa paghahanda, sa wika, sa bayarin, at sa kahulugan ng pagpapadala ng mensahe.
+
+guidanceContent.fil.pages.faq.intro
+    Sinasagot ang mga tanong sa ibaba sa antas ng pangkalahatang impormasyon. Ang sagot para sa sarili ninyong usapin ay maibibigay lamang matapos suriin ng abogado ang mga dokumento at pangyayari.
+
+guidanceContent.fil.pages.faq.sections[0].heading
+    Paano gamitin ang bahaging ito
+
+guidanceContent.fil.pages.faq.sections[0].paragraphs[0]
+    Kung wala kayong makitang sagot para sa sitwasyon ninyo, kadalasan ay tanda iyon na nakadepende ang sagot sa mga natatanging pangyayari. Sa ganoong pagkakataon, isulat ninyo na lamang ang mga pangyayaring iyon sa buod kapag nakipag-ugnayan kayo, sa halip na maghinuha mula sa nilalaman dito.
+
+guidanceContent.fil.pages.faq.faqs[0].question
+    Anong mga usapin ang tinatanggap ng tanggapan?
+
+guidanceContent.fil.pages.faq.faqs[0].answer
+    Tumatanggap ang tanggapan ng anim na pangkat ng usapin: pamumuhunan at pagtatatag ng kompanya sa Taiwan, sibil na alitan at danyos, usaping pag-aasawa, pampamilya, at pagmamana, alitan sa paggawa, usaping kriminal, at intelektuwal na ari-arian. Ang pagtanggap sa isang tiyak na usapin ay napagpapasyahan pagkatapos suriin ang nilalaman nito.
+
+guidanceContent.fil.pages.faq.faqs[1].question
+    Ano ang dapat kong ihanda bago makipag-ugnayan?
+
+guidanceContent.fil.pages.faq.faqs[1].answer
+    Maghanda ng maikling buod tungkol sa pagkakasunod-sunod ng mga pangyayari, sa hinihiling ninyo, sa kaugnayan ng usapin sa Taiwan, at sa takdang panahon kung mayroon. Kung may papeles na kayo mula sa korte o sa ahensiya ng pamahalaan, banggitin ang petsa nito. Sa yugtong ito ay hindi pa ninyo kailangang ipadala ang mga dokumento ng pagkakakilanlan o ang buong ebidensiya.
+
+guidanceContent.fil.pages.faq.faqs[2].question
+    Maaari ba ang konsultasyon sa Filipino?
+
+guidanceContent.fil.pages.faq.faqs[2].answer
+    Hindi. Nakasulat sa Filipino ang gabay na ito, ngunit ang konsultasyon sa abogado ay isinasagawa lamang sa Ingles, Tsino, Hapon, at Koreano. Hindi rin kami nangangako ng interpreter para sa pasalitang pag-uusap. Hiwalay dito ang nakasulat na salin: iniingatan ang orihinal na teksto gaya ng pagkakasulat ninyo, at hindi ito awtomatikong isinasalin.
+
+guidanceContent.fil.pages.faq.faqs[3].question
+    Paano kung hindi ko magamit ang apat na wikang iyon?
+
+guidanceContent.fil.pages.faq.faqs[3].answer
+    Piliin ang “Kailangang kumpirmahin ang paraan ng pakikipag-ugnayan” kapag nagpadala kayo ng mensahe. Sasagot kami upang magkasamang kumpirmahin kung paano tayo maaaring mag-usap. Hakbang ito ng pagkumpirma, hindi pangako na kaya naming maglingkod sa ibang wika.
+
+guidanceContent.fil.pages.faq.faqs[4].question
+    Paano hahawakan ang tekstong Filipino na isinulat ko?
+
+guidanceContent.fil.pages.faq.faqs[4].answer
+    Iniingatan ang orihinal na teksto gaya ng pagkakasulat ninyo at hindi ito awtomatikong isinasalin. Kung kakailanganin, kukumpirmahin naming kasama kayo kung anong wika ang gagamitin sa susunod na palitan.
+
+guidanceContent.fil.pages.faq.faqs[5].question
+    Kapag naipadala ko na ang mensahe, konsultado na ba ako?
+
+guidanceContent.fil.pages.faq.faqs[5].answer
+    Hindi pa. Ang naipadalang mensahe ay usaping naghihintay ng pagsusuri ng abogado. Hindi ito legal na payo, hindi ito kumpirmadong appointment, at ang pagpapadala mismo ay hindi bumubuo ng ugnayan ng abogado at kliyente.
+
+guidanceContent.fil.pages.faq.faqs[6].question
+    Paano kinukuwenta ang bayarin?
+
+guidanceContent.fil.pages.faq.faqs[6].answer
+    Itinatakda muna ang saklaw ng trabaho, saka kinukumpirma kasama kayo ang halaga at ang paraan ng pagkuwenta bago magsimula ang trabaho. Walang halagang nakalathala sa pahinang ito, at hindi rin sinasabi rito na libre ang unang konsultasyon.
+
+guidanceContent.fil.pages.faq.faqs[7].question
+    Paano kung napakadalian ng usapin ko?
+
+guidanceContent.fil.pages.faq.faqs[7].answer
+    Ilagay agad sa simula ng buod ang takdang petsa o ang petsang nakasulat sa opisyal na papeles, upang makita ng abogado ang mga petsang iyon sa pagsusuri. Walang hotline ang pahinang ito at walang garantiya sa panahon ng pagsagot; kung hindi na kayang hintayin ang usapin, mabuting maghanap din kayo ng ibang paraan sa lugar ninyo.
+
+guidanceContent.fil.pages.privacy.eyebrow
+    PRIBASIYA
+
+guidanceContent.fil.pages.privacy.title
+    Impormasyong kinokolekta sa form ng kontak
+
+guidanceContent.fil.pages.privacy.description
+    Ano ang kinokolekta ng form ng kontak sa bahaging Filipino, paano hinahawakan ang orihinal na teksto, at paano kayo makikipag-ugnayan tungkol sa impormasyon ninyo.
+
+guidanceContent.fil.pages.privacy.intro
+    Ang bahaging ito ay tungkol lamang sa form ng kontak sa mga pahina ng gabay na ito. Naglalarawan ito kung paano hinahawakan ang impormasyon, hindi ito teknikal na garantiya.
+
+guidanceContent.fil.pages.privacy.sections[0].heading
+    Ang mga impormasyong kinokolekta
+
+guidanceContent.fil.pages.privacy.sections[0].paragraphs[0]
+    Kapag nagpadala kayo ng mensahe sa form ng bahaging ito, naitatala ang mga sumusunod:
+
+guidanceContent.fil.pages.privacy.sections[0].items[0]
+    Ang pangalang inilagay ninyo
+
+guidanceContent.fil.pages.privacy.sections[0].items[1]
+    Ang email address na pagpapadalhan ng sagot
+
+guidanceContent.fil.pages.privacy.sections[0].items[2]
+    Ang wika ng pahina noong nagpadala kayo
+
+guidanceContent.fil.pages.privacy.sections[0].items[3]
+    Ang wikang ginamit ninyo sa pagsulat
+
+guidanceContent.fil.pages.privacy.sections[0].items[4]
+    Ang wikang nais ninyo para sa konsultasyon
+
+guidanceContent.fil.pages.privacy.sections[0].items[5]
+    Ang orihinal na tekstong isinulat ninyo
+
+guidanceContent.fil.pages.privacy.sections[0].items[6]
+    Ang pagsang-ayon ninyong ipadala ang mensahe
+
+guidanceContent.fil.pages.privacy.sections[0].items[7]
+    Ang numero ng pagtanggap na panghanap sa mensahe ninyo
+
+guidanceContent.fil.pages.privacy.sections[1].heading
+    Iniingatan ang orihinal na teksto
+
+guidanceContent.fil.pages.privacy.sections[1].paragraphs[0]
+    Iniimbak ang isinulat ninyo nang eksakto gaya ng pagkakasulat ninyo, at hindi ito awtomatikong isinasalin. Kung kailangan ng salin upang maasikaso ang usapin, hiwalay itong pag-uusapan kasama kayo.
+
+guidanceContent.fil.pages.privacy.sections[1].paragraphs[1]
+    Dahil iniingatan ang orihinal na teksto, huwag munang isulat ang mga bagay na hindi pa kailangan sa unang yugto, gaya ng numero ng pasaporte, numero ng ID, o detalye ng bank account.
+
+guidanceContent.fil.pages.privacy.sections[2].heading
+    Saan iniimbak at sino ang makakakita
+
+guidanceContent.fil.pages.privacy.sections[2].paragraphs[0]
+    Iniimbak ang ipinadala ninyo sa isang lugar na hindi bukas sa publiko, at ang mga awtorisadong tao lamang sa tanggapan ang maaaring maka-access dito upang asikasuhin ang mensahe.
+
+guidanceContent.fil.pages.privacy.sections[2].paragraphs[1]
+    Hindi nagbibigay ang pahinang ito ng ganap na garantiya sa seguridad. Walang daan ng pagpapadala o paraan ng pag-iimbak na ganap na ligtas, kaya ang mga sensitibong dokumento ay dapat ipadala lamang ayon sa tiyak na tagubilin ng abogado.
+
+guidanceContent.fil.pages.privacy.sections[3].heading
+    Layunin ng paggamit
+
+guidanceContent.fil.pages.privacy.sections[3].paragraphs[0]
+    Ginagamit ang ipinadala ninyo upang suriin ang mensahe, upang makabalik sa inyo, upang kumpirmahin ang paraan ng pag-uusap, at upang asikasuhin ang usapin kung magsisimula ang trabaho.
+
+guidanceContent.fil.pages.privacy.sections[3].paragraphs[1]
+    Hindi ginagamit ang impormasyong ito para sa marketing kung wala kayong hiwalay na pagsang-ayon para sa layuning iyon.
+
+guidanceContent.fil.pages.privacy.sections[4].heading
+    Abiso at numero ng pagtanggap
+
+guidanceContent.fil.pages.privacy.sections[4].paragraphs[0]
+    Kapag matagumpay na naipadala ang mensahe, may abisong ipinapadala sa tanggapan. Kung hindi pa nakukumpirma ang abisong iyon, nananatiling nakatala ang isinulat ninyo at hindi ito nawawala.
+
+guidanceContent.fil.pages.privacy.sections[4].paragraphs[1]
+    Nilikha ang numero ng pagtanggap upang matagpuan ang mensahe ninyo sa aming talaan. Ipinapakita ito matapos maitala ang mensahe, at maaari ninyong banggitin ang numerong ito kapag muli kayong nakipag-ugnayan upang matiyak naming tama ang mensaheng aming hahanapin.
+
+guidanceContent.fil.pages.privacy.sections[5].heading
+    Ang mga karapatan ninyo at ang paraan ng pakikipag-ugnayan
+
+guidanceContent.fil.pages.privacy.sections[5].paragraphs[0]
+    Maaari kayong humiling na makita, maitama, o mabura ang impormasyon ninyo, o bawiin ang pagsang-ayon ninyo, sa pamamagitan ng email address na nasa pahina ng kontak. Kung may tungkuling mag-ingat ng talaan alinsunod sa mga umiiral na tuntunin, o dahil sa isang usaping kasalukuyang isinasagawa, ipapaliwanag namin ang dahilan ng limitasyon.
+
+guidanceContent.fil.pages.privacy.sections[5].paragraphs[1]
+    Hindi nagsasaad ang pahinang ito ng nakatakdang haba ng pag-iingat, dahil nakadepende ang aktwal na haba kung magpapatuloy ba ang usapin at kung anong tungkuling mag-ingat ang kaugnay nito. Kung nais ninyong mabura nang mas maaga ang impormasyon ninyo, banggitin ninyo ang kahilingang iyon kapag nakipag-ugnayan kayo.
+
+guidanceContent.fil.pages.privacy.sections[6].heading
+    Saan nakaimbak ang impormasyon at ang mga tagapaglaan ng serbisyo
+
+guidanceContent.fil.pages.privacy.sections[6].paragraphs[0]
+    Naka-host sa Vercel ang website na ito, at iniimbak ang ipinadala ninyo sa pribadong object storage ng serbisyong iyon — hindi ito bukas sa publiko. Ipinapadala naman ang email sa pamamagitan ng serbisyo ng email na ginagamit ng tanggapan.
+
+guidanceContent.fil.pages.privacy.sections[6].paragraphs[1]
+    Maaaring nasa labas ng Taiwan ang mga server ng ilang tagapaglaan ng serbisyo, kaya maaaring maimbak at maproseso roon ang impormasyon ninyo. Kapag natupad na ang layunin ng pag-iingat, binubura ang impormasyon nang walang pagkaantala; iniingatan naman sa buong takdang panahon ang impormasyong may tungkuling itago alinsunod sa mga umiiral na tuntunin. Tinatanggap sa wei@hoveringlaw.com.tw ang mga kahilingang may kinalaman sa personal na impormasyon.
+
+guidanceContent.fil.pages.disclaimer.eyebrow
+    PAUNAWA
+
+guidanceContent.fil.pages.disclaimer.title
+    Saklaw at limitasyon ng impormasyon sa pahinang ito
+
+guidanceContent.fil.pages.disclaimer.description
+    Ang katangian ng pangkalahatang impormasyon, ang saklaw ng batas na iniiral, at ang kondisyon ng pagbuo ng ugnayan ng abogado at kliyente.
+
+guidanceContent.fil.pages.disclaimer.intro
+    Nililinaw ng bahaging ito kung ano ang kaya at hindi kayang gawin para sa inyo ng mga pahina ng gabay na ito sa Filipino.
+
+guidanceContent.fil.pages.disclaimer.sections[0].heading
+    Pangkalahatang impormasyon lamang
+
+guidanceContent.fil.pages.disclaimer.sections[0].paragraphs[0]
+    Isinulat ang nilalaman ng mga pahinang ito bilang pangkalahatang impormasyon. Hindi ito legal na payo para sa usapin ninyo, at hindi nito kayang palitan ang pagsusuri sa sarili ninyong mga dokumento at pangyayari.
+
+guidanceContent.fil.pages.disclaimer.sections[0].paragraphs[1]
+    Nakadepende ang kalalabasan ng isang usapin sa mga totoong pangyayari, sa mga tuntuning umiiral, at sa panahon, kaya ang dalawang sitwasyong magkamukha ay maaari pa ring magkaiba ng bunga.
+
+guidanceContent.fil.pages.disclaimer.sections[1].heading
+    Saklaw ng batas
+
+guidanceContent.fil.pages.disclaimer.sections[1].paragraphs[0]
+    Nagpapraktis ang tanggapan sa ilalim ng batas ng Taiwan, at tungkol lamang sa gawaing nasa saklaw na iyon ang mga pahinang ito.
+
+guidanceContent.fil.pages.disclaimer.sections[1].paragraphs[1]
+    Hindi payo ang nilalaman ng mga pahinang ito sa ilalim ng batas ng alinmang hurisdiksiyon maliban sa Taiwan, kabilang ang batas ng lugar na tinitirhan ninyo. Kung may bahagi ng usapin ninyo na nasa ilalim ng ibang hurisdiksiyon, kukumpirmahin naming kasama kayo kung anong propesyonal na may tamang kwalipikasyon ang kailangan para roon.
+
+guidanceContent.fil.pages.disclaimer.sections[2].heading
+    Hindi kusang nabubuo ang ugnayan ng abogado at kliyente
+
+guidanceContent.fil.pages.disclaimer.sections[2].paragraphs[0]
+    Ang pagbabasa ng pahinang ito, ang pagpapadala ng form, o ang pagpapadala ng email ay hindi bumubuo ng ugnayan ng abogado at kliyente.
+
+guidanceContent.fil.pages.disclaimer.sections[2].paragraphs[1]
+    Nabubuo lamang ang ugnayang iyon matapos masuri ang usapin at matapos kumpirmahin ng dalawang panig ang pagtanggap sa trabaho.
+
+guidanceContent.fil.pages.disclaimer.sections[3].heading
+    Walang garantiya ng resulta
+
+guidanceContent.fil.pages.disclaimer.sections[3].paragraphs[0]
+    Walang bahagi ng mga pahinang ito ang pangako tungkol sa kalalabasan ng isang usapin, sa pag-apruba ng isang aplikasyon, o sa katayuan sa paninirahan at sa trabaho.
+
+guidanceContent.fil.pages.disclaimer.sections[3].paragraphs[1]
+    Ibinibigay ang mga panlabas na link para sa kaginhawahan ninyo; hindi namin ginagarantiyahan ang katumpakan o pagiging napapanahon ng nilalamang inilathala ng ibang partido.
+
+guidanceContent.fil.pages.columns.eyebrow
+    MGA ARTIKULO
+
+guidanceContent.fil.pages.columns.title
+    Mga artikulo tungkol sa batas ng Taiwan
+
+guidanceContent.fil.pages.columns.description
+    Mga artikulo sa Filipino na nagpapaliwanag ng mga paksa sa batas ng Taiwan na madalas itanong. Pangkalahatang impormasyon ito noong panahong inilathala, hindi legal na payo para sa usapin ninyo.
+
+guidanceContent.fil.pages.columns.intro
+    Naglalathala ang tanggapan ng mga artikulong nagpapaliwanag ng mga paksa sa batas ng Taiwan na madalas itanong. Nakalista sa pahinang ito ang mga artikulong mayroon nang bersyon sa Filipino; bukod doon ay may apat na link, at bubuksan ng bawat isa ang talaan ng mga artikulo para sa isang orihinal na wika.
+
+guidanceContent.fil.pages.columns.sections[0].heading
+    Apat na talaan ayon sa wika
+
+guidanceContent.fil.pages.columns.sections[0].paragraphs[0]
+    Apat na link ang nasa bahaging ito: ang talaan ng mga artikulong Koreano, ang talaang Tsino, ang talaang Ingles, at ang talaang Hapon. Nakasaad sa bawat link ang wika ng talaang iyon, upang alam ninyo na kaagad kung anong wika ang bubuksan ninyo.
+
+guidanceContent.fil.pages.columns.sections[0].paragraphs[1]
+    Talaan ayon sa orihinal na wika ang apat na ito, hindi listahan ng mga salin. Hiwalay na nakalista sa pahinang ito ang mga artikulong mayroon nang bersyon sa Filipino.
+
+guidanceContent.fil.pages.columns.sections[1].heading
+    Saan kayo dadalhin ng link
+
+guidanceContent.fil.pages.columns.sections[1].paragraphs[0]
+    Kapag pumili kayo ng isa sa apat na link, bubuksan nito ang talaan ng mga artikulo para sa wikang iyon. Mula sa talaan, kayo na mismo ang pipili ng artikulong babasahin, at nasa orihinal na wika ng artikulo ang buong nilalaman nito.
+
+guidanceContent.fil.pages.columns.sections[1].paragraphs[1]
+    Hindi binubuod ng pahinang ito ang nilalaman ng mga artikulo, at hindi rin nito ginagarantiyang nasa apat na wika ang isang partikular na paksa. Ang nasa bawat talaan ay ang mga artikulong nalathala sa wikang iyon.
+
+guidanceContent.fil.pages.columns.sections[2].heading
+    Hanggang saan magagamit ang artikulo bilang sanggunian
+
+guidanceContent.fil.pages.columns.sections[2].paragraphs[0]
+    Isinulat ang mga artikulo bilang pangkalahatang impormasyon noong panahong inilathala ang mga ito. Maaaring magbago ang mga tuntunin at ang paraan ng paglalapat ng mga ito, at hindi saklaw ng isang artikulo ang lahat ng pangyayari sa usapin ninyo.
+
+guidanceContent.fil.pages.columns.sections[2].paragraphs[1]
+    Kaya huwag gawing batayan ang isang artikulo sa pagpapasyang kumilos sa totoong usapin. Gamitin ang artikulo upang maunawaan ang pangkalahatang larawan, at pag-usapan nang hiwalay ang sarili ninyong mga dokumento kasama ang abogado; hindi hakbang ng konsultasyon ang pahinang ito.
+
+guidanceTeamCopy.fil.label
+    OUR TEAM
+
+guidanceTeamCopy.fil.title
+    Pandaigdigang koponan ng Hovering
+
+guidanceTeamCopy.fil.description
+    Mga profile ng mga abogado, tagapamahala ng operasyon, at kasosyong akawntant ng Hovering.
+
+guidanceTeamCopy.fil.representativeTitle
+    Namamahalang abogada
+
+guidanceTeamCopy.fil.teamTitle
+    Mga abogado at kawani
+
+guidanceTeamCopy.fil.partnerTitle
+    Kasosyong akawntant
+
+guidanceTeamCopy.fil.introLabel
+    Panimula
+
+guidanceTeamCopy.fil.educationLabel
+    Edukasyon
+
+guidanceTeamCopy.fil.experienceLabel
+    Karanasan
+
+guidanceTeamCopy.fil.photoAltPrefix
+    Larawan
+
+guidanceTeamCopy.fil.workingLanguagesLabel
+    Mga wikang ginagamit sa trabaho
+
+guidanceTeamCopy.fil.fullProfileLabel
+    Buong profile (English)
+
+guidanceTeamCopy.fil.keyFactsHeading
+    Abogadang Wei Tseng — Mahahalagang impormasyon
+
+guidanceTeamCopy.fil.qualificationLabel
+    Kwalipikasyon at tanggapan
+
+guidanceTeamCopy.fil.qualificationSentence
+    Si {name} ay abogadang kwalipikado sa Taiwan at ang namamahalang abogada ng {firm}.
+
+guidanceTeamCopy.fil.practiceLabel
+    Pangunahing larangan
+
+guidanceTeamCopy.fil.consultationLanguagesLabel
+    Wika ng konsultasyon
+
+guidanceTeamCopy.fil.roles.tseng-junwei
+    Namamahalang abogada sa Taiwan (Managing Attorney)
+
+guidanceTeamCopy.fil.roles.chang-rongxuan
+    Abogado sa Taiwan (Taiwan Attorney)
+
+guidanceTeamCopy.fil.roles.chang-fangyu
+    Paralegal
+
+guidanceTeamCopy.fil.roles.son-jungmin
+    Tagapamahala ng operasyong Korea (Korea Operations Manager)
+
+guidanceTeamCopy.fil.roles.huang-shengping
+    Kasosyong akawntant (Partner CPA)
+
+guidanceTeamBios.fil.tseng-junwei.intro[0]
+    Tinatanggap ng tanggapan ang mga usaping pangkorporasyon at pang-indibidwal sa Taiwan, sa Ingles, Hapon, Koreano, at Tsino.
+
+guidanceTeamBios.fil.tseng-junwei.intro[1]
+    Kinatawan nito ang isang mag-aaral mula sa Korea sa usapin ng pinsalang natamo sa gym, na nagbunga ng hatol sa unang hukuman para sa danyos na TWD 1.57M.
+
+guidanceTeamBios.fil.tseng-junwei.education[0]
+    Masterado (M.S.), Institute of Finance, National Taiwan University
+
+guidanceTeamBios.fil.tseng-junwei.education[1]
+    Batsilyer (B.A.) na doble ang medyor sa Batas at Pananalapi, National Chengchi University
+
+guidanceTeamBios.fil.tseng-junwei.education[2]
+    Palitang mag-aaral, Kobe University at Waseda University
+
+guidanceTeamBios.fil.tseng-junwei.experience[0]
+    Trend Law Office
+
+guidanceTeamBios.fil.tseng-junwei.experience[1]
+    Hovering International Law Firm
+
+guidanceTeamBios.fil.tseng-junwei.experience[2]
+    Legal Aid Foundation, Taichung Branch
+
+guidanceTeamBios.fil.chang-rongxuan.intro[0]
+    Dating naglingkod sa Ministry of Education, Legal Affairs Division, nakatuon sa mga hidwaang administratibo at sibil.
+
+guidanceTeamBios.fil.chang-rongxuan.intro[1]
+    May karanasan sa mga usaping may kinalaman sa unibersidad, karapatan ng guro, at reklamong administratibo.
+
+guidanceTeamBios.fil.chang-rongxuan.education[0]
+    Batsilyer sa Batas (LL.B.), National Chung Hsing University
+
+guidanceTeamBios.fil.chang-rongxuan.experience[0]
+    Ministry of Education, Legal Affairs Division
+
+guidanceTeamBios.fil.chang-rongxuan.experience[1]
+    Abogado, Hovering International Law Firm
+
+guidanceTeamBios.fil.chang-fangyu.intro[0]
+    Beteranong paralegal na may maraming taóng karanasan bilang senior na paralegal sa ilang tanggapan ng abogado, sumasaklaw sa suporta sa litigasyon, gawaing legal na pangkorporasyon, at usapin ng dayuhang pamumuhunan.
+
+guidanceTeamBios.fil.chang-fangyu.intro[1]
+    Sumusuporta sa litigasyon, pagtatatag ng kompanya, pag-apruba ng dayuhang pamumuhunan, aplikasyon ng permiso, at komunikasyong Korea-Taiwan.
+
+guidanceTeamBios.fil.chang-fangyu.education[0]
+    Batsilyer sa Batas (LL.B.), Tunghai University
+
+guidanceTeamBios.fil.chang-fangyu.experience[0]
+    Senior na paralegal, Boyin Law Firm
+
+guidanceTeamBios.fil.chang-fangyu.experience[1]
+    Senior na paralegal, Muyang International Law Firm
+
+guidanceTeamBios.fil.son-jungmin.intro[0]
+    Inaayos ang iskedyul ng konsultasyon at ang pakikipag-ugnayan para sa mga kliyenteng Koreano.
+
+guidanceTeamBios.fil.son-jungmin.intro[1]
+    Sinusuportahan ang komunikasyon sa pagitan ng mga koponan sa pamamagitan ng sistema ng dokumento at daloy ng trabaho, batay sa pinag-aralang agham pangkompyuter.
+
+guidanceTeamBios.fil.son-jungmin.education[0]
+    Batsilyer (B.S.) sa Agham Pangkompyuter, National Cheng Kung University
+
+guidanceTeamBios.fil.son-jungmin.experience[0]
+    Koponang Pangnegosyo sa Korea, Hovering International Law Firm
+
+guidanceTeamBios.fil.huang-shengping.intro[0]
+    Natapos ang mga programang batsilyer at masterado sa akawnting sa National Chengchi University, at kasalukuyang namumuno sa isang tanggapan ng akawntant.
+
+guidanceTeamBios.fil.huang-shengping.intro[1]
+    Sumusuporta sa pinagsanib na pagsusuri ng panganib na legal, pambuwis, at pampinansiya para sa mga kliyenteng korporasyon.
+
+guidanceTeamBios.fil.huang-shengping.education[0]
+    Masterado (M.A.) sa Akawnting, National Chengchi University
+
+guidanceTeamBios.fil.huang-shengping.education[1]
+    Batsilyer (B.A.) sa Akawnting, National Chengchi University
+
+guidanceTeamBios.fil.huang-shengping.experience[0]
+    Chinshin CPA Firm
+
+guidanceLanguageNames.fil.Korean
+    Koreano
+
+guidanceLanguageNames.fil.Chinese
+    Tsino
+
+guidanceLanguageNames.fil.Japanese
+    Hapon
+
+guidancePracticeAreaNames.fil.Taiwan company setup
+    Pagtatatag ng kompanya sa Taiwan
+
+guidancePracticeAreaNames.fil.Taiwan investment counsel
+    Payong legal sa pamumuhunan sa Taiwan
+
+guidancePracticeAreaNames.fil.Civil litigation and damages
+    Sibil na paglilitis at danyos
+
+guidancePracticeAreaNames.fil.Trademark and patent filings
+    Paghahain ng trademark at patente
+
+guidancePracticeAreaNames.fil.Visa and residency
+    Visa at paninirahan
+
+guidancePracticeAreaNames.fil.Family and labor disputes
+    Alitan sa pamilya at paggawa
+
+guidanceOfficeCopy.fil.label
+    OFFICES
+
+guidanceOfficeCopy.fil.title
+    Mga tanggapan
+
+guidanceOfficeCopy.fil.description
+    Mga address ng tanggapan ng Hovering International Law Firm sa Taiwan.
+
+guidanceOfficeCopy.fil.officeLabel
+    Tanggapan
+
+guidanceOfficeCopy.fil.mapPreviewLabel
+    Paunang tanaw ng mapa
+
+guidanceOfficeCopy.fil.koreaOfficeTitle
+    Tanggapan sa Korea
+
+guidanceOfficeCopy.fil.koreaAddressCardLabel
+    Address ng tanggapan sa Korea
+
+guidanceOfficeCopy.fil.koreaMapLinkLabel
+    Tingnan sa Naver Map
+
+guidanceOfficeCopy.fil.reviewCountWord
+    pagsusuri
+
+guidanceOfficeCopy.fil.phoneLabel
+    Telepono
+
+guidanceOfficeCopy.fil.faxLabel
+    Fax
+
+guidanceOfficeCopy.fil.mapLinkLabel
+    Tingnan sa mapa
+
+guidanceOfficeCopy.fil.photoAlts[0]
+    Silid-tanggapan ng tanggapan sa Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.fil.photoAlts[1]
+    Silid-trabaho ng abogado sa tanggapan sa Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.fil.photoAlts[2]
+    Silid-pulungan ng tanggapan sa Taipei, Hovering International Law Firm
+
+guidanceOfficeCopy.fil.officeTitles.taipei
+    Taipei
+
+guidanceOfficeCopy.fil.officeTitles.taichung
+    Taichung
+
+guidanceOfficeCopy.fil.officeTitles.kaohsiung
+    Kaohsiung
+
+guidanceOfficeCopy.fil.officeTitles.pingtung
+    Pingtung
+
+guidanceFooterCopy.fil.officeLabel
+    Mga tanggapan
+
+guidanceFooterCopy.fil.officeQuickLinksLabel
+    Mabilisang link sa mga tanggapan
+
+guidanceFooterCopy.fil.followLabel
+    Sundan
+
+guidanceFooterCopy.fil.blogLabel
+    Blog
+
+guidanceFooterCopy.fil.websiteLabel
+    Opisyal na website
+
+guidanceFooterCopy.fil.sitemapLabel
+    Mapa ng site
+
+guidanceFooterCopy.fil.copyEmailLabel
+    Kopyahin ang email address
+
+guidanceFooterCopy.fil.emailCopiedMessage
+    Nakopya ang email address.
+
+guidanceFooterCopy.fil.officialConsultationEmailLabel
+    Opisyal na email para sa konsultasyon
+
+internationalInquiryCopy.fil.guidanceNotice
+    Nakasulat sa Filipino ang pahinang ito bilang pangkalahatang gabay. Hindi ito legal na payo para sa tiyak na usapin ninyo.
+
+internationalInquiryCopy.fil.consultationNotice
+    Ang aktwal na konsultasyon ay isinasagawa sa apat na wika: Ingles, Tsino, Hapon, at Koreano.
+
+internationalInquiryCopy.fil.methodConfirmationNotice
+    Kung wala sa apat na wikang iyon ang kaya ninyong gamitin, piliin ang “Kailangang kumpirmahin ang paraan ng pakikipag-ugnayan”. Sasagot kami upang kumpirmahin kung paano tayo makakapag-usap kung may posibleng paraan, ngunit hindi garantisado ang serbisyo sa ibang wika at walang pangako sa panahon ng pagsagot.
+
+internationalInquiryCopy.fil.preparationNotice
+    Maaari ninyong isulat ang buod ng usapin ninyo sa sarili ninyong wika. Iniingatan ang orihinal ninyong teksto gaya ng pagkakasulat ninyo, at hindi ito awtomatikong isinasalin.
+
+internationalInquiryCopy.fil.heading
+    Ipadala ang inyong katanungan
+
+internationalInquiryCopy.fil.intro
+    Ipaliwanag nang maikli ang usapin ninyo. Sinusuri ito ng abogado bago pag-usapan ang susunod na hakbang.
+
+internationalInquiryCopy.fil.submitLabel
+    Ipadala ang katanungan
+
+internationalInquiryCopy.fil.submittingLabel
+    Ipinapadala…
+
+internationalInquiryCopy.fil.successMessage
+    Natanggap namin ang mensahe ninyo at naghihintay ito ng pagsusuri. Hindi ito nangangahulugang naganap na ang konsultasyon o kumpirmado na ang appointment.
+
+internationalInquiryCopy.fil.savedNotificationPendingMessage
+    Naitala na ang mensahe ninyo, ngunit hindi pa nakukumpirma ang abiso papunta sa opisina. Hindi nawala ang isinulat ninyo. Kung wala kayong matanggap na sagot, maaari rin kayong sumulat sa email address na nasa pahina ng kontak.
+
+internationalInquiryCopy.fil.receiptIdLabel
+    Numero ng pagtanggap (reference number)
+
+internationalInquiryCopy.fil.failureMessage
+    Hindi naipadala ang mensahe ninyo. Pakisubukan muli, o ipadala ito sa email address na nasa pahina ng kontak.
+
+internationalInquiryCopy.fil.originalLanguageLabel
+    Wikang ginagamit ninyo sa pagsulat
+
+internationalInquiryCopy.fil.originalLanguagePlaceholder
+    Halimbawa: Filipino, Vietnamese, Indonesian, Thai, o ibang wika
+
+internationalInquiryCopy.fil.preferredConsultationLanguageLabel
+    Wikang nais ninyo para sa konsultasyon
+
+internationalInquiryCopy.fil.originalTextLabel
+    Buod ng usapin ninyo (sa sarili ninyong wika)
+
+internationalInquiryCopy.fil.originalTextPlaceholder
+    Isulat kung ano ang nangyari, anong tulong ang kailangan ninyo, at kung may takdang petsa. Huwag ilagay ang numero ng pasaporte, numero ng ID, o detalye ng bank account.
+
+internationalInquiryCopy.fil.nameLabel
+    Pangalan
+
+internationalInquiryCopy.fil.emailLabel
+    Email
+
+internationalInquiryCopy.fil.consentLabel
+    Nabasa ko ang patakaran sa pribasiya at pumapayag akong ipadala ang mensaheng ito.
+
+internationalInquiryCopy.fil.privacyLinkLabel
+    Patakaran sa pribasiya
+
+internationalInquiryCopy.fil.requiredMessage
+    Kailangang punan ang bahaging ito.
+
+internationalInquiryCopy.fil.invalidEmailMessage
+    Maglagay ng wastong email address.
+
+internationalInquiryCopy.fil.tooLongMessage
+    Masyadong mahaba ang tekstong ito. Paikliin ninyo ito at ipadala muli.
+
+internationalInquiryCopy.fil.sourceLanguageNotice
+    Ang artikulong ito ay makukuha lamang sa {language}, at bubuksan ng link ang orihinal na pahinang iyon.
+
+internationalInquiryCopy.fil.unavailableTranslationNotice
+    Hindi pa naisasalin ang bahaging ito sa wika ng pahinang ito. May link na malinaw na nagsasaad ng wikang pinagmulan; bubuksan nito ang orihinal na teksto.
+
+internationalInquiryCopy.fil.unavailableLanguageNotice
+    Hindi makukuha ang pahinang ito sa {language}.
+
+internationalInquiryCopy.fil.languageOptions.en
+    Ingles (English)
+
+internationalInquiryCopy.fil.languageOptions.zh-hant
+    Tsino (中文)
+
+internationalInquiryCopy.fil.languageOptions.ja
+    Hapon (日本語)
+
+internationalInquiryCopy.fil.languageOptions.ko
+    Koreano (한국어)
+
+internationalInquiryCopy.fil.languageOptions.needs-method-confirmation
+    Wala sa apat na wika — kailangang kumpirmahin ang paraan ng pakikipag-ugnayan
+
+guidanceAnswers.fil.services.answer
+    Anim na pangkat ng usapin ang hinahawakan ng tanggapan sa ilalim ng batas ng Taiwan: pamumuhunan at pagtatatag ng kompanya sa Taiwan, sibil na hidwaan at danyos, usaping pag-aasawa, pampamilya, at pagmamana, hidwaan sa paggawa, usaping kriminal, at intelektuwal na ari-arian. Hiwalay na kinukumpirma ang saklaw ng bawat usapin matapos suriin ng abogado ang ipinadala ninyo. Isinasagawa ang konsultasyon sa abogado sa Ingles, Tsino, Hapon, at Koreano.
+
+guidanceAnswers.fil.services.sources[0]
+    /fil/faq
+
+guidanceAnswers.fil.services.sources[1]
+    /fil/contact
+
+guidanceAnswers.fil.about.answer
+    Ang Hovering International Law Firm ay tanggapan ng mga abogado sa Taiwan na itinatag noong 2016 ng mga abogadong nagmula sa National Taiwan University (國立臺灣大學), na may mga tanggapan sa Taipei, Kaohsiung, Taichung, at Pingtung. Mula noong 2020 ay may bahagi rin itong pang-akawnting, at hinahawakan ng tanggapan sa Taichung ang gawaing may kaugnayan sa Korea at Japan. Wala kaming ipinapangakong resulta. Isinasagawa ang konsultasyon sa abogado sa Ingles, Tsino, Hapon, at Koreano.
+
+guidanceAnswers.fil.about.sources[0]
+    /fil/lawyers
+
+guidanceAnswers.fil.about.sources[1]
+    /fil/services
+
+guidanceAnswers.fil.lawyers.answer
+    Inilalahad ng pahinang ito ang mga profile ng mga abogado, tagapamahala ng operasyon, at kasosyong akawntant ng Hovering. Si Wei Tseng (曾雋崴) ay abogadang kwalipikadong magpraktis sa Taiwan at ang namamahalang abogada ng tanggapan, na gumagawa para sa mga kliyenteng Koreano, Hapon, at iba pang dayuhang kliyente. Isinasagawa ang konsultasyon sa tanggapan sa apat na wika: Ingles, Tsino, Hapon, at Koreano.
+
+guidanceAnswers.fil.lawyers.sources[0]
+    /fil/about
+
+guidanceAnswers.fil.lawyers.sources[1]
+    /fil/contact
+
+guidanceAnswers.fil.pricing.answer
+    Walang listahan ng presyo sa pahinang ito. Itinatakda muna ang saklaw ng trabaho batay sa buod na ipinadala ninyo, saka kinukumpirma kasama kayo ang halaga at ang paraan ng pagkuwenta bago magsimula ang trabaho. Maaaring bayad na serbisyo ang pagharap sa abogado, at maaari ring may singil na babayaran sa korte o sa ahensiya ng pamahalaan. Isinasagawa ang konsultasyon sa abogado sa Ingles, Tsino, Hapon, at Koreano.
+
+guidanceAnswers.fil.pricing.sources[0]
+    /fil/contact
+
+guidanceAnswers.fil.pricing.sources[1]
+    /fil/faq
+
+guidanceAnswers.fil.contact.answer
+    Ipadala ang buod sa pamamagitan ng form ng kontak: kung ano ang nangyari, anong tulong ang kailangan ninyo, ano ang kaugnayan ng usapin sa Taiwan, at kung may takdang petsa na alam ninyo. Sa unang yugto ay hindi pa ninyo kailangang ipadala ang mga dokumento ng pagkakakilanlan o ang buong ebidensiya. Walang ipinapangakong panahon ng pagsagot at walang kinukumpirmang appointment dito. Isinasagawa ang konsultasyon sa abogado sa Ingles, Tsino, Hapon, at Koreano.
+
+guidanceAnswers.fil.contact.sources[0]
+    /fil/faq
+
+guidanceAnswers.fil.contact.sources[1]
+    /fil/pricing
+
+guidanceAnswers.fil.faq.answer
+    Sinasagot ng bahaging ito ang mga madalas itanong sa antas ng pangkalahatang impormasyon: ang anim na pangkat ng usapin, ang paghahanda bago makipag-ugnayan, ang pagtatakda ng bayarin, at ang kahulugan ng pagpapadala ng mensahe. Ang naipadalang mensahe ay naghihintay pa ng pagsusuri ng abogado; hindi ito legal na payo, hindi ito appointment, at hindi ito bumubuo ng ugnayan ng abogado at kliyente. Isinasagawa ang konsultasyon sa abogado sa Ingles, Tsino, Hapon, at Koreano.
+
+guidanceAnswers.fil.faq.sources[0]
+    /fil/contact
+
+guidanceAnswers.fil.faq.sources[1]
+    /fil/services
+
+GUIDANCE_LLMS_NOTICES.fil.consultationNotice
+    Nakasulat sa Filipino ang gabay na ito, ngunit ang konsultasyon sa abogado ay isinasagawa lamang sa Ingles, Tsino, Hapon, at Koreano.
+
+GUIDANCE_LLMS_NOTICES.fil.discoveryNotice
+    Mapa lamang ng mga pampublikong pahina ang llms.txt na ito; hindi ito nangangako ng ranggo sa paghahanap, pag-endorso, rekomendasyon ng AI, o garantisadong paglabas.
+
+GUIDANCE_LLMS_NOTICES.fil.confidentialNotice
+    Dahil iniingatan ang orihinal na teksto, huwag munang isulat ang mga bagay na hindi pa kailangan sa unang yugto, gaya ng numero ng pasaporte, numero ng ID, o detalye ng bank account.

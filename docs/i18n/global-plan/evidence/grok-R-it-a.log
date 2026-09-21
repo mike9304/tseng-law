@@ -1,0 +1,25 @@
+[WO start 2026-09-21 16:10:54]
+Native review is in `docs/i18n/global-plan/reviews/native/it-a.md` (60 findings: 22 P1, 38 P2).
+
+**Verdict:** guidance pack **3/5**, columns **2/5**. Standard Italian, but the pack is German-calqued and columns 001–004/007 are French-calqued. Wei Tseng is feminine throughout; no F findings.
+
+Last 15 lines of the file:
+
+```
+| 46 | P2 | C | columns-it/003-taiwan-traffic-accident-procedure.md | "un 3 (第三人) esteriore al veicolo" | Digit plus French “extérieur”; see also P1 #7. | "un terzo (第三人) estraneo al veicolo" |
+| 47 | P2 | C | columns-it/003-taiwan-traffic-accident-procedure.md | "non è se non uno strumento di calcolo" | French n’est que / n’est sinon. | "è soltanto uno strumento di calcolo" |
+| 48 | P2 | D | columns-it/005-taiwan-company-establishment-advanced-2.md | "può contattarci in qualsiasi momento" | Reads as always-on availability; no reply-time promise should stay implicit either. | "può scrivere tramite la pagina Contatti; un termine di risposta non è promesso" |
+| 49 | P2 | C | columns-it/006-taiwan-massage-history-law.md | "Non starò rivelando la mia età senza volerlo?" | Unnatural inversion; a native would not write this. | "Sto svelando la mia età senza volerlo?" |
+| 50 | P2 | A | columns-it/006-taiwan-massage-history-law.md | "i Grandi Giudici (大法官) hanno dichiarato incostituzionale" | Calque of Grand Justices; Italian readers need “giudici costituzionali”. | "i giudici costituzionali (大法官) hanno dichiarato incostituzionale" |
+| 51 | P2 | D | columns-it/006-taiwan-massage-history-law.md | "si rechi alla questura con un amico di fiducia" | “Questura” is an Italian State Police HQ, not a Taiwan police station. | "si rechi alla polizia con una persona di fiducia" |
+| 52 | P2 | A | columns-it/007-taiwan-divorce-lawsuit-qna.md | "come diritto dei conflitti, al divorzio" | French droit des conflits; Italian says “diritto internazionale privato”. | "come diritto internazionale privato, al divorzio" |
+| 53 | P2 | G | columns-it/007-taiwan-divorce-lawsuit-qna.md | "Le fonti primarie (1.º livello) seguenti" | Portuguese/Spanish ordinal `1.º`, not Italian `1°`. | "Le fonti primarie (di primo livello) seguenti" |
+| 54 | P2 | C | columns-it/007-taiwan-divorce-lawsuit-qna.md | "introdotti di immediato come azione" | French d’immédiat, repeated in 007/008. | "introdotti subito come azione" |
+| 55 | P2 | C | columns-it/007-taiwan-divorce-lawsuit-qna.md | "tenuti in conto in forma d’insieme" | French dans l’ensemble / de manière d’ensemble. also 001 `in modo d’insieme` | "valutati nel loro insieme" |
+| 56 | P2 | D | columns-it/007-taiwan-divorce-lawsuit-qna.md | "per una famiglia legata, come la Corea e Taiwan, a 2 Stati" | Still framed for Korean–Taiwan families; Italian reader is an afterthought. also 008–009 Korea-vs-Taiwan TFR contrast | "per una famiglia legata a due Stati o territori (per esempio Italia e Taiwan)" |
+| 57 | P2 | C | columns-it/008-taiwan-labor-severance-law.md | "e vegliare a non cadere nell’intenzione della società" | French veiller à; “intenzione della società” is opaque. | "e fare attenzione a non cadere nel disegno della società" |
+| 58 | P2 | C | columns-it/009-taiwan-voluntary-resignation-severance.md | "Come indicato sopra, a Taiwan non è facile" | “Sopra” points at a previous Korean-series post, not this page. | "A Taiwan non è facile, in via generale, ottenere l’indennità di licenziamento." |
+| 59 | P2 | B | columns-it/001-taiwan-company-establishment-basics.md | "si applica a decorrere dal 1 gennaio 2024" | Italian requires the ordinal: 1°. | "si applica a decorrere dal 1° gennaio 2024" |
+| 60 | P2 | B | columns-it/001-taiwan-company-establishment-basics.md | "è del 5 %; la dichiarazione ha luogo abitualmente ogni 2 mesi" | French space before %; Italy writes 5%. also throughout 001, 004 | "è del 5%; la dichiarazione si presenta di regola ogni due mesi" |
+```
+=== end code=0 2026-09-21 16:20:05 ===

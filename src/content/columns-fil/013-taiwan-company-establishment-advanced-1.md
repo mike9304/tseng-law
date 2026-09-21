@@ -17,7 +17,7 @@ Kamakailan, marami ang matagumpay na nakapagtatag ng kompanya sa Taiwan at nakak
 
 kaya tinipon ko rito ang mga tanong na madalas itanong ng marami sa panahon ng pagtatatag ng kompanya.
 
-Para sa mga nakabasa na ng [**Batayang Bahagi ng Pagtatatag ng Kompanya**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8), sundan po ninyo rin ang masusing bahaging ito.
+Para sa mga nakabasa na ng [**Batayang Bahagi ng Pagtatatag ng Kompanya**](/fil/columns/taiwan-company-establishment-basics), sundan po ninyo rin ang masusing bahaging ito.
 
 Sana po ay makatulong ang Q&A sa ibaba sa sinumang nag-iisip magtatag ng kompanya sa Taiwan. 😊
 
@@ -128,6 +128,6 @@ pumirma ng kontrata sa upa, tiyakin po ninyo ito nang maaga.
 ---
 
 > Tingnan din:
-> - [Komprehensibong Gabay sa Pagtatatag ng Kompanya sa Taiwan — Mga Hakbang, Gastos at Anyo ng Korporasyon](/ko/guides/taiwan-company-setup)
-> - [Abogada sa Taiwan na Marunong ng Koreano](/ko/korean-lawyer-in-taiwan)
-> - [Gabay sa Abogado para sa Pagtatatag ng Kompanya at Korporasyon sa Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Mga usaping hinahawakan ng tanggapan](/fil/services)
+> - [Pandaigdigang koponan ng Hovering](/fil/lawyers)
+> - [Paano makipag-ugnayan sa tanggapan](/fil/contact)

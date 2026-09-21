@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Udvalgt billede](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Den, der har læst [Selskabsstiftelse i Taiwan – grundlag](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) og [Selskabsstiftelse i Taiwan – uddybning del 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1), kan ligeledes gøre sig bekendt med Selskabsstiftelse i Taiwan – uddybning del 2 (公司設立).
+Den, der har læst [Selskabsstiftelse i Taiwan – grundlag](/da/columns/taiwan-company-establishment-basics) og [Selskabsstiftelse i Taiwan – uddybning del 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1), kan ligeledes gøre sig bekendt med Selskabsstiftelse i Taiwan – uddybning del 2 (公司設立).
 
 ​
 
@@ -82,6 +82,6 @@ Hvis De har andre spørgsmål, kan De kontakte os.
 ---
 
 > Se også:
-> - [Almen vejledning om selskabsstiftelse i Taiwan — procedurer, omkostninger og selskabsformer](/ko/guides/taiwan-company-setup)
-> - [Taiwansk advokat, der taler koreansk](/ko/korean-lawyer-in-taiwan)
-> - [Anvisninger om advokaten for juridiske personer og selskabsstiftelse i Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Hvilke sager vi behandler](/da/services)
+> - [Hoverings internationale team](/da/lawyers)
+> - [Hvordan De når kontoret](/da/contact)

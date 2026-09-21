@@ -138,7 +138,7 @@ faq:
 - [台湾移民署（内政部移民署）永久居留说明](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [台北市营业场所预先审查说明](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-相关业务范围见[台湾投资与公司设立服务](/ko/services/investment)，负责律师的经历与工作语言见[律师曾雋崴简介](/ko/lawyers/wei-tseng)。如有具体案件问题，请使用[联系我们](/zh-hans/contact)。
+相关业务范围见[我们处理哪些事项](/zh-hans/services)，负责律师的经历与工作语言见[Hovering 国际团队](/zh-hans/lawyers)。如有具体案件问题，请使用[联系我们](/zh-hans/contact)。
 
 本文是关于在台湾设立公司及相关规则的一般性教育说明，并不构成对具体案件的法律或税务意见，也不承诺特定结果。必要程序与结果可能因投资结构、行业、申请人国籍与居留身份以及主管机关最新实务而有不同；在执行投资、契约或雇用前，应检视最新官方来源及案件本身的情形。
 

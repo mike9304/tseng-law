@@ -78,6 +78,6 @@ Madalas magbago ang mga patakaran ng ahensiyang administratibo, kaya mainam na t
 ---
 
 > Iba pang babasahin:
-> - [Komprehensibong Gabay sa Pagtatatag ng Kompanya sa Taiwan — Buod ng mga Hakbang, Gastos at Anyo ng Korporasyon](/ko/guides/taiwan-company-setup)
-> - [Abogadang Taiwanese na Nakakapagsalita ng Koreano](/ko/korean-lawyer-in-taiwan)
-> - [Gabay sa Abogado para sa Pagtatatag at Pagrerehistro ng Kompanya sa Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Mga usaping hinahawakan ng tanggapan](/fil/services)
+> - [Pandaigdigang koponan ng Hovering](/fil/lawyers)
+> - [Paano makipag-ugnayan sa tanggapan](/fil/contact)

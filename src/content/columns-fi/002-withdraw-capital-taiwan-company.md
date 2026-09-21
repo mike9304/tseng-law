@@ -139,7 +139,7 @@ Mitä pidempään toiminnan keskeyttäminen kestää, sitä enemmän myöhempä�
 
 ## Liittyvät oppaat
 
-1. [Palvelut Taiwanin investointeihin ja yhtiön perustamiseen](/ko/services/investment)
+1. [Mitä asioita käsittelemme](/fi/services)
 2. [Yhtiön perustamisen perusteet Taiwanissa](/fi/columns/taiwan-company-establishment-basics)
 3. [Yhteydenotto](/fi/contact)
 

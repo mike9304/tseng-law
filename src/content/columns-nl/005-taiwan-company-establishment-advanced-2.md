@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Uitgelichte afbeelding](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Wie [Vennootschapsoprichting in Taiwan – grondslagen](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) en [Vennootschapsoprichting in Taiwan – verdieping deel 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) heeft gelezen, kan eveneens Vennootschapsoprichting in Taiwan – verdieping deel 2 (公司設立) ter kennis nemen.
+Wie [Vennootschapsoprichting in Taiwan – grondslagen](/nl/columns/taiwan-company-establishment-basics) en [Vennootschapsoprichting in Taiwan – verdieping deel 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) heeft gelezen, kan eveneens Vennootschapsoprichting in Taiwan – verdieping deel 2 (公司設立) ter kennis nemen.
 
 ​
 
@@ -82,6 +82,6 @@ Als u andere vragen hebt, kunt u contact met ons opnemen.
 ---
 
 > Zie ook:
-> - [Algemene gids voor vennootschapsoprichting in Taiwan — procedures, kosten en vennootschapsvormen](/ko/guides/taiwan-company-setup)
-> - [Taiwanese advocaat die Koreaans spreekt](/ko/korean-lawyer-in-taiwan)
-> - [Aanwijzingen over de advocaat voor rechtspersonen en vennootschapsoprichting in Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Welke zaken wij behandelen](/nl/services)
+> - [Internationaal team van Hovering](/nl/lawyers)
+> - [Hoe u het kantoor bereikt](/nl/contact)

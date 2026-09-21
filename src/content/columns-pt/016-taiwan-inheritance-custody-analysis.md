@@ -143,8 +143,8 @@ Nas páginas oficiais de regulamentação, confirma-se a data de reforma e a de 
 
 ## 11. Orientações ligadas
 
-- [Serviço de contencioso familiar em Taiwan](/ko/services/family)
-- [Guia do advogado litigante em Taiwan](/ko/taiwan-litigation-lawyer)
+- [Assuntos que tratamos](/pt/services)
+- [Como se fixam o âmbito do trabalho e os honorários](/pt/pricing)
 - [Contacto](/pt/contact)
 
 ---

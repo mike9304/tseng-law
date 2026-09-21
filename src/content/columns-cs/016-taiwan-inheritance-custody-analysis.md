@@ -143,8 +143,8 @@ Na oficiálních stránkách předpisů ověříte den novely a den nabytí úč
 
 ## 11. Související vodítka
 
-- [Služba rodinných sporů na Tchaj-wanu](/ko/services/family)
-- [Průvodce procesní advokátkou na Tchaj-wanu](/ko/taiwan-litigation-lawyer)
+- [Které věci vedeme](/cs/services)
+- [Jak se stanoví rozsah práce a náklady](/cs/pricing)
 - [Kontakt](/cs/contact)
 
 ---

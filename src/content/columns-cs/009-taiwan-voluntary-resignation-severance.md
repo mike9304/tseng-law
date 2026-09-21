@@ -96,6 +96,6 @@ Ve většině případů ten, kdo se připravil předem, má chráněná práva.
 ---
 
 > Viz také:
-> - [Průvodce procesním advokátem na Tchaj-wanu](/ko/taiwan-litigation-lawyer)
-> - [Advokátka na Tchaj-wanu hovořící korejsky](/ko/korean-lawyer-in-taiwan)
-> - [Oblasti činnosti — práce](/ko/services/labor)
+> - [Jak se stanoví rozsah práce a náklady](/cs/pricing)
+> - [Mezinárodní tým Hovering](/cs/lawyers)
+> - [Které věci vedeme](/cs/services)

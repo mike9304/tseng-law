@@ -184,7 +184,7 @@ Son seçim, Tayvan’da ve ana kuruluşun yerindeki uzmanların aynı olguları 
 
 ## İlgili rehberler
 
-- [Tayvan’da yatırım ve şirket kuruluşu hizmetleri](/ko/services/investment)
+- [Hangi işleri yürütürüz](/tr/services)
 - [Tayvan’da şirket kuruluşunun temelleri](/tr/columns/taiwan-company-establishment-basics)
 - [İletişim](/tr/contact)
 

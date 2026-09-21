@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Öne çıkan görsel](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-[Tayvan’da şirket kuruluşu – temeller](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) ile [Tayvan’da şirket kuruluşu – derinleştirme 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) yazılarını okuyanlar, Tayvan’da şirket kuruluşu – derinleştirme 2 (公司設立) yazısına da bakabilir.
+[Tayvan’da şirket kuruluşu – temeller](/tr/columns/taiwan-company-establishment-basics) ile [Tayvan’da şirket kuruluşu – derinleştirme 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) yazılarını okuyanlar, Tayvan’da şirket kuruluşu – derinleştirme 2 (公司設立) yazısına da bakabilir.
 
 ​
 
@@ -82,6 +82,6 @@ Başka sorularınız varsa bize her zaman yazabilirsiniz.
 ---
 
 > Ayrıca bakınız:
-> - [Tayvan’da şirket kuruluşuna genel rehber — usuller, maliyetler ve hukuk biçimleri](/ko/guides/taiwan-company-setup)
-> - [Korece konuşan Tayvan avukatı](/ko/korean-lawyer-in-taiwan)
-> - [Tayvan’da tüzel kişiler ve şirket kuruluşu avukatına ilişkin açıklamalar](/ko/taiwan-company-setup-lawyer)
+> - [Hangi işleri yürütürüz](/tr/services)
+> - [Hovering uluslararası ekibi](/tr/lawyers)
+> - [Büroya nasıl ulaşırsınız](/tr/contact)

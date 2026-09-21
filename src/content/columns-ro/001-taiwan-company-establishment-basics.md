@@ -138,7 +138,7 @@ Cota limitată a acordului nu se aplică automat numai pentru că există un aco
 - [Indicația Administrației imigrației din Taiwan (內政部移民署) asupra șederii permanente](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Indicația orașului Taipei asupra examinării prealabile a locului de activitate](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-Puteți consulta câmpul de activitate vizat la [Servicii de investiții și de înființare de societăți în Taiwan](/ko/services/investment), parcursul și limbile avocatei competente la [Profilul avocatei Wei Tseng](/ko/lawyers/wei-tseng). Pentru întrebări relative la o cauză concretă, folosiți [Contact](/ro/contact).
+Puteți consulta câmpul de activitate vizat la [Ce cauze tratăm](/ro/services), parcursul și limbile avocatei competente la [Echipa internațională Hovering](/ro/lawyers). Pentru întrebări relative la o cauză concretă, folosiți [Contact](/ro/contact).
 
 Prezentul articol este un document de informare generală în scop educativ asupra înființării de societăți în Taiwan și a regulilor conexe; nu constituie un sfat juridic sau fiscal într-o cauză concretă și nu promite un rezultat determinat. Procedurile necesare și rezultatele pot varia după structura de investiție, sectorul, cetățenia și statutul de ședere al solicitantului, precum și practica cea mai recentă a autorității competente; înainte de a executa o investiție, un contract sau o angajare, convine să se examineze sursele oficiale cele mai recente și împrejurările proprii cauzei.
 

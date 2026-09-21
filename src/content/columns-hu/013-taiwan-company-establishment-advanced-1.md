@@ -17,7 +17,7 @@ Az utóbbi időben sokan sikerrel alapítottak társaságot (公司) Tajvanon, �
 
 és az alapításkor gyakran felmerülő kérdéseket az alábbiakban rendezzük.
 
-Akik elolvasták a [**társaságalapítás alapjait**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8), ezt követően ezt a részletesebb elmélyítő részt is nézzék meg.
+Akik elolvasták a [**társaságalapítás alapjait**](/hu/columns/taiwan-company-establishment-basics), ezt követően ezt a részletesebb elmélyítő részt is nézzék meg.
 
 Az alábbi kérdések és válaszok (Q&A) azoknak kívánnak segíteni, akik tajvani társaságalapítást fontolgatnak. 😊
 
@@ -128,6 +128,6 @@ ezt előzetesen ellenőrizni kell.
 ---
 
 > További olvasmány:
-> - [A tajvani társaságalapítás átfogó útmutatója — eljárások, költségek és jogi formák](/ko/guides/taiwan-company-setup)
-> - [Koreaiul beszélő tajvani ügyvéd](/ko/korean-lawyer-in-taiwan)
-> - [Ügyvédi útmutató tajvani jogi személyek és társaságok alapításához](/ko/taiwan-company-setup-lawyer)
+> - [Milyen ügyeket viszünk](/hu/services)
+> - [A Hovering nemzetközi csapata](/hu/lawyers)
+> - [Hogyan érheti el az irodát](/hu/contact)

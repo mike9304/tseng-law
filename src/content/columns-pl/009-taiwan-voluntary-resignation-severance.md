@@ -96,6 +96,6 @@ W większości przypadków ten, kto przygotował się z wyprzedzeniem, ma chroni
 ---
 
 > Zobacz też:
-> - [Przewodnik po adwokacie procesowym na Tajwanie](/ko/taiwan-litigation-lawyer)
-> - [Adwokat na Tajwanie mówiący po koreańsku](/ko/korean-lawyer-in-taiwan)
-> - [Dziedziny działalności — praca](/ko/services/labor)
+> - [Jak ustala się zakres pracy i koszty](/pl/pricing)
+> - [Międzynarodowy zespół Hovering](/pl/lawyers)
+> - [Jakie sprawy prowadzimy](/pl/services)

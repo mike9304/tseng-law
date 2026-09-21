@@ -183,7 +183,7 @@ Ordonând documentele în ordine temporală, este potrivit să se indice împreu
 
 ## 11. Orientare legată
 
-- [Serviciu de drept al muncii pe Taiwan](/ko/services/labor)
+- [Ce cauze tratăm](/ro/services)
 - [Orientare asupra demisiei voluntare și a excepțiilor de indemnizație de concediere](/ro/columns/taiwan-voluntary-resignation-severance)
 - [Contact](/ro/contact)
 

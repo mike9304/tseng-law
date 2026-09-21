@@ -114,6 +114,6 @@ Uma queda no solo de um estabelecimento, um prejuízo à saúde por alimentos e 
 ---
 
 > Ver também:
-> - [Guia do advogado litigante em Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Advogada de Taiwan que fala coreano](/ko/korean-lawyer-in-taiwan)
-> - [Guia para procurar um advogado em Taiwan](/ko/taiwan-lawyer)
+> - [Como se fixam o âmbito do trabalho e os honorários](/pt/pricing)
+> - [Equipa internacional de Hovering](/pt/lawyers)
+> - [Sobre Hovering International Law Firm](/pt/about)

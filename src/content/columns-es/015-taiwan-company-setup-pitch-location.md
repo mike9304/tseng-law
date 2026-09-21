@@ -78,6 +78,6 @@ Las reglas de las autoridades administrativas pueden cambiar con frecuencia, de 
 ---
 
 > Véase también:
-> - [Guía general de constitución de sociedades en Taiwán — trámites, costes y formas jurídicas](/ko/guides/taiwan-company-setup)
-> - [Abogada en Taiwán que puede atender en coreano](/ko/korean-lawyer-in-taiwan)
-> - [Guía del abogado de constitución de personas jurídicas y sociedades en Taiwán](/ko/taiwan-company-setup-lawyer)
+> - [Asuntos que atendemos](/es/services)
+> - [Equipo internacional de Hovering](/es/lawyers)
+> - [Cómo contactar con el despacho](/es/contact)

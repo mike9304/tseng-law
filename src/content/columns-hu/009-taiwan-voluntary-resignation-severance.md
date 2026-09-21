@@ -96,6 +96,6 @@ A legtöbb esetben annak a jogai védettek, aki előre felkészült.
 ---
 
 > Lásd még:
-> - [Útmutató a tajvani peres ügyvédhez](/ko/taiwan-litigation-lawyer)
-> - [Tajvani ügyvéd, aki koreaiul tud megszólalni](/ko/korean-lawyer-in-taiwan)
-> - [Tevékenységi területek — munka](/ko/services/labor)
+> - [Hogyan rögzítjük a munka terjedelmét és a költségeket](/hu/pricing)
+> - [A Hovering nemzetközi csapata](/hu/lawyers)
+> - [Milyen ügyeket viszünk](/hu/services)

@@ -139,7 +139,7 @@ Quanto più la sospensione di attività dura, più la procedura di cessazione ul
 
 ## Indicazioni connesse
 
-1. [Servizi di investimento e costituzione di società a Taiwan](/ko/services/investment)
+1. [Quali questioni trattiamo](/it/services)
 2. [Fondamenti della costituzione di società a Taiwan](/it/columns/taiwan-company-establishment-basics)
 3. [Contatti](/it/contact)
 

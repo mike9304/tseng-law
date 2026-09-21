@@ -368,6 +368,6 @@ Wei Tseng (曾雋崴), peguam Taiwan.
 ---
 
 > Lihat juga:
-> - [Panduan peguam pliding di Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Peguam Taiwan yang bertutur Korea](/ko/korean-lawyer-in-taiwan)
-> - [Panduan mencari peguam di Taiwan](/ko/taiwan-lawyer)
+> - [Bagaimana skop kerja dan kos ditetapkan](/ms/pricing)
+> - [Pasukan antarabangsa Hovering](/ms/lawyers)
+> - [Tentang Hovering International Law Firm](/ms/about)

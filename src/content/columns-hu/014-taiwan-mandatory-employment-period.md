@@ -183,7 +183,7 @@ Az iratok időrend szerinti rendezésekor együtt kell feltüntetni a szerződé
 
 ## 11. Kapcsolódó útmutató
 
-- [Tajvani munkajogi szolgáltatás](/ko/services/labor)
+- [Milyen ügyeket viszünk](/hu/services)
 - [Útmutató az önkéntes kilépésről és a végkielégítés kivételeiről](/hu/columns/taiwan-voluntary-resignation-severance)
 - [Kapcsolat](/hu/contact)
 

@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Beitragsbild](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Wer [Gesellschaftsgründung in Taiwan – Grundlagen](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) und [Gesellschaftsgründung in Taiwan – Vertiefung Teil 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) gelesen hat, kann auch Gesellschaftsgründung in Taiwan – Vertiefung Teil 2 (公司設立) zur Kenntnis nehmen.
+Wer [Gesellschaftsgründung in Taiwan – Grundlagen](/de/columns/taiwan-company-establishment-basics) und [Gesellschaftsgründung in Taiwan – Vertiefung Teil 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) gelesen hat, kann auch Gesellschaftsgründung in Taiwan – Vertiefung Teil 2 (公司設立) zur Kenntnis nehmen.
 
 ​
 
@@ -82,6 +82,6 @@ Wenn Sie weitere Fragen haben, können Sie uns kontaktieren.
 ---
 
 > Siehe auch:
-> - [Gesamtleitfaden zur Gesellschaftsgründung in Taiwan — Verfahren, Kosten und Gesellschaftsformen](/ko/guides/taiwan-company-setup)
-> - [Taiwanische Anwältin mit Koreanischkenntnissen](/ko/korean-lawyer-in-taiwan)
-> - [Hinweis zur Anwaltschaft für juristische Personen und Gesellschaftsgründung in Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Welche Angelegenheiten wir bearbeiten](/de/services)
+> - [Internationales Team von Hovering](/de/lawyers)
+> - [Wie Sie die Kanzlei erreichen](/de/contact)

@@ -184,7 +184,7 @@ La scelta finale è più sicura se è esaminata da specialisti a Taiwan e nel lu
 
 ## Guide connesse
 
-- [Servizi di investimento e costituzione di società a Taiwan](/ko/services/investment)
+- [Quali questioni trattiamo](/it/services)
 - [Fondamenti della costituzione di società a Taiwan](/it/columns/taiwan-company-establishment-basics)
 - [Contatti](/it/contact)
 

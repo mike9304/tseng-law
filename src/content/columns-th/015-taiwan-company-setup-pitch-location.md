@@ -78,6 +78,6 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 ---
 
 > อ่านเพิ่มเติม:
-> - [คู่มือฉบับสมบูรณ์ว่าด้วยการจัดตั้งบริษัทในไต้หวัน — สรุปขั้นตอน ค่าใช้จ่าย และรูปแบบนิติบุคคล](/ko/guides/taiwan-company-setup)
-> - [ทนายความไต้หวันที่สื่อสารภาษาเกาหลีได้](/ko/korean-lawyer-in-taiwan)
-> - [คู่มือทนายความด้านการจัดตั้งบริษัทและนิติบุคคลในไต้หวัน](/ko/taiwan-company-setup-lawyer)
+> - [ประเภทเรื่องที่สำนักงานรับดำเนินการ](/th/services)
+> - [ทีมงานระหว่างประเทศ Hovering](/th/lawyers)
+> - [วิธีติดต่อสำนักงาน](/th/contact)

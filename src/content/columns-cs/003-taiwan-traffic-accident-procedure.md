@@ -368,6 +368,6 @@ Wei Tseng (曾雋崴), advokátka na Tchaj-wanu.
 ---
 
 > Viz také:
-> - [Průvodce procesního advokáta na Tchaj-wanu](/ko/taiwan-litigation-lawyer)
-> - [Advokátka na Tchaj-wanu hovořící korejsky](/ko/korean-lawyer-in-taiwan)
-> - [Průvodce, jak hledat advokáta na Tchaj-wanu](/ko/taiwan-lawyer)
+> - [Jak se stanoví rozsah práce a náklady](/cs/pricing)
+> - [Mezinárodní tým Hovering](/cs/lawyers)
+> - [O Hovering International Law Firm](/cs/about)

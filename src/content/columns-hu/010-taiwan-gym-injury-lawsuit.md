@@ -114,6 +114,6 @@ Ha edzőtermi sérülést szenvedett, fontos először a szükséges ellátást 
 ---
 
 > További olvasmány:
-> - [Tajvani peres ügyvéd útmutató](/ko/taiwan-litigation-lawyer)
-> - [Koreaiul beszélő tajvani ügyvéd](/ko/korean-lawyer-in-taiwan)
-> - [Tajvani ügyvéd keresési útmutató](/ko/taiwan-lawyer)
+> - [Hogyan rögzítjük a munka terjedelmét és a költségeket](/hu/pricing)
+> - [A Hovering nemzetközi csapata](/hu/lawyers)
+> - [A Hovering International Law Firmről](/hu/about)

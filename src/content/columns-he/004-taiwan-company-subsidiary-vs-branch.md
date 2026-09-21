@@ -184,7 +184,7 @@ faq:
 
 ## הנחיות קשורות
 
-- [שירותי השקעה והקמת חברות בטאיוואן](/ko/services/investment)
+- [באילו עניינים אנו מטפלים](/he/services)
 - [יסודות הקמת חברה בטאיוואן](/he/columns/taiwan-company-establishment-basics)
 - [יצירת קשר](/he/contact)
 

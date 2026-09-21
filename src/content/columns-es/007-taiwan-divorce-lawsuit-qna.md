@@ -188,8 +188,8 @@ Las fuentes primarias siguientes son el punto de partida para confirmar la estru
 
 ## 13. Orientación relacionada
 
-- [Servicio de litigios de familia en Taiwán](/ko/services/family)
-- [Guía del abogado litigante en Taiwán](/ko/taiwan-litigation-lawyer)
+- [Asuntos que atendemos](/es/services)
+- [Cómo se fijan el alcance del trabajo y los honorarios](/es/pricing)
 - [Consulta](/es/contact)
 
 ---

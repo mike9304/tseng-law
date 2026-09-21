@@ -17,7 +17,7 @@ Onlangs hebben talrijke personen met succes een vennootschap (公司) in Taiwan 
 
 en de vragen die bij de oprichting vaak worden gesteld, zijn hieronder verzameld.
 
-Wie [**de grondslagen van de vennootschapsoprichting**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) heeft gelezen, kan vervolgens ook deze uitvoeriger verdieping raadplegen.
+Wie [**de grondslagen van de vennootschapsoprichting**](/nl/columns/taiwan-company-establishment-basics) heeft gelezen, kan vervolgens ook deze uitvoeriger verdieping raadplegen.
 
 De volgende vragen en antwoorden (Q&A) beogen personen te helpen die een vennootschapsoprichting in Taiwan overwegen. 😊
 
@@ -128,6 +128,6 @@ dient u dit vooraf te controleren.
 ---
 
 > Zie ook:
-> - [Overzichtsleidraad voor vennootschapsoprichting in Taiwan — procedures, kosten en vennootschapsvormen](/ko/guides/taiwan-company-setup)
-> - [Taiwanese advocaat die Koreaans spreekt](/ko/korean-lawyer-in-taiwan)
-> - [Leidraad van de advocaat voor rechtspersonen en vennootschapsoprichting in Taiwan](/ko/taiwan-company-setup-lawyer)
+> - [Welke zaken wij behandelen](/nl/services)
+> - [Internationaal team van Hovering](/nl/lawyers)
+> - [Hoe u het kantoor bereikt](/nl/contact)

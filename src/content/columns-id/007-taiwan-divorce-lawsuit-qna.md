@@ -188,8 +188,8 @@ Sumber primer berikut merupakan titik awal untuk memastikan struktur hukum dan p
 
 ## 13. Panduan Terkait
 
-- [Layanan Hukum Keluarga Taiwan](/ko/services/family)
-- [Panduan Pengacara Litigasi Taiwan](/ko/taiwan-litigation-lawyer)
+- [Bidang perkara yang kami tangani](/id/services)
+- [Bagaimana lingkup pekerjaan dan biaya ditetapkan](/id/pricing)
 - [Hubungi Kami](/id/contact)
 
 ---

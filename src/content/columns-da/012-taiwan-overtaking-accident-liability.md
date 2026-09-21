@@ -58,8 +58,8 @@ Som supplement kan De konsultere [billedet af overhalingsreglerne og -proceduren
 ---
 
 > Se også:
-> - [Vejledning om processadvokaten i Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Taiwansk advokat, der taler koreansk](/ko/korean-lawyer-in-taiwan)
+> - [Hvordan arbejdsomfang og omkostninger fastlægges](/da/pricing)
+> - [Hoverings internationale team](/da/lawyers)
 > - [Procedure ved færdselsuheld i Taiwan](/da/columns/taiwan-traffic-accident-procedure)
 
 Dette stykke er almindelig juridisk information om overhalingsordningen og vurderingen af ulykkesansvaret i Taiwan (超車); det er ikke rådgivning om en konkret sag og heller ikke et løfte om et bestemt resultat. Det faktiske ansvar kan afvige efter ulykkessted, køretøjsbevægelse, hastighed, signaler, beviser, sagkyndig undersøgelse (鑑定) og den nyeste ret; konkrete sager skal undersøges særskilt på grundlag af de pågældende dokumenter.

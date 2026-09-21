@@ -184,7 +184,7 @@ Pilihan akhirnya lebih aman ditinjau dalam keadaan para ahli di Taiwan dan di te
 
 ## Panduan Terkait
 
-- [Layanan investasi dan pendirian perusahaan di Taiwan](/ko/services/investment)
+- [Bidang perkara yang kami tangani](/id/services)
 - [Dasar Pendirian Perusahaan di Taiwan](/id/columns/taiwan-company-establishment-basics)
 - [Hubungi kami](/id/contact)
 

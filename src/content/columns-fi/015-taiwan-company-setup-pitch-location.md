@@ -78,6 +78,6 @@ Viranomaisten säännöt voivat usein muuttua; ennen oikeushenkilön rekisteröi
 ---
 
 > Katso myös:
-> - [Yleinen opas yhtiön perustamisesta Taiwanissa — menettelyt, kustannukset ja yhtiömuodot](/ko/guides/taiwan-company-setup)
-> - [Taiwanilainen asianajaja, joka puhuu koreaa](/ko/korean-lawyer-in-taiwan)
-> - [Opas oikeushenkilöiden ja yhtiön perustamisen asianajajasta Taiwanissa](/ko/taiwan-company-setup-lawyer)
+> - [Mitä asioita käsittelemme](/fi/services)
+> - [Hoveringin kansainvälinen tiimi](/fi/lawyers)
+> - [Miten tavoitatte toimiston](/fi/contact)

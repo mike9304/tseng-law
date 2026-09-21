@@ -17,7 +17,7 @@ W ostatnim czasie wiele osób pomyślnie założyło spółkę (公司) na Tajwa
 
 a pytania często zadawane przy zakładaniu zebrano poniżej.
 
-Osoby, które przeczytały [**podstawy zakładania spółki**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8), mogą następnie sięgnąć także do tej bardziej szczegółowej części pogłębionej.
+Osoby, które przeczytały [**podstawy zakładania spółki**](/pl/columns/taiwan-company-establishment-basics), mogą następnie sięgnąć także do tej bardziej szczegółowej części pogłębionej.
 
 Poniższe pytania i odpowiedzi (Q&A) mają pomóc osobom, które rozważają założenie spółki na Tajwanie. 😊
 
@@ -128,6 +128,6 @@ należy to wcześniej sprawdzić.
 ---
 
 > Zobacz także:
-> - [Ogólny przewodnik po zakładaniu spółki na Tajwanie — procedury, koszty i formy prawne](/ko/guides/taiwan-company-setup)
-> - [adwokat na Tajwanie mówiąca po koreańsku](/ko/korean-lawyer-in-taiwan)
-> - [Przewodnik adwokata po zakładaniu osób prawnych i spółek na Tajwanie](/ko/taiwan-company-setup-lawyer)
+> - [Jakie sprawy prowadzimy](/pl/services)
+> - [Międzynarodowy zespół Hovering](/pl/lawyers)
+> - [Jak skontaktować się z kancelarią](/pl/contact)

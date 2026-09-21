@@ -184,7 +184,7 @@ Det endelige valg er sikrere at undersøge, hvis fagfolk i Taiwan og på hoveds�
 
 ## Forbundne vejledninger
 
-- [Tjenester vedrørende investering og selskabsstiftelse i Taiwan](/ko/services/investment)
+- [Hvilke sager vi behandler](/da/services)
 - [Grundlag for selskabsstiftelse i Taiwan](/da/columns/taiwan-company-establishment-basics)
 - [Kontakt](/da/contact)
 

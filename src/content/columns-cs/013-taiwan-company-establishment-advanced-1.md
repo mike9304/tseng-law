@@ -17,7 +17,7 @@ V poslední době mnoho osob úspěšně založilo společnost (公司) na Tchaj
 
 a otázky často kladené při zakládání jsou sebrány níže.
 
-Osoby, které si přečetly [**základy založení společnosti**](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8), mohou následně nahlédnout i do této podrobnější prohloubené části.
+Osoby, které si přečetly [**základy založení společnosti**](/cs/columns/taiwan-company-establishment-basics), mohou následně nahlédnout i do této podrobnější prohloubené části.
 
 Následující otázky a odpovědi (Q&A) mají pomoci osobám, které zvažují založení společnosti na Tchaj-wanu. 😊
 
@@ -128,6 +128,6 @@ to předem ověřte.
 ---
 
 > Další čtení:
-> - [Souhrnný průvodce založením společnosti na Tchaj-wanu — postupy, náklady a právní formy](/ko/guides/taiwan-company-setup)
-> - [Advokátka na Tchaj-wanu hovořící korejsky](/ko/korean-lawyer-in-taiwan)
-> - [Průvodce advokátky k zakládání právnických osob a společností na Tchaj-wanu](/ko/taiwan-company-setup-lawyer)
+> - [Které věci vedeme](/cs/services)
+> - [Mezinárodní tým Hovering](/cs/lawyers)
+> - [Jak kancelář oslovit](/cs/contact)

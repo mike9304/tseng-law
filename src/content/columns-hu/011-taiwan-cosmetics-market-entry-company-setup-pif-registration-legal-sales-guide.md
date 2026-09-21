@@ -111,7 +111,7 @@ A tajvani értékesítés előkészítése, ha a következő sorrendben ellenőr
 5. A címkét, az értékesítési oldalt, a reklámot és az együttműködési közléseket a teljes megjelenítés mércéje szerint átnézik.
 6. Működtetik az eljárást a vizsgálatokra és a javítási felhívásokra, a panaszokra, a biztonsági információkra és a szükséges utóintézkedésre.
 
-A társaság és a fióktelep alapstruktúrája a [társaságalapítás alapjai Tajvanon](/hu/columns/taiwan-company-establishment-basics) alatt, a kapcsolódó támogatás köre a [tajvani beruházási és társaságalapítási szolgáltatások](/ko/services/investment) alatt, az illetékes ügyvéd adatai a [Wei Tseng ügyvéd profilja](/ko/lawyers/wei-tseng) alatt tekinthetők meg.
+A társaság és a fióktelep alapstruktúrája a [társaságalapítás alapjai Tajvanon](/hu/columns/taiwan-company-establishment-basics) alatt, a kapcsolódó támogatás köre a [Milyen ügyeket viszünk](/hu/services) alatt, az illetékes ügyvéd adatai a [A Hovering nemzetközi csapata](/hu/lawyers) alatt tekinthetők meg.
 
 ### Hivatalos források
 

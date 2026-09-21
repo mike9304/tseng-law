@@ -227,6 +227,6 @@ Anda juga mesti melindungi hak anda di Taiwan.
 ---
 
 > Lihat juga:
-> - [Panduan peguam litigasi di Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Peguam di Taiwan yang bertutur Korea](/ko/korean-lawyer-in-taiwan)
-> - [Bidang aktiviti — buruh](/ko/services/labor)
+> - [Bagaimana skop kerja dan kos ditetapkan](/ms/pricing)
+> - [Pasukan antarabangsa Hovering](/ms/lawyers)
+> - [Hal yang kami kendalikan](/ms/services)

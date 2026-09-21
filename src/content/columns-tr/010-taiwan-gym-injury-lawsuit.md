@@ -114,6 +114,6 @@ Spor salonunda yaralandıysanız önce gereken tıbbi bakımı almak, henüz gü
 ---
 
 > Ayrıca bakınız:
-> - [Tayvan dava avukatı rehberi](/ko/taiwan-litigation-lawyer)
-> - [Korece konuşan Tayvan avukatı](/ko/korean-lawyer-in-taiwan)
-> - [Tayvan avukatı arama rehberi](/ko/taiwan-lawyer)
+> - [Çalışma kapsamı ve ücret nasıl belirlenir](/tr/pricing)
+> - [Hovering uluslararası ekibi](/tr/lawyers)
+> - [Hovering International Law Firm hakkında](/tr/about)

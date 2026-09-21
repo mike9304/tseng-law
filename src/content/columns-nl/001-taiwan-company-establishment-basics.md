@@ -138,7 +138,7 @@ Het beperkte verdragstarief geldt niet automatisch alleen omdat een verdrag best
 - [Aanwijzing van de immigratiedienst van Taiwan (內政部移民署) over het permanente verblijf](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Aanwijzing van de stad Taipei over het vooronderzoek van de bedrijfsplaats](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-U kunt het betreffende werkterrein raadplegen onder [Diensten inzake investering en vennootschapsoprichting in Taiwan](/ko/services/investment), parcours en talen van de bevoegde advocaat onder [Profiel van advocaat Wei Tseng](/ko/lawyers/wei-tseng). Voor vragen over een concreet geval gebruikt u [Contact](/nl/contact).
+U kunt het betreffende werkterrein raadplegen onder [Welke zaken wij behandelen](/nl/services), parcours en talen van de bevoegde advocaat onder [Internationaal team van Hovering](/nl/lawyers). Voor vragen over een concreet geval gebruikt u [Contact](/nl/contact).
 
 Dit artikel is algemeen informatiemateriaal voor educatieve doeleinden over de vennootschapsoprichting in Taiwan (公司設立) en de daarmee samenhangende regelingen; het is geen juridisch of fiscaal advies in een concreet geval en belooft geen bepaald resultaat. Nodige procedures en resultaten kunnen verschillen volgens investeringsstructuur, sector, nationaliteit en verblijfsstatus van de aanvrager alsmede de recentste praktijk van de bevoegde autoriteit; vóór het uitvoeren van investering, contract of tewerkstelling moeten de recentste officiële bronnen en de eigen omstandigheden worden onderzocht.
 

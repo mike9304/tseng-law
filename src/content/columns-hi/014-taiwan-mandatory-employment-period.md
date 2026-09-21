@@ -183,7 +183,7 @@ faq:
 
 ## 11. संबंधित मार्गदर्शन
 
-- [ताइवान श्रम कानून सेवा](/ko/services/labor)
+- [हम किन मामलों का कार्य करते हैं](/hi/services)
 - [स्वैच्छिक त्यागपत्र और विच्छेद भुगतान के अपवाद संबंधी मार्गदर्शन](/hi/columns/taiwan-voluntary-resignation-severance)
 - [संपर्क](/hi/contact)
 

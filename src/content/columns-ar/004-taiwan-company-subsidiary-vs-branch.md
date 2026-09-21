@@ -184,7 +184,7 @@ faq:
 
 ## الإرشاد ذو الصلة
 
-- [خدمات الاستثمار وتأسيس الشركات في تايوان](/ko/services/investment)
+- [المجالات التي يقبلها المكتب](/ar/services)
 - [أساسيات تأسيس الشركات في تايوان](/ar/columns/taiwan-company-establishment-basics)
 - [طلب الاستشارة](/ar/contact)
 

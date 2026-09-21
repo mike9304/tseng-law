@@ -140,8 +140,8 @@ Do pracy bez zezwolenia mogą mieć zastosowanie kara administracyjna i nakaz op
 
 ## Wskazówki związane
 
-- [Usługi inwestycji i zakładania spółek na Tajwanie](/ko/services/investment)
-- [Profil Adwokat Wei Tseng](/ko/lawyers/wei-tseng)
+- [Jakie sprawy prowadzimy](/pl/services)
+- [Międzynarodowy zespół Hovering](/pl/lawyers)
 - [Kontakt](/pl/contact)
 
 ---

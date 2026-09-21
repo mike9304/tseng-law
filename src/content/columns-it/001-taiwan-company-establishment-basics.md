@@ -138,7 +138,7 @@ L’aliquota limitata dell’accordo non si applica automaticamente per il solo 
 - [Indicazione dell’Amministrazione dell’immigrazione di Taiwan (內政部移民署) sul soggiorno permanente](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Indicazione della città di Taipei sull’esame preliminare del luogo di attività](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
 
-Si può consultare l’ambito di attività rispettivo in [Servizi di investimento e costituzione di società a Taiwan](/ko/services/investment), il percorso e le lingue dell’avvocata competente in [Profilo dell’avvocata Wei Tseng](/ko/lawyers/wei-tseng). Per le questioni relative a un affare concreto, utilizzi [Contatti](/it/contact).
+Si può consultare l’ambito di attività rispettivo in [Quali questioni trattiamo](/it/services), il percorso e le lingue dell’avvocata competente in [Team internazionale di Hovering](/it/lawyers). Per le questioni relative a un affare concreto, utilizzi [Contatti](/it/contact).
 
 Il presente articolo è un documento di informazione generale a fini educativi sulla costituzione di società a Taiwan e le regole connesse; non costituisce un consiglio giuridico o fiscale in un affare concreto e non promette un risultato determinato. Le procedure necessarie e i risultati possono variare secondo la struttura di investimento, il settore, la nazionalità e lo statuto di soggiorno del richiedente, nonché la prassi più recente dell’autorità competente; prima di eseguire un investimento, un contratto o un impiego, conviene esaminare le fonti ufficiali più recenti e le circostanze proprie dell’affare.
 

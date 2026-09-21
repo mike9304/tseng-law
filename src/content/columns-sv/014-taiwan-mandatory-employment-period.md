@@ -183,7 +183,7 @@ När materialet ordnas i tidsföljd bör avtalets ingångsdatum, utbildningens s
 
 ## 11. Relaterad vägledning
 
-- [Tjänster inom taiwanesisk arbetsrätt](/ko/services/labor)
+- [Vilka ärenden vi behandlar](/sv/services)
 - [Vägledning om frivillig avgång och undantag för avgångsvederlag](/sv/columns/taiwan-voluntary-resignation-severance)
 - [Kontakt](/sv/contact)
 

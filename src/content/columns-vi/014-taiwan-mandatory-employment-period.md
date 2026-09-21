@@ -183,7 +183,7 @@ Khi sắp xếp tài liệu theo trình tự thời gian, nên ghi kèm ngày gi
 
 ## 11. Thông tin liên quan
 
-- [Dịch vụ pháp luật lao động Đài Loan](/ko/services/labor)
+- [Các lĩnh vực mà văn phòng nhận xử lý](/vi/services)
 - [Hướng dẫn về những trường hợp ngoại lệ khi tự xin nghỉ việc và trợ cấp thôi việc (資遣費)](/vi/columns/taiwan-voluntary-resignation-severance)
 - [Liên hệ tư vấn](/vi/contact)
 

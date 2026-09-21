@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![मुख्य छवि](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-जिन लोगों ने [ताइवान में कंपनी स्थापना — मूल बातें](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EA%B8%B0%EC%B4%88%ED%8E%B8) और [ताइवान में कंपनी स्थापना — गहन भाग 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) पढ़ी हैं, वे ताइवान में कंपनी स्थापना — गहन भाग 2 (公司設立) भी देख सकते हैं।
+जिन लोगों ने [ताइवान में कंपनी स्थापना — मूल बातें](/hi/columns/taiwan-company-establishment-basics) और [ताइवान में कंपनी स्थापना — गहन भाग 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1) पढ़ी हैं, वे ताइवान में कंपनी स्थापना — गहन भाग 2 (公司設立) भी देख सकते हैं।
 
 ​
 
@@ -82,6 +82,6 @@ B. दूसरे कर्मचारी से प्रतिबंध ह�
 ---
 
 > यह भी देखें:
-> - [ताइवान में कंपनी स्थापना की सामान्य मार्गदर्शिका — प्रक्रियाएँ, लागत और विधिक रूप](/ko/guides/taiwan-company-setup)
-> - [कोरियाई बोल सकने वाली ताइवान अधिवक्ता](/ko/korean-lawyer-in-taiwan)
-> - [ताइवान में विधिक व्यक्तियों और कंपनी स्थापना के लिए अधिवक्ता संबंधी संकेत](/ko/taiwan-company-setup-lawyer)
+> - [हम किन मामलों का कार्य करते हैं](/hi/services)
+> - [Hovering की अंतरराष्ट्रीय टीम](/hi/lawyers)
+> - [कार्यालय तक कैसे पहुँचें](/hi/contact)

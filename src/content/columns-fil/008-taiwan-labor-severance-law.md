@@ -227,6 +227,6 @@ Kayo rin ay dapat magtanggol sa sarili ninyong karapatan dito sa Taiwan.
 ---
 
 > Iba pang babasahin:
-> - [Gabay sa Abogado para sa Paglilitis sa Taiwan](/ko/taiwan-litigation-lawyer)
-> - [Abogadang Taiwanese na Nakakapagsalita ng Koreano](/ko/korean-lawyer-in-taiwan)
-> - [Larangan ng Serbisyo — Paggawa](/ko/services/labor)
+> - [Paano itinatakda ang saklaw ng trabaho at ang bayarin](/fil/pricing)
+> - [Pandaigdigang koponan ng Hovering](/fil/lawyers)
+> - [Mga usaping hinahawakan ng tanggapan](/fil/services)

@@ -78,6 +78,6 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 ---
 
 > اقرأ أيضًا:
-> - [دليل شامل لتأسيس الشركات في تايوان — الإجراءات والتكاليف وأشكال الكيان](/ko/guides/taiwan-company-setup)
-> - [محامٍ تايواني يمكنه الاستشارة بالكورية](/ko/korean-lawyer-in-taiwan)
-> - [إرشاد محامي تأسيس الكيانات والشركات في تايوان](/ko/taiwan-company-setup-lawyer)
+> - [المجالات التي يقبلها المكتب](/ar/services)
+> - [فريق Hovering الدولي](/ar/lawyers)
+> - [كيفية التواصل مع المكتب](/ar/contact)

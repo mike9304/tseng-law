@@ -132,7 +132,7 @@ const CLIENT_COUNTRY_TERMS: Record<GuidanceLocale, Record<string, string[]>> = {
   lv: { Korea: ['Korej'], Japan: ['Japān'] },
   et: { Korea: ['Korea'], Japan: ['Jaapan'] },
   ca: { Korea: ['Corea'], Japan: ['Japó'] },
-  is: { Korea: ['Koreje'], Japan: ['Japonska'] }, // SCAFFOLD(cs)
+  is: { Korea: ['Kóreu'], Japan: ['Japan'] },
 };
 
 /** The attorney's Chinese name; how the same sentence is found in both modules. */

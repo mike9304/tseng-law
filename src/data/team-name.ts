@@ -68,5 +68,5 @@ export const TEAM_NAME_BY_LOCALE: Record<PublicLocale8, string> = {
   lv: 'Hovering Taivānas–Korejas komanda',
   et: 'Hoveringi Taiwani–Korea meeskond',
   ca: 'Hovering International Team',
-  is: 'Tchajwansko-korejský tým Hovering', // SCAFFOLD(cs)
+  is: 'Hovering International Team',
 };

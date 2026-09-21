@@ -655,12 +655,12 @@ export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion
     europe: 'Europa',
     americas: 'Amèrica',
   },
-  is: { // SCAFFOLD(cs)
-    global: 'Celosvětově',
-    'asia-pacific': 'Asie a Tichomoří',
-    'middle-east': 'Blízký východ',
-    europe: 'Evropa',
-    americas: 'Amerika',
+  is: {
+    global: 'Alþjóðlegt',
+    'asia-pacific': 'Asía og Kyrrahaf',
+    'middle-east': 'Miðausturlönd',
+    europe: 'Evrópa',
+    americas: 'Ameríka',
   },
 };
 
@@ -957,11 +957,11 @@ export const LANGUAGE_PICKER_COPY: Record<
     close: 'Tancar',
     current: 'Idioma actual',
   },
-  is: { // SCAFFOLD(cs)
-    open: 'Zvolte region a jazyk',
-    title: 'Zvolte svůj region a jazyk',
-    close: 'Zavřít',
-    current: 'Současný jazyk',
+  is: {
+    open: 'Velja svæði og tungumál',
+    title: 'Veldu svæði og tungumál',
+    close: 'Loka',
+    current: 'Núverandi tungumál',
   },
 };
 

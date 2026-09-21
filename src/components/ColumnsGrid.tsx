@@ -158,7 +158,7 @@ const GUIDANCE_FILTER_ALL_LABEL: Record<GuidanceLocale4, string> = {
   lv: 'Visus',
   et: 'Kõik',
   ca: 'Tot',
-  is: 'Vše', // SCAFFOLD(cs)
+  is: 'Allt',
 };
 
 /** Same strings `guidanceColumnCategoryLabel` returns in `src/lib/columns.ts`. */
@@ -383,10 +383,10 @@ const GUIDANCE_FILTER_CATEGORY_LABEL: Record<GuidanceLocale4, Record<ColumnCateg
     legal: 'Informació jurídica de Taiwan',
     case: 'Anàlisi de casos',
   },
-  is: { // SCAFFOLD(cs)
-    formation: 'Zakládání společností na Tchaj-wanu',
-    legal: 'Právní informace o Tchaj-wanu',
-    case: 'Rozbor případu',
+  is: {
+    formation: 'Félagastofnun á Taívan',
+    legal: 'Lagaupplýsingar um Taívan',
+    case: 'Málsgreining',
   },
 };
 
@@ -436,7 +436,7 @@ const GUIDANCE_CARD_READ_MORE_LABEL: Record<GuidanceLocale4, string> = {
   lv: 'Lasīt tālāk',
   et: 'Lugege edasi',
   ca: 'Continuar llegint',
-  is: 'Číst dál', // SCAFFOLD(cs)
+  is: 'Lesa áfram',
 };
 
 function categoryFilterLabels(locale: PublicLocale8) {

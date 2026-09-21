@@ -386,7 +386,7 @@ const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
   lv: 'Latvian',
   et: 'Estonian',
   ca: 'Catalan',
-  is: 'Czech', // SCAFFOLD(cs)
+  is: 'Icelandic',
 };
 
 export function buildRootLlmsTxt(): string {
@@ -903,13 +903,13 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     confidentialNotice:
       'Com que el text original es guarda, no escrigui en aquesta primera fase dades que encara no calen, com el número de passaport, el número d’identitat o dades d’un compte bancari.',
   },
-  is: { // SCAFFOLD(cs)
+  is: {
     consultationNotice:
-      'Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
+      'Þessar leiðbeiningar eru skrifaðar á íslensku, en ráðgjöf við lögmann fer einungis fram á ensku, kínversku (中文), japönsku og kóresku.',
     discoveryNotice:
-      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, podporu, doporučení umělé inteligence ani viditelnost.',
+      'Skráin llms.txt er aðeins kort til að finna opinberar síður; hún heitir ekki sæti í leitarvélum, stuðningi, tillögu gervigreindar né sýnileika.',
     confidentialNotice:
-      'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+      'Vegna þess að frumtextinn er vistaður skaltu í upphafi ekki skrifa það sem enn er óþarft, til dæmis vegabréfsnúmer, kennitölu eða reikningsupplýsingar.',
   },
 };
 

@@ -78,7 +78,7 @@ const GUIDANCE_ALL_LABEL: Record<GuidanceLocale4, string> = {
   lv: 'Visus',
   et: 'Kõik',
   ca: 'Tot',
-  is: 'Vše', // SCAFFOLD(cs)
+  is: 'Allt',
 };
 
 const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
@@ -126,7 +126,7 @@ const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
   lv: "viewAllLabel: 'Rādīt visus'",
   et: "viewAllLabel: 'Kuva kõik'",
   ca: "viewAllLabel: 'Veure-ho tot'",
-  is: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
+  is: "viewAllLabel: 'Sýna allt'",
 };
 
 const ENGLISH_FILTER_LABELS = ['All', 'Company Setup', 'Legal Info', 'Case Studies'] as const;

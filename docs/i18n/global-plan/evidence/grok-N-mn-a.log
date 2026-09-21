@@ -1,3 +1,20 @@
 [WO start 2026-09-22 07:12:49]
 Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
 Retry attempt 1...
+Nine Mongolian (Cyrillic) columns are in `src/content/columns-mn/`. The checker reports **`summary PASS 9/9 files`**. Review markers are 0. Nothing was committed.
+
+The report is in `docs/i18n/global-plan/evidence/grok-N-mn-a.log`.
+
+**§Verify**
+
+```
+       9
+summary  PASS  9/9 files
+       0
+      34
+```
+
+(`git status --short` is the whole worktree, not these nine files alone.)
+
+Numbers WARNs remain on Korean ordinal tokens (`제1항` / `제N호` / `1일로`); counts still match, so they are not FAILs.
+=== end code=0 2026-09-22 08:07:44 ===

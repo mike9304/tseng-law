@@ -1953,487 +1953,487 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
   },
 };
 
-// SCAFFOLD(cs) locale is
 export const icelandicGuidanceContent: GuidanceLocaleContent = {
-  languageName: 'Čeština',
+  languageName: 'Íslenska',
   nav: {
-    home: 'Úvod',
-    services: 'Služby',
-    about: 'Kancelář',
-    lawyers: 'Advokáti',
-    pricing: 'Náklady',
-    contact: 'Kontakt',
-    faq: 'Otázky',
-    privacy: 'Soukromí',
-    disclaimer: 'Upozornění',
-    columns: 'Články',
+    home: 'Forsíða',
+    services: 'Þjónusta',
+    about: 'Skrifstofan',
+    lawyers: 'Lögmenn',
+    pricing: 'Kostnaður',
+    contact: 'Samband',
+    faq: 'Spurningar',
+    privacy: 'Persónuvernd',
+    disclaimer: 'Fyrirvari',
+    columns: 'Greinar',
   },
-  contactCta: 'Odeslat žádost o posouzení',
+  contactCta: 'Senda beiðni um ráðgjöf',
   footerNotice:
-    'Tato česká stránka obsahuje pouze obecné informace o práci kanceláře podle tchajwanského práva. Není právní radou k jednotlivému případu a samotné odeslání zprávy nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
-  skipLink: 'Přeskočit navigaci a přejít k obsahu',
-  menuLabel: 'Přehled stránek',
-  languageLabel: 'Jazyk zobrazení',
+    'Þessi síða á íslensku inniheldur aðeins almennar leiðbeiningar um störf skrifstofunnar samkvæmt rétti Taívan. Hún er ekki lögfræðileg ráðgjöf í tilteknu máli og sending skilaboða stofnar ein og sér ekki samband milli lögmanns og skjólstæðings.',
+  skipLink: 'Sleppa leiðarstýringu og fara í efnið',
+  menuLabel: 'Valmynd',
+  languageLabel: 'Birtingarmál',
   mega: {
     services: {
-      description: 'Kancelář se zabývá hlavními agendami tchajwanského práva.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Skrifstofan vinnur helstu málaflokka réttar Taívan.',
+      viewAllLabel: 'Sýna allt',
     },
     columns: {
-      description: 'Články k častým otázkám tchajwanského práva.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Greinar um algengar spurningar í rétti Taívan.',
+      viewAllLabel: 'Sýna allt',
     },
     lawyers: {
-      description: 'Představení advokátek a advokátů a způsobů kontaktu.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Kynning á lögmönnunum og hvernig þú hefur samband.',
+      viewAllLabel: 'Sýna allt',
     },
     pricing: {
-      description: 'Tato stránka vysvětluje rozsah práce a způsob ujasnění nákladů.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Þessi síða útskýrir umfang vinnunnar og hvernig kostnaður er ákveðinn.',
+      viewAllLabel: 'Sýna allt',
     },
     faq: {
-      description: 'Časté otázky k práci kanceláře na Tchaj-wanu.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Algengar spurningar um störf skrifstofunnar á Taívan.',
+      viewAllLabel: 'Sýna allt',
     },
   },
-  notFoundTitle: 'Stránka nenalezena',
+  notFoundTitle: 'Síðan fannst ekki',
   notFoundText:
-    'Hledaná stránka neexistuje nebo byla přesunuta. Můžete se vrátit na českou úvodní stránku a prohlédnout si dostupné informace.',
-  backHomeLabel: 'Na úvodní stránku',
-  readSourceLabel: 'Otevřít seznam článků v původním jazyce',
+    'Síðan sem leitað var að er ekki til eða hefur verið færð. Þú getur farið aftur á forsíðuna á íslensku til að sjá leiðbeiningarnar sem eru tiltækar.',
+  backHomeLabel: 'Á forsíðuna',
+  readSourceLabel: 'Opna greinalistann á frummálinu',
   home: {
-    heroScrollLabel: 'Posunout dolů',
-    heroColumnsCtaLabel: 'Zobrazit články',
-    servicesDetailLabel: 'Zobrazit podrobnosti',
-    servicesAssistanceBefore: 'Není-li zřejmé, do které agendy Vaše věc patří, stránka ',
-    servicesAssistanceLinkLabel: 'Kontakt',
-    servicesAssistanceAfter: ' vysvětluje, jak sestavit shrnutí, které advokátka nebo advokát posoudí.',
-    columnsViewAllLabel: 'Zobrazit všechny články',
-    columnsReadMoreLabel: 'Číst dál',
-    columnsReviewLabel: 'Posoudila advokátka Wei Tseng',
-    columnsOriginalLanguageBadge: 'Původní jazyk',
+    heroScrollLabel: 'Fletta niður',
+    heroColumnsCtaLabel: 'Sjá greinarnar',
+    servicesDetailLabel: 'Sjá nánar',
+    servicesAssistanceBefore: 'Ef óljóst er hvaða málaflokki málið þitt tilheyrir útskýrir síðan ',
+    servicesAssistanceLinkLabel: 'Samband',
+    servicesAssistanceAfter:
+      ' hvernig þú setur saman samantekt sem lögmaður metur.',
+    columnsViewAllLabel: 'Sjá allar greinar',
+    columnsReadMoreLabel: 'Lesa áfram',
+    columnsReviewLabel: 'Yfirfarið af lögmanninum Wei Tseng',
+    columnsOriginalLanguageBadge: 'Frummál',
     columnsOriginalLanguageNote:
-      'Následující články zatím nejsou k dispozici v češtině. Seznam zůstává v původním jazyce a otevře příslušnou jazykovou stránku; obsah se automaticky nepřekládá.',
-    imageBandAlt: 'Tradiční tchajwanský dvorec sanheyuan (三合院) a moderní pavilon za denního světla',
-    videoPauseLabel: 'Pozastavit video',
-    videoPlayLabel: 'Přehrát video',
-    videoReplayLabel: 'Přehrát video znovu',
+      'Eftirfarandi greinar eru enn ekki tiltækar á íslensku. Listinn stendur á frummálinu og opnar viðkomandi málsíðu; efnið er ekki þýtt sjálfkrafa.',
+    imageBandAlt: 'Hefðbundið taívanskt sanheyuan (三合院) og nútímalegur skáli í dagsbirtu',
+    videoPauseLabel: 'Gera hlé á myndbandinu',
+    videoPlayLabel: 'Spila myndbandið',
+    videoReplayLabel: 'Spila myndbandið aftur',
   },
   pages: {
     home: {
-      eyebrow: 'INFORMACE',
-      title: 'Právní služby na Tchaj-wanu — informace v češtině',
+      eyebrow: 'LEIÐBEININGAR',
+      title: 'Lögfræðiþjónusta á Taívan — leiðbeiningar á íslensku',
       description:
-        'Obecné vysvětlení v češtině o rozsahu práce Hovering International Law Firm na Tchaj-wanu, o jazycích konzultace a o prvním kontaktu.',
+        'Almennar skýringar á íslensku um starfssvið Hovering International Law Firm á Taívan, ráðgjafarmálin og fyrsta samband.',
       intro:
-        'Hovering International Law Firm zastupuje zahraniční klienty, včetně osob s vazbou na Tchaj-wan, ve věcech tchajwanského práva: investice a zakládání společností, občanskoprávní spory, manželství, rodina a dědictví, pracovní právo, trestní věci a duševní vlastnictví. Tato česká část Vám pomůže rozpoznat, která práce spadá do našeho rozsahu, co si připravit a jak nás oslovit. Jde o obecné informace, nikoli o právní radu k Vašemu případu.',
+        'Hovering International Law Firm aðstoðar skjólstæðinga erlendis frá, einnig þá sem tengjast Taívan, í málum samkvæmt rétti Taívan: fjárfestingu og félagastofnun, einkamál, hjúskap, fjölskyldu og erfðir, vinnurétt, refsirétt og hugverkarétt. Þessi íslenski hluti hjálpar þér að sjá hvaða vinna fellur innan sviðs okkar, hvað þú ættir að undirbúa og hvernig þú nærð til okkar. Þetta eru almennar upplýsingar, ekki lögfræðileg ráðgjöf í þínu eigin máli.',
       sections: [
         {
-          heading: 'Čím se zabýváme',
+          heading: 'Hvað við gerum',
           paragraphs: [
-            'Hovering International Law Firm je advokátní kancelář se sídlem na Tchaj-wanu. Pracuje podle tchajwanského práva a má pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pching-tungu (屏東). Radíme podnikům, vedeme soudní řízení a zastupujeme zahraniční klienty v krocích, které je na Tchaj-wanu třeba učinit.',
-            'Celý zdejší obsah je obecný. Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku. Tyto informace nenahrazují konzultaci s advokátkou nebo advokátem nad Vašimi dokumenty.',
+            'Hovering International Law Firm er lögmannsstofa með aðsetur á Taívan. Hún starfar samkvæmt rétti Taívan og hefur skrifstofur í Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Við ráðleggjum fyrirtækjum, flytjum mál fyrir dómstólum og fylgjum skjólstæðingum erlendis frá í gegnum þau skref sem krafist er á Taívan.',
+            'Allt efnið hér er almennt. Úrslit máls ráðast af málsatvikum, gildandi reglum og tímasetningu. Þessar leiðbeiningar koma ekki í stað samtals við lögmann um skjölin þín.',
           ],
         },
         {
-          heading: 'Jazyk stránky a jazyk konzultace nejsou totéž',
+          heading: 'Mál síðunnar og ráðgjafarmálið eru ekki það sama',
           paragraphs: [
-            'Tato stránka je psána česky, ale konzultace s advokátkou nebo advokátem probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky. Čtení informací v češtině neznamená, že konzultace s advokátkou nebo advokátem proběhne česky.',
-            'Neslibujeme tlumočníka, lhůtu k odpovědi ani schůzku prostřednictvím této stránky. Pokud neovládáte žádný ze čtyř jazyků konzultace, stránka „Kontakt“ vysvětluje, jak posuzujeme způsob komunikace.',
+            'Þessi síða er skrifuð á íslensku, en ráðgjöf við lögmann fer einungis fram á fjórum ráðgjafarmálum: ensku, kínversku (中文), japönsku og kóresku. Að lesa leiðbeiningarnar á íslensku þýðir ekki að samtalið við lögmanninn fari fram á íslensku.',
+            'Við heitum ekki túlki, svarfresti né tíma í gegnum þessa síðu. Ef þú kannt ekkert af fjórum málunum útskýrir síðan „Samband“ hvernig við könnum samskiptaleið.',
           ],
         },
         {
-          heading: 'Agendy kanceláře',
+          heading: 'Málaflokkar',
           paragraphs: [
-            'Rozsah práce zahrnuje následujících šest agend. Stránka „Služby“ popisuje každou z nich přesněji a uvádí, co se neslibuje.',
+            'Starfið nær til eftirfarandi sex málaflokka. Síðan „Þjónusta“ lýsir hverjum flokki nánar og tilgreinir það sem ekki er heitið.',
           ],
           items: [
-            'Investice a zakládání společností na Tchaj-wanu',
-            'Občanskoprávní spory a náhrada škody',
-            'Manželství, rodina a dědictví',
-            'Pracovněprávní spory',
-            'Trestní věci',
-            'Duševní vlastnictví: ochranné známky, patenty a autorské právo',
+            'Fjárfesting og félagastofnun á Taívan',
+            'Einkamál og skaðabætur',
+            'Hjúskapur, fjölskylda og erfðir',
+            'Vinnuréttardeilur',
+            'Refsiréttarmál',
+            'Hugverkaréttur: vörumerki, einkaleyfi og höfundarréttur',
           ],
         },
         {
-          heading: 'Kde začít',
+          heading: 'Hvar þú ættir að byrja',
           paragraphs: [
-            'Přečtěte si stránku „Služby“ a ověřte, zda Vaše věc spadá do našeho rozsahu, poté „Náklady“ a „Kontakt“, abyste věděli, jak se stanoví rozsah a jak se náklady potvrzují před zahájením práce.',
-            'Při odeslání zprávy můžete shrnutí napsat ve svém jazyce. Původní text se uchová přesně tak, jak jste jej napsali, a automaticky se nepřekládá. Odeslaná zpráva je žádostí čekající na posouzení: není to ještě porada ani potvrzená schůzka.',
+            'Lestu síðuna „Þjónusta“ til að sjá hvort málið þitt falli innan sviðs okkar, síðan „Kostnaður“ og „Samband“ til að sjá hvernig umfangið er ákveðið og hvernig kostnaður er staðfestur áður en vinna hefst.',
+            'Þegar þú sendir skilaboð máttu skrifa samantektina á þínu eigin máli. Frumtextinn er vistaður eins og þú skrifaðir hann og er ekki þýddur sjálfkrafa. Send skilaboð eru beiðni sem bíður mats: það er enn ekki ráðgjöf og enn ekki staðfestur tími.',
           ],
         },
       ],
     },
     services: {
-      eyebrow: 'SLUŽBY',
-      title: 'V čem klienty zastupujeme',
+      eyebrow: 'ÞJÓNUSTA',
+      title: 'Hvaða mál við tökum til vinnslu',
       description:
-        'Šest agend, které kancelář na Tchaj-wanu vede, a hranice, které je užitečné znát nejdříve.',
+        'Sex málaflokkar skrifstofunnar á Taívan og mörkin sem þú ættir fyrst að þekkja.',
       intro:
-        'Níže jsou agendy, které skutečně vedeme, a otázky, jež se v počáteční fázi kladou nejčastěji. Výklad Vám pomůže posoudit, zda Vaše věc spadá do našeho rozsahu; je obecný a není právním rozborem jednotlivého spisu.',
+        'Hér á eftir eru flokkarnir sem við vinnum raunverulega, og spurningar sem oft koma upp í upphafi. Framsetningin hjálpar þér að meta hvort málið þitt falli innan sviðs okkar; hún er almenn og ekki lögfræðileg greining á einstöku máli.',
       sections: [
         {
-          heading: 'Investice a zakládání společností na Tchaj-wanu',
+          heading: 'Fjárfesting og félagastofnun á Taívan',
           paragraphs: [
-            'Zastupujeme zahraniční investory a podniky při založení nebo vedení společnosti na Tchaj-wanu: volba právní formy, příprava a podání dokumentů, vklad kapitálu, bankovní otázky, posouzení sídla a odvětvové požadavky. Podporujeme také účetnictví a daně, které ze založení a z provozu na Tchaj-wanu vyplývají.',
-            'Postup a lhůty se liší podle formy, investora, odvětví, banky a podle již dostupných dokumentů. Založení společnosti samo o sobě nevede k pobytovému oprávnění (居留) ani k pracovnímu povolení (工作許可): jde o samostatná řízení posuzovaná podle situace konkrétní osoby.',
+            'Við aðstoðum erlenda fjárfesta og fyrirtæki við stofnun eða rekstur félags á Taívan: val á félagaformi, undirbúning og skil gagna, innlegg hlutafjár, bankamál, mat á starfsstöð og greinarkröfur. Við aðstoðum einnig við bókhald og skatta sem leiðir af stofnun og rekstri á Taívan.',
+            'Ferli og tímalengd eru mishlöð eftir félagaformi, fjárfesti, grein, banka og þeim gögnum sem þegar eru til. Félagastofnun leiðir ekki af sjálfu sér til dvalarleyfis (居留) eða atvinnuleyfis (工作許可): það eru sérstök málsmeðferðir sem metin eru út frá stöðu hvers og eins.',
           ],
         },
         {
-          heading: 'Občanskoprávní spory a náhrada škody',
+          heading: 'Einkamál og skaðabætur',
           paragraphs: [
-            'Tato agenda zahrnuje spory ze smluv, náhradu škody z protiprávního jednání a spotřebitelské spory. Práce zpravidla začíná časovou osou, posouzením dokumentů a existujících důkazů a teprve poté následují další kroky.',
-            'Průběh určují lhůty, včetně promlčecích, a úplnost důkazů. Uveďte proto známá data co nejdříve. Uschovejte smlouvy, zprávy, doklady o platbě nebo fotografie stavu na místě a zmiňte je v první zprávě.',
+            'Þessi flokkur nær til samningsdeilna, skaðabóta vegna skaðaverka (侵權行為) og neytendadeilna. Vinna hefst að jafnaði með tímalínu, yfirferð gagna og fyrirliggjandi sönnunargagna og síðan fyrst með næstu skrefum.',
+            'Frestir, þar á meðal lögbundnir málshöfðunarfrestir, og hve fullkomin sönnunargögnin eru, móta framvinduna. Tilgreindu því þekktar dagsetningar sem fyrst. Varðveittu samninga, skilaboð, greiðslukvittanir eða ljósmyndir af staðnum og nefndu þau í fyrstu skilaboðunum.',
           ],
         },
         {
-          heading: 'Manželství, rodina a dědictví',
+          heading: 'Hjúskapur, fjölskylda og erfðir',
           paragraphs: [
-            'Vedeme rozvod (離婚), vypořádání majetku, výkon a převzetí práv a povinností k nezletilým dětem (未成年子女權利義務之行使或負擔), styk s dítětem (會面交往) a dědictví (繼承), a to i tehdy, nacházejí-li se strany nebo majetek v různých státech. Přeshraniční rodinné věci často vyžadují další posouzení matričních záznamů (戶籍), formy listin a jejich průkaznosti na Tchaj-wanu.',
-            'Protože rodinné věci s sebou často nesou lhůty a souběžná řízení, mělo by první shrnutí uvést vztah mezi stranami, současné bydliště a již probíhající řízení.',
+            'Við vinnum skilnað (離婚), skiptingu eigna, forsjá og foreldraábyrgð gagnvart ólögráða börnum (未成年子女權利義務之行使或負擔), umgengni (會面交往) og erfðir (繼承), einnig þegar aðilar eða eignir eru í ólíkum ríkjum. Fjölskyldumál yfir landamæri krefjast oft auka athugunar á heimilisskrá (戶籍), formi skjala og sönnunargildi þeirra á Taívan.',
+            'Vegna þess að fjölskyldumál hafa oft fresti og samhliða málsmeðferðir ætti fyrsta samantektin að nefna tengsl aðila, núverandi búsetu og mál sem þegar eru í gangi.',
           ],
         },
         {
-          heading: 'Pracovněprávní spory',
+          heading: 'Vinnuréttardeilur',
           paragraphs: [
-            'Tato agenda zahrnuje skončení pracovního poměru, odstupné podle tchajwanského práva (資遣費; nelze je ztotožňovat s obdobnými instituty jiných států), odměnu a spory z pracovní smlouvy (勞動契約), a to jak na straně zaměstnance, tak na straně zaměstnavatele. Při posouzení odlišujeme důvod skončení od otázek výpovědní doby, výplaty a lhůt.',
-            'Rozhodujícími dokumenty bývají pracovní smlouva, vnitřní pracovní řád (工作規則), výplatní pásky a korespondence stran. Máte-li je stále k dispozici, zmiňte to ve shrnutí.',
+            'Þessi flokkur nær til lokunar ráðningarsambands, lögbundins starfslokastyrks samkvæmt rétti Taívan (資遣費; ekki að jafna við sambærilegar reglur annarra ríkja), launa og deilna sem leiðir af ráðningarsamningi (勞動契約), bæði af hálfu launþega og vinnuveitanda. Við matið aðgreinum við ástæðu lokunar frá spurningum um uppsagnarfrest, greiðslu og fresti.',
+            'Ráðningarsamningur, vinnureglur (工作規則), launaseðlar og bréfaskipti aðila eru yfirleitt lykilgögnin. Ef þú hefur þau enn, nefndu það í samantektinni.',
           ],
         },
         {
-          heading: 'Trestní věci',
+          heading: 'Refsiréttarmál',
           paragraphs: [
-            'Zastupujeme v přípravném řízení i před soudem podezřelé a obviněné i poškozené a posuzujeme trestní rizika podnikatelské činnosti.',
-            'Trestní věci mívají krátké lhůty a pevně stanovené fáze. Obdrželi-li jste již písemnost orgánu činného v trestním řízení nebo soudu, uveďte datum na písemnosti včas, aby byl obsah posouzen ve správném pořadí.',
+            'Við flytjum mál sakborninga, ákærðra og brotaþola í rannsókn og fyrir dómi og metum refsiréttaráhættu atvinnurekstrar.',
+            'Refsimál hafa oft stutta fresti og fastar stigskiptingar. Ef þú hefur þegar fengið bréf frá ákæruvaldi eða dómstóli, nefndu dagsetninguna á bréfinu snemma svo innihaldið sé metið í réttri röð.',
           ],
         },
         {
-          heading: 'Duševní vlastnictví',
+          heading: 'Hugverkaréttur',
           paragraphs: [
-            'Podporujeme zápis ochranných známek (商標) a patentů (專利), autorské právo a spory o tato práva na Tchaj-wanu.',
-            'V této agendě rozhoduje pořadí kroků: rozsah ochrany, okamžik podání přihlášky a skutečné užívání ovlivňují volbu. Podání přihlášky samo o sobě neznamená, že jí bude vyhověno.',
+            'Við aðstoðum við skráningu vörumerkja (商標) og einkaleyfa (專利), við höfundarrétt og við deilur um þessi réttindi á Taívan.',
+            'Í þessum flokki skiptir röð skrefanna máli: verndarsvið, umsóknartími og raunveruleg notkun hafa áhrif á valið. Að skila umsókn þýðir ekki af sjálfu sér að henni verði veitt.',
           ],
         },
         {
-          heading: 'Rozsah a jeho potvrzení',
+          heading: 'Umfang og staðfesting þess',
           paragraphs: [
-            'Kancelář pracuje podle tchajwanského práva a vede věci z výše uvedených agend. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí Vaši zprávu.',
-            'Pobytový status, pracovní povolení a obdobné otázky se posuzují podle dokumentů a podle situace konkrétní osoby, nikoli podle státní příslušnosti. Dotýká-li se část Vaší věci těchto bodů, uveďte to při kontaktu. Tato stránka neslibuje výsledek ani lhůtu k odpovědi.',
+            'Skrifstofan starfar samkvæmt rétti Taívan og vinnur mál í ofangreindum flokkum. Umfang hvers máls er staðfest sérstaklega eftir að lögmaður hefur metið skilaboðin þín.',
+            'Dvalarstaða, atvinnuleyfi og sambærilegar spurningar eru metnar út frá gögnum og stöðu hvers og eins, ekki út frá ríkisfangi. Ef hluti málsins þíns snertir slíkar spurningar, nefndu það þegar þú hefur samband. Þessi síða heitir hvorki niðurstöðu né svarfresti.',
           ],
         },
       ],
     },
     about: {
-      eyebrow: 'KANCELÁŘ',
-      title: 'O Hovering International Law Firm',
+      eyebrow: 'SKRIFSTOFAN',
+      title: 'Um Hovering International Law Firm',
       description:
-        'Základní údaje o této tchajwanské advokátní kanceláři, o jejích pobočkách a o práci se zahraničními stranami.',
+        'Grunnupplýsingar um þessa taívönsku lögmannsstofu, skrifstofur hennar og vinnu með erlendum aðilum.',
       intro:
-        'Hovering International Law Firm je advokátní kancelář na Tchaj-wanu. Advokátky a advokáti pracují od poradenství podnikům až po soudní řízení. Tato část popisuje vznik kanceláře, sídla a práci se zahraničními stranami.',
+        'Hovering International Law Firm er lögmannsstofa á Taívan. Lögmennirnir vinna allt frá ráðgjöf til fyrirtækja til málflutnings fyrir dómstólum. Þessi hluti lýsir tilurð stofunnar, staðsetningum og vinnu með erlendum aðilum.',
       sections: [
         {
-          heading: 'Založení a struktura',
+          heading: 'Stofnun og uppbygging',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) byla založena v roce 2016 advokátkami a advokáty, kteří studovali na National Taiwan University (國立臺灣大學). Čínský název 昊鼎 spojuje znak 昊 („širé nebe“) se znakem 鼎 („pevný základ“) a vystihuje zaměření kanceláře od jejího založení.',
-            'Máme pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pching-tungu (屏東). Pobočka v Kao-siungu se soustředí na vedení podniků a vede občanskoprávní, trestní a správní spory. Pobočka v Tchaj-čungu vede stavební věci, duševní vlastnictví a věci s vazbou na Koreu a Japonsko. Pobočka v Pching-tungu byla otevřena v roce 2017 pro místní potřebu.',
-            'Vedle advokátní práce působí od roku 2020 také Hovering Accounting Office, která nabízí účetnictví a daňové plánování podnikatelům a soukromým osobám s majetkem.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) var stofnuð árið 2016 af lögmönnum sem stunduðu nám við National Taiwan University (國立臺灣大學). Kínverska nafnið 昊鼎 sameinar táknið 昊 („himininn víði“) og 鼎 („traustur grunnur“) og lýsir stefnu stofunnar frá stofnun.',
+            'Við höfum skrifstofur í Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Skrifstofan í Kaohsiung leggur áherslu á stjórnun fyrirtækja og vinnur einkamála-, refsi- og stjórnsýsludeilur. Skrifstofan í Taichung vinnur byggingamál, hugverkarétt og mál sem tengjast Kóreu og Japan. Skrifstofan í Pingtung var opnuð árið 2017 til að þjóna skjólstæðingum á svæðinu.',
+            'Til viðbótar við lögmannsstörfin starfar frá 2020 einnig Hovering Accounting Office, sem býður bókhald og skattáætlun fyrir atvinnurekendur og eignamikla einstaklinga.',
           ],
         },
         {
-          heading: 'Práce se zahraničními stranami',
+          heading: 'Vinna með erlendum aðilum',
           paragraphs: [
-            'Přeshraniční práce zahrnuje zakládání společností, víza, přihlášky ochranných známek a patentů, posouzení právního rizika a daňové poradenství podnikům. Pobočka v Tchaj-čungu vede zejména stavební věci, duševní vlastnictví a věci s vazbou na Koreu a Japonsko. Advokátka Wei Tseng (曾雋崴) zastupuje klienty z Koreje, z Japonska a další mezinárodní klienty v uvedených agendách.',
-            'Zda můžeme věc převzít, závisí na obsahu a na jazyku komunikace. Spadá-li Vaše věc do uvedených agend a lze-li ji projednat v některém ze čtyř jazyků konzultace, můžete zaslat shrnutí k posouzení.',
+            'Starf yfir landamæri nær til félagastofnunar, vegabréfsáritana, vörumerkja- og einkaleyfisumsókna, mats á lagaáhættu og skattaráðgjafar fyrir fyrirtæki. Skrifstofan í Taichung vinnur einkum byggingamál, hugverkarétt og mál sem tengjast Kóreu og Japan. Lögmaðurinn Wei Tseng (曾雋崴) aðstoðar skjólstæðinga frá Kóreu og Japan og aðra alþjóðlega skjólstæðinga í tilgreindum flokkum.',
+            'Hvort við getum tekið mál ræðst af efninu og af málinu sem samskiptin geta farið fram á. Falli málið þitt innan tilgreindra flokka og megi ræða það á einu af fjórum ráðgjafarmálum geturðu sent samantekt til mats.',
           ],
         },
         {
-          heading: 'Když nás oslovíte',
+          heading: 'Þegar þú hefur samband',
           paragraphs: [
-            'Po doručení Vašeho shrnutí posoudí advokátka nebo advokát obsah a poté hovoří o možném rozsahu práce, o dosud potřebných dokumentech a o dalších krocích. U daňových nebo účetních otázek může kancelář postupovat s účetním úsekem v jednom navazujícím postupu.',
-            'Výsledek každé věci závisí na skutkovém stavu a na dostupných dokumentech; výsledek neslibujeme. Potřebujete-li závaznou odpověď pro svou situaci, musí být dokumenty projednány s advokátkou nebo advokátem v některém ze čtyř jazyků konzultace.',
+            'Að samantektinni þinni móttekinni metur lögmaður innihaldið og ræðir síðan mögulegt vinnuumfang, gögn sem enn vantar og næstu skref. Í skatta- eða bókhaldsmálum getur skrifstofan unnið með bókhaldsdeildinni í einu samfelldu ferli.',
+            'Úrslit hvers máls ráðast af málsatvikum og þeim gögnum sem eru til; við heitum ekki niðurstöðu. Ef þú þarft bindandi svar við þinni stöðu verða skjölin að vera rædd við lögmann á einu af fjórum ráðgjafarmálum.',
           ],
         },
       ],
     },
     lawyers: {
-      eyebrow: 'ADVOKÁTI',
-      title: 'Mezinárodní tým Hovering',
-      description: 'Profily advokátek a advokátů, provozního vedení a přidruženého účetnictví a auditu Hovering.',
+      eyebrow: 'LÖGMENN',
+      title: 'Alþjóðlegt teymi Hovering',
+      description: 'Prófílar lögmanna Hovering, rekstrarstjórnarinnar og tengds endurskoðunarfyrirtækis.',
       intro: '',
       sections: [],
     },
     pricing: {
-      eyebrow: 'NÁKLADY',
-      title: 'Jak se stanoví rozsah práce a náklady',
+      eyebrow: 'KOSTNAÐUR',
+      title: 'Hvernig vinnuumfang og kostnaður eru ákveðin',
       description:
-        'Vysvětlení pořadí: nejprve rozsah práce, poté potvrzení nákladů, a proč tato stránka neobsahuje ceník.',
+        'Skýring á röðinni: fyrst vinnuumfangið, síðan staðfesting kostnaðar, og hvers vegna þessi síða inniheldur ekki gjaldskrá.',
       intro:
-        'Tato stránka vysvětluje, jak se náklady stanoví, nikoli jejich výši. Výše závisí na rozsahu práce v jednotlivé věci a má smysl teprve tehdy, je-li tento rozsah zřejmý.',
+        'Þessi síða útskýrir hvernig kostnaður er ákveðinn, ekki fjárhæðina. Fjárhæðin ræðst af vinnuumfangi hvers máls og hefur merkingu fyrst þegar það umfang er ljóst.',
       sections: [
         {
-          heading: 'Nejprve se stanoví rozsah práce',
+          heading: 'Fyrst er vinnuumfangið ákveðið',
           paragraphs: [
-            'Věci téhož druhu mohou vyžadovat velmi rozdílné úsilí, podle počtu stran, dostupných dokumentů, lhůt, které je třeba dodržet, a podle toho, zda již bylo zahájeno řízení. Prvním krokem je proto vždy stanovit, co do práce patří a co nikoli.',
-            'Shrnutí, které na začátku zašlete, je základem tohoto rozsahu. Čím jasněji popisuje průběh, Váš požadavek a lhůty, tím přesněji lze rozsah určit.',
+            'Mál af sömu gerð geta krafist mjög ólíkrar vinnu, eftir fjölda aðila, fyrirliggjandi gögnum, frestum sem halda þarf og því hvort málsmeðferð er þegar hafin. Fyrsta skrefið er því alltaf að ákveða hvað tilheyrir vinnunni og hvað ekki.',
+            'Samantektin sem þú sendir í upphafi er grundvöllur þessa umfangs. Því skýrar sem hún lýsir framvindu, beiðni þinni og frestum, því nákvæmar má ákveða umfangið.',
           ],
         },
         {
-          heading: 'Náklady se potvrzují před zahájením práce',
+          heading: 'Kostnaður er staðfestur áður en vinna hefst',
           paragraphs: [
-            'Je-li rozsah práce zřejmý, výše a způsob výpočtu nákladů se s Vámi projedná a potvrdí dříve, než práce začne. Změní-li se rozsah v průběhu, musí být potvrzen znovu.',
-            'Tato stránka není cenovou nabídkou a nezakládá povinnost k platbě.',
+            'Þegar vinnuumfangið er ljóst eru fjárhæð og útreikningsaðferð ræddar við þig og staðfestar áður en vinna hefst. Breyti umfangið í vinnslunni verður það að vera staðfest að nýju.',
+            'Þessi síða er ekki tilboð og stofnar ekki greiðsluskyldu. Að senda beiðni í gegnum þessa síðu er einnig án greiðslu.',
           ],
         },
         {
-          heading: 'Porada může být úplatná',
+          heading: 'Ráðgjöfin getur verið greidd',
           paragraphs: [
-            'Porada s advokátkou nebo advokátem může být úplatnou službou. Tato stránka neříká, že první konzultace je bezplatná, a žádnou její část nelze v tomto smyslu vykládat.',
-            'Je-li porada úplatná, sdělí se výše a způsob platby dříve, než se porada uskuteční.',
+            'Ráðgjöf lögmanns getur verið greidd þjónusta. Þessi síða segir ekki að fyrsta samtalið sé án greiðslu og engan hluta hennar má lesa þannig.',
+            'Sé ráðgjöfin greidd eru fjárhæð og greiðsluháttur tilkynnt áður en hún fer fram.',
           ],
         },
         {
-          heading: 'Proč tato stránka neuvádí sazby',
+          heading: 'Hvers vegna þessi síða tilgreinir ekki gjaldskrá',
           paragraphs: [
-            'Náklady závisejí na věci samé: na úsilí, počtu stran, dokumentech, lhůtách a na tom, zda již řízení probíhá. Číslo stanovené předem by náklady Vašeho spisu neukázalo. Proto nejprve stanovíme rozsah práce a náklady Vám sdělíme poté, dříve než práce začne.',
-            'Vedle odměny mohou vzniknout soudní poplatky, náklady orgánů nebo třetích osob. Ty jsou od odměny oddělené a závisejí na příslušném řízení.',
+            'Kostnaður ræðst af málinu sjálfu: af vinnunni, fjölda aðila, gögnum, frestum og því hvort málsmeðferð er þegar í gangi. Tala sett fyrirfram sýndi ekki kostnað málsins þíns. Þess vegna ákveðum við fyrst vinnuumfangið og tilkynnum þér síðan kostnaðinn, áður en vinna hefst.',
+            'Til viðbótar við lögmannsþóknun geta komið dómstóla-, stjórnvalds- eða þriðja aðila kostnaður. Hann er aðskilinn frá þóknuninni og ræðst af viðkomandi málsmeðferð.',
           ],
         },
       ],
     },
     contact: {
-      eyebrow: 'KONTAKT',
-      title: 'Jak kancelář oslovit',
+      eyebrow: 'SAMBAND',
+      title: 'Hvernig þú nærð til skrifstofunnar',
       description:
-        'Jazyk stránky, jazyky konzultace, postup pro případ, že neovládáte žádný ze čtyř jazyků, a co tato stránka neslibuje.',
+        'Mál síðunnar, ráðgjafarmálin, ferlið ef þú kannt ekkert af fjórum málunum, og það sem þessi síða heitir ekki.',
       intro:
-        'Než nám napíšete, rozlište následující tři body. Bývají směšovány, ale znamenají různé věci.',
+        'Áður en þú skrifar okkur skaltu greina á milli þessara þriggja atriða. Þau eru oft blanduð saman en merkja ólíka hluti.',
       sections: [
         {
-          heading: 'Tři věci, které je třeba držet odděleně',
+          heading: 'Þrír hlutir sem halda þarf aðskildum',
           paragraphs: [
-            'Jazyk zobrazení stránky, jazyk konzultace s advokátkou nebo advokátem a jazyk, v němž píšete, jsou tři různé věci.',
+            'Birtingarmál síðunnar, málið sem ráðgjöf við lögmann fer fram á, og málið sem þú skrifar á, eru þrír aðskildir hlutir.',
           ],
           items: [
-            'Jazyk stránky: tyto informace jsou psány česky.',
-            'Jazyk konzultace: porada probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
-            'Váš jazyk psaní: shrnutí můžete napsat ve svém jazyce; původní text se uchová beze změny.',
+            'Mál síðunnar: þessar leiðbeiningar eru skrifaðar á íslensku.',
+            'Ráðgjafarmál: ráðgjöf fer einungis fram á ensku, kínversku (中文), japönsku og kóresku.',
+            'Skrifmál þitt: þú mátt skrifa samantektina á þínu eigin máli; frumtextinn er vistaður óbreyttur.',
           ],
         },
         {
-          heading: 'Pokud neovládáte žádný ze čtyř jazyků konzultace',
+          heading: 'Ef þú kannt ekkert af fjórum ráðgjafarmálunum',
           paragraphs: [
-            'V kontaktním formuláři můžete zvolit „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
-            'Jde pouze o krok posouzení, nikoli o příslib. Neslibujeme tlumočníka, službu v češtině ani v jiném jazyce mimo čtyři uvedené jazyky, ani to, že každou věc přijmeme.',
+            'Í tengiliðaeyðublaðinu geturðu valið „Samskiptaleiðina þarf að staðfesta“. Við svörum til að kanna hvort nothæf samskiptaleið sé til; ráðgjöf á öðru tungumáli er ekki heitið og enginn svarfrestur er lofað.',
+            'Þetta er aðeins könnunarþrep, ekki loforð. Við heitum ekki túlki, ekki þjónustu á íslensku eða á öðru máli utan fjögurra tilgreindra mála, og ekki að við tökum hvert mál.',
           ],
         },
         {
-          heading: 'Co by měla obsahovat první zpráva',
+          heading: 'Hvað ætti að standa í fyrstu skilaboðunum',
           paragraphs: [
-            'Uveďte, co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. Obdrželi-li jste již písemnost soudu nebo úřadu, uveďte datum na písemnosti.',
-            'V počáteční fázi zatím nemusíte zasílat číslo pasu, číslo dokladu, údaje o účtu, zdravotní dokumentaci ani soubor důkazů. Vyčkejte pokynů advokátky nebo advokáta a citlivé dokumenty zašlete až poté bezpečnou cestou.',
+            'Segðu frá því sem gerðist, hvers konar aðstoð þú þarft, hvaða tengsl málið hefur við Taívan og frestinum, ef þú þekkir hann. Ef þú hefur þegar fengið bréf frá dómstóli eða stjórnvaldi, nefndu dagsetninguna á bréfinu.',
+            'Í upphafi þarftu enn ekki að senda vegabréfsnúmer, kennitölu, reikningsupplýsingar, sjúkraskrá eða öll sönnunargögn. Bíddu eftir leiðbeiningum lögmanns og sendu viðkvæm gögn þá um örugga leið.',
           ],
         },
         {
-          heading: 'Co tato stránka neslibuje',
+          heading: 'Það sem þessi síða heitir ekki',
           paragraphs: [
-            'Neslibujeme lhůtu k odpovědi, nepotvrzujeme schůzku prostřednictvím této stránky, neslibujeme určitou advokátku ani určitého advokáta a neposkytujeme tlumočníka. Písemný překlad je něco jiného: Vaše zpráva se automaticky nepřekládá.',
-            'Odešlete-li žádost, obsah se uchová a čeká na posouzení. Neobdržíte-li po nějaké době odpověď, můžete napsat znovu na e-mailovou adresu uvedenou na kontaktní stránce.',
+            'Við heitum engum svarfresti, staðfestum engan tíma í gegnum þessa síðu, heitum ekki tilteknum lögmanni og útvegum ekki túlk. Skrifleg þýðing er annað: skilaboðin þín eru ekki þýdd sjálfkrafa.',
+            'Þegar þú sendir beiðni er innihaldið vistað og bíður mats. Fáirðu ekki svar að einhverjum tíma liðnum geturðu skrifað að nýju á netfangið sem er tilgreint á tengiliðasíðunni.',
           ],
         },
       ],
     },
     faq: {
-      eyebrow: 'OTÁZKY',
-      title: 'Časté otázky',
+      eyebrow: 'SPURNINGAR',
+      title: 'Algengar spurningar',
       description:
-        'Vysvětlení k rozsahu práce, přípravě, jazykům, nákladům a k tomu, co znamená odeslaná žádost.',
+        'Skýringar á starfssviði, undirbúningi, málum, kostnaði og merkingu sendrar beiðni.',
       intro:
-        'Následující otázky jsou zodpovězeny na úrovni obecných informací. Odpověď pro Váš případ je možná teprve poté, co advokátka nebo advokát posoudí dokumenty.',
+        'Eftirfarandi spurningar eru svaraðar á stigi almennra upplýsinga. Svar við þínu eigin máli er fyrst mögulegt eftir að lögmaður hefur metið skjölin.',
       sections: [
         {
-          heading: 'Jak tuto část užívat',
+          heading: 'Hvernig þú notar þennan hluta',
           paragraphs: [
-            'Nenajdete-li odpověď pro svou situaci, závisí odpověď zpravidla na zvláštních skutečnostech. Napište je proto do shrnutí, namísto abyste je dovozovali z této stránky.',
+            'Finnirðu ekki svar við þinni stöðu ræðst svarið að jafnaði af sérstökum málsatvikum. Skrifaðu þau þá í samantektina í stað þess að draga ályktanir af þessari síðu.',
           ],
         },
       ],
       faqs: [
         {
-          question: 'Které věci kancelář vede?',
+          question: 'Hvaða mál vinnur skrifstofan?',
           answer:
-            'Vedeme šest agend: investice a zakládání společností na Tchaj-wanu, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Zda bude věc přijata, se rozhodne po posouzení obsahu.',
+            'Við vinnum sex málaflokka: fjárfestingu og félagastofnun á Taívan, einkamál og skaðabætur, hjúskap, fjölskyldu og erfðir, vinnuréttardeilur, refsimál og hugverkarétt. Hvort mál er tekið ræðst eftir mat á innihaldinu.',
         },
         {
-          question: 'Co si připravit před kontaktem?',
+          question: 'Hvað ætti ég að undirbúa áður en ég hef samband?',
           answer:
-            'Připravte si krátké shrnutí průběhu, svého požadavku, vazby na Tchaj-wan a lhůty, existuje-li nějaká. Je-li již k dispozici písemnost soudu nebo úřadu, uveďte datum. V této fázi zatím nemusíte zasílat doklady totožnosti ani soubor důkazů.',
+            'Undirbúðu stutta samantekt á framvindu, beiðni þinni, tengslum við Taívan og fresti, ef einhver er. Sé þegar til bréf frá dómstóli eða stjórnvaldi, nefndu dagsetninguna. Á þessu stigi þarftu enn ekki að senda persónuskilríki eða öll sönnunargögn.',
         },
         {
-          question: 'Je možná porada v češtině?',
+          question: 'Get ég fengið ráðgjöf á íslensku?',
           answer:
-            'Ne. Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky. Neslibujeme ani tlumočníka. Písemný překlad je něco jiného: původní text, který napíšete, se uchová tak, jak je, a automaticky se nepřekládá.',
+            'Nei. Þessar leiðbeiningar eru skrifaðar á íslensku, en ráðgjöf við lögmann fer einungis fram á ensku, kínversku (中文), japönsku og kóresku. Við heitum ekki heldur túlki. Skrifleg þýðing er annað: frumtextinn sem þú skrifar er vistaður eins og hann er og er ekki þýddur sjálfkrafa.',
         },
         {
-          question: 'Co dělat, nemohu-li užít žádný ze čtyř jazyků?',
+          question: 'Hvað ef ég kann ekkert af fjórum málunum?',
           answer:
-            'Při odeslání žádosti zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili způsob komunikace, ale služba v jiném jazyce zaručena není. Jde o krok posouzení, nikoli o příslib, že můžeme pracovat v jiném jazyce.',
+            'Veldu „Samskiptaleiðina þarf að staðfesta“ þegar þú sendir beiðnina. Við svörum til að kanna samskiptaleið, en ráðgjöf á öðru máli er ekki heitið. Þetta er könnunarþrep, ekki loforð um að við getum unnið á öðru máli.',
         },
         {
-          question: 'Jak se nakládá s mým textem v češtině?',
+          question: 'Hvernig er farið með íslenska textann minn?',
           answer:
-            'Původní text, který napíšete, se uchová tak, jak je, a automaticky se nepřekládá. Je-li to potřeba, jazyk další komunikace se s Vámi potvrdí.',
+            'Frumtextinn sem þú skrifar er vistaður eins og hann er og er ekki þýddur sjálfkrafa. Ef þörf krefur er mál áframhaldandi samskipta staðfest við þig.',
         },
         {
-          question: 'Proběhla porada již tím, že je žádost odeslána?',
+          question: 'Hefur ráðgjöfin þegar farið fram þegar beiðnin er send?',
           answer:
-            'Ne. Odeslaná žádost čeká na posouzení advokátkou nebo advokátem. Není to právní stanovisko, není to potvrzená schůzka a samotné odeslání nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
+            'Nei. Send beiðni bíður mats lögmanns. Þetta er ekki lögfræðilegt álit, ekki staðfestur tími, og sendingin ein og sér stofnar ekki samband milli lögmanns og skjólstæðings.',
         },
         {
-          question: 'Jak se počítají náklady?',
+          question: 'Hvernig er kostnaður reiknaður?',
           answer:
-            'Nejprve se stanoví rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu nákladů, dříve než práce začne. Tato stránka neuvádí částky a neříká, že první konzultace je bezplatná.',
+            'Fyrst er vinnuumfangið ákveðið, síðan eru fjárhæð og útreikningsaðferð staðfestar við þig áður en vinna hefst. Þessi síða tilgreinir ekki fjárhæðir og segir ekki að fyrsta samtalið sé án greiðslu.',
         },
         {
-          question: 'Co dělat, je-li má věc velmi naléhavá?',
+          question: 'Hvað ef málið mitt er mjög brýnt?',
           answer:
-            'Uveďte lhůtu nebo datum z úřední písemnosti hned na začátku shrnutí, aby byla tato data při posouzení vidět. Tato stránka nemá nouzový kanál a nezajišťuje lhůtu k odpovědi; nesnese-li Vaše věc odkladu, měli byste souběžně hledat další cesty ve svém místě.',
+            'Tilgreindu frestinn eða dagsetninguna á opinberu bréfi efst í samantektinni svo þær upplýsingar séu sýnilegar við matið. Þessi síða hefur enga neyðarlínu og heitir engum svarfresti; þoli málið þitt enga bið ættirðu samhliða að leita annarra leiða þar sem þú ert.',
         },
       ],
     },
     privacy: {
-      eyebrow: 'SOUKROMÍ',
-      title: 'Údaje sbírané kontaktním formulářem',
+      eyebrow: 'PERSÓNUVERND',
+      title: 'Gögn sem safnað er með tengiliðaeyðublaðinu',
       description:
-        'Co sbírá kontaktní formulář v této české části, jak se nakládá s původním textem a jak nás oslovit ohledně Vašich údajů.',
+        'Hvað tengiliðaeyðublaðið í þessum íslenska hluta safnar, hvernig frumtextinn er meðhöndlaður og hvernig þú nærð til okkar vegna gagna þinna.',
       intro:
-        'Tato část se týká pouze kontaktního formuláře na těchto informačních stránkách. Popisuje nakládání s údaji, nikoli technickou záruku.',
+        'Þessi hluti varðar einungis tengiliðaeyðublaðið á þessum leiðbeiningarsíðum. Hann lýsir meðferð gagna, ekki tæknilegri tryggingu.',
       sections: [
         {
-          heading: 'Které údaje se sbírají',
+          heading: 'Hvaða gögnum er safnað',
           paragraphs: [
-            'Odešlete-li žádost prostřednictvím formuláře v této části, zaznamenají se tyto údaje:',
+            'Þegar þú sendir beiðni í gegnum eyðublaðið í þessum hluta eru eftirfarandi atriði skráð:',
           ],
           items: [
-            'Jméno, které uvedete',
-            'E-mailová adresa pro odpověď',
-            'Jazyk zobrazení stránky v okamžiku odeslání',
-            'Jazyk, v němž jste psali',
-            'Jazyk konzultace, který si přejete',
-            'Původní text, který jste napsali',
-            'Váš souhlas s odesláním žádosti',
-            'Číslo podání pro dohledání žádosti',
+            'Nafnið sem þú gefur upp',
+            'Netfangið fyrir svarið',
+            'Birtingarmál síðunnar við sendingu',
+            'Málið sem þú skrifaðir á',
+            'Ráðgjafarmálið sem þú óskar',
+            'Frumtextinn sem þú skrifaðir',
+            'Samþykki þitt við sendingu beiðninnar',
+            'Móttökunúmer til að finna beiðnina aftur',
           ],
         },
         {
-          heading: 'Původní text se uchová beze změny',
+          heading: 'Frumtextinn er vistaður óbreyttur',
           paragraphs: [
-            'Váš text se uchová přesně tak, jak jste jej napsali, a automaticky se nepřekládá. Je-li pro vyřízení potřebný překlad, projedná se to s Vámi zvlášť.',
-            'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+            'Textinn þinn er vistaður nákvæmlega eins og þú skrifaðir hann og er ekki þýddur sjálfkrafa. Sé þýðing nauðsynleg til vinnslu er það rætt sérstaklega við þig.',
+            'Vegna þess að frumtextinn er vistaður skaltu í upphafi ekki skrifa það sem enn er óþarft, til dæmis vegabréfsnúmer, kennitölu eða reikningsupplýsingar.',
           ],
         },
         {
-          heading: 'Místo uchování a přístup',
+          heading: 'Geymslustaður og aðgangur',
           paragraphs: [
-            'Obsah Vašeho podání se uchovává na místě, které není veřejně přístupné. Přístup k němu mají pouze oprávněné osoby v kanceláři, a to za účelem vyřízení žádosti.',
-            'Tato stránka nedává absolutní záruku bezpečnosti. Žádná cesta přenosu a žádné místo uchování není zcela bezpečné; citlivé dokumenty by proto měly být zasílány až po zvláštním pokynu advokátky nebo advokáta.',
+            'Innihald sendingarinnar er geymt á stað sem er ekki opinn almenningi. Aðeins heimilaðir aðilar á skrifstofunni mega nálgast það til að vinna beiðnina.',
+            'Þessi síða veitir enga algjöra öryggistryggingu. Engin sendingarleið og enginn geymslustaður er fullkomlega öruggur; viðkvæm gögn ætti því aðeins að senda eftir sérstaka leiðbeiningu lögmanns.',
           ],
         },
         {
-          heading: 'Účel užití',
+          heading: 'Tilgangur notkunar',
           paragraphs: [
-            'Odeslané údaje slouží k posouzení žádosti, k odpovědi Vám, k ujasnění způsobu komunikace a k vyřízení, je-li práce převzata.',
-            'Údaje se bez zvláštního souhlasu neužívají k marketingu.',
+            'Send gögn eru notuð til að meta beiðnina, svara þér, skýra samskiptaleiðina og vinna málið ef vinnan er tekin upp.',
+            'Gögnin eru ekki notuð til markaðssetningar án sérstaks samþykkis.',
           ],
         },
         {
-          heading: 'Oznámení a číslo podání',
+          heading: 'Tilkynning og móttökunúmer',
           paragraphs: [
-            'Je-li žádost úspěšně odeslána, systém uvědomí kancelář. Není-li toto oznámení zatím potvrzeno, Váš text zůstává uchován a neztrácí se.',
-            'Číslo podání slouží k dohledání Vaší žádosti v našich záznamech. Zobrazí se po uložení; můžete je uvést při novém kontaktu.',
+            'Þegar beiðni er send með góðum árangri tilkynnir kerfið skrifstofunni. Hafi þessi tilkynning ekki verið staðfest enn er textinn þinn áfram vistaður og tapast ekki.',
+            'Móttökunúmerið þjónar því að finna beiðnina þína í gögnum okkar. Það birtist eftir vistun; þú getur tilgreint það við nýtt samband.',
           ],
         },
         {
-          heading: 'Vaše práva a cesta ke kontaktu',
+          heading: 'Réttindi þín og tengiliðaleiðin',
           paragraphs: [
-            'Můžete žádat o přístup ke svým údajům, o jejich opravu nebo výmaz, případně odvolat souhlas, a to prostřednictvím e-mailové adresy uvedené na kontaktní stránce. Existuje-li zákonná nebo procesní povinnost uchování, vysvětlíme omezení.',
-            'Tato stránka neuvádí pevnou dobu uchování, protože skutečná doba závisí na dalším průběhu věci a na souvisejících povinnostech. Přejete-li si dřívější výmaz, sdělte to při kontaktu.',
+            'Þú getur óskað aðgangs, leiðréttingar eða eyðingar gagna þinna, eða afturkallað samþykki, í gegnum netfangið sem er tilgreint á tengiliðasíðunni. Sé lögbundin eða málsmeðferðarskylda til varðveislu, skýrum við takmörkunina.',
+            'Þessi síða tilgreinir ekki fastan varðveislutíma vegna þess að raunverulegur tími ræðst af því hvort málið er haldið áfram og af skyldum sem því fylgja. Óskirðu fyrr eyðingu, tilkynntu það við samband.',
           ],
         },
         {
-          heading: 'Místo uchování a poskytovatelé',
+          heading: 'Geymslustaður og þjónustuaðilar',
           paragraphs: [
-            'Tyto stránky jsou hostovány u společnosti Vercel a Vaše podání se uchovává v neveřejném objektovém úložišti této služby. E-maily se odesílají poštovní službou, kterou kancelář užívá.',
-            'Servery jednotlivých poskytovatelů se mohou nacházet mimo Tchaj-wan, takže Vaše údaje tam mohou být uchovávány a zpracovávány. Je-li účel uchování naplněn, údaje se bez zbytečného odkladu vymažou; údaje, které je třeba uchovávat podle použitelných předpisů, zůstávají po tuto dobu. Žádosti o osobní údaje přijímá wei@hoveringlaw.com.tw.',
+            'Þessi vefur er hýstur hjá Vercel og sendingin þín er geymd í óopinberri hlutageymslu þeirrar þjónustu. Tölvupóstur er sendur um póstþjónustuna sem skrifstofan notar.',
+            'Netþjónar einstakra þjónustuaðila geta staðið utan Taívan, svo gögnin þín geta verið geymd og unnin þar. Þegar geymslutilganginum er náð eru gögnin eydd án tafar; gögn sem varðveita ber samkvæmt gildandi reglum eru geymd þann tíma. Fyrirspurnir um persónuupplýsingar berast á wei@hoveringlaw.com.tw.',
           ],
         },
       ],
     },
     disclaimer: {
-      eyebrow: 'UPOZORNĚNÍ',
-      title: 'Rozsah a hranice informací na této stránce',
+      eyebrow: 'FYRIRVARI',
+      title: 'Umfang og mörk upplýsinganna á þessari síðu',
       description:
-        'Obecná povaha informací, právní rámec a předpoklady vzniku vztahu mezi advokátkou nebo advokátem a klientem.',
+        'Almennt eðli upplýsinganna, lagalegt gildissvið og forsendur sambands milli lögmanns og skjólstæðings.',
       intro:
-        'Tato část objasňuje, co pro Vás tyto české informační stránky mohou udělat a co nikoli.',
+        'Þessi hluti skýrir hvað þessar íslensku leiðbeiningarsíður geta gert fyrir þig og hvað þær geta ekki.',
       sections: [
         {
-          heading: 'Pouze obecné informace',
+          heading: 'Aðeins almennar upplýsingar',
           paragraphs: [
-            'Obsah těchto stránek je psán jako obecná informace. Není právní radou k Vašemu případu a nenahrazuje posouzení Vašich dokumentů.',
-            'Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku; dvě zdánlivě podobné situace mohou skončit různě.',
+            'Efni þessara síðna er skrifað sem almennar upplýsingar. Það er ekki lögfræðileg ráðgjöf í þínu máli og kemur ekki í stað mats á skjölum þínum.',
+            'Úrslit máls ráðast af málsatvikum, gildandi reglum og tímasetningu; tvær að því er virðist svipaðar aðstæður geta endað ólíkt.',
           ],
         },
         {
-          heading: 'Právní rámec',
+          heading: 'Lagalegt gildissvið',
           paragraphs: [
-            'Kancelář působí podle tchajwanského práva a tato stránka hovoří pouze o práci v tomto rámci.',
-            'Obsah není poradenstvím podle práva jiného řádu než tchajwanského, včetně práva místa Vašeho pobytu. Týká-li se část Vaší věci jiného právního řádu, ujasníme s Vámi, jaká kvalifikovaná osoba je pro tuto část potřebná.',
+            'Skrifstofan starfar samkvæmt rétti Taívan og þessi síða varðar einungis vinnu innan þess ramma.',
+            'Efnið er ekki ráðgjöf samkvæmt rétti annars lögsagnarumdæmis en Taívan, þar á meðal rétti búsetustaðar þíns. Snerti hluti málsins þíns annað lögsagnarumdæmi, skýrum við með þér hvers konar hæfur fagaðili þarf fyrir þann hluta.',
           ],
         },
         {
-          heading: 'Vztah mezi advokátkou nebo advokátem a klientem nevzniká sám od sebe',
+          heading: 'Samband milli lögmanns og skjólstæðings verður ekki til af sjálfu sér',
           paragraphs: [
-            'Přečtení této stránky, odeslání formuláře nebo e-mailu samo o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
-            'Tento vztah vzniká teprve poté, co byla věc posouzena a obě strany potvrdily převzetí práce.',
+            'Að lesa þessa síðu, senda eyðublað eða tölvupóst stofnar ein og sér ekki samband milli lögmanns og skjólstæðings.',
+            'Þetta samband verður fyrst til eftir að málið hefur verið metið og báðir aðilar hafa staðfest að vinnan sé tekin upp.',
           ],
         },
         {
-          heading: 'Žádný příslib výsledku',
+          heading: 'Ekkert loforð um niðurstöðu',
           paragraphs: [
-            'Žádná část této stránky není příslibem ohledně výsledku věci, vyhovění přihlášce nebo žádosti či ohledně pobytového a pracovního statusu.',
-            'Vnější odkazy slouží k orientaci; neslibujeme správnost ani aktuálnost obsahu třetích osob.',
+            'Enginn hluti þessarar síðu er loforð um úrslit máls, veitingu umsóknar eða dvalar- og atvinnustöðu.',
+            'Ytri tenglar eru til leiðsagnar; við heitum hvorki að efni þriðju aðila sé rétt né að það sé uppfært.',
           ],
         },
       ],
     },
     columns: {
-      eyebrow: 'ČLÁNKY',
-      title: 'Články o tchajwanském právu',
+      eyebrow: 'GREINAR',
+      title: 'Greinar um rétt Taívan',
       description:
-        'Články v češtině k častým otázkám tchajwanského práva. Obsah je obecnou informací k okamžiku zveřejnění, nikoli právní radou k Vašemu případu.',
+        'Greinar á íslensku um algengar spurningar í rétti Taívan. Efnið er almenn upplýsing á birtingarstundu, ekki lögfræðileg ráðgjöf í þínu máli.',
       intro:
-        'Kancelář zveřejňuje články k častým otázkám tchajwanského práva. Články dostupné v češtině jsou na této stránce; vedle nich jsou čtyři odkazy, z nichž každý otevře seznam článků v jednom původním jazyce.',
+        'Skrifstofan birtir greinar um algengar spurningar í rétti Taívan. Greinar sem eru tiltækar á íslensku standa á þessari síðu; til viðbótar eru fjórir tenglar sem hver opnar greinalista eins frummáls.',
       sections: [
         {
-          heading: 'Čtyři seznamy podle jazyka',
+          heading: 'Fjórir listar eftir máli',
           paragraphs: [
-            'Tato část obsahuje čtyři odkazy: seznam článků v korejštině, v čínštině, v angličtině a v japonštině. Každý odkaz uvádí jazyk seznamu, takže předem víte, v jakém jazyce se obsah otevře.',
-            'Tyto čtyři seznamy jsou seznamy podle původního jazyka článků, nikoli seznamy překladů. Články dostupné v češtině jsou zvlášť na této stránce.',
+            'Þessi hluti inniheldur fjóra tengla: greinalistann á kóresku, á kínversku, á ensku og á japönsku. Hver tengill tilgreinir mál listans svo þú vitir fyrirfram á hvaða máli efnið opnast.',
+            'Þessir fjórir listar eru listar eftir frummáli greinanna, ekki þýðingarlistar. Greinar sem eru tiltækar á íslensku standa sérstaklega á þessari síðu.',
           ],
         },
         {
-          heading: 'Kam odkazy vedou',
+          heading: 'Hvert tenglarnir leiða',
           paragraphs: [
-            'Zvolíte-li jeden ze čtyř odkazů, otevře se seznam článků v daném jazyce. Ze seznamu si text vyberete sami; celý obsah se zobrazí v původním jazyce článku.',
-            'Tato stránka obsah článků neshrnuje a nezaručuje, že určité téma je k dispozici ve všech čtyřech jazycích. Každý seznam obsahuje pouze texty zveřejněné v daném jazyce.',
+            'Þegar þú velur einn af fjórum tenglunum opnast greinalisti þess máls. Af listanum velurðu textann; allt innihaldið birtist á frummáli greinarinnar.',
+            'Þessi síða dregur ekki saman innihald greinanna og heitir ekki að tiltekið efni sé tiltækt á öllum fjórum málunum. Hver listi inniheldur aðeins texta sem hafa verið birtir á því máli.',
           ],
         },
         {
-          heading: 'Nakolik může článek sloužit k orientaci',
+          heading: 'Hve langt grein getur þjónað sem leiðsögn',
           paragraphs: [
-            'Články jsou obecnými informacemi k okamžiku zveřejnění. Předpisy a jejich používání se mohou změnit a článek neobsahuje všechny okolnosti Vašeho případu.',
-            'Nezakládejte proto postup ve skutečné věci pouze na článku. Užijte jej k přehledu a své dokumenty projednejte zvlášť s advokátkou nebo advokátem; tato stránka není krokem porady.',
+            'Greinar eru almennar upplýsingar á birtingarstundu. Reglur og beiting þeirra geta breyst og grein inniheldur ekki allar aðstæður málsins þíns.',
+            'Ekki byggðu ákvörðun í raunverulegu máli einungis á grein. Notaðu hana til yfirlits og ræddu skjölin þín sérstaklega við lögmann; þessi síða er ekki ráðgjafarþrepið.',
           ],
         },
       ],

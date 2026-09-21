@@ -1,11 +1,86 @@
-[WO start 2026-09-22 06:19:07]
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
-Retry attempt 1...
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 2)...
-Retry attempt 2...
-Icelandic (`is`) guidance copy is in place. SCAFFOLD markers for `is` are gone; `languageName` is **Íslenska**.
+WO-P-is — Icelandic guidance pack + UI strings
+Workspace: /Users/son7/Projects/tseng-law-new-is-20260922
+Date: 2026-09-22
+Agent: Grok 4.6
 
-Verify: SCAFFOLD grep **0**, **TSC_OK**, **1096** tests passed. Five failures are other still-scaffolded locales (answers locale list length 27 vs 45, shared llms notices 84 vs 135, root `llms.txt` over 8 KiB) — none on `is` rows.
+## Files touched
+src/data/international-guidance-baltic-atlantic.ts
+src/data/international-guidance-team.ts
+src/data/international-guidance-offices.ts
+src/data/international-guidance-answers.ts
+src/data/international-inquiry-copy.ts
+src/data/multilingual-international-v2.ts
+src/data/team-name.ts
+src/lib/llms-txt.ts
+src/lib/columns.ts
+src/lib/public-language-registry.ts
+src/components/ColumnsGrid.tsx
+src/components/CinematicOpening.tsx
+src/components/decorative-video-controls.ts
+src/components/__tests__/columns-grid-guidance-labels.test.tsx
+src/components/__tests__/multilingual-international-v2.test.tsx
+src/data/__tests__/column-alternate-expectations.ts
+src/data/__tests__/guidance-disclosure-parity.test.ts
+src/data/__tests__/guidance-office-facts-sync.test.ts
+src/data/__tests__/international-guidance-privacy-disclosure.test.ts
+tests/builder-editor/international-guidance.playwright.ts
 
-Nav labels all ≤ 14 (`Persónuvernd` is longest at 12). FAQ “Get ég fengið ráðgjöf á íslensku?” opens **Nei.** Wei Tseng is marked feminine (`hún`). Log: `docs/i18n/global-plan/evidence/grok-P-is.log`. No git add/commit.
-=== end code=0 2026-09-22 06:52:53 ===
+(columns-grid test also reads the Baltic pack file so VIEW_ALL_LABEL_EVIDENCE for is can see `viewAllLabel: 'Sýna allt'`.)
+
+## §Verify output (verbatim)
+
+=== grep SCAFFOLD is ===
+0
+=== tsc ===
+TSC_OK
+=== vitest ===
+   × guidance locale llms.txt catalogs > writes a distinct notice set for each guidance language 3ms
+   × root llms.txt guidance catalog links > stays inside the 8 KiB root budget and the documented grammar 2ms
+   × root llms.txt guidance catalog links > lists every site-locale catalog and every guidance catalog 0ms
+   × root llms.txt guidance catalog links > labels each guidance catalog in its own language without widening consultation languages 0ms
+   × guidanceAnswers > covers every guidance locale x 6 page keys 4ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+ Test Files  2 failed | 45 passed (47)
+      Tests  5 failed | 1096 passed (1101)
+=== git status --short | wc -l ===
+      22
+
+## Failures that are not is rows
+These 5 failures are caused by other new locales that are still scaffolded (or by the batch size of all new locales), not by Icelandic copy:
+
+1. src/lib/__tests__/international-guidance-answers.test.ts
+   "covers every guidance locale x 6 page keys"
+   The suite's hardcoded GUIDANCE_LOCALES list is the previous 27. GUIDANCE_LOCALES_4 / guidanceAnswers now also contain bn, ur, fa, my, ta, ne, km, mn, sk, bg, hr, sr, sl, lt, lv, et, ca (still scaffolded) plus is. Would fail the same way with is omitted.
+
+2. src/app/[locale]/__tests__/llms-discovery.test.tsx
+   "writes a distinct notice set for each guidance language"
+   Expected 135 unique notice strings; received 84 because remaining scaffolded locales still share cloned Czech / Hindi / Arabic / Thai / Russian notices. Icelandic notices are distinct.
+
+3–5. same file, root llms.txt catalog tests
+   Root catalog exceeds the 8192-byte budget because every new locale is listed. Not an is wording defect.
+
+No failing assertion targeted an is row, is regex, or Icelandic string.
+
+## Terminology (legal terms + Chinese gloss kept exactly)
+- dvalarleyfi (居留)
+- atvinnuleyfi (工作許可)
+- lögbundinn starfslokastyrkur samkvæmt rétti Taívan (資遣費)
+- skilnaður (離婚)
+- forsjá og foreldraábyrgð gagnvart ólögráða börnum (未成年子女權利義務之行使或負擔)
+- umgengni (會面交往)
+- erfðir (繼承)
+- heimilisskrá (戶籍)
+- ráðningarsamningur (勞動契約)
+- vinnureglur (工作規則)
+- vörumerki (商標) / einkaleyfi (專利)
+- skaðaverk (侵權行為)
+
+Register: þú; typographic quotes „…“; Taiwan → Taívan; cities kept Latin (Taipei / Kaohsiung / Taichung / Pingtung) so officeTitles stay substrings of about/answers copy. Attorney Wei Tseng is feminine (hún; lögmaðurinn Wei Tseng). Consultation languages in order: enska, kínverska (中文), japanska, kóreska. Autonym languageName: Íslenska. Team / office eyebrows: LIÐIÐ, SKRIFSTOFUR. Bio keeps TWD 1.57M and GUIDANCE_BIO_PRESERVED_TERMS byte-identical. FAQ “Get ég fengið ráðgjöf á íslensku?” opens “Nei.” workingLanguagesLabel: Vinnutungumál (not Vinnumál, which is labour-affairs).
+
+## Could not fit / constraints
+- All nav.* labels ≤ 14 characters (longest: Persónuvernd = 12). menuLabel = “Valmynd” (not the literal Menu).
+- ColumnsGrid All chip is “Allt”; mega viewAllLabel “Sýna allt”; columnsReadMoreLabel = ColumnsGrid read-more = “Lesa áfram”; category labels byte-identical to src/lib/columns.ts.
+- lawyers page title/description = guidanceTeamCopy: “Alþjóðlegt teymi Hovering” / “Prófílar lögmanna Hovering, rekstrarstjórnarinnar og tengds endurskoðunarfyrirtækis.”
+- answers sources and GUIDANCE_HOME_PATHS hrefs use /is/… (locale paths; not left on the Czech /cs/ clones).
+- og:locale fixture: is_IS. hreflang tag: is.
+- privacy pending-confirmation regex is a negative match (hosting section states Vercel facts; no leftover “awaiting office confirmation”).

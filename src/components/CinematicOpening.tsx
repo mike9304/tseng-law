@@ -904,15 +904,15 @@ export const CINEMATIC_OPENING_COPY: Record<
     service: 'Orientació jurídica sobre Taiwan · anglès, xinès, japonès i coreà',
     contact: 'Contactar amb el despatx',
   },
-  is: { // SCAFFOLD(cs)
+  is: {
     primary: 'HOVERING INTERNATIONAL LAW FIRM',
-    secondary: 'ADVOKÁTI NA TCHAJ-WANU',
-    scroll: 'Pokračujte dolů',
-    skip: 'Přeskočit úvod',
+    secondary: 'LÖGMENN Á TAÍVAN',
+    scroll: 'Halda áfram niður',
+    skip: 'Sleppa inngangi',
     mediaAlt:
-      'Letecký pohled na středohoří Tchaj-wanu a moře mraků v přirozeném světle',
-    service: 'Právní informace o Tchaj-wanu · angličtina, čínština, japonština a korejština',
-    contact: 'Obraťte se na kancelář',
+      'Loftmynd í dagsbirtu af miðhálendi Taívan og skýjahafi',
+    service: 'Lagaupplýsingar um Taívan · enska, kínverska, japanska og kóreska',
+    contact: 'Hafa samband við skrifstofuna',
   },
 };
 

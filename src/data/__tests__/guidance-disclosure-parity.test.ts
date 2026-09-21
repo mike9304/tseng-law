@@ -95,7 +95,7 @@ const ELEMENTS = {
     lv: /izmantojamu/,
     et: /kasutatav/,
     ca: /via possible/,
-    is: /schůdný/, // SCAFFOLD(cs)
+    is: /nothæf/,
   },
   /** Support in a language outside the four consultation languages is not guaranteed. */
   'no-other-language-guarantee': {
@@ -143,7 +143,7 @@ const ELEMENTS = {
     lv: /citā valodā nav garantēts/,
     et: /muus keeles ei tagata/,
     ca: /un altre idioma/,
-    is: /v jiném jazyce zaručena není/, // SCAFFOLD(cs)
+    is: /öðru tungumáli/,
   },
   /** No reply time is promised. */
   'no-reply-time-promise': {
@@ -191,7 +191,7 @@ const ELEMENTS = {
     lv: /atbildes termiņ/,
     et: /vastamise tähtaeg/,
     ca: /termini de resposta/,
-    is: /lhůtu k odpovědi|lhůta k odpovědi/, // SCAFFOLD(cs)
+    is: /svarfrest/,
   },
   /** The confirmation step is a step, not a promise. */
   'confirmation-is-not-a-promise': {
@@ -239,7 +239,7 @@ const ELEMENTS = {
     lv: /nevis solījums/,
     et: /mitte lubadus/,
     ca: /no és una promesa/,
-    is: /příslib/, // SCAFFOLD(cs)
+    is: /ekki loforð/,
   },
   /** No interpreter is arranged. */
   'no-interpreter-promise': {
@@ -287,7 +287,7 @@ const ELEMENTS = {
     lv: /tulku/,
     et: /tõlki/,
     ca: /intèrpret/,
-    is: /tlumočník/, // SCAFFOLD(cs)
+    is: /túlk/,
   },
   /** Not every matter can be accepted. */
   'not-every-matter-accepted': {
@@ -335,7 +335,7 @@ const ELEMENTS = {
     lv: /katru lietu/,
     et: /iga asja/,
     ca: /tots els assumptes/,
-    is: /každou věc/, // SCAFFOLD(cs)
+    is: /hvert mál/,
   },
   /** No outcome is promised. */
   'no-outcome-promise': {
@@ -383,7 +383,7 @@ const ELEMENTS = {
     lv: /iznākum/,
     et: /ei luba tulemust|tulemust me ei luba/,
     ca: /resultat/,
-    is: /výsledek/, // SCAFFOLD(cs)
+    is: /niðurstöðu/,
   },
   /** A certain answer needs one of the four consultation languages. */
   'four-consultation-languages': {
@@ -431,7 +431,7 @@ const ELEMENTS = {
     lv: /četr/,
     et: /neljast nõustamiskeelest/,
     ca: /quatre idiomes de consulta/,
-    is: /čtyř/, // SCAFFOLD(cs)
+    is: /fjórum ráðgjafarmál/,
   },
   /** This page is not the consultation step. */
   'not-the-consultation-step': {
@@ -479,7 +479,7 @@ const ELEMENTS = {
     lv: /konsultācijas solis/,
     et: /nõustamissamm/,
     ca: /pas de consulta/,
-    is: /krokem porady|krok porady/, // SCAFFOLD(cs)
+    is: /ráðgjafarþrep/,
   },
   /** A sent message is not legal advice. */
   'not-legal-advice': {
@@ -527,7 +527,7 @@ const ELEMENTS = {
     lv: /juridisks atzinums/,
     et: /õiguslik seisukoht/,
     ca: /assessorament jurídic/,
-    is: /právní\w* stanovisk/, // SCAFFOLD(cs)
+    is: /lögfræðilegt álit/,
   },
   /** A sent message is not a confirmed appointment. */
   'not-an-appointment': {
@@ -575,7 +575,7 @@ const ELEMENTS = {
     lv: /tikšan/,
     et: /kohtumist|kohtumine/,
     ca: /cita/,
-    is: /schůzk/, // SCAFFOLD(cs)
+    is: /tíma í gegnum|staðfestur tími/,
   },
   /** Sending a message forms no attorney–client relationship. */
   'no-attorney-client-relationship': {
@@ -623,7 +623,7 @@ const ELEMENTS = {
     lv: /attiecības starp advokāt/,
     et: /suhet advokaadi ja kliendi vahel/,
     ca: /relació entre advocad/,
-    is: /vztah mezi advokát/, // SCAFFOLD(cs)
+    is: /samband milli lögmanns/,
   },
   /** Written text is never machine-translated for the reader. */
   'no-automatic-translation': {
@@ -671,7 +671,7 @@ const ELEMENTS = {
     lv: /automātiski/,
     et: /automaatselt/,
     ca: /de forma automàtica/,
-    is: /automaticky/, // SCAFFOLD(cs)
+    is: /sjálfkrafa/,
   },
   /** The family group is named as covering marriage matters. */
   'marriage-in-family-group': {
@@ -719,7 +719,7 @@ const ELEMENTS = {
     lv: /laulīb/i,
     et: /abielu/i,
     ca: /matrimoni/i,
-    is: /manželství/i, // SCAFFOLD(cs)
+    is: /hjúskap/i,
   },
   /** Meeting the attorney may be a paid service. */
   'consultation-may-be-paid': {
@@ -767,7 +767,7 @@ const ELEMENTS = {
     lv: /maksas|pret samaksu/,
     et: /tasuline/,
     ca: /servei de pagament/,
-    is: /úplatn/, // SCAFFOLD(cs)
+    is: /greidd/,
   },
 } as const satisfies Record<string, ElementMarkers>;
 

@@ -1,1 +1,74 @@
-[WO start 2026-09-22 07:37:41]
+WO-N-is-b — Icelandic columns 010–018
+Workspace: /Users/son7/Projects/tseng-law-new-is-20260922
+Date: 2026-09-22
+Agent: Grok 4.6
+
+## File count
+9 files written in src/content/columns-is/ (010–018):
+010-taiwan-gym-injury-lawsuit.md
+011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md
+012-taiwan-overtaking-accident-liability.md
+013-taiwan-company-establishment-advanced-1.md
+014-taiwan-mandatory-employment-period.md
+015-taiwan-company-setup-pitch-location.md
+016-taiwan-inheritance-custody-analysis.md
+017-taiwan-logistics-business-setup.md
+018-taiwan-semiconductor-market-entry.md
+
+Wrote ONLY these 9 files + this log. 001–009 already present from WO-N-is-a (untouched). No git add/commit/push.
+
+## §Verify output (verbatim)
+
+      18
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-is-20260922/src/content/columns-is/018-taiwan-semiconductor-market-entry.md  lang=is
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=99
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+      44
+
+Pass: summary PASS 18/18 files (010–018 all PASS; 001–009 from is-a also PASS). Markers 0.
+
+## Key term choices (Icelandic + Traditional-Chinese gloss)
+- skipting mismunar eftirstöðva eigna (剩餘財產差額分配)
+- sérstakar eignir (特有財產)
+- sérstakur umboðsmaður (特別代理人)
+- arfafsal (拋棄繼承)
+- arfur með staðgengil (代位繼承)
+- skylduarfur (特留分)
+- forsjá (親權)
+- lögráð ólögráða (未成年人監護)
+- vöruflutningar með vélknúnum ökutækjum (汽車貨運業)
+- farmiðlun (運送承攬)
+- undirbúningsleyfi (籌設許可)
+- rekstrarleyfi (營業執照) — kept distinct from atvinnuleyfi (工作許可)
+- greinafélag (同業公會)
+- eftirlitamaður félags (監察人)
+- fjárfestingarathugunardeild efnahagsráðuneytisins (經濟部投資審議司)
+
+Also consistent with is-a: dótturfélag (子公司), útibú (分公司), umboðsskrifstofa (代表人辦事處), einkahlutafélag (有限公司), hlutafélag (股份有限公司), heimilisskrá (戶籍), bestu hagsmunir barnsins (子女最佳利益), lög um lagaval í einkamálum með erlendum þætti (涉外民事法律適用法). Byline **Lögmaður Wei Tseng (曾雋崴)** (feminine; Latin name kept). 018 has no byline (Korean source has none).
+
+Register: þú; quotes „…“; dates 13. september 2025 / 17. september 2026; thousands 25.000.000; categories from src/lib/columns.ts. R2 investor’s home country / fjölskylda með erlendum þætti; no Ísland. R3 no result/availability promises; consultation languages EN / 中文 / JA / KO only. R7b §3/§7 of 016 and §1/§3/§4 of 017 are self-standing (not orphan Nei). Links follow da → /is/services, /is/pricing, /is/lawyers, /is/contact.
+
+## Unresolved
+- Checker has no Icelandic ordinal lexicon; 제3자 stays WARN on 016 and 017 (digit bags matched). Same class as is-a.
+- 018 Korean frontmatter has no `url` key and jumps ## 5 → ## 7; both mirrored.
+- 012: paragraphs/link labels must not start with `N. gr.` (markdown list / stripStructuralNoise); used „Ákvæði 101. gr.“.
+- 010 leftover extra 2020 from ROC year 109 (2020) is WARN only, same pattern as da.
+- No native Icelandic attorney review of these 9 files.

@@ -591,16 +591,16 @@ export const GUIDANCE_HOME_PATHS: Record<GuidanceLocale, GuidanceHomePaths> = {
     },
     ariaLabel: 'Dos camins d’informació',
   },
-  is: { // SCAFFOLD(cs)
+  is: {
     setup: {
-      label: 'Informace o zakládání společností na Tchaj-wanu',
+      label: 'Upplýsingar um félagastofnun á Taívan',
       href: '/is/services',
     },
     legal: {
-      label: 'Právní informace o Tchaj-wanu',
+      label: 'Lagaupplýsingar um Taívan',
       href: '/is/faq',
     },
-    ariaLabel: 'Dvě informační cesty',
+    ariaLabel: 'Tvær upplýsingaleiðir',
   },
 };
 

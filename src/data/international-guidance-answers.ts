@@ -1448,36 +1448,36 @@ export const guidanceAnswers: Record<
       sources: ['/ca/services', '/ca/contact'],
     },
   },
-  is: { // SCAFFOLD(cs)
+  is: {
     services: {
       answer:
-        'Kancelář vede šest agend podle tchajwanského práva: investice a zakládání společností, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí zaslaný obsah. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+        'Skrifstofan vinnur sex málaflokka samkvæmt rétti Taívan: fjárfestingu og félagastofnun, einkamál og skaðabætur, hjúskap, fjölskyldu og erfðir, vinnurétt, refsirétt og hugverkarétt. Umfang hvers máls er staðfest sérstaklega eftir að lögmaður hefur metið sent efni. Ráðgjöf fer einungis fram á ensku, kínversku, japönsku og kóresku.',
       sources: ['/is/faq', '/is/contact'],
     },
     about: {
       answer:
-        'Hovering International Law Firm je tchajwanská advokátní kancelář, kterou v roce 2016 založili absolventi National Taiwan University (國立臺灣大學), s pobočkami v Tchaj-peji, Kao-siungu, Tchaj-čungu a Pching-tungu. Od roku 2020 působí i účetní úsek; pobočka v Tchaj-čungu vede věci s vazbou na Koreu a Japonsko. Kancelář neslibuje výsledek. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+        'Hovering International Law Firm er lögmannsstofa á Taívan, stofnuð árið 2016 af lögmönnum menntuðum við National Taiwan University (國立臺灣大學), með skrifstofur í Taipei, Kaohsiung, Taichung og Pingtung. Frá 2020 starfar einnig bókhaldsdeild; skrifstofan í Taichung vinnur mál sem tengjast Kóreu og Japan. Skrifstofan heitir ekki niðurstöðu. Ráðgjöf fer einungis fram á ensku, kínversku, japönsku og kóresku.',
       sources: ['/is/lawyers', '/is/services'],
     },
     lawyers: {
       answer:
-        'Tato stránka ukazuje profily advokátek a advokátů Hovering, provozního vedení a přidruženého účetnictví a auditu. Advokátka Wei Tseng (曾雋崴) je oprávněna vykonávat advokacii na Tchaj-wanu a je řídící advokátkou kanceláře; pracuje s klienty z Koreje, z Japonska a s dalšími mezinárodními klienty. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+        'Þessi síða sýnir prófíla lögmanna Hovering, rekstrarstjórnarinnar og tengds endurskoðunarfyrirtækis. Lögmaðurinn Wei Tseng (曾雋崴) hefur lögmannsréttindi á Taívan og er aðallögmaður stofunnar; hún vinnur með skjólstæðingum frá Kóreu og Japan og öðrum alþjóðlegum skjólstæðingum. Ráðgjöf fer einungis fram á ensku, kínversku, japönsku og kóresku.',
       sources: ['/is/about', '/is/contact'],
     },
     pricing: {
       answer:
-        'Tato stránka nezveřejňuje ceník. Nejprve se z Vašeho shrnutí potvrdí rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu, dříve než práce začne. Konzultace s advokátkou nebo advokátem může být úplatná; vedle odměny mohou vzniknout soudní nebo správní poplatky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+        'Þessi síða birtir ekki gjaldskrá. Fyrst er vinnuumfangið ákveðið út frá samantektinni sem þú sendir, síðan eru fjárhæð og útreikningsaðferð staðfestar við þig áður en vinna hefst. Samtal við lögmann getur verið greidd þjónusta; til viðbótar við þóknun geta komið dómstóla- eða stjórnvaldsgjöld. Ráðgjöf fer einungis fram á ensku, kínversku, japönsku og kóresku.',
       sources: ['/is/contact', '/is/faq'],
     },
     contact: {
       answer:
-        'Zašlete shrnutí kontaktním formulářem: co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. V počáteční fázi zatím není třeba zasílat doklady totožnosti ani celý důkazní materiál. Kancelář neslibuje lhůtu k odpovědi a nepotvrzuje schůzku prostřednictvím této stránky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+        'Sendu samantektina með tengiliðaeyðublaðinu: hvað gerðist, hvers konar aðstoð þú þarft, hvaða tengsl málið hefur við Taívan og frestinn ef þú þekkir hann. Í fyrsta skrefi þarftu enn ekki að senda persónuskilríki eða öll sönnunargögn. Skrifstofan heitir engum svarfresti og staðfestir engan tíma í gegnum þessa síðu. Ráðgjöf fer einungis fram á ensku, kínversku, japönsku og kóresku.',
       sources: ['/is/faq', '/is/pricing'],
     },
     faq: {
       answer:
-        'Tato část odpovídá na časté otázky na úrovni obecných informací: šest agend kanceláře, příprava před kontaktem, potvrzení nákladů a význam odeslané zprávy. Odeslaná zpráva čeká na posouzení, není právním stanoviskem ani potvrzenou schůzkou a sama o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem. Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/is/services', '/is/contact'],
+        'Þessi hluti svarar algengum spurningum á stigi almennra upplýsinga: sex málaflokkarnir, undirbúningur fyrir samband, hvernig kostnaður er ákveðinn og merking sendrar beiðni. Send beiðni bíður mats lögmanns; hún er ekki lögfræðilegt álit, ekki staðfestur tími, og stofnar ekki samband milli lögmanns og skjólstæðings. Ráðgjöf fer einungis fram á ensku, kínversku, japönsku og kóresku.',
+      sources: ['/is/contact', '/is/services'],
     },
   },
 };

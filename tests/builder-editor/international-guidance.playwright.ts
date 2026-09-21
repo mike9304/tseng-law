@@ -972,7 +972,7 @@ test.describe('O29 og:locale across the eight public locales', () => {
     lv: 'lv_LV',
     et: 'et_EE',
     ca: 'ca_ES',
-    is: 'cs_CZ', // SCAFFOLD(cs)
+    is: 'is_IS',
   };
 
   for (const locale of PUBLIC_LOCALES_8) {

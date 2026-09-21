@@ -1,0 +1,256 @@
+# WO-F-th — Thai fix lane (Opus 5) — 2026-09-21
+
+Scope written: src/content/columns-th/*.md (17 of 18; 012 needed nothing),
+src/data/international-guidance-content.ts, -team.ts, -answers.ts,
+src/data/international-inquiry-copy.ts, src/lib/llms-txt.ts (th keys only).
+No test file was modified. No git add/commit/stash/checkout. Helpers under .tmp-th/.
+Verified with `git diff -U0 -- src/data src/lib | grep '^+' | grep -vE '[ก-๙]'` → empty,
+i.e. every added .ts line is Thai; no other locale was touched.
+
+## Rows applied — part a (th-a.md)
+
+a#1  P1 bio meaning: "เคยเป็นผู้แทนนักศึกษา… และได้รับคำพิพากษา…ให้ชดใช้" →
+     "เคยเป็นทนายความให้แก่นักศึกษาชาวเกาหลี… และศาลชั้นต้นพิพากษาให้นักศึกษาผู้นั้นได้รับค่าเสียหาย…".
+     Fact kept. Figure format: see "Not applied" below.
+a#2  P1 gender sweep ผม → ดิฉัน for Wei Tseng: 003 (×5: Q16 ×2, Q19/20 sign-offs ×3),
+     008 (×5). 006's 10 "ผม" are the noun "hair" (ตัดผม/สระผม) — correctly untouched.
+     010/013 use the epicene ผู้เขียน; 011/014/016/017 close with "ทนายความ Wei Tseng".
+     นาย B (008) and นายหลิน (006) left male.
+a#3  P1 003 "ค่าสินไหมทดแทนสูงสุดเท่าที่พึงเรียกร้องได้" → "…ให้ครบถ้วนตามข้อเท็จจริงและพยานหลักฐานที่มีอยู่".
+a#4  P1 003 typical-sentence claims → "มีบางคำพิพากษาที่ศาลลงโทษจำคุกประมาณ 3 เดือน … ทั้งนี้มิใช่ผลที่
+     เกิดขึ้นเป็นปกติ และมิใช่ผลที่รับประกันได้" (same for the 4-month / 6-month sentence). Digits kept.
+a#5  P1 003 "จำเลยอาจได้รับการรอการลงโทษ และไม่ต้องเข้าเรือนจำ" → "ในบางกรณี ศาลอาจพิจารณาให้
+     รอการลงโทษ (緩刑) ได้ ทั้งนี้มิใช่คำมั่นว่าจะไม่ต้องเข้าเรือนจำ".
+a#6  P1 008 "นาย B จึงได้รับค่าชดเชยจำนวนสูง" → "…จึงสามารถพิสูจน์สิทธิในค่าชดเชยตามที่กฎหมายกำหนดได้";
+     the following "ไม่ได้โชคดีเช่นนั้น" → "ไม่มีพยานหลักฐานเช่นนั้น" (R8: 成功 ≠ luck).
+a#7  P1 005 "ติดต่อสอบถามได้ตลอดเวลา" → "ท่านส่งเรื่องผ่านแบบฟอร์มติดต่อได้ ทั้งนี้ สำนักงานไม่ได้
+     รับประกันระยะเวลาในการตอบกลับ". NOTE: the reviewer's "ไม่รับประกันว่าจะตอบกลับทันที" trips the
+     checker's `th-immediate` forbidden lane (/ตอบกลับทันที/) — reworded, see "Checker constraints".
+a#8  P1 001 country-specific note appended to the two Taiwan–Korea treaty paragraphs (§ intro para
+     and §5 last para), neutral per ACCEPTED (no "นักลงทุนไทย"). Block count unchanged.
+a#9  P1 004 same note appended to the dividend paragraph and to §6's first paragraph.
+a#10 P1 005 Q1 generalised: "จากประเทศเกาหลีใต้" → "จากต่างประเทศ"; the parenthetical now labels Korea
+     as an example ("ยกระบบธนาคารและกฎหมายว่าด้วยเงินตราต่างประเทศของเกาหลีใต้ขึ้นเป็นตัวอย่างเท่านั้น");
+     closing line → "…ธนาคารหลักที่ท่านใช้บริการอยู่ในประเทศของท่าน".
+a#11 P1 008 FAQ + body and 009: "แตกต่างจากกฎหมายเกาหลี" → "ต่างจากบางประเทศ เช่น เกาหลีใต้" (R2c).
+     008's Korea paragraph reframed as "เพื่อเปรียบเทียบกับบางประเทศ โดยยกเกาหลีใต้เป็นตัวอย่าง"
+     (matches columns-en/008 L30).
+a#12/13 verified already Thai (ทีมงานของเรา / สำนักงาน).
+a#14 P1 fullProfileLabel "ประวัติฉบับเต็ม (English)" → "ประวัติฉบับเต็ม (ภาษาอังกฤษ)".
+a#16 P2 contact bullet: added เฉพาะ + "(中文)"; same เฉพาะ/中文 added to the 6 guidanceAnswers.
+a#17 P2 llms discoveryNotice — applied in modified form, see "Reviewer rows I disagree with".
+a#18 P2 "ผู้สอบบัญชีพันธมิตร" → "หุ้นส่วนผู้สอบบัญชี" (teamCopy.description, partnerTitle,
+     roles.huang-shengping, guidanceContent lawyers.description, guidanceAnswers.lawyers). 4 remaining
+     "พันธมิตร" in 004 mean business partners/co-investors — correctly left.
+a#19 P2 answers.pricing "การพบทนายความ…" → "การปรึกษากับทนายความอาจเป็นบริการที่มีค่าใช้จ่าย".
+a#20 P2 003 "ในศาลชั้นที่สอง" → "ในชั้นอุทธรณ์ (二審)".
+a#21 P2 006 "คณะตุลาการใหญ่ (大法官) ได้ประกาศว่า" → "คณะตุลาการศาลรัฐธรรมนูญ (大法官) ได้วินิจฉัยว่า".
+a#22 P2 008 ×2 "ระเบียบกองทุนบำเหน็จบำนาญลูกจ้าง (勞工退休金條例)" → "พระราชบัญญัติเงินบำนาญลูกจ้าง (勞工退休金條例)".
+a#23 P2 009 + 018 "ประกันแรงงาน (勞保)" → "ประกันสังคมลูกจ้าง (勞保)".
+a#24 P2 "จะดำเนินเป็นภาษาไทย" → "จะดำเนินการเป็นภาษาไทย".
+a#25 P2 008 title/H1: fullwidth "：" → ":" and "??" → "?".
+a#26 P2 006 «การแพทย์» (醫療法) → "กฎหมายว่าด้วยการแพทย์ (醫療法)".
+a#27 P2 009 "''**เวลา**''" → "**เวลา**".
+a#28 P2 menuLabel "รายการหน้า" → "เมนู".
+a#29/31 P2 "กลุ่มงาน" → "ประเภทงาน" sweep in the pack (mega.services, home hero-assist, home §2 intro,
+     home §3, services intro, services last section ×2, about §1 ×2, answers.faq) — 10 instances.
+a#30 P2 "ส่วนภาษาไทยนี้" → "หน้าภาษาไทยเหล่านี้"; footerNotice "หน้าภาษาไทยนี้" → "หน้าภาษาไทยเหล่านี้".
+a#32 P2 "ในกระบวนการเดียวกันได้" → "ไปในคราวเดียวกันได้".
+a#33 P2 "ไม่สะดวกทั้ง 4 ภาษา" → "ใช้ภาษาใดใน 4 ภาษา…ไม่ได้" (home §2, contact description, contact §2
+     heading, faq q4 question, inquiry methodConfirmationNotice) — 5 instances.
+a#35 P2 "การใช้และการรับภาระสิทธิและหน้าที่ต่อบุตรผู้เยาว์ (未成年子女權利義務之行使或負擔)" →
+     "อำนาจปกครองบุตรผู้เยาว์ (…)" — pack services §3 + 4 instances in 007/016 (= b#25).
+a#36 P2 003 comment CTA → "โปรดใช้หน้าติดต่อของสำนักงาน".
+a#37 P2 003 "Q&A" → "คำถามและคำตอบ" in the closing line; title/H1 "Q&A:" → "ถาม-ตอบ:".
+a#39 P2 居留 → พำนัก sweep, residence-permit sense only (33 instances in columns + pack services §1 +
+     guidancePracticeAreaNames "Visa and residency"): สถานะการมีถิ่นที่อยู่ ×10, บัตรถิ่นที่อยู่ ×11,
+     ถิ่นที่อยู่ถาวร ×4, and 8 further phrases. Tax/civil-law ถิ่นที่อยู่ (ผู้มีถิ่นที่อยู่ทางภาษี,
+     ผู้มีถิ่นที่อยู่ตามความตกลง, ภูมิลำเนา/ถิ่นที่อยู่ประจำ 經常居所, 007/016 family-law uses) left intact.
+a#40 P2 "(中文)" added on first mention of the four consultation languages: pack home §2, contact bullet,
+     faq q3 answer, 6 guidanceAnswers, inquiry consultationNotice, llms consultationNotice, 013 + 018 CTAs.
+a#41 P2 003 emergency numbers: "ในไต้หวัน … 119 (รถพยาบาลและดับเพลิง) … 110 (ตำรวจ) หรือโทร 112 จาก
+     โทรศัพท์มือถือ หมายเลขเหล่านี้เป็นหมายเลขฉุกเฉินของไต้หวัน มิใช่ของประเทศอื่น" (R9; neutral, not "ไทย").
+a#42 P2 003 ISO dates → "29 พฤษภาคม ค.ศ. 2026" / "1 กรกฎาคม ค.ศ. 2026". Checker still PASS.
+a#43 P2 007 ×3 "ที่ 4 ปี 112 (112年憲判字第4號)" → "…(ค.ศ. 2023; 112年憲判字第4號)".
+a#44 P2 006 "ในทำนองเดียวกัน ในประเทศเกาหลีใต้" → "เพื่อเปรียบเทียบ: ในประเทศเกาหลีใต้".
+a#45 P2 English job titles removed from all five th roles ("(Managing Attorney)", "(Taiwan Attorney)",
+     "(Paralegal)", "(Korea Operations Manager)", "(Partner CPA)"). Per ACCEPTED the wording stays
+     "ทนายความผู้บริหาร" (a#34's ทนายความผู้จัดการสำนักงาน NOT applied — supervisor decision).
+a#46 P2 003 "การแบ่งปันจาก WEI ทนายความไต้หวัน" → "ข้อมูลจากทนายความ Wei Tseng".
+a#47 P2 005 list markers "A." / "B." → Thai "ก." / "ข." and the space before ":" removed; the
+     cross-reference "ตามข้อ B ข้างล่าง" → "ตามข้อ ข. ข้างล่าง". Thai letters were used instead of
+     "1)/2)" so the checker's numbers lane gains no digits.
+a#48 P2 003 "3*30*1,000=90,000" → "จึงเท่ากับ 90,000 ดอลลาร์ไต้หวันใหม่ (TWD) กล่าวคือ วันละ 1,000 …
+     คูณด้วย 30 วัน คูณด้วย 3 เดือน" (same digit multiset).
+a#49 P2 services chrome → "สาขางานที่ให้บริการ" (nav.services, pages.services.eyebrow, the two page
+     references in home §2/§3) and pages.services.title → "สาขางานที่สำนักงานให้บริการ" (ACCEPTED).
+a#50 P2 001 "## 5. ภาษีและความตกลง…" → "## 5. ภาษี และหมายเหตุเฉพาะประเทศเกี่ยวกับความตกลง…".
+
+## Rows applied — part b (th-b.md)
+
+b#1  P1 010 image alts/link labels ×4 "ศาลชั้นต้นให้ชดใช้" → "ศาลชั้นต้นพิพากษาให้ฝ่ายสถานออกกำลังกาย
+     ชดใช้"; line 22 "ได้มีคำพิพากษาศาลชั้นต้นเมื่อ…" → "ได้มีคำพิพากษาเมื่อ…" (= b#43).
+     Amount stays "TWD 1.57 ล้าน" — columns-en/010 writes "TWD 1.57 million" in the same alts; the
+     ACCEPTED "TWD 1,570,000" format applies to the team bio, not this article's press-figure alts.
+b#3  P1 013 "สามารถแสดงความคิดเห็นหรือติดต่อมาได้ทุกเมื่อ" → "โปรดใช้หน้าติดต่อของสำนักงาน ทั้งนี้
+     สำนักงานไม่ได้รับประกันระยะเวลาในการตอบกลับ และการปรึกษากับทนายความดำเนินการเฉพาะภาษาอังกฤษ
+     ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี". NOTE: the reviewer's "ไม่รับปรึกษาเป็นภาษาไทย" would trip
+     the checker's `th-consult-lang` lane — the four-language lock is stated positively instead.
+b#4  P1 014 §1 body no longer opens with the FAQ "ไม่ใช่": "ข้อตกลงระยะเวลาทำงานขั้นต่ำมิได้ตกเป็นโมฆะ
+     โดยอัตโนมัติ ตามมาตรา 15-1 …". The frontmatter FAQ keeps "ไม่ใช่" (reviewer: FAQ paste is fine).
+b#5  P1 015 ×3 "ประเภทกิจการที่เป็นวัตถุของการตรวจสอบด้วยตนเอง" → "ประเภทกิจการที่ต้องตรวจสอบเอง"
+     (ACCEPTED's exact string; see disagreement note below).
+b#6  P1 015 "ขอเชิญสอบถามทนายความในไต้หวันได้เสมอ" → "โปรดใช้หน้าติดต่อของสำนักงาน ทั้งนี้ สำนักงาน
+     ไม่ได้รับประกันระยะเวลาในการตอบกลับ".
+b#7  P1 經濟部投資審議司 unified to "กรมพิจารณาการลงทุน กระทรวงเศรษฐกิจ" (ACCEPTED: กรม, not คณะกรรมการ):
+     8 × "สำนักพิจารณาการลงทุน" (001, 011, 013, 017) + 1 × "คณะกรรมการพิจารณาการลงทุน" (018) = 9.
+b#8  P2 013 "จัดตั้งบริษัทในไต้หวันได้สำเร็จ และได้รับวีซ่าทำงาน" → "…ในไต้หวันและได้รับวีซ่าทำงาน".
+b#9  P2 013 "แต่มิได้เป็นการตรวจสอบที่เข้มงวดจนเกินไป" → "แต่มิได้ใช้เกณฑ์เดียวเป็นการชี้ขาด และมิได้
+     ชี้ขาดจากวุฒิการศึกษาเพียงอย่างเดียว".
+b#10 P2 013 "ระเบียบการลงทุนของคนต่างชาติ (外國人投資條例)" → "กฎหมายว่าด้วยการลงทุนของคนต่างชาติ (…)".
+b#11 P2 013 "ระยะเวลาตกแต่งภายใน (裝潢期間)" → "ระยะเวลายกเว้นค่าเช่าสำหรับตกแต่งร้าน (裝潢期間)".
+b#12 P2 013 "**คำแนะนำ**：" → "**คำแนะนำ:**".
+b#13 P2 013 emoji line → "คำถามและคำตอบต่อไปนี้อาจใช้เป็นแนวทางทั่วไปสำหรับ…" (emoji removed; the
+     blank padding blocks are kept so the checker's block count is unchanged).
+b#14 P2 010 "ผู้เขียนได้เข้าเป็นทนายผู้รับมอบอำนาจ" → "ผู้เขียนได้รับมอบหมายเป็นทนายความผู้รับมอบอำนาจ".
+b#15 P2 010 "ในคดีหมายเลข 109 年度消字第 7 號" → "ในคดีหมายเลข 109 ปีปฏิทินสาธารณรัฐจีน
+     (ค.ศ. 2020; 109年度消字第7號)". The extra digit passes the checker's numbers lane.
+b#16 P2 010 title + H1 interpunct "·" → spaces + "และ"; 003 title + H1 likewise (= a#37).
+b#17 P2 011 ×2 "ไม่จำเป็นต้องจัดตั้งเสมอไป" → "ไม่จำเป็นต้องจัดตั้งบริษัทลูกหรือสาขาเสมอไป".
+b#18 P2 011 "ผู้ประกอบการฝ่ายไต้หวัน" → "ผู้ประกอบการในไต้หวัน".
+b#19 P2 related-link label ×13 "[ประเภทเรื่องที่สำนักงานรับดำเนินการ](/th/services)" →
+     "[สาขางานที่ให้บริการ](/th/services)" (ACCEPTED wording; targets unchanged).
+b#20 P2 015 "**Q. ทุกประเภทกิจการ…" → "**ทุกประเภทกิจการ…".
+b#21 P2 015 "1 มกราคม 2023" → "1 มกราคม ค.ศ. 2023".
+b#22 P2 015 "ดังนั้น โปรดระมัดระวัง!" → "ดังนั้นควรตรวจสอบผลก่อนทำสัญญาเช่าและก่อนยื่นจดทะเบียนบริษัท".
+b#23 P2 014 ×7 "โบนัสคงอยู่ (留任獎金)" → "โบนัสเพื่อรักษาการจ้าง (留任獎金)".
+b#24 P2 016 title + H1 "ครอบครัวที่ยังอยู่" → "ครอบครัวของผู้ถึงแก่ความตาย".
+b#26 P2 016 "ทรัพย์สินฝ่ายบวก (積極財產) และหนี้สินฝ่ายลบ (消極財產)" → "ทรัพย์สิน (積極財產) และหนี้สิน (消極財產)".
+b#27 P2 "เว็บท่าภาษี (稅務入口網)" ×3 (016) → "เว็บพอร์ทัลภาษี (…)"; same calque fixed in 004's
+     "เว็บท่าการลงทุนไต้หวัน (Invest Taiwan)" → "เว็บพอร์ทัลการลงทุนไต้หวัน (…)".
+b#28 P2 016 §7 body "หาได้เป็นเช่นนั้นไม่ ตามมาตรา 1087…" → "บิดามารดาจะใช้ทรัพย์สินที่บุตรผู้เยาว์
+     ได้รับมาโดยการรับมรดกได้โดยอิสระหาได้ไม่ ตามมาตรา 1087…" (FAQ paste kept).
+b#29 P2 017 §1 body no longer opens with "มิใช่เช่นนั้นเสมอไป"; first sentence is now self-standing
+     ("ความจำเป็นในการมีใบอนุญาตธุรกิจขนส่งสินค้าด้วยรถยนต์จึงมิได้ถูกกำหนดโดยชื่อ…"). FAQ kept.
+b#30 P2 017 §4 sub-heading now "สถานะการพำนัก (居留)"; the 居留 sweep covers the rest (= a#39).
+b#31 P2 017 ×7 "สมาคมการค้าประเภทเดียวกัน (同業公會)" → "สมาคมผู้ประกอบการประเภทเดียวกัน (…)".
+b#32 P2 018 ×3 "บุคลิกภาพทางกฎหมาย" → "สภาพนิติบุคคล".
+b#33 P2 018 ×2 "ผู้ตรวจการ" → "ผู้ตรวจสอบกิจการ (監察人)".
+b#34 P2 018 "ลูกจ้างประกันแรงงาน 100 คน" → "มีลูกจ้างที่เข้าประกันสังคมลูกจ้าง (勞保) 100 คน".
+b#35 P2 018 "30 ล้านเหรียญไต้หวันใหม่ … 100 ล้านเหรียญ" → "TWD 30 ล้าน … TWD 100 ล้าน".
+b#36 P2 018 "คนต่างด้าว"/"พนักงานต่างด้าว" → "คนต่างชาติ"/"พนักงานต่างชาติ" (3, incl. 1 in 007);
+     "ใบอนุญาตทำงาน (工作許可)" gloss added; "บัตรผู้พำนัก" → "บัตรพำนักสำหรับคนต่างชาติ (外僑居留證, ARC)".
+b#37 P2 018 §8 heading de-colloquialised ("ในการติดต่อครั้งแรก เตรียมภาพรวมการดำเนินงานก็เพียงพอ…")
+     and the four-language lock added to the §8 body.
+b#38 P2 018 ×2 "สรุปไม่ได้เพียงเพราะลูกค้าอยู่ในไต้หวัน ต้องดูความต้องการ…" → "ไม่อาจสรุปได้เพียงเพราะ
+     มีลูกค้าอยู่ในไต้หวัน ต้องพิจารณาความต้องการ…" (FAQ + body).
+b#39 P2 018 子公司 / 分公司 glosses restored in §2 lead and in both table rows.
+b#40 P2 018 ×2 "เข้าตลาด" → "เข้าตลาดหลักทรัพย์".
+b#41 P2 018 "การตรวจทุนโดยนักบัญชี" → "การตรวจทุนโดยผู้สอบบัญชี".
+b#42 P2 018 "สำนักพัฒนาพาณิชย์ กระทรวงเศรษฐกิจ" → "กรมพาณิชย์ กระทรวงเศรษฐกิจ (經濟部商業司)"
+     (กรม for 司, consistent with the ACCEPTED name for 投資審議司; reviewer suggested สำนักพาณิชย์).
+b#43 P2 010 doubled "ศาลชั้นต้น" removed (folded into b#1).
+b#44 P2 015 broken quotes before the Chinese gloss cleaned; "กรุงไทเป" → "นครไทเป" in that label.
+b#45 P2 013 "บัตรถิ่นที่อยู่ … (外僑居留證, ARC)" → "บัตรพำนัก …" (part of the a#39 sweep).
+b#46 P2 ×7 "[ติดต่อสอบถาม](/th/contact)" → "[ติดต่อสำนักงาน](/th/contact)";
+     "[ติดต่อสอบถามเพื่อขอคำปรึกษา](/th/contact)" → "[วิธีติดต่อสำนักงาน](/th/contact)".
+
+## Rows skipped (with reason)
+
+a#15, b#2  Skipped per ACCEPTED + the lane brief: the percent-encoded Korean-blog "advanced-1" link in
+           005 and the Invest Taiwan `lang=jpn` link in 011 are fixed centrally by the supervisor
+           (link parity). Frontmatter `url:` values with Hangul left untouched (canonical metadata).
+a#34       Skipped per ACCEPTED — representativeTitle / roles / qualificationSentence keep
+           "ทนายความผู้บริหาร"; only the English "(Managing Attorney)" bracket was removed (a#45).
+
+## Systemic sweeps (pattern → instances changed, columns only unless noted)
+
+居留 → พำนัก (residence-permit sense only)                     33  (+ pack services §1, practice-area name)
+Related-link label "ประเภทเรื่องที่…" → "สาขางานที่ให้บริการ"    13
+"ติดต่อสอบถาม" link labels → "ติดต่อสำนักงาน" / "วิธีติดต่อ…"     7
+"กลุ่มงาน" → "ประเภทงาน" (guidance pack)                       10
+經濟部投資審議司 → "กรมพิจารณาการลงทุน กระทรวงเศรษฐกิจ"            9
+同業公會 → "สมาคมผู้ประกอบการประเภทเดียวกัน"                      7
+留任獎金 → "โบนัสเพื่อรักษาการจ้าง"                                7
+未成年子女權利義務之行使或負擔 → "อำนาจปกครองบุตรผู้เยาว์"             4 (+1 in the pack)
+"(中文)" on first mention of the four consultation languages   13 (pack + answers + inquiry + llms + 013/018)
+"เฉพาะ" added to the consultation-language sentence            8 (contact bullet + 6 answers + inquiry)
+入口網 → "เว็บพอร์ทัล"                                           4
+ผม → ดิฉัน (attorney first person)                            10
+"บุคลิกภาพทางกฎหมาย" → "สภาพนิติบุคคล"                          3
+"คนต่างด้าว"/"ต่างด้าว" → "คนต่างชาติ"/"ต่างชาติ"                  4
+Fullwidth "：" → ":" in running text (008 ×3, 013 ×1)           4  (008's frontmatter `url:` untouched)
+CJK interpunct "·" → Thai separators (003, 010 titles + H1)    4 marks in 4 lines
+"ผู้สอบบัญชีพันธมิตร" → "หุ้นส่วนผู้สอบบัญชี"                      5 (pack/team/answers)
+English role brackets removed (th roles)                       5
+
+012 required no change (reviewer: strongest file in part b); 002 changed only by the sweeps.
+
+## Checker constraints found (wording forced by the gate, not by the reviewer)
+
+- `th-immediate` forbids /ตอบกลับทันที/ — the reviewer's suggested "ไม่รับประกันว่าจะตอบกลับทันที"
+  (a#7, b#3, b#6) FAILED the checker; every such CTA now says
+  "สำนักงานไม่ได้รับประกันระยะเวลาในการตอบกลับ" instead.
+- `th-consult-lang` forbids /ปรึกษา(ได้)?เป็นภาษาไทย/ — the reviewer's "ไม่รับปรึกษาเป็นภาษาไทย" (b#3)
+  would trip it; replaced by the positive four-language statement.
+- `th-cost-guarantee` forbids /รับประกันผล/, so the R3 hedges use "มิใช่ผลที่รับประกันได้".
+- a#47's list markers were written as Thai "ก./ข." rather than "1)/2)" to avoid adding digits to the
+  numbers lane. All other digits were preserved verbatim; 003's ISO→Thai date and 010's added
+  "ค.ศ. 2020" were verified to still PASS.
+- Team-bio figure: "TWD 1.57M" had to stay byte-identical (see below).
+
+## Rows I could not apply / disagree with (not applied)
+
+1. a#38 "TWD 1.57M" → "TWD 1.57 ล้าน" in the team bio — NOT APPLIED.
+   `src/data/__tests__/guidance-team-bios.test.ts` asserts every term of
+   `GUIDANCE_BIO_PRESERVED_TERMS` (which includes the literal "TWD 1.57M") byte-identical for
+   vi/id/th/fil against the canonical `teamContent.en`. Writing "TWD 1,570,000" (the ACCEPTED b#1
+   format) or "1.57 ล้าน" fails that test; the fix would be to change the shared constant in
+   `international-guidance-team.ts`, which is outside this lane (it would relax the rule for vi/id/fil
+   too). The a#1/b#1 MEANING fix is applied — only the figure's surface form is unchanged.
+   Supervisor decision needed. (Locales outside the 4-locale test, e.g. hi, already write "TWD 1,570,000".)
+2. a#17 llms `discoveryNotice` — applied in MODIFIED form. The reviewer read the source as German
+   (Empfehlung/Anzeige → "การแนะนำ / การลงโฆษณา"), but the canonical sibling text is the Indonesian
+   "peringkat pencarian, dukungan, rekomendasi AI, atau jaminan untuk ditampilkan" = ranking,
+   endorsement, AI recommendation, guaranteed display. The reviewer's rewrite would also have said
+   "การแนะนำ การแนะนำโดย AI" twice. Written as:
+   "ไม่ได้รับประกันอันดับในผลการค้นหา การรับรองสนับสนุน การแนะนำโดย AI หรือการแสดงผลในหน้าใด".
+3. b#5 "ประเภทกิจการที่ต้องตรวจสอบเอง" (ACCEPTED's string) — applied verbatim, but I believe it keeps
+   exactly the ambiguity the reviewer flagged: 主動查詢 is the Commerce Office querying on its own
+   initiative, and "ตรวจสอบเอง" can still be read as the applicant's self-check, especially in the
+   standalone image caption (015 L70/L72) where no subject is present. The body sentence right after
+   the list does disambiguate it ("…คือประเภทกิจการที่สำนักงานพาณิชย์จะตรวจสอบเพิ่มเติมเองในระหว่าง
+   การพิจารณาคำขอ"). The reviewer's "ประเภทกิจการที่สำนักงานพาณิชย์ตรวจสอบเพิ่มเติมเอง" is clearer.
+   Supervisor's call to keep or revise.
+4. b#42 — reviewer proposed "สำนักพาณิชย์" for 商業司 while ACCEPTED fixes 投資審議司 (the same 司 rank)
+   as "กรม". I used "กรมพาณิชย์ … (經濟部商業司)" so the two 司 bodies are named consistently inside 018.
+5. b#1's "TWD 1,570,000" was NOT applied to column 010's image alts: columns-en/010 writes
+   "TWD 1.57 million" there (it is the press headline figure, not the judgment sum, which the same
+   article states separately as TWD 1,579,589). Changing it would break parity with the English source.
+
+## §Verify (verbatim)
+
+=== node scripts/check-column-translation.mjs --dir src/content/columns-th --lang th 2>&1 | tail -8
+forbidden      PASS
+hanzi          PASS   han=37
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+
+=== grep -rn "[변호사 검수 필요]" src/content/columns-th src/data | wc -l
+       0
+
+=== npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+=== npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+=== git status --short | wc -l
+      24
+
+(24 = 22 modified source files + the untracked `.tmp-th/` helper dir + the untracked WO file.)

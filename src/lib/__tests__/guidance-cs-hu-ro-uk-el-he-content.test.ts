@@ -223,7 +223,8 @@ describe('cs/hu/ro/uk/el/he attorney gender', () => {
     expect(allText('ro')).not.toMatch(/\bavocatul Wei Tseng/i);
     expect(allText('el')).toMatch(/η δικηγόρος Wei Tseng|τη δικηγόρο Wei Tseng/);
     expect(allText('el')).not.toMatch(/ο δικηγόρος Wei Tseng|τον δικηγόρο Wei Tseng/);
-    expect(allText('uk')).toMatch(/Перевірила адвокат Wei Tseng/);
+    expect(allText('uk')).toMatch(/Перевірила адвокатка Wei Tseng/);
+    expect(allText('uk')).not.toMatch(/\bАдвокат Wei Tseng|керівним адвокатом/);
     expect(allText('he')).toMatch(/עורכת דין|עורכת הדין/);
     // Hungarian has no grammatical gender; only require the name to be present.
     expect(allText('hu')).toMatch(/Wei Tseng/);

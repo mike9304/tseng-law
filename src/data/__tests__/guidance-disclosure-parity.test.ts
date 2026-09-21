@@ -315,7 +315,7 @@ const ELEMENTS = {
     cs: /krokem porady|krok porady/,
     hu: /tanácsadás lépése/,
     ro: /pasul consultanței/,
-    uk: /кроком консультації/,
+    uk: /не є консультацією/,
     el: /βήμα της συμβουλευτικής/,
     he: /שלב הייעוץ/,
   },

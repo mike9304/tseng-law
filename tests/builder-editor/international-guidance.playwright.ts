@@ -958,7 +958,7 @@ test.describe('O29 og:locale across the eight public locales', () => {
     bn: 'bn_BD',
     ur: 'ur_PK',
     fa: 'fa_IR',
-    my: 'th_TH', // SCAFFOLD(th)
+    my: 'my_MM',
     ta: 'ta_IN',
     ne: 'ne_NP',
     km: 'th_TH', // SCAFFOLD(th)

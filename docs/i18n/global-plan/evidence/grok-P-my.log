@@ -1,9 +1,99 @@
-[WO start 2026-09-22 05:17:35]
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
-Retry attempt 1...
-WO-P-my is done. Locale `my` is natural Burmese; every `SCAFFOLD(th)` marker for `my` is gone.
+WO-P-my — Burmese guidance pack + UI strings (locale my)
+Workspace: /Users/son7/Projects/tseng-law-new-my-20260922
+No git add/commit/push/stash/checkout. Helpers in .tmp-my/ only.
 
-**Verify:** grep `0`, `TSC_OK`, **1096 passed / 5 failed**. The five failures are other still-scaffolded locales (shared llms notices, root catalog size, answers map 27 vs 45). No `my` row failed.
+## Files touched
+src/data/international-guidance-southeast-central.ts
+src/data/international-guidance-team.ts
+src/data/international-guidance-offices.ts
+src/data/international-guidance-answers.ts
+src/data/international-inquiry-copy.ts
+src/data/multilingual-international-v2.ts
+src/data/team-name.ts
+src/lib/llms-txt.ts
+src/lib/columns.ts
+src/lib/public-language-registry.ts
+src/components/ColumnsGrid.tsx
+src/components/CinematicOpening.tsx
+src/components/decorative-video-controls.ts
+src/data/__tests__/guidance-disclosure-parity.test.ts
+src/data/__tests__/guidance-office-facts-sync.test.ts
+src/data/__tests__/international-guidance-privacy-disclosure.test.ts
+src/data/__tests__/column-alternate-expectations.ts
+src/components/__tests__/columns-grid-guidance-labels.test.tsx
+src/components/__tests__/multilingual-international-v2.test.tsx
+tests/builder-editor/international-guidance.playwright.ts
 
-**Report:** `docs/i18n/global-plan/evidence/grok-P-my.log` — files, verbatim verify output, 10 legal terms with Chinese glosses, nav labels all ≤ 14. No git add/commit/push.
-=== end code=0 2026-09-22 05:57:10 ===
+Untracked helpers (not source): .tmp-my/
+WO file already untracked: docs/i18n/global-plan/WO-P-my.txt
+
+SCAFFOLD(th) locale my markers removed. Remaining SCAFFOLD comments in those files are other locales (ne, km, mn, ta, …).
+
+## Terminology (Burmese + Traditional-Chinese gloss kept)
+နေထိုင်ခွင့် (居留)
+အလုပ်လုပ်ခွင့် (工作許可)
+နုတ်ထွက်ကြေး (資遣費)
+အလုပ်သမားစာချုပ် (勞動契約)
+ကုန်အမှတ်တံဆိပ် (商標)
+တီထွင်မှုမူပိုင်ခွင့် (專利) — heading ဉာဏပစ္စည်းမူပိုင်ခွင့် vs patent sense
+ကွာရှင်းခြင်း (離婚)
+အမွေဆက်ခံရေး (繼承)
+အိမ်ထောင်စုမှတ်ပုံတင် (戶籍)
+တွေ့ဆုံဆက်သွယ်ခွင့် (會面交往)
+
+Cities: တိုင်ပေ (臺北)၊ ကောင်းရှုံ (高雄)၊ ထိုင်ချုံ (臺中)၊ ပင်တုံ (屏東)
+Consultation languages (order kept): အင်္ဂလိပ်၊ တရုတ် (中文)၊ ဂျပန်နှင့် ကိုရီးယား
+Autonym: မြန်မာ
+Attorney: ရှေ့နေမ Wei Tseng (曾雋崴) — feminine where Burmese marks gender
+Address: သင် / ကျွန်ုပ်တို့ / ရုံး; quotes “ ”; Arabic numerals; years as 2016/2017 ခုနှစ်
+FAQ Burmese-advice: မရပါ။
+menuLabel: စာမျက်နှာများ (not "Menu")
+eyebrows: အဖွဲ့ / ရုံးများ
+columns All filter: အားလုံး (inside viewAll အားလုံးကြည့်ရန်)
+columnsReadMoreLabel: ဆက်ဖတ်ရန် (byte-identical pack ↔ ColumnsGrid)
+Korea/Japan: ကိုရီးယား / ဂျပန်
+languageName / GUIDANCE_HOME_PATHS / llms English name: မြန်မာ / Burmese
+og:locale my_MM; hreflang my
+team-name: Hovering International Team (guidance-locale brand, unchanged)
+
+Nav (JS code-point length ≤ 14, all fit):
+ပင်မ 4 · ဝန်ဆောင်မှု 11 · ရုံးအကြောင်း 12 · ရှေ့နေများ 10 · ကုန်ကျစရိတ် 11
+ဆက်သွယ် 7 · မေးခွန်း 8 · ကိုယ်ရေး 8 · သတိပေးချက် 10 · ဆောင်းပါး 9
+
+Lawyers page title/description = guidanceTeamCopy.my:
+Hovering ၏ နိုင်ငံတကာအဖွဲ့
+Hovering ၏ ရှေ့နေများ၊ လုပ်ငန်းစီမံခန့်ခွဲမှုနှင့် တွဲဖက်စာရင်းကိုင်၏ ကိုယ်ရေးအချက်အလက်များ။
+
+Could not fit: none. No nav label exceeded 14 characters.
+
+## §Verify
+cd /Users/son7/Projects/tseng-law-new-my-20260922 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+grep -rn "SCAFFOLD" src tests | grep -cE "^\S+:[0-9]+:\s*'?my'?:|locale my"
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+npx vitest run src/data/__tests__/ src/lib/__tests__/guidance-chrome-language.test.ts src/lib/__tests__/international-guidance-answers.test.ts "src/app/[locale]/__tests__/llms-discovery.test.tsx" src/components/__tests__/columns-grid-guidance-labels.test.tsx src/components/__tests__/multilingual-international-v2.test.tsx --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+git status --short | wc -l
+
+--- verbatim ---
+0
+TSC_OK
+   × guidance locale llms.txt catalogs > writes a distinct notice set for each guidance language 3ms
+   × root llms.txt guidance catalog links > stays inside the 8 KiB root budget and the documented grammar 1ms
+   × root llms.txt guidance catalog links > lists every site-locale catalog and every guidance catalog 0ms
+   × root llms.txt guidance catalog links > labels each guidance catalog in its own language without widening consultation languages 1ms
+   × guidanceAnswers > covers every guidance locale x 6 page keys 3ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+ Test Files  2 failed | 45 passed (47)
+      Tests  5 failed | 1096 passed (1101)
+      22
+--- end verbatim ---
+
+Pass on my: grep = 0, TSC_OK, all my-row tests green (including llms.txt “quotes the published my pages verbatim in the notice block”).
+
+## Acceptable non-my failures (other new locales still scaffolded)
+1. src/app/[locale]/__tests__/llms-discovery.test.tsx
+   - distinct notice set: expected 135 unique, got 84 — remaining scaffolded locales still share cloned Thai/Hindi/etc notices; my notices are unique and quoted verbatim.
+   - root llms.txt 8 KiB budget + “lists every site-locale catalog” + “labels each guidance catalog”: GUIDANCE_LOCALES_4 already has 45 locales; untranslated siblings still share labels/notices and inflate the root catalog. Not a my-copy failure.
+2. src/lib/__tests__/international-guidance-answers.test.ts
+   - GUIDANCE_LOCALES length 27 vs GUIDANCE_LOCALES_4 length 45: answers map not yet filled for remaining new locales. my answers keys are present and sourced at /my/… (not /th/…).
+
+No test failed on a my row.

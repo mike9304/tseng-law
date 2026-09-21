@@ -964,32 +964,32 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'huang-shengping': 'حسابدار رسمی شریک (Partner CPA)',
     },
   },
-  my: { // SCAFFOLD(th)
-    label: 'ทีมงานของเรา',
-    title: 'ทีมงานระหว่างประเทศ Hovering',
+  my: {
+    label: 'အဖွဲ့',
+    title: 'Hovering ၏ နိုင်ငံတကာအဖွဲ့',
     description:
-      'ประวัติของทนายความ ผู้จัดการงาน และหุ้นส่วนผู้สอบบัญชีของ Hovering',
-    representativeTitle: 'ทนายความผู้บริหาร',
-    teamTitle: 'ทนายความและเจ้าหน้าที่',
-    partnerTitle: 'หุ้นส่วนผู้สอบบัญชี',
-    introLabel: 'แนะนำ',
-    educationLabel: 'การศึกษา',
-    experienceLabel: 'ประสบการณ์',
-    photoAltPrefix: 'ภาพ',
-    workingLanguagesLabel: 'ภาษาที่ใช้ทำงาน',
-    fullProfileLabel: 'ประวัติฉบับเต็ม (ภาษาอังกฤษ)',
-    keyFactsHeading: 'ทนายความ Wei Tseng — ข้อมูลพื้นฐาน',
-    qualificationLabel: 'คุณสมบัติและสังกัด',
+      'Hovering ၏ ရှေ့နေများ၊ လုပ်ငန်းစီမံခန့်ခွဲမှုနှင့် တွဲဖက်စာရင်းကိုင်၏ ကိုယ်ရေးအချက်အလက်များ။',
+    representativeTitle: 'အမှုဆောင်ရှေ့နေမ',
+    teamTitle: 'ရှေ့နေများနှင့် ဝန်ထမ်းများ',
+    partnerTitle: 'တွဲဖက်စာရင်းကိုင်',
+    introLabel: 'မိတ်ဆက်',
+    educationLabel: 'ပညာရေး',
+    experienceLabel: 'အတွေ့အကြုံ',
+    photoAltPrefix: 'ဓာတ်ပုံ',
+    workingLanguagesLabel: 'လုပ်ငန်းသုံး ဘာသာစကားများ',
+    fullProfileLabel: 'ကိုယ်ရေးအပြည့်အစုံ (အင်္ဂလိပ်ဘာသာဖြင့်)',
+    keyFactsHeading: 'ရှေ့နေမ Wei Tseng — အခြေခံအချက်များ',
+    qualificationLabel: 'အရည်အချင်းနှင့် ရုံး',
     qualificationSentence:
-      '{name} เป็นทนายความที่มีคุณสมบัติประกอบวิชาชีพในไต้หวัน และเป็นทนายความผู้บริหารของ {firm}',
-    practiceLabel: 'สาขาที่รับดำเนินการหลัก',
-    consultationLanguagesLabel: 'ภาษาที่ใช้ให้คำปรึกษา',
+      '{name} သည် ထိုင်ဝမ်တွင် လုပ်ကိုင်ခွင့်ရှိသော ရှေ့နေမဖြစ်ပြီး {firm} ၏ အမှုဆောင်ရှေ့နေမဖြစ်သည်။',
+    practiceLabel: 'အဓိကနယ်ပယ်များ',
+    consultationLanguagesLabel: 'တိုင်ပင်ဆွေးနွေးသည့် ဘာသာစကားများ',
     roles: {
-      'tseng-junwei': 'ทนายความผู้บริหารในไต้หวัน',
-      'chang-rongxuan': 'ทนายความในไต้หวัน',
-      'chang-fangyu': 'ผู้ช่วยงานกฎหมาย',
-      'son-jungmin': 'ผู้จัดการงานประเทศเกาหลี',
-      'huang-shengping': 'หุ้นส่วนผู้สอบบัญชี',
+      'tseng-junwei': 'ထိုင်ဝမ်ရှိ အမှုဆောင်ရှေ့နေမ',
+      'chang-rongxuan': 'ထိုင်ဝမ်ရှိ ရှေ့နေ',
+      'chang-fangyu': 'ဥပဒေအကူ',
+      'son-jungmin': 'ကိုရီးယားလုပ်ငန်း စီမံခန့်ခွဲမှု',
+      'huang-shengping': 'တွဲဖက်စာရင်းကိုင်',
     },
   },
   ta: {
@@ -1426,7 +1426,7 @@ export const guidanceLanguageNames: Record<GuidanceLocale, Record<string, string
   bn: { Korean: 'কোরীয়', Chinese: 'চীনা', Japanese: 'জাপানি' },
   ur: { Korean: 'کوریائی', Chinese: 'چینی', Japanese: 'جاپانی' },
   fa: { Korean: 'کره‌ای', Chinese: 'چینی', Japanese: 'ژاپنی' },
-  my: { Korean: 'ภาษาเกาหลี', Chinese: 'ภาษาจีน', Japanese: 'ภาษาญี่ปุ่น' }, // SCAFFOLD(th)
+  my: { Korean: 'ကိုရီးယား', Chinese: 'တရုတ်', Japanese: 'ဂျပန်' },
   ta: { Korean: 'கொரியன்', Chinese: 'சீனம்', Japanese: 'ஜப்பானியம்' },
   ne: { Korean: 'कोरियाली', Chinese: 'चिनियाँ', Japanese: 'जापानी' },
   km: { Korean: 'ภาษาเกาหลี', Chinese: 'ภาษาจีน', Japanese: 'ภาษาญี่ปุ่น' }, // SCAFFOLD(th)
@@ -1703,13 +1703,13 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Visa and residency': 'روادید و اقامت',
     'Family and labor disputes': 'اختلافات خانوادگی و کار',
   },
-  my: { // SCAFFOLD(th)
-    'Taiwan company setup': 'การจัดตั้งบริษัทในไต้หวัน',
-    'Taiwan investment counsel': 'ที่ปรึกษากฎหมายด้านการลงทุนในไต้หวัน',
-    'Civil litigation and damages': 'คดีแพ่งและค่าสินไหมทดแทน',
-    'Trademark and patent filings': 'การยื่นจดทะเบียนเครื่องหมายการค้าและสิทธิบัตร',
-    'Visa and residency': 'วีซ่าและการพำนัก',
-    'Family and labor disputes': 'ข้อพิพาทครอบครัวและแรงงาน',
+  my: {
+    'Taiwan company setup': 'ထိုင်ဝမ်တွင် ကုမ္ပဏီတည်ထောင်ခြင်း',
+    'Taiwan investment counsel': 'ထိုင်ဝမ် ရင်းနှီးမြှုပ်နှံမှု ဥပဒေအကြံပေးခြင်း',
+    'Civil litigation and damages': 'တရားမမှုနှင့် လျော်ကြေး',
+    'Trademark and patent filings': 'ကုန်အမှတ်တံဆိပ်နှင့် တီထွင်မှုမူပိုင်ခွင့် လျှောက်ထားခြင်း',
+    'Visa and residency': 'ဗီဇာနှင့် နေထိုင်ခွင့်',
+    'Family and labor disputes': 'မိသားစုနှင့် အလုပ်သမားအငြင်းပွားမှု',
   },
   ta: {
     'Taiwan company setup': 'தைவானில் நிறுவனம் அமைத்தல்',
@@ -3712,16 +3712,16 @@ export const guidanceTeamBios: Record<
       experience: ['Chinshin CPA Firm'],
     },
   },
-  my: { // SCAFFOLD(th)
+  my: {
     'tseng-junwei': {
       intro: [
-        'สำนักงานรับดำเนินการเรื่องของบริษัทและบุคคลในไต้หวัน โดยใช้ภาษาอังกฤษ ภาษาญี่ปุ่น ภาษาเกาหลี และภาษาจีน',
-        'เคยเป็นทนายความให้แก่นักศึกษาชาวเกาหลีในคดีเรียกค่าเสียหายจากการบาดเจ็บที่ฟิตเนส และศาลชั้นต้นพิพากษาให้นักศึกษาผู้นั้นได้รับค่าเสียหาย TWD 1.57M',
+        'ရုံးသည် ထိုင်ဝမ်တွင် ကုမ္ပဏီနှင့် ပုဂ္ဂိုလ်ရေးကိစ္စများကို အင်္ဂလိပ်၊ ဂျပန်၊ ကိုရီးယားနှင့် တရုတ်ဘာသာဖြင့် ဆောင်ရွက်သည်။',
+        'သူမသည် ကြံ့ခိုင်ရေးရုံတွင် ထိခိုက်ဒဏ်ရာရမှု လျော်ကြေးအမှုတွင် ကိုရီးယားကျောင်းသားတစ်ဦးကို ကိုယ်စားပြုခဲ့ပြီး ပထမအဆင့် တရားရုံးက TWD 1.57M ချမှတ်ခဲ့သည်။',
       ],
       education: [
-        'ปริญญาโท (M.S.), Institute of Finance, National Taiwan University',
-        'ปริญญาตรี (B.A.) สองสาขาวิชา ด้านกฎหมายและการเงิน, National Chengchi University',
-        'นักศึกษาแลกเปลี่ยน, Kobe University และ Waseda University',
+        'မဟာသိပ္ပံဘွဲ့ (M.S.), Institute of Finance, National Taiwan University',
+        'ဘွဲ့ (B.A.) ဥပဒေနှင့် ဘဏ္ဍာရေး နှစ်ဘာသာတွဲ, National Chengchi University',
+        'Kobe University နှင့် Waseda University တွင် ဖလှယ်ကျောင်းသူ',
       ],
       experience: [
         'Trend Law Office',
@@ -3731,42 +3731,42 @@ export const guidanceTeamBios: Record<
     },
     'chang-rongxuan': {
       intro: [
-        'เคยปฏิบัติงานที่ Ministry of Education, Legal Affairs Division โดยเน้นข้อพิพาททางปกครองและทางแพ่ง',
-        'มีประสบการณ์ในเรื่องที่เกี่ยวกับมหาวิทยาลัย สิทธิของอาจารย์ และการร้องทุกข์ทางปกครอง',
+        'ယခင်က Ministry of Education, Legal Affairs Division တွင် အုပ်ချုပ်ရေးနှင့် တရားမအငြင်းပွားမှုကို အလေးထား၍ တာဝန်ထမ်းဆောင်ခဲ့သည်။',
+        'တက္ကသိုလ်များ၊ ဆရာအခွင့်အရေးနှင့် အုပ်ချုပ်ရေးတိုင်ကြားမှုများနှင့် ပတ်သက်သော ကိစ္စများတွင် အတွေ့အကြုံ ရှိသည်။',
       ],
-      education: ['นิติศาสตรบัณฑิต (LL.B.), National Chung Hsing University'],
+      education: ['ဥပဒေဘွဲ့ (LL.B.), National Chung Hsing University'],
       experience: [
         'Ministry of Education, Legal Affairs Division',
-        'ทนายความ, Hovering International Law Firm',
+        'ရှေ့နေ, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'ผู้ช่วยงานกฎหมายที่มีประสบการณ์ยาวนานในตำแหน่งผู้ช่วยงานกฎหมายอาวุโสของสำนักงานกฎหมายหลายแห่ง ครอบคลุมงานสนับสนุนคดี งานกฎหมายบริษัท และเรื่องการลงทุนจากต่างประเทศ',
-        'สนับสนุนงานคดี การจัดตั้งบริษัท การขออนุมัติการลงทุนจากต่างประเทศ การยื่นขอใบอนุญาต และการติดต่อสื่อสารระหว่างเกาหลีกับไต้หวัน',
+        'ဥပဒေရုံး အများအပြားတွင် အကြီးတန်း ဥပဒေအကူအဖြစ် နှစ်ပေါင်းများစွာ လုပ်ကိုင်ခဲ့ပြီး အမှုလိုက်ကူညီခြင်း၊ ကုမ္ပဏီဥပဒေနှင့် နိုင်ငံခြားရင်းနှီးမြှုပ်နှံမှုတို့ကို လွှမ်းခြုံသည်။',
+        'အမှုလိုက်ကူညီခြင်း၊ ကုမ္ပဏီတည်ထောင်ခြင်း၊ နိုင်ငံခြားရင်းနှီးမြှုပ်နှံမှု ခွင့်ပြုချက်၊ လိုင်စင်လျှောက်ထားခြင်းနှင့် ကိုရီးယား–ထိုင်ဝမ် ဆက်သွယ်ရေးကို ကူညီသည်။',
       ],
-      education: ['นิติศาสตรบัณฑิต (LL.B.), Tunghai University'],
+      education: ['ဥပဒေဘွဲ့ (LL.B.), Tunghai University'],
       experience: [
-        'ผู้ช่วยงานกฎหมายอาวุโส, Boyin Law Firm',
-        'ผู้ช่วยงานกฎหมายอาวุโส, Muyang International Law Firm',
+        'အကြီးတန်း ဥပဒေအကူ, Boyin Law Firm',
+        'အကြီးတန်း ဥပဒေအကူ, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
       intro: [
-        'ประสานการนัดหมายให้คำปรึกษาและการติดต่อสื่อสารสำหรับลูกความชาวเกาหลี',
-        'สนับสนุนการสื่อสารระหว่างทีมด้วยระบบเอกสารและระบบงาน โดยอาศัยพื้นฐานด้านวิทยาการคอมพิวเตอร์',
+        'ကိုရီးယားအမှုသည်များအတွက် တိုင်ပင်ချိန်းဆိုမှုနှင့် ဆက်သွယ်ရေးကို ညှိနှိုင်းသည်။',
+        'ကွန်ပျူတာသိပ္ပံ နောက်ခံအပေါ် အခြေခံ၍ စာရွက်စာတမ်းစနစ်နှင့် လုပ်ငန်းစဉ်များဖြင့် အဖွဲ့များအကြား ဆက်သွယ်ရေးကို ကူညီသည်။',
       ],
-      education: ['วิทยาศาสตรบัณฑิต (B.S.) สาขาวิทยาการคอมพิวเตอร์, National Cheng Kung University'],
-      experience: ['ทีมงานธุรกิจเกาหลี, Hovering International Law Firm'],
+      education: ['သိပ္ပံဘွဲ့ (B.S.) ကွန်ပျူတာသိပ္ပံ, National Cheng Kung University'],
+      experience: ['ကိုရီးယားလုပ်ငန်းဌာန, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'สำเร็จการศึกษาระดับปริญญาตรีและปริญญาโทด้านการบัญชีจาก National Chengchi University และปัจจุบันบริหารสำนักงานบัญชีแห่งหนึ่ง',
-        'สนับสนุนการวิเคราะห์ความเสี่ยงด้านกฎหมาย ภาษี และการเงินอย่างครบวงจรให้แก่ลูกความที่เป็นองค์กรธุรกิจ',
+        'National Chengchi University တွင် စာရင်းကိုင် ဘွဲ့နှင့် မဟာဘွဲ့ အစီအစဉ်များကို ပြီးဆုံးခဲ့ပြီး လက်ရှိတွင် စာရင်းကိုင်ရုံးတစ်ခုကို ဦးဆောင်သည်။',
+        'ကုမ္ပဏီအမှုသည်များအတွက် ဥပဒေ၊ အခွန်နှင့် ငွေကြေးအန္တရာယ်ကို ပေါင်းစပ် သုံးသပ်ရန် ကူညီသည်။',
       ],
       education: [
-        'ปริญญาโท (M.A.) การบัญชี, National Chengchi University',
-        'ปริญญาตรี (B.A.) การบัญชี, National Chengchi University',
+        'မဟာဝိဇ္ဇာဘွဲ့ (M.A.) စာရင်းကိုင်, National Chengchi University',
+        'ဘွဲ့ (B.A.) စာရင်းကိုင်, National Chengchi University',
       ],
       experience: ['Chinshin CPA Firm'],
     },

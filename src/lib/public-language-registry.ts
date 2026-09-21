@@ -557,12 +557,12 @@ export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion
     europe: 'اروپا',
     americas: 'قاره‌های آمریکا',
   },
-  my: { // SCAFFOLD(th)
-    global: 'ทั่วโลก',
-    'asia-pacific': 'เอเชียแปซิฟิก',
-    'middle-east': 'ตะวันออกกลาง',
-    europe: 'ยุโรป',
-    americas: 'ทวีปอเมริกา',
+  my: {
+    global: 'ကမ္ဘာလုံးဆိုင်ရာ',
+    'asia-pacific': 'အာရှ-ပစိဖိတ်',
+    'middle-east': 'အရှေ့အလယ်ပိုင်း',
+    europe: 'ဥရောပ',
+    americas: 'အမေရိကတိုက်များ',
   },
   ta: {
     global: 'உலகளாவிய',
@@ -873,11 +873,11 @@ export const LANGUAGE_PICKER_COPY: Record<
     close: 'بستن',
     current: 'زبان فعلی',
   },
-  my: { // SCAFFOLD(th)
-    open: 'เลือกภูมิภาคและภาษา',
-    title: 'กรุณาเลือกภูมิภาคและภาษา',
-    close: 'ปิด',
-    current: 'ภาษาปัจจุบัน',
+  my: {
+    open: 'ဒေသနှင့် ဘာသာစကား ရွေးရန်',
+    title: 'သင့်ဒေသနှင့် ဘာသာစကားကို ရွေးပါ',
+    close: 'ပိတ်ရန်',
+    current: 'လက်ရှိဘာသာ',
   },
   ta: {
     open: 'பகுதியையும் மொழியையும் தேர்ந்தெடுக்கவும்',

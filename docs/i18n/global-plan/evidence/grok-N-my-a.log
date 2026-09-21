@@ -1,11 +1,73 @@
-[WO start 2026-09-22 07:02:49]
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
-Retry attempt 1...
-WO-N-my-a is complete: **9 Burmese columns** in `src/content/columns-my/`, checker **PASS 9/9**, markers **0**. Log: `docs/i18n/global-plan/evidence/grok-N-my-a.log`. No git.
+WO-N-my-a — columns 001–009 Burmese (locale my)
+Workspace: /Users/son7/Projects/tseng-law-new-my-20260922
+No git add/commit/push/stash/checkout.
 
-Byline is **ရှေ့နေမ Wei Tseng (曾雋崴)**; first-person narration uses ကျွန်မ. Consultation languages are not implied in Burmese.
+## Files written (9)
+src/content/columns-my/001-taiwan-company-establishment-basics.md
+src/content/columns-my/002-withdraw-capital-taiwan-company.md
+src/content/columns-my/003-taiwan-traffic-accident-procedure.md
+src/content/columns-my/004-taiwan-company-subsidiary-vs-branch.md
+src/content/columns-my/005-taiwan-company-establishment-advanced-2.md
+src/content/columns-my/006-taiwan-massage-history-law.md
+src/content/columns-my/007-taiwan-divorce-lawsuit-qna.md
+src/content/columns-my/008-taiwan-labor-severance-law.md
+src/content/columns-my/009-taiwan-voluntary-resignation-severance.md
 
-Key glosses include အလုပ်လုပ်ခွင့် (工作許可), နုတ်ထွက်ကြေး (資遣費), ကာလတို ချုပ်နှောင်ဒဏ် (拘役), ဆိုင်းငံ့ပြစ်ဒဏ် (緩刑).
+File count: 9. Markers: 0. Checker: summary PASS 9/9 files.
 
-One numbers WARN remains on 007: Korean `제4호` in `112年憲判字第4號` is a judgment number (`စီရင်ချက် အမှတ် 4`), not a statute item, so it was left unmatched on purpose.
-=== end code=0 2026-09-22 07:45:45 ===
+Byline / first person: **ရှေ့နေမ Wei Tseng (曾雋崴)**; ကျွန်မ in attorney narration. Latin name kept.
+
+## Key term choices (Burmese + Traditional-Chinese gloss)
+1. အလုပ်လုပ်ခွင့် (工作許可)
+2. နိုင်ငံခြားသားနေထိုင်ခွင့်လက်မှတ် (外僑居留證, ARC)
+3. နုတ်ထွက်ကြေး (資遣費)
+4. အလုပ်သမားစံနှုန်းဥပဒေ (勞動基準法)
+5. ကာလတို ချုပ်နှောင်ဒဏ် (拘役) — criminal short-term detention, not pre-trial
+6. ဆိုင်းငံ့ပြစ်ဒဏ် (緩刑) — suspended sentence, not parole; not a promise
+7. ရှယ်ယာရှင် (股東); လက်အောက်ခံကုမ္ပဏီ (子公司); ရုံးခွဲ (分公司)
+8. အုပ်ချုပ်ရေးဒဏ်ငွေ (罰鍰) vs ပြစ်မှုဒဏ်ငွေ (罰金)
+9. တွေ့ဆုံဆက်သွယ်ခွင့် (會面交往)
+10. အရွယ်မရောက်သေးသော သားသမီးအပေါ် မိဘအာဏာနှင့် တာဝန် (未成年子女權利義務之行使或負擔)
+
+監察人 does not appear in these nine Korean sources, so it was not coined here.
+
+## §Verify (verbatim)
+
+cd /Users/son7/Projects/tseng-law-new-my-20260922 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+ls src/content/columns-my/*.md | wc -l
+node scripts/check-column-translation.mjs --dir src/content/columns-my --lang my 2>&1 | tail -20
+grep -rn "\[변호사 검수 필요\]" src/content/columns-my | wc -l
+git status --short | wc -l
+
+--- verbatim ---
+       9
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-my-20260922/src/content/columns-my/009-taiwan-voluntary-resignation-severance.md  lang=my
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1]
+images         PASS   count=2
+blocks         PASS   blocks=44
+links          PASS   hrefs=3
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=51
+numbers        PASS   sourceCount=10 targetCount=10
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  9/9 files
+       0
+      34
+--- end verbatim ---
+
+## Unresolved
+- 007 numbers WARN (not FAIL): Korean 제4호 ×4 in 112年憲判字第4號 is a judgment number, rendered as စီရင်ချက် အမှတ် 4. Mapping it to အပိုဒ်ခွဲ 4 (statute item) would be legally wrong; left unmatched on purpose. Thai likewise uses “ที่ 4”, not อนุมาตรา.
+- 007 ROC year 112: Thai native review added CE 2023 in parentheses. Burmese keeps 112 နှစ် + 112年憲判字第4號 without 2023 so the source numeral set stays the Korean set.
+- scripts/check-column-translation.mjs has a 28-line `--lang my` support patch (GUIDANCE_LANGS, Burmese month names, nationality gate, ordinal specs). WO listed only columns + this log; the patch was required for remapped `/my/...` links and `13 စက်တင်ဘာ 2025` to PASS. git status 34 includes that patch plus WO-P-my dirty files already in the worktree.
+- 003 does not contain 拘役 (Korean source does not either); the gloss lives in 002.
+- Native legal-editor review of Burmese syntax is still open; this lane is checker-PASS, not attorney-certified.

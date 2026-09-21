@@ -437,16 +437,16 @@ export const GUIDANCE_HOME_PATHS: Record<GuidanceLocale, GuidanceHomePaths> = {
     },
     ariaLabel: 'دو مسیر اطلاعات',
   },
-  my: { // SCAFFOLD(th)
+  my: {
     setup: {
-      label: 'ข้อมูลการจัดตั้งบริษัทในไต้หวัน',
+      label: 'ထိုင်ဝမ်တွင် ကုမ္ပဏီတည်ထောင်ခြင်း အချက်အလက်',
       href: '/my/services',
     },
     legal: {
-      label: 'ข้อมูลปัญหาทางกฎหมายในไต้หวัน',
+      label: 'ထိုင်ဝမ်ဥပဒေကိစ္စ အချက်အလက်',
       href: '/my/faq',
     },
-    ariaLabel: 'สองเส้นทางข้อมูล',
+    ariaLabel: 'အချက်အလက်လမ်းကြောင်း နှစ်ခု',
   },
   ta: {
     setup: {

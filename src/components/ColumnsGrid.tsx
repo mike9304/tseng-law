@@ -144,7 +144,7 @@ const GUIDANCE_FILTER_ALL_LABEL: Record<GuidanceLocale4, string> = {
   bn: 'সব',
   ur: 'سب',
   fa: 'همه',
-  my: 'ทั้งหมด', // SCAFFOLD(th)
+  my: 'အားလုံး',
   ta: 'அனைத்தும்',
   ne: 'सबै',
   km: 'ทั้งหมด', // SCAFFOLD(th)
@@ -313,10 +313,10 @@ const GUIDANCE_FILTER_CATEGORY_LABEL: Record<GuidanceLocale4, Record<ColumnCateg
     legal: 'اطلاعات حقوقی تایوان',
     case: 'تحلیل پرونده',
   },
-  my: { // SCAFFOLD(th)
-    formation: 'การจัดตั้งบริษัทในไต้หวัน',
-    legal: 'ข้อมูลกฎหมายไต้หวัน',
-    case: 'การวิเคราะห์คดีตัวอย่าง',
+  my: {
+    formation: 'ထိုင်ဝမ်တွင် ကုမ္ပဏီတည်ထောင်ခြင်း',
+    legal: 'ထိုင်ဝမ်ဥပဒေအချက်အလက်',
+    case: 'အမှုနမူနာ သုံးသပ်ချက်',
   },
   ta: {
     formation: 'தைவானில் நிறுவனம் அமைத்தல்',
@@ -422,7 +422,7 @@ const GUIDANCE_CARD_READ_MORE_LABEL: Record<GuidanceLocale4, string> = {
   bn: 'আরও পড়ুন',
   ur: 'آگے پڑھیں',
   fa: 'ادامهٔ مطلب',
-  my: 'อ่านต่อ', // SCAFFOLD(th)
+  my: 'ဆက်ဖတ်ရန်',
   ta: 'மேலும் படிக்க',
   ne: 'अगाडि पढ्नुहोस्',
   km: 'อ่านต่อ', // SCAFFOLD(th)

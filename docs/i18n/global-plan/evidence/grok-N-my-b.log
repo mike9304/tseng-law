@@ -1,1 +1,73 @@
-[WO start 2026-09-22 07:46:45]
+WO-N-my-b — columns 010–018 Burmese (locale my)
+Workspace: /Users/son7/Projects/tseng-law-new-my-20260922
+No git add/commit/push/stash/checkout.
+
+## Files written (9)
+src/content/columns-my/010-taiwan-gym-injury-lawsuit.md
+src/content/columns-my/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md
+src/content/columns-my/012-taiwan-overtaking-accident-liability.md
+src/content/columns-my/013-taiwan-company-establishment-advanced-1.md
+src/content/columns-my/014-taiwan-mandatory-employment-period.md
+src/content/columns-my/015-taiwan-company-setup-pitch-location.md
+src/content/columns-my/016-taiwan-inheritance-custody-analysis.md
+src/content/columns-my/017-taiwan-logistics-business-setup.md
+src/content/columns-my/018-taiwan-semiconductor-market-entry.md
+
+File count: 18 (this lane 010–018 plus WO-N-my-a 001–009). Markers: 0. Checker: summary PASS 18/18 files.
+
+Byline / first person: **ရှေ့နေမ Wei Tseng (曾雋崴)** where the Korean source has a byline (011, 014, 016, 017); ကျွန်မ in 010/013 first-person narration. Latin name kept. 010, 012, 013, 015, 018 have no byline because the Korean sources have none (block parity).
+
+## Key term choices (Burmese + Traditional-Chinese gloss)
+1. အနည်းဆုံး အလုပ်ကာလ သဘောတူညီချက် (最低服務年限約定)
+2. ကျွမ်းကျင်နည်းပညာ လေ့ကျင့်သင်တန်း (專業技術培訓); သင့်တော်သော လျော်ကြေး (合理補償)
+3. စာချုပ်ချုပ်ကြေး (簽約金); ဆက်နေဆုကြေး (留任獎金); ကြိုတင်ပေးချေမှု (預付性給付)
+4. ဥပဒေအရ အမွေဝေစု (應繼分); အမွေစွန့်လွှတ်ခြင်း (拋棄繼承); ကိုယ်စားအမွေဆက်ခံခြင်း (代位繼承)
+5. အရွယ်မရောက်သေးသော သားသမီးအပေါ် အခွင့်အရေးနှင့် တာဝန် (未成年子女權利義務之行使或負擔)
+6. သီးသန့်ပိုင်ဆိုင်မှု (特有財產); အထူးကိုယ်စားလှယ် (特別代理人); ဥပဒေက သီးသန့်ထားသော ဝေစု (特留分)
+7. မော်တော်ယာဉ်ကုန်ပို့ဆောင်ရေးလုပ်ငန်း (汽車貨運業); တည်ထောင်ပြင်ဆင်ခွင့်ပြုချက် (籌設許可)
+8. ပို့ဆောင်ကြားခံ (運送承攬); တူရာလုပ်ငန်းအသင်း (同業公會)
+9. ကုမ္ပဏီကြီးကြပ်သူ (監察人) — 018; ရှယ်ယာရှင် (股東)
+10. အလုပ်သမားစံနှုန်းဥပဒေ (勞動基準法); အလုပ်လုပ်ခွင့် (工作許可)
+
+## §Verify (verbatim)
+
+cd /Users/son7/Projects/tseng-law-new-my-20260922 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+ls src/content/columns-my/*.md | wc -l
+node scripts/check-column-translation.mjs --dir src/content/columns-my --lang my 2>&1 | tail -20
+grep -rn "\[변호사 검수 필요\]" src/content/columns-my | wc -l
+git status --short | wc -l
+
+--- verbatim ---
+      18
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-my-20260922/src/content/columns-my/018-taiwan-semiconductor-market-entry.md  lang=my
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=72
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+      45
+--- end verbatim ---
+
+## Unresolved
+- Checker reports 18/18 because WO-N-my-a files 001–009 are already in this worktree; this lane’s nine files (010–018) are all PASS. Markers 0.
+- 010: running-text date kept as 2022 ခုနှစ် 1 လ 24 ရက် so the source 1월 numeral is not dropped (month-name form failed numbers). 제7호 → အပိုဒ်ခွဲ 7.
+- 012: forbidden `/ရလဒ်\s*အာမခံ/` matches even in negation; phrased ရလဒ်ကိုလည်း အာမမခံ.
+- 016: 제1순위 rendered အဆင့် 1 (ပထမအဆင့် is consumed as court-instance ordinal and left the numeral 1 missing).
+- 018 Korean has no `url` key; Burmese matches that key set.
+- Native legal-editor review of Burmese syntax is still open; this lane is checker-PASS, not attorney-certified.
+- git status 45 includes WO-N-my-a files, checker `--lang my` patch, WO docs, and `.tmp-my/` already in the worktree.

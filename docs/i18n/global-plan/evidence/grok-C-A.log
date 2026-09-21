@@ -1,0 +1,133 @@
+[WO-C-A 완료 Sun Sep 20 18:53:28 KST 2026]
+worker: Cursor Grok 4.6
+worktree: /Users/son7/Projects/tseng-law-columns-a-20260920
+git HEAD: 77d08636 docs(i18n): 보드 G3-2 — 31언어 라이브 검증·IndexNow 완료
+git add/commit/push: not run
+
+=== 언어별 파일 수 ===
+zh-hans: 18
+pt:      18
+ms:      18
+
+=== §5 명령 출력 그대로 ===
+
+$ git status --short | wc -l
+      56
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-zh-hans --lang zh-hans 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-columns-a-20260920/src/content/columns-zh-hans/018-taiwan-semiconductor-market-entry.md  lang=zh-hans
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=2769
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-pt --lang pt 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-columns-a-20260920/src/content/columns-pt/018-taiwan-semiconductor-market-entry.md  lang=pt
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=73
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-ms --lang ms 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-columns-a-20260920/src/content/columns-ms/018-taiwan-semiconductor-market-entry.md  lang=ms
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=61
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-zh-hans src/content/columns-pt src/content/columns-ms | wc -l
+       0
+
+$ ls src/content/columns-zh-hans/*.md | wc -l; ls src/content/columns-pt/*.md | wc -l; ls src/content/columns-ms/*.md | wc -l
+      18
+      18
+      18
+
+=== 추가 잠금 스캔 (체커 외) ===
+zh-hans 제공중문상담/口译/胜诉率/免费咨询/24小时/中国台湾/台湾省/工商局/知识产权: 0 (grep empty)
+pt consulta em português / 24 horas / consulta gratuita / Portugal / Brasil: 0
+ms bahasa Melayu / 24 jam / percuma / Malaysia: 0
+본문 한글: url 원본 바이트만 (008·009 wei-wei-lawyer.com/post/한글슬러그). 체커 hangul PASS.
+
+=== 용어 선택에서 망설인 지점 ===
+- zh-hans 괄호 병기: 본문이 이미 간체라 工作许可（工作许可）、分公司（分公司）처럼 동어 반복이 됨. 선례(fr/de) 병기 관례를 유지하느라 제거하지 않음.
+- zh-hans 만 단위: 체커가 万을 배수로 읽지 않음(萬/만만 인식). TWD 500,000 아라비아 숫자 사용.
+- zh-hans 三分之一 미수록 → 1/3. 제1심 서수 테이블 없음 → 第1审(아라비아).
+- zh-hans 017: 제품잠금 营业执照 금지. 본문 经营许可, 원문 한자 營業執照는 괄호 병기.
+- zh-hans 017 中国大陆투자: 大陆 금지 → 来自中国的投资.
+- zh-hans 011 知识产权 → 智慧财产.
+- pt 24 horas 금지어가 기간 표현까지 오탐(G2-1 NOTE #20). 본문에 24 horas 0건.
+- pt 영어검사: 관사 as가 영어 stopword. 한 문장에 as 3개 쌓이면 FAIL → 문장 재배치로 회피.
+- pt 信託 fidúcia (fr fiducie). 보증/예탁 caução (garantia 회피).
+- pt 제6호(009) 수사미해석 WARN, 개수 11/11 일치라 PASS.
+- ms juta가 MAGNITUDE_WORDS에 없음 → 157만은 TWD 1.570.000.
+- ms un tiers → 1/3 (sepertiga 미수록). 제1심 → perbicaraan 1 (아라비아 유지).
+- ms 인도네시아어 누수 회피: kerana/iaitu/syarikat/peguam/wang. 국적어 Malaysia 0건. 한국 원문의 한국은 프랑스 선례대로 syarikat asing으로 일반화.
+- 세 언어 공통: 한국 기업 → 외국 기업(fr entreprises étrangères). Portugal/Brasil/Malaysia/中国企业 삽입 없음.
+- 018: 원본에 url 키 없음. 세 언어 모두 동일하게 생략.
+
+=== 미해결 ===
+- 원어민 검수 아님 (G2-C-FR과 동일 조건).
+- zh-hans 동어 반복 괄호는 체커 비대상. 총괄이 간체 병기 관례를 줄이라고 하면 후속 패치.
+- pt 009 제6호 서수 WARN. FAIL 아님.
+- git add/commit/push 하지 않음. 산출물은 untracked 54 md + 기존 WO/log.
+WO-C-A 완료. 세 언어 모두 체커 **PASS 18/18**, 마커 0, 파일 각 18. git add/commit/push는 하지 않았습니다.
+
+**산출물**
+- `src/content/columns-zh-hans/` 18
+- `src/content/columns-pt/` 18
+- `src/content/columns-ms/` 18
+
+**§5 (직접 재실행)**
+- `git status --short | wc -l` → 56
+- zh-hans / pt / ms → 각각 `summary PASS 18/18 files`
+- `[변호사 검수 필요]` → 0
+- 파일 수 → 18 / 18 / 18
+
+보고 전문(명령 출력·용어 망설임·미해결)은 `docs/i18n/global-plan/evidence/grok-C-A.log`에 있습니다. 원어민 검수는 이번 범위 밖입니다.
+=== WO-C-A 종료 code=0 Sun Sep 20 18:53:39 KST 2026 ===

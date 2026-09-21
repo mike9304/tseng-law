@@ -1,0 +1,154 @@
+[WO-C-B 완료 Sun Sep 20 20:53:18 KST 2026]
+worker: Cursor Grok 4.6
+worktree: /Users/son7/Projects/tseng-law-columns-a-20260920
+git HEAD: 07821dd3 i18n(columns): 칼럼 18편 번역 3개 언어 — zh-hans·pt·ms (WO-C-A)
+git add/commit/push: not run
+
+=== 언어별 파일 수 ===
+tr: 18
+it: 18
+nl: 18
+
+=== §5 명령 출력 그대로 ===
+
+$ git status --short | wc -l
+      56
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-tr --lang tr 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-columns-a-20260920/src/content/columns-tr/018-taiwan-semiconductor-market-entry.md  lang=tr
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=69
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-it --lang it 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-columns-a-20260920/src/content/columns-it/018-taiwan-semiconductor-market-entry.md  lang=it
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=73
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-nl --lang nl 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-columns-a-20260920/src/content/columns-nl/018-taiwan-semiconductor-market-entry.md  lang=nl
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=101
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-tr src/content/columns-it src/content/columns-nl | wc -l
+       0
+
+$ ls src/content/columns-tr/*.md | wc -l; ls src/content/columns-it/*.md | wc -l; ls src/content/columns-nl/*.md | wc -l
+      18
+      18
+      18
+
+=== 추가 잠금 스캔 (체커 외) ===
+tr Türkçe danışma / tercüman / anında yanıt / başarı oranı / ücretsiz danışma|görüşme / 24 saat danışma: 0
+it consulenza in italiano / interprete / risposta immediata / tasso di successo / gratuito / 24 ore su 24: 0
+nl advies in het Nederlands / tolk beschikbaar / onmiddellijk antwoord / succespercentage / kosteloos / gratis consultatie / 24 uur per dag: 0
+Türkiye / Türk şirketleri / Italia / imprese italiane / Nederlanders / Nederlandse ondernemingen: 0
+본문 한글: url 원본 바이트만 (008·009 wei-wei-lawyer.com/post/한글슬러그). 체커 hangul PASS.
+
+=== 용어 선택에서 망설인 지점 ===
+- it 자회사: 이탈리아어 filiale는 지점 뜻이라 쓰지 않음. PT filial / FR filiale 선례와 달리 società controllata (有限公司·股份有限公司). 지점은 succursale (分公司).
+- it 체커 /gratuito/i 가 모든 출현을 잡음. 007 무상취득은 acquisto senza corrispettivo / a titolo di liberalità. 015 무료 조회는 senza oneri. 면제문 «non dice che il primo colloquio è gratuito»는 칼럼에 넣지 않음.
+- nl /kosteloos/i 동일. 015는 zonder kosten. 007은 verkrijging zonder tegenprestatie.
+- tr 015 무료 조회: ücretsiz danışma/görüşme만 금지라 정부 조회는 ücret ödemeden.
+- tr/it/nl 서수 테이블 없음 → 제N심/항/호/제3자는 수사미해석 WARN. FAIL 아님. 숫자는 아라비아로 남김 (1. derece / grado 1 / 1e aanleg, 3. kişi).
+- 분수는 1/3·2/3 (üçte bir / un terzo / een derde는 수사 어휘가 추가 카운트하거나 3을 놓침).
+- 천단위 점은 PT와 같음 (TWD 500.000). 157만은 1.570.000 (nl/it 백만 단위 낱말 미수록).
+- nl 영어검사: 네덜란드어 of/in/is가 영어 stopword. 한자 병기 없는 12어 이상 문장이 FAIL → DE/PT와 같은 漢字 병기로 회피.
+- tr altında가 어휘 «altı»(6)로 잡힘 → 우회 표현.
+- it «sei»(6) 및 «un anno» 회피. 수량은 아라비아.
+- 한국 기업 → 외국 기업 (tr yabancı işletmeler / it imprese straniere / nl buitenlandse ondernemingen). Türkiye/Italia/Nederland 삽입 없음.
+- 상담 언어 잠금: 해당 언어로 상담 가능·통역·무료 상담 암시 0. 링크 «한국어 가능한 대만 변호사»는 한국어 구사로 유지.
+- date_display: tr 13 Eylül 2025 / 4 Şubat 2026 (eylül·şubat 체커 월명). it 13 settembre 2025. nl 13 september 2025. Mart는 DATE_MONTH_NAMES에 없어 이번 배치에서는 미사용.
+- 018: 원본에 url 키 없음. 세 언어 모두 동일하게 생략.
+- read_time 숫자는 PT와 맞춤 (번역문이 길어져 원본 분량과 다름; 체커는 read_time 수사 제외).
+
+=== 미해결 ===
+- 원어민 검수 아님 (G2-C-FR·WO-C-A와 동일 조건).
+- tr/it/nl 서수 WARN은 체커 테이블 부재. FAIL 아님. 총괄이 서수 패턴을 넣으면 후속 패치.
+- it società controllata는 법률적으로 자회사에 가깝지만 구어 filiale와 다름. 총괄이 표기를 바꾸라면 후속.
+- git add/commit/push 하지 않음. 산출물은 untracked 54 md + WO-C-B.txt + 본 로그.
+WO-C-B 완료. 세 언어 모두 체커 **PASS 18/18**, 마커 0, 파일 각 18. git add/commit/push는 하지 않았습니다.
+
+**산출물**
+- `src/content/columns-tr/` 18
+- `src/content/columns-it/` 18
+- `src/content/columns-nl/` 18
+
+**§5 (직접 재실행)**
+- `git status --short | wc -l` → 56
+- tr / it / nl → 각각 `summary PASS 18/18 files`
+- `[변호사 검수 필요]` → 0
+- 파일 수 → 18 / 18 / 18
+
+보고 전문(명령 출력·용어 망설임·미해결)은 `docs/i18n/global-plan/evidence/grok-C-B.log`에 있습니다. 원어민 검수는 이번 범위 밖입니다.
+=== WO-C-B 종료 code=0 Sun Sep 20 20:53:18 KST 2026 ===
+WO-C-B 완료. 세 언어 모두 체커 **PASS 18/18**, 마커 0, 파일 각 18. git add/commit/push는 하지 않았습니다.
+
+**산출물**
+- `src/content/columns-tr/` 18
+- `src/content/columns-it/` 18
+- `src/content/columns-nl/` 18
+
+**§5 (직접 재실행)**
+- `git status --short | wc -l` → 56
+- tr / it / nl → 각각 `summary PASS 18/18 files`
+- `[변호사 검수 필요]` → 0
+- 파일 수 → 18 / 18 / 18
+
+**용어에서 가른 지점**
+- 이탈리아어 자회사는 `filiale`(지점)를 쓰지 않고 `società controllata`.
+- it `gratuito` · nl `kosteloos`는 체커가 전부 잡아서, 015 무료 조회는 `senza oneri` / `zonder kosten`, 007 무상취득은 `senza corrispettivo` / `zonder tegenprestatie`.
+- tr/it/nl은 서수 테이블이 없어 `제N항` 등은 WARN만. 숫자는 아라비아로 맞춤.
+
+보고 전문은 `docs/i18n/global-plan/evidence/grok-C-B.log`에 있습니다. 원어민 검수는 이번 범위 밖입니다.Italian column files are already in place: 18 files under `src/content/columns-it/`, checker **PASS 18/18** from the WO-C-B run.
+=== WO-C-B 종료 code=0 Sun Sep 20 20:54:21 KST 2026 ===

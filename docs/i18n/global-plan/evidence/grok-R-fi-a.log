@@ -1,1 +1,23 @@
 [WO start 2026-09-21 16:27:55]
+Review written to `docs/i18n/global-plan/reviews/native/fi-a.md`. Naturalness **2/5** (guidance) and **2/5** (columns): German-pivoted Finnish, Korea left as the default reader, English/Hangul chrome still on the surface. No masculine forms for Wei Tseng. 23 P1 + 42 P2 rows.
+
+Last 15 lines of the output file:
+
+```
+| 51 | P2 | D | columns-fi/003-taiwan-traffic-accident-procedure.md | "Jos Teillä on muita kysymyksiä, jättäkää kommentti." | Blog-comment CTA; this site has no comment thread. | Jos teillä on muita kysymyksiä, käyttäkää [Yhteydenotto](/fi/contact). |
+| 52 | P2 | D | columns-fi/003-taiwan-traffic-accident-procedure.md | "Kiinan tasavallan rikoslaki 185-4 artikla" | *Kiinan tasavalta* sounds like PRC to a Finland reader; 中華民國刑法 is Taiwan’s Criminal Code. Recurs in the source list. | Taiwanin rikoslaki (中華民國刑法) 185-4 artikla |
+| 53 | P2 | A | columns-fi/003-taiwan-traffic-accident-procedure.md | "alentaa tai antaa anteeksi korvauksen" | Civil Code 217 is contributory negligence reducing damages; *antaa anteeksi* = pardon. Also 007 "antaa anteeksi jakosumman". | alentaa korvausta tai evätä se |
+| 54 | P2 | C | columns-fi/003-taiwan-traffic-accident-procedure.md | "ennen 2. asteen suullisen käsittelyn päättymistä" | *2. asteen* reads as “second-degree”; Finnish procedure says toinen oikeusaste. Also "1. asteen". | ennen toisen oikeusasteen suullisen käsittelyn päättymistä |
+| 55 | P2 | G | columns-fi/005-taiwan-company-establishment-advanced-2.md | "Seuraavat kysymykset ja vastaukset (Q&A) on tarkoitettu auttamaan henkilöitä" | English abbreviation left in running Finnish. | Seuraavat kysymykset ja vastaukset on tarkoitettu niille, jotka harkitsevat yhtiön perustamista Taiwanissa. |
+| 56 | P2 | E | columns-fi/005-taiwan-company-establishment-advanced-2.md | "Jos teillä on muita kysymyksiä, voitte ottaa meihin yhteyttä." | Availability CTA with no reminder that there is no reply-time promise. | Voitte lähettää kysymyksen yhteydenottolomakkeella; välitöntä vastausta ei luvata. |
+| 57 | P2 | A | columns-fi/006-taiwan-massage-history-law.md | "Lopulta suurtuomarit (大法官) julistivat säännöksen" | *Suurtuomarit* is “the big judges”; 大法官 are the Grand Justices of the Constitutional Court. | Lopulta perustuslakituomioistuimen suurtuomarit (大法官) julistivat säännöksen |
+| 58 | P2 | D | columns-fi/006-taiwan-massage-history-law.md | "Vastaavasti Koreassa, jossa lukuisat näkövammaiset ansaitsevat elantonsa hieronnalla" | Long Korea-only comparative coda on a Finnish page; keep as comparative law, but signpost it. | Vertailun vuoksi: Koreassa, jossa monet näkövammaiset ansaitsevat elantonsa hieronnalla, |
+| 59 | P2 | A | columns-fi/007-taiwan-divorce-lawsuit-qna.md | "syyttömän puolison hätäelatus 1057 artiklassa" | *Hätäelatus* is emergency support; 贍養費 is post-divorce spousal maintenance (hardship support). | syyttömän puolison elatus avioeron jälkeen (贍養費) 1057 artiklassa |
+| 60 | P2 | B | columns-fi/008-taiwan-labor-severance-law.md | "onko irtisanomiskorvausta Taiwanissa todella vaikea saada??" | Double question mark and blog clickbait on a client-facing legal article. Also in the H1. | Irtisanomiskorvaus Taiwanissa: milloin se maksetaan ja milloin ei |
+| 61 | P2 | C | columns-fi/008-taiwan-labor-severance-law.md | "Hyvää päivää, olen Wei Tseng (曾雋崴), taiwanilainen asianajaja." | Blog greeting clashes with the rest of the site’s formal te-register; 003 Q16–Q20 and 006 have the same first-person shift. | Olen Wei Tseng (曾雋崴), asianajaja Taiwanissa. |
+| 62 | P2 | B | columns-fi/008-taiwan-labor-severance-law.md | "kirjoittamaan: „Minä, OOO, alennan vapaaehtoisesti asemaa ja palkkaa“" | German low-9 quotes on a Finnish page. | kirjoittamaan: ”Minä, OOO, alennan vapaaehtoisesti asemaa ja palkkaa” |
+| 63 | P2 | B | columns-fi/009-taiwan-voluntary-resignation-severance.md | "''**ajankohta**'' on hyvin tärkeä." | Mixed ASCII quotes around a bold word; looks unedited. | **ajankohta** on hyvin tärkeä. |
+| 64 | P2 | C | columns-fi/004-taiwan-company-subsidiary-vs-branch.md | "nämä suhteet voidaan muotoilla yhtiön osakkeenomistajarakennetta" | Case error: *muotoilla* needs *rakenteessa* / *rakenteen avulla*, not partitive hanging. | nämä suhteet voidaan muotoilla yhtiön osakkeenomistajarakenteessa |
+| 65 | P2 | C | fi-guidance.txt | "molemmat osapuolet ovat vahvistaneet työn vastaanottamisen" | German *Übernahme der Arbeit*; Finnish engagement language is toimeksianto. | molemmat osapuolet ovat kirjallisesti vahvistaneet, että toimisto ottaa toimeksiannon vastaan |
+```
+=== end code=0 2026-09-21 16:35:03 ===

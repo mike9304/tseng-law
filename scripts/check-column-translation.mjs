@@ -1851,7 +1851,7 @@ export const DATE_MONTH_NAMES = {
   'មករា': 1, 'កុម្ភៈ': 2, 'មីនា': 3, 'មេសា': 4, 'ឧសភា': 5, 'មិថុនា': 6, 'កក្កដា': 7, 'សីហា': 8, 'កញ្ញា': 9, 'តុលា': 10, 'វិច្ឆិកា': 11, 'ធ្នូ': 12,
   'januára': 1, 'februára': 2, 'marca': 3, 'apríla': 4, 'mája': 5, 'júna': 6, 'júla': 7, 'augusta': 8, 'septembra': 9, 'októbra': 10, 'novembra': 11, 'decembra': 12,
   'януари': 1, 'февруари': 2, 'март': 3, 'април': 4, 'май': 5, 'юни': 6, 'юли': 7, 'август': 8, 'септември': 9, 'октомври': 10, 'ноември': 11, 'декември': 12,
-  'siječnja': 1, 'veljače': 2, 'ožujka': 3, 'travnja': 4, 'svibnja': 5, 'lipnja': 6, 'srpnja': 7, 'kolovoza': 8, 'rujna': 9, 'listopada': 10, 'studenoga': 11, 'prosinca': 12,
+  'siječnja': 1, 'veljače': 2, 'ožujka': 3, 'travnja': 4, 'svibnja': 5, 'lipnja': 6, 'srpnja': 7, 'kolovoza': 8, 'rujna': 9, 'studenoga': 11, 'prosinca': 12,
   'januara': 1, 'februara': 2, 'marta': 3, 'aprila': 4, 'maja': 5, 'juna': 6, 'jula': 7, 'avgusta': 8, 'septembra': 9, 'oktobra': 10, 'novembra': 11, 'decembra': 12,
   'januarja': 1, 'februarja': 2, 'marca': 3, 'aprila': 4, 'maja': 5, 'junija': 6, 'julija': 7, 'avgusta': 8, 'septembra': 9, 'oktobra': 10, 'novembra': 11, 'decembra': 12,
   'sausio': 1, 'vasario': 2, 'kovo': 3, 'balandžio': 4, 'gegužės': 5, 'birželio': 6, 'liepos': 7, 'rugpjūčio': 8, 'rugsėjo': 9, 'spalio': 10, 'lapkričio': 11, 'gruodžio': 12,
@@ -1860,6 +1860,12 @@ export const DATE_MONTH_NAMES = {
   'gener': 1, 'febrer': 2, 'març': 3, 'abril': 4, 'maig': 5, 'juny': 6, 'juliol': 7, 'agost': 8, 'setembre': 9, 'octubre': 10, 'novembre': 11, 'desembre': 12,
   'janúar': 1, 'febrúar': 2, 'mars': 3, 'apríl': 4, 'maí': 5, 'júní': 6, 'júlí': 7, 'ágúst': 8, 'september': 9, 'október': 10, 'nóvember': 11, 'desember': 12,
 };
+
+/** Per-language month names that collide with another language's spelling (hr listopada = 10, pl listopada = 11). */
+export const DATE_MONTH_OVERRIDES = {
+  hr: { listopada: 10 },
+};
+let activeNumberLang = 'ko';
 
 export function parseArgs(argv) {
   const out = {
@@ -2235,6 +2241,11 @@ function monthNameRe() {
 }
 
 function monthNumber(name) {
+  const override = DATE_MONTH_OVERRIDES[activeNumberLang];
+  if (override) {
+    const hit = override[name.toLowerCase()] ?? override[name];
+    if (hit) return hit;
+  }
   return DATE_MONTH_NAMES[name.toLowerCase()] ?? DATE_MONTH_NAMES[name] ?? null;
 }
 
@@ -2321,6 +2332,7 @@ function collectUnparsedNumerals(s, lang) {
 }
 
 export function analyzeNumbers(text, lang = 'ko') {
+  activeNumberLang = lang;
   const tokens = [];
   const unparsed = [];
   let s = foldDigits(stripStructuralNoise(text));

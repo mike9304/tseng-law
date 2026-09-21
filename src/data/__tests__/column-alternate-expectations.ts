@@ -56,11 +56,11 @@ const HREFLANG_TAG_BY_LOCALE: Record<PublicLocale8, string> = {
   bn: 'bn',
   ur: 'ur',
   fa: 'fa',
-  my: 'th', // SCAFFOLD(th)
+  my: 'my',
   ta: 'ta',
-  ne: 'hi', // SCAFFOLD(hi)
-  km: 'th', // SCAFFOLD(th)
-  mn: 'ru', // SCAFFOLD(ru)
+  ne: 'ne',
+  km: 'km',
+  mn: 'mn',
   sk: 'sk',
   bg: 'bg',
   hr: 'hr',
@@ -70,7 +70,7 @@ const HREFLANG_TAG_BY_LOCALE: Record<PublicLocale8, string> = {
   lv: 'lv',
   et: 'et',
   ca: 'ca',
-  is: 'cs', // SCAFFOLD(cs)
+  is: 'is',
 };
 
 /** Mirrors `slugFromFilename` in src/lib/columns.ts (`NNN-<slug>.md`). */

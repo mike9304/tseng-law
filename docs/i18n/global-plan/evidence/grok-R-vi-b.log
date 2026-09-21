@@ -1,1 +1,24 @@
 [WO start 2026-09-21 16:43:54]
+Native review is in `docs/i18n/global-plan/reviews/native/vi-b.md`. Guidance pack was skipped (part a). Columns **010–018** scored **3/5**: 012 is the cleanest; 010/014/016/017 are usable legal Vietnamese; 013/015 still read as a Korean blog; 018 mixes three names for 投資審議司.
+
+**6 P1:** blog-comment + anytime contact (013); *thế lực nước ngoài* ≠ foreign parties (013); 戶籍 as *hộ tịch* (017/016); 018’s *Ủy ban/Vụ/Cục* mix; representative office as *điểm làm việc*; CPA as *kế toán viên*. No masculine form for Wei Tseng. 45 findings, P1 then P2; no P3.
+
+Last 15 lines of the file:
+
+```
+| 32 | P2 | C | columns-vi/014-taiwan-mandatory-employment-period.md | biểu thị ý chí xin nghỉ việc và tài liệu về việc vi phạm điều kiện lao động | Calque of 意思表示 stacked onto resignation; a worker looks for *thông báo nghỉ việc*. Throughout 014. | thông báo xin nghỉ việc và tài liệu về việc vi phạm điều kiện lao động |
+| 33 | P2 | E | columns-vi/014-taiwan-mandatory-employment-period.md | Liên hệ tư vấn | On a Vietnamese page this reads as consultation being offered; 016 uses the same label. | Liên hệ (không tư vấn bằng tiếng Việt) |
+| 34 | P2 | A | columns-vi/016-taiwan-inheritance-custody-analysis.md | thực hiện và gánh vác quyền, nghĩa vụ đối với con chưa thành niên | You *gánh vác* duties, not rights; same 行使或負擔 calque as part a. Throughout 016. | thực hiện quyền và gánh vác nghĩa vụ đối với con chưa thành niên (未成年子女權利義務之行使或負擔) |
+| 35 | P2 | C | columns-vi/016-taiwan-inheritance-custody-analysis.md | Không phải. Quyền yêu cầu phân chia phần chênh lệch tài sản còn lại | FAQ “No.” dumped as the opening of §3 (and §7 `Không được.`). | Quyền yêu cầu phân chia phần chênh lệch tài sản còn lại của vợ chồng |
+| 36 | P2 | C | columns-vi/017-taiwan-logistics-business-setup.md | ‘Hậu cần’ là một thuật ngữ thực tiễn có phạm vi rộng | Coined *thuật ngữ thực tiễn*; EN was “a broad business term”. | ‘Hậu cần’ là một thuật ngữ kinh doanh có phạm vi rộng |
+| 37 | P2 | A | columns-vi/017-taiwan-logistics-business-setup.md | thu tiền công và dùng ô tô tải để vận chuyển hàng hóa của người khác | EN “for compensation” / freight charge; *tiền công* is wages. The same file later correctly says *tiền cước*. | thu tiền cước và dùng ô tô tải để vận chuyển hàng hóa của người khác |
+| 38 | P2 | C | columns-vi/017-taiwan-logistics-business-setup.md | Không nhất thiết. ‘Hậu cần’ là một thuật ngữ thực tiễn | FAQ answer dumped as the opening of §1 (and §3 `Không.`). | Không phải mọi hoạt động gọi là hậu cần đều cần giấy phép ngành vận tải hàng hóa bằng ô tô. ‘Hậu cần’ |
+| 39 | P2 | C | columns-vi/017-taiwan-logistics-business-setup.md | thành viên hội đồng quản trị hoặc người quản trị (董事) | 董事 is a board director; *người quản trị* is an administrator. Same hole as part a. | thành viên hội đồng quản trị (董事) |
+| 40 | P2 | C | columns-vi/018-taiwan-semiconductor-market-entry.md | Doanh nghiệp linh kiện bán dẫn vào thị trường Đài Loan | Source word order copied into the title; no native would lead with “component enterprises enter”. | Doanh nghiệp sản xuất linh kiện bán dẫn gia nhập thị trường Đài Loan |
+| 41 | P2 | C | columns-vi/018-taiwan-semiconductor-market-entry.md | quá bán quyền biểu quyết của cổ đông khác | Digit-style *quá bán* (過半) is memo Chinese; Vietnamese company law says *hơn một nửa*. | hơn một nửa số quyền biểu quyết của cổ đông khác |
+| 42 | P2 | C | columns-vi/018-taiwan-semiconductor-market-entry.md | Trên đây là đề xuất thiết kế hợp đồng. | Orphaned leftover after company-form procedures, not contract drafting. | Xóa câu này, hoặc: Trên đây là so sánh chung các hình thức công ty, không phải tư vấn cho một giao dịch cụ thể. |
+| 43 | P2 | D | columns-vi/018-taiwan-semiconductor-market-entry.md | vốn góp đã nộp NT$30 triệu | Mixes `NT$` into a locale that otherwise uses TWD / Đài tệ; Vietnamese thousands would be `30 triệu TWD`. | vốn góp đã nộp 30 triệu TWD |
+| 44 | P2 | A | columns-vi/018-taiwan-semiconductor-market-entry.md | Cục Phát triển Thương mại Bộ Kinh tế | EN Department of Commerce (商業司/署); *Phát triển Thương mại* is read as a trade-promotion bureau. | Vụ Thương mại, Bộ Kinh tế |
+| 45 | P2 | C | columns-vi/018-taiwan-semiconductor-market-entry.md | 1 cổ đông 1 phiếu nên quyền kiểm soát không nhất thiết khớp tỷ lệ góp vốn | Telegraphic “1 shareholder 1 vote so…”; a native would write the rule out. | mỗi cổ đông có một phiếu, nên quyền kiểm soát không nhất thiết khớp với tỷ lệ góp vốn |
+```
+=== end code=0 2026-09-21 16:49:55 ===

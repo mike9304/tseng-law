@@ -14,4 +14,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `es-a.md` 
 - 'grupos de trabajo' → 'áreas de práctica'; 'Índice de páginas' → 'Menú'; blog voice R7.
 
 ## Part b
-Apply every P1/P2 row of `es-b.md` under the same skip rules above.
+Apply every P1/P2 row of `es-b.md` under the same skip rules above. Additional: b#1 'derechos reales' → 'los derechos concretos'; b#2 postura → actitud/mentalidad (心態); b#3 skip (mechanical); b#4 cesión → 'ceder el paso'; b#5 → 'período de acondicionamiento/obras (裝潢期間)'; b#6, b#8 → R3/R7; b#7 → 'una abogada de Taiwán' where it refers to the firm; b#9 → R7b; b#10 → 'beneficiarios efectivos'; b#11 戶籍 → 'registro de domicilio (戶籍)'; b#12 → 'patrimonio propio del hijo (特有財產)'; b#13 → 'se reserva/pre-verifica el nombre'; b#14 → 'la sociedad de responsabilidad limitada (有限公司) y la sociedad anónima (股份有限公司)'; 'El solo hecho' → 'El mero hecho' (sweep). The Korean student in 010 is a case fact — keep.

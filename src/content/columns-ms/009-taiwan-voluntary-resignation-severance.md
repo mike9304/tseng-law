@@ -21,7 +21,7 @@ Khususnya, jika pekerja meletakkan jawatan atas kehendaknya sendiri (自請離�
 
 ia tidak boleh menerima pampasan pemberhentian (資遣費) (perkara 18 undang-undang piawaian buruh),
 
-dan ini berbeza daripada Korea.
+dan ini berbeza daripada sesetengah bidang kuasa lain — Korea, sebagai contoh.
 
 ​
 
@@ -89,9 +89,9 @@ pampasan mungkin tidak dibayar atau boleh dituntut.
 
 Itulah sebabnya, dalam konflik buruh (勞資糾紛) di Taiwan,
 
-«**masa**» sangat penting.
+“**masa**” sangat penting.
 
-Dalam kebanyakan kes, orang yang bersedia terlebih dahulu melihat haknya dilindungi.
+Dalam banyak kes, pihak yang menyusun bukti lebih awal dan mematuhi tempoh berada dalam kedudukan yang lebih kukuh — ini bukan janji tentang hasil.
 
 ---
 

@@ -363,7 +363,7 @@ export const guidanceAnswers: Record<
   ms: {
     services: {
       answer:
-        'Firma mengendalikan enam kumpulan kerja menurut undang-undang Taiwan: pelaburan dan penubuhan syarikat, pertikaian sivil dan ganti rugi, perkahwinan, keluarga dan pusaka, pertikaian buruh, jenayah dan harta intelek. Skop setiap hal disahkan secara berasingan selepas peguam menyemak kandungan yang anda hantar. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
+        'Firma mengendalikan enam bidang amalan menurut undang-undang Taiwan: pelaburan dan penubuhan syarikat, pertikaian sivil dan ganti rugi, perkahwinan, keluarga dan pusaka, pertikaian buruh, jenayah dan harta intelek. Skop setiap hal disahkan secara berasingan selepas peguam menyemak kandungan yang anda hantar. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
       sources: ['/ms/faq', '/ms/contact'],
     },
     about: {
@@ -373,7 +373,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Halaman ini memperkenalkan peguam, pengurusan operasi dan perakaunan rakan kongsi Hovering. Peguam Wei Tseng (曾雋崴) mempunyai kelayakan untuk beramal di Taiwan dan ialah peguam pengarah firma; beliau bekerja dengan klien dari Korea, Jepun dan klien antarabangsa lain. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
+        'Halaman ini memperkenalkan peguam, pengurusan operasi dan akauntan rakan kongsi Hovering. Peguam Wei Tseng (曾雋崴) mempunyai kelayakan untuk beramal di Taiwan dan ialah peguam pengarah firma; beliau bekerja dengan klien dari Korea, Jepun dan klien antarabangsa lain. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
       sources: ['/ms/about', '/ms/contact'],
     },
     pricing: {
@@ -383,12 +383,12 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Hantar ringkasan melalui borang hubungan: apa yang berlaku, bantuan yang diperlukan, kaitan dengan Taiwan dan tempoh jika ada. Pada peringkat ini belum perlu menghantar dokumen pengenalan atau seluruh bukti. Firma tidak menjanjikan tempoh jawapan dan tidak mengesahkan janji temu melalui halaman ini. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
+        'Hantar ringkasan melalui borang pertanyaan: apa yang berlaku, bantuan yang diperlukan, kaitan dengan Taiwan dan tempoh jika ada. Pada peringkat ini belum perlu menghantar dokumen pengenalan atau seluruh bukti. Firma tidak menjanjikan tempoh jawapan dan tidak mengesahkan janji temu melalui halaman ini. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
       sources: ['/ms/faq', '/ms/pricing'],
     },
     faq: {
       answer:
-        'Bahagian soalan menjawab pada tahap maklumat am: enam kumpulan kerja, persediaan sebelum hubungan, cara menetapkan yuran dan makna mesej yang dihantar. Permintaan yang dihantar menunggu semakan peguam; bukan nasihat undang-undang, bukan janji temu, dan tidak mewujudkan hubungan antara peguam dan klien. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
+        'Bahagian soalan menjawab pada tahap maklumat am: enam bidang amalan, persediaan sebelum hubungan, cara menetapkan yuran dan makna mesej yang dihantar. Permintaan yang dihantar menunggu semakan peguam; bukan nasihat undang-undang, bukan janji temu, dan tidak mewujudkan hubungan antara peguam dan klien. Perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.',
       sources: ['/ms/contact', '/ms/services'],
     },
   },

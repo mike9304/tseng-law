@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Pernahkah anda mengalami zaman salun gunting rambut tradisional (理髮廳) pada awal Taiwan?
+Pernahkah anda mengalami zaman salun gunting rambut tradisional (理髮廳) pada era awal Taiwan moden?
 
 Cara mencuci rambut di salun itu sangat khusus.
 
@@ -23,7 +23,7 @@ Selain guntingan, terdapat pelbagai perkhidmatan seperti cukur dan jagaan muka.
 
 Dan yang penting ialah, sambil duduk, seseorang boleh menerima cucian rambut dengan urutan kulit kepala, bahu dan leher.
 
-Satu guntingan sudah membenarkan menikmati perkhidmatan bertaraf tinggi ini, sehingga nisbah kualiti-harga sangat baik.
+Satu guntingan sudah membenarkan menikmati perkhidmatan bertaraf tinggi ini, sehingga ia sangat berbaloi.
 
 Ini menyerupai sekali cucian rambut gaya Vietnam hari ini.
 
@@ -55,7 +55,7 @@ Undang-undang ini kekal hingga 2003; pada masa itu, Encik Lin, yang mengurus sal
 
 menggaji pekerja tanpa kurang upaya penglihatan untuk perkhidmatan cucian rambut dan urutan, dan polis mengetahuinya.
 
-Menurut undang-undang masa itu, Encik Lin dan pekerja itu masing-masing dikenakan denda pentadbiran (罰鍰) TWD 40.000, TWD 10.000 dan TWD 20.000 dalam dolar Taiwan baharu (新臺幣).
+Menurut undang-undang masa itu, Encik Lin dan pekerja itu masing-masing dikenakan denda pentadbiran (罰鍰) TWD 40,000, TWD 10,000 dan TWD 20,000 dalam dolar Taiwan baharu (新臺幣).
 
 Encik Lin menganggap sanksi ini sangat tidak adil dan memohon tafsiran perlembagaan.
 
@@ -81,11 +81,11 @@ Ditanyakan contohnya sama ada peraturan bertulis yang hanya membenarkan orang ku
 
 dan diragui sama ada peraturan ini benar-benar menyumbang untuk melindungi pekerjaan dan sara hidup orang kurang upaya penglihatan.
 
-Akhirnya, Hakim Agung (大法官) mengisytiharkan tidak perlembagaan (違憲) peruntukan yang hanya membenarkan orang kurang upaya penglihatan menjalankan pekerjaan urutan.
+Akhirnya, Hakim-hakim Besar Mahkamah Perlembagaan (大法官) mengisytiharkan tidak berperlembagaan (違憲) peruntukan yang hanya membenarkan orang kurang upaya penglihatan menjalankan pekerjaan urutan.
 
 ​
 
-Secara serupa, di Korea, di mana ramai orang kurang upaya penglihatan mencari nafkah melalui urutan,
+Sebagai perbandingan: di Korea, di mana ramai orang kurang upaya penglihatan mencari nafkah melalui urutan,
 
 pada umumnya hanya orang kurang upaya penglihatan yang memperoleh sijil kelayakan boleh menjalankan pekerjaan urutan.
 

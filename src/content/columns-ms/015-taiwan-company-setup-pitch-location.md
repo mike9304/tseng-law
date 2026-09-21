@@ -23,23 +23,23 @@ Selain keadaan pasaran,
 
 titik penting lain ialah
 
-mengetahui sama ada alamat ini terletak dalam zon di mana operasi « premis restoran » mungkin.
+mengetahui sama ada alamat ini terletak dalam zon di mana operasi “premis restoran” mungkin.
 
 ​
 
 Jika anda memulakan aktiviti di bandar Taipei,
 
-anda boleh menggunakan sistem « rujukan terdahulu premis » (營業場所預先查詢) pejabat perdagangan bandar Taipei (臺北市商業處).
+anda boleh menggunakan sistem “semakan awal premis” (營業場所預先查詢) pejabat perdagangan bandar Taipei (臺北市商業處).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
 ​
 
-Anda boleh mengesahkan tanpa yuran sama ada, di alamat yang diingini, pembukaan « premis restoran » mungkin.
+Anda boleh mengesahkan tanpa yuran sama ada, di alamat yang diingini, pembukaan “premis restoran” mungkin.
 
-Namun, untuk pengesahan ini, anda mesti memuat naik « petikan pendaftaran hartanah jenis 2 » (建物登記第二類謄本, yang mengandungi maklumat terperinci bangunan) alamat premis.
+Namun, untuk pengesahan ini, anda mesti memuat naik “petikan pendaftaran bangunan kelas 2” (建物登記第二類謄本, yang mengandungi maklumat terperinci bangunan) alamat premis.
 
-Sesiapa boleh memohon di pejabat pentadbiran tanah (地政事務所) « petikan pendaftaran hartanah jenis 2 » mana-mana alamat.
+Sesiapa boleh memohon di pejabat pentadbiran tanah (地政事務所) “petikan pendaftaran bangunan kelas 2” mana-mana alamat.
 
 Jika anda sukar hadir secara peribadi di pejabat pentadbiran tanah (地政事務所),
 
@@ -51,27 +51,27 @@ Maka berikan perhatian kepada titik ini.
 
 ​
 
-**S. Adakah semua sektor mesti mengesahkan, melalui sistem « rujukan terdahulu premis », sama ada operasi mungkin?**
+**S. Adakah semua sektor mesti mengesahkan, melalui sistem “semakan awal premis”, sama ada operasi mungkin?**
 
-Disyorkan kepada semua sektor untuk mengesahkan, melalui sistem « rujukan terdahulu premis » (營業場所預先查詢), sama ada operasi mungkin.
+Disyorkan kepada semua sektor untuk mengesahkan, melalui sistem “semakan awal premis” (營業場所預先查詢), sama ada operasi mungkin.
 
-Namun, semasa pendaftaran syarikat, beberapa cabang kerap didaftarkan sekali gus, dan orang kerap ingin mendaftarkan sekitar 10 cabang dalam satu kali.
+Namun, semasa pendaftaran syarikat, beberapa item perniagaan kerap didaftarkan sekali gus, dan orang kerap ingin mendaftarkan sekitar 10 item perniagaan serentak.
 
-Maka, dalam amalan, tidak perlu mengesahkan semua cabang semasa pendaftaran syarikat.
+Maka, dalam amalan, tidak perlu mengesahkan semua item perniagaan semasa pendaftaran syarikat.
 
-Menurut « [arahan operasi perkhidmatan maklumat premis bandar Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) »(臺北市營業場所協助查詢服務作業須知) dan panduan yang berkuat kuasa bandar Taipei,
+Menurut “[arahan operasi perkhidmatan maklumat premis bandar Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)”(臺北市營業場所協助查詢服務作業須知) dan panduan yang berkuat kuasa bandar Taipei,
 
-sejak 1 Januari 2023, semasa permohonan pendaftaran penubuhan, pindahan pejabat utama atau penambahan cabang aktiviti syarikat atau perniagaan (termasuk cawangan (分公司) dan premis tambahan (分支機構)), hasil rujukan terdahulu premis **mesti** dilampirkan kepada permohonan pendaftaran, tanpa mengira sektor.
+sejak 1 Januari 2023, semasa permohonan pendaftaran penubuhan, pindahan pejabat utama atau penambahan item perniagaan syarikat atau perniagaan (termasuk cawangan (分公司) dan premis tambahan (分支機構)), hasil semakan awal premis **mesti** dilampirkan kepada permohonan pendaftaran, tanpa mengira sektor.
 
-Senarai di bawah « cabang yang menjadi objek pengesahan rasmi » (主動查詢之營業項目) menamakan cabang yang pejabat perdagangan mengesahkan secara rasmi tambahan semasa semakan pendaftaran (隨案主動查詢) apabila cabang muncul dalam permohonan tetapi tiada dalam hasil yang dilampirkan; hakikat bahawa suatu cabang tidak muncul dalam senarai ini tidak bermakna bahawa pengesahan dikecualikan.
+Senarai di bawah “item perniagaan yang menjadi objek pengesahan rasmi” (主動查詢之營業項目) menamakan item perniagaan yang pejabat perdagangan mengesahkan secara rasmi tambahan semasa semakan pendaftaran (隨案主動查詢) apabila item perniagaan muncul dalam permohonan tetapi tiada dalam hasil yang dilampirkan; hakikat bahawa suatu item perniagaan tidak muncul dalam senarai ini tidak bermakna bahawa pengesahan dikecualikan.
 
 Jika dibuka di tempat di mana premis restoran tidak mungkin, denda pentadbiran (罰鍰) pihak berkuasa kompeten boleh kemudian dikenakan.
 
-![« cabang yang menjadi objek pengesahan rasmi » (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
+![“item perniagaan yang menjadi objek pengesahan rasmi” (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
-« cabang yang menjadi objek pengesahan rasmi » (主動查詢之營業項目)
+“item perniagaan yang menjadi objek pengesahan rasmi” (主動查詢之營業項目)
 
-Inilah intinya; bagi soalan lain, anda boleh berhubung pada bila-bila masa dengan peguam di Taiwan.
+Inilah intinya; bagi soalan lain, anda boleh menghantar pertanyaan melalui halaman Hubungi — tempoh jawapan tidak dijanjikan.
 
 Peraturan pihak berkuasa pentadbiran boleh berubah kerap; sebelum pendaftaran badan undang-undang, sesuai mengesahkan peraturan terbaharu.
 

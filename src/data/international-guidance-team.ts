@@ -408,16 +408,16 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'PASUKAN KAMI',
     title: 'Pasukan antarabangsa Hovering',
     description:
-      'Profil peguam, pengurusan operasi dan perakaunan rakan kongsi Hovering.',
+      'Profil peguam, pengurusan operasi dan akauntan rakan kongsi Hovering.',
     representativeTitle: 'Peguam pengarah',
     teamTitle: 'Peguam dan rakan sekerja',
-    partnerTitle: 'Perakaunan rakan kongsi',
+    partnerTitle: 'Akauntan rakan kongsi',
     introLabel: 'Pengenalan',
     educationLabel: 'Pendidikan',
     experienceLabel: 'Pengalaman',
     photoAltPrefix: 'Foto',
     workingLanguagesLabel: 'Bahasa kerja',
-    fullProfileLabel: 'Profil penuh (English)',
+    fullProfileLabel: 'Profil penuh (bahasa Inggeris)',
     keyFactsHeading: 'Peguam Wei Tseng — Petunjuk utama',
     qualificationLabel: 'Kelayakan dan firma',
     qualificationSentence:
@@ -425,11 +425,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     practiceLabel: 'Bidang utama',
     consultationLanguagesLabel: 'Bahasa perundingan',
     roles: {
-      'tseng-junwei': 'Peguam pengarah di Taiwan (Managing Attorney)',
-      'chang-rongxuan': 'Peguam di Taiwan (Taiwan Attorney)',
+      'tseng-junwei': 'Peguam pengarah di Taiwan',
+      'chang-rongxuan': 'Peguam di Taiwan',
       'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Pengurusan operasi Korea (Korea Operations Manager)',
-      'huang-shengping': 'Perakaunan rakan kongsi (Partner CPA)',
+      'son-jungmin': 'Pengurus operasi Korea',
+      'huang-shengping': 'Akauntan rakan kongsi',
     },
   },
   ru: {
@@ -1025,8 +1025,8 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Taiwan company setup': 'Penubuhan syarikat di Taiwan',
     'Taiwan investment counsel': 'Nasihat undang-undang pelaburan di Taiwan',
     'Civil litigation and damages': 'Litigasi sivil dan ganti rugi',
-    'Trademark and patent filings': 'Pemfailan cap dagangan dan paten',
-    'Visa and residency': 'Visa dan residensi',
+    'Trademark and patent filings': 'Pemfailan tanda dagangan dan paten',
+    'Visa and residency': 'Visa dan permit tinggal',
     'Family and labor disputes': 'Pertikaian keluarga dan buruh',
   },
   ru: {
@@ -1810,7 +1810,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Firma mengendalikan hal syarikat dan individu di Taiwan dalam bahasa Inggeris, Jepun, Korea dan Cina.',
-        'Mewakili seorang pelajar Korea dalam tuntutan ganti rugi kerana kecederaan di gimnasium dan memperoleh penghakiman peringkat pertama sebanyak TWD 1.57M.',
+        'Mewakili seorang pelajar Korea dalam tuntutan ganti rugi kerana kecederaan di pusat kecergasan dan memperoleh penghakiman peringkat pertama sebanyak TWD 1,570,000.',
       ],
       education: [
         'Sarjana (M.S.), Institute of Finance, National Taiwan University',

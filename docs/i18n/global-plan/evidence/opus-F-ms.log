@@ -1,0 +1,297 @@
+# WO-F-ms — Malay (ms) native-quality fix lane — Opus 5 report
+Date: 2026-09-21 · Worktree: /Users/son7/Projects/tseng-law-fix-p-20260921
+Scope written: src/content/columns-ms/*.md (18), src/data/international-guidance-asia.ts (malayGuidanceContent only),
+src/data/international-guidance-team.ts (ms blocks only), src/data/international-guidance-answers.ts (ms),
+src/data/international-inquiry-copy.ts (ms), src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.ms), this log.
+No git add/commit/push/stash/checkout was run. No other locale's strings were touched (diff hunks verified
+to fall inside the ms blocks only). No test file needed changing — the whole suite passes unmodified.
+
+## 1. Rows applied
+
+### ms-a.md (guidance pack + columns 001–009)
+a#1, a#2   verified only — labels already 'PASUKAN KAMI' / 'PEJABAT' (done mechanically). Read naturally, kept.
+a#3        資遣費 caveat: 'tidak disamakan dengan institusi negara lain' → '(資遣費; jangan disamakan dengan skim
+           atau peraturan negara lain)'; also harmonised 'bayaran pemberhentian' → 'pampasan pemberhentian'.
+a#4        股東 sweep (see §2).
+a#5        R2b country note added to 001 §"Perjanjian cukai pendapatan…": "Nota khusus negara: … Sama ada
+           perjanjian cukai wujud antara Taiwan dan negara anda sendiri … mesti diteliti secara berasingan;
+           ini bukan peraturan am bagi pelabur dari semua negara." (matches EN line 45; digits/dates kept).
+a#6        004: "Walaupun syarikat induk Korea masuk ke Taiwan…" → EN framing: "Apabila syarikat induk yang
+           berpangkalan di luar Taiwan masuk ke Taiwan … Korea ialah satu contoh berlabel …, bukan
+           satu-satunya negara asal." (neutral, Malaysia NOT named — ACCEPTED-ms).
+a#7        005 Q1 heading generalised to "dari luar negara … (contoh di bawah menggunakan rejim dan amalan bank
+           Korea; peraturan negara asal pelabur lain mesti disemak secara berasingan)"; "bank utama anda di
+           Korea" → "di negara asal anda"; "dari akaun bank di Korea" → "dari akaun bank di luar negara".
+a#8        005 Q5 → "Bolehkah syarikat menggaji pekerja warganegara asing?"
+a#9        007 → "anak akan tinggal di luar Taiwan … kos sara hidup negara itu … formula automatik".
+a#10       008 + 009 → "Berbeza dengan sesetengah bidang kuasa — Korea, sebagai contoh —" (FAQ + body).
+a#11       003 → "meneliti dengan teliti setiap pos tuntutan supaya tiada pos terlepas pandang; hasilnya
+           bergantung pada fakta dan bukti, dan tiada hasil yang dijanjikan."
+a#12       003 → "Dalam sesetengah keputusan … hukuman kira-kira 3 bulan pernah dijatuhkan; ini bukan hasil
+           yang lazim atau yang dijanjikan." Same treatment for the 4-month / 6-month sentence (digits kept).
+a#13       003 → "Dalam sesetengah kes, penggantungan hukuman (緩刑) mungkin dipertimbangkan … ini bukan janji."
+a#14       008 → "…dengan bantuan peguam, hak pampasan pemberhentiannya di bawah undang-undang dapat
+           ditegakkan, sedangkan pekerja lain … berada dalam kedudukan yang lebih lemah."
+a#16       003 → "peguam litigasi am"; "berpliding hingga akhir" → "meneruskan litigasi hingga akhir".
+a#17       006 → "Hakim-hakim Besar Mahkamah Perlembagaan (大法官) … tidak berperlembagaan (違憲)".
+a#18       一審/二審 sweep (§2); 003 "penutupan hujah lisan … peringkat pertama/kedua".
+a#19       002 → "syarikat yang telah membuat tawaran awam saham (公開發行公司)" (3 places).
+a#20       Sentence-initial 'anda' → 'Anda' in guidance (notFoundText, privacy rights, contact bullet) and in
+           internationalInquiryCopy.ms.preparationNotice. No remaining lower-case sentence-initial 'anda'.
+a#21       'menemani' → 'membantu' / 'mewakili' / 'membimbing' (guidance home, services, about: 5 places).
+a#22       'kumpulan kerja' / 'kumpulan' (practice areas) → 'bidang amalan' / 'bidang' (guidance + GEO answers).
+a#23       'cap dagangan' → 'tanda dagangan' (guidance home items, services IP, practice-area name).
+a#24       'Visa dan residensi' → 'Visa dan permit tinggal'.
+a#25       'Mengapa halaman ini tidak menyebut tarif' → '… jadual yuran' (+ pricing description).
+a#26       'storan objek bukan awam' → 'storan bukan awam'.
+a#27       'dilayan' → 'diuruskan' (FAQ question + privacy description).
+a#28       'Firma mengamalkan menurut undang-undang Taiwan' → 'Firma beramal di bawah undang-undang Taiwan'.
+a#29       'Perakaunan rakan kongsi' → 'Akauntan rakan kongsi' (team copy partnerTitle, role, descriptions,
+           lawyers page description, GEO lawyers answer).
+a#30       'Profil penuh (English)' → 'Profil penuh (bahasa Inggeris)'.
+a#31       English job titles dropped from all four ms role lines.
+a#32       'TWD 1.57M' → 'TWD 1,570,000' (fact kept per R3; Malaysian grouping).
+a#33       'gimnasium' → 'pusat kecergasan' in the team bio (and throughout 010).
+a#34       'Bahagian bahasa Melayu ini membantu anda melihat…' → 'Halaman bahasa Melayu ini menerangkan…'.
+a#35       Tautology removed: 'meneliti sama ada terdapat cara berkomunikasi yang boleh digunakan' (guidance
+           contact + inquiry methodConfirmationNotice).
+a#36       'borang hubungan' → 'borang pertanyaan' (guidance contact/privacy/title/intro, GEO contact answer).
+a#37       'mengesahkan penerimaan kerja' → 'mengesahkan secara bertulis bahawa firma menerima kes itu'.
+a#38       llms discoveryNotice: 'sokongan' → 'pengendorsan'.
+a#39       Contact bullet now reads 'Perundingan hanya dijalankan dalam bahasa Inggeris, Cina (中文), Jepun dan Korea.'
+a#40       'pavilion' → 'paviliun'.
+a#41       'Hal apa yang dikendalikan oleh firma?' → 'Apakah hal yang dikendalikan oleh firma?';
+           'Data apa yang dikumpul' → 'Apakah data yang dikumpul'.
+a#42       privacy description → 'Apa yang dikumpulkan oleh borang pertanyaan dalam halaman bahasa Melayu ini…'.
+a#43       002: '…tidak boleh, 1 kali, melebihi 1 tahun' → 'sesuatu penggantungan aktiviti tidak boleh melebihi
+           1 tahun bagi setiap 1 kali pendaftaran'. See §4 — the bare '1' must stay (checker).
+a#44/b#48  Guillemets → Malaysian “ ” (§2).
+a#45/b#23/b#36/b#40/b#60/b#68  Number format → Malaysian 500,000 / 0.5 (§2).
+a#46/b#31  第三人 'pihak 3' → 'pihak ketiga' (§2).
+a#47       007: 'hubungan peribadi (會面交往)' → 'hak melawat dan berhubung (會面交往)' (2 places).
+a#48/b#58  慰撫金 'kerugian moral' → 'pampasan penderitaan' (§2); 010 'Kerugian luar harta (非財產上損害)' →
+           'Ganti rugi bukan wang (非財產上損害)'.
+a#49       007: 'ialah institusi yang…' → 'ialah skim berkanun yang, apabila rejim harta berkanun terhapus,…'.
+a#50       007: 'keputusan nombor 4 tahun 112' → '… (2023 Masihi; 112年憲判字第4號)' (3 places incl. FAQ + link label).
+a#51       007: 'seperti Korea dan Taiwan' → 'keluarga yang mempunyai kaitan dengan 2 negara atau wilayah atau
+           lebih — Taiwan dan sebuah negara lain —' (neutral; Malaysia NOT named, per ACCEPTED-ms).
+a#52       006: 'Secara serupa, di Korea…' → 'Sebagai perbandingan: di Korea…'.
+a#53       003: comment CTA → 'sila gunakan halaman Hubungi.' (ZWSP padding: see §4).
+a#54       003: 'rekod semata-mata' → 'sekadar mengambil gambar'.
+a#55/b#27  Orientierung sweep (§2): 'Orientasi/orientasi' → 'Panduan/panduan' (link labels, 函釋, headings).
+a#56       003: 'Patut tidak diketinggalkan…' → 'Jangan tinggalkan butiran hubungan saksi…'.
+a#57       008: 'Kes force majeure…' → 'Kejadian di luar kawalan (force majeure) menuntut…'.
+a#58       008: '??' → '?' in both the frontmatter title and the H1.
+a#59       'orang yang digaji' → 'pekerja' (§2, 16 places).
+a#60       戶政/戶籍 sweep (§2): 'pejabat status sivil' → 'pejabat pendaftaran isi rumah', 'daftar status sivil'
+           → 'daftar isi rumah', 'undang-undang status sivil (戶籍法)' → 'Akta Pendaftaran Isi Rumah (戶籍法)',
+           'Jabatan Status Sivil' → 'Jabatan Pendaftaran Isi Rumah'; 'proses verbal' → 'rekod prosiding'.
+a#61/R9    003: 'Di Taiwan, jika ada yang cedera … hubungi 119 (ambulans dan bomba); … 110 (polis), atau 112
+           daripada telefon mudah alih. Nombor ini ialah nombor kecemasan Taiwan.'
+a#62       005: 'menghubungi kami pada bila-bila masa' → 'menghantar pertanyaan melalui halaman Hubungi;
+           tempoh jawapan tidak dijanjikan'.
+a#63/b#41  'Soalan dan jawapan (Q&A)' → 'Soalan dan jawapan' (005, 013); 013 emoji 😊 removed.
+a#64       006: 'nisbah kualiti-harga sangat baik' → 'ia sangat berbaloi'.
+a#65       006: 'pada awal Taiwan' → 'pada era awal Taiwan moden'.
+a#66       003: 'Kanun Jenayah Republik China' → 'Kanun Jenayah Taiwan (中華民國刑法)' (4 link labels).
+a#67       008: 'hasil terbaik' → 'jualan tertinggi' (2 places).
+a#68       008: 'pihak saya, Encik B, digaji' → 'klien saya, Encik B, telah bekerja'.
+a#69/b#32  項 'ayat N' → 'perenggan N' (§2, 29 places).
+a#70       章程 'tataurusan' → 'perlembagaan syarikat' (§2, 14 places).
+a#71       008: 'Salam, saya Wei Tseng (曾雋崴), peguam di Taiwan.' → 'Saya Wei Tseng (曾雋崴), peguam di Taiwan.'
+a#72       009: → 'Dalam banyak kes, pihak yang menyusun bukti lebih awal dan mematuhi tempoh berada dalam
+           kedudukan yang lebih kukuh — ini bukan janji tentang hasil.' (wording avoids the checker's
+           ms-cost-guarantee pattern /jaminan (kos|hasil)/ — first draft used 'jaminan hasil' and failed).
+a#73       'Pautan luaran adalah untuk orientasi' → '… untuk rujukan'.
+a#74       '… profesional berkelayakan mana yang diperlukan' → '… pakar berkelayakan yang diperlukan'.
+
+### ms-b.md (columns 010–018)
+b#1  010 title/H1/body: 'kes perbicaraan 1' → 'kes mahkamah peringkat pertama (一審)'; all remaining
+     'perbicaraan 1' / 'peringkat 2' in body, captions and link labels → 'peringkat pertama/kedua'.
+b#2  010: 'gimnasium' → 'pusat kecergasan' (29 incl. title, H1, alts, labels; first body use keeps (健身房)).
+b#3  010 + 003: 'pengangkutan (就醫交通費) dan jagaan (看護費用)' → 'kos perjalanan untuk rawatan (就醫交通費) dan
+     kos jagaan (看護費用)'.
+b#4  010: 'Apakah postur orang yang berlatih?' → 'Apakah sikap dan kerangka minda orang yang berlatih?' (×2).
+b#5  010: 'meneliti punca pampasan' → 'sebagai sumber dana pampasan'.
+b#6  011: 'bentuk farmaseutikal (劑型)' → 'bentuk sediaan produk (劑型)'.
+b#8  012 + 003 + 007: 鑑定 'kepakaran' → 'penilaian pakar' / 'pendapat pakar' (§2). ('tahap kepakaran' in 014
+     is genuine "level of expertise" and was left.)
+b#9  012: decimal fixed to 0.5 (thousand/decimal sweep). The added "Taiwan is RHT / unlike Malaysia" clause was
+     NOT added — ACCEPTED-ms reduces b#9 to the number format, and naming Malaysia would break the
+     nationality gate. See §3.
+b#10 013: 'pelaku asing tidak memasukkan dana' → 'pelabur asing memasukkan dana dengan alasan lain'.
+b#11 013: '“**lembaran data asas**” (統一證號基本資料表)' → '“**borang data asas nombor pengenalan seragam**”'.
+b#12/b#16/b#18 營業項目 'cabang (aktiviti)' → 'item perniagaan'; 同業公會 'persatuan cabang' → 'persatuan
+     industri'; 015 'sekitar 10 cabang dalam satu kali' → 'sekitar 10 item perniagaan serentak'.
+b#13 013 CTA → 'Jika anda memerlukan bantuan mengenai undang-undang Taiwan, sila gunakan halaman Hubungi;
+     perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.' (a first draft wrote
+     "perundingan dalam bahasa Melayu tidak ditawarkan" — the checker's ms-consult-lang regex matches that
+     string even in the negative, so the limiter is phrased positively.)
+b#14 014 §1: heading → 'Jawapan ringkas: bilakah perjanjian tempoh kerja minimum boleh berkuat kuasa?' and the
+     answer now opens self-standing: 'Ia tidak sah secara automatik. Menurut perkara 15-1 …' (heading count kept).
+b#15/b#69 014 'menurut formula apa dilikuidasi jika terhapus berlaku di tengah jalan' → '… ia dikira jika
+     kontrak ditamatkan di tengah jalan'; 'likuidasi tempoh yang sudah bekerja' → 'pengiraan tempoh …';
+     018 'bagaimana dilikuidasi kos' → 'bagaimana dikira kos'. (004's 'dilikuidasi' is genuine winding-up: kept.)
+b#17 017: 汽車貨運業/汽車運輸業 'automotif' → 'kenderaan bermotor' (33, incl. title/H1).
+b#19 018: 股東 → 'pemegang saham'; 'pemegang saham menjawab' → 'pemegang saham bertanggungjawab'.
+b#20 018: 監察人 'pemeriksa' → 'penyelia syarikat (監察人)' (2).
+b#21 經濟部投資審議司 → 'Jabatan Semakan Pelaburan, Kementerian Hal Ehwal Ekonomi (經濟部投資審議司)' — one name in
+     001/013/018 (and 'Suruhanjaya Pelaburan'/'Suruhanjaya semakan' removed). 'Suruhanjaya Penyeliaan Kewangan
+     (金融監督管理委員會)' kept — 委員會 really is a commission.
+b#22 018: 'temu ramah' → 'perundingan' / 'perbincangan awal' (heading, body, CTA, 'Bahasa perundingan').
+b#24 010: 'kes pengguna nombor 7 tahun 109' → '… (2020 Masihi; 109年度消字第7號)'.
+b#25 010: 'Kerugian luar harta (非財產上損害)' → 'Ganti rugi bukan wang (非財產上損害)'.
+b#26 010: 'masuk ke dalam permainan' → 'turut terpakai'.
+b#28 010: 'sehingga 1 kali jumlah kerugian sebenar' → 'sehingga 1 kali ganda jumlah kerugian sebenar'
+     (digit kept: it sits in the 5×/3×/1× series the checker counts).
+b#29 010: 'memotret' → 'mengambil gambar'.
+b#30 011 + 004 + 013 + 017 + 018: French 'subjek' → 'pihak' / 'entiti undang-undang' / 'pemegang hak' (21).
+b#33 011: 'Terbitan pengaruh' → 'Siaran influencer'.
+b#34 011: 'meletakkannya pada pelupusan pengguna untuk cubaan' → 'menyediakan produk untuk cubaan pengguna'
+     (2). Other uses of 'pelupusan' are genuine Malay legal "disposal (of property)" and were left.
+b#35 011: 'perlu disahkan kedua, bentuk pepejal dan …' → 'perlu disahkan kedua-duanya: bentuk pepejal dan …'.
+b#37 011: 'data boleh dilokasi' → 'data boleh dikesan'.
+b#38 012: 'membunyikan hon 2 kali … atau membuat isyarat lampu' → 'membunyikan hon dua kali secara singkat
+     atau mengerdipkan lampu besar sekali' (restores the EN "flash the headlights once").
+b#39 012: 'menempah ruang keselamatan' → 'menyediakan ruang keselamatan'.
+b#41/b#42/b#43 013: Q&A + 😊 removed; '**Nasihat**：' → '**Nasihat:**'; 'Contoh)' → 'Contoh:' (2).
+b#44 014: 'kalendar latihan' → 'jadual latihan'.
+b#45 014: 'Aspek yang majikan/pekerja mesti sahkan' → 'Aspek yang mesti disahkan oleh majikan/pekerja'.
+b#46 014: 'peranti yang menghalang' → 'alat yang menghalang pekerja meletakkan jawatan, sama ada dari segi
+     fizikal atau dari segi undang-undang'.
+b#49 015 CTA → 'anda boleh menghantar pertanyaan melalui halaman Hubungi — tempoh jawapan tidak dijanjikan'.
+b#50 015: 'petikan pendaftaran hartanah jenis 2' → 'petikan pendaftaran bangunan kelas 2' — see §4 (the
+     checker requires the digit 2 for 제2종, so 'kelas kedua' could not be used).
+b#51 015: '“rujukan terdahulu premis” (營業場所預先查詢)' → '“semakan awal premis”' (4).
+b#52 016 title/H1: 'keluarga yang tinggal' → 'keluarga yang ditinggalkan'.
+b#53 016: 監護 'jagaan anak bawah umur' → 'perwalian anak bawah umur' (incl. §-heading and FAQ).
+b#54 016: 'pelepaskan' (noun) → 'pelepasan' (6).
+b#55 016: 'peringkat 1 pewarisan berkanun' → 'peringkat pertama pewarisan berkanun'.
+b#56 016: 'kuasa ibu bapa ibu bapa yang hidup' → 'kuasa ibu bapa pihak yang hidup' (3, incl. §5 heading + FAQ).
+b#57 016: 'daftar status sivil (戶籍)' → 'daftar isi rumah (戶籍)'.
+b#59 016: 'rizab waris (特留分)' → 'bahagian wajib waris (特留分)'.
+b#61 017 + 003: 'tarif' → 'tambang' (freight charge / transport fare).
+b#62 017 + 018: 'orang fizikal' → 'orang perseorangan' (4).
+b#63 017: 客戶服務 'perhatian kepada pelanggan' → 'perkhidmatan pelanggan' (2).
+b#64 018: 董事 'pentadbir' → 'pengarah' (3); 'dipilih antara pemegang saham'.
+b#66 018: 'orang asing 2 atau yang berikutnya' → 'orang asing yang kedua dan seterusnya'.
+b#67 018: 'syarikat bukan pengeluar awam' → 'syarikat yang bukan syarikat tawaran awam (非公開發行)'; 'tidak
+     mempunyai majlis' → 'tidak mempunyai lembaga pengarah'.
+b#70 017: 運送承攬 'komisen pengangkutan' → 'perantaraan pengangkutan (運送承攬)'; 'komisioner pengangkutan' →
+     'perantara pengangkutan' (8 total).
+
+## 2. Systemic sweeps (pattern → instances changed)
+guillemets «…» / « … » → Malaysian “…”                                   54
+European thousands 1.234.567 → 1,234,567 (URLs masked)                   76
+European decimal 0,5 → 0.5                                                3
+股東 'rakan kongsi' → 'pemegang saham' (all 18 files)                     70
+項 'ayat N' → 'perenggan N'                                               29
+章程 'tataurusan' → 'perlembagaan syarikat'                               14
+營業項目 'cabang (aktiviti)' → 'item perniagaan'                           18
+同業公會 'persatuan cabang' → 'persatuan industri'                          7
+第三人 'pihak 3' → 'pihak ketiga'                                          18
+'orang yang digaji' (Beschäftigte) → 'pekerja'                           16
+函釋 / Orientierung 'orientasi|Orientasi' → 'panduan|tafsiran'             27
+戶政/戶籍 'status sivil' → 'pendaftaran isi rumah' / 'daftar isi rumah'     34
+'proses verbal' → 'rekod prosiding' / 'rekod tempat kejadian'             7
+鑑定 'kepakaran' → 'penilaian pakar' / 'pendapat pakar'                    16
+French 'subjek …' → 'pihak' / 'entiti undang-undang' / 'pemegang hak'     21
+'orang fizikal' → 'orang perseorangan'                                    4
+一審/二審 'peringkat 1|2', 'perbicaraan 1' → 'peringkat pertama|kedua'      20
+慰撫金/非財產 'kerugian moral' → 'pampasan penderitaan'                      7
+ministry names capitalised; 經濟部 → 'Kementerian Hal Ehwal Ekonomi'        41
+投資審議司 'Suruhanjaya …' → 'Jabatan Semakan Pelaburan, …'                  9
+'perdebatan lisan' → 'hujah lisan'                                        3
+病歷 'fail perubatan' → 'rekod perubatan'                                  5
+健身房 'gimnasium' → 'pusat kecergasan' (010 + team bio)                   29
+汽車貨運業/汽車運輸業 'automotif' → 'kenderaan bermotor'                      33
+'temu ramah' → 'perundingan' / 'perbincangan awal'                        4
+'pelepaskan' (noun) → 'pelepasan'                                         6
+'tarif' → 'tambang' / 'jadual yuran'                                      4
+guidance: 'kumpulan (kerja)' → 'bidang (amalan)'                         14
+guidance: 'borang hubungan' → 'borang pertanyaan'                         6
+guidance: 'menemani' → 'membantu'/'mewakili'/'membimbing'                 5
+guidance: 'cap dagangan' → 'tanda dagangan'                               4
+
+## 3. Rows skipped (with reason)
+a#15  Hangul percent-encoded body link in 005 (and the Hangul `url:` in 008/009 frontmatter).
+      ACCEPTED-ms skip list + the WO hard rule "do not change `url` / links". Left untouched.
+b#7   Invest Taiwan `lang=jpn` link in 011 — ACCEPTED-ms says "fixed mechanically — skip"; it is a link URL,
+      which the hard rules forbid changing. Left untouched.
+a#5/a#7/a#9/a#51, b#9  The reviewer's wording that names Malaysia ("misalnya di Malaysia", "berbeza dengan
+      Malaysia") was NOT used. ACCEPTED-ms: "R2 (neutral, not 'Malaysia')" — and the checker's nationality gate
+      fails any 'Malaysia' mention whose source block does not name a country. Neutral generalisation applied.
+a#32 (variant), team bio  The reviewer suggested 'TWD 1.57 juta'; R3 says keep the attorney-approved fact
+      "TWD 1,570,000" and only fix the format, so the full Malaysian-grouped figure is used.
+b#65  Applied only in part. The "orphan sentence" exists identically in the English source ("The foregoing is
+      contract-design advice."), so replacing it with the reviewer's new sentence about registration routes
+      would change the meaning of the source. Fixed the orphan reference instead: 'Nasihat di atas berkaitan
+      reka bentuk kontrak.' Flagged below.
+a#53 (ZWSP part)  The chatty comment CTA was rewritten, but the ~52 zero-width-space "padding" paragraphs in
+      003 (and the like in 005/009/013) were kept: they are real blocks in the Korean source. Removing them in
+      003 was tested and the checker failed with `blocks 158 → 106, ZWSP 52 → 0`. R7 requires block parity, so
+      the padding stays.
+
+## 4. Checker-forced wording (noted per WO §Verify)
+- 015 建物登記第二類謄本: 'kelas kedua' removed the digit the checker requires for 제2종 (numbers FAIL,
+  sourceCount 11 vs targetCount 9). Kept as "petikan pendaftaran bangunan kelas 2"; the substantive fix
+  (hartanah → bangunan) is in place.
+- 002 停業登記: "bagi setiap kali pendaftaran" dropped one '1' and the file failed `numbers`. Final wording
+  keeps the digit: "sesuatu penggantungan aktiviti tidak boleh melebihi 1 tahun bagi setiap 1 kali pendaftaran".
+- 007 "Sumber primer (peringkat 1)" is a source-tier label, not 一審 — the 一審 sweep was reverted there
+  (it is the file's only '1' and the checker requires it).
+- 008 frontmatter `url:` still contains a fullwidth colon inside the Hangul slug (…대만-노동법：대만에서…).
+  Left: `url` is canonical source metadata the hard rules forbid changing. All fullwidth punctuation in
+  running text is gone (013 '**Nasihat**：' fixed).
+- 009 first draft "— ini bukan jaminan hasil." tripped the ms-cost-guarantee rule; reworded to
+  "— ini bukan janji tentang hasil."
+- 013 first draft "perundingan dalam bahasa Melayu tidak ditawarkan" tripped ms-consult-lang (the regex has no
+  negation awareness); reworded to the positive limiter.
+
+## 5. Disagreements with the reviews (not applied)
+1. b#9 (012) — "Di Taiwan kenderaan di kanan (berbeza dengan Malaysia)". Inserting a statement about
+   Malaysian traffic law is exactly what R2/ACCEPTED-ms forbid (no claims about the reader's country) and it
+   breaks the nationality gate. Only the decimal format was fixed. If the supervisor wants the RHT fact, it
+   should be added as a Taiwan-side statement ("Di Taiwan, kenderaan memandu di sebelah kanan jalan") with no
+   comparison — say the word and I will add it.
+2. b#65 (018) — the reviewer's replacement sentence ("rangka umum laluan pendaftaran") describes a different
+   thing than the English source sentence, which really is about contract design. Applied a minimal
+   disambiguation instead of the suggested rewrite.
+3. b#34 / "pelupusan" — the reviewer calls 'pelupusan' a raw calque. It is only wrong in the one
+   mettre-à-la-disposition sentence (fixed). 'Pelupusan harta' is standard Malaysian legal usage for disposal
+   of property (007, 016) and was deliberately left.
+4. a#43 "sekali gus" — "sekali gus" means "all at once/simultaneously", which is not what 停業 1 year per
+   registration says. Rephrased for sense rather than using the suggested word.
+5. a#3 — the reviewer's suggested gloss mentioned Malaysian termination benefits ("pampasan buang kerja di
+   Malaysia"); that is a claim about Malaysian law, so the neutral ACCEPTED-ms form ('skim atau peraturan
+   negara lain') was used.
+6. b#59 / a#48 "ganti rugi bukan wang" vs "pampasan penderitaan": both were suggested. 慰撫金 is used
+   consistently as 'pampasan penderitaan' and 非財產上損害 as 'ganti rugi bukan wang', so the two Chinese terms
+   stay distinguishable in Malay.
+
+## 6. §Verify output (verbatim)
+$ node scripts/check-column-translation.mjs --dir src/content/columns-ms --lang ms 2>&1 | tail -8
+forbidden      PASS   
+hanzi          PASS   han=69
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-ms src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      24
+
+Pass criteria: checker summary PASS 18/18 · markers 0 · TSC_OK · 2770 tests passed · 23 modified files
+(18 columns + 5 data/lib files, all ms-only) + this log.

@@ -19,17 +19,17 @@ dan soalan yang kerap diajukan pada saat penubuhan dikumpulkan di bawah.
 
 Mereka yang telah membaca [**asas penubuhan syarikat**](/ms/columns/taiwan-company-establishment-basics) kemudian boleh merujuk juga kepada bahagian mendalam yang lebih terperinci ini.
 
-Soalan dan jawapan (Q&A) berikut bertujuan membantu orang yang merancang menubuhkan syarikat di Taiwan. 😊
+Soalan dan jawapan berikut bertujuan membantu orang yang merancang menubuhkan syarikat di Taiwan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
 **1. Saya ingin menubuhkan syarikat, tetapi belum menemui alamat pendaftaran. Adakah penubuhan tetap mungkin?**
 
-Apabila orang asing menubuhkan syarikat di Taiwan, ia mesti mengemukakan pelan pelaburan (投資計畫書) kepada Jabatan Semakan Pelaburan kementerian Ekonomi (經濟部投資審議司) bagi tujuan semakan.
+Apabila orang asing menubuhkan syarikat di Taiwan, ia mesti mengemukakan pelan pelaburan (投資計畫書) kepada Jabatan Semakan Pelaburan, Kementerian Hal Ehwal Ekonomi (經濟部投資審議司) bagi tujuan semakan.
 
 Jabatan Semakan Pelaburan mesti mengesahkan sama ada modal (資本額) berkenaan benar-benar digunakan bagi tujuan pelaburan
 
-dan sama ada pelaku asing tidak memasukkan dana dengan alasan lain.
+dan sama ada pelabur asing memasukkan dana dengan alasan lain.
 
 Semasa penyediaan pelan pelaburan, tidak perlu menyatakan alamat tepat syarikat; pernyataan wilayah mencukupi (contoh: bandar Taipei). ​
 
@@ -43,7 +43,7 @@ Sudah dalam bahagian asas, seorang pembaca menyatakan bahawa pembukaan akaun ial
 
 Kerana kes pengubahan wang haram (洗錢) sangat ramai di Taiwan, pembukaan akaun bank menjadi semakin ketat.
 
-**Nasihat**：
+**Nasihat:**
 
 Kerana semakan pelan pelaburan juga mengambil masa,
 
@@ -63,7 +63,7 @@ Ini mungkin.
 
 Bank menuntut pada umumnya pengesahan identiti berganda,
 
-dan tanpa kad kediaman, anda boleh memohon di pentadbiran imigresen Taiwan « **lembaran data asas** » (統一證號基本資料表).
+dan tanpa kad kediaman, anda boleh memohon di pentadbiran imigresen Taiwan “**borang data asas nombor pengenalan seragam**” (統一證號基本資料表).
 
 Pengeluaran mungkin pada hari yang sama,
 
@@ -73,7 +73,7 @@ tetapi pentadbiran imigresen (移民署) sangat ramai; maka sesuai tiba awal dan
 
 **3. Saya mendengar bahawa, semasa semakan pelan pelaburan, perlu dinyatakan pendidikan dan pengalaman profesional, dan saya bimbang bahawa pendidikan dan pengalaman saya tidak sepadan dengan sektor syarikat yang ingin saya tubuhkan.**
 
-Suruhanjaya semakan kementerian Ekonomi meneliti memang latarbelakang pelabur,
+Jabatan Semakan Pelaburan, Kementerian Hal Ehwal Ekonomi memang meneliti latar belakang pelabur,
 
 tetapi semakan tidak terlalu ketat.
 
@@ -91,7 +91,7 @@ Penubuhan syarikat berlangsung sekitar **3 bulan**, pemerolehan lesen kerja (工
 
 maka anda mesti menetapkan permulaan kontrak selewat mungkin.
 
-Selain itu, dalam kontrak sewa premis komersial di Taiwan, tuan rumah kerap memberikan kepada penyewa « **tempoh pengubahsuaian** » (裝潢期間).
+Selain itu, dalam kontrak sewa premis komersial di Taiwan, tuan rumah kerap memberikan kepada penyewa “**tempoh pengubahsuaian**” (裝潢期間).
 
 Ini ialah tempoh yang dikecualikan sewa; anda boleh merundingkannya.
 
@@ -109,9 +109,9 @@ anda boleh, jika sesuai, mencadangkan pengesahan kontrak sewa (公證) atau depo
 
 **5. Bolehkah, semasa penubuhan syarikat, menyewa premis komersial pejabat?**
 
-Ini bergantung pada cabang aktiviti (營業項目) syarikat.
+Ini bergantung pada item perniagaan (營業項目) syarikat.
 
-Contoh) Jika cabang aktiviti ialah restoran dan ingin menyewa premis komersial pejabat, pembukaan akaun bank akan sangat sukar.
+Contoh: jika item perniagaan ialah restoran dan ingin menyewa premis komersial pejabat, pembukaan akaun bank akan sangat sukar.
 
 Seperti sudah dinyatakan, bank meneliti kontrak sewa dan memeriksa di tempat alamat syarikat.
 
@@ -119,11 +119,11 @@ Selain itu, semasa pendaftaran akhir syarikat, perbandaran (市政府) juga menu
 
 jika ia premis komersial pejabat, pendaftaran syarikat (公司登記) maka tidak mungkin.
 
-Contoh) Jika ia cabang aktiviti yang mungkin dalam premis komersial pejabat, seperti pengiklanan atau perdagangan borong, syarikat boleh ditubuhkan dalam premis komersial pejabat. Sebelum pemeteraian kontrak sewa
+Contoh: jika ia item perniagaan yang mungkin dalam premis komersial pejabat, seperti pengiklanan atau perdagangan borong, syarikat boleh ditubuhkan dalam premis komersial pejabat. Sebelum pemeteraian kontrak sewa
 
 anda patut mengesahkannya terlebih dahulu.
 
-*Jika anda memerlukan bantuan atau pertukaran mengenai undang-undang Taiwan, tinggalkan komen atau hubungi.*
+*Jika anda memerlukan bantuan mengenai undang-undang Taiwan, sila gunakan halaman Hubungi; perundingan hanya dijalankan dalam bahasa Inggeris, Cina, Jepun dan Korea.*
 
 ---
 

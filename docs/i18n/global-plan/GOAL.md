@@ -9,7 +9,10 @@ Cloud Terminal MCP는 이 로컬 세션 네임스페이스에 없고(`CURSOR_API
 작업트리 `~/Projects/tseng-law-global-picker-20260918` 브랜치 `i18n/global-picker-20260918` (base origin/main 4152e1c6).
 상위 하드 룰 상속(`docs/seo/sea-geo-plan/PROMPT.md` §4): 상담 언어 EN/ZH/JA/KO만(안내 언어로 상담 가능 암시 금지, `availableLanguage` 4 고정), 대만 변호사 광고규정(승소율·보장·최고/유일 금지), 새 법률 주장은 `[변호사 검수 필요]`(있으면 main 금지), `siteLocales`·빌더 Locale 확대 금지(새 언어는 **안내 로케일** 메커니즘: `GUIDANCE_LOCALES_4`/`PUBLIC_LOCALES_8` + 팩 파일 + 폰트 + 칼럼 폴더).
 
-## 현 상태 (2026-09-18 origin/main)
+## 현 상태 (2026-09-21 origin/main 7becf2e2)
+- 공개 로케일 31: 사이트 4 + 안내 27. 칼럼 18편 × 31언어 전부 보유, 안내 27개 체커 PASS. 다음 단계는 사용자 지시대로 언어 추가(후보: bn·ur·ta·fa·my·km·lo·mn·sk·bg·hr·lt·lv·et·sl·ca·is·sw).
+
+### (이전) 2026-09-18 기준
 - 공개 로케일 11: ko·zh-hant·en·ja(사이트 4) + vi·id·th·fil·ar·de·es(안내 7). 팩: `international-guidance-content.ts`(vi/id/th/fil), `-western.ts`(de/es), ar 별도. 칼럼 17편 × 11언어 폴더. RTL ar 지원.
 - 언어 선택 UI: 헤더 유틸리티 `LocaleFlagSwitcher`(드롭다운) + 푸터 동일. 지구본·지역 그룹 없음.
 - 선례: de/es 추가 = 팩 파일 + 폰트 + 칼럼 17 + 테스트 갱신 + Fable 검토 4라운드(`docs/seo/reviews/DE-ES-*`). 새 언어 1개 ≈ WO 1~2건.
@@ -76,3 +79,4 @@ Cloud Terminal MCP는 이 로컬 세션 네임스페이스에 없고(`CURSOR_API
 - 2026-09-19 09:0x · Opus 5(son7-51) · 레인 인수. G2-3 검증·커밋(7a138084)·정정(6bb3e839). 중복 워크트리 폐기.
 - 2026-09-18 15:5x · Fable 5.1 · G1 커밋 8c365373·R1 d7aa7622(브라우저 QA 통과). WO-G2-1(fr·pt) Grok 발주, G1 Opus 검토 병행.
 - 2026-09-19 13:2x · Grok 4.6 총괄 세션 · 사용자 지시로 Opus 5를 구현 워커로 병행. Cloud Terminal MCP는 로컬 세션에 없음 → cursor-agent Opus. G2-4(Grok) + G2-C-FR(Opus, 별도 워크트리) 발주.
+- 2026-09-21 · Fable 5.1 총괄 · **전체 검수(/goal)**: 워커 병행분(ru·da·nb·fi·cs·hu·ro·uk·el·he 칼럼 + 선택기) 통합 후 재검. 결함 6종 정정(카테고리 정본 불일치 88파일 · zh-hans 자기병기 640건 · el/uk 서명 · 018 수사 · date_display 8언어 현지화+체커 월명 · sitemap 테스트 하드코딩). 체커 27/27 PASS, 마커 0, 한글 0, lint/tsc 0, build OK, vitest 1320/11994, 로컬 935 URL 200. 커밋 7becf2e2 → origin/main 푸시. 보고서 `reviews/AUDIT-20260921-FULL.md`. Vercel CLI는 분류기 차단 → 라이브 마커 폴링으로 배포 확인. **12:52 라이브** 935/935 200, IndexNow 935 HTTP 200.

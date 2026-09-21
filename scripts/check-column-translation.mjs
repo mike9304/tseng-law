@@ -24,7 +24,7 @@ const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 export const repoRoot = resolve(scriptDirectory, '..');
 export const DEFAULT_SOURCE_DIR = join(repoRoot, 'src/content/columns');
 
-export const GUIDANCE_LANGS = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi', 'cs', 'hu', 'ro', 'uk', 'el', 'he'];
+export const GUIDANCE_LANGS = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi', 'cs', 'hu', 'ro', 'uk', 'el', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne', 'km', 'mn', 'sk', 'bg', 'hr', 'sr', 'sl', 'lt', 'lv', 'et', 'ca', 'is'];
 export const HANZI_MIN = 5;
 export const ENGLISH_WORD_MIN = 12;
 export const ENGLISH_STOPWORD_MIN = 3;
@@ -320,6 +320,186 @@ export const FORBIDDEN_PHRASES = {
     { id: 'he-always-on', re: /ייעוץ\s*24\s*\/\s*7|24\/7/, note: '즉시/상시 상담' },
     { id: 'he-free-consult', re: /ייעוץ חינם|ייעוץ ללא תשלום/, note: '비용 보장(무료 상담)' },
   ],
+  bn: [
+    { id: 'bn-consult-lang', re: /পরামর্শ বাংলায়|বাংলায় পরামর্শ|বাংলা ভাষায় আইনি পরামর্শ/i, note: 'bn 상담 가능' },
+    { id: 'bn-interpreter', re: /দোভাষী (দেওয়া হবে|প্রদান|সরবরাহ)|দোভাষী রয়েছে/i, note: '통역 제공' },
+    { id: 'bn-immediate', re: /তাৎক্ষণিক (উত্তর|জবাব)|অবিলম্বে উত্তর/i, note: '즉시 응답' },
+    { id: 'bn-success-rate', re: /সাফল্যের হার|জয়ের হার/i, note: '성공률' },
+    { id: 'bn-win-100', re: /১০০\s*%\s*সাফল্য|100\s*%\s*সাফল্য/i, note: '성공률 100%' },
+    { id: 'bn-cost-guarantee', re: /(খরচ|ফলাফল)(ের)? নিশ্চয়তা|আমরা নিশ্চয়তা দিই|গ্যারান্টি/i, note: '비용/결과 보장' },
+    { id: 'bn-always-on', re: /২৪\s*\/\s*৭|24\s*\/\s*7/i, note: '즉시/상시 상담' },
+    { id: 'bn-free-consult', re: /বিনামূল্যে পরামর্শ|ফ্রি পরামর্শ/i, note: '비용 보장(무료 상담)' },
+  ],
+  ur: [
+    { id: 'ur-consult-lang', re: /اردو میں (قانونی )?مشاورت|مشاورت اردو میں/i, note: 'ur 상담 가능' },
+    { id: 'ur-interpreter', re: /مترجم (فراہم|دستیاب|مہیا)/i, note: '통역 제공' },
+    { id: 'ur-immediate', re: /فوری جواب|فوراً جواب/i, note: '즉시 응답' },
+    { id: 'ur-success-rate', re: /کامیابی کی شرح|جیتنے کی شرح/i, note: '성공률' },
+    { id: 'ur-win-100', re: /100\s*%\s*کامیابی|۱۰۰\s*%\s*کامیابی/i, note: '성공률 100%' },
+    { id: 'ur-cost-guarantee', re: /(لاگت|نتیجہ|نتائج) کی ضمانت|ہم ضمانت دیتے ہیں/i, note: '비용/결과 보장' },
+    { id: 'ur-always-on', re: /24\s*\/\s*7|۲۴\s*\/\s*۷/i, note: '즉시/상시 상담' },
+    { id: 'ur-free-consult', re: /مفت مشاورت|مفت مشورہ/i, note: '비용 보장(무료 상담)' },
+  ],
+  fa: [
+    { id: 'fa-consult-lang', re: /مشاوره (حقوقی )?به (زبان )?فارسی|مشاوره فارسی/i, note: 'fa 상담 가능' },
+    { id: 'fa-interpreter', re: /مترجم (فراهم|ارائه|در دسترس)/i, note: '통역 제공' },
+    { id: 'fa-immediate', re: /پاسخ فوری|فوراً پاسخ/i, note: '즉시 응답' },
+    { id: 'fa-success-rate', re: /نرخ موفقیت|درصد موفقیت|نرخ برد/i, note: '성공률' },
+    { id: 'fa-win-100', re: /100\s*%\s*موفقیت|۱۰۰\s*%\s*موفقیت/i, note: '성공률 100%' },
+    { id: 'fa-cost-guarantee', re: /تضمین (هزینه|نتیجه)|ما تضمین می‌کنیم/i, note: '비용/결과 보장' },
+    { id: 'fa-always-on', re: /24\s*\/\s*7|۲۴\s*\/\s*۷|شبانه‌روزی/i, note: '즉시/상시 상담' },
+    { id: 'fa-free-consult', re: /مشاوره رایگان|رایگان مشاوره/i, note: '비용 보장(무료 상담)' },
+  ],
+  my: [
+    { id: 'my-consult-lang', re: /မြန်မာဘာသာဖြင့် (ဥပဒေ)?အကြံ(ပြု|ဉာဏ်)|မြန်မာလို အကြံပေး/i, note: 'my 상담 가능' },
+    { id: 'my-interpreter', re: /စကားပြန် (စီစဉ်|ပံ့ပိုး|ရှိ)/i, note: '통역 제공' },
+    { id: 'my-immediate', re: /ချက်ချင်း (ပြန်ကြား|ဖြေကြား)/i, note: '즉시 응답' },
+    { id: 'my-success-rate', re: /အောင်မြင်နှုန်း|အနိုင်ရနှုန်း/i, note: '성공률' },
+    { id: 'my-win-100', re: /100\s*%\s*အောင်မြင်|၁၀၀\s*%\s*အောင်မြင်/i, note: '성공률 100%' },
+    { id: 'my-cost-guarantee', re: /(ကုန်ကျစရိတ်|ရလဒ်) အာမခံ|ကျွန်ုပ်တို့ အာမခံ/i, note: '비용/결과 보장' },
+    { id: 'my-always-on', re: /24\s*\/\s*7|၂၄\s*\/\s*၇/i, note: '즉시/상시 상담' },
+    { id: 'my-free-consult', re: /အခမဲ့ (အကြံပေး|တိုင်ပင်)/i, note: '비용 보장(무료 상담)' },
+  ],
+  ta: [
+    { id: 'ta-consult-lang', re: /தமிழில் (சட்ட )?ஆலோசனை|ஆலோசனை தமிழில்/i, note: 'ta 상담 가능' },
+    { id: 'ta-interpreter', re: /மொழிபெயர்ப்பாளர் (வழங்க|கிடைக்க|உள்ள)/i, note: '통역 제공' },
+    { id: 'ta-immediate', re: /உடனடி (பதில்|பதிலளிப்பு)|உடனே பதில்/i, note: '즉시 응답' },
+    { id: 'ta-success-rate', re: /வெற்றி விகிதம்|வெற்றி சதவீதம்/i, note: '성공률' },
+    { id: 'ta-win-100', re: /100\s*%\s*வெற்றி/i, note: '성공률 100%' },
+    { id: 'ta-cost-guarantee', re: /(செலவு|முடிவு) உத்தரவாதம்|நாங்கள் உத்தரவாதம்/i, note: '비용/결과 보장' },
+    { id: 'ta-always-on', re: /24\s*\/\s*7/i, note: '즉시/상시 상담' },
+    { id: 'ta-free-consult', re: /இலவச ஆலோசனை/i, note: '비용 보장(무료 상담)' },
+  ],
+  ne: [
+    { id: 'ne-consult-lang', re: /नेपालीमा (कानुनी )?परामर्श|परामर्श नेपालीमा/i, note: 'ne 상담 가능' },
+    { id: 'ne-interpreter', re: /दोभाषे (उपलब्ध|प्रदान|व्यवस्था)/i, note: '통역 제공' },
+    { id: 'ne-immediate', re: /तत्काल (जवाफ|उत्तर)|तुरुन्तै जवाफ/i, note: '즉시 응답' },
+    { id: 'ne-success-rate', re: /सफलता दर|जित्ने दर/i, note: '성공률' },
+    { id: 'ne-win-100', re: /100\s*%\s*सफलता|१००\s*%\s*सफलता/i, note: '성공률 100%' },
+    { id: 'ne-cost-guarantee', re: /(लागत|नतिजा)को (ग्यारेन्टी|प्रत्याभूति)|हामी ग्यारेन्टी/i, note: '비용/결과 보장' },
+    { id: 'ne-always-on', re: /24\s*\/\s*7|२४\s*\/\s*७/i, note: '즉시/상시 상담' },
+    { id: 'ne-free-consult', re: /निःशुल्क परामर्श|नि:शुल्क परामर्श/i, note: '비용 보장(무료 상담)' },
+  ],
+  km: [
+    { id: 'km-consult-lang', re: /ប្រឹក្សា(ច្បាប់)?ជាភាសាខ្មែរ|ជាភាសាខ្មែរ.{0,10}ប្រឹក្សា/i, note: 'km 상담 가능' },
+    { id: 'km-interpreter', re: /(ផ្តល់|មាន)អ្នកបកប្រែ/i, note: '통역 제공' },
+    { id: 'km-immediate', re: /ឆ្លើយតបភ្លាមៗ|ឆ្លើយភ្លាម/i, note: '즉시 응답' },
+    { id: 'km-success-rate', re: /អត្រាជោគជ័យ|អត្រាឈ្នះ/i, note: '성공률' },
+    { id: 'km-win-100', re: /100\s*%\s*ជោគជ័យ|១០០\s*%\s*ជោគជ័យ/i, note: '성공률 100%' },
+    { id: 'km-cost-guarantee', re: /ធានា(ថ្លៃ|លទ្ធផល)|យើងធានា/i, note: '비용/결과 보장' },
+    { id: 'km-always-on', re: /24\s*\/\s*7|២៤\s*\/\s*៧/i, note: '즉시/상시 상담' },
+    { id: 'km-free-consult', re: /ប្រឹក្សា(ដោយ)?ឥតគិតថ្លៃ/i, note: '비용 보장(무료 상담)' },
+  ],
+  mn: [
+    { id: 'mn-consult-lang', re: /монгол хэлээр (хууль зүйн )?зөвлөгөө|зөвлөгөө монгол хэлээр/i, note: 'mn 상담 가능' },
+    { id: 'mn-interpreter', re: /орчуулагч (гаргаж|бэлэн|байна)/i, note: '통역 제공' },
+    { id: 'mn-immediate', re: /шууд хариулна|яаралтай хариу/i, note: '즉시 응답' },
+    { id: 'mn-success-rate', re: /амжилтын хувь|ялалтын хувь/i, note: '성공률' },
+    { id: 'mn-win-100', re: /100\s*%\s*амжилт/i, note: '성공률 100%' },
+    { id: 'mn-cost-guarantee', re: /(зардал|үр дүн)гийн баталгаа|бид баталгаа/i, note: '비용/결과 보장' },
+    { id: 'mn-always-on', re: /24\s*\/\s*7/i, note: '즉시/상시 상담' },
+    { id: 'mn-free-consult', re: /үнэгүй зөвлөгөө/i, note: '비용 보장(무료 상담)' },
+  ],
+  sk: [
+    { id: 'sk-consult-lang', re: /(právn[eaá]\s+)?poradenstvo\s+(v\s+)?slovenčine|po\s+slovensky\s+(právn[eaá]\s+)?poradenstvo|konzultáci[ae]\s+v\s+slovenčine/i, note: 'sk 상담 가능' },
+    { id: 'sk-interpreter', re: /(poskytneme|zabezpečíme|k dispozícii je)\s+tlmočník/i, note: '통역 제공' },
+    { id: 'sk-immediate', re: /okamžitá odpoveď|odpovieme ihneď|ihneď odpovieme/i, note: '즉시 응답' },
+    { id: 'sk-success-rate', re: /úspešnosť|miera úspešnosti|percento výhier/i, note: '성공률' },
+    { id: 'sk-win-100', re: /100\s*%\s*úspešnosť|úspešnosť\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'sk-cost-guarantee', re: /garancia (ceny|výsledku)|garantujeme (výsledok|cenu)|zaručujeme/i, note: '비용/결과 보장' },
+    { id: 'sk-always-on', re: /24\s*\/\s*7|nonstop poradenstvo/i, note: '즉시/상시 상담' },
+    { id: 'sk-free-consult', re: /bezplatn[áé] (konzultácia|poradenstvo)|poradenstvo zdarma/i, note: '비용 보장(무료 상담)' },
+  ],
+  bg: [
+    { id: 'bg-consult-lang', re: /(правна )?консултация на български|консултация на български език/i, note: 'bg 상담 가능' },
+    { id: 'bg-interpreter', re: /(осигуряваме|предоставяме|разполагаме с) преводач/i, note: '통역 제공' },
+    { id: 'bg-immediate', re: /незабавен отговор|отговаряме веднага/i, note: '즉시 응답' },
+    { id: 'bg-success-rate', re: /процент (успех|успеваемост)|успеваемост от/i, note: '성공률' },
+    { id: 'bg-win-100', re: /100\s*%\s*успех|успех\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'bg-cost-guarantee', re: /гаранция за (цена|резултат)|гарантираме (резултат|цена)/i, note: '비용/결과 보장' },
+    { id: 'bg-always-on', re: /24\s*\/\s*7|денонощна консултация/i, note: '즉시/상시 상담' },
+    { id: 'bg-free-consult', re: /безплатна консултация/i, note: '비용 보장(무료 상담)' },
+  ],
+  hr: [
+    { id: 'hr-consult-lang', re: /(pravno )?savjetovanje na hrvatskom|konzultacije na hrvatskom/i, note: 'hr 상담 가능' },
+    { id: 'hr-interpreter', re: /(osiguravamo|nudimo|na raspolaganju je) prevoditelj/i, note: '통역 제공' },
+    { id: 'hr-immediate', re: /trenutačan odgovor|odgovaramo odmah|odmah odgovaramo/i, note: '즉시 응답' },
+    { id: 'hr-success-rate', re: /stopa uspjeha|postotak uspjeha|stopa dobivenih/i, note: '성공률' },
+    { id: 'hr-win-100', re: /100\s*%\s*uspjeh|uspjeh\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'hr-cost-guarantee', re: /jamstvo (cijene|rezultata|ishoda)|jamčimo (rezultat|cijenu|ishod)/i, note: '비용/결과 보장' },
+    { id: 'hr-always-on', re: /24\s*\/\s*7/i, note: '즉시/상시 상담' },
+    { id: 'hr-free-consult', re: /besplatn[oa] (savjetovanje|konzultacij)/i, note: '비용 보장(무료 상담)' },
+  ],
+  sr: [
+    { id: 'sr-consult-lang', re: /(pravno )?savetovanje na srpskom|konsultacije na srpskom/i, note: 'sr 상담 가능' },
+    { id: 'sr-interpreter', re: /(obezbeđujemo|nudimo|na raspolaganju je) prevodilac/i, note: '통역 제공' },
+    { id: 'sr-immediate', re: /trenutan odgovor|odgovaramo odmah|odmah odgovaramo/i, note: '즉시 응답' },
+    { id: 'sr-success-rate', re: /stopa uspeha|procenat uspeha|stopa dobijenih/i, note: '성공률' },
+    { id: 'sr-win-100', re: /100\s*%\s*usp[ej]h|usp[ej]h\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'sr-cost-guarantee', re: /garancija (cene|rezultata|ishoda)|garantujemo (rezultat|cenu|ishod)/i, note: '비용/결과 보장' },
+    { id: 'sr-always-on', re: /24\s*\/\s*7/i, note: '즉시/상시 상담' },
+    { id: 'sr-free-consult', re: /besplatn[oa] (savetovanje|konsultacij)/i, note: '비용 보장(무료 상담)' },
+  ],
+  sl: [
+    { id: 'sl-consult-lang', re: /(pravno )?svetovanje v slovenščini|posvet v slovenščini/i, note: 'sl 상담 가능' },
+    { id: 'sl-interpreter', re: /(zagotovimo|zagotavljamo|na voljo je) tolmač/i, note: '통역 제공' },
+    { id: 'sl-immediate', re: /takojšen odgovor|odgovorimo takoj|takoj odgovorimo/i, note: '즉시 응답' },
+    { id: 'sl-success-rate', re: /stopnja uspešnosti|odstotek uspešnosti|delež dobljenih/i, note: '성공률' },
+    { id: 'sl-win-100', re: /100\s*%\s*uspe(h|šnost)|uspešnost\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'sl-cost-guarantee', re: /jamstvo (cene|rezultata|izida)|jamčimo (rezultat|ceno|izid)/i, note: '비용/결과 보장' },
+    { id: 'sl-always-on', re: /24\s*\/\s*7/i, note: '즉시/상시 상담' },
+    { id: 'sl-free-consult', re: /brezplačn[oa] (svetovanje|posvet)/i, note: '비용 보장(무료 상담)' },
+  ],
+  lt: [
+    { id: 'lt-consult-lang', re: /(teisinės )?konsultacijos lietuvių kalba|konsultuojame lietuviškai/i, note: 'lt 상담 가능' },
+    { id: 'lt-interpreter', re: /(suteiksime|užtikrinsime|turime) vertėją/i, note: '통역 제공' },
+    { id: 'lt-immediate', re: /atsakysime nedelsiant|skubus atsakymas|atsakome iš karto/i, note: '즉시 응답' },
+    { id: 'lt-success-rate', re: /sėkmės rodiklis|laimėtų bylų procentas|sėkmės procentas/i, note: '성공률' },
+    { id: 'lt-win-100', re: /100\s*%\s*sėkm/i, note: '성공률 100%' },
+    { id: 'lt-cost-guarantee', re: /(kainos|rezultato) garantija|garantuojame (rezultatą|kainą)/i, note: '비용/결과 보장' },
+    { id: 'lt-always-on', re: /24\s*\/\s*7|visą parą/i, note: '즉시/상시 상담' },
+    { id: 'lt-free-consult', re: /nemokam[aos]+ (konsultacij|teisin)/i, note: '비용 보장(무료 상담)' },
+  ],
+  lv: [
+    { id: 'lv-consult-lang', re: /(juridiskas )?konsultācijas latviešu valodā|konsultējam latviski/i, note: 'lv 상담 가능' },
+    { id: 'lv-interpreter', re: /(nodrošinām|nodrošināsim|pieejams) tulk[su]/i, note: '통역 제공' },
+    { id: 'lv-immediate', re: /tūlītēja atbilde|atbildēsim nekavējoties|atbildam uzreiz/i, note: '즉시 응답' },
+    { id: 'lv-success-rate', re: /panākumu rādītājs|uzvarēto lietu procents|veiksmes procents/i, note: '성공률' },
+    { id: 'lv-win-100', re: /100\s*%\s*panākum/i, note: '성공률 100%' },
+    { id: 'lv-cost-guarantee', re: /(cenas|rezultāta) garantija|garantējam (rezultātu|cenu)/i, note: '비용/결과 보장' },
+    { id: 'lv-always-on', re: /24\s*\/\s*7|diennakts/i, note: '즉시/상시 상담' },
+    { id: 'lv-free-consult', re: /bezmaksas (konsultācij|juridisk)/i, note: '비용 보장(무료 상담)' },
+  ],
+  et: [
+    { id: 'et-consult-lang', re: /(õigus)?nõustamine eesti keeles|konsultatsioon eesti keeles/i, note: 'et 상담 가능' },
+    { id: 'et-interpreter', re: /(tagame|pakume|olemas on) tõlgi?/i, note: '통역 제공' },
+    { id: 'et-immediate', re: /kohene vastus|vastame kohe|vastame viivitamata/i, note: '즉시 응답' },
+    { id: 'et-success-rate', re: /edukuse määr|võidetud asjade protsent|eduprotsent/i, note: '성공률' },
+    { id: 'et-win-100', re: /100\s*%\s*edu/i, note: '성공률 100%' },
+    { id: 'et-cost-guarantee', re: /(hinna|tulemuse) garantii|garanteerime (tulemuse|hinna)/i, note: '비용/결과 보장' },
+    { id: 'et-always-on', re: /24\s*\/\s*7|ööpäevaringne/i, note: '즉시/상시 상담' },
+    { id: 'et-free-consult', re: /tasuta (konsultatsioon|nõustamine)/i, note: '비용 보장(무료 상담)' },
+  ],
+  ca: [
+    { id: 'ca-consult-lang', re: /(assessorament|consulta) (jurídic[a]? )?en català|en català (assessorament|consulta)/i, note: 'ca 상담 가능' },
+    { id: 'ca-interpreter', re: /(oferim|proporcionem|disposem d'un) intèrpret/i, note: '통역 제공' },
+    { id: 'ca-immediate', re: /resposta immediata|responem immediatament|responem a l'instant/i, note: '즉시 응답' },
+    { id: 'ca-success-rate', re: /taxa d'èxit|percentatge d'èxit|taxa de casos guanyats/i, note: '성공률' },
+    { id: 'ca-win-100', re: /100\s*%\s*d'èxit|èxit del\s*100\s*%/i, note: '성공률 100%' },
+    { id: 'ca-cost-guarantee', re: /garantia (de cost|de resultat)|garantim (el resultat|el cost)/i, note: '비용/결과 보장' },
+    { id: 'ca-always-on', re: /24\s*\/\s*7|consulta les 24 hores/i, note: '즉시/상시 상담' },
+    { id: 'ca-free-consult', re: /consulta gratuïta|assessorament gratuït|primera consulta gratuïta/i, note: '비용 보장(무료 상담)' },
+  ],
+  is: [
+    { id: 'is-consult-lang', re: /(lögfræði)?ráðgjöf á íslensku|ráðgjöf á íslensku/i, note: 'is 상담 가능' },
+    { id: 'is-interpreter', re: /(útvegum|bjóðum|höfum) túlk/i, note: '통역 제공' },
+    { id: 'is-immediate', re: /tafarlaust svar|svörum strax|svörum samstundis/i, note: '즉시 응답' },
+    { id: 'is-success-rate', re: /árangurshlutfall|hlutfall unninna mála|sigurhlutfall/i, note: '성공률' },
+    { id: 'is-win-100', re: /100\s*%\s*árangur/i, note: '성공률 100%' },
+    { id: 'is-cost-guarantee', re: /(kostnaðar|niðurstöðu)ábyrgð|ábyrgjumst (niðurstöðu|kostnað)/i, note: '비용/결과 보장' },
+    { id: 'is-always-on', re: /24\s*\/\s*7|allan sólarhringinn/i, note: '즉시/상시 상담' },
+    { id: 'is-free-consult', re: /ókeypis (ráðgjöf|viðtal)/i, note: '비용 보장(무료 상담)' },
+  ],
 };
 
 /** Locale-prefix swaps that are allowed; everything else must stay byte-identical to source href. */
@@ -400,6 +580,24 @@ export const NATIONALITY_TERMS = {
   uk: ['українське громадянство', 'Україна', 'український'],
   el: ['ελληνική ιθαγένεια', 'Ελλάδα', 'ελληνικ'],
   he: ['אזרחות ישראלית', 'ישראל', 'ישראלי'],
+  bn: ['বাংলাদেশি নাগরিকত্ব', 'বাংলাদেশ', 'বাংলাদেশি'],
+  ur: ['پاکستانی شہریت', 'پاکستان', 'پاکستانی'],
+  fa: ['تابعیت ایرانی', 'ایران', 'ایرانی'],
+  my: ['မြန်မာနိုင်ငံသား', 'မြန်မာနိုင်ငံ'],
+  ta: ['இந்திய குடியுரிமை', 'இந்தியா', 'இலங்கை', 'இந்திய'],
+  ne: ['नेपाली नागरिकता', 'नेपाल'],
+  km: ['សញ្ជាតិខ្មែរ', 'កម្ពុជា'],
+  mn: ['Монгол Улсын иргэн', 'Монгол Улс'],
+  sk: ['slovenské občianstvo', 'Slovensko', 'Slovenská republika'],
+  bg: ['българско гражданство', 'България'],
+  hr: ['hrvatsko državljanstvo', 'Hrvatska', 'hrvatski'],
+  sr: ['srpsko državljanstvo', 'Srbija', 'srpski'],
+  sl: ['slovensko državljanstvo', 'Slovenija'],
+  lt: ['Lietuvos pilietybė', 'Lietuva', 'Lietuvos'],
+  lv: ['Latvijas pilsonība', 'Latvija', 'Latvijas'],
+  et: ['Eesti kodakondsus', 'Eesti Vabariik', 'Eestis'],
+  ca: ['nacionalitat espanyola', 'Catalunya', 'Espanya'],
+  is: ['íslenskur ríkisborgararéttur', 'Ísland', 'Íslands'],
 };
 
 export const NATIONALITY_LANGUAGE_NAMES = {
@@ -430,6 +628,24 @@ export const NATIONALITY_LANGUAGE_NAMES = {
   uk: [/українською/gi, /українською мовою/gi],
   el: [/στα ελληνικά/gi, /ελληνική γλώσσα/gi],
   he: [/בעברית/g, /בשפה העברית/g],
+  bn: [/বাংলায়/gi, /বাংলা ভাষায়/gi],
+  ur: [/اردو میں/gi, /اردو زبان میں/gi],
+  fa: [/به فارسی/gi, /به زبان فارسی/gi],
+  my: [/မြန်မာဘာသာဖြင့်/gi, /မြန်မာလို/gi],
+  ta: [/தமிழில்/gi, /தமிழ் மொழியில்/gi],
+  ne: [/नेपालीमा/gi, /नेपाली भाषामा/gi],
+  km: [/ជាភាសាខ្មែរ/gi],
+  mn: [/монгол хэлээр/gi, /монголоор/gi],
+  sk: [/v slovenčine/gi, /po slovensky/gi],
+  bg: [/на български/gi, /на български език/gi],
+  hr: [/na hrvatskom/gi, /na hrvatskom jeziku/gi],
+  sr: [/na srpskom/gi, /na srpskom jeziku/gi],
+  sl: [/v slovenščini/gi, /slovensko/gi],
+  lt: [/lietuvių kalba/gi, /lietuviškai/gi],
+  lv: [/latviešu valodā/gi, /latviski/gi],
+  et: [/eesti keeles/gi],
+  ca: [/en català/gi],
+  is: [/á íslensku/gi],
 };
 
 export const SOURCE_LANGUAGE_NAME_RE = /한국어|베트남어|인도네시아어|태국어|필리핀어|영어|일본어|중국어|타이완어|대만어/g;
@@ -471,6 +687,24 @@ export const NUMBER_THOUSAND_STYLE = {
   uk: 'dot',
   el: 'dot',
   he: 'comma',
+  bn: 'comma',
+  ur: 'comma',
+  fa: 'comma',
+  my: 'comma',
+  ta: 'comma',
+  ne: 'comma',
+  km: 'comma',
+  mn: 'comma',
+  sk: 'dot',
+  bg: 'dot',
+  hr: 'dot',
+  sr: 'dot',
+  sl: 'dot',
+  lt: 'dot',
+  lv: 'dot',
+  et: 'dot',
+  ca: 'dot',
+  is: 'dot',
 };
 
 /**
@@ -1607,6 +1841,24 @@ export const DATE_MONTH_NAMES = {
   'يناير': 1, 'فبراير': 2, 'مارس': 3, 'أبريل': 4, 'مايو': 5, 'يونيو': 6, 'يوليو': 7, 'أغسطس': 8, 'سبتمبر': 9, 'أكتوبر': 10, 'نوفمبر': 11, 'ديسمبر': 12,
   tammikuuta: 1, helmikuuta: 2, maaliskuuta: 3, huhtikuuta: 4, toukokuuta: 5, 'kesäkuuta': 6,
   'heinäkuuta': 7, elokuuta: 8, syyskuuta: 9, lokakuuta: 10, marraskuuta: 11, joulukuuta: 12,
+  // 18 locales added 2026-09-22 (bn ur fa my ta ne km sk bg hr sr sl lt lv et ca is; mn uses numeric dates)
+  'জানুয়ারি': 1, 'ফেব্রুয়ারি': 2, 'মার্চ': 3, 'এপ্রিল': 4, 'মে': 5, 'জুন': 6, 'জুলাই': 7, 'আগস্ট': 8, 'সেপ্টেম্বর': 9, 'অক্টোবর': 10, 'নভেম্বর': 11, 'ডিসেম্বর': 12,
+  'جنوری': 1, 'فروری': 2, 'مارچ': 3, 'اپریل': 4, 'مئی': 5, 'جون': 6, 'جولائی': 7, 'اگست': 8, 'ستمبر': 9, 'اکتوبر': 10, 'نومبر': 11, 'دسمبر': 12,
+  'ژانویه': 1, 'فوریه': 2, 'مارس': 3, 'آوریل': 4, 'مه': 5, 'ژوئن': 6, 'ژوئیه': 7, 'اوت': 8, 'سپتامبر': 9, 'اکتبر': 10, 'نوامبر': 11, 'دسامبر': 12,
+  'ဇန်နဝါရီ': 1, 'ဖေဖော်ဝါရီ': 2, 'မတ်': 3, 'ဧပြီ': 4, 'မေ': 5, 'ဇွန်': 6, 'ဇူလိုင်': 7, 'ဩဂုတ်': 8, 'စက်တင်ဘာ': 9, 'အောက်တိုဘာ': 10, 'နိုဝင်ဘာ': 11, 'ဒီဇင်ဘာ': 12,
+  'ஜனவரி': 1, 'பிப்ரவரி': 2, 'மார்ச்': 3, 'ஏப்ரல்': 4, 'மே': 5, 'ஜூன்': 6, 'ஜூலை': 7, 'ஆகஸ்ட்': 8, 'செப்டம்பர்': 9, 'அக்டோபர்': 10, 'நவம்பர்': 11, 'டிசம்பர்': 12,
+  'जनवरी': 1, 'फेब्रुअरी': 2, 'मार्च': 3, 'अप्रिल': 4, 'मे': 5, 'जुन': 6, 'जुलाई': 7, 'अगस्त': 8, 'सेप्टेम्बर': 9, 'अक्टोबर': 10, 'नोभेम्बर': 11, 'डिसेम्बर': 12,
+  'មករា': 1, 'កុម្ភៈ': 2, 'មីនា': 3, 'មេសា': 4, 'ឧសភា': 5, 'មិថុនា': 6, 'កក្កដា': 7, 'សីហា': 8, 'កញ្ញា': 9, 'តុលា': 10, 'វិច្ឆិកា': 11, 'ធ្នូ': 12,
+  'januára': 1, 'februára': 2, 'marca': 3, 'apríla': 4, 'mája': 5, 'júna': 6, 'júla': 7, 'augusta': 8, 'septembra': 9, 'októbra': 10, 'novembra': 11, 'decembra': 12,
+  'януари': 1, 'февруари': 2, 'март': 3, 'април': 4, 'май': 5, 'юни': 6, 'юли': 7, 'август': 8, 'септември': 9, 'октомври': 10, 'ноември': 11, 'декември': 12,
+  'siječnja': 1, 'veljače': 2, 'ožujka': 3, 'travnja': 4, 'svibnja': 5, 'lipnja': 6, 'srpnja': 7, 'kolovoza': 8, 'rujna': 9, 'listopada': 10, 'studenoga': 11, 'prosinca': 12,
+  'januara': 1, 'februara': 2, 'marta': 3, 'aprila': 4, 'maja': 5, 'juna': 6, 'jula': 7, 'avgusta': 8, 'septembra': 9, 'oktobra': 10, 'novembra': 11, 'decembra': 12,
+  'januarja': 1, 'februarja': 2, 'marca': 3, 'aprila': 4, 'maja': 5, 'junija': 6, 'julija': 7, 'avgusta': 8, 'septembra': 9, 'oktobra': 10, 'novembra': 11, 'decembra': 12,
+  'sausio': 1, 'vasario': 2, 'kovo': 3, 'balandžio': 4, 'gegužės': 5, 'birželio': 6, 'liepos': 7, 'rugpjūčio': 8, 'rugsėjo': 9, 'spalio': 10, 'lapkričio': 11, 'gruodžio': 12,
+  'janvārī': 1, 'februārī': 2, 'martā': 3, 'aprīlī': 4, 'maijā': 5, 'jūnijā': 6, 'jūlijā': 7, 'augustā': 8, 'septembrī': 9, 'oktobrī': 10, 'novembrī': 11, 'decembrī': 12,
+  'jaanuar': 1, 'veebruar': 2, 'märts': 3, 'aprill': 4, 'mai': 5, 'juuni': 6, 'juuli': 7, 'august': 8, 'september': 9, 'oktoober': 10, 'november': 11, 'detsember': 12,
+  'gener': 1, 'febrer': 2, 'març': 3, 'abril': 4, 'maig': 5, 'juny': 6, 'juliol': 7, 'agost': 8, 'setembre': 9, 'octubre': 10, 'novembre': 11, 'desembre': 12,
+  'janúar': 1, 'febrúar': 2, 'mars': 3, 'apríl': 4, 'maí': 5, 'júní': 6, 'júlí': 7, 'ágúst': 8, 'september': 9, 'október': 10, 'nóvember': 11, 'desember': 12,
 };
 
 export function parseArgs(argv) {
@@ -1901,12 +2153,24 @@ export function countHanzi(body) {
 
 const FULLWIDTH_DIGIT_RE = /[０-９]/g;
 const THAI_DIGIT_RE = /[๐-๙]/g;
+const ARABIC_INDIC_DIGIT_RE = /[٠-٩]/g;
+const EXT_ARABIC_DIGIT_RE = /[۰-۹]/g;
+const BENGALI_DIGIT_RE = /[০-৯]/g;
+const DEVANAGARI_DIGIT_RE = /[०-९]/g;
+const MYANMAR_DIGIT_RE = /[၀-၉]/g;
+const KHMER_DIGIT_RE = /[០-៩]/g;
 
 function foldDigits(text) {
   return String(text)
     .normalize('NFC')
     .replace(FULLWIDTH_DIGIT_RE, (ch) => String(ch.codePointAt(0) - 0xFF10))
-    .replace(THAI_DIGIT_RE, (ch) => String(ch.codePointAt(0) - 0x0E50));
+    .replace(THAI_DIGIT_RE, (ch) => String(ch.codePointAt(0) - 0x0E50))
+    .replace(ARABIC_INDIC_DIGIT_RE, (ch) => String(ch.codePointAt(0) - 0x0660))
+    .replace(EXT_ARABIC_DIGIT_RE, (ch) => String(ch.codePointAt(0) - 0x06F0))
+    .replace(BENGALI_DIGIT_RE, (ch) => String(ch.codePointAt(0) - 0x09E6))
+    .replace(DEVANAGARI_DIGIT_RE, (ch) => String(ch.codePointAt(0) - 0x0966))
+    .replace(MYANMAR_DIGIT_RE, (ch) => String(ch.codePointAt(0) - 0x1040))
+    .replace(KHMER_DIGIT_RE, (ch) => String(ch.codePointAt(0) - 0x17E0));
 }
 
 function translatableText(parsed) {
@@ -2113,6 +2377,18 @@ export function analyzeNumbers(text, lang = 'ko') {
     let year = Number.parseInt(groups[2], 10);
     if (/พ\.ศ\./.test(match) || year >= 2400) year -= THAI_BUDDHIST_ERA_OFFSET;
     consumeValues(match, offset, [Number.parseInt(groups[0], 10), monthN, year]);
+  });
+
+  // lt: 2025 m. rugsėjo 13 d. / lv: 2025. gada 13. septembrī
+  s = blankReplace(s, new RegExp(`((?:19|20)\\d{2})\\s*m\\.\\s+(${month})\\s+(${day})\\s*d\\.`, 'giu'), (match, groups, offset) => {
+    const monthN = monthNumber(groups[1]);
+    if (!monthN) return false;
+    consumeValues(match, offset, [Number.parseInt(groups[0], 10), monthN, Number.parseInt(groups[2], 10)]);
+  });
+  s = blankReplace(s, new RegExp(`((?:19|20)\\d{2})\\.\\s*gada\\s+(${day})\\.\\s+(${month})`, 'giu'), (match, groups, offset) => {
+    const monthN = monthNumber(groups[2]);
+    if (!monthN) return false;
+    consumeValues(match, offset, [Number.parseInt(groups[0], 10), Number.parseInt(groups[1], 10), monthN]);
   });
 
   // hu: 2025. szeptember 13.
@@ -2407,7 +2683,13 @@ const LANGID_SCRIPTS = [
   { id: 'thai', lang: 'th', re: /[\u0E00-\u0E7F]/u, label: '태국 문자' },
   { id: 'hangul', lang: 'ko', re: /[\uAC00-\uD7A3]/u, label: '한글' },
   { id: 'kana', lang: 'ja', re: /[\u3040-\u30FF]/u, label: '가나' },
-  { id: 'arabic', lang: 'ar', re: /[؀-ۿݐ-ݿ]/u, label: '아랍 문자' },
+  { id: 'arabic', lang: ['ar', 'ur', 'fa'], re: /[؀-ۿݐ-ݿ]/u, label: '아랍 문자' },
+  { id: 'bengali', lang: 'bn', re: /[\u0980-\u09FF]/u, label: '벵골 문자' },
+  { id: 'tamil', lang: 'ta', re: /[\u0B80-\u0BFF]/u, label: '타밀 문자' },
+  { id: 'myanmar', lang: 'my', re: /[\u1000-\u109F]/u, label: '미얀마 문자' },
+  { id: 'khmer', lang: 'km', re: /[\u1780-\u17FF]/u, label: '크메르 문자' },
+  { id: 'devanagari', lang: ['hi', 'ne'], re: /[\u0900-\u097F]/u, label: '데바나가리' },
+  { id: 'hebrew', lang: 'he', re: /[\u0590-\u05FF]/u, label: '히브리 문자' },
 ];
 
 // 베트남어 고유 결합 문자(다른 라틴 로케일에 나타나면 혼입)
@@ -2425,7 +2707,7 @@ export function findLangidHits(body, startLine, lang) {
       .replace(/\([^)]*[\u4E00-\u9FFF][^)]*\)/gu, ' ')
       .replace(/（[^）]*[\u4E00-\u9FFF][^）]*）/gu, ' ');
     for (const script of LANGID_SCRIPTS) {
-      if (script.lang === lang) continue;
+      if (Array.isArray(script.lang) ? script.lang.includes(lang) : script.lang === lang) continue;
       const m = scrubbed.match(script.re);
       if (m) hits.push({ line: startLine + i, script: script.id, label: script.label, text: line });
     }

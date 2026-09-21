@@ -1,1 +1,26 @@
 [WO start 2026-09-21 16:18:34]
+Native Hindi review for columns 010–018 is in `docs/i18n/global-plan/reviews/native/hi-b.md`. Guidance pack was not in this part.
+
+**Verdict:** columns **3/5** (usable legal Hindi with machine residue). Stronger files: 011, 014, 016, 018. Weakest: 010 (gender + “hearing 1/2”), 013/015 (blog tone), 017 (रसद for logistics).
+
+**10 P1s**, including: masculine **था** for Wei Tseng in 010; **1/2 सुनवाई** for first instance/appeal; **रसद**; **साझेदार**/**लेखापरीक्षक** in 018; Hindi-page contact CTA; Japanese `lang=jpn` link.
+
+Last 15 lines of the output file:
+
+```
+| 37 | P2 | C | columns-hi/017-taiwan-logistics-business-setup.md | "ग्राहक ध्यान जैसा दैनिक कार्य करता है" | 客戶服務 calqued as “customer attention”. | ग्राहक सेवा जैसा दैनिक कार्य करता है |
+| 38 | P2 | C | columns-hi/018-taiwan-semiconductor-market-entry.md | "ताइवान जिम्मेदार का अधिकार कहाँ तक है?" | Bare जिम्मेदार as 負責人; same calque family as part a’s उत्तरदायी. | ताइवान स्थित प्रभारी व्यक्ति (負責人) का अधिकार कहाँ तक है? |
+| 39 | P2 | C | columns-hi/018-taiwan-semiconductor-market-entry.md | "वांछित बातचीत की भाषा बताएँ" | बातचीत is a chat; this is a consultation-language line. | वांछित परामर्श भाषा बताएँ (उपलब्ध भाषाएँ संपर्क पर पुष्टि) |
+| 40 | P2 | C | columns-hi/018-taiwan-semiconductor-market-entry.md | "अर्धचालक घटकों की विदेशी कंपनियाँ" | Word order “foreign companies of components”; a native would name the business. | अर्धचालक घटक बेचने वाली विदेशी कंपनियाँ |
+| 41 | P2 | C | columns-hi/010-taiwan-gym-injury-lawsuit.md | "सामग्री-प्रमाण पत्र (存證信函) या अधिवक्ता के नाम के पत्र (律師函)" | 存證信函 is content-certified mail, not a “material-proof certificate”. | विषय-प्रमाणित पत्र (存證信函) या अधिवक्ता-पत्र (律師函) |
+| 42 | P2 | C | columns-hi/016-taiwan-inheritance-custody-analysis.md | "दांपत्य अवशिष्ट संपत्ति अंतर वितरण अधिकार (剩餘財產差額分配)" | Unreadable stacked calque; Indian family-law Hindi needs a sentence, not seven nouns. | पति-पत्नी की अधिशेष संपत्ति के अंतर का वितरण अधिकार (剩餘財產差額分配) |
+| 43 | P2 | D | columns-hi/010-taiwan-gym-injury-lawsuit.md | "[TWD 1,579,589]" | Western thousands grouping; India expects 15,79,589 / 15.8 लाख. Also TWD 1,570,000 headlines. | [TWD 15,79,589] (लगभग 15.8 लाख नए ताइवान डॉलर) |
+| 44 | P2 | D | columns-hi/010-taiwan-gym-injury-lawsuit.md | "वर्ष 109 के उपभोक्ता मामले संख्या 7" | ROC year 109 is opaque in India; judgment date is already 2022 CE. | वर्ष 109 (ई. 2020) के उपभोक्ता मामले संख्या 7 |
+| 45 | P2 | D | columns-hi/012-taiwan-overtaking-accident-liability.md | "बाईं ओर जाना, सुरक्षित दूरी सुनिश्चित करने के बाद दायाँ दिशा-संकेतक" | Taiwan is right-hand traffic (overtake on the left); India is the reverse, and the text never says so. | ताइवान में वाहन दाईं ओर चलते हैं (भारत से उल्टा), इसलिए ओवरटेकिंग बाईं ओर होती है; बायाँ संकेत देकर बाईं ओर निकलें |
+| 46 | P2 | D | columns-hi/017-taiwan-logistics-business-setup.md | "न्यूनतम पूँजी TWD 25,000,000 (新臺幣)" | Western grouping; India would write 2,50,00,000 / 2.5 करोड़. Also 10,000,000. | न्यूनतम पूँजी TWD 2,50,00,000 (लगभग 2.5 करोड़ नए ताइवान डॉलर) |
+| 47 | P2 | D | columns-hi/018-taiwan-semiconductor-market-entry.md | "चुकता पूँजी TWD 30,000,000, या उससे कम पर परिचालन आय TWD 100,000,000" | Same Western millions; Indian reader parses 3 करोड़ / 10 करोड़ faster. | चुकता पूँजी TWD 3,00,00,000, या उससे कम पर परिचालन आय TWD 10,00,00,000 |
+| 48 | P2 | G | columns-hi/013-taiwan-company-establishment-advanced-1.md | "प्रश्न-उत्तर (Q&A)" | Latin Q&A left on a Devanagari page. | प्रश्न-उत्तर |
+| 49 | P2 | C | columns-hi/015-taiwan-company-setup-pitch-location.md | "भवन पंजीकरण प्रकार 2 उद्धरण" | प्रकार 2 उद्धरण is a calque of 第二類謄本; India land Hindi wants प्रमाणित प्रति/नकल. | भवन पंजी की द्वितीय श्रेणी की प्रमाणित प्रति (建物登記第二類謄本) |
+| 50 | P2 | C | columns-hi/018-taiwan-semiconductor-market-entry.md | "संगम-ज्ञापन से बोर्ड न रखकर" | Indian संगम ज्ञापन is the memorandum (MOA), not Taiwan 章程 (articles). | अंतर्नियम/संस्था के अंतर्नियम (章程) से बोर्ड न रखकर |
+```
+=== end code=0 2026-09-21 16:25:20 ===

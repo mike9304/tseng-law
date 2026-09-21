@@ -15,4 +15,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `cs-a.md` 
 - Guillemets → „ “ (R6); dates 27. 12. 2023 only if the checker accepts; otherwise 27.12.2023.
 
 ## Part b
-Apply every P1/P2 row of `cs-b.md` under the same skip rules above.
+Apply every P1/P2 row of `cs-b.md` under the same skip rules above. Additional: b#9 → R3/R7 wording (no 'leave a comment', no consultation invitation beyond the contact page + four languages); b#11 fullwidth colon → sweep all files (R6b); place names: use Czech exonyms where established (Tchaj-pej, Kao-siung, Tchaj-čung) with the Chinese gloss, consistently in pack and columns; FAQ-answer openings 'Ne. Podle…' are the source structure (question is the heading) — keep, but make the first sentence self-standing where the reviewer flagged it.

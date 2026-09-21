@@ -53,6 +53,24 @@ const HREFLANG_TAG_BY_LOCALE: Record<PublicLocale8, string> = {
   uk: 'uk',
   el: 'el',
   he: 'he',
+  bn: 'hi', // SCAFFOLD(hi)
+  ur: 'ar', // SCAFFOLD(ar)
+  fa: 'ar', // SCAFFOLD(ar)
+  my: 'th', // SCAFFOLD(th)
+  ta: 'hi', // SCAFFOLD(hi)
+  ne: 'hi', // SCAFFOLD(hi)
+  km: 'th', // SCAFFOLD(th)
+  mn: 'ru', // SCAFFOLD(ru)
+  sk: 'cs', // SCAFFOLD(cs)
+  bg: 'ru', // SCAFFOLD(ru)
+  hr: 'cs', // SCAFFOLD(cs)
+  sr: 'cs', // SCAFFOLD(cs)
+  sl: 'cs', // SCAFFOLD(cs)
+  lt: 'cs', // SCAFFOLD(cs)
+  lv: 'cs', // SCAFFOLD(cs)
+  et: 'cs', // SCAFFOLD(cs)
+  ca: 'cs', // SCAFFOLD(cs)
+  is: 'cs', // SCAFFOLD(cs)
 };
 
 /** Mirrors `slugFromFilename` in src/lib/columns.ts (`NNN-<slug>.md`). */

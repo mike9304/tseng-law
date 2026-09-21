@@ -404,6 +404,204 @@ export const GUIDANCE_HOME_PATHS: Record<GuidanceLocale, GuidanceHomePaths> = {
     },
     ariaLabel: 'שני מסלולי מידע',
   },
+  bn: { // SCAFFOLD(hi)
+    setup: {
+      label: 'ताइवान में कंपनी स्थापना की जानकारी',
+      href: '/hi/services',
+    },
+    legal: {
+      label: 'ताइवान कानूनी जानकारी',
+      href: '/hi/faq',
+    },
+    ariaLabel: 'जानकारी के दो मार्ग',
+  },
+  ur: { // SCAFFOLD(ar)
+    setup: {
+      label: 'معلومات تأسيس شركة في تايوان',
+      href: '/ar/services',
+    },
+    legal: {
+      label: 'معلومات عن مسألة قانونية في تايوان',
+      href: '/ar/faq',
+    },
+    ariaLabel: 'مساران للمعلومات',
+  },
+  fa: { // SCAFFOLD(ar)
+    setup: {
+      label: 'معلومات تأسيس شركة في تايوان',
+      href: '/ar/services',
+    },
+    legal: {
+      label: 'معلومات عن مسألة قانونية في تايوان',
+      href: '/ar/faq',
+    },
+    ariaLabel: 'مساران للمعلومات',
+  },
+  my: { // SCAFFOLD(th)
+    setup: {
+      label: 'ข้อมูลการจัดตั้งบริษัทในไต้หวัน',
+      href: '/th/services',
+    },
+    legal: {
+      label: 'ข้อมูลปัญหาทางกฎหมายในไต้หวัน',
+      href: '/th/faq',
+    },
+    ariaLabel: 'สองเส้นทางข้อมูล',
+  },
+  ta: { // SCAFFOLD(hi)
+    setup: {
+      label: 'ताइवान में कंपनी स्थापना की जानकारी',
+      href: '/hi/services',
+    },
+    legal: {
+      label: 'ताइवान कानूनी जानकारी',
+      href: '/hi/faq',
+    },
+    ariaLabel: 'जानकारी के दो मार्ग',
+  },
+  ne: { // SCAFFOLD(hi)
+    setup: {
+      label: 'ताइवान में कंपनी स्थापना की जानकारी',
+      href: '/hi/services',
+    },
+    legal: {
+      label: 'ताइवान कानूनी जानकारी',
+      href: '/hi/faq',
+    },
+    ariaLabel: 'जानकारी के दो मार्ग',
+  },
+  km: { // SCAFFOLD(th)
+    setup: {
+      label: 'ข้อมูลการจัดตั้งบริษัทในไต้หวัน',
+      href: '/th/services',
+    },
+    legal: {
+      label: 'ข้อมูลปัญหาทางกฎหมายในไต้หวัน',
+      href: '/th/faq',
+    },
+    ariaLabel: 'สองเส้นทางข้อมูล',
+  },
+  mn: { // SCAFFOLD(ru)
+    setup: {
+      label: 'Информация о регистрации компании на Тайване',
+      href: '/ru/services',
+    },
+    legal: {
+      label: 'Информация по правовым вопросам Тайваня',
+      href: '/ru/faq',
+    },
+    ariaLabel: 'Два пути к информации',
+  },
+  sk: { // SCAFFOLD(cs)
+    setup: {
+      label: 'Informace o zakládání společností na Tchaj-wanu',
+      href: '/cs/services',
+    },
+    legal: {
+      label: 'Právní informace o Tchaj-wanu',
+      href: '/cs/faq',
+    },
+    ariaLabel: 'Dvě informační cesty',
+  },
+  bg: { // SCAFFOLD(ru)
+    setup: {
+      label: 'Информация о регистрации компании на Тайване',
+      href: '/ru/services',
+    },
+    legal: {
+      label: 'Информация по правовым вопросам Тайваня',
+      href: '/ru/faq',
+    },
+    ariaLabel: 'Два пути к информации',
+  },
+  hr: { // SCAFFOLD(cs)
+    setup: {
+      label: 'Informace o zakládání společností na Tchaj-wanu',
+      href: '/cs/services',
+    },
+    legal: {
+      label: 'Právní informace o Tchaj-wanu',
+      href: '/cs/faq',
+    },
+    ariaLabel: 'Dvě informační cesty',
+  },
+  sr: { // SCAFFOLD(cs)
+    setup: {
+      label: 'Informace o zakládání společností na Tchaj-wanu',
+      href: '/cs/services',
+    },
+    legal: {
+      label: 'Právní informace o Tchaj-wanu',
+      href: '/cs/faq',
+    },
+    ariaLabel: 'Dvě informační cesty',
+  },
+  sl: { // SCAFFOLD(cs)
+    setup: {
+      label: 'Informace o zakládání společností na Tchaj-wanu',
+      href: '/cs/services',
+    },
+    legal: {
+      label: 'Právní informace o Tchaj-wanu',
+      href: '/cs/faq',
+    },
+    ariaLabel: 'Dvě informační cesty',
+  },
+  lt: { // SCAFFOLD(cs)
+    setup: {
+      label: 'Informace o zakládání společností na Tchaj-wanu',
+      href: '/cs/services',
+    },
+    legal: {
+      label: 'Právní informace o Tchaj-wanu',
+      href: '/cs/faq',
+    },
+    ariaLabel: 'Dvě informační cesty',
+  },
+  lv: { // SCAFFOLD(cs)
+    setup: {
+      label: 'Informace o zakládání společností na Tchaj-wanu',
+      href: '/cs/services',
+    },
+    legal: {
+      label: 'Právní informace o Tchaj-wanu',
+      href: '/cs/faq',
+    },
+    ariaLabel: 'Dvě informační cesty',
+  },
+  et: { // SCAFFOLD(cs)
+    setup: {
+      label: 'Informace o zakládání společností na Tchaj-wanu',
+      href: '/cs/services',
+    },
+    legal: {
+      label: 'Právní informace o Tchaj-wanu',
+      href: '/cs/faq',
+    },
+    ariaLabel: 'Dvě informační cesty',
+  },
+  ca: { // SCAFFOLD(cs)
+    setup: {
+      label: 'Informace o zakládání společností na Tchaj-wanu',
+      href: '/cs/services',
+    },
+    legal: {
+      label: 'Právní informace o Tchaj-wanu',
+      href: '/cs/faq',
+    },
+    ariaLabel: 'Dvě informační cesty',
+  },
+  is: { // SCAFFOLD(cs)
+    setup: {
+      label: 'Informace o zakládání společností na Tchaj-wanu',
+      href: '/cs/services',
+    },
+    legal: {
+      label: 'Právní informace o Tchaj-wanu',
+      href: '/cs/faq',
+    },
+    ariaLabel: 'Dvě informační cesty',
+  },
 };
 
 export const LITIGATION_SITUATION_NAV: Record<

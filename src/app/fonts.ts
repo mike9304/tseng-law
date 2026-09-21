@@ -1,6 +1,10 @@
 import {
   Noto_Sans,
   Noto_Sans_Arabic,
+  Noto_Sans_Bengali,
+  Noto_Sans_Khmer,
+  Noto_Sans_Myanmar,
+  Noto_Sans_Tamil,
   Noto_Sans_Devanagari,
   Noto_Sans_Hebrew,
   Noto_Sans_KR,
@@ -116,6 +120,38 @@ const sansHebrew = Noto_Sans_Hebrew({
   subsets: ['hebrew'],
 });
 
+const sansBengali = Noto_Sans_Bengali({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-bengali-loaded',
+  subsets: ['bengali'],
+});
+
+const sansTamil = Noto_Sans_Tamil({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-tamil-loaded',
+  subsets: ['tamil'],
+});
+
+const sansMyanmar = Noto_Sans_Myanmar({
+  display: 'swap',
+  preload: false,
+  weight: ['400', '500', '700'],
+  variable: '--font-noto-sans-myanmar-loaded',
+  subsets: ['myanmar'],
+});
+
+const sansKhmer = Noto_Sans_Khmer({
+  display: 'swap',
+  preload: false,
+  weight: 'variable',
+  variable: '--font-noto-sans-khmer-loaded',
+  subsets: ['khmer'],
+});
+
 const sansLatin = Noto_Sans({
   display: 'swap',
   preload: false,
@@ -157,7 +193,25 @@ export type DocumentLanguage =
   | 'ro'
   | 'uk'
   | 'el'
-  | 'he';
+  | 'he'
+  | 'bn'
+  | 'ur'
+  | 'fa'
+  | 'my'
+  | 'ta'
+  | 'ne'
+  | 'km'
+  | 'mn'
+  | 'sk'
+  | 'bg'
+  | 'hr'
+  | 'sr'
+  | 'sl'
+  | 'lt'
+  | 'lv'
+  | 'et'
+  | 'ca'
+  | 'is';
 
 const koreanFontClassName = [sansKorean.variable, serifKorean.variable].join(' ');
 const traditionalChineseFontClassName = [
@@ -173,6 +227,10 @@ const thaiFontClassName = [sansThai.variable, sansLatin.variable].join(' ');
 const arabicFontClassName = [sansArabic.variable, sansLatin.variable].join(' ');
 const hindiFontClassName = [sansDevanagari.variable, sansLatin.variable].join(' ');
 const hebrewFontClassName = [sansHebrew.variable, sansLatin.variable].join(' ');
+const bengaliFontClassName = [sansBengali.variable, sansLatin.variable].join(' ');
+const tamilFontClassName = [sansTamil.variable, sansLatin.variable].join(' ');
+const myanmarFontClassName = [sansMyanmar.variable, sansLatin.variable].join(' ');
+const khmerFontClassName = [sansKhmer.variable, sansLatin.variable].join(' ');
 const latinExtendedFontClassName = sansLatin.variable;
 
 /**
@@ -193,11 +251,23 @@ export function getLocaleFontClassName(language: DocumentLanguage): string {
   if (language === 'th') {
     return thaiFontClassName;
   }
-  if (language === 'ar') {
+  if (language === 'ar' || language === 'ur' || language === 'fa') {
     return arabicFontClassName;
   }
-  if (language === 'hi') {
+  if (language === 'hi' || language === 'ne') {
     return hindiFontClassName;
+  }
+  if (language === 'bn') {
+    return bengaliFontClassName;
+  }
+  if (language === 'ta') {
+    return tamilFontClassName;
+  }
+  if (language === 'my') {
+    return myanmarFontClassName;
+  }
+  if (language === 'km') {
+    return khmerFontClassName;
   }
   if (language === 'he') {
     return hebrewFontClassName;
@@ -225,6 +295,17 @@ export function getLocaleFontClassName(language: DocumentLanguage): string {
     || language === 'ro'
     || language === 'uk'
     || language === 'el'
+    || language === 'mn'
+    || language === 'sk'
+    || language === 'bg'
+    || language === 'hr'
+    || language === 'sr'
+    || language === 'sl'
+    || language === 'lt'
+    || language === 'lv'
+    || language === 'et'
+    || language === 'ca'
+    || language === 'is'
   ) {
     return latinExtendedFontClassName;
   }
@@ -244,6 +325,10 @@ export function getManagedLocaleFontClassNames(): string[] {
         arabicFontClassName,
         hindiFontClassName,
         hebrewFontClassName,
+        bengaliFontClassName,
+        tamilFontClassName,
+        myanmarFontClassName,
+        khmerFontClassName,
         latinExtendedFontClassName,
       ].flatMap((className) => className.split(/\s+/).filter(Boolean)),
     ),

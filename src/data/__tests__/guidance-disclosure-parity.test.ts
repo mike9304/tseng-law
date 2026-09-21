@@ -78,6 +78,24 @@ const ELEMENTS = {
     uk: /придатний/,
     el: /εφικτό/,
     he: /מעשית/,
+    bn: /व्यावहारिक|व्यवहार्य/, // SCAFFOLD(hi)
+    ur: /طريقة ممكنة/, // SCAFFOLD(ar)
+    fa: /طريقة ممكنة/, // SCAFFOLD(ar)
+    my: /เป็นไปได้/, // SCAFFOLD(th)
+    ta: /व्यावहारिक|व्यवहार्य/, // SCAFFOLD(hi)
+    ne: /व्यावहारिक|व्यवहार्य/, // SCAFFOLD(hi)
+    km: /เป็นไปได้/, // SCAFFOLD(th)
+    mn: /возможн/, // SCAFFOLD(ru)
+    sk: /schůdný/, // SCAFFOLD(cs)
+    bg: /возможн/, // SCAFFOLD(ru)
+    hr: /schůdný/, // SCAFFOLD(cs)
+    sr: /schůdný/, // SCAFFOLD(cs)
+    sl: /schůdný/, // SCAFFOLD(cs)
+    lt: /schůdný/, // SCAFFOLD(cs)
+    lv: /schůdný/, // SCAFFOLD(cs)
+    et: /schůdný/, // SCAFFOLD(cs)
+    ca: /schůdný/, // SCAFFOLD(cs)
+    is: /schůdný/, // SCAFFOLD(cs)
   },
   /** Support in a language outside the four consultation languages is not guaranteed. */
   'no-other-language-guarantee': {
@@ -108,6 +126,24 @@ const ELEMENTS = {
     uk: /іншою мовою не гарантовано/,
     el: /σε άλλη γλώσσα δεν είναι εγγυημένη/,
     he: /בשפה אחרת אינו מובטח/,
+    bn: /अन्य भाषा/, // SCAFFOLD(hi)
+    ur: /لغة أخرى/, // SCAFFOLD(ar)
+    fa: /لغة أخرى/, // SCAFFOLD(ar)
+    my: /ภาษาอื่น/, // SCAFFOLD(th)
+    ta: /अन्य भाषा/, // SCAFFOLD(hi)
+    ne: /अन्य भाषा/, // SCAFFOLD(hi)
+    km: /ภาษาอื่น/, // SCAFFOLD(th)
+    mn: /друг(?:ом|ого) язык/, // SCAFFOLD(ru)
+    sk: /v jiném jazyce zaručena není/, // SCAFFOLD(cs)
+    bg: /друг(?:ом|ого) язык/, // SCAFFOLD(ru)
+    hr: /v jiném jazyce zaručena není/, // SCAFFOLD(cs)
+    sr: /v jiném jazyce zaručena není/, // SCAFFOLD(cs)
+    sl: /v jiném jazyce zaručena není/, // SCAFFOLD(cs)
+    lt: /v jiném jazyce zaručena není/, // SCAFFOLD(cs)
+    lv: /v jiném jazyce zaručena není/, // SCAFFOLD(cs)
+    et: /v jiném jazyce zaručena není/, // SCAFFOLD(cs)
+    ca: /v jiném jazyce zaručena není/, // SCAFFOLD(cs)
+    is: /v jiném jazyce zaručena není/, // SCAFFOLD(cs)
   },
   /** No reply time is promised. */
   'no-reply-time-promise': {
@@ -138,6 +174,24 @@ const ELEMENTS = {
     uk: /строку відповіді|строк відповіді/,
     el: /προθεσμία απάντησης/,
     he: /מועד למענה/,
+    bn: /उत्तर की समयसीमा/, // SCAFFOLD(hi)
+    ur: /مدة للرد/, // SCAFFOLD(ar)
+    fa: /مدة للرد/, // SCAFFOLD(ar)
+    my: /ระยะเวลา(ในการ)?ตอบกลับ/, // SCAFFOLD(th)
+    ta: /उत्तर की समयसीमा/, // SCAFFOLD(hi)
+    ne: /उत्तर की समयसीमा/, // SCAFFOLD(hi)
+    km: /ระยะเวลา(ในการ)?ตอบกลับ/, // SCAFFOLD(th)
+    mn: /срок[а]? ответа/, // SCAFFOLD(ru)
+    sk: /lhůtu k odpovědi|lhůta k odpovědi/, // SCAFFOLD(cs)
+    bg: /срок[а]? ответа/, // SCAFFOLD(ru)
+    hr: /lhůtu k odpovědi|lhůta k odpovědi/, // SCAFFOLD(cs)
+    sr: /lhůtu k odpovědi|lhůta k odpovědi/, // SCAFFOLD(cs)
+    sl: /lhůtu k odpovědi|lhůta k odpovědi/, // SCAFFOLD(cs)
+    lt: /lhůtu k odpovědi|lhůta k odpovědi/, // SCAFFOLD(cs)
+    lv: /lhůtu k odpovědi|lhůta k odpovědi/, // SCAFFOLD(cs)
+    et: /lhůtu k odpovědi|lhůta k odpovědi/, // SCAFFOLD(cs)
+    ca: /lhůtu k odpovědi|lhůta k odpovědi/, // SCAFFOLD(cs)
+    is: /lhůtu k odpovědi|lhůta k odpovědi/, // SCAFFOLD(cs)
   },
   /** The confirmation step is a step, not a promise. */
   'confirmation-is-not-a-promise': {
@@ -168,6 +222,24 @@ const ELEMENTS = {
     uk: /не обіцянка/,
     el: /όχι υπόσχεση/,
     he: /לא הבטחה/,
+    bn: /वादा नहीं/, // SCAFFOLD(hi)
+    ur: /لا وعد/, // SCAFFOLD(ar)
+    fa: /لا وعد/, // SCAFFOLD(ar)
+    my: /ไม่ใช่คำมั่น/, // SCAFFOLD(th)
+    ta: /वादा नहीं/, // SCAFFOLD(hi)
+    ne: /वादा नहीं/, // SCAFFOLD(hi)
+    km: /ไม่ใช่คำมั่น/, // SCAFFOLD(th)
+    mn: /не обещание/, // SCAFFOLD(ru)
+    sk: /příslib/, // SCAFFOLD(cs)
+    bg: /не обещание/, // SCAFFOLD(ru)
+    hr: /příslib/, // SCAFFOLD(cs)
+    sr: /příslib/, // SCAFFOLD(cs)
+    sl: /příslib/, // SCAFFOLD(cs)
+    lt: /příslib/, // SCAFFOLD(cs)
+    lv: /příslib/, // SCAFFOLD(cs)
+    et: /příslib/, // SCAFFOLD(cs)
+    ca: /příslib/, // SCAFFOLD(cs)
+    is: /příslib/, // SCAFFOLD(cs)
   },
   /** No interpreter is arranged. */
   'no-interpreter-promise': {
@@ -198,6 +270,24 @@ const ELEMENTS = {
     uk: /перекладач/i,
     el: /διερμηνέα/,
     he: /מתורגמן/,
+    bn: /दुभाषि/, // SCAFFOLD(hi)
+    ur: /ترجمة فورية/, // SCAFFOLD(ar)
+    fa: /ترجمة فورية/, // SCAFFOLD(ar)
+    my: /ล่าม/, // SCAFFOLD(th)
+    ta: /दुभाषि/, // SCAFFOLD(hi)
+    ne: /दुभाषि/, // SCAFFOLD(hi)
+    km: /ล่าม/, // SCAFFOLD(th)
+    mn: /переводчик/, // SCAFFOLD(ru)
+    sk: /tlumočník/, // SCAFFOLD(cs)
+    bg: /переводчик/, // SCAFFOLD(ru)
+    hr: /tlumočník/, // SCAFFOLD(cs)
+    sr: /tlumočník/, // SCAFFOLD(cs)
+    sl: /tlumočník/, // SCAFFOLD(cs)
+    lt: /tlumočník/, // SCAFFOLD(cs)
+    lv: /tlumočník/, // SCAFFOLD(cs)
+    et: /tlumočník/, // SCAFFOLD(cs)
+    ca: /tlumočník/, // SCAFFOLD(cs)
+    is: /tlumočník/, // SCAFFOLD(cs)
   },
   /** Not every matter can be accepted. */
   'not-every-matter-accepted': {
@@ -228,6 +318,24 @@ const ELEMENTS = {
     uk: /кожну справу/,
     el: /κάθε υπόθεση/,
     he: /כל עניין/,
+    bn: /प्रत्येक मामला/, // SCAFFOLD(hi)
+    ur: /قبول كل قضية/, // SCAFFOLD(ar)
+    fa: /قبول كل قضية/, // SCAFFOLD(ar)
+    my: /ได้ทุกเรื่อง/, // SCAFFOLD(th)
+    ta: /प्रत्येक मामला/, // SCAFFOLD(hi)
+    ne: /प्रत्येक मामला/, // SCAFFOLD(hi)
+    km: /ได้ทุกเรื่อง/, // SCAFFOLD(th)
+    mn: /каждое дело/, // SCAFFOLD(ru)
+    sk: /každou věc/, // SCAFFOLD(cs)
+    bg: /каждое дело/, // SCAFFOLD(ru)
+    hr: /každou věc/, // SCAFFOLD(cs)
+    sr: /každou věc/, // SCAFFOLD(cs)
+    sl: /každou věc/, // SCAFFOLD(cs)
+    lt: /každou věc/, // SCAFFOLD(cs)
+    lv: /každou věc/, // SCAFFOLD(cs)
+    et: /každou věc/, // SCAFFOLD(cs)
+    ca: /každou věc/, // SCAFFOLD(cs)
+    is: /každou věc/, // SCAFFOLD(cs)
   },
   /** No outcome is promised. */
   'no-outcome-promise': {
@@ -258,6 +366,24 @@ const ELEMENTS = {
     uk: /результат/,
     el: /αποτέλεσμα/,
     he: /תוצאה/,
+    bn: /परिणाम/, // SCAFFOLD(hi)
+    ur: /التزام ب(?:ال)?نتيجة/, // SCAFFOLD(ar)
+    fa: /التزام ب(?:ال)?نتيجة/, // SCAFFOLD(ar)
+    my: /รับประกันผล/, // SCAFFOLD(th)
+    ta: /परिणाम/, // SCAFFOLD(hi)
+    ne: /परिणाम/, // SCAFFOLD(hi)
+    km: /รับประกันผล/, // SCAFFOLD(th)
+    mn: /результат/, // SCAFFOLD(ru)
+    sk: /výsledek/, // SCAFFOLD(cs)
+    bg: /результат/, // SCAFFOLD(ru)
+    hr: /výsledek/, // SCAFFOLD(cs)
+    sr: /výsledek/, // SCAFFOLD(cs)
+    sl: /výsledek/, // SCAFFOLD(cs)
+    lt: /výsledek/, // SCAFFOLD(cs)
+    lv: /výsledek/, // SCAFFOLD(cs)
+    et: /výsledek/, // SCAFFOLD(cs)
+    ca: /výsledek/, // SCAFFOLD(cs)
+    is: /výsledek/, // SCAFFOLD(cs)
   },
   /** A certain answer needs one of the four consultation languages. */
   'four-consultation-languages': {
@@ -288,6 +414,24 @@ const ELEMENTS = {
     uk: /чотир/,
     el: /τέσσερ|τεσσάρ/,
     he: /ארבע/,
+    bn: /चार परामर्श भाषा/, // SCAFFOLD(hi)
+    ur: /اللغات الأربع/, // SCAFFOLD(ar)
+    fa: /اللغات الأربع/, // SCAFFOLD(ar)
+    my: /4 ภาษาที่ใช้ให้คำปรึกษา/, // SCAFFOLD(th)
+    ta: /चार परामर्श भाषा/, // SCAFFOLD(hi)
+    ne: /चार परामर्श भाषा/, // SCAFFOLD(hi)
+    km: /4 ภาษาที่ใช้ให้คำปรึกษา/, // SCAFFOLD(th)
+    mn: /четырёх язык/, // SCAFFOLD(ru)
+    sk: /čtyř/, // SCAFFOLD(cs)
+    bg: /четырёх язык/, // SCAFFOLD(ru)
+    hr: /čtyř/, // SCAFFOLD(cs)
+    sr: /čtyř/, // SCAFFOLD(cs)
+    sl: /čtyř/, // SCAFFOLD(cs)
+    lt: /čtyř/, // SCAFFOLD(cs)
+    lv: /čtyř/, // SCAFFOLD(cs)
+    et: /čtyř/, // SCAFFOLD(cs)
+    ca: /čtyř/, // SCAFFOLD(cs)
+    is: /čtyř/, // SCAFFOLD(cs)
   },
   /** This page is not the consultation step. */
   'not-the-consultation-step': {
@@ -318,6 +462,24 @@ const ELEMENTS = {
     uk: /не є консультацією/,
     el: /βήμα της συμβουλευτικής/,
     he: /שלב הייעוץ/,
+    bn: /परामर्श चरण/, // SCAFFOLD(hi)
+    ur: /خطوة استشارة/, // SCAFFOLD(ar)
+    fa: /خطوة استشارة/, // SCAFFOLD(ar)
+    my: /ขั้นตอนการให้คำปรึกษา/, // SCAFFOLD(th)
+    ta: /परामर्श चरण/, // SCAFFOLD(hi)
+    ne: /परामर्श चरण/, // SCAFFOLD(hi)
+    km: /ขั้นตอนการให้คำปรึกษา/, // SCAFFOLD(th)
+    mn: /шагом консультации/, // SCAFFOLD(ru)
+    sk: /krokem porady|krok porady/, // SCAFFOLD(cs)
+    bg: /шагом консультации/, // SCAFFOLD(ru)
+    hr: /krokem porady|krok porady/, // SCAFFOLD(cs)
+    sr: /krokem porady|krok porady/, // SCAFFOLD(cs)
+    sl: /krokem porady|krok porady/, // SCAFFOLD(cs)
+    lt: /krokem porady|krok porady/, // SCAFFOLD(cs)
+    lv: /krokem porady|krok porady/, // SCAFFOLD(cs)
+    et: /krokem porady|krok porady/, // SCAFFOLD(cs)
+    ca: /krokem porady|krok porady/, // SCAFFOLD(cs)
+    is: /krokem porady|krok porady/, // SCAFFOLD(cs)
   },
   /** A sent message is not legal advice. */
   'not-legal-advice': {
@@ -348,6 +510,24 @@ const ELEMENTS = {
     uk: /юридичн[а-яіїєґ]* висновк/,
     el: /νομική γνώμη/,
     he: /חוות דעת משפטית/,
+    bn: /कानूनी राय/, // SCAFFOLD(hi)
+    ur: /رأيًا قانوني/, // SCAFFOLD(ar)
+    fa: /رأيًا قانوني/, // SCAFFOLD(ar)
+    my: /ความเห็นทางกฎหมาย/, // SCAFFOLD(th)
+    ta: /कानूनी राय/, // SCAFFOLD(hi)
+    ne: /कानूनी राय/, // SCAFFOLD(hi)
+    km: /ความเห็นทางกฎหมาย/, // SCAFFOLD(th)
+    mn: /юридическ/, // SCAFFOLD(ru)
+    sk: /právní\w* stanovisk/, // SCAFFOLD(cs)
+    bg: /юридическ/, // SCAFFOLD(ru)
+    hr: /právní\w* stanovisk/, // SCAFFOLD(cs)
+    sr: /právní\w* stanovisk/, // SCAFFOLD(cs)
+    sl: /právní\w* stanovisk/, // SCAFFOLD(cs)
+    lt: /právní\w* stanovisk/, // SCAFFOLD(cs)
+    lv: /právní\w* stanovisk/, // SCAFFOLD(cs)
+    et: /právní\w* stanovisk/, // SCAFFOLD(cs)
+    ca: /právní\w* stanovisk/, // SCAFFOLD(cs)
+    is: /právní\w* stanovisk/, // SCAFFOLD(cs)
   },
   /** A sent message is not a confirmed appointment. */
   'not-an-appointment': {
@@ -378,6 +558,24 @@ const ELEMENTS = {
     uk: /зустріч/,
     el: /ραντεβού/,
     he: /פגישה/,
+    bn: /नियुक्ति/, // SCAFFOLD(hi)
+    ur: /موعد|مواعيد/, // SCAFFOLD(ar)
+    fa: /موعد|مواعيد/, // SCAFFOLD(ar)
+    my: /การนัดหมาย/, // SCAFFOLD(th)
+    ta: /नियुक्ति/, // SCAFFOLD(hi)
+    ne: /नियुक्ति/, // SCAFFOLD(hi)
+    km: /การนัดหมาย/, // SCAFFOLD(th)
+    mn: /запись/, // SCAFFOLD(ru)
+    sk: /schůzk/, // SCAFFOLD(cs)
+    bg: /запись/, // SCAFFOLD(ru)
+    hr: /schůzk/, // SCAFFOLD(cs)
+    sr: /schůzk/, // SCAFFOLD(cs)
+    sl: /schůzk/, // SCAFFOLD(cs)
+    lt: /schůzk/, // SCAFFOLD(cs)
+    lv: /schůzk/, // SCAFFOLD(cs)
+    et: /schůzk/, // SCAFFOLD(cs)
+    ca: /schůzk/, // SCAFFOLD(cs)
+    is: /schůzk/, // SCAFFOLD(cs)
   },
   /** Sending a message forms no attorney–client relationship. */
   'no-attorney-client-relationship': {
@@ -408,6 +606,24 @@ const ELEMENTS = {
     uk: /між адвокатом і клієнтом/,
     el: /σχέση δικηγόρου/,
     he: /עורך דין–לקוח/,
+    bn: /अधिवक्ता तथा मुवक्किल/, // SCAFFOLD(hi)
+    ur: /علاقة بين المحامي/, // SCAFFOLD(ar)
+    fa: /علاقة بين المحامي/, // SCAFFOLD(ar)
+    my: /ความสัมพันธ์ระหว่างทนายความ/, // SCAFFOLD(th)
+    ta: /अधिवक्ता तथा मुवक्किल/, // SCAFFOLD(hi)
+    ne: /अधिवक्ता तथा मुवक्किल/, // SCAFFOLD(hi)
+    km: /ความสัมพันธ์ระหว่างทนายความ/, // SCAFFOLD(th)
+    mn: /отношений между адвокатом/, // SCAFFOLD(ru)
+    sk: /vztah mezi advokát/, // SCAFFOLD(cs)
+    bg: /отношений между адвокатом/, // SCAFFOLD(ru)
+    hr: /vztah mezi advokát/, // SCAFFOLD(cs)
+    sr: /vztah mezi advokát/, // SCAFFOLD(cs)
+    sl: /vztah mezi advokát/, // SCAFFOLD(cs)
+    lt: /vztah mezi advokát/, // SCAFFOLD(cs)
+    lv: /vztah mezi advokát/, // SCAFFOLD(cs)
+    et: /vztah mezi advokát/, // SCAFFOLD(cs)
+    ca: /vztah mezi advokát/, // SCAFFOLD(cs)
+    is: /vztah mezi advokát/, // SCAFFOLD(cs)
   },
   /** Written text is never machine-translated for the reader. */
   'no-automatic-translation': {
@@ -438,6 +654,24 @@ const ELEMENTS = {
     uk: /автоматично/,
     el: /αυτόματα/,
     he: /אוטומטית/,
+    bn: /स्वचालित/, // SCAFFOLD(hi)
+    ur: /ترجمة آلية/, // SCAFFOLD(ar)
+    fa: /ترجمة آلية/, // SCAFFOLD(ar)
+    my: /แปลโดยอัตโนมัติ/, // SCAFFOLD(th)
+    ta: /स्वचालित/, // SCAFFOLD(hi)
+    ne: /स्वचालित/, // SCAFFOLD(hi)
+    km: /แปลโดยอัตโนมัติ/, // SCAFFOLD(th)
+    mn: /автоматически не переводится/, // SCAFFOLD(ru)
+    sk: /automaticky/, // SCAFFOLD(cs)
+    bg: /автоматически не переводится/, // SCAFFOLD(ru)
+    hr: /automaticky/, // SCAFFOLD(cs)
+    sr: /automaticky/, // SCAFFOLD(cs)
+    sl: /automaticky/, // SCAFFOLD(cs)
+    lt: /automaticky/, // SCAFFOLD(cs)
+    lv: /automaticky/, // SCAFFOLD(cs)
+    et: /automaticky/, // SCAFFOLD(cs)
+    ca: /automaticky/, // SCAFFOLD(cs)
+    is: /automaticky/, // SCAFFOLD(cs)
   },
   /** The family group is named as covering marriage matters. */
   'marriage-in-family-group': {
@@ -468,6 +702,24 @@ const ELEMENTS = {
     uk: /шлюб/i,
     el: /γάμ/i,
     he: /נישואין/,
+    bn: /विवाह/, // SCAFFOLD(hi)
+    ur: /الزواج/, // SCAFFOLD(ar)
+    fa: /الزواج/, // SCAFFOLD(ar)
+    my: /การสมรส/, // SCAFFOLD(th)
+    ta: /विवाह/, // SCAFFOLD(hi)
+    ne: /विवाह/, // SCAFFOLD(hi)
+    km: /การสมรส/, // SCAFFOLD(th)
+    mn: /брак/i, // SCAFFOLD(ru)
+    sk: /manželství/i, // SCAFFOLD(cs)
+    bg: /брак/i, // SCAFFOLD(ru)
+    hr: /manželství/i, // SCAFFOLD(cs)
+    sr: /manželství/i, // SCAFFOLD(cs)
+    sl: /manželství/i, // SCAFFOLD(cs)
+    lt: /manželství/i, // SCAFFOLD(cs)
+    lv: /manželství/i, // SCAFFOLD(cs)
+    et: /manželství/i, // SCAFFOLD(cs)
+    ca: /manželství/i, // SCAFFOLD(cs)
+    is: /manželství/i, // SCAFFOLD(cs)
   },
   /** Meeting the attorney may be a paid service. */
   'consultation-may-be-paid': {
@@ -498,6 +750,24 @@ const ELEMENTS = {
     uk: /платn|платн/,
     el: /με αμοιβή/,
     he: /בתשלום/,
+    bn: /शुल्क/, // SCAFFOLD(hi)
+    ur: /خدمة بمقابل/, // SCAFFOLD(ar)
+    fa: /خدمة بمقابل/, // SCAFFOLD(ar)
+    my: /บริการที่มีค่าใช้จ่าย/, // SCAFFOLD(th)
+    ta: /शुल्क/, // SCAFFOLD(hi)
+    ne: /शुल्क/, // SCAFFOLD(hi)
+    km: /บริการที่มีค่าใช้จ่าย/, // SCAFFOLD(th)
+    mn: /возмездн/, // SCAFFOLD(ru)
+    sk: /úplatn/, // SCAFFOLD(cs)
+    bg: /возмездн/, // SCAFFOLD(ru)
+    hr: /úplatn/, // SCAFFOLD(cs)
+    sr: /úplatn/, // SCAFFOLD(cs)
+    sl: /úplatn/, // SCAFFOLD(cs)
+    lt: /úplatn/, // SCAFFOLD(cs)
+    lv: /úplatn/, // SCAFFOLD(cs)
+    et: /úplatn/, // SCAFFOLD(cs)
+    ca: /úplatn/, // SCAFFOLD(cs)
+    is: /úplatn/, // SCAFFOLD(cs)
   },
 } as const satisfies Record<string, ElementMarkers>;
 

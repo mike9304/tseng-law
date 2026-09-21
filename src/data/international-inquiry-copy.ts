@@ -43,7 +43,25 @@ export type InquiryCopyLocale =
   | 'ro'
   | 'uk'
   | 'el'
-  | 'he';
+  | 'he'
+  | 'bn'
+  | 'ur'
+  | 'fa'
+  | 'my'
+  | 'ta'
+  | 'ne'
+  | 'km'
+  | 'mn'
+  | 'sk'
+  | 'bg'
+  | 'hr'
+  | 'sr'
+  | 'sl'
+  | 'lt'
+  | 'lv'
+  | 'et'
+  | 'ca'
+  | 'is';
 
 export interface InternationalInquiryCopy {
   /** The page language is guidance only. */
@@ -1636,6 +1654,904 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ko: 'קוריאנית (한국어)',
       'needs-method-confirmation':
         'אף אחת מארבע השפות אינה שמישה — יש לאשר את דרך התקשורת',
+    },
+  },
+  bn: { // SCAFFOLD(hi)
+    guidanceNotice:
+      'यह पृष्ठ हिंदी में सामान्य जानकारी के रूप में लिखा गया है, आपके मामले की कानूनी राय के रूप में नहीं।',
+    consultationNotice:
+      'परामर्श चार भाषाओं में होता है: अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई।',
+    methodConfirmationNotice:
+      'यदि आप चार भाषाओं में से किसी का उपयोग न कर सकें, तो “संचार मार्ग की पुष्टि आवश्यक है” चुनें। हम व्यवहार्य संचार मार्ग जाँचने के लिए उत्तर देते हैं, यदि ऐसा मार्ग हो; अन्य भाषा में सेवा सुनिश्चित नहीं है और उत्तर की समयसीमा का वादा नहीं है।',
+    preparationNotice:
+      'आप सार अपनी भाषा में लिख सकते हैं। मूल पाठ वैसे ही रखा जाता है जैसा आपने लिखा और स्वचालित रूप से अनुवाद नहीं किया जाता।',
+    heading: 'परामर्श अनुरोध भेजें',
+    intro:
+      'अपने मामले का संक्षेप में वर्णन करें। अगले चरण की चर्चा से पहले अधिवक्ता सामग्री की जाँच करते हैं।',
+    submitLabel: 'अनुरोध भेजें',
+    submittingLabel: 'भेजा जा रहा है…',
+    successMessage:
+      'हमने आपका अनुरोध प्राप्त कर लिया; वह जाँच की प्रतीक्षा करता है। इसका अर्थ यह नहीं कि परामर्श हो चुका या नियुक्ति पुष्ट हुई।',
+    savedNotificationPendingMessage:
+      'आपका अनुरोध सुरक्षित है, लेकिन कार्यालय को सूचना अभी पुष्ट नहीं हुई। जो आपने लिखा वह नहीं खोता। यदि उत्तर न मिले, तो संपर्क पृष्ठ के ईमेल पते पर भी लिख सकते हैं।',
+    receiptIdLabel: 'प्राप्ति संख्या',
+    failureMessage:
+      'आपका अनुरोध नहीं भेजा जा सका। पुनः प्रयास करें या संपर्क पृष्ठ के ईमेल पते पर लिखें।',
+    originalLanguageLabel: 'जिस भाषा में आप लिखते हैं',
+    originalLanguagePlaceholder:
+      'उदाहरण के लिए हिंदी, अंग्रेज़ी, चीनी या कोई अन्य भाषा',
+    preferredConsultationLanguageLabel: 'परामर्श के लिए इच्छित भाषा',
+    originalTextLabel: 'मामले का संक्षिप्त विवरण (अपनी भाषा में)',
+    originalTextPlaceholder:
+      'बताएँ क्या हुआ, किस सहायता की आवश्यकता है और यदि हो तो समयसीमा। पासपोर्ट संख्या, पहचान संख्या या खाता विवरण न लिखें।',
+    nameLabel: 'नाम',
+    emailLabel: 'ईमेल',
+    consentLabel:
+      'मैंने गोपनीयता पृष्ठ पढ़ लिया है और इस अनुरोध को भेजने की सहमति देता/देती हूँ।',
+    privacyLinkLabel: 'गोपनीयता',
+    requiredMessage: 'यह फ़ील्ड आवश्यक है।',
+    invalidEmailMessage: 'कृपया मान्य ईमेल पता दें।',
+    tooLongMessage: 'पाठ बहुत लंबा है। उसे छोटा कर फिर भेजें।',
+    sourceLanguageNotice:
+      'यह लेख केवल {language} में प्रकाशित है; लिंक मूल पृष्ठ खोलता है।',
+    unavailableTranslationNotice:
+      'यह बिंदु इस पृष्ठ की भाषा में अभी उपलब्ध नहीं है। मूल भाषा का लिंक मूल पाठ खोलता है।',
+    unavailableLanguageNotice: 'यह पृष्ठ {language} में उपलब्ध नहीं है।',
+    languageOptions: {
+      en: 'अंग्रेज़ी (English)',
+      'zh-hant': 'चीनी (中文)',
+      ja: 'जापानी (日本語)',
+      ko: 'कोरियाई (한국어)',
+      'needs-method-confirmation':
+        'चार भाषाओं में से कोई उपयोगी नहीं — संचार मार्ग की पुष्टि आवश्यक है',
+    },
+  },
+  ur: { // SCAFFOLD(ar)
+    guidanceNotice:
+      'هذه الصفحة مكتوبة بالعربية بوصفها إرشادًا عامًا. وهي ليست رأيًا قانونيًا في قضيتك بعينها.',
+    consultationNotice:
+      'الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+    methodConfirmationNotice:
+      'إذا لم تكن تستخدم أيًّا من هذه اللغات الأربع، فاختر «يلزم تأكيد طريقة التواصل». يؤكّد المكتب طريقة التواصل برسالة رد عند وجود طريقة ممكنة؛ ولا يضمن تقديم الخدمة بأي لغة أخرى، ولا يلتزم بمدة للرد.',
+    preparationNotice:
+      'يمكنك كتابة ملخّص قضيتك بلغتك. ويُحفَظ النص الأصلي كما كتبته ولا يُترجَم ترجمة آلية.',
+    heading: 'إرسال طلب استشارة',
+    intro:
+      'يُرجى وصف قضيتك باختصار. يراجع المحامي المحتوى ثم يوضّح الخطوة التالية.',
+    submitLabel: 'إرسال الطلب',
+    submittingLabel: 'جارٍ الإرسال…',
+    successMessage:
+      'وصلنا طلبك وهو بانتظار المراجعة. وهذا لا يعني أن الجلسة قد تمّت أو أن الموعد قد تأكّد.',
+    savedNotificationPendingMessage:
+      'حُفِظ طلبك، غير أن إشعار المكتب لم يتأكّد بعد. ولم يُفقَد ما كتبته. وإذا لم يصلك رد، فيمكنك أيضًا المراسلة على عنوان البريد الإلكتروني المذكور في صفحة التواصل.',
+    receiptIdLabel: 'رقم الاستلام',
+    failureMessage:
+      'تعذّر إرسال طلبك. يُرجى المحاولة مرة أخرى، أو الإرسال إلى عنوان البريد الإلكتروني المذكور في صفحة التواصل.',
+    originalLanguageLabel: 'اللغة التي تكتب بها',
+    originalLanguagePlaceholder:
+      'مثال: العربية أو الفرنسية أو الفارسية أو التركية أو لغة أخرى',
+    preferredConsultationLanguageLabel: 'اللغة التي تفضّلها للاستشارة',
+    originalTextLabel: 'ملخّص القضية (بلغتك)',
+    originalTextPlaceholder:
+      'اذكر ما الذي حدث، وما المساعدة التي تحتاج إليها، والموعد النهائي إن وُجد. ويُرجى عدم كتابة رقم جواز السفر أو رقم الهوية أو بيانات الحساب المصرفي.',
+    nameLabel: 'الاسم',
+    emailLabel: 'البريد الإلكتروني',
+    consentLabel:
+      'اطّلعتُ على سياسة الخصوصية وأوافق على إرسال هذا الطلب.',
+    privacyLinkLabel: AR_PRIVACY_POLICY_LABEL,
+    requiredMessage: 'هذا الحقل مطلوب.',
+    invalidEmailMessage: 'يُرجى إدخال عنوان بريد إلكتروني صحيح.',
+    tooLongMessage: 'النص طويل جدًا. يُرجى اختصاره ثم إعادة الإرسال.',
+    sourceLanguageNotice:
+      'هذا المقال متاح بـ{language} فقط، والرابط يفتح الصفحة الأصلية بتلك اللغة.',
+    unavailableTranslationNotice:
+      'هذا العنصر غير مترجَم بعد إلى لغة هذه الصفحة. اضغط الرابط الذي يذكر اللغة الأصلية لقراءة النص الأصلي.',
+    unavailableLanguageNotice: 'هذه الصفحة غير متاحة بـ{language}.',
+    languageOptions: {
+      en: 'الإنجليزية (English)',
+      'zh-hant': 'الصينية (中文)',
+      ja: 'اليابانية (日本語)',
+      ko: 'الكورية (한국어)',
+      'needs-method-confirmation':
+        'لا أستطيع استخدام أي من اللغات الأربع — يلزم تأكيد طريقة التواصل',
+    },
+  },
+  fa: { // SCAFFOLD(ar)
+    guidanceNotice:
+      'هذه الصفحة مكتوبة بالعربية بوصفها إرشادًا عامًا. وهي ليست رأيًا قانونيًا في قضيتك بعينها.',
+    consultationNotice:
+      'الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+    methodConfirmationNotice:
+      'إذا لم تكن تستخدم أيًّا من هذه اللغات الأربع، فاختر «يلزم تأكيد طريقة التواصل». يؤكّد المكتب طريقة التواصل برسالة رد عند وجود طريقة ممكنة؛ ولا يضمن تقديم الخدمة بأي لغة أخرى، ولا يلتزم بمدة للرد.',
+    preparationNotice:
+      'يمكنك كتابة ملخّص قضيتك بلغتك. ويُحفَظ النص الأصلي كما كتبته ولا يُترجَم ترجمة آلية.',
+    heading: 'إرسال طلب استشارة',
+    intro:
+      'يُرجى وصف قضيتك باختصار. يراجع المحامي المحتوى ثم يوضّح الخطوة التالية.',
+    submitLabel: 'إرسال الطلب',
+    submittingLabel: 'جارٍ الإرسال…',
+    successMessage:
+      'وصلنا طلبك وهو بانتظار المراجعة. وهذا لا يعني أن الجلسة قد تمّت أو أن الموعد قد تأكّد.',
+    savedNotificationPendingMessage:
+      'حُفِظ طلبك، غير أن إشعار المكتب لم يتأكّد بعد. ولم يُفقَد ما كتبته. وإذا لم يصلك رد، فيمكنك أيضًا المراسلة على عنوان البريد الإلكتروني المذكور في صفحة التواصل.',
+    receiptIdLabel: 'رقم الاستلام',
+    failureMessage:
+      'تعذّر إرسال طلبك. يُرجى المحاولة مرة أخرى، أو الإرسال إلى عنوان البريد الإلكتروني المذكور في صفحة التواصل.',
+    originalLanguageLabel: 'اللغة التي تكتب بها',
+    originalLanguagePlaceholder:
+      'مثال: العربية أو الفرنسية أو الفارسية أو التركية أو لغة أخرى',
+    preferredConsultationLanguageLabel: 'اللغة التي تفضّلها للاستشارة',
+    originalTextLabel: 'ملخّص القضية (بلغتك)',
+    originalTextPlaceholder:
+      'اذكر ما الذي حدث، وما المساعدة التي تحتاج إليها، والموعد النهائي إن وُجد. ويُرجى عدم كتابة رقم جواز السفر أو رقم الهوية أو بيانات الحساب المصرفي.',
+    nameLabel: 'الاسم',
+    emailLabel: 'البريد الإلكتروني',
+    consentLabel:
+      'اطّلعتُ على سياسة الخصوصية وأوافق على إرسال هذا الطلب.',
+    privacyLinkLabel: AR_PRIVACY_POLICY_LABEL,
+    requiredMessage: 'هذا الحقل مطلوب.',
+    invalidEmailMessage: 'يُرجى إدخال عنوان بريد إلكتروني صحيح.',
+    tooLongMessage: 'النص طويل جدًا. يُرجى اختصاره ثم إعادة الإرسال.',
+    sourceLanguageNotice:
+      'هذا المقال متاح بـ{language} فقط، والرابط يفتح الصفحة الأصلية بتلك اللغة.',
+    unavailableTranslationNotice:
+      'هذا العنصر غير مترجَم بعد إلى لغة هذه الصفحة. اضغط الرابط الذي يذكر اللغة الأصلية لقراءة النص الأصلي.',
+    unavailableLanguageNotice: 'هذه الصفحة غير متاحة بـ{language}.',
+    languageOptions: {
+      en: 'الإنجليزية (English)',
+      'zh-hant': 'الصينية (中文)',
+      ja: 'اليابانية (日本語)',
+      ko: 'الكورية (한국어)',
+      'needs-method-confirmation':
+        'لا أستطيع استخدام أي من اللغات الأربع — يلزم تأكيد طريقة التواصل',
+    },
+  },
+  my: { // SCAFFOLD(th)
+    guidanceNotice:
+      'หน้านี้จัดทำเป็นภาษาไทยเพื่อเป็นข้อมูลแนะนำทั่วไป ไม่ใช่ความเห็นทางกฎหมายสำหรับเรื่องเฉพาะของท่าน',
+    consultationNotice:
+      'การให้คำปรึกษาจริงดำเนินการเฉพาะ 4 ภาษา ได้แก่ ภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
+    methodConfirmationNotice:
+      'หากท่านใช้ภาษาใดใน 4 ภาษานี้ไม่ได้ กรุณาเลือก “ต้องยืนยันวิธีติดต่อ” เราจะตอบกลับเพื่อยืนยันวิธีการสื่อสารที่เป็นไปได้ แต่ไม่รับประกันว่าจะรองรับภาษาอื่นได้ และไม่รับประกันระยะเวลาตอบกลับ',
+    preparationNotice:
+      'ท่านเขียนสรุปเรื่องด้วยภาษาของท่านเองได้ ข้อความต้นฉบับที่ท่านเขียนจะถูกเก็บไว้ตามเดิม และไม่มีการแปลโดยอัตโนมัติ',
+    heading: 'ส่งเรื่องเพื่อขอคำปรึกษา',
+    intro:
+      'กรุณาอธิบายเรื่องของท่านโดยย่อ ทนายความจะตรวจสอบเนื้อหาก่อนแจ้งขั้นตอนต่อไป',
+    submitLabel: 'ส่งเรื่อง',
+    submittingLabel: 'กำลังส่ง…',
+    successMessage:
+      'เราได้รับเรื่องของท่านไว้และอยู่ระหว่างรอการตรวจสอบ ทั้งนี้ไม่ได้หมายความว่าการปรึกษาเสร็จสิ้นแล้วหรือมีการยืนยันนัดหมายแล้ว',
+    savedNotificationPendingMessage:
+      'เรื่องของท่านถูกบันทึกไว้แล้ว แต่ยังยืนยันไม่ได้ว่าการแจ้งเตือนไปถึงสำนักงานแล้วหรือไม่ ข้อความที่ท่านเขียนไม่ได้สูญหาย หากยังไม่ได้รับการติดต่อกลับ ท่านสามารถส่งอีเมลตามที่อยู่ในหน้าติดต่อได้เช่นกัน',
+    receiptIdLabel: 'หมายเลขรับเรื่อง',
+    failureMessage:
+      'ส่งเรื่องของท่านไม่สำเร็จ กรุณาลองใหม่อีกครั้ง หรือส่งอีเมลตามที่อยู่ในหน้าติดต่อ',
+    originalLanguageLabel: 'ภาษาที่ท่านใช้เขียน',
+    originalLanguagePlaceholder:
+      'เช่น ภาษาไทย ภาษาเวียดนาม ภาษาอินโดนีเซีย ภาษาฟิลิปิโน หรือภาษาอื่น',
+    preferredConsultationLanguageLabel: 'ภาษาที่ท่านต้องการใช้ในการปรึกษา',
+    originalTextLabel: 'สรุปเรื่องของท่าน (เขียนด้วยภาษาของท่านเองได้)',
+    originalTextPlaceholder:
+      'กรุณาระบุว่าเกิดอะไรขึ้น ท่านต้องการความช่วยเหลือด้านใด และมีกำหนดเวลาหรือไม่ กรุณาอย่าระบุเลขหนังสือเดินทาง เลขบัตรประจำตัว หรือข้อมูลบัญชีธนาคาร',
+    nameLabel: 'ชื่อ',
+    emailLabel: 'อีเมล',
+    consentLabel:
+      'ข้าพเจ้าได้อ่านนโยบายความเป็นส่วนตัวแล้ว และยินยอมส่งเรื่องนี้',
+    privacyLinkLabel: 'นโยบายความเป็นส่วนตัว',
+    requiredMessage: 'กรุณากรอกช่องนี้',
+    invalidEmailMessage: 'กรุณากรอกที่อยู่อีเมลให้ถูกต้อง',
+    tooLongMessage: 'ข้อความยาวเกินไป กรุณาย่อให้สั้นลงแล้วส่งใหม่',
+    sourceLanguageNotice:
+      'บทความนี้มีเฉพาะภาษา {language} เท่านั้น และลิงก์จะเปิดหน้าต้นฉบับนั้น',
+    unavailableTranslationNotice:
+      'บทความนี้ยังไม่ได้แปลเป็นภาษาของหน้านี้ ลิงก์ที่ระบุภาษาต้นฉบับไว้ชัดเจนจะเปิดหน้าต้นฉบับให้ท่านอ่าน',
+    unavailableLanguageNotice: 'หน้านี้ไม่มีให้บริการเป็นภาษา {language}',
+    languageOptions: {
+      en: 'ภาษาอังกฤษ (English)',
+      'zh-hant': 'ภาษาจีน (中文)',
+      ja: 'ภาษาญี่ปุ่น (日本語)',
+      ko: 'ภาษาเกาหลี (한국어)',
+      'needs-method-confirmation': 'ใช้ภาษาใดใน 4 ภาษานี้ไม่ได้ — ต้องยืนยันวิธีติดต่อ',
+    },
+  },
+  ta: { // SCAFFOLD(hi)
+    guidanceNotice:
+      'यह पृष्ठ हिंदी में सामान्य जानकारी के रूप में लिखा गया है, आपके मामले की कानूनी राय के रूप में नहीं।',
+    consultationNotice:
+      'परामर्श चार भाषाओं में होता है: अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई।',
+    methodConfirmationNotice:
+      'यदि आप चार भाषाओं में से किसी का उपयोग न कर सकें, तो “संचार मार्ग की पुष्टि आवश्यक है” चुनें। हम व्यवहार्य संचार मार्ग जाँचने के लिए उत्तर देते हैं, यदि ऐसा मार्ग हो; अन्य भाषा में सेवा सुनिश्चित नहीं है और उत्तर की समयसीमा का वादा नहीं है।',
+    preparationNotice:
+      'आप सार अपनी भाषा में लिख सकते हैं। मूल पाठ वैसे ही रखा जाता है जैसा आपने लिखा और स्वचालित रूप से अनुवाद नहीं किया जाता।',
+    heading: 'परामर्श अनुरोध भेजें',
+    intro:
+      'अपने मामले का संक्षेप में वर्णन करें। अगले चरण की चर्चा से पहले अधिवक्ता सामग्री की जाँच करते हैं।',
+    submitLabel: 'अनुरोध भेजें',
+    submittingLabel: 'भेजा जा रहा है…',
+    successMessage:
+      'हमने आपका अनुरोध प्राप्त कर लिया; वह जाँच की प्रतीक्षा करता है। इसका अर्थ यह नहीं कि परामर्श हो चुका या नियुक्ति पुष्ट हुई।',
+    savedNotificationPendingMessage:
+      'आपका अनुरोध सुरक्षित है, लेकिन कार्यालय को सूचना अभी पुष्ट नहीं हुई। जो आपने लिखा वह नहीं खोता। यदि उत्तर न मिले, तो संपर्क पृष्ठ के ईमेल पते पर भी लिख सकते हैं।',
+    receiptIdLabel: 'प्राप्ति संख्या',
+    failureMessage:
+      'आपका अनुरोध नहीं भेजा जा सका। पुनः प्रयास करें या संपर्क पृष्ठ के ईमेल पते पर लिखें।',
+    originalLanguageLabel: 'जिस भाषा में आप लिखते हैं',
+    originalLanguagePlaceholder:
+      'उदाहरण के लिए हिंदी, अंग्रेज़ी, चीनी या कोई अन्य भाषा',
+    preferredConsultationLanguageLabel: 'परामर्श के लिए इच्छित भाषा',
+    originalTextLabel: 'मामले का संक्षिप्त विवरण (अपनी भाषा में)',
+    originalTextPlaceholder:
+      'बताएँ क्या हुआ, किस सहायता की आवश्यकता है और यदि हो तो समयसीमा। पासपोर्ट संख्या, पहचान संख्या या खाता विवरण न लिखें।',
+    nameLabel: 'नाम',
+    emailLabel: 'ईमेल',
+    consentLabel:
+      'मैंने गोपनीयता पृष्ठ पढ़ लिया है और इस अनुरोध को भेजने की सहमति देता/देती हूँ।',
+    privacyLinkLabel: 'गोपनीयता',
+    requiredMessage: 'यह फ़ील्ड आवश्यक है।',
+    invalidEmailMessage: 'कृपया मान्य ईमेल पता दें।',
+    tooLongMessage: 'पाठ बहुत लंबा है। उसे छोटा कर फिर भेजें।',
+    sourceLanguageNotice:
+      'यह लेख केवल {language} में प्रकाशित है; लिंक मूल पृष्ठ खोलता है।',
+    unavailableTranslationNotice:
+      'यह बिंदु इस पृष्ठ की भाषा में अभी उपलब्ध नहीं है। मूल भाषा का लिंक मूल पाठ खोलता है।',
+    unavailableLanguageNotice: 'यह पृष्ठ {language} में उपलब्ध नहीं है।',
+    languageOptions: {
+      en: 'अंग्रेज़ी (English)',
+      'zh-hant': 'चीनी (中文)',
+      ja: 'जापानी (日本語)',
+      ko: 'कोरियाई (한국어)',
+      'needs-method-confirmation':
+        'चार भाषाओं में से कोई उपयोगी नहीं — संचार मार्ग की पुष्टि आवश्यक है',
+    },
+  },
+  ne: { // SCAFFOLD(hi)
+    guidanceNotice:
+      'यह पृष्ठ हिंदी में सामान्य जानकारी के रूप में लिखा गया है, आपके मामले की कानूनी राय के रूप में नहीं।',
+    consultationNotice:
+      'परामर्श चार भाषाओं में होता है: अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई।',
+    methodConfirmationNotice:
+      'यदि आप चार भाषाओं में से किसी का उपयोग न कर सकें, तो “संचार मार्ग की पुष्टि आवश्यक है” चुनें। हम व्यवहार्य संचार मार्ग जाँचने के लिए उत्तर देते हैं, यदि ऐसा मार्ग हो; अन्य भाषा में सेवा सुनिश्चित नहीं है और उत्तर की समयसीमा का वादा नहीं है।',
+    preparationNotice:
+      'आप सार अपनी भाषा में लिख सकते हैं। मूल पाठ वैसे ही रखा जाता है जैसा आपने लिखा और स्वचालित रूप से अनुवाद नहीं किया जाता।',
+    heading: 'परामर्श अनुरोध भेजें',
+    intro:
+      'अपने मामले का संक्षेप में वर्णन करें। अगले चरण की चर्चा से पहले अधिवक्ता सामग्री की जाँच करते हैं।',
+    submitLabel: 'अनुरोध भेजें',
+    submittingLabel: 'भेजा जा रहा है…',
+    successMessage:
+      'हमने आपका अनुरोध प्राप्त कर लिया; वह जाँच की प्रतीक्षा करता है। इसका अर्थ यह नहीं कि परामर्श हो चुका या नियुक्ति पुष्ट हुई।',
+    savedNotificationPendingMessage:
+      'आपका अनुरोध सुरक्षित है, लेकिन कार्यालय को सूचना अभी पुष्ट नहीं हुई। जो आपने लिखा वह नहीं खोता। यदि उत्तर न मिले, तो संपर्क पृष्ठ के ईमेल पते पर भी लिख सकते हैं।',
+    receiptIdLabel: 'प्राप्ति संख्या',
+    failureMessage:
+      'आपका अनुरोध नहीं भेजा जा सका। पुनः प्रयास करें या संपर्क पृष्ठ के ईमेल पते पर लिखें।',
+    originalLanguageLabel: 'जिस भाषा में आप लिखते हैं',
+    originalLanguagePlaceholder:
+      'उदाहरण के लिए हिंदी, अंग्रेज़ी, चीनी या कोई अन्य भाषा',
+    preferredConsultationLanguageLabel: 'परामर्श के लिए इच्छित भाषा',
+    originalTextLabel: 'मामले का संक्षिप्त विवरण (अपनी भाषा में)',
+    originalTextPlaceholder:
+      'बताएँ क्या हुआ, किस सहायता की आवश्यकता है और यदि हो तो समयसीमा। पासपोर्ट संख्या, पहचान संख्या या खाता विवरण न लिखें।',
+    nameLabel: 'नाम',
+    emailLabel: 'ईमेल',
+    consentLabel:
+      'मैंने गोपनीयता पृष्ठ पढ़ लिया है और इस अनुरोध को भेजने की सहमति देता/देती हूँ।',
+    privacyLinkLabel: 'गोपनीयता',
+    requiredMessage: 'यह फ़ील्ड आवश्यक है।',
+    invalidEmailMessage: 'कृपया मान्य ईमेल पता दें।',
+    tooLongMessage: 'पाठ बहुत लंबा है। उसे छोटा कर फिर भेजें।',
+    sourceLanguageNotice:
+      'यह लेख केवल {language} में प्रकाशित है; लिंक मूल पृष्ठ खोलता है।',
+    unavailableTranslationNotice:
+      'यह बिंदु इस पृष्ठ की भाषा में अभी उपलब्ध नहीं है। मूल भाषा का लिंक मूल पाठ खोलता है।',
+    unavailableLanguageNotice: 'यह पृष्ठ {language} में उपलब्ध नहीं है।',
+    languageOptions: {
+      en: 'अंग्रेज़ी (English)',
+      'zh-hant': 'चीनी (中文)',
+      ja: 'जापानी (日本語)',
+      ko: 'कोरियाई (한국어)',
+      'needs-method-confirmation':
+        'चार भाषाओं में से कोई उपयोगी नहीं — संचार मार्ग की पुष्टि आवश्यक है',
+    },
+  },
+  km: { // SCAFFOLD(th)
+    guidanceNotice:
+      'หน้านี้จัดทำเป็นภาษาไทยเพื่อเป็นข้อมูลแนะนำทั่วไป ไม่ใช่ความเห็นทางกฎหมายสำหรับเรื่องเฉพาะของท่าน',
+    consultationNotice:
+      'การให้คำปรึกษาจริงดำเนินการเฉพาะ 4 ภาษา ได้แก่ ภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
+    methodConfirmationNotice:
+      'หากท่านใช้ภาษาใดใน 4 ภาษานี้ไม่ได้ กรุณาเลือก “ต้องยืนยันวิธีติดต่อ” เราจะตอบกลับเพื่อยืนยันวิธีการสื่อสารที่เป็นไปได้ แต่ไม่รับประกันว่าจะรองรับภาษาอื่นได้ และไม่รับประกันระยะเวลาตอบกลับ',
+    preparationNotice:
+      'ท่านเขียนสรุปเรื่องด้วยภาษาของท่านเองได้ ข้อความต้นฉบับที่ท่านเขียนจะถูกเก็บไว้ตามเดิม และไม่มีการแปลโดยอัตโนมัติ',
+    heading: 'ส่งเรื่องเพื่อขอคำปรึกษา',
+    intro:
+      'กรุณาอธิบายเรื่องของท่านโดยย่อ ทนายความจะตรวจสอบเนื้อหาก่อนแจ้งขั้นตอนต่อไป',
+    submitLabel: 'ส่งเรื่อง',
+    submittingLabel: 'กำลังส่ง…',
+    successMessage:
+      'เราได้รับเรื่องของท่านไว้และอยู่ระหว่างรอการตรวจสอบ ทั้งนี้ไม่ได้หมายความว่าการปรึกษาเสร็จสิ้นแล้วหรือมีการยืนยันนัดหมายแล้ว',
+    savedNotificationPendingMessage:
+      'เรื่องของท่านถูกบันทึกไว้แล้ว แต่ยังยืนยันไม่ได้ว่าการแจ้งเตือนไปถึงสำนักงานแล้วหรือไม่ ข้อความที่ท่านเขียนไม่ได้สูญหาย หากยังไม่ได้รับการติดต่อกลับ ท่านสามารถส่งอีเมลตามที่อยู่ในหน้าติดต่อได้เช่นกัน',
+    receiptIdLabel: 'หมายเลขรับเรื่อง',
+    failureMessage:
+      'ส่งเรื่องของท่านไม่สำเร็จ กรุณาลองใหม่อีกครั้ง หรือส่งอีเมลตามที่อยู่ในหน้าติดต่อ',
+    originalLanguageLabel: 'ภาษาที่ท่านใช้เขียน',
+    originalLanguagePlaceholder:
+      'เช่น ภาษาไทย ภาษาเวียดนาม ภาษาอินโดนีเซีย ภาษาฟิลิปิโน หรือภาษาอื่น',
+    preferredConsultationLanguageLabel: 'ภาษาที่ท่านต้องการใช้ในการปรึกษา',
+    originalTextLabel: 'สรุปเรื่องของท่าน (เขียนด้วยภาษาของท่านเองได้)',
+    originalTextPlaceholder:
+      'กรุณาระบุว่าเกิดอะไรขึ้น ท่านต้องการความช่วยเหลือด้านใด และมีกำหนดเวลาหรือไม่ กรุณาอย่าระบุเลขหนังสือเดินทาง เลขบัตรประจำตัว หรือข้อมูลบัญชีธนาคาร',
+    nameLabel: 'ชื่อ',
+    emailLabel: 'อีเมล',
+    consentLabel:
+      'ข้าพเจ้าได้อ่านนโยบายความเป็นส่วนตัวแล้ว และยินยอมส่งเรื่องนี้',
+    privacyLinkLabel: 'นโยบายความเป็นส่วนตัว',
+    requiredMessage: 'กรุณากรอกช่องนี้',
+    invalidEmailMessage: 'กรุณากรอกที่อยู่อีเมลให้ถูกต้อง',
+    tooLongMessage: 'ข้อความยาวเกินไป กรุณาย่อให้สั้นลงแล้วส่งใหม่',
+    sourceLanguageNotice:
+      'บทความนี้มีเฉพาะภาษา {language} เท่านั้น และลิงก์จะเปิดหน้าต้นฉบับนั้น',
+    unavailableTranslationNotice:
+      'บทความนี้ยังไม่ได้แปลเป็นภาษาของหน้านี้ ลิงก์ที่ระบุภาษาต้นฉบับไว้ชัดเจนจะเปิดหน้าต้นฉบับให้ท่านอ่าน',
+    unavailableLanguageNotice: 'หน้านี้ไม่มีให้บริการเป็นภาษา {language}',
+    languageOptions: {
+      en: 'ภาษาอังกฤษ (English)',
+      'zh-hant': 'ภาษาจีน (中文)',
+      ja: 'ภาษาญี่ปุ่น (日本語)',
+      ko: 'ภาษาเกาหลี (한국어)',
+      'needs-method-confirmation': 'ใช้ภาษาใดใน 4 ภาษานี้ไม่ได้ — ต้องยืนยันวิธีติดต่อ',
+    },
+  },
+  mn: { // SCAFFOLD(ru)
+    guidanceNotice:
+      'Эта страница написана на русском языке как общие сведения, а не как юридическая консультация по Вашему делу.',
+    consultationNotice:
+      'Консультация проводится только на четырёх языках: английском, китайском (中文), японском и корейском.',
+    methodConfirmationNotice:
+      'Если Вы не можете пользоваться ни одним из четырёх языков, выберите «Способ связи должен быть подтверждён». Мы отвечаем, чтобы рассмотреть возможный способ связи, если такой способ есть; услуга на другом языке не обеспечивается, и срок ответа не обещается.',
+    preparationNotice:
+      'Вы можете написать краткое изложение дела на своём языке. Исходный текст сохраняется так, как Вы его написали, и автоматически не переводится.',
+    heading: 'Отправить запрос на консультацию',
+    intro:
+      'Кратко опишите Ваше дело. Адвокат рассматривает содержание до того, как обсуждается следующий шаг.',
+    submitLabel: 'Отправить запрос',
+    submittingLabel: 'Отправка…',
+    successMessage:
+      'Мы получили Ваш запрос; он ожидает рассмотрения. Это не означает, что консультация состоялась или что запись подтверждена.',
+    savedNotificationPendingMessage:
+      'Ваш запрос сохранён, но уведомление фирме ещё не подтверждено. Написанное Вами не теряется. Если ответа нет, Вы можете также написать на адрес электронной почты страницы контактов.',
+    receiptIdLabel: 'Номер обращения',
+    failureMessage:
+      'Ваш запрос не удалось отправить. Повторите попытку или напишите на адрес электронной почты страницы контактов.',
+    originalLanguageLabel: 'Язык, на котором Вы пишете',
+    originalLanguagePlaceholder:
+      'Например: русский, английский, китайский или другой язык',
+    preferredConsultationLanguageLabel: 'Желаемый язык консультации',
+    originalTextLabel: 'Краткое изложение дела (на Вашем языке)',
+    originalTextPlaceholder:
+      'Укажите, что произошло, какая помощь нужна и срок, если он есть. Не пишите номер паспорта, номер удостоверения или данные счёта.',
+    nameLabel: 'Имя',
+    emailLabel: 'Электронная почта',
+    consentLabel:
+      'Я прочитал(а) страницу о конфиденциальности и соглашаюсь отправить этот запрос.',
+    privacyLinkLabel: 'Конфиденциальность',
+    requiredMessage: 'Это поле обязательно.',
+    invalidEmailMessage: 'Укажите действительный адрес электронной почты.',
+    tooLongMessage: 'Текст слишком длинный. Сократите его и отправьте снова.',
+    sourceLanguageNotice:
+      'Этот материал опубликован только на языке {language}; ссылка открывает исходную страницу.',
+    unavailableTranslationNotice:
+      'Этот элемент ещё не переведён на язык этой страницы. Ссылка, указывающая язык оригинала, открывает исходный текст.',
+    unavailableLanguageNotice: 'Эта страница не предлагается на языке {language}.',
+    languageOptions: {
+      en: 'Английский (English)',
+      'zh-hant': 'Китайский (中文)',
+      ja: 'Японский (日本語)',
+      ko: 'Корейский (한국어)',
+      'needs-method-confirmation':
+        'Ни один из четырёх языков недоступен — способ связи должен быть подтверждён',
+    },
+  },
+  sk: { // SCAFFOLD(cs)
+    guidanceNotice:
+      'Tato stránka je psána česky jako obecná orientace, nikoli jako právní rada ve Vaší věci.',
+    consultationNotice:
+      'Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky.',
+    methodConfirmationNotice:
+      'Pokud neovládáte žádný ze čtyř jazyků konzultace, zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
+    preparationNotice:
+      'Shrnutí můžete napsat ve svém jazyce. Původní text se uchová tak, jak jste jej napsali, a automaticky se nepřekládá.',
+    heading: 'Odeslat žádost o posouzení',
+    intro:
+      'Popište svou věc stručně. Advokátka nebo advokát posoudí obsah, než se přistoupí k dalšímu kroku.',
+    submitLabel: 'Odeslat žádost',
+    submittingLabel: 'Odesílá se…',
+    successMessage:
+      'Obdrželi jsme Vaši žádost; čeká na posouzení. Neznamená to, že porada proběhla nebo že byla potvrzena schůzka.',
+    savedNotificationPendingMessage:
+      'Vaše žádost byla uložena, ale oznámení kanceláři zatím není potvrzeno. Co jste napsali, se neztratí. Neobdržíte-li odpověď, můžete napsat i na e-mailovou adresu z kontaktní stránky.',
+    receiptIdLabel: 'Číslo podání',
+    failureMessage:
+      'Vaši žádost se nepodařilo odeslat. Zkuste to znovu nebo napište na e-mailovou adresu z kontaktní stránky.',
+    originalLanguageLabel: 'Jazyk, v němž píšete',
+    originalLanguagePlaceholder:
+      'Například čeština, angličtina, čínština nebo jiný jazyk',
+    preferredConsultationLanguageLabel: 'Jazyk, který si přejete pro konzultaci',
+    originalTextLabel: 'Krátký popis věci (ve Vašem jazyce)',
+    originalTextPlaceholder:
+      'Napište, co se stalo, jakou pomoc potřebujete a lhůtu, existuje-li. Nepište číslo pasu, číslo dokladu ani údaje o účtu.',
+    nameLabel: 'Jméno',
+    emailLabel: 'E-mail',
+    consentLabel:
+      'Přečetl(a) jsem stránku o soukromí a souhlasím s odesláním této žádosti.',
+    privacyLinkLabel: 'Soukromí',
+    requiredMessage: 'Toto pole je povinné.',
+    invalidEmailMessage: 'Zadejte platnou e-mailovou adresu.',
+    tooLongMessage: 'Text je příliš dlouhý. Zkraťte jej a odešlete znovu.',
+    sourceLanguageNotice:
+      'Tento článek je zveřejněn pouze v jazyce {language}; odkaz otevře původní stránku.',
+    unavailableTranslationNotice:
+      'Tato část zatím není k dispozici v jazyce této stránky. Odkaz v původním jazyce otevře původní text.',
+    unavailableLanguageNotice: 'Tato stránka se v jazyce {language} nenabízí.',
+    languageOptions: {
+      en: 'Angličtina (English)',
+      'zh-hant': 'Čínština (中文)',
+      ja: 'Japonština (日本語)',
+      ko: 'Korejština (한국어)',
+      'needs-method-confirmation':
+        'Žádný ze čtyř jazyků není použitelný — způsob komunikace je třeba potvrdit',
+    },
+  },
+  bg: { // SCAFFOLD(ru)
+    guidanceNotice:
+      'Эта страница написана на русском языке как общие сведения, а не как юридическая консультация по Вашему делу.',
+    consultationNotice:
+      'Консультация проводится только на четырёх языках: английском, китайском (中文), японском и корейском.',
+    methodConfirmationNotice:
+      'Если Вы не можете пользоваться ни одним из четырёх языков, выберите «Способ связи должен быть подтверждён». Мы отвечаем, чтобы рассмотреть возможный способ связи, если такой способ есть; услуга на другом языке не обеспечивается, и срок ответа не обещается.',
+    preparationNotice:
+      'Вы можете написать краткое изложение дела на своём языке. Исходный текст сохраняется так, как Вы его написали, и автоматически не переводится.',
+    heading: 'Отправить запрос на консультацию',
+    intro:
+      'Кратко опишите Ваше дело. Адвокат рассматривает содержание до того, как обсуждается следующий шаг.',
+    submitLabel: 'Отправить запрос',
+    submittingLabel: 'Отправка…',
+    successMessage:
+      'Мы получили Ваш запрос; он ожидает рассмотрения. Это не означает, что консультация состоялась или что запись подтверждена.',
+    savedNotificationPendingMessage:
+      'Ваш запрос сохранён, но уведомление фирме ещё не подтверждено. Написанное Вами не теряется. Если ответа нет, Вы можете также написать на адрес электронной почты страницы контактов.',
+    receiptIdLabel: 'Номер обращения',
+    failureMessage:
+      'Ваш запрос не удалось отправить. Повторите попытку или напишите на адрес электронной почты страницы контактов.',
+    originalLanguageLabel: 'Язык, на котором Вы пишете',
+    originalLanguagePlaceholder:
+      'Например: русский, английский, китайский или другой язык',
+    preferredConsultationLanguageLabel: 'Желаемый язык консультации',
+    originalTextLabel: 'Краткое изложение дела (на Вашем языке)',
+    originalTextPlaceholder:
+      'Укажите, что произошло, какая помощь нужна и срок, если он есть. Не пишите номер паспорта, номер удостоверения или данные счёта.',
+    nameLabel: 'Имя',
+    emailLabel: 'Электронная почта',
+    consentLabel:
+      'Я прочитал(а) страницу о конфиденциальности и соглашаюсь отправить этот запрос.',
+    privacyLinkLabel: 'Конфиденциальность',
+    requiredMessage: 'Это поле обязательно.',
+    invalidEmailMessage: 'Укажите действительный адрес электронной почты.',
+    tooLongMessage: 'Текст слишком длинный. Сократите его и отправьте снова.',
+    sourceLanguageNotice:
+      'Этот материал опубликован только на языке {language}; ссылка открывает исходную страницу.',
+    unavailableTranslationNotice:
+      'Этот элемент ещё не переведён на язык этой страницы. Ссылка, указывающая язык оригинала, открывает исходный текст.',
+    unavailableLanguageNotice: 'Эта страница не предлагается на языке {language}.',
+    languageOptions: {
+      en: 'Английский (English)',
+      'zh-hant': 'Китайский (中文)',
+      ja: 'Японский (日本語)',
+      ko: 'Корейский (한국어)',
+      'needs-method-confirmation':
+        'Ни один из четырёх языков недоступен — способ связи должен быть подтверждён',
+    },
+  },
+  hr: { // SCAFFOLD(cs)
+    guidanceNotice:
+      'Tato stránka je psána česky jako obecná orientace, nikoli jako právní rada ve Vaší věci.',
+    consultationNotice:
+      'Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky.',
+    methodConfirmationNotice:
+      'Pokud neovládáte žádný ze čtyř jazyků konzultace, zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
+    preparationNotice:
+      'Shrnutí můžete napsat ve svém jazyce. Původní text se uchová tak, jak jste jej napsali, a automaticky se nepřekládá.',
+    heading: 'Odeslat žádost o posouzení',
+    intro:
+      'Popište svou věc stručně. Advokátka nebo advokát posoudí obsah, než se přistoupí k dalšímu kroku.',
+    submitLabel: 'Odeslat žádost',
+    submittingLabel: 'Odesílá se…',
+    successMessage:
+      'Obdrželi jsme Vaši žádost; čeká na posouzení. Neznamená to, že porada proběhla nebo že byla potvrzena schůzka.',
+    savedNotificationPendingMessage:
+      'Vaše žádost byla uložena, ale oznámení kanceláři zatím není potvrzeno. Co jste napsali, se neztratí. Neobdržíte-li odpověď, můžete napsat i na e-mailovou adresu z kontaktní stránky.',
+    receiptIdLabel: 'Číslo podání',
+    failureMessage:
+      'Vaši žádost se nepodařilo odeslat. Zkuste to znovu nebo napište na e-mailovou adresu z kontaktní stránky.',
+    originalLanguageLabel: 'Jazyk, v němž píšete',
+    originalLanguagePlaceholder:
+      'Například čeština, angličtina, čínština nebo jiný jazyk',
+    preferredConsultationLanguageLabel: 'Jazyk, který si přejete pro konzultaci',
+    originalTextLabel: 'Krátký popis věci (ve Vašem jazyce)',
+    originalTextPlaceholder:
+      'Napište, co se stalo, jakou pomoc potřebujete a lhůtu, existuje-li. Nepište číslo pasu, číslo dokladu ani údaje o účtu.',
+    nameLabel: 'Jméno',
+    emailLabel: 'E-mail',
+    consentLabel:
+      'Přečetl(a) jsem stránku o soukromí a souhlasím s odesláním této žádosti.',
+    privacyLinkLabel: 'Soukromí',
+    requiredMessage: 'Toto pole je povinné.',
+    invalidEmailMessage: 'Zadejte platnou e-mailovou adresu.',
+    tooLongMessage: 'Text je příliš dlouhý. Zkraťte jej a odešlete znovu.',
+    sourceLanguageNotice:
+      'Tento článek je zveřejněn pouze v jazyce {language}; odkaz otevře původní stránku.',
+    unavailableTranslationNotice:
+      'Tato část zatím není k dispozici v jazyce této stránky. Odkaz v původním jazyce otevře původní text.',
+    unavailableLanguageNotice: 'Tato stránka se v jazyce {language} nenabízí.',
+    languageOptions: {
+      en: 'Angličtina (English)',
+      'zh-hant': 'Čínština (中文)',
+      ja: 'Japonština (日本語)',
+      ko: 'Korejština (한국어)',
+      'needs-method-confirmation':
+        'Žádný ze čtyř jazyků není použitelný — způsob komunikace je třeba potvrdit',
+    },
+  },
+  sr: { // SCAFFOLD(cs)
+    guidanceNotice:
+      'Tato stránka je psána česky jako obecná orientace, nikoli jako právní rada ve Vaší věci.',
+    consultationNotice:
+      'Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky.',
+    methodConfirmationNotice:
+      'Pokud neovládáte žádný ze čtyř jazyků konzultace, zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
+    preparationNotice:
+      'Shrnutí můžete napsat ve svém jazyce. Původní text se uchová tak, jak jste jej napsali, a automaticky se nepřekládá.',
+    heading: 'Odeslat žádost o posouzení',
+    intro:
+      'Popište svou věc stručně. Advokátka nebo advokát posoudí obsah, než se přistoupí k dalšímu kroku.',
+    submitLabel: 'Odeslat žádost',
+    submittingLabel: 'Odesílá se…',
+    successMessage:
+      'Obdrželi jsme Vaši žádost; čeká na posouzení. Neznamená to, že porada proběhla nebo že byla potvrzena schůzka.',
+    savedNotificationPendingMessage:
+      'Vaše žádost byla uložena, ale oznámení kanceláři zatím není potvrzeno. Co jste napsali, se neztratí. Neobdržíte-li odpověď, můžete napsat i na e-mailovou adresu z kontaktní stránky.',
+    receiptIdLabel: 'Číslo podání',
+    failureMessage:
+      'Vaši žádost se nepodařilo odeslat. Zkuste to znovu nebo napište na e-mailovou adresu z kontaktní stránky.',
+    originalLanguageLabel: 'Jazyk, v němž píšete',
+    originalLanguagePlaceholder:
+      'Například čeština, angličtina, čínština nebo jiný jazyk',
+    preferredConsultationLanguageLabel: 'Jazyk, který si přejete pro konzultaci',
+    originalTextLabel: 'Krátký popis věci (ve Vašem jazyce)',
+    originalTextPlaceholder:
+      'Napište, co se stalo, jakou pomoc potřebujete a lhůtu, existuje-li. Nepište číslo pasu, číslo dokladu ani údaje o účtu.',
+    nameLabel: 'Jméno',
+    emailLabel: 'E-mail',
+    consentLabel:
+      'Přečetl(a) jsem stránku o soukromí a souhlasím s odesláním této žádosti.',
+    privacyLinkLabel: 'Soukromí',
+    requiredMessage: 'Toto pole je povinné.',
+    invalidEmailMessage: 'Zadejte platnou e-mailovou adresu.',
+    tooLongMessage: 'Text je příliš dlouhý. Zkraťte jej a odešlete znovu.',
+    sourceLanguageNotice:
+      'Tento článek je zveřejněn pouze v jazyce {language}; odkaz otevře původní stránku.',
+    unavailableTranslationNotice:
+      'Tato část zatím není k dispozici v jazyce této stránky. Odkaz v původním jazyce otevře původní text.',
+    unavailableLanguageNotice: 'Tato stránka se v jazyce {language} nenabízí.',
+    languageOptions: {
+      en: 'Angličtina (English)',
+      'zh-hant': 'Čínština (中文)',
+      ja: 'Japonština (日本語)',
+      ko: 'Korejština (한국어)',
+      'needs-method-confirmation':
+        'Žádný ze čtyř jazyků není použitelný — způsob komunikace je třeba potvrdit',
+    },
+  },
+  sl: { // SCAFFOLD(cs)
+    guidanceNotice:
+      'Tato stránka je psána česky jako obecná orientace, nikoli jako právní rada ve Vaší věci.',
+    consultationNotice:
+      'Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky.',
+    methodConfirmationNotice:
+      'Pokud neovládáte žádný ze čtyř jazyků konzultace, zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
+    preparationNotice:
+      'Shrnutí můžete napsat ve svém jazyce. Původní text se uchová tak, jak jste jej napsali, a automaticky se nepřekládá.',
+    heading: 'Odeslat žádost o posouzení',
+    intro:
+      'Popište svou věc stručně. Advokátka nebo advokát posoudí obsah, než se přistoupí k dalšímu kroku.',
+    submitLabel: 'Odeslat žádost',
+    submittingLabel: 'Odesílá se…',
+    successMessage:
+      'Obdrželi jsme Vaši žádost; čeká na posouzení. Neznamená to, že porada proběhla nebo že byla potvrzena schůzka.',
+    savedNotificationPendingMessage:
+      'Vaše žádost byla uložena, ale oznámení kanceláři zatím není potvrzeno. Co jste napsali, se neztratí. Neobdržíte-li odpověď, můžete napsat i na e-mailovou adresu z kontaktní stránky.',
+    receiptIdLabel: 'Číslo podání',
+    failureMessage:
+      'Vaši žádost se nepodařilo odeslat. Zkuste to znovu nebo napište na e-mailovou adresu z kontaktní stránky.',
+    originalLanguageLabel: 'Jazyk, v němž píšete',
+    originalLanguagePlaceholder:
+      'Například čeština, angličtina, čínština nebo jiný jazyk',
+    preferredConsultationLanguageLabel: 'Jazyk, který si přejete pro konzultaci',
+    originalTextLabel: 'Krátký popis věci (ve Vašem jazyce)',
+    originalTextPlaceholder:
+      'Napište, co se stalo, jakou pomoc potřebujete a lhůtu, existuje-li. Nepište číslo pasu, číslo dokladu ani údaje o účtu.',
+    nameLabel: 'Jméno',
+    emailLabel: 'E-mail',
+    consentLabel:
+      'Přečetl(a) jsem stránku o soukromí a souhlasím s odesláním této žádosti.',
+    privacyLinkLabel: 'Soukromí',
+    requiredMessage: 'Toto pole je povinné.',
+    invalidEmailMessage: 'Zadejte platnou e-mailovou adresu.',
+    tooLongMessage: 'Text je příliš dlouhý. Zkraťte jej a odešlete znovu.',
+    sourceLanguageNotice:
+      'Tento článek je zveřejněn pouze v jazyce {language}; odkaz otevře původní stránku.',
+    unavailableTranslationNotice:
+      'Tato část zatím není k dispozici v jazyce této stránky. Odkaz v původním jazyce otevře původní text.',
+    unavailableLanguageNotice: 'Tato stránka se v jazyce {language} nenabízí.',
+    languageOptions: {
+      en: 'Angličtina (English)',
+      'zh-hant': 'Čínština (中文)',
+      ja: 'Japonština (日本語)',
+      ko: 'Korejština (한국어)',
+      'needs-method-confirmation':
+        'Žádný ze čtyř jazyků není použitelný — způsob komunikace je třeba potvrdit',
+    },
+  },
+  lt: { // SCAFFOLD(cs)
+    guidanceNotice:
+      'Tato stránka je psána česky jako obecná orientace, nikoli jako právní rada ve Vaší věci.',
+    consultationNotice:
+      'Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky.',
+    methodConfirmationNotice:
+      'Pokud neovládáte žádný ze čtyř jazyků konzultace, zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
+    preparationNotice:
+      'Shrnutí můžete napsat ve svém jazyce. Původní text se uchová tak, jak jste jej napsali, a automaticky se nepřekládá.',
+    heading: 'Odeslat žádost o posouzení',
+    intro:
+      'Popište svou věc stručně. Advokátka nebo advokát posoudí obsah, než se přistoupí k dalšímu kroku.',
+    submitLabel: 'Odeslat žádost',
+    submittingLabel: 'Odesílá se…',
+    successMessage:
+      'Obdrželi jsme Vaši žádost; čeká na posouzení. Neznamená to, že porada proběhla nebo že byla potvrzena schůzka.',
+    savedNotificationPendingMessage:
+      'Vaše žádost byla uložena, ale oznámení kanceláři zatím není potvrzeno. Co jste napsali, se neztratí. Neobdržíte-li odpověď, můžete napsat i na e-mailovou adresu z kontaktní stránky.',
+    receiptIdLabel: 'Číslo podání',
+    failureMessage:
+      'Vaši žádost se nepodařilo odeslat. Zkuste to znovu nebo napište na e-mailovou adresu z kontaktní stránky.',
+    originalLanguageLabel: 'Jazyk, v němž píšete',
+    originalLanguagePlaceholder:
+      'Například čeština, angličtina, čínština nebo jiný jazyk',
+    preferredConsultationLanguageLabel: 'Jazyk, který si přejete pro konzultaci',
+    originalTextLabel: 'Krátký popis věci (ve Vašem jazyce)',
+    originalTextPlaceholder:
+      'Napište, co se stalo, jakou pomoc potřebujete a lhůtu, existuje-li. Nepište číslo pasu, číslo dokladu ani údaje o účtu.',
+    nameLabel: 'Jméno',
+    emailLabel: 'E-mail',
+    consentLabel:
+      'Přečetl(a) jsem stránku o soukromí a souhlasím s odesláním této žádosti.',
+    privacyLinkLabel: 'Soukromí',
+    requiredMessage: 'Toto pole je povinné.',
+    invalidEmailMessage: 'Zadejte platnou e-mailovou adresu.',
+    tooLongMessage: 'Text je příliš dlouhý. Zkraťte jej a odešlete znovu.',
+    sourceLanguageNotice:
+      'Tento článek je zveřejněn pouze v jazyce {language}; odkaz otevře původní stránku.',
+    unavailableTranslationNotice:
+      'Tato část zatím není k dispozici v jazyce této stránky. Odkaz v původním jazyce otevře původní text.',
+    unavailableLanguageNotice: 'Tato stránka se v jazyce {language} nenabízí.',
+    languageOptions: {
+      en: 'Angličtina (English)',
+      'zh-hant': 'Čínština (中文)',
+      ja: 'Japonština (日本語)',
+      ko: 'Korejština (한국어)',
+      'needs-method-confirmation':
+        'Žádný ze čtyř jazyků není použitelný — způsob komunikace je třeba potvrdit',
+    },
+  },
+  lv: { // SCAFFOLD(cs)
+    guidanceNotice:
+      'Tato stránka je psána česky jako obecná orientace, nikoli jako právní rada ve Vaší věci.',
+    consultationNotice:
+      'Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky.',
+    methodConfirmationNotice:
+      'Pokud neovládáte žádný ze čtyř jazyků konzultace, zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
+    preparationNotice:
+      'Shrnutí můžete napsat ve svém jazyce. Původní text se uchová tak, jak jste jej napsali, a automaticky se nepřekládá.',
+    heading: 'Odeslat žádost o posouzení',
+    intro:
+      'Popište svou věc stručně. Advokátka nebo advokát posoudí obsah, než se přistoupí k dalšímu kroku.',
+    submitLabel: 'Odeslat žádost',
+    submittingLabel: 'Odesílá se…',
+    successMessage:
+      'Obdrželi jsme Vaši žádost; čeká na posouzení. Neznamená to, že porada proběhla nebo že byla potvrzena schůzka.',
+    savedNotificationPendingMessage:
+      'Vaše žádost byla uložena, ale oznámení kanceláři zatím není potvrzeno. Co jste napsali, se neztratí. Neobdržíte-li odpověď, můžete napsat i na e-mailovou adresu z kontaktní stránky.',
+    receiptIdLabel: 'Číslo podání',
+    failureMessage:
+      'Vaši žádost se nepodařilo odeslat. Zkuste to znovu nebo napište na e-mailovou adresu z kontaktní stránky.',
+    originalLanguageLabel: 'Jazyk, v němž píšete',
+    originalLanguagePlaceholder:
+      'Například čeština, angličtina, čínština nebo jiný jazyk',
+    preferredConsultationLanguageLabel: 'Jazyk, který si přejete pro konzultaci',
+    originalTextLabel: 'Krátký popis věci (ve Vašem jazyce)',
+    originalTextPlaceholder:
+      'Napište, co se stalo, jakou pomoc potřebujete a lhůtu, existuje-li. Nepište číslo pasu, číslo dokladu ani údaje o účtu.',
+    nameLabel: 'Jméno',
+    emailLabel: 'E-mail',
+    consentLabel:
+      'Přečetl(a) jsem stránku o soukromí a souhlasím s odesláním této žádosti.',
+    privacyLinkLabel: 'Soukromí',
+    requiredMessage: 'Toto pole je povinné.',
+    invalidEmailMessage: 'Zadejte platnou e-mailovou adresu.',
+    tooLongMessage: 'Text je příliš dlouhý. Zkraťte jej a odešlete znovu.',
+    sourceLanguageNotice:
+      'Tento článek je zveřejněn pouze v jazyce {language}; odkaz otevře původní stránku.',
+    unavailableTranslationNotice:
+      'Tato část zatím není k dispozici v jazyce této stránky. Odkaz v původním jazyce otevře původní text.',
+    unavailableLanguageNotice: 'Tato stránka se v jazyce {language} nenabízí.',
+    languageOptions: {
+      en: 'Angličtina (English)',
+      'zh-hant': 'Čínština (中文)',
+      ja: 'Japonština (日本語)',
+      ko: 'Korejština (한국어)',
+      'needs-method-confirmation':
+        'Žádný ze čtyř jazyků není použitelný — způsob komunikace je třeba potvrdit',
+    },
+  },
+  et: { // SCAFFOLD(cs)
+    guidanceNotice:
+      'Tato stránka je psána česky jako obecná orientace, nikoli jako právní rada ve Vaší věci.',
+    consultationNotice:
+      'Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky.',
+    methodConfirmationNotice:
+      'Pokud neovládáte žádný ze čtyř jazyků konzultace, zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
+    preparationNotice:
+      'Shrnutí můžete napsat ve svém jazyce. Původní text se uchová tak, jak jste jej napsali, a automaticky se nepřekládá.',
+    heading: 'Odeslat žádost o posouzení',
+    intro:
+      'Popište svou věc stručně. Advokátka nebo advokát posoudí obsah, než se přistoupí k dalšímu kroku.',
+    submitLabel: 'Odeslat žádost',
+    submittingLabel: 'Odesílá se…',
+    successMessage:
+      'Obdrželi jsme Vaši žádost; čeká na posouzení. Neznamená to, že porada proběhla nebo že byla potvrzena schůzka.',
+    savedNotificationPendingMessage:
+      'Vaše žádost byla uložena, ale oznámení kanceláři zatím není potvrzeno. Co jste napsali, se neztratí. Neobdržíte-li odpověď, můžete napsat i na e-mailovou adresu z kontaktní stránky.',
+    receiptIdLabel: 'Číslo podání',
+    failureMessage:
+      'Vaši žádost se nepodařilo odeslat. Zkuste to znovu nebo napište na e-mailovou adresu z kontaktní stránky.',
+    originalLanguageLabel: 'Jazyk, v němž píšete',
+    originalLanguagePlaceholder:
+      'Například čeština, angličtina, čínština nebo jiný jazyk',
+    preferredConsultationLanguageLabel: 'Jazyk, který si přejete pro konzultaci',
+    originalTextLabel: 'Krátký popis věci (ve Vašem jazyce)',
+    originalTextPlaceholder:
+      'Napište, co se stalo, jakou pomoc potřebujete a lhůtu, existuje-li. Nepište číslo pasu, číslo dokladu ani údaje o účtu.',
+    nameLabel: 'Jméno',
+    emailLabel: 'E-mail',
+    consentLabel:
+      'Přečetl(a) jsem stránku o soukromí a souhlasím s odesláním této žádosti.',
+    privacyLinkLabel: 'Soukromí',
+    requiredMessage: 'Toto pole je povinné.',
+    invalidEmailMessage: 'Zadejte platnou e-mailovou adresu.',
+    tooLongMessage: 'Text je příliš dlouhý. Zkraťte jej a odešlete znovu.',
+    sourceLanguageNotice:
+      'Tento článek je zveřejněn pouze v jazyce {language}; odkaz otevře původní stránku.',
+    unavailableTranslationNotice:
+      'Tato část zatím není k dispozici v jazyce této stránky. Odkaz v původním jazyce otevře původní text.',
+    unavailableLanguageNotice: 'Tato stránka se v jazyce {language} nenabízí.',
+    languageOptions: {
+      en: 'Angličtina (English)',
+      'zh-hant': 'Čínština (中文)',
+      ja: 'Japonština (日本語)',
+      ko: 'Korejština (한국어)',
+      'needs-method-confirmation':
+        'Žádný ze čtyř jazyků není použitelný — způsob komunikace je třeba potvrdit',
+    },
+  },
+  ca: { // SCAFFOLD(cs)
+    guidanceNotice:
+      'Tato stránka je psána česky jako obecná orientace, nikoli jako právní rada ve Vaší věci.',
+    consultationNotice:
+      'Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky.',
+    methodConfirmationNotice:
+      'Pokud neovládáte žádný ze čtyř jazyků konzultace, zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
+    preparationNotice:
+      'Shrnutí můžete napsat ve svém jazyce. Původní text se uchová tak, jak jste jej napsali, a automaticky se nepřekládá.',
+    heading: 'Odeslat žádost o posouzení',
+    intro:
+      'Popište svou věc stručně. Advokátka nebo advokát posoudí obsah, než se přistoupí k dalšímu kroku.',
+    submitLabel: 'Odeslat žádost',
+    submittingLabel: 'Odesílá se…',
+    successMessage:
+      'Obdrželi jsme Vaši žádost; čeká na posouzení. Neznamená to, že porada proběhla nebo že byla potvrzena schůzka.',
+    savedNotificationPendingMessage:
+      'Vaše žádost byla uložena, ale oznámení kanceláři zatím není potvrzeno. Co jste napsali, se neztratí. Neobdržíte-li odpověď, můžete napsat i na e-mailovou adresu z kontaktní stránky.',
+    receiptIdLabel: 'Číslo podání',
+    failureMessage:
+      'Vaši žádost se nepodařilo odeslat. Zkuste to znovu nebo napište na e-mailovou adresu z kontaktní stránky.',
+    originalLanguageLabel: 'Jazyk, v němž píšete',
+    originalLanguagePlaceholder:
+      'Například čeština, angličtina, čínština nebo jiný jazyk',
+    preferredConsultationLanguageLabel: 'Jazyk, který si přejete pro konzultaci',
+    originalTextLabel: 'Krátký popis věci (ve Vašem jazyce)',
+    originalTextPlaceholder:
+      'Napište, co se stalo, jakou pomoc potřebujete a lhůtu, existuje-li. Nepište číslo pasu, číslo dokladu ani údaje o účtu.',
+    nameLabel: 'Jméno',
+    emailLabel: 'E-mail',
+    consentLabel:
+      'Přečetl(a) jsem stránku o soukromí a souhlasím s odesláním této žádosti.',
+    privacyLinkLabel: 'Soukromí',
+    requiredMessage: 'Toto pole je povinné.',
+    invalidEmailMessage: 'Zadejte platnou e-mailovou adresu.',
+    tooLongMessage: 'Text je příliš dlouhý. Zkraťte jej a odešlete znovu.',
+    sourceLanguageNotice:
+      'Tento článek je zveřejněn pouze v jazyce {language}; odkaz otevře původní stránku.',
+    unavailableTranslationNotice:
+      'Tato část zatím není k dispozici v jazyce této stránky. Odkaz v původním jazyce otevře původní text.',
+    unavailableLanguageNotice: 'Tato stránka se v jazyce {language} nenabízí.',
+    languageOptions: {
+      en: 'Angličtina (English)',
+      'zh-hant': 'Čínština (中文)',
+      ja: 'Japonština (日本語)',
+      ko: 'Korejština (한국어)',
+      'needs-method-confirmation':
+        'Žádný ze čtyř jazyků není použitelný — způsob komunikace je třeba potvrdit',
+    },
+  },
+  is: { // SCAFFOLD(cs)
+    guidanceNotice:
+      'Tato stránka je psána česky jako obecná orientace, nikoli jako právní rada ve Vaší věci.',
+    consultationNotice:
+      'Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky.',
+    methodConfirmationNotice:
+      'Pokud neovládáte žádný ze čtyř jazyků konzultace, zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
+    preparationNotice:
+      'Shrnutí můžete napsat ve svém jazyce. Původní text se uchová tak, jak jste jej napsali, a automaticky se nepřekládá.',
+    heading: 'Odeslat žádost o posouzení',
+    intro:
+      'Popište svou věc stručně. Advokátka nebo advokát posoudí obsah, než se přistoupí k dalšímu kroku.',
+    submitLabel: 'Odeslat žádost',
+    submittingLabel: 'Odesílá se…',
+    successMessage:
+      'Obdrželi jsme Vaši žádost; čeká na posouzení. Neznamená to, že porada proběhla nebo že byla potvrzena schůzka.',
+    savedNotificationPendingMessage:
+      'Vaše žádost byla uložena, ale oznámení kanceláři zatím není potvrzeno. Co jste napsali, se neztratí. Neobdržíte-li odpověď, můžete napsat i na e-mailovou adresu z kontaktní stránky.',
+    receiptIdLabel: 'Číslo podání',
+    failureMessage:
+      'Vaši žádost se nepodařilo odeslat. Zkuste to znovu nebo napište na e-mailovou adresu z kontaktní stránky.',
+    originalLanguageLabel: 'Jazyk, v němž píšete',
+    originalLanguagePlaceholder:
+      'Například čeština, angličtina, čínština nebo jiný jazyk',
+    preferredConsultationLanguageLabel: 'Jazyk, který si přejete pro konzultaci',
+    originalTextLabel: 'Krátký popis věci (ve Vašem jazyce)',
+    originalTextPlaceholder:
+      'Napište, co se stalo, jakou pomoc potřebujete a lhůtu, existuje-li. Nepište číslo pasu, číslo dokladu ani údaje o účtu.',
+    nameLabel: 'Jméno',
+    emailLabel: 'E-mail',
+    consentLabel:
+      'Přečetl(a) jsem stránku o soukromí a souhlasím s odesláním této žádosti.',
+    privacyLinkLabel: 'Soukromí',
+    requiredMessage: 'Toto pole je povinné.',
+    invalidEmailMessage: 'Zadejte platnou e-mailovou adresu.',
+    tooLongMessage: 'Text je příliš dlouhý. Zkraťte jej a odešlete znovu.',
+    sourceLanguageNotice:
+      'Tento článek je zveřejněn pouze v jazyce {language}; odkaz otevře původní stránku.',
+    unavailableTranslationNotice:
+      'Tato část zatím není k dispozici v jazyce této stránky. Odkaz v původním jazyce otevře původní text.',
+    unavailableLanguageNotice: 'Tato stránka se v jazyce {language} nenabízí.',
+    languageOptions: {
+      en: 'Angličtina (English)',
+      'zh-hant': 'Čínština (中文)',
+      ja: 'Japonština (日本語)',
+      ko: 'Korejština (한국어)',
+      'needs-method-confirmation':
+        'Žádný ze čtyř jazyků není použitelný — způsob komunikace je třeba potvrdit',
     },
   },
 };

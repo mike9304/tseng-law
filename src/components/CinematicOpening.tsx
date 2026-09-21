@@ -734,6 +734,186 @@ export const CINEMATIC_OPENING_COPY: Record<
     service: 'מידע משפטי על טאיוואן · אנגלית, סינית, יפנית וקוריאנית',
     contact: 'פנו אל המשרד',
   },
+  bn: { // SCAFFOLD(hi)
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ताइवान में अधिवक्ता',
+    scroll: 'नीचे जारी रखें',
+    skip: 'प्रस्तावना छोड़ें',
+    mediaAlt:
+      'ताइवान की केंद्रीय पर्वत श्रृंखला और बादलों के सागर पर प्राकृतिक प्रकाश में हवाई चित्र',
+    service: 'ताइवान कानूनी जानकारी · अंग्रेज़ी, चीनी, जापानी और कोरियाई',
+    contact: 'कार्यालय से संपर्क करें',
+  },
+  ur: { // SCAFFOLD(ar)
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'محامون في تايوان',
+    scroll: 'مرّر للأسفل للمتابعة',
+    skip: 'تخطّي المقدمة',
+    mediaAlt:
+      'لقطة جوية في ضوء طبيعي ساطع، تحلّق فوق سلسلة الجبال الوسطى في تايوان وبحر السحب',
+    service: 'الدعم القانوني في تايوان · بالإنجليزية والصينية واليابانية والكورية',
+    contact: 'التواصل مع المكتب',
+  },
+  fa: { // SCAFFOLD(ar)
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'محامون في تايوان',
+    scroll: 'مرّر للأسفل للمتابعة',
+    skip: 'تخطّي المقدمة',
+    mediaAlt:
+      'لقطة جوية في ضوء طبيعي ساطع، تحلّق فوق سلسلة الجبال الوسطى في تايوان وبحر السحب',
+    service: 'الدعم القانوني في تايوان · بالإنجليزية والصينية واليابانية والكورية',
+    contact: 'التواصل مع المكتب',
+  },
+  my: { // SCAFFOLD(th)
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'สำนักงานกฎหมายในไต้หวัน',
+    scroll: 'เลื่อนลง',
+    skip: 'ข้ามบทนำ',
+    mediaAlt:
+      'ภาพมุมสูงใต้แสงธรรมชาติที่สว่าง บินเหนือเทือกเขาตอนกลางของไต้หวันและทะเลหมอก',
+    service: 'บริการทางกฎหมายในไต้หวัน · ภาษาอังกฤษ ญี่ปุ่น และเกาหลี',
+    contact: 'ติดต่อสำนักงาน',
+  },
+  ta: { // SCAFFOLD(hi)
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ताइवान में अधिवक्ता',
+    scroll: 'नीचे जारी रखें',
+    skip: 'प्रस्तावना छोड़ें',
+    mediaAlt:
+      'ताइवान की केंद्रीय पर्वत श्रृंखला और बादलों के सागर पर प्राकृतिक प्रकाश में हवाई चित्र',
+    service: 'ताइवान कानूनी जानकारी · अंग्रेज़ी, चीनी, जापानी और कोरियाई',
+    contact: 'कार्यालय से संपर्क करें',
+  },
+  ne: { // SCAFFOLD(hi)
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ताइवान में अधिवक्ता',
+    scroll: 'नीचे जारी रखें',
+    skip: 'प्रस्तावना छोड़ें',
+    mediaAlt:
+      'ताइवान की केंद्रीय पर्वत श्रृंखला और बादलों के सागर पर प्राकृतिक प्रकाश में हवाई चित्र',
+    service: 'ताइवान कानूनी जानकारी · अंग्रेज़ी, चीनी, जापानी और कोरियाई',
+    contact: 'कार्यालय से संपर्क करें',
+  },
+  km: { // SCAFFOLD(th)
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'สำนักงานกฎหมายในไต้หวัน',
+    scroll: 'เลื่อนลง',
+    skip: 'ข้ามบทนำ',
+    mediaAlt:
+      'ภาพมุมสูงใต้แสงธรรมชาติที่สว่าง บินเหนือเทือกเขาตอนกลางของไต้หวันและทะเลหมอก',
+    service: 'บริการทางกฎหมายในไต้หวัน · ภาษาอังกฤษ ญี่ปุ่น และเกาหลี',
+    contact: 'ติดต่อสำนักงาน',
+  },
+  mn: { // SCAFFOLD(ru)
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'АДВОКАТЫ НА ТАЙВАНЕ',
+    scroll: 'Продолжить вниз',
+    skip: 'Пропустить вступление',
+    mediaAlt:
+      'Аэросъёмка при естественном свете над Центральным горным хребтом Тайваня и морем облаков',
+    service: 'Правовые сведения о Тайване · английский, китайский, японский и корейский',
+    contact: 'Связаться с фирмой',
+  },
+  sk: { // SCAFFOLD(cs)
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ADVOKÁTI NA TCHAJ-WANU',
+    scroll: 'Pokračujte dolů',
+    skip: 'Přeskočit úvod',
+    mediaAlt:
+      'Letecký pohled na středohoří Tchaj-wanu a moře mraků v přirozeném světle',
+    service: 'Právní informace o Tchaj-wanu · angličtina, čínština, japonština a korejština',
+    contact: 'Obraťte se na kancelář',
+  },
+  bg: { // SCAFFOLD(ru)
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'АДВОКАТЫ НА ТАЙВАНЕ',
+    scroll: 'Продолжить вниз',
+    skip: 'Пропустить вступление',
+    mediaAlt:
+      'Аэросъёмка при естественном свете над Центральным горным хребтом Тайваня и морем облаков',
+    service: 'Правовые сведения о Тайване · английский, китайский, японский и корейский',
+    contact: 'Связаться с фирмой',
+  },
+  hr: { // SCAFFOLD(cs)
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ADVOKÁTI NA TCHAJ-WANU',
+    scroll: 'Pokračujte dolů',
+    skip: 'Přeskočit úvod',
+    mediaAlt:
+      'Letecký pohled na středohoří Tchaj-wanu a moře mraků v přirozeném světle',
+    service: 'Právní informace o Tchaj-wanu · angličtina, čínština, japonština a korejština',
+    contact: 'Obraťte se na kancelář',
+  },
+  sr: { // SCAFFOLD(cs)
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ADVOKÁTI NA TCHAJ-WANU',
+    scroll: 'Pokračujte dolů',
+    skip: 'Přeskočit úvod',
+    mediaAlt:
+      'Letecký pohled na středohoří Tchaj-wanu a moře mraků v přirozeném světle',
+    service: 'Právní informace o Tchaj-wanu · angličtina, čínština, japonština a korejština',
+    contact: 'Obraťte se na kancelář',
+  },
+  sl: { // SCAFFOLD(cs)
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ADVOKÁTI NA TCHAJ-WANU',
+    scroll: 'Pokračujte dolů',
+    skip: 'Přeskočit úvod',
+    mediaAlt:
+      'Letecký pohled na středohoří Tchaj-wanu a moře mraků v přirozeném světle',
+    service: 'Právní informace o Tchaj-wanu · angličtina, čínština, japonština a korejština',
+    contact: 'Obraťte se na kancelář',
+  },
+  lt: { // SCAFFOLD(cs)
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ADVOKÁTI NA TCHAJ-WANU',
+    scroll: 'Pokračujte dolů',
+    skip: 'Přeskočit úvod',
+    mediaAlt:
+      'Letecký pohled na středohoří Tchaj-wanu a moře mraků v přirozeném světle',
+    service: 'Právní informace o Tchaj-wanu · angličtina, čínština, japonština a korejština',
+    contact: 'Obraťte se na kancelář',
+  },
+  lv: { // SCAFFOLD(cs)
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ADVOKÁTI NA TCHAJ-WANU',
+    scroll: 'Pokračujte dolů',
+    skip: 'Přeskočit úvod',
+    mediaAlt:
+      'Letecký pohled na středohoří Tchaj-wanu a moře mraků v přirozeném světle',
+    service: 'Právní informace o Tchaj-wanu · angličtina, čínština, japonština a korejština',
+    contact: 'Obraťte se na kancelář',
+  },
+  et: { // SCAFFOLD(cs)
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ADVOKÁTI NA TCHAJ-WANU',
+    scroll: 'Pokračujte dolů',
+    skip: 'Přeskočit úvod',
+    mediaAlt:
+      'Letecký pohled na středohoří Tchaj-wanu a moře mraků v přirozeném světle',
+    service: 'Právní informace o Tchaj-wanu · angličtina, čínština, japonština a korejština',
+    contact: 'Obraťte se na kancelář',
+  },
+  ca: { // SCAFFOLD(cs)
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ADVOKÁTI NA TCHAJ-WANU',
+    scroll: 'Pokračujte dolů',
+    skip: 'Přeskočit úvod',
+    mediaAlt:
+      'Letecký pohled na středohoří Tchaj-wanu a moře mraků v přirozeném světle',
+    service: 'Právní informace o Tchaj-wanu · angličtina, čínština, japonština a korejština',
+    contact: 'Obraťte se na kancelář',
+  },
+  is: { // SCAFFOLD(cs)
+    primary: 'HOVERING INTERNATIONAL LAW FIRM',
+    secondary: 'ADVOKÁTI NA TCHAJ-WANU',
+    scroll: 'Pokračujte dolů',
+    skip: 'Přeskočit úvod',
+    mediaAlt:
+      'Letecký pohled na středohoří Tchaj-wanu a moře mraků v přirozeném světle',
+    service: 'Právní informace o Tchaj-wanu · angličtina, čínština, japonština a korejština',
+    contact: 'Obraťte se na kancelář',
+  },
 };
 
 export default function CinematicOpening({

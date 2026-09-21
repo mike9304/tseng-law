@@ -205,6 +205,24 @@ const GUIDANCE_COLUMN_CATEGORY_LABELS: Partial<Record<GuidanceLocale4, Record<Co
   uk: { formation: 'Створення товариств на Тайвані', legal: 'Правова інформація про Тайвань', case: 'Розбір справи' },
   el: { formation: 'Σύσταση εταιρειών στην Ταϊβάν', legal: 'Νομικές πληροφορίες για την Ταϊβάν', case: 'Ανάλυση υπόθεσης' },
   he: { formation: 'הקמת חברות בטאיוואן', legal: 'מידע משפטי על טאיוואן', case: 'ניתוח מקרה' },
+  bn: { formation: 'ताइवान में कंपनी स्थापना', legal: 'ताइवान कानूनी जानकारी', case: 'मामला विश्लेषण' }, // SCAFFOLD(hi)
+  ur: { formation: 'تأسيس الشركات', legal: 'معلومات قانونية', case: 'دراسات قضايا' }, // SCAFFOLD(ar)
+  fa: { formation: 'تأسيس الشركات', legal: 'معلومات قانونية', case: 'دراسات قضايا' }, // SCAFFOLD(ar)
+  my: { formation: 'การจัดตั้งบริษัทในไต้หวัน', legal: 'ข้อมูลกฎหมายไต้หวัน', case: 'การวิเคราะห์คดีตัวอย่าง' }, // SCAFFOLD(th)
+  ta: { formation: 'ताइवान में कंपनी स्थापना', legal: 'ताइवान कानूनी जानकारी', case: 'मामला विश्लेषण' }, // SCAFFOLD(hi)
+  ne: { formation: 'ताइवान में कंपनी स्थापना', legal: 'ताइवान कानूनी जानकारी', case: 'मामला विश्लेषण' }, // SCAFFOLD(hi)
+  km: { formation: 'การจัดตั้งบริษัทในไต้หวัน', legal: 'ข้อมูลกฎหมายไต้หวัน', case: 'การวิเคราะห์คดีตัวอย่าง' }, // SCAFFOLD(th)
+  mn: { formation: 'Учреждение компании на Тайване', legal: 'Правовая информация о Тайване', case: 'Анализ дел' }, // SCAFFOLD(ru)
+  sk: { formation: 'Zakládání společností na Tchaj-wanu', legal: 'Právní informace o Tchaj-wanu', case: 'Rozbor případu' }, // SCAFFOLD(cs)
+  bg: { formation: 'Учреждение компании на Тайване', legal: 'Правовая информация о Тайване', case: 'Анализ дел' }, // SCAFFOLD(ru)
+  hr: { formation: 'Zakládání společností na Tchaj-wanu', legal: 'Právní informace o Tchaj-wanu', case: 'Rozbor případu' }, // SCAFFOLD(cs)
+  sr: { formation: 'Zakládání společností na Tchaj-wanu', legal: 'Právní informace o Tchaj-wanu', case: 'Rozbor případu' }, // SCAFFOLD(cs)
+  sl: { formation: 'Zakládání společností na Tchaj-wanu', legal: 'Právní informace o Tchaj-wanu', case: 'Rozbor případu' }, // SCAFFOLD(cs)
+  lt: { formation: 'Zakládání společností na Tchaj-wanu', legal: 'Právní informace o Tchaj-wanu', case: 'Rozbor případu' }, // SCAFFOLD(cs)
+  lv: { formation: 'Zakládání společností na Tchaj-wanu', legal: 'Právní informace o Tchaj-wanu', case: 'Rozbor případu' }, // SCAFFOLD(cs)
+  et: { formation: 'Zakládání společností na Tchaj-wanu', legal: 'Právní informace o Tchaj-wanu', case: 'Rozbor případu' }, // SCAFFOLD(cs)
+  ca: { formation: 'Zakládání společností na Tchaj-wanu', legal: 'Právní informace o Tchaj-wanu', case: 'Rozbor případu' }, // SCAFFOLD(cs)
+  is: { formation: 'Zakládání společností na Tchaj-wanu', legal: 'Právní informace o Tchaj-wanu', case: 'Rozbor případu' }, // SCAFFOLD(cs)
 };
 const ENGLISH_COLUMN_CATEGORY_LABELS: Record<ColumnCategory, string> = {
   formation: 'Company Setup',

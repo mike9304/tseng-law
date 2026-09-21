@@ -248,7 +248,9 @@ html[lang='zh-hans'] {
 }
 
 /* Arabic: Noto Sans Arabic for body and headings (no Arabic serif pair is loaded). */
-html[lang='ar'] {
+html[lang='ar'],
+html[lang='ur'],
+html[lang='fa'] {
   --font-body: var(--font-body-ar);
   --font-sans: var(--font-body-ar);
   --font-heading: var(--font-body-ar);
@@ -266,7 +268,8 @@ html[lang='th'] {
   --font-display-en: var(--font-body-th);
 }
 
-html[lang='hi'] {
+html[lang='hi'],
+html[lang='ne'] {
   --font-body: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
   --font-sans: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
   --font-heading: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
@@ -285,6 +288,40 @@ html[lang='he'] {
   --font-heading-ko: var(--font-noto-sans-hebrew-loaded, 'Noto Sans Hebrew'), 'Noto Sans Hebrew', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
   --font-display: var(--font-noto-sans-hebrew-loaded, 'Noto Sans Hebrew'), 'Noto Sans Hebrew', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
   --font-display-en: var(--font-noto-sans-hebrew-loaded, 'Noto Sans Hebrew'), 'Noto Sans Hebrew', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+}
+
+/* Bengali, Tamil, Burmese and Khmer get their own faces (no subset in the shared latin face). */
+html[lang='bn'] {
+  --font-body: var(--font-noto-sans-bengali-loaded, 'Noto Sans Bengali'), 'Noto Sans Bengali', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-sans: var(--font-noto-sans-bengali-loaded, 'Noto Sans Bengali'), 'Noto Sans Bengali', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading: var(--font-noto-sans-bengali-loaded, 'Noto Sans Bengali'), 'Noto Sans Bengali', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading-ko: var(--font-noto-sans-bengali-loaded, 'Noto Sans Bengali'), 'Noto Sans Bengali', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display: var(--font-noto-sans-bengali-loaded, 'Noto Sans Bengali'), 'Noto Sans Bengali', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display-en: var(--font-noto-sans-bengali-loaded, 'Noto Sans Bengali'), 'Noto Sans Bengali', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+}
+html[lang='ta'] {
+  --font-body: var(--font-noto-sans-tamil-loaded, 'Noto Sans Tamil'), 'Noto Sans Tamil', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-sans: var(--font-noto-sans-tamil-loaded, 'Noto Sans Tamil'), 'Noto Sans Tamil', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading: var(--font-noto-sans-tamil-loaded, 'Noto Sans Tamil'), 'Noto Sans Tamil', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading-ko: var(--font-noto-sans-tamil-loaded, 'Noto Sans Tamil'), 'Noto Sans Tamil', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display: var(--font-noto-sans-tamil-loaded, 'Noto Sans Tamil'), 'Noto Sans Tamil', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display-en: var(--font-noto-sans-tamil-loaded, 'Noto Sans Tamil'), 'Noto Sans Tamil', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+}
+html[lang='my'] {
+  --font-body: var(--font-noto-sans-myanmar-loaded, 'Noto Sans Myanmar'), 'Noto Sans Myanmar', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-sans: var(--font-noto-sans-myanmar-loaded, 'Noto Sans Myanmar'), 'Noto Sans Myanmar', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading: var(--font-noto-sans-myanmar-loaded, 'Noto Sans Myanmar'), 'Noto Sans Myanmar', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading-ko: var(--font-noto-sans-myanmar-loaded, 'Noto Sans Myanmar'), 'Noto Sans Myanmar', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display: var(--font-noto-sans-myanmar-loaded, 'Noto Sans Myanmar'), 'Noto Sans Myanmar', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display-en: var(--font-noto-sans-myanmar-loaded, 'Noto Sans Myanmar'), 'Noto Sans Myanmar', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+}
+html[lang='km'] {
+  --font-body: var(--font-noto-sans-khmer-loaded, 'Noto Sans Khmer'), 'Noto Sans Khmer', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-sans: var(--font-noto-sans-khmer-loaded, 'Noto Sans Khmer'), 'Noto Sans Khmer', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading: var(--font-noto-sans-khmer-loaded, 'Noto Sans Khmer'), 'Noto Sans Khmer', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading-ko: var(--font-noto-sans-khmer-loaded, 'Noto Sans Khmer'), 'Noto Sans Khmer', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display: var(--font-noto-sans-khmer-loaded, 'Noto Sans Khmer'), 'Noto Sans Khmer', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display-en: var(--font-noto-sans-khmer-loaded, 'Noto Sans Khmer'), 'Noto Sans Khmer', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
 }
 
 *,
@@ -693,7 +730,9 @@ li,
   --font-heading-ko: var(--font-noto-serif-sc-loaded, 'Noto Serif SC'), 'Noto Serif SC', 'Songti SC', Georgia, serif;
 }
 
-.site[data-locale='ar'] {
+.site[data-locale='ar'],
+.site[data-locale='ur'],
+.site[data-locale='fa'] {
   --font-body: var(--font-body-ar);
   --font-sans: var(--font-body-ar);
   --font-display: var(--font-body-ar);
@@ -709,7 +748,8 @@ li,
   --font-heading-ko: var(--font-body-th);
 }
 
-.site[data-locale='hi'] {
+.site[data-locale='hi'],
+.site[data-locale='ne'] {
   --font-body: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
   --font-sans: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
   --font-display: var(--font-noto-sans-devanagari-loaded, 'Noto Sans Devanagari'), 'Noto Sans Devanagari', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
@@ -723,6 +763,38 @@ li,
   --font-display: var(--font-noto-sans-hebrew-loaded, 'Noto Sans Hebrew'), 'Noto Sans Hebrew', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
   --font-heading: var(--font-noto-sans-hebrew-loaded, 'Noto Sans Hebrew'), 'Noto Sans Hebrew', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
   --font-heading-ko: var(--font-noto-sans-hebrew-loaded, 'Noto Sans Hebrew'), 'Noto Sans Hebrew', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+}
+.site[data-locale='bn'] {
+  --font-body: var(--font-noto-sans-bengali-loaded, 'Noto Sans Bengali'), 'Noto Sans Bengali', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-sans: var(--font-noto-sans-bengali-loaded, 'Noto Sans Bengali'), 'Noto Sans Bengali', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading: var(--font-noto-sans-bengali-loaded, 'Noto Sans Bengali'), 'Noto Sans Bengali', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading-ko: var(--font-noto-sans-bengali-loaded, 'Noto Sans Bengali'), 'Noto Sans Bengali', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display: var(--font-noto-sans-bengali-loaded, 'Noto Sans Bengali'), 'Noto Sans Bengali', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display-en: var(--font-noto-sans-bengali-loaded, 'Noto Sans Bengali'), 'Noto Sans Bengali', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+}
+.site[data-locale='ta'] {
+  --font-body: var(--font-noto-sans-tamil-loaded, 'Noto Sans Tamil'), 'Noto Sans Tamil', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-sans: var(--font-noto-sans-tamil-loaded, 'Noto Sans Tamil'), 'Noto Sans Tamil', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading: var(--font-noto-sans-tamil-loaded, 'Noto Sans Tamil'), 'Noto Sans Tamil', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading-ko: var(--font-noto-sans-tamil-loaded, 'Noto Sans Tamil'), 'Noto Sans Tamil', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display: var(--font-noto-sans-tamil-loaded, 'Noto Sans Tamil'), 'Noto Sans Tamil', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display-en: var(--font-noto-sans-tamil-loaded, 'Noto Sans Tamil'), 'Noto Sans Tamil', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+}
+.site[data-locale='my'] {
+  --font-body: var(--font-noto-sans-myanmar-loaded, 'Noto Sans Myanmar'), 'Noto Sans Myanmar', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-sans: var(--font-noto-sans-myanmar-loaded, 'Noto Sans Myanmar'), 'Noto Sans Myanmar', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading: var(--font-noto-sans-myanmar-loaded, 'Noto Sans Myanmar'), 'Noto Sans Myanmar', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading-ko: var(--font-noto-sans-myanmar-loaded, 'Noto Sans Myanmar'), 'Noto Sans Myanmar', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display: var(--font-noto-sans-myanmar-loaded, 'Noto Sans Myanmar'), 'Noto Sans Myanmar', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display-en: var(--font-noto-sans-myanmar-loaded, 'Noto Sans Myanmar'), 'Noto Sans Myanmar', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+}
+.site[data-locale='km'] {
+  --font-body: var(--font-noto-sans-khmer-loaded, 'Noto Sans Khmer'), 'Noto Sans Khmer', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-sans: var(--font-noto-sans-khmer-loaded, 'Noto Sans Khmer'), 'Noto Sans Khmer', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading: var(--font-noto-sans-khmer-loaded, 'Noto Sans Khmer'), 'Noto Sans Khmer', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-heading-ko: var(--font-noto-sans-khmer-loaded, 'Noto Sans Khmer'), 'Noto Sans Khmer', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display: var(--font-noto-sans-khmer-loaded, 'Noto Sans Khmer'), 'Noto Sans Khmer', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
+  --font-display-en: var(--font-noto-sans-khmer-loaded, 'Noto Sans Khmer'), 'Noto Sans Khmer', var(--font-noto-sans-latin-loaded, 'Noto Sans'), sans-serif;
 }
 
 html.has-cyber-cursor,

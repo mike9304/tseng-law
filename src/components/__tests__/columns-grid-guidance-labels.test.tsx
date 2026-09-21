@@ -57,6 +57,24 @@ const GUIDANCE_ALL_LABEL: Record<GuidanceLocale4, string> = {
   uk: 'Все',
   el: 'Όλα',
   he: 'הכול',
+  bn: 'सभी', // SCAFFOLD(hi)
+  ur: 'الكل', // SCAFFOLD(ar)
+  fa: 'الكل', // SCAFFOLD(ar)
+  my: 'ทั้งหมด', // SCAFFOLD(th)
+  ta: 'सभी', // SCAFFOLD(hi)
+  ne: 'सभी', // SCAFFOLD(hi)
+  km: 'ทั้งหมด', // SCAFFOLD(th)
+  mn: 'Все', // SCAFFOLD(ru)
+  sk: 'Vše', // SCAFFOLD(cs)
+  bg: 'Все', // SCAFFOLD(ru)
+  hr: 'Vše', // SCAFFOLD(cs)
+  sr: 'Vše', // SCAFFOLD(cs)
+  sl: 'Vše', // SCAFFOLD(cs)
+  lt: 'Vše', // SCAFFOLD(cs)
+  lv: 'Vše', // SCAFFOLD(cs)
+  et: 'Vše', // SCAFFOLD(cs)
+  ca: 'Vše', // SCAFFOLD(cs)
+  is: 'Vše', // SCAFFOLD(cs)
 };
 
 const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
@@ -87,6 +105,24 @@ const VIEW_ALL_LABEL_EVIDENCE: Record<GuidanceLocale4, string> = {
   uk: "viewAllLabel: 'Показати все'",
   el: "viewAllLabel: 'Δείτε όλα'",
   he: "viewAllLabel: 'הצגת הכול'",
+  bn: "viewAllLabel: 'सभी देखें'", // SCAFFOLD(hi)
+  ur: "viewAllLabel: 'عرض الكل'", // SCAFFOLD(ar)
+  fa: "viewAllLabel: 'عرض الكل'", // SCAFFOLD(ar)
+  my: "viewAllLabel: 'ดูทั้งหมด'", // SCAFFOLD(th)
+  ta: "viewAllLabel: 'सभी देखें'", // SCAFFOLD(hi)
+  ne: "viewAllLabel: 'सभी देखें'", // SCAFFOLD(hi)
+  km: "viewAllLabel: 'ดูทั้งหมด'", // SCAFFOLD(th)
+  mn: "viewAllLabel: 'Показать все'", // SCAFFOLD(ru)
+  sk: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
+  bg: "viewAllLabel: 'Показать все'", // SCAFFOLD(ru)
+  hr: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
+  sr: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
+  sl: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
+  lt: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
+  lv: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
+  et: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
+  ca: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
+  is: "viewAllLabel: 'Zobrazit vše'", // SCAFFOLD(cs)
 };
 
 const ENGLISH_FILTER_LABELS = ['All', 'Company Setup', 'Legal Info', 'Case Studies'] as const;

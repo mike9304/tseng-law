@@ -42,6 +42,24 @@ export const GUIDANCE_LOCALES_4 = [
   'uk',
   'el',
   'he',
+  'bn',
+  'ur',
+  'fa',
+  'my',
+  'ta',
+  'ne',
+  'km',
+  'mn',
+  'sk',
+  'bg',
+  'hr',
+  'sr',
+  'sl',
+  'lt',
+  'lv',
+  'et',
+  'ca',
+  'is',
 ] as const;
 export type GuidanceLocale4 = (typeof GUIDANCE_LOCALES_4)[number];
 
@@ -92,6 +110,24 @@ export const PUBLIC_LOCALES_8 = [
   'uk',
   'el',
   'he',
+  'bn',
+  'ur',
+  'fa',
+  'my',
+  'ta',
+  'ne',
+  'km',
+  'mn',
+  'sk',
+  'bg',
+  'hr',
+  'sr',
+  'sl',
+  'lt',
+  'lv',
+  'et',
+  'ca',
+  'is',
 ] as const;
 export type PublicLocale8 = (typeof PUBLIC_LOCALES_8)[number];
 
@@ -114,7 +150,7 @@ export type RoutedPublicLocale = (typeof ROUTED_PUBLIC_LOCALES)[number];
 /** Right-to-left scripts: Arabic and Hebrew. The `html[dir='rtl']` rules in
  * `globals.css` were written for Arabic but are script-agnostic, so Hebrew
  * needs no new CSS — only this registry entry and the document-language check. */
-export const RTL_PUBLIC_LOCALES = ['ar', 'he'] as const;
+export const RTL_PUBLIC_LOCALES = ['ar', 'he', 'ur', 'fa'] as const;
 
 export const GUIDANCE_PAGE_KEYS = [
   'home',
@@ -184,6 +220,24 @@ export const PUBLIC_LANGUAGE_AUTONYMS: Record<PublicLocale8, string> = {
   uk: 'Українська',
   el: 'Ελληνικά',
   he: 'עברית',
+  bn: 'বাংলা',
+  ur: 'اردو',
+  fa: 'فارسی',
+  my: 'မြန်မာ',
+  ta: 'தமிழ்',
+  ne: 'नेपाली',
+  km: 'ខ្មែរ',
+  mn: 'Монгол',
+  sk: 'Slovenčina',
+  bg: 'Български',
+  hr: 'Hrvatski',
+  sr: 'Srpski',
+  sl: 'Slovenščina',
+  lt: 'Lietuvių',
+  lv: 'Latviešu',
+  et: 'Eesti',
+  ca: 'Català',
+  is: 'Íslenska',
 };
 
 export type PublicDocumentLanguage =
@@ -217,10 +271,28 @@ export type PublicDocumentLanguage =
   | 'ro'
   | 'uk'
   | 'el'
-  | 'he';
+  | 'he'
+  | 'bn'
+  | 'ur'
+  | 'fa'
+  | 'my'
+  | 'ta'
+  | 'ne'
+  | 'km'
+  | 'mn'
+  | 'sk'
+  | 'bg'
+  | 'hr'
+  | 'sr'
+  | 'sl'
+  | 'lt'
+  | 'lv'
+  | 'et'
+  | 'ca'
+  | 'is';
 
 const DEFAULT_SITE_URL = 'https://tseng-law.com';
-const PUBLIC_LOCALE_PATH_RE = /^\/(ko|zh-hant|zh-hans|en|ja|vi|id|th|fil|ar|de|es|fr|pt|ms|ru|tr|it|nl|pl|hi|sv|da|nb|fi|cs|hu|ro|uk|el|he)(?=\/|$)/i;
+const PUBLIC_LOCALE_PATH_RE = /^\/(ko|zh-hant|zh-hans|en|ja|vi|id|th|fil|ar|de|es|fr|pt|ms|ru|tr|it|nl|pl|hi|sv|da|nb|fi|cs|hu|ro|uk|el|he|bn|ur|fa|my|ta|ne|km|mn|sk|bg|hr|sr|sl|lt|lv|et|ca|is)(?=\/|$)/i;
 const PAGE_KEY_BY_ROUTE: Record<GuidanceCoreRouteKey, GuidancePageKey> = {
   '': 'home',
   services: 'services',
@@ -263,6 +335,24 @@ export function isGuidanceLocale4(value?: string | null): value is GuidanceLocal
     || value === 'uk'
     || value === 'el'
     || value === 'he'
+    || value === 'bn'
+    || value === 'ur'
+    || value === 'fa'
+    || value === 'my'
+    || value === 'ta'
+    || value === 'ne'
+    || value === 'km'
+    || value === 'mn'
+    || value === 'sk'
+    || value === 'bg'
+    || value === 'hr'
+    || value === 'sr'
+    || value === 'sl'
+    || value === 'lt'
+    || value === 'lv'
+    || value === 'et'
+    || value === 'ca'
+    || value === 'is'
   );
 }
 
@@ -301,7 +391,7 @@ export function isRtlPublicLocale(value?: string | null): boolean {
 }
 
 export function isRtlDocumentLanguage(language: PublicDocumentLanguage): boolean {
-  return language === 'ar' || language === 'he';
+  return language === 'ar' || language === 'he' || language === 'ur' || language === 'fa';
 }
 
 export function isExistingSiteLocale4(value?: string | null): value is ExistingSiteLocale4 {

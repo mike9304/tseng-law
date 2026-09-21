@@ -368,6 +368,24 @@ const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
   uk: 'Ukrainian',
   el: 'Greek',
   he: 'Hebrew',
+  bn: 'Hindi', // SCAFFOLD(hi)
+  ur: 'Arabic', // SCAFFOLD(ar)
+  fa: 'Arabic', // SCAFFOLD(ar)
+  my: 'Thai', // SCAFFOLD(th)
+  ta: 'Hindi', // SCAFFOLD(hi)
+  ne: 'Hindi', // SCAFFOLD(hi)
+  km: 'Thai', // SCAFFOLD(th)
+  mn: 'Russian', // SCAFFOLD(ru)
+  sk: 'Czech', // SCAFFOLD(cs)
+  bg: 'Russian', // SCAFFOLD(ru)
+  hr: 'Czech', // SCAFFOLD(cs)
+  sr: 'Czech', // SCAFFOLD(cs)
+  sl: 'Czech', // SCAFFOLD(cs)
+  lt: 'Czech', // SCAFFOLD(cs)
+  lv: 'Czech', // SCAFFOLD(cs)
+  et: 'Czech', // SCAFFOLD(cs)
+  ca: 'Czech', // SCAFFOLD(cs)
+  is: 'Czech', // SCAFFOLD(cs)
 };
 
 export function buildRootLlmsTxt(): string {
@@ -742,6 +760,160 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
       'הקובץ llms.txt הוא מפה בלבד לאיתור העמודים הפומביים; אין בו הבטחה לדירוג בחיפוש, לתמיכה, להמלצה של בינה מלאכותית או לחשיפה.',
     confidentialNotice:
       'מאחר שהטקסט המקורי נשמר, אל תכתבו בשלב הראשון את מה שאינו נדרש עדיין, למשל מספר דרכון, מספר תעודה או פרטי חשבון.',
+  },
+  bn: { // SCAFFOLD(hi)
+    consultationNotice:
+      'ये पृष्ठ हिंदी में लिखे गए हैं, लेकिन अधिवक्ता से परामर्श केवल अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई में होता है।',
+    discoveryNotice:
+      'llms.txt फ़ाइल केवल सार्वजनिक पृष्ठ खोजने का मानचित्र है; यह खोज क्रम, समर्थन, कृत्रिम बुद्धि की अनुशंसा या दृश्यता का वादा नहीं करती।',
+    confidentialNotice:
+      'क्योंकि मूल पाठ रखा जाता है, आरंभिक चरण में वह न लिखें जिसकी अभी आवश्यकता नहीं, जैसे पासपोर्ट संख्या, पहचान संख्या या खाता विवरण।',
+  },
+  ur: { // SCAFFOLD(ar)
+    // Verbatim from the published `faq` answer to "is the session held in the
+    // language of this page?", minus its leading "لا. " — the same clause the
+    // other guidance locales quote.
+    consultationNotice:
+      'هذه الصفحة الإرشادية مكتوبة بالعربية. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية، ولا نلتزم بتوفير ترجمة فورية.',
+    discoveryNotice:
+      'ملف llms.txt هذا ليس إلا خريطة للاستدلال على الصفحات العامة؛ وهو لا يَعِد بترتيب في نتائج البحث ولا بتزكية، ولا بترشيح من الذكاء الاصطناعي، ولا بإعلان.',
+    // The published privacy-page sentence, with its leading connective dropped
+    // so the line stands alone; the proposition is unchanged.
+    confidentialNotice:
+      'لأن النص الأصلي محفوظ، يُرجى عدم كتابة معلومات لا حاجة إليها في المرحلة الأولى، مثل رقم جواز السفر أو رقم الهوية أو بيانات الحساب المصرفي.',
+  },
+  fa: { // SCAFFOLD(ar)
+    // Verbatim from the published `faq` answer to "is the session held in the
+    // language of this page?", minus its leading "لا. " — the same clause the
+    // other guidance locales quote.
+    consultationNotice:
+      'هذه الصفحة الإرشادية مكتوبة بالعربية. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية، ولا نلتزم بتوفير ترجمة فورية.',
+    discoveryNotice:
+      'ملف llms.txt هذا ليس إلا خريطة للاستدلال على الصفحات العامة؛ وهو لا يَعِد بترتيب في نتائج البحث ولا بتزكية، ولا بترشيح من الذكاء الاصطناعي، ولا بإعلان.',
+    // The published privacy-page sentence, with its leading connective dropped
+    // so the line stands alone; the proposition is unchanged.
+    confidentialNotice:
+      'لأن النص الأصلي محفوظ، يُرجى عدم كتابة معلومات لا حاجة إليها في المرحلة الأولى، مثل رقم جواز السفر أو رقم الهوية أو بيانات الحساب المصرفي.',
+  },
+  my: { // SCAFFOLD(th)
+    consultationNotice:
+      'ข้อมูลแนะนำส่วนนี้จัดทำเป็นภาษาไทย แต่การปรึกษากับทนายความดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
+    discoveryNotice:
+      'ไฟล์ llms.txt นี้เป็นเพียงแผนผังสำหรับค้นหน้าเว็บสาธารณะ ไม่ได้รับประกันอันดับในผลการค้นหา การรับรองสนับสนุน การแนะนำโดย AI หรือการแสดงผลในหน้าใด',
+    confidentialNotice:
+      'เนื่องจากข้อความต้นฉบับถูกเก็บไว้ จึงขอความกรุณาอย่าเขียนข้อมูลที่ยังไม่จำเป็นในขั้นแรก เช่น เลขหนังสือเดินทาง เลขบัตรประจำตัว หรือข้อมูลบัญชีธนาคาร',
+  },
+  ta: { // SCAFFOLD(hi)
+    consultationNotice:
+      'ये पृष्ठ हिंदी में लिखे गए हैं, लेकिन अधिवक्ता से परामर्श केवल अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई में होता है।',
+    discoveryNotice:
+      'llms.txt फ़ाइल केवल सार्वजनिक पृष्ठ खोजने का मानचित्र है; यह खोज क्रम, समर्थन, कृत्रिम बुद्धि की अनुशंसा या दृश्यता का वादा नहीं करती।',
+    confidentialNotice:
+      'क्योंकि मूल पाठ रखा जाता है, आरंभिक चरण में वह न लिखें जिसकी अभी आवश्यकता नहीं, जैसे पासपोर्ट संख्या, पहचान संख्या या खाता विवरण।',
+  },
+  ne: { // SCAFFOLD(hi)
+    consultationNotice:
+      'ये पृष्ठ हिंदी में लिखे गए हैं, लेकिन अधिवक्ता से परामर्श केवल अंग्रेज़ी, चीनी (中文), जापानी और कोरियाई में होता है।',
+    discoveryNotice:
+      'llms.txt फ़ाइल केवल सार्वजनिक पृष्ठ खोजने का मानचित्र है; यह खोज क्रम, समर्थन, कृत्रिम बुद्धि की अनुशंसा या दृश्यता का वादा नहीं करती।',
+    confidentialNotice:
+      'क्योंकि मूल पाठ रखा जाता है, आरंभिक चरण में वह न लिखें जिसकी अभी आवश्यकता नहीं, जैसे पासपोर्ट संख्या, पहचान संख्या या खाता विवरण।',
+  },
+  km: { // SCAFFOLD(th)
+    consultationNotice:
+      'ข้อมูลแนะนำส่วนนี้จัดทำเป็นภาษาไทย แต่การปรึกษากับทนายความดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
+    discoveryNotice:
+      'ไฟล์ llms.txt นี้เป็นเพียงแผนผังสำหรับค้นหน้าเว็บสาธารณะ ไม่ได้รับประกันอันดับในผลการค้นหา การรับรองสนับสนุน การแนะนำโดย AI หรือการแสดงผลในหน้าใด',
+    confidentialNotice:
+      'เนื่องจากข้อความต้นฉบับถูกเก็บไว้ จึงขอความกรุณาอย่าเขียนข้อมูลที่ยังไม่จำเป็นในขั้นแรก เช่น เลขหนังสือเดินทาง เลขบัตรประจำตัว หรือข้อมูลบัญชีธนาคาร',
+  },
+  mn: { // SCAFFOLD(ru)
+    consultationNotice:
+      'Эти сведения написаны на русском языке, но консультация с адвокатом проводится только на английском, китайском (中文), японском и корейском языках.',
+    discoveryNotice:
+      'Файл llms.txt — лишь карта для поиска открытых страниц; он не обещает места в поиске, поддержки, рекомендации искусственного интеллекта или показа.',
+    confidentialNotice:
+      'Поскольку исходный текст сохраняется, на первом этапе не пишите то, что ещё не нужно: номер паспорта, номер удостоверения или данные счёта.',
+  },
+  sk: { // SCAFFOLD(cs)
+    consultationNotice:
+      'Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
+    discoveryNotice:
+      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, podporu, doporučení umělé inteligence ani viditelnost.',
+    confidentialNotice:
+      'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+  },
+  bg: { // SCAFFOLD(ru)
+    consultationNotice:
+      'Эти сведения написаны на русском языке, но консультация с адвокатом проводится только на английском, китайском (中文), японском и корейском языках.',
+    discoveryNotice:
+      'Файл llms.txt — лишь карта для поиска открытых страниц; он не обещает места в поиске, поддержки, рекомендации искусственного интеллекта или показа.',
+    confidentialNotice:
+      'Поскольку исходный текст сохраняется, на первом этапе не пишите то, что ещё не нужно: номер паспорта, номер удостоверения или данные счёта.',
+  },
+  hr: { // SCAFFOLD(cs)
+    consultationNotice:
+      'Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
+    discoveryNotice:
+      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, podporu, doporučení umělé inteligence ani viditelnost.',
+    confidentialNotice:
+      'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+  },
+  sr: { // SCAFFOLD(cs)
+    consultationNotice:
+      'Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
+    discoveryNotice:
+      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, podporu, doporučení umělé inteligence ani viditelnost.',
+    confidentialNotice:
+      'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+  },
+  sl: { // SCAFFOLD(cs)
+    consultationNotice:
+      'Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
+    discoveryNotice:
+      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, podporu, doporučení umělé inteligence ani viditelnost.',
+    confidentialNotice:
+      'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+  },
+  lt: { // SCAFFOLD(cs)
+    consultationNotice:
+      'Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
+    discoveryNotice:
+      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, podporu, doporučení umělé inteligence ani viditelnost.',
+    confidentialNotice:
+      'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+  },
+  lv: { // SCAFFOLD(cs)
+    consultationNotice:
+      'Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
+    discoveryNotice:
+      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, podporu, doporučení umělé inteligence ani viditelnost.',
+    confidentialNotice:
+      'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+  },
+  et: { // SCAFFOLD(cs)
+    consultationNotice:
+      'Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
+    discoveryNotice:
+      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, podporu, doporučení umělé inteligence ani viditelnost.',
+    confidentialNotice:
+      'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+  },
+  ca: { // SCAFFOLD(cs)
+    consultationNotice:
+      'Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
+    discoveryNotice:
+      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, podporu, doporučení umělé inteligence ani viditelnost.',
+    confidentialNotice:
+      'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+  },
+  is: { // SCAFFOLD(cs)
+    consultationNotice:
+      'Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
+    discoveryNotice:
+      'Soubor llms.txt je pouze mapou pro nalezení veřejných stránek; neslibuje pořadí ve vyhledávání, podporu, doporučení umělé inteligence ani viditelnost.',
+    confidentialNotice:
+      'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
   },
 };
 

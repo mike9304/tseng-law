@@ -141,4 +141,58 @@ export const DECORATIVE_VIDEO_CONTROL_LABELS = {
   uk: { pause: 'Зупинити відео', play: 'Відтворити відео', replay: 'Відтворити відео ще раз' },
   el: { pause: 'Παύση του βίντεο', play: 'Αναπαραγωγή του βίντεο', replay: 'Νέα αναπαραγωγή του βίντεο' },
   he: { pause: 'השהיית הסרטון', play: 'הפעלת הסרטון', replay: 'הפעלת הסרטון מחדש' },
+  bn: { // SCAFFOLD(hi)
+    pause: 'वीडियो रोकें',
+    play: 'वीडियो चलाएँ',
+    replay: 'वीडियो फिर चलाएँ',
+  },
+  ur: { // SCAFFOLD(ar)
+    pause: 'إيقاف الفيديو مؤقتًا',
+    play: 'تشغيل الفيديو',
+    replay: 'إعادة تشغيل الفيديو',
+  },
+  fa: { // SCAFFOLD(ar)
+    pause: 'إيقاف الفيديو مؤقتًا',
+    play: 'تشغيل الفيديو',
+    replay: 'إعادة تشغيل الفيديو',
+  },
+  my: { // SCAFFOLD(th)
+    pause: 'หยุดวิดีโอชั่วคราว',
+    play: 'เล่นวิดีโอ',
+    replay: 'เล่นวิดีโออีกครั้ง',
+  },
+  ta: { // SCAFFOLD(hi)
+    pause: 'वीडियो रोकें',
+    play: 'वीडियो चलाएँ',
+    replay: 'वीडियो फिर चलाएँ',
+  },
+  ne: { // SCAFFOLD(hi)
+    pause: 'वीडियो रोकें',
+    play: 'वीडियो चलाएँ',
+    replay: 'वीडियो फिर चलाएँ',
+  },
+  km: { // SCAFFOLD(th)
+    pause: 'หยุดวิดีโอชั่วคราว',
+    play: 'เล่นวิดีโอ',
+    replay: 'เล่นวิดีโออีกครั้ง',
+  },
+  mn: { // SCAFFOLD(ru)
+    pause: 'Приостановить видео',
+    play: 'Воспроизвести видео',
+    replay: 'Воспроизвести видео снова',
+  },
+  sk: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)
+  bg: { // SCAFFOLD(ru)
+    pause: 'Приостановить видео',
+    play: 'Воспроизвести видео',
+    replay: 'Воспроизвести видео снова',
+  },
+  hr: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)
+  sr: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)
+  sl: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)
+  lt: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)
+  lv: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)
+  et: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)
+  ca: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)
+  is: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)
 } as const satisfies Record<PublicLocale8, DecorativeVideoControlLabels>;

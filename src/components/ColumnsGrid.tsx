@@ -141,6 +141,24 @@ const GUIDANCE_FILTER_ALL_LABEL: Record<GuidanceLocale4, string> = {
   uk: 'Все',
   el: 'Όλα',
   he: 'הכול',
+  bn: 'सभी', // SCAFFOLD(hi)
+  ur: 'الكل', // SCAFFOLD(ar)
+  fa: 'الكل', // SCAFFOLD(ar)
+  my: 'ทั้งหมด', // SCAFFOLD(th)
+  ta: 'सभी', // SCAFFOLD(hi)
+  ne: 'सभी', // SCAFFOLD(hi)
+  km: 'ทั้งหมด', // SCAFFOLD(th)
+  mn: 'Все', // SCAFFOLD(ru)
+  sk: 'Vše', // SCAFFOLD(cs)
+  bg: 'Все', // SCAFFOLD(ru)
+  hr: 'Vše', // SCAFFOLD(cs)
+  sr: 'Vše', // SCAFFOLD(cs)
+  sl: 'Vše', // SCAFFOLD(cs)
+  lt: 'Vše', // SCAFFOLD(cs)
+  lv: 'Vše', // SCAFFOLD(cs)
+  et: 'Vše', // SCAFFOLD(cs)
+  ca: 'Vše', // SCAFFOLD(cs)
+  is: 'Vše', // SCAFFOLD(cs)
 };
 
 /** Same strings `guidanceColumnCategoryLabel` returns in `src/lib/columns.ts`. */
@@ -280,6 +298,96 @@ const GUIDANCE_FILTER_CATEGORY_LABEL: Record<GuidanceLocale4, Record<ColumnCateg
     legal: 'מידע משפטי על טאיוואן',
     case: 'ניתוח מקרה',
   },
+  bn: { // SCAFFOLD(hi)
+    formation: 'ताइवान में कंपनी स्थापना',
+    legal: 'ताइवान कानूनी जानकारी',
+    case: 'मामला विश्लेषण',
+  },
+  ur: { // SCAFFOLD(ar)
+    formation: 'تأسيس الشركات',
+    legal: 'معلومات قانونية',
+    case: 'دراسات قضايا',
+  },
+  fa: { // SCAFFOLD(ar)
+    formation: 'تأسيس الشركات',
+    legal: 'معلومات قانونية',
+    case: 'دراسات قضايا',
+  },
+  my: { // SCAFFOLD(th)
+    formation: 'การจัดตั้งบริษัทในไต้หวัน',
+    legal: 'ข้อมูลกฎหมายไต้หวัน',
+    case: 'การวิเคราะห์คดีตัวอย่าง',
+  },
+  ta: { // SCAFFOLD(hi)
+    formation: 'ताइवान में कंपनी स्थापना',
+    legal: 'ताइवान कानूनी जानकारी',
+    case: 'मामला विश्लेषण',
+  },
+  ne: { // SCAFFOLD(hi)
+    formation: 'ताइवान में कंपनी स्थापना',
+    legal: 'ताइवान कानूनी जानकारी',
+    case: 'मामला विश्लेषण',
+  },
+  km: { // SCAFFOLD(th)
+    formation: 'การจัดตั้งบริษัทในไต้หวัน',
+    legal: 'ข้อมูลกฎหมายไต้หวัน',
+    case: 'การวิเคราะห์คดีตัวอย่าง',
+  },
+  mn: { // SCAFFOLD(ru)
+    formation: 'Учреждение компании на Тайване',
+    legal: 'Правовая информация о Тайване',
+    case: 'Анализ дел',
+  },
+  sk: { // SCAFFOLD(cs)
+    formation: 'Zakládání společností na Tchaj-wanu',
+    legal: 'Právní informace o Tchaj-wanu',
+    case: 'Rozbor případu',
+  },
+  bg: { // SCAFFOLD(ru)
+    formation: 'Учреждение компании на Тайване',
+    legal: 'Правовая информация о Тайване',
+    case: 'Анализ дел',
+  },
+  hr: { // SCAFFOLD(cs)
+    formation: 'Zakládání společností na Tchaj-wanu',
+    legal: 'Právní informace o Tchaj-wanu',
+    case: 'Rozbor případu',
+  },
+  sr: { // SCAFFOLD(cs)
+    formation: 'Zakládání společností na Tchaj-wanu',
+    legal: 'Právní informace o Tchaj-wanu',
+    case: 'Rozbor případu',
+  },
+  sl: { // SCAFFOLD(cs)
+    formation: 'Zakládání společností na Tchaj-wanu',
+    legal: 'Právní informace o Tchaj-wanu',
+    case: 'Rozbor případu',
+  },
+  lt: { // SCAFFOLD(cs)
+    formation: 'Zakládání společností na Tchaj-wanu',
+    legal: 'Právní informace o Tchaj-wanu',
+    case: 'Rozbor případu',
+  },
+  lv: { // SCAFFOLD(cs)
+    formation: 'Zakládání společností na Tchaj-wanu',
+    legal: 'Právní informace o Tchaj-wanu',
+    case: 'Rozbor případu',
+  },
+  et: { // SCAFFOLD(cs)
+    formation: 'Zakládání společností na Tchaj-wanu',
+    legal: 'Právní informace o Tchaj-wanu',
+    case: 'Rozbor případu',
+  },
+  ca: { // SCAFFOLD(cs)
+    formation: 'Zakládání společností na Tchaj-wanu',
+    legal: 'Právní informace o Tchaj-wanu',
+    case: 'Rozbor případu',
+  },
+  is: { // SCAFFOLD(cs)
+    formation: 'Zakládání společností na Tchaj-wanu',
+    legal: 'Právní informace o Tchaj-wanu',
+    case: 'Rozbor případu',
+  },
 };
 
 /** Reviewed `home.columnsReadMoreLabel` — same CTA GuidanceHomeBody already uses. */
@@ -311,6 +419,24 @@ const GUIDANCE_CARD_READ_MORE_LABEL: Record<GuidanceLocale4, string> = {
   uk: 'Читати далі',
   el: 'Συνέχεια ανάγνωσης',
   he: 'המשך קריאה',
+  bn: 'आगे पढ़ें', // SCAFFOLD(hi)
+  ur: 'اقرأ المزيد', // SCAFFOLD(ar)
+  fa: 'اقرأ المزيد', // SCAFFOLD(ar)
+  my: 'อ่านต่อ', // SCAFFOLD(th)
+  ta: 'आगे पढ़ें', // SCAFFOLD(hi)
+  ne: 'आगे पढ़ें', // SCAFFOLD(hi)
+  km: 'อ่านต่อ', // SCAFFOLD(th)
+  mn: 'Читать далее', // SCAFFOLD(ru)
+  sk: 'Číst dál', // SCAFFOLD(cs)
+  bg: 'Читать далее', // SCAFFOLD(ru)
+  hr: 'Číst dál', // SCAFFOLD(cs)
+  sr: 'Číst dál', // SCAFFOLD(cs)
+  sl: 'Číst dál', // SCAFFOLD(cs)
+  lt: 'Číst dál', // SCAFFOLD(cs)
+  lv: 'Číst dál', // SCAFFOLD(cs)
+  et: 'Číst dál', // SCAFFOLD(cs)
+  ca: 'Číst dál', // SCAFFOLD(cs)
+  is: 'Číst dál', // SCAFFOLD(cs)
 };
 
 function categoryFilterLabels(locale: PublicLocale8) {

@@ -51,4 +51,22 @@ export const TEAM_NAME_BY_LOCALE: Record<PublicLocale8, string> = {
   uk: 'Тайвансько-корейська команда Hovering',
   el: 'Η ομάδα Ταϊβάν–Κορέας της Hovering',
   he: 'צוות טאיוואן–קוריאה של Hovering',
+  bn: 'Hovering International Team', // SCAFFOLD(hi)
+  ur: 'Hovering International Team', // SCAFFOLD(ar)
+  fa: 'Hovering International Team', // SCAFFOLD(ar)
+  my: 'Hovering International Team', // SCAFFOLD(th)
+  ta: 'Hovering International Team', // SCAFFOLD(hi)
+  ne: 'Hovering International Team', // SCAFFOLD(hi)
+  km: 'Hovering International Team', // SCAFFOLD(th)
+  mn: 'Hovering International Team', // SCAFFOLD(ru)
+  sk: 'Tchajwansko-korejský tým Hovering', // SCAFFOLD(cs)
+  bg: 'Hovering International Team', // SCAFFOLD(ru)
+  hr: 'Tchajwansko-korejský tým Hovering', // SCAFFOLD(cs)
+  sr: 'Tchajwansko-korejský tým Hovering', // SCAFFOLD(cs)
+  sl: 'Tchajwansko-korejský tým Hovering', // SCAFFOLD(cs)
+  lt: 'Tchajwansko-korejský tým Hovering', // SCAFFOLD(cs)
+  lv: 'Tchajwansko-korejský tým Hovering', // SCAFFOLD(cs)
+  et: 'Tchajwansko-korejský tým Hovering', // SCAFFOLD(cs)
+  ca: 'Tchajwansko-korejský tým Hovering', // SCAFFOLD(cs)
+  is: 'Tchajwansko-korejský tým Hovering', // SCAFFOLD(cs)
 };

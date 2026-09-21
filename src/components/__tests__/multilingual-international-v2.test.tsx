@@ -87,6 +87,24 @@ describe('MULTILINGUAL-INTERNATIONAL-v2 unpublished candidate', () => {
       uk: /англійськ/i,
       el: /αγγλικ/i,
       he: /אנגלית/,
+      bn: /अंग्रेज़ी/, // SCAFFOLD(hi)
+      ur: /الإنجليزية/, // SCAFFOLD(ar)
+      fa: /الإنجليزية/, // SCAFFOLD(ar)
+      my: /อังกฤษ/, // SCAFFOLD(th)
+      ta: /अंग्रेज़ी/, // SCAFFOLD(hi)
+      ne: /अंग्रेज़ी/, // SCAFFOLD(hi)
+      km: /อังกฤษ/, // SCAFFOLD(th)
+      mn: /английск/i, // SCAFFOLD(ru)
+      sk: /anglick/i, // SCAFFOLD(cs)
+      bg: /английск/i, // SCAFFOLD(ru)
+      hr: /anglick/i, // SCAFFOLD(cs)
+      sr: /anglick/i, // SCAFFOLD(cs)
+      sl: /anglick/i, // SCAFFOLD(cs)
+      lt: /anglick/i, // SCAFFOLD(cs)
+      lv: /anglick/i, // SCAFFOLD(cs)
+      et: /anglick/i, // SCAFFOLD(cs)
+      ca: /anglick/i, // SCAFFOLD(cs)
+      is: /anglick/i, // SCAFFOLD(cs)
       hi: /अंग्रेज़ी/,
       sv: /engelska/i,
       da: /engelsk/i,

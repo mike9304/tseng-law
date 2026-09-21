@@ -18,6 +18,10 @@
  */
 
 import { AR_PRIVACY_POLICY_LABEL, ID_PRIVACY_POLICY_LABEL } from '@/data/guidance-privacy-label';
+import { bengaliGuidanceContent, urduGuidanceContent, persianGuidanceContent, tamilGuidanceContent } from './international-guidance-south-asia';
+import { nepaliGuidanceContent, burmeseGuidanceContent, khmerGuidanceContent, mongolianGuidanceContent } from './international-guidance-southeast-central';
+import { slovakGuidanceContent, bulgarianGuidanceContent, croatianGuidanceContent, serbianGuidanceContent, slovenianGuidanceContent } from './international-guidance-central-europe';
+import { lithuanianGuidanceContent, latvianGuidanceContent, estonianGuidanceContent, catalanGuidanceContent, icelandicGuidanceContent } from './international-guidance-baltic-atlantic';
 import {
   hindiGuidanceContent,
   malayGuidanceContent,
@@ -76,7 +80,25 @@ export type GuidanceLocale =
   | 'ro'
   | 'uk'
   | 'el'
-  | 'he';
+  | 'he'
+  | 'bn'
+  | 'ur'
+  | 'fa'
+  | 'my'
+  | 'ta'
+  | 'ne'
+  | 'km'
+  | 'mn'
+  | 'sk'
+  | 'bg'
+  | 'hr'
+  | 'sr'
+  | 'sl'
+  | 'lt'
+  | 'lv'
+  | 'et'
+  | 'ca'
+  | 'is';
 
 export type GuidancePageKey =
   | 'home'
@@ -2670,4 +2692,22 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
   uk: ukrainianGuidanceContent,
   el: greekGuidanceContent,
   he: hebrewGuidanceContent,
+  bn: bengaliGuidanceContent,
+  ur: urduGuidanceContent,
+  fa: persianGuidanceContent,
+  ta: tamilGuidanceContent,
+  ne: nepaliGuidanceContent,
+  my: burmeseGuidanceContent,
+  km: khmerGuidanceContent,
+  mn: mongolianGuidanceContent,
+  sk: slovakGuidanceContent,
+  bg: bulgarianGuidanceContent,
+  hr: croatianGuidanceContent,
+  sr: serbianGuidanceContent,
+  sl: slovenianGuidanceContent,
+  lt: lithuanianGuidanceContent,
+  lv: latvianGuidanceContent,
+  et: estonianGuidanceContent,
+  ca: catalanGuidanceContent,
+  is: icelandicGuidanceContent,
 };

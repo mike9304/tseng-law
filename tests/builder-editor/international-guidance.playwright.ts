@@ -955,6 +955,24 @@ test.describe('O29 og:locale across the eight public locales', () => {
     uk: 'uk_UA',
     el: 'el_GR',
     he: 'he_IL',
+    bn: 'hi_IN', // SCAFFOLD(hi)
+    ur: 'ar_AR', // SCAFFOLD(ar)
+    fa: 'ar_AR', // SCAFFOLD(ar)
+    my: 'th_TH', // SCAFFOLD(th)
+    ta: 'hi_IN', // SCAFFOLD(hi)
+    ne: 'hi_IN', // SCAFFOLD(hi)
+    km: 'th_TH', // SCAFFOLD(th)
+    mn: 'ru_RU', // SCAFFOLD(ru)
+    sk: 'cs_CZ', // SCAFFOLD(cs)
+    bg: 'ru_RU', // SCAFFOLD(ru)
+    hr: 'cs_CZ', // SCAFFOLD(cs)
+    sr: 'cs_CZ', // SCAFFOLD(cs)
+    sl: 'cs_CZ', // SCAFFOLD(cs)
+    lt: 'cs_CZ', // SCAFFOLD(cs)
+    lv: 'cs_CZ', // SCAFFOLD(cs)
+    et: 'cs_CZ', // SCAFFOLD(cs)
+    ca: 'cs_CZ', // SCAFFOLD(cs)
+    is: 'cs_CZ', // SCAFFOLD(cs)
   };
 
   for (const locale of PUBLIC_LOCALES_8) {

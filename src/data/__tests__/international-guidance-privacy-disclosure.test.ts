@@ -38,6 +38,24 @@ const PENDING_CONFIRMATION: Record<(typeof GUIDANCE_LOCALES_4)[number], RegExp> 
   uk: /ще не підтверджено|очікує підтвердження/i,
   el: /δεν έχει ακόμη επιβεβαιωθεί|αναμένει επιβεβαίωση/i,
   he: /טרם אושרה|ממתין לאישור/,
+  bn: /कार्यालय की पुष्टि की प्रतीक्षा|अभी कार्यालय द्वारा पुष्ट नहीं/, // SCAFFOLD(hi)
+  ur: /في انتظار .{0,20}تأكيد|بانتظار تأكيد المكتب|لم يتأكّد المكتب بعد/, // SCAFFOLD(ar)
+  fa: /في انتظار .{0,20}تأكيد|بانتظار تأكيد المكتب|لم يتأكّد المكتب بعد/, // SCAFFOLD(ar)
+  my: /รอการยืนยัน|ยังไม่ได้รับการยืนยัน/, // SCAFFOLD(th)
+  ta: /कार्यालय की पुष्टि की प्रतीक्षा|अभी कार्यालय द्वारा पुष्ट नहीं/, // SCAFFOLD(hi)
+  ne: /कार्यालय की पुष्टि की प्रतीक्षा|अभी कार्यालय द्वारा पुष्ट नहीं/, // SCAFFOLD(hi)
+  km: /รอการยืนยัน|ยังไม่ได้รับการยืนยัน/, // SCAFFOLD(th)
+  mn: /ожидает подтверждения бюро|ещё не подтверждено бюро/, // SCAFFOLD(ru)
+  sk: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
+  bg: /ожидает подтверждения бюро|ещё не подтверждено бюро/, // SCAFFOLD(ru)
+  hr: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
+  sr: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
+  sl: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
+  lt: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
+  lv: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
+  et: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
+  ca: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
+  is: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
 };
 
 const GENERIC_PENDING = /pending confirmation|operator confirmation|confirmed by the operator/i;

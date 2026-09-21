@@ -904,4 +904,580 @@ export const guidanceAnswers: Record<
       sources: ['/he/services', '/he/contact'],
     },
   },
+  bn: { // SCAFFOLD(hi)
+    services: {
+      answer:
+        'कार्यालय ताइवान के कानून के अनुसार छह कार्य-क्षेत्रों में सेवा देता है: निवेश और कंपनी स्थापना, दीवानी विवाद और हर्जाना, विवाह, परिवार और उत्तराधिकार, श्रम, आपराधिक तथा बौद्धिक संपदा। प्रत्येक मामले का दायरा उस सामग्री की जाँच के बाद अलग से पुष्ट होता है जिसे आप भेजते हैं। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/faq', '/hi/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm ताइवान का एक कानून कार्यालय है, 2016 में National Taiwan University (國立臺灣大學) के स्नातकों द्वारा स्थापित, ताइपेई, काओश्युंग, ताइचुंग और पिंगतुंग में कार्यालयों के साथ। 2020 से लेखा विभाग है; ताइचुंग कार्यालय कोरिया और जापान से जुड़े मामलों का कार्य करता है। कार्यालय परिणाम का वादा नहीं करता। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/lawyers', '/hi/services'],
+    },
+    lawyers: {
+      answer:
+        'यह पृष्ठ Hovering के अधिवक्ताओं, संचालन प्रबंधन और साझेदार लेखाकार की प्रोफ़ाइलें दिखाता है। अधिवक्ता Wei Tseng (曾雋崴) ताइवान में अधिकृत हैं और कार्यालय की प्रबंध अधिवक्ता हैं; वह कोरिया, जापान और अन्य अंतरराष्ट्रीय मुवक्किलों के साथ कार्य करती हैं। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/about', '/hi/contact'],
+    },
+    pricing: {
+      answer:
+        'यह पृष्ठ मूल्य सूची प्रकाशित नहीं करता। पहले आपके भेजे सार से कार्य का दायरा तय होता है, फिर लागत की राशि और गणना का तरीका कार्य शुरू होने से पहले आपके साथ पुष्ट होता है। अधिवक्ता से बात सशुल्क हो सकती है; अधिवक्ता शुल्क के अतिरिक्त न्यायालय या प्राधिकरण की लागतें भी लग सकती हैं। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/contact', '/hi/faq'],
+    },
+    contact: {
+      answer:
+        'संपर्क फ़ॉर्म से अपना सार भेजें: क्या हुआ, किस सहायता की आवश्यकता है, मामले का ताइवान से क्या संबंध है और यदि ज्ञात हो तो समयसीमा। आरंभ में पहचान पत्र या संपूर्ण प्रमाण भेजना आवश्यक नहीं। कार्यालय उत्तर की समयसीमा का वादा नहीं करता और इस पृष्ठ से नियुक्ति की पुष्टि नहीं करता। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/faq', '/hi/pricing'],
+    },
+    faq: {
+      answer:
+        'यह भाग सामान्य जानकारी के स्तर पर बार-बार पूछे जाने वाले प्रश्नों का उत्तर देता है: छह कार्य-समूह, संपर्क से पहले तैयारी, लागत तय होने का तरीका और भेजे गए संदेश का अर्थ। भेजा गया अनुरोध अधिवक्ता की जाँच की प्रतीक्षा करता है; यह कानूनी राय नहीं है, नियुक्ति नहीं है और अधिवक्ता तथा मुवक्किल के बीच संबंध नहीं बनाता। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/contact', '/hi/services'],
+    },
+  },
+  ur: { // SCAFFOLD(ar)
+    services: {
+      answer:
+        'يتولّى المكتب ست مجموعات من القضايا وفق القانون التايواني: الاستثمار وتأسيس الشركات في تايوان، والمنازعات المدنية ودعاوى التعويض، وقضايا الزواج والأسرة والميراث، ومنازعات العمل، والقضايا الجزائية، والملكية الفكرية. ويُؤكَّد نطاق كل قضية على حدة بعد مراجعة المحامي لما ترسله. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+      sources: ['/ar/faq', '/ar/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm مكتب محاماة في تايوان، تأسّس عام 2016 على يد محامين من خرّيجي الجامعة الوطنية التايوانية (國立臺灣大學)، وله مكاتب في تايبيه وكاوهسيونغ وتايتشونغ وبينغتونغ. ومنذ عام 2020 يضم قسمًا للمحاسبة، ويتولّى مكتب تايتشونغ الأعمال المتصلة بكوريا واليابان. ولا يقدّم المكتب أي التزام بالنتيجة. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+      sources: ['/ar/lawyers', '/ar/services'],
+    },
+    lawyers: {
+      answer:
+        'تعرض هذه الصفحة ملفات المحامين ومديري الأعمال والمحاسب الشريك في Hovering. والمحامية Wei Tseng (曾雋崴) محامية مؤهَّلة لمزاولة المهنة في تايوان والمحامية المديرة في المكتب، وتعمل مع العملاء من كوريا واليابان وسائر العملاء الدوليين. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+      sources: ['/ar/about', '/ar/contact'],
+    },
+    pricing: {
+      answer:
+        'لا تنشر هذه الصفحة قائمة أسعار. يُحدَّد نطاق العمل أولًا من الملخّص الذي ترسله، ثم تُؤكَّد معك الأتعاب وطريقة احتسابها قبل بدء العمل. وقد تكون الجلسة مع المحامي خدمة بمقابل، وقد تنشأ إلى جانب أتعاب المحاماة مبالغ تُدفَع للمحكمة أو لجهة حكومية. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+      sources: ['/ar/contact', '/ar/faq'],
+    },
+    contact: {
+      answer:
+        'أرسل ملخّصك عبر نموذج التواصل: ما الذي حدث، وما المساعدة التي تحتاج إليها، وما صلة القضية بتايوان، والمواعيد إن كنت تعرفها. ولا حاجة في المرحلة الأولى إلى إرسال وثائق الهوية أو ملف الأدلة كاملًا. ولا يلتزم المكتب بمدة للرد، ولا يؤكّد المواعيد عبر هذه الصفحة. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+      sources: ['/ar/faq', '/ar/pricing'],
+    },
+    faq: {
+      answer:
+        'يجيب قسم الأسئلة الشائعة على مستوى المعلومات العامة: مجالات العمل الستة، وكيفية تحضير الملخّص، وطريقة تحديد التكلفة، ومعنى إرسال الطلب. والطلب المُرسَل ينتظر مراجعة المحامي؛ فهو ليس رأيًا قانونيًا، وليس موعدًا مؤكّدًا، ولا يُنشئ علاقة بين المحامي والموكّل. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+      sources: ['/ar/contact', '/ar/services'],
+    },
+  },
+  fa: { // SCAFFOLD(ar)
+    services: {
+      answer:
+        'يتولّى المكتب ست مجموعات من القضايا وفق القانون التايواني: الاستثمار وتأسيس الشركات في تايوان، والمنازعات المدنية ودعاوى التعويض، وقضايا الزواج والأسرة والميراث، ومنازعات العمل، والقضايا الجزائية، والملكية الفكرية. ويُؤكَّد نطاق كل قضية على حدة بعد مراجعة المحامي لما ترسله. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+      sources: ['/ar/faq', '/ar/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm مكتب محاماة في تايوان، تأسّس عام 2016 على يد محامين من خرّيجي الجامعة الوطنية التايوانية (國立臺灣大學)، وله مكاتب في تايبيه وكاوهسيونغ وتايتشونغ وبينغتونغ. ومنذ عام 2020 يضم قسمًا للمحاسبة، ويتولّى مكتب تايتشونغ الأعمال المتصلة بكوريا واليابان. ولا يقدّم المكتب أي التزام بالنتيجة. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+      sources: ['/ar/lawyers', '/ar/services'],
+    },
+    lawyers: {
+      answer:
+        'تعرض هذه الصفحة ملفات المحامين ومديري الأعمال والمحاسب الشريك في Hovering. والمحامية Wei Tseng (曾雋崴) محامية مؤهَّلة لمزاولة المهنة في تايوان والمحامية المديرة في المكتب، وتعمل مع العملاء من كوريا واليابان وسائر العملاء الدوليين. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+      sources: ['/ar/about', '/ar/contact'],
+    },
+    pricing: {
+      answer:
+        'لا تنشر هذه الصفحة قائمة أسعار. يُحدَّد نطاق العمل أولًا من الملخّص الذي ترسله، ثم تُؤكَّد معك الأتعاب وطريقة احتسابها قبل بدء العمل. وقد تكون الجلسة مع المحامي خدمة بمقابل، وقد تنشأ إلى جانب أتعاب المحاماة مبالغ تُدفَع للمحكمة أو لجهة حكومية. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+      sources: ['/ar/contact', '/ar/faq'],
+    },
+    contact: {
+      answer:
+        'أرسل ملخّصك عبر نموذج التواصل: ما الذي حدث، وما المساعدة التي تحتاج إليها، وما صلة القضية بتايوان، والمواعيد إن كنت تعرفها. ولا حاجة في المرحلة الأولى إلى إرسال وثائق الهوية أو ملف الأدلة كاملًا. ولا يلتزم المكتب بمدة للرد، ولا يؤكّد المواعيد عبر هذه الصفحة. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+      sources: ['/ar/faq', '/ar/pricing'],
+    },
+    faq: {
+      answer:
+        'يجيب قسم الأسئلة الشائعة على مستوى المعلومات العامة: مجالات العمل الستة، وكيفية تحضير الملخّص، وطريقة تحديد التكلفة، ومعنى إرسال الطلب. والطلب المُرسَل ينتظر مراجعة المحامي؛ فهو ليس رأيًا قانونيًا، وليس موعدًا مؤكّدًا، ولا يُنشئ علاقة بين المحامي والموكّل. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية.',
+      sources: ['/ar/contact', '/ar/services'],
+    },
+  },
+  my: { // SCAFFOLD(th)
+    services: {
+      answer:
+        'สำนักงานรับดำเนินการงาน 6 กลุ่มภายใต้กฎหมายไต้หวัน ได้แก่ การลงทุนและการจัดตั้งบริษัทในไต้หวัน ข้อพิพาททางแพ่งและการเรียกค่าสินไหมทดแทน คดีการสมรส ครอบครัว และมรดก ข้อพิพาทแรงงาน คดีอาญา และทรัพย์สินทางปัญญา ส่วนขอบเขตของแต่ละเรื่องจะได้รับการยืนยันเป็นการเฉพาะ หลังจากทนายความตรวจสอบเนื้อหาที่ท่านส่งมาแล้ว การให้คำปรึกษาดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
+      sources: ['/th/faq', '/th/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm เป็นสำนักงานกฎหมายในไต้หวัน ก่อตั้งขึ้นในปี 2016 โดยกลุ่มทนายความที่จบการศึกษาจากมหาวิทยาลัยแห่งชาติไต้หวัน (國立臺灣大學) มีที่ทำการที่ไทเป เกาสง ไถจง และผิงตง และมีส่วนงานบัญชีตั้งแต่ปี 2020 โดยสาขาไถจงรับงานที่เกี่ยวข้องกับเกาหลีและญี่ปุ่น ทั้งนี้ เราไม่รับประกันผล การให้คำปรึกษาดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
+      sources: ['/th/lawyers', '/th/services'],
+    },
+    lawyers: {
+      answer:
+        'หน้านี้แนะนำประวัติของทนายความ ผู้จัดการงาน และหุ้นส่วนผู้สอบบัญชีของ Hovering โดย Wei Tseng (曾雋崴) เป็นทนายความที่มีคุณสมบัติประกอบวิชาชีพในไต้หวัน และเป็นทนายความผู้บริหารของสำนักงาน ทำงานให้แก่ลูกความชาวเกาหลี ชาวญี่ปุ่น และลูกความต่างชาติรายอื่น การให้คำปรึกษาของสำนักงานดำเนินการเฉพาะ 4 ภาษา ได้แก่ ภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
+      sources: ['/th/about', '/th/contact'],
+    },
+    pricing: {
+      answer:
+        'หน้านี้ไม่แสดงอัตราค่าบริการ สำนักงานจะกำหนดขอบเขตงานก่อนจากสรุปเรื่องที่ท่านส่งมา จากนั้นจำนวนเงินและวิธีคิดค่าใช้จ่ายจะได้รับการยืนยันกับท่านก่อนเริ่มงาน การปรึกษากับทนายความอาจเป็นบริการที่มีค่าใช้จ่าย และนอกจากค่าทนายความยังอาจมีค่าธรรมเนียมที่ต้องชำระต่อศาลหรือหน่วยงานของรัฐ การให้คำปรึกษาดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
+      sources: ['/th/contact', '/th/faq'],
+    },
+    contact: {
+      answer:
+        'โปรดส่งสรุปเรื่องผ่านแบบฟอร์มติดต่อ โดยระบุว่าเกิดอะไรขึ้น ท่านต้องการความช่วยเหลือด้านใด เรื่องนี้เกี่ยวข้องกับไต้หวันอย่างไร และมีกำหนดเวลาหรือไม่ ในขั้นแรกยังไม่จำเป็นต้องส่งเอกสารแสดงตนหรือพยานหลักฐานทั้งหมด สำนักงานไม่รับประกันระยะเวลาตอบกลับและไม่ได้ยืนยันการนัดหมายผ่านหน้านี้ การให้คำปรึกษาดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
+      sources: ['/th/faq', '/th/pricing'],
+    },
+    faq: {
+      answer:
+        'ส่วนคำถามที่พบบ่อยตอบไว้ในระดับข้อมูลทั่วไป ทั้งประเภทงาน 6 ประเภท การเตรียมตัวก่อนติดต่อ วิธีกำหนดค่าใช้จ่าย และความหมายของการส่งเรื่องเข้ามา เรื่องที่ส่งแล้วคือเรื่องที่รอทนายความตรวจสอบ ไม่ใช่ความเห็นทางกฎหมาย ไม่ใช่การนัดหมาย และไม่ได้ทำให้เกิดความสัมพันธ์ระหว่างทนายความกับลูกความ การให้คำปรึกษาดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
+      sources: ['/th/contact', '/th/services'],
+    },
+  },
+  ta: { // SCAFFOLD(hi)
+    services: {
+      answer:
+        'कार्यालय ताइवान के कानून के अनुसार छह कार्य-क्षेत्रों में सेवा देता है: निवेश और कंपनी स्थापना, दीवानी विवाद और हर्जाना, विवाह, परिवार और उत्तराधिकार, श्रम, आपराधिक तथा बौद्धिक संपदा। प्रत्येक मामले का दायरा उस सामग्री की जाँच के बाद अलग से पुष्ट होता है जिसे आप भेजते हैं। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/faq', '/hi/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm ताइवान का एक कानून कार्यालय है, 2016 में National Taiwan University (國立臺灣大學) के स्नातकों द्वारा स्थापित, ताइपेई, काओश्युंग, ताइचुंग और पिंगतुंग में कार्यालयों के साथ। 2020 से लेखा विभाग है; ताइचुंग कार्यालय कोरिया और जापान से जुड़े मामलों का कार्य करता है। कार्यालय परिणाम का वादा नहीं करता। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/lawyers', '/hi/services'],
+    },
+    lawyers: {
+      answer:
+        'यह पृष्ठ Hovering के अधिवक्ताओं, संचालन प्रबंधन और साझेदार लेखाकार की प्रोफ़ाइलें दिखाता है। अधिवक्ता Wei Tseng (曾雋崴) ताइवान में अधिकृत हैं और कार्यालय की प्रबंध अधिवक्ता हैं; वह कोरिया, जापान और अन्य अंतरराष्ट्रीय मुवक्किलों के साथ कार्य करती हैं। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/about', '/hi/contact'],
+    },
+    pricing: {
+      answer:
+        'यह पृष्ठ मूल्य सूची प्रकाशित नहीं करता। पहले आपके भेजे सार से कार्य का दायरा तय होता है, फिर लागत की राशि और गणना का तरीका कार्य शुरू होने से पहले आपके साथ पुष्ट होता है। अधिवक्ता से बात सशुल्क हो सकती है; अधिवक्ता शुल्क के अतिरिक्त न्यायालय या प्राधिकरण की लागतें भी लग सकती हैं। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/contact', '/hi/faq'],
+    },
+    contact: {
+      answer:
+        'संपर्क फ़ॉर्म से अपना सार भेजें: क्या हुआ, किस सहायता की आवश्यकता है, मामले का ताइवान से क्या संबंध है और यदि ज्ञात हो तो समयसीमा। आरंभ में पहचान पत्र या संपूर्ण प्रमाण भेजना आवश्यक नहीं। कार्यालय उत्तर की समयसीमा का वादा नहीं करता और इस पृष्ठ से नियुक्ति की पुष्टि नहीं करता। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/faq', '/hi/pricing'],
+    },
+    faq: {
+      answer:
+        'यह भाग सामान्य जानकारी के स्तर पर बार-बार पूछे जाने वाले प्रश्नों का उत्तर देता है: छह कार्य-समूह, संपर्क से पहले तैयारी, लागत तय होने का तरीका और भेजे गए संदेश का अर्थ। भेजा गया अनुरोध अधिवक्ता की जाँच की प्रतीक्षा करता है; यह कानूनी राय नहीं है, नियुक्ति नहीं है और अधिवक्ता तथा मुवक्किल के बीच संबंध नहीं बनाता। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/contact', '/hi/services'],
+    },
+  },
+  ne: { // SCAFFOLD(hi)
+    services: {
+      answer:
+        'कार्यालय ताइवान के कानून के अनुसार छह कार्य-क्षेत्रों में सेवा देता है: निवेश और कंपनी स्थापना, दीवानी विवाद और हर्जाना, विवाह, परिवार और उत्तराधिकार, श्रम, आपराधिक तथा बौद्धिक संपदा। प्रत्येक मामले का दायरा उस सामग्री की जाँच के बाद अलग से पुष्ट होता है जिसे आप भेजते हैं। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/faq', '/hi/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm ताइवान का एक कानून कार्यालय है, 2016 में National Taiwan University (國立臺灣大學) के स्नातकों द्वारा स्थापित, ताइपेई, काओश्युंग, ताइचुंग और पिंगतुंग में कार्यालयों के साथ। 2020 से लेखा विभाग है; ताइचुंग कार्यालय कोरिया और जापान से जुड़े मामलों का कार्य करता है। कार्यालय परिणाम का वादा नहीं करता। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/lawyers', '/hi/services'],
+    },
+    lawyers: {
+      answer:
+        'यह पृष्ठ Hovering के अधिवक्ताओं, संचालन प्रबंधन और साझेदार लेखाकार की प्रोफ़ाइलें दिखाता है। अधिवक्ता Wei Tseng (曾雋崴) ताइवान में अधिकृत हैं और कार्यालय की प्रबंध अधिवक्ता हैं; वह कोरिया, जापान और अन्य अंतरराष्ट्रीय मुवक्किलों के साथ कार्य करती हैं। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/about', '/hi/contact'],
+    },
+    pricing: {
+      answer:
+        'यह पृष्ठ मूल्य सूची प्रकाशित नहीं करता। पहले आपके भेजे सार से कार्य का दायरा तय होता है, फिर लागत की राशि और गणना का तरीका कार्य शुरू होने से पहले आपके साथ पुष्ट होता है। अधिवक्ता से बात सशुल्क हो सकती है; अधिवक्ता शुल्क के अतिरिक्त न्यायालय या प्राधिकरण की लागतें भी लग सकती हैं। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/contact', '/hi/faq'],
+    },
+    contact: {
+      answer:
+        'संपर्क फ़ॉर्म से अपना सार भेजें: क्या हुआ, किस सहायता की आवश्यकता है, मामले का ताइवान से क्या संबंध है और यदि ज्ञात हो तो समयसीमा। आरंभ में पहचान पत्र या संपूर्ण प्रमाण भेजना आवश्यक नहीं। कार्यालय उत्तर की समयसीमा का वादा नहीं करता और इस पृष्ठ से नियुक्ति की पुष्टि नहीं करता। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/faq', '/hi/pricing'],
+    },
+    faq: {
+      answer:
+        'यह भाग सामान्य जानकारी के स्तर पर बार-बार पूछे जाने वाले प्रश्नों का उत्तर देता है: छह कार्य-समूह, संपर्क से पहले तैयारी, लागत तय होने का तरीका और भेजे गए संदेश का अर्थ। भेजा गया अनुरोध अधिवक्ता की जाँच की प्रतीक्षा करता है; यह कानूनी राय नहीं है, नियुक्ति नहीं है और अधिवक्ता तथा मुवक्किल के बीच संबंध नहीं बनाता। परामर्श केवल अंग्रेज़ी, चीनी, जापानी और कोरियाई में होता है।',
+      sources: ['/hi/contact', '/hi/services'],
+    },
+  },
+  km: { // SCAFFOLD(th)
+    services: {
+      answer:
+        'สำนักงานรับดำเนินการงาน 6 กลุ่มภายใต้กฎหมายไต้หวัน ได้แก่ การลงทุนและการจัดตั้งบริษัทในไต้หวัน ข้อพิพาททางแพ่งและการเรียกค่าสินไหมทดแทน คดีการสมรส ครอบครัว และมรดก ข้อพิพาทแรงงาน คดีอาญา และทรัพย์สินทางปัญญา ส่วนขอบเขตของแต่ละเรื่องจะได้รับการยืนยันเป็นการเฉพาะ หลังจากทนายความตรวจสอบเนื้อหาที่ท่านส่งมาแล้ว การให้คำปรึกษาดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
+      sources: ['/th/faq', '/th/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm เป็นสำนักงานกฎหมายในไต้หวัน ก่อตั้งขึ้นในปี 2016 โดยกลุ่มทนายความที่จบการศึกษาจากมหาวิทยาลัยแห่งชาติไต้หวัน (國立臺灣大學) มีที่ทำการที่ไทเป เกาสง ไถจง และผิงตง และมีส่วนงานบัญชีตั้งแต่ปี 2020 โดยสาขาไถจงรับงานที่เกี่ยวข้องกับเกาหลีและญี่ปุ่น ทั้งนี้ เราไม่รับประกันผล การให้คำปรึกษาดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
+      sources: ['/th/lawyers', '/th/services'],
+    },
+    lawyers: {
+      answer:
+        'หน้านี้แนะนำประวัติของทนายความ ผู้จัดการงาน และหุ้นส่วนผู้สอบบัญชีของ Hovering โดย Wei Tseng (曾雋崴) เป็นทนายความที่มีคุณสมบัติประกอบวิชาชีพในไต้หวัน และเป็นทนายความผู้บริหารของสำนักงาน ทำงานให้แก่ลูกความชาวเกาหลี ชาวญี่ปุ่น และลูกความต่างชาติรายอื่น การให้คำปรึกษาของสำนักงานดำเนินการเฉพาะ 4 ภาษา ได้แก่ ภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
+      sources: ['/th/about', '/th/contact'],
+    },
+    pricing: {
+      answer:
+        'หน้านี้ไม่แสดงอัตราค่าบริการ สำนักงานจะกำหนดขอบเขตงานก่อนจากสรุปเรื่องที่ท่านส่งมา จากนั้นจำนวนเงินและวิธีคิดค่าใช้จ่ายจะได้รับการยืนยันกับท่านก่อนเริ่มงาน การปรึกษากับทนายความอาจเป็นบริการที่มีค่าใช้จ่าย และนอกจากค่าทนายความยังอาจมีค่าธรรมเนียมที่ต้องชำระต่อศาลหรือหน่วยงานของรัฐ การให้คำปรึกษาดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
+      sources: ['/th/contact', '/th/faq'],
+    },
+    contact: {
+      answer:
+        'โปรดส่งสรุปเรื่องผ่านแบบฟอร์มติดต่อ โดยระบุว่าเกิดอะไรขึ้น ท่านต้องการความช่วยเหลือด้านใด เรื่องนี้เกี่ยวข้องกับไต้หวันอย่างไร และมีกำหนดเวลาหรือไม่ ในขั้นแรกยังไม่จำเป็นต้องส่งเอกสารแสดงตนหรือพยานหลักฐานทั้งหมด สำนักงานไม่รับประกันระยะเวลาตอบกลับและไม่ได้ยืนยันการนัดหมายผ่านหน้านี้ การให้คำปรึกษาดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
+      sources: ['/th/faq', '/th/pricing'],
+    },
+    faq: {
+      answer:
+        'ส่วนคำถามที่พบบ่อยตอบไว้ในระดับข้อมูลทั่วไป ทั้งประเภทงาน 6 ประเภท การเตรียมตัวก่อนติดต่อ วิธีกำหนดค่าใช้จ่าย และความหมายของการส่งเรื่องเข้ามา เรื่องที่ส่งแล้วคือเรื่องที่รอทนายความตรวจสอบ ไม่ใช่ความเห็นทางกฎหมาย ไม่ใช่การนัดหมาย และไม่ได้ทำให้เกิดความสัมพันธ์ระหว่างทนายความกับลูกความ การให้คำปรึกษาดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี',
+      sources: ['/th/contact', '/th/services'],
+    },
+  },
+  mn: { // SCAFFOLD(ru)
+    services: {
+      answer:
+        'Фирма ведёт шесть групп работы по праву Тайваня: инвестиции и учреждение компаний, гражданские дела и возмещение вреда, брак, семья и наследство, трудовые споры, уголовные дела и интеллектуальная собственность. Объём каждого дела подтверждается отдельно после того, как адвокат рассмотрит содержание, которое Вы отправляете. Консультация проводится только на английском, китайском, японском и корейском языках.',
+      sources: ['/ru/faq', '/ru/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm — адвокатская фирма на Тайване, основанная в 2016 году выпускниками National Taiwan University (國立臺灣大學), с офисами в городах Тайбэй, Гаосюн, Тайчжун и Пиндун. С 2020 года есть бухгалтерское подразделение; офис в Тайчжуне ведёт дела, связанные с Кореей и Японией. Фирма не обещает результата. Консультация проводится только на английском, китайском, японском и корейском языках.',
+      sources: ['/ru/lawyers', '/ru/services'],
+    },
+    lawyers: {
+      answer:
+        'Эта страница представляет адвокатов, операционного менеджера и партнёра-бухгалтера Hovering. Адвокат Wei Tseng (曾雋崴) уполномочена вести адвокатскую деятельность на Тайване и возглавляет фирму; она работает с доверителями из Кореи, Японии и другими международными доверителями. Консультация проводится только на английском, китайском, японском и корейском языках.',
+      sources: ['/ru/about', '/ru/contact'],
+    },
+    pricing: {
+      answer:
+        'Эта страница не публикует прейскурант. Объём работы сначала определяется по краткому изложению, которое Вы отправляете, затем размер и способ расчёта подтверждаются с Вами до начала работы. Консультация с адвокатом может быть возмездной услугой; помимо гонорара могут возникнуть судебные или административные расходы. Консультация проводится только на английском, китайском, японском и корейском языках.',
+      sources: ['/ru/contact', '/ru/faq'],
+    },
+    contact: {
+      answer:
+        'Отправьте краткое изложение через контактную форму: что произошло, какая помощь нужна, какая связь у дела с Тайванем и срок, если он есть. На этом этапе ещё не нужно отправлять документы, удостоверяющие личность, или все доказательства. Фирма не обещает срок ответа и не подтверждает запись через эту страницу. Консультация проводится только на английском, китайском, японском и корейском языках.',
+      sources: ['/ru/faq', '/ru/pricing'],
+    },
+    faq: {
+      answer:
+        'Этот раздел отвечает на частые вопросы на уровне общих сведений: шесть групп работы, подготовка до обращения, способ определения гонорара и смысл отправленного сообщения. Отправленный запрос ожидает рассмотрения адвокатом; это не юридическая консультация, не запись и не создаёт отношений между адвокатом и доверителем. Консультация проводится только на английском, китайском, японском и корейском языках.',
+      sources: ['/ru/contact', '/ru/services'],
+    },
+  },
+  sk: { // SCAFFOLD(cs)
+    services: {
+      answer:
+        'Kancelář vede šest agend podle tchajwanského práva: investice a zakládání společností, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí zaslaný obsah. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm je tchajwanská advokátní kancelář, kterou v roce 2016 založili absolventi National Taiwan University (國立臺灣大學), s pobočkami v Tchaj-peji, Kao-siungu, Tchaj-čungu a Pching-tungu. Od roku 2020 působí i účetní úsek; pobočka v Tchaj-čungu vede věci s vazbou na Koreu a Japonsko. Kancelář neslibuje výsledek. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/lawyers', '/cs/services'],
+    },
+    lawyers: {
+      answer:
+        'Tato stránka ukazuje profily advokátek a advokátů Hovering, provozního vedení a přidruženého účetnictví a auditu. Advokátka Wei Tseng (曾雋崴) je oprávněna vykonávat advokacii na Tchaj-wanu a je řídící advokátkou kanceláře; pracuje s klienty z Koreje, z Japonska a s dalšími mezinárodními klienty. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/about', '/cs/contact'],
+    },
+    pricing: {
+      answer:
+        'Tato stránka nezveřejňuje ceník. Nejprve se z Vašeho shrnutí potvrdí rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu, dříve než práce začne. Konzultace s advokátkou nebo advokátem může být úplatná; vedle odměny mohou vzniknout soudní nebo správní poplatky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/contact', '/cs/faq'],
+    },
+    contact: {
+      answer:
+        'Zašlete shrnutí kontaktním formulářem: co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. V počáteční fázi zatím není třeba zasílat doklady totožnosti ani celý důkazní materiál. Kancelář neslibuje lhůtu k odpovědi a nepotvrzuje schůzku prostřednictvím této stránky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/pricing'],
+    },
+    faq: {
+      answer:
+        'Tato část odpovídá na časté otázky na úrovni obecných informací: šest agend kanceláře, příprava před kontaktem, potvrzení nákladů a význam odeslané zprávy. Odeslaná zpráva čeká na posouzení, není právním stanoviskem ani potvrzenou schůzkou a sama o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem. Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/services', '/cs/contact'],
+    },
+  },
+  bg: { // SCAFFOLD(ru)
+    services: {
+      answer:
+        'Фирма ведёт шесть групп работы по праву Тайваня: инвестиции и учреждение компаний, гражданские дела и возмещение вреда, брак, семья и наследство, трудовые споры, уголовные дела и интеллектуальная собственность. Объём каждого дела подтверждается отдельно после того, как адвокат рассмотрит содержание, которое Вы отправляете. Консультация проводится только на английском, китайском, японском и корейском языках.',
+      sources: ['/ru/faq', '/ru/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm — адвокатская фирма на Тайване, основанная в 2016 году выпускниками National Taiwan University (國立臺灣大學), с офисами в городах Тайбэй, Гаосюн, Тайчжун и Пиндун. С 2020 года есть бухгалтерское подразделение; офис в Тайчжуне ведёт дела, связанные с Кореей и Японией. Фирма не обещает результата. Консультация проводится только на английском, китайском, японском и корейском языках.',
+      sources: ['/ru/lawyers', '/ru/services'],
+    },
+    lawyers: {
+      answer:
+        'Эта страница представляет адвокатов, операционного менеджера и партнёра-бухгалтера Hovering. Адвокат Wei Tseng (曾雋崴) уполномочена вести адвокатскую деятельность на Тайване и возглавляет фирму; она работает с доверителями из Кореи, Японии и другими международными доверителями. Консультация проводится только на английском, китайском, японском и корейском языках.',
+      sources: ['/ru/about', '/ru/contact'],
+    },
+    pricing: {
+      answer:
+        'Эта страница не публикует прейскурант. Объём работы сначала определяется по краткому изложению, которое Вы отправляете, затем размер и способ расчёта подтверждаются с Вами до начала работы. Консультация с адвокатом может быть возмездной услугой; помимо гонорара могут возникнуть судебные или административные расходы. Консультация проводится только на английском, китайском, японском и корейском языках.',
+      sources: ['/ru/contact', '/ru/faq'],
+    },
+    contact: {
+      answer:
+        'Отправьте краткое изложение через контактную форму: что произошло, какая помощь нужна, какая связь у дела с Тайванем и срок, если он есть. На этом этапе ещё не нужно отправлять документы, удостоверяющие личность, или все доказательства. Фирма не обещает срок ответа и не подтверждает запись через эту страницу. Консультация проводится только на английском, китайском, японском и корейском языках.',
+      sources: ['/ru/faq', '/ru/pricing'],
+    },
+    faq: {
+      answer:
+        'Этот раздел отвечает на частые вопросы на уровне общих сведений: шесть групп работы, подготовка до обращения, способ определения гонорара и смысл отправленного сообщения. Отправленный запрос ожидает рассмотрения адвокатом; это не юридическая консультация, не запись и не создаёт отношений между адвокатом и доверителем. Консультация проводится только на английском, китайском, японском и корейском языках.',
+      sources: ['/ru/contact', '/ru/services'],
+    },
+  },
+  hr: { // SCAFFOLD(cs)
+    services: {
+      answer:
+        'Kancelář vede šest agend podle tchajwanského práva: investice a zakládání společností, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí zaslaný obsah. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm je tchajwanská advokátní kancelář, kterou v roce 2016 založili absolventi National Taiwan University (國立臺灣大學), s pobočkami v Tchaj-peji, Kao-siungu, Tchaj-čungu a Pching-tungu. Od roku 2020 působí i účetní úsek; pobočka v Tchaj-čungu vede věci s vazbou na Koreu a Japonsko. Kancelář neslibuje výsledek. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/lawyers', '/cs/services'],
+    },
+    lawyers: {
+      answer:
+        'Tato stránka ukazuje profily advokátek a advokátů Hovering, provozního vedení a přidruženého účetnictví a auditu. Advokátka Wei Tseng (曾雋崴) je oprávněna vykonávat advokacii na Tchaj-wanu a je řídící advokátkou kanceláře; pracuje s klienty z Koreje, z Japonska a s dalšími mezinárodními klienty. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/about', '/cs/contact'],
+    },
+    pricing: {
+      answer:
+        'Tato stránka nezveřejňuje ceník. Nejprve se z Vašeho shrnutí potvrdí rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu, dříve než práce začne. Konzultace s advokátkou nebo advokátem může být úplatná; vedle odměny mohou vzniknout soudní nebo správní poplatky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/contact', '/cs/faq'],
+    },
+    contact: {
+      answer:
+        'Zašlete shrnutí kontaktním formulářem: co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. V počáteční fázi zatím není třeba zasílat doklady totožnosti ani celý důkazní materiál. Kancelář neslibuje lhůtu k odpovědi a nepotvrzuje schůzku prostřednictvím této stránky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/pricing'],
+    },
+    faq: {
+      answer:
+        'Tato část odpovídá na časté otázky na úrovni obecných informací: šest agend kanceláře, příprava před kontaktem, potvrzení nákladů a význam odeslané zprávy. Odeslaná zpráva čeká na posouzení, není právním stanoviskem ani potvrzenou schůzkou a sama o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem. Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/services', '/cs/contact'],
+    },
+  },
+  sr: { // SCAFFOLD(cs)
+    services: {
+      answer:
+        'Kancelář vede šest agend podle tchajwanského práva: investice a zakládání společností, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí zaslaný obsah. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm je tchajwanská advokátní kancelář, kterou v roce 2016 založili absolventi National Taiwan University (國立臺灣大學), s pobočkami v Tchaj-peji, Kao-siungu, Tchaj-čungu a Pching-tungu. Od roku 2020 působí i účetní úsek; pobočka v Tchaj-čungu vede věci s vazbou na Koreu a Japonsko. Kancelář neslibuje výsledek. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/lawyers', '/cs/services'],
+    },
+    lawyers: {
+      answer:
+        'Tato stránka ukazuje profily advokátek a advokátů Hovering, provozního vedení a přidruženého účetnictví a auditu. Advokátka Wei Tseng (曾雋崴) je oprávněna vykonávat advokacii na Tchaj-wanu a je řídící advokátkou kanceláře; pracuje s klienty z Koreje, z Japonska a s dalšími mezinárodními klienty. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/about', '/cs/contact'],
+    },
+    pricing: {
+      answer:
+        'Tato stránka nezveřejňuje ceník. Nejprve se z Vašeho shrnutí potvrdí rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu, dříve než práce začne. Konzultace s advokátkou nebo advokátem může být úplatná; vedle odměny mohou vzniknout soudní nebo správní poplatky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/contact', '/cs/faq'],
+    },
+    contact: {
+      answer:
+        'Zašlete shrnutí kontaktním formulářem: co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. V počáteční fázi zatím není třeba zasílat doklady totožnosti ani celý důkazní materiál. Kancelář neslibuje lhůtu k odpovědi a nepotvrzuje schůzku prostřednictvím této stránky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/pricing'],
+    },
+    faq: {
+      answer:
+        'Tato část odpovídá na časté otázky na úrovni obecných informací: šest agend kanceláře, příprava před kontaktem, potvrzení nákladů a význam odeslané zprávy. Odeslaná zpráva čeká na posouzení, není právním stanoviskem ani potvrzenou schůzkou a sama o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem. Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/services', '/cs/contact'],
+    },
+  },
+  sl: { // SCAFFOLD(cs)
+    services: {
+      answer:
+        'Kancelář vede šest agend podle tchajwanského práva: investice a zakládání společností, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí zaslaný obsah. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm je tchajwanská advokátní kancelář, kterou v roce 2016 založili absolventi National Taiwan University (國立臺灣大學), s pobočkami v Tchaj-peji, Kao-siungu, Tchaj-čungu a Pching-tungu. Od roku 2020 působí i účetní úsek; pobočka v Tchaj-čungu vede věci s vazbou na Koreu a Japonsko. Kancelář neslibuje výsledek. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/lawyers', '/cs/services'],
+    },
+    lawyers: {
+      answer:
+        'Tato stránka ukazuje profily advokátek a advokátů Hovering, provozního vedení a přidruženého účetnictví a auditu. Advokátka Wei Tseng (曾雋崴) je oprávněna vykonávat advokacii na Tchaj-wanu a je řídící advokátkou kanceláře; pracuje s klienty z Koreje, z Japonska a s dalšími mezinárodními klienty. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/about', '/cs/contact'],
+    },
+    pricing: {
+      answer:
+        'Tato stránka nezveřejňuje ceník. Nejprve se z Vašeho shrnutí potvrdí rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu, dříve než práce začne. Konzultace s advokátkou nebo advokátem může být úplatná; vedle odměny mohou vzniknout soudní nebo správní poplatky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/contact', '/cs/faq'],
+    },
+    contact: {
+      answer:
+        'Zašlete shrnutí kontaktním formulářem: co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. V počáteční fázi zatím není třeba zasílat doklady totožnosti ani celý důkazní materiál. Kancelář neslibuje lhůtu k odpovědi a nepotvrzuje schůzku prostřednictvím této stránky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/pricing'],
+    },
+    faq: {
+      answer:
+        'Tato část odpovídá na časté otázky na úrovni obecných informací: šest agend kanceláře, příprava před kontaktem, potvrzení nákladů a význam odeslané zprávy. Odeslaná zpráva čeká na posouzení, není právním stanoviskem ani potvrzenou schůzkou a sama o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem. Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/services', '/cs/contact'],
+    },
+  },
+  lt: { // SCAFFOLD(cs)
+    services: {
+      answer:
+        'Kancelář vede šest agend podle tchajwanského práva: investice a zakládání společností, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí zaslaný obsah. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm je tchajwanská advokátní kancelář, kterou v roce 2016 založili absolventi National Taiwan University (國立臺灣大學), s pobočkami v Tchaj-peji, Kao-siungu, Tchaj-čungu a Pching-tungu. Od roku 2020 působí i účetní úsek; pobočka v Tchaj-čungu vede věci s vazbou na Koreu a Japonsko. Kancelář neslibuje výsledek. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/lawyers', '/cs/services'],
+    },
+    lawyers: {
+      answer:
+        'Tato stránka ukazuje profily advokátek a advokátů Hovering, provozního vedení a přidruženého účetnictví a auditu. Advokátka Wei Tseng (曾雋崴) je oprávněna vykonávat advokacii na Tchaj-wanu a je řídící advokátkou kanceláře; pracuje s klienty z Koreje, z Japonska a s dalšími mezinárodními klienty. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/about', '/cs/contact'],
+    },
+    pricing: {
+      answer:
+        'Tato stránka nezveřejňuje ceník. Nejprve se z Vašeho shrnutí potvrdí rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu, dříve než práce začne. Konzultace s advokátkou nebo advokátem může být úplatná; vedle odměny mohou vzniknout soudní nebo správní poplatky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/contact', '/cs/faq'],
+    },
+    contact: {
+      answer:
+        'Zašlete shrnutí kontaktním formulářem: co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. V počáteční fázi zatím není třeba zasílat doklady totožnosti ani celý důkazní materiál. Kancelář neslibuje lhůtu k odpovědi a nepotvrzuje schůzku prostřednictvím této stránky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/pricing'],
+    },
+    faq: {
+      answer:
+        'Tato část odpovídá na časté otázky na úrovni obecných informací: šest agend kanceláře, příprava před kontaktem, potvrzení nákladů a význam odeslané zprávy. Odeslaná zpráva čeká na posouzení, není právním stanoviskem ani potvrzenou schůzkou a sama o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem. Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/services', '/cs/contact'],
+    },
+  },
+  lv: { // SCAFFOLD(cs)
+    services: {
+      answer:
+        'Kancelář vede šest agend podle tchajwanského práva: investice a zakládání společností, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí zaslaný obsah. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm je tchajwanská advokátní kancelář, kterou v roce 2016 založili absolventi National Taiwan University (國立臺灣大學), s pobočkami v Tchaj-peji, Kao-siungu, Tchaj-čungu a Pching-tungu. Od roku 2020 působí i účetní úsek; pobočka v Tchaj-čungu vede věci s vazbou na Koreu a Japonsko. Kancelář neslibuje výsledek. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/lawyers', '/cs/services'],
+    },
+    lawyers: {
+      answer:
+        'Tato stránka ukazuje profily advokátek a advokátů Hovering, provozního vedení a přidruženého účetnictví a auditu. Advokátka Wei Tseng (曾雋崴) je oprávněna vykonávat advokacii na Tchaj-wanu a je řídící advokátkou kanceláře; pracuje s klienty z Koreje, z Japonska a s dalšími mezinárodními klienty. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/about', '/cs/contact'],
+    },
+    pricing: {
+      answer:
+        'Tato stránka nezveřejňuje ceník. Nejprve se z Vašeho shrnutí potvrdí rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu, dříve než práce začne. Konzultace s advokátkou nebo advokátem může být úplatná; vedle odměny mohou vzniknout soudní nebo správní poplatky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/contact', '/cs/faq'],
+    },
+    contact: {
+      answer:
+        'Zašlete shrnutí kontaktním formulářem: co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. V počáteční fázi zatím není třeba zasílat doklady totožnosti ani celý důkazní materiál. Kancelář neslibuje lhůtu k odpovědi a nepotvrzuje schůzku prostřednictvím této stránky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/pricing'],
+    },
+    faq: {
+      answer:
+        'Tato část odpovídá na časté otázky na úrovni obecných informací: šest agend kanceláře, příprava před kontaktem, potvrzení nákladů a význam odeslané zprávy. Odeslaná zpráva čeká na posouzení, není právním stanoviskem ani potvrzenou schůzkou a sama o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem. Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/services', '/cs/contact'],
+    },
+  },
+  et: { // SCAFFOLD(cs)
+    services: {
+      answer:
+        'Kancelář vede šest agend podle tchajwanského práva: investice a zakládání společností, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí zaslaný obsah. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm je tchajwanská advokátní kancelář, kterou v roce 2016 založili absolventi National Taiwan University (國立臺灣大學), s pobočkami v Tchaj-peji, Kao-siungu, Tchaj-čungu a Pching-tungu. Od roku 2020 působí i účetní úsek; pobočka v Tchaj-čungu vede věci s vazbou na Koreu a Japonsko. Kancelář neslibuje výsledek. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/lawyers', '/cs/services'],
+    },
+    lawyers: {
+      answer:
+        'Tato stránka ukazuje profily advokátek a advokátů Hovering, provozního vedení a přidruženého účetnictví a auditu. Advokátka Wei Tseng (曾雋崴) je oprávněna vykonávat advokacii na Tchaj-wanu a je řídící advokátkou kanceláře; pracuje s klienty z Koreje, z Japonska a s dalšími mezinárodními klienty. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/about', '/cs/contact'],
+    },
+    pricing: {
+      answer:
+        'Tato stránka nezveřejňuje ceník. Nejprve se z Vašeho shrnutí potvrdí rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu, dříve než práce začne. Konzultace s advokátkou nebo advokátem může být úplatná; vedle odměny mohou vzniknout soudní nebo správní poplatky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/contact', '/cs/faq'],
+    },
+    contact: {
+      answer:
+        'Zašlete shrnutí kontaktním formulářem: co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. V počáteční fázi zatím není třeba zasílat doklady totožnosti ani celý důkazní materiál. Kancelář neslibuje lhůtu k odpovědi a nepotvrzuje schůzku prostřednictvím této stránky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/pricing'],
+    },
+    faq: {
+      answer:
+        'Tato část odpovídá na časté otázky na úrovni obecných informací: šest agend kanceláře, příprava před kontaktem, potvrzení nákladů a význam odeslané zprávy. Odeslaná zpráva čeká na posouzení, není právním stanoviskem ani potvrzenou schůzkou a sama o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem. Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/services', '/cs/contact'],
+    },
+  },
+  ca: { // SCAFFOLD(cs)
+    services: {
+      answer:
+        'Kancelář vede šest agend podle tchajwanského práva: investice a zakládání společností, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí zaslaný obsah. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm je tchajwanská advokátní kancelář, kterou v roce 2016 založili absolventi National Taiwan University (國立臺灣大學), s pobočkami v Tchaj-peji, Kao-siungu, Tchaj-čungu a Pching-tungu. Od roku 2020 působí i účetní úsek; pobočka v Tchaj-čungu vede věci s vazbou na Koreu a Japonsko. Kancelář neslibuje výsledek. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/lawyers', '/cs/services'],
+    },
+    lawyers: {
+      answer:
+        'Tato stránka ukazuje profily advokátek a advokátů Hovering, provozního vedení a přidruženého účetnictví a auditu. Advokátka Wei Tseng (曾雋崴) je oprávněna vykonávat advokacii na Tchaj-wanu a je řídící advokátkou kanceláře; pracuje s klienty z Koreje, z Japonska a s dalšími mezinárodními klienty. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/about', '/cs/contact'],
+    },
+    pricing: {
+      answer:
+        'Tato stránka nezveřejňuje ceník. Nejprve se z Vašeho shrnutí potvrdí rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu, dříve než práce začne. Konzultace s advokátkou nebo advokátem může být úplatná; vedle odměny mohou vzniknout soudní nebo správní poplatky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/contact', '/cs/faq'],
+    },
+    contact: {
+      answer:
+        'Zašlete shrnutí kontaktním formulářem: co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. V počáteční fázi zatím není třeba zasílat doklady totožnosti ani celý důkazní materiál. Kancelář neslibuje lhůtu k odpovědi a nepotvrzuje schůzku prostřednictvím této stránky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/pricing'],
+    },
+    faq: {
+      answer:
+        'Tato část odpovídá na časté otázky na úrovni obecných informací: šest agend kanceláře, příprava před kontaktem, potvrzení nákladů a význam odeslané zprávy. Odeslaná zpráva čeká na posouzení, není právním stanoviskem ani potvrzenou schůzkou a sama o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem. Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/services', '/cs/contact'],
+    },
+  },
+  is: { // SCAFFOLD(cs)
+    services: {
+      answer:
+        'Kancelář vede šest agend podle tchajwanského práva: investice a zakládání společností, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí zaslaný obsah. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/contact'],
+    },
+    about: {
+      answer:
+        'Hovering International Law Firm je tchajwanská advokátní kancelář, kterou v roce 2016 založili absolventi National Taiwan University (國立臺灣大學), s pobočkami v Tchaj-peji, Kao-siungu, Tchaj-čungu a Pching-tungu. Od roku 2020 působí i účetní úsek; pobočka v Tchaj-čungu vede věci s vazbou na Koreu a Japonsko. Kancelář neslibuje výsledek. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/lawyers', '/cs/services'],
+    },
+    lawyers: {
+      answer:
+        'Tato stránka ukazuje profily advokátek a advokátů Hovering, provozního vedení a přidruženého účetnictví a auditu. Advokátka Wei Tseng (曾雋崴) je oprávněna vykonávat advokacii na Tchaj-wanu a je řídící advokátkou kanceláře; pracuje s klienty z Koreje, z Japonska a s dalšími mezinárodními klienty. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/about', '/cs/contact'],
+    },
+    pricing: {
+      answer:
+        'Tato stránka nezveřejňuje ceník. Nejprve se z Vašeho shrnutí potvrdí rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu, dříve než práce začne. Konzultace s advokátkou nebo advokátem může být úplatná; vedle odměny mohou vzniknout soudní nebo správní poplatky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/contact', '/cs/faq'],
+    },
+    contact: {
+      answer:
+        'Zašlete shrnutí kontaktním formulářem: co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. V počáteční fázi zatím není třeba zasílat doklady totožnosti ani celý důkazní materiál. Kancelář neslibuje lhůtu k odpovědi a nepotvrzuje schůzku prostřednictvím této stránky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/faq', '/cs/pricing'],
+    },
+    faq: {
+      answer:
+        'Tato část odpovídá na časté otázky na úrovni obecných informací: šest agend kanceláře, příprava před kontaktem, potvrzení nákladů a význam odeslané zprávy. Odeslaná zpráva čeká na posouzení, není právním stanoviskem ani potvrzenou schůzkou a sama o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem. Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky, japonsky a korejsky.',
+      sources: ['/cs/services', '/cs/contact'],
+    },
+  },
 };

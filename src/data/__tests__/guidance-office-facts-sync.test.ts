@@ -115,6 +115,24 @@ const CLIENT_COUNTRY_TERMS: Record<GuidanceLocale, Record<string, string[]>> = {
   uk: { Korea: ['Кореї'], Japan: ['Японії'] },
   el: { Korea: ['Κορέα'], Japan: ['Ιαπωνία'] },
   he: { Korea: ['קוריאה'], Japan: ['יפן'] },
+  bn: { Korea: ['कोरिया'], Japan: ['जापान'] }, // SCAFFOLD(hi)
+  ur: { Korea: ['كوريا'], Japan: ['اليابان', 'يابان'] }, // SCAFFOLD(ar)
+  fa: { Korea: ['كوريا'], Japan: ['اليابان', 'يابان'] }, // SCAFFOLD(ar)
+  my: { Korea: ['เกาหลี'], Japan: ['ญี่ปุ่น'] }, // SCAFFOLD(th)
+  ta: { Korea: ['कोरिया'], Japan: ['जापान'] }, // SCAFFOLD(hi)
+  ne: { Korea: ['कोरिया'], Japan: ['जापान'] }, // SCAFFOLD(hi)
+  km: { Korea: ['เกาหลี'], Japan: ['ญี่ปุ่น'] }, // SCAFFOLD(th)
+  mn: { Korea: ['Коре'], Japan: ['Япон'] }, // SCAFFOLD(ru)
+  sk: { Korea: ['Koreje'], Japan: ['Japonska'] }, // SCAFFOLD(cs)
+  bg: { Korea: ['Коре'], Japan: ['Япон'] }, // SCAFFOLD(ru)
+  hr: { Korea: ['Koreje'], Japan: ['Japonska'] }, // SCAFFOLD(cs)
+  sr: { Korea: ['Koreje'], Japan: ['Japonska'] }, // SCAFFOLD(cs)
+  sl: { Korea: ['Koreje'], Japan: ['Japonska'] }, // SCAFFOLD(cs)
+  lt: { Korea: ['Koreje'], Japan: ['Japonska'] }, // SCAFFOLD(cs)
+  lv: { Korea: ['Koreje'], Japan: ['Japonska'] }, // SCAFFOLD(cs)
+  et: { Korea: ['Koreje'], Japan: ['Japonska'] }, // SCAFFOLD(cs)
+  ca: { Korea: ['Koreje'], Japan: ['Japonska'] }, // SCAFFOLD(cs)
+  is: { Korea: ['Koreje'], Japan: ['Japonska'] }, // SCAFFOLD(cs)
 };
 
 /** The attorney's Chinese name; how the same sentence is found in both modules. */

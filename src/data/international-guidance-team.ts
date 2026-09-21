@@ -772,7 +772,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'ECHIPA NOASTRĂ',
     title: 'Echipa internațională Hovering',
     description:
-      'Profilurile avocatelor și avocaților, ale conducerii operative și ale revizuirii contabile asociate Hovering.',
+      'Profilurile avocaților, ale conducerii operaționale și ale cabinetului de contabilitate asociat Hovering.',
     representativeTitle: 'Avocată coordonatoare',
     teamTitle: 'Avocați și colaboratori',
     partnerTitle: 'Contabilitate asociată',
@@ -781,7 +781,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     experienceLabel: 'Experiență',
     photoAltPrefix: 'Fotografie',
     workingLanguagesLabel: 'Limbi de lucru',
-    fullProfileLabel: 'Profil complet (English)',
+    fullProfileLabel: 'Profil complet (în engleză)',
     keyFactsHeading: 'Avocata Wei Tseng — Date esențiale',
     qualificationLabel: 'Calificare și cabinet',
     qualificationSentence:
@@ -2597,10 +2597,10 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Cabinetul tratează cauze ale întreprinderilor și ale persoanelor fizice în Taiwan în engleză, japoneză, coreeană și chineză.',
-        'A reprezentat un student coreean într-o cerere de despăgubire pentru o vătămare la sală și a obținut o hotărâre în primă instanță de TWD 1.57M.',
+        'A reprezentat un student coreean într-o cerere de despăgubire pentru o vătămare la sală, iar instanța de fond a pronunțat o hotărâre de 1,57 mil. TWD.',
       ],
       education: [
-        'Master (M.S.), Institute of Finance, National Taiwan University',
+        'Master (M.S.) în finanțe, Institute of Finance, National Taiwan University',
         'Licență (B.A.) în dublu program de drept și finanțe, National Chengchi University',
         'Studii de schimb la Kobe University și Waseda University',
       ],
@@ -2612,7 +2612,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-rongxuan': {
       intro: [
-        'Anterior la Ministry of Education, Legal Affairs Division, cu accent pe cauze administrative și civile.',
+        'Anterior, în cadrul Ministry of Education, Legal Affairs Division, cu accent pe cauze administrative și civile.',
         'Experiență în cauze privind universități, drepturile cadrelor didactice și contestații administrative.',
       ],
       education: [
@@ -2632,14 +2632,14 @@ export const guidanceTeamBios: Record<
         'Licență în drept (LL.B.), Tunghai University',
       ],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Paralegal senior, Boyin Law Firm',
+        'Paralegal senior, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
       intro: [
         'Coordonează programările pentru consultanță și comunicarea pentru clienții din Coreea.',
-        'Sprijină schimbul interregional prin sisteme de documente și fluxuri de lucru, pe fond de informatică.',
+        'Sprijină schimbul interregional prin sisteme de documente și fluxuri de lucru, având formare în informatică.',
       ],
       education: [
         'Licență (B.S.) în informatică, National Cheng Kung University',
@@ -2651,7 +2651,7 @@ export const guidanceTeamBios: Record<
     'huang-shengping': {
       intro: [
         'A absolvit programele de licență și de master în contabilitate la National Chengchi University și conduce acum un cabinet de contabilitate.',
-        'Sprijină analiza integrată a riscurilor juridice, fiscale și financiare pentru clienții companii.',
+        'Sprijină analiza integrată a riscurilor juridice, fiscale și financiare pentru clienții persoane juridice.',
       ],
       education: [
         'Master (M.A.) în contabilitate, National Chengchi University',

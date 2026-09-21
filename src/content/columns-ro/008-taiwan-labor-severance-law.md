@@ -1,5 +1,5 @@
 ---
-title: "Dreptul muncii din Taiwan: este cu adevărat greu de obținut indemnizația de concediere în Taiwan??"
+title: "Dreptul muncii din Taiwan: este chiar atât de greu de obținut indemnizația de concediere?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
 lastmod: "2026-09-10"
 date_display: "13 septembrie 2025"
@@ -9,14 +9,14 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "În Taiwan, salariații primesc o indemnizație de concediere dacă demisionează ei înșiși?"
-    a: "Nu. Spre deosebire de Coreea, în Taiwan obligația de a plăti indemnizația de concediere (資遣費) se naște numai când societatea concediază persoana angajată; dacă persoana angajată demisionează ea însăși, societatea nu trebuie să plătească indemnizație de concediere."
+    a: "Nu. Spre deosebire de unele state — de exemplu Coreea —, în Taiwan obligația de a plăti indemnizația de concediere (資遣費) se naște numai când societatea concediază persoana angajată; dacă persoana angajată demisionează ea însăși, societatea nu trebuie să plătească indemnizație de concediere."
   - q: "Societatea trebuie să plătească o indemnizație de concediere și în caz de concediere disciplinară?"
     a: "Nu. Dacă persoana angajată săvârșește un act ilicit, încalcă regulamentul intern sau lipsește fără motiv legitim 3 zile la rând (art. 12 din legea privind normele muncii, 勞動基準法第12條), societatea poate concedia fără preaviz și nu trebuie să plătească indemnizație de concediere. În schimb, o concediere economică (art. 11) cere un preaviz prealabil și plata indemnizației de concediere."
   - q: "Cum se calculează indemnizația de concediere în Taiwan?"
     a: "Pentru fiecare 1 an de vechime împlinit, angajatorul trebuie să plătească 0,5 luni de salariu mediu ca indemnizație de concediere, cel mult 6 luni de salariu. Această formulă se aplică vechimii căreia i se aplică art. 12 din regulamentul privind pensia de pensionare a lucrătorilor (勞工退休金條例); pentru vechimea căreia i se aplică art. 17 din legea privind normele muncii (勞動基準法), se plătește 1 lună de salariu mediu pe 1 an, fără plafon."
 ---
 
-# Dreptul muncii din Taiwan: este cu adevărat greu de obținut indemnizația de concediere în Taiwan??
+# Dreptul muncii din Taiwan: este chiar atât de greu de obținut indemnizația de concediere?
 
 ![Imagine principală](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
@@ -28,9 +28,9 @@ Astăzi aș dori să vorbesc cu dumneavoastră despre indemnizația de concedier
 
 Mulți dintre dumneavoastră știți deja acest lucru.
 
-În Coreea, societatea trebuie să plătească o indemnizație de plecare când salariații părăsesc întreprinderea
+Prin comparație cu unele state — Coreea fiind un exemplu —, acolo societatea trebuie de regulă să plătească o indemnizație atunci când salariatul pleacă din întreprindere.
 
-În Taiwan, totuși, este diferit de Coreea:
+În Taiwan însă lucrurile stau altfel:
 
 Obligația de a plăti indemnizația de concediere se naște numai când societatea concediază persoana angajată.
 
@@ -58,7 +58,7 @@ Vă rezum aceasta într-un tablou simplu.
 | Preaviz prealabil | Cerut | Necerut | Cerut |
 | Dificultate | Simplă | Dificilă | Simplă |
 | Dacă societatea trebuie să plătească indemnizația de concediere (資遣費) | Cerut | Necerut | Necerut |
-|  | Legea taiwaneză privind normele muncii, art. 11 (勞動基準法第11條): În afară de cazul în care se produce unul dintre cazurile următoare, angajatorul nu poate pune capăt contractului de muncă, chiar după înștiințarea prealabilă a persoanei angajate.  1. Încetarea activității (歇業) sau cesiunea de întreprindere (轉讓)  2. Pierderi (虧損) sau contracția activității (業務緊縮)  3. Un caz de forță majoră cere o întrerupere a activității de 1 lună sau mai mult  4. Natura activității cere o reducere de personal, iar persoana concediată nu poate fi mutată la un alt post potrivit  5. O persoană angajată determinată nu poate îndeplini în mod satisfăcător munca cerută de post | Legea taiwaneză privind normele muncii, art. 12 (勞動基準法第12條): Angajatorul poate concedia fără înștiințare prealabilă dacă persoana angajată cade în unul dintre cazurile următoare.  1. Care, la încheierea contractului de muncă, face declarații inexacte, induce în eroare angajatorul și face să existe un risc de prejudiciu pentru întreprindere  2. Care exercită violențe sau insultă grav angajatorul, familia sa, reprezentantul său (代理人) sau alți colegi  3. Care a fost condamnat definitiv la o pedeapsă cu închisoarea pe durată determinată (有期徒刑) sau la o pedeapsă mai grea, fără ca sursisul (緩刑) să fi fost pronunțat și fără ca convertirea în amendă (易科罰金) să fi fost autorizată  4. Încălcare gravă a contractului de muncă sau a regulilor de muncă  5. Care consumă intenționat mașini, unelte, materii prime, produse sau alte bunuri ale angajatorului, sau dezvăluie intenționat secrete tehnice și comerciale ale angajatorului, și cauzează un prejudiciu angajatorului  6. Absență nejustificată (曠工) fără motiv legitim timp de 3 zile consecutive, sau timp de 6 zile sau mai mult într-o lună |  |
+|  | Legea taiwaneză privind normele muncii, art. 11 (勞動基準法第11條): În afară de cazul în care se produce unul dintre cazurile următoare, angajatorul nu poate pune capăt contractului de muncă, chiar după înștiințarea prealabilă a persoanei angajate.  1. Încetarea activității (歇業) sau cesiunea de întreprindere (轉讓)  2. Pierderi (虧損) sau contracția activității (業務緊縮)  3. Un caz de forță majoră cere o întrerupere a activității de 1 lună sau mai mult  4. Natura activității cere o reducere de personal, iar persoana concediată nu poate fi mutată la un alt post potrivit  5. O persoană angajată determinată nu poate îndeplini în mod satisfăcător munca cerută de post | Legea taiwaneză privind normele muncii, art. 12 (勞動基準法第12條): Angajatorul poate concedia fără înștiințare prealabilă dacă persoana angajată cade în unul dintre cazurile următoare.  1. Care, la încheierea contractului de muncă, face declarații inexacte, induce în eroare angajatorul și face să existe un risc de prejudiciu pentru întreprindere  2. Care exercită violențe sau insultă grav angajatorul, familia sa, reprezentantul său (代理人) sau alți colegi  3. Care a fost condamnat definitiv la o pedeapsă cu închisoarea pe durată determinată (有期徒刑) sau la o pedeapsă mai grea, fără ca suspendarea executării pedepsei (緩刑) să fi fost dispusă și fără ca convertirea în amendă (易科罰金) să fi fost autorizată  4. Încălcare gravă a contractului de muncă sau a regulilor de muncă  5. Care consumă intenționat mașini, unelte, materii prime, produse sau alte bunuri ale angajatorului, sau dezvăluie intenționat secrete tehnice și comerciale ale angajatorului, și cauzează un prejudiciu angajatorului  6. Absență nejustificată (曠工) fără motiv legitim timp de 3 zile consecutive, sau timp de 6 zile sau mai mult într-o lună |  |
 
 > În Taiwan, pentru fiecare 1 an de vechime (年資) împlinit,
 > angajatorul trebuie să plătească 0,5 luni de salariu mediu (平均工資) ca indemnizație de concediere.
@@ -92,7 +92,7 @@ iar noua conducere a început, de la preluarea funcțiilor,
 
 pentru a reduce costurile de personal,
 
-să cheme pe rând salariații bine plătiți și vechi la interviuri
+să cheme pe rând la discuții salariații vechi și bine plătiți.
 
 La acea vreme, partea mea, domnul B, era angajată de mai bine de 10 ani la societatea A
 
@@ -118,7 +118,7 @@ Altfel, B ar trebui să părăsească societatea;
 
 i-a dat lui B o foaie A4
 
-și i-a indicat să scrie: «Eu, OOO, îmi scad de bunăvoie postul și salariul»
+și i-a indicat să scrie: „Eu, OOO, îmi scad de bunăvoie postul și salariul”
 
 ca conținut.
 
@@ -172,9 +172,9 @@ B a, în ziua în care s-a prezentat la interviu,
 
 și a putut dovedi că nu demisionase el însuși.
 
-De aceea a putut, mai târziu, cu ajutorul unei avocate,
+De aceea a putut, mai târziu, cu asistență juridică,
 
-să primească o indemnizație de concediere ridicată,
+să își stabilească dreptul la indemnizația de concediere prevăzut de lege,
 
 în timp ce ceilalți salariați plecați nu au avut atâta noroc.
 
@@ -210,13 +210,13 @@ sau mută salariații la posturi ciudate,
 
 Dacă lucrați în Taiwan,
 
-indemnizația de concediere este mai greu de obținut decât se crede
+indemnizația de concediere este mai greu de obținut decât se crede.
 
 Nu tranzacționați ușor cu societatea
 
 și vegheați ca societatea să nu vă concedieze în mod nepotrivit
 
-nici să nu vă împingă să demisionați voi înșivă
+nici să nu vă împingă să demisionați.
 
 Indemnizația de concediere este un drept legal al persoanei angajate,
 
@@ -227,6 +227,6 @@ iar societatea trebuie evident să o plătească.
 ---
 
 > Vezi și:
-> - [Cum se stabilesc întinderea lucrării și costurile](/ro/pricing)
+> - [Cum se stabilesc obiectul mandatului și onorariile](/ro/pricing)
 > - [Echipa internațională Hovering](/ro/lawyers)
 > - [Ce cauze tratăm](/ro/services)

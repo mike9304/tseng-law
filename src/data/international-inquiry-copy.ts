@@ -1444,12 +1444,12 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Consultanța se desfășoară în patru limbi: engleză, chineză (中文), japoneză și coreeană.',
     methodConfirmationNotice:
-      'Dacă nu puteți folosi niciuna dintre cele patru limbi, alegeți «Calea de comunicare trebuie confirmată». Răspundem pentru a examina o cale practicabilă de comunicare, dacă există; o prestație în altă limbă nu este garantată, iar un termen de răspuns nu se promite.',
+      'Dacă nu puteți folosi niciuna dintre cele patru limbi, alegeți „Calea de comunicare trebuie confirmată”. Vă putem scrie pentru a vedea dacă există o cale de comunicare pe care o putem folosi; o prestație în altă limbă nu este garantată, iar un termen de răspuns nu se promite.',
     preparationNotice:
       'Puteți scrie rezumatul în limba dumneavoastră. Textul original se păstrează așa cum l-ați scris și nu este tradus automat.',
     heading: 'Trimiteți o solicitare',
     intro:
-      'Descrieți pe scurt cazul dumneavoastră. O avocată sau un avocat examinează conținutul înainte de a se trece la pasul următor.',
+      'Descrieți pe scurt cazul dumneavoastră. Un avocat examinează conținutul înainte de a se trece la pasul următor.',
     submitLabel: 'Trimiteți solicitarea',
     submittingLabel: 'Se trimite…',
     successMessage:

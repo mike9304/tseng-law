@@ -29,9 +29,9 @@ Art. 185-4 din Codul penal al Taiwanului (刑法) reglementează răspunderea pe
 
 ## Q2. Ce probe trebuie păstrate mai întâi?
 
-Asigurați mai întâi siguranța personală și semnalele de avertizare; dacă există răniți sau o nevoie de salvare, apelați 119, iar dacă există o infracțiune sau o situație de siguranță urgentă, 110 sau 112. Efectuați și semnalarea la poliție după împrejurările accidentului de circulație.
+Asigurați mai întâi siguranța personală și semnalele de avertizare; dacă există răniți sau este nevoie de salvare, apelați în Taiwan 119 (ambulanță și pompieri), iar dacă este vorba despre o infracțiune sau despre un pericol imediat, 110 (poliția) sau 112 de pe telefonul mobil. Efectuați și semnalarea la poliție după împrejurările accidentului de circulație.
 
-Odată siguranța asigurată, faceți fotografii de ansamblu și de detaliu pentru a înregistra poziția și daunele vehiculelor, marcajele rutiere, semafoarele și condițiile meteorologice. Convine să nu se omită datele de contact ale martorilor, cererea de conservare a imaginilor CCTV (監視器影像) și a camerei de bord (行車紀錄器), datele părților, ale vehiculului și ale asigurării, și dosarul medical (病歷). Fotografiile personale sunt utile, dar nu se substituie intervenției poliției cerute în caz de accident cu răniți sau deces.
+Odată siguranța asigurată, faceți fotografii de ansamblu și de detaliu pentru a înregistra poziția și daunele vehiculelor, marcajele rutiere, semafoarele și condițiile meteorologice. Nu omiteți datele de contact ale martorilor, cererea de conservare a imaginilor CCTV (監視器影像) și a camerei de bord (行車紀錄器), datele părților, ale vehiculului și ale asigurării, și dosarul medical (病歷). Fotografiile personale sunt utile, dar nu se substituie intervenției poliției cerute în caz de accident cu răniți sau deces.
 
 Cât la documentele de poliție, la locul accidentului puteți primi talonul de înregistrare a părților la accidentul de circulație (道路交通事故當事人登記聯單). După 7 zile de la data accidentului, schița și fotografiile locului (現場圖 / 現場照片) pot fi cerute; după 30 de zile de la data accidentului, tabloul de analiză preliminară a accidentului de circulație (道路交通事故初步分析研判表) poate fi cerut. Momentul de eliberare și condițiile de cerere trebuie confirmate din nou la autoritatea de poliție competentă.
 
@@ -41,7 +41,7 @@ Art. 284 din Codul penal reglementează leziunile din imprudență (過失傷害
 
 În materie de despăgubire civilă a daunelor (損害賠償), potrivit art. 197 din Codul civil al Taiwanului (民法) revendicarea nu mai este posibilă odată scurse 2 ani de la ziua în care dauna și debitorul despăgubirii au fost cunoscute, sau 10 ani de la ziua actului ilicit. Ce fapte influențează prescripția (消滅時效) trebuie examinat separat.
 
-Oricine suferă o daună din cauza unei infracțiuni poate, potrivit art. 487 din Codul de procedură penală, forma o acțiune civilă accesorie instanței penale (刑事附帶民事訴訟). Cât timp instanța penală este în curs, această acțiune poate fi formată până înainte de închiderea dezbaterilor orale (言詞辯論終結) ale instanței 2, potrivit art. 488 din Codul de procedură penală, dar nu poate fi formată după închiderea dezbaterilor orale ale instanței 1 și înainte de interpunerea căii de atac. În general, plata unor cheltuieli de judecată (裁判費) distincte poate fi evitată, dar nu toate rezultatele se încheie fără cost. De exemplu, dacă cauza penală este respinsă și, la cererea reclamantului, trimisă tribunalului civil, potrivit art. 503 din Codul de procedură penală cheltuielile pot fi impuse, și trebuie verificate și regulile de trimitere și de procedură ale art. 504.
+Oricine suferă o daună din cauza unei infracțiuni poate, potrivit art. 487 din Codul de procedură penală, introduce o acțiune civilă alăturată procesului penal (刑事附帶民事訴訟). Cât timp instanța penală este în curs, această acțiune poate fi introdusă până înainte de închiderea dezbaterilor orale (言詞辯論終結) din apel, potrivit art. 488 din Codul de procedură penală, dar nu poate fi introdusă după închiderea dezbaterilor orale ale primei instanțe și înainte de interpunerea căii de atac. În general, plata unor cheltuieli de judecată (裁判費) distincte poate fi evitată, dar nu toate rezultatele se încheie fără cost. De exemplu, dacă cauza penală este respinsă și, la cererea reclamantului, trimisă tribunalului civil, potrivit art. 503 din Codul de procedură penală cheltuielile pot fi impuse, și trebuie verificate și regulile de trimitere și de procedură ale art. 504.
 
 Alegerea variază după întreruperea prescripției (時效中斷), cercul pârâților, probele, asigurarea și competența. Nu există deci o procedură uniform preferabilă pentru toate cauzele.
 
@@ -51,15 +51,15 @@ Răspunderea penală nu poate fi reținută decât când sunt recunoscute încă
 
 Pe plan civil, potrivit art. 217 din Codul civil, dacă persoana vătămată are o vină care a contribuit la cauzarea sau agravarea daunei (與有過失), tribunalul poate reduce sau scuti despăgubirea. De exemplu, dacă dauna recunoscută în noul dolar taiwanez (新臺幣, TWD) este TWD 1.000.000 și vina persoanei vătămate este evaluată la 50 %, suma poate fi redusă la TWD 500.000 înainte de alte ajustări.
 
-Expertiza (鑑定) sau tabloul de analiză preliminară pot fi piese importante, dar ele nu leagă tribunalul în mod mecanic. Tribunalul examinează ansamblul probelor, inclusiv declarațiile, imaginile și starea vehiculelor.
+Expertiza (鑑定) sau tabloul de analiză preliminară pot fi documente importante, dar ele nu leagă tribunalul în mod mecanic. Tribunalul examinează ansamblul probelor, inclusiv declarațiile, imaginile și starea vehiculelor.
 
 ## Q5. Ce trebuie inclus în actul de tranzacție?
 
-În actul de tranzacție (和解書) convine să se individualizeze data, locul și părțile accidentului și să se consemneze suma și momentul plății, tratarea prestațiilor de asigurare, revendicările incluse și cele rezervate. Trebuie de asemenea fixat clar tratamentul viitor, leziunile descoperite mai târziu, predarea documentelor precum certificatul medical (診斷證明書) și raportul dintre plată și desistarea de la plângere.
+În actul de tranzacție (和解書) este indicat să se individualizeze data, locul și părțile accidentului și să se consemneze suma și momentul plății, tratarea prestațiilor de asigurare, revendicările incluse și cele rezervate. Trebuie de asemenea fixat clar tratamentul viitor, leziunile descoperite mai târziu, predarea documentelor precum certificatul medical (診斷證明書) și raportul dintre plată și desistarea de la plângere.
 
 Tranzacția (和解) din art. 736 al Codului civil este un contract în care părțile cedează reciproc pentru a pune capăt unui litigiu sau a-l evita. Potrivit art. 737 din Codul civil, întinderea în care drepturile se sting se apreciază de asemenea numai în limitele a ceea ce a fost abandonat în actul de tranzacție. Nu trebuie deci afirmat, fără a examina textul, că toate revendicările viitoare dispar.
 
-Dacă este vorba de o infracțiune urmărită la plângere, potrivit art. 238 din Codul de procedură penală plângerea poate fi retrasă până înainte de închiderea dezbaterilor orale ale instanței 1, și odată retrasă nu poate fi depusă din nou. Totuși, într-o infracțiune care nu este urmărită la plângere, acuzarea nu ia sfârșit automat printr-o tranzacție privată, iar faptul de a fi tranzacționat nu obligă întotdeauna la desistarea de la plângere.
+Dacă este vorba de o infracțiune urmărită la plângere, potrivit art. 238 din Codul de procedură penală plângerea poate fi retrasă până înainte de închiderea dezbaterilor orale ale primei instanțe, și odată retrasă nu poate fi depusă din nou. Totuși, într-o infracțiune care nu este urmărită la plângere, acuzarea nu ia sfârșit automat printr-o tranzacție privată, iar faptul de a fi tranzacționat nu obligă întotdeauna la desistarea de la plângere.
 
 ### Temeiuri oficiale ale Q1–Q5
 
@@ -83,31 +83,31 @@ Dacă este vorba de o infracțiune urmărită la plângere, potrivit art. 238 di
 
 ## Q6. Cum se determină răspunderea accidentului?
 
-Tabloul de analiză preliminară a accidentului de circulație întocmit de poliție este o analiză prealabilă întemeiată pe piesele locului. Nu este o judecată, nu leagă tribunalul și nu fixează proporția de vină (過失比例). Cum piesele necesare și întinderea controversei variază după accident, acest tablou, expertiza legală și reexaminarea (覆議) nu sunt nici o procedură automată, nici o etapă obligatorie.
+Tabloul de analiză preliminară a accidentului de circulație întocmit de poliție este o analiză prealabilă întemeiată pe documentele locului. Nu este o judecată, nu leagă tribunalul și nu fixează proporția de vină (過失比例). Cum documentele necesare și întinderea controversei variază după accident, acest tablou, expertiza legală și reexaminarea (覆議) nu sunt nici o procedură automată, nici o etapă obligatorie.
 
-Potrivit regulilor aplicabile, partea legitimată poate cere o expertiză de accident de vehicule (車輛行車事故鑑定); organul care instruiește cauza o poate transmite, iar autoritatea judiciară o poate comanda. Cererea părții se prezintă, în general, în 6 luni de la data accidentului; în cauzele deja în anchetă sau în judecată, expertiza se desfășoară prin comandă a autorității judiciare, nu printr-o nouă cerere directă.
+Potrivit regulilor aplicabile, partea legitimată poate cere o expertiză de accident de vehicule (車輛行車事故鑑定); organul care instrumentează cauza o poate transmite, iar autoritatea judiciară o poate comanda. Cererea părții se prezintă, în general, în 6 luni de la data accidentului; în cauzele deja în anchetă sau în judecată, expertiza se desfășoară prin comandă a autorității judiciare, nu printr-o nouă cerere directă.
 
-În caz de dezacord cu avizul de expertiză, o reexaminare poate fi cerută, dar reexaminarea se limitează la o unică dată. Avizul de expertiză și cel de reexaminare sunt o probă sau o piesă de referință, iar tribunalul apreciază în mod independent ansamblul dosarului, inclusiv declarațiile, imaginile și procesele-verbale ale locului.
+În caz de dezacord cu avizul de expertiză, o reexaminare poate fi cerută, dar reexaminarea se limitează la o unică dată. Avizul de expertiză și cel de reexaminare sunt o probă sau un element de referință, iar tribunalul apreciază în mod independent ansamblul dosarului, inclusiv declarațiile, imaginile și procesele-verbale ale locului.
 
 ## Q7. Ce daune pot fi revendicate după accident?
 
-Revendicarea întemeiată pe art. 184 din Codul civil presupune o atingere ilicită a unui drept, legătura de cauzalitate cu accidentul și proba daunei. Singurul fapt că un accident a survenit nu implică faptul că toate posturile următoare sunt recunoscute. Art. 216 din Codul civil este criteriul pentru a determina întinderea daunei efective și a câștigului nerealizat (所失利益).
+Revendicarea întemeiată pe art. 184 din Codul civil presupune o atingere ilicită a unui drept, legătura de cauzalitate cu accidentul și proba daunei. Singurul fapt că un accident a survenit nu implică faptul că toate capetele de cerere următoare sunt recunoscute. Art. 216 din Codul civil este criteriul pentru a determina întinderea daunei efective și a câștigului nerealizat (所失利益).
 
 - **Răni**: Potrivit art. 193 din Codul civil pot fi examinate cheltuielile medicale (醫療費用) necesare, cheltuielile suplimentare ale vieții zilnice precum cheltuielile de îngrijire (看護費用), de transport pentru tratament (就醫交通費) și de ajutoare tehnice, precum și pierderea de venituri (收入損失) prin incapacitatea de muncă reală și diminuarea capacității de muncă (勞動能力減損). Potrivit art. 195 din Codul civil prejudiciul moral poate de asemenea fi examinat.
 - **Deces**: Potrivit art. 192 din Codul civil, când este cazul, pot fi examinate cheltuielile medicale anterioare decesului și cheltuielile de nevoi vitale sporite, cheltuielile funerare (殯葬費) și pierderea de alimente (扶養利益損失) a persoanei care avea un drept legal la alimente. Potrivit art. 194 din Codul civil prejudiciul moral al anumitor părinți poate de asemenea fi examinat.
-- **Patrimoniu**: Potrivit art. 196 din Codul civil poate fi revendicat dauna patrimonială efectivă justificată, inclusiv cheltuielile de reparare a vehiculului sau pierderea de valoare.
+- **Patrimoniu**: Potrivit art. 196 din Codul civil poate fi cerută dauna patrimonială efectivă, dacă este dovedită, inclusiv cheltuielile de reparare a vehiculului sau pierderea de valoare.
 
-## Q8. Dacă tratamentul continuă, cum se prezintă piesele de cheltuieli medicale?
+## Q8. Dacă tratamentul continuă, cum se prezintă documentele de cheltuieli medicale?
 
-Păstrați chitanțele (收據), certificatele medicale și dosarul medical, și organizați cu ele necesitatea medicală a fiecărui tratament și legătura sa de cauzalitate cu accidentul. Piesele unui tratament care continuă pot completa proba după calendarul procedural al tribunalului și conținutul revendicării deja prezentate, dar aceasta nu asigură că toate piesele prezentate tardiv sau orice extindere a revendicării sunt admise sau autorizate.
+Păstrați chitanțele (收據), certificatele medicale și dosarul medical, și organizați cu ele necesitatea medicală a fiecărui tratament și legătura sa de cauzalitate cu accidentul. Documentele unui tratament care continuă pot completa proba după calendarul procedural al tribunalului și conținutul revendicării deja prezentate, dar aceasta nu asigură că toate documentele prezentate tardiv sau orice extindere a revendicării sunt admise sau autorizate.
 
-Trebuie distins adăugarea de piese medicale de modificarea sau creșterea sumei revendicate. După ce s-a format o acțiune civilă accesorie instanței penale, singurul fapt de a prezenta mai multe chitanțe medicale nu generează automat cheltuieli de judecată.
+Trebuie distins adăugarea de documente medicale de modificarea sau creșterea sumei revendicate. După ce s-a format o acțiune civilă accesorie instanței penale, singurul fapt de a prezenta mai multe chitanțe medicale nu generează automat cheltuieli de judecată.
 
 Totuși, potrivit art. 504 din Codul de procedură penală, odată cauza trimisă secției civile, a modifica, a adăuga sau a extinde revendicarea dincolo de întinderea anterioară trimiterii poate pune chestiunea cheltuielilor asupra părții excedente. Faza de trimitere, momentul de prezentare și întinderea revendicării trebuie verificate în fiecare cauză.
 
 ## Q9. Prin ce se dovedesc cheltuielile de îngrijire profesională și cele de îngrijire de către apropiați?
 
-Certificatul medical sau avizul medical sunt utile pentru a arăta necesitatea de îngrijiri, dar nu sunt prin ele însele un temei decisiv. Trebuie explicat prin piese legătura de cauzalitate cu accidentul, necesitatea de îngrijiri, dacă au fost efectiv furnizate, durata și o sumă rezonabilă.
+Certificatul medical sau avizul medical sunt utile pentru a arăta necesitatea de îngrijiri, dar nu sunt prin ele însele un temei decisiv. Trebuie explicat prin documente legătura de cauzalitate cu accidentul, necesitatea de îngrijiri, dacă au fost efectiv furnizate, durata și o sumă rezonabilă.
 
 Chiar dacă un apropiat a furnizat efectiv îngrijirile fără remunerație, în cauza potrivită aceasta poate fi evaluată ca o daună. Totuși, singura împrejurare că îngrijirile sunt furnizate de un apropiat nu implică recunoașterea lor automată; conținutul și durata îngrijirilor, precum și nivelul obișnuit de cost, sunt de asemenea examinate.
 
@@ -115,7 +115,7 @@ Chiar dacă un apropiat a furnizat efectiv îngrijirile fără remunerație, în
 
 Cheltuielile de deplasare se organizează pornind de la legătura dintre registrul de tratament și leziunile legate de accident. Itinerariul, numărul de vizite, datele, mijlocul de transport, tariful, precum și necesitatea și caracterul rezonabil de a folosi acest mijloc, pot fi pertinente pentru apreciere.
 
-Chitanțele, registrele de tarif, registrele de itinerariu și piesele clinice sunt probe posibile. Chitanța de taxi nu este singurul mijloc de probă, iar prezentarea ei nu implică prin ea însăși că este suficientă.
+Chitanțele, registrele de tarif, registrele de itinerariu și documentele clinice sunt probe posibile. Chitanța de taxi nu este singurul mijloc de probă, iar prezentarea ei nu implică prin ea însăși că este suficientă.
 
 ### Temeiuri oficiale ale Q6–Q10
 
@@ -137,15 +137,15 @@ Chitanțele, registrele de tarif, registrele de itinerariu și piesele clinice s
 
 ## Q11. Cum se dovedește pierderea de venituri în timpul perioadei de tratament și de restabilire?
 
-Pierderea de venituri trebuie dovedită prin piese care stabilesc că, din cauza leziunilor legate de accident, munca a fost total sau parțial imposibilă în timpul perioadei de restabilire și că, în urma acesteia, a existat o reducere reală de venituri. Certificatul medical sau recomandarea de odihnă sunt un punct de plecare important, dar prin ele însele nu ajung pentru ca revendicarea să fie recunoscută.
+Pierderea de venituri trebuie dovedită prin documente care stabilesc că, din cauza leziunilor legate de accident, munca a fost total sau parțial imposibilă în timpul perioadei de restabilire și că, în urma acesteia, a existat o reducere reală de venituri. Certificatul medical sau recomandarea de odihnă sunt un punct de plecare important, dar prin ele însele nu ajung pentru ca revendicarea să fie recunoscută.
 
-Convine să se organizeze împreună dosarul medical, registrele de prezență sau de concediu, datele de salariu și de impozite și confirmarea angajatorului. Lucrătorul independent poate prezenta date acordate formei activității sale, precum date de vânzări, registre de operațiuni și declarații fiscale.
+Este indicat să se strângă împreună dosarul medical, registrele de prezență sau de concediu, datele de salariu și de impozite și confirmarea angajatorului. Lucrătorul independent poate prezenta date acordate formei activității sale, precum date de vânzări, registre de operațiuni și declarații fiscale.
 
 Împrejurarea de a fi continuat să lucreze sau de a fi perceput salariul fără variație este pertinentă pentru a aprecia pierderea de venituri a perioadei de restabilire, dar acest fapt prin el însuși nu tranșează automat chestiunea daunei prin diminuarea capacității de muncă. Această împrejurare nu este nici un temei autonom pentru a aprecia dauna prin diminuarea capacității de muncă. Dauna prin diminuarea capacității de muncă se examinează separat la Q12.
 
 ## Q12. Cum se dovedește dauna prin diminuarea capacității de muncă?
 
-Dauna prin diminuarea capacității de muncă se distinge de veniturile efectiv reduse în timpul perioadei de restabilire de la Q11. Potrivit art. 193 și 216 din Codul civil se examinează împreună legătura de cauzalitate cu accidentul, tulburarea funcțională persistentă (持續功能障礙), profesia și aptitudinile persoanei vătămate, veniturile pe care se pot aștepta în mod obișnuit și temeiul și proba relative la perioada de capacitate de muncă.
+Dauna prin diminuarea capacității de muncă se distinge de veniturile efectiv reduse în timpul perioadei de restabilire de la Q11. Potrivit art. 193 și 216 din Codul civil se examinează împreună legătura de cauzalitate cu accidentul, tulburarea funcțională persistentă (持續功能障礙), profesia și aptitudinile persoanei vătămate, veniturile la care se poate aștepta în mod obișnuit și temeiul și proba referitoare la perioada de capacitate de muncă.
 
 Faptul că salariul actual se menține fără variație nu exclude automat revendicarea. Invers, suma daunei nu se fixează nici în mod mecanic numai cu procentul de invaliditate sau cu salariul actual.
 
@@ -171,7 +171,7 @@ Chestiunea împotriva cui se orientează revendicarea civilă trebuie distinsă 
 
 ## Q15. Ce prestații și ce acoperiri ale asigurării auto trebuie verificate?
 
-Obligația de a subscrie potrivit art. 6 din legea asigurării obligatorii de răspundere civilă auto (強制汽車責任保險法) apasă, în principiu, asupra proprietarului vehiculului și, în cazurile prevăzute, și asupra utilizatorului sau administratorului acestui vehicul. Acest regim stabilește o structură de acoperire fără vină (無過失給付制度) pentru persoana rănită sau decedată din cauza unui accident de automobil, dar trebuie verificată întinderea pasagerilor sau a unui terț 3 (第三人) exterior vehiculului pe care o fixează legea.
+Obligația de a subscrie potrivit art. 6 din legea asigurării obligatorii de răspundere civilă auto (強制汽車責任保險法) apasă, în principiu, asupra proprietarului vehiculului și, în cazurile prevăzute, și asupra utilizatorului sau administratorului acestui vehicul. Acest regim stabilește o structură de acoperire fără vină (無過失給付制度) pentru persoana rănită sau decedată din cauza unui accident de automobil, dar trebuie verificată întinderea pasagerilor sau a unui terț (第三人) exterior vehiculului pe care o fixează legea.
 
 Într-un accident al unui singur vehicul, conducătorul acestui vehicul nu este, în general, destinatar al prestațiilor asigurării obligatorii a acestui vehicul. Totuși, într-un accident în care intervin mai multe vehicule, există cazuri în care conducătorul poate revendica prestații de la asigurătorul obligatoriu al unui alt vehicul implicat.
 
@@ -211,7 +211,7 @@ Pentru asigurător, a cheltui TWD 500.000 sau TWD 1.000.000 suplimentare într-o
 
 ​
 
-Un conflict de interese între asigurător și parte poate de asemenea să se ivească, și cum asigurătorul trebuie să instruiească multe cauze, îi este greu să consacre un timp suficient fiecăreia.
+Un conflict de interese între asigurător și parte poate de asemenea să se ivească, și cum asigurătorul trebuie să instrumenteze multe cauze, îi este greu să consacre un timp suficient fiecăreia.
 
 ​
 
@@ -223,7 +223,7 @@ Nu recomand deci să se încredințeze întregul litigiu asigurătorului.
 
 ​
 
-Dacă se încredințează dosarul asigurătorului, trebuie urmărit în mod continuu procesul de instruire și examinate cu grijă documentele ambelor părți.
+Dacă se încredințează dosarul asigurătorului, trebuie urmărit în mod continuu modul în care este instrumentat dosarul și examinate cu grijă documentele ambelor părți.
 
 ​
 
@@ -235,7 +235,7 @@ Q17. Care este răspunderea penală pentru leziuni din imprudență a autorului 
 
 ​
 
-În caz de leziuni din imprudență, tribunalele pronunță în prezent o pedeapsă de aproximativ 3 luni.
+În unele hotărâri pentru leziuni din imprudență s-a pronunțat o pedeapsă de aproximativ 3 luni; nu există un rezultat tipic sau garantat, pedeapsa fiind stabilită de instanță în fiecare cauză.
 
 ​
 
@@ -267,7 +267,7 @@ Leziunile din imprudență și leziunile grave din imprudență sunt o infracți
 
 ​
 
-Poate exista un sursis (緩刑) și să nu se meargă la închisoare.
+Instanța poate dispune suspendarea executării pedepsei (緩刑); aceasta nu este o regulă și nu se promite un asemenea rezultat.
 
 ​
 
@@ -299,15 +299,15 @@ Q20. Cum se caută un avocat pentru un accident de circulație?
 
 ​
 
-Cum accidentele de circulație sunt cauze foarte frecvente, un avocat pledant general care a acumulat câțiva ani de experiență practică poate instrui o cauză de accident de circulație.
+Cum accidentele de circulație sunt cauze foarte frecvente, un avocat pledant general care a acumulat câțiva ani de experiență practică poate instrumenta o cauză de accident de circulație.
 
 ​
 
-Importantul atunci este grija și onestitatea avocatului.
+Important este atunci grija și corectitudinea avocatului.
 
 ​
 
-Importă ca avocatul să examineze cu atenție toate posturile revendicării și să se străduiască ca să fie obținută despăgubirea cea mai ridicată posibil.
+Este important ca avocatul să examineze cu atenție toate capetele cererii și să urmărească despăgubirea pe care faptele și probele o pot susține.
 
 ​
 
@@ -331,7 +331,7 @@ Trebuie să vă feriți de avocatul care umflă cauza și susține că nu trebui
 
 ​
 
-După ce am instruit multe accidente de circulație, doresc să semnalez un punct important.
+După ce am instrumentat multe cauze de accidente de circulație, doresc să semnalez un punct important.
 
 ​
 
@@ -351,7 +351,7 @@ Victima rămâne astfel foarte rănită și se mânie, astfel că nu cedează ad
 
 ​
 
-Acest punct nu trebuie deci absolut neglijat, și convine să consultați o avocată sau un avocat după împrejurări.
+Acest punct nu trebuie deci absolut neglijat, și este indicat să consultați un avocat, după împrejurări.
 
 ​
 
@@ -359,7 +359,7 @@ Acest punct nu trebuie deci absolut neglijat, și convine să consultați o avoc
 
 ​
 
-Dacă aveți alte întrebări, lăsați-le în comentarii.
+Pentru întrebări legate de o cauză concretă folosiți pagina Contact a cabinetului.
 
 ​
 
@@ -368,6 +368,6 @@ Wei Tseng (曾雋崴), avocată din Taiwan.
 ---
 
 > Vezi și:
-> - [Cum se stabilesc întinderea lucrării și costurile](/ro/pricing)
+> - [Cum se stabilesc obiectul mandatului și onorariile](/ro/pricing)
 > - [Echipa internațională Hovering](/ro/lawyers)
 > - [Despre Hovering International Law Firm](/ro/about)

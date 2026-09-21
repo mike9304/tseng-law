@@ -779,7 +779,7 @@ export const guidanceAnswers: Record<
   ro: {
     services: {
       answer:
-        'Cabinetul vede șase grupe potrivit dreptului taiwanez: investiții și înființare de societăți, litigii civile și despăgubiri, căsătorie, familie și succesiuni, muncă, cauze penale și proprietate intelectuală. Întinderea fiecărei cauze se confirmă separat, după ce o avocată sau un avocat a examinat conținutul trimis. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
+        'Cabinetul acoperă șase domenii de practică din dreptul taiwanez: investiții și înființare de societăți, litigii civile și despăgubiri, căsătorie, familie și succesiuni, muncă, cauze penale și proprietate intelectuală. Întinderea fiecărui mandat se confirmă separat, după ce un avocat a examinat conținutul trimis. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
       sources: ['/ro/faq', '/ro/contact'],
     },
     about: {
@@ -789,12 +789,12 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Această pagină arată profilurile avocatelor și avocaților Hovering, ale conducerii operative și ale revizuirii contabile asociate. Avocata Wei Tseng (曾雋崴) este autorizată în Taiwan și este avocata coordonatoare a cabinetului; lucrează cu clienți din Coreea, din Japonia și cu alți clienți internaționali. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
+        'Această pagină arată profilurile avocaților Hovering, ale conducerii operaționale și ale cabinetului de contabilitate asociat. Avocata Wei Tseng (曾雋崴) este autorizată în Taiwan și este avocata coordonatoare a cabinetului; lucrează cu clienți din Coreea, din Japonia și cu alți clienți internaționali. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
       sources: ['/ro/about', '/ro/contact'],
     },
     pricing: {
       answer:
-        'Această pagină nu publică o listă de prețuri. Mai întâi se confirmă întinderea lucrării din rezumatul dumneavoastră, apoi cuantumul și modul de calcul se confirmă cu dumneavoastră înainte ca lucrarea să înceapă. Discuția cu o avocată sau un avocat poate fi cu plată; pe lângă onorariu pot apărea taxe de instanță sau ale autorităților. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
+        'Această pagină nu publică o listă de prețuri. Mai întâi se confirmă obiectul mandatului din rezumatul dumneavoastră, apoi cuantumul onorariului și modul lui de calcul se confirmă cu dumneavoastră înainte ca lucrarea să înceapă. Discuția cu un avocat poate fi contra cost; pe lângă onorariu pot apărea taxe de instanță sau ale autorităților. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
       sources: ['/ro/contact', '/ro/faq'],
     },
     contact: {
@@ -804,7 +804,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Această parte răspunde la întrebări frecvente la nivel de informații generale: cele șase grupe de lucrări, pregătirea înainte de contactare, confirmarea costurilor și înțelesul unui mesaj trimis. Un mesaj trimis așteaptă examinarea, nu este o opinie juridică și nici o programare confirmată, iar prin el însuși nu creează o relație între avocată sau avocat și client. Consultanța se desfășoară în patru limbi: engleză, chineză, japoneză și coreeană.',
+        'Această parte răspunde la întrebări frecvente la nivel de informații generale: cele șase domenii de practică, pregătirea înainte de contactare, confirmarea costurilor și înțelesul unui mesaj trimis. Un mesaj trimis așteaptă examinarea, nu este o opinie juridică și nici o programare confirmată, iar prin el însuși nu creează o relație între avocat și client. Consultanța se desfășoară în patru limbi: engleză, chineză, japoneză și coreeană.',
       sources: ['/ro/services', '/ro/contact'],
     },
   },

@@ -713,7 +713,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
   },
   ro: {
     consultationNotice:
-      'Aceste informații sunt scrise în limba română, dar consultanța cu o avocată sau un avocat se desfășoară numai în engleză, chineză (中文), japoneză și coreeană.',
+      'Aceste informații sunt scrise în limba română, dar consultanța cu un avocat se desfășoară numai în engleză, chineză (中文), japoneză și coreeană.',
     discoveryNotice:
       'Fișierul llms.txt este doar o hartă pentru găsirea paginilor publice; nu promite poziție în căutare, susținere, recomandare din partea inteligenței artificiale și nici vizibilitate.',
     confidentialNotice:

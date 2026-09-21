@@ -14,4 +14,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `fil-a.md`
 - a#4–a#6, a#13, a#14: R2 (neutral, not 'Pilipinas'). a#7: skip. a#8–a#12, a#15: R3. Blog close in 003 Q16–Q20 → R7. 'pangkat' (Tätigkeitsgruppen) → 'larangan ng serbisyo'.
 
 ## Part b
-Apply every P1/P2 row of `fil-b.md` under the same skip rules above.
+Apply every P1/P2 row of `fil-b.md` under the same skip rules above. Additional: b#1 skip (mechanical); b#2 'dayuhang pwersa' → 'dayuhang partido'; b#3, b#6 → R3/R7; b#4, b#7 → 'sa abogada' / 'sa abogada sa Taiwan'; b#5, b#8, b#10 → R7b; b#9 nakaguro → 'Lienchiang (Matsu, 連江／馬祖)'; b#11 'Investment Commission' → 'Kagawaran ng Pagsusuri ng Pamumuhunan (經濟部投資審議司)'; English-dump legal terms → Filipino gloss on first use (litigation representative → 'kinatawan sa paglilitis (訴訟代理人)'); 'pati' stacking → 'at'; emoji/Halimbawa)/ZWSP → R6b/R7.

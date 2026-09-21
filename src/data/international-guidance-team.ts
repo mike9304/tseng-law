@@ -880,32 +880,32 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'huang-shengping': 'רואה חשבון שותף (Partner CPA)',
     },
   },
-  bn: { // SCAFFOLD(hi)
-    label: 'हमारी टीम',
-    title: 'Hovering की अंतरराष्ट्रीय टीम',
+  bn: {
+    label: 'দল',
+    title: 'Hovering-এর আন্তর্জাতিক দল',
     description:
-      'Hovering के अधिवक्ताओं, संचालन प्रबंधन और साझेदार लेखाकार की प्रोफ़ाइलें।',
-    representativeTitle: 'प्रबंध अधिवक्ता',
-    teamTitle: 'अधिवक्ता और सहयोगी',
-    partnerTitle: 'साझेदार लेखाकार',
-    introLabel: 'परिचय',
-    educationLabel: 'शिक्षा',
-    experienceLabel: 'अनुभव',
-    photoAltPrefix: 'फ़ोटो',
-    workingLanguagesLabel: 'कार्य भाषाएँ',
-    fullProfileLabel: 'पूर्ण प्रोफ़ाइल (अंग्रेज़ी में)',
-    keyFactsHeading: 'अधिवक्ता Wei Tseng — मुख्य तथ्य',
-    qualificationLabel: 'योग्यता और कार्यालय',
+      'Hovering-এর আইনজীবী, পরিচালনা ব্যবস্থাপনা ও অংশীদার হিসাবরক্ষকের পরিচিতি।',
+    representativeTitle: 'প্রধান আইনজীবী',
+    teamTitle: 'আইনজীবী ও সহকর্মী',
+    partnerTitle: 'অংশীদার হিসাবরক্ষক',
+    introLabel: 'পরিচিতি',
+    educationLabel: 'শিক্ষা',
+    experienceLabel: 'অভিজ্ঞতা',
+    photoAltPrefix: 'ছবি',
+    workingLanguagesLabel: 'কর্ম ভাষা',
+    fullProfileLabel: 'পূর্ণ পরিচিতি (ইংরেজিতে)',
+    keyFactsHeading: 'আইনজীবী Wei Tseng — মূল তথ্য',
+    qualificationLabel: 'যোগ্যতা ও কার্যালয়',
     qualificationSentence:
-      '{name} ताइवान में व्यवसाय करने के लिए अधिकृत हैं और {firm} की प्रबंध अधिवक्ता हैं।',
-    practiceLabel: 'मुख्य क्षेत्र',
-    consultationLanguagesLabel: 'परामर्श भाषाएँ',
+      '{name} তাইওয়ানে আইনপেশা চর্চার অনুমতিপ্রাপ্ত এবং {firm}-এর প্রধান আইনজীবী।',
+    practiceLabel: 'প্রধান ক্ষেত্র',
+    consultationLanguagesLabel: 'পরামর্শের ভাষা',
     roles: {
-      'tseng-junwei': 'ताइवान में प्रबंध अधिवक्ता (Managing Attorney)',
-      'chang-rongxuan': 'ताइवान अधिवक्ता (Taiwan Attorney)',
+      'tseng-junwei': 'তাইওয়ানে প্রধান আইনজীবী (Managing Attorney)',
+      'chang-rongxuan': 'তাইওয়ানের আইনজীবী (Taiwan Attorney)',
       'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'कोरिया संचालन प्रबंधन (Korea Operations Manager)',
-      'huang-shengping': 'साझेदार लेखाकार (Partner CPA)',
+      'son-jungmin': 'কোরিয়া পরিচালনা ব্যবস্থাপক (Korea Operations Manager)',
+      'huang-shengping': 'অংশীদার হিসাবরক্ষক (Partner CPA)',
     },
   },
   ur: {
@@ -1423,7 +1423,7 @@ export const guidanceLanguageNames: Record<GuidanceLocale, Record<string, string
   uk: { Korean: 'корейська', Chinese: 'китайська', Japanese: 'японська' },
   el: { Korean: 'κορεατικά', Chinese: 'κινεζικά', Japanese: 'ιαπωνικά' },
   he: { Korean: 'קוריאנית', Chinese: 'סינית', Japanese: 'יפנית' },
-  bn: { Korean: 'कोरियाई', Chinese: 'चीनी', Japanese: 'जापानी' }, // SCAFFOLD(hi)
+  bn: { Korean: 'কোরীয়', Chinese: 'চীনা', Japanese: 'জাপানি' },
   ur: { Korean: 'کوریائی', Chinese: 'چینی', Japanese: 'جاپانی' },
   fa: { Korean: 'کره‌ای', Chinese: 'چینی', Japanese: 'ژاپنی' },
   my: { Korean: 'ภาษาเกาหลี', Chinese: 'ภาษาจีน', Japanese: 'ภาษาญี่ปุ่น' }, // SCAFFOLD(th)
@@ -1679,13 +1679,13 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Visa and residency': 'אשרה ושהייה',
     'Family and labor disputes': 'סכסוכי משפחה ועבודה',
   },
-  bn: { // SCAFFOLD(hi)
-    'Taiwan company setup': 'ताइवान में कंपनी स्थापना',
-    'Taiwan investment counsel': 'ताइवान निवेश के लिए कानूनी सलाह',
-    'Civil litigation and damages': 'दीवानी मुकदमे और हर्जाना',
-    'Trademark and patent filings': 'व्यापार चिह्न और पेटेंट आवेदन',
-    'Visa and residency': 'वीज़ा और निवास',
-    'Family and labor disputes': 'परिवार और श्रम विवाद',
+  bn: {
+    'Taiwan company setup': 'তাইওয়ানে কোম্পানি গঠন',
+    'Taiwan investment counsel': 'তাইওয়ান বিনিয়োগের আইনি পরামর্শ',
+    'Civil litigation and damages': 'দেওয়ানি মামলা ও ক্ষতিপূরণ',
+    'Trademark and patent filings': 'ট্রেডমার্ক ও পেটেন্ট আবেদন',
+    'Visa and residency': 'ভিসা ও অবস্থান',
+    'Family and labor disputes': 'পরিবার ও শ্রম বিরোধ',
   },
   ur: {
     'Taiwan company setup': 'تائیوان میں کمپنی کا قیام',
@@ -3535,16 +3535,16 @@ export const guidanceTeamBios: Record<
       ],
     },
   },
-  bn: { // SCAFFOLD(hi)
+  bn: {
     'tseng-junwei': {
       intro: [
-        'कार्यालय ताइवान में उद्यमों और व्यक्तियों के मामलों का अंग्रेज़ी, जापानी, कोरियाई और चीनी में कार्य करता है।',
-        'उन्होंने जिम में लगी चोट के हर्जाने के एक दावे में कोरियाई छात्र का प्रतिनिधित्व किया और प्रथम दृष्टया न्यायालय (निचली अदालत) से TWD 1,570,000 का निर्णय दिलाया।',
+        'কার্যালয় তাইওয়ানে উদ্যোগ ও ব্যক্তিগত বিষয়ে ইংরেজি, জাপানি, কোরীয় ও চীনায় কাজ করে।',
+        'তিনি জিমে আঘাতজনিত ক্ষতিপূরণের দাবিতে একজন কোরীয় শিক্ষার্থীর প্রতিনিধিত্ব করেছেন এবং প্রথম ধাপের আদালত থেকে TWD 1.57M রায় আদায় করেছেন।',
       ],
       education: [
-        'स्नातकोत्तर (M.S.), Institute of Finance, National Taiwan University',
-        'स्नातक (B.A.) विधि और वित्त के दोहरे पथ के साथ, National Chengchi University',
-        'Kobe University और Waseda University में विनिमय छात्रा',
+        'স্নাতকোত্তর (M.S.), Institute of Finance, National Taiwan University',
+        'স্নাতক (B.A.) আইন ও অর্থায়নের দ্বৈত পথে, National Chengchi University',
+        'Kobe University ও Waseda University-এ বিনিময় ছাত্রী',
       ],
       experience: [
         'Trend Law Office',
@@ -3554,21 +3554,21 @@ export const guidanceTeamBios: Record<
     },
     'chang-rongxuan': {
       intro: [
-        'पहले Ministry of Education, Legal Affairs Division में, प्रशासनिक और दीवानी मामलों पर ध्यान के साथ।',
-        'विश्वविद्यालयों, शिक्षण कर्मचारियों के अधिकारों और प्रशासनिक अपीलों से जुड़े मामलों का अनुभव।',
+        'আগে Ministry of Education, Legal Affairs Division-এ, প্রশাসনিক ও দেওয়ানি বিষয়ে মন দিয়ে।',
+        'বিশ্ববিদ্যালয়, শিক্ষকদের অধিকার এবং প্রশাসনিক আপিল-সংক্রান্ত বিষয়ের অভিজ্ঞতা।',
       ],
-      education: ['विधि स्नातक (LL.B.), National Chung Hsing University'],
+      education: ['আইন স্নাতক (LL.B.), National Chung Hsing University'],
       experience: [
         'Ministry of Education, Legal Affairs Division',
-        'अधिवक्ता, Hovering International Law Firm',
+        'আইনজীবী, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal जिन्होंने कई कार्यालयों में वरिष्ठ paralegal के रूप में लंबे समय तक कार्य किया, प्रक्रिया सहायता, कंपनी विधि और विदेशी निवेश के लिए उत्तरदायी।',
-        'कार्यवाही, कंपनी स्थापना, विदेशी निवेश अनुमति, लाइसेंस आवेदन तथा कोरिया और ताइवान के बीच आदान-प्रदान में सहायता।',
+        'Paralegal যিনি বেশ কয়েকটি কার্যালয়ে সিনিয়র paralegal হিসেবে দীর্ঘদিন কাজ করেছেন, কার্যক্রম সহায়তা, কোম্পানি আইন ও বিদেশি বিনিয়োগের দায়িত্বে।',
+        'মামলা, কোম্পানি গঠন, বিদেশি বিনিয়োগ অনুমতি, লাইসেন্স আবেদন এবং কোরিয়া ও তাইওয়ানের মধ্যে আদান-প্রদানে সহায়তা।',
       ],
-      education: ['विधि स्नातक (LL.B.), Tunghai University'],
+      education: ['আইন স্নাতক (LL.B.), Tunghai University'],
       experience: [
         'Senior Paralegal, Boyin Law Firm',
         'Senior Paralegal, Muyang International Law Firm',
@@ -3576,20 +3576,20 @@ export const guidanceTeamBios: Record<
     },
     'son-jungmin': {
       intro: [
-        'कोरिया से आए मुवक्किलों के परामर्श समय और संचार का समन्वय करते हैं।',
-        'सूचना विज्ञान के आधार पर दस्तावेज़ प्रणालियों और कार्य प्रवाह से क्षेत्रों के बीच आदान-प्रदान का समर्थन करते हैं।',
+        'কোরিয়া থেকে আসা মক্কেলদের পরামর্শের সময় ও যোগাযোগ সমন্বয় করেন।',
+        'তথ্যবিজ্ঞানের ভিত্তিতে নথি ব্যবস্থা ও কর্মপ্রবাহ দিয়ে ক্ষেত্রগুলোর মধ্যে আদান-প্রদান সমর্থন করেন।',
       ],
-      education: ['स्नातक (B.S.) सूचना विज्ञान, National Cheng Kung University'],
-      experience: ['कोरिया संचालन क्षेत्र, Hovering International Law Firm'],
+      education: ['স্নাতক (B.S.) তথ্যবিজ্ঞান, National Cheng Kung University'],
+      experience: ['কোরিয়া পরিচালনা ক্ষেত্র, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'National Chengchi University से लेखा में स्नातक और स्नातकोत्तर कार्यक्रम पूरे किए और वर्तमान में एक लेखा कार्यालय का नेतृत्व करते हैं।',
-        'उद्यमी मुवक्किलों के लिए कानूनी, कर और वित्तीय जोखिमों का एकीकृत विश्लेषण समर्थन करते हैं।',
+        'National Chengchi University-এ হিসাবে স্নাতক ও স্নাতকোত্তর কর্মসূচি শেষ করেছেন এবং বর্তমানে একটি হিসাব কার্যালয় পরিচালনা করেন।',
+        'উদ্যোক্তা মক্কেলদের জন্য আইনি, কর ও আর্থিক ঝুঁকির সমন্বিত বিশ্লেষণ সমর্থন করেন।',
       ],
       education: [
-        'स्नातकोत्तर (M.A.) लेखा, National Chengchi University',
-        'स्नातक (B.A.) लेखा, National Chengchi University',
+        'স্নাতকোত্তর (M.A.) হিসাব, National Chengchi University',
+        'স্নাতক (B.A.) হিসাব, National Chengchi University',
       ],
       experience: ['Chinshin CPA Firm'],
     },

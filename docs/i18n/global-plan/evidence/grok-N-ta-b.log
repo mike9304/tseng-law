@@ -1,1 +1,5 @@
 [WO start 2026-09-22 06:54:30]
+Tamil columns **010–018** are in `src/content/columns-ta/`. Checker: **summary PASS 18/18 files**, `[변호사 검수 필요]` **0**.
+
+Evidence: `docs/i18n/global-plan/evidence/grok-N-ta-b.log`. No git add/commit/push.
+=== end code=0 2026-09-22 07:22:51 ===

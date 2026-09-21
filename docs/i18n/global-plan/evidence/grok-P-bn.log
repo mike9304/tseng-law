@@ -1,11 +1,147 @@
-[WO start 2026-09-22 05:17:25]
-Bengali (`bn`) is no longer a Hindi clone. Every scaffolded `bn` string is now natural Bangladesh Bengali, and the `// SCAFFOLD(hi)` markers for `bn` are gone.
+WO-P-bn — Bengali guidance pack + UI strings (locale `bn`, readers in Bangladesh)
+Workspace: /Users/son7/Projects/tseng-law-new-bn-20260922
+Agent: Grok 4.6 (Cursor). No git add/commit/push/stash/checkout.
 
-**Quality bar used:** RULEBOOK-FIX plus the German pack as the meaning source. Consultation is still only English, Chinese (中文), Japanese, Korean; Wei Tseng is marked feminine where Bengali marks gender (`তিনি`, `বিনিময় ছাত্রী`); product facts, Latin names, Chinese glosses, URLs and `{name}`/`{firm}` are unchanged.
+================================================================
+§1. FILES TOUCHED
+================================================================
 
-**Verify:** SCAFFOLD grep for `bn` = **0**, **TSC_OK**, **1096 tests passed**. Five failures are the other still-scaffolded locales (test lists still 27 vs 45; cloned notices not unique; root `llms.txt` over 8 KiB). No `bn`-row failure.
+Pack
+  src/data/international-guidance-south-asia.ts
+    bengaliGuidanceContent (~365 strings). languageName = বাংলা.
+    Marker `// SCAFFOLD(hi) locale bn` removed; header now `// SCAFFOLD: ur, fa, ta`.
 
-**Nav (all ≤ 14):** মূলপাতা, সেবাসমূহ, পরিচিতি, আইনজীবী, ব্যয়, যোগাযোগ, প্রশ্নোত্তর, গোপনীয়তা, অস্বীকৃতি, প্রবন্ধ. Autonym: **বাংলা**.
+Team / offices / answers / inquiry
+  src/data/international-guidance-team.ts   (copy, language names, practice-area names, bios)
+  src/data/international-guidance-offices.ts (office copy + footer copy)
+  src/data/international-guidance-answers.ts (6 answers; sources retargeted /hi/ → /bn/)
+  src/data/international-inquiry-copy.ts
+  src/data/team-name.ts                     (SCAFFOLD comment removed; brand form kept)
 
-Full file list, verbatim verify output, and glossary: `docs/i18n/global-plan/evidence/grok-P-bn.log`. No git add/commit/push.
-=== end code=0 2026-09-22 05:31:31 ===
+Chrome / registry / columns
+  src/lib/llms-txt.ts                       (English catalog name Bengali + 3 notices)
+  src/lib/public-language-registry.ts       (region labels + picker copy)
+  src/lib/columns.ts                        (3 category labels)
+  src/data/multilingual-international-v2.ts (GUIDANCE_HOME_PATHS; hrefs /bn/services, /bn/faq)
+  src/components/ColumnsGrid.tsx            (All / categories / read-more; categories byte-identical
+                                            to columns.ts; read-more byte-identical to
+                                            home.columnsReadMoreLabel = আরও পড়ুন)
+  src/components/CinematicOpening.tsx
+  src/components/decorative-video-controls.ts
+
+Tests (bn rows only + south-asia evidence file for viewAllLabel)
+  src/data/__tests__/guidance-disclosure-parity.test.ts
+  src/data/__tests__/guidance-office-facts-sync.test.ts
+  src/data/__tests__/international-guidance-privacy-disclosure.test.ts
+  src/components/__tests__/columns-grid-guidance-labels.test.tsx
+  src/components/__tests__/multilingual-international-v2.test.tsx
+  src/data/__tests__/column-alternate-expectations.ts
+  tests/builder-editor/international-guidance.playwright.ts   (bn_BD)
+
+Helpers (not product): .tmp-bn/  (scratch only)
+
+================================================================
+§2. VERIFY (verbatim)
+================================================================
+
+$ grep -rn "SCAFFOLD" src tests | grep -cE "^\S+:[0-9]+:\s*'?bn'?:|locale bn"
+0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/data/__tests__/ src/lib/__tests__/guidance-chrome-language.test.ts src/lib/__tests__/international-guidance-answers.test.ts "src/app/[locale]/__tests__/llms-discovery.test.tsx" src/components/__tests__/columns-grid-guidance-labels.test.tsx src/components/__tests__/multilingual-international-v2.test.tsx --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+   × guidance locale llms.txt catalogs > writes a distinct notice set for each guidance language 3ms
+   × root llms.txt guidance catalog links > stays inside the 8 KiB root budget and the documented grammar 1ms
+   × root llms.txt guidance catalog links > lists every site-locale catalog and every guidance catalog 0ms
+   × root llms.txt guidance catalog links > labels each guidance catalog in its own language without widening consultation languages 0ms
+   × guidanceAnswers > covers every guidance locale x 6 page keys 4ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+ Test Files  2 failed | 45 passed (47)
+      Tests  5 failed | 1096 passed (1101)
+
+$ git status --short | wc -l
+      22
+
+Pass notes
+  - SCAFFOLD grep for bn = 0. TSC_OK.
+  - Every bn-row test in the suite passed (llms bn catalog, notice verbatim-quote,
+    columns-grid bn All/categories/read-more, inquiry ইংরেজি token, disclosure
+    regexes are type-complete; lawyers title/description = team copy).
+  - 5 failures are not bn-row failures; they fire because other new locales are
+    still scaffolded / the registry grew past the old 27-locale test lists:
+
+    1. src/lib/__tests__/international-guidance-answers.test.ts
+       GUIDANCE_LOCALES (27, vi…he) vs GUIDANCE_LOCALES_4 (45). Length mismatch
+       before any answer text is read.
+
+    2. llms-discovery “distinct notice set”
+       45×3 = 135 notice lines, only 84 unique because ur/fa still clone ar,
+       ta/ne still clone hi, my/km clone th, etc. bn’s three notices are unique
+       Bengali (verified: bn catalog tests PASS).
+
+    3–5. root llms.txt 8 KiB budget
+       buildRootLlmsTxt() exceeds 8192 bytes because 18 new locale catalog
+       links were added to the registry. Unrelated to bn wording; bn’s own
+       per-locale catalog stays inside the locale budget (bn contract PASS).
+
+================================================================
+§3. TERMINOLOGY (Bengali legal register, Bangladesh; glosses kept)
+================================================================
+
+  工作許可   কর্ম অনুমতি (工作許可)
+  居留       অবস্থান অনুমতি (居留)
+  資遣費     সংবিধিবদ্ধ ছাঁটাই ভাতা (資遣費)
+  離婚       বিবাহবিচ্ছেদ (離婚)
+  未成年子女權利義務之行使或負擔
+             নাবালক সন্তানের অভিভাবকত্ব ও পিতামাতার অধিকার-কর্তব্য (…原文)
+  會面交往   সাক্ষাৎ ও যোগাযোগের অধিকার (會面交往)
+  繼承       উত্তরাধিকার (繼承)
+  戶籍       গৃহনিবন্ধন (戶籍)
+  勞動契約   শ্রম চুক্তি (勞動契約)
+  工作規則   কর্মবিধি (工作規則)
+  商標       ট্রেডমার্ক (商標)
+  專利       পেটেন্ট (專利)
+
+Other register choices
+  languageName / autonym     বাংলা
+  address                    আপনি
+  quotes                     “ ” (U+201C/U+201D)
+  sentence end               danda । (U+0964; Bangladesh formal prose)
+  digits                     Western (checker-parseable)
+  consultation languages     ইংরেজি, চীনা (中文), জাপানি, কোরীয়  (same order)
+  attorney Wei Tseng         তিনি / বিনিময় ছাত্রী; 3rd-person verbs unmarked
+  team eyebrow / offices     দল / অফিস  (short nouns; Bengali has no case)
+  menuLabel                  পাতার তালিকা  (not the literal "Menu")
+  All filter / viewAll       সব  /  সব দেখুন
+  columns read-more          আরও পড়ুন
+  team/lawyers title         Hovering-এর আন্তর্জাতিক দল
+  bio amount                 TWD 1.57M (byte-identical)
+  FAQ “advice in Bengali?”   না। … কেবল ইংরেজি, চীনা (中文), জাপানি ও কোরীয়তে হয়।
+  llms consultationNotice    verbatim FAQ clause minus leading না।
+  llms confidentialNotice    verbatim privacy “মূল পাঠ্য রাখা হয় বলে…” sentence
+  playwright locale          bn_BD
+  catalog English name       Bengali
+
+Latin proper names kept: Hovering International Law Firm, National Taiwan University,
+Wei Tseng, Hovering Accounting Office, institution/firm names in GUIDANCE_BIO_PRESERVED_TERMS.
+Traditional-Chinese glosses kept exactly; no extra Chinese added for Bengali readers.
+Placeholders {name} {firm} {language} and wei@hoveringlaw.com.tw unchanged.
+
+================================================================
+§4. WHAT DID NOT FIT / NOTES
+================================================================
+
+  Nav labels (string.length, all ≤ 14):
+    মূলপাতা 7, সেবাসমূহ 8, পরিচিতি 7, আইনজীবী 7, ব্যয় 5,
+    যোগাযোগ 7, প্রশ্নোত্তর 11, গোপনীয়তা 9, অস্বীকৃতি 9, প্রবন্ধ 7.
+    None over cap.
+
+  team-name.ts left as `Hovering International Team` (same brand form as hi/vi/de;
+  Latin proper name, not a Hindi sentence).
+
+  columns-grid evidence grep did not read south-asia.ts; added
+  international-guidance-south-asia.ts to that test’s source concat so
+  viewAllLabel: 'সব দেখুন' is findable. No other test lists expanded.
+
+  No nav label had to be truncated.

@@ -2709,7 +2709,7 @@ const LANGID_SCRIPTS = [
   { id: 'tamil', lang: 'ta', re: /[\u0B80-\u0BFF]/u, label: '타밀 문자' },
   { id: 'myanmar', lang: 'my', re: /[\u1000-\u109F]/u, label: '미얀마 문자' },
   { id: 'khmer', lang: 'km', re: /[\u1780-\u17FF]/u, label: '크메르 문자' },
-  { id: 'devanagari', lang: ['hi', 'ne'], re: /[\u0900-\u097F]/u, label: '데바나가리' },
+  { id: 'devanagari', lang: ['hi', 'ne'], re: /[\u0900-\u0963\u0966-\u097F]/u, label: '데바나가리' }, // danda U+0964/0965 is shared by Bengali
   { id: 'hebrew', lang: 'he', re: /[\u0590-\u05FF]/u, label: '히브리 문자' },
 ];
 

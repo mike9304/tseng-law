@@ -87,7 +87,7 @@ describe('MULTILINGUAL-INTERNATIONAL-v2 unpublished candidate', () => {
       uk: /англійськ/i,
       el: /αγγλικ/i,
       he: /אנגלית/,
-      bn: /अंग्रेज़ी/, // SCAFFOLD(hi)
+      bn: /ইংরেজি/,
       ur: /انگریزی/,
       fa: /انگلیسی/,
       my: /อังกฤษ/, // SCAFFOLD(th)

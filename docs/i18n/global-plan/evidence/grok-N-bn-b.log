@@ -1,7 +1,102 @@
-[WO start 2026-09-22 06:57:30]
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
-Retry attempt 1...
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 2)...
-Retry attempt 2...
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 3)...
-Retry attempt 3...
+WO-N-bn-b — Translate columns 010–018 into Bengali (locale `bn`, readers in Bangladesh)
+Workspace: /Users/son7/Projects/tseng-law-new-bn-20260922
+Agent: Grok 4.6 (Cursor). No git add/commit/push/stash/checkout.
+
+================================================================
+§1. FILE COUNT
+================================================================
+
+9 files written in src/content/columns-bn/ (010–018). Directory also holds 001–009 from WO-N-bn-a, so ls = 18.
+
+  010-taiwan-gym-injury-lawsuit.md
+  011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md
+  012-taiwan-overtaking-accident-liability.md
+  013-taiwan-company-establishment-advanced-1.md
+  014-taiwan-mandatory-employment-period.md
+  015-taiwan-company-setup-pitch-location.md
+  016-taiwan-inheritance-custody-analysis.md
+  017-taiwan-logistics-business-setup.md
+  018-taiwan-semiconductor-market-entry.md
+
+010 written and checker-PASS first; 011–018 then. Categories: 010 case (`মামলা বিশ্লেষণ`); 011/013/015/017/018 formation (`তাইওয়ানে কোম্পানি গঠন`); 012/014/016 legal (`তাইওয়ানের আইনি তথ্য`). No `[변호사 검수 필요]`. No `বাংলাদেশ`. Hangul only if present in Korean `url` (none of 010–018).
+
+================================================================
+§2. VERIFY (verbatim)
+================================================================
+
+$ ls src/content/columns-bn/*.md | wc -l
+      18
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-bn --lang bn 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-bn-20260922/src/content/columns-bn/018-taiwan-semiconductor-market-entry.md  lang=bn
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=97
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-bn | wc -l
+       0
+
+$ git status --short | wc -l
+      45
+
+Pass: `summary PASS 18/18 files` (001–009 from WO-N-bn-a + 010–018 this WO). Markers 0. Each of 010–018 also PASS 1/1 when checked alone.
+
+================================================================
+§3. KEY TERM CHOICES (Bengali + Traditional-Chinese gloss)
+================================================================
+
+  訴訟代理人           মামলার প্রতিনিধি (訴訟代理人)
+  過失傷害             অবহেলাজনিত আঘাত (過失傷害)
+  告訴乃論之罪         অভিযোগের উপরই অভিযোগযোগ্য অপরাধ (告訴乃論之罪)
+  存證信函             বিষয়বস্তু-প্রমাণিত চিঠি (存證信函)
+  懲罰性賠償金         শাস্তিমূলক ক্ষতিপূরণ (懲罰性賠償金)
+  經濟部投資審議司     অর্থনৈতিক বিষয়ক মন্ত্রণালয়ের বিনিয়োগ পর্যালোচনা বিভাগ (經濟部投資審議司)
+  最低服務年限         ন্যূনতম সেবার মেয়াদ (最低服務年限)
+  物流                 লজিস্টিকস (物流)
+  經營許可             (পরিবহন) ব্যবসা পরিচালন অনুমতি (經營許可) — not 營業執照
+  監察人               তত্ত্বাবধায়ক (監察人)
+  未成年子女權利義務之行使或負擔
+                       নাবালক সন্তানের অধিকার-কর্তব্যের প্রয়োগ বা বহন (হেফাজত ও অভিভাবকত্ব)
+
+Other register (aligned with the bn guidance pack / 001–009, not copied from hi wording)
+  address                    আপনি
+  quotes                     “ ” (U+201C/U+201D)
+  sentence end               danda । (U+0964)
+  digits                     Western (100,000 not 1,00,000)
+  date_display               13 সেপ্টেম্বর 2025 (011: 4 ফেব্রুয়ারি 2026; 018: 17 সেপ্টেম্বর 2026 — Korean dates)
+  read_time                  N মিনিটের পাঠ
+  byline                     **আইনজীবী Wei Tseng (曾雋崴)**  (আইনজীবী unmarked; first-person verbs unmarked)
+  consultation languages     ইংরেজি, চীনা (中文), জাপানি, কোরীয় only
+  Korea                      labelled example / case fact only (010 Korean student; 011 foreign brands not “Korean brands”)
+
+R2/R7b applied: 011 foreign brands; 014 §1 heading is the yes/no question the body answers with “না।”; 016 family = “দুই বা তার বেশি দেশের সঙ্গে যুক্ত পরিবারে — তাইওয়ান এবং অন্য কোনো দেশ”, child habitual residence “তাইওয়ানের বাইরে”. Invest Taiwan in 011 is `lang=eng`.
+
+================================================================
+§4. UNRESOLVED
+================================================================
+
+  Number WARNs (not FAILs) on some files: unmatched Korean ordinals (1심, 제7호, 제3자, 제1항, 제2종, …) because bn has no ordinal-word lexicon. sourceCount equals targetCount on every file.
+
+  Official `--dir` summary is 18/18 because 001–009 already exist in this worktree (WO-N-bn-a). This WO’s nine files are 010–018; each PASS 1/1.
+
+  git status --short = 45 includes prior WO-P / WO-N-bn-a dirty files, columns-bn 001–018, checker bn wiring, and this log.
+
+  018 Korean source has no `url` key and no related-link block; bn matches (hrefs=0).
+
+  010 keeps the Korean-student fact pattern (the case is Korea-specific); default reader is not treated as Korean.

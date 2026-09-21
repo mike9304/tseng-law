@@ -536,12 +536,12 @@ export const LANGUAGE_REGION_LABELS: Record<PublicLocale8, Record<LanguageRegion
     europe: 'אירופה',
     americas: 'אמריקה',
   },
-  bn: { // SCAFFOLD(hi)
-    global: 'वैश्विक',
-    'asia-pacific': 'एशिया-प्रशांत',
-    'middle-east': 'मध्य पूर्व',
-    europe: 'यूरोप',
-    americas: 'अमेरिका महाद्वीप',
+  bn: {
+    global: 'বিশ্বজুড়ে',
+    'asia-pacific': 'এশিয়া-প্রশান্ত',
+    'middle-east': 'মধ্যপ্রাচ্য',
+    europe: 'ইউরোপ',
+    americas: 'আমেরিকা মহাদেশ',
   },
   ur: {
     global: 'عالمی',
@@ -855,11 +855,11 @@ export const LANGUAGE_PICKER_COPY: Record<
     close: 'סגירה',
     current: 'השפה הנוכחית',
   },
-  bn: { // SCAFFOLD(hi)
-    open: 'क्षेत्र और भाषा चुनें',
-    title: 'कृपया अपना क्षेत्र और भाषा चुनें',
-    close: 'बंद करें',
-    current: 'वर्तमान भाषा',
+  bn: {
+    open: 'অঞ্চল ও ভাষা বেছে নিন',
+    title: 'অনুগ্রহ করে আপনার অঞ্চল ও ভাষা বেছে নিন',
+    close: 'বন্ধ করুন',
+    current: 'বর্তমান ভাষা',
   },
   ur: {
     open: 'علاقہ اور زبان منتخب کریں',

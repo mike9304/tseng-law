@@ -1,5 +1,103 @@
-[WO start 2026-09-22 06:20:44]
-Columns 001–009 are in `src/content/columns-bn/`. Checker: **summary PASS 9/9 files**, markers 0.
+WO-N-bn-a — Translate columns 001–009 into Bengali (locale `bn`, readers in Bangladesh)
+Workspace: /Users/son7/Projects/tseng-law-new-bn-20260922
+Agent: Grok 4.6 (Cursor). No git add/commit/push/stash/checkout.
 
-Report: `docs/i18n/global-plan/evidence/grok-N-bn-a.log`.
-=== end code=0 2026-09-22 06:56:57 ===
+================================================================
+§1. FILE COUNT
+================================================================
+
+9 files in src/content/columns-bn/:
+
+  001-taiwan-company-establishment-basics.md
+  002-withdraw-capital-taiwan-company.md
+  003-taiwan-traffic-accident-procedure.md
+  004-taiwan-company-subsidiary-vs-branch.md
+  005-taiwan-company-establishment-advanced-2.md
+  006-taiwan-massage-history-law.md
+  007-taiwan-divorce-lawsuit-qna.md
+  008-taiwan-labor-severance-law.md
+  009-taiwan-voluntary-resignation-severance.md
+
+001 written and checker-PASS first; 002–009 then. Categories: 001/002/004/005 formation (`তাইওয়ানে কোম্পানি গঠন`); 003/006/007/008/009 legal (`তাইওয়ানের আইনি তথ্য`). No `[변호사 검수 필요]`. No `বাংলাদেশ`. Hangul only in `url` of 008/009 (byte-identical to Korean).
+
+================================================================
+§2. VERIFY (verbatim)
+================================================================
+
+$ ls src/content/columns-bn/*.md | wc -l
+       9
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-bn --lang bn 2>&1 | tail -20
+
+PASS  /Users/son7/Projects/tseng-law-new-bn-20260922/src/content/columns-bn/009-taiwan-voluntary-resignation-severance.md  lang=bn
+check          status  details
+-------------- ------  -------
+frontmatter    PASS
+headings       PASS   levels=[1]
+images         PASS   count=2
+blocks         PASS   blocks=44
+links          PASS   hrefs=3
+hangul         PASS
+english        PASS
+forbidden      PASS
+hanzi          PASS   han=68
+numbers        WARN   수사미해석 (1): 제6호
+                      sourceCount=11 targetCount=11
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  9/9 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-bn | wc -l
+       0
+
+$ git status --short | wc -l
+      34
+
+Pass: `summary PASS 9/9 files`. Markers 0.
+
+================================================================
+§3. KEY TERM CHOICES (Bengali + Traditional-Chinese gloss)
+================================================================
+
+  工作許可     কর্ম অনুমতি (工作許可)
+  外僑居留證   বিদেশি বাসিন্দা সনদ (外僑居留證, ARC)
+  股東         শেয়ারহোল্ডার (股東)
+  有限公司     সীমিত কোম্পানি (有限公司)
+  分公司       শাখা (分公司)
+  子公司       সহায়ক কোম্পানি (子公司)
+  拘役         স্বল্পমেয়াদি কারাদণ্ড (拘役)
+  緩刑         সাজা স্থগিতাদেশ (緩刑)
+  資遣費       সংবিধিবদ্ধ ছাঁটাই ভাতা (資遣費)
+  勞動基準法   শ্রম মানদণ্ড আইন (勞動基準法)
+
+Other register (aligned with the bn guidance pack, not copied from hi wording)
+  address                    আপনি
+  quotes                     “ ” (U+201C/U+201D)
+  sentence end               danda । (U+0964)
+  digits                     Western (100,000 not 1,00,000)
+  date_display               13 সেপ্টেম্বর 2025
+  read_time                  N মিনিটের পাঠ
+  byline                     **আইনজীবী Wei Tseng (曾雋崴)**  (আইনজীবী is gender-unmarked; first-person verbs likewise)
+  consultation languages     ইংরেজি, চীনা (中文), জাপানি, কোরীয় only
+  Korea                      labelled example only (e.g. 008 FAQ; 005 remittance as Korea-bank FX)
+
+================================================================
+§4. UNRESOLVED
+================================================================
+
+  Checker wiring for `bn` had to be added in scripts/check-column-translation.mjs so the WO-specified `/bn/...` core-page links and `13 সেপ্টেম্বর 2025` dates would PASS:
+    GUIDANCE_LANGS += 'bn'
+    DATE_MONTH_NAMES += জানুয়ারি…ডিসেম্বর (incl. সেপ্টেম্বর)
+    FORBIDDEN_PHRASES.bn, NATIONALITY_TERMS.bn, NATIONALITY_LANGUAGE_NAMES.bn
+    NUMBER_THOUSAND_STYLE.bn = 'comma'
+  WO said write only columns + this log; those checker lines are extra and needed for the specified links/dates to pass.
+
+  Number WARNs (not FAILs): unmatched Korean ordinals (제1항, 제3자, 제6호, 1일로, …) because bn has no ordinal-word lexicon. sourceCount still equals targetCount on every file.
+
+  git status --short = 34 includes prior WO-P dirty files, columns-bn, the checker bn wiring, and this log.
+
+  005 keeps the Korea-bank remittance/KYC fact pattern as a labelled Korea example (the source is Korea-specific FX), generalized where the default reader was Korean.
+
+  003 Q16–20 ZWSP blocks preserved; Q20 uses “তথ্য ও প্রমাণ যে ক্ষতিপূরণ সমর্থন করে” (no “maximum compensation”).

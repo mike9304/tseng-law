@@ -828,16 +828,16 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'Η ΟΜΑΔΑ ΜΑΣ',
     title: 'Η διεθνής ομάδα της Hovering',
     description:
-      'Προφίλ των δικηγόρων, της λειτουργικής διεύθυνσης και του συνεργαζόμενου λογιστικού ελέγχου της Hovering.',
+      'Προφίλ των δικηγόρων, της λειτουργικής διεύθυνσης και του συνεργαζόμενου λογιστικού γραφείου της Hovering.',
     representativeTitle: 'Διευθύνουσα δικηγόρος',
     teamTitle: 'Δικηγόροι και συνεργάτες',
-    partnerTitle: 'Συνεργαζόμενη λογιστική',
+    partnerTitle: 'Συνεργαζόμενο λογιστικό γραφείο',
     introLabel: 'Παρουσίαση',
     educationLabel: 'Σπουδές',
     experienceLabel: 'Εμπειρία',
     photoAltPrefix: 'Φωτογραφία',
     workingLanguagesLabel: 'Γλώσσες εργασίας',
-    fullProfileLabel: 'Πλήρες προφίλ (English)',
+    fullProfileLabel: 'Πλήρες προφίλ (στα αγγλικά)',
     keyFactsHeading: 'Η δικηγόρος Wei Tseng — Βασικά στοιχεία',
     qualificationLabel: 'Προσόντα και γραφείο',
     qualificationSentence:
@@ -847,7 +847,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Διευθύνουσα δικηγόρος στην Ταϊβάν (Managing Attorney)',
       'chang-rongxuan': 'Δικηγόρος στην Ταϊβάν (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
+      'chang-fangyu': 'Δικηγορικός συνεργάτης (Paralegal)',
       'son-jungmin': 'Διεύθυνση λειτουργιών Κορέας (Korea Operations Manager)',
       'huang-shengping': 'Συνεργαζόμενος ορκωτός λογιστής (Partner CPA)',
     },
@@ -2735,7 +2735,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Το γραφείο χειρίζεται υποθέσεις επιχειρήσεων και ιδιωτών στην Ταϊβάν στα αγγλικά, ιαπωνικά, κορεατικά και κινεζικά.',
-        'Εκπροσώπησε Κορεάτη φοιτητή σε αξίωση αποζημίωσης για τραυματισμό σε γυμναστήριο και πέτυχε πρωτόδικη απόφαση TWD 1.57M.',
+        'Εκπροσώπησε Κορεάτη φοιτητή σε αξίωση αποζημίωσης για τραυματισμό σε γυμναστήριο και πέτυχε πρωτόδικη απόφαση ύψους 1,57 εκατ. TWD.',
       ],
       education: [
         'Μεταπτυχιακό (M.S.), Institute of Finance, National Taiwan University',

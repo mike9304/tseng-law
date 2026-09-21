@@ -14,4 +14,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `th-a.md` 
 - 'กลุ่มงาน' → 'สาขางาน/ประเภทงาน'; 'Q&A' → 'ถาม-ตอบ'; blog voice R7.
 
 ## Part b
-Apply every P1/P2 row of `th-b.md` under the same skip rules above.
+Apply every P1/P2 row of `th-b.md` under the same skip rules above. Additional: b#1 keep the case fact; fix the wording per reviewer (court awarded; settlement reported) and number format 'TWD 1,570,000'; b#2 skip (mechanical); b#3, b#6 → R3/R7; b#4 → R7b; b#5 → 'ประเภทกิจการที่ต้องตรวจสอบเอง'; b#7 → 'กรมพิจารณาการลงทุน กระทรวงเศรษฐกิจ (經濟部投資審議司)' consistently; 018 register → match 010–017 and add 子公司/分公司 glosses; 016 parental authority → 'อำนาจปกครองบุตรผู้เยาว์ (未成年子女權利義務之行使或負擔)'; services chrome → 'สาขางานที่ให้บริการ'.

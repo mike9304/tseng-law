@@ -1,1 +1,27 @@
 [WO start 2026-09-21 16:47:54]
+Native review of columns 010–018 is in `docs/i18n/global-plan/reviews/native/th-b.md`. Guidance pack was out of scope (part a).
+
+**Verdict:** 3/5 for these columns. 012 is the strongest; 010, 011, 014, 016, 017 are usable legal Thai. 013/015 still read as a Korean blog; 018 is a different, spoken register. No masculine form for Wei Tseng in this set.
+
+**7 P1s:** gym headlines that can be read as the student being ordered to pay; Invest Taiwan `lang=jpn`; comment/always-on CTAs in 013 and 015; FAQ “ไม่ใช่” under the wrong 014 heading; 主動查詢 rendered as “ตรวจสอบด้วยตนเอง”; 投資審議司 named as both a committee and a กรม.
+
+Last 15 lines of the output file:
+
+```
+| 32 | P2 | A | columns-th/018-taiwan-semiconductor-market-entry.md | "มีบุคลิกภาพทางกฎหมายแยกจากบริษัทแม่หรือสำนักงานใหญ่หรือไม่" | บุคลิกภาพทางกฎหมาย is a European-law calque; 011 already uses สภาพนิติบุคคล. Recurs in the table | มีสภาพนิติบุคคลแยกจากบริษัทแม่หรือสำนักงานใหญ่หรือไม่ |
+| 33 | P2 | A | columns-th/018-taiwan-semiconductor-market-entry.md | "จึงไม่ต้องตั้งผู้ตรวจการแยก" | 監察人 is a company supervisor; ผู้ตรวจการ is read as a state inspector (ผู้ตรวจการแผ่นดิน). also later “ไม่ตั้งผู้ตรวจการ” | จึงไม่ต้องตั้งผู้ตรวจสอบกิจการ (監察人) แยกต่างหาก |
+| 34 | P2 | A | columns-th/018-taiwan-semiconductor-market-entry.md | "ลูกจ้างประกันแรงงาน 100 คน" | ประกันแรงงาน is a calque of 勞保; a Thai reader maps this to ประกันสังคม (same hole as 009 in part a). | ลูกจ้างที่เข้าประกันสังคมลูกจ้าง (勞保) 100 คน |
+| 35 | P2 | D | columns-th/018-taiwan-semiconductor-market-entry.md | "ทุนชำระแล้ว 30 ล้านเหรียญไต้หวันใหม่" | เหรียญ is USD in Thai; this series otherwise writes ดอลลาร์ไต้หวันใหม่ (TWD). also “100 ล้านเหรียญ” | ทุนชำระแล้ว TWD 30 ล้าน |
+| 36 | P2 | D | columns-th/018-taiwan-semiconductor-market-entry.md | "คนต่างด้าวทำงานในไต้หวันต้องมีใบอนุญาตทำงานโดยชอบ" | คนต่างด้าว is Thailand’s Alien Employment Act term; 013/017 use คนต่างชาติ for Taiwan. Recurs as “พนักงานต่างด้าว” | คนต่างชาติที่ทำงานในไต้หวันต้องมีใบอนุญาตทำงาน (工作許可) โดยชอบ |
+| 37 | P2 | E | columns-th/018-taiwan-semiconductor-market-entry.md | "การปรึกษาครั้งแรกเตรียมภาพรวมการดำเนินงานก็พอ ไม่ต้องส่งข้อมูลลับทั้งหมดก่อน" | First-consultation CTA on a Thai guidance page, without restating the four-language lock (the last line does hedge). | ในการติดต่อครั้งแรก เตรียมภาพรวมการดำเนินงานก็เพียงพอ ทั้งนี้การปรึกษากับทนายความดำเนินการเฉพาะภาษาอังกฤษ ภาษาจีน (中文) ภาษาญี่ปุ่น และภาษาเกาหลี |
+| 38 | P2 | C | columns-th/018-taiwan-semiconductor-market-entry.md | "สรุปไม่ได้เพียงเพราะลูกค้าอยู่ในไต้หวัน ต้องดูความต้องการของลูกค้า" | Spoken staccato against 010–017’s legal Thai; English was “Not automatically. The need depends on…”. Recurs in the FAQ | ไม่อาจสรุปได้เพียงเพราะมีลูกค้าอยู่ในไต้หวัน ต้องพิจารณาความต้องการของลูกค้า |
+| 39 | P2 | D | columns-th/018-taiwan-semiconductor-market-entry.md | "ความต่างหลักระหว่างบริษัทย่อยไต้หวันกับสาขาในไต้หวันของบริษัทต่างชาติ" | 018 drops the 子公司 / 分公司 glosses that 011 keeps throughout. | ความต่างหลักระหว่างบริษัทย่อยในไต้หวัน (子公司) กับสาขาในไต้หวัน (分公司) ของบริษัทต่างชาติ |
+| 40 | P2 | C | columns-th/018-taiwan-semiconductor-market-entry.md | "หรืออาจเข้าตลาด" | เข้าตลาด is unfinished; Thai needs เข้าตลาดหลักทรัพย์. also “ควบรวม เข้าตลาดในอนาคต” | หรืออาจเข้าตลาดหลักทรัพย์ในอนาคต |
+| 41 | P2 | A | columns-th/018-taiwan-semiconductor-market-entry.md | "การตรวจทุนโดยนักบัญชี" | Capital verification is a CPA act; นักบัญชี is a bookkeeper. | การตรวจทุนโดยผู้สอบบัญชี |
+| 42 | P2 | A | columns-th/018-taiwan-semiconductor-market-entry.md | "สำนักพัฒนาพาณิชย์ กระทรวงเศรษฐกิจเป็นผู้ดำเนินการจดสาขา" | 商業司 is the Department of Commerce; สำนักพัฒนาพาณิชย์ is an invented name a Thai reader may map to กรมพัฒนาธุรกิจการค้า. | สำนักพาณิชย์ กระทรวงเศรษฐกิจ (經濟部商業司) เป็นผู้ดำเนินการจดสาขา |
+| 43 | P2 | C | columns-th/010-taiwan-gym-injury-lawsuit.md | "ศาลชั้นต้นไถจง (臺灣臺中地方法院) ได้มีคำพิพากษาศาลชั้นต้นเมื่อวันที่ 24 มกราคม" | ศาลชั้นต้น said twice; a native names the court once. | ศาลชั้นต้นไถจง (臺灣臺中地方法院) ได้มีคำพิพากษาเมื่อวันที่ 24 มกราคม ค.ศ. 2022 |
+| 44 | P2 | B | columns-th/015-taiwan-company-setup-pitch-location.md | "FL080687) ”(臺北市營業場所協助查詢服務作業須知)" | Broken quotes and a space before the Chinese gloss. | ตามแนวปฏิบัติการให้บริการช่วยตรวจสอบสถานประกอบการของนครไทเป (臺北市營業場所協助查詢服務作業須知) |
+| 45 | P2 | D | columns-th/013-taiwan-company-establishment-advanced-1.md | "บัตรถิ่นที่อยู่สำหรับคนต่างชาติ (外僑居留證, ARC)" | Same 居留→ถิ่นที่อยู่ hole as 017; 013 also says บัตรถิ่นที่อยู่ (ARC) in Q2. | บัตรพำนักสำหรับคนต่างชาติ (外僑居留證, ARC) |
+| 46 | P2 | C | columns-th/014-taiwan-mandatory-employment-period.md | "[ติดต่อสอบถาม](/th/contact)" | Related-link label is “enquire”; the site’s Thai nav is ติดต่อ / วิธีติดต่อสำนักงาน (013, 015). | [ติดต่อสำนักงาน](/th/contact) |
+```
+=== end code=0 2026-09-21 16:55:45 ===

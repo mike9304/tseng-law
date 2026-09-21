@@ -1,9 +1,94 @@
-[WO start 2026-09-22 05:17:33]
-The Nepali (`ne`) guidance pack and UI strings are in. Scaffolded Hindi copy is gone; `languageName` is **नेपाली**.
+WO-P-ne — Nepali guidance pack + UI strings
+Workspace: /Users/son7/Projects/tseng-law-new-ne-20260922
+Date: 2026-09-22
 
-Report: `docs/i18n/global-plan/evidence/grok-P-ne.log`
+## Files touched
+- src/data/international-guidance-southeast-central.ts  (nepaliGuidanceContent; languageName नेपाली; SCAFFOLD(hi) locale ne removed)
+- src/data/international-guidance-team.ts               (copy, bios, language names, practice-area names)
+- src/data/international-guidance-offices.ts            (office copy + footer copy)
+- src/data/international-guidance-answers.ts            (6 answers; sources /ne/…)
+- src/data/international-inquiry-copy.ts
+- src/lib/llms-txt.ts                                   (English name Nepali + notices)
+- src/data/multilingual-international-v2.ts             (GUIDANCE_HOME_PATHS; href /ne/…)
+- src/lib/columns.ts                                    (3 category labels)
+- src/components/ColumnsGrid.tsx                        (All / categories / read-more; byte-identical to columns.ts + pack home.columnsReadMoreLabel)
+- src/components/CinematicOpening.tsx
+- src/components/decorative-video-controls.ts           (byte-identical to pack home.video* labels)
+- src/data/team-name.ts                                 (brand form kept: Hovering International Team)
+- src/lib/public-language-registry.ts                   (region labels + picker copy)
+- src/data/__tests__/guidance-disclosure-parity.test.ts (15 ne regexes; LOCALES += ne)
+- src/data/__tests__/guidance-office-facts-sync.test.ts (Korea/Japan spellings; LOCALES += ne)
+- src/data/__tests__/international-guidance-privacy-disclosure.test.ts (pending-confirmation regex)
+- src/components/__tests__/columns-grid-guidance-labels.test.tsx (+ southeast-central.ts source)
+- src/components/__tests__/multilingual-international-v2.test.tsx
+- src/data/__tests__/column-alternate-expectations.ts   (hreflang ne)
+- tests/builder-editor/international-guidance.playwright.ts (ne_NP)
 
-**Verify:** SCAFFOLD(ne) = 0, TSC_OK, 1099 tests passed. Five failures are from other locales still on their templates (answers list 27 vs 45, duplicate llms.txt notices, root catalog over 8 KiB) — not from `ne` rows. The Nepali llms.txt contract passed.
+## §Verify (verbatim)
 
-Consultation is stated as English, Chinese (中文), Japanese, Korean only; the Nepali FAQ answer is **होइन।** Attorney Wei Tseng uses feminine forms. Chinese glosses and `TWD 1.57M` are unchanged. Every nav label is within 14 characters.
-=== end code=0 2026-09-22 05:31:12 ===
+===== VERIFY =====
+--- grep SCAFFOLD ne count ---
+0
+--- tsc ---
+TSC_OK
+--- vitest ---
+   × guidance locale llms.txt catalogs > writes a distinct notice set for each guidance language 3ms
+   × root llms.txt guidance catalog links > stays inside the 8 KiB root budget and the documented grammar 1ms
+   × root llms.txt guidance catalog links > lists every site-locale catalog and every guidance catalog 0ms
+   × root llms.txt guidance catalog links > labels each guidance catalog in its own language without widening consultation languages 0ms
+   × guidanceAnswers > covers every guidance locale x 6 page keys 3ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+ Test Files  2 failed | 45 passed (47)
+      Tests  5 failed | 1099 passed (1104)
+--- git status count ---
+      21
+===== END VERIFY =====
+
+SCAFFOLD(ne) remaining: 0
+TSC_OK
+ne-row tests: pass (disclosure-parity with ne in LOCALES, office-facts with ne, privacy negative regex, columns-grid, multilingual-v2, llms.txt contract for ne)
+
+## Failures that are not ne rows (other new locales still scaffolded)
+1. src/lib/__tests__/international-guidance-answers.test.ts
+   "covers every guidance locale x 6 page keys"
+   GUIDANCE_LOCALES is still the previous 27-locale list; GUIDANCE_LOCALES_4 is 45.
+   Expected 45, received 27. bn/ur/fa/ta/my/km/mn/sk/… are not in that hardcoded list.
+2. src/app/[locale]/__tests__/llms-discovery.test.tsx
+   "writes a distinct notice set for each guidance language"
+   Set size 84 vs 135 = GUIDANCE_LOCALES_4.length * 3. Duplicate notices among
+   remaining clones (bn/ta still Hindi, ur/fa still Arabic, my/km still Thai, …).
+   The ne notice block itself is distinct; "satisfies the locale llms.txt contract for ne" passed.
+3. Same file, three root-catalog tests: "llms.txt exceeds its 8192-byte limit"
+   Root catalog lists every guidance locale; 45 locales overflow the 8 KiB budget.
+   Not a wording defect on ne.
+
+## Terminology (key legal terms + Chinese gloss)
+- बसोबास अनुमति (居留) — residence status; not given by company setup alone
+- कार्य अनुमति (工作許可) — work permit; separate procedure
+- सम्बन्धविच्छेद (離婚) — divorce
+- नाबालिग सन्तानको संरक्षकत्व तथा अभिभावकीय अधिकार र कर्तव्य (未成年子女權利義務之行使或負擔)
+- भेटघाट र सम्पर्कको अधिकार (會面交往) — visitation/contact
+- उत्तराधिकार (繼承)
+- घरधुरी दर्ता (戶籍)
+- वैधानिक सेवा-अन्त भत्ता (資遣費) — Taiwan statutory severance; not equated with other countries’ schemes
+- श्रम सम्झौता (勞動契約); कार्यनियमावली (工作規則)
+- व्यापार चिह्न (商標); पेटेन्ट (專利)
+Cities kept with glosses: ताइपेई (臺北), काओस्युङ (高雄), ताइचुङ (臺中), पिङतुङ (屏東).
+
+Register: तपाईं / हुनुहुन्छ; Wei Tseng feminine (की प्रबन्ध अधिवक्ता, उहाँले … गर्नुभयो, विनिमय छात्रा).
+Consultation languages named in order: अङ्ग्रेजी, चिनियाँ (中文), जापानी, कोरियाली.
+Quotes: “ ” ; sentence stop: । ; Western digits (2016, TWD 1.57M).
+FAQ “Can I get advice in Nepali?” → “होइन।”
+
+## Constraints held
+- nav.* all ≤ 14 UTF-16 code units (longest: हाम्रो बारे 11, प्रश्नोत्तर 11)
+- menuLabel = 'सामग्री सूची' (not the literal "Menu")
+- lawyers title/description = guidanceTeamCopy.ne title/description
+- GUIDANCE_BIO_PRESERVED_TERMS kept byte-identical, including TWD 1.57M
+- eyebrows: टोली / कार्यालय (short nouns; Devanagari has no case)
+- columnsReadMoreLabel 'अगाडि पढ्नुहोस्' = ColumnsGrid; All-filter 'सबै' ⊂ viewAllLabel 'सबै हेर्नुहोस्'
+- category labels identical in src/lib/columns.ts and ColumnsGrid.tsx
+
+## Could not fit
+None. Every nav label is within 14 characters.
+The 5 failing tests above are locale-list / clone-duplicate / root-budget issues from other still-scaffolded locales, not ne rows.

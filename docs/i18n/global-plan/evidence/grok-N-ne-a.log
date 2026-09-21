@@ -1,7 +1,66 @@
-[WO start 2026-09-22 07:04:34]
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
-Retry attempt 1...
-`summary PASS 9/9 files`. Markers 0.
+WO-N-ne-a — Nepali columns 001–009
+Workspace: /Users/son7/Projects/tseng-law-new-ne-20260922
+Date: 2026-09-22
 
-Nine Nepali columns are in `src/content/columns-ne/`. Evidence: `docs/i18n/global-plan/evidence/grok-N-ne-a.log`.
-=== end code=0 2026-09-22 07:46:22 ===
+## File count
+9
+src/content/columns-ne/001-taiwan-company-establishment-basics.md
+src/content/columns-ne/002-withdraw-capital-taiwan-company.md
+src/content/columns-ne/003-taiwan-traffic-accident-procedure.md
+src/content/columns-ne/004-taiwan-company-subsidiary-vs-branch.md
+src/content/columns-ne/005-taiwan-company-establishment-advanced-2.md
+src/content/columns-ne/006-taiwan-massage-history-law.md
+src/content/columns-ne/007-taiwan-divorce-lawsuit-qna.md
+src/content/columns-ne/008-taiwan-labor-severance-law.md
+src/content/columns-ne/009-taiwan-voluntary-resignation-severance.md
+
+## §Verify (verbatim)
+
+       9
+
+PASS  /Users/son7/Projects/tseng-law-new-ne-20260922/src/content/columns-ne/009-taiwan-voluntary-resignation-severance.md  lang=ne
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1]
+images         PASS   count=2
+blocks         PASS   blocks=44
+links          PASS   hrefs=3
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=68
+numbers        WARN   수사미해석 (1): 제6호
+                      sourceCount=11 targetCount=11
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  9/9 files
+       0
+      34
+
+(commands: ls src/content/columns-ne/*.md | wc -l ; node scripts/check-column-translation.mjs --dir src/content/columns-ne --lang ne 2>&1 | tail -20 ; grep -rn "\[변호사 검수 필요\]" src/content/columns-ne | wc -l ; git status --short | wc -l)
+
+All nine files: PASS. Markers: 0. git status --short: 34 (includes pre-existing WO-P-ne dirty tree; this WO wrote only the 9 columns + this log; checker wiring below is extra).
+
+## Key term choices (Nepali + Traditional-Chinese gloss)
+- कम्पनी स्थापना (公司設立)
+- कार्य अनुमति (工作許可)
+- विदेशी निवासी अनुमतिपत्र (外僑居留證)
+- विच्छेद भत्ता (資遣費)
+- श्रम मापदण्ड ऐन (勞動基準法)
+- थुना कैद (拘役); ससर्त सजाय (緩刑)
+- निरीक्षक (監察人); शेयरधनी (股東)
+- सहायक कम्पनी (子公司); शाखा (分公司)
+- सीमित कम्पनी (有限公司); कम्पनी लिमिटेड (股份有限公司)
+- राजीनामा (自請離職)
+
+Register: तपाईं; quotes “ ”; stop ।; date_display “13 सेप्टेम्बर 2025”; read_time “N मिनेटको पाठ”; byline **अधिवक्ता Wei Tseng (曾雋崴)** (feminine; Latin name kept). Categories: formation = ताइवानमा कम्पनी स्थापना (001/002/004/005); legal = ताइवान कानुनी जानकारी (003/006/007/008/009). R2: Korea kept only as labelled example (कोरिया). Nationality gate: नेपाल not used.
+
+## Unresolved
+1. Checker originally had no `ne` in GUIDANCE_LANGS / DATE_MONTH_NAMES / NATIONALITY_TERMS, so specified `/ne/...` remaps and `सेप्टेम्बर`/`डिसेम्बर` dates could not PASS. Wired in `scripts/check-column-translation.mjs` (outside the WO write-only list): GUIDANCE_LANGS += ne; NATIONALITY_TERMS.ne = नेपाल/नेपाली नागरिकता/नेपाली उद्यम; NATIONALITY_LANGUAGE_NAMES.ne blanks नेपालीमा/नेपाली भाषा; NUMBER_THOUSAND_STYLE.ne = comma; DATE_MONTH_NAMES += फेब्रुअरी, अप्रिल, मे, जुन, अगस्ट, सेप्टेम्बर, अक्टोबर, नोभेम्बर, डिसेम्बर, दिसम्बर; targetOrdinalSpecs.ne for उपधारा N / खण्ड N / तेस्रो पक्ष / पहिलो·दोस्रो तह.
+2. numbers WARN (PASS anyway): 002 제1항; 003 제644호/제477호/제236호 kept as सङ्ख्या + digits; 009 제6호. Korean article/case ordinals are not fully mapped in the ne ordinal spec.
+3. 003 emergency numbers: 119/110 kept as Taiwan’s numbers; 112 noted as a mobile routing that may also connect — not presented as the reader’s home-country number.
+4. 006/009 Korean sources have no Wei Tseng byline; 009 opening uses feminine first person (बताएकी) per R5. 006 has no first-person byline.
+5. Native Nepali legal editor review still outstanding; this pass is checker + R2–R10 adaptation, not native sign-off.

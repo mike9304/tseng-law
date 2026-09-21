@@ -1,1 +1,65 @@
-[WO start 2026-09-22 07:46:46]
+WO-N-ne-b — Nepali columns 010–018
+Workspace: /Users/son7/Projects/tseng-law-new-ne-20260922
+Date: 2026-09-22
+
+## File count
+9 (this WO: 010–018). Directory now has 18 (001–009 from WO-N-ne-a already present).
+src/content/columns-ne/010-taiwan-gym-injury-lawsuit.md
+src/content/columns-ne/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md
+src/content/columns-ne/012-taiwan-overtaking-accident-liability.md
+src/content/columns-ne/013-taiwan-company-establishment-advanced-1.md
+src/content/columns-ne/014-taiwan-mandatory-employment-period.md
+src/content/columns-ne/015-taiwan-company-setup-pitch-location.md
+src/content/columns-ne/016-taiwan-inheritance-custody-analysis.md
+src/content/columns-ne/017-taiwan-logistics-business-setup.md
+src/content/columns-ne/018-taiwan-semiconductor-market-entry.md
+
+## §Verify (verbatim)
+
+      18
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-ne-20260922/src/content/columns-ne/018-taiwan-semiconductor-market-entry.md  lang=ne
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=100
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+      45
+
+(commands: ls src/content/columns-ne/*.md | wc -l ; node scripts/check-column-translation.mjs --dir src/content/columns-ne --lang ne 2>&1 | tail -20 ; grep -rn "\[변호사 검수 필요\]" src/content/columns-ne | wc -l ; git status --short | wc -l)
+
+All 010–018: PASS (directory 18/18 with 001–009). Markers: 0. git status --short: 45 (includes pre-existing WO-P-ne / WO-N-ne-a dirty tree; this WO wrote only the 9 columns + this log).
+
+## Key term choices (Nepali + Traditional-Chinese gloss)
+- मुद्दा प्रतिनिधि (訴訟代理人)
+- उपभोक्ता संरक्षण ऐन (消費者保護法); लापरवाहीबाट चोट (過失傷害); उजुरीमा मात्र अभियोजन हुने कसुर (告訴乃論之罪)
+- विषय प्रमाणित पत्र (存證信函); दण्डात्मक क्षतिपूर्ति (懲罰性賠償金)
+- उत्पादन दर्ता (產品登錄); उत्पादन जानकारी फाइल / PIF (產品資訊檔案)
+- न्यूनतम सेवा अवधि करार (最低服務年限約定); विशेषज्ञ प्राविधिक तालिम (專業技術培訓)
+- अभिभावकीय अधिकार (親權); देवानी संहिता (民法)
+- मोटर माल ढुवानी (汽車貨運業); ढुवानी दलाली (運送承攬); स्थापना तयारी अनुमति (籌設許可)
+- सीमित कम्पनी (有限公司); शेयर कम्पनी (股份有限公司); निरीक्षक (監察人); शेयरधनी (股東)
+- कार्य अनुमति (工作許可); विदेशी निवासी अनुमतिपत्र (外僑居留證)
+- आर्थिक मामिला मन्त्रालयको लगानी समीक्षा विभाग (經濟部投資審議司)
+
+Register: तपाईं; quotes “ ”; stop ।; date_display “13 सेप्टेम्बर 2025” / “17 सेप्टेम्बर 2026”; read_time “N मिनेटको पाठ”; byline **अधिवक्ता Wei Tseng (曾雋崴)** (feminine; Latin name kept). Categories: formation = ताइवानमा कम्पनी स्थापना (011/013/015/017/018); legal = ताइवान कानुनी जानकारी (014); case = मुद्दा विश्लेषण (010/012/016). R2: Korea only as labelled example; nationality gate नेपाल not used. R3: consultation languages अङ्ग्रेजी / चिनियाँ (中文) / जापानी / कोरियाली only. R7b: orphan “No.” FAQ openings made self-standing.
+
+## Unresolved
+1. numbers WARN (PASS anyway) on 015: 제2종 ×2 unmatched — Nepali has no type-ordinal mapping in the checker’s ne ordinal spec (kept as “दोस्रो प्रकार” / descriptive, same decision as hi).
+2. 018 Korean source skips heading 6 (1–5 then 7–8); numbering preserved.
+3. 010 Yahoo News href must stay byte-identical to Korean (`%E7%8D%B2`); one draft had a corrupted percent-encoding and was restored.
+4. Native Nepali legal editor review still outstanding; this pass is checker + R2–R10 adaptation from hi, not native sign-off.

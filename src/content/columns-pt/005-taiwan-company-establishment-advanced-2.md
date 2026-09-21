@@ -21,7 +21,7 @@ Quem leu [Constituição de sociedades em Taiwan – fundamentos](/pt/columns/ta
 
 ​
 
-As perguntas e respostas (Q&A) seguintes visam ajudar as pessoas que ponderam uma constituição de sociedade (公司設立) em Taiwan.
+As perguntas e respostas seguintes visam ajudar as pessoas que ponderam uma constituição de sociedade (公司設立) em Taiwan.
 
 ​
 
@@ -33,7 +33,7 @@ A transferência por banco em linha ou por intermédio de um próximo na Coreia 
 
 Além disso, em conformidade com a regulamentação coreana sobre o controlo dos câmbios, a pessoa de nacionalidade coreana que constitui uma pessoa coletiva estrangeira ou adquire partes deve depositar uma «declaração de investimento direto no estrangeiro». A declaração deve ser registada no momento da transferência do capital à pessoa coletiva taiwanesa (台灣法人); na falta disso, podem aplicar-se sanções por violação da regulamentação sobre os câmbios.
 
-Antes de transferir o capital (資本金匯款), informe-se junto do seu banco principal na Coreia.
+Antes de transferir o capital (資本金匯款), informe-se junto do banco no país de origem dos fundos (no exemplo, a Coreia).
 
 **​**
 
@@ -67,7 +67,7 @@ Certos bancos podem impor exigências suplementares, por exemplo uma duração d
 
 **​**
 
-**5. A sociedade pode contratar pessoas de nacionalidade coreana como trabalhadores?**
+**5. A sociedade pode contratar trabalhadores de nacionalidade estrangeira?**
 
 A. Primeiro trabalhador: o pedido é apresentado como um trabalho de direção numa empresa de investimento ordinário de chineses do ultramar ou de estrangeiros (一般僑外投資事業主管工作). O critério do «trabalho de natureza especializada ou técnica» do ponto B abaixo não se aplica, mas aplicam-se as condições de destinatário, nomeadamente a de gerente (經理人) de uma sociedade cuja entrada de chineses do ultramar ou de estrangeiros ultrapassa um terço, bem como as condições de resultados do empregador relativas ao capital e ao volume de negócios (artigos 38 e 39 das normas de exame).
 
@@ -77,7 +77,7 @@ Consulte o sítio do Ministério do Trabalho de Taiwan (勞動部): <https://ezw
 
 ​
 
-Se tiver outras perguntas, pode contactar-nos a qualquer momento.
+Para outras perguntas, pode escrever através da página Contacto; não é prometido um prazo de resposta.
 
 ---
 

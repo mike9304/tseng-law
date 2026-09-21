@@ -29,7 +29,7 @@ O artigo 185-4 do Código Penal de Taiwan (刑法) rege a responsabilidade penal
 
 ## Q2. Que provas devem conservar-se em primeiro lugar?
 
-Assegure primeiro a segurança pessoal e os sinais de aviso; se houver feridos ou necessidade de salvamento, ligue para o 119, e se houver uma infração ou uma situação de segurança urgente, para o 110 ou o 112. Efetue também a comunicação à polícia segundo as circunstâncias do acidente de viação.
+Assegure primeiro a segurança pessoal e os sinais de aviso; se houver feridos ou necessidade de salvamento, em Taiwan ligue para o 119 (ambulância e bombeiros) e, se houver uma infração ou uma situação de segurança urgente, para o 110 (polícia) ou o 112 (a partir de um telemóvel). Efetue também a comunicação à polícia segundo as circunstâncias do acidente de viação.
 
 Uma vez assegurada a segurança, tire fotografias de conjunto e de pormenor para registar a posição e os danos dos veículos, as marcas rodoviárias, os semáforos e as condições meteorológicas. Convém não omitir os contactos das testemunhas, o pedido de conservação das imagens de CCTV (監視器影像) e da câmara de bordo (行車紀錄器), os dados das partes, do veículo e do seguro, e o processo clínico (病歷). As fotografias pessoais são úteis, mas não substituem a intervenção policial exigida em caso de acidente com ferimentos ou morte.
 
@@ -47,7 +47,7 @@ A escolha varia segundo a interrupção da prescrição (時效中斷), o círcu
 
 ## Q4. Se houver culpa de parte a parte, como se apreciam as responsabilidades penal e civil?
 
-A responsabilidade penal só pode ser retida quando são reconhecidos o incumprimento do dever de prudência de cada um e o nexo de causalidade entre esse incumprimento e as lesões da outra parte. O só facto de uma culpa ter existido de parte a parte não faz nascer automaticamente a responsabilidade por lesões por imprudência.
+A responsabilidade penal só pode ser retida quando são reconhecidos o incumprimento do dever de prudência de cada um e o nexo de causalidade entre esse incumprimento e as lesões da outra parte. O simples facto de uma culpa ter existido de parte a parte não faz nascer automaticamente a responsabilidade por lesões por imprudência.
 
 No plano civil, segundo o artigo 217 do Código Civil, se a pessoa lesada tiver uma culpa que contribuiu para causar ou agravar o dano (與有過失), o tribunal pode reduzir ou isentar a indemnização. Por exemplo, se o dano reconhecido em novo dólar de Taiwan (新臺幣, TWD) for TWD 1.000.000 e a culpa da pessoa lesada for avaliada em 50 %, o montante pode ser reduzido a TWD 500.000 antes de outros ajustamentos.
 
@@ -91,7 +91,7 @@ Em caso de desacordo com o parecer de perícia, um reexame pode ser pedido, mas 
 
 ## Q7. Que danos podem ser reclamados depois do acidente?
 
-A reclamação fundada no artigo 184 do Código Civil pressupõe uma ofensa ilícita a um direito, o nexo de causalidade com o acidente e a prova do dano. O só facto de um acidente ter ocorrido não implica que todos os postos seguintes sejam reconhecidos. O artigo 216 do Código Civil é o critério para determinar a extensão do dano efetivo e do lucro cessante (所失利益).
+A reclamação fundada no artigo 184 do Código Civil pressupõe uma ofensa ilícita a um direito, o nexo de causalidade com o acidente e a prova do dano. O simples facto de um acidente ter ocorrido não implica que todos os postos seguintes sejam reconhecidos. O artigo 216 do Código Civil é o critério para determinar a extensão do dano efetivo e do lucro cessante (所失利益).
 
 - **Ferimentos**: Segundo o artigo 193 do Código Civil podem ser examinados os encargos médicos (醫療費用) necessários, os encargos suplementares da vida quotidiana tais como os encargos de cuidados (看護費用), de transporte para tratamento (就醫交通費) e de ajudas técnicas, bem como a perda de rendimentos (收入損失) por incapacidade de trabalho real e a diminuição da capacidade de trabalho (勞動能力減損). Segundo o artigo 195 do Código Civil o dano moral pode também ser examinado.
 - **Morte**: Segundo o artigo 192 do Código Civil, quando houver lugar, podem ser examinados os encargos médicos anteriores à morte e os encargos de necessidades vitais acrescidos, os encargos fúnebres (殯葬費) e a perda de alimentos (扶養利益損失) da pessoa que tinha um direito legal aos alimentos. Segundo o artigo 194 do Código Civil o dano moral de certos parentes pode também ser examinado.
@@ -101,7 +101,7 @@ A reclamação fundada no artigo 184 do Código Civil pressupõe uma ofensa ilí
 
 Conserve os recibos (收據), os certificados médicos e o processo clínico, e organize com eles a necessidade médica de cada tratamento e o seu nexo de causalidade com o acidente. As peças de um tratamento que prossegue podem completar a prova segundo o calendário processual do tribunal e o conteúdo da reclamação já apresentada, mas isso não assegura que todas as peças apresentadas tardiamente ou toda a extensão da reclamação sejam admitidas ou autorizadas.
 
-Deve distinguir-se o aditamento de peças médicas da modificação ou do aumento do montante reclamado. Depois de formada uma ação civil acessória à instância penal, o só facto de apresentar mais recibos médicos não gera automaticamente custas judiciais.
+Deve distinguir-se o aditamento de peças médicas da modificação ou do aumento do montante reclamado. Depois de formada uma ação civil acessória à instância penal, o simples facto de apresentar mais recibos médicos não gera automaticamente custas judiciais.
 
 Contudo, segundo o artigo 504 do Código de Processo Penal, uma vez o assunto remetido à secção civil, modificar, aditar ou alargar a reclamação para além da extensão anterior à remessa pode pôr a questão das custas sobre a parte excedentária. A fase de remessa, o momento de apresentação e a extensão da reclamação devem ser verificados em cada assunto.
 
@@ -109,7 +109,7 @@ Contudo, segundo o artigo 504 do Código de Processo Penal, uma vez o assunto re
 
 O certificado médico ou o parecer médico são úteis para mostrar a necessidade de cuidados, mas não são por si só um fundamento decisivo. Deve explicar-se por peças o nexo de causalidade com o acidente, a necessidade de cuidados, se foram efetivamente prestados, a duração e um montante razoável.
 
-Mesmo se um próximo tiver efetivamente prestado os cuidados sem remuneração, no assunto adequado isso pode ser avaliado como um dano. Contudo, a só circunstância de os cuidados serem prestados por um próximo não implica o seu reconhecimento automático; o conteúdo e a duração dos cuidados, bem como o nível habitual de custo, são também examinados.
+Mesmo se um próximo tiver efetivamente prestado os cuidados sem remuneração, no assunto adequado isso pode ser avaliado como um dano. Contudo, a simples circunstância de os cuidados serem prestados por um próximo não implica o seu reconhecimento automático; o conteúdo e a duração dos cuidados, bem como o nível habitual de custo, são também examinados.
 
 ## Q10. Por que se provam os encargos de deslocação para o tratamento?
 
@@ -175,7 +175,7 @@ A obrigação de subscrever segundo o artigo 6 da lei sobre o seguro obrigatóri
 
 Num acidente de um só veículo, o condutor desse veículo não é, em geral, destinatário das prestações do seguro obrigatório desse veículo. Contudo, num acidente em que intervêm vários veículos, existem casos nos quais o condutor pode reclamar prestações ao segurador obrigatório de outro veículo implicado.
 
-A tabela de prestações (強制汽車責任保險給付標準) modificado em 2026-05-29 aplica-se aos acidentes ocorridos a contar de 2026-07-01. O teto dos encargos médicos razoáveis e necessários por ferimentos é TWD 200.000 em novo dólar de Taiwan; a prestação por invalidez (失能) vai de TWD 80.000 a TWD 3.000.000 segundo 15 graus legais; a prestação por morte é TWD 3.000.000, e o máximo conjunto de morte, de invalidez e de encargos médicos para 1 vítima e 1 acidente é TWD 3.200.000. Aos acidentes anteriores pode aplicar-se a tabela precedente.
+A tabela de prestações (強制汽車責任保險給付標準) alterada em 29 de maio de 2026 aplica-se aos acidentes ocorridos a partir de 1 de julho de 2026. O teto dos encargos médicos razoáveis e necessários por ferimentos é TWD 200.000 em novo dólar de Taiwan; a prestação por invalidez (失能) vai de TWD 80.000 a TWD 3.000.000 segundo 15 graus legais; a prestação por morte é TWD 3.000.000, e o máximo conjunto de morte, de invalidez e de encargos médicos para 1 vítima e 1 acidente é TWD 3.200.000. Aos acidentes anteriores pode aplicar-se a tabela precedente.
 
 O seguro de responsabilidade civil perante terceiros (第三人責任險), o seguro de acidentes do condutor (駕駛人傷害險) e o seguro de danos no próprio veículo (車體損失險) são produtos facultativos de caráter contratual. A cobertura real varia segundo o segurado, o teto, a franquia (自負額), as exclusões, a culpa e as outras condições da apólice, de modo que a apólice e as condições devem ser verificadas caso a caso.
 
@@ -184,11 +184,11 @@ O seguro de responsabilidade civil perante terceiros (第三人責任險), o seg
 - [Código Civil, artigo 193](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Código Civil, artigo 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Código Civil, artigo 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Acórdão do tribunal da Relação de Taiwan, ano 109, assunto 上易字 número 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [Acórdão do tribunal da Relação de Taiwan, ano 109, assunto 上易字 número 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Acórdão do Tribunal da Relação de Taiwan (臺灣高等法院), ano 109 do calendário da República (民國), 上易字 número 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Acórdão do Tribunal da Relação de Taiwan (臺灣高等法院), ano 109 do calendário da República (民國), 上易字 número 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Calculador de valor atual Hoffmann do Yuan Judicial](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Código Civil, artigo 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Acórdão do tribunal de comarca de Taoyuan, ano 112, assunto 壢簡字 número 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Acórdão do tribunal de comarca de Taoyuan, ano 112 do calendário da República (民國), 壢簡字 número 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Código Civil, artigo 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Código Penal da República da China, artigo 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Lei sobre o seguro obrigatório de responsabilidade civil automóvel](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
@@ -235,7 +235,7 @@ Q17. Qual é a responsabilidade penal por lesões por imprudência do autor de u
 
 ​
 
-Em caso de lesões por imprudência, os tribunais infligem atualmente uma pena de cerca de 3 meses.
+Em alguns acórdãos tem sido aplicada, por lesões por imprudência, uma pena de cerca de 3 meses; não existe um resultado típico nem garantido.
 
 ​
 
@@ -247,7 +247,7 @@ Se for convertida em multa (易科罰金), o artigo 41, alínea 1, do Código Pe
 
 ​
 
-Para as lesões graves por imprudência, uma pena de 4 meses é habitualmente infligida, e para a morte por imprudência (過失致死) uma pena de 6 meses é habitualmente infligida.
+Nas lesões graves por imprudência tem sido aplicada, em alguns acórdãos, uma pena de 4 meses e, na morte por imprudência (過失致死), uma pena de 6 meses; também aqui não existe um resultado típico nem garantido.
 
 ​
 
@@ -267,7 +267,7 @@ Na morte por imprudência, o desistimento da queixa não é possível; contudo, 
 
 ​
 
-Pode haver uma suspensão da pena (緩刑) e não ir para a prisão.
+Em alguns casos pode ser possível uma suspensão da pena (緩刑); não é uma promessa de que a prisão seja evitada.
 
 ​
 
@@ -307,7 +307,7 @@ O importante então é o cuidado e a honestidade do advogado.
 
 ​
 
-Importa que o advogado examine com atenção todos os postos da reclamação e se empenhe em que seja obtida a indemnização mais elevada possível.
+Importa que o advogado examine com atenção todas as rubricas da reclamação e se empenhe em pedir a indemnização que os factos e as provas sustentam.
 
 ​
 
@@ -359,7 +359,7 @@ Este ponto não deve portanto absolutamente ser negligenciado, e convém consult
 
 ​
 
-Se tiver outras perguntas, deixe-as nos comentários.
+Para outras perguntas, utilize a página Contacto.
 
 ​
 

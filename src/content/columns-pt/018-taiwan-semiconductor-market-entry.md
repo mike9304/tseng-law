@@ -67,11 +67,11 @@ Pode formar-se com uma ou várias pessoas singulares, ou com associados pessoas 
 
 O capital divide-se em ações. Em princípio 2 associados ou mais são exigidos, mas o Estado ou uma pessoa coletiva podem constituí-la sozinhos, e uma pessoa coletiva estrangeira pode deter 100 %. As ações são, em princípio, livremente transmissíveis, com exceções legais; ações especiais e opções de assalariados podem conceber-se em conformidade com a lei. Isso convém às empresas que esperam investidores, uma negociação de ações, incentivos em capital para os assalariados ou uma fusão, uma aquisição ou uma cotação futura; não se limita às grandes empresas. Em governação, uma sociedade não emitente pública pode, pelos estatutos, não ter conselho e ter só 1 ou 2 administradores. Uma sociedade com um só associado estatal ou pessoa coletiva pode, pelos estatutos, não ter comissário. Toda a sociedade por ações (股份有限公司) não tem de fazer certificar as contas anuais. Os limiares principais de auditoria de uma sociedade ordinária são um capital realizado de TWD 30.000.000, ou, abaixo disso, receitas de exploração de TWD 100.000.000 ou 100 trabalhadores no regime de seguro do trabalho; as sociedades de oferta pública seguem a regulamentação dos valores.
 
-## 4. Os procedimentos de sucursal e de filial diferem; só a filial passa pelo exame da Comissão dos investimentos
+## 4. Os procedimentos de sucursal e de filial diferem; só a filial passa pelo exame do Departamento de Revisão dos Investimentos
 
-Quando uma sociedade estrangeira constitui uma filial taiwanesa, o nome verifica-se em princípio de antemão e uma autorização de investimento é pedida à Comissão dos investimentos do Ministério da Economia (經濟部投資審議司). Depois da aprovação, os fundos são transferidos, o montante do investimento é determinado e um perito contabilista (會計師) verifica o capital, depois a constituição e o registo fiscal concluem-se.
+Quando uma sociedade estrangeira constitui uma filial taiwanesa, o nome verifica-se em princípio de antemão e uma autorização de investimento é pedida à Departamento de Revisão dos Investimentos do Ministério da Economia (經濟部投資審議司). Depois da aprovação, os fundos são transferidos, o montante do investimento é determinado e um perito contabilista (會計師) verifica o capital, depois a constituição e o registo fiscal concluem-se.
 
-Em contrapartida, para constituir uma sucursal taiwanesa de uma sociedade estrangeira ordinária, uma autorização de investimento da Comissão dos investimentos não é em princípio exigida; o Departamento do comércio do Ministério da Economia (經濟部商業發展署) trata o registo de sucursal e a determinação de capital conexa. Permanecem necessários a verificação prévia do nome, a transferência do capital de exploração, a verificação do capital e o registo fiscal; o calendário é em geral mais curto.
+Pelo contrário, para constituir uma sucursal taiwanesa de uma sociedade estrangeira ordinária, uma autorização de investimento do Departamento de Revisão dos Investimentos não é em princípio exigida; o Departamento do comércio do Ministério da Economia (經濟部商業發展署) trata o registo de sucursal e a determinação de capital conexa. Permanecem necessários a verificação prévia do nome, a transferência do capital de exploração, a verificação do capital e o registo fiscal; o calendário é em geral mais curto.
 
 O que precede é uma proposta de conceção contratual. Dispor de um formulário concreto não torna a operação lícita e não evita os litígios.
 
@@ -91,11 +91,11 @@ Os cenários seguintes são hipotéticos para ajudar a refletir; não estabelece
 
 **Empresas estrangeiras em fase de estudo de mercado.** Se, antes de uma organização de vendas, se quiserem só funções de informação e de ligação, um escritório de representação pode avaliar-se. Se o plano real incluir a venda de stocks ou o trabalho no local, deve confirmar-se em separado se estas atividades são permitidas.
 
-## 8. Para a primeira entrevista, um panorama operacional basta; não é necessário entregar de entrada todas as peças confidenciais
+## 8. Para a primeira consulta, um panorama operacional basta; não é necessário entregar à partida todas as peças confidenciais
 
-Na primeira entrevista, podem reunir-se os dados de base da sede e dos que fazem entradas, uma descrição geral do produto ou do serviço, o fluxo de operações previsto, os planos de pessoal e de instalações em Taiwan, e as condições de contrato e de apoio que os clientes pedem. O que ainda não estiver decidido pode marcar-se como «em espera».
+Na primeira consulta, podem reunir-se os dados de base da sede e dos que fazem entradas, uma descrição geral do produto ou do serviço, o fluxo de operações previsto, os planos de pessoal e de instalações em Taiwan, e as condições de contrato e de apoio que os clientes pedem. O que ainda não estiver decidido pode marcar-se como «em espera».
 
-Não é necessário juntar ao primeiro contacto todos os materiais confidenciais do cliente ou dados de processo pormenorizados. Depois de fornecido o nome da contraparte para o controlo dos conflitos, os materiais necessários e o modo de envio determinam-se segundo as indicações do responsável.
+Não é necessário juntar ao primeiro contacto todos os materiais confidenciais do cliente ou dados de processo pormenorizados. Depois de fornecido o nome da contraparte para o controlo dos conflitos, os materiais necessários e o modo de envio determinam-se segundo as indicações da advogada responsável.
 
 ## Perguntas frequentes
 
@@ -111,8 +111,8 @@ Se se constituir uma filial e não uma sucursal, a sede, em princípio, não ass
 
 Uma transição por etapas pode planear-se, mas deve também rever-se a extinção ou a alteração dos contratos existentes, os contratos com os clientes, os stocks, o tratamento dos defeitos e o pessoal.
 
-## Entrevista sobre a estrutura de entrada em Taiwan
+## Consulta sobre a estrutura de entrada em Taiwan
 
-Se se prever vender, gerir stocks, fornecer um apoio de instalação ou contratar localmente em Taiwan, organize-se primeiro o trabalho que a sede executará e o que caberá à organização em Taiwan. Depois da confirmação dos temas de entrevista e dos conflitos de interesses, o escritório explicará os materiais necessários e a extensão dos serviços que podem ser fornecidos.
+Se se prever vender, gerir stocks, fornecer um apoio de instalação ou contratar localmente em Taiwan, organize-se primeiro o trabalho que a sede executará e o que caberá à organização em Taiwan. Depois da confirmação dos temas da consulta e dos conflitos de interesses, o escritório explicará os materiais necessários e a extensão dos serviços que podem ser fornecidos.
 
-Exemplo de objeto: Entrevista sobre a estrutura de entrada em Taiwan de uma empresa de semicondutores. No primeiro contacto, indique-se o nome da sociedade, o país da sede, o produto ou o serviço previsto, o plano de operação em Taiwan e a língua de entrevista pretendida. Enviem-se os materiais de conceção confidenciais e os contratos completos só depois de se terem recebido indicações suplementares. As línguas de entrevista realmente disponíveis e a extensão de todo o mandato devem confirmar-se no momento do contacto.
+Exemplo de objeto: consulta sobre a estrutura de entrada em Taiwan de uma empresa de semicondutores. No primeiro contacto, indique-se o nome da sociedade, o país da sede, o produto ou o serviço previsto, o plano de operação em Taiwan e a língua de consulta pretendida. Enviem-se os materiais de conceção confidenciais e os contratos completos só depois de se terem recebido indicações suplementares. As línguas de entrevista realmente disponíveis e a extensão de todo o mandato devem confirmar-se no momento do contacto.

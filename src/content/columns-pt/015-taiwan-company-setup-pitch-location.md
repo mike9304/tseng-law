@@ -13,7 +13,7 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 ![Imagem de destaque](../images/015-taiwan-company-setup-pitch-location/featured-01.jpg)
 
-(As exigências das coletividades locais de Taiwan diferem; o texto seguinte é um exemplo de abertura de um estabelecimento de restauração na cidade de Taipé.)
+(As exigências das autarquias locais de Taiwan diferem; o texto seguinte é um exemplo de abertura de um estabelecimento de restauração na cidade de Taipé.)
 
 ![](../images/015-taiwan-company-setup-pitch-location/img-01.jpg)
 
@@ -43,7 +43,7 @@ Qualquer pessoa pode pedir junto do gabinete da administração fundiária (地�
 
 Se tiver dificuldade em deslocar-se em pessoa ao gabinete da administração fundiária (地政事務所),
 
-pode pedir a ajuda de um conhecido em Taiwan, do senhorio, de um agente imobiliário ou de um advogado.
+pode pedir a ajuda de um conhecido em Taiwan, do senhorio, de um agente imobiliário ou de uma advogada ou advogado.
 
 Se o resultado da verificação indicar que o estabelecimento de restauração não é possível, mais tarde, na inscrição da pessoa coletiva (公司登記), a municipalidade poderia não aceitar a inscrição.
 
@@ -71,7 +71,7 @@ Se se abrir num lugar onde o estabelecimento de restauração não é possível,
 
 «ramos objeto de uma verificação oficiosa» (主動查詢之營業項目)
 
-Tal é o essencial; para outras perguntas, pode dirigir-se a qualquer momento a um advogado de Taiwan.
+Tal é o essencial; para outras perguntas, pode escrever através da página Contacto; não é prometido um prazo de resposta.
 
 As regras das autoridades administrativas podem mudar com frequência; antes da inscrição da pessoa coletiva, convém confirmar a regulamentação mais recente.
 

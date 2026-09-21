@@ -361,7 +361,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     experienceLabel: 'Experiência',
     photoAltPrefix: 'Foto',
     workingLanguagesLabel: 'Línguas de trabalho',
-    fullProfileLabel: 'Perfil completo (English)',
+    fullProfileLabel: 'Perfil completo (em inglês)',
     keyFactsHeading: 'Advogada Wei Tseng — Dados essenciais',
     qualificationLabel: 'Qualificação e escritório',
     qualificationSentence:
@@ -1692,7 +1692,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'O escritório trata assuntos de empresas e de particulares em Taiwan em inglês, japonês, coreano e chinês.',
-        'Representou um estudante coreano numa pretensão de indemnização por uma lesão num ginásio e obteve uma sentença de primeira instância de TWD 1.57M.',
+        'Representou um estudante coreano numa pretensão de indemnização por uma lesão num ginásio e obteve uma sentença de primeira instância de 1,57 milhões de TWD.',
       ],
       education: [
         'Mestrado (M.S.), Institute of Finance, National Taiwan University',

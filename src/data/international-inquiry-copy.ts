@@ -692,7 +692,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Esta página está escrita em português como orientação geral, não como parecer jurídico para o seu próprio caso.',
     consultationNotice:
-      'A consulta realiza-se em quatro línguas: inglês, chinês (中文), japonês e coreano.',
+      'A consulta realiza-se apenas em quatro línguas: inglês, chinês (中文), japonês e coreano.',
     methodConfirmationNotice:
       'Se não puder usar nenhuma dessas quatro línguas, escolha «É preciso confirmar a forma de comunicar». Responderemos para examinar uma via possível de comunicação quando existir uma forma possível; não se assegura o serviço noutra língua e não se promete um prazo de resposta.',
     preparationNotice:

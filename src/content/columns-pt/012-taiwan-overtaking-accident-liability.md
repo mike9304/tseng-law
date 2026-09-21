@@ -21,35 +21,35 @@ O [artigo 101 do regulamento de segurança da circulação rodoviária de Taiwan
 
 O artigo 101 interdita a ultrapassagem nos troços providos de painéis que indiquem uma curva, uma rampa íngreme ou uma descida, uma ponte estreita, um túnel ou um cruzamento, bem como nas passagens de nível e nos estaleiros.
 
-Além disso, não se pode ultrapassar nos locais ou troços providos de um painel de escola ou de hospital, nos sítios providos de outros painéis ou marcas de interdição de ultrapassar, quando um veículo se aproxima em sentido inverso, nem quando 2 veículos ou mais circulam um atrás do outro à frente.
+Além disso, não se pode ultrapassar nos locais ou troços providos de um painel de escola ou de hospital, nos sítios providos de outros painéis ou marcas de interdição de ultrapassar, quando um veículo se aproxima em sentido inverso, nem quando dois veículos ou mais circulam um atrás do outro à frente.
 
-Para ultrapassar o veículo da frente na mesma via, o condutor do veículo de trás deve primeiro buzinar 2 vezes brevemente ou fazer um apelo de faróis. A buzina e os faróis não devem ser utilizados de forma repetida para forçar o veículo da frente a ceder a via.
+Para ultrapassar o veículo da frente na mesma via, o condutor do veículo de trás deve primeiro buzinar duas vezes brevemente ou fazer um apelo de faróis. A buzina e os faróis não devem ser utilizados de forma repetida para forçar o veículo da frente a ceder a via.
 
 O veículo de trás só pode ultrapassar depois de o veículo da frente ter abrandado e se ter afastado, ou ter manifestado a sua vontade de ceder a passagem por um sinal da mão ou pelo intermitente direito.
 
 Em seguida, o veículo que ultrapassa deve acender o intermitente esquerdo, passar à esquerda mantendo uma distância de pelo menos 0,5 metro relativamente ao veículo da frente e, uma distância de segurança uma vez assegurada, acender o intermitente direito e regressar em segurança à via de origem.
 
-Esta ordem de sinais e de cessão na mesma via não significa que a ultrapassagem seria autorizada num local ou numa condição interditos. Antes de começar a ultrapassagem, todas as condições do artigo 101 devem ser apreciadas em conjunto.
+Esta ordem de sinais e de cedência de passagem na mesma via não significa que a ultrapassagem seria autorizada num local ou numa condição interditos. Antes de começar a ultrapassagem, todas as condições do artigo 101 devem ser apreciadas em conjunto.
 
 ## Caso de acidente anonimizado tratado por este escritório
 
 Num assunto anonimizado tratado por este escritório, o motociclista A circulava numa estrada de montanha com o passageiro B. À frente circulavam 2 automóveis particulares; o veículo n.º 1, o mais à frente, avançava lentamente, de modo que o veículo n.º 2 e a motocicleta progrediam também a baixa velocidade.
 
-![Esquema de acidente que mostra a trajetória de ultrapassagem da motocicleta e dos 2 veículos da frente numa estrada de montanha](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
+![Esquema de acidente que mostra a trajetória de ultrapassagem da motocicleta e dos dois veículos da frente numa estrada de montanha](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A tentou ultrapassar os 2 veículos, entrou na via oposta e acelerou. O veículo n.º 2 preparava-se também para ultrapassar o veículo n.º 1: menos de 1 segundo depois de ter acendido o intermitente, entrou na via oposta. A motocicleta não tinha margem de travagem suficiente e entrou em colisão com o veículo n.º 2.
+A tentou ultrapassar os dois veículos, entrou na via oposta e acelerou. O veículo n.º 2 preparava-se também para ultrapassar o veículo n.º 1: menos de 1 segundo depois de ter acendido o intermitente, entrou na via oposta. A motocicleta não tinha margem de travagem suficiente e entrou em colisão com o veículo n.º 2.
 
 B sofreu lesões graves na cabeça e faleceu no local; A perdeu a consciência e foi transportado para o hospital.
 
 Os próximos de A e de B viram primeiro a mudança brusca de via do veículo n.º 2 como a causa principal da colisão. O assunto deu lugar a um processo e, no curso do procedimento, várias perícias (鑑定) do acidente foram praticadas.
 
-Segundo o resultado da perícia, A suportava a responsabilidade principal desta colisão. Esta conclusão estava limitada aos factos deste assunto. A perícia teve em conta em conjunto o facto de A querer ultrapassar 2 veículos da frente que circulavam um atrás do outro, de se ter engajado na via oposta, de circular a uma velocidade que deixava apenas uma margem de travagem, de os sinais de buzina e de faróis prescritos terem faltado, bem como o movimento de mudança de via do veículo n.º 2, a estrutura da estrada e das vias e as outras provas recolhidas.
+Segundo o resultado da perícia, A suportava a responsabilidade principal desta colisão. Esta conclusão estava limitada aos factos deste assunto. A perícia teve em conta em conjunto o facto de A querer ultrapassar dois veículos da frente que circulavam um atrás do outro, de se ter lançado na via oposta, de circular a uma velocidade que deixava apenas uma margem de travagem, de os sinais de buzina e de faróis prescritos terem faltado, bem como o movimento de mudança de via do veículo n.º 2, a estrutura da estrada e das vias e as outras provas recolhidas.
 
 Que, em certos assuntos, tais resultados de perícia intervenham não significa que uma só omissão de um sinal prescrito fixe sempre a responsabilidade. A culpa (過失) num acidente de ultrapassagem depende do local do acidente, da configuração das vias, da velocidade, dos movimentos dos veículos, dos sinais, dos intervalos de tempo, da visibilidade e das outras provas.
 
 ## Pontos a verificar para apreciar a responsabilidade do acidente
 
-Antes de ultrapassar, deve primeiro verificar-se se o local ou a situação do tráfego entra na interdição de ultrapassar. Se o procedimento da mesma via se aplicar, dê o sinal de buzina ou de faróis prescrito, sem forçar o veículo da frente a ceder, aguarde um sinal claro de cessão e conclua a ultrapassagem com um afastamento suficiente e uma distância de regresso segura.
+Antes de ultrapassar, deve primeiro verificar-se se o local ou a situação do tráfego entra na interdição de ultrapassar. Se o procedimento da mesma via se aplicar, dê o sinal de buzina ou de faróis prescrito, sem forçar o veículo da frente a ceder, aguarde um sinal claro de cedência de passagem e conclua a ultrapassagem com um afastamento suficiente e uma distância de regresso segura.
 
 O respeito do artigo 101 é importante, mas não assegura por si só nem evitar o acidente nem o resultado ulterior da perícia ou do processo. Os condutores devem reservar uma margem de segurança suplementar e adaptar-se à situação à frente.
 

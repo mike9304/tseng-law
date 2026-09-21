@@ -1256,36 +1256,36 @@ export const guidanceAnswers: Record<
       sources: ['/hr/contact', '/hr/services'],
     },
   },
-  sr: { // SCAFFOLD(cs)
+  sr: {
     services: {
       answer:
-        'Kancelář vede šest agend podle tchajwanského práva: investice a zakládání společností, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí zaslaný obsah. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/faq', '/cs/contact'],
+        'Kancelarija vodi šest oblasti po tajvanskom pravu: investicije i osnivanje društava, građanske sporove i naknadu štete, brak, porodicu i nasleđe, radnopravne sporove, krivične stvari i intelektualnu svojinu. Obim svake stvari potvrđuje se posebno nakon što advokatkinja ili advokat pregleda poslati sadržaj. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
+      sources: ['/sr/faq', '/sr/contact'],
     },
     about: {
       answer:
-        'Hovering International Law Firm je tchajwanská advokátní kancelář, kterou v roce 2016 založili absolventi National Taiwan University (國立臺灣大學), s pobočkami v Tchaj-peji, Kao-siungu, Tchaj-čungu a Pching-tungu. Od roku 2020 působí i účetní úsek; pobočka v Tchaj-čungu vede věci s vazbou na Koreu a Japonsko. Kancelář neslibuje výsledek. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/lawyers', '/cs/services'],
+        'Hovering International Law Firm je tajvanska advokatska kancelarija koju su 2016. osnovali diplomci National Taiwan University (國立臺灣大學), sa kancelarijama u Tajpeju, Kaohsiungu, Taichungu i Pingtungu. Od 2020. deluje i računovodstveno odeljenje; kancelarija u Taichungu vodi stvari sa vezom na Koreju i Japan. Kancelarija ne obećava ishod. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
+      sources: ['/sr/lawyers', '/sr/services'],
     },
     lawyers: {
       answer:
-        'Tato stránka ukazuje profily advokátek a advokátů Hovering, provozního vedení a přidruženého účetnictví a auditu. Advokátka Wei Tseng (曾雋崴) je oprávněna vykonávat advokacii na Tchaj-wanu a je řídící advokátkou kanceláře; pracuje s klienty z Koreje, z Japonska a s dalšími mezinárodními klienty. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/about', '/cs/contact'],
+        'Ova stranica pokazuje profile advokatkinja i advokata Hovering, operativnog rukovodstva i pridruženog računovodstva i revizije. Advokatkinja Wei Tseng (曾雋崴) ovlašćena je da obavlja advokatsku delatnost na Tajvanu i rukovodeća je advokatkinja kancelarije; radi sa klijentima iz Koreje, iz Japana i sa drugim međunarodnim klijentima. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
+      sources: ['/sr/about', '/sr/contact'],
     },
     pricing: {
       answer:
-        'Tato stránka nezveřejňuje ceník. Nejprve se z Vašeho shrnutí potvrdí rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu, dříve než práce začne. Konzultace s advokátkou nebo advokátem může být úplatná; vedle odměny mohou vzniknout soudní nebo správní poplatky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/contact', '/cs/faq'],
+        'Ova stranica ne objavljuje cenovnik. Najpre se iz Vašeg sažetka potvrđuje obim rada, zatim se sa Vama potvrđuju visina i način obračuna, pre nego što rad počne. Konsultacija sa advokatkinjom ili advokatom može biti uz naknadu; pored nagrade mogu nastati sudske ili upravne takse. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
+      sources: ['/sr/contact', '/sr/faq'],
     },
     contact: {
       answer:
-        'Zašlete shrnutí kontaktním formulářem: co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. V počáteční fázi zatím není třeba zasílat doklady totožnosti ani celý důkazní materiál. Kancelář neslibuje lhůtu k odpovědi a nepotvrzuje schůzku prostřednictvím této stránky. Porada probíhá pouze anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/faq', '/cs/pricing'],
+        'Pošaljite sažetak kontaktnim obrascem: šta se dogodilo, kakva Vam je pomoć potrebna, kakvu vezu stvar ima sa Tajvanom i rok, ako ga znate. U početnoj fazi još nije potrebno slati isprave identiteta niti celokupne dokaze. Kancelarija ne obećava rok za odgovor i ne potvrđuje sastanak preko ove stranice. Konsultacija se odvija samo na engleskom, kineskom, japanskom i korejskom.',
+      sources: ['/sr/faq', '/sr/pricing'],
     },
     faq: {
       answer:
-        'Tato část odpovídá na časté otázky na úrovni obecných informací: šest agend kanceláře, příprava před kontaktem, potvrzení nákladů a význam odeslané zprávy. Odeslaná zpráva čeká na posouzení, není právním stanoviskem ani potvrzenou schůzkou a sama o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem. Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky, japonsky a korejsky.',
-      sources: ['/cs/services', '/cs/contact'],
+        'Ovaj deo odgovara na česta pitanja na nivou opštih informacija: šest oblasti kancelarije, priprema pre kontakta, potvrda troškova i značenje poslate poruke. Poslat zahtev čeka ocenu, nije pravno mišljenje niti potvrđen sastanak i samo po sebi ne zasniva odnos između advokatkinje ili advokata i klijenta. Konsultacija se odvija samo na četiri jezika: engleskom, kineskom, japanskom i korejskom.',
+      sources: ['/sr/services', '/sr/contact'],
     },
   },
   sl: {

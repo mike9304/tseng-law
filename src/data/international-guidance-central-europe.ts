@@ -1465,487 +1465,486 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
   },
 };
 
-// SCAFFOLD(cs) locale sr
 export const serbianGuidanceContent: GuidanceLocaleContent = {
-  languageName: 'Čeština',
+  languageName: 'Srpski',
   nav: {
-    home: 'Úvod',
-    services: 'Služby',
-    about: 'Kancelář',
-    lawyers: 'Advokáti',
-    pricing: 'Náklady',
+    home: 'Početna',
+    services: 'Usluge',
+    about: 'Kancelarija',
+    lawyers: 'Advokati',
+    pricing: 'Troškovi',
     contact: 'Kontakt',
-    faq: 'Otázky',
-    privacy: 'Soukromí',
-    disclaimer: 'Upozornění',
-    columns: 'Články',
+    faq: 'Pitanja',
+    privacy: 'Privatnost',
+    disclaimer: 'Odricanje',
+    columns: 'Članci',
   },
-  contactCta: 'Odeslat žádost o posouzení',
+  contactCta: 'Pošaljite zahtev za ocenu',
   footerNotice:
-    'Tato česká stránka obsahuje pouze obecné informace o práci kanceláře podle tchajwanského práva. Není právní radou k jednotlivému případu a samotné odeslání zprávy nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
-  skipLink: 'Přeskočit navigaci a přejít k obsahu',
-  menuLabel: 'Přehled stránek',
-  languageLabel: 'Jazyk zobrazení',
+    'Ova srpska stranica sadrži samo opšte informacije o radu kancelarije po tajvanskom pravu. Nije pravni savet za pojedinačan slučaj, a samo slanje poruke ne zasniva odnos između advokatkinje ili advokata i klijenta.',
+  skipLink: 'Preskočite navigaciju i pređite na sadržaj',
+  menuLabel: 'Pregled stranica',
+  languageLabel: 'Jezik prikaza',
   mega: {
     services: {
-      description: 'Kancelář se zabývá hlavními agendami tchajwanského práva.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Kancelarija vodi glavne oblasti tajvanskog prava.',
+      viewAllLabel: 'Prikaži sve',
     },
     columns: {
-      description: 'Články k častým otázkám tchajwanského práva.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Članci o čestim pitanjima tajvanskog prava.',
+      viewAllLabel: 'Prikaži sve',
     },
     lawyers: {
-      description: 'Představení advokátek a advokátů a způsobů kontaktu.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Predstavljanje advokatkinja i advokata i načina kontakta.',
+      viewAllLabel: 'Prikaži sve',
     },
     pricing: {
-      description: 'Tato stránka vysvětluje rozsah práce a způsob ujasnění nákladů.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Ova stranica objašnjava obim rada i način utvrđivanja troškova.',
+      viewAllLabel: 'Prikaži sve',
     },
     faq: {
-      description: 'Časté otázky k práci kanceláře na Tchaj-wanu.',
-      viewAllLabel: 'Zobrazit vše',
+      description: 'Česta pitanja o radu kancelarije na Tajvanu.',
+      viewAllLabel: 'Prikaži sve',
     },
   },
-  notFoundTitle: 'Stránka nenalezena',
+  notFoundTitle: 'Stranica nije pronađena',
   notFoundText:
-    'Hledaná stránka neexistuje nebo byla přesunuta. Můžete se vrátit na českou úvodní stránku a prohlédnout si dostupné informace.',
-  backHomeLabel: 'Na úvodní stránku',
-  readSourceLabel: 'Otevřít seznam článků v původním jazyce',
+    'Tražena stranica ne postoji ili je premeštena. Možete se vratiti na srpsku početnu stranicu i pogledati dostupne informacije.',
+  backHomeLabel: 'Na početnu stranicu',
+  readSourceLabel: 'Otvorite spisak članaka na izvornom jeziku',
   home: {
-    heroScrollLabel: 'Posunout dolů',
-    heroColumnsCtaLabel: 'Zobrazit články',
-    servicesDetailLabel: 'Zobrazit podrobnosti',
-    servicesAssistanceBefore: 'Není-li zřejmé, do které agendy Vaše věc patří, stránka ',
+    heroScrollLabel: 'Pomerite nadole',
+    heroColumnsCtaLabel: 'Pogledajte članke',
+    servicesDetailLabel: 'Pogledajte detalje',
+    servicesAssistanceBefore: 'Ako nije jasno u koju oblast spada Vaša stvar, stranica ',
     servicesAssistanceLinkLabel: 'Kontakt',
-    servicesAssistanceAfter: ' vysvětluje, jak sestavit shrnutí, které advokátka nebo advokát posoudí.',
-    columnsViewAllLabel: 'Zobrazit všechny články',
-    columnsReadMoreLabel: 'Číst dál',
-    columnsReviewLabel: 'Posoudila advokátka Wei Tseng',
-    columnsOriginalLanguageBadge: 'Původní jazyk',
+    servicesAssistanceAfter: ' objašnjava kako sastaviti sažetak koji advokatkinja ili advokat pregleda.',
+    columnsViewAllLabel: 'Pogledajte sve članke',
+    columnsReadMoreLabel: 'Čitajte dalje',
+    columnsReviewLabel: 'Pregledala advokatkinja Wei Tseng',
+    columnsOriginalLanguageBadge: 'Izvorni jezik',
     columnsOriginalLanguageNote:
-      'Následující články zatím nejsou k dispozici v češtině. Seznam zůstává v původním jazyce a otevře příslušnou jazykovou stránku; obsah se automaticky nepřekládá.',
-    imageBandAlt: 'Tradiční tchajwanský dvorec sanheyuan (三合院) a moderní pavilon za denního světla',
-    videoPauseLabel: 'Pozastavit video',
-    videoPlayLabel: 'Přehrát video',
-    videoReplayLabel: 'Přehrát video znovu',
+      'Sledeći članci još nisu dostupni na srpskom. Spisak ostaje na izvornom jeziku i otvara odgovarajuću jezičku stranicu; sadržaj se automatski ne prevodi.',
+    imageBandAlt: 'Tradicionalno tajvansko dvorište sanheyuan (三合院) i savremeni paviljon pri dnevnom svetlu',
+    videoPauseLabel: 'Pauzirajte video',
+    videoPlayLabel: 'Pustite video',
+    videoReplayLabel: 'Pustite video ponovo',
   },
   pages: {
     home: {
-      eyebrow: 'INFORMACE',
-      title: 'Právní služby na Tchaj-wanu — informace v češtině',
+      eyebrow: 'INFORMACIJE',
+      title: 'Pravne usluge na Tajvanu — informacije na srpskom',
       description:
-        'Obecné vysvětlení v češtině o rozsahu práce Hovering International Law Firm na Tchaj-wanu, o jazycích konzultace a o prvním kontaktu.',
+        'Opšte objašnjenje na srpskom o obimu rada Hovering International Law Firm na Tajvanu, o jezicima konsultacije i o prvom kontaktu.',
       intro:
-        'Hovering International Law Firm zastupuje zahraniční klienty, včetně osob s vazbou na Tchaj-wan, ve věcech tchajwanského práva: investice a zakládání společností, občanskoprávní spory, manželství, rodina a dědictví, pracovní právo, trestní věci a duševní vlastnictví. Tato česká část Vám pomůže rozpoznat, která práce spadá do našeho rozsahu, co si připravit a jak nás oslovit. Jde o obecné informace, nikoli o právní radu k Vašemu případu.',
+        'Hovering International Law Firm zastupa klijente iz inostranstva, uključujući osobe sa vezom sa Tajvanom, u stvarima tajvanskog prava: investicije i osnivanje društava, građanske sporove, brak, porodicu i nasleđe, radno pravo, krivične stvari i intelektualnu svojinu. Ovaj srpski deo pomaže Vam da prepoznate koji rad spada u naš obim, šta da pripremite i kako da nas kontaktirate. Reč je o opštim informacijama, a ne o pravnom savetu za Vaš slučaj.',
       sections: [
         {
-          heading: 'Čím se zabýváme',
+          heading: 'Čime se bavimo',
           paragraphs: [
-            'Hovering International Law Firm je advokátní kancelář se sídlem na Tchaj-wanu. Pracuje podle tchajwanského práva a má pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pching-tungu (屏東). Radíme podnikům, vedeme soudní řízení a zastupujeme zahraniční klienty v krocích, které je na Tchaj-wanu třeba učinit.',
-            'Celý zdejší obsah je obecný. Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku. Tyto informace nenahrazují konzultaci s advokátkou nebo advokátem nad Vašimi dokumenty.',
+            'Hovering International Law Firm je advokatska kancelarija sa sedištem na Tajvanu. Radi po tajvanskom pravu i ima kancelarije u Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Savetujemo preduzeća, vodimo sudske postupke i pratimo klijente iz inostranstva kroz korake koje na Tajvanu treba preduzeti.',
+            'Sav sadržaj ovde je opšti. Ishod stvari zavisi od činjenica, od primenjivih propisa i od trenutka. Ove informacije ne zamenjuju razgovor sa advokatkinjom ili advokatom o Vašim dokumentima.',
           ],
         },
         {
-          heading: 'Jazyk stránky a jazyk konzultace nejsou totéž',
+          heading: 'Jezik stranice i jezik konsultacije nisu isto',
           paragraphs: [
-            'Tato stránka je psána česky, ale konzultace s advokátkou nebo advokátem probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky. Čtení informací v češtině neznamená, že konzultace s advokátkou nebo advokátem proběhne česky.',
-            'Neslibujeme tlumočníka, lhůtu k odpovědi ani schůzku prostřednictvím této stránky. Pokud neovládáte žádný ze čtyř jazyků konzultace, stránka „Kontakt“ vysvětluje, jak posuzujeme způsob komunikace.',
+            'Ova stranica je napisana na srpskom, ali konsultacija sa advokatkinjom ili advokatom odvija se samo na četiri jezika: engleskom, kineskom (中文), japanskom i korejskom. Čitanje informacija na srpskom ne znači da će razgovor sa advokatkinjom ili advokatom biti na srpskom.',
+            'Ne obećavamo tumača, rok za odgovor niti sastanak preko ove stranice. Ako ne možete da koristite nijedan od četiri jezika konsultacije, stranica „Kontakt“ objašnjava kako ocenjujemo način komunikacije.',
           ],
         },
         {
-          heading: 'Agendy kanceláře',
+          heading: 'Oblasti rada',
           paragraphs: [
-            'Rozsah práce zahrnuje následujících šest agend. Stránka „Služby“ popisuje každou z nich přesněji a uvádí, co se neslibuje.',
+            'Obim rada obuhvata sledećih šest oblasti. Stranica „Usluge“ svaku opisuje tačnije i navodi šta se ne obećava.',
           ],
           items: [
-            'Investice a zakládání společností na Tchaj-wanu',
-            'Občanskoprávní spory a náhrada škody',
-            'Manželství, rodina a dědictví',
-            'Pracovněprávní spory',
-            'Trestní věci',
-            'Duševní vlastnictví: ochranné známky, patenty a autorské právo',
+            'Investicije i osnivanje društava na Tajvanu',
+            'Građanski sporovi i naknada štete',
+            'Brak, porodica i nasleđe',
+            'Radnopravni sporovi',
+            'Krivične stvari',
+            'Intelektualna svojina: žigovi, patenti i autorsko pravo',
           ],
         },
         {
-          heading: 'Kde začít',
+          heading: 'Gde početi',
           paragraphs: [
-            'Přečtěte si stránku „Služby“ a ověřte, zda Vaše věc spadá do našeho rozsahu, poté „Náklady“ a „Kontakt“, abyste věděli, jak se stanoví rozsah a jak se náklady potvrzují před zahájením práce.',
-            'Při odeslání zprávy můžete shrnutí napsat ve svém jazyce. Původní text se uchová přesně tak, jak jste jej napsali, a automaticky se nepřekládá. Odeslaná zpráva je žádostí čekající na posouzení: není to ještě porada ani potvrzená schůzka.',
+            'Pročitajte stranicu „Usluge“ da proverite da li Vaša stvar spada u naš obim, zatim „Troškovi“ i „Kontakt“, da biste znali kako se utvrđuje obim i kako se troškovi potvrđuju pre početka rada.',
+            'Pri slanju poruke sažetak možete napisati na svom jeziku. Izvorni tekst se čuva tačno onako kako ste ga napisali i automatski se ne prevodi. Poslata poruka je zahtev koji čeka ocenu: to još nije konsultacija niti potvrđen sastanak.',
           ],
         },
       ],
     },
     services: {
-      eyebrow: 'SLUŽBY',
-      title: 'V čem klienty zastupujeme',
+      eyebrow: 'USLUGE',
+      title: 'U kojim stvarima zastupamo klijente',
       description:
-        'Šest agend, které kancelář na Tchaj-wanu vede, a hranice, které je užitečné znát nejdříve.',
+        'Šest oblasti koje kancelarija vodi na Tajvanu i granice koje je korisno znati najpre.',
       intro:
-        'Níže jsou agendy, které skutečně vedeme, a otázky, jež se v počáteční fázi kladou nejčastěji. Výklad Vám pomůže posoudit, zda Vaše věc spadá do našeho rozsahu; je obecný a není právním rozborem jednotlivého spisu.',
+        'Ispod su oblasti koje zaista vodimo i pitanja koja se na početku najčešće postavljaju. Opis Vam pomaže da ocenite da li Vaša stvar spada u naš obim; opšti je i nije pravna analiza pojedinačnog predmeta.',
       sections: [
         {
-          heading: 'Investice a zakládání společností na Tchaj-wanu',
+          heading: 'Investicije i osnivanje društava na Tajvanu',
           paragraphs: [
-            'Zastupujeme zahraniční investory a podniky při založení nebo vedení společnosti na Tchaj-wanu: volba právní formy, příprava a podání dokumentů, vklad kapitálu, bankovní otázky, posouzení sídla a odvětvové požadavky. Podporujeme také účetnictví a daně, které ze založení a z provozu na Tchaj-wanu vyplývají.',
-            'Postup a lhůty se liší podle formy, investora, odvětví, banky a podle již dostupných dokumentů. Založení společnosti samo o sobě nevede k pobytovému oprávnění (居留) ani k pracovnímu povolení (工作許可): jde o samostatná řízení posuzovaná podle situace konkrétní osoby.',
+            'Pratimo strane investitore i preduzeća pri osnivanju ili vođenju društva na Tajvanu: izbor pravne forme, priprema i podnošenje dokumenata, unos kapitala, bankarska pitanja, ocena sedišta i zahtevi pojedinih grana. Podržavamo i računovodstvo i poreze koji proizlaze iz osnivanja i poslovanja na Tajvanu.',
+            'Tok i trajanje razlikuju se prema formi, investitoru, grani, banci i već raspoloživim dokumentima. Osnivanje društva samo po sebi ne vodi boravišnoj dozvoli (居留) niti radnoj dozvoli (工作許可): to su posebni postupci koji se ocenjuju prema situaciji konkretne osobe.',
           ],
         },
         {
-          heading: 'Občanskoprávní spory a náhrada škody',
+          heading: 'Građanski sporovi i naknada štete',
           paragraphs: [
-            'Tato agenda zahrnuje spory ze smluv, náhradu škody z protiprávního jednání a spotřebitelské spory. Práce zpravidla začíná časovou osou, posouzením dokumentů a existujících důkazů a teprve poté následují další kroky.',
-            'Průběh určují lhůty, včetně promlčecích, a úplnost důkazů. Uveďte proto známá data co nejdříve. Uschovejte smlouvy, zprávy, doklady o platbě nebo fotografie stavu na místě a zmiňte je v první zprávě.',
+            'Ova oblast obuhvata sporove iz ugovora, naknadu štete iz delikta i potrošačke sporove. Rad obično počinje hronologijom, pregledom dokumenata i postojećih dokaza, a tek potom slede dalji koraci.',
+            'Tok određuju rokovi, uključujući zakonske rokove za tužbu, i potpunost dokaza. Zato navedite poznate datume što ranije. Sačuvajte ugovore, poruke, dokaze o plaćanju ili fotografije stanja na licu mesta i pomenite ih u prvoj poruci.',
           ],
         },
         {
-          heading: 'Manželství, rodina a dědictví',
+          heading: 'Brak, porodica i nasleđe',
           paragraphs: [
-            'Vedeme rozvod (離婚), vypořádání majetku, výkon a převzetí práv a povinností k nezletilým dětem (未成年子女權利義務之行使或負擔), styk s dítětem (會面交往) a dědictví (繼承), a to i tehdy, nacházejí-li se strany nebo majetek v různých státech. Přeshraniční rodinné věci často vyžadují další posouzení matričních záznamů (戶籍), formy listin a jejich průkaznosti na Tchaj-wanu.',
-            'Protože rodinné věci s sebou často nesou lhůty a souběžná řízení, mělo by první shrnutí uvést vztah mezi stranami, současné bydliště a již probíhající řízení.',
+            'Vodimo razvod (離婚), deobu imovine, vršenje i preuzimanje prava i dužnosti prema maloletnoj deci (未成年子女權利義務之行使或負擔), viđanje (會面交往) i nasleđe (繼承), i kada se strane ili imovina nalaze u različitim državama. Prekogranične porodične stvari često zahtevaju dodatnu ocenu evidencije prebivališta (戶籍), forme isprava i njihove dokazne snage na Tajvanu.',
+            'Budući da porodične stvari često nose rokove i paralelne postupke, prvi sažetak treba da navede odnos među stranama, sadašnje prebivalište i već pokrenute postupke.',
           ],
         },
         {
-          heading: 'Pracovněprávní spory',
+          heading: 'Radnopravni sporovi',
           paragraphs: [
-            'Tato agenda zahrnuje skončení pracovního poměru, odstupné podle tchajwanského práva (資遣費; nelze je ztotožňovat s obdobnými instituty jiných států), odměnu a spory z pracovní smlouvy (勞動契約), a to jak na straně zaměstnance, tak na straně zaměstnavatele. Při posouzení odlišujeme důvod skončení od otázek výpovědní doby, výplaty a lhůt.',
-            'Rozhodujícími dokumenty bývají pracovní smlouva, vnitřní pracovní řád (工作規則), výplatní pásky a korespondence stran. Máte-li je stále k dispozici, zmiňte to ve shrnutí.',
+            'Ova oblast obuhvata prestanak radnog odnosa, otpremninu po tajvanskom pravu (資遣費; ne poistovećuje se sa sličnim institutima drugih država), naknadu i sporove iz ugovora o radu (勞動契約), kako na strani zaposlenog tako i na strani poslodavca. Pri oceni razdvajamo razlog prestanka od pitanja otkaznog roka, isplate i rokova.',
+            'Odlučujući dokumenti obično su ugovor o radu, pravilnik o radu (工作規則), platni listići i prepiska strana. Ako ih još imate, pomenite to u sažetku.',
           ],
         },
         {
-          heading: 'Trestní věci',
+          heading: 'Krivične stvari',
           paragraphs: [
-            'Zastupujeme v přípravném řízení i před soudem podezřelé a obviněné i poškozené a posuzujeme trestní rizika podnikatelské činnosti.',
-            'Trestní věci mívají krátké lhůty a pevně stanovené fáze. Obdrželi-li jste již písemnost orgánu činného v trestním řízení nebo soudu, uveďte datum na písemnosti včas, aby byl obsah posouzen ve správném pořadí.',
+            'Zastupamo u istrazi i pred sudom osumnjičene i okrivljene, kao i oštećene, i ocenjujemo krivične rizike privredne delatnosti.',
+            'Krivične stvari često imaju kratke rokove i utvrđene faze. Ako ste već primili pismeno organa gonjenja ili suda, navedite datum na pismenu na vreme, da bi se sadržaj ocenio u pravom redosledu.',
           ],
         },
         {
-          heading: 'Duševní vlastnictví',
+          heading: 'Intelektualna svojina',
           paragraphs: [
-            'Podporujeme zápis ochranných známek (商標) a patentů (專利), autorské právo a spory o tato práva na Tchaj-wanu.',
-            'V této agendě rozhoduje pořadí kroků: rozsah ochrany, okamžik podání přihlášky a skutečné užívání ovlivňují volbu. Podání přihlášky samo o sobě neznamená, že jí bude vyhověno.',
+            'Podržavamo upis žigova (商標) i patenata (專利), autorsko pravo i sporove o tim pravima na Tajvanu.',
+            'U ovoj oblasti odlučuje redosled koraka: obim zaštite, trenutak podnošenja prijave i stvarno korišćenje utiču na izbor. Podnošenje prijave samo po sebi ne znači da će biti usvojena.',
           ],
         },
         {
-          heading: 'Rozsah a jeho potvrzení',
+          heading: 'Obim i njegova potvrda',
           paragraphs: [
-            'Kancelář pracuje podle tchajwanského práva a vede věci z výše uvedených agend. Rozsah každé věci se potvrzuje zvlášť poté, co advokátka nebo advokát posoudí Vaši zprávu.',
-            'Pobytový status, pracovní povolení a obdobné otázky se posuzují podle dokumentů a podle situace konkrétní osoby, nikoli podle státní příslušnosti. Dotýká-li se část Vaší věci těchto bodů, uveďte to při kontaktu. Tato stránka neslibuje výsledek ani lhůtu k odpovědi.',
+            'Kancelarija radi po tajvanskom pravu i vodi stvari iz navedenih oblasti. Obim svake stvari potvrđuje se posebno nakon što advokatkinja ili advokat pregleda Vašu poruku.',
+            'Boravišni status, radna dozvola i slična pitanja ocenjuju se prema dokumentima i prema situaciji konkretne osobe, a ne prema državljanstvu. Ako deo Vaše stvari dira te tačke, navedite to pri kontaktu. Ova stranica ne obećava ishod niti rok za odgovor.',
           ],
         },
       ],
     },
     about: {
-      eyebrow: 'KANCELÁŘ',
+      eyebrow: 'KANCELARIJA',
       title: 'O Hovering International Law Firm',
       description:
-        'Základní údaje o této tchajwanské advokátní kanceláři, o jejích pobočkách a o práci se zahraničními stranami.',
+        'Osnovni podaci o ovoj tajvanskoj advokatskoj kancelariji, njenim kancelarijama i radu sa stranim strankama.',
       intro:
-        'Hovering International Law Firm je advokátní kancelář na Tchaj-wanu. Advokátky a advokáti pracují od poradenství podnikům až po soudní řízení. Tato část popisuje vznik kanceláře, sídla a práci se zahraničními stranami.',
+        'Hovering International Law Firm je advokatska kancelarija na Tajvanu. Advokatkinje i advokati rade od savetovanja preduzeća do sudskog postupka. Ovaj deo opisuje nastanak kancelarije, sedišta i rad sa stranim strankama.',
       sections: [
         {
-          heading: 'Založení a struktura',
+          heading: 'Osnivanje i struktura',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) byla založena v roce 2016 advokátkami a advokáty, kteří studovali na National Taiwan University (國立臺灣大學). Čínský název 昊鼎 spojuje znak 昊 („širé nebe“) se znakem 鼎 („pevný základ“) a vystihuje zaměření kanceláře od jejího založení.',
-            'Máme pobočky v Tchaj-peji (臺北), Kao-siungu (高雄), Tchaj-čungu (臺中) a Pching-tungu (屏東). Pobočka v Kao-siungu se soustředí na vedení podniků a vede občanskoprávní, trestní a správní spory. Pobočka v Tchaj-čungu vede stavební věci, duševní vlastnictví a věci s vazbou na Koreu a Japonsko. Pobočka v Pching-tungu byla otevřena v roce 2017 pro místní potřebu.',
-            'Vedle advokátní práce působí od roku 2020 také Hovering Accounting Office, která nabízí účetnictví a daňové plánování podnikatelům a soukromým osobám s majetkem.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) osnovale su 2016. godine advokatkinje i advokati koji su studirali na National Taiwan University (國立臺灣大學). Kineski naziv 昊鼎 spaja znak 昊 („široko nebo“) sa znakom 鼎 („čvrst temelj“) i izražava usmerenje kancelarije od osnivanja.',
+            'Imamo kancelarije u Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Kancelarija u Kaohsiungu usredsređena je na upravljanje preduzećima i vodi građanske, krivične i upravne sporove. Kancelarija u Taichungu vodi građevinske stvari, intelektualnu svojinu i stvari sa vezom na Koreju i Japan. Kancelarija u Pingtungu otvorena je 2017. godine zbog lokalne potrebe.',
+            'Pored advokatskog rada od 2020. godine deluje i Hovering Accounting Office, koje nudi računovodstvo i poresko planiranje preduzetnicima i privatnim licima sa imovinom.',
           ],
         },
         {
-          heading: 'Práce se zahraničními stranami',
+          heading: 'Rad sa stranim strankama',
           paragraphs: [
-            'Přeshraniční práce zahrnuje zakládání společností, víza, přihlášky ochranných známek a patentů, posouzení právního rizika a daňové poradenství podnikům. Pobočka v Tchaj-čungu vede zejména stavební věci, duševní vlastnictví a věci s vazbou na Koreu a Japonsko. Advokátka Wei Tseng (曾雋崴) zastupuje klienty z Koreje, z Japonska a další mezinárodní klienty v uvedených agendách.',
-            'Zda můžeme věc převzít, závisí na obsahu a na jazyku komunikace. Spadá-li Vaše věc do uvedených agend a lze-li ji projednat v některém ze čtyř jazyků konzultace, můžete zaslat shrnutí k posouzení.',
+            'Prekogranični rad obuhvata osnivanje društava, vize, prijave žigova i patenata, ocenu pravnog rizika i poresko savetovanje preduzeća. Kancelarija u Taichungu vodi naročito građevinske stvari, intelektualnu svojinu i stvari sa vezom na Koreju i Japan. Advokatkinja Wei Tseng (曾雋崴) prati klijente iz Koreje, iz Japana i druge međunarodne klijente u navedenim oblastima.',
+            'Da li možemo da preuzmemo stvar zavisi od sadržaja i od jezika komunikacije. Ako Vaša stvar spada u navedene oblasti i može da se razgovara na jednom od četiri jezika konsultacije, možete poslati sažetak na ocenu.',
           ],
         },
         {
-          heading: 'Když nás oslovíte',
+          heading: 'Kada nas kontaktirate',
           paragraphs: [
-            'Po doručení Vašeho shrnutí posoudí advokátka nebo advokát obsah a poté hovoří o možném rozsahu práce, o dosud potřebných dokumentech a o dalších krocích. U daňových nebo účetních otázek může kancelář postupovat s účetním úsekem v jednom navazujícím postupu.',
-            'Výsledek každé věci závisí na skutkovém stavu a na dostupných dokumentech; výsledek neslibujeme. Potřebujete-li závaznou odpověď pro svou situaci, musí být dokumenty projednány s advokátkou nebo advokátem v některém ze čtyř jazyků konzultace.',
+            'Nakon prijema Vašeg sažetka advokatkinja ili advokat pregleda sadržaj i zatim govori o mogućem obimu rada, o još potrebnim dokumentima i o daljim koracima. Kod poreskih ili računovodstvenih pitanja kancelarija može da postupa sa računovodstvenim odeljenjem u jednom povezanom postupku.',
+            'Ishod svake stvari zavisi od činjenica i od raspoloživih dokumenata; ishod ne obećavamo. Ako Vam je potrebna obavezujuća ocena Vaše situacije, dokumente treba razgovarati sa advokatkinjom ili advokatom na jednom od četiri jezika konsultacije.',
           ],
         },
       ],
     },
     lawyers: {
-      eyebrow: 'ADVOKÁTI',
-      title: 'Mezinárodní tým Hovering',
-      description: 'Profily advokátek a advokátů, provozního vedení a přidruženého účetnictví a auditu Hovering.',
+      eyebrow: 'ADVOKATI',
+      title: 'Međunarodni tim Hovering',
+      description: 'Profili advokatkinja i advokata, operativnog rukovodstva i pridruženog računovodstva i revizije Hovering.',
       intro: '',
       sections: [],
     },
     pricing: {
-      eyebrow: 'NÁKLADY',
-      title: 'Jak se stanoví rozsah práce a náklady',
+      eyebrow: 'TROŠKOVI',
+      title: 'Kako se utvrđuju obim rada i troškovi',
       description:
-        'Vysvětlení pořadí: nejprve rozsah práce, poté potvrzení nákladů, a proč tato stránka neobsahuje ceník.',
+        'Objašnjenje redosleda: najpre obim rada, zatim potvrda troškova, i zašto ova stranica nema cenovnik.',
       intro:
-        'Tato stránka vysvětluje, jak se náklady stanoví, nikoli jejich výši. Výše závisí na rozsahu práce v jednotlivé věci a má smysl teprve tehdy, je-li tento rozsah zřejmý.',
+        'Ova stranica objašnjava kako se troškovi utvrđuju, a ne njihov iznos. Iznos zavisi od obima rada u pojedinoj stvari i ima smisla tek kada je taj obim jasan.',
       sections: [
         {
-          heading: 'Nejprve se stanoví rozsah práce',
+          heading: 'Najpre se utvrđuje obim rada',
           paragraphs: [
-            'Věci téhož druhu mohou vyžadovat velmi rozdílné úsilí, podle počtu stran, dostupných dokumentů, lhůt, které je třeba dodržet, a podle toho, zda již bylo zahájeno řízení. Prvním krokem je proto vždy stanovit, co do práce patří a co nikoli.',
-            'Shrnutí, které na začátku zašlete, je základem tohoto rozsahu. Čím jasněji popisuje průběh, Váš požadavek a lhůty, tím přesněji lze rozsah určit.',
+            'Stvari iste vrste mogu zahtevati veoma različit trud, prema broju strana, raspoloživim dokumentima, rokovima koje treba poštovati i prema tome da li je postupak već pokrenut. Prvi korak je zato uvek utvrditi šta u rad spada, a šta ne.',
+            'Sažetak koji na početku pošaljete osnova je tog obima. Što jasnije opisuje tok, Vaš zahtev i rokove, to se obim može tačnije odrediti.',
           ],
         },
         {
-          heading: 'Náklady se potvrzují před zahájením práce',
+          heading: 'Troškovi se potvrđuju pre početka rada',
           paragraphs: [
-            'Je-li rozsah práce zřejmý, výše a způsob výpočtu nákladů se s Vámi projedná a potvrdí dříve, než práce začne. Změní-li se rozsah v průběhu, musí být potvrzen znovu.',
-            'Tato stránka není cenovou nabídkou a nezakládá povinnost k platbě.',
+            'Kada je obim rada jasan, visina i način obračuna troškova razgovaraju se sa Vama i potvrđuju pre nego što rad počne. Ako se obim u toku promeni, mora se ponovo potvrditi.',
+            'Ova stranica nije ponuda cene i ne zasniva obavezu plaćanja. Slanje zahteva preko ove stranice takođe je besplatno.',
           ],
         },
         {
-          heading: 'Porada může být úplatná',
+          heading: 'Konsultacija može biti uz naknadu',
           paragraphs: [
-            'Porada s advokátkou nebo advokátem může být úplatnou službou. Tato stránka neříká, že první konzultace je bezplatná, a žádnou její část nelze v tomto smyslu vykládat.',
-            'Je-li porada úplatná, sdělí se výše a způsob platby dříve, než se porada uskuteční.',
+            'Konsultacija sa advokatkinjom ili advokatom može biti usluga uz naknadu. Ova stranica ne kaže da je prva konsultacija besplatna, i nijedan njen deo ne sme se tako čitati.',
+            'Ako je konsultacija uz naknadu, visina i način plaćanja saopštavaju se pre nego što se konsultacija održi.',
           ],
         },
         {
-          heading: 'Proč tato stránka neuvádí sazby',
+          heading: 'Zašto ova stranica ne navodi tarife',
           paragraphs: [
-            'Náklady závisejí na věci samé: na úsilí, počtu stran, dokumentech, lhůtách a na tom, zda již řízení probíhá. Číslo stanovené předem by náklady Vašeho spisu neukázalo. Proto nejprve stanovíme rozsah práce a náklady Vám sdělíme poté, dříve než práce začne.',
-            'Vedle odměny mohou vzniknout soudní poplatky, náklady orgánů nebo třetích osob. Ty jsou od odměny oddělené a závisejí na příslušném řízení.',
+            'Troškovi zavise od same stvari: od truda, broja strana, dokumenata, rokova i od toga da li postupak već teče. Broj unapred određen ne bi pokazao troškove Vašeg predmeta. Zato najpre utvrđujemo obim rada i troškove Vam saopštavamo potom, pre nego što rad počne.',
+            'Pored nagrade mogu nastati sudske takse, troškovi organa ili trećih lica. Oni su od nagrade odvojeni i zavise od konkretnog postupka.',
           ],
         },
       ],
     },
     contact: {
       eyebrow: 'KONTAKT',
-      title: 'Jak kancelář oslovit',
+      title: 'Kako se obratiti kancelariji',
       description:
-        'Jazyk stránky, jazyky konzultace, postup pro případ, že neovládáte žádný ze čtyř jazyků, a co tato stránka neslibuje.',
+        'Jezik stranice, jezici konsultacije, postupak ako ne možete da koristite nijedan od četiri jezika, i šta ova stranica ne obećava.',
       intro:
-        'Než nám napíšete, rozlište následující tři body. Bývají směšovány, ale znamenají různé věci.',
+        'Pre nego što nam pišete, razlikujte sledeće tri tačke. Često se mešaju, ali znače različite stvari.',
       sections: [
         {
-          heading: 'Tři věci, které je třeba držet odděleně',
+          heading: 'Tri stvari koje treba držati odvojeno',
           paragraphs: [
-            'Jazyk zobrazení stránky, jazyk konzultace s advokátkou nebo advokátem a jazyk, v němž píšete, jsou tři různé věci.',
+            'Jezik prikaza stranice, jezik konsultacije sa advokatkinjom ili advokatom i jezik na kojem pišete tri su različite stvari.',
           ],
           items: [
-            'Jazyk stránky: tyto informace jsou psány česky.',
-            'Jazyk konzultace: porada probíhá pouze anglicky, čínsky (中文), japonsky a korejsky.',
-            'Váš jazyk psaní: shrnutí můžete napsat ve svém jazyce; původní text se uchová beze změny.',
+            'Jezik stranice: ove informacije napisane su na srpskom.',
+            'Jezik konsultacije: konsultacija se odvija samo na engleskom, kineskom (中文), japanskom i korejskom.',
+            'Vaš jezik pisanja: sažetak možete napisati na svom jeziku; izvorni tekst se čuva bez izmene.',
           ],
         },
         {
-          heading: 'Pokud neovládáte žádný ze čtyř jazyků konzultace',
+          heading: 'Ako ne možete da koristite nijedan od četiri jezika konsultacije',
           paragraphs: [
-            'V kontaktním formuláři můžete zvolit „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
-            'Jde pouze o krok posouzení, nikoli o příslib. Neslibujeme tlumočníka, službu v češtině ani v jiném jazyce mimo čtyři uvedené jazyky, ani to, že každou věc přijmeme.',
+            'U kontaktnom obrascu možete izabrati „Način komunikacije treba potvrditi“. Odgovaramo da bismo ocenili izvodljiv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zagarantovana i rok za odgovor se ne obećava.',
+            'To je samo korak ocene, a nije obećanje. Ne obećavamo tumača, uslugu na srpskom niti na drugom jeziku van navedena četiri jezika, niti da ćemo prihvatiti svaku stvar.',
           ],
         },
         {
-          heading: 'Co by měla obsahovat první zpráva',
+          heading: 'Šta treba da sadrži prva poruka',
           paragraphs: [
-            'Uveďte, co se stalo, jakou pomoc potřebujete, jakou vazbu má věc na Tchaj-wan a lhůtu, znáte-li ji. Obdrželi-li jste již písemnost soudu nebo úřadu, uveďte datum na písemnosti.',
-            'V počáteční fázi zatím nemusíte zasílat číslo pasu, číslo dokladu, údaje o účtu, zdravotní dokumentaci ani soubor důkazů. Vyčkejte pokynů advokátky nebo advokáta a citlivé dokumenty zašlete až poté bezpečnou cestou.',
+            'Navedite šta se dogodilo, kakva Vam je pomoć potrebna, kakvu vezu stvar ima sa Tajvanom i rok, ako ga znate. Ako ste već primili pismeno suda ili organa, navedite datum na pismenu.',
+            'U početnoj fazi još ne morate slati broj pasoša, broj isprave, podatke o računu, medicinsku dokumentaciju niti celokupne dokaze. Sačekajte uputstva advokatkinje ili advokata i osetljive dokumente pošaljite tek potom bezbednim putem.',
           ],
         },
         {
-          heading: 'Co tato stránka neslibuje',
+          heading: 'Šta ova stranica ne obećava',
           paragraphs: [
-            'Neslibujeme lhůtu k odpovědi, nepotvrzujeme schůzku prostřednictvím této stránky, neslibujeme určitou advokátku ani určitého advokáta a neposkytujeme tlumočníka. Písemný překlad je něco jiného: Vaše zpráva se automaticky nepřekládá.',
-            'Odešlete-li žádost, obsah se uchová a čeká na posouzení. Neobdržíte-li po nějaké době odpověď, můžete napsat znovu na e-mailovou adresu uvedenou na kontaktní stránce.',
+            'Ne obećavamo rok za odgovor, ne potvrđujemo sastanak preko ove stranice, ne obećavamo određenu advokatkinju niti određenog advokata i ne obezbeđujemo tumača. Pismeni prevod je nešto drugo: Vaša poruka se automatski ne prevodi.',
+            'Ako pošaljete zahtev, sadržaj se čuva i čeka ocenu. Ako posle izvesnog vremena ne dobijete odgovor, možete ponovo pisati na adresu elektronske pošte navedenu na kontaktnoj stranici.',
           ],
         },
       ],
     },
     faq: {
-      eyebrow: 'OTÁZKY',
-      title: 'Časté otázky',
+      eyebrow: 'PITANJA',
+      title: 'Česta pitanja',
       description:
-        'Vysvětlení k rozsahu práce, přípravě, jazykům, nákladům a k tomu, co znamená odeslaná žádost.',
+        'Objašnjenja o obimu rada, pripremi, jezicima, troškovima i o tome šta znači poslat zahtev.',
       intro:
-        'Následující otázky jsou zodpovězeny na úrovni obecných informací. Odpověď pro Váš případ je možná teprve poté, co advokátka nebo advokát posoudí dokumenty.',
+        'Sledeća pitanja odgovorena su na nivou opštih informacija. Odgovor za Vaš slučaj moguć je tek nakon što advokatkinja ili advokat pregleda dokumente.',
       sections: [
         {
-          heading: 'Jak tuto část užívat',
+          heading: 'Kako koristiti ovaj deo',
           paragraphs: [
-            'Nenajdete-li odpověď pro svou situaci, závisí odpověď zpravidla na zvláštních skutečnostech. Napište je proto do shrnutí, namísto abyste je dovozovali z této stránky.',
+            'Ako ne nađete odgovor za svoju situaciju, odgovor obično zavisi od posebnih činjenica. Napišite ih zato u sažetak, umesto da ih izvodite sa ove stranice.',
           ],
         },
       ],
       faqs: [
         {
-          question: 'Které věci kancelář vede?',
+          question: 'Koje stvari kancelarija vodi?',
           answer:
-            'Vedeme šest agend: investice a zakládání společností na Tchaj-wanu, občanskoprávní spory a náhradu škody, manželství, rodinu a dědictví, pracovněprávní spory, trestní věci a duševní vlastnictví. Zda bude věc přijata, se rozhodne po posouzení obsahu.',
+            'Vodimo šest oblasti: investicije i osnivanje društava na Tajvanu, građanske sporove i naknadu štete, brak, porodicu i nasleđe, radnopravne sporove, krivične stvari i intelektualnu svojinu. Da li će stvar biti prihvaćena odlučuje se nakon ocene sadržaja.',
         },
         {
-          question: 'Co si připravit před kontaktem?',
+          question: 'Šta pripremiti pre kontakta?',
           answer:
-            'Připravte si krátké shrnutí průběhu, svého požadavku, vazby na Tchaj-wan a lhůty, existuje-li nějaká. Je-li již k dispozici písemnost soudu nebo úřadu, uveďte datum. V této fázi zatím nemusíte zasílat doklady totožnosti ani soubor důkazů.',
+            'Pripremite kratak sažetak toka, svog zahteva, veze sa Tajvanom i roka, ako postoji. Ako je već dostupno pismeno suda ili organa, navedite datum. U ovoj fazi još ne morate slati isprave identiteta niti celokupne dokaze.',
         },
         {
-          question: 'Je možná porada v češtině?',
+          question: 'Da li je moguća konsultacija na srpskom?',
           answer:
-            'Ne. Tyto informace jsou psány česky, ale porada s advokátkou nebo advokátem probíhá pouze anglicky, čínsky (中文), japonsky a korejsky. Neslibujeme ani tlumočníka. Písemný překlad je něco jiného: původní text, který napíšete, se uchová tak, jak je, a automaticky se nepřekládá.',
+            'Ne. Ove informacije napisane su na srpskom, ali konsultacija sa advokatkinjom ili advokatom odvija se samo na engleskom, kineskom (中文), japanskom i korejskom. Ne obećavamo ni tumača. Pismeni prevod je nešto drugo: izvorni tekst koji napišete čuva se kakav jeste i automatski se ne prevodi.',
         },
         {
-          question: 'Co dělat, nemohu-li užít žádný ze čtyř jazyků?',
+          question: 'Šta ako ne mogu da koristim nijedan od četiri jezika?',
           answer:
-            'Při odeslání žádosti zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili způsob komunikace, ale služba v jiném jazyce zaručena není. Jde o krok posouzení, nikoli o příslib, že můžeme pracovat v jiném jazyce.',
+            'Pri slanju zahteva izaberite „Način komunikacije treba potvrditi“. Odgovaramo da bismo ocenili način komunikacije, ali usluga na drugom jeziku nije zagarantovana. To je korak ocene, a nije obećanje da možemo raditi na drugom jeziku.',
         },
         {
-          question: 'Jak se nakládá s mým textem v češtině?',
+          question: 'Kako se postupa sa mojim tekstom na srpskom?',
           answer:
-            'Původní text, který napíšete, se uchová tak, jak je, a automaticky se nepřekládá. Je-li to potřeba, jazyk další komunikace se s Vámi potvrdí.',
+            'Izvorni tekst koji napišete čuva se kakav jeste i automatski se ne prevodi. Ako je potrebno, jezik dalje komunikacije potvrđuje se sa Vama.',
         },
         {
-          question: 'Proběhla porada již tím, že je žádost odeslána?',
+          question: 'Da li je konsultacija već obavljena time što je zahtev poslat?',
           answer:
-            'Ne. Odeslaná žádost čeká na posouzení advokátkou nebo advokátem. Není to právní stanovisko, není to potvrzená schůzka a samotné odeslání nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
+            'Ne. Poslat zahtev čeka ocenu advokatkinje ili advokata. To nije pravno mišljenje, nije potvrđen sastanak i samo slanje ne zasniva odnos između advokatkinje ili advokata i klijenta.',
         },
         {
-          question: 'Jak se počítají náklady?',
+          question: 'Kako se računaju troškovi?',
           answer:
-            'Nejprve se stanoví rozsah práce, poté se s Vámi potvrdí výše a způsob výpočtu nákladů, dříve než práce začne. Tato stránka neuvádí částky a neříká, že první konzultace je bezplatná.',
+            'Najpre se utvrđuje obim rada, zatim se sa Vama potvrđuju visina i način obračuna troškova, pre nego što rad počne. Ova stranica ne navodi iznose i ne kaže da je prva konsultacija besplatna.',
         },
         {
-          question: 'Co dělat, je-li má věc velmi naléhavá?',
+          question: 'Šta ako je moja stvar veoma hitna?',
           answer:
-            'Uveďte lhůtu nebo datum z úřední písemnosti hned na začátku shrnutí, aby byla tato data při posouzení vidět. Tato stránka nemá nouzový kanál a nezajišťuje lhůtu k odpovědi; nesnese-li Vaše věc odkladu, měli byste souběžně hledat další cesty ve svém místě.',
+            'Navedite rok ili datum sa službenog pismena odmah na početku sažetka, da bi ti podaci bili vidljivi pri oceni. Ova stranica nema hitni kanal i ne obezbeđuje rok za odgovor; ako Vaša stvar ne trpi odlaganje, trebalo bi paralelno da tražite druge puteve na svom mestu.',
         },
       ],
     },
     privacy: {
-      eyebrow: 'SOUKROMÍ',
-      title: 'Údaje sbírané kontaktním formulářem',
+      eyebrow: 'PRIVATNOST',
+      title: 'Podaci koje prikuplja kontaktni obrazac',
       description:
-        'Co sbírá kontaktní formulář v této české části, jak se nakládá s původním textem a jak nás oslovit ohledně Vašich údajů.',
+        'Šta prikuplja kontaktni obrazac u ovom srpskom delu, kako se postupa sa izvornim tekstom i kako nas kontaktirati u vezi sa Vašim podacima.',
       intro:
-        'Tato část se týká pouze kontaktního formuláře na těchto informačních stránkách. Popisuje nakládání s údaji, nikoli technickou záruku.',
+        'Ovaj deo odnosi se samo na kontaktni obrazac na ovim informativnim stranicama. Opisuje postupanje sa podacima, a ne tehničku garanciju.',
       sections: [
         {
-          heading: 'Které údaje se sbírají',
+          heading: 'Koji se podaci prikupljaju',
           paragraphs: [
-            'Odešlete-li žádost prostřednictvím formuláře v této části, zaznamenají se tyto údaje:',
+            'Ako pošaljete zahtev preko obrasca u ovom delu, beleže se sledeći podaci:',
           ],
           items: [
-            'Jméno, které uvedete',
-            'E-mailová adresa pro odpověď',
-            'Jazyk zobrazení stránky v okamžiku odeslání',
-            'Jazyk, v němž jste psali',
-            'Jazyk konzultace, který si přejete',
-            'Původní text, který jste napsali',
-            'Váš souhlas s odesláním žádosti',
-            'Číslo podání pro dohledání žádosti',
+            'Ime koje navedete',
+            'Adresa elektronske pošte za odgovor',
+            'Jezik prikaza stranice u trenutku slanja',
+            'Jezik na kojem ste pisali',
+            'Jezik konsultacije koji želite',
+            'Izvorni tekst koji ste napisali',
+            'Vaša saglasnost za slanje zahteva',
+            'Broj predaje radi pronalaženja zahteva',
           ],
         },
         {
-          heading: 'Původní text se uchová beze změny',
+          heading: 'Izvorni tekst čuva se bez izmene',
           paragraphs: [
-            'Váš text se uchová přesně tak, jak jste jej napsali, a automaticky se nepřekládá. Je-li pro vyřízení potřebný překlad, projedná se to s Vámi zvlášť.',
-            'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
+            'Vaš tekst čuva se tačno onako kako ste ga napisali i automatski se ne prevodi. Ako je za obradu potreban prevod, to se sa Vama posebno razgovara.',
+            'Budući da se izvorni tekst čuva, u početnoj fazi ne pišite ono što još nije potrebno, na primer broj pasoša, broj isprave ili podatke o računu.',
           ],
         },
         {
-          heading: 'Místo uchování a přístup',
+          heading: 'Mesto čuvanja i pristup',
           paragraphs: [
-            'Obsah Vašeho podání se uchovává na místě, které není veřejně přístupné. Přístup k němu mají pouze oprávněné osoby v kanceláři, a to za účelem vyřízení žádosti.',
-            'Tato stránka nedává absolutní záruku bezpečnosti. Žádná cesta přenosu a žádné místo uchování není zcela bezpečné; citlivé dokumenty by proto měly být zasílány až po zvláštním pokynu advokátky nebo advokáta.',
+            'Sadržaj Vaše predaje čuva se na mestu koje nije javno dostupno. Pristup imaju samo ovlašćene osobe u kancelariji, i to radi obrade zahteva.',
+            'Ova stranica ne daje apsolutnu garanciju bezbednosti. Nijedan put prenosa i nijedno mesto čuvanja nisu potpuno bezbedni; osetljive dokumente zato treba slati tek po posebnom uputstvu advokatkinje ili advokata.',
           ],
         },
         {
-          heading: 'Účel užití',
+          heading: 'Svrha korišćenja',
           paragraphs: [
-            'Odeslané údaje slouží k posouzení žádosti, k odpovědi Vám, k ujasnění způsobu komunikace a k vyřízení, je-li práce převzata.',
-            'Údaje se bez zvláštního souhlasu neužívají k marketingu.',
+            'Poslati podaci služe oceni zahteva, odgovoru Vama, razjašnjavanju načina komunikacije i obradi, ako se rad preuzme.',
+            'Podaci se bez posebne saglasnosti ne koriste za marketing.',
           ],
         },
         {
-          heading: 'Oznámení a číslo podání',
+          heading: 'Obaveštenje i broj predaje',
           paragraphs: [
-            'Je-li žádost úspěšně odeslána, systém uvědomí kancelář. Není-li toto oznámení zatím potvrzeno, Váš text zůstává uchován a neztrácí se.',
-            'Číslo podání slouží k dohledání Vaší žádosti v našich záznamech. Zobrazí se po uložení; můžete je uvést při novém kontaktu.',
+            'Ako je zahtev uspešno poslat, sistem obaveštava kancelariju. Ako to obaveštenje još nije evidentirano kao dostavljeno, Vaš tekst ostaje sačuvan i ne gubi se.',
+            'Broj predaje služi da se Vaš zahtev pronađe u našim evidencijama. Prikazuje se nakon čuvanja; možete ga navesti pri novom kontaktu.',
           ],
         },
         {
-          heading: 'Vaše práva a cesta ke kontaktu',
+          heading: 'Vaša prava i put kontakta',
           paragraphs: [
-            'Můžete žádat o přístup ke svým údajům, o jejich opravu nebo výmaz, případně odvolat souhlas, a to prostřednictvím e-mailové adresy uvedené na kontaktní stránce. Existuje-li zákonná nebo procesní povinnost uchování, vysvětlíme omezení.',
-            'Tato stránka neuvádí pevnou dobu uchování, protože skutečná doba závisí na dalším průběhu věci a na souvisejících povinnostech. Přejete-li si dřívější výmaz, sdělte to při kontaktu.',
+            'Možete tražiti pristup svojim podacima, njihovu ispravku ili brisanje, ili povući saglasnost, preko adrese elektronske pošte navedene na kontaktnoj stranici. Ako postoji zakonska ili procesna dužnost čuvanja, objasnićemo ograničenje.',
+            'Ova stranica ne navodi fiksni rok čuvanja, jer stvarno trajanje zavisi od daljeg toka stvari i od povezanih dužnosti. Ako želite ranije brisanje, navedite to pri kontaktu.',
           ],
         },
         {
-          heading: 'Místo uchování a poskytovatelé',
+          heading: 'Mesto čuvanja i pružaoci usluga',
           paragraphs: [
-            'Tyto stránky jsou hostovány u společnosti Vercel a Vaše podání se uchovává v neveřejném objektovém úložišti této služby. E-maily se odesílají poštovní službou, kterou kancelář užívá.',
-            'Servery jednotlivých poskytovatelů se mohou nacházet mimo Tchaj-wan, takže Vaše údaje tam mohou být uchovávány a zpracovávány. Je-li účel uchování naplněn, údaje se bez zbytečného odkladu vymažou; údaje, které je třeba uchovávat podle použitelných předpisů, zůstávají po tuto dobu. Žádosti o osobní údaje přijímá wei@hoveringlaw.com.tw.',
+            'Ove stranice hostovane su kod kompanije Vercel, a Vaša predaja čuva se u nejavnom objektnom skladištu te usluge. Poruke elektronske pošte šalju se poštanskom uslugom koju kancelarija koristi.',
+            'Serveri pojedinih pružalaca mogu se nalaziti van Tajvana, pa se Vaši podaci tamo mogu čuvati i obrađivati. Kada je svrha čuvanja ispunjena, podaci se brišu bez nepotrebnog odlaganja; podaci koje treba čuvati prema primenjivim propisima ostaju za to vreme. Zahteve u vezi sa ličnim podacima prima wei@hoveringlaw.com.tw.',
           ],
         },
       ],
     },
     disclaimer: {
-      eyebrow: 'UPOZORNĚNÍ',
-      title: 'Rozsah a hranice informací na této stránce',
+      eyebrow: 'ODRICANJE',
+      title: 'Obim i granice informacija na ovoj stranici',
       description:
-        'Obecná povaha informací, právní rámec a předpoklady vzniku vztahu mezi advokátkou nebo advokátem a klientem.',
+        'Opšti karakter informacija, pravni okvir i pretpostavke nastanka odnosa između advokatkinje ili advokata i klijenta.',
       intro:
-        'Tato část objasňuje, co pro Vás tyto české informační stránky mohou udělat a co nikoli.',
+        'Ovaj deo razjašnjava šta ovaj srpski informativni deo može da učini za Vas, a šta ne.',
       sections: [
         {
-          heading: 'Pouze obecné informace',
+          heading: 'Samo opšte informacije',
           paragraphs: [
-            'Obsah těchto stránek je psán jako obecná informace. Není právní radou k Vašemu případu a nenahrazuje posouzení Vašich dokumentů.',
-            'Výsledek věci závisí na skutkovém stavu, na použitelných předpisech a na okamžiku; dvě zdánlivě podobné situace mohou skončit různě.',
+            'Sadržaj ovih stranica napisan je kao opšta informacija. Nije pravni savet za Vaš slučaj i ne zamenjuje ocenu Vaših dokumenata.',
+            'Ishod stvari zavisi od činjenica, od primenjivih propisa i od trenutka; dve naizgled slične situacije mogu se završiti različito.',
           ],
         },
         {
-          heading: 'Právní rámec',
+          heading: 'Pravni okvir',
           paragraphs: [
-            'Kancelář působí podle tchajwanského práva a tato stránka hovoří pouze o práci v tomto rámci.',
-            'Obsah není poradenstvím podle práva jiného řádu než tchajwanského, včetně práva místa Vašeho pobytu. Týká-li se část Vaší věci jiného právního řádu, ujasníme s Vámi, jaká kvalifikovaná osoba je pro tuto část potřebná.',
+            'Kancelarija deluje po tajvanskom pravu i ova stranica govori samo o radu u tom okviru.',
+            'Sadržaj nije savetovanje po pravu drugog poretka osim tajvanskog, uključujući pravo mesta Vašeg boravka. Ako deo Vaše stvari dira drugi pravni poredak, razjasnićemo sa Vama koja kvalifikovana osoba je za taj deo potrebna.',
           ],
         },
         {
-          heading: 'Vztah mezi advokátkou nebo advokátem a klientem nevzniká sám od sebe',
+          heading: 'Odnos između advokatkinje ili advokata i klijenta ne nastaje sam od sebe',
           paragraphs: [
-            'Přečtení této stránky, odeslání formuláře nebo e-mailu samo o sobě nezakládá vztah mezi advokátkou nebo advokátem a klientem.',
-            'Tento vztah vzniká teprve poté, co byla věc posouzena a obě strany potvrdily převzetí práce.',
+            'Čitanje ove stranice, slanje obrasca ili poruke elektronske pošte samo po sebi ne zasniva odnos između advokatkinje ili advokata i klijenta.',
+            'Taj odnos nastaje tek nakon što je stvar ocenjena i obe strane potvrdile preuzimanje rada.',
           ],
         },
         {
-          heading: 'Žádný příslib výsledku',
+          heading: 'Nema obećanja ishoda',
           paragraphs: [
-            'Žádná část této stránky není příslibem ohledně výsledku věci, vyhovění přihlášce nebo žádosti či ohledně pobytového a pracovního statusu.',
-            'Vnější odkazy slouží k orientaci; neslibujeme správnost ani aktuálnost obsahu třetích osob.',
+            'Nijedan deo ove stranice nije obećanje u pogledu ishoda stvari, usvajanja prijave ili zahteva, niti u pogledu boravišnog i radnog statusa.',
+            'Spoljašnji linkovi služe orijentaciji; ne garantujemo tačnost niti ažurnost sadržaja trećih lica.',
           ],
         },
       ],
     },
     columns: {
-      eyebrow: 'ČLÁNKY',
-      title: 'Články o tchajwanském právu',
+      eyebrow: 'ČLANCI',
+      title: 'Članci o tajvanskom pravu',
       description:
-        'Články v češtině k častým otázkám tchajwanského práva. Obsah je obecnou informací k okamžiku zveřejnění, nikoli právní radou k Vašemu případu.',
+        'Članci na srpskom o čestim pitanjima tajvanskog prava. Sadržaj je opšta informacija u trenutku objavljivanja, a ne pravni savet za Vaš slučaj.',
       intro:
-        'Kancelář zveřejňuje články k častým otázkám tchajwanského práva. Články dostupné v češtině jsou na této stránce; vedle nich jsou čtyři odkazy, z nichž každý otevře seznam článků v jednom původním jazyce.',
+        'Kancelarija objavljuje članke o čestim pitanjima tajvanskog prava. Članci dostupni na srpskom nalaze se na ovoj stranici; pored njih su četiri linka, od kojih svaki otvara spisak članaka na jednom izvornom jeziku.',
       sections: [
         {
-          heading: 'Čtyři seznamy podle jazyka',
+          heading: 'Četiri spiska prema jeziku',
           paragraphs: [
-            'Tato část obsahuje čtyři odkazy: seznam článků v korejštině, v čínštině, v angličtině a v japonštině. Každý odkaz uvádí jazyk seznamu, takže předem víte, v jakém jazyce se obsah otevře.',
-            'Tyto čtyři seznamy jsou seznamy podle původního jazyka článků, nikoli seznamy překladů. Články dostupné v češtině jsou zvlášť na této stránce.',
+            'Ovaj deo sadrži četiri linka: spisak članaka na korejskom, na kineskom, na engleskom i na japanskom. Svaki link navodi jezik spiska, da unapred znate na kom jeziku se sadržaj otvara.',
+            'Ta četiri spiska su spiskovi prema izvornom jeziku članaka, a ne spiskovi prevoda. Članci dostupni na srpskom posebno su na ovoj stranici.',
           ],
         },
         {
-          heading: 'Kam odkazy vedou',
+          heading: 'Kuda vode linkovi',
           paragraphs: [
-            'Zvolíte-li jeden ze čtyř odkazů, otevře se seznam článků v daném jazyce. Ze seznamu si text vyberete sami; celý obsah se zobrazí v původním jazyce článku.',
-            'Tato stránka obsah článků neshrnuje a nezaručuje, že určité téma je k dispozici ve všech čtyřech jazycích. Každý seznam obsahuje pouze texty zveřejněné v daném jazyce.',
+            'Ako izaberete jedan od četiri linka, otvara se spisak članaka na tom jeziku. Sa spiska tekst birate sami; ceo sadržaj prikazuje se na izvornom jeziku članka.',
+            'Ova stranica ne sažima sadržaj članaka i ne garantuje da je određena tema dostupna na sva četiri jezika. Svaki spisak sadrži samo tekstove objavljene na tom jeziku.',
           ],
         },
         {
-          heading: 'Nakolik může článek sloužit k orientaci',
+          heading: 'Koliko članak može da posluži orijentaciji',
           paragraphs: [
-            'Články jsou obecnými informacemi k okamžiku zveřejnění. Předpisy a jejich používání se mohou změnit a článek neobsahuje všechny okolnosti Vašeho případu.',
-            'Nezakládejte proto postup ve skutečné věci pouze na článku. Užijte jej k přehledu a své dokumenty projednejte zvlášť s advokátkou nebo advokátem; tato stránka není krokem porady.',
+            'Članci su opšte informacije u trenutku objavljivanja. Propisi i njihova primena mogu se promeniti, a članak ne sadrži sve okolnosti Vašeg slučaja.',
+            'Zato ne zasnivajte postupak u stvarnoj stvari samo na članku. Koristite ga za pregled i svoje dokumente razgovarajte posebno sa advokatkinjom ili advokatom; ova stranica nije korak konsultacije.',
           ],
         },
       ],

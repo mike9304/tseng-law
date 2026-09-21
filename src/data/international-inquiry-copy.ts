@@ -2204,54 +2204,54 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
         'Nijedan od četiri jezika nije uporabljiv — način komunikacije treba potvrditi',
     },
   },
-  sr: { // SCAFFOLD(cs)
+  sr: {
     guidanceNotice:
-      'Tato stránka je psána česky jako obecná orientace, nikoli jako právní rada ve Vaší věci.',
+      'Ova stranica napisana je na srpskom kao opšta orijentacija, a ne kao pravni savet u Vašoj stvari.',
     consultationNotice:
-      'Porada probíhá pouze ve čtyřech jazycích: anglicky, čínsky (中文), japonsky a korejsky.',
+      'Konsultacija se odvija samo na četiri jezika: engleskom, kineskom (中文), japanskom i korejskom.',
     methodConfirmationNotice:
-      'Pokud neovládáte žádný ze čtyř jazyků konzultace, zvolte „Způsob komunikace je třeba potvrdit“. Odpovíme, abychom posoudili schůdný způsob komunikace, existuje-li takový; služba v jiném jazyce zaručena není a lhůta k odpovědi se neslibuje.',
+      'Ako ne možete da koristite nijedan od četiri jezika konsultacije, izaberite „Način komunikacije treba potvrditi“. Odgovaramo da bismo ocenili izvodljiv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zagarantovana i rok za odgovor se ne obećava.',
     preparationNotice:
-      'Shrnutí můžete napsat ve svém jazyce. Původní text se uchová tak, jak jste jej napsali, a automaticky se nepřekládá.',
-    heading: 'Odeslat žádost o posouzení',
+      'Sažetak možete napisati na svom jeziku. Izvorni tekst čuva se onako kako ste ga napisali i automatski se ne prevodi.',
+    heading: 'Pošaljite zahtev za ocenu',
     intro:
-      'Popište svou věc stručně. Advokátka nebo advokát posoudí obsah, než se přistoupí k dalšímu kroku.',
-    submitLabel: 'Odeslat žádost',
-    submittingLabel: 'Odesílá se…',
+      'Opišite svoju stvar ukratko. Advokatkinja ili advokat pregleda sadržaj pre nego što se pređe na sledeći korak.',
+    submitLabel: 'Pošaljite zahtev',
+    submittingLabel: 'Šalje se…',
     successMessage:
-      'Obdrželi jsme Vaši žádost; čeká na posouzení. Neznamená to, že porada proběhla nebo že byla potvrzena schůzka.',
+      'Primili smo Vaš zahtev; čeka ocenu. To ne znači da je konsultacija obavljena niti da je sastanak potvrđen.',
     savedNotificationPendingMessage:
-      'Vaše žádost byla uložena, ale oznámení kanceláři zatím není potvrzeno. Co jste napsali, se neztratí. Neobdržíte-li odpověď, můžete napsat i na e-mailovou adresu z kontaktní stránky.',
-    receiptIdLabel: 'Číslo podání',
+      'Vaš zahtev je sačuvan, ali obaveštenje kancelariji još nije evidentirano kao dostavljeno. Ono što ste napisali ne gubi se. Ako ne dobijete odgovor, možete pisati i na adresu elektronske pošte sa kontaktne stranice.',
+    receiptIdLabel: 'Broj predaje',
     failureMessage:
-      'Vaši žádost se nepodařilo odeslat. Zkuste to znovu nebo napište na e-mailovou adresu z kontaktní stránky.',
-    originalLanguageLabel: 'Jazyk, v němž píšete',
+      'Vaš zahtev nije uspelo poslati. Pokušajte ponovo ili pišite na adresu elektronske pošte sa kontaktne stranice.',
+    originalLanguageLabel: 'Jezik na kojem pišete',
     originalLanguagePlaceholder:
-      'Například čeština, angličtina, čínština nebo jiný jazyk',
-    preferredConsultationLanguageLabel: 'Jazyk, který si přejete pro konzultaci',
-    originalTextLabel: 'Krátký popis věci (ve Vašem jazyce)',
+      'Na primer srpski, engleski, kineski ili drugi jezik',
+    preferredConsultationLanguageLabel: 'Jezik koji želite za konsultaciju',
+    originalTextLabel: 'Kratak opis stvari (na Vašem jeziku)',
     originalTextPlaceholder:
-      'Napište, co se stalo, jakou pomoc potřebujete a lhůtu, existuje-li. Nepište číslo pasu, číslo dokladu ani údaje o účtu.',
-    nameLabel: 'Jméno',
-    emailLabel: 'E-mail',
+      'Napišite šta se dogodilo, kakva Vam je pomoć potrebna i rok, ako postoji. Ne pišite broj pasoša, broj isprave niti podatke o računu.',
+    nameLabel: 'Ime',
+    emailLabel: 'Elektronska pošta',
     consentLabel:
-      'Přečetl(a) jsem stránku o soukromí a souhlasím s odesláním této žádosti.',
-    privacyLinkLabel: 'Soukromí',
-    requiredMessage: 'Toto pole je povinné.',
-    invalidEmailMessage: 'Zadejte platnou e-mailovou adresu.',
-    tooLongMessage: 'Text je příliš dlouhý. Zkraťte jej a odešlete znovu.',
+      'Pročitao sam ili pročitala sam stranicu o privatnosti i saglasan sam ili saglasna sam sa slanjem ovog zahteva.',
+    privacyLinkLabel: 'Privatnost',
+    requiredMessage: 'Ovo polje je obavezno.',
+    invalidEmailMessage: 'Unesite važeću adresu elektronske pošte.',
+    tooLongMessage: 'Tekst je predugačak. Skraćujte ga i pošaljite ponovo.',
     sourceLanguageNotice:
-      'Tento článek je zveřejněn pouze v jazyce {language}; odkaz otevře původní stránku.',
+      'Ovaj članak objavljen je samo na jeziku {language}; link otvara izvornu stranicu.',
     unavailableTranslationNotice:
-      'Tato část zatím není k dispozici v jazyce této stránky. Odkaz v původním jazyce otevře původní text.',
-    unavailableLanguageNotice: 'Tato stránka se v jazyce {language} nenabízí.',
+      'Ovaj deo još nije dostupan na jeziku ove stranice. Link na izvornom jeziku otvara izvorni tekst.',
+    unavailableLanguageNotice: 'Ova stranica se ne nudi na jeziku {language}.',
     languageOptions: {
-      en: 'Angličtina (English)',
-      'zh-hant': 'Čínština (中文)',
-      ja: 'Japonština (日本語)',
-      ko: 'Korejština (한국어)',
+      en: 'Engleski (English)',
+      'zh-hant': 'Kineski (中文)',
+      ja: 'Japanski (日本語)',
+      ko: 'Korejski (한국어)',
       'needs-method-confirmation':
-        'Žádný ze čtyř jazyků není použitelný — způsob komunikace je třeba potvrdit',
+        'Nijedan od četiri jezika nije upotrebljiv — način komunikacije treba potvrditi',
     },
   },
   sl: {

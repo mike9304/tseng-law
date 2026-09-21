@@ -1,1 +1,72 @@
-[WO start 2026-09-22 06:58:31]
+WO-N-sr-b — columns 010–018 Serbian (Latin) — grok
+Workspace: /Users/son7/Projects/tseng-law-new-sr-20260922
+Date: 2026-09-22
+
+## File count
+9 files written in src/content/columns-sr/ (this lane):
+010-taiwan-gym-injury-lawsuit.md
+011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md
+012-taiwan-overtaking-accident-liability.md
+013-taiwan-company-establishment-advanced-1.md
+014-taiwan-mandatory-employment-period.md
+015-taiwan-company-setup-pitch-location.md
+016-taiwan-inheritance-custody-analysis.md
+017-taiwan-logistics-business-setup.md
+018-taiwan-semiconductor-market-entry.md
+
+Dir also contains 001–009 from WO-N-sr-a (ls = 18). Checker run on the whole dir.
+
+## §Verify output (verbatim)
+
+ls src/content/columns-sr/*.md | wc -l
+      18
+
+node scripts/check-column-translation.mjs --dir src/content/columns-sr --lang sr 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-sr-20260922/src/content/columns-sr/018-taiwan-semiconductor-market-entry.md  lang=sr
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=68
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-sr | wc -l
+       0
+
+git status --short | wc -l
+      45
+
+Gate: this lane 010–018 all PASS; dir summary PASS 18/18 files (001–009 already present); markers 0. No git add/commit/push.
+
+## Key term choices (Serbian + Traditional-Chinese gloss)
+1. punomoćnica u parnici (訴訟代理人) — feminine; male client in 010 unchanged
+2. pismo s overom sadržaja (存證信函) — not a parliamentary question
+3. kaznena naknada štete (懲罰性賠償金)
+4. klauzula obaveznog ostanka / minimalni rok službe (最低服務年限) — not working hours
+5. davanje unapred / predplata (預付性給付); nagrada za potpis (簽約金); nagrada za zadržavanje (留任獎金)
+6. vršenje ili nošenje prava i obaveza prema maloletnom detetu (未成年子女權利義務之行使或負擔); lični kontakt (會面交往)
+7. notarska overa (認證) vs provera/potvrda testamenta (檢認) — two acts
+8. špedicija / preuzimanje prevoza (運送承攬); ugovor o delu (承攬); logistika (物流)
+9. poslovna dozvola za prevoz (經營許可) vs uverenje o upisu delatnosti (營業執照)
+10. Odeljenje za ocenu investicija Ministarstva ekonomije (經濟部投資審議司) — same name as 001/013/018
+
+House: **Advokatkinja Wei Tseng (曾雋崴)**; formal Vi; date_display 13. septembra 2025. (011: 4. februara 2026.; 018: 17. septembra 2026.); thousands 1.579.589; categories from src/lib/columns.ts (formation / legal / case). R2: strani brendovi (011); porodica povezana s dve ili više država (016). R3/R7: 015 contact-anytime and 013 comment CTA removed.
+
+## Unresolved
+- numbers WARN only (not FAIL) on some files: Korean 제N항 / 제N호 / 제3자 / 1심 have no sr word-numeral lexicon; digit bags still match. 010 WARN on 1심 (written as prvi stepen). 011/014/015/017 similar.
+- 012 english check false-positive if `br.` splits a long sentence (`što` strips to stopword `to`); rewritten as `broj` + shorter clause. Do not reintroduce `br. N`.
+- 018 Korean source has no `url` and no related-links block (hrefs=0); sr matches that.
+- Consultation languages EN/中文/JA/KO only; nationality gate not tripped (no Srbija).

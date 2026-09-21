@@ -184,7 +184,7 @@ export const DECORATIVE_VIDEO_CONTROL_LABELS = {
     replay: 'Пуснете видеото отново',
   },
   hr: { pause: 'Pauzirajte videozapis', play: 'Pokrenite videozapis', replay: 'Ponovno pokrenite videozapis' },
-  sr: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)
+  sr: { pause: 'Pauzirajte video', play: 'Pustite video', replay: 'Pustite video ponovo' },
   sl: { pause: 'Zaustavi video', play: 'Predvajaj video', replay: 'Predvajaj video znova' },
   lt: { pause: 'Pristabdyti vaizdo įrašą', play: 'Leisti vaizdo įrašą', replay: 'Leisti vaizdo įrašą iš naujo' },
   lv: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)

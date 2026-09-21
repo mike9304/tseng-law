@@ -1,7 +1,106 @@
-[WO start 2026-09-22 05:17:48]
-Serbian (Latin) `sr` copy is in place: every `SCAFFOLD(cs)` `sr` string is replaced, markers are gone, `languageName` is `Srpski`.
+WO-P-sr — Serbian (Latin script) guidance pack + UI strings
+Workspace: /Users/son7/Projects/tseng-law-new-sr-20260922
+Agent: grok  |  2026-09-22
+No git add/commit/push/stash/checkout. Helper scratch only under .tmp-sr/.
 
-Verify: SCAFFOLD `sr` count **0**, **TSC_OK**. Vitest **1096 passed**; the **5 failures** are other still-scaffolded locales (answers list 27 vs 45; duplicate llms notices; root `llms.txt` over 8 KiB). Every `sr` row passed.
+## Files touched
+src/data/international-guidance-central-europe.ts   (serbianGuidanceContent; languageName 'Srpski')
+src/data/international-guidance-team.ts             (copy TIM, language names, practice areas, bios)
+src/data/international-guidance-offices.ts          (KANCELARIJE + footer chrome)
+src/data/international-guidance-answers.ts          (6 answers; sources /sr/…)
+src/data/international-inquiry-copy.ts
+src/lib/llms-txt.ts                                 (English name 'Serbian' + 3 notices)
+src/data/multilingual-international-v2.ts           (GUIDANCE_HOME_PATHS /sr/…)
+src/lib/columns.ts
+src/components/ColumnsGrid.tsx                      (Sve; category labels = columns.ts; Čitajte dalje = pack)
+src/components/CinematicOpening.tsx
+src/components/decorative-video-controls.ts
+src/data/team-name.ts
+src/lib/public-language-registry.ts                 (region labels + picker)
+src/data/__tests__/guidance-disclosure-parity.test.ts
+src/data/__tests__/guidance-office-facts-sync.test.ts   (Korea: Korej / Japan: Japan)
+src/data/__tests__/international-guidance-privacy-disclosure.test.ts
+src/data/__tests__/column-alternate-expectations.ts
+src/components/__tests__/columns-grid-guidance-labels.test.tsx
+src/components/__tests__/multilingual-international-v2.test.tsx
+tests/builder-editor/international-guidance.playwright.ts  (og:locale sr_RS)
+docs/i18n/global-plan/evidence/grok-P-sr.log        (this file)
 
-Full report: `docs/i18n/global-plan/evidence/grok-P-sr.log`.
-=== end code=0 2026-09-22 05:54:40 ===
+SCAFFOLD(cs) markers removed from every sr block. No other locales rewritten.
+
+## §Verify (verbatim)
+
+$ grep -rn "SCAFFOLD" src tests | grep -cE "^\S+:[0-9]+:\s*'?sr'?:|locale sr"
+0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/data/__tests__/ src/lib/__tests__/guidance-chrome-language.test.ts src/lib/__tests__/international-guidance-answers.test.ts "src/app/[locale]/__tests__/llms-discovery.test.tsx" src/components/__tests__/columns-grid-guidance-labels.test.tsx src/components/__tests__/multilingual-international-v2.test.tsx --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+   × guidance locale llms.txt catalogs > writes a distinct notice set for each guidance language 3ms
+   × root llms.txt guidance catalog links > stays inside the 8 KiB root budget and the documented grammar 1ms
+   × root llms.txt guidance catalog links > lists every site-locale catalog and every guidance catalog 0ms
+   × root llms.txt guidance catalog links > labels each guidance catalog in its own language without widening consultation languages 0ms
+   × guidanceAnswers > covers every guidance locale x 6 page keys 4ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+ Test Files  2 failed | 45 passed (47)
+      Tests  5 failed | 1096 passed (1101)
+
+$ git status --short | wc -l
+      21
+
+## Acceptable failures (other new locales still scaffolded — not sr rows)
+
+1. src/lib/__tests__/international-guidance-answers.test.ts
+   local GUIDANCE_LOCALES list is still 27 (vi…he); GUIDANCE_LOCALES_4 is 45.
+   sr answers exist and /sr/ sources are set. Not an sr-wording miss.
+
+2. llms-discovery “writes a distinct notice set for each guidance language”
+   expected 135 unique notice strings (45×3), received 84 because sk/hr/sl/lt/lv/et/ca/is
+   (and other scaffold clones) still share identical Czech/Hindi/Arabic/Thai/Russian notices.
+   sr notices are unique; every it.each('%s') row for locale sr passed
+   (ten pages, catalog isolation, notice block, verbatim quote, locale contract, route).
+
+3–5. root llms.txt 8 KiB budget + catalog listing
+   validateLlmsTxt on buildRootLlmsTxt() — the root catalog lists every GUIDANCE_LOCALES_4
+   entry; size/grammar fail is the widened registry, not sr copy.
+
+sr-pinning tests in this run: columns-grid, multilingual-v2, privacy-disclosure,
+disclosure-parity, office-facts-sync — all passed.
+
+## Terminology (Serbian Latin; Traditional-Chinese gloss kept byte-identical)
+
+  boravišna dozvola (居留)
+  radna dozvola (工作許可)
+  razvod (離婚)
+  prava i dužnosti prema maloletnoj deci (未成年子女權利義務之行使或負擔)
+  viđanje (會面交往)
+  nasleđe (繼承)
+  evidencija prebivališta (戶籍)
+  otpremnina po tajvanskom pravu (資遣費)
+  ugovor o radu (勞動契約)  /  pravilnik o radu (工作規則)
+  žig (商標)  /  patent (專利)
+  sanheyuan (三合院)
+  Hovering International Law Firm (昊鼎國際法律事務所)
+  National Taiwan University (國立臺灣大學)
+  Wei Tseng (曾雋崴) — feminine: advokatkinja / ovlašćena / rukovodeća
+  cities kept as Latin + gloss: Tajpej (臺北), Kaohsiung (高雄), Taichung (臺中), Pingtung (屏東)
+
+Register: formal Vi; Serbian quotation marks „…“; consultation languages in the
+canonical order English / Chinese (中文) / Japanese / Korean. FAQ “Da li je moguća
+konsultacija na srpskom?” opens “Ne.” No interpreter / reply-time / appointment /
+free first meeting / outcome promises. TWD 1.57M and GUIDANCE_BIO_PRESERVED_TERMS
+kept byte-identical. Eyebrows TIM / KANCELARIJE (uppercase short nouns).
+
+## Could not fit
+
+None. All nav.* labels ≤ 14 characters:
+
+  Početna 7, Usluge 6, Kancelarija 11, Advokati 8, Troškovi 8,
+  Kontakt 7, Pitanja 7, Privatnost 10, Odricanje 9, Članci 6.
+
+menuLabel is 'Pregled stranica' (not the literal "Menu").
+lawyers title/description = guidanceTeamCopy: 'Međunarodni tim Hovering' /
+'Profili advokatkinja i advokata, operativnog rukovodstva i pridruženog računovodstva i revizije Hovering.'
+columnsReadMoreLabel 'Čitajte dalje' is byte-identical in ColumnsGrid.
+category labels byte-identical between src/lib/columns.ts and ColumnsGrid.tsx.

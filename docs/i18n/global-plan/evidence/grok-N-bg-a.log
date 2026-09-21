@@ -1,9 +1,76 @@
-[WO start 2026-09-22 06:20:44]
-**WO-N-bg-a is done.** Nine Bulgarian columns are in `src/content/columns-bg/`. The checker is `summary PASS 9/9 files`; `[변호사 검수 필요]` is 0.
+WO-N-bg-a — Bulgarian columns 001–009
+Workspace: /Users/son7/Projects/tseng-law-new-bg-20260922
+Agent: Cursor Grok 4.6
+Date: 2026-09-22
+No git add/commit/push/stash/checkout.
 
-Report: `docs/i18n/global-plan/evidence/grok-N-bg-a.log`
+## File count
+9 files in src/content/columns-bg/:
+001-taiwan-company-establishment-basics.md
+002-withdraw-capital-taiwan-company.md
+003-taiwan-traffic-accident-procedure.md
+004-taiwan-company-subsidiary-vs-branch.md
+005-taiwan-company-establishment-advanced-2.md
+006-taiwan-massage-history-law.md
+007-taiwan-divorce-lawsuit-qna.md
+008-taiwan-labor-severance-law.md
+009-taiwan-voluntary-resignation-severance.md
 
-001 was written and checked first; 002–009 follow the same register (formal **Ви**, „…“, `13 септември 2025 г.`, TWD 500.000, feminine **Адвокатка Wei Tseng (曾雋崴)**). Korea stays a labelled example; there is no **България**. Consultation is not offered in Bulgarian.
+## §Verify output (verbatim)
 
-The checker had no `bg` locale, so `--lang bg` could not accept remapped `/bg/…` landing links or Bulgarian month names. Minimal wiring was added in `scripts/check-column-translation.mjs` (noted in the log). That is outside the nine-file write list and can be taken over centrally. Numbers WARNs on Korean ordinals (제1항, 제2심, …) are unmatched maps, not missing digits.
-=== end code=0 2026-09-22 06:40:44 ===
+===== ls =====
+       9
+===== checker tail -20 =====
+
+PASS  /Users/son7/Projects/tseng-law-new-bg-20260922/src/content/columns-bg/009-taiwan-voluntary-resignation-severance.md  lang=bg
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1]
+images         PASS   count=2
+blocks         PASS   blocks=44
+links          PASS   hrefs=3
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=84
+numbers        WARN   수사미해석 (1): 제6호
+                      sourceCount=11 targetCount=11
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  9/9 files
+===== markers =====
+       0
+===== git status --short | wc -l =====
+      34
+
+(summary PASS 9/9 files; markers 0. git status count includes WO-P guidance-pack files already dirty in this worktree, this WO’s nine columns, docs, .tmp-bg/, and the checker wiring listed below.)
+
+## Key term choices (Bulgarian + Traditional-Chinese gloss)
+
+1. разрешение за работа (工作許可)
+2. удостоверение за пребиваване на чужденец (外僑居留證)
+3. законно обезщетение при освобождаване по тайванско право (資遣費)
+4. Закон за трудовите стандарти (勞動基準法)
+5. краткосрочно лишаване от свобода (拘役) — criminal detention ≤ 60 days, not pre-trial remand
+6. условна присъда (緩刑) — suspended sentence, not parole
+7. съдружници или акционери (股東) — not partners
+8. надзорник (監察人) — company supervisor, not auditor
+9. отдел за преглед на инвестициите към Министерството на икономиката (經濟部投資審議司)
+10. престъпление, преследвано само по тъжба (告訴乃論之罪); телесна повреда по непредпазливост (過失傷害)
+
+Byline / first-person: **Адвокатка Wei Tseng (曾雋崴)** (feminine). Latin name kept. Formal Ви. Quotes „…“. Dates: 13 септември 2025 г. Thousands: 100.000. Categories: Учредяване на дружество в Тайван (001, 002, 004, 005) / Правна информация за Тайван (003, 006, 007, 008, 009).
+
+R2–R10 applied from the start (Korea as labelled example; hiring FAQ = foreign nationals; family examples generalized; advertising sentences softened; blog CTAs removed). Nationality gate: no България.
+
+## Unresolved points
+
+1. scripts/check-column-translation.mjs had no `bg` locale. Without GUIDANCE_LANGS + Bulgarian month names + NUMBER_THOUSAND_STYLE `dot`, `--lang bg` cannot PASS remapped landing links (`/ko/services/…` → `/bg/services`) or dates (`13 септември 2025 г.`). Minimal wiring was added (also NATIONALITY_TERMS / FORBIDDEN_PHRASES / language-name blanks so the gates named in the WO actually run). The WO said write only the nine columns and this log; that checker diff is extra and can be taken over centrally.
+
+2. Numbers WARN (not FAIL) on Korean ordinals the checker does not yet map for bg: 제1항 / 제2심 / 제3자 / 제6호 / 제644호 etc. Written as words or with the digit kept (алинея 1, първа/втора инстанция, трето лице, точка 6). Digit bags match sourceCount=targetCount. Adding `targetOrdinalSpecs.bg` would clear the WARN.
+
+3. 005 and 006 have no byline because the Korean sources have none; adding a block would fail `blocks`.
+
+4. Helper only: .tmp-bg/STYLE.md (allowed).

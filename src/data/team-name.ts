@@ -60,7 +60,7 @@ export const TEAM_NAME_BY_LOCALE: Record<PublicLocale8, string> = {
   km: 'Hovering International Team', // SCAFFOLD(th)
   mn: 'Hovering International Team', // SCAFFOLD(ru)
   sk: 'Tchajwansko-korejský tým Hovering', // SCAFFOLD(cs)
-  bg: 'Hovering International Team', // SCAFFOLD(ru)
+  bg: 'Международен екип Hovering',
   hr: 'Tajvansko-korejski tim Hovering',
   sr: 'Tchajwansko-korejský tým Hovering', // SCAFFOLD(cs)
   sl: 'Tajvansko-korejska ekipa Hovering',

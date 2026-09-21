@@ -1,3 +1,82 @@
-[WO start 2026-09-22 06:41:36]
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
-Retry attempt 1...
+WO-N-bg-b — Bulgarian columns 010–018
+Workspace: /Users/son7/Projects/tseng-law-new-bg-20260922
+Agent: Cursor Grok 4.6
+Date: 2026-09-22
+No git add/commit/push/stash/checkout.
+
+## File count
+9 assigned files in src/content/columns-bg/ (directory now also holds 001–009 from WO-N-bg-a; 18 total):
+010-taiwan-gym-injury-lawsuit.md
+011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md
+012-taiwan-overtaking-accident-liability.md
+013-taiwan-company-establishment-advanced-1.md
+014-taiwan-mandatory-employment-period.md
+015-taiwan-company-setup-pitch-location.md
+016-taiwan-inheritance-custody-analysis.md
+017-taiwan-logistics-business-setup.md
+018-taiwan-semiconductor-market-entry.md
+
+## §Verify output (verbatim)
+
+===== ls =====
+      18
+===== checker tail -20 =====
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-bg-20260922/src/content/columns-bg/018-taiwan-semiconductor-market-entry.md  lang=bg
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=95
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+===== markers =====
+       0
+===== git status --short | wc -l =====
+      45
+
+(summary PASS 18/18 files includes WO-N-bg-a 001–009 plus this WO’s 010–018; markers 0. git status count includes guidance-pack / checker / docs / .tmp-bg/ already dirty in this worktree.)
+
+Assigned 010–018 each PASS individually (010 first, then 011–018). Numbers WARN only (Korean ordinals 제N항/제3자/제7호/제2종 without a bg ordinal table; digit bags match). 010 has extra `2020` (ROC year 109 = 2020) as in ru — WARN, not FAIL.
+
+## Key term choices (Bulgarian + Traditional-Chinese gloss)
+
+1. процесуален представител (訴訟代理人)
+2. телесна повреда по непредпазливост (過失傷害)
+3. престъпление, преследвано само по тъжба (告訴乃論之罪)
+4. писмо с удостоверяване на съдържанието (存證信函)
+5. наказателно обезщетение (懲罰性賠償金)
+6. минимален срок на служба / клауза за оставане на длъжността (最低服務年限) — not working hours
+7. отдел за преглед на инвестициите към Министерството на икономиката (經濟部投資審議司)
+8. упражняване или носене на правата и задълженията спрямо ненавършилите пълнолетие деца (未成年子女權利義務之行使或負擔)
+9. спедиция / експедиция на товари (運送承攬); разрешение за транспортна дейност (經營許可) vs удостоверение за вписване на търговеца (營業執照)
+10. файл с информация за продукта (產品資訊檔案, PIF); административна глоба (罰鍰)
+
+Byline / first-person: **Адвокатка Wei Tseng (曾雋崴)** (feminine; Latin name kept). Formal Ви. Quotes „…“. Dates: 13 септември 2025 г. (011: 4 февруари 2026 г.; 018: 17 септември 2026 г.). Thousands: 100.000. Categories: Анализ на дела (010) / Правна информация за Тайван (012, 014, 016) / Учредяване на дружество в Тайван (011, 013, 015, 017, 018).
+
+R2–R10 from the start: 011 Korean-brand default → чуждестранна марка; 013/015 blog leftover rephrased inside the same blocks; 014/016 FAQ headings self-standing (R7b); 018 CTA lists only English, Chinese (中文), Japanese, Korean. Nationality gate: no България.
+
+## Unresolved points
+
+1. Numbers WARN (not FAIL) on Korean ordinals the checker does not map for bg: 제1항 / 제3자 / 제7호 / 제2종. Written as алинея 1, трето лице (第三人), точка 7, тип 2. Digit bags match. Adding `targetOrdinalSpecs.bg` would clear the WARN.
+
+2. 010 extra numeral `2020` (пояснение на 109 година на Република Китай) as in ru; checker WARN extra, sourceCount/targetCount 54/55.
+
+3. 016 «제1순위» rendered as **1-ви ред** so the digit `1` is kept; a fully spelled «първи ред» would FAIL numbers.
+
+4. 013 and 015 have no byline because the Korean sources have none; adding a block would fail `blocks`. 013 first-person feminine only where Bulgarian marks it.
+
+5. 018 FAQ uses **главно седалище** for Korean `본사` (as in the body); English meaning is parent-company liability. 母公司 = майчино дружество where that lemma appears.
+
+6. Helper only: .tmp-bg/STYLE.md updated with 010–018 category map (allowed).

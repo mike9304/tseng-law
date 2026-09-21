@@ -824,15 +824,15 @@ export const CINEMATIC_OPENING_COPY: Record<
     service: 'Právní informace o Tchaj-wanu · angličtina, čínština, japonština a korejština',
     contact: 'Obraťte se na kancelář',
   },
-  bg: { // SCAFFOLD(ru)
+  bg: {
     primary: 'HOVERING INTERNATIONAL LAW FIRM',
-    secondary: 'АДВОКАТЫ НА ТАЙВАНЕ',
-    scroll: 'Продолжить вниз',
-    skip: 'Пропустить вступление',
+    secondary: 'АДВОКАТИ В ТАЙВАН',
+    scroll: 'Продължете надолу',
+    skip: 'Прескочете увода',
     mediaAlt:
-      'Аэросъёмка при естественном свете над Центральным горным хребтом Тайваня и морем облаков',
-    service: 'Правовые сведения о Тайване · английский, китайский, японский и корейский',
-    contact: 'Связаться с фирмой',
+      'Въздушна снимка при естествена светлина над Централната планинска верига на Тайван и море от облаци',
+    service: 'Правни сведения за Тайван · английски, китайски, японски и корейски',
+    contact: 'Свържете се с кантората',
   },
   hr: {
     primary: 'HOVERING INTERNATIONAL LAW FIRM',

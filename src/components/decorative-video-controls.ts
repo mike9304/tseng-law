@@ -182,10 +182,10 @@ export const DECORATIVE_VIDEO_CONTROL_LABELS = {
     replay: 'Воспроизвести видео снова',
   },
   sk: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)
-  bg: { // SCAFFOLD(ru)
-    pause: 'Приостановить видео',
-    play: 'Воспроизвести видео',
-    replay: 'Воспроизвести видео снова',
+  bg: {
+    pause: 'Пауза на видеото',
+    play: 'Пуснете видеото',
+    replay: 'Пуснете видеото отново',
   },
   hr: { pause: 'Pauzirajte videozapis', play: 'Pokrenite videozapis', replay: 'Ponovno pokrenite videozapis' },
   sr: { pause: 'Pozastavit video', play: 'Přehrát video', replay: 'Přehrát video znovu' }, // SCAFFOLD(cs)

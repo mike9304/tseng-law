@@ -503,16 +503,16 @@ export const GUIDANCE_HOME_PATHS: Record<GuidanceLocale, GuidanceHomePaths> = {
     },
     ariaLabel: 'Dvě informační cesty',
   },
-  bg: { // SCAFFOLD(ru)
+  bg: {
     setup: {
-      label: 'Информация о регистрации компании на Тайване',
-      href: '/ru/services',
+      label: 'Сведения за учредяване на дружество в Тайван',
+      href: '/bg/services',
     },
     legal: {
-      label: 'Информация по правовым вопросам Тайваня',
-      href: '/ru/faq',
+      label: 'Сведения по правни въпроси на Тайван',
+      href: '/bg/faq',
     },
-    ariaLabel: 'Два пути к информации',
+    ariaLabel: 'Два пътя към сведенията',
   },
   hr: {
     setup: {

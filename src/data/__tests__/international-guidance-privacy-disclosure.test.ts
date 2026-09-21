@@ -47,7 +47,7 @@ const PENDING_CONFIRMATION: Record<(typeof GUIDANCE_LOCALES_4)[number], RegExp> 
   km: /รอการยืนยัน|ยังไม่ได้รับการยืนยัน/, // SCAFFOLD(th)
   mn: /ожидает подтверждения бюро|ещё не подтверждено бюро/, // SCAFFOLD(ru)
   sk: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
-  bg: /ожидает подтверждения бюро|ещё не подтверждено бюро/, // SCAFFOLD(ru)
+  bg: /очаква потвърждение от кантората|все още не е потвърдено от кантората/,
   hr: /čeka potvrdu ureda|još nije potvrđeno od strane ureda/i,
   sr: /není zatím potvrzeno|čeká na potvrzení/i, // SCAFFOLD(cs)
   sl: /še ni potrjeno s strani pisarne|čaka na potrditev pisarne/,

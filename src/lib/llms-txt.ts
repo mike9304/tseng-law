@@ -377,7 +377,7 @@ const GUIDANCE_CATALOG_LANGUAGE_NAMES: Record<GuidanceLocale4, string> = {
   km: 'Thai', // SCAFFOLD(th)
   mn: 'Russian', // SCAFFOLD(ru)
   sk: 'Czech', // SCAFFOLD(cs)
-  bg: 'Russian', // SCAFFOLD(ru)
+  bg: 'Bulgarian',
   hr: 'Croatian',
   sr: 'Czech', // SCAFFOLD(cs)
   sl: 'Slovenian',
@@ -843,13 +843,13 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     confidentialNotice:
       'Protože se původní text uchovává, nepište v počáteční fázi to, co zatím není potřebné, například číslo pasu, číslo dokladu nebo údaje o účtu.',
   },
-  bg: { // SCAFFOLD(ru)
+  bg: {
     consultationNotice:
-      'Эти сведения написаны на русском языке, но консультация с адвокатом проводится только на английском, китайском (中文), японском и корейском языках.',
+      'Тези сведения са написани на български, но консултацията с адвокатка или адвокат се провежда само на английски, китайски (中文), японски и корейски.',
     discoveryNotice:
-      'Файл llms.txt — лишь карта для поиска открытых страниц; он не обещает места в поиске, поддержки, рекомендации искусственного интеллекта или показа.',
+      'Файлът llms.txt е само карта за намиране на открити страници; той не обещава място в търсенето, поддръжка, препоръка на изкуствен интелект или показване.',
     confidentialNotice:
-      'Поскольку исходный текст сохраняется, на первом этапе не пишите то, что ещё не нужно: номер паспорта, номер удостоверения или данные счёта.',
+      'Тъй като изходният текст се запазва, на първия етап не пишете това, което още не е нужно: номер на паспорт, номер на документ за самоличност или данни за сметка.',
   },
   hr: {
     consultationNotice:

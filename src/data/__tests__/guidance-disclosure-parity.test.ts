@@ -87,7 +87,7 @@ const ELEMENTS = {
     km: /เป็นไปได้/, // SCAFFOLD(th)
     mn: /возможн/, // SCAFFOLD(ru)
     sk: /schůdný/, // SCAFFOLD(cs)
-    bg: /возможн/, // SCAFFOLD(ru)
+    bg: /приложим начин/,
     hr: /provediv/,
     sr: /schůdný/, // SCAFFOLD(cs)
     sl: /izvedljiv/,
@@ -135,7 +135,7 @@ const ELEMENTS = {
     km: /ภาษาอื่น/, // SCAFFOLD(th)
     mn: /друг(?:ом|ого) язык/, // SCAFFOLD(ru)
     sk: /v jiném jazyce zaručena není/, // SCAFFOLD(cs)
-    bg: /друг(?:ом|ого) язык/, // SCAFFOLD(ru)
+    bg: /друг език/,
     hr: /na drugom jeziku nije zajamčena/,
     sr: /v jiném jazyce zaručena není/, // SCAFFOLD(cs)
     sl: /v drugem jeziku ni zagotovljena/,
@@ -183,7 +183,7 @@ const ELEMENTS = {
     km: /ระยะเวลา(ในการ)?ตอบกลับ/, // SCAFFOLD(th)
     mn: /срок[а]? ответа/, // SCAFFOLD(ru)
     sk: /lhůtu k odpovědi|lhůta k odpovědi/, // SCAFFOLD(cs)
-    bg: /срок[а]? ответа/, // SCAFFOLD(ru)
+    bg: /срок за отговор/,
     hr: /rok za odgovor/,
     sr: /lhůtu k odpovědi|lhůta k odpovědi/, // SCAFFOLD(cs)
     sl: /rok za odgovor|roka za odgovor/,
@@ -231,7 +231,7 @@ const ELEMENTS = {
     km: /ไม่ใช่คำมั่น/, // SCAFFOLD(th)
     mn: /не обещание/, // SCAFFOLD(ru)
     sk: /příslib/, // SCAFFOLD(cs)
-    bg: /не обещание/, // SCAFFOLD(ru)
+    bg: /не обещание/,
     hr: /ne o obećanju|nije obećanje/,
     sr: /příslib/, // SCAFFOLD(cs)
     sl: /obljub/,
@@ -279,7 +279,7 @@ const ELEMENTS = {
     km: /ล่าม/, // SCAFFOLD(th)
     mn: /переводчик/, // SCAFFOLD(ru)
     sk: /tlumočník/, // SCAFFOLD(cs)
-    bg: /переводчик/, // SCAFFOLD(ru)
+    bg: /преводач/,
     hr: /tumač/,
     sr: /tlumočník/, // SCAFFOLD(cs)
     sl: /tolmač/,
@@ -327,7 +327,7 @@ const ELEMENTS = {
     km: /ได้ทุกเรื่อง/, // SCAFFOLD(th)
     mn: /каждое дело/, // SCAFFOLD(ru)
     sk: /každou věc/, // SCAFFOLD(cs)
-    bg: /каждое дело/, // SCAFFOLD(ru)
+    bg: /всяко дело/,
     hr: /svaki predmet/,
     sr: /každou věc/, // SCAFFOLD(cs)
     sl: /vsak[oe] zadev/,
@@ -375,7 +375,7 @@ const ELEMENTS = {
     km: /รับประกันผล/, // SCAFFOLD(th)
     mn: /результат/, // SCAFFOLD(ru)
     sk: /výsledek/, // SCAFFOLD(cs)
-    bg: /результат/, // SCAFFOLD(ru)
+    bg: /резултат/,
     hr: /ishod/,
     sr: /výsledek/, // SCAFFOLD(cs)
     sl: /izid/,
@@ -423,7 +423,7 @@ const ELEMENTS = {
     km: /4 ภาษาที่ใช้ให้คำปรึกษา/, // SCAFFOLD(th)
     mn: /четырёх язык/, // SCAFFOLD(ru)
     sk: /čtyř/, // SCAFFOLD(cs)
-    bg: /четырёх язык/, // SCAFFOLD(ru)
+    bg: /четирите езика за консултация/,
     hr: /četiri/,
     sr: /čtyř/, // SCAFFOLD(cs)
     sl: /štirih/,
@@ -471,7 +471,7 @@ const ELEMENTS = {
     km: /ขั้นตอนการให้คำปรึกษา/, // SCAFFOLD(th)
     mn: /шагом консультации/, // SCAFFOLD(ru)
     sk: /krokem porady|krok porady/, // SCAFFOLD(cs)
-    bg: /шагом консультации/, // SCAFFOLD(ru)
+    bg: /стъпка от консултацията/,
     hr: /korak savjetovanja/,
     sr: /krokem porady|krok porady/, // SCAFFOLD(cs)
     sl: /korak posveta/,
@@ -519,7 +519,7 @@ const ELEMENTS = {
     km: /ความเห็นทางกฎหมาย/, // SCAFFOLD(th)
     mn: /юридическ/, // SCAFFOLD(ru)
     sk: /právní\w* stanovisk/, // SCAFFOLD(cs)
-    bg: /юридическ/, // SCAFFOLD(ru)
+    bg: /правна консултация/,
     hr: /pravn\w* mišljenj/,
     sr: /právní\w* stanovisk/, // SCAFFOLD(cs)
     sl: /pravn\w* mnenj/,
@@ -567,7 +567,7 @@ const ELEMENTS = {
     km: /การนัดหมาย/, // SCAFFOLD(th)
     mn: /запись/, // SCAFFOLD(ru)
     sk: /schůzk/, // SCAFFOLD(cs)
-    bg: /запись/, // SCAFFOLD(ru)
+    bg: /среща/,
     hr: /sastanak/,
     sr: /schůzk/, // SCAFFOLD(cs)
     sl: /sestank/,
@@ -615,7 +615,7 @@ const ELEMENTS = {
     km: /ความสัมพันธ์ระหว่างทนายความ/, // SCAFFOLD(th)
     mn: /отношений между адвокатом/, // SCAFFOLD(ru)
     sk: /vztah mezi advokát/, // SCAFFOLD(cs)
-    bg: /отношений между адвокатом/, // SCAFFOLD(ru)
+    bg: /отношения между адвокатка или адвокат и клиент/,
     hr: /odnos između odvjetnic/,
     sr: /vztah mezi advokát/, // SCAFFOLD(cs)
     sl: /razmerje med odvetnic/,
@@ -663,7 +663,7 @@ const ELEMENTS = {
     km: /แปลโดยอัตโนมัติ/, // SCAFFOLD(th)
     mn: /автоматически не переводится/, // SCAFFOLD(ru)
     sk: /automaticky/, // SCAFFOLD(cs)
-    bg: /автоматически не переводится/, // SCAFFOLD(ru)
+    bg: /не се превежда автоматично/,
     hr: /automatski/,
     sr: /automaticky/, // SCAFFOLD(cs)
     sl: /samodejno/,
@@ -711,7 +711,7 @@ const ELEMENTS = {
     km: /การสมรส/, // SCAFFOLD(th)
     mn: /брак/i, // SCAFFOLD(ru)
     sk: /manželství/i, // SCAFFOLD(cs)
-    bg: /брак/i, // SCAFFOLD(ru)
+    bg: /брак/i,
     hr: /brak/i,
     sr: /manželství/i, // SCAFFOLD(cs)
     sl: /zakonsk/i,
@@ -759,7 +759,7 @@ const ELEMENTS = {
     km: /บริการที่มีค่าใช้จ่าย/, // SCAFFOLD(th)
     mn: /возмездн/, // SCAFFOLD(ru)
     sk: /úplatn/, // SCAFFOLD(cs)
-    bg: /возмездн/, // SCAFFOLD(ru)
+    bg: /платен/,
     hr: /naplatn/,
     sr: /úplatn/, // SCAFFOLD(cs)
     sl: /plačljiv/,

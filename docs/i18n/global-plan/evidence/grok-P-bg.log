@@ -1,7 +1,74 @@
-[WO start 2026-09-22 05:17:43]
-The Bulgarian guidance pack and UI strings are in. Full report: `docs/i18n/global-plan/evidence/grok-P-bg.log`.
+WO-P-bg — Bulgarian guidance pack + UI strings
+Workspace: /Users/son7/Projects/tseng-law-new-bg-20260922
+Agent: Cursor Grok 4.6
+Date: 2026-09-22
+No git add/commit/push/stash/checkout.
 
-Scaffolded `bg` copy cloned from Russian is now natural Bulgarian for readers in Bulgaria (formal **Вие**, quotes **„ “**, cities **Тайпе / Тайджун / Гаосюн / Пиндун**). Consultation stays English, Chinese (中文), Japanese, Korean; Wei Tseng is **адвокатка**; Chinese glosses and Latin names are unchanged.
+## Files touched
+- src/data/international-guidance-central-europe.ts (bulgarianGuidanceContent; removed // SCAFFOLD(ru) locale bg)
+- src/data/international-guidance-team.ts (team copy, language names, practice-area names, bios)
+- src/data/international-guidance-offices.ts (2 blocks)
+- src/data/international-guidance-answers.ts (1 block; sources /bg/…)
+- src/data/international-inquiry-copy.ts (1 block)
+- src/lib/llms-txt.ts (English catalog name Bulgarian + notices)
+- src/data/multilingual-international-v2.ts (GUIDANCE_HOME_PATHS; href /bg/…)
+- src/lib/columns.ts (3 category labels)
+- src/components/ColumnsGrid.tsx (All filter, category labels, read-more)
+- src/components/CinematicOpening.tsx
+- src/components/decorative-video-controls.ts
+- src/data/team-name.ts
+- src/lib/public-language-registry.ts (region labels, picker copy)
+- src/data/__tests__/guidance-disclosure-parity.test.ts (15 bg regexes)
+- src/data/__tests__/guidance-office-facts-sync.test.ts (Корея / Япония)
+- src/data/__tests__/international-guidance-privacy-disclosure.test.ts
+- src/components/__tests__/columns-grid-guidance-labels.test.tsx (Всички / Покажи всички; concat now also reads international-guidance-central-europe.ts so the bg viewAllLabel is found)
+- src/components/__tests__/multilingual-international-v2.test.tsx
+- src/data/__tests__/column-alternate-expectations.ts (hreflang bg)
+- tests/builder-editor/international-guidance.playwright.ts (og:locale bg_BG)
 
-**Verify:** SCAFFOLD `bg` count **0**, **TSC_OK**, **1096 passed / 5 failed**. The five failures are other still-scaffolded locales (answers locale-count 27 vs 45, duplicate llms notices, root `llms.txt` 8 KiB budget) — none are `bg` rows. Nav labels all fit in 14 characters.
-=== end code=0 2026-09-22 05:37:01 ===
+## §Verify output (verbatim)
+
+===== grep SCAFFOLD bg =====
+0
+===== tsc =====
+TSC_OK
+===== vitest =====
+   × guidance locale llms.txt catalogs > writes a distinct notice set for each guidance language 3ms
+   × root llms.txt guidance catalog links > stays inside the 8 KiB root budget and the documented grammar 1ms
+   × root llms.txt guidance catalog links > lists every site-locale catalog and every guidance catalog 0ms
+   × root llms.txt guidance catalog links > labels each guidance catalog in its own language without widening consultation languages 0ms
+   × guidanceAnswers > covers every guidance locale x 6 page keys 4ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+ Test Files  2 failed | 45 passed (47)
+      Tests  5 failed | 1096 passed (1101)
+===== git status count =====
+      21
+
+(The count is 21 because this log file did not yet exist when the command ran. git status --short listed the 20 modified source/test files above plus untracked docs/i18n/global-plan/WO-P-bg.txt.)
+
+## Failures that are not bg rows
+All five failures are the still-scaffolded rest of the new-locale batch, not Bulgarian copy:
+
+1. src/lib/__tests__/international-guidance-answers.test.ts — `GUIDANCE_LOCALES` is the 27 completed locales; `GUIDANCE_LOCALES_4` is 45. Expected length 45, got 27.
+2. llms-discovery “distinct notice set” — 135 notice strings, 84 unique, because cloned locales (sk/hr/…, mn, bn, …) still share the template notices. bg notices are distinct Bulgarian and the per-locale `satisfies the locale llms.txt contract for bg` / “quotes the published pages verbatim” rows passed.
+3. Three root-llms.txt tests — `llms.txt exceeds its 8192-byte limit` because the root catalog already lists every wired guidance locale. Not a bg wording defect.
+
+No test failed on a bg row, regex, or string.
+
+## Terminology (legal terms + Chinese gloss)
+- 工作許可 — разрешение за работа
+- 居留 — разрешение за пребиваване
+- 資遣費 — законно обезщетение при освобождаване (по тайванско право; not equated with other states’ severance)
+- 離婚 — развод
+- 未成年子女權利義務之行使或負擔 — упражняване и носене на правата и задълженията спрямо ненавършили пълнолетие деца
+- 會面交往 — контакти
+- 繼承 — наследяване
+- 戶籍 — регистрация по местоживеене
+- 勞動契約 — трудов договор
+- 工作規則 — вътрешен трудов правилник
+- 商標 / 專利 — търговска марка / патент
+
+Register: formal Вие; quotes „ “; cities Тайпе, Гаосюн, Тайджун, Пиндун (Bulgarian, not Russian Тайбэй/Тайчжун). Wei Tseng is адвокатка throughout. languageName / autonym: Български. Consultation languages stay English, Chinese (中文), Japanese, Korean in that order. FAQ “Възможна ли е консултация на български?” opens “Не.”
+
+## Could not fit
+Nav labels all ≤ 14 characters (Начало, Направления, Кантората, Екипът, Обхват и цена, Контакт, Въпроси, Поверителност, Уговорки, Статии). menuLabel is „Страници“, not “Menu”. TWD 1.57M and GUIDANCE_BIO_PRESERVED_TERMS kept byte-identical. Eyebrows ЕКИПЪТ / ОФИСИ.

@@ -13,21 +13,21 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Imagem de destaque](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Recentemente, numerosas pessoas constituíram com êxito uma sociedade (公司) em Taiwan e obtiveram um visto de trabalho bem como um cartão de residência (外僑居留證),
+Recentemente, muitas pessoas constituíram uma sociedade (公司) em Taiwan e obtiveram um visto de trabalho bem como um cartão de residência (外僑居留證),
 
 e as perguntas formuladas com frequência no momento da constituição estão reunidas abaixo.
 
 Quem leu [**os fundamentos da constituição de sociedades**](/pt/columns/taiwan-company-establishment-basics) pode em seguida reportar-se também a esta parte aprofundada mais pormenorizada.
 
-As perguntas e respostas (Q&A) seguintes visam ajudar as pessoas que ponderam constituir uma sociedade em Taiwan. 😊
+As perguntas e respostas seguintes visam ajudar as pessoas que ponderam constituir uma sociedade em Taiwan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
 **1. Pretendo constituir uma sociedade, mas ainda não encontrei um endereço de inscrição. A constituição é mesmo assim possível?**
 
-Quando um estrangeiro constitui uma sociedade em Taiwan, deve apresentar um plano de investimento (投資計畫書) ao Departamento de Exame dos Investimentos do Ministério da Economia (經濟部投資審議司) para exame.
+Quando um estrangeiro constitui uma sociedade em Taiwan, deve apresentar um plano de investimento (投資計畫書) ao Departamento de Revisão dos Investimentos do Ministério da Economia (經濟部投資審議司) para exame.
 
-O Departamento de Exame dos Investimentos deve verificar se o capital (資本額) em causa é realmente utilizado para fins de investimento
+O Departamento de Revisão dos Investimentos deve verificar se o capital (資本額) em causa é realmente utilizado para fins de investimento
 
 e se atores estrangeiros não introduzem fundos sob outro pretexto.
 
@@ -43,7 +43,7 @@ Já na parte fundamental, uma leitora ou um leitor indicou que a abertura da con
 
 Porque os casos de branqueamento de capitais (洗錢) são muito numerosos em Taiwan, a abertura das contas bancárias torna-se cada vez mais estrita.
 
-**Conselho**：
+**Conselho**:
 
 Como o exame do plano de investimento também leva tempo,
 
@@ -75,7 +75,7 @@ mas a administração da imigração (移民署) está muito frequentada; convé
 
 A comissão de exame do Ministério da Economia examina de facto os antecedentes do investidor,
 
-mas o exame não é excessivamente estrito.
+mas o exame não se limita a um único critério formal: cada pedido é apreciado a partir dos documentos apresentados.
 
 Podem mencionar-se experiências profissionais variadas, incluindo o trabalho a tempo parcial,
 
@@ -91,7 +91,7 @@ A constituição da sociedade dura cerca de **3 meses**, a obtenção da autoriz
 
 também se deve fixar o início do contrato o mais tarde possível.
 
-Além disso, nos contratos de arrendamento de locais comerciais em Taiwan, o senhorio concede frequentemente ao arrendatário um «**período de arranjo**» (裝潢期間).
+Além disso, nos contratos de arrendamento de locais comerciais em Taiwan, o senhorio concede frequentemente ao arrendatário um «**período de obras e de instalação**» (裝潢期間).
 
 Trata-se de um período isento de renda; pode negociar-se.
 
@@ -123,7 +123,7 @@ Ex.) Se se tratar de ramos de atividade possíveis num local comercial de escrit
 
 convém verificá-lo previamente.
 
-*Se precisar de ajuda ou de uma troca sobre o direito de Taiwan, deixe um comentário ou tome contacto.*
+*Se precisar de ajuda ou de uma troca sobre o direito de Taiwan, escreva através da página Contacto; não é prometido um prazo de resposta.*
 
 ---
 

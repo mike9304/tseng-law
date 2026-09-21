@@ -13,7 +13,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![Imagem de destaque](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Como indicado acima, em Taiwan não é fácil para o trabalhador obter a indemnização por despedimento (資遣費).
+Em Taiwan não é, em regra, fácil para o trabalhador obter a indemnização por despedimento (資遣費).
 
 ​
 
@@ -21,7 +21,7 @@ Em particular, se o trabalhador se demitir por sua própria iniciativa (自請�
 
 não pode perceber a indemnização por despedimento (資遣費) (artigo 18 da lei sobre as normas do trabalho),
 
-e isso difere da Coreia.
+e isso difere de alguns outros ordenamentos, por exemplo do coreano.
 
 ​
 

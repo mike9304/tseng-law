@@ -1496,8 +1496,8 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
   footerNotice:
     'Esta página em português contém apenas indicações gerais sobre o trabalho do escritório segundo o direito de Taiwan. Não é um parecer jurídico para um caso concreto, e o envio de uma mensagem não cria, por si só, uma relação entre advogada ou advogado e cliente.',
   skipLink: 'Saltar a navegação e ir para o conteúdo',
-  menuLabel: 'Índice de páginas',
-  languageLabel: 'Língua de visualização',
+  menuLabel: 'Menu',
+  languageLabel: 'Língua da página',
   mega: {
     services: {
       description: 'O escritório trata os grupos principais de atividade segundo o direito de Taiwan.',
@@ -1568,7 +1568,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Grupos de atividade',
+          heading: 'Áreas de atividade',
           paragraphs: [
             'O âmbito do escritório cobre os seis grupos seguintes. A página «Áreas de atividade» descreve cada grupo com mais pormenor e indica o que não é prometido.',
           ],
@@ -1596,7 +1596,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
       description:
         'Seis grupos de trabalho do escritório em Taiwan e os limites que convém conhecer de antemão.',
       intro:
-        'Seguem-se os grupos que realmente tratamos e as questões que costumam surgir no início. Esta descrição ajuda a avaliar se o seu assunto entra no nosso âmbito; é informação geral, não a análise jurídica de um processo concreto.',
+        'Seguem-se os grupos de que nos ocupamos e as questões que costumam surgir no início. Esta descrição ajuda a avaliar se o seu assunto entra no nosso âmbito; é informação geral, não a análise jurídica de um processo concreto.',
       sections: [
         {
           heading: 'Investimento e constituição de sociedades em Taiwan',
@@ -1629,7 +1629,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Assuntos penais',
           paragraphs: [
-            'Acompanhamos na investigação e perante o tribunal, tanto a pessoa investigada ou acusada como a vítima, e avaliamos o risco penal da atividade empresarial.',
+            'Intervimos na fase de investigação e em tribunal, tanto a favor da pessoa investigada ou acusada como da vítima, e avaliamos o risco penal da atividade empresarial.',
             'Os assuntos penais costumam ter prazos curtos e etapas já definidas, pelo que, se já recebeu um escrito da autoridade ou do tribunal, indique a data desse escrito desde o início para que o conteúdo seja revisto na ordem adequada.',
           ],
         },
@@ -1661,7 +1661,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
           heading: 'Fundação e estrutura',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) foi fundado em 2016 por advogadas e advogados formados na National Taiwan University (國立臺灣大學). O nome chinês 昊鼎 une o carácter 昊 («céu amplo») e o carácter 鼎 («base sólida») e descreve a orientação do escritório desde a fundação.',
-            'Temos escritórios em Taipé (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). O escritório de Kaohsiung centra-se na governação de empresas e trata conflitos civis, penais e administrativos. O escritório de Taichung trata construção, propriedade intelectual e assuntos relacionados com a Coreia e o Japão. O escritório de Pingtung abriu em 2017 para a procura local.',
+            'Temos escritórios em Taipé (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). O escritório de Kaohsiung centra-se na governação de empresas e trata conflitos civis, penais e administrativos. O escritório de Taichung trata construção, propriedade intelectual e assuntos relacionados com a Coreia e o Japão. O escritório de Pingtung abriu em 2017 para responder às necessidades locais.',
             'Além do trabalho de advocacia, em 2020 criou-se Hovering Accounting Office, que oferece contabilidade e planeamento fiscal a empresários e a particulares com património elevado.',
           ],
         },
@@ -1675,7 +1675,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Quando nos contacta',
           paragraphs: [
-            'Após receber o seu resumo, uma advogada ou um advogado examina o conteúdo e fala depois do âmbito possível, dos documentos ainda necessários e dos passos seguintes. Se o assunto colocar questões contabilísticas ou fiscais, o escritório pode trabalhar com a área de contabilidade num mesmo fluxo.',
+            'Após receber o seu resumo, uma advogada ou um advogado examina o conteúdo e fala depois do âmbito possível, dos documentos ainda necessários e dos passos seguintes. Se o assunto colocar questões contabilísticas ou fiscais, o escritório pode trabalhar com a área de contabilidade de forma integrada.',
             'O resultado de cada assunto depende dos factos e dos documentos existentes; não prometemos um resultado. Se precisar de uma resposta concreta para a sua situação, esse processo deve ser discutido diretamente com uma advogada ou um advogado numa das quatro línguas de consulta.',
           ],
         },
@@ -1713,14 +1713,14 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'A consulta pode ser um serviço pago',
           paragraphs: [
-            'A consulta com uma advogada ou um advogado pode ser um serviço pago. Esta página não afirma que o primeiro encontro seja oferecido, e nenhuma parte deve ler-se nesse sentido.',
+            'A consulta com uma advogada ou um advogado pode ser um serviço pago. Esta página não afirma que a primeira consulta seja gratuita, e nenhuma parte deve ler-se nesse sentido.',
             'Se a consulta tiver custo, o montante e a forma de pagamento comunicam-se antes de ter lugar.',
           ],
         },
         {
           heading: 'Por que esta página não publica tarifas',
           paragraphs: [
-            'O montante depende do próprio assunto: do trabalho a fazer, do número de partes, dos documentos, dos prazos e de se um procedimento já começou. Uma cifra colocada de antemão não mostraria o custo do seu processo. Por isso fixamos primeiro o âmbito do seu assunto e comunicamos-lhe depois os honorários para os avaliar antes de começar.',
+            'O montante depende do próprio assunto: do trabalho a fazer, do número de partes, dos documentos, dos prazos e de se um procedimento já começou. Um valor indicado de antemão não mostraria o custo do seu processo. Por isso fixamos primeiro o âmbito do seu assunto e comunicamos-lhe depois os honorários para os avaliar antes de começar.',
             'Além dos honorários da advogada ou do advogado, um assunto pode gerar taxas a pagar ao tribunal, a uma autoridade ou a um terceiro. Essas taxas são distintas dos honorários e dependem do procedimento seguido.',
           ],
         },
@@ -1737,11 +1737,11 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Três coisas que convém distinguir',
           paragraphs: [
-            'A língua de visualização da página, a língua da consulta com a advogada ou o advogado e a língua em que escreve são três coisas distintas.',
+            'A língua em que a página é apresentada, a língua da consulta com a advogada ou o advogado e a língua em que escreve são três coisas distintas.',
           ],
           items: [
             'Língua da página: esta orientação está escrita em português.',
-            'Língua de consulta: a consulta realiza-se em inglês, chinês (中文), japonês e coreano.',
+            'Língua de consulta: a consulta realiza-se apenas em inglês, chinês (中文), japonês e coreano.',
             'Língua do seu texto: pode escrever o resumo na sua própria língua, e o texto original guarda-se tal qual.',
           ],
         },
@@ -1763,18 +1763,18 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
           heading: 'O que esta página não promete',
           paragraphs: [
             'Não prometemos um prazo de resposta, não confirmamos uma marcação através desta página, não prometemos uma advogada ou um advogado concreto e não disponibilizamos serviço de interpretação. A tradução escrita é outra coisa: a mensagem que envia não se traduz de forma automática.',
-            'Quando envia um pedido, o conteúdo guarda-se e espera revisão. Se passado algum tempo não receber resposta, pode voltar a escrever para o endereço de correio que figura na página de contacto.',
+            'Quando envia um pedido, o conteúdo guarda-se e espera revisão. Se passado algum tempo não receber resposta, pode voltar a escrever para o endereço de correio indicado na página de contacto.',
           ],
         },
       ],
     },
     faq: {
       eyebrow: 'PERGUNTAS FREQUENTES',
-      title: 'Perguntas que se formulam com frequência',
+      title: 'Perguntas frequentes',
       description:
         'Explicação do âmbito, da preparação, das línguas, dos honorários e do significado de enviar um pedido.',
       intro:
-        'As perguntas seguintes respondem-se no plano da informação geral. A resposta para o seu próprio caso só pode dar-se depois de uma advogada ou um advogado rever o processo.',
+        'As respostas seguintes são informação geral. A resposta para o seu próprio caso só pode dar-se depois de uma advogada ou um advogado rever o processo.',
       sections: [
         {
           heading: 'Como usar esta parte',
@@ -1817,7 +1817,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Como se calculam os honorários?',
           answer:
-            'Primeiro fixa-se o âmbito do trabalho e depois confirmam-se consigo o montante e o modo de cálculo antes de começar. Esta página não publica cifras e não afirma que o primeiro encontro seja oferecido.',
+            'Primeiro fixa-se o âmbito do trabalho e depois confirmam-se consigo o montante e o modo de cálculo antes de começar. Esta página não publica valores e não afirma que a primeira consulta seja gratuita.',
         },
         {
           question: 'O que faço se o meu assunto for urgente?',
@@ -1842,7 +1842,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
           items: [
             'O nome que indica',
             'O endereço de correio para responder',
-            'A língua de visualização da página no momento do envio',
+            'A língua da página no momento do envio',
             'A língua em que escreveu',
             'A língua de consulta que deseja',
             'O texto original que escreveu',
@@ -1881,7 +1881,7 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Os seus direitos e como nos contactar',
           paragraphs: [
-            'Pode pedir acesso, retificação ou supressão dos seus dados, ou retirar o consentimento, através do endereço de correio que figura na página de contacto. Se existir uma obrigação de conservação segundo as normas aplicáveis ou por um assunto em curso, explicaremos o motivo da limitação.',
+            'Pode pedir acesso, retificação ou supressão dos seus dados, ou retirar o consentimento, através do endereço de correio indicado na página de contacto. Se existir uma obrigação de conservação segundo as normas aplicáveis ou por um assunto em curso, explicaremos o motivo da limitação.',
             'Esta página não indica um prazo fixo de conservação, porque a duração real depende de o assunto continuar e das obrigações de conservação associadas. Se desejar que se suprimam antes, indique-o ao contactar-nos.',
           ],
         },
@@ -1938,13 +1938,13 @@ export const portugueseGuidanceContent: GuidanceLocaleContent = {
       description:
         'Artigos em português que explicam temas frequentes do direito de Taiwan. O conteúdo é informação geral no momento da sua publicação, não um parecer jurídico para o seu caso.',
       intro:
-        'O escritório publica artigos que explicam temas frequentes do direito de Taiwan. Os artigos disponíveis em português figuram nesta página; além disso há quatro ligações, cada uma abre a lista de artigos de uma língua original.',
+        'O escritório publica artigos que explicam temas frequentes do direito de Taiwan. Os artigos disponíveis em português encontram-se nesta página; além disso há quatro ligações, cada uma abre a lista de artigos de uma língua original.',
       sections: [
         {
           heading: 'Quatro listas segundo a língua',
           paragraphs: [
             'Esta parte contém quatro ligações: a lista de artigos em coreano, a lista em chinês, a lista em inglês e a lista em japonês. Cada ligação indica a língua da sua lista, para que saiba de antemão em que língua se abrirá o conteúdo.',
-            'Essas quatro listas são listas segundo a língua original do artigo, não listas de traduções. Os artigos já disponíveis em português figuram em separado nesta mesma página.',
+            'Essas quatro listas são listas segundo a língua original do artigo, não listas de traduções. Os artigos já disponíveis em português encontram-se em separado nesta mesma página.',
           ],
         },
         {

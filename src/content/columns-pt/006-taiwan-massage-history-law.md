@@ -55,7 +55,7 @@ Esta lei manteve-se até 2003; na época, o Sr. Lin, que geria um salão de cabe
 
 empregou trabalhadores sem deficiência visual para serviços de lavagem de cabelo e de massagem, e a polícia constatou-o.
 
-Segundo o direito de então, o Sr. Lin e esses trabalhadores viram infligir-se respetivamente uma multa administrativa (罰鍰) de TWD 40.000, TWD 10.000 e TWD 20.000 em novo dólar de Taiwan (新臺幣).
+Segundo o direito de então, o Sr. Lin e esses trabalhadores viram infligir-se respetivamente uma coima administrativa (罰鍰) de TWD 40.000, TWD 10.000 e TWD 20.000 em novo dólar de Taiwan (新臺幣).
 
 O Sr. Lin estimou esta sanção muito injusta e pediu uma interpretação constitucional.
 
@@ -81,7 +81,7 @@ Perguntou-se por exemplo se a regra escrita que só autorizava as pessoas em sit
 
 e pôs-se em dúvida que esta regra tivesse realmente contribuído para proteger o emprego e a subsistência das pessoas em situação de deficiência visual.
 
-Finalmente, os Grandes Juízes (大法官) declararam inconstitucional (違憲) a disposição que só autorizava as pessoas em situação de deficiência visual a exercer o ofício de massagem.
+Finalmente, os juízes constitucionais (大法官) declararam inconstitucional (違憲) a disposição que só autorizava as pessoas em situação de deficiência visual a exercer o ofício de massagem.
 
 ​
 
@@ -93,7 +93,7 @@ em geral só as pessoas em situação de deficiência visual que obtiveram um ce
 
 e numerosas pessoas em situação de deficiência visual, receando perder o seu meio de subsistência, organizaram protestos intensos.
 
-Na hora atual, a Coreia continua a autorizar só as pessoas em situação de deficiência visual titulares da qualificação a exercer o ofício de massagem,
+Atualmente, a Coreia continua a autorizar só as pessoas em situação de deficiência visual titulares da qualificação a exercer o ofício de massagem,
 
 e se alguém percebe uma remuneração de massagem de outrem sem essa qualificação,
 
@@ -125,4 +125,4 @@ comunique-o de imediato ou peça que se pare, a fim de se proteger.
 
 Se estimar ter sofrido um assédio sexual,
 
-dirija-se à esquadra com um amigo de confiança ou com um advogado de Taiwan (律師) para apresentar queixa.
+dirija-se à esquadra com um amigo de confiança ou com uma advogada ou um advogado de Taiwan (律師) para apresentar queixa.

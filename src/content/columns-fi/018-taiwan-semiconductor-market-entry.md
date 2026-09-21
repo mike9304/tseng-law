@@ -1,0 +1,118 @@
+---
+title: "Puolijohdekomponenttien toimittajat, jotka astuvat Taiwaniin: miten tytäryhtiötä, sivuliikettä tai agentuuria arvioidaan"
+lastmod: "2026-09-17"
+date_display: "17. syyskuu 2026"
+read_time: "8 min lukuaikaa"
+categories:
+  - "Yhtiön perustaminen Taiwanissa"
+featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
+faq:
+  - q: "Jos Taiwanissa on asiakkaita, onko sinne pakollisesti perustettava yhtiö?"
+    a: "Sitä ei voida ratkaista pelkästään siksi, että asiakas on Taiwanissa. On katsottava asiakkaan vaatimuksia ja tosiasiallista toimintaa kaupan, laitosten, henkilöstön ja transaktiorakenteen osalta Taiwanissa ja sen jälkeen valittava sopivin yksikkö."
+  - q: "Katoaako päätoimipaikan vastuu kokonaan, kun taiwanilainen yhtiö perustetaan?"
+    a: "Jos perustetaan tytäryhtiö eikä sivuliike (分公司), päätoimipaikka ei lähtökohtaisesti kanna sopimusvelvoitteita, jotka allekirjoitetaan tytäryhtiön nimissä. On kuitenkin tutkittava poikkeukset oikeussubjektiuden väärinkäytön vuoksi sekä se, onko päätoimipaikka itse ottanut takauksen tai omia sopimusvelvoitteita."
+  - q: "Voiko ensin toimia jälleenmyyjän kautta ja siirtyä myöhemmin yhtiöön Taiwanissa?"
+    a: "Vaiheittainen siirtymä voidaan suunnitella, mutta on myös tutkittava olemassa olevien sopimusten päättyminen tai muuttaminen, asiakassopimukset, varastot, vikojen käsittely ja henkilöstö."
+---
+
+# Puolijohdekomponenttien toimittajat, jotka astuvat Taiwaniin: miten tytäryhtiötä, sivuliikettä tai agentuuria arvioidaan
+
+![Toimituksellinen kuva Taiwanin tulostruktuurin arvioimiseksi puolijohdeyritykselle](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
+
+Kun kauppa taiwanilaisten asiakkaiden kanssa alkaa, ulkomainen päätoimipaikka voi saada erilaisia vaatimuksia: käsitellä tarjouksia ja sopimuksia Taiwanissa, pitää varastoa kiireellistä vaihtoa varten tai sijoittaa henkilöstöä asennukseen ja huoltoon (子公司). Silloin kysytään mielellään ensin: «Riittääkö yhtiön perustaminen Taiwanissa (子公司) tämän ratkaisemiseksi?»
+
+Se, mikä on ensin selvitettävä, on kuka Taiwanissa ottaa mitä. Arvioitava rakenne muuttuu sen mukaan, jatkaako ulkomainen päätoimipaikka myyntisopimusten allekirjoittamista, ostaako taiwanilainen yhtiö tavaroita ja myy ne edelleen vai antaako paikallinen henkilöstö vain teknistä tukea.
+
+Tämä teksti on yleinen opas puolijohdemateriaalien, -komponenttien ja -laitteiden yrityksille, jotka muotoilevat tulostruktuuria Taiwanissa. Seuraavat skenaariot ja tarkastuskohdat ovat hypoteettisia esimerkkejä ja arviointiehdotuksia, eivät tietyn yrityksen tosiasiallista toimeksiantoa eivätkä yhtenäistä perustamisvaatimusta. Verot, vientivalvonta, tuotekohtaiset luvat ja sijoittajan luokittelu vaativat vielä erillisen analyysin.
+
+## 1. Kaupan ja toiminnan jako selvitetään ennen rekisteröintimuodon valintaa
+
+Oletetaan, että ulkomainen tarkkuuskomponenttien valmistaja myy taiwanilaisille asiakkaille. Alussa päätoimipaikka lähettää suoraan, mutta asiakas pyytää varaamaan varaosia Taiwanissa ja tukea insinööreiltä paikan päällä. Osoite ei riitä: tarvitaan subjekti, joka voi myydä, tuoda, varastoida, palkata, antaa teknistä tukea ja kantaa vastuun.
+
+Ennen tulostruktuurin päättämistä päätoimipaikka voi sisäisesti selvittää:
+
+| Toimintakohta | Kysymykset, jotka on ensin selvitettävä |
+|---|---|
+| Sopimukset asiakkaiden kanssa | Kuka tulee sopimusosapuoleksi: ulkomainen päätoimipaikka, taiwanilainen tytäryhtiö vai paikallinen agentuuri? |
+| Tarjoukset ja tilaukset | Kuka vahvistaa lopullisesti hinnan ja toimitusajan, ja kuinka pitkälle Taiwanin vastuuhenkilön toimivalta ulottuu? |
+| Tavarat ja varastot | Kuka tuo, pitää ja johtaa varastoja sekä käsittelee palautuksia ja vaihtoja? |
+| Henkilöstö | Matkustavatko päätoimipaikan työntekijät, palkataanko Taiwanissa vai annetaanko työ ulkoiselle suorittajalle? |
+| Asennus ja tekninen tuki | Kuka on velkaa tuen asiakkaalle ja käsittelee ongelmat paikan päällä tehtävässä työssä? |
+| Laskutus ja kustannukset | Kuka laskuttaa ja perii, ja miten kustannukset tilitytetään päätoimipaikan ja Taiwanin organisaation välillä? |
+| Laatu ja riidat | Kuka vahvistaa tarkastuksen tuloksen ja vastaanottaa valitukset vioista tai vahingosta? |
+
+Erityisesti jos ostosopimuksen myyjä ei ole se yritys, joka antaa teknisen tuen, liitteiden on erotettava, keneltä asiakas voi vaatia mitä velvoitteita.
+
+## 2. Erottelu tytäryhtiön, sivuliikkeen ja ulkomaisen yhtiön edustuston välillä Taiwanissa
+
+Tulon suunnittelussa puolijohdeyrityksen on erotettava, mikä läsnäolo Taiwanissa perustetaan ja miten myynti ja asiakaspalvelu järjestetään. Ensimmäinen kohta koskee oikeussubjektiutta, rekisteröintivaatimuksia ja toimialaa; toinen kauppatapaa, toimivaltuuksia ja vastuun jakoa.
+
+Keskeinen ero taiwanilaisen tytäryhtiön (子公司) ja ulkomaisen yhtiön taiwanilaisen sivuliikkeen (分公司) välillä on, onko sillä emoyhtiöstä tai päätoimipaikasta erillinen oikeussubjektius. Jakelu ja agentuuri ovat transaktio- ja sopimusrakenteita, eikä niitä saa sekoittaa yhtiömuotoon.
+
+| Rakenne | Perusero | Mitä on ensin syytä vahvistaa |
+|---|---|---|
+| Taiwanilainen tytäryhtiö (子公司) | Perustetaan Taiwanin oikeuden mukaisesti, omalla oikeussubjektiudella, ja on eri oikeussubjekti kuin ulkomainen emoyhtiö. | Koska tytäryhtiö on itsenäinen oikeushenkilö, on vahvistettava, miten toimitus, palvelut, teknologialisenssi ja kustannusten jako emoyhtiön kanssa järjestetään. |
+| Ulkomaisen yhtiön taiwanilainen sivuliike (分公司) | Lainmukaisesti Taiwanissa rekisteröity sivuliike, ilman päätoimipaikasta erillistä oikeussubjektiutta, toisin kuin erikseen perustettu tytäryhtiö. | Sivuliike on osa ulkomaista päätoimipaikkaa, ei itsenäinen oikeushenkilö, joten päätoimipaikka kantaa velvoitteet suoraan. Vahvistakaa sivuliikkeen edustajan toimivaltuuksien laajuus ja ulkoisten sopimusten, toimituksen, vikojen kattamisen ja jälkipalvelun sisäinen jako. |
+| Edustusto Taiwanissa (代表人辦事處) | Kaupallinen tukipiste, joka on rekisteröity yhtiölain 386 artiklan mukaisesti; ei saa Taiwanissa harjoittaa kaupallista toimintaa. | Koska kaupallista toimintaa ei saa harjoittaa, vahvistetaan, pysyykö tosiasiallinen toiminta sallitulla alalla. |
+
+## 3. Taiwanilaisen tytäryhtiön muodot: yhtiö, jolla on rajoitettu vastuu (有限公司), ja osakeyhtiö (股份有限公司)
+
+Jos päätetään perustaa itsenäinen oikeushenkilö Taiwanissa, on myös valittava sen muoto. Taiwanissa on yhtiö, jolla on rajoitettu vastuu (有限公司), ja osakeyhtiö (股份有限公司).
+
+### Yhtiö, jolla on rajoitettu vastuu (有限公司): hoikempi hallinto, mutta suljetumpi osuuksien luovutus
+
+Se voidaan muodostaa 1 tai useammalla luonnollisella henkilöllä (有限公司) tai taiwanilaisilla tai ulkomaisilla oikeushenkilöillä yhtiömiehinä; yhtiömiehet ovat lähtökohtaisesti vastuussa sijoituksensa määrään asti. Yhtiöllä on 1–3 johtajaa, valittuina yhtiömiehistä. Yhtiömiehet, jotka eivät hoida kauppaa, voivat käyttää valvontaoikeuksia ilman, että erillinen tilintarkastaja on tarpeen. Ellei yhtiöjärjestyksessä toisin määrätä, pätee 1 ääni per 1 yhtiömies, joten määräysvallan ei tarvitse vastata sijoitussuhdetta. Tavallisen yhtiömiehen sijoituksen luovutus edellyttää lähtökohtaisesti suostumusta yli puolelta muiden äänioikeuksista; johtajalle 2/3 tai enemmän. Se sopii paremmin yksinkertaisiin yhtiömiesuhteisiin ja vakaaseen määräysvaltaan kuin toistuvaan pääomanhankintaan tai osuuksien kauppaan. Myöhemmin se voidaan muuttaa osakeyhtiöksi (股份有限公司).
+
+### Osakeyhtiö (股份有限公司): sopiva, jos halutaan ottaa muita sijoittajia tai listautuminen on ennakoitavissa
+
+Pääoma jaetaan osakkeisiin. Lähtökohtaisesti vaaditaan 2 yhtiömiestä tai enemmän (股份有限公司), mutta valtio tai oikeushenkilö voi perustaa sen yksin, ja ulkomainen oikeushenkilö voi pitää 100 %. Osakkeet ovat lähtökohtaisesti vapaasti luovutettavissa, lakisääteisin poikkeuksin; erityisiä osakkeita ja optioita työntekijöille voidaan muotoilla lain mukaisesti. Se sopii yrityksille, jotka odottavat sijoittajia, osakekauppaa, pääomakannustimia työntekijöille tai myöhempää sulautumista, yritysostoa tai listautumista; se ei rajoitu suuriin yrityksiin. Hallinnossa ei-julkisesti liikkeeseen laskeva yhtiö voi yhtiöjärjestyksellä olla ilman hallitusta ja olla vain 1 tai 2 johtajaa. Yhtiö, jonka ainoa yhtiömies on valtio tai oikeushenkilö, voi yhtiöjärjestyksellä olla ilman tilintarkastajaa. Jokaisen osakeyhtiön (股份有限公司) ei tarvitse antaa tilinpäätöstä varmennettavaksi. Tavanomaisen yhtiön olennaisimmat tilintarkastusrajat ovat maksettu pääoma TWD 30.000.000 (新臺幣) tai, sen alle, liikevaihto TWD 100.000.000 tai 100 työntekijää työvakuutuksessa; julkisen tarjouksen yhtiöt noudattavat arvopaperisääntelyä.
+
+## 4. Sivuliikkeen ja tytäryhtiön menettelyt eroavat; vain tytäryhtiö käy sijoituslautakunnan tarkastuksen
+
+Kun ulkomainen yhtiö perustaa taiwanilaisen tytäryhtiön, nimi ennakkotarkastetaan lähtökohtaisesti ja haetaan sijoituslupaa talousministeriön sijoitustarkastusosastolta (經濟部投資審議司). Hyväksynnän jälkeen varat siirretään, sijoitussumma vahvistetaan ja tilintarkastaja (會計師) tarkastaa pääoman, minkä jälkeen perustaminen ja verorekisteröinti saatetaan päätökseen.
+
+Sitä vastoin tavanomaisen ulkomaisen yhtiön taiwanilaisen sivuliikkeen perustamiseen ei lähtökohtaisesti vaadita sijoitustarkastusosaston sijoituslupaa; talousministeriön kaupallisen kehityksen virasto (經濟部商業發展署) käsittelee sivuliikkeen rekisteröinnin ja siihen liittyvän pääoman vahvistamisen. Tarvittaviksi jäävät ennakollinen nimitarkastus, käyttöpääoman siirto, pääomatarkastus ja verorekisteröinti; kalenteri on yleensä lyhyempi.
+
+Edellä esitetty on ehdotus sopimuksen muotoiluun. Yhden konkreettisen lomakkeen hallussapito ei tee transaktiota lainmukaiseksi eikä ehkäise riitoja.
+
+## 5. Yhtiörekisteröinti ja insinöörin lainmukainen työ eivät ole sama asia
+
+Rekisteröinnin saattaminen päätökseen Taiwanissa ei merkitse, että ulkomaisen päätoimipaikan henkilöstö saisi automaattisesti työskennellä Taiwanissa. Ulkomaalainen, joka työskentelee Taiwanissa, tarvitsee lainmukaisen työluvan ja, pidemmässä oleskelussa, oleskeluluvan. Lähtökohtaisesti työnantaja hakee työlupaa ja vastaavaa oleskelulupaa.
+
+Työluvan saaminen on suhteellisen yksinkertaisempaa taiwanilaisen tytäryhtiön tai ulkomaisen yhtiön sivuliikkeen johtajalle. Hakeakseen sen toiselle ulkomaalaiselle tai seuraaville työministeriö vaatii, alan mukaan, rajoja pääomalle, liikevaihdolle tai muulle (子公司). Jos ennakoidaan, että ulkomaista henkilöstöä työskentelee Taiwanissa, on ennen yhtiön perustamista vahvistettava, saavuttaako suunniteltu pääoma voimassa olevan rajan.
+
+## 7. Rakenteet, jotka kaupan vaiheen mukaan voivat sopia
+
+Seuraavat skenaariot ovat hypoteettisia harkinnan avuksi; ne eivät vahvista, että tietty tapa olisi lainmukainen tai parempi (子公司).
+
+**Ulkomaiset yritykset, jotka tähtäävät alkuvaiheen vientiin.** Jos Taiwanissa ei vielä ole työntekijöitä eikä varastoja ja halutaan tutkia kysyntää riippumattoman jakelijan kautta, voidaan ensin katsoa toimitusta, jakelusuhdetta ja toimialaa Taiwanissa. Pelkkä jakelusopimus ei ratkaise kaikkia sääntelykysymyksiä Taiwanissa.
+
+**Ulkomaiset yritykset, jotka laajentavat myyntiä ja teknistä tukea Taiwanissa.** Jos Taiwanissa halutaan palkata ja edelleen johtaa varastoja, perintää ja asiakastukea, tytäryhtiötä ja sivuliikettä tulisi verrata konkreettisesti ja tutkia myös sopimusvastuu, päätoimipaikan toimintatapa, verot ja henkilöstö.
+
+**Ulkomaiset yritykset markkinatutkimusvaiheessa.** Jos ennen myyntiorganisaatiota halutaan vain tieto- ja yhteystoimintoja, voidaan arvioida edustustoa (代表人辦事處). Jos tosiasiallinen suunnitelma käsittää varastojen myynnin tai työn paikan päällä, on erikseen vahvistettava, ovatko nämä toimet sallittuja.
+
+## 8. Ensimmäiseen keskusteluun riittää toiminnan yleiskuva; kaikkia luottamuksellisia liitteitä ei tarvitse heti luovuttaa
+
+Ensimmäisessä keskustelussa voidaan koota perustiedot päätoimipaikasta ja sijoittajasta, yleinen kuvaus tuotteesta tai palvelusta, suunniteltu transaktiovirta, suunnitelmat henkilöstöstä ja laitoksista Taiwanissa sekä sopimus- ja tukiehdot, joita asiakkaat vaativat. Se, mitä ei ole vielä päätetty, voidaan merkitä «odottavaksi».
+
+Ensimmäisessä yhteydessä ei ole tarpeen liittää kaikkia luottamuksellisia asiakasliitteitä tai yksityiskohtaisia prosessitietoja. Sen jälkeen kun vastapuolen nimi eturistiriitatarkastusta varten on ilmoitettu, tarvittavat liitteet ja lähetystapa vahvistetaan vastuuhenkilön ohjeiden mukaan.
+
+## Usein kysyttyjä kysymyksiä
+
+### Jos Taiwanissa on asiakkaita, onko sinne pakollisesti perustettava yhtiö?
+
+Sitä ei voida ratkaista pelkästään siksi, että asiakas on Taiwanissa. On katsottava asiakkaan vaatimuksia ja tosiasiallista toimintaa kaupan, laitosten, henkilöstön ja transaktiorakenteen osalta Taiwanissa ja sen jälkeen valittava sopivin yksikkö.
+
+### Katoaako päätoimipaikan vastuu kokonaan, kun taiwanilainen yhtiö perustetaan?
+
+Jos perustetaan tytäryhtiö eikä sivuliike (分公司), päätoimipaikka ei lähtökohtaisesti kanna sopimusvelvoitteita, jotka allekirjoitetaan tytäryhtiön nimissä. On kuitenkin tutkittava poikkeukset oikeussubjektiuden väärinkäytön vuoksi sekä se, onko päätoimipaikka itse ottanut takauksen tai omia sopimusvelvoitteita.
+
+### Voiko ensin toimia jälleenmyyjän kautta ja siirtyä myöhemmin yhtiöön Taiwanissa?
+
+Vaiheittainen siirtymä voidaan suunnitella, mutta on myös tutkittava olemassa olevien sopimusten päättyminen tai muuttaminen, asiakassopimukset, varastot, vikojen käsittely ja henkilöstö.
+
+## Keskustelu tulostruktuurista Taiwanissa
+
+Jos Taiwanissa halutaan myydä, johtaa varastoja, antaa asennustukea tai palkata paikallisesti, järjestäkää ensin työ, jonka päätoimipaikka suorittaa, ja se, joka kuuluu Taiwanin organisaatiolle. Keskustelunaiheiden ja eturistiriitojen vahvistamisen jälkeen toimisto valottaa tarvittavat liitteet ja niiden palvelujen laajuuden, jotka voidaan toimittaa.
+
+Esimerkki aiheesta: keskustelu puolijohdeyrityksen tulostruktuurista Taiwanissa. Ensimmäisessä yhteydessä ilmoitetaan yhtiön nimi, päätoimipaikan maa, suunniteltu tuote tai palvelu, toimintasuunnitelma Taiwanissa ja toivottu keskustelukieli. Luottamukselliset suunnitteluliitteet ja täydelliset sopimukset lähetetään vasta lisäohjeiden vastaanottamisen jälkeen. Tosiasiallisesti käytettävissä olevat keskustelukielet ja kunkin toimeksiannon laajuus on vahvistettava yhteydenoton yhteydessä.

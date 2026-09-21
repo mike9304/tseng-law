@@ -5,7 +5,7 @@ lastmod: "2026-09-10"
 date_display: "2025年9月13日"
 read_time: "18分钟阅读"
 categories:
-  - "台湾法律资讯"
+  - "台湾法律信息"
 featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
 faq:
   - q: "在台湾，两愿离婚是否在签署协议时即发生效力？"

@@ -5,7 +5,7 @@ lastmod: "2026-09-10"
 date_display: "2025年9月13日"
 read_time: "3分钟阅读"
 categories:
-  - "台湾法律资讯"
+  - "台湾法律信息"
 featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg"
 ---
 

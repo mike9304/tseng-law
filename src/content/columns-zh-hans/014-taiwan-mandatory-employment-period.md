@@ -5,7 +5,7 @@ lastmod: "2026-07-25"
 date_display: "2025年9月13日"
 read_time: "18分钟阅读"
 categories:
-  - "台湾法律资讯"
+  - "台湾法律信息"
 featured_image: "../images/014-taiwan-mandatory-employment-period/featured-01.jpg"
 faq:
   - q: "台湾劳动合同（勞動契約）的最低服务年限约定是否当然无效？"

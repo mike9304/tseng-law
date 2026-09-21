@@ -5,7 +5,7 @@ lastmod: "2026-07-25"
 date_display: "2025年9月13日"
 read_time: "16分钟阅读"
 categories:
-  - "台湾法律资讯"
+  - "台湾法律信息"
 featured_image: "../images/016-taiwan-inheritance-custody-analysis/featured-generic.webp"
 faq:
   - q: "若没有遗嘱，继承人仅为配偶与2名子女，应继分如何分配？"

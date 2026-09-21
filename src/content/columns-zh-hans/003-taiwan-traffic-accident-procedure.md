@@ -5,7 +5,7 @@ lastmod: "2026-09-10"
 date_display: "2025年9月13日"
 read_time: "12分钟阅读"
 categories:
-  - "台湾法律资讯"
+  - "台湾法律信息"
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 ---
 

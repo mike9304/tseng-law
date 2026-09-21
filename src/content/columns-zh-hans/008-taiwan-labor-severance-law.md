@@ -5,7 +5,7 @@ lastmod: "2026-09-10"
 date_display: "2025年9月13日"
 read_time: "6分钟阅读"
 categories:
-  - "台湾法律资讯"
+  - "台湾法律信息"
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "在台湾，受雇人自行辞职也能领取资遣费吗？"

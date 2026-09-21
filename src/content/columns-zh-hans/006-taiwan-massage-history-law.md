@@ -5,7 +5,7 @@ lastmod: "2025-09-13"
 date_display: "2025年9月13日"
 read_time: "3分钟阅读"
 categories:
-  - "台湾法律资讯"
+  - "台湾法律信息"
 featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 ---
 

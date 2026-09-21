@@ -13,13 +13,13 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Imagen principal](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Recientemente muchas personas han constituido con éxito una sociedad en Taiwán y han obtenido el visado de trabajo y la tarjeta de residencia,
+Recientemente muchas personas han constituido una sociedad en Taiwán y han obtenido el visado de trabajo y la tarjeta de residencia,
 
 y a continuación se recogen las preguntas que más se plantean en el momento de la constitución.
 
 Quienes hayan leído [**la parte básica de constitución de sociedades**](/es/columns/taiwan-company-establishment-basics) pueden continuar con esta parte avanzada más detallada.
 
-Se espera que las preguntas y respuestas siguientes sean de utilidad para quienes consideran constituir una sociedad en Taiwán. 😊
+Las preguntas y respuestas siguientes pueden servir de orientación general a quien considera constituir una sociedad en Taiwán.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
@@ -43,7 +43,7 @@ En la parte básica anterior un lector mencionó que la apertura de la cuenta es
 
 Como los casos de blanqueo de capitales (洗錢) en Taiwán son muy numerosos, la apertura de cuentas bancarias se vuelve cada vez más estricta.
 
-**Consejo**：
+**Consejo**:
 
 Como la revisión del plan de inversión también requiere tiempo,
 
@@ -75,13 +75,13 @@ pero la Administración de Inmigración está muy concurrida, de modo que convie
 
 El comité de revisión del Ministerio de Economía examina los antecedentes del inversor,
 
-pero no es excesivamente estricto.
+pero el examen no se limita a un único criterio formal: cada solicitud se valora a partir de sus documentos.
 
 Puede mencionar experiencias laborales diversas, incluido el trabajo a tiempo parcial,
 
 y explicarlas con detalle de modo que pueda convencer a los revisores.
 
-Sobre este punto, conviene consultar de forma suficiente con un abogado de Taiwán.
+Sobre este punto, conviene consultar de forma suficiente con una abogada o un abogado de Taiwán.
 
 ​
 
@@ -91,7 +91,7 @@ La constitución de la sociedad requiere unos **3 meses**, y la obtención del p
 
 de modo que fije la fecha de inicio del contrato lo más tarde posible.
 
-Además, en los contratos de arrendamiento de locales en Taiwán el propietario suele conceder al arrendatario un «**período de interiorismo**».
+Además, en los contratos de arrendamiento de locales en Taiwán el propietario suele conceder al arrendatario un «**período de obras o de acondicionamiento**» (裝潢期間).
 
 Se trata de un período exento de renta, y conviene negociarlo.
 
@@ -111,7 +111,7 @@ si es necesario, puede proponer la notarización del contrato de arrendamiento o
 
 Depende de los ramos de actividad de la sociedad.
 
-Ej.) Si el ramo de actividad es la restauración y pretende arrendar un espacio comercial de oficinas, la apertura de la cuenta bancaria será muy difícil.
+Por ejemplo, si el ramo de actividad es la restauración y pretende arrendar un espacio comercial de oficinas, la apertura de la cuenta bancaria será muy difícil.
 
 Como se ha indicado, el banco revisa el contrato de arrendamiento e inspecciona in situ la dirección de la sociedad.
 
@@ -119,11 +119,11 @@ Además, en el registro final de la sociedad el gobierno municipal también exig
 
 y si se trata de un espacio comercial de oficinas, el registro de la sociedad no es posible.
 
-Ej.) Si el ramo de actividad es de los que pueden explotarse en un espacio comercial de oficinas, como la publicidad o el comercio al por mayor, puede constituirse en un espacio comercial de oficinas. Arrendamiento
+Por ejemplo, si el ramo de actividad es de los que pueden explotarse en un espacio comercial de oficinas, como la publicidad o el comercio al por mayor, puede constituirse en un espacio comercial de oficinas.
 
-Antes de firmar el contrato, confírmelo de antemano.
+Confírmelo antes de firmar el contrato de arrendamiento.
 
-*Si necesita ayuda o consulta sobre el Derecho de Taiwán, deje un comentario o póngase en contacto en cualquier momento.*
+*Si necesita ayuda o asesoramiento sobre el Derecho de Taiwán, escriba a través de la página Contacto; no se promete un plazo de respuesta.*
 
 ---
 

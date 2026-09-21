@@ -296,16 +296,16 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'NUESTRO EQUIPO',
     title: 'Equipo internacional de Hovering',
     description:
-      'Perfiles de los abogados, de la dirección de operaciones y del contador asociado de Hovering.',
+      'Perfiles de los abogados, de la dirección de operaciones y del auditor asociado de Hovering.',
     representativeTitle: 'Abogada directora',
     teamTitle: 'Abogados y personal',
-    partnerTitle: 'Contador asociado',
+    partnerTitle: 'Auditor asociado',
     introLabel: 'Presentación',
     educationLabel: 'Formación',
     experienceLabel: 'Experiencia',
     photoAltPrefix: 'Foto',
     workingLanguagesLabel: 'Idiomas de trabajo',
-    fullProfileLabel: 'Perfil completo (English)',
+    fullProfileLabel: 'Perfil completo (en inglés)',
     keyFactsHeading: 'Abogada Wei Tseng — Datos esenciales',
     qualificationLabel: 'Cualificación y despacho',
     qualificationSentence:
@@ -313,11 +313,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     practiceLabel: 'Áreas principales',
     consultationLanguagesLabel: 'Idiomas de consulta',
     roles: {
-      'tseng-junwei': 'Abogada directora en Taiwán (Managing Attorney)',
-      'chang-rongxuan': 'Abogado en Taiwán (Taiwan Attorney)',
+      'tseng-junwei': 'Abogada directora en Taiwán',
+      'chang-rongxuan': 'Abogado en Taiwán',
       'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Dirección de operaciones de Corea (Korea Operations Manager)',
-      'huang-shengping': 'Contador asociado (Partner CPA)',
+      'son-jungmin': 'Dirección de operaciones de Corea',
+      'huang-shengping': 'Auditor asociado',
     },
   },
   fr: {
@@ -1574,7 +1574,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'El despacho atiende asuntos de empresas y de particulares en Taiwán en inglés, japonés, coreano y chino.',
-        'Representó a un estudiante coreano en una reclamación de daños por una lesión en un gimnasio y obtuvo una sentencia de primera instancia de TWD 1.57M.',
+        'Representó a un estudiante coreano en una reclamación de daños por una lesión en un gimnasio y obtuvo una sentencia de primera instancia de TWD 1.57M (1,57 millones de dólares taiwaneses).',
       ],
       education: [
         'Máster (M.S.), Institute of Finance, National Taiwan University',

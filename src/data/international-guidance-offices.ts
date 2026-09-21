@@ -810,7 +810,7 @@ export const guidanceFooterCopy: Record<GuidanceLocale, GuidanceFooterCopy> = {
     officeQuickLinksLabel: 'Enlaces rápidos a las oficinas',
     followLabel: 'Seguir',
     blogLabel: 'Blog',
-    websiteLabel: 'Sitio oficial',
+    websiteLabel: 'Sitio web oficial',
     sitemapLabel: 'Mapa del sitio',
     copyEmailLabel: 'Copiar la dirección de correo',
     emailCopiedMessage: 'Se copió la dirección de correo.',

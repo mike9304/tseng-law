@@ -519,11 +519,11 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
   footerNotice:
     'Esta página en español solo ofrece orientación general sobre el trabajo del despacho según el derecho de Taiwán. No es asesoramiento jurídico para un asunto concreto, y el envío de un mensaje no crea por sí solo una relación entre abogado y cliente.',
   skipLink: 'Saltar la navegación e ir al contenido',
-  menuLabel: 'Índice de páginas',
-  languageLabel: 'Idioma de visualización',
+  menuLabel: 'Menú',
+  languageLabel: 'Idioma de la página',
   mega: {
     services: {
-      description: 'El despacho atiende los grupos principales de trabajo según el derecho de Taiwán.',
+      description: 'El despacho atiende las principales áreas de práctica según el derecho de Taiwán.',
       viewAllLabel: 'Ver todo',
     },
     columns: {
@@ -553,7 +553,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
     heroColumnsCtaLabel: 'Ver artículos',
     servicesDetailLabel: 'Ver detalles',
     servicesAssistanceBefore:
-      'Si aún no tiene claro a qué grupo pertenece su asunto, la página de ',
+      'Si aún no tiene claro a qué área pertenece su asunto, la página de ',
     servicesAssistanceLinkLabel: 'Contacto',
     servicesAssistanceAfter:
       ' explica cómo redactar un resumen que un abogado revisará.',
@@ -592,9 +592,9 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Grupos de asuntos que atendemos',
+          heading: 'Áreas de práctica que atendemos',
           paragraphs: [
-            'El alcance del despacho cubre los seis grupos siguientes. La página «Áreas de trabajo» describe cada grupo con más detalle y señala lo que no se garantiza.',
+            'El alcance del despacho cubre las seis áreas siguientes. La página «Áreas de trabajo» describe cada una con más detalle y señala lo que no se garantiza.',
           ],
           items: [
             'Inversión y constitución de sociedades en Taiwán',
@@ -618,35 +618,35 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'ÁREAS DE TRABAJO',
       title: 'Asuntos que atendemos',
       description:
-        'Seis grupos de trabajo del despacho en Taiwán y los límites que conviene conocer de antemano.',
+        'Las seis áreas de práctica del despacho en Taiwán y los límites que conviene conocer de antemano.',
       intro:
-        'A continuación, los grupos que realmente atendemos y las cuestiones que suelen plantearse al inicio. Esta descripción le ayuda a valorar si su asunto entra en nuestro alcance; es información general, no el análisis jurídico de un expediente concreto.',
+        'A continuación, los asuntos de los que nos ocupamos y las cuestiones que suelen plantearse al inicio. Esta descripción le ayuda a valorar si su asunto entra en nuestro alcance; es información general, no el análisis jurídico de un expediente concreto.',
       sections: [
         {
           heading: 'Inversión y constitución de sociedades en Taiwán',
           paragraphs: [
-            'Acompañamos a inversores y empresas extranjeras que constituyen o explotan una sociedad en Taiwán: elección de la forma societaria, preparación y presentación de documentos, aportación de capital, banca, valoración del local y requisitos propios de determinados sectores. También apoyamos la contabilidad y la fiscalidad derivadas de constituir y operar en Taiwán.',
+            'Acompañamos a inversores y empresas extranjeras que constituyen o gestionan una sociedad en Taiwán: elección de la forma societaria, preparación y presentación de documentos, aportación de capital, banca, valoración del local y requisitos propios de determinados sectores. También apoyamos la contabilidad y la fiscalidad derivadas de constituir y operar en Taiwán.',
             'El orden y la duración del proceso varían según la forma societaria, el inversor, el sector, el banco y los documentos disponibles. Constituir una sociedad no produce por sí solo un permiso de residencia (居留) ni un permiso de trabajo (工作許可): son trámites distintos que se valoran según la situación de cada persona.',
           ],
         },
         {
           heading: 'Litigios civiles y daños',
           paragraphs: [
-            'Este grupo cubre conflictos contractuales, reclamaciones de daños por acto ilícito y conflictos de consumo. El trabajo suele empezar por una cronología de los hechos, la revisión de documentos y pruebas existentes y, solo después, los siguientes pasos.',
+            'Esta área cubre conflictos contractuales, reclamaciones de daños por acto ilícito y conflictos de consumo. El trabajo suele empezar por una cronología de los hechos, la revisión de documentos y pruebas existentes y, solo después, los siguientes pasos.',
             'Los plazos, incluidos los plazos legales para demandar, y la integridad de las pruebas influyen mucho en el curso del asunto civil, así que indique desde el principio las fechas que conozca. Si conserva contratos, mensajes, justificantes de pago o fotos del lugar, menciónelo en el primer mensaje.',
           ],
         },
         {
           heading: 'Matrimonio, familia y sucesiones',
           paragraphs: [
-            'Atendemos divorcio (離婚), liquidación de bienes, ejercicio y asunción de derechos y deberes respecto de hijos menores (未成年子女權利義務之行使或負擔), régimen de visitas (會面交往) y sucesiones (繼承), también cuando las partes o los bienes están en países distintos. Los asuntos de familia transfronterizos suelen exigir un examen adicional de documentos del registro de hogar (戶籍), de la forma de los documentos y de su valor probatorio en Taiwán.',
+            'Atendemos divorcio (離婚), liquidación de bienes, ejercicio y asunción de derechos y deberes respecto de hijos menores (未成年子女權利義務之行使或負擔), régimen de visitas (會面交往) y sucesiones (繼承), también cuando las partes o los bienes están en países distintos. Los asuntos de familia transfronterizos suelen exigir un examen adicional de documentos del registro de domicilio (戶籍), de la forma de los documentos y de su valor probatorio en Taiwán.',
             'Como los asuntos de familia suelen ir unidos a plazos y a varios trámites en paralelo, el resumen inicial debería indicar la relación entre las partes, el lugar de residencia actual y los procedimientos ya iniciados.',
           ],
         },
         {
           heading: 'Conflictos laborales',
           paragraphs: [
-            'Este grupo cubre la extinción del contrato de trabajo, la indemnización según el derecho de Taiwán (資遣費; no se identifica con instituciones de otros países), salarios y conflictos derivados del contrato de trabajo (勞動契約), tanto del lado de la persona trabajadora como del empleador. Al revisar el asunto separamos el fundamento de la extinción de las cuestiones de preaviso, pago y plazos.',
+            'Esta área cubre la extinción del contrato de trabajo, la indemnización según el derecho de Taiwán (資遣費; no se identifica con instituciones de otros países), salarios y conflictos derivados del contrato de trabajo (勞動契約), tanto del lado de la persona trabajadora como del empleador. Al revisar el asunto separamos el fundamento de la extinción de las cuestiones de preaviso, pago y plazos.',
             'El contrato de trabajo, el reglamento interno (工作規則), las nóminas y el intercambio escrito entre las partes suelen ser los documentos decisivos. Si aún los conserva, indíquelo en el resumen.',
           ],
         },
@@ -661,13 +661,13 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Propiedad intelectual',
           paragraphs: [
             'Ayudamos en el registro de marcas (商標) y patentes (專利), en derechos de autor y en conflictos sobre esos derechos en Taiwán.',
-            'En este grupo el orden de los pasos es decisivo: el alcance de la protección, el momento de la presentación y el uso efectivo influyen en la estrategia. Presentar una solicitud no garantiza por sí solo que se conceda.',
+            'En esta área el orden de los pasos es decisivo: el alcance de la protección, el momento de la presentación y el uso efectivo influyen en la estrategia. Presentar una solicitud no garantiza por sí solo que se conceda.',
           ],
         },
         {
           heading: 'Alcance y cómo se confirma',
           paragraphs: [
-            'El despacho trabaja según el derecho de Taiwán y atiende asuntos de los grupos anteriores. El alcance de cada asunto se confirma por separado después de que un abogado revise el contenido que usted envía.',
+            'El despacho trabaja según el derecho de Taiwán y atiende asuntos de las áreas anteriores. El alcance de cada asunto se confirma por separado después de que un abogado revise el contenido que usted envía.',
             'El estatus de residencia, el permiso de trabajo y cuestiones similares se valoran a partir del expediente y de la situación de cada persona, no a partir de la nacionalidad. Si alguna parte de su asunto toca esos temas, indíquelo al contactarnos. Esta página no promete un resultado ni un plazo de respuesta.',
           ],
         },
@@ -684,7 +684,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Fundación y estructura',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) se fundó en 2016 por abogados egresados de la National Taiwan University (國立臺灣大學). El nombre chino 昊鼎 une el carácter 昊 («cielo amplio») y el carácter 鼎 («base sólida»), y expresa la orientación del despacho desde su origen.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) se fundó en 2016 por abogados titulados por la National Taiwan University (國立臺灣大學). El nombre chino 昊鼎 une el carácter 昊 («cielo amplio») y el carácter 鼎 («base sólida»), y expresa la orientación del despacho desde su origen.',
             'Tenemos oficinas en Taipéi (臺北), Kaohsiung (高雄), Taichung (臺中) y Pingtung (屏東). La oficina de Kaohsiung se centra en el gobierno corporativo y atiende conflictos civiles, penales y administrativos. La oficina de Taichung atiende construcción, propiedad intelectual y asuntos relacionados con Corea y Japón. La oficina de Pingtung se abrió en 2017 para atender la demanda local.',
             'Además del trabajo de abogacía, en 2020 se creó Hovering Accounting Office, que ofrece contabilidad y planificación fiscal a empresarios y a particulares con patrimonio elevado.',
           ],
@@ -692,14 +692,14 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Trabajo con partes extranjeras',
           paragraphs: [
-            'El trabajo transfronterizo cubre constitución de sociedades, visados, registro de marcas y patentes, evaluación de riesgos jurídicos y asesoramiento fiscal empresarial. La oficina de Taichung atiende en particular construcción, propiedad intelectual y asuntos relacionados con Corea y Japón. La abogada Wei Tseng (曾雋崴) acompaña a clientes de Corea, de Japón y a otros clientes internacionales en los grupos anteriores.',
-            'Si podemos o no atender un asunto depende de su contenido y del idioma de la comunicación. Si su asunto entra en los grupos anteriores y puede hablarse en uno de los cuatro idiomas de consulta, puede enviar un resumen para que un abogado lo revise.',
+            'El trabajo transfronterizo cubre constitución de sociedades, visados, registro de marcas y patentes, evaluación de riesgos jurídicos y asesoramiento fiscal empresarial. La oficina de Taichung atiende en particular construcción, propiedad intelectual y asuntos relacionados con Corea y Japón. La abogada Wei Tseng (曾雋崴) acompaña a clientes de Corea, de Japón y a otros clientes internacionales en las áreas anteriores.',
+            'Si podemos o no atender un asunto depende de su contenido y del idioma de la comunicación. Si su asunto entra en las áreas anteriores y puede hablarse en uno de los cuatro idiomas de consulta, puede enviar un resumen para que un abogado lo revise.',
           ],
         },
         {
           heading: 'Cuando nos contacta',
           paragraphs: [
-            'Tras recibir su resumen, un abogado revisa el contenido y habla después del alcance posible, de los documentos que aún se necesitan y de los siguientes pasos. Si el asunto plantea cuestiones contables o fiscales, el despacho puede trabajar con el área de contabilidad en un mismo flujo.',
+            'Tras recibir su resumen, un abogado revisa el contenido y habla después del alcance posible, de los documentos que aún se necesitan y de los siguientes pasos. Si el asunto plantea cuestiones contables o fiscales, el despacho puede trabajar de forma integrada con el área de contabilidad.',
             'El resultado de cada asunto depende de los hechos y de los documentos existentes, de modo que no prometemos un resultado. Si necesita una respuesta concreta para su situación, ese expediente debe hablarse directamente con un abogado en uno de los cuatro idiomas de consulta.',
           ],
         },
@@ -708,7 +708,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ABOGADOS',
       title: 'Equipo internacional de Hovering',
-      description: 'Perfiles de los abogados, de la dirección de operaciones y del contador asociado de Hovering.',
+      description: 'Perfiles de los abogados, de la dirección de operaciones y del auditor asociado de Hovering.',
       intro: '',
       sections: [],
     },
@@ -744,7 +744,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Por qué esta página no publica tarifas',
           paragraphs: [
-            'La cuantía depende del propio asunto: del trabajo que haya que hacer, del número de partes, de los documentos, de los plazos y de si un procedimiento ya ha empezado. Una cifra puesta de antemano no mostraría el coste de su expediente; por eso, en lugar de una lista de tarifas, fijamos primero el alcance de su asunto y le comunicamos después los honorarios para que los valore antes de empezar.',
+            'La cuantía depende del propio asunto: del trabajo que haya que hacer, del número de partes, de los documentos, de los plazos y de si un procedimiento ya ha empezado. Un importe indicado de antemano no reflejaría el coste de su expediente; por eso, en lugar de una lista de tarifas, fijamos primero el alcance de su asunto y le comunicamos después los honorarios para que los valore antes de empezar.',
             'Además de los honorarios del abogado, un asunto puede generar tasas que deban pagarse al tribunal, a una autoridad o a un tercero. Esas tasas son distintas de los honorarios y dependen del procedimiento que se siga.',
           ],
         },
@@ -765,14 +765,14 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
           ],
           items: [
             'Idioma de la página: esta orientación está escrita en español.',
-            'Idioma de consulta: la consulta con un abogado se realiza en inglés, chino (中文), japonés y coreano.',
+            'Idioma de consulta: la consulta con un abogado se realiza únicamente en inglés, chino (中文), japonés y coreano.',
             'Idioma de su texto: puede escribir el resumen en su propio idioma, y el texto original se guarda tal cual.',
           ],
         },
         {
           heading: 'Si no puede usar ninguno de los cuatro idiomas de consulta',
           paragraphs: [
-            'En el formulario de contacto puede elegir «Hace falta confirmar la forma de comunicarse». Responderemos para comprobar una vía posible de comunicación cuando exista una forma posible; no se garantiza el servicio en otro idioma y no se promete un plazo de respuesta.',
+            'En el formulario de contacto puede elegir «Hace falta confirmar la forma de comunicarse». Responderemos para comprobar si existe una vía posible de comunicación; no se garantiza el servicio en otro idioma y no se promete un plazo de respuesta.',
             'Esto es solo un paso de comprobación, no es una promesa. No prometemos intérprete, no prometemos servicio en español ni en otro idioma fuera de los cuatro indicados, y no prometemos que podamos aceptar todos los asuntos.',
           ],
         },
@@ -794,11 +794,11 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
     },
     faq: {
       eyebrow: 'PREGUNTAS FRECUENTES',
-      title: 'Preguntas que se formulan a menudo',
+      title: 'Preguntas frecuentes',
       description:
         'Explicación del alcance, de la preparación, de los idiomas, de los honorarios y del significado de enviar una solicitud.',
       intro:
-        'Las preguntas siguientes se responden en el plano de la información general. La respuesta para su propio caso solo puede darse después de que un abogado revise el expediente.',
+        'Las respuestas siguientes son información general. La respuesta para su propio caso solo puede darse después de que un abogado revise el expediente.',
       sections: [
         {
           heading: 'Cómo usar esta parte',
@@ -811,7 +811,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
         {
           question: '¿Qué tipo de asuntos atiende este despacho?',
           answer:
-            'Atendemos seis grupos: inversión y constitución de sociedades en Taiwán, litigios civiles y daños, matrimonio, familia y sucesiones, conflictos laborales, asuntos penales y propiedad intelectual. Si un asunto se acepta o no se decide después de revisar su contenido.',
+            'Atendemos seis áreas de práctica: inversión y constitución de sociedades en Taiwán, litigios civiles y daños, matrimonio, familia y sucesiones, conflictos laborales, asuntos penales y propiedad intelectual. Si un asunto se acepta o no se decide después de revisar su contenido.',
         },
         {
           question: '¿Qué debo preparar antes de contactar con el despacho?',

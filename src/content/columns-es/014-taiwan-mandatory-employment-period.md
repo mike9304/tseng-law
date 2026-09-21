@@ -22,7 +22,7 @@ faq:
 
 ![Imagen que explica el período mínimo de trabajo del contrato laboral y la cuestión de la devolución de gastos](../images/014-taiwan-mandatory-employment-period/featured-01.jpg)
 
-El pacto de período mínimo de trabajo (最低服務年限約定) del contrato de trabajo (勞動契約) de Taiwán se utiliza, junto con la promesa de trabajar durante un período determinado, para fijar si al dimitir de forma anticipada existe obligación de devolver el gasto de formación, la prima de firma (簽約金) o la prima de permanencia (留任獎金), y si puede reclamarse por separado una cláusula penal (違約金). Sin embargo, el solo hecho de que haya un texto firmado no fija la validez del pacto ni el importe a devolver. Más que el nombre del contrato, deben comprobarse por etapas los requisitos legales y el curso real de pagos, formación y extinción.
+El pacto de período mínimo de trabajo (最低服務年限約定) del contrato de trabajo (勞動契約) de Taiwán se utiliza, junto con la promesa de trabajar durante un período determinado, para fijar si al dimitir de forma anticipada existe obligación de devolver el gasto de formación, la prima de firma (簽約金) o la prima de permanencia (留任獎金), y si puede reclamarse por separado una cláusula penal (違約金). Sin embargo, el mero hecho de que haya un texto firmado no fija la validez del pacto ni el importe a devolver. Más que el nombre del contrato, deben comprobarse por etapas los requisitos legales y el curso real de pagos, formación y extinción.
 
 Al examinarlo, es importante no mezclar las cuatro preguntas siguientes.
 
@@ -35,7 +35,7 @@ Aunque estas cuatro cuestiones figuren juntas en el mismo contrato, el precepto 
 
 ## 1. Cuándo produce efectos el pacto de período mínimo de trabajo
 
-No. Según el artículo 15-1 de la Ley de Normas Laborales de Taiwán (勞動基準法), si el empleador imparte formación técnica especializada (專業技術培訓) y asume el coste, o proporciona una compensación razonable (合理補償) para que el trabajador observe el período mínimo de trabajo, el pacto puede reunir los requisitos legales. No es necesario reunir ambos requisitos a la vez, pero, aun habiendo uno de ellos, el pacto no debe rebasar el alcance razonable a la luz del conjunto de circunstancias, como la duración y el coste de la formación, la posibilidad de sustituir al personal (人力替補可能性) y el importe y el alcance de la compensación.
+El pacto no es automáticamente nulo. Según el artículo 15-1 de la Ley de Normas Laborales de Taiwán (勞動基準法), si el empleador imparte formación técnica especializada (專業技術培訓) y asume el coste, o proporciona una compensación razonable (合理補償) para que el trabajador observe el período mínimo de trabajo, el pacto puede reunir los requisitos legales. No es necesario reunir ambos requisitos a la vez, pero, aun habiendo uno de ellos, el pacto no debe rebasar el alcance razonable a la luz del conjunto de circunstancias, como la duración y el coste de la formación, la posibilidad de sustituir al personal (人力替補可能性) y el importe y el alcance de la compensación.
 
 El artículo 15-1, apartado 1, regula de forma alternativa dos requisitos legales. El primero es que el empleador haya proporcionado al trabajador formación técnica especializada y haya asumido su coste; el segundo, que haya proporcionado una compensación razonable como contraprestación por observar el período mínimo de trabajo. Debe comprobarse no qué nombre se dio en el contrato, sino qué fundamento existe realmente.
 
@@ -118,7 +118,7 @@ También deben distinguirse la devolución del gasto de formación y la devoluci
 
 El artículo 15-1, apartado 4, de la Ley de Normas Laborales de Taiwán dispone que, si el contrato de trabajo se extingue antes de terminar el período mínimo de trabajo por una causa no imputable al trabajador, el trabajador no asume responsabilidad por infracción del pacto de período mínimo de trabajo ni por devolución del gasto de formación. Sin embargo, la causa de extinción y la imputación de responsabilidad deben valorarse a partir de pruebas concretas, como la notificación de despido, la manifestación de dimisión y los datos de infracción de las condiciones de trabajo.
 
-Por ello no puede reconocerse la infracción del trabajador por el solo hecho de que la relación laboral haya terminado antes del período pactado. Debe comprobarse quién formuló qué manifestación de voluntad, cuál es el fundamento jurídico de la extinción del contrato y a qué parte se imputan las circunstancias reales que la produjeron.
+Por ello no puede reconocerse la infracción del trabajador por el mero hecho de que la relación laboral haya terminado antes del período pactado. Debe comprobarse quién formuló qué manifestación de voluntad, cuál es el fundamento jurídico de la extinción del contrato y a qué parte se imputan las circunstancias reales que la produjeron.
 
 Los datos de examen pueden incluir la notificación de despido, la carta de dimisión, el documento de extinción de común acuerdo, el correo electrónico y el registro de mensajería, los datos de cambio de condiciones de trabajo y el registro de asistencia y de trabajo. Aunque se mencionen la salud o las circunstancias del trabajo, no se concluye el resultado solo con esa expresión, sino que se ven juntos el curso real, el fundamento legal de la extinción y las pruebas relacionadas.
 
@@ -140,7 +140,7 @@ El período de preaviso según la antigüedad continua es el siguiente.
 
 Si el período de un contrato de trabajo de duración determinada para un trabajo específico (特定性定期契約) supera 3 años, se aplica la norma separada del artículo 15. El trabajador, tras trabajar 3 años, puede extinguir el contrato con un preaviso de 30 días al empleador. Esta norma debe distinguirse de la de preaviso según la antigüedad continua aplicable al contrato de duración indefinida.
 
-Si la antigüedad continua es inferior a 3 meses, si se trata de otro tipo de contrato de duración determinada o si se alega una causa legal de extinción inmediata, el precepto aplicable y los hechos deben examinarse de forma individual. El solo hecho de que el contrato consigne un preaviso más largo o exija una entrega inmediata del puesto no permite fijar de antemano la conclusión jurídica.
+Si la antigüedad continua es inferior a 3 meses, si se trata de otro tipo de contrato de duración determinada o si se alega una causa legal de extinción inmediata, el precepto aplicable y los hechos deben examinarse de forma individual. El mero hecho de que el contrato consigne un preaviso más largo o exija una entrega inmediata del puesto no permite fijar de antemano la conclusión jurídica.
 
 En la práctica deben conservarse el contenido y la fecha de transmisión de la manifestación de dimisión, el día en que el empleador la recibió realmente y las comunicaciones de las partes sobre el último día de trabajo. Si se separan en cuatro preguntas el momento en que la dimisión produce efectos de forma válida, la validez del pacto de período mínimo de trabajo, la devolución del gasto de formación o de la prestación anticipada y el daño que se alega por separado, se reduce el error de extraer todas las conclusiones de una sola cláusula del contrato.
 
@@ -185,7 +185,7 @@ Al ordenar los datos en orden temporal, conviene indicar juntos la fecha de cele
 
 - [Asuntos que atendemos](/es/services)
 - [Orientación sobre dimisión voluntaria y excepciones de indemnización por despido](/es/columns/taiwan-voluntary-resignation-severance)
-- [Consulta](/es/contact)
+- [Contacto](/es/contact)
 
 ---
 

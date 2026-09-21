@@ -21,11 +21,11 @@ Quienes hayan leído [Constitución de sociedades en Taiwán — parte básica](
 
 ​
 
-Las preguntas y respuestas siguientes también esperan ser de utilidad para quienes consideran constituir una sociedad en Taiwán.
+Las preguntas y respuestas siguientes pueden servir de orientación general a quien considera constituir una sociedad en Taiwán.
 
 ​
 
-**1. Al remitir el capital (資本額) desde Corea a la cuenta preparatoria de una sociedad taiwanesa (公司籌備處帳戶), ¿a qué debe prestarse atención? (este punto trata del sistema coreano y de la práctica bancaria de Corea)**
+**1. Al remitir el capital (資本額) desde el exterior a la cuenta preparatoria de una sociedad taiwanesa (公司籌備處帳戶), ¿a qué debe prestarse atención? (las reglas bancarias y de control de cambios de Corea que se describen a continuación son solo un ejemplo; las del país de origen del inversor deben comprobarse por separado)**
 
 En general, los bancos de Corea exigen que el inversor **en persona** acuda al banco en Corea y remita los fondos desde una cuenta a su propio nombre.
 
@@ -67,7 +67,7 @@ Algunos bancos pueden imponer requisitos adicionales, por ejemplo un período de
 
 **​**
 
-**5. ¿Puede la sociedad contratar a coreanos como empleados?**
+**5. ¿Puede la sociedad contratar a trabajadores de nacionalidad extranjera?**
 
 A. Primer empleado: se solicita como trabajo de dirección en una empresa de inversión ordinaria de chinos de ultramar o de extranjeros (一般僑外投資事業主管工作). No se aplican los criterios de «trabajo de carácter especializado o técnico» del apartado B siguiente, pero sí se aplican los requisitos de destinatario, como el de responsable de gestión (經理人) de una sociedad cuya aportación de chinos de ultramar o extranjeros exceda de un tercio, y los requisitos de resultados del empleador en capital y cifra de negocios (artículos 38 y 39 de las Normas de Revisión).
 
@@ -77,7 +77,7 @@ Consulte el sitio del Ministerio de Trabajo de Taiwán (勞動部): <https://ezw
 
 ​
 
-Si tiene preguntas adicionales, puede ponerse en contacto con nosotros en cualquier momento.
+Para otras preguntas, escriba a través de la página Contacto; no se promete un plazo de respuesta.
 
 ---
 

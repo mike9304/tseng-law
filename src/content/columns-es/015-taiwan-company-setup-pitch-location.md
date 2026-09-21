@@ -37,13 +37,13 @@ puede utilizar el sistema de «consulta previa del local de negocio» (營業場
 
 Puede consultar sin coste si en la dirección deseada es posible abrir un «establecimiento de restauración».
 
-Sin embargo, al consultar debe cargar la «transcripción de inscripción predial de tipo II» (建物登記第二類謄本, que contiene información detallada del edificio) de la dirección del local de negocio.
+Sin embargo, al consultar debe cargar la «certificación registral del inmueble de tipo II» (建物登記第二類謄本, que contiene información detallada del edificio) de la dirección del local de negocio.
 
-Cualquiera puede solicitar en la oficina de administración predial (地政事務所) la «transcripción de inscripción predial de tipo II» de cualquier dirección.
+Cualquiera puede solicitar en la oficina del registro de la propiedad (地政事務所) la «certificación registral del inmueble de tipo II» de cualquier dirección.
 
-Si le resulta difícil acudir en persona a la oficina de administración predial (地政事務所),
+Si le resulta difícil acudir en persona a la oficina del registro de la propiedad (地政事務所),
 
-puede pedir ayuda a un conocido en Taiwán, al propietario, a un agente inmobiliario o a un abogado.
+puede pedir ayuda a un conocido en Taiwán, al propietario, a un agente inmobiliario o a una abogada o abogado.
 
 Si el resultado de la consulta indica que el establecimiento de restauración no es posible, más adelante, al registrar la persona jurídica (公司登記), el gobierno municipal podría no aceptar el registro.
 
@@ -71,7 +71,7 @@ Si se abre en un lugar donde el establecimiento de restauración no es posible, 
 
 «ramos objeto de consulta de oficio» (主動查詢之營業項目)
 
-Con esto concluye la explicación; si tiene preguntas adicionales, puede consultar en cualquier momento a un abogado de Taiwán.
+Con esto concluye la explicación; para otras preguntas, escriba a través de la página Contacto; no se promete un plazo de respuesta.
 
 Las reglas de las autoridades administrativas pueden cambiar con frecuencia, de modo que conviene confirmar la normativa más reciente antes de registrar la persona jurídica.
 

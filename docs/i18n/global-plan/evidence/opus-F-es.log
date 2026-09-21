@@ -1,0 +1,220 @@
+# opus-F-es.log — Spanish (es) native-quality fix lane
+worker: Claude Opus 5 (1M)   date: 2026-09-21   worktree: /Users/son7/Projects/tseng-law-fix-s-20260921
+inputs: RULEBOOK-FIX.md (R2-R10), ACCEPTED-es.md, es-a.md (51 rows), es-b.md (42 rows)
+scope written: src/content/columns-es/*.md (18), src/data/international-guidance-western.ts (es block only,
+L504-991), -team.ts (es block + es bio), -offices.ts (es), -answers.ts (es), international-inquiry-copy.ts (es),
+src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.es). No test file was edited.
+
+## 1. Rows applied
+
+### es-a (guidance pack + columns 001-009)
+a#1  APPLIED (modified) llms discoveryNotice -> "no promete posicionamiento en buscadores, respaldo,
+     recomendacion por parte de una inteligencia artificial ni visibilidad garantizada." See sec. 4.
+a#2  APPLIED 001: country-specific note added around the Taiwan-Korea agreement (R2b), inside the existing
+     block; no digit or date touched. Same caveat folded into the sec.5 repetition.
+a#3  APPLIED 002: 拘役 "detencion" -> "arresto de corta duracion (拘役)" (art. 9 and art. 90).
+a#4  APPLIED 004: "sociedad matriz coreana" -> "sociedad matriz establecida fuera de Taiwan ... Corea es un
+     ejemplo senalado mas adelante, no el unico pais de origen posible"; "En el lado de Corea" -> "En el pais
+     de origen -Corea, en el ejemplo que sigue-"; 2 further home-country generalisations.
+a#5  APPLIED 005 Q1 heading: "desde Corea" -> "desde el exterior", Korea labelled as the example.
+a#6  APPLIED 005 Q5 heading: "contratar a coreanos" -> "contratar a trabajadores de nacionalidad extranjera".
+a#7  APPLIED 007: "como Corea y Taiwan" -> "(Taiwan y otro pais)".
+a#8  APPLIED 007: "vivira en Corea" -> "vivira fuera de Taiwan" + "coste de vida del pais de destino".
+a#9  APPLIED 008 faq + body, 009: "A diferencia de Corea" -> "A diferencia de algunos ordenamientos (Corea,
+     por ejemplo)"; 008 body pair rewritten to the English "by way of comparison" framing.
+a#10 APPLIED 003: "la maxima indemnizacion posible" -> "la indemnizacion que los hechos y las pruebas sostienen".
+a#11 APPLIED 003: 3-month and 4/6-month sentences -> "en algunas sentencias se ha impuesto ...; no existe un
+     resultado tipico ni garantizado" (all digits kept).
+a#12 APPLIED 003: 緩刑 -> "En algunos casos el tribunal puede acordar ...; no es una promesa de evitar la prision."
+a#13 APPLIED 008: "percibir una indemnizacion por despido elevada" -> "verse reconocido el derecho a la
+     indemnizacion ... prevista en la ley, con base en las pruebas reunidas".
+a#14 APPLIED 003 (R9): "llame en Taiwan al 119 (ambulancia y bomberos) y ... al 110 (policia) o al 112 desde un
+     telefono movil".
+a#15/16 VERIFIED already fixed mechanically ("NUESTRO EQUIPO", "OFICINAS"); both read naturally.
+a#17 APPLIED team.ts es: "Perfil completo (English)" -> "Perfil completo (en ingles)".
+a#18 SKIPPED per ACCEPTED-es (frontmatter `url:` is canonical source metadata). The 005 body link to the
+     Korean Wix "advanced 1" post is also kept: the English source carries the identical href and the
+     checker's `links` parity compares hrefs.
+a#19 APPLIED "Indice de paginas" -> "Menu".
+a#20 APPLIED "Idioma de visualizacion" -> "Idioma de la pagina".
+a#21/22 APPLIED (per ACCEPTED: "grupos de trabajo" -> "areas de practica"): whole-pack sweep, 14 strings.
+     "los grupos que realmente atendemos" -> "los asuntos de los que nos ocupamos".
+a#23 APPLIED "en un mismo flujo" -> "de forma integrada".
+a#24 VERIFIED already fixed (the sentence now names the investigated person and the victim).
+a#25 APPLIED "explotan una sociedad" -> "gestionan una sociedad".
+a#26 APPLIED FAQ title "Preguntas que se formulan a menudo" -> "Preguntas frecuentes".
+a#27 APPLIED "se responden en el plano de la informacion general" -> "Las respuestas siguientes son
+     informacion general."
+a#28 APPLIED "Una cifra puesta de antemano no mostraria" -> "Un importe indicado de antemano no reflejaria".
+a#29 APPLIED tautology removed in guidance contact + inquiry methodConfirmationNotice ->
+     "Responderemos para comprobar si existe una via posible de comunicacion; ...". (Wording keeps the
+     "via posible" disclosure token that guidance-disclosure-parity.test.ts matches - see sec. 3.)
+a#30 APPLIED (modified) team bio: "... de TWD 1.57M (1,57 millones de dolares taiwaneses)." See sec. 4.
+a#31 APPLIED "unicamente" added: guidance contact item, 5 guidanceAnswers.es answers, inquiry
+     consultationNotice (7 strings).
+a#32 APPLIED role lines: English job titles in parentheses removed (4 roles).
+a#33 APPLIED 001/004: "(常設機構, PE)" -> "(常設機構)"; 004 heading "(PE)" -> "(常設機構)".
+a#34 APPLIED 有期徒刑 calque removed: 002 (x2), 007, 008 table.
+a#35 APPLIED "Q&A" -> "Preguntas y respuestas" in 003 title+H1 and 007 title+H1.
+a#36 APPLIED 003: "Codigo Penal de la Republica de China" -> "Codigo Penal de Taiwan (中華民國刑法)" (4 links).
+a#37 APPLIED 003: ISO dates -> "29 de mayo de 2026" / "1 de julio de 2026" (checker parses the es form).
+a#38 APPLIED 003: comments CTA -> "Para otras preguntas, utilice la pagina Contacto; no se promete un plazo
+     de respuesta."
+a#39 APPLIED ROC years glossed: 003 (x3), 007 (x4), 010 (x1) -> "ano 109 de la Republica de China (2020)" etc.
+a#40 APPLIED 005: "ponerse en contacto con nosotros en cualquier momento" -> Contact page + no reply-time promise.
+a#41 APPLIED 005 intro -> "pueden servir de orientacion general a quien considera constituir una sociedad".
+a#42 APPLIED 006: "los Grandes Jueces (大法官) declararon" -> "el Tribunal Constitucional (大法官) declaro".
+a#43 APPLIED 006: "Ha llegado a conocer" -> "Recuerda".
+a#44 APPLIED 007 sec.3 and sec.6 bodies now open self-standing ("La comparecencia personal no es siempre
+     obligatoria." / "La titularidad registral no decide por si sola el reparto."). The frontmatter FAQ pairs
+     keep their "No." because there the question is present. sec.7 ("No son el mismo derecho.") left as is -
+     it is already a self-standing proposition.
+a#45 APPLIED "[Consulta](/es/contact)" -> "[Contacto](/es/contact)" (007, 014, 016).
+a#46 APPLIED 008: "Hola, soy Wei Tseng ..." -> "Wei Tseng (曾雋崴), abogada de Taiwan."
+a#47 APPLIED 008: 勞工退休金條例 "Reglamento" -> "Ley de la pension laboral" (faq + body).
+a#48 APPLIED 008 table: "Hay  (articulo 11 ...)" -> "Si  (articulo 11 ...)", "No hay" -> "No".
+a#49 APPLIED 008: "como es natural" -> "cuando se reunen los requisitos legales".
+a#50 APPLIED 009: "Como indique antes" -> "En Taiwan no es facil, por regla general, ...".
+a#51 APPLIED 009: "el ''**tiempo**''" -> "el **tiempo**".
+
+### es-b (columns 010-018)
+b#1  APPLIED 010 "Los derechos reales" -> "Los derechos concretos y las vias de actuacion".
+b#2  APPLIED 010 "la postura de quien entrena" -> "la actitud de quien entrena" (2 headline instances).
+b#3  NOT APPLIED - Invest Taiwan `lang=jpn` is fixed centrally by the supervisor (WO instruction).
+b#4  APPLIED 012 "cesion en el mismo carril" -> "ceder el paso"; "indicacion clara de cesion" -> "indicacion
+     clara de que le ceden el paso".
+b#5  APPLIED 013 "periodo de interiorismo" -> "periodo de obras o de acondicionamiento (裝潢期間)".
+b#6  APPLIED 013 closing CTA -> Contact page, no reply-time promise, no comments.
+b#7  APPLIED 013 "un abogado de Taiwan" -> "una abogada o un abogado de Taiwan"; 015 closing CTA replaced by
+     the Contact-page wording; 015 helper list -> "una abogada o abogado".
+b#8  APPLIED 015 "consultar en cualquier momento" -> Contact page + no reply-time promise.
+b#9  APPLIED 014 sec.1 and 016 sec.3/sec.7 bodies now open self-standing; the FAQ pairs keep "No.".
+b#10 APPLIED 016 "duenos sustanciales" -> "titulares ni beneficiarios efectivos" (x3); "propiedad real" ->
+     "la titularidad efectiva" (x2).
+b#11 APPLIED 016 "registro civil (戶籍)" -> "registro de domicilio (戶籍)" (and the same gloss in the guidance
+     services page). Scope note in sec. 4.
+b#12 APPLIED 016 "patrimonio peculiar del hijo" -> "patrimonio propio del hijo (特有財產)" (x3).
+b#13 APPLIED 018 "se precinta el nombre" -> "se reserva previamente el nombre"; "el precintado del nombre" ->
+     "la reserva previa del nombre".
+b#14 APPLIED 018 sec.3: "limited company"/"company limited by shares" -> "sociedad de responsabilidad
+     limitada (有限公司)" / "sociedad anonima (股份有限公司)" (6 instances incl. the two sub-headings).
+b#15 APPLIED 010 "pruebas aseguradas"/"datos que aun pueden asegurarse" -> "recabadas"/"recabarse".
+b#16 APPLIED 010 "requerimiento con acuse de contenido (存證信函)" -> "carta con constancia de contenido".
+b#17 APPLIED 010 "escrito a nombre de abogado (律師函)" -> "escrito de abogado (律師函)".
+b#18 APPLIED sweep, see sec. 2.
+b#19 APPLIED 010 "ano 109 de la Republica de China (2020) (109年度消字第7號)".
+b#20 APPLIED (modified) 010 "hasta 1 vez" -> "hasta una vez el importe del dano real". See sec. 4.
+b#21 APPLIED 011 "No es siempre necesario constituirla." -> "No siempre es necesario constituir una filial o
+     una sucursal." (faq + body).
+b#22 APPLIED 011 "forma farmaceutica (劑型)" -> "forma de presentacion (劑型)".
+b#23 APPLIED 011 "items de cumplimiento distintos" -> "lineas de cumplimiento distintas".
+b#24 APPLIED 011 "al empresario del lado de Taiwan transmitirse mutuamente" -> "al operador en Taiwan
+     intercambiarse".
+b#25 APPLIED 012 "2 o mas vehiculos"->"dos", "2 toques"->"dos", "1 destello"->"un destello"; 017 "1 camion
+     pequeno" -> "un camion pequeno" (x3). Checker `numbers` still PASS on both files (verified per-file).
+b#26 APPLIED 012 "una sena de la mano" -> "una senal con la mano".
+b#27 APPLIED 012 "de las senales ... " -> "deben darse las senales ...", plus the following imperative.
+b#28 APPLIED 013 "han constituido con exito" -> "han constituido".
+b#29 APPLIED 013 "pero no es excesivamente estricto" -> "el examen no se limita a un unico criterio formal:
+     cada solicitud se valora a partir de sus documentos".
+b#30 APPLIED 013 "Se espera que ... sean de utilidad ... 😊" -> "pueden servir de orientacion general ..."
+     (emoji removed).
+b#31 APPLIED 013 "Ej.)" -> "Por ejemplo," (x2).
+b#32 APPLIED 013 orphan "Arrendamiento" removed; "Confirmelo antes de firmar el contrato de arrendamiento."
+b#33 APPLIED (= a#45).
+b#34 APPLIED 015 "transcripcion de inscripcion predial de tipo II" -> "certificacion registral del inmueble
+     de tipo II (建物登記第二類謄本)"; "oficina de administracion predial (地政事務所)" -> "oficina del registro
+     de la propiedad (地政事務所)" (x2).
+b#35 APPLIED 016 "familia que queda" -> "familia sobreviviente" (title + H1).
+b#36 APPLIED 016 "Yuan Judicial de Taiwan (司法院, organo judicial central)".
+b#37 APPLIED 017 Chinese gloss thousands separator -> 新臺幣2.500萬元 / 新臺幣1.000萬元 (x4). Checker PASS.
+b#38 APPLIED 017 "subencomienda" -> "subcontratacion" / "empresarios subcontratados".
+b#39 APPLIED 018 "Investment Commission" -> "Departamento de Revision de Inversiones del Ministerio de
+     Economia (經濟部投資審議司)" (x3, harmonised with 001/011/013/017); "Department of Commerce" ->
+     "Departamento de Comercio"; "un CPA" -> "la atestacion de un auditor de cuentas (會計師)"; "supervisor"
+     glossed as "supervisor (監察人)".
+b#40 APPLIED 018 "las indicaciones del responsable" -> "las indicaciones de la abogada responsable".
+b#41 NOT APPLIED - see sec. 4 (renumbering breaks the checker; the gap is in the ko and en sources too).
+b#42 APPLIED 018 "Es relativamente mas facil obtener el permiso de trabajo" -> "el permiso de trabajo sigue un
+     cauce distinto; esto no es una promesa de concesion".
+
+## 2. Systemic sweeps (pattern -> instances changed)
+S1  "El/el solo hecho", "El solo acuerdo", "por el solo registro", "El solo porcentaje" -> "mero" / recast
+    : 27 instances in 002, 003, 004, 007, 010, 011, 014, 016, 017.
+S2  Related-link label "[Consulta](/es/contact)" -> "[Contacto](/es/contact)" : 3 (007, 014, 016).
+S3  R2 Korea-as-default-reader -> foreign/home-country framing (Korea kept as a labelled example)
+    : 15 passages in 001, 004, 005, 007, 008, 009. 006 (Korean massage law) and 010 (Korean student) kept:
+    those are subject matter / case facts.
+S4  R3 advertising-risk softening (result, availability, easy-approval, success-story) : 12 sentences in
+    003 (4), 005 (1), 008 (2), 013 (3), 015 (1), 018 (1).
+S5  R5/R7 English chrome and blog register: "Q&A" (4), "(PE)" (3), role parentheses (4), "Perfil completo
+    (English)" (1), "items" (1), English company forms (6), authority names (4), "CPA" (1), emoji (1),
+    "Ej.)" (2), comment CTAs (3), "en cualquier momento" (3), chatty "ustedes" asides (3) : 36.
+S6  R6 typography/numerals: ISO dates -> es dates (2), ROC years glossed with the Gregorian year (8),
+    small numerals -> words (6), "1 vez" -> "una vez" (1), Chinese-gloss thousands separator (4),
+    "TWD 1.57M" given its Spanish reading (1) : 22.
+S7  R8 glossary harmonisation: 拘役(2), 有期徒刑(4), 勞工退休金條例(2), 大法官(1), 中華民國刑法(4), 戶籍(3),
+    特有財產(3), beneficial owner(5), 存證信函/律師函(2), 心態(2), 劑型(1), 裝潢期間(1), 監察人(2),
+    經濟部投資審議司 + Department of Commerce(4), 會計師(1), 名稱預查(2), 股東->accionistas(1), 認證(1),
+    ceder el paso(2), subcontratacion(2), registro de la propiedad(3), company forms(6) : 54.
+S8  Guidance pack "grupos (de trabajo)" -> "areas de practica" / "areas" : 14 strings
+    (western.ts es block 12, answers.ts es 2).
+S9  Consultation-language exclusivity "unicamente" added where it was missing : 7 strings
+    (western.ts 1, answers.ts 5, inquiry-copy.ts 1).
+S10 LatAm-only forms harmonised for the Spain-lean panhispanic variety: "egresados" -> "titulados" (2),
+    "contador asociado" -> "auditor asociado" (4), "Sitio oficial" -> "Sitio web oficial" (1), "predial" (3).
+
+## 3. Test touched
+None. a#29's first wording ("una via de comunicacion posible") dropped the `feasible-method-only` disclosure
+token that src/data/__tests__/guidance-disclosure-parity.test.ts matches with /forma posible|via posible/ for
+es. Rather than edit the cross-locale test, the sentence was written as "si existe una via posible de
+comunicacion", which is equally natural, still removes the tautology, and keeps the token. All 2770 tests pass
+unmodified.
+
+## 4. Reviewer rows I disagreed with / could not apply as written
+D1 a#1 ("visibilidad" -> "insercion publicitaria"). The English canonical notice is "it does not promise search
+   ranking, endorsement, AI recommendation, or guaranteed visibility" - "insercion publicitaria" (advertising
+   placement) is a different claim. Applied the rest of the row and wrote "visibilidad garantizada".
+D2 b#41 (018: renumber 5/7/8 as 5/6/7). NOT APPLIED. The Korean source (src/content/columns/018, headings
+   1,2,3,4,5,7,8) and the English source have the same gap. Renumbering the Spanish would delete the numeral
+   8 that the source carries, and check-column-translation's `numbers` check treats a missing source figure as
+   FAIL. This is a source-side defect and needs a decision on ko/en first.
+D3 b#20 ("hasta 1 vez el importe" -> "hasta el importe"). Dropping the numeral removes a figure the checker
+   counts, and the sentence is a 5 / 3 / 1 series ("hasta 5 veces ... hasta 3 veces ... hasta 1 vez").
+   Written as "hasta una vez el importe del dano real".
+D4 a#30 (bio "TWD 1.57M" -> "1,57 millones de TWD"). GUIDANCE_BIO_PRESERVED_TERMS + guidance-team-bios.test.ts
+   require "TWD 1.57M" byte-identical in every locale bio, and that rule is cross-locale, not an es string.
+   Kept the token and appended the Spanish reading: "TWD 1.57M (1,57 millones de dolares taiwaneses)".
+D5 b#11 scope. 戶籍 as a record is now "registro de domicilio (戶籍)" everywhere (007, 016, guidance; 017
+   already had it). But 戶政機關 / 戶政事務所 (the office where a divorce is registered) and 戶籍法 keep
+   "oficina del registro civil (戶政機關)" / "Ley del registro civil (戶籍法)": es-a explicitly approved that
+   rendering, and "registro civil" is the Spanish institution a reader maps a divorce registration to.
+D6 a#44 sec.7 of 007 ("No son el mismo derecho."). Left unchanged: unlike "No." / "No siempre.", this opener
+   already states a proposition that stands on its own.
+D7 a#18 / the 005 percent-encoded Korean Wix href. Skipped per ACCEPTED-es; additionally the English source
+   carries the identical href, so changing it would break the checker's `links` parity.
+
+## 5. Verify (verbatim)
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-es --lang es 2>&1 | tail -8
+forbidden      PASS   
+hanzi          PASS   han=53
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "[변호사 검수 필요]" src/content/columns-es src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  2770 passed (2770)
+
+$ git status --short | wc -l
+      26

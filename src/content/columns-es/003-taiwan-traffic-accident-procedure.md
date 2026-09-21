@@ -1,5 +1,5 @@
 ---
-title: "Q&A sobre accidentes de tráfico en Taiwán: medidas en el lugar, culpa, transacción e indemnización"
+title: "Preguntas y respuestas sobre accidentes de tráfico en Taiwán: medidas en el lugar, culpa, transacción e indemnización"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
 date_display: "13 de septiembre de 2025"
@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 ---
 
-# Q&A sobre accidentes de tráfico en Taiwán: medidas en el lugar, culpa, transacción e indemnización
+# Preguntas y respuestas sobre accidentes de tráfico en Taiwán: medidas en el lugar, culpa, transacción e indemnización
 
 ![Imagen que explica las medidas de seguridad en el lugar y la conservación de pruebas justo después de un accidente de tráfico en Taiwán](../images/003-taiwan-traffic-accident-procedure/featured-01.jpg)
 
@@ -29,7 +29,7 @@ El artículo 185-4 del Código Penal de Taiwán (刑法) regula la responsabilid
 
 ## Q2. ¿Qué pruebas deben conservarse primero?
 
-Asegure primero la seguridad personal y las señales de advertencia; si hay heridos o se necesita rescate, llame al 119, y si hay un delito o una situación de seguridad urgente, al 110 o al 112. Haga también la denuncia policial según las circunstancias del accidente de tráfico.
+Asegure primero la seguridad personal y las señales de advertencia; si hay heridos o se necesita rescate, llame en Taiwán al 119 (ambulancia y bomberos) y, si hay un delito o una situación de seguridad urgente, al 110 (policía) o al 112 desde un teléfono móvil. Haga también la denuncia policial según las circunstancias del accidente de tráfico.
 
 Una vez asegurada la seguridad, tome fotografías de conjunto y de detalle para registrar la posición y los daños de los vehículos, las marcas viales, los semáforos y el tiempo atmosférico. Conviene no omitir los datos de contacto de testigos, la solicitud de conservación de imágenes de CCTV (監視器影像) y de la cámara de a bordo (行車紀錄器), los datos de las partes, del vehículo y del seguro, y la historia clínica (病歷). Las fotos personales son útiles, pero no sustituyen la actuación policial exigida en accidentes con lesiones o muerte.
 
@@ -47,7 +47,7 @@ La elección varía según la interrupción de la prescripción (時效中斷), 
 
 ## Q4. Si hay culpa en ambas partes, ¿cómo se valoran las responsabilidades penal y civil?
 
-La responsabilidad penal solo puede apreciarse cuando se reconoce la infracción del deber de cuidado de cada uno y el nexo causal entre esa infracción y las lesiones de la otra parte. El solo hecho de que ambas partes hayan tenido culpa no hace nacer automáticamente la responsabilidad por lesiones por imprudencia.
+La responsabilidad penal solo puede apreciarse cuando se reconoce la infracción del deber de cuidado de cada uno y el nexo causal entre esa infracción y las lesiones de la otra parte. El mero hecho de que ambas partes hayan tenido culpa no hace nacer automáticamente la responsabilidad por lesiones por imprudencia.
 
 En el ámbito civil, según el artículo 217 del Código Civil, si el perjudicado tiene culpa que contribuyó a causar o agravar el daño (與有過失), el tribunal puede reducir o eximir la indemnización. Por ejemplo, si el daño reconocido en nuevo dólar taiwanés (新臺幣, TWD) es TWD 1.000.000 y la culpa del perjudicado se valora en 50 %, el importe puede reducirse a TWD 500.000 antes de otros ajustes.
 
@@ -64,9 +64,9 @@ Si se trata de un delito perseguible a instancia de parte, según el artículo 2
 ### Fundamento oficial de Q1–Q5
 
 - [Reglamento de gestión y sanciones del tráfico por carretera (道路交通管理處罰條例), artículo 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
-- [Código Penal de la República de China, artículo 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
-- [Código Penal de la República de China, artículo 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
-- [Código Penal de la República de China, artículo 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
+- [Código Penal de Taiwán (中華民國刑法), artículo 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
+- [Código Penal de Taiwán (中華民國刑法), artículo 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [Código Penal de Taiwán (中華民國刑法), artículo 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
 - [Ley de Enjuiciamiento Criminal de Taiwán, artículo 237](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001)
 - [Ley de Enjuiciamiento Criminal, artículo 238](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=238&pcode=C0010001)
 - [Ley de Enjuiciamiento Criminal, artículo 487](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=487&pcode=C0010001)
@@ -91,7 +91,7 @@ Si hay discrepancia con el dictamen pericial, puede pedirse una revisión, pero 
 
 ## Q7. ¿Qué daños pueden reclamarse después del accidente?
 
-La reclamación basada en el artículo 184 del Código Civil presupone una lesión ilícita de un derecho, el nexo causal con el accidente y la prueba del daño. El solo hecho de que haya ocurrido un accidente no implica que se reconozcan todos los conceptos siguientes. El artículo 216 del Código Civil es el criterio para determinar el alcance del daño efectivo y del lucro cesante (所失利益).
+La reclamación basada en el artículo 184 del Código Civil presupone una lesión ilícita de un derecho, el nexo causal con el accidente y la prueba del daño. El mero hecho de que haya ocurrido un accidente no implica que se reconozcan todos los conceptos siguientes. El artículo 216 del Código Civil es el criterio para determinar el alcance del daño efectivo y del lucro cesante (所失利益).
 
 - **Lesiones**: Según el artículo 193 del Código Civil pueden examinarse los gastos médicos (醫療費用) necesarios, los gastos adicionales de la vida diaria como los de cuidados (看護費用), de transporte para tratamiento (就醫交通費) y de ayudas técnicas, así como la pérdida de ingresos (收入損失) por incapacidad laboral real y la disminución de la capacidad laboral (勞動能力減損). Según el artículo 195 del Código Civil también puede examinarse el daño moral.
 - **Muerte**: Según el artículo 192 del Código Civil, cuando proceda, pueden examinarse los gastos médicos anteriores al fallecimiento y los gastos de necesidades vitales incrementadas, los gastos funerarios (殯葬費) y la pérdida de alimentos (扶養利益損失) de quien tenía derecho legal a alimentos. Según el artículo 194 del Código Civil también puede examinarse el daño moral de determinados parientes.
@@ -101,7 +101,7 @@ La reclamación basada en el artículo 184 del Código Civil presupone una lesi�
 
 Conserve recibos (收據), certificados médicos e historia clínica, y organice junto con ellos la necesidad médica de cada tratamiento y su nexo causal con el accidente. Los datos de un tratamiento que sigue pueden complementar la prueba según el calendario procesal del tribunal y el contenido de la reclamación ya presentada, pero no se garantiza que todos los datos presentados tarde o toda ampliación de la reclamación sean admitidos o permitidos.
 
-Debe distinguirse el añadir datos médicos del modificar o aumentar el importe reclamado. Después de interponer una acción civil acumulada al proceso penal, el solo hecho de presentar más recibos médicos no genera automáticamente costas procesales.
+Debe distinguirse el añadir datos médicos del modificar o aumentar el importe reclamado. Después de interponer una acción civil acumulada al proceso penal, el mero hecho de presentar más recibos médicos no genera automáticamente costas procesales.
 
 Sin embargo, según el artículo 504 de la Ley de Enjuiciamiento Criminal, una vez remitido el asunto a la sección civil, modificar, añadir o ampliar la reclamación más allá del alcance anterior a la remisión puede plantear la cuestión de las costas sobre la parte excedente. La fase de remisión, el momento de presentación y el alcance de la reclamación deben comprobarse en cada asunto.
 
@@ -175,7 +175,7 @@ La obligación de contratar según el artículo 6 de la Ley del seguro obligator
 
 En un accidente de un solo vehículo, el conductor de ese vehículo no es, por lo general, destinatario de las prestaciones del seguro obligatorio de ese vehículo. Sin embargo, en un accidente en el que intervienen varios vehículos, hay casos en que el conductor puede reclamar prestaciones al asegurador obligatorio de otro vehículo implicado.
 
-El baremo de prestaciones (強制汽車責任保險給付標準) modificado el 2026-05-29 se aplica a los accidentes ocurridos a partir del 2026-07-01. El límite de los gastos médicos razonables y necesarios por lesiones es TWD 200.000 en nuevo dólar taiwanés; la prestación por discapacidad (失能) oscila entre TWD 80.000 y TWD 3.000.000 según 15 grados legales; la prestación por muerte es TWD 3.000.000, y el máximo conjunto de muerte, discapacidad y gastos médicos por 1 víctima y 1 accidente es TWD 3.200.000. A los accidentes anteriores puede aplicárseles el baremo precedente.
+El baremo de prestaciones (強制汽車責任保險給付標準) modificado el 29 de mayo de 2026 se aplica a los accidentes ocurridos a partir del 1 de julio de 2026. El límite de los gastos médicos razonables y necesarios por lesiones es TWD 200.000 en nuevo dólar taiwanés; la prestación por discapacidad (失能) oscila entre TWD 80.000 y TWD 3.000.000 según 15 grados legales; la prestación por muerte es TWD 3.000.000, y el máximo conjunto de muerte, discapacidad y gastos médicos por 1 víctima y 1 accidente es TWD 3.200.000. A los accidentes anteriores puede aplicárseles el baremo precedente.
 
 El seguro de responsabilidad civil frente a terceros (第三人責任險), el seguro de lesiones del conductor (駕駛人傷害險) y el seguro de daños del vehículo propio (車體損失險) son productos voluntarios de carácter contractual. La cobertura real varía según el asegurado, el límite, la franquicia (自負額), las exclusiones, la culpa y las demás condiciones de la póliza, de modo que la póliza y las condiciones deben comprobarse caso por caso.
 
@@ -184,13 +184,13 @@ El seguro de responsabilidad civil frente a terceros (第三人責任險), el se
 - [Código Civil, artículo 193](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Código Civil, artículo 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Código Civil, artículo 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Sentencia del Tribunal Superior de Taiwán, año 109, asunto 上易字 n.º 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [Sentencia del Tribunal Superior de Taiwán, año 109, asunto 上易字 n.º 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Sentencia del Tribunal Superior de Taiwán (臺灣高等法院), año 109 de la República de China (2020), asunto 上易字 n.º 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Sentencia del Tribunal Superior de Taiwán (臺灣高等法院), año 109 de la República de China (2020), asunto 上易字 n.º 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Calculadora del valor actual Hoffmann del Yuan Judicial](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Código Civil, artículo 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Sentencia del Tribunal de Distrito de Taoyuan, año 112, asunto 壢簡字 n.º 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Sentencia del Tribunal de Distrito de Taoyuan, año 112 de la República de China (2023), asunto 壢簡字 n.º 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Código Civil, artículo 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
-- [Código Penal de la República de China, artículo 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [Código Penal de Taiwán (中華民國刑法), artículo 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Ley del seguro obligatorio de responsabilidad civil de automóviles](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
 - [Baremo de prestaciones del seguro obligatorio de responsabilidad civil de automóviles](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Contrato tipo de seguro de automóvil de uso particular de la Comisión de Supervisión Financiera (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
@@ -235,7 +235,7 @@ Q17. ¿Cuál es la responsabilidad penal por lesiones por imprudencia del causan
 
 ​
 
-En caso de lesiones por imprudencia, los tribunales imponen en la actualidad una pena de unos 3 meses.
+En algunas sentencias por lesiones por imprudencia se ha impuesto una pena de unos 3 meses; no existe un resultado típico ni garantizado.
 
 ​
 
@@ -247,7 +247,7 @@ Si se conmuta por multa (易科罰金), el artículo 41, apartado 1, del Código
 
 ​
 
-Por lesiones graves por imprudencia suele imponerse una pena de 4 meses, y por muerte por imprudencia (過失致死) suele imponerse una pena de 6 meses.
+En algunas sentencias por lesiones graves por imprudencia se ha impuesto una pena de 4 meses y, por muerte por imprudencia (過失致死), una pena de 6 meses; tampoco aquí existe un resultado típico ni garantizado.
 
 ​
 
@@ -267,7 +267,7 @@ En la muerte por imprudencia no es posible desistir de la querella; no obstante,
 
 ​
 
-Puede obtenerse la suspensión de la pena (緩刑) y no ir a prisión.
+En algunos casos el tribunal puede acordar la suspensión de la pena (緩刑); no es una promesa de evitar la prisión.
 
 ​
 
@@ -307,7 +307,7 @@ Lo importante entonces es la minuciosidad y la honestidad del abogado.
 
 ​
 
-Es importante que el abogado examine con atención todos los conceptos de la reclamación y procure que se obtenga la máxima indemnización posible.
+Es importante que el abogado o la abogada examine con atención todos los conceptos de la reclamación y procure reclamar la indemnización que los hechos y las pruebas sostienen.
 
 ​
 
@@ -359,7 +359,7 @@ Por ello este punto no debe pasarse por alto en absoluto, y conviene consultar c
 
 ​
 
-Si tiene otras preguntas, déjelas en los comentarios.
+Para otras preguntas, utilice la página Contacto; no se promete un plazo de respuesta.
 
 ​
 

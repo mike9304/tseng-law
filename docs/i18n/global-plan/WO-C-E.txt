@@ -1,0 +1,67 @@
+WO-C-E — 칼럼 18편 번역 3개 언어: cs(Čeština) · hu(Magyar) · ro(Română)
+
+작업트리: /Users/son7/Projects/tseng-law-columns-c-20260920. 이 밖으로 쓰기 금지. git add/commit/push 금지.
+node: export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+**선행 학습(필수)**
+- 원본: `src/content/columns/*.md` (한국어 18편). 번역의 의미 기준은 이 원본이다.
+- 선례: `src/content/columns-fr/` (프랑스어 18편, 커밋 18adba43)과 `src/content/columns-de/`.
+  용어·구조·FAQ 처리 방식을 그대로 따른다. 새 문단·새 주장·새 사례를 만들지 않는다.
+- 체커: `scripts/check-column-translation.mjs` — 이 파일이 요구하는 것이 합격 기준이다.
+
+## 1. 산출물
+- `src/content/columns-cs/` 18편
+- `src/content/columns-hu/` 18편
+- `src/content/columns-ro/` 18편
+파일명은 원본과 **동일**해야 한다(`001-taiwan-company-establishment-basics.md` …). 번호·슬러그 변경 금지.
+
+## 2. 제품 잠금 (세 언어 공통)
+- 이 세 언어는 **안내 로케일**이다. 상담 언어는 영어·중국어(中文)·일본어·한국어 넷뿐이다.
+  해당 언어로 상담·통역·즉시응답·성공률·비용/결과 보장·24/7·무료 상담을 **암시조차 하지 말 것**.
+  (cs·hu·ro 모두 상담 언어가 아니다. 해당 언어로 상담 가능하다는 인상을 주지 말 것.)
+- 대만 변호사 광고규정: 승소율·보장·최고/유일 표현 금지.
+- 새 법률 주장 금지. 원본에 없는 수치·기관명·절차를 만들지 말 것.
+- `[변호사 검수 필요]` 마커가 산출물에 남으면 안 된다(0건).
+- 대만 법률 용어는 선례대로 **원문 한자를 괄호로 병기**한다. 예: 工作許可, 外僑居留證, 資遣費, 勞動契約.
+  세 언어 모두 라틴 문자다. 한자 용어는 번체 그대로 괄호 병기한다. 체코어는 여성형 advokátka, 루마니아어는 avocata를 쓴다(대표 변호사는 여성). 헝가리어는 문법적 성이 없어 ügyvéd 그대로.
+
+## 3. 형식 패리티 (체커가 검사한다)
+- frontmatter 키 집합과 순서는 원본과 같게. `title` `url` `lastmod` `date_display` `read_time`
+  `categories` `featured_image` `faq`.
+  - `url` `lastmod` `featured_image` 는 **원본 값 그대로**. 바꾸지 말 것.
+  - `date_display` `read_time` 은 해당 언어 표기로 옮긴다.
+  - `categories` 는 해당 언어로 옮기되 개수는 원본과 같게.
+  - `faq` 항목 수는 원본과 **정확히 같게**. q/a 모두 번역한다.
+- 본문 블록 수(문단·제목·이미지·목록)와 순서가 원본과 일치해야 한다. 합치거나 쪼개지 말 것.
+- 이미지 경로는 원본 그대로. 대체 텍스트만 번역한다.
+- 링크: 내부 링크는 원본 그대로 두는 것이 기본이다. `/ko/columns` `/ko/contact` `/ko/services`
+  `/ko/faq` `/ko/pricing` 만 해당 언어 접두사로 바꾼다. `/ko/services/investment` 같은 상세 경로는 그대로.
+- **숫자는 아라비아 숫자로**. 원본의 숫자 개수와 목표의 숫자 개수가 같아야 한다.
+  숫자를 낱말로 풀어 쓰지 말 것(예: "세 가지" → "3"). 천단위 구분은 언어 관례를 따르되
+  원본의 값 자체를 바꾸지 말 것. 통화 기호와 단위(TWD, USD, 新臺幣)는 원본대로.
+- 한글이 남아 있으면 안 된다. 영어 단어가 과도하게 남아 있어도 안 된다(고유명사·기관 영문명은 예외).
+
+## 4. 금지 파일
+`src/content/columns-cs/**`, `src/content/columns-hu/**`, `src/content/columns-ro/**`,
+그리고 이 워크오더의 로그 파일 외에는 **아무것도 쓰지 말 것**.
+특히 `scripts/**`, `src/data/**`, `src/lib/**`, `docs/i18n/global-plan/GOAL.md` 는 총괄 소유다.
+
+## 5. 검증 (전부 실행하고 출력을 그대로 보고)
+cd /Users/son7/Projects/tseng-law-columns-c-20260920 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+git status --short | wc -l
+node scripts/check-column-translation.mjs --dir src/content/columns-cs --lang cs 2>&1 | tail -20
+node scripts/check-column-translation.mjs --dir src/content/columns-hu --lang hu 2>&1 | tail -20
+node scripts/check-column-translation.mjs --dir src/content/columns-ro --lang ro 2>&1 | tail -20
+grep -rn "\[변호사 검수 필요\]" src/content/columns-cs src/content/columns-hu src/content/columns-ro | wc -l
+ls src/content/columns-cs/*.md | wc -l; ls src/content/columns-hu/*.md | wc -l; ls src/content/columns-ro/*.md | wc -l
+
+**합격 기준: 세 언어 모두 `summary PASS 18/18 files`, 마커 0, 파일 수 각 18.**
+PASS가 아니면 고쳐서 다시 돌린다. 실패한 채로 보고하지 말 것.
+
+## 6. 진행 순서 제안
+한 번에 한 언어, 한 언어 안에서 001부터 순서대로. 3편마다 그 언어 체커를 돌려 조기에 어긋남을 잡는다.
+전부 끝난 뒤 §5 전체를 한 번 더 돌린다.
+
+## 7. 보고
+`docs/i18n/global-plan/evidence/grok-C-E.log` 에만 남긴다(stdout). 별도 md 커밋 금지.
+보고 항목: 언어별 파일 수 · §5 명령 출력 그대로 · 용어 선택에서 망설인 지점 · 미해결.

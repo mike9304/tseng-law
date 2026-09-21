@@ -2,7 +2,7 @@
 title: "החריג שבו העובד יכול לקבל דמי פיטורים גם אם הפסיק מעצמו"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 בספטמבר 2025"
 read_time: "2 דקות קריאה"
 categories:
   - "מידע משפטי על טאיוואן"

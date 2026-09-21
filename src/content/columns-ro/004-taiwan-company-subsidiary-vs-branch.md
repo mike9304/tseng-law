@@ -2,10 +2,10 @@
 title: "Intrare în Taiwan: diferențe între societatea fiică și sucursală"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-subsidiary-vs-branch"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13 septembrie 2025"
 read_time: "18 min de lectură"
 categories:
-  - "Înființarea unei societăți în Taiwan"
+  - "Înființare de societăți în Taiwan"
 featured_image: "../images/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg"
 faq:
   - q: "Se poate face să participe un taiwanez sau o persoană juridică taiwaneză ca acționar al unei sucursale în Taiwan?"

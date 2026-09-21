@@ -2,7 +2,7 @@
 title: "Succesiune și autoritate părintească pe Taiwan: ghid juridic pentru familia care rămâne"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13 septembrie 2025"
 read_time: "16 min de lectură"
 categories:
   - "Informații juridice despre Taiwan"

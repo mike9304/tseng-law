@@ -2,10 +2,10 @@
 title: "כניסה לטאיוואן: הבדלים בין חברה בת לסניף"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-subsidiary-vs-branch"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13 בספטמבר 2025"
 read_time: "18 דקות קריאה"
 categories:
-  - "הקמת חברה בטאיוואן"
+  - "הקמת חברות בטאיוואן"
 featured_image: "../images/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg"
 faq:
   - q: "האם ניתן לשתף טאיוואני או אישיות משפטית טאיוואנית כבעל מניות בסניף בטאיוואן?"

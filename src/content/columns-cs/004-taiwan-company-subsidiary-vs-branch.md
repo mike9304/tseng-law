@@ -2,10 +2,10 @@
 title: "Vstup na Tchaj-wan: rozdíly mezi dceřinou společností a pobočkou"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-subsidiary-vs-branch"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13. září 2025"
 read_time: "18 min čtení"
 categories:
-  - "Založení společnosti na Tchaj-wanu"
+  - "Zakládání společností na Tchaj-wanu"
 featured_image: "../images/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg"
 faq:
   - q: "Lze připustit Tchajwance nebo tchajwanskou právnickou osobu jako akcionáře pobočky na Tchaj-wanu?"

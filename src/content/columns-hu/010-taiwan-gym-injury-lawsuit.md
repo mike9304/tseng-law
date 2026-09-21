@@ -2,10 +2,10 @@
 title: "Kártérítés edzőtermi sérülésért Tajvanon: 1. fokú ügy, határidők, bizonyítékok és kártérítési tételek"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
 lastmod: "2026-07-25"
-date_display: "2025-09-13"
+date_display: "2025. szeptember 13."
 read_time: "10 perc olvasás"
 categories:
-  - "Bírósági ügy elemzése"
+  - "Esetelemzés"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 

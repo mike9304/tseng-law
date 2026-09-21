@@ -2,7 +2,7 @@
 title: "Logistiikka Taiwanissa ja lupa moottoriajoneuvojen tavaraliikenteeseen (汽車貨運業): uusi perustaminen, yritysosto ja luovutus"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
 lastmod: "2026-07-25"
-date_display: "13. syyskuu 2025"
+date_display: "13. syyskuuta 2025"
 read_time: "12 min lukuaikaa"
 categories:
   - "Yhtiön perustaminen Taiwanissa"

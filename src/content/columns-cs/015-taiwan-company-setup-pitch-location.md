@@ -2,10 +2,10 @@
 title: "Založení společnosti na Tchaj-wanu – prohloubená část 3: hledání provozovny"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13. září 2025"
 read_time: "4 min čtení"
 categories:
-  - "Založení společnosti na Tchaj-wanu"
+  - "Zakládání společností na Tchaj-wanu"
 featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.jpg"
 ---
 

@@ -2,7 +2,7 @@
 title: "Historie a právní režim masáže na Tchaj-wanu"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
 lastmod: "2025-09-13"
-date_display: "13/9/2025"
+date_display: "13. září 2025"
 read_time: "3 min čtení"
 categories:
   - "Právní informace o Tchaj-wanu"

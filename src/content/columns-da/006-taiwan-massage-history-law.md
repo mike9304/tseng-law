@@ -5,7 +5,7 @@ lastmod: "2025-09-13"
 date_display: "13. september 2025"
 read_time: "3 minutters læsetid"
 categories:
-  - "Juridiske oplysninger om Taiwan"
+  - "Juridisk information om Taiwan"
 featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 ---
 

@@ -5,7 +5,7 @@ lastmod: "2026-09-10"
 date_display: "13. september 2025"
 read_time: "6 minutters læsetid"
 categories:
-  - "Juridiske oplysninger om Taiwan"
+  - "Juridisk information om Taiwan"
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Modtager arbejdstagere i Taiwan fratrædelsesgodtgørelse, når de selv siger op?"

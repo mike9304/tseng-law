@@ -44,7 +44,7 @@ vi.mock('@/lib/builder/seo/sitemap-builder', () => ({
   collectAllBuilderSitemapEntries: sourceMocks.collectAllBuilderSitemapEntries,
 }));
 
-const guidanceTranslatedColumnCount = ['vi', 'id', 'th', 'fil', 'ar', 'de', 'es', 'fr', 'pt', 'zh-hans', 'ms', 'ru', 'tr', 'it', 'nl', 'pl', 'hi', 'sv', 'da', 'nb', 'fi'].reduce((total, locale) => {
+const guidanceTranslatedColumnCount = [...GUIDANCE_LOCALES_4].reduce((total, locale) => {
   const dir = path.join(process.cwd(), 'src/content', `columns-${locale}`);
   if (!existsSync(dir)) return total;
   return total + readdirSync(dir).filter((name) => name.endsWith('.md')).length;
@@ -137,7 +137,7 @@ describe('sitemap column lastModified', () => {
       // details (+41). Builder fixtures still drop 9 EN-only noindex routes.
       // Plus the guidance core URLs (GUIDANCE_LOCALES_4 × 10 dictionary pages), plus one
       // URL per translated column file present in
-      // src/content/columns-{vi,id,th,fil,ar,de,es,fr,pt,zh-hans,ms,ru,tr,it,nl,pl} (counted from disk so this
+      // src/content/columns-<locale> for every GUIDANCE_LOCALES_4 entry (counted from disk so this
       // assertion tracks the growing corpus).
       // Semiconductor hub adds 4 URLs (ko/zh-hant/en STATIC_PATHS + ja entry).
       // Public semiconductor guide board adds 4 more URLs.

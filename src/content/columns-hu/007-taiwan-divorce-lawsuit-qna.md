@@ -2,10 +2,10 @@
 title: "Kérdések és válaszok a tajvani válási eljárásról: közvetítés, per, vagyonmegosztás és gyermekek"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-divorce-lawsuit-qna"
 lastmod: "2026-09-10"
-date_display: "2025-09-13"
+date_display: "2025. szeptember 13."
 read_time: "18 perc olvasás"
 categories:
-  - "Jogi információk Tajvanról"
+  - "Tajvani jogi tájékoztatás"
 featured_image: "../images/007-taiwan-divorce-lawsuit-qna/featured-01.jpg"
 faq:
   - q: "Tajvanon a közös megegyezéses válás már a megállapodás aláírásakor hatályosul?"

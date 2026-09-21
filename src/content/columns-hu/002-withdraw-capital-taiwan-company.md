@@ -2,10 +2,10 @@
 title: "Hogyan kezelendő a tőke és a társasági vagyon, ha tajvani társaságot szüntetnek meg?"
 url: "https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company"
 lastmod: "2026-09-10"
-date_display: "2025-09-13"
+date_display: "2025. szeptember 13."
 read_time: "16 perc olvasás"
 categories:
-  - "Társaságalapítás Tajvanon"
+  - "Cégalapítás Tajvanon"
 featured_image: "../images/002-withdraw-capital-taiwan-company/featured-01.png"
 faq:
   - q: "Tajvani társaság pénzeszközeinek a tagokhoz való visszaadásához mindig feloszlatás és felszámolás kell?"

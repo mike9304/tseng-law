@@ -2,7 +2,7 @@
 title: "تأسيس الشركات في تايوان — الجزء المتعمق 2"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 سبتمبر 2025"
 read_time: "2 دقيقة قراءة"
 categories:
   - "تأسيس الشركات"

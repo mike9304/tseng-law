@@ -2,10 +2,10 @@
 title: "Korvaus kuntosalivammasta Taiwanissa: 1. oikeusasteen asia, määräajat, todisteet ja korvauserät"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
 lastmod: "2026-07-25"
-date_display: "13. syyskuu 2025"
+date_display: "13. syyskuuta 2025"
 read_time: "10 min lukuaikaa"
 categories:
-  - "Asia-analyysi"
+  - "Tapausanalyysi"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 

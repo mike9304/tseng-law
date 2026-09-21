@@ -2,10 +2,10 @@
 title: "Σύσταση εταιρείας στην Ταϊβάν – μέρος εμβάθυνσης 2"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 Σεπτεμβρίου 2025"
 read_time: "2 λεπτά ανάγνωσης"
 categories:
-  - "Ίδρυση εταιρείας στην Ταϊβάν"
+  - "Σύσταση εταιρειών στην Ταϊβάν"
 featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg"
 ---
 

@@ -2,7 +2,7 @@
 title: "Yhtiön perustaminen Taiwanissa – syventävä osa 3: toimipaikan etsiminen"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
 lastmod: "2026-09-10"
-date_display: "13. syyskuu 2025"
+date_display: "13. syyskuuta 2025"
 read_time: "4 min lukuaikaa"
 categories:
   - "Yhtiön perustaminen Taiwanissa"

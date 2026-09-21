@@ -1,10 +1,10 @@
 ---
 title: "Zahraniční podniky součástek polovodičů, které vstupují na Tchaj-wan: jak posoudit dceřinou společnost, pobočku nebo zástupce"
 lastmod: "2026-09-17"
-date_display: "17/9/2026"
+date_display: "17. září 2026"
 read_time: "8 min čtení"
 categories:
-  - "Založení společnosti na Tchaj-wanu"
+  - "Zakládání společností na Tchaj-wanu"
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Pokud jsou zákazníci na Tchaj-wanu, je nutné tam vždy založit společnost?"

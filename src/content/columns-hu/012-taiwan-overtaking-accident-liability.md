@@ -2,10 +2,10 @@
 title: "Hogyan ítélik meg a felelősséget tajvani előzési balesetnél?"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
 lastmod: "2026-09-10"
-date_display: "2025-09-13"
+date_display: "2025. szeptember 13."
 read_time: "5 perc olvasás"
 categories:
-  - "Jogi információk Tajvanról"
+  - "Tajvani jogi tájékoztatás"
 featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.jpg"
 ---
 

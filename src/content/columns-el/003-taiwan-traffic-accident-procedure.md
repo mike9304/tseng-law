@@ -2,7 +2,7 @@
 title: "Q&A για την αντιμετώπιση τροχαίων ατυχημάτων στην Ταϊβάν: μέτρα επί τόπου, πταίσμα, συμβιβασμός και αποζημίωση"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 Σεπτεμβρίου 2025"
 read_time: "8 λεπτά ανάγνωσης"
 categories:
   - "Νομικές πληροφορίες για την Ταϊβάν"

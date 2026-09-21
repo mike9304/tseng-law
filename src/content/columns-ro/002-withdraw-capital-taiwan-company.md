@@ -2,10 +2,10 @@
 title: "Cum se tratează capitalul și patrimoniul social când puneți capăt unei societăți în Taiwan?"
 url: "https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 septembrie 2025"
 read_time: "16 min de lectură"
 categories:
-  - "Înființarea unei societăți în Taiwan"
+  - "Înființare de societăți în Taiwan"
 featured_image: "../images/002-withdraw-capital-taiwan-company/featured-01.png"
 faq:
   - q: "Pentru a restitui fondurile unei societăți taiwaneze asociaților, trebuie întotdeauna să se procedeze la dizolvare și la lichidare?"

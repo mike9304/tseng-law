@@ -2,10 +2,10 @@
 title: "כיצד לטפל בהון וברכוש החברה כאשר מסיימים חברה בטאיוואן?"
 url: "https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 בספטמבר 2025"
 read_time: "14 דקות קריאה"
 categories:
-  - "הקמת חברה בטאיוואן"
+  - "הקמת חברות בטאיוואן"
 featured_image: "../images/002-withdraw-capital-taiwan-company/featured-01.png"
 faq:
   - q: "כדי להשיב כספים של חברה טאיוואנית לבעלי המניות, האם תמיד נדרשים פירוק וחיסול?"

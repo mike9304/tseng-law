@@ -2,7 +2,7 @@
 title: "أسئلة وأجوبة عن التعامل مع حوادث المرور في تايوان: إجراء الموقع، والخطأ، والصلح، والتعويض"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 سبتمبر 2025"
 read_time: "8 دقيقة قراءة"
 categories:
   - "معلومات قانونية"

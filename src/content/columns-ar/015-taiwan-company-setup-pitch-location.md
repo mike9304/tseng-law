@@ -2,7 +2,7 @@
 title: "تأسيس الشركات في تايوان — الجزء المتعمق 3: البحث عن مقر النشاط"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 سبتمبر 2025"
 read_time: "2 دقيقة قراءة"
 categories:
   - "تأسيس الشركات"

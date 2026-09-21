@@ -2,10 +2,10 @@
 title: "Kérdések és válaszok a tajvani közúti baleseti eljárásról: helyszíni intézkedések, gondatlanság, egyezség és kártérítés"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
-date_display: "2025-09-13"
+date_display: "2025. szeptember 13."
 read_time: "12 perc olvasás"
 categories:
-  - "Jogi információk Tajvanról"
+  - "Tajvani jogi tájékoztatás"
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 ---
 

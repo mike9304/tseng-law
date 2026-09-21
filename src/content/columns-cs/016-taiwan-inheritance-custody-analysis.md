@@ -2,7 +2,7 @@
 title: "Dědictví a rodičovská péče na Tchaj-wanu: právní vodítka pro zbývající rodinu"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13. září 2025"
 read_time: "16 min čtení"
 categories:
   - "Právní informace o Tchaj-wanu"

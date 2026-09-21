@@ -2,10 +2,10 @@
 title: "A tajvani masszázs története és jogi rendje"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
 lastmod: "2025-09-13"
-date_display: "2025-09-13"
+date_display: "2025. szeptember 13."
 read_time: "3 perc olvasás"
 categories:
-  - "Jogi információk Tajvanról"
+  - "Tajvani jogi tájékoztatás"
 featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 ---
 

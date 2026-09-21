@@ -2,7 +2,7 @@
 title: "Q&A k postupu po dopravních nehodách na Tchaj-wanu: úkony na místě, zavinění, smír a náhrada škody"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13. září 2025"
 read_time: "12 min čtení"
 categories:
   - "Právní informace o Tchaj-wanu"

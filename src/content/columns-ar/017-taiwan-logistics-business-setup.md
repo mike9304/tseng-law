@@ -2,7 +2,7 @@
 title: "نشاط اللوجستيات في تايوان وترخيص نقل البضائع بالسيارات (汽車貨運業): التأسيس الجديد والاستحواذ والإسناد"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13 سبتمبر 2025"
 read_time: "9 دقيقة قراءة"
 categories:
   - "تأسيس الشركات"

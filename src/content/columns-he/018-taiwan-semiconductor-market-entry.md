@@ -1,10 +1,10 @@
 ---
 title: "כאשר חברת רכיבים למוליכים למחצה נכנסת לשוק טאיוואן: מה לבחון מבין חברה בת מקומית, סניף וסוכן?"
 lastmod: "2026-09-17"
-date_display: "17/9/2026"
+date_display: "17 בספטמבר 2026"
 read_time: "8 דקות קריאה"
 categories:
-  - "הקמת חברה בטאיוואן"
+  - "הקמת חברות בטאיוואן"
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "אם יש לקוחות בטאיוואן, האם חובה להקים שם חברה?"

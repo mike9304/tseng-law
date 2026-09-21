@@ -2,7 +2,7 @@
 title: "Pracovní právo na Tchaj-wanu: je odstupné na Tchaj-wanu opravdu obtížné získat??"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13. září 2025"
 read_time: "6 min čtení"
 categories:
   - "Právní informace o Tchaj-wanu"

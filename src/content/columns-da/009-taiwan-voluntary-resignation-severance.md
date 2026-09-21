@@ -5,7 +5,7 @@ lastmod: "2026-09-10"
 date_display: "13. september 2025"
 read_time: "3 minutters læsetid"
 categories:
-  - "Juridiske oplysninger om Taiwan"
+  - "Juridisk information om Taiwan"
 featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg"
 ---
 

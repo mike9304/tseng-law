@@ -2,7 +2,7 @@
 title: "Πώς κρίνεται η ευθύνη σε ατύχημα προσπεράσεως στην Ταϊβάν;"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 Σεπτεμβρίου 2025"
 read_time: "4 λεπτά ανάγνωσης"
 categories:
   - "Νομικές πληροφορίες για την Ταϊβάν"

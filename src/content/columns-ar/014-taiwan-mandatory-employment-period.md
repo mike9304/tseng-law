@@ -2,7 +2,7 @@
 title: "اتفاق الحد الأدنى لمدة العمل في تايوان: معايير الحكم في النفاذ وتكاليف التعليم والشرط الجزائي"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-mandatory-employment-period"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13 سبتمبر 2025"
 read_time: "14 دقيقة قراءة"
 categories:
   - "معلومات قانونية"

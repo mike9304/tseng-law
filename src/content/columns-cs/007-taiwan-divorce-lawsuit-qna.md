@@ -2,7 +2,7 @@
 title: "Q&A k postupu rozvodu na Tchaj-wanu: mediace, řízení, vypořádání majetku a děti"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-divorce-lawsuit-qna"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13. září 2025"
 read_time: "18 min čtení"
 categories:
   - "Právní informace o Tchaj-wanu"

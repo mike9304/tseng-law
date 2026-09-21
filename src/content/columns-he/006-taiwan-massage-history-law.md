@@ -2,7 +2,7 @@
 title: "היסטוריה ומשטר משפטי של העיסוי בטאיוואן"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
 lastmod: "2025-09-13"
-date_display: "13/9/2025"
+date_display: "13 בספטמבר 2025"
 read_time: "2 דקות קריאה"
 categories:
   - "מידע משפטי על טאיוואן"

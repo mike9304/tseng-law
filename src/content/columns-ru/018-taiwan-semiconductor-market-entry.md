@@ -4,7 +4,7 @@ lastmod: "2026-09-17"
 date_display: "17 сентября 2026"
 read_time: "8 минут чтения"
 categories:
-  - "Создание компании на Тайване"
+  - "Учреждение компании на Тайване"
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Если есть тайваньские клиенты, обязательно ли создавать компанию на Тайване?"

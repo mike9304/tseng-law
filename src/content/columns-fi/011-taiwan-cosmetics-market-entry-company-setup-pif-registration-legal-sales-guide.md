@@ -2,7 +2,7 @@
 title: "Pääsy kosmetiikkamarkkinoille Taiwanissa: maahantuojan valinta, tuoterekisteröinti, PIF:n laatiminen ja säilytys sekä mainonnan sääntely"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide"
 lastmod: "2026-07-25"
-date_display: "4. helmikuu 2026"
+date_display: "4. helmikuuta 2026"
 read_time: "12 min lukuaikaa"
 categories:
   - "Yhtiön perustaminen Taiwanissa"

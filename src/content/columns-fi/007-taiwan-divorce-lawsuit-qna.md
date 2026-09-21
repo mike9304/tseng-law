@@ -2,7 +2,7 @@
 title: "Kysymyksiä ja vastauksia avioeromenettelystä Taiwanissa: sovittelu, oikeudenkäynti, omaisuuden jako ja lapset"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-divorce-lawsuit-qna"
 lastmod: "2026-09-10"
-date_display: "13. syyskuu 2025"
+date_display: "13. syyskuuta 2025"
 read_time: "18 min lukuaikaa"
 categories:
   - "Oikeudellista tietoa Taiwanista"

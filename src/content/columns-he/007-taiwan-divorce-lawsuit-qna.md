@@ -2,7 +2,7 @@
 title: "שאלות ותשובות על הליך הגירושין בטאיוואן: גישור, תביעה, חלוקת רכוש וילדים"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-divorce-lawsuit-qna"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 בספטמבר 2025"
 read_time: "18 דקות קריאה"
 categories:
   - "מידע משפטי על טאיוואן"

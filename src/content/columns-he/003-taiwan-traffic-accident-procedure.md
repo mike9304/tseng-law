@@ -2,7 +2,7 @@
 title: "שאלות ותשובות על טיפול בתאונות דרכים בטאיוואן: אמצעים במקום, אשמה, פשרה ופיצויים"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 בספטמבר 2025"
 read_time: "8 דקות קריאה"
 categories:
   - "מידע משפטי על טאיוואן"

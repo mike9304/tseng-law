@@ -2,7 +2,7 @@
 title: "Ujednání o minimální době práce na Tchaj-wanu: kritéria platnosti, náklady na školení a smluvní pokuta"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-mandatory-employment-period"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13. září 2025"
 read_time: "18 min čtení"
 categories:
   - "Právní informace o Tchaj-wanu"

@@ -2,10 +2,10 @@
 title: "Înființarea unei societăți pe Taiwan – parte aprofundată 3: căutarea localului"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 septembrie 2025"
 read_time: "4 min de lectură"
 categories:
-  - "Înființarea unei societăți în Taiwan"
+  - "Înființare de societăți în Taiwan"
 featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.jpg"
 ---
 

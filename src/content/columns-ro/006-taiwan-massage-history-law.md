@@ -2,7 +2,7 @@
 title: "Istoria și regimul juridic al masajului în Taiwan"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
 lastmod: "2025-09-13"
-date_display: "13/9/2025"
+date_display: "13 septembrie 2025"
 read_time: "3 min de lectură"
 categories:
   - "Informații juridice despre Taiwan"

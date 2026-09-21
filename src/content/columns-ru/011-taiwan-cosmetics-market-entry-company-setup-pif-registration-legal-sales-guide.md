@@ -5,7 +5,7 @@ lastmod: "2026-07-25"
 date_display: "4 февраля 2026"
 read_time: "9 минут чтения"
 categories:
-  - "Создание компании на Тайване"
+  - "Учреждение компании на Тайване"
 featured_image: "../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg"
 faq:
   - q: "Чтобы продавать косметику на Тайване, обязательно ли создавать дочернюю компанию или филиал?"

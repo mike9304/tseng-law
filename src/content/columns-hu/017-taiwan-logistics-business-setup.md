@@ -2,10 +2,10 @@
 title: "Logisztikai tevékenység és a gépjárműves árufuvarozás (汽車貨運業) engedélye Tajvanon: új alapítás, felvásárlás és megbízás"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
 lastmod: "2026-07-25"
-date_display: "2025-09-13"
+date_display: "2025. szeptember 13."
 read_time: "12 perc olvasás"
 categories:
-  - "Társaságalapítás Tajvanon"
+  - "Cégalapítás Tajvanon"
 featured_image: "../images/017-taiwan-logistics-business-setup/featured-01.jpg"
 faq:
   - q: "Tajvani logisztikai tevékenységhez mindig be kell szerezni a gépjárműves árufuvarozás (汽車貨運業) engedélyét?"

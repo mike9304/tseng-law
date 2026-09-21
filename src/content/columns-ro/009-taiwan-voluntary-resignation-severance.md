@@ -2,7 +2,7 @@
 title: "Excepții în care salariatul poate primi indemnizația de concediere (資遣費) deși demisionează de bunăvoie"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 septembrie 2025"
 read_time: "3 min de lectură"
 categories:
   - "Informații juridice despre Taiwan"

@@ -2,7 +2,7 @@
 title: "דיני עבודה בטאיוואן: האם באמת קשה לקבל דמי פיטורים בטאיוואן??"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 בספטמבר 2025"
 read_time: "3 דקות קריאה"
 categories:
   - "מידע משפטי על טאיוואן"

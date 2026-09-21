@@ -2,10 +2,10 @@
 title: "Társaságalapítás Tajvanon – elmélyítő rész 3: a telephely keresése"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
 lastmod: "2026-09-10"
-date_display: "2025-09-13"
+date_display: "2025. szeptember 13."
 read_time: "4 perc olvasás"
 categories:
-  - "Társaságalapítás Tajvanon"
+  - "Cégalapítás Tajvanon"
 featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.jpg"
 ---
 

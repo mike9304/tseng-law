@@ -1,10 +1,10 @@
 ---
 title: "Întreprinderi străine de componente de semiconductori care intră pe Taiwan: cum se evaluează o filială, o sucursală sau un agent"
 lastmod: "2026-09-17"
-date_display: "17/9/2026"
+date_display: "17 septembrie 2026"
 read_time: "8 min de lectură"
 categories:
-  - "Înființarea unei societăți în Taiwan"
+  - "Înființare de societăți în Taiwan"
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Dacă există clienți pe Taiwan, trebuie neapărat înființată acolo o societate?"

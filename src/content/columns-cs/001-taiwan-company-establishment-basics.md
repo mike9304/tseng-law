@@ -2,10 +2,10 @@
 title: "Základy založení společnosti na Tchaj-wanu: dceřiná společnost, pobočka, reprezentační kancelář, postup a pracovní povolení"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-basics"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13. září 2025"
 read_time: "14 min čtení"
 categories:
-  - "Založení společnosti na Tchaj-wanu"
+  - "Zakládání společností na Tchaj-wanu"
 featured_image: "../images/001-taiwan-company-establishment-basics/featured-01.jpg"
 faq:
   - q: "Při zakládání společnosti na Tchaj-wanu čím se liší dceřiná společnost, pobočka a reprezentační kancelář?"

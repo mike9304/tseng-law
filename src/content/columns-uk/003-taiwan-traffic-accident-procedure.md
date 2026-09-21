@@ -2,7 +2,7 @@
 title: "Q&A щодо дій при ДТП на Тайвані: заходи на місці, вина, мирова угода та відшкодування шкоди"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 вересня 2025"
 read_time: "8 хв читання"
 categories:
   - "Правова інформація про Тайвань"

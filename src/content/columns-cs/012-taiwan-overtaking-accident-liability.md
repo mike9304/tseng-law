@@ -2,7 +2,7 @@
 title: "Jak se posuzuje odpovědnost při nehodě při předjíždění na Tchaj-wanu?"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13. září 2025"
 read_time: "5 min čtení"
 categories:
   - "Právní informace o Tchaj-wanu"

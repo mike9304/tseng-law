@@ -2,7 +2,7 @@
 title: "عند إنهاء الشركة في تايوان، كيف تُعالَج رأس المال وأموال الشركة؟"
 url: "https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 سبتمبر 2025"
 read_time: "14 دقيقة قراءة"
 categories:
   - "تأسيس الشركات"

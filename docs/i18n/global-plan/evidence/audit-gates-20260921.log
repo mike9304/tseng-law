@@ -1,0 +1,21 @@
+[lint]
+LINT=0
+[typecheck]
+TSC=
+[build]
+├ ƒ /review/[token]                                                                                            1.1 kB         130 kB
+├ ƒ /robots.txt                                                                                                1.1 kB         130 kB
+└ ƒ /sitemap.xml                                                                                               1.1 kB         130 kB
++ First Load JS shared by all                                                                                  129 kB
+  ├ chunks/3782-43000b03f3b56bc6.js                                                                           71.7 kB
+  ├ chunks/ef0a141b-513fa3520f2418ec.js                                                                       54.2 kB
+  └ other shared chunks (total)                                                                               3.11 kB
+
+
+ƒ Middleware                                                                                                  35.1 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+BUILD=

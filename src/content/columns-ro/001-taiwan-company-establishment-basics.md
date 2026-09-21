@@ -2,10 +2,10 @@
 title: "Bazele înființării unei societăți în Taiwan: societate fiică, sucursală, birou de reprezentare, procedură și permis de muncă"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-basics"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13 septembrie 2025"
 read_time: "14 min de lectură"
 categories:
-  - "Înființarea unei societăți în Taiwan"
+  - "Înființare de societăți în Taiwan"
 featured_image: "../images/001-taiwan-company-establishment-basics/featured-01.jpg"
 faq:
   - q: "La înființarea unei societăți în Taiwan, prin ce se deosebesc societatea fiică, sucursala și biroul de reprezentare?"

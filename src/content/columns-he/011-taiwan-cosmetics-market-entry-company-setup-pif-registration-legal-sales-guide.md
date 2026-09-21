@@ -2,10 +2,10 @@
 title: "כניסה לשוק הקוסמטיקה בטאיוואן: בחירת גוף היבוא, רישום מוצר, עריכת PIF ושמירתו ורגולציית הפרסום"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide"
 lastmod: "2026-07-25"
-date_display: "4/2/2026"
+date_display: "4 בפברואר 2026"
 read_time: "9 דקות קריאה"
 categories:
-  - "הקמת חברה בטאיוואן"
+  - "הקמת חברות בטאיוואן"
 featured_image: "../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg"
 faq:
   - q: "כדי למכור קוסמטיקה בטאיוואן, האם חובה להקים חברה בת או סניף?"

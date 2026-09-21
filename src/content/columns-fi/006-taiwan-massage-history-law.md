@@ -2,7 +2,7 @@
 title: "Hieronnan historia ja oikeudellinen asema Taiwanissa"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
 lastmod: "2025-09-13"
-date_display: "13. syyskuu 2025"
+date_display: "13. syyskuuta 2025"
 read_time: "3 min lukuaikaa"
 categories:
   - "Oikeudellista tietoa Taiwanista"

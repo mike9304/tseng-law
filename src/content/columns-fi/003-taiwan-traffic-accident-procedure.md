@@ -2,7 +2,7 @@
 title: "Kysymyksiä ja vastauksia liikenneonnettomuuksien käsittelystä Taiwanissa: toimet paikan päällä, tuottamus, sovinto ja vahingonkorvaus"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
-date_display: "13. syyskuu 2025"
+date_display: "13. syyskuuta 2025"
 read_time: "12 min lukuaikaa"
 categories:
   - "Oikeudellista tietoa Taiwanista"

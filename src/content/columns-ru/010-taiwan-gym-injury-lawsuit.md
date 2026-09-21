@@ -5,7 +5,7 @@ lastmod: "2026-07-25"
 date_display: "13 сентября 2025"
 read_time: "7 минут чтения"
 categories:
-  - "Анализ судебных дел"
+  - "Анализ дел"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 

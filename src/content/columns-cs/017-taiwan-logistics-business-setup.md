@@ -2,10 +2,10 @@
 title: "Logistická činnost na Tchaj-wanu a povolení automobilové nákladní dopravy (汽車貨運業): nově založení, nabytí a pověření"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13. září 2025"
 read_time: "12 min čtení"
 categories:
-  - "Založení společnosti na Tchaj-wanu"
+  - "Zakládání společností na Tchaj-wanu"
 featured_image: "../images/017-taiwan-logistics-business-setup/featured-01.jpg"
 faq:
   - q: "Musí každá činnost související s logistikou na Tchaj-wanu získat povolení automobilové nákladní dopravy (汽車貨運業)?"

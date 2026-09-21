@@ -1,7 +1,7 @@
 ---
 title: "Puolijohdekomponenttien toimittajat, jotka astuvat Taiwaniin: miten tytäryhtiötä, sivuliikettä tai agentuuria arvioidaan"
 lastmod: "2026-09-17"
-date_display: "17. syyskuu 2026"
+date_display: "17. syyskuuta 2026"
 read_time: "8 min lukuaikaa"
 categories:
   - "Yhtiön perustaminen Taiwanissa"

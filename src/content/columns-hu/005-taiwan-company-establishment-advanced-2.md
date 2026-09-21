@@ -2,10 +2,10 @@
 title: "Társaságalapítás Tajvanon – elmélyítő rész 2"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2"
 lastmod: "2026-09-10"
-date_display: "2025-09-13"
+date_display: "2025. szeptember 13."
 read_time: "4 perc olvasás"
 categories:
-  - "Társaságalapítás Tajvanon"
+  - "Cégalapítás Tajvanon"
 featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg"
 ---
 

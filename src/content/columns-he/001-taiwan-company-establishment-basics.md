@@ -2,10 +2,10 @@
 title: "יסודות הקמת חברה בטאיוואן: חברה בת, סניף ומשרד ייצוג, ההליך והיתר העבודה"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-basics"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13 בספטמבר 2025"
 read_time: "9 דקות קריאה"
 categories:
-  - "הקמת חברה בטאיוואן"
+  - "הקמת חברות בטאיוואן"
 featured_image: "../images/001-taiwan-company-establishment-basics/featured-01.jpg"
 faq:
   - q: "בעת הקמת חברה בטאיוואן, במה נבדלים חברה בת, סניף ומשרד ייצוג?"

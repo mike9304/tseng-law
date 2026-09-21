@@ -2,10 +2,10 @@
 title: "Belépés Tajvanra: különbségek a leányvállalat és a fióktelep között"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-subsidiary-vs-branch"
 lastmod: "2026-07-25"
-date_display: "2025-09-13"
+date_display: "2025. szeptember 13."
 read_time: "18 perc olvasás"
 categories:
-  - "Társaságalapítás Tajvanon"
+  - "Cégalapítás Tajvanon"
 featured_image: "../images/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg"
 faq:
   - q: "Bevonható-e tajvani személy vagy tajvani jogi személy részvényesként a tajvani fióktelepbe?"

@@ -2,10 +2,10 @@
 title: "Activitatea de logistică pe Taiwan și autorizația de transport de mărfuri cu autovehicule (汽車貨運業): constituire nouă, achiziție și mandat"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13 septembrie 2025"
 read_time: "12 min de lectură"
 categories:
-  - "Înființarea unei societăți în Taiwan"
+  - "Înființare de societăți în Taiwan"
 featured_image: "../images/017-taiwan-logistics-business-setup/featured-01.jpg"
 faq:
   - q: "Orice activitate legată de logistică pe Taiwan trebuie să obțină autorizația de transport de mărfuri cu autovehicule (汽車貨運業)?"

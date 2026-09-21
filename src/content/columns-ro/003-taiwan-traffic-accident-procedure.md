@@ -2,7 +2,7 @@
 title: "Întrebări și răspunsuri despre tratarea accidentelor de circulație în Taiwan: măsuri la fața locului, vină, tranzacție și despăgubiri"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 septembrie 2025"
 read_time: "12 min de lectură"
 categories:
   - "Informații juridice despre Taiwan"

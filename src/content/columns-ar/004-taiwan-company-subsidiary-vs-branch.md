@@ -2,7 +2,7 @@
 title: "دخول تايوان: الفرق بين الشركة التابعة والفرع"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-subsidiary-vs-branch"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13 سبتمبر 2025"
 read_time: "18 دقيقة قراءة"
 categories:
   - "تأسيس الشركات"

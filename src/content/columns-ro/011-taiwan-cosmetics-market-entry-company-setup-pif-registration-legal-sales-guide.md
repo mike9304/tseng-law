@@ -2,10 +2,10 @@
 title: "Intrarea pe piața cosmeticelor pe Taiwan: alegerea subiectului importator, înregistrarea produsului, întocmirea și păstrarea PIF și reglementarea publicității"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide"
 lastmod: "2026-07-25"
-date_display: "4/2/2026"
+date_display: "4 februarie 2026"
 read_time: "12 min de lectură"
 categories:
-  - "Înființarea unei societăți în Taiwan"
+  - "Înființare de societăți în Taiwan"
 featured_image: "../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg"
 faq:
   - q: "Pentru a vinde cosmetice pe Taiwan, trebuie neapărat înființată o filială sau o sucursală?"

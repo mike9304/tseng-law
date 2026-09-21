@@ -1,10 +1,10 @@
 ---
 title: "Félvezető-alkatrész vállalat tajvani piacra lépésekor: helyi leányvállalat, fióktelep vagy ügynök közül mit kell vizsgálni?"
 lastmod: "2026-09-17"
-date_display: "2026-09-17"
+date_display: "2026. szeptember 17."
 read_time: "8 perc olvasás"
 categories:
-  - "Társaságalapítás Tajvanon"
+  - "Cégalapítás Tajvanon"
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Ha vannak tajvani ügyfelek, feltétlenül társaságot kell alapítani Tajvanon?"

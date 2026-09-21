@@ -2,7 +2,7 @@
 title: "دخول سوق مستحضرات التجميل في تايوان: اختيار جهة الاستيراد، وتسجيل المنتج، وإعداد PIF وحفظه، وتنظيم الإعلان"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide"
 lastmod: "2026-07-25"
-date_display: "4/2/2026"
+date_display: "4 فبراير 2026"
 read_time: "9 دقيقة قراءة"
 categories:
   - "تأسيس الشركات"

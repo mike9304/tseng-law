@@ -2,7 +2,7 @@
 title: "أساسيات تأسيس الشركات في تايوان: الشركة التابعة والفرع ومكتب التمثيل، والإجراءات وتصريح العمل"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-basics"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13 سبتمبر 2025"
 read_time: "9 دقيقة قراءة"
 categories:
   - "تأسيس الشركات"

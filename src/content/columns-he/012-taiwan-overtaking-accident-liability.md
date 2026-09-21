@@ -2,7 +2,7 @@
 title: "כיצד נשפטת האחריות בתאונת עקיפה בטאיוואן?"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 בספטמבר 2025"
 read_time: "4 דקות קריאה"
 categories:
   - "מידע משפטי על טאיוואן"

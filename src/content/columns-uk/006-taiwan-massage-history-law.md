@@ -2,7 +2,7 @@
 title: "Історія та правовий режим масажу на Тайвані"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
 lastmod: "2025-09-13"
-date_display: "13/9/2025"
+date_display: "13 вересня 2025"
 read_time: "2 хв читання"
 categories:
   - "Правова інформація про Тайвань"

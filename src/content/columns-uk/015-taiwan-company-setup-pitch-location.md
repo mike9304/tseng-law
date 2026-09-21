@@ -2,10 +2,10 @@
 title: "Заснування товариства на Тайвані — поглиблена частина 3: пошук місця діяльності"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 вересня 2025"
 read_time: "2 хв читання"
 categories:
-  - "Заснування товариства на Тайвані"
+  - "Створення товариств на Тайвані"
 featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.jpg"
 ---
 

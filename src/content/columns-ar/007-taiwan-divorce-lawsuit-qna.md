@@ -2,7 +2,7 @@
 title: "إجراءات الطلاق في تايوان: أسئلة وأجوبة عن الصلح والتقاضي وتقسيم المال والأبناء"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-divorce-lawsuit-qna"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 سبتمبر 2025"
 read_time: "18 دقيقة قراءة"
 categories:
   - "معلومات قانونية"

@@ -2,7 +2,7 @@
 title: "Výjimky, v nichž zaměstnanec může obdržet odstupné (資遣費) i při dobrovolném odchodu"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13. září 2025"
 read_time: "3 min čtení"
 categories:
   - "Právní informace o Tchaj-wanu"

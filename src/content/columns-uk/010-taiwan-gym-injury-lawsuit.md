@@ -2,10 +2,10 @@
 title: "Відшкодування шкоди за травму у фітнес-залі на Тайвані: справа 1 інстанції, строки, докази та статті відшкодування"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13 вересня 2025"
 read_time: "7 хв читання"
 categories:
-  - "Аналіз судової справи"
+  - "Розбір справи"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 

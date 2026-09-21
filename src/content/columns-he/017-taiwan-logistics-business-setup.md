@@ -2,10 +2,10 @@
 title: "עסק הלוגיסטיקה בטאיוואן והיתר הובלת מטענים ברכב (汽車貨運業): הקמה חדשה, רכישה והפקדה"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-logistics-business-setup"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13 בספטמבר 2025"
 read_time: "9 דקות קריאה"
 categories:
-  - "הקמת חברה בטאיוואן"
+  - "הקמת חברות בטאיוואן"
 featured_image: "../images/017-taiwan-logistics-business-setup/featured-01.jpg"
 faq:
   - q: "האם כל עסק הקשור ללוגיסטיקה בטאיוואן חייב לקבל היתר הובלת מטענים ברכב (汽車貨運業)?"

@@ -2,7 +2,7 @@
 title: "Pactul de perioadă minimă de muncă pe Taiwan: criterii de valabilitate, cheltuieli de formare și clauză penală"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-mandatory-employment-period"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13 septembrie 2025"
 read_time: "18 min de lectură"
 categories:
   - "Informații juridice despre Taiwan"

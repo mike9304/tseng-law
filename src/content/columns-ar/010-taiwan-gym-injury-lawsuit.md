@@ -2,7 +2,7 @@
 title: "تعويض ضرر الإصابة في صالة الرياضة في تايوان: قضية الدرجة الأولى وأجل المطالبة والأدلة وبنود التعويض"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13 سبتمبر 2025"
 read_time: "7 دقيقة قراءة"
 categories:
   - "دراسات قضايا"

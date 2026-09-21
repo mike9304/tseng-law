@@ -2,7 +2,7 @@
 title: "Miten pääoma ja yhtiön omaisuus on käsiteltävä, kun Taiwanissa oleva yhtiö saatetaan päättymään?"
 url: "https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company"
 lastmod: "2026-09-10"
-date_display: "13. syyskuu 2025"
+date_display: "13. syyskuuta 2025"
 read_time: "16 min lukuaikaa"
 categories:
   - "Yhtiön perustaminen Taiwanissa"

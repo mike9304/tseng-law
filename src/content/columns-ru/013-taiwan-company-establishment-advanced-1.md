@@ -5,7 +5,7 @@ lastmod: "2026-09-10"
 date_display: "13 сентября 2025"
 read_time: "2 минуты чтения"
 categories:
-  - "Создание компании на Тайване"
+  - "Учреждение компании на Тайване"
 featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg"
 ---
 

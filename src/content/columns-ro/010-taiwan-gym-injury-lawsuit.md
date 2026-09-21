@@ -2,10 +2,10 @@
 title: "Despăgubiri pentru o vătămare la sală pe Taiwan: caz de instanța 1, termene, probe și posturi de despăgubire"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13 septembrie 2025"
 read_time: "10 min de lectură"
 categories:
-  - "Analiza unui litigiu"
+  - "Analiză de caz"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 

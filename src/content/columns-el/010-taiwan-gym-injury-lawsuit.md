@@ -2,10 +2,10 @@
 title: "Αποζημίωση για τραυματισμό σε γυμναστήριο στην Ταϊβάν: υπόθεση 1ου βαθμού, προθεσμίες, αποδείξεις και κονδύλια αποζημιώσεως"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13 Σεπτεμβρίου 2025"
 read_time: "7 λεπτά ανάγνωσης"
 categories:
-  - "Ανάλυση δικαστικής υπόθεσης"
+  - "Ανάλυση υπόθεσης"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 

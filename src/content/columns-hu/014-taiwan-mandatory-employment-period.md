@@ -2,10 +2,10 @@
 title: "Minimális munkavégzési időszakra vonatkozó megállapodás Tajvanon: érvényesség, képzési költség és kötbér megítélési szempontjai"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-mandatory-employment-period"
 lastmod: "2026-07-25"
-date_display: "2025-09-13"
+date_display: "2025. szeptember 13."
 read_time: "18 perc olvasás"
 categories:
-  - "Jogi információk Tajvanról"
+  - "Tajvani jogi tájékoztatás"
 featured_image: "../images/014-taiwan-mandatory-employment-period/featured-01.jpg"
 faq:
   - q: "A tajvani munkaszerződés minimális munkavégzési időszakra vonatkozó megállapodása (最低服務年限約定) automatikusan semmis?"

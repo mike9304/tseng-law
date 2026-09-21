@@ -2,10 +2,10 @@
 title: "Náhrada škody za úraz v posilovně na Tchaj-wanu: věc 1. instance, lhůty, důkazy a položky náhrady"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13. září 2025"
 read_time: "10 min čtení"
 categories:
-  - "Rozbor soudního sporu"
+  - "Rozbor případu"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 

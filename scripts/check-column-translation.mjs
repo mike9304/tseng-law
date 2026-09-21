@@ -1596,6 +1596,17 @@ export const DATE_MONTH_NAMES = {
   heinäkuu: 7, elokuu: 8, syyskuu: 9, lokakuu: 10, marraskuu: 11, joulukuu: 12,
   'जनवरी': 1, 'फरवरी': 2, 'फ़रवरी': 2, 'मार्च': 3, 'अप्रैल': 4, 'मई': 5, 'जून': 6,
   'जुलाई': 7, 'अगस्त': 8, 'सितंबर': 9, 'अक्टूबर': 10, 'नवंबर': 11, 'दिसंबर': 12,
+  // cs (genitive), hu, ro, uk (genitive), el (genitive, lower-cased for lookup), he (bare + ב-prefixed), fi (partitive)
+  ledna: 1, 'února': 2, 'března': 3, dubna: 4, 'května': 5, 'června': 6, 'července': 7, srpna: 8, 'září': 9, 'října': 10, listopadu: 11, prosince: 12,
+  'január': 1, 'február': 2, 'március': 3, 'április': 4, 'május': 5, 'június': 6, 'július': 7, augusztus: 8, szeptember: 9, 'október': 10,
+  ianuarie: 1, februarie: 2, martie: 3, aprilie: 4, iunie: 6, iulie: 7, septembrie: 9, octombrie: 10, noiembrie: 11, decembrie: 12,
+  'січня': 1, 'лютого': 2, 'березня': 3, 'квітня': 4, 'травня': 5, 'червня': 6, 'липня': 7, 'серпня': 8, 'вересня': 9, 'жовтня': 10, 'листопада': 11, 'грудня': 12,
+  'ιανουαρίου': 1, 'φεβρουαρίου': 2, 'μαρτίου': 3, 'απριλίου': 4, 'μαΐου': 5, 'ιουνίου': 6, 'ιουλίου': 7, 'αυγούστου': 8, 'σεπτεμβρίου': 9, 'οκτωβρίου': 10, 'νοεμβρίου': 11, 'δεκεμβρίου': 12,
+  'ינואר': 1, 'פברואר': 2, 'מרץ': 3, 'אפריל': 4, 'מאי': 5, 'יוני': 6, 'יולי': 7, 'אוגוסט': 8, 'ספטמבר': 9, 'אוקטובר': 10, 'נובמבר': 11, 'דצמבר': 12,
+  'בינואר': 1, 'בפברואר': 2, 'במרץ': 3, 'באפריל': 4, 'במאי': 5, 'ביוני': 6, 'ביולי': 7, 'באוגוסט': 8, 'בספטמבר': 9, 'באוקטובר': 10, 'בנובמבר': 11, 'בדצמבר': 12,
+  'يناير': 1, 'فبراير': 2, 'مارس': 3, 'أبريل': 4, 'مايو': 5, 'يونيو': 6, 'يوليو': 7, 'أغسطس': 8, 'سبتمبر': 9, 'أكتوبر': 10, 'نوفمبر': 11, 'ديسمبر': 12,
+  tammikuuta: 1, helmikuuta: 2, maaliskuuta: 3, huhtikuuta: 4, toukokuuta: 5, 'kesäkuuta': 6,
+  'heinäkuuta': 7, elokuuta: 8, syyskuuta: 9, lokakuuta: 10, marraskuuta: 11, joulukuuta: 12,
 };
 
 export function parseArgs(argv) {
@@ -2074,6 +2085,13 @@ export function analyzeNumbers(text, lang = 'ko') {
     let year = Number.parseInt(groups[2], 10);
     if (/พ\.ศ\./.test(match) || year >= 2400) year -= THAI_BUDDHIST_ERA_OFFSET;
     consumeValues(match, offset, [Number.parseInt(groups[0], 10), monthN, year]);
+  });
+
+  // hu: 2025. szeptember 13.
+  s = blankReplace(s, new RegExp(`((?:19|20)\\d{2})\\.\\s+(${month})\\s+(${day})\\.`, 'giu'), (match, groups, offset) => {
+    const monthN = monthNumber(groups[1]);
+    if (!monthN) return false;
+    consumeValues(match, offset, [Number.parseInt(groups[0], 10), monthN, Number.parseInt(groups[2], 10)]);
   });
 
   // de: 13. September 2025

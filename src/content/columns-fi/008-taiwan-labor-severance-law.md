@@ -2,10 +2,10 @@
 title: "Työoikeus Taiwanissa: onko irtisanomiskorvausta Taiwanissa todella vaikea saada??"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
 lastmod: "2026-09-10"
-date_display: "13. syyskuu 2025"
+date_display: "13. syyskuuta 2025"
 read_time: "6 min lukuaikaa"
 categories:
-  - "Oikeudellisia tietoja Taiwanista"
+  - "Oikeudellista tietoa Taiwanista"
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Saavatko työntekijät Taiwanissa irtisanomiskorvausta, kun he irtisanoutuvat itse?"

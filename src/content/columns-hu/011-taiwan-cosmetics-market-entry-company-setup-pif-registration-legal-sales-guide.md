@@ -2,10 +2,10 @@
 title: "Belépés a tajvani kozmetikai piacra: importáló alany választása, terméknyilvántartás, PIF készítése és megőrzése, valamint a reklámszabályozás"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide"
 lastmod: "2026-07-25"
-date_display: "2026-02-04"
+date_display: "2026. február 4."
 read_time: "12 perc olvasás"
 categories:
-  - "Társaságalapítás Tajvanon"
+  - "Cégalapítás Tajvanon"
 featured_image: "../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg"
 faq:
   - q: "Tajvani kozmetikumértékesítéshez mindig leányvállalatot vagy fióktelepet kell alapítani?"

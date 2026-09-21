@@ -2,10 +2,10 @@
 title: "פיצוי נזק בפציעה בחדר כושר בטאיוואן: תיק ערכאה 1, מועד התביעה, ראיות וסעיפי הפיצוי"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13 בספטמבר 2025"
 read_time: "7 דקות קריאה"
 categories:
-  - "ניתוח תיק משפטי"
+  - "ניתוח מקרה"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 ---
 

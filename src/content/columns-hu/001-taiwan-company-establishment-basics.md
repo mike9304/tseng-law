@@ -2,10 +2,10 @@
 title: "Társaságalapítás Tajvanon: alapok — leányvállalat, fióktelep, képviseleti iroda, eljárás és munkavállalási engedély"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-basics"
 lastmod: "2026-07-25"
-date_display: "2025-09-13"
+date_display: "2025. szeptember 13."
 read_time: "14 perc olvasás"
 categories:
-  - "Társaságalapítás Tajvanon"
+  - "Cégalapítás Tajvanon"
 featured_image: "../images/001-taiwan-company-establishment-basics/featured-01.jpg"
 faq:
   - q: "Tajvani társaság alapításakor miben különbözik a leányvállalat, a fióktelep és a képviseleti iroda?"

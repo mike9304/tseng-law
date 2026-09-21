@@ -2,10 +2,10 @@
 title: "Öröklés és szülői felügyelet Tajvanon: jogi útmutató a hátramaradt családnak"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
 lastmod: "2026-07-25"
-date_display: "2025-09-13"
+date_display: "2025. szeptember 13."
 read_time: "16 perc olvasás"
 categories:
-  - "Jogi információk Tajvanról"
+  - "Tajvani jogi tájékoztatás"
 featured_image: "../images/016-taiwan-inheritance-custody-analysis/featured-generic.webp"
 faq:
   - q: "Ha nincs végrendelet, és csak a házastárs és két gyermek az örökös, hogyan alakul az örökrész?"

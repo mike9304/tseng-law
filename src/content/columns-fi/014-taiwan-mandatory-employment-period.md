@@ -2,7 +2,7 @@
 title: "Sopimus vähimmäispalvelusajasta Taiwanissa: pätevyyskriteerit, koulutuskustannukset ja sopimussakko"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-mandatory-employment-period"
 lastmod: "2026-07-25"
-date_display: "13. syyskuu 2025"
+date_display: "13. syyskuuta 2025"
 read_time: "18 min lukuaikaa"
 categories:
   - "Oikeudellista tietoa Taiwanista"

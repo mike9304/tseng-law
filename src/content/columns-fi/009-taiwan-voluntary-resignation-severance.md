@@ -2,10 +2,10 @@
 title: "Poikkeukset, joissa työntekijät voivat omasta irtisanoutumisestaan huolimatta saada irtisanomiskorvausta (資遣費)"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
 lastmod: "2026-09-10"
-date_display: "13. syyskuu 2025"
+date_display: "13. syyskuuta 2025"
 read_time: "3 min lukuaikaa"
 categories:
-  - "Oikeudellisia tietoja Taiwanista"
+  - "Oikeudellista tietoa Taiwanista"
 featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg"
 ---
 

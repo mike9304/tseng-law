@@ -2,7 +2,7 @@
 title: "الميراث وممارسة الحقوق والواجبات تجاه الابن القاصر في تايوان: إرشاد قانوني للأسرة الباقية"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
 lastmod: "2026-07-25"
-date_display: "13/9/2025"
+date_display: "13 سبتمبر 2025"
 read_time: "13 دقيقة قراءة"
 categories:
   - "معلومات قانونية"

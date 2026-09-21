@@ -2,10 +2,10 @@
 title: "Jak naložit s kapitálem a majetkem společnosti, když ukončujete společnost na Tchaj-wanu?"
 url: "https://www.wei-wei-lawyer.com/post/withdraw-capital-taiwan-company"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13. září 2025"
 read_time: "16 min čtení"
 categories:
-  - "Založení společnosti na Tchaj-wanu"
+  - "Zakládání společností na Tchaj-wanu"
 featured_image: "../images/002-withdraw-capital-taiwan-company/featured-01.png"
 faq:
   - q: "Aby se prostředky tchajwanské společnosti vrátily společníkům, je vždy nutné provést zrušení a likvidaci?"

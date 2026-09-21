@@ -2,7 +2,7 @@
 title: "Як оцінюється відповідальність при ДТП під час обгону на Тайвані?"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
 lastmod: "2026-09-10"
-date_display: "13/9/2025"
+date_display: "13 вересня 2025"
 read_time: "4 хв читання"
 categories:
   - "Правова інформація про Тайвань"

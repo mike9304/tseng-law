@@ -2,7 +2,7 @@
 title: "Perintöoikeus ja huolto Taiwanissa: oikeudellinen opas jäljelle jääneelle perheelle"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
 lastmod: "2026-07-25"
-date_display: "13. syyskuu 2025"
+date_display: "13. syyskuuta 2025"
 read_time: "16 min lukuaikaa"
 categories:
   - "Oikeudellista tietoa Taiwanista"

@@ -1,0 +1,55 @@
+WO-C-G — 러시아어 칼럼 003~018 번역 (16편). 001·002는 총괄이 이미 번역해 커밋했다.
+
+작업트리: /Users/son7/Projects/tseng-law-columns-e-20260920. 밖 쓰기 금지. git add/commit/push 금지.
+node: export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+**선행 학습(필수)**
+- **문체 기준은 이미 있는 `src/content/columns-ru/001-...md` 와 `002-...md` 다.** 총괄이 직접 번역했다.
+  어휘·격식·한자 병기 방식·링크 처리·숫자 표기를 그대로 이어가라. 이 두 파일은 **수정 금지**.
+- 원본: `src/content/columns/*.md` (한국어). 의미 기준은 이 원본이다.
+- 구조 선례: `src/content/columns-de/` 와 `src/content/columns-fr/`.
+
+## 1. 산출물
+`src/content/columns-ru/` 에 003~018 **16편**. 파일명은 원본과 동일.
+
+## 2. 제품 잠금
+- ru는 **안내 로케일**이다. 상담 언어는 영어·중국어(中文)·일본어·한국어 넷뿐.
+  러시아어 상담·통역·즉시응답·성공률·비용/결과 보장·24/7·무료 상담을 암시조차 하지 말 것.
+- 대만 변호사 광고규정: 승소율·보장·최고/유일 금지. 새 법률 주장 금지.
+- `[변호사 검수 필요]` 0건.
+- 대만 법률 용어는 **번체 한자를 괄호로 병기**한다(工作許可, 資遣費, 勞動契約, 外僑居留證 …).
+  키릴로 음역하지 말 것. TWD·USD·PE·ARC 같은 라틴 약어도 원문 그대로.
+- 대표 변호사는 여성이다. 이름은 `Wei Tseng (曾雋崴)` 라틴 표기 그대로 쓰고 키릴 음역하지 말 것
+  (001·002가 그렇게 돼 있다).
+- 한국 기업 → 외국 기업으로 일반화(fr·de 선례와 동일). 러시아·독립국가연합 관련 서술 추가 금지.
+
+## 3. 형식 패리티 (체커가 검사한다)
+- frontmatter 키 집합·순서는 원본과 같게. `url` `lastmod` `featured_image` 는 **원본 값 그대로**.
+  `date_display`는 러시아어 표기(예: "13 сентября 2025"), `read_time`은 "N минут чтения".
+- `faq` 항목 수는 원본과 정확히 같게. 없으면 만들지 말 것.
+- 본문 블록 수·순서가 원본과 일치. 합치거나 쪼개지 말 것. 이미지 경로 그대로, 대체 텍스트만 번역.
+- 링크: `/ko/columns` `/ko/contact` `/ko/services` `/ko/faq` `/ko/pricing` 만 `/ru/...` 로 바꾼다.
+  `/ko/services/investment` 같은 상세 경로와 외부 링크는 **그대로**.
+- **숫자는 아라비아 숫자로.** 원본과 개수가 같아야 한다. 천단위는 점(TWD 3.000.000).
+  단, 러시아어 관용상 낱말로 쓰는 분수·수사는 사전에 등록돼 있다
+  (две трети, двух третей, одну треть, одна/одну/одной …). 그 외는 숫자로 쓰는 편이 안전하다.
+- 한글이 남아 있으면 안 된다. `url` 값 안의 한글은 예외(원본 주소 그대로).
+
+## 4. 금지 파일
+`src/content/columns-ru/003~018` 과 이 워크오더의 로그 외에는 아무것도 쓰지 말 것.
+`001`·`002`, `scripts/**`, `src/lib/**`, `src/data/**` 는 총괄 소유다.
+
+## 5. 검증 (전부 실행하고 출력 그대로 보고)
+cd /Users/son7/Projects/tseng-law-columns-e-20260920 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+ls src/content/columns-ru/*.md | wc -l
+node scripts/check-column-translation.mjs --dir src/content/columns-ru --lang ru 2>&1 | tail -20
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ru | wc -l
+git status --short | wc -l
+
+**합격 기준: `summary PASS 18/18 files`, 마커 0, 파일 18.**
+PASS가 아니면 고쳐서 다시 돌린다. 실패한 채로 보고하지 말 것.
+003 하나를 먼저 끝내고 바로 체커를 돌려 형식을 확인한 뒤 나머지로 넘어갈 것.
+
+## 6. 보고
+`docs/i18n/global-plan/evidence/grok-C-G.log` 에만 남긴다.
+항목: 파일 수 · §5 출력 그대로 · 용어 판단 · 미해결.

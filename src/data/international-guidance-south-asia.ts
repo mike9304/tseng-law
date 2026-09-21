@@ -1,4 +1,3 @@
-import { AR_PRIVACY_POLICY_LABEL } from './guidance-privacy-label';
 import type { GuidanceLocaleContent } from './international-guidance-content';
 
 // SCAFFOLD: bn, ur, fa, ta — cloned from template packs; every string must be translated and the SCAFFOLD markers removed.

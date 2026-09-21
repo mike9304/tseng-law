@@ -320,7 +320,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     description: 'Адреса офисов Hovering International Law Firm на Тайване.',
     officeLabel: 'Офис',
     mapPreviewLabel: 'Предпросмотр карты',
-    koreaOfficeTitle: 'Офис Корея',
+    koreaOfficeTitle: 'Офис в Корее',
     koreaAddressCardLabel: 'Адрес офиса в Корее',
     koreaMapLinkLabel: 'Смотреть в Naver Map',
     reviewCountWord: 'отзывов',

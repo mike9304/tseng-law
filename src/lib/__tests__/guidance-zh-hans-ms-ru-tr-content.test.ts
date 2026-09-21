@@ -207,9 +207,9 @@ describe('zh-hans/ms/ru/tr attorney gender and language FAQ', () => {
     expect(guidanceContent.ms.home.columnsReviewLabel).toMatch(/peguam Wei Tseng/);
   });
 
-  it('names Wei Tseng as адвокат Вэй Цзэн with feminine agreement in Russian', () => {
+  it('names Wei Tseng as адвокат Wei Tseng (曾雋崴) with feminine agreement in Russian', () => {
     const text = allText('ru');
-    expect(text).toMatch(/адвокат Вэй Цзэн/i);
+    expect(text).toMatch(/адвокат(?:ом)? Wei Tseng \(曾雋崴\)/i);
     expect(guidanceTeamBios.ru['tseng-junwei'].intro.join(' ')).toMatch(/Она /);
     expect(guidanceTeamCopy.ru.qualificationSentence).toMatch(/уполномочена/);
   });

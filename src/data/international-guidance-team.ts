@@ -436,27 +436,27 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'НАША КОМАНДА',
     title: 'Международная команда Hovering',
     description:
-      'Профили адвокатов, руководства по операциям и партнёрской бухгалтерии Hovering.',
-    representativeTitle: 'Руководящий адвокат',
+      'Профили адвокатов, операционного менеджера и партнёра-бухгалтера Hovering.',
+    representativeTitle: 'Управляющий адвокат',
     teamTitle: 'Адвокаты и сотрудники',
-    partnerTitle: 'Партнёрская бухгалтерия',
-    introLabel: 'Представление',
+    partnerTitle: 'Партнёр-бухгалтер (CPA)',
+    introLabel: 'О себе',
     educationLabel: 'Образование',
     experienceLabel: 'Опыт',
     photoAltPrefix: 'Фото',
     workingLanguagesLabel: 'Рабочие языки',
-    fullProfileLabel: 'Полный профиль (English)',
-    keyFactsHeading: 'Адвокат Вэй Цзэн — Основные сведения',
+    fullProfileLabel: 'Полный профиль (на английском)',
+    keyFactsHeading: 'Адвокат Wei Tseng (曾雋崴) — основные сведения',
     qualificationLabel: 'Квалификация и фирма',
     qualificationSentence:
-      '{name} уполномочена практиковать на Тайване и является руководящим адвокатом {firm}.',
+      '{name} уполномочена вести адвокатскую деятельность на Тайване и возглавляет {firm}.',
     practiceLabel: 'Основные направления',
     consultationLanguagesLabel: 'Языки консультации',
     roles: {
-      'tseng-junwei': 'Руководящий адвокат на Тайване (Managing Attorney)',
+      'tseng-junwei': 'Управляющий адвокат на Тайване (Managing Attorney)',
       'chang-rongxuan': 'Адвокат на Тайване (Taiwan Attorney)',
       'chang-fangyu': 'Помощник адвоката',
-      'son-jungmin': 'Руководство операциями Кореи (Korea Operations Manager)',
+      'son-jungmin': 'Операционный менеджер по Корее (Korea Operations Manager)',
       'huang-shengping': 'Партнёр-бухгалтер (Partner CPA)',
     },
   },
@@ -1869,11 +1869,11 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Фирма ведёт дела компаний и частных лиц на Тайване на английском, японском, корейском и китайском языках.',
-        'Она представляла корейского студента в требовании о возмещении вреда из-за травмы в спортивном зале и добилась решения первой инстанции на TWD 1.57M.',
+        'Она представляла студента из Кореи в требовании о возмещении вреда из-за травмы в спортивном зале и добилась решения первой инстанции на 1,57 млн TWD.',
       ],
       education: [
         'Магистр (M.S.), Institute of Finance, National Taiwan University',
-        'Бакалавр (B.A.) с двойным обучением по праву и финансам, National Chengchi University',
+        'Бакалавр (B.A.) по двум специальностям — право и финансы, National Chengchi University',
         'Студентка по обмену в Kobe University и Waseda University',
       ],
       experience: [
@@ -1900,8 +1900,8 @@ export const guidanceTeamBios: Record<
       ],
       education: ['Бакалавр права (LL.B.), Tunghai University'],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Старший помощник адвоката, Boyin Law Firm',
+        'Старший помощник адвоката, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
@@ -1910,7 +1910,7 @@ export const guidanceTeamBios: Record<
         'Поддерживает обмен между подразделениями через системы документов и рабочие процессы, на основе информатики.',
       ],
       education: ['Бакалавр (B.S.) информатики, National Cheng Kung University'],
-      experience: ['Направление операций Кореи, Hovering International Law Firm'],
+      experience: ['Операционное направление по Корее, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [

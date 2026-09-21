@@ -13,4 +13,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `fr-a.md` 
 - 'groupes d’activité' → 'domaines d’intervention'; 'pour le besoin local' → 'pour répondre aux besoins locaux'; 'dans un même flux' → 'de manière intégrée'; 'de façon d’ensemble' → 'dans leur ensemble'; blog voice R7.
 
 ## Part b
-Apply every P1/P2 row of `fr-b.md` under the same skip rules above.
+Apply every P1/P2 row of `fr-b.md` under the same skip rules above. Additional: b#1 posture → état d’esprit (心態); b#2 assurés → préservés; b#3 skip (mechanical); b#4 Statut → 'loi sur les investissements étrangers (外國人投資條例)'; b#6/b#7 → 'clause de durée minimale de service (最低服務年限)' + R7b; b#5, b#8 → R3/R7; b#9 → 'une avocate'; b#10 saisie → 'la prise en charge des dettes'; b#11 nakaguro → 'Lienchiang (Matsu, 連江／馬祖)' with a normal slash; b#12 commissaire → 'superviseur de la société (監察人)'; b#13 captation → 'levée de fonds fréquente'; b#14 associés → actionnaires (股東); 'sujet' → 'entité/titulaire'; thousands 25 000 000 TWD (espace fine or space) if the checker accepts; 'de soi' → 'automatiquement'.

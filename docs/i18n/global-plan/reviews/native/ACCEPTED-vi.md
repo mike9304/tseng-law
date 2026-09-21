@@ -14,4 +14,4 @@ Scope for the fixer: RULEBOOK-FIX.md (all rules) + every P1/P2 row of `vi-a.md` 
 - Number punctuation: Vietnamese 1.579.589 (period thousands) consistently; blog voice R7.
 
 ## Part b
-Apply every P1/P2 row of `vi-b.md` under the same skip rules above.
+Apply every P1/P2 row of `vi-b.md` under the same skip rules above. Additional: b#1 → R3/R7; b#2 'thế lực nước ngoài' → 'bên nước ngoài'; b#3 hộ tịch → 'đăng ký hộ khẩu (戶籍)' (also 016); b#4 Ủy ban → 'Vụ Thẩm định Đầu tư, Bộ Kinh tế (經濟部投資審議司)'; b#5 → 'văn phòng đại diện đăng ký theo Điều 386 Luật Công ty'; b#6 kế toán viên → 'kế toán viên công chứng (會計師, CPA)'; 條例 → 'Luật/Quy định (外國人投資條例)' not điều lệ; FAQ openings → R7b; Sino-Vietnamese memo calques → plain Vietnamese per reviewer P2; emoji/Ví dụ)/Q. → R7.

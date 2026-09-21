@@ -1,1 +1,22 @@
 [WO start 2026-09-21 16:42:55]
+Review is in `docs/i18n/global-plan/reviews/native/fr-b.md` (columns 010–018 only). Naturalness: **N/A** for the guidance pack, **3/5** for the columns. 14 P1 rows (meaning, advertising, gender, leftover Japanese/Hangul-adjacent script) and 36 P2 rows. 012 is the strongest file; 013/015 still read as a Korean blog; 018 mixes SARL *associés* into the 股份有限公司 paragraph and calls 監察人 a *commissaire*.
+
+Last 15 lines of the output file:
+
+```
+| 37 | P2 | C | columns-fr/016-taiwan-inheritance-custody-analysis.md | "guide juridique pour la famille qui reste" | Calque of *surviving families*; a native writes *famille survivante*. | "guide juridique pour la famille survivante" |
+| 38 | P2 | C | columns-fr/016-taiwan-inheritance-custody-analysis.md | "sont le rang 1 de la succession légale" | Digit for the first statutory rank of heirs. | "sont au premier rang de la succession légale" |
+| 39 | P2 | B | columns-fr/016-taiwan-inheritance-custody-analysis.md | "n’entrent pas de soi dans le calcul" | *De soi* is not French for “automatically”. also 016 `devient de soi tuteur` ; 017 `ne se transmet pas de soi`. | "n’entrent pas automatiquement dans le calcul" |
+| 40 | P2 | A | columns-fr/016-taiwan-inheritance-custody-analysis.md | "la traduction et la légalisation (認證)" | 認證 of a will is notarial authentication; *légalisation* is apostille/consular. | "la traduction et l’authentification (認證)" |
+| 41 | P2 | C | columns-fr/016-taiwan-inheritance-custody-analysis.md | "n’en deviennent pas les propriétaires économiques" | English *beneficial owner*; *propriétaire économique* is jargon. | "n’en deviennent pas les titulaires économiques" |
+| 42 | P2 | C | columns-fr/016-taiwan-inheritance-custody-analysis.md | "## 3. Droit du conjoint à la répartition du patrimoine résiduel" | Topic heading; the next sentence is the FAQ answer `Non.` (R7b). | "Le droit du conjoint à la répartition du patrimoine résiduel est-il le même que la quote-part successorale ?" |
+| 43 | P2 | C | columns-fr/017-taiwan-logistics-business-setup.md | "l’attention au client à la fin du contrat" | *Attention au client* is a calque of customer service. also 017 `"et l’attention au client"`. | "le service client à la fin du contrat" |
+| 44 | P2 | C | columns-fr/017-taiwan-logistics-business-setup.md | "transport de marchandises par automobile" | A France reader expects *transport routier de marchandises*; keep the Chinese gloss. throughout 017. | "transport routier de marchandises (汽車貨運業)" |
+| 45 | P2 | A | columns-fr/018-taiwan-semiconductor-market-entry.md | "Commission des investissements du ministère de l’Économie (經濟部投資審議司)" | 011/013/017 already say *Département de l’examen* for the same 司. | "Département de l’examen des investissements du ministère de l’Économie (經濟部投資審議司)" |
+| 46 | P2 | A | columns-fr/018-taiwan-semiconductor-market-entry.md | "une société non émettrice publique peut, par les statuts" | 非公開發行公司 is a company that has not made a public offering, not a “public issuer”. | "une société n’ayant pas fait d’offre publique peut, par les statuts" |
+| 47 | P2 | C | columns-fr/018-taiwan-semiconductor-market-entry.md | "il ne peut exercer d’activité mercantile à Taïwan" | *Mercantile* is dated; company law says *activité commerciale*. | "il ne peut exercer d’activité commerciale à Taïwan" |
+| 48 | P2 | A | columns-fr/018-taiwan-semiconductor-market-entry.md | "la langue d’entretien souhaitée" | 諮詢 is consultation, not an interview. also 018 `"langues d’entretien réellement disponibles"`. | "la langue de consultation souhaitée" |
+| 49 | P2 | C | columns-fr/018-taiwan-semiconductor-market-entry.md | "Qui doit le soutien au client et traite les problèmes" | Calque of *owes support*; a native writes *qui est tenu de*. | "Qui est tenu du soutien au client et traite les problèmes" |
+| 50 | P2 | C | columns-fr/018-taiwan-semiconductor-market-entry.md | "Pouvez-vous commencer par un distributeur puis passer à une société" | On a firm FAQ, *pouvez-vous* is read as asking the firm, not the client. | "Peut-on commencer par un distributeur puis passer à une société à Taïwan ?" |
+```
+=== end code=0 2026-09-21 16:50:06 ===

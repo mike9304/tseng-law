@@ -13,13 +13,13 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![主图](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-近来许多人已在台湾成功设立公司并取得工作签证与居留证（外侨居留证），
+近来不少人已在台湾完成公司设立，并取得工作签证与居留证（外僑居留證，ARC）。
 
 设立时常见问题汇总如下。
 
 读过[**公司设立基础篇**](/zh-hans/columns/taiwan-company-establishment-basics)的人，可接着参阅这篇更详细的深入篇。
 
-以下问答（Q&A）旨在协助考虑在台湾设立公司的人。 😊
+以下问答旨在协助考虑在台湾设立公司的人。
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
@@ -29,17 +29,17 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 投资审议司须核对该资本额是否确实用于投资目的，
 
-以及外国行为人是否以其他借口引入资金。
+以及外国投资人是否借其他名目把资金汇入台湾。
 
 撰写投资计划书时，不必记载公司精确地址；记载地区即可（例：台北市）。 ​
 
 其后在银行开立公司筹备处账户时，许多银行仍会审查租赁契约并实地检查公司地址。
 
-一位台湾银行职员曾当面告诉我，
+曾有台湾银行职员表示，
 
 近来许多外国人在开户后消失，故开户处理越来越严格。
 
-基础篇中已有读者指出开户是最难的一步；我同意。
+实务上，开户往往是整个流程中最困难的一步。
 
 因为台湾洗钱案例很多，银行开户越来越严格。
 
@@ -63,7 +63,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 银行通常要求双重身份核验，
 
-没有居留证时，可向台湾移民署申请「**基本资料表**」（统一证号基本资料表）。
+没有居留证时，可向台湾移民署申请“**基本资料表**”（統一證號基本資料表）。
 
 当天即可发给，
 
@@ -73,7 +73,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 **3. 听说审查投资计划时须记载学历与职业经历，我担心自己的学历与经历与拟设立公司的行业不符。**
 
-经济部审议委员会固然审查投资人背景，
+经济部投资审议司固然审查投资人背景，
 
 但审查并非过度严格。
 
@@ -81,7 +81,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 并详细说明，以便说服承办审查的人。
 
-就此点，您应与台湾律师深入交换意见。
+投资人背景与行业是否匹配，宜结合具体计划再作核对。
 
 ​
 
@@ -91,7 +91,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 故须将契约开始日尽量往后订。
 
-此外，台湾商业店铺租赁契约中，出租人常给承租人「**装潢期间**」（装潢期间）。
+此外，台湾商业店铺租赁契约中，出租人常给承租人“**装潢期间**”（裝潢期間）。
 
 这是免租金期间；可以协商。
 
@@ -99,7 +99,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 出租人因此犹豫是否租给外国人。
 
-所以我建议尽早寻找经营场所。
+因此建议尽早寻找经营场所。
 
 若与出租人的协商不顺利，
 
@@ -111,7 +111,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 这取决于公司的营业项目。
 
-例）若营业项目是餐饮却拟承租办公商业空间，银行开户将非常困难。
+例如：若营业项目是餐饮却拟承租办公商业空间，银行开户将非常困难。
 
 如前所述，银行会审查租赁契约并实地检查公司地址。
 
@@ -119,11 +119,11 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 若是办公商业空间，则无法办理公司登记。
 
-例）若是办公商业空间可能的营业项目，如广告或批发，则可在办公商业空间设立公司。签署租赁契约前
+例如：若是办公商业空间可能的营业项目，如广告或批发，则可在办公商业空间设立公司。签署租赁契约前，
 
 您应事先核对。
 
-*若您需要台湾法律方面的协助或交流，请留言或联系。*
+*如需就具体案件讨论，请通过联系页提交案情摘要；本所不承诺回复时间。*
 
 ---
 

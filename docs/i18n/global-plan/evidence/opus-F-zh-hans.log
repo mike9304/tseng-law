@@ -1,0 +1,104 @@
+# WO-F-zh-hans — Opus 5 fix lane log (2026-09-21)
+Workspace: /Users/son7/Projects/tseng-law-fix-j-20260921 (no git add/commit/push done)
+Scope written: src/content/columns-zh-hans/*.md (18), src/data/international-guidance-asia.ts,
+src/data/international-guidance-team.ts, src/data/international-guidance-answers.ts,
+src/data/international-inquiry-copy.ts, src/lib/llms-txt.ts, this log. No test file needed changing.
+
+## 1. Systemic sweeps (pattern -> instances changed)
+Columns (all 18 files):
+- 「」 corner quotes -> “ ”                                        27 pairs
+- 检视 -> 审查 / 核对 / 评估 / 考虑 (collocation-aware)              157
+    一并检视 24, 分别检视 13, 另行检视 8, 先检视 4, 逐项检视 3, 同时检视 2,
+    审慎检视 2, 分开检视 2, 事先/重新/再次/再/一起检视 1 each, rest -> 审查 95
+    (+11 hand-fixed collocations: 可审查刑事告诉 -> 可考虑提出刑事告诉 etc.)
+- TWD N / 新台币TWD N / TWD N（新台币）-> 新台币N元 (mainland form)   70
+- 劳动契约 -> 劳动合同 + （勞動契約） on first use per file          18
+- 第3人 -> 第三人                                                   18
+- 第1审 -> 一审 · 第2审 -> 二审 · 第3国 -> 第三国                    15 / 7 / 1
+- 税捐 -> 税收 · 税捐机关 -> 税务机关 · 税捐债务/债权 -> 税款…        21
+- 智慧财产 -> 知识产权 + （智慧財產權） first use                     6
+- 声请 -> 申请 + （聲請） first use                                   5
+- 帖文/贴文 -> 帖子                                                  5 + 3
+- 入国 -> 入境 3 · 事业体 -> 法律主体 2 · 检察署 -> 检察机关 1
+- 资讯 -> 信息 8 · 讯息 -> 信息 2 · 行动电话 -> 手机 2 · 本店 -> 总公司 29
+- 监视器影像 -> 监控录像, 摄影机 -> 摄像头 (010)
+- Self-gloss X（X）-> Traditional gloss on first use: 工作许可（工作許可）,
+  外僑居留證（ARC）, 資遣費, 勞動契約, 常設機構, 專門服務, 專門性或技術性工作,
+  僑外投資事業主管工作許可, 公司名稱及所營事業預查, 公司負責人, 清算所得申報,
+  無過失給付, 未分配盈餘加徵, 勞動能力減損, 告訴乃論之罪, 化粧品製造或輸入業者,
+  產品資訊檔案, 統一證號基本資料表, 裝潢期間, 營業場所預先查詢, 建物登記第二類謄本,
+  主動查詢之營業項目, 臺北市營業場所協助查詢服務作業須知, 存證信函, 罰鍰, 特有財產,
+  親權, 應繼分, 拋棄繼承, 贍養費, 會面交往, 彎道, 鐵路平交道, 小貨車, 運送承攬,
+  汽車貨運業經營許可, 會計師查核簽證, 興櫃, 勞工保險, 檢認, 專業技術培訓, 曠職, 猥褻  (~45 spots)
+- R7b orphan FAQ answers made self-standing (011 §1, 014 §1/§6, 016 §3/§7, 017 §1/§3/§4,
+  007 §3/§6/§7)                                                     11 sections
+- R7 blog register: missing terminal punctuation / telegram fragments repaired in
+  003 Q16–Q20, 006, 008, 009, 013, 015                              ~35 blocks
+Guidance pack (zh-hans strings only):
+- 「」 -> “ ” (沟通方式须待确认 ×3 surfaces, 「昊」「鼎」)             5
+- 智慧财产 -> 知识产权 (+ first-use 智慧財產權)                        6
+- 劳动契约 -> 劳动合同（勞動契約）                                     2
+- 影片 -> 视频 (video labels)                                         3
+- 审视 -> 评估 (沟通方式) 4 · 检警 -> 检察机关、警方 1
+- 资料 -> 个人信息 / 信息 (privacy page + contact + llms + inquiry)   12
+- 营运 -> 运营 2 · 主持律师 -> 主任律师（主持律師） 3
+- Latin chrome: 完整简介 (English) -> 完整简介（英文）; roles ASCII ( ) -> （ ）;
+  bio schools/organs given Chinese + English in parens (5 lines)
+
+## 2. Rows applied
+zh-hans-a.md: 1–23, 26(no-op, already R1), 27–41, 42–65 — all P1/P2 applied.
+zh-hans-b.md: 1–20, 21(partial, see §4), 22–50 — all P1/P2 applied.
+zh-hans-supervisor.md: 1, 3, 4, 5, 6, 7, 8, 9, 11, 12 applied; 2 applied per ACCEPTED
+(common words 离婚/继承 get no gloss); 10 applied with a deviation (see §4).
+RULEBOOK-FIX: R2a–R2f, R3, R4, R5, R6, R6b, R7, R7b, R8, R9, R10 applied.
+- R2b country-specific note added to 001 §1 and 004 §6 (Taiwan–Korea tax agreement is a
+  Korea-related fact pattern, not a worldwide investor rule).
+- R2c/R2d/R2e: 004 "即使韩国母公司" -> "境外母公司…韩国只是本文后面标示的一个例子";
+  008/009 "与韩国不同" -> "与不少法域（例如韩国）不同"; 007 Korea–Taiwan family and
+  "子女将在韩国生活" -> neutral; 005 Q1/Q5 -> 境外/外国人 with Korea kept as labelled example.
+- R3: 003 typical-sentence claims (3/4/6 个月), 缓刑, "赔偿尽量提高"; 005/013/015 "随时联系";
+  008 "在律师协助下领取较高资遣费" -> "依法确认其资遣费请求权". Team-bio fact
+  新台币157万元 一审判决 kept (number format only).
+- R9: 003 Q2 now says explicitly 119（救护车与消防）/110（报警）/112（手机）in Taiwan.
+
+## 3. Rows skipped (with reason)
+- a#24, a#25 (Hangul-slug wei-wei-lawyer.com body links, frontmatter `url` Hangul):
+  skipped per ACCEPTED-zh-hans "rows to SKIP"; also checkLinks compares href sets against the
+  Korean source, so rewriting those hrefs would FAIL the `links` gate.
+- a#26 (/ko/ "韩语律师" CTA): already 0 occurrences (R1 done mechanically).
+- a#39 "OUR TEAM"/"OFFICES": already localized (我们的团队 / 办公室) — no change needed.
+- Frontmatter `categories: "台湾法律资讯"` left as is: the rendered badge comes from
+  GUIDANCE_COLUMN_CATEGORY_LABELS in src/lib/columns.ts, which is OUT of this WO's write scope.
+  Changing only the frontmatter would desync the two. -> supervisor decision needed.
+
+## 4. Checker-forced deviations (R6 "keep the form the checker accepts")
+WORD_NUMERAL_LEXICONS['zh-hans'] in scripts/check-column-translation.mjs does not actually match
+bare Chinese numerals (verified: analyzeNumbers('第二类…三分之一…两名','zh-hans') -> only the
+Arabic 2 is tokenised). Any digit -> Chinese-numeral conversion therefore drops a number and
+FAILs `numbers`. Kept in digit form and noted here:
+- 015 建物登记第2类誊本 (b#15) — Simplified text keeps 第2类; the official Traditional gloss
+  建物登記第二類謄本 is added. Converting the running text FAILed numbers (2×2 missing).
+- 016 第1顺位, 016 原则上…各继承1/3 (三人 applied, 1/3 kept), 018 第2名起, 007 第1次,
+  statutory 第N条/第N项/第N款 — all kept with Arabic digits.
+- 008 faq: removing the duplicated 第12条 FAILed numbers (source has two); restored by adding
+  the proper Traditional gloss 台湾劳动基准法第12条（勞動基準法第12條）in the body table.
+- 013: "本所不承诺即时回复" FAILed `forbidden` (zh-hans-immediate matches 即时回复 even inside a
+  denial) -> reworded to "本所不承诺回复时间".
+
+## 5. Disagreements with the reviews (NOT applied as written)
+- supervisor #10 (未成年子女权利义务之行使或负担 -> 未成年子女的抚养与监护（親權）):
+  dropping the Taiwan statutory formula conflicts with the WO hard rule and R8 (gloss the
+  Chinese) and with a#2/a#60. Applied a middle form instead:
+  "未成年子女权利义务之行使或负担（未成年子女權利義務之行使或負擔，即亲权与抚养）".
+- b#40 (3人各继承1/3 -> 三人各继承三分之一): only 三人 applied; 三分之一 breaks the checker.
+- b#21 (第1顺位/第2名 -> 一/二): breaks the checker; see §4.
+- a#16 suggested glossing 赡养费 in the body as well; one gloss per surface was used
+  (faq + first body use) to avoid repetition.
+- a#2/a#4 asked for 离婚（離婚）/继承（繼承）/商标（商標）/专利（專利）; per ACCEPTED these are
+  common words and got no gloss (supervisor rows 2 and 4 followed instead).
+
+## 6. §Verify output (verbatim)
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+
+(the 25th entry in git status is this log file itself; the other 24 are the 18 columns,
+4 guidance data files, src/lib/llms-txt.ts and the untracked WO-F-zh-hans.txt)

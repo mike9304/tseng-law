@@ -1,1 +1,67 @@
-[WO start 2026-09-22 06:50:30]
+WO-N-fa-b — Persian columns 010–018
+date: 2026-09-22
+worktree: /Users/son7/Projects/tseng-law-new-fa-20260922
+files: 9 (src/content/columns-fa/010…018)
+
+## File count
+9 (dir now 18 with part A 001–009)
+
+## §Verify (verbatim)
+
+$ ls src/content/columns-fa/*.md | wc -l
+      18
+
+$ node scripts/check-column-translation.mjs --dir src/content/columns-fa --lang fa 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-fa-20260922/src/content/columns-fa/018-taiwan-semiconductor-market-entry.md  lang=fa
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=56
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-fa | wc -l
+       0
+
+$ git status --short | wc -l
+      45
+
+## Key term choices (Persian + Traditional-Chinese gloss)
+- حمل بار با خودرو (汽車貨運業)
+- قانون راه‌ها (公路法)
+- مجوز آماده‌سازی تأسیس (籌設許可)
+- انجمن صنفی (同業公會)
+- پلاک وسیلهٔ فعالیت (車輛牌照); ابطال با تسلیم (繳銷); انتقال نام در ثبت وسیله (過戶轉讓)
+- ترک ارث (拋棄繼承); سقوط حق ارث (喪失繼承權); ارث به جانشینی (代位繼承)
+- حصهٔ محفوظ (特留分); مال خاص فرزند (特有財產)
+- توزیع مابه‌التفاوت اموال باقی‌ماندهٔ زوجین (剩餘財產差額分配); قیمومت صغیر (未成年監護)
+- پروانهٔ کار (工作許可); ناظر شرکت (監察人); سهامدار (股東)
+- ادارهٔ بررسی سرمایه‌گذاری وزارت اقتصاد (經濟部投資審議司); تأیید مبلغ سرمایه‌گذاری (投資額審定)
+
+Register: formal شما; quotation «»; Western digits; thousands 100,000; dates 13 سپتامبر 2025 (018: 17 سپتامبر 2026).
+Byline: **وکیل Wei Tseng (曾雋崴)** — Latin name kept; Persian وکیل is not gendered on the noun.
+Categories: 010 تحلیل پرونده; 011/013/015/017/018 تأسیس شرکت در تایوان; 012/014/016 اطلاعات حقوقی تایوان.
+Links: /fa/services (اموری که میپذیریم), /fa/lawyers (تیم بین المللی Hovering), /fa/contact (چگونه با دفتر تماس بگیرید), /fa/pricing (محدودهٔ کار و هزینه چگونه تعیین میشود). 011 Invest Taiwan kept `lang=eng`.
+
+R2: Korea-centric framing generalized to foreign investor / labelled Korean example only (010 gym case keeps Korea as labelled fact). R3: no result/win-rate/free-consult claims. R7: 013 emoji/comment CTA removed. R7b: 014/016/017 FAQ bodies that began 아닙니다/그렇지 않습니다 rewritten as self-standing answers.
+
+## Unresolved
+- Checker has no Persian word-numeral lexicon. 제1순위 required a digit (`رتبهٔ 1`); native `رتبهٔ نخست` FAILed numbers. `دو فرزند` for 두 명 is not counted; FAQ/body use `2 فرزند` so the bag matches.
+- 018 Korean frontmatter has no `url`; heading numbers jump 5→7. Both preserved.
+- 013/018 state consultation languages EN / 中文 / Japanese / Korean only; no Persian consultation implied.
+- Nationality gate: ایران/ایرانی unused. Forbidden `تضمین نتیجه` unused (denials use وعدهٔ نتیجه).
+- Hangul only inside byte-identical `url` values (part A 008/009); none in 010–018 bodies.
+- No git add/commit/push.

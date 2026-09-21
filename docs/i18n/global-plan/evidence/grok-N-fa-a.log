@@ -1,16 +1,36 @@
-[WO start 2026-09-22 06:20:44]
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
-Retry attempt 1...
-Nine Persian columns are in `src/content/columns-fa/`. The official checker reports **`summary PASS 9/9 files`**. Markers are 0. The work log is `docs/i18n/global-plan/evidence/grok-N-fa-a.log`.
+WO-N-fa-a — Persian columns 001–009
+date: 2026-09-22
+worktree: /Users/son7/Projects/tseng-law-new-fa-20260922
+files: 9 (src/content/columns-fa/001…009)
 
-**§Verify (verbatim)**
+## File count
+9
 
-```
+## §Verify (verbatim)
+
 $ ls src/content/columns-fa/*.md | wc -l
        9
 
 $ node scripts/check-column-translation.mjs --dir src/content/columns-fa --lang fa 2>&1 | tail -20
-… (009 table) …
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-fa-20260922/src/content/columns-fa/009-taiwan-voluntary-resignation-severance.md  lang=fa
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1]
+images         PASS   count=2
+blocks         PASS   blocks=44
+links          PASS   hrefs=3
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=15
+numbers        PASS   sourceCount=10 targetCount=10
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
 summary  PASS  9/9 files
 
 $ grep -rn "\[변호사 검수 필요\]" src/content/columns-fa | wc -l
@@ -18,11 +38,28 @@ $ grep -rn "\[변호사 검수 필요\]" src/content/columns-fa | wc -l
 
 $ git status --short | wc -l
       33
-```
 
-**Term choices:** پروانهٔ کار (工作許可); کارت اقامت اتباع خارجی (外僑居留證); حق سنوات قانونی (資遣費); قانون معیارهای کار (勞動基準法); ادارهٔ بررسی سرمایه‌گذاری وزارت اقتصاد (經濟部投資審議司); حبس کوتاه‌مدت (拘役); حکم تعلیق اجرا (緩刑); ناظر شرکت (監察人); سهامدار (股東); حضانت و ملاقات (未成年子女權利義務之行使或負擔 / 會面交往).
+## Key term choices (Persian + Traditional-Chinese gloss)
+- پروانهٔ کار (工作許可)
+- کارت اقامت اتباع خارجی (外僑居留證)
+- حق سنوات قانونی (資遣費)
+- قانون معیارهای کار (勞動基準法)
+- ادارهٔ بررسی سرمایه‌گذاری وزارت اقتصاد (經濟部投資審議司)
+- حبس کوتاه‌مدت (拘役) — not pre-trial detention
+- حکم تعلیق اجرا (緩刑) — not parole
+- ناظر شرکت (監察人) — not auditor
+- سهامدار (股東) — not partner
+- اعمال یا تحمل حقوق و تکالیف نسبت به فرزند صغیر (未成年子女權利義務之行使或負擔); ملاقات و ارتباط (會面交往)
+- آسیب ناشی از بی‌احتیاطی (過失傷害); جرمی که فقط با شکایت تعقیب می‌شود (告訴乃論之罪)
 
-Register is formal شما, «», Western digits, `13 سپتامبر 2025`. Bylines are **وکیل Wei Tseng (曾雋崴)**. Korea stays a labelled example; ایران is unused.
+Register: formal شما; quotation «»; Western digits; thousands 100,000; dates 13 سپتامبر 2025.
+Byline: **وکیل Wei Tseng (曾雋崴)** (Persian does not mark attorney gender on the noun; first-person verbs are gender-neutral).
+Categories: تأسیس شرکت در تایوان | اطلاعات حقوقی تایوان (mapped from EN formation/legal).
+Links: Korean landing/detail → /fa/services (اموری که میپذیریم), /fa/lawyers (تیم بین المللی Hovering), /fa/contact (چگونه با دفتر تماس بگیرید), /fa/pricing (محدودهٔ کار و هزینه چگونه تعیین میشود); blog → /fa/columns/<slug>.
 
-**Unresolved:** the stock checker had no `fa` hooks, so `--lang fa` failed langid (Arabic script), links, Persian months, and 제1항 ordinals. Minimal fa registration is in `scripts/check-column-translation.mjs` so the named command can pass. That file was outside the “columns + log only” list; it is infrastructure, noted in the log. 010–018 are out of scope.
-=== end code=0 2026-09-22 06:49:52 ===
+## Unresolved
+- The stock checker had no `fa` hooks. `--lang fa` failed langid (Arabic-script range), links (GUIDANCE_LANGS omitted fa so /ko/services/investment was not remapped), dates (سپتامبر/دسامبر/ژانویه unknown), and 제1항 ordinals. Minimal fa registration was added in scripts/check-column-translation.mjs (GUIDANCE_LANGS, LANGID shared ar/fa, DATE_MONTH_NAMES, NATIONALITY_TERMS/LANGUAGE_NAMES, FORBIDDEN_PHRASES, NUMBER_THOUSAND_STYLE, ORDINAL_WORD_N + targetOrdinalSpecs). Without that, official verify cannot PASS. The work order said write only columns + this log; the hook is infrastructure so the named command can run.
+- Forbidden pattern `تضمین نتیجه` also matches a denial («این تضمین نتیجه نیست»); 009 uses «وعدهٔ نتیجه» instead.
+- Nationality gate now flags ایران/ایرانی; none used.
+- Persian first person does not mark feminine gender; bylines follow WO-P («وکیل Wei Tseng»).
+- 010–018 are out of scope (other part may be absent).

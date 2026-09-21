@@ -333,7 +333,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     experienceLabel: 'Expérience',
     photoAltPrefix: 'Photo',
     workingLanguagesLabel: 'Langues de travail',
-    fullProfileLabel: 'Profil complet (English)',
+    fullProfileLabel: 'Profil complet (en anglais)',
     keyFactsHeading: 'Avocate Wei Tseng — Indications essentielles',
     qualificationLabel: 'Qualification et cabinet',
     qualificationSentence:
@@ -341,11 +341,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     practiceLabel: 'Domaines principaux',
     consultationLanguagesLabel: 'Langues de consultation',
     roles: {
-      'tseng-junwei': 'Avocate dirigeante à Taïwan (Managing Attorney)',
-      'chang-rongxuan': 'Avocat à Taïwan (Taiwan Attorney)',
+      'tseng-junwei': 'Avocate dirigeante à Taïwan',
+      'chang-rongxuan': 'Avocat à Taïwan',
       'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Direction des opérations Corée (Korea Operations Manager)',
-      'huang-shengping': 'Expert-comptable associé (Partner CPA)',
+      'son-jungmin': 'Direction des opérations Corée',
+      'huang-shengping': 'Expert-comptable associé',
     },
   },
   pt: {
@@ -1633,7 +1633,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Le cabinet traite des affaires d’entreprises et de particuliers à Taïwan en anglais, en japonais, en coréen et en chinois.',
-        'Elle a représenté un étudiant coréen dans une demande de dommages-intérêts pour une blessure en salle de sport et a obtenu un jugement de première instance de TWD 1.57M.',
+        'Elle a représenté un étudiant coréen dans une demande de dommages-intérêts pour une blessure en salle de sport et a obtenu un jugement de première instance de 1,57 million TWD.',
       ],
       education: [
         'Master (M.S.), Institute of Finance, National Taiwan University',

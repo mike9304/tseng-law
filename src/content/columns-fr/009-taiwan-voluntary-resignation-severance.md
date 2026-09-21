@@ -13,7 +13,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![Image à la une](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Comme indiqué plus haut, à Taïwan il n’est pas aisé pour le salarié d’obtenir l’indemnité de licenciement (資遣費).
+À Taïwan, il n’est en principe pas aisé pour le salarié d’obtenir l’indemnité de licenciement (資遣費).
 
 ​
 
@@ -21,7 +21,7 @@ En particulier, si le salarié démissionne de son propre chef (自請離職),
 
 il ne peut pas percevoir l’indemnité de licenciement (資遣費) (article 18 de la loi sur les normes du travail),
 
-et cela diffère de la Corée.
+et cela diffère de certains autres droits, par exemple celui de la Corée.
 
 ​
 

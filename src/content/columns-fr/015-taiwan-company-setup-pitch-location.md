@@ -43,7 +43,7 @@ Toute personne peut demander auprès du bureau de l’administration foncière (
 
 Si vous avez du mal à vous rendre en personne au bureau de l’administration foncière (地政事務所),
 
-vous pouvez demander l’aide d’une connaissance à Taïwan, du bailleur, d’un agent immobilier ou d’un avocat.
+vous pouvez demander l’aide d’une connaissance à Taïwan, du bailleur, d’un agent immobilier ou d’une avocate ou d’un avocat.
 
 Si le résultat de la vérification indique que l’établissement de restauration n’est pas possible, plus tard, lors de l’immatriculation de la personne morale (公司登記), la municipalité pourrait ne pas accepter l’immatriculation.
 
@@ -71,7 +71,7 @@ Si l’on ouvre dans un lieu où l’établissement de restauration n’est pas 
 
 « branches faisant l’objet d’une vérification d’office » (主動查詢之營業項目)
 
-Tel est l’essentiel ; pour d’autres questions, vous pouvez vous adresser à tout moment à un avocat de Taïwan.
+Tel est l’essentiel ; pour d’autres questions, vous pouvez écrire depuis la page Contact à une avocate ou à un avocat de Taïwan ; aucun délai de réponse n’est promis.
 
 Les règles des autorités administratives peuvent changer souvent ; avant l’immatriculation de la personne morale, il convient de confirmer la réglementation la plus récente.
 

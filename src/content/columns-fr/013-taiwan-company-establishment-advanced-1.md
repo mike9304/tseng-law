@@ -19,7 +19,7 @@ et les questions fréquemment posées au moment de la constitution sont rassembl
 
 Ceux qui ont lu [**les fondamentaux de la création de société**](/fr/columns/taiwan-company-establishment-basics) peuvent ensuite se reporter aussi à cette partie approfondie plus détaillée.
 
-Les questions et réponses (Q&A) suivantes visent à aider les personnes qui envisagent de constituer une société à Taïwan. 😊
+Les questions et réponses suivantes visent à aider les personnes qui envisagent de constituer une société à Taïwan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
@@ -29,7 +29,7 @@ Lorsqu’un étranger constitue une société à Taïwan, il doit présenter un 
 
 Le Département de l’examen des investissements doit vérifier si le capital (資本額) concerné est réellement utilisé à des fins d’investissement
 
-et si des acteurs étrangers n’introduisent pas des fonds sous un autre prétexte.
+et si des parties étrangères n’introduisent pas de fonds sous un autre prétexte.
 
 Lors de la rédaction du plan d’investissement, il n’est pas nécessaire d’indiquer l’adresse exacte de la société ; l’indication de la région suffit (exemple : ville de Taipei). ​
 
@@ -37,19 +37,19 @@ Lorsque plus tard le compte préparatoire de la société (公司籌備處帳戶
 
 Une employée ou un employé d’une banque taïwanaise m’a dit en personne que
 
-de nombreux étrangers disparaissent récemment après l’ouverture du compte, de sorte que l’ouverture des comptes est traitée de façon de plus en plus stricte.
+de nombreux étrangers disparaissent récemment après l’ouverture du compte, de sorte que l’ouverture des comptes est traitée de manière de plus en plus stricte.
 
 Déjà dans la partie fondamentale, une lectrice ou un lecteur a indiqué que l’ouverture du compte était l’étape la plus difficile ; j’en conviens.
 
 Parce que les cas de blanchiment d’argent (洗錢) sont très nombreux à Taïwan, l’ouverture des comptes bancaires devient de plus en plus stricte.
 
-**Conseil**：
+**Conseil** :
 
 Comme l’examen du plan d’investissement prend aussi du temps,
 
 vous devriez rédiger le plan d’investissement et chercher l’adresse d’immatriculation de la société en même temps.
 
-Selon l’article 9 du Statut de l’investissement des étrangers (外國人投資條例), l’apport approuvé doit parvenir en totalité dans le délai fixé par l’autorité compétente (核定期限) ; le délai est à confirmer dans l’acte d’approbation de chaque affaire (en pratique, il est souvent fixé autour de 1 an).
+Selon l’article 9 de la loi sur l’investissement des étrangers (外國人投資條例), l’apport approuvé doit parvenir en totalité dans le délai fixé par l’autorité compétente (核定期限) ; le délai est à confirmer dans l’acte d’approbation de chaque affaire (en pratique, il est souvent fixé autour de 1 an).
 
 Dans ce délai, une fois l’adresse de la société trouvée et le contrat de bail signé,
 
@@ -63,7 +63,7 @@ C’est possible.
 
 La banque exige en général une double vérification d’identité,
 
-et sans carte de séjour, vous pouvez demander auprès de l’administration de l’immigration de Taïwan la « **feuille de données de base** » (統一證號基本資料表).
+et sans carte de séjour, vous pouvez demander auprès de l’administration de l’immigration de Taïwan la « **formulaire de données de base du numéro d’identification unique** » (統一證號基本資料表).
 
 La délivrance est possible le jour même,
 
@@ -81,7 +81,7 @@ Vous pouvez mentionner des expériences professionnelles variées, y compris le 
 
 et les exposer en détail de manière à pouvoir convaincre les personnes chargées de l’examen.
 
-Sur ce point, vous devriez échanger de façon approfondie avec une avocate ou un avocat de Taïwan.
+Sur ce point, vous devriez échanger de manière approfondie avec une avocate ou un avocat de Taïwan.
 
 ​
 
@@ -101,7 +101,7 @@ les bailleurs hésitent donc à louer à des étrangers.
 
 C’est pourquoi je recommande de chercher le lieu d’exploitation tôt.
 
-Si la négociation avec le bailleur ne se déroule pas de façon fluide,
+Si la négociation avec le bailleur n’avance pas facilement,
 
 vous pouvez, s’il y a lieu, proposer l’authentification du contrat de bail (公證) ou un dépôt de caution supplémentaire.
 
@@ -111,7 +111,7 @@ vous pouvez, s’il y a lieu, proposer l’authentification du contrat de bail (
 
 Cela dépend des branches d’activité (營業項目) de la société.
 
-Ex.) Si la branche d’activité est la restauration et que l’on entend prendre à bail un local commercial de bureaux, l’ouverture du compte bancaire sera très difficile.
+Exemple : si la branche d’activité est la restauration et que l’on entend prendre à bail un local commercial de bureaux, l’ouverture du compte bancaire sera très difficile.
 
 Comme déjà indiqué, la banque examine le contrat de bail et inspecte sur place l’adresse de la société.
 
@@ -119,11 +119,11 @@ En outre, lors de l’immatriculation finale de la société, la municipalité (
 
 s’il s’agit d’un local commercial de bureaux, l’immatriculation de la société (公司登記) n’est alors pas possible.
 
-Ex.) S’il s’agit de branches d’activité possibles dans un local commercial de bureaux, telles que la publicité ou le commerce de gros, la société peut être constituée dans un local commercial de bureaux. Avant la conclusion du contrat de bail
+Exemple : s’il s’agit de branches d’activité possibles dans un local commercial de bureaux, telles que la publicité ou le commerce de gros, la société peut être constituée dans un local commercial de bureaux. Avant la conclusion du contrat de bail
 
 vous devriez le vérifier au préalable.
 
-*Si vous avez besoin d’aide ou d’un échange sur le droit de Taïwan, laissez un commentaire ou prenez contact.*
+*Si vous avez besoin d’aide ou d’un échange sur le droit de Taïwan, utilisez la page Contact ; aucun délai de réponse n’est promis.*
 
 ---
 

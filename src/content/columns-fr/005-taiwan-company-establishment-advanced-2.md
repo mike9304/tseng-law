@@ -21,11 +21,11 @@ Ceux qui ont lu [Création de société à Taïwan – fondamentaux](/fr/columns
 
 ​
 
-Les questions et réponses (Q&A) suivantes visent à aider les personnes qui envisagent une création de société (公司設立) à Taïwan.
+Les questions et réponses suivantes visent à aider les personnes qui envisagent une création de société (公司設立) à Taïwan.
 
 ​
 
-**1. Lors du virement du capital (資本額) depuis la Corée vers le compte préparatoire d’une société taïwanaise (公司籌備處帳戶), à quoi faut-il prêter attention ? (ce point concerne le régime coréen et la pratique bancaire de la Corée)**
+**1. Lors du virement du capital (資本額) depuis l’étranger vers le compte préparatoire d’une société taïwanaise (公司籌備處帳戶), à quoi faut-il prêter attention ? (les règles bancaires et de change de la Corée exposées ci-dessous ne sont qu’un exemple)**
 
 En général, les banques de Corée exigent que l’investisseur se rende **en personne** dans une banque en Corée et vire les fonds depuis un compte à son propre nom.
 
@@ -33,7 +33,7 @@ Le virement par banque en ligne ou par l’intermédiaire d’un proche en Coré
 
 En outre, conformément à la réglementation coréenne sur le contrôle des changes, la personne de nationalité coréenne qui constitue une personne morale étrangère ou acquiert des parts doit déposer une « déclaration d’investissement direct à l’étranger ». La déclaration doit être enregistrée au moment du virement du capital à la personne morale taïwanaise (台灣法人) ; à défaut, des sanctions pour violation de la réglementation sur les changes peuvent s’appliquer.
 
-Avant de virer le capital (資本金匯款), renseignez-vous auprès de votre banque principale en Corée.
+Avant de virer le capital (資本金匯款), renseignez-vous auprès de votre banque principale dans votre pays d’origine.
 
 **​**
 
@@ -67,7 +67,7 @@ Certaines banques peuvent imposer des exigences supplémentaires, par exemple un
 
 **​**
 
-**5. La société peut-elle embaucher des personnes de nationalité coréenne comme salariés ?**
+**5. La société peut-elle embaucher des salariés de nationalité étrangère ?**
 
 A. Premier salarié : la demande est présentée comme un travail de direction dans une entreprise d’investissement ordinaire de Chinois d’outre-mer ou d’étrangers (一般僑外投資事業主管工作). Le critère du « travail de nature spécialisée ou technique » du point B ci-dessous ne s’applique pas, mais s’appliquent les conditions de destinataire, notamment celle de dirigeant (經理人) d’une société dont l’apport de Chinois d’outre-mer ou d’étrangers dépasse un tiers, ainsi que les conditions de résultats de l’employeur relatives au capital et au chiffre d’affaires (articles 38 et 39 des normes d’examen).
 
@@ -77,7 +77,7 @@ Consultez le site du ministère du Travail de Taïwan (勞動部) : <https://ez
 
 ​
 
-Si vous avez d’autres questions, vous pouvez nous contacter à tout moment.
+Si vous avez d’autres questions, vous pouvez écrire depuis la page Contact ; aucun délai de réponse n’est promis.
 
 ---
 

@@ -549,7 +549,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     title: 'Międzynarodowy zespół Hovering',
     description:
       'Profile adwokatów, kierownictwa operacyjnego i partnerskiego biura rachunkowego Hovering.',
-    representativeTitle: 'Adwokat kierujący',
+    representativeTitle: 'Adwokatka kierująca kancelarią',
     teamTitle: 'Adwokaci i współpracownicy',
     partnerTitle: 'Partnerskie biuro rachunkowe',
     introLabel: 'Przedstawienie',
@@ -557,15 +557,15 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     experienceLabel: 'Doświadczenie',
     photoAltPrefix: 'Zdjęcie',
     workingLanguagesLabel: 'Języki pracy',
-    fullProfileLabel: 'Pełny profil (English)',
-    keyFactsHeading: 'Adwokat Wei Tseng — Dane zasadnicze',
+    fullProfileLabel: 'Pełny profil (w języku angielskim)',
+    keyFactsHeading: 'Adwokatka Wei Tseng — dane zasadnicze',
     qualificationLabel: 'Uprawnienie i kancelaria',
     qualificationSentence:
-      '{name} jest uprawniona do wykonywania zawodu adwokata na Tajwanie i jest adwokatem kierującym {firm}.',
+      '{name} jest uprawniona do wykonywania zawodu adwokata na Tajwanie i kieruje kancelarią {firm}.',
     practiceLabel: 'Główne dziedziny',
     consultationLanguagesLabel: 'Języki konsultacji',
     roles: {
-      'tseng-junwei': 'Adwokat kierujący na Tajwanie (Managing Attorney)',
+      'tseng-junwei': 'Adwokatka kierująca kancelarią na Tajwanie (Managing Attorney)',
       'chang-rongxuan': 'Adwokat na Tajwanie (Taiwan Attorney)',
       'chang-fangyu': 'Paralegal',
       'son-jungmin': 'Kierownictwo operacyjne Korei (Korea Operations Manager)',
@@ -2105,11 +2105,11 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kancelaria prowadzi sprawy przedsiębiorstw i osób prywatnych na Tajwanie po angielsku, japońsku, koreańsku i chińsku.',
-        'Reprezentowała koreańskiego studenta w żądaniu odszkodowania z powodu urazu na siłowni i uzyskała wyrok pierwszej instancji na TWD 1.57M.',
+        'Reprezentowała koreańskiego studenta w żądaniu odszkodowania z powodu urazu na siłowni i uzyskała wyrok pierwszej instancji zasądzający 1,57 mln TWD.',
       ],
       education: [
         'Magister (M.S.), Institute of Finance, National Taiwan University',
-        'Licencjat (B.A.) z podwójnym tokiem prawo i finanse, National Chengchi University',
+        'Licencjat (B.A.), podwójny kierunek: prawo i finanse, National Chengchi University',
         'Studentka wymiany na Kobe University i Waseda University',
       ],
       experience: [

@@ -1,5 +1,5 @@
 ---
-title: "Q&A w sprawie postępowania po wypadkach drogowych na Tajwanie: czynności na miejscu, wina, ugoda i odszkodowanie"
+title: "Pytania i odpowiedzi o postępowaniu po wypadku drogowym na Tajwanie: czynności na miejscu, wina, ugoda i odszkodowanie"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
 date_display: "13 września 2025"
@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 ---
 
-# Q&A w sprawie postępowania po wypadkach drogowych na Tajwanie: czynności na miejscu, wina, ugoda i odszkodowanie
+# Pytania i odpowiedzi o postępowaniu po wypadku drogowym na Tajwanie: czynności na miejscu, wina, ugoda i odszkodowanie
 
 ![Obraz wyjaśniający środki bezpieczeństwa na miejscu i zachowanie dowodów tuż po wypadku drogowym na Tajwanie](../images/003-taiwan-traffic-accident-procedure/featured-01.jpg)
 
@@ -29,9 +29,9 @@ Art. 185-4 Kodeksu karnego Tajwanu (刑法) reguluje odpowiedzialność karną k
 
 ## Q2. Jakie dowody należy zachować w pierwszej kolejności?
 
-Proszę najpierw zapewnić bezpieczeństwo osobiste i znaki ostrzegawcze; jeżeli są ranni albo potrzeba ratunku, proszę dzwonić pod 119, a jeżeli jest przestępstwo albo nagła sytuacja bezpieczeństwa, pod 110 lub 112. Proszę też dokonać zgłoszenia na policję według okoliczności wypadku drogowego.
+Proszę najpierw zapewnić bezpieczeństwo osobiste i znaki ostrzegawcze; jeżeli są ranni albo potrzeba ratunku, proszę zadzwonić na Tajwanie pod numer 119 (pogotowie i straż pożarna), a w razie przestępstwa albo nagłego zagrożenia bezpieczeństwa — pod 110 (policja); z telefonu komórkowego działa też numer 112. Proszę też dokonać zgłoszenia na policję według okoliczności wypadku drogowego.
 
-Gdy bezpieczeństwo jest zapewnione, proszę wykonać zdjęcia ogólne i szczegółowe, aby zarejestrować położenie i uszkodzenia pojazdów, oznaczenia drogowe, światła i warunki pogodowe. Nie należy pomijać danych kontaktowych świadków, wniosku o zachowanie obrazów CCTV (監視器影像) i kamery pokładowej (行車紀錄器), danych stron, pojazdu i ubezpieczenia oraz dokumentacji medycznej (病歷). Zdjęcia osobiste są użyteczne, lecz nie zastępują interwencji policyjnej wymaganej przy wypadku z obrażeniami lub ze śmiercią.
+Gdy bezpieczeństwo jest zapewnione, proszę wykonać zdjęcia ogólne i szczegółowe, aby zarejestrować położenie i uszkodzenia pojazdów, oznaczenia drogowe, światła i warunki pogodowe. Nie należy pomijać danych kontaktowych świadków, wniosku o zabezpieczenie nagrań z monitoringu (監視器影像) i kamery pokładowej (行車紀錄器), danych stron, pojazdu i ubezpieczenia oraz dokumentacji medycznej (病歷). Zdjęcia osobiste są użyteczne, lecz nie zastępują interwencji policyjnej wymaganej przy wypadku z obrażeniami lub ze śmiercią.
 
 Co do dokumentów policji, na miejscu wypadku można otrzymać odcinek rejestracji stron wypadku drogowego (道路交通事故當事人登記聯單). Po upływie 7 dni od daty wypadku można wnioskować o szkic i zdjęcia miejsca (現場圖 / 現場照片); po upływie 30 dni od daty wypadku można wnioskować o tabelę wstępnej analizy wypadku drogowego (道路交通事故初步分析研判表). Moment wydania i przesłanki wniosku należy ponownie potwierdzić u właściwego organu policji.
 
@@ -41,7 +41,7 @@ Art. 284 Kodeksu karnego reguluje uszkodzenie ciała z nieostrożności (過失�
 
 W cywilnym odszkodowaniu szkód (損害賠償), według art. 197 tajwańskiego Kodeksu cywilnego (民法) roszczenie nie jest już możliwe po upływie 2 lat od dnia, w którym szkoda i dłużnik odszkodowania stały się znane, albo 10 lat od dnia czynu niedozwolonego. Które fakty wpływają na przedawnienie (消滅時效), należy zbadać osobno.
 
-Ktokolwiek dozna szkody wskutek przestępstwa, może według art. 487 Kodeksu postępowania karnego wytoczyć powództwo cywilne akcesoryjne do postępowania karnego (刑事附帶民事訴訟). Dopóki postępowanie karne trwa, powództwo to można wytoczyć aż do zamknięcia rozprawy ustnej (言詞辯論終結) 2. instancji, według art. 488 Kodeksu postępowania karnego, lecz nie można go wytoczyć po zamknięciu rozprawy ustnej 1. instancji i przed wniesieniem środka odwoławczego. Co do zasady można uniknąć zapłaty odrębnych kosztów sądowych (裁判費), lecz nie wszystkie wyniki kończą się bez kosztu. Na przykład, jeżeli sprawę karną oddalono i na wniosek powoda przekazano sądowi cywilnemu, według art. 503 Kodeksu postępowania karnego mogą być nałożone koszty procesu, a ponadto należy sprawdzić reguły przekazania i procedury art. 504.
+Ktokolwiek dozna szkody wskutek przestępstwa, może według art. 487 Kodeksu postępowania karnego wytoczyć powództwo cywilne akcesoryjne do postępowania karnego (刑事附帶民事訴訟). Dopóki postępowanie karne trwa, powództwo to można wytoczyć aż do zamknięcia rozprawy ustnej (言詞辯論終結) drugiej instancji, według art. 488 Kodeksu postępowania karnego, lecz nie można go wytoczyć po zamknięciu rozprawy ustnej pierwszej instancji i przed wniesieniem środka odwoławczego. Co do zasady można uniknąć zapłaty odrębnych kosztów sądowych (裁判費), lecz nie wszystkie wyniki kończą się bez kosztu. Na przykład, jeżeli sprawę karną oddalono i na wniosek powoda przekazano sądowi cywilnemu, według art. 503 Kodeksu postępowania karnego mogą być nałożone koszty procesu, a ponadto należy sprawdzić reguły przekazania i procedury art. 504.
 
 Wybór różni się według przerwania przedawnienia (時效中斷), kręgu pozwanych, dowodów, ubezpieczenia i właściwości. Nie istnieje zatem procedura jednolicie preferowana dla wszystkich spraw.
 
@@ -59,14 +59,14 @@ W akcie ugody (和解書) należy zindywidualizować datę, miejsce i strony wyp
 
 Ugoda (和解) z art. 736 Kodeksu cywilnego jest umową, w której strony wzajemnie ustępują, aby zakończyć spór albo go uniknąć. Według art. 737 Kodeksu cywilnego zakres, w jakim prawa wygasają, ocenia się także tylko w granicach tego, co porzucono w akcie ugody. Nie należy zatem twierdzić, bez zbadania tekstu, że wszystkie przyszłe roszczenia znikają.
 
-Jeżeli chodzi o przestępstwo ścigane z oskarżenia prywatnego, według art. 238 Kodeksu postępowania karnego skargę można cofnąć aż do zamknięcia rozprawy ustnej 1. instancji, a po cofnięciu nie można jej wnieść ponownie. Jednak w przestępstwie, które nie jest ścigane z oskarżenia prywatnego, oskarżenie nie kończy się automatycznie przez ugodę prywatną, a fakt ugody nie zobowiązuje zawsze do cofnięcia skargi.
+Jeżeli chodzi o przestępstwo ścigane z oskarżenia prywatnego, według art. 238 Kodeksu postępowania karnego skargę można cofnąć aż do zamknięcia rozprawy ustnej pierwszej instancji, a po cofnięciu nie można jej wnieść ponownie. Jednak w przestępstwie, które nie jest ścigane z oskarżenia prywatnego, oskarżenie nie kończy się automatycznie przez ugodę prywatną, a fakt ugody nie zobowiązuje zawsze do cofnięcia skargi.
 
 ### Oficjalne podstawy Q1–Q5
 
 - [Rozporządzenie o zarządzaniu i sankcjach ruchu drogowego (道路交通管理處罰條例), art. 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
-- [Kodeks karny Republiki Chińskiej, art. 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
-- [Kodeks karny Republiki Chińskiej, art. 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
-- [Kodeks karny Republiki Chińskiej, art. 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
+- [Kodeks karny Tajwanu, art. 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
+- [Kodeks karny Tajwanu, art. 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [Kodeks karny Tajwanu, art. 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
 - [Kodeks postępowania karnego Tajwanu, art. 237](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001)
 - [Kodeks postępowania karnego, art. 238](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=238&pcode=C0010001)
 - [Kodeks postępowania karnego, art. 487](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=487&pcode=C0010001)
@@ -89,12 +89,12 @@ Według przepisów mających zastosowanie strona legitymowana może wnioskować 
 
 W razie braku zgody z opinią ekspertyzy można wnioskować o ponowne rozpatrzenie, lecz ponowne rozpatrzenie ogranicza się do jedynego razu. Opinia ekspertyzy i ponownego rozpatrzenia jest dowodem lub dokumentem odniesienia, a sąd ocenia niezależnie całokształt akt, w tym oświadczenia, obrazy i protokoły miejsca.
 
-## Q7. Jakie szkody można dochodzić po wypadku?
+## Q7. Jakich szkód można dochodzić po wypadku?
 
 Roszczenie oparte na art. 184 Kodeksu cywilnego zakłada bezprawne naruszenie prawa, związek przyczynowy z wypadkiem i dowód szkody. Sam fakt, że doszło do wypadku, nie pociąga, iż wszystkie poniższe pozycje są uznane. Art. 216 Kodeksu cywilnego jest kryterium ustalenia zakresu szkody rzeczywistej i utraconej korzyści (所失利益).
 
-- **Obrażenia**: Według art. 193 Kodeksu cywilnego można zbadać potrzebne koszty medyczne (醫療費用), dodatkowe koszty życia codziennego, takie jak koszty opieki (看護費用), transportu na leczenie (就醫交通費) i pomocy technicznej, a także utratę dochodów (收入損失) przez rzeczywistą niezdolność do pracy oraz zmniejszenie zdolności do pracy (勞動能力減損). Według art. 195 Kodeksu cywilnego można też zbadać szkodę moralną.
-- **Śmierć**: Według art. 192 Kodeksu cywilnego, gdy zachodzi podstawa, można zbadać koszty medyczne przed śmiercią i koszty zwiększonych potrzeb życiowych, koszty pogrzebu (殯葬費) oraz utratę alimentów (扶養利益損失) osoby, która miała ustawowe prawo do alimentów. Według art. 194 Kodeksu cywilnego można też zbadać szkodę moralną niektórych krewnych.
+- **Obrażenia**: Według art. 193 Kodeksu cywilnego szkoda podlegająca naprawieniu może obejmować potrzebne koszty medyczne (醫療費用), dodatkowe koszty życia codziennego, takie jak koszty opieki (看護費用), transportu na leczenie (就醫交通費) i pomocy technicznej, a także utratę dochodów (收入損失) przez rzeczywistą niezdolność do pracy oraz zmniejszenie zdolności do pracy (勞動能力減損). Według art. 195 Kodeksu cywilnego można też dochodzić szkody niemajątkowej.
+- **Śmierć**: Według art. 192 Kodeksu cywilnego, gdy zachodzi podstawa, naprawienie szkody może obejmować koszty medyczne przed śmiercią i koszty zwiększonych potrzeb życiowych, koszty pogrzebu (殯葬費) oraz utratę alimentów (扶養利益損失) osoby, która miała ustawowe prawo do alimentów. Według art. 194 Kodeksu cywilnego szkody niemajątkowej mogą też dochodzić niektórzy krewni.
 - **Majątek**: Według art. 196 Kodeksu cywilnego można dochodzić uzasadnionej rzeczywistej szkody majątkowej, w tym kosztów naprawy pojazdu albo utraty wartości.
 
 ## Q8. Jeżeli leczenie trwa, jak przedstawiać dokumenty kosztów medycznych?
@@ -161,7 +161,7 @@ Sąd bada okoliczności każdej sprawy, oceniając łącznie treść obrażeń i
 
 ## Q14. Jeżeli wypadek następuje w czasie pracy, czy można też dochodzić odpowiedzialności cywilnej pracodawcy?
 
-Art. 188 Kodeksu cywilnego reguluje przypadek, w którym pracownik powoduje bezprawną szkodę innemu podczas wykonywania funkcji. Związek z funkcjami nie jest uznawany automatycznie z samego czasu pracy, toteż należy sprawdzić związek między rzeczywistą pracą a wypadkiem.
+Art. 188 Kodeksu cywilnego reguluje przypadek, w którym pracownik powoduje bezprawną szkodę innemu podczas wykonywania funkcji. Związek z funkcjami nie wynika automatycznie z samego czasu pracy, dlatego należy sprawdzić związek między rzeczywistą pracą a wypadkiem.
 
 Pracodawca może podnieść, że zachował należytą staranność przy wyborze i nadzorze pracownika, albo że szkody nie dałoby się uniknąć nawet przy zachowaniu tej staranności. Można rozważyć dochodzenie odszkodowania łącznie przeciwko pracodawcy i pracownikowi. Po odszkodowaniu pracodawca może wykonać regres wobec pracownika.
 
@@ -171,13 +171,13 @@ Kwestię, przeciwko komu kieruje się roszczenie cywilne, należy odróżnić od
 
 ## Q15. Jakie świadczenia i jakie pokrycia ubezpieczenia komunikacyjnego należy sprawdzić?
 
-Obowiązek zawarcia według art. 6 ustawy o obowiązkowym ubezpieczeniu odpowiedzialności cywilnej pojazdów (強制汽車責任保險法) spoczywa co do zasady na właścicielu pojazdu, a w przewidzianych przypadkach także na użytkowniku albo administratorze tego pojazdu. Ten reżim ustanawia strukturę pokrycia bez winy (無過失給付制度) dla osoby rannej albo zmarłej wskutek wypadku samochodowego, lecz należy sprawdzić zakres pasażerów albo osoby 3. (第三人) poza pojazdem, który ustala ustawa.
+Obowiązek zawarcia według art. 6 ustawy o obowiązkowym ubezpieczeniu odpowiedzialności cywilnej pojazdów (強制汽車責任保險法) spoczywa co do zasady na właścicielu pojazdu, a w przewidzianych przypadkach także na użytkowniku albo administratorze tego pojazdu. Ten reżim ustanawia strukturę pokrycia bez winy (無過失給付制度) dla osoby rannej albo zmarłej wskutek wypadku samochodowego, lecz należy sprawdzić zakres pasażerów albo osoby trzeciej (第三人) poza pojazdem, który ustala ustawa.
 
 W wypadku jednego pojazdu kierowca tego pojazdu nie jest co do zasady adresatem świadczeń obowiązkowego ubezpieczenia tego pojazdu. Jednak w wypadku, w którym uczestniczy kilka pojazdów, istnieją przypadki, w których kierowca może dochodzić świadczeń od ubezpieczyciela obowiązkowego innego pojazdu zaangażowanego.
 
-Taryfa świadczeń (強制汽車責任保險給付標準) zmieniona 2026-05-29 stosuje się do wypadków, które nastąpiły od 2026-07-01. Pułap rozsądnych i potrzebnych kosztów medycznych za obrażenia wynosi TWD 200.000 w nowym dolarze tajwańskim; świadczenie za inwalidztwo (失能) wynosi od TWD 80.000 do TWD 3.000.000 według 15 stopni ustawowych; świadczenie za śmierć wynosi TWD 3.000.000, a łączne maksimum śmierci, inwalidztwa i kosztów medycznych dla 1 poszkodowanego i 1 wypadku wynosi TWD 3.200.000. Do wypadków wcześniejszych może stosować się taryfa poprzednia.
+Taryfa świadczeń (強制汽車責任保險給付標準) zmieniona 29 maja 2026 r. stosuje się do wypadków, które nastąpiły od 1 lipca 2026 r. Pułap rozsądnych i potrzebnych kosztów medycznych za obrażenia wynosi TWD 200.000 w nowym dolarze tajwańskim; świadczenie za inwalidztwo (失能) wynosi od TWD 80.000 do TWD 3.000.000 według 15 stopni ustawowych; świadczenie za śmierć wynosi TWD 3.000.000, a łączne maksimum śmierci, inwalidztwa i kosztów medycznych dla 1 poszkodowanego i 1 wypadku wynosi TWD 3.200.000. Do wypadków wcześniejszych może stosować się taryfa poprzednia.
 
-Ubezpieczenie odpowiedzialności cywilnej wobec osób trzecich (第三人責任險), ubezpieczenie wypadków kierowcy (駕駛人傷害險) i ubezpieczenie szkód własnego pojazdu (車體損失險) są produktami fakultatywnymi o charakterze umownym. Rzeczywiste pokrycie różni się według ubezpieczonego, pułapu, franszyzy (自負額), wyłączeń, winy i innych warunków polisy, toteż polisę i warunki należy sprawdzić sprawa po sprawie.
+Ubezpieczenie odpowiedzialności cywilnej wobec osób trzecich (第三人責任險), ubezpieczenie wypadków kierowcy (駕駛人傷害險) i ubezpieczenie szkód własnego pojazdu (車體損失險) są produktami fakultatywnymi o charakterze umownym. Rzeczywiste pokrycie różni się według ubezpieczonego, pułapu, franszyzy (自負額), wyłączeń, winy i innych warunków polisy, dlatego polisę i warunki należy sprawdzić w każdej sprawie osobno.
 
 ### Oficjalne podstawy Q11–Q15
 
@@ -190,7 +190,7 @@ Ubezpieczenie odpowiedzialności cywilnej wobec osób trzecich (第三人責任�
 - [Kodeks cywilny, art. 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
 - [Wyrok sądu rejonowego Taoyuan, rok 112, sprawa 壢簡字 numer 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Kodeks cywilny, art. 188](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
-- [Kodeks karny Republiki Chińskiej, art. 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [Kodeks karny Tajwanu, art. 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Ustawa o obowiązkowym ubezpieczeniu odpowiedzialności cywilnej pojazdów](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
 - [Taryfa świadczeń obowiązkowego ubezpieczenia odpowiedzialności cywilnej pojazdów](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Umowa wzorcowa ubezpieczenia komunikacyjnego użytku prywatnego Komisji Nadzoru Finansowego (金融監督管理委員會)](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
@@ -199,7 +199,7 @@ Q16. Po wypadku, czy można wszystko zostawić w rękach ubezpieczyciela?
 
 ​
 
-Według mojego doświadczenia ubezpieczyciele często nie załatwiają w sposób wystarczający aspektu emocjonalnego stron wypadku.
+Z doświadczenia kancelarii wynika, że ubezpieczyciele często nie zajmują się w wystarczającym stopniu emocjonalną stroną sprawy.
 
 ​
 
@@ -219,7 +219,7 @@ Może też powstać konflikt interesów między ubezpieczycielem a stroną, a po
 
 ​
 
-Nie zalecam zatem powierzać całości sporu ubezpieczycielowi.
+Nie zalecamy zatem powierzania całości sporu ubezpieczycielowi.
 
 ​
 
@@ -235,7 +235,7 @@ Q17. Jaka jest odpowiedzialność karna za uszkodzenie ciała z nieostrożności
 
 ​
 
-W razie uszkodzenia ciała z nieostrożności sądy wymierzają obecnie karę około 3 miesięcy.
+W części wyroków za uszkodzenie ciała z nieostrożności orzekano karę około 3 miesięcy; nie ma jednak wyniku typowego ani gwarantowanego.
 
 ​
 
@@ -247,7 +247,7 @@ Jeżeli jest zamieniana na grzywnę (易科罰金), art. 41 ust. 1 Kodeksu karne
 
 ​
 
-Za ciężkie uszkodzenie ciała z nieostrożności zwykle wymierza się karę 4 miesięcy, a za śmierć z nieostrożności (過失致死) zwykle wymierza się karę 6 miesięcy.
+W części wyroków za ciężkie uszkodzenie ciała z nieostrożności orzekano karę około 4 miesięcy, a za śmierć z nieostrożności (過失致死) około 6 miesięcy; nie są to wartości gwarantowane.
 
 ​
 
@@ -255,19 +255,19 @@ Za ciężkie uszkodzenie ciała z nieostrożności zwykle wymierza się karę 4 
 
 ​
 
-Q18. Jeżeli zawierają państwo ugodę z drugą stroną, czy można cofnąć skargę karną?
+Q18. Jeżeli zawierają Państwo ugodę z drugą stroną, czy można cofnąć skargę karną?
 
 ​
 
-Uszkodzenie ciała z nieostrożności i ciężkie uszkodzenie ciała z nieostrożności są przestępstwem ściganym z oskarżenia prywatnego (告訴乃論之罪), toteż skargę karną można cofnąć.
+Uszkodzenie ciała z nieostrożności i ciężkie uszkodzenie ciała z nieostrożności są przestępstwem ściganym z oskarżenia prywatnego (告訴乃論之罪), dlatego skargę karną można cofnąć.
 
 ​
 
-Przy śmierci z nieostrożności cofnięcie skargi nie jest możliwe; jednak jeżeli zawrą państwo ugodę z rodziną drugiej strony, sąd może złagodzić karę.
+Przy śmierci z nieostrożności cofnięcie skargi nie jest możliwe; jednak jeżeli zawrą Państwo ugodę z rodziną drugiej strony, sąd może złagodzić karę.
 
 ​
 
-Może nastąpić zawieszenie wykonania (緩刑) i nie iść do więzienia.
+W niektórych sprawach możliwe jest warunkowe zawieszenie wykonania kary (緩刑); nie jest to jednak obietnica takiego wyniku.
 
 ​
 
@@ -307,7 +307,7 @@ Ważna jest wówczas staranność i uczciwość adwokata.
 
 ​
 
-Istotne jest, aby adwokat zbadał z uwagą wszystkie pozycje roszczenia i starał się, by uzyskano odszkodowanie możliwie najwyższe.
+Istotne jest, aby adwokat zbadał z uwagą wszystkie składniki roszczenia i dochodził odszkodowania w wysokości, którą uzasadniają fakty i dowody.
 
 ​
 
@@ -323,7 +323,7 @@ Należy wystrzegać się adwokata, który rozdmuchuje sprawę i twierdzi, że ni
 
 ​
 
-Kończę tym pytania i odpowiedzi o wypadkach drogowych. Mam nadzieję, że będą państwu użyteczne.
+Na tym kończymy pytania i odpowiedzi o wypadkach drogowych. Mamy nadzieję, że będą dla Państwa użyteczne.
 
 ​
 
@@ -331,7 +331,7 @@ Kończę tym pytania i odpowiedzi o wypadkach drogowych. Mam nadzieję, że będ
 
 ​
 
-Po prowadzeniu wielu wypadków drogowych chcę wskazać jeden ważny punkt.
+Po prowadzeniu wielu spraw wypadkowych chcemy wskazać jeszcze jedną ważną kwestię.
 
 ​
 
@@ -347,11 +347,11 @@ Sprawca często nie dba o telefonowanie z pytaniem o stan ofiary ani o jej odwie
 
 ​
 
-Ofiara pozostaje w ten sposób bardzo zraniona i wpada w gniew, toteż często nie ustępuje w kwocie negocjacji albo wnioskuje o zajęcie zabezpieczające (假扣押) i prowadzi zajęcie majątku drugiej strony aż do końca.
+Osoba poszkodowana pozostaje w ten sposób głęboko dotknięta i rozżalona, dlatego często nie ustępuje w kwocie negocjacji albo wnioskuje o zajęcie zabezpieczające (假扣押) i prowadzi zajęcie majątku drugiej strony aż do końca.
 
 ​
 
-Tego punktu nie należy zatem absolutnie zaniedbywać i stosownie do okoliczności należy skonsultować się z adwokatem.
+Tej kwestii nie należy zatem lekceważyć; stosownie do okoliczności warto skonsultować się z adwokatem.
 
 ​
 
@@ -359,11 +359,11 @@ Tego punktu nie należy zatem absolutnie zaniedbywać i stosownie do okolicznoś
 
 ​
 
-Jeżeli mają państwo dalsze pytania, proszę zostawić je w komentarzach.
+Jeżeli mają Państwo dalsze pytania, prosimy o kontakt z kancelarią.
 
 ​
 
-Wei Tseng (曾雋崴), adwokat na Tajwanie.
+Wei Tseng (曾雋崴), adwokatka na Tajwanie.
 
 ---
 

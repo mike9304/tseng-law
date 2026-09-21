@@ -8,7 +8,7 @@ categories:
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Jeśli są klienci na Tajwanie, czy trzeba tam koniecznie założyć spółkę?"
-    a: "Nie można rozstrzygnąć wyłącznie dlatego, że klient jest na Tajwanie. Trzeba zobaczyć wymagania klienta oraz rzeczywistą działalność handlu, instalacji, personelu i strukturę operacji na Tajwanie, a następnie wybrać najbardziej adekwatny podmiot."
+    a: "Nie można rozstrzygnąć wyłącznie dlatego, że klient jest na Tajwanie. Trzeba zobaczyć wymagania klienta oraz rzeczywistą działalność handlu, instalacji, personelu i strukturę operacji na Tajwanie, a następnie wybrać najwłaściwszy podmiot."
   - q: "Czy odpowiedzialność siedziby zanika całkowicie, gdy zakłada się spółkę tajwańską?"
     a: "Jeśli zakładają Państwo spółkę zależną, a nie oddział, siedziba co do zasady nie przyjmuje obowiązków umownych podpisanych w imieniu spółki zależnej. Trzeba jednak sprawdzić wyjątki z tytułu nadużycia osobowości prawnej oraz to, czy siedziba udzieliła poręczenia lub przyjęła własne obowiązki umowne."
   - q: "Czy można zacząć od dystrybutora, a następnie przejść na spółkę na Tajwanie?"
@@ -19,7 +19,7 @@ faq:
 
 ![Zdjęcie redakcyjne do oceny struktury wejścia na Tajwan przedsiębiorstwa półprzewodników](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
-Gdy zaczynają się operacje z klientami tajwańskimi, zagraniczna siedziba może otrzymać różne wymagania: obsługiwać oferty i umowy na Tajwanie, posiadać zapas części do pilnej wymiany albo skierować personel instalacji i utrzymania. Łatwo wtedy zapytać najpierw: «Czy wystarczy założyć spółkę na Tajwanie, aby to rozwiązać?»
+Gdy zaczynają się operacje z klientami tajwańskimi, zagraniczna siedziba może otrzymać różne wymagania: obsługiwać oferty i umowy na Tajwanie, posiadać zapas części do pilnej wymiany albo skierować personel instalacji i utrzymania. Łatwo wtedy zapytać najpierw: „Czy wystarczy założyć spółkę na Tajwanie, aby to rozwiązać?”
 
 To, co trzeba najpierw wyjaśnić, to kto czym się zajmuje na Tajwanie. Struktura do oceny zmienia się zależnie od tego, czy zagraniczna siedziba nadal podpisuje umowy sprzedaży, czy spółka tajwańska kupuje i odsprzedaje, czy też personel lokalny zapewnia tylko wsparcie techniczne.
 
@@ -37,7 +37,7 @@ Zanim siedziba zdecyduje o strukturze wejścia, może wewnętrznie wyjaśnić:
 | Oferty i zamówienia | Kto ostatecznie potwierdza cenę i termin, i dokąd sięga umocowanie odpowiedzialnego na Tajwanie? |
 | Towar i zapasy | Kto importuje, posiada i zarządza zapasami oraz obsługuje zwroty i substytucje? |
 | Personel | Czy pracownicy siedziby wyjeżdżają, czy zatrudnia się na Tajwanie, czy powierza się pracę wykonawcy zewnętrznemu? |
-| Instalacja i wsparcie techniczne | Kto jest dłużnikiem wsparcia wobec klienta i obsługuje problemy pracy na miejscu? |
+| Instalacja i wsparcie techniczne | Kto jest zobowiązany do świadczenia wsparcia wobec klienta i obsługuje problemy pracy na miejscu? |
 | Wpływy i koszty | Kto wystawia faktury i inkasuje, i jak rozlicza się koszty między siedzibą a organizacją na Tajwanie? |
 | Jakość i spory | Kto potwierdza wynik odbioru i przyjmuje reklamacje wad lub szkód? |
 
@@ -61,17 +61,17 @@ Jeśli zdecydują Państwo założyć niezależną osobę prawną na Tajwanie, t
 
 ### Spółka z ograniczoną odpowiedzialnością (有限公司): zarządzanie prostsze, lecz zbywanie udziałów bardziej zamknięte
 
-Może powstać z 1 lub więcej osób fizycznych albo ze wspólników będących osobami prawnymi tajwańskimi lub zagranicznymi; wspólnicy odpowiadają co do zasady do wysokości wkładu. Spółka ma od 1 do 3 dyrektorów, wybieranych spośród wspólników. Wspólnicy, którzy nie wykonują interesów, mogą wykonywać uprawnienia nadzoru, bez potrzeby odrębnego komisarza. O ile statut nie stanowi inaczej, każdy wspólnik ma 1 głos, więc kontrola nie musi pokrywać się z proporcją wkładów. Zbycie wkładu zwykłego wspólnika wymaga co do zasady zgody więcej niż połowy praw głosu pozostałych; dla dyrektora 2/3 lub więcej. Lepiej to pasuje do prostych relacji wspólników i stabilnej kontroli niż do częstego pozyskiwania kapitału lub obrotu udziałami. Później można przekształcić ją w spółkę akcyjną (股份有限公司).
+Może powstać z 1 lub więcej osób fizycznych albo ze wspólników będących osobami prawnymi tajwańskimi lub zagranicznymi; wspólnicy odpowiadają co do zasady do wysokości wkładu. Spółka ma od 1 do 3 dyrektorów, wybieranych spośród wspólników. Wspólnicy, którzy nie wykonują interesów, mogą wykonywać uprawnienia nadzoru, bez potrzeby odrębnego organu nadzoru (監察人). O ile statut nie stanowi inaczej, każdy wspólnik ma 1 głos, więc kontrola nie musi pokrywać się z proporcją wkładów. Zbycie wkładu zwykłego wspólnika wymaga co do zasady zgody więcej niż połowy praw głosu pozostałych; dla dyrektora 2/3 lub więcej. Lepiej to pasuje do prostych relacji wspólników i stabilnej kontroli niż do częstego pozyskiwania kapitału lub obrotu udziałami. Później można przekształcić ją w spółkę akcyjną (股份有限公司).
 
 ### Spółka akcyjna (股份有限公司): odpowiednia, jeśli chce się włączyć innych inwestorów lub jeśli notowanie jest możliwe do rozważenia
 
-Kapitał dzieli się na akcje. Co do zasady wymaganych jest 2 wspólników lub więcej, lecz państwo lub osoba prawna mogą założyć ją same, a zagraniczna osoba prawna może posiadać 100 %. Akcje są co do zasady swobodnie zbywalne, z wyjątkami ustawowymi; akcje specjalne i opcje pracownicze można zaprojektować zgodnie z ustawą. Pasuje to do przedsiębiorstw, które oczekują inwestorów, obrotu akcjami, zachęt kapitałowych dla pracowników albo przyszłej fuzji, przejęcia lub notowania; nie ogranicza się to do dużych przedsiębiorstw. W zarządzaniu spółka niepubliczna może, przez statut, nie mieć rady i mieć tylko 1 lub 2 dyrektorów. Spółka z 1 wspólnikiem państwowym lub osobą prawną może, przez statut, nie mieć komisarza. Nie każda spółka akcyjna (股份有限公司) musi certyfikować roczne sprawozdania. Główne progi badania spółki zwykłej to kapitał wpłacony TWD 30.000.000 albo, poniżej tego, przychody operacyjne TWD 100.000.000 lub 100 pracowników w reżimie ubezpieczenia pracy; spółki oferty publicznej stosują regulację papierów wartościowych.
+Kapitał dzieli się na akcje. Co do zasady wymaganych jest 2 wspólników lub więcej, lecz państwo lub osoba prawna mogą założyć ją same, a zagraniczna osoba prawna może posiadać 100 %. Akcje są co do zasady swobodnie zbywalne, z wyjątkami ustawowymi; akcje specjalne i opcje pracownicze można zaprojektować zgodnie z ustawą. Pasuje to do przedsiębiorstw, które oczekują inwestorów, obrotu akcjami, zachęt kapitałowych dla pracowników albo przyszłej fuzji, przejęcia lub notowania; nie ogranicza się to do dużych przedsiębiorstw. W zarządzaniu spółka niepubliczna może, przez statut, nie mieć rady i mieć tylko 1 lub 2 dyrektorów. Spółka z 1 wspólnikiem państwowym lub osobą prawną może, przez statut, nie mieć organu nadzoru (監察人). Nie każda spółka akcyjna (股份有限公司) musi poddawać roczne sprawozdania badaniu przez biegłego rewidenta. Główne progi badania spółki zwykłej to kapitał wpłacony TWD 30.000.000 albo, poniżej tego, przychody operacyjne TWD 100.000.000 lub 100 pracowników w reżimie ubezpieczenia pracy; spółki oferty publicznej stosują regulację papierów wartościowych.
 
-## 4. Procedury oddziału i spółki zależnej różnią się; tylko spółka zależna przechodzi przez kontrolę Komisji Inwestycji
+## 4. Procedury oddziału i spółki zależnej różnią się; tylko spółka zależna przechodzi przez kontrolę Departamentu Przeglądu Inwestycji
 
-Gdy spółka zagraniczna zakłada tajwańską spółkę zależną, nazwę co do zasady sprawdza się z góry i występuje o zezwolenie inwestycyjne do Komisji Inwestycji Ministerstwa Gospodarki (經濟部投資審議司). Po zatwierdzeniu środki przelewa się, ustala kwotę inwestycji, a biegły rewident (會計師) weryfikuje kapitał, następnie kończy się założenie i rejestrację podatkową.
+Gdy spółka zagraniczna zakłada tajwańską spółkę zależną, nazwę co do zasady sprawdza się z góry i występuje o zezwolenie inwestycyjne do Departamentu Przeglądu Inwestycji Ministerstwa Gospodarki (經濟部投資審議司). Po zatwierdzeniu środki przelewa się, ustala kwotę inwestycji, a biegły rewident (會計師) weryfikuje kapitał, następnie kończy się założenie i rejestrację podatkową.
 
-Natomiast aby założyć tajwański oddział zwykłej spółki zagranicznej, zezwolenie inwestycyjne Komisji Inwestycji co do zasady nie jest wymagane; Departament Handlu Ministerstwa Gospodarki (經濟部商業發展署) obsługuje rejestrację oddziału i związane ustalenie kapitału. Nadal konieczne są wcześniejsze sprawdzenie nazwy, przelew kapitału obrotowego, weryfikacja kapitału i rejestracja podatkowa; kalendarz jest na ogół krótszy.
+Natomiast aby założyć tajwański oddział zwykłej spółki zagranicznej, zezwolenie inwestycyjne Departamentu Przeglądu Inwestycji co do zasady nie jest wymagane; Departament Handlu Ministerstwa Gospodarki (經濟部商業發展署) obsługuje rejestrację oddziału i związane ustalenie kapitału. Nadal konieczne są wcześniejsze sprawdzenie nazwy, przelew kapitału obrotowego, weryfikacja kapitału i rejestracja podatkowa; kalendarz jest na ogół krótszy.
 
 Powyższe jest propozycją konstrukcji umownej. Posiadanie konkretnego formularza nie czyni operacji legalną i nie unika sporów.
 
@@ -79,7 +79,7 @@ Powyższe jest propozycją konstrukcji umownej. Posiadanie konkretnego formularz
 
 Zakończenie rejestracji na Tajwanie nie oznacza, że personel zagranicznej siedziby może automatycznie pracować na Tajwanie. Cudzoziemiec, który pracuje na Tajwanie, potrzebuje legalnego zezwolenia na pracę, a przy dłuższym pobycie — zezwolenia na pobyt. Co do zasady pracodawca występuje o zezwolenie na pracę i odpowiadające zezwolenie na pobyt.
 
-Stosunkowo łatwiej jest uzyskać zezwolenie na pracę dla zarządzającego tajwańską spółką zależną lub oddziałem spółki zagranicznej. Aby wystąpić o nie dla 2. cudzoziemca lub kolejnych, Ministerstwo Pracy wymaga, według branży, progów kapitału, obrotu lub innych. Jeśli planują Państwo, że personel zagraniczny będzie pracował na Tajwanie, trzeba przed założeniem spółki potwierdzić, czy planowany kapitał osiąga właściwy próg.
+Stosunkowo łatwiej jest uzyskać zezwolenie na pracę dla zarządzającego tajwańską spółką zależną lub oddziałem spółki zagranicznej. Aby wystąpić o nie dla drugiego i każdego kolejnego cudzoziemca, Ministerstwo Pracy wymaga, według branży, progów kapitału, obrotu lub innych. Jeśli planują Państwo, że personel zagraniczny będzie pracował na Tajwanie, trzeba przed założeniem spółki potwierdzić, czy planowany kapitał osiąga właściwy próg.
 
 ## 7. Struktury, które mogą pasować według etapu handlu
 
@@ -93,7 +93,7 @@ Poniższe scenariusze są hipotetyczne, aby pomóc w myśleniu; nie ustalają, �
 
 ## 8. Na pierwsze spotkanie wystarczy panorama operacyjna; nie trzeba od razu przekazywać wszystkich materiałów poufnych
 
-Przy pierwszym spotkaniu można zebrać dane podstawowe siedziby i wnoszących, ogólny opis produktu lub usługi, przewidywany przepływ operacji, plany personelu i instalacji na Tajwanie oraz warunki umowy i wsparcia, których żądają klienci. To, czego jeszcze nie ustalono, można oznaczyć jako «w toku».
+Przy pierwszym spotkaniu można zebrać dane podstawowe siedziby i inwestorów, ogólny opis produktu lub usługi, przewidywany przepływ operacji, plany personelu i instalacji na Tajwanie oraz warunki umowy i wsparcia, których żądają klienci. To, czego jeszcze nie ustalono, można oznaczyć jako „do ustalenia”.
 
 Nie trzeba przy pierwszym kontakcie załączać wszystkich materiałów poufnych klienta lub szczegółowych danych procesu. Po podaniu nazwy kontrahenta do kontroli konfliktu interesów potrzebne materiały i sposób przesłania ustala się według wskazówek osoby prowadzącej.
 
@@ -101,7 +101,7 @@ Nie trzeba przy pierwszym kontakcie załączać wszystkich materiałów poufnych
 
 ### Jeśli są klienci na Tajwanie, czy trzeba tam koniecznie założyć spółkę?
 
-Nie można rozstrzygnąć wyłącznie dlatego, że klient jest na Tajwanie. Trzeba zobaczyć wymagania klienta oraz rzeczywistą działalność handlu, instalacji, personelu i strukturę operacji na Tajwanie, a następnie wybrać najbardziej adekwatny podmiot.
+Nie można rozstrzygnąć wyłącznie dlatego, że klient jest na Tajwanie. Trzeba zobaczyć wymagania klienta oraz rzeczywistą działalność handlu, instalacji, personelu i strukturę operacji na Tajwanie, a następnie wybrać najwłaściwszy podmiot.
 
 ### Czy odpowiedzialność siedziby zanika całkowicie, gdy zakłada się spółkę tajwańską?
 
@@ -113,6 +113,6 @@ Przejście etapami można zaplanować, ale trzeba też ponownie przejrzeć wyga�
 
 ## Rozmowa o strukturze wejścia na Tajwan
 
-Jeśli planują Państwo sprzedawać, zarządzać zapasami, zapewniać wsparcie instalacji lub zatrudniać lokalnie na Tajwanie, uporządkujcie najpierw pracę, którą wykona siedziba, i tę, która przypadnie organizacji na Tajwanie. Po potwierdzeniu tematów rozmowy i konfliktów interesów kancelaria objaśni potrzebne materiały i zakres usług, które mogą być świadczone.
+Jeśli planują Państwo sprzedawać, zarządzać zapasami, zapewniać wsparcie instalacji lub zatrudniać lokalnie na Tajwanie, prosimy najpierw uporządkować pracę, którą wykona siedziba, i tę, która przypadnie organizacji na Tajwanie. Po potwierdzeniu tematów rozmowy i konfliktów interesów kancelaria objaśni potrzebne materiały i zakres usług, które mogą być świadczone.
 
-Przykład tematu: Rozmowa o strukturze wejścia na Tajwan przedsiębiorstwa półprzewodników. Przy pierwszym kontakcie podajcie nazwę spółki, kraj siedziby, planowany produkt lub usługę, plan operacji na Tajwanie i oczekiwany język rozmowy. Materiały projektu poufnego i pełne umowy przesyłajcie dopiero po otrzymaniu dodatkowych wskazówek. Języki rozmowy faktycznie dostępne i zakres ewentualnego zlecenia trzeba potwierdzić w chwili kontaktu.
+Przykład tematu: Rozmowa o strukturze wejścia na Tajwan przedsiębiorstwa półprzewodników. Przy pierwszym kontakcie prosimy podać nazwę spółki, kraj siedziby, planowany produkt lub usługę, plan operacji na Tajwanie i oczekiwany język rozmowy. Materiały projektu poufnego i pełne umowy prosimy przesyłać dopiero po otrzymaniu dodatkowych wskazówek. Języki rozmowy faktycznie dostępne i zakres ewentualnego zlecenia trzeba potwierdzić w chwili kontaktu.

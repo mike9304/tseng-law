@@ -21,7 +21,7 @@ W szczególności, jeśli pracownik odchodzi z własnej woli (自請離職),
 
 nie może otrzymać odprawy (資遣費) (art. 18 ustawy o normach pracy),
 
-co różni się od Korei.
+co odróżnia Tajwan od niektórych innych porządków prawnych, na przykład koreańskiego.
 
 ​
 
@@ -67,7 +67,7 @@ musi zakończyć umowę o pracę w terminie **30 dni** od dnia, w którym pozna�
 
 albo, w przypadku pkt 6, w terminie **30 dni** od dnia, w którym poznał skutek szkody.
 
-Pracownik musi więc dobrze opanować termin.
+Pracownik musi więc pilnować tego terminu.
 
 ​
 
@@ -89,7 +89,7 @@ odprawa może nie zostać wypłacona albo może zostać żądana.
 
 Dlatego w sporach pracy (勞資糾紛) na Tajwanie
 
-«**czas**» jest bardzo ważny.
+czas ma kluczowe znaczenie.
 
 W większości przypadków ten, kto przygotował się z wyprzedzeniem, ma chronione prawa.
 

@@ -1,5 +1,5 @@
 ---
-title: "Zakładanie spółki na Tajwanie – część pogłębiona 1"
+title: "Zakładanie spółki na Tajwanie – omówienie pogłębione 1"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-1"
 lastmod: "2026-09-10"
 date_display: "13 września 2025"
@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg"
 ---
 
-# Zakładanie spółki na Tajwanie – część pogłębiona 1
+# Zakładanie spółki na Tajwanie – omówienie pogłębione 1
 
 ![Zdjęcie główne](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
@@ -17,17 +17,17 @@ W ostatnim czasie wiele osób pomyślnie założyło spółkę (公司) na Tajwa
 
 a pytania często zadawane przy zakładaniu zebrano poniżej.
 
-Osoby, które przeczytały [**podstawy zakładania spółki**](/pl/columns/taiwan-company-establishment-basics), mogą następnie sięgnąć także do tej bardziej szczegółowej części pogłębionej.
+Osoby, które przeczytały [**podstawy zakładania spółki**](/pl/columns/taiwan-company-establishment-basics), mogą następnie sięgnąć także do tego bardziej szczegółowego omówienia.
 
-Poniższe pytania i odpowiedzi (Q&A) mają pomóc osobom, które rozważają założenie spółki na Tajwanie. 😊
+Poniższe pytania i odpowiedzi mają pomóc osobom, które rozważają założenie spółki na Tajwanie.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
 **1. Chcę założyć spółkę, ale nie znalazłem jeszcze adresu rejestracji. Czy założenie jest mimo to możliwe?**
 
-Gdy cudzoziemiec zakłada spółkę na Tajwanie, musi złożyć plan inwestycji (投資計畫書) do Departamentu Rozpatrywania Inwestycji Ministerstwa Gospodarki (經濟部投資審議司) w celu kontroli.
+Gdy cudzoziemiec zakłada spółkę na Tajwanie, musi złożyć plan inwestycji (投資計畫書) do Departamentu Przeglądu Inwestycji Ministerstwa Gospodarki (經濟部投資審議司) w celu kontroli.
 
-Departament Rozpatrywania Inwestycji musi sprawdzić, czy dany kapitał (資本額) jest rzeczywiście wykorzystywany na cele inwestycyjne
+Departament Przeglądu Inwestycji musi sprawdzić, czy dany kapitał (資本額) jest rzeczywiście wykorzystywany na cele inwestycyjne
 
 oraz czy podmioty zagraniczne nie wprowadzają środków pod innym pretekstem.
 
@@ -35,21 +35,21 @@ Przy sporządzaniu planu inwestycji nie trzeba podawać dokładnego adresu spó�
 
 Gdy później w banku otwierany jest rachunek przygotowawczy spółki (公司籌備處帳戶), wiele banków bada jednak umowę najmu (租賃契約) i przeprowadza oględziny adresu spółki na miejscu.
 
-Pracownica lub pracownik tajwańskiego banku powiedziała mi osobiście, że
+Pracownica tajwańskiego banku powiedziała mi osobiście, że
 
 w ostatnim czasie wielu cudzoziemców znika po otwarciu rachunku, dlatego otwieranie rachunków jest traktowane coraz surowiej.
 
-Już w części podstawowej czytelniczka lub czytelnik wskazał, że otwarcie rachunku jest najtrudniejszym etapem; zgadzam się z tym.
+Przy części podstawowej jedna z osób czytających wskazała, że otwarcie rachunku jest najtrudniejszym etapem; zgadzam się z tym.
 
 Ponieważ na Tajwanie jest bardzo wiele przypadków prania pieniędzy (洗錢), otwieranie rachunków bankowych staje się coraz surowsze.
 
-**Wskazówka**：
+**Wskazówka:**
 
 Ponieważ kontrola planu inwestycji również zajmuje czas,
 
 należy sporządzać plan inwestycji i szukać adresu rejestracji spółki jednocześnie.
 
-Zgodnie z art. 9 Statutu inwestycji cudzoziemców (外國人投資條例) zatwierdzony wkład musi w całości wpłynąć w terminie ustalonym przez właściwy organ (核定期限); termin należy potwierdzić w akcie zatwierdzenia każdej sprawy (w praktyce często ustala się go na około 1 rok).
+Zgodnie z art. 9 ustawy o inwestycjach cudzoziemców (外國人投資條例) zatwierdzony wkład musi w całości wpłynąć w terminie ustalonym przez właściwy organ (核定期限); termin należy potwierdzić w akcie zatwierdzenia każdej sprawy (w praktyce często ustala się go na około 1 rok).
 
 W tym terminie, po znalezieniu adresu spółki i podpisaniu umowy najmu,
 
@@ -63,7 +63,7 @@ To jest możliwe.
 
 Bank wymaga na ogół podwójnego potwierdzenia tożsamości,
 
-a bez karty pobytu można wystąpić do tajwańskiej administracji imigracyjnej o «**arkusz danych podstawowych**» (統一證號基本資料表).
+a bez karty pobytu można wystąpić do tajwańskiej administracji imigracyjnej o „**formularz danych podstawowych do jednolitego numeru identyfikacyjnego**” (統一證號基本資料表).
 
 Wydanie jest możliwe tego samego dnia,
 
@@ -73,7 +73,7 @@ jednak administracja imigracyjna (移民署) jest bardzo oblegana; należy więc
 
 **3. Słyszałem, że przy kontroli planu inwestycji trzeba podać wykształcenie i doświadczenie zawodowe, i obawiam się, że moje wykształcenie i doświadczenie nie odpowiadają branży spółki, którą chcę założyć.**
 
-Komisja kontrolna Ministerstwa Gospodarki bada wprawdzie zaplecze inwestora,
+Departament Przeglądu Inwestycji Ministerstwa Gospodarki bada wprawdzie zaplecze inwestora,
 
 jednak kontrola nie jest nadmiernie surowa.
 
@@ -91,7 +91,7 @@ Założenie spółki trwa około **3 miesięcy**, uzyskanie zezwolenia na pracę
 
 dlatego początek umowy należy ustalić możliwie najpóźniej.
 
-Ponadto w umowach najmu lokali handlowych na Tajwanie wynajmujący często przyznaje najemcy «**okres aranżacji**» (裝潢期間).
+Ponadto w umowach najmu lokali handlowych na Tajwanie wynajmujący często przyznaje najemcy „**okres aranżacji**” (裝潢期間).
 
 Jest to okres zwolniony z czynszu; można o niego negocjować.
 
@@ -111,7 +111,7 @@ można w razie potrzeby zaproponować poświadczenie umowy najmu (公證) lub do
 
 Zależy to od branż działalności (營業項目) spółki.
 
-Przykł.) Jeśli branżą jest gastronomia, a zamierza się wynająć lokal biurowy, otwarcie rachunku bankowego będzie bardzo trudne.
+Przykład: Jeśli branżą jest gastronomia, a zamierza się wynająć lokal biurowy, otwarcie rachunku bankowego będzie bardzo trudne.
 
 Jak już wskazano, bank bada umowę najmu i przeprowadza oględziny adresu spółki na miejscu.
 
@@ -119,11 +119,11 @@ Ponadto przy ostatecznej rejestracji spółki urząd miejski (市政府) wymaga 
 
 jeśli jest to lokal biurowy, rejestracja spółki (公司登記) nie jest wtedy możliwa.
 
-Przykł.) Jeśli chodzi o branże możliwe w lokalu biurowym, takie jak reklama lub handel hurtowy, spółkę można założyć w lokalu biurowym. Przed zawarciem umowy najmu
+Przykład: Jeśli chodzi o branże możliwe w lokalu biurowym, takie jak reklama lub handel hurtowy, spółkę można założyć w lokalu biurowym. Przed zawarciem umowy najmu
 
 należy to wcześniej sprawdzić.
 
-*Jeśli potrzebują Państwo pomocy lub rozmowy o prawie Tajwanu, zostawcie komentarz lub skontaktujcie się.*
+*Jeśli potrzebują Państwo pomocy w sprawie z zakresu prawa Tajwanu, prosimy o kontakt z kancelarią.*
 
 ---
 

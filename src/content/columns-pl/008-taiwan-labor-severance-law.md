@@ -1,5 +1,5 @@
 ---
-title: "Prawo pracy na Tajwanie: czy odprawę naprawdę trudno uzyskać na Tajwanie??"
+title: "Prawo pracy na Tajwanie: kiedy przysługuje odprawa (資遣費)"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
 lastmod: "2026-09-10"
 date_display: "13 września 2025"
@@ -9,18 +9,18 @@ categories:
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Na Tajwanie, czy pracownicy otrzymują odprawę, jeśli sami rezygnują z pracy?"
-    a: "Nie. W odróżnieniu od Korei na Tajwanie obowiązek wypłaty odprawy (資遣費) powstaje dopiero wtedy, gdy spółka zwalnia zatrudnioną osobę; jeśli zatrudniona osoba sama rezygnuje, spółka nie musi wypłacać odprawy."
+    a: "Nie. W odróżnieniu od niektórych porządków prawnych — na przykład koreańskiego — na Tajwanie obowiązek wypłaty odprawy (資遣費) powstaje dopiero wtedy, gdy spółka zwalnia zatrudnioną osobę; jeśli zatrudniona osoba sama rezygnuje, spółka nie musi wypłacać odprawy."
   - q: "Czy spółka musi też wypłacić odprawę przy zwolnieniu dyscyplinarnym?"
-    a: "Nie. Jeśli zatrudniona osoba popełnia czyn bezprawny, narusza regulamin wewnętrzny albo opuszcza pracę bez uzasadnionej przyczyny przez 3 dni z rzędu (art. 12 ustawy o normach pracy, 勞動基準法第12條), spółka może zwolnić bez wypowiedzenia i nie musi wypłacać odprawy. Natomiast zwolnienie ekonomiczne (art. 11) wymaga wcześniejszego wypowiedzenia i wypłaty odprawy."
+    a: "Nie. Jeśli zatrudniona osoba popełnia czyn bezprawny, narusza regulamin pracy albo opuszcza pracę bez uzasadnionej przyczyny przez 3 dni z rzędu (art. 12 ustawy o normach pracy, 勞動基準法第12條), spółka może zwolnić bez wypowiedzenia i nie musi wypłacać odprawy. Natomiast zwolnienie ekonomiczne (art. 11) wymaga wcześniejszego wypowiedzenia i wypłaty odprawy."
   - q: "Jak oblicza się odprawę na Tajwanie?"
     a: "Za każde ukończone 1 rok stażu pracodawca musi wypłacić 0,5 miesiąca przeciętnego wynagrodzenia jako odprawę, najwyżej 6 miesięcy wynagrodzenia. Ten wzór dotyczy stażu, do którego stosuje się art. 12 rozporządzenia o emeryturze pracowników (勞工退休金條例); dla stażu, do którego stosuje się art. 17 ustawy o normach pracy (勞動基準法), za 1 rok wypłaca się 1 miesiąc przeciętnego wynagrodzenia, bez limitu."
 ---
 
-# Prawo pracy na Tajwanie: czy odprawę naprawdę trudno uzyskać na Tajwanie??
+# Prawo pracy na Tajwanie: kiedy przysługuje odprawa (資遣費)
 
 ![Obraz główny](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Dzień dobry, jestem Wei Tseng (曾雋崴), adwokatem na Tajwanie.
+Dzień dobry, nazywam się Wei Tseng (曾雋崴) i jestem adwokatką na Tajwanie.
 
 Dziś chciałabym porozmawiać z Państwem o odprawie (資遣費) na Tajwanie.
 
@@ -28,9 +28,9 @@ Dziś chciałabym porozmawiać z Państwem o odprawie (資遣費) na Tajwanie.
 
 Wielu z Państwa już to wie.
 
-W Korei spółka musi wypłacić odprawę, gdy pracownicy odchodzą z przedsiębiorstwa
+W niektórych państwach — na przykład w Korei — spółka musi wypłacić odprawę także wtedy, gdy pracownik sam odchodzi z przedsiębiorstwa
 
-Na Tajwanie jest to jednak inne niż w Korei:
+Na Tajwanie jest to jednak uregulowane inaczej:
 
 Obowiązek wypłaty odprawy powstaje dopiero wtedy, gdy spółka zwalnia zatrudnioną osobę.
 
@@ -40,7 +40,7 @@ Jeśli zatrudniona osoba sama rezygnuje, spółka nie musi wypłacać odprawy.
 
 Jeśli zatrudniona osoba popełnia jednak czyn bezprawny,
 
-**narusza regulamin wewnętrzny (工作規則),**
+**narusza regulamin pracy (工作規則),**
 
 **albo opuszcza pracę bez powodu przez 3 dni z rzędu (曠工),**
 
@@ -78,7 +78,7 @@ i skłaniają pracowników do samodzielnej rezygnacji.
 
 Pracownicy muszą być ostrożni
 
-i dbać, by nie wpaść w zamiar spółki.
+i uważać, by nie dać się wciągnąć w plan spółki.
 
 ​
 
@@ -94,9 +94,9 @@ aby obniżyć koszty personelu,
 
 kolejno wzywać dobrze opłacanych i dawnych pracowników na rozmowy
 
-Wówczas moja strona, pan B, była zatrudniona od ponad 10 lat w spółce A
+Mój klient, pan B, był zatrudniony w spółce A od ponad 10 lat
 
-i handlowcem o najlepszym wyniku w regionie środkowego Tajwanu.
+i był handlowcem o najlepszym wyniku w regionie środkowego Tajwanu.
 
 Ponieważ wynagrodzenie i premie były bardzo wysokie,
 
@@ -114,13 +114,13 @@ B powinien poświęcić się i dać przykład
 
 oraz obniżyć wynagrodzenie i stanowisko.
 
-W przeciwnym razie B powinien opuścić spółkę;
+W przeciwnym razie B miał opuścić spółkę.
 
-dał B kartkę A4
+Kadra dała B kartkę A4
 
-i wskazał, by napisał: «Ja, OOO, dobrowolnie obniżam stanowisko i wynagrodzenie»
+i poleciła, by napisał: „Ja, OOO, dobrowolnie obniżam stanowisko i wynagrodzenie”
 
-jako treść.
+jako treść oświadczenia.
 
 To porozumienie chciano pokazać wszystkim innym pracownikom,
 
@@ -172,11 +172,11 @@ nagrał cały przebieg telefonem komórkowym
 
 i mógł wykazać, że sam nie zrezygnował.
 
-Dlatego mógł później, z pomocą adwokata,
+Dzięki reprezentacji prawnej mógł później
 
-otrzymać wysoką odprawę,
+wykazać przysługujące mu z ustawy uprawnienie do odprawy,
 
-podczas gdy inni odejści pracownicy nie mieli tyle szczęścia.
+podczas gdy inni pracownicy, którzy odeszli, nie mieli tyle szczęścia.
 
 ​
 
@@ -196,25 +196,25 @@ albo przenosi pracowników na dziwne stanowiska,
 
 **należy zachowywać dowody.**
 
-**Wasze zwykłe ewidencje obecności,**
+**Zwykłe ewidencje obecności,**
 
 **ewidencje nadgodzin, ewidencje wyników,**
 
-**regulamin wewnętrzny, korespondencję e-mail ze współpracownikami i przełożonymi**
+**regulamin pracy, korespondencję e-mail ze współpracownikami i przełożonymi**
 
 **oraz nagrania rozmów z przełożonymi —**
 
-**zachowujcie dowody, które są dla Was korzystne.**
+**proszę zachować dowody korzystne dla siebie.**
 
 ​
 
-Jeśli pracujecie na Tajwanie,
+Jeśli pracują Państwo na Tajwanie,
 
 odprawę trudniej uzyskać, niż się myśli
 
-Nie zawierajcie łatwo ugody ze spółką
+Prosimy nie zawierać pochopnie ugody ze spółką
 
-i dbajcie, by spółka nie zwalniała Was w niewłaściwy sposób
+i zadbać, by spółka nie zwolniła Państwa w niewłaściwy sposób
 
 ani nie skłaniała do samodzielnej rezygnacji
 

@@ -1044,18 +1044,18 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Konsultacja odbywa się wyłącznie w czterech językach: angielskim, chińskim (中文), japońskim i koreańskim.',
     methodConfirmationNotice:
-      'Jeśli nie można korzystać z żadnego z czterech języków, prosimy wybrać «Sposób komunikacji musi zostać potwierdzony». Odpowiadamy, aby zbadać możliwy sposób komunikacji, jeśli taki sposób istnieje; świadczenie w innym języku nie jest zapewniane, a termin odpowiedzi nie jest obiecany.',
+      'Jeśli nie można korzystać z żadnego z czterech języków, prosimy wybrać „Sposób komunikacji musi zostać potwierdzony”. Odpowiadamy, aby ustalić możliwy sposób komunikacji, jeśli taki sposób istnieje; nie świadczymy usług w innym języku i nie obiecujemy terminu odpowiedzi.',
     preparationNotice:
       'Można napisać streszczenie we własnym języku. Oryginalny tekst jest zapisywany tak, jak został napisany, i nie jest tłumaczony automatycznie.',
-    heading: 'Wysłać wniosek o konsultację',
+    heading: 'Wyślij wniosek o konsultację',
     intro:
       'Prosimy krótko opisać sprawę. Adwokat rozpatruje treść, zanim omawia się kolejny krok.',
-    submitLabel: 'Wysłać wniosek',
+    submitLabel: 'Wyślij wniosek',
     submittingLabel: 'Wysyłanie…',
     successMessage:
       'Otrzymaliśmy wniosek; czeka na rozpatrzenie. To nie oznacza, że konsultacja się odbyła ani że termin został potwierdzony.',
     savedNotificationPendingMessage:
-      'Wniosek jest zapisany, ale powiadomienie kancelarii nie jest jeszcze potwierdzone. Napisane nie ginie. Jeśli nie ma odpowiedzi, można też napisać na adres poczty elektronicznej strony kontaktu.',
+      'Wniosek jest zapisany, ale powiadomienie kancelarii nie jest jeszcze potwierdzone. Treść wiadomości nie została utracona. Jeśli nie ma odpowiedzi, można też napisać na adres poczty elektronicznej strony kontaktu.',
     receiptIdLabel: 'Numer odbioru',
     failureMessage:
       'Nie udało się wysłać wniosku. Prosimy spróbować ponownie albo napisać na adres poczty elektronicznej strony kontaktu.',

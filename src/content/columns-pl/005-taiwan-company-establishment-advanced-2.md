@@ -1,5 +1,5 @@
 ---
-title: "Zakładanie spółki na Tajwanie – część pogłębiona 2"
+title: "Zakładanie spółki na Tajwanie – omówienie pogłębione 2"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2"
 lastmod: "2026-09-10"
 date_display: "13 września 2025"
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg"
 ---
 
-# Zakładanie spółki na Tajwanie – część pogłębiona 2
+# Zakładanie spółki na Tajwanie – omówienie pogłębione 2
 
 ![Obraz wyróżniający](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Osoby, które przeczytały [Zakładanie spółki na Tajwanie – podstawy](/pl/columns/taiwan-company-establishment-basics) oraz [Zakładanie spółki na Tajwanie – część pogłębiona 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1), mogą również zapoznać się z Zakładanie spółki na Tajwanie – część pogłębiona 2 (公司設立).
+Osoby, które przeczytały [Zakładanie spółki na Tajwanie – podstawy](/pl/columns/taiwan-company-establishment-basics) oraz [Zakładanie spółki na Tajwanie – omówienie pogłębione 1](https://www.wei-wei-lawyer.com/post/%EB%8C%80%EB%A7%8C-%ED%9A%8C%EC%82%AC%EC%84%A4%EB%A6%BD-%EC%8B%AC%ED%99%94%ED%8E%B8-1), mogą również zapoznać się z pogłębionym omówieniem zakładania spółki na Tajwanie – część 2 (公司設立).
 
 ​
 
@@ -21,13 +21,13 @@ Osoby, które przeczytały [Zakładanie spółki na Tajwanie – podstawy](/pl/c
 
 ​
 
-Poniższe pytania i odpowiedzi (Q&A) mają pomóc osobom rozważającym założenie spółki (公司設立) na Tajwanie.
+Poniższe pytania i odpowiedzi mają pomóc osobom rozważającym założenie spółki (公司設立) na Tajwanie.
 
 ​
 
-**1. Na co zwrócić uwagę przy przelewie kapitału (資本額) z Korei na rachunek przygotowawczy tajwańskiej spółki (公司籌備處帳戶)? (punkt ten dotyczy koreańskiego reżimu i koreańskiej praktyki bankowej)**
+**1. Na co zwrócić uwagę przy przelewie kapitału (資本額) z zagranicy na rachunek przygotowawczy tajwańskiej spółki (公司籌備處帳戶)? (poniższy przykład dotyczy reżimu i praktyki bankowej w Korei; w innych państwach reguły wywozu kapitału i zgłoszeń dewizowych trzeba sprawdzić osobno)**
 
-Co do zasady banki w Korei wymagają, aby inwestor **osobiście** stawił się w banku w Korei i przelał środki z rachunku prowadzonego na własne imię.
+Co do zasady banki w Korei wymagają, aby inwestor **osobiście** stawił się w banku w Korei i przelał środki z rachunku prowadzonego na własne nazwisko.
 
 Przelew przez bankowość internetową albo za pośrednictwem krewnego w Korei nie jest możliwy.
 
@@ -59,7 +59,7 @@ Jednak ponieważ wewnętrzne reguły poszczególnych banków (銀行) się róż
 
 **​**
 
-**4. Po przekształceniu rachunku przygotowawczego w rachunek zwykły, czy bankowość internetową można używać od razu?**
+**4. Po przekształceniu rachunku przygotowawczego w rachunek zwykły, czy można od razu korzystać z bankowości internetowej?**
 
 Zależy to od banku; co do zasady potrzebny jest co najmniej numer telefonu komórkowego.
 
@@ -67,17 +67,17 @@ Niektóre banki mogą nakładać dodatkowe wymagania, na przykład okres korzyst
 
 **​**
 
-**5. Czy spółka może zatrudniać jako pracowników osoby o obywatelstwie koreańskim?**
+**5. Czy spółka może zatrudniać pracowników o obywatelstwie zagranicznym?**
 
 A. Pierwszy pracownik: wniosek składa się jako pracę kierowniczą w przedsiębiorstwie zwykłej inwestycji Chińczyków zamorskich lub cudzoziemców (一般僑外投資事業主管工作). Kryterium „pracy o charakterze specjalistycznym lub technicznym” z punktu B poniżej nie stosuje się, lecz stosuje się przesłanki adresata, w tym przesłankę kierownika (經理人) spółki, której wkład Chińczyków zamorskich lub cudzoziemców przekracza 1/3, a także przesłanki wyników pracodawcy dotyczące kapitału i obrotu (art. 38 i 39 standardów badania).
 
-B. Od drugiego pracownika istnieją ograniczenia: jeżeli liczba zatrudnionych pracowników przekracza 1 osobę, wykształcenie i doświadczenie pracownika, zasady przeciętnego wynagrodzenia przy zatrudnieniu oraz zasady kapitału i obrotu spółki traktuje się zgodnie z „pracą specjalistyczną lub techniczną” (專門性或技術性工作).
+B. Dla drugiego i każdego kolejnego cudzoziemca istnieją ograniczenia: jeżeli liczba zatrudnionych pracowników przekracza 1 osobę, wykształcenie i doświadczenie pracownika, zasady przeciętnego wynagrodzenia przy zatrudnieniu oraz zasady kapitału i obrotu spółki traktuje się zgodnie z „pracą specjalistyczną lub techniczną” (專門性或技術性工作).
 
 Zob. witrynę Ministerstwa Pracy Tajwanu (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 
 ​
 
-Jeżeli mają państwo dalsze pytania, mogą państwo się z nami skontaktować.
+Jeżeli mają Państwo dalsze pytania, prosimy o kontakt z kancelarią.
 
 ---
 

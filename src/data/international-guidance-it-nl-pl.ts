@@ -6,7 +6,7 @@
  *
  * Formal address: Italian Lei (capitalised), Dutch u, Polish Państwo.
  * Attorney Wei Tseng is female: Italian l'avvocata; Dutch advocaat + zij/haar;
- * Polish adwokat + feminine agreement (not adwokatka).
+ * Polish adwokatka + feminine agreement (native review 2026-09-21).
  */
 import type { GuidanceLocaleContent } from '@/data/international-guidance-content';
 
@@ -989,7 +989,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
 export const polishGuidanceContent: GuidanceLocaleContent = {
   languageName: 'Polski',
   nav: {
-    home: 'Start',
+    home: 'Strona główna',
     services: 'Usługi',
     about: 'Kancelaria',
     lawyers: 'Adwokaci',
@@ -1000,10 +1000,10 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
     disclaimer: 'Zastrzeżenia',
     columns: 'Artykuły',
   },
-  contactCta: 'Wysłać wniosek o konsultację',
+  contactCta: 'Wyślij wniosek o konsultację',
   footerNotice:
     'Ta strona po polsku zawiera jedynie ogólne informacje o pracy kancelarii według prawa Tajwanu. Nie jest poradą prawną w konkretnej sprawie, a wysłanie wiadomości samo w sobie nie tworzy stosunku między adwokatem a klientem.',
-  skipLink: 'Pominąć nawigację i przejść do treści',
+  skipLink: 'Pomiń nawigację i przejdź do treści',
   menuLabel: 'Spis stron',
   languageLabel: 'Język wyświetlania',
   mega: {
@@ -1032,25 +1032,25 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
   notFoundText:
     'Szukana strona nie istnieje albo została przeniesiona. Można wrócić na polską stronę główną, aby zobaczyć dostępne informacje.',
   backHomeLabel: 'Na stronę główną',
-  readSourceLabel: 'Otworzyć listę artykułów w języku oryginału',
+  readSourceLabel: 'Otwórz listę artykułów w języku oryginału',
   home: {
-    heroScrollLabel: 'Przewinąć w dół',
-    heroColumnsCtaLabel: 'Zobaczyć artykuły',
-    servicesDetailLabel: 'Zobaczyć szczegóły',
+    heroScrollLabel: 'Przewiń w dół',
+    heroColumnsCtaLabel: 'Zobacz artykuły',
+    servicesDetailLabel: 'Zobacz szczegóły',
     servicesAssistanceBefore: 'Jeśli nie jest jasne, do której grupy należy sprawa, strona ',
     servicesAssistanceLinkLabel: 'Kontakt',
     servicesAssistanceAfter:
       ' wyjaśnia, jak sformułować streszczenie, które adwokat rozpatruje.',
-    columnsViewAllLabel: 'Zobaczyć wszystkie artykuły',
+    columnsViewAllLabel: 'Zobacz wszystkie artykuły',
     columnsReadMoreLabel: 'Czytaj dalej',
-    columnsReviewLabel: 'Sprawdziła adwokat Wei Tseng',
+    columnsReviewLabel: 'Sprawdziła adwokatka Wei Tseng',
     columnsOriginalLanguageBadge: 'Język oryginału',
     columnsOriginalLanguageNote:
       'Poniższe artykuły nie są jeszcze dostępne po polsku. Lista pozostaje w języku oryginału i otwiera odpowiednią stronę językową; treść nie jest tłumaczona automatycznie.',
     imageBandAlt: 'Tradycyjny tajwański sanheyuan (三合院) i nowoczesny pawilon w świetle dziennym',
-    videoPauseLabel: 'Wstrzymać wideo',
-    videoPlayLabel: 'Odtworzyć wideo',
-    videoReplayLabel: 'Odtworzyć wideo ponownie',
+    videoPauseLabel: 'Wstrzymaj wideo',
+    videoPlayLabel: 'Odtwórz wideo',
+    videoReplayLabel: 'Odtwórz wideo ponownie',
   },
   pages: {
     home: {
@@ -1064,7 +1064,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Czym się zajmujemy',
           paragraphs: [
-            'Hovering International Law Firm jest kancelarią adwokacką z siedzibą na Tajwanie. Pracuje według prawa Tajwanu i ma biura w Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) i Pingtung (屏東). Doradzamy przedsiębiorstwom i prowadzimy postępowania przed sądem oraz towarzyszymy klientom z zagranicy w krokach wymaganych na Tajwanie.',
+            'Hovering International Law Firm jest kancelarią adwokacką z siedzibą na Tajwanie. Pracuje według prawa Tajwanu i ma biura w Tajpej (臺北), Kaohsiung (高雄), Taichung (臺中) i Pingtung (屏東). Doradzamy przedsiębiorstwom i prowadzimy postępowania przed sądem oraz towarzyszymy klientom z zagranicy w krokach wymaganych na Tajwanie.',
             'Cała treść tutaj jest ogólna. Wynik sprawy zależy od faktów, od stosowanych przepisów i od chwili. Te informacje nie zastępują rozmowy z adwokatem o Państwa dokumentach.',
           ],
         },
@@ -1072,13 +1072,13 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Język strony i język konsultacji to nie to samo',
           paragraphs: [
             'Ta strona jest napisana po polsku, ale konsultacja z adwokatem odbywa się wyłącznie w czterech językach konsultacji: angielskim, chińskim (中文), japońskim i koreańskim. Czytanie informacji po polsku nie oznacza, że rozmowa z adwokatem odbywa się po polsku.',
-            'Nie obiecujemy tłumacza ustnego, terminu odpowiedzi ani spotkania za pośrednictwem tej strony. Jeśli nie można korzystać z żadnego z czterech języków, strona «Kontakt» wyjaśnia, jak badamy sposób komunikacji.',
+            'Nie obiecujemy tłumacza ustnego, terminu odpowiedzi ani spotkania za pośrednictwem tej strony. Jeśli nie można korzystać z żadnego z czterech języków, strona „Kontakt” wyjaśnia, jak ustalamy sposób komunikacji.',
           ],
         },
         {
           heading: 'Grupy spraw',
           paragraphs: [
-            'Zakres pracy obejmuje następujące sześć grup. Strona «Usługi» opisuje każdą grupę dokładniej i wskazuje, czego się nie obiecuje.',
+            'Zakres pracy obejmuje następujące sześć grup. Strona „Usługi” opisuje każdą grupę dokładniej i wskazuje, czego się nie obiecuje.',
           ],
           items: [
             'Inwestycje i zakładanie spółki na Tajwanie',
@@ -1092,7 +1092,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Od czego zacząć',
           paragraphs: [
-            'Prosimy przeczytać stronę «Usługi», aby sprawdzić, czy sprawa wchodzi w nasz zakres, a następnie «Koszty» i «Kontakt», aby dowiedzieć się, jak ustala się zakres i jak koszty są potwierdzane przed rozpoczęciem pracy.',
+            'Prosimy przeczytać stronę „Usługi”, aby sprawdzić, czy sprawa wchodzi w nasz zakres, a następnie „Koszty” i „Kontakt”, aby dowiedzieć się, jak ustala się zakres i jak koszty są potwierdzane przed rozpoczęciem pracy.',
             'Przy wysyłaniu wiadomości można napisać streszczenie we własnym języku. Oryginalny tekst jest zapisywany tak, jak został napisany, i nie jest tłumaczony automatycznie. Wysłana wiadomość jest wnioskiem oczekującym na rozpatrzenie: to jeszcze nie konsultacja i jeszcze nie potwierdzony termin.',
           ],
         },
@@ -1104,7 +1104,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
       description:
         'Sześć grup spraw kancelarii na Tajwanie i granice, które warto znać najpierw.',
       intro:
-        'Poniżej grupy, które rzeczywiście prowadzimy, oraz pytania często zadawane na początku. Opis pomaga ocenić, czy sprawa wchodzi w nasz zakres; jest ogólny i nie jest analizą prawną jednego akt.',
+        'Poniżej grupy, które rzeczywiście prowadzimy, oraz pytania często zadawane na początku. Opis pomaga ocenić, czy sprawa wchodzi w nasz zakres; jest ogólny i nie jest analizą prawną konkretnej sprawy.',
       sections: [
         {
           heading: 'Inwestycje i zakładanie spółki na Tajwanie',
@@ -1123,7 +1123,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Małżeństwo, rodzina i spadki',
           paragraphs: [
-            'Prowadzimy sprawy o rozwód (離婚), podział majątku, wykonywanie i ponoszenie praw i obowiązków wobec małoletnich dzieci (未成年子女權利義務之行使或負擔), kontakty (會面交往) i spadki (繼承), także gdy strony lub majątek znajdują się w różnych państwach. Transgraniczne sprawy rodzinne często wymagają dodatkowego badania rejestrów gospodarstw (戶籍), formy dokumentów i ich dowodowości na Tajwanie.',
+            'Prowadzimy sprawy o rozwód (離婚), podział majątku, wykonywanie praw i obowiązków rodzicielskich wobec małoletnich dzieci (未成年子女權利義務之行使或負擔), kontakty (會面交往) i spadki (繼承), także gdy strony lub majątek znajdują się w różnych państwach. Transgraniczne sprawy rodzinne często wymagają dodatkowego badania rejestrów gospodarstw domowych (戶籍), formy dokumentów i ich dowodowości na Tajwanie.',
             'Ponieważ sprawy rodzinne często niosą terminy i równoległe postępowania, pierwsze streszczenie powinno wskazać stosunek stron, aktualne miejsce zamieszkania i już toczące się postępowania.',
           ],
         },
@@ -1168,22 +1168,22 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Założenie i struktura',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) została założona w 2016 r. przez adwokatów, którzy studiowali na National Taiwan University (國立臺灣大學). Chińska nazwa 昊鼎 łączy znak 昊 («szerokie niebo») ze znakiem 鼎 («trwała podstawa») i opisuje kierunek kancelarii od założenia.',
-            'Mamy biura w Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) i Pingtung (屏東). Biuro w Kaohsiung koncentruje się na zarządzaniu przedsiębiorstwem i prowadzi spory cywilne, karne i administracyjne. Biuro w Taichung prowadzi sprawy budowlane, własność intelektualną oraz sprawy związane z Koreą i Japonią. Biuro w Pingtung otwarto w 2017 r. na potrzeby lokalne.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) została założona w 2016 r. przez adwokatów, którzy studiowali na National Taiwan University (國立臺灣大學). Chińska nazwa 昊鼎 łączy znak 昊 („szerokie niebo”) ze znakiem 鼎 („trwała podstawa”) i opisuje kierunek kancelarii od założenia.',
+            'Mamy biura w Tajpej (臺北), Kaohsiung (高雄), Taichung (臺中) i Pingtung (屏東). Biuro w Kaohsiung koncentruje się na zarządzaniu przedsiębiorstwem i prowadzi spory cywilne, karne i administracyjne. Biuro w Taichung prowadzi sprawy budowlane, własność intelektualną oraz sprawy związane z Koreą i Japonią. Biuro w Pingtung otwarto w 2017 r. na potrzeby lokalne.',
             'Oprócz pracy adwokackiej od 2020 r. istnieje także Hovering Accounting Office, które oferuje księgowość i planowanie podatkowe przedsiębiorcom i osobom z majątkiem.',
           ],
         },
         {
           heading: 'Praca z podmiotami zagranicznymi',
           paragraphs: [
-            'Praca transgraniczna obejmuje zakładanie spółek, wizy, zgłoszenia znaków towarowych i patentów, ocenę ryzyka prawnego oraz doradztwo podatkowe przedsiębiorstw. Biuro w Taichung prowadzi zwłaszcza sprawy budowlane, własność intelektualną oraz sprawy związane z Koreą i Japonią. Adwokat Wei Tseng (曾雋崴) towarzyszy klientom z Korei, Japonii i innym klientom międzynarodowym w wskazanych grupach.',
-            'Czy możemy przyjąć sprawę, zależy od treści i od języka komunikacji. Jeśli sprawa wchodzi w wskazane grupy i można ją omówić w jednym z czterech języków konsultacji, można wysłać streszczenie do rozpatrzenia.',
+            'Praca transgraniczna obejmuje zakładanie spółek, wizy, zgłoszenia znaków towarowych i patentów, ocenę ryzyka prawnego oraz doradztwo podatkowe przedsiębiorstw. Biuro w Taichung prowadzi zwłaszcza sprawy budowlane, własność intelektualną oraz sprawy związane z Koreą i Japonią. Adwokatka Wei Tseng (曾雋崴) towarzyszy klientom z Korei, Japonii i innym klientom międzynarodowym we wskazanych grupach.',
+            'Czy możemy przyjąć sprawę, zależy od treści i od języka komunikacji. Jeśli sprawa wchodzi we wskazane grupy i można ją omówić w jednym z czterech języków konsultacji, można wysłać streszczenie do rozpatrzenia.',
           ],
         },
         {
           heading: 'Gdy Państwo się z nami kontaktują',
           paragraphs: [
-            'Po wpłynięciu streszczenia adwokat rozpatruje treść, a następnie omawia możliwy zakres pracy, jeszcze potrzebne dokumenty i kolejne kroki. W sprawach podatkowych lub księgowych kancelaria może pracować z działem księgowości w jednym biegu.',
+            'Po wpłynięciu streszczenia adwokat rozpatruje treść, a następnie omawia możliwy zakres pracy, jeszcze potrzebne dokumenty i kolejne kroki. W sprawach podatkowych lub księgowych kancelaria może prowadzić sprawę razem z działem księgowości.',
             'Wynik każdej sprawy zależy od faktów i posiadanych dokumentów; nie obiecujemy wyniku. Jeśli potrzebna jest wiążąca odpowiedź dla danej sytuacji, dokumenty muszą być omówione w jednym z czterech języków konsultacji z adwokatem.',
           ],
         },
@@ -1256,7 +1256,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Jeśli nie można korzystać z żadnego z czterech języków konsultacji',
           paragraphs: [
-            'W formularzu kontaktowym można wybrać «Sposób komunikacji musi zostać potwierdzony». Odpowiadamy, aby zbadać możliwy sposób komunikacji, jeśli taki sposób istnieje; świadczenie w innym języku nie jest zapewniane, a termin odpowiedzi nie jest obiecany.',
+            'W formularzu kontaktowym można wybrać „Sposób komunikacji musi zostać potwierdzony”. Odpowiadamy, aby ustalić możliwy sposób komunikacji, jeśli taki sposób istnieje; nie świadczymy usług w innym języku i nie obiecujemy terminu odpowiedzi.',
             'To tylko krok badania, nie jest obietnicą. Nie obiecujemy tłumacza ustnego, świadczenia po polsku ani w innym języku poza czterema wskazanymi językami, i nie obiecujemy, że przyjmiemy każdą sprawę.',
           ],
         },
@@ -1271,7 +1271,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Czego ta strona nie obiecuje',
           paragraphs: [
             'Nie obiecujemy terminu odpowiedzi, nie potwierdzamy spotkania za pośrednictwem tej strony, nie obiecujemy konkretnego adwokata i nie zapewniamy tłumacza ustnego. Tłumaczenie pisemne to coś innego: wiadomość nie jest tłumaczona automatycznie.',
-            'Jeśli Państwo wyślą wniosek, treść jest zapisywana i czeka na rozpatrzenie. Jeśli po pewnym czasie nie ma odpowiedzi, można ponownie napisać na adres poczty elektronicznej podany na stronie kontaktu.',
+            'Jeśli Państwo wyślą wniosek, treść jest zapisywana i czeka na rozpatrzenie. Jeśli nie ma odpowiedzi, można ponownie napisać na adres poczty elektronicznej podany na stronie kontaktu.',
           ],
         },
       ],
@@ -1310,7 +1310,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Co, jeśli nie można korzystać z żadnego z czterech języków?',
           answer:
-            'Przy wysyłaniu wniosku prosimy wybrać «Sposób komunikacji musi zostać potwierdzony». Odpowiadamy, aby zbadać sposób komunikacji, ale świadczenie w innym języku nie jest zapewniane. To krok badania, nie jest obietnicą, że możemy pracować w innym języku.',
+            'Przy wysyłaniu wniosku prosimy wybrać „Sposób komunikacji musi zostać potwierdzony”. Odpowiadamy, aby ustalić sposób komunikacji, ale nie świadczymy usług w innym języku. To krok badania, nie jest obietnicą, że możemy pracować w innym języku.',
         },
         {
           question: 'Jak traktowany jest mój tekst po polsku?',
@@ -1382,7 +1382,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Powiadomienie i numer odbioru',
           paragraphs: [
-            'Jeśli wniosek zostanie pomyślnie wysłany, system powiadamia kancelarię. Jeśli to powiadomienie nie jest jeszcze potwierdzone, tekst pozostaje zapisany i nie ginie.',
+            'Jeśli wniosek zostanie pomyślnie wysłany, system powiadamia kancelarię. Jeśli to powiadomienie nie jest jeszcze potwierdzone, tekst pozostaje zapisany i nie zostaje utracony.',
             'Numer odbioru służy do odnalezienia wniosku w naszych aktach. Jest pokazywany po zapisaniu; można go podać przy ponownym kontakcie.',
           ],
         },
@@ -1396,7 +1396,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Miejsce przechowywania i dostawcy',
           paragraphs: [
-            'Ta witryna jest hostowana u Vercel, a wysyłka jest przechowywana w niepublicznym magazynie obiektów tej usługi. Poczta elektroniczna jest wysyłana przez usługę poczty używaną przez kancelarię.',
+            'Ta witryna jest hostowana u Vercel, a wysyłka jest przechowywana w niepublicznej przestrzeni dyskowej tej usługi. Poczta elektroniczna jest wysyłana przez usługę poczty używaną przez kancelarię.',
             'Serwery poszczególnych dostawców mogą znajdować się poza Tajwanem, więc dane mogą tam być przechowywane i przetwarzane. Gdy cel przechowywania zostanie spełniony, dane usuwa się bez zwłoki; dane, które według stosowanych przepisów muszą być przechowywane, pozostają przez ten czas. Wnioski dotyczące danych osobowych przyjmuje wei@hoveringlaw.com.tw.',
           ],
         },
@@ -1420,7 +1420,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Zakres prawny',
           paragraphs: [
-            'Kancelaria praktykuje według prawa Tajwanu, a ta strona mówi wyłącznie o pracy w tym ramach.',
+            'Kancelaria prowadzi sprawy według prawa Tajwanu, a ta strona mówi wyłącznie o pracy w tych ramach.',
             'Treść nie jest doradztwem według prawa innego porządku niż Tajwan, w tym prawa miejsca zamieszkania. Jeśli część sprawy dotyczy innego porządku prawnego, wyjaśnimy z Państwem, jaka wykwalifikowana osoba jest potrzebna do tej części.',
           ],
         },

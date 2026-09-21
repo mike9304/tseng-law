@@ -31,6 +31,8 @@ Rules to apply (all locales):
 - R9 Taiwan emergency numbers (003): say explicitly "in Taiwan: 119 (ambulance/fire), 110 (police), 112 from a mobile".
 - R10 Register: consistent formal address of your locale (sv: du; pl: Państwo capitalised; cs/uk/ru: Vy/Ви as already used; hi: आप); no German/French/English calques flagged by the reviewer (systemic rows).
 
+Helper scripts: keep any helper you write inside your own worktree (e.g. <worktree>/.tmp-<loc>/), never in a shared scratchpad — a shared `sweep.py` from another lane was imported by mistake and rewrote 62 files in a different worktree (restored). Nav labels (`nav.*`) are capped at 14 characters by a test. The Invest Taiwan link `lang=jpn` in 011 is fixed centrally by the supervisor — leave it.
+
 Hard constraints (unchanged): consultation languages EN/中文/JA/KO only; no interpreter / reply-time / free-consultation / 24-7 / result / win-rate / best-only promises; Traditional-Chinese glosses stay; frontmatter keys, `url`, `lastmod`, `featured_image`, image paths, external links, block counts unchanged; `[변호사 검수 필요]` = 0; no Hangul outside `url`.
 
 Decisions for the user (not applied): (1) the same advertising-risk sentences exist in ko/en/ja/zh-hant (003, 005, 008); (2) the team bio's first-instance judgment amount; (3) Korea-centric framing in the Korean/English originals.

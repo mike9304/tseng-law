@@ -1,1 +1,27 @@
 [WO start 2026-09-21 16:47:54]
+Review is on disk at `docs/i18n/global-plan/reviews/native/id-b.md` (columns 010–018 only; guidance pack left to part a).
+
+**Verdict:** N/A for the guidance pack, **3/5** for these columns. Standard EYD Indonesian, not mixed with Malay. No masculine form for Wei Tseng. 012, 011, and 017 are the strongest once the Japanese Invest Taiwan link and *subjek* are closed; 013 and 015 still read as a Korean blog; 018 is a different, more telegraphic register.
+
+**Must-fix (P1):** comment/“kapan saja” CTAs in 013 and 015; `lang=jpn` on 011; FAQ “Tidak.” under “Kapan …” in 014; *disposisi harta* (處分) in 016; 018’s *hak pengawasan*/*pengawas*, “Komisi Peninjauan Investasi”, and “Contoh subjek”.
+
+Last 15 lines of the output file:
+
+```
+| 24 | P2 | C | columns-id/016-taiwan-inheritance-custody-analysis.md | "Pewarisan dan Hak serta Kewajiban terhadap Anak di Taiwan" | Word-for-word 權利義務; the body later coins the native *hak asuh*. Title and FAQ still read as children’s rights-and-duties. | Pewarisan dan hak asuh anak di Taiwan: panduan hukum bagi keluarga yang ditinggalkan |
+| 25 | P2 | B | columns-id/016-taiwan-inheritance-custody-analysis.md | "Bukan. Hak menuntut pembagian selisih sisa harta suami istri" | Topic heading, then FAQ “Bukan.” Same paste in 016 §7 “Tidak.” and 017 §1 “Tidak selalu demikian.” | Hak itu bukan bagian waris. Hak menuntut pembagian selisih sisa harta suami istri … |
+| 26 | P2 | A | columns-id/016-taiwan-inheritance-custody-analysis.md | "harta aktif dan harta pasif harus diselidiki sekaligus" | *Harta pasif* is a 消極財產 calque; a native says assets and debts. | harta dan utang harus diselidiki sekaligus |
+| 27 | P2 | A | columns-id/017-taiwan-logistics-business-setup.md | "Statuta Investasi oleh Warga Negara Asing (外國人投資條例)" | Same 條例 is “Peraturan Penanaman Modal oleh Orang Asing” in 013; *statuta* is Latinising and the two pages disagree. | Undang-Undang Penanaman Modal oleh Orang Asing (外國人投資條例) |
+| 28 | P2 | C | columns-id/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md | "**Pengacara Wei Tseng (曾雋崴)**" | Guidance pack uses Advokat; 011, 014, 017 use Pengacara; 016 “Pengacara Taiwan”. Pick one. | **Advokat Wei Tseng (曾雋崴)** |
+| 29 | P2 | G | columns-id/018-taiwan-semiconductor-market-entry.md | "Warga negara asing yang bekerja di Taiwan harus memiliki izin kerja yang sah" | 018 drops the Traditional-Chinese gloss convention (工作許可, 監察人, 有限公司, 股份有限公司, 投資審議司) used in 010–017. | Warga negara asing yang bekerja di Taiwan harus memiliki izin kerja (工作許可) yang sah |
+| 30 | P2 | D | columns-id/018-taiwan-semiconductor-market-entry.md | "modal disetor NT$30 juta" | Other Indonesian columns use TWD; NT$ is Taiwan-English chrome. Also “pendapatan usaha NT$100 juta”. Keep the amounts. | modal disetor TWD 30.000.000 |
+| 31 | P2 | C | columns-id/018-taiwan-semiconductor-market-entry.md | "perseroan terbatas oleh saham" | Same “company limited by shares” calque as part a 001; Indonesian company talk is PT / perseroan saham. Recurs through 018. | perseroan terbatas berbentuk saham (股份有限公司) |
+| 32 | P2 | G | columns-id/018-taiwan-semiconductor-market-entry.md | "listing di masa depan" | English leftover; the English source also had “emerging-market registration”, which was dropped. Also “jasa vendor eksternal”. | pencatatan di bursa atau di pasar emerging pada masa depan |
+| 33 | P2 | B | columns-id/018-taiwan-semiconductor-market-entry.md | "## 7. Struktur yang lebih sesuai menurut tahap perkembangan usaha" | Section 6 is missing (5 then 7); inherited from English, still a broken outline on the Indonesian page. | ## 6. Struktur yang lebih sesuai menurut tahap perkembangan usaha |
+| 34 | P2 | E | columns-id/018-taiwan-semiconductor-market-entry.md | "relatif lebih mudah mengajukan izin kerja" | Reads as an easy-permit path. | Manajer anak perusahaan dan cabang Taiwan perusahaan asing pada umumnya menempuh jalur izin kerja yang berbeda; ini bukan jaminan persetujuan |
+| 35 | P2 | E | columns-id/018-taiwan-semiconductor-market-entry.md | "Pada konsultasi pertama, kumpulkan informasi dasar kantor pusat dan pemodal" | Indonesian page describes “first consultation” as if the reader can have one; language limit appears only at the end. | Pada kontak pertama melalui halaman Kontak, kumpulkan informasi dasar kantor pusat dan pemodal |
+| 36 | P2 | A | columns-id/018-taiwan-semiconductor-market-entry.md | "Departemen Pengembangan Perdagangan Kementerian Ekonomi" | English is Department of Commerce, not “trade development”; 商業/國貿 is not 發展. | Departemen Perdagangan Kementerian Ekonomi (經濟部) |
+| 37 | P2 | D | columns-id/013-taiwan-company-establishment-advanced-1.md | "Departemen Peninjauan Investasi, Kementerian Ekonomi Taiwan (經濟部投資審議司)" | Same 司 is Direktorat in 018 and Komisi in the 018 heading; pick one Indonesian label and keep the gloss. | Departemen Peninjauan Investasi Kementerian Ekonomi (經濟部投資審議司) — samakan di 011, 017, 018 |
+| 38 | P2 | C | columns-id/018-taiwan-semiconductor-market-entry.md | "jasa vendor eksternal?" | Unassimilated English *vendor* in a table cell the reader will scan first. | jasa penyedia dari luar? |
+```
+=== end code=0 2026-09-21 16:53:40 ===

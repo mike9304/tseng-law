@@ -28,7 +28,7 @@ def key_blocks(text, key):
 replaced = 0; copied = 0
 for f in files:
     sp, dp = os.path.join(src, f), os.path.join(dst, f)
-    if not os.path.exists(sp) or '/.tmp-' in '/'+f or f.startswith('.tmp-'): continue
+    if not os.path.exists(sp) or '/.tmp-' in '/'+f or f.startswith('.tmp-') or f.startswith('scripts/'): continue
     if f.startswith(f'src/content/columns-{loc}/') or f.startswith('docs/'):
         os.makedirs(os.path.dirname(dp), exist_ok=True); shutil.copyfile(sp, dp); copied += 1; continue
     if not os.path.exists(dp): shutil.copyfile(sp, dp); copied += 1; continue

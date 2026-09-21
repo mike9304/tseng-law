@@ -13,7 +13,7 @@ import type { GuidanceLocaleContent } from '@/data/international-guidance-conten
 export const italianGuidanceContent: GuidanceLocaleContent = {
   languageName: 'Italiano',
   nav: {
-    home: 'Inizio',
+    home: 'Home',
     services: 'Servizi',
     about: 'Lo studio',
     lawyers: 'Avvocati',
@@ -28,11 +28,11 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
   footerNotice:
     'Questa pagina in italiano contiene soltanto indicazioni generali sul lavoro dello studio secondo il diritto di Taiwan. Non è una consulenza legale per un caso concreto, e l’invio di un messaggio non costituisce di per sé un rapporto tra avvocata o avvocato e cliente.',
   skipLink: 'Saltare la navigazione e andare al contenuto',
-  menuLabel: 'Indice delle pagine',
+  menuLabel: 'Menu',
   languageLabel: 'Lingua di visualizzazione',
   mega: {
     services: {
-      description: 'Lo studio tratta i gruppi essenziali di lavoro secondo il diritto di Taiwan.',
+      description: 'Lo studio tratta le principali aree di attività secondo il diritto di Taiwan.',
       viewAllLabel: 'Mostra tutti',
     },
     columns: {
@@ -61,12 +61,12 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
     heroScrollLabel: 'Scorrere verso il basso',
     heroColumnsCtaLabel: 'Vedere gli articoli',
     servicesDetailLabel: 'Vedere i dettagli',
-    servicesAssistanceBefore: 'Se non è chiaro a quale gruppo appartiene la Sua questione, la pagina ',
+    servicesAssistanceBefore: 'Se non è chiaro a quale area di attività appartiene la Sua questione, la pagina ',
     servicesAssistanceLinkLabel: 'Contatti',
     servicesAssistanceAfter:
       ' spiega come formulare un riassunto che un’avvocata o un avvocato esamina.',
     columnsViewAllLabel: 'Vedere tutti gli articoli',
-    columnsReadMoreLabel: 'Leggere oltre',
+    columnsReadMoreLabel: 'Continua a leggere',
     columnsReviewLabel: 'Verificato dall’avvocata Wei Tseng',
     columnsOriginalLanguageBadge: 'Lingua originale',
     columnsOriginalLanguageNote:
@@ -83,12 +83,12 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Spiegazioni generali in italiano sull’ambito di lavoro di Hovering International Law Firm a Taiwan, sulle lingue di consulenza e sul primo contatto.',
       intro:
-        'Hovering International Law Firm accompagna clienti dall’estero, anche con un nesso con Taiwan, in questioni di diritto taiwanese: investimento e costituzione di società, controversie civili, matrimonio, famiglia e successioni, diritto del lavoro, penale e proprietà intellettuale. Questa parte in italiano La aiuta a riconoscere quale lavoro rientra nel nostro ambito, che cosa preparare e come raggiungerci. Si tratta di indicazioni generali, non di una consulenza legale per il Suo caso.',
+        'Hovering International Law Firm accompagna clienti dall’estero, anche quando hanno un collegamento con Taiwan, in questioni di diritto taiwanese: investimento e costituzione di società, controversie civili, matrimonio, famiglia e successioni, diritto del lavoro, penale e proprietà intellettuale. Questa parte in italiano La aiuta a riconoscere quale lavoro rientra nel nostro ambito, che cosa preparare e come raggiungerci. Si tratta di indicazioni generali, non di una consulenza legale per il Suo caso.',
       sections: [
         {
           heading: 'Che cosa facciamo',
           paragraphs: [
-            'Hovering International Law Firm è uno studio legale stabilito a Taiwan. Lavora secondo il diritto di Taiwan e ha uffici a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). Consuliamo imprese e conduciamo procedimenti in giudizio e accompagniamo clienti dall’estero nei passi necessari a Taiwan.',
+            'Hovering International Law Firm è uno studio legale stabilito a Taiwan. Lavora secondo il diritto di Taiwan e ha uffici a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). Forniamo consulenza alle imprese, le rappresentiamo in giudizio e accompagniamo i clienti dall’estero nei passi necessari a Taiwan.',
             'Tutto il contenuto qui è generale. L’esito di una questione dipende dai fatti, dalle norme applicabili e dal momento. Queste indicazioni non sostituiscono il colloquio con un’avvocata o un avvocato sui Suoi documenti.',
           ],
         },
@@ -96,13 +96,13 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           heading: 'La lingua della pagina e la lingua di consulenza non sono la stessa cosa',
           paragraphs: [
             'Questa pagina è scritta in italiano, ma la consulenza con un’avvocata o un avvocato si svolge soltanto nelle quattro lingue di consulenza inglese, cinese (中文), giapponese e coreano. Leggere le indicazioni in italiano non significa che il colloquio con l’avvocata o l’avvocato avvenga in italiano.',
-            'Non promettiamo un interprete, un termine di risposta né un appuntamento tramite questa pagina. Se non può usare nessuna delle quattro lingue, la pagina «Contatti» spiega come esaminiamo una via di comunicazione.',
+            'Non promettiamo un interprete, un termine di risposta né un appuntamento tramite questa pagina. Se non può usare nessuna delle quattro lingue, la pagina «Contatti» spiega come esaminiamo un canale di comunicazione.',
           ],
         },
         {
-          heading: 'Gruppi di lavoro',
+          heading: 'Aree di attività',
           paragraphs: [
-            'L’ambito di lavoro comprende i sei gruppi seguenti. La pagina «Servizi» descrive ogni gruppo con più precisione e indica che cosa non viene promesso.',
+            'L’ambito di lavoro comprende le sei aree seguenti. La pagina «Servizi» descrive ogni area con più precisione e indica che cosa non viene promesso.',
           ],
           items: [
             'Investimento e costituzione di società a Taiwan',
@@ -117,7 +117,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Da dove iniziare',
           paragraphs: [
             'Legga la pagina «Servizi» per verificare se la Sua questione rientra nel nostro ambito, poi «Costi» e «Contatti» per sapere come si fissa l’ambito e come i costi vengono confermati prima dell’inizio del lavoro.',
-            'Nell’inviare un messaggio può scrivere il riassunto nella Sua lingua. Il testo originale viene conservato così come Lo ha scritto e non viene tradotto automaticamente. Un messaggio inviato è una richiesta in attesa di esame: non è ancora una consulenza né un appuntamento confermato.',
+            'Nell’inviare un messaggio può scrivere il riassunto nella Sua lingua. Il testo originale viene conservato così come lo ha scritto e non viene tradotto automaticamente. Un messaggio inviato è una richiesta in attesa di esame: non è ancora una consulenza né un appuntamento confermato.',
           ],
         },
       ],
@@ -126,35 +126,35 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'SERVIZI',
       title: 'Quali questioni trattiamo',
       description:
-        'Sei gruppi di lavoro dello studio a Taiwan e i limiti che conviene conoscere per primi.',
+        'Le sei aree di attività dello studio a Taiwan e i limiti che conviene conoscere per primi.',
       intro:
-        'Di seguito i gruppi che trattiamo davvero e le domande che nella fase iniziale si pongono spesso. L’esposizione La aiuta a valutare se la Sua questione rientra nel nostro ambito; è generale e non è un’analisi giuridica di un singolo fascicolo.',
+        'Di seguito le aree di cui ci occupiamo e le domande che nella fase iniziale si pongono spesso. L’esposizione La aiuta a valutare se la Sua questione rientra nel nostro ambito; è generale e non è un’analisi giuridica di un singolo fascicolo.',
       sections: [
         {
           heading: 'Investimento e costituzione di società a Taiwan',
           paragraphs: [
-            'Accompagniamo investitori e imprese straniere nella costituzione o nella gestione di una società a Taiwan: scelta della forma giuridica, preparazione e deposito di documenti, conferimento del capitale, questioni bancarie, esame della sede e requisiti di settore. Sosteniamo anche la contabilità e le imposte che derivano dalla costituzione e dalla gestione a Taiwan.',
+            'Accompagniamo investitori e imprese straniere nella costituzione o nella gestione di una società a Taiwan: scelta della forma giuridica, preparazione e deposito di documenti, conferimento del capitale, questioni bancarie, esame della sede e requisiti di settore. Assistiamo anche in materia contabile e fiscale per quanto deriva dalla costituzione e dalla gestione a Taiwan.',
             'Il percorso e i tempi differiscono secondo la forma, l’investitore, il settore, la banca e i documenti già disponibili. La costituzione di una società non porta da sola a un titolo di soggiorno (居留) o a un permesso di lavoro (工作許可): sono procedimenti distinti, valutati secondo la situazione della persona.',
           ],
         },
         {
           heading: 'Controversie civili e risarcimento',
           paragraphs: [
-            'Questo gruppo comprende controversie contrattuali, risarcimento da illecito e controversie dei consumatori. Il lavoro inizia di regola con una cronologia, l’esame dei documenti e delle prove esistenti e soltanto dopo con i passi successivi.',
-            'I termini, comprese le prescrizioni, e la completezza delle prove segnano il corso. Indichi quindi le date note il più presto possibile. Conservi contratti, messaggi, ricevute di pagamento o fotografie della situazione sul posto e li menzioni nel primo messaggio.',
+            'Quest’area comprende controversie contrattuali, risarcimento da illecito e controversie dei consumatori. Il lavoro inizia di regola con una cronologia, l’esame dei documenti e delle prove esistenti e soltanto dopo con i passi successivi.',
+            'I termini, comprese le prescrizioni, e la completezza delle prove determinano l’andamento della pratica. Indichi quindi le date note il più presto possibile. Conservi contratti, messaggi, ricevute di pagamento o fotografie della situazione sul posto e li menzioni nel primo messaggio.',
           ],
         },
         {
           heading: 'Matrimonio, famiglia e successioni',
           paragraphs: [
-            'Trattiamo il divorzio (離婚), la divisione patrimoniale, l’esercizio e l’assunzione dei diritti e dei doveri verso i figli minori (未成年子女權利義務之行使或負擔), i rapporti (會面交往) e le successioni (繼承), anche quando le parti o i beni si trovano in Stati diversi. Le questioni familiari transfrontaliere richiedono spesso un esame ulteriore dei registri anagrafici (戶籍), della forma degli atti e della loro prova a Taiwan.',
+            'Trattiamo il divorzio (離婚), la divisione patrimoniale, l’affidamento e la responsabilità genitoriale sui figli minori (未成年子女權利義務之行使或負擔), il diritto di visita (會面交往) e le successioni (繼承), anche quando le parti o i beni si trovano in Stati diversi. Le questioni familiari transfrontaliere richiedono spesso un esame ulteriore dei registri anagrafici (戶籍), della forma degli atti e della loro prova a Taiwan.',
             'Poiché le questioni familiari portano spesso termini e procedimenti paralleli, il primo riassunto dovrebbe indicare il rapporto tra le parti, il domicilio attuale e i procedimenti già in corso.',
           ],
         },
         {
           heading: 'Controversie di lavoro',
           paragraphs: [
-            'Questo gruppo comprende la cessazione del rapporto di lavoro, l’indennità secondo il diritto di Taiwan (資遣費; non da equiparare a istituti di altri Stati), la retribuzione e le controversie dal contratto di lavoro (勞動契約), tanto dal lato del lavoratore quanto dal lato del datore. Nell’esame distinguiamo il motivo della cessazione dalle questioni di preavviso, di pagamento e di termini.',
+            'Quest’area comprende la cessazione del rapporto di lavoro, l’indennità secondo il diritto di Taiwan (資遣費; non da equiparare a istituti di altri Stati), la retribuzione e le controversie dal contratto di lavoro (勞動契約), sia dal lato del lavoratore sia da quello del datore di lavoro. Nell’esame distinguiamo il motivo della cessazione dalle questioni di preavviso, di pagamento e di termini.',
             'Il contratto di lavoro, il regolamento interno (工作規則), le buste paga e la corrispondenza delle parti sono di solito i documenti decisivi. Se li ha ancora, lo menzioni nel riassunto.',
           ],
         },
@@ -168,14 +168,14 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Proprietà intellettuale',
           paragraphs: [
-            'Sosteniamo la registrazione di marchi (商標) e brevetti (專利), il diritto d’autore e le controversie su questi diritti a Taiwan.',
-            'In questo gruppo decide l’ordine dei passi: l’ambito di protezione, il momento del deposito e l’uso effettivo influenzano la scelta. Il deposito di una domanda non significa di per sé che essa sia accolta.',
+            'Assistiamo nella registrazione di marchi (商標) e brevetti (專利), nel diritto d’autore e nelle controversie su questi diritti a Taiwan.',
+            'In quest’area decide l’ordine dei passi: l’ambito di protezione, il momento del deposito e l’uso effettivo influenzano la scelta. Il deposito di una domanda non significa di per sé che essa sia accolta.',
           ],
         },
         {
           heading: 'Ambito e sua conferma',
           paragraphs: [
-            'Lo studio lavora secondo il diritto di Taiwan e tratta questioni dei gruppi sopra indicati. L’ambito di ciascuna questione viene confermato separatamente dopo che un’avvocata o un avvocato ha esaminato il Suo messaggio.',
+            'Lo studio lavora secondo il diritto di Taiwan e tratta questioni delle aree sopra indicate. L’ambito di ciascuna questione viene confermato separatamente dopo che un’avvocata o un avvocato ha esaminato il Suo messaggio.',
             'Lo status di soggiorno, il permesso di lavoro e questioni analoghe si valutano dai documenti e dalla situazione della persona, non dalla nazionalità. Se una parte della Sua questione tocca tali punti, lo indichi nel contatto. Questa pagina non promette un risultato né un termine di risposta.',
           ],
         },
@@ -193,21 +193,21 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Fondazione e struttura',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) è stato fondato nel 2016 da avvocate e avvocati che hanno studiato alla National Taiwan University (國立臺灣大學). Il nome cinese 昊鼎 unisce il carattere 昊 («cielo ampio») con 鼎 («base solida») e descrive l’orientamento dello studio dalla fondazione.',
-            'Abbiamo uffici a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). L’ufficio di Kaohsiung si concentra sulla gestione d’impresa e tratta controversie civili, penali e amministrative. L’ufficio di Taichung tratta questioni edilizie, proprietà intellettuale e questioni con nesso con la Corea e il Giappone. L’ufficio di Pingtung è stato aperto nel 2017 per il fabbisogno locale.',
-            'Oltre al lavoro forense esiste dal 2020 anche Hovering Accounting Office, che offre contabilità e pianificazione fiscale a imprenditori e privati con patrimonio.',
+            'Abbiamo uffici a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). L’ufficio di Kaohsiung si concentra sulla gestione d’impresa e tratta controversie civili, penali e amministrative. L’ufficio di Taichung tratta questioni edilizie, proprietà intellettuale e questioni collegate alla Corea e al Giappone. L’ufficio di Pingtung è stato aperto nel 2017 per le esigenze del territorio.',
+            'Oltre al lavoro forense esiste dal 2020 anche Hovering Accounting Office, che offre contabilità e pianificazione fiscale a imprenditori e privati con patrimoni rilevanti.',
           ],
         },
         {
           heading: 'Lavoro con parti straniere',
           paragraphs: [
-            'Il lavoro transfrontaliero comprende costituzione di società, visti, depositi di marchi e brevetti, esame del rischio giuridico e consulenza fiscale di imprese. L’ufficio di Taichung tratta in particolare questioni edilizie, proprietà intellettuale e questioni con nesso con la Corea e il Giappone. L’avvocata Wei Tseng (曾雋崴) accompagna clienti dalla Corea, dal Giappone e altri clienti internazionali nei gruppi indicati.',
-            'Se possiamo assumere una questione dipende dal contenuto e dalla lingua della comunicazione. Se la Sua questione rientra nei gruppi indicati e può essere discussa in una delle quattro lingue di consulenza, può inviare un riassunto per l’esame.',
+            'Il lavoro transfrontaliero comprende costituzione di società, visti, depositi di marchi e brevetti, esame del rischio giuridico e consulenza fiscale di imprese. L’ufficio di Taichung tratta in particolare questioni edilizie, proprietà intellettuale e questioni collegate alla Corea e al Giappone. L’avvocata Wei Tseng (曾雋崴) accompagna clienti dalla Corea, dal Giappone e altri clienti internazionali nelle aree indicate.',
+            'Se possiamo assumere una questione dipende dal contenuto e dalla lingua della comunicazione. Se la Sua questione rientra nelle aree indicate e può essere discussa in una delle quattro lingue di consulenza, può inviare un riassunto per l’esame.',
           ],
         },
         {
           heading: 'Quando ci contatta',
           paragraphs: [
-            'Dopo l’arrivo del Suo riassunto un’avvocata o un avvocato esamina il contenuto e parla poi del possibile ambito di lavoro, dei documenti ancora necessari e dei passi successivi. Per questioni fiscali o contabili lo studio può lavorare con la sezione di contabilità in un unico flusso.',
+            'Dopo l’arrivo del Suo riassunto un’avvocata o un avvocato esamina il contenuto e parla poi del possibile ambito di lavoro, dei documenti ancora necessari e dei passi successivi. Per questioni fiscali o contabili lo studio può lavorare con la sezione di contabilità in modo integrato.',
             'Il risultato di ciascuna questione dipende dai fatti e dai documenti disponibili; non promettiamo un risultato. Se ha bisogno di una risposta vincolante per la Sua situazione, i documenti devono essere discussi in una delle quattro lingue di consulenza con un’avvocata o un avvocato.',
           ],
         },
@@ -216,7 +216,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'AVVOCATI',
       title: 'Team internazionale di Hovering',
-      description: 'Profili delle avvocate e degli avvocati, della direzione operativa e della revisione associata di Hovering.',
+      description: 'Profili delle avvocate e degli avvocati, del responsabile operativo e del commercialista partner di Hovering.',
       intro: '',
       sections: [],
     },
@@ -280,15 +280,15 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Se non può usare nessuna delle quattro lingue di consulenza',
           paragraphs: [
-            'Nel modulo di contatto può scegliere «La via di comunicazione deve essere confermata». Rispondiamo per esaminare una via praticabile di comunicazione, se una tale via esiste; una prestazione in un’altra lingua non è garantita e un termine di risposta non è promesso.',
-            'Questo è soltanto un passo di esame, non è una promessa. Non promettiamo un interprete, una prestazione in italiano o in un’altra lingua fuori dalle quattro lingue indicate, e non che accettiamo ogni questione.',
+            'Nel modulo di contatto può scegliere «Il canale di comunicazione deve essere confermato». Rispondiamo per esaminare un canale di comunicazione praticabile, se un canale del genere esiste; una prestazione in un’altra lingua non è garantita e un termine di risposta non è promesso.',
+            'Questo è soltanto un passo di esame, non è una promessa. Non promettiamo un interprete, una prestazione in italiano o in un’altra lingua fuori dalle quattro lingue indicate, né promettiamo di accettare ogni questione.',
           ],
         },
         {
           heading: 'Che cosa dovrebbe contenere il primo messaggio',
           paragraphs: [
             'Indichi che cosa è accaduto, di quale aiuto ha bisogno, quale nesso ha la questione con Taiwan e il termine, se ne conosce uno. Se ha già ricevuto uno scritto di un tribunale o di un’autorità, indichi la data sullo scritto.',
-            'Nella fase iniziale non deve ancora inviare il numero di passaporto, il numero di documento, i dati di un conto, cartelle cliniche o l’insieme delle prove. Attenda le indicazioni dell’avvocata o dell’avvocato e invii allora i documenti sensibili su una via sicura.',
+            'Nella fase iniziale non deve ancora inviare il numero di passaporto, il numero di documento, i dati di un conto, cartelle cliniche o l’insieme delle prove. Attenda le indicazioni dell’avvocata o dell’avvocato e invii allora i documenti sensibili attraverso un canale sicuro.',
           ],
         },
         {
@@ -306,7 +306,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Spiegazioni su ambito di lavoro, preparazione, lingue, costi e sul significato di una richiesta inviata.',
       intro:
-        'Le domande seguenti sono risposte al livello di indicazioni generali. Una risposta per il Suo caso è possibile soltanto dopo che un’avvocata o un avvocato ha esaminato i documenti.',
+        'Alle domande seguenti si risponde a livello di indicazioni generali. Una risposta per il Suo caso è possibile soltanto dopo che un’avvocata o un avvocato ha esaminato i documenti.',
       sections: [
         {
           heading: 'Come usare questa parte',
@@ -319,7 +319,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Quali questioni tratta lo studio?',
           answer:
-            'Trattiamo sei gruppi: investimento e costituzione di società a Taiwan, controversie civili e risarcimento, matrimonio, famiglia e successioni, controversie di lavoro, questioni penali e proprietà intellettuale. Se una questione viene accettata si decide dopo l’esame del contenuto.',
+            'Trattiamo sei aree di attività: investimento e costituzione di società a Taiwan, controversie civili e risarcimento, matrimonio, famiglia e successioni, controversie di lavoro, questioni penali e proprietà intellettuale. Se una questione viene accettata si decide dopo l’esame del contenuto.',
         },
         {
           question: 'Che cosa dovrei preparare prima del contatto?',
@@ -334,7 +334,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Che fare se non posso usare nessuna delle quattro lingue?',
           answer:
-            'Scelga, nell’inviare la richiesta, «La via di comunicazione deve essere confermata». Rispondiamo per esaminare una via di comunicazione, ma una prestazione in un’altra lingua non è garantita. Questo è un passo di esame, non è una promessa che possiamo lavorare in un’altra lingua.',
+            'Scelga, nell’inviare la richiesta, «Il canale di comunicazione deve essere confermato». Rispondiamo per esaminare un canale di comunicazione, ma una prestazione in un’altra lingua non è garantita. Questo è un passo di esame, non è una promessa che possiamo lavorare in un’altra lingua.',
         },
         {
           question: 'Come viene trattato il mio testo in italiano?',
@@ -385,7 +385,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Il testo originale viene conservato senza modifiche',
           paragraphs: [
-            'Il Suo testo viene conservato esattamente come Lo ha scritto e non viene tradotto automaticamente. Se una traduzione è necessaria per il trattamento, ciò viene discusso con Lei a parte.',
+            'Il Suo testo viene conservato esattamente come lo ha scritto e non viene tradotto automaticamente. Se una traduzione è necessaria per il trattamento, ciò viene discusso con Lei a parte.',
             'Poiché il testo originale viene conservato, nella fase iniziale non scriva ciò che non è ancora necessario, ad esempio il numero di passaporto, il numero di documento o i dati di un conto.',
           ],
         },
@@ -393,13 +393,13 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Luogo di conservazione e accesso',
           paragraphs: [
             'Il contenuto del Suo invio viene conservato in un luogo non accessibile al pubblico. Soltanto persone autorizzate nello studio possono accedervi per trattare la richiesta.',
-            'Questa pagina non dà una garanzia assoluta di sicurezza. Nessuna via di trasmissione e nessun luogo di conservazione è del tutto sicuro; i documenti sensibili dovrebbero quindi essere inviati soltanto dopo un’istruzione particolare dell’avvocata o dell’avvocato.',
+            'Questa pagina non dà una garanzia assoluta di sicurezza. Nessun canale di trasmissione e nessun luogo di conservazione è del tutto sicuro; i documenti sensibili dovrebbero quindi essere inviati soltanto dopo un’istruzione particolare dell’avvocata o dell’avvocato.',
           ],
         },
         {
           heading: 'Scopo dell’uso',
           paragraphs: [
-            'I dati inviati servono all’esame della richiesta, alla risposta a Lei, al chiarimento della via di comunicazione e al trattamento, se il lavoro viene assunto.',
+            'I dati inviati servono all’esame della richiesta, alla risposta a Lei, al chiarimento del canale di comunicazione e al trattamento, se il lavoro viene assunto.',
             'I dati non vengono usati per il marketing senza un consenso distinto.',
           ],
         },
@@ -411,7 +411,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'I Suoi diritti e la via di contatto',
+          heading: 'I Suoi diritti e il canale di contatto',
           paragraphs: [
             'Può chiedere accesso, rettifica o cancellazione dei Suoi dati o revocare il consenso, tramite l’indirizzo di posta elettronica indicato nella pagina di contatto. Se esiste un obbligo legale o processuale di conservazione, spieghiamo la limitazione.',
             'Questa pagina non indica un termine fisso di conservazione, perché la durata effettiva dipende dal seguito della questione e dagli obblighi connessi. Se desidera una cancellazione anteriore, lo comunichi nel contatto.',
@@ -421,7 +421,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Luogo di conservazione e fornitori',
           paragraphs: [
             'Questo sito è ospitato presso Vercel, e il Suo invio viene conservato in un archivio di oggetti non pubblico di questo servizio. Le e-mail vengono inviate tramite il servizio di posta usato dallo studio.',
-            'I server di singoli fornitori possono trovarsi fuori da Taiwan, così i Suoi dati possono essere ivi conservati e trattati. Quando lo scopo di conservazione è soddisfatto, i dati vengono cancellati senza ritardo; i dati che devono essere conservati secondo le norme applicabili restano per quella durata. Le richieste sui dati personali sono accolte da wei@hoveringlaw.com.tw.',
+            'I server di singoli fornitori possono trovarsi fuori da Taiwan, così i Suoi dati possono essere ivi conservati e trattati. Quando lo scopo di conservazione è soddisfatto, i dati vengono cancellati senza ritardo; i dati che devono essere conservati secondo le norme applicabili restano per quella durata. Per le richieste sui dati personali si scriva a wei@hoveringlaw.com.tw.',
           ],
         },
       ],
@@ -449,7 +449,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Un rapporto tra avvocata o avvocato e cliente non nasce da sé',
+          heading: 'Un rapporto tra avvocata o avvocato e cliente non sorge automaticamente',
           paragraphs: [
             'La lettura di questa pagina, l’invio di un modulo o di un’e-mail non costituisce di per sé un rapporto tra avvocata o avvocato e cliente.',
             'Questo rapporto nasce soltanto dopo che la questione è stata esaminata e entrambe le parti hanno confermato l’assunzione del lavoro.',
@@ -470,13 +470,13 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Articoli in italiano su domande frequenti del diritto di Taiwan. Il contenuto è informazione generale al momento della pubblicazione, non una consulenza legale per il Suo caso.',
       intro:
-        'Lo studio pubblica articoli su domande frequenti del diritto di Taiwan. Gli articoli disponibili in italiano stanno su questa pagina; accanto ci sono quattro collegamenti che aprono ciascuno l’elenco degli articoli di una lingua originale.',
+        'Lo studio pubblica articoli su domande frequenti del diritto di Taiwan. Gli articoli disponibili in italiano si trovano su questa pagina; accanto ci sono quattro collegamenti che aprono ciascuno l’elenco degli articoli di una lingua originale.',
       sections: [
         {
           heading: 'Quattro elenchi per lingua',
           paragraphs: [
             'Questa parte contiene quattro collegamenti: l’elenco degli articoli in coreano, in cinese, in inglese e in giapponese. Ogni collegamento indica la lingua dell’elenco, così sa in anticipo in quale lingua si apre il contenuto.',
-            'Questi quattro elenchi sono elenchi secondo la lingua originale degli articoli, non elenchi di traduzione. Gli articoli disponibili in italiano stanno a parte su questa pagina.',
+            'Questi quattro elenchi sono elenchi secondo la lingua originale degli articoli, non elenchi di traduzione. Gli articoli disponibili in italiano si trovano a parte su questa pagina.',
           ],
         },
         {
@@ -490,7 +490,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Fino a che punto un articolo può servire da orientamento',
           paragraphs: [
             'Gli articoli sono indicazioni generali al momento della pubblicazione. Le norme e la loro applicazione possono cambiare, e un articolo non contiene tutte le circostanze del Suo caso.',
-            'Non fondi quindi un’azione in una questione reale soltanto su un articolo. Lo usi per la visione d’insieme e discuta i Suoi documenti a parte con un’avvocata o un avvocato; questa pagina non è il passo di consulenza.',
+            'Non fondi quindi una decisione su un caso reale soltanto su un articolo. Lo usi per la visione d’insieme e discuta i Suoi documenti a parte con un’avvocata o un avvocato; questa pagina non è il passo di consulenza.',
           ],
         },
       ],

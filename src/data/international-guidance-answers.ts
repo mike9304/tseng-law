@@ -459,17 +459,17 @@ export const guidanceAnswers: Record<
   it: {
     services: {
       answer:
-        'Lo studio tratta sei gruppi di lavoro secondo il diritto di Taiwan: investimento e costituzione di società, controversie civili e risarcimento, matrimonio, famiglia e successioni, lavoro, penale e proprietà intellettuale. L’ambito di ciascuna questione viene confermato separatamente dopo che un’avvocata o un avvocato ha esaminato il contenuto che Lei invia. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
+        'Lo studio tratta sei aree di attività secondo il diritto di Taiwan: investimento e costituzione di società, controversie civili e risarcimento, matrimonio, famiglia e successioni, lavoro, penale e proprietà intellettuale. L’ambito di ciascuna questione viene confermato separatamente dopo che un’avvocata o un avvocato ha esaminato il contenuto che Lei invia. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
       sources: ['/it/faq', '/it/contact'],
     },
     about: {
       answer:
-        'Hovering International Law Firm è uno studio legale a Taiwan, fondato nel 2016 da laureate e laureati della National Taiwan University (國立臺灣大學), con uffici a Taipei, Kaohsiung, Taichung e Pingtung. Dal 2020 esiste una sezione di contabilità; l’ufficio di Taichung tratta questioni con nesso con la Corea e il Giappone. Lo studio non promette un risultato. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
+        'Hovering International Law Firm è uno studio legale a Taiwan, fondato nel 2016 da laureate e laureati della National Taiwan University (國立臺灣大學), con uffici a Taipei, Kaohsiung, Taichung e Pingtung. Dal 2020 esiste una sezione di contabilità; l’ufficio di Taichung tratta questioni collegate alla Corea e al Giappone. Lo studio non promette un risultato. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
       sources: ['/it/lawyers', '/it/services'],
     },
     lawyers: {
       answer:
-        'Questa pagina mostra i profili delle avvocate e degli avvocati, della direzione operativa e della revisione associata di Hovering. L’avvocata Wei Tseng (曾雋崴) è abilitata a Taiwan ed è l’avvocata dirigente dello studio; lavora con clienti dalla Corea, dal Giappone e con altri clienti internazionali. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
+        'Questa pagina mostra i profili delle avvocate e degli avvocati, del responsabile operativo e del commercialista partner di Hovering. L’avvocata Wei Tseng (曾雋崴) è abilitata a Taiwan ed è l’avvocata dirigente dello studio; lavora con clienti dalla Corea, dal Giappone e con altri clienti internazionali. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
       sources: ['/it/about', '/it/contact'],
     },
     pricing: {
@@ -479,12 +479,12 @@ export const guidanceAnswers: Record<
     },
     contact: {
       answer:
-        'Invii il riassunto tramite il modulo di contatto: che cosa è accaduto, di quale aiuto ha bisogno, quale nesso ha la questione con Taiwan e il termine, se Lo conosce. Nella fase iniziale non deve ancora inviare documenti di identità o l’insieme delle prove. Lo studio non promette un termine di risposta e non conferma un appuntamento tramite questa pagina. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
+        'Invii il riassunto tramite il modulo di contatto: che cosa è accaduto, di quale aiuto ha bisogno, quale nesso ha la questione con Taiwan e il termine, se lo conosce. Nella fase iniziale non deve ancora inviare documenti di identità o l’insieme delle prove. Lo studio non promette un termine di risposta e non conferma un appuntamento tramite questa pagina. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
       sources: ['/it/faq', '/it/pricing'],
     },
     faq: {
       answer:
-        'Questa parte risponde a domande frequenti al livello di indicazioni generali: i sei gruppi di lavoro, la preparazione prima del contatto, la fissazione dei costi e il significato di un messaggio inviato. Una richiesta inviata attende l’esame di un’avvocata o di un avvocato; non è un parere giuridico, non è un appuntamento e non costituisce un rapporto tra avvocata o avvocato e cliente. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
+        'Questa parte risponde a domande frequenti al livello di indicazioni generali: le sei aree di attività, la preparazione prima del contatto, la fissazione dei costi e il significato di un messaggio inviato. Una richiesta inviata attende l’esame di un’avvocata o di un avvocato; non è un parere giuridico, non è un appuntamento e non costituisce un rapporto tra avvocata o avvocato e cliente. La consulenza si svolge soltanto in inglese, cinese, giapponese e coreano.',
       sources: ['/it/contact', '/it/services'],
     },
   },

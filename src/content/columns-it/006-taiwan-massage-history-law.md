@@ -29,7 +29,7 @@ Ciò assomigliava molto al lavaggio di capelli di stile vietnamita di oggi.
 
 E quei saloni di stile taiwanese restano una memoria culturale distintiva per numerose persone a Taiwan.
 
-(Non starò rivelando la mia età senza volerlo?)
+(Sto svelando la mia età senza volerlo?)
 
 ​
 
@@ -55,7 +55,7 @@ Questa legge si è mantenuta fino al 2003; all’epoca, il Sig. Lin, che gestiva
 
 ha impiegato lavoratori senza disabilità visiva per servizi di lavaggio dei capelli e di massaggio, e la polizia lo ha constatato.
 
-Secondo il diritto di allora, il Sig. Lin e quei lavoratori hanno visto infliggersi rispettivamente un’ammenda amministrativa (罰鍰) di TWD 40.000, TWD 10.000 e TWD 20.000 in nuovo dollaro di Taiwan (新臺幣).
+Secondo il diritto di allora, il Sig. Lin e quei lavoratori hanno visto infliggersi rispettivamente una sanzione amministrativa pecuniaria (罰鍰) di TWD 40.000, TWD 10.000 e TWD 20.000 in nuovo dollaro di Taiwan (新臺幣).
 
 Il Sig. Lin ha stimato questa sanzione molto ingiusta e ha chiesto un’interpretazione costituzionale.
 
@@ -81,7 +81,7 @@ Ci si è chiesti per esempio se la regola scritta che solo autorizzava le person
 
 e si è posto in dubbio che questa regola avesse realmente contribuito a proteggere l’impiego e la sussistenza delle persone in situazione di disabilità visiva.
 
-Infine, i Grandi Giudici (大法官) hanno dichiarato incostituzionale (違憲) la disposizione che solo autorizzava le persone in situazione di disabilità visiva a esercitare il mestiere di massaggio.
+Infine, i giudici costituzionali (大法官) hanno dichiarato incostituzionale (違憲) la disposizione che solo autorizzava le persone in situazione di disabilità visiva a esercitare il mestiere di massaggio.
 
 ​
 
@@ -123,6 +123,6 @@ Se, durante un massaggio a Taiwan, sente un malessere o qualcosa di strano,
 
 lo comunichi subito o chieda che si fermi, al fine di proteggersi.
 
-Se stima di aver subito una molestia sessuale,
+Se ritiene di aver subito una molestia sessuale,
 
-si rechi alla questura con un amico di fiducia o con un avvocato di Taiwan (律師) per presentare querela.
+si rechi alla polizia con una persona di fiducia o con un’avvocata o un avvocato di Taiwan (律師) per presentare querela.

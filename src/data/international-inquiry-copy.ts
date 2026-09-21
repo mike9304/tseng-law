@@ -944,9 +944,9 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'La consulenza si svolge soltanto in quattro lingue: inglese, cinese (中文), giapponese e coreano.',
     methodConfirmationNotice:
-      'Se non può usare nessuna delle quattro lingue, scelga «La via di comunicazione deve essere confermata». Rispondiamo per esaminare una via praticabile di comunicazione, se una tale via esiste; una prestazione in un’altra lingua non è garantita e un termine di risposta non è promesso.',
+      'Se non può usare nessuna delle quattro lingue, scelga «Il canale di comunicazione deve essere confermato». Rispondiamo per esaminare un canale di comunicazione praticabile, se un canale del genere esiste; una prestazione in un’altra lingua non è garantita e un termine di risposta non è promesso.',
     preparationNotice:
-      'Può scrivere il riassunto nella Sua lingua. Il testo originale viene conservato così come Lo ha scritto e non viene tradotto automaticamente.',
+      'Può scrivere il riassunto nella Sua lingua. Il testo originale viene conservato così come lo ha scritto e non viene tradotto automaticamente.',
     heading: 'Inviare una richiesta di consulenza',
     intro:
       'Descriva brevemente la Sua questione. Un’avvocata o un avvocato esamina il contenuto prima che si parli del passo successivo.',
@@ -985,7 +985,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Giapponese (日本語)',
       ko: 'Coreano (한국어)',
       'needs-method-confirmation':
-        'Nessuna delle quattro lingue è utilizzabile — la via di comunicazione deve essere confermata',
+        'Nessuna delle quattro lingue è utilizzabile — il canale di comunicazione deve essere confermato',
     },
   },
   nl: {

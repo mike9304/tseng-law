@@ -13,7 +13,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![Immagine in evidenza](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Come indicato sopra, a Taiwan non è facile per il lavoratore ottenere l'indennità di licenziamento (資遣費).
+A Taiwan, in via generale, non è facile per il lavoratore ottenere l'indennità di licenziamento (資遣費).
 
 ​
 
@@ -21,7 +21,7 @@ In particolare, se il lavoratore si dimette di propria iniziativa (自請離職)
 
 non può percepire l'indennità di licenziamento (資遣費) (articolo 18 della legge sulle norme del lavoro),
 
-e ciò differisce dalla Corea.
+e ciò differisce da altri ordinamenti, per esempio dalla Corea.
 
 ​
 
@@ -55,7 +55,7 @@ non paga le ore straordinarie (加班費),
 
 o non affilia il lavoratore all'assicurazione del lavoro (勞保) o all'assicurazione di malattia (健保).
 
-In questi casi, anche se il lavoratore pone termine al contratto di lavoro in forma ordinaria, il datore di lavoro deve pagargli l'indennità di licenziamento.
+In questi casi, anche se il lavoratore pone termine al contratto di lavoro in via ordinaria, il datore di lavoro deve pagargli l'indennità di licenziamento.
 
 ​
 
@@ -63,9 +63,9 @@ Tuttavia, la legge sulle norme del lavoro (勞動基準法) dispone che,
 
 se il lavoratore desidera porre termine al contratto di lavoro a titolo dei punti 1 o 6 sopra (per esempio per terminare il contratto per mancanza di affiliazione all'assicurazione),
 
-deve porre termine al contratto di lavoro in un termine di **30 giorni** a contare dal giorno in cui ha conosciuto questa situazione,
+deve porre termine al contratto di lavoro in un termine di **30 giorni** a decorrere dal giorno in cui ha conosciuto questa situazione,
 
-o, per il punto 6, in un termine di **30 giorni** a contare dal giorno in cui ha conosciuto il risultato del pregiudizio.
+o, per il punto 6, in un termine di **30 giorni** a decorrere dal giorno in cui ha conosciuto il risultato del pregiudizio.
 
 Il lavoratore deve quindi padroneggiare bene il termine.
 
@@ -85,7 +85,7 @@ se la lite sorge,
 
 secondo chi pone termine per primo al contratto con un motivo sufficiente
 
-l'indennità può non essere pagata o può essere esigita.
+l'indennità può non essere pagata o può essere richiesta.
 
 È per questo che, nei conflitti del lavoro (勞資糾紛) a Taiwan,
 

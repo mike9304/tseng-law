@@ -64,7 +64,7 @@ const ELEMENTS = {
     ms: /yang boleh digunakan/,
     ru: /возможн/,
     tr: /Kullanılabilir/,
-    it: /via praticabile/,
+    it: /praticabile/,
     nl: /werkbare/,
     pl: /możliwy sposób/,
     hi: /व्यावहारिक|व्यवहार्य/,

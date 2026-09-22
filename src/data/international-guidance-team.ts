@@ -427,7 +427,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Peguam pengarah di Taiwan',
       'chang-rongxuan': 'Peguam di Taiwan',
-      'chang-fangyu': 'Paralegal',
+      'chang-fangyu': 'Pembantu undang-undang',
       'son-jungmin': 'Pengurus operasi Korea',
       'huang-shengping': 'Akauntan rakan kongsi',
     },
@@ -2502,13 +2502,13 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal kanan dengan pengalaman bertahun-tahun di beberapa firma, bertanggungjawab atas sokongan prosedur, undang-undang syarikat dan pelaburan asing.',
+        'Pembantu undang-undang kanan dengan pengalaman bertahun-tahun di beberapa firma, bertanggungjawab atas sokongan prosedur, undang-undang syarikat dan pelaburan asing.',
         'Sokongan bagi prosedur, penubuhan syarikat, kelulusan pelaburan asing, permohonan lesen dan pertukaran antara Korea dan Taiwan.',
       ],
       education: ['Ijazah Sarjana Muda Undang-undang (LL.B.), Tunghai University'],
       experience: [
-        'Paralegal kanan, Boyin Law Firm',
-        'Paralegal kanan, Muyang International Law Firm',
+        'Pembantu undang-undang kanan, Boyin Law Firm',
+        'Pembantu undang-undang kanan, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {

@@ -552,9 +552,9 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
     servicesAssistanceBefore: 'Jika tidak jelas bidang mana yang merangkumi hal anda, halaman ',
     servicesAssistanceLinkLabel: 'Hubungi',
     servicesAssistanceAfter:
-      ' menerangkan bagaimana anda merumuskan ringkasan untuk disemak oleh peguam.',
+      'menerangkan bagaimana anda merumuskan ringkasan untuk disemak oleh peguam.',
     columnsViewAllLabel: 'Lihat semua rencana',
-    columnsReadMoreLabel: 'Baca selanjutnya',
+    columnsReadMoreLabel: 'Baca seterusnya',
     columnsReviewLabel: 'Disemak oleh peguam Wei Tseng',
     columnsOriginalLanguageBadge: 'Bahasa asal',
     columnsOriginalLanguageNote:
@@ -650,7 +650,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
           heading: 'Hal jenayah',
           paragraphs: [
             'Kami mewakili klien dalam siasatan dan di mahkamah, bagi orang yang disyaki atau tertuduh serta bagi orang yang tercedera, dan menilai risiko jenayah dalam aktiviti perniagaan.',
-            'Hal jenayah kerap mempunyai tempoh pendek dan peringkat yang ditetapkan. Jika anda sudah menerima surat daripada pihak pendakwaan atau mahkamah, nyatakan tarikh pada surat itu awal, supaya kandungannya disemak dalam urutan yang betul.',
+            'Hal jenayah kerap mempunyai tempoh pendek dan peringkat yang ditetapkan. Jika anda sudah menerima surat daripada pihak pendakwaan atau mahkamah, nyatakan seawal mungkin tarikh pada surat itu, supaya kandungannya disemak dalam urutan yang betul.',
           ],
         },
         {

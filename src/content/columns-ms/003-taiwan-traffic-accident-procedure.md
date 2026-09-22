@@ -57,7 +57,7 @@ Kepakaran (鑑定) atau jadual analisis awal boleh menjadi dokumen penting, teta
 
 Dalam akta perdamaian (和解書), patut diperincikan tarikh, tempat dan pihak kemalangan, dan direkod jumlah serta saat bayaran, rawatan faedah insurans, tuntutan yang termasuk dan yang dikhaskan. Perlu juga ditetapkan dengan jelas rawatan masa depan, kecederaan yang dikesan kemudian, penyerahan dokumen seperti perakuan perubatan (診斷證明書) dan hubungan antara bayaran dan penarikan aduan.
 
-Perdamaian (和解) perkara 736 Kanun Sivil ialah kontrak di mana pihak menyerah secara timbal balik untuk menamatkan pertikaian atau mengelakkannya. Menurut perkara 737 Kanun Sivil, skop di mana hak terhapus dinilai juga hanya dalam had apa yang ditinggalkan dalam akta perdamaian. Maka jangan ditegaskan, tanpa meneliti teks, bahawa semua tuntutan masa depan hilang.
+Perdamaian (和解) perkara 736 Kanun Sivil ialah kontrak yang pihak gunakan untuk berkompromi secara timbal balik untuk menamatkan pertikaian atau mengelakkannya. Menurut perkara 737 Kanun Sivil, skop yang hak terhapus dinilai juga hanya dalam had apa yang ditinggalkan dalam akta perdamaian. Maka jangan ditegaskan, tanpa meneliti teks, bahawa semua tuntutan masa depan hilang.
 
 Jika ia kesalahan yang didakwa atas aduan, menurut perkara 238 Kanun Tatacara Jenayah aduan boleh ditarik hingga sebelum penutupan hujah lisan peringkat pertama, dan setelah ditarik ia tidak boleh difailkan semula. Namun, dalam kesalahan yang tidak didakwa atas aduan, pendakwaan tidak tamat secara automatik dengan perdamaian peribadi, dan hakikat telah berdamai tidak sentiasa mewajibkan menarik aduan.
 
@@ -141,7 +141,7 @@ Kehilangan pendapatan mesti dibuktikan dengan dokumen yang menetapkan bahawa, ke
 
 Patut disusun bersama rekod perubatan, daftar kehadiran atau cuti, data gaji dan cukai serta pengesahan majikan. Pekerja bebas boleh mengemukakan data yang sesuai dengan bentuk aktivitinya, seperti data jualan, daftar operasi dan pengisytiharan cukai.
 
-Keadaan telah terus bekerja atau menerima gaji tanpa perubahan relevan untuk menilai kehilangan pendapatan tempoh pemulihan, tetapi fakta ini semata-mata tidak memutuskan secara automatik soalan kerosakan kerana pengurangan keupayaan kerja. Keadaan ini juga bukan asas yang berdiri sendiri untuk menilai kerosakan kerana pengurangan keupayaan kerja. Kerosakan kerana pengurangan keupayaan kerja diteliti secara berasingan pada Q12.
+Terus bekerja atau menerima gaji yang tidak berubah adalah relevan untuk menilai kehilangan pendapatan semasa tempoh pemulihan, tetapi fakta ini semata-mata tidak memutuskan secara automatik soalan kerosakan kerana pengurangan keupayaan kerja. Keadaan ini juga bukan asas yang berdiri sendiri untuk menilai kerosakan kerana pengurangan keupayaan kerja. Kerosakan kerana pengurangan keupayaan kerja diteliti secara berasingan pada Q12.
 
 ## Q12. Bagaimana dibuktikan kerosakan kerana pengurangan keupayaan kerja?
 
@@ -161,7 +161,7 @@ Mahkamah meneliti keadaan setiap kes dengan menilai secara keseluruhan isi keced
 
 ## Q14. Jika kemalangan berlaku semasa kerja, bolehkah juga dicari tanggungjawab sivil majikan?
 
-Perkara 188 Kanun Sivil mengatur kes di mana pekerja menyebabkan kerosakan haram kepada orang lain semasa menjalankan tugasnya. Kaitan dengan tugas tidak diakui secara automatik semata-mata kerana waktu kerja, sehingga perlu disemak kaitan antara kerja sebenar dan kemalangan.
+Perkara 188 Kanun Sivil mengatur kes apabila pekerja menyebabkan kerosakan haram kepada orang lain semasa menjalankan tugasnya. Kaitan dengan tugas tidak diakui secara automatik semata-mata kerana waktu kerja, sehingga perlu disemak kaitan antara kerja sebenar dan kemalangan.
 
 Majikan boleh mendakwa bahawa ia mematuhi ketelitian yang wajar dalam pemilihan dan pengawasan pekerja, atau bahawa kerosakan tidak dapat dielakkan walaupun mematuhi ketelitian itu. Boleh dipertimbangkan untuk menuntut pampasan secara bersama terhadap majikan dan pekerja. Selepas membayar pampasan, majikan boleh menjalankan tuntutan balik terhadap pekerja.
 
@@ -173,7 +173,7 @@ Soalan terhadap siapa tuntutan sivil diarahkan mesti dibezakan daripada tanggung
 
 Kewajipan untuk menyertai menurut perkara 6 undang-undang insurans liabiliti sivil kenderaan wajib (強制汽車責任保險法) terletak, pada prinsipnya, ke atas pemilik kenderaan dan, dalam kes yang diperuntukkan, juga ke atas pengguna atau pentadbir kenderaan itu. Rejim ini menubuhkan struktur perlindungan tanpa kecuaian (無過失給付制度) bagi orang yang cedera atau meninggal kerana kemalangan kenderaan, tetapi perlu disemak skop penumpang atau pihak ketiga (第三人) di luar kenderaan yang ditetapkan undang-undang.
 
-Dalam kemalangan satu kenderaan, pemandu kenderaan itu pada umumnya bukan penerima faedah insurans wajib kenderaan itu. Namun, dalam kemalangan yang melibatkan beberapa kenderaan, terdapat kes di mana pemandu boleh menuntut faedah daripada penanggung insurans wajib kenderaan lain yang terlibat.
+Dalam kemalangan satu kenderaan, pemandu kenderaan itu pada umumnya bukan penerima faedah insurans wajib kenderaan itu. Namun, dalam kemalangan yang melibatkan beberapa kenderaan, terdapat kes apabila pemandu boleh menuntut faedah daripada penanggung insurans wajib kenderaan lain yang terlibat.
 
 Skala manfaat (強制汽車責任保險給付標準) yang diubah pada 29 Mei 2026 terpakai kepada kemalangan yang berlaku mulai 1 Julai 2026. Siling kos perubatan yang munasabah dan diperlukan bagi kecederaan ialah TWD 200,000 dalam dolar Taiwan baharu; manfaat bagi ketidakupayaan (失能) merangkumi dari TWD 80,000 hingga TWD 3,000,000 menurut 15 darjah berkanun; manfaat bagi kematian ialah TWD 3,000,000, dan maksimum bersama kematian, ketidakupayaan dan kos perubatan bagi 1 mangsa dan 1 kemalangan ialah TWD 3,200,000. Bagi kemalangan terdahulu skala sebelumnya boleh terpakai.
 
@@ -199,7 +199,7 @@ Q16. Selepas kemalangan, bolehkah semuanya dibiarkan di tangan penanggung insura
 
 ​
 
-Menurut pengalaman saya, penanggung insurans sering tidak merawat dengan mencukupi aspek emosi pihak kemalangan.
+Menurut pengalaman saya, penanggung insurans sering tidak mengambil berat secukupnya akan aspek emosi pihak kemalangan.
 
 ​
 
@@ -315,7 +315,7 @@ Selain itu, peguam mesti menjelaskan dengan jelas keadaan pihak dan memberi amar
 
 ​
 
-Perlu berhati-hati terhadap peguam yang membesarkan kes dan menyokong bahawa tidak perlu berdamai dan perlu meneruskan litigasi hingga akhir dari segi sivil dan jenayah, hanya untuk menerima mandat.
+Perlu berhati-hati terhadap peguam yang membesar-besarkan kes dan menyokong bahawa tidak perlu berdamai dan perlu meneruskan litigasi hingga akhir dari segi sivil dan jenayah, hanya untuk menerima mandat.
 
 ​
 

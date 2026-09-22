@@ -17,7 +17,7 @@ Apabila kenderaan di hadapan bergerak perlahan, memotong (超車) boleh kelihata
 
 ## Syarat memotong yang ditetapkan perkara 101 peraturan keselamatan lalu lintas jalan raya (道路交通安全規則)
 
-[Perkara 101 peraturan keselamatan lalu lintas jalan raya Taiwan (道路交通安全規則)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) mengatur kedua-dua perkara, iaitu syarat pemotongan dilarang dan urutan yang mesti diikuti apabila pemotongan pada lorong yang sama dibenarkan.
+[Perkara 101 peraturan keselamatan lalu lintas jalan raya Taiwan (道路交通安全規則)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) mengatur kedua-dua perkara, iaitu keadaan pemotongan yang dilarang dan urutan yang mesti diikuti apabila pemotongan pada lorong yang sama dibenarkan.
 
 Perkara 101 melarang pemotongan pada bahagian yang dilengkapi papan tanda yang menunjukkan selekoh, cerun curam atau menurun, jambatan sempit, terowong atau persimpangan, serta di lintasan kereta api dan di tapak pembinaan.
 
@@ -49,9 +49,9 @@ Hasil kes ini tidak bermakna bahawa kegagalan memberikan satu isyarat yang ditet
 
 ## Titik yang perlu disahkan untuk menilai tanggungjawab kemalangan
 
-Sebelum memotong, anda mesti dahulu mengesahkan sama ada larangan memotong terpakai kepada tempat atau keadaan lalu lintas itu. Jika prosedur lorong yang sama terpakai, berikan isyarat hon atau lampu yang ditetapkan, tanpa memaksa kenderaan di hadapan menyerah, tunggu isyarat penyerahan yang jelas dan selesaikan pemotongan dengan jarak yang mencukupi dan jarak kembali yang selamat.
+Sebelum memotong, anda mesti dahulu mengesahkan sama ada larangan memotong terpakai kepada tempat atau keadaan lalu lintas itu. Jika prosedur lorong yang sama terpakai, berikan isyarat hon atau lampu yang ditetapkan, tanpa memaksa kenderaan di hadapan memberi laluan, tunggu isyarat penyerahan yang jelas dan selesaikan pemotongan dengan jarak yang mencukupi dan jarak kembali yang selamat.
 
-Pematuhan perkara 101 penting, tetapi ia tidak memastikan dengan sendirinya pengelakan kemalangan mahupun hasil penilaian pakar atau perbicaraan kemudian. Pemandu mesti menyediakan ruang keselamatan tambahan dan menyesuaikan diri dengan keadaan di hadapan mereka.
+Pematuhan perkara 101 penting, tetapi ia tidak dengan sendirinya menjamin bahawa kemalangan akan terelak mahupun hasil penilaian pakar atau perbicaraan kemudian. Pemandu mesti menyediakan ruang keselamatan tambahan dan menyesuaikan diri dengan keadaan di hadapan mereka.
 
 Sebagai pelengkap, anda boleh merujuk [ilustrasi peraturan dan prosedur memotong](https://gonews.com.tw/car/daily/21934/). Kerana ini sumber sekunder, semasa pengesahan syarat undang-undang, sebaiknya baca juga peraturan rasmi yang berkuat kuasa.
 

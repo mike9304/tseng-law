@@ -49,7 +49,7 @@ Kerana semakan pelan pelaburan juga mengambil masa,
 
 anda patut menyediakan pelan pelaburan dan mencari alamat pendaftaran syarikat pada masa yang sama.
 
-Menurut perkara 9 Statut Pelaburan oleh Warganegara Asing (外國人投資條例), sumbangan yang diluluskan mesti tiba sepenuhnya dalam tempoh yang ditetapkan pihak berkuasa kompeten (核定期限); tempoh hendaklah disahkan dalam dokumen kelulusan setiap kes (dalam amalan, ia kerap ditetapkan sekitar 1 tahun).
+Menurut perkara 9 Statut Pelaburan oleh Warganegara Asing (外國人投資條例), caruman modal yang diluluskan mesti tiba sepenuhnya dalam tempoh yang ditetapkan pihak berkuasa kompeten (核定期限); tempoh hendaklah disahkan dalam dokumen kelulusan setiap kes (dalam amalan, ia kerap ditetapkan sekitar 1 tahun).
 
 Dalam tempoh ini, setelah alamat syarikat dijumpai dan kontrak sewa ditandatangani,
 
@@ -103,7 +103,7 @@ Itulah sebabnya saya mengesyorkan mencari tempat operasi awal.
 
 Jika rundingan dengan tuan rumah tidak berjalan dengan lancar,
 
-anda boleh, jika perlu, mencadangkan supaya kontrak sewa dinotari (公證) atau deposit cagaran tambahan.
+anda boleh, jika perlu, mencadangkan supaya kontrak sewa dibuat secara notari (公證) atau deposit cagaran tambahan.
 
 ​
 

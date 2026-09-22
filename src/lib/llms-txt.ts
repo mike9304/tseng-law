@@ -593,7 +593,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Diese Hinweise sind auf Deutsch geschrieben, aber die Beratung durch eine Anwältin oder einen Anwalt erfolgt nur auf Englisch, Chinesisch (中文), Japanisch und Koreanisch.',
     discoveryNotice:
-      'Die Datei llms.txt ist nur eine Suchkarte öffentlicher Seiten; sie verspricht keine Suchplatzierung, keine Empfehlung, keine KI-Empfehlung und keine Anzeige.',
+      'Die Datei llms.txt ist nur eine Übersicht zum Auffinden öffentlicher Seiten; sie verspricht keine Suchplatzierung, keine Empfehlung, keine KI-Empfehlung und keine garantierte Sichtbarkeit.',
     confidentialNotice:
       'Weil der Originaltext gespeichert wird, schreiben Sie in der Anfangsphase bitte nichts, das noch nicht nötig ist, etwa Passnummer, Ausweisnummer oder Kontodaten.',
   },

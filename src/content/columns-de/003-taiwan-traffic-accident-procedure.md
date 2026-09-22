@@ -323,7 +323,7 @@ Vorsicht ist geboten bei Anwälten, die die Sache aufbauschen, vom Vergleich abr
 
 ​
 
-Damit schließe ich die Fragen und Antworten zu Verkehrsunfällen. Ich hoffe, dass sie Ihnen helfen.
+Damit schließen die Fragen und Antworten zu Verkehrsunfällen.
 
 ​
 
@@ -335,7 +335,7 @@ Nach Bearbeitung vieler Verkehrsunfälle möchte ich einen wichtigen Punkt nenne
 
 ​
 
-Durch Verletzung oder Tod der geschädigten Person erleiden sie selbst oder die Familie körperliches und seelisches Leid.
+Durch Verletzung oder Tod erleiden die geschädigte Person selbst oder ihre Familie körperliches und seelisches Leid.
 
 ​
 

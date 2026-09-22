@@ -1,0 +1,86 @@
+WO-F-de r1 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-de-r1
+date: 2026-09-22
+
+## Rows
+
+Numbered findings: de-a 27, de-b 70 (97).
+
+Applied: 95.
+Skipped: 2 numbered rows, plus the verdict's Hangul `url` fields (not a numbered row).
+
+### Applied
+de-a 1–14, 16–27 and de-b 1–31, 33–70.
+de-b 7 and 8 are the same sentence; one rewrite covers both.
+de-b 62: body of §1 only. The FAQ answer was left, as the reviewer asked.
+de-a 24: the table row was not deleted (that would change the row count). The cells were rephrased so „Einfach“ is no longer an outcome: „Formale Hürde (kein zugesagtes Ergebnis) | geringer | höher | geringer“.
+
+Guidance pack (German strings only): llms discovery notice; pricing comma; Partner-Wirtschaftsprüfung → Wirtschaftsprüfungspartner (lawyers description in western + team copy, partnerTitle, role, lawyers answer); Mandanten parallel in the about page and the lawyers answer; Ministry of Education sentence and experience line, with the English name kept in parentheses; Legal Aid Foundation experience line, English name in parentheses; Informatikstudium; Bachelor- und Masterstudium.
+
+### Skipped
+- de-a 15. Q16–Q20 were not promoted to headings, and the U+200B blank lines were not removed. Heading levels, block counts and ZWSP counts are locked to the Korean source. Measured ZWSP already matches (003: 52, 005: 8, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3). ACCEPTED-ROUND: do not add headings or merge blocks. The blog close in that stretch is de-a 16 and was rephrased inside the existing paragraph.
+- de-b 32. „Neben der Marktlage / ist ein weiterer wichtiger Gesichtspunkt, / ob …“ was not merged. The English file splits the same three blocks, and the checker compares block counts. 015 wording rows 33–35 were applied inside the existing blocks. 013 clause fragments were repaired the same way (period, then a full sentence in the next block) without merging.
+- Verdict, 008 and 009 `url` Hangul slugs. Canonical source metadata. Not rewritten.
+
+## Systemic patterns
+
+- Feminine article after Gesetz (de-a verdict). „der Gesetz zur/über“ → „des Gesetzes zur/über“: 5 in 004 (including the source-link label) and 2 in 008. „der Gesetzgeber“ in 006 was left.
+- Digit glued into a year phrase (de-a verdict). Swept the quoted pattern, not every „1 Jahr“ threshold („weniger als 1 Jahr“, „rund 1 Jahr“, „1 Jahr ab dem Ausgabetag“ stay, because there the digit is the threshold). See checker note below for the forms that still carry a digit.
+- Blog register (de-a 16 and the 008 openings named there; de-b 013/015 where a block could be made grammatical without a merge). 003 close, 008 byline and topic sentence, 008 closing imperatives, 009 last sentence. First-person case narration in 008/010 was kept (Wei Tseng feminine; Herr B stays male).
+- English office name inside a German sentence (de-a 4). Three German bio lines. Paralegal / Senior Paralegal and the Latin degree lines were not in a finding row; R12 applies to the 18 locales added on 2026-09-22, not to this pack. OUR TEAM / OFFICES / full-profile were already German („UNSER TEAM“, „BÜROS“, „Vollständiges Profil (auf Englisch)“).
+- Outcome flavour (de-a verdict). Schwierigkeit row rephrased (1). 009 „wird die Seite geschützt“ rephrased (1). R3 emergency numbers, suspended-sentence softening and the severance anecdote were already in place in 003/008; not rewritten again.
+- False friends (de-b verdict). Gewinnverlagerung → Gewinnüberweisung/Gewinnabführung: 2 in 004, 1 in 011. Bewerbung (宣傳): heading, body, source-list title, and the (宣傳) gloss site in §3. Gesamtnamen, Kundenreaktion (2), Namensleihe (3), Personenstandsregister where it glosses 戶籍 (3 in 016), Verwaltungsgegenstand, Erstherstellung, Erzeugnis, unter anderem Vorwand, Aktiengesellschaft for 股份有限公司 (heading, body equation, H3, Umwandlung, „Nicht jede …“). The German AG in „der AG des deutschen Rechtskreises“ stays.
+- Subjekt calque of 主體 (de-b verdict, 011 and 017). das Subjekt ×2, Verantwortungssubjekt ×3, numbered-list Subjekt ×1, Genehmigungssubjekt ×3.
+- Pair-split role chains (de-b verdict, 011 and 017). The flagged chains (Ursprungshersteller, Investor, Influencer/Rezensionsverfasser/Verkaufspartner, Absender/Logistikdienstleister, Beförderer, Gesellschafter oder Investor, Direktoren und der verantwortlichen Person). House style „Anwältin oder Anwalt“ in the guidance pack was not flattened; the guidance verdict did not flag it.
+- Coined labour terms (de-b 014). vorleistend* → im Voraus gezahlte Leistung, all inflections found (11, including the genitive). Neueintritte ×2.
+- One office name for 經濟部投資審議司 (R8 / de-b 63). Investitionsprüfungsamt → Abteilung für Investitionsprüfung: 001 ×1, 017 body and link label ×2. 011/013/018 already used that name.
+- R2, R4, R9. Korea-as-example framing, feminine Wei Tseng, and the Taiwan 119/110/112 line were already in the German pack and columns. No further instance needed a rewrite. Consultation languages stay English, Chinesisch (中文), Japanisch, Koreanisch. 013’s contact line now names those four languages and still refuses a reply deadline.
+
+## Checker and digits
+
+Natural forms that drop a source digit fail `numbers`. The checker compares to the Korean file. Restored the smallest form that still parses, and noted it here:
+
+- 001 „das letzte Jahr“ drops Korean 최근 1년. Now „das letzte Jahr (1 Jahr)“ ×2.
+- 002 „jeder Ruhezeitraum darf ein Jahr“ drops Korean 1회 beside 1년. Now „die Dauer von 1 Ruhezeitraum darf ein Jahr nicht überschreiten“ ×2. This does not restore „1 Mal“ („only once“).
+- 008 „jedes vollendete Jahr“ and „je vollem Jahr ein Monatsbetrag“ („ein Monatsbetrag“ is not in the German lexicon). Now „jedes vollendete Jahr (1 Jahr)“ ×2 and „pro 1 Jahr 1 Monatsbetrag“ ×2.
+- 010 deleting „(bis zum 1-fachen)“ drops the 1 in 1배. Now „(1-fach)“, which is the German word, not the calque „1-fachen“.
+- 018 „jeder Gesellschafter eine Stimme“ drops 1인 and 1표 („eine Stimme“ is not in the lexicon). Now „hat 1 Gesellschafter 1 Stimme“.
+
+010 still WARNs an extra 2020 (Gregorian year already in the judgment gloss). The file PASSes. That warning was not introduced as a new digit in running text beyond the existing year gloss.
+
+## Reviewer points not followed
+
+- de-a 15 and the U+200B „pad“ are not a German-only defect. The counts match the Korean source. Treating them as disposable blank lines would fail the checker.
+- de-b 32. The three short blocks are the English structure, not a German blog merge waiting to happen.
+- R8 „write parent company, not the mother“. German legal usage for 母公司 is Muttergesellschaft, and „die Mutter“ in 018 is that short form. Replacing it with a calque of „parent company“ would be less native. Left as it is.
+- 007 „Personenstandsregister“ glosses 戶政機關 and the 戶籍法 filing regime. Part a called 007 native professional and did not flag it. The 016 fix is limited to 戶籍. 007 Namensleihe (借名登記) is name-borrowing of title, not 借牌, so it was not swept with the 017 licence-lending fix.
+- de-a 24’s request to delete the Schwierigkeit row. The English source has the same row. Deleting it changes the table. The cells were softened instead.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-de --lang de 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=65
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-de src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      24
+```
+
+That 24 is the run before this log existed. Re-running only `git status --short | wc -l` after the file was written prints `25` (this log, untracked). No test expectation needed a wording update.

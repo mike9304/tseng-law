@@ -93,7 +93,7 @@ Die Erläuterung, die Scheidung sei nach örtlichem Recht im Ausland wirksam, od
 
 Ausländische Dokumente können Beglaubigung durch taiwanesische Auslandsvertretungen oder andere zuständige Stellen erfordern; nach amtlichen Richtlinien für das jeweilige Dokument kann eine beglaubigte oder beurkundete chinesische Übersetzung nötig sein. Im chinesischen Festland errichtete Dokumente und in Hongkong oder Macau errichtete Dokumente folgen von allgemeinen ausländischen Dokumenten abweichenden Prüfungsregeln; das Errichtungsgebiet ist genau anzugeben. Vor Einreichung sind neueste Hinweise der Personenstandsabteilung und der zuständigen Stelle zu Urschrift, Beglaubigung, Übersetzung und Antragsvertretung zu prüfen.
 
-## 6. Wohnungsname, voreheliches Vermögen und Ausgleich des Restvermögens
+## 6. Wohnungseigentum und Eintragungsname, voreheliches Vermögen und Ausgleich des Restvermögens
 
 Eintragungsname und Herkunft der Kaufmittel legen Eigentum und Vermögensaufteilung nicht allein fest. Sie sind wichtige Beweise, doch einzelne Ansprüche wie Eigentum, Schenkung, Namensleihe (借名登記), Darlehen und ungerechtfertigte Bereicherung (不當得利) sind andere Fragen als der Ausgleich der Restvermögensdifferenz (剩餘財產差額分配) nach Artikel 1030-1 des Zivilgesetzbuchs (民法). Tatsächliche Vereinbarung, Erwerbsgrund und -zeitpunkt, Mittelabfluss, Schulden, unentgeltlicher Erwerb und Beweise sind getrennt zu prüfen; allein die Zahlung eines Teils mit vorehelichem Vermögen oder die Eintragung auf einen Namen legt nicht alle Schlüsse fest.
 

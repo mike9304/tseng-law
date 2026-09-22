@@ -13,9 +13,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Beitragsbild](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-In jüngerer Zeit haben viele Personen in Taiwan eine Gesellschaft (公司) gegründet und ein Arbeitsvisum sowie eine Aufenthaltskarte (外僑居留證) erhalten,
+In jüngerer Zeit haben viele Personen in Taiwan eine Gesellschaft (公司) gegründet und ein Arbeitsvisum sowie eine Aufenthaltskarte (外僑居留證) erhalten.
 
-und die Fragen, die bei der Gründung häufig gestellt werden, sind im Folgenden zusammengestellt.
+Die Fragen, die bei der Gründung häufig gestellt werden, sind im Folgenden zusammengestellt.
 
 Wer den Beitrag [**Grundlagen der Gesellschaftsgründung**](/de/columns/taiwan-company-establishment-basics) gelesen hat, kann anschließend auch diese ausführlichere Vertiefung heranziehen.
 
@@ -29,7 +29,7 @@ Wenn Ausländerinnen und Ausländer in Taiwan eine Gesellschaft gründen, müsse
 
 Die Abteilung für Investitionsprüfung muss feststellen, ob das betreffende Kapital (資本額) tatsächlich für Investitionszwecke verwendet wird
 
-und ob ausländische Stellen nicht unter anderem Vorwand Mittel einführen.
+und ob ausländische Personen Mittel nicht unter einem anderen Vorwand einführen.
 
 Bei der Abfassung des Investitionsplans muss die genaue Gesellschaftsadresse nicht angegeben werden; die Angabe der Region genügt (Beispiel: Stadt Taipeh). ​
 
@@ -39,7 +39,7 @@ Eine Mitarbeiterin oder ein Mitarbeiter einer taiwanesischen Bank hat mir selbst
 
 dass in jüngerer Zeit viele Ausländerinnen und Ausländer nach der Kontoeröffnung untertauchen, weshalb die Kontoeröffnung zunehmend strenger gehandhabt wird.
 
-Bereits in der Grundlagenfassung hat eine lesende Person erwähnt, dass die Kontoeröffnung der schwierigste Schritt sei; dem stimme ich zu.
+Bereits in der Grundlagenfassung hat jemand angemerkt, dass die Kontoeröffnung der schwierigste Schritt sei; dem stimme ich zu.
 
 Weil es in Taiwan sehr viele Fälle von Geldwäsche (洗錢) gibt, wird die Eröffnung von Bankkonten zunehmend strenger.
 
@@ -63,7 +63,7 @@ Das ist möglich.
 
 Die Bank verlangt in der Regel eine doppelte Identitätsprüfung,
 
-und ohne Aufenthaltskarte können Sie bei der taiwanesischen Einwanderungsbehörde das ‚**Grunddatenblatt**(統一證號基本資料表)‘ beantragen.
+und ohne Aufenthaltskarte können Sie bei der taiwanesischen Einwanderungsbehörde das „Grunddatenblatt zur einheitlichen Identifikationsnummer“ (統一證號基本資料表) beantragen.
 
 Die Ausstellung ist am selben Tag möglich,
 
@@ -123,7 +123,7 @@ Zum Beispiel: Handelt es sich um Geschäftszweige, die in gewerblichen Büroräu
 
 sollten Sie dies vorab prüfen.
 
-*Wenn Sie Unterstützung oder ein Gespräch zum taiwanesischen Recht benötigen, schreiben Sie bitte über die Seite „Kontakt“; eine Antwortfrist wird nicht zugesagt.*
+*Wenn Sie eine Frage zum taiwanesischen Recht haben, schreiben Sie über die Seite „Kontakt“ auf Englisch, Chinesisch (中文), Japanisch oder Koreanisch; eine Antwortfrist wird nicht zugesagt.*
 
 ---
 

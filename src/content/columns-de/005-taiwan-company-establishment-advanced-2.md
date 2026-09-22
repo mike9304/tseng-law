@@ -37,7 +37,7 @@ Bitte holen Sie vor der Kapitalüberweisung (資本金匯款) Auskunft bei Ihrer
 
 **​**
 
-**2. Kann man bei der Einzahlung des Gesellschaftskapitals New Taiwan Dollar (新臺幣, TWD) vom eigenen taiwanesischen Konto auf das Vorbereitungskonto der taiwanesischen Gesellschaft überweisen?**
+**2. Kann man bei der Einzahlung des Gesellschaftskapitals Neue Taiwan-Dollar (新臺幣, TWD) vom eigenen taiwanesischen Konto auf das Vorbereitungskonto der taiwanesischen Gesellschaft überweisen?**
 
 Das ist möglich; Sie müssen jedoch Nachweise über die Herkunft der in Taiwan erworbenen TWD-Mittel vorlegen.
 
@@ -71,7 +71,7 @@ Einzelne Banken können zusätzliche Anforderungen stellen, etwa eine Nutzungsda
 
 A. Erste Beschäftigte: Es wird eine leitende Tätigkeit in einem allgemeinen Unternehmen mit Investition von Überseechinesen oder Ausländern (一般僑外投資事業主管工作) beantragt. Der Maßstab der „fachlichen oder technischen Tätigkeit“ unter B. gilt nicht; es gelten jedoch die Adressatenvoraussetzungen wie die der geschäftsführenden Person (經理人) einer Gesellschaft, deren Einlage von Überseechinesen oder Ausländern ein Drittel übersteigt, sowie die Leistungsvoraussetzungen des Arbeitgebers zu Kapital und Umsatz (Prüfungsstandards Art. 38 und Art. 39).
 
-B. Ab der zweiten beschäftigten Person bestehen Beschränkungen: Übersteigt die Zahl der Beschäftigten 1 Person, werden einschlägige Ausbildung und Berufserfahrung, die Regelung zum durchschnittlichen Entgelt sowie die Regelungen zu Kapital und Umsatz der Gesellschaft nach der „fachlichen oder technischen Tätigkeit“ (專門性或技術性工作) behandelt.
+B. Ab der zweiten beschäftigten Person bestehen Beschränkungen: Beschäftigt die Gesellschaft mehr als eine Person mit ausländischer Staatsangehörigkeit, richten sich Ausbildung, Berufserfahrung, durchschnittliches Entgelt sowie Kapital und Umsatz nach der „fachlichen oder technischen Tätigkeit“ (專門性或技術性工作).
 
 Siehe die Website des taiwanesischen Arbeitsministeriums (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

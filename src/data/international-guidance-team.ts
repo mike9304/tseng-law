@@ -268,10 +268,10 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'UNSER TEAM',
     title: 'Internationales Team von Hovering',
     description:
-      'Profile der Anwältinnen und Anwälte, der Betriebsleitung und der Partner-Wirtschaftsprüfung von Hovering.',
+      'Profile der Anwältinnen und Anwälte, der Betriebsleitung und der Wirtschaftsprüfungspartner von Hovering.',
     representativeTitle: 'Geschäftsführende Anwältin',
     teamTitle: 'Anwältinnen, Anwälte und Mitarbeitende',
-    partnerTitle: 'Partner-Wirtschaftsprüfung',
+    partnerTitle: 'Wirtschaftsprüfungspartner',
     introLabel: 'Vorstellung',
     educationLabel: 'Ausbildung',
     experienceLabel: 'Berufserfahrung',
@@ -289,7 +289,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'chang-rongxuan': 'Anwalt in Taiwan',
       'chang-fangyu': 'Paralegal',
       'son-jungmin': 'Betriebsleitung Korea',
-      'huang-shengping': 'Partner-Wirtschaftsprüfer',
+      'huang-shengping': 'Wirtschaftsprüfungspartner',
     },
   },
   es: {
@@ -2191,17 +2191,17 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Stiftung für Prozesskostenhilfe, Zweigstelle Taichung (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Tätig zuvor im Ministry of Education, Legal Affairs Division, mit Schwerpunkt auf Verwaltungs- und Zivilsachen.',
+        'Zuvor tätig im Bildungsministerium, Abteilung Rechtsangelegenheiten (Ministry of Education, Legal Affairs Division), mit Schwerpunkt auf Verwaltungs- und Zivilsachen.',
         'Erfahrung mit Angelegenheiten zu Hochschulen, Rechten von Lehrkräften und Verwaltungsbeschwerden.',
       ],
       education: ['Bachelor of Laws (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Bildungsministerium, Abteilung Rechtsangelegenheiten (Ministry of Education, Legal Affairs Division)',
         'Anwalt, Hovering International Law Firm',
       ],
     },
@@ -2219,14 +2219,14 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordiniert Beratungstermine und die Kommunikation für Mandanten aus Korea.',
-        'Unterstützt den Austausch zwischen den Bereichen über Dokumentensysteme und Arbeitsabläufe, auf Grundlage der Informatik.',
+        'Unterstützt den Austausch zwischen den Bereichen über Dokumentensysteme und Arbeitsabläufe, auf der Grundlage eines Informatikstudiums.',
       ],
       education: ['Bachelor (B.S.) Informatik, National Cheng Kung University'],
       experience: ['Bereich Korea-Betrieb, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'Hat Bachelor- und Masterprogramme in Rechnungswesen an der National Chengchi University abgeschlossen und leitet derzeit eine Wirtschaftsprüfungskanzlei.',
+        'Hat an der National Chengchi University ein Bachelor- und ein Masterstudium im Rechnungswesen abgeschlossen und leitet derzeit eine Wirtschaftsprüfungskanzlei.',
         'Unterstützt die integrierte Analyse rechtlicher, steuerlicher und finanzieller Risiken für Unternehmenskunden.',
       ],
       education: [

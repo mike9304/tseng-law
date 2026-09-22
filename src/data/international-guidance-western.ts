@@ -47,7 +47,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
       viewAllLabel: 'Alle anzeigen',
     },
     pricing: {
-      description: 'Diese Seite erklärt den Arbeitsumfang und, wie Kosten geklärt werden.',
+      description: 'Diese Seite erklärt den Arbeitsumfang und wie die Kosten geklärt werden.',
       viewAllLabel: 'Alle anzeigen',
     },
     faq: {
@@ -203,7 +203,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Arbeit mit ausländischen Beteiligten',
           paragraphs: [
-            'Die grenzüberschreitende Arbeit umfasst Gesellschaftsgründung, Visa, Marken- und Patentanmeldungen, rechtliche Risikoprüfung und steuerliche Beratung von Unternehmen. Das Büro Taichung bearbeitet insbesondere Bausachen, geistiges Eigentum und Angelegenheiten mit Bezug zu Korea und Japan. Rechtsanwältin Wei Tseng (曾雋崴) begleitet Mandanten aus Korea, Japan und andere internationale Mandanten in den genannten Gruppen.',
+            'Die grenzüberschreitende Arbeit umfasst Gesellschaftsgründung, Visa, Marken- und Patentanmeldungen, rechtliche Risikoprüfung und steuerliche Beratung von Unternehmen. Das Büro Taichung bearbeitet insbesondere Bausachen, geistiges Eigentum und Angelegenheiten mit Bezug zu Korea und Japan. Rechtsanwältin Wei Tseng (曾雋崴) begleitet Mandanten aus Korea und Japan sowie weitere internationale Mandanten in den genannten Gruppen.',
             'Ob wir eine Sache übernehmen können, hängt vom Inhalt und von der Sprache der Kommunikation ab. Fällt Ihr Anliegen in die genannten Gruppen und kann es in einer der vier Beratungssprachen besprochen werden, können Sie eine Zusammenfassung zur Prüfung senden.',
           ],
         },
@@ -219,7 +219,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ANWÄLTINNEN UND ANWÄLTE',
       title: 'Internationales Team von Hovering',
-      description: 'Profile der Anwältinnen und Anwälte, der Betriebsleitung und der Partner-Wirtschaftsprüfung von Hovering.',
+      description: 'Profile der Anwältinnen und Anwälte, der Betriebsleitung und der Wirtschaftsprüfungspartner von Hovering.',
       intro: '',
       sections: [],
     },

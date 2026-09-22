@@ -91,7 +91,7 @@ Deshalb ist in taiwanesischen Arbeitsstreitigkeiten (勞資糾紛)
 
 der **Zeitpunkt** sehr wichtig.
 
-In den meisten Fällen wird die Seite geschützt, die sich vorher vorbereitet hat.
+Wer sich vorher vorbereitet, ist in der besseren Lage, die eigenen Rechte zu wahren; ein bestimmtes Ergebnis folgt daraus nicht.
 
 ---
 

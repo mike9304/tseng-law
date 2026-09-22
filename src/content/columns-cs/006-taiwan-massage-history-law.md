@@ -25,7 +25,7 @@ A podstatou bylo, že vsedě bylo možné obdržet mytí vlasů spolu s masáž�
 
 Už jedno stříhání umožňovalo užívat tuto službu vysoké třídy, takže poměr kvality k ceně byl výborný.
 
-Připomínalo to velmi dnešní mytí vlasů ve vietnamském stylu.
+Velmi to připomínalo dnešní mytí vlasů ve vietnamském stylu.
 
 A tyto salony v tchajwanském stylu zůstávají zvláštní kulturní vzpomínkou pro mnoho osob na Tchaj-wanu.
 
@@ -71,13 +71,13 @@ Proto tehdejší zákonodárce, aby chránil osoby se zrakovým postižením, kt
 
 vypracoval zákon, který chránil zaměstnání a právo na existenci (生存權) osob se zrakovým postižením.
 
-Avšak s během času a rozšířením spotřebního trhu
+Avšak s postupem času a s rozšířením spotřebního trhu
 
 se objevil názor, že ochrana výhradně práv osob se zrakovým postižením příliš omezuje právo na práci osob bez zrakového postižení.
 
 V debatě o profesních právech osob se zrakovým postižením a bez něj se objevilo mnoho protichůdných názorů.
 
-Ptalo se například, zda psané ustanovení, které dovolovalo výhradně osobám se zrakovým postižením vykonávat masáž, nepředstavuje diskriminaci vůči osobám bez zrakového postižení,
+Padla například otázka, zda psané ustanovení, které dovolovalo výhradně osobám se zrakovým postižením vykonávat masáž, nepředstavuje diskriminaci vůči osobám bez zrakového postižení,
 
 a zpochybňovalo se, zda toto ustanovení skutečně přispělo k ochraně zaměstnání a existence osob se zrakovým postižením.
 

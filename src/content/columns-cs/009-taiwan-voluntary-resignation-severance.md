@@ -73,11 +73,11 @@ Zaměstnanec proto musí dobře ovládat lhůtu.
 
 Jinými slovy,
 
-právo Tchaj-wanu, ať vina leží na straně podniku,
+Tchajwanské právo přiznává — podle toho, zda je vina na straně zaměstnavatele,
 
-nebo na straně zaměstnance,
+nebo na straně zaměstnance —
 
-přiznává každé ze stran právo nevyplatit odstupné, nebo je žádat.
+jedné straně právo odstupné nevyplatit a druhé právo je žádat.
 
 Někdy, leží-li vina na obou stranách pracovního vztahu,
 
@@ -91,7 +91,7 @@ Proto v pracovněprávních sporech (勞資糾紛) na Tchaj-wanu
 
 je „**čas**“ velmi důležitý.
 
-Ve sporech o odstupné proto rozhoduje, která strana dříve ukončí smlouvu s řádným důvodem a s důkazy.
+Ve většině případů je lépe chráněna strana, která se připraví předem.
 
 ---
 

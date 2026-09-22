@@ -26,7 +26,7 @@ Text vysvětluje, kdy nárok na odstupné vzniká a kdy nikoli.
 
 ![](../images/008-taiwan-labor-severance-law/img-01.jpg)
 
-Úprava se stát od státu liší.
+Úprava se liší stát od státu.
 
 V některých jurisdikcích, například v Koreji, musí společnost vyplatit odstupné i tehdy, když zaměstnanec odejde sám.
 
@@ -54,7 +54,7 @@ Následující tabulka to shrnuje.
 | --- | --- | --- | --- |
 | **Druh** | **Hospodářské propuštění (資遣員工, 經濟解僱)** | **Kárné propuštění (解僱員工, 懲戒解僱)** | **Vlastní odchod zaměstnance**  **員工自請離職** |
 | Význam | Existuje-li u zaměstnavatele potřeba úpravy personálu kvůli situaci podniku, leží důvod v hospodářské oblasti zaměstnavatele, nikoli v odpovědnosti zaměstnance. Proto musí zaměstnavatel dodržet výpovědní dobu (預告期間) a vyplatit odstupné, aby vyvážil nevýhody zaměstnance. | Dopustí-li se zaměstnanec protiprávního nebo nevhodného činu, může zaměstnavatel okamžitě ukončit pracovní smlouvu (勞動契約) bez předchozí výpovědi a odstupné vyplácet nemusí. Jde o jednu z kárných pravomocí zaměstnavatele. | Zaměstnanec může kdykoli ukončit smlouvu, avšak musí podle doby zaměstnání dodržet výpovědní dobu, aby zaměstnavatel mohl provést předání a hledání náhrady. |
-| Podmínky | Jsou  (článek 11 tchajwanského zákona o pracovních normách) | Jsou  (článek 12 tchajwanského zákona o pracovních normách) | Nejsou |
+| Podmínky | Ano (článek 11 tchajwanského zákona o pracovních normách) | Ano (článek 12 tchajwanského zákona o pracovních normách) | Nejsou |
 | Předchozí výpověď | Nutná | Není nutná | Nutná |
 | Obtížnost pro zaměstnavatele | Nižší | Vyšší | Netýká se |
 | Zda společnost musí vyplatit odstupné (資遣費) | Nutné | Není nutné | Není nutné |
@@ -78,7 +78,7 @@ a vedou zaměstnance k vlastnímu odchodu.
 
 Zaměstnanci musí být opatrní
 
-a dbát, aby nepadli do záměru společnosti.
+a dbát, aby do takového postupu nespadli.
 
 ​
 
@@ -172,7 +172,7 @@ nahrál celý průběh mobilním telefonem
 
 a mohl prokázat, že sám neodešel.
 
-Díky tomu mohl později díky zastoupení advokátem
+Díky zastoupení advokátem mohl později
 
 prokázat svůj zákonný nárok na odstupné;
 
@@ -208,7 +208,7 @@ nebo převádí zaměstnance na podivná místa,
 
 ​
 
-Pracujete-li na Tchaj-wanu,
+Pracujete-li na Tchaj-wanu, platí následující.
 
 Odstupné je obtížnější získat, než se myslí.
 

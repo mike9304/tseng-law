@@ -19,11 +19,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Když začínáte gastronomickou činnost, prvním problémem je najít adresu provozovny (營業地址).
 
-Kromě tržní situace
+Kromě tržní situace je třeba posoudit ještě další bod.
 
-je dalším důležitým bodem
+Dalším důležitým bodem je územní režim adresy.
 
-to, zda tato adresa leží v zóně, kde je provoz „restaurace“ možný.
+Jde o to, zda tato adresa leží v zóně, kde je provoz „restaurace“ možný.
 
 ​
 

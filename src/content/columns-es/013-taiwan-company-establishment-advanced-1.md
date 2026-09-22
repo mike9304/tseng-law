@@ -13,9 +13,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Imagen principal](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Recientemente muchas personas han constituido una sociedad en Taiwán y han obtenido el visado de trabajo y la tarjeta de residencia,
+Recientemente muchas personas han constituido una sociedad en Taiwán y han obtenido el visado de trabajo y la tarjeta de residencia.
 
-y a continuación se recogen las preguntas que más se plantean en el momento de la constitución.
+A continuación se recogen las preguntas que más se plantean al constituirla.
 
 Quienes hayan leído [**la parte básica de constitución de sociedades**](/es/columns/taiwan-company-establishment-basics) pueden continuar con esta parte avanzada más detallada.
 
@@ -63,7 +63,7 @@ Es posible.
 
 En general, el banco exige una doble acreditación de identidad,
 
-y si no tiene tarjeta de residencia, puede solicitar en la Administración de Inmigración de Taiwán el '**formulario de datos básicos del número unificado**(統一證號基本資料表)'.
+y si no tiene tarjeta de residencia, puede solicitar en la Administración de Inmigración de Taiwán el «formulario de datos básicos del número unificado» (統一證號基本資料表).
 
 Puede expedirse el mismo día,
 
@@ -107,19 +107,19 @@ si es necesario, puede proponer la notarización del contrato de arrendamiento o
 
 ​
 
-**5. Al constituir la sociedad, ¿puede arrendar un espacio comercial de oficinas?**
+**5. Al constituir la sociedad, ¿puede arrendar un local de oficinas ordinario?**
 
 Depende de los ramos de actividad de la sociedad.
 
-Por ejemplo, si el ramo de actividad es la restauración y pretende arrendar un espacio comercial de oficinas, la apertura de la cuenta bancaria será muy difícil.
+Por ejemplo, si el ramo de actividad es la restauración y pretende arrendar un local de oficinas ordinario, la apertura de la cuenta bancaria será muy difícil.
 
 Como se ha indicado, el banco revisa el contrato de arrendamiento e inspecciona in situ la dirección de la sociedad.
 
-Además, en el registro final de la sociedad el gobierno municipal también exige que la dirección registrada se sitúe en una zona donde sea posible la explotación de restauración,
+Además, en el registro final de la sociedad el gobierno municipal también exige que la dirección registrada se sitúe en una zona donde pueda ejercerse la actividad de restauración,
 
-y si se trata de un espacio comercial de oficinas, el registro de la sociedad no es posible.
+y si se trata de un local de oficinas ordinario, el registro de la sociedad no es posible.
 
-Por ejemplo, si el ramo de actividad es de los que pueden explotarse en un espacio comercial de oficinas, como la publicidad o el comercio al por mayor, puede constituirse en un espacio comercial de oficinas.
+Por ejemplo, si el ramo de actividad es de los que pueden explotarse en un local de oficinas ordinario, como la publicidad o el comercio al por mayor, puede constituirse en un local de oficinas ordinario.
 
 Confírmelo antes de firmar el contrato de arrendamiento.
 

@@ -1515,9 +1515,9 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Taiwan company setup': 'Constitución de sociedades en Taiwán',
     'Taiwan investment counsel': 'Asesoramiento jurídico para invertir en Taiwán',
     'Civil litigation and damages': 'Litigios civiles y daños',
-    'Trademark and patent filings': 'Presentación de marcas y patentes',
+    'Trademark and patent filings': 'Solicitudes de marcas y patentes',
     'Visa and residency': 'Visado y residencia',
-    'Family and labor disputes': 'Conflictos de familia y laborales',
+    'Family and labor disputes': 'Conflictos familiares y laborales',
   },
   fr: {
     'Taiwan company setup': 'Constitution de sociétés à Taïwan',
@@ -2244,7 +2244,7 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'Máster (M.S.), Institute of Finance, National Taiwan University',
-        'Grado (B.A.) con doble especialidad en Derecho y Finanzas, National Chengchi University',
+        'Grado (B.A.) con doble titulación en Derecho y Finanzas, National Chengchi University',
         'Estudiante de intercambio en Kobe University y Waseda University',
       ],
       experience: [
@@ -2255,18 +2255,18 @@ export const guidanceTeamBios: Record<
     },
     'chang-rongxuan': {
       intro: [
-        'Trabajó antes en el Ministry of Education, Legal Affairs Division, centrado en conflictos administrativos y civiles.',
+        'Trabajó antes en el Ministerio de Educación, División de Asuntos Jurídicos (Ministry of Education, Legal Affairs Division), centrado en conflictos administrativos y civiles.',
         'Tiene experiencia en asuntos de universidades, derechos del profesorado y reclamaciones administrativas.',
       ],
       education: ['Grado en Derecho (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Ministerio de Educación, División de Asuntos Jurídicos (Ministry of Education, Legal Affairs Division)',
         'Abogado, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal con años de trabajo como paralegal sénior en varios despachos, a cargo del apoyo procesal, del derecho de empresa y de la inversión extranjera.',
+        'Paralegal sénior, con años de experiencia en varios despachos, a cargo del apoyo procesal, del derecho societario y de la inversión extranjera.',
         'Apoya litigios, constitución de sociedades, trámites de aprobación de inversión extranjera, solicitudes de licencia y el intercambio entre Corea y Taiwán.',
       ],
       education: ['Grado en Derecho (LL.B.), Tunghai University'],
@@ -2285,7 +2285,7 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'Completó los programas de grado y máster en contabilidad en National Chengchi University y dirige actualmente un despacho de contabilidad.',
+        'Cursó el grado y el máster en Contabilidad en la National Chengchi University y dirige actualmente un despacho de contabilidad.',
         'Apoya el análisis integrado de riesgos jurídicos, fiscales y financieros para clientes empresariales.',
       ],
       education: [

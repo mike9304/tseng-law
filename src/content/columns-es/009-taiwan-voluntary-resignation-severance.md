@@ -29,7 +29,7 @@ Sin embargo, hay **casos excepcionales**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-En las situaciones especiales siguientes, aunque el trabajador dimita de forma voluntaria, el empleador debe pagarle la indemnización por despido (artículos 14 de la Ley de Normas Laborales, que aplica por analogía el artículo 17; 勞動基準法第14條):
+En las situaciones especiales siguientes, aunque el trabajador dimita de forma voluntaria, el empleador debe pagarle la indemnización por despido (el artículo 14 de la Ley de Normas Laborales, que aplica por analogía el artículo 17; 勞動基準法第14條):
 
 1. Cuando el empleador, al celebrar el contrato de trabajo (勞動契約), hace una declaración de voluntad falsa (虛偽意思表示) de modo que el trabajador cree por error y existe el riesgo de sufrir un daño
 
@@ -39,7 +39,7 @@ En las situaciones especiales siguientes, aunque el trabajador dimita de forma v
 
 3. Cuando el trabajo pactado en el contrato puede ser perjudicial para la salud del trabajador, se ha pedido al empleador que lo mejore y no hay efecto
 
-4. Cuando el empleador, su representante u otro trabajador padece una enfermedad contagiosa legal (法定傳染病), existe riesgo de contagio a los trabajadores que laboran juntos y ello supone un peligro grave para la salud del trabajador
+4. Cuando el empleador, su representante u otro trabajador padece una enfermedad contagiosa de declaración obligatoria (法定傳染病), existe riesgo de contagio a los trabajadores que laboran juntos y ello supone un peligro grave para la salud del trabajador
 
 5. Cuando el empleador no paga la remuneración (工作報酬) según el contrato de trabajo, o no proporciona trabajo suficiente al trabajador cuya retribución se calcula por pieza (按件計酬)
 
@@ -91,7 +91,7 @@ Por ello, en los conflictos laborales (勞資糾紛) de Taiwán,
 
 el **tiempo** es muy importante.
 
-En la mayoría de los casos, quien se ha preparado de antemano ve protegidos sus derechos.
+En la mayoría de los casos, quien se prepara de antemano está en mejor posición para defender sus derechos; de ello no se sigue un resultado determinado.
 
 ---
 

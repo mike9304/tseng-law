@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Imagen principal](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Quienes hayan leído [Constitución de sociedades en Taiwán — parte básica](/es/columns/taiwan-company-establishment-basics) y [Constitución de sociedades en Taiwán — parte avanzada 1](/es/columns/taiwan-company-establishment-advanced-1) pueden también consultar Constitución de sociedades en Taiwán — parte avanzada 2.
+Quienes hayan leído [Constitución de sociedades en Taiwán — parte básica](/es/columns/taiwan-company-establishment-basics) y [Constitución de sociedades en Taiwán — parte avanzada 1](/es/columns/taiwan-company-establishment-advanced-1) encontrarán aquí la parte avanzada 2.
 
 ​
 
@@ -71,7 +71,7 @@ Algunos bancos pueden imponer requisitos adicionales, por ejemplo un período de
 
 A. Primer empleado: se solicita como trabajo de dirección en una empresa de inversión ordinaria de chinos de ultramar o de extranjeros (一般僑外投資事業主管工作). No se aplican los criterios de «trabajo de carácter especializado o técnico» del apartado B siguiente, pero sí se aplican los requisitos de destinatario, como el de responsable de gestión (經理人) de una sociedad cuya aportación de chinos de ultramar o extranjeros exceda de un tercio, y los requisitos de resultados del empleador en capital y cifra de negocios (artículos 38 y 39 de las Normas de Revisión).
 
-B. A partir del segundo empleado hay restricciones: si el número de empleados contratados supera 1 persona, la formación y experiencia pertinentes del empleado, las normas de salario medio de contratación y las normas de capital y cifra de negocios de la sociedad se tramitan conforme al «trabajo especializado o técnico» (專門性或技術性工作).
+B. A partir del segundo empleado hay restricciones: cuando se contrata a más de una persona de nacionalidad extranjera, la formación y la experiencia pertinentes del empleado, las normas de salario medio y las de capital y cifra de negocios se tramitan conforme al «trabajo especializado o técnico» (專門性或技術性工作).
 
 Consulte el sitio del Ministerio de Trabajo de Taiwán (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

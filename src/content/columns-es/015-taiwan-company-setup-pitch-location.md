@@ -55,11 +55,11 @@ Por tanto, preste atención.
 
 Se recomienda que todos los sectores confirmen si la explotación es posible a través del sistema de «consulta previa del local de negocio».
 
-Sin embargo, al registrar la sociedad suele inscribirse varios ramos a la vez, y con frecuencia se pretende registrar aproximadamente diez ramos de una sola vez.
+Sin embargo, al registrar la sociedad suelen inscribirse varios ramos a la vez, y con frecuencia se pretende registrar aproximadamente diez ramos de una sola vez.
 
 Por ello, en la práctica no es necesario consultar todos los ramos al registrar la sociedad.
 
-Según las «[Instrucciones de funcionamiento del servicio de consulta de locales de negocio de la ciudad de Taipéi](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) »(臺北市營業場所協助查詢服務作業須知) y la guía vigente de la ciudad de Taipéi,
+Según las «[Instrucciones de funcionamiento del servicio de consulta de locales de negocio de la ciudad de Taipéi](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)» (臺北市營業場所協助查詢服務作業須知) y la guía vigente de la ciudad de Taipéi,
 
 desde el 1 de enero de 2023, al solicitar el registro de constitución, de traslado de domicilio o de adición de ramos de actividad de una sociedad o de un comercio (incluidas la sucursal (分公司) y el establecimiento auxiliar (分支機構)), el resultado de la consulta previa del local de negocio **debe** anexarse a la solicitud de registro, con independencia del sector.
 

@@ -41,7 +41,7 @@ El artículo 284 del Código Penal regula las lesiones por imprudencia (過失�
 
 En materia de indemnización civil por daños (損害賠償), según el artículo 197 del Código Civil de Taiwán (民法) no puede reclamarse una vez transcurridos 2 años desde el día en que se conocieron el daño y el obligado a indemnizar, o 10 años desde el día del acto ilícito. Qué hechos influyen en la prescripción (消滅時效) debe examinarse por separado.
 
-Quien sufre un daño por un delito puede, según el artículo 487 de la Ley de Enjuiciamiento Criminal, interponer una acción civil acumulada al proceso penal (刑事附帶民事訴訟). Mientras el proceso penal sigue en trámite, esa acción puede interponerse hasta antes de la conclusión de los alegatos orales (言詞辯論終結) de la segunda instancia, según el artículo 488 de la Ley de Enjuiciamiento Criminal, pero no puede interponerse después de la conclusión de los alegatos orales de la primera instancia y antes de interponer el recurso. Por lo general puede evitarse el pago de costas procesales (裁判費) independientes, pero no todos los resultados concluyen sin coste. Por ejemplo, si el asunto penal se desestima y, a petición del demandante, se remite al tribunal civil, según el artículo 503 de la Ley de Enjuiciamiento Criminal pueden imponerse las costas, y deben comprobarse también las normas de remisión y procedimiento del artículo 504.
+Quien sufre un daño por un delito puede, según el artículo 487 de la Ley de Enjuiciamiento Criminal, interponer una acción civil acumulada al proceso penal (刑事附帶民事訴訟). Mientras el proceso penal sigue en trámite, esa acción puede interponerse hasta antes de la conclusión de los alegatos orales (言詞辯論終結) de la segunda instancia, según el artículo 488 de la Ley de Enjuiciamiento Criminal, pero no puede interponerse después de la conclusión de los alegatos orales de la primera instancia y antes de interponer el recurso. Por lo general puede evitarse el pago de una tasa judicial (裁判費) independiente, pero no todos los resultados concluyen sin coste. Por ejemplo, si el asunto penal se desestima y, a petición del demandante, se remite al tribunal civil, según el artículo 503 de la Ley de Enjuiciamiento Criminal puede imponerse la tasa judicial, y deben comprobarse también las normas de remisión y procedimiento del artículo 504.
 
 La elección varía según la interrupción de la prescripción (時效中斷), el círculo de demandados, las pruebas, el seguro y la competencia. Por ello no existe un procedimiento uniformemente mejor para todos los asuntos.
 
@@ -57,7 +57,7 @@ El peritaje (鑑定) o la tabla de análisis preliminar pueden ser materiales im
 
 En el documento de transacción (和解書) conviene individualizar la fecha, el lugar y las partes del accidente, y consignar el importe y el momento del pago, el tratamiento de las prestaciones del seguro, las reclamaciones incluidas y las que se reservan. También deben fijarse con claridad el tratamiento futuro, las lesiones descubiertas más tarde, la entrega de documentos como el certificado médico (診斷證明書) y la relación entre el pago y el desistimiento de la querella.
 
-La transacción (和解) del artículo 736 del Código Civil es un contrato en el que las partes ceden recíprocamente para poner fin a un litigio o evitarlo. Según el artículo 737 del Código Civil, el alcance en que se extinguen derechos también se valora solo dentro de lo que se renunció en el documento de transacción. Por ello no debe afirmarse, sin examinar el texto, que desaparecen todas las reclamaciones futuras.
+La transacción (和解) del artículo 736 del Código Civil es un contrato en el que las partes se hacen concesiones recíprocas para poner fin a un litigio o evitarlo. Según el artículo 737 del Código Civil, el alcance en que se extinguen derechos también se valora solo dentro de lo que se renunció en el documento de transacción. Por ello no debe afirmarse, sin examinar el texto, que desaparecen todas las reclamaciones futuras.
 
 Si se trata de un delito perseguible a instancia de parte, según el artículo 238 de la Ley de Enjuiciamiento Criminal la querella puede desistirse hasta antes de la conclusión de los alegatos orales de la primera instancia, y una vez desistida no puede presentarse de nuevo. Sin embargo, en un delito que no es perseguible a instancia de parte, la acusación no termina automáticamente por una transacción privada, y el haber transigido no obliga siempre a desistir de la querella.
 
@@ -101,9 +101,9 @@ La reclamación basada en el artículo 184 del Código Civil presupone una lesi�
 
 Conserve recibos (收據), certificados médicos e historia clínica, y organice junto con ellos la necesidad médica de cada tratamiento y su nexo causal con el accidente. Los datos de un tratamiento que sigue pueden complementar la prueba según el calendario procesal del tribunal y el contenido de la reclamación ya presentada, pero no se garantiza que todos los datos presentados tarde o toda ampliación de la reclamación sean admitidos o permitidos.
 
-Debe distinguirse el añadir datos médicos del modificar o aumentar el importe reclamado. Después de interponer una acción civil acumulada al proceso penal, el mero hecho de presentar más recibos médicos no genera automáticamente costas procesales.
+Debe distinguirse el añadir datos médicos del modificar o aumentar el importe reclamado. Después de interponer una acción civil acumulada al proceso penal, el mero hecho de presentar más recibos médicos no genera automáticamente una tasa judicial.
 
-Sin embargo, según el artículo 504 de la Ley de Enjuiciamiento Criminal, una vez remitido el asunto a la sección civil, modificar, añadir o ampliar la reclamación más allá del alcance anterior a la remisión puede plantear la cuestión de las costas sobre la parte excedente. La fase de remisión, el momento de presentación y el alcance de la reclamación deben comprobarse en cada asunto.
+Sin embargo, según el artículo 504 de la Ley de Enjuiciamiento Criminal, una vez remitido el asunto a la sección civil, modificar, añadir o ampliar la reclamación más allá del alcance anterior a la remisión puede plantear la cuestión de la tasa judicial sobre la parte excedente. La fase de remisión, el momento de presentación y el alcance de la reclamación deben comprobarse en cada asunto.
 
 ## Q9. ¿Con qué se prueban los gastos de cuidados profesionales y los de cuidados por familiares?
 
@@ -139,17 +139,17 @@ Los recibos, los registros de tarifa, los registros de itinerario y los datos cl
 
 La pérdida de ingresos debe probarse con datos de que, por lesiones relacionadas con el accidente, el trabajo fue total o parcialmente imposible durante el período de recuperación y de que, como resultado, hubo una reducción real de ingresos. El certificado médico o la recomendación de reposo son un punto de partida importante, pero por sí solos no bastan para que se reconozca la reclamación.
 
-Conviene organizar juntos la historia clínica, los registros de asistencia o de permiso, los datos de salario e impuestos y la confirmación del empleador. El trabajador autónomo puede presentar datos acordes con la forma de su actividad, como datos de ventas, registros de operaciones y declaraciones fiscales.
+Conviene organizar en conjunto la historia clínica, los registros de asistencia o de permiso, los datos de salario e impuestos y la confirmación del empleador. El trabajador autónomo puede presentar datos acordes con la forma de su actividad, como datos de ventas, registros de operaciones y declaraciones fiscales.
 
 La circunstancia de haber seguido trabajando o de haber percibido el salario sin variación es relevante para valorar la pérdida de ingresos del período de recuperación, pero ese hecho por sí solo no decide automáticamente la cuestión del daño por disminución de la capacidad laboral. Esa circunstancia tampoco es fundamento autónomo para valorar el daño por disminución de la capacidad laboral. El daño por disminución de la capacidad laboral se examina por separado en la Q12.
 
 ## Q12. ¿Cómo se prueba el daño por disminución de la capacidad laboral?
 
-El daño por disminución de la capacidad laboral se distingue de los ingresos realmente reducidos durante el período de recuperación de la Q11. Según los artículos 193 y 216 del Código Civil se examinan juntos el nexo causal con el accidente, la disfunción funcional persistente (持續功能障礙), la profesión y las aptitudes del perjudicado, los ingresos que habitualmente pueden esperarse y el fundamento y la prueba relativos al período de capacidad laboral.
+El daño por disminución de la capacidad laboral se distingue de los ingresos realmente reducidos durante el período de recuperación de la Q11. Según los artículos 193 y 216 del Código Civil se examinan en conjunto el nexo causal con el accidente, el menoscabo funcional persistente (持續功能障礙), la profesión y las aptitudes del perjudicado, los ingresos que habitualmente pueden esperarse y el fundamento y la prueba relativos al período de capacidad laboral.
 
 El que el salario actual se mantenga sin variación no excluye automáticamente la reclamación. A la inversa, el importe del daño tampoco se fija de forma mecánica solo con el porcentaje de discapacidad o con el salario actual.
 
-Si la disfunción funcional persistente se discute de forma sustancial, un peritaje médico puede ser útil, pero no es obligatorio en todos los asuntos. También se examinan la compensación de culpas del artículo 217 del Código Civil y otros motivos de ajuste.
+Si el menoscabo funcional persistente se discute de forma sustancial, un peritaje médico puede ser útil, pero no es obligatorio en todos los asuntos. También se examinan la compensación de culpas del artículo 217 del Código Civil y otros motivos de ajuste.
 
 Cuando el cálculo se hace en un capital único, puede considerarse la deducción de intereses intermedios (中間利息扣除). La calculadora Hoffmann (霍夫曼) del Yuan Judicial es solo una herramienta de cálculo, no un método legalmente obligatorio, y no garantiza el resultado. Según el artículo 193 del Código Civil, a petición de la parte el tribunal también puede ordenar el pago en renta periódica con la condición de una garantía.
 
@@ -157,7 +157,7 @@ Cuando el cálculo se hace en un capital único, puede considerarse la deducció
 
 La indemnización por daño moral por perjuicios no patrimoniales se valora fijando un importe adecuado cuando existe una lesión ilícita del cuerpo o de la salud, según el artículo 195 del Código Civil.
 
-El tribunal examina las circunstancias de cada asunto valorando en conjunto el contenido de las lesiones y del tratamiento, los efectos persistentes, el sufrimiento y la repercusión en la vida, la edad y la condición, las circunstancias socioeconómicas y las pruebas de las partes. Por ello es difícil anticipar el resultado solo a partir de un intervalo tipificado.
+El tribunal examina las circunstancias de cada asunto valorando en conjunto el contenido de las lesiones y del tratamiento, los efectos persistentes, el sufrimiento y la repercusión en la vida, la edad y la condición, las circunstancias socioeconómicas y las pruebas de las partes. Por ello ningún intervalo fijo determina el resultado.
 
 ## Q14. Si el accidente ocurre durante el trabajo, ¿puede exigirse también responsabilidad civil al empleador?
 
@@ -199,7 +199,7 @@ Q16. Después del accidente, ¿puede dejarse todo en manos de la aseguradora?
 
 ​
 
-Según mi experiencia, las aseguradoras a menudo no atienden de forma suficiente el aspecto emocional de las partes del accidente.
+Las aseguradoras a menudo no atienden de forma suficiente el aspecto emocional de las partes del accidente.
 
 ​
 
@@ -219,7 +219,7 @@ También puede surgir un conflicto de intereses entre la aseguradora y la parte,
 
 ​
 
-Por ello no recomiendo encomendar todo el litigio a la aseguradora.
+Por ello no conviene encomendar todo el litigio a la aseguradora.
 
 ​
 
@@ -323,7 +323,7 @@ Debe tenerse cuidado con el abogado que infla el asunto y sostiene que no se tra
 
 ​
 
-Con esto concluyo las preguntas y respuestas sobre accidentes de tráfico. Espero que le resulten de utilidad.
+Aquí terminan las preguntas y respuestas sobre accidentes de tráfico.
 
 ​
 
@@ -331,7 +331,7 @@ Con esto concluyo las preguntas y respuestas sobre accidentes de tráfico. Esper
 
 ​
 
-Tras tramitar muchos accidentes de tráfico, quiero señalar un punto importante.
+Tras muchos accidentes de tráfico tramitados, cabe señalar un punto importante.
 
 ​
 

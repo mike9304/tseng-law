@@ -1,0 +1,155 @@
+# grok-F-es-r1.log — Spanish (es) native-review fix, campaign round 1
+worker: Grok 4.7   date: 2026-09-22   worktree: /Users/son7/Projects/tseng-law-fix-es-r1
+inputs: RULEBOOK-FIX.md (R2–R10; R1/R11 already in the text), ACCEPTED-ROUND.md, rounds/r1/es-a.md (43 rows), es-b.md (39 rows)
+scope written: src/content/columns-es/*.md (17 files; 006 unchanged), src/data/international-guidance-western.ts (es strings), international-guidance-answers.ts (es services answer), international-guidance-team.ts (es service labels + es bios). One test expectation updated: src/data/__tests__/guidance-disclosure-parity.test.ts es regex for not-the-consultation-step. inquiry copy, offices copy and llms-txt.es were already in line with R5/R10 and no review row touched them. No commit.
+
+## Rows applied
+
+es-a and es-b together: 82 P1/P2 rows. 80 applied as wording inside the existing block. 1 applied only in part (es-a #36: cells rephrased, row kept). 1 skipped (es-a #27). No P3 rows in either review.
+
+### es-a (guidance + columns 001–009)
+a#1  APPLIED guidance FAQ: comma in «Si un asunto se acepta o no, se decide…».
+a#2  APPLIED 002: «fecha de nacimiento» → «La fecha, el propósito, la persona que lo aprobó…».
+a#3  APPLIED 004: «unidad filial (分支機構)» → «oficina local»; the gloss stays on sucursal, because 分支機構 is the branch term and the gloss must not be dropped.
+a#4  APPLIED 005: «supera 1 persona» → «más de una persona de nacionalidad extranjera» («una persona» still parses as 1).
+a#5  APPLIED about: «se fundó en 2016 por» → «fue fundado en 2016 por».
+a#6  APPLIED «ese expediente debe hablarse» → «ese asunto debe tratarse»; the about-page «puede hablarse» → «puede tratarse».
+a#7  APPLIED «no ponemos intérprete» → «no facilitamos intérprete».
+a#8  APPLIED «esta página no es el paso de consulta» → «esta página no es una consulta». Test regex updated to /no es una consulta/.
+a#9  APPLIED bare «laboral, penal» → «asuntos laborales, asuntos penales» in the home intro and the services answer.
+a#10 APPLIED «valoración del local» → «comprobación del local».
+a#11 APPLIED «Presentación de marcas y patentes» → «Solicitudes de marcas y patentes».
+a#12 APPLIED Ministry of Education in the bio sentence and the experience line → «Ministerio de Educación, División de Asuntos Jurídicos (Ministry of Education, Legal Affairs Division)».
+a#13 APPLIED «Completó los programas…» → «Cursó el grado y el máster en Contabilidad…».
+a#14 APPLIED «doble especialidad» → «doble titulación».
+a#15 APPLIED the repeated Paralegal sentence → «Paralegal sénior, con años de experiencia…». The short role label «Paralegal» and the Boyin/Muyang experience lines were not the quoted sentence; left as titles.
+a#16 APPLIED «otras vías donde usted se encuentre» → «otras vías en el lugar donde usted se encuentre».
+a#17 APPLIED «Conflictos de familia y laborales» → «Conflictos familiares y laborales».
+a#18 APPLIED «cuenta de ingreso» → «cuenta de destino». The plural «no coinciden» stays: the subject is the whole series (ordenante, propósito, contenido y cuenta).
+a#19 APPLIED «distribución interior» → «distribución en el mercado nacional».
+a#20 APPLIED «colaterales» / «el colateral» / «préstamo bancario y colateral» → «cauciones» / «la caución» (001 once, 004 three times).
+a#21 APPLIED the FAQ question now has the article: «¿La constitución de la sociedad implica obtener un permiso de trabajo o de residencia en Taiwán?».
+a#22 APPLIED «intervalo tipificado» → «Por ello ningún intervalo fijo determina el resultado.»
+a#23 APPLIED 裁判費 «costas» → «tasa judicial» (the independent fee, the remittal, the extra receipts, and «cuestión de las costas»).
+a#24 APPLIED «ceden recíprocamente» → «se hacen concesiones recíprocas».
+a#25 APPLIED «disfunción funcional» → «menoscabo funcional» (body + the following sentence).
+a#26 APPLIED Q16 and the close out of the first person: «Las aseguradoras…», «no conviene encomendar», «Aquí terminan las preguntas y respuestas…», «cabe señalar».
+a#27 SKIPPED. See skipped rows.
+a#28 APPLIED «Cuál forma» → «La forma más adecuada».
+a#29 APPLIED «sociedad comanditaria limitada (有限合夥)» → «sociedad comanditaria (有限合夥)».
+a#30 APPLIED «se enfrentan a» → «tratan con».
+a#31 APPLIED the self-reference → «encontrarán aquí la parte avanzada 2.» Links in the same sentence kept.
+a#32 APPLIED «plazo de legislación» → «plazo de adecuación que fijó el Tribunal Constitucional».
+a#33 APPLIED «a 25 de julio de 2026» → «al 25 de julio de 2026». Date unchanged.
+a#34 APPLIED «Hoy quiero explicar…» → «La indemnización por despido (資遣費) en Taiwán funciona así.»
+a#35 APPLIED «Les contaré» → «Le contaré» (usted).
+a#36 PARTIAL. The row asked to delete the «Dificultad» table row. Deleting a row changes the table-row count. Cells rephrased to «Dificultad del trámite | Menor | Mayor | Menor» so they name procedural difficulty and do not read as an easy outcome. English still has Easy / Difficult / Easy.
+a#37 APPLIED «OOO» → «[nombre]».
+a#38 APPLIED the split bold glosses → «Despido económico (資遣員工, 經濟解僱)» and «Despido disciplinario (解僱員工, 懲戒解僱)».
+a#39 APPLIED «complete 1 año» → «complete un año» (2) and «por cada 1 año» → «por cada un año completo» (2). «un año» is the form the checker counts as 1. Bare «por cada año completo» would drop that 1.
+a#40 APPLIED the missing period: «La indemnización por despido es más difícil de cobrar de lo que se piensa.»
+a#41 APPLIED «artículos 14» → «el artículo 14».
+a#42 APPLIED «enfermedad contagiosa legal» → «enfermedad contagiosa de declaración obligatoria».
+a#43 APPLIED the closer → «quien se prepara de antemano está en mejor posición para defender sus derechos; de ello no se sigue un resultado determinado.»
+
+### es-b (columns 010–018)
+b#1  APPLIED «diagnosis» → «diagnóstico».
+b#2  APPLIED the broken footage sentence → the court does not automatically draw an adverse inference merely because the images no longer exist.
+b#3  APPLIED «indemnización real» → «si llega a concederse una indemnización punitiva, y por qué importe».
+b#4  APPLIED «distribuidor exclusivo o comercializador» → «distribuidor principal o distribuidor».
+b#5  APPLIED 準用: «por analogía» → «se aplica, en lo pertinente,».
+b#6  APPLIED «Como con la sola sentencia» → a self-standing sentence: the first-instance judgment alone does not confirm the second instance or the settlement amount.
+b#7  APPLIED «quien entrena» → «quien hacía el ejercicio» (alt and the matching link).
+b#8  APPLIED with the multiplier kept. «hasta una vez el importe» became «hasta una vez el daño real, es decir, un importe igual al de ese daño.» Dropping «una vez» failed the checker (missing 1). The equal-amount reading is in the same sentence.
+b#9  APPLIED «pruebas aseguradas» → «pruebas conservadas».
+b#10 APPLIED. The verbless press titles in 010 now have a verb (alt and link, six titles). Image paths and hrefs unchanged. «TWD 1,57 millones» unchanged.
+b#11 APPLIED «por sí mismo» where the subject was missing or the filial/marca is feminine: FAQ and body «por cuenta propia», heading «Cuando la propia marca explota…», list «Decidir si la propia marca constituye una filial…». «por sí mismas» (las marcas) and masculine «por sí mismo» agreeing with «escrito» / «el hecho» were left.
+b#12 APPLIED «deben operarse por separado» → «deben distinguirse en la práctica».
+b#13 APPLIED «concluirse como» → «tratarse como si produjeran la misma consecuencia».
+b#14 APPLIED «2 turismos» → «dos automóviles»; «motorista» → «conductor de la motocicleta»; «intermitente» → «indicador de dirección» (4).
+b#15 APPLIED «el más adelantado» → «el que iba en cabeza». The verb «adelantar» stays.
+b#16 APPLIED «soportaba la responsabilidad» → «la responsabilidad principal … recaía en A».
+b#17 APPLIED «no garantiza evitar» → «no garantiza que se evite el accidente ni un resultado concreto…». The denial stays.
+b#18 APPLIED «en cada asunto» → «Que el peritaje de este asunto haya llegado a ese resultado…».
+b#19 APPLIED inside the two existing blocks: the first now ends with a period; the next opens «A continuación se recogen…» and no longer starts with «y». Blocks were not merged.
+b#20 APPLIED «espacio comercial de oficinas» → «local de oficinas ordinario» (5, heading and section).
+b#21 APPLIED «explotación de restauración» → «actividad de restauración».
+b#22 APPLIED the glued quotes → «el «formulario de datos básicos del número unificado» (統一證號基本資料表)».
+b#23 APPLIED «Se ve juntos» and the same calque. See systemic count.
+b#24 APPLIED «de origen» → «en el giro ordinario».
+b#25 APPLIED «dispositivo» → «mecanismo».
+b#26 APPLIED «material de propósito educativo» in 014 and 016, and the same closer in 007.
+b#27 APPLIED «suele inscribirse varios ramos» → «suelen inscribirse».
+b#28 APPLIED the space before the closing guillemet. The link href is unchanged; the gloss now has a space: «…Taipéi](url)» (臺北市…).
+b#29 APPLIED «se hereda juntos» → «según el orden con el que el cónyuge concurre a la herencia».
+b#30 APPLIED «calcularse distinguido» → «calcularse aparte» (FAQ and body).
+b#31 APPLIED «empieza» → «empiece».
+b#32 APPLIED «adveración (檢認)» → «validación judicial del testamento (檢認)».
+b#33 APPLIED «herederos relacionados» → «los únicos herederos» (FAQ and body).
+b#34 APPLIED «elementos internacionales» / «familia con elemento internacional» → «elementos de extranjería» / «elemento de extranjería», including the 016 closer and the 007 closer’s «familia internacional».
+b#35 APPLIED «distribución igual» → «reparto igualitario» (016, and the same calque in 007).
+b#36 APPLIED «debe presentar materiales» → «hay que presentar documentos».
+b#37 APPLIED «formulario concreto» → «Contar con una forma concreta no hace lícita la operación ni evita controversias.»
+b#38 APPLIED «Punto de negocios inscrito» → «Oficina inscrita conforme al artículo 386…».
+b#39 APPLIED the missing emerging-board path: «o una fusión, una adquisición, una cotización o el acceso al mercado emergente». No new digit.
+
+## Rows skipped
+
+es-a #27. The row asks to turn Q16–Q20 (and the same pattern in 005, 006, 008, 009) into new headings and to drop the U+200B spacer lines. ACCEPTED-ROUND forbids adding headings. Those lines are blocks the checker counts against the Korean source (a line that is only U+200B is not empty whitespace). Removing them or promoting them to ## would fail headings or blocks. First-person wording inside those blocks was still rewritten under a#26. 006 had no other row, so that file is unchanged.
+
+es-a #36, the deletion only. See a#36. The row remains.
+
+## Systemic patterns and how many instances changed
+
+es-a
+- Missing comma that splits a yes/no: 1 (the guidance FAQ). No second «se acepta o no se decide».
+- Legal qualifier «extranjero» dropped: 1 (005).
+- U+200B blog spacers: 0 removed (structural). Present in 003 Q16–Q20, 005, 006, 008, 009.
+- English office name inside a Spanish sentence: 2 (bio + experience).
+- Blog first person / usted switch: 7 blocks (008 opening, the table lead-in, «Le contaré»; 003 «Las aseguradoras», «no conviene», the close, «cabe señalar»).
+- Digit glued into «1 año»: 4, rewritten as «un año» so the checker still sees 1.
+
+es-b
+- Calque ver / examinar / confirmar / valorar + «juntos», including the ungrammatical singular+juntos: 44 rewrites across 002, 003, 004, 007, 010, 011, 012, 014, 016 (plus «El tercer factor ve» and «La primera se ve centrada»). Left as ordinary Spanish: «laboran juntos», «comparecer juntos», «juntos en el mismo espacio», «ambos conceptos juntos», and «pueden ordenarse juntos» in the mediation sentence (they are together in the same room or the same act, not «consider together»).
+- English operational verbs: 3 («operarse», «concluirse como», «dispositivo»). «concluirse en 6 meses» and «modo de operar» mean finish / run a business and were left.
+- Spain-only road words: 6 (turismos, motorista, intermitente ×4).
+- Noun-stack headlines and a paragraph ending on a comma: 6 titles (12 alt/link strings) in 010, and 2 blocks in 013.
+- Masculine «por sí mismo» with a missing or feminine subject: 5 (011 ×4, 017 ×1).
+- «material de propósito educativo»: 3 (014, 016, 007).
+- «elemento internacional»: 5 strings → «elemento de extranjería».
+
+R2–R10 already in the Spanish pack and columns (country note on the Korea tax agreement, «Corea, por ejemplo», emergency 119/110/112, feminine abogada, NUESTRO EQUIPO, OFICINAS, «Perfil completo (en inglés)», Spanish dates, «» and 1.000 / 0,5) were checked and not rewritten again. TWD 1.57M was not touched. Frontmatter url values with Hangul were not touched.
+
+## §Verify
+
+```
+=== CHECKER ===
+neighbour      PASS   
+hanzi          PASS   han=53
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+=== MARKERS ===
+       0
+=== TSC ===
+TSC_OK
+=== VITEST ===
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+=== GIT ===
+      25
+```
+
+Recount after this log file existed: `git status --short | wc -l` → 25.
+
+## Reviewer points not applied as stated
+
+1. es-a #27. Q16–Q20 are body blocks because that is the Korean source shape, not because Spanish failed to promote them to headings. Adding ## or deleting the U+200B lines fails the checker. The first-person register was fixed inside the blocks.
+2. es-a #36. The English source has a Difficulty row (Easy / Difficult / Easy). Deleting it drops that comparison and a table row. The bare «Sencillo» was the real problem; the cells now say «Dificultad del trámite | Menor | Mayor | Menor».
+3. es-b #8. «hasta un importe igual» alone deletes the statutory «one time», which the checker counts as 1. The sentence keeps «una vez» and then says that is an amount equal to the actual damage.
+4. es-a #39. «por cada año completo» with no word for 1 fails numbers. «un año» / «por cada un año completo» is the form the checker accepts.
+5. es-a #3 suggested dropping the gloss 分支機構. It is kept, moved onto «sucursal», so the Traditional-Chinese gloss stays and is no longer attached to «oficina local».
+6. Not every «juntos» is the calque. The ones that mean people or issues physically or procedurally together were left (listed above).

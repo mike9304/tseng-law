@@ -53,7 +53,7 @@ La diferencia principal entre una filial taiwanesa y una sucursal taiwanesa de u
 |---|---|---|
 | Filial taiwanesa | Se constituye conforme al Derecho de Taiwán, con personalidad jurídica propia, y es un sujeto jurídico distinto de la matriz extranjera. | Como la filial es una persona jurídica independiente, hay que confirmar cómo se organizan el suministro, los servicios, la licencia tecnológica y el reparto de costes con la matriz. |
 | Sucursal taiwanesa de una sociedad extranjera | Sucursal inscrita legalmente en Taiwán, sin personalidad jurídica distinta de la sede, diferente de una filial constituida aparte. | La sucursal es parte de la sede extranjera, no una persona jurídica independiente, de modo que la sede asume las obligaciones de forma directa. Confirmar el alcance de facultades del representante de la sucursal y el reparto interno de contratos externos, entrega, garantía y posventa. |
-| Oficina de representación en Taiwán | Punto de negocios inscrito conforme al artículo 386 de la Ley de Sociedades; no puede ejercer actividad mercantil en Taiwán. | Como no puede ejercer actividad mercantil, confirmar si la actividad real permanece en el ámbito permitido. |
+| Oficina de representación en Taiwán | Oficina inscrita conforme al artículo 386 de la Ley de Sociedades; no puede ejercer actividad mercantil en Taiwán. | Como no puede ejercer actividad mercantil, confirmar si la actividad real permanece en el ámbito permitido. |
 
 ## 3. Formas de la filial taiwanesa: sociedad de responsabilidad limitada (有限公司) y sociedad anónima (股份有限公司)
 
@@ -65,7 +65,7 @@ Puede formarse con una o más personas físicas, o con socios personas jurídica
 
 ### La sociedad anónima (股份有限公司): adecuada si se quieren incorporar otros inversores o cabe una cotización
 
-El capital se divide en acciones. En principio se requieren dos o más accionistas, pero el Estado o una persona jurídica pueden constituirla solos, y una persona jurídica extranjera puede poseer el 100 %. Las acciones son, en principio, libremente transmisibles, con excepciones legales; pueden diseñarse acciones especiales y opciones de empleados conforme a la ley. Conviene a empresas que esperan inversores, negociación de acciones, incentivos de capital para empleados o una fusión, adquisición o cotización futura; no se limita a grandes empresas. En gobernanza, una sociedad no pública puede, por estatutos, no tener consejo y tener solo uno o dos directores. Una sociedad con un único socio estatal o persona jurídica puede, por estatutos, no tener supervisor (監察人). No toda sociedad anónima debe auditar las cuentas anuales. Los umbrales principales de auditoría de una sociedad ordinaria son capital desembolsado de 30 millones de dólares taiwaneses, o, por debajo, ingresos de explotación de 100 millones o 100 trabajadores en el seguro laboral; las sociedades de oferta pública siguen la normativa de valores.
+El capital se divide en acciones. En principio se requieren dos o más accionistas, pero el Estado o una persona jurídica pueden constituirla solos, y una persona jurídica extranjera puede poseer el 100 %. Las acciones son, en principio, libremente transmisibles, con excepciones legales; pueden diseñarse acciones especiales y opciones de empleados conforme a la ley. Conviene a empresas que esperan inversores, negociación de acciones, incentivos de capital para empleados o una fusión, una adquisición, una cotización o el acceso al mercado emergente; no se limita a grandes empresas. En gobernanza, una sociedad no pública puede, por estatutos, no tener consejo y tener solo uno o dos directores. Una sociedad con un único socio estatal o persona jurídica puede, por estatutos, no tener supervisor (監察人). No toda sociedad anónima debe auditar las cuentas anuales. Los umbrales principales de auditoría de una sociedad ordinaria son capital desembolsado de 30 millones de dólares taiwaneses, o, por debajo, ingresos de explotación de 100 millones o 100 trabajadores en el seguro laboral; las sociedades de oferta pública siguen la normativa de valores.
 
 ## 4. Los procedimientos de sucursal y de filial difieren; solo la filial pasa por la revisión del Departamento de Revisión de Inversiones
 
@@ -73,7 +73,7 @@ Cuando una sociedad extranjera constituye una filial taiwanesa, en principio se 
 
 En cambio, al constituir una sucursal taiwanesa de una sociedad extranjera ordinaria, en principio no se exige autorización de inversión del Departamento de Revisión de Inversiones; el Departamento de Comercio del Ministerio de Economía tramita el registro de sucursal y la determinación de capital conexa. Siguen siendo necesarios la reserva previa del nombre, la remesa de capital de explotación, la verificación de capital y el registro fiscal; el calendario suele ser más corto.
 
-Lo anterior es una propuesta de diseño contractual. Disponer de un formulario concreto no hace lícita la operación ni evita controversias.
+Lo anterior es una propuesta de diseño contractual. Contar con una forma concreta no hace lícita la operación ni evita controversias.
 
 ## 5. El registro societario y el trabajo lícito de un ingeniero no son lo mismo
 

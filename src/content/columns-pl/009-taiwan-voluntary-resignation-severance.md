@@ -73,11 +73,11 @@ Pracownik musi więc pilnować tego terminu.
 
 Innymi słowy,
 
-prawo Tajwanu, niezależnie od tego, czy wina leży po stronie przedsiębiorstwa,
+prawo Tajwanu, zależnie od tego, czy winę ponosi pracodawca,
 
-czy po stronie pracownika,
+czy pracownik,
 
-przyznaje każdej ze stron prawo do niewypłacenia odprawy albo do jej żądania.
+przyznaje każdej ze stron prawo do odmowy wypłaty odprawy albo do jej żądania.
 
 Czasem, gdy wina leży po obu stronach stosunku pracy,
 

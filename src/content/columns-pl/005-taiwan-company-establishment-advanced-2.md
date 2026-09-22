@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Obraz wyróżniający](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Osoby, które przeczytały [Zakładanie spółki na Tajwanie – podstawy](/pl/columns/taiwan-company-establishment-basics) oraz [Zakładanie spółki na Tajwanie – omówienie pogłębione 1](/pl/columns/taiwan-company-establishment-advanced-1), mogą również zapoznać się z pogłębionym omówieniem zakładania spółki na Tajwanie – część 2 (公司設立).
+Osoby, które przeczytały [Zakładanie spółki na Tajwanie – podstawy](/pl/columns/taiwan-company-establishment-basics) oraz [Zakładanie spółki na Tajwanie – omówienie pogłębione 1](/pl/columns/taiwan-company-establishment-advanced-1), znajdą tutaj, w części 2, dalsze pytania o zakładanie spółki na Tajwanie (公司設立).
 
 ​
 
@@ -37,9 +37,9 @@ Przed przelewem kapitału (資本金匯款) proszę zasięgnąć informacji w sw
 
 **​**
 
-**2. Przy wpłacie kapitału zakładowego, czy można przelać dolary tajwańskie (新臺幣, TWD) z osobistego rachunku na Tajwanie na rachunek przygotowawczy tajwańskiej spółki?**
+**2. Przy wpłacie kapitału zakładowego, czy można przelać nowe dolary tajwańskie (新臺幣, TWD) z osobistego rachunku na Tajwanie na rachunek przygotowawczy tajwańskiej spółki?**
 
-Jest to możliwe, lecz należy przedłożyć dokumenty potwierdzające pochodzenie środków w dolarach tajwańskich uzyskanych na Tajwanie.
+Jest to możliwe, lecz należy przedłożyć dokumenty potwierdzające pochodzenie środków w nowych dolarach tajwańskich uzyskanych na Tajwanie.
 
 Jeżeli chodzi na przykład o dochody z wynagrodzenia uzyskane na Tajwanie, należy przedstawić kopię zaświadczenia o pobraniu u źródła od tych dochodów z wynagrodzenia (薪資所得的扣繳憑單影本).
 

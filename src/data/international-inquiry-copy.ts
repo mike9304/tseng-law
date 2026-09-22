@@ -1062,7 +1062,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Konsultacja odbywa się wyłącznie w czterech językach: angielskim, chińskim (中文), japońskim i koreańskim.',
     methodConfirmationNotice:
-      'Jeśli nie można korzystać z żadnego z czterech języków, prosimy wybrać „Sposób komunikacji musi zostać potwierdzony”. Odpowiadamy, aby ustalić możliwy sposób komunikacji, jeśli taki sposób istnieje; nie świadczymy usług w innym języku i nie obiecujemy terminu odpowiedzi.',
+      'Jeśli nie posługują się Państwo żadnym z czterech języków, prosimy wybrać „Sposób komunikacji musi zostać potwierdzony”. Odpowiadamy, aby ustalić możliwy sposób komunikacji, jeśli taki sposób istnieje; nie świadczymy usług w innym języku i nie obiecujemy terminu odpowiedzi.',
     preparationNotice:
       'Można napisać streszczenie we własnym języku. Oryginalny tekst jest zapisywany tak, jak został napisany, i nie jest tłumaczony automatycznie.',
     heading: 'Wyślij wniosek o konsultację',
@@ -1080,7 +1080,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     originalLanguageLabel: 'Język, w którym Państwo piszą',
     originalLanguagePlaceholder:
       'Na przykład polski, angielski, chiński lub inny język',
-    preferredConsultationLanguageLabel: 'Język, którego Państwo sobie życzą na konsultację',
+    preferredConsultationLanguageLabel: 'Język, w którym Państwo chcą odbyć konsultację',
     originalTextLabel: 'Krótki opis sprawy (we własnym języku)',
     originalTextPlaceholder:
       'Prosimy podać, co się stało, jakiej pomocy potrzeba i termin, jeśli istnieje. Prosimy nie wpisywać numeru paszportu, numeru dokumentu ani danych rachunku.',
@@ -1103,7 +1103,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Japoński (日本語)',
       ko: 'Koreański (한국어)',
       'needs-method-confirmation':
-        'Żaden z czterech języków nie jest dostępny — sposób komunikacji musi zostać potwierdzony',
+        'Nie posługuję się żadnym z czterech języków — sposób komunikacji musi zostać potwierdzony',
     },
   },
   hi: {

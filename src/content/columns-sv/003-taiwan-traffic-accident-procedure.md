@@ -31,7 +31,7 @@ Artikel 185-4 i Taiwans strafflag (刑法) reglerar det straffrättsliga ansvare
 
 Trygga först den personliga säkerheten och varningssignalerna; om det finns skadade eller behov av räddning, ring 119 i Taiwan (ambulans och brand), och vid brott eller en akut säkerhetssituation 110 (polis) eller 112 från mobiltelefon. Gör också anmälan till polisen efter trafikolyckans omständigheter.
 
-När säkerheten är tryggad, ta översikts- och detaljfotografier för att registrera fordonens läge och skador, vägmarkeringar, signaler och väderförhållanden. Det bör inte utelämnas vittnens kontaktuppgifter, begäran om bevarande av CCTV-bilder (監視器影像) och färdskrivare (行車紀錄器), parternas, fordonets och försäkringens uppgifter samt journalen (病歷). Privata foton är nyttiga, men de ersätter inte det ingripande från polisen som krävs vid olycka med skada eller dödsfall.
+När säkerheten är tryggad, ta översikts- och detaljfotografier för att registrera fordonens läge och skador, vägmarkeringar, signaler och väderförhållanden. Vittnens kontaktuppgifter bör inte utelämnas, och inte heller en begäran om att övervakningsbilder (監視器影像) och färdskrivare (行車紀錄器) bevaras, eller parternas, fordonets och försäkringens uppgifter samt journalen (病歷). Privata foton är nyttiga, men de ersätter inte det ingripande från polisen som krävs vid olycka med skada eller dödsfall.
 
 Vad gäller polisens handlingar kan du på olycksplatsen få talongen för registrering av parterna i trafikolyckan (道路交通事故當事人登記聯單). Efter 7 dagar från olycksdagen kan skissen och fotona från platsen (現場圖 / 現場照片) begäras; efter 30 dagar från olycksdagen kan tabellen för preliminär analys av trafikolyckan (道路交通事故初步分析研判表) begäras. Utfärdandetidpunkt och ansökningsvillkor ska bekräftas på nytt hos den behöriga polismyndigheten.
 
@@ -47,7 +47,7 @@ Valet beror på avbrott i preskriptionen (時效中斷), kretsen av svarande, be
 
 ## Q4. Om det finns vårdslöshet på båda sidor, hur bedöms det straffrättsliga och civilrättsliga ansvaret?
 
-Straffrättsligt ansvar kan bara hållas när varje sidas åsidosättande av aktsamhetsplikten och orsakssambandet mellan detta åsidosättande och motpartens skador är erkända. Enbart det faktum att vårdslöshet har funnits på båda sidor ger inte automatiskt ansvar för vållande till kroppsskada.
+Straffrättsligt ansvar förutsätter att varje sidas åsidosättande av aktsamhetsplikten, och orsakssambandet mellan det åsidosättandet och motpartens skada, är styrkta. Enbart det faktum att vårdslöshet har funnits på båda sidor ger inte automatiskt ansvar för vållande till kroppsskada.
 
 På civilrättslig sida kan, enligt artikel 217 i civillagen, om den skadade har en vårdslöshet som bidragit till att orsaka eller förvärra skadan (與有過失), domstolen sätta ned eller befria från skadeståndet. Till exempel, om den erkända skadan i ny taiwanesisk dollar (新臺幣, TWD) är TWD 1.000.000 och den skadades vårdslöshet värderas till 50 %, kan beloppet sättas ned till TWD 500.000 före andra justeringar.
 
@@ -57,7 +57,7 @@ Sakkunnigutlåtandet (鑑定) eller tabellen för preliminär analys kan vara vi
 
 I förlikningshandlingen (和解書) bör olyckans datum, plats och parter individualiseras, och belopp och tidpunkt för betalning, behandlingen av försäkringsersättningar, de krav som omfattas och de som förbehålls, dokumenteras. Även den framtida behandlingen, skador som upptäcks senare, överlämnandet av handlingar såsom läkarintyg (診斷證明書) och förhållandet mellan betalning och återkallelse av angivelsen ska fastställas klart.
 
-Förlikningen (和解) i artikel 736 i civillagen är ett avtal där parterna ömsesidigt efterger för att avsluta en tvist eller undvika den. Enligt artikel 737 i civillagen bedöms den omfattning i vilken rättigheterna upphör också endast inom gränserna för det som har uppgivits i förlikningshandlingen. Man ska därför inte, utan att pröva texten, påstå att alla framtida krav försvinner.
+Förlikningen (和解) i artikel 736 i civillagen är ett avtal där parterna gör ömsesidiga eftergifter för att avsluta en tvist eller undvika den. Enligt artikel 737 i civillagen bedöms den omfattning i vilken rättigheterna upphör också endast inom gränserna för det som har uppgivits i förlikningshandlingen. Man ska därför inte, utan att pröva texten, påstå att alla framtida krav försvinner.
 
 Om det är ett brott som åtalas efter angivelse kan, enligt artikel 238 i rättegångsbalken i brottmål, angivelsen återkallas fram till före avslutandet av den muntliga förhandlingen i första instans, och när den återkallats kan den inte göras på nytt. Dock, vid ett brott som inte åtalas efter angivelse, upphör åtalet inte automatiskt genom en privat förlikning, och det faktum att man har förlikats förpliktar inte alltid att återkalla angivelsen.
 
@@ -85,7 +85,7 @@ Om det är ett brott som åtalas efter angivelse kan, enligt artikel 238 i rätt
 
 Tabellen för preliminär analys av trafikolyckan som polisen upprättar är en förhandsanalys grundad på handlingarna från platsen. Den är inte en dom, den binder inte domstolen och den fastställer inte vårdslöshetsandelen (過失比例). Eftersom de nödvändiga handlingarna och tvisteomfånget varierar beroende på olyckan, är denna tabell, lagstadgad sakkunnigbedömning och omprövning (覆議) varken ett automatiskt förfarande eller ett obligatoriskt steg.
 
-Enligt tillämpliga regler kan den legitimationsberättigade parten begära en sakkunnigbedömning av fordonsolycka (車輛行車事故鑑定); det organ som utreder ärendet kan vidarebefordra det och rättsväsendet kan förordna det. Partens begäran görs i allmänhet inom 6 månader från olycksdagen; i ärenden som redan är under utredning eller rättegång sker sakkunnigbedömningen genom förordnande av rättsväsendet och inte genom en ny direkt begäran.
+Enligt tillämpliga regler kan en behörig part begära en sakkunnigbedömning av fordonsolycka (車輛行車事故鑑定); det organ som utreder ärendet kan vidarebefordra det och rättsväsendet kan förordna det. Partens begäran görs i allmänhet inom 6 månader från olycksdagen; i ärenden som redan är under utredning eller rättegång sker sakkunnigbedömningen genom förordnande av rättsväsendet och inte genom en ny direkt begäran.
 
 Vid oenighet med sakkunnigutlåtandet kan omprövning begäras, men omprövningen begränsas till en enda gång. Sakkunnigutlåtandet och omprövningsutlåtandet är ett bevis eller en referenshandling, och domstolen bedömer självständigt hela akten, inbegripet utsagor, bilder och protokoll från platsen.
 
@@ -153,9 +153,9 @@ Om den fortgående funktionsstörningen bestrids på ett väsentligt sätt kan e
 
 När beräkningen görs som ett enda kapitalbelopp kan avdrag för mellanliggande ränta (中間利息扣除) komma i fråga. Hoffmann-kalkylatorn (霍夫曼) vid Justitieyuanen är bara ett beräkningsverktyg, inte en lagstadgad, obligatorisk metod, och den utlovar inte resultatet. Enligt artikel 193 i civillagen kan domstolen, på parts begäran, också förordna periodiska betalningar mot säkerhet.
 
-## Q13. Hur bedöms ersättningen för ideell skada (慰撫金) för icke-förmögenhetsskada?
+## Q13. Hur bedöms ersättningen för ideell skada (慰撫金)?
 
-Ersättningen för ideell skada för icke-förmögenhetsskada bedöms genom att ett lämpligt belopp fastställs när det finns en olaglig kränkning av kroppen eller hälsan, enligt artikel 195 i civillagen.
+Ersättningen för ideell skada (慰撫金) bedöms genom att ett lämpligt belopp fastställs när det finns en olaglig kränkning av kroppen eller hälsan, enligt artikel 195 i civillagen.
 
 Domstolen prövar omständigheterna i varje ärende genom att samlat bedöma innehållet i skador och behandling, de fortgående verkningarna, lidandet och återverkan på livet, ålder och ställning, de socioekonomiska omständigheterna och parternas bevis. Det är därför svårt att förutse utfallet enbart från en typiserad ram.
 
@@ -239,7 +239,7 @@ I publicerad praxis förekommer vid vållande till kroppsskada straff om omkring
 
 ​
 
-Om det omvandlas till böter (易科罰金) fastställer artikel 41, 1:a stycket, i strafflagen omvandlingen till TWD 1.000, TWD 2.000 eller TWD 3.000 per 1 dag; beräknat till TWD 1.000 per 1 dag motsvarar ett straff om 3 månader 3 × 30 × TWD 1.000 = TWD 90.000.
+Om det omvandlas till böter (易科罰金) fastställer artikel 41, 1:a stycket, i strafflagen omvandlingen till TWD 1.000, TWD 2.000 eller TWD 3.000 per dag; beräknat till TWD 1.000 per dag motsvarar ett straff om 3 månader 3 × 30 × TWD 1.000 = TWD 90.000.
 
 ​
 

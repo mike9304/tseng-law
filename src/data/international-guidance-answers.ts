@@ -597,7 +597,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Den här sidan visar profiler för Hoverings advokater, operativ ledning och anknuten revisionsbyrå. Advokat Wei Tseng (曾雋崴) är behörig i Taiwan och är byråns ledande advokat; hon arbetar med klienter från Korea och Japan samt andra internationella klienter. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
+        'Den här sidan visar profiler för Hoverings advokater, operativ ledning för Korea och anknuten revisionsbyrå. Advokat Wei Tseng (曾雋崴) är behörig i Taiwan och är byråns ledande advokat; hon arbetar med klienter från Korea och Japan samt andra internationella klienter. Rådgivningen sker endast på engelska, kinesiska, japanska och koreanska.',
       sources: ['/sv/about', '/sv/contact'],
     },
     pricing: {

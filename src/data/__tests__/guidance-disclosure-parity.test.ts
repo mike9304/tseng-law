@@ -452,7 +452,7 @@ const ELEMENTS = {
     nl: /vervangt de consultatie niet/,
     pl: /nie jest konsultacją/,
     hi: /परामर्श चरण/,
-    sv: /rådgivningssteget/,
+    sv: /ersätter inte rådgivningen/,
     da: /selve rådgivningen/,
     nb: /rådgivningsmøte/,
     fi: /neuvontavaihe/,

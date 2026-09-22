@@ -37,7 +37,7 @@ När bolagets förberedelsekonto (公司籌備處帳戶) senare öppnas hos bank
 
 En anställd vid en taiwanesisk bank har beskrivit läget så här.
 
-Många utlänningar försvinner på senare tid efter kontoöppningen, så att kontoöppning hanteras allt striktare.
+På senare tid försvinner många utlänningar efter kontoöppningen, så att kontoöppning hanteras allt striktare.
 
 I den tidigare texten om grunderna beskrevs kontoöppningen som det svåraste steget, och det stämmer med byråns erfarenhet.
 
@@ -75,7 +75,7 @@ Immigrationsmyndigheten (移民署) är dock mycket välbesökt; det är därfö
 
 Ekonomiministeriets prövningskommitté granskar visst investerarens bakgrund.
 
-Prövningen tar dock sikte på om investeringsplanen är verklig, inte på att utbildningen ska matcha branschen exakt.
+Prövningen är dock inte överdrivet sträng.
 
 Du kan nämna all slags yrkeserfarenhet, även extrajobb.
 
@@ -87,7 +87,7 @@ På den punkten bör du gå igenom saken grundligt med en advokat i Taiwan.
 
 **4. Vilka punkter ska iakttas när bolagets registreringsadress (till exempel en restauranglokal) hyrs?**
 
-Bolagsbildningen tar omkring **3 månader**, och erhållandet av arbetstillstånd (工作許可) och uppehållskort omkring **1 månad**,
+Bolagsbildningen tar omkring **3 månader**, och erhållandet av arbetstillstånd (工作許可) och uppehållskort tar ytterligare omkring **1 månad**,
 
 så du bör sätta avtalets startdatum så sent som möjligt.
 
@@ -115,7 +115,7 @@ T.ex. om verksamhetsgrenen är restaurang och man avser att hyra en kontorslokal
 
 Som redan angetts granskar banken hyresavtalet och inspekterar bolagsadressen på plats.
 
-Dessutom kräver stadsförvaltningen (市政府) vid den slutliga bolagsregistreringen att den registrerade adressen ligger i ett område där restaurangdrift är tillåten;
+Dessutom kräver stadsförvaltningen (市政府) vid den slutliga bolagsregistreringen att den registrerade adressen ligger i ett område där restaurangdrift är tillåten.
 
 Om det är en kontorslokal är bolagsregistrering (公司登記) då inte möjlig.
 

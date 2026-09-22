@@ -53,7 +53,7 @@ inte betalar lön (工資) i tid,
 
 inte betalar övertidsersättning (加班費),
 
-eller inte ansluter arbetstagaren till den taiwanesiska arbetstagarförsäkringen (勞保) eller sjukförsäkringen (健保).
+eller inte ansluter arbetstagaren till Taiwans arbetstagarförsäkring (勞保) eller Taiwans sjukförsäkring (健保).
 
 I sådana fall måste arbetsgivaren betala avgångsvederlag till arbetstagaren även om arbetstagaren avslutar arbetsavtalet på vanligt sätt.
 
@@ -73,11 +73,11 @@ Arbetstagaren måste alltså hålla reda på fristen väl.
 
 Med andra ord,
 
-Taiwans rätt ger, oavsett om felet ligger på företagets sida
+Taiwans rätt ger, beroende på om felet ligger hos arbetsgivaren
 
-eller på den anställdas sida,
+eller hos den anställda,
 
-den ena parten rätt att slippa betala avgångsvederlag och den andra rätt att kräva det.
+endera parten rätt att slippa betala avgångsvederlag eller att kräva det.
 
 Ibland, när det finns fel på båda sidor i arbetsförhållandet,
 

@@ -97,7 +97,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Sidans språk och rådgivningsspråket är inte samma sak',
           paragraphs: [
             'Den här sidan är skriven på svenska, men rådgivningen med en advokat sker endast på de fyra rådgivningsspråken engelska, kinesiska (中文), japanska och koreanska. Att läsa vägledningen på svenska betyder inte att samtalet med advokaten sker på svenska.',
-            'Vi lovar inte en tolk, en svarstid eller en tid via den här sidan. Om du inte kan använda något av de fyra språken förklarar sidan ”Kontakt” hur vi undersöker en möjlig kommunikationsväg.',
+            'Vi lovar varken en tolk, en svarstid eller en bokad tid via den här sidan. Om du inte kan använda något av de fyra språken förklarar sidan ”Kontakt” hur vi undersöker en möjlig kommunikationsväg.',
           ],
         },
         {
@@ -155,7 +155,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Arbetsrättsliga tvister',
           paragraphs: [
-            'Det här området omfattar upphörande av anställning, ersättning vid arbetsgivarens uppsägning enligt Taiwans rätt (資遣費; inte detsamma som avgångsvederlag eller liknande ersättningar enligt andra länders rätt), lön och tvister om anställningsavtalet (勞動契約), både på arbetstagar- och arbetsgivarsidan. Vid prövningen skiljer vi uppsägningsgrunden från frågor om underrättelse, betalning och frister.',
+            'Det här området omfattar upphörande av anställning, ersättning vid arbetsgivarens uppsägning enligt Taiwans rätt (資遣費; inte detsamma som avgångsvederlag eller uppsägningsskydd enligt andra länders rätt), lön och tvister om anställningsavtalet (勞動契約), både på arbetstagar- och arbetsgivarsidan. Vid prövningen skiljer vi uppsägningsgrunden från frågor om underrättelse, betalning och frister.',
             'Anställningsavtal, arbetsreglemente (工作規則), lönebesked och parternas skriftväxling är oftast de avgörande handlingarna. Om du fortfarande har dem, nämn det i sammanfattningen.',
           ],
         },
@@ -217,7 +217,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ADVOKATER',
       title: 'Hoverings internationella team',
-      description: 'Profiler för Hoverings advokater, operativ ledning och anknuten revisionsbyrå.',
+      description: 'Profiler för Hoverings advokater, operativ ledning för Korea och anknuten revisionsbyrå.',
       intro: '',
       sections: [],
     },
@@ -244,7 +244,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Rådgivningen kan vara mot betalning',
+          heading: 'Rådgivningen kan vara avgiftsbelagd',
           paragraphs: [
             'Rådgivningen med en advokat kan ske mot betalning. Den här sidan säger inte att det första samtalet är kostnadsfritt, och ingen del av den får läsas på det sättet.',
             'Sker rådgivningen mot betalning får du besked om belopp och betalningssätt innan den äger rum.',
@@ -365,7 +365,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
       description:
         'Vad kontaktformuläret i den här svenska delen samlar in, hur originaltexten behandlas och hur du når oss om dina uppgifter.',
       intro:
-        'Den här delen gäller endast kontaktformuläret på de svenska vägledningssidorna. Den beskriver hur uppgifter behandlas och utgör inte ett tekniskt åtagande.',
+        'Den här delen gäller endast kontaktformuläret på de svenska vägledningssidorna. Den beskriver hur uppgifter behandlas och är inte en teknisk utfästelse.',
       sections: [
         {
           heading: 'Vilka uppgifter som samlas in',
@@ -422,7 +422,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Lagringsplats och leverantörer',
           paragraphs: [
             'Den här webbplatsen drivs hos Vercel, och det du skickar lagras i icke-offentlig objektlagring hos den tjänsten. E-post skickas via den e-posttjänst byrån använder.',
-            'Enskilda leverantörers servrar kan stå utanför Taiwan, så att dina uppgifter kan lagras och behandlas där. När ändamålet med lagringen är uppfyllt raderas uppgifterna utan dröjsmål; uppgifter som måste bevaras enligt tillämpliga regler ligger kvar under den tiden. Frågor om personuppgifter tas emot på wei@hoveringlaw.com.tw.',
+            'Enskilda leverantörers servrar kan stå utanför Taiwan, så att dina uppgifter kan lagras och behandlas där. När ändamålet med lagringen är uppfyllt raderas uppgifterna utan dröjsmål; uppgifter som måste bevaras enligt tillämpliga regler ligger kvar under den tiden. Frågor om personuppgifter skickas till wei@hoveringlaw.com.tw.',
           ],
         },
       ],
@@ -474,10 +474,10 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
         'Byrån publicerar artiklar om vanliga frågor i Taiwans rätt. Artiklar som finns på svenska står på den här sidan; därtill finns fyra länkar som var och en öppnar artikellistan för ett originalspråk.',
       sections: [
         {
-          heading: 'Fyra listor efter språk',
+          heading: 'Fyra listor på originalspråk',
           paragraphs: [
             'Den här delen innehåller fyra länkar: artikellistan på koreanska, på kinesiska, på engelska och på japanska. Varje länk anger listans språk, så att du i förväg vet på vilket språk innehållet öppnas.',
-            'Dessa fyra listor är listor efter artiklarnas originalspråk, inte översättningslistor. Artiklar som finns på svenska står särskilt på den här sidan.',
+            'Dessa fyra listor följer artiklarnas originalspråk; de är inte översättningar. Artiklar som finns på svenska står särskilt på den här sidan.',
           ],
         },
         {
@@ -491,7 +491,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Hur långt en artikel kan tjäna som orientering',
           paragraphs: [
             'Artiklar är allmän information vid publiceringstidpunkten. Regler och deras tillämpning kan ändras, och en artikel täcker inte alla omständigheter i ditt ärende.',
-            'Grunda därför inte ett beslut i ett verkligt ärende enbart på en artikel. Använd den för överblick och gå igenom dina handlingar särskilt med en advokat; den här sidan är inte rådgivningssteget.',
+            'Grunda därför inte ett beslut i ett verkligt ärende enbart på en artikel. Använd den för överblick och gå igenom dina handlingar särskilt med en advokat; den här sidan ersätter inte rådgivningen.',
           ],
         },
       ],

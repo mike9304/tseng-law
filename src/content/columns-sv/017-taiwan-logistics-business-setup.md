@@ -50,7 +50,7 @@ För vanlig motorfordonstransport av gods gäller i princip lägsta kapital 25.0
 
 ### Kapital- och fordonskrav samt begränsade undantag
 
-När ett vanligt bolag på nytt ska bedriva motorfordonstransport av gods gäller i princip lägsta kapital 25.000.000 TWD och minst 20 nya fordon. För den som enbart ägnar sig åt flytt gäller ett eget mått med lägsta kapital 10.000.000 TWD och minst 8 nya fordon, och för den som driver i Kinmen eller i Lienchiang (Matsu) lägsta kapital 10.000.000 TWD och minst 5 nya fordon. Aktören som använder måttet för Kinmen eller Lienchiang (Matsu) underkastas restriktion av driftsomfånget enligt det godkända området.
+När ett vanligt bolag ska börja bedriva motorfordonstransport av gods gäller i princip lägsta kapital 25.000.000 TWD och minst 20 nya fordon. För den som enbart ägnar sig åt flytt gäller ett eget mått med lägsta kapital 10.000.000 TWD och minst 8 nya fordon, och för den som driver i Kinmen eller i Lienchiang (Matsu) lägsta kapital 10.000.000 TWD och minst 5 nya fordon. Aktören som använder måttet för Kinmen eller Lienchiang (Matsu) omfattas av en geografisk begränsning till det godkända området.
 
 Transport med liten lastbil (小貨車) som bedrivs av fysisk person är ett smalt system, skilt från ordinär bolagsbildning. Bland kraven ingår att sökanden har hushållsregistrering i det behöriga distriktet, innehar yrkeskörkort för litet fordon och använder 1 egen liten lastbil med fordonsålder högst 2 år. Detta är inte den vanliga väg som en utländsk juridisk person använder för att gå in i motorfordonstransport av gods.
 
@@ -84,7 +84,7 @@ Ett förvärv ger inte automatiskt driftlicensen. Vid aktieförvärv förvärvas
 
 ### Skillnad mellan aktieförvärv och övertagande av verksamhet eller tillgångar
 
-Vid aktieförvärv blir köparen delägare, medan målbolaget fortsätter att bestå som samma juridiska person. Det belopp som sänds för aktieförvärvet är aktieöverlåtelsepriset, inte kapital. Beroende på ärendet handläggs ekonomiministeriets förhandsgodkännande, branschgodkännande enligt väglagens artikel 35, fastställelse av investeringsbelopp (投資額審定) efter överföring, bolagsändring av delägare, styrelseledamöter och ansvarig, samt ändringsansökan hos den behöriga vägmyndigheten, var för sig.
+Vid aktieförvärv blir köparen delägare, medan målbolaget fortsätter att bestå som samma juridiska person. Det belopp som sänds för aktieförvärvet är aktieöverlåtelsepriset, inte kapital. Beroende på ärendet handläggs ekonomiministeriets förhandsgodkännande, branschgodkännande enligt väglagens artikel 35, verifiering av det överförda investeringsbeloppet (投資額審定), bolagsändring av delägare, styrelseledamöter och ansvarig, samt ändringsansökan hos den behöriga vägmyndigheten, var för sig.
 
 Omvänt, även om en annan juridisk person tar över verksamhet eller tillgångar, övergår överlåtarens driftlicens inte av sig själv till förvärvaren. Fordon, yrkesregistreringsskyltar, parkeringsanläggningar, avtal, arbetstagare, försäkringar och driftstillstånd ska kontrolleras var för sig, och den förberedelse, driftlicens och övriga godkännanden som förvärvaren behöver ska ordnas innan transaktionen genomförs.
 

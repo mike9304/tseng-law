@@ -28,8 +28,8 @@ Vid prövningen är det viktigt att inte blanda de följande 4 frågorna.
 
 1. Om avtalet i sig uppfyller de lagstadgade kraven i artikel 15-1
 2. Om den avtalade perioden och arbetstagarens börda ligger inom skälig ram
-3. Vem upphörandeskälet för anställningsavtalet kan läggas till last
-4. Hur uppsägningstid vid avgång och återbetalningens omfång bedöms
+3. Till vem upphörandeskälet för anställningsavtalet kan läggas till last
+4. Hur avgångsbeskedet och återbetalningens omfång ska bedömas
 
 Även om dessa 4 frågor står tillsammans i samma avtal är tillämpligt stadgande och nödvändig bevisning skilda. Det ska därför prövas var för sig om avtalet är giltigt, när avgångsförklaringen får verkan, om det finns ansvar att återbetala förskottsbetalning (預付性給付) eller utbildningskostnad, och om en separat skada faktiskt har uppstått.
 
@@ -126,7 +126,7 @@ Uppsägning, överenskommet upphörande och påstående om brott mot arbetsvillk
 
 Bedömningen av upphörandeskäl påverkar också direkt återbetalningens omfång. Om stycke 4 tillämpas kan arbetstagaren inte krävas på ansvar för avtalsbrott mot avtalet om minsta tjänstgöringstid eller återbetalning av utbildningskostnad, så tillräknandet ska bekräftas innan formeln tillämpas. Om det också finns förskottsbetalning och andra separata krav prövas varje kravs rättsliga karaktär och grund.
 
-## 8. Uppsägningstid vid avgång är en skild fråga
+## 8. Avgångsbeskedet är en skild fråga
 
 Avtalet om minsta tjänstgöringstid är inte något som fysiskt eller rättsligt hindrar arbetstagaren från att säga upp sig. Avgångsförklaring och uppsägningstid (預告期間) är frågan om när anställningsförhållandet upphör; giltigheten av avtalet om minsta tjänstgöringstid och ansvaret att återbetala kostnader är frågan om det finns förmögenhetsansvar till följd av upphörandet.
 
@@ -189,6 +189,6 @@ När materialet ordnas i tidsföljd bör avtalets ingångsdatum, utbildningens s
 
 ---
 
-Den här texten är utbildningsmaterial som allmänt förklarar avtalet om minsta tjänstgöringstid i Taiwan, återbetalning av utbildningskostnad och förskottsbetalning samt uppsägningstid vid avgång; det är inte juridisk rådgivning för ett konkret arbetsärende. Avtalets giltighet och ansvarsomfånget kan variera beroende på avtals typ och lydelse, faktisk utbildning och kostnad, ersättningens syfte och underrättelse, tjänstgöringstid, upphörandeskäl och bevisning. Innan avgångsförklaring, löneavdrag, återbetalningsöverenskommelse eller tvistreaktion, bekräfta de senaste officiella källorna och de enskilda omständigheterna.
+Den här texten är utbildningsmaterial som allmänt förklarar avtalet om minsta tjänstgöringstid i Taiwan, återbetalning av utbildningskostnad och förskottsbetalning samt avgångsbeskedet; det är inte juridisk rådgivning för ett konkret arbetsärende. Avtalets giltighet och ansvarsomfånget kan variera beroende på avtals typ och lydelse, faktisk utbildning och kostnad, ersättningens syfte och underrättelse, tjänstgöringstid, upphörandeskäl och bevisning. Innan avgångsförklaring, löneavdrag, återbetalningsöverenskommelse eller tvistreaktion, bekräfta de senaste officiella källorna och de enskilda omständigheterna.
 
 **Advokat Wei Tseng (曾雋崴)**

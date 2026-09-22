@@ -604,7 +604,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'VÅRT TEAM',
     title: 'Hoverings internationella team',
     description:
-      'Profiler för Hoverings advokater, operativ ledning och anknuten revisionsbyrå.',
+      'Profiler för Hoverings advokater, operativ ledning för Korea och anknuten revisionsbyrå.',
     representativeTitle: 'Ledande advokat',
     teamTitle: 'Advokater och medarbetare',
     partnerTitle: 'Anknuten revisionsbyrå',
@@ -623,7 +623,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Ledande advokat i Taiwan (Managing Attorney)',
       'chang-rongxuan': 'Advokat i Taiwan (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
+      'chang-fangyu': 'Juristassistent',
       'son-jungmin': 'Operativ ledning Korea (Korea Operations Manager)',
       'huang-shengping': 'Anknuten revisor (Partner CPA)',
     },
@@ -1604,7 +1604,7 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Taiwan investment counsel': 'Juridisk rådgivning för investering i Taiwan',
     'Civil litigation and damages': 'Civilmål och skadestånd',
     'Trademark and patent filings': 'Varumärkes- och patentansökningar',
-    'Visa and residency': 'Visum och vistelse',
+    'Visa and residency': 'Visum och uppehållstillstånd',
     'Family and labor disputes': 'Familje- och arbetstvister',
   },
   da: {
@@ -2892,7 +2892,7 @@ export const guidanceTeamBios: Record<
         'Hon företrädde en koreansk student i ett skadeståndsanspråk efter en skada på ett gym och fick i första instans en dom på 1,57 miljoner TWD.',
       ],
       education: [
-        'Master (M.S.), Institute of Finance, National Taiwan University',
+        'Masterexamen (M.S.) vid Institute of Finance, National Taiwan University',
         'Kandidatexamen (B.A.) med dubbla huvudämnen i juridik och finans, National Chengchi University',
         'Utbytesstudent vid Kobe University och Waseda University',
       ],
@@ -2915,13 +2915,13 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal med lång erfarenhet som senior paralegal vid flera byråer, ansvarig för processstöd, bolagsrätt och utländska investeringar.',
+        'Juristassistent med lång erfarenhet som senior juristassistent vid flera byråer, ansvarig för processstöd, bolagsrätt och utländska investeringar.',
         'Stöd vid förfaranden, bolagsbildning, tillstånd för utländska investeringar, licensansökningar och kontakterna mellan Korea och Taiwan.',
       ],
       education: ['Juridisk kandidatexamen (LL.B.), Tunghai University'],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Senior juristassistent, Boyin Law Firm',
+        'Senior juristassistent, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
@@ -2930,7 +2930,7 @@ export const guidanceTeamBios: Record<
         'Stödjer samarbetet mellan verksamhetsområdena genom dokumentsystem och arbetsflöden, med bakgrund i datavetenskap.',
       ],
       education: ['Kandidatexamen (B.S.) i datavetenskap, National Cheng Kung University'],
-      experience: ['Område Korea-verksamhet, Hovering International Law Firm'],
+      experience: ['Ansvarig för Korea-verksamheten, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [

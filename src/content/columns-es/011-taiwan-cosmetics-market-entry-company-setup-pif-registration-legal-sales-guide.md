@@ -13,7 +13,7 @@ faq:
   - q: "¿Qué es el PIF y es el mismo procedimiento que el registro de producto ante la TFDA?"
     a: "No es el mismo procedimiento. El registro de producto (產品登錄) es un trámite aparte que se realiza en la plataforma de registro de productos cosméticos de la TFDA (衛生福利部食品藥物管理署). El PIF es un expediente que reúne datos sobre calidad, seguridad, composición, función reivindicada, método de fabricación, resultados de ensayo y evaluación de seguridad, entre otros, y que el fabricante o importador de cosméticos elabora, actualiza y custodia; el PIF mismo no es un documento que deba presentarse de antemano a la TFDA. Desde el 1 de julio de 2026, en principio todos los cosméticos quedan sujetos al régimen del PIF, con la excepción del jabón sólido artesanal fabricado en un lugar de producción exento de registro de fábrica (工廠登記)."
   - q: "¿Qué expresiones deben vigilarse en la publicidad de cosméticos en Taiwán?"
-    a: "La publicidad se valora no solo por la frase, sino por el conjunto de la presentación, incluido el nombre del producto, el texto, la imagen, el símbolo y el sonido. Están prohibidas las expresiones falsas o exageradas y la reivindicación de eficacia médica, y debe prestarse especial atención a expresiones médicas como tratar el acné, antiinflamatorio o bactericida. La multa administrativa es de 40.000 a 200.000 dólares de Taiwán (新臺幣, TWD) por publicidad falsa o exagerada, y de TWD 600.000 a TWD 5.000.000 por reivindicación de eficacia médica. Las publicaciones de influenciadores y de otros también deben examinarse con el mismo criterio si en sustancia son publicidad."
+    a: "La publicidad se valora no solo por la frase, sino por el conjunto de la presentación, incluido el nombre del producto, el texto, la imagen, el símbolo y el sonido. Están prohibidas las expresiones falsas o exageradas y la reivindicación de eficacia médica, y debe prestarse especial atención a expresiones médicas como tratar el acné, tener efecto antiinflamatorio o ejercer una acción bactericida. La multa administrativa es de 40.000 a 200.000 dólares de Taiwán (新臺幣, TWD) por publicidad falsa o exagerada, y de TWD 600.000 a TWD 5.000.000 por reivindicación de eficacia médica. Las publicaciones de influenciadores y de otros también deben examinarse con el mismo criterio si en sustancia son publicidad."
 ---
 
 # Entrada en el mercado de cosméticos de Taiwán: elección del sujeto importador, registro de producto, elaboración y custodia del PIF y regulación de la publicidad
@@ -84,7 +84,7 @@ La retirada o la destrucción (銷毀) no es una medida que acompañe de forma a
 
 ## 3. Regulación del etiquetado, la promoción y la publicidad
 
-La publicidad se valora no solo por la frase, sino por el conjunto de la presentación, incluido el nombre del producto, el texto, la imagen, el símbolo y el sonido. Están prohibidas las expresiones falsas o exageradas y la reivindicación de eficacia médica, y debe prestarse especial atención a expresiones médicas como tratar el acné, antiinflamatorio o bactericida. La multa administrativa es de TWD 40.000 a TWD 200.000 por publicidad falsa o exagerada, y de TWD 600.000 a TWD 5.000.000 por reivindicación de eficacia médica. Las publicaciones de influenciadores y de otros también deben examinarse con el mismo criterio si en sustancia son publicidad.
+La publicidad se valora no solo por la frase, sino por el conjunto de la presentación, incluido el nombre del producto, el texto, la imagen, el símbolo y el sonido. Están prohibidas las expresiones falsas o exageradas y la reivindicación de eficacia médica, y debe prestarse especial atención a expresiones médicas como tratar el acné, tener efecto antiinflamatorio o ejercer una acción bactericida. La multa administrativa es de TWD 40.000 a TWD 200.000 por publicidad falsa o exagerada, y de TWD 600.000 a TWD 5.000.000 por reivindicación de eficacia médica. Las publicaciones de influenciadores y de otros también deben examinarse con el mismo criterio si en sustancia son publicidad.
 
 ### Se valora por el conjunto de la presentación, no por cada palabra
 
@@ -109,7 +109,7 @@ La preparación de la venta en Taiwán, si se comprueba en el orden siguiente, p
 3. Concluir el registro de producto antes de suministrar, vender, regalar, exhibir en público o poner el producto a disposición del consumidor para prueba.
 4. Elaborar el PIF por producto, actualizar los cambios y custodiarlo conforme al período y al lugar legales.
 5. Revisar la etiqueta, la página de venta, la publicidad y las publicaciones de colaboración con el criterio del conjunto de la presentación.
-6. Operar el procedimiento para atender inspecciones y requerimientos de corrección, reclamaciones, información de seguridad y el seguimiento necesario.
+6. Mantener procedimientos para atender inspecciones y requerimientos de corrección, reclamaciones, información de seguridad y el seguimiento necesario.
 
 La estructura básica de la sociedad y de la sucursal puede verse en [Fundamentos de la constitución de sociedades en Taiwán](/es/columns/taiwan-company-establishment-basics), el ámbito de apoyo relacionado en [Asuntos que atendemos](/es/services), y la información de la abogada responsable en [Equipo internacional de Hovering](/es/lawyers).
 

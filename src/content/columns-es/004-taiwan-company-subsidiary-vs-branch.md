@@ -50,7 +50,7 @@ Si planea explotar el negocio en Taiwán junto con un tercero, no basta con fija
 
 En el modo sucursal, el sujeto jurídico último de la gestión de la sucursal es la sociedad extranjera. La sede necesita fijar de forma concreta el alcance de los contratos que el responsable en Taiwán puede celebrar, las facultades de operación bancaria, las facultades de personal, el sistema de informes, la aprobación del presupuesto y el control interno. A la inversa, si elige la filial, deben distinguirse y documentarse los estatutos y la composición de órganos, el reparto de facultades entre accionistas y los contratos de servicios, préstamo y licencia entre la filial y la matriz. Lo importante no es la denominación, sino si las facultades reales y el flujo de las operaciones se ajustan a la estructura jurídica.
 
-Las autorizaciones tampoco pueden concluirse solo a partir de la personalidad jurídica. Ello se debe a que las normas sectoriales pueden fijar por separado el sujeto solicitante, el capital mínimo, el personal profesional, el local, la revisión de la inversión extranjera o la cualificación del responsable. El hecho de que la filial o la sucursal puedan registrarse no es lo mismo que el hecho de que pueda explotarse un negocio regulado determinado. Las actividades previstas deben desglosarse y debe confirmarse primero la parte contractual y el titular de cada autorización.
+Las autorizaciones tampoco pueden determinarse solo a partir de la personalidad jurídica. Ello se debe a que las normas sectoriales pueden fijar por separado el sujeto solicitante, el capital mínimo, el personal profesional, el local, la revisión de la inversión extranjera o la cualificación del responsable. El hecho de que la filial o la sucursal puedan registrarse no es lo mismo que el hecho de que pueda explotarse un negocio regulado determinado. Las actividades previstas deben desglosarse y debe confirmarse primero la parte contractual y el titular de cada autorización.
 
 ## 2. Fiscalidad y envío de beneficios
 
@@ -172,7 +172,7 @@ La elección final es más segura si la examinan especialistas de Taiwán y del 
 ## Fuentes oficiales
 
 - [Base de datos normativa del Ministerio de Justicia de Taiwán — Ley de Sociedades](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
-- [Base de datos normativa del Ministerio de Justicia de Taiwán — artículo 10 de la Ley del Impuesto sobre las Ventas](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
+- [Base de datos normativa del Ministerio de Justicia de Taiwán — artículo 3 de las Normas sobre los tipos de retención de las distintas rentas (各類所得扣繳率標準), dividendos pagados a no residentes (la fuente lo cita como artículo 10)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Base de datos normativa del Ministerio de Justicia de Taiwán — Ley del Impuesto sobre la Renta](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [Ministerio de Finanzas de Taiwán — guía de retención sobre dividendos de accionistas en el exterior](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [Ministerio de Finanzas de Taiwán — interpretación relativa a los beneficios de la sucursal de una sociedad extranjera](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)

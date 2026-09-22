@@ -2250,7 +2250,7 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Fundación de Asistencia Jurídica, sede de Taichung (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {

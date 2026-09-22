@@ -175,7 +175,7 @@ La obligación de contratar según el artículo 6 de la Ley del seguro obligator
 
 En un accidente de un solo vehículo, el conductor de ese vehículo no es, por lo general, destinatario de las prestaciones del seguro obligatorio de ese vehículo. Sin embargo, en un accidente en el que intervienen varios vehículos, hay casos en que el conductor puede reclamar prestaciones al asegurador obligatorio de otro vehículo implicado.
 
-El baremo de prestaciones (強制汽車責任保險給付標準) modificado el 29 de mayo de 2026 se aplica a los accidentes ocurridos a partir del 1 de julio de 2026. El límite de los gastos médicos razonables y necesarios por lesiones es TWD 200.000 en nuevo dólar taiwanés; la prestación por discapacidad (失能) oscila entre TWD 80.000 y TWD 3.000.000 según 15 grados legales; la prestación por muerte es TWD 3.000.000, y el máximo conjunto de muerte, discapacidad y gastos médicos por 1 víctima y 1 accidente es TWD 3.200.000. A los accidentes anteriores puede aplicárseles el baremo precedente.
+El baremo de prestaciones (強制汽車責任保險給付標準) modificado el 29 de mayo de 2026 se aplica a los accidentes ocurridos a partir del 1 de julio de 2026. El límite de los gastos médicos razonables y necesarios por lesiones es TWD 200.000 en nuevo dólar taiwanés; la prestación por discapacidad (失能) oscila entre TWD 80.000 y TWD 3.000.000 según 15 grados legales; la prestación por muerte es TWD 3.000.000, y el máximo conjunto de muerte, discapacidad y gastos médicos por cada 1 víctima y cada 1 accidente es TWD 3.200.000. A los accidentes anteriores puede aplicárseles el baremo precedente.
 
 El seguro de responsabilidad civil frente a terceros (第三人責任險), el seguro de lesiones del conductor (駕駛人傷害險) y el seguro de daños del vehículo propio (車體損失險) son productos voluntarios de carácter contractual. La cobertura real varía según el asegurado, el límite, la franquicia (自負額), las exclusiones, la culpa y las demás condiciones de la póliza, de modo que la póliza y las condiciones deben comprobarse caso por caso.
 
@@ -239,7 +239,7 @@ En algunas sentencias por lesiones por imprudencia se ha impuesto una pena de un
 
 ​
 
-Si se conmuta por multa (易科罰金), el artículo 41, apartado 1, del Código Penal fija la conversión en TWD 1.000, TWD 2.000 o TWD 3.000 por día; calculado a TWD 1.000 por día, una pena de 3 meses equivale a 3 × 30 × TWD 1.000 = TWD 90.000.
+Si la pena se convierte en multa (易科罰金), el artículo 41, apartado 1, del Código Penal fija la conversión en TWD 1.000, TWD 2.000 o TWD 3.000 por día; calculado a TWD 1.000 por día, una pena de 3 meses equivale a 3 × 30 × TWD 1.000 = TWD 90.000.
 
 ​
 

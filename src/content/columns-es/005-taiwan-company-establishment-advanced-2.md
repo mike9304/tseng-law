@@ -51,7 +51,7 @@ Si la remisión se hace desde una cuenta bancaria de Corea, no es necesario adju
 
 **3. Tras ingresarse el capital en la cuenta preparatoria de la sociedad, ¿cuándo puede convertirse en cuenta ordinaria (正式公司帳戶)?**
 
-En general, una vez recibidos los documentos de registro de la persona jurídica,
+En general, primero deben haberse expedido los documentos de registro de la persona jurídica.
 
 el responsable (負責人) puede acudir al banco y convertir la cuenta preparatoria de la sociedad en cuenta ordinaria.
 

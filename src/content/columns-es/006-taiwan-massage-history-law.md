@@ -81,7 +81,7 @@ Por ejemplo, se pensó si la norma escrita que solo permitía a las personas con
 
 y se cuestionó si esa norma había contribuido realmente a proteger el empleo y la subsistencia de las personas con discapacidad visual.
 
-Al final, el Tribunal Constitucional (大法官) declaró inconstitucional (違憲) el precepto que solo permitía a las personas con discapacidad visual dedicarse al oficio de masaje.
+Al final, los grandes jueces (大法官) declararon inconstitucional (違憲) el precepto que solo permitía a las personas con discapacidad visual dedicarse al oficio de masaje.
 
 ​
 
@@ -113,7 +113,7 @@ y el legislador procura hallar una solución relativamente equilibrada para reso
 
 Hoy muchas personas eligen el masaje para aliviar el estrés,
 
-pero en ese proceso no dejan de producirse casos de acoso sexual (性騷擾) o de actos impúdicos (猥褻).
+pero en ese proceso no dejan de producirse casos de acoso sexual (性騷擾) o de tocamientos no consentidos (猥褻).
 
 Lo que en origen era solo recibir un masaje para aliviar el estrés
 

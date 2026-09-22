@@ -639,7 +639,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Matrimonio, familia y sucesiones',
           paragraphs: [
-            'Atendemos divorcio (離婚), liquidación de bienes, ejercicio y asunción de derechos y deberes respecto de hijos menores (未成年子女權利義務之行使或負擔), régimen de visitas (會面交往) y sucesiones (繼承), también cuando las partes o los bienes están en países distintos. Los asuntos de familia transfronterizos suelen exigir un examen adicional de documentos del registro de domicilio (戶籍), de la forma de los documentos y de su valor probatorio en Taiwán.',
+            'Atendemos divorcio (離婚), liquidación de bienes, ejercicio y asunción de derechos y deberes respecto de hijos menores (未成年子女權利義務之行使或負擔), régimen de visitas (會面交往) y sucesiones (繼承), también cuando las partes o los bienes están en países distintos. Los asuntos de familia transfronterizos suelen exigir un examen adicional de documentos del registro de hogar (戶籍), de la forma de los documentos y de su valor probatorio en Taiwán.',
             'Como los asuntos de familia suelen ir unidos a plazos y a varios trámites en paralelo, el resumen inicial debería indicar la relación entre las partes, el lugar de residencia actual y los procedimientos ya iniciados.',
           ],
         },

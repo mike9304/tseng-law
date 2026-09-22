@@ -204,7 +204,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     mapLinkLabel: 'Ver en el mapa',
     photoAlts: [
       'Sala de recepción de la oficina de Taipéi, Hovering International Law Firm',
-      'Despacho de abogados en la oficina de Taipéi, Hovering International Law Firm',
+      'Despacho de un abogado en la oficina de Taipéi, Hovering International Law Firm',
       'Sala de reuniones de la oficina de Taipéi, Hovering International Law Firm',
     ],
     officeTitles: {
@@ -1263,7 +1263,7 @@ export const guidanceFooterCopy: Record<GuidanceLocale, GuidanceFooterCopy> = {
     websiteLabel: 'Sitio web oficial',
     sitemapLabel: 'Mapa del sitio',
     copyEmailLabel: 'Copiar la dirección de correo',
-    emailCopiedMessage: 'Se copió la dirección de correo.',
+    emailCopiedMessage: 'Se ha copiado la dirección de correo.',
     officialConsultationEmailLabel: 'Correo oficial para consultas',
   },
   fr: {

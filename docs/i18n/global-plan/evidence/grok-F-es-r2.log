@@ -1,0 +1,108 @@
+# WO-F-es — Spanish fix lane, campaign round 2 (Grok 4.7), 2026-09-22
+Worktree: /Users/son7/Projects/tseng-law-fix-es-r2 (no git add/commit/push)
+Files touched: src/content/columns-es/002, 003, 004, 005, 006, 007, 008, 010, 011, 014, 015, 016, 017, 018;
+src/data/international-guidance-western.ts (es string only);
+src/data/international-guidance-offices.ts (es alt + es toast only);
+src/data/international-guidance-team.ts (es bio only);
+src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.es.discoveryNotice only);
+this log.
+No test file was edited. No pinned Spanish expectation had to change. "TWD 1.57M" stays byte-identical. The Legal Aid line keeps that English name in parentheses so GUIDANCE_BIO_PRESERVED_TERMS still matches.
+
+## Rows applied
+es-a 15/17 and es-b 22/23. No P3 rows in either review.
+
+es-a
+1  004 link label, URL unchanged: "artículo 3 de las Normas sobre los tipos de retención de las distintas rentas (各類所得扣繳率標準), dividendos pagados a no residentes". The digit 10 is kept as "(la fuente lo cita como artículo 10)" because the Korean source still says 영업세법 제10조. 004 numbers stayed sourceCount=93 targetCount=93.
+2  戶籍 "registro de domicilio" → "registro de hogar" in the pack, plus the sweep below.
+3  Taipei office alt: "Despacho de un abogado en la oficina de Taipéi" (a room, not a second firm).
+4  llms discovery notice: dropped the AI-only qualifier so the denial is posicionamiento, respaldo, recomendación y visibilidad garantizada.
+5  002 "declarar la liquidación anual" → "presentar la declaración anual" (FAQ, body, §5). Liquidación stays the word for 清算.
+6  易科罰金: "Si la pena se convierte en multa" (003) and "la conversión de la pena en multa" (008).
+7  006 大法官: "los grandes jueces (大法官) declararon". Tribunal Constitucional stays reserved for 憲法法庭.
+8  es bio: "Fundación de Asistencia Jurídica, sede de Taichung (Legal Aid Foundation, Taichung Branch)".
+9  Toast: "Se ha copiado la dirección de correo."
+11 005: the comma fragment is now its own sentence inside the same block. The next block ("el responsable puede acudir al banco…") is unchanged.
+12 008: "Si se trabaja en Taiwán," is now a full sentence in that block. The next block was not pulled in (see adaptations).
+13 003: "por cada 1 víctima y cada 1 accidente". The digits stay; Korean is 피해자 1명·사고 1건.
+15 006 猥褻: "tocamientos no consentidos".
+16 "centro de vida" → "el lugar donde concentran / se concentra / concentraba su vida" (see sweep).
+17 007: "Un pariente político u otro familiar del cónyuge no es deudor".
+
+es-b
+1  010 heading: "¿puede seguir discutiéndose la indemnización y su importe?"
+2  "En la práctica" for "in practice".
+3  011 checklist: "Mantener procedimientos para atender inspecciones…".
+4  Acne claims, FAQ and body: "tratar el acné, tener efecto antiinflamatorio o ejercer una acción bactericida".
+6  014: "la competencia profesional o técnica que el puesto exige".
+7  "esa sola expresión no debe determinar el resultado"; also the bare "concluir" sweep.
+8  015 公司登記: "al registrar la sociedad" and "antes de registrar la sociedad".
+9  016: "el progenitor que haya ejercido en último término los derechos…".
+10 Spouse stands outside the blood order: "no forma parte del orden de parientes por consanguinidad del artículo 1138".
+11 "Este derecho compara… cuando se extingue el régimen legal de bienes (法定財產制)." Gloss kept.
+12 Title, not name: "titularidad registral" / "titularidad de la cuenta".
+13 "Lo que sigue es un orden general de comprobación" (民法 gloss and official materials kept).
+14 "Conviene seguir en un solo calendario el avance…" inside the existing paragraph.
+15 "se interrumpa el acceso a una cuenta o la explotación de un negocio".
+16 "el registro de sociedad o el registro de comercio" (FAQ, body, checklist).
+17 Chinese glosses: (新臺幣2,500萬元) and (新臺幣1,000萬元). Spanish "25 millones" / TWD 10.000.000 unchanged.
+18 "en Kinmen (金門) o en Lienchiang, también llamado Matsu (連江、馬祖)", and the same in §2.
+19 Manager's permit: "obtener el permiso de trabajo es, en términos relativos, más sencillo; esto no es una promesa de concesión."
+20 "una cotización o la inscripción en el mercado de valores emergente (興櫃)".
+21 "La distribución y la agencia son modalidades contractuales".
+22 "No se puede concluir que haya que constituir una sociedad solo porque el cliente esté en Taiwán." (FAQ and repeated answer).
+23 "hipotéticos y solo sirven para orientar el análisis"; the denial of a guarantee stays.
+
+## Rows skipped
+es-a #10 and es-b #5. The quoted U+200B lines (003 Q16–Q20, 005 including **​**, 006, 008, 009, 013, 015) are the same spacers as the Korean source. checkBlocks requires an equal ZWSP count, and checkHeadings requires the same heading levels. Promoting those lines to ## or deleting the spacers would fail the checker. Wording inside the real paragraphs was left alone.
+
+Adaptations (still applied):
+- es-a #1: artículo 3 is the statute the URL actually opens; "(la fuente lo cita como artículo 10)" keeps the Korean digit.
+- es-a #12 and #11: the suggested rewrites would merge the next paragraph into the fragment. ACCEPTED-ROUND forbids merging blocks. Each fragment is now a sentence in its own block.
+- es-a #13: "por cada víctima y cada accidente" would drop two 1s. "cada" was added beside the digits.
+
+## Systemic patterns (instances changed)
+戶籍 "registro de domicilio" → "registro de hogar"                 6 (pack ×1, 007 ×1, 016 ×1, 017 ×3)
+易科罰金 conmutación → conversión de la pena en multa               2 (003, 008)
+"centro de vida"                                                   3 (007 ×2, 016 ×1)
+"concluir" with no object, or "concluir el resultado"             7 (014 ×2, 016 ×1, 018 ×2, 004 ×1 "determinarse", 007 ×1)
+"registro de sociedad y de comercio" where English is "or"        3 (017 FAQ, body, checklist)
+title flattened to "nombre"                                        3 (016: registro/cuenta, comparación, cambio de titularidad)
+Kinmen y Lienchiang o Matsu as a third place                       3 (017 ×2 with gloss, §2 ×1)
+thousands dot inside a Chinese gloss (2.500 / 1.000)              4 (017)
+公司登記 as "persona jurídica"                                      2 (015)
+"tratar el acné, antiinflamatorio o bactericida"                  2 (011 FAQ, body)
+U+200B spacers                                                     0 (skipped; see above)
+Latin-American toast "Se copió"                                    1
+
+R2–R10 were already in this corpus (prior pass; this round scored 4/5 and confirmed feminine forms for Wei Tseng, the four-language consultation lock, and Korea as a labelled example in 005). This pass did not reopen them except where a row above is the same pattern. "el mejor resultado" in 008 is the employee's sales rank in the anecdote, not a firm superlative. "la única solución" is a denial. The fullwidth colon remains only inside the Hangul `url` (R16). Paralegal stays: R12 is for the 18 locales added on 2026-09-22, and the es review did not flag it. "TWD 1.57M" was not reformatted.
+
+## §Verify
+```
+$ node scripts/check-column-translation.mjs --dir src/content/columns-es --lang es 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=55
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-es src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      22
+```
+
+Pre-existing number WARNs (still PASS, not introduced by this pass): 003 extra 2020×2 and 2023; 006 extra 1×2 and 2×2; 007 extra 2023×4; 010 extra 2020. 009 was WARN on 제6호 only while inciso 6 was briefly apartado 6; after the revert below it is sourceCount=10 targetCount=10 PASS.
+
+## Reviewer disagreed (not applied)
+es-a #14. "inciso 6" and "apartados 1 o 6" are not the same unit. Korean line 64 is 제1、6항 (paragraph → apartado). Korean line 68 is 제6호 (item → inciso). The checker maps inciso to 호 and apartado to 항. Calling the 호 "apartado" left 제6호 unmatched (수사미해석). The distinction stays.

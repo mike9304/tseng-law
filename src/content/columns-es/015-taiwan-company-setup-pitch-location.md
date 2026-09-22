@@ -45,7 +45,7 @@ Si le resulta difícil acudir en persona a la oficina del registro de la propied
 
 puede pedir ayuda a un conocido en Taiwán, al propietario, a un agente inmobiliario o a una abogada o abogado.
 
-Si el resultado de la consulta indica que el establecimiento de restauración no es posible, más adelante, al registrar la persona jurídica (公司登記), el gobierno municipal podría no aceptar el registro.
+Si el resultado de la consulta indica que el establecimiento de restauración no es posible, más adelante, al registrar la sociedad (公司登記), el gobierno municipal podría no aceptar el registro.
 
 Por tanto, preste atención.
 
@@ -73,7 +73,7 @@ Si se abre en un lugar donde el establecimiento de restauración no es posible, 
 
 Con esto concluye la explicación; para otras preguntas, escriba a través de la página Contacto; no se promete un plazo de respuesta.
 
-Las reglas de las autoridades administrativas pueden cambiar con frecuencia, de modo que conviene confirmar la normativa más reciente antes de registrar la persona jurídica.
+Las reglas de las autoridades administrativas pueden cambiar con frecuencia, de modo que conviene confirmar la normativa más reciente antes de registrar la sociedad.
 
 ---
 

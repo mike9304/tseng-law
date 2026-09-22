@@ -8,7 +8,7 @@ categories:
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Si hay clientes en Taiwán, ¿hay que constituir necesariamente una sociedad allí?"
-    a: "No se puede concluir solo porque el cliente esté en Taiwán. Hay que ver las exigencias del cliente y la actividad real de negocio, instalaciones, personal y estructura de las operaciones en Taiwán, y luego elegir la entidad más adecuada."
+    a: "No se puede concluir que haya que constituir una sociedad solo porque el cliente esté en Taiwán. Hay que ver las exigencias del cliente y la actividad real de negocio, instalaciones, personal y estructura de las operaciones en Taiwán, y luego elegir la entidad más adecuada."
   - q: "¿Desaparece por completo la responsabilidad de la matriz al constituir una sociedad taiwanesa?"
     a: "Si se constituye una filial y no una sucursal, la matriz, en principio, no asume las obligaciones contractuales firmadas en nombre de la filial. Aun así hay que comprobar las excepciones por abuso de la personalidad jurídica y si la matriz ha otorgado garantía o ha asumido obligaciones contractuales propias."
   - q: "¿Se puede empezar con un distribuidor y luego pasar a una sociedad en Taiwán?"
@@ -47,7 +47,7 @@ Sobre todo si el vendedor del contrato de compraventa no es la empresa que prest
 
 Al planificar la entrada, la empresa de semiconductores debe separar qué presencia se establece en Taiwán y cómo se organizan las ventas y el servicio. Lo primero atiende a la personalidad jurídica, los requisitos de registro y el ámbito de negocio; lo segundo, al modo de operar, las facultades y el reparto de responsabilidad.
 
-La diferencia principal entre una filial taiwanesa y una sucursal taiwanesa de una sociedad extranjera es si tiene personalidad jurídica distinta de la matriz o de la sede. La distribución y la agencia son arreglos transaccionales y contractuales, y no deben confundirse con la forma societaria.
+La diferencia principal entre una filial taiwanesa y una sucursal taiwanesa de una sociedad extranjera es si tiene personalidad jurídica distinta de la matriz o de la sede. La distribución y la agencia son modalidades contractuales, y no deben confundirse con la forma societaria.
 
 | Estructura | Distinción básica | Qué confirmar primero |
 |---|---|---|
@@ -65,7 +65,7 @@ Puede formarse con una o más personas físicas, o con socios personas jurídica
 
 ### La sociedad anónima (股份有限公司): adecuada si se quieren incorporar otros inversores o cabe una cotización
 
-El capital se divide en acciones. En principio se requieren dos o más accionistas, pero el Estado o una persona jurídica pueden constituirla solos, y una persona jurídica extranjera puede poseer el 100 %. Las acciones son, en principio, libremente transmisibles, con excepciones legales; pueden diseñarse acciones especiales y opciones de empleados conforme a la ley. Conviene a empresas que esperan inversores, negociación de acciones, incentivos de capital para empleados o una fusión, una adquisición, una cotización o el acceso al mercado emergente; no se limita a grandes empresas. En gobernanza, una sociedad no pública puede, por estatutos, no tener consejo y tener solo uno o dos directores. Una sociedad con un único socio estatal o persona jurídica puede, por estatutos, no tener supervisor (監察人). No toda sociedad anónima debe auditar las cuentas anuales. Los umbrales principales de auditoría de una sociedad ordinaria son capital desembolsado de 30 millones de dólares taiwaneses, o, por debajo, ingresos de explotación de 100 millones o 100 trabajadores en el seguro laboral; las sociedades de oferta pública siguen la normativa de valores.
+El capital se divide en acciones. En principio se requieren dos o más accionistas, pero el Estado o una persona jurídica pueden constituirla solos, y una persona jurídica extranjera puede poseer el 100 %. Las acciones son, en principio, libremente transmisibles, con excepciones legales; pueden diseñarse acciones especiales y opciones de empleados conforme a la ley. Conviene a empresas que esperan inversores, negociación de acciones, incentivos de capital para empleados o una fusión, una adquisición, una cotización o la inscripción en el mercado de valores emergente (興櫃); no se limita a grandes empresas. En gobernanza, una sociedad no pública puede, por estatutos, no tener consejo y tener solo uno o dos directores. Una sociedad con un único socio estatal o persona jurídica puede, por estatutos, no tener supervisor (監察人). No toda sociedad anónima debe auditar las cuentas anuales. Los umbrales principales de auditoría de una sociedad ordinaria son capital desembolsado de 30 millones de dólares taiwaneses, o, por debajo, ingresos de explotación de 100 millones o 100 trabajadores en el seguro laboral; las sociedades de oferta pública siguen la normativa de valores.
 
 ## 4. Los procedimientos de sucursal y de filial difieren; solo la filial pasa por la revisión del Departamento de Revisión de Inversiones
 
@@ -79,11 +79,11 @@ Lo anterior es una propuesta de diseño contractual. Contar con una forma concre
 
 Completar el registro en Taiwán no implica que el personal de la sede extranjera pueda trabajar automáticamente en Taiwán. Un extranjero que trabaje en Taiwán necesita un permiso de trabajo lícito y, para una estancia más larga, un permiso de residencia. En principio el empleador solicita el permiso de trabajo y el de residencia correspondiente.
 
-Para el gerente de la filial o sucursal taiwanesa de una sociedad extranjera, el permiso de trabajo sigue un cauce distinto; esto no es una promesa de concesión. Para solicitarlo para un segundo extranjero o posteriores, el Ministerio de Trabajo exige, según el sector, umbrales de capital, facturación u otros. Si se prevé que personal extranjero trabaje en Taiwán, hay que confirmar antes de constituir la sociedad si el capital previsto alcanza el umbral aplicable.
+Para el gerente de la filial o sucursal taiwanesa de una sociedad extranjera, obtener el permiso de trabajo es, en términos relativos, más sencillo; esto no es una promesa de concesión. Para solicitarlo para un segundo extranjero o posteriores, el Ministerio de Trabajo exige, según el sector, umbrales de capital, facturación u otros. Si se prevé que personal extranjero trabaje en Taiwán, hay que confirmar antes de constituir la sociedad si el capital previsto alcanza el umbral aplicable.
 
 ## 7. Estructuras que pueden encajar según la etapa del negocio
 
-Los siguientes escenarios son hipotéticos para ayudar a pensar; no garantizan que un modo sea lícito o preferible.
+Los siguientes escenarios son hipotéticos y solo sirven para orientar el análisis; no garantizan que un modo sea lícito o preferible.
 
 **Empresas centradas en la exportación inicial.** Si aún no hay empleados ni inventario en Taiwán y se quiere comprobar la demanda mediante un distribuidor independiente, pueden examinarse primero el suministro, la relación de distribución y el ámbito de actividad en Taiwán. Un contrato de distribución por sí solo no elimina todas las cuestiones regulatorias en Taiwán.
 
@@ -101,7 +101,7 @@ No es necesario adjuntar en el primer contacto todos los materiales confidencial
 
 ### Si hay clientes en Taiwán, ¿hay que constituir necesariamente una sociedad allí?
 
-No se puede concluir solo porque el cliente esté en Taiwán. Hay que ver las exigencias del cliente y la actividad real de negocio, instalaciones, personal y estructura de las operaciones en Taiwán, y luego elegir la entidad más adecuada.
+No se puede concluir que haya que constituir una sociedad solo porque el cliente esté en Taiwán. Hay que ver las exigencias del cliente y la actividad real de negocio, instalaciones, personal y estructura de las operaciones en Taiwán, y luego elegir la entidad más adecuada.
 
 ### ¿Desaparece por completo la responsabilidad de la matriz al constituir una sociedad taiwanesa?
 

@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Bild zur Erläuterung der Haftungsbeurteilung bei Überholunfällen in Taiwan und des sicheren Überholverfahrens](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Fährt das vorausfahrende Fahrzeug langsam, kann Überholen (超車) wie eine alltägliche Wahl wirken, doch handelt es sich um ein Fahrverhalten mit erheblichem Risiko. Bevor Sie mit dem Überholen beginnen, müssen Sie den Streckenabschnitt, die Verkehrslage in beiden Richtungen, die Bewegung der vorausfahrenden Fahrzeuge und den Raum für eine sichere Rückkehr auf die ursprüngliche Fahrspur gemeinsam prüfen.
+Fährt das vorausfahrende Fahrzeug langsam, kann Überholen (超車) wie eine Alltäglichkeit wirken, doch handelt es sich um ein Fahrverhalten mit erheblichem Risiko. Bevor Sie mit dem Überholen beginnen, müssen Sie den Streckenabschnitt, die Verkehrslage in beiden Richtungen, die Bewegung der vorausfahrenden Fahrzeuge und den Raum für eine sichere Rückkehr auf die ursprüngliche Fahrspur gemeinsam prüfen.
 
 ## Überholvoraussetzungen nach Artikel 101 der Straßenverkehrssicherheitsvorschriften (道路交通安全規則)
 
@@ -31,7 +31,7 @@ Anschließend muss das überholende Fahrzeug den linken Blinker setzen, links mi
 
 Diese Reihenfolge von Signal und Ausweichen auf derselben Fahrspur bedeutet nicht, dass Überholen an verbotenen Orten oder unter verbotenen Bedingungen zulässig wäre. Bevor Sie mit dem Überholen beginnen, müssen sämtliche Voraussetzungen des Artikels 101 gemeinsam beurteilt werden.
 
-## Anonymer Unfallfall, den diese Kanzlei bearbeitet hat
+## Anonymisierter Unfallfall aus der Bearbeitung dieser Kanzlei
 
 In einem anonymisierten Fall dieser Kanzlei fuhr Motorradfahrer A mit Beifahrer B auf einer Bergstraße. Vor ihnen fuhren zwei Personenkraftwagen; das vorderste Fahrzeug Nr. 1 bewegte sich langsam, sodass auch Fahrzeug Nr. 2 und das Motorrad mit geringer Geschwindigkeit vorankamen.
 

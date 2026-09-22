@@ -576,7 +576,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'हमारी टीम',
     title: 'Hovering की अंतरराष्ट्रीय टीम',
     description:
-      'Hovering के अधिवक्ताओं, संचालन प्रबंधन और साझेदार लेखाकार की प्रोफ़ाइलें।',
+      'Hovering के अधिवक्ताओं, कोरिया संचालन के नेतृत्व और साझेदार लेखाकार की प्रोफ़ाइलें।',
     representativeTitle: 'प्रबंध अधिवक्ता',
     teamTitle: 'अधिवक्ता और सहयोगी',
     partnerTitle: 'साझेदार लेखाकार',
@@ -596,7 +596,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'tseng-junwei': 'ताइवान में प्रबंध अधिवक्ता (Managing Attorney)',
       'chang-rongxuan': 'ताइवान अधिवक्ता (Taiwan Attorney)',
       'chang-fangyu': 'विधि सहायक (Paralegal)',
-      'son-jungmin': 'कोरिया संचालन प्रबंधन (Korea Operations Manager)',
+      'son-jungmin': 'कोरिया संचालन का नेतृत्व (Korea Operations Manager)',
       'huang-shengping': 'साझेदार लेखाकार (Partner CPA)',
     },
   },
@@ -2871,7 +2871,7 @@ export const guidanceTeamBios: Record<
         'सूचना विज्ञान की पढ़ाई के आधार पर दस्तावेज़ प्रणालियों और कार्यप्रवाह के जरिए विभागों के बीच आदान-प्रदान में सहायता करते हैं।',
       ],
       education: ['स्नातक (B.S.) सूचना विज्ञान, National Cheng Kung University'],
-      experience: ['कोरिया संचालन क्षेत्र, Hovering International Law Firm'],
+      experience: ['कोरिया संचालन का नेतृत्व, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [

@@ -27,7 +27,7 @@ Aby bolo možné v tom istom pruhu predísť vozidlo vpredu, musí vodič zadné
 
 Zadné vozidlo smie predísť až potom, čo vozidlo vpredu spomalilo a uhlo nabok, alebo prejavilo vôľu uvoľniť cestu rukou alebo pravou smerovkou.
 
-Potom musí predchádzajúce vozidlo zapnúť ľavý blinker, minúť zľava pri zachovaní odstupu najmenej 0,5 metra od vozidla vpredu a po zabezpečení bezpečnej vzdialenosti zapnúť pravý blinker a bezpečne sa vrátiť na pôvodný pruh.
+Potom musí predchádzajúce vozidlo zapnúť ľavú smerovku, minúť zľava pri zachovaní odstupu najmenej 0,5 metra od vozidla vpredu a po zabezpečení bezpečnej vzdialenosti zapnúť pravú smerovku a bezpečne sa vrátiť na pôvodný pruh.
 
 Toto poradie signálov a uvoľnenia v tom istom pruhu neznamená, že by predchádzanie bolo dovolené i na zakázanom mieste alebo za zakázaných podmienok. Pred začatím predchádzania treba posúdiť spoločne všetky podmienky článku 101.
 
@@ -45,13 +45,13 @@ Rodiny A a B najprv považovali náhlu zmenu pruhu vozidla č. 2 za hlavnú prí
 
 Podľa výsledku posudku niesol hlavnú zodpovednosť za túto zrážku A. Tento záver bol obmedzený na skutkové okolnosti tejto veci. Posudok zohľadnil spoločne to, že A chcel predísť 2 vozidlá vpredu idúce za sebou, že vošiel do protismerného pruhu, že išiel rýchlosťou, ktorá takmer nenechávala čas na zabrzdenie, že chýbali predpísané signály klaksónu a svetiel, ako aj pohyb zmeny pruhu vozidla č. 2, usporiadanie cesty a pruhov a ostatné zaistené dôkazy.
 
-To, že v niektorých veciach takéto výsledky posudku nastanú, neznamená, že jedno vynechanie predpísaného signálu vždy určí zodpovednosť. Nedbanlivosť (過失) pri nehode pri predchádzaní závisí od miesta nehody, usporiadania pruhov, rýchlosti, pohybov vozidiel, signálov, časových intervalov, výhľadu a ostatných dôkazov.
+Záver obmedzený na túto vec neznamená, že jedno vynechanie predpísaného signálu vždy určí zodpovednosť. Nedbanlivosť (過失) pri nehode pri predchádzaní závisí od miesta nehody, usporiadania pruhov, rýchlosti, pohybov vozidiel, signálov, časových intervalov, výhľadu a ostatných dôkazov.
 
 ## Body na overenie pri posudzovaní zodpovednosti za nehodu
 
 Pred predchádzaním treba najprv overiť, či miesto alebo dopravná situácia spadajú pod zákaz predchádzania. Ak sa uplatní postup toho istého pruhu, treba dať predpísaný signál klaksónu alebo svetiel, bez toho, aby sa vozidlo vpredu nútilo k uvoľneniu, vyčkať jasný prejav uvoľnenia a dokončiť predchádzanie s dostatočným odstupom a bezpečnou vzdialenosťou návratu.
 
-Dodržiavanie článku 101 je dôležité, ale samo osebe nezabezpečuje ani vyhnutie sa nehode, ani neskorší výsledok posudku alebo konania. Vodiči musia ponechať dodatočnú bezpečnostnú rezervu a prispôsobiť sa situácii vpredu.
+Dodržiavanie článku 101 je dôležité, ale samo osebe nezaručuje ani to, že sa nehode predíde, ani určitý výsledok neskoršieho posudku alebo konania. Vodiči musia ponechať dodatočnú bezpečnostnú rezervu a prispôsobiť sa situácii vpredu.
 
 Ako doplnok možno nahliadnuť [ilustráciu pravidiel a postupu predchádzania](https://gonews.com.tw/car/daily/21934/). Pretože ide o sekundárny zdroj, pri overovaní právnych podmienok treba čítať tiež aktuálne oficiálne predpisy.
 

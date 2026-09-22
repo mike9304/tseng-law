@@ -21,7 +21,7 @@ Osoby, ktoré čítali [Založenie spoločnosti na Taiwane – základy](/sk/col
 
 ​
 
-Nižšie uvedené otázky a odpovede majú pomôcť osobám, ktoré zvažujú založenie spoločnosti (公司設立) na Taiwane.
+Nižšie uvedené otázky a odpovede pripravila advokátka Wei Tseng (曾雋崴); majú pomôcť osobám, ktoré zvažujú založenie spoločnosti (公司設立) na Taiwane.
 
 ​
 
@@ -37,9 +37,9 @@ Pred prevodom kapitálu (資本金匯款) sa informujte u svojej hlavnej banky v
 
 **​**
 
-**2. Pri vklade základného kapitálu, možno previesť taiwanské doláre (新臺幣, TWD) z osobného účtu na Taiwane na prípravný účet taiwanskej spoločnosti?**
+**2. Pri vklade základného kapitálu, možno previesť nové taiwanské doláre (新臺幣, TWD) z osobného účtu na Taiwane na prípravný účet taiwanskej spoločnosti?**
 
-Je to možné, avšak treba predložiť listiny potvrdzujúce pôvod prostriedkov v taiwanských dolároch získaných na Taiwane.
+Je to možné, avšak treba predložiť listiny potvrdzujúce pôvod prostriedkov v nových taiwanských dolároch získaných na Taiwane.
 
 Ak ide napríklad o príjmy zo mzdy získané na Taiwane, treba predložiť kópiu osvedčenia o zrážke pri zdroji z týchto príjmov zo mzdy (薪資所得的扣繳憑單影本).
 

@@ -85,7 +85,7 @@ Nakoniec sudcovia Súdneho jüanu (大法官) vyhlásili za protiústavné (違�
 
 ​
 
-Podobne v Kórei, kde mnoho osôb so zrakovým postihnutím sa živí masážou,
+Podobne v Kórei, kde sa mnoho osôb so zrakovým postihnutím živí masážou,
 
 zásadne len osoby so zrakovým postihnutím, ktoré získali osvedčenie kvalifikácie, môžu vykonávať povolanie maséra.
 

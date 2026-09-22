@@ -13,14 +13,14 @@ faq:
   - q: "Čo je PIF a ide o ten istý postup ako registrácia produktu u TFDA?"
     a: "Registrácia produktu a PIF nie sú tým istým postupom. Registrácia produktu (產品登錄) je samostatný úkon, ktorý sa vykonáva na platforme registrácie kozmetických produktov TFDA (衛生福利部食品藥物管理署). PIF je spis, ktorý spája údaje o akosti, bezpečnosti, zložení, tvrdených funkciách, spôsobe výroby, výsledkoch skúšok a hodnotení bezpečnosti a ktorý výrobca alebo dovozca kozmetiky zostavuje, aktualizuje a uchováva; samotný PIF nie je dokumentom, ktorý by sa musel vopred predkladať TFDA. Od 1. 7. 2026 zásadne všetky kozmetické prípravky spadajú pod režim PIF, s výnimkou tuhého ručne vyrábaného mydla vyrobeného v mieste výroby oslobodenom od registrácie závodu (工廠登記)."
   - q: "Na aké výrazy treba dávať pozor v reklame na kozmetiku na Taiwane?"
-    a: "Reklama sa posudzuje nielen podľa vety, ale podľa celého vyjadrenia, vrátane názvu výrobku, textu, obrazu, symbolu a zvuku. Zakázané sú nepravdivé alebo nadsadené výrazy a tvrdenia liečebného účinku a osobitnú pozornosť treba venovať lekárskym výrazom, ako je liečba akné, protizápalové pôsobenie alebo baktericídne pôsobenie. Správna pokuta (罰鍰) činí 40.000 až 200.000 taiwanských dolárov (新臺幣, TWD) za nepravdivú alebo nadsadenú reklamu a 600.000 až 5.000.000 TWD za tvrdenie liečebného účinku. Príspevky influencerov a ďalších je takisto treba posúdiť podľa toho istého meradla, ak sú v podstate reklamou."
+    a: "Reklama sa posudzuje nielen podľa vety, ale podľa celého vyjadrenia, vrátane názvu výrobku, textu, obrazu, symbolu a zvuku. Zakázané sú nepravdivé alebo nadsadené výrazy a tvrdenia liečebného účinku a osobitnú pozornosť treba venovať lekárskym výrazom, ako je liečba akné, protizápalové pôsobenie alebo baktericídne pôsobenie. Správna pokuta (罰鍰) činí 40.000 až 200.000 nových taiwanských dolárov (新臺幣, TWD) za nepravdivú alebo nadsadenú reklamu a 600.000 až 5.000.000 TWD za tvrdenie liečebného účinku. Príspevky influencerov a ďalších je takisto treba posúdiť podľa toho istého kritéria, ak sú v podstate reklamou."
 ---
 
 # Vstup na trh kozmetiky na Taiwane: voľba dovozcu, registrácia produktu, zostavenie a uchovanie PIF a úprava reklamy
 
 ![Podklady produktu a preskúmanie predpisov potrebné pre vstup na trh kozmetiky na Taiwane](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg)
 
-Zahraničná značka kozmetiky, ktorá hodlá na Taiwane uvádzať výrobky do obehu, musí určiť, komu zverí dovoz, kedy dokončí registráciu produktu (產品登錄), kto spravuje informačný spis produktu (產品資訊檔案, Product Information File, PIF) a kde, a podľa akého meradla sa posudzuje označenie (標示) a reklama (廣告). Zahraničná značka môže buď využiť miestneho dovozcu, alebo činnosť na Taiwane prevádzkovať sama, takže príprava predaja nie je dokončená len tým, že bola založená spoločnosť.
+Zahraničná značka kozmetiky, ktorá hodlá na Taiwane uvádzať výrobky do obehu, musí určiť, komu zverí dovoz, kedy dokončí registráciu produktu (產品登錄), kto spravuje informačný spis produktu (產品資訊檔案, Product Information File, PIF) a kde, a podľa akého kritéria sa posudzuje označenie (標示) a reklama (廣告). Zahraničná značka môže buď využiť miestneho dovozcu, alebo činnosť na Taiwane prevádzkovať sama, takže príprava predaja nie je dokončená len tým, že bola založená spoločnosť.
 
 Uplatniteľné povinnosti sa môžu líšiť podľa druhu výrobku a miesta výroby (製造場所), skutočnej formy dovozu, spôsobu obehu a obsahu reklamy. Nižšie sa oddelene vysvetľujú forma vstupu a zákonný subjekt zodpovednosti, registrácia produktu u TFDA, zostavenie, aktualizácia a uchovanie PIF, označenie a reklama a kontrola a nápravné opatrenie. Pred stanovením skutočného dodacieho kalendára treba znovu, výrobok po výrobku, overiť najnovšie predpisy a pokyny príslušného orgánu (主管機關).
 
@@ -52,7 +52,7 @@ Registrácia produktu a PIF nie sú tým istým postupom. Registrácia produktu 
 
 ### Okamih registrácie produktu a doba platnosti
 
-Registrácia kozmetického produktu sa vykonáva na platforme registrácie kozmetických produktov TFDA. Výrobca alebo dovozca kozmetiky musí dokončiť registráciu produktu predtým, než výrobok dodá, predá, daruje, verejne vystaví (公開陳列) alebo poskytne spotrebiteľovi na vyskúšanie. Prípravu nemožno organizovať len podľa odplatného predaja; kalendár propagačných darov alebo poskytnutia na vyskúšanie spotrebiteľom treba spravovať spoločne s okamihom registrácie.
+Registrácia kozmetického produktu sa vykonáva na platforme registrácie kozmetických produktov TFDA. Výrobca alebo dovozca kozmetiky musí dokončiť registráciu produktu predtým, než výrobok dodá, predá, daruje, verejne vystaví (公開陳列) alebo poskytne spotrebiteľovi na vyskúšanie. Prípravu nemožno organizovať len podľa odplatného predaja; do kalendára registrácie treba zahrnúť aj propagačné dary a poskytnutie výrobku spotrebiteľovi na vyskúšanie.
 
 Doba platnosti registrácie produktu je 3 roky. Ak sa má v dodávkach pokračovať, treba požiadať o predĺženie (展延) do 3 mesiacov pred uplynutím platnosti. Ak sa zmenia zapísané údaje, ako je názov výrobku, použitie, forma prípravku (劑型), zložky a miesto výroby, treba tiež overiť, či je nutný postup zodpovedajúci obsahu zmeny.
 
@@ -70,7 +70,7 @@ Prácu PIF, vrátane hodnotenia bezpečnosti, môže podporiť tretia osoba, kto
 
 Ak sa zmení surovina alebo receptúra, spôsob a miesto výroby, označenie vrátane etikety, tvrdená funkcia alebo bezpečnostné informácie, treba preskúmať a aktualizovať dotknuté podklady PIF. Treba tiež posúdiť, či sťažnosti spotrebiteľov, nežiaduce príhody a nové výsledky skúšok ovplyvňujú existujúce hodnotenie, preto je i po prvom zostavení nutný aj postup riadenia zmien.
 
-Podľa článku 7 pravidiel o správe informačného spisu kozmetických produktov je doba uchovania najmenej 5 rokov počítaných odo dňa nasledujúceho po dni posledného dodania výrobku na trh. Podľa článku 8 tých istých pravidiel je miestom uchovania adresa označenia výrobcu alebo dovozcu kozmetiky stanovená v článku 7 odseku 1 bode 7 zákona o správe hygieny a bezpečnosti kozmetiky (化粧品衛生安全管理法). Ustanovenie o dobe uchovania a ustanovenie o mieste uchovania treba v praxi rozlišovať.
+Podľa článku 7 pravidiel o správe informačného spisu kozmetických produktov je doba uchovania najmenej 5 rokov počítaných odo dňa nasledujúceho po dni posledného dodania výrobku na trh. Podľa článku 8 tých istých pravidiel je miestom uchovania adresa výrobcu alebo dovozcu kozmetiky stanovená v článku 7 odseku 1 bode 7 zákona o správe hygieny a bezpečnosti kozmetiky (化粧品衛生安全管理法). Ustanovenie o dobe uchovania a ustanovenie o mieste uchovania treba v praxi rozlišovať.
 
 Aj keď pôvodný výrobca uchováva originál alebo sa používa bezpečné elektronické alebo cloudové úložisko, výrobca alebo dovozca musí mať prístup k úplným podkladom. Treba stanoviť prístupové oprávnenie, zálohy, správu verzií, formát súborov a zodpovednú osobu tak, aby bolo možné podklady rýchlo vyhľadať a predložiť, keď ich príslušný orgán požaduje. Je tiež dôležité v zmluve upraviť príjemcu odovzdania, spôsob a to, či prístupové oprávnenie trvá, aby sa podklady udržali po zákonnú dobu uchovania i po skončení zmluvy s predajným partnerom alebo poskytovateľom služieb.
 
@@ -78,13 +78,13 @@ Aj keď pôvodný výrobca uchováva originál alebo sa používa bezpečné ele
 
 Keď príslušný orgán kontroluje PIF, oznámi to zásadne výrobcovi alebo dovozcovi kozmetiky najneskôr 7 dní pred dňom kontroly. Ak však prípad spadá pod zákonnú výnimku stanovenú v súvisiacich predpisoch, možno kontrolu vykonať bez predchádzajúceho oznámenia. Bez ohľadu na to, či oznámenie bolo, treba trvale udržiavať stav, ktorý umožňuje vyhľadať a predložiť úplné aktuálne podklady.
 
-Ohlásenie nepravdivých informácií pri registrácii produktu alebo zapísanie nepravdivých informácií do PIF môže byť predmetom správnej pokuty (罰鍰) 10.000 až 1.000.000 taiwanských dolárov (新臺幣, TWD). Ak sú naopak podklady PIF neúplné, príslušný orgán zvyčajne nariadi nápravu v stanovenej lehote (限期改正) a správna pokuta sa stáva otázkou až vtedy, keď sa v tejto lehote nenapraví. Nepravdivé informácie a ešte napraviteľnú neúplnosť podkladov nemožno posudzovať ako rovnaký následok.
+Ohlásenie nepravdivých informácií pri registrácii produktu alebo zapísanie nepravdivých informácií do PIF môže byť predmetom správnej pokuty (罰鍰) 10.000 až 1.000.000 nových taiwanských dolárov (新臺幣, TWD). Ak sú naopak podklady PIF neúplné, príslušný orgán zvyčajne nariadi nápravu v stanovenej lehote (限期改正) a správna pokuta sa stáva otázkou až vtedy, keď sa v tejto lehote nenapraví. Nepravdivé informácie a ešte napraviteľnú neúplnosť podkladov nemožno posudzovať ako rovnaký následok.
 
-Stiahnutie alebo zničenie (銷毀) nie je opatrením, ktoré by automaticky nasledovalo každú neúplnosť podkladov PIF. Bezpečnosť výrobku, obsah porušenia, stav nápravy a zákonné podmienky uplatniteľné na každé opatrenie treba posúdiť oddelene. Opatrenie, keď bol potvrdený bezpečnostný problém, a požiadavku na doplnenie dokumentov treba posúdiť osobitne a postup sa riadi oznámením príslušného orgánu a použitým ustanovením.
+Stiahnutie alebo zničenie (銷毀) nie je opatrením, ktoré by automaticky nasledovalo každú neúplnosť podkladov PIF. Bezpečnosť výrobku, obsah porušenia, stav nápravy a zákonné podmienky uplatniteľné na každé opatrenie treba posúdiť oddelene. Opatrenie pri zistenom bezpečnostnom probléme treba odlíšiť od požiadavky na doplnenie dokumentov a postup sa riadi oznámením príslušného orgánu a použitým ustanovením.
 
 ## 3. Úprava označenia, propagácie a reklamy
 
-Reklama sa posudzuje nielen podľa vety, ale podľa celého vyjadrenia, vrátane názvu výrobku, textu, obrazu, symbolu a zvuku. Zakázané sú nepravdivé alebo nadsadené výrazy a tvrdenia liečebného účinku a osobitnú pozornosť treba venovať lekárskym výrazom, ako je liečba akné, protizápalové pôsobenie alebo baktericídne pôsobenie. Správna pokuta činí 40.000 až 200.000 TWD za nepravdivú alebo nadsadenú reklamu a 600.000 až 5.000.000 TWD za tvrdenie liečebného účinku. Príspevky influencerov a ďalších je takisto treba posúdiť podľa toho istého meradla, ak sú v podstate reklamou.
+Reklama sa posudzuje nielen podľa vety, ale podľa celého vyjadrenia, vrátane názvu výrobku, textu, obrazu, symbolu a zvuku. Zakázané sú nepravdivé alebo nadsadené výrazy a tvrdenia liečebného účinku a osobitnú pozornosť treba venovať lekárskym výrazom, ako je liečba akné, protizápalové pôsobenie alebo baktericídne pôsobenie. Správna pokuta činí 40.000 až 200.000 TWD za nepravdivú alebo nadsadenú reklamu a 600.000 až 5.000.000 TWD za tvrdenie liečebného účinku. Príspevky influencerov a ďalších je takisto treba posúdiť podľa toho istého kritéria, ak sú v podstate reklamou.
 
 ### Posudzuje sa podľa celého vyjadrenia, nie podľa každého slova
 
@@ -108,7 +108,7 @@ Ak sa overí príprava predaja na Taiwane v tomto poradí, klesá riziko zámeny
 2. Overiť subjekt, ktorý nesie právnu zodpovednosť ako výrobca alebo dovozca kozmetiky, a zmluvného zodpovedného za prácu.
 3. Dokončiť registráciu produktu pred dodaním, predajom, darovaním, verejným vystavením alebo poskytnutím výrobku spotrebiteľovi na vyskúšanie.
 4. Zostaviť PIF podľa výrobku, aktualizovať zmeny a uchovávať ho v súlade so zákonnou dobou a miestom.
-5. Preskúmať etiketu, predajnú stránku, reklamu a príspevky zo spolupráce podľa meradla celého vyjadrenia.
+5. Preskúmať etiketu, predajnú stránku, reklamu a príspevky zo spolupráce podľa kritéria celého vyjadrenia.
 6. Prevádzkovať postup na reakciu na kontroly a požiadavky na nápravu, sťažnosti, bezpečnostné informácie a potrebné následné kroky.
 
 Základnú štruktúru spoločnosti a pobočky možno vidieť v [Základy zakladania spoločnosti na Taiwane](/sk/columns/taiwan-company-establishment-basics), rozsah súvisiacej podpory v [V čom klientov zastupujeme](/sk/services) a údaje o zodpovednej advokátke v [Medzinárodný tím Hovering](/sk/lawyers).

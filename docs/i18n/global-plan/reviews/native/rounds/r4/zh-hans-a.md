@@ -1,0 +1,37 @@
+# Simplified Chinese native review — round 4, part a (zh-hans)
+reviewer: Grok 4.7 · date: 2026-09-23 · scope: zh-hans-guidance.txt (365 strings); columns-zh-hans/001-taiwan-company-establishment-basics.md, 002-withdraw-capital-taiwan-company.md, 003-taiwan-traffic-accident-procedure.md, 004-taiwan-company-subsidiary-vs-branch.md, 005-taiwan-company-establishment-advanced-2.md, 006-taiwan-massage-history-law.md, 007-taiwan-divorce-lawsuit-qna.md, 008-taiwan-labor-severance-law.md, 009-taiwan-voluntary-resignation-severance.md
+
+## Verdict
+naturalness (1 = machine, 5 = native professional): 4/5 for guidance pack, 4/5 for columns
+variety used: Mainland Simplified Chinese, consistent. Traditional characters are limited to Taiwan legal glosses in parentheses, the name 曾雋崴, the firm name 昊鼎國際法律事務所, and the citation 民國112年憲判字第4號. Running dates are mainland style (2025年9月13日, 2023年12月27日, 2024年1月1日, 2025年1月1日, 2029年12月31日). Amounts use the comma (500,000) and 万 (157万元). The decimal point is in 0.5. 民国112年 is the official case name, not a running date.
+systemic patterns (max 6, each one line, with 1 example quote):
+- Invisible blank lines (U+200B) still split 003 from Q16, plus 005, 006, 008 and 009, into one-line fragments; 005 also has empty bold lines `**​**`: "Q16. 事故后，能否把一切都交给保险人处理？"
+- A few guidance strings are still English calques of “not offered in” and “the language of this page”: "本页不以{language}提供。"
+- Sentence-initial 曾 in her own bio collides with the surname: "曾代理一名韩国学生因健身房受伤提出的损害赔偿"
+- 007 still has three predicates copied from English structure: "不能限制一切变更都必须先有双方绝对无法预见的事件。"
+- The 008 difficulty row is no longer three comparable levels: "须符合法定列举事由，并不容易"
+- One guidance gloss lists the same limitation three times: "期限（包括诉讼时效／消灭时效，消滅時效）"
+
+Gender of attorney Wei Tseng: no finding. The pack and bylines use 律师曾雋崴, 主任律师, 交换学生, with no 他. 006 林先生 and 008 B先生 / 他 are male third parties. Consultation lock stays negative (only four languages; no interpreter; no reply-time promise; no free first meeting; no result promise) on the home, contact, FAQ, pricing, inquiry form, and llms notice. 008 "业绩最好" describes Mr. B’s sales rank in the case story, not the firm. 子女最佳利益 is the statutory custody standard, not a firm claim. The guidance pack is client-ready apart from the rows below. 001, 002 and 004 are native professional legal Chinese. 003 Q1–Q15 is that register apart from one sentence; Q16 through the close is still a stack of one-line fragments. 007 is that register apart from three sentences. 005, 006, 008 and 009 are ordinary inside the lines; what remains is that layout, the permit-category sentence in 005, 这次 in 006, the difficulty row and the detached cap in 008, and the subjectless summary in 009. The canonical URLs of 008 and 009 still contain the original Korean slugs; those URLs are not findings.
+
+## Findings
+| # | sev | cat | file | quote (≤120 chars, verbatim) | problem (English, one line) | suggested Simplified Chinese rewrite |
+|---|-----|-----|------|------|------|------|
+| 1 | P2 | A | columns-zh-hans/003-taiwan-traffic-accident-procedure.md | "对方非正式同意或仅作成记录，并不足以认为在未完成法定措施前即可离开现场。" | Without 的, this reads as “the other party has not formally agreed.” The English is informal consent, which does not replace the required measures. | 对方的非正式同意，或仅作成记录，并不足以取代尚未完成的法定措施。 |
+| 2 | P2 | A | columns-zh-hans/007-taiwan-divorce-lawsuit-qna.md | "司法审查仍可能成为问题。" | 成为问题 means the review may turn into trouble. The English is that court review may be required when later circumstances call for a change. | 即使已有既有决定，若其后情形及子女利益有必要变更，仍可能需要法院审查。 |
+| 3 | P2 | A | columns-zh-hans/008-taiwan-labor-severance-law.md | "须符合法定列举事由，并不容易" | The English difficulty row is Easy, Difficult, Easy. The first cell says the opposite, and “受雇人得随时终止，但须遵守预告期间” states a notice rule instead of a difficulty. Do not promise a result. | 较低（须符合第11条列举事由，不表示一定成立）；高；较低（仍须遵守预告期间） |
+| 4 | P2 | A | columns-zh-hans/005-taiwan-company-establishment-advanced-2.md | "以一般侨外投资事业主管工作提出申请。" | This turns the permit category into the means of applying, and the official traditional name is missing. 但适用对象要件 also has no verb such as 符合. | 首位受雇人：按“一般侨外投资事业主管”（一般僑外投資事業主管工作）类别申请工作许可。下文B的标准不适用，但仍须符合对象要件，尤其是华侨或外国人出资超过1/3的公司经理人（經理人），以及雇主资本额与营业额等实绩要件（审查标准第38条、第39条）。 |
+| 5 | P2 | A | columns-zh-hans/006-taiwan-massage-history-law.md | "而今天会有这么多按摩店，可能与这次释宪有关。" | 这次 points to a petition the reader has not yet been shown. The English is one petition for constitutional interpretation. | 而今天会有这么多按摩店，可能与一次释宪有关。 |
+| 6 | P2 | A | zh-hans-guidance.txt | "高雄办公室侧重企业治理，并处理民事、刑事与行政争议。" | The office focus is corporate governance. In company-law Chinese the term is 公司治理; 企业治理 is not that term. | 高雄办公室侧重公司治理，并处理民事、刑事与行政争议。 |
+| 7 | P2 | B | columns-zh-hans/003-taiwan-traffic-accident-procedure.md | "Q16. 事故后，能否把一切都交给保险人处理？" | Q1–Q15 are headings. Q16–Q20 and the close are body lines split by U+200B blanks. The same blanks run through 005, 006, 008 and 009. 005 also has empty bold lines `**​**`. | ## Q16. 事故后，能否把一切都交给保险人处理？ |
+| 8 | P2 | B | columns-zh-hans/008-taiwan-labor-severance-law.md | "至多6个月工资。此公式适用于劳工退休金条例第12条所适用的年资" | 至多6个月工资 has no subject, so the six-month cap is detached from the 0.5-month formula. The FAQ already states the rule in full sentences. | 雇主须给付平均工资0.5个月作为资遣费，至多6个月工资。此公式适用于劳工退休金条例第12条所适用的年资；劳动基准法第17条所适用的年资，则每满1年给付平均工资1个月，没有上限。 |
+| 9 | P2 | B | zh-hans-guidance.txt | "期限（包括诉讼时效／消灭时效，消滅時效）" | The slash and the comma present 诉讼时效, 消灭时效 and 消滅時效 as three items. The traditional form should gloss the Taiwan term. | 期限（包括诉讼时效，台湾法称消灭时效／消滅時效）与证据是否齐备会影响进程。 |
+| 10 | P2 | C | columns-zh-hans/007-taiwan-divorce-lawsuit-qna.md | "不能限制一切变更都必须先有双方绝对无法预见的事件。" | 不能限制一切变更都必须 does not collocate. A change of child support is not limited to events the parties could not foresee. | 变更子女抚养费，并不以双方当初绝对无法预见的事件为限。 |
+| 11 | P2 | C | columns-zh-hans/007-taiwan-divorce-lawsuit-qna.md | "并不会立刻动用物理强制、交付子女、制裁他方" | 物理强制 is not an enforcement term. It calques “physical force.” 交付子女 already covers handover. | 仅因联络受阻，并不会立刻采取强制手段、交付子女、制裁他方或变更对未成年子女权利义务的行使。 |
+| 12 | P2 | C | columns-zh-hans/009-taiwan-voluntary-resignation-severance.md | "也就是说，资遣费可能不给付，也可能被请求。" | This summary drops the subjects the previous sentence just assigned. An employee does not withhold severance, and an employer does not claim it. | 因此，由雇主依法终止的可以不给付，由受雇人依法终止的可以请求。 |
+| 13 | P2 | C | zh-hans-guidance.txt | "屏东办公室于 2017 年为当地需求开设。" | 为当地需求开设 is not a collocation. The office was opened in 2017 to meet local needs. | 屏东办公室于2017年开设，以应对当地需求。 |
+| 14 | P2 | C | zh-hans-guidance.txt | "本页不以{language}提供。" | 不以…提供 calques “is not offered in.” A page is not supplied by means of a language. | 本页不提供{language}版本。 |
+| 15 | P2 | C | zh-hans-guidance.txt | "这篇内容尚无本页语言的版本。" | 篇 does not count 内容, and 本页语言 calques “the language of this page.” | 此内容尚无当前页面所用语言的版本。标明原文语言的链接会打开原文。 |
+| 16 | P2 | C | zh-hans-guidance.txt | "曾代理一名韩国学生因健身房受伤提出的损害赔偿" | The subject is dropped, and sentence-initial 曾 collides with her surname, so the line can be read as the firm or as the name Tseng. | 她曾代理一名韩国学生，就健身房受伤请求损害赔偿，并取得新台币157万元的一审判决。 |
+| 17 | P2 | C | zh-hans-guidance.txt | "劳资双方均可能涉及。" | 均可能涉及 has no object. The source is that both employees and employers may be parties. | 劳动合同（勞動契約）争议，劳资双方都可能成为当事人。 |
+| 18 | P2 | C | zh-hans-guidance.txt | "以及在开始工作后进行处理。" | 进行处理 has no object, so the purpose list ends on an empty verb. | 所发送的信息用于审阅请求、回复您、厘清沟通方式，以及开始工作后的案件处理。 |

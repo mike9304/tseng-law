@@ -2417,7 +2417,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         '事务所在台湾以英语、日语、韩语和中文处理企业与个人事项。',
-        '曾代理一名韩国学生因健身房受伤提出的损害赔偿，并取得新台币157万元的一审判决。',
+        '她曾代理一名韩国学生，就健身房受伤请求损害赔偿，并取得新台币157万元的一审判决。',
       ],
       education: [
         '硕士（M.S.），国立台湾大学财务金融研究所（Institute of Finance, National Taiwan University）',

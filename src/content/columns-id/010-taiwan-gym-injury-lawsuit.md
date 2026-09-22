@@ -13,13 +13,13 @@ featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 
 ![Gambar utama](../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg)
 
-Artikel ini bertolak dari sebuah perkara ketika seorang mahasiswa asal Korea mengalami cedera saat menerima bimbingan pelatih (教練) di sebuah pusat kebugaran (健身房) di Taiwan, dan menjelaskan prosedur hukum yang dapat dipertimbangkan setelah cedera di pusat kebugaran, batas waktu pengajuan tuntutan, cara pengamanan bukti (保全證據), serta pos-pos ganti rugi (損害賠償).
+Artikel ini berangkat dari perkara seorang mahasiswa asal Korea yang mengalami cedera saat menerima bimbingan pelatih (教練) di sebuah pusat kebugaran (健身房) di Taiwan, dan menjelaskan prosedur hukum yang dapat dipertimbangkan setelah cedera di pusat kebugaran, batas waktu pengajuan tuntutan, cara pengamanan bukti (保全證據), serta pos-pos ganti rugi (損害賠償).
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
 Kecelakaan itu terjadi di sebuah pusat kebugaran di Taichung (臺中), saat mahasiswa tersebut menjalani latihan deadlift (硬舉) di bawah bimbingan pelatih. Setelah cedera terjadi, yang perlu diperhatikan bukan sekadar kenyataan bahwa peristiwa itu berlangsung di dalam pusat kebugaran. Harus ditelaah pula pengalaman berolahraga dan kondisi kesehatan pengguna, jenis latihan serta beban yang digunakan, penjelasan dan bimbingan yang diberikan pelatih, gerakan dan penanganan pada saat kejadian, hubungan kausal (因果關係) antara latihan dan cedera, serta data yang mendukung kerugian yang didalilkan.
 
-Saya bertindak sebagai kuasa hukum (訴訟代理人) penggugat, yaitu mahasiswa asal Korea tersebut, dalam perkara ini. Pengadilan Distrik Taichung, Taiwan (臺灣臺中地方法院) pada 24 Januari 2022 menjatuhkan putusan tingkat pertama dalam perkara konsumen tahun 109 (2020) Nomor 7 (109年度消字第7號), yang memerintahkan tergugat membayar [1.579.589 dolar Taiwan baru (新臺幣, TWD)](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) beserta bunga sebagaimana tercantum dalam putusan tersebut.
+Saya bertindak sebagai kuasa hukum (訴訟代理人) penggugat, yaitu mahasiswa asal Korea tersebut, dalam perkara ini. Pengadilan Distrik Taichung, Taiwan (臺灣臺中地方法院) pada 24 Januari 2022 menjatuhkan putusan tingkat pertama dalam perkara konsumen tahun 109 (2020) Nomor 7 (109年度消字第7號), yang memerintahkan tergugat membayar [1.579.589 dolar baru Taiwan (新臺幣, TWD)](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) beserta bunga sebagaimana tercantum dalam putusan tersebut.
 
 Setelah itu, pemberitaan media menyebutkan bahwa para pihak mencapai perdamaian (和解) pada tingkat banding. Pemberitaan itu tidak boleh dianggap sebagai hasil akhir yang sudah pasti atas putusan tingkat pertama, karena putusan resmi tingkat pertama saja tidak mengungkapkan hasil pemeriksaan tingkat banding maupun jumlah uang perdamaian.
 

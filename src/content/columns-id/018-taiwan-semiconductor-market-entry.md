@@ -21,7 +21,7 @@ faq:
 
 Setelah mulai bertransaksi dengan pelanggan Taiwan, kantor pusat di luar negeri dapat menghadapi berbagai permintaan: menangani penawaran dan kontrak di Taiwan, menyiapkan persediaan pengganti darurat, atau menempatkan petugas pemasangan dan perawatan. Saat itu perusahaan mudah bertanya lebih dulu: “Apakah mendirikan perusahaan di Taiwan akan menyelesaikan masalah ini?”
 
-Yang perlu diklarifikasi lebih dulu adalah siapa yang bertanggung jawab atas hal apa di Taiwan. Struktur yang dinilai berbeda tergantung apakah kantor pusat luar negeri terus menandatangani kontrak penjualan, perusahaan Taiwan membeli barang lalu menjual kembali, atau personel di Taiwan hanya memberikan dukungan teknis.
+Yang perlu diklarifikasi lebih dulu adalah siapa yang bertanggung jawab atas hal apa di Taiwan. Struktur yang perlu dinilai berbeda-beda, bergantung pada apakah kantor pusat di luar negeri terus menandatangani kontrak penjualan, perusahaan Taiwan membeli barang lalu menjual kembali, atau personel di Taiwan hanya memberikan dukungan teknis.
 
 Tulisan ini adalah penjelasan umum bagi perusahaan bahan, komponen, dan peralatan semikonduktor yang merancang struktur masuk pasar Taiwan. Situasi operasional dan butir pemeriksaan di bawah ini adalah contoh hipotetis dan usulan penilaian, bukan penugasan nyata suatu perusahaan tertentu, dan bukan syarat pendirian yang berlaku seragam. Pajak, pengendalian ekspor, izin produk tertentu, dan klasifikasi investor tetap perlu dinilai terpisah.
 

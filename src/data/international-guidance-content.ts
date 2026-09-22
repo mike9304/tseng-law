@@ -919,7 +919,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Langkah pertama adalah menetapkan lingkup pekerjaan',
             paragraphs: [
-              'Perkara yang jenisnya sama dapat sangat berbeda beban kerjanya, tergantung jumlah pihak, dokumen yang tersedia, tenggat waktu yang harus dipenuhi, dan apakah suatu prosedur sudah dimulai. Karena itu langkah pertama selalu memperjelas apa yang termasuk dan apa yang tidak termasuk dalam pekerjaan.',
+              'Perkara yang jenisnya sama dapat sangat berbeda beban kerjanya, bergantung pada jumlah pihak, dokumen yang tersedia, tenggat waktu yang harus dipenuhi, dan apakah suatu prosedur sudah dimulai. Karena itu langkah pertama selalu memperjelas apa yang termasuk dan apa yang tidak termasuk dalam pekerjaan.',
               'Ringkasan yang Anda kirim pada tahap awal menjadi dasar penetapan lingkup ini. Semakin jelas ringkasan itu menerangkan kejadian, harapan Anda, dan tenggat waktunya, semakin tepat lingkup yang dapat ditetapkan.',
             ],
           },

@@ -33,9 +33,9 @@ Salon pangkas rambut bergaya Taiwan seperti ini pun tetap tersimpan sebagai kena
 
 ​
 
-Bagaimanapun juga, kalau berbicara tentang pijat,
+Bagaimanapun juga, kalau berbicara tentang pijat.
 
-di Taiwan terdapat pula banyak ruas jalan yang dikenal sebagai kawasan pijat.
+Di Taiwan terdapat pula banyak ruas jalan yang dikenal sebagai kawasan pijat.
 
 Berbagai macam tempat pijat berjajar di sepanjang jalan tersebut.
 
@@ -45,59 +45,59 @@ Pada dasarnya setiap orang dapat memilih pijat yang sesuai dengan seleranya untu
 
 Dan alasan mengapa pada hari ini terdapat begitu banyak tempat pijat boleh jadi berkaitan dengan satu permohonan penafsiran konstitusi (釋憲).
 
-Ketika Taiwan menetapkan dan memberlakukan Undang-Undang Kesejahteraan Penyandang Disabilitas Taiwan (殘障福利法) pada tahun 1980,
+Pada tahun 1980, Taiwan menetapkan dan memberlakukan Undang-Undang Kesejahteraan Penyandang Disabilitas Taiwan (殘障福利法).
 
-sesungguhnya hanya penyandang disabilitas netra (視障者) yang boleh bekerja di bidang usaha pijat (按摩業).
+Pada waktu itu, sesungguhnya hanya penyandang disabilitas netra (視障者) yang boleh bekerja di bidang usaha pijat (按摩業).
 
 Bagi orang yang bukan penyandang disabilitas netra (非視障者), bekerja di bidang usaha ini merupakan perbuatan yang melanggar hukum.
 
-Ketentuan ini terus berlaku sampai tahun 2003, ketika Tuan Lin yang pada waktu itu mengelola sebuah salon pangkas rambut
+Ketentuan ini terus berlaku sampai tahun 2003. Ketika itu, Tuan Lin mengelola sebuah salon pangkas rambut.
 
-mempekerjakan dua karyawan yang bukan penyandang disabilitas netra untuk memberikan jasa cuci rambut dan pijat, lalu ketahuan oleh polisi.
+Ia mempekerjakan dua karyawan yang bukan penyandang disabilitas netra untuk memberikan jasa cuci rambut dan pijat, lalu ketahuan oleh polisi.
 
-Menurut hukum yang berlaku pada waktu itu, Tuan Lin dan kedua karyawannya masing-masing dikenai denda administratif (罰鍰) sebesar 40.000, 10.000, dan 20.000 dolar Taiwan baru (新臺幣, TWD).
+Menurut hukum yang berlaku pada waktu itu, Tuan Lin dan kedua karyawannya masing-masing dikenai denda administratif (罰鍰) sebesar 40.000, 10.000, dan 20.000 dolar baru Taiwan (新臺幣, TWD).
 
 Tuan Lin menilai sanksi tersebut sangat tidak wajar, sehingga ia mengajukan permohonan penafsiran konstitusi.
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
-Di Taiwan,
+Di Taiwan, penyandang disabilitas netra menghadapi banyak hambatan.
 
-penyandang disabilitas netra menghadapi banyak hambatan dalam berbagai aspek seperti tumbuh kembang, kegiatan sehari-hari, pembelajaran, dan pendidikan,
+Hambatan itu meliputi tumbuh kembang, kegiatan sehari-hari, pembelajaran, dan pendidikan.
 
-sehingga jenis pekerjaan yang dapat mereka jalani pun sangat terbatas.
+Karena hambatan itu, jenis pekerjaan yang dapat mereka jalani pun sangat terbatas.
 
-Karena itu, pembentuk undang-undang pada masa tersebut, demi melindungi penyandang disabilitas netra yang berada pada posisi lemah,
+Karena itu, pembentuk undang-undang pada masa tersebut berupaya melindungi penyandang disabilitas netra yang berada pada posisi lemah.
 
-menyusun undang-undang yang melindungi kesempatan kerja dan hak atas penghidupan (生存權) bagi penyandang disabilitas netra.
+Mereka menyusun undang-undang yang melindungi kesempatan kerja dan hak atas penghidupan (生存權) bagi penyandang disabilitas netra.
 
-Namun seiring perkembangan zaman dan meluasnya pasar konsumen,
+Namun seiring perkembangan zaman dan meluasnya pasar konsumen, pandangan masyarakat berubah.
 
-lambat laun muncul pendapat bahwa melindungi hak penyandang disabilitas netra semata justru terlalu membatasi hak atas pekerjaan bagi orang yang bukan penyandang disabilitas netra.
+Lambat laun muncul pendapat bahwa melindungi hak penyandang disabilitas netra semata justru terlalu membatasi hak atas pekerjaan bagi orang yang bukan penyandang disabilitas netra.
 
 Dalam perdebatan mengenai persoalan hak atas pekerjaan antara penyandang disabilitas netra dan orang yang bukan penyandang disabilitas netra ini, muncul banyak pendapat yang menentang.
 
-Sebagai contoh, timbul pemikiran apakah ketentuan tertulis yang hanya memperbolehkan penyandang disabilitas netra bekerja di bidang usaha pijat bukan merupakan diskriminasi terhadap orang yang bukan penyandang disabilitas netra,
+Sebagai contoh, timbul pemikiran apakah ketentuan tertulis yang hanya memperbolehkan penyandang disabilitas netra bekerja di bidang usaha pijat bukan merupakan diskriminasi terhadap orang yang bukan penyandang disabilitas netra.
 
-dan dipertanyakan pula apakah ketentuan tersebut benar-benar berkontribusi pada perlindungan pekerjaan dan penghidupan penyandang disabilitas netra.
+Dipertanyakan pula apakah ketentuan tersebut benar-benar berkontribusi pada perlindungan pekerjaan dan penghidupan penyandang disabilitas netra.
 
 Pada akhirnya para hakim konstitusi (大法官) menyatakan bahwa pasal undang-undang yang hanya memperbolehkan penyandang disabilitas netra bekerja di bidang usaha pijat bertentangan dengan konstitusi (違憲).
 
 ​
 
-Serupa dengan itu, di Korea Selatan, tempat banyak penyandang disabilitas netra menyambung hidup melalui pijat,
+Serupa dengan itu, di Korea Selatan banyak penyandang disabilitas netra menyambung hidup melalui pijat.
 
-pada umumnya hanya penyandang disabilitas netra yang telah memperoleh sertifikat keahlian yang boleh bekerja di bidang usaha pijat.
+Pada umumnya hanya penyandang disabilitas netra yang telah memperoleh sertifikat keahlian yang boleh bekerja di bidang usaha pijat.
 
-Memang pemerintah Korea Selatan pernah pula menerbitkan sertifikat keahlian pijat bagi orang yang bukan penyandang disabilitas netra,
+Memang pemerintah Korea Selatan pernah pula menerbitkan sertifikat keahlian pijat bagi orang yang bukan penyandang disabilitas netra.
 
-dan banyak penyandang disabilitas netra menggelar unjuk rasa keras karena khawatir kehilangan mata pencaharian.
+Banyak penyandang disabilitas netra menggelar unjuk rasa keras karena khawatir kehilangan mata pencaharian.
 
-Sampai saat ini di Korea Selatan tetap hanya penyandang disabilitas netra yang telah memperoleh kualifikasi yang boleh bekerja di bidang usaha pijat,
+Sampai saat ini di Korea Selatan tetap hanya penyandang disabilitas netra yang telah memperoleh kualifikasi yang boleh bekerja di bidang usaha pijat.
 
-dan apabila seseorang memungut biaya pijat dari orang lain tanpa memiliki kualifikasi tersebut,
+Apabila seseorang memungut biaya pijat dari orang lain tanpa memiliki kualifikasi tersebut, ia dapat dikenai pidana.
 
-berdasarkan Undang-Undang Layanan Medis Korea Selatan (醫療法) ia dapat dijatuhi pidana penjara paling lama 3 tahun.
+Berdasarkan Undang-Undang Layanan Medis Korea Selatan (醫療法), pidana itu berupa penjara paling lama 3 tahun.
 
 Adapun orang yang bukan penyandang disabilitas netra yang menjalankan usaha pijat dapat dijatuhi pidana penjara paling lama 5 tahun.
 
@@ -105,19 +105,19 @@ Adapun orang yang bukan penyandang disabilitas netra yang menjalankan usaha pija
 
 Dari hal tersebut dapat diketahui bahwa setiap negara menempuh cara yang berbeda-beda untuk melindungi hak dan kepentingan berbagai kelompok masyarakat.
 
-Perlindungan hak dan kepentingan setiap kelompok terus berubah mengikuti perkembangan zaman,
+Perlindungan hak dan kepentingan setiap kelompok terus berubah mengikuti perkembangan zaman.
 
-dan pembentuk undang-undang berupaya menemukan penyelesaian yang relatif seimbang untuk mengatasi benturan kepentingan.
+Pembentuk undang-undang berupaya menemukan penyelesaian yang relatif seimbang untuk mengatasi benturan kepentingan.
 
 ​
 
-Dewasa ini banyak orang memilih pijat untuk meredakan tekanan hidup,
+Dewasa ini banyak orang memilih pijat untuk meredakan tekanan hidup.
 
-namun dalam prosesnya peristiwa pelecehan seksual (性騷擾) maupun perbuatan tidak senonoh (猥褻) terus saja terjadi.
+Dalam proses itu, peristiwa pelecehan seksual (性騷擾) maupun perbuatan tidak senonoh (猥褻) terus saja terjadi.
 
-Apa yang semula sekadar niat untuk melepas penat dengan berpijat
+Apa yang semula sekadar niat untuk melepas penat dengan berpijat tidak selalu berakhir dengan rasa lega.
 
-justru dapat berakhir menjadi trauma seumur hidup karena mengalami pelecehan seksual.
+Pijat itu justru dapat berakhir menjadi trauma seumur hidup karena mengalami pelecehan seksual.
 
 Apabila Anda merasakan ketidaknyamanan atau hal yang janggal selama proses pijat di Taiwan,
 

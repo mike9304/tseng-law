@@ -1,0 +1,75 @@
+WO-F-id r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-id-r4
+date: 2026-09-23
+no git add/commit/push
+
+## Rows applied (12)
+
+id-a
+1 P1 009 — the two fault sentences were swapped inside the existing blocks. Company fault: the worker can claim severance. Employee fault: the employer can be released from paying it. This matches Article 14 in the same file (employer misconduct still requires severance on a voluntary resignation).
+4 P2 006 — the massage sentence is no longer split so the next block starts with lowercase "di". Each block is now a full sentence. The blocks were not merged.
+6 P2 007 — "Dugaan dan fakta yang dipastikan sendiri secara langsung dibedakan." → "Bedakan dugaan dari fakta yang telah diverifikasi secara langsung."
+7 P3 — "dolar Taiwan baru" → "dolar baru Taiwan" (gloss 新臺幣 kept). See systemic count. The bio gloss moved with this row; the token did not.
+
+id-b
+2 P2 016 — renunciation now affects heirs in the next rank, or representation in the succession, rather than "heirs of the person who renounced".
+5 P2 018 — "tergantung apakah" → "bergantung pada apakah" (kantor pusat di luar negeri).
+6 P2 010 — "perkara ketika seorang mahasiswa" → "perkara seorang mahasiswa … yang mengalami cedera".
+7 P2 011 — "persiapan penjualan tidak menjadi lengkap" → "pendirian perusahaan saja tidak menuntaskan persiapan yang diperlukan untuk menjual."
+8 P2 011 — the manufacturer holds the originals, or a secure electronic store or a secure cloud store is used; "yang aman" is no longer only on "awan", and "digunakan" is no longer forced onto the manufacturer.
+9 P2 015 — "contoh membuka usaha" → "mengambil pembukaan usaha rumah makan di Kota Taipei sebagai contoh".
+10 P2 016 — "Kedudukan wali tidak sama dengan orang tua yang melaksanakan hak asuh" (a guardian is not that parent). The duty list is unchanged.
+
+Also, same pattern as id-b 5, one guidance sentence: pricing "tergantung jumlah pihak" → "bergantung pada jumlah pihak" (src/data/international-guidance-content.ts, Indonesian pricing paragraph only).
+
+## Rows skipped (6)
+
+id-a 2 P2 — do not promote Pertanyaan 16–20 to ## headings. See reviewer-wrong.
+id-a 3 P2 and id-b 3 P2 — do not delete U+200B lines or 005 `**​**`. checkBlocks requires the Indonesian ZWSP count to equal the Korean source. Removing a ZWSP-only line also drops a block. 0 removed.
+id-a 5 P2 — the aside "(bukan Pasal 10 Undang-Undang Pajak Usaha)" stays. The visible statute name is already the withholding-rate standard, Pasal 3, and the URL was not touched. Korean link text is 영업세법 제10조, so dropping "10" fails `numbers missing 10` (confirmed again by the checker rule; r3 already reproduced the failure). The parenthetical is the form the checker accepts.
+id-a 8 P3 — "TWD 1.57M" left byte-identical (ACCEPTED-ROUND pin). The parenthetical gloss did change to "1,57 juta dolar baru Taiwan" under row 7. The suggested "1,57 juta dolar baru Taiwan (TWD 1,57 juta)" was not used: it would replace the pinned token and add a second amount.
+id-b 1 P1 — "Uraian di atas merupakan saran perancangan kontrak" left as written. See reviewer-wrong.
+id-b 4 P2 — headings stay numbered 7 then 8. See reviewer-wrong.
+
+## Systemic patterns
+
+- "dolar Taiwan baru" → "dolar baru Taiwan": 17.
+  001 ×2 (FAQ + body), 002 ×1, 003 ×2, 004 ×1, 005 ×2, 006 ×1, 007 ×2 (FAQ + body), 010 ×1, 011 ×2 (FAQ + body), 017 ×2 (FAQ + body), team bio ×1.
+  Left: "mobil barang baru", "aset tersebut baru", and "denda administratif baru" (those "baru" are not the currency name). 新臺幣 glosses unchanged. "TWD 1.57M" unchanged.
+- Mid-sentence breaks whose next block started in lowercase, completed inside the existing blocks (not merged): 27.
+  006 ×15, 009 ×12. Includes the quoted "kalau berbicara tentang pijat," / "di Taiwan" pair.
+  Left in 003, 005, 008, 013, and 015: the same one-clause-per-block shape as the Korean source, including lines that continue a sentence. Merging them fails the block check. Those files were not the sentence-cut pattern named for 006 and 009.
+- "tergantung" without "pada": 2 (018 "tergantung apakah"; guidance pricing "tergantung jumlah"). "ketergantungan pada" in 017 left (noun, already has "pada"). "bergantung pada" already used elsewhere was left.
+- English result-clause calque "tidak menjadi lengkap": 1 (011, the row above). Other "tidak menjadi" lines are "tidak menjadi pemilik" / "tidak menjadi pasti" and were left.
+- U+200B and 005 empty bold lines: 0 removed (checker).
+- R2–R10 otherwise already held from prior rounds. Rechecked: consultation stays English, Mandarin (中文), Japanese, and Korean; no interpreter, reply-time, free-meeting, or result promise was turned positive; Wei Tseng stays unmarked (Indonesian does not inflect; no Bapak); no OUR TEAM / OFFICES / Q&A chrome left in the Indonesian pack. No test expectation needed updating.
+
+## §Verify
+
+```
+neighbour      PASS   
+hanzi          PASS   han=55
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+---MARKERS---
+       0
+---TSC---
+TSC_OK
+---VITEST---
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+---GIT---
+      19
+```
+
+Commands were the work-order set. Checker tail above is the last 8 lines (018 PASS details + summary PASS 18/18). Markers 0. TSC_OK. Tests 160 files / 3202 passed, no × lines. git status --short | wc -l = 19 at verify time, before this log file existed. The 19 includes the three paths that were already dirty at the start of the lane (WO-F-id.txt, r4/id-a.md, r4/id-b.md) plus the 16 files edited here.
+
+## Reviewer got wrong (not applied)
+
+- id-a 2. Q16–Q20 are body lines in the English file ("Q16. After an accident…") and in the Korean file, not markdown headings. Promoting them would fail checkHeadings. The Indonesian "Pertanyaan 16." lines already match that shape.
+- id-b 1. English: "The foregoing is contract-design advice." Korean: "이상은 계약 설계 제안입니다." The Indonesian sentence matches both. The preceding paragraphs are about branch versus subsidiary registration in the source as well. Replacing the sentence with "hanya membandingkan prosedur pendirian" would drop the source's characterization. The next sentence already says that choosing a form does not make a transaction lawful and does not prevent disputes.
+- id-b 4. English and Korean headings also jump from section 5 to section 7, then 8. Renumbering 7→6 and 8→7 would diverge from the source and change digits the checker counts.

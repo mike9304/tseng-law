@@ -1,0 +1,101 @@
+WO-F-ur r4 — Grok 4.7 fix lane
+date: 2026-09-23
+workspace: /Users/son7/Projects/tseng-law-fix-ur-r4
+scope: Urdu columns 001–018. Guidance pack, inquiry copy, and GUIDANCE_LLMS_NOTICES.ur were not rewritten (the only guidance row is the pinned bio figure; consultation and confidential notices stay verbatim substrings). No test file changed: nothing in src/lib/__tests__ or src/data/__tests__ pinned the strings that moved.
+
+## Rows applied
+
+30 of 35 P1/P2 rows. No P3 rows in either review.
+
+ur-a (7 of 11):
+2 P1 007 — Judgment 112-Hsien-Pan-4’s two time tests, in the FAQ answer and in the section 4 opening (the same sentence). “سنگین وجہ کے پیدا ہونے یا کافی مدت تک جاری رہنے” → a considerable period has elapsed since the cause arose, or the cause has continued for a considerable period. Wording: “سنگین وجہ کے پیدا ہونے کے بعد کافی مدت گزر چکی ہے، یا وہ کافی مدت تک جاری رہی ہے” (وجہ is feminine, so not the reviewer’s “پیدا ہوئے”).
+4 P2 007 — the legislative period set by judgment no. 4 of ROC year 112 has elapsed; the proviso text itself had not been deleted as of 25 جولائی 2026. “ہو” (possibility) → “گزر چکی ہے” / “حذف نہیں ہوئی تھی”. No new Gregorian digit; 112 and 4 are the judgment number already in the English paragraph.
+5 P2 008 — both sentences: highest-performing salesperson in central Taiwan, and B as the top performer in central Taiwan. Anecdote about the male client, not a firm claim.
+6 P2 005 — remittance through a relative or an acquaintance in Korea. The in-person sentence above was left. Korea stays because the English fact pattern is Korean banks.
+7 P2 002 — predicate completed to “بنیاد بنتے ہیں۔”. See reviewer-wrong: the file already had بنتے, not the noun بنت.
+8 P2 006 — the three-year Korea penalty now has its own subject inside that line (“جو بغیر قابلیت کے … لے، اسے … 3 سال”). The line above is a complete sentence so the comma fragment is not left hanging. Blocks not merged. The “کوریا کا قاعدہ ہے، ہر ملک کا عام قاعدہ نہیں” frame stays.
+9 P2 003 — “بیان کرنی چاہیے” → “بیان کرنا چاہیے” (object موقف is masculine). “بتانے چاہیے” stays (خطرات is masculine plural). Line 110 “رقم … بیان کرنی چاہیے” stays (رقم is feminine). Not a title for Wei Tseng.
+
+ur-b (23 of 24):
+1 P2 010 — the article does not itself establish the headline facts.
+2 P2 010 — whether punitive damages are actually awarded, and in what amount.
+3 P2 011 — whether supplemental documents are requested (اضافی کاغذات), not تصحیح. The FAQ in the same file already said اضافی کاغذات and was left.
+4 P2 012 — A attempted the pass; he did not merely want to.
+5 P2 012 — the assessments considered the attempt, not a completed pass.
+6 P2 016 — solatium (تسلی کا معاوضہ (慰撫金)), not compensation in general.
+7 P2 017 — the due-diligence bullet is حقِ حبس (lien). FAQ and the repeated body paragraph keep رہن یا گروی for security interests, as the row allows.
+8 P2 010 — “ہیں۔؛” → “ہیں؛”, in the same sentence as row 1.
+9 P2 010 — کے لیے covers all three heads (lost earning capacity, lost income during recovery, non-pecuniary loss).
+10 P2 011 — “معاہدے کے کام کی تقسیم” (کام is masculine) and “قانون کے ذمہ دار کو”.
+11 P2 012 — “راستہ دینے کے نشان کا انتظار”.
+13 P2 013 — جو and تو split: if the business items can be run from a commercial office, establishment there is possible. Same block.
+14 P2 014 — “باقی قانونی سوالات” (plural).
+15 P2 015 — “دوسری قسم کی نقل” in both sentences (نقل is feminine).
+16 P2 016 — “شریک حیات کی باقی ماندہ جائیداد” in the FAQ question and the section 3 heading. The section body opening already said “جوڑے کی باقی ماندہ جائیداد” and was not rewritten.
+17 P2 016 — the izafat no longer has “قانونی معیار سے” sitting between کا and موازنہ.
+18 P2 010 — whether each item is recognized, and in what amount.
+19 P2 011 — “تائیوان کا کاروباری”, not “تائیوان کی جانب کا کاروباری”.
+20 P2 014 — “ایسی وجہ سے جو ملازم کو منسوب نہ ہو” in the FAQ question, the FAQ answer, the section 7 heading, and the repeated body paragraph; “وجوہات … جو ملازم کو منسوب نہ ہوں” in the later sentence of that section.
+21 P2 014 — “دفعہ 15 کی الگ شق”, not another article of Article 15.
+22 P2 014 — “متبادل عملے کی وہ دستیابی جس کا آجر دعویٰ کرتا ہے”.
+23 P2 018 — “غیر فہرست شدہ کمپنی اپنے ضوابط”.
+24 P2 012 — same block: Taiwan traffic keeps to the right, so the pass is on the left. Digit 0.5 unchanged. Not a statement about the reader’s country’s law.
+
+## Rows skipped
+
+ur-a 1 P1 — do not restore “courts generally impose about 3 / 4 / 6 months”. RULEBOOK R3 and ACCEPTED-ROUND (“do not make a result sentence positive”). Both 003 sentences stay in the R3 form: some judgments imposed those terms, and there is no typical or guaranteed outcome. Same skip as r3.
+ur-a 3 P2 — do not restore “pursue the maximum compensation available”. RULEBOOK R3 maps that sentence to compensation the facts and evidence support. The existing line already says that. Restoring زیادہ سے زیادہ would make the result sentence positive.
+ur-a 10 P2 — “TWD 1.57M” kept byte-identical (guidance-team-bios test pins it; R12 / ACCEPTED-ROUND). The suggested lakh spelling “TWD 15,70,000” is also unparsed grouping.
+ur-a 11 P2 — lakh/crore grouping not applied (R14 and ACCEPTED-ROUND; the checker does not parse 30,00,000). Western commas left in 001, 002, 003, 004 and the other columns.
+ur-b 12 P2 — U+200B not deleted. The checker requires the target ZWSP count to match the Korean source, and a line whose only character is U+200B counts as a non-empty block. Deleting them fails blocks (`ZWSP n → 0` and a block-count drop). Left in place: 003=52, 005=8, 006=4, 008=10, 009=5, 013=5, 015=3.
+
+## Systemic patterns and how many instances changed
+
+A usual court sentence written as “not a usual sentence” (ur-a verdict): 0 changed. Both 003 sentences left in the R3 form. See skipped ur-a 1.
+Judgment 112-Hsien-Pan-4’s first time test reduced to the cause’s arising: 2 changed (007 FAQ answer and the section 4 opening). The legislative-period paragraph is row 4, not a third copy of this phrase.
+Amounts at or above one lakh, and “TWD 1.57M”: 0 changed. See skipped ur-a 10 and 11.
+U+200B, including lines whose only character is that space: 0 changed. See skipped ur-b 12. The spaces match the Korean source; they are not Urdu-only.
+Izafat taking the gender of the wrong noun: 11 changed.
+  011 “معاہدے کی کام” → “کے کام”: 1.
+  001 “کی کام کی اجازت” (same کی before masculine کام): 4 (body, heading, the repeated body sentence, the link label). “تکنیکی کام” was not touched.
+  015 “قسم کا نقل” → “کی نقل”: 2.
+  016 “شریک حیات کا باقی ماندہ جائیداد”: 2 (FAQ question, section 3 heading). Section body opening already agreed and was left.
+  007 “دفعہ 1030-1 کا باقی ماندہ جائیداد” (کا before feminine جائیداد, same break): 2 (FAQ and the repeated body sentence) → “کے تحت باقی ماندہ جائیداد”.
+A reason not attributable to the worker rendered as “a reason that cannot be placed on the worker”: 5 changed, all in 014 (question, FAQ answer, section 7 heading, repeated body paragraph, the وجوہات sentence). No other file had the calque.
+Doubled کمپنی: 2 changed in 018 (the unlisted-company articles sentence, and the representative-office cell where “غیر ملکی کمپنی” was stacked onto “کمپنی قانون”). The cell now matches the English “under Article 386 of the Company Act” without a second کمپنی. Digit 386 unchanged.
+
+R2–R10 and R12–R17 were already in this corpus (prior rounds; this round’s verdicts are 4/5 and confirm feminine Wei Tseng, the consultation lock, Korea as a labelled example, and Pakistani Urdu orthography). This pass did not reopen them. No Arabic ي/ك in the columns. Hangul remains only inside frontmatter `url` of 008 and 009 (R16, not rendered). Guidance, inquiry copy, and the llms notice were not edited, so disclosure-parity regexes and the `llms.txt` token were left as pinned.
+
+018’s numbers WARN “extra in translation (14): 1×14” is the same pre-existing tail as r3. This pass did not add those digits. Summary stays PASS.
+
+## §Verify
+
+```
+hanzi          PASS   han=57
+numbers        WARN   extra in translation (14): 1×14
+                      sourceCount=25 targetCount=39
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+===== MARKERS =====
+       0
+===== TSC =====
+TSC_OK
+===== VITEST =====
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+===== GIT =====
+      19
+```
+
+Commands were the work-order block (checker `tail -8`, marker count, `tsc --noEmit`, vitest grep, `git status --short | wc -l`). The 19 is before this log file existed (16 column files, the pre-existing `WO-F-ur.txt` modification, and the two untracked r4 review files).
+
+## Reviewer got wrong (not applied, or applied only in the corrected form)
+
+- ur-a 1 and ur-a 3. The English does say courts generally impose those terms, and that the attorney should pursue the maximum available. Those are the sentences RULEBOOK R3 deliberately softened, and ACCEPTED-ROUND forbids making a result sentence positive. Restoring “عام طور پر” and “زیادہ سے زیادہ معاوضہ” would undo that. Left in the R3 wording.
+- ur-a 7. The quote “بنیاد بنت۔” drops ے (U+06D2). The file already had “بنیاد بنتے۔”, which is the verb بنتے plus the Urdu full stop, not the noun بنت (“daughter”). The finite auxiliary ہیں was still missing, so the suggested “بنتے ہیں” was applied. The diagnosis “daughter, verb missing” is wrong; the missing piece was ہیں only.
+- ur-a 10 and 11. Pakistani lakh grouping and spelling out 1.57 million are reasonable for a Pakistan reader. The checker does not parse lakh grouping, and a test pins the bytes `TWD 1.57M`. Not applied.
+- ur-b 12. The zero-width spaces are real, and a line that contains only U+200B looks blank. They are not stray Urdu defects: the Korean source has the same counts, and the checker fails if the counts diverge. Not deleted.
+- ur-b 16, “also the opening of that section”. The section 3 body already opened with “جوڑے کی باقی ماندہ جائیداد”, where کی agrees with جائیداد. Only the FAQ question and the heading had “شریک حیات کا”. The opening was left.

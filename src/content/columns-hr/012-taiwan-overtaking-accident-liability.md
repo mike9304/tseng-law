@@ -25,7 +25,7 @@ Osim toga ne smije se pretjecati na mjestima ili dionicama s oznakom škole ili 
 
 Da bi se u istom traku pretjelo vozilo ispred, vozač stražnjeg vozila mora najprije kratko dvaput trubiti ili jednom trepnuti dugim svjetlima. Truba i svjetla ne smiju se rabiti ponavljano da se vozilo ispred prisili da ustupi put.
 
-Stražnje vozilo smije pretjecati tek nakon što je vozilo ispred usporilo i sklonilo se ustranu ili je rukom ili desnim pokazivačem smjera pokazalo namjeru da ustupi put.
+Stražnje vozilo smije pretjecati tek nakon što je vozilo ispred usporilo i sklonilo se u stranu ili je rukom ili desnim pokazivačem smjera pokazalo namjeru da ustupi put.
 
 Zatim pretječuće vozilo mora uključiti lijevi pokazivač smjera, proći slijeva uz razmak od najmanje 0,5 metara od vozila ispred te, nakon osiguranja sigurne udaljenosti, uključiti desni pokazivač smjera i sigurno se vratiti na izvorni trak.
 

@@ -40,7 +40,7 @@ Predstavništvo je uporište koje u dopuštenom okviru obavlja promatranje trži
 
 Pri usporedbi oblika organizacije stoga treba uzeti u obzir ne samo opseg odgovornosti, nego i strukturu kapitala, raspodjelu i prijenos dobiti, poreze, sektorska dopuštenja, radnopravne odnose i pretpostavke sudjelovanja u javnoj nabavi. Ako određeni natječaj ili dopuštenje zahtijeva tajvansku pravnu osobu, kapital, reference ili upis, sudjelovanje se ne može izvoditi samo iz naziva oblika organizacije; treba ocijeniti mjerodavnu odredbu i objavu.
 
-Napomena za pojedine zemlje — sporazum o porezu na dohodak Tajvan–Koreja (所得稅協定): Sporazum između Tajvana i Koreje stupio je na snagu 27. 12. 2023. i primjenjuje se od 1. 1. 2024. Ako su ispunjene pretpostavke primjene sporazuma, najviša stopa u državi izvora kod dividendi, kamata i licencijskih naknada iznosi u svakom slučaju 10 %. Dobit poduzeća načelno se oporezuje na strani države sjedišta, osim osobito tada kad na drugom području postoji stalna poslovna jedinica u smislu sporazuma (常設機構, PE); stvarni način obavljanja djelatnosti treba međutim ocijeniti najprije. Ovo tumačenje tiče se činjeničnih stanja s vezom s Korejom koja ispunjavaju uvjete sporazuma; nije pravilo koje vrijedi za ulagače iz svih zemalja. Postoji li između Tajvana i Vaše zemlje takav sporazum i što sadrži, treba provjeriti zasebno.
+Napomena za pojedine zemlje — sporazum o porezu na dohodak Tajvan–Koreja (所得稅協定): Sporazum između Tajvana i Koreje stupio je na snagu 27. 12. 2023. i primjenjuje se od 1. 1. 2024. Ako su ispunjene pretpostavke primjene sporazuma, za dividende, kamate i licencijske naknade najviša je stopa u državi izvora za svaku od tih vrsta 10 %. Dobit poduzeća načelno se oporezuje samo u državi sjedišta, osim, među ostalim, kada na drugom području postoji stalna poslovna jedinica u smislu sporazuma (常設機構, PE); stvarni način obavljanja djelatnosti treba međutim ocijeniti najprije. Ovo tumačenje tiče se činjeničnih stanja s vezom s Korejom koja ispunjavaju uvjete sporazuma; nije pravilo koje vrijedi za ulagače iz svih zemalja. Postoji li između Tajvana i Vaše zemlje takav sporazum i što sadrži, treba provjeriti zasebno.
 
 U stalnu poslovnu jedinicu u smislu sporazuma mogu spadati stalna postrojenja, kao što su sjedište vodstva, podružnica i ured, građevinski radovi koji traju dulje od 6 mjeseci, usluge koje u bilo kojem razdoblju od 12 mjeseci zbrojeno premašuju 183 dana, i zastupnici koji ponovljeno koriste ovlast za sklapanje ugovora. Ta 4 tipa imaju različite pretpostavke; ako postoji stalno mjesto ili djelatnost zastupnika, ocjena je potrebna neovisno o danima usluga. Sam broj 183 dana stoga se ne može smatrati odlučujućim o nastanku stalne poslovne jedinice ni o oporezivanju dobiti poduzeća.
 
@@ -52,11 +52,11 @@ Osnivanje tajvanskog kćerinskog društva načelno započinje prethodnim pregled
 
 1. Prethodni pregled kineskog naziva društva i djelatnosti (公司名稱及所營事業預查)
 
-2. Javnobilježnički zapis i legalizacija stranih isprava, kao što je punomoć (委任書), i po potrebi ovjera tajvanskim predstavništvom u inozemstvu (駐外館處驗證)
+2. Javnobilježnička ovjera ili legalizacija stranih isprava, kao što je punomoć (委任書), i po potrebi ovjera tajvanskim predstavništvom u inozemstvu (駐外館處驗證)
 
 3. Ulagački zahtjev kod Odjela za pregled ulaganja Ministarstva gospodarstva (經濟部投資審議司) (po potrebi)
 
-4. Otvaranje računa pripremnog odbora društva (公司籌備處帳戶)
+4. Otvaranje pripremnog računa društva (公司籌備處帳戶)
 
 5. Prijenos ulagačkih sredstava iz inozemstva
 
@@ -70,9 +70,9 @@ Osnivanje tajvanskog kćerinskog društva načelno započinje prethodnim pregled
 
 10. Daljnje etape, kao uvoz i izvoz, sektorska dopuštenja, dozvola za rad i boravak (po potrebi)
 
-Prethodni pregled kineskog naziva društva i djelatnosti prije upisa potvrđuje naziv koji se ima rabiti i namjeravanu djelatnost. Uspjeh tog pregleda ne znači da je zasebno dopuštenje potrebno za djelatnost već izdano, niti da se može odmah djelovati na predviđenom mjestu. Ako je potreban zahtjev za strano ulaganje, ulagač, iznos ulaganja, predmet uloga i poslovni plan moraju se slagati s podlogama pregleda.
+Prethodni pregled kineskog naziva društva i djelatnosti prije upisa potvrđuje naziv koji se ima rabiti i namjeravanu djelatnost. Uspjeh tog pregleda ne znači da je zasebno dopuštenje potrebno za djelatnost već izdano, niti da se može odmah djelovati na predviđenom mjestu. Ako je potreban zahtjev za strano ulaganje, ulagač, iznos ulaganja, društvo u koje se ulaže i poslovni plan moraju se slagati s podlogama pregleda.
 
-Isprave sastavljene u inozemstvu, kao što su punomoć, potvrda o postojanju pravne osobe (法人存續證明) i isprave o ovlaštenju za zastupanje, mogu prema mjestu sastavljanja i naravi isprave zahtijevati javnobilježnički zapis, legalizaciju ili ovjeru tajvanskim predstavništvom u inozemstvu. Nadalje treba provjeriti slažu li se prijevod, osoba ovlaštena za potpis i naziv pravne osobe sa zahtjevom. Prema državljanstvu ulagača i prema tome je li riječ o fizičkoj ili pravnoj osobi, isprave se mogu razlikovati; prije izdavanja korisno je urediti rok valjanosti i put legalizacije.
+Isprave sastavljene u inozemstvu, kao što su punomoć, potvrda o postojanju pravne osobe (法人存續證明) i isprave o ovlaštenju za zastupanje, mogu prema mjestu sastavljanja i naravi isprave zahtijevati javnobilježničku ovjeru, legalizaciju ili ovjeru tajvanskim predstavništvom u inozemstvu. Nadalje treba provjeriti slažu li se prijevod, osoba ovlaštena za potpis i naziv pravne osobe sa zahtjevom. Prema državljanstvu ulagača i prema tome je li riječ o fizičkoj ili pravnoj osobi, isprave se mogu razlikovati; prije izdavanja korisno je urediti rok valjanosti i put legalizacije.
 
 Pri otvaranju pripremnog računa i prijenosu ulagačkih sredstava banka u okviru identifikacije klijenta može ocijeniti stvarnog vlasnika (實質受益人) i podrijetlo sredstava. Ako se nalogodavac, svrha prijenosa, sadržaj odobrenja ulaganja i račun primatelja ne slažu, mogu biti potrebna dodatna objašnjenja ili ispravci. Nakon prijenosa slijedi utvrđivanje stvarno uloženog iznosa, zatim upis društva i porezna registracija te prema bankovnom postupku pretvorba pripremnog računa u redoviti račun.
 
@@ -116,9 +116,9 @@ Zahtjev za stalni boravak (永久居留) od stranih osoba načelno zahtijeva, me
 
 ## 5. Porezi i sporazum o porezu na dohodak Tajvan–Koreja
 
-Opća stopa tajvanskog poreza na promet (營業稅) iznosi 5 %; prijava se obično podnosi jednom u 2 mjeseca. Opća stopa poreza na dohodak poduzeća koja posluju radi dobiti (營利事業所得稅) iznosi 20 %, no stvarno oporezivanje ovisi o oporezivom dohotku i o mjerodavnim odredbama. Stopa obustave na izvoru prema unutarnjem tajvanskom pravu od dividendi isplaćenih nerezidentima iznosi 21 %. Na dividende koje ispunjavaju pretpostavke primjene i postupak sporazuma o porezu na dohodak Tajvan–Koreja primjenjuje se najviša stopa 10 %. Konkretnu prijavu i obustavu na izvoru treba voditi prema rezidenciji, stvarnom vlasniku dohotka (受益所有人), vrsti dohotka i ispravama sporazuma.
+Opća stopa tajvanskog poreza na promet (營業稅) iznosi 5 %; prijava se obično podnosi jednom u 2 mjeseca. Opća stopa poreza na dobit poslovnih subjekata (營利事業所得稅) iznosi 20 %, no stvarno oporezivanje ovisi o oporezivom dohotku i o mjerodavnim odredbama. Stopa obustave na izvoru prema unutarnjem tajvanskom pravu od dividendi isplaćenih nerezidentima iznosi 21 %. Na dividende koje ispunjavaju pretpostavke primjene i postupak sporazuma o porezu na dohodak Tajvan–Koreja primjenjuje se najviša stopa 10 %. Konkretnu prijavu i obustavu na izvoru treba voditi prema rezidenciji, stvarnom vlasniku dohotka (受益所有人), vrsti dohotka i ispravama sporazuma.
 
-Porez na promet i porez na dohodak poduzeća koja posluju radi dobiti razlikuju se prema predmetu poreza i načinu prijave; porez koji se primjenjuje na promet i porez koji se primjenjuje na oporezivi dohodak treba razlikovati. Pri isplati dividendi, kamata, licencijskih naknada ili naknada za usluge stranim dioničarima ili povezanim poduzećima treba unaprijed ocijeniti narav plaćanja i položaj osobe koja prima, unutarnja pravila obustave na izvoru i moguću primjenu sporazuma o porezu na dohodak.
+Porez na promet i porez na dobit poslovnih subjekata razlikuju se prema predmetu poreza i načinu prijave; porez koji se primjenjuje na promet i porez koji se primjenjuje na oporezivi dohodak treba razlikovati. Pri isplati dividendi, kamata, licencijskih naknada ili naknada za usluge stranim dioničarima ili povezanim poduzećima treba unaprijed ocijeniti narav plaćanja i položaj osobe koja prima, unutarnja pravila obustave na izvoru i moguću primjenu sporazuma o porezu na dohodak.
 
 Sporazum o porezu na dohodak Tajvan–Koreja stupio je na snagu 27. 12. 2023. i primjenjuje se od 1. 1. 2024.; na kamate i licencijske naknade koje ispunjavaju pretpostavke također se primjenjuje najviša stopa u državi izvora 10 %. Pri ocjeni prava oporezivanja dobiti poduzeća treba uzeti u obzir sva četiri gore navedena tipa stalne poslovne jedinice. Osim dana usluga treba zajedno ocijeniti stalna postrojenja, trajanje radova, ovlast zastupnika za sklapanje ugovora i stvarnu djelatnost.
 
@@ -133,7 +133,7 @@ Ograničena stopa sporazuma ne primjenjuje se automatski zbog same činjenice da
 - [Uputa Ministarstva financija Tajvana o sporazumu o porezu na dohodak Tajvan–Koreja](https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10)
 - [Odredbe o stopi obustave na izvoru od dividendi isplaćenih nerezidentima](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Uputa o ciklusu prijave tajvanskog poreza na promet](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/business-tax/collection-prcedure/oVL9pwM)
-- [Uputa o stopi tajvanskog poreza na dohodak poduzeća koja posluju radi dobiti](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR)
+- [Uputa o stopi tajvanskog poreza na dobit poslovnih subjekata](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR)
 - [Uputa o oporezivanju prihoda od dividendi stranih osoba](https://www.etax.nat.gov.tw/etwmain/alien-tax-service/alien-tax-faq/KK9Y76o)
 - [Uputa Imigracijske uprave Tajvana (內政部移民署) o stalnom boravku](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Uputa grada Taipeia o prethodnoj ocjeni mjesta poslovanja](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)

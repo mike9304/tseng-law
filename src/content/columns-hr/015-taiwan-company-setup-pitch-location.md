@@ -13,7 +13,7 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 ![Naslovna slika](../images/015-taiwan-company-setup-pitch-location/featured-01.jpg)
 
-(Zahtjevi mjesnih samouprava na Tajvanu razlikuju se; sljedeći tekst primjer je otvaranja ugostiteljskog pogona u gradu Taipei (臺北).)
+(Zahtjevi mjesnih samouprava na Tajvanu razlikuju se; sljedeći tekst primjer je otvaranja restorana u gradu Taipeiu (臺北).)
 
 ![](../images/015-taiwan-company-setup-pitch-location/img-01.jpg)
 
@@ -21,9 +21,9 @@ Kad započinjete ugostiteljsku djelatnost, prvi je problem pronaći adresu mjest
 
 Osim tržišnih uvjeta valja uzeti u obzir i zoniranje.
 
-Daljnja važna točka jest dopuštenost restoranskog pogona.
+Daljnja važna točka jest dopuštenost restorana.
 
-Treba provjeriti leži li adresa u zoni u kojoj je pogon restorana dopušten.
+Treba provjeriti leži li adresa u zoni u kojoj restoran smije poslovati.
 
 ​
 
@@ -45,15 +45,15 @@ Ako je teško osobno doći u zemljišnoknjižni ured (地政事務所), izvadak 
 
 Može se zatražiti pomoć poznanika na Tajvanu, najmodavca, posrednika u prometu nekretnina ili odvjetnice odnosno odvjetnika.
 
-Ako rezultat provjere pokaže da restoran nije moguć, kasnije pri upisu društva (公司登記) gradska uprava možda neće prihvatiti zahtjev za upis.
+Ako rezultat provjere pokaže da restoran ondje nije dopušten, kasnije pri upisu društva (公司登記) gradska uprava možda neće prihvatiti zahtjev za upis.
 
 Stoga ovoj stvari posvetite pozornost.
 
 ​
 
-**Pitanje. Moraju li sve djelatnosti sustavom „prethodne provjere mjesta poslovanja“ provjeravati je li pogon moguć?**
+**Pitanje. Moraju li sve djelatnosti sustavom „prethodne provjere mjesta poslovanja“ provjeravati je li poslovanje na tom mjestu dopušteno?**
 
-Svim se djelatnostima preporučuje potvrditi sustavom „prethodne provjere mjesta poslovanja“ (營業場所預先查詢) je li pogon moguć.
+Svim se djelatnostima preporučuje potvrditi sustavom „prethodne provjere mjesta poslovanja“ (營業場所預先查詢) je li poslovanje na tom mjestu dopušteno.
 
 Pri upisu društva međutim se često upisuje više djelatnosti odjednom i često se želi upisati oko 10 djelatnosti jednim podneskom.
 
@@ -65,7 +65,7 @@ Od 1. 1. 2023. pri zahtjevu za upis osnivanja, premještaja sjedišta ili dopune
 
 Niže navedeni popis „djelatnosti koje su predmetom službene provjere“ (主動查詢之營業項目) označuje djelatnosti koje Trgovački ured tijekom pregleda upisa provjerava po službenoj dužnosti dodatno (隨案主動查詢), kad djelatnost figurira u zahtjevu, a nedostaje u priloženom rezultatu; činjenica da djelatnost nije na tom popisu ne znači oslobođenje od provjere.
 
-Ako se otvori na mjestu gdje restoran nije moguć, kasnije može uslijediti upravna novčana kazna (罰鍰) nadležnog tijela.
+Ako se restoran otvori na mjestu gdje to nije dopušteno, kasnije može uslijediti upravna novčana kazna (罰鍰) nadležnog tijela.
 
 ![„djelatnosti koje su predmetom službene provjere“ (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 

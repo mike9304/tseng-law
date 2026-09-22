@@ -83,9 +83,9 @@ Ponekad, kada je krivnja na objema stranama radnog odnosa,
 
 izbije li spor,
 
-prema tome tko prvi otkaže ugovor s dostatnim razlogom,
+Tada je mjerodavno koja je strana prva otkazala.
 
-zakonska otpremnina ne mora biti isplaćena, ili može biti zahtijevana.
+strana koja prva otkaže ugovor s dostatnim razlogom može otpremninu ne isplatiti ili je zahtijevati.
 
 Stoga u sporovima rada (勞資糾紛) na Tajvanu
 

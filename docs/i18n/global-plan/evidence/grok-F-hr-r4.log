@@ -1,0 +1,157 @@
+WO-F-hr r4 — Grok 4.7 fix lane
+Workspace: /Users/son7/Projects/tseng-law-fix-hr-r4
+Inputs: RULEBOOK-FIX.md R2–R17, ACCEPTED-ROUND.md, rounds/r4/hr-a.md (34 rows), hr-b.md (48 rows).
+English meaning: src/content/columns-en/<same file>. Checker compares to Korean src/content/columns.
+No git add / commit / push.
+
+Rows applied: 76 of 82 (hr-a 30, hr-b 46 including the partial on hr-b 30)
+Rows skipped: 5 (listed below)
+Already correct, no edit: 1 (hr-b 27)
+
+## Applied
+
+hr-a
+2 007 FAQ + body: je li od nastanka teškog razloga proteklo znatno vrijeme ili je li taj razlog trajao znatno vrijeme (2).
+3 Kaohsiung office: korporativno upravljanje (guidance pack).
+4 vršenje prava i obveza. Guidance (1, maloljetnoj djeci). 007: the named term (3), vrši ta prava i te obveze (1), izmjene vršenja (1). 016 sweep: ne može vršiti (2), i dalje vrši (2), vrši prava i obveze (3), o vršenju roditeljske odgovornosti (1), plural ne mogu vršiti plus mogu li se prava stvarno vršiti (1 sentence). Checklist “izvršavanja prava i ovrhe” in 007 and creditor “izvršavati prava” in 004 left (not the parental term).
+5 001 heading: Otvaranje pripremnog računa društva (公司籌備處帳戶).
+6 001: Javnobilježnička ovjera ili legalizacija; body javnobilježničku ovjeru (2).
+7 001: društvo u koje se ulaže (investee).
+8 001 treaty pivot: načelno se oporezuje samo u državi sjedišta, osim, među ostalim, kada …
+9 porez na dobit poslovnih subjekata (營利事業所得稅). 001: 3, 002: 1, 004: 7. Treaty name sporazum o porezu na dohodak (所得稅協定) left. Poduzeća koja posluju radi dobiti (營利事業) as the taxpayer left.
+10 “in each case” 10 %: 001 and 004 §6 (2). Other “u svakom slučaju” (statute of limitations, money leaving the account) left.
+11 004: imenovanje likvidatora. Porezna prijava and raspodjela ostatka imovine were already in the same sentence.
+12 007 FAQ + body: bračni drug s krivnjom uvijek može ili nikada ne može tražiti razvod (2).
+13 008: rekavši da društvo ima teškoće.
+14 009: strana koja prva otkaže … može otpremninu ne isplatiti ili je zahtijevati. Preceding ZWSP block made a sentence (Tada je mjerodavno koja je strana prva otkazala.) so it no longer ends on a comma.
+15 “i tada kada” = also/even when: guidance “pa i kada se stranke…” and 008 “pa i kada radnik sam ode” (2). “tek tada kada” and “samo tada kada” left (they are temporal).
+16 guidance: razjasnit ćemo s Vama koja je stručna osoba za taj dio potrebna.
+17 guidance: Vaš se zahtjev čuva u pohrani te usluge koja nije javno dostupna. Not a substring of GUIDANCE_LLMS_NOTICES.hr; notices left.
+18 guidance: Vanjske poveznice služe orijentaciji. Serbian strings in the same file not touched.
+19 računovodstveni tretman / porezni tretman. 002: računovodstveno 3, porezno 3. 004: računovodstveni tretman 1, tretiraju prema glavnoj poslovnici 1, porezni tretman 1.
+20 003: podnijeti prijavu i sačuvati dokaze (sigurnost was already in the sentence).
+21 003: ne zamjenjuju propisane radnje.
+22 004 listing: i sama ne može biti uvrštena na Tajvanu (上市) FAQ + body (2); sama podružnica ne može biti uvrštena na tržište (1).
+23 004: iz samog broja 5 % ne može se izvesti…
+24 004: cijenu po načelu nepristrane transakcije.
+25 004: kao suugovaratelj. “Isto vrijedi ako…” was already there.
+26 007: Izmjena uzdržavanja djeteta ne zahtijeva da joj prethodi…
+27 003: kaznena su djela koja se gone samo na prijavu.
+30 007: uzročnu vezu (2).
+31 008 FAQ + blockquote: Za svaku navršenu godinu staža (2). Digit 1 removed; checker numbers still pass (the statutory “za 1 godinu” / “jedan mjesec” pair remains).
+32 008 bare B in the quoted positions: pozvao g. B, g. B bi se trebao, Inače bi g. B, predali su g. B (4). Nominative “B je …” line openings left.
+33 008: da on sam nije otišao.
+
+hr-b
+1 010: klauzulama o isključenju.
+2 011: glavni distributer ili distributer.
+3 014 opening: služi tome da se utvrdi obveza radnika da ostane… Kept the three English payment types (troškovi obuke, nagrada za potpis, nagrada za ostanak) and the glosses.
+4 014: razuman razmjer.
+5 014 vesting: kako radniku pripada dio… and radniku konačno pripada (2). “Kome se pripisuje razlog prestanka” left (attribution of the reason, not vesting).
+6 016 trust: Imovinu u trustu, ugovor o trustu, pravo koristi iz trusta, isprave o trustu, Planiranje koje rabi trust, list item trust (信託). povjerenik (受託人) left.
+7 016: kandidata čiji se gospodarski interes sukobljava s interesom djeteta. Comma before the next “ili kandidata” so the three candidates stay a list.
+8 016: te međunarodne ugovore i pravo druge države.
+9 018 FAQ + body: stvarno poslovanje, postrojenja, osoblje i strukturu posla (2).
+11 010: dužnost brige za sigurnost (安全義務) in the case discussion and the closing paragraph (2). “mora osigurati da” (the statute’s duty to ensure) left.
+12 010: fotografirati ozlijeđeni dio tijela. Did not repeat “u mjeri u kojoj je moguće”, already the start of the sentence.
+13 neimovinska šteta. 010 section 5 and the damages list (2), 016 naknada za neimovinsku štetu (1), and the same term in 003 (4) and 007 (3).
+14 011: upravna novčana kazna može se izreći tek tada kad se u tom roku ne ispravi.
+15 011: niti da su označavanje ili reklama proizvoda u skladu s pravom.
+16 013: račun pripremnog ureda društva (公司籌備處帳戶).
+17 013: dvije isprave za utvrđivanje identiteta.
+18 013: rad s nepunim radnim vremenom.
+19 014: Prije izjave o odlasku, odbitka od plaće, …
+20 016 FAQ + body: jedini mjerodavni nasljednici (2).
+21 016: utvrđivanje dugova i postupovnih rizika.
+22 016: U pravnom poslu; prema obliku pravnog posla (2).
+23 covered with hr-a 4.
+24 017: sam naziv ugovora ne izbjegava primjenu propisa o prijevozu.
+25 017 FAQ: posrednika u prijevozu. Body špedicija (運送承攬) left.
+26 018: pa kontrola ne mora odgovarati omjeru uloga. Same paragraph: stabilnoj strukturi kontrole. “pravo nadzora” and nadzornik (監察人) left.
+28 010: Izdaci stvarno nastali za pregled…
+29 012: u stranu.
+30 013 partial, inside the existing block (not merged): Ako pregovori s najmodavcem ne teku glatko, dolazi u obzir sljedeće. Next block still the notarial authentication / extra deposit sentence. ZWSP in 013 and 015 not removed.
+31 014: jesu li snošeni njezini troškovi.
+32 015: Ako se restoran otvori na mjestu gdje to nije dopušteno. Parallel “restoran ondje nije dopušten” in the inquiry-result sentence.
+33 015: u gradu Taipeiu (臺北). Office-card label Taipei in offices.ts left (nominative label, not this locative).
+34 016: dužnosti glede opsega ovlasti.
+35 016: ishod tog zahtjeva možda treba najprije uzeti u obzir. “uravnoteženo odraziti” (the outcome should reflect the child’s needs) left.
+36 010: ima razinu sigurnosti.
+37 010: rok se može razlikovati. Did not copy the reviewer’s full clause; the if-sentence already states the other basis and the other limitation rules.
+38 011: Pripremu ne treba usmjeriti samo na prodaju uz naplatu.
+39 011: mogu trajno dokumentirati.
+40 011: Posao na PIF-u.
+41 013: Djelatnica jedne tajvanske banke (already feminine; “osoba” was the stiff category).
+42 pogon = restaurant. 013: u kojoj restoran smije poslovati. 015: otvaranja restorana, dopuštenost restorana, restoran smije poslovati, and both “je li poslovanje na tom mjestu dopušteno” (the FAQ is every business, not only a restaurant). 001 “dopuštenja koja se tiču pogona” left (plant/product licences, not a restaurant).
+43 014 doubled isplaćeno: FAQ with the gloss and the body without it (2).
+44 raspored for a timetable. 014: raspored obuke, program tečaja / program + raspored (3). 016: u zasebnom rasporedu, u jednom rasporedu (2). 018: raspored osnivanja. 004: raspored zahtjeva, rasporede prijave (2). 003: postupovnom rasporedu. 9 instances.
+45 014: obično prođe.
+46 014: čije je vrijeme utrošeno.
+47 014: Odredbe treba sastaviti tako da odražavaju…
+48 017: Ako postoje osobite okolnosti, produženje je moguće najdulje za daljnjih 6 mjeseci.
+
+Cheap extra inside the zahvaćanje pattern: 014 “točnije utvrditi stvarni teret”.
+
+R2–R17 spot check, no further edits: consultation stays English / kineski (中文) / japanski / korejski and negative (no interpreter, no reply-time, no free meeting, no result). Wei Tseng stays feminine (odvjetnica, ovlaštena, Zastupala, željela bih, složila sam se). Male manager and client in 008 and the male client in 010 left. Team chrome already Croatian (NAŠ TIM, UREDI, Pravni asistent, Cjeloviti profil (na engleskom)). TWD 1.57M byte-identical. ROC years already “godine Republike Kine”. No Czech function-word leak (neighbour PASS on all 18). Dates and dotted thousands left as the checker already accepts. llms.txt hr notices not rewritten (pinned sentences unchanged). No disclosure-regex edit.
+
+## Skipped
+
+hr-a 1. Suggested drop of “(članak 10.)” on the G0340028&flno=3 link. Restored. Korean link text is 영업세법 제10조 and the English label is “Article 10 of the Value-Added and Non-Value-Added Business Tax Act”. Removing 10 failed numbers (`missing from translation (1): 10` on that link). The withholding-rate description the reviewer wanted was already the rest of the label. URL unchanged.
+hr-a 28. Q16–Q20 are body lines, not headings. Promoting them to ## would change heading levels against the Korean source. Not done.
+hr-a 29 and the U+200B part of the 003/005/006/008/009/013/015 verdicts. ZWSP counts already match Korean (003: 52, 005: 8, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3). Removing them, or the empty `**​**` lines in 005, fails the block/ZWSP check. Wording inside those blocks was edited only where a row asked for wording.
+hr-a 34. “TWD 1.57M” kept byte-identical (ACCEPTED-ROUND; a test pins it).
+hr-b 10. “Riječ je o savjetu o oblikovanju ugovora.” English §4 has the same sentence (“The foregoing is contract-design advice.”). Replacing it with a description of branch-versus-subsidiary registration would leave the English meaning. Not applied. See reviewer disagreements.
+
+hr-b 30 merge of the landlord sentence with the next paragraph: not merged (block count). The comma fragment was repaired inside its own block.
+
+## Systemic patterns
+
+- Porez na dohodak for 營利事業所得稅 → porez na dobit poslovnih subjekata: 11 (001: 3, 002: 1, 004: 7).
+- “u svakom slučaju” = in each case, the 10 % cap: 2 (001, 004).
+- zahvaćanje = accounting/tax treatment → tretman / tretiraju: 8 (002: 6, 004: 2), plus 016 utvrđivanje dugova (1) and 014 utvrditi stvarni teret (1). “zahvaćene podloge” and “zahvaćenim državama” (affected) left.
+- izvršavanje/snošenje as the name of 未成年子女權利義務之行使或負擔 → vršenje/vršiti prava i obveze: guidance 1, 007: 5, 016: 9.
+- “i tada kada” = also when: 2 (guidance, 008).
+- Bare “B” after “g. B” in the oblique spots the review named: 4.
+- osiguranje = the duty to ensure safety: 2. Insurance uses of osiguranje left.
+- kalendar = timetable → raspored: 9 (003, 004×2, 014×3, 016×2, 018).
+- pripisuje = vesting → pripada: 2. Attribution of the reason for termination left.
+- pogon = a restaurant: 6 (013: 1, 015: 5).
+- povjerenstvo = a trust: 4 phrases in 016. Trustee povjerenik left.
+- nematerijalna šteta → neimovinska šteta: 10 (003: 4, 007: 3, 010: 2, 016: 1).
+- U+200B blank lines: 0 removed.
+
+## Reviewer disagreements (not applied)
+
+- hr-b 10. The sentence is a faithful translation of the English source sentence in the same place. The section heading already says the section compares branch and subsidiary registration. Replacing the sentence would correct the English source, not the Croatian.
+- hr-b 27. The file already has “Stvarno priznanje i visina ovise o nužnosti” (plural ovise). The quote “ovisi” does not match the text.
+- hr-a 1, on the law the URL opens. flno=3 may not be “article 10” of the page that loads, but both the Korean link text and the English label call it Article 10 of the business-tax act, and the checker counts that 10. The Croatian label keeps (članak 10.) for that reason. 001’s copy of the same URL has no article number because its Korean source does not put 제10조 in that link.
+
+## §Verify
+
+node scripts/check-column-translation.mjs --dir src/content/columns-hr --lang hr 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=145
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-hr src/data | wc -l
+
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+
+      20

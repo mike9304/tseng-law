@@ -33,9 +33,9 @@ Mora provjeriti i ne uvode li inozemni subjekti sredstva pod drugim izgovorom.
 
 Pri sastavljanju ulagačkog plana nije potrebno navesti točnu adresu društva; dovoljno je navesti područje (primjer: grad Taipei). ​
 
-Kad se kasnije u banci otvara račun pripremnog odbora društva (公司籌備處帳戶), mnoge banke međutim pregledavaju ugovor o najmu (租賃契約) i obavljaju pregled adrese društva na licu mjesta.
+Kad se kasnije u banci otvara račun pripremnog ureda društva (公司籌備處帳戶), mnoge banke međutim pregledavaju ugovor o najmu (租賃契約) i obavljaju pregled adrese društva na licu mjesta.
 
-Zaposlena osoba jedne tajvanske banke osobno mi je rekla sljedeće.
+Djelatnica jedne tajvanske banke osobno mi je rekla sljedeće.
 
 U posljednje vrijeme mnogi stranci nakon otvaranja računa nestanu, pa se otvaranje računa ocjenjuje sve strože.
 
@@ -61,7 +61,7 @@ U tom je roku također dovoljno vremena otvoriti pripremni račun društva i pre
 
 Moguće je.
 
-Banka općenito zahtijeva dvostruku potvrdu identiteta.
+Banka općenito zahtijeva dvije isprave za utvrđivanje identiteta.
 
 A bez boravišne iskaznice može se kod tajvanske imigracijske uprave zatražiti „**obrazac osnovnih podataka jedinstvenog identifikacijskog broja**“ (統一證號基本資料表).
 
@@ -77,7 +77,7 @@ Povjerenstvo Ministarstva gospodarstva pregledava pozadinu ulagača.
 
 Pregled međutim nije pretjerano strog.
 
-Može se navesti raznoliko radno iskustvo, uključujući povremeni rad.
+Može se navesti raznoliko radno iskustvo, uključujući rad s nepunim radnim vremenom.
 
 To iskustvo valja izložiti detaljno kako bi se osobe koje obavljaju pregled mogle uvjeriti.
 
@@ -101,7 +101,7 @@ Najmodavci se stoga ustručavaju iznajmljivati strancima.
 
 Stoga preporučujem da se mjesto poslovanja potraži rano.
 
-Ako pregovori s najmodavcem ne teku glatko,
+Ako pregovori s najmodavcem ne teku glatko, dolazi u obzir sljedeće.
 
 Po potrebi se može predložiti javnobilježnička ovjera ugovora o najmu (公證) ili dodatna jamčevina.
 
@@ -115,7 +115,7 @@ Npr. ako je djelatnost ugostiteljstvo, a namjerava se unajmiti uredski prostor, 
 
 Kao što je već navedeno, banka pregledava ugovor o najmu i obavlja pregled adrese društva na licu mjesta.
 
-Nadalje, pri konačnom upisu društva gradska uprava (市政府) također zahtijeva da adresa upisa leži u zoni u kojoj je pogon restorana dopušten.
+Nadalje, pri konačnom upisu društva gradska uprava (市政府) također zahtijeva da adresa upisa leži u zoni u kojoj restoran smije poslovati.
 
 Ako je riječ o uredskom prostoru, upis društva (公司登記) tada nije moguć.
 

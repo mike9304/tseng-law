@@ -61,7 +61,7 @@ Die folgenden Titel von Medienberichten, Online-Beiträgen und rechtlichen Erlä
 
 **Erlitt ein koreanischer männlicher Student beim Personal Training einen Bandscheibenriss durch Deadlift mit 90 kg?**
 
-Dieser Fall ist praktisch bedeutsam, weil er zeigt, dass die Haftung nicht schon deshalb feststeht, weil eine Verletzung im Fitnessstudio eingetreten ist. Inhalt der Sicherheitspflicht (安全義務) des Dienstleisters, konkrete Anleitung und Verletzung der Sorgfaltspflicht (注意義務), Kausalzusammenhang zwischen Verletzung und Handlung sowie Umfang des Schadens werden anhand der Unterlagen jedes Falls beurteilt. Voraussetzungen und Fristen des Strafverfahrens und des Zivilverfahrens unterscheiden sich, sodass Aufzeichnungen von unmittelbar nach dem Unfall an getrennt zu ordnen sind.
+Dieser Fall ist praktisch bedeutsam, weil er zeigt, dass die Haftung nicht schon deshalb feststeht, weil eine Verletzung im Fitnessstudio eingetreten ist. Inhalt der Sicherheitspflicht (安全義務) des Dienstleisters, konkrete Anleitung und Verletzung der Sorgfaltspflicht (注意義務), Kausalzusammenhang zwischen Verletzung und Handlung sowie Umfang des Schadens werden anhand der Unterlagen jedes Falls beurteilt. Voraussetzungen und Fristen des Strafverfahrens und des Zivilverfahrens unterscheiden sich, sodass die Aufzeichnungen von Anfang an getrennt zu ordnen sind.
 
 Die folgende Darstellung ist allgemeine Information zu Streitigkeiten über Fitnessstudio-Verletzungen in Taiwan und keine Rechtsberatung für einen Einzelfall. Tatsächliche Rechte und Vorgehensweisen können je nach Vertragsverhältnis, Unfallhergang, Ursache und Grad der Verletzung, Verhalten der Parteien, Versicherungsbedingungen, gesicherten Beweisen und anwendbarem Recht abweichen.
 
@@ -87,7 +87,7 @@ Um Haftung, Kausalzusammenhang und Schaden darzulegen, empfiehlt es sich, nicht 
 
 Videoaufnahmen können nach Ablauf der Aufbewahrungsfrist überschrieben oder aus anderen Gründen unbrauchbar werden. Deshalb kann geprüft werden, das Fitnessstudio durch ein Schreiben mit Inhaltszertifizierung der Post (存證信函) oder ein Anwaltsschreiben (律師函), das benötigten Zeitraum, Ort und Kameraposition konkret nennt, zur Sicherung aufzufordern. Solche Schreiben sind eine praktische Maßnahme, um festzuhalten, was wann verlangt wurde. Sie begründen für sich keine neue Rechtspflicht der Gegenseite zur Speicherung und verhindern die Löschung nicht; allein der Umstand, dass Aufnahmen nicht mehr vorhanden sind, führt auch nicht automatisch zu einer nachteiligen gerichtlichen Würdigung.
 
-Besteht die Möglichkeit, dass der Unfallhergang einen Straftatbestand erfüllt, kann zügig Anzeige erstattet werden, damit die Ermittlungsbehörde (偵查機關) prüft, ob eine rechtmäßige Sicherungsgrundlage besteht. Eine Anzeige bedeutet nicht, dass Polizei oder Staatsanwaltschaft zwingend CCTV sichern; deshalb sind auch Unterlagen, die die Partei selbst sichern kann, wie medizinische Daten und Kommunikationsaufzeichnungen, mitzunehmen.
+Besteht die Möglichkeit, dass der Unfallhergang einen Straftatbestand erfüllt, kann zügig Anzeige erstattet werden, damit die Ermittlungsbehörde (偵查機關) prüft, ob eine rechtmäßige Sicherungsgrundlage besteht. Eine Anzeige bedeutet nicht, dass Polizei oder Staatsanwaltschaft zwingend Überwachungsaufnahmen (CCTV) sichern; deshalb sind auch Unterlagen, die die Partei selbst sichern kann, wie medizinische Daten und Kommunikationsaufzeichnungen, mitzunehmen.
 
 ## 4. Welche Schadenspositionen können gegenüber dem Fitnessstudio geltend gemacht werden?
 

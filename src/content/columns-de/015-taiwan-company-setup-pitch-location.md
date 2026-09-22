@@ -19,17 +19,17 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Wenn Sie ein Gastronomieunternehmen beginnen, ist die erste Frage die Suche nach der Geschäftsadresse (營業地址).
 
-Neben der Marktlage
+Neben der Marktlage ist die zulässige Nutzung der Adresse zu prüfen.
 
-ist ein weiterer wichtiger Gesichtspunkt,
+Ein weiterer wichtiger Gesichtspunkt ist die Gebietszulässigkeit.
 
-ob die betreffende Adresse in einem Gebiet liegt, in dem der Betrieb „Restaurantgewerbe“ zulässig ist.
+Zu prüfen ist, ob die betreffende Adresse in einem Gebiet liegt, in dem der Betrieb „Restaurantgewerbe“ zulässig ist.
 
 ​
 
-Wenn Sie das Unternehmen in der Stadt Taipeh beginnen,
+Wenn Sie das Unternehmen in der Stadt Taipeh beginnen, steht ein Vorabprüfungssystem zur Verfügung.
 
-können Sie das System der „Vorabprüfung des Geschäftsorts“ (營業場所預先查詢) des Amts für Handel der Stadt Taipeh (臺北市商業處) nutzen.
+Sie können das System der „Vorabprüfung des Geschäftsorts“ (營業場所預先查詢) des Amts für Handel der Stadt Taipeh (臺北市商業處) nutzen.
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
@@ -41,9 +41,9 @@ Für die Abfrage müssen Sie jedoch die „Abschrift der Gebäudeeintragung zwei
 
 Jede Person kann bei einem Grundbuchamt (地政事務所) die „Abschrift der Gebäudeeintragung zweiter Art“ zu einer beliebigen Adresse beantragen.
 
-Wenn Sie das Grundbuchamt (地政事務所) nicht selbst aufsuchen können,
+Wenn Sie das Grundbuchamt (地政事務所) nicht selbst aufsuchen können, kann eine andere Person helfen.
 
-können Sie taiwanesische Bekannte, die Vermieterseite, eine Immobilienmaklerin oder einen Immobilienmakler oder eine Anwältin oder einen Anwalt um Hilfe bitten.
+Sie können taiwanesische Bekannte, die Vermieterseite, eine Immobilienmaklerin oder einen Immobilienmakler oder eine Anwältin oder einen Anwalt um Hilfe bitten.
 
 Ergibt die Abfrage, dass Restaurantbetrieb unmöglich ist, kann die Stadtverwaltung die spätere Gesellschaftseintragung (公司登記) ablehnen.
 
@@ -67,11 +67,11 @@ Die nachstehende Liste der „von Amts wegen abzufragenden Geschäftszweige“ (
 
 Wird in einem Lokal eröffnet, in dem Restaurantbetrieb unmöglich ist, kann später eine Geldbuße (罰鍰) der zuständigen Behörde folgen.
 
-!["von Amts wegen abzufragende Geschäftszweige" (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
+![„von Amts wegen abzufragende Geschäftszweige“ (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
-"von Amts wegen abzufragende Geschäftszweige" (主動查詢之營業項目)
+„von Amts wegen abzufragende Geschäftszweige“ (主動查詢之營業項目)
 
-Das ist der Hinweis. Bei weiteren Fragen können Sie sich an eine taiwanesische Anwältin oder einen taiwanesischen Anwalt wenden; eine Antwortfrist wird nicht zugesagt.
+Damit ist die Darstellung abgeschlossen. Bei weiteren Fragen können Sie sich an eine taiwanesische Anwältin oder einen taiwanesischen Anwalt wenden; eine Antwortfrist wird nicht zugesagt.
 
 Die Regeln der Verwaltungsbehörden können häufig geändert werden; vor der Eintragung der juristischen Person empfiehlt es sich, die neuesten Vorschriften zu prüfen.
 

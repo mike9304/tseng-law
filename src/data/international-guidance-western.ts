@@ -99,7 +99,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Seitensprache und Beratungssprache sind nicht dasselbe',
           paragraphs: [
             'Diese Seite ist auf Deutsch geschrieben, aber die Beratung durch eine Anwältin oder einen Anwalt erfolgt nur in den vier Beratungssprachen Englisch, Chinesisch (中文), Japanisch und Koreanisch. Das Lesen der deutschen Hinweise bedeutet nicht, dass das Gespräch mit der Anwältin oder dem Anwalt auf Deutsch stattfindet.',
-            'Wir versprechen keinen Dolmetscher, keine Antwortfrist und keinen Termin über diese Seite. Wenn Sie keine der vier Sprachen nutzen können, erläutert die Seite „Kontakt“, wie wir eine Kommunikationsweise prüfen.',
+            'Wir versprechen keinen Dolmetscher, keine Antwortfrist und keinen Termin über diese Seite. Wenn Sie keine der vier Sprachen sprechen können, erläutert die Seite „Kontakt“, wie wir eine Kommunikationsweise prüfen.',
           ],
         },
         {
@@ -219,7 +219,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ANWÄLTINNEN UND ANWÄLTE',
       title: 'Internationales Team von Hovering',
-      description: 'Profile der Anwältinnen und Anwälte, der Betriebsleitung und der Wirtschaftsprüfungspartner von Hovering.',
+      description: 'Profile der Anwältinnen und Anwälte, der Leitung Korea und der Wirtschaftsprüfungspartner von Hovering.',
       intro: '',
       sections: [],
     },
@@ -248,7 +248,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Die Beratung kann entgeltlich sein',
           paragraphs: [
-            'Die Beratung durch eine Anwältin oder einen Anwalt kann eine entgeltliche Leistung sein. Diese Seite sagt nicht, dass das erste Gespräch kostenfrei ist, und kein Teil darf so gelesen werden.',
+            'Die Beratung durch eine Anwältin oder einen Anwalt kann eine entgeltliche Leistung sein. Diese Seite sagt nicht, dass das erste Gespräch kostenfrei ist, und kein Teil dieser Seite darf so verstanden werden.',
             'Ist die Beratung entgeltlich, werden Höhe und Zahlungsweise mitgeteilt, bevor sie stattfindet.',
           ],
         },
@@ -265,7 +265,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'KONTAKT',
       title: 'Wie Sie die Kanzlei erreichen',
       description:
-        'Seitensprache, Beratungssprachen, das Vorgehen, wenn Sie keine der vier Sprachen nutzen können, und was diese Seite nicht zusagt.',
+        'Seitensprache, Beratungssprachen, das Vorgehen, wenn Sie keine der vier Sprachen sprechen können, und was diese Seite nicht zusagt.',
       intro:
         'Bevor Sie uns schreiben, unterscheiden Sie bitte die folgenden drei Punkte. Sie werden oft vermischt, bedeuten aber Unterschiedliches.',
       sections: [
@@ -281,7 +281,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Wenn Sie keine der vier Beratungssprachen nutzen können',
+          heading: 'Wenn Sie keine der vier Beratungssprachen sprechen können',
           paragraphs: [
             'Im Kontaktformular können Sie „Kommunikationsweise muss bestätigt werden“ wählen. Wir antworten, um zu prüfen, ob ein praktikabler Kommunikationsweg besteht; eine Leistung in einer anderen Sprache wird nicht gewährleistet und eine Antwortfrist nicht zugesagt.',
             'Das ist nur ein Prüfungsschritt, kein Versprechen. Wir versprechen keinen Dolmetscher, keine Leistung auf Deutsch oder in einer anderen Sprache außerhalb der vier genannten Sprachen, und nicht, dass wir jede Sache annehmen.',
@@ -335,7 +335,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
             'Nein. Diese Hinweise sind auf Deutsch geschrieben, aber die Beratung durch eine Anwältin oder einen Anwalt erfolgt nur auf Englisch, Chinesisch (中文), Japanisch und Koreanisch. Wir versprechen auch keinen Dolmetscher. Schriftliche Übersetzung ist etwas anderes: Der Originaltext, den Sie schreiben, wird so gespeichert und nicht automatisch übersetzt.',
         },
         {
-          question: 'Was, wenn ich keine der vier Sprachen nutzen kann?',
+          question: 'Was, wenn ich keine der vier Sprachen sprechen kann?',
           answer:
             'Wählen Sie beim Senden der Anfrage „Kommunikationsweise muss bestätigt werden“. Wir antworten, um eine Kommunikationsweise zu prüfen, aber eine Leistung in einer anderen Sprache wird nicht gewährleistet. Das ist ein Prüfungsschritt, kein Versprechen, dass wir in einer anderen Sprache arbeiten können.',
         },
@@ -357,7 +357,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Was, wenn mein Anliegen sehr eilig ist?',
           answer:
-            'Nennen Sie die Frist oder das Datum auf einem amtlichen Schreiben am Anfang Ihrer Zusammenfassung, damit diese Daten bei der Prüfung sichtbar sind. Diese Seite hat keinen Notfallkontakt und sagt keine Antwortfrist zu; wenn Ihr Anliegen nicht warten kann, sollten Sie parallel andere Wege an Ihrem Ort suchen.',
+            'Nennen Sie die Frist oder das Datum auf einem amtlichen Schreiben am Anfang Ihrer Zusammenfassung, damit diese Daten bei der Prüfung sichtbar sind. Diese Seite hat keinen Notfallkontakt und sagt keine Antwortfrist zu; wenn Ihr Anliegen nicht warten kann, sollten Sie parallel anderweitig Hilfe an Ihrem Wohnort suchen.',
         },
       ],
     },
@@ -409,7 +409,7 @@ export const germanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Benachrichtigung und Empfangsnummer',
           paragraphs: [
-            'Wird eine Anfrage erfolgreich gesendet, benachrichtigt das System die Kanzlei. Ist diese Benachrichtigung noch nicht bestätigt, bleibt Ihr Text gespeichert und geht nicht verloren.',
+            'Wird eine Anfrage erfolgreich gesendet, benachrichtigt das System die Kanzlei. Ist der Eingang dieser Meldung bei der Kanzlei noch nicht bestätigt, bleibt Ihr Text gespeichert und geht nicht verloren.',
             'Die Empfangsnummer dient dazu, Ihre Anfrage in unseren Unterlagen wiederzufinden. Sie wird nach dem Speichern angezeigt; Sie können sie bei einer erneuten Kontaktaufnahme nennen.',
           ],
         },

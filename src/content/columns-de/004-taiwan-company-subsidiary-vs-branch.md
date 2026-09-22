@@ -172,7 +172,7 @@ Die endgültige Wahl ist sicherer zu prüfen, wenn Fachleute in Taiwan und am Si
 ## Amtliche Quellen
 
 - [Rechtsdatenbank des taiwanesischen Justizministeriums — Gesellschaftsgesetz](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
-- [Rechtsdatenbank des taiwanesischen Justizministeriums — Artikel 10 des Umsatzsteuergesetzes (營業稅法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
+- [Rechtsdatenbank des taiwanesischen Justizministeriums — Vorschrift zum Quellensteuersatz auf Dividenden an Nichtansässige (Artikel 10)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Rechtsdatenbank des taiwanesischen Justizministeriums — Einkommensteuergesetz](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [Taiwanesisches Finanzministerium — Hinweis zur Quellensteuer auf Dividenden an ausländische Gesellschafterinnen und Gesellschafter](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [Taiwanesisches Finanzministerium — Auslegung zum Gewinn der Zweigniederlassung einer ausländischen Gesellschaft](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)

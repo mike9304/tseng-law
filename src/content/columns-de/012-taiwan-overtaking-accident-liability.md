@@ -37,13 +37,13 @@ In einem anonymisierten Fall dieser Kanzlei fuhr Motorradfahrer A mit Beifahrer 
 
 ![Unfallskizze, die den Überholweg des Motorrads und der zwei vorausfahrenden Fahrzeuge auf einer Bergstraße zeigt](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A versuchte, beide Fahrzeuge zu überholen, fuhr auf die Gegenfahrbahn und beschleunigte. Auch Fahrzeug Nr. 2 bereitete sich darauf vor, Fahrzeug Nr. 1 zu überholen: weniger als 1 Sekunde nach Setzen des Blinkers fuhr es auf die Gegenfahrbahn. Dem Motorrad fehlte der Bremsweg, sodass es mit Fahrzeug Nr. 2 zusammenstieß.
+A versuchte, beide Fahrzeuge zu überholen, fuhr auf die Gegenfahrbahn und beschleunigte. Auch Fahrzeug Nr. 2 bereitete sich darauf vor, Fahrzeug Nr. 1 zu überholen: weniger als 1 Sekunde nach Setzen des Blinkers fuhr es auf die Gegenfahrbahn. Dem Motorrad blieb zu wenig Zeit zum Bremsen, sodass es mit Fahrzeug Nr. 2 zusammenstieß.
 
 B erlitt schwere Kopfverletzungen und verstarb am Unfallort; A verlor das Bewusstsein und wurde ins Krankenhaus gebracht.
 
 Die Angehörigen von A und B sahen zunächst den plötzlichen Spurwechsel von Fahrzeug Nr. 2 als Hauptursache des Zusammenstoßes. Die Sache führte zur Klage, und im Verfahren wurden mehrere Gutachten (鑑定) zum Unfall erstellt.
 
-Nach dem Gutachtenergebnis trug A die Hauptverantwortung für diesen Zusammenstoß. Diese Schlussfolgerung war auf die Tatsachen dieses Falles beschränkt. Das Gutachten berücksichtigte gemeinsam, dass A zwei hintereinander fahrende vorausfahrende Fahrzeuge überholen wollte, dass er auf die Gegenfahrbahn fuhr, dass er mit einer Geschwindigkeit fuhr, die kaum Bremsweg ließ, dass die vorgeschriebenen Hup- und Scheinwerfersignale unterblieben, ferner die Spurwechselbewegung von Fahrzeug Nr. 2, die Straßen- und Spurstruktur sowie weitere gesicherte Beweise.
+Nach dem Gutachtenergebnis trug A die Hauptverantwortung für diesen Zusammenstoß. Diese Schlussfolgerung war auf die Tatsachen dieses Falles beschränkt. Das Gutachten berücksichtigte gemeinsam, dass A zwei hintereinander fahrende vorausfahrende Fahrzeuge überholen wollte, dass er auf die Gegenfahrbahn fuhr, dass er mit einer Geschwindigkeit fuhr, die kaum Zeit zum Bremsen ließ, dass die vorgeschriebenen Hup- und Scheinwerfersignale unterblieben, ferner die Spurwechselbewegung von Fahrzeug Nr. 2, die Straßen- und Spurstruktur sowie weitere gesicherte Beweise.
 
 Dass in einzelnen Fällen solche Gutachtenergebnisse ergehen, bedeutet nicht, dass das einmalige Unterlassen eines vorgeschriebenen Signals stets die Haftung festlegt. Die Fahrlässigkeit (過失) bei einem Überholunfall hängt vom Unfallort, der Spurgestaltung, der Geschwindigkeit, den Fahrzeugbewegungen, den Signalen, den Zeitabständen, der Sicht und weiteren Beweisen ab.
 

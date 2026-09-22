@@ -188,7 +188,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 - [حکم دادگاه عالی تایوان (臺灣高等法院) شماره 477 سال 109 گاه‌شماری مینگو (民國109年) در تجدیدنظر کیفری ساده (上易字)](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [ماشین‌حساب ارزش فعلی هوفمان نزد یوآن قضایی (司法院)](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [مادهٔ 195 قانون مدنی](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [حکم دادگاه ناحیهٔ تاویوان شماره 236 سال 112 گاه‌شماری مینگو (民國112年)](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [حکم دادگاه ناحیهٔ تاویوان، شعبهٔ اختصاری ژونگلی، شمارهٔ 236 سال 112 (112年度壢簡字第236號)](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [مادهٔ 188 قانون مدنی](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [مادهٔ 284 قانون کیفری (刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [قانون بیمهٔ اجباری مسئولیت خودرو](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)

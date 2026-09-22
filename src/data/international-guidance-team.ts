@@ -1304,7 +1304,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'MEESKOND',
     title: 'Hoveringi rahvusvaheline meeskond',
     description:
-      'Hoveringi advokaatide, Korea tegevjuhi ja seotud audiitorbüroo profiilid.',
+      'Hoveringi advokaatide, Korea tegevuse juhi ja seotud audiitorbüroo profiilid.',
     representativeTitle: 'Juhtiv advokaat',
     teamTitle: 'Advokaadid ja töötajad',
     partnerTitle: 'Seotud audiitorbüroo',
@@ -1324,8 +1324,8 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'tseng-junwei': 'Juhtiv advokaat Taiwanis',
       'chang-rongxuan': 'Advokaat Taiwanis',
       'chang-fangyu': 'Jurist-assistent',
-      'son-jungmin': 'Korea tegevjuht',
-      'huang-shengping': 'Partner ja vandeaudiitor',
+      'son-jungmin': 'Korea tegevuse juht',
+      'huang-shengping': 'Partner ja audiitor',
     },
   },
   ca: {
@@ -1804,7 +1804,7 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Taiwan investment counsel': 'Nõustamine Taiwani investeeringute asjus',
     'Civil litigation and damages': 'Tsiviilvaidlused ja kahjuhüvitis',
     'Trademark and patent filings': 'Kaubamärgi- ja patenditaotlused',
-    'Visa and residency': 'Viisa ja elamine',
+    'Visa and residency': 'Viisa ja elamisluba',
     'Family and labor disputes': 'Perekonna- ja töövaidlused',
   },
   ca: {
@@ -4488,7 +4488,7 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'Magistrikraad (M.S.), National Taiwan University rahanduse instituut',
-        'Bakalaureusekraad (B.A.) õigusteaduse ja rahanduse kahe eriala õppes, National Chengchi University',
+        'Bakalaureusekraad (B.A.), õigusteaduse ja rahanduse topelteriala, National Chengchi University',
         'Vahetusüliõpilane Kobe Universitys ja Waseda Universitys',
       ],
       experience: [
@@ -4526,19 +4526,19 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordineerib nõustamisaegu ja suhtlust Koreast tulevatele klientidele.',
-        'Toetab piirkondadevahelist vahetust dokumendisüsteemide ja töövoogude kaudu, arvutiteaduse taustal.',
+        'Toetab üksustevahelist koostööd dokumendisüsteemide ja töövoogude kaudu; taust on arvutiteadus.',
       ],
       education: [
         'Bakalaureus (B.S.) arvutiteaduses, National Cheng Kung University',
       ],
       experience: [
-        'Korea tegevuste üksus, Hovering International Law Firm',
+        'Korea tegevuse üksus, Hovering International Law Firm',
       ],
     },
     'huang-shengping': {
       intro: [
         'Lõpetas bakalaureuse- ja magistriprogrammi raamatupidamises National Chengchi Universitys ja juhib nüüd audiitorbürood.',
-        'Toetab õiguslike, maksu- ja finantsriskide ühendatud analüüsi ettevõtteklientidele.',
+        'Toetab ettevõtteklientide õiguslike, maksu- ja finantsriskide koondhindamist.',
       ],
       education: [
         'Magister (M.A.) raamatupidamises, National Chengchi University',

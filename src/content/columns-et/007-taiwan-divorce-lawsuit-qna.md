@@ -13,7 +13,7 @@ faq:
   - q: "Kas abikaasad peavad Taiwani kohtu vahenduses alati koos kohal olema?"
     a: "Abikaasad ei pea Taiwani kohtu vahenduses alati koos kohal olema. Taiwani kohus võib pereasja (家事事件) laadi järgi määrata pooled või seaduslikud esindajad isiklikult ilmuma; kui seda ilma mõjuva põhjuseta ei täideta, võib pereasjade seaduse (家事事件法) artikli 13 ja vastavalt kohaldatava tsiviilkohtumenetluse seadustiku (民事訴訟法) artikli 303 järgi esimesel korral tulla kõne alla haldusrahve (罰鍰) kuni TWD 30.000 (新臺幣). Kas tuleb vahendada (調解) koos samas ruumis ning kas eraldamine, kaitse, esindamine või muud menetlustoimingud on võimalikud, tuleb läbi käia kohtu ja asja asjaolude järgi."
   - q: "Kas abielu lagunemise eest vastutav abikaasa võib Taiwanis nõuda kohtulikku lahutust?"
-    a: "Kehtiva tsiviilseadustiku (民法) artikli 1052 lõike 2 erand (但書) määrab, et põhimõtteliselt võib lahutust nõuda ainult vastaspool, kui abielu lagunemise (婚姻破綻) raske põhjus on omistatav ainult 1 poolele. Taiwani põhiseaduskohus (憲法法庭) on siiski vabariigi aasta 112 põhiseaduslikus otsuses nr 4 (112年憲判字第4號) hinnanud, et säte on põhiseadusvastane (違憲) niivõrd, kui see võtab süüdlaselt abikaasalt (有責配偶) täielikult igasuguse võimaluse lahutuseks, arvestamata raske põhjuse tekkimist või piisavalt pikka kestmist, nii et see konkreetses asjas muutub ilmselgelt karmiks. Sõnastus jääb kehtima; ärge üldiselt kinnitage, et see on võimalik või võimatu, vaid vaadake, kuidas kohus kohaldab otsuse mõtet ja konkreetseid asjaolusid."
+    a: "Kehtiva tsiviilseadustiku (民法) artikli 1052 lõike 2 erand (但書) määrab, et põhimõtteliselt võib lahutust nõuda ainult vastaspool, kui abielu lagunemise (婚姻破綻) raske põhjus on omistatav ainult ühe poolele. Taiwani põhiseaduskohus (憲法法庭) on siiski Hiina Vabariigi kalendriaasta 112 põhiseaduslikus otsuses nr 4 (112年憲判字第4號) hinnanud, et säte on põhiseadusvastane (違憲) niivõrd, kui see võtab süüdlaselt abikaasalt (有責配偶) täielikult igasuguse võimaluse lahutuseks, arvestamata raske põhjuse tekkimist või piisavalt pikka kestmist, nii et see konkreetses asjas muutub ilmselgelt karmiks. Sõnastus jääb kehtima; ärge üldiselt kinnitage, et see on võimalik või võimatu, vaid vaadake, kuidas kohus kohaldab otsuse mõtet ja konkreetseid asjaolusid."
   - q: "Kas ostuhinna tasumine abielueelse varaga või registreerimine 1 nimele otsustab omandiõiguse ja vara jagamise?"
     a: "Ei. Eluaseme registreeritud nimi ja ostuvahendite päritolu on olulised tõendid, kuid eraldi nõuded nagu omandiõigus, kingitus, registreerimine teise nimele (借名登記), laen ja alusetu rikastumine (不當得利) on teised küsimused kui abieluvara jäägi vahe jaotamine (剩餘財產差額分配) tsiviilseadustiku (民法) artiklis 1030-1. Tegelik kokkulepe, omandamise alus ja aeg, rahavood, võlg, tasuta omandamine ja tõendid tuleb uurida eraldi; pelgalt osa tasumine abielueelse varaga või registreerimine 1 nimele ei otsusta kõiki järeldusi."
   - q: "Kas abieluvara jäägi jagamine, lahutusest tulenev kahjuhüvitis, abikaasa ülalpidamine ja lapse ülalpidamine on sama nõue?"
@@ -58,26 +58,26 @@ Pereasjade seaduse artikli 13 sanktsioon tuleb kõne alla ainult siis, kui kohus
 
 Kui vahendus või kompromiss sünnib, lõpeb abielu seadusjärgsel viisil ja tekib mõju nagu seadusjõulise otsusega. Kui vahendus ei sünni, võib menetlust jätkata kohaldatavate reeglite järgi; kohtulikus lahutuses on otsuse seadusjõud määrav. Menetluse kestus sõltub kättetoimetamisest (送達), vahendusistungite arvust, vaidlustatud asjaoludest ja tõenditest, ekspertiisist (鑑定) ja uurimisest, lapseküsimustest, rahvusvahelisest kättetoimetamisest ja astmest; kindlat lõppemise hetke ei saa teatada.
 
-Ka vaidlustamist ei saa määrata üksnes dokumendi nime järgi. Tee ja tähtaeg erinevad selle järgi, kas tegu on otsuse apellatsiooniga (上訴), määruse määruskaebusega (抗告) või eraldi menetlusega vahenduse ja kompromissi saavutamise või mõju kohta. Pärast kättetoimetamise päeva, seadusjõu ja menetlusliku seisundi läbikäimist tuleb arvutada selle tüübi tähtaeg; ühes asjas kuuldud tähtaega ei tohi kanda teise menetlusse või registreerimismenetlusse.
+Ka vaidlustamist ei saa määrata üksnes dokumendi nime järgi. Tee ja tähtaeg erinevad selle järgi, kas tegu on otsuse apellatsiooniga (上訴), määruskaebusega määruse peale (抗告) või eraldi menetlusega vahenduse ja kompromissi saavutamise või mõju kohta. Pärast kättetoimetamise päeva, seadusjõu ja menetlusliku seisundi läbikäimist tuleb arvutada selle tüübi tähtaeg; ühes asjas kuuldud tähtaega ei tohi kanda teise menetlusse või registreerimismenetlusse.
 
 ## 4. Alused kohtulikuks lahutuseks ja süüdlase abikaasa piirang
 
-Kehtiva tsiviilseadustiku (民法) artikli 1052 lõike 2 erand (但書) määrab, et põhimõtteliselt võib lahutust nõuda ainult vastaspool, kui abielu lagunemise (婚姻破綻) raske põhjus on omistatav ainult 1 poolele. Taiwani põhiseaduskohus (憲法法庭) on siiski vabariigi aasta 112 põhiseaduslikus otsuses nr 4 (112年憲判字第4號) hinnanud, et säte on põhiseadusvastane (違憲) niivõrd, kui see võtab süüdlaselt abikaasalt (有責配偶) täielikult igasuguse võimaluse lahutuseks, arvestamata raske põhjuse tekkimist või piisavalt pikka kestmist, nii et see konkreetses asjas muutub ilmselgelt karmiks. Sõnastus jääb kehtima; ärge üldiselt kinnitage, et see on võimalik või võimatu, vaid vaadake, kuidas kohus kohaldab otsuse mõtet ja konkreetseid asjaolusid.
+Kehtiva tsiviilseadustiku (民法) artikli 1052 lõike 2 erand (但書) määrab, et põhimõtteliselt võib lahutust nõuda ainult vastaspool, kui abielu lagunemise (婚姻破綻) raske põhjus on omistatav ainult ühe poolele. Taiwani põhiseaduskohus (憲法法庭) on siiski Hiina Vabariigi kalendriaasta 112 põhiseaduslikus otsuses nr 4 (112年憲判字第4號) hinnanud, et säte on põhiseadusvastane (違憲) niivõrd, kui see võtab süüdlaselt abikaasalt (有責配偶) täielikult igasuguse võimaluse lahutuseks, arvestamata raske põhjuse tekkimist või piisavalt pikka kestmist, nii et see konkreetses asjas muutub ilmselgelt karmiks. Sõnastus jääb kehtima; ärge üldiselt kinnitage, et see on võimalik või võimatu, vaid vaadake, kuidas kohus kohaldab otsuse mõtet ja konkreetseid asjaolusid.
 
 Tsiviilseadustiku (民法) artikli 1052 lõige 1 loetleb kümme alust, millest kohtulikku lahutust saab nõuda, kui järgmised asjaolud on vastaspoole poolel.
 
 1. Kaksikabielu (重婚)
 2. Kokkulepitud suguühe muu isiku kui abikaasaga
 3. Vastaspoole väärkohtlemine (虐待) ulatuses, mis teeb ühiselu talumatuks
-4. Vastaspool väärkohtleb oma otsejoones sugulasi (直系親屬) või vastaspoole otsejoones sugulased väärkohtlevad teid endid, nii et ühiselu muutub talumatuks
+4. Vastaspool väärkohtleb teie otsejoones sugulasi (直系親屬) või vastaspoole otsejoones sugulased väärkohtlevad teid endid, nii et ühiselu muutub talumatuks
 5. Vastaspoole pahatahtlik maha jätmine (惡意遺棄) kestab
-6. Oli tahtlus vastaspool tappa
+6. Vastaspool üritas teid tappa
 7. On ravimatu raske haigus
 8. On raske ravimatu psüühikahäire
 9. Elu või surm on tundmatu üle 3 aasta
 10. Seadusjõuline otsus tähtajalisele vangistusele (有期徒刑) üle 6 kuu tahtliku süüteo eest
 
-Lõige 2 seab eraldi üldiseks aluseks juhu, kus muu raske põhjus kui eespool loetletud kümme alust teeb abielu jätkamise raskeks. Seetõttu tuleb asjad, mis esitavad kindla aluse lõikes 1, ja asjad, mis esitavad abielu jätkamise raskuse lõike 2 järgi, eristada õigusstruktuuris ja tõendamise esemes. Kuigi selle põhiseadusliku otsuse seadusandmise tähtaeg on möödunud, ei ole erandi sõnastust seisuga 25. juuli 2026 seadusest eemaldatud; kohus peab igas asjas kohaldama põhiseadusvastasuse hinnangu (違憲) mõtet.
+Lõige 2 seab eraldi üldiseks aluseks juhu, kus muu raske põhjus kui eespool loetletud kümme alust teeb abielu jätkamise raskeks. Seetõttu tuleb asjad, mis esitavad kindla aluse lõikes 1, ja asjad, mis esitavad abielu jätkamise raskuse lõike 2 järgi, eristada õigusstruktuuris ja tõendamise esemes. Kuigi selle põhiseadusliku otsuse seadusandmise tähtaeg on möödunud, ei ole erandi sõnastust 25. juuli 2026. aasta seisuga seadusest eemaldatud; kohus peab igas asjas kohaldama põhiseadusvastasuse hinnangu (違憲) mõtet.
 
 Ka siis, kui abikaasa ei ole kättesaadav või on kodust lahkunud, ei tohi aluseid segada. Lõike 1 alus, et elu või surm on tundmatu üle 3 aasta, lõike 1 alus, et pahatahtlik maha jätmine (惡意遺棄) kestab, ja lõike 2 alus, et abielu on muust raskest põhjusest raske jätkata, erinevad. Politsei kadumisteade võib olla tõendiks viibimisest ja kulgemisest, kuid ei ole üldine eeldus kõigile lahutusnõuetele. Ei ole ka üldist eeldust, mille järgi tuleks esmalt esitada nõue ühiselu kohustuse täitmiseks, enne kui pahatahtlikku maha jätmist või muud rasket põhjust saab esitada. Pelk asjaolu kodust lahkumisest mõneks kuuks ei täida ühtki alust; lahkumise põhjus, mõjuv lahuselu alus, sidepidamine ja ülalpidamine ning kestus tuleb uurida konkreetsete asjaoludena.
 
@@ -141,7 +141,7 @@ Kui olemasolevat kokkulepet või otsust lapse ülalpidamise kohta kavatsetakse m
 
 Kui suhtlust (會面交往) takistatakse, uuritakse olemasoleva kokkuleppe või otsuse sisust ja täitmisjõust, takistuse kulust ning lapse tahtest, turvalisusest ja eluplaanist, kas kohtult saab taotleda sisu määramist või muutmist, täitmist või sobivat ajutist korraldust (暫時處分). Praegune kokkulepe või otsus, sidepidamise väljavõtted, tegelikult üritatud kohtumisajad ja -kohad, kooli- ja arstiajad ning asjaolud, mis mõjutavad turvalisust ja stabiilsust, tuleb korrastada.
 
-Ka täitmises pereasjade seaduse (家事事件法) artikli 194 järgi peab meetod vastama lapse parimatele huvidele; asja järgi võib tulla kõne alla vahetu või kaudne sund. Pelk asjaolu takistatud kontaktist ei kindlusta kohe kehalise jõu kasutamist, lapse üleandmist, vastaspoole karistamist või last puudutava hooldusotsuse muutmist. Aste ja meetod tuleb määrata, arvestades lapse vanust ja tahet, praegust kaitse seisundit ning täitmise emotsionaalset mõju ja turvalisust.
+Ka täitmises pereasjade seaduse (家事事件法) artikli 194 järgi peab meetod vastama lapse parimatele huvidele; asja järgi võib tulla kõne alla vahetu või kaudne sund. Pelk asjaolu takistatud kontaktist ei taga kohe kehalise jõu kasutamist, lapse üleandmist, vastaspoole karistamist või last puudutava hooldusotsuse muutmist. Aste ja meetod tuleb määrata, arvestades lapse vanust ja tahet, praegust kaitse seisundit ning täitmise emotsionaalset mõju ja turvalisust.
 
 Lapse ülalpidamise täitmises on olemasoleva täitedokumendi (執行名義) sõnastus, maksetähtajad, võlg ja maksed olulised; suhtluse täitmises on oluline, kas kontaktiviis ja tingimused on konkreetsed. Lapse ülalpidamise maksmine ja suhtluse täitmine ei ole vahendid, mida võiks omavahel kättemaksuhimuliselt vahetada; lapse huvides tuleb kohustus ja menetlus igaüks käsitleda iseseisvalt.
 
@@ -183,8 +183,8 @@ Järgmised esmased allikad (1. aste) on lähtekoht selle artikli õigusstruktuur
 6. [Taiwani üleriigiline õigusandmebaas: leibkonna registreerimise seadus (戶籍法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0030006)
 7. [Taiwani Siseministeeriumi leibkonnaregistri osakond: juhised lahutuse registreerimisest](https://www.ris.gov.tw/documents/html/2/3/1/384.html)
 8. [Taiwani üleriigiline õigusandmebaas: seadus välismaise elemendiga tsiviilõiguslikele suhetele kohaldatava õiguse kohta (涉外民事法律適用法)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007)
-9. [Taiwani põhiseaduskohus: vabariigi aasta 112 põhiseaduslik otsus nr 4 (112年憲判字第4號)](https://cons.judicial.gov.tw/docdata.aspx?fid=52&id=310013)
-10. [Taiwani põhiseaduskohus: vabariigi aasta 112 põhiseadusliku otsuse nr 4 ingliskeelne tekst](https://cons.judicial.gov.tw/en/docdata.aspx?fid=5534&id=352234)
+9. [Taiwani põhiseaduskohus: Hiina Vabariigi kalendriaasta 112 põhiseaduslik otsus nr 4 (112年憲判字第4號)](https://cons.judicial.gov.tw/docdata.aspx?fid=52&id=310013)
+10. [Taiwani põhiseaduskohus: Hiina Vabariigi kalendriaasta 112 põhiseadusliku otsuse nr 4 ingliskeelne tekst](https://cons.judicial.gov.tw/en/docdata.aspx?fid=5534&id=352234)
 
 ## 13. Seotud juhised
 

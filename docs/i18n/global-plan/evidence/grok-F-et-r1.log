@@ -1,0 +1,69 @@
+WO-F-et r1 — Grok 4.7 fix lane
+Workspace: /Users/son7/Projects/tseng-law-fix-et-r1
+Date: 2026-09-22
+
+## Rows applied
+et-a P1/P2: 1–45, 47–49, 51, and 53 (the table row was reworded and kept; it was not deleted).
+et-b P1/P2: 1–20 and 22–61.
+Guidance pack (baltic-atlantic `et`, team `et` copy/roles/bios, answers `et`, inquiry `et`, llms `et`) and the five `viewAllLabel` strings. The columns-grid test expectation was updated only for `et` `viewAllLabel` (`Kuva kõik` → `Vaadake kõiki`).
+
+## Rows skipped
+- et-a #46. Q16–Q20 stay body lines. Turning them into headings, or removing U+200B lines, would change the heading-level sequence or the ZWSP/block count against the Korean source.
+- et-a #50. `TWD 1.57M` stays byte-identical (R12 / team bio pin). Not rewritten as “1,57 miljonit TWD”.
+- et-a #52 and et-b #21. Space as thousands separator fails `NUMBER_THOUSAND_STYLE.et = dot` (R14). Kept `500.000`, `1.579.589`, `TWD 25.000.000`, and the decimal comma `0,5`.
+- et-a #54. Hangul remains only inside the `url` values of columns 008 and 009.
+- 013 and 015 one-sentence paragraphs were not merged. Each dangling clause was finished inside its own block.
+- Adessive month names (`detsembril` and the like) were not used. They are absent from `DATE_MONTH_NAMES`, and the date pattern needs a space after the nominative month. Dates were recast as nominative predicates the checker still parses (`jõustumiskuupäev on 27. detsember 2023`, `mille kuupäev on 24. jaanuar 2022`, `25. juuli 2026. aasta seisuga`). Frontmatter `date_display` was not touched.
+- Gender. Estonian `ta` / `advokaat` / first person do not mark gender. No feminine inflection was invented. The male manager in 008 and the male client in 010 stay male.
+- “Võite tasuta uurida” in 015 stays. It is the municipal lookup, not a free consultation.
+- “ei luba järeldada / järeldust / õiguslikku järeldust” stays (inference, not a promise). “Hüvitise olemasolu ei luba piiramata…” stays in the permit sense.
+- 辦法 stays `määrus`. Office names `kaubandusamet` and `kaubandusarengu amet` stay. `õigussubjekt` / `õigussubjektsus` stay. “lapse parimad huvid”, “parima müügitulemuse” (case fact), and “ainus lahendus” inside a denial stay.
+
+## Systemic patterns (net change in the diff)
+- Promise denials (`ei tõota` +9, `ei anna lubadust` +8, `lubadust ei` +4), including “kindlat tulemust” in 001, 002, and 004. Inference “ei luba järeldada” was left.
+- 居留 `elamisõigus` → `elamisluba` (+8 `elamisluba`). 017 immigration status, which has no 居留 gloss, uses `elamisõigus` as requested.
+- 條例 `määrus` → `seadus` (Tööstusinnovatsiooni seadus, töötajate vanaduspensioni seadus). Not 辦法, not `määruskaebus`.
+- ROC year `vabariigi aasta*` → `Hiina Vabariigi kalendriaasta*` (+8). No Gregorian year added.
+- Nominative date recasts: +11 lines containing `kuupäev on`.
+- Misplaced Chinese glosses moved or dropped only when the characters remain on the right word (010, 011, 016, 018, 001 duplicate 建築管理). Glossed digits (112年, 109年度) kept.
+- Responsible-entity `subjekt` calques reduced (12 removed on changed lines, 4 still on those lines where the word is legal personality or a remaining label). `õigussubjekt` kept.
+- 商業 registration `kaubandus` → `ettevõte` (4 `kaubanduse` removed). Office names kept.
+- Taiwan CPA `vandeaudiitor` → `audiitor` (3 removed: team role, 018 kinnitus, 018 “audiitor (會計師)”).
+- `peegeldama` calques removed (7). `kindlustama` as “guarantee” → `ei taga` (2). Real insurance words kept.
+- `Kuva kõik` → `Vaadake kõiki` (5 labels). `ei saa kasutada` a language → `ei oska` (+8). `saadetis` → `saadetud andmed` (2).
+- 004 percent: a space before `%` on non-URL lines only.
+- Bare `1` written as `ühe`/`üks` was put back wherever that word is the counted token. The checker’s `\b` is ASCII-only, so `ühe` and `üks` are in the lexicon and still uncounted. Grammar around the digit was kept where it does not drop the digit (`1 kuu pikkuseks`, `1 korra puhul`, `1 aasta pikkuseks`). `kaks`/`kahe` do count and were kept.
+
+## §Verify
+```
+neighbour      PASS   
+hanzi          PASS   han=131
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+```
+       0
+```
+```
+TSC_OK
+```
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+```
+      28
+```
+`git status --short | wc -l` was re-run after this log file existed, so the count includes the log. The checker, marker grep, tsc, and vitest outputs above are from the run that produced PASS 18/18, markers 0, TSC_OK, and 3202 passed. An extra pin check, not part of the required command, also passed: `columns-grid-guidance-labels.test.tsx` 94/94.
+
+## Reviewer points not applied as written
+- et-a #53. Deleting the row “Raskus | Lihtne | Raske | Lihtne” would drop a table row the Korean source still has. The cells were reworded so they do not read as an easy outcome.
+- Month adessive (`27. detsembril 2023`) is the natural Estonian date, and “kuupäeval 27. detsember” is ungrammatical. The checker only accepts the nominative month token with a following space, so the sentence was recast (`jõustumiskuupäev on 27. detsember 2023`) rather than inflected.
+- et-a #52 / et-b #21. A space thousands separator is natural Estonian and fails the checker. Dot grouping kept.
+- et-a #50. “1,57 miljonit TWD” would break the byte pin `TWD 1.57M`.
+- Suggested `ühe` / `üks` for a counted digit 1 does not survive the number check (`\b` does not bound ü). The digit stayed.
+- et-a #46 and #54. Structural and `url` constraints, as above. Not a disagreement about the Estonian.

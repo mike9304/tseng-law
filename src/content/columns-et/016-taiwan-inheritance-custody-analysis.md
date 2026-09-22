@@ -1,5 +1,5 @@
 ---
-title: "Pärimine ja hooldusõigus Taiwanis: õigusjuhis järelejäänud perele"
+title: "Pärimine ja hooldusõigus Taiwanis: õigusjuhis ellujäänud perele"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
 lastmod: "2026-07-25"
 date_display: "13. september 2025"
@@ -13,12 +13,12 @@ faq:
   - q: "Kas abikaasa õigus abieluvara jäägi jaotamisele on sama õigus kui pärandiosa?"
     a: "Ei. Õigus abielu ajal soetatud vara jäägi vahe jaotamisele (剩餘財產差額分配) Taiwani tsiviilseadustiku (民法) artiklis 1030-1 on õigus, millele abikaasa võib eraldi tugineda, kui seadusjärgsed eeldused on täidetud, ja see tuleb arvutada pärandiosast eraldi. Kõik abielu ajal omandatud varad ei kuulu iseenesest arvutusse ega saa ellujäänud abikaasa tingimata poolt pärandvarast. Asi tuleb hinnata pärast seda, kui vararežiim, iga vara omandamise põhjus ja hetk, võlg ja seadusjärgselt välistatud kirjed on kinnitatud."
   - q: "Kui üks vanematest sureb, mis saab ellujäänud vanema hooldusõigusest?"
-    a: "Taiwani tsiviilseadustiku (民法) artikli 1089 järgi, kui üks vanematest ei saa kasutada hooldusõigust ja vanemlikku vastutust (親權) alaealise lapse suhtes, kasutab teine seda põhimõtteliselt. Kui ellujäänud vanem säilitab hooldusõiguse (親權) ja vastupidist kohtuotsust ei ole, jätkab see vanem tavaliselt hooldusõiguse õiguste ja kohustuste kasutamist. Konkreetsete asjaolude, nagu juba antud otsus, hooldusõiguse piiramise või peatamise põhjused, rahvusvahelised elemendid ja lapse parimad huvid, järgi võib siiski olla vajalik kohtu osalus."
+    a: "Taiwani tsiviilseadustiku (民法) artikli 1089 järgi, kui üks vanematest ei saa kasutada hooldusõigust ja vanemlikku vastutust (親權) alaealise lapse suhtes, kasutab teine seda põhimõtteliselt. Kui ellujäänud vanem säilitab hooldusõiguse (親權) ja vastupidist kohtuotsust ei ole, jätkab see vanem tavaliselt hooldusõiguse õiguste ja kohustuste kasutamist. Konkreetsete asjaolude, nagu juba antud otsus, hooldusõiguse piiramise või peatamise põhjused, rahvusvahelised elemendid ja lapse parimad huvid, järgi võib siiski olla vajalik kohtumenetlus."
   - q: "Kas ellujäänud vanem tohib vabalt kasutada vara, mille alaealine laps on pärinud?"
-    a: "Ei. Taiwani tsiviilseadustiku (民法) artiklite 1087 ja 1088 järgi on vara, mille alaealine saab pärimisega, lapse eraldi vara (特有財產) ning isa, ema või eestkostja ei saa selle tegelikuks omanikuks. Haldamine, kasutamine, tulu, seaduslik esindamine ja käsutamine peavad toimuma lapse huvides; huvide konflikti või olulise käsutamise korral võib kõne alla tulla eriesindaja (特別代理人) nimetamine või kohtu osalus. Ei tohi arvata, et vanemad võiksid ühepoolselt ja piiranguta kasutada lapse pärandvara."
+    a: "Ei. Taiwani tsiviilseadustiku (民法) artiklite 1087 ja 1088 järgi on vara, mille alaealine saab pärimisega, lapse eraldi vara (特有財產) ning isa, ema või eestkostja ei saa selle tegelikuks omanikuks. Haldamine, kasutamine, tulu, seaduslik esindamine ja käsutamine peavad toimuma lapse huvides; huvide konflikti või olulise käsutamise korral võib kõne alla tulla eriesindaja (特別代理人) nimetamine või kohtumenetlus. Ei tohi arvata, et vanemad võiksid ühepoolselt ja piiranguta kasutada lapse pärandvara."
 ---
 
-# Pärimine ja hooldusõigus Taiwanis: õigusjuhis järelejäänud perele
+# Pärimine ja hooldusõigus Taiwanis: õigusjuhis ellujäänud perele
 
 ![Pilt, mis sümboliseerib pärandi planeerimist Taiwanis ja alaealise vara kaitset](../images/016-taiwan-inheritance-custody-analysis/featured-generic.webp)
 
@@ -50,7 +50,7 @@ Varauurimine ei ole ainult õiguste jälgimine; see on ka võla ja menetlusriski
 
 Ellujäänud abikaasa ei saa automaatselt poolt pärandvarast. Õigus abielu ajal soetatud vara jäägi vahe jaotamisele (剩餘財產差額分配) Taiwani tsiviilseadustiku (民法) artiklis 1030-1 on õigus, millele abikaasa võib eraldi tugineda, kui seadusjärgsed eeldused on täidetud, ja see tuleb arvutada pärandiosast eraldi. Kõik abielu ajal omandatud varad ei kuulu iseenesest arvutusse ega saa ellujäänud abikaasa tingimata poolt pärandvarast. Asi tuleb hinnata pärast seda, kui vararežiim, iga vara omandamise põhjus ja hetk, võlg ja seadusjärgselt välistatud kirjed on kinnitatud.
 
-See õigus on kord, mis seadusjärgse vararežiimi (法定財產制) lõppemisel võrdleb kummagi abikaasa vara kasvu pärast abielu seadusjärgse kriteeriumi järgi. Tekkimise alus, vastaspool ja arvutusobjekt erinevad pärandiosast, mis tekib seetõttu, et ellujäänud abikaasa on pärija. Kui see nõue tekib, võib kõne alla tulla esmalt peegeldada selle tulemus, seejärel kinnitada pärandvarana, mis pärandajale jääb.
+See õigus võrdleb seadusjärgse vararežiimi (法定財產制) lõppemisel kummagi abikaasa abielu ajal toimunud vara kasvu seadusjärgse mõõdupuu järgi. Tekkimise alus, vastaspool ja arvutusobjekt erinevad pärandiosast, mis tekib seetõttu, et ellujäänud abikaasa on pärija. Kui see nõue tekib, võib selle tulemuse esmalt arvesse võtta, seejärel kinnitada pärandvarana, mis pärandajale jääb.
 
 Arvutuses ei tohi vaadata ainult väljendit „abielu ajal omandatud varad“, vaid tsiviilseadustiku (民法) kinnitatud kaasamise ja välistamise ulatust. Võib olla seadusjärgselt välistatud kirjeid, nagu pärimise või kingitusega omandatud varad ja hüvitis mittevaralise kahju eest (慰撫金); abielu ajal tekkinud võlg tuleb samuti arvesse võtta. Kas abikaasad on kokku leppinud teises režiimis, milline on vara omandamise põhjus ja kuupäev ning kuidas väärtuse viitepäev kinnitatakse, hinnatakse materjalide järgi.
 
@@ -64,13 +64,13 @@ Pärija, kes soovib pärandist loobuda, peab tsiviilseadustiku (民法) artikli 
 
 Enne pärandvara käsutamist või võla tasumist tuleb koos uurida aktiivvara ja passiivvara. Tuleb kinnitada võlausaldajate olemasolu, tagatisõigused, käendusvõlg, kestvad lepingud ja maksudeklaratsiooni kohustus ning vajaduse korral uurida vara loetelu esitamist ja võlausaldajate menetlust. Tuleb vältida ka asjaolusid, mis võivad mõjutada seaduses määratud vastutuse piiramist, nagu vara varjamine või loetelust väljajätmine.
 
-Taiwani rahandusministeeriumi maksportaali juhis pärandiasjade taotlusmenetluse kohta on uuendatud kuupäeval 25. juuni 2026; see selgitab vara loetelu esitamise ja pärandist loobumise kohtumenetluse tavalist 3-kuulist tähtaega ning pärandimaksu deklaratsiooni tavalist 6-kuulist tähtaega. Algushetk, pikendamine, erandid ja pädevus tuleb siiski kinnitada asja kaupa ning seda ei tohi kasutada isikliku tähtaja arvutusena.
+Taiwani rahandusministeeriumi maksportaali juhis pärandiasjade taotlusmenetluse kohta uuendamise kuupäev on 25. juuni 2026; see selgitab vara loetelu esitamise ja pärandist loobumise kohtumenetluse tavalist 3-kuulist tähtaega ning pärandimaksu deklaratsiooni tavalist 6-kuulist tähtaega. Algushetk, pikendamine, erandid ja pädevus tuleb siiski kinnitada asja kaupa ning seda ei tohi kasutada isikliku tähtaja arvutusena.
 
 Pärandimaksu deklaratsioon, leibkonna registreerimise teade (戶籍), kinnisasja ja sõiduki omandi üleminek ning finantsasutuste makse menetlus võivad erineda pädeva asutuse ja esitatavate dokumentide poolest. Kohtule esitatavaid pärandist loobumise dokumente ja maksuasutuse pärandimaksu deklaratsiooni ei tohi pidada samaks menetluseks. Kuna mitu tähtaega võib kulgeda ühel ajal, on kindlam hallata iga menetluse algushetke ja tõendeid eraldi ajakavana.
 
 ## 5. Ellujäänud vanema hooldusõiguse õigused ja kohustused
 
-Taiwani tsiviilseadustiku (民法) artikli 1089 järgi, kui üks vanematest ei saa kasutada hooldusõigust ja vanemlikku vastutust (親權) alaealise lapse suhtes, kasutab teine seda põhimõtteliselt. Kui ellujäänud vanem säilitab hooldusõiguse (親權) ja vastupidist kohtuotsust ei ole, jätkab see vanem tavaliselt hooldusõiguse õiguste ja kohustuste kasutamist. Konkreetsete asjaolude, nagu juba antud otsus, hooldusõiguse piiramise või peatamise põhjused, rahvusvahelised elemendid ja lapse parimad huvid, järgi võib siiski olla vajalik kohtu osalus.
+Taiwani tsiviilseadustiku (民法) artikli 1089 järgi, kui üks vanematest ei saa kasutada hooldusõigust ja vanemlikku vastutust (親權) alaealise lapse suhtes, kasutab teine seda põhimõtteliselt. Kui ellujäänud vanem säilitab hooldusõiguse (親權) ja vastupidist kohtuotsust ei ole, jätkab see vanem tavaliselt hooldusõiguse õiguste ja kohustuste kasutamist. Konkreetsete asjaolude, nagu juba antud otsus, hooldusõiguse piiramise või peatamise põhjused, rahvusvahelised elemendid ja lapse parimad huvid, järgi võib siiski olla vajalik kohtumenetlus.
 
 Hooldusõiguse õigustesse ja kohustustesse võivad kuuluda alaealise lapse kaitse ja kasvatus, otsused elukoha kohta, seaduslik esindamine ja vara haldamine. Iga volitus tuleb kasutada lapse isiku ja varaliste huvide kaitsmiseks, mitte vanema enda hüvanguks. Igapäevase kaitse otsused ja seaduslik esindamine olulise varakäsutamise jaoks võivad eeldada erinevat uurimist.
 
@@ -78,7 +78,7 @@ Tuleb vaadata mitte ainult peresuhteid enne ja pärast surma, vaid ka olemasolev
 
 Hooldusõigus ja pärimine on õiguslikult eraldi küsimused. Kuigi ellujäänud vanem kasutab hooldusõiguse õigusi ja kohustusi, on lapse päritud vara omanik laps ning vanem ei tohi seda käsitleda nagu oma pärandiosa. Samuti võib ellujäänud vanemal olla hooldusõiguse staatus ka siis, kui ta ei ole pärija; kui ta on saanud pärijaks, tuleb enda ja lapse vahelist huvide konflikti võimalust uurida veel hoolikamalt.
 
-## 6. Eestkostja määramine ja kohtu osalus
+## 6. Eestkostja määramine ja kohtumenetlus
 
 Taiwani tsiviilseadustiku (民法) artikli 1091 järgi tuleb alaealise eestkoste kõne alla, kui alaealisel ei ole vanemaid või kui kumbki vanem ei saa kasutada hooldusõiguse õigusi ja kohustusi. Ainuüksi asjaolu, et üks vanematest on surnud, ei luba järeldada, et alaealise eestkoste algaks kohe. Esmalt tuleb kinnitada ellujäänud vanema hooldusõiguse seisund, olemasolevad otsused ja see, kas õigusi saab tegelikult kasutada.
 
@@ -92,7 +92,7 @@ Eestkostjat uurides tuleb kaitse ja vara haldamise rollid konkreetselt eristada.
 
 ## 7. Alaealise pärandvara kaitse
 
-Vanem ei tohi alaealise pärandvara vabalt kasutada. Taiwani tsiviilseadustiku (民法) artiklite 1087 ja 1088 järgi on vara, mille alaealine saab pärimisega, lapse eraldi vara (特有財產) ning isa, ema või eestkostja ei saa selle tegelikuks omanikuks. Haldamine, kasutamine, tulu, seaduslik esindamine ja käsutamine peavad toimuma lapse huvides; huvide konflikti või olulise käsutamise korral võib kõne alla tulla eriesindaja (特別代理人) nimetamine või kohtu osalus. Ei tohi arvata, et vanemad võiksid ühepoolselt ja piiranguta kasutada lapse pärandvara.
+Vanem ei tohi alaealise pärandvara vabalt kasutada. Taiwani tsiviilseadustiku (民法) artiklite 1087 ja 1088 järgi on vara, mille alaealine saab pärimisega, lapse eraldi vara (特有財產) ning isa, ema või eestkostja ei saa selle tegelikuks omanikuks. Haldamine, kasutamine, tulu, seaduslik esindamine ja käsutamine peavad toimuma lapse huvides; huvide konflikti või olulise käsutamise korral võib kõne alla tulla eriesindaja (特別代理人) nimetamine või kohtumenetlus. Ei tohi arvata, et vanemad võiksid ühepoolselt ja piiranguta kasutada lapse pärandvara.
 
 Eraldi vara tähendab vara, mis kuulub alaealisele endale. Päritud hoiused, kinnisasjad, aktsiad või muud õigused tuleb selgelt määratleda lapse varaks ja hallata eraldi lapse huvides. Kuigi vanem või eestkostja võtab haldamise töö, ei saa ta selle vara tegelikuks omanikuks ega tohi seda kasutada oma elamiskuludeks või võla tasumiseks.
 
@@ -102,7 +102,7 @@ Kui vanem ja laps on sama pärandvara kaaspärijad või teineteise lepingupartne
 
 Kui alaealise eestkostja haldab vara, võivad kohalduda vara loetelu koostamine, tõendite säilitamine, tulu ja kulu eraldamine, aruandlus kohtule ja järelevalve reeglid. Finantskontod ja investeerimisvarad tuleb hallata nii, et need oleksid tuvastatavad lapse varana, ning kulutuste eesmärk ja alus tuleb kirjendada. Eestkoste lõppemisel või alaealise täisealiseks saamisel tuleb vara ja haldamiskirjed sujuvalt üle anda, seega tuleb materjalid algusest peale süsteemselt korrastada.
 
-Usaldusvara või kindlustusega kava ei tohi pidada turvaliseks ainuüksi lepingu sisu järgi. Tuleb kinnitada usaldusisik ja kasusaaja, maksetingimused, haldustasu, järelevalvemehhanismid, muutmise ja lõpetamise tingimused ning koos uurida sundosa ja maksuküsimusi. Lapse praegune vajadus ja tuleviku elu tuleb tasakaalustatult peegeldada; vara haldaja mugavust ei tohi seada lapse huvidest ettepoole.
+Usaldusvara või kindlustusega kava ei tohi pidada turvaliseks ainuüksi lepingu sisu järgi. Tuleb kinnitada usaldusisik ja kasusaaja, maksetingimused, haldustasu, järelevalvemehhanismid, muutmise ja lõpetamise tingimused ning koos uurida sundosa ja maksuküsimusi. Lapse praegune vajadus ja tuleviku elu tuleb tasakaalustatult arvesse võtta; vara haldaja mugavust ei tohi seada lapse huvidest ettepoole.
 
 ## 8. Rahvusvahelise pere kohaldatav õigus ja menetlus
 
@@ -114,7 +114,7 @@ Välismaal koostatud testamendi puhul tuleb uurida koostamise vormi ja sisulist 
 
 Kui välismaine otsus hooldusõiguse (親權) või eestkoste kohta on olemas, tuleb kinnitada otsuse lõplikkus, seadusliku menetluse järgimine ning tunnustamise võimalus Taiwanis. Kui lapsel on harilik viibimiskoht teises riigis, võivad olla tähtsad ka kohaliku kohtu pädevus ja kiireloomulised kaitsemeetmed. Millise riigi menetlust esmalt läbi viia, tuleb kaaluda koos lapse parimate huvide ja täidetavusega.
 
-Maksudeklaratsioon võib riigiti tekitada eraldi kohustusi. Tuleb kinnitada, kas Taiwani pärandimaksu deklaratsioon kattub välismaise pärandi- või kingimaksu, välismaiste finantskontode deklaratsiooni või kinnisasja üleminekumaksuga, ning vaadata topeltmaksustamise kohandamise sätteid. Kuna kursiviitepäev, vara hindamise viis ja maksukohustuslaste ulatus võivad erineda, ei tohi ühe riigi deklaratsiooni tulemust muutmata kopeerida.
+Maksudeklaratsioon võib riigiti tekitada eraldi kohustusi. Tuleb kinnitada, kas Taiwani pärandimaksu deklaratsioon kattub välismaise pärandi- või kinkemaksu, välismaiste finantskontode deklaratsiooni või kinnisasja üleminekumaksuga, ning vaadata topeltmaksustamise kohandamise sätteid. Kuna kursiviitepäev, vara hindamise viis ja maksukohustuslaste ulatus võivad erineda, ei tohi ühe riigi deklaratsiooni tulemust muutmata kopeerida.
 
 ## 9. Praktiline ettevalmistuse kontrollnimekiri
 
@@ -122,8 +122,8 @@ Järgnev järjekord on põhiline raamistik asjaolude täielikuks kogumiseks ja e
 
 1. Kinnitatakse surmatõend ja surmateate materjalid, peresuhted ja Taiwani leibkonna registreerimise materjalid (戶籍), abielu-, lahutus- ja lapsendamiskirjed ning olemasolevad kohtuotsused. Välismaiste dokumentide puhul kontrollitakse ka kinnitamist, tõlget ja nime kirjapildi vastavust.
 2. Uuritakse kinnisasju, hoiuseid, investeerimisvarasid, äriühingu osalusi ja vallasasju ning nõudeid ning korrastatakse koos laenud, käendused, maksud ja lepingulised võlad. Nimi ja tegelik omandisuhe, kindlustuse kasusaaja, usaldusvara, ühisvara ning eluaegse üleandmise materjalid märgitakse eraldi.
-3. Kinnitatakse testamendi originaal ja koostamise vorm, testamendivõime, tunnistaja või notariaalse kinnitamise eeldused, testamenditäitja ja päranduse sisu. Koos uuritakse, kuidas kehtiv testament jagamist muudab, ning sundnormide, sealhulgas sundosa, piire.
-4. Seadusjärgne pärandiosa ja õigus abieluvara jäägi vahe jaotamisele arvutatakse eraldi. Iga süsteemi arvutusobjekt, võlg, välistatud kirjed, hindamise viitepäev ja tõendid eristatakse ning ühe arvutuse tulemust ei peegeldata teise juurde topelt.
+3. Kinnitatakse testamendi originaal ja koostamise vorm, testamendivõime, tunnistaja või notariaalse kinnitamise eeldused, testamenditäitja ja legaat. Koos uuritakse, kuidas kehtiv testament jagamist muudab, ning sundnormide, sealhulgas sundosa, piire.
+4. Seadusjärgne pärandiosa ja õigus abieluvara jäägi vahe jaotamisele arvutatakse eraldi. Iga süsteemi arvutusobjekt, võlg, välistatud kirjed, hindamise viitepäev ja tõendid eristatakse ning ühe arvutuse tulemust ei kanta teise juurde topelt.
 5. Tuvastatakse alaealisele kuuluv vara ning kinnitatakse seadusliku esindamise volitus, vanema või eestkostja haldamise ulatus, huvide konflikt ja eriesindaja vajadus. Kavas on ka viis hoida kontosid, raamatuid ja käsutamisest saadud raha täisealise isiklikust varast eraldi.
 6. Kohtu pärandist loobumise, vara loetelu, eestkoste ja eriesindaja menetlused, maksuasutuse pärandimaksu deklaratsioon, leibkonna registreerimise teade ja vara registreerimise menetlused jagatakse asutuste kaupa. Iga menetluse pädevus, algushetk, esitatavad dokumendid, täiendamise võimalus ja pikendamine kinnitatakse ning hoitakse vastuvõtutõendit ja koopiaid.
 
@@ -149,6 +149,6 @@ Ametlikel õiguslehtedel kinnitatakse sätte muutmise päev ja jõustumise päev
 
 ---
 
-See artikkel on üldine selgitus, et kirjeldada pärimise, abieluvararežiimi, hooldusõiguse ja alaealise eestkoste korda Taiwanis; see ei ole õigusnõuanne konkreetses pärandi- või pereasjas (民法). Kohalduv õigus, menetlus ja tulemus võivad erineda pärijate ringi, testamendi, vara ja võla, abielurežiimi, olemasolevate kohtuotsuste ja rahvusvaheliste elementide järgi. Enne tähtaegade arvutamist, nagu loobumine või maksudeklaratsioon, või vara käsutamist kinnitatakse uusimad ametlikud allikad ja individuaalsed asjaolud.
+See artikkel on üldine selgitus, et kirjeldada pärimise, abieluvararežiimi, hooldusõiguse ja alaealise eestkoste korda Taiwanis; see ei ole õigusnõuanne konkreetses pärandi- või pereasjas. Kohalduv õigus, menetlus ja tulemus võivad erineda pärijate ringi, testamendi, vara ja võla, abielurežiimi, olemasolevate kohtuotsuste ja rahvusvaheliste elementide järgi. Enne tähtaegade arvutamist, nagu loobumine või maksudeklaratsioon, või vara käsutamist kinnitatakse uusimad ametlikud allikad ja individuaalsed asjaolud.
 
 **Advokaat Wei Tseng (曾雋崴)**

@@ -13,7 +13,7 @@ faq:
   - q: "Kas äriühing peab lahkumishüvitist maksma ka distsiplinaarse ülesütlemise korral?"
     a: "Ei. Kui töötaja paneb toime õigusvastase teo, rikub töökorralduseeskirja või puudub mõjuva põhjuseta 3 järjestikusel päeval (tööstandardite seaduse artikkel 12, 勞動基準法第12條), võib äriühing üles öelda etteteatamiseta ja ei pea lahkumishüvitist maksma. Majanduslik ülesütlemine (artikkel 11) eeldab seevastu etteteatamist ja lahkumishüvitise maksmist."
   - q: "Kuidas arvutatakse Taiwani lahkumishüvitis?"
-    a: "Iga täidetud 1 staažiaasta kohta peab tööandja maksma lahkumishüvitisena 0,5 kuu keskmist palka, kuni 6 kuupalka. See valem kehtib staažile, millele kohaldatakse töötajate vanaduspensioni määruse (勞工退休金條例) artiklit 12; staažile, millele kohaldatakse tööstandardite seaduse (勞動基準法) artiklit 17, makstakse iga 1 aasta kohta 1 kuu keskmine palk ilma ülemmäärata."
+    a: "Iga täidetud 1 staažiaasta kohta peab tööandja maksma lahkumishüvitisena 0,5 kuu keskmist palka, kuni 6 kuupalka. See valem kehtib staažile, millele kohaldatakse töötajate vanaduspensioni seaduse (勞工退休金條例) artiklit 12; staažile, millele kohaldatakse tööstandardite seaduse (勞動基準法) artiklit 17, makstakse iga 1 aasta kohta 1 kuu keskmine palk ilma ülemmäärata."
 ---
 
 # Seadusjärgne lahkumishüvitis (資遣費) Taiwanis: millal see makstakse ja millal mitte
@@ -52,17 +52,17 @@ Koostasin selle teile lihtsasse tabelisse.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Liik** | **Majanduslik ülesütlemine**  **資遣** **員工(經濟解僱)** | **Distsiplinaarne ülesütlemine**  **解僱** **員工(懲戒解僱)** | **Töötaja omal soovil lahkumine**  **員工自請離職** |
+| **Liik** | **Majanduslik ülesütlemine (資遣員工, 經濟解僱)** | **Distsiplinaarne ülesütlemine (解僱員工, 懲戒解僱)** | **Töötaja omal soovil lahkumine**  **員工自請離職** |
 | Tähendus | Kui tööandjal on äritegevuse olukorra tõttu vaja personali kohandada, asub põhjus tööandja ettevõtluse sfääris, mitte töötaja vastutuses. Seetõttu peab tööandja järgima etteteatamistähtaega (預告期間) ja maksma lahkumishüvitist, et töötaja ebasoodsat olukorda tasakaalustada. | Kui töötaja paneb toime õigusvastase või ebasobiva teo, võib tööandja töölepingu (勞動契約) etteteatamiseta kohe üles öelda ega pea lahkumishüvitist maksma. See on osa tööandja distsiplinaarvolitustest. | Töötaja võib lepingu igal ajal lõpetada, kuid peab staaži järgi järgima etteteatamistähtaega, et tööandja saaks korraldada üleandmise ja asendaja otsimise. |
 | Tingimused | On  (Taiwani tööstandardite seaduse artikkel 11) | On  (Taiwani tööstandardite seaduse artikkel 12) | Ei ole |
 | Etteteatamine | Nõutav | Ei ole nõutav | Nõutav |
-| Raskus | Lihtne | Raske | Lihtne |
+| Raskus tööandjale | Lihtsam menetlus | Raskem menetlus | Lihtsam menetlus |
 | Kas äriühing peab maksma lahkumishüvitist (資遣費) | Nõutav | Ei ole nõutav | Ei ole nõutav |
-|  | Taiwani tööstandardite seadus artikkel 11 (勞動基準法第11條): Kui ei esine üht järgmistest asjaoludest, ei tohi tööandja töölepingut üles öelda isegi pärast töötajale etteteatamist.  1. Tegevuse peatamine (歇業) või ettevõtte võõrandamine (轉讓)  2. Kahjum (虧損) või tegevuse kokkutõmbamine (業務緊縮)  3. Vääramatu jõud eeldab tegevuse peatamist 1 kuuks või kauemaks  4. Tegevuse laad eeldab personali vähendamist ja ülesöeldud töötajat ei saa määrata teisele sobivale ametikohale  5. Konkreetne töötaja ei suuda ametikoha nõutavat tööd rahuldavalt täita | Taiwani tööstandardite seadus artikkel 12 (勞動基準法第12條): Tööandja võib üles öelda etteteatamiseta, kui töötaja kuulub ühe järgmise asjaolu alla.  1. Isik, kes töölepingu sõlmimisel esitab valeandmeid, eksitab tööandjat ja tekitab ettevõttele kahju ohu  2. Isik, kes tarvitab vägivalda tööandja, tema perekonna, tema esindaja (代理人) või teiste töökaaslaste suhtes või solvab neid raskelt  3. Isik, kelle suhtes on jõustunud tähtajaline vangistus (有期徒刑) või rangem karistus, ilma et oleks mõistetud tingimisi karistust (緩刑) ja ilma et oleks lubatud asendamine rahatrahviga (易科罰金)  4. Töölepingu või töökorralduseeskirja raske rikkumine  5. Isik, kes tahtlikult kulutab tööandja masinaid, tööriistu, toorainet, tooteid või muud vara või tahtlikult paljastab tööandja tehnilisi ja ärisaladusi ning tekitab tööandjale kahju  6. Omavoliline töölt puudumine (曠工) mõjuva põhjuseta 3 järjestikusel päeval või 6 päeva või rohkem 1 kuu jooksul |  |
+|  | Taiwani tööstandardite seadus artikkel 11 (勞動基準法第11條): Kui ei esine üht järgmistest asjaoludest, ei tohi tööandja töölepingut üles öelda isegi pärast töötajale etteteatamist.  1. Tegevuse peatamine (歇業) või ettevõtte võõrandamine (轉讓)  2. Kahjum (虧損) või tegevuse kokkutõmbamine (業務緊縮)  3. Vääramatu jõud eeldab tegevuse peatamist 1 kuu pikkuseks või kauemaks  4. Tegevuse laad eeldab personali vähendamist ja ülesöeldud töötajat ei saa määrata teisele sobivale ametikohale  5. Konkreetne töötaja ei suuda ametikoha nõutavat tööd rahuldavalt täita | Taiwani tööstandardite seadus artikkel 12 (勞動基準法第12條): Tööandja võib üles öelda etteteatamiseta, kui töötaja kuulub ühe järgmise asjaolu alla.  1. Isik, kes töölepingu sõlmimisel esitab valeandmeid, eksitab tööandjat ja tekitab ettevõttele kahju ohu  2. Isik, kes tarvitab vägivalda tööandja, tema perekonna, tema esindaja (代理人) või teiste töökaaslaste suhtes või solvab neid raskelt  3. Isik, kelle suhtes on jõustunud tähtajaline vangistus (有期徒刑) või rangem karistus, ilma et oleks mõistetud tingimisi karistust (緩刑) ja ilma et oleks lubatud asendamine rahatrahviga (易科罰金)  4. Töölepingu või töökorralduseeskirja raske rikkumine  5. Isik, kes tahtlikult kulutab tööandja masinaid, tööriistu, toorainet, tooteid või muud vara või tahtlikult paljastab tööandja tehnilisi ja ärisaladusi ning tekitab tööandjale kahju  6. Omavoliline töölt puudumine (曠工) mõjuva põhjuseta 3 järjestikusel päeval või 6 päeva või rohkem 1 kuu jooksul |  |
 
 > Taiwanis peab tööandja iga täidetud 1 staažiaasta (年資) kohta
 > maksma lahkumishüvitisena 0,5 kuu keskmist palka (平均工資).
-> (kuni 6 kuupalka) See valem kehtib staažile, millele kohaldatakse töötajate vanaduspensioni määruse artiklit 12 (勞工退休金條例); staažile, millele kohaldatakse tööstandardite seaduse artiklit 17 (勞動基準法), makstakse iga 1 aasta kohta 1 kuu keskmine palk ilma ülemmäärata.
+> (kuni 6 kuupalka) See valem kehtib staažile, millele kohaldatakse töötajate vanaduspensioni seaduse artiklit 12 (勞工退休金條例); staažile, millele kohaldatakse tööstandardite seaduse artiklit 17 (勞動基準法), makstakse iga 1 aasta kohta 1 kuu keskmine palk ilma ülemmäärata.
 
 ​
 
@@ -210,19 +210,19 @@ või paigutab töötajaid ootamatutele ametikohtadele,
 
 Kui töötate Taiwanis,
 
-on lahkumishüvitist raskem saada, kui arvatakse
+on lahkumishüvitist raskem saada, kui arvatakse.
 
-Ärge tehke äriühinguga kergekäeliselt kompromissi
+Ärge tehke äriühinguga kergekäeliselt kompromissi.
 
-ja hoidke, et äriühing ei ütleks teid ebaõiglaselt üles
+Hoidke, et äriühing ei ütleks teid ebaõiglaselt üles.
 
-ega ajaks teid omal soovil lahkuma
+Ärge laske end omal soovil lahkuma ajada.
 
-Lahkumishüvitis on töötaja seadusjärgne õigus,
+Lahkumishüvitis on töötaja seadusjärgne õigus.
 
 Lahkumishüvitis tuleb maksta ainult siis, kui seaduse eeldused on täidetud; iga töösuhte lõpp seda ei too.
 
-Töötaja võib Taiwanis oma õigusi kaitsta; tulemust see artikkel ei luba.
+Töötaja võib Taiwanis oma õigusi kaitsta; tulemuse kohta see artikkel lubadust ei anna.
 
 ---
 

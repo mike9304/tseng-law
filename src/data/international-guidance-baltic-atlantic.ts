@@ -999,23 +999,23 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
   mega: {
     services: {
       description: 'Büroo tegeleb Taiwani õiguse põhiliste valdkondadega.',
-      viewAllLabel: 'Kuva kõik',
+      viewAllLabel: 'Vaadake kõiki',
     },
     columns: {
       description: 'Artikleid Taiwani õiguse korduvatest küsimustest.',
-      viewAllLabel: 'Kuva kõik',
+      viewAllLabel: 'Vaadake kõiki',
     },
     lawyers: {
       description: 'Büroo advokaatide tutvustus ja ühenduse võtmise viisid.',
-      viewAllLabel: 'Kuva kõik',
+      viewAllLabel: 'Vaadake kõiki',
     },
     pricing: {
       description: 'See leht selgitab töö ulatust ja seda, kuidas tasud kinnitatakse.',
-      viewAllLabel: 'Kuva kõik',
+      viewAllLabel: 'Vaadake kõiki',
     },
     faq: {
       description: 'Korduvad küsimused büroo töö kohta Taiwanis.',
-      viewAllLabel: 'Kuva kõik',
+      viewAllLabel: 'Vaadake kõiki',
     },
   },
   notFoundTitle: 'Lehte ei leitud',
@@ -1036,7 +1036,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
     columnsReviewLabel: 'Läbi vaadanud advokaat Wei Tseng',
     columnsOriginalLanguageBadge: 'Algkeel',
     columnsOriginalLanguageNote:
-      'Järgmisi artikleid ei ole veel eesti keeles. Loend jääb algkeelde ja avab vastava keelelehe; sisu ei tõlgita automaatselt.',
+      'Järgmisi artikleid ei ole veel eesti keeles. Loend on algkeeles ja avab vastava keele lehe; sisu ei tõlgita automaatselt.',
     imageBandAlt: 'Traditsiooniline taiwani sanheyuan (三合院) ja kaasaegne paviljon päevavalguses',
     videoPauseLabel: 'Peatage video',
     videoPlayLabel: 'Esitage video',
@@ -1062,13 +1062,13 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Lehe keel ja nõustamiskeel ei ole sama asi',
           paragraphs: [
             'See leht on kirjutatud eesti keeles, kuid nõustamine advokaadiga toimub ainult neljas nõustamiskeeles: inglise, hiina (中文), jaapani ja korea keeles. Juhiste lugemine eesti keeles ei tähenda, et vestlus advokaadiga toimuks eesti keeles.',
-            'Me ei luba tõlki, vastamise tähtaega ega kohtumist selle lehe kaudu. Kui te ei saa kasutada ühtegi neljast keelest, selgitab leht „Kontakt“, kuidas suhtlusviisi kontrollitakse.',
+            'Me ei anna lubadust tõlgi, vastamise tähtaja ega kohtumise kohta selle lehe kaudu. Kui te ei oska ühtegi neljast keelest, selgitab leht „Kontakt“, kuidas suhtlusviisi kontrollitakse.',
           ],
         },
         {
           heading: 'Töövaldkonnad',
           paragraphs: [
-            'Töövaldkond hõlmab järgmisi kuut rühma. Leht „Teenused“ kirjeldab iga rühma täpsemalt ja ütleb, mida ei lubata.',
+            'Töövaldkond hõlmab järgmisi kuut rühma. Leht „Teenused“ kirjeldab iga rühma täpsemalt ja ütleb, mida ei tõotata.',
           ],
           items: [
             'Investeeringud ja äriühingu asutamine Taiwanis',
@@ -1100,7 +1100,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Investeeringud ja äriühingu asutamine Taiwanis',
           paragraphs: [
             'Abistame välismaiseid investoreid ja ettevõtteid äriühingu asutamisel või juhtimisel Taiwanis: õigusliku vormi valik, dokumentide ettevalmistamine ja esitamine, kapitali sissemakse, pangaküsimused, tegutsemiskoha hindamine ning valdkonnanõuded. Toetame ka raamatupidamist ja makse, mis tekivad asutamisest ja tegutsemisest Taiwanis.',
-            'Menetluse käik ja kestus erinevad vormi, investori, tegevusala, panga ja juba olemasolevate dokumentide järgi. Äriühingu asutamine iseenesest ei too kaasa elamisõigust (居留) ega tööluba (工作許可): need on eraldi menetlused, mida hinnatakse isiku olukorra järgi.',
+            'Menetluse käik ja kestus erinevad vormi, investori, tegevusala, panga ja juba olemasolevate dokumentide järgi. Äriühingu asutamine iseenesest ei anna elamisluba (居留) ega tööluba (工作許可): need on eraldi menetlused, mida hinnatakse isiku olukorra järgi.',
           ],
         },
         {
@@ -1142,7 +1142,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Ulatus ja selle kinnitamine',
           paragraphs: [
             'Büroo töötab Taiwani õiguse järgi ja tegeleb eespool nimetatud valdkondade asjadega. Iga asja ulatus kinnitatakse eraldi pärast seda, kui advokaat on teie teate läbi vaadanud.',
-            'Elamisstaatus, tööluba ja sarnased küsimused hinnatakse dokumentide ja isiku olukorra järgi, mitte kodakondsuse järgi. Kui osa teie asjast puudutab selliseid küsimusi, nimetage see ühendust võttes. See leht ei luba tulemust ega vastamise tähtaega.',
+            'Elamisstaatus, tööluba ja sarnased küsimused hinnatakse dokumentide ja isiku olukorra järgi, mitte kodakondsuse järgi. Kui osa teie asjast puudutab selliseid küsimusi, nimetage see ühendust võttes. See leht ei anna lubadust tulemuse ega vastamise tähtaja kohta.',
           ],
         },
       ],
@@ -1153,7 +1153,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Põhiandmed selle Taiwani advokaadibüroo, selle büroode ja välismaiste osapooltega tehtava töö kohta.',
       intro:
-        'Hovering International Law Firm on advokaadibüroo Taiwanis. Advokaadid töötavad ettevõtete nõustamisest kuni kohtumenetluseni. See osa kirjeldab büroo teket, asukohti ja tööd välismaiste osapooltega.',
+        'Hovering International Law Firm on advokaadibüroo Taiwanis. Advokaadid tegelevad nii ettevõtete nõustamise kui ka kohtumenetlusega. See osa kirjeldab büroo teket, asukohti ja tööd välismaiste osapooltega.',
       sections: [
         {
           heading: 'Asutamine ja ülesehitus',
@@ -1174,7 +1174,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kui võtate meiega ühendust',
           paragraphs: [
             'Kui teie kokkuvõte on saabunud, vaatab advokaat sisu läbi ja räägib seejärel võimalikust töö ulatusest, veel vajalikest dokumentidest ja järgmistest sammudest. Maksu- või raamatupidamisküsimustes võib büroo töötada raamatupidamisüksusega ühes menetluses.',
-            'Iga asja tulemus sõltub asjaoludest ja olemasolevatest dokumentidest; tulemust me ei luba. Kui vajate siduvat vastust oma olukorrale, tuleb dokumendid arutada advokaadiga ühes neljast nõustamiskeelest.',
+            'Iga asja tulemus sõltub asjaoludest ja olemasolevatest dokumentidest; tulemuse kohta me lubadust ei anna. Kui vajate siduvat vastust oma olukorrale, tuleb dokumendid arutada advokaadiga ühes neljast nõustamiskeelest.',
           ],
         },
       ],
@@ -1182,7 +1182,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ADVOKAADID',
       title: 'Hoveringi rahvusvaheline meeskond',
-      description: 'Hoveringi advokaatide, tegevjuhtimise ja seotud audiitorbüroo profiilid.',
+      description: 'Hoveringi advokaatide, Korea tegevuse juhi ja seotud audiitorbüroo profiilid.',
       intro: '',
       sections: [],
     },
@@ -1228,7 +1228,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'KONTAKT',
       title: 'Kuidas bürooni jõuda',
       description:
-        'Lehe keel, nõustamiskeeled, toimimisviis, kui te ei saa kasutada ühtegi neljast keelest, ja mida see leht ei luba.',
+        'Lehe keel, nõustamiskeeled, toimimisviis, kui te ei oska ühtegi neljast keelest, ja mida see leht ei tõota.',
       intro:
         'Enne kui meile kirjutate, eristage järgmised kolm asja. Neid aetakse sageli segi, kuid need tähendavad erinevaid asju.',
       sections: [
@@ -1244,23 +1244,23 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Kui te ei saa kasutada ühtegi neljast nõustamiskeelest',
+          heading: 'Kui te ei oska ühtegi neljast nõustamiskeelest',
           paragraphs: [
-            'Kontaktvormil võite valida „Suhtlusviis tuleb kinnitada“. Vastame, et kontrollida, kas on olemas kasutatav suhtlusviis; teenust muus keeles ei tagata ja vastamise tähtaega ei lubata.',
-            'See on üksnes kontroll, mitte lubadus. Me ei luba tõlki, teenust eesti keeles ega muus keeles väljaspool neid nelja keelt, ega seda, et võtame iga asja vastu.',
+            'Kontaktvormil võite valida „Ma ei oska ühtegi neljast keelest — suhtlusviis tuleb kinnitada“. Vastame, et kontrollida, kas on olemas kasutatav suhtlusviis; teenust muus keeles ei tagata ja vastamise tähtaja kohta lubadust ei anta.',
+            'See on üksnes kontroll, mitte lubadus. Me ei anna lubadust tõlgi, teenuse eesti keeles ega muus keeles väljaspool neid nelja keelt ega selle kohta, et võtame iga asja vastu.',
           ],
         },
         {
           heading: 'Mis peaks olema esimeses teates',
           paragraphs: [
             'Nimetage, mis on juhtunud, millist abi vajate, milline side on asjal Taiwaniga, ja tähtaeg, kui te selle teate. Kui olete juba saanud kirja kohtult või asutuselt, nimetage kirjal olev kuupäev.',
-            'Algfaasis ei ole veel vaja saata passinumbrit, isikutunnistuse numbrit, kontonumbreid, haiguslugu ega kogu tõendusmaterjali. Oodake advokaadi juhiseid ja saatke tundlikud dokumendid seejärel turvalist teed pidi.',
+            'Algfaasis ei ole veel vaja saata passinumbrit, isikutunnistuse numbrit, kontonumbreid, haiguslugu ega kogu tõendusmaterjali. Oodake advokaadi juhiseid ja saatke tundlikud dokumendid seejärel turvalist kanalit pidi.',
           ],
         },
         {
-          heading: 'Mida see leht ei luba',
+          heading: 'Mida see leht ei tõota',
           paragraphs: [
-            'Me ei luba vastamise tähtaega, ei kinnita kohtumist selle lehe kaudu, ei luba konkreetset advokaati ega korralda tõlki. Kirjalik tõlge on midagi muud: teie teadet ei tõlgita automaatselt.',
+            'Me ei anna lubadust vastamise tähtaja kohta, ei kinnita kohtumist selle lehe kaudu, ei anna lubadust konkreetse advokaadi kohta ega korralda tõlki. Kirjalik tõlge on midagi muud: teie teadet ei tõlgita automaatselt.',
             'Kui saadate taotluse, säilitatakse sisu ja see ootab läbivaatamist. Kui te mõne aja pärast vastust ei saa, võite kirjutada uuesti kontaktlehel nimetatud e-posti aadressile.',
           ],
         },
@@ -1295,12 +1295,12 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Kas ma saan nõu eesti keeles?',
           answer:
-            'Ei. Need juhised on kirjutatud eesti keeles, kuid nõustamine advokaadiga toimub ainult inglise, hiina (中文), jaapani ja korea keeles. Me ei luba ka tõlki. Kirjalik tõlge on midagi muud: algtekst, mille kirjutate, säilitatakse nii, nagu see on, ja seda ei tõlgita automaatselt.',
+            'Ei. Need juhised on kirjutatud eesti keeles, kuid nõustamine advokaadiga toimub ainult inglise, hiina (中文), jaapani ja korea keeles. Me ei anna lubadust ka tõlgi kohta. Kirjalik tõlge on midagi muud: algtekst, mille kirjutate, säilitatakse nii, nagu see on, ja seda ei tõlgita automaatselt.',
         },
         {
-          question: 'Mis siis, kui ma ei saa kasutada ühtegi neljast keelest?',
+          question: 'Mis siis, kui ma ei oska ühtegi neljast keelest?',
           answer:
-            'Valige saatmisel „Suhtlusviis tuleb kinnitada“. Vastame, et kontrollida suhtlusviisi, kuid teenust muus keeles ei tagata. See on kontroll, mitte lubadus, et saame töötada muus keeles.',
+            'Valige saatmisel „Ma ei oska ühtegi neljast keelest — suhtlusviis tuleb kinnitada“. Vastame, et kontrollida suhtlusviisi, kuid teenust muus keeles ei tagata. See on kontroll, mitte lubadus, et saame töötada muus keeles.',
         },
         {
           question: 'Kuidas minu eestikeelset teksti käsitletakse?',
@@ -1320,7 +1320,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Mis siis, kui minu asi on väga kiireloomuline?',
           answer:
-            'Nimetage tähtaeg või ametikirja kuupäev kokkuvõtte alguses, et need andmed oleksid läbivaatamisel nähtavad. Sellel lehel ei ole valvesidet ega lubata vastamise tähtaega; kui teie asi ei saa oodata, peaksite paralleelselt otsima muid teid oma asukohas.',
+            'Nimetage tähtaeg või ametikirja kuupäev kokkuvõtte alguses, et need andmed oleksid läbivaatamisel nähtavad. Sellel lehel ei ole valvesidet ega lubata vastamise tähtaega; kui teie asi ei saa oodata, peaksite samal ajal otsima muud abi oma asukohas.',
         },
       ],
     },
@@ -1358,7 +1358,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Säilitamiskoht ja juurdepääs',
           paragraphs: [
-            'Teie saadetise sisu säilitatakse kohas, mis ei ole avalikult kättesaadav. Juurdepääs on ainult büroo volitatud isikutel taotluse menetlemiseks.',
+            'Teie saadetud andmete sisu säilitatakse kohas, mis ei ole avalikult kättesaadav. Juurdepääs on ainult büroo volitatud isikutel taotluse menetlemiseks.',
             'See leht ei anna absoluutset turvagarantiid. Ükski edastustee ega ükski säilitamiskoht ei ole täielikult turvaline; tundlikud dokumendid tuleks seetõttu saata alles pärast advokaadi erijuhist.',
           ],
         },
@@ -1373,21 +1373,21 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Teade ja vastuvõtunumber',
           paragraphs: [
             'Kui taotlus saadetakse edukalt, teavitab süsteem bürood. Kui seda teadet ei ole veel kinnitatud, jääb teie tekst alles ega kao.',
-            'Vastuvõtunumber aitab teie taotlust meie toimikutest leida. See kuvatakse pärast säilitamist; võite selle uuel ühendusel nimetada.',
+            'Vastuvõtunumber aitab teie taotlust meie toimikutest leida. See kuvatakse pärast säilitamist; võite selle uuesti ühendust võttes nimetada.',
           ],
         },
         {
           heading: 'Teie õigused ja ühenduse võtmise viis',
           paragraphs: [
-            'Võite taotleda oma andmete tutvustamist, parandamist või kustutamist või nõusoleku tagasi võtta kontaktlehel nimetatud e-posti aadressi kaudu. Kui on seaduslik või menetlusest tulenev säilitamiskohustus, selgitame piirangut.',
+            'Võite taotleda oma andmetega tutvumist, nende parandamist või kustutamist või võtta nõusoleku tagasi kontaktlehel nimetatud e-posti aadressi kaudu. Kui on seaduslik või menetlusest tulenev säilitamiskohustus, selgitame piirangut.',
             'See leht ei nimeta kindlat säilitamistähtaega, sest tegelik kestus sõltub sellest, kas asja jätkatakse, ja sellega seotud kohustustest. Kui soovite varasemat kustutamist, teatage sellest ühendust võttes.',
           ],
         },
         {
           heading: 'Säilitamiskoht ja teenuseosutajad',
           paragraphs: [
-            'Neid veebilehti majutab Vercel ja teie saadetis säilitatakse selle teenuse mitteavalikus andmesalvestuses. E-kirjad saadetakse büroo kasutatava e-postiteenuse kaudu.',
-            'Üksikute teenuseosutajate serverid võivad asuda väljaspool Taiwani, nii et teie andmeid võidakse seal säilitada ja töödelda. Kui säilitamise eesmärk on täidetud, kustutatakse andmed viivituseta; andmed, mida tuleb kohalduvate sätete järgi säilitada, jäävad selleks ajaks. Isikuandmete taotlused võtab vastu wei@hoveringlaw.com.tw.',
+            'Neid veebilehti majutab Vercel ja teie saadetud andmed säilitatakse selle teenuse mitteavalikus andmesalvestuses. E-kirjad saadetakse büroo kasutatava e-postiteenuse kaudu.',
+            'Üksikute teenuseosutajate serverid võivad asuda väljaspool Taiwani, nii et teie andmeid võidakse seal säilitada ja töödelda. Kui säilitamise eesmärk on täidetud, kustutatakse andmed viivituseta; andmed, mida tuleb kohalduvate sätete järgi säilitada, jäävad selleks ajaks. Isikuandmete taotlused saab saata aadressile wei@hoveringlaw.com.tw.',
           ],
         },
       ],
@@ -1396,7 +1396,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'LAHTIÜTLUS',
       title: 'Selle lehe teabe ulatus ja piirid',
       description:
-        'Teabe üldine iseloom, õiguslik kohaldamisala ja eeldused suhtele advokaadi ja kliendi vahel.',
+        'Teabe üldine iseloom, õiguslik kohaldamisala ja eeldused advokaadi ja kliendi suhte tekkimiseks.',
       intro:
         'See osa teeb selgeks, mida need eestikeelsed juhislehed saavad teie heaks teha ja mida mitte.',
       sections: [
@@ -1422,7 +1422,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Tulemust ei lubata',
+          heading: 'Tulemust ei tõotata',
           paragraphs: [
             'Ükski osa sellest lehest ei ole lubadus asja tulemuse, taotluse rahuldamise ega elamis- ja tööstaatuse kohta.',
             'Välislingid on mõeldud orienteerumiseks; me ei taga kolmandate isikute sisu õigsust ega ajakohasust.',
@@ -1453,10 +1453,10 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Kui kaugele saab artikkel orienteerida',
+          heading: 'Kui kaugele saab artiklist orienteeruda',
           paragraphs: [
             'Artiklid on üldine teave avaldamise hetkel. Sätted ja nende kohaldamine võivad muutuda ning artikkel ei kata kõiki teie asja asjaolusid.',
-            'Ärge seetõttu tehke tegelikus asjas otsuseid üksnes artikli põhjal. Kasutage seda ülevaate saamiseks ja arutage oma dokumente eraldi advokaadiga; see leht ei ole nõustamissamm.',
+            'Ärge seetõttu tehke tegelikus asjas otsuseid üksnes artikli põhjal. Kasutage seda ülevaate saamiseks ja arutage oma dokumente eraldi advokaadiga; see leht ei ole nõustamine.',
           ],
         },
       ],

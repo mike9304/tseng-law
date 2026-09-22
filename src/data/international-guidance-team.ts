@@ -343,8 +343,8 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Avocate dirigeante à Taïwan',
       'chang-rongxuan': 'Avocat à Taïwan',
-      'chang-fangyu': 'Collaborateur juridique',
-      'son-jungmin': 'Direction des opérations Corée',
+      'chang-fangyu': 'Collaboratrice juridique',
+      'son-jungmin': 'Direction des opérations de Corée',
       'huang-shengping': 'Expert-comptable associé',
     },
   },
@@ -2325,13 +2325,13 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Collaborateur juridique, fort d’une longue expérience comme collaborateur senior dans plusieurs cabinets, en charge de l’appui procédural, du droit des sociétés et de l’investissement étranger.',
+        'Collaboratrice juridique, forte d’une longue expérience comme collaboratrice senior dans plusieurs cabinets, en charge de l’appui procédural, du droit des sociétés et de l’investissement étranger.',
         'Appui aux procédures, à la constitution de sociétés, aux autorisations d’investissement étranger, aux demandes de licence et aux échanges entre la Corée et Taïwan.',
       ],
       education: ['Licence en droit (LL.B.), Tunghai University'],
       experience: [
-        'Collaborateur juridique senior, Boyin Law Firm',
-        'Collaborateur juridique senior, Muyang International Law Firm',
+        'Collaboratrice juridique senior, Boyin Law Firm',
+        'Collaboratrice juridique senior, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
@@ -2340,7 +2340,7 @@ export const guidanceTeamBios: Record<
         'Appuie les échanges entre équipes par des systèmes documentaires et des flux de travail, avec une formation en informatique.',
       ],
       education: ['Licence (B.S.) informatique, National Cheng Kung University'],
-      experience: ['Pôle opérations Corée, Hovering International Law Firm'],
+      experience: ['Pôle opérations de Corée, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [

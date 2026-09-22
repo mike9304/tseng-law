@@ -42,7 +42,7 @@ Si le salarié commet toutefois un acte illicite,
 
 **viole le règlement intérieur (工作規則),**
 
-**ou s’absente du travail sans motif 3 jours de suite (曠工),**
+**ou s’absente du travail sans motif légitime 3 jours de suite (曠工),**
 
 la société peut licencier sans verser d’indemnité de licenciement.
 
@@ -94,9 +94,9 @@ afin de réduire les coûts de personnel,
 
 à convoquer successivement les salariés bien payés et anciens à des entretiens
 
-À l’époque, mon client, M. B, était employé depuis plus de dix ans auprès de la société A
+À l’époque, mon client, M. B, était employé depuis plus de dix ans auprès de la société A.
 
-et il était le commercial le plus performant de la région du centre de Taïwan.
+Il était le commercial le plus performant de la région du centre de Taïwan.
 
 Parce que le salaire et les primes étaient très élevés,
 

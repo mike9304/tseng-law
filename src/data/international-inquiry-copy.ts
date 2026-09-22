@@ -690,7 +690,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'J’ai lu la page de confidentialité et j’accepte l’envoi de cette demande.',
     privacyLinkLabel: 'Confidentialité',
     requiredMessage: 'Ce champ est obligatoire.',
-    invalidEmailMessage: 'Veuillez indiquer une adresse e-mail valable.',
+    invalidEmailMessage: 'Veuillez indiquer une adresse e-mail valide.',
     tooLongMessage: 'Le texte est trop long. Raccourcissez-le et renvoyez-le.',
     sourceLanguageNotice:
       'Cet article n’est publié qu’en {language} ; le lien ouvre la page d’origine.',

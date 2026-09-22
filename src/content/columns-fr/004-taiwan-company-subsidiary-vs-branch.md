@@ -50,7 +50,7 @@ S’il est prévu d’exploiter l’activité à Taïwan conjointement avec un t
 
 Dans le mode succursale, le sujet juridique ultime de l’exploitation de la succursale est la société étrangère. Le siège doit fixer concrètement le cercle des contrats que le responsable à Taïwan peut conclure, les pouvoirs bancaires, les pouvoirs de personnel, le système de rapports, l’approbation du budget et le contrôle interne. Si, à l’inverse, la filiale est choisie, les statuts et les organes, la répartition des pouvoirs entre actionnaires ainsi que les contrats de services, de prêt et de licence entre la filiale et la société mère sont à documenter de façon distincte. Plus essentiel que la dénomination est de savoir si les pouvoirs réels et le flux des opérations correspondent à la structure juridique.
 
-Les autorisations ne peuvent pas non plus se conclure à partir de la seule personnalité juridique. Des règles sectorielles peuvent fixer séparément l’entité demanderesse, le capital minimal, le personnel professionnel, le local, l’examen de l’investissement étranger ou la qualification du responsable. Le fait que l’immatriculation de la filiale ou de la succursale soit possible n’est pas la même chose que le pouvoir d’exploiter une activité réglementée déterminée. Les activités prévues sont à décomposer ; la partie contractuelle et le titulaire de chaque autorisation sont d’abord à confirmer.
+Les autorisations ne se déterminent pas non plus d’après la seule personnalité juridique. Des règles sectorielles peuvent fixer séparément l’entité demanderesse, le capital minimal, le personnel professionnel, le local, l’examen de l’investissement étranger ou la qualification du responsable. Le fait que l’immatriculation de la filiale ou de la succursale soit possible n’est pas la même chose que le pouvoir d’exploiter une activité réglementée déterminée. Les activités prévues sont à décomposer ; la partie contractuelle et le titulaire de chaque autorisation sont d’abord à confirmer.
 
 ## 2. Fiscalité et virement des bénéfices
 
@@ -172,7 +172,7 @@ Le choix final est plus sûr s’il est examiné par des spécialistes à Taïwa
 ## Sources officielles
 
 - [Base de données normative du ministère de la Justice de Taïwan — Loi sur les sociétés](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
-- [Base de données normative du ministère de la Justice de Taïwan — normes des taux de retenue à la source par catégorie de revenus (各類所得扣繳率標準), article 10](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
+- [Base de données normative du ministère de la Justice de Taïwan — normes des taux de retenue à la source par catégorie de revenus (各類所得扣繳率標準), article 3, et non l’article 10 de la loi sur la TVA](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Base de données normative du ministère de la Justice de Taïwan — Loi de l’impôt sur le revenu](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003)
 - [Ministère des Finances de Taïwan — indication sur la retenue à la source des dividendes versés aux actionnaires à l’étranger](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/withheld-rule/rule/3AmWR0R)
 - [Ministère des Finances de Taïwan — interprétation relative au bénéfice de la succursale d’une société étrangère](https://law-out.mof.gov.tw/LawContent.aspx?id=GL002917)

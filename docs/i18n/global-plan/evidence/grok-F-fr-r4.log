@@ -1,0 +1,64 @@
+WO-F-fr r4 — Grok 4.7 fix lane
+Workspace: /Users/son7/Projects/tseng-law-fix-fr-r4
+Date: 2026-09-23
+Scope: French guidance pack + columns-fr only. No commit.
+
+Rows: 61 (fr-a 25 + fr-b 36). Applied 55 (4 of them in a checker-safe form). Skipped 6.
+
+## Applied
+fr-a: 1, 2, 4, 5, 6, 7, 8, 9, 11, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25.
+fr-b: 1, 2, 6, 7, 8, 9, 10, 12, 13, 14, 15, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36.
+
+Checker-safe variants (still applied):
+- fr-a 3. Link label now says article 3 of the withholding-rate standards, and keeps « et non l’article 10 de la loi sur la TVA ». The Korean source link text is 제10조; dropping 10 fails numbers. URL unchanged (flno=3).
+- fr-a 12. « pour 1 victime et 1 accident » → « par 1 victime et par 1 accident ». The bare digits stay: Korean 1명·1건 are counted.
+- fr-a 13. « (1 période) » removed from the body. The FAQ copy keeps « (une fois) »: deleting both drops one counted 1 from 1회. « une fois » is the lexicon’s 1.
+- fr-a 14 / fr-b 16–17. Q16–Q20 were not promoted to headings, and U+200B was not deleted (heading levels and ZWSP counts are pinned to the Korean source). Inside the existing blocks: 006 « parlons du massage » / « Il existe… »; 008 the Company A sentence now ends, and the next block starts « Il était le commercial… »; 013 « À défaut de carte de séjour… » and « Avant de conclure le contrat de bail, vous devriez vérifier ce point. »
+- fr-b 4. « affaire de consommation » → « affaire de protection des consommateurs ». The gloss (109年度消字第7號) stays. (2020) was already in the sentence; no second Gregorian year was added.
+
+## Skipped
+- fr-a 10 and fr-b 11 (first of the month as « 1er »). 9 left as « 1 janvier / 1 juillet »: 001 ×2, 003 ×1, 004 ×2, 011 ×3, 015 ×1. The checker’s date pattern is `1 janvier 2024` → day + month + year. `1er janvier 2024` does not match, so the month number is lost and numbers FAIL.
+- fr-a 17 and fr-b 3 (space as thousands separator). ACCEPTED-ROUND: the checker does not parse « 500 000 ». French thousands stay dotted (`TWD 500.000`). 0 instances changed. `TWD 1.57M` untouched.
+- fr-b 5. Did not delete « (une fois ce montant) ». Korean is 최대 1배; removing « une fois » fails numbers (missing 1). The 3× and 5× caps stay.
+- fr-b 16 as a deletion. Every U+200B in 003, 005, 006, 008, 009, 013 and 015 stays, including 005’s `**​**` lines. See the in-block repairs above.
+- Frontmatter `url:` Hangul and the fullwidth colon inside the 008 url: not touched (R16).
+- R2–R10 sweep beyond the rows: prior rounds already hold the consultation lock, feminine Wei Tseng, Korea-as-labelled-example framing, Traditional glosses, and the advertising hedges (« Ce n’est pas un résultat promis »). No further instance turned up. Fullwidth CJK punctuation outside glosses: only the 008 url colon. « NOTRE ÉQUIPE », « Profil complet (en anglais) » and « questions et réponses » were already in French.
+
+## Systemic patterns
+- Corporate governance named as management + company law: 1 (Kaohsiung office → « gouvernance d’entreprise »). 004 already used the right term.
+- Fang-Yu Chang masculine beside a woman’s portrait: 4 strings (role « Collaboratrice juridique », intro « forte … collaboratrice senior », two experience lines). Wei Tseng stays feminine. Chang Rongxuan, the male manager in 008, and M. B / M. Lin stay masculine. Huang Shengping stays « il dirige ».
+- Korea label without « de »: 3 (« Bureau de Corée », « Direction des opérations de Corée », « Pôle opérations de Corée »). « clients de Corée » and « liées à la Corée » already had the preposition.
+- « qu’il n’y a pas d’effet »: 1 (009 → « d’y remédier et qu’il ne l’a pas fait »).
+- Simplified 台 in a gloss: 1 (台灣法人 → 臺灣法人). No other 台 in columns-fr.
+- « local commercial de bureaux »: 5 → « local à usage de bureaux ». One « local commercial » remains: it is the restaurant storefront, which is the right noun.
+- « un âge du véhicule n’excédant pas 2 ans »: 2 (FAQ + body) → « âgé de 2 ans au plus ». Digit 2 kept.
+- « exceptions limitées propres »: 2 → « un régime d’exceptions étroit, qui lui est propre ». The heading « exceptions limitées » is a title, not that calque; left.
+- False pronominals in the finding rows (se confirment, se considèrent, se convertir, se fixer, se substitue): those five sentences. No further « se considèrent ».
+- Thousands separator and « 1er »: 0 changed (see Skipped).
+- Spoken-column ZWSP stacks: 0 deleted.
+
+## §Verify
+```
+neighbour      PASS   
+hanzi          PASS   han=78
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+`grep -rn "\[변호사 검수 필요\]" src/content/columns-fr src/data | wc -l` → 0
+`npx tsc --noEmit -p tsconfig.json && echo TSC_OK` → TSC_OK
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+`git status --short | wc -l` → 23
+(That count is from before this log file existed. 010 numbers is WARN, not FAIL: extra `2020` was already in the consumer-case sentence; the file still passes.)
+
+## Reviewer disagreements (not applied)
+- The « 1er » and narrow-space thousands recommendations are right for French typography. They are not applied because the checker and ACCEPTED-ROUND reject them. Noted above, not treated as a mistake about the language.
+- fr-b 5 is the one legal call I did not follow. English stops at actual damages. The Korean source says 최대 1배, and Article 51’s simple-fault cap is one times actual damages. Deleting « (une fois ce montant) » both drops that cap and fails the number check. Kept.
+- fr-b 4’s suggested « (2020) » was already in the sentence next to 民國 year 109. I did not add another year. The extra-2020 warning is pre-existing; removing it would change a number that was not part of a failed check.
+- Promoting Q16–Q20 to `##` headings would change heading levels against the Korean source. The layout complaint is fair; the structure cannot move.

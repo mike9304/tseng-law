@@ -29,15 +29,15 @@ Wanneer een buitenlander in Taiwan een vennootschap opricht, moet hij of zij een
 
 De Dienst Investeringstoetsing moet nagaan of het betreffende kapitaal (資本額) werkelijk voor investeringsdoeleinden wordt gebruikt.
 
-Zij moet ook nagaan of buitenlandse actoren geen middelen onder een ander voorwendsel binnenbrengen.
+Zij moet ook nagaan of buitenlandse partijen geen middelen onder een ander voorwendsel binnenbrengen.
 
 Bij het opstellen van het investeringsplan hoeft het exacte vennootschapsadres niet te worden vermeld; de vermelding van de streek volstaat (voorbeeld: stad Taipei). ​
 
 Wanneer later bij de bank de voorbereidingsrekening van de vennootschap (公司籌備處帳戶) wordt geopend, toetsen talrijke banken echter de huurovereenkomst (租賃契約) en inspecteren zij ter plaatse het vennootschapsadres.
 
-Een medewerker van een Taiwanese bank heeft mij persoonlijk het volgende gezegd.
+Een medewerker van een Taiwanese bank heeft dit persoonlijk toegelicht.
 
-Talrijke buitenlanders verdwijnen recent na de rekeningopening, zodat de rekeningopening steeds strenger wordt behandeld.
+Talrijke buitenlanders zijn recent na de opening van de rekening verdwenen, zodat de rekeningopening steeds strenger wordt behandeld.
 
 In de grondslagtekst is al aangegeven dat de rekeningopening de moeilijkste stap bleek; dat klopt met de praktijk.
 
@@ -61,25 +61,25 @@ Die tijd gebruikt u om bij de bank de voorbereidingsrekening te openen en het ka
 
 Dat is mogelijk.
 
-De bank eist in de regel een dubbele identiteitscontrole,
+De bank eist in de regel een dubbele identiteitscontrole.
 
-en zonder verblijfskaart kunt u bij de immigratiedienst van Taiwan het basisgegevensblad van het uniforme identificatienummer (統一證號基本資料表) aanvragen.
+Zonder verblijfskaart kunt u bij de immigratiedienst van Taiwan het basisgegevensblad van het uniforme identificatienummer (統一證號基本資料表) aanvragen.
 
-De afgifte is op dezelfde dag mogelijk,
+De afgifte is op dezelfde dag mogelijk.
 
-maar de immigratiedienst (移民署) is zeer drukbezocht; u dient daarom vroeg te komen en een nummertje te trekken.
+De immigratiedienst (移民署) is echter zeer drukbezocht; u dient daarom vroeg te komen en een nummertje te trekken.
 
 ​
 
 **3. Ik heb gehoord dat bij de toetsing van het investeringsplan opleiding en beroepservaring moeten worden vermeld, en ik vrees dat mijn opleiding en ervaring niet bij de sector van de op te richten vennootschap passen.**
 
-De toetsingscommissie van het ministerie van Economische Zaken toetst weliswaar de achtergrond van de investeerder,
+De toetsingscommissie van het ministerie van Economische Zaken toetst weliswaar de achtergrond van de investeerder.
 
-maar de toetsing is niet buitensporig streng.
+De toetsing is echter niet buitensporig streng.
 
-U kunt uiteenlopende beroepservaringen vermelden, inclusief bijbaanwerk,
+U kunt uiteenlopende beroepservaringen vermelden, inclusief bijbaanwerk.
 
-en ze zo uitvoerig toelichten dat de toetsende personen kunnen worden overtuigd.
+U kunt ze zo uitvoerig toelichten dat de toetsende personen kunnen worden overtuigd.
 
 Over dit punt dient u grondig te overleggen met een advocaat in Taiwan.
 
@@ -87,7 +87,7 @@ Over dit punt dient u grondig te overleggen met een advocaat in Taiwan.
 
 **4. Waarop moet worden gelet wanneer het inschrijvingsadres van de vennootschap (bijvoorbeeld een horecalokaal) wordt gehuurd?**
 
-De vennootschapsoprichting duurt ongeveer **3 maanden**, de verkrijging van de werkvergunning (工作許可) en van de verblijfskaart ongeveer **1 maand**.
+De vennootschapsoprichting duurt ongeveer **3 maanden**, en de verkrijging van de werkvergunning (工作許可) en van de verblijfskaart duurt ongeveer **1 maand** extra.
 
 Plaats de ingangsdatum van de overeenkomst daarom zo laat mogelijk.
 
@@ -95,11 +95,11 @@ Bovendien verleent de verhuurder in huurovereenkomsten voor winkelpanden in Taiw
 
 Dit is een van huur vrijgestelde periode; u kunt daarover onderhandelen.
 
-Voor een buitenlander is het huren van een winkelpand niet eenvoudig, en de waarborgsom (押金) in Taiwan is eerder laag (gewoonlijk 2 maanden huur), zodat de bescherming van de verhuurder beperkt is;
+Voor een buitenlander is het huren van een winkelpand niet eenvoudig, en de waarborgsom (押金) in Taiwan is eerder laag (gewoonlijk 2 maanden huur), zodat de bescherming van de verhuurder beperkt is.
 
-verhuurders aarzelen daarom om aan buitenlanders te verhuren.
+Verhuurders aarzelen daarom om aan buitenlanders te verhuren.
 
-Daarom raad ik aan het exploitatieadres vroeg te zoeken.
+Het verdient daarom aanbeveling het exploitatieadres vroeg te zoeken.
 
 Verloopt de onderhandeling met de verhuurder niet soepel, dan is een extra zekerheid bespreekbaar.
 
@@ -115,13 +115,13 @@ Bijvoorbeeld: als de bedrijfsactiviteit de horeca is en men een commercieel kant
 
 Zoals reeds aangegeven, toetst de bank de huurovereenkomst en inspecteert zij ter plaatse het vennootschapsadres.
 
-Bovendien eist het stadsbestuur (市政府) bij de definitieve vennootschapsinschrijving dat het ingeschreven adres in een zone ligt waar restaurantuitbating is toegestaan;
+Bovendien eist het stadsbestuur (市政府) bij de definitieve vennootschapsinschrijving dat het ingeschreven adres in een zone ligt waar restaurantuitbating is toegestaan.
 
-bij een commercieel kantoorpand is de vennootschapsinschrijving (公司登記) dan niet mogelijk.
+Bij een commercieel kantoorpand is de vennootschapsinschrijving (公司登記) dan niet mogelijk.
 
-Bijvoorbeeld: gaat het om bedrijfsactiviteiten (營業項目) die in een commercieel kantoorpand mogelijk zijn, zoals reclame of groothandel, dan kan de vennootschap in een commercieel kantoorpand worden opgericht. Vóór het sluiten van de huurovereenkomst
+Bijvoorbeeld: gaat het om bedrijfsactiviteiten (營業項目) die in een commercieel kantoorpand mogelijk zijn, zoals reclame of groothandel, dan kan de vennootschap in een commercieel kantoorpand worden opgericht. Controleer dat vóór het sluiten van de huurovereenkomst.
 
-dient u dit vooraf te controleren.
+U dient dit vooraf te controleren.
 
 *Als u een vraag over Taiwanees recht hebt, kunt u een bericht sturen via de contactpagina, in het Engels, het Chinees (中文), het Japans of het Koreaans. Een antwoordtermijn wordt niet toegezegd.*
 

@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Uitgelichte afbeelding](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Dit deel sluit aan op [Vennootschapsoprichting in Taiwan – grondslagen](/nl/columns/taiwan-company-establishment-basics) en op [Vennootschapsoprichting in Taiwan – verdieping deel 1](/nl/columns/taiwan-company-establishment-advanced-1). Het is verdieping deel 2 (公司設立).
+Dit deel sluit aan op [Vennootschapsoprichting in Taiwan – grondslagen](/nl/columns/taiwan-company-establishment-basics) en op [Vennootschapsoprichting in Taiwan – verdieping deel 1](/nl/columns/taiwan-company-establishment-advanced-1). Het behandelt de vennootschapsoprichting (公司設立); het is verdieping deel 2.
 
 ​
 

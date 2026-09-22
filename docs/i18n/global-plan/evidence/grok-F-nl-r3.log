@@ -1,0 +1,90 @@
+WO-F-nl r3 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-nl-r3
+date: 2026-09-23
+no git add/commit/push
+
+## Rows
+
+Numbered findings: nl-a 34, nl-b 42 (76). No separate P3 table. P1 and P2 applied unless a skip rule below.
+
+Applied: 74.
+Skipped: 2 numbered rows. Adaptations on applied rows are listed under that row, not as skips.
+
+Test edit: src/data/__tests__/guidance-disclosure-parity.test.ts `nl: /consultatiestap/` → `/vervangt de consultatie niet/`. That regex pins the "not the consultation step" sentence. Nothing else in the test changed. consultationNotice in llms-txt.ts was left; it is still a verbatim substring of the Dutch FAQ answer ("Deze toelichting is in het Nederlands geschreven, maar het gesprek met een advocaat vindt alleen plaats in het Engels, Chinees (中文), Japans en Koreaans."). confidentialNotice was left. discoveryNotice still contains the token llms.txt. "TWD 1.57M" was not the Dutch bio figure and was not touched.
+
+### Applied
+nl-a 1–15, 17–34.
+nl-b 1–18, 20–42.
+
+Adaptations (still applied):
+- nl-a 1. The link label now names the nonresident dividend withholding rule, as in 001. "(artikel 10)" stays: the Korean link is 영업세법 제10조, and dropping 10 fails the number check. The URL (`pcode=G0340028&flno=3`) is unchanged.
+- nl-a 6. The gloss (公司設立) now sits on vennootschapsoprichting. "verdieping deel 2" stays in the same sentence so the source 2 is still counted.
+- nl-a 13. "per een gewonde persoon en 1 ongeval" → "per gewonde persoon en per 1 ongeval". "per ongeval" would drop the digit; "een gewonde persoon" is not the lexicon phrase "een persoon".
+- nl-a 27. "Bij een ongeval met 1 voertuig". "één voertuig" does not count as 1 (één counts only before jaar/maand/dag/keer/persoon).
+- nl-a 33. The reviewer's one sentence would merge three blocks. Each block is now its own sentence: employer at fault → the employee can claim; employee at fault → the employer can refuse; the two rights are not given at once.
+- nl-b 20. Lowercase openings in 013 (questions 2–5) and 015 ("moet sinds 1 januari 2023") were closed inside the existing blocks. Paragraphs were not merged.
+- nl-b 25. "tot 1 maal het bedrag" → "tot het bedrag van de werkelijke schade". 010 still matches sourceCount=44 targetCount=44, so that 1 was not a missing source digit.
+- nl-b 34. "een keer", not "eenmalig". The lexicon counts "een keer" as 1.
+- nl-b 39. "heeft 1 aandeelhouder 1 stem". "elke aandeelhouder één stem" would drop both 1s (één without a unit does not count).
+- nl-b 40. "2/3" → "twee derde", which the lexicon counts as 2 and 3. The clause now names the consent of the other shareholders' voting rights. "is" was left out of that clause so the Latin sentence stays under the English-stopword threshold.
+- nl-b 3. "(和解)" was repeated on the settlement sentence so the long Latin sentence is not read as English. The gloss is already the term for that settlement.
+
+### Skipped
+- nl-a 16. Q16–Q20 were not promoted to `##` headings, and the U+200B lines in 003 (from Q16), 005, 006, 008 and 009 were not removed. Heading levels and ZWSP counts must match the Korean source. English keeps Q16–Q20 as body paragraphs. Same decision as rounds 1 and 2.
+- nl-b 19. The trailing U+200B after the Taipei sentence, and the ZWSP-only lines in 013 and 015, were left. Deleting them changes the ZWSP count. The lowercase openings in those files were repaired under nl-b 20.
+
+## Systemic patterns
+
+- U+200B blanks (003 from Q16, 005 including `**​**`, 006, 008, 009, 013, 015). 0 deleted. See Skipped.
+- Guidance calques (consultatiestap, "zo", the "geen … en niet dat", "ze" for the facts, aanmeldtijdstip, vertaallijsten / "lijsten naar", Baseer, koppeling met, werkstromen, skip link without a verb). 10 Dutch strings, in international-guidance-it-nl-pl.ts, international-guidance-team.ts (nl bio only), and international-inquiry-copy.ts (nl only).
+- 覆議 rendered as "nader onderzoek" next to a sentence that already says herziening. 4: the body pair with (鑑定), and three source-link titles.
+- German comma between a long subject and the finite verb in 002. 7: "draagt, zijn" ×1, "draagt, vereisen" ×2, "schulden, moeten" ×1, "contracten, worden" ×1, "bankovermakingsstukken, overeenstemmen" ×1, "aangiftegeschiedenis, moeten" ×1. Relative-clause commas were left.
+- Personal case note. 008 ×1 "mijn partij, de heer B" → third person; de heer B stays male. 009 ×3 blocks, fault mapped to one right each. The forced letter "Ik, [naam]" in 008 stays: that is the male employee speaking.
+- Zetel for the foreign head office → hoofdkantoor. 25: 018 ×22 (every zetel in that file), 011 ×2 ("deel van de zetel (本公司)", "verantwoordelijkheid van de zetel"), 004 ×1 ("op de zetel van de hoofdzetel"). Left: registered-office zetel in 001, 002, and 017 (seat amendment under the transport rules).
+- "Naar" / "verschilt naar" / "wijkt af volgens" for "according to". 9: 011 ×7 (two "verschilt naar elke zaak", "verschilt naar de investeerder", contract name, sales control, product type, interval, "naar 1 bepaald woord"), 003 ×1 (policy cover "wijkt af volgens"). "Naar Taiwanees recht" and "naargelang" that already mapped a condition were left.
+- Verzekeren for collecting records. 2: 014 payment records, 016 family-relationship records. Left: "veilige afstand is verzekerd" and "de veiligheid verzekeren" (ensure, not collect).
+- Coined or stock compounds. steungegevens ×3 → ondersteunende gegevens; recensieauteur ×2 → recensent; wijkteken ×1; belangenconflictcontrole ×1; Werkingsrichtlijnen ×1 → Werkinstructies.
+- Meervoudige toepassing where the restriction on duplicate benefits was dropped. 3: FAQ, body repeat, and "meervoudige beperking" → "de beperking van meervoudig gebruik".
+- Handel as a trading firm for the transport business, and 018 shareholders who do not run the business. 9 in 017 (question, two vehicle-threshold clauses × FAQ and body, intro, heading, statutory name) and 1 in 018. handelsinschrijving / handelsvoertuigen / handelsgebruik left.
+- Eenheden for the new freight trucks. 4: 8 and 5, FAQ and body.
+- Circulatie for vehicle operations. 2.
+- Lowercase paragraph openings after a split sentence. 8: 013 questions 2–5, 015 before "sinds 1 januari 2023".
+- R2–R10. Prior rounds already hold: u-address, feminine Wei Tseng where Dutch marks it (the title Advocaat is common gender), consultation languages Engels / Chinees (中文) / Japans / Koreaans, no interpreter, no reply-time, no free first meeting, no result promise. Korea stays a labelled example. This round did not turn any of those sentences positive. The kosteloos denial still matches the checker's exempt phrase.
+
+## Reviewer points not followed
+
+- nl-a 16 and nl-b 19. The U+200B lines are the same count as the Korean source. Promoting Q16–Q20 to headings would also change heading levels. English does not use those headings either.
+- nl-a 1, the request to drop "(artikel 10)". The opened URL is flno=3 and was not changed. The Korean link text still contains 제10조, and the checker counts that 10. The label's subject is now the withholding rule, with the digit kept in parentheses.
+- nl-a 13, nl-a 27, nl-b 34, nl-b 39. The suggested wording drops a digit the checker still requires, or uses "één"/"eenmalig"/"elke" where the Dutch lexicon does not count them. The meaning is the reviewer's; the digit shape is the one that still passes.
+- nl-a 33 and nl-b 20, where the suggested rewrite would join the next block. Block counts are locked. Each block was made a full sentence.
+- Registered-office "zetel" in 001, 002 and 017. That is the company's own seat, not the foreign head office the verdict describes.
+- "Bevestigen" was not rewritten everywhere. Where it means confirm (conflict check, scope, the four-language channel), it is the right verb. It was changed where the flagged sentence used it, or vastleggen, for determine or check (011 "nagegaan", 010 "vastgesteld").
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-nl --lang nl 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=113
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-nl src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      22
+```
+
+Recount after this log file was written: `git status --short | wc -l` → 23. The extra line is this log.

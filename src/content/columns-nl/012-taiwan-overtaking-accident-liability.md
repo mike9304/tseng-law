@@ -45,11 +45,11 @@ De familie van A en de nabestaanden van B zagen eerst de plotselinge rijstrookwi
 
 Volgens het resultaat van het deskundigenonderzoek droeg A de voornaamste verantwoordelijkheid voor deze botsing. Deze conclusie was beperkt tot de feiten van deze zaak. Het deskundigenonderzoek nam gezamenlijk in aanmerking dat A 2 achtereenvolgens rijdende voorliggende voertuigen wilde inhalen, dat hij de tegengestelde rijstrook opreed, dat hij met een snelheid reed die nauwelijks tijd liet om te remmen, dat de voorgeschreven toeter- en koplampsignalen ontbraken, en nam ook de rijstrookwissel van voertuig nr. 2, de structuur van de weg en de rijstroken en de overige veiliggestelde bewijzen in aanmerking.
 
-Dat in afzonderlijke zaken zulke deskundigenresultaten er komen, betekent niet dat het 1 keer achterwege laten van een voorgeschreven sein steeds de aansprakelijkheid vastlegt. De nalatigheid (過失) bij een inhaalongeval hangt af van de plaats van het ongeval, de rijstrookindeling, de snelheid, de voertuigbewegingen, de seinen, de tijdintervallen, het zicht en de overige bewijzen.
+Dat in afzonderlijke zaken zulke deskundigenresultaten er komen, betekent niet dat het een keer achterwege laten van een voorgeschreven sein steeds de aansprakelijkheid vastlegt. De nalatigheid (過失) bij een inhaalongeval hangt af van de plaats van het ongeval, de rijstrookindeling, de snelheid, de voertuigbewegingen, de seinen, de tijdintervallen, het zicht en de overige bewijzen.
 
 ## Punten die bij de beoordeling van de ongevalaansprakelijkheid moeten worden nagegaan
 
-Voor het inhalen moet u eerst nagaan of de plaats of de verkeerssituatie onder het inhaalverbod valt. Geldt de procedure voor dezelfde rijstrook, geef dan het voorgeschreven toeter- of koplampsignaal, zonder het voorliggende voertuig tot wijken te dwingen, wacht op een duidelijk wijkteken en voltooi het inhalen met voldoende afstand en veilige terugkeerafstand (超車).
+Voor het inhalen moet u eerst nagaan of de plaats of de verkeerssituatie onder het inhaalverbod valt. Geldt de procedure voor dezelfde rijstrook, geef dan het voorgeschreven toeter- of koplampsignaal, zonder het voorliggende voertuig tot wijken te dwingen, wacht op een duidelijk teken dat de voorligger wil wijken en voltooi het inhalen met voldoende afstand en veilige terugkeerafstand (超車).
 
 De naleving van artikel 101 is belangrijk, maar waarborgt op zichzelf noch het vermijden van een ongeval, noch een later resultaat van deskundigenonderzoek of proces. Bestuurders moeten een extra veiligheidsmarge aanhouden en zich aan de situatie vóór hen aanpassen.
 

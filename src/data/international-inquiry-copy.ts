@@ -1045,7 +1045,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     sourceLanguageNotice:
       'Dit artikel is alleen in het {language} gepubliceerd; de koppeling opent de oorspronkelijke pagina.',
     unavailableTranslationNotice:
-      'Dit punt is in de taal van deze pagina nog niet beschikbaar. Een koppeling met de oorspronkelijke taal opent de oorspronkelijke tekst.',
+      'Dit punt is in de taal van deze pagina nog niet beschikbaar. Een koppeling naar de oorspronkelijke tekst opent die tekst.',
     unavailableLanguageNotice: 'Deze pagina wordt niet in het {language} aangeboden.',
     languageOptions: {
       en: 'Engels (English)',

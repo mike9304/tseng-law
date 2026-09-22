@@ -27,7 +27,7 @@ Bestaat alleen vermogensschade en kunnen de voertuigen worden bewogen, dan is he
 
 Artikel 185-4 van het Wetboek van Strafrecht (刑法) behandelt de strafrechtelijke verantwoordelijkheid van de bestuurder die na een verkeersongeval met letsel of overlijden de plaats verlaat. Hoe dit in de praktijk uitpakt, hangt af van de ongevalssituatie en van de genomen maatregelen.
 
-## Q2. Welke bewijzen moeten eerst worden geconserveerd?
+## Q2. Welke bewijzen moeten eerst worden veiliggesteld?
 
 Verzeker eerst de persoonlijke veiligheid en plaats de waarschuwingstekens; bel in Taiwan bij letsel of reddingsnood 119 (ambulance en brandweer), bij een strafbaar feit of een dringende veiligheidssituatie 110 (politie), en vanaf een mobiele telefoon 112 (交通事故). Meld het verkeersongeval ook aan de politie, voor zover de toestand het vereist.
 
@@ -43,13 +43,13 @@ Civielrechtelijke schadevergoeding (損害賠償) kan volgens artikel 197 van he
 
 Wie door een strafbaar feit schade heeft geleden, kan volgens artikel 487 van het Wetboek van Strafvordering een bij de strafzaak gevoegde civiele vordering (刑事附帶民事訴訟) instellen. Zolang de strafzaak loopt, kan zij volgens artikel 488 tot vóór de sluiting van het mondeling debat (言詞辯論終結) van de tweede aanleg worden ingesteld, maar niet na sluiting van het mondeling debat van de eerste aanleg en vóór het instellen van het hoger beroep. Gewoonlijk kan een afzonderlijke betaling van de gerechtskosten (裁判費) worden vermeden; niet elk resultaat eindigt zonder kosten. Wordt bijvoorbeeld de strafzaak afgewezen en op verzoek van de eisende partij naar de burgerlijke rechter verwezen, dan kunnen volgens artikel 503 van het Wetboek van Strafvordering proceskosten ontstaan; ook de verwijzings- en procedurevoorschriften van artikel 504 moeten worden nagegaan.
 
-De keuze wijkt af volgens stuiting van de verjaring (時效中斷), kring van gedaagden, bewijzen, verzekering en bevoegdheid. Daarom bestaat er geen procedure die in alle gevallen de beste is.
+De passende keuze hangt af van de stuiting van de verjaring (時效中斷), de kring van gedaagden, de bewijzen, de verzekering en de bevoegdheid. Daarom bestaat er geen procedure die in alle gevallen de beste is.
 
 ## Q4. Hoe worden straf- en civielrechtelijke aansprakelijkheid beoordeeld wanneer beide partijen schuld treft?
 
 Strafrechtelijke aansprakelijkheid kan pas worden beoordeeld wanneer schending van de zorgplicht van elke partij en het causaal verband van die schending met het letsel van de wederpartij zijn erkend. Alleen omdat beide partijen schuld (過失) treft, ontstaat niet automatisch aansprakelijkheid wegens letsel door nalatigheid.
 
-Civielrechtelijk kan de rechter volgens artikel 217 van het Burgerlijk Wetboek (民法) de schadevergoeding verminderen of kwijtschelden, indien de benadeelde persoon schuld toekomt bij het ontstaan of de vergroting van de schade (與有過失). Werden bijvoorbeeld erkende schade van TWD 1.000.000 (新臺幣) en de schuld van de benadeelde persoon op 50 % gewaardeerd, dan kan het bedrag vóór andere aanpassingen tot TWD 500.000 dalen.
+Civielrechtelijk kan de rechter volgens artikel 217 van het Burgerlijk Wetboek (民法) de schadevergoeding verminderen of kwijtschelden, indien eigen schuld van de benadeelde heeft bijgedragen aan het ontstaan of de vergroting van de schade (與有過失). Werden bijvoorbeeld erkende schade van TWD 1.000.000 (新臺幣) en de schuld van de benadeelde persoon op 50 % gewaardeerd, dan kan het bedrag vóór andere aanpassingen tot TWD 500.000 dalen.
 
 Deskundigenonderzoek (鑑定) of de voorlopige analysebeoordeling kunnen belangrijke stukken zijn, maar binden de rechter niet mechanisch. De rechter beschouwt verklaringen, opnamen, voertuigtoestand en het geheel van de bewijzen samen.
 
@@ -83,7 +83,7 @@ Bij klachtdelicten kan de klacht volgens artikel 238 van het Wetboek van Strafvo
 
 ## Q6. Hoe wordt de ongevallenaansprakelijkheid erkend?
 
-De voorlopige analysebeoordeling van het wegverkeersongeval door de politie is een vooranalyse aan de hand van de stukken ter plaatse. Zij is geen rechterlijk vonnis, bindt de rechter niet en legt ook niet het schuldpercentage (過失比例) vast. Omdat nodige stukken en geschilomvang per ongeval afwijken, zijn deze tabel, wettelijk deskundigenonderzoek (鑑定) en nader onderzoek (覆議) noch automatische procedure noch dwingende etappe.
+De voorlopige analysebeoordeling van het wegverkeersongeval door de politie is een vooranalyse aan de hand van de stukken ter plaatse. Zij is geen rechterlijk vonnis, bindt de rechter niet en legt ook niet het schuldpercentage (過失比例) vast. Omdat nodige stukken en geschilomvang per ongeval afwijken, zijn deze tabel, wettelijk deskundigenonderzoek (鑑定) en herziening (覆議) noch automatische procedure noch dwingende etappe.
 
 Volgens de betreffende voorschriften kunnen gerechtigde partijen een voertuigdeskundigenonderzoek (車輛行車事故鑑定) aanvragen, de behandelende instantie de zaak doorzenden of gerechtelijke organen het opdragen. Het verzoek van de partij geschiedt gewoonlijk binnen 6 maanden vanaf de ongevallendag; bij reeds in onderzoek of gerechtelijke procedure bevindende zaken loopt het deskundigenonderzoek via de opdracht van de gerechtelijke organen, niet via een nieuw rechtstreeks verzoek.
 
@@ -119,9 +119,9 @@ Bewijzen, tariefopnamen, routeopnamen en behandelingsstukken zijn mogelijke bewi
 
 ### Officiële grondslagen Q6–Q10
 
-- [Regels inzake deskundigenonderzoek en nader onderzoek van voertuigongevallen (車輛行車事故鑑定及覆議作業辦法) artikel 3](https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL025820&LawNo=3)
-- [Regels inzake deskundigenonderzoek en nader onderzoek van voertuigongevallen artikel 11 tot artikel 15](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=11&lsid=FL025820&media=print)
-- [Aanvraagformulier tot nader onderzoek van voertuigongevallendeskundigenonderzoek, wegenbureau van het Taiwanese ministerie van Verkeer (交通部公路局)](https://www.mvdis.gov.tw/files/m3/vil/cac/cacApply2.pdf)
+- [Regels inzake deskundigenonderzoek en herziening van voertuigongevallen (車輛行車事故鑑定及覆議作業辦法) artikel 3](https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL025820&LawNo=3)
+- [Regels inzake deskundigenonderzoek en herziening van voertuigongevallen artikel 11 tot artikel 15](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=11&lsid=FL025820&media=print)
+- [Aanvraagformulier tot herziening van het deskundigenonderzoek van voertuigongevallen, wegenbureau van het Taiwanese ministerie van Verkeer (交通部公路局)](https://www.mvdis.gov.tw/files/m3/vil/cac/cacApply2.pdf)
 - [Burgerlijk Wetboek artikel 184](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=184&pcode=B0000001)
 - [Burgerlijk Wetboek artikel 192](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=192&pcode=B0000001)
 - [Burgerlijk Wetboek artikel 193](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
@@ -159,7 +159,7 @@ Smartengeld voor niet-vermogensrechtelijke schade wordt zo beoordeeld dat bij on
 
 De rechter beschouwt letsel en behandeling, aanhoudend gevolg, leed en levensuitwerking, leeftijd en stand, sociale en economische omstandigheden en de bewijzen van de partijen omvattend en onderzoekt de omstandigheden van het individuele geval. Daarom is het resultaat moeilijk alleen volgens een getypeerd kader vooraf vast te leggen.
 
-## Q14. Kan bij een ongeval tijdens de arbeid ook de werkgever civielrechtelijk in aanspraak worden genomen?
+## Q14. Kan bij een ongeval tijdens de arbeid ook de werkgever civielrechtelijk aansprakelijk worden gesteld?
 
 Artikel 188 van het Burgerlijk Wetboek (民法) behandelt het geval dat een tewerkgestelde persoon in uitoefening van de taak een ander onrechtmatig schade toebrengt. Alleen de arbeidstijd grondt niet automatisch het taakverband; de verbinding van werkelijke arbeid en ongeval moet worden onderzocht.
 
@@ -173,11 +173,11 @@ De bepaling van de civielrechtelijke vorderingstegenpartijen en de strafrechteli
 
 De verzekeringsplicht volgens artikel 6 van de wet op de verplichte autoverzekering van civiele aansprakelijkheid (強制汽車責任保險法) treft in beginsel de voertuigeigenaar en in bepaalde gevallen ook gebruiker of beheerder van het voertuig. Dit stelsel voorziet een schuldonafhankelijke prestatiestructuur (無過失給付制度) voor bij motorvoertuigongevallen gewonden of overledenen; de wettelijk bepaalde kring van passagiers of van een derde (第三人) buiten het voertuig moet worden onderzocht.
 
-Bij alleenongevallen van 1 voertuig is diens bestuurder in de regel geen prestatieontvanger van de verplichte verzekering van dat voertuig. Bij ongevallen met verscheidene voertuigen kan de bestuurder echter prestaties bij de verplichte verzekeraar van een ander betrokken voertuig vorderen.
+Bij een ongeval met 1 voertuig is de bestuurder van dat voertuig in de regel geen prestatieontvanger van de verplichte verzekering van dat voertuig. Bij ongevallen met verscheidene voertuigen kan de bestuurder echter prestaties bij de verplichte verzekeraar van een ander betrokken voertuig vorderen.
 
-De op 29 mei 2026 gewijzigde prestatiemaatstaf (強制汽車責任保險給付標準) geldt voor ongevallen vanaf 1 juli 2026. Het plafond van nodige passende behandelingskosten bij letsel bedraagt TWD 200.000, invaliditeitsprestaties (失能) volgens de wettelijke 15 treden TWD 80.000–3.000.000, de overlijdensprestatie TWD 3.000.000, en het maximum uit overlijden, invaliditeit en behandelingskosten per een gewonde persoon en 1 ongeval bedraagt TWD 3.200.000. Voor vroegere ongevallen kan de vroegere maatstaf gelden.
+De op 29 mei 2026 gewijzigde prestatiemaatstaf (強制汽車責任保險給付標準) geldt voor ongevallen vanaf 1 juli 2026. Het plafond van nodige passende behandelingskosten bij letsel bedraagt TWD 200.000, invaliditeitsprestaties (失能) volgens de wettelijke 15 invaliditeitsgraden TWD 80.000–3.000.000, de overlijdensprestatie TWD 3.000.000, en het maximum uit overlijden, invaliditeit en behandelingskosten per gewonde persoon en per 1 ongeval bedraagt TWD 3.200.000. Voor vroegere ongevallen kan de vroegere maatstaf gelden.
 
-Aansprakelijkheidsverzekering jegens derden (第三人責任險), bestuurdersongevallenverzekering (駕駛人傷害險) en cascoverzekering (車體損失險) zijn contractuele keuzeproducten. De werkelijke dekking wijkt af volgens verzekerde, limiet, eigen risico (自負額), uitsluiting, schuld en overige voorwaarden van de polis; verzekeringsbewijs en voorwaarden moeten een voor een worden onderzocht.
+Aansprakelijkheidsverzekering jegens derden (第三人責任險), bestuurdersongevallenverzekering (駕駛人傷害險) en cascoverzekering (車體損失險) zijn contractuele keuzeproducten. De werkelijke dekking verschilt naargelang de verzekerde, de limiet, het eigen risico (自負額), de uitsluiting, de schuld en de overige voorwaarden van de polis; verzekeringsbewijs en voorwaarden moeten een voor een worden onderzocht.
 
 ### Officiële grondslagen Q11–Q15
 

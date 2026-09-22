@@ -515,7 +515,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
   contactCta: 'Een verzoek om advies sturen',
   footerNotice:
     'Deze Nederlandstalige pagina bevat alleen algemene toelichting over het werk van het kantoor volgens Taiwanees recht. Het is geen juridisch advies voor een concreet dossier, en het versturen van een bericht schept op zich geen relatie tussen advocaat en cliënt.',
-  skipLink: 'Navigatie overslaan en naar de inhoud',
+  skipLink: 'Navigatie overslaan en naar de inhoud gaan',
   menuLabel: 'Pagina-overzicht',
   languageLabel: 'Weergavetaal',
   mega: {
@@ -657,7 +657,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Intellectuele eigendom',
           paragraphs: [
             'Wij ondersteunen bij de inschrijving van merken (商標) en octrooien (專利), bij auteursrecht en bij geschillen over deze rechten in Taiwan.',
-            'In deze groep beslist de volgorde van de stappen: beschermingsomvang, aanmeldtijdstip en feitelijk gebruik beïnvloeden de keuze. Het indienen van een aanvraag betekent niet vanzelf dat zij wordt ingewilligd.',
+            'In deze groep beslist de volgorde van de stappen: beschermingsomvang, tijdstip van de aanvraag en feitelijk gebruik beïnvloeden de keuze. Het indienen van een aanvraag betekent niet vanzelf dat zij wordt ingewilligd.',
           ],
         },
         {
@@ -733,7 +733,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'De consultatie kan tegen betaling zijn',
           paragraphs: [
-            'Het gesprek met een advocaat kan een dienst tegen betaling zijn. Deze pagina zegt niet dat het eerste gesprek kosteloos is, en geen deel van deze pagina mag zo worden gelezen.',
+            'Het gesprek met een advocaat kan een dienst tegen betaling zijn. Deze pagina zegt niet dat het eerste gesprek kosteloos is, en niets op deze pagina mag in die zin worden gelezen.',
             'Is de consultatie tegen betaling, dan worden hoogte en betalingswijze meegedeeld voordat zij plaatsvindt.',
           ],
         },
@@ -769,7 +769,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Als u geen van de vier consultatietalen kunt gebruiken',
           paragraphs: [
             'In het contactformulier kunt u “Communicatiekanaal moet worden bevestigd” kiezen. Wij antwoorden om te onderzoeken of er een werkbare manier van communiceren bestaat; een dienst in een andere taal wordt niet gewaarborgd en een antwoordtermijn niet toegezegd.',
-            'Dit is alleen een controle, geen belofte. Wij beloven geen tolk, geen dienst in het Nederlands of in een andere taal buiten de vier genoemde talen, en niet dat wij elke zaak aannemen.',
+            'Dit is alleen een controle, geen belofte. Wij beloven geen tolk en geen dienst in het Nederlands of in een andere taal buiten de vier genoemde talen, en wij nemen niet elke zaak aan.',
           ],
         },
         {
@@ -799,7 +799,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Hoe u dit deel gebruikt',
           paragraphs: [
-            'Vindt u geen antwoord voor uw situatie, dan hangt het antwoord meestal van bijzondere feiten af. Schrijf die feiten dan in de samenvatting, in plaats van ze zelf uit deze pagina af te leiden.',
+            'Vindt u geen antwoord voor uw situatie, dan hangt het antwoord meestal van bijzondere feiten af. Schrijf die feiten dan in de samenvatting, in plaats van het antwoord zelf uit deze pagina af te leiden.',
           ],
         },
       ],
@@ -961,10 +961,10 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         'Het kantoor publiceert artikelen over veelgestelde vragen over het Taiwanese recht. Artikelen die in het Nederlands beschikbaar zijn, staan op deze pagina; daarnaast zijn er vier koppelingen die elk de artikelenlijst van een oorspronkelijke taal openen.',
       sections: [
         {
-          heading: 'Vier lijsten naar taal',
+          heading: 'Vier lijsten in de oorspronkelijke taal',
           paragraphs: [
             'Dit deel bevat vier koppelingen: de artikelenlijst in het Koreaans, in het Chinees, in het Engels en in het Japans. Elke koppeling noemt de taal van de lijst, zodat u vooraf weet in welke taal de inhoud opent.',
-            'Deze vier lijsten zijn lijsten naar de oorspronkelijke taal van de artikelen, geen vertaallijsten. Artikelen die in het Nederlands beschikbaar zijn, staan afzonderlijk op deze pagina.',
+            'Deze vier lijsten volgen de oorspronkelijke taal van de artikelen; het zijn geen vertalingen. Artikelen die in het Nederlands beschikbaar zijn, staan afzonderlijk op deze pagina.',
           ],
         },
         {
@@ -978,7 +978,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Hoe ver een artikel als oriëntatie kan dienen',
           paragraphs: [
             'Artikelen zijn algemene informatie op het tijdstip van publicatie. Voorschriften en hun toepassing kunnen veranderen, en een artikel bevat niet alle omstandigheden van uw zaak.',
-            'Baseer in een echte zaak geen stappen alleen op een artikel. Gebruik het voor het overzicht en bespreek uw stukken afzonderlijk met een advocaat; deze pagina is niet de consultatiestap.',
+            'Neem in een echte zaak geen stappen alleen op basis van een artikel. Gebruik het voor het overzicht en bespreek uw stukken afzonderlijk met een advocaat; deze pagina vervangt de consultatie niet.',
           ],
         },
       ],

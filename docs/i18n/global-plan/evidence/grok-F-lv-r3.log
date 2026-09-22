@@ -1,0 +1,151 @@
+WO-F-lv r3 — Grok 4.7 fix lane
+Workspace: /Users/son7/Projects/tseng-law-fix-lv-r3
+Inputs: RULEBOOK-FIX.md R2–R17, ACCEPTED-ROUND.md, rounds/r3/lv-a.md (32 rows), lv-b.md (33 rows).
+English meaning: src/content/columns-en/<same file>. Checker compares to Korean src/content/columns.
+No git add / commit / push. No test expectation strings needed updating.
+
+Rows applied: 56 of 65, plus lv-b 33 in part (ROC framing only).
+Rows skipped: 8, plus the Gregorian half of lv-b 33. Reasons below.
+
+## Applied
+
+lv-a
+2 privacy: E-pastus sūta e-pasta pakalpojums, ko birojs lieto.
+3 lawyers page description and lawyers answer: revīzijas partnera profili / profilus. Team-block description already said revīzijas partnera.
+4 īpašs apstiprinājums — FAQ + body (2).
+5 ārvalsts piederības atbildīgās personas darba atļauja → vadītāja darba atļauja — FAQ + body (2). Gloss (僑外投資事業主管工作許可) kept.
+6 step 2 limited company: dalībnieku piekrišana. Share-company sentences that already say akcionāri left. FAQ and §1 body already said dalībnieku.
+7 uzkrātie zaudējumi (累積虧損).
+8 interešu konflikta apstiprinājums (conflict-of-interest approval). The other calque, interešu attiecības ar direktoriem un akcionāriem, is English “interests of directors or shareholders” → direktoru vai akcionāru intereses.
+9 provizorisko arestu → pagaidu mantas nodrošinājumu (假扣押). The following “mantas arestu” left, as in the suggested sentence: that one is attachment of assets.
+10 kopīgā piemērošana → ierobežojumi kopīgai piemērošanai ar citām priekšrocībām — FAQ + §4 opening (2). §5 already had ierobežojumi.
+11 nesaistītu pušu cenu (arm’s-length).
+12 Vietējo ieguldītāju var pieņemt par akcionāru, un …
+13 A. Pirmais darbinieks: parastā … uzņēmuma vadītājs (一般僑外投資事業主管工作).
+14 Ja uzskatāt, ka esat cietis(-usi) seksuālu uzmākšanos,
+15 heading ## 6. Mājokļa īpašuma ieraksts, …
+16 family service: jāizvērtē … ieraksti, aktu forma un … spēks.
+17 jurista palīdze bio: sabiedrību tiesības un ārvalstu ieguldījumus (accusative after uz).
+18 sarakstus par kārtējos līgumus, darbiniekus, nomas, … (par + accusative).
+19 Pienākumi pēc … darbinieku un citu apstākļu — FAQ + body (2).
+20 paliek iespējamas parastā darbība un parādu atmaksāšana.
+22 katras tiesības priekšnoteikumi, and the close pēc katras tiesības.
+23 pretēji esošai vienošanai vai rīkojumam.
+24 Civillikums, Mājsaimniecības reģistra likums, Likums par piemērojamām tiesībām … (three source-list labels).
+25 quote block: the 6-month cap is inside the wage sentence; the next line starts Šī formula attiecas. FAQ answer already had that shape. Three quote lines kept.
+26 Missing period before Taivānā tas ir citādi and before Mans klients. Ja Jūs strādājat Taivānā, (comma, so the next paragraph is the warning). The two paragraphs were not merged.
+27 Puse, kas līgumu izbeidz pirmā …
+28 Lin kungs uzskatīja. Lin kungam already correct.
+
+lv-b
+1 noregulēt, kuri materiāli tiek nodoti, kādā veidā nodošana notiek un vai piekļuves tiesības paliek.
+2 Nedrīkst secināt tikai pēc vārda reģistrā vai kontā.
+3 ieguldījums no kontinentālās Ķīnas.
+5 marķējums, tostarp etiķete. Same tostarp-case sweep: advertising list tostarp izstrādājuma nosaukuma, teksta, attēla, simbola un skaņas (FAQ + body, 2); 017 tostarp … norakstīšana … un aizstāšana.
+6 both ranges kept dotted thousands and gained (jaunie Taivānas dolāri, 新臺幣): TWD 40.000–200.000 and TWD 10.000–1.000.000. Single-amount locative jaunajā Taivānas dolārā left (one sum, not a range).
+7 reakcijai uz pārbaudes un labošanas pieprasījumus, sūdzības, drošības informāciju un vajadzīgos turpmākos soļus.
+8 trūka noteiktā skaņas vai gaismas signāla.
+10 nolīgtais laiks ir garš; jāpārbauda …
+11 kura laiks tika ieguldīts.
+12 kurā tā jāizmanto, un kāpēc …
+13 otro — pēc izmaksas mērķa, paziņojuma un nosacījumu, … un pēc proporcijas pret neizpildīto laiku. The proportion limb is in the English sentence; the 120-character suggestion had dropped it.
+14 vispārīgo 3 mēnešu tiesas termiņu saraksta iesniegšanai un mantojuma atteikšanai.
+15 no uzraudzības nevar izvairīties tikai ar apzīmējumu.
+16 to, kā tiek sniegti, tulkoti un papildināti sākotnējā ražotāja (原製造者) materiāli, kas vajadzīgi …
+17 ne vairāk kā 1-kārtīgā faktisko zaudējumu apmērā. Digit 1 kept (see disagreement).
+18 vairākas procedūras (010); tās pašas joslas kārtība (012); pēc vajadzīgās kārtības (014); nesākas tikai viena procedūra (016). Also 007 close Kārtība un iznākums / katras kārtības, and the 018 heading kārtība.
+19 Par nepatiesas informācijas paziņošanu … var uzlikt administratīvo naudas sodu (罰鍰). 014 costs: nedrīkst iekļaut atdodamajā summā. Same calque in 004: Uz atsevišķu režīmu … var attiekties citi noteikumi (was citu noteikumu priekšmets). Kotācijas priekšmets, pierādīšanas priekšmets, aprēķina priekšmets left: those are “subject matter”, not “subject to”.
+20 nav atļauts neierobežots palikšanas ilgums un neierobežots atdošanas pienākums.
+21 attiecas saskaņā ar 15. pantu. Same caur-calque: 007 principā pirms izspriešanas nonāk tiesas mediācijā (was iet caur tiesas mediāciju). caur kādu organizāciju / caur kuru / caur neatkarīgu izplatītāju left: those are “through an entity”, not through a statute.
+22 faktiskajiem apstākļiem.
+23 pēc kādas formulas aprēķina atdošanu, ja darba attiecības izbeidzas pirms termiņa.
+24 zoning label rephrased inside its own paragraph: Vēl viens svarīgs apsvērums ir tas, vai izvēlētā adrese vispār pieļauj ēdināšanas darbību. The next paragraph still states the restaurant-zone check. Paragraphs not merged.
+25 tostarp filiāles (分公司) un struktūrvienības (分支機構).
+26 nav zemākas kārtas radinieks 1138. panta radniecības mantošanas kārtā.
+27 nodot citam turētājam / nodošanu citam turētājam. Both glosses (繳銷) and (過戶轉讓) kept.
+28 šauri, atsevišķi izņēmumi — FAQ + body (2).
+29 vērtē faktus, piemērojamās normas un katras lietas apstākļus.
+30 heading: Filiāles un meitas sabiedrības kārtība atšķiras; tikai meitas sabiedrības dibināšanu izskata Ekonomikas ministrijas Ieguldījumu izskatīšanas departaments. One heading, same level.
+31 Konfidenciālos projektēšanas materiālus.
+32 darbu, ko veiks Taivānas organizācija.
+33 ROC framing without a new Gregorian year: par Ķīnas Republikas 109. gada patērētāju lietu Nr. 7 (109年度消字第7號). R13 sweep of the same bare Minguo years in 003 link labels: Ķīnas Republikas 109. gada lieta (2) and Ķīnas Republikas 112. gada lieta (1). URLs unchanged. 007 already said Ķīnas Republikas 112. gada.
+
+Also, from the part-a verdict typography note (not a numbered row): 5% → 5 % in 001. One instance.
+
+## Skipped
+
+lv-a 1 — Hangul in frontmatter url of 008 and 009. R16 and ACCEPTED-ROUND. The row itself says not to edit url.
+lv-a 21 and lv-b 9 — U+200B blanks, including 005 empty bold lines **​**. The checker requires ZWSP count and block count to match the Korean source (003 is ZWSP 52 = 52 and blocks 158). Deleting them, or turning Q16– into new headings, fails blocks. Left byte-for-byte.
+lv-a 29 — “1 gadu / 1 mēnesi / 1 cietušajam” → vienu. The number checker’s Latvian lexicon has nominative viens/viena only, not accusative vienu. Replacing the digit fails numbers. Digit kept.
+lv-a 30 — bio “TWD 1.57M” kept byte-identical. R12 and ACCEPTED-ROUND. A test pins that token.
+lv-a 31 and lv-b 4 — space thousands (“500 000”, “1 579 589”). R14 and ACCEPTED-ROUND: lv is dot style (“500.000”); a space fails the checker. Dots kept. Currency-before was not mass-moved: part a’s suggested form used the forbidden space, and part b’s suggested form kept “TWD” before the figure. Both orders parse; the code stays before the figure, except the pinned “TWD 1.57M”.
+lv-a 32 — byline “13. septembrī 2025. gadā” → “2025. gada 13. septembrī” (and the 4 Feb 2026 / 17 Sep 2026 bylines). Tried, then reverted. As a whole date_display field, “2026. gada 17. septembrī” is parsed as day 17 only (missing month 9 and year 2026) and the checker FAILs. The existing “17. septembrī 2026. gadā” parses as 17, 9, 2026. Mid-sentence “2023. gada 27. decembrī” already parses and was left. 18 date_display values restored.
+lv-b 33 (part) — do not add Gregorian (2020). Checker counts the new digits. ROC label applied without it.
+
+013 had no wording row beyond the U+200B skip, so that file is unchanged. llms.txt lv notices were not rewritten; consultationNotice / confidentialNotice substrings are unchanged. No disclosure-regex edit.
+
+## Systemic patterns
+
+- Dot thousands and “TWD” before the figure: 0 changed (checker / skip rules).
+- Bio “TWD 1.57M”: 0.
+- Glued digit “1” for “one”: 0 (lexicon).
+- U+200B: 0 (parity with Korean source).
+- LLC dalībnieki vs akcionāri: 1 (the step-2 sentence that still said akcionāru).
+- 累積虧損 as loss carryforward: 1.
+- gaita standing in for a procedure: 7 (010 procedūras, 012 kārtība, 014 kārtība, 016 procedūra, 007 kārtība ×2, 018 heading kārtība). Other gaita left where it means the course of a filing or sits in a title / “procedūras gaita” / “Jaundibināšanas gaitas kārtība” (a swap there would stutter).
+- tostarp in the wrong case: 4 (etiķete, two advertising lists, 017 norakstīšana/aizstāšana).
+- priekšmets calquing “subject to”: 3 (011 fine, 014 repayment, 004 other rules).
+- caur calquing “through” a statute or a review: 3 (014 article 15, 018 heading, 007 mediation).
+- ROC year written as an ordinary year: 4 (010 judgment + 3 link labels in 003). No new digits.
+- 5% → 5 %: 1.
+
+Gender of Wei Tseng was already feminine (advokāte, tiesīga, viņa, maģistre, esmu konstatējusi). Lin kungs / B kungs / the 009 employee viņš left masculine. Consultation lock left negative (EN / 中文 / JA / KO only). R2–R11 residue the reviews did not flag was not rewritten.
+
+## §Verify
+
+node scripts/check-column-translation.mjs --dir src/content/columns-lv --lang lv 2>&1 | tail -8
+```
+neighbour      PASS   
+hanzi          PASS   han=33
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-lv src/data | wc -l
+```
+       0
+```
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+```
+TSC_OK
+```
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+git status --short | wc -l
+```
+      23
+```
+(This count is from before this log file existed. Diff of the content edits: 20 files, 80 insertions, 80 deletions. 013 and llms-txt.ts unchanged.)
+
+## Reviewer disagreements (not applied)
+
+- Space as the Latvian thousands separator is what a native editor would write. The checker’s lv style is the dot (“500.000”). A space fails numbers. Dots kept.
+- “TWD 1.57M” as “1,57 miljonu TWD” is better Latvian. The token is pinned. Left byte-identical.
+- “mazāk nekā vienu gadu” is the right accusative. The checker does not count vienu, so the digit 1 has to stay.
+- The U+200B lines and the Q16-as-body layout match the Korean source. Promoting them to headings or deleting the characters fails the block check. They are source parity, not a Latvian-only defect.
+- “2025. gada 13. septembrī” is the better byline order, and it parses in the middle of a sentence. As the entire date_display value it drops the month and the year. The older “13. septembrī 2025. gadā” is the form the checker accepts.
+- Adding “(2020)” next to Minguo 109 makes the Gregorian year explicit and adds a digit the checker counts. “Ķīnas Republikas 109. gada” plus the existing (109年度消字第7號) is the R13 form.
+- lv-b 17 says not to change the multiple, then suggests wording that drops “1”. Kept as 1-kārtīgā so the cap is still “one times actual damages” and the digit remains.
+- lv-b 13’s suggested sentence stops before “proportionality to the unserved period”. That limb is in the English. Kept, in the genitive after pēc.
+- lv-b 24 asks to collapse three zoning paragraphs into one sentence. Block count cannot change. Only the label sentence was rewritten; the following restaurant-zone sentence stays.
+- lv-a 26 asks to put “Ja Jūs strādājat Taivānā, atlaišanas pabalstu ir grūtāk saņemt…” into the first paragraph. The next paragraph is already that warning. A comma joins them across the existing break, matching the English comma, without duplicating the sentence.

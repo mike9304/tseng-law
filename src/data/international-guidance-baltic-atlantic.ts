@@ -625,7 +625,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Laulība, ģimene un mantojums',
           paragraphs: [
-            'Mēs vedam laulības šķiršanu (離婚), mantas sadali, aizgādību un vecāku atbildību par nepilngadīgiem bērniem (未成年子女權利義務之行使或負擔), saskarsmes tiesības (會面交往) un mantojumu (繼承), arī tad, ja puses vai manta atrodas dažādās valstīs. Pārrobežu ģimenes lietās bieži vajadzīgs papildu izvērtējums mājsaimniecības reģistra (戶籍) ierakstiem, aktu formai un to pierādījuma spēkam Taivānā.',
+            'Mēs vedam laulības šķiršanu (離婚), mantas sadali, aizgādību un vecāku atbildību par nepilngadīgiem bērniem (未成年子女權利義務之行使或負擔), saskarsmes tiesības (會面交往) un mantojumu (繼承), arī tad, ja puses vai manta atrodas dažādās valstīs. Pārrobežu ģimenes lietās bieži papildus jāizvērtē mājsaimniecības reģistra (戶籍) ieraksti, aktu forma un to pierādījuma spēks Taivānā.',
             'Tā kā ģimenes lietām bieži ir termiņi un paralēlas procedūras, pirmajam kopsavilkumam jānorāda pušu attiecības, pašreizējā dzīvesvieta un jau notiekošās procedūras.',
           ],
         },
@@ -694,7 +694,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ADVOKĀTI',
       title: 'Hovering starptautiskā komanda',
-      description: 'Hovering advokātu un līdzstrādnieku, kā arī partnera grāmatvedības un revīzijas profili.',
+      description: 'Hovering advokātu un līdzstrādnieku, kā arī revīzijas partnera profili.',
       intro: '',
       sections: [],
     },
@@ -898,7 +898,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Glabāšanas vieta un pakalpojumu sniedzēji',
           paragraphs: [
-            'Šīs vietnes mitināšanu nodrošina Vercel, un Jūsu iesniegums tiek glabāts šā pakalpojuma nepubliskajā datu krātuvē. E-pastus sūta pasta pakalpojums, ko birojs lieto.',
+            'Šīs vietnes mitināšanu nodrošina Vercel, un Jūsu iesniegums tiek glabāts šā pakalpojuma nepubliskajā datu krātuvē. E-pastus sūta e-pasta pakalpojums, ko birojs lieto.',
             'Atsevišķu pakalpojumu sniedzēju serveri var atrasties ārpus Taivānas, tāpēc Jūsu datus tur var glabāt un apstrādāt. Kad glabāšanas mērķis ir izpildīts, datus dzēš bez liekas kavēšanās; dati, kas jāglabā saskaņā ar piemērojamiem noteikumiem, tiek glabāti šajā laikposmā. Personu datu pieprasījumus pieņem wei@hoveringlaw.com.tw.',
           ],
         },

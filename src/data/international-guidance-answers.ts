@@ -1365,7 +1365,7 @@ export const guidanceAnswers: Record<
     },
     lawyers: {
       answer:
-        'Šī lapa rāda Hovering advokātu un līdzstrādnieku, kā arī partnera grāmatvedības un revīzijas profilus. Advokāte Wei Tseng (曾雋崴) ir tiesīga praktizēt advokatūru Taivānā un ir biroja vadošā advokāte; viņa palīdz klientiem no Korejas, no Japānas un citiem starptautiskiem klientiem. Konsultācija notiek tikai angļu, ķīniešu, japāņu un korejiešu valodā.',
+        'Šī lapa rāda Hovering advokātu un līdzstrādnieku, kā arī revīzijas partnera profilus. Advokāte Wei Tseng (曾雋崴) ir tiesīga praktizēt advokatūru Taivānā un ir biroja vadošā advokāte; viņa palīdz klientiem no Korejas, no Japānas un citiem starptautiskiem klientiem. Konsultācija notiek tikai angļu, ķīniešu, japāņu un korejiešu valodā.',
       sources: ['/lv/about', '/lv/contact'],
     },
     pricing: {

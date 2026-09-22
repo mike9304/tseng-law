@@ -184,11 +184,11 @@ Trešo personu civiltiesiskās atbildības apdrošināšana (第三人責任險)
 - [Civillikums, 193. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Civillikums, 216. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Civillikums, 217. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=B0000001)
-- [Taivānas apelācijas tiesas spriedums, 109. gads, lieta 上易字 Nr. 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
-- [Taivānas apelācijas tiesas spriedums, 109. gads, lieta 上易字 Nr. 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
+- [Taivānas apelācijas tiesas spriedums, Ķīnas Republikas 109. gada lieta 上易字 Nr. 644](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C644%2C20220215%2C1.pdf)
+- [Taivānas apelācijas tiesas spriedums, Ķīnas Republikas 109. gada lieta 上易字 Nr. 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Tiesu juaņa Hofmana tagadnes vērtības kalkulators](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Civillikums, 195. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Taojuaņas rajona tiesas spriedums, 112. gads, lieta 壢簡字 Nr. 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Taojuaņas rajona tiesas spriedums, Ķīnas Republikas 112. gada lieta 壢簡字 Nr. 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Civillikums, 188. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Taivānas Krimināllikums, 284. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Obligātās automašīnu civiltiesiskās atbildības apdrošināšanas likums](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
@@ -347,7 +347,7 @@ Vainīgais bieži nerūpējas par zvanīšanu ar jautājumu par cietušā stāvo
 
 ​
 
-Cietušais tādējādi paliek dziļi ievainots un nonāk dusmās, tāpēc bieži neatkāpjas sarunu summā vai lūdz provizorisko arestu (假扣押) un ved otras puses mantas arestu līdz galam.
+Cietušais tādējādi paliek dziļi ievainots un nonāk dusmās, tāpēc bieži neatkāpjas sarunu summā, piesakās uz pagaidu mantas nodrošinājumu (假扣押) un ved otras puses mantas arestu līdz galam.
 
 ​
 

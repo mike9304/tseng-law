@@ -69,7 +69,7 @@ Dažas bankas var uzlikt papildu prasības, piemēram, konta lietošanas laiku v
 
 **5. Vai sabiedrība var nodarbināt ārzemniekus?**
 
-A. Pirmais darbinieks: pieteikums iesniedzams kā parastā ārvalstu ķīniešu vai ārzemnieku ieguldījumu uzņēmuma vadītāja darbs (一般僑外投資事業主管工作). Turpmāk B punktā minētais „profesionāla vai tehniska rakstura darba“ kritērijs nepiemērojas, tomēr piemērojas adresāta priekšnoteikumi, tostarp priekšnoteikums būt pārvaldniekam (經理人) sabiedrībā, kuras ārvalstu ķīniešu vai ārzemnieku ieguldījums pārsniedz 1/3, kā arī darba devēja rezultātu priekšnoteikumi par kapitālu un apgrozījumu (pārbaudes normu 38. un 39. pants).
+A. Pirmais darbinieks: parastā ārvalstu ķīniešu vai ārzemnieku ieguldījumu uzņēmuma vadītājs (一般僑外投資事業主管工作). Turpmāk B punktā minētais „profesionāla vai tehniska rakstura darba“ kritērijs nepiemērojas, tomēr piemērojas adresāta priekšnoteikumi, tostarp priekšnoteikums būt pārvaldniekam (經理人) sabiedrībā, kuras ārvalstu ķīniešu vai ārzemnieku ieguldījums pārsniedz 1/3, kā arī darba devēja rezultātu priekšnoteikumi par kapitālu un apgrozījumu (pārbaudes normu 38. un 39. pants).
 
 B. No otrā darbinieka pastāv ierobežojumi: ja sabiedrība nodarbina vairāk nekā 1 ārzemnieku, darbinieka izglītība un pieredze, vidējās algas noteikumi un sabiedrības kapitāla un apgrozījuma noteikumi tiek izskatīti saskaņā ar „profesionālu vai tehnisku darbu“ (專門性或技術性工作).
 

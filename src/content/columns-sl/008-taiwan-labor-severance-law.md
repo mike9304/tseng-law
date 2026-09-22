@@ -53,12 +53,12 @@ Spodnja preglednica to strne.
 |  |  |  |  |
 | --- | --- | --- | --- |
 | **Vrsta** | **Gospodarska odpoved**  **資遣** **員工(經濟解僱)** | **Disciplinska odpoved**  **解僱** **員工(懲戒解僱)** | **Prostovoljni odhod delavca**  **員工自請離職** |
-| Pomen | Če ima delodajalec zaradi poslovnih razmer potrebo po prilagoditvi osebja, je razlog v gospodarskem področju delodajalca, ne pa v odgovornosti delavca. Zato mora delodajalec spoštovati odpovedni rok (預告期間) ter izplačati odpravnino, da uravnoteži neugodnosti delavca. | Če delavec stori protipravno ali neprimerno dejanje, sme delodajalec takoj končati pogodbo o zaposlitvi (勞動契約) brez predhodne odpovedi ter odpravnine ni dolžan izplačati. Gre za eno od disciplinskih pooblastil delodajalca. | Delavec sme kadar koli končati pogodbo, vendar mora glede na dobo zaposlitve spoštovati odpovedni rok, da lahko delodajalec opravi predajo ter iskanje nadomestila. |
+| Pomen | Če ima delodajalec zaradi poslovnih razmer potrebo po prilagoditvi osebja, je razlog v gospodarskem področju delodajalca, ne pa v odgovornosti delavca. Zato mora delodajalec spoštovati odpovedni rok (預告期間) ter izplačati odpravnino, da uravnoteži neugodnosti delavca. | Če delavec stori protipravno ali neprimerno dejanje, sme delodajalec takoj končati pogodbo o zaposlitvi (勞動契約) brez predhodne odpovedi ter odpravnine ni dolžan izplačati. Gre za eno od disciplinskih pooblastil delodajalca. | Delavec sme kadar koli končati pogodbo, vendar mora glede na dobo zaposlitve spoštovati odpovedni rok, da lahko delodajalec opravi predajo ter iskanje nadomestnega delavca. |
 | Pogoji | So  (11. člen tajvanskega zakona o temeljnih delovnih standardih) | So  (12. člen tajvanskega zakona o temeljnih delovnih standardih) | Jih ni |
 | Predhodna odpoved | Potrebna | Ni potrebna | Potrebna |
-| Težavnost za delodajalca | Nižja | Višja | Se ne nanaša |
+| Težavnost (z vidika delodajalca) | Lahka | Težka | Lahka |
 | Ali mora družba izplačati odpravnino (資遣費) | Potrebno | Ni potrebno | Ni potrebno |
-|  | Tajvanski zakon o temeljnih delovnih standardih, 11. člen (勞動基準法第11條): Če ne nastopi eden od naslednjih primerov, delodajalec ne sme končati pogodbe o zaposlitvi, niti po predhodnem obvestilu delavcu.  1. Prenehanje dejavnosti (歇業) ali prenos podjetja (轉讓)  2. Izgube (虧損) ali zožitev dejavnosti (業務緊縮)  3. Višja sila zahteva prekinitev dejavnosti za 1 mesec ali dlje  4. Narava dejavnosti zahteva zmanjšanje osebja ter odpuščenega ni mogoče premestiti na drugo primerno mesto  5. Določeni delavec ne more zadovoljivo opravljati dela, ki ga mesto zahteva | Tajvanski zakon o temeljnih delovnih standardih, 12. člen (勞動基準法第12條): Delodajalec sme odpustiti brez predhodnega obvestila, če delavec sodi v enega od naslednjih primerov.  1. Kdor ob sklenitvi pogodbe o zaposlitvi navede neresnične podatke, zavede delodajalca ter izpostavi podjetje tveganju škode  2. Kdor uporabi nasilje ali hudo užali delodajalca, njegovo družino, njegovega zastopnika (代理人) ali druge sodelavce  3. Kogar so pravnomočno obsodili na kazen odvzema prostosti za določen čas (有期徒刑) ali na strožjo kazen, brez pogojnega odloga izvršitve (緩刑) ter brez dovoljenja pretvorbe v denarno kazen (易科罰金)  4. Huda kršitev pogodbe o zaposlitvi ali delovnega reda  5. Kdor namenoma porabi stroje, orodja, surovine, izdelke ali drugo premoženje delodajalca, ali namenoma izda tehnične ter poslovne skrivnosti delodajalca ter mu povzroči škodo  6. Neopravičena odsotnost (曠工) brez utemeljenega razloga 3 dni zapored ali 6 dni ali več v mesecu |  |
+|  | Tajvanski zakon o temeljnih delovnih standardih, 11. člen (勞動基準法第11條): Če ne nastopi eden od naslednjih primerov, delodajalec ne sme končati pogodbe o zaposlitvi, niti po predhodnem obvestilu delavcu.  1. Prenehanje dejavnosti (歇業) ali prenos podjetja (轉讓)  2. Izgube (虧損) ali zožitev dejavnosti (業務緊縮)  3. Višja sila zahteva prekinitev dejavnosti za 1 mesec ali dlje  4. Narava dejavnosti zahteva zmanjšanje osebja ter odpuščenega ni mogoče premestiti na drugo primerno mesto  5. Določeni delavec ne more zadovoljivo opravljati dela, ki ga mesto zahteva | Tajvanski zakon o temeljnih delovnih standardih, 12. člen (勞動基準法第12條): Delodajalec sme odpustiti brez predhodnega obvestila, če delavec sodi v enega od naslednjih primerov.  1. Kdor ob sklenitvi pogodbe o zaposlitvi navede neresnične podatke, zavede delodajalca ter izpostavi podjetje tveganju škode  2. Kdor uporabi nasilje ali hudo užali delodajalca, njegovo družino, njegovega zastopnika (代理人) ali druge sodelavce  3. Kogar so pravnomočno obsodili na kazen zapora za določen čas (有期徒刑) ali na strožjo kazen, brez pogojnega odloga izvršitve (緩刑) ter brez dovoljenja pretvorbe v denarno kazen (易科罰金)  4. Huda kršitev pogodbe o zaposlitvi ali delovnega reda  5. Kdor namenoma porabi stroje, orodja, surovine, izdelke ali drugo premoženje delodajalca, ali namenoma izda tehnične ter poslovne skrivnosti delodajalca ter mu povzroči škodo  6. Neopravičena odsotnost (曠工) brez utemeljenega razloga 3 dni zapored ali 6 dni ali več v mesecu |  |
 
 > Na Tajvanu mora delodajalec za vsako dopolnjeno 1 leto delovne dobe (年資)
 > izplačati 0,5 meseca povprečne plače (平均工資) kot odpravnino.
@@ -78,7 +78,7 @@ ter vodijo delavce k lastnemu odhodu.
 
 Delavci morajo biti previdni
 
-ter paziti, da ne padejo v namen družbe.
+ter paziti, da ne nasedejo načrtu družbe.
 
 ​
 
@@ -118,7 +118,7 @@ Sicer naj bi B družbo zapustil;
 
 predložili so B list formata A4
 
-ter ga pozvali, naj nanj napiše: »Jaz, OOO, prostovoljno znižujem funkcijo ter plačo«
+ter ga pozvali, naj nanj napiše: »Jaz, [ime], prostovoljno znižujem funkcijo in plačo«
 
 kot vsebino.
 
@@ -218,9 +218,9 @@ ter pazite, da družba ne odpusti na neustrezen način
 
 niti ne vodi k lastnemu odhodu
 
-Odpravnina je zakonska pravica delavca,
+Odpravnina ni samodejna pravica delavca.
 
-in družba jo mora seveda izplačati.
+Odpravnina je zakonska pravica le, kadar so izpolnjeni pogoji zakona; družba je takrat dolžna izplačati.
 
 Tudi vi morate na Tajvanu varovati svoje pravice.
 

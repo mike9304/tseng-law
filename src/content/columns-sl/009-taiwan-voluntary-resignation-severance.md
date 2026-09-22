@@ -41,7 +41,7 @@ V naslednjih posebnih okoliščinah mora delodajalec delavcu izplačati odpravni
 
 4. Kadar delodajalec, njegov zastopnik ali drug delavec zboli za zakonsko nalezljivo boleznijo (法定傳染病), obstaja tveganje okužbe delavcev, ki delajo skupaj, ter gre za hudo nevarnost za zdravje delavca
 
-5. Kadar delodajalec ne izplačuje nagrade (工作報酬) po pogodbi o zaposlitvi ali ne zagotavlja dovolj dela delavcu, katerega nagrada se računa po kosu (按件計酬)
+5. Kadar delodajalec ne izplačuje plačila za delo (工作報酬) po pogodbi o zaposlitvi ali ne zagotavlja dovolj dela delavcu, katerega plačilo za delo se računa po kosu (按件計酬)
 
 6. Kadar delodajalec krši pogodbo o zaposlitvi ali delovno pravo, tako da obstaja tveganje posega v pravice ter interese delavca
 
@@ -87,11 +87,11 @@ odvisno od tega, kdo prvi konča pogodbo z zadostnim razlogom,
 
 odpravnina morda ni izplačana ali pa jo je mogoče zahtevati.
 
-Zato v delovnih sporih (勞資糾紛) na Tajvanu
+Zato je v delovnih sporih (勞資糾紛) na Tajvanu odločilen trenutek.
 
-je »**čas**« zelo pomemben.
+»**čas**« je zelo pomemben.
 
-V večini primerov so pravice tistega, ki se vnaprej pripravi, bolje zavarovane.
+V sporih o odpravnini odloča, katera stran prva konča pogodbo z zakonskim razlogom in z dokazi.
 
 ---
 

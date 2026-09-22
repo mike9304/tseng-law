@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Ali se spominjate časov tradicionalnih brivnic (理髮廳) iz zgodnjega Tajvana?
+Na zgodnjem Tajvanu so tradicionalne brivnice (理髮廳) ponujale tudi masažo.
 
 Način umivanja las v teh salonih je bil zelo poseben.
 
@@ -23,7 +23,7 @@ Poleg striženja so obstajale različne storitve, kot so britje ter nega obraza.
 
 Bistvo pa je bilo, da je bilo sede mogoče prejeti umivanje las skupaj z masažo lasišča, ramen ter vratu.
 
-Že eno striženje je omogočalo uživanje te storitve visokega razreda, zato je bilo razmerje kakovosti do cene odlično.
+Že ob striženju je bilo mogoče prejeti umivanje las skupaj z masažo.
 
 Zelo je spominjalo na današnje umivanje las v vietnamskem slogu.
 
@@ -33,7 +33,7 @@ Danes se saloni v tej obliki skoraj ne pojavljajo več.
 
 ​
 
-Kakor koli, ko je govor o masaži (按摩),
+Ko gre za masažo (按摩),
 
 na Tajvanu obstaja tudi veliko ulic masaže.
 
@@ -49,7 +49,7 @@ Ko je Tajvan leta 1980 razglasil ter uveljavil zakon o blaginji oseb z invalidno
 
 so v resnici le osebe z okvaro vida (視障者) smele opravljati poklic masažista (按摩業).
 
-Osebi brez okvare vida (非視障者) opravljanje tega poklica ni bilo dovoljeno.
+Osebam brez okvare vida (非視障者) opravljanje tega poklica ni bilo dovoljeno.
 
 Ta zakon je veljal do leta 2003; tedaj je gospod Lin, ki je vodil brivnico,
 
@@ -81,11 +81,11 @@ Spraševalo se je denimo, ali pisana določba, ki je izključno osebam z okvaro 
 
 ter se je dvomilo, ali je ta določba resnično prispevala k varovanju zaposlitve ter obstoja oseb z okvaro vida.
 
-Nazadnje so ustavni sodniki (大法官) za protiustavno (違憲) razglasili določbo, ki je izključno osebam z okvaro vida dovoljevala opravljanje poklica masažista.
+Nazadnje so ustavni sodniki Sodnega sveta (大法官) določbo razglasili za protiustavno (違憲), ki je izključno osebam z okvaro vida dovoljevala opravljanje poklica masažista.
 
 ​
 
-Podobno v Koreji, kjer se številne osebe z okvaro vida preživljajo z masažo,
+Za primerjavo, po korejskem pravu se številne osebe z okvaro vida preživljajo z masažo,
 
 smejo poklic masažista praviloma opravljati le osebe z okvaro vida, ki so pridobile potrdilo o usposobljenosti.
 
@@ -97,9 +97,9 @@ Trenutno Koreja še vedno dovoli izključno osebam z okvaro vida, ki imajo uspos
 
 če pa kdo brez te usposobljenosti od druge osebe zaračunava nagrado za masažo,
 
-se po korejskem zakonu o zdravstvenih storitvah (醫療法) lahko izreče kazen odvzema prostosti do 3 let.
+se po korejskem zakonu o zdravstvenih storitvah (醫療法) lahko izreče kazen zapora do 3 let.
 
-Če masažno dejavnost vodi kdo brez okvare vida, se lahko izreče kazen odvzema prostosti do 5 let.
+Če masažno dejavnost vodi kdo brez okvare vida, se lahko izreče kazen zapora do 5 let.
 
 ​
 

@@ -2261,9 +2261,9 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Posvet poteka samo v štirih jezikih: v angleščini, kitajščini (中文), japonščini in korejščini.',
     methodConfirmationNotice:
-      'Če ne obvladate nobenega od štirih jezikov posveta, izberite »Način sporazumevanja je treba potrditi«. Odgovorimo, da ocenimo, ali obstaja izvedljiv način sporazumevanja; storitev v drugem jeziku ni zagotovljena in rok za odgovor se ne obljublja.',
+      'Če ne obvladate nobenega od štirih jezikov posveta, izberite »Način sporazumevanja je treba potrditi«. Odgovorimo, da bi ocenili, ali obstaja izvedljiv način sporazumevanja; storitev v drugem jeziku ni zagotovljena in rok za odgovor se ne obljublja.',
     preparationNotice:
-      'Povzetek smete napisati v svojem jeziku. Izvirno besedilo se shrani tako, kot ste ga napisali, in se ne prevaja samodejno.',
+      'Povzetek lahko napišete v svojem jeziku. Izvirno besedilo se shrani tako, kot ste ga napisali, in se ne prevaja samodejno.',
     heading: 'Pošljite prošnjo za pregled',
     intro:
       'Opišite svojo zadevo na kratko. Odvetnica ali odvetnik oceni vsebino, preden se preide k naslednjemu koraku.',

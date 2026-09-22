@@ -13,29 +13,29 @@ featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
 
 ![Glavna slika](../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg)
 
-Na podlagi zadeve, v kateri se je korejski študent poškodoval, ko je v fitnesu (健身房) na Tajvanu sprejemal navodila trenerja (教練), ta članek pojasnjuje pravne postopke, ki jih je mogoče po poškodbi v fitnesu presoditi, roke uveljavljanja, načine ohranitve dokazov (保全證據) ter postavke odškodnine (損害賠償).
+Na podlagi zadeve, v kateri se je korejski študent poškodoval, ko je v fitnesu (健身房) na Tajvanu sprejemal navodila trenerja (教練), ta članek pojasnjuje pravne postopke, ki jih je mogoče po poškodbi v fitnesu presoditi, roke uveljavljanja, načine ohranitve dokazov (保全證據) in postavke odškodnine (損害賠償).
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
-Nesreča se je zgodila v fitnesu v Tajdžongu (臺中) med vadbo mrtvega dviga (硬舉), ki jo je vodil trener. Po poškodbi ne zadošča ostati le pri dejstvu, da se je nesreča zgodila znotraj fitnesa; treba je skupaj presoditi vadbene izkušnje ter zdravstveno stanje uporabnika, vrsto vadbe ter obremenitev, pojasnila ter navodila trenerja, gibanje ter odziv v tistem trenutku, vzročno zvezo (因果關係) med poškodbo ter vadbo in listine, ki podpirajo škodo.
+Nesreča se je zgodila v fitnesu v Taichungu (臺中) med vadbo mrtvega dviga (硬舉), ki jo je vodil trener. Po poškodbi ne zadošča ostati le pri dejstvu, da se je nesreča zgodila znotraj fitnesa; treba je skupaj presoditi vadbene izkušnje in zdravstveno stanje uporabnika, vrsto vadbe in obremenitev, pojasnila in navodila trenerja, gibanje in odziv v tistem trenutku, vzročno zvezo (因果關係) med poškodbo in vadbo in listine, ki podpirajo škodo.
 
-Odvetnica Wei Tseng je tožnika, korejskega študenta, zastopala kot procesna zastopnica (訴訟代理人). Okrožno sodišče v Tajdžongu je 24. 1. 2022 v sodbi prve stopnje v potrošniški zadevi št. 7 leta 109 (109年度消字第7號) naložilo toženi stranki plačilo [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) ter obresti, navedenih v sodbi.
+Odvetnica Wei Tseng je tožnika, korejskega študenta, zastopala kot procesna zastopnica (訴訟代理人). Okrožno sodišče v Taichungu je 24. 1. 2022 v sodbi prve stopnje v potrošniški zadevi št. 7 leta 109 po koledarju Republike Kitajske (民國109年度消字第7號) naložilo toženi stranki plačilo [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) in obresti, navedenih v sodbi.
 
-Nato je tisk poročal, da sta stranki v drugi stopnji sklenili poravnavo (和解). Samo uradna sodba prve stopnje ne omogoča potrditve izida druge stopnje niti zneska poravnave; tega ni mogoče brati kot končni izid sodbe prve stopnje.
+Nato je tisk poročal, da sta stranki v drugi stopnji sklenili poravnavo (和解). Samo uradna sodba prve stopnje ne omogoča potrditve izida druge stopnje niti zneska poravnave; o poravnavi, o kateri poroča tisk, zato ni mogoče sklepati, da je s tem potrjen končni izid sodbe prve stopnje.
 
-Naslovi tiskovnih poročil, spletnih objav ter pravnih komentarjev k tej zadevi, v prevodu, so naslednji. Naslovi spodaj služijo le predstavitvi vsebine vsake povezave; ne pomenijo, da to besedilo samo ugotavlja dejstva.
+Naslovi tiskovnih poročil, spletnih objav in pravnih komentarjev k tej zadevi, v prevodu, so naslednji. Naslovi spodaj služijo le predstavitvi vsebine vsake povezave; ne pomenijo, da to besedilo samo ugotavlja dejstva.
 
 ![Študent, ruptura medvretenčne ploščice (椎間盤破裂) po mrtvem dvigu 90 kg… zahteva odškodnino od fitnesa](../images/010-taiwan-gym-injury-lawsuit/img-02.jpg)
 
 [Študent, ruptura medvretenčne ploščice (椎間盤破裂) po mrtvem dvigu 90 kg… zahteva odškodnino od fitnesa](https://tw.news.yahoo.com/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82-%E6%80%92%E5%91%8A%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B1%82%E5%84%9F-095800997.html)
 
-![Korejski študent, ruptura medvretenčne ploščice pri mrtvem dvigu 90 kg… na prvi stopnji odškodnina 1.570.000 TWD ter poročilo o poravnavi na drugi stopnji](../images/010-taiwan-gym-injury-lawsuit/img-03.jpg)
+![Korejski študent, ruptura medvretenčne ploščice pri mrtvem dvigu 90 kg… na prvi stopnji odškodnina 1.570.000 TWD in poročilo o poravnavi na drugi stopnji](../images/010-taiwan-gym-injury-lawsuit/img-03.jpg)
 
-[Korejski študent, ruptura medvretenčne ploščice pri mrtvem dvigu 90 kg… na prvi stopnji odškodnina 1.570.000 TWD ter poročilo o poravnavi na drugi stopnji](https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com)
+[Korejski študent, ruptura medvretenčne ploščice pri mrtvem dvigu 90 kg… na prvi stopnji odškodnina 1.570.000 TWD in poročilo o poravnavi na drugi stopnji](https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com)
 
-![Korejski študent, poškodba pri mrtvem dvigu 90 kg… prva stopnja 1.570.000 TWD odškodnine ter poročilo o poravnavi na drugi stopnji](../images/010-taiwan-gym-injury-lawsuit/img-04.jpg)
+![Korejski študent, poškodba pri mrtvem dvigu 90 kg… prva stopnja 1.570.000 TWD odškodnine in poročilo o poravnavi na drugi stopnji](../images/010-taiwan-gym-injury-lawsuit/img-04.jpg)
 
-[Korejski študent, poškodba pri mrtvem dvigu 90 kg… prva stopnja 1.570.000 TWD odškodnine ter poročilo o poravnavi na drugi stopnji](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
+[Korejski študent, poškodba pri mrtvem dvigu 90 kg… prva stopnja 1.570.000 TWD odškodnine in poročilo o poravnavi na drugi stopnji](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
 
 ![Študent, ruptura medvretenčne ploščice po mrtvem dvigu 90 kg… zahteva odškodnino od fitnesa](../images/010-taiwan-gym-injury-lawsuit/img-05.jpg)
 
@@ -45,9 +45,9 @@ Naslovi tiskovnih poročil, spletnih objav ter pravnih komentarjev k tej zadevi,
 
 [Objava na PTT: korejski študent, ruptura medvretenčne ploščice pri mrtvem dvigu 90 kg… na prvi stopnji nalog fitnesu plačati 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
-![Blog: poškodba pri mrtvem dvigu 90 kg pri korejskem študentu z maso 70 kg ter odškodnina prek 1.000.000 TWD… je bila krivda fitnesa? Kakšno je stališče vaditelja (心態)?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
+![Blog: poškodba pri mrtvem dvigu 90 kg pri korejskem študentu z maso 70 kg in odškodnina prek 1.000.000 TWD… je bila krivda fitnesa? Kakšna je bila miselnost vadečega (心態)?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
-[Blog: poškodba pri mrtvem dvigu 90 kg pri korejskem študentu z maso 70 kg ter odškodnina prek 1.000.000 TWD… je bila krivda fitnesa? Kakšno je stališče vaditelja (心態)?](https://blog.udn.com/blackjack/179081715)
+[Blog: poškodba pri mrtvem dvigu 90 kg pri korejskem študentu z maso 70 kg in odškodnina prek 1.000.000 TWD… je bila krivda fitnesa? Kakšna je bila miselnost vadečega (心態)?](https://blog.udn.com/blackjack/179081715)
 
 ![Pravni komentar: študent, ruptura medvretenčne ploščice pri mrtvem dvigu… na prvi stopnji nalog znanemu fitnesu plačati 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
@@ -61,55 +61,55 @@ Naslovi tiskovnih poročil, spletnih objav ter pravnih komentarjev k tej zadevi,
 
 **Ali je pri korejskem študentu prišlo do rupture medvretenčne ploščice, ko je pri osebni vadbi izvajal mrtvi dvig 90 kg?**
 
-Praktični pomen te zadeve je, da pokaže, da se odgovornost ne določi takoj že s samim dejstvom, da se je poškodba zgodila v fitnesu. Vsebina varnostne dolžnosti (安全義務), ki bremeni ponudnika storitve, konkretno dejanje navodila ter kršitev dolžnosti skrbnosti (注意義務), vzročna zveza med poškodbo ter ravnanjem ter obseg škode se presojajo po listinah vsake zadeve. Pogoji ter roki kazenskega postopka ter civilnega postopka se prav tako razlikujejo, zato je treba sledi takoj po nesreči urediti ločeno.
+Praktični pomen te zadeve je, da pokaže, da se odgovornost ne določi takoj že s samim dejstvom, da se je poškodba zgodila v fitnesu. Vsebina varnostne dolžnosti (安全義務), ki bremeni ponudnika storitve, konkretno dejanje navodila in kršitev dolžnosti skrbnosti (注意義務), vzročna zveza med poškodbo in ravnanjem in obseg škode se presojajo po listinah vsake zadeve. Pogoji in roki kazenskega postopka in civilnega postopka se prav tako razlikujejo, zato je treba sledi takoj po nesreči urediti ločeno.
 
-Spodnje je splošna informacija za pojasnilo sporov o poškodbi v fitnesu na Tajvanu; ni pravno mnenje k konkretni zadevi. Dejanske pravice ter način postopanja se lahko razlikujejo glede na pogodbeno razmerje, okoliščine nesreče, vzrok ter stopnjo poškodbe, ravnanje strank, pogoje police, zagotovljene dokaze ter uporabno pravo.
+Spodnje je splošna informacija za pojasnilo sporov o poškodbi v fitnesu na Tajvanu; ni pravno mnenje k konkretni zadevi. Dejanske pravice in način postopanja se lahko razlikujejo glede na pogodbeno razmerje, okoliščine nesreče, vzrok in stopnjo poškodbe, ravnanje strank, pogoje police, zagotovljene dokaze ter pravo, ki se uporablja.
 
 ## 1. Po poškodbi v fitnesu na Tajvanu, katere pravne postopke je mogoče presoditi?
 
 [7. člen tajvanskega zakona o varstvu potrošnikov (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) določa, da mora podjetje, ko nudi storitev, zagotoviti, da ima ta storitev varnost, ki jo je mogoče razumno pričakovati po strokovnem ali tehničnem merilu v trenutku nudenja.
 
-To ne pomeni, da je odgovornost podjetja ali trenerja priznana vsakič, ko se poškodba zgodi v fitnesu. Treba je presojati zadevo za zadevo, katera konkretna dolžnost skrbnosti je obstajala, ali je bila kršena, ali je vzročna zveza med kršitvijo ter poškodbo, ali je nastala dejanska škoda, kakšne ugovore ima nasprotna stranka ter ali obstaja dokaz, ki podpira vsako trditev ter vsak ugovor.
+To ne pomeni, da je odgovornost podjetja ali trenerja priznana vsakič, ko se poškodba zgodi v fitnesu. Treba je presojati zadevo za zadevo, katera konkretna dolžnost skrbnosti je obstajala, ali je bila kršena, ali je vzročna zveza med kršitvijo in poškodbo, ali je nastala dejanska škoda, kakšne ugovore ima nasprotna stranka in ali obstaja dokaz, ki podpira vsako trditev ter vsak ugovor.
 
-Če so izpolnjeni zakonski znaki kaznivega dejanja poškodbe iz malomarnosti (過失傷害), je mogoče presoditi kazensko ovadbo (告訴). Mogoče je tudi presoditi civilni zahtevek za odškodnino, vendar kateri pravni temelj se uporabi — pogodbena odgovornost, protipravno dejanje (侵權行為) ali varstvo potrošnikov — ter obseg odgovornosti se razlikujeta glede na konkretne dejanske okoliščine. Okoliščina, da je pri eni nesreči mogoče presoditi več postopkov, ne pomeni, da jih je treba vse opraviti, niti da je uspeh ene od strank vnaprej dan.
+Če so izpolnjeni zakonski znaki kaznivega dejanja poškodbe iz malomarnosti (過失傷害), je mogoče presoditi kazensko ovadbo (告訴). Mogoče je tudi presoditi civilni zahtevek za odškodnino, vendar kateri pravni temelj se uporabi — pogodbena odgovornost, protipravno dejanje (侵權行為) ali varstvo potrošnikov — in obseg odgovornosti se razlikujeta glede na konkretne dejanske okoliščine. Okoliščina, da je pri eni nesreči mogoče presoditi več postopkov, ne pomeni, da jih je treba vse opraviti, niti da je uspeh ene od strank vnaprej dan.
 
-## 2. Kateri roki se uporabijo za kazensko ovadbo ter civilno odškodnino?
+## 2. Kateri roki se uporabijo za kazensko ovadbo in civilno odškodnino?
 
-Po [287. členu tajvanskega kazenskega zakonika (刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001) je kaznivo dejanje poškodbe iz malomarnosti po 284. členu kazenskega zakonika kaznivo dejanje, ki za začetek pregona zahteva ovadbo (告訴乃論之罪). Po [237. členu tajvanskega zakonika o kazenskem postopku (刑事訴訟法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001) mora upravičenec do ovadbe ovadbo vložiti praviloma v 6 mesecih od dneva, ko je spoznal storilca.
+Po [287. členu tajvanskega kazenskega zakonika (刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001) je kaznivo dejanje poškodbe iz malomarnosti po 284. členu kazenskega zakonika kaznivo dejanje, ki se preganja le na predlog (告訴乃論之罪). Po [237. členu tajvanskega zakonika o kazenskem postopku (刑事訴訟法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001) mora upravičenec do ovadbe ovadbo vložiti praviloma v 6 mesecih od dneva, ko je spoznal storilca.
 
-Pravica zahtevati odškodnino iz protipravnega dejanja po [197. členu tajvanskega civilnega zakonika (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) praviloma ugasne, če ni uveljavljena v 2 letih od trenutka, ko je oškodovanec izvedel tako za škodo kakor za osebo, dolžno k odškodnini, ter ugasne tudi, ko od protipravnega dejanja preteče 10 let.
+Pravica zahtevati odškodnino iz protipravnega dejanja po [197. členu tajvanskega civilnega zakonika (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) praviloma ugasne, če ni uveljavljena v 2 letih od trenutka, ko je oškodovanec izvedel tako za škodo kakor za osebo, ki je dolžna plačati odškodnino, in ugasne tudi, ko od protipravnega dejanja preteče 10 let.
 
-Če pa pride v poštev drug razlog zahtevka, kot pogodbena odgovornost, ali če se uporabijo druga pravila o začetku teka, poteku, pretrganju ipd., se to lahko razlikuje glede na dejanske okoliščine. Roka ni mogoče določati le po datumu nesreče ali diagnoze; varneje je pravočasno ter posamično preveriti mogoče temelje zahtevka ter referenčne datume.
+Če pa pride v poštev drug razlog zahtevka, kot pogodbena odgovornost, ali če se uporabijo druga pravila o začetku teka, poteku, pretrganju ipd., se to lahko razlikuje glede na dejanske okoliščine. Roka ni mogoče določati le po datumu nesreče ali diagnoze; varneje je pravočasno in posamično preveriti mogoče temelje zahtevka in referenčne datume.
 
-## 3. Takoj po nesreči, katere dokaze je treba ohraniti ter kako?
+## 3. Takoj po nesreči, katere dokaze je treba ohraniti in kako?
 
-Da bi bilo mogoče pojasniti odgovornost, vzročno zvezo ter škodo, je smiselno zbrati skupaj ne le posnetke CCTV (監視器影像) iz trenutka nesreče, temveč tudi zdravstveno dokumentacijo (病歷) ter zdravniško potrdilo (診斷證明書), potrdila za zdravstvene stroške (醫療費用), potne stroške za zdravljenje (就醫交通費) ter stroške nege (看護費用), sporočila, izmenjana s fitnesom ter trenerjem, izjave prič, rezervacijo ur ter evidenco prisotnosti, načrt vadbe ter zapis treninga. V mogočem obsegu je smiselno fotografirati mesto poškodbe ter stanje kraja nesreče ter po datumu urediti potek pred nesrečo ter po njej in vsebino stikov, da bo pozneje lažje listine primerjati.
+Da bi bilo mogoče pojasniti odgovornost, vzročno zvezo in škodo, je smiselno zbrati skupaj ne le posnetke CCTV (監視器影像) iz trenutka nesreče, temveč tudi zdravstveno dokumentacijo (病歷) in zdravniško potrdilo (診斷證明書), potrdila za zdravstvene stroške (醫療費用), potne stroške za zdravljenje (就醫交通費) in stroške nege (看護費用), sporočila, izmenjana s fitnesom in trenerjem, izjave prič, rezervacijo ur in evidenco prisotnosti, načrt vadbe in zapis treninga. V mogočem obsegu je smiselno fotografirati mesto poškodbe in stanje kraja nesreče in po datumu urediti potek pred nesrečo ter po njej ter vsebino stikov, da bo pozneje lažje listine primerjati.
 
-Posnetki so lahko po preteku dobe hrambe prepisani (影像可能被覆蓋) ali iz drugih razlogov postanejo neuporabni. Zato je mogoče presoditi prošnjo fitnesu za ohranitev prek pisma s potrdilom vsebine (存證信函) ali pisma v imenu odvetnice (律師函), ki konkretno zapiše potreben časovni odsek, kraj ter položaj kamere. Ta pisna listina je praktični ukrep za zapis, kaj ter kdaj je bilo zaprošeno. Sama po sebi pa nasprotni stranki ne nalaga nove pravne dolžnosti ohraniti posnetke niti ne preprečuje njihovega izbrisa, niti sama okoliščina, da posnetki niso ostali, ne vodi sodišča k samodejno neugodni presoji.
+Posnetki so lahko po preteku dobe hrambe prepisani (影像可能被覆蓋) ali iz drugih razlogov postanejo neuporabni. Zato je mogoče presoditi prošnjo fitnesu za ohranitev prek pisma s potrdilom vsebine (存證信函) ali pisma v imenu odvetnice (律師函), ki konkretno zapiše potreben časovni odsek, kraj in položaj kamere. Ta pisna listina je praktični ukrep za zapis, kaj in kdaj je bilo zaprošeno. Sama po sebi pa nasprotni stranki ne nalaga nove pravne dolžnosti ohraniti posnetke niti ne preprečuje njihovega izbrisa, niti sama okoliščina, da posnetki niso ostali, ne vodi sodišča k samodejno neugodni presoji.
 
-Če okoliščine nesreče lahko izpolnijo znake kaznivega dejanja, je mogoče hitro vložiti ovadbo, da preiskovalni organ (偵查機關) presodi, ali obstaja zakonita podlaga zasega ali ohranitve. Ovadba ne pomeni, da policija ali tožilstvo nujno zavarujeta CCTV, zato je treba zbrati tudi listine, ki jih stranka lahko ohrani sama, kot zdravstvene ter komunikacijske podlage.
+Če okoliščine nesreče lahko izpolnijo znake kaznivega dejanja, je mogoče hitro vložiti ovadbo, da preiskovalni organ (偵查機關) presodi, ali obstaja zakonita podlaga zasega ali ohranitve. Ovadba ne pomeni, da policija ali tožilstvo nujno zavarujeta CCTV, zato je treba zbrati tudi listine, ki jih stranka lahko ohrani sama, kot zdravstveno dokumentacijo in komunikacijske zapise.
 
 ## 4. Katere postavke škode je mogoče zahtevati od fitnesa?
 
-Postavke škode, katerih uveljavljanje je mogoče presoditi, so naslednje. Dejansko priznanje ter višina sta odvisna od nujnosti vsakega izdatka, vzročne zveze z nesrečo, dokazil, razmerja odgovornosti ter presoje sodišča.
+Postavke škode, katerih uveljavljanje je mogoče presoditi, so naslednje. Dejansko priznanje in višina sta odvisna od nujnosti vsakega izdatka, vzročne zveze z nesrečo, dokazil, razmerja odgovornosti in presoje sodišča.
 
-1. **Zdravstveni stroški**: Izdatke, dejansko porabljene za posvet, pregled, zdravljenje, zdravila ter rehabilitacijo, se dokazuje s potrdili ter zdravstveno dokumentacijo.
-2. **Stroški nege ali oskrbe**: Ali je bila glede na stopnjo poškodbe ter potek zdravljenja nega nujna ter ali sta čas ter strošek primerna, se presoja z zdravstvenimi ter izdatkovnimi podlagami.
-3. **Potni stroški**: Izdatke, nujne za vožnjo v zdravstveno ustanovo zaradi zdravljenja, se dokazuje z evidenco premikov, potrdili ter podobnimi dokazili.
-4. **Škoda iz zmanjšanja delovne zmožnosti (勞動能力減損)**: Če so priznane posledice ter trajno znižanje delovne zmožnosti, je mogoče ocenjevati skupaj po medicinskih ter poklicnih podlagah, stopnji okvare, poklicu ter dohodku ter preostalem času delovne zmožnosti. Sam odstotek okvare odškodnine ne določa, niti se izguba ne izračuna samodejno do trenutka upokojitve.
-5. **Izgubljeni dohodek v času okrevanja (收入損失)**: Čas, v katerem dejansko ni bilo mogoče delati zaradi zdravljenja ali okrevanja, ter iz tega izhajajoče znižanje dohodka je treba dokazati s plačilnimi, davčnimi ter evidenčnimi podlagami.
-6. **Nepremoženjska škoda (非財產上損害)**: Znesek za duševne bolečine določi sodišče po elementih vsake zadeve, kot so stopnja poškodbe, čas zdravljenja, posledice ter konkretne okoliščine stranke.
-7. **Kaznovalna odškodnina (懲罰性賠償金)**: Obstaja pravilo, po katerem je v postopku, za katerega velja zakon o varstvu potrošnikov, mogoče, če je škoda nastala z naklepom podjetja, zahtevati do 5-kratnika dejanske škode; pri hudi malomarnosti do 3-kratnika; ter pri malomarnosti do 1-kratnika zneska dejanske škode. Ali se [51. člen tajvanskega zakona o varstvu potrošnikov](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na zadevo nanaša ter ali in v kakšni višini je dejanska odškodnina, je odvisno od presoje sodišča glede konkretnih predpostavk ter dokazov.
+1. **Zdravstveni stroški**: Izdatke, dejansko porabljene za posvet, pregled, zdravljenje, zdravila in rehabilitacijo, se dokazuje s potrdili in zdravstveno dokumentacijo.
+2. **Stroški nege ali oskrbe**: Ali je bila glede na stopnjo poškodbe in potek zdravljenja nega nujna ter ali sta čas ter strošek primerna, se presoja z zdravstvenimi ter izdatkovnimi podlagami.
+3. **Potni stroški**: Izdatke, nujne za vožnjo v zdravstveno ustanovo zaradi zdravljenja, se dokazuje z evidenco premikov, potrdili in podobnimi dokazili.
+4. **Škoda iz zmanjšanja delovne zmožnosti (勞動能力減損)**: Če so priznane posledice in trajno znižanje delovne zmožnosti, je mogoče ocenjevati skupaj po medicinske in poklicne dokumentacijeah, stopnji okvare, poklicu in dohodku in preostalem času delovne zmožnosti. Sam odstotek okvare odškodnine ne določa, niti se izguba ne izračuna samodejno do trenutka upokojitve.
+5. **Izgubljeni dohodek v času okrevanja (收入損失)**: Čas, v katerem dejansko ni bilo mogoče delati zaradi zdravljenja ali okrevanja, in iz tega izhajajoče znižanje dohodka je treba dokazati s plačilnimi, davčnimi in evidenčnimi podlagami.
+6. **Nepremoženjska škoda (非財產上損害)**: Znesek za duševne bolečine določi sodišče po elementih vsake zadeve, kot so stopnja poškodbe, čas zdravljenja, posledice in konkretne okoliščine stranke.
+7. **Kaznovalna odškodnina (懲罰性賠償金)**: Obstaja pravilo, po katerem je v postopku, za katerega velja zakon o varstvu potrošnikov, mogoče, če je škoda nastala z naklepom podjetja, zahtevati do 5-kratnika dejanske škode; pri hudi malomarnosti do 3-kratnika; in pri malomarnosti do 1-kratnika zneska dejanske škode. Ali se [51. člen tajvanskega zakona o varstvu potrošnikov](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na zadevo nanaša in ali in v kakšni višini je dejanska odškodnina, je odvisno od presoje sodišča glede konkretnih predpostavk ter dokazov.
 
-## 5. Tudi če ima fitnes zavarovanje odgovornosti (責任保險), sta lahko obstoj odškodnine ter višina sporna?
+## 5. Tudi če ima fitnes zavarovanje odgovornosti (責任保險), sta lahko obstoj odškodnine in višina sporna?
 
-Da. Dejstvo, da zavarovanje obstaja, je lahko pomenljivo pri presoji vira odškodnine, vendar samo po sebi ne priznava pravne odgovornosti fitnesa ali trenerja niti ne določa zneska za izplačilo. Med zavarovalnico (保險人) ter strankami lahko nastanejo spori o limitu kritja ter izključitvenih klavzulah, vzročni zvezi med nesrečo ter poškodbo ter nujnosti in višini vsake postavke škode.
+Da. Dejstvo, da zavarovanje obstaja, je lahko pomenljivo pri presoji vira odškodnine, vendar samo po sebi ne priznava pravne odgovornosti fitnesa ali trenerja niti ne določa zneska za izplačilo. Med zavarovalnico (保險人) in strankami lahko nastanejo spori o limitu kritja in izključitvenih klavzulah, vzročni zvezi med nesrečo in poškodbo in nujnosti in višini vsake postavke škode.
 
-Zlasti zmanjšanje delovne zmožnosti, znižanje dohodka v času okrevanja ter nepremoženjska škoda lahko zahtevajo zdravstvene, dohodkovne ter poklicne podlage ali mnenje izvedenca. Znesek, ki ga predlaga zavarovalnica, ali tisti, ki ga zahteva oškodovanec, ne postane takoj znesek, ki ga prizna sodišče, niti izid ocene okvare odškodnine ne določa samodejno. V dejanskem postopku je treba skupaj preveriti polico ter pogoje, vsebino obvestila o nesreči, odgovor zavarovalnice, potek zdravljenja ter podlage škode.
+Zlasti zmanjšanje delovne zmožnosti, znižanje dohodka v času okrevanja in nepremoženjska škoda lahko zahtevajo zdravstveno, dohodkovno in poklicno dokumentacijo ali mnenje izvedenca. Znesek, ki ga predlaga zavarovalnica, ali tisti, ki ga zahteva oškodovanec, ne postane takoj znesek, ki ga prizna sodišče, niti izid ocene okvare odškodnine ne določa samodejno. V dejanskem postopku je treba skupaj preveriti polico in pogoje, vsebino obvestila o nesreči, odgovor zavarovalnice, potek zdravljenja in podlage škode.
 
-Če ste utrpeli poškodbo v fitnesu, je pomembno najprej pridobiti potrebno oskrbo, ohraniti listine, ki jih je še mogoče zagotoviti, preden izginejo, ter pravočasno pridobiti posamičen pravni nasvet k rokom ter postopkom, ki se na zadevo lahko nanašajo. Pogajanja, potrošniška pritožba (消費申訴) ali mediacija (調解), kazenska ovadba ter civilni zahtevek za odškodnino so vsa sredstva, ki jih je mogoče glede na zadevo izbrati, ter niso postopki, ki bi jih bilo vedno nujno opraviti v celoti.
+Če ste utrpeli poškodbo v fitnesu, je pomembno najprej pridobiti potrebno oskrbo, ohraniti listine, ki jih je še mogoče zagotoviti, preden izginejo, in pravočasno pridobiti posamičen pravni nasvet k rokom in postopkom, ki se na zadevo lahko nanašajo. Pogajanja, potrošniška pritožba (消費申訴) ali mediacija (調解), kazenska ovadba in civilni zahtevek za odškodnino so vsa sredstva, ki jih je mogoče glede na zadevo izbrati, in niso postopki, ki bi jih bilo vedno nujno opraviti v celoti.
 
-Padec v obratu, škoda na zdravju zaradi hrane ter poškodba pri strokovni storitvi imajo lahko prav tako za sporne točke varnostno dolžnost, vzročno zvezo, škodo ter dokaz. Zaključka iz zadeve fitnesa pa ni mogoče brez spremembe uporabiti za drugo nesrečo, zato je treba pogodbo, ravnanje ter ustrezne predpise vsakega primera presoditi ločeno.
+Padec v poslovnih prostorih, škoda na zdravju zaradi hrane in poškodba pri strokovni storitvi imajo lahko prav tako za sporne točke varnostno dolžnost, vzročno zvezo, škodo in dokaz. Zaključka iz zadeve fitnesa pa ni mogoče brez spremembe uporabiti za drugo nesrečo, zato je treba pogodbo, ravnanje in ustrezne predpise vsakega primera presoditi ločeno.
 
 ---
 

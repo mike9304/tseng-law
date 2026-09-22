@@ -1113,7 +1113,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Brak, obitelj i nasljeđivanje',
           paragraphs: [
-            'Vodimo razvod (離婚), diobu imovine, izvršavanje prava i snošenje dužnosti prema maloljetnoj djeci (未成年子女權利義務之行使或負擔), viđanje djeteta (會面交往) i nasljeđivanje (繼承), i tada kada se stranke ili imovina nalaze u različitim državama. Prekogranični obiteljski predmeti često zahtijevaju dodatnu procjenu evidencije kućanstava (戶籍), oblika isprava i njihove dokazne vrijednosti na Tajvanu.',
+            'Vodimo razvod (離婚), diobu imovine, vršenje prava i obveza prema maloljetnoj djeci (未成年子女權利義務之行使或負擔), viđanje djeteta (會面交往) i nasljeđivanje (繼承), pa i kada se stranke ili imovina nalaze u različitim državama. Prekogranični obiteljski predmeti često zahtijevaju dodatnu procjenu evidencije kućanstava (戶籍), oblika isprava i njihove dokazne vrijednosti na Tajvanu.',
             'Budući da obiteljski predmeti često nose rokove i paralelne postupke, prvi sažetak treba navesti odnos među strankama, trenutačno prebivalište i već pokrenute postupke.',
           ],
         },
@@ -1159,7 +1159,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Osnivanje i struktura',
           paragraphs: [
             'Odvjetnice i odvjetnici koji su studirali na National Taiwan University (國立臺灣大學) osnovali su 2016. Hovering International Law Firm (昊鼎國際法律事務所). Kineski naziv 昊鼎 spaja znak 昊 („široko nebo“) sa znakom 鼎 („čvrst temelj“) i izražava usmjerenje ureda od njegova osnivanja.',
-            'Imamo urede u Taipeiju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Ured u Kaohsiungu usredotočen je na vođenje poduzeća i vodi građanskopravne, kaznene i upravne sporove. Ured u Taichungu vodi građevinske predmete, intelektualno vlasništvo i predmete s vezom s Korejom i Japanom. Ured u Pingtungu otvoren je 2017. kako bi se skrbilo o strankama u toj regiji.',
+            'Imamo urede u Taipeiju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Ured u Kaohsiungu usredotočen je na korporativno upravljanje i vodi građanskopravne, kaznene i upravne sporove. Ured u Taichungu vodi građevinske predmete, intelektualno vlasništvo i predmete s vezom s Korejom i Japanom. Ured u Pingtungu otvoren je 2017. kako bi se skrbilo o strankama u toj regiji.',
             'Uz odvjetnički rad od 2020. djeluje i Hovering Accounting Office, koji nudi računovodstvo i porezno planiranje poduzetnicima i imućnim privatnim osobama.',
           ],
         },
@@ -1386,7 +1386,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Mjesto pohrane i pružatelji usluga',
           paragraphs: [
-            'Ove stranice smještene su kod tvrtke Vercel, a Vaš se podnesak čuva u nejavnoj pohrani te usluge. Poruke e-pošte šalju se uslugom e-pošte koju ured rabi.',
+            'Ove stranice smještene su kod tvrtke Vercel, a Vaš se zahtjev čuva u pohrani te usluge koja nije javno dostupna. Poruke e-pošte šalju se uslugom e-pošte koju ured rabi.',
             'Poslužitelji pojedinih pružatelja mogu se nalaziti izvan Tajvana, pa se Vaši podaci tamo mogu čuvati i obrađivati. Kada je svrha pohrane ispunjena, podaci se bez nepotrebne odgode brišu; podaci koje treba čuvati prema mjerodavnim propisima ostaju za to razdoblje. Zahtjeve u vezi s osobnim podacima prima wei@hoveringlaw.com.tw.',
           ],
         },
@@ -1411,7 +1411,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Pravni okvir',
           paragraphs: [
             'Ured djeluje prema tajvanskom pravu i ova stranica govori samo o radu u tom okviru.',
-            'Sadržaj nije savjetovanje prema pravnom poretku koji nije tajvanski, uključujući pravo mjesta Vašeg boravka. Ako se dio Vašeg predmeta tiče drugog pravnog poretka, s Vama ćemo razjasniti koja je kvalificirana osoba za taj dio potrebna.',
+            'Sadržaj nije savjetovanje prema pravnom poretku koji nije tajvanski, uključujući pravo mjesta Vašeg boravka. Ako se dio Vašeg predmeta tiče drugog pravnog poretka, razjasnit ćemo s Vama koja je stručna osoba za taj dio potrebna.',
           ],
         },
         {
@@ -1425,7 +1425,7 @@ export const croatianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Nema obećanja ishoda',
           paragraphs: [
             'Nijedan dio ove stranice nije obećanje glede ishoda predmeta, udovoljenja prijavi ili zahtjevu niti glede boravišnog i radnog statusa.',
-            'Vanjski linkovi služe orijentaciji; ne jamčimo točnost ni aktualnost sadržaja trećih osoba.',
+            'Vanjske poveznice služe orijentaciji; ne jamčimo točnost ni aktualnost sadržaja trećih osoba.',
           ],
         },
       ],

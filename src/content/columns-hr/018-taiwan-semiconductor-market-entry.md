@@ -8,7 +8,7 @@ categories:
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Ako imate kupce na Tajvanu, morate li tamo nužno osnovati društvo?"
-    a: "Sama činjenica da je kupac na Tajvanu ne određuje sama po sebi rješenje. Treba vidjeti zahtjeve tajvanskog kupca te stvarnu djelatnost prodaje, postrojenja, osoblja i strukturu operacija na Tajvanu, pa zatim odabrati najprikladniji subjekt."
+    a: "Sama činjenica da je kupac na Tajvanu ne određuje sama po sebi rješenje. Treba vidjeti zahtjeve tajvanskog kupca te stvarno poslovanje, postrojenja, osoblje i strukturu posla na Tajvanu, pa zatim odabrati najprikladniji subjekt."
   - q: "Nestaje li odgovornost glavne poslovnice u potpunosti kad se osnuje tajvansko društvo?"
     a: "Ako osnujete kćerinsko društvo (子公司), a ne podružnicu (分公司), glavna poslovnica načelno ne snosi dužnosti iz ugovora sklopljenih u ime kćerinskog društva. Treba međutim provjeriti iznimke zlouporabe pravne osobnosti i to daje li glavna poslovnica zasebno jamstvo ili preuzima vlastite ugovorne dužnosti."
   - q: "Možete li najprije djelovati preko distributera, a zatim prijeći na društvo na Tajvanu?"
@@ -61,7 +61,7 @@ Ako ste odlučili na Tajvanu imati samostalnu pravnu osobu, treba odabrati i nje
 
 ### Društvo s ograničenom odgovornošću: upravljanje je jednostavnije, no prijenos udjela relativno je zatvoren
 
-Društvo s ograničenom odgovornošću (有限公司) može se sastaviti od 1 ili više fizičkih osoba ili od tajvanskih ili stranih pravnih osoba kao članova (股東); članovi načelno odgovaraju do visine uloga. Članova uprave (董事) ima od 1 do 3 i biraju se između članova. Članovi koji ne izvršavaju poslove mogu ostvarivati pravo nadzora, pa zasebnog nadzornika (監察人) nije nužno imenovati. Ako statut ne određuje drukčije, jedan član ima jedan glas, pa nadzor ne mora odgovarati omjeru uloga. Da opći član prenese ulog, načelno je potreban pristanak više od polovine glasova ostalih članova, a za člana uprave 2/3 ili više. Stoga bolje odgovara jednostavnim odnosima članova i stabilnoj strukturi nadzora nego čestom prikupljanju kapitala ili prometu udjela. Kasnije ga se može pretvoriti u dioničko društvo (股份有限公司).
+Društvo s ograničenom odgovornošću (有限公司) može se sastaviti od 1 ili više fizičkih osoba ili od tajvanskih ili stranih pravnih osoba kao članova (股東); članovi načelno odgovaraju do visine uloga. Članova uprave (董事) ima od 1 do 3 i biraju se između članova. Članovi koji ne izvršavaju poslove mogu ostvarivati pravo nadzora, pa zasebnog nadzornika (監察人) nije nužno imenovati. Ako statut ne određuje drukčije, jedan član ima jedan glas, pa kontrola ne mora odgovarati omjeru uloga. Da opći član prenese ulog, načelno je potreban pristanak više od polovine glasova ostalih članova, a za člana uprave 2/3 ili više. Stoga bolje odgovara jednostavnim odnosima članova i stabilnoj strukturi kontrole nego čestom prikupljanju kapitala ili prometu udjela. Kasnije ga se može pretvoriti u dioničko društvo (股份有限公司).
 
 ### Dioničko društvo: prikladno poduzećima koja namjeravaju primiti druge ulagače ili razmatraju kotaciju
 
@@ -71,7 +71,7 @@ Obilježje je dioničkog društva (股份有限公司) da se kapital dijeli na d
 
 Kad strano društvo osniva tajvansko kćerinsko društvo (子公司), načelno se nakon prethodnog pregleda naziva podnosi zahtjev za dopuštenje ulaganja Odjelu za pregled ulaganja Ministarstva gospodarstva (經濟部投資審議司). Nakon odobrenja prenose se sredstva, dovršavaju utvrđivanje iznosa ulaganja (投資額審定) i ovjera kapitala ovlaštenim revizorom (會計師), zatim se dovršavaju osnivanje društva i porezna registracija (稅籍登記).
 
-Nasuprot tomu, kad obično strano društvo osniva tajvansku podružnicu (分公司), načelno nije potrebno dopuštenje ulaganja Odjela za pregled ulaganja Ministarstva gospodarstva; Uprava za razvoj trgovine Ministarstva gospodarstva (經濟部商業發展署) obavlja upis podružnice i povezano utvrđivanje sredstava. I dalje su potrebni prethodni pregled naziva, prijenos operativnih sredstava, ovjera kapitala i porezna registracija; kalendar osnivanja obično je kraći.
+Nasuprot tomu, kad obično strano društvo osniva tajvansku podružnicu (分公司), načelno nije potrebno dopuštenje ulaganja Odjela za pregled ulaganja Ministarstva gospodarstva; Uprava za razvoj trgovine Ministarstva gospodarstva (經濟部商業發展署) obavlja upis podružnice i povezano utvrđivanje sredstava. I dalje su potrebni prethodni pregled naziva, prijenos operativnih sredstava, ovjera kapitala i porezna registracija; raspored osnivanja obično je kraći.
 
 Riječ je o savjetu o oblikovanju ugovora. Sam odabir jednog određenog oblika ne čini posao zakonitim i ne sprječava spor.
 
@@ -101,7 +101,7 @@ Pri prvom kontaktu nije nužno priložiti sve povjerljive podloge kupca ili deta
 
 ### Ako imate kupce na Tajvanu, morate li tamo nužno osnovati društvo?
 
-Sama činjenica da je kupac na Tajvanu ne određuje sama po sebi rješenje. Treba vidjeti zahtjeve tajvanskog kupca te stvarnu djelatnost prodaje, postrojenja, osoblja i strukturu operacija na Tajvanu, pa zatim odabrati najprikladniji subjekt.
+Sama činjenica da je kupac na Tajvanu ne određuje sama po sebi rješenje. Treba vidjeti zahtjeve tajvanskog kupca te stvarno poslovanje, postrojenja, osoblje i strukturu posla na Tajvanu, pa zatim odabrati najprikladniji subjekt.
 
 ### Nestaje li odgovornost glavne poslovnice u potpunosti kad se osnuje tajvansko društvo?
 

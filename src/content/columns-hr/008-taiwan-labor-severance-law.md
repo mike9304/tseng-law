@@ -13,7 +13,7 @@ faq:
   - q: "Mora li društvo isplatiti zakonsku otpremninu i pri stegovnom otkazu?"
     a: "Ne. Ako radnik počini protupravnu radnju, povrijedi radna pravila ili se bez opravdanog razloga ne pojavi 3 dana uzastopce (članak 12. Zakona o standardima rada, 勞動基準法第12條), društvo može otpustiti bez prethodne obavijesti i zakonsku otpremninu ne mora isplatiti. Nasuprot tomu, gospodarski otkaz (članak 11.) zahtijeva prethodnu obavijest i isplatu zakonske otpremnine."
   - q: "Kako se na Tajvanu računa zakonska otpremnina?"
-    a: "Za svaku navršenu 1 godinu staža poslodavac mora isplatiti 0,5 mjeseca prosječne plaće kao zakonsku otpremninu, najviše 6 mjeseci plaće. Ta se formula odnosi na staž na koji se primjenjuje članak 12. Zakona o mirovini radnika (勞工退休金條例); za staž na koji se primjenjuje članak 17. Zakona o standardima rada (勞動基準法), za 1 godinu isplaćuje se jedan mjesec prosječne plaće, bez gornje granice."
+    a: "Za svaku navršenu godinu staža poslodavac mora isplatiti 0,5 mjeseca prosječne plaće kao zakonsku otpremninu, najviše 6 mjeseci plaće. Ta se formula odnosi na staž na koji se primjenjuje članak 12. Zakona o mirovini radnika (勞工退休金條例); za staž na koji se primjenjuje članak 17. Zakona o standardima rada (勞動基準法), za 1 godinu isplaćuje se jedan mjesec prosječne plaće, bez gornje granice."
 ---
 
 # Radno pravo na Tajvanu: je li zakonsku otpremninu na Tajvanu doista teško ostvariti?
@@ -28,7 +28,7 @@ Tekst objašnjava kada pravo na zakonsku otpremninu nastaje, a kada ne.
 
 Uređenje se od države do države razlikuje.
 
-U nekim pravnim poredcima, na primjer u Koreji, društvo mora isplatiti zakonsku otpremninu i tada kada radnik sam ode
+U nekim pravnim poredcima, na primjer u Koreji, društvo mora isplatiti zakonsku otpremninu pa i kada radnik sam ode
 
 Na Tajvanu je drukčije:
 
@@ -60,7 +60,7 @@ Sljedeća tablica to sažima.
 | Mora li društvo isplatiti zakonsku otpremninu (資遣費) | Potrebno | Nije potrebno | Nije potrebno |
 |  | Tajvanski Zakon o standardima rada, članak 11. (勞動基準法第11條): Ako ne nastupi jedan od sljedećih slučajeva, poslodavac ne može otkazati ugovor o radu, čak ni nakon prethodne obavijesti radniku.  1. Obustava djelatnosti (歇業) ili prijenos poduzeća (轉讓)  2. Gubitak (虧損) ili stezanje djelatnosti (業務緊縮)  3. Viša sila zahtijeva prekid djelatnosti na rok od 1 mjeseca ili dulje  4. Narav djelatnosti zahtijeva smanjenje osoblja i otpuštenoga se ne može premjestiti na drugo prikladno mjesto  5. Određeni radnik ne može zadovoljavajuće obavljati rad koji mjesto zahtijeva | Tajvanski Zakon o standardima rada, članak 12. (勞動基準法第12條): Poslodavac može otpustiti bez prethodne obavijesti ako radnik spada u jedan od sljedećih slučajeva.  1. Tko pri sklapanju ugovora o radu da neistinite podatke, uvede poslodavca u zabludu i izloži poduzeće riziku štete  2. Tko uporabi nasilje ili teško uvrijedi poslodavca, njegovu obitelj, njegova zastupnika (代理人) ili druge suradnike  3. Koga pravomoćno osude na kaznu zatvora na određeno vrijeme (有期徒刑) ili na strožu kaznu, bez uvjetne odgode izvršenja kazne (緩刑) i bez dopuštenja pretvorbe u novčanu kaznu (易科罰金)  4. Teška povreda ugovora o radu ili radnih pravila  5. Tko namjerno potroši strojeve, alate, sirovine, proizvode ili drugu imovinu poslodavca, ili namjerno odaje tehničke i poslovne tajne poslodavca i prouzroči poslodavcu štetu  6. Neopravdani izostanak (曠工) bez opravdanog razloga 3 dana uzastopce, ili 6 dana ili više u mjesecu |  |
 
-> Na Tajvanu, za svaku navršenu 1 godinu staža (年資),
+> Na Tajvanu, za svaku navršenu godinu staža (年資),
 > poslodavac mora isplatiti 0,5 mjeseca prosječne plaće (平均工資) kao zakonsku otpremninu.
 > (najviše 6 mjeseci plaće) Ta se formula odnosi na staž na koji se primjenjuje članak 12. Zakona o mirovini radnika (勞工退休金條例); za staž na koji se primjenjuje članak 17. Zakona o standardima rada (勞動基準法), za 1 godinu isplaćuje se jedan mjesec prosječne plaće, bez gornje granice.
 
@@ -104,19 +104,19 @@ društvo je uzelo g. B za cilj.
 
 ​
 
-Jednoga dana viši je rukovoditelj pozvao B na razgovor
+Jednoga dana viši je rukovoditelj pozvao g. B na razgovor
 
 i iznenada mu počeo prigovarati da ne radi savjesno.
 
-Društvo bi imalo teškoće,
+rekavši da društvo ima teškoće,
 
-B bi se trebao žrtvovati i dati primjer
+g. B bi se trebao žrtvovati i dati primjer
 
 te smanjiti plaću i dužnost.
 
-Inače bi B trebao napustiti društvo;
+Inače bi g. B trebao napustiti društvo;
 
-predali su B list formata A4
+predali su g. B list formata A4
 
 i naložili mu da na nj napiše: „Ja, [ime i prezime], dobrovoljno pristajem na nižu dužnost i plaću“
 
@@ -170,7 +170,7 @@ B je na dan kada je otišao na razgovor
 
 snimio cijeli tijek mobilnim telefonom
 
-i mogao je dokazati da sam nije otišao.
+i mogao je dokazati da on sam nije otišao.
 
 Zahvaljujući pravnom zastupanju mogao je kasnije
 

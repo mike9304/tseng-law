@@ -15,11 +15,11 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ![Primjerna slika koja bilježi položaj vozila i tragove na kolniku na mjestu prometne nesreće](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-Ako na Tajvanu dođe do prometne nesreće (交通事故), treba najprije osigurati sigurnost, izvršiti prijavu i očuvanje dokaza, a zatim redom ocijeniti rok zahtjeva, krivnju (過失) i opseg nagodbe (和解). Niže je naveden opći redoslijed postupanja utemeljen na propisima Tajvana i uputama javnih tijela; odgovornost i konkretni postupak mogu se razlikovati prema okolnostima svake nesreće.
+Ako na Tajvanu dođe do prometne nesreće (交通事故), treba najprije osigurati sigurnost, podnijeti prijavu i sačuvati dokaze, a zatim redom ocijeniti rok zahtjeva, krivnju (過失) i opseg nagodbe (和解). Niže je naveden opći redoslijed postupanja utemeljen na propisima Tajvana i uputama javnih tijela; odgovornost i konkretni postupak mogu se razlikovati prema okolnostima svake nesreće.
 
 ## Q1. Može li se nakon nesreće napustiti mjesto događaja?
 
-Kod nesreće s ozljedom ili smrću vozač mora odmah poduzeti mjere spašavanja (救護措施), obavijestiti policiju te sačuvati vozilo i dokaze na mjestu (保全現場). Neformalni pristanak druge strane ili samo snimka ne dopuštaju smatrati da se mjesto smije napustiti prije dovršetka zahtijevanih radnji.
+Kod nesreće s ozljedom ili smrću vozač mora odmah poduzeti mjere spašavanja (救護措施), obavijestiti policiju te sačuvati vozilo i dokaze na mjestu (保全現場). Neformalni pristanak druge strane ili samo snimka ne zamjenjuju propisane radnje.
 
 Međutim, kod nesreće s ozljedom, ako se sve strane slože, vozilo se može premjestiti na mjesto koje ne ometa promet, nakon što se označe položaj vozila i tragovi na mjestu. To ne znači da te oznake zamjenjuju zahtijevane radnje, kao što su spašavanje i prijava.
 
@@ -93,13 +93,13 @@ Pri neslaganju s mišljenjem vještačenja može se zatražiti ponovni pregled, 
 
 Zahtjev utemeljen na članku 184. Građanskog zakonika pretpostavlja protupravnu povredu prava, uzročnu vezu s nesrećom i dokaz štete. Sama činjenica da je do nesreće došlo ne vodi k tomu da su sve niže navedene stavke priznate. Članak 216. Građanskog zakonika mjerilo je utvrđivanja opsega stvarne štete i izgubljene koristi (所失利益).
 
-- **Ozljeda**: Prema članku 193. Građanskog zakonika mogu se ocijeniti potrebni medicinski troškovi (醫療費用), dodatni troškovi svakodnevnog života kao što su troškovi njege (看護費用), putni troškovi za liječenje (就醫交通費) i tehnička pomagala, te gubitak prihoda (收入損失) zbog stvarne nesposobnosti za rad i smanjenje radne sposobnosti (勞動能力減損). Prema članku 195. Građanskog zakonika može se ocijeniti i nematerijalna šteta.
-- **Smrt**: Prema članku 192. Građanskog zakonika, ako postoji osnova, mogu se ocijeniti medicinski troškovi prije smrti i troškovi povećanih životnih potreba, troškovi pogreba (殯葬費) i gubitak uzdržavanja (扶養利益損失) osobe koja je imala zakonsko pravo na uzdržavanje. Prema članku 194. Građanskog zakonika može se ocijeniti i nematerijalna šteta određenih srodnika.
+- **Ozljeda**: Prema članku 193. Građanskog zakonika mogu se ocijeniti potrebni medicinski troškovi (醫療費用), dodatni troškovi svakodnevnog života kao što su troškovi njege (看護費用), putni troškovi za liječenje (就醫交通費) i tehnička pomagala, te gubitak prihoda (收入損失) zbog stvarne nesposobnosti za rad i smanjenje radne sposobnosti (勞動能力減損). Prema članku 195. Građanskog zakonika može se ocijeniti i neimovinska šteta.
+- **Smrt**: Prema članku 192. Građanskog zakonika, ako postoji osnova, mogu se ocijeniti medicinski troškovi prije smrti i troškovi povećanih životnih potreba, troškovi pogreba (殯葬費) i gubitak uzdržavanja (扶養利益損失) osobe koja je imala zakonsko pravo na uzdržavanje. Prema članku 194. Građanskog zakonika može se ocijeniti i neimovinska šteta određenih srodnika.
 - **Imovina**: Prema članku 196. Građanskog zakonika može se zahtijevati dokazana stvarna imovinska šteta, uključujući troškove popravka vozila ili pad vrijednosti.
 
 ## Q8. Ako liječenje traje, kako predlagati isprave medicinskih troškova?
 
-Sačuvajte potvrde o plaćanju (收據), liječničke potvrde i medicinsku dokumentaciju te ih uredite zajedno s medicinskom nužnošću svakog liječenja i njegovom uzročnom vezom s nesrećom. Isprave liječenja koje traje mogu dopuniti dokaz prema postupovnom kalendaru suda i sadržaju već podnesenog zahtjeva, ali to ne jamči da će sve isprave podnesene kasnije ili svako proširenje zahtjeva biti prihvaćeni ili dopušteni.
+Sačuvajte potvrde o plaćanju (收據), liječničke potvrde i medicinsku dokumentaciju te ih uredite zajedno s medicinskom nužnošću svakog liječenja i njegovom uzročnom vezom s nesrećom. Isprave liječenja koje traje mogu dopuniti dokaz prema postupovnom rasporedu suda i sadržaju već podnesenog zahtjeva, ali to ne jamči da će sve isprave podnesene kasnije ili svako proširenje zahtjeva biti prihvaćeni ili dopušteni.
 
 Treba razlikovati dodavanje medicinskih isprava od izmjene ili povećanja zahtijevanog iznosa. Nakon podnošenja građanske tužbe pridružene kaznenom postupku sama činjenica predlaganja većeg broja medicinskih potvrda o plaćanju ne utemeljuje automatski sudske pristojbe.
 
@@ -153,9 +153,9 @@ Ako je trajni funkcionalni poremećaj bitno sporan, medicinsko vještačenje mo�
 
 Kad se izračun vrši u jednokratnom iznosu, može se razmotriti odbitak međukamata (中間利息扣除). Hoffmanov kalkulator (霍夫曼) Sudbenog yuana samo je računsko pomagalo, a ne pravno obvezna metoda, i ne obećava ishod. Prema članku 193. Građanskog zakonika, na prijedlog stranke, sud može naložiti i plaćanje u redovitoj renti uz uvjet jamstva.
 
-## Q13. Kako se ocjenjuje naknada za nematerijalnu štetu (慰撫金)?
+## Q13. Kako se ocjenjuje naknada za neimovinsku štetu (慰撫金)?
 
-Naknada za nematerijalnu štetu ocjenjuje se utvrđivanjem primjerenog iznosa, ako postoji protupravna povreda tijela ili zdravlja, prema članku 195. Građanskog zakonika.
+Naknada za neimovinsku štetu ocjenjuje se utvrđivanjem primjerenog iznosa, ako postoji protupravna povreda tijela ili zdravlja, prema članku 195. Građanskog zakonika.
 
 Sud ocjenjuje okolnosti svakog predmeta, zajedno procjenjujući sadržaj ozljede i liječenja, trajne učinke, bol i utjecaj na život, dob i položaj, socioekonomske okolnosti i dokaze stranaka. Stoga je teško unaprijed odrediti ishod samo iz tipiziranog raspona.
 
@@ -259,7 +259,7 @@ Q18. Ako se s drugom stranom nagodite, možete li povući kaznenu prijavu?
 
 ​
 
-Nehajna tjelesna ozljeda i nehajna teška tjelesna ozljeda kazneno su djelo koje se goni samo na prijavu (告訴乃論之罪), pa se kaznena prijava može povući.
+Nehajna tjelesna ozljeda i nehajna teška tjelesna ozljeda kaznena su djela koja se gone samo na prijavu (告訴乃論之罪), pa se kaznena prijava može povući.
 
 ​
 

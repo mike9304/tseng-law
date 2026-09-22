@@ -16,3 +16,7 @@ Applies to every locale and every round of the campaign (rounds r1–r5, all 45 
 - One consistent formal register per locale; feminine forms for attorney Wei Tseng where the language marks gender; the male manager (008) and male client (010) stay male.
 - Systemic patterns listed in a review's verdict are swept across all 18 columns and the pack, not only the quoted instance.
 - After editing, run the checker and the tests named in the work order; if a number/date format change breaks the checker, keep the previous form for that item and note it in the log.
+
+## llms.txt notice block (added after round 2, ar/zh-hans gate failures)
+- `GUIDANCE_LLMS_NOTICES.<loc>.discoveryNotice` must keep the literal token `llms.txt` (a test pins it); rephrase around it.
+- `consultationNotice` must remain a verbatim substring of one FAQ answer of the pack, and `confidentialNotice` a verbatim substring of a privacy-page paragraph. If you rewrite the FAQ/privacy sentence, rewrite the notice identically (or leave both).

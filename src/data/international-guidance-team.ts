@@ -4208,10 +4208,10 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Kancelarija vodi stvari preduzeća i privatnih lica na Tajvanu na engleskom, japanskom, korejskom i kineskom.',
-        'Zastupala je korejskog studenta u zahtevu za naknadu štete zbog povrede u teretani i postigla presudu prvog stepena u iznosu TWD 1.57M.',
+        'Zastupala je korejskog studenta u sporu za naknadu štete zbog povrede u teretani i postigla presudu prvog stepena u iznosu TWD 1.57M.',
       ],
       education: [
-        'Magistarka nauka (M.S.), Institut za finansije, National Taiwan University',
+        'Master nauka (M.S.), Institut za finansije, National Taiwan University',
         'Diplomirala (B.A.) na dvostrukom programu prava i finansija, National Chengchi University',
         'Studentkinja na razmeni na Kobe University i Waseda University',
       ],
@@ -4236,7 +4236,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Pravni asistent sa dugogodišnjim radom; ranije stariji pravni asistent u više advokatskih kancelarija, sa težištem na procesnoj podršci, korporativnoj oblasti i stranim investicijama.',
+        'Pravni asistent sa dugogodišnjim iskustvom; ranije stariji pravni asistent u više advokatskih kancelarija, sa težištem na procesnoj podršci, korporativnoj oblasti i stranim investicijama.',
         'Podrška u sudskim postupcima, pri osnivanju društava, kod dozvola za strane investicije, kod zahteva za licence i u komunikaciji između Koreje i Tajvana.',
       ],
       education: [
@@ -4250,7 +4250,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordinira termine konsultacija i komunikaciju za klijente iz Koreje.',
-        'Podržava međuregionalnu razmenu preko sistema dokumenata i tokova rada, na osnovu studija informatike.',
+        'Na osnovu studija informatike podržava komunikaciju među timovima pomoću sistema dokumenata i tokova rada.',
       ],
       education: [
         'Diploma (B.S.) informatike, National Cheng Kung University',

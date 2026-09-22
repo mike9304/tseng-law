@@ -177,7 +177,7 @@ Kod nezgode jednog vozila vozač tog vozila načelno nije adresat davanja obavez
 
 Tarifa davanja (強制汽車責任保險給付標準) izmenjena 29. 5. 2026. primenjuje se na nezgode koje su nastupile od 1. 7. 2026. Gornja granica primeranih i potrebnih medicinskih troškova za povredu iznosi 200.000 novih tajvanskih dolara (TWD); davanje za invalidnost (失能) iznosi od 80.000 TWD do 3.000.000 TWD prema 15 zakonskih stepeni; davanje za smrt iznosi 3.000.000 TWD, a zajednički maksimum smrti, invalidnosti i medicinskih troškova za 1 oštećenog i 1 nezgodu iznosi 3.200.000 TWD. Na ranije nezgode može se primeniti prethodna tarifa.
 
-Osiguranje odgovornosti prema trećim licima (第三人責任險), osiguranje od povreda vozača (駕駛人傷害險) i osiguranje štete na sopstvenom vozilu (車體損失險) fakultativni su proizvodi ugovorne prirode. Stvarno pokriće razlikuje se prema osiguraniku, gornjoj granici, odbitnoj franšizi (自負額), isključenjima, nehatu i drugim uslovima police, pa policu i uslove treba proveriti stvar po stvar.
+Osiguranje odgovornosti prema trećim licima (第三人責任險), osiguranje od povreda vozača (駕駛人傷害險) i osiguranje štete na sopstvenom vozilu (車體損失險) fakultativni su proizvodi ugovorne prirode. Stvarno pokriće razlikuje se prema osiguraniku, gornjoj granici, odbitnoj franšizi (自負額), isključenjima, nehatu i drugim uslovima polise, pa polisu i uslove treba proveriti stvar po stvar.
 
 ### Zvanični izvori Q11–Q15
 
@@ -339,7 +339,7 @@ Povreda ili smrt oštećenog donosi njemu samom i njegovoj porodici fizičku i d
 
 ​
 
-Učinilac često ne mari za telefoniranje s pitanjem o stanju oštećenog ni za njegovu posetu, a mnogi učinioci pretpostavljaju da će osiguravač sve rešiti, pa se sami ne pojavljuju. U tim slučajevima ne opaža se ni kajanje ni dobra vera.
+Učinilac često ne mari za telefoniranje s pitanjem o stanju oštećenog ni za njegovu posetu, a mnogi učinioci pretpostavljaju da će osiguravač sve rešiti, pa se sami ne pojavljuju. U tim slučajevima oštećeni ne vidi ni kajanje ni iskrenu nameru.
 
 ​
 

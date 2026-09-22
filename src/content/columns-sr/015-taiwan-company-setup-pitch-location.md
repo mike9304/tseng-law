@@ -13,7 +13,7 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 ![Glavni prikaz](../images/015-taiwan-company-setup-pitch-location/featured-01.jpg)
 
-(Zahtevi lokalnih samouprava na Tajvanu razlikuju se; sledeći tekst primer je otvaranja restoranske delatnosti u gradu Tajpeju.)
+(Zahtevi lokalnih samouprava na Tajvanu razlikuju se; sledeći tekst je primer otvaranja restoranske delatnosti u gradu Tajpeju.)
 
 ![](../images/015-taiwan-company-setup-pitch-location/img-01.jpg)
 
@@ -51,7 +51,7 @@ Zato ovoj stvari posvetite pažnju.
 
 ​
 
-**Q. Moraju li sve grane sistemom „prethodne provere mesta delatnosti“ da proveravaju da li je delatnost moguća?**
+**Q. Mora li se za svaku granu delatnosti sistemom „prethodne provere mesta delatnosti“ proveriti da li je delatnost moguća?**
 
 Za svaku granu delatnosti preporučuje se da se sistemom „prethodne provere mesta delatnosti“ (營業場所預先查詢) potvrdi da li je delatnost na adresi moguća.
 

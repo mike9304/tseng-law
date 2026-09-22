@@ -113,7 +113,7 @@ a zakonodavac nastoji da nađe relativno uravnoteženo rešenje sukoba interesa.
 
 Danas mnoga lica biraju masažu da rasterete napetost,
 
-ali u tom procesu i dalje dolazi do slučajeva seksualnog uznemiravanja (性騷擾) ili nepristojnih dela (猥褻).
+ali u tom procesu i dalje dolazi do slučajeva seksualnog uznemiravanja (性騷擾) ili opscenih radnji (猥褻).
 
 Ono što je prvobitno trebalo da bude puko primanje masaže radi rasterećenja napetosti
 

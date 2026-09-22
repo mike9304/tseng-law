@@ -105,7 +105,7 @@ U ugovoru o saradnji i u operativnim uputstvima mogu se utvrditi obim dozvoljeni
 Ako se priprema prodaje na Tajvanu proveri ovim redosledom, opada rizik da se jedan režim pomeša s drugim.
 
 1. Utvrditi da li sami osnivate zavisno društvo ili ogranak na Tajvanu, ili da li uvoz i prodaju poveravate lokalnom uvozniku.
-2. Proveriti subjekt koji nosi pravnu odgovornost kao proizvođač ili uvoznik kozmetike i ugovorno odgovorno lice za posao.
+2. Proveriti subjekt koji nosi pravnu odgovornost kao proizvođač ili uvoznik kozmetike i lica ugovorno odgovorna za poverene poslove.
 3. Završiti registraciju proizvoda pre isporuke, prodaje, poklanjanja, javnog izlaganja ili davanja proizvoda potrošaču na probu.
 4. Sastaviti PIF za svaki proizvod, ažurirati ga kad dođe do izmena i čuvati ga u skladu sa zakonskim rokom i mestom.
 5. Oceniti etiketu, prodajnu stranicu, reklamu i objave iz saradnje prema merilu celokupnog izraza.

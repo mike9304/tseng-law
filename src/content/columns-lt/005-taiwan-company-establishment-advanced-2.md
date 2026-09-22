@@ -69,7 +69,7 @@ Kai kurie bankai gali kelti papildomų reikalavimų, pavyzdžiui, kad sąskaita 
 
 **5. Ar bendrovė gali įdarbinti užsieniečius?**
 
-A. Pirmasis darbuotojas: prašymas teikiamas kaip vadovo darbas paprastoje užjūrio kinų arba užsieniečių investicijos įmonėje (一般僑外投資事業主管工作). Toliau B punkte nurodytas „specializuoto arba techninio darbo“ kriterijus netaikomas, tačiau taikomos adresato sąlygos, įskaitant vadovo (經理人) sąlygą bendrovėje, kurios užjūrio kinų arba užsieniečių įnašas viršija 1/3, ir darbdavio kapitalo bei apyvartos rezultatų sąlygos (peržiūros standartų 38 ir 39 straipsniai).
+A. Pirmasis darbuotojas: paprastos užjūrio kinų arba užsieniečių investicijos įmonės vadovas (一般僑外投資事業主管工作). Toliau B punkte nurodytas „specializuoto arba techninio darbo“ kriterijus netaikomas, tačiau taikomos adresato sąlygos, įskaitant vadovo (經理人) sąlygą bendrovėje, kurios užjūrio kinų arba užsieniečių įnašas viršija 1/3, ir darbdavio kapitalo bei apyvartos rezultatų sąlygos (peržiūros standartų 38 ir 39 straipsniai).
 
 B. Nuo antrojo darbuotojo taikomi apribojimai: jei įdarbinamų užsieniečių skaičius viršija 1, darbuotojo išsilavinimas ir patirtis, vidutinio darbo užmokesčio taisyklė bei bendrovės kapitalo ir apyvartos taisyklės tvarkomi pagal „specializuotą arba techninį darbą“ (專門性或技術性工作).
 

@@ -62,7 +62,7 @@ Lentelėje tai trumpai apibendrinama.
 
 > Taivane už kiekvienus ištisus darbo stažo (年資) metus
 > darbdavys privalo išmokėti 0,5 mėnesio vidutinio darbo užmokesčio (平均工資) kaip išeitinę išmoką.
-> (daugiausia 6 mėnesių darbo užmokestį) Ši formulė taikoma stažui, kuriam taikomas Darbuotojų pensijų įstatymo (勞工退休金條例) 12 straipsnis; stažui, kuriam taikomas Darbo standartų įstatymo (勞動基準法) 17 straipsnis, už 1 metus mokamas 1 mėnesio vidutinis darbo užmokestis, be viršutinės ribos.
+> Viršutinė riba yra 6 mėnesių darbo užmokestis. Ši formulė taikoma stažui, kuriam taikomas Darbuotojų pensijų įstatymo (勞工退休金條例) 12 straipsnis; stažui, kuriam taikomas Darbo standartų įstatymo (勞動基準法) 17 straipsnis, už 1 metus mokamas 1 mėnesio vidutinis darbo užmokestis, be viršutinės ribos.
 
 ​
 

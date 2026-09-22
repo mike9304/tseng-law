@@ -29,13 +29,13 @@ Toliau pateikiami šią bylą aprašiusių žiniasklaidos pranešimų, interneto
 
 [Studentui po 90 kg mirties traukos plyšo tarpslankstelinis diskas (椎間盤破裂)… prašo žalos atlyginimo iš sporto salės](https://tw.news.yahoo.com/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82-%E6%80%92%E5%91%8A%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B1%82%E5%84%9F-095800997.html)
 
-![Korėjiečių studentas, tarpslankstelinio disko plyšimas 90 kg mirties traukos metu… 1-ojoje instancijoje priteistas 1.570.000 TWD žalos atlyginimas ir pranešimas apie taikos susitarimą apeliacinėje instancijoje](../images/010-taiwan-gym-injury-lawsuit/img-03.jpg)
+![Korėjiečių studentas, tarpslankstelinio disko plyšimas 90 kg mirties traukos metu… 1-ojoje instancijoje priteistas 1.570.000 TWD žalos atlyginimas; apie taikos susitarimą apeliacinėje instancijoje tik pranešta](../images/010-taiwan-gym-injury-lawsuit/img-03.jpg)
 
-[Korėjiečių studentas, tarpslankstelinio disko plyšimas 90 kg mirties traukos metu… 1-ojoje instancijoje priteistas 1.570.000 TWD žalos atlyginimas ir pranešimas apie taikos susitarimą apeliacinėje instancijoje](https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com)
+[Korėjiečių studentas, tarpslankstelinio disko plyšimas 90 kg mirties traukos metu… 1-ojoje instancijoje priteistas 1.570.000 TWD žalos atlyginimas; apie taikos susitarimą apeliacinėje instancijoje tik pranešta](https://www.ettoday.net/amp/amp_news.php7?news_id=2475272&ref=mw&from=google.com)
 
-![Korėjiečių studentas, sužalojimas 90 kg mirties traukos metu… 1-oji instancija priteisė 1.570.000 TWD žalos atlyginimą ir pranešimas apie taikos susitarimą apeliacinėje instancijoje](../images/010-taiwan-gym-injury-lawsuit/img-04.jpg)
+![Korėjiečių studentas, sužalojimas 90 kg mirties traukos metu… 1-oji instancija priteisė 1.570.000 TWD žalos atlyginimą; apie taikos susitarimą apeliacinėje instancijoje tik pranešta](../images/010-taiwan-gym-injury-lawsuit/img-04.jpg)
 
-[Korėjiečių studentas, sužalojimas 90 kg mirties traukos metu… 1-oji instancija priteisė 1.570.000 TWD žalos atlyginimą ir pranešimas apie taikos susitarimą apeliacinėje instancijoje](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
+[Korėjiečių studentas, sužalojimas 90 kg mirties traukos metu… 1-oji instancija priteisė 1.570.000 TWD žalos atlyginimą; apie taikos susitarimą apeliacinėje instancijoje tik pranešta](https://tw.news.yahoo.com/%E9%9F%93%E7%94%B7%E5%A4%A7%E7%94%9F-%E7%A1%AC%E8%88%8990%E5%85%AC%E6%96%A4-%E9%87%80%E5%82%B7%E7%8D%B2%E8%B3%A0157%E8%90%AC-%E5%81%A5%E8%BA%AB%E5%B7%A5%E5%BB%A0%E4%BA%8C%E5%AF%A9%E4%BD%8E%E8%AA%BF%E5%92%8C%E8%A7%A3-013448072.html)
 
 ![Studentas, tarpslankstelinio disko plyšimas po 90 kg mirties traukos… prašo žalos atlyginimo iš sporto salės](../images/010-taiwan-gym-injury-lawsuit/img-05.jpg)
 
@@ -45,9 +45,9 @@ Toliau pateikiami šią bylą aprašiusių žiniasklaidos pranešimų, interneto
 
 [PTT įrašas: korėjiečių studentas, tarpslankstelinio disko plyšimas 90 kg mirties traukos metu… 1-oji instancija nurodė sporto salei sumokėti 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
-![Tinklaraštis: 70 kg sveriančio korėjiečių studento 90 kg mirties traukos sužalojimas ir žalos atlyginimas, viršijantis 1.000.000 TWD… ar kaltė sporto salės? Koks sportuojančiojo požiūris (心態)?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
+![Tinklaraštis: 70 kg sveriančio korėjiečių studento 90 kg mirties traukos sužalojimas ir žalos atlyginimas, viršijantis 1.000.000 TWD… Ar kalta sporto salė? Koks sportuojančiojo požiūris (心態)?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
-[Tinklaraštis: 70 kg sveriančio korėjiečių studento 90 kg mirties traukos sužalojimas ir žalos atlyginimas, viršijantis 1.000.000 TWD… ar kaltė sporto salės? Koks sportuojančiojo požiūris (心態)?](https://blog.udn.com/blackjack/179081715)
+[Tinklaraštis: 70 kg sveriančio korėjiečių studento 90 kg mirties traukos sužalojimas ir žalos atlyginimas, viršijantis 1.000.000 TWD… Ar kalta sporto salė? Koks sportuojančiojo požiūris (心態)?](https://blog.udn.com/blackjack/179081715)
 
 ![Teisinis komentaras: studentas, tarpslankstelinio disko plyšimas mirties traukos metu… 1-oji instancija nurodė žinomai sporto salei sumokėti 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
@@ -63,7 +63,7 @@ Toliau pateikiami šią bylą aprašiusių žiniasklaidos pranešimų, interneto
 
 Praktinė šios bylos reikšmė ta, kad ji parodo, jog atsakomybė nekyla vien dėl to, kad sužalojimas įvyko sporto salėje. Paslaugos teikėjui tenkančios saugumo pareigos (安全義務) turinys, konkreti duota instrukcija ir rūpestingumo pareigos (注意義務) pažeidimas, priežastinis ryšys tarp sužalojimo ir veiksmo bei žalos apimtis vertinami pagal kiekvienos bylos dokumentus. Baudžiamojo ir civilinio proceso sąlygos ir terminai taip pat skiriasi, todėl iškart po įvykio įrašus ir dokumentus reikia tvarkyti atskirai.
 
-Toliau pateikta bendra informacija, skirta sužalojimų sporto salėje ginčams Taivane paaiškinti; tai nėra teisinė konsultacija konkrečiai bylai. Faktinės teisės ir reagavimo būdas gali skirtis pagal sutartinius santykius, įvykio aplinkybes, sužalojimo priežastį ir laipsnį, šalių elgesį, draudimo poliso sąlygas, užtikrintus įrodymus ir taikytiną teisę.
+Toliau pateikta bendra informacija, skirta sužalojimų sporto salėje ginčams Taivane paaiškinti; tai nėra teisinė konsultacija konkrečiai bylai. Kokios teisės faktiškai atsiranda ir kaip galima reaguoti, gali skirtis pagal sutartinius santykius, įvykio aplinkybes, sužalojimo priežastį ir laipsnį, šalių elgesį, draudimo poliso sąlygas, užtikrintus įrodymus ir taikytiną teisę.
 
 ## 1. Po sužalojimo sporto salėje Taivane kokias teisines procedūras galima įvertinti?
 
@@ -109,7 +109,7 @@ Ypač darbingumo sumažėjimas, pajamų sumažėjimas atsigavimo laikotarpiu ir 
 
 Jei patyrėte sužalojimą sporto salėje, svarbu pirmiausia gauti reikalingą gydymą, išsaugoti dokumentus, kuriuos dar galima užtikrinti, kol jie neišnyko, ir anksti gauti individualią teisinę konsultaciją dėl terminų ir procedūrų, kurios gali būti taikomos bylai. Derybos, vartotojo skundas (消費申訴) ar taikinimo procedūra (調解), baudžiamasis skundas ir civilinis reikalavimas atlyginti žalą yra priemonės, iš kurių galima rinktis pagal bylą, ir tai nėra procedūros, kurias kiekvienoje byloje reikėtų atlikti visas.
 
-Kritimas verslo vietoje, sveikatos žala dėl maisto ir sužalojimas naudojantis profesine paslauga taip pat gali kelti saugumo pareigos, priežastinio ryšio, žalos ir įrodymų klausimus. Tačiau sporto salės bylos išvados negalima be pakeitimų taikyti kitam įvykiui, todėl kiekvieno atvejo sutartį, elgesį ir atitinkamas normas reikia vertinti atskirai.
+Kritimas komercinėse patalpose, sveikatos žala dėl maisto ir sužalojimas naudojantis profesine paslauga taip pat gali kelti saugumo pareigos, priežastinio ryšio, žalos ir įrodymų klausimus. Tačiau sporto salės bylos išvados negalima be pakeitimų taikyti kitam įvykiui, todėl kiekvieno atvejo sutartį, elgesį ir atitinkamas normas reikia vertinti atskirai.
 
 ---
 

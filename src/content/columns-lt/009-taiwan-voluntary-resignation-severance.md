@@ -73,11 +73,11 @@ Darbuotojas todėl turi gerai sekti terminą.
 
 Kitaip tariant,
 
-Taivano teisė, pagal tai, ar kaltė tenka darbdaviui,
+Taivano teisė, pagal tai, kuriai šaliai tenka kaltė,
 
-ar darbuotojui,
+darbdaviui suteikia teisę išeitinės išmokos nemokėti,
 
-atitinkamai šaliai suteikia teisę išeitinės išmokos nemokėti arba jos reikalauti.
+o darbuotojui — teisę jos reikalauti.
 
 Kartais, kai kaltė tenka abiem darbo santykio šalims,
 

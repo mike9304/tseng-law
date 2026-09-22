@@ -1631,7 +1631,7 @@ export const guidanceFooterCopy: Record<GuidanceLocale, GuidanceFooterCopy> = {
   },
   lt: {
     officeLabel: 'Biurai',
-    officeQuickLinksLabel: 'Greitosios nuorodos į biurus',
+    officeQuickLinksLabel: 'Sparčiosios nuorodos į biurus',
     followLabel: 'Sekite mus',
     blogLabel: 'Tinklaraštis',
     websiteLabel: 'Oficiali svetainė',

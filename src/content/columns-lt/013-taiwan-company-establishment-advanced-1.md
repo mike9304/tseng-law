@@ -27,17 +27,17 @@ Toliau pateikti klausimai ir atsakymai skirti padėti asmenims, kurie svarsto į
 
 Kai užsienietis steigia įmonę Taivane, jis privalo pateikti investicijų planą (投資計畫書) Ekonomikos ministerijos Investicijų peržiūros departamentui (經濟部投資審議司) peržiūrai.
 
-Investicijų peržiūros departamentas turi patikrinti, ar tas kapitalas (資本額) iš tikrųjų naudojamas investiciniams tikslams
+Investicijų peržiūros departamentas turi patikrinti, ar tas kapitalas (資本額) iš tikrųjų naudojamas investiciniams tikslams.
 
-ir ar užsienio subjektai neįveda lėšų kitu pretekstu.
+Jis taip pat tikrina, ar užsienio subjektai neįveda lėšų į Taivaną kitu pretekstu.
 
 Rengiant investicijų planą tikslaus įmonės adreso nurodyti nereikia; pakanka nurodyti vietovę (pavyzdys: Taipėjaus miestas). ​
 
 Tačiau vėliau, banke atidarant bendrovės parengiamąją sąskaitą (公司籌備處帳戶), daugelis bankų peržiūri nuomos sutartį (租賃契約) ir vietoje tikrina įmonės adresą.
 
-Vienos Taivano banko darbuotojos teigimu,
+Taip teigia viena Taivano banko darbuotoja.
 
-pastaruoju metu daugelis užsieniečių po sąskaitos atidarymo dingsta, todėl sąskaitų atidarymas vertinamas vis griežčiau.
+Jos teigimu, pastaruoju metu daugelis užsieniečių po sąskaitos atidarymo dingsta, todėl sąskaitų atidarymas vertinamas vis griežčiau.
 
 Jau pagrindų dalyje vienas skaitytojas nurodė, kad sąskaitos atidarymas yra sunkiausias etapas; praktika tai patvirtina.
 
@@ -45,9 +45,9 @@ Kadangi Taivane yra labai daug pinigų plovimo (洗錢) atvejų, banko sąskait�
 
 **Patarimas:**
 
-Kadangi investicijų plano peržiūra taip pat užtrunka,
+Investicijų plano peržiūra taip pat užtrunka.
 
-investicijų planą ir įmonės registracijos adreso paiešką reikia vykdyti kartu.
+Todėl investicijų planą ir įmonės registracijos adreso paiešką reikia vykdyti kartu.
 
 Pagal Užsieniečių investicijų įstatymo (外國人投資條例) 9 straipsnį patvirtintas įnašas turi būti įmokėtas visa suma kompetentingos institucijos nustatytu terminu (核定期限); terminą reikia patvirtinti kiekvieno reikalo patvirtinimo akte (praktikoje dažnai nustatomas apie 1 metus).
 
@@ -61,25 +61,25 @@ Lieka pakankamai laiko banke atidaryti parengiamąją sąskaitą ir pervesti kap
 
 Tai įmanoma.
 
-Bankas paprastai reikalauja dvigubo tapatybės patvirtinimo,
+Bankas paprastai reikalauja dvigubo tapatybės patvirtinimo.
 
-o be leidimo gyventi pažymėjimo Taivano imigracijos tarnyboje galima kreiptis dėl „**vieningo identifikacinio numerio pagrindinių duomenų formos**“ (統一證號基本資料表).
+Be leidimo gyventi pažymėjimo Taivano imigracijos tarnyboje galima kreiptis dėl „**vieningo identifikacinio numerio pagrindinių duomenų formos**“ (統一證號基本資料表).
 
-Išdavimas galimas tą pačią dieną,
+Išdavimas galimas tą pačią dieną.
 
-tačiau imigracijos tarnyba (移民署) yra labai apkrauta; todėl reikia atvykti anksti ir paimti eilės numerį.
+Tačiau imigracijos tarnyba (移民署) yra labai apkrauta; todėl reikia atvykti anksti ir paimti eilės numerį.
 
 ​
 
 **3. Girdėjau, kad per investicijų plano peržiūrą reikia nurodyti išsilavinimą ir profesinę patirtį. Kas, jei mano išsilavinimas ir patirtis neatitinka įmonės, kurią noriu steigti, šakos?**
 
-Ekonomikos ministerijos peržiūros komisija investuotojo patirtį tikrina,
+Ekonomikos ministerijos peržiūros komisija investuotojo patirtį tikrina.
 
-tačiau peržiūra nėra pernelyg griežta.
+Tačiau peržiūra nėra pernelyg griežta.
 
-Galima nurodyti įvairią darbo patirtį, įskaitant darbą ne visą darbo dieną,
+Galima nurodyti įvairią darbo patirtį, įskaitant darbą ne visą darbo dieną.
 
-ir ją išdėstyti išsamiai, kad būtų galima įtikinti peržiūrą atliekančius asmenis.
+Ją reikia išdėstyti išsamiai, kad būtų galima įtikinti peržiūrą atliekančius asmenis.
 
 Šiuo klausimu tikslinga dalyką nuodugniai aptarti su advokate arba advokatu Taivane.
 
@@ -87,23 +87,23 @@ ir ją išdėstyti išsamiai, kad būtų galima įtikinti peržiūrą atliekanč
 
 **4. Į ką atkreipti dėmesį nuomojant įmonės registracijos adresą (pavyzdžiui, maitinimo įstaigos patalpas)?**
 
-Įmonės steigimas trunka apie **3 mėnesius**, leidimo dirbti (工作許可) ir leidimo gyventi pažymėjimo gavimas — apie **1 mėnesį**,
+Įmonės steigimas trunka apie **3 mėnesius**, o leidimo dirbti (工作許可) ir leidimo gyventi pažymėjimo gavimas trunka dar apie **1 mėnesį**.
 
-todėl sutarties pradžią reikia nustatyti kuo vėliau.
+Todėl sutarties pradžią reikia nustatyti kuo vėliau.
 
 Be to, Taivano prekybos patalpų nuomos sutartyse nuomotojas dažnai nuomininkui suteikia „**įrengimo laikotarpį**“ (裝潢期間).
 
 Tai laikotarpis, atleistas nuo nuomos mokesčio; dėl jo galima derėtis.
 
-Užsieniečiui prekybos patalpas išsinuomoti nėra lengva, o užstatas (押金) Taivane palyginti mažas (paprastai 2 mėnesių nuomos mokestis), todėl nuomotojo apsauga ribota;
+Užsieniečiui prekybos patalpas išsinuomoti nėra lengva, o užstatas (押金) Taivane palyginti mažas (paprastai 2 mėnesių nuomos mokestis), todėl nuomotojo apsauga ribota.
 
-nuomotojai todėl vengia nuomoti užsieniečiams.
+Nuomotojai todėl vengia nuomoti užsieniečiams.
 
 Todėl veiklos vietos tikslinga ieškoti anksti.
 
-Jei derybos su nuomotoju vyksta nesėkmingai,
+Jei derybos su nuomotoju vyksta nesėkmingai, galima imtis papildomų priemonių.
 
-prireikus galima pasiūlyti nuomos sutarties notarinį tvirtinimą (公證) arba papildomą užstatą.
+Prireikus galima pasiūlyti nuomos sutarties notarinį tvirtinimą (公證) arba papildomą užstatą.
 
 ​
 
@@ -115,13 +115,13 @@ Pvz., jei veiklos sritis yra maitinimas, o ketinama nuomotis komercines biuro pa
 
 Kaip jau nurodyta, bankas peržiūri nuomos sutartį ir vietoje tikrina įmonės adresą.
 
-Be to, galutinės įmonės registracijos metu miesto savivaldybė (市政府) taip pat reikalauja, kad registruotas adresas būtų zonoje, kurioje restoranų veikla leidžiama;
+Be to, galutinės įmonės registracijos metu miesto savivaldybė (市政府) taip pat reikalauja, kad registruotas adresas būtų zonoje, kurioje restoranų veikla leidžiama.
 
-jei tai komercinės biuro patalpos, įmonės registracija (公司登記) tuomet gali būti negalima.
+Jei tai komercinės biuro patalpos, įmonės registracija (公司登記) tuomet gali būti negalima.
 
-Pvz., jei veiklos sritys galimos komercinėse biuro patalpose, pavyzdžiui, reklama ar didmeninė prekyba, įmonę galima steigti komercinėse biuro patalpose. Prieš sudarant nuomos sutartį
+Pvz., jei veiklos sritys galimos komercinėse biuro patalpose, pavyzdžiui, reklama ar didmeninė prekyba, įmonę galima steigti komercinėse biuro patalpose.
 
-tai iš anksto patikrinkite.
+Prieš sudarant nuomos sutartį tai iš anksto patikrinkite.
 
 *Jei turite daugiau klausimų, galite pateikti užklausą per kontaktinę formą; atsakymo terminas nėra žadamas. Konsultacija vyksta tik anglų, kinų (中文), japonų ir korėjiečių kalbomis; svetainėje komentarai nerenkami.*
 

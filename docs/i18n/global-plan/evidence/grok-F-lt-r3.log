@@ -1,0 +1,126 @@
+WO-F-lt r3 — Grok 4.7 fix lane
+Workspace: /Users/son7/Projects/tseng-law-fix-lt-r3
+Inputs: RULEBOOK-FIX.md R2–R17, ACCEPTED-ROUND.md, rounds/r3/lt-a.md (22 rows), lt-b.md (32 rows).
+English meaning: src/content/columns-en/<same file>. Checker compares to Korean src/content/columns.
+
+Rows applied: 47 of 54
+Rows skipped: 7 (listed below)
+No git add / commit / push. llms.txt not edited. No test file edited (no pinned Lithuanian string had to move).
+
+## Applied
+
+lt-a
+2 specialus pripažinimas → specialus patvirtinimas. FAQ + body (2).
+3 005 A: paprastos užjūrio kinų arba užsieniečių investicijos įmonės vadovas (一般僑外投資事業主管工作).
+4 būsto / nekilnojamojo turto nuosavybės įrašas. FAQ + body (2 sentences × 2).
+5 009, inside the three existing blocks: darbdaviui teisė nemokėti, darbuotojui teisė reikalauti. Blocks not joined.
+6 verslininkams ir pasiturintiems privatiems asmenims.
+7 disclaimer eyebrow ĮSPĖJIMAS → ATSAKOMYBĖS APRIBOJIMAS. Page title left.
+8 nav disclaimer Apribojimas → Atsakomybė (10 characters). Suggested „Atsakomybės apribojimas“ is 23; nav labels are capped at 14. The full phrase is the eyebrow.
+9 ir vertimo žodžiu neteikiame. „Nežadame ir vertėjo žodžiu“ left, so the disclosure regex still matches.
+10 008 quote: Viršutinė riba yra 6 mėnesių darbo užmokestis. Ši formulė taikoma… FAQ sentence already had the cap inside the sentence and was left.
+12 Ši svetainė talpinama „Vercel“ platformoje…
+13 procedūra / veiksmai for the procedure calque: home „per procedūras“, services „tolesni veiksmai“, IP „veiksmų seka“, about „tolesnius veiksmus“, inquiry „prieš pereinant prie kitos procedūros“ (5). „pirmasis žingsnis visada yra nustatyti“ left — idiomatic, not a procedure name.
+14 jei byla negali laukti, kartu ieškokite pagalbos ir ten, kur gyvenate.
+15 heading neatsiranda; body „Šie santykiai atsiranda tik po to…“.
+16 patekti = „may include“: 001 Sutarties nuolatinei buveinei gali būti priskiriami…; 004 Nuolatinei buveinei gali būti priskiriama…; 007 Tai gali apimti gyvenamąją vietą… (3). 017 „gali patekti į skirtingus teisinius režimus“ left (fall under a regime, not include).
+18 Darbas paprastai pradedamas nuo įvykių eigos ir nuo turimų dokumentų bei įrodymų vertinimo, ir tik tada seka tolesni veiksmai.
+19 Sparčiosios nuorodos į biurus.
+20 vienam nukentėjusiajam ir vienam įvykiui; 3.200.000 kept with dots. Checker numbers PASS (the two source 1s are still matched elsewhere in the file).
+
+lt-b
+1 013: steigimas apie 3 mėnesius, o leidimo dirbti ir leidimo gyventi pažymėjimo gavimas trunka dar apie 1 mėnesį. Digits unchanged. Next block starts „Todėl…“ so it is its own sentence.
+2 and 9 016: Nė vienas iš šių įgaliojimų nėra skirtas tėvų asmeniniam interesui; vaiko asmeniniams ir turtiniams interesams apsaugoti.
+3 010 award vs settlement report: semicolon + „tik pranešta“. Two alt texts and two link labels (4). Amounts stay 1.570.000. Image paths unchanged.
+4 Kokios teisės faktiškai atsiranda ir kaip galima reaguoti, gali skirtis…
+5 atstovas, pagrindinis platintojas ar platintojas.
+6 asmenis, kurie pagal sutartį atsako už jiems paskirtas užduotis.
+7 Gaminys neatleidžiamas vien todėl, kad yra rankų darbo arba vadinamas muilu.
+8 nebuvo duotas nustatytas garso signalas arba žibintų signalas.
+10 pažymėti registre įrašytą savininką ir tikrąjį savininką.
+11 kitos eilės įpėdiniams ar atstovaujamajam paveldėjimui.
+12 su užsienio paveldėjimo mokesčiu arba dovanojimo mokesčiu (贈與稅). Gloss stays on gift tax only.
+13 kainos koregavimas, nuostolių atlyginimo įsipareigojimai, sandorio užbaigimo dokumentai, apyvartinės lėšos.
+14 direktoriaus įnašui perleisti reikia kitų dalininkų balsavimo teisių 2/3 arba daugiau sutikimo. Fraction unchanged.
+15 pagal atsakingos advokatės nurodymus.
+16 Ar kalta sporto salė? Alt + link label (2).
+18 014 list items 1–4 now end with ?.
+19 015 „Ar šis adresas… veiklą?“ The lead-in „Kitas svarbus dalykas yra šis.“ stays its own block.
+20 kurio amžius ne didesnis kaip 2 metai. FAQ + body (2).
+21 Negalima leisti skolinti verslo registracijos pažymėjimą ar vežti krovinius per veiklos vykdytoją, neturintį leidimo.
+22 Kritimas komercinėse patalpose.
+23 timetable kalendorius → grafikas, or dropped where English has no schedule: 003 teismo proceso grafiką; 004 prašymo grafikas and deklaravimo grafikus; 011 faktinį tiekimo grafiką, the trial-calendar clause rewritten with the paid-sales sentence, Produkto registraciją (English is the registration, not a calendar); 014 mokymo grafikas + two list „grafikas“; 016 atskirame grafike and viename grafike; 018 steigimo grafikas. ROC „Kinijos Respublikos kalendoriaus“ left (12 timetable sites).
+24 same 011 sentence: Pasirengimas neturi apsiriboti vien mokamu pardavimu…
+25 Vien mažu šriftu įrašyta išlyga savaime nepanaikina vyraujančios reklaminės žinutės įspūdžio.
+26 Priešingai, jei PIF dokumentai yra neišsamūs.
+27 Taivano įmonė.
+28 013 one-clause layout rephrased inside existing blocks, including „Jis taip pat tikrina, ar užsienio subjektai neįveda lėšų į Taivaną…“. Paragraphs not joined. 12 split pairs. Block count unchanged.
+29 Kadangi toks mokymas lydi įmonės veiklą arba įstatyminės pareigos vykdymą, jo išlaidų negalima daryti…
+30 nėra giminaitis, įrašytas į 1138 straipsnio eilę kaip vėlesnės eilės įpėdinis.
+31 gali ją steigti ir vienas. Užsienio juridinis asmuo taip pat gali turėti 100 % akcijų. Same paragraph; 100 % unchanged.
+
+llms.txt GUIDANCE_LLMS_NOTICES.lt not rewritten. consultationNotice and confidentialNotice stay verbatim substrings of the FAQ answer and the privacy paragraph. discoveryNotice still contains llms.txt.
+Page descriptions were not given parentheses, brackets, #, |, backticks, or angle brackets.
+
+## Skipped (with reason)
+
+lt-a 1 — „1,57 mln. TWD“ not applied. The bio stays the pinned token TWD 1.57M.
+lt-a 11 — Do not turn Q16–Q20 into ## headings and do not delete U+200B or the empty **​** lines in 005. The checker pins heading levels, block count, and ZWSP count to the Korean source. Korean already has the same blanks. Counts left: 003:52, 005:8, 006:4, 008:10, 009:5, 013:5, 015:3.
+lt-a 17 — „ne verslo mokesčio įstatymo 10 straipsnis“ restored on the 004 link label. Deleting it made the checker fail: numbers missing 10. Korean link text is 영업세법 제10조. The URL (flno=3 of 各類所得扣繳率標準) was not changed. The visible label still leads with 3 straipsnis.
+lt-a 21 and lt-b 32 — space thousands („500 000“, „1 579 589“, „3 200 000“). ACCEPTED-ROUND and R14: lt parses dot thousands. Dots kept, including 0,5.
+lt-a 22 — Gregorian years (2020, 2023) not added beside ROC 109 and 112. ACCEPTED-ROUND forbids a new digit. The citations already say Kinijos Respublikos kalendoriaus (民國).
+lt-b 17 — U+200B in 013 and 015 not deleted. Same checker parity as lt-a 11.
+lt-b 19 and 28 — paragraphs not joined. English and Korean already split those clauses. Joining would change the block count. Each block was made a grammatical sentence instead.
+
+## Systemic patterns (instances changed)
+
+- Procedure called žingsnis: 5 (home, services, IP, about, inquiry). „pirmasis žingsnis“ kept (1).
+- patekti for „may include“: 3 (001 PE, 004 PE, 007 custody list).
+- Timetable called kalendorius: 12. ROC calendar: 0 changed.
+- 013 one-clause blocks rephrased in place: 12 pairs. Block count unchanged.
+- 010 settlement report no longer governed by priteisė: 4. „Ar kalta sporto salė?“: 2.
+- 007 nuosavybės įrašas: 4 (two phrases × FAQ and body).
+- 009 fault/remedy split across the three existing lines: 1 passage.
+- prasmė ta, kad: 1 (014).
+- Direct questions missing ?: 4 list items in 014, 1 standalone question in 015. Indirect „Ar…“ clauses that are the subject of a statement (002, 007, 011) left with a full stop.
+- ZWSP deleted: 0. Space thousands: 0.
+
+R2–R10 / R12–R17: the reviews already scored consultation languages (EN/中文/JA/KO only), feminine forms for Wei Tseng, dates, the decimal comma, Lithuanian quotation marks, and no Czech leakage as holding. No further Korea-default or advertising sweep beyond the rows above. R9 emergency numbers were not a finding in this round. Team bios already name the roles in Lithuanian; TWD 1.57M left byte-identical.
+
+## Reviewer got this wrong (not applied)
+
+- A space as the Lithuanian thousands separator, and „1,57 mln. TWD“ for the pinned bio figure. The checker accepts only dot grouping for lt, and a test pins TWD 1.57M byte-identical.
+- A Gregorian year next to a Minguo year. 109 is 2020 and the 112 constitutional judgment is 2023, but adding those digits is forbidden and the ROC gloss is already in the sentence.
+- Q16–Q20 should become headings, and U+200B lines are a Lithuanian-only defect. The Korean source has the same heading levels and the same ZWSP counts. Deleting them fails the structural check.
+- 013 (and the 015 lead-in) should be joined to the previous paragraph. English and Korean already break them the same way. The meaning fix was applied inside the existing blocks.
+- The 004 link parenthetical that the label is not Business Tax Act article 10 can simply be deleted. The URL is article 3 of the withholding-rate standards, and the Korean and English labels still say article 10. The digit 10 is required because the Korean link text contains 제10조. The parenthetical was put back so the file passes; the label still names the withholding standard and article 3 first.
+- Nav label „Atsakomybės apribojimas“ as written. It is the right legal name and it is the eyebrow. It does not fit the 14-character nav cap, so the nav item is Atsakomybė.
+
+## §Verify
+
+cd /Users/son7/Projects/tseng-law-fix-lt-r3 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+node scripts/check-column-translation.mjs --dir src/content/columns-lt --lang lt 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=68
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-lt src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      22
+
+The count above is the verify run, before this log existed. After the log was written, the same command prints 23.

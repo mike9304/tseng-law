@@ -87,9 +87,9 @@ prema tome ko prvi raskine ugovor s dovoljnim razlogom,
 
 otpremnina ne mora biti isplaćena, ili može biti zahtevana.
 
-Zato u sporovima rada (勞資糾紛) na Tajvanu
+U radnim sporovima (勞資糾紛) na Tajvanu vreme je odlučujuće.
 
-je „**vreme**“ veoma važno.
+„**Vreme**“ je veoma važno.
 
 U sporovima o otpremnini zato odlučuje koja strana ranije raskine ugovor s urednim razlogom i s dokazima.
 

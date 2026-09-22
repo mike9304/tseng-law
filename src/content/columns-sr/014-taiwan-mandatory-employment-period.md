@@ -31,7 +31,7 @@ Pri pregledu je važno da se ne mešaju sledeća četiri pitanja.
 3. Kome se pripisuje razlog prestanka ugovora o radu
 4. Kako se ocenjuju otkazni rok odlaska i opseg vraćanja
 
-Čak i kada ova četiri pitanja stoje zajedno u istom ugovoru, merodavna odredba i potreban dokaz razlikuju se. Zato treba posebno oceniti da li je klauzula važeća, kada izjava volje o odlasku proizvodi dejstvo, da li postoji odgovornost vraćanja davanja unapred, odnosno predplate (預付性給付), ili troškova obuke i da li je stvarno nastala posebno isticana šteta.
+Čak i kada ova četiri pitanja stoje zajedno u istom ugovoru, merodavna odredba i potreban dokaz razlikuju se. Zato treba posebno oceniti da li je klauzula važeća, kada izjava volje o odlasku proizvodi dejstvo, da li postoji odgovornost vraćanja davanja unapred, odnosno predplate (預付性給付), ili troškova obuke i da li je stvarno nastala posebna šteta.
 
 ## 1. Da li je klauzula obaveznog ostanka automatski ništava?
 
@@ -43,7 +43,7 @@ Klauzula nije automatski ništava. Prema članu 15-1 tajvanskog Zakona o radnim 
 
 Po potvrdi zakonske pretpostavke prema stavu 2 posebno se ocenjuje da li su ugovoreni rok i opseg odgovornosti razumni. Klauzula koja povredi zakonsku pretpostavku stava 1 ili merilo razumnosti stava 2 ništava je prema stavu 3. Ova norma međutim merilo je za ocenu sadržaja i činjenica svake klauzule, a ne norma koja od početka sve klauzule obaveznog ostanka proglašava važećim ili ništavim.
 
-Okolicnost da je zaposleni potpisao ugovor može biti dokaz koji potvrđuje postojanje sporazuma, ali ne zamenjuje zakonske pretpostavke. Nasuprot tome, umesto da se odmah zaključi samo zato što je klauzula dugotrajna, treba proveriti kakva je investicija ili naknada postojala i zašto je taj rok određen.
+Okolicnost da je zaposleni potpisao ugovor može biti dokaz koji potvrđuje postojanje sporazuma, ali ne zamenjuje zakonske pretpostavke. Nasuprot tome, umesto da se ishod odmah izvede samo iz dužine klauzule, treba proveriti kakva je investicija ili naknada postojala i zašto je taj rok određen.
 
 ## 2. Prva zakonska pretpostavka: stručna obuka i snošenje troškova
 
@@ -51,7 +51,7 @@ Da bi se klauzula zasnovala na obuci, poslodavac mora zaposlenom stvarno da pru�
 
 Predmet pregleda nisu samo neposredno proverljivi troškovi, kao honorari spoljnih predavača, školarina obrazovne ustanove i naknade za materijale ili opremu, već i osnov obračuna unutrašnjih troškova koje poslodavac tvrdi. Ako je obuku držalo unutrašnje osoblje, treba videti čije i kakvo vreme je uloženo, čime se to razlikuje od uobičajenog nadzora ili predaje posla i da li postoji osnov da se taj trošak pripiše datom zaposlenom. Procenjeni iznos ili paušalna raspodela sami po sebi stvarni teret ne dokazuju.
 
-Program, kalendar obuke, spisak prisustva, rezultat ocene, uverenje o završetku, računi i priznanice osnovna je dokumentacija za potvrdu činjenice obuke i troškova. Ugovor između poslodavca i obrazovne ustanove, isprave o plaćanju i uslovi povraćaja, viđeni zajedno, omogućavaju tačnije da se utvrdi stvarni teret. Ako je zaposleni deo troškova platio neposredno ili ih je snosilo treće lice, treba i razlikovati ko je snosio konačne troškove.
+Program, kalendar obuke, spisak prisustva, rezultat ocene, uverenje o završetku, računi i priznanice osnovna su dokumentacija za potvrdu činjenice obuke i troškova. Ugovor između poslodavca i obrazovne ustanove, isprave o plaćanju i uslovi povraćaja, viđeni zajedno, omogućavaju tačnije da se utvrdi stvarni teret. Ako je zaposleni deo troškova platio neposredno ili ih je snosilo treće lice, treba i razlikovati ko je snosio konačne troškove.
 
 Granica između opšteg prilagođavanja poslu i stručne obuke ne deli se samo prema mestu obuke ili prema tome ko je organizuje. Unutrašnji kurs može da dokaže konkretan stručni i tehnički sadržaj i znatnu investiciju, a dugi kurs spoljne ustanove može u stvari biti opšta uvodna obuka. Zato se ne sme jedinstveno isključiti sva unutrašnja obuka niti priznati zakonska pretpostavka samo zato što je kurs skup ili dug.
 
@@ -94,7 +94,7 @@ Prema uputstvu tajvanskog Ministarstva rada od 5. 6. 2026. troškovi redovne obu
 
 Uputstvo 勞動關2字第1150141814號 Ministarstva rada razlikuje i uređuje obuku koja se sprovodi redovno, uobičajenu obuku za radno mesto, obuku da se novozaposleni upozna s okruženjem i postupcima rada, i obuku koju poslodavac mora da sprovede prema zakonu. Pošto ova obuka prati vođenje delatnosti ili ispunjenje zakonske obaveze, smisao je da se njeni troškovi ne mogu pretvoriti u osnov obaveze ostanka ili sankcije za rani prestanak.
 
-Kurseve koje novi zaposleni obično primi, kao objašnjenje radnih pravila (工作規則), predstavljanje organizacije i sistema, uobičajenu predaju posla i uputstvo o osnovnim postupcima bezbednosti, treba potvrditi u njihovoj suštini. Opšti troškovi prijema i upravljanja ili troškovi predaje posla, koje je poslodavac prvobitno trebalo da snosi, ne mogu se odrediti kao predmet vraćanja samim označavanjem kao posebne investicije.
+Kurseve koje novi zaposleni obično primi, kao objašnjenje radnih pravila (工作規則), predstavljanje organizacije i sistema, uobičajenu predaju posla i uputstvo o osnovnim postupcima bezbednosti, treba potvrditi u njihovoj suštini. Opšti troškovi prijema i upravljanja ili troškovi predaje posla, koje je poslodavac prvobitno trebao da snosi, ne mogu se odrediti kao predmet vraćanja samim označavanjem kao posebne investicije.
 
 Obuka se međutim ne isključuje uvek samo zato što je sprovedena unutar preduzeća. U istom programu mogu se mešati deo opšteg prilagođavanja i stručni deo, zato treba temu, vreme, troškove i to da li postoji zakonska obaveza proveriti po kursu. Ko tvrdi stručni deo, treba dokazima da objasni koji se sadržaj razlikuje od uobičajene obuke i ko je stvarno snosio troškove.
 
@@ -142,7 +142,7 @@ Ako trajanje ugovora o radu na određeno vreme za određeni posao (特定性定�
 
 Ako je neprekidni staž kraći od 3 meseca, ako je reč o drugom tipu ugovora na određeno vreme ili se tvrdi zakonski razlog trenutnog prestanka, merodavnu odredbu i činjenice treba oceniti pojedinačno. Sama činjenica da ugovor upisuje duži otkazni rok ili zahteva trenutnu predaju posla ne omogućava da se unapred odredi pravni zaključak.
 
-U praksi treba sačuvati sadržaj i dan predaje izjave volje o odlasku, dan kada ju je poslodavac stvarno primio, i komunikaciju strana o poslednjem radnom danu. Ako se u četiri pitanja odvoje trenutak kada odlazak važeće proizvodi dejstvo, važenje klauzule obaveznog ostanka, vraćanje troškova obuke ili davanja unapred i posebno isticana šteta, smanjuje se greška da se svi zaključci izvedu iz jedne ugovorne odredbe.
+U praksi treba sačuvati sadržaj i dan predaje izjave volje o odlasku, dan kada ju je poslodavac stvarno primio, i komunikaciju strana o poslednjem radnom danu. Ako se u četiri pitanja odvoje trenutak kada odlazak važeće proizvodi dejstvo, važenje klauzule obaveznog ostanka, vraćanje troškova obuke ili davanja unapred i posebna šteta, smanjuje se greška da se svi zaključci izvedu iz jedne ugovorne odredbe.
 
 ## 9. Kontrolna lista za poslodavca i zaposlenog
 
@@ -152,12 +152,12 @@ Da bi se sprečio spor ili ocenio već podneti zahtev, ne sme se čitati samo ug
 
 1. Najpre se utvrđuje zakonska pretpostavka: da li je pružena stručna obuka i snoseni troškovi, ili da li je pružena razumna naknada za obećanje ostanka.
 2. Opšta, redovna i zakonski obavezna obuka odvajaju se od stručne obuke prema stvarnom sadržaju kursa, trajanju i svrsi.
-3. Čuvaju se program kursa, kalendar, zapis o završetku, računi, priznanice i dokumentaciju o tome ko je snosio troškove, i posebno se beleži osnov spoljnih i unutrašnjih troškova.
+3. Čuvaju se program kursa, kalendar, zapis o završetku, računi, priznanice i dokumentacija o tome ko je snosio troškove, i posebno se beleži osnov spoljnih i unutrašnjih troškova.
 4. Pismeno se jasno povežu svrha naknade, dan isplate, iznos, uslovi pripisivanja, saopštenje učinjeno zaposlenom i formula vraćanja neispunjenog perioda.
 5. Dokumentuje se osnov obračuna ugovorenog roka, mogućnost zamene osoblja istog ili sličnog mesta i odnos između operativne potrebe poslodavca i stvarne investicije.
 6. Ocenjuje se da li su ugovoreni rok i iznos vraćanja srazmerni opsegu troškova obuke ili naknade, i u obračun se odražava već odrađeni period.
 7. Po pojedinačnoj proveri razloga prestanka i pripisivanja odgovornosti izračunavaju se stvarni dan prestanka, ispunjeni period i neispunjeni period.
-8. Pre odbitka od plate ili zahteva za vraćanje porede se ugovor, dokumentaciju isplata, platni listić, komunikacija strana, poziv i zapis odbitaka radi provere pravnog osnova i postupka.
+8. Pre odbitka od plate ili zahteva za vraćanje porede se ugovor, dokumentacija isplata, platni listić, komunikacija strana, poziv i zapis odbitaka radi provere pravnog osnova i postupka.
 
 Čak i pri upotrebi standardnog obrasca ugovora ne sme se mehanički primeniti isti rok i isti iznos na svako mesto i svakog zaposlenog. Odredbe treba zasnovati s odrazom stvarne investicije u obuku, naknade i mogućnosti zamene, a svrhu isplate i srazmernu formulu treba razumljivo saopštiti pre zaključenja ugovora.
 
@@ -165,14 +165,14 @@ Da bi se sprečio spor ili ocenio već podneti zahtev, ne sme se čitati samo ug
 
 1. Skupljaju se original potpisanog ugovora o radu i sporazuma o izmeni, objašnjavajući materijali prijema, materijali obuke, program, kalendar i zapis o završetku.
 2. Proveravaju se stručni i tehnički sadržaj obuke, da li je reč o opštoj obuci prilagođavanja ili zakonski obaveznoj obuci, iznosi računa i priznanica i ko je stvarno snosio troškove.
-3. Obezbeđuju se dokumentaciju isplata nagrade za potpis, nagrade za zadržavanje i drugih davanja unapred, saopštenje o svrsi naknade, dan isplate, uslovi pripisivanja i formula vraćanja.
+3. Obezbeđuje se dokumentacija isplata nagrade za potpis, nagrade za zadržavanje i drugih davanja unapred, saopštenje o svrsi naknade, dan isplate, uslovi pripisivanja i formula vraćanja.
 4. Posebno se beleži osnov obračuna ugovorenog roka, već odrađeni period, preostali period i mogućnost zamene osoblja koju poslodavac tvrdi.
 5. Čuvaju se obaveštenje o odlasku, o otkazu ili isprava o prestanku sporazumom i dokaz dostavljanja, kao e-pošta i mesendžer.
 6. U vremenskom redosledu uređuju se stvarni razlog prestanka i tok i zajedno se proveravaju poziv poslodavca na vraćanje, platni listić, komunikacija strana i zapis odbitaka.
-7. Posebno se ocenjuju važenje klauzule obaveznog ostanka, izjava volje o odlasku i otkazni rok, vraćanje troškova obuke i davanja unapred i posebno isticana šteta.
+7. Posebno se ocenjuju važenje klauzule obaveznog ostanka, izjava volje o odlasku i otkazni rok, vraćanje troškova obuke i davanja unapred i posebna šteta.
 8. Odgovornost se ne priznaje samo zato što je potpisano ili što poslodavac zahteva određeni iznos; proveravaju se dokazi koji odgovaraju zakonskim pretpostavkama, razumnosti, pripisivanju prestanka i srazmernoj formuli člana 15-1.
 
-Pri uređivanju dokumentacije u vremenskom redosledu poželjno je zajedno navesti dan zaključenja ugovora, dane početka i kraja obuke, svaki dan isplate, dane početka i kraja rada i dan predaje obaveštenja. Ako deo dokumentacije drži samo poslodavac, najpre se urede sopstvenu dokumentaciju i osnov obračuna zahtevanog iznosa, a dodatnu dokumentaciju proveravaju se prema potrebnom postupku.
+Pri uređivanju dokumentacije u vremenskom redosledu poželjno je zajedno navesti dan zaključenja ugovora, dane početka i kraja obuke, svaki dan isplate, dane početka i kraja rada i dan predaje obaveštenja. Ako deo dokumentacije drži samo poslodavac, najpre se uredi sopstvena dokumentacija i osnov obračuna zahtevanog iznosa, a dodatna dokumentacija proverava se prema potrebnom postupku.
 
 ## 10. Službeni izvori
 

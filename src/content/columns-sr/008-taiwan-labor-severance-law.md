@@ -52,11 +52,11 @@ Sledeća tabela to sažima.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Vrsta** | **Privredni otkaz**  **資遣** **員工(經濟解僱)** | **Disciplinski otkaz**  **解僱** **員工(懲戒解僱)** | **Sopstveni odlazak zaposlenog**  **員工自請離職** |
+| **Vrsta** | **Privredni otkaz (資遣員工, 經濟解僱)** | **Disciplinski otkaz (解僱員工, 懲戒解僱)** | **Sopstveni odlazak zaposlenog (員工自請離職)** |
 | Značenje | Ako kod poslodavca postoji potreba usklađivanja osoblja zbog stanja preduzeća, razlog leži u privrednoj oblasti poslodavca, a ne u odgovornosti zaposlenog. Zato poslodavac mora da poštuje otkazni rok (預告期間) i da isplati otpremninu, da uravnoteži nepovoljnosti zaposlenog. | Ako zaposleni učini protivpravni ili neprikladan akt, poslodavac može odmah da raskine ugovor o radu (勞動契約) bez prethodnog otkaza i otpremninu ne mora da isplati. Reč je o jednom od disciplinskih ovlašćenja poslodavca. | Zaposleni može u svakom trenutku da raskine ugovor, ali mora prema trajanju zaposlenja da poštuje otkazni rok, da poslodavac može da izvrši predaju i traženje zamene. |
 | Uslovi | Postoje  (član 11 tajvanskog Zakona o radnim standardima) | Postoje  (član 12 tajvanskog Zakona o radnim standardima) | Nema |
 | Prethodni otkaz | Nužan | Nije nužan | Nužan |
-| Težina za poslodavca | Lako | Teško | Lako |
+| Težina | Lako | Teško | Lako |
 | Da li društvo mora da isplati otpremninu (資遣費) | Nužno | Nije nužno | Nije nužno |
 |  | Tajvanski Zakon o radnim standardima, član 11 (勞動基準法第11條): Ako ne nastupi jedan od sledećih slučajeva, poslodavac ne može da raskine ugovor o radu, ni posle prethodnog obaveštenja zaposlenom.  1. Obustava delatnosti (歇業) ili prenos preduzeća (轉讓)  2. Gubici (虧損) ili stezanje delatnosti (業務緊縮)  3. Viša sila zahteva prekid delatnosti na 1 mesec ili duže  4. Priroda delatnosti zahteva smanjenje osoblja i otpušteni se ne može premestiti na drugo pogodno mesto  5. Određeni zaposleni ne može zadovoljavajuće da obavi posao koji mesto zahteva | Tajvanski Zakon o radnim standardima, član 12 (勞動基準法第12條): Poslodavac može da otpusti bez prethodnog obaveštenja, ako zaposleni spada u jedan od sledećih slučajeva.  1. Ko pri zaključenju ugovora o radu podnese netačne podatke, navede poslodavca u zabludu i izloži preduzeće riziku štete  2. Ko upotrebi nasilje ili teško uvredi poslodavca, njegovu porodicu, njegovog zastupnika (代理人) ili druge saradnike  3. Koga su pravnosnažno osudili na kaznu zatvora na određeno vreme (有期徒刑) ili na strožu kaznu, bez uslovnog odlaganja izvršenja kazne (緩刑) i bez dozvole pretvaranja u novčanu kaznu (易科罰金)  4. Teško kršenje ugovora o radu ili pravilnika o radu  5. Ko namerno potroši mašine, alate, sirovine, proizvode ili drugu imovinu poslodavca, ili namerno odaje tehničke i poslovne tajne poslodavca i nanese poslodavcu štetu  6. Neopravdani izostanak (曠工) bez opravdanog razloga 3 dana uzastopno, ili 6 dana ili više u mesecu |  |
 
@@ -174,9 +174,9 @@ i mogao je da dokaže da sam nije otišao.
 
 Zahvaljujući tome kasnije je uz zastupanje
 
-mogao da utvrdi pravo koje zakon predviđa;
+mogao da utvrdi pravo koje zakon predviđa.
 
-ostali zaposleni koji su otišli bez dokaza nisu ostvarili isti zahtev.
+Opis jedne stvari nije obećanje da će isti ishod nastupiti i drugde.
 
 ​
 
@@ -210,13 +210,13 @@ ili premešta zaposlene na čudna mesta,
 
 Ako radite na Tajvanu,
 
-otpremninu je teže dobiti nego što se misli
+otpremninu je teže dobiti nego što se misli.
 
 Ne zaključujte lako poravnanje s društvom
 
 i pazite da društvo ne otpušta neprikladnim načinom
 
-niti vodi ka sopstvenom odlasku
+niti vodi ka sopstvenom odlasku.
 
 Otpremnina je zakonsko pravo samo kada su uslovi zakona ispunjeni;
 

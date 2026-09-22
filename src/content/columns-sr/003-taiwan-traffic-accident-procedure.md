@@ -37,7 +37,7 @@ Kada je bezbednost obezbeđena, napravite ukupne i detaljne snimke da zabeležit
 
 ## Q3. Pri povredi, koja potraživanja i koje rokove treba proveriti?
 
-Član 284 Krivičnog zakonika uređuje telesnu povredu iz nehata (過失傷害) i tešku telesnu povredu iz nehata (過失致重傷). Pošto je prema članu 287 Krivičnog zakonika reč o krivičnom delu koje se goni po prijavi oštećenog (告訴乃論之罪), prema članu 237 Zakonika o krivičnom postupku (Tajvan) (刑事訴訟法) prijavu treba načelno podneti u roku od 6 meseci od dana kada je učinilac postao poznat.
+Član 284 Krivičnog zakonika uređuje telesnu povredu iz nehata (過失傷害) i tešku telesnu povredu iz nehata (過失致重傷). Pošto je prema članu 287 Krivičnog zakonika reč o krivičnom delu koje se goni samo po predlogu oštećenog (告訴乃論之罪), prema članu 237 Zakonika o krivičnom postupku (Tajvan) (刑事訴訟法) predlog treba načelno podneti u roku od 6 meseci od dana kada je učinilac postao poznat.
 
 Kod građanske naknade štete (損害賠償), prema članu 197 Građanskog zakonika (Tajvan) (民法) potraživanje više nije moguće po isteku 2 godine od dana kada su šteta i dužnik naknade postali poznati, ili 10 godina od dana protivpravne radnje (侵權行為). Koje činjenice utiču na zastarelost (消滅時效), treba oceniti posebno.
 
@@ -49,17 +49,17 @@ Izbor se razlikuje prema prekidu zastarelosti (時效中斷), krugu tuženih, do
 
 Krivična odgovornost može se utvrditi samo ako su priznati povreda dužnosti pažnje svakog i uzročna veza između te povrede i povrede druge strane. Sama činjenica da je nehat postojao na obe strane ne zasniva automatski odgovornost za telesnu povredu iz nehata.
 
-Na građanskoj ravni, prema članu 217 Građanskog zakonika, ako oštećeni ima krivicu koja je doprinela nastanku ili povećanju štete (與有過失), sud može da umanji naknadu ili da dužnika oslobodi obaveze. Na primer, ako šteta priznata u novom tajvanskom dolaru (新臺幣, TWD) iznosi TWD 1.000.000, a krivica oštećenog ocenjena je na 50 %, iznos može biti smanjen na TWD 500.000 pre drugih usklađivanja.
+Na građanskoj ravni, prema članu 217 Građanskog zakonika, ako oštećeni ima krivicu koja je doprinela nastanku ili povećanju štete (與有過失), sud može da umanji naknadu ili da dužnika oslobodi obaveze. Na primer, ako šteta priznata u novim tajvanskim dolarima (新臺幣) iznosi 1.000.000 TWD, a krivica oštećenog ocenjena je na 50 %, iznos može biti smanjen na 500.000 TWD pre drugih usklađivanja.
 
 Veštačenje (鑑定) ili tabela preliminarne analize mogu biti važni podaci, ali sud ne vezuju mehanički. Sud ocenjuje celinu dokaza, uključujući iskaze, snimke i stanje vozila.
 
 ## Q5. Šta treba navesti u ispravi o poravnanju?
 
-U ispravi o poravnanju (和解書) treba individualizovati datum, mesto i strane nezgode i upisati iznos i trenutak plaćanja, rešavanje osiguranih davanja, potraživanja koja su obuhvaćena i ona koja su zadržana. Treba i jasno utvrditi dalje lečenje, povrede otkrivene kasnije, izdavanje isprava, kao što je lekarsko uverenje (診斷證明書), i odnos između plaćanja i povlačenja prijave oštećenog.
+U ispravi o poravnanju (和解書) treba individualizovati datum, mesto i strane nezgode i upisati iznos i trenutak plaćanja, rešavanje osiguranih davanja, potraživanja koja su obuhvaćena i ona koja su zadržana. Treba i jasno utvrditi dalje lečenje, povrede otkrivene kasnije, izdavanje isprava, kao što je lekarsko uverenje (診斷證明書), i odnos između plaćanja i povlačenja predloga oštećenog.
 
 Poravnanje (和解) iz člana 736 Građanskog zakonika ugovor je u kojem strane uzajamno ustupaju da bi okončale spor ili mu preduhitrile. Prema članu 737 Građanskog zakonika obim u kojem prava prestaju ocenjuje se takođe samo u granicama onoga što je u ispravi o poravnanju napušteno. Zato se, bez ocene teksta, ne može tvrditi da sva buduća potraživanja nestaju.
 
-Ako je reč o krivičnom delu koje se goni po prijavi oštećenog, prema članu 238 Zakonika o krivičnom postupku prijava se može povući do završetka usmene rasprave prvog stepena, a nakon povlačenja ne može se podneti ponovo. Kod krivičnog dela koje se ne goni po prijavi oštećenog, međutim, optužba se ne okončava automatski privatnim poravnanjem, a činjenica poravnanja ne obavezuje uvek na povlačenje prijave.
+Ako je reč o krivičnom delu koje se goni samo po predlogu oštećenog, prema članu 238 Zakonika o krivičnom postupku predlog se može povući do završetka usmene rasprave prvog stepena, a nakon povlačenja ne može se podneti ponovo. Kod krivičnog dela koje se ne goni samo po predlogu oštećenog, međutim, optužba se ne okončava automatski privatnim poravnanjem, a činjenica poravnanja ne obavezuje uvek na povlačenje predloga.
 
 ### Zvanični izvori Q1–Q5
 
@@ -131,7 +131,7 @@ Priznanice, zapisi tarife, zapisi trase i kliničke isprave mogući su dokazi. P
 - [Građanski zakonik, član 216](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Zakonik o krivičnom postupku, član 504](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001)
 - [Uputstvo Sudskog juana (司法院) o proširenju potraživanja nakon ustupanja](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
-- [Presuda okružnog suda Đjaji (嘉義) u stvari troškova nege bliskih lica](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
+- [Presuda okružnog suda u Điajiju (嘉義) u stvari troškova nege bliskih lica](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
 - [Presuda okružnog suda Tajnan (臺南) u stvari troškova prevoza na lečenje](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
 
 
@@ -175,7 +175,7 @@ Obaveza zaključenja prema članu 6 Zakona o obaveznom osiguranju od autoodgovor
 
 Kod nezgode jednog vozila vozač tog vozila načelno nije adresat davanja obaveznog osiguranja tog vozila. Međutim, kod nezgode u kojoj učestvuje više vozila postoje slučajevi u kojima vozač može istaći davanje kod osiguravača obaveznog osiguranja drugog učestvujućeg vozila.
 
-Tarifa davanja (強制汽車責任保險給付標準) izmenjena 29. 5. 2026. primenjuje se na nezgode koje su nastupile od 1. 7. 2026. Gornja granica primeranih i potrebnih medicinskih troškova za povredu iznosi TWD 200.000 u novom tajvanskom dolaru; davanje za invalidnost (失能) iznosi od TWD 80.000 do TWD 3.000.000 prema 15 zakonskih stepeni; davanje za smrt iznosi TWD 3.000.000, a zajednički maksimum smrti, invalidnosti i medicinskih troškova za 1 oštećenog i 1 nezgodu iznosi TWD 3.200.000. Na ranije nezgode može se primeniti prethodna tarifa.
+Tarifa davanja (強制汽車責任保險給付標準) izmenjena 29. 5. 2026. primenjuje se na nezgode koje su nastupile od 1. 7. 2026. Gornja granica primeranih i potrebnih medicinskih troškova za povredu iznosi 200.000 novih tajvanskih dolara (TWD); davanje za invalidnost (失能) iznosi od 80.000 TWD do 3.000.000 TWD prema 15 zakonskih stepeni; davanje za smrt iznosi 3.000.000 TWD, a zajednički maksimum smrti, invalidnosti i medicinskih troškova za 1 oštećenog i 1 nezgodu iznosi 3.200.000. TWD Na ranije nezgode može se primeniti prethodna tarifa.
 
 Osiguranje odgovornosti prema trećim licima (第三人責任險), osiguranje od povreda vozača (駕駛人傷害險) i osiguranje štete na sopstvenom vozilu (車體損失險) fakultativni su proizvodi ugovorne prirode. Stvarno pokriće razlikuje se prema osiguraniku, gornjoj granici, odbitnoj franšizi (自負額), isključenjima, nehatu i drugim uslovima police, pa policu i uslove treba proveriti stvar po stvar.
 
@@ -207,7 +207,7 @@ Mogu zanemariti i ono što je za drugu stranu bitno — izvinjenje i izraz sauč
 
 ​
 
-Za osiguravača isplata dodatnih TWD 500.000 ili TWD 1.000.000 u pojedinačnoj stvari nema bitan uticaj na ukupni privredni rezultat; za učesnika nezgode, međutim, takav iznos može odlučivati o tome da li će imati, ili neće imati, zabelešku u evidenciji osuđivanosti (前科).
+Za osiguravača isplata dodatnih 500.000 TWD ili 1.000.000 TWD u pojedinačnoj stvari nema bitan uticaj na ukupni privredni rezultat; za učesnika nezgode, međutim, takav iznos može odlučivati o tome da li će imati, ili neće imati, zabelešku u evidenciji osuđivanosti (前科).
 
 ​
 
@@ -239,7 +239,7 @@ U nekim presudama za telesnu povredu iz nehata izrečeno je oko 3 meseca; nema t
 
 ​
 
-Ako se kazna pretvori u novčanu kaznu (易科罰金; 罰金, a ne upravna kazna 罰鍰), član 41 stav 1 Krivičnog zakonika utvrđuje preračun TWD 1.000, TWD 2.000 ili TWD 3.000 za 1 dan; pri tarifi TWD 1.000 za dan kazna od 3 meseca odgovara iznosu 3 × 30 × TWD 1.000 = TWD 90.000.
+Ako se kazna pretvori u novčanu kaznu (易科罰金; 罰金, a ne upravna kazna 罰鍰), član 41 stav 1 Krivičnog zakonika utvrđuje preračun 1.000 TWD, 2.000 TWD ili 3.000 TWD za 1 dan; pri tarifi 1.000 TWD za dan kazna od 3 meseca odgovara iznosu 3 × 30 × 1.000 TWD = 90.000. TWD
 
 ​
 
@@ -255,15 +255,15 @@ U nekim presudama za tešku telesnu povredu iz nehata izrečeno je oko 4 meseca,
 
 ​
 
-Q18. Ako zaključite poravnanje s drugom stranom, može li se krivična prijava oštećenog povući?
+Q18. Ako zaključite poravnanje s drugom stranom, može li se krivični predlog oštećenog povući?
 
 ​
 
-Telesna povreda iz nehata i teška telesna povreda iz nehata krivično su delo koje se goni po prijavi oštećenog (告訴乃論之罪), pa se krivična prijava oštećenog može povući.
+Telesna povreda iz nehata i teška telesna povreda iz nehata krivično su delo koje se goni samo po predlogu oštećenog (告訴乃論之罪), pa se krivični predlog oštećenog može povući.
 
 ​
 
-Pri smrti iz nehata povlačenje prijave nije moguće; međutim, ako zaključite poravnanje s porodicom druge strane, sud može kaznu ublažiti.
+Pri smrti iz nehata povlačenje predloga nije moguće; međutim, ako zaključite poravnanje s porodicom druge strane, sud može kaznu ublažiti.
 
 ​
 

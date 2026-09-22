@@ -55,7 +55,7 @@ Taj zakon je važio do 2003; tada je g. Lin, koji je vodio frizerski salon,
 
 zaposlio radnike bez oštećenja vida za usluge pranja kose i masaže, i policija je to utvrdila.
 
-Prema tadašnjem pravu g. Linu i tim radnicima izrečena je upravna novčana kazna (罰鍰) u visini TWD 40.000, TWD 10.000 i TWD 20.000 u novom tajvanskom dolaru (新臺幣).
+Prema tadašnjem pravu g. Linu i tim radnicima izrečena je upravna novčana kazna (罰鍰) u visini 40.000, 10.000 i 20.000 novih tajvanskih dolara (新臺幣).
 
 G. Lin je smatrao tu sankciju veoma nepravednom i zatražio je ustavno tumačenje.
 

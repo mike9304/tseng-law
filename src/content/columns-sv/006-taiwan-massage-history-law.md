@@ -23,7 +23,7 @@ Utöver klippning fanns olika tjänster såsom rakning och ansiktsvård.
 
 Och det väsentliga var att man sittande kunde få hårtvätt med massage av hårbotten, axlar och nacke.
 
-Redan en enda klippning gav denna högklassiga tjänst, så att förhållandet mellan kvalitet och pris var utmärkt.
+Redan en enda klippning gav denna högklassiga tjänst, så att den var mycket prisvärd.
 
 Det liknade mycket dagens vietnamesiska hårtvätt.
 

@@ -1162,7 +1162,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Rådgivningen sker endast på fyra språk: engelska, kinesiska (中文), japanska och koreanska.',
     methodConfirmationNotice:
-      'Om du inte kan använda något av de fyra språken, välj ”Kommunikationsvägen måste bekräftas”. Vi hör av oss för att undersöka om det finns en användbar kommunikationsväg; rådgivning på ett annat språk utlovas inte och ingen svarstid lovas.',
+      'Om du inte behärskar något av de fyra språken, välj ”Kommunikationsvägen måste bekräftas”. Vi hör av oss för att undersöka om det finns en användbar kommunikationsväg; rådgivning på ett annat språk utlovas inte och ingen svarstid lovas.',
     preparationNotice:
       'Du får skriva sammanfattningen på ditt eget språk. Originaltexten sparas som du har skrivit den och översätts inte automatiskt.',
     heading: 'Skicka en begäran om rådgivning',

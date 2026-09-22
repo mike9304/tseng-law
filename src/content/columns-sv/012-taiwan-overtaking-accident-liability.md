@@ -23,7 +23,7 @@ Artikel 101 förbjuder omkörning på avsnitt med skyltar som anger kurva, brant
 
 Dessutom får man inte köra om på platser eller avsnitt med skylt för skola eller sjukhus, där det finns annan skylt eller märkning som förbjuder omkörning, när ett mötande fordon närmar sig, eller när 2 eller fler fordon kör i följd framför.
 
-För att köra om fordonet framför i samma körfält måste föraren bak först tuta kort 2 gånger eller blinka med helljus 1 gång. Tuta och helljus får inte användas upprepat för att tvinga fordonet framför att lämna företräde.
+För att köra om fordonet framför i samma körfält måste föraren bak först tuta kort 2 gånger eller blinka med helljus 1 gång. Signalhornet och helljuset får inte användas upprepade gånger för att tvinga fordonet framför att lämna företräde.
 
 Fordonet bak får köra om först efter att fordonet framför har sänkt farten och vikit undan, eller visat vilja att lämna företräde med handsignal eller höger blinkers.
 
@@ -51,7 +51,7 @@ Att sådana sakkunnigresultat förekommer i vissa ärenden betyder inte att ett 
 
 Innan omkörning måste man först kontrollera om platsen eller trafikläget faller under omkörningsförbud. Om förfarandet för samma körfält gäller, ge det föreskrivna tut- eller helljustecknet utan att tvinga fordonet framför att vika, vänta på ett tydligt tecken på företräde och slutför omkörningen med tillräckligt mellanrum och ett säkert återgångsavstånd.
 
-Att följa artikel 101 är viktigt, men det säkerställer i sig varken att olyckan undviks eller det senare resultatet av sakkunnigbedömning eller rättegång. Förare måste hålla extra säkerhetsmarginal och anpassa sig till läget framför.
+Att följa artikel 101 är viktigt, men det innebär i sig varken att olyckan undviks eller att en senare sakkunnigbedömning eller rättegång får ett visst utfall. Förare måste hålla extra säkerhetsmarginal och anpassa sig till läget framför.
 
 Som kompletterande läsning kan [illustrationen av omkörningsregler och -förfarande](https://gonews.com.tw/car/daily/21934/) konsulteras. Eftersom det är en sekundär källa bör gällande officiella föreskrifter också läsas när de rättsliga villkoren kontrolleras.
 

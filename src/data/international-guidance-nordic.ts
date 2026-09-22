@@ -97,7 +97,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Sidans språk och rådgivningsspråket är inte samma sak',
           paragraphs: [
             'Den här sidan är skriven på svenska, men rådgivningen med en advokat sker endast på de fyra rådgivningsspråken engelska, kinesiska (中文), japanska och koreanska. Att läsa vägledningen på svenska betyder inte att samtalet med advokaten sker på svenska.',
-            'Vi lovar varken en tolk, en svarstid eller en bokad tid via den här sidan. Om du inte kan använda något av de fyra språken förklarar sidan ”Kontakt” hur vi undersöker en möjlig kommunikationsväg.',
+            'Vi lovar varken en tolk, en svarstid eller en bokad tid via den här sidan. Om du inte behärskar något av de fyra språken förklarar sidan ”Kontakt” hur vi undersöker en möjlig kommunikationsväg.',
           ],
         },
         {
@@ -263,7 +263,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'KONTAKT',
       title: 'Hur du når byrån',
       description:
-        'Sidans språk, rådgivningsspråken, vad som gäller om du inte kan använda något av de fyra språken, och vad den här sidan inte utlovar.',
+        'Sidans språk, rådgivningsspråken, vad som gäller om du inte behärskar något av de fyra språken, och vad den här sidan inte utlovar.',
       intro:
         'Innan du skriver till oss bör du skilja på följande tre saker. De blandas ofta ihop, men betyder olika saker.',
       sections: [
@@ -279,7 +279,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Om du inte kan använda något av de fyra rådgivningsspråken',
+          heading: 'Om du inte behärskar något av de fyra rådgivningsspråken',
           paragraphs: [
             'I kontaktformuläret kan du välja ”Kommunikationsvägen måste bekräftas”. Vi hör av oss för att undersöka om det finns en användbar kommunikationsväg; rådgivning på ett annat språk utlovas inte och ingen svarstid utlovas.',
             'Det är bara ett steg för att undersöka saken, inte ett löfte. Vi lovar inte en tolk, inte rådgivning på svenska eller på ett annat språk utanför de fyra som nämns, och inte att vi tar emot varje ärende.',
@@ -333,7 +333,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
             'Nej. Den här vägledningen är skriven på svenska, men rådgivningen med en advokat sker endast på engelska, kinesiska (中文), japanska och koreanska. Vi lovar inte heller en tolk. Skriftlig översättning är något annat: den text du skriver sparas i original och översätts inte automatiskt.',
         },
         {
-          question: 'Vad händer om jag inte kan använda något av de fyra språken?',
+          question: 'Vad händer om jag inte behärskar något av de fyra språken?',
           answer:
             'Välj ”Kommunikationsvägen måste bekräftas” när du skickar begäran. Vi hör av oss för att undersöka om det finns ett användbart kommunikationssätt, men rådgivning på ett annat språk utlovas inte. Det är ett steg för att undersöka saken, inte ett löfte om att vi kan arbeta på ett annat språk.',
         },
@@ -365,7 +365,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
       description:
         'Vad kontaktformuläret i den här svenska delen samlar in, hur originaltexten behandlas och hur du når oss om dina uppgifter.',
       intro:
-        'Den här delen gäller endast kontaktformuläret på de svenska vägledningssidorna. Den beskriver hur uppgifter behandlas och är inte en teknisk utfästelse.',
+        'Den här delen gäller endast kontaktformuläret på de svenska vägledningssidorna. Den beskriver hur uppgifter behandlas och lovar inte teknisk säkerhet.',
       sections: [
         {
           heading: 'Vilka uppgifter som samlas in',
@@ -394,7 +394,7 @@ export const swedishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Lagringsplats och åtkomst',
           paragraphs: [
             'Det du skickar lagras på en plats som inte är offentligt tillgänglig. Endast behöriga personer på byrån får komma åt innehållet för att handlägga begäran.',
-            'Den här sidan ger inget absolut säkerhetslöfte. Ingen överföringsväg och ingen lagringsplats är helt säker; känsliga handlingar bör därför skickas endast efter särskild anvisning från advokaten.',
+            'Den här sidan ger inget absolut löfte om säkerhet. Ingen överföringsväg och ingen lagringsplats är helt säker; känsliga handlingar bör därför skickas endast efter särskild anvisning från advokaten.',
           ],
         },
         {

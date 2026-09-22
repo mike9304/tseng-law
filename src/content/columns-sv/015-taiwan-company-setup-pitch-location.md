@@ -59,7 +59,7 @@ Vid bolagsregistrering skrivs dock ofta flera grenar in samtidigt, och man vill 
 
 I praktiken behöver därför inte alla grenar kontrolleras vid bolagsregistreringen.
 
-Följande följer [driftsanvisningen för upplysningstjänsten om driftställen i staden Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) (臺北市營業場所協助查詢服務作業須知) och staden Taipeis gällande vägledning.
+Det följande utgår från [driftsanvisningen för Taipeis tjänst för assisterad förfrågan om driftställe](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) (臺北市營業場所協助查詢服務作業須知) och från staden Taipeis gällande vägledning.
 
 Från och med den 1 januari 2023 ska, vid ansökan om registrering av bildande, flytt av säte eller tillägg av verksamhetsgrenar för bolag eller handel (inklusive filial (分公司) och underenhet (分支機構)), resultatet av förhandsfrågan om driftställe **obligatoriskt** fogas till registreringsansökan, oberoende av bransch.
 

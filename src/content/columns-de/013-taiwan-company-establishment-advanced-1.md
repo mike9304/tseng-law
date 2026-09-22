@@ -75,7 +75,7 @@ Die Einwanderungsbehörde (移民署) ist jedoch sehr überlaufen, daher sollten
 
 Die Prüfungskommission des Wirtschaftsministeriums prüft zwar den Hintergrund der Investorin oder des Investors.
 
-Die Prüfung beschränkt sich jedoch nicht auf ein einziges formales Kriterium; jeder Antrag wird anhand der Unterlagen beurteilt.
+Die Prüfung ist jedoch nicht übermäßig streng; jeder Antrag wird anhand der Unterlagen beurteilt.
 
 Sie können vielfältige Berufserfahrungen einschließlich Aushilfstätigkeiten anführen.
 
@@ -87,11 +87,11 @@ Zu diesem Punkt sollten Sie sich mit einer taiwanesischen Anwältin oder einem t
 
 **4. Worauf ist zu achten, wenn die Eintragungsadresse der Gesellschaft (zum Beispiel ein Restaurantlokal) gemietet wird?**
 
-Die Gesellschaftsgründung dauert etwa **3 Monate**, die Erlangung der Arbeitserlaubnis (工作許可) und der Aufenthaltskarte etwa **1 Monat**.
+Die Gesellschaftsgründung dauert etwa **3 Monate**, die Erlangung der Arbeitserlaubnis (工作許可) und der Aufenthaltskarte zusätzlich etwa **1 Monat**.
 
 Daher sollten Sie den Vertragsbeginn möglichst spät ansetzen.
 
-In taiwanesischen Mietverträgen für Ladenlokale gewährt die Vermieterseite der Mietpartei häufig eine mietzinsfreie „**Ausbaufrist**“ (裝潢期間).
+In taiwanesischen Mietverträgen für Ladenlokale gewährt die Vermieterseite der Mietpartei häufig eine mietzinsfreie „**Ausbauzeit**“ (裝潢期間).
 
 Dies ist ein von der Miete befreiter Zeitraum; Sie können darüber verhandeln.
 
@@ -115,9 +115,9 @@ Zum Beispiel: Soll bei dem Geschäftszweig Gastronomie ein gewerblicher Bürorau
 
 Wie bereits erwähnt, prüft die Bank den Mietvertrag und nimmt die Gesellschaftsadresse vor Ort in Augenschein.
 
-Außerdem verlangt die Stadtverwaltung (市政府) bei der endgültigen Gesellschaftseintragung, dass die Eintragungsadresse in einem Gebiet liegt, in dem Restaurantbetrieb zulässig ist;
+Außerdem verlangt die Stadtverwaltung (市政府) bei der endgültigen Gesellschaftseintragung, dass die Eintragungsadresse in einem Gebiet liegt, in dem Restaurantbetrieb zulässig ist.
 
-bei einem gewerblichen Büroraum ist die Gesellschaftseintragung (公司登記) dann nicht möglich.
+Bei einem gewerblichen Büroraum ist die Gesellschaftseintragung (公司登記) dann nicht möglich.
 
 Zum Beispiel: Handelt es sich um Geschäftszweige, die in gewerblichen Büroräumen möglich sind, etwa Werbung oder Großhandel, kann die Gesellschaft in einem gewerblichen Büroraum gegründet werden. Vor Abschluss des Mietvertrags ist dies zu prüfen.
 

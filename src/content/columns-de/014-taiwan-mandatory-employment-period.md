@@ -26,10 +26,10 @@ Die Vereinbarung über eine Mindestbeschäftigungsdauer (最低服務年限約�
 
 Bei der Prüfung ist es wichtig, die folgenden vier Fragen nicht zu vermengen.
 
-1. Erfüllt die Vereinbarung selbst die gesetzlichen Voraussetzungen des Artikels 15-1
-2. Liegen vereinbarte Dauer und Belastung der beschäftigten Person im angemessenen Rahmen
-3. Wem ist der Beendigungsgrund des Arbeitsvertrags zuzurechnen
-4. Wie sind Kündigungserklärung und Rückzahlungsumfang zu beurteilen
+1. Erfüllt die Vereinbarung selbst die gesetzlichen Voraussetzungen des Artikels 15-1?
+2. Liegen die vereinbarte Dauer und die Belastung der beschäftigten Person im angemessenen Rahmen?
+3. Wem ist der Beendigungsgrund des Arbeitsvertrags zuzurechnen?
+4. Wie sind Kündigungserklärung und Rückzahlungsumfang zu beurteilen?
 
 Auch wenn diese vier Fragen in demselben Vertrag stehen, unterscheiden sich anwendbare Vorschriften und erforderliche Beweise. Deshalb sind Wirksamkeit der Vereinbarung, wann die Kündigungserklärung wirkt, ob im Voraus gezahlte Leistungen (預付性給付) oder Schulungskosten zurückzuzahlen sind und ob ein gesonderter Schaden tatsächlich entstanden ist, jeweils getrennt zu prüfen.
 
@@ -43,7 +43,7 @@ Artikel 15-1 verlangt eine der beiden gesetzlichen Voraussetzungen und eine geso
 
 Nach Feststellung der gesetzlichen Voraussetzungen ist nach Absatz 2 gesondert zu prüfen, ob vereinbarte Dauer und Haftungsumfang angemessen sind. Eine Vereinbarung, die die gesetzlichen Voraussetzungen von Absatz 1 oder den Angemessenheitsmaßstab von Absatz 2 verletzt, ist nach Absatz 3 unwirksam. Diese Vorschrift ist Maßstab zur Prüfung von Inhalt und Tatsachen der einzelnen Vereinbarung, nicht eine Regelung, die alle Vereinbarungen über eine Mindestbeschäftigungsdauer von vornherein pauschal für wirksam oder unwirksam erklärt.
 
-Dass die beschäftigte Person den Vertrag unterzeichnet hat, kann die Existenz einer Einigung belegen, ersetzt aber die gesetzlichen Voraussetzungen nicht. Umgekehrt sollte man das Ergebnis nicht allein aus der langen Dauer ableiten, sondern prüfen, welche Investition oder Gegenleistung vorlag und warum diese Dauer bestimmt wurde.
+Dass die beschäftigte Person den Vertrag unterzeichnet hat, kann die Existenz einer Einigung belegen, ersetzt aber die gesetzlichen Voraussetzungen nicht. Umgekehrt sollte man das Ergebnis nicht allein aus der Länge der vereinbarten Dauer ableiten, sondern prüfen, welche Investition oder Gegenleistung vorlag und warum diese Dauer bestimmt wurde.
 
 ## 2. Erste gesetzliche Voraussetzung: fachlich-technische Schulung und Kostentragung
 
@@ -61,13 +61,13 @@ Auch das Verhältnis von vereinbarter Dauer und Schulungsinvestition muss erklä
 
 Die zweite gesetzliche Voraussetzung liegt vor, wenn der Arbeitgeber für das Versprechen der beschäftigten Person, die Mindestbeschäftigungsdauer einzuhalten, eine angemessene Gegenleistung gewährt. Diese Gegenleistung muss Zweck und Struktur haben, die sich vom gewöhnlichen Lohn und von der bereits geschuldeten Arbeitsvergütung unterscheiden. Allein die Bezeichnung als Antrittsprämie, Bindungsbonus oder im Voraus gezahlte Leistung auf der Abrechnung legt die rechtliche Natur nicht fest.
 
-Zuerst ist der Zahlungszweck zu prüfen. Ob es allgemeine Lohnbedingung zur Einstellung, Gegenleistung für das Versprechen einer bestimmten Bindungsdauer oder Belohnung für Zielerreichung ist, muss in Vertrag und Mitteilungsunterlagen klar sein. Zahlungsdatum, Betrag, Zuordnungszeitpunkt, Verbindung zur Bindungsdauer sowie Rückzahlungsgrund und -formel sind daraufhin zu prüfen, ob die beschäftigte Person sie vor Vertragsschluss verstehen konnte.
+Zuerst ist der Zahlungszweck zu prüfen. Ob es sich um eine allgemeine Lohnbedingung zur Einstellung, um eine Gegenleistung für das Versprechen einer bestimmten Bindungsdauer oder um eine Belohnung für die Zielerreichung handelt, muss in Vertrag und Mitteilungsunterlagen klar sein. Zahlungsdatum, Betrag, Zuordnungszeitpunkt, Verbindung zur Bindungsdauer sowie Rückzahlungsgrund und -formel sind daraufhin zu prüfen, ob die beschäftigte Person sie vor Vertragsschluss verstehen konnte.
 
 Die Hinweise des Arbeitsministeriums vom 5. Juni 2026 erläutern, dass Bindungsbonus, Antrittsprämie oder sonstige im Voraus gezahlte Leistungen als angemessene Gegenleistung der Mindestbeschäftigungsdauer nur dienen können, wenn diese Rolle klar mitgeteilt wurde. Eine nachträgliche Neuauslegung des Zahlungszwecks durch den Arbeitgeber oder die Umwidmung eines Gehaltsteils als Gegenleistung kann die Mitteilung bei Vertragsschluss schwer ersetzen.
 
 Die Angemessenheit der Gegenleistung beurteilt man nicht allein nach dem Betrag. Ob die beschäftigte Person tatsächlich zusätzlichen Vorteil erhält, ob die Zahlungsbedingungen klar sind, wie der bereits geleisteten Zeit entsprechende Teil zugeordnet wird und ob der Rückzahlungsumfang übermäßig ist, ist gemeinsam zu betrachten. Auch bei bestehender Gegenleistung sind nicht Bindungsdauer beliebiger Länge und Rückzahlungshaftung beliebiger Höhe unbegrenzt zulässig.
 
-Auch die Übereinstimmung von Vertragsklausel und tatsächlicher Zahlung ist wichtig. Ob die Zahlung verspätet oder in Raten erfolgte, ob sie bedingt war, wie hoch der tatsächliche Empfangsbetrag nach Steuern und Abzügen war und ob eine gesonderte schriftliche Mitteilung vorlag, hilft, Umfang der Gegenleistung und den tatsächlichen Vorteil der beschäftigten Person zu beurteilen.
+Auch die Übereinstimmung von Vertragsklausel und tatsächlicher Zahlung ist wichtig. Ob die Zahlung verspätet oder in Raten erfolgte, ob sie bedingt war, wie hoch der nach Steuern und Abzügen tatsächlich erhaltene Betrag war und ob eine gesonderte schriftliche Mitteilung vorlag, hilft, den Umfang der Gegenleistung und den tatsächlichen Vorteil der beschäftigten Person zu beurteilen.
 
 ## 4. Angemessener Rahmen und vier Prüfungsfaktoren
 
@@ -120,7 +120,7 @@ Artikel 15-1 Absatz 4 des taiwanesischen Arbeitsstandardsgesetzes bestimmt, dass
 
 Deshalb kann allein aus der Tatsache, dass das Arbeitsverhältnis vor der vereinbarten Dauer endete, keine Verletzung durch die beschäftigte Person anerkannt werden. Wer welche Willenserklärung abgegeben hat, auf welcher Rechtsgrundlage der Vertrag endete und wem die Umstände zuzurechnen sind, die zur Beendigung geführt haben, ist zu prüfen.
 
-Prüfungsunterlagen können Kündigungsschreiben des Arbeitgebers, Kündigungsschreiben der beschäftigten Person, einvernehmliche Beendigungsdokumente, E-Mail- und Messenger-Aufzeichnungen, Unterlagen zur Änderung von Arbeitsbedingungen sowie Anwesenheits- und Arbeitsaufzeichnungen umfassen. Auch wenn Gesundheit oder Arbeitssituation erwähnt werden, darf man nicht allein nach der Formulierung schließen, sondern betrachtet tatsächlichen Hergang, gesetzliche Beendigungsgrundlage und einschlägige Beweise gemeinsam.
+Prüfungsunterlagen können Kündigungsschreiben des Arbeitgebers, Kündigungsschreiben der beschäftigten Person, einvernehmliche Beendigungsdokumente, E-Mail- und Messenger-Aufzeichnungen, Unterlagen zur Änderung von Arbeitsbedingungen sowie Anwesenheits- und Arbeitsaufzeichnungen umfassen. Auch wenn Gesundheit oder Arbeitssituation erwähnt werden, darf man nicht allein nach der Formulierung schließen, sondern muss den tatsächlichen Hergang, die gesetzliche Beendigungsgrundlage und die einschlägigen Beweise gemeinsam betrachten.
 
 Kündigung, einvernehmliche Beendigung und Behauptung der Verletzung von Arbeitsbedingungen sind nur Beispiele für zu prüfende Umstände, keine abschließende Aufzählung der der beschäftigten Person nicht zurechenbaren Gründe. Auch bei gleicher Bezeichnung der Beendigung können Wille und Hergang der Parteien abweichen, und die im Dokument genannte Bezeichnung kann mit den tatsächlichen Umständen nicht übereinstimmen.
 
@@ -146,7 +146,7 @@ In der Praxis sind Inhalt und Übermittlungsdatum der Kündigungserklärung, der
 
 ## 9. Prüfliste für Arbeitgeber und Beschäftigte
 
-Zur Vorbeugung von Streit oder zur Prüfung bereits erhobener Ansprüche darf man nicht nur den Vertrag lesen, sondern muss zeitlich geordnete Unterlagen zu Schulung, Zahlung, Beschäftigung und Beendigung gemeinsam ordnen. Besonders hilft eine tabellarische Ordnung, wie viel der vereinbarten Dauer erfüllt ist und wie viel verblieben ist und welchen Unterlagen behauptete Kosten und Gegenleistungen entsprechen, die Streitpunkte zu trennen.
+Zur Vorbeugung von Streit oder zur Prüfung bereits erhobener Ansprüche darf man nicht nur den Vertrag lesen, sondern muss zeitlich geordnete Unterlagen zu Schulung, Zahlung, Beschäftigung und Beendigung gemeinsam ordnen. Besonders hilft eine Tabelle, die zeigt, wie viel der vereinbarten Dauer erfüllt ist und wie viel verbleibt und welchen Unterlagen die behaupteten Kosten und Gegenleistungen entsprechen, die Streitpunkte zu trennen.
 
 ### Was der Arbeitgeber prüfen sollte
 
@@ -163,7 +163,7 @@ Auch bei Verwendung von Standardverträgen dürfen Dauer und Betrag nicht mechan
 
 ### Was die beschäftigte Person prüfen sollte
 
-1. Unterzeichnete Arbeitsvertrags- und Änderungsvereinbarungsurschriften, Erläuterungsunterlagen bei Einstellung sowie Schulungsunterlagen, Lehrplan, Zeitplan und Abschlussaufzeichnungen zusammenführen.
+1. Die Urschriften des unterzeichneten Arbeitsvertrags und der Änderungsvereinbarungen, Erläuterungsunterlagen bei Einstellung sowie Schulungsunterlagen, Lehrplan, Zeitplan und Abschlussaufzeichnungen zusammenführen.
 2. Fachlich-technischen Inhalt der Schulung, ob allgemeine Einarbeitung oder gesetzliche Pflichtschulung vorliegt, Beträge auf Rechnungen und Belegen und wer die Kosten tatsächlich getragen hat, prüfen.
 3. Zahlungsunterlagen zu Antrittsprämie, Bindungsbonus und sonstigen im Voraus gezahlten Leistungen, Mitteilung über den Gegenleistungszweck, Zahlungsdatum, Zuordnungsbedingungen und Rückzahlungsformel sichern.
 4. Berechnungsgrundlage der vereinbarten Dauer, bereits geleistete Zeit, verbleibende Zeit und die vom Arbeitgeber behauptete Ersetzbarkeit getrennt aufzeichnen.

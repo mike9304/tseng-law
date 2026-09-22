@@ -77,7 +77,7 @@ Das taiwanesische Recht unterscheidet, ob das Verschulden bei der Gesellschaft l
 
 Oder das Verschulden liegt bei der beschäftigten Person.
 
-Der einen oder der anderen Seite steht dann das Recht zu, die Abfindung zu verweigern oder sie zu verlangen.
+Liegt das Verschulden bei der Gesellschaft, kann die beschäftigte Person die Abfindung verlangen; liegt es bei der beschäftigten Person, kann die Gesellschaft die Abfindung verweigern.
 
 Manchmal liegt Verschulden auf beiden Seiten.
 

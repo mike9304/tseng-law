@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Beitragsbild](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Dieser Teil setzt die Beiträge [Gesellschaftsgründung in Taiwan – Grundlagen](/de/columns/taiwan-company-establishment-basics) und [Gesellschaftsgründung in Taiwan – Vertiefung Teil 1](/de/columns/taiwan-company-establishment-advanced-1) fort (Teil 2, 公司設立).
+Dieser Teil setzt die Beiträge [Gesellschaftsgründung in Taiwan – Grundlagen](/de/columns/taiwan-company-establishment-basics) und [Gesellschaftsgründung in Taiwan – Vertiefung Teil 1](/de/columns/taiwan-company-establishment-advanced-1) fort (Teil 2). 公司設立 bezeichnet die Gesellschaftsgründung.
 
 ​
 
@@ -51,9 +51,9 @@ Bei einer Überweisung von einem Konto bei einer koreanischen Bank brauchen Unte
 
 **3. Wann kann das Vorbereitungskonto, nachdem das Kapital darauf eingegangen ist, in ein ordentliches Gesellschaftskonto (正式公司帳戶) umgewandelt werden?**
 
-In der Regel kann die verantwortliche Person (負責人) nach Erhalt der Eintragungsunterlagen der juristischen Person (法人登記文件)
+In der Regel kann die verantwortliche Person (負責人) nach Erhalt der Eintragungsunterlagen der juristischen Person (法人登記文件) das Vorbereitungskonto umstellen.
 
-zur Bank gehen und das Vorbereitungskonto der Gesellschaft in ein ordentliches Konto umwandeln.
+Sie geht zur Bank und wandelt das Vorbereitungskonto der Gesellschaft in ein ordentliches Konto um.
 
 Da die internen Vorschriften der einzelnen Banken (銀行) jedoch voneinander abweichen, empfiehlt es sich, die Bank zuerst zu befragen, wenn das Kapital dringend verwendet werden muss.
 

@@ -1,0 +1,93 @@
+WO-F-de r3 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-de-r3
+date: 2026-09-23
+
+## Rows
+
+Numbered findings: de-a 22, de-b 33 (55). No P3 rows in either review.
+
+Applied: 50.
+Skipped: 5 numbered rows. Adaptations on applied rows are listed under that row, not as skips.
+
+Test edit: `src/data/__tests__/guidance-disclosure-parity.test.ts` only. The German expectation for `not-the-consultation-step` was `/Beratungsschritt/` and is now `/ersetzt die Beratung nicht/`. No other test line changed. "TWD 1.57M" / "1,57 Millionen TWD" was not touched. `src/lib/llms-txt.ts` and `src/data/international-inquiry-copy.ts` were not edited: the FAQ and privacy sentences those notices quote were not rewritten.
+
+### Applied
+de-a 2–11, 13–22.
+de-b 2–9, 11–29, 31–33.
+
+Adaptations (still applied):
+- de-a 6. Suggested text drops 公司設立 and the counted 2. Now: "fort (Teil 2). 公司設立 bezeichnet die Gesellschaftsgründung." Digit 2 and the gloss stay; they are no longer equated.
+- de-a 7. Suggested rewrite is one sentence across four blocks. Block count stays. The defective block now assigns the rights: the company may refuse when the worker is at fault; the worker may claim when the company is at fault. The later line "Dann kann die Abfindung verweigert oder verlangt werden" was left: the English gives both options to the party that terminates first.
+- de-a 11. "(1 Jahr)" ×4 (001 ×2, 008 ×2) is now "(ein Jahr)". The lexicon counts "ein Jahr" as 1, so `numbers` still PASS. The parenthetical was not deleted: dropping it fails `numbers` (Korean 최근 1년 / 1년). "pro 1 Jahr 1 Monatsbetrag" ×2 is now "pro einem Jahr 1 Monatsbetrag"; the second 1 stays ("ein Monatsbetrag" is not in the lexicon). 003 "je 1 verletzte Person und 1 Unfall" was not changed: neither 1 has a lexicon form ("eine verletzte Person" does not match "eine Person").
+- de-a 13 and de-b 11 and de-b 20. Suggested rewrites merge the next block. Each block is now its own sentence. 005: the responsible person can convert the account; "Sie geht zur Bank …" ("Sie geht" is "she goes", agreeing with "die verantwortliche Person", not the formal address). 013: the office-space sentence now starts with "Bei" and the previous block ends with a period. 015: "gilt die folgende Pflicht." then "Seit dem 1. Januar 2023 ist …". Date unchanged.
+- de-a 19. "diese Seite ersetzt die Beratung nicht." The disclosure-parity regex was updated to that wording.
+- de-b 2. "Ziffer 7" → "Nr. 7". The Chinese citation (109年度消字第7號) was already in the sentence; it was not added again.
+- de-b 7. First clause only: "Die Prüfung ist jedoch nicht übermäßig streng"; the following "jeder Antrag wird anhand der Unterlagen beurteilt" stays.
+- de-b 12. Question marks on all four checklist questions. Articles added on item 2, which the row named. Items 3 and 4 were already grammatical questions and only lacked "?".
+- de-b 31. "bei einem Direktor sind es zwei Drittel oder mehr der Stimmrechte der übrigen Gesellschafter." "zwei Drittel" is in the lexicon (2 and 3). The dative "zwei Dritteln" is not, so that form was not used. The fraction digits are gone; the counted values remain.
+
+Guidance pack (German strings only, `germanGuidanceContent` and `guidanceTeamCopy.de`):
+- skip link "springen"; 昊 „der weite Himmel“; bookkeeping sentence without "Verfahren"; "Antwort für Ihre Situation" / "die Antwort selbst"; article on "Aufwand"; free-first-meeting close; "Ein im Voraus genannter Betrag"; "Kosten Dritter"; "wir übernehmen nicht jede Sache"; "keine Übersetzungen"; "ersetzt die Beratung nicht"; son-jungmin bio (document systems).
+
+### Skipped
+- de-a 1. "(Artikel 10)" on the dividend-withholding link. The URL is `flno=3` and was not changed. Korean 영업세법 제10조 and the English label are Article 10; dropping or replacing 10 fails `numbers`. The label stays.
+- de-a 12. Q16–Q20 were not promoted to `##` headings, and the U+200B lines were not removed. Heading levels and the ZWSP count match the Korean source.
+- de-b 1. "(1-fach)" stays. Korean 1배 is a counted 1; "bis zur Höhe des tatsächlichen Schadens" alone fails `numbers`. The sentence still denies a guaranteed multiple.
+- de-b 10. Trailing U+200B and the ZWSP-only lines in 013 and 015 were left. Deleting them changes the ZWSP count.
+- de-b 30. "hat je 1 Gesellschafter 1 Stimme" stays. "hat jeder Gesellschafter eine Stimme" drops both 1s ("eine Stimme" is not in the lexicon).
+
+## Systemic patterns
+
+- U+200B blanks and 005 `**​**` (de-a verdict; de-b 013/015). 0 deleted. Counts unchanged: 003=52, 005=8, 006=4, 008=10, 009=5, 013=5, 015=3.
+- Digit glued onto a unit the sentence already names (de-a). 4 parentheticals "(1 Jahr)" → "(ein Jahr)". 2 "pro 1 Jahr" → "pro einem Jahr", second digit kept. 003 "je 1 verletzte Person und 1 Unfall" and 010 "(1-fach)" and 018 "je 1 Gesellschafter 1 Stimme" left; see Skipped and the de-a 11 adaptation.
+- Guidance English calques (de-a). 8 sentences rewritten, listed under Guidance pack. No further "Beratungsschritt" / "Drittkosten" / "Übersetzungslisten" / "vorab gesetzte Zahl" left in the German pack.
+- 昊 glossed with the comparative (de-a). 1 instance → „der weite Himmel“. 鼎 „fester Grund“ was already right.
+- *Verfahren* where no proceeding is meant (de-a). 1 instance, the bookkeeping sentence. Other "Verfahren" are court or administrative proceedings and were left.
+- 009 gives both remedies to whichever side (de-a). 1 sentence rewritten. The later both-options sentence matches the English and was left.
+- Articles and case falling out of finite clauses (de-b). 017 "einen Aufenthaltsstatus erforderlich sind" ×2 → "ein Aufenthaltsstatus". 001 nominative close of the *wie*-list (the dative list after "in Bereichen wie" was already correct and was left). 014 articles on the checklist, the payment-purpose sentence, "den Umfang", and the termination sentence. 016 articles on the share, the apostille objects, and the two-procedure checklist item.
+- Wrong neighbouring legal word (de-b). Feststellung for 投資額審定: 001 ×3 and 017 ×1 ("des überwiesenen Investitionsbetrags" on the 017 row). Darreichungsform ×1. Ausbauzeit ×1. gerichtliche Bestätigung des Testaments (檢認) ×1. Urkunden zur Abstammung ×1. Umsatz ×1. Beschränkung der Mehrfachnutzung ×2 (004 FAQ and body; the body sentence that already said "Beschränkung der Mehrfachnutzung" was left).
+- 018 digit telegram and ellipsis (de-b). The 2/3 ellipsis was filled in with "zwei Drittel" plus the voting-rights object. The "je 1 … 1 Stimme" telegram was not changed.
+- Finite verb with no subject (de-b, 014). 1 sentence: "sondern muss … betrachten", subject "man" from the same clause.
+- 016 checklist running two procedures into one noun phrase (de-b). 1 item, comma and articles between the tax filing and the household-registration filing. The later time-plan sentence that already separated those procedures was left.
+- R2–R10. The round-3 verdict says feminine Wei Tseng, Sie, the four-language consultation lock, dates, and dot-thousands already hold. This pass did not find a new Korea-as-default-reader, result-promise, or untranslated-chrome instance outside the rows above. The only fullwidth colon in columns-de is inside the 008 frontmatter `url`, which is canonical source metadata and was not edited.
+
+## Reviewer points not followed
+
+- de-a 1. The link parameter `flno=3` is not Article 10. The Korean source and the English file both cite Article 10 of the business-tax act on that same URL, and the checker counts that 10. The article number in the label was kept.
+- de-a 11, de-b 1, and de-b 30. The suggested wording is the better German. It deletes digits the checker counts against the Korean source. Where a lexicon spelling carries the same value ("ein Jahr", "einem Jahr", "zwei Drittel"), that spelling was used. Where it does not, the digit-bearing form was kept.
+- de-a 12 and de-b 10. The U+200B lines match the Korean source. Promoting Q16–Q20 would also change heading levels. They are not disposable blank lines.
+- de-a 6. The suggested sentence drops the Chinese gloss and the counted 2. Both stay; the false synonym was removed.
+- de-b 2. The suggested Chinese citation was already present. Adding it again would duplicate 109 and 7.
+- de-a 7, de-a 13, de-b 11, and de-b 20. Merging blocks is locked by the block count. Each existing block was made a sentence.
+- 009 "Dann kann die Abfindung verweigert oder verlangt werden" is not the same defect. The English assigns both options to the party that terminates first on sufficient grounds.
+
+Nothing else in the two verdicts looked factually wrong. `taiwanesisch` was already consistent and was not a finding.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-de --lang de 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=70
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-de src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      20
+```
+
+The count 20 was taken before this log existed. This file is the additional untracked path.

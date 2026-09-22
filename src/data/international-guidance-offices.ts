@@ -676,7 +676,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     reviewCountWord: 'κριτικές',
     phoneLabel: 'Τηλέφωνο',
     faxLabel: 'Φαξ',
-    mapLinkLabel: 'Προβολή στον χάρτη',
+    mapLinkLabel: 'Προβολή στο χάρτη',
     photoAlts: [
       'Χώρος υποδοχής του γραφείου στην Ταϊπέι, Hovering International Law Firm',
       'Γραφείο δικηγόρου στο γραφείο της Ταϊπέι, Hovering International Law Firm',

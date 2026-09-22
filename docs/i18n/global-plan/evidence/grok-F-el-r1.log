@@ -1,0 +1,115 @@
+WO-F-el — Grok 4.7 fix lane, campaign round 1
+Workspace: /Users/son7/Projects/tseng-law-fix-el-r1
+Date: 2026-09-22
+No git add / commit / push.
+
+## Rows
+
+Finding rows: el-a 44 + el-b 60 = 104. No P3 rows in either review.
+Applied: 102.
+Skipped: 2 (plus the unnumbered Hangul-url note in the el-a verdict).
+
+Applied, every P1 and P2, inside the existing block, except the two skips below.
+Guidance pack (Greek strings only): international-guidance-eastern.ts (greekGuidanceContent), international-guidance-team.ts (el role, practice, bios), international-guidance-answers.ts (el), international-inquiry-copy.ts (el), llms-txt.ts (GUIDANCE_LLMS_NOTICES.el), international-guidance-offices.ts (el map label, movable -ν only).
+Columns: all 18 files under src/content/columns-el/.
+Tests: no expected Greek string was pinned to a wording that changed. No test file was edited.
+
+### Skipped
+
+- el-a #27 (003 Q16 → ## heading). The Korean source and the Greek file share the same U+200B blank-line block count. Promoting Q16 to a heading would change heading levels and block structure. Q16–Q20 stay body lines. Same constraint left the ZWSP padding in 005, 006, 008 and 009.
+- el-b #30 (merge the one-clause paragraphs in 015, and the same layout in 013). Merging paragraphs would change the block count. The 015 line was made a complete sentence inside that block («Πέραν της κατάστασης της αγοράς ισχύει και το ακόλουθο.»). The following paragraphs were not merged. 013’s comma-ended sentence (el-b #29) was closed with a period, and the next block’s «και» was dropped, without joining the blocks.
+- el-a verdict, Hangul slugs in 008 and 009 frontmatter `url`. ACCEPTED-ROUND: do not rewrite `url`.
+
+### Checker override (wording applied; digit kept)
+
+The checker compares digits with the Korean source. Dropping a glued «1» failed `numbers`. The previous digit was put back in the form the checker accepts.
+
+- el-a #5 (002, FAQ and body). «1 φορά» no longer means “only once”. Korean `1회` is kept as «η διάρκεια της 1 περιόδου αναστολής … το 1 έτος» (2 places). Suggested «το ένα έτος» has no digit and was not used.
+- el-a #25. 001: «επί του τελευταίου έτους (1 έτος)» (2 places) so `1년` remains. 008: «κάθε 1 συμπληρωθέν έτος» and «ανά 1 έτος» restored (FAQ and the table blockquote) after the checker reported `missing from translation (4): 1×4`.
+- el-a #10. Meaning applied (foreign nationals, not every employee). Digit kept as «περισσότεροι από 1 αλλοδαποί» because Korean `1명` must remain. Suggested «περισσότεροι του ενός» failed `numbers` (`missing … 1`).
+
+### Rephrased instead of deleted
+
+- el-a #38. The difficulty row was not deleted (that would drop a table row). Cells rewritten in place: «Βαθμός δυσκολίας | Χαμηλός | Υψηλός | Χαμηλός», matching English Easy / Difficult / Easy.
+
+## Systemic patterns
+
+- Movable -ν dropped before β γ δ ζ θ λ μ ν ρ σ φ χ. 163 replacements in 17 column files. 10 in greekGuidanceContent. 1 in the Greek offices map label («Προβολή στο χάρτη»). Articles only (την/στην/τον/στον/έναν and the same after από/κατά/για/με/παρά). «στην Ταϊβάν» kept the ν. «δεν» was not rewritten.
+- «μέρος» for a site section → «σελίδες» or «ενότητα» in the Greek guidance pack (intro, about, FAQ heading, privacy, disclaimer, columns blurb, lawyers answer, inquiry unavailable notice). «Αν μέρος της υπόθεσης», «αμφότερα τα μέρη» and «κανένα μέρος» were left; those mean a party or a portion.
+- List after «καταγράφονται» moved from accusative to nominative (6 items).
+- 戶籍 / 戶政 is μητρώο κατοίκων, not δημοτολόγιο and not ληξιαρχείο. Glossed hits in 007, 016 and 017, then a sweep of the remaining household-registration uses: 20 in 007 and 4 in 016. One body gloss that named the office as 離婚登記 was aligned with the FAQ as 戶政機關. Left on purpose: 007 «ληξιαρχική πράξη … στην αλλοδαπή» (a foreign civil-status instrument, not 戶籍).
+- 告訴 → έγκληση (告訴): 003 Q18 (2) and 010 (body, §2, close).
+- Result disclaimer «επαγγέλλεται / εγγυάται ορισμένο αποτέλεσμα» → «δεν εγγυάται» where the sentence was a negative disclaimer (001, 003, 004, 011, 012). The column checker’s ban is εγγυόμαστε, not the negative «δεν εγγυάται».
+- Currency name «νέα δολάρια Ταϊβάν» where the review flagged a bare «δολάρια» or a doubled «TWD … δολάριο» (003, 005, 006, 011).
+- Consultation languages on the 013 and 015 contact lines: αγγλικά, κινεζικά (中文), ιαπωνικά, κορεατικά, and no reply-time promise. The pinned FAQ question «Είναι δυνατή συμβουλευτική στα ελληνικά;» was not changed.
+- Feminine Wei Tseng was already in place («η δικηγόρος», «τη δικηγόρο», «η πληρεξούσια δικηγόρος»). No masculine form was introduced. 008’s male manager and 010’s male client stay male.
+- English office chrome in the Greek bios: Υπουργείο Παιδείας, Τμήμα Νομικών Υποθέσεων; Ίδρυμα Νομικής Αρωγής, παράρτημα Ταϊτσούνγκ; νομικός συνεργάτης (paralegal) / ανώτερος νομικός συνεργάτης. English parentheticals kept so the preserved-term substrings remain. «1,57 εκατ. TWD» was not rewritten to «TWD 1.57M» (the bio pin does not cover el).
+
+## Reviewer disagreements (not followed)
+
+- el-a #34 asks for ληξιαρχείο as the gloss of 戶籍, and the el-a verdict says the rest of 007’s ληξιαρχείο is already right. el-b #45 and the household-registration pattern say the opposite: 戶籍 is not the Greek civil registry. Applied μητρώο κατοίκων, and swept the unglossed household-registration uses. Did not apply ληξιαρχείο.
+- el-a #38 asks to delete the difficulty row. A deleted row fails the table-row check. The cells were rephrased.
+- el-b #19 suggests «μικρά στοιχεία» for the small-print disclaimer. Kept «μικρά γράμματα» (the English is small print, not data elements).
+- el-b #30’s merged paragraph was not applied (block count). See Skipped.
+- Suggested «το ένα έτος» / «κάθε συμπληρωθέν έτος» / «ανά έτος» / «περισσότεροι του ενός» drop a Korean digit. The checker form was kept. See Checker override.
+- «καλύτερη θέση» in column 009 is the reviewer’s own comparative for the reader, not a firm superlative. It is not in the guidance pack, where the vitest ban on καλύτερ applies.
+- The Greek bio figure stays «1,57 εκατ. TWD». Forcing «TWD 1.57M» was not requested and the pinning test does not include el.
+
+## §Verify
+
+Commands run from /Users/son7/Projects/tseng-law-fix-el-r1 with PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH, after the last content edit and before this log file existed.
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-el --lang el 2>&1 | tail -8
+```
+
+```
+neighbour      PASS   
+hanzi          PASS   han=22
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+```
+grep -rn "\[변호사 검수 필요\]" src/content/columns-el src/data | wc -l
+```
+
+```
+       0
+```
+
+```
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+```
+
+```
+TSC_OK
+```
+
+```
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+```
+
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+```
+git status --short | wc -l
+```
+
+```
+      27
+```
+
+This log is untracked and was not in that count of 27.
+After this file was written, the same command returned:
+
+```
+      28
+```

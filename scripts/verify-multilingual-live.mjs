@@ -69,11 +69,15 @@ export const PRIVACY_MEMO_PHRASES = Object.freeze([
 ]);
 
 export function hreflangTagForPublicLocale(locale) {
-  return locale === 'zh-hant' ? 'zh-Hant' : locale;
+  if (locale === 'zh-hant') return 'zh-Hant';
+  if (locale === 'zh-hans') return 'zh-Hans';
+  return locale;
 }
 
 export function publicDocumentLanguage(locale) {
-  return locale === 'zh-hant' ? 'zh-Hant' : locale;
+  if (locale === 'zh-hant') return 'zh-Hant';
+  if (locale === 'zh-hans') return 'zh-Hans';
+  return locale;
 }
 
 export function guidancePublicPath(locale, pageKey) {

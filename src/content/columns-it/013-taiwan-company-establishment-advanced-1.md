@@ -13,7 +13,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Immagine in evidenza](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Di recente, numerose persone hanno costituito una società (公司) a Taiwan e hanno ottenuto un visto di lavoro nonché una carta di soggiorno (外僑居留證).
+Di recente, numerose persone hanno costituito una società (公司) a Taiwan e hanno ottenuto un visto di lavoro nonché un certificato di soggiorno per stranieri (外僑居留證).
 
 Le domande formulate di frequente al momento della costituzione sono riunite di seguito.
 
@@ -29,7 +29,7 @@ Quando uno straniero costituisce una società a Taiwan, deve presentare un piano
 
 Il Dipartimento di esame degli investimenti deve verificare se il capitale (資本額) in questione è realmente utilizzato a fini di investimento
 
-e se soggetti stranieri non introducono fondi con un altro pretesto.
+e che i soggetti stranieri non introducano fondi con un altro pretesto.
 
 Nella redazione del piano di investimento, non è necessario indicare l’indirizzo esatto della società; l’indicazione della regione basta (esempio: città di Taipei). ​
 
@@ -49,7 +49,7 @@ Poiché l’esame del piano di investimento richiede anche tempo,
 
 conviene redigere il piano di investimento e cercare l’indirizzo di iscrizione della società allo stesso tempo.
 
-Secondo l’articolo 9 dello Statuto dell’investimento degli stranieri (外國人投資條例), l’apporto approvato deve arrivare per intero nel termine fissato dall’autorità competente (核定期限); il termine deve confermarsi nell’atto di approvazione di ciascun caso (nella pratica, è di frequente fissato intorno a 1 anno).
+Secondo l’articolo 9 dello Legge sull’investimento degli stranieri (外國人投資條例), l’apporto approvato deve arrivare per intero nel termine fissato dall’autorità competente (核定期限); il termine deve confermarsi nell’atto di approvazione di ciascun caso (nella pratica, è di frequente fissato intorno a 1 anno).
 
 In questo termine, una volta trovato l’indirizzo della società e firmato il contratto di locazione,
 
@@ -57,13 +57,13 @@ resta tempo sufficiente per aprire in banca il conto preparatorio e trasferire i
 
 ​
 
-**2. Si può aprire un conto di società in banca anche senza carta di soggiorno di Taiwan?**
+**2. Si può aprire un conto di società in banca anche senza certificato di soggiorno per stranieri di Taiwan?**
 
 È possibile.
 
 La banca esige in generale due documenti di identità.
 
-Senza carta di soggiorno, si può chiedere presso l’amministrazione dell’immigrazione di Taiwan la «**scheda di dati di base del numero unificato di identificazione**» (統一證號基本資料表).
+Senza certificato di soggiorno per stranieri, si può chiedere presso l’amministrazione dell’immigrazione di Taiwan la «**scheda di dati di base del numero unificato di identificazione**» (統一證號基本資料表).
 
 Il rilascio è possibile nello stesso giorno,
 
@@ -71,7 +71,7 @@ ma l’amministrazione dell’immigrazione (移民署) è molto frequentata; con
 
 ​
 
-**3. Ho sentito dire che, nell’esame del piano di investimento, deve indicarsi la formazione e l’esperienza professionale, e mi inquieto che la mia formazione e la mia esperienza non corrispondano al settore della società che intendo costituire.**
+**3. Ho sentito dire che, nell’esame del piano di investimento, deve indicarsi la formazione e l’esperienza professionale, e temo che la mia formazione e la mia esperienza non corrispondano al settore della società che intendo costituire.**
 
 La commissione di esame del Ministero dell’Economia esamina il percorso formativo e professionale dell’investitore.
 
@@ -81,13 +81,13 @@ Si possono menzionare esperienze professionali varie, compreso il lavoro a tempo
 
 ed esporle in dettaglio in modo da poter convincere le persone incaricate dell’esame.
 
-Su questo punto, conviene scambiare in modo approfondito con un’avvocata o un avvocato di Taiwan.
+Su questo punto, conviene confrontarsi in modo approfondito con un’avvocata o un avvocato di Taiwan.
 
 ​
 
 **4. Quali punti devono osservarsi quando l’indirizzo di iscrizione della società (per esempio un locale di ristorazione) è preso in locazione?**
 
-La costituzione della società dura circa **3 mesi**, l’ottenimento dell’autorizzazione di lavoro (工作許可) e della carta di soggiorno circa **1 mese**,
+La costituzione della società dura circa **3 mesi**, l’ottenimento dell’autorizzazione di lavoro (工作許可) e delil certificato di soggiorno per stranieri circa **1 mese**,
 
 perciò l’inizio del contratto va fissato il più tardi possibile.
 
@@ -109,9 +109,9 @@ si può, se del caso, proporre l’autenticazione del contratto di locazione (�
 
 **5. Si può, nella costituzione della società, prendere in locazione un locale commerciale di uffici?**
 
-Ciò dipende dai voci di attività (營業項目) della società.
+Ciò dipende dalle voci di attività (營業項目) della società.
 
-Esempio. Se il voce di attività è la ristorazione e si intende prendere in locazione un locale commerciale di uffici, l’apertura del conto bancario sarà molto difficile.
+Esempio. Se la voce di attività è la ristorazione e si intende prendere in locazione un locale commerciale di uffici, l’apertura del conto bancario sarà molto difficile.
 
 Come già indicato, la banca esamina il contratto di locazione e ispeziona sul posto l’indirizzo della società.
 

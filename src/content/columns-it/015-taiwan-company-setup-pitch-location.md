@@ -23,7 +23,7 @@ Oltre alla situazione del mercato,
 
 un altro punto importante è
 
-sapere se quell’indirizzo si situa in una zona dove l’esercizio di un «stabilimento di ristorazione» è possibile.
+Occorre verificare se quell’indirizzo si trova in una zona in cui un esercizio di ristorazione è ammesso.
 
 ​
 
@@ -35,7 +35,7 @@ si può utilizzare il sistema di «consultazione preventiva del locale» (營業
 
 ​
 
-Si può verificare senza oneri se, all’indirizzo che si intende usare, l’apertura di un «stabilimento di ristorazione» è possibile.
+Si può verificare senza oneri se, all’indirizzo che si intende usare, l’apertura di un «esercizio di ristorazione» è possibile.
 
 Tuttavia, per questa verifica, deve caricarsi l’«estratto di iscrizione immobiliare di tipo 2» (建物登記第二類謄本, che contiene le informazioni dettagliate dell’edificio) dell’indirizzo del locale.
 
@@ -45,7 +45,7 @@ Se ha difficoltà a recarsi di persona all’ufficio dell’amministrazione fond
 
 può chiedere l’aiuto di un conoscente a Taiwan, del locatore, di un agente immobiliare o di un avvocato.
 
-Se il risultato della verifica indica che lo stabilimento di ristorazione non è possibile, più tardi, nell’iscrizione della persona giuridica (公司登記), l’amministrazione comunale potrebbe non accettare l’iscrizione.
+Se il risultato della verifica indica che l’esercizio di ristorazione non è possibile, più tardi, nell’iscrizione della società (公司登記), l’amministrazione comunale potrebbe non accettare l’iscrizione.
 
 Presti quindi attenzione a questo punto.
 
@@ -63,17 +63,17 @@ Secondo le [«istruzioni di funzionamento del servizio di informazione sui local
 
 dal 1 gennaio 2023, nella domanda di iscrizione di costituzione, di trasferimento di sede o di aggiunta di voci di attività di una società o di un commercio (compresa la succursale (分公司) e la sede secondaria (分支機構)), il risultato della consultazione preventiva del locale **deve** essere allegato alla domanda di iscrizione, indipendentemente dal settore.
 
-L’elenco sotto dei «voci di attività oggetto di una verifica d’ufficio» (主動查詢之營業項目) designa le voci di attività che l’ufficio del commercio verifica d’ufficio in più durante l’esame dell’iscrizione (隨案主動查詢) quando la voce figura nella domanda ma manca nel risultato allegato; il fatto che una voce non figuri in questo elenco non significa che la verifica sia dispensata.
+L’elenco sotto delle «voci di attività oggetto di una verifica d’ufficio» (主動查詢之營業項目) designa le voci di attività che l’ufficio del commercio verifica d’ufficio in più durante l’esame dell’iscrizione (隨案主動查詢) quando la voce figura nella domanda ma manca nel risultato allegato; il fatto che una voce non figuri in questo elenco non significa che la verifica sia dispensata.
 
-Se si apre in un luogo dove lo stabilimento di ristorazione non è possibile, una sanzione amministrativa pecuniaria (罰鍰) dell’autorità competente può più tardi essere inflitta.
+Se si apre in un luogo dove l’esercizio di ristorazione non è possibile, una sanzione amministrativa pecuniaria (罰鍰) dell’autorità competente può più tardi essere inflitta.
 
 ![«voci di attività oggetto di una verifica d’ufficio» (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
 «voci di attività oggetto di una verifica d’ufficio» (主動查詢之營業項目)
 
-Tale è l’essenziale; per altre domande può rivolgersi a un’avvocata o a un avvocato di Taiwan tramite la pagina dei contatti, indicando la lingua desiderata tra inglese, cinese (中文), giapponese e coreano; un termine di risposta non è promesso.
+Questo è l’essenziale; per altre domande può rivolgersi a un’avvocata o a un avvocato di Taiwan tramite la pagina dei contatti, indicando la lingua desiderata tra inglese, cinese (中文), giapponese e coreano; un termine di risposta non è promesso.
 
-Le regole delle autorità amministrative possono cambiare di frequente; prima dell’iscrizione della persona giuridica, conviene confermare la regolamentazione più recente.
+Le regole delle autorità amministrative possono cambiare di frequente; prima dell’iscrizione della società, conviene confermare la regolamentazione più recente.
 
 ---
 

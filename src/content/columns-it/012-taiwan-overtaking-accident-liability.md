@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Immagine che spiega la valutazione della responsabilità in caso di incidente di sorpasso a Taiwan e la procedura di sorpasso sicuro](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Quando il veicolo davanti circola lentamente, sorpassare (超車) può sembrare un gesto abituale, ma si tratta di un comportamento di guida di rischio considerevole. Prima di cominciare il sorpasso, si deve esaminare insieme il tratto di strada, la situazione del traffico nei 2 sensi, il movimento dei veicoli che precedono e lo spazio per tornare in sicurezza alla corsia di partenza.
+Quando il veicolo davanti circola lentamente, sorpassare (超車) può sembrare un gesto abituale, ma si tratta di un comportamento di guida di rischio considerevole. Prima di cominciare il sorpasso, si deve esaminare insieme il tratto di strada, la situazione del traffico nei 2 sensi, il movimento dei veicoli che precedono e lo spazio per tornare in sicurezza alla corsia originaria.
 
 ## Condizioni di sorpasso fissate dall'articolo 101 del regolamento di sicurezza della circolazione stradale (道路交通安全規則)
 
@@ -27,7 +27,7 @@ Per sorpassare il veicolo davanti nella stessa corsia, il conducente del veicolo
 
 Il veicolo di dietro può sorpassare solo dopo che il veicolo davanti ha rallentato e si è scostato, o ha manifestato la sua volontà di cedere il passaggio con un segnale della mano o con l'indicatore destro.
 
-In seguito, il veicolo che sorpassa deve accendere l'indicatore sinistro, passare a sinistra mantenendo una distanza di almeno 0,5 metri dal veicolo davanti e, una volta assicurata una distanza di sicurezza, accendere l'indicatore destro e tornare in sicurezza alla corsia di partenza.
+In seguito, il veicolo che sorpassa deve accendere l'indicatore sinistro, passare a sinistra mantenendo una distanza di almeno 0,5 metri dal veicolo davanti e, una volta assicurata una distanza di sicurezza, accendere l'indicatore destro e tornare in sicurezza alla corsia originaria.
 
 Quest'ordine di segnali e di precedenza nella stessa corsia non significa che il sorpasso sarebbe autorizzato in un luogo o in una condizione interdetti. Prima di cominciare il sorpasso, tutte le condizioni dell'articolo 101 devono essere valutate insieme.
 
@@ -43,7 +43,7 @@ B ha sofferto lesioni gravi alla testa ed è deceduto sul luogo; A ha perso la c
 
 I congiunti di A e di B hanno inizialmente ritenuto che il brusco cambio di corsia del veicolo n. 2 fosse la causa principale della collisione. Il caso ha dato luogo a un processo e, nel corso della procedura, sono state svolte più perizie (鑑定) dell'incidente.
 
-Secondo il risultato della perizia, A sopportava la responsabilità principale di questa collisione. Questa conclusione era limitata ai fatti di questo caso. La perizia ha tenuto conto insieme del fatto che A voleva sorpassare 2 veicoli davanti che circolavano uno dietro l'altro, di essersi impegnato nella corsia di senso opposto, di circolare a una velocità che lasciava un margine di frenata insufficiente, che i segnali di clacson e di fari prescritti erano mancati, nonché il movimento di cambio di corsia del veicolo n. 2, la struttura della strada e delle corsie e le altre prove raccolte.
+Secondo il risultato della perizia, La responsabilità principale della collisione faceva capo ad A. Questa conclusione era limitata ai fatti di questo caso. La perizia ha considerato insieme il tentativo di A di sorpassare 2 veicoli che lo precedevano incolonnati, l'immissione nella corsia di senso opposto, una velocità che non lasciava il tempo di frenare, l'omessa segnalazione con clacson o fari, il movimento di cambio di corsia del veicolo n. 2, la struttura della strada e delle corsie e le altre prove raccolte.
 
 Che, in certi casi, tali risultati di perizia intervengano non significa che 1 omissione di un segnale prescritto fissi sempre la responsabilità. La colpa (過失) in un incidente di sorpasso dipende dal luogo dell'incidente, dalla configurazione delle corsie, dalla velocità, dai movimenti dei veicoli, dai segnali, dagli intervalli di tempo, dalla visibilità e dalle altre prove.
 
@@ -53,7 +53,7 @@ Prima di sorpassare, si deve prima verificare se il luogo o la situazione del tr
 
 Il rispetto dell'articolo 101 è importante, ma non garantisce di per sé né che l'incidente sarà evitato né un esito determinato della perizia o del processo. I conducenti devono riservare un margine di sicurezza supplementare e adattarsi alla situazione davanti.
 
-A titolo di complemento, può consultarsi [l'illustrazione delle regole e della procedura di sorpasso](https://gonews.com.tw/car/daily/21934/). Trattandosi di una fonte secondaria, nella verifica delle condizioni giuridiche, conviene leggere anche le regole ufficiali in vigore.
+Per un approfondimento si può consultare [l'illustrazione delle regole e della procedura di sorpasso](https://gonews.com.tw/car/daily/21934/). Trattandosi di una fonte secondaria, nella verifica delle condizioni giuridiche, conviene leggere anche le regole ufficiali in vigore.
 
 ---
 

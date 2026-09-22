@@ -13,7 +13,7 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 ![Hlavný obrázok](../images/015-taiwan-company-setup-pitch-location/featured-01.jpg)
 
-(Požiadavky miestnych samospráv na Taiwane sa líšia; nasledujúci text je príkladom otvorenia reštauračnej prevádzky v meste Taipei.)
+(Požiadavky miestnych samospráv na Taiwane sa líšia; nasledujúci text je príkladom otvorenia reštauračnej prevádzky v Taipeji.)
 
 ![](../images/015-taiwan-company-setup-pitch-location/img-01.jpg)
 
@@ -27,9 +27,9 @@ to, či táto adresa leží v zóne, kde je prevádzka „reštaurácie“ možn
 
 ​
 
-Ak začínate činnosť v meste Taipei,
+Ak začínate činnosť v Taipeji,
 
-môžete použiť systém „predbežného overenia prevádzkarne“ (營業場所預先查詢) Obchodného úradu mesta Taipei (臺北市商業處).
+môžete použiť systém „predbežného overenia prevádzkarne“ (營業場所預先查詢) Obchodného úradu mesta Taipeja (臺北市商業處).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
@@ -59,7 +59,7 @@ Pri zápise spoločnosti sa však často zapisuje viacero odvetví naraz a čast
 
 Preto v praxi nie je nutné pri zápise spoločnosti overovať všetky odvetvia.
 
-Podľa „[prevádzkových pokynov služby informácií o prevádzkarňach mesta Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) “(臺北市營業場所協助查詢服務作業須知) a platného návodu mesta Taipei,
+Podľa „[prevádzkových pokynov služby informácií o prevádzkarňach mesta Taipeja](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“ (臺北市營業場所協助查詢服務作業須知) a platného oznámenia mesta Taipei,
 
 od 1. 1. 2023 pri žiadosti o zápis založenia, premiestnenia sídla alebo doplnenia odvetvia činnosti spoločnosti alebo podniku (vrátane pobočky (分公司) a podriadenej prevádzky (分支機構)) výsledok predbežného overenia prevádzkarne **musí** byť pripojený k žiadosti o zápis, bez ohľadu na odvetvie.
 

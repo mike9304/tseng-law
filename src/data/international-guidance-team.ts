@@ -4021,7 +4021,7 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Nadácia právnej pomoci, pobočka Taichung',
+        'Nadácia právnej pomoci, pobočka v Taichungu',
       ],
     },
     'chang-rongxuan': {
@@ -4053,13 +4053,13 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordinuje termíny porád a komunikáciu pre klientov z Kórey.',
-        'Na základe vzdelania v informatike podporuje výmenu medzi regiónmi systémami dokumentov a pracovnými postupmi.',
+        'Na základe vzdelania v informatike podporuje výmenu medzi regiónmi pomocou systémov dokumentov a pracovných postupov.',
       ],
       education: [
         'Bakalársky titul (B.S.) v informatike, National Cheng Kung University',
       ],
       experience: [
-        'Úsek kórejských operácií, Hovering International Law Firm',
+        'Úsek prevádzky pre Kóreu, Hovering International Law Firm',
       ],
     },
     'huang-shengping': {

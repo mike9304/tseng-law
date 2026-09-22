@@ -73,11 +73,11 @@ Zamestnanec si preto musí túto lehotu ustrážiť.
 
 Inými slovami,
 
-právo Taiwanu, či vina leží na strane podniku,
+taiwanské právo priznáva každej strane, podľa toho, či vina leží na strane podniku,
 
 alebo na strane zamestnanca,
 
-priznáva každej zo strán právo nevyplatiť odstupné, alebo ho žiadať.
+buď právo odstupné nevyplatiť, alebo právo ho žiadať.
 
 Niekedy, ak vina leží na oboch stranách pracovného vzťahu,
 
@@ -87,7 +87,7 @@ podľa toho, kto prvý ukončí zmluvu s dostatočným dôvodom,
 
 odstupné nemusí byť vyplatené, alebo môže byť žiadané.
 
-Preto v sporoch práce (勞資糾紛) na Taiwane
+Preto v pracovnoprávnych sporoch (勞資糾紛) na Taiwane
 
 je „**čas**“ veľmi dôležitý.
 

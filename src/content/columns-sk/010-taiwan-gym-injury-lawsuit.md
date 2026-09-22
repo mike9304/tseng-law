@@ -17,11 +17,11 @@ Na základe veci, v ktorej sa kórejský vysokoškolský študent zranil, keď v
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
-Nehoda nastala v posilňovni v Taichung (臺中) pri tréningu mŕtveho ťahu (硬舉) vedenom trénerom. Po úraze nestačí ostať len pri skutočnosti, že k nehode došlo vo vnútri posilňovne; treba spoločne posúdiť športové skúsenosti a zdravotný stav používateľa, druh cvičenia a záťaž, vysvetlenie a pokyny trénera, pohyb a reakciu v onom okamihu, príčinnú súvislosť (因果關係) medzi úrazom a cvičením a podklady, ktoré dokladajú uplatňovanú škodu.
+Nehoda nastala v posilňovni v Taichungu (臺中) pri tréningu mŕtveho ťahu (硬舉) vedenom trénerom. Po úraze nestačí ostať len pri skutočnosti, že k nehode došlo vo vnútri posilňovne; treba spoločne posúdiť športové skúsenosti a zdravotný stav používateľa, druh cvičenia a záťaž, vysvetlenie a pokyny trénera, pohyb a reakciu v onom okamihu, príčinnú súvislosť (因果關係) medzi úrazom a cvičením a podklady, ktoré dokladajú uplatňovanú škodu.
 
-Zastupovala som žalobcu, kórejského študenta, ako procesná zástupkyňa (訴訟代理人). Okresný súd v Taichung 24. 1. 2022 v rozsudku 1. stupňa v spotrebiteľskej veci č. 7 roku 109 kalendára Čínskej republiky (109年度消字第7號) nariadil žalovanému zaplatiť [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) a úroky uvedené v rozsudku.
+Zastupovala som žalobcu, kórejského študenta, ako procesná zástupkyňa (訴訟代理人). Okresný súd v Taichungu 24. 1. 2022 v rozsudku 1. stupňa v spotrebiteľskej veci č. 7 roku 109 kalendára Čínskej republiky (109年度消字第7號) nariadil žalovanému zaplatiť [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) a úroky uvedené v rozsudku.
 
-Potom tlač uviedla, že strany uzavreli zmier (和解) v 2. inštancii. Samotný oficiálny rozsudok 1. inštancie neumožňuje potvrdiť výsledok 2. inštancie ani výšku zmieru; nemožno to čítať ako konečný výsledok rozsudku 1. inštancie.
+Potom tlač uviedla, že strany uzavreli zmier (和解) v 2. inštancii. Samotný oficiálny rozsudok 1. inštancie neumožňuje potvrdiť výsledok 2. inštancie ani výšku zmieru; uvedený zmier v tlači nemožno brať ako potvrdené konečné vybavenie veci v 1. inštancii.
 
 Názvy tlačových správ, internetových príspevkov a právnych komentárov k tejto veci, v preklade, sú nasledujúce. Názvy nižšie slúžia len na predstavenie obsahu každého odkazu; neznamenajú, že tento text sám zisťuje fakty.
 
@@ -85,7 +85,7 @@ Ak však prichádza do úvahy ďalší dôvod nároku, ako zmluvná zodpovednos�
 
 Aby bolo možné vysvetliť zodpovednosť, príčinnú súvislosť a škodu, je vhodné zhromaždiť spoločne nielen snímky CCTV (監視器影像) z okamihu nehody, ale aj zdravotnú dokumentáciu (病歷) a lekárske osvedčenie (診斷證明書), stvrdenky za liečebné výdavky (醫療費用), dopravu k lekárovi (就醫交通費) a ošetrovateľskú starostlivosť (看護費用), správy vymenené s posilňovňou a trénerom, vyhlásenia svedkov, rezerváciu lekcií a evidenciu dochádzky, plán cvičenia a záznam tréningu. Je vhodné v možnom rozsahu odfotografovať poranenú časť tela a v možnom rozsahu aj stav miesta nehody a usporiadať podľa dátumu priebeh pred nehodou a po nej i obsah komunikácie, aby neskôr bolo ľahšie dokumenty porovnať.
 
-Zábery môžu byť po uplynutí doby uchovania prepísané novým záznamom (影像可能被覆蓋) alebo sa z iných dôvodov stať nepoužiteľnými. Možno preto zvážiť žiadosť posilňovni o zachovanie prostredníctvom listu s potvrdením obsahu (存證信函) alebo písomnosti v mene advokátky (律師函), ktorá konkrétne zaznamená potrebný časový úsek, miesto a polohu kamery. Táto písomnosť je praktickým opatrením na zaznamenanie toho, čo a kedy bolo žiadané. Sama osebe však protistrane neukladá novú právnu povinnosť snímky zachovať ani nebráni ich vymazaniu a samotná okolnosť, že snímky nezostali, tiež nevedie súd k automaticky nepriaznivému posúdeniu.
+Zábery môžu byť po uplynutí doby uchovania prepísané novým záznamom (影像可能被覆蓋) alebo sa z iných dôvodov stať nepoužiteľnými. Možno preto zvážiť žiadosť posilňovni o zachovanie prostredníctvom listu s potvrdením obsahu (存證信函) alebo listu advokátky (律師函), ktorá konkrétne zaznamená potrebný časový úsek, miesto a polohu kamery. Táto písomnosť je praktickým opatrením na zaznamenanie toho, čo a kedy bolo žiadané. Sama osebe však protistrane neukladá novú právnu povinnosť snímky zachovať ani nebráni ich vymazaniu a samotná okolnosť, že snímky nezostali, súd z toho automaticky nevyvodzuje nepriaznivý záver.
 
 Ak okolnosti nehody môžu naplniť znaky trestného činu, možno rýchlo podať oznámenie, aby vyšetrovací orgán (偵查機關) posúdil, či existuje zákonný základ zaistenia alebo zachovania. Oznámenie neznamená, že polícia alebo prokuratúra nutne zaistí CCTV, preto treba tiež zhromaždiť dokumenty, ktoré strana môže zachovať sama, ako zdravotné a komunikačné podklady.
 
@@ -103,13 +103,13 @@ Položky škody, ktorých uplatnenie možno posúdiť, sú nasledujúce. Skutoč
 
 ## 5. Aj keď má posilňovňa poistenie zodpovednosti (責任保險), môžu byť existencia náhrady a výška sporné?
 
-Áno. Skutočnosť, že poistenie existuje, môže byť významná pri posudzovaní zdroja náhrady, ale sama osebe neuznáva právnu zodpovednosť posilňovne alebo trénera ani neurčuje sumu na výplatu. Medzi poisťovateľom (保險人) a stranami môžu vzniknúť spory o limit krytia a výlukové doložky, príčinnú súvislosť medzi nehodou a úrazom a nutnosť a výšku každej položky škody.
+Áno. Skutočnosť, že poistenie existuje, môže byť významná pri posudzovaní zdroja náhrady, ale sama osebe nezakladá právnu zodpovednosť posilňovne alebo trénera ani neurčuje sumu na výplatu. Medzi poisťovateľom (保險人) a stranami môžu vzniknúť spory o limit krytia a výlukové doložky, príčinnú súvislosť medzi nehodou a úrazom a nutnosť a výšku každej položky škody.
 
 Najmä strata pracovnej schopnosti, zníženie príjmu v dobe zotavenia a nemajetková škoda môžu vyžadovať zdravotné, príjmové a profesijné podklady alebo stanovisko znalca. Suma, ktorú navrhne poisťovateľ, alebo tá, ktorú žiada poškodený, sa nestáva ihneď sumou uznanou súdom a výsledok posúdenia postihnutia tiež náhradu automaticky neurčuje. V skutočnom postupe treba spoločne overiť poistku a podmienky, obsah oznámenia nehody, odpoveď poisťovateľa, priebeh liečby a podklady škody.
 
 Ak ste utrpeli úraz v posilňovni, je dôležité najprv získať potrebné ošetrenie, zachovať dokumenty, ktoré ešte možno zaistiť, kým nezmiznú, a včas získať individuálnu právnu radu k lehotám a postupom, ktoré sa na vec môžu vzťahovať. Vyjednávanie, spotrebiteľská sťažnosť (消費申訴) alebo zmierovacie konanie (調解), trestné oznámenie a občiansky nárok na náhradu škody sú všetky prostriedky, ktoré možno podľa veci zvoliť, a nie sú postupmi, ktoré by bolo vždy nutné podstúpiť vcelku.
 
-Pád v prevádzkarni, ujma na zdraví spôsobená jedlom a úraz pri odbornej službe môžu mať tiež za sporné body povinnosť bezpečnosti, príčinnú súvislosť, škodu a dôkaz. Záver z veci posilňovne však nemožno bez zmeny uplatniť na inú nehodu, preto treba zmluvu, konanie a príslušné normy každého prípadu posúdiť osobitne.
+Pád v prevádzkarni, ujma na zdraví spôsobená jedlom a úraz pri odbornej službe môžu tiež otvoriť spor o povinnosť bezpečnosti, príčinnú súvislosť, škodu a dôkazy. Záver z veci posilňovne však nemožno bez zmeny uplatniť na inú nehodu, preto treba zmluvu, konanie a príslušné normy každého prípadu posúdiť osobitne.
 
 ---
 

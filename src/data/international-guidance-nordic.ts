@@ -1858,7 +1858,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Säilytyspaikka ja pääsy',
           paragraphs: [
             'Lähetyksenne sisältö säilytetään paikassa, joka ei ole julkisesti saatavilla. Vain toimiston valtuutetut henkilöt saavat käyttää sitä pyynnön käsittelemiseksi.',
-            'Tämä sivu ei anna ehdotonta turvallisuuslupausta. Mikään siirtotie eikä mikään säilytyspaikka ole täysin turvallinen; arkaluonteiset asiakirjat tulisi siksi lähettää vain asianajajan erityisen ohjeen jälkeen.',
+            'Tämä sivu ei anna ehdotonta lupausta turvallisuudesta. Mikään siirtotie eikä mikään säilytyspaikka ole täysin turvallinen; arkaluonteiset asiakirjat tulisi siksi lähettää vain asianajajan erityisen ohjeen jälkeen.',
           ],
         },
         {

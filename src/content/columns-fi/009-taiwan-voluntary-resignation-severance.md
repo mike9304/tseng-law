@@ -31,7 +31,7 @@ On kuitenkin **poikkeustapauksia**.
 
 Seuraavissa erityistilanteissa työnantajan on maksettava eroraha työntekijälle myös silloin, kun tämä irtisanoutuu itse (työstandardilain 14 artikla, joka soveltaa 17 artiklaa vastaavasti, 勞動基準法第14條):
 
-1. Kun työnantaja työsopimusta (勞動契約) solmittaessa antaa virheellisen tahdonilmaisun (虛偽意思表示), niin että työntekijä erehtyy siitä, ja vahingon vaara on olemassa
+1. Kun työnantaja työsopimusta (勞動契約) solmittaessa antaa totuudenvastaisen tahdonilmaisun (虛偽意思表示), niin että työntekijä erehtyy siitä, ja vahingon vaara on olemassa
 
 (esimerkiksi kun työnantaja lupaa lähettää työntekijän työhönastumisen jälkeen ulkomaiseen sivuliikkeeseen, jota ei todellisuudessa ole)
 
@@ -73,7 +73,7 @@ Siksi työntekijöiden on pidettävä määräaika tarkasti silmällä.
 
 Toisin sanoen:
 
-Taiwanin oikeus antaa, sen mukaan sijaitsiko syy työnantajassa
+Taiwanin oikeus antaa sen mukaan, sijaitsiko syy työnantajassa
 
 tai työntekijässä,
 

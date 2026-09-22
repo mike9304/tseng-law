@@ -43,13 +43,13 @@ B ha sofferto lesioni gravi alla testa ed è deceduto sul luogo; A ha perso la c
 
 I congiunti di A e di B hanno inizialmente ritenuto che il brusco cambio di corsia del veicolo n. 2 fosse la causa principale della collisione. Il caso ha dato luogo a un processo e, nel corso della procedura, sono state svolte più perizie (鑑定) dell'incidente.
 
-Secondo il risultato della perizia, La responsabilità principale della collisione faceva capo ad A. Questa conclusione era limitata ai fatti di questo caso. La perizia ha considerato insieme il tentativo di A di sorpassare 2 veicoli che lo precedevano incolonnati, l'immissione nella corsia di senso opposto, una velocità che non lasciava il tempo di frenare, l'omessa segnalazione con clacson o fari, il movimento di cambio di corsia del veicolo n. 2, la struttura della strada e delle corsie e le altre prove raccolte.
+Secondo il risultato della perizia, la responsabilità principale della collisione faceva capo ad A. Questa conclusione era limitata ai fatti di questo caso. La perizia ha considerato insieme il tentativo di A di sorpassare 2 veicoli che lo precedevano incolonnati, l'immissione nella corsia di senso opposto, una velocità che non lasciava il tempo di frenare, l'omessa segnalazione con clacson o fari, il movimento di cambio di corsia del veicolo n. 2, la struttura della strada e delle corsie e le altre prove raccolte.
 
 Che, in certi casi, tali risultati di perizia intervengano non significa che 1 omissione di un segnale prescritto fissi sempre la responsabilità. La colpa (過失) in un incidente di sorpasso dipende dal luogo dell'incidente, dalla configurazione delle corsie, dalla velocità, dai movimenti dei veicoli, dai segnali, dagli intervalli di tempo, dalla visibilità e dalle altre prove.
 
 ## Punti da verificare per valutare la responsabilità dell'incidente
 
-Prima di sorpassare, si deve prima verificare se il luogo o la situazione del traffico entra nell'interdizione di sorpassare. Se la procedura della stessa corsia si applica, dia il segnale di clacson o di fari prescritto, senza forzare il veicolo davanti a cedere, attenda un segnale chiaro di cessione del passo e concluda il sorpasso con uno scostamento sufficiente e una distanza di ritorno sicura.
+Prima di sorpassare, si deve prima verificare se il luogo o la situazione del traffico entra nell'interdizione di sorpassare. Se si applica la procedura della stessa corsia, si usi il segnale di clacson o di fari prescritto, senza forzare il veicolo davanti a cedere, attenda un segnale chiaro di cessione del passo e concluda il sorpasso con uno scostamento sufficiente e una distanza di ritorno sicura.
 
 Il rispetto dell'articolo 101 è importante, ma non garantisce di per sé né che l'incidente sarà evitato né un esito determinato della perizia o del processo. I conducenti devono riservare un margine di sicurezza supplementare e adattarsi alla situazione davanti.
 

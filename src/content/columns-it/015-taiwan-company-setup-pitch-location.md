@@ -19,9 +19,9 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Quando si inizia un’attività di ristorazione, il primo problema è trovare l’indirizzo del locale (營業地址).
 
-Oltre alla situazione del mercato,
+Oltre alla situazione del mercato, se ne aggiunge un altro.
 
-un altro punto importante è
+Un altro punto importante è la zona in cui un esercizio di ristorazione è ammesso.
 
 Occorre verificare se quell’indirizzo si trova in una zona in cui un esercizio di ristorazione è ammesso.
 
@@ -59,9 +59,9 @@ Tuttavia, nell’iscrizione della società, diverse voci di attività sono di fr
 
 Nella pratica, peraltro, non è necessario verificare tutte le voci di attività nell’iscrizione della società.
 
-Secondo le [«istruzioni di funzionamento del servizio di informazione sui locali della città di Taipei»](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) (臺北市營業場所協助查詢服務作業須知) e la guida in vigore della città di Taipei,
+Si applicano le [«istruzioni di funzionamento del servizio di informazione sui locali della città di Taipei»](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) (臺北市營業場所協助查詢服務作業須知) e la guida in vigore della città di Taipei.
 
-dal 1 gennaio 2023, nella domanda di iscrizione di costituzione, di trasferimento di sede o di aggiunta di voci di attività di una società o di un commercio (compresa la succursale (分公司) e la sede secondaria (分支機構)), il risultato della consultazione preventiva del locale **deve** essere allegato alla domanda di iscrizione, indipendentemente dal settore.
+Dal 1 gennaio 2023, nella domanda di iscrizione di costituzione, di trasferimento di sede o di aggiunta di voci di attività di una società o di un’impresa (compresa la succursale (分公司) e la sede secondaria (分支機構)), il risultato della consultazione preventiva del locale **deve** essere allegato alla domanda di iscrizione, indipendentemente dal settore.
 
 L’elenco sotto delle «voci di attività oggetto di una verifica d’ufficio» (主動查詢之營業項目) designa le voci di attività che l’ufficio del commercio verifica d’ufficio in più durante l’esame dell’iscrizione (隨案主動查詢) quando la voce figura nella domanda ma manca nel risultato allegato; il fatto che una voce non figuri in questo elenco non significa che la verifica sia dispensata.
 
@@ -73,7 +73,7 @@ Se si apre in un luogo dove l’esercizio di ristorazione non è possibile, una 
 
 Questo è l’essenziale; per altre domande può rivolgersi a un’avvocata o a un avvocato di Taiwan tramite la pagina dei contatti, indicando la lingua desiderata tra inglese, cinese (中文), giapponese e coreano; un termine di risposta non è promesso.
 
-Le regole delle autorità amministrative possono cambiare di frequente; prima dell’iscrizione della società, conviene confermare la regolamentazione più recente.
+Le regole delle autorità amministrative possono cambiare di frequente; prima dell’iscrizione della società, conviene confermare la normativa più recente.
 
 ---
 

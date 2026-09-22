@@ -1076,7 +1076,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Cu ce ne ocupăm',
           paragraphs: [
-            'Hovering International Law Firm este un cabinet de avocatură stabilit în Taiwan. Lucrează potrivit dreptului taiwanez și are birouri în Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) și Pingtung (屏東). Consiliem întreprinderi, susținem cauze în fața instanțelor și însoțim clienți din străinătate în pașii necesari în Taiwan.',
+            'Hovering International Law Firm este un cabinet de avocatură stabilit în Taiwan. Lucrează potrivit dreptului taiwanez și are birouri în Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) și Pingtung (屏東). Cabinetul consiliază întreprinderi, susține cauze în fața instanțelor și însoțește clienți din străinătate în pașii necesari în Taiwan.',
             'Tot conținutul de aici este general. Rezultatul unei cauze depinde de fapte, de normele aplicabile și de momentul respectiv. Aceste informații nu înlocuiesc discuția cu un avocat asupra documentelor dumneavoastră.',
           ],
         },
@@ -1182,7 +1182,7 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) a fost înființat în 2016 de avocați care au studiat la National Taiwan University (國立臺灣大學). Denumirea chineză 昊鼎 unește caracterul 昊 („cer larg”) cu 鼎 („temelie solidă”) și descrie orientarea cabinetului încă de la înființare.',
             'Avem birouri în Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) și Pingtung (屏東). Biroul din Kaohsiung se concentrează pe conducerea întreprinderilor și tratează litigii civile, penale și administrative. Biroul din Taichung tratează cauze din construcții, proprietate intelectuală și cauze cu legătură cu Coreea și Japonia. Biroul din Pingtung a fost deschis în 2017 pentru nevoile locale.',
-            'Pe lângă activitatea de avocatură există din 2020 și Hovering Accounting Office, care oferă contabilitate și planificare fiscală întreprinzătorilor și persoanelor fizice cu patrimoniu.',
+            'Pe lângă activitatea de avocatură există din 2020 și Hovering Accounting Office, care oferă contabilitate și planificare fiscală întreprinzătorilor și persoanelor fizice înstărite.',
           ],
         },
         {
@@ -1195,8 +1195,8 @@ export const romanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Când ne contactați',
           paragraphs: [
-            'După sosirea rezumatului dumneavoastră, un avocat examinează conținutul și vorbește apoi despre obiectul posibil al mandatului, despre documentele încă necesare și despre pașii următori. Pentru chestiuni fiscale sau contabile, cabinetul poate lucra împreună cu secțiunea de contabilitate într-un singur flux.',
-            'Rezultatul fiecărei cauze depinde de fapte și de documentele disponibile; nu promitem un rezultat. Dacă aveți nevoie de un răspuns obligatoriu pentru situația dumneavoastră, documentele trebuie discutate cu un avocat într-una dintre cele patru limbi de consultanță.',
+            'După sosirea rezumatului dumneavoastră, un avocat examinează conținutul și vorbește apoi despre obiectul posibil al mandatului, despre documentele încă necesare și despre pașii următori. Pentru chestiuni fiscale sau contabile, cabinetul poate lucra împreună cu Hovering Accounting Office, în același demers.',
+            'Rezultatul fiecărei cauze depinde de fapte și de documentele disponibile; nu promitem un rezultat. Dacă aveți nevoie de un răspuns pe care să vă puteți întemeia în situația dumneavoastră, documentele trebuie discutate cu un avocat într-una dintre cele patru limbi de consultanță.',
           ],
         },
       ],

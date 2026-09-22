@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Imagine care explică aprecierea răspunderii într-un accident de depășire în Taiwan și procedura de depășire sigură](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Când vehiculul din față circulă încet, depășirea (超車) poate părea o alegere obișnuită, dar este un comportament de conducere cu risc considerabil. Înainte de a începe depășirea, trebuie examinate împreună tronsonul de drum, situația traficului în ambele sensuri, mișcarea vehiculelor din față și spațiul pentru a reveni în siguranță pe banda de origine.
+Când vehiculul din față circulă încet, depășirea (超車) poate părea ceva obișnuit, dar este un comportament de conducere cu risc considerabil. Înainte de a începe depășirea, trebuie examinate împreună tronsonul de drum, situația traficului în ambele sensuri, mișcarea vehiculelor din față și spațiul pentru a reveni în siguranță pe banda de origine.
 
 ## Condițiile de depășire fixate de art. 101 din regulamentul de siguranță a circulației rutiere (道路交通安全規則)
 
@@ -23,7 +23,7 @@ Art. 101 interzice depășirea pe tronsoanele prevăzute cu panouri care indică
 
 În plus, nu puteți depăși în locurile sau pe tronsoanele prevăzute cu un panou de școală sau de spital, în locurile prevăzute cu alte panouri sau mărci de interdicție de depășire, când un vehicul se apropie din sens opus, nici când 2 vehicule sau mai multe circulă unul după altul în față.
 
-Pentru a depăși vehiculul din față pe aceeași bandă, conducătorul vehiculului din spate trebuie mai întâi să claxoneze de 2 ori scurt sau să clipească din faruri. Claxonul și farurile nu trebuie folosite în mod repetat pentru a forța vehiculul din față să cedeze banda.
+Pentru a depăși vehiculul din față pe aceeași bandă, conducătorul vehiculului din spate trebuie mai întâi să claxoneze de 2 ori scurt sau să semnalizeze o singură dată cu farurile. Claxonul și farurile nu trebuie folosite în mod repetat pentru a forța vehiculul din față să cedeze banda.
 
 Vehiculul din spate poate depăși abia după ce vehiculul din față a încetinit și s-a dat la o parte, sau a manifestat voința de a ceda printr-un semn al mâinii sau prin semnalizatorul drept.
 
@@ -37,13 +37,13 @@ Această ordine de semnale și de cedare pe aceeași bandă nu înseamnă că de
 
 ![Schemă de accident care arată traiectoria de depășire a motocicletei și a 2 vehicule din față pe un drum de munte](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A a încercat să depășească ambele vehicule, s-a angajat pe banda opusă și a accelerat. Vehiculul nr. 2 se pregătea și el să depășească vehiculul nr. 1: la mai puțin de 1 secundă după ce a aprins semnalizatorul, s-a angajat pe banda opusă. Motocicleta nu avea o marjă de frânare suficientă și a intrat în coliziune cu vehiculul nr. 2.
+A a încercat să depășească ambele vehicule, s-a angajat pe banda opusă și a accelerat. Vehiculul nr. 2 se pregătea și el să depășească vehiculul nr. 1: la mai puțin de 1 secundă după ce a aprins semnalizatorul, s-a angajat pe banda opusă. Motocicleta nu avea timp suficient pentru a frâna și a intrat în coliziune cu vehiculul nr. 2.
 
 B a suferit leziuni grave la cap și a decedat pe loc; A a pierdut cunoștința și a fost transportat la spital.
 
 Apropiații lui A și B au văzut mai întâi schimbarea bruscă de bandă a vehiculului nr. 2 ca cauza principală a coliziunii. Cauza a dat loc unui proces și, în cursul procedurii, s-au efectuat mai multe expertize (鑑定) ale accidentului.
 
-Potrivit rezultatului expertizei, A suporta răspunderea principală a acestei coliziuni. Această concluzie era limitată la faptele acestei cauze. Expertiza a luat în considerare împreună faptul că A voia să depășească 2 vehicule din față care circulau unul după altul, că se angajase pe banda opusă, că circula cu o viteză care lăsa abia o marjă de frânare, că semnalele de claxon și de faruri prescrise lipsiseră, precum și mișcarea de schimbare de bandă a vehiculului nr. 2, structura drumului și a benzilor și celelalte probe culese.
+Potrivit rezultatului expertizei, A suporta răspunderea principală a acestei coliziuni. Această concluzie era limitată la faptele acestei cauze. Expertiza a luat în considerare împreună faptul că A voia să depășească 2 vehicule din față care circulau unul după altul, că se angajase pe banda opusă, că circula cu o viteză care lăsa abia timp pentru a frâna, că semnalele de claxon și de faruri prescrise lipsiseră, precum și mișcarea de schimbare de bandă a vehiculului nr. 2, structura drumului și a benzilor și celelalte probe culese.
 
 Faptul că, în unele cauze, astfel de rezultate de expertiză intervin nu înseamnă că o singură omisiune a unui semnal prescris fixează întotdeauna răspunderea. Culpa (過失) într-un accident de depășire depinde de locul accidentului, de configurația benzilor, de viteză, de mișcările vehiculelor, de semnale, de intervalele de timp, de vizibilitate și de celelalte probe.
 

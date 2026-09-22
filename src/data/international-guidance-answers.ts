@@ -784,7 +784,7 @@ export const guidanceAnswers: Record<
     },
     about: {
       answer:
-        'Hovering International Law Firm este un cabinet de avocatură taiwanez, înființat în 2016 de absolvenți ai National Taiwan University (國立臺灣大學), cu birouri în Taipei, Kaohsiung, Taichung și Pingtung. Din 2020 există și o secțiune de contabilitate; biroul din Taichung tratează cauze cu legătură cu Coreea și Japonia. Cabinetul nu promite un rezultat. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
+        'Hovering International Law Firm este un cabinet de avocatură taiwanez, înființat în 2016 de absolvenți ai National Taiwan University (國立臺灣大學), cu birouri în Taipei, Kaohsiung, Taichung și Pingtung. Din 2020 există și Hovering Accounting Office; biroul din Taichung tratează cauze cu legătură cu Coreea și Japonia. Cabinetul nu promite un rezultat. Consultanța se desfășoară numai în engleză, chineză, japoneză și coreeană.',
       sources: ['/ro/lawyers', '/ro/services'],
     },
     lawyers: {

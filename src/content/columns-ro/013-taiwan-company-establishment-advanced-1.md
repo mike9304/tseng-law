@@ -13,9 +13,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Imagine de deschidere](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Recent, multe persoane au înființat cu succes o societate (公司) în Taiwan și au obținut o viză de muncă precum și o carte de ședere (外僑居留證),
+Recent, multe persoane au înființat cu succes o societate (公司) în Taiwan și au obținut o viză de muncă precum și o carte de ședere (外僑居留證).
 
-iar întrebările puse frecvent la momentul înființării sunt adunate mai jos.
+Întrebările puse frecvent la momentul înființării sunt adunate mai jos.
 
 Cei care au citit [**fundamentele înființării unei societăți**](/ro/columns/taiwan-company-establishment-basics) pot apoi să se refere și la această parte aprofundată mai detaliată.
 
@@ -29,7 +29,7 @@ Când un străin înființează o societate în Taiwan, trebuie să prezinte un 
 
 Departamentul de examinare a investițiilor trebuie să verifice dacă capitalul (資本額) vizat este realmente folosit în scopuri de investiție
 
-și dacă actori străini nu introduc fonduri sub un alt pretext.
+și dacă persoane străine nu introduc fonduri sub un alt pretext.
 
 La redactarea planului de investiție nu este necesar să se indice adresa exactă a societății; indicarea regiunii este suficientă (exemplu: orașul Taipei). ​
 
@@ -81,7 +81,7 @@ Puteți menționa experiențe profesionale variate, inclusiv munca cu timp parț
 
 și le puteți expune în detaliu astfel încât să puteți convinge persoanele însărcinate cu examinarea.
 
-Pe acest punct, ar trebui să discutați pe larg acest punct cu un avocat din Taiwan.
+Pe acest punct ar trebui să discutați pe larg cu un avocat din Taiwan.
 
 ​
 
@@ -95,15 +95,15 @@ așa că trebuie să fixați începutul contractului cât mai târziu posibil.
 
 Este o perioadă scutită de chirie; o puteți negocia.
 
-Nu este ușor pentru un străin să ia în locațiune un local comercial, iar depozitul de cauțiune (押金) în Taiwan este destul de jos (de obicei 2 luni), astfel că protecția locatorului este limitată;
+Nu este ușor pentru un străin să ia în locațiune un local comercial, iar depozitul de garanție (押金) în Taiwan este destul de jos (de obicei 2 luni), astfel că protecția locatorului este limitată;
 
 locatorii ezită deci să închirieze străinilor.
 
 De aceea recomand să căutați locul de exploatare de timpuriu.
 
-Dacă negocierea cu locatorul nu se desfășoară fluent,
+Dacă negocierea cu locatorul nu decurge bine,
 
-puteți, dacă este cazul, să propuneți autentificarea contractului de locațiune (公證) sau un depozit de cauțiune suplimentar.
+puteți, dacă este cazul, să propuneți autentificarea contractului de locațiune (公證) sau un depozit de garanție suplimentar.
 
 ​
 
@@ -111,7 +111,7 @@ puteți, dacă este cazul, să propuneți autentificarea contractului de locați
 
 Aceasta depinde de ramurile de activitate (營業項目) ale societății.
 
-Ex.) Dacă ramura de activitate este alimentația și se intenționează luarea în locațiune a unui local comercial de birouri, deschiderea contului bancar va fi foarte dificilă.
+De exemplu, dacă obiectul de activitate este alimentația și se intenționează luarea în locațiune a unui local comercial de birouri, deschiderea contului bancar va fi foarte dificilă.
 
 După cum s-a indicat deja, banca examinează contractul de locațiune și inspectează pe loc adresa societății.
 
@@ -119,7 +119,7 @@ După cum s-a indicat deja, banca examinează contractul de locațiune și inspe
 
 dacă este vorba de un local comercial de birouri, înregistrarea societății (公司登記) nu este atunci posibilă.
 
-Ex.) Dacă este vorba de ramuri de activitate posibile într-un local comercial de birouri, precum publicitatea sau comerțul en-gros, societatea poate fi înființată într-un local comercial de birouri. Înainte de încheierea contractului de locațiune
+De exemplu, dacă este vorba de obiecte de activitate posibile într-un local comercial de birouri, precum publicitatea sau comerțul en-gros, societatea poate fi înființată într-un local comercial de birouri. Înainte de încheierea contractului de locațiune
 
 ar trebui să verificați dinainte.
 

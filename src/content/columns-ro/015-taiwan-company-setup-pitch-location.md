@@ -59,7 +59,7 @@ Totuși, la înregistrarea societății, mai multe ramuri sunt adesea înscrise 
 
 Așadar, în practică, nu este necesar să se verifice toate ramurile la înregistrarea societății.
 
-Potrivit „[instrucțiunilor de funcționare a serviciului de informare asupra localurilor orașului Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) ”(臺北市營業場所協助查詢服務作業須知) și ghidului în vigoare al orașului Taipei,
+Potrivit „[Instrucțiunile serviciului de informare asupra localurilor orașului Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)” (臺北市營業場所協助查詢服務作業須知) și avizului în vigoare al orașului Taipei,
 
 de la 1 ianuarie 2023, la cererea de înregistrare a constituirii, a mutării sediului sau a adăugării de ramuri de activitate a unei societăți sau a unui comerț (inclusiv sucursala (分公司) și stabilimentul auxiliar (分支機構)), rezultatul consultării prealabile a localului **trebuie** anexat cererii de înregistrare, independent de sector.
 
@@ -71,7 +71,7 @@ Dacă se deschide într-un loc unde localul de alimentație nu este posibil, o a
 
 „ramuri supuse unei verificări din oficiu” (主動查詢之營業項目)
 
-Acesta este esențialul; pentru alte întrebări vă puteți adresa unui avocat din Taiwan prin pagina Contact a cabinetului; nu promitem un termen de răspuns.
+Aici se încheie prezentarea; pentru alte întrebări vă puteți adresa unui avocat din Taiwan prin pagina Contact a cabinetului; nu promitem un termen de răspuns.
 
 Regulile autorităților administrative se pot schimba des; înainte de înregistrarea societății, este potrivit să se confirme reglementarea cea mai recentă.
 

@@ -688,10 +688,10 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'TIIMIMME',
     title: 'Hoveringin kansainvälinen tiimi',
     description:
-      'Hoveringin asianajajien, operatiivisen johdon ja yhteistyökumppanina toimivan tilitoimiston profiilit.',
+      'Hoveringin asianajajien, Korean toimintojen johdon ja tilintarkastajaosakkaan profiilit.',
     representativeTitle: 'Johtava asianajaja',
     teamTitle: 'Asianajajat ja työntekijät',
-    partnerTitle: 'Yhteistyökumppanina toimiva tilitoimisto',
+    partnerTitle: 'Tilintarkastajaosakas',
     introLabel: 'Esittely',
     educationLabel: 'Koulutus',
     experienceLabel: 'Kokemus',
@@ -3066,11 +3066,11 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Toimisto käsittelee yritysten ja yksityishenkilöiden asioita Taiwanissa englanniksi, japaniksi, koreaksi ja kiinaksi.',
-        'Hän edusti korealaista opiskelijaa kuntosalilla sattunutta vammaa koskevassa vahingonkorvausasiassa ja sai päämiehelleen ensimmäisen asteen tuomion, jossa korvaukseksi määrättiin 1,57 miljoonaa TWD.',
+        'Hän ajoi korealaisen opiskelijan vahingonkorvausasian kuntosalilla sattuneesta vammasta, ja ensimmäinen oikeusaste tuomitsi päämiehen hyväksi 1,57 miljoonan TWD:n korvauksen.',
       ],
       education: [
-        'Maisteri (M.S.), Institute of Finance, National Taiwan University',
-        'Oikeustieteen ja rahoituksen kaksoistutkinto (B.A.), National Chengchi University',
+        'Maisterintutkinto (M.S.) National Taiwan Universityn Institute of Financesta',
+        'Oikeustieteen ja rahoituksen kaksoistutkinto (B.A.) National Chengchi Universitystä',
         'Vaihto-opiskelija Kobe Universityssä ja Waseda Universityssä',
       ],
       experience: [
@@ -3084,7 +3084,7 @@ export const guidanceTeamBios: Record<
         'Aiemmin opetusministeriössä, oikeudellisten asioiden yksikössä (Ministry of Education, Legal Affairs Division), painopisteenä hallinto- ja siviiliasiat.',
         'Kokemusta yliopistoja, opetushenkilöstön oikeuksia ja hallintovalituksia koskevista asioista.',
       ],
-      education: ['Oikeustieteen kandidaatti (LL.B.), National Chung Hsing University'],
+      education: ['Oikeustieteen kandidaatin tutkinto (LL.B.) National Chung Hsing Universitystä'],
       experience: [
         'Opetusministeriö, oikeudellisten asioiden yksikkö (Ministry of Education, Legal Affairs Division)',
         'Asianajaja, Hovering International Law Firm',
@@ -3095,7 +3095,7 @@ export const guidanceTeamBios: Record<
         'Lakimiesavustaja, jolla on pitkä kokemus vanhempana lakimiesavustajana useissa toimistoissa, vastuualueinaan prosessituki, yhtiöoikeus ja ulkomaiset investoinnit.',
         'Tukee menettelyissä, yhtiön perustamisessa, ulkomaisten investointien luvissa, lupahakemuksissa sekä Korean ja Taiwanin vaihdossa.',
       ],
-      education: ['Oikeustieteen kandidaatti (LL.B.), Tunghai University'],
+      education: ['Oikeustieteen kandidaatin tutkinto (LL.B.) Tunghai Universitystä'],
       experience: [
         'Vanhempi lakimiesavustaja, Boyin Law Firm',
         'Vanhempi lakimiesavustaja, Muyang International Law Firm',
@@ -3106,17 +3106,17 @@ export const guidanceTeamBios: Record<
         'Koordinoi neuvonta-aikoja ja viestintää Koreasta tuleville päämiehille.',
         'Tukee toimintojen välistä tiedonvaihtoa asiakirjajärjestelmien ja työnkulkujen avulla, tietojenkäsittelytieteen pohjalta.',
       ],
-      education: ['Kandidaatti (B.S.) tietojenkäsittelytieteessä, National Cheng Kung University'],
+      education: ['Kandidaatintutkinto (B.S.) tietojenkäsittelytieteessä National Cheng Kung Universityssä'],
       experience: ['Korean toiminnot, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'On suorittanut kirjanpidon kandidaatin ja maisterin tutkinnot National Chengchi Universityssä ja johtaa nyt tilitoimistoa.',
+        'On suorittanut kirjanpidon kandidaatin ja maisterin tutkinnot National Chengchi Universityssä ja johtaa nyt tilintarkastustoimistoa.',
         'Tukee yritysasiakkaiden oikeudellisten, verotuksellisten ja taloudellisten riskien kokonaisarviointia.',
       ],
       education: [
-        'Maisteri (M.A.) kirjanpidossa, National Chengchi University',
-        'Kandidaatti (B.A.) kirjanpidossa, National Chengchi University',
+        'Maisterintutkinto (M.A.) kirjanpidossa National Chengchi Universityssä',
+        'Kandidaatintutkinto (B.A.) kirjanpidossa National Chengchi Universityssä',
       ],
       experience: ['Chinshin CPA Firm'],
     },

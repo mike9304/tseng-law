@@ -1,0 +1,61 @@
+WO-F-fi round 3 — Grok 4.7 fix lane
+date: 2026-09-23
+workspace: /Users/son7/Projects/tseng-law-fix-fi-r3
+
+## Rows applied
+98 finding rows (fi-a 36 + fi-b 62). Applied 94. Skipped 4.
+
+fi-a applied: 1–19, 21 (only the per-day calque), 23–36.
+fi-b applied: 1–23, 25, 27–62.
+
+Wording follows the review where it is natural Finnish and keeps the English sense. Digits the checker counts were kept (004 "10 artikla", statutory "1"/"2" counts, dot thousands). The columns disclosure regex was updated from /neuvontavaihe/ to /ei korvaa neuvontaa/.
+
+fi-a 6: the gym-injury bio no longer says she "sai tuomion" (that is a sentence against someone). The first instance awarded 1,57 miljoonan TWD:n korvauksen for the client. The Finnish line never contained the pinned token "TWD 1.57M"; 1,57 was left as it was.
+
+fi-a 21: "(新臺幣) 1 päivää kohden" → "päivää kohden". Korean 1일로 is stripped before the number compare.
+
+## Rows skipped
+- fi-a 20 and fi-b 24 (thousands as spaces, "500 000" / "1 579 589"). ACCEPTED-ROUND skips space thousands separators. The checker groups Finnish with "." (NUMBER_THOUSAND_STYLE.fi = dot). Period grouping left as-is in all 18 columns. 0 instances changed.
+- fi-a 22 and fi-b 26 (delete U+200B; turn 003 Q16–Q20 into headings). Korean and Finnish ZWSP counts already match (003: 52, 005: 8, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3). Deleting them, or promoting body lines to ## headings, changes the checker block count or ZWSP count. Left in place. 0 instances changed.
+- fi-a 21, the other quoted "1"s: "alle 1 vuotta" and "1 seuraavista" (001), "2 yhtiön … 1 oikeushenkilöksi" (004), "enemmän kuin 1 ulkomaan kansalaisen" (005), "vain 1 puolen" and "1 nimeen" (007). Those are statutory counts, not the 1일로 calque. Digits kept.
+
+## Systemic patterns
+- read_time partitive "lukuaikaa" → nominative "lukuaika": 18 (every column).
+- Short UI te-imperative → singular imperative: 15 (Vieritä alaspäin, Katso artikkelit, Katso tiedot, Katso kaikki artikkelit, Lue lisää, Lähetä yhteydenottopyyntö ×2, Lähetä pyyntö, Ohita navigointi ja siirry sisältöön, Avaa artikkeliluettelo alkuperäiskielellä, Keskeytä/Toista/Toista video uudelleen, Seuraa, Kopioi sähköpostiosoite). Running-text teitittely left.
+- 營利事業所得稅 "voittoa tuottavien yritysten tulovero" → "elinkeinotulovero": 4 (001 rate sentence, 001 contrast sentence, 001 link label, 002 dissolution return). 004 already said elinkeinotulovero.
+- 007 marital 剩餘財產差額分配 "jäännösomaisuuden" → "avioliiton jälkeisen nettovarallisuuden": 9. 002 liquidation residue "jäännösomaisuus" left.
+- "Pelkkä seikka(, että)" calque: 10 (003 ×2, 007 ×2, 010, 011, 014 ×2, 016, 017).
+- "kaupunginhallitus" for 市政府 → "kaupungin viranomainen": 2 (013, 015).
+- Education lines still in English CV comma order: 7 (M.S. Institute of Finance, both National Chengchi degrees for Tseng and both for Huang, both LL.B. lines, B.S.). Proper names kept in Latin.
+- Korea leadership dropped, and "tilitoimisto" for the CPA partner: 5 (team description, partner heading, lawyers page description, lawyers answer, Huang intro "johtaa nyt tilintarkastustoimistoa"). Role line already said "Korean toimintojen johtaja".
+- Thousands spaces: 0. U+200B: 0. Bare "1" dropped: 1 (the per-day calque only).
+- R2–R10 residue from earlier rounds was not reopened except where a round-3 row or one of these patterns hit it. No new masculine form for Wei Tseng, no Finnish consultation, no new result or availability promise.
+
+## §Verify
+```
+neighbour      PASS   
+hanzi          PASS   han=121
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+---MARKERS---
+       0
+---TSC---
+TSC_OK
+---VITEST---
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+---GIT---
+      27
+```
+
+Commands were the work-order set. `tail -8` is the last file plus the summary. Markers 0. TSC_OK. 3202 tests passed. `git status --short | wc -l` was 27 before this log file was written.
+
+## Reviewer disagreements (not applied as suggested)
+- fi-a 20 and fi-b 24. Space thousands are what Finnish typography wants. The checker and ACCEPTED-ROUND do not accept them. Period grouping kept.
+- fi-a 22 and fi-b 26. The fragments are in the Korean source (same ZWSP counts). Removing them or making new headings fails the checker. Layout left.
+- fi-a 21, except "1 päivää kohden". The other "1"s are statutory counts. "yksi" alone is not in the Finnish number lexicon, so replacing the digit with a word would fail the number check.
+- fi-a 1, the aside about 004 "(10 artikla)" and URL flno=3. English and Korean 004 name article 10 of the business-tax act. flno=3 is the database fragment, not the article number. Dropping 10 would fail the checker. 001's label for the same URL is now "Säännös liikevaihtoveron yleisestä verokannasta". 004 still says "10 artikla". URL unchanged.

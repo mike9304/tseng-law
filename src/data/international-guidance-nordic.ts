@@ -1489,10 +1489,10 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
     disclaimer: 'Vastuuvapaus',
     columns: 'Artikkelit',
   },
-  contactCta: 'Lähettäkää yhteydenottopyyntö',
+  contactCta: 'Lähetä yhteydenottopyyntö',
   footerNotice:
     'Tämä suomenkielinen sivu sisältää vain yleisiä ohjeita toimiston työstä Taiwanin oikeuden mukaan. Se ei ole oikeudellista neuvontaa yksittäisessä asiassa, eikä viestin lähettäminen yksinään synnytä suhdetta asianajajan ja päämiehen välillä.',
-  skipLink: 'Ohittakaa navigointi ja siirtykää sisältöön',
+  skipLink: 'Ohita navigointi ja siirry sisältöön',
   menuLabel: 'Valikko',
   languageLabel: 'Näyttökieli',
   mega: {
@@ -1521,25 +1521,25 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
   notFoundText:
     'Etsittyä sivua ei ole tai se on siirretty. Voitte palata suomenkieliselle etusivulle nähdäksenne saatavilla olevat ohjeet.',
   backHomeLabel: 'Etusivulle',
-  readSourceLabel: 'Avatkaa artikkeliluettelo alkuperäiskielellä',
+  readSourceLabel: 'Avaa artikkeliluettelo alkuperäiskielellä',
   home: {
-    heroScrollLabel: 'Vierittäkää alaspäin',
-    heroColumnsCtaLabel: 'Katsokaa artikkelit',
-    servicesDetailLabel: 'Katsokaa tiedot',
+    heroScrollLabel: 'Vieritä alaspäin',
+    heroColumnsCtaLabel: 'Katso artikkelit',
+    servicesDetailLabel: 'Katso tiedot',
     servicesAssistanceBefore: 'Jos on epäselvää, mihin oikeudenalaan asianne kuuluu, sivu ',
     servicesAssistanceLinkLabel: 'Yhteystiedot',
     servicesAssistanceAfter:
       ' selittää, miten laaditte yhteenvedon, jonka asianajaja tarkistaa.',
-    columnsViewAllLabel: 'Katsokaa kaikki artikkelit',
-    columnsReadMoreLabel: 'Lukekaa lisää',
+    columnsViewAllLabel: 'Katso kaikki artikkelit',
+    columnsReadMoreLabel: 'Lue lisää',
     columnsReviewLabel: 'Tarkistanut asianajaja Wei Tseng',
     columnsOriginalLanguageBadge: 'Alkuperäiskieli',
     columnsOriginalLanguageNote:
       'Seuraavia artikkeleita ei ole vielä suomeksi. Luettelo pysyy alkuperäiskielellä ja avaa kyseisen kielisivun; sisältöä ei käännetä automaattisesti.',
     imageBandAlt: 'Perinteinen taiwanilainen sanheyuan (三合院) ja nykyaikainen paviljonki päivänvalossa',
-    videoPauseLabel: 'Keskeyttäkää video',
-    videoPlayLabel: 'Toistakaa video',
-    videoReplayLabel: 'Toistakaa video uudelleen',
+    videoPauseLabel: 'Keskeytä video',
+    videoPlayLabel: 'Toista video',
+    videoReplayLabel: 'Toista video uudelleen',
   },
   pages: {
     home: {
@@ -1619,7 +1619,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Työoikeudelliset riidat',
           paragraphs: [
-            'Tähän oikeudenalaan kuuluvat työsuhteen päättyminen, Taiwanin oikeuden mukainen eroraha (資遣費; ei rinnastettavissa muiden valtioiden vastaaviin järjestelyihin), palkka ja riidat työsopimuksesta (勞動契約), sekä työntekijän että työnantajan puolella. Tarkastuksessa erotamme päättämisperusteen ilmoitusta, maksua ja määräaikoja koskevista kysymyksistä.',
+            'Tähän oikeudenalaan kuuluvat työsuhteen päättyminen, Taiwanin oikeuden mukainen eroraha (資遣費; ei ole sama asia kuin irtisanomiskorvaus tai irtisanomissuoja muiden valtioiden oikeudessa), palkka ja riidat työsopimuksesta (勞動契約), sekä työntekijän että työnantajan puolella. Tarkastuksessa erotamme päättämisperusteen ilmoitusta, maksua ja määräaikoja koskevista kysymyksistä.',
             'Työsopimus, työsäännöt (工作規則), palkkalaskelmat ja osapuolten kirjeenvaihto ovat yleensä ratkaisevat asiakirjat. Jos teillä on ne vielä, mainitkaa se yhteenvedossa.',
           ],
         },
@@ -1681,7 +1681,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ASIANAJAJAT',
       title: 'Hoveringin kansainvälinen tiimi',
-      description: 'Hoveringin asianajajien, operatiivisen johdon ja yhteistyökumppanina toimivan tilitoimiston profiilit.',
+      description: 'Hoveringin asianajajien, Korean toimintojen johdon ja tilintarkastajaosakkaan profiilit.',
       intro: '',
       sections: [],
     },
@@ -1897,7 +1897,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
       description:
         'Tietojen yleinen luonne, oikeudellinen soveltamisala ja edellytykset suhteelle asianajajan ja päämiehen välillä.',
       intro:
-        'Tämä osa tekee selväksi, mitä nämä suomenkieliset ohjesivut voivat tehdä teille ja mitä eivät.',
+        'Tämä osa tekee selväksi, mihin näistä suomenkielisistä ohjesivuista on apua ja mihin ei.',
       sections: [
         {
           heading: 'Vain yleisiä tietoja',
@@ -1909,7 +1909,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Oikeudellinen soveltamisala',
           paragraphs: [
-            'Toimisto harjoittaa ammattia Taiwanin oikeuden mukaan, ja tämä sivu puhuu vain työstä tässä kehyksessä.',
+            'Toimisto harjoittaa asianajotoimintaa Taiwanin oikeuden mukaan, ja tämä sivu käsittelee vain työtä tässä kehyksessä.',
             'Sisältö ei ole neuvontaa muun oikeusjärjestyksen kuin Taiwanin mukaan, mukaan lukien asuinpaikkanne oikeus. Jos osa asiastanne koskee toista oikeusjärjestystä, selvitämme teidän kanssanne, millaista pätevää asiantuntemusta siihen osaan tarvitaan.',
           ],
         },
@@ -1941,7 +1941,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Neljä luetteloa kielen mukaan',
           paragraphs: [
             'Tässä osassa on neljä linkkiä: artikkeliluettelo koreaksi, kiinaksi, englanniksi ja japaniksi. Kukin linkki ilmoittaa luettelon kielen, jotta tiedätte etukäteen, millä kielellä sisältö avautuu.',
-            'Nämä neljä luetteloa ovat luetteloita artikkeleiden alkuperäiskielen mukaan, eivät käännösluetteloita. Suomenkieliset artikkelit ovat erikseen tällä sivulla.',
+            'Nämä neljä luetteloa seuraavat artikkeleiden alkuperäiskieltä; ne eivät ole käännöksiä. Suomenkieliset artikkelit ovat erikseen tällä sivulla.',
           ],
         },
         {
@@ -1955,7 +1955,7 @@ export const finnishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Mihin asti artikkelista voi olla apua',
           paragraphs: [
             'Artikkelit ovat yleistä tietoa julkaisuajankohtana. Säännöt ja niiden soveltaminen voivat muuttua, eikä artikkeli kata kaikkia asianne olosuhteita.',
-            'Älkää siksi tehkö todellisessa asiassa päätöksiä pelkästään artikkelin perusteella. Käyttäkää sitä yleiskuvan saamiseen ja keskustelkaa asiakirjoistanne erikseen asianajajan kanssa; tämä sivu ei ole neuvontavaihe.',
+            'Älkää siksi tehkö todellisessa asiassa päätöksiä pelkästään artikkelin perusteella. Käyttäkää sitä yleiskuvan saamiseen ja keskustelkaa asiakirjoistanne erikseen asianajajan kanssa; tämä sivu ei korvaa neuvontaa.',
           ],
         },
       ],

@@ -3,7 +3,7 @@ title: "Yhtiön perustaminen Taiwanissa – syventävä osa 2"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-2"
 lastmod: "2026-09-10"
 date_display: "13. syyskuuta 2025"
-read_time: "4 min lukuaikaa"
+read_time: "4 min lukuaika"
 categories:
   - "Yhtiön perustaminen Taiwanissa"
 featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg"
@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Kansikuva](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Tämä osa 2 jatkaa artikkeleita [Yhtiön perustaminen Taiwanissa – perusteet](/fi/columns/taiwan-company-establishment-basics) ja [Yhtiön perustaminen Taiwanissa – syventävä osa 1](/fi/columns/taiwan-company-establishment-advanced-1) (公司設立).
+Tämä on syventävä osa 2, ja se jatkaa artikkeleita [Yhtiön perustaminen Taiwanissa – perusteet](/fi/columns/taiwan-company-establishment-basics) ja [Yhtiön perustaminen Taiwanissa – syventävä osa 1](/fi/columns/taiwan-company-establishment-advanced-1). Aiheena on yhtiön perustaminen (公司設立).
 
 ​
 
@@ -29,7 +29,7 @@ Seuraavat kysymykset ja vastaukset on tarkoitettu niille, jotka harkitsevat yhti
 
 Korealaiset pankit (銀行) vaativat yleensä, että sijoittaja käy **henkilökohtaisesti** pankissa Koreassa ja siirtää varat omalla nimellään olevalta tililtä.
 
-Siirto verkkopankin kautta tai läheisen välityksellä (匯款) ei ole mahdollinen.
+Siirto verkkopankin kautta tai läheisen välityksellä (匯款) ei ole sallittu.
 
 Lisäksi henkilön, jolla on Korean kansalaisuus ja joka perustaa ulkomaisen oikeushenkilön tai hankkii osuuksia, on Korean valuuttasääntelyn mukaan tehtävä ”ilmoitus suorasta ulkomaisesta sijoituksesta”. Ilmoitus on rekisteröitävä sillä hetkellä, kun pääoma siirretään taiwanilaiselle oikeushenkilölle (台灣法人); jos se jää tekemättä, voi seurata valuuttasääntöjen rikkomisesta johtuvia seuraamuksia.
 
@@ -45,7 +45,7 @@ Jos kyse on esimerkiksi Taiwanissa saadusta palkkatulosta, on esitettävä jälj
 
 Jos kyse on osingoista ja voitosta sijoituksesta taiwanilaiseen yritykseen, on esitettävä jäljennös kyseisten osinkojen ja voiton ennakonpidätystodistuksesta (股息和紅利的扣繳憑單影本).
 
-Jos siirto tehdään ulkomaisesta pankista, varojen alkuperää koskevia asiakirjoja ei tarvitse liittää.
+Jos varat siirretään korealaiselta pankkitililtä, varojen alkuperää koskevia asiakirjoja ei tarvitse liittää.
 
 **​**
 

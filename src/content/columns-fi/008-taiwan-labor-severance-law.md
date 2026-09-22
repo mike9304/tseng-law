@@ -3,7 +3,7 @@ title: "Eroraha Taiwanissa: milloin se maksetaan ja milloin ei"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
 lastmod: "2026-09-10"
 date_display: "13. syyskuuta 2025"
-read_time: "6 min lukuaikaa"
+read_time: "6 min lukuaika"
 categories:
   - "Oikeudellista tietoa Taiwanista"
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
@@ -84,7 +84,7 @@ eivätkä he saa langeta yhtiön aikeeseen.
 
 Seuraava esimerkki on toimiston hoitamasta asiasta.
 
-On tunnettu yhtiö A, jolla on sivuliikkeitä koko Taiwanissa.
+Eräällä tunnetulla yhtiöllä, tässä A, oli toimipaikkoja koko Taiwanissa.
 
 Jostain syystä johto vaihtui,
 

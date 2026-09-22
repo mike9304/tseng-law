@@ -1412,11 +1412,11 @@ export const guidanceFooterCopy: Record<GuidanceLocale, GuidanceFooterCopy> = {
   fi: {
     officeLabel: 'Toimistot',
     officeQuickLinksLabel: 'Pikalinkit toimistoihin',
-    followLabel: 'Seuratkaa',
+    followLabel: 'Seuraa',
     blogLabel: 'Blogi',
     websiteLabel: 'Virallinen sivusto',
     sitemapLabel: 'Sivukartta',
-    copyEmailLabel: 'Kopioikaa sähköpostiosoite',
+    copyEmailLabel: 'Kopioi sähköpostiosoite',
     emailCopiedMessage: 'Sähköpostiosoite on kopioitu.',
     officialConsultationEmailLabel: 'Virallinen sähköposti neuvontaa varten',
   },

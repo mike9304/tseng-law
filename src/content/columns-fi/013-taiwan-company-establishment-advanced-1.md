@@ -3,7 +3,7 @@ title: "Yhtiön perustaminen Taiwanissa – syventävä osa 1"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-1"
 lastmod: "2026-09-10"
 date_display: "13. syyskuuta 2025"
-read_time: "4 min lukuaikaa"
+read_time: "4 min lukuaika"
 categories:
   - "Yhtiön perustaminen Taiwanissa"
 featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg"
@@ -13,9 +13,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Kansikuva](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Viime aikoina monet ovat perustaneet yhtiön (公司) Taiwanissa ja saaneet työluvan sekä ulkomaalaisen oleskelukortin (外僑居留證),
+Viime aikoina monet ovat perustaneet yhtiön (公司) Taiwanissa ja saaneet työluvan sekä ulkomaalaisen oleskelukortin (外僑居留證).
 
-ja perustamisen yhteydessä usein esitetyt kysymykset on koottu jäljempänä.
+Perustamisen yhteydessä usein esitetyt kysymykset on koottu jäljempänä.
 
 Se, joka on lukenut [**yhtiön perustamisen perusteet**](/fi/columns/taiwan-company-establishment-basics), voi sen jälkeen tutustua myös tähän seikkaperäisempään syventävään osaan.
 
@@ -51,9 +51,9 @@ teidän kannattaa laatia sijoitussuunnitelma ja etsiä yhtiön rekisteröintioso
 
 Ulkomaisten sijoitusten lain (外國人投資條例) 9 artiklan mukaan hyväksytyn sijoituksen on saavuttava kokonaisuudessaan toimivaltaisen viranomaisen asettamassa määräajassa (核定期限); määräaika on vahvistettava hyväksymisasiakirjassa kussakin asiassa (käytännössä se asetetaan usein noin 1 vuodeksi).
 
-Tämän määräajan kuluessa jää, sen jälkeen kun yhtiön osoite on löydetty ja vuokrasopimus on tehty,
+Tämän määräajan kuluessa jää riittävästi aikaa sen jälkeen, kun yhtiön osoite on löydetty ja vuokrasopimus on tehty.
 
-riittävästi aikaa avata valmistelutili pankissa ja siirtää pääoma.
+Silloin ehditään avata valmistelutili pankissa ja siirtää pääoma.
 
 ​
 
@@ -87,9 +87,9 @@ Tästä kohdasta kannattaa keskustella perusteellisesti taiwanilaisen asianajaja
 
 **4. Mihin on kiinnitettävä huomiota, kun yhtiön rekisteröintiosoite (esimerkiksi ravintolatila) vuokrataan?**
 
-Yhtiön perustaminen kestää noin **3 kuukautta**, työluvan (工作許可) ja oleskelukortin saaminen noin **1 kuukauden**,
+Yhtiön perustaminen kestää noin **3 kuukautta**, ja työluvan (工作許可) sekä oleskelukortin saaminen vie sen päälle noin **1 kuukauden**.
 
-siksi sopimuksen voimaantulopäivä kannattaa sijoittaa mahdollisimman myöhään.
+Siksi sopimuksen voimaantulopäivä kannattaa sijoittaa mahdollisimman myöhään.
 
 Lisäksi vuokranantaja antaa Taiwanissa liikehuoneistojen vuokrasopimuksissa usein vuokralaiselle **sisustusjakson** (裝潢期間).
 
@@ -115,13 +115,13 @@ Esimerkiksi: jos toimiala on ravintola-ala ja halutaan vuokrata kaupallinen toim
 
 Kuten jo todettu, pankki tutkii vuokrasopimuksen ja tarkastaa yhtiön osoitteen paikan päällä.
 
-Lisäksi kaupunginhallitus (市政府) vaatii lopullisessa yhtiörekisteröinnissä, että rekisteröity osoite sijaitsee vyöhykkeellä, jossa ravintolatoiminta on sallittu;
+Lisäksi kaupungin viranomainen (市政府) vaatii lopullisessa yhtiörekisteröinnissä, että rekisteröity osoite sijaitsee vyöhykkeellä, jossa ravintolatoiminta on sallittu.
 
-kaupallisessa toimistotilassa yhtiörekisteröinti (公司登記) ei tällöin ole mahdollista.
+Kaupallisessa toimistotilassa yhtiörekisteröinti (公司登記) ei tällöin ole mahdollista.
 
-Esimerkiksi: jos kyse on toimialoista (營業項目), jotka ovat mahdollisia kaupallisessa toimistotilassa, kuten mainonta tai tukkukauppa, yhtiö voidaan perustaa kaupalliseen toimistotilaan. Ennen vuokrasopimuksen tekemistä
+Jos taas toimialoja (營業項目) voi harjoittaa kaupallisesta toimistotilasta, kuten mainontaa tai tukkukauppaa, yhtiö voidaan perustaa kaupalliseen toimistotilaan. Ennen vuokrasopimuksen tekemistä asia kannattaa tarkistaa.
 
-tämä kannattaa tarkistaa etukäteen.
+Tämä kannattaa tehdä etukäteen.
 
 *Tämä sivu on vain yleistä opastusta. Neuvonta tapahtuu vain englanniksi, kiinaksi (中文), japaniksi ja koreaksi; yhteydenottopyynnön voi lähettää yhteydenottolomakkeella.*
 

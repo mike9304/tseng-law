@@ -2,7 +2,7 @@
 title: "Puolijohdekomponenttien toimittajat Taiwanin markkinoilla: miten tytäryhtiötä, sivuliikettä tai edustussuhdetta arvioidaan"
 lastmod: "2026-09-17"
 date_display: "17. syyskuuta 2026"
-read_time: "8 min lukuaikaa"
+read_time: "8 min lukuaika"
 categories:
   - "Yhtiön perustaminen Taiwanissa"
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
@@ -67,7 +67,7 @@ Se voidaan perustaa 1 luonnollisella henkilöllä tai useammalla (有限公司) 
 
 Pääoma jaetaan osakkeisiin. Lähtökohtaisesti vaaditaan 2 osakkeenomistajaa tai enemmän (股份有限公司), mutta valtio tai oikeushenkilö voi perustaa sen yksin, ja ulkomainen oikeushenkilö voi pitää 100 %. Osakkeet ovat lähtökohtaisesti vapaasti luovutettavissa, lakisääteisin poikkeuksin; erityisiä osakkeita ja optioita työntekijöille voidaan muotoilla lain mukaisesti. Se sopii yrityksille, jotka odottavat sijoittajia, osakekauppaa, pääomakannustimia työntekijöille tai myöhempää sulautumista, yritysostoa, pörssilistautumista tai rekisteröitymistä esipörssiin (興櫃); se ei rajoitu suuriin yrityksiin. Hallinnossa yhtiö, joka ei ole tehnyt julkista osakeantia, voi yhtiöjärjestyksellä olla ilman hallitusta, ja sillä voi olla vain 1 tai 2 johtajaa. Yhtiö, jonka ainoa osakkeenomistaja on valtio tai oikeushenkilö, voi yhtiöjärjestyksellä olla ilman yhtiön valvojaa (監察人). Jokaisen osakeyhtiön (股份有限公司) ei tarvitse antaa tilinpäätöstä varmennettavaksi. Tavanomaisen yhtiön olennaisimmat tilintarkastusrajat ovat maksettu pääoma 30.000.000 TWD (新臺幣) tai, sen alle, liikevaihto 100.000.000 TWD tai 100 työntekijää Taiwanin työntekijävakuutuksessa (勞工保險); julkisen osakeannin tehneet yhtiöt noudattavat arvopaperisääntelyä.
 
-## 4. Sivuliikkeen ja tytäryhtiön menettelyt eroavat; vain tytäryhtiö käy sijoitustarkastusosaston tarkastuksen
+## 4. Sivuliikkeen ja tytäryhtiön menettelyt eroavat; vain tytäryhtiö käy läpi sijoitustarkastusosaston tarkastuksen
 
 Kun ulkomainen yhtiö perustaa taiwanilaisen tytäryhtiön, nimi ennakkotarkastetaan lähtökohtaisesti ja haetaan sijoituslupaa talousministeriön sijoitustarkastusosastolta (經濟部投資審議司). Hyväksynnän jälkeen varat siirretään, sijoitussumma vahvistetaan ja tilintarkastaja (會計師) tarkastaa pääoman, minkä jälkeen perustaminen ja verorekisteröinti saatetaan päätökseen.
 
@@ -93,7 +93,7 @@ Seuraavat skenaariot ovat hypoteettisia harkinnan avuksi; ne eivät vahvista, et
 
 ## 8. Ensimmäiseen keskusteluun riittää toiminnan yleiskuva; kaikkia luottamuksellisia liitteitä ei tarvitse heti luovuttaa
 
-Ensimmäistä yhteydenottoa varten (neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi tai koreaksi) voidaan koota perustiedot päätoimipaikasta ja sijoittajasta, yleinen kuvaus tuotteesta tai palvelusta, suunniteltu transaktiovirta, suunnitelmat henkilöstöstä ja laitoksista Taiwanissa sekä sopimus- ja tukiehdot, joita asiakkaat vaativat. Se, mitä ei ole vielä päätetty, voidaan merkitä ”odottavaksi”.
+Ensimmäistä yhteydenottoa varten (neuvonta tapahtuu vain englanniksi, kiinaksi (中文), japaniksi ja koreaksi) voidaan koota perustiedot päätoimipaikasta ja sijoittajasta, yleinen kuvaus tuotteesta tai palvelusta, suunniteltu transaktiovirta, suunnitelmat henkilöstöstä ja laitoksista Taiwanissa sekä sopimus- ja tukiehdot, joita asiakkaat vaativat. Se, mitä ei ole vielä päätetty, voidaan merkitä ”odottavaksi”.
 
 Ensimmäisessä yhteydessä ei ole tarpeen liittää kaikkia luottamuksellisia asiakasliitteitä tai yksityiskohtaisia prosessitietoja. Sen jälkeen kun vastapuolen nimi eturistiriitatarkastusta varten on ilmoitettu, tarvittavat liitteet ja lähetystapa vahvistetaan vastuuhenkilön ohjeiden mukaan.
 

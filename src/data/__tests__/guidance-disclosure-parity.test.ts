@@ -455,7 +455,7 @@ const ELEMENTS = {
     sv: /ersätter inte rådgivningen/,
     da: /selve rådgivningen/,
     nb: /rådgivningsmøte/,
-    fi: /neuvontavaihe/,
+    fi: /ei korvaa neuvontaa/,
     cs: /není poradou/,
     hu: /nem helyettesíti a tanácsadást/,
     ro: /nu ține loc de consultanță/,

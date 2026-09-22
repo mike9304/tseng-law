@@ -167,10 +167,10 @@ export const DECORATIVE_VIDEO_CONTROL_LABELS = {
     play: 'भिडियो चलाउनुहोस्',
     replay: 'भिडियो फेरि चलाउनुहोस्',
   },
-  km: { // SCAFFOLD(th)
-    pause: 'หยุดวิดีโอชั่วคราว',
-    play: 'เล่นวิดีโอ',
-    replay: 'เล่นวิดีโออีกครั้ง',
+  km: {
+    pause: 'ផ្អាកវីដេអូ',
+    play: 'ចាក់វីដេអូ',
+    replay: 'ចាក់វីដេអូម្ដងទៀត',
   },
   mn: {
     pause: 'Видеог түр зогсоох',

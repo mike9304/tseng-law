@@ -1,3 +1,81 @@
-[WO start 2026-09-22 08:05:50]
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
-Retry attempt 1...
+WO-N-km-b — Khmer columns 010–018
+worker: Cursor Grok 4.6
+worktree: /Users/son7/Projects/tseng-law-new-km-20260922
+git add/commit/push/stash/checkout: not run
+node: /Users/son7/.nvm/versions/node/v24.14.1/bin
+
+=== File count ===
+
+9 files written in this work order (src/content/columns-km/ now has 18 with WO-N-km-a):
+
+  010-taiwan-gym-injury-lawsuit.md
+  011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md
+  012-taiwan-overtaking-accident-liability.md
+  013-taiwan-company-establishment-advanced-1.md
+  014-taiwan-mandatory-employment-period.md
+  015-taiwan-company-setup-pitch-location.md
+  016-taiwan-inheritance-custody-analysis.md
+  017-taiwan-logistics-business-setup.md
+  018-taiwan-semiconductor-market-entry.md
+
+categories: formation (011, 013, 015, 017, 018) = ការបង្កើតក្រុមហ៊ុននៅតៃវ៉ាន់
+            legal   (012, 014, 016)             = ព័ត៌មានច្បាប់តៃវ៉ាន់
+            case    (010)                       = ការវិភាគសំណុំរឿង
+
+=== §Verify (verbatim) ===
+
+$ ls src/content/columns-km/*.md | wc -l
+      18
+$ node scripts/check-column-translation.mjs --dir src/content/columns-km --lang km 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-km-20260922/src/content/columns-km/018-taiwan-semiconductor-market-entry.md  lang=km
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1,2,2,2,3,3,2,2,2,2,2,3,3,3,2]
+images         PASS   count=1
+blocks         PASS   blocks=45
+links          PASS   hrefs=0
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=167
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-km | wc -l
+       0
+$ git status --short | wc -l
+      45
+
+Pass: summary PASS 18/18 files (this WO 010–018 plus km-a 001–009); markers 0.
+Each of 010–018 also checked individually; all PASS.
+010 numbers WARN only (not FAIL): 제7호; 1심 — digits kept in 109年度消字第7號; សាលាដំបូង used for first instance.
+
+=== Key term choices (Khmer + Traditional-Chinese gloss) ===
+
+  អ្នកតំណាងក្នុងសំណុំរឿង (訴訟代理人)
+  លិខិតបញ្ជាក់ខ្លឹមសារ (存證信函)
+  ពិន័យរដ្ឋបាល (罰鍰)
+  នាយកដ្ឋានពិនិត្យការវិនិយោគ ក្រសួងសេដ្ឋកិច្ច (經濟部投資審議司)
+  រយៈពេលបម្រើការអប្បបរមា (最低服務年限)
+  អត្ថប្រយោជន៍បង់ជាមុន (預付性給付) / ប្រាក់ចុះកិច្ចសន្យា (簽約金) / ប្រាក់រក្សាឱ្យនៅបន្ត (留任獎金)
+  ការប្រើប្រាស់និងទទួលបន្ទុកសិទ្ធិនិងកាតព្វកិច្ចចំពោះកូនមិនគ្រប់អាយុ (未成年子女權利義務之行使或負擔)
+  សិទ្ធិទទួលផលតាមទំនុកបម្រុង (信託受益權)
+  ភស្តុភារ (物流) / ការទទួលធ្វើការដឹកជញ្ជូន (運送承攬)
+  លិខិតចុះបញ្ជីអាជីវកម្ម (營業執照) vs លិខិតអនុញ្ញាតប្រតិបត្តិការអាជីវកម្ម (經營許可)
+
+Register: លោកអ្នក; first-person នាងខ្ញុំ (010, 013); byline **មេធាវីស្ត្រី Wei Tseng (曾雋崴)** where the Korean source has a byline (011, 014, 016, 017). Quotes « ». Dates 13 កញ្ញា 2025 (011: 4 កុម្ភៈ 2026; 018: 17 កញ្ញា 2026). Thousands 100,000. Korea as labelled example (កូរ៉េ) only. No កម្ពុជា.
+
+R2/R3/R7/R7b/R8 applied from the start: 010 client remains male; 011 Korean brands → foreign brands; 015 contact-form inquiry, no reply-time promise; 016 family → two or more countries / child outside Taiwan; 014 FAQ answers self-standing; Invest Taiwan lang=eng (011). Avoided ធានាលទ្ធផល (forbidden regex) even in negation.
+
+=== Unresolved ===
+
+- 010 numbers WARN on 제7호 / 1심 (Chinese docket string 109年度消字第7號 keeps the digit; សាលាដំបូង used for first instance). Same class of leftover as km-a 003.
+- 010 / 012 / 013 / 015 / 018: Korean source has no closing byline block, so none added (block-count gate). Feminine first person is in the body where the source is first-person (010, 013).
+- 018 Korean source has no `url` and no related-link hrefs (checker links hrefs=0) — matched, not omitted.
+- Consultation remains EN / 中文 / JA / KO only; no Khmer advice implied.

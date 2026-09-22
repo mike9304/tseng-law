@@ -470,16 +470,16 @@ export const GUIDANCE_HOME_PATHS: Record<GuidanceLocale, GuidanceHomePaths> = {
     },
     ariaLabel: 'जानकारीका दुई बाटो',
   },
-  km: { // SCAFFOLD(th)
+  km: {
     setup: {
-      label: 'ข้อมูลการจัดตั้งบริษัทในไต้หวัน',
+      label: 'ព័ត៌មានការបង្កើតក្រុមហ៊ុននៅតៃវ៉ាន់',
       href: '/km/services',
     },
     legal: {
-      label: 'ข้อมูลปัญหาทางกฎหมายในไต้หวัน',
+      label: 'ព័ត៌មានបញ្ហាផ្លូវច្បាប់នៅតៃវ៉ាន់',
       href: '/km/faq',
     },
-    ariaLabel: 'สองเส้นทางข้อมูล',
+    ariaLabel: 'មាគ៌ាព័ត៌មានពីរ',
   },
   mn: {
     setup: {

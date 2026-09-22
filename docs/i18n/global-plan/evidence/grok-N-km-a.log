@@ -1,7 +1,92 @@
-[WO start 2026-09-22 07:09:47]
-Connection lost, reconnecting to https://agentn.global.api5.cursor.sh (attempt 1)...
-Retry attempt 1...
-Nine Khmer columns are in `src/content/columns-km/`. Checker: **summary PASS 9/9 files**, markers 0.
+WO-N-km-a — Khmer columns 001–009
+worker: Cursor Grok 4.6
+worktree: /Users/son7/Projects/tseng-law-new-km-20260922
+git add/commit/push/stash/checkout: not run
+node: /Users/son7/.nvm/versions/node/v24.14.1/bin
 
-Evidence: `docs/i18n/global-plan/evidence/grok-N-km-a.log`. No git add/commit/push.
-=== end code=0 2026-09-22 08:04:49 ===
+=== File count ===
+
+9 files in src/content/columns-km/:
+
+  001-taiwan-company-establishment-basics.md
+  002-withdraw-capital-taiwan-company.md
+  003-taiwan-traffic-accident-procedure.md
+  004-taiwan-company-subsidiary-vs-branch.md
+  005-taiwan-company-establishment-advanced-2.md
+  006-taiwan-massage-history-law.md
+  007-taiwan-divorce-lawsuit-qna.md
+  008-taiwan-labor-severance-law.md
+  009-taiwan-voluntary-resignation-severance.md
+
+categories: formation (001, 002, 004, 005) = ការបង្កើតក្រុមហ៊ុននៅតៃវ៉ាន់
+            legal   (003, 006, 007, 008, 009) = ព័ត៌មានច្បាប់តៃវ៉ាន់
+
+=== §Verify (verbatim) ===
+
+$ ls src/content/columns-km/*.md | wc -l
+       9
+$ node scripts/check-column-translation.mjs --dir src/content/columns-km --lang km 2>&1 | tail -20
+currency       PASS   
+
+PASS  /Users/son7/Projects/tseng-law-new-km-20260922/src/content/columns-km/009-taiwan-voluntary-resignation-severance.md  lang=km
+check          status  details
+-------------- ------  -------
+frontmatter    PASS   
+headings       PASS   levels=[1]
+images         PASS   count=2
+blocks         PASS   blocks=44
+links          PASS   hrefs=3
+hangul         PASS   
+english        PASS   
+forbidden      PASS   
+hanzi          PASS   han=56
+numbers        PASS   sourceCount=10 targetCount=10
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  9/9 files
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-km | wc -l
+       0
+$ git status --short | wc -l
+      34
+
+Pass: summary PASS 9/9 files; markers 0.
+(git status line count includes pre-existing WO-P dirty files plus these 9 columns and a km hook in the checker, below.)
+
+003 numbers WARN only (not FAIL): 수사미해석 제644호; 제477호; 제236호 — digits kept inside the Chinese docket strings, same choice as Thai.
+
+=== Key term choices (Khmer + Traditional-Chinese gloss) ===
+
+  លិខិតអនុញ្ញាតការងារ (工作許可)
+  លិខិតស្នាក់នៅជនបរទេស (外僑居留證, ARC)
+  ប្រាក់ឈប់ការងារតាមច្បាប់ (資遣費)
+  ច្បាប់គោលការណ៍ពលកម្ម (勞動基準法)
+  ទោសឃុំខ្លួនរយៈខ្លី (拘役)          — not pre-trial detention
+  ការពន្យារទោស (緩刑)                 — not parole
+  ភាគទុនិក (股東)                     — not partners
+  នាយកដ្ឋានពិនិត្យការវិនិយោគ ក្រសួងសេដ្ឋកិច្ច (經濟部投資審議司)
+  ការប្រើប្រាស់និងទទួលបន្ទុកសិទ្ធិនិងកាតព្វកិច្ចចំពោះកូនមិនគ្រប់អាយុ (未成年子女權利義務之行使或負擔)
+  ការជួបនិងទាក់ទង (會面交往)
+
+Register: លោកអ្នក; first-person នាងខ្ញុំ / មេធាវីស្ត្រី; byline **មេធាវីស្ត្រី Wei Tseng (曾雋崴)** where the Korean source has a byline. Quotes « ». Dates 13 កញ្ញា 2025. Thousands 100,000. Korea as labelled example (កូរ៉េ) only. No កម្ពុជា.
+
+R2/R3 applied from the start: tax-treaty country note (001, 004); hiring FAQ → foreign nationals (005); family → two or more countries / child outside Taiwan (007); “unlike some jurisdictions (Korea, for example)” (008, 009); compensation/sentence soften + 119/110/112 in Taiwan (003); contact-form inquiry, no reply-time promise (005); severance anecdote = entitlement under the law (008).
+
+=== Checker locale hook (needed for PASS; not a column file) ===
+
+scripts/check-column-translation.mjs had no km tables. Without them, Khmer dates (13 កញ្ញា 2025) drop month 9 and guidance links (/km/lawyers, /km/services) FAIL. Additive km entries only:
+
+  GUIDANCE_LANGS += km
+  DATE_MONTH_NAMES: មករា … ធ្នូ
+  NATIONALITY_TERMS.km: សញ្ជាតិខ្មែរ, កម្ពុជា, ខ្មែរ
+  FORBIDDEN_PHRASES.km (8 patterns)
+  NUMBER_THOUSAND_STYLE.km = comma
+  targetOrdinalSpecs.km (កថាខណ្ឌ N, សាលាដំបូង, ភាគីទីបី, …)
+
+=== Unresolved ===
+
+- 003 numbers WARN on 제N호 docket labels (digits kept in 年度…字第 N 號; same as other locales).
+- 005 / 006 / 009: Korean source has no closing byline block, so none added (block-count gate). Feminine first person is in the body where the source is first-person (006, 008, 009, 003 Q16–20).
+- 010–018 are out of this work order (WO-N-km-b).
+- Consultation remains EN / 中文 / JA / KO only; no Khmer advice implied.

@@ -1,5 +1,129 @@
-[WO start 2026-09-22 05:17:36]
-WO-P-km is done. Report: `docs/i18n/global-plan/evidence/grok-P-km.log`.
+WO-P-km — Khmer guidance pack + UI strings
+worker: Cursor Grok 4.6
+worktree: /Users/son7/Projects/tseng-law-new-km-20260922
+git add/commit/push/stash/checkout: not run
+node: /Users/son7/.nvm/versions/node/v24.14.1/bin
+marker: every `// SCAFFOLD(th)` on km blocks removed; `khmerGuidanceContent` header is no longer scaffolded (file-level leftover: `// SCAFFOLD: ne, my, mn`)
 
-Verify: SCAFFOLD grep **0**, **TSC_OK**, 1096 tests passed. Five failures are other new locales still scaffolded (`GUIDANCE_LOCALES` 27 vs 45, duplicate llms notices, root `llms.txt` over 8 KiB) — not `km` rows. All nav labels ≤ 14. No git add/commit/push.
-=== end code=0 2026-09-22 05:41:06 ===
+=== Files touched ===
+
+Pack
+  src/data/international-guidance-southeast-central.ts   (khmerGuidanceContent; languageName ភាសាខ្មែរ)
+
+Team / offices / answers / inquiry
+  src/data/international-guidance-team.ts                 (copy, bios, language names, practice-area names)
+  src/data/international-guidance-offices.ts              (label ការិយាល័យ; city titles; footer)
+  src/data/international-guidance-answers.ts              (sources /km/…)
+  src/data/international-inquiry-copy.ts
+
+Chrome / UI
+  src/lib/llms-txt.ts                                     (English name Khmer + 3 notices)
+  src/data/multilingual-international-v2.ts               (GUIDANCE_HOME_PATHS labels; hrefs /km/…)
+  src/lib/columns.ts                                      (3 category labels)
+  src/components/ColumnsGrid.tsx                          (All=ទាំងអស់; categories = columns.ts; read-more=អានបន្ត)
+  src/components/CinematicOpening.tsx
+  src/components/decorative-video-controls.ts
+  src/data/team-name.ts                                   (brand kept: Hovering International Team)
+  src/lib/public-language-registry.ts                     (region labels + picker copy)
+
+Test fixtures pinned to this wording
+  src/data/__tests__/guidance-disclosure-parity.test.ts
+  src/data/__tests__/guidance-office-facts-sync.test.ts   (កូរ៉េ / ជប៉ុន)
+  src/data/__tests__/international-guidance-privacy-disclosure.test.ts
+  src/components/__tests__/columns-grid-guidance-labels.test.tsx
+  src/components/__tests__/multilingual-international-v2.test.tsx
+  src/data/__tests__/column-alternate-expectations.ts     (km:'km')
+  tests/builder-editor/international-guidance.playwright.ts  (km_KH)
+
+Helpers (not product): .tmp-km/ only
+Report: this file
+
+=== §Verify (verbatim) ===
+
+$ cd /Users/son7/Projects/tseng-law-new-km-20260922 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+$ grep -rn "SCAFFOLD" src tests | grep -cE "^\S+:[0-9]+:\s*'?km'?:|locale km"
+0
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+$ npx vitest run src/data/__tests__/ src/lib/__tests__/guidance-chrome-language.test.ts src/lib/__tests__/international-guidance-answers.test.ts "src/app/[locale]/__tests__/llms-discovery.test.tsx" src/components/__tests__/columns-grid-guidance-labels.test.tsx src/components/__tests__/multilingual-international-v2.test.tsx --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+   × guidance locale llms.txt catalogs > writes a distinct notice set for each guidance language 3ms
+   × root llms.txt guidance catalog links > stays inside the 8 KiB root budget and the documented grammar 1ms
+   × root llms.txt guidance catalog links > lists every site-locale catalog and every guidance catalog 0ms
+   × root llms.txt guidance catalog links > labels each guidance catalog in its own language without widening consultation languages 0ms
+   × guidanceAnswers > covers every guidance locale x 6 page keys 4ms
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+ Test Files  2 failed | 45 passed (47)
+      Tests  5 failed | 1096 passed (1101)
+$ git status --short | wc -l
+      22
+
+Pass: first grep = 0, TSC_OK. Every km-specific row in this run passed. The 5 failures are other new locales still scaffolded (named below), not km rows.
+
+=== Acceptable failures (other locales still scaffolded) ===
+
+1. src/lib/__tests__/international-guidance-answers.test.ts
+   "covers every guidance locale x 6 page keys"
+   GUIDANCE_LOCALES length 27 vs GUIDANCE_LOCALES_4 length 45.
+   Test list of completed answer packs was not extended to the 18 new locales.
+
+2. src/app/[locale]/__tests__/llms-discovery.test.tsx
+   "writes a distinct notice set for each guidance language"
+   Set size 84 vs 135 (GUIDANCE_LOCALES_4.length * 3).
+   27 completed × 3 = 81, plus km’s 3 unique notices = 84.
+   The other 17 scaffolded locales still share the template notices.
+
+3–5. same file, root llms.txt guidance catalog links:
+   "stays inside the 8 KiB root budget and the documented grammar"
+   "lists every site-locale catalog and every guidance catalog"
+   "labels each guidance catalog in its own language without widening consultation languages"
+   buildRootLlmsTxt() exceeds 8192 bytes because GUIDANCE_LOCALES_4 now has 45 entries
+   (18 new locales including still-scaffolded ones). km catalog tests in the same file
+   (ten pages, free of other locales, notice in Khmer, verbatim quotes, contract) all PASSED.
+
+=== Terminology (Khmer + Traditional-Chinese gloss, kept exactly) ===
+
+  លិខិតអនុញ្ញាតការងារ (工作許可)
+  ប្រាក់ឈប់ការងារតាមច្បាប់ (資遣費)
+  ស្ថានភាពស្នាក់នៅ (居留)
+  លែងលះ (離婚)
+  អំណាចឪពុកម្តាយលើកូនមិនគ្រប់អាយុ (未成年子女權利義務之行使或負擔)
+  សិទ្ធិជួបនិងទាក់ទង (會面交往)
+  មរតក (繼承)
+  បញ្ជីគ្រួសារ (戶籍)
+  កិច្ចសន្យាការងារ (勞動契約)
+  បទប្បញ្ញត្តិការងារ (工作規則)
+
+Register: formal Khmer legal-editor voice; address លោកអ្នក; attorney Wei Tseng as មេធាវីស្ត្រី / លោកស្រី.
+Quotes « ». Cities: តៃប៉ិ / កៅស៊ុង / តៃជុង / ពីងតុង. Korea/Japan: កូរ៉េ / ជប៉ុន.
+Four consultation languages, same order: English, Chinese (中文), Japanese, Korean.
+FAQ “advice in Khmer?” opens ទេ។
+Bio preserved terms + TWD 1.57M kept byte-identical.
+team-name brand kept Latin: Hovering International Team.
+
+=== Could not fit ===
+
+None. All nav.* labels ≤ 14 JS code units:
+
+  home        8  ទំព័រដើម
+  services    9  វិស័យសេវា
+  about       9  ការិយាល័យ
+  lawyers     6  មេធាវី
+  pricing    12  វិសាលភាពថ្លៃ
+  contact    10  ទំនាក់ទំនង
+  faq        12  សំណួរញឹកញាប់
+  privacy     7  ឯកជនភាព
+  disclaimer  9  ការបដិសេធ
+  columns     6  អត្ថបទ
+
+menuLabel = បញ្ជីទំព័រ (not the literal "Menu")
+eyebrows: team label ក្រុម ; offices label ការិយាល័យ
+lawyers page title/description = guidanceTeamCopy:
+  ក្រុមអន្តរជាតិ Hovering
+  ប្រវត្តិមេធាវី អ្នកគ្រប់គ្រងប្រតិបត្តិ និងដៃគូគណនេយ្យករនៃ Hovering
+columns All = ទាំងអស់ ; read-more = អានបន្ត (byte-identical pack home.columnsReadMoreLabel)
+
+=== Constraints held ===
+
+Consultation only in English, Chinese (中文), Japanese, Korean — no Khmer advice, no interpreter, no reply-time / appointment / free first meeting / result or guarantee promises.
+Latin proper names and Traditional-Chinese glosses unchanged; URLs, emails, {name} {firm} unchanged.
+No Thai sentence left in km blocks.

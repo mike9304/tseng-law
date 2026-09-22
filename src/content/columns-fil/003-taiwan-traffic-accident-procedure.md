@@ -33,7 +33,7 @@ Tiyakin muna ang sariling kaligtasan at ang paglalagay ng babalang panandaan; sa
 
 Kapag natiyak na ang kaligtasan, kumuha ng malawak at malapitang mga larawan upang maitala ang posisyon ng sasakyan, ang pinsala nito, ang mga marka sa kalsada, ang mga senyas, at ang lagay ng panahon. Mabuting huwag ding kaligtaan ang impormasyon sa pakikipag-ugnayan ng mga saksi, ang paghiling na maingatan ang kuha ng CCTV at ng dashcam, ang datos ng mga panig, sasakyan at seguro, gayundin ang mga rekord ng paggamot. Kapaki-pakinabang ang sariling pagkuha ng larawan, ngunit hindi nito napapalitan ang paghawak ng pulisya na hinihingi sa mga aksidenteng may nasugatan o namatay.
 
-Tungkol sa dokumento ng pulisya, maaaring matanggap sa lugar ng aksidente ang traffic accident party registration slip (道路交通事故當事人登記聯單). Kapag lumipas ang 7 araw mula sa petsa ng aksidente ay maaari nang hilingin ang guhit ng pinangyarihan (現場圖) at ang mga larawan nito (現場照片), at kapag lumipas ang 30 araw ay maaari nang hilingin ang preliminary accident analysis report (道路交通事故初步分析研判表). Muling kumpirmahin sa pulisyang may hurisdiksyon ang panahon ng paglalabas nito at ang mga kailangan sa paghiling.
+Tungkol sa dokumento ng pulisya, maaaring matanggap sa lugar ng aksidente ang traffic accident party registration slip (道路交通事故當事人登記聯單). Kapag lumipas ang 7 araw mula sa petsa ng aksidente ay maaari nang hilingin ang guhit ng pinangyarihan (現場圖) at ang mga larawan nito (現場照片), at kapag lumipas ang 30 araw ay maaari nang hilingin ang preliminary accident analysis report (道路交通事故初步分析研判表). Muling kumpirmahin sa pulisyang may hurisdiksiyon ang panahon ng paglalabas nito at ang mga kailangan sa paghiling.
 
 ## Q3. Kung ako ay nasugatan, anong mga paghahabla at takdang panahon ang dapat kong tingnan?
 
@@ -43,13 +43,13 @@ Ang danyos (damages, 損害賠償) sa sibil ay hindi na maaaring habulin ayon sa
 
 Ang taong napinsala ng isang krimen ay maaaring maghain ng civil action na kalakip ng kasong kriminal (刑事附帶民事訴訟) ayon sa Artikulo 487 ng Kodigo ng Pamamaraang Kriminal. Habang nakabinbin ang paglilitis na kriminal, maihahain ito hanggang sa pagtatapos ng pasalitaang pagtatalo (oral argument, 言詞辯論終結) sa ikalawang antas (antas ng apela, 二審) na itinakda ng Artikulo 488 ng Kodigo ng Pamamaraang Kriminal, ngunit hindi ito maihahain matapos ang pagtatapos ng pasalitaang pagtatalo sa unang antas (unang antas, 一審) at bago maihain ang apela. Karaniwang naiiwasan nito ang hiwalay na bayad sa korte (court fee, 裁判費), ngunit hindi lahat ng kalalabasan ay nagtatapos nang walang gastos. Halimbawa, kapag ibinasura ang kasong kriminal at inilipat ito sa hukumang sibil sa hiling ng naghahabla, maaaring pasanin ang gastos sa paglilitis ayon sa Artikulo 503 ng Kodigo ng Pamamaraang Kriminal, kaya dapat ding tingnan ang panuntunan sa paglilipat at sa pamamaraan sa Artikulo 504.
 
-Nag-iiba ang pagpipilian depende sa kung naputol at muling nagsimula (時效中斷) ang takbo ng prescription o hindi, sa saklaw ng mga inihahabla, sa ebidensya, sa seguro, gayundin sa hurisdiksyon. Kaya walang iisang pamamaraang pinakamainam sa lahat ng kaso.
+Nag-iiba ang pagpipilian depende sa kung naputol at muling nagsimula (時效中斷) ang takbo ng prescription o hindi, sa saklaw ng mga inihahabla, sa ebidensya, sa seguro, gayundin sa hurisdiksiyon. Kaya walang iisang pamamaraang pinakamainam sa lahat ng kaso.
 
 ## Q4. Kung parehong may kapabayaan ang dalawang panig, paano tinitingnan ang pananagutang kriminal at sibil?
 
 Ang pananagutang kriminal ay mahuhusgahan lamang kapag kinilala ang paglabag ng bawat isa sa tungkuling mag-ingat, gayundin ang ugnayang sanhi ng paglabag na iyon sa pinsalang natamo ng kabilang panig. Hindi awtomatikong nabubuo ang pananagutan sa pinsala dahil sa kapabayaan dahil lamang sa parehong may kapabayaan ang dalawang panig.
 
-Sa sibil, ayon sa Artikulo 217 ng Kodigo Sibil, kung may kapabayaan ang biktima na nag-ambag sa pagkakaroon o sa paglaki ng pinsala ay maaaring bawasan o alisin ng hukuman ang halaga ng danyos. Halimbawa, kung ang kinilalang pinsala ay TWD 1,000,000 sa TWD (新臺幣) at ang kapabayaan ng biktima ay itinaya sa 50%, maaari itong bumaba sa TWD 500,000 bago ang iba pang pagsasaayos.
+Sa sibil, ayon sa Artikulo 217 ng Kodigo Sibil, kung may kapabayaan ang biktima na nag-ambag sa pagkakaroon o sa paglaki ng pinsala ay maaaring bawasan o alisin ng hukuman ang halaga ng danyos. Halimbawa, kung ang kinilalang pinsala ay TWD 1,000,000 (isang milyong dolyar ng Taiwan, 新臺幣) at ang kapabayaan ng biktima ay itinaya sa 50%, maaari itong bumaba sa TWD 500,000 bago ang iba pang pagsasaayos.
 
 Maaaring maging mahalagang materyal ang expert appraisal (鑑定) o ang preliminary accident analysis report, ngunit hindi nito mekanikal na iginagapos ang hukuman. Sinusuri ng hukuman ang buong ebidensya kasama ang mga pahayag, ang bidyo, at ang kalagayan ng sasakyan.
 
@@ -91,7 +91,7 @@ Kung may pagtutol sa opinyon ng appraisal ay maaaring humiling ng re-examination
 
 ## Q7. Anong mga pinsala ang maaaring habulin matapos ang aksidente?
 
-Ang paghahabla ayon sa Artikulo 184 ng Kodigo Sibil ay nangangailangan ng labag sa batas na paglabag sa karapatan, ng ugnayang sanhi sa aksidente, gayundin ng patunay ng pinsala. Hindi kinikilala ang lahat ng sumusunod na aytem dahil lamang sa naganap ang aksidente. Ang Artikulo 216 ng Kodigo Sibil ang nagiging batayan sa pagtukoy ng saklaw ng aktuwal na pinsala at ng nawalang kita (lost profits, 所失利益).
+Ang paghahabla ayon sa Artikulo 184 ng Kodigo Sibil ay nangangailangan ng labag sa batas na paglabag sa karapatan, ng ugnayang sanhi sa aksidente, gayundin ng patunay ng pinsala. Hindi kinikilala ang lahat ng sumusunod na bagay dahil lamang sa naganap ang aksidente. Ang Artikulo 216 ng Kodigo Sibil ang nagiging batayan sa pagtukoy ng saklaw ng aktuwal na pinsala at ng nawalang kita (lost profits, 所失利益).
 
 - **Pinsala sa katawan**: Ayon sa Artikulo 193 ng Kodigo Sibil, maaaring suriin ang kinakailangang gastos sa medikal (medical expenses, 醫療費用), ang dagdag na gastusing pangangailangan sa pamumuhay gaya ng pag-aalaga, pagbiyahe para sa paggamot at kagamitang pantulong, ang pagkawala ng kita (income loss, 收入損失) dahil sa aktuwal na hindi pagkakaya sa trabaho, at ang pagkabawas ng kakayahang kumita (loss of earning capacity, 勞動能力減損). Ayon sa Artikulo 195 ng Kodigo Sibil ay maaari ding suriin ang moral damages (慰撫金).
 - **Kamatayan**: Ayon sa Artikulo 192 ng Kodigo Sibil, kung naaangkop ay maaaring suriin ang gastos sa medikal bago ang kamatayan, ang dagdag na gastusing pangangailangan sa pamumuhay, ang gastos sa libing (殯葬費), at ang pagkawala ng suporta ng taong may karapatang tumanggap ng sustento ayon sa batas. Ayon sa Artikulo 194 ng Kodigo Sibil ay maaari ding suriin ang moral damages ng ilang kamag-anak.
@@ -121,7 +121,7 @@ Posibleng ebidensya ang mga resibo, ang tala ng pamasahe, ang tala ng ruta, at a
 
 - [Artikulo 3 ng Alituntunin sa Appraisal at Re-examination ng Aksidente ng Sasakyan (車輛行車事故鑑定及覆議作業辦法)](https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL025820&LawNo=3)
 - [Artikulo 11 hanggang Artikulo 15 ng Alituntunin sa Appraisal at Re-examination ng Aksidente ng Sasakyan](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=11&lsid=FL025820&media=print)
-- [Pormularyo ng kahilingan sa re-examination ng appraisal ng aksidente ng sasakyan, Directorate General of Highways (交通部公路局)](https://www.mvdis.gov.tw/files/m3/vil/cac/cacApply2.pdf)
+- [Pormularyo ng kahilingan sa re-examination ng appraisal ng aksidente ng sasakyan, Pangasiwaan ng mga Lansangan (交通部公路局)](https://www.mvdis.gov.tw/files/m3/vil/cac/cacApply2.pdf)
 - [Artikulo 184 ng Kodigo Sibil](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=184&pcode=B0000001)
 - [Artikulo 192 ng Kodigo Sibil](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=192&pcode=B0000001)
 - [Artikulo 193 ng Kodigo Sibil](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
@@ -139,7 +139,7 @@ Posibleng ebidensya ang mga resibo, ang tala ng pamasahe, ang tala ng ruta, at a
 
 Kailangang patunayan sa pamamagitan ng datos na dahil sa pinsalang may kinalaman sa aksidente ay hindi nakapagtrabaho nang buo o nang bahagya ang biktima sa panahon ng paggaling, at na nagkaroon nga nito ng aktuwal na pagbaba ng kita. Mahalagang panimula ang medical certificate o ang rekomendasyong magpahinga, ngunit hindi kinikilala ang paghahabla dahil lamang doon.
 
-Mabuting sabay na ayusin ang mga rekord ng paggamot, ang tala ng pagpasok o ng pagliban, ang datos ng sahod at ng buwis, gayundin ang patunay mula sa employer. Ang nagnenegosyo nang mag-isa ay maaaring magsumite ng datos ng benta, tala ng transaksyon, datos sa pagbabayad ng buwis, o iba pang datos na naaayon sa uri ng kaniyang hanapbuhay.
+Mabuting sabay na ayusin ang mga rekord ng paggamot, ang tala ng pagpasok o ng pagliban, ang datos ng sahod at ng buwis, gayundin ang patunay mula sa amo. Ang nagnenegosyo nang mag-isa ay maaaring magsumite ng datos ng benta, tala ng transaksyon, datos sa pagbabayad ng buwis, o iba pang datos na naaayon sa uri ng kaniyang hanapbuhay.
 
 Ang pagpapatuloy sa trabaho o ang sahod na naibigay nang walang pagbabago ay may kaugnayan sa paghusga ng pagkawala ng kita sa panahon ng paggaling, ngunit dapat ituring na hindi awtomatikong napagpapasyahan ng ganitong pangyayari ang usapin ng pagkabawas ng kakayahang kumita. Hindi rin ito mag-isang batayan sa paghusga ng pagkabawas ng kakayahang kumita. Hiwalay na sinusuri sa Q12 ang pagkabawas ng kakayahang kumita.
 
@@ -159,13 +159,13 @@ Ang moral damages para sa pinsalang hindi pinansiyal ay hinuhusgahan sa paraang 
 
 Sinusuri ng hukuman ang kalagayan ng bawat kaso sa pamamagitan ng pagsasama-sama ng nilalaman ng pinsala at ng paggamot, ng nagpapatuloy na epekto, ng hirap gayundin ng epekto sa pamumuhay, ng edad at katayuan, ng lagay panlipunan saka pang-ekonomiya, at ng ebidensyang inihain ng mga panig. Kaya mahirap tiyakin nang maaga ang resulta batay lamang sa mga nakasanayang saklaw ng halaga.
 
-## Q14. Kung naganap ang aksidente habang nasa trabaho, mapananagot din ba sa sibil ang employer?
+## Q14. Kung naganap ang aksidente habang nasa trabaho, mapananagot din ba sa sibil ang amo?
 
 Tinatalakay ng Artikulo 188 ng Kodigo Sibil ang kalagayang ang empleyado ay labag sa batas na nakapinsala sa iba habang tinutupad ang kaniyang tungkulin. Hindi awtomatikong kinikilala ang kaugnayan sa tungkulin batay lamang sa oras ng trabaho, kaya kailangang tiyakin ang aktuwal na ugnayan ng gawain sa aksidente.
 
-Maaaring iharap ng employer ang depensa na ginawa niya ang nararapat na pag-iingat sa pagpili at sa pagsubaybay sa empleyado, o na hindi maiiwasan ang pinsala kahit ginawa ang gayong pag-iingat. Mapag-iisipan ang paraang paghahabol ng danyos laban sa employer at sa empleyado nang magkasama. Matapos magbayad ang employer ay maaari niyang singilin ang empleyado.
+Maaaring iharap ng amo ang depensa na ginawa niya ang nararapat na pag-iingat sa pagpili at sa pagsubaybay sa empleyado, o na hindi maiiwasan ang pinsala kahit ginawa ang gayong pag-iingat. Mapag-iisipan ang paraang paghahabol ng danyos laban sa amo at sa empleyado nang magkasama. Matapos magbayad ang amo ay maaari niyang singilin ang empleyado.
 
-Kapag napatunayan ng employer ang nabanggit na dahilan ng pagkaligtas sa pananagutan kaya hindi natanggap ng biktima ang danyos ayon sa unang talata, maaaring iutos ng hukuman ang buo o bahagyang pagbabayad ayon sa ikalawang talata ng Artikulo 188 ng Kodigo Sibil, sa pagsasaalang-alang sa kalagayang pang-ekonomiya ng employer at ng biktima.
+Kapag napatunayan ng amo ang nabanggit na dahilan ng pagkaligtas sa pananagutan kaya hindi natanggap ng biktima ang danyos ayon sa unang talata, maaaring iutos ng hukuman ang buo o bahagyang pagbabayad ayon sa ikalawang talata ng Artikulo 188 ng Kodigo Sibil, sa pagsasaalang-alang sa kalagayang pang-ekonomiya ng amo at ng biktima.
 
 Kailangang ibukod ang usapin ng pagpili kung sino ang hahablahin sa sibil sa usapin ng pananagutang kriminal. Ang pananagutang kriminal sa Artikulo 284 ng Kodigo Penal ay hinuhusgahan batay sa paglabag ng bawat natural na tao sa tungkuling mag-ingat, gayundin sa ugnayang sanhi ng paglabag na iyon.
 
@@ -207,7 +207,7 @@ Maaaring mapabayaan ang mahalagang bahagi ng pag-aalaga sa damdamin ng kabilang 
 
 ​
 
-Para sa kompanya ng seguro, ang dagdag na paggastos ng TWD 500,000 o TWD 1,000,000 sa isang kaso ay walang malaking epekto sa kabuuang interes nito, ngunit para sa panig sa aksidente ay maaari itong makaapekto kung magkakaroon siya ng rekord na kriminal (前科).
+Para sa kompanya ng seguro, ang dagdag na paggastos ng TWD 500,000 o TWD 1,000,000 sa isang kaso ay walang malaking epekto sa kabuuang tubo nito, ngunit para sa panig sa aksidente ay maaari itong makaapekto kung magkakaroon siya ng rekord na kriminal (前科).
 
 ​
 
@@ -235,7 +235,7 @@ Q17. Ano ang pananagutang kriminal ng may kagagawan sa aksidente sa trapiko para
 
 ​
 
-Sa kaso ng pinsala dahil sa kapabayaan, sa ilang hatol ay may ipinataw na humigit-kumulang 3 buwang pagkakakulong; hindi ito karaniwan o garantisadong resulta.
+Sa kaso ng pinsala dahil sa kapabayaan, ang parusang karaniwang ipinapataw ng mga hukuman ngayon ay humigit-kumulang 3 buwang pagkakakulong. Hindi ito garantisadong resulta para sa usapin ninyo.
 
 ​
 
@@ -247,7 +247,7 @@ Kapag pinalitan ito ng multang kapalit ng pagkakakulong (易科罰金), itinatak
 
 ​
 
-Sa ilang hatol ay may ipinataw na humigit-kumulang 4 na buwang pagkakakulong para sa malubhang pinsala dahil sa kapabayaan, at humigit-kumulang 6 na buwan para sa pagkamatay dahil sa kapabayaan (過失致死); hindi ito nakapirming resulta.
+Ang malubhang pinsala dahil sa kapabayaan ay karaniwang humigit-kumulang 4 na buwan, at ang pagkamatay dahil sa kapabayaan (過失致死) ay humigit-kumulang 6 na buwan; hindi rin ito nakapirming pangako.
 
 ​
 
@@ -307,7 +307,7 @@ Ang mahalaga rito ay ang pagiging maingat at ang katapatan ng abogado.
 
 ​
 
-Mahalagang maingat na suriin ng abogado ang bawat aytem ng paghahabol sa kaso, upang hindi malampasan ang mga paghahablang suportado ng ebidensya; hindi ito pangako ng anumang halaga.
+Mahalagang maingat na suriin ng abogado ang bawat bagay ng paghahabol sa kaso, upang hindi malampasan ang mga paghahablang suportado ng ebidensya; hindi ito pangako ng anumang halaga.
 
 ​
 

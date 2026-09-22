@@ -37,13 +37,13 @@ Sa isang anonimong kaso na hinawakan ng tanggapang ito, ang nagmamaneho ng motor
 
 ![Diagram ng aksidenteng nagpapakita ng ruta ng paglampas ng motorsiklo gayundin ng dalawang sasakyan sa unahan sa daang bundok](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-Sinubukan ni A na lampasan nang sabay ang dalawang sasakyan, kaya pumasok siya sa kabilang lane (對向車道) saka binilisan ang takbo. Naghahanda rin ang Sasakyan 2 na lampasan ang Sasakyan 1: wala pang isang segundo matapos buksan ang senyas ng liko ay pumasok na ito sa kabilang lane. Kulang ang kaluwagan ng motorsiklo upang makapreno, kaya bumangga ito sa Sasakyan 2.
+Sinubukan ni A na lampasan nang sabay ang dalawang sasakyan, kaya pumasok siya sa kabilang lane (對向車道) saka binilisan ang takbo. Naghahanda rin ang Sasakyan 2 na lampasan ang Sasakyan 1: wala pang isang segundo matapos buksan ang senyas ng liko ay pumasok na ito sa kabilang lane. Kulang ang oras ng motorsiklo upang makapreno, kaya bumangga ito sa Sasakyan 2.
 
 Nagtamo si B ng malubhang pinsala sa ulo at namatay sa mismong pinangyarihan; nawalan naman ng malay si A saka dinala sa ospital.
 
 Sa simula ay pinaniwalaan ng mga pamilya nina A at B na ang biglaang paglipat ng lane ng Sasakyan 2 ang pangunahing sanhi ng banggaan. Umabot sa paglilitis ang usapin, at sa proseso nito ay ilang ulit na isinagawa ang pagsusuri ng eksperto (鑑定) hinggil sa aksidente.
 
-Ayon sa mga resulta ng appraisal, si A ang itinuring na pangunahing may pananagutan sa banggaang ito. Ang konklusyong iyon ay limitado lamang sa mga pangyayari ng kasong ito. Sabay-sabay na isinaalang-alang sa appraisal ang pagtatangka ni A na lampasan ang dalawang magkakasunod na sasakyan sa unahan, ang pagpasok niya sa kabilang lane, ang bilis na nag-iwan ng kakaunting kaluwagan upang makapreno, ang hindi paggawa ng itinakdang senyas ng busina o ng ilaw sa unahan, ang galaw ng Sasakyan 2 sa paglipat ng lane, ang ayos ng kalsada at ng mga lane, gayundin ang iba pang ebidensyang nakalap.
+Ayon sa mga resulta ng pagsusuri ng eksperto, si A ang itinuring na pangunahing may pananagutan sa banggaang ito. Ang konklusyong iyon ay limitado lamang sa mga pangyayari ng kasong ito. Sabay-sabay na isinaalang-alang sa pagsusuri ng eksperto ang pagtatangka ni A na lampasan ang dalawang magkakasunod na sasakyan sa unahan, ang pagpasok niya sa kabilang lane, ang bilis na nag-iwan ng kakaunting oras upang makapreno, ang hindi paggawa ng itinakdang senyas ng busina o ng ilaw sa unahan, ang galaw ng Sasakyan 2 sa paglipat ng lane, ang ayos ng kalsada at ng mga lane, gayundin ang iba pang ebidensyang nakalap.
 
 Ang ganitong resultang nakabatay sa isang tiyak na kaso ay hindi nangangahulugang laging natutukoy ang pananagutan sa isang nalaktawang senyas. Ang kapabayaan (過失) sa aksidente ng paglampas ay nakadepende sa lugar ng pangyayari, sa ayos ng mga lane, sa bilis, sa galaw ng mga sasakyan, sa mga senyas, sa agwat ng oras, sa saklaw ng paningin, gayundin sa iba pang makukuhang ebidensya.
 
@@ -51,7 +51,7 @@ Ang ganitong resultang nakabatay sa isang tiyak na kaso ay hindi nangangahulugan
 
 Bago lumampas ay kailangan munang tiyakin kung ang lugar o ang kalagayan ng trapiko ay saklaw ng pagbabawal sa paglampas. Kapag naaangkop ang pamamaraan para sa iisang lane, gawin ang itinakdang senyas ng busina o ng ilaw sa unahan nang hindi pinipilit na magbigay-daan ang sasakyan sa unahan, hintayin ang malinaw na pahiwatig ng pagbibigay-daan, saka tapusin ang paglampas nang may sapat na agwat at may ligtas na distansya ng pagbalik sa orihinal na lane.
 
-Mahalaga ang pagsunod sa Artikulo 101, ngunit hindi nito tinitiyak sa sarili nitong maiiwasan ang aksidente, ni naitatakda nito nang maaga ang magiging resulta ng appraisal o ng paglilitis. Kailangan pa ring mag-iwan ang mga nagmamaneho ng dagdag na puwang para sa kaligtasan saka tumugon ayon sa kalagayan ng kalsada sa unahan nila.
+Mahalaga ang pagsunod sa Artikulo 101, ngunit hindi nito tinitiyak sa sarili nitong maiiwasan ang aksidente, ni naitatakda nito nang maaga ang magiging resulta ng pagsusuri ng eksperto o ng paglilitis. Kailangan pa ring mag-iwan ang mga nagmamaneho ng dagdag na puwang para sa kaligtasan saka tumugon ayon sa kalagayan ng kalsada sa unahan nila.
 
 Bilang karagdagang babasahin ay maaaring sumangguni sa [ilustradong gabay sa mga alituntunin at hakbang ng paglampas](https://gonews.com.tw/car/daily/21934/). Dahil pangalawang sanggunian lamang ito, mangyaring tingnan din ang kasalukuyang opisyal na regulasyon kapag tinitiyak ang mga kinakailangan ng batas.
 

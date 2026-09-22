@@ -1,5 +1,5 @@
 ---
-title: "Pagtatatag ng Kompanya sa Taiwan — Masusing Bahagi 3 Paghahanap ng Lugar ng Negosyo"
+title: "Pagtatatag ng Kompanya sa Taiwan — Masusing Bahagi 3: Paghahanap ng Lugar ng Negosyo"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
 lastmod: "2026-09-10"
 date_display: "Setyembre 13, 2025"
@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.jpg"
 ---
 
-# Pagtatatag ng Kompanya sa Taiwan — Masusing Bahagi 3 Paghahanap ng Lugar ng Negosyo
+# Pagtatatag ng Kompanya sa Taiwan — Masusing Bahagi 3: Paghahanap ng Lugar ng Negosyo
 
 ![Pangunahing larawan](../images/015-taiwan-company-setup-pitch-location/featured-01.jpg)
 
@@ -21,9 +21,9 @@ Kapag sisimulan ang negosyo sa pagkain, ang unang suliranin ay ang paghahanap ng
 
 Bukod sa pagsasaalang-alang sa kalagayan ng pamilihan,
 
-isa pang mahalagang pagsasaalang-alang ay
+Isa pang mahalagang pagsasaalang-alang ay ito:
 
-kung ang adres na iyon ay nasa lugar kung saan pinahihintulutang magpatakbo ng negosyong restawran.
+Kung ang adres na iyon ay nasa lugar kung saan pinahihintulutang magpatakbo ng negosyong restawran.
 
 ​
 
@@ -63,7 +63,7 @@ Ayon sa "[Mga Alituntunin sa Pagpapatakbo ng Serbisyong Tulong sa Pagsusuri ng L
 
 mula Enero 1, 2023, ang aplikasyon para sa pagpaparehistro ng pagtatatag, paglipat ng lokasyon, o pagdaragdag ng rehistradong gawain ng kompanya o negosyo (kasama ang sangay ng kompanya (分公司) at tanggapang sangay (分支機構)) ay **kinakailangang** maglakip ng resulta ng paunang pagsusuri sa lugar ng negosyo, anuman ang rehistradong gawain.
 
-Ang listahan ng "mga rehistradong gawain na kailangang unang itanong" (主動查詢之營業項目) sa ibaba ay ang mga item na kusang sinusuri ng Pangasiwaan sa Pagpapaunlad ng Komersiyo habang isinasagawa ang pagsusuri sa pagpaparehistro (隨案主動查詢) kapag nakasaad ang item na iyon sa aplikasyon ngunit wala ito sa nakalakip na resulta; hindi nangangahulugang hindi na kailangang suriin ang item na wala sa listahang ito.
+Ang listahan ng "mga rehistradong gawain na kailangang unang itanong" (主動查詢之營業項目) sa ibaba ay ang mga gawaing kusang sinusuri ng Kagawaran ng Komersiyo ng Lungsod ng Taipei habang isinasagawa ang pagsusuri sa pagpaparehistro (隨案主動查詢) kapag nakasaad ang item na iyon sa aplikasyon ngunit wala ito sa nakalakip na resulta; hindi nangangahulugang hindi na kailangang suriin ang item na wala sa listahang ito.
 
 Kung magbubukas sa lugar na hindi pinahihintulutan ang operasyon ng restawran, maaari kayong patawan sa hinaharap ng multa administratibo (罰鍰) ng ahensiyang may hurisdiksiyon.
 

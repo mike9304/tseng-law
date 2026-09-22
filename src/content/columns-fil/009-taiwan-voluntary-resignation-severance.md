@@ -19,7 +19,7 @@ Gaya ng nabanggit ko na noon, hindi madali para sa isang empleyado sa Taiwan na 
 
 Lalo na kung kusang-loob na nagbitiw (自請離職) ang empleyado,
 
-hindi siya makakatanggap ng separation pay (Artikulo 18 ng Labor Standards Act),
+hindi siya makakatanggap ng separation pay (Artikulo 18 ng Batas sa mga Pamantayan sa Paggawa),
 
 at ito ay naiiba sa ilang bansa (halimbawa ang Korea); huwag itumbas ang 資遣費 sa separation pay sa ilalim ng batas paggawa ng ibang bansa.
 
@@ -29,25 +29,25 @@ Ngunit may mga **eksepsiyonal na sitwasyon**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-Sa mga sumusunod na natatanging sitwasyon, kailangan pa ring bayaran ng employer ang manggagawa ng separation pay kahit kusang-loob itong nagbitiw — ayon sa Artikulo 14 ng Labor Standards Act, na nag-aaplay ng Artikulo 17 nang may kaukulang pagbabago (準用, 勞動基準法):
+Sa mga sumusunod na natatanging sitwasyon, kailangan pa ring bayaran ng amo ang manggagawa ng separation pay kahit kusang-loob itong nagbitiw — ayon sa Artikulo 14 ng Batas sa mga Pamantayan sa Paggawa, na nag-aaplay ng Artikulo 17 nang may kaukulang pagbabago (準用, 勞動基準法):
 
-1. Kung sa pagpasok sa kontrata sa paggawa (labor contract, 勞動契約) ay gumawa ang employer ng hindi totoong paglalahad (虛偽之意思表示), kaya't naniwala nang mali ang manggagawa at may panganib siyang magdusa ng pinsala
+1. Kung sa pagpasok sa kontrata sa paggawa (勞動契約) ay gumawa ang amo ng hindi totoong paglalahad (虛偽之意思表示), kaya't naniwala nang mali ang manggagawa at may panganib siyang magdusa ng pinsala
 
-(Halimbawa, kapag ipinangako ng employer sa manggagawa na, pagkapasok niya sa trabaho, ipadadala siya sa isang sangay sa ibayong dagat na wala naman talagang umiiral)
+(Halimbawa, kapag ipinangako ng amo sa manggagawa na, pagkapasok niya sa trabaho, ipadadala siya sa isang sangay sa ibayong dagat na wala naman talagang umiiral)
 
-2. Kung ang employer, ang kapamilya ng employer, o ang kinatawan ng employer ay gumamit ng karahasan sa manggagawa o gumawa ng malubhang pang-iinsulto laban sa kanya
+2. Kung ang amo, ang kapamilya ng amo, o ang kinatawan ng amo ay gumamit ng karahasan sa manggagawa o gumawa ng malubhang pang-iinsulto laban sa kanya
 
-3. Kung ang trabahong nakasaad sa kontrata ay may panganib na makasama sa kalusugan ng manggagawa, at matapos hilingin sa employer na ito ay ayusin ay wala namang naging bisa
+3. Kung ang trabahong nakasaad sa kontrata ay may panganib na makasama sa kalusugan ng manggagawa, at matapos hilingin sa amo na ito ay ayusin ay wala namang naging bisa
 
-4. Kung ang employer, ang kinatawan ng employer, o ibang manggagawa ay may nakahahawang sakit na itinakda ng batas (法定傳染病) na maaaring makahawa sa mga kasabay niyang nagtatrabaho, at malubhang panganib ito sa kalusugan ng manggagawa
+4. Kung ang amo, ang kinatawan ng amo, o ibang manggagawa ay may nakahahawang sakit na itinakda ng batas (法定傳染病) na maaaring makahawa sa mga kasabay niyang nagtatrabaho, at malubhang panganib ito sa kalusugan ng manggagawa
 
-5. Kung hindi binabayaran ng employer ang sahod (wages, 工資) na nakatakda sa kontrata sa paggawa, o hindi nagbibigay ng sapat na trabaho sa manggagawang binabayaran ayon sa bilang ng natapos na piyesa (按件計酬)
+5. Kung hindi binabayaran ng amo ang sahod (工資) na nakatakda sa kontrata sa paggawa, o hindi nagbibigay ng sapat na trabaho sa manggagawang binabayaran ayon sa bilang ng natapos na piyesa (按件計酬)
 
-6. Kung lumabag ang employer sa kontrata sa paggawa o sa mga batas sa paggawa, kaya't may panganib na masira ang mga karapatan at interes ng manggagawa
+6. Kung lumabag ang amo sa kontrata sa paggawa o sa mga batas sa paggawa, kaya't may panganib na masira ang mga karapatan at interes ng manggagawa
 
 ​
 
-Ang pinakakaraniwang halimbawa ay kapag ang employer ay
+Ang pinakakaraniwang halimbawa ay kapag ang amo ay
 
 hindi nagbabayad ng sahod sa takdang panahon,
 
@@ -55,11 +55,11 @@ hindi nagbabayad ng overtime pay (加班費),
 
 o hindi ipinatatala ang empleyado sa labor insurance (勞保) o sa national health insurance (健保).
 
-Sa ganitong mga kaso, kahit ang manggagawa mismo ang nagwakas ng kontrata sa paggawa, kailangan pa ring bayaran ng employer ang separation pay.
+Sa ganitong mga kaso, kahit ang manggagawa mismo ang nagwakas ng kontrata sa paggawa, kailangan pa ring bayaran ng amo ang separation pay.
 
 ​
 
-Gayunman, itinatakda ng Labor Standards Act na
+Gayunman, itinatakda ng Batas sa mga Pamantayan sa Paggawa na
 
 kung nais ng manggagawa na wakasan ang kontrata sa paggawa batay sa bilang 1 o bilang 6 sa itaas (halimbawa, dahil hindi siya ipinatala sa insurance),
 
@@ -79,7 +79,7 @@ o ang empleyado ang may pagkakamali,
 
 binibigyan ng batas ng Taiwan ang magkabilang panig ng karapatang tumangging magbayad o humingi ng separation pay.
 
-Kung minsan, kapag kapwa may pagkakamali ang employer at ang manggagawa,
+Kung minsan, kapag kapwa may pagkakamali ang amo at ang manggagawa,
 
 at nagkaroon ng alitan,
 

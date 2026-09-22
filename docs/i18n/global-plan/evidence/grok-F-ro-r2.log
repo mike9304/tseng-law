@@ -1,0 +1,143 @@
+WO-F-ro r2 — Grok 4.7 fix lane — 2026-09-22
+Workspace: /Users/son7/Projects/tseng-law-fix-ro-r2
+No git add/commit/push.
+
+## Rows applied
+
+Reviews: ro-a.md 51 rows, ro-b.md 54 rows.
+Applied: ro-a #1–#11, #13–#37, #39–#51 and ro-b #1–#29, #32–#54.
+P3-cheap items done inside the same sweep: `Invers,` → `Dimpotrivă,`; `nici o programare` → `nicio programare` in the answers pack; 010 `termenele de revendicare` → `termenele pretenției de despăgubire`.
+
+ro-a, applied (guidance pack and columns 001–009):
+1 P1 case intake is whether the firm takes the case.
+2 P1 001 regulatory authority, not the guardianship authority.
+3 P1 002 the date of each amount, not a date of birth.
+4 P1 002 revenue and expenses (`veniturile și cheltuielile`); the same pair in 004.
+5 P1 004 link label is the non-resident dividend withholding rule. URL unchanged (`pcode=G0340028&flno=3`). Digit `art. 10` kept: the Korean anchor is 제10조. Wrong gloss 營業稅法 removed.
+6 P1 007 service of process is `comunicare` (送達), including the inflected forms in that file. The 008 table header `Semnificație` is “meaning” and was left.
+7 P2 whether a proceeding has already started.
+8–9 P2 `suspecți sau inculpați`; criminal `Însoțim` → `Reprezentăm`. Other firm-level `însoțește` / `Însoțim` (begleiten) → `asistă` / `Asistăm`. Column uses that really mean “accompanied by” were left.
+10 P2 `gir` → a recommendation, separate from the AI recommendation. Token `llms.txt` kept.
+11 P2 Kaohsiung office: company-management advice, not running companies.
+13 P2 投資額審定 is official verification of the amount.
+14 P2 `beneficiar real` for 實質受益人 and, as the row asked, also for 受益所有人 in 001 and 004.
+15–17 P2 conduct or skills; direct employees; staffing.
+18 P2 營業稅 is `impozit pe afaceri` in 001, 002 and 004. The 004 withholding link was not renamed to that tax.
+19 P2 `titlu de ședere` → `permis de ședere` (heading and family permit). Existing `drept de ședere` / `permis de ședere` left.
+20 P2 premises suitable for tax registration; the later `aptitudinea locului` in the same section became `adecvarea locului`.
+21–22 P2 recorded by the tax authority; Article 90 provides for the penalty.
+23–25 P2 damages claim is `pretenție` / `drept la despăgubire` throughout 003; tort is `faptă ilicită`; `sechestru asigurător`.
+26 P2 產業創新條例 is `Legea privind inovarea industrială`.
+27 P2 unwanted sexual touching.
+28–29 P2 戶籍法 / 戶政機關 are household registration (`evidența gospodăriilor`); visitation is `legăturile personale`. True marital-status `stare civilă` left.
+30 P2 settlement is `a încheia o tranzacție`, including the 003 verb forms. The noun `tranzacție (和解)` stayed.
+31–36 P2 article on `interpret`; subject `rezumatul`; commas around `de regulă`; `în drept`; `o privire`; `niciun` / `nicio`.
+37 P2 broken coordination in 001, with the one-word negative determiner (`nicio ordine și nicio durată fixă`).
+39 P2 `a soma` takes a direct object.
+40 P2 the compound past is finite inside each existing block. The two blocks were not merged.
+41–44 P2 Sprachseite, Schreibsprache, word order of `de aceea`, `nu ține loc de consultanță`.
+45 P2 guidance: `autoritatea părintească asupra copiilor minori`, gloss kept. In 007 the article itself says that shorthand is incomplete, so the long name became `exercitarea drepturilor și îndeplinirea obligațiilor față de copilul minor` (gloss kept).
+46–49 P2 Korea operations unit; gym injury; habitual residence; bare `preaviz`.
+50 P2 amount-then-currency: `500.000 USD`, `200.000 USD` (four of each).
+51 P2 `asistent juridic senior`. The parenthetical `(paralegal)` on the first mention stayed.
+
+ro-b, applied (columns 010–018):
+1 P1 several procedures do not guarantee success in any of them. `pentru același accident` in the same sentence.
+2–3 P1 which records are handed over; distribution records.
+4 P1 the worker’s commitment to remain (`a rămâne`), including `de a observa`.
+5 P1 one issue, not a line item. Digit kept: `1 chestiune`.
+6 P1 taxpayers, and the verb agrees (`poate`).
+7 P1 Kinmen or Lienchiang (Matsu), including the body and the criterion. Amounts unchanged.
+8 P1 legal form of the entity; the transaction is not made lawful.
+9–11 P2 photograph the injury, and the site only so far as possible; the injured person sesizează the authority; travel to a medical institution and back.
+12–15 P2 stacked predicates; stranded `nici` (010 and 011, where `ținut` became `respectat`); apposition; `în fiecare cauză`.
+16 P2 ordinary negligence is up to the actual damage. Digit kept as `coeficient 1` because dropping `1` fails the number check. `5 ori` and `3 ori` stayed.
+17–18 P2 `persoana obligată la despăgubire`; `același accident`.
+19–25 P2 labelling address of the manufacturer or importer (art. 7 alin. (1) nr. 7 kept); the two provisions distinguished; principal distributor; `reacții adverse`; `confruntat cu documentele justificative`; `Măsura luată când`; `cadru medical`.
+26–27 P2 this case’s result; compliance guarantees no particular outcome.
+28 P2 the deposit is small, usually 2 months’ rent. Digit 2 kept.
+29 P2 the period leaves time to find the address and sign the lease. Rephrased inside the two existing lines; they were not merged.
+32–43 P2 the facts inform the assessment; records are compared; `Legea standardelor muncii` (three link labels); `și` not `iar`; disclosure list; payslip commas; `în lumina` (3); the role the training is for; costs the employer would bear anyway; when employment ends; later reinterpretation; `pe înțeles`. `proporționalitate comprehensibilă` stayed, as the row allowed.
+44–48 P2 recognition at the situs; the result reflected first; a personal deadline; not assumed safe; prerogatives are not exercised for the parent’s own benefit.
+49–51 P2 who dispatches the vehicles; impersonal duty to notify the start; a company’s `sediu`.
+52 P2 `operație` where it meant a transaction or an activity: 017 (4), 016 (transaction, 2), 011 operating guidelines, 018 sales opening, division of sales and activity, operating structure (2), activity flow, activity plan, and the legal-form sentence. `operațiuni` and `operațional` that were already the right word were left. True `vânzări` (sales) were left.
+53 P2 pre-listing board, gloss `(興櫃)` added.
+54 P2 `în limitele permise`.
+
+Also, R8: `Statutul investiției străinilor (外國人投資條例)` in 013 and the 017 link label → `Legea privind investițiile străinilor`. `Statutul (章程)` in 002 stayed; that is the articles.
+
+Test marker: `guidance-disclosure-parity.test.ts` `not-the-consultation-step` for `ro` was `/pasul consultanței/` and is now `/nu ține loc de consultanță/`. Nothing else in that test was changed. `llms.txt` remains in `discoveryNotice`. `consultationNotice` and `confidentialNotice` were not rewritten. Bio figure stays `1,57 mil. TWD`.
+
+## Rows skipped
+
+- ro-a #12 (P2) and the verdict’s `filială` → `societate-fiică` sweep. See disagreements. Zero instances changed.
+- ro-a #38 (P2). Q16 onward was not promoted to `##` headings, and the U+200B lines were not removed. Heading levels, block count and ZWSP count are checked against the Korean source.
+- ro-b #30 (P2). The U+200B after the Taipei sentence, and the lines that contain only that character in 013 and 015, were not deleted. ZWSP count is checked.
+- ro-b #31 (P2). The one-clause lines in 015 (`Pe lângă situația pieței` …) were not joined. Block count is checked. 013’s meaning error (row 29) was fixed inside the existing lines; the line breaks were not removed.
+
+R2–R10 framing that round 1 already put in place (country-specific tax sentence, Taiwan 119/110/112, feminine Wei Tseng, four-language consultation lock, `ECHIPA NOASTRĂ` / `BIROURI` / `Profil complet (în engleză)`, formal `dumneavoastră`) was not loosened. 008 `domnul B` and the male client in 010 stay male.
+
+## Systemic patterns and how many instances changed
+
+ro-a verdict:
+
+- `Invers,` / mid-sentence `invers,` for conversely → `Dimpotrivă,` / `dimpotrivă,`: 11 (002 ×3, 003 ×1, 004 ×1, 007 ×3, 014 ×1, 016 ×1, 017 ×1).
+- Accounting `produse` (French produits) → `venituri`: 3 (002 one pair; 004 two pairs). Goods in `produsele sau serviciile` were left.
+- `semnificație` / `semnificare` for 送達 → `comunicare`: 9 stem replacements in 007, plus the service address. The 008 header `Semnificație` was left.
+- `filială` for the subsidiary: 0. Not applied.
+- `însoțește` / `Însoțim` as the firm’s begleiten: 5 in the Romanian guidance pack (three `însoțește`, company-setup `Însoțim`, criminal `Însoțim` → `Reprezentăm`).
+- Bare `interpret`: 4 (article or `niciun`). `nicio programare`: guidance ×2 and the answers sentence.
+- U+200B question spacers: 0 removed.
+- 營業稅 called a sales tax → `impozit pe afaceri`: 001 ×3, 002 ×4, 004 ×5 (including the table header). The mislabelled withholding link is a different statute name, not this tax.
+- `act ilicit` for the tort → `faptă ilicită`: 003 (the prescription sentence), 004 ×3, 008 ×3, 007 ×1. `atingere ilicită` and `daună ilicită` were left.
+
+ro-b verdict:
+
+- `operație` as surgery standing in for a transaction, an activity, or sales: 17 replacements, as listed under row 52. Not every `operațiune`.
+- `a observa` the minimum period: 2 (`observării`, `de a observa`). The FAQ and the parallel body sentence already said `a rămâne`.
+- Kinmen and Lienchiang, with Matsu as the name of Lienchiang: 4.
+- One clause per line and U+200B-only lines in 013 and 015: 0 structural changes.
+- Stranded `nici`: 010 (appeal result and settlement amount), 011 (sale possible / deadline kept), 018 (not a real engagement and not a uniform formation requirement).
+- `formular` for the legal form: 1 (018).
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-ro --lang ro 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=66
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "[변호사 검수 필요]" src/content/columns-ro src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      23
+```
+
+The count above is from before this log file existed. After the log was written, `git status --short | wc -l` is 24.
+
+Checker note: the summary is PASS. WARN rows that do not fail the summary were already of this kind: 015 `extra in translation (2): 2×2` with `제2종` (ordinal, not a Romanian digit I added); 016 and 017 `제3자`. 010 keeps the statutory 1 as `coeficient 1`. 004 keeps `art. 10`. 016 keeps `1 chestiune`. 013 keeps `2` inside `chiria pe 2 luni`.
+
+## Where the reviewer was not followed
+
+- ro-a #12 and the `filială` sweep. In Legea nr. 31/1990, art. 42, a filială is a company with its own legal personality; art. 43, a sucursală is a branch without one. That is the distinction these columns draw, often next to 子公司 / 分公司. `Societate-fiică` is a calque of “daughter company”, not the term a Romanian company-law editor uses. Colloquial “filiala băncii” is a different register. The team line `filiala Taichung` of the legal-aid foundation is a branch of an institution and had to stay anyway. Not applied.
+- ro-a #38 and ro-b #30–#31. New headings, deleted U+200B lines, or joined clause-lines fail the checker (heading levels, block count, or ZWSP count against the Korean source). Wording that could be fixed inside a block was fixed.
+- ro-a #5. The suggested label drops `art. 10`. The Korean anchor is 영업세법 제10조, so the digit stays. The visible statute name is the withholding rule, and the URL was not changed.
+- ro-a #40 and ro-b #29. The suggested sentences are one block. Each existing line was made grammatical on its own.
+- ro-b #5 and #16. Dropping the digit `1` fails `numbers`. The wording is `1 chestiune` and `coeficient 1`.
+- ro-a #45 in 007. The column says that `autoritate părintească` does not carry the whole Taiwanese concept. The glossed name was rephrased; it was not collapsed into the shorthand. The guidance-pack sentence, which has no such caveat, does use `autoritatea părintească`.
+- 008 `Semnificație` in the comparison table is the significance of each ground for ending employment, not service of process.
+- `beneficiar real` was applied to the tax-treaty beneficial owner (受益所有人) as well as to the AML term (實質受益人), because the row said “also in 004”. Romanian fiscal usage often keeps `beneficiar efectiv` for the treaty owner and `beneficiar real` for Law 129/2019. Both were aligned to `beneficiar real` as requested.

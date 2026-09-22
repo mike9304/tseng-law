@@ -49,11 +49,11 @@ Cum examinarea planului de investiție ia și ea timp,
 
 ar trebui să redactați planul de investiție și să căutați adresa de înregistrare a societății în același timp.
 
-Potrivit art. 9 din Statutul investiției străinilor (外國人投資條例), aportul aprobat trebuie să sosească în totalitate în termenul fixat de autoritatea competentă (核定期限); termenul este de confirmat în actul de aprobare al fiecărei cauze (în practică, este adesea fixat în jur de 1 an).
+Potrivit art. 9 din Legea privind investițiile străinilor (外國人投資條例), aportul aprobat trebuie să sosească în totalitate în termenul fixat de autoritatea competentă (核定期限); termenul este de confirmat în actul de aprobare al fiecărei cauze (în practică, este adesea fixat în jur de 1 an).
 
-În acest termen, odată adresa societății găsită și contractul de locațiune semnat,
+În acest termen rămâne timp să găsiți adresa și să semnați contractul de locațiune,
 
-rămâne suficient timp pentru a deschide la bancă contul pregătitor și a vira capitalul.
+precum și să deschideți la bancă contul pregătitor și să virați capitalul.
 
 ​
 
@@ -95,7 +95,7 @@ așa că trebuie să fixați începutul contractului cât mai târziu posibil.
 
 Este o perioadă scutită de chirie; o puteți negocia.
 
-Nu este ușor pentru un străin să ia în locațiune un local comercial, iar depozitul de garanție (押金) în Taiwan este destul de jos (de obicei 2 luni), astfel că protecția locatorului este limitată;
+Nu este ușor pentru un străin să ia în locațiune un local comercial, iar depozitul de garanție (押金) în Taiwan este destul de mic (de obicei chiria pe 2 luni), astfel că protecția locatorului este limitată;
 
 locatorii ezită deci să închirieze străinilor.
 

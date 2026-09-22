@@ -3263,11 +3263,11 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Cabinetul tratează cauze ale întreprinderilor și ale persoanelor fizice în Taiwan în engleză, japoneză, coreeană și chineză.',
-        'A reprezentat un student coreean într-o cerere de despăgubire pentru o vătămare la sală, iar instanța de fond a pronunțat o hotărâre de 1,57 mil. TWD.',
+        'A reprezentat un student coreean într-o cerere de despăgubire pentru o vătămare la sala de sport, iar instanța de fond a pronunțat o hotărâre de 1,57 mil. TWD.',
       ],
       education: [
         'Master (M.S.) în finanțe, Institute of Finance, National Taiwan University',
-        'Licență (B.A.), dublă specializare drept și finanțe, National Chengchi University',
+        'Licență (B.A.), dublă specializare în drept și finanțe, National Chengchi University',
         'Studii de schimb la Kobe University și Waseda University',
       ],
       experience: [
@@ -3291,7 +3291,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Asistent juridic (paralegal), cu o activitate îndelungată ca paralegal senior în mai multe cabinete, cu atribuții de sprijin procedural, drept societar și investiții străine.',
+        'Asistent juridic (paralegal), cu o activitate îndelungată ca asistent juridic senior în mai multe cabinete, cu atribuții de sprijin procedural, drept societar și investiții străine.',
         'Sprijin în proceduri, la înființarea de societăți, la aprobările pentru investiții străine, la cererile de licență și în schimburile dintre Coreea și Taiwan.',
       ],
       education: [
@@ -3311,7 +3311,7 @@ export const guidanceTeamBios: Record<
         'Licență (B.S.) în informatică, National Cheng Kung University',
       ],
       experience: [
-        'Zona de operațiuni din Coreea, Hovering International Law Firm',
+        'Operațiunile pentru Coreea, Hovering International Law Firm',
       ],
     },
     'huang-shengping': {

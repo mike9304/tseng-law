@@ -45,13 +45,13 @@ Apropiații lui A și B au văzut mai întâi schimbarea bruscă de bandă a veh
 
 Potrivit rezultatului expertizei, A suporta răspunderea principală a acestei coliziuni. Această concluzie era limitată la faptele acestei cauze. Expertiza a luat în considerare împreună faptul că A voia să depășească 2 vehicule din față care circulau unul după altul, că se angajase pe banda opusă, că circula cu o viteză care lăsa abia timp pentru a frâna, că semnalele de claxon și de faruri prescrise lipsiseră, precum și mișcarea de schimbare de bandă a vehiculului nr. 2, structura drumului și a benzilor și celelalte probe culese.
 
-Faptul că, în unele cauze, astfel de rezultate de expertiză intervin nu înseamnă că o singură omisiune a unui semnal prescris fixează întotdeauna răspunderea. Culpa (過失) într-un accident de depășire depinde de locul accidentului, de configurația benzilor, de viteză, de mișcările vehiculelor, de semnale, de intervalele de timp, de vizibilitate și de celelalte probe.
+Acest rezultat, propriu cauzei, nu înseamnă că o singură omisiune a unui semnal prescris fixează întotdeauna răspunderea. Culpa (過失) într-un accident de depășire depinde de locul accidentului, de configurația benzilor, de viteză, de mișcările vehiculelor, de semnale, de intervalele de timp, de vizibilitate și de celelalte probe.
 
 ## Puncte de verificat pentru a aprecia răspunderea accidentului
 
 Înainte de a depăși, trebuie mai întâi verificat dacă locul sau situația traficului intra în interdicția de depășire. Dacă se aplică procedura aceleiași benzi, dați semnalul de claxon sau de faruri prescris, fără a forța vehiculul din față să cedeze, așteptați un semn clar de cedare și încheiați depășirea cu un interval suficient și o distanță de revenire sigură.
 
-Respectarea art. 101 este importantă, dar nu asigură prin ea însăși nici evitarea accidentului, nici rezultatul ulterior al expertizei sau al procesului. Conducătorii trebuie să lase o marjă de siguranță suplimentară și să se adapteze situației din față.
+Respectarea art. 101 este importantă, dar nu garantează nici evitarea accidentului, nici un anumit rezultat al expertizei sau al procesului. Conducătorii trebuie să lase o marjă de siguranță suplimentară și să se adapteze situației din față.
 
 Ca material auxiliar, puteți consulta [ilustrarea regulilor și a procedurii de depășire](https://gonews.com.tw/car/daily/21934/). Fiind o sursă secundară, la verificarea condițiilor juridice este potrivit să se citească și regulile oficiale în vigoare.
 

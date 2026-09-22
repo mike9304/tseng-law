@@ -27,17 +27,17 @@ Nasledujúce otázky a odpovede majú pomôcť osobám, ktoré zvažujú založe
 
 Keď cudzinec zakladá spoločnosť na Taiwane, musí predložiť investičný plán (投資計畫書) Odboru preskúmania investícií Ministerstva hospodárstva (經濟部投資審議司) na posúdenie.
 
-Odbor preskúmania investícií musí overiť, či sa daný kapitál (資本額) skutočne používa na investičné účely
+Odbor preskúmania investícií musí overiť, či sa daný kapitál (資本額) skutočne používa na investičné účely.
 
-a či zahraničné subjekty neprinášajú prostriedky na Taiwan pod inou zámienkou.
+Treba tiež overiť, či zahraničné subjekty neprinášajú prostriedky na Taiwan pod inou zámienkou.
 
 Pri zostavovaní investičného plánu netreba uvádzať presnú adresu spoločnosti; stačí uviesť oblasť (príklad: Taipej). ​
 
 Keď sa neskôr v banke otvára prípravný účet spoločnosti (公司籌備處帳戶), mnoho bánk však preskúmava nájomnú zmluvu (租賃契約) a vykonáva miestnu prehliadku adresy spoločnosti.
 
-Podľa oznámenia pracovníčky jednej taiwanskej banky platí, že
+Podľa oznámenia pracovníčky jednej taiwanskej banky.
 
-v poslednom čase mnoho cudzincov po otvorení účtu zmizne, preto sa otváranie účtov posudzuje stále prísnejšie.
+V poslednom čase mnoho cudzincov po otvorení účtu zmizne, preto sa otváranie účtov posudzuje stále prísnejšie.
 
 Už v základnej časti čitateľky a čitatelia uvádzali, že otvorenie účtu je najťažšou etapou; prax to potvrdzuje.
 
@@ -45,15 +45,15 @@ Pretože na Taiwane je veľmi veľa prípadov prania peňazí (洗錢), otváran
 
 **Rada:**
 
-Pretože posúdenie investičného plánu tiež zaberie čas,
+Pretože posúdenie investičného plánu tiež zaberie čas.
 
-mali by ste zostavovať investičný plán a hľadať adresu zápisu spoločnosti súčasne.
+Mali by ste zostavovať investičný plán a hľadať adresu zápisu spoločnosti súčasne.
 
 Podľa článku 9 zákona o investíciách cudzincov (外國人投資條例) musí schválený vklad doraziť v plnej výške v lehote stanovenej príslušným orgánom (核定期限); lehotu treba overiť v akte schválenia každej veci (v praxi sa často stanoví približne na jeden rok).
 
-V tejto lehote, po nájdení adresy spoločnosti a uzatvorení nájomnej zmluvy,
+V tejto lehote je dosť času nájsť adresu a uzatvoriť nájomnú zmluvu,
 
-zostáva dostatok času na otvorenie prípravného účtu v banke a na prevod kapitálu.
+otvoriť prípravný účet v banke a previesť kapitál.
 
 ​
 
@@ -61,25 +61,25 @@ zostáva dostatok času na otvorenie prípravného účtu v banke a na prevod ka
 
 Je to možné.
 
-Banka všeobecne vyžaduje dvojaké overenie totožnosti,
+Banka všeobecne vyžaduje dvojaké overenie totožnosti.
 
-a bez preukazu na pobyt možno na taiwanskej imigračnej správe požiadať o „**výpis základných údajov k jednotnému identifikačnému číslu**“ (統一證號基本資料表).
+Bez preukazu na pobyt možno na taiwanskej imigračnej správe požiadať o „**formulár základných údajov jednotného identifikačného čísla**“ (統一證號基本資料表).
 
-Vydanie je možné toho istého dňa,
+Vydanie je možné toho istého dňa.
 
-imigračná správa (移民署) je však veľmi vyťažená; preto treba prísť skoro a vziať poradové číslo.
+Imigračná správa (移民署) je však veľmi vyťažená; preto treba prísť skoro a vziať poradové číslo.
 
 ​
 
 **3. Pri posúdení investičného plánu sa vraj uvádza vzdelanie a odborná prax. Čo keď moje vzdelanie a prax nezodpovedajú odvetviu spoločnosti, ktorú chcem založiť?**
 
-Preskúmavacia komisia Ministerstva hospodárstva síce posudzuje zázemie investora,
+Preskúmavacia komisia Ministerstva hospodárstva síce posudzuje zázemie investora.
 
-posúdenie však nie je nadmerne prísne.
+Posúdenie však nie je nadmerne prísne.
 
-Možno uviesť rôznorodé pracovné skúsenosti, vrátane brigád,
+Možno uviesť rôznorodé pracovné skúsenosti, vrátane brigád.
 
-a vyložiť ich podrobne tak, aby bolo možné presvedčiť osoby vykonávajúce posúdenie.
+Možno ich vyložiť podrobne tak, aby bolo možné presvedčiť osoby vykonávajúce posúdenie.
 
 V tomto bode je vhodné vec dôkladne prebrať s advokátkou alebo advokátom na Taiwane.
 
@@ -87,7 +87,7 @@ V tomto bode je vhodné vec dôkladne prebrať s advokátkou alebo advokátom na
 
 **4. Na čo dávať pozor, keď sa prenajíma adresa zápisu spoločnosti (napríklad reštauračná prevádzkareň)?**
 
-Založenie spoločnosti trvá približne **3 mesiace**, získanie pracovného povolenia (工作許可) a preukazu na pobyt približne **jeden mesiac**,
+Založenie spoločnosti trvá približne **3 mesiace** a získanie pracovného povolenia (工作許可) a preukazu na pobyt trvá navyše približne **jeden mesiac**,
 
 preto treba začiatok zmluvy stanoviť čo najneskôr.
 
@@ -95,9 +95,9 @@ Okrem toho v nájomných zmluvách na obchodné prevádzkarne na Taiwane prenaj�
 
 Ide o obdobie oslobodené od nájomného; možno oň rokovať.
 
-Cudzincovi nie je ľahké prenajať obchodnú prevádzkareň a kaucia (押金) na Taiwane je skôr nízka (zvyčajne 2 mesiace), takže ochrana prenajímateľa je obmedzená;
+Cudzincovi nie je ľahké prenajať obchodnú prevádzkareň a kaucia (押金) na Taiwane je skôr nízka (zvyčajne 2 mesiace), takže ochrana prenajímateľa je obmedzená.
 
-prenajímatelia sa preto zdráhajú prenajímať cudzincom.
+Prenajímatelia sa preto zdráhajú prenajímať cudzincom.
 
 Je preto vhodné hľadať prevádzkareň včas.
 
@@ -115,13 +115,13 @@ Napr. ak je odvetvím gastronómia a zamýšľa sa prenajať kancelársky priest
 
 Ako už bolo uvedené, banka preskúmava nájomnú zmluvu a vykonáva miestnu prehliadku adresy spoločnosti.
 
-Okrem toho pri konečnom zápise spoločnosti mestský úrad (市政府) tiež vyžaduje, aby zapísaná adresa ležala v zóne, kde je prevádzka reštaurácie prípustná;
+Okrem toho pri konečnom zápise spoločnosti mestský úrad (市政府) tiež vyžaduje, aby zapísaná adresa ležala v zóne, kde je prevádzka reštaurácie prípustná.
 
-ak ide o kancelársky priestor, zápis spoločnosti (公司登記) potom nie je možný.
+Ak ide o kancelársky priestor, zápis spoločnosti (公司登記) potom nie je možný.
 
-Napr. ak ide o odvetvie možné v kancelárskom priestore, ako je reklama alebo veľkoobchod, možno spoločnosť založiť v kancelárskom priestore. Pred uzatvorením nájomnej zmluvy
+Napr. ak ide o odvetvie možné v kancelárskom priestore, ako je reklama alebo veľkoobchod, možno spoločnosť založiť v kancelárskom priestore.
 
-to vopred overte.
+Pred uzatvorením nájomnej zmluvy to vopred overte.
 
 *Ak potrebujete konzultáciu k taiwanskému právu, kancelária koná iba po anglicky, čínsky (中文), japonsky a kórejsky; komentáre sa na webe nevedú.*
 

@@ -59,7 +59,7 @@ Pri zápise spoločnosti sa však často zapisuje viacero odvetví naraz a čast
 
 Preto v praxi nie je nutné pri zápise spoločnosti overovať všetky odvetvia.
 
-Podľa „[prevádzkových pokynov služby informácií o prevádzkarňach mesta Taipeja](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“ (臺北市營業場所協助查詢服務作業須知) a platného oznámenia mesta Taipei,
+Podľa „[prevádzkových pokynov služby informácií o prevádzkarňach mesta Taipeja](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)“ (臺北市營業場所協助查詢服務作業須知) a platného oznámenia mesta Taipej,
 
 od 1. 1. 2023 pri žiadosti o zápis založenia, premiestnenia sídla alebo doplnenia odvetvia činnosti spoločnosti alebo podniku (vrátane pobočky (分公司) a podriadenej prevádzky (分支機構)) výsledok predbežného overenia prevádzkarne **musí** byť pripojený k žiadosti o zápis, bez ohľadu na odvetvie.
 

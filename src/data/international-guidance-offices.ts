@@ -933,7 +933,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
       'Rokovacia miestnosť v sídle v Taipeji, Hovering International Law Firm',
     ],
     officeTitles: {
-      taipei: 'Taipei',
+      taipei: 'Taipej',
       taichung: 'Taichung',
       kaohsiung: 'Kaohsiung',
       pingtung: 'Pingtung',

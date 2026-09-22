@@ -2061,7 +2061,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Porada prebieha iba v štyroch jazykoch: anglicky, čínsky (中文), japonsky a kórejsky.',
     methodConfirmationNotice:
-      'Ak neovládate žiadny zo štyroch jazykov konzultácie, zvoľte „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili schodný spôsob komunikácie, ak taký existuje; služba v inom jazyku zaručená nie je a lehota na odpoveď sa nesľubuje.',
+      'Ak neovládate žiadny zo štyroch jazykov konzultácie, zvoľte „Spôsob komunikácie treba potvrdiť“. Odpovieme, aby sme posúdili schôdny spôsob komunikácie, ak taký existuje; služba v inom jazyku zaručená nie je a lehota na odpoveď sa nesľubuje.',
     preparationNotice:
       'Zhrnutie môžete napísať vo svojom jazyku. Pôvodný text sa uchová tak, ako ste ho napísali, a automaticky sa neprekladá.',
     heading: 'Odoslať žiadosť o posúdenie',

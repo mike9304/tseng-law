@@ -86,7 +86,7 @@ const ELEMENTS = {
     ne: /व्यवहार्य/,
     km: /អាចប្រើបាន/,
     mn: /хэрэгжүүлж болох/,
-    sk: /schodný/,
+    sk: /schôdný/,
     bg: /приложим начин/,
     hr: /provediv/,
     sr: /izvodljiv/,

@@ -17,7 +17,7 @@ Keď vozidlo vpredu ide pomaly, môže predchádzanie (超車) vyzerať ako bež
 
 ## Podmienky predchádzania stanovené článkom 101 pravidiel bezpečnosti cestnej premávky (道路交通安全規則)
 
-[Článok 101 taiwanských pravidiel bezpečnosti cestnej premávky (道路交通安全規則)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) upravuje ako podmienky, za ktorých je predchádzanie zakázané, tak poradie, ktorého treba dbať, keď je predchádzanie v tom istom pruhu dovolené.
+[Článok 101 taiwanských pravidiel bezpečnosti cestnej premávky (道路交通安全規則)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) upravuje ako podmienky, za ktorých je predchádzanie zakázané, tak poradie, ktoré treba dodržať, keď je predchádzanie v tom istom pruhu dovolené.
 
 Článok 101 zakazuje predchádzanie v úsekoch so značkami označujúcimi zákrutu, prudké stúpanie alebo klesanie, úzky most, tunel alebo križovatku, ako aj na železničných priecestiach a v úsekoch stavebných prác.
 

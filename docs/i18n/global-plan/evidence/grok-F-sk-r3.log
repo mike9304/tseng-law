@@ -1,0 +1,150 @@
+WO-F-sk r3 — Grok 4.7 fix lane
+Workspace: /Users/son7/Projects/tseng-law-fix-sk-r3
+Inputs: RULEBOOK-FIX.md R2–R17, ACCEPTED-ROUND.md, rounds/r3/sk-a.md (44 rows), sk-b.md (31 rows).
+English meaning: src/content/columns-en/<same file>. Checker compares to Korean src/content/columns.
+
+Rows applied: 68 of 75
+Rows skipped or only partly applied: 7 (listed below)
+No git add / commit / push.
+
+## Applied
+
+sk-a
+1 team bio (son-jungmin): komunikáciu medzi tímami … dokumentových systémov a pracovných postupov.
+2 001: Schválenie investície posudzuje vstup prostriedkov, pracovné povolenie posudzuje výkon práce, ARC posudzuje účel a dobu pobytu.
+4 wording only: v konaní o náhradu škody. Figure left as TWD 1.57M (see skip 27).
+5 privacy: e-mailovou službou.
+6 osobitné schválenie — FAQ + body (2).
+7 povolený účel budovy alebo pravidlá jej správy.
+8 董事: člen predstavenstva. Swept 001 (1) and 002 (3: jediným členom, záujmy členov, zodpovednosť členov).
+9 schválenie konfliktu záujmov.
+10 nakopené straty (累積虧損).
+11 股東 gloss. 001 opening + “nemá vlastných spoločníkov ani akcionárov”; 002 residual assets, opening account, and property of spoločníkov ani akcionárov. Quorum sentences that already said akcionári for 股份有限公司 left.
+12 obeť nevidí ani ľútosť, ani úprimnú snahu.
+13 predbežné zabezpečenie (假扣押) … zabezpečenie majetku.
+14 uplatňujú / uplatňuje oprávnenie uzatvárať zmluvy — 001 (1) and 004 (agent + subsidiary, 2).
+15 schodný → schôdny in central-europe contact sentence and international-inquiry-copy.ts sk. Disclosure regex in src/data/__tests__/guidance-disclosure-parity.test.ts updated /schodný/ → /schôdný/ in the same edit. Nothing else in that test.
+16 lehotu, ak nejaká existuje.
+17 či po platbe ostane možná bežná prevádzka aj splácanie dlhov.
+19 wording with lexicon forms the checker counts: jeden poškodený a jedna nehoda; za jeden deň (003); viac ako jedna osoba (005). Space thousands not used (see skips).
+20 sprevádzame zahraničných klientov pri úkonoch.
+21 Ide iba o posúdenie / FAQ Ide o posúdenie (2).
+22 chronológiou udalostí.
+23 miestom (reprezentačná kancelária).
+24 z akých prostriedkov sa suma na vrátenie uhradí.
+25 zodpovedná osoba (公司負責人).
+26 Napokon zníženie kapitálu … každá z týchto položiek.
+28 currency code moved after the dotted amount only. 40 instances: 001:14, 002:3, 003:15, 004:2, 006:3, 007:3. Dots kept. 010, 011, 017, 018 already had the code after the figure.
+29 Mesto Taipej + link label Pokyn mesta Taipej (URL unchanged). 015 oznámenia mesta Taipej (link text already Taipeja). offices.ts sk officeTitles.taipei Taipei → Taipej only.
+30 004 FAQ + §4: osobitne potvrdiť zahrnutú investíciu … obmedzenia spoločného uplatnenia. §4 body also “obmedzenia spoločného uplatnenia”.
+32 cenu podľa princípu nezávislého vzťahu.
+33 či sa neskôr plánuje scudzenie podielov alebo kotácia.
+34 A. Prvý zamestnanec: vedúci podniku bežnej investície zámorských Číňanov alebo cudzincov.
+35 obscénneho konania (猥褻).
+36 Ak máte za to, že ste boli sexuálne obťažovaní, … s advokátkou či advokátom.
+37 Sú tu masáže vykonávané osobami so zrakovým postihnutím.
+38 Miestneho investora možno prijať ako akcionára.
+39 aktualizáciu záznamov evidencie obyvateľov (戶籍).
+40 s manželom alebo manželkou (3) and než manželovi alebo manželke (1).
+41 heading ## 6. Vlastnícky zápis bývania, majetok pred manželstvom a rozdelenie zvyškového majetku.
+42 Lehota z jednej veci sa nemá prenášať. Preceding clause: treba vypočítať lehotu daného typu.
+43 quote line: najviac za 6 mesiacov mzdy. Tento vzorec sa týka praxe…
+44 Tento príklad nie je prísľubom, že rovnaký výsledok nastane aj u ostatných zamestnancov.
+
+sk-b
+1 ktoré podklady sa odovzdajú, ako odovzdanie prebehne a či prístupové oprávnenie trvá.
+2 rephrased inside the two existing blocks (not joined): V tejto lehote je dosť času nájsť adresu a uzatvoriť nájomnú zmluvu / otvoriť prípravný účet v banke a previesť kapitál.
+3 Založenie spoločnosti trvá približne 3 mesiace a získanie pracovného povolenia a preukazu na pobyt trvá navyše približne jeden mesiac. Numbers unchanged.
+4 Žiadne z týchto oprávnení sa nevykonáva v osobnom záujme rodiča.
+5 osoby zmluvne zodpovedné za zverené úlohy.
+6 formulár základných údajov jednotného identifikačného čísla.
+7 na ochranu osobných a majetkových záujmov dieťaťa.
+8 dedičská reprezentácia (代位繼承) in FAQ and body (2); “alebo na dedičskú reprezentáciu treba tiež overiť”. Legal-representation uses of zastúpenie left.
+9 označiť zapísaného vlastníka a skutočného majiteľa; treba tiež skúmať, kto je skutočným majiteľom.
+10 nestávajú sa osobami, ktorým tento majetok hospodársky patrí — 3 (FAQ, body, and the third with a comma before “a nesmú”).
+11 zasielateľstvo (運送承攬) alebo iné sprostredkovanie prepravy; ako zasielateľstvo alebo prevádzka platformy.
+12 overenie výšky investície po prevode peňazí (投資額審定). Same term swept in 001: overenie výšky investície (body + list item 6) and overenie skutočne investovanej sumy (3).
+13 úprava ceny, odškodnenie, predmety odovzdania pri uzatvorení transakcie, prevádzkový kapitál.
+14 súhlas 2/3 alebo viac hlasovacích práv ostatných spoločníkov.
+15 listu advokátky (律師函), ktorý konkrétne zaznamená. Feminine advokátky kept.
+16 poradie, ktoré treba dodržať.
+18 four list items now questions with ?.
+19 comma before “a prečo”.
+20 štát alebo právnická osoba ju môže založiť aj samostatne.
+21 súd 1. inštancie uložil posilňovni zaplatiť / uložil známej posilňovni zaplatiť — 4 (two alts, two link labels). Digit 1. kept. Image paths unchanged.
+22 Strata pracovnej schopnosti (勞動能力減損).
+23 harmonogramu dodávok.
+24 one-clause layout in 013 rephrased inside existing blocks (not merged): capital-use sentence, address window, bank-employee notice, investment-plan timing, identity check, immigration office, work experience, landlord reluctance, restaurant zone (“Pred uzatvorením nájomnej zmluvy to vopred overte.”), and “Posúdenie však nie je nadmerne prísne.” Block count unchanged (checker PASS).
+25 vzhľadom na dobu a náklady školenia.
+26 Pretože toto školenie sprevádza prevádzku podniku alebo plnenie zákonnej povinnosti, jeho náklady nemožno urobiť základom povinnosti zotrvať ani sankcie za predčasné skončenie.
+27 Skutočný záver treba vyvodiť spoločným posúdením — FAQ + body (2).
+28 Pozostalý manžel nie je príbuzným zaradeným do poradia podľa článku 1138.
+29 Platné správne pokyny Imigračnej správy Ministerstva vnútra (內政部移民署) k zákazu vstupu (禁止入國).
+30 title frontmatter + H1: Zahraničné podniky v odbore polovodičových súčiastok; body: pre zahraničné podniky v odbore polovodičových materiálov, súčiastok a zariadení. “1 alebo 2 riaditeľov” left (no 董事 gloss; not the flagged sentence).
+
+llms.txt GUIDANCE_LLMS_NOTICES.sk not rewritten. consultationNotice and confidentialNotice stay verbatim substrings of the FAQ answer and the privacy paragraph. discoveryNotice still contains llms.txt.
+international-guidance-answers.ts sk not edited (no flagged string).
+Page descriptions were not given parentheses.
+
+## Skipped (with reason)
+
+sk-a 3 — Hangul in frontmatter url of 008 and 009. ACCEPTED-ROUND: canonical metadata, never rendered. url not edited.
+sk-a 18 — Do not turn Q16–Q20 into ## headings and do not delete U+200B or the empty **​** lines in 005. The checker pins heading levels, block count, and ZWSP count to the Korean source. Korean already has the same blanks. Counts left: 003:52, 005:8, 006:4, 008:10, 009:5, 013:5, 015:3.
+sk-a 19 / 28 and sk-b 31 — space thousands (“3 200 000”, “500 000”, “1 579 589”). ACCEPTED-ROUND and NUMBER_THOUSAND_STYLE.sk = dot. Dots kept. Currency-after-amount was applied where the code stood before a dotted group (row 28, 40 instances). Files that already had the code after the figure were left.
+sk-a 27 — “1,57 mil. TWD” not applied. The bio figure stays the pinned token TWD 1.57M. The proceeding wording from row 4 was applied around it.
+sk-a 31 — parenthetical “zdrojové označenie: článok 10” restored. Deleting it made the checker fail: numbers missing 10. Korean link text is 영업세법 제10조; English label is Article 10 of the Business Tax Act; the URL is flno=3 of 各類所得扣繳率標準 and was not changed. The visible label still leads with článok 3.
+sk-b 2 and 24 — paragraphs not joined. English and Korean already split those clauses across blocks. Joining would change the block count. Each block was made a grammatical clause instead.
+sk-b 17 — U+200B in 013 and 015 not deleted. Same checker parity as sk-a 18.
+
+sk-a 19 genitive: the suggested “jedného / jednu” is natural Slovak, but the checker’s small lexicon counts jeden/jedna/jedno and not jedného/jednu, and Korean “1명·1건” and the counted 1 in 005 must remain. Nominative “jeden poškodený a jedna nehoda”, “za jeden deň”, and “viac ako jedna osoba” were used so the digits still count.
+
+## Systemic patterns (instances changed)
+
+- Currency code after a dotted amount: 40 (001:14, 002:3, 003:15, 004:2, 006:3, 007:3). Space separator: 0.
+- 董事 = člen predstavenstva, not riaditeľ: 4 (001:1, 002:3).
+- 股東 gloss expanded where the passage is not already an a.s. quorum: 001 (2) and 002 (residual assets, opening, and the property sentence).
+- 投資額審定 určenie → overenie: 017 (1) plus 001 (3: overview, list item 6, skutočne investovanej sumy).
+- Taipei → Taipej: 001 title sentence + link label, 015 notice, sk office card title. Other office city titles left (review flagged Taipei only). Declined Taipeji / Taipeja already in the pack left.
+- Agent “uplatňuje oprávnenie uzatvárať zmluvy”: 3 (001:1, 004:2).
+- 013 one-clause blocks rephrased in place: the two quoted sentences plus the same layout through that file (see row 24). Block count unchanged.
+- 016 beneficial-owner wording: 3. Dedičská reprezentácia: 2 plus the “treba tiež overiť” clause.
+- 010 “súd 1. inštancie uložil … zaplatiť”: 4.
+- 007 spouse pair: 4.
+- schôdny: guidance contact, inquiry copy, disclosure test regex.
+- ZWSP deleted: 0 (see skips).
+
+R2–R10 / R12–R17: the reviews already scored consultation languages, feminine forms for Wei Tseng, dates, decimal comma, Slovak quotation marks, and no Czech function-word mix as holding. No further Korea-default, advertising, or English-chrome sweep beyond the rows above. Emergency-number wording (R9) was not separately rewritten. GUIDANCE_LLMS notices left because the underlying FAQ and privacy sentences were not the flagged strings.
+
+## Reviewer got this wrong (not applied)
+
+- Space as the Slovak thousands separator, and “1,57 mil. TWD” for the pinned bio figure. The checker accepts only dot grouping for sk, and a test pins TWD 1.57M byte-identical.
+- Q16–Q20 should become headings, and U+200B lines are a Slovak-only defect. The Korean source has the same heading levels and the same ZWSP counts. Deleting them fails the structural check.
+- 013 sentences should be joined into the previous paragraph. English and Korean already break them the same way. The meaning fix (the approval window is long enough to find the address and sign the lease; each fragment is a clause) was applied inside the existing blocks.
+- The 004 link parenthetical “článok 10” can simply be deleted. The reviewer is right that the URL is article 3 of the withholding-rate standards and that calling that URL article 10 is a bad label (Korean and English do the same). The digit 10 is still required because the Korean link text contains 제10조. The parenthetical was put back so the file passes.
+
+## §Verify
+
+cd /Users/son7/Projects/tseng-law-fix-sk-r3 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+node scripts/check-column-translation.mjs --dir src/content/columns-sk --lang sk 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=52
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-sk src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      25

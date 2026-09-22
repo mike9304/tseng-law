@@ -13,9 +13,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Zdjęcie główne](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-W ostatnim czasie wiele osób pomyślnie założyło spółkę (公司) na Tajwanie i uzyskało wizę pracy oraz kartę pobytu (外僑居留證),
+W ostatnim czasie wiele osób pomyślnie założyło spółkę (公司) na Tajwanie i uzyskało wizę pracy oraz kartę pobytu (外僑居留證).
 
-a pytania często zadawane przy zakładaniu zebrano poniżej.
+Pytania często zadawane przy zakładaniu zebrano poniżej.
 
 Osoby, które przeczytały [**podstawy zakładania spółki**](/pl/columns/taiwan-company-establishment-basics), mogą następnie sięgnąć także do tego bardziej szczegółowego omówienia.
 
@@ -39,7 +39,7 @@ Pracownica tajwańskiego banku powiedziała mi osobiście, że
 
 w ostatnim czasie wielu cudzoziemców znika po otwarciu rachunku, dlatego otwieranie rachunków jest traktowane coraz surowiej.
 
-Przy części podstawowej jedna z osób czytających wskazała, że otwarcie rachunku jest najtrudniejszym etapem; zgadzam się z tym.
+Przy części podstawowej jeden z czytelników napisał, że otwarcie rachunku jest najtrudniejszym etapem; zgadzam się z tym.
 
 Ponieważ na Tajwanie jest bardzo wiele przypadków prania pieniędzy (洗錢), otwieranie rachunków bankowych staje się coraz surowsze.
 
@@ -123,7 +123,7 @@ Przykład: Jeśli chodzi o branże możliwe w lokalu biurowym, takie jak reklama
 
 należy to wcześniej sprawdzić.
 
-*Jeśli potrzebują Państwo pomocy w sprawie z zakresu prawa Tajwanu, prosimy o kontakt z kancelarią.*
+*Jeśli mają Państwo pytanie z zakresu prawa Tajwanu, prosimy o kontakt przez stronę „Kontakt” po angielsku, chińsku (中文), japońsku lub koreańsku; termin odpowiedzi nie jest przyrzeczony.*
 
 ---
 

@@ -567,9 +567,9 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Adwokatka kierująca kancelarią na Tajwanie (Managing Attorney)',
       'chang-rongxuan': 'Adwokat na Tajwanie (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
+      'chang-fangyu': 'Asystent prawny (paralegal)',
       'son-jungmin': 'Kierownictwo operacyjne Korei (Korea Operations Manager)',
-      'huang-shengping': 'Partner-księgowy (Partner CPA)',
+      'huang-shengping': 'Wspólnik biura rachunkowego (Partner CPA)',
     },
   },
   hi: {
@@ -2781,42 +2781,42 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Fundacja pomocy prawnej, oddział w Taichung (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Wcześniej w Ministry of Education, Legal Affairs Division, ze szczególnym uwzględnieniem spraw administracyjnych i cywilnych.',
+        'Wcześniej w Ministerstwie Edukacji, w departamencie spraw prawnych (Ministry of Education, Legal Affairs Division), ze szczególnym uwzględnieniem spraw administracyjnych i cywilnych.',
         'Doświadczenie w sprawach uczelni, praw nauczycieli i skarg administracyjnych.',
       ],
       education: ['Licencjat prawa (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Ministerstwo Edukacji, departament spraw prawnych (Ministry of Education, Legal Affairs Division)',
         'Adwokat, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal z wieloletnią pracą jako starszy paralegal w kilku kancelariach, odpowiedzialny za wsparcie procesowe, prawo spółek i inwestycje zagraniczne.',
+        'Asystent prawny (paralegal) z wieloletnią pracą na stanowisku starszego asystenta prawnego w kilku kancelariach, odpowiedzialny za wsparcie procesowe, prawo spółek i inwestycje zagraniczne.',
         'Wsparcie postępowań, zakładania spółek, zezwoleń na inwestycje zagraniczne, wniosków o licencje oraz wymiany między Koreą a Tajwanem.',
       ],
       education: ['Licencjat prawa (LL.B.), Tunghai University'],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Starszy asystent prawny, Boyin Law Firm',
+        'Starszy asystent prawny, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
       intro: [
         'Koordynuje terminy konsultacji i komunikację dla klientów z Korei.',
-        'Wspiera wymianę między działami przez systemy dokumentów i tok pracy, na podstawie informatyki.',
+        'Wspiera wymianę między działami przez systemy dokumentów i tok pracy, na podstawie wykształcenia informatycznego.',
       ],
       education: ['Licencjat (B.S.) informatyki, National Cheng Kung University'],
       experience: ['Obszar operacji Korei, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'Ukończył programy licencjackie i magisterskie z rachunkowości na National Chengchi University i obecnie kieruje biurem rachunkowym.',
+        'Ukończył studia licencjackie i magisterskie z rachunkowości na National Chengchi University i obecnie kieruje biurem rachunkowym.',
         'Wspiera zintegrowaną analizę ryzyka prawnego, podatkowego i finansowego dla klientów korporacyjnych.',
       ],
       education: [

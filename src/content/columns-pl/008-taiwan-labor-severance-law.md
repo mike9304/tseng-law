@@ -13,22 +13,22 @@ faq:
   - q: "Czy spółka musi też wypłacić odprawę przy zwolnieniu dyscyplinarnym?"
     a: "Nie. Jeśli zatrudniona osoba popełnia czyn bezprawny, narusza regulamin pracy albo opuszcza pracę bez uzasadnionej przyczyny przez 3 dni z rzędu (art. 12 ustawy o normach pracy, 勞動基準法第12條), spółka może zwolnić bez wypowiedzenia i nie musi wypłacać odprawy. Natomiast zwolnienie ekonomiczne (art. 11) wymaga wcześniejszego wypowiedzenia i wypłaty odprawy."
   - q: "Jak oblicza się odprawę na Tajwanie?"
-    a: "Za każde ukończone 1 rok stażu pracodawca musi wypłacić 0,5 miesiąca przeciętnego wynagrodzenia jako odprawę, najwyżej 6 miesięcy wynagrodzenia. Ten wzór dotyczy stażu, do którego stosuje się art. 12 rozporządzenia o emeryturze pracowników (勞工退休金條例); dla stażu, do którego stosuje się art. 17 ustawy o normach pracy (勞動基準法), za 1 rok wypłaca się 1 miesiąc przeciętnego wynagrodzenia, bez limitu."
+    a: "Za każdy ukończony 1 rok stażu pracodawca musi wypłacić 0,5 miesiąca przeciętnego wynagrodzenia jako odprawę, najwyżej 6 miesięcy wynagrodzenia. Ten wzór dotyczy stażu, do którego stosuje się art. 12 ustawy o emeryturach pracowniczych (勞工退休金條例); dla stażu, do którego stosuje się art. 17 ustawy o normach pracy (勞動基準法), za 1 rok wypłaca się 1 miesiąc przeciętnego wynagrodzenia, bez limitu."
 ---
 
 # Prawo pracy na Tajwanie: kiedy przysługuje odprawa (資遣費)
 
 ![Obraz główny](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Dzień dobry, nazywam się Wei Tseng (曾雋崴) i jestem adwokatką na Tajwanie.
+Nazywam się Wei Tseng (曾雋崴) i jestem adwokatką na Tajwanie.
 
-Dziś chciałabym porozmawiać z Państwem o odprawie (資遣費) na Tajwanie.
+Poniżej omawiam odprawę (資遣費) na Tajwanie.
 
 ![](../images/008-taiwan-labor-severance-law/img-01.jpg)
 
-Wielu z Państwa już to wie.
+Poniższe rozróżnienie warto mieć na uwadze.
 
-W niektórych państwach — na przykład w Korei — spółka musi wypłacić odprawę także wtedy, gdy pracownik sam odchodzi z przedsiębiorstwa
+W niektórych państwach — na przykład w Korei — spółka musi wypłacić odprawę także wtedy, gdy pracownik sam odchodzi z przedsiębiorstwa.
 
 Na Tajwanie jest to jednak uregulowane inaczej:
 
@@ -52,17 +52,17 @@ Podsumowuję to w prostej tabeli.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Rodzaj** | **Zwolnienie ekonomiczne**  **資遣** **員工(經濟解僱)** | **Zwolnienie dyscyplinarne**  **解僱** **員工(懲戒解僱)** | **Własna rezygnacja zatrudnionej osoby**  **員工自請離職** |
+| **Rodzaj** | **Zwolnienie ekonomiczne (資遣員工, 經濟解僱)** | **Zwolnienie dyscyplinarne (解僱員工, 懲戒解僱)** | **Własna rezygnacja zatrudnionej osoby (員工自請離職)** |
 | Znaczenie | Jeśli u pracodawcy istnieje potrzeba korekty personelu z powodu sytuacji przedsiębiorstwa, przyczyna leży w sferze gospodarczej pracodawcy, a nie w odpowiedzialności zatrudnionej osoby. Dlatego pracodawca musi przestrzegać terminu wypowiedzenia (預告期間) i wypłacić odprawę, aby zrównoważyć niekorzyści zatrudnionej osoby. | Jeśli zatrudniona osoba popełnia czyn bezprawny lub niewłaściwy, pracodawca może natychmiast zakończyć umowę o pracę (勞動契約) bez wcześniejszego wypowiedzenia i nie musi wypłacać odprawy. Jest to jedna z prerogatyw dyscyplinarnych pracodawcy. | Zatrudniona osoba może w każdej chwili zakończyć umowę, lecz musi, według czasu zatrudnienia, przestrzegać terminu wypowiedzenia, aby pracodawca mógł przeprowadzić przekazanie i poszukiwanie zastępstwa. |
 | Warunki | Obecne  (art. 11 tajwańskiej ustawy o normach pracy) | Obecne  (art. 12 tajwańskiej ustawy o normach pracy) | Brak |
 | Wcześniejsze wypowiedzenie | Wymagane | Niewymagane | Wymagane |
-| Trudność | Proste | Trudne | Proste |
+| Trudność (bez obietnicy wyniku) | Porównawczo mniejsza | Porównawczo większa | Porównawczo mniejsza |
 | Czy spółka musi wypłacić odprawę (資遣費) | Wymagane | Niewymagane | Niewymagane |
 |  | Tajwańska ustawa o normach pracy, art. 11 (勞動基準法第11條): O ile nie wystąpi jeden z następujących przypadków, pracodawca nie może zakończyć umowy o pracę, nawet po wcześniejszym zawiadomieniu zatrudnionej osoby.  1. Zaprzestanie działalności (歇業) lub zbycie przedsiębiorstwa (轉讓)  2. Straty (虧損) lub ograniczenie działalności (業務緊縮)  3. Siła wyższa wymaga przerwy w działalności na 1 miesiąc lub dłużej  4. Charakter działalności wymaga redukcji personelu, a zwolnionej osoby nie można przenieść na inne odpowiednie stanowisko  5. Określona zatrudniona osoba nie może w sposób zadowalający wykonać pracy wymaganej przez stanowisko | Tajwańska ustawa o normach pracy, art. 12 (勞動基準法第12條): Pracodawca może zwolnić bez wcześniejszego zawiadomienia, jeśli zatrudniona osoba wchodzi w jeden z następujących przypadków.  1. Kto przy zawarciu umowy o pracę składa nieprawdziwe oświadczenia, wprowadza pracodawcę w błąd i naraża przedsiębiorstwo na ryzyko szkody  2. Kto stosuje przemoc lub poważnie znieważa pracodawcę, jego rodzinę, jego przedstawiciela (代理人) lub innych współpracowników  3. Kogo prawomocnie skazano na karę pozbawienia wolności na czas oznaczony (有期徒刑) lub karę cięższą, bez orzeczenia warunkowego zawieszenia (緩刑) i bez zezwolenia na zamianę na grzywnę (易科罰金)  4. Poważne naruszenie umowy o pracę lub regulaminu pracy  5. Kto umyślnie zużywa maszyny, narzędzia, surowce, produkty lub inne mienie pracodawcy albo umyślnie ujawnia tajemnice techniczne i handlowe pracodawcy i wyrządza pracodawcy szkodę  6. Nieusprawiedliwiona nieobecność (曠工) bez uzasadnionej przyczyny przez 3 dni z rzędu albo przez 6 dni lub więcej w miesiącu |  |
 
-> Na Tajwanie, za każde ukończone 1 rok stażu (年資),
+> Na Tajwanie, za każdy ukończony 1 rok stażu (年資),
 > pracodawca musi wypłacić 0,5 miesiąca przeciętnego wynagrodzenia (平均工資) jako odprawę.
-> (najwyżej 6 miesięcy wynagrodzenia) Ten wzór dotyczy stażu, do którego stosuje się art. 12 rozporządzenia o emeryturze pracowników (勞工退休金條例); dla stażu, do którego stosuje się art. 17 ustawy o normach pracy (勞動基準法), za 1 rok wypłaca się 1 miesiąc przeciętnego wynagrodzenia, bez limitu.
+> (najwyżej 6 miesięcy wynagrodzenia) Ten wzór dotyczy stażu, do którego stosuje się art. 12 ustawy o emeryturach pracowniczych (勞工退休金條例); dla stażu, do którego stosuje się art. 17 ustawy o normach pracy (勞動基準法), za 1 rok wypłaca się 1 miesiąc przeciętnego wynagrodzenia, bez limitu.
 
 ​
 
@@ -118,7 +118,7 @@ W przeciwnym razie B miał opuścić spółkę.
 
 Kadra dała B kartkę A4
 
-i poleciła, by napisał: „Ja, OOO, dobrowolnie obniżam stanowisko i wynagrodzenie”
+i poleciła, by napisał: „Ja, [imię i nazwisko], dobrowolnie obniżam stanowisko i wynagrodzenie”
 
 jako treść oświadczenia.
 
@@ -176,7 +176,7 @@ Dzięki reprezentacji prawnej mógł później
 
 wykazać przysługujące mu z ustawy uprawnienie do odprawy,
 
-podczas gdy inni pracownicy, którzy odeszli, nie mieli tyle szczęścia.
+podczas gdy ten opis jednej sprawy nie jest obietnicą wyniku dla innych pracowników, którzy odeszli.
 
 ​
 
@@ -210,17 +210,17 @@ albo przenosi pracowników na dziwne stanowiska,
 
 Jeśli pracują Państwo na Tajwanie,
 
-odprawę trudniej uzyskać, niż się myśli
+Odprawę trudniej uzyskać, niż się myśli.
 
-Prosimy nie zawierać pochopnie ugody ze spółką
+Prosimy nie zawierać pochopnie ugody ze spółką.
 
-i zadbać, by spółka nie zwolniła Państwa w niewłaściwy sposób
+Należy też zadbać, by spółka nie zwolniła Państwa w niewłaściwy sposób.
 
-ani nie skłaniała do samodzielnej rezygnacji
+Nie należy też dać się skłonić do samodzielnej rezygnacji.
 
-Odprawa jest ustawowym prawem zatrudnionej osoby,
+Odprawa jest ustawowym prawem zatrudnionej osoby.
 
-a spółka oczywiście musi ją wypłacić.
+Gdy ustawa to przewiduje, spółka ma obowiązek ją wypłacić.
 
 Państwo również muszą chronić swoje prawa na Tajwanie.
 

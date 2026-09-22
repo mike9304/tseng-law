@@ -59,7 +59,7 @@ Jednak przy rejestracji spółki często wpisuje się kilka branż naraz i częs
 
 Dlatego w praktyce nie trzeba sprawdzać wszystkich branż przy rejestracji spółki.
 
-Zgodnie z „[instrukcją działania usługi informacji o lokalach miasta Tajpej](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)”(臺北市營業場所協助查詢服務作業須知) oraz obowiązującym przewodnikiem miasta Tajpej,
+Zgodnie z „[instrukcją usługi wspomagającej zapytania o lokale działalności miasta Tajpej](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)” (臺北市營業場所協助查詢服務作業須知) oraz obowiązującym obwieszczeniem miasta Tajpej,
 
 od 1 stycznia 2023 r. przy wniosku o rejestrację założenia, przeniesienia siedziby lub dodania branż działalności spółki lub przedsiębiorstwa (w tym oddziału (分公司) i placówki pomocniczej (分支機構)) wynik wcześniejszego sprawdzenia lokalu **musi** być załączony do wniosku o rejestrację, niezależnie od branży.
 
@@ -71,7 +71,7 @@ Jeśli otworzy się lokal w miejscu, w którym zakład gastronomiczny nie jest m
 
 „branże objęte sprawdzeniem z urzędu” (主動查詢之營業項目)
 
-Na tym polega sedno; w pozostałych kwestiach w razie pytań można skontaktować się z adwokatem na Tajwanie.
+Na tym kończy się omówienie. Jeśli mają Państwo pytanie z zakresu prawa Tajwanu, prosimy o kontakt przez stronę „Kontakt” po angielsku, chińsku (中文), japońsku lub koreańsku; termin odpowiedzi nie jest przyrzeczony.
 
 Reguły organów administracyjnych mogą często się zmieniać; przed rejestracją osoby prawnej należy potwierdzić najnowsze przepisy.
 

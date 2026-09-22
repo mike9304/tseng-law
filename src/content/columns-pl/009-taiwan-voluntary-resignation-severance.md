@@ -37,7 +37,7 @@ W następujących szczególnych sytuacjach, nawet jeśli pracownik odchodzi z w�
 
 2. Gdy pracodawca, członek rodziny pracodawcy lub przedstawiciel pracodawcy (代理人) stosuje przemoc lub zadaje poważną zniewagę (重大侮辱) pracownikowi
 
-3. Gdy praca ustalona w umowie może szkodzić zdrowiu pracownika, zażądano od pracodawcy poprawy i nie ma skutku
+3. Gdy praca ustalona w umowie może szkodzić zdrowiu pracownika, zażądano od pracodawcy poprawy, a poprawa nie nastąpiła
 
 4. Gdy pracodawca, jego przedstawiciel lub inny pracownik choruje na ustawową chorobę zakaźną (法定傳染病), istnieje ryzyko zakażenia pracowników pracujących razem i stanowi to poważne niebezpieczeństwo dla zdrowia pracownika
 
@@ -91,7 +91,7 @@ Dlatego w sporach pracy (勞資糾紛) na Tajwanie
 
 czas ma kluczowe znaczenie.
 
-W większości przypadków ten, kto przygotował się z wyprzedzeniem, ma chronione prawa.
+W większości przypadków ten, kto przygotował się wcześniej, jest w lepszej sytuacji, by chronić swoje prawa; samo przygotowanie nie przesądza wyniku.
 
 ---
 

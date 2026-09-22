@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Obraz wyjaśniający ocenę odpowiedzialności w wypadku przy wyprzedzaniu na Tajwanie oraz bezpieczną procedurę wyprzedzania](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Gdy pojazd z przodu jedzie wolno, wyprzedzanie (超車) może wydawać się zwykłym wyborem, lecz jest to zachowanie kierowcy o znacznym ryzyku. Przed rozpoczęciem wyprzedzania należy razem zbadać odcinek drogi, sytuację ruchu w obu kierunkach, ruch pojazdów z przodu oraz przestrzeń do bezpiecznego powrotu na pierwotny pas.
+Gdy pojazd z przodu jedzie wolno, wyprzedzanie (超車) może wydawać się czymś zwyczajnym, lecz jest to zachowanie kierowcy o znacznym ryzyku. Przed rozpoczęciem wyprzedzania należy razem zbadać odcinek drogi, sytuację ruchu w obu kierunkach, ruch pojazdów z przodu oraz przestrzeń do bezpiecznego powrotu na pierwotny pas.
 
 ## Warunki wyprzedzania określone w art. 101 rozporządzenia o bezpieczeństwie ruchu drogowego (道路交通安全規則)
 
@@ -37,13 +37,13 @@ W zanonimizowanej sprawie prowadzonej przez tę kancelarię motocyklista A jecha
 
 ![Schemat wypadku pokazujący tor wyprzedzania motocykla i 2 pojazdów z przodu na drodze górskiej](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A próbował wyprzedzić oba pojazdy, wjechał na przeciwny pas i przyspieszył. Pojazd nr 2 też przygotowywał się do wyprzedzenia pojazdu nr 1: mniej niż 1 sekundę po włączeniu kierunkowskazu wjechał na przeciwny pas. Motocykl nie miał wystarczającego zapasu hamowania i zderzył się z pojazdem nr 2.
+A próbował wyprzedzić oba pojazdy, wjechał na przeciwny pas i przyspieszył. Pojazd nr 2 też przygotowywał się do wyprzedzenia pojazdu nr 1: mniej niż 1 sekundę po włączeniu kierunkowskazu wjechał na przeciwny pas. Motocykl nie miał dość czasu na hamowanie i zderzył się z pojazdem nr 2.
 
 B doznał ciężkich obrażeń głowy i zmarł na miejscu; A stracił przytomność i został przewieziony do szpitala.
 
 Rodziny A i B uznały najpierw nagłą zmianę pasa pojazdu nr 2 za główną przyczynę zderzenia. Sprawa przeszła do procesu, a w jego toku przeprowadzono kilka ekspertyz (鑑定) wypadku.
 
-Według wyniku ekspertyzy główną odpowiedzialność za to zderzenie ponosił A. Ten wniosek był ograniczony do faktów tej sprawy. Ekspertyza uwzględniła razem to, że A chciał wyprzedzić dwa pojazdy z przodu jadące jeden za drugim, że wjechał na przeciwny pas, że jechał z prędkością prawie niepozostawiającą zapasu hamowania, że brakowało przepisanych sygnałów klaksonu i świateł, a także ruch zmiany pasa pojazdu nr 2, strukturę drogi i pasów oraz inne zebrane dowody.
+Według wyniku ekspertyzy główną odpowiedzialność za to zderzenie ponosił A. Ten wniosek był ograniczony do faktów tej sprawy. Ekspertyza uwzględniła razem to, że A chciał wyprzedzić dwa pojazdy z przodu jadące jeden za drugim, że wjechał na przeciwny pas, że jechał z prędkością, przy której prawie nie było czasu na hamowanie, że brakowało przepisanych sygnałów klaksonu i świateł, a także ruch zmiany pasa pojazdu nr 2, strukturę drogi i pasów oraz inne zebrane dowody.
 
 To, że w niektórych sprawach takie wyniki ekspertyzy następują, nie oznacza, że jedno pominięcie przepisanego sygnału zawsze ustala odpowiedzialność. Wina (過失) w wypadku przy wyprzedzaniu zależy od miejsca wypadku, układu pasów, prędkości, ruchów pojazdów, sygnałów, odstępów czasu, widoczności i innych dowodów.
 

@@ -1074,13 +1074,13 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Otrzymaliśmy wniosek; czeka na rozpatrzenie. To nie oznacza, że konsultacja się odbyła ani że termin został potwierdzony.',
     savedNotificationPendingMessage:
       'Wniosek jest zapisany, ale powiadomienie kancelarii nie jest jeszcze potwierdzone. Treść wiadomości nie została utracona. Jeśli nie ma odpowiedzi, można też napisać na adres poczty elektronicznej strony kontaktu.',
-    receiptIdLabel: 'Numer odbioru',
+    receiptIdLabel: 'Numer zgłoszenia',
     failureMessage:
       'Nie udało się wysłać wniosku. Prosimy spróbować ponownie albo napisać na adres poczty elektronicznej strony kontaktu.',
     originalLanguageLabel: 'Język, w którym Państwo piszą',
     originalLanguagePlaceholder:
       'Na przykład polski, angielski, chiński lub inny język',
-    preferredConsultationLanguageLabel: 'Język, którego Państwo życzą sobie do konsultacji',
+    preferredConsultationLanguageLabel: 'Język, którego Państwo sobie życzą na konsultację',
     originalTextLabel: 'Krótki opis sprawy (we własnym języku)',
     originalTextPlaceholder:
       'Prosimy podać, co się stało, jakiej pomocy potrzeba i termin, jeśli istnieje. Prosimy nie wpisywać numeru paszportu, numeru dokumentu ani danych rachunku.',

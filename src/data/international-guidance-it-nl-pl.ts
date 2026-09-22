@@ -1065,7 +1065,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Czym się zajmujemy',
           paragraphs: [
             'Hovering International Law Firm jest kancelarią adwokacką z siedzibą na Tajwanie. Pracuje według prawa Tajwanu i ma biura w Tajpej (臺北), Kaohsiung (高雄), Taichung (臺中) i Pingtung (屏東). Doradzamy przedsiębiorstwom i prowadzimy postępowania przed sądem oraz towarzyszymy klientom z zagranicy w krokach wymaganych na Tajwanie.',
-            'Cała treść tutaj jest ogólna. Wynik sprawy zależy od faktów, od stosowanych przepisów i od chwili. Te informacje nie zastępują rozmowy z adwokatem o Państwa dokumentach.',
+            'Cała treść tutaj jest ogólna. Wynik sprawy zależy od faktów, od stosowanych przepisów i od chwili, w której sprawa jest oceniana. Te informacje nie zastępują rozmowy z adwokatem o Państwa dokumentach.',
           ],
         },
         {
@@ -1117,7 +1117,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Sprawy cywilne i odszkodowania',
           paragraphs: [
             'Ta grupa obejmuje spory umowne, odszkodowania z czynu niedozwolonego i spory konsumenckie. Praca zaczyna się zwykle od chronologii, oceny posiadanych dokumentów i dowodów, a dopiero potem od kolejnych kroków.',
-            'Terminy, w tym ustawowe terminy do wytoczenia powództwa, oraz kompletność dowodów kształtują przebieg. Dlatego znane daty należy podać jak najwcześniej. Prosimy zachować umowy, wiadomości, dowody zapłaty lub zdjęcia sytuacji na miejscu i wymienić je w pierwszej wiadomości.',
+            'Terminy, w tym ustawowe terminy do wytoczenia powództwa, oraz kompletność dowodów kształtują przebieg. Dlatego znane daty należy podać jak najwcześniej. Prosimy zachować umowy, wiadomości, dowody zapłaty lub zdjęcia z miejsca zdarzenia i wymienić je w pierwszej wiadomości.',
           ],
         },
         {
@@ -1138,7 +1138,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Sprawy karne',
           paragraphs: [
             'Towarzyszymy w postępowaniu przygotowawczym i przed sądem, zarówno dla podejrzanych lub oskarżonych, jak i dla pokrzywdzonych, oraz oceniamy ryzyko karne działalności przedsiębiorstwa.',
-            'Sprawy karne mają często krótkie terminy i ustalone etapy. Jeśli otrzymano już pismo organu ścigania lub sądu, prosimy wcześnie podać datę na piśmie, aby treść została rozpatrzona we właściwej kolejności.',
+            'Sprawy karne mają często krótkie terminy i ustalone etapy. Jeśli otrzymano już pismo organu ścigania lub sądu, prosimy wcześnie podać datę widniejącą na piśmie, aby treść została rozpatrzona we właściwej kolejności.',
           ],
         },
         {
@@ -1221,14 +1221,14 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Konsultacja może być odpłatna',
           paragraphs: [
-            'Konsultacja z adwokatem może być świadczeniem odpłatnym. Ta strona nie mówi, że pierwsza rozmowa jest bezpłatna, i żadna część nie może być tak odczytana.',
+            'Konsultacja z adwokatem może być świadczeniem odpłatnym. Ta strona nie mówi, że pierwsza rozmowa jest bezpłatna, i żadnego fragmentu tej strony nie należy tak odczytywać.',
             'Jeśli konsultacja jest odpłatna, wysokość i sposób zapłaty podaje się, zanim do niej dojdzie.',
           ],
         },
         {
           heading: 'Dlaczego ta strona nie podaje stawek',
           paragraphs: [
-            'Koszty zależą od samej sprawy: od nakładu, liczby stron, dokumentów, terminów i od tego, czy postępowanie już trwa. Liczba ustalona z góry nie pokazałaby kosztów Państwa akt. Dlatego najpierw ustalamy zakres pracy, a następnie podajemy koszty, zanim praca się zacznie.',
+            'Koszty zależą od samej sprawy: od nakładu, liczby stron, dokumentów, terminów i od tego, czy postępowanie już trwa. Liczba ustalona z góry nie oddałaby kosztów Państwa sprawy. Dlatego najpierw ustalamy zakres pracy, a następnie podajemy koszty, zanim praca się zacznie.',
             'Obok honorarium adwokackiego mogą powstać koszty sądowe, urzędowe lub osób trzecich. Są one oddzielone od honorarium i zależą od danego postępowania.',
           ],
         },
@@ -1287,7 +1287,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Jak korzystać z tej części',
           paragraphs: [
-            'Jeśli nie ma odpowiedzi na daną sytuację, odpowiedź zwykle zależy od szczególnych faktów. Prosimy wtedy wpisać te fakty w streszczeniu, zamiast wyprowadzać je samodzielnie z tej strony.',
+            'Jeśli nie ma odpowiedzi na daną sytuację, odpowiedź zwykle zależy od szczególnych faktów. Prosimy wtedy wpisać te fakty w streszczeniu, zamiast samodzielnie wyciągać z tej strony odpowiedź.',
           ],
         },
       ],
@@ -1330,7 +1330,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Co, jeśli sprawa jest bardzo pilna?',
           answer:
-            'Prosimy podać termin lub datę na piśmie urzędowym na początku streszczenia, aby te daty były widoczne przy rozpatrzeniu. Ta strona nie ma kanału awaryjnego i nie zapewnia terminu odpowiedzi; jeśli sprawa nie może czekać, należy równolegle szukać innych dróg w swoim miejscu.',
+            'Prosimy podać termin lub datę widniejącą na piśmie urzędowym na początku streszczenia, aby te daty były widoczne przy rozpatrzeniu. Ta strona nie ma kanału awaryjnego i nie zapewnia terminu odpowiedzi; jeśli sprawa nie może czekać, należy równolegle szukać równolegle innych dróg tam, gdzie Państwo przebywają.',
         },
       ],
     },
@@ -1355,7 +1355,7 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
             'Żądany język konsultacji',
             'Oryginalny tekst, który napisano',
             'Zgoda na wysłanie wniosku',
-            'Numer odbioru, aby odnaleźć wniosek',
+            'Numer zgłoszenia, aby odnaleźć wniosek',
           ],
         },
         {
@@ -1380,10 +1380,10 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Powiadomienie i numer odbioru',
+          heading: 'Powiadomienie i numer zgłoszenia',
           paragraphs: [
             'Jeśli wniosek zostanie pomyślnie wysłany, system powiadamia kancelarię. Jeśli to powiadomienie nie jest jeszcze potwierdzone, tekst pozostaje zapisany i nie zostaje utracony.',
-            'Numer odbioru służy do odnalezienia wniosku w naszych aktach. Jest pokazywany po zapisaniu; można go podać przy ponownym kontakcie.',
+            'Numer zgłoszenia służy do odnalezienia wniosku w naszych aktach. Jest pokazywany po zapisaniu; można go podać przy ponownym kontakcie.',
           ],
         },
         {
@@ -1414,14 +1414,14 @@ export const polishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Tylko informacje ogólne',
           paragraphs: [
             'Treść tych stron jest napisana jako informacja ogólna. Nie jest poradą prawną w Państwa sprawie i nie zastępuje oceny własnych dokumentów.',
-            'Wynik sprawy zależy od faktów, stosowanych przepisów i chwili; dwie pozornie podobne sytuacje mogą zakończyć się inaczej.',
+            'Wynik sprawy zależy od faktów, stosowanych przepisów i chwili, w której sprawa jest oceniana; dwie pozornie podobne sytuacje mogą zakończyć się inaczej.',
           ],
         },
         {
           heading: 'Zakres prawny',
           paragraphs: [
             'Kancelaria prowadzi sprawy według prawa Tajwanu, a ta strona mówi wyłącznie o pracy w tych ramach.',
-            'Treść nie jest doradztwem według prawa innego porządku niż Tajwan, w tym prawa miejsca zamieszkania. Jeśli część sprawy dotyczy innego porządku prawnego, wyjaśnimy z Państwem, jaka wykwalifikowana osoba jest potrzebna do tej części.',
+            'Treść nie jest doradztwem według prawa porządku prawnego innego niż tajwański, w tym prawa miejsca zamieszkania. Jeśli część sprawy dotyczy innego porządku prawnego, wyjaśnimy z Państwem, jaka wykwalifikowana osoba jest potrzebna do tej części.',
           ],
         },
         {

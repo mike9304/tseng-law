@@ -583,7 +583,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'هذه الصفحة الإرشادية مكتوبة بالعربية. الاستشارات تُقدَّم بالإنجليزية أو الصينية أو اليابانية أو الكورية، ولا نلتزم بتوفير ترجمة فورية.',
     discoveryNotice:
-      'هذا الملف مجرد خريطة للوصول إلى الصفحات العامة؛ وهو لا يَعِد بترتيب في نتائج البحث، ولا بتزكية، ولا بتوصية من أنظمة الذكاء الاصطناعي، ولا بإعلان.',
+      'ملف llms.txt هذا ليس إلا خريطة للاستدلال على الصفحات العامة؛ وهو لا يَعِد بترتيب في نتائج البحث ولا بتزكية، ولا بترشيح من الذكاء الاصطناعي، ولا بإعلان.',
     // The published privacy-page sentence, with its leading connective dropped
     // so the line stands alone; the proposition is unchanged.
     confidentialNotice:

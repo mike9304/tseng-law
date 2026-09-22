@@ -83,12 +83,12 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Spiegazioni generali in italiano sull’ambito di lavoro di Hovering International Law Firm a Taiwan, sulle lingue di consulenza e sul primo contatto.',
       intro:
-        'Hovering International Law Firm accompagna clienti dall’estero, anche quando hanno un collegamento con Taiwan, in questioni di diritto taiwanese: investimento e costituzione di società, controversie civili, matrimonio, famiglia e successioni, diritto del lavoro, penale e proprietà intellettuale. Questa parte in italiano La aiuta a riconoscere quale lavoro rientra nel nostro ambito, che cosa preparare e come raggiungerci. Si tratta di indicazioni generali, non di una consulenza legale per il Suo caso.',
+        'Hovering International Law Firm accompagna clienti dall’estero, anche quelli che hanno un collegamento con Taiwan, in questioni di diritto taiwanese: investimento e costituzione di società, controversie civili, matrimonio, famiglia e successioni, diritto del lavoro, penale e proprietà intellettuale. Questa parte in italiano La aiuta a riconoscere quale lavoro rientra nel nostro ambito, che cosa preparare e come raggiungerci. Si tratta di indicazioni generali, non di una consulenza legale per il Suo caso.',
       sections: [
         {
           heading: 'Che cosa facciamo',
           paragraphs: [
-            'Hovering International Law Firm è uno studio legale stabilito a Taiwan. Lavora secondo il diritto di Taiwan e ha uffici a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). Forniamo consulenza alle imprese, le rappresentiamo in giudizio e accompagniamo i clienti dall’estero nei passi necessari a Taiwan.',
+            'Hovering International Law Firm è uno studio legale stabilito a Taiwan. Lavora secondo il diritto di Taiwan e ha uffici a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) e Pingtung (屏東). Lo studio fornisce consulenza alle imprese, le rappresenta in giudizio e accompagna i clienti dall’estero nei passi necessari a Taiwan.',
             'Tutto il contenuto qui è generale. L’esito di una questione dipende dai fatti, dalle norme applicabili e dal momento. Queste indicazioni non sostituiscono il colloquio con un’avvocata o un avvocato sui Suoi documenti.',
           ],
         },
@@ -200,7 +200,7 @@ export const italianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Lavoro con parti straniere',
           paragraphs: [
-            'Il lavoro transfrontaliero comprende costituzione di società, visti, depositi di marchi e brevetti, esame del rischio giuridico e consulenza fiscale di imprese. L’ufficio di Taichung tratta in particolare questioni edilizie, proprietà intellettuale e questioni collegate alla Corea e al Giappone. L’avvocata Wei Tseng (曾雋崴) accompagna clienti dalla Corea, dal Giappone e altri clienti internazionali nelle aree indicate.',
+            'Il lavoro transfrontaliero comprende costituzione di società, visti, depositi di marchi e brevetti, esame del rischio giuridico e consulenza fiscale di imprese. L’ufficio di Taichung tratta in particolare questioni edilizie, proprietà intellettuale e questioni collegate alla Corea e al Giappone. L’avvocata Wei Tseng (曾雋崴) accompagna clienti dalla Corea e dal Giappone e altri clienti internazionali nelle aree indicate.',
             'Se possiamo assumere una questione dipende dal contenuto e dalla lingua della comunicazione. Se la Sua questione rientra nelle aree indicate e può essere discussa in una delle quattro lingue di consulenza, può inviare un riassunto per l’esame.',
           ],
         },

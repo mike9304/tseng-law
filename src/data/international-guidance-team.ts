@@ -511,9 +511,9 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Avvocata dirigente a Taiwan (Managing Attorney)',
       'chang-rongxuan': 'Avvocato a Taiwan (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
+      'chang-fangyu': 'Collaboratore legale (paralegal)',
       'son-jungmin': 'Responsabile operativo Corea (Korea Operations Manager)',
-      'huang-shengping': 'Dottore commercialista partner (Partner CPA)',
+      'huang-shengping': 'Commercialista partner a Taiwan (Partner CPA)',
     },
   },
   nl: {
@@ -2656,49 +2656,49 @@ export const guidanceTeamBios: Record<
         'Ha seguito in primo grado la domanda di risarcimento di uno studente coreano per una lesione in palestra, definita con una sentenza di 1,57 milioni di TWD.',
       ],
       education: [
-        'Master (M.S.), Institute of Finance, National Taiwan University',
+        'Master (M.S.) in finanza, Institute of Finance, National Taiwan University',
         'Laurea (B.A.) con doppio percorso in diritto e finanza, National Chengchi University',
         'Studentessa in scambio alla Kobe University e alla Waseda University',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Fondazione di assistenza legale, sede di Taichung (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Precedentemente al Ministry of Education, Legal Affairs Division, con attenzione a questioni amministrative e civili.',
+        'In precedenza ha lavorato presso il Ministero dell’Istruzione, Divisione affari giuridici (Ministry of Education, Legal Affairs Division), con particolare riguardo alle controversie amministrative e civili.',
         'Esperienza in questioni relative alle università, ai diritti del personale docente e ai ricorsi amministrativi.',
       ],
       education: ['Laurea in giurisprudenza (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Ministero dell’Istruzione, Divisione affari giuridici (Ministry of Education, Legal Affairs Division)',
         'Avvocato, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal con lunga attività come senior paralegal in più studi, responsabile del supporto processuale, del diritto societario e degli investimenti esteri.',
+        'Collaboratore legale (paralegal), con lunga attività come senior paralegal in più studi, responsabile del supporto processuale, del diritto societario e degli investimenti esteri.',
         'Supporto a procedimenti, costituzione di società, autorizzazioni di investimenti esteri, domande di licenza e allo scambio tra Corea e Taiwan.',
       ],
       education: ['Laurea in giurisprudenza (LL.B.), Tunghai University'],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Collaboratore legale senior, Boyin Law Firm',
+        'Collaboratore legale senior, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
       intro: [
         'Coordina gli appuntamenti di consulenza e la comunicazione per i clienti dalla Corea.',
-        'Facilita lo scambio tra le due aree tramite sistemi documentali e flussi di lavoro, sulla base dell’informatica.',
+        'Agevola la comunicazione tra i team tramite sistemi documentali e flussi di lavoro, sulla base di una formazione in informatica.',
       ],
       education: ['Laurea (B.S.) in informatica, National Cheng Kung University'],
       experience: ['Area operazioni Corea, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'Ha concluso i programmi di laurea e master in contabilità alla National Chengchi University e dirige attualmente uno studio di dottori commercialisti.',
+        'Ha conseguito la laurea e il master in contabilità alla National Chengchi University e dirige attualmente uno studio di commercialisti a Taiwan.',
         'Contribuisce all’analisi integrata dei rischi giuridici, fiscali e finanziari per i clienti d’impresa.',
       ],
       education: [

@@ -39,7 +39,7 @@ esistono anche a Taiwan numerose vie di massaggio.
 
 Stabilimenti di massaggio di tutte le specie vi si allineano.
 
-Vi è il massaggio da persone in situazione di disabilità visiva (視障按摩), il massaggio dei piedi, il massaggio all’olio, il massaggio thailandese e altre forme.
+Vi è il massaggio da persone con disabilità visiva (視障按摩), il massaggio dei piedi, il massaggio all’olio, il massaggio thailandese e altre forme.
 
 In sostanza, ciascuno può scegliere il massaggio che conviene al proprio gusto per alleviare la tensione.
 
@@ -47,7 +47,7 @@ E la ragione per cui esistono oggi tanti stabilimenti di massaggio può doversi 
 
 Quando Taiwan ha promulgato e messo in vigore, nel 1980, la legge sul benessere delle persone con disabilità (殘障福利法),
 
-solo le persone in situazione di disabilità visiva (視障者) potevano in realtà esercitare il mestiere di massaggio (按摩業).
+solo le persone con disabilità visiva (視障者) potevano in realtà esercitare il mestiere di massaggio (按摩業).
 
 Che un individuo senza disabilità visiva (非視障者) esercitasse questo mestiere era illegale.
 
@@ -55,7 +55,7 @@ Questa legge si è mantenuta fino al 2003; all’epoca, il Sig. Lin, che gestiva
 
 ha impiegato lavoratori senza disabilità visiva per servizi di lavaggio dei capelli e di massaggio, e la polizia lo ha constatato.
 
-Secondo il diritto di allora, il Sig. Lin e quei lavoratori hanno visto infliggersi rispettivamente una sanzione amministrativa pecuniaria (罰鍰) di TWD 40.000, TWD 10.000 e TWD 20.000 in nuovo dollaro di Taiwan (新臺幣).
+Secondo il diritto di allora, il Sig. Lin e quei lavoratori hanno visto infliggersi rispettivamente una sanzione amministrativa pecuniaria (罰鍰) di TWD 40.000, TWD 10.000 e TWD 20.000 in nuovi dollari taiwanesi (新臺幣).
 
 Il Sig. Lin ha stimato questa sanzione molto ingiusta e ha chiesto un’interpretazione costituzionale.
 
@@ -63,37 +63,37 @@ Il Sig. Lin ha stimato questa sanzione molto ingiusta e ha chiesto un’interpre
 
 A Taiwan,
 
-le persone in situazione di disabilità visiva incontrano numerosi ostacoli nella crescita, nell’attività, nell’apprendimento e nell’educazione, tra l’altro,
+le persone con disabilità visiva incontrano numerosi ostacoli nella crescita, nell’attività, nell’apprendimento e nell’educazione, tra l’altro,
 
 e i mestieri che possono esercitare sono molto limitati.
 
-È per questo che il legislatore di allora, per proteggere le persone in situazione di disabilità visiva, che si trovavano in posizione di debolezza,
+È per questo che il legislatore di allora, per proteggere le persone con disabilità visiva, che si trovavano in posizione di debolezza,
 
-ha elaborato una legge che proteggeva l’impiego e il diritto alla sussistenza (生存權) delle persone in situazione di disabilità visiva.
+ha elaborato una legge che proteggeva l’impiego e il diritto alla sussistenza (生存權) delle persone con disabilità visiva.
 
 Tuttavia, con il passaggio del tempo e l’allargamento del mercato di consumo,
 
-l’opinione si è fatta udire che proteggere unicamente i diritti delle persone in situazione di disabilità visiva restringeva troppo il diritto al lavoro delle persone senza disabilità visiva.
+l’opinione si è fatta udire che proteggere unicamente i diritti delle persone con disabilità visiva restringeva troppo il diritto al lavoro delle persone senza disabilità visiva.
 
 Nel dibattito sui diritti professionali delle persone con e senza disabilità visiva, numerose opinioni contrarie sono apparse.
 
-Ci si è chiesti per esempio se la regola scritta che solo autorizzava le persone in situazione di disabilità visiva a esercitare il massaggio non fosse una discriminazione verso le persone senza disabilità visiva,
+Ci si è chiesti per esempio se la regola scritta che solo autorizzava le persone con disabilità visiva a esercitare il massaggio non fosse una discriminazione verso le persone senza disabilità visiva,
 
-e si è posto in dubbio che questa regola avesse realmente contribuito a proteggere l’impiego e la sussistenza delle persone in situazione di disabilità visiva.
+e si è posto in dubbio che questa regola avesse realmente contribuito a proteggere l’impiego e la sussistenza delle persone con disabilità visiva.
 
-Infine, i giudici costituzionali (大法官) hanno dichiarato incostituzionale (違憲) la disposizione che solo autorizzava le persone in situazione di disabilità visiva a esercitare il mestiere di massaggio.
+Infine, i giudici costituzionali (大法官) hanno dichiarato incostituzionale (違憲) la disposizione che solo autorizzava le persone con disabilità visiva a esercitare il mestiere di massaggio.
 
 ​
 
-In modo simile, nella Corea, dove numerose persone in situazione di disabilità visiva guadagnano da vivere grazie al massaggio,
+In modo simile, in Corea, dove numerose persone con disabilità visiva guadagnano da vivere grazie al massaggio,
 
-in generale solo le persone in situazione di disabilità visiva che hanno ottenuto un certificato di qualificazione possono esercitare il mestiere di massaggio.
+in generale solo le persone con disabilità visiva che hanno ottenuto un certificato di qualificazione possono esercitare il mestiere di massaggio.
 
 È vero che il governo della Corea è passato a emettere certificati di massaggio anche a persone senza disabilità visiva,
 
-e numerose persone in situazione di disabilità visiva, temendo di perdere il proprio mezzo di sussistenza, hanno organizzato proteste intense.
+e numerose persone con disabilità visiva, temendo di perdere il proprio mezzo di sussistenza, hanno organizzato proteste intense.
 
-All’ora attuale, la Corea continua ad autorizzare solo le persone in situazione di disabilità visiva titolari della qualificazione a esercitare il mestiere di massaggio,
+Attualmente, la Corea continua ad autorizzare solo le persone con disabilità visiva titolari della qualificazione a esercitare il mestiere di massaggio,
 
 e se qualcuno percepisce una remunerazione di massaggio da altri senza quella qualificazione,
 

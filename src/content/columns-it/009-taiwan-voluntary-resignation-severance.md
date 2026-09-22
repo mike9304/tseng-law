@@ -19,7 +19,7 @@ A Taiwan, in via generale, non è facile per il lavoratore ottenere l'indennità
 
 In particolare, se il lavoratore si dimette di propria iniziativa (自請離職),
 
-non può percepire l'indennità di licenziamento (資遣費) (articolo 18 della legge sulle norme del lavoro),
+non può percepire l'indennità di licenziamento (資遣費) (articolo 18 della legge sugli standard del lavoro),
 
 e ciò differisce da altri ordinamenti, per esempio dalla Corea.
 
@@ -29,9 +29,9 @@ Esistono, tuttavia, **casi eccezionali**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-Nelle situazioni particolari seguenti, anche se il lavoratore si dimette di propria iniziativa, il datore di lavoro deve pagargli l'indennità di licenziamento (articoli 14 della legge sulle norme del lavoro, che applica per analogia l'articolo 17; 勞動基準法第14條):
+Nelle situazioni particolari seguenti, anche se il lavoratore si dimette di propria iniziativa, il datore di lavoro deve pagargli l'indennità di licenziamento (l'articolo 14 della legge sugli standard del lavoro, che applica per analogia l'articolo 17; 勞動基準法第14條):
 
-1. Quando il datore di lavoro, nella celebrazione del contratto di lavoro (勞動契約), fa una dichiarazione di volontà mendace (虛偽意思表示) di modo che il lavoratore si inganna e esiste un rischio di subire un pregiudizio
+1. Quando il datore di lavoro, nella celebrazione del contratto di lavoro (勞動契約), fa una dichiarazione di volontà mendace (虛偽意思表示) così che il lavoratore si inganna e esiste un rischio di subire un pregiudizio
 
 (per esempio quando il datore di lavoro dice al lavoratore che, dall'ingresso, lo invierà a una succursale all'estero che non esiste nella realtà)
 
@@ -43,7 +43,7 @@ Nelle situazioni particolari seguenti, anche se il lavoratore si dimette di prop
 
 5. Quando il datore di lavoro non paga la remunerazione (工作報酬) secondo il contratto di lavoro, o non fornisce un lavoro sufficiente al lavoratore la cui retribuzione è calcolata a cottimo (按件計酬)
 
-6. Quando il datore di lavoro infrange il contratto di lavoro o la legislazione del lavoro di modo che esiste un rischio di offesa ai diritti e agli interessi del lavoratore
+6. Quando il datore di lavoro infrange il contratto di lavoro o la legislazione del lavoro così che esiste un rischio di offesa ai diritti e agli interessi del lavoratore
 
 ​
 
@@ -59,7 +59,7 @@ In questi casi, anche se il lavoratore pone termine al contratto di lavoro in vi
 
 ​
 
-Tuttavia, la legge sulle norme del lavoro (勞動基準法) dispone che,
+Tuttavia, la legge sugli standard del lavoro (勞動基準法) dispone che,
 
 se il lavoratore desidera porre termine al contratto di lavoro a titolo dei punti 1 o 6 sopra (per esempio per terminare il contratto per mancanza di affiliazione all'assicurazione),
 
@@ -91,7 +91,7 @@ l'indennità può non essere pagata o può essere richiesta.
 
 il «**tempo**» è molto importante.
 
-Nella maggior parte dei casi, colui che si è preparato in anticipo vede i suoi diritti protetti.
+Nella maggior parte dei casi, Chi si prepara in anticipo è in una posizione migliore per far valere i propri diritti; da ciò non segue un esito determinato.
 
 ---
 

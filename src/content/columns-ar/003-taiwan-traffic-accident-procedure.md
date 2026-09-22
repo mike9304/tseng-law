@@ -188,7 +188,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 - [حكم المحكمة العالية في تايوان (臺灣高等法院) رقم 477 لسنة 109 (2020) في الاستئناف الجزائي الميسَّر (上易字)](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [حاسبة القيمة الحالية لهوفمان لدى اليوان القضائي (司法院)](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [المادة 195 من القانون المدني](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [حكم المحكمة الابتدائية في تاويوان رقم 236 لسنة 112](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [حكم المحكمة الابتدائية في تاويوان، فرع تشونغلي، رقم 236 لسنة 112 في الدعوى الميسَّرة (112年度壢簡字第236號)](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [المادة 188 من القانون المدني](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [المادة 284 من قانون العقوبات (刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [قانون التأمين الإلزامي لمسؤولية السيارات](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
@@ -283,7 +283,7 @@ Q19. إذا غادر السائق الموقع بعد وقوع الحادث، ه
 
 ​
 
-وشرط الفرار المسبق هو أن يُصاب أحد أو يتوفى.
+وشرط قيام جريمة مغادرة موقع الحادث هو أن يُصاب أحد أو يتوفى.
 
 ​
 

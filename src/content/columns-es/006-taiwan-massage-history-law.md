@@ -55,7 +55,7 @@ Esta ley se mantuvo hasta 2003, cuando el señor Lin, que entonces gestionaba un
 
 empleó a dos trabajadores sin discapacidad visual para prestar servicios de lavado de cabello y masaje, y la policía lo detectó.
 
-Según la ley de entonces, al señor Lin y a los dos trabajadores se les impuso una multa administrativa (罰鍰) de TWD 40.000, TWD 10.000 y TWD 20.000 en nuevo dólar taiwanés (新臺幣), respectivamente.
+Según la ley de entonces, al señor Lin y a los dos trabajadores se les impuso una multa administrativa (罰鍰) de 40.000, 10.000 y 20.000 dólares de Taiwán (TWD, 新臺幣), respectivamente.
 
 El señor Lin consideró esa sanción muy injusta y solicitó una interpretación constitucional.
 

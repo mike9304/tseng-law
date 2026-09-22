@@ -75,7 +75,7 @@ pero la Administración de Inmigración está muy concurrida, de modo que convie
 
 El comité de revisión del Ministerio de Economía examina los antecedentes del inversor,
 
-pero el examen no se limita a un único criterio formal: cada solicitud se valora a partir de sus documentos.
+pero el examen no es excesivamente estricto.
 
 Puede mencionar experiencias laborales diversas, incluido el trabajo a tiempo parcial,
 

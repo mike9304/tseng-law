@@ -902,7 +902,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Aquesta orientació està escrita en català, però la consulta amb una advocada o un advocat es fa únicament en anglès, xinès (中文), japonès i coreà.',
     discoveryNotice:
-      'El fitxer llms.txt és només un mapa per localitzar pàgines públiques; no promet posicionament en cercadors, aval, recomanació, recomanació d’una intel·ligència artificial ni visibilitat garantida.',
+      'El fitxer llms.txt és només un mapa per localitzar pàgines públiques; no promet posicionament en cercadors, aval, recomanació d’una intel·ligència artificial ni visibilitat garantida.',
     confidentialNotice:
       'Com que el text original es guarda, no escrigui en aquesta primera fase dades que encara no calen, com el número de passaport, el número d’identitat o dades d’un compte bancari.',
   },

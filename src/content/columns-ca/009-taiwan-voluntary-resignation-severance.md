@@ -73,11 +73,11 @@ Per això el treballador ha de controlar bé el termini.
 
 És a dir,
 
-el dret de Taiwan, tant si la falta és a l’empresa
+el dret de Taiwan, segons si la falta és de l’ocupador
 
-com si és al treballador,
+o del treballador,
 
-reconeix a ambdues parts el dret a no pagar la indemnització per acomiadament o a exigir-la.
+atribueix a una de les parts el dret a no pagar la indemnització per acomiadament i a l’altra el dret a exigir-la.
 
 A vegades, quan hi ha falta en ambdues parts de la relació laboral,
 

@@ -204,7 +204,7 @@ o destina el treballador a un lloc estrany,
 
 **Gravi les converses amb el superior.**
 
-**Deixi proves favorables a un mateix.**
+**Conservi qualsevol prova que li sigui favorable.**
 
 ​
 

@@ -1891,11 +1891,11 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     privacyLinkLabel: 'தனியுரிமை',
     requiredMessage: 'இந்தப் புலம் தேவை.',
     invalidEmailMessage: 'செல்லுபடியான மின்னஞ்சல் முகவரியைத் தரவும்.',
-    tooLongMessage: 'உரை மிக நீளம். சுருக்கி மீண்டும் அனுப்புங்கள்.',
+    tooLongMessage: 'உரை மிக நீளமாக உள்ளது. சுருக்கி மீண்டும் அனுப்புங்கள்.',
     sourceLanguageNotice:
       'இந்தக் கட்டுரை {language} மொழியில் மட்டுமே வெளியிடப்பட்டுள்ளது; இணைப்பு மூலப் பக்கத்தைத் திறக்கும்.',
     unavailableTranslationNotice:
-      'இந்தப் புள்ளி இந்தப் பக்கத்தின் மொழியில் இன்னும் இல்லை. மூல மொழி இணைப்பு மூல உரையைத் திறக்கும்.',
+      'இந்த உருப்படி இந்தப் பக்கத்தின் மொழியில் இன்னும் இல்லை. மூல மொழி இணைப்பு மூல உரையைத் திறக்கும்.',
     unavailableLanguageNotice: 'இந்தப் பக்கம் {language} மொழியில் இல்லை.',
     languageOptions: {
       en: 'ஆங்கிலம் (English)',
@@ -1903,7 +1903,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'ஜப்பானியம் (日本語)',
       ko: 'கொரிய மொழி (한국어)',
       'needs-method-confirmation':
-        'நான்கு மொழிகளில் எதுவும் பயன்படவில்லை — தகவல் தொடர்பு வழியை உறுதிப்படுத்த வேண்டும்',
+        'நான்கு மொழிகளில் எதையும் என்னால் பேச முடியாது — தகவல் தொடர்பு வழியை உறுதிப்படுத்த வேண்டும்',
     },
   },
   ne: {

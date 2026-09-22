@@ -3,7 +3,7 @@ title: "தானாக விலகினாலும் சட்டப்ப�
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
 lastmod: "2026-09-10"
 date_display: "13 செப்டம்பர் 2025"
-read_time: "3 நிமிட வாசிப்பு"
+read_time: "3 நிமிடத்தில் படிக்கலாம்"
 categories:
   - "தைவான் சட்டத் தகவல்"
 featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg"
@@ -91,7 +91,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 “**நேரம்**” மிக முக்கியம்.
 
-பெரும்பாலான வழக்குகளில் முன்கூட்டியே தயாராக இருக்கும் தரப்பின் உரிமைகள் பாதுகாக்கப்படும்.
+முன்கூட்டியே தயாராக இருப்பது உரிமையைக் காக்க உதவக்கூடும்; இது உறுதியான முடிவு அல்ல.
 
 ---
 

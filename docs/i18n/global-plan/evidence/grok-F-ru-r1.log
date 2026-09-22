@@ -1,0 +1,74 @@
+WO-F-ru — Grok 4.7 fix lane, campaign round 1
+workspace: /Users/son7/Projects/tseng-law-fix-ru-r1
+date: 2026-09-22
+
+## Rows
+Reviews: ru-a 40 rows + ru-b 45 rows = 85.
+Applied: 80. Skipped: 5.
+
+Applied with a wording adjustment the checker or the block rules required (still the row’s meaning):
+- ru-a 19: «за последний 1 год» → «за последний один год» (×2 in 001). Bare «за последний год» drops the Korean digit 1 (최근 1년). «один год» is counted by the checker.
+- ru-a 19 sweep in 008: «каждый полный 1 год» → «каждый полный один год» (×2); «за 1 год выплачивается» → «за один год выплачивается» (×2).
+- ru-a 26: not the reviewer’s «из трёх стран». English is “a third country” (제3국). Wrote «инвесторы из Тайваня или из третьей страны».
+- ru-a 35: the «Сложность» row was not deleted (table-row count). Cells rephrased to «Относительная сложность процедуры (не исход дела) | Сравнительно ниже | Сравнительно выше | Сравнительно ниже».
+- ru-a 7: the both-rights sentence was rewritten inside the four existing paragraphs, not merged.
+- ru-b 8: «до 1-кратного» → «не выше размера фактического вреда (не более чем в 1 раз)». Korean is 최대 1배; dropping the 1 fails the checker.
+- ru-b 19: period and new opening written inside the two existing paragraphs, not merged.
+- ru-b 45: four consultation languages named on the 013, 015 and 018 contact lines, with «срок ответа не обещается» kept on 013 and 015. The reviewer’s «консультация на русском языке не проводится» matches the checker’s forbidden phrase ru-consult-lang even as a negation, so the closed list «Язык беседы — только английский, китайский (中文), японский или корейский» is used instead.
+
+Skipped:
+- ru-a 18 and ru-b 12. Space thousands («500 000», «1 579 589 TWD»). ACCEPTED-ROUND: the checker does not parse a space separator. Russian number style in this checker is dot (`500.000`). Amounts and currency order left as they were. 0 instances changed.
+- ru-a 23. Turning Q16–Q20 into headings would add headings and change the heading-level list. The U+200B blank lines match the Korean source count; removing them fails the block check. Left in place.
+- ru-a 40. Hangul in frontmatter `url` of 008 and 009. Canonical path, not rendered. Not edited.
+- ru-b 23. Merging the one-clause paragraphs in 015 (and the same layout in 013) would change the block count. The Korean/English source is split the same way. Rephrased nothing there except the quote-placement row (ru-b 24) and the contact-language row (ru-b 45).
+
+## Systemic patterns
+- Glued year digit («последний 1 год», «каждый полный 1 год», «за 1 год»): 6 instances, all rewritten with adjacent «один год». Other statutory «1 года» phrases (менее 1 года, в течение 1 года, около 1 года) left; they are not that pattern and the digit is required.
+- Dot thousands: 0 changed (see skip).
+- U+200B blog padding: 0 structural changes. Chatty lines inside existing blocks: 003 closing hope (1), 008 greeting and «Сегодня я хотела бы» (2), 013 «Надеемся…» (1). Total 4.
+- Korea-only bank practice stated as a universal rule (005): 2 sentences (internet transfer / relative, and the source-of-funds waiver).
+- Hangul slugs: 0 (skipped).
+- Labour outcome flavour: 3 (difficulty row, «разумеется» must pay, prepared party’s rights are protected).
+- Registered title calqued as a personal name (016 «по имени / совместном имени / сравнением имён / смена имени»; 017 過戶 ×2): 6.
+- 戶籍 as residence registration or «семейное состояние»: 7 (016 ×4, 017 ×3). Accounting «отнесение расходов» in 002 and 004 left; that is allocation, not 戶籍 and not vesting.
+- Vesting calqued as «отнесение»: 7 (момент, как относится, когда она ему относится, условий отнесения, поэтапное отнесение, условия отнесения ×2).
+- English office name in the Russian bios: 2 (intro and experience line for chang-rongxuan). Ukrainian experience line was not left in Russian; the accidental second match was reverted.
+- Kinmen joined with «и … или Мацзу»: 4 (glossed pair ×2, unglossed §2, criterion name).
+- Consultation-language lock on a contact line that did not name the four languages: 3 (013, 015, 018).
+
+R2–R10 already in the pack and columns were left where they already read correctly: Korea-treaty caveat in 001/004, emergency 119/110/112 in 003, feminine narration for Wei Tseng, «НАША КОМАНДА», «ОФИСЫ», «Полный профиль (на английском)». No new Hangul outside `url`. `[변호사 검수 필요]` remains 0. 006 had no wording row; its U+200B lines were not touched.
+
+## §Verify
+cd /Users/son7/Projects/tseng-law-fix-ru-r1 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+node scripts/check-column-translation.mjs --dir src/content/columns-ru --lang ru 2>&1 | tail -8
+```
+neighbour      PASS   
+hanzi          PASS   han=41
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ru src/data | wc -l
+```
+       0
+```
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+```
+TSC_OK
+```
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+git status --short | wc -l
+```
+      25
+```
+(This log file is written after that count.)
+
+## Reviewer got it wrong — not applied as suggested
+- ru-a 26. «инвесторы Тайваня или 3 государств» is Korean 제3국, and the English is “investors from Taiwan or a third country”, not three countries. «из трёх стран» would change the fact. Applied «из Тайваня или из третьей страны» instead.

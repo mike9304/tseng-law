@@ -13,9 +13,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Forsidebilde](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-I det siste har mange lykkes med å stifte et selskap (公司) i Taiwan og oppnådd et arbeidsvisum samt et oppholdskort for utlendinger (外僑居留證),
+I det siste har mange lykkes med å stifte et selskap (公司) i Taiwan og oppnådd et arbeidsvisum samt et oppholdskort for utlendinger (外僑居留證).
 
-og de spørsmålene som ofte stilles ved stiftelsen, er samlet nedenfor.
+De spørsmålene som ofte stilles ved stiftelsen, er samlet nedenfor.
 
 Den som har lest [**grunnlaget for selskapsstiftelsen**](/nb/columns/taiwan-company-establishment-basics), kan deretter også konsultere denne utførligere fordypningen.
 
@@ -25,9 +25,9 @@ Spørsmålene og svarene nedenfor er ment som hjelp for den som vurderer en sels
 
 **1. Jeg vil stifte et selskap, men har ennå ikke funnet en registreringsadresse. Er stiftelsen likevel mulig?**
 
-Når en utlending stifter et selskap i Taiwan, skal vedkommende inngi en investeringsplan (投資計畫書) til avdelingen for investeringsprøving under Ministeriet for økonomiske anliggender (經濟部投資審議司) til prøving.
+Når en utlending stifter et selskap i Taiwan, skal vedkommende inngi en investeringsplan (投資計畫書) til avdelingen for investeringsgjennomgang i Taiwans økonomidepartement (經濟部投資審議司) til prøving.
 
-Avdelingen for investeringsprøving skal undersøke om den gjeldende kapitalen (資本額) faktisk brukes til investeringsformål
+Avdelingen for investeringsgjennomgang skal undersøke at kapitalen (資本額) faktisk skal brukes til investeringsformålet
 
 og om utenlandske aktører ikke innfører midler under et annet påskudd.
 
@@ -49,7 +49,7 @@ Fordi prøvingen av investeringsplanen også tar tid,
 
 bør du utarbeide investeringsplanen og samtidig søke selskapets registreringsadresse.
 
-Ifølge artikkel 9 i forskriften om utenlandsk investering (外國人投資條例) skal det godkjente innskuddet ankomme fullt ut innen den fristen som den kompetente myndighet har fastsatt (核定期限); fristen skal bekreftes i godkjenningsakten i hver sak (i praksis fastsettes den ofte omkring 1 år).
+Ifølge artikkel 9 i loven om utenlandske statsborgeres investeringer (外國人投資條例) skal det godkjente innskuddet ankomme fullt ut innen den fristen som den kompetente myndigheten har fastsatt (核定期限); fristen skal bekreftes i godkjenningsakten i hver sak (i praksis fastsettes den ofte omkring 1 år).
 
 Innen denne fristen blir det, etter at selskapsadressen er funnet og leieavtalen er inngått,
 
@@ -61,25 +61,25 @@ tilstrekkelig tid til å åpne forberedelseskontoen i banken og overføre kapita
 
 Det er mulig.
 
-Banken krever som regel en dobbelt identitetskontroll,
+Banken krever som regel en dobbelt identitetskontroll.
 
-og uten oppholdskort kan du hos Taiwans immigrasjonsmyndighet søke om ‘**grunndataarket**(統一證號基本資料表)’.
+Uten oppholdskort kan du hos Taiwans immigrasjonsmyndighet søke om ‘**grunndataarket**(統一證號基本資料表)’.
 
 Utstedelsen er mulig samme dag,
 
-men immigrasjonsmyndigheten (移民署) er svært travelt besøkt; du bør derfor komme tidlig og trekke et nummer.
+men hos immigrasjonsmyndigheten (移民署) er det svært stor pågang; du bør derfor komme tidlig og trekke et nummer.
 
 ​
 
 **3. Jeg har hørt at det ved prøvingen av investeringsplanen (投資計畫書) skal oppgis utdanning og yrkeserfaring, og jeg frykter at min utdanning og erfaring ikke passer til bransjen for det selskapet som skal stiftes.**
 
-Prøvingskommisjonen under Ministeriet for økonomiske anliggender prøver riktignok investorens bakgrunn,
+Prøvingskommisjonen under Taiwans økonomidepartement prøver riktignok investorens bakgrunn,
 
 men prøvingen tar sikte på om planen er reell, ikke på at utdanningen skal treffe bransjen nøyaktig.
 
-Du kan oppgi ulike yrkeserfaringer, herunder bierverv,
+Du kan oppgi ulike yrkeserfaringer, herunder bierverv.
 
-og redegjøre så utførlig at de prøvende personene kan overbevises.
+Du kan redegjøre så utførlig at de prøvende personene kan overbevises.
 
 Om dette punktet bør du drøfte dette grundig med en advokat i Taiwan.
 
@@ -87,15 +87,15 @@ Om dette punktet bør du drøfte dette grundig med en advokat i Taiwan.
 
 **4. Hva skal det tas hensyn til når selskapets registreringsadresse (for eksempel et serveringslokale) leies?**
 
-Selskapsstiftelsen varer omkring **3 måneder**, oppnåelsen av arbeidstillatelsen (工作許可) og av oppholdskortet omkring **1 måned**,
+Selskapsstiftelsen varer omkring **3 måneder**, oppnåelsen av arbeidstillatelsen (工作許可) og av oppholdskortet omkring **1 måned**.
 
 derfor bør du legge avtalens ikrafttredelsesdato så sent som mulig.
 
-Dessuten gir utleieren i leieavtaler for butikklokaler i Taiwan ofte leieren en „**innredningsperiode**“ (裝潢期間).
+Dessuten gir utleieren i leieavtaler for butikklokaler i Taiwan ofte leieren en «**innredningsperiode**» (裝潢期間).
 
 Dette er en periode uten leie; det kan du forhandle om.
 
-For en utlending er det ikke enkelt å leie et butikklokale, og depositumet (押金) i Taiwan er snarere lavt (vanligvis 2 måneder), så utleierens beskyttelse er begrenset;
+For en utlending er det ikke enkelt å leie et butikklokale, og depositumet (押金) i Taiwan er snarere lavt (vanligvis 2 måneder), så utleierens beskyttelse er begrenset.
 
 utleiere nøler derfor med å leie ut til utlendinger.
 
@@ -103,7 +103,7 @@ Derfor anbefaler jeg å søke driftsadressen tidlig.
 
 Forløper forhandlingen med utleieren ikke gnidningsfritt,
 
-kan du om nødvendig foreslå en notarial bekreftelse av leieavtalen (公證) eller et supplerende depositum.
+kan du om nødvendig foreslå en notariell bekreftelse av leieavtalen (公證) eller et supplerende depositum.
 
 ​
 

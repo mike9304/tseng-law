@@ -1124,7 +1124,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ekteskap, familie og arv',
           paragraphs: [
-            'Vi behandler skilsmisse (離婚), deling av formue, foreldreansvar for mindreårige barn (未成年子女權利義務之行使或負擔), samvær (會面交往) og arv (繼承), også når parter eller formue befinner seg i ulike land. Grenseoverskridende familiesaker krever ofte en ekstra kontroll av folkeregistreringen (戶籍), av dokumentenes form og av bevisverdien de har i Taiwan.',
+            'Vi behandler skilsmisse (離婚), deling av formue, foreldreansvar for mindreårige barn (未成年子女權利義務之行使或負擔), samvær (會面交往) og arv (繼承), også når parter eller formue befinner seg i ulike land. Grenseoverskridende familiesaker krever ofte en ekstra kontroll av husholdningsregisteret (戶籍), av dokumentenes form og av bevisverdien de har i Taiwan.',
             'Fordi familiesaker ofte har frister og parallelle prosesser, bør det første sammendraget nevne forholdet mellom partene, hvor de bor nå, og hvilke prosesser som allerede pågår.',
           ],
         },
@@ -1150,7 +1150,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Omfang og dets bekreftelse',
+          heading: 'Omfanget og hvordan det bekreftes',
           paragraphs: [
             'Kontoret arbeider etter taiwansk rett og behandler saker på de fagområdene som er nevnt. Omfanget i den enkelte sak bekreftes særskilt etter at en advokat har vurdert meldingen din.',
             'Oppholdsstatus, arbeidstillatelse og lignende spørsmål vurderes ut fra dokumentene og den enkeltes situasjon, ikke ut fra statsborgerskap. Hvis en del av saken din berører slike spørsmål, nevn det når du tar kontakt. Denne siden lover verken et resultat eller en svartid.',
@@ -1184,7 +1184,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Når du kontakter oss',
           paragraphs: [
-            'Når sammendraget ditt er kommet inn, vurderer en advokat innholdet og tar deretter opp mulig arbeidsomfang, dokumenter som fortsatt trengs, og de neste trinnene. I skatte- og bokføringsspørsmål kan kontoret arbeide sammen med regnskapsavdelingen i én og samme prosess.',
+            'Når sammendraget ditt er kommet inn, vurderer en advokat innholdet og tar deretter opp mulig arbeidsomfang, dokumenter som fortsatt trengs, og de neste trinnene. I skatte- og bokføringsspørsmål kan kontoret arbeide sammen med regnskapsavdelingen i én og samme sak.',
             'Utfallet i den enkelte sak avhenger av fakta og av dokumentene som finnes; vi lover ikke noe resultat. Trenger du et bindende svar for din situasjon, må dokumentene drøftes med en advokat på et av de fire rådgivningsspråkene.',
           ],
         },
@@ -1203,7 +1203,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Forklaring av rekkefølgen: først arbeidsomfanget, deretter kostnadsbekreftelsen, og hvorfor denne siden ikke inneholder en prisliste.',
       intro:
-        'Denne siden forklarer hvordan kostnader fastsettes, ikke beløpet. Beløpet avhenger av arbeidsomfanget i den enkelte sak og er meningsfullt først når det omfanget er klart.',
+        'Denne siden forklarer hvordan kostnader fastsettes, ikke beløpet. Beløpet avhenger av arbeidsomfanget i den enkelte sak og gir først mening når omfanget er klart.',
       sections: [
         {
           heading: 'Først fastsettes arbeidsomfanget',
@@ -1251,13 +1251,13 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
           items: [
             'Sidens språk: Disse veiledningene er skrevet på norsk.',
             'Rådgivningsspråk: Rådgivningen foregår bare på engelsk, kinesisk (中文), japansk og koreansk.',
-            'Ditt skriftspråk: Du kan skrive sammendraget på ditt eget språk; originalteksten lagres uendret.',
+            'Språket du skriver på: Du kan skrive sammendraget på ditt eget språk; originalteksten lagres uendret.',
           ],
         },
         {
           heading: 'Hvis du ikke behersker noen av de fire rådgivningsspråkene',
           paragraphs: [
-            'I kontaktskjemaet kan du velge «Kommunikasjonsmåten må bekreftes». Vi svarer for å undersøke om det finnes en brukbar kommunikasjonsvei; rådgivning på et annet språk loves ikke, og vi lover ingen svartid.',
+            'I kontaktskjemaet kan du velge «Kommunikasjonsveien må bekreftes». Vi svarer for å undersøke om det finnes en brukbar kommunikasjonsvei; rådgivning på et annet språk loves ikke, og vi lover ingen svartid.',
             'Det er bare et forsøk, ikke et løfte. Vi lover ikke tolk, ikke bistand på norsk eller på andre språk enn de fire nevnte, og ikke at vi tar imot enhver sak.',
           ],
         },
@@ -1309,9 +1309,9 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
             'Nei. Disse veiledningene er skrevet på norsk, men rådgivningen med en advokat foregår bare på engelsk, kinesisk (中文), japansk og koreansk. Vi lover heller ikke tolk. Skriftlig oversettelse er noe annet: den opprinnelige teksten du skriver, lagres slik den er, og oversettes ikke automatisk.',
         },
         {
-          question: 'Hva hvis jeg ikke kan bruke noe av de fire språkene?',
+          question: 'Hva hvis jeg ikke kan bruke noen av de fire språkene?',
           answer:
-            'Velg «Kommunikasjonsmåten må bekreftes» når du sender inn. Vi svarer for å undersøke en mulig kommunikasjonsmåte, men rådgivning på et annet språk loves ikke. Det er et forsøk, ikke et løfte om at vi kan arbeide på et annet språk.',
+            'Velg «Kommunikasjonsveien må bekreftes» når du sender inn. Vi svarer for å undersøke en mulig kommunikasjonsvei, men rådgivning på et annet språk loves ikke. Det er et forsøk, ikke et løfte om at vi kan arbeide på et annet språk.',
         },
         {
           question: 'Hvordan behandles min norske tekst?',
@@ -1341,7 +1341,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Hva kontaktskjemaet i denne norske delen samler inn, hvordan originalteksten behandles, og hvordan du når oss om opplysningene dine.',
       intro:
-        'Denne delen gjelder bare kontaktskjemaet på disse veiledningssidene. Den beskriver hvordan opplysningene behandles, og er ikke et teknisk løfte.',
+        'Denne delen gjelder bare kontaktskjemaet på disse veiledningssidene. Den beskriver hvordan opplysningene behandles, og gir ingen teknisk sikkerhet.',
       sections: [
         {
           heading: 'Hvilke data som samles inn',
@@ -1397,7 +1397,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Lagringssted og leverandører',
           paragraphs: [
-            'Dette nettstedet driftes hos Vercel, og det du sender inn, lagres i et ikke-offentlig lager hos denne tjenesten. E-post sendes via e-posttjenesten kontoret bruker.',
+            'Dette nettstedet driftes hos Vercel, og det du sender inn, lagres i ikke-offentlig objektslagring hos denne tjenesten. E-post sendes via e-posttjenesten kontoret bruker.',
             'Enkelte leverandørers servere kan stå utenfor Taiwan, slik at opplysningene dine kan lagres og behandles der. Når formålet med lagringen er oppfylt, slettes opplysningene uten opphold; opplysninger som må oppbevares etter gjeldende regler, beholdes i den perioden. Henvendelser om personopplysninger tas imot på wei@hoveringlaw.com.tw.',
           ],
         },

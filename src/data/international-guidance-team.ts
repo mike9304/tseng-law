@@ -679,9 +679,9 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'Ledende advokat i Taiwan',
       'chang-rongxuan': 'Advokat i Taiwan',
-      'chang-fangyu': 'Paralegal',
+      'chang-fangyu': 'Juridisk assistent',
       'son-jungmin': 'Operativ ledelse, Korea',
-      'huang-shengping': 'Tilknyttet statsautorisert revisor',
+      'huang-shengping': 'Tilknyttet revisor (CPA)',
     },
   },
   fi: {
@@ -3011,35 +3011,35 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'Master (M.S.), Institute of Finance, National Taiwan University',
-        'Bachelor (B.A.) med to studieretninger, jus og finans, National Chengchi University',
+        'Bachelor (B.A.) med to fag, jus og finans, National Chengchi University',
         'Utvekslingsstudent ved Kobe University og Waseda University',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Rettshjelpfondet, avdelingen i Taichung (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Tidligere ved Ministry of Education, Legal Affairs Division, med vekt på forvaltnings- og sivilrettslige saker.',
+        'Tidligere ved utdanningsdepartementet, avdelingen for juridiske saker (Ministry of Education, Legal Affairs Division), med vekt på forvaltnings- og sivilrettslige saker.',
         'Erfaring med saker om universiteter, undervisningspersonalets rettigheter og forvaltningsrettslige klager.',
       ],
       education: ['Juridisk bachelor (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Utdanningsdepartementet, avdelingen for juridiske saker (Ministry of Education, Legal Affairs Division)',
         'Advokat, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal med lang erfaring som senior paralegal ved flere kontorer, med ansvar for prosesstøtte, selskapsrett og utenlandske investeringer.',
+        'Juridisk assistent med lang erfaring som senior juridisk assistent ved flere kontorer, med ansvar for prosesstøtte, selskapsrett og utenlandske investeringer.',
         'Bistand ved prosedyre, selskapsstiftelse, godkjenning av utenlandske investeringer, lisenssøknader og kontakten mellom Korea og Taiwan.',
       ],
       education: ['Juridisk bachelor (LL.B.), Tunghai University'],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Senior juridisk assistent, Boyin Law Firm',
+        'Senior juridisk assistent, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
@@ -3052,7 +3052,7 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'Har fullført bachelor- og masterprogrammer i regnskap ved National Chengchi University og leder nå et revisjonskontor.',
+        'Har avlagt bachelorgrad og mastergrad i regnskap ved National Chengchi University og leder nå et revisjonskontor.',
         'Bidrar til en samlet analyse av juridisk, skattemessig og finansiell risiko for virksomhetsklienter.',
       ],
       education: [

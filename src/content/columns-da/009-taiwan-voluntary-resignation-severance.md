@@ -35,7 +35,7 @@ I de følgende særlige situationer skal arbejdsgiveren udbetale fratrædelsesgo
 
 (for eksempel når arbejdsgiveren lover at sende arbejdstageren efter tiltrædelsen til en i virkeligheden ikke-eksisterende udenlandsk filial)
 
-2. Når arbejdsgiveren, familiemedlemmer af arbejdsgiveren eller repræsentanter af arbejdsgiveren (代理人) anvender vold over for arbejdstageren eller groft fornærmer vedkommende (重大侮辱)
+2. Når arbejdsgiveren, arbejdsgiverens familiemedlemmer eller arbejdsgiverens repræsentanter (代理人) anvender vold over for arbejdstageren eller groft fornærmer vedkommende (重大侮辱)
 
 3. Når det kontraktlige arbejde kan skade arbejdstagerens helbred, arbejdstageren har anmodet arbejdsgiveren om forbedring, og dette forbliver uden virkning
 
@@ -91,7 +91,7 @@ Derfor er i taiwanske arbejdskonflikter (勞資糾紛)
 
 **tidspunktet** meget vigtigt.
 
-I de fleste tilfælde beskyttes den side, der har forberedt sig på forhånd.
+Den, der forbereder sig i forvejen, står i de fleste tilfælde stærkere til at varetage sine rettigheder.
 
 ---
 

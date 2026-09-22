@@ -41,7 +41,7 @@ Artikel 284 i straffeloven (刑法) regulerer uagtsom legemsbeskadigelse (過失
 
 Civilretlig erstatning (損害賠償) kan ifølge artikel 197 i civilloven (民法) ikke længere kræves, når 2 år fra kendskabet til skaden og den erstatningspligtige eller 10 år fra den retsstridige handling er forløbet. Hvilke kendsgerninger der påvirker forældelsen (消滅時效), skal undersøges særskilt.
 
-Den, der har lidt skade ved en strafbar handling, kan ifølge artikel 487 i strafferetsplejeloven anlægge et civilt bi-søgsmål tilknyttet straffesagen (刑事附帶民事訴訟). Så længe straffesagen verserer, kan det ifølge artikel 488 anlægges indtil før afslutningen af den mundtlige forhandling (言詞辯論終結) i 2. instans, men ikke efter afslutningen af den mundtlige forhandling i 1. instans og før iværksættelse af anke. Sædvanligvis kan en særskilt betaling af retsafgift (裁判費) undgås; ikke ethvert resultat ender uden omkostninger. Afvises for eksempel straffesagen og henvises den på sagsøgerens begæring til den civile ret, kan der ifølge artikel 503 i strafferetsplejeloven opstå sagsomkostninger; også henvisnings- og procedurebestemmelserne i artikel 504 skal eftergås.
+Den, der har lidt skade ved en strafbar handling, kan ifølge artikel 487 i strafferetsplejeloven anlægge et civilt krav i tilknytning til straffesagen (刑事附帶民事訴訟). Så længe straffesagen verserer, kan det ifølge artikel 488 anlægges indtil før afslutningen af den mundtlige forhandling (言詞辯論終結) i 2. instans, men ikke efter afslutningen af den mundtlige forhandling i 1. instans og før iværksættelse af anke. Sædvanligvis kan en særskilt betaling af retsafgift (裁判費) undgås; ikke ethvert resultat ender uden omkostninger. Afvises for eksempel straffesagen og henvises den på sagsøgerens begæring til den civile ret, kan der ifølge artikel 503 i strafferetsplejeloven opstå sagsomkostninger; også henvisnings- og procedurebestemmelserne i artikel 504 skal eftergås.
 
 Valget afviger efter afbrydelse af forældelsen (時效中斷), kredsen af sagsøgte, beviser, forsikring og kompetence. Derfor findes der ingen ensartet bedste procedure for alle sager.
 
@@ -101,7 +101,7 @@ Krav ifølge artikel 184 i civilloven (民法) forudsætter retsstridig krænkel
 
 Opbevar kvitteringer (收據), attester og lægejournaler, og ordn den medicinske nødvendighed af hver behandling og årsagssammenhængen med ulykken sammen. Fortsatte behandlingsdokumenter kan supplere beviser efter rettens procedurekalender og det allerede nedlagte krav; ikke alle sent indgivne dokumenter eller udvidede krav antages eller tillades.
 
-Tilføjelse af medicinske dokumenter og ændring eller forhøjelse af kravbeløbet skal skelnes. Efter anlæg af et civilt bi-søgsmål tilknyttet straffesagen opstår retsafgift ikke automatisk alene fordi yderligere behandlingskvitteringer indgives.
+Tilføjelse af medicinske dokumenter og ændring eller forhøjelse af kravbeløbet skal skelnes. Efter anlæg af et civilt krav i tilknytning til straffesagen opstår retsafgift ikke automatisk alene fordi yderligere behandlingskvitteringer indgives.
 
 Ifølge artikel 504 i strafferetsplejeloven kan der dog, efter at sagen er henvist til den civile afdeling, ved ændring, tilføjelse eller udvidelse af kravet ud over omfanget før henvisningen opstå omkostningsspørgsmål for den overskydende del. Henvisningsfase, indgivelsestidspunkt og kravets omfang skal undersøges fra sag til sag.
 
@@ -175,7 +175,7 @@ Forsikringspligten ifølge artikel 6 i loven om obligatorisk ansvarsforsikring f
 
 Ved eneulykker med 1 køretøj er dets fører som regel ikke ydelsesmodtager af den obligatoriske forsikring for det køretøj. Ved ulykker med flere køretøjer kan føreren dog kræve ydelser hos den obligatoriske forsikringsgiver for et andet involveret køretøj.
 
-Ydelsesnormen (強制汽車責任保險給付標準), der blev ændret 2026-05-29, gælder for ulykker fra den 1. juli 2026. Loftet for nødvendige passende behandlingsudgifter ved tilskadekomst udgør TWD 200.000, invaliditetsydelser (失能) efter de lovbestemte 15 trin TWD 80.000–3.000.000, dødsfaldsydelsen TWD 3.000.000, og maksimum af dødsfald, invaliditet og behandlingsudgifter pr. 1 tilskadekommen person og 1 ulykke udgør TWD 3.200.000. For tidligere ulykker kan den tidligere norm gælde.
+Ydelsesnormen (強制汽車責任保險給付標準), der blev ændret den 29. maj 2026, gælder for ulykker fra den 1. juli 2026. Loftet for nødvendige passende behandlingsudgifter ved tilskadekomst udgør TWD 200.000, invaliditetsydelser (失能) efter de lovbestemte 15 trin TWD 80.000–3.000.000, dødsfaldsydelsen TWD 3.000.000, og maksimum af dødsfald, invaliditet og behandlingsudgifter pr. tilskadekommen person og pr. ulykke udgør TWD 3.200.000. For tidligere ulykker kan den tidligere norm gælde.
 
 Ansvarsforsikring over for tredjemand (第三人責任險), førerens ulykkesforsikring (駕駛人傷害險) og kaskoforsikring (車體損失險) er kontraktlige valgprodukter. Den faktiske dækning afviger efter forsikret, loft, selvrisiko (自負額), undtagelse, uagtsomhed og øvrige vilkår i policen; forsikringsbevis og vilkår skal undersøges et for et.
 
@@ -239,7 +239,7 @@ Ved uagtsom legemsbeskadigelse (過失傷害) er der i nogle afgørelser idømt 
 
 ​
 
-Ved omregning til bøde fastsætter artikel 41 stk. 1 i straffeloven (刑法) omregningen af TWD 1.000, TWD 2.000 eller TWD 3.000 (新臺幣) pr. 1 dag; beregner man på grundlag af TWD 1.000 pr. dag, giver en straf på 3 måneder 3 × 30 × 1.000 = TWD 90.000.
+Ved omregning til bøde fastsætter artikel 41 stk. 1 i straffeloven (刑法) omregningen af TWD 1.000, TWD 2.000 eller TWD 3.000 (新臺幣) pr. dag; beregner man på grundlag af TWD 1.000 pr. dag, giver en straf på 3 måneder 3 × 30 × 1.000 = TWD 90.000.
 
 ​
 
@@ -267,7 +267,7 @@ Uagtsomt forvoldt død tillader ikke frafald af klagen; indgår man dog forlig m
 
 ​
 
-I nogle sager kan der idømmes betinget strafudsættelse (緩刑), så frihedsstraffen ikke skal udstås; det er ikke et løfte om et bestemt udfald.
+I nogle sager kan der idømmes en betinget dom (緩刑), så frihedsstraffen ikke skal udstås; det er ikke et løfte om et bestemt udfald.
 
 ​
 
@@ -323,7 +323,7 @@ Forsigtighed er påkrævet over for advokater, der oppuster sagen, fraråder for
 
 ​
 
-Hermed afslutter jeg spørgsmålene og svarene om trafikulykker. Jeg håber, at de er til hjælp.
+Hermed er spørgsmålene og svarene om trafikulykker afsluttet.
 
 ​
 

@@ -71,7 +71,7 @@ Visse banker kan stille yderligere krav, for eksempel en brugstid for kontoen p�
 
 A. Første medarbejder: anmodningen indgives som ledende arbejde i en almindelig virksomhed med investering fra oversøiske kinesere eller udlændinge (一般僑外投資事業主管工作). Målestokken for «specialiseret eller teknisk arbejde» under punkt B nedenfor finder ikke anvendelse, men adressatvilkårene gør, herunder vilkåret som leder (經理人) af et selskab, hvis indskud fra oversøiske kinesere eller udlændinge overstiger 1/3, samt arbejdsgiverens resultatvilkår vedrørende kapital og omsætning (bedømmelsesstandarder art. 38 og art. 39).
 
-B. Fra den næste medarbejder gælder der begrænsninger: overstiger antallet af ansatte medarbejdere 1 person, behandles medarbejderens relevante uddannelse og erfaring, reglerne om den gennemsnitlige ansættelsesløn samt reglerne om selskabets kapital og omsætning i overensstemmelse med «specialiseret eller teknisk arbejde» (專門性或技術性工作).
+B. Fra den næste medarbejder gælder der begrænsninger: ansættes mere end 1 udenlandsk statsborger, behandles medarbejderens relevante uddannelse og erfaring, kravet til gennemsnitsløn samt selskabets kapital og omsætning efter reglerne for «specialiseret eller teknisk arbejde» (專門性或技術性工作).
 
 Se webstedet for Taiwans arbejdsministerium (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

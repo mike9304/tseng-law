@@ -1,0 +1,101 @@
+WO-F-da r1 — Grok 4.7 fix lane — 2026-09-22
+Workspace: /Users/son7/Projects/tseng-law-fix-da-r1
+No git add/commit/push.
+
+## Rows applied
+
+da-a (57 rows): 1–29, 31–38, 40–52, 54–56 applied.
+da-a 8 applied with different wording (see disagreements): anprisning + garanteret synlighed.
+da-a 53 applied as a rephrase of the row header («Vanskelighed ved fremgangsmåden»); the row was not deleted.
+da-b (79 rows): 1–79 applied.
+da-b 25: body «Beløbet for moralsk lidelse» → «Godtgørelsen for tort». Heading «Ikke-formueretligt tab (非財產上損害)» left (see disagreements).
+da-b 52: signature sentence plus three evidence-calques in the same file («med bilag kunne forbinde», «med bilag forklare», «også bilag til at vurdere», «objektive bilag»). grundbilag / betalingsbilag / bilagene for uddannelsesomkostningerne left.
+006: no P1/P2 row. Unchanged.
+Inquiry `da` already said «Kommunikationsvejen skal bekræftes» (da-a 26). No edit.
+Test pin updated, expected string only: src/data/__tests__/guidance-disclosure-parity.test.ts da /rådgivningsskridtet/ → /selve rådgivningen/.
+
+## Rows skipped
+
+- da-a 30. «TWD 1.57M» left byte-identical. ACCEPTED-ROUND pinned bio figure. The Danish parenthesis «(1,57 mio. TWD)» was already there.
+- da-a 39. Q16–Q20 were not promoted to ## headings, and U+200B padding in 003, 005, 006, 008, 009 was not removed. The column checker requires heading levels, block counts and ZWSP counts to match the Korean source. Rephrasing inside existing blocks only.
+- da-a 53 deletion. «Stryg rækken» would drop a table row. Header rephrased instead so Enkel/Vanskelig/Enkel is the difficulty of the procedure.
+- da-a 57. Hangul slugs in 008 and 009 `url` left. Live paths; Hangul is allowed only in `url`.
+
+## Checker-forced number forms
+
+Idiomatic wording was tried first. These failed `numbers` (missing digit 1) and were put back in a form the Danish lexicon or a digit accepts. Extra digits only warn; these were the FAILs.
+
+- 001 «det seneste år» (da-a 46) → «det seneste et år» (2). «et år» parses as 1.
+- 005 «mere end én udenlandsk statsborger» (da-a 4) → «mere end 1 udenlandsk statsborger». «én» does not parse.
+- 008 «hvert fuldført år» → «hvert fuldført et år» (2); «pr. år» → «pr. et år» (2). da-a 46.
+- 018 «1 stemme pr. deltager» (da-b 79) → «1 stemme pr. 1 deltager». Korean has both ones (주주 1인 1표).
+
+These glued-1 rewrites passed without restoring a digit: 003 «pr. dag», «pr. tilskadekommen person og pr. ulykke»; 010 «op til det faktiske tabs beløb»; 011 «én bestemt tidsramme»; 012 «én udeladelse».
+
+Sentences that lost a misplaced gloss then tripped the English-stopword check (latin-only + for/at) were rephrased inside the same block: 011 copies sentence, 014 signature sentence, 016 closing disclaimer, 018 opening requirements and the hypothetical scenarios. 018 work-permit sentence kept «ministeriet for arbejde» and gained the correct gloss (工作許可).
+
+## Systemic patterns (instances changed)
+
+- Glued 1 in a time or count phrase: 001 «det seneste et år» 2, «ét af følgende» 4; 002 suspension «1 gang» removed 2 (kept «et år»); 003 «pr. dag» 1 and «pr. tilskadekommen … pr. ulykke» 1; 008 «hvert fuldført et år» 2, «pr. et år» 2, «ét af følgende» 2, «På én dag» 1; 010 negligence «1 gang» 1; 011 «én bestemt tidsramme» 1; 012 «én udeladelse» 1. Headlight «blinke … 1 gang» in 012 left (that 1 is the rule).
+- 戶籍/戶政 is not the Danish folkeregister: guidance 1; 007 20; 016 5; 017 3. → husstandsregister / husstandsregistrering / husstandsregistreringsmyndighed / loven om husstandsregistrering. opholdsret (EU) → opholdsstatus in 001 (FAQ, §4 headings, body, familiens). opholdskort / varigt ophold left.
+- 條例 called bekendtgørelse: 004 «loven om industriel innovation» 5; 008 «loven om arbejdstageres pension» 2. 公司登記辦法 stays bekendtgørelse. TFDA 公告 labels and the 016 creditor notice stay bekendtgørelse.
+- 緩刑: 003 «en betinget dom» 1; 008 «en betinget dom» 1. Not strafudsættelse / betinget udsættelse.
+- Personal voice, ZWSP kept: 003 closing 1; 008 five «jeg» sentences (byline, article open, table, anecdote, «min part») plus «naturligvis» → «når lovens betingelser er opfyldt». 013 first person left (part b: acceptable).
+- English office name in the Danish bios: 2 (intro + experience), «undervisningsministeriet i Taiwan».
+- 主體 calque (not retssubjekt): 011 ansvarssubjekt / importsubjekt / «det subjekt, der» 9; 004 børsnoteringssubjekt, hæftelsessubjekt, ansøgningssubjekt, «Til hvilket subjekt» 8; 017 subjekt-indehaver 3; 018 «et subjekt, der kan sælge» 1. retssubjekt, retssubjektivitet and skattepligtsubjekt left.
+- Frist used for a duration: 011 «den tid, der er nødvendig» 3 and «én bestemt tidsramme» 1. Real deadlines left.
+- Wrong Traditional Chinese gloss removed, gloss kept on the right word: 010 (損害賠償 on rådgivning, 民法 on kendsgerninger); 011 (化粧品, 契約); 014 closing (最低服務年限約定); 016 (被繼承人 on gæld, 遺產稅 on kopierne, 民法 on bo eller familie); 018 (子公司) off installation staff, «eller andet», and «retmæssig eller bedre». (子公司) kept on datterselskab. 遺產稅 kept on arveafgiften. 民法 kept on civilloven.
+- 營業項目 as «gren» in 015: «forretningsområder» on the count, the official-list name (3, including alt and caption), «når grenen står», «en gren ikke står», «tilføjelse af forretningsgrene». 001/013 «forretningsgren» left (already a business-item compound, not «branch»).
+- konventionalbod 8 in 014. arveuværdighed 3 in 016. ophæve→opsige for resignation-with-notice 3 in 014.
+
+## §Verify
+
+node scripts/check-column-translation.mjs --dir src/content/columns-da --lang da 2>&1 | tail -8
+
+```
+neighbour      PASS   
+hanzi          PASS   han=114
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-da src/data | wc -l
+
+```
+       0
+```
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+
+```
+TSC_OK
+```
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+git status --short | wc -l
+
+```
+      25
+```
+
+That count is the snapshot before this log file existed. After this file was written, `git status --short | wc -l` is 26.
+
+## Reviewer disagreements (not applied)
+
+- da-a 8. English discovery notice is «does not promise search ranking, endorsement, recommendation, or guaranteed visibility.» «Visning» and a doubled «anbefaling» do not match. Applied «anprisning» and «garanteret synlighed».
+- da-b 25 heading. «Ikke-formueretligt tab (非財產上損害)» is the Danish term for non-pecuniary loss. Only the body «moralsk lidelse» was wrong.
+- da-a 39 and the ZWSP sweep. Promoting Q16–Q20 and deleting the padding would fail heading, block and ZWSP parity with Korean. Personal-voice sentences inside those blocks were still rewritten.
+- da-a 53. Deleting the difficulty row would drop a table row. The header now says what Enkel/Vanskelig/Enkel measures.
+- da-a 30 and da-a 57. Pinned figure and live Hangul urls, per ACCEPTED-ROUND.
+- retssubjekt / retssubjektivitet are Danish for legal personality. The subjekt sweep was the 主體 calque only.
+- A global replacement of «bilag» would break grundbilag and betalingsbilag, which are exhibits. Only the signature sentence and the evidence calques in the flagged paragraphs were changed.

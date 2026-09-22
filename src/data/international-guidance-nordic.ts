@@ -578,7 +578,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Hvad vi gør',
           paragraphs: [
             'Hovering International Law Firm er et advokatkontor i Taiwan. Kontoret arbejder efter taiwansk ret og har kontorer i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Vi rådgiver virksomheder, fører sager for retten og bistår klienter fra udlandet gennem de skridt, der kræves i Taiwan.',
-            'Hele indholdet her er almindeligt. Udfaldet af en sag afhænger af fakta, de gældende regler og tidspunktet. Disse vejledninger erstatter ikke samtalen med en advokat om dine dokumenter.',
+            'Her står kun almindelige oplysninger. Udfaldet af en sag afhænger af fakta, de gældende regler og tidspunktet. Disse vejledninger erstatter ikke samtalen med en advokat om dine dokumenter.',
           ],
         },
         {
@@ -622,7 +622,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Investering og selskabsstiftelse i Taiwan',
           paragraphs: [
-            'Vi bistår udenlandske investorer og virksomheder ved stiftelse eller drift af et selskab i Taiwan: valg af selskabsform, forberedelse og indgivelse af dokumenter, kapitalindskud, bankforhold, kontrol af lokalet samt branchekrav. Vi bistår også med bogføring og skat, der følger af stiftelse og drift i Taiwan.',
+            'Vi bistår udenlandske investorer og virksomheder ved stiftelse eller drift af et selskab i Taiwan: valg af selskabsform, forberedelse og indgivelse af dokumenter, kapitalindskud, bankforhold, gennemgang af forretningsstedet samt branchekrav. Vi bistår også med bogføring og skat, der følger af stiftelse og drift i Taiwan.',
             'Forløb og tid adskiller sig efter form, investor, branche, bank og allerede tilgængelige dokumenter. En selskabsstiftelse fører ikke af sig selv til opholdstilladelse (居留) eller arbejdstilladelse (工作許可): det er særskilte forløb, der vurderes efter personens situation.',
           ],
         },
@@ -636,14 +636,14 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ægteskab, familie og arv',
           paragraphs: [
-            'Vi behandler skilsmisse (離婚), bodeling, forældremyndighed og forældreansvar for mindreårige børn (未成年子女權利義務之行使或負擔), samvær (會面交往) og arv (繼承), også når parter eller formue findes i forskellige stater. Grænseoverskridende familiesager kræver ofte yderligere kontrol af folkeregistrering (戶籍), dokumenternes form og deres bevisværdi i Taiwan.',
+            'Vi behandler skilsmisse (離婚), bodeling, forældremyndighed og forældreansvar for mindreårige børn (未成年子女權利義務之行使或負擔), samvær (會面交往) og arv (繼承), også når parter eller formue findes i forskellige stater. Grænseoverskridende familiesager kræver ofte yderligere kontrol af husstandsregistreringen (戶籍), dokumenternes form og deres bevisværdi i Taiwan.',
             'Fordi familiesager ofte medfører frister og parallelle forløb, bør det første resumé nævne parternes forhold, den aktuelle bopæl og allerede igangværende forløb.',
           ],
         },
         {
           heading: 'Arbejdsretlige tvister',
           paragraphs: [
-            'Dette område omfatter ophør af ansættelse, fratrædelsesgodtgørelse efter taiwansk ret (資遣費; det er ikke det samme som fratrædelsesgodtgørelse eller andre ordninger i andre lande), løn og tvister om ansættelseskontrakten (勞動契約), både på arbejdstager- og arbejdsgiverside. Ved gennemgangen adskiller vi ophørsgrunden fra spørgsmål om varsel, betaling og frister.',
+            'Dette område omfatter ophør af ansættelse, godtgørelse ved afskedigelse efter taiwansk ret (資遣費; ikke det samme som fratrædelsesgodtgørelse eller lignende ordninger efter andre landes ret), løn og tvister om ansættelseskontrakten (勞動契約), både på arbejdstager- og arbejdsgiverside. Ved gennemgangen adskiller vi ophørsgrunden fra spørgsmål om varsel, betaling og frister.',
             'Ansættelseskontrakt, arbejdsreglement (工作規則), lønsedler og parternes korrespondance er oftest de afgørende dokumenter. Hvis du stadig har dem, nævn det i resuméet.',
           ],
         },
@@ -651,7 +651,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Strafferetlige sager',
           paragraphs: [
             'Vi bistår sigtede, tiltalte og forurettede under efterforskningen og i retten og vurderer strafferetlige risici ved erhvervsvirksomhed.',
-            'Strafferetlige sager har ofte korte frister og fastlagte trin. Hvis du allerede har fået en skrivelse fra anklagemyndighed eller ret, nævn datoen på skrivelsen tidligt, så indholdet prøves i den rigtige rækkefølge.',
+            'Strafferetlige sager har ofte korte frister og fastlagte trin. Hvis du allerede har fået en skrivelse fra anklagemyndighed eller ret, nævn datoen på skrivelsen tidligt, så indholdet kan gennemgås i den rigtige rækkefølge.',
           ],
         },
         {
@@ -769,7 +769,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Hvis du ikke kan bruge noget af de fire rådgivningssprog',
           paragraphs: [
-            'I kontaktformularen kan du vælge »Kommunikationsmåden skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsvej; rådgivning på et andet sprog loves ikke, og der loves ingen svartid.',
+            'I kontaktformularen kan du vælge »Kommunikationsvejen skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsvej; rådgivning på et andet sprog loves ikke, og der loves ingen svartid.',
             'Det er kun en afklaring, ikke et løfte. Vi lover ikke en tolk, ikke rådgivning på dansk eller på et andet sprog end de fire nævnte, og ikke at vi tager imod enhver sag.',
           ],
         },
@@ -777,7 +777,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Hvad der bør stå i den første meddelelse',
           paragraphs: [
             'Angiv, hvad der er sket, hvilken hjælp du har brug for, hvilket forhold sagen har til Taiwan, og fristen, hvis du kender en. Hvis du allerede har fået en skrivelse fra en ret eller en myndighed, nævn datoen på skrivelsen.',
-            'I begyndelsen behøver du endnu ikke sende pasnummer, identitetsnummer, kontooplysninger, journaler eller hele beviset. Vent på anvisninger fra advokaten og send da følsomme dokumenter ad en sikker vej.',
+            'I begyndelsen behøver du endnu ikke sende pasnummer, identitetsnummer, kontooplysninger, patientjournaler eller hele bevismaterialet. Vent på anvisninger fra advokaten og send da følsomme dokumenter ad en sikker vej.',
           ],
         },
         {
@@ -823,7 +823,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Hvad hvis jeg ikke kan bruge noget af de fire sprog?',
           answer:
-            'Vælg ved afsendelsen »Kommunikationsmåden skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsmåde, men rådgivning på et andet sprog loves ikke. Det er kun en afklaring, ikke et løfte om, at vi kan arbejde på et andet sprog.',
+            'Vælg ved afsendelsen »Kommunikationsvejen skal bekræftes«. Vi vender tilbage for at undersøge, om der findes en brugbar kommunikationsvej, men rådgivning på et andet sprog loves ikke. Det er kun en afklaring, ikke et løfte om, at vi kan arbejde på et andet sprog.',
         },
         {
           question: 'Hvordan behandles min danske tekst?',
@@ -969,7 +969,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Hvor linksene fører hen',
+          heading: 'Hvor linkene fører hen',
           paragraphs: [
             'Når du vælger et af de fire links, åbnes artikellisten for det sprog. Ud af listen vælger du selv teksten; hele indholdet vises på artiklens originalsprog.',
             'Denne side sammenfatter ikke artiklernes indhold og lover ikke, at et emne findes på alle fire sprog. Hver liste indeholder kun tekster, der er offentliggjort på det sprog.',
@@ -979,7 +979,7 @@ export const danishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Hvor langt en artikel kan tjene som orientering',
           paragraphs: [
             'Artikler er almindelige oplysninger på tidspunktet for offentliggørelsen. Regler og deres anvendelse kan ændre sig, og en artikel indeholder ikke alle omstændigheder i din sag.',
-            'Byg derfor ikke en beslutning i en virkelig sag alene på en artikel. Brug den til overblik og drøft dine dokumenter særskilt med en advokat; denne side er ikke rådgivningsskridtet.',
+            'Byg derfor ikke en beslutning i en virkelig sag alene på en artikel. Brug den til overblik og drøft dine dokumenter særskilt med en advokat; denne side er ikke selve rådgivningen.',
           ],
         },
       ],

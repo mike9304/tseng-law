@@ -3897,7 +3897,7 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'បរិញ្ញាបត្រជាន់ខ្ពស់ (M.S.) វិទ្យាស្ថានហិរញ្ញវត្ថុ សាកលវិទ្យាល័យជាតិតៃវ៉ាន់ (Institute of Finance, National Taiwan University)',
-        'បរិញ្ញាបត្រ (B.A.) ពីរសាខា ច្បាប់ និងហិរញ្ញវត្ថុ, National Chengchi University',
+        'បរិញ្ញាបត្រ (B.A.) ពីរជំនាញ ច្បាប់ និងហិរញ្ញវត្ថុ, National Chengchi University',
         'និស្សិតស្រីផ្លាស់ប្ដូរ នៅ Kobe University និង Waseda University',
       ],
       experience: [

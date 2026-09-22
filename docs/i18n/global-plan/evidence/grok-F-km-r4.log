@@ -1,0 +1,96 @@
+WO-F-km r4 — Grok 4.7 fix lane — 2026-09-23
+
+## Rows applied
+
+km-a
+1  P1  guidance labour paragraph. តាមច្បាប់ប្រទេសផ្សេង now covers both other countries’ severance and dismissal-protection rules. The head noun ប្រាក់ឈប់ការងារតាមច្បាប់តៃវ៉ាន់ (資遣費) was already there and was not repeated.
+2  P1  002 creditor. See systemic count.
+3  P1  003 criminal liability requires proof of each person’s breach of the duty of care (កាតព្វកិច្ចប្រុងប្រយ័ត្ន). The causal clause already in the sentence was kept.
+5  P1  007 cross-border registration. See systemic count.
+7  P2  nav.pricing and the home “where to start” sentence: «វិសាលភាព និងថ្លៃ». JS length 16. No km nav test caps labels at 14 (those tests cover other locales only). The pricing eyebrow «វិសាលភាពនិងថ្លៃ» was already the fuller form and was left.
+8  P2  guidance about. «ចម្លើយដែលមានលក្ខណៈចង». The result-disclaimer sentence and «៤ ភាសានៃការពិគ្រោះយោបល់» were kept, so the disclosure regexes still match.
+9  P2  privacy notice. The sentence now says the firm’s receipt of the notice is not yet confirmed. llms confidentialNotice is a different privacy sentence and was left.
+10 P2  bio education. «ពីរជំនាញ», not two company branches. «TWD 1.57M» in the same bio was not touched.
+11 P2  001 investee. «សហគ្រាសដែលទទួលវិនិយោគ».
+12 P2  head office bears the branch’s debts. See systemic count.
+13 P2  002 «សេចក្ដីណែនាំដែលហួសសម័យ».
+14 P2  004 «ការិយាល័យក្នុងតំបន់», so the contrast with សាខា remains.
+15 P2  005 remittance. A relative or an acquaintance in Korea. Korea stays labelled as that question’s example.
+
+km-b
+1  P1  016 economic interest that conflicts with the child’s. Other ផ្ទុយគ្នា sentences in 016 already said conflict and were left.
+2  P1  013 commercial-office registration «អាចធ្វើមិនបាន».
+3  P1  014 FAQ. Disclosure is a duty («ត្រូវជូនដំណឹង … ជាមុន»). The body already used ត្រូវ and was left.
+4  P1  012 «ស្ពានចង្អៀត».
+5  P1  013 opening. People have already formed companies and obtained work visas and ARC; the next sentence still says those permits do not arise automatically.
+7  P2  010 «ត្រឹមហេតុថាមានរបួស … ទំនួលខុសត្រូវត្រូវបានកំណត់ភ្លាមៗ».
+8  P2  014 training costs. «ព្រោះការបណ្ដុះបណ្ដាលទាំងនេះមកជាមួយ…», not a stated aim.
+9  P2  018 table. យ៉ាងដូចម្ដេច now closes product supply, services, technology licensing, and cost sharing. The (母公司) gloss was kept.
+10 P2  018 operating body. «អង្គភាពដែលអាចលក់ … ជួលបុគ្គលិក ផ្ដល់ការគាំទ្របច្ចេកទេស».
+11 P2  018 «បើមុនពេលរៀបចំអង្គភាពលក់».
+12 P2  018 «នឹងបង្កើតវត្តមានបែបណានៅតៃវ៉ាន់».
+13 P2  018 heading now says only a subsidiary needs Investment Commission approval. The Traditional gloss (經濟部投資審議司) was kept. The following paragraph already said the same rule and was left.
+
+Applied 25 (km-a 13, km-b 12). No test expected-string changed. llms.txt km notices were left: the rewritten privacy sentence is not the pinned confidentialNotice, and consultationNotice was not rewritten.
+
+## Rows skipped
+
+km-a #4  004 link label trailing “(10)”. The suggested rewrite drops the digit. The Korean source link is “영업세법 제10조”; checkNumbers FAILs a missing 10. The operative cite is already មាត្រា 3, the gloss (各類所得扣繳率標準) is already there, and the URL (`flno=3`) was not touched. The suggested label is otherwise the current text.
+km-a #6  “TWD 1.57M”. ACCEPTED-ROUND / GUIDANCE_BIO_PRESERVED_TERMS pins that figure byte-identical. Left as published.
+km-b #6  U+200B in 013 and 015 (and the same spacers in 003, 005, 006, 008, 009). 87 characters, 0 removed. checkBlocks requires the same ZWSP count as src/content/columns (Korean). Deleting them FAILs blocks. Counts match: 003 52, 005 8, 006 4, 008 10, 009 5, 013 5, 015 3.
+
+## Systemic patterns
+
+- Creditor word អ្នកមានបំណុល where the gloss or the English is the creditor: 5, all in 002 (the 債權人保護程序 line, two ការការពារ phrases, the liquidator’s duty to protect creditors, and the capital-reduction protection phrase). Existing ម្ចាស់បំណុល lines were already correct and were left. No hit in the pack or the other 17 columns.
+- Cross-border “registration” rendered as ការប្រកាស: 3, all in 007 (FAQ answer, the repeated body paragraph, and the five-question list “ការចុះបញ្ជី ការទទួលស្គាល់ ឬការប្រតិបត្ដិ”). Other ការប្រកាស are public notices or creditor announcements (002, 016) and were left.
+- “To bear a debt” as អ្នកទទួលបំណុល / អ្នកណាទទួលបំណុល: 2 (001 head office; 004 “who bears the debts”). No other hit.
+- 資遣費 “នៃប្រទេសផ្សេង” attached only to the second limb: 1, the guidance labour paragraph.
+- Bio “TWD 1.57M”: 0 changed (see skipped).
+- 013 absolute ban where English says registration may not be possible: 1, the commercial-office sentence. No second hit.
+- 016 “នឹងកូន” without ផ្ទុយ: 1. Other economic-conflict sentences already use ផ្ទុយគ្នា.
+- 018 bare-verb stacks and noun piles named in the verdict: 5 (rows 9–13). The closing “បើមានផែនការលក់ គ្រប់គ្រងស្ដុក …” is a plan under មានផែនការ, not an “entity that can”, and was left.
+- Zero-width spacers: 0 changed, 87 left (see skipped).
+- R2–R10 and R12–R17 were already in the pack and the 18 columns (feminine នាងខ្ញុំ / លោកស្រី / មេធាវីស្ដ្រី, លោកអ្នក, consultation lock, no sister-language paragraphs). No further instance outside the rows above.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-km --lang km 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=178
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+```
+grep -rn "\[변호사 검수 필요\]" src/content/columns-km src/data | wc -l
+       0
+```
+
+```
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+```
+
+```
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+```
+git status --short | wc -l
+      18
+```
+
+The 18 lines are the 12 edited columns, the two guidance files, the pre-existing `WO-F-km.txt` modification, the pre-existing untracked `reviews/native/rounds/r4/km-a.md` and `km-b.md`, and this log. No test file is in the diff.
+
+## Reviewer got wrong (not applied)
+
+- Removing “(10)” from the 004 link label would fail `checkNumbers`. The digit is the Korean link label 영업세법 제10조, not a free editorial choice. The public label already names មាត្រា 3 and the withholding-rate gloss. km-a #4.
+- Rewriting “TWD 1.57M” in the bio would fail the preserved-term test. km-a #6.
+- Deleting the U+200B lines would fail `checkBlocks`. The Korean source has the same spacers; they are not Khmer wording. km-b #6.

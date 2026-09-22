@@ -1,0 +1,97 @@
+WO-F-ne r4 — Grok 4.7 fix lane
+date: 2026-09-23
+workspace: /Users/son7/Projects/tseng-law-fix-ne-r4
+
+## Rows applied (27)
+
+Part a
+- A2 P1 channel exists vs whether it exists. Two strings: international-guidance-southeast-central.ts contact paragraph, and international-inquiry-copy.ts ne.methodConfirmationNotice. Both now say the firm replies in order to check whether a workable channel exists. Disclosure tokens व्यवहार्य, अर्को भाषा, and जवाफको समयसीमा kept. The negative (no other-language service, no reply deadline) stays.
+- A3 P1 two time tests in 007. FAQ answer and the matching body paragraph. “the cause has arisen” is now “a considerable time has passed since the serious cause arose, or the cause continued for a considerable period.”
+- A4 P2 Son Jungmin bio: विभागहरूबीचको आदानप्रदान → समन्वय. Chang Fangyu’s Korea–Taiwan आदानप्रदान left as Austausch.
+- A5 P2 criminal-practice sentence: शङ्कास्पद → संदिग्ध, and the sentence now says the firm represents the suspect, the accused, and the victim.
+- A6 P2 severance calque. Guidance labor paragraph and columns-ne/002. “वैधानिक सेवा-अन्त भत्ता / बर्खास्तगी-संरक्षण” → “सेवा अन्त्य गर्दा दिइने वैधानिक भत्ता” and “बर्खास्तीबाट जोगाउने नियम”. Columns 008 and 009 already say विच्छेद भत्ता; not rewritten.
+- A9 P2 007 source heading. “निम्न 1 तहका प्राथमिक स्रोत” → “निम्न आधिकारिक प्राथमिक स्रोत … मा जाँचिएका हुन्”. The invented tier is gone. A dry run showed dropping that digit does not unbalance the number bag (Korean 1차 is handled before the bag compare; sourceCount stayed 120).
+- A10 P2 憲判字第4號. “खण्ड” → “नम्बर” in the FAQ answer, the body paragraph, and both source-list labels (4). Chinese gloss 民國112年憲判字第4號 unchanged. No Gregorian year added.
+- A11 P2 008 conditions row. Both “विद्यमान” cells → “हो” (Articles 11 and 12).
+- A12 P2 008. Highest-performing salesperson and later top performer, two sentences. Client B stays male.
+- A13 P2 001. “मिल्दा व्यक्ति” → “अन्य वर्ग”.
+- A14 P2 001. “अन्य कुराका साथ” → “अन्य सर्तका अतिरिक्त”.
+- A15 P2 006 opening question. “को समय देख्नुभएको छ?” → “सम्झनुहुन्छ?”. Honorific address kept.
+
+Part b
+- B1 P1 011. “उत्पादन सामग्रीको क्रम” → “उत्पादनका कागजात”.
+- B2 P1 015. Dropped मुख्यालय so relocation is not only a head-office move. The sentence already named शाखा and उपशाखा.
+- B3 P2 010. “वास्तविक क्षतिपूर्ति र रकम” → whether punitive damages are actually awarded, and in what amount.
+- B4 P2 011. “प्रत्येक पाठ र अन्तिम उत्पादन” → “प्रत्येक दाबी र तयार पारिएको अन्तिम विज्ञापन”.
+- B5 P2 013. “सम्भव हुँदैन” → “सम्भव नहुन सक्छ”.
+- B6 P2 014. “विशेषज्ञता-प्राविधिक चरित्र” → “विशेषज्ञ वा प्राविधिक सीप”. Other “कानुनी चरित्र” uses mean legal character of a payment and were left.
+- B7 P2 016 guardianship. Five phrases now say संरक्षकत्व (commencement, end, the connecting-factor list, a foreign judgment, and the checklist). Estate preservation, evidence preservation, the section-7 heading, the image alt, and “तत्काल संरक्षण” stay संरक्षण.
+- B8 P2 017. “काउन्टरबाहिरको धितोपत्र” → “काउन्टर कारोबारका धितोपत्र”.
+- B9 P2 010. “मानिँदैन न” → “मानिँदैन, न त”.
+- B10 P2 010. “कुन प्रतिवाद छन्” → “कस्ता प्रतिवाद छन्”.
+- B12 P2 017. Imperatives गरोस् / चलाओस् → गर्नुपर्छ / चलाउनुपर्छ.
+- B13 P2 010. “अवधिको चलन” → when the period starts, how long it runs, and when it stops.
+- B14 P2 विषय standing in for content, a repayment head, or the bare fact of a legacy. See systemic count below.
+- B15 P2 013 repeated “confirm before signing”. The second line is its own block because the Korean source breaks the sentence across a blank line, so the block was not deleted. The confirmation was removed from the previous block and kept once in this block: “भाडा सम्झौतामा हस्ताक्षर गर्नुअघि व्यवसाय स्थलको उपयुक्तता पुष्टि गर्नुहोस्।”
+- B16 P2 018. “सबैभन्दा उपयुक्त एकाइ” → “ती तथ्यसँग मिल्ने संरचना”, FAQ and body (2).
+
+No test expected-string updates. No guidance-*ne* test pinned a Nepali sentence that changed. Disclosure markers still match (व्यवहार्य, अर्को भाषा, जवाफको समयसीमा). llms.txt ne notices were not rewritten; consultationNotice and confidentialNotice stay verbatim substrings of the existing FAQ and privacy copy. TWD 1.57M left byte-identical.
+
+## Rows skipped (5)
+
+- A1 P1 004 visible “धारा 10” → “धारा 3”. The URL pcode=G0340028&flno=3 was not touched, and the statute name was already the withholding-rate standards. The Korean label is 영업세법 제10조. A simulated edit failed the number check: `missing from translation (1): 10` (sourceCount 95 → targetCount 94). ACCEPTED-ROUND says not to change a number the checker cannot accept. Visible article number left at 10.
+- A7 P2 and the part-a systemic pattern on amounts. “TWD 1.57M” is pinned byte-identical. Lakh grouping (15,70,000 and the column amounts at or above one lakh) is a skip: the checker does not parse it, and ACCEPTED-ROUND forbids it. Western grouping left as-is. 0 instances changed.
+- A8 P2 003 “तथ्य तथा प्रमाणले टेवा दिने क्षतिपूर्ति”. Not restored to “अधिकतम क्षतिपूर्ति”. See reviewer-wrong below.
+- B11 P2 U+200B in 013 and 015. The column checker compares ZWSP count with the Korean source. Counts already match (013: 5, 015: 3; also 003: 52, 005: 8, 006: 4, 008: 10, 009: 5). Removing the Nepali-only lines the review listed would fail `blocks` on ZWSP. 0 characters removed.
+- B17 P3 TWD 15,79,589 and the same lakh regrouping in 010, 011, 017, and 018. Same skip as A7. 0 instances changed.
+
+## Systemic patterns
+
+- Hyphenated severance calque “सेवा-अन्त” / “बर्खास्तगी-संरक्षण”: 2 instances (guidance labor paragraph; column 002).
+- “यदि त्यस्तो मार्ग छ भने” (assumes the channel already exists): 2 instances (guidance contact; inquiry methodConfirmationNotice).
+- विषय for content, a repayment head, or the bare existence of a legacy: 8 instances.
+  - 011 “विज्ञापन विषयअनुसार” → विषयवस्तु (1)
+  - 014 “विशेषज्ञ-प्राविधिक विषय” where English says professional or technical content (FAQ, one body paragraph, and the repeated body paragraph) (3). The checklist line that already said विषयवस्तु was not left doubled.
+  - 014 “फिर्तीको विषय” (1)
+  - 016 “वसीयत दान (遺贈) विषय” (1)
+  - 016 “जाँच विषय हुन्” (1)
+  - 008 “भन्ने विषय” for Korean 내용 (1)
+  Link labels “हामी कुन विषयमा काम गर्छौं”, “कानुनी चरित्र” for the legal character of a payment, and “तालिमको विषय” for the subject of the training were not this pattern and were left, except the skills sentence in row B6 which now says “तालिमको विषय” plus “सीप”.
+- संरक्षण where the institution is guardianship: 5 instances in 016, listed under B7. Preservation uses of संरक्षण were not swept.
+- Western grouping at or above one lakh, and “TWD 1.57M”: 0 (skipped).
+- U+200B: 0 (skipped).
+
+R2–R10 and R12–R17 were already in this pack aside from the rows above. No Hindi running text turned up in the flagged files. Consultation languages stay English, Chinese (中文), Japanese, and Korean. Wei Tseng’s feminine forms were already in place and were not undone. No frontmatter keys, urls, dates, image paths, or block counts changed.
+
+## Reviewer got wrong (not applied)
+
+- A8. The English column still says the attorney should “pursue the maximum compensation available.” RULEBOOK-FIX R3 already replaced that degree with “pursue the compensation the facts and evidence support,” and ACCEPTED-ROUND forbids making a result sentence positive again. The Nepali sentence already does that (“तथ्य तथा प्रमाणले टेवा दिने क्षतिपूर्ति”). “अधिकतम” was not put back. This is advice about the work only in the softened form the rulebook requires.
+
+The article-number row (A1) and the ZWSP row (B11) are not treated as mistakes about the law or the characters. They are skipped because applying them fails the column checker, as noted above.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-ne --lang ne 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=103
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ne src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      20
+```

@@ -134,7 +134,7 @@ faq:
 
 1. [חוק החברות הטאיוואני](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001)
 2. [תקנות רישום החברות של משרד הכלכלה של טאיוואן (經濟部)](https://law.moea.gov.tw/LawContent.aspx?id=FL011312)
-3. [הנחיה מיסויית של משרד האוצר של טאיוואן (財政部) על סגירה תקופתית, חיסול והשעיית פעילות](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/liquidation-procedure/x6mOPan)
+3. [הנחיה מיסויית של משרד האוצר של טאיוואן (財政部) על הדוח הסופי, דוח החיסול והשעיית פעילות](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/liquidation-procedure/x6mOPan)
 4. [הנחיית משרד הכלכלה של טאיוואן על מועד בקשת השעיית הפעילות](https://serv.gcis.nat.gov.tw/crm/faqAction.do?id=659&method=faqDetlDetl)
 
 ## הנחיות קשורות

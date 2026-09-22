@@ -1,0 +1,95 @@
+WO-F-he r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-he-r4
+date: 2026-09-23
+no git add/commit/push
+
+## Rows
+
+Numbered findings: he-a 12 (11 P1/P2 + 1 P3), he-b 18 (all P1/P2). 30 numbered rows.
+
+Applied: 22.
+Skipped: 8.
+
+No test file was edited. No pinned Hebrew string in src/lib/__tests__ or src/data/__tests__ moved. "TWD 1.57M" left byte-identical. discoveryNotice still contains the token llms.txt. consultationNotice and confidentialNotice were left. The privacy sentence that changed (המשך → משך) is not a substring of confidentialNotice. Disclosure-parity regexes were left; none of the pinned disclosure phrases was reworded.
+
+### Applied
+he-a 1, 2, 5, 6, 8, 9, 12.
+he-b 1–5, 7–11, 13–17.
+
+Adaptations (still applied):
+- he-a 2. The URL is unchanged (pcode=G0340028&flno=3). The label now names the withholding-rate standards (各類所得扣繳率標準), matching column 001, and keeps "ולא סעיף 10" so the checker still sees the source digit 10. The digit 3 from flno=3 was not added (an extra 3 would be a new number). Column 001 already used the withholding title; only 004 was wrong. The verdict's "two labels" had no second hit.
+- he-a 6. The location clause already in the sentence stays. The broken "אמנה אחד" is now "לשם של אמנה או ללוחות העלות המקומיים של מדינה אחת", with "השאלות האלה" as the antecedent.
+- he-a 12. Maqaf בין־לאומי also applied in 016, which used the same hyphen. 10 slots in 007, 6 in 016.
+- he-b 1. Only the first sentence of the existing paragraph changed. The no-guarantee sentence stays. English and Korean have the same "contract-design" sentence; the paragraphs under heading 4 compare branch registration with subsidiary formation, so the Hebrew label now says that.
+- he-b 2. פיצוי מוסכם → קנס חוזי only where it rendered 違約金 (8 slots, including the title and the MOL link label). פיצוי סביר and מטרת הפיצוי stay; those are reasonable compensation (合理補償), not the penalty.
+- he-b 4. Glossed terms 最低服務年限約定, 勞動契約, 簽約金, 留任獎金, 違約金 stay inside the rewritten sentence.
+- he-b 10. "מקום מצאות הרכוש" in the same file was the same dropped י; it is now "מקום הימצא הרכוש". "במקום הימצא הנכס" was already right.
+- he-b 16. The same הפסקה-for-resignation calque in 008 (table header and the spoken line) was changed to התפטרות. "הפסקת פעילות" (cessation of operations) was left. 009's title "הפסיק מעצמו" does not use the noun הפסקה and was left.
+
+### Skipped
+- he-a 3. The 3-month, 4-month, and 6-month sentences already say some judgments imposed about that period and that there is no typical or guaranteed outcome. Restoring "courts currently generally impose" undoes RULEBOOK R3 and makes the result sentence positive. ACCEPTED-ROUND forbids that.
+- he-a 4. 008 already says that with legal representation B established the statutory severance entitlement. Restoring "received a substantial severance" makes the result sentence positive. RULEBOOK R3 and ACCEPTED-ROUND leave that hedge.
+- he-a 7. Q16–Q20 were not promoted to headings, and the U+200B lines in 003 (from Q16), 005 (including empty bold lines), 006, 008, and 009 were not removed. Heading levels and ZWSP counts must match the Korean source. English keeps Q16–Q20 as body paragraphs. ACCEPTED-ROUND: do not add headings.
+- he-a 10. Bare "1" in "כל 1 תקופת", "1 שנה אחרונה" (001 FAQ and body), and "כל 1 שנת ותק" / "בעבור כל 1 שנת ותק" (008) was left. Hebrew has no word-numeral entry in the checker. Dropping those 1s fails numbers (r3 already showed this). The suggested wording drops the digits.
+- he-a 11. "TWD 1.57M" stays byte-identical. A test pins it.
+- he-b 6. The trailing U+200B after the Taipei sentence, and the ZWSP-only lines in 013 and 015, were left. Deleting them changes the ZWSP count.
+- he-b 12. Headings stay "## 7." and "## 8.". English and Korean skip 6 the same way. Renumbering changes digits the checker counts. ACCEPTED-ROUND: do not change numbers.
+- he-b 18. "לכל 1 מבעלי החלקים יש 1 קול" and "אדם טבעי 1" were left. The suggested "קול אחד" drops digits the checker counts.
+
+## Systemic patterns
+
+- U+200B blanks (003 from Q16, 005 including `**​**`, 006, 008, 009, 013, 015). 0 deleted. See Skipped he-a 7 and he-b 6.
+- Bare numeral 1 where Hebrew wants a word. 0 rewritten. See Skipped he-a 10 and he-b 18.
+- Court-practice / severance hedge. 0 undone. See Skipped he-a 3 and he-a 4.
+- "המחבר" for the person who incurs personal liability. 1, in 004. Now "אדם נושא באחריות אישית".
+- Wrong instrument on the flno=3 withholding link. 1, in 004. 001 was already the withholding title.
+- הפסקה for the employee's resignation. 23: 014 ×21 (notices, letters, early leaving, the resignation taking effect), 008 ×2 (table header and the spoken line). Left: הפסקת פעילות, הפסקת התיישנות, and פסקה as "paragraph".
+- 011 regulation title with stacked nouns. 4: body definition, retention paragraph, source list, TFDA link. Act name "חוק ניהול היגיינת…" → "חוק היגיינת הקוסמטיקה ובטיחותה" ×2 (body and source list). Chinese glosses kept.
+- שלפנים for the vehicle ahead. 9 in 012 → שמלפנים. Left: מלפנים as the adverb "ahead" (the sign sentence, "מלפנים היו", and "לפי המצב מלפנים").
+- "הצעת עיצוב חוזי" over a branch-versus-subsidiary comparison. 1, in 018.
+- פיצוי מוסכם for 違約金. 8 in 014. פיצוי סביר left.
+- Hyphen בין-לאומי. 16 changed to the maqaf: 007 ×10, 016 ×6. Other columns and the guidance pack already used בין־לאומי.
+- Duration written as המשך. 1, the privacy retention sentence in hebrewGuidanceContent. "בהמשך" meaning "afterwards" was left.
+- המצאות / מצאות for the place where property is. 2 in 016.
+- "את שינויים" for amendment of the existing contracts. 2 in 018 (FAQ and body). 017's "שינויים שטרם טופלו" (changes not yet handled) was left.
+- Laws-and-regulations database labelled only as תקנות. 5: 014 Labor Standards Act links ×3, 016 Civil Code and choice-of-law ×2. Now "מאגר החוקים והתקנות של טאיוואן". URLs unchanged. 007 already said "מאגר החקיקה הלאומי".
+
+R2–R10. Prior rounds already hold: feminine Wei Tseng where Hebrew marks gender, consultation languages English / Chinese (中文) / Japanese / Korean, no interpreter, no reply-time, no free first meeting, no result promise. This round did not turn any of those sentences positive. Team label is already "הצוות שלנו"; full profile is already "פרופיל מלא (באנגלית)". The only fullwidth colon left in columns-he is inside the 008 frontmatter url, which is canonical metadata and was not edited. Korea stays a labelled example.
+
+## Reviewer points not followed
+
+- he-a 3 and he-a 4. The softening is the R3 wording the rulebook requires ("in some judgments … there is no typical or guaranteed outcome"; "establish the entitlement"). Putting "courts currently generally impose" or the substantial payment back would make the result sentence positive.
+- he-a 7 and he-b 6. U+200B lines match the Korean source. Promoting Q16–Q20 would change heading levels. English does not use those headings either.
+- he-a 10 and he-b 18. The suggested wording drops a digit ("השנה האחרונה" with no 1; "שנה אחת"; "קול אחד"). The checker counts those 1s. The current inline digits stay.
+- he-a 11. "TWD 1.57M" is pinned. It was not written out as "1.57 מיליון".
+- he-b 12. Outline numbers 7 and 8 match English and Korean. Changing them changes digits.
+- he-a 2, the request to drop every mention of 10. The instrument name was corrected. The digit stays, in the phrase "ולא סעיף 10", so the number check still sees 10.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-he --lang he 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=73
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-he src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      14
+```
+
+The 14 was counted before this log file existed. Several numbers WARNs are pre-existing (lexical 제N항 / 제3자, and extra years in 007 and 010). None is a missing digit, and every file still PASSes. 017 numbers remains WARN only (`제3자`), sourceCount=44 targetCount=44, as in r3.

@@ -783,13 +783,13 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     // language of this page?", minus its leading "خیر. " — the same clause the
     // other guidance locales quote.
     consultationNotice:
-      'این صفحهٔ راهنما به فارسی نوشته شده است. مشاوره فقط به انگلیسی، چینی (中文)، ژاپنی و کرهای انجام میشود و مترجم شفاهی فراهم نمیکنیم.',
+      'این صفحهٔ راهنما به فارسی نوشته شده است. مشاوره فقط به انگلیسی، چینی (中文)، ژاپنی و کره‌ای انجام می‌شود و مترجم شفاهی فراهم نمی‌کنیم.',
     discoveryNotice:
-      'پروندهٔ llms.txt تنها نقشهای برای یافتن صفحههای عمومی است؛ رتبهای در نتایج جستوجو، توصیهای، پیشنهاد هوش مصنوعی یا نمایانی را وعده نمیدهد.',
+      'فایل llms.txt فقط نقشه‌ای برای پیدا کردن صفحه‌های عمومی است؛ رتبه‌ای در نتایج جست‌وجو، توصیه‌ای، پیشنهاد هوش مصنوعی یا آگهی را وعده نمی‌دهد.',
     // The published privacy-page sentence, with its leading connective dropped
     // so the line stands alone; the proposition is unchanged.
     confidentialNotice:
-      'متن اصلی ذخیره میشود، لطفاً در مرحلهٔ نخست اطلاعاتی را که هنوز لازم نیست ننویسید، مانند شمارهٔ گذرنامه یا شمارهٔ شناسنامه یا دادههای حساب بانکی.',
+      'متن اصلی ذخیره می‌شود، لطفاً در مرحلهٔ نخست اطلاعاتی را که هنوز لازم نیست ننویسید، مانند شمارهٔ گذرنامه یا شمارهٔ شناسنامه یا داده‌های حساب بانکی.',
   },
   my: {
     consultationNotice:

@@ -567,7 +567,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Ko mēs darām',
           paragraphs: [
             'Hovering International Law Firm ir advokātu birojs, kas dibināts Taivānā. Tas strādā saskaņā ar Taivānas tiesībām un uztur birojus Taipejā (臺北), Gaosjunā (高雄), Taidžunā (臺中) un Pindunā (屏東). Mēs konsultējam uzņēmumus, vedam tiesvedību un palīdzam ārvalstu klientiem veikt soļus, kas Taivānā ir nepieciešami.',
-            'Viss šeit sniegtais saturs ir vispārīgs. Lietas iznākums ir atkarīgs no faktiem, piemērojamajiem noteikumiem un laika. Šī informācija neaizstāj pārrunas ar advokāti vai advokātu par Jūsu dokumentiem.',
+            'Viss šeit sniegtais saturs ir vispārīgs. Lietas iznākums ir atkarīgs no faktiem, piemērojamajiem noteikumiem un no brīža, kurā lietu vērtē. Šī informācija neaizstāj pārrunas ar advokāti vai advokātu par Jūsu dokumentiem.',
           ],
         },
         {
@@ -594,7 +594,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kur sākt',
           paragraphs: [
-            'Izlasiet lapu „Pakalpojumi“ un pārbaudiet, vai Jūsu lieta ietilpst mūsu jomā, pēc tam „Izmaksas“ un „Saziņa“, lai saprastu, kā tiek noteikts apjoms un kā izmaksas apstiprina pirms darba sākšanas.',
+            'Izlasiet lapu „Pakalpojumi“ un pārbaudiet, vai Jūsu lieta ietilpst mūsu jomā, pēc tam „Izmaksas“ un „Saziņa“, lai saprastu, kā tiek noteikts apjoms un kā izmaksas tiek apstiprinātas pirms darba sākšanas.',
             'Nosūtot ziņojumu, kopsavilkumu varat rakstīt savā valodā. Sākotnējais teksts tiek saglabāts tieši tā, kā to uzrakstījāt, un netiek tulkots automātiski. Nosūtīts ziņojums ir pieteikums, kas gaida izvērtējumu: tā vēl nav konsultācija un nav apstiprināta tikšanās.',
           ],
         },
@@ -625,14 +625,14 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Laulība, ģimene un mantojums',
           paragraphs: [
-            'Mēs vedam laulības šķiršanu (離婚), mantas sadali, aizgādību un vecāku atbildību par nepilngadīgiem bērniem (未成年子女權利義務之行使或負擔), saskarsmes tiesības (會面交往) un mantojumu (繼承), arī tad, ja puses vai manta atrodas dažādās valstīs. Pārrobežu ģimenes lietās bieži vajadzīgs papildu izvērtējums mājsaimniecības reģistra (戶籍) ierakstiem, aktu formai un to pierādīšanas spējai Taivānā.',
+            'Mēs vedam laulības šķiršanu (離婚), mantas sadali, aizgādību un vecāku atbildību par nepilngadīgiem bērniem (未成年子女權利義務之行使或負擔), saskarsmes tiesības (會面交往) un mantojumu (繼承), arī tad, ja puses vai manta atrodas dažādās valstīs. Pārrobežu ģimenes lietās bieži vajadzīgs papildu izvērtējums mājsaimniecības reģistra (戶籍) ierakstiem, aktu formai un to pierādījuma spēkam Taivānā.',
             'Tā kā ģimenes lietām bieži ir termiņi un paralēlas procedūras, pirmajam kopsavilkumam jānorāda pušu attiecības, pašreizējā dzīvesvieta un jau notiekošās procedūras.',
           ],
         },
         {
           heading: 'Darba strīdi',
           paragraphs: [
-            'Šī joma aptver darba attiecību izbeigšanu, likumā noteikto atlaišanas pabalstu saskaņā ar Taivānas tiesībām (資遣費; to nedrīkst pielīdzināt līdzīgiem institūtiem citās valstīs), atlīdzību un strīdus no darba līguma (勞動契約), gan darbinieka, gan darba devēja pusē. Izvērtējumā nošķiram izbeigšanas iemeslu no uzteikuma, izmaksas un termiņu jautājumiem.',
+            'Šī joma aptver darba attiecību izbeigšanu, likumā noteikto atlaišanas pabalstu saskaņā ar Taivānas tiesībām (資遣費; to nedrīkst pielīdzināt līdzīgiem institūtiem citās valstīs), atlīdzību un strīdus no darba līguma (勞動契約), gan darbinieka, gan darba devēja pusē. Izvērtējumā nošķiram izbeigšanas iemeslu no uzteikuma, samaksas un termiņu jautājumiem.',
             'Bieži izšķirošie dokumenti ir darba līgums, iekšējie darba noteikumi (工作規則), algas lapiņas un pušu sarakste. Ja tie Jums joprojām ir, miniet to kopsavilkumā.',
           ],
         },
@@ -647,7 +647,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Intelektuālais īpašums',
           paragraphs: [
             'Mēs atbalstām preču zīmju (商標) un patentu (專利) reģistrāciju, autortiesības un strīdus par šīm tiesībām Taivānā.',
-            'Šajā jomā izšķir soļu secība: aizsardzības apjoms, pieteikuma iesniegšanas brīdis un faktiskā lietošana ietekmē izvēli. Pieteikuma iesniegšana pati par sevi nenozīmē, ka tas tiks apstiprināts.',
+            'Šajā jomā izšķiroša ir soļu secība: aizsardzības apjoms, pieteikuma iesniegšanas brīdis un faktiskā lietošana ietekmē izvēli. Pieteikuma iesniegšana pati par sevi nenozīmē, ka tas tiks apstiprināts.',
           ],
         },
         {
@@ -671,7 +671,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Dibināšana un struktūra',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) 2016. gadā dibināja advokātes un advokāti, kuri studēja National Taiwan University (國立臺灣大學). Ķīniešu nosaukums 昊鼎 savieno zīmi 昊 („plašās debesis“) ar zīmi 鼎 („stabils pamats“) un raksturo biroja ievirzi kopš dibināšanas.',
-            'Mums ir biroji Taipejā (臺北), Gaosjunā (高雄), Taidžunā (臺中) un Pindunā (屏東). Gaosjunas birojs koncentrējas uz uzņēmumu vadību un ved civillietas, krimināllietas un administratīvos strīdus. Taidžunas birojs ved būvniecības lietas, intelektuālo īpašumu un lietas ar saikni ar Koreju un Japānu. Pindunas birojs tika atvērts 2017. gadā vietējām vajadzībām.',
+            'Mums ir biroji Taipejā (臺北), Gaosjunā (高雄), Taidžunā (臺中) un Pindunā (屏東). Gaosjunas birojs koncentrējas uz korporatīvo pārvaldību un ved civillietas, krimināllietas un administratīvos strīdus. Taidžunas birojs ved būvniecības lietas, intelektuālo īpašumu un lietas ar saikni ar Koreju un Japānu. Pindunas birojs tika atvērts 2017. gadā vietējām vajadzībām.',
             'Līdzās advokātu darbam kopš 2020. gada darbojas arī Hovering Accounting Office, kas piedāvā grāmatvedību un nodokļu plānošanu uzņēmējiem un turīgām privātpersonām.',
           ],
         },
@@ -704,7 +704,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Skaidrojums par secību: vispirms darba apjoms, pēc tam izmaksu apstiprinājums, un kāpēc šajā lapā nav cenrāža.',
       intro:
-        'Šī lapa izskaidro, kā izmaksas nosaka, nevis to apmēru. Apmērs ir atkarīgs no darba apjoma konkrētajā lietā un ir jēgpilns tikai tad, kad šis apjoms ir skaidrs.',
+        'Šī lapa izskaidro, kā izmaksas tiek noteiktas, nevis to apmēru. Apmērs ir atkarīgs no darba apjoma konkrētajā lietā un ir jēgpilns tikai tad, kad šis apjoms ir skaidrs.',
       sections: [
         {
           heading: 'Vispirms nosaka darba apjomu',
@@ -832,7 +832,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Ko darīt, ja mana lieta ir ļoti steidzama?',
           answer:
-            'Nosauciet termiņu vai datumu no iestādes raksta tūlīt kopsavilkuma sākumā, lai šie datumi izvērtējumā būtu redzami. Šai lapai nav ārkārtas kanāla, un tā nenodrošina atbildes termiņu; ja Jūsu lieta nevar gaidīt, Jums paralēli jāmeklē citi ceļi savā vietā.',
+            'Nosauciet termiņu vai datumu no iestādes raksta tūlīt kopsavilkuma sākumā, lai šie datumi izvērtējumā būtu redzami. Šai lapai nav ārkārtas kanāla, un tā nenodrošina atbildes termiņu; ja Jūsu lieta nevar gaidīt, paralēli meklējiet citu palīdzību tur, kur atrodaties.',
         },
       ],
     },
@@ -916,14 +916,14 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Tikai vispārīga informācija',
           paragraphs: [
             'Šo lapu saturs ir rakstīts kā vispārīga informācija. Tas nav juridisks padoms Jūsu lietā un neaizstāj Jūsu dokumentu izvērtējumu.',
-            'Lietas iznākums ir atkarīgs no faktiem, piemērojamajiem noteikumiem un laika; divas šķietami līdzīgas situācijas var beigties atšķirīgi.',
+            'Lietas iznākums ir atkarīgs no faktiem, piemērojamajiem noteikumiem un no brīža, kurā lietu vērtē; divas šķietami līdzīgas situācijas var beigties atšķirīgi.',
           ],
         },
         {
           heading: 'Tiesiskais ietvars',
           paragraphs: [
             'Birojs darbojas saskaņā ar Taivānas tiesībām, un šī lapa runā tikai par darbu šajā ietvarā.',
-            'Saturs nav konsultācija pēc citas valsts tiesībām, izņemot Taivānas tiesības, tostarp Jūsu uzturēšanās vietas tiesības. Ja daļa Jūsu lietas skar citu tiesību kārtību, ar Jums noskaidrosim, kāds kvalificēts speciālists šai daļai ir vajadzīgs.',
+            'Saturs nav konsultācija pēc tiesībām, kas nav Taivānas tiesības, tostarp pēc Jūsu uzturēšanās vietas tiesībām. Ja daļa Jūsu lietas skar citu tiesību kārtību, ar Jums noskaidrosim, kāds kvalificēts speciālists šai daļai ir vajadzīgs.',
           ],
         },
         {
@@ -936,7 +936,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Nekāds iznākuma solījums',
           paragraphs: [
-            'Neviena šīs lapas daļa nav solījums par lietas iznākumu, pieteikuma apstiprināšanu vai uzturēšanās un darba statusu.',
+            'Neviena šīs lapas daļa nav solījums par lietas iznākumu, pieteikuma apstiprināšanu vai uzturēšanās statusu un darba atļauju.',
             'Ārējās saites kalpo orientācijai; mēs negarantējam trešo personu satura pareizību un aktualitāti.',
           ],
         },

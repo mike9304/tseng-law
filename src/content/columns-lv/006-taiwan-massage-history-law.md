@@ -45,7 +45,7 @@ Būtībā ikviens var izvēlēties masāžu pēc paša gaumes, lai atbrīvotu sa
 
 Un iemesls, kāpēc šodien ir tik daudz masāžas vietu, var būt tieši tas pieteikums konstitucionālajai iztulkošanai (釋憲).
 
-Kad Taivāna 1980. gadā izsludināja, un likums stājās spēkā likumu par personu ar invaliditāti labklājību (殘障福利法),
+Kad Taivāna 1980. gadā izsludināja Likumu par personu ar invaliditāti labklājību (殘障福利法) un tas stājās spēkā,
 
 patiešām tikai personas ar redzes traucējumiem (視障者) varēja veikt masiera profesiju (按摩業).
 

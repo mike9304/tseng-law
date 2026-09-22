@@ -63,7 +63,7 @@ Ja tas ir noziegums, ko var vajāt tikai pēc sūdzības, saskaņā ar Krimināl
 
 ### Oficiālie avoti 1–5
 
-- [Ceļu satiksmes pārvaldības un sankciju rīkojums (道路交通管理處罰條例), 62. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [Ceļu satiksmes pārvaldības un sankciju likums (道路交通管理處罰條例), 62. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
 - [Taivānas Krimināllikums, 185-4. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
 - [Taivānas Krimināllikums, 284. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Taivānas Krimināllikums, 287. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
@@ -239,7 +239,7 @@ Dažos spriedumos par aiz neuzmanības nodarītu miesas bojājumu ir uzlikts sod
 
 ​
 
-Ja sods tiek aizstāts ar kriminālo naudas sodu (易科罰金), Krimināllikuma 41. panta 1. daļa nosaka pārrēķinu TWD 1.000, TWD 2.000 vai TWD 3.000 par 1 dienu; pēc likmes TWD 1.000 par dienu 3 mēnešu sods atbilst 3 × 30 × TWD 1.000 = TWD 90.000.
+Ja sods tiek aizstāts ar kriminālo naudas sodu (易科罰金), Krimināllikuma 41. panta 1. daļa nosaka pārrēķinu TWD 1.000, TWD 2.000 vai TWD 3.000 par vienu dienu; pēc likmes TWD 1.000 par dienu 3 mēnešu sods atbilst 3 × 30 × TWD 1.000 = TWD 90.000.
 
 ​
 
@@ -331,7 +331,7 @@ Ar to šis jautājumu un atbilžu apskats par ceļu satiksmes negadījumiem nosl
 
 ​
 
-Daudzās ceļu satiksmes negadījumu lietās, ko esmu vadījusi, esmu uzzinājusi vēl vienu būtisku punktu.
+Šis apskats ir vispārīga informācija; konkrētas lietas iznākums ir atkarīgs no faktiem un pierādījumiem.
 
 ​
 

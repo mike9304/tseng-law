@@ -33,7 +33,7 @@ Pārskaitījums internetbankā vai ar radinieka starpniecību Korejā nav iespē
 
 Turklāt saskaņā ar Korejas ārvalstu valūtas kontroles noteikumiem personai ar Korejas valstspiederību, kura dibina ārvalstu juridisko personu vai iegūst daļas, jāiesniedz „paziņojums par tiešo ārvalstu ieguldījumu“. Paziņojums jāreģistrē brīdī, kad kapitāls tiek pārskaitīts uz Taivānas juridisko personu (台灣法人); neiesniedzot, var iestāties sankcijas par ārvalstu valūtas noteikumu pārkāpumu.
 
-Pirms kapitāla pārskaitījuma (資本金匯款) informējieties savā galvenajā bankā Korejā.
+Pirms kapitāla pārskaitījuma (資本金匯款) informējieties savā galvenajā bankā savā mītnes valstī.
 
 **​**
 
@@ -71,7 +71,7 @@ Dažas bankas var uzlikt papildu prasības, piemēram, konta lietošanas laiku v
 
 A. Pirmais darbinieks: pieteikums iesniedzams kā parastā ārvalstu ķīniešu vai ārzemnieku ieguldījumu uzņēmuma vadītāja darbs (一般僑外投資事業主管工作). Turpmāk B punktā minētais „profesionāla vai tehniska rakstura darba“ kritērijs nepiemērojas, tomēr piemērojas adresāta priekšnoteikumi, tostarp priekšnoteikums būt pārvaldniekam (經理人) sabiedrībā, kuras ārvalstu ķīniešu vai ārzemnieku ieguldījums pārsniedz 1/3, kā arī darba devēja rezultātu priekšnoteikumi par kapitālu un apgrozījumu (pārbaudes normu 38. un 39. pants).
 
-B. No otrā darbinieka pastāv ierobežojumi: ja nodarbināto personu skaits pārsniedz 1 personu, darbinieka izglītība un pieredze, vidējās algas noteikumi nodarbināšanā un sabiedrības kapitāla un apgrozījuma noteikumi tiek izskatīti saskaņā ar „profesionālu vai tehnisku darbu“ (專門性或技術性工作).
+B. No otrā darbinieka pastāv ierobežojumi: ja sabiedrība nodarbina vairāk nekā 1 ārzemnieku, darbinieka izglītība un pieredze, vidējās algas noteikumi un sabiedrības kapitāla un apgrozījuma noteikumi tiek izskatīti saskaņā ar „profesionālu vai tehnisku darbu“ (專門性或技術性工作).
 
 Skatiet Taivānas Darba ministrijas (勞動部) lapu: <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

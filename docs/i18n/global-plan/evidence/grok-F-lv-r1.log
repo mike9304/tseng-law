@@ -1,0 +1,178 @@
+# WO-F-lv — Latvian fix lane, campaign round 1 (Grok 4.7, 2026-09-22)
+
+Workspace: /Users/son7/Projects/tseng-law-fix-lv-r1
+No git add/commit/push. Latvian strings only.
+Files written: 18 × src/content/columns-lv/*.md;
+src/data/international-guidance-baltic-atlantic.ts (latvianGuidanceContent only);
+src/data/international-guidance-team.ts (lv role + lv bios only);
+src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.lv discoveryNotice only).
+Offices, answers, and inquiry copy had no finding row that still needed a string change
+(BIROJI / KOMANDA / Pilns profils already in place). Left unchanged.
+No test file updated: vitest passed with the existing pinned Latvian expectations.
+Bio figure left byte-identical: "TWD 1.57M".
+Consultation languages stay English, Chinese (中文), Japanese, Korean. Wei Tseng stays feminine.
+Traditional Chinese glosses kept. Frontmatter keys, url, lastmod, featured_image, links,
+numbers, dates, and block order unchanged.
+
+## Rows applied
+
+lv-a.md (46 rows). Applied except the skips below:
+a#1 disclaimer exception: tiesībām, kas nav Taivānas tiesības.
+a#2 002 FAQ + body: "katrs darbības pārtraukšanas periods"; "1 reizi" removed; digit kept as "1 gadu".
+a#3 001 beneficial owner (kvalitāte → faktiskais īpašnieks).
+a#4 004 PE: the fact of being a subsidiary does not by itself make it the parent's PE.
+a#5 005 "vairāk nekā 1 ārzemnieku" (foreign national restored; digit kept).
+a#6 007 lineal relatives: pret Jūsu radiniekiem / pret Jums.
+a#7 008 勞工退休金條例 → Darbinieku pensiju likuma (FAQ + blockquote). 003 道路交通管理處罰條例 → likums.
+a#8 009 close: better positioned to protect rights; preparation does not decide the outcome.
+a#10 llms discoveryNotice: meklēšanas rezultātos, ieteikumu, garantētu redzamību.
+a#11 Kaohsiung: korporatīvo pārvaldību.
+a#12 bio: sabiedrību tiesībām.
+a#13 disclaimer: uzturēšanās statusu un darba atļauju.
+a#14 001 duties and experience (not gaita).
+a#15 001 permitted use / apsaimniekošanas noteikumi.
+a#16 002 suspension does not generally remove filing duties (FAQ + body).
+a#17 002 possibility of resuming business is lost.
+a#18 004 營業稅 → uzņēmējdarbības nodoklis (pēc būtības PVN), including the link label.
+a#19 008 close: payment exists when the statutory conditions are met.
+a#20 guidance: kā izmaksas tiek apstiprinātas / tiek noteiktas.
+a#21 labour: samaksas un termiņu.
+a#22 izšķiroša ir soļu secība.
+a#23 001 "uz peļņu vērsta" (FAQ + body).
+a#25 002 penalty: paredzēta brīvības atņemšana.
+a#26 004 four "Ne tāpēc, ka" calques rewritten (name match, head-office payment, 183 days / 6 months PE, branch struck off).
+a#27 006 statute enacted and entered into force.
+a#28 007 Pats vienošanās fakts.
+a#29 007 katrs patstāvīgs priekšnoteikums (digit "2 liecinieku" kept).
+a#30 008 bold glosses joined: Ekonomiskā atlaišana / Disciplinārā atlaišana / Darbinieka brīvprātīga aiziešana.
+a#31 008 close periods, and "Tās pastāv tad, kad izmaksas priekšnoteikumi ir izpildīti."
+a#33 both outcome sentences: no brīža, kurā lietu vērtē.
+a#34 urgent FAQ: paralēli meklējiet citu palīdzību tur, kur atrodaties.
+a#35 informātikas izglītību.
+a#36 Palīdz uzņēmumu klientiem kopā izvērtēt tiesiskos, nodokļu un finanšu riskus.
+a#37 CPA bio: Ieguvis bakalaura un maģistra grādu grāmatvedībā.
+a#38 Korejas darba virziena vadītājs / Korejas darba virziens.
+a#39 pierādījuma spēkam.
+a#40 003 blog close replaced with a general-information sentence.
+a#41 009 item 3: labošana pieprasīta, bet labojums nav noticis.
+a#42 009 fault blocks finished inside the existing blocks (allocation, then which side may withhold or claim).
+a#46 008 anecdote: one case is not a promise to other employees who left. Opening names advokāte Wei Tseng.
+
+lv-b.md (48 rows). Applied except the skips below:
+b#1 010 settlement is not the confirmed end of the first instance.
+b#2 insurance does not establish liability (nepamato).
+b#3 硬舉 → stieņa pacelšana no zemes (headlines, body, "plīsums").
+b#4 011 either a local importer or direct operation.
+b#5 galvenais izplatītājs vai izplatītājs.
+b#6 devas forma (劑型).
+b#7 handmade is not exempt.
+b#8 dominant advertising message is not cured by small-print disclaimer.
+b#9 finished advertisement. Debitive kept in the nominative: "gan galīgā reklāma" (reviewer's accusative "galīgo reklāmu" does not agree with jāpārskata).
+b#10 Pārskatīšanas apjomā.
+b#11 012 time to brake (nepietika laika nobremzēt / gandrīz neatstāja laiku nobremzēt).
+b#12 013 drošības nauda (押金), 2 mēnešu nomas maksa, papildu drošības naudu.
+b#13 014 vesting: brīdis, kad labums kļūst neatņemams; nosacījumi; neatņemamība pa posmiem. Fault-attribution "pieskaitīt" left.
+b#14 014 resignation notice: aiziešanas paziņojums / paziņojuma termiņš (預告期間), including 008's same calque (iepriekšējs paziņojums, not a disciplinary warning).
+b#15 015 authority checks on its own initiative (3 sites); "pievienotajā iznākumā tās trūkst".
+b#16 016 residual-property claim is not itself a regime.
+b#17 ierakstu reģistrā.
+b#18 if the claim is established, its result is reflected before the estate is identified.
+b#19 Darījumā, kurā saduras vecāka un bērna intereses.
+b#20 017 "1 mazs kravas automobilis pieteicēja personīgā īpašumā" (digit kept; FAQ + body).
+b#21 norakstīšanu metāllūžņos.
+b#22 018 returns and replacements (preču atgriešanu un nomaiņu). Spare-parts sentences left.
+b#23 mātes sabiedrības atbildība (FAQ + heading).
+b#24 ieteikums līgumu kārtošanai; the form does not exclude a dispute.
+b#25 limited-company paragraph only: dalībnieki. Joint-stock section keeps akcionāri.
+b#26 posteņus; heading "Kādus zaudējumu posteņus"; "ir šādi".
+b#27 kvītis par medicīniskos izdevumus … un aprūpes izmaksas.
+b#28 līdz 5-kārtīgai faktisko zaudējumu summai (digit 5 kept).
+b#31 investment-department guidance, jo tas pašlaik ir kompetentā iestāde.
+b#32 instrumental: ar cietajām ar rokām darinātajām ziepēm, kas ražotas.
+b#33 Pasākumi, ko piemēro, kad ir apstiprināta drošības problēma.
+b#34 013 and 015 comma-ended blocks each finished as a full sentence. The following block was also made a full sentence. Blocks were not merged.
+b#35 014 records sentence.
+b#36 nav jāpārbauda visas nozares.
+b#37 Trasta manta (信託).
+b#38 Kuras valsts gaita jākārto vispirms (reviewer's own wording keeps gaita).
+b#39 ilgākai uzturēšanai vajadzīga arī.
+b#40 Taivānas pārstāvja pilnvara.
+b#41 mēraukla → standarts / slieksnis / kritērijs (see systemic count).
+b#42 nākt vērā swept (see systemic count).
+b#43 panākums būtu garantēts.
+b#44 Samaksa, izstrādājuma sniegšana.
+b#45 vietu (piemēram, Taipejas pilsēta).
+b#46 Kopīgi vērtē / jāvērtē sweep.
+b#47 Pirmo vērtē pēc faktiskās profesionālo prasmju apmācības.
+b#48 nedrīkst slēdzienu izdarīt tikai tāpēc, ka nolīgtais laiks ir garš.
+
+Also applied inside those sweeps, not as extra rows: 008 opening "advokāte Wei Tseng"; 014 "Turpretī nedrīkst" (stray comma removed); 004 "var piemērot 5 % palielinājumu" (accusative).
+
+No P3 rows in either review.
+
+## Rows skipped
+
+a#9  SKIP  Hangul frontmatter url in 008 and 009. Reviewer and the hard rules both say do not edit url.
+a#24 SKIP after a failed checker pass. "mazāk nekā vienu gadu" (001 ×4) and "noslēgtu vienu darba stāža gadu" (008 ×2) dropped a counted digit 1 (numbers FAIL missing 1×4 and 1). Restored "mazāk nekā 1 gadu" and "noslēgtu 1 darba stāža gadu". 003 "par vienu dienu" was kept: that block still contains the digit 1 (TWD 1.000) and numbers PASS.
+a#32 SKIP  Promoting 003 Q16–Q20 (and the same U+200B layout in 005, 006, 008, 009) to ## headings. The checker pins heading levels, block counts, and ZWSP to the Korean source.
+a#43 SKIP  "TWD 1.57M" is a pinned bio figure. Not reformatted to "1,57 miljonu TWD".
+a#44 SKIP  Space thousands and currency-after-amount ("500 000 TWD"). R14: the lv checker style is dot-thousands. Kept "TWD 500.000".
+a#45 SKIP  date_display "2025. gada 13. septembrī" (also 002–010, 012–017). When that value is at line start, stripStructuralNoise treats "2025. " as a markdown ordered-list marker, and numbers FAIL missing 9 and 2025. Restored the form the checker accepts: "13. septembrī 2025". Body dates that already read "2023. gada 27. decembrī" mid-paragraph were left.
+b#29 SKIP  Same as a#44. "TWD 1.579.589" and the other dot-thousands amounts in 011, 017, 018 stay. A space separator fails the checker.
+b#30 SKIP  Same as a#45. "4. februārī 2026" (011) and "17. septembrī 2026" (018) restored.
+
+## Systemic patterns
+
+- kvalitāte for legal status: 2 instances (001 beneficial owner, 004 PE). 006 "kvalitātes un cenas" is ordinary quality and was left.
+- 條例 → likums: 3 instances (008 pension statute ×2, 003 traffic statute ×1). Court orders, 限令, and the news-headline "rīkojums sporta zālei samaksāt" left.
+- "1 reizi" (adds "only once"): 2 instances removed in 002. The year digit stays "1 gadu".
+- mēraukla as standard / threshold / criterion: 19 instances replaced (010, 011, 014, 007 best-interests, 017 slieksnis/standarts). None remain in columns-lv.
+- nākt vērā: 11 instances replaced (004, 007, 010, 016). None remain.
+- jāredz / Jāredz / Kopīgi redz: 13 + 1 instances → jāvērtē / Kopīgi vērtē (004, 007, 014, 016, 018).
+- pieskaitīšana as vesting: 8 instances in 014. 3 "pieskaitīt" left where the meaning is attribution of fault or of a cost, not vesting.
+- brīdinājuma termiņš / iepriekšējs brīdinājums when it is 預告期間: 16 instances in 008 and 014 → paziņojums. 003 "brīdinājuma zīmes" is a hazard sign and was left.
+- gaita: not mass-replaced. Clear procedure calques were rewritten (011 "Uzturēt procedūru reakcijai", 010 "tiesisko kārtību"). "Kuras valsts gaita" kept, matching the reviewer's own rewrite. Ordinary "course" left.
+- 013/015 sentence fragments: each comma-ended block was closed in place so the block count stays.
+
+## §Verify
+
+```
+neighbour      PASS
+hanzi          PASS   han=33
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+       0
+TSC_OK
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+      24
+```
+
+Commands, in order, from /Users/son7/Projects/tseng-law-fix-lv-r1 with PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH:
+node scripts/check-column-translation.mjs --dir src/content/columns-lv --lang lv 2>&1 | tail -8
+grep -rn "[변호사 검수 필요]" src/content/columns-lv src/data | wc -l
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+git status --short | wc -l
+
+The git count 24 was taken before this log file existed. It includes the pre-existing dirty WO-F-lv.txt and the untracked review files lv-a.md and lv-b.md, which this lane did not edit.
+
+Checker note: the first date_display pass used "2025. gada 13. septembrī" and failed 0/18 on missing 9 and 2025. The digit-to-word pass then failed 001 (missing 1×4) and 008 (missing 1). Both were reverted to the forms above. Final checker: summary PASS 18/18.
+
+## Reviewer points not applied
+
+- Space as the Latvian thousands separator, and currency after the amount, is the native norm. The lv number checker cannot parse it (R14). Amounts stay "TWD 500.000" / "TWD 1.579.589".
+- "TWD 1.57M" is pinned. The suggested "1,57 miljonu TWD" was not applied.
+- "2025. gada 13. septembrī" is natural Latvian and is what the checker comment documents, but at the start of date_display the checker deletes "2025. " as a list marker. date_display stays "13. septembrī 2025".
+- "vienu gadu" / "vienu darba stāža gadu" / "viens mazs kravas automobilis" / "pieckārtīgai" drop a counted digit. Digits were kept inside the corrected phrases.
+- Turning Q16–Q20 into headings, and deleting U+200B blanks, would fail headings, blocks, and ZWSP parity with the Korean source.
+- Hangul slugs in url were not edited.
+- "gan galīgo reklāmu" is accusative. After "jāpārskata" the nominative "galīgā reklāma" is the form that agrees.
+- Merging the 013/015 comma fragment with the next block would change the block count. Each block was completed on its own.
+- "gaita" was not replaced everywhere. It is the right word for a course of events, and the reviewer's 016 rewrite still says "Kuras valsts gaita".
+- Statutory ceilings ("visaugstāk 6 mēnešu alga", the 5 % undistributed-earnings surcharge) are legal ceilings, not advertising superlatives. Left.
+- 003 "brīdinājuma zīmes" is a warning sign, not the resignation-notice calque. Left.

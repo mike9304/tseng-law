@@ -37,7 +37,7 @@ Turpmākajos īpašajos gadījumos, pat ja darbinieks aiziet pēc paša gribas, 
 
 2. Kad darba devējs, darba devēja ģimenes loceklis vai darba devēja pārstāvis (代理人) lieto vardarbību vai nodara smagu apvainojumu (重大侮辱) darbiniekam
 
-3. Kad līgumā noteiktais darbs var kaitēt darbinieka veselībai, no darba devēja pieprasīta labošana un iedarbības nav
+3. Kad līgumā noteiktais darbs var kaitēt darbinieka veselībai, no darba devēja ir pieprasīta labošana, bet labojums nav noticis
 
 4. Kad darba devējs, viņa pārstāvis vai cits darbinieks saslimst ar likumā noteiktu lipīgu slimību (法定傳染病), pastāv risks inficēt kopā strādājošos darbiniekus un tas ir nopietns apdraudējums darbinieka veselībai
 
@@ -73,11 +73,11 @@ Tāpēc darbiniekam termiņš labi jāpārvalda.
 
 Citiem vārdiem sakot,
 
-Taivānas tiesības, lai vaina būtu uzņēmuma pusē,
+Taivānas tiesības atkarībā no tā, vai vaina ir darba devēja vai darbinieka pusē, katrai pusei piešķir tiesības atlaišanas pabalstu neizmaksāt vai to prasīt.
 
-vai darbinieka pusē,
+Vaina var būt darba devēja pusē vai darbinieka pusē.
 
-katrai no pusēm piešķir tiesības atlaišanas pabalstu neizmaksāt vai to prasīt.
+No tā ir atkarīgs, kura puse atlaišanas pabalstu var neizmaksāt un kura to var prasīt.
 
 Dažkārt, ja vaina ir abu darba attiecību pušu pusē,
 
@@ -89,7 +89,7 @@ atlaišanas pabalsts var netikt izmaksāts vai var tikt prasīts.
 
 Tāpēc darba strīdos (勞資糾紛) Taivānā
 
-laiks šeit ir izšķirošs. Parasti labāk aizsargātas ir tās puses tiesības, kura sagatavojas laikus.
+laiks šeit ir izšķirošs. Parasti puse, kas sagatavojas laikus, ir labākā situācijā, lai aizsargātu savas tiesības; pati sagatavošanās iznākumu nenolemj.
 
 Atlaišanas pabalsta strīdos tātad izšķir, kura puse agrāk izbeidz līgumu ar pienācīgu pamatu un ar pierādījumiem.
 

@@ -1,0 +1,103 @@
+WO-F-fa — Grok 4.7 fix lane, campaign round 1
+Workspace: /Users/son7/Projects/tseng-law-fix-fa-r1
+Date: 2026-09-22
+No git add/commit/push.
+
+Scope touched: Persian string values only, in
+src/content/columns-fa/*.md (all 18 were in scope; 006 had no in-block wording
+that the rows or the sweeps required),
+src/data/international-guidance-south-asia.ts (persianGuidanceContent only),
+src/data/international-guidance-team.ts (fa bios only).
+international-inquiry-copy.ts fa, llms-txt.ts GUIDANCE_LLMS_NOTICES.fa,
+guidance offices, and guidance answers were already in the target wording
+(consultation lock, «دفاتر», «به انگلیسی», فرستاده‌شده with ZWNJ). No test
+expected-string needed a change. Other locales, frontmatter keys, urls,
+lastmod, featured_image, image paths, links, numbers, dates, and block order
+were left as they were.
+
+## Rows applied
+
+fa-a P1/P2 applied: 1, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 25.
+fa-a applied with a supervisor modification:
+- a#13: currency code unjammed (“1,000,000 دلار جدید تایوان”, “500,000 دلار جدید تایوان”, “200,000 دلار جدید تایوان”). ASCII comma thousands kept (R14). Persian digits and U+066C ٬ not used.
+- a#14: “تقویم جمهوری چین” → “گاه‌شماری مینگو”, gloss (民國…) kept. Gregorian “(۲۰۲۰)” not added (R13).
+- a#24: table row kept (row count is pinned). Label rewritten «دشواری طی مسیر» so آسان describes the difficulty of the path, matching English “Difficulty | Easy”.
+
+fa-b P1/P2 applied: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35.
+fa-b applied with a supervisor modification:
+- b#1: English is “footage no longer exists”, so «نبودن تصویر», not the suggested باقی‌نماندن. See “Reviewer got wrong”.
+- b#10: same ROC naming as a#14, also on 003 and 007 cites. No new Gregorian digit. «قانون کیفری جمهوری چین (刑法)» → «قانون کیفری تایوان (刑法)» (R8, never the PRC reading).
+- b#18: the two blocks stay (block count and ZWSP are pinned to the Korean source). Each block is now a complete sentence; فرار → ناپدید.
+- b#19: the paragraph stays. Wording inside it is «این نکته را پیش از امضای قرارداد اجاره احراز کنید.» The duplicate sentence was not deleted.
+- b#34: bare «خیر.» / «لزوماً چنین نیست.» removed from the body openings of §3 and §1 only. The FAQ answers keep both.
+
+No P3 rows in fa-a.md or fa-b.md.
+
+## Rows skipped
+
+- a#2: Hangul in frontmatter url of 008 (and the 009 slug the row names). R16 / ACCEPTED-ROUND. The url bytes were not changed, and the Hangul is not repeated in the body.
+- a#3: “TWD 1.57M” left byte-identical (R12, test-pinned). Not rewritten as «۱٫۵۷ میلیون».
+- a#12: Q16–Q20 were not promoted to headings, and the U+200B spacer lines in 003, 005, 006, 008, 009, 013, and 015 were not removed. The checker compares heading levels, block counts, and ZWSP counts to the Korean source, which has the same spacers (003: 52, 005: 8, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3). Removing them fails the checker.
+- a#14 / b#10 Gregorian year in parentheses: skipped (R13). ROC naming applied instead.
+- a#24 row deletion: skipped (table-row count). Label rephrased inside the row.
+- b#11: “0.5” → «نیم», the slash fraction “2/3”, and comma-thousands restyling skipped. R14 requires comma thousands and a decimal point for fa; a word for 0.5 drops a number the checker counts. Part a already accepts Western digits and “500,000”.
+- b#18 merge and ZWSP removal: skipped for the same checker reason as a#12. Wording inside the two blocks was fixed.
+- b#19 deletion of the whole sentence-block: skipped (block count). Wording inside the block was fixed.
+
+## Systemic patterns and how many instances changed
+
+Counts are replacements in the diff, not a second pass over untouched wording.
+
+- غرض (ulterior-motive reading of “purpose”) → هدف / «هدف آن انتفاع است»: 7 (001 ×1, 002 ×3, 004 ×3).
+- 條例 named آیین‌نامه → قانون: 8 (產業創新條例 ×5, 勞工退休金條例 ×2, 道路交通管理處罰條例 ×1). 工作規則 and 道路交通安全規則 stay آیین‌نامه. 辦法 «روش» → آیین‌نامه: 3 titles (file-management regulations ×2 including the link, notification regulations ×1) plus «همان حکم» → «همان آیین‌نامه» ×1.
+- حکم for a non-court determination: the police form ×2 («فرم تحلیل مقدماتی»), «حکم به ممکن‌بودن / کارآمد بودن» ×1 sentence, «به‌خطا حکم شود» → تعیین, «با شروط خود حکم می‌شود» → سنجیده. Court judgments stay حکم.
+- به‌حساب “on behalf of” → از جانب: 2 (004). Bank «به حساب» was left.
+- مکانیکی → به‌خودی‌خود: 4 (003 ×2, 014 ×1, 017 ×1).
+- داوری where English means an assessment, not arbitration → سنجش / سنجید: 16 (010 ×2, 011 ×2, 012 ×2, 014 ×4, 016 ×4, 017 ×2). «پیش‌داوری» in 004 was left.
+- مواد where it means records, and collides with statutory articles or with مواد اولیه: swept in 003 (Q8 and the police-form paragraph), 010 (medical, wage, and loss records), 011 (PIF records, manufacturer’s records, documentation alt, «محتوای PIF»), 012 closing, 014 «مدارک پایه», 016/017/007/014 headings «منابع رسمی» ×5, 017 link «معیارهای مقر فعالیت». Statutory «وفق مواد 1138», «مواد 38 و 39», «مواد خام», and «مواد اولیه» were left. 007 checklist «مواد مشخص» (factors such as age and health) was left; it is not a record.
+- محل حساب / محل ارث → داخل محاسبه / ترکه: 6 phrases in 016, including the FAQ and the body copy of the same sentence.
+- روز معیار → تاریخ مبنا, except 010 where English is each claim’s starting date («تاریخ شروع هر مدت»): 7 (002 ×1, 010 ×1, 016 ×5).
+- تقویم جمهوری چین → گاه‌شماری مینگو: 8 (003 ×3, 007 ×4, 010 ×1). قانون کیفری جمهوری چین → قانون کیفری تایوان: 3.
+- ادارهٔ توسعهٔ بازرگانی (Department of Commerce) → ادارهٔ بازرگانی: 2 (001 link label, 018 body).
+- R2–R5, R7, R9, R12: already in place on this pack (Korea only as a labelled example in 005; consultation languages EN/中文/JA/KO; no reply-time or free-meeting promise; team label «تیم», offices «دفاتر», profile «به انگلیسی»; emergency line already says Taiwan 119 / 110 / 112; paralegal and ministry lines already Persian). No masculine title for Wei Tseng. آقای B and آقای لین stay male. R6 dates already read 13 سپتامبر 2025 and the like; they were not touched. No Arabic-only ك/ي/ة in the Persian files.
+
+## §Verify
+
+node scripts/check-column-translation.mjs --dir src/content/columns-fa --lang fa 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=56
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-fa src/data | wc -l
+
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+
+      23
+
+(22 before this log file; the log is the extra untracked path. No commit.)
+
+## Reviewer got wrong (not applied as suggested)
+
+- b#1 suggested «به‌سبب باقی‌نماندن تصویر». That is the opposite of the English: the court does not draw an adverse inference merely because the footage no longer exists. The double negative in the old Persian was real; the fix uses «نبودن تصویر».
+- a#14’s “(۲۰۲۰)” and any other Gregorian beside a Minguo year. R13 forbids a new digit. The calendar was renamed گاه‌شماری مینگو instead.
+- a#3’s «۱٫۵۷ میلیون دلار جدید تایوان» for the pinned bio figure “TWD 1.57M”.
+- b#11’s word “نیم” for 0.5, and the request to abandon comma thousands. R14 and the checker require “0.5” and “500,000” for fa. Part a already says business Persian accepts that grouping.
+- a#12 and b#18, insofar as they ask to delete U+200B lines or to turn Q16–Q20 into new headings. Those lines match the Korean source the checker diffs against. The blog cadence is real; the structure is not free to change.
+- a#24’s “delete this row” and b#19’s “delete this sentence”, insofar as each is its own table row or block. The cells and the sentence were rephrased in place.

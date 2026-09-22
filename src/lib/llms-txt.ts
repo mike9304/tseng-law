@@ -210,7 +210,7 @@ export function sanitizeLlmsText(value: string, maxCharacters = ANNOTATION_MAX_C
   const withoutControls = value
     .normalize('NFC')
     .replace(/https?:\/\/[^\s]+/giu, ' ')
-    .replace(/[\p{Cc}\p{Cf}]/gu, ' ')
+    .replace(/(?![\u200C\u200D])[\p{Cc}\p{Cf}]/gu, ' ')
     .replace(/[\[\]()<>`#|\\]/gu, ' ')
     .replace(/\s+/gu, ' ')
     .trim();
@@ -281,7 +281,10 @@ export function validateLlmsTxt(body: string, maxBytes: number): void {
   const hasDisallowedControl = body
     .split('\n')
     .some((line) => /\p{Cc}/u.test(line));
-  if (/\p{Cf}/u.test(body) || hasDisallowedControl) {
+  // U+200C ZWNJ / U+200D ZWJ are orthographic joiners (Persian, Urdu, Indic and South-East Asian
+  // scripts) and are allowed; every other format character (bidi marks/embeddings/isolates,
+  // zero-width space, BOM, soft hyphen …) is still rejected.
+  if (/(?![\u200C\u200D])\p{Cf}/u.test(body) || hasDisallowedControl) {
     throw new Error('llms.txt contains control or bidi formatting characters');
   }
 

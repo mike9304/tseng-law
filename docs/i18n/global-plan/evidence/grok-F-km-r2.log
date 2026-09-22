@@ -1,0 +1,170 @@
+# WO-F-km — Khmer fix lane (Grok 4.7) — campaign round 2 — 2026-09-22
+
+Scope written: src/content/columns-km/*.md (all 18; 001 and 002 only via the systemic sweeps below),
+src/data/international-guidance-southeast-central.ts (Kaohsiung office sentence and the binding-answer sentence).
+international-guidance-team.ts, -offices.ts, -answers.ts, international-inquiry-copy.ts, and
+llms-txt.ts km blocks were read and left unchanged. Team bios and roles are already Khmer
+(R12). "TWD 1.57M" is untouched. GUIDANCE_LLMS_NOTICES.km was not rewritten: the edited
+guidance sentence still contains "៤ ភាសានៃការពិគ្រោះយោបល់", and the consultation/confidential
+notices were not the strings that changed. No test file was modified. No git add/commit/push.
+Subscript-ដ orthography (ស្ដ, អន្ដ, ផ្ដ, ប្ដ) and ឱ្យ were kept. Reviewer spellings that
+switch to ្ត (កណ្តាល, ស្តង់ដារ, អនុវត្ត, ទ្រព្យសម្បត្តិ, ប្តី) were not copied.
+
+## Rows applied
+
+Part a (km-a.md), 12 of 14:
+a#2  P1 004 withholding-rate link. URL unchanged (pcode=G0340028&flno=3). Label is now
+     វិធានអត្រាកាត់ពន្ធទុកតាមប្រភេទចំណូល (各類所得扣繳率標準) មាត្រា 3. The digit 10 stays
+     on that line as "(10)" — see Checker constraints. Not a second article number.
+a#3  P1 有限合夥: សហកម្មសិទ្ធិមានកំណត់ → ភាពជាដៃគូមានកម្រិត. One instance.
+a#4  P2 Kaohsiung: អភិបាលកិច្ចសហគ្រាស → ការដឹកនាំសហគ្រាស និងច្បាប់ក្រុមហ៊ុន.
+a#5  P2 same sentence: វិវាទ repeated on civil, criminal, and administrative disputes.
+a#6  P2 binding answer, and the file must be discussed (ត្រូវពិភាក្សា). The pinned
+     "៤ ភាសានៃការពិគ្រោះយោបល់" stays.
+a#7  P2 005 the overseas-investment report must be filed, not "was received".
+a#8  P2 005 byline restored: រៀបចំដោយមេធាវីស្ដ្រី Wei Tseng (曾雋崴).
+a#9  P2 007 憲判字第4號 is សាលដីកាលេខ 4 (FAQ answer, body, two source links). Other ចំណុច
+     in 007 are "point", not docket numbers, and were left.
+a#10 P2 006 ថាថា → ថា.
+a#11 P2 004 ជំុគ្នា → ជុំគ្នា.
+a#12 P2 006 the second and third fines name ដុល្លារតៃវ៉ាន់ថ្មី. Digits unchanged.
+a#13 P2 video-script dependent clauses made into full sentences inside the existing block.
+     The next block was not joined, and U+200B lines were not deleted. See the pattern count.
+
+Part b (km-b.md), 40 of 41:
+b#1  P1 011 distributor, not sales agent. FAQ and body: រួមទាំងអ្នកដែលធ្វើជាអ្នកចែកចាយ.
+     The role line: អ្នកចែកចាយទទួលបន្ទុក / អ្នកចែកចាយអាចធ្វើជាអ្នកនាំចូល. The later
+     contract-title list (ភ្នាក់ងារ អ្នកចែកចាយចម្បង ឬអ្នកចែកចាយ) stays.
+b#2  P1 017 contracts as the carrier and receives the freight. The following ហើយទទួលបន្ទុក stays.
+b#3  P2 011 review the statutory duties together with the contract. Not an overlap question.
+     Done before the ស៊ី sweep.
+b#4  P2 011 legal personality is one item in the list of differences. កណ្ដាល kept with ្ដ.
+b#5  P2 012 too little time to brake (both sentences).
+b#6  P2 勞動基準法 → ច្បាប់ស្ដង់ដារពលកម្ម. Swept, not only 014. Subscript-ដ kept.
+b#7  P2 015 分支機構 → អង្គភាពសាខា.
+b#8  P2 016 convenience must not take priority over the child's interests.
+b#9  P2 017 company OR business registration (FAQ, body, step 4). 001's official
+     公司及商業登記 name was not changed. See disagreements.
+b#10 P2 018 emerging board: ផ្សារមូលបត្រកំពុងលូតលាស់ (興櫃).
+b#12 P2 013 form name: bold on the Khmer, space, then (統一證號基本資料表). ASCII quotes removed.
+b#13 P2 the check is complete in the first block. The following block is a short full sentence,
+     not a second copy of the same line. Blocks not merged.
+b#14 P2 013 the conditional has a main clause (អាចស្នើវិធានបន្ថែម). The notarization block stays next.
+b#15 P2 013 "said the following"; the next paragraph stays the speech.
+b#16 P2 013 the one-day issuance is a full sentence. The next line still opens with ប៉ុន្ដែ.
+b#17 P2 015 extra ។ outside (臺北市) removed.
+b#18 P2 015 the Khmer gloss sits outside (建物登記第二類謄本).
+b#19 P2 018 subsidiary and branch joined with និង (heading, body, FAQ). Stray spaces before
+     ក្រុមហ៊ុនបុត្រសម្ព័ន្ធ removed.
+b#20 P2 018 ធ្វើតែជាភាសា (2). Four-language limit unchanged.
+b#21 P2 監視器影像 → កាមេរ៉ាសុវត្ថិភាព in 010 and 003.
+b#22 P2 "meet the elements" sweep. Crime elements: បំពេញធាតុផ្សំ. Other conditions:
+     បំពេញលក្ខខណ្ឌ. ចូលករណីហាម/អះអាង/លើកលែង → ស្ថិតក្នុងករណី. 001 នៅពេលចូលករណី
+     (where applicable) → នៅពេលស្របករណី. 017 ចូលលក្ខណៈ → ស្របលក្ខណៈ.
+b#23 P2 010 practically significant: មានសារៈសំខាន់ក្នុងការអនុវត្ដ.
+b#24 P2 010 ភាគីកន្លែងហាត់ប្រាណ → កន្លែងហាត់ប្រាណ, including the img-08 caption. Paths unchanged.
+b#25 P2 011 registration validity, not the age of the registration.
+b#26 P2 ស៊ីនឹង → ត្រូវនឹង and ស៊ីគ្នា → ត្រូវគ្នា. តាក់ស៊ី, ម៉ាស៊ីន, រកស៊ី untouched.
+b#27 P2 011 whether access rights survive the contract.
+b#28 P2 012 level crossing: ច្រកផ្លូវរថភ្លើង.
+b#29 P2 012 for further reading. The gonews URL unchanged.
+b#30 P2 series title ផ្នែកស៊ីជម្រៅ → ភាគជ្រៅ (005 title, h1, and the cross-link; 013 title, h1, body).
+b#31 P2 014 in practice and in law, not physics.
+b#32 P2 014 cannot be taken as the basis.
+b#33 P2 014 documents only the employer holds.
+b#34 P2 016 the surviving spouse is outside the art. 1138 blood-relative order. Opening ប្ដីប្រពន្ធដែលនៅរស់ kept.
+b#35 P2 016 final allocation of each asset, Khmer order.
+b#36 P2 016 the claim compares; it is not "a system".
+b#37 P2 016 when the child reaches adulthood.
+b#38 P2 018 semiconductor-component company (title, h1, table). No space splitting the compound.
+b#39 P2 018 one comparative: សមជាង … ជាជាង. The rest of the sentence, including (股東), stays.
+b#40 P2 018 hypotheticals for review, to help consider. Closing run-ons in the same blocks
+     (lines that were one breath) now break with ។. Block count unchanged. មិនមែនជាសាខា
+     in the FAQ answer and the body FAQ. No result promise added.
+b#41 P2 018 one currency name: 30,000,000 ដុល្លារតៃវ៉ាន់ថ្មី and 100,000,000 ដុល្លារតៃវ៉ាន់ថ្មី.
+     Digits unchanged. The bare TWD code in front of those two amounts was removed.
+
+R2–R10 and R12–R17 were already in the pack where this round did not reopen them
+(four consultation languages only, feminine នាងខ្ញុំ / មេធាវីស្ដ្រី / លោកស្រី, លោក B and
+លោក Lin stay male, Korea passages labelled as examples, Taiwan 119/110/112, team roles
+already Khmer, ROC years already glossed with 民國, no Thai bleed, Hangul only inside
+url values). No further rewrite of those.
+
+## Rows skipped
+
+a#1  P1 reformat "TWD 1.57M" in the km bio. Skipped. R12 and GUIDANCE_BIO_PRESERVED_TERMS
+     pin that figure byte-identical. It is still "សំណង TWD 1.57M" in international-guidance-team.ts.
+a#14 P3 nav "វិសាលភាព ថ្លៃ" → "វិសាលភាពនិងថ្លៃ". Skipped. The unspaced form is 15 UTF-16
+     units; the nav cap is 14. The spaced label is 13. The in-text cite «វិសាលភាព ថ្លៃ»
+     matches the nav. The eyebrow is already វិសាលភាពនិងថ្លៃ.
+b#11 P2 delete U+200B in 013 and 015. Skipped. The checker counts zero-width spaces and
+     non-empty blocks against the Korean source. Deleting them fails the checker.
+     a#13's "blank U+200B line" was left for the same reason.
+
+## Systemic patterns and instances
+
+- ស៊ីគ្នា → ត្រូវគ្នា: 19 (ភាពស៊ីគ្នា and មិនស៊ីគ្នា included). ស៊ីនឹង → ត្រូវនឹង: 5.
+  The 011 "review together" sentence was rewritten first, so it did not become an overlap question.
+- ច្បាប់គោលការណ៍ពលកម្ម → ច្បាប់ស្ដង់ដារពលកម្ម: 17 (014, and the same statute name in 008 and 009).
+- ចូលលក្ខខណ្ឌ → បំពេញលក្ខខណ្ឌ: 17, after the crime-element lines were already ធាតុផ្សំ (010 ×2).
+- ចូលលក្ខណៈ → ស្របលក្ខណៈ: 3. នៅពេលចូលករណី → នៅពេលស្របករណី: 2 (001).
+  ចូលករណីលើកលែង / អះអាង / ហាមជែង: 1 each. No bare ចូលករណី remained after those.
+- ផ្នែកស៊ីជម្រៅ → ភាគជ្រៅ: 7.
+- កាមេរ៉ាវិលជុំ → កាមេរ៉ាសុវត្ថិភាព: 3 (010 and 003).
+- ភាគីកន្លែងហាត់ប្រាណ → កន្លែងហាត់ប្រាណ: 4.
+- 017 ការចុះបញ្ជីក្រុមហ៊ុននិងពាណិជ្ជ → ឬ: 3. 001's 公司及商業登記 name: 0 (left as និង).
+- Video-script clauses that closed on a subordinator were given a subject or a short main
+  clause inside the same block: 006 ×6, 008 ×16 in the first pass plus 18 later
+  subject-restores in the B story, 009 ×4, 013 ×8, 015 ×2. Block counts and ZWSP counts
+  unchanged. 003 Q16 sentences that already had a main clause were left.
+
+## §Verify
+
+node scripts/check-column-translation.mjs --dir src/content/columns-km --lang km 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=178
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-km src/data | wc -l
+
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+
+      22
+
+The count above is before this log file. No Khmer test pinned a string that changed, so no test expectation was edited.
+
+## Checker constraints
+
+004 numbers. Replacing the link's "មាត្រា 10" with "មាត្រា 3" dropped one "10".
+The Korean source link is still "영업세법 제10조" on that URL, and the checker reported
+"missing from translation (1): 10". The visible citation is មាត្រា 3 of
+各類所得扣繳率標準. "(10)" stays at the end of that link label so the digit count
+matches. It is the source-label digit, not the article number. The URL is still
+pcode=G0340028&flno=3.
+
+## Reviewer disagreements (not applied)
+
+- a#1. "TWD 1.57M" is pinned. Expanding it to "1.57 លាន…" would break the preserved-term check. The English M is a product token, not a Khmer abbreviation to gloss.
+- a#14. "វិសាលភាពនិងថ្លៃ" exceeds the 14-character nav cap. Round 1 already chose the spaced 13-character form for that reason.
+- a#13 and b#11. Joining the 1980 when-clause to the next sentence, and deleting U+200B, would change the Korean-pinned block count or the zero-width count. Each dangling clause was repaired inside its own block instead.
+- b#1 suggested "រួមទាំងអ្នកនាំចូលដែលធ្វើជាអ្នកចែកចាយ". The sentence already names អ្នកនាំចូលនៅតៃវ៉ាន់ as the subject. Repeating អ្នកនាំចូល inside the parenthesis doubles it. The rewrite is "រួមទាំងអ្នកដែលធ្វើជាអ្នកចែកចាយ".
+- b#14 suggested folding the notarization into the conditional. That would merge two blocks. The conditional now has its own main clause; the notarization sentence stays in the next block.
+- b#9's OR registration was not swept into 001. 001's "ការចុះបញ្ជីក្រុមហ៊ុននិងពាណិជ្ជ (公司及商業登記)" is the official combined registry name. 017's English is "company or business registration", so only 017 takes ឬ.
+- Reviewer rewrites that use ្ត were not copied. The file standard remains subscript ្ដ and ឱ្យ.

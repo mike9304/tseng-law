@@ -73,11 +73,11 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 换句话说，
 
-台湾法不论过失在企业一方，
+过失在雇主一方时，受雇人可以请求资遣费。
 
-或在受雇人一方，
+过失在受雇人一方时，雇主可以不给付资遣费。
 
-都承认各方有不给付资遣费或请求资遣费的权利。
+台湾法是按过失所在分别处理，而不是让双方同时享有请求与不给付两项权利。
 
 有时，劳动关系双方都有过失时，
 
@@ -91,7 +91,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 “**时间**”非常重要。
 
-多数情形，事先做好准备的人，其权利较获保护。
+多数情形，事先做准备的一方更有条件维护自己的权利；这并不当然带来某一结果。
 
 ---
 

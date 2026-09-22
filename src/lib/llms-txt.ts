@@ -623,9 +623,9 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
   },
   'zh-hans': {
     consultationNotice:
-      '律师咨询以英语、中文、日语和韩语进行。本页面以简体中文撰写，咨询时使用的中文包括普通话与书面中文。',
+      '律师咨询以英语、中文、日语和韩语进行。本页面以简体中文撰写。咨询使用的中文，指普通话与书面中文。阅读本简体中文页面，并不表示某次咨询会以简体中文这一书面形式进行。',
     discoveryNotice:
-      '本 llms.txt 文件只是公开页面的检索地图；它不承诺搜索排名、背书、人工智能推荐或展示。',
+      '本 llms.txt 文件只是公开页面的查找索引；它不承诺搜索排名、背书、推荐或必然展示。',
     confidentialNotice:
       '因为原文会被保存，初期请不要写下尚不需要的内容，例如护照号码、身份证号或银行账户信息。',
   },

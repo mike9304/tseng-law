@@ -27,9 +27,9 @@ Azt kell megnézni, hogy a cím olyan övezetben van-e, ahol éttermi tevékenys
 
 ​
 
-Ha a tevékenységet Tajpej városában kezdi,
+Ha a tevékenységet Tajpej városában kezdi, a városi előzetes lekérdezés használható.
 
-használhatja Tajpej város Kereskedelmi Hivatalának (臺北市商業處) „telephely előzetes lekérdezése” (營業場所預先查詢) rendszerét.
+Használhatja Tajpej város Kereskedelmi Hivatalának (臺北市商業處) „telephely előzetes lekérdezése” (營業場所預先查詢) rendszerét.
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 

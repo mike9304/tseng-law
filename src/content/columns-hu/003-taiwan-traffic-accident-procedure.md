@@ -49,7 +49,7 @@ A választás az elévülés megszakadása (時效中斷), az alperesi kör, a b
 
 Büntetőjogi felelősség csak akkor állapítható meg, ha elismerték mindenki gondossági kötelezettségének megsértését, valamint e megsértés és a másik fél sérülései közötti okozati összefüggést. Önmagában az, hogy mindkét oldalon volt gondatlanság, nem kelti automatikusan a gondatlan testi sértés felelősségét.
 
-Polgári síkon, a polgári törvénykönyv 217. cikke szerint, ha a károsultnak van a kár okozásához vagy súlyosbításához hozzájáruló gondatlansága (與有過失), a bíróság csökkentheti vagy elengedheti a kártérítést. Például, ha a tajvani új dollárban (新臺幣, TWD) elismert kár TWD 1.000.000, és a károsult gondatlanságát 50 %-ra értékelik, az összeg TWD 500.000-ra csökkenthető a többi korrekció előtt.
+Polgári síkon, a polgári törvénykönyv 217. cikke szerint, ha a károsultnak van a kár okozásához vagy súlyosbításához hozzájáruló gondatlansága (與有過失), a bíróság csökkentheti vagy elengedheti a kártérítést. Például, ha az új tajvani dollárban (新臺幣, TWD) elismert kár TWD 1.000.000, és a károsult gondatlanságát 50 %-ra értékelik, az összeg TWD 500.000-ra csökkenthető a többi korrekció előtt.
 
 A szakvélemény (鑑定) vagy az előzetes elemzési táblázat fontos irat lehet, de nem köti a bíróságot mechanikusan. A bíróság a bizonyítékok összességét vizsgálja, ideértve a vallomásokat, a képeket és a járművek állapotát.
 
@@ -63,7 +63,7 @@ Ha magánindítványra üldözendő bűncselekményről van szó, a büntetőelj
 
 ### Q1–Q5 hivatalos alapjai
 
-- [A közúti forgalom igazgatásáról és szankcióiról szóló rendelet (道路交通管理處罰條例) 62. cikke](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [A közúti forgalom igazgatásáról és szankcióiról szóló törvény (道路交通管理處罰條例) 62. cikke](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
 - [A Kínai Köztársaság (Tajvan) büntető törvénykönyve, 185-4. cikk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
 - [A Kínai Köztársaság (Tajvan) büntető törvénykönyve, 284. cikk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [A Kínai Köztársaság (Tajvan) büntető törvénykönyve, 287. cikk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
@@ -175,7 +175,7 @@ A kötelező gépjármű-felelősségbiztosításról szóló törvény (強制�
 
 Egyjárműves balesetben e jármű vezetője elvben nem címzettje e jármű kötelező biztosításának. Több jármű részvételével járó balesetben azonban vannak esetek, amikor a vezető a másik érintett jármű kötelező biztosítója felé érvényesíthet szolgáltatásokat.
 
-A 2026. május 29-én módosított kifizetési tarifa (強制汽車責任保險給付標準) a 2026. július 1-jétől bekövetkezett balesetekre alkalmazandó. A sérülések ésszerű és szükséges orvosi költségeinek plafonja TWD 200.000 tajvani új dollárban; a rokkantsági szolgáltatás (失能) TWD 80.000-tól TWD 3.000.000-ig terjed a 15 törvényes fokozat szerint; a halálozási szolgáltatás TWD 3.000.000, a halál, a rokkantság és az orvosi költségek együttes maximuma 1 károsultra és 1 balesetre TWD 3.200.000. A korábbi balesetekre a megelőző tarifa alkalmazható.
+A 2026. május 29-én módosított kifizetési tarifa (強制汽車責任保險給付標準) a 2026. július 1-jétől bekövetkezett balesetekre alkalmazandó. A sérülések ésszerű és szükséges orvosi költségeinek plafonja TWD 200.000 új tajvani dollárban; a rokkantsági szolgáltatás (失能) TWD 80.000-tól TWD 3.000.000-ig terjed a 15 törvényes fokozat szerint; a halálozási szolgáltatás TWD 3.000.000, a halál, a rokkantság és az orvosi költségek együttes maximuma 1 károsultra és 1 balesetre vetítve TWD 3.200.000. A korábbi balesetekre a megelőző tarifa alkalmazható.
 
 A Harmadik személlyel szembeni felelősségbiztosítás (第三人責任險), a járművezetői balesetbiztosítás (駕駛人傷害險) és a saját jármű kárbiztosítása (車體損失險) fakultatív, szerződéses jellegű termékek. A tényleges fedezet a biztosított, a plafon, az önrész (自負額), a kizárások, a gondatlanság és a kötvény egyéb feltételei szerint különbözik, ezért a kötvényt és a feltételeket ügyenként kell ellenőrizni.
 
@@ -219,7 +219,7 @@ A biztosító számára egy konkrét ügyben további TWD 500.000 vagy TWD 1.000
 
 ​
 
-Ezért nem ajánlom, hogy a vita egészét a biztosítóra bízzák.
+A vita egészét ezért nem érdemes a biztosítóra bízni.
 
 ​
 
@@ -239,7 +239,7 @@ Gondatlan testi sértés miatt egyes ítéletekben mintegy 3 hónap szabadságve
 
 ​
 
-Ha pénzbüntetésre váltják (易科罰金), a büntető törvénykönyv 41. cikke 1. bekezdése 1 napra TWD 1.000, TWD 2.000 vagy TWD 3.000 átváltást állapít meg; TWD 1.000/nap szerint számítva a 3 hónap büntetés 3 × 30 × TWD 1.000 = TWD 90.000.
+Ha pénzbüntetésre váltják (易科罰金), a büntető törvénykönyv 41. cikke 1. bekezdése 1 napra TWD 1.000, TWD 2.000 vagy TWD 3.000 átváltást állapít meg; naponta TWD 1.000 szerint számítva a 3 hónap büntetés 3 × 30 × TWD 1.000 = TWD 90.000.
 
 ​
 
@@ -323,7 +323,7 @@ Továbbá az ügyvédnek világosan ismertetnie kell a fél helyzetét, és vil�
 
 ​
 
-Ezzel zárulnak a közúti balesetekre vonatkozó kérdések és válaszok.
+A fentiek a közúti balesetekre vonatkozó általános kérdéseket és válaszokat foglalják össze.
 
 ​
 
@@ -347,7 +347,7 @@ Az okozó gyakran nem törődik azzal, hogy telefonáljon az áldozat állapotá
 
 ​
 
-A sértett ezért mélyen megsértődik és haragra gerjed, ezért gyakran nem enged a tárgyalási összegből, vagy előzetes vagyonzárlatot (假扣押) kér, és a másik fél vagyonának zárolását a végsőkig viszi.
+A sértett ezért mélyen megbántódik, és haragra gerjed, ezért gyakran nem enged a tárgyalási összegből, vagy előzetes vagyonzárlatot (假扣押) kér, és a másik fél vagyonának zárolását a végsőkig viszi.
 
 ​
 

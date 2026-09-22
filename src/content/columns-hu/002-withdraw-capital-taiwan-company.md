@@ -24,7 +24,7 @@ Tajvani társaság alapítása után, ha a tevékenység megszüntetéséről d�
 
 A tagok tehát nem vonhatják ki szabadon a társaság pénzeszközeit vagy javait pusztán azért, mert korábban hozzájárulást nyújtottak. A társaság nevére szóló pénzeszközöket, követeléseket, berendezéseket, járműveket, ingatlanokat, kauciókat és szellemi tulajdonjogokat mind a társaság jogai és kötelezettségei keretében kell kezelni. Fordítva, ha a társaságnak a tagokkal szemben valódi tartozása van, a tartozás fennállását és a törlesztés alapját szerződés, átutalási igazolások, könyvek és határozatok alapján kell vizsgálni.
 
-A feloszlatás (解散) és a felszámolás (清算), amely a társaságot véglegesen megszünteti, a tőkeleszállítás (減資), amely a létfenntartás mellett csökkenti a tőkét, a szokásos működési költségek kifizetése, a nyereség feltételéhez kötött osztalék (股利) és a társaság által ténylegesen viselt kölcsönök törlesztése külön jogi és adójogi kategóriák. Kifelé minden esetben pénz hagyhatja el a társaság számláját; a szükséges határozatok, a hitelezővédelem, az igazolások, a könyvelési kezelés, a forrásadó (扣繳) és a bevallás módja azonban nem azonos.
+A feloszlatás (解散) és a felszámolás (清算), amely a társaságot véglegesen megszünteti, a tőkeleszállítás (減資), amely a társaság fennmaradása mellett csökkenti a tőkét, a szokásos működési költségek kifizetése, a nyereség feltételéhez kötött osztalék (股利) és a társaság által ténylegesen viselt kölcsönök törlesztése külön jogi és adójogi kategóriák. Kifelé minden esetben pénz hagyhatja el a társaság számláját; a szükséges határozatok, a hitelezővédelem, az igazolások, a könyvelési kezelés, a forrásadó (扣繳) és a bevallás módja azonban nem azonos.
 
 Önmagában a működés megszakítása nem szünteti meg sem a jogi személyiséget (法人格), sem a bevallási kötelezettségeket. Ha a végleges megszüntetést választották, a feloszlatás bejegyzését (解散登記) és a felszámolást össze kell kapcsolni, hogy a társaság szerződéseit, követeléseit, tartozásait, adóit és maradványvagyonát rendezzék. Ha egyelőre fenn kell maradnia az újrakezdés lehetőségének, a tevékenység szüneteltetése (停業) vizsgálható; a szüneteltetés nem a társaság létét megszüntető eljárás.
 
@@ -147,4 +147,4 @@ Minél tovább tart a szüneteltetés, annál inkább bonyolódhat a későbbi m
 
 Ez a cikk a tajvani társaság megszüntetéséről és a társasági vagyon kezeléséről szóló általános jogi tájékoztató és oktatási anyag; nem minősül meghatározott ügyben adott jogi véleménynek. A megfelelő feloszlatási, felszámolási, tőkeleszállítási és szüneteltetési eljárás, valamint az adóbevallás a társasági forma, az alapszabály, a vagyoni helyzet, a hitelezők, a külföldi beruházás és a különös ügylet szerint különbözhet; a tényleges határozat vagy tőkemozgás előtt az adott ügyet külön kell vizsgálni.
 
-**Ügyvédnő Wei Tseng (曾雋崴)**
+**Wei Tseng ügyvédnő (曾雋崴)**

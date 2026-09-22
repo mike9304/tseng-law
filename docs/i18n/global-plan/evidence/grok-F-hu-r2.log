@@ -1,0 +1,145 @@
+WO-F-hu r2 — Grok 4.7 fix lane — 2026-09-22
+Workspace: /Users/son7/Projects/tseng-law-fix-hu-r2
+No git add/commit/push.
+
+## Rows applied
+
+Part a (hu-a.md), applied:
+1 P1 002 — létfenntartás → a társaság fennmaradása (減資). 006 létfenntartáshoz való jog (生存權) left; that one is subsistence.
+2 P1 004 — anchor no longer names the Business Tax Act (營業稅法). Label is the non-resident dividend withholding rule. URL unchanged (flno=3). Digit „10. cikk” kept: dropping it failed numbers. See adjusted.
+3 P1 009 — függetlenül → aszerint, inside the existing three blocks (munkáltató / munkavállaló / az egyik nem fizeti, a másik követelheti). Blocks not merged.
+5 P2 003 — tajvani új dollár → új tajvani dollár (line 52 „az új tajvani dollárban”, line 178). 005 „tajvani dollárok” / „tajvani dollár tőke” → új tajvani dollár. 006 was already „új tajvani dollár”.
+6 P2 003 — rendelet → törvény for 道路交通管理處罰條例 art. 62. URL unchanged. 辦法 titles left as rendelet.
+7 P2 003 — megsértődik → megbántódik.
+8 P2 003 — „1 károsultra és 1 balesetre vetítve”; „TWD 1.000/nap” → „naponta TWD 1.000”. Digits kept (Korean 피해자 1명·사고 1건당 and the daily rate).
+9 P2 003 — „A vita egészét ezért nem érdemes a biztosítóra bízni.” Close: „A fentiek a közúti balesetekre vonatkozó általános kérdéseket és válaszokat foglalják össze.”
+11 P2 005 — the page no longer tells the reader to go and read part 2. Links kept. „ez a 2. rész … (公司設立)”. Digit 2 kept: dropping it failed numbers.
+12 P2 005 — rezsim → devizaszabályozás.
+13 P2 001 — „a befektetők és a székhely helyét”. Same pattern in the 004 disclaimer: „a befektető és a székhely helye”.
+14 P2 bylines — „Wei Tseng ügyvédnő (曾雋崴)” in 001, 002, 004, 007, 011, 014, 016, 017. 003 and 008 already had the name first.
+15 P2 007 — „a Háztartás-nyilvántartási Főosztály”.
+16 P2 007 — „Önmagában az a közlés, hogy a válás a külföldi jog szerint hatályos…”.
+17 P2 háztartási nyilvántartás → háztartás-nyilvántartás. See systemic.
+18 P2 guidance — vállalatvezetés → vállalatirányítás (Kaohsziung).
+19 P2 guidance — „a könyvviteli részleggel egy közös eljárásban”.
+20 P2 guidance — belső munkarend (工作規則) → belső munkaügyi szabályzat. 008 already said belső szabályzat.
+21 P2 team bio — „Koreai üzleti csapat, Hovering International Law Firm”. Role line „Koreai működési vezető (Korea Operations Manager)” left; the review says that gloss can stay.
+22 P2 008 — the ha-clause is now a full sentence in its own block; the next block stands alone („A megszerzés a törvényi feltételektől függ.”). „Önöknek” → „Önnek”. Blocks not merged.
+23 P2 008 — period after the társaság clause, after „A4-es lapot adott B-nek”, and after the quoted „Én, [név]…”. „tartalomként.” → „Ez volt a kért szöveg.”
+24 P2 008 — „Sokan már tudják ezt.” → „A végkielégítés szabálya jogrendszerenként eltér.” Next block: „Tajvanon ez másként van.” Not merged with the Korea sentence.
+25 P2 008 — „Az iroda egyik ügyében B úr…”. „legjobb eredményű” left: it describes employee B, as the verdict says.
+26 P2 008 table — „Indokolt ok nélküli hiányzás (曠工)”.
+27 P2 008 — „1 betöltött szolgálati évenként” and „1 év szolgálati időnként 1 havi átlagbért” (FAQ and blockquote). Digits 1 and 0,5 kept.
+28 P2 009 — valótlan nyilatkozatot (虛偽意思表示).
+29 P2 009 — „amikor a bekövetkezett kárról tudomást szerzett”.
+
+Part b (hu-b.md), applied:
+1 P1 010 — szankciós kártérítés, not tényleges kártérítés, for whether punitive damages are actually awarded.
+2 P1 018 — jogi forma, not szerződésminta.
+3 P2 010 — magánindítvány (告訴).
+4 P2 010 — „az edzést végző szemlélete” in the image alt and the link label. Paths unchanged.
+5 P2 011 — forgalomba hozná / forgalomba hoznák, a forgalmazást folytatni, utolsó forgalomba hozatalának, forgalomba hozatali ütemezés. „ellátott” (equipped with a sign) in 012 left.
+6 P2 011 — csírátlanító → fertőtlenítő (FAQ, body, „hatása”).
+7 P2 013 — „rendszerint 2 havi bér”. Digit 2 kept („két” is not in the hu numeral lexicon).
+8 P2 014 — „A teher körének megítéléséhez az is hozzátartozik, hogy…”.
+9 P2 014 — „A tényleges kimenetel … vizsgálatától függ” (FAQ and body).
+10 P2 014 — the notice period „arra vonatkozik, mikor szűnik meg”; validity and repayment „arra, keletkezik-e … vagyoni felelősség”.
+11 P2 014 — a képzés lebonyolításának nyilvántartását.
+12 P2 014 — „mikor keletkezik rá a jogosultság” and „hogyan keletkezik a jogosultság a már ledolgozott időszaknak megfelelő részre”.
+13 P2 016 — „az egyik kérdésre levont következtetést … átviszik”.
+14 P2 016 — whether the situs accepts the Taiwan determination.
+15 P2 016 — tényleges tulajdonosává (FAQ, §7, and the following sentence). 3.
+16 P2 016 — „minden rendszer számítási alapját”.
+17 P2 017 — szállítmányozás (運送承攬) / szállítmányozó / szállítmányozásként. „fuvarozási szerződés” and fuvarozó (運送人) left.
+18 P2 018 — „minden tagnak 1 szavazata van, és 1 tagra 1 szavazat jut”. Digits kept. File still numbers PASS 25=25.
+19 P2 018 — „Egy második és minden további külföldi személy munkavállalási engedélyéhez…”.
+20 P2 018 — a befektetők alapadatait. hozzájárulás as capital contribution left.
+21 P2 018 — a tőzsde előtti kereskedésben való nyilvántartásba vétel (興櫃).
+22 P2 010 — „a veszteséget nem számítják”.
+23 P2 010 — „pusztán abból, hogy a felvételek nem maradtak meg, a bíróság sem következtet…”.
+24 P2 011 — továbbíthatják (four subjects).
+25 P2 011 — doubled comma after címkét removed.
+26 P2 011 — „a jelenleg illetékes szerv, a Gazdasági Minisztérium Beruházásvizsgáló Főosztálya (經濟部投資審議司)”. Bold and gloss kept.
+27 P2 013 — „az érintett tőkét (資本額) … használják-e fel”.
+29 P2 014 — „Azt is vizsgálják, hogy a munkavállaló a szerződéskötés előtt megérthette-e…”.
+30 P2 014 — „Különösen az a táblázat segíti…, amely megmutatja…”.
+31 P2 016 — „a gyermek vagyonaként azonosíthatók legyenek, és a kiadást a célja és az alapja szerint kell feljegyezni”. The suggested „a kiadást célja” is still ungrammatical; the article was added.
+32 P2 017 — dative „külföldinek … meg kell erősítenie” (FAQ and body). Art. 35: „a külföldinek vagy a külföldi jogi személynek, ha…”.
+33 P2 017 — „a teljes eljárás befejezésére ezért nem ígérhető egyetlen határidő sem”.
+34 P2 017 — „az eredeti anyagoknak az illetékes szerv nyilvántartásával való összevetésével”.
+35 P2 018 — „A fentiek a szerződés tervezésére vonatkozó javaslat.”
+36 P2 010 — „legfeljebb a tényleges kár összegéig (1-szeres)”. Digit kept (Korean 1배).
+37 P2 011 — „a tajvani vállalkozás”.
+38 P2 011 — „összhangban van-e a gyártóra vagy az importőrre rótt törvényi kötelezettség…”.
+39 P2 011 — „Eljárást tartanak fenn … megválaszolására.”
+40 P2 012 — „„A” mindkét járművet meg akarta előzni”.
+41 P2 012 — „tiltja az előzést olyan szakaszokon, ahol … jelző tábla van”.
+42 P2 013 — „Mivel Tajvanon sok a pénzmosási (洗錢) eset…”.
+43 P2 013 — the bank sentence is complete in each block (not merged). „Ezért érdemes az üzlethelyiséget korán megkeresni.” „a gyakorlat ezt megerősíti.” „Mint fentebb szerepel”. Same broken ha-clause in 015 completed inside its block, and the next line capitalised.
+44 P2 014 — „e költség nem fordítható…” (no dangling „a jelentése”).
+45 P2 014 — tájékoztató iratokban.
+46 P2 014 — „Legalább 3 hónapos, de 1 évnél rövidebb folyamatos munkaviszony” and the two parallel items. Digits kept.
+47 P2 016 — „először annak eredményét kell figyelembe venni, és csak azután…”.
+
+Also R8 on the 017 link label: „A külföldiek befektetéséről szóló törvény (外國人投資條例)”. URL unchanged. Same name as 013.
+
+R2 country-note in 001, R3 softenings, R9 (119 / 110 / 112 in Taiwan), feminine ügyvédnő, and the four-language consultation lock were already in place and were not loosened. llms.txt notices were not rewritten: they were not flagged, and consultationNotice / confidentialNotice stay substrings of the pack. No test expected-string had to change.
+
+## Rows skipped
+
+4 (a) and 48 (b) — space as the thousands separator („500 000”, „1 579 589”). ACCEPTED-ROUND skip. NUMBER_THOUSAND_STYLE for hu is `dot`. Amounts left as 500.000 / 1.579.589 and the rest. Currency-before-amount order left with them.
+10 (a) — do not turn Q16–Q20 into new ## headings, and do not delete U+200B. checkHeadings requires the Korean heading-level list; checkBlocks requires the same ZWSP count (003: 52, 005: 8, 006: 4, 008: 10, 009: 5). The blanks are in the Korean source. The blog sentences in those blocks were rephrased (rows 9 and 24).
+28 (b) — do not delete the U+200B in 013/015. Same ZWSP parity (013: 5, 015: 3). The broken clauses were rephrased inside the blocks (row 43).
+30 (a) — Hangul in frontmatter `url` of 008 and 009. ACCEPTED-ROUND / R16. Not edited.
+
+Adjusted, not skipped:
+2 (a) — „(10. cikk)” remains on the corrected withholding-rule label. Removing 10 failed numbers. The false act name and the gloss 營業稅法 are gone.
+8 (a), 27 (a), 7 (b), 18 (b), 36 (b) — source digits stay (1, 2, 0,5, 1-szeres). „egy” / „két” are not parsed for hu, so the reviewer’s word forms would fail numbers.
+11 (a) — „ez a 2. rész” stays. Removing 2 failed numbers.
+22 (a), 23 (a), 24 (a), 43 (b) — rephrased inside the existing blocks. Not merged.
+
+## Systemic patterns and how many instances changed
+
+- háztartási nyilvántartás → háztartás-nyilvántartás: 12 (007 ×6, 016 ×2, 017 ×3, guidance services ×1). Already-hyphenated „háztartás-nyilvántartási” left.
+- Title-before-name byline „Ügyvédnő Wei Tseng”: 8.
+- Currency name order (új tajvani dollár, not tajvani új / bare tajvani dollár): 4 (003 ×2, 005 ×2).
+- Case mismatch (nominative subject with a transitive plural, or nominative with kell + -nie): 7 (010 ×2, 011 ×1, 013 ×1, 017 dative ×2, 017 art. 35 ×1).
+- Market „ellát” for putting a cosmetic on the market: 5 in 011.
+- csírátlanító: 3 in 011.
+- fuvarozási megbízás/megbízott for 運送承攬: 6 in 017.
+- Blog voice / unfinished clause, rephrased inside the block: 003 ×2, 008 ×10, 009 ×4, 013 ×5, 015 ×2.
+- Dot thousands separators: 0 changed (skip).
+- U+200B blanks: 0 deleted (skip).
+- Hangul url: 0 changed (skip).
+
+## §Verify
+
+===== CHECKER =====
+neighbour      PASS   
+hanzi          PASS   han=46
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+===== MARKERS =====
+       0
+===== TSC =====
+TSC_OK
+===== VITEST =====
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+===== GIT =====
+      22
+
+The block above is the work-order commands as run, before this log file existed. `git status --short | wc -l` after writing this log is 23, because the log itself is untracked. The 22 already included this lane’s edits plus files that were dirty or untracked before the lane (WO-F-hu.txt, the r2 review files). Nothing was staged.
+
+## What I believe the reviewer got wrong — not applied
+
+- Space-grouped thousands are normal Hungarian, but they are not a checker-safe form here. Not a legal error; left as dots on the skip rule.
+- The U+200B lines and the Q16–Q20 body lines are the Korean source structure, not leftover Hungarian blanks. Promoting them to headings or deleting the blanks fails the checker. Not applied. The blog wording inside those blocks was still rewritten.
+- Merging 008, 009 and 013 into single paragraphs would drop blocks. Each block was made to stand on its own.
+- „egy” and „két” for the statutory 1 and 2 are right Hungarian, and they fail the number check. Digits kept.
+- The suggested 016 close „a kiadást célja és alapja szerint” still does not parse. Written as „a kiadást a célja és az alapja szerint”.
+- I agree with the P1 legal calls (002 fennmaradása, 004 mislabeled anchor, 009 aszerint, 010 szankciós kártérítés, 018 jogi forma). The anchor still shows „10. cikk” only because the checker counts that digit; the Business Tax Act name is what was wrong.

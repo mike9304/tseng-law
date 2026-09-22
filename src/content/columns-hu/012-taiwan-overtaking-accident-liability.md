@@ -19,7 +19,7 @@ Ha az elöl haladó jármű lassan megy, az előzés (超車) mindennaposnak tű
 
 A [tajvani közúti közlekedésbiztonsági szabályzat (道路交通安全規則) 101. cikke](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=101) együtt rögzíti azokat a feltételeket, amelyek mellett az előzés tilos, és azt a sorrendet, amelyet ugyanazon sávban engedélyezett előzéskor követni kell.
 
-A 101. cikk tiltja az előzést kanyart, meredek emelkedőt vagy lejtőt, keskeny hidat, alagutat vagy kereszteződést jelző táblával ellátott szakaszokon, valamint vasúti átjáróknál és útmunkálatoknál.
+A 101. cikk tiltja az előzést olyan szakaszokon, ahol kanyart, meredek emelkedőt vagy lejtőt, keskeny hidat, alagutat vagy kereszteződést jelző tábla van, valamint vasúti átjáróknál és útmunkálatoknál.
 
 Továbbá nem lehet előzni iskolát vagy kórházat jelző táblával ellátott helyen vagy szakaszon, más előzési tilalmi táblával vagy jellel ellátott helyen, ha szemből jármű közeledik, sem akkor, ha elöl két vagy több jármű halad egymás után.
 
@@ -37,7 +37,7 @@ Az iroda által kezelt, anonimizált ügyben A motorkerékpár-vezető B utassal
 
 ![Baleseti ábra, amely a motorkerékpár és az elöl haladó két jármű előzési pályáját mutatja hegyi úton](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A mindkét járművet meg akarta előzni, az ellenkező sávba hajtott és gyorsított. A 2. számú jármű is készült az 1. számú jármű előzésére: az index bekapcsolása után 1 másodperc sem telt el, amikor az ellenkező sávba lépett. A motorkerékpárnak nem volt elég ideje a fékezésre, és összeütközött a 2. számú járművel.
+„A” mindkét járművet meg akarta előzni, az ellenkező sávba hajtott és gyorsított. A 2. számú jármű is készült az 1. számú jármű előzésére: az index bekapcsolása után 1 másodperc sem telt el, amikor az ellenkező sávba lépett. A motorkerékpárnak nem volt elég ideje a fékezésre, és összeütközött a 2. számú járművel.
 
 B súlyos fejsérülést szenvedett, és a helyszínen meghalt; A eszméletét vesztette, és kórházba szállították.
 

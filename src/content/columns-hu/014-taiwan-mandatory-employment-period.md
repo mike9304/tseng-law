@@ -13,7 +13,7 @@ faq:
   - q: "Az újonnan belépők képzése vagy a törvényileg kötelező képzés szakmai-műszaki képzésnek minősül?"
     a: "A tajvani Munkaügyi Minisztérium (勞動部) 2026. június 5-i iránymutatása szerint a rendszeres képzés, az általános munkaköri képzés, az újonnan belépők munkahelyi beilleszkedési képzése és a törvény által elrendelt kötelező képzés költsége nem alapja a minimális szolgálati időre vonatkozó kikötésnek, sem kötbér (違約金) vagy költség-visszatérítés iránti igénynek. Nemcsak a képzés megnevezését kell nézni, hanem a konkrét tanmenetet, a szakmai-műszaki tartalmat, az időtartamot, a munkáltató által ténylegesen viselt költséget és a bizonylatokat."
   - q: "Korai kilépéskor a szerződéskötési díjat (簽約金) vagy a bentmaradási bónuszt (留任獎金) teljes egészében vissza kell adni?"
-    a: "Nem mindig a teljes összeget kell visszaadni. Ha a szerződéskötési díj, a bentmaradási bónusz vagy más előzetes juttatás (預付性給付) a minimális szolgálati időre vonatkozó kikötés észszerű ellentételezéseként került kifizetésre, a célt egyértelműen közölni kell a munkavállalóval. A tajvani Munkaügyi Minisztérium 2026. június 5-i iránymutatása szerint az időszak lejárta előtti kilépéskor a visszatérítendő összeget a még nem teljesített időszakra arányosan kell számítani, és nem szabad a teljes összeg visszatérítését követelni. A tényleges következtetés a kifizetés célját, a megállapodás tartalmát, a már ledolgozott időszakot és a megszűnés okát együtt vizsgálja."
+    a: "Nem mindig a teljes összeget kell visszaadni. Ha a szerződéskötési díj, a bentmaradási bónusz vagy más előzetes juttatás (預付性給付) a minimális szolgálati időre vonatkozó kikötés észszerű ellentételezéseként került kifizetésre, a célt egyértelműen közölni kell a munkavállalóval. A tajvani Munkaügyi Minisztérium 2026. június 5-i iránymutatása szerint az időszak lejárta előtti kilépéskor a visszatérítendő összeget a még nem teljesített időszakra arányosan kell számítani, és nem szabad a teljes összeg visszatérítését követelni. A tényleges kimenetel a kifizetés céljának, a megállapodás tartalmának, a már ledolgozott időszaknak és a megszűnés okának együttes vizsgálatától függ."
   - q: "Ha a szerződés a munkavállalónak nem felróható okból korán szűnik meg, vissza kell téríteni a képzési költséget?"
     a: "A tajvani munkaügyi törvény 15-1. cikk 4. bekezdése úgy rendelkezik, hogy ha a munkaszerződés a minimális szolgálati idő vége előtt a munkavállalónak nem felróható okból szűnik meg, a munkavállaló nem visel felelősséget a minimális szolgálati időre vonatkozó kikötés megsértéséért, sem a képzési költség visszatérítéséért. A megszűnés okát és a felelősség hovatartozását azonban konkrét bizonyítékok, például felmondási értesítés, kilépési nyilatkozat és a munkafeltételek megsértésére vonatkozó iratok alapján kell megítélni."
 ---
@@ -55,17 +55,17 @@ A tanmenet, a képzési ütemezés, a jelenléti ív, az értékelés eredménye
 
 Az általános munkahelyi beilleszkedés és a szakmai-műszaki képzés határa nem attól függ önmagában, hogy hol tartották a képzést, vagy ki szervezte. Belső tanfolyam is igazolhat konkrét szakmai-műszaki tartalmat és jelentős beruházást, külső intézet hosszú tanfolyama pedig valójában általános bevezető képzés lehet. Ezért nem szabad minden belső képzést egységesen kizárni, sem pusztán a magas összeg vagy a hosszú időtartam miatt elismerni a törvényi feltételt.
 
-A kikötött időszak és a képzési beruházás viszonyát is ismertetni kell. Milyen képesség sajátítható el, e képesség milyen kapcsolatban van a célzott munkakörrel, és a képzés időtartamához és költségéhez képest miért szükséges a javasolt munkavégzési időszak, egyedileg vizsgálandó. Az is a teher körének megítéléséhez tartozó irat, hogy a képzés vége után ténylegesen végezték-e az adott munkát, és mennyi időt dolgoztak már.
+A kikötött időszak és a képzési beruházás viszonyát is ismertetni kell. Milyen képesség sajátítható el, e képesség milyen kapcsolatban van a célzott munkakörrel, és a képzés időtartamához és költségéhez képest miért szükséges a javasolt munkavégzési időszak, egyedileg vizsgálandó. A teher körének megítéléséhez az is hozzátartozik, hogy a képzés vége után ténylegesen végezték-e az adott munkát, és mennyi időt dolgoztak már.
 
 ## 3. Második törvényi feltétel: észszerű ellentételezés
 
 A második törvényi feltétel az, hogy a munkáltató észszerű ellentételezést nyújt a munkavállaló azon ígéretéért, hogy tartja a minimális szolgálati időt. Itt az ellentételezésnek a szokásos bértől vagy a már járó munkavégzés ellenértékétől elkülönülő céllal és szerkezettel kell rendelkeznie. A jogi jelleg nem dől el pusztán attól, hogy a bérjegyzéken szerződéskötési díjnak, bentmaradási bónusznak vagy előzetes juttatásnak címkézték.
 
-Először a kifizetés célját kell megerősíteni. Általános felvételi bérfeltétel-e, meghatározott idejű bentmaradási ígéret ellenértéke-e, vagy teljesítmény elérésének jutalma, annak a szerződésben és a közlő iratokban egyértelműnek kell lennie. Azt is vizsgálják, a kifizetés napját, az összeget, a keletkezés időpontját, a bentmaradási időszakkal való kapcsolatot, a visszatérítés okait és a képletet a munkavállaló a szerződés előtt megérthette-e.
+Először a kifizetés célját kell megerősíteni. Általános felvételi bérfeltétel-e, meghatározott idejű bentmaradási ígéret ellenértéke-e, vagy teljesítmény elérésének jutalma, annak a szerződésben és a tájékoztató iratokban egyértelműnek kell lennie. Azt is vizsgálják, hogy a munkavállaló a szerződéskötés előtt megérthette-e a kifizetés napját, az összeget, a keletkezés időpontját, a bentmaradási időszakkal való kapcsolatot, a visszatérítés okait és a képletet.
 
 A tajvani Munkaügyi Minisztérium (勞動部) 2026. június 5-i iránymutatása (函釋) szerint, ha bentmaradási bónuszt, szerződéskötési díjat vagy más előzetes juttatást a minimális szolgálati időre vonatkozó kikötés észszerű ellentételezéseként vesznek, e szerepet egyértelműen közölni kell. Az, hogy a munkáltató utólag újraértelmezi a kifizetés célját, vagy a bér egy részét ellentételezésként újraosztályozza, nehezen helyettesíti a szerződéskori közlést.
 
-Az ellentételezés észszerűsége nem ítélhető meg csak az összeg alapján. Együtt nézik, kap-e a munkavállaló ténylegesen többletelőnyt, egyértelműek-e a kifizetési feltételek, hogyan rendelődik a már ledolgozott időszaknak megfelelő rész, és nem túlzó-e a visszatérítés köre. Még ha van is ellentételezés, nem engedélyezett korlátlanul bármilyen bentmaradási időtartam vagy bármilyen összegű visszatérítési felelősség.
+Az ellentételezés észszerűsége nem ítélhető meg csak az összeg alapján. Együtt nézik, kap-e a munkavállaló ténylegesen többletelőnyt, egyértelműek-e a kifizetési feltételek, hogyan keletkezik a jogosultság a már ledolgozott időszaknak megfelelő részre, és nem túlzó-e a visszatérítés köre. Még ha van is ellentételezés, nem engedélyezett korlátlanul bármilyen bentmaradási időtartam vagy bármilyen összegű visszatérítési felelősség.
 
 Az is fontos, hogy a szerződés szövege és a tényleges kifizetés egyezzen. Annak ellenőrzése, hogy a kifizetés késett-e vagy részletekben történt-e, feltételes-e, mennyi az adó és levonás után ténylegesen kapott összeg, és volt-e külön írásbeli közlés, segíti az ellentételezés körének és a munkavállaló valós előnyének megítélését.
 
@@ -92,19 +92,19 @@ Végül érthető arányossági viszony szükséges a kikötött időszak, a mun
 
 A tajvani Munkaügyi Minisztérium 2026. június 5-i iránymutatása szerint a rendszeres képzés, az általános munkaköri képzés, az újonnan belépők munkahelyi beilleszkedési képzése és a törvény által elrendelt kötelező képzés költsége nem alapja a minimális szolgálati időre vonatkozó kikötésnek, sem kötbér vagy költség-visszatérítés iránti igénynek. Nemcsak a képzés megnevezését kell nézni, hanem a konkrét tanmenetet, a szakmai-műszaki tartalmat, az időtartamot, a munkáltató által ténylegesen viselt költséget és a bizonylatokat.
 
-A Munkaügyi Minisztérium 勞動關2字第1150141814號 iránymutatása megkülönbözteti és kezeli a rendszeresen tartott képzést, a szokásos munkaköri képzést, azt a képzést, amellyel az újonnan belépő megismeri a munkakörnyezetet és az eljárásokat, valamint a törvény szerint a munkáltató által tartandó képzést. Mivel e képzés a tevékenység üzemeltetéséhez vagy törvényi kötelezettség teljesítéséhez kapcsolódik, a jelentése az, hogy e költség nem fordítható bentmaradási kötelezettség vagy korai megszűnés szankciójának alapjává.
+A Munkaügyi Minisztérium 勞動關2字第1150141814號 iránymutatása megkülönbözteti és kezeli a rendszeresen tartott képzést, a szokásos munkaköri képzést, azt a képzést, amellyel az újonnan belépő megismeri a munkakörnyezetet és az eljárásokat, valamint a törvény szerint a munkáltató által tartandó képzést. Mivel e képzés a tevékenység üzemeltetéséhez vagy törvényi kötelezettség teljesítéséhez kapcsolódik, e költség nem fordítható bentmaradási kötelezettség vagy korai megszűnés szankciójának alapjává.
 
 Azokat a tanfolyamokat, amelyeket új munkavállaló általában kap, például a munkaszabályzat (工作規則) ismertetését, a szervezet és a rendszerek bemutatását, a szokásos munkakör-átadást és az alapvető biztonsági eljárások útmutatóját, a lényegük szerint kell megerősíteni. A munkáltató által eredetileg viselendő általános felvételi és kezelési költség vagy a munkakör-átadás költsége nem tehető visszatérítés tárgyává pusztán azzal, hogy külön beruházásnak címkézik.
 
 A képzés azonban nem mindig zárható ki pusztán azért, mert a vállalaton belül tartották. Ugyanazon programban keveredhet általános beilleszkedési és szakmai-műszaki rész, ezért a témát, az időt, a költséget és a törvényi kötelezettség meglétét tanfolyamonként kell megerősíteni. Aki a szakmai-műszaki részt állítja, irattal kell ismertetnie, milyen tartalom különbözik a szokásos képzéstől, és ki viselte ténylegesen a költséget.
 
-A gyakorlatban nem csak a képzési anyag borítóját nézik, hanem összevetik a részletes tartalomjegyzéket és a tényleges tartási nyilvántartást. Ellenőrizni kell, ismétlődő rendszeres tanfolyam-e, konkrét képesítés vagy berendezéskezelési képesség tanfolyama-e, törvényileg kötelező képzés-e, a munkavállaló ténylegesen részt vett-e, és a követelt összeg egyezik-e a képzési költség bizonylataival.
+A gyakorlatban nem csak a képzési anyag borítóját nézik, hanem összevetik a részletes tartalomjegyzéket és a képzés lebonyolításának nyilvántartását. Ellenőrizni kell, ismétlődő rendszeres tanfolyam-e, konkrét képesítés vagy berendezéskezelési képesség tanfolyama-e, törvényileg kötelező képzés-e, a munkavállaló ténylegesen részt vett-e, és a követelt összeg egyezik-e a képzési költség bizonylataival.
 
 ## 6. Bónusz-visszatérítés és korai kilépés
 
-Nem mindig a teljes összeget kell visszaadni. Ha a szerződéskötési díj, a bentmaradási bónusz vagy más előzetes juttatás a minimális szolgálati időre vonatkozó kikötés észszerű ellentételezéseként került kifizetésre, a célt egyértelműen közölni kell a munkavállalóval. A tajvani Munkaügyi Minisztérium 2026. június 5-i iránymutatása szerint az időszak lejárta előtti kilépéskor a visszatérítendő összeget a még nem teljesített időszakra arányosan kell számítani, és nem szabad a teljes összeg visszatérítését követelni. A tényleges következtetés a kifizetés célját, a megállapodás tartalmát, a már ledolgozott időszakot és a megszűnés okát együtt vizsgálja.
+Nem mindig a teljes összeget kell visszaadni. Ha a szerződéskötési díj, a bentmaradási bónusz vagy más előzetes juttatás a minimális szolgálati időre vonatkozó kikötés észszerű ellentételezéseként került kifizetésre, a célt egyértelműen közölni kell a munkavállalóval. A tajvani Munkaügyi Minisztérium 2026. június 5-i iránymutatása szerint az időszak lejárta előtti kilépéskor a visszatérítendő összeget a még nem teljesített időszakra arányosan kell számítani, és nem szabad a teljes összeg visszatérítését követelni. A tényleges kimenetel a kifizetés céljának, a megállapodás tartalmának, a már ledolgozott időszaknak és a megszűnés okának együttes vizsgálatától függ.
 
-A közlés nem jelenhet meg először akkor, amikor a kifizetés után vita keletkezik. A munkavállalónak a szerződéskötéskor és a kifizetéskor tudnia kell, mely összeg a minimális szolgálati időre vonatkozó ígéret ellentételezése, mennyi a kikötött időszak egésze, mikor rendelődik hozzá, és milyen képlet szerint számolnak el, ha a megszűnés közben következik be.
+A közlés nem jelenhet meg először akkor, amikor a kifizetés után vita keletkezik. A munkavállalónak a szerződéskötéskor és a kifizetéskor tudnia kell, mely összeg a minimális szolgálati időre vonatkozó ígéret ellentételezése, mennyi a kikötött időszak egésze, mikor keletkezik rá a jogosultság, és milyen képlet szerint számolnak el, ha a megszűnés közben következik be.
 
 A nem teljesített időszakra vonatkozó arányosság elvének alkalmazásához először rögzíteni kell a megállapodás kezdő- és zárónapját, a ténylegesen ledolgozott napokat és a visszatérítés számításának alapösszegét. Például a már teljesített időszakot egyáltalán nem tükröző rögzített összeget az iránymutatás arányossági mércéje fényében kell vizsgálni. Ha a szerkezet részletfizetéses vagy szakaszos keletkezésű, külön kell számítani, melyik részlet melyik időszaknak felel meg.
 
@@ -128,15 +128,15 @@ A megszűnés okának megítélése közvetlenül a visszatérítés körére is
 
 ## 8. A kilépési előzetes bejelentés külön kérdés
 
-A minimális szolgálati időre vonatkozó kikötés nem olyan eszköz, amely fizikailag vagy jogilag megakadályozná a munkavállaló kilépését. A kilépési nyilatkozat és az előzetes bejelentési időszak (預告期間) az, mikor szűnik meg a munkaviszony; a minimális szolgálati időre vonatkozó kikötés érvényessége és a költség-visszatérítési felelősség az, van-e a megszűnésből eredő vagyoni felelősség.
+A minimális szolgálati időre vonatkozó kikötés nem olyan eszköz, amely fizikailag vagy jogilag megakadályozná a munkavállaló kilépését. A kilépési nyilatkozat és az előzetes bejelentési időszak (預告期間) arra vonatkozik, mikor szűnik meg a munkaviszony; a kikötés érvényessége és a költség-visszatérítési felelősség arra, keletkezik-e a megszűnésből vagyoni felelősség.
 
 Amikor a munkavállaló határozatlan idejű munkaszerződést (不定期契約) szüntet meg, a tajvani munkaügyi törvény 15. cikke szerint a 16. cikk 1. bekezdésének előzetes bejelentési időszaka megfelelően alkalmazandó. A 16. cikk a munkáltató általi szerződésmegszüntetésre vonatkozó rendelkezés, a munkavállaló kilépésére ez az előzetes bejelentési időszak a 15. cikken keresztül vonatkozik.
 
 A folyamatos munkaviszony szerinti előzetes bejelentési időszak a következő.
 
-1. Ha 3 hónap vagy több, és 1 évnél kevesebb: 10 nap
-2. Ha 1 év vagy több, és 3 évnél kevesebb: 20 nap
-3. Ha 3 év vagy több: 30 nap
+1. Legalább 3 hónapos, de 1 évnél rövidebb folyamatos munkaviszony: 10 nap
+2. Legalább 1 éves, de 3 évnél rövidebb folyamatos munkaviszony: 20 nap
+3. Legalább 3 éves folyamatos munkaviszony: 30 nap
 
 Ha meghatározott munkára szóló határozott idejű munkaszerződés (特定性定期契約) időtartama meghaladja a 3 évet, a 15. cikk külön szabálya alkalmazandó. A munkavállaló 3 év munkavégzés után 30 nappal korábban előzetesen bejelentve a munkáltatónak megszüntetheti a szerződést. Ezt a szabályt meg kell különböztetni a határozatlan idejű szerződésre vonatkozó, folyamatos munkaviszony szerinti előzetes bejelentési szabálytól.
 
@@ -146,7 +146,7 @@ A gyakorlatban meg kell őrizni a kilépési nyilatkozat tartalmát és tovább�
 
 ## 9. Ellenőrzőlista a munkáltatónak és a munkavállalónak
 
-Vita megelőzéséhez vagy már előterjesztett igény vizsgálatához nem elég a szerződést olvasni, hanem a képzés, a kifizetés, a munkavégzés és a megszűnés időrend szerinti iratait együtt kell rendezni. Különösen az, ha táblázatban rendezik, a kikötött időszakból mennyit teljesítettek és mennyi maradt, valamint az állított költség és ellentételezés mely iratoknak felel meg, segíti a viták szétválasztását.
+Vita megelőzéséhez vagy már előterjesztett igény vizsgálatához nem elég a szerződést olvasni, hanem a képzés, a kifizetés, a munkavégzés és a megszűnés időrend szerinti iratait együtt kell rendezni. Különösen az a táblázat segíti a viták szétválasztását, amely megmutatja, a kikötött időszakból mennyit teljesítettek és mennyi maradt, valamint az állított költség és ellentételezés mely iratoknak felel meg.
 
 ### A munkáltató által ellenőrizendő szempontok
 
@@ -191,4 +191,4 @@ Az iratok időrend szerinti rendezésekor együtt kell feltüntetni a szerződé
 
 Ez a cikk a tajvani minimális szolgálati időre vonatkozó kikötést, a képzési költség és az előzetes juttatás visszatérítését, valamint a kilépési előzetes bejelentést általánosan ismertető, oktatási célú anyag; nem jogi vélemény egyedi munkaügyi ügyben, és nem ígér meghatározott eredményt. A megállapodás érvényessége és a felelősség köre a szerződés típusától és szövegétől, a tényleges képzéstől és költségektől, az ellentételezés céljától és közlésétől, a munkavégzési időszaktól, a megszűnés okától és a bizonyítékoktól függően változhat. Kilépési nyilatkozat, bérlevonás, visszatérítési megállapodás vagy vita megválaszolása előtt a legújabb hivatalos forrásokat és az egyedi körülményeket kell megerősíteni.
 
-**Ügyvédnő Wei Tseng (曾雋崴)**
+**Wei Tseng ügyvédnő (曾雋崴)**

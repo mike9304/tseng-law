@@ -1,0 +1,69 @@
+WO-F-ne r2 — Grok 4.7 fix lane — 2026-09-22
+Workspace: /Users/son7/Projects/tseng-law-fix-ne-r2
+No git add/commit/push.
+
+## Rows applied
+Part a (ne-a.md): 1, 4, 5, 6 (statute name only — see note), 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 29.
+Part b (ne-b.md): 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 17.
+41 of 46 P1/P2 rows applied. No P3 rows were tabled. No test expected-string needed a change (vitest 3202 passed).
+
+a-6 note: the link label no longer calls the target the Business Tax Act (營業稅法). It now names the withholding-rate standard (各類所得扣繳率標準). The digit stays “धारा 10” because the checker counts Korean 제10조 in that same link. “धारा 3” inside the Chinese gloss is not counted (hanzi-paren collapse), and dropping 10 fails numbers. URL flno=3 unchanged.
+
+a-7 note: the three source blocks stay separate. Only the third block changed from “दुवै पक्षलाई” to “सम्बन्धित पक्षलाई”, so the right follows whose fault it is.
+
+## Rows skipped
+- a-2 TWD 1.57M → lakh words / 15,70,000. Standing rule: the bio figure stays byte-identical (test pin). Not reformatted.
+- a-3 “sending an inquiry on this page is free.” Not applied. See reviewer-wrong below.
+- a-13 lakh/crore grouping (TWD 5,00,000 and the listed large amounts). R14 and ACCEPTED-ROUND: the checker does not parse lakh grouping. Western commas kept. 0 amount strings changed.
+- a-22 turn Q16–Q20 into ## headings and strip U+200B. The checker requires heading levels and ZWSP counts to match the Korean source. English/Korean keep those lines as body text split by U+200B. 0 characters removed.
+- b-12 delete U+200B in 013 and 015, including lines that are only that character. Same ZWSP parity rule. Removing those lines would also change the block count.
+- b-16 delete the extra 013 paragraph about a prior site check before signing the lease. Deleting a block is forbidden; the checker compares block counts. The sentence was left as its own block.
+
+## Systemic patterns and instances changed
+- Missing comma that glued अवधि to रूप (“प्रक्रिया र अवधि रूप”): 1 (guidance pack).
+- समर्थन used for endorsement, a tax incentive, or the work a person does: 4 (llms discovery notice 1; team bios 2 — विभागहरूबीचको आदानप्रदान and एकीकृत विश्लेषण; column 004 “कर समर्थन” → कर सुविधा 1).
+- Treaty PE written as the typical case (“विशेष गरी जब”): 1 (001). 004 was already the exception framing.
+- केन्द्र for “what matters” or “center of life”: 4 (007 life-center list, 007 evidence list, 007 “केन्द्र हो”, 016 “मृत्युका बेलाको जीवन केन्द्र”). केन्द्रित for “focused on” was left.
+- U+200B blank lines (003, 005, 006, 008, 009, 013, 015): 0 changed. 87 characters left in those 7 files so the checker’s ZWSP count stays equal to the source.
+- आरोपण for vesting (014), not for attribution: 8 (आरोपण समय 1, आरोपण सर्त 3, staged/final/when-it-vests and the already-served portion 4). Left in place: दायित्व आरोपण, समाप्ति आरोपण, कर्मचारीमाथि आरोपित, and 011 “कानुनी दायित्वको आरोपण”.
+- आरोपण for who receives an estate asset, and for a will’s disposition (016): 3 (बाँडफाँड 1, अन्तिम निर्णय 1, व्ययन 1).
+- विषय for the responsible party rather than a topic: 3 (011 “वैधानिक दायित्व विषय”, 011 heading “आयातकर्ता विषयको छनोट”, 004 “निवेदक विषय” — same pattern). Other विषय/विषयवस्तु (topic, content, scope) left.
+- अधिशेष vs अवशिष्ट for the same 剩餘財產 right (016): 4 body/answer strings aligned to अवशिष्ट, matching the FAQ question and the section heading. 007 already used अवशिष्ट.
+- English डाटा outside डाटाबेस: 6 (004 व्यक्तिगत डाटा; 017 personal/logistics data and the post-contract data handover; 016 passport data and household-registration data; 018 process data). Link labels “विनियम डाटाबेस” / “कानुन डाटाबेस” left.
+- Hindi-mixed शुरुवाती → सुरुवाती: 2 (010 image alt and the matching link text). No other Hindi paragraphs found.
+- Docket names given only in characters: 3 (上易字 644, 上易字 477, 壢簡字 236 → Shang-Yi-Zi / Li-Jian-Zi plus the gloss).
+- हस्तान्तरण परिणाम (gains or losses on disposal): 2 (002 dissolution return and liquidation return).
+- Western thousands and “TWD 1.57M”: 0 (skipped; see rows a-2 and a-13).
+
+R2–R10 and R12–R17 were already in the machine translation except the rows and sweeps above. Team roles, consultation languages (अङ्ग्रेजी, चिनियाँ, जापानी, कोरियाली), feminine forms for Wei Tseng, and the negative consultation lock were already in place and were not loosened. Frontmatter keys, urls, lastmod, images, links, and block order were not changed. No Hangul was added outside existing url values.
+
+## §Verify
+cd /Users/son7/Projects/tseng-law-fix-ne-r2 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+node scripts/check-column-translation.mjs --dir src/content/columns-ne --lang ne 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=103
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ne src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      20
+
+That count was taken before this log existed. The log is an additional untracked file under docs/i18n/global-plan/evidence/.
+
+## Reviewer got wrong (not applied)
+- a-3. The quoted sentence is only “this page is not a fee quotation and does not create a payment obligation.” The Hindi sister sentence is the same, and there is no following source sentence that sending an inquiry is free. The next section says the opposite of a free first meeting: the page does not say the first conversation is free, and no part of the page should be read that way. Adding “यस पृष्ठबाट अनुरोध पठाउँदा पनि शुल्क लाग्दैन” would introduce a free-service claim. ACCEPTED-ROUND forbids making a free-consultation sentence positive. Left unchanged.

@@ -1945,7 +1945,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     sourceLanguageNotice:
       'यो लेख {language} मा मात्र प्रकाशित छ; कडी मूल पृष्ठ खोल्छ।',
     unavailableTranslationNotice:
-      'यो बिन्दु यस पृष्ठको भाषामा अझै उपलब्ध छैन। मूल भाषाको कडी मूल पाठ खोल्छ।',
+      'यो अंश यस पृष्ठको भाषामा अझै उपलब्ध छैन। मूल भाषाको कडी मूल पाठ खोल्छ।',
     unavailableLanguageNotice: 'यो पृष्ठ {language} मा उपलब्ध छैन।',
     languageOptions: {
       en: 'अङ्ग्रेजी (English)',

@@ -1,0 +1,133 @@
+# WO-F-my — Burmese fix lane (Grok 4.7) — campaign round 1 — 2026-09-22
+
+Scope written: src/content/columns-my/ (15 of 18; 005, 009, 012 only where a sweep hit — 005 and 009 unchanged),
+src/data/international-guidance-southeast-central.ts (burmeseGuidanceContent only),
+src/data/international-guidance-team.ts (my keys only),
+src/data/international-guidance-answers.ts (my key only).
+Inquiry copy and llms-txt my strings needed no change. No test file pinned a changed string.
+No git add/commit/push. No other locale's strings were edited.
+
+## Rows applied
+
+Part a (my-a.md), 24 of 27:
+a#1  P1 001 double negative on the branch: "ရှယ်ယာရှင် မထားသော အဖွဲ့အစည်း မဟုတ်" → "ရုံးခွဲကိုယ်၌ ရှယ်ယာရှင် မရှိပါ။ သီးခြား ဥပဒေပုဂ္ဂိုလ်လည်း မဟုတ်ဘဲ…".
+a#2  P1 ပါတီ (political party) → နှစ်ဖက်သက်ဆိုင်သူများ. Guidance family ×2, labour correspondence ×1, column 002 ×1.
+a#3  P1 မူပိုင်ခွင့် used for patent/IP. Filings sentence → "ကုန်အမှတ်တံဆိပ်နှင့် တီထွင်မှုမူပိုင်ခွင့် (專利) လျှောက်ထားခြင်း". Taichung sentences ×2 → "ဆောက်လုပ်ရေး၊ ဉာဏပစ္စည်းမူပိုင်ခွင့်နှင့်". Copyright gloss မူပိုင်ခွင့် (著作權) left as copyright.
+a#4  P1 qualification line. "{name} သည် ထိုင်ဝမ်တွင် ရှေ့နေအဖြစ် လုပ်ကိုင်ခွင့်ရှိပြီး {firm} ၏ ဦးဆောင်ရှေ့နေဖြစ်သည်။" Same parse fixed in guidanceAnswers.my.lawyers.
+a#6  P1 တရားစီရင်နယ် → ဥပဒေစနစ်, both times in the disclaimer paragraph.
+a#7  P1 004 link label. Wrong "လုပ်ငန်းခွန်ဥပဒေ (營業稅法) ပုဒ်မ 10" → the withholding-rule name 001 already uses. URL unchanged. Digit 10 kept as "(10)" because dropping it failed the number checker (source link text is 영업세법 제10조). See "Reviewer got wrong / constrained".
+a#8  P1 003 條例 rendered as စည်းမျဉ်း → ဥပဒေ on the Road Traffic Management and Penalty Act, article 62. URL unchanged.
+a#9  P2 ရှေ့နေမ / အမှုဆောင်ရှေ့နေမ retired. Role title ဦးဆောင်ရှေ့နေ. Name lines use ရှေ့နေ ဒေါ် Wei Tseng (gender on the honorific, not a မ suffix). See systemic count.
+a#10 P2 severance gloss. Full stop moved out of the parenthesis: "လျော်ကြေး (資遣費)။ ဤလျော်ကြေးကို အခြားနိုင်ငံများ၏ … မယူဆသင့်။" Same paragraph.
+a#11 P2 fee sentence "အဓိပ္ပာယ်ရှိသည်" → "ထိုအကျယ်အဝန်း မရှင်းလင်းသေးလျှင် ပမာဏကို သတ်မှတ်၍ မရပါ။"
+a#12 P2 နယ်စပ်ဖြတ် → နယ်စပ်ဖြတ်ကျော် (family matters, cross-border work).
+a#13 P2 ပြသဘာသာ. languageLabel "ပြထားသော ဘာသာစကား"; two running sentences "စာမျက်နှာတွင် ပြထားသော ဘာသာစကား".
+a#14 P2 "ပိုင်ဆိုင်မှုမြင့်မားသော ပုဂ္ဂိုလ်များ" → "ကြွယ်ဝချမ်းသာသော ပုဂ္ဂိုလ်များ".
+a#15 P2 urgent-matter question → "အမှုက အရေးတကြီး ဖြစ်နေပါက မည်သို့နည်း။"
+a#16 P2 "နှောင့်နှေးခြင်းမရှိဘဲ" → "မနှောင့်နှေးဘဲ".
+a#17 P2 labour review "မေးခွန်းများနှင့် ခွဲခြားသည်" → "မေးခွန်းများမှ ခွဲခြားသည်".
+a#18 P2 missing object marker: "ပါဝင်သည်ကို မရှင်းလင်းသေးပါက".
+a#20 P2 003 stacked ဆိုပါက rewritten as one finite sentence about a general litigator with a few years' experience.
+a#21 P2 "တရုတ်သမ္မတနိုင်ငံ ပြစ်မှုဆိုင်ရာဥပဒေ" → "ထိုင်ဝမ် ပြစ်မှုဆိုင်ရာဥပဒေ" on all four 刑法 links in 003. Glosses (中華民國刑法) kept.
+a#22 P2 006 "ခေတ်ကို တွေ့ကြုံဖူးပါသလား" → "ရှေးရိုးဆံပင်ညှပ်ဆိုင်များကို မှတ်မိပါသလား။"
+a#23 P2 006 age aside → "(ကျွန်မ အသက်ကို ဖော်မိသွားပြီလား။)"
+a#24 P2 006 "ကြီးပြင်းခြင်း…" → "မိမိကိုယ်ကို တိုးတက်အောင် လုပ်ခြင်း၊ နေ့စဉ်လှုပ်ရှားမှု၊ သင်ယူခြင်းနှင့် ပညာသင်ခြင်း".
+a#25 P2 007 §3 opening. Question prepended inside the existing paragraph: "အိမ်ထောင်ဖက်နှစ်ဦး တရားရုံးညှိနှိုင်းမှုသို့ အမြဲတမ်း အတူလာရပါသလား။" FAQ answer left, because its question already supplies the antecedent.
+a#26 P2 "ကိုယ်ရေးအဆင့်" → "အိမ်ထောင်အဆင့်အတန်း".
+a#27 P2 ROC year, without the suggested Gregorian ၂၀၂၃ (R13 / ACCEPTED). "သမ္မတနိုင်ငံ 112 ခုနှစ်" → "ထိုင်ဝမ်သမ္မတနိုင်ငံ (民國) 112 ခုနှစ်" in FAQ, body, and both link labels (4). Gloss "(112年憲判字第4號)" → "(民國112年憲判字第4號)" (3). No new digit.
+
+Part b (my-b.md), 35 of 36:
+b#1  P1 018 "ကြီးကြပ်သူ မထားနိုင်သည်" → "မထားဘဲ နေနိုင်သည်" (permission, not a prohibition).
+b#2  P1 အပိုပစ္စည်း = spare parts, used for components. Title/H1 "အစိတ်အပိုင်းကုမ္ပဏီ"; lead "ပစ္စည်း၊ အစိတ်အပိုင်း၊ စက်ပစ္စည်း"; example "တိကျသော အစိတ်အပိုင်း". အရန်ပစ္စည်း (actual spares) left.
+b#3  P1 011 duplicated object dropped: one "စာသားတစ်ခုချင်းနှင့်".
+b#4  P2 010 "စာကိုယ်၌" → "ထိုစာတစ်စောင်တည်းဖြင့်".
+b#5  P2 "အကျိုးမဲ့စေသော ကောက်ချက်" → "အကျိုးယုတ်စေသော ယူဆချက်".
+b#6  P2 gym-fault caption, image alt and the matching link text: "အမှားရှိခဲ့သလား" → "တာဝန်ရှိခဲ့သလား" (2).
+b#7  P2 調解 "ပြေငြိမ်းညှိနှိုင်းမှု" → "ညှိနှိုင်းဖြေရှင်းမှု". 和解 ပြေငြိမ်း left where it means settlement.
+b#8  P2 010 docket year → "ထိုင်ဝမ်သမ္မတနိုင်ငံ (民國) 109 ခုနှစ်" and gloss "(民國109年度消字第7號)". No new digit.
+b#9  P2 the "whether" series restored with လား/လဲ.
+b#10 P2 "ဘေးထွက်ဆိုးကျိုး" → "မလိုလားအပ်သော ဖြစ်ရပ်".
+b#11 P2 "ဥပဒေအမြင် … ကိုင်တွယ်ကာလကို အာမမခံ" → "ဥပဒေအကြံဉာဏ် မဟုတ်သည့်အပြင် … ဆောင်ရွက်ကာလကို အာမမခံ". Same "not legal advice" fix on 017's closing line.
+b#12 P2 ရောင်းမိတ်ဖက် → အရောင်းမိတ်ဖက် (4), and the en-dash compound → "အမှတ်တံဆိပ်နှင့် အရောင်းမိတ်ဖက်အကြား".
+b#13 P2 ဦးတည်-as-scope. 011 "သက်ရောက်ဦးတည်တွင် ပါဝင်လာသောကြောင့်" → "လွှမ်းခြုံလာသောကြောင့်"; "စီမံဦးတည်" → "စစ်ဆေးအကျယ်အဝန်း"; "ဦးတည် ထုတ်ကုန်" → "ထုတ်ကုန်" (English: the product); link "ဦးတည်အကျယ်အဝန်း" → "လွှမ်းခြုံအကျယ်အဝန်း". 014 "ဦးတည်တာဝန်" → "ရာထူးတာဝန်". 015 "ဦးတည်ဖြစ်ပြီး" → "အရာများဖြစ်ပြီး". 004 "သဘောတူညီချက်၏ ဦးတည်ဖြစ်ကာ" → "အကျုံးဝင်သူဖြစ်ကာ" (English: falls within the agreement). 017 ဦးတည်ကုမ္ပဏီ ×6 → ဝယ်ယူခံကုမ္ပဏီ. Turn-signal ဦးတည်ချက်မီး and the firm's ဦးတည်ချက် (direction of the name) left.
+b#14 P2 ထပ်ခါတလဲလဲ → ထပ်တလဲလဲ. See systemic count.
+b#15 P2 bylines 011, 014, 016, 017 (and the rest of the ရှေ့နေမ sweep) → "ရှေ့နေ ဒေါ် Wei Tseng".
+b#16 P2 013 "အခြားအမည်ခံဖြင့်" → "အခြားအကြောင်းပြချက်ဖြင့်".
+b#17 P2 duplicated (統一證號基本資料表) after the bold removed. One gloss remains.
+b#18 P2 အငှား / စာချုပ် split. First block now ends at "တည်ထောင်နိုင်သည်။"; next block starts "အငှားစာချုပ် မချုပ်မီ…". Block count unchanged.
+b#20 P2 "သင်ခန်းစာနှင့် စက်ပစ္စည်း အသုံးကြေး" → "သင်ထောက်ကူပစ္စည်း သို့မဟုတ် စက်ပစ္စည်းခ".
+b#21 P2 docket "ဥပဒေရှင်းလင်းစာ အမှတ် 勞動關2字第1150141814號".
+b#22 P2 "ကျေနပ်ပြီး" → "လုပ်ပြီး".
+b#23 P2 "နောက်ပါ စာသည်" → "ဤဆောင်းပါးသည်".
+b#24 P2 closing line → "ဆောင်းပါး ဤနေရာတွင် ပြီးပါပြီ။"
+b#25 P2 လှုပ်ရှားပစ္စည်း → ရွှေ့ပြောင်းပစ္စည်း (body + checklist, 2).
+b#26 P2 "ကပ်လျက်ရှိသော" → "ခွဲ၍မရသော".
+b#27 P2 "တန်ဖိုးဖြတ် တန်ဖိုးဖြတ်နေ့" → "တန်ဖိုးဖြတ်နေ့".
+b#28 P2 "စနစ်လည်ပတ်ခြင်း" → "ထောက်ပံ့ပို့ဆောင်ရေးစနစ် လည်ပတ်ခြင်း" (lead and §1, 2).
+b#29 P2 "အဖွဲ့အစည်း ပြင်ဆင်သည်" → "အဖွဲ့အစည်းဆိုင်ရာ စီစဉ်မှု ပြင်ဆင်သည်".
+b#30 P2 due-diligence "ရန်ပုံငွေရှာရေး" → "ငွေကြေးထောက်ပံ့မှု". Fundraising in 001 left (it is a capital plan, not vehicle finance).
+b#31 P2 ကန့်သတ်ချွင်းချက် → လိုအပ်ချက် (FAQ, body, heading). Heading written "သီးခြား လိုအပ်ချက်" so it does not stutter against ယာဉ်လိုအပ်ချက်.
+b#32 P2 covered under b#13 (ဝယ်ယူခံကုမ္ပဏီ ×6, including the work-permit section).
+b#33 P2 "အသင့်တော်ဆုံး လုပ်ငန်းအဖွဲ့အစည်း" → "ထိုအချက်အလက်နှင့် ကိုက်သော ဖွဲ့စည်းပုံ" (FAQ and body, 2).
+b#34 P2 "စာရင်းဝင်၊ မှတ်ပုံတင်" → "စာရင်းဝင်ခြင်း သို့မဟုတ် ထွန်းသစ်စဈေးကွက် မှတ်ပုံတင်ခြင်း".
+b#35 P2 repeated သတ်မှတ်ချက် dropped: "စီစဉ်ထားသော အရင်းအနှီးသည် ထိုသတ်မှတ်ချက် ပြည့်သည် မပြည့်သည်".
+b#36 P2 "လူအင်အား ပြဿနာ" → "လူအင်အား စီစဉ်မှု" (FAQ and body, 2).
+
+Rulebook extras, not a numbered row:
+- R12 role 'son-jungmin': "ကိုရီးယားလုပ်ငန်း စီမံခန့်ခွဲမှု" → "ကိုရီးယားလုပ်ငန်း စီမံခန့်ခွဲသူ" (manager). Other my bios were already in Burmese (paralegal = ဥပဒေအကူ, ministry legal-affairs division, Taichung legal-aid branch, partner CPA). "TWD 1.57M" left byte-identical.
+- R17 sister-language scan: no Thai script in columns-my or burmeseGuidanceContent.
+- R15: 008 already uses "[အမည်]". No OOO left.
+- R2 Korea-as-example framing, consultation lock, and ကျွန်မ for Wei Tseng were already in place. ဦး B stays male.
+
+## Rows skipped
+
+a#5  P1 "TWD 1.57M" → "TWD 1.57 သန်း". Skipped. ACCEPTED-ROUND and R12 pin that figure byte-identical. It remains in the my bio.
+a#19 P2 promote Q16–Q20 to ## headings and delete the blank U+200B lines in 003, 005, 006, 008, 009. Skipped. Heading levels are compared to the Korean source (those lines are not headings there). U+200B counts are also compared: 003=52, 005=8, 006=4, 008=10, 009=5, each already equal to the source. Deleting them fails the blocks check. Wording inside the Q16–Q20 sentences was not otherwise flagged.
+b#19 P2 delete U+200B in 013 (5) and 015 (3). Skipped for the same checker lock. Those counts already match the source. The 013 lease-word split (b#18) was fixed without touching the spacers.
+
+a#27's suggested "၂၀၂၃" was not inserted. The row's purpose (a reader cannot see that 112 is an ROC year) was done under R13, above.
+
+## Systemic patterns and instances
+
+- ရှေ့နေမ / အမှုဆောင်ရှေ့နေမ: 17. Column bylines 001, 002, 003, 004, 007, 008, 011, 014, 016, 017 (10). Pack: representativeTitle, role tseng-junwei, qualificationSentence, keyFactsHeading, columnsReviewLabel, about sentence, answers.lawyers (7).
+- ပါတီ as a party to a case: 4 (guidance ×3, 002 ×1).
+- မူပိုင်ခွင့် standing in for patent or IP: 3. Copyright (著作權) glosses not changed.
+- နယ်စပ်ဖြတ် without ကျော်: 2.
+- ပြသဘာသာ: 3.
+- ထပ်ခါတလဲလဲ: 7 (001 ×2, 004 ×2, 011, 012, 014).
+- ဦးတည် as scope/target: 13 (004 ×1, 011 ×4, 014 ×1, 015 ×1, 017 ဦးတည်ကုမ္ပဏီ ×6).
+- ကန့်သတ်ချွင်းချက်: 3, all in 017.
+- Bare republic year, ROC calendar made explicit without a new digit: 007 ×4 labels + ×3 glosses; 010 ×1 label + ×1 gloss.
+
+## §Verify
+
+```
+===== CHECKER =====
+neighbour      PASS   
+hanzi          PASS   han=72
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+===== MARKERS =====
+       0
+===== TSC =====
+TSC_OK
+===== VITEST =====
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+===== GIT =====
+      22
+```
+
+The 22 is `git status --short | wc -l` before this log file existed. Three of those lines were already dirty at the start of the lane and were not edited here: `docs/i18n/global-plan/WO-F-my.txt`, and untracked `reviews/native/rounds/r1/my-a.md` and `my-b.md`.
+
+## Reviewer got wrong, or a suggestion the checker cannot take
+
+- a#7 suggested a label with no digit. The Korean source link is "영업세법 제10조", so the number checker requires a 10 in the translation. The false statute name is gone; "(10)" stays on the corrected withholding-rule label. URL still flno=3.
+- a#5 is a real readability point (M is opaque), and it is also a pinned product string. Not applied.
+- a#27's ၂၀၂၃ would be a new number. The reader problem is real; the fix is the ROC gloss (民國), not a Gregorian year.
+- a#19 and b#19 are right that the zero-width lines are not Burmese prose. They are also a byte-level match to the Korean source, and the checker fails if the count changes. Not deleted.
+- 008's forced letter was already "[အမည်]", not OOO. Nothing to change.

@@ -73,11 +73,11 @@ Le salarié doit donc bien maîtriser le délai.
 
 Autrement dit,
 
-le droit de Taïwan, que la faute soit du côté de l’entreprise
+le droit de Taïwan distingue l’effet selon qui a la faute :
 
-ou du côté du salarié,
+si elle est du côté de l’employeur, le salarié peut exiger l’indemnité de licenciement ;
 
-reconnaît à chacune des parties le droit de ne pas verser l’indemnité de licenciement ou de l’exiger.
+si elle est du côté du salarié, l’employeur peut ne pas la verser.
 
 Parfois, lorsqu’il y a faute de part et d’autre dans la relation de travail,
 

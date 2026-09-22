@@ -33,11 +33,11 @@ Il doit aussi vérifier si des parties étrangères n’introduisent pas de fond
 
 Lors de la rédaction du plan d’investissement, il n’est pas nécessaire d’indiquer l’adresse exacte de la société ; l’indication de la région suffit (exemple : ville de Taipei). ​
 
-Lorsque plus tard le compte de la société en formation de la société (公司籌備處帳戶) est ouvert à la banque, de nombreuses banques examinent toutefois le contrat de bail (租賃契約) et inspectent sur place l’adresse de la société.
+Lorsque plus tard le compte de la société en formation (公司籌備處帳戶) est ouvert à la banque, de nombreuses banques examinent toutefois le contrat de bail (租賃契約) et inspectent sur place l’adresse de la société.
 
-Une employée ou un employé d’une banque taïwanaise m’a dit en personne que
+Une employée ou un employé d’une banque taïwanaise m’a dit en personne ce qui suit.
 
-de nombreux étrangers disparaissent récemment après l’ouverture du compte, de sorte que l’ouverture des comptes est traitée de manière de plus en plus stricte.
+De nombreux étrangers ont ouvert un compte puis ont disparu, de sorte que l’examen des ouvertures de compte est de plus en plus strict.
 
 L’ouverture du compte est souvent l’étape la plus difficile.
 
@@ -61,7 +61,7 @@ il reste suffisamment de temps pour ouvrir à la banque le compte de la sociét�
 
 C’est possible.
 
-La banque exige en général une double vérification d’identité,
+La banque exige en général deux pièces d’identité.
 
 et sans carte de séjour, vous pouvez demander auprès de l’administration de l’immigration de Taïwan le « formulaire de données de base du numéro d’identification unique » (統一證號基本資料表).
 
@@ -87,7 +87,7 @@ Sur ce point, vous devriez échanger de manière approfondie avec une avocate ou
 
 **4. Quels points faut-il observer lorsque l’adresse d’immatriculation de la société (par exemple un local de restauration) est prise à bail ?**
 
-La constitution de la société dure environ **3 mois**, l’obtention du permis de travail (工作許可) et de la carte de séjour environ **un mois**,
+La constitution de la société dure environ **3 mois**, l’obtention du permis de travail (工作許可) et de la carte de séjour environ **un mois de plus**,
 
 aussi devez-vous fixer le début du contrat le plus tard possible.
 
@@ -103,7 +103,7 @@ C’est pourquoi je recommande de chercher le lieu d’exploitation tôt.
 
 Si la négociation avec le bailleur n’avance pas facilement,
 
-vous pouvez, s’il y a lieu, proposer l’authentification du contrat de bail (公證) ou un dépôt de caution supplémentaire.
+vous pouvez, s’il y a lieu, proposer de faire notarier le contrat de bail (公證) ou de verser un dépôt de caution supplémentaire.
 
 ​
 

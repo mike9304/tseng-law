@@ -28,8 +28,8 @@ Lors de l’examen, il est important de ne pas mêler les quatre questions suiva
 
 1. Si la clause elle-même réunit les conditions légales de l’article 15-1
 2. Si la période convenue et la charge du travailleur sont dans une portée raisonnable
-3. À qui s’impute la cause d’extinction du contrat de travail
-4. Comment s’apprécient le préavis de démission et l’étendue de la restitution
+3. À qui s’impute la cause d’extinction du contrat de travail ?
+4. Comment s’apprécient le préavis de démission et l’étendue de la restitution ?
 
 Même si ces quatre questions figurent ensemble dans le même contrat, la disposition applicable et la preuve nécessaire sont distinctes. Il faut donc examiner séparément si la clause est valable, quand la démission produit ses effets, s’il y a responsabilité de restituer la prestation anticipée (預付性給付) ou les frais de formation, et si un préjudice séparé s’est réellement produit.
 
@@ -43,7 +43,7 @@ L’article 15-1 exige l’une des deux conditions légales et, en outre, un exa
 
 Après confirmation de la condition légale, selon l’alinéa 2 on examine séparément si la période convenue et l’étendue de la responsabilité sont raisonnables. La clause qui enfreint la condition légale de l’alinéa 1 ou le critère de raisonnabilité de l’alinéa 2 est nulle selon l’alinéa 3. Toutefois, cette norme est un critère pour examiner le contenu et les faits de chaque clause, non une norme qui déclare d’emblée valables ou nulles toutes les clauses de durée minimale de service.
 
-La circonstance que le travailleur ait signé le contrat peut être un document qui confirme l’existence de l’accord, mais elle ne substitue pas les conditions légales. À l’inverse, plutôt que de trancher d’emblée du seul fait que la clause est de longue durée, il faut vérifier quel investissement ou quelle contrepartie il y a eu et pourquoi cette période a été fixée.
+La circonstance que le travailleur ait signé le contrat peut être un document qui confirme l’existence de l’accord, mais elle ne se substitue pas aux conditions légales. À l’inverse, plutôt que de trancher d’emblée d’après la seule durée de la période convenue, il faut vérifier quel investissement ou quelle contrepartie il y a eu et pourquoi cette période a été fixée.
 
 ## 2. Première condition légale : formation technique spécialisée et prise en charge du coût
 
@@ -65,7 +65,7 @@ Il faut d’abord confirmer la finalité du versement. S’il s’agit d’une c
 
 L’interprétation administrative (函釋) du ministère du Travail de Taïwan (勞動部) du 5 juin 2026 explique que, si l’on prend comme contrepartie raisonnable de la clause de durée minimale de service une prime de maintien en poste, une prime de signature ou une autre prestation anticipée, ce rôle doit être communiqué clairement. Que l’employeur interprète à nouveau après coup la finalité du versement ou reclasse une partie du salaire comme contrepartie se substitue difficilement à la communication du moment du contrat.
 
-La raisonnabilité de la contrepartie ne s’apprécie pas seulement d’après le montant. On voit ensemble si le travailleur obtient réellement un bénéfice supplémentaire, si les conditions de versement sont claires, comment s’attribue la part correspondant à la période déjà travaillée et si l’étendue de la restitution n’est pas excessive. Même s’il existe une contrepartie, on n’autorise pas sans limite n’importe quelle durée de maintien ni n’importe quel montant de responsabilité de restitution.
+La raisonnabilité de la contrepartie ne s’apprécie pas seulement d’après le montant. On voit ensemble si le travailleur obtient réellement un bénéfice supplémentaire, si les conditions de versement sont claires, comment s’attribue la part correspondant à la période déjà travaillée et si l’étendue de la restitution n’est pas excessive. L’existence d’une contrepartie n’autorise pas pour autant, sans limite, une durée de maintien ni une obligation de restitution d’un montant quelconque.
 
 Il importe aussi que le texte du contrat et le versement réel coïncident. Vérifier si le versement a été retardé ou fractionné, s’il est conditionnel, quel est le montant réellement perçu après impôts et retenues, et s’il y a eu une communication écrite séparée aide à apprécier l’étendue de la contrepartie et le bénéfice réel du travailleur.
 
@@ -84,7 +84,7 @@ Le second facteur, la possibilité de remplacement, ne se fixe pas seulement ave
 
 Le troisième facteur voit non seulement le montant de la contrepartie, mais aussi l’étendue. Importent quand on verse et à quelles conditions elle s’attribue définitivement au travailleur, comment elle correspond à la période convenue dans son ensemble et si, à l’extinction en cours de route, on reflète la période déjà accomplie. Une prime du même nom peut s’apprécier de façon distincte selon la structure du contrat et la réalité.
 
-Le quatrième facteur peut inclure diverses circonstances qui influent sur la raisonnabilité, comme le cours de conclusion de la clause, la nature du travail, ce qui a été expliqué aux parties, la période réellement travaillée et la cause d’extinction. L’importance de chaque facteur peut varier selon l’affaire, et les circonstances à considérer ne se limitent pas aux exemples précédents. Il faut donc examiner sans omettre les faits pertinents qui apparaissent dans le dossier.
+Le quatrième facteur peut inclure diverses circonstances qui influent sur la raisonnabilité, comme les circonstances dans lesquelles la clause a été conclue, la nature du travail, ce qui a été expliqué aux parties, la période réellement travaillée et la cause d’extinction. L’importance de chaque facteur peut varier selon l’affaire, et les circonstances à considérer ne se limitent pas aux exemples précédents. Il faut donc examiner sans omettre les faits pertinents qui apparaissent dans le dossier.
 
 Au final, il faut une relation de proportionnalité compréhensible entre la période convenue, l’investissement réel de l’employeur, la difficulté de remplacement, la contrepartie que le travailleur a reçue et la charge de restitution. Il ne faut pas fixer d’avance la validité seulement parce qu’il s’agit d’un métier déterminé ni appliquer telle quelle la conclusion d’une autre affaire. Il faut voir ensemble la conception du moment de conclusion du contrat et le degré réel d’accomplissement au moment de l’extinction.
 
@@ -138,7 +138,7 @@ La période de préavis selon l’ancienneté continue est la suivante.
 2. Si elle est d’un an ou plus et de moins de 3 ans : 20 jours
 3. Si elle est de 3 ans ou plus : 30 jours
 
-Si la période d’un contrat de travail à durée déterminée pour un travail spécifique (特定性定期契約) dépasse 3 ans, s’applique la norme séparée de l’article 15. Le travailleur, après avoir travaillé 3 ans, peut éteindre le contrat avec un préavis de 30 jours à l’employeur. Cette norme doit se distinguer de celle de préavis selon l’ancienneté continue applicable au contrat à durée indéterminée.
+Si la période d’un contrat de travail à durée déterminée pour un travail spécifique (特定性定期契約) dépasse 3 ans, s’applique la norme séparée de l’article 15. Le travailleur, après avoir travaillé 3 ans, peut éteindre le contrat avec un préavis de 30 jours à l’employeur. Cette norme doit se distinguer de celle des délais de préavis fondés sur l’ancienneté continue applicable au contrat à durée indéterminée.
 
 Si l’ancienneté continue est inférieure à 3 mois, s’il s’agit d’un autre type de contrat à durée déterminée ou si l’on allègue une cause légale d’extinction immédiate, la disposition applicable et les faits doivent s’examiner au cas par cas. Le seul fait que le contrat consigne un préavis plus long ou exige une transmission immédiate du poste ne permet pas de fixer d’avance la conclusion juridique.
 
@@ -146,7 +146,7 @@ Dans la pratique, il faut conserver le contenu et la date de transmission de la 
 
 ## 9. Liste de vérification pour l’employeur et le travailleur
 
-Pour prévenir un litige ou examiner une demande déjà posée, il ne faut pas lire seulement le contrat, mais ordonner ensemble les documents de formation, de versement, de travail et d’extinction en ordre temporel. En particulier, organiser dans un tableau combien on a accompli de la période convenue et combien il reste, et à quels documents correspondent le coût et la contrepartie allégués, aide à séparer les controverses.
+Pour prévenir un litige ou examiner une demande déjà posée, il ne faut pas lire seulement le contrat, mais ordonner ensemble les documents de formation, de versement, de travail et d’extinction en ordre temporel. En particulier, organiser dans un tableau quelle part de la période convenue a été accomplie et quelle part reste, et à quels documents correspondent le coût et la contrepartie allégués, aide à séparer les controverses.
 
 ### Aspects que l’employeur doit vérifier
 

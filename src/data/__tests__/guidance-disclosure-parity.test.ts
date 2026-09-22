@@ -442,7 +442,7 @@ const ELEMENTS = {
     ar: /خطوة استشارة/,
     de: /ersetzt die Beratung nicht/,
     es: /no es una consulta/,
-    fr: /étape de consultation/,
+    fr: /ne tient pas lieu de consultation/,
     pt: /não é uma consulta/,
     'zh-hans': /咨询步骤/,
     ms: /langkah perundingan/,

@@ -45,7 +45,7 @@ Si vous avez du mal à vous rendre en personne au bureau de l’administration f
 
 vous pouvez demander l’aide d’une connaissance à Taïwan, du bailleur, d’un agent immobilier ou d’une avocate ou d’un avocat.
 
-Si le résultat de la vérification indique que l’établissement de restauration n’est pas possible, plus tard, lors de l’immatriculation de la personne morale (公司登記), la municipalité pourrait ne pas accepter l’immatriculation.
+Si le résultat de la vérification indique que l’établissement de restauration n’est pas possible, plus tard, lors de l’immatriculation de la société (公司登記), la municipalité pourrait ne pas accepter l’immatriculation.
 
 Prêtez donc attention à ce point.
 
@@ -59,9 +59,9 @@ Toutefois, lors de l’immatriculation de la société, plusieurs branches d’a
 
 Aussi, en pratique, il n’est pas nécessaire de vérifier toutes les branches d’activité lors de l’immatriculation de la société.
 
-Selon les « [instructions de fonctionnement du service d’aide à la consultation des locaux de la ville de Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) » (臺北市營業場所協助查詢服務作業須知) et le guide en vigueur de la ville de Taipei,
+Les « [instructions de fonctionnement du service d’aide à la consultation des locaux de la ville de Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) » (臺北市營業場所協助查詢服務作業須知) et le guide en vigueur de la ville de Taipei fixent la règle suivante.
 
-depuis le 1 janvier 2023, lors de la demande d’immatriculation de constitution, de transfert de siège ou d’ajout de branches d’activité d’une société ou d’un commerce (y compris la succursale (分公司) et l’établissement auxiliaire (分支機構)), le résultat de la consultation préalable du local **doit** être joint à la demande d’immatriculation, indépendamment du secteur.
+Depuis le 1 janvier 2023, lors de la demande d’immatriculation de constitution, de transfert de siège ou d’ajout de branches d’activité d’une société ou d’un commerce (y compris la succursale (分公司) et l’établissement auxiliaire (分支機構)), le résultat de la consultation préalable du local **doit** être joint à la demande d’immatriculation, indépendamment du secteur.
 
 La liste ci-dessous des « branches faisant l’objet d’une vérification d’office » (主動查詢之營業項目) désigne les branches que le bureau du commerce vérifie d’office en plus pendant l’examen de l’immatriculation (隨案主動查詢) lorsque la branche figure dans la demande mais manque dans le résultat joint ; le fait qu’une branche ne figure pas sur cette liste ne signifie pas que la vérification soit dispensée.
 
@@ -73,7 +73,7 @@ Si l’on ouvre dans un lieu où l’établissement de restauration n’est pas 
 
 Tel est l’essentiel ; pour d’autres questions, vous pouvez écrire depuis la page Contact à une avocate ou à un avocat de Taïwan ; aucun délai de réponse n’est promis.
 
-Les règles des autorités administratives peuvent changer souvent ; avant l’immatriculation de la personne morale, il convient de confirmer la réglementation la plus récente.
+Les règles des autorités administratives peuvent changer souvent ; avant l’immatriculation de la société, il convient de confirmer la réglementation la plus récente.
 
 ---
 

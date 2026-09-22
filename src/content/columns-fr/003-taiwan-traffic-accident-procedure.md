@@ -43,13 +43,13 @@ En matière d’indemnisation civile des dommages (損害賠償), selon l’arti
 
 Quiconque subit un dommage du fait d’une infraction peut, selon l’article 487 du Code de procédure pénale, former une action civile accessoire à l’instance pénale (刑事附帶民事訴訟). Tant que l’instance pénale est en cours, cette action peut être formée jusqu’avant la clôture des débats en deuxième instance (言詞辯論終結), selon l’article 488 du Code de procédure pénale, mais elle ne peut pas être formée après la clôture des débats en première instance et avant l’interjection du recours. En général, le paiement de frais de justice (裁判費) distincts peut être évité, mais tous les résultats ne s’achèvent pas sans coût. Par exemple, si l’affaire pénale est rejetée et, à la demande du demandeur, renvoyée au tribunal civil, selon l’article 503 du Code de procédure pénale les dépens peuvent être imposés, et il faut aussi vérifier les règles de renvoi et de procédure de l’article 504.
 
-Le choix varie selon l’interruption de la prescription (時效中斷), le cercle des défendeurs, les preuves, l’assurance et la compétence. Il n’existe donc pas de procédure uniformément préférable pour toutes les affaires.
+Le choix varie selon l’interruption de la prescription (時效中斷), le cercle des défendeurs, les preuves, l’assurance et la compétence. Il n’existe donc pas de procédure qui convienne le mieux à toutes les affaires.
 
 ## Q4. S’il y a faute de part et d’autre, comment s’apprécient les responsabilités pénale et civile ?
 
 La responsabilité pénale ne peut être retenue que lorsque sont reconnus le manquement au devoir de prudence de chacun et le lien de causalité entre ce manquement et les lésions de l’autre partie. Le seul fait qu’une faute ait existé de part et d’autre ne fait pas naître automatiquement la responsabilité pour lésions par imprudence.
 
-Sur le plan civil, selon l’article 217 du Code civil, si la personne lésée a une faute qui a contribué à causer ou à aggraver le dommage (與有過失), le tribunal peut réduire ou exempter l’indemnisation. Par exemple, si le dommage reconnu en nouveau dollar de Taïwan (新臺幣, TWD) est TWD 1.000.000 et que la faute de la personne lésée est évaluée à 50 %, le montant peut être réduit à TWD 500.000 avant d’autres ajustements.
+Sur le plan civil, selon l’article 217 du Code civil, si la personne lésée a une faute qui a contribué à causer ou à aggraver le dommage (與有過失), le tribunal peut réduire l’indemnisation ou exonérer la personne responsable. Par exemple, si le dommage reconnu en nouveaux dollars de Taïwan (新臺幣, TWD) est TWD 1.000.000 et que la faute de la personne lésée est évaluée à 50 %, le montant peut être réduit à TWD 500.000 avant d’autres ajustements.
 
 L’expertise (鑑定) ou le tableau d’analyse préliminaire peuvent être des pièces importantes, mais elles ne lient pas le tribunal mécaniquement. Le tribunal examine l’ensemble des preuves, y compris les déclarations, les images et l’état des véhicules.
 
@@ -175,7 +175,7 @@ L’obligation de souscrire selon l’article 6 de la loi sur l’assurance obli
 
 Dans un accident d’un seul véhicule, le conducteur de ce véhicule n’est, en général, pas destinataire des prestations de l’assurance obligatoire de ce véhicule. Toutefois, dans un accident où interviennent plusieurs véhicules, il existe des cas dans lesquels le conducteur peut réclamer des prestations à l’assureur obligatoire d’un autre véhicule impliqué.
 
-Le barème de prestations (強制汽車責任保險給付標準) modifié le 29 mai 2026 s’applique aux accidents survenus à compter du 1 juillet 2026. Le plafond des frais médicaux raisonnables et nécessaires pour blessures est TWD 200.000 en nouveau dollar de Taïwan ; la prestation pour invalidité (失能) va de TWD 80.000 à TWD 3.000.000 selon 15 degrés légaux ; la prestation pour décès est TWD 3.000.000, et le maximum conjoint de décès, d’invalidité et de frais médicaux pour 1 victime et 1 accident est TWD 3.200.000. Aux accidents antérieurs peut s’appliquer le barème précédent.
+Le barème de prestations (強制汽車責任保險給付標準) modifié le 29 mai 2026 s’applique aux accidents survenus à compter du 1 juillet 2026. Le plafond des frais médicaux raisonnables et nécessaires pour blessures est TWD 200.000 en nouveaux dollars de Taïwan ; la prestation pour invalidité (失能) va de TWD 80.000 à TWD 3.000.000 selon 15 degrés légaux ; la prestation pour décès est TWD 3.000.000, et le maximum conjoint de décès, d’invalidité et de frais médicaux pour 1 victime et 1 accident est TWD 3.200.000. Aux accidents antérieurs peut s’appliquer le barème précédent.
 
 L’assurance de responsabilité civile envers les tiers (第三人責任險), l’assurance accidents du conducteur (駕駛人傷害險) et l’assurance dommages au véhicule propre (車體損失險) sont des produits facultatifs de caractère contractuel. La couverture réelle varie selon l’assuré, le plafond, la franchise (自負額), les exclusions, la faute et les autres conditions de la police, de sorte que la police et les conditions doivent être vérifiées cas par cas.
 
@@ -339,7 +339,7 @@ Du fait des blessures ou du décès de la victime, celle-ci ou sa famille subit 
 
 ​
 
-L’auteur ne se préoccupe souvent pas d’appeler pour prendre des nouvelles de la victime ni de lui rendre visite, et de nombreux auteurs pensent que l’assureur réglera tout et ils n’apparaissent pas. Dans ces cas, ni le repentir ni la bonne foi ne se perçoivent.
+L’auteur ne se préoccupe souvent pas d’appeler pour prendre des nouvelles de la victime ni de lui rendre visite, et de nombreux auteurs pensent que l’assureur réglera tout et ils n’apparaissent pas. Dans ces cas, la victime n’y perçoit ni repentir ni sincérité.
 
 ​
 

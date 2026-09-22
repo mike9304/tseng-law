@@ -1,0 +1,116 @@
+WO-F-pt r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-pt-r4
+date: 2026-09-23
+No git add/commit/push. Portuguese strings only. Guidance pack, inquiry copy, and llms.txt were swept and left unchanged (no remaining instance of this round’s patterns). No test expectation was rewritten. "TWD 1.57M" was not in any edited sentence.
+
+## Rows applied
+
+Part A (pt-a.md): 1–6, 9, 11–20.
+Part B (pt-b.md): 1–7, 9–21.
+
+A9 and B9 were rephrased inside the existing blocks. Paragraphs were not joined and headings were not added.
+
+A12 kept the digit 10. The editor’s “a disposição ligada” was removed; the label now says the linked rule is article 3 of the withholding standards and is not article 10 of the business-tax act. URL unchanged.
+
+A2 keeps “dupla tributação”. The verb is no longer “ordena”. The sentence now says the agreement coordinates taxation of residents of the two territories in order to avoid double taxation, and still denies an automatic exemption.
+
+B1 puts the Ministry of Labor number in parentheses as a gloss and repeats it once as “n.º 1150141814”. The number checker still matches (hanzi duplicate collapse).
+
+B18 uses “dentro de um âmbito razoável” (the calque was “estar numa extensão”, and “extensão” is not the Portuguese word for statutory scope).
+
+## Rows skipped
+
+- A7, and the request to turn Q16–Q20 into `##` headings.
+  Reason: heading levels must match the Korean source. English Q16–Q20 are body lines too. Adding headings fails `headings`. Q16–Q20 stay body paragraphs.
+- A8, B8, and the verdict lines on U+200B in 003, 005, 006, 008, 009, 013 and 015, including 005 `**​**`.
+  Reason: the checker counts zero-width spaces against the Korean source. Deleting the spacer lines fails `blocks`. Zero-width characters removed: 0. The sentences those spacers were chopping were rewritten inside the blocks that already had words (see systemic count).
+- A10, including “por cada 1 vítima e por cada 1 acidente”, “por cada 1 ano” (008 FAQ and both formula lines), and “ultrapassar 1 pessoa” (005).
+  Reason: those digits are in the source count. “por cada vítima” / “uma pessoa” drops them. The digit 1 stays. “ultrapassar 1 pessoa” is the statutory threshold of more than one worker, not a bare “each”.
+
+No P3 rows in either review.
+
+## Systemic patterns and how many instances changed
+
+French verbs and clitics
+  "uma aprovação automática intervém" → "a aprovação é automática"                         1 (004)
+  "para deles fazer acionistas" → "para fazer desses terceiros acionistas"               1 (004)
+  "viram infligir-se respetivamente uma coima" → "foi aplicada ao Sr. Lin …"            1 (006)
+  "banco em linha" → "banco online"                                                      2 (005)
+  "uma pessoa outra que" → "uma pessoa que não seja"                                     4 (007)
+  "se for caso disso" → "se for o caso"                                                  5 (001 ×3, 013, 016)
+  "inflige um insulto grave" → "lhe dirige um insulto grave"                             1 (009)
+  008 already said "insulta gravemente" and was left.
+
+Mid-sentence paragraph breaks, rephrased inside the block (blocks not merged, U+200B unchanged)
+  006  15
+  008  20
+  009   6
+  013  11
+  015   3
+  Total 55. Each former lowercase continuation is now its own sentence.
+
+Payment dates read as wages ("vencimentos")
+  002 bankruptcy checklist → "datas de pagamento" and "fluxo de tesouraria"              1
+  007 child-support enforcement "vencimentos de pagamento" → "datas de pagamento"       1
+  Left: "ficha de vencimento" (payslip, 014 ×2) and "o vencimento" of a shareholder loan (002). Those are not the wages error.
+
+Treaty verb "ordena a dupla tributação"                                                  1 (004)
+
+Editor’s aside "a disposição ligada" on the withholding-standard link                    1 (004). Digit 10 kept.
+
+"constituir-se" for a completed waiver or an established claim
+  waiver "se constitui" → "formalizada"                                                  1 (016)
+  "Se este pedido se constituir" → "Se este pedido for reconhecido"                     1 (016)
+  Left: "Se se constituir uma subsidiária" (018 ×2). That verb forms a company.
+
+"estar numa extensão" → "manter-se dentro de um âmbito razoável"                        2 (014)
+
+"de outros" with no noun → "de outras pessoas"                                          2 (011 FAQ and body)
+  Left: "de outros sinais", "de outros órgãos", "de outros colegas" (the noun is there).
+
+繳銷 "restituição" → surrender of the plate for deregistration                          2 (017)
+  Left: "restituição dos encargos de formação" (014). That is repayment of training cost, not 繳銷.
+
+Ministry of Labor letter number moved into parentheses                                  1 (014)
+
+Also in the same rows, not a separate pattern: gender agreement "pedida" → "pedido" (002);
+Article 12 damage limb "danifica ou consome" (008); "dominar bem o prazo" → "estar muito atento a estes prazos" (009);
+"marcas de reconforto" (003); gym "reter" / "inferência" / "curso" (010);
+importer "estatuto", "comparar", supplemental documents, "âmbito" (011);
+"por si sós" (014); guardian "cuidado da pessoa", "há longo tempo", "essa designação", "aceita o cargo" (016).
+
+R2–R10 were already in this corpus (prior rounds; this round’s verdicts are 4/5 and 5/5 and confirm feminine Wei Tseng, the consultation lock, European Portuguese, and Korea only as a labelled example). This pass did not reopen them. Hangul remains only inside frontmatter `url` of 008 and 009.
+
+## §Verify
+
+```
+$ node scripts/check-column-translation.mjs --dir src/content/columns-pt --lang pt 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=75
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-pt src/data | wc -l
+       0
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+$ git status --short | wc -l
+      19
+```
+
+That count is from the verify run, before this log file existed. This log is one further untracked path. After the verify run, one clause in 009 was tightened so ground 6 stays an alternative 30-day period ("em alternativa"), not a second requirement piled on the first. No digit, block, heading, link, or zero-width space changed.
+
+## Reviewer got wrong (not applied)
+
+- A7. Q16–Q20 are body paragraphs in the Korean source and in the English file. Promoting them to headings fails the heading-level check.
+- A8 / B8 and the U+200B verdict lines. The zero-width lines match the Korean source. Deleting them fails `blocks`. They are source layout. The Portuguese sentences around them were completed inside the existing blocks instead.
+- A10. "por cada 1 vítima", "por cada 1 acidente", and "por cada 1 ano" keep a source digit. "ultrapassar 1 pessoa" in 005 is the counted threshold “more than 1 worker”, not the redundant “each”.
+- A12, the request to drop article 10 from the public label. The Korean anchor still names article 10 of the business-tax act, and that digit has to remain. The URL stays `flno=3`. The editor’s phrase “a disposição ligada” was removed; “não o artigo 10” stays.
+- "Se se constituir uma subsidiária" (018). "Constituir" there means to form a company. The waiver and the residual-property claim were the "constituir-se" errors.
+- "ficha de vencimento" (014) and the loan’s "vencimento" (002). The wages misreading was "natureza dos vencimentos" in the bankruptcy checklist, and "vencimentos de pagamento" for child-support due dates. Those two were changed.

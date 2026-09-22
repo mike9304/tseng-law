@@ -52,9 +52,9 @@ A constituição de uma subsidiária taiwanesa começa em geral pelo exame prév
 
 1. Exame prévio do nome chinês da sociedade e dos ramos de atividade (公司名稱及所營事業預查)
 
-2. Ato autêntico e legalização de atos estrangeiros tais como a procuração (委任書) e, se for caso disso, autenticação por uma representação de Taiwan no estrangeiro (駐外館處驗證)
+2. Ato autêntico e legalização de atos estrangeiros tais como a procuração (委任書) e, se for o caso, autenticação por uma representação de Taiwan no estrangeiro (駐外館處驗證)
 
-3. Pedido de investimento junto do Departamento de Revisão dos Investimentos do Ministério da Economia (經濟部投資審議司) (se for caso disso)
+3. Pedido de investimento junto do Departamento de Revisão dos Investimentos do Ministério da Economia (經濟部投資審議司) (se for o caso)
 
 4. Abertura da conta da sociedade em formação (公司籌備處帳戶)
 
@@ -68,7 +68,7 @@ A constituição de uma subsidiária taiwanesa começa em geral pelo exame prév
 
 9. Conversão da conta da sociedade em formação em conta ordinária
 
-10. Outras etapas tais como a importação e a exportação, as autorizações setoriais, a autorização de trabalho e a residência (se for caso disso)
+10. Outras etapas tais como a importação e a exportação, as autorizações setoriais, a autorização de trabalho e a residência (se for o caso)
 
 O exame prévio do nome chinês da sociedade e dos ramos de atividade confirma, antes da inscrição, a denominação a utilizar e a atividade prevista. O êxito deste exame não significa que a autorização distinta necessária ao setor já tenha sido emitida, nem que se possa de imediato atuar no local previsto. Se um pedido de investimento estrangeiro for necessário, o investidor, o montante do investimento, o objeto da entrada e o plano de negócios devem coincidir com as peças de exame.
 

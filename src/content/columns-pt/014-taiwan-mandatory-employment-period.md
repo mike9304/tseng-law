@@ -27,7 +27,7 @@ O pacto de período mínimo de trabalho (最低服務年限約定) do contrato d
 No exame, é importante não misturar as quatro perguntas seguintes.
 
 1. O próprio pacto reúne os requisitos legais do artigo 15-1?
-2. O período convencionado e a carga do trabalhador estão numa extensão razoável?
+2. O período convencionado e a carga do trabalhador mantêm-se dentro de um âmbito razoável?
 3. A quem se imputa a causa de extinção do contrato de trabalho?
 4. Como se apreciam o pré-aviso de demissão e a extensão da restituição?
 
@@ -49,13 +49,13 @@ A circunstância de o trabalhador ter assinado o contrato pode ser um documento 
 
 Para fundar o pacto na formação, o empregador deve ter fornecido realmente ao trabalhador uma formação técnica especializada e ter assumido o custo. Não basta escrever no plano de formação que se trata de um curso profissional ou consignar um custo estimado no contrato. Deve poder ligar-se por documentos o tema da formação, a competência profissional ou técnica que o posto exige, a duração concreta, se foi concluída e o desembolso real.
 
-O objeto de exame compreende não só custos diretamente verificáveis, como os honorários de formadores externos, as propinas de um centro de formação e as taxas de materiais ou de equipamentos, mas também o fundamento de cálculo dos custos internos que o empregador alega. Se formou pessoal interno, deve ver-se de quem e de que tempo se trata, em que isso se distingue da supervisão habitual ou da transmissão do posto, e se há um fundamento para imputar esse custo a esse trabalhador. Um montante estimado ou uma repartição global não provam por si a carga real.
+O objeto de exame compreende não só custos diretamente verificáveis, como os honorários de formadores externos, as propinas de um centro de formação e as taxas de materiais ou de equipamentos, mas também o fundamento de cálculo dos custos internos que o empregador alega. Se formou pessoal interno, deve ver-se de quem e de que tempo se trata, em que isso se distingue da supervisão habitual ou da transmissão do posto, e se há um fundamento para imputar esse custo a esse trabalhador. Um montante estimado ou uma repartição global não provam por si sós a carga real.
 
 O programa, o calendário de formação, a lista de presença, o resultado da avaliação, o certificado de conclusão, as faturas e os recibos são documentos de base para confirmar a realidade da formação e o custo. O contrato entre o empregador e o centro de formação, os comprovativos de pagamento e as condições de reembolso, vistos em conjunto, permitem captar com mais exatidão a carga real. Se o trabalhador pagou uma parte do custo de forma direta ou se um terceiro o assumiu, deve também distinguir-se quem assumiu o custo final.
 
 O limite entre a adaptação geral ao trabalho e a formação técnica especializada não se divide só segundo o lugar da formação ou segundo quem a organiza. Um curso interno pode estabelecer um conteúdo profissional e técnico concreto e um investimento considerável, e um curso longo de um centro externo pode ser, na realidade, uma formação introdutória geral. Não se deve portanto excluir de forma uniforme toda a formação interna nem reconhecer o requisito legal só porque o curso é dispendioso ou longo.
 
-Deve também poder explicar-se a relação entre o período convencionado e o investimento de formação. Que competência se adquire, que relação essa competência tem com o posto de destino e por que o período de trabalho proposto é necessário face à duração e ao custo da formação examinam-se de forma individual. Se, depois do termo da formação, esse trabalho foi realmente exercido e o período já trabalhado são também documentos para apreciar a extensão da carga.
+Deve também poder explicar-se a relação entre o período convencionado e o investimento de formação. Que competência se adquire, que relação essa competência tem com o posto de destino e por que o período de trabalho proposto é necessário face à duração e ao custo da formação examinam-se de forma individual. O facto de, terminada a formação, esse trabalho ter sido realmente exercido, e o tempo já trabalhado, também servem para apreciar a extensão da carga.
 
 ## 3. Segundo requisito legal: contrapartida razoável
 
@@ -71,7 +71,7 @@ Importa também que o texto do contrato e o pagamento real coincidam. Verificar 
 
 ## 4. Extensão razoável e quatro fatores de exame
 
-Mesmo existindo um dos requisitos legais, o período convencionado e a responsabilidade devem estar numa extensão razoável. O artigo 15-1, n.º 2, não oferece uma resposta fixa segundo o nome ou o ofício, mas dispõe que o contrato concreto e a estrutura de investimento e de contrapartida se examinem com os quatro fatores seguintes.
+Mesmo existindo um dos requisitos legais, o período convencionado e a responsabilidade devem manter-se dentro de um âmbito razoável. O artigo 15-1, n.º 2, não oferece uma resposta fixa segundo o nome ou o ofício, mas dispõe que o contrato concreto e a estrutura de investimento e de contrapartida se examinem com os quatro fatores seguintes.
 
 1. Duração e custo da formação técnica especializada.
 2. Possibilidade de substituir um trabalhador do mesmo posto ou de um posto similar.
@@ -92,7 +92,7 @@ No final, precisa-se de uma relação de proporcionalidade compreensível entre 
 
 Segundo a orientação do Ministério do Trabalho de Taiwan de 5 de junho de 2026, o custo da formação periódica, da formação geral do posto, da adaptação ao trabalho dos trabalhadores recém-admitidos e da formação que a lei obriga a ministrar não pode ser tomado como fundamento do pacto de período mínimo de trabalho nem de um pedido de cláusula penal ou de restituição de encargos. Não se deve ver só o nome da formação, mas o programa concreto, o conteúdo profissional e técnico, a duração, o custo realmente assumido pelo empregador e os comprovativos.
 
-A orientação 勞動關2字第1150141814號 do Ministério do Trabalho distingue e trata a formação que se ministra de forma periódica, a formação habitual do posto, a formação para que o trabalhador recém-admitido se familiarize com o ambiente e os procedimentos de trabalho, e a formação que o empregador deve ministrar segundo a lei. Como esta formação acompanha a exploração da atividade ou o cumprimento de uma obrigação legal, o sentido é que o seu custo não pode converter-se em fundamento de uma obrigação de permanência ou de uma sanção por extinção antecipada.
+A orientação do Ministério do Trabalho n.º 1150141814 (勞動關2字第1150141814號) distingue e trata a formação que se ministra de forma periódica, a formação habitual do posto, a formação para que o trabalhador recém-admitido se familiarize com o ambiente e os procedimentos de trabalho, e a formação que o empregador deve ministrar segundo a lei. Como esta formação acompanha a exploração da atividade ou o cumprimento de uma obrigação legal, o sentido é que o seu custo não pode converter-se em fundamento de uma obrigação de permanência ou de uma sanção por extinção antecipada.
 
 Os cursos que um empregado novo recebe de ordinário, como a explicação do regulamento de trabalho (工作規則), a apresentação da organização e dos sistemas, a transmissão habitual do posto e o guia dos procedimentos de base de segurança, devem ser confirmados na sua substância. O custo geral de contratação e de gestão ou o custo de transmissão do posto que o empregador já devia assumir no curso normal da atividade não podem fixar-se como objeto de restituição etiquetando-os só como investimento separado.
 

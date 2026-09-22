@@ -54,9 +54,9 @@ Quando uma sociedade ordinária começa de novo o transporte de mercadorias por 
 
 O transporte por camião pequeno (小貨車) explorado por uma pessoa singular é um regime estreito, distinto da constituição ordinária de sociedades. Entre as exigências figura que o requerente tenha um registo de domicílio na circunscrição competente, possua uma carta de condução profissional de veículo pequeno e utilize 1 camião pequeno da sua propriedade de uma idade que não exceda 2 anos. Não é a via habitual que uma pessoa coletiva estrangeira utiliza para entrar no transporte de mercadorias por automóvel.
 
-As matrículas de veículo (車輛牌照) de uso comercial emitidas a um empresário de transporte por automóvel de constituição nova não podem ser canceladas por restituição (繳銷) nem transmitidas por alteração de titular no registo do veículo (過戶轉讓) durante 1 ano a contar da data de emissão.
+As matrículas de veículo (車輛牌照) de uso comercial emitidas a um empresário de transporte por automóvel de constituição nova não podem ser canceladas por entrega da matrícula para baixa (繳銷) nem transmitidas por alteração de titular no registo do veículo (過戶轉讓) durante 1 ano a contar da data de emissão.
 
-Esta restrição visa o cancelamento da matrícula de uso comercial por restituição e a transmissão por alteração de titular no registo do veículo. Os outros tratamentos, incluindo a colocação fora de uso do veículo e a substituição, devem confirmar-se em separado segundo as normas em vigor da autoridade das estradas competente.
+Esta restrição visa a entrega da matrícula de uso comercial para baixa e a transmissão por alteração de titular no registo do veículo. Os outros tratamentos, incluindo a colocação fora de uso do veículo e a substituição, devem confirmar-se em separado segundo as normas em vigor da autoridade das estradas competente.
 
 ### Investimento estrangeiro e aprovação do setor
 

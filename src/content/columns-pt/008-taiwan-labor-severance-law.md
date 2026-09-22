@@ -38,13 +38,13 @@ Se a pessoa empregada se demitir ela própria, a sociedade não tem de pagar ind
 
 ​
 
-Se a pessoa empregada cometer contudo um ato ilícito,
+Se a pessoa empregada cometer, contudo, um ato ilícito, o despedimento sem indemnização pode caber.
 
-**violar o regulamento interno (工作規則),**
+**Violar o regulamento interno (工作規則) tem o mesmo efeito.**
 
-**ou faltar ao trabalho sem motivo 3 dias seguidos (曠工),**
+**Faltar ao trabalho sem motivo 3 dias seguidos (曠工) tem o mesmo efeito.**
 
-a sociedade pode despedir sem pagar indemnização por despedimento.
+A sociedade pode despedir sem pagar indemnização por despedimento.
 
 ​
 
@@ -58,7 +58,7 @@ Resumo-lhe isso num quadro simples.
 | Pré-aviso prévio | Exigido | Não exigido | Exigido |
 | Dificuldade | Simples | Difícil | Simples |
 | Se a sociedade deve pagar a indemnização por despedimento (資遣費) | Exigido | Não exigido | Não exigido |
-|  | Lei taiwanesa sobre as normas do trabalho, artigo 11 (勞動基準法第11條): Salvo se um dos casos seguintes se produzir, o empregador não pode pôr termo ao contrato de trabalho, mesmo depois de notificação prévia à pessoa empregada.  1. Cessação de atividade (歇業) ou cessão de empresa (轉讓)  2. Perdas (虧損) ou contração da atividade (業務緊縮)  3. Um caso de força maior exige uma interrupção de atividade de 1 mês ou mais  4. A natureza da atividade exige uma redução de pessoal, e a pessoa despedida não pode ser transferida para outro posto adequado  5. Uma pessoa empregada determinada não pode cumprir de forma satisfatória o trabalho exigido pelo posto | Lei taiwanesa sobre as normas do trabalho, artigo 12 (勞動基準法第12條): O empregador pode despedir sem notificação prévia se a pessoa empregada cair num dos casos seguintes.  1. Quem, na celebração do contrato de trabalho, faz declarações inexatas, induz o empregador em erro e faz correr um risco de prejuízo à empresa  2. Quem exerce violências ou insulta gravemente o empregador, a sua família, o seu representante (代理人) ou outros colegas  3. Quem foi definitivamente condenado a uma pena de prisão por tempo determinado (有期徒刑) ou a uma pena mais pesada, sem que a suspensão da pena (緩刑) tenha sido pronunciada nem que a conversão em multa (易科罰金) tenha sido autorizada  4. Violação grave do contrato de trabalho ou das regras de trabalho  5. Quem consome intencionalmente máquinas, ferramentas, matérias-primas, produtos ou outros bens do empregador, ou revela intencionalmente segredos técnicos e comerciais do empregador, e causa um prejuízo ao empregador  6. Falta injustificada (曠工) sem motivo legítimo durante 3 dias consecutivos, ou durante 6 dias ou mais num mês |  |
+|  | Lei taiwanesa sobre as normas do trabalho, artigo 11 (勞動基準法第11條): Salvo se um dos casos seguintes se produzir, o empregador não pode pôr termo ao contrato de trabalho, mesmo depois de notificação prévia à pessoa empregada.  1. Cessação de atividade (歇業) ou cessão de empresa (轉讓)  2. Perdas (虧損) ou contração da atividade (業務緊縮)  3. Um caso de força maior exige uma interrupção de atividade de 1 mês ou mais  4. A natureza da atividade exige uma redução de pessoal, e a pessoa despedida não pode ser transferida para outro posto adequado  5. Uma pessoa empregada determinada não pode cumprir de forma satisfatória o trabalho exigido pelo posto | Lei taiwanesa sobre as normas do trabalho, artigo 12 (勞動基準法第12條): O empregador pode despedir sem notificação prévia se a pessoa empregada cair num dos casos seguintes.  1. Quem, na celebração do contrato de trabalho, faz declarações inexatas, induz o empregador em erro e faz correr um risco de prejuízo à empresa  2. Quem exerce violências ou insulta gravemente o empregador, a sua família, o seu representante (代理人) ou outros colegas  3. Quem foi definitivamente condenado a uma pena de prisão por tempo determinado (有期徒刑) ou a uma pena mais pesada, sem que a suspensão da pena (緩刑) tenha sido pronunciada nem que a conversão em multa (易科罰金) tenha sido autorizada  4. Violação grave do contrato de trabalho ou das regras de trabalho  5. Quem danifica ou consome intencionalmente máquinas, ferramentas, matérias-primas, produtos ou outros bens do empregador, ou revela intencionalmente segredos técnicos e comerciais do empregador, e causa um prejuízo ao empregador  6. Falta injustificada (曠工) sem motivo legítimo durante 3 dias consecutivos, ou durante 6 dias ou mais num mês |  |
 
 > Em Taiwan, por cada 1 ano de antiguidade (年資) cumprido,
 > o empregador deve pagar 0,5 mês de salário médio (平均工資) a título de indemnização por despedimento.
@@ -66,19 +66,19 @@ Resumo-lhe isso num quadro simples.
 
 ​
 
-Se o salário da pessoa empregada for elevado e uma certa antiguidade for atingida,
+Se o salário da pessoa empregada for elevado e uma certa antiguidade for atingida, o montante sobe.
 
-a indemnização por despedimento é também relativamente mais elevada.
+A indemnização por despedimento é também relativamente mais elevada.
 
-Então, certas sociedades taiwanesas pouco escrupulosas empregam diversos meios,
+Então, certas sociedades taiwanesas pouco escrupulosas empregam diversos meios.
 
-para não ter de pagar indemnizações por despedimento elevadas,
+Fazem-no para não ter de pagar indemnizações por despedimento elevadas.
 
-e empurram os trabalhadores a demitir-se eles próprios.
+Empurram os trabalhadores a demitir-se eles próprios.
 
-Os trabalhadores devem ser prudentes
+Os trabalhadores devem ser prudentes.
 
-e ter cuidado para não cair na intenção da sociedade.
+Devem ter cuidado para não cair na intenção da sociedade.
 
 ​
 
@@ -86,91 +86,91 @@ Conto-lhe um assunto que tratei.
 
 Existe a sociedade A, conhecida, com estabelecimentos em todo Taiwan.
 
-Por uma razão qualquer, a direção mudou,
+Por uma razão qualquer, a direção mudou.
 
-e a nova direção começou, desde a tomada de funções,
+A nova direção começou desde a tomada de funções.
 
-a fim de reduzir os custos de pessoal,
+O fim era reduzir os custos de pessoal.
 
-a convocar sucessivamente os trabalhadores bem pagos e antigos para entrevistas
+A nova direção passou a convocar sucessivamente os trabalhadores bem pagos e antigos para entrevistas.
 
-Na época, a minha parte, o senhor B, estava empregado há mais de 10 anos junto da sociedade A
+Na época, a minha parte, o senhor B, estava empregado há mais de 10 anos junto da sociedade A.
 
-e o comercial de maior resultado da região do centro de Taiwan.
+Era o comercial de maior resultado da região do centro de Taiwan.
 
-Porque o salário e os prémios eram muito elevados,
+O salário e os prémios eram muito elevados.
 
-a sociedade tomou o senhor B por alvo.
+A sociedade tomou o senhor B por alvo.
 
 ​
 
-Um dia, um quadro dirigente convocou B para uma entrevista
+Um dia, um quadro dirigente convocou B para uma entrevista.
 
-e começou de súbito a censurá-lo, dizendo que B não trabalhava com consciência.
+O quadro começou de súbito a censurá-lo, dizendo que B não trabalhava com consciência.
 
 A sociedade estaria em dificuldade,
 
-B deveria sacrificar-se e servir de exemplo
+B deveria sacrificar-se e servir de exemplo.
 
-e baixar o seu salário bem como o seu posto.
+Deveria baixar o seu salário bem como o seu posto.
 
-Senão, B deveria deixar a sociedade;
+Senão, B deveria deixar a sociedade.
 
-deu a B uma folha A4
+O quadro deu a B uma folha A4.
 
-e indicou-lhe que escrevesse: «Eu, OOO, baixo voluntariamente o meu posto e o meu salário»
+O quadro indicou-lhe que escrevesse: «Eu, OOO, baixo voluntariamente o meu posto e o meu salário».
 
-como conteúdo.
+Esse devia ser o conteúdo da folha.
 
-Este acordo, queria-se mostrá-lo a todos os outros trabalhadores,
+Queria mostrar-se este acordo a todos os outros trabalhadores.
 
-a fim de que o seguissem.
-
-​
-
-B era o trabalhador de maior resultado da região do centro de Taiwan,
-
-tinha trazido muito dinheiro à sociedade
-
-e trabalhava cada dia com consciência,
-
-é por isso que rejeitou fortemente esta exigência desrazoável.
-
-B recusou escrever isso,
-
-e finalmente o quadro da sociedade ordenou-lhe com cólera que partisse.
-
-B deixou, com um sentimento de injustiça e de tristeza,
-
-a sociedade onde estava há 10 anos,
-
-e não veio mais em seguida trabalhar.
+O fim era que o seguissem.
 
 ​
 
-Da mesma maneira, a sociedade
+B era o trabalhador de maior resultado da região do centro de Taiwan.
 
-baixou os salários de numerosos trabalhadores dirigentes
+B tinha trazido muito dinheiro à sociedade.
 
-e uma parte dos trabalhadores não suportou este tratamento
+B trabalhava cada dia com consciência.
 
-e alguns demitiram-se por sua iniciativa
+É por isso que rejeitou fortemente esta exigência desrazoável.
+
+B recusou escrever isso.
+
+Finalmente, o quadro da sociedade ordenou-lhe com cólera que partisse.
+
+B deixou o emprego com um sentimento de injustiça e de tristeza.
+
+B deixou a sociedade onde estava há 10 anos.
+
+Não veio mais em seguida trabalhar.
 
 ​
 
-B tinha, contudo, depois da mudança de direção,
+Da mesma maneira, a sociedade agiu sobre outros trabalhadores.
 
-reconhecido que a sociedade queria fazer partir os trabalhadores de forma inapropriada,
+A sociedade baixou os salários de numerosos trabalhadores dirigentes.
 
-e tê-lo notado cedo
+Uma parte dos trabalhadores não suportou este tratamento.
 
-e, porque já tinha descoberto ofertas de emprego antes da partida de trabalhadores,
+Alguns demitiram-se por sua iniciativa.
 
-B, no dia em que se dirigiu à entrevista,
+​
 
-gravou todo o desenrolar com o telemóvel
+B tinha, contudo, depois da mudança de direção, já visto o risco.
 
-e pôde provar que não se tinha demitido ele próprio.
+Reconheceu que a sociedade queria fazer partir os trabalhadores de forma inapropriada.
+
+B notou-o cedo.
+
+B já tinha descoberto ofertas de emprego antes da partida de trabalhadores.
+
+B, no dia em que se dirigiu à entrevista, documentou o que se passou.
+
+B gravou todo o desenrolar com o telemóvel.
+
+B pôde provar que não se tinha demitido ele próprio.
 
 A gravação pode mostrar que B não se demitiu por sua iniciativa.
 
@@ -180,21 +180,21 @@ Os outros trabalhadores que saíram tinham de apreciar se a indemnização era d
 
 ​
 
-Porque existem muitos de tais casos,
+Porque existem muitos de tais casos, a prova importa.
 
-deve conservar provas,
+Deve conservar provas.
 
-se a sociedade empregar meios inapropriados.
+Faça-o se a sociedade empregar meios inapropriados.
 
-Se a sociedade consignar pequenos erros dos trabalhadores,
+Se a sociedade consignar pequenos erros dos trabalhadores, isso conta.
 
-fixar objetivos difíceis de atingir,
+Se fixar objetivos difíceis de atingir, isso conta.
 
-pôr exigências excessivas
+Se pôr exigências excessivas, isso conta.
 
-ou transferir os trabalhadores para postos estranhos,
+Se transferir os trabalhadores para postos estranhos, isso conta.
 
-**deve conservar provas.**
+**Deve conservar provas.**
 
 **Conserve os registos de presença habituais.**
 
@@ -212,15 +212,15 @@ Para quem trabalha em Taiwan, vale o seguinte.
 
 A indemnização por despedimento é mais difícil de obter do que se pensa.
 
-Não transija facilmente com a sociedade
+Não transija facilmente com a sociedade.
 
-e cuide para que a sociedade não o despeça de forma indevida
+Cuide para que a sociedade não o despeça de forma indevida.
 
-nem o empurre a demitir-se por si próprio
+Cuide também para que não o empurre a demitir-se por si próprio.
 
-A indemnização por despedimento é um direito legal da pessoa empregada,
+A indemnização por despedimento é um direito legal da pessoa empregada.
 
-e a sociedade deve evidentemente pagá-la.
+A sociedade deve evidentemente pagá-la.
 
 Deve também proteger os seus direitos em Taiwan.
 

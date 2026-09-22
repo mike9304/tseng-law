@@ -35,9 +35,9 @@ Na redação do plano de investimento, não é necessário indicar o endereço e
 
 Quando mais tarde a conta da sociedade em formação (公司籌備處帳戶) é aberta no banco, numerosos bancos examinam contudo o contrato de arrendamento (租賃契約) e inspecionam no local o endereço da sociedade.
 
-Num banco taiwanês indicou-se que
+Num banco taiwanês indicou-se um motivo concreto.
 
-numerosos estrangeiros têm desaparecido depois da abertura da conta, de modo que a abertura das contas é tratada de forma cada vez mais estrita.
+Numerosos estrangeiros têm desaparecido depois da abertura da conta, de modo que a abertura das contas é tratada de forma cada vez mais estrita.
 
 Na parte sobre os fundamentos, a abertura da conta foi indicada como a etapa mais difícil, e essa indicação confirma-se na prática.
 
@@ -45,15 +45,15 @@ Porque os casos de branqueamento de capitais (洗錢) são muito numerosos em Ta
 
 **Conselho**:
 
-Como o exame do plano de investimento também leva tempo,
+O exame do plano de investimento também leva tempo.
 
-convém redigir o plano de investimento e procurar o endereço de inscrição da sociedade ao mesmo tempo.
+Convém redigir o plano de investimento e procurar o endereço de inscrição da sociedade ao mesmo tempo.
 
 Segundo o artigo 9 do Estatuto do investimento dos estrangeiros (外國人投資條例), a entrada aprovada deve chegar na totalidade no prazo fixado pela autoridade competente (核定期限); o prazo deve confirmar-se no ato de aprovação de cada assunto (na prática, é frequentemente fixado em torno de 1 ano).
 
-Neste prazo, uma vez encontrado o endereço da sociedade e assinado o contrato de arrendamento,
+Neste prazo, o endereço da sociedade pode já estar encontrado e o contrato de arrendamento assinado.
 
-resta tempo suficiente para abrir no banco a conta da sociedade em formação e transferir o capital.
+Resta então tempo suficiente para abrir no banco a conta da sociedade em formação e transferir o capital.
 
 ​
 
@@ -61,25 +61,25 @@ resta tempo suficiente para abrir no banco a conta da sociedade em formação e 
 
 É possível.
 
-O banco exige em geral uma dupla verificação de identidade,
+O banco exige em geral uma dupla verificação de identidade.
 
-e sem cartão de residência, pode pedir-se junto da administração da imigração de Taiwan a «**folha de dados básicos do número de identificação unificado**» (統一證號基本資料表).
+Sem cartão de residência, pode pedir-se junto da administração da imigração de Taiwan a «**folha de dados básicos do número de identificação unificado**» (統一證號基本資料表).
 
-A emissão é possível no próprio dia,
+A emissão é possível no próprio dia.
 
-mas a administração da imigração (移民署) está muito frequentada; convém portanto chegar cedo e tirar um número.
+A administração da imigração (移民署) está, porém, muito frequentada; convém portanto chegar cedo e tirar um número.
 
 ​
 
 **3. Ouvi dizer que, no exame do plano de investimento, deve indicar-se a formação e a experiência profissional, e preocupa-me que a minha formação e a minha experiência não correspondam ao setor da sociedade que pretendo constituir.**
 
-A comissão de exame do Ministério da Economia examina de facto os antecedentes do investidor,
+A comissão de exame do Ministério da Economia examina de facto os antecedentes do investidor.
 
-mas o exame não é excessivamente estrito.
+O exame não é, porém, excessivamente estrito.
 
-Podem mencionar-se experiências profissionais variadas, incluindo o trabalho a tempo parcial,
+Podem mencionar-se experiências profissionais variadas, incluindo o trabalho a tempo parcial.
 
-e expô-las em pormenor de modo a poder convencer as pessoas encarregadas do exame.
+Convém expô-las em pormenor de modo a poder convencer as pessoas encarregadas do exame.
 
 Sobre este ponto, convém tratar o assunto em pormenor com uma advogada ou um advogado de Taiwan.
 
@@ -95,15 +95,15 @@ Além disso, nos contratos de arrendamento de locais comerciais em Taiwan, o sen
 
 Trata-se de um período isento de renda; pode negociar-se.
 
-Não é fácil para um estrangeiro tomar de arrendamento um local comercial, e o depósito de caução (押金) em Taiwan é bastante baixo (ordinariamente 2 meses), de modo que a proteção do senhorio é limitada;
+Não é fácil para um estrangeiro tomar de arrendamento um local comercial, e o depósito de caução (押金) em Taiwan é bastante baixo (ordinariamente 2 meses), de modo que a proteção do senhorio é limitada.
 
-os senhorios hesitam portanto em arrendar a estrangeiros.
+Os senhorios hesitam portanto em arrendar a estrangeiros.
 
 Convém por isso procurar o local de exploração cedo.
 
-Se a negociação com o senhorio não se desenrolar de forma fluida,
+Se a negociação com o senhorio não se desenrolar de forma fluida, há medidas suplementares.
 
-pode, se for caso disso, propor-se a certificação notarial do contrato de arrendamento (公證) ou um depósito de caução suplementar.
+Pode, se for o caso, propor-se a certificação notarial do contrato de arrendamento (公證) ou um depósito de caução suplementar.
 
 ​
 
@@ -115,13 +115,13 @@ Por exemplo, se o ramo de atividade for a restauração e se pretender tomar de 
 
 Como já indicado, o banco examina o contrato de arrendamento e inspeciona no local o endereço da sociedade.
 
-Além disso, na inscrição final da sociedade, a municipalidade (市政府) exige também que o endereço inscrito se situe numa zona onde a exploração de um restaurante é autorizada;
+Além disso, na inscrição final da sociedade, a municipalidade (市政府) exige também que o endereço inscrito se situe numa zona onde a exploração de um restaurante é autorizada.
 
-se se tratar de um escritório comercial ordinário, a inscrição da sociedade (公司登記) não é então possível.
+Se se tratar de um escritório comercial ordinário, a inscrição da sociedade (公司登記) não é então possível.
 
-Por exemplo, se se tratar de ramos de atividade possíveis num escritório comercial ordinário, tais como a publicidade ou o comércio por grosso, a sociedade pode ser constituída num escritório comercial ordinário. Antes da conclusão do contrato de arrendamento
+Por exemplo, se se tratar de ramos de atividade possíveis num escritório comercial ordinário, tais como a publicidade ou o comércio por grosso, a sociedade pode ser constituída num escritório comercial ordinário. A adequação do local deve confirmar-se antes da conclusão do contrato de arrendamento.
 
-convém verificá-lo previamente.
+Convém verificá-lo previamente.
 
 *Se for preciso tratar uma questão de direito de Taiwan, escreva através da página Contacto; não é prometido um prazo de resposta.*
 

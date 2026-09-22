@@ -27,9 +27,9 @@ Há que saber se esse endereço se situa numa zona onde a exploração de um «e
 
 ​
 
-Se se começar a atividade na cidade de Taipé,
+Se se começar a atividade na cidade de Taipé, há um instrumento público.
 
-pode utilizar-se o sistema de «consulta prévia do local» (營業場所預先查詢) do gabinete do comércio da cidade de Taipé (臺北市商業處).
+Pode utilizar-se o sistema de «consulta prévia do local» (營業場所預先查詢) do gabinete do comércio da cidade de Taipé (臺北市商業處).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
@@ -41,9 +41,9 @@ Contudo, para esta verificação, deve carregar-se o «extrato de inscrição im
 
 Qualquer pessoa pode pedir junto do gabinete da administração fundiária (地政事務所) o «extrato de inscrição imobiliária de tipo II» de um endereço qualquer.
 
-Se tiver dificuldade em deslocar-se em pessoa ao gabinete da administração fundiária (地政事務所),
+Se tiver dificuldade em deslocar-se em pessoa ao gabinete da administração fundiária (地政事務所), há quem possa tratar do pedido.
 
-pode pedir a ajuda de um conhecido em Taiwan, do senhorio, de um agente imobiliário ou de uma advogada ou de um advogado.
+Pode pedir a ajuda de um conhecido em Taiwan, do senhorio, de um agente imobiliário ou de uma advogada ou de um advogado.
 
 Se o resultado da verificação indicar que o estabelecimento de restauração não é possível, mais tarde, no registo da sociedade (公司登記), a municipalidade poderia não aceitar a inscrição.
 
@@ -59,9 +59,9 @@ Contudo, na inscrição da sociedade, vários ramos são frequentemente inscrito
 
 Na prática, também não é necessário verificar todos os ramos na inscrição da sociedade.
 
-Segundo as «[instruções de funcionamento do serviço de consulta assistida de locais de negócio da cidade de Taipé](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)» (臺北市營業場所協助查詢服務作業須知) e o guia em vigor da cidade de Taipé,
+Segundo as «[instruções de funcionamento do serviço de consulta assistida de locais de negócio da cidade de Taipé](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)» (臺北市營業場所協助查詢服務作業須知) e o guia em vigor da cidade de Taipé, vigora uma regra de junção.
 
-desde 1 de janeiro de 2023, no pedido de inscrição de constituição, de transferência de sede ou de adição de ramos de atividade de uma sociedade ou de um comércio (incluindo a sucursal (分公司) e o estabelecimento auxiliar (分支機構)), o resultado da consulta prévia do local **deve** ser junto ao pedido de inscrição, independentemente do setor.
+Desde 1 de janeiro de 2023, no pedido de inscrição de constituição, de transferência de sede ou de adição de ramos de atividade de uma sociedade ou de um comércio (incluindo a sucursal (分公司) e o estabelecimento auxiliar (分支機構)), o resultado da consulta prévia do local **deve** ser junto ao pedido de inscrição, independentemente do setor.
 
 A lista abaixo dos «ramos sujeitos a consulta por iniciativa do serviço» (主動查詢之營業項目) designa os ramos que o gabinete do comércio consulta por iniciativa própria durante o exame da inscrição (隨案主動查詢) quando o ramo figura no pedido mas falta no resultado junto; o facto de um ramo não figurar nesta lista não significa que a verificação seja dispensada.
 

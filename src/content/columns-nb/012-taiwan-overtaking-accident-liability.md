@@ -41,9 +41,9 @@ A forsøkte å forbikjøre de 2 kjøretøyene, kjørte inn i det motsatte kjøre
 
 B pådro seg alvorlige hodeskader og omkom på stedet; A mistet bevisstheten og ble brakt til sykehuset.
 
-As og Bs familier så først kjøretøy nummer 2s plutselige kjørefeltskifte som den vesentligste årsaken til sammenstøtet. Saken førte til en rettssak, og i sakens forløp ble det gjennomført flere sakkyndige undersøkelser (鑑定) av ulykken.
+As og Bs familier så først det plutselige kjørefeltskiftet til kjøretøy nummer 2 som den vesentligste årsaken til sammenstøtet. Saken førte til en rettssak, og i sakens forløp ble det gjennomført flere sakkyndige undersøkelser (鑑定) av ulykken.
 
-Ifølge resultatet av den sakkyndige undersøkelsen bar A det vesentligste ansvaret for dette sammenstøtet. Denne konklusjonen var begrenset til denne sakens kjensgjerninger. Den sakkyndige undersøkelsen tok samlet i betraktning at A ville forbikjøre 2 forankjørende kjøretøy som kjørte i rekke, at han kjørte inn i det motsatte kjørefeltet, at han kjørte med en hastighet som etterlot for liten tid til å bremse, at de foreskrevne horn- og frontlyktsignalene manglet, samt kjøretøy nummer 2s kjørefeltskifte, veiens og kjørefeltenes struktur og de øvrige sikrede bevisene (鑑定).
+Ifølge resultatet av den sakkyndige undersøkelsen bar A det vesentligste ansvaret for dette sammenstøtet. Denne konklusjonen var begrenset til denne sakens kjensgjerninger. Den sakkyndige undersøkelsen tok samlet i betraktning at A ville forbikjøre 2 forankjørende kjøretøy som kjørte i rekke, at han kjørte inn i det motsatte kjørefeltet, at han kjørte med en hastighet som etterlot for liten tid til å bremse, at de foreskrevne horn- og frontlyktsignalene manglet, samt kjørefeltskiftet til kjøretøy nummer 2, veiens og kjørefeltenes struktur og de øvrige sikrede bevisene (鑑定).
 
 At det i enkelte saker kommer slike sakkyndige resultater, betyr ikke at 1 utelatelse av et foreskrevet signal alltid fastlegger ansvaret (鑑定). Uaktsomheten (過失) ved en forbikjøringsulykke avhenger av ulykkesstedet, kjørefeltinndelingen, hastigheten, kjøretøybevegelsene, signalene, tidsintervallene, sikten og de øvrige bevisene.
 

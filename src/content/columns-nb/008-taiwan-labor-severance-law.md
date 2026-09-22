@@ -32,7 +32,7 @@ I noen land — Korea er ett eksempel — skal selskapet betale sluttvederlag n�
 
 I Taiwan er ordningen en annen:
 
-Plikten til utbetaling av sluttvederlag oppstår først når selskapet avskjediger arbeidstakeren.
+Plikten til å betale sluttvederlag oppstår først når arbeidsgiveren sier opp arbeidstakeren.
 
 Sier arbeidstakeren selv opp, trenger selskapet ikke å utbetale sluttvederlag.
 
@@ -118,7 +118,7 @@ Ellers var B nødt til å forlate selskapet;
 
 vedkommende gav B et ark A4
 
-og anviste ham å skrive: «Jeg, [navn], senker frivillig stilling og lønn»
+og anviste ham å skrive: «Jeg, [navn], går frivillig ned i stilling og lønn»
 
 som innhold.
 

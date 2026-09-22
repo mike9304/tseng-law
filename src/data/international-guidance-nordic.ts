@@ -1003,7 +1003,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
   },
   contactCta: 'Send en forespørsel om rådgivning',
   footerNotice:
-    'Denne siden på norsk inneholder bare alminnelige veiledninger om kontorets arbeid etter Taiwans rett. Den er ikke juridisk rådgivning for en konkret sak, og å sende en melding skaper i seg selv ikke et forhold mellom advokat og klient.',
+    'Denne siden på norsk inneholder bare alminnelige veiledninger om kontorets arbeid etter Taiwans rett. Den er ikke juridisk rådgivning for en konkret sak, og å sende en melding skaper i seg selv ikke et klientforhold.',
   skipLink: 'Hopp over navigasjonen og gå til innholdet',
   menuLabel: 'Meny',
   languageLabel: 'Visningsspråk',
@@ -1058,7 +1058,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'VEILEDNINGER',
       title: 'Juridiske tjenester i Taiwan — veiledninger på norsk',
       description:
-        'Alminnelige forklaringer på norsk om Hovering International Law Firms arbeidsområde i Taiwan, rådgivningsspråkene og den første kontakten.',
+        'Alminnelige forklaringer på norsk om arbeidsområdet til Hovering International Law Firm i Taiwan, rådgivningsspråkene og den første kontakten.',
       intro:
         'Hovering International Law Firm bistår klienter i utlandet, også med tilknytning til Taiwan, i saker etter taiwansk rett: investering og selskapsstiftelse, sivile tvister, ekteskap, familie og arv, arbeidsrett, strafferett og immaterialrett. Denne norske delen hjelper deg med å se hvilket arbeid som faller innenfor vårt område, hva du bør forberede, og hvordan du når oss. Det er alminnelige opplysninger, ikke juridisk rådgivning i din egen sak.',
       sections: [
@@ -1066,7 +1066,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Hva vi gjør',
           paragraphs: [
             'Hovering International Law Firm er et advokatkontor etablert i Taiwan. Vi arbeider etter taiwansk rett og har kontorer i Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) og Pingtung (屏東). Vi gir råd til virksomheter, fører saker for domstolene og bistår klienter fra utlandet gjennom de trinnene som kreves i Taiwan.',
-            'Alt innholdet her er alminnelig. Utfallet av en sak avhenger av fakta, av reglene som gjelder, og av tidspunktet. Disse veiledningene erstatter ikke en samtale med advokat om dine egne dokumenter.',
+            'Alt innholdet her er alminnelig informasjon. Utfallet av en sak avhenger av fakta, av reglene som gjelder, og av tidspunktet. Disse veiledningene erstatter ikke en samtale med advokat om dine egne dokumenter.',
           ],
         },
         {
@@ -1222,7 +1222,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Rådgivningen kan være mot betaling',
           paragraphs: [
-            'Rådgivning hos advokat kan være en betalt tjeneste. Denne siden sier ikke at den første samtalen er uten betaling, og ingen del av den skal leses slik.',
+            'Rådgivning hos advokat kan være en betalt tjeneste. Denne siden sier ikke at den første samtalen er uten betaling, og ingen del av siden skal leses slik.',
             'Er rådgivningen mot betaling, opplyser vi om beløp og betalingsmåte før den finner sted.',
           ],
         },
@@ -1296,7 +1296,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Hvilke saker behandler kontoret?',
           answer:
-            'Vi behandler seks fagområder: investering og selskapsstiftelse i Taiwan, sivile tvister og erstatning, ekteskap, familie og arv, arbeidsrettslige tvister, straffesaker og immaterialrett. Om vi tar imot en sak, avgjøres etter en vurdering av innholdet.',
+            'Vi behandler seks fagområder: investering og selskapsstiftelse i Taiwan, sivile tvister og erstatning, ekteskap, familie og arv, arbeidsrettslige tvister, straffesaker og immaterialrett. Hvorvidt vi tar imot en sak, avgjøres etter at innholdet er vurdert.',
         },
         {
           question: 'Hva bør jeg forberede før kontakten?',
@@ -1321,7 +1321,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Har rådgivningen allerede skjedd når forespørselen er sendt?',
           answer:
-            'Nei. En innsendt forespørsel venter på vurdering hos en advokat. Det er ikke juridisk rådgivning, det er ingen bekreftet time, og innsendingen skaper i seg selv ikke et forhold mellom advokat og klient.',
+            'Nei. En innsendt forespørsel venter på vurdering hos en advokat. Det er ikke juridisk rådgivning, det er ingen bekreftet time, og innsendingen skaper i seg selv ikke et klientforhold.',
         },
         {
           question: 'Hvordan beregnes kostnadene?',
@@ -1384,7 +1384,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Underretning og mottaksnummer',
           paragraphs: [
             'Når en forespørsel blir sendt, varsler systemet kontoret. Er varselet ennå ikke bekreftet, blir teksten din liggende lagret og går ikke tapt.',
-            'Mottaksnummeret brukes til å finne igjen forespørselen din i saksdokumentene våre. Det vises etter lagringen, og du kan oppgi det når du tar kontakt på nytt.',
+            'Mottaksnummeret brukes til å finne igjen forespørselen din hos oss. Det vises etter lagringen, og du kan oppgi det når du tar kontakt på nytt.',
           ],
         },
         {
@@ -1397,8 +1397,8 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Lagringssted og leverandører',
           paragraphs: [
-            'Dette nettstedet driftes hos Vercel, og det du sender inn, lagres i ikke-offentlig objektslagring hos denne tjenesten. E-post sendes via e-posttjenesten kontoret bruker.',
-            'Enkelte leverandørers servere kan stå utenfor Taiwan, slik at opplysningene dine kan lagres og behandles der. Når formålet med lagringen er oppfylt, slettes opplysningene uten opphold; opplysninger som må oppbevares etter gjeldende regler, beholdes i den perioden. Henvendelser om personopplysninger sendes til wei@hoveringlaw.com.tw.',
+            'Dette nettstedet driftes hos Vercel, og det du sender inn, lagres i en ikke-offentlig skylagring hos denne tjenesten. E-post sendes via e-posttjenesten kontoret bruker.',
+            'Enkelte leverandørers servere kan stå utenfor Taiwan, slik at opplysningene dine kan lagres og behandles der. Når formålet med lagringen er oppfylt, slettes opplysningene uten ugrunnet opphold; opplysninger som må oppbevares etter gjeldende regler, beholdes i den perioden. Henvendelser om personopplysninger sendes til wei@hoveringlaw.com.tw.',
           ],
         },
       ],
@@ -1407,7 +1407,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'FORBEHOLD',
       title: 'Omfang og grenser for opplysningene på denne siden',
       description:
-        'Opplysningenes alminnelige karakter, det rettslige anvendelsesområdet og forutsetningene for et forhold mellom advokat og klient.',
+        'Opplysningenes alminnelige karakter, det rettslige anvendelsesområdet og forutsetningene for et klientforhold.',
       intro:
         'Denne delen gjør det klart hva disse norske veiledningssidene kan gjøre for deg, og hva de ikke kan.',
       sections: [
@@ -1426,9 +1426,9 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Et forhold mellom advokat og klient oppstår ikke av seg selv',
+          heading: 'Et klientforhold oppstår ikke av seg selv',
           paragraphs: [
-            'Å lese denne siden, å sende et skjema eller en e-post skaper i seg selv ikke et forhold mellom advokat og klient.',
+            'Å lese denne siden, å sende et skjema eller en e-post skaper i seg selv ikke et klientforhold.',
             'Dette forholdet oppstår først etter at saken er vurdert, og begge sider har bekreftet at arbeidet tas opp.',
           ],
         },
@@ -1453,7 +1453,7 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Fire lister etter språk',
           paragraphs: [
             'Denne delen inneholder fire lenker: artikkellisten på koreansk, på kinesisk, på engelsk og på japansk. Hver lenke oppgir hvilket språk listen er på, slik at du på forhånd vet hvilket språk innholdet åpnes på.',
-            'De fire listene er ordnet etter artiklenes originalspråk og er ikke oversettelseslister. Artiklene som finnes på norsk, står særskilt på denne siden.',
+            'De fire listene er ordnet etter artiklenes originalspråk. De er ikke oversettelser. Artiklene som finnes på norsk, står særskilt på denne siden.',
           ],
         },
         {
@@ -1464,10 +1464,10 @@ export const norwegianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Hvor langt en artikkel kan tjene som orientering',
+          heading: 'Hva en artikkel kan brukes til som orientering',
           paragraphs: [
             'Artiklene er alminnelige opplysninger på publiseringstidspunktet. Regler og praksis kan endre seg, og en artikkel dekker ikke alle omstendighetene i din sak.',
-            'Ikke bygg en beslutning i en virkelig sak bare på en artikkel. Bruk den til å få oversikt, og drøft dine egne dokumenter særskilt med en advokat; denne siden er ikke et rådgivningsmøte.',
+            'Ikke ta en beslutning i en konkret sak bare ut fra en artikkel. Bruk den til å få oversikt, og drøft dine egne dokumenter særskilt med en advokat; denne siden er ikke et rådgivningsmøte.',
           ],
         },
       ],

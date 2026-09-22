@@ -39,7 +39,7 @@ Undersøk reglene hos banken din i hjemlandet før kapitaloverføringen (資本�
 
 **2. Må du ved innbetaling av selskapskapitalen overføre taiwanske dollar (新臺幣, TWD) fra din personlige konto i Taiwan til det taiwanske selskapets forberedelseskonto?**
 
-Det er mulig, men du må legge fram dokumenter, som godtgjør opprinnelsen av de i Taiwan ervervede TWD-midler.
+Det er mulig, men du må legge fram dokumenter, som godtgjør opprinnelsen av midler i TWD som er ervervet i Taiwan.
 
 Dreier det seg for eksempel om lønnsinntekt ervervet i Taiwan, skal det fremlegges en kopi av kildeskattattesten for den aktuelle lønnsinntekten (薪資所得的扣繳憑單影本).
 

@@ -97,7 +97,7 @@ I dag tillater Korea fortsatt bare personer med synshemming som har kvalifikasjo
 
 og hvis noen uten denne kvalifikasjonen tar betalt for massasje,
 
-kan det ifølge den koreanske lov om medisinske ytelser (醫療法) idømmes fengsel i inntil 3 år.
+kan det ifølge den koreanske loven om medisinsk behandling (醫療法) idømmes fengsel i inntil 3 år.
 
 Hvis noen uten synshemming driver en massasjevirksomhet, kan det idømmes fengsel i inntil 5 år.
 

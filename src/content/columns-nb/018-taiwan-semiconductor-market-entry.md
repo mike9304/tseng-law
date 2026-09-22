@@ -35,7 +35,7 @@ Før inntredelsesstrukturen besluttes, kan hovedsetet internt klarlegge:
 |---|---|
 | Kontrakter med kundene | Hvem blir part i kontrakten: det utenlandske hovedsetet, det taiwanske datterselskapet eller et lokalt agentur? |
 | Tilbud og ordrer | Hvem bekrefter endelig prisen og leveringstiden, og hvor langt rekker fullmakten for den ansvarlige i Taiwan? |
-| Varer og lagre | Hvem innfører, holder og leder lagrene og behandler returneringer og utskiftinger? |
+| Varer og lagre | Hvem innfører, holder og styrer varelageret og behandler returneringer og utskiftinger? |
 | Personale | Reiser hovedsetets arbeidstakere, ansetter man i Taiwan, eller overlates arbeidet til en ekstern leverandør? |
 | Installasjon og teknisk støtte | Hvem skylder støtten til kunden og behandler problemene ved arbeidet på stedet? |
 | Fakturering og kostnader | Hvem fakturerer og innkrever, og hvordan avregnes kostnadene mellom hovedsetet og organisasjonen i Taiwan? |
@@ -63,7 +63,7 @@ Hvis man beslutter å stifte en selvstendig juridisk person i Taiwan, skal man o
 
 Det kan dannes med 1 eller flere fysiske personer (有限公司), eller med taiwanske eller utenlandske juridiske personer som selskapsdeltakere; deltakerne er i utgangspunktet ansvarlige inntil beløpet av innskuddet sitt. Selskapet har fra 1 til 3 ledere, valgt blant deltakerne. Deltakere som ikke driver den daglige virksomheten, kan utøve tilsynsrett, uten at det trengs en særskilt tilsynsperson (監察人). Med mindre vedtektene bestemmer noe annet, gjelder 1 stemme per 1 deltaker, så kontrollen ikke trenger å stemme overens med innskuddsforholdet. Overdragelsen av innskuddet fra en alminnelig deltaker krever i utgangspunktet samtykke fra mer enn halvparten av de øvriges stemmerettigheter; for en leder, 2/3 eller mer. Det passer bedre til enkle deltakerforhold og en stabil kontroll enn til en hyppig kapitalinnhenting eller handelen med andeler. Senere kan det omdannes til et aksjeselskap (股份有限公司).
 
-### Aksjeselskap (股份有限公司): passende hvis man vil ta inn andre investorer, eller en notering er forutsigbar
+### Aksjeselskap (股份有限公司): passende hvis man vil ta inn andre investorer, eller en børsnotering er aktuell
 
 Kapitalen deles i aksjer. I utgangspunktet kreves 2 deltakere eller mer (股份有限公司), men staten eller en juridisk person kan stifte det alene, og en utenlandsk juridisk person kan holde 100 %. Aksjer er i utgangspunktet fritt overdragelige, med lovbestemte unntak; særlige aksjer og opsjoner til arbeidstakere kan utformes i samsvar med loven. Det passer til virksomheter som forventer investorer, aksjehandel, kapitalinsentiver til arbeidstakere eller en senere fusjon, overtakelse, børsnotering eller registrering i den førbørslige handelen (興櫃); det begrenser seg ikke til store virksomheter. I styringen kan et ikke-offentlig emitterende selskap ved vedtektene være uten styre og kun ha 1 eller 2 ledere. Et selskap med én stats- eller juridisk person som eneste deltaker kan ved vedtektene være uten tilsynsperson (監察人). Ikke hvert aksjeselskap (股份有限公司) skal få årsregnskapet revidert. De vesentligste revisjonsgrensene for et alminnelig selskap er en innbetalt kapital på 30.000.000 TWD (新臺幣), eller, derunder, driftsinntekter på 100.000.000 TWD eller 100 arbeidstakere meldt inn i den taiwanske arbeidstakertrygden (勞工保險); selskaper med offentlig utbud følger verdipapirreguleringen.
 
@@ -77,7 +77,7 @@ Avsnittet over er veiledning om hvordan kontrakten utformes. At en bestemt selsk
 
 ## 5. Selskapsregistreringen og ingeniørens rettmessige arbeid er ikke det samme
 
-Å fullføre registreringen i Taiwan innebærer ikke at personalet fra det utenlandske hovedsetet automatisk må arbeide i Taiwan. En utlending som arbeider i Taiwan, har behov for en rettmessig arbeidstillatelse og, ved et lengre opphold, en oppholdstillatelse. I utgangspunktet søker arbeidsgiveren om arbeidstillatelsen og den tilsvarende oppholdstillatelsen.
+Å fullføre registreringen i Taiwan innebærer ikke at personalet fra det utenlandske hovedsetet automatisk kan arbeide i Taiwan. En utlending som arbeider i Taiwan, har behov for en rettmessig arbeidstillatelse og, ved et lengre opphold, en oppholdstillatelse. I utgangspunktet søker arbeidsgiveren om arbeidstillatelsen og den tilsvarende oppholdstillatelsen.
 
 Det er relativt enklere å erverve arbeidstillatelsen for en leder av det taiwanske datterselskapet eller av filialen av et utenlandsk selskap. For å søke om arbeidstillatelse for en annen og hver ytterligere utenlandsk statsborger krever likevel arbeidsdepartementet (勞動部), avhengig av bransje, terskler for kapital, omsetning eller liknende (子公司). Hvis man forutser at utenlandsk personale arbeider i Taiwan, skal man før stiftelsen av selskapet bekrefte om den påtenkte kapitalen når den gjeldende grensen.
 
@@ -87,9 +87,9 @@ De følgende scenariene er hypotetiske for å hjelpe vurderingen; de fastslår i
 
 **Utenlandske virksomheter rettet mot den innledende eksporten.** Hvis det i Taiwan ennå verken er arbeidstakere eller lagre, og man vil etterprøve etterspørselen via en uavhengig distributør, kan man først se leveringen, distribusjonsforholdet og virksomhetsfeltet i Taiwan. En distribusjonskontrakt alene løser ikke alle reguleringsspørsmål i Taiwan.
 
-**Utenlandske virksomheter som utvider salget og den tekniske støtten i Taiwan.** Hvis man i Taiwan vil ansette og fortsatt lede lagre, innkreving og kundestøtte, bør man konkret sammenligne datterselskap og filial og også etterprøve det kontraktsmessige ansvaret, hovedsetets driftsmåte, skattene og personalet.
+**Utenlandske virksomheter som utvider salget og den tekniske støtten i Taiwan.** Hvis man i Taiwan vil ansette og fortsatt styre varelager, innkreving og kundestøtte, bør man konkret sammenligne datterselskap og filial og også etterprøve det kontraktsmessige ansvaret, hovedsetets driftsmåte, skattene og personalet.
 
-**Utenlandske virksomheter i markedsundersøkelsesfasen.** Hvis man før en salgsorganisasjon kun vil ha informasjons- og kontaktfunksjoner, kan et representasjonskontor (代表人辦事處) vurderes. Hvis den faktiske planen omfatter salg av lagre eller arbeid på stedet, skal det særskilt bekreftes om disse aktivitetene er tillatt.
+**Utenlandske virksomheter i markedsundersøkelsesfasen.** Hvis man før en salgsorganisasjon kun vil ha informasjons- og kontaktfunksjoner, kan et representasjonskontor (代表人辦事處) vurderes. Hvis den faktiske planen omfatter salg fra lager eller arbeid på stedet, skal det særskilt bekreftes om disse aktivitetene er tillatt.
 
 ## 8. Til den første samtalen rekker en driftsoversikt; man trenger ikke straks å overdra alle fortrolige bilag
 
@@ -113,6 +113,6 @@ En overgang i trinn kan planlegges, men man skal også etterprøve opphør eller
 
 ## Samtale om inntredelsesstrukturen i Taiwan
 
-Hvis man i Taiwan vil selge, lede lagre, yte installasjonsstøtte eller ansette lokalt, ordn da først det arbeidet som hovedsetet utfører, og det som tilkommer organisasjonen i Taiwan. Etter bekreftelse av samtaleemnene og interessekonfliktene belyser kontoret de nødvendige bilagene og omfanget av tjenestene som kan leveres.
+Hvis man i Taiwan vil selge, styre varelager, yte installasjonsstøtte eller ansette lokalt, ordn da først det arbeidet som hovedsetet utfører, og det som tilkommer organisasjonen i Taiwan. Etter bekreftelse av samtaleemnene og interessekonfliktene belyser kontoret de nødvendige bilagene og omfanget av tjenestene som kan leveres.
 
 Eksempel på emne: samtale om inntredelsesstrukturen i Taiwan for en halvledervirksomhet. Ved den første kontakten oppgis selskapsnavnet, hovedsetets land, det påtenkte produktet eller tjenesten, driftsplanen i Taiwan og det ønskede samtalespråket. Fortrolige konstruksjonsbilag og fullstendige kontrakter sendes først etter mottak av ytterligere anvisninger. De faktisk tilgjengelige samtalespråkene og omfanget av hvert mandat skal bekreftes ved henvendelsen.

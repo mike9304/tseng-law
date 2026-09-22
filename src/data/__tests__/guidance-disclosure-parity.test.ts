@@ -598,7 +598,7 @@ const ELEMENTS = {
     hi: /अधिवक्ता तथा मुवक्किल/,
     sv: /förhållande mellan advokat/,
     da: /forhold mellem advokat/,
-    nb: /forhold mellom advokat/,
+    nb: /klientforhold/,
     fi: /suhdetta asianajajan ja päämiehen/,
     cs: /vztah mezi advokát/,
     hu: /ügyvéd–ügyfél/,

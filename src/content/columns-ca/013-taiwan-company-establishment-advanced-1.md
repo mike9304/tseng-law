@@ -13,9 +13,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Imatge principal](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Recentment moltes persones han constituït una societat a Taiwan i han obtingut el visat de treball i el certificat de residència,
+Recentment moltes persones han constituït una societat a Taiwan i han obtingut el visat de treball i el certificat de residència.
 
-i tot seguit es recullen les preguntes que més es plantegen en el moment de la constitució.
+Tot seguit es recullen les preguntes que més es plantegen en el moment de la constitució.
 
 Qui hagi llegit [**la part bàsica de constitució de societats**](/ca/columns/taiwan-company-establishment-basics) pot continuar amb aquesta part avançada més detallada.
 
@@ -49,7 +49,7 @@ Com que la revisió del pla d’inversió també requereix temps,
 
 redacti el pla d’inversió i cerqui l’adreça de registre de la societat alhora.
 
-Segons l’article 9 de l’Estatut d’inversió d’estrangers (外國人投資條例), l’aportació aprovada ha d’arribar per complet dins del termini fixat per l’autoritat competent (核定期限), i aquest termini s’ha de confirmar en el document d’aprovació de cada cas (en la pràctica sol fixar-se al voltant d’1 any).
+Segons l’article 9 de l’Llei d’inversió d’estrangers (外國人投資條例), l’aportació aprovada ha d’arribar per complet dins del termini fixat per l’autoritat competent (核定期限), i aquest termini s’ha de confirmar en el document d’aprovació de cada cas (en la pràctica sol fixar-se al voltant d’1 any).
 
 Dins d’aquest termini, un cop trobada l’adreça de la societat i signat el contracte d’arrendament,
 
@@ -63,7 +63,7 @@ hi ha temps suficient per obrir al banc el compte preparatori de la societat i r
 
 En general, el banc exigeix una doble acreditació d’identitat,
 
-i si no té certificat de residència, pot sol·licitar a l’Administració d’Immigració de Taiwan el ’**formulari de dades bàsiques del número unificat**(統一證號基本資料表)’.
+i si no té certificat de residència, pot sol·licitar a l’Administració d’Immigració de Taiwan el «formulari de dades bàsiques del número unificat» (統一證號基本資料表).
 
 Es pot expedir el mateix dia,
 
@@ -99,11 +99,11 @@ No és fàcil que un estranger arrendï un local, i com que el dipòsit de garan
 
 els propietaris es resisteixen a arrendar a estrangers.
 
-Per tant, es recomana cercar el local de negoci des de d’hora.
+Per tant, es recomana cercar el local de negoci ben d’hora.
 
 Si la negociació amb el propietari no avança amb fluïdesa,
 
-si és necessari, pot proposar la notarització del contracte d’arrendament o un dipòsit de garantia addicional.
+si és necessari, pot proposar d’atorgar el contracte d’arrendament en escriptura pública (公證) o un dipòsit de garantia addicional.
 
 ​
 

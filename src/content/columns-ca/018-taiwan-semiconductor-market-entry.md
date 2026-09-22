@@ -12,7 +12,7 @@ faq:
   - q: "Desapareix per complet la responsabilitat de la societat matriu en constituir una societat taiwanesa?"
     a: "Si es constitueix una filial i no una sucursal, la societat matriu, en principi, no assumeix les obligacions contractuals signades en nom de la filial. Tanmateix, s’han de comprovar les excepcions per abús de la personalitat jurídica i si la societat matriu ha atorgat garantia o ha assumit obligacions contractuals pròpies."
   - q: "Es pot començar amb un distribuïdor i després passar a una societat a Taiwan?"
-    a: "Es pot planificar una transició per etapes, però també s’han de revisar l’extinció o la modificació de contractes existents, els contractes amb clients, l’inventari, la garantia i el personal."
+    a: "Es pot planificar una transició per etapes, però també s’han de revisar l’extinció o la modificació de contractes existents, els contractes amb clients, l’inventari, la gestió de les garanties i el personal."
 ---
 
 # Empreses de components de semiconductors que entren a Taiwan: com avaluar una filial, una sucursal o un agent
@@ -45,15 +45,15 @@ Sobretot si el venedor del contracte de compravenda no és l’empresa que prest
 
 ## 2. Distinció entre filial, sucursal i oficina de representació d’una societat estrangera a Taiwan
 
-En planificar l’entrada, l’empresa de semiconductors ha de separar quina presència s’estableix a Taiwan i com s’organitzen les vendes i el servei. El primer atén a la personalitat jurídica, els requisits de registre i l’àmbit de negoci; el segon, al mode d’operar, les facultats i el repartiment de responsabilitat.
+En planificar l’entrada, l’empresa de semiconductors ha de separar quina presència s’estableix a Taiwan i com s’organitzen les vendes i el servei. El primer es refereix a la personalitat jurídica, els requisits de registre i l’àmbit de negoci; el segon, al mode d’operar, les facultats i el repartiment de responsabilitat.
 
-La diferència principal entre una filial taiwanesa i una sucursal taiwanesa d’una societat estrangera és si té personalitat jurídica distinta de la societat matriu (母公司) o de la seu. La distribució i l’agència són arranjaments transaccionals i contractuals, i no s’han de confondre amb la forma societària.
+La diferència principal entre una filial taiwanesa i una sucursal taiwanesa d’una societat estrangera és si té personalitat jurídica distinta de la societat matriu (母公司) o de la seu. La distribució i l’agència són pactes contractuals de negoci, i no s’han de confondre amb la forma societària.
 
 | Estructura | Distinció bàsica | Què confirmar primer |
 |---|---|---|
 | Filial taiwanesa | Es constitueix d’acord amb el dret de Taiwan, amb personalitat jurídica pròpia, i és un subjecte jurídic distint de la societat matriu estrangera. | Com que la filial és una persona jurídica independent, cal confirmar com s’organitzen el subministrament, els serveis, la llicència tecnològica i el repartiment de costos amb la societat matriu. |
-| Sucursal taiwanesa d’una societat estrangera | Sucursal inscrita legalment a Taiwan, sense personalitat jurídica distinta de la seu, diferent d’una filial constituïda a part. | La sucursal és part de la seu estrangera, no una persona jurídica independent, de manera que la seu assumeix les obligacions de forma directa. Confirmar l’abast de facultats del representant de la sucursal i el repartiment intern de contractes externs, entrega, garantia i postvenda. |
-| Oficina de representació a Taiwan | Punt de negocis inscrit d’acord amb l’article 386 de la Llei de societats; no pot exercir activitat mercantil a Taiwan. | Com que no pot exercir activitat mercantil, confirmar si l’activitat real roman en l’àmbit permès. |
+| Sucursal taiwanesa d’una societat estrangera | Sucursal inscrita legalment a Taiwan, sense personalitat jurídica distinta de la seu, diferent d’una filial constituïda a part. | La sucursal és part de la seu estrangera, no una persona jurídica independent, de manera que la seu assumeix les obligacions de forma directa. Confirmar l’abast de facultats del representant de la sucursal i el repartiment intern de contractes externs, lliurament, gestió de les garanties i postvenda. |
+| Oficina de representació a Taiwan | Presència inscrita d’acord amb l’article 386 de la Llei de societats; no pot exercir activitat mercantil a Taiwan. | Com que no pot exercir activitat mercantil, confirmar si l’activitat real roman en l’àmbit permès. |
 
 ## 3. Formes de la filial taiwanesa: societat de responsabilitat limitada (有限公司) i societat anònima (股份有限公司)
 
@@ -61,11 +61,11 @@ Si es decideix constituir una persona jurídica independent a Taiwan, també cal
 
 ### La societat de responsabilitat limitada (有限公司): governança més simple, però transmissió de participacions més tancada
 
-Es pot formar amb 1 o més persones físiques, o amb socis persones jurídiques taiwaneses o estrangeres; els socis responen, en principi, fins a l’import de la seva aportació. La societat té d’1 a 3 administradors (董事), elegits entre els socis. Els socis que no executen el negoci poden exercir drets de supervisió, sense necessitat de nomenar un supervisor (監察人) a part. Salvo disposició estatutària en contra, 1 soci té 1 vot, de manera que el control no ha de coincidir necessàriament amb la proporció d’aportacions. La transmissió de l’aportació d’un soci ordinari requereix, en principi, el consentiment de més de la meitat dels drets de vot dels altres; per a un administrador, 2/3 o més. Encaixa millor amb relacions de socis simples i un control estable que amb captació freqüent de capital o negociació de participacions. Més endavant es pot transformar en societat anònima (股份有限公司).
+Es pot formar amb 1 o més persones físiques, o amb socis persones jurídiques taiwaneses o estrangeres; els socis responen, en principi, fins a l’import de la seva aportació. La societat té d’1 a 3 administradors (董事), elegits entre els socis. Els socis que no executen el negoci poden exercir el dret d’inspecció, sense necessitat de nomenar un supervisor (監察人) a part. Llevat que els estatuts disposin el contrari, 1 soci té 1 vot, de manera que el control no ha de coincidir necessàriament amb la proporció d’aportacions. La transmissió de l’aportació d’un soci ordinari requereix, en principi, el consentiment de més de la meitat dels drets de vot dels altres; per a un administrador, 2/3 o més. Encaixa millor amb relacions de socis simples i un control estable que amb captació freqüent de capital o negociació de participacions. Més endavant es pot transformar en societat anònima (股份有限公司).
 
-### La societat anònima (股份有限公司): adequada si es volen incorporar altres inversors o cap una cotització
+### La societat anònima (股份有限公司): adequada si es volen incorporar altres inversors o anar cap a una cotització
 
-El capital es divideix en accions. En principi es requereixen 2 accionistes (股東) o més, però l’Estat o una persona jurídica la poden constituir sols, i una persona jurídica estrangera pot posseir el 100 %. Les accions són, en principi, lliurement transmissibles, amb excepcions legals; es poden dissenyar accions especials i opcions d’empleats d’acord amb la llei. Convé a empreses que esperen inversors, negociació d’accions, incentius de capital per a empleats o una fusió, adquisició o cotització futura; no es limita a grans empreses. En governança, una societat no pública pot, per estatuts, no tenir consell i tenir només 1 o 2 administradors. Una societat amb un únic soci estatal o persona jurídica pot, per estatuts, no tenir supervisor (監察人). No tota societat anònima ha d’auditar els comptes anuals. Els llindars principals d’auditoria d’una societat ordinària són capital desemborsat de TWD 30.000.000, o, per sota, ingressos d’explotació de TWD 100.000.000 o 100 treballadors en l’assegurança laboral (勞工保險); les societats que han fet una oferta pública d’accions (公開發行公司) segueixen la normativa de valors.
+El capital es divideix en accions. En principi es requereixen 2 accionistes (股東) o més, però l’Estat o una persona jurídica la poden constituir sols, i una persona jurídica estrangera pot posseir el 100 %. Les accions són, en principi, lliurement transmissibles, amb excepcions legals; es poden dissenyar accions especials i opcions d’empleats d’acord amb la llei. Convé a empreses que esperen inversors, negociació d’accions, incentius de capital per a empleats o una fusió, una adquisició, una cotització o la inscripció al mercat emergent (興櫃); no es limita a grans empreses. En governança, una societat no pública pot, per estatuts, no tenir consell i tenir només 1 o 2 administradors. Una societat amb un únic soci estatal o persona jurídica pot, per estatuts, no tenir supervisor (監察人). No tota societat anònima ha d’auditar els comptes anuals. Els llindars principals d’auditoria d’una societat ordinària són capital desemborsat de 30.000.000 TWD, o, per sota, ingressos d’explotació de 100.000.000 TWD o 100 treballadors en l’assegurança laboral (勞工保險); les societats que han fet una oferta pública d’accions (公開發行公司) segueixen la normativa de valors.
 
 ## 4. Els procediments de sucursal i de filial difereixen; només la filial passa per la revisió del Departament de Revisió d’Inversions
 
@@ -79,7 +79,7 @@ El que precedeix és una proposta de disseny contractual. Disposar d’un formul
 
 Completar el registre a Taiwan no implica que el personal de la seu estrangera pugui treballar automàticament a Taiwan. Un estranger que treballi a Taiwan necessita un permís de treball (工作許可) lícit i, per a una estada més llarga, un certificat de residència d’estranger (外僑居留證). En principi l’ocupador sol·licita el permís de treball i el de residència corresponent.
 
-Per al gerent de la filial o sucursal taiwanesa d’una societat estrangera, el permís de treball segueix un cau distint; això no és una promesa de concessió. Per sol·licitar-lo per a un segon estranger o posteriors, el Ministeri de Treball exigeix, segons el sector, llindars de capital, facturació o altres. Si es preveu que personal estranger treballi a Taiwan, cal confirmar abans de constituir la societat si el capital previst assoleix el llindar aplicable.
+Per al gerent d’una filial o sucursal taiwanesa d’una societat estrangera, el permís de treball és, en termes relatius, més fàcil d’obtenir. Això no és una promesa de concessió. Per sol·licitar-lo per a un segon estranger o posteriors, el Ministeri de Treball exigeix, segons el sector, llindars de capital, facturació o altres. Si es preveu que personal estranger treballi a Taiwan, cal confirmar abans de constituir la societat si el capital previst assoleix el llindar aplicable.
 
 ## 7. Estructures que poden encaixar segons l’etapa del negoci
 
@@ -91,7 +91,7 @@ Els escenaris següents són hipotètics per ajudar a pensar; no garanteixen que
 
 **Empreses en fase d’estudi de mercat.** Si, abans d’una organització de vendes, només es volen funcions d’informació i enllaç, es pot avaluar una oficina de representació. Si el pla real inclou venda d’inventari o treball in situ, cal confirmar per separat si aquestes activitats estan permeses.
 
-## 8. En la primera consulta n’hi ha prou d’un panorama operatiu; no cal entregar tota la informació confidencial d’entrada
+## 8. En la primera consulta n’hi ha prou d’un panorama operatiu; no cal lliurar tota la informació confidencial d’entrada
 
 En la primera consulta es poden reunir dades bàsiques de la seu i els aportants, una descripció general del producte o servei, el flux d’operacions previst, plans de personal i instal·lacions a Taiwan, i les condicions de contracte i suport que demanen els clients. El que no estigui decidit es pot marcar com a «pendent».
 
@@ -109,7 +109,7 @@ Si es constitueix una filial i no una sucursal, la societat matriu, en principi,
 
 ### Es pot començar amb un distribuïdor i després passar a una societat a Taiwan?
 
-Es pot planificar una transició per etapes, però també s’han de revisar l’extinció o la modificació de contractes existents, els contractes amb clients, l’inventari, la garantia i el personal.
+Es pot planificar una transició per etapes, però també s’han de revisar l’extinció o la modificació de contractes existents, els contractes amb clients, l’inventari, la gestió de les garanties i el personal.
 
 ## Consulta sobre l’estructura d’entrada a Taiwan
 

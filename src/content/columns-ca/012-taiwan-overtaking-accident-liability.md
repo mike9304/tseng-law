@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Imatge que explica la valoració de la responsabilitat en un accident per avançament a Taiwan i el procediment d’avançament segur](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Quan el vehicle del davant circula a poc a poc, avançar (超車) pot semblar una opció habitual, però aquesta conducta de conducció comporta en realitat un risc considerable. Abans d’iniciar l’avançament s’han d’examinar junts el tram de via, la situació del trànsit en tots dos sentits, el moviment dels vehicles que van davant i si hi ha espai per tornar al carril original després de ultrapassar-los amb seguretat.
+Quan el vehicle del davant circula a poc a poc, avançar (超車) pot semblar una opció habitual, però aquesta conducta de conducció comporta en realitat un risc considerable. Abans d’iniciar l’avançament s’han d’examinar junts el tram de via, la situació del trànsit en tots dos sentits, el moviment dels vehicles que van davant i si hi ha espai per tornar al carril original després d’ultrapassar-los amb seguretat.
 
 ## Requisits d’avançament fixats per l’article 101 del Reglament de seguretat del trànsit viari (道路交通安全規則)
 
@@ -23,7 +23,7 @@ L’article 101 prohibeix avançar en trams amb senyals que indiquen corba, pend
 
 Tampoc no es pot avançar en llocs o trams amb senyal d’escola o d’hospital, en llocs amb altres senyals o marques de prohibició d’avançament, quan s’acosta un vehicle en sentit contrari, ni quan davant circulen de forma contínua 2 vehicles o més.
 
-Per ultrapassar el vehicle del davant en el mateix carril, el conductor del vehicle de darrere ha de fer primer 2 tocs curts de clàxon o 1 destell dels fars davanters. No s’han d’utilitzar el clàxon ni els fars de forma repetida per forçar que el vehicle del davant cedeixi el pas.
+Per ultrapassar el vehicle del davant en el mateix carril, el conductor del vehicle de darrere ha de fer primer 2 tocs curts de clàxon o 1 senyal lluminós dels fars davanters. No s’han d’utilitzar el clàxon ni els fars de forma repetida per forçar que el vehicle del davant cedeixi el pas.
 
 El vehicle de darrere només pot avançar després que el del davant redueixi la velocitat i s’aparti, o després que manifesti la voluntat de cedir el pas amb un senyal amb la mà o amb l’intermitent dret.
 
@@ -33,7 +33,7 @@ Aquest ordre de senyals i de cedir el pas en el mateix carril no significa que l
 
 ## Cas anònim d’accident tramitat per aquest despatx
 
-En un assumpte anònim tramitat per aquest despatx, el motorista A circulava per una carretera de muntanya amb el passatger B. Davant hi havia 2 turismes; el vehicle núm. 1, el més avançat, es movia a poc a poc, de manera que el vehicle núm. 2 i la motocicleta també avançaven a baixa velocitat.
+En un assumpte anònim tramitat per aquest despatx, el motorista A circulava per una carretera de muntanya amb el passatger B. Davant hi havia 2 turismes; el vehicle núm. 1, el que anava més al davant, es movia a poc a poc, de manera que el vehicle núm. 2 i la motocicleta també avançaven a baixa velocitat.
 
 ![Esquema de l’accident que mostra la trajectòria d’avançament de la motocicleta i dels 2 vehicles del davant en una carretera de muntanya](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 

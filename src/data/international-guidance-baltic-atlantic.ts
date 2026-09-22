@@ -1631,7 +1631,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Abast i com es confirma',
           paragraphs: [
             'El despatx treballa segons el dret de Taiwan i atén assumptes de les àrees anteriors. L’abast de cada assumpte es confirma per separat després que una advocada o un advocat revisi el contingut que vostè envia.',
-            'L’estatut de residència, el permís de treball i qüestions similars es valoren a partir de l’expedient i de la situació de cada persona, no a partir de la nacionalitat. Si alguna part del seu assumpte toca aquests temes, indiqui-ho en contactar-nos. Aquesta pàgina no promet un resultat ni un termini de resposta.',
+            'La situació de residència, el permís de treball i qüestions similars es valoren a partir de l’expedient i de la situació de cada persona, no a partir de la nacionalitat. Si alguna part del seu assumpte toca aquests temes, indiqui-ho en contactar-nos. Aquesta pàgina no promet un resultat ni un termini de resposta.',
           ],
         },
       ],
@@ -1647,7 +1647,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Fundació i estructura',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) es va fundar el 2016 per advocats titulats per la National Taiwan University (國立臺灣大學). El nom xinès 昊鼎 uneix el caràcter 昊 («cel ampli») i el caràcter 鼎 («base sòlida»), i expressa l’orientació del despatx des del seu origen.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) va ser fundat el 2016 per advocats titulats per la National Taiwan University (國立臺灣大學). El nom xinès 昊鼎 uneix el caràcter 昊 («cel ampli») i el caràcter 鼎 («base sòlida»), i expressa l’orientació del despatx des del seu origen.',
             'Tenim oficines a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) i Pingtung (屏東). L’oficina de Kaohsiung se centra en el govern corporatiu i atén conflictes civils, penals i administratius. L’oficina de Taichung atén construcció, propietat intel·lectual i assumptes relacionats amb Corea i el Japó. L’oficina de Pingtung es va obrir el 2017 per atendre la demanda local.',
             'A més del treball d’advocacia, el 2020 es va crear Hovering Accounting Office, que ofereix comptabilitat i planificació fiscal a empresaris i a particulars amb patrimoni elevat.',
           ],
@@ -1663,7 +1663,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Quan ens contacta',
           paragraphs: [
             'Després de rebre el seu resum, una advocada o un advocat revisa el contingut i parla després de l’abast possible, dels documents que encara calen i dels passos següents. Si l’assumpte planteja qüestions comptables o fiscals, el despatx pot treballar de forma integrada amb l’àrea de comptabilitat.',
-            'El resultat de cada assumpte depèn dels fets i dels documents existents, de manera que no prometem un resultat. Si necessita una resposta concreta per a la seva situació, aquest expedient s’ha de parlar directament amb una advocada o un advocat en un dels quatre idiomes de consulta.',
+            'El resultat de cada assumpte depèn dels fets i dels documents existents, de manera que no prometem un resultat. Si necessita una resposta concreta per a la seva situació, cal tractar aquest expedient directament amb una advocada o un advocat en un dels quatre idiomes de consulta.',
           ],
         },
       ],
@@ -1671,7 +1671,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ADVOCATS',
       title: 'Equip internacional de Hovering',
-      description: 'Perfils dels advocats, de la direcció d’operacions i de l’auditor associat de Hovering.',
+      description: 'Perfils dels advocats, de la direcció d’operacions i del soci auditor de Hovering.',
       intro: '',
       sections: [],
     },
@@ -1724,7 +1724,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Tres coses que convé distingir',
           paragraphs: [
-            'L’idioma de visualització de la pàgina, l’idioma de la consulta amb l’advocada o l’advocat i l’idioma en què vostè escriu són tres coses distintes.',
+            'L’idioma de la pàgina, l’idioma de la consulta amb l’advocada o l’advocat i l’idioma en què vostè escriu són tres coses distintes.',
           ],
           items: [
             'Idioma de la pàgina: aquesta orientació està escrita en català.',
@@ -1749,7 +1749,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'El que aquesta pàgina no garanteix',
           paragraphs: [
-            'No prometem un termini de resposta, no confirmem una cita a través d’aquesta pàgina, no prometem una advocada o un advocat concret i no posem intèrpret. La traducció escrita és una altra cosa: el missatge que envia no es tradueix de forma automàtica.',
+            'No prometem un termini de resposta, no confirmem una cita a través d’aquesta pàgina, no prometem una advocada o un advocat concret i no oferim intèrpret. La traducció escrita és una altra cosa: el missatge que envia no es tradueix de forma automàtica.',
             'Quan envia una sol·licitud, el contingut es guarda i espera revisió. Si al cap d’un temps no rep resposta, pot tornar a escriure a l’adreça de correu que figura a la pàgina de contacte.',
           ],
         },
@@ -1829,7 +1829,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
           items: [
             'El nom que indica',
             'L’adreça de correu per respondre',
-            'L’idioma de visualització de la pàgina en el moment de l’enviament',
+            'L’idioma de la pàgina en el moment de l’enviament',
             'L’idioma en què va escriure',
             'L’idioma de consulta que desitja',
             'El text original que va escriure',
@@ -1913,7 +1913,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'No hi ha garantia de resultat',
           paragraphs: [
-            'Cap part d’aquesta pàgina no és una promesa sobre el resultat d’un assumpte, sobre la concessió d’una sol·licitud o sobre l’estatut de residència i de treball.',
+            'Cap part d’aquesta pàgina no és una promesa sobre el resultat d’un assumpte, sobre la concessió d’una sol·licitud o sobre la situació de residència i de treball.',
             'Els enllaços externs s’ofereixen per a la seva comoditat; no en garantim l’exactitud ni l’actualitat del contingut publicat per tercers.',
           ],
         },

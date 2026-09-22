@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Recorda l’època de les barberies tradicionals (理髮廳) dels primers temps de Taiwan?
+Recordi l’època de les barberies tradicionals (理髮廳) dels primers temps de Taiwan?
 
 La manera de rentar els cabells en aquelles barberies era molt peculiar.
 
@@ -55,7 +55,7 @@ Aquesta llei es va mantenir fins al 2003, quan el senyor Lin, que aleshores gest
 
 va ocupar dos treballadors sense discapacitat visual per prestar serveis de rentat de cabells i massatge, i la policia ho va detectar.
 
-Segons la llei d’aleshores, al senyor Lin i als dos treballadors se’ls va imposar una multa administrativa (罰鍰) de TWD 40.000, TWD 10.000 i TWD 20.000 en nou dòlar taiwanès (新臺幣), respectivament.
+Segons la llei d’aleshores, al senyor Lin i als dos treballadors se’ls va imposar una multa administrativa (罰鍰) de 40.000, 10.000 i 20.000 nous dòlars taiwanesos (新臺幣), respectivament.
 
 El senyor Lin va considerar aquesta sanció molt injusta i va sol·licitar una interpretació constitucional.
 
@@ -81,7 +81,7 @@ Per exemple, es va pensar si la norma escrita que només permetia a les persones
 
 i es va qüestionar si aquella norma havia contribuït realment a protegir l’ocupació i la subsistència de les persones amb discapacitat visual.
 
-Al final, el Tribunal Constitucional (大法官) va declarar inconstitucional (違憲) el precepte que només permetia a les persones amb discapacitat visual dedicar-se a l’ofici de massatge.
+Al final, els Grans Magistrats (大法官) van declarar inconstitucional (違憲) el precepte que només permetia a les persones amb discapacitat visual dedicar-se a l’ofici de massatge.
 
 ​
 

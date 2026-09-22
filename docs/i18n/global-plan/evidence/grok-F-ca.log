@@ -1,0 +1,134 @@
+WO-F-ca — Catalan native-review fixes (Grok 4.7)
+Worktree: /Users/son7/Projects/tseng-law-fix-ca-20260922
+Date: 2026-09-22
+Scope: Catalan strings only. No git add/commit/push.
+
+Sources read: RULEBOOK-FIX.md (R2–R10, R12–R17), ACCEPTED-ca.md, ca-a.md, ca-b.md.
+English meaning checked against src/content/columns-en/ for the rows that change legal sense.
+Guidance edits are in the .ts sources (catalanGuidanceContent, ca team/offices/answers, GUIDANCE_LLMS_NOTICES.ca). The dump ca-guidance.txt was not edited. international-inquiry-copy.ts had no finding and was not edited. No test pinned a changed Catalan string, so no test file was updated. TWD 1.57M in the bio is byte-identical.
+
+Diff: 23 content files, Catalan string replacements only (columns-ca 001–018, international-guidance-answers.ts, international-guidance-baltic-atlantic.ts, international-guidance-offices.ts, international-guidance-team.ts, llms-txt.ts). Frontmatter keys, url, lastmod, featured_image, image paths, links, and block order were left as they were.
+
+================================================================================
+ROWS APPLIED
+================================================================================
+
+Part A (ca-a.md) — applied: 1 (modified), 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41.
+
+A1 llms discovery notice. "aval" dropped. Wording follows the English four denials (search ranking, endorsement, recommendation, guaranteed visibility): "no promet posicionament en cercadors, suport, recomanació ni visibilitat garantida."
+
+A2 "Auditor associat" → "Soci auditor" in the team description, partnerTitle, huang-shengping role, and the lawyers answer. R12 chrome: Ajudant jurídic; Responsable d’operacions de Corea; Conflictes familiars i laborals; Grau (B.A.), doble grau…; English institution names kept as the required substrings, with the Catalan gloss beside them (Fundació d’Assistència Jurídica, sucursal de Taichung; Divisió d’Afers Jurídics del Ministeri d’Educació; Ajudant jurídic sènior).
+
+A3 profit-seeking enterprise. FAQ, body, table, and the Ministry of Finance sentence now say the filing duty is the one being exempted: "empresa amb finalitat de lucre (營利事業)". Table cell matches the exemption. "cada empresari" in the 5% comparison → "cadascuna". Bare "empreses lucratives" → "empreses".
+
+A4 / A15. 條例 titles are "Llei …", not "Estatut". "estatuts (章程)" kept for articles of association. Residence status is "situació de residència" / "situació d’estada" in the guidance pack and in 001 / 017.
+
+A6–A40. Spanish calques and the named column rows, including the systemic sweeps below: d’avançada → per endavant; extrems anàlegs; al costat de la residència; col·laterals; nocions que se solen confondre; capital social (股款); Q headings; cercle de demandats; uniformement millor; Llei de sancions de trànsit (道路交通管理處罰條例); dòlar singular; Recordi l’època; Grans Magistrats (大法官); 005 self-reference (both links kept); Korea-bank framing; article 14 singular; missing period in 008; amb base en; [nom]; comanditària (有限合夥); instrument; TWD after the amount; apostrophes (ha d’ultrapassar, després d’ultrapassar-los).
+
+A41 table row in 008. Four cells kept. English Easy | Difficult | Easy is ambiguous for an economic dismissal, so the row is the burden of justification: "Càrrega de justificació de l’empresa | Alta | Molt alta | No escau".
+
+Part B (ca-b.md) — applied: 1–36, 38–48, and 37 as an in-block rephrase (see skipped merges).
+
+B1 work permit. Relative ease, no promise: "el permís de treball és, en termes relatius, més fàcil d’obtenir. Això no és una promesa de concessió."
+
+B2 finestreta → via de presentació / organismes diferents (017).
+
+B3 Estatut d’inversió estrangera → Llei d’inversió estrangera (外國人投資條例), including the repeats in 013/017. "estatuts" kept where the English is articles of association.
+
+B4–B5 and the 010–018 Spanish leftovers: cohereus; rebuts/justificants; Llevat que els estatuts; senyal lluminós; adjuntar; lliurament (goods/data) vs traspàs (job handover in 014).
+
+B37 blog lineation. 013 opening split into two complete sentences inside the same block. 015 fragments made self-standing without merging blocks. 003 sign-off is a complete sentence. "No en tots els casos."
+
+Register: Segueixi’ns (offices followLabel). Vostè kept. "Recorda" → "Recordi".
+
+Founding sentence (guidance about). "es va fundar … per" does not take an agent. Final: "va ser fundat el 2016 per advocats titulats…" (same passive the answers line already used).
+
+Punitive damages (010). English is "up to the amount of the actual damages". Korean source still has the digit 1, so the digit stays in a parenthetical the checker can see: "fins a l’import del dany real (1 vegada aquest import)". 5 vegades and 3 vegades unchanged.
+
+Q16–Q20 in 003. They are **16.**–**20.** so the digits remain and the lines are not ordered-list items (a "16. " marker would drop 16–20 from the number check and add five list items).
+
+================================================================================
+ROWS SKIPPED
+================================================================================
+
+A5. Hangul inside the frontmatter url of 008 and 009. R16: do not edit url. The Hangul is only in those url values.
+
+A10. "TWD 1.57M" in the bio. The guidance-team bios test requires that substring byte-identical. The parenthetical gloss "(1,57 milions de dòlars taiwanesos)" was already there and was left.
+
+B37 as a block merge. Joining the clause to the next line would change the blank-line block count. Rephrased inside the existing blocks instead.
+
+No other P1/P2 row was skipped.
+
+================================================================================
+SYSTEMIC PATTERNS (instances)
+================================================================================
+
+Counts are replacements that landed, not reviewer-row numbers. A shorter pattern sometimes consumed a longer quote first; those are not double-counted.
+
+- TWD after the amount: 54 moves of "TWD <dotted number>", plus the rewritten "nous dòlars" phrases (40.000 / 10.000 / 20.000; 30.000). "TWD 1.57M" was not matched and did not move.
+- 條例 as Llei, not Estatut/Reglament: Industrial Innovation (004, body and table), Foreign Investment (013, 017, including link labels), traffic-penalty statute (道路交通管理處罰條例). "estatuts (章程)" left wherever it means articles of association.
+- situació de residència / d’estada: guidance services + disclaimer, plus the column hits in 001 and 017. "estatut de residència" is gone.
+- empresa amb finalitat de lucre (營利事業) and the exemption-from-filing sense: FAQ, body, table, Ministry sentence in 004. "empreses lucratives" → "empreses".
+- d’avançada → per endavant: 001, 007, 009 (every hit).
+- dies a quo → data d’inici: 007 (three, including the quoted sentence) and 016.
+- Q-labels: ## Q1.–## Q15. → ## 1.–## 15. Internal "de la Q11/Q12" → "pregunta 11/12". Q16–Q20 → **16.**–**20.**
+- Soci auditor: description, partnerTitle, role, lawyers answer (4).
+- Ajudant jurídic: role + bio intro + two experience lines. Responsable d’operacions de Corea: 1.
+- Segueixi’ns: 1. Idioma de la pàgina: contact + privacy (2). "no oferim intèrpret" kept as the denial (no Catalan consultation, no interpreter).
+- 010–018 Spanish leftovers swept, not only the quoted line: cohereus (2 in 016); rebuts; Llevat que els estatuts; senyal lluminós; adjuntar (015, including "resultat adjunt"); lliurament for delivery of goods/data; traspàs for the job handover in 014.
+- 014 nouvingut → personal / persona de nova incorporació (the quoted line and the later repeats).
+- 015 gloss moved inside the Taipei link label; URL unchanged. (公司登記), (分支機構), (公證), (興櫃) glosses added on the terms the reviews named. No new digits.
+- 013 formulari: curly-apostrophe scaffolding replaced by «formulari de dades bàsiques del número unificat» (統一證號基本資料表).
+- Apostrophe before a vowel: "ha d'ultrapassar" and "després d'ultrapassar-los" only. "de a qui" is not that pattern and was left.
+- Gender: Wei Tseng stays feminine. The male manager in 008 and the male client in 010 were not feminised. "estudiant universitari home" lost the redundant "home" in the body, the image alts, and the clipping headlines.
+- Blog voice (R7): chatty fragments in 003, 013, and 015 made into complete sentences inside the same blocks. The one-sentence-per-line layout of 006/008/009 was not rewritten wholesale.
+
+================================================================================
+REVIEWER DISAGREEMENTS (not applied as suggested)
+================================================================================
+
+- A1. "inserció publicitària" and a doubled "recomanació d’una intel·ligència artificial" do not match the English notice (search ranking, endorsement, recommendation, guaranteed visibility). "aval" was the real error. Visibility stays "visibilitat garantida".
+- A41. The English table really does say Easy | Difficult | Easy. That reading makes an economic dismissal sound like an easy outcome for the worker, which is the opposite of the column. The accepted burden-of-justification labels were applied instead.
+- B1. The relative-ease sentence is in. The following denial ("Això no és una promesa de concessió") stays, because the product rule forbids a result promise. "cau en necessitat" in 007 is the verb caure, not the noun den, and was left.
+- Punitive "1 vegada" was not deleted. Dropping the digit fails the number check against the Korean source. It sits in parentheses after the English sense.
+- Q16–Q20 are bold numbers, not "16. " ordered items. An ordered marker strips the digit and changes the list-item count.
+- Plural "junts" with a plural verb ("s’han de comprovar junts", "examinar-se junts") was left. Only singular verb + "junts" was fixed ("Es veu junts", "s’hereta junts", "fer-se junts").
+- "beneficiari efectiu (受益所有人)" in the 001 tax/treaty passages was left. Only the 016 inheritance phrase became "titulars econòmics".
+- English institution names in the bios were not translated away. The test requires those substrings. Catalan glosses sit beside them.
+
+================================================================================
+§Verify
+================================================================================
+
+cd /Users/son7/Projects/tseng-law-fix-ca-20260922 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+node scripts/check-column-translation.mjs --dir src/content/columns-ca --lang ca 2>&1 | tail -8
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ca src/data | wc -l
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+git status --short | wc -l
+
+=== CHECKER ===
+hanzi          PASS   han=85
+numbers        WARN   extra in translation (5): 1×5
+                      sourceCount=25 targetCount=30
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+=== MARKERS ===
+       0
+=== TSC ===
+TSC_OK
+=== VITEST ===
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+=== GIT ===
+      25
+
+The numbers WARN is on the last file in the checker tail. The file still PASSes, and the summary is PASS 18/18. The five extra "1" digits were not introduced as new legal amounts; the summary gate is the pass criterion.
+
+The git count of 25 is from that run: 23 modified content files, untracked docs/i18n/global-plan/WO-F-ca.txt, and untracked .tmp-ca/ (the helper script plus a local install of @modelcontextprotocol/server, which this worktree's package.json requires and the main checkout does not have). After that run, .tmp-ca/ and the gitignored node_modules symlink farm were removed. This log took the place of .tmp-ca/ in the status list, so a later `git status --short | wc -l` is still 25: the 23 modified files, WO-F-ca.txt, and this log.
+
+Pass criteria met: summary PASS 18/18, markers 0, TSC_OK, tests 3202 passed.

@@ -1665,7 +1665,7 @@ export const guidanceFooterCopy: Record<GuidanceLocale, GuidanceFooterCopy> = {
   ca: {
     officeLabel: 'Oficines',
     officeQuickLinksLabel: 'Enllaços ràpids a les oficines',
-    followLabel: 'Seguiu-nos',
+    followLabel: 'Segueixi’ns',
     blogLabel: 'Blog',
     websiteLabel: 'Lloc web oficial',
     sitemapLabel: 'Mapa del lloc',

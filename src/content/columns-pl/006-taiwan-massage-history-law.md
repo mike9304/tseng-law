@@ -37,7 +37,7 @@ Tak czy inaczej, gdy mowa o masażu (按摩),
 
 na Tajwanie istnieje też wiele ulic masażu.
 
-Ustawiają się tam zakłady masażu wszelkiego rodzaju.
+Ciągną się tam zakłady masażu wszelkiego rodzaju.
 
 Jest masaż wykonywany przez osoby z niepełnosprawnością wzroku (視障按摩), masaż stóp, masaż olejowy, masaż tajski i inne formy.
 
@@ -55,7 +55,7 @@ Ustawa ta obowiązywała do 2003 r.; wówczas pan Lin, który prowadził salon f
 
 zatrudnił pracowników bez niepełnosprawności wzroku do usług mycia włosów i masażu, i policja to stwierdziła.
 
-Według ówczesnego prawa panu Linowi i tym pracownikom wymierzono odpowiednio administracyjną karę pieniężną (罰鍰) w wysokości TWD 40.000, TWD 10.000 i TWD 20.000 w nowym dolarze tajwańskim (新臺幣).
+Według ówczesnego prawa panu Linowi i tym pracownikom wymierzono odpowiednio administracyjną karę pieniężną (罰鍰) w wysokości 40.000 TWD, 10.000 TWD i 20.000 TWD w nowym dolarze tajwańskim (新臺幣).
 
 Pan Lin uznał tę sankcję za bardzo niesprawiedliwą i wystąpił o wykładnię konstytucyjną.
 

@@ -71,13 +71,13 @@ Niektóre banki mogą nakładać dodatkowe wymagania, na przykład okres korzyst
 
 A. Pierwszy pracownik: wniosek składa się jako pracę kierowniczą w przedsiębiorstwie zwykłej inwestycji Chińczyków zamorskich lub cudzoziemców (一般僑外投資事業主管工作). Kryterium „pracy o charakterze specjalistycznym lub technicznym” z punktu B poniżej nie stosuje się, lecz stosuje się przesłanki adresata, w tym przesłankę kierownika (經理人) spółki, której wkład Chińczyków zamorskich lub cudzoziemców przekracza 1/3, a także przesłanki wyników pracodawcy dotyczące kapitału i obrotu (art. 38 i 39 standardów badania).
 
-B. Dla drugiego i każdego kolejnego cudzoziemca istnieją ograniczenia: jeżeli liczba zatrudnionych pracowników przekracza 1 osobę, wykształcenie i doświadczenie pracownika, zasady przeciętnego wynagrodzenia przy zatrudnieniu oraz zasady kapitału i obrotu spółki traktuje się zgodnie z „pracą specjalistyczną lub techniczną” (專門性或技術性工作).
+B. Dla drugiego i każdego kolejnego cudzoziemca istnieją ograniczenia: jeżeli spółka zatrudnia więcej niż 1 cudzoziemca, wykształcenie i doświadczenie, przeciętne wynagrodzenie oraz kapitał i obrót spółki ocenia się według „pracy specjalistycznej lub technicznej” (專門性或技術性工作).
 
 Zob. witrynę Ministerstwa Pracy Tajwanu (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 
 ​
 
-Jeżeli mają Państwo dalsze pytania, prosimy o kontakt z kancelarią.
+Jeśli mają Państwo pytanie z zakresu prawa Tajwanu, prosimy o kontakt przez stronę „Kontakt” po angielsku, chińsku (中文), japońsku lub koreańsku; termin odpowiedzi nie jest przyrzeczony.
 
 ---
 

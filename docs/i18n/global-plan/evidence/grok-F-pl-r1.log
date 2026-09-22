@@ -1,0 +1,82 @@
+WO-F-pl r1 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-pl-r1
+date: 2026-09-22
+scope: Polish columns (18) + Polish guidance pack strings. No commit.
+
+## Rows applied / skipped
+
+Reviews: pl-a.md 49 rows, pl-b.md 60 rows (109 P1/P2).
+
+Applied: 104 rows, including every P1 except the Hangul url (pl-a #9).
+P3 was not a separate table; cheap register and punctuation fixes that sat on an applied row were done inside that row.
+
+Skipped (4 rows, plus the space-separator half of 2 rows):
+
+- pl-a #9 (P1, 008 and the same Hangul `url` in 009). ACCEPTED-ROUND and the reviewer both say not to edit frontmatter `url`. Left byte-identical. Hangul remains only inside those two `url` values.
+- pl-a #19 and pl-b #56, space thousands ("500 000", "1 579 589"). ACCEPTED-ROUND: the checker does not parse a space separator (Polish style is `dot`). Digits and dot grouping were kept. The currency-order half was applied: `TWD 500.000` → `500.000 TWD` (53 occurrences across 001–004, 006, 007, 011, 017, 018). Amounts that were already amount-then-TWD (`1.579.589 TWD`, `1,57 mln TWD`) were left. `TWD 1.57M` does not occur in the Polish bio; the pinned figure stays `1,57 mln TWD`.
+- pl-a #25. Q16–Q20 in 003 (and the U+200B spacer lines in 003, 005, 006, 008, 009, 013, 015) were not turned into new headings and the blank lines were not deleted. That would change heading levels and block counts against the Korean source. Chatty sentences inside existing blocks were rewritten (see systemic notes).
+- pl-b #27. The one-clause-per-line layout in 015 (and the same layout in 013) was not merged. Block count is checked. pl-b #26 was applied without a merge: the comma at the end of the visa sentence in 013 became a period, and the next block is now its own sentence.
+
+pl-a #7 was not applied as a deletion. The table row stays (the checker counts table rows; the English source has Difficulty | Easy | Difficult | Easy). The cells were softened so economic dismissal is not an easy promised outcome: `Trudność (bez obietnicy wyniku) | Porównawczo mniejsza | Porównawczo większa | Porównawczo mniejsza`.
+
+No test pinned a Polish string that changed. `src/lib/__tests__/guidance-it-nl-pl-content.test.ts` still expects the unchanged FAQ question and the unchanged free-sending sentence. No test file was edited.
+
+## Systemic patterns and how many instances changed
+
+pl-a verdict:
+
+- An act (條例) named with a word that already means something else. `Statutu innowacji przemysłowej` → `ustawy o innowacjach przemysłowych` in 004 (5, including the link label). `rozporządzenia o emeryturze pracowników` → `ustawy o emeryturach pracowniczych` in 008 (2: FAQ and blockquote). Real executive regulations (`公司登記辦法`, `道路交通安全規則`, cosmetics-file rules) stayed `rozporządzenie`.
+- `Jakość` standing in for status. 4: 001 beneficial owner, 004 subsidiary, 017 shareholder/investor (FAQ and body). Product `jakość` in 011 was left; there it means quality.
+- A digit glued into a time phrase, and `1 raz` read as "only once". 002: both FAQ and body, now `każdy okres zawieszenia działalności liczy się osobno i ten 1 okres nie może przekroczyć 1 roku` (the extra 1 is the Korean `1회`, which the checker still counts; it no longer means the company may suspend only once). 001: `za ostatni 1 rok` → `za ostatni jeden rok` (2; `jeden rok` is the form the checker parses). 008: `ukończone 1 rok` → `ukończony 1 rok` (2; the digit stays). 005: the headcount is now "more than 1 foreign national", not "more than 1 employee".
+- English office and job lines in the Polish bios. 8 strings in the `pl` block of `international-guidance-team.ts` only: Legal Aid Foundation, both Ministry of Education lines, the paralegal intro, both Senior Paralegal lines, `na podstawie informatyki`, and the CPA degree sentence. Role labels: `Paralegal` → `Asystent prawny (paralegal)`; `Partner-księgowy (Partner CPA)` → `Wspólnik biura rachunkowego (Partner CPA)`. Firm names and the English glosses the reviewer kept in parentheses stayed. Other locales in that file were not touched.
+- Blog padding. U+200B lines were not removed (block count). Inside existing blocks: 008 drops `Dzień dobry` / `Dziś chciałabym` / `Wielu z Państwa już to wie` (3) and the closing fragments now end as sentences; 003's hope-you-find-this-useful close is now `Na tym kończą się pytania i odpowiedzi o wypadkach drogowych.`
+- Currency order. 53 `TWD N` → `N TWD`, dot thousands kept. See the skip note above.
+
+pl-b verdict:
+
+- A neighbouring legal word for the Taiwanese institution. 010: `skarga karna (告訴)` and the §2 heading, the complaint-offence sentence, the person entitled to file, and the closing list → `wniosek o ściganie` (5). `存證信函` is a certified-content letter, not a summons; `律師函` is a letter from counsel (2). 011 handmade soap: `mydła ręcznego` / `jest ręczny` → `wytwarzanego ręcznie` (4, FAQ, body, exception, exclusion test). 016 `rejestr stanu cywilnego` for 戶籍 → `rejestr gospodarstw domowych` (4: passport sentence, checklist items 1 and 6, and the urgent-steps sentence). 017 `jakość akcjonariusza` → `status akcjonariusza` (2).
+- 014 labour wording. `z górygo` and the mismatched participle (4, including the disclaimer). `wypowiedzenie odejścia` (3: list item, §8 heading, disclaimer). `chwila przypisania` / `warunki przypisania` → nabycie uprawnienia (4). `Widzi się` as a calque of "one sees" in §§3–4 and the training/return sentences (4). `czas oznaczony` / `czas nieoznaczony` for a fixed-term / indefinite contract (3). Plus the flagged clause rewrites in that file (uniform allocation, training boundary, pay statement, vesting communication, penalty label, the four-question split, Article 16 periods, "one problem").
+- 013 and 015 clause-per-line. Not merged. See skipped pl-b #27. 013's broken comma and the "osoba czytająca" calque were fixed inside their blocks.
+- Bare digits. Where the suggested wording dropped a digit the checker counts, the digit stayed and the words around it were fixed (`1 cudzoziemca`, `1 okres`, `ostatni jeden rok`, `mnożnik 1` for the old `1-krotność`, `co najmniej 2 akcjonariuszy`, `1 albo 2 dyrektorów`, `1 mała ciężarówka`). `gdy 1 z rodziców` in 016 was left with the digit; the word `jeden` is not parsed unless it is `jeden rok`.
+- Contact lines that invite a Polish reader to write without the four consultation languages. 5: 003, 005, 013, 015, 018. Each now names English, Chinese (中文), Japanese and Korean and says no reply time is promised. The negative consultation lock was not turned into a positive offer.
+
+Rulebook R2–R10, already in the Polish pack and not re-opened: the Taiwan–Korea tax passages in 001 and 004 already carry the country-specific framing sentence; 008/009 already say "some legal orders, for example Korea"; the hiring question in 005 is already about foreign nationals; 003 already gives Taiwan 119 / 110 / 112; the "about 3 / 4 / 6 months, no typical outcome" softenings are already there; Wei Tseng is already feminine (`Adwokatka`, `uprawniona`, `Reprezentowała`, `chciałabym`, `prowadziłam`); `NASZ ZESPÓŁ`, `BIURA`, and `Pełny profil (w języku angielskim)` are already Polish; Państwo is the address. The Korea-specific FX example in 005 is already labelled as a Korea example in the question heading, so it was not rewritten as a worldwide rule. The gym-injury client stays a Korean student because that is the case, not the default reader.
+
+Guidance pack (pl-a rows 18, 29, 36–46, 49, and the team rows above): 13 strings in `international-guidance-it-nl-pl.ts` (facts/timing, photos, the date on the notice, where the reader is, "no part may be read as", matter costs, derive-the-answer, receipt number in three places, other legal order) and 2 in `international-inquiry-copy.ts` (`Numer zgłoszenia`, `sobie życzą na konsultację`). `llms-txt.ts` Polish notices already name the four languages and make no reply-time or result promise; no change. Offices and the answer pack had no flagged string.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-pl --lang pl 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=74
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "[변호사 검수 필요]" src/content/columns-pl src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      25
+```
+
+Checker note: the first run was `summary FAIL 14/18` because four suggested rewrites dropped a digit the checker counts (001 `ostatni rok`, 002 dropping `1회`, 005 `jednego cudzoziemca`, 010 dropping `1-krotność`). Those four were put back in a form the checker accepts, as the work order requires. WARN rows (ordinal lexical items such as `제3자` / `1심`) were already present and do not fail the summary.
+
+## Where the reviewer was not followed as written
+
+- pl-a #7. The difficulty row should not be deleted. The English source has it, the next row is a different question (whether severance is payable), and deleting a table row fails the checker. The cells were softened instead of removed.
+- pl-a #12 / the suggested `podatkowi od działalności gospodarczej (營業稅, business tax)`. The same article already defines 營業稅 as `podatek od wartości dodanej` and then explains it. The FAQ's `podatek od sprzedaży` was aligned to that term. A third name, plus the English words "business tax", would split the term again.
+- pl-a #19 and pl-b #56. A space as the thousands separator is normal Polish and the checker rejects it. Dot grouping was kept; only the currency order moved.
+- pl-a #25 and pl-b #27. Adding headings, or merging the one-line clauses in 013 and 015, would change heading levels or block counts. The wording that could be fixed inside a block was fixed; the line breaks were not.
+- Digit wording in 001, 002, 005 and 010, as noted under Verify. The suggested sentences were right about the meaning and dropped a number the checker requires.

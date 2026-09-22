@@ -21,7 +21,7 @@ Wypadek nastąpił na siłowni w Taichung (臺中), podczas treningu martwego ci
 
 Byłam pełnomocnikiem procesowym (訴訟代理人) powoda — koreańskiego studenta. Sąd okręgowy w Taichung 24 stycznia 2022 r., w wyroku pierwszej instancji w sprawie konsumenckiej nr 7 roku 109 (109年度消字第7號), nakazał pozwanemu zapłacić [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) oraz odsetki wymienione w wyroku.
 
-Następnie prasa podała, że strony zawarły ugodę (和解) w drugiej instancji. Sam oficjalny wyrok pierwszej instancji nie pozwala potwierdzić wyniku drugiej instancji ani kwoty ugody; nie należy tego czytać jako ostatecznego wyniku wyroku pierwszej instancji.
+Następnie prasa podała, że strony zawarły ugodę (和解) w drugiej instancji. Sam oficjalny wyrok pierwszej instancji nie pozwala potwierdzić wyniku drugiej instancji ani kwoty ugody; ugody podanej w prasie nie należy traktować jako ustalonego zakończenia sprawy w pierwszej instancji.
 
 Tytuły doniesień prasowych, publikacji internetowych i komentarzy prawnych dotyczących tej sprawy, w przekładzie, są następujące. Tytuły poniżej służą tylko przedstawieniu treści każdego łącza; nie oznaczają, że ten tekst sam ustala fakty.
 
@@ -53,9 +53,9 @@ Tytuły doniesień prasowych, publikacji internetowych i komentarzy prawnych dot
 
 [Komentarz prawny: student, pęknięcie krążka międzykręgowego podczas martwego ciągu… w pierwszej instancji nakaz znanej siłowni zapłaty 1.570.000 TWD](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
 
-![Lektura wyroku: sprawa ostrego pęknięcia krążka międzykręgowego po tym, jak początkujący na siłowni otrzymał wskazówkę martwego ciągu 90 kg](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
+![Lektura wyroku: sprawa ostrego pęknięcia krążka międzykręgowego po tym, jak początkujący na siłowni został poinstruowany, aby wykonać martwy ciąg 90 kg](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
 
-[Lektura wyroku: sprawa ostrego pęknięcia krążka międzykręgowego po tym, jak początkujący na siłowni otrzymał wskazówkę martwego ciągu 90 kg](https://www.instagram.com/p/Crp4vJag7v3/)
+[Lektura wyroku: sprawa ostrego pęknięcia krążka międzykręgowego po tym, jak początkujący na siłowni został poinstruowany, aby wykonać martwy ciąg 90 kg](https://www.instagram.com/p/Crp4vJag7v3/)
 
 ![Czy koreański student doznał pęknięcia krążka międzykręgowego, wykonując martwy ciąg 90 kg podczas treningu personalnego?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
@@ -71,11 +71,11 @@ Poniższe jest ogólną informacją do wyjaśnienia sporów o uraz na siłowni n
 
 Nie oznacza to, że odpowiedzialność przedsiębiorstwa lub trenera jest uznawana za każdym razem, gdy uraz nastąpi na siłowni. Należy oceniać w każdej sprawie osobno, jaki obowiązek staranności konkretnie istniał, czy został naruszony, czy jest związek przyczynowy między naruszeniem a urazem, czy powstała rzeczywista szkoda, jakie zarzuty ma strona przeciwna i czy istnieje dowód podpierający każde twierdzenie i każdy zarzut.
 
-Jeśli spełnione są ustawowe przesłanki przestępstwa uszkodzenia ciała z nieostrożności (過失傷害), można rozważyć skargę karną (告訴). Można też rozważyć cywilne roszczenie o odszkodowanie, lecz która podstawa stosuje się spośród odpowiedzialności umownej, odpowiedzialności deliktowej (侵權行為) i odpowiedzialności ochrony konsumenta, oraz zakres odpowiedzialności, różnią się według konkretnych faktów. To, że w jednym wypadku można rozważyć kilka procedur, nie oznacza, że trzeba je wszystkie przejść, ani że sukces jednej ze stron jest z góry przesądzony.
+Jeśli spełnione są ustawowe przesłanki przestępstwa uszkodzenia ciała z nieostrożności (過失傷害), można rozważyć wniosek o ściganie (告訴). Można też rozważyć cywilne roszczenie o odszkodowanie, lecz która podstawa stosuje się spośród odpowiedzialności umownej, odpowiedzialności deliktowej (侵權行為) i odpowiedzialności ochrony konsumenta, oraz zakres odpowiedzialności, różnią się według konkretnych faktów. To, że w jednym wypadku można rozważyć kilka procedur, nie oznacza, że trzeba je wszystkie przejść, ani że sukces jednej ze stron jest z góry przesądzony.
 
-## 2. Jakie terminy obowiązują przy skardze karnej i cywilnym roszczeniu o odszkodowanie?
+## 2. Jakie terminy obowiązują przy wniosku o ściganie i cywilnym roszczeniu o odszkodowanie?
 
-Według [art. 287 tajwańskiego kodeksu karnego (刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001) przestępstwo uszkodzenia ciała z nieostrożności z art. 284 kodeksu karnego jest przestępstwem, które wymaga skargi, aby można było wnieść oskarżenie (告訴乃論之罪). Według [art. 237 tajwańskiego kodeksu postępowania karnego (刑事訴訟法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001) uprawniony do skargi musi ją złożyć, co do zasady, w ciągu 6 miesięcy od dnia, w którym poznał sprawcę.
+Według [art. 287 tajwańskiego kodeksu karnego (刑法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001) przestępstwo uszkodzenia ciała z nieostrożności z art. 284 kodeksu karnego jest przestępstwem ściganym wyłącznie na wniosek (告訴乃論之罪). Według [art. 237 tajwańskiego kodeksu postępowania karnego (刑事訴訟法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001) uprawniony do złożenia wniosku o ściganie musi go złożyć, co do zasady, w ciągu 6 miesięcy od dnia, w którym poznał sprawcę.
 
 Prawo żądania odszkodowania z deliktu według [art. 197 tajwańskiego kodeksu cywilnego (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) wygasa, co do zasady, jeśli nie jest wykonywane przez 2 lata od chwili, gdy poszkodowany poznał szkodę i dłużnika odszkodowania, i wygasa też, gdy od deliktu upłynęło 10 lat.
 
@@ -85,7 +85,7 @@ Jeśli jednak wchodzi w grę inna podstawa żądania, jak odpowiedzialność umo
 
 Aby wyjaśnić odpowiedzialność, związek przyczynowy i szkodę, należy zebrać razem nie tylko nagrania z monitoringu (監視器影像) z chwili wypadku, lecz także dokumentację medyczną (病歷) i zaświadczenie lekarskie (診斷證明書), pokwitowania kosztów medycznych (醫療費用), transportu (就醫交通費) i opieki (看護費用), wiadomości wymieniane z siłownią i trenerem, oświadczenia świadków, rezerwację zajęć i rejestr obecności, plan ćwiczeń i rejestr treningu. Należy sfotografować, w miarę możliwości, okolicę urazu i stan miejsca wypadku oraz uporządkować według dat przebieg przed i po wypadku oraz treść komunikacji, aby później ułatwić zestawienie dokumentów.
 
-Nagrania mogą zostać nadpisane po upływie okresu przechowywania albo stać się nieużyteczne z innych przyczyn. Można więc rozważyć żądanie od siłowni zachowania za pomocą wezwania z potwierdzeniem treści (存證信函) lub pisma w imieniu adwokata (律師函), które konkretnie zapisuje potrzebny przedział czasu, miejsce i położenie kamery. To pismo jest praktycznym środkiem, by zostawić ślad, o co i kiedy żądano. Samo w sobie nie nakłada jednak na drugą stronę nowego obowiązku prawnego zabezpieczenia nagrań ani nie zapobiega ich usunięciu, a sam fakt, że nagrania się nie zachowały, nie prowadzi też sądu do automatycznie niekorzystnej oceny.
+Nagrania mogą zostać nadpisane po upływie okresu przechowywania albo stać się nieużyteczne z innych przyczyn. Można więc rozważyć żądanie od siłowni zachowania za pomocą pisma z poświadczoną treścią (存證信函) lub pisma adwokata (律師函), które konkretnie zapisuje potrzebny przedział czasu, miejsce i położenie kamery. To pismo jest praktycznym środkiem, by zostawić ślad, o co i kiedy żądano. Samo w sobie nie nakłada jednak na drugą stronę nowego obowiązku prawnego zabezpieczenia nagrań ani nie zapobiega ich usunięciu, a z samego faktu, że nagrania się nie zachowały, sąd nie wyciąga automatycznie wniosku na niekorzyść strony.
 
 Jeśli okoliczności wypadku mogą wypełnić znamiona przestępstwa, można szybko zawiadomić, aby organ śledczy (偵查機關) ocenił, czy istnieje legalna podstawa zajęcia lub zachowania. Zawiadomienie nie oznacza, że policja lub prokuratura koniecznie zabezpieczą nagrania z monitoringu, więc należy też zebrać dokumenty, które strona może zachować sama, jak dokumenty medyczne i komunikacyjne.
 
@@ -94,12 +94,12 @@ Jeśli okoliczności wypadku mogą wypełnić znamiona przestępstwa, można szy
 Składniki szkody, których można dochodzić, są następujące. Rzeczywiste uznanie i kwota zależą od konieczności każdego wydatku, związku przyczynowego z wypadkiem, dowodów, stopnia odpowiedzialności i oceny sądu.
 
 1. **Koszty medyczne**: Koszty rzeczywiście poniesione na poradę, badania, leczenie, leki i rehabilitację dowodzi się pokwitowaniami i dokumentacją medyczną.
-2. **Koszty opieki lub asysty**: Jeśli, w świetle stopnia urazu i przebiegu leczenia, opieka była konieczna, oraz czy okres i koszt są odpowiednie, bada się to dokumentami medycznymi i wydatkowymi.
+2. **Koszty opieki lub asysty**: To, czy opieka była konieczna w świetle stopnia urazu i przebiegu leczenia oraz czy okres i koszt były odpowiednie, ustala się na podstawie dokumentacji medycznej i dowodów wydatków.
 3. **Koszty transportu**: Koszty konieczne, by dojeżdżać do placówki medycznej na leczenie, dowodzi się rejestrem przejazdów, pokwitowaniami i podobnymi dokumentami.
 4. **Szkoda z utraty zdolności do pracy (勞動能力減損)**: Jeśli uznane są następstwa i trwałe obniżenie zdolności do pracy, można oceniać łącznie dokumentami medycznymi i zawodowymi, stopniem niepełnosprawności, zawodem i dochodami oraz pozostałym okresem pracy. Sam procent niepełnosprawności nie ustala odszkodowania, a strata nie jest liczona automatycznie do chwili emerytury.
 5. **Utrata dochodu w okresie powrotu do zdrowia (收入損失)**: Okres, w którym rzeczywiście nie można było pracować z powodu leczenia lub odpoczynku, oraz wynikające z tego obniżenie dochodu, należy dowieść dokumentami wynagrodzenia, podatkowymi, obecności w pracy itd.
 6. **Szkoda niemajątkowa (非財產上損害)**: Kwotę za cierpienie moralne ustala sąd na podstawie czynników każdej sprawy, jak stopień urazu, okres leczenia, następstwa i konkretne okoliczności strony.
-7. **Odszkodowanie karne (懲罰性賠償金)**: Istnieje przepis, według którego w sporze, do którego stosuje się ustawę o ochronie konsumentów, jeśli szkodę wywołał zamiar przedsiębiorstwa, można żądać do 5-krotności rzeczywistej szkody; jeśli ciężka wina, do 3-krotności; a jeśli wina, do 1-krotności kwoty rzeczywistej szkody. Czy [art. 51 tajwańskiej ustawy o ochronie konsumentów](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) stosuje się do sprawy oraz czy jest rzeczywiste odszkodowanie i w jakiej kwocie, zależy od oceny sądu dotyczącej konkretnych przesłanek i dowodów.
+7. **Odszkodowanie karne (懲罰性賠償金)**: Istnieje przepis, według którego w sporze, do którego stosuje się ustawę o ochronie konsumentów, jeśli szkodę wywołał zamiar przedsiębiorstwa, można żądać do 5-krotności rzeczywistej szkody; jeśli ciężka wina, do 3-krotności; a przy winie — do wysokości rzeczywistej szkody (mnożnik 1). Czy [art. 51 tajwańskiej ustawy o ochronie konsumentów](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) stosuje się do sprawy oraz czy jest rzeczywiste odszkodowanie i w jakiej kwocie, zależy od oceny sądu dotyczącej konkretnych przesłanek i dowodów.
 
 ## 5. Nawet jeśli siłownia ma ubezpieczenie odpowiedzialności (責任保險), czy istnienie odszkodowania i kwota mogą być sporne?
 
@@ -107,9 +107,9 @@ Tak. Fakt, że istnieje ubezpieczenie, może być istotny przy ustalaniu źród�
 
 W szczególności utrata zdolności do pracy, obniżenie dochodu w okresie powrotu do zdrowia i szkoda niemajątkowa mogą wymagać dokumentów medycznych, dochodowych i zawodowych albo opinii biegłego. Kwota, którą proponuje ubezpieczyciel, albo ta, której żąda poszkodowany, nie staje się od razu kwotą uznaną przez sąd, a wynik oceny niepełnosprawności też nie ustala automatycznie odszkodowania. W rzeczywistym działaniu należy razem sprawdzić polisę i warunki, treść zawiadomienia o wypadku, odpowiedź ubezpieczyciela, przebieg leczenia i dokumenty szkody.
 
-Jeśli doznali Państwo urazu na siłowni, ważne jest, by najpierw otrzymać potrzebne leczenie, zachować dokumenty, które jeszcze można zabezpieczyć, zanim znikną, oraz wcześnie zebrać indywidualne wskazówki o terminach i procedurach, które mogą stosować się do sprawy. Negocjacja, skarga konsumencka (消費申訴) lub mediacja (調解), skarga karna i cywilne żądanie odszkodowania są wszystkimi środkami, które można wybrać według sprawy, i nie są procedurami, które zawsze trzeba przejść w całości.
+Jeśli doznali Państwo urazu na siłowni, ważne jest, by najpierw otrzymać potrzebne leczenie, zachować dokumenty, które jeszcze można zabezpieczyć, zanim znikną, oraz wcześnie zebrać indywidualne wskazówki o terminach i procedurach, które mogą stosować się do sprawy. Negocjacja, skarga konsumencka (消費申訴) lub mediacja (調解), wniosek o ściganie i cywilne żądanie odszkodowania są wszystkimi środkami, które można wybrać według sprawy, i nie są procedurami, które zawsze trzeba przejść w całości.
 
-Upadek na terenie lokalu, szkoda zdrowotna przez żywność i uraz przy korzystaniu z usługi zawodowej mogą też mieć za spory obowiązek bezpieczeństwa, związek przyczynowy, szkodę i dowód. Wniosku ze sprawy siłowni nie można jednak stosować takim, jaki jest, do innego wypadku, więc umowę, zachowanie i normy właściwe każdego przypadku należy zbadać osobno.
+Upadek na terenie lokalu, szkoda zdrowotna przez żywność i uraz przy korzystaniu z usługi zawodowej mogą również rodzić spór o obowiązek bezpieczeństwa, związek przyczynowy, szkodę i dowody. Wniosku ze sprawy siłowni nie można jednak stosować takim, jaki jest, do innego wypadku, więc umowę, zachowanie i normy właściwe każdego przypadku należy zbadać osobno.
 
 ---
 

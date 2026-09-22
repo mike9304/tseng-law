@@ -39,7 +39,7 @@ Co do dokumentów policji, na miejscu wypadku można otrzymać odcinek rejestrac
 
 Art. 284 Kodeksu karnego reguluje uszkodzenie ciała z nieostrożności (過失傷害) i ciężkie uszkodzenie ciała z nieostrożności (過失致重傷). Ponieważ według art. 287 Kodeksu karnego jest to przestępstwo ścigane z oskarżenia prywatnego (告訴乃論之罪), zgodnie z art. 237 tajwańskiego Kodeksu postępowania karnego (刑事訴訟法) skargę należy co do zasady wnieść w ciągu 6 miesięcy od dnia, w którym sprawca stał się znany.
 
-W cywilnym odszkodowaniu szkód (損害賠償), według art. 197 tajwańskiego Kodeksu cywilnego (民法) roszczenie nie jest już możliwe po upływie 2 lat od dnia, w którym szkoda i dłużnik odszkodowania stały się znane, albo 10 lat od dnia czynu niedozwolonego. Które fakty wpływają na przedawnienie (消滅時效), należy zbadać osobno.
+W cywilnym roszczeniu o naprawienie szkody (損害賠償), według art. 197 tajwańskiego Kodeksu cywilnego (民法) roszczenie nie jest już możliwe po upływie 2 lat od dnia, w którym szkoda i dłużnik odszkodowania stały się znane, albo 10 lat od dnia czynu niedozwolonego. Które fakty wpływają na przedawnienie (消滅時效), należy zbadać osobno.
 
 Ktokolwiek dozna szkody wskutek przestępstwa, może według art. 487 Kodeksu postępowania karnego wytoczyć powództwo cywilne akcesoryjne do postępowania karnego (刑事附帶民事訴訟). Dopóki postępowanie karne trwa, powództwo to można wytoczyć aż do zamknięcia rozprawy ustnej (言詞辯論終結) drugiej instancji, według art. 488 Kodeksu postępowania karnego, lecz nie można go wytoczyć po zamknięciu rozprawy ustnej pierwszej instancji i przed wniesieniem środka odwoławczego. Co do zasady można uniknąć zapłaty odrębnych kosztów sądowych (裁判費), lecz nie wszystkie wyniki kończą się bez kosztu. Na przykład, jeżeli sprawę karną oddalono i na wniosek powoda przekazano sądowi cywilnemu, według art. 503 Kodeksu postępowania karnego mogą być nałożone koszty procesu, a ponadto należy sprawdzić reguły przekazania i procedury art. 504.
 
@@ -49,7 +49,7 @@ Wybór różni się według przerwania przedawnienia (時效中斷), kręgu pozw
 
 Odpowiedzialność karna może być przyjęta tylko wtedy, gdy uznane są naruszenie obowiązku ostrożności każdego oraz związek przyczynowy między tym naruszeniem a obrażeniami drugiej strony. Sam fakt, że wina istniała po obu stronach, nie rodzi automatycznie odpowiedzialności za uszkodzenie ciała z nieostrożności.
 
-Na płaszczyźnie cywilnej, według art. 217 Kodeksu cywilnego, jeżeli osoba poszkodowana ma winę, która przyczyniła się do spowodowania albo pogłębienia szkody (與有過失), sąd może zmniejszyć albo zwolnić od odszkodowania. Na przykład, jeżeli szkoda uznana w nowym dolarze tajwańskim (新臺幣, TWD) wynosi TWD 1.000.000, a wina osoby poszkodowanej jest oceniona na 50 %, kwota może zostać zmniejszona do TWD 500.000 przed innymi korektami.
+Na płaszczyźnie cywilnej, według art. 217 Kodeksu cywilnego, jeżeli osoba poszkodowana ma winę, która przyczyniła się do spowodowania albo pogłębienia szkody (與有過失), sąd może zmniejszyć albo zwolnić od odszkodowania. Na przykład, jeżeli szkoda uznana w nowym dolarze tajwańskim (新臺幣, TWD) wynosi 1.000.000 TWD, a wina osoby poszkodowanej jest oceniona na 50 %, kwota może zostać zmniejszona do 500.000 TWD przed innymi korektami.
 
 Ekspertyza (鑑定) albo tabela wstępnej analizy mogą być ważnymi dokumentami, lecz nie wiążą sądu w sposób mechaniczny. Sąd bada całokształt dowodów, w tym oświadczenia, obrazy i stan pojazdów.
 
@@ -141,11 +141,11 @@ Utratę dochodów należy dowieść dokumentami ustalającymi, że z powodu obra
 
 Należy łącznie uporządkować dokumentację medyczną, rejestry obecności albo urlopu, dane o wynagrodzeniu i podatkach oraz potwierdzenie pracodawcy. Osoba prowadząca działalność na własny rachunek może przedstawić dane dostosowane do formy swojej działalności, takie jak dane sprzedaży, rejestry operacji i deklaracje podatkowe.
 
-Okoliczność dalszej pracy albo otrzymywania wynagrodzenia bez zmiany jest istotna dla oceny utraty dochodów okresu powrotu do zdrowia, lecz sam ten fakt nie rozstrzyga automatycznie kwestii szkody z zmniejszenia zdolności do pracy. Ta okoliczność nie jest też samodzielną podstawą oceny szkody z zmniejszenia zdolności do pracy. Szkodę z zmniejszenia zdolności do pracy bada się osobno w Q12.
+Okoliczność dalszej pracy albo otrzymywania wynagrodzenia bez zmiany jest istotna dla oceny utraty dochodów okresu powrotu do zdrowia, lecz sam ten fakt nie rozstrzyga automatycznie kwestii szkody ze zmniejszenia zdolności do pracy. Ta okoliczność nie jest też samodzielną podstawą oceny szkody ze zmniejszenia zdolności do pracy. Szkodę ze zmniejszenia zdolności do pracy bada się osobno w Q12.
 
-## Q12. Jak dowodzi się szkodę z zmniejszenia zdolności do pracy?
+## Q12. Jak dowodzi się szkodę ze zmniejszenia zdolności do pracy?
 
-Szkoda z zmniejszenia zdolności do pracy odróżnia się od dochodów rzeczywiście zmniejszonych w okresie powrotu do zdrowia z Q11. Według art. 193 i 216 Kodeksu cywilnego bada się łącznie związek przyczynowy z wypadkiem, trwałe zaburzenie czynnościowe (持續功能障礙), zawód i umiejętności osoby poszkodowanej, dochody, których można zwykle oczekiwać, oraz podstawę i dowód dotyczące okresu zdolności do pracy.
+Szkoda ze zmniejszenia zdolności do pracy odróżnia się od dochodów rzeczywiście zmniejszonych w okresie powrotu do zdrowia z Q11. Według art. 193 i 216 Kodeksu cywilnego bada się łącznie związek przyczynowy z wypadkiem, trwałe zaburzenie czynnościowe (持續功能障礙), zawód i umiejętności osoby poszkodowanej, dochody, których można zwykle oczekiwać, oraz podstawę i dowód dotyczące okresu zdolności do pracy.
 
 Fakt, że bieżące wynagrodzenie utrzymuje się bez zmiany, nie wyłącza automatycznie roszczenia. Odwrotnie, kwoty szkody nie ustala się też w sposób mechaniczny tylko procentem inwalidztwa albo bieżącym wynagrodzeniem.
 
@@ -175,7 +175,7 @@ Obowiązek zawarcia według art. 6 ustawy o obowiązkowym ubezpieczeniu odpowied
 
 W wypadku jednego pojazdu kierowca tego pojazdu nie jest co do zasady adresatem świadczeń obowiązkowego ubezpieczenia tego pojazdu. Jednak w wypadku, w którym uczestniczy kilka pojazdów, istnieją przypadki, w których kierowca może dochodzić świadczeń od ubezpieczyciela obowiązkowego innego pojazdu zaangażowanego.
 
-Taryfa świadczeń (強制汽車責任保險給付標準) zmieniona 29 maja 2026 r. stosuje się do wypadków, które nastąpiły od 1 lipca 2026 r. Pułap rozsądnych i potrzebnych kosztów medycznych za obrażenia wynosi TWD 200.000 w nowym dolarze tajwańskim; świadczenie za inwalidztwo (失能) wynosi od TWD 80.000 do TWD 3.000.000 według 15 stopni ustawowych; świadczenie za śmierć wynosi TWD 3.000.000, a łączne maksimum śmierci, inwalidztwa i kosztów medycznych dla 1 poszkodowanego i 1 wypadku wynosi TWD 3.200.000. Do wypadków wcześniejszych może stosować się taryfa poprzednia.
+Taryfa świadczeń (強制汽車責任保險給付標準) zmieniona 29 maja 2026 r. stosuje się do wypadków, które nastąpiły od 1 lipca 2026 r. Pułap rozsądnych i potrzebnych kosztów medycznych za obrażenia wynosi 200.000 TWD w nowym dolarze tajwańskim; świadczenie za inwalidztwo (失能) wynosi od 80.000 TWD do 3.000.000 TWD według 15 stopni ustawowych; świadczenie za śmierć wynosi 3.000.000 TWD, a łączne maksimum śmierci, inwalidztwa i kosztów medycznych dla 1 poszkodowanego i 1 wypadku wynosi 3.200.000 TWD. Do wypadków wcześniejszych może stosować się taryfa poprzednia.
 
 Ubezpieczenie odpowiedzialności cywilnej wobec osób trzecich (第三人責任險), ubezpieczenie wypadków kierowcy (駕駛人傷害險) i ubezpieczenie szkód własnego pojazdu (車體損失險) są produktami fakultatywnymi o charakterze umownym. Rzeczywiste pokrycie różni się według ubezpieczonego, pułapu, franszyzy (自負額), wyłączeń, winy i innych warunków polisy, dlatego polisę i warunki należy sprawdzić w każdej sprawie osobno.
 
@@ -207,7 +207,7 @@ Mogą zaniedbać ważne części, które dotyczą uczuć drugiej strony, takie j
 
 ​
 
-Dla ubezpieczyciela wydanie dodatkowo TWD 500.000 albo TWD 1.000.000 w konkretnej sprawie nie wpływa w sposób istotny na całkowity zysk ubezpieczyciela, lecz dla strony wypadku ta suma może rozstrzygać, czy są czy nie są poprzednie skazania karne (前科).
+Dla ubezpieczyciela wydanie dodatkowo 500.000 TWD albo 1.000.000 TWD w konkretnej sprawie nie wpływa w sposób istotny na całkowity zysk ubezpieczyciela, lecz dla strony wypadku ta suma może rozstrzygać, czy sprawa skończy się wpisem o karalności (前科).
 
 ​
 
@@ -239,7 +239,7 @@ W części wyroków za uszkodzenie ciała z nieostrożności orzekano karę oko�
 
 ​
 
-Jeżeli jest zamieniana na grzywnę (易科罰金), art. 41 ust. 1 Kodeksu karnego ustala zamianę na TWD 1.000, TWD 2.000 albo TWD 3.000 za 1 dzień; liczone według TWD 1.000 za dzień, kara 3 miesięcy odpowiada 3 × 30 × TWD 1.000 = TWD 90.000.
+Jeżeli jest zamieniana na grzywnę (易科罰金), art. 41 ust. 1 Kodeksu karnego ustala zamianę na 1.000 TWD, 2.000 TWD albo 3.000 TWD za 1 dzień; liczone według 1.000 TWD za dzień, kara 3 miesięcy odpowiada 3 × 30 × 1.000 TWD = 90.000 TWD.
 
 ​
 
@@ -323,7 +323,7 @@ Należy wystrzegać się adwokata, który rozdmuchuje sprawę i twierdzi, że ni
 
 ​
 
-Na tym kończymy pytania i odpowiedzi o wypadkach drogowych. Mamy nadzieję, że będą dla Państwa użyteczne.
+Na tym kończą się pytania i odpowiedzi o wypadkach drogowych.
 
 ​
 
@@ -359,7 +359,7 @@ Tej kwestii nie należy zatem lekceważyć; stosownie do okoliczności warto sko
 
 ​
 
-Jeżeli mają Państwo dalsze pytania, prosimy o kontakt z kancelarią.
+Jeśli mają Państwo pytanie z zakresu prawa Tajwanu, prosimy o kontakt przez stronę „Kontakt” po angielsku, chińsku (中文), japońsku lub koreańsku; termin odpowiedzi nie jest przyrzeczony.
 
 ​
 

@@ -1,0 +1,112 @@
+WO-F-mn r3 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-mn-r3
+date: 2026-09-23
+
+Finding rows: 39 (mn-a 16 + mn-b 23)
+Applied: 34
+Skipped: 5
+
+## Rows applied
+
+mn-a
+2 P2 guidance Kaohsiung office: корпорацийн практикт → компанийн засаглалд (1)
+3 P2 004 listing standards: компанийн удирдлага → компанийн засаглал (1). Day-to-day удирдлага elsewhere left (017 staffing, 018 manager).
+4 P2 guidance: Өргөдөл гаргах нь тэр өргөдөл өөрөө хангагдана (1)
+5 P2 003: шүүхийг хүлээлгэх does not mean “does not bind”. Two sites: шүүхэд механикаар үүрэг болохгүй; шүүхэд үүрэг болохгүй. Did not use the coined үүрэгжүүлэх.
+6 P2 005: one job title, буюу, gloss 一般僑外投資事業主管工作 kept (1)
+7 P2 005: хаягийн нөхцөл → нэр дэвшигчийн нөхцөл (1). The 經理人 condition was already in the same clause, so the extra тухайлбал repeat was not added.
+8 P2 營業稅 is аж ахуйн албан татвар, not a second НӨАТ. 001 body (gloss 營業稅 added) + 004 body + 004 table header (3)
+9 P2 pricing: эхний алхам нь … явдал юм (1)
+10 P2 accusative хяналтыг: guidance contact paragraph (1) + inquiry successMessage (1). FAQ хяналтыг хүлээнэ was already right.
+11 P2 Тайванийн: about description + image alt (2). No other lowercase тайванийн.
+12 P2 sentence-initial capital: 001 after the period; 002 after the bold heading; 004 paragraph that opened on ашгийн (3). 005 Хариуцлагатай, the sentence the a-13 note called out (1).
+14 P2 columns page: энэ хуудас зөвлөгөө биш. Denial kept. guidance-disclosure-parity.test.ts mn regex updated to /энэ хуудас зөвлөгөө биш/. llms consultationNotice does not contain this sentence and was left.
+15 P2 007: аль нутгийн хууль хэрэглэх вэ, inside the existing paragraph (1)
+mn-b
+1 P1 010: loss is not automatically projected through to retirement age (1)
+2 P1 010: whether punitive damages are actually awarded, and in what amount (1). Article 51 applicability was already in the sentence.
+3 P1 014 notice periods, inclusive boundary: N ба түүнээс дээш (3 list items, not merged)
+4 P1 018: хоёр дахь болон түүнээс хойших гадаадын иргэн (1). No other role/count swap.
+5 P2 010 gloss moved after хагарч, image alt and link text (2)
+6 P2 011: өөрчлөлтөд өртсөн PIF (1). Other нөлөөлөх participles are active and correct (conditions that affect reasonableness, facts that affect).
+7 P2 013 bank employee: attribution kept across the two existing blocks (ингэж хэлсэн / гэсэн юм). Blocks not merged.
+8 P2 013 one-year period: enough time for the address and the lease in the first block, and for the account and the remittance in the second. дараа нь removed.
+9 P2 014: тохиролцсон хугацааны уртаар л (1)
+10 P2 016: доод зэрэглэлийн өв залгамжлагч (1)
+11 P2 017: ердийн компани байгуулалт (1). Ерөнхий автомашины ачаа тээвэр left: that is the licence category, not ordinary company formation.
+12 P2 012: B толгойдоо хүнд гэмтэл авч (1)
+14 P2 013: the Department is the subject of the second check (1)
+15 P2 014: question marks on the four existing checklist items. Items not merged.
+16 P2 014: эх хувь on both the signed contract and the amendments (1)
+17 P2 016 comma splice → period, FAQ answer and body (2)
+18 P2 012: compliance is not itself a guarantee. The denial stays.
+19 P2 011: гоо сайхны зохицуулалтын гол хариуцагч (1)
+20 P2 011: тус тусын дагаж мөрдөх ажил. Kept бүтээгдэхүүн бүртгэлийн хуваарь.
+21 P2 014: whether termination gives rise to financial liability. Wording: хөдөлмөрийн харилцаа дуусахад эд хөрөнгийн хариуцлага үүсэх эсэх. Did not keep the stranded дуусгаснаас.
+22 P2 018: кантор → фирм (1). Bulgarian кантор untouched.
+
+## Rows skipped
+
+mn-a 1 P1 004 link label 10 дугаар зүйл → 3 дугаар зүйл.
+Tried it. Checker: numbers FAIL, missing from translation (1): 10. The Korean source label is 영업세법 제10조 on the same URL (flno=3). Restored 10 дугаар зүйл. URL unchanged. The reviewer’s URL point is right; the digit is pinned.
+
+mn-a 13 P2 U+200B blank lines and promoting Q16–Q20 to ## headings.
+Not applied. checkBlocks requires the target ZWSP count and block count to match the Korean source, and checkHeadings requires the same heading levels. English Q16–Q20 are body lines as well. 005’s sentence-initial capital is under row 12, not a layout change.
+
+mn-a 16 P2 TWD 1.57M → 1,57 сая TWD.
+Not applied. R12 and ACCEPTED-ROUND: keep TWD 1.57M byte-identical. The suggested 1,57 is also a decimal comma, which R14 does not parse for mn.
+
+mn-b 13 P2 delete U+200B in 013 and 015.
+Not applied. Same ZWSP parity. The sentences were left as they were.
+
+mn-b 23 P2 space thousands and a decimal comma (1 579 589 TWD, 0.5 метр, other TWD figures).
+Not applied. R14: mn is comma-thousands and a decimal point (500,000 / 0.5). Space separators fail the checker. Figures left as TWD 1,579,589 and 0.5.
+
+## Systemic patterns
+
+- Money format (comma, leading TWD, bio 1.57M): 0 changed. R14 and the pinned bio figure.
+- U+200B blank lines (003, 005, 006, 008, 009, 013, 015): 0 removed. Checker pins the count.
+- хяналт as the subject of хүлээнэ: 2 changed (guidance + inquiry success). FAQ already accusative.
+- Corporate governance named as практик or as day-to-day удирдлага: 2 changed (office focus, listing standards).
+- New sentence opening in lowercase after the tax-name fix: 3 (001, 002, 004) plus the 005 responsible-person sentence.
+- Hangul in frontmatter url (008, 009): 0. R16 skip.
+- Inclusive 以上 written as exclusive X-аас дээш: 3 list items in 014. No other аас дээш / ээс дээш in columns-mn.
+- A count swapped for a nearby role: 1 (018).
+- Active participle that reverses who is affected: 1 (PIF). 
+- Ерөнхий attached to the wrong noun: 1 (ердийн компани байгуулалт).
+- Thousands with a space: 0.
+- Lowercase тайванийн: 2.
+- Russian кантор for the firm: 1 in mn (018).
+- 營業稅 called НӨАТ: 3.
+
+R2–R10 / R12–R17 were already in the pack. No further edits. Consultation stays English, Chinese (中文), Japanese, Korean. No interpreter, reply-time, free first meeting, or result promise added. Wei Tseng is not marked masculine. Dates stay YYYY.MM.DD, which the review calls ordinary Mongolian numeric order. The 004 table cell ашгийн төлөөх was left: it is a label, not a sentence opening.
+
+## §Verify
+
+===== CHECKER =====
+neighbour      PASS   
+hanzi          PASS   han=98
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+===== MARKERS =====
+       0
+===== TSC =====
+TSC_OK
+===== VITEST =====
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+===== GIT =====
+      20
+
+The checker tail above is the last file (018) plus summary PASS 18/18. Markers 0. This log file was not on disk when git status ran, so it is not inside the count of 20.
+
+## Reviewer points not applied
+
+- a-1: the URL flno=3 does open article 3 of the withholding-rate standards, and the statute name on the label is that instrument. The visible 10 matches the Korean and English link label (business-tax act, article 10), not the URL. The number checker rejects dropping that 10. Not applied.
+- a-13 / b-13: Q16–Q20 should not become new headings. In the English and Korean files they are body lines. U+200B is inherited from the Korean source and the checker counts it.
+- a-16 and b-23: Mongolian running text often uses a space and a decimal comma. This locale’s checker accepts only comma grouping and a decimal point, and TWD 1.57M is pinned. Not applied.
+- Suggested үүрэгжүүлэх (a-5) and дуусгаснаас (b-21) were not copied. The meaning was applied in ordinary wording.

@@ -13,7 +13,7 @@ faq:
   - q: "¿La formación de los recién incorporados o la formación legalmente obligatoria se consideran formación técnica especializada?"
     a: "Según la orientación del Ministerio de Trabajo de Taiwán (勞動部) de 5 de junio de 2026, el coste de la formación periódica, de la formación general del puesto, de la adaptación al trabajo de los recién incorporados y de la formación que la ley obliga a impartir no puede tomarse como fundamento del pacto de período mínimo de trabajo ni de una reclamación de cláusula penal (違約金) o de devolución de gastos. No debe verse solo el nombre de la formación, sino el programa concreto, el contenido profesional y técnico, la duración, el coste realmente asumido por el empleador y los justificantes."
   - q: "Si se dimite de forma anticipada, ¿deben devolverse por completo la prima de firma (簽約金) o la prima de permanencia (留任獎金)?"
-    a: "No siempre se devuelve el importe íntegro. Si la prima de firma, la prima de permanencia u otra prestación anticipada (預付性給付) se pagó como compensación razonable del pacto de período mínimo de trabajo, su finalidad debe comunicarse con claridad al trabajador. La orientación del Ministerio de Trabajo de Taiwán de 5 de junio de 2026 explica que, al dimitir antes de vencer el período, el importe a devolver debe calcularse en proporción al período aún no cumplido y no debe exigirse la devolución íntegra. La conclusión real debe examinar juntos la finalidad del pago, el contenido del pacto, el período ya trabajado y la causa de la extinción."
+    a: "No siempre se devuelve el importe íntegro. Si la prima de firma, la prima de permanencia u otra prestación anticipada (預付性給付) se pagó como compensación razonable del pacto de período mínimo de trabajo, su finalidad debe comunicarse con claridad al trabajador. La orientación del Ministerio de Trabajo de Taiwán de 5 de junio de 2026 explica que, al dimitir antes de vencer el período, el importe a devolver debe calcularse en proporción al período aún no cumplido y no debe exigirse la devolución íntegra. La conclusión real debe examinar en conjunto la finalidad del pago, el contenido del pacto, el período ya trabajado y la causa de la extinción."
   - q: "Si el contrato se extingue de forma anticipada por una causa no imputable al trabajador, ¿debe devolverse el gasto de formación?"
     a: "El artículo 15-1, apartado 4, de la Ley de Normas Laborales de Taiwán dispone que, si el contrato de trabajo se extingue antes de terminar el período mínimo de trabajo por una causa no imputable al trabajador, el trabajador no asume responsabilidad por infracción del pacto de período mínimo de trabajo ni por devolución del gasto de formación. Sin embargo, la causa de extinción y la imputación de responsabilidad deben valorarse a partir de pruebas concretas, como la notificación de despido, la manifestación de dimisión y los datos de infracción de las condiciones de trabajo."
 ---
@@ -51,7 +51,7 @@ Para fundar el pacto en la formación, el empleador debe haber proporcionado rea
 
 El objeto de examen incluye no solo costes directamente comprobables, como honorarios de formadores externos, matrícula de un centro de formación y tasas de materiales o equipos, sino también el fundamento de cálculo de los costes internos que alega el empleador. Si formó personal interno, debe verse de quién y de qué tiempo se trata, en qué se diferencia de la supervisión habitual o de la entrega del puesto, y si hay fundamento para imputar ese coste a ese trabajador. Un importe estimado o un prorrateo global no prueban por sí la carga real.
 
-El programa, el calendario de formación, la lista de asistencia, el resultado de la evaluación, el certificado de aprovechamiento, las facturas y los recibos son datos básicos para confirmar la realidad de la formación y el coste. El contrato entre el empleador y el centro de formación, los justificantes de pago y las condiciones de reembolso, vistos juntos, permiten captar con más exactitud la carga real. Si el trabajador pagó parte del coste de forma directa o un tercero lo sufragó, también debe distinguirse quién asumió el coste final.
+El programa, el calendario de formación, la lista de asistencia, el resultado de la evaluación, el certificado de aprovechamiento, las facturas y los recibos son datos básicos para confirmar la realidad de la formación y el coste. El contrato entre el empleador y el centro de formación, los justificantes de pago y las condiciones de reembolso, considerados en conjunto, permiten captar con más exactitud la carga real. Si el trabajador pagó parte del coste de forma directa o un tercero lo sufragó, también debe distinguirse quién asumió el coste final.
 
 El límite entre la adaptación general al trabajo y la formación técnica especializada no se divide solo por el lugar de la formación o por quién la organiza. Un curso interno puede acreditar contenido profesional y técnico concreto y una inversión considerable, y un curso largo de un centro externo puede ser, en realidad, una formación introductoria general. Por ello no debe excluirse de forma uniforme toda formación interna ni reconocerse el requisito legal solo porque el curso sea costoso o largo.
 
@@ -65,7 +65,7 @@ Primero debe confirmarse la finalidad del pago. Si es una condición salarial ge
 
 La orientación (函釋) del Ministerio de Trabajo de Taiwán (勞動部) de 5 de junio de 2026 explica que, si se toma como compensación razonable del pacto de período mínimo de trabajo una prima de permanencia, una prima de firma u otra prestación anticipada, ese papel debe comunicarse con claridad. El que el empleador interprete de nuevo después la finalidad del pago o reclasifique una parte del salario como compensación difícilmente sustituye la comunicación del momento del contrato.
 
-La razonabilidad de la compensación no se valora solo por el importe. Se ve juntos si el trabajador obtiene realmente un beneficio adicional, si las condiciones de pago son claras, cómo se atribuye la parte correspondiente al período ya trabajado y si el alcance de la devolución no es excesivo. Aunque exista compensación, no se permite sin límite cualquier duración de permanencia ni cualquier importe de responsabilidad de devolución.
+La razonabilidad de la compensación no se valora solo por el importe. Hay que valorar en conjunto si el trabajador obtiene realmente un beneficio adicional, si las condiciones de pago son claras, cómo se atribuye la parte correspondiente al período ya trabajado y si el alcance de la devolución no es excesivo. Aunque exista compensación, no se permite sin límite cualquier duración de permanencia ni cualquier importe de responsabilidad de devolución.
 
 También importa si el texto del contrato y el pago real coinciden. Comprobar si el pago se retrasó o se fraccionó, si es condicional, cuál es el importe realmente percibido después de impuestos y descuentos, y si hubo comunicación escrita separada ayuda a valorar el alcance de la compensación y el beneficio real del trabajador.
 
@@ -78,15 +78,15 @@ Aunque exista uno de los requisitos legales, el período pactado y la responsabi
 3. Importe y alcance de la compensación
 4. Demás circunstancias que influyen en la razonabilidad
 
-En el primer factor se ve cuánto duró realmente la formación y cuánto asumió el empleador. No basta con presentar el total; conviene confirmar juntos los justificantes por partida, el importe imputado a cada trabajador, la competencia que la formación proporcionó y la parte de inversión ya recuperada.
+En el primer factor se ve cuánto duró realmente la formación y cuánto asumió el empleador. No basta con presentar el total; conviene confirmar en conjunto los justificantes por partida, el importe imputado a cada trabajador, la competencia que la formación proporcionó y la parte de inversión ya recuperada.
 
 El segundo factor, la posibilidad de sustitución, no se fija solo con la alegación del empleador de dificultad de contratación. Se examina si puede obtenerse personal del mismo puesto o de un puesto similar, qué cualificación y nivel de pericia se necesitan, cuál es el período habitual de cobertura y si la necesidad operativa que alega el empleador encaja con datos objetivos.
 
-El tercer factor ve no solo el importe de la compensación, sino también el alcance. Importan cuándo se paga y en qué condiciones se atribuye de forma definitiva al trabajador, cómo se corresponde con el período pactado en su conjunto y si, al extinguirse a mitad, se refleja el período ya cumplido. Una prima con el mismo nombre puede valorarse de forma distinta según la estructura del contrato y la realidad.
+En el tercer factor se valora no solo el importe de la compensación, sino también el alcance. Importan cuándo se paga y en qué condiciones se atribuye de forma definitiva al trabajador, cómo se corresponde con el período pactado en su conjunto y si, al extinguirse a mitad, se refleja el período ya cumplido. Una prima con el mismo nombre puede valorarse de forma distinta según la estructura del contrato y la realidad.
 
 El cuarto factor puede incluir diversas circunstancias que influyen en la razonabilidad, como el curso de celebración del pacto, la naturaleza del trabajo, lo explicado a las partes, el período realmente trabajado y la causa de extinción. La importancia de cada factor puede variar según el caso, y las circunstancias a considerar no se limitan a los ejemplos anteriores. Por ello deben examinarse sin omitir los hechos pertinentes que aparecen en el expediente.
 
-Al final se necesita una relación de proporcionalidad comprensible entre el período pactado, la inversión real del empleador, la dificultad de sustitución, la compensación que recibió el trabajador y la carga de devolución. No debe fijarse de antemano la validez solo porque se trate de un oficio determinado ni aplicarse tal cual la conclusión de otro asunto. Deben verse juntos el diseño del momento de celebración del contrato y el grado real de cumplimiento en el momento de la extinción.
+Al final se necesita una relación de proporcionalidad comprensible entre el período pactado, la inversión real del empleador, la dificultad de sustitución, la compensación que recibió el trabajador y la carga de devolución. No debe fijarse de antemano la validez solo porque se trate de un oficio determinado ni aplicarse tal cual la conclusión de otro asunto. Deben valorarse en conjunto el diseño del momento de celebración del contrato y el grado real de cumplimiento en el momento de la extinción.
 
 ## 5. Formación que no puede fundar el pacto
 
@@ -94,7 +94,7 @@ Según la orientación del Ministerio de Trabajo de Taiwán de 5 de junio de 202
 
 La orientación 勞動關2字第1150141814號 del Ministerio de Trabajo distingue y trata la formación que se imparte de forma periódica, la formación habitual del puesto, la formación para que el recién incorporado se familiarice con el entorno y los procedimientos de trabajo, y la formación que el empleador debe impartir según la ley. Como esa formación acompaña a la explotación del negocio o al cumplimiento de una obligación legal, el sentido es que su coste no puede convertirse en fundamento de una obligación de permanencia o de una sanción por extinción anticipada.
 
-Los cursos que un empleado nuevo suele recibir, como la explicación del reglamento de trabajo (工作規則), la presentación de la organización y de los sistemas, la entrega habitual del puesto y la guía de procedimientos básicos de seguridad, deben confirmarse en su sustancia. El coste general de contratación y gestión o el coste de entrega del puesto que el empleador debía asumir de origen no pueden fijarse como objeto de devolución con solo etiquetarlos como inversión separada.
+Los cursos que un empleado nuevo suele recibir, como la explicación del reglamento de trabajo (工作規則), la presentación de la organización y de los sistemas, la entrega habitual del puesto y la guía de procedimientos básicos de seguridad, deben confirmarse en su sustancia. El coste general de contratación y gestión o el coste de entrega del puesto que el empleador ya debía asumir en el giro ordinario no pueden fijarse como objeto de devolución con solo etiquetarlos como inversión separada.
 
 Sin embargo, tampoco se excluye siempre una formación solo porque se haya impartido en el interior de la empresa. En un mismo programa pueden mezclarse una parte de adaptación general y una parte técnica especializada, de modo que el tema, el tiempo, el coste y si hay obligación legal deben confirmarse por curso. Quien alega la parte técnica especializada necesita explicar con datos qué contenido se diferencia de la formación habitual y quién asumió realmente el coste.
 
@@ -102,7 +102,7 @@ En la práctica no se mira solo la portada del material de formación, sino que 
 
 ## 6. Devolución de primas y dimisión anticipada
 
-No siempre se devuelve el importe íntegro. Si la prima de firma, la prima de permanencia u otra prestación anticipada se pagó como compensación razonable del pacto de período mínimo de trabajo, su finalidad debe comunicarse con claridad al trabajador. La orientación del Ministerio de Trabajo de Taiwán de 5 de junio de 2026 explica que, al dimitir antes de vencer el período, el importe a devolver debe calcularse en proporción al período aún no cumplido y no debe exigirse la devolución íntegra. La conclusión real debe examinar juntos la finalidad del pago, el contenido del pacto, el período ya trabajado y la causa de la extinción.
+No siempre se devuelve el importe íntegro. Si la prima de firma, la prima de permanencia u otra prestación anticipada se pagó como compensación razonable del pacto de período mínimo de trabajo, su finalidad debe comunicarse con claridad al trabajador. La orientación del Ministerio de Trabajo de Taiwán de 5 de junio de 2026 explica que, al dimitir antes de vencer el período, el importe a devolver debe calcularse en proporción al período aún no cumplido y no debe exigirse la devolución íntegra. La conclusión real debe examinar en conjunto la finalidad del pago, el contenido del pacto, el período ya trabajado y la causa de la extinción.
 
 La comunicación no debe presentarse por primera vez cuando surge el litigio después del pago. El trabajador debe poder saber, en el momento de celebrar el contrato y de percibir el pago, qué suma es compensación por la promesa de período mínimo de trabajo, cuál es el período pactado en su conjunto, cuándo se le atribuye y con qué fórmula se liquida si se extingue a mitad.
 
@@ -112,7 +112,7 @@ La cuestión de la devolución debe confirmarse por orden: validez del pacto, ca
 
 La cláusula de devolución íntegra, la cláusula penal fija ajena a la pérdida real y el descuento unilateral del salario no se valoran como un solo problema. El fundamento jurídico, el contenido del acuerdo, los límites del Derecho laboral y la licitud del descuento deben confirmarse por separado. El importe escrito en el requerimiento del empleador o el hecho de que el trabajador haya pagado una parte tampoco fijan el resto de las cuestiones jurídicas.
 
-También deben distinguirse la devolución del gasto de formación y la devolución de la prestación anticipada. La primera se ve centrada en la formación técnica especializada real y en la asunción del coste; la segunda, en la finalidad del pago, la comunicación, las condiciones de atribución y la proporción al período no cumplido. Si se reclaman ambos conceptos juntos, deben contrastarse por separado si el coste se ha calculado dos veces y los justificantes de cada concepto.
+También deben distinguirse la devolución del gasto de formación y la devolución de la prestación anticipada. La primera se centra en la formación técnica especializada real y en la asunción del coste; la segunda, en la finalidad del pago, la comunicación, las condiciones de atribución y la proporción al período no cumplido. Si se reclaman ambos conceptos juntos, deben contrastarse por separado si el coste se ha calculado dos veces y los justificantes de cada concepto.
 
 ## 7. Cuando el contrato se extingue por una causa no imputable al trabajador
 
@@ -120,7 +120,7 @@ El artículo 15-1, apartado 4, de la Ley de Normas Laborales de Taiwán dispone 
 
 Por ello no puede reconocerse la infracción del trabajador por el mero hecho de que la relación laboral haya terminado antes del período pactado. Debe comprobarse quién formuló qué manifestación de voluntad, cuál es el fundamento jurídico de la extinción del contrato y a qué parte se imputan las circunstancias reales que la produjeron.
 
-Los datos de examen pueden incluir la notificación de despido, la carta de dimisión, el documento de extinción de común acuerdo, el correo electrónico y el registro de mensajería, los datos de cambio de condiciones de trabajo y el registro de asistencia y de trabajo. Aunque se mencionen la salud o las circunstancias del trabajo, no se concluye el resultado solo con esa expresión, sino que se ven juntos el curso real, el fundamento legal de la extinción y las pruebas relacionadas.
+Los datos de examen pueden incluir la notificación de despido, la carta de dimisión, el documento de extinción de común acuerdo, el correo electrónico y el registro de mensajería, los datos de cambio de condiciones de trabajo y el registro de asistencia y de trabajo. Aunque se mencionen la salud o las circunstancias del trabajo, no se concluye el resultado solo con esa expresión, sino que se valoran en conjunto el curso real, el fundamento legal de la extinción y las pruebas relacionadas.
 
 El despido, la extinción de común acuerdo y la alegación de infracción de las condiciones de trabajo son solo ejemplos de circunstancias a examinar, no una enumeración cerrada de las causas no imputables al trabajador. Una extinción con el mismo nombre puede diferir en la voluntad de las partes y en el curso, y el nombre escrito en el documento puede no coincidir con los hechos reales.
 
@@ -128,9 +128,9 @@ La valoración de la causa de extinción influye de forma directa también en el
 
 ## 8. El preaviso de dimisión es una cuestión distinta
 
-El pacto de período mínimo de trabajo no es un dispositivo que impida de forma física o jurídica la dimisión del trabajador. La manifestación de dimisión y el período de preaviso (預告期間) son la cuestión de cuándo termina la relación laboral; la validez del pacto de período mínimo de trabajo y la responsabilidad de devolución de gastos son la cuestión de si hay responsabilidad patrimonial derivada de la extinción.
+El pacto de período mínimo de trabajo no es un mecanismo que impida física o jurídicamente la dimisión del trabajador. La manifestación de dimisión y el período de preaviso (預告期間) son la cuestión de cuándo termina la relación laboral; la validez del pacto de período mínimo de trabajo y la responsabilidad de devolución de gastos son la cuestión de si hay responsabilidad patrimonial derivada de la extinción.
 
-Cuando el trabajador extingue un contrato de trabajo de duración indefinida (不定期契約), según el artículo 15 de la Ley de Normas Laborales de Taiwán se aplica por analogía el período de preaviso del artículo 16, apartado 1. El artículo 16 es un precepto sobre la extinción del contrato por el empleador, y a la dimisión del trabajador ese período de preaviso se aplica a través del artículo 15.
+Cuando el trabajador extingue un contrato de trabajo de duración indefinida (不定期契約), según el artículo 15 de la Ley de Normas Laborales de Taiwán se aplica, en lo pertinente, el período de preaviso del artículo 16, apartado 1. El artículo 16 es un precepto sobre la extinción del contrato por el empleador, y a la dimisión del trabajador ese período de preaviso se aplica a través del artículo 15.
 
 El período de preaviso según la antigüedad continua es el siguiente.
 
@@ -146,7 +146,7 @@ En la práctica deben conservarse el contenido y la fecha de transmisión de la 
 
 ## 9. Lista de comprobación para el empleador y el trabajador
 
-Para prevenir un litigio o examinar una reclamación ya planteada, no debe leerse solo el contrato, sino ordenar juntos los datos de formación, pago, trabajo y extinción en orden temporal. En particular, organizar en una tabla cuánto se ha cumplido del período pactado y cuánto queda, y a qué datos corresponden el coste y la compensación alegados, ayuda a separar las controversias.
+Para prevenir un litigio o examinar una reclamación ya planteada, no debe leerse solo el contrato, sino ordenar en conjunto los datos de formación, pago, trabajo y extinción en orden temporal. En particular, organizar en una tabla cuánto se ha cumplido del período pactado y cuánto queda, y a qué datos corresponden el coste y la compensación alegados, ayuda a separar las controversias.
 
 ### Aspectos que el empleador debe comprobar
 
@@ -168,11 +168,11 @@ Aunque se utilice un contrato tipo, no debe aplicarse de forma mecánica el mism
 3. Se aseguran los datos de pago de la prima de firma, de la prima de permanencia y de otras prestaciones anticipadas, la comunicación sobre la finalidad de la compensación, la fecha de pago, las condiciones de atribución y la fórmula de devolución.
 4. Se registran por separado el fundamento de cálculo del período pactado, el período ya trabajado, el período restante y la posibilidad de sustituir personal que alega el empleador.
 5. Se conservan la notificación de dimisión, la de despido o el documento de extinción de común acuerdo y la prueba de entrega, como el correo electrónico y la mensajería.
-6. Se ordena en orden temporal la causa real de extinción y el curso, y se confirman juntos el requerimiento de devolución del empleador, la nómina, las comunicaciones de las partes y el registro de descuentos.
+6. Se ordena en orden temporal la causa real de extinción y el curso, y se confirman en conjunto el requerimiento de devolución del empleador, la nómina, las comunicaciones de las partes y el registro de descuentos.
 7. Se examinan por separado la validez del pacto de período mínimo de trabajo, la manifestación de dimisión y el preaviso, la devolución del gasto de formación y de la prestación anticipada, y el daño que se alega por separado.
 8. No se reconoce la responsabilidad solo porque se haya firmado o porque el empleador exija un importe determinado; se confirman las pruebas que corresponden a los requisitos legales, la razonabilidad, la imputación de la extinción y la fórmula proporcional del artículo 15-1.
 
-Al ordenar los datos en orden temporal, conviene indicar juntos la fecha de celebración del contrato, las fechas de inicio y fin de la formación, cada fecha de pago, las fechas de inicio y fin del trabajo y la fecha de transmisión de la notificación. Si parte de los datos solo los tiene el empleador, se ordenan primero los datos propios y el fundamento de cálculo del importe exigido, y los datos adicionales se confirman según el procedimiento necesario.
+Al ordenar los datos en orden temporal, conviene indicar de forma conjunta la fecha de celebración del contrato, las fechas de inicio y fin de la formación, cada fecha de pago, las fechas de inicio y fin del trabajo y la fecha de transmisión de la notificación. Si parte de los datos solo los tiene el empleador, se ordenan primero los datos propios y el fundamento de cálculo del importe exigido, y los datos adicionales se confirman según el procedimiento necesario.
 
 ## 10. Fuentes oficiales
 
@@ -189,6 +189,6 @@ Al ordenar los datos en orden temporal, conviene indicar juntos la fecha de cele
 
 ---
 
-Este artículo es un material de propósito educativo para explicar de forma general el pacto de período mínimo de trabajo en Taiwán, la devolución del gasto de formación y de la prestación anticipada y el preaviso de dimisión; no es asesoramiento jurídico para un asunto laboral concreto. La validez del pacto y el alcance de la responsabilidad pueden variar según el tipo y el tenor del contrato, la formación y el coste reales, la finalidad de la compensación y su comunicación, el período de trabajo, la causa de extinción y las pruebas. Antes de formular la dimisión, de aceptar un descuento salarial, de pactar una devolución o de responder a un litigio, conviene confirmar las fuentes oficiales más recientes y las circunstancias individuales.
+Este artículo tiene fines divulgativos y explica de forma general el pacto de período mínimo de trabajo en Taiwán, la devolución del gasto de formación y de la prestación anticipada y el preaviso de dimisión; no es asesoramiento jurídico para un asunto laboral concreto. La validez del pacto y el alcance de la responsabilidad pueden variar según el tipo y el tenor del contrato, la formación y el coste reales, la finalidad de la compensación y su comunicación, el período de trabajo, la causa de extinción y las pruebas. Antes de formular la dimisión, de aceptar un descuento salarial, de pactar una devolución o de responder a un litigio, conviene confirmar las fuentes oficiales más recientes y las circunstancias individuales.
 
 **Wei Tseng (曾雋崴), abogada de Taiwán**

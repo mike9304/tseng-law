@@ -441,7 +441,7 @@ const ELEMENTS = {
     fil: /hakbang ng konsultasyon/i,
     ar: /خطوة استشارة/,
     de: /Beratungsschritt/,
-    es: /paso de consulta/,
+    es: /no es una consulta/,
     fr: /étape de consultation/,
     pt: /passo de consulta/,
     'zh-hans': /咨询步骤/,

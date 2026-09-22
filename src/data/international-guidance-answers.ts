@@ -235,7 +235,7 @@ export const guidanceAnswers: Record<
   es: {
     services: {
       answer:
-        'El despacho atiende seis áreas de práctica según el derecho de Taiwán: inversión y constitución de sociedades, litigios civiles y daños, matrimonio, familia y sucesiones, laboral, penal y propiedad intelectual. El alcance de cada asunto se confirma por separado después de que un abogado revise el contenido que usted envía. La consulta se realiza únicamente en inglés, chino, japonés y coreano.',
+        'El despacho atiende seis áreas de práctica según el derecho de Taiwán: inversión y constitución de sociedades, litigios civiles y daños, matrimonio, familia y sucesiones, asuntos laborales, asuntos penales y propiedad intelectual. El alcance de cada asunto se confirma por separado después de que un abogado revise el contenido que usted envía. La consulta se realiza únicamente en inglés, chino, japonés y coreano.',
       sources: ['/es/faq', '/es/contact'],
     },
     about: {

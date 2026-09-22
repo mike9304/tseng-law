@@ -575,7 +575,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
       description:
         'Explicación general en español sobre el alcance de Hovering International Law Firm en Taiwán, los idiomas de consulta y el primer contacto.',
       intro:
-        'Hovering International Law Firm acompaña a clientes del extranjero, también a quienes tienen un vínculo con Taiwán, en asuntos de derecho taiwanés: inversión y constitución de sociedades, litigios civiles, matrimonio, familia y sucesiones, laboral, penal y propiedad intelectual. Esta parte en español le ayuda a saber qué trabajo entra en nuestro alcance, qué conviene preparar y cómo contactarnos. Son indicaciones generales, no asesoramiento jurídico para su propio caso.',
+        'Hovering International Law Firm acompaña a clientes del extranjero, también a quienes tienen un vínculo con Taiwán, en asuntos de derecho taiwanés: inversión y constitución de sociedades, litigios civiles, matrimonio, familia y sucesiones, asuntos laborales, asuntos penales y propiedad intelectual. Esta parte en español le ayuda a saber qué trabajo entra en nuestro alcance, qué conviene preparar y cómo contactarnos. Son indicaciones generales, no asesoramiento jurídico para su propio caso.',
       sections: [
         {
           heading: 'Qué hacemos',
@@ -625,7 +625,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Inversión y constitución de sociedades en Taiwán',
           paragraphs: [
-            'Acompañamos a inversores y empresas extranjeras que constituyen o gestionan una sociedad en Taiwán: elección de la forma societaria, preparación y presentación de documentos, aportación de capital, banca, valoración del local y requisitos propios de determinados sectores. También apoyamos la contabilidad y la fiscalidad derivadas de constituir y operar en Taiwán.',
+            'Acompañamos a inversores y empresas extranjeras que constituyen o gestionan una sociedad en Taiwán: elección de la forma societaria, preparación y presentación de documentos, aportación de capital, banca, comprobación del local y requisitos propios de determinados sectores. También apoyamos la contabilidad y la fiscalidad derivadas de constituir y operar en Taiwán.',
             'El orden y la duración del proceso varían según la forma societaria, el inversor, el sector, el banco y los documentos disponibles. Constituir una sociedad no produce por sí solo un permiso de residencia (居留) ni un permiso de trabajo (工作許可): son trámites distintos que se valoran según la situación de cada persona.',
           ],
         },
@@ -684,7 +684,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Fundación y estructura',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) se fundó en 2016 por abogados titulados por la National Taiwan University (國立臺灣大學). El nombre chino 昊鼎 une el carácter 昊 («cielo amplio») y el carácter 鼎 («base sólida»), y expresa la orientación del despacho desde su origen.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) fue fundado en 2016 por abogados titulados por la National Taiwan University (國立臺灣大學). El nombre chino 昊鼎 une el carácter 昊 («cielo amplio») y el carácter 鼎 («base sólida»), y expresa la orientación del despacho desde su origen.',
             'Tenemos oficinas en Taipéi (臺北), Kaohsiung (高雄), Taichung (臺中) y Pingtung (屏東). La oficina de Kaohsiung se centra en el gobierno corporativo y atiende conflictos civiles, penales y administrativos. La oficina de Taichung atiende construcción, propiedad intelectual y asuntos relacionados con Corea y Japón. La oficina de Pingtung se abrió en 2017 para atender la demanda local.',
             'Además del trabajo de abogacía, en 2020 se creó Hovering Accounting Office, que ofrece contabilidad y planificación fiscal a empresarios y a particulares con patrimonio elevado.',
           ],
@@ -693,14 +693,14 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Trabajo con partes extranjeras',
           paragraphs: [
             'El trabajo transfronterizo cubre constitución de sociedades, visados, registro de marcas y patentes, evaluación de riesgos jurídicos y asesoramiento fiscal empresarial. La oficina de Taichung atiende en particular construcción, propiedad intelectual y asuntos relacionados con Corea y Japón. La abogada Wei Tseng (曾雋崴) acompaña a clientes de Corea, de Japón y a otros clientes internacionales en las áreas anteriores.',
-            'Si podemos o no atender un asunto depende de su contenido y del idioma de la comunicación. Si su asunto entra en las áreas anteriores y puede hablarse en uno de los cuatro idiomas de consulta, puede enviar un resumen para que un abogado lo revise.',
+            'Si podemos o no atender un asunto depende de su contenido y del idioma de la comunicación. Si su asunto entra en las áreas anteriores y puede tratarse en uno de los cuatro idiomas de consulta, puede enviar un resumen para que un abogado lo revise.',
           ],
         },
         {
           heading: 'Cuando nos contacta',
           paragraphs: [
             'Tras recibir su resumen, un abogado revisa el contenido y habla después del alcance posible, de los documentos que aún se necesitan y de los siguientes pasos. Si el asunto plantea cuestiones contables o fiscales, el despacho puede trabajar de forma integrada con el área de contabilidad.',
-            'El resultado de cada asunto depende de los hechos y de los documentos existentes, de modo que no prometemos un resultado. Si necesita una respuesta concreta para su situación, ese expediente debe hablarse directamente con un abogado en uno de los cuatro idiomas de consulta.',
+            'El resultado de cada asunto depende de los hechos y de los documentos existentes, de modo que no prometemos un resultado. Si necesita una respuesta concreta para su situación, ese asunto debe tratarse directamente con un abogado en uno de los cuatro idiomas de consulta.',
           ],
         },
       ],
@@ -786,7 +786,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Lo que esta página no garantiza',
           paragraphs: [
-            'No prometemos un plazo de respuesta, no confirmamos una cita a través de esta página, no prometemos un abogado concreto y no ponemos intérprete. La traducción escrita es otra cosa: el mensaje que envía no se traduce de forma automática.',
+            'No prometemos un plazo de respuesta, no confirmamos una cita a través de esta página, no prometemos un abogado concreto y no facilitamos intérprete. La traducción escrita es otra cosa: el mensaje que envía no se traduce de forma automática.',
             'Cuando envía una solicitud, el contenido se guarda y espera revisión. Si pasado un tiempo no recibe respuesta, puede volver a escribir a la dirección de correo que figura en la página de contacto.',
           ],
         },
@@ -811,7 +811,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
         {
           question: '¿Qué tipo de asuntos atiende este despacho?',
           answer:
-            'Atendemos seis áreas de práctica: inversión y constitución de sociedades en Taiwán, litigios civiles y daños, matrimonio, familia y sucesiones, conflictos laborales, asuntos penales y propiedad intelectual. Si un asunto se acepta o no se decide después de revisar su contenido.',
+            'Atendemos seis áreas de práctica: inversión y constitución de sociedades en Taiwán, litigios civiles y daños, matrimonio, familia y sucesiones, conflictos laborales, asuntos penales y propiedad intelectual. Si un asunto se acepta o no, se decide después de revisar su contenido.',
         },
         {
           question: '¿Qué debo preparar antes de contactar con el despacho?',
@@ -846,7 +846,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
         {
           question: '¿Qué hago si mi asunto es urgente?',
           answer:
-            'Indique el plazo o la fecha de un escrito oficial al inicio de su resumen para que el abogado vea esas fechas al revisar. Esta página no tiene un canal de emergencia y no garantiza un plazo de respuesta; si su asunto no puede esperar, conviene buscar al mismo tiempo otras vías donde usted se encuentre.',
+            'Indique el plazo o la fecha de un escrito oficial al inicio de su resumen para que el abogado vea esas fechas al revisar. Esta página no tiene un canal de emergencia y no garantiza un plazo de respuesta; si su asunto no puede esperar, conviene buscar al mismo tiempo otras vías en el lugar donde usted se encuentre.',
         },
       ],
     },
@@ -982,7 +982,7 @@ export const spanishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Hasta dónde puede orientarle un artículo',
           paragraphs: [
             'Los artículos se escribieron como información general en el momento de su publicación. Las normas y su aplicación pueden cambiar, y un artículo no recoge todas las circunstancias de su caso.',
-            'Por eso, no tome un artículo como base para actuar en un asunto real. Úselo para entender el panorama general y hable después de su expediente con un abogado; esta página no es el paso de consulta.',
+            'Por eso, no tome un artículo como base para actuar en un asunto real. Úselo para entender el panorama general y hable después de su expediente con un abogado; esta página no es una consulta.',
           ],
         },
       ],

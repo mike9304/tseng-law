@@ -1355,17 +1355,17 @@ export const guidanceAnswers: Record<
   lv: {
     services: {
       answer:
-        'Birojs ved sešas jomas saskaņā ar Taivānas tiesībām: ieguldījumus un sabiedrību dibināšanu, civillietas un zaudējumu atlīdzību, laulību, ģimeni un mantojumu, darba strīdus, krimināllietas un intelektuālo īpašumu. Katra lietas apjoms tiek apstiprināts atsevišķi pēc tam, kad advokāte vai advokāts ir izvērtējis nosūtīto saturu. Konsultācija notiek tikai angļu, ķīniešu, japāņu un korejiešu valodā.',
+        'Birojs ved sešas jomas saskaņā ar Taivānas tiesībām: ieguldījumus un sabiedrību dibināšanu, civillietas un zaudējumu atlīdzību, laulību, ģimeni un mantojumu, darba strīdus, krimināllietas un intelektuālo īpašumu. Katras lietas apjoms tiek apstiprināts atsevišķi pēc tam, kad advokāte vai advokāts ir izvērtējis nosūtīto saturu. Konsultācija notiek tikai angļu, ķīniešu, japāņu un korejiešu valodā.',
       sources: ['/lv/faq', '/lv/contact'],
     },
     about: {
       answer:
-        'Hovering International Law Firm ir Taivānas advokātu birojs, ko 2016. gadā dibināja National Taiwan University (國立臺灣大學) absolventi, ar birojiem Taipei, Kaohsiung, Taichung un Pingtung. Kopš 2020. gada darbojas arī grāmatvedības daļa; Taichung birojs ved lietas ar saikni ar Koreju un Japānu. Birojs nesola iznākumu. Konsultācija notiek tikai angļu, ķīniešu, japāņu un korejiešu valodā.',
+        'Hovering International Law Firm ir Taivānas advokātu birojs, ko 2016. gadā dibināja National Taiwan University (國立臺灣大學) absolventi, ar birojiem Taipejā, Gaosjunā, Taidžunā un Pindunā. Kopš 2020. gada darbojas arī grāmatvedības daļa; Taidžunas birojs ved lietas ar saikni ar Koreju un Japānu. Birojs nesola iznākumu. Konsultācija notiek tikai angļu, ķīniešu, japāņu un korejiešu valodā.',
       sources: ['/lv/lawyers', '/lv/services'],
     },
     lawyers: {
       answer:
-        'Šī lapa rāda Hovering advokāšu un advokātu, darbības vadības un partnera grāmatvedības un revīzijas profilus. Advokāte Wei Tseng (曾雋崴) ir tiesīga praktizēt advokatūru Taivānā un ir biroja vadošā advokāte; viņa palīdz klientiem no Korejas, no Japānas un citiem starptautiskiem klientiem. Konsultācija notiek tikai angļu, ķīniešu, japāņu un korejiešu valodā.',
+        'Šī lapa rāda Hovering advokātu un līdzstrādnieku, kā arī partnera grāmatvedības un revīzijas profilus. Advokāte Wei Tseng (曾雋崴) ir tiesīga praktizēt advokatūru Taivānā un ir biroja vadošā advokāte; viņa palīdz klientiem no Korejas, no Japānas un citiem starptautiskiem klientiem. Konsultācija notiek tikai angļu, ķīniešu, japāņu un korejiešu valodā.',
       sources: ['/lv/about', '/lv/contact'],
     },
     pricing: {

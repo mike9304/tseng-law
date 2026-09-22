@@ -508,7 +508,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
     'Šī latviešu lapa sniedz tikai vispārīgu informāciju par biroja darbu saskaņā ar Taivānas tiesībām. Tā nav juridisks padoms konkrētā lietā, un ziņojuma nosūtīšana pati par sevi nerada attiecības starp advokāti vai advokātu un klientu.',
   skipLink: 'Izlaist navigāciju un pāriet pie satura',
   menuLabel: 'Izvēlne',
-  languageLabel: 'Attēlošanas valoda',
+  languageLabel: 'Lapas valoda',
   mega: {
     services: {
       description: 'Birojs strādā Taivānas tiesību galvenajās jomās.',
@@ -566,7 +566,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ko mēs darām',
           paragraphs: [
-            'Hovering International Law Firm ir advokātu birojs, kas dibināts Taivānā. Tas strādā saskaņā ar Taivānas tiesībām un uztur birojus Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) un Pingtung (屏東). Mēs konsultējam uzņēmumus, vedam tiesvedību un palīdzam ārvalstu klientiem veikt soļus, kas Taivānā ir nepieciešami.',
+            'Hovering International Law Firm ir advokātu birojs, kas dibināts Taivānā. Tas strādā saskaņā ar Taivānas tiesībām un uztur birojus Taipejā (臺北), Gaosjunā (高雄), Taidžunā (臺中) un Pindunā (屏東). Mēs konsultējam uzņēmumus, vedam tiesvedību un palīdzam ārvalstu klientiem veikt soļus, kas Taivānā ir nepieciešami.',
             'Viss šeit sniegtais saturs ir vispārīgs. Lietas iznākums ir atkarīgs no faktiem, piemērojamajiem noteikumiem un laika. Šī informācija neaizstāj pārrunas ar advokāti vai advokātu par Jūsu dokumentiem.',
           ],
         },
@@ -653,7 +653,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Apjoms un tā apstiprināšana',
           paragraphs: [
-            'Birojs strādā saskaņā ar Taivānas tiesībām un ved lietas no iepriekš minētajām jomām. Katra lietas apjoms tiek apstiprināts atsevišķi pēc tam, kad advokāte vai advokāts ir izvērtējis Jūsu ziņojumu.',
+            'Birojs strādā saskaņā ar Taivānas tiesībām un ved lietas no iepriekš minētajām jomām. Katras lietas apjoms tiek apstiprināts atsevišķi pēc tam, kad advokāte vai advokāts ir izvērtējis Jūsu ziņojumu.',
             'Uzturēšanās statusu, darba atļauju un līdzīgus jautājumus izvērtē pēc dokumentiem un konkrētās personas situācijas, nevis pēc valstspiederības. Ja daļa Jūsu lietas skar šos punktus, miniet to, sazinoties ar mums. Šī lapa nesola iznākumu un atbildes termiņu.',
           ],
         },
@@ -668,25 +668,25 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         'Hovering International Law Firm ir advokātu birojs Taivānā. Advokātes un advokāti strādā no uzņēmumu konsultācijām līdz tiesvedībai. Šī daļa apraksta biroja izveidi, atrašanās vietas un darbu ar ārvalstu pusēm.',
       sections: [
         {
-          heading: 'Dibināšana un uzbūve',
+          heading: 'Dibināšana un struktūra',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) 2016. gadā dibināja advokātes un advokāti, kuri studēja National Taiwan University (國立臺灣大學). Ķīniešu nosaukums 昊鼎 savieno zīmi 昊 („plašās debesis“) ar zīmi 鼎 („stabils pamats“) un raksturo biroja ievirzi kopš dibināšanas.',
-            'Mums ir biroji Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) un Pingtung (屏東). Kaohsiung birojs koncentrējas uz uzņēmumu vadību un ved civillietas, krimināllietas un administratīvos strīdus. Taichung birojs ved būvniecības lietas, intelektuālo īpašumu un lietas ar saikni ar Koreju un Japānu. Pingtung birojs tika atvērts 2017. gadā vietējām vajadzībām.',
-            'Līdzās advokātu darbam kopš 2020. gada darbojas arī Hovering Accounting Office, kas piedāvā grāmatvedību un nodokļu plānošanu uzņēmējiem un privātpersonām ar mantu.',
+            'Mums ir biroji Taipejā (臺北), Gaosjunā (高雄), Taidžunā (臺中) un Pindunā (屏東). Gaosjunas birojs koncentrējas uz uzņēmumu vadību un ved civillietas, krimināllietas un administratīvos strīdus. Taidžunas birojs ved būvniecības lietas, intelektuālo īpašumu un lietas ar saikni ar Koreju un Japānu. Pindunas birojs tika atvērts 2017. gadā vietējām vajadzībām.',
+            'Līdzās advokātu darbam kopš 2020. gada darbojas arī Hovering Accounting Office, kas piedāvā grāmatvedību un nodokļu plānošanu uzņēmējiem un turīgām privātpersonām.',
           ],
         },
         {
           heading: 'Darbs ar ārvalstu pusēm',
           paragraphs: [
-            'Pārrobežu darbs aptver sabiedrību dibināšanu, vīzas, preču zīmju un patentu pieteikumus, tiesiskā riska izvērtējumu un nodokļu konsultācijas uzņēmumiem. Taichung birojs jo īpaši ved būvniecības lietas, intelektuālo īpašumu un lietas ar saikni ar Koreju un Japānu. Advokāte Wei Tseng (曾雋崴) palīdz klientiem no Korejas, no Japānas un citiem starptautiskiem klientiem minētajās jomās.',
+            'Pārrobežu darbs aptver sabiedrību dibināšanu, vīzas, preču zīmju un patentu pieteikumus, tiesiskā riska izvērtējumu un nodokļu konsultācijas uzņēmumiem. Taidžunas birojs jo īpaši ved būvniecības lietas, intelektuālo īpašumu un lietas ar saikni ar Koreju un Japānu. Advokāte Wei Tseng (曾雋崴) palīdz klientiem no Korejas, no Japānas un citiem starptautiskiem klientiem minētajās jomās.',
             'Vai lietu varam uzņemties, ir atkarīgs no satura un saziņas valodas. Ja Jūsu lieta ietilpst minētajās jomās un to var pārrunāt kādā no četrām konsultācijas valodām, varat nosūtīt kopsavilkumu izvērtēšanai.',
           ],
         },
         {
           heading: 'Kad sazināties ar mums',
           paragraphs: [
-            'Pēc Jūsu kopsavilkuma saņemšanas advokāte vai advokāts izvērtē saturu un pēc tam runā par iespējamo darba apjomu, vēl vajadzīgajiem dokumentiem un nākamajiem soļiem. Nodokļu vai grāmatvedības jautājumos birojs var rīkoties kopā ar grāmatvedības daļu vienā secīgā gaitā.',
-            'Katra lietas iznākums ir atkarīgs no faktiem un pieejamajiem dokumentiem; iznākumu nesolām. Ja Jums vajadzīga saistoša atbilde savai situācijai, dokumenti jāpārrunā ar advokāti vai advokātu kādā no četrām konsultācijas valodām.',
+            'Pēc Jūsu kopsavilkuma saņemšanas advokāte vai advokāts izvērtē saturu un pēc tam runā par iespējamo darba apjomu, vēl vajadzīgajiem dokumentiem un nākamajiem soļiem. Nodokļu vai grāmatvedības jautājumos birojs var rīkoties kopā ar grāmatvedības daļu vienā gaitā.',
+            'Katras lietas iznākums ir atkarīgs no faktiem un pieejamajiem dokumentiem; iznākumu nesolām. Ja Jums vajadzīga saistoša atbilde savai situācijai, dokumenti jāpārrunā ar advokāti vai advokātu kādā no četrām konsultācijas valodām.',
           ],
         },
       ],
@@ -694,7 +694,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ADVOKĀTI',
       title: 'Hovering starptautiskā komanda',
-      description: 'Hovering advokāšu un advokātu, darbības vadības un partnera grāmatvedības un revīzijas profili.',
+      description: 'Hovering advokātu un līdzstrādnieku, kā arī partnera grāmatvedības un revīzijas profili.',
       intro: '',
       sections: [],
     },
@@ -745,14 +745,14 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         'Pirms mums rakstāt, nošķiriet šos trīs punktus. Tos bieži sajauc, taču tie nozīmē atšķirīgas lietas.',
       sections: [
         {
-          heading: 'Trīs lietas, kas jātur nošķirti',
+          heading: 'Trīs lietas, kas jātur nošķirtas',
           paragraphs: [
-            'Lapas attēlošanas valoda, konsultācijas valoda ar advokāti vai advokātu un valoda, kurā rakstāt, ir trīs atšķirīgas lietas.',
+            'Lapas valoda, konsultācijas valoda ar advokāti vai advokātu un valoda, kurā rakstāt, ir trīs atšķirīgas lietas.',
           ],
           items: [
             'Lapas valoda: šī informācija ir rakstīta latviešu valodā.',
             'Konsultācijas valoda: konsultācija notiek tikai angļu, ķīniešu (中文), japāņu un korejiešu valodā.',
-            'Jūsu rakstīšanas valoda: kopsavilkumu varat rakstīt savā valodā; sākotnējais teksts tiek saglabāts bez izmaiņām.',
+            'Valoda, kurā rakstāt: kopsavilkumu varat rakstīt savā valodā; sākotnējais teksts tiek saglabāts bez izmaiņām.',
           ],
         },
         {
@@ -766,7 +766,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kas jāietver pirmajā ziņojumā',
           paragraphs: [
             'Nosauciet, kas ir noticis, kāda palīdzība Jums vajadzīga, kāda saikne lietai ir ar Taivānu, un termiņu, ja to zināt. Ja jau esat saņēmuši tiesas vai iestādes rakstu, nosauciet rakstā norādīto datumu.',
-            'Sākumposmā vēl nav jānosūta pases numurs, personas dokumenta numurs, konta dati, medicīniskā dokumentācija vai visa pierādījumu kopa. Gaidiet advokātes vai advokāta norādījumus un sensitīvos dokumentus pēc tam sūtiet drošā ceļā.',
+            'Sākumposmā vēl nav jānosūta pases numurs, personas dokumenta numurs, konta dati, medicīniskā dokumentācija vai visa pierādījumu kopa. Gaidiet advokātes vai advokāta norādījumus; sensitīvos dokumentus pēc tam sūtiet drošā ceļā.',
           ],
         },
         {
@@ -852,7 +852,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
           items: [
             'Vārds, ko norādāt',
             'E-pasta adrese atbildei',
-            'Lapas attēlošanas valoda nosūtīšanas brīdī',
+            'Lapas valoda nosūtīšanas brīdī',
             'Valoda, kurā rakstījāt',
             'Konsultācijas valoda, ko vēlaties',
             'Sākotnējais teksts, ko uzrakstījāt',
@@ -898,7 +898,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Glabāšanas vieta un pakalpojumu sniedzēji',
           paragraphs: [
-            'Šīs vietnes mitināšanu nodrošina Vercel, un Jūsu iesniegums tiek glabāts šā pakalpojuma nepubliskā objektu krātuvē. E-pastus sūta pasta pakalpojums, ko birojs lieto.',
+            'Šīs vietnes mitināšanu nodrošina Vercel, un Jūsu iesniegums tiek glabāts šā pakalpojuma nepubliskajā datu krātuvē. E-pastus sūta pasta pakalpojums, ko birojs lieto.',
             'Atsevišķu pakalpojumu sniedzēju serveri var atrasties ārpus Taivānas, tāpēc Jūsu datus tur var glabāt un apstrādāt. Kad glabāšanas mērķis ir izpildīts, datus dzēš bez liekas kavēšanās; dati, kas jāglabā saskaņā ar piemērojamiem noteikumiem, paliek šajā laikā. Personu datu pieprasījumus pieņem wei@hoveringlaw.com.tw.',
           ],
         },
@@ -910,7 +910,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Informācijas vispārīgais raksturs, tiesiskais ietvars un priekšnoteikumi attiecībām starp advokāti vai advokātu un klientu.',
       intro:
-        'Šī daļa skaidro, ko šīs latviešu informatīvās lapas Jums var darīt un ko ne.',
+        'Šī daļa skaidro, ko šīs latviešu informatīvās lapas Jums sniedz un ko nesniedz.',
       sections: [
         {
           heading: 'Tikai vispārīga informācija',
@@ -923,7 +923,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Tiesiskais ietvars',
           paragraphs: [
             'Birojs darbojas saskaņā ar Taivānas tiesībām, un šī lapa runā tikai par darbu šajā ietvarā.',
-            'Saturs nav konsultācija saskaņā ar citas kārtības tiesībām, izņemot Taivānas, tostarp Jūsu uzturēšanās vietas tiesībām. Ja daļa Jūsu lietas skar citu tiesību kārtību, ar Jums noskaidrosim, kāds kvalificēts speciālists šai daļai ir vajadzīgs.',
+            'Saturs nav konsultācija pēc citas valsts tiesībām, izņemot Taivānas tiesības, tostarp Jūsu uzturēšanās vietas tiesības. Ja daļa Jūsu lietas skar citu tiesību kārtību, ar Jums noskaidrosim, kāds kvalificēts speciālists šai daļai ir vajadzīgs.',
           ],
         },
         {

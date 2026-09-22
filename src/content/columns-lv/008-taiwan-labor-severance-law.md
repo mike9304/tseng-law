@@ -22,7 +22,7 @@ faq:
 
 Sveicināti, esmu **Advokāte Wei Tseng (曾雋崴)**, Taivānas advokāte.
 
-Šodien vēlos Jums izklāstīt likumā noteikto atlaišanas pabalstu (資遣費) Taivānā.
+Šajā rakstā izklāstu likumā noteikto atlaišanas pabalstu (資遣費) Taivānā.
 
 ![](../images/008-taiwan-labor-severance-law/img-01.jpg)
 
@@ -56,7 +56,7 @@ Turpmākā tabula to apkopo.
 | Nozīme | Ja darba devējam uzņēmuma stāvokļa dēļ vajadzīga personāla korekcija, iemesls slēpjas darba devēja saimnieciskajā jomā, nevis darbinieka atbildībā. Tāpēc darba devējam jāievēro iepriekšējā brīdinājuma termiņš (預告期間) un jāizmaksā atlaišanas pabalsts, lai līdzsvarotu darbinieka nelabvēlību. | Ja darbinieks izdara pretlikumīgu vai neatbilstošu darbību, darba devējs var nekavējoties izbeigt darba līgumu (勞動契約) bez iepriekšēja brīdinājuma un atlaišanas pabalstu neizmaksāt. Tā ir viena no darba devēja disciplinārajām pilnvarām. | Darbinieks var jebkurā laikā izbeigt līgumu, tomēr atbilstoši nostrādātajam laikam jāievēro brīdinājuma termiņš, lai darba devējs varētu veikt nodošanu un meklēt aizstājēju. |
 | Nosacījumi | Ir  (Taivānas Darba standartu likuma 11. pants) | Ir  (Taivānas Darba standartu likuma 12. pants) | Nav |
 | Iepriekšējs brīdinājums | Nepieciešams | Nav nepieciešams | Nepieciešams |
-| Grūtība darba devējam | Zemāka | Augstāka | Neattiecas |
+| Grūtība darba devējam | Zemāka | Augstāka | Zemāka |
 | Vai sabiedrībai jāizmaksā atlaišanas pabalsts (資遣費) | Nepieciešams | Nav nepieciešams | Nav nepieciešams |
 |  | Taivānas Darba standartu likums, 11. pants (勞動基準法第11條): Ja neiestājas kāds no šādiem gadījumiem, darba devējs nevar izbeigt darba līgumu, pat pēc iepriekšēja paziņojuma darbiniekam.  1. Darbības apturēšana (歇業) vai uzņēmuma nodošana (轉讓)  2. Zaudējumi (虧損) vai darbības sašaurināšana (業務緊縮)  3. Nepārvarama vara prasa darbības pārtraukumu uz 1 mēnesi vai ilgāk  4. Darbības raksturs prasa personāla samazināšanu, un atlaisto nevar pārcelt citā piemērotā amatā  5. Noteikts darbinieks nevar apmierinoši veikt amatā prasīto darbu | Taivānas Darba standartu likums, 12. pants (勞動基準法第12條): Darba devējs var atlaist bez iepriekšēja paziņojuma, ja darbinieks ietilpst kādā no šādiem gadījumiem.  1. Kurš, slēdzot darba līgumu, sniedz nepatiesas ziņas, maldina darba devēju un pakļauj uzņēmumu zaudējumu riskam  2. Kurš lieto vardarbību vai smagi apvaino darba devēju, viņa ģimeni, viņa pārstāvi (代理人) vai citus līdzstrādniekus  3. Kuram ar spēkā stājušos spriedumu piespriesta brīvības atņemšana uz noteiktu laiku (有期徒刑) vai smagāks sods, bez nosacītas soda izpildes atlikšanas (緩刑) un bez atļaujas aizstāt sodu ar naudas sodu (易科罰金)  4. Smags darba līguma vai iekšējo darba noteikumu pārkāpums  5. Kurš tīši izlieto darba devēja mašīnas, rīkus, izejvielas, izstrādājumus vai citu mantu vai tīši izpauž darba devēja tehniskos un komerciālos noslēpumus un nodara darba devējam zaudējumus  6. Nepamatota neierašanās (曠工) bez attaisnojoša iemesla 3 dienas pēc kārtas vai 6 dienas vai vairāk mēnesī |  |
 
@@ -116,9 +116,9 @@ un pazemināt algu un amatu.
 
 Citādi B vajagot sabiedrību atstāt;
 
-B iedeva A4 formāta lapu
+Vadītājs iedeva B A4 formāta lapu
 
-un lika uz tās uzrakstīt: „Es, OOO, brīvprātīgi pazeminu amatu un algu“
+un lika uz tās uzrakstīt: „Es, [vārds], brīvprātīgi pazeminu amatu un algu“
 
 kā saturu.
 

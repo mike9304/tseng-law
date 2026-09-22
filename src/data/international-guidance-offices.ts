@@ -1078,15 +1078,15 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     faxLabel: 'Fakss',
     mapLinkLabel: 'Skatīt kartē',
     photoAlts: [
-      'Hovering International Law Firm Taipei biroja reģistratūra',
-      'Advokātes kabinets Hovering International Law Firm Taipei birojā',
-      'Sanāksmju telpa Hovering International Law Firm Taipei birojā',
+      'Hovering International Law Firm Taipejas biroja reģistratūra',
+      'Advokātes kabinets Hovering International Law Firm Taipejas birojā',
+      'Sanāksmju telpa Hovering International Law Firm Taipejas birojā',
     ],
     officeTitles: {
-      taipei: 'Taipei',
-      taichung: 'Taichung',
-      kaohsiung: 'Kaohsiung',
-      pingtung: 'Pingtung',
+      taipei: 'Taipeja',
+      taichung: 'Taidžuna',
+      kaohsiung: 'Gaosjuna',
+      pingtung: 'Pinduna',
     },
   },
   et: {

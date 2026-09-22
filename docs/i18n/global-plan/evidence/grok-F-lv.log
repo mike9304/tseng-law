@@ -1,0 +1,87 @@
+WO-F-lv — Latvian native-review fix lane
+Workspace: /Users/son7/Projects/tseng-law-fix-lv-20260922
+Date: 2026-09-22
+No git add / commit / push.
+
+## Rows applied
+lv-a.md: 22 P1 + 32 P2. Applied every P1/P2 except the skips and modifications below.
+lv-b.md: 19 P1 + 29 P2. Applied every P1/P2 except the skips and modifications below.
+No P3 rows in either review.
+Guidance pack (lv strings only): international-guidance-baltic-atlantic.ts (latvianGuidanceContent), international-guidance-team.ts (lv copy + bios), international-guidance-offices.ts (lv titles/alts), international-guidance-answers.ts (lv).
+international-inquiry-copy.ts `lv` and src/lib/llms-txt.ts GUIDANCE_LLMS_NOTICES.lv were already natural and were not the quoted lawyers-description string (that string lives in the guidance pack, which was rewritten). No test expected-string had to change; TWD 1.57M in the lv bio is still byte-identical.
+
+Modifications (applied, not the reviewer's wording verbatim):
+- a#5: reviewer "Jurista palīgs". Latvian already marks Chang Fangyu feminine ("vecākā"). Used "Jurista palīdze" and "Vecākā jurista palīdze". Other roles translated per R12; firm names stay in Latin (Boyin, Muyang, Hovering, National Taiwan University).
+- a#28 / team description: "Hovering advokātu un līdzstrādnieku, kā arī partnera grāmatvedības un revīzijas profili."
+- a#52 / R13: did not add Gregorian 2023. Form: "ROC 112. gada konstitucionālajā spriedumā Nr. 4 (民國112年憲判字第4號)" so the digits 112 and 4 stay.
+- b#8: "ziņojumapmaiņas ieraksti" (not the reviewer's "sarakstes ierakstu").
+- b#37: the bank sentence stays two blocks. First block ends "teica šādi."; the next block is self-standing. Block count unchanged.
+- Q16–Q20 in 003: not a bare "16." at line start (that is an ordered list and the checker then drops the number). Wording: "Jautājums 16." … "Jautājums 20." Headings Q1–Q15 are "## 1." … "## 15."
+- Child's best interests: "labākās/labākajām/labāko intereses", not the superlative "vislabāk-". mēraukla is feminine ("mēraukla/mērauklu/mērauklai", "vienīgā lēmuma mēraukla", "kas piemērojama").
+
+## Rows skipped
+- a#23 — "TWD 1.57M". ACCEPTED-lv: test-pinned, byte-identical. Not reformatted to "1,57 milj."
+- b#21 — space thousands ("1 579 589") and "milj." R14: Latvian thousands stay a dot. The checker rejects a space as the thousands separator. Amounts such as TWD 1.579.589 left as dots.
+- Frontmatter `url:` Hangul in 008 and 009 (R16). Fullwidth colon inside the 008 url left as-is.
+- Date stamps. ACCEPTED-lv says change "13. septembrī 2025" to "2025. gada 13. septembris" only if the checker still parses, otherwise keep. Nominative "septembris" is not in the month lexicon. The registered year-first pattern does match "2025. gada 13. septembrī", but stripStructuralNoise treats a line-initial "YYYY. " as a markdown ordered-list marker (the token after the dot is "gada", not a month) and deletes the year before the date parser runs. Missing numbers were 9 and the year. Restored the form the checker accepts: "13. septembrī 2025" (16 files), "4. februārī 2026" (011), "17. septembrī 2026" (018). In-sentence "2026. gada 1. jūlijā" and similar stay; they are not at line start.
+- R2b Korea-tax framing in 001 and 004 was already present ("Šis izklāsts attiecas uz lietas apstākļiem ar saikni ar Koreju… nav visiem ieguldītājiem… Jūsu izcelsmes valsti"). Not duplicated.
+- R3: 003 already says Taivānā 119/110/112; sentencing already softened; 008 anecdote already "ar juridisko pārstāvību varēja konstatēt likumā noteiktās tiesības"; 008/009 already "dažās jurisdikcijām, piemēram, Korejā".
+
+## Systemic patterns (diff hit counts, not every prose occurrence)
+- apgabaltiesa / apgabala tiesa → rajona tiesa: 4 (including Taidžunas rajona tiesa). "apgabals" meaning region was left.
+- Taibei → Taipeja/Taipejas/Taipejā: 8 removed spellings. Taidžuna sweep (guidance + columns) and Dzjajī → Dzjaji (1). Pinduna in the office pack.
+- OOO → [vārds]: 1 (R15).
+- English "Q" labels removed: 28 hits (## Qn, bare Qn, "Oficiālie avoti Q1–Q5", body Q11/Q12).
+- Sentence-initial "Pretēji" → "Turpretī": 8 removed. One mid-sentence "Pretēji ne visām" in 007 also → "Turpretī".
+- apgrozījuma nodoklis (營業稅) → uzņēmējdarbības nodoklis (營業稅; pēc būtības PVN): 10 removed. Bare "apgrozījums" (turnover) left.
+- 條例 "statūti/statūts/statūta" → "likums/likuma": 7 net (10 removed, 3 company-articles "statūti" for 章程 kept).
+- Masculine mērauks/mērauku → feminine mēraukla: 6.
+- "vislabāk-" on the legal standard 子女最佳利益 → "labāk-": 13. Employee "vislabāko rezultātu" in 008 left (not a firm claim).
+- Calque "pozīcijas" (line items / issues) → "posteņi" / "jautājums": 17 removed, 14 "posteņ" added.
+- "spēkā esība" → "spēkā esamība": 13 "esamīb" added. One leftover "parādu esība" in 002 → "parādu pastāvēšana".
+- "Pilnvarojums" → "Kvalifikācija un birojs": 1.
+- English role labels in the lv team block removed: 5 (Managing Attorney / Paralegal / Senior Paralegal). Nav labels not lengthened.
+- "ziņojumapmaiņas ieraksti": 2. "izplatītājs" in the 018 FAQ/heading that means a distributor: added; the article title stays "pārstāvi" (representative office).
+- "patiesais labuma guvējs" sweep in 016.
+- 013 "Ekonomikas ministrijas izskatīšanas komisija" → "Ekonomikas ministrijas Ieguldījumu izskatīšanas departaments".
+- Corporate/legal "uzbūve" → "struktūra" (011 ienākšana, 014 kompensācija, 016 trasts). Physical road "joslu uzbūve" in 012 left.
+
+## §Verify
+cd /Users/son7/Projects/tseng-law-fix-lv-20260922 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+node scripts/check-column-translation.mjs --dir src/content/columns-lv --lang lv 2>&1 | tail -8
+grep -rn "\[변호사 검수 필요\]" src/content/columns-lv src/data | wc -l
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+git status --short | wc -l
+
+neighbour      PASS   
+hanzi          PASS   han=33
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+---MARKERS---
+       0
+---TSC---
+TSC_OK
+---VITEST---
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+---STATUS---
+      23
+
+The 23 paths are the 18 columns, 4 guidance data files, and the pre-existing untracked docs/i18n/global-plan/WO-F-lv.txt. This log is a 24th untracked path after it is written. No other locale's strings were edited. Hangul remains only inside the two frontmatter url values (008, 009).
+
+## Reviewer points not applied (disagreements)
+- a#23 and b#21 number reformatting (comma decimal, space thousands, "milj."). R14 and the pinned "TWD 1.57M" override. Space thousands fail the checker.
+- a#52 adding 2023. R13 forbids a new digit. ROC 112 with the 民國 gloss is the form used.
+- Nominative date stamp "2025. gada 13. septembris", and also the locative year-first "2025. gada 13. septembrī" at the start of date_display. The checker drops a leading "YYYY. " as a list marker, so the year and the month number disappear. Kept "13. septembrī 2025".
+- a#5 "Jurista palīgs". The existing Latvian bio marks Chang Fangyu feminine; "Jurista palīdze" / "Vecākā jurista palīdze".
+- b#37 merging the comma-split paragraphs. That would change the block count. Each block was made self-standing instead.
+- "Pati vienošanās, ka bērns..." is grammatically right (vienošanās is feminine). Only "Pati fakts," was changed to "Pats fakts,".
+- 004 "noslēgt ar pašu teikumu" means end the comparison with a sentence. It is not the secināt/vērtēt error.
+- Physical "joslu uzbūvi/uzbūves" in 012 left.
+- "Finanšu uzraudzības komisijas" and "sagatavošanas komisijas" are real commissions, not the abolished investment-review name.
+- "vislabāko rezultātu" in 008 is the employee's sales result, not a firm "best" claim.

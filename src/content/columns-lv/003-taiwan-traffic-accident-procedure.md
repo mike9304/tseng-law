@@ -17,7 +17,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 Ja Taivānā notiek ceļu satiksmes negadījums (交通事故), vispirms jānodrošina drošība, jāveic paziņošana un pierādījumu saglabāšana un pēc tam pēc kārtas jāizvērtē prasījuma termiņš, neuzmanība (過失) un izlīguma (和解) apjoms. Turpmāk izklāstīta vispārīga rīcības kārtība, kas balstīta uz Taivānas tiesību aktiem un publisko iestāžu norādījumiem; atbildība un konkrētā gaita var atšķirties pēc katra negadījuma apstākļiem.
 
-## Q1. Vai pēc negadījuma var atstāt notikuma vietu?
+## 1. Vai pēc negadījuma var atstāt notikuma vietu?
 
 Negadījumā ar ievainojumu vai nāvi vadītājam nekavējoties jāveic glābšanas pasākumi (救護措施), jāpaziņo policijai un jāsaglabā transportlīdzeklis un notikuma vietas pierādījumi (保全現場). Otras puses neformāla piekrišana vai viens pats ieraksts neļauj uzskatīt, ka vietu var atstāt, nepabeidzot prasītos pasākumus.
 
@@ -27,15 +27,15 @@ Ja ir tikai mantiski zaudējumi un transportlīdzekli var pārvietot, princips i
 
 Taivānas Krimināllikuma (刑法) 185-4. pants regulē vadītāja kriminālatbildību, kurš atstāj vietu pēc ceļu satiksmes negadījuma, kas izraisījis ievainojumu vai nāvi. Tā piemērošana tiek vērtēta pēc negadījuma apstākļiem un veiktajiem pasākumiem.
 
-## Q2. Kādi pierādījumi vispirms jāsaglabā?
+## 2. Kādi pierādījumi vispirms jāsaglabā?
 
 Vispirms nodrošiniet personisko drošību un brīdinājuma zīmes. Taivānā zvaniet, ja ir ievainojums vai vajadzīga glābšana, uz 119 (ātrā palīdzība un ugunsdzēsēji), ja ir noziegums vai steidzama sabiedriskās drošības situācija — uz 110 (policija); no mobilā tālruņa var zvanīt arī 112. Veiciet arī paziņošanu policijai atbilstoši ceļu satiksmes negadījuma apstākļiem.
 
 Kad drošība ir nodrošināta, uzņemiet kopskata un tuvplāna fotogrāfijas, lai fiksētu transportlīdzekļu novietojumu un bojājumus, ceļa apzīmējumus, signālus un laikapstākļus. Nedrīkst aizmirst liecinieku kontaktus, lūgumu saglabāt novērošanas kameru (監視器影像) un braukšanas reģistratora (行車紀錄器) ierakstus, pušu, transportlīdzekļa un apdrošināšanas datus, kā arī medicīnisko dokumentāciju (病歷). Personiskie uzņēmumi ir noderīgi, taču tie neaizstāj policijas rīcību, kas prasīta negadījumā ar ievainojumu vai nāvi.
 
-Kas attiecas uz policijas dokumentiem, notikuma vietā var saņemt ceļu satiksmes negadījuma dalībnieku reģistrācijas un kontaktlapu (道路交通事故當事人登記聯單). Kad no negadījuma dienas pagājušas 7 dienas, var pieprasīt vietas shēmu un fotogrāfijas (現場圖 / 現場照片); kad no negadījuma dienas pagājušas 30 dienas, var pieprasīt ceļu satiksmes negadījuma sākotnējās analīzes novērtējuma tabulu (道路交通事故初步分析研判表). Izsniegšanas brīdi un pieteikuma priekšnoteikumus vēlreiz jāapstiprina pie kompetentās policijas iestādes.
+Kas attiecas uz policijas dokumentiem, notikuma vietā var saņemt ceļu satiksmes negadījuma dalībnieku reģistrācijas un kontaktlapu (道路交通事故當事人登記聯單). Kad no negadījuma dienas pagājušas 7 dienas, var pieprasīt vietas shēmu un fotogrāfijas (現場圖 / 現場照片); kad no negadījuma dienas pagājušas 30 dienas, var pieprasīt ceļu satiksmes negadījuma sākotnējās analīzes novērtējuma tabulu (道路交通事故初步分析研判表). Izsniegšanas brīdis un pieteikuma priekšnoteikumi vēlreiz jāapstiprina pie kompetentās policijas iestādes.
 
-## Q3. Ja ir ievainojums, kādi prasījumi un kādi termiņi jāpārbauda?
+## 3. Ja ir ievainojums, kādi prasījumi un kādi termiņi jāpārbauda?
 
 Krimināllikuma 284. pants regulē aiz neuzmanības nodarītu miesas bojājumu (過失傷害) un aiz neuzmanības nodarītu smagu miesas bojājumu (過失致重傷). Tā kā saskaņā ar Krimināllikuma 287. pantu tas ir noziegums, ko var vajāt tikai pēc sūdzības (告訴乃論之罪), saskaņā ar Taivānas Kriminālprocesa likuma (刑事訴訟法) 237. pantu sūdzība principā jāiesniedz 6 mēnešu laikā no dienas, kad kļuva zināms pārkāpējs.
 
@@ -45,7 +45,7 @@ Ikviens, kas nozieguma dēļ cietis zaudējumus, saskaņā ar Kriminālprocesa l
 
 Izvēle atšķiras pēc noilguma pārtraukšanas (時效中斷), atbildētāju loka, pierādījumiem, apdrošināšanas un piekritības. Tāpēc nav vienas visām lietām vienādi ieteicamas gaitas.
 
-## Q4. Ja neuzmanība ir abu pušu pusē, kā vērtē kriminālatbildību un civiltiesisko atbildību?
+## 4. Ja neuzmanība ir abu pušu pusē, kā vērtē kriminālatbildību un civiltiesisko atbildību?
 
 Kriminālatbildību var pieņemt tikai tad, ja atzīts katra piesardzības pienākuma pārkāpums un cēloņsakarība starp šo pārkāpumu un otras puses ievainojumu. Pats fakts, ka neuzmanība bijusi abām pusēm, automātiski nerada atbildību par aiz neuzmanības nodarītu miesas bojājumu.
 
@@ -53,15 +53,15 @@ Civiltiesiskajā plaknē saskaņā ar Civillikuma 217. pantu, ja cietušajam ir 
 
 Ekspertīze (鑑定) vai sākotnējās analīzes tabula var būt svarīgi materiāli, taču tie mehāniski nesaista tiesu. Tiesa vērtē pierādījumu kopumu, tostarp liecības, ierakstus un transportlīdzekļu stāvokli.
 
-## Q5. Kas jānorāda izlīguma aktā?
+## 5. Kas jānorāda izlīguma aktā?
 
 Izlīguma aktā (和解書) jāindividualizē negadījuma datums, vieta un puses un jāieraksta maksājuma summa un brīdis, apdrošināšanas atlīdzību kārtošana, ietvertie prasījumi un tie, kas tiek rezervēti. Skaidri jānosaka arī turpmākā ārstēšana, vēlāk atklāti ievainojumi, dokumentu, piemēram, ārsta izziņas (診斷證明書), izsniegšana un saikne starp maksājumu un sūdzības atsaukšanu.
 
-Izlīgums (和解) saskaņā ar Civillikuma 736. pantu ir līgums, kurā puses savstarpēji piekāpjas, lai izbeigtu strīdu vai tam novērstu. Saskaņā ar Civillikuma 737. pantu apjoms, kādā tiesības izbeidzas, arī tiek vērtēts tikai tādā mērā, kādā tās izlīguma aktā ir atstātas. Tāpēc, neizvērtējot tekstu, nedrīkst apgalvot, ka izzūd visi nākotnes prasījumi.
+Izlīgums (和解) saskaņā ar Civillikuma 736. pantu ir līgums, kurā puses savstarpēji piekāpjas, lai izbeigtu strīdu vai novērstu tā rašanos. Saskaņā ar Civillikuma 737. pantu apjoms, kādā tiesības izbeidzas, arī tiek vērtēts tikai attiecībā uz tiesībām, no kurām izlīguma tekstā ir atteikušies. Tāpēc, neizvērtējot tekstu, nedrīkst apgalvot, ka izzūd visi nākotnes prasījumi.
 
 Ja tas ir noziegums, ko var vajāt tikai pēc sūdzības, saskaņā ar Kriminālprocesa likuma 238. pantu sūdzību var atsaukt līdz 1. instances mutvārdu debašu slēgšanai, un pēc atsaukšanas to nevar iesniegt no jauna. Tomēr noziegumā, ko nevar vajāt tikai pēc sūdzības, apsūdzība automātiski neizbeidzas ar privātu izlīgumu, un izlīguma fakts ne vienmēr uzliek pienākumu sūdzību atsaukt.
 
-### Oficiālie avoti Q1–Q5
+### Oficiālie avoti 1–5
 
 - [Ceļu satiksmes pārvaldības un sankciju rīkojums (道路交通管理處罰條例), 62. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
 - [Taivānas Krimināllikums, 185-4. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
@@ -81,15 +81,15 @@ Ja tas ir noziegums, ko var vajāt tikai pēc sūdzības, saskaņā ar Krimināl
 - [Nacionālās policijas aģentūras (內政部警政署) norādījums par ceļu satiksmes negadījumu pierādījumiem un dokumentiem](https://www.npa.gov.tw/ch/app/data/view?id=2306&module=wg076&serno=ea678c1a-5035-49bf-8fa3-d0926bb3a889)
 - [Nacionālās policijas aģentūras bieži uzdotie jautājumi par ceļu satiksmes negadījumiem](https://wwwcdn.npa.gov.tw/ch/app/faq/view?id=2144&module=faq&serno=A1084129)
 
-## Q6. Kā nosaka atbildību par negadījumu?
+## 6. Kā nosaka atbildību par negadījumu?
 
 Policijas sastādītā ceļu satiksmes negadījuma sākotnējās analīzes tabula ir sākotnēja analīze, kas balstīta uz vietas materiāliem. Tā nav spriedums, nesaista tiesu un nenosaka neuzmanības īpatsvaru (過失比例). Tā kā vajadzīgie materiāli un strīda apjoms atšķiras pēc negadījuma, šī tabula, tiesiskā ekspertīze un pārskatīšana (覆議) nav ne automātiska gaita, ne obligāts posms.
 
-Saskaņā ar piemērojamiem noteikumiem leģitimētā puse var pieprasīt transportlīdzekļa negadījuma ekspertīzi (車輛行車事故鑑定); iestāde, kas lietu vada, to var nodot, un tiesu iestāde to var uzdot. Puses pieteikums principā iesniedzams 6 mēnešu laikā no negadījuma dienas; lietās, kas jau ir izmeklēšanā vai tiesāšanā, ekspertīze notiek ar tiesu iestādes uzdevumu, nevis ar jaunu tiešu pieteikumu.
+Saskaņā ar piemērojamiem noteikumiem tiesīgā persona var pieprasīt transportlīdzekļa negadījuma ekspertīzi (車輛行車事故鑑定); iestāde, kas lietu vada, to var nodot, un tiesu iestāde to var uzdot. Puses pieteikums principā iesniedzams 6 mēnešu laikā no negadījuma dienas; lietās, kas jau ir izmeklēšanā vai tiesāšanā, ekspertīze notiek ar tiesu iestādes uzdevumu, nevis ar jaunu tiešu pieteikumu.
 
 Ja ekspertīzes atzinumam nepiekrīt, var pieprasīt pārskatīšanu, taču to var iesniegt tikai vienu reizi. Ekspertīzes un pārskatīšanas atzinums ir pierādījums vai atsauces materiāls, un tiesa patstāvīgi vērtē lietas kopumu, tostarp liecības, ierakstus un vietas protokolus.
 
-## Q7. Kādus zaudējumus var prasīt pēc negadījuma?
+## 7. Kādus zaudējumus var prasīt pēc negadījuma?
 
 Prasījums, kas balstīts uz Civillikuma 184. pantu, pieņem prettiesisku tiesību aizskārumu, cēloņsakarību ar negadījumu un zaudējumu pierādījumu. Pats fakts, ka negadījums noticis, nenozīmē, ka visi turpmāk minētie posteņi tiek atzīti. Civillikuma 216. pants ir kritērijs faktisko zaudējumu un zaudētās peļņas (所失利益) apjoma noteikšanai.
 
@@ -97,7 +97,7 @@ Prasījums, kas balstīts uz Civillikuma 184. pantu, pieņem prettiesisku tiesī
 - **Nāve**: Saskaņā ar Civillikuma 192. pantu, ja ir pamats, var izvērtēt medicīniskos izdevumus pirms nāves un palielināto dzīves vajadzību izmaksas, apbedīšanas izdevumus (殯葬費) un uzturēšanas zaudējumu (扶養利益損失) personai, kurai bija likumīgas tiesības uz uzturēšanu. Saskaņā ar Civillikuma 194. pantu var izvērtēt arī noteiktu tuvinieku morālo kaitējumu.
 - **Manta**: Saskaņā ar Civillikuma 196. pantu var prasīt pamatotus faktiskos mantiskos zaudējumus, tostarp transportlīdzekļa remonta izmaksas vai vērtības zudumu.
 
-## Q8. Ja ārstēšana turpinās, kā iesniegt medicīnisko izdevumu dokumentus?
+## 8. Ja ārstēšana turpinās, kā iesniegt medicīnisko izdevumu dokumentus?
 
 Saglabājiet kvītis (收據), ārsta izziņas un medicīnisko dokumentāciju un kopā ar tām sakārtojiet katras ārstēšanas medicīnisko nepieciešamību un tās cēloņsakarību ar negadījumu. Turpinātās ārstēšanas dokumenti var papildināt pierādījumu saskaņā ar tiesas procesuālo kalendāru un jau iesniegtā prasījuma saturu, taču tas negarantē, ka visi vēlāk iesniegtie dokumenti vai katrs prasījuma paplašinājums tiks pieņemts vai atļauts.
 
@@ -105,19 +105,19 @@ Jānošķir medicīnisko dokumentu pievienošana no prasītās summas grozīšan
 
 Tomēr saskaņā ar Kriminālprocesa likuma 504. pantu, ja lieta nodota civiltiesas nodaļai, prasījuma grozīšana, pievienošana vai paplašināšana ārpus apjoma pirms nodošanas var radīt jautājumu par procesa izmaksām no pārsniegtās daļas. Nodošanas posms, iesniegšanas brīdis un prasījuma apjoms jāpārbauda katrā lietā.
 
-## Q9. Ar ko pierāda profesionālās kopšanas un tuvinieku kopšanas izmaksas?
+## 9. Ar ko pierāda profesionālās kopšanas un tuvinieku kopšanas izmaksas?
 
 Ārsta izziņa vai medicīnisks atzinums ir noderīgi, lai parādītu kopšanas nepieciešamību, taču paši par sevi nav izšķirošs pamats. Ar dokumentiem jāizskaidro cēloņsakarība ar negadījumu, kopšanas nepieciešamība, vai tā patiešām sniegta, ilgums un samērīga summa.
 
 Pat ja tuvinieks patiešām sniedza kopšanu bez atlīdzības, attiecīgā lietā to var vērtēt kā zaudējumu. Tomēr pats apstāklis, ka kopšanu sniedz tuvinieks, nenoved pie tās automātiskas atzīšanas; vērtē arī kopšanas saturu un ilgumu un parasto izmaksu līmeni.
 
-## Q10. Ar ko pierāda ceļa izdevumus ārstēšanai?
+## 10. Ar ko pierāda ceļa izdevumus ārstēšanai?
 
 Ceļa izdevumus sakārto, pamatojoties uz saikni starp ārstēšanas reģistru un ar negadījumu saistītajiem ievainojumiem. Maršruts, apmeklējumu skaits, datumi, transporta līdzeklis, tarifs, kā arī šā līdzekļa izmantošanas nepieciešamība un samērīgums var būt būtiski vērtējumam.
 
 Kvītis, tarifa ieraksti, maršruta ieraksti un klīniskie dokumenti ir iespējami pierādījumi. Taksometra kvīts nav vienīgais pierādīšanas līdzeklis, un pats tās iesniegums nenozīmē, ka tā ir pietiekama.
 
-### Oficiālie avoti Q6–Q10
+### Oficiālie avoti 6–10
 
 - [Noteikumi par transportlīdzekļu negadījumu ekspertīzi un pārskatīšanu (車輛行車事故鑑定及覆議作業辦法), 3. pants](https://mojlaw.moj.gov.tw/LawContentExtent.aspx?LSID=FL025820&LawNo=3)
 - [Noteikumi par transportlīdzekļu negadījumu ekspertīzi un pārskatīšanu, 11. līdz 15. pants](https://mojlaw.moj.gov.tw/LawContent.aspx?TypeSort=2&lawNumber=11&lsid=FL025820&media=print)
@@ -131,35 +131,35 @@ Kvītis, tarifa ieraksti, maršruta ieraksti un klīniskie dokumenti ir iespēja
 - [Civillikums, 216. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
 - [Kriminālprocesa likums, 504. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=504&pcode=C0010001)
 - [Tiesu juaņa (司法院) norādījums par prasījuma paplašināšanu pēc nodošanas](https://www.judicial.gov.tw/tw/dl-251103-0e248a7b9e4248d7ae31fcdeda58ac07.html)
-- [Dzjajī (嘉義) apgabaltiesas spriedums par tuvinieku kopšanas izmaksām](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
-- [Tainaņas (臺南) apgabaltiesas spriedums par ceļa izdevumiem ārstēšanai](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
+- [Dzjaji (嘉義) rajona tiesas spriedums par tuvinieku kopšanas izmaksām](https://data.judicial.gov.tw/opendl/JDocFile/CYEV/111%2C%E5%98%89%E7%B0%A1%2C850%2C20230111%2C1.pdf)
+- [Tainaņas (臺南) rajona tiesas spriedums par ceļa izdevumiem ārstēšanai](https://data.judicial.gov.tw/opendl/JDocFile/TNEV/110%2C%E5%8D%97%E7%B0%A1%2C1212%2C20220210%2C1.pdf)
 
 
-## Q11. Kā pierāda ienākumu zaudējumu ārstēšanas un atveseļošanās periodā?
+## 11. Kā pierāda ienākumu zaudējumu ārstēšanas un atveseļošanās periodā?
 
 Ienākumu zaudējums jāpierāda ar dokumentiem, kas nosaka, ka ar negadījumu saistīto ievainojumu dēļ darbs atveseļošanās periodā bija pilnībā vai daļēji neiespējams un ka tādēļ iestājās faktiska ienākumu samazināšanās. Ārsta izziņa vai atpūtas ieteikums ir svarīgs sākumpunkts, taču paši par sevi nepietiek, lai prasījumu atzītu.
 
 Kopīgi jāsakārto medicīniskā dokumentācija, apmeklējuma vai atvaļinājuma ieraksti, dati par darba samaksu un nodokļiem un darba devēja apstiprinājums. Pašnodarbināta persona var iesniegt savai darbības formai pielāgotus datus, piemēram, pārdošanas datus, darījumu ierakstus un nodokļu deklarācijas.
 
-Turpmāka darba vai nemainīgas darba samaksas saņemšanas apstāklis ir būtisks atveseļošanās perioda ienākumu zaudējuma vērtējumam, taču šis fakts pats par sevi automātiski neizšķir jautājumu par zaudējumu no darbspējas samazināšanās. Šis apstāklis arī nav patstāvīgs pamats darbspējas samazināšanās zaudējuma vērtēšanai. Zaudējums no darbspējas samazināšanās izvērtējams atsevišķi Q12.
+Turpmāka darba vai nemainīgas darba samaksas saņemšanas apstāklis ir būtisks atveseļošanās perioda ienākumu zaudējuma vērtējumam, taču šis fakts pats par sevi automātiski neizšķir jautājumu par zaudējumu no darbspējas samazināšanās. Šis apstāklis arī nav patstāvīgs pamats darbspējas samazināšanās zaudējuma vērtēšanai. Zaudējums no darbspējas samazināšanās izvērtējams atsevišķi 12. punktā.
 
-## Q12. Kā pierāda zaudējumu no darbspējas samazināšanās?
+## 12. Kā pierāda zaudējumu no darbspējas samazināšanās?
 
-Zaudējums no darbspējas samazināšanās atšķiras no Q11 atveseļošanās periodā faktiski samazinātajiem ienākumiem. Saskaņā ar Civillikuma 193. un 216. pantu kopīgi vērtē cēloņsakarību ar negadījumu, ilgstošus funkcionālos traucējumus (持續功能障礙), cietušā profesiju un spējas, ienākumus, ko parasti var gaidīt, un pamatu un pierādījumu par darbspējas periodu.
+Zaudējums no darbspējas samazināšanās atšķiras no 11. jautājuma atveseļošanās periodā faktiski samazinātajiem ienākumiem. Saskaņā ar Civillikuma 193. un 216. pantu kopīgi vērtē cēloņsakarību ar negadījumu, ilgstošus funkcionālos traucējumus (持續功能障礙), cietušā profesiju un spējas, ienākumus, ko parasti var gaidīt, un pamatu un pierādījumu par darbspējas periodu.
 
-Fakts, ka pašreizējā darba samaksa saglabājas bez izmaiņām, automātiski neizslēdz prasījumu. Pretēji, zaudējuma apmērs arī netiek mehāniski noteikts tikai ar invaliditātes procentu vai pašreizējo darba samaksu.
+Fakts, ka pašreizējā darba samaksa saglabājas bez izmaiņām, automātiski neizslēdz prasījumu. Turpretī, zaudējuma apmērs arī netiek mehāniski noteikts tikai ar invaliditātes procentu vai pašreizējo darba samaksu.
 
 Ja ilgstoši funkcionālie traucējumi ir būtiski apstrīdēti, medicīniskā ekspertīze var būt noderīga, taču tā nav obligāta visās lietās. Vērtē arī neuzmanības ieskaitu saskaņā ar Civillikuma 217. pantu un citus korekcijas iemeslus.
 
 Ja aprēķins notiek vienā kapitāla summā, var apsvērt starpprocentu atskaitīšanu (中間利息扣除). Tiesu juaņa Hofmana kalkulators (霍夫曼) ir tikai aprēķina palīgs, nevis tiesiski obligāta metode, un tas nesola iznākumu. Saskaņā ar Civillikuma 193. pantu pēc puses lūguma tiesa var arī uzlikt maksājumu periodiskā rentē ar nodrošinājuma nosacījumu.
 
-## Q13. Kā vērtē morālā kaitējuma atlīdzību (慰撫金) par nemantiskajiem zaudējumiem?
+## 13. Kā vērtē morālā kaitējuma atlīdzību (慰撫金) par nemantiskajiem zaudējumiem?
 
 Morālā kaitējuma atlīdzību par nemantiskajiem zaudējumiem vērtē, nosakot samērīgu summu, ja pastāv prettiesisks ķermeņa vai veselības aizskārums saskaņā ar Civillikuma 195. pantu.
 
 Tiesa vērtē katras lietas apstākļus, kopīgi ņemot vērā ievainojuma un ārstēšanas saturu, ilgstošo ietekmi, sāpes un ietekmi uz dzīvi, vecumu un stāvokli, sociālekonomiskos apstākļus un pušu pierādījumus. Tāpēc ir grūti iepriekš noteikt iznākumu tikai pēc tipizēta diapazona.
 
-## Q14. Ja negadījums notiek darba laikā, vai var vērst civiltiesisko atbildību arī pret darba devēju?
+## 14. Ja negadījums notiek darba laikā, vai var vērst civiltiesisko atbildību arī pret darba devēju?
 
 Civillikuma 188. pants regulē gadījumu, kurā darbinieks, pildot amata pienākumus, nodara citam prettiesiskus zaudējumus. Saikne ar amata pienākumiem netiek atzīta automātiski no paša darba laika, tāpēc jāpārbauda saikne starp faktisko darbu un negadījumu.
 
@@ -169,7 +169,7 @@ Ja darba devējs pierāda šos atbrīvojuma priekšnoteikumus un cietušais nesa
 
 Jautājums, pret ko vērst civiltiesisko prasījumu, jānošķir no kriminālatbildības. Kriminālatbildību saskaņā ar Krimināllikuma 284. pantu vērtē pēc katras fiziskās personas piesardzības pienākuma pārkāpuma un šā pārkāpuma cēloņsakarības.
 
-## Q15. Kādi pabalsti un kāds transportlīdzekļu obligātās apdrošināšanas segums jāpārbauda?
+## 15. Kādi pabalsti un kāds transportlīdzekļu obligātās apdrošināšanas segums jāpārbauda?
 
 Pienākums slēgt līgumu saskaņā ar Obligātās automašīnu civiltiesiskās atbildības apdrošināšanas likuma (強制汽車責任保險法) 6. pantu principā gulstas uz transportlīdzekļa īpašnieku un paredzētos gadījumos arī uz šā transportlīdzekļa lietotāju vai pārvaldītāju. Šis režīms izveido bezvainas pabalstu struktūru (無過失給付制度) personai, kas ievainota vai mirusi automašīnas negadījuma dēļ, taču jāpārbauda likumā noteiktais pasažieru vai trešo personu (第三人) apjoms ārpus transportlīdzekļa.
 
@@ -177,9 +177,9 @@ Viena transportlīdzekļa negadījumā šā transportlīdzekļa vadītājs princ
 
 Pabalstu standarts (強制汽車責任保險給付標準), kas grozīts 2026. gada 29. maijā, piemērojams negadījumiem, kuri notikuši 2026. gada 1. jūlijā vai pēc tam. Samērīgo un nepieciešamo medicīnisko izdevumu griesti par ievainojumu ir TWD 200.000 jaunajā Taivānas dolārā; pabalsts par invaliditāti (失能) ir no TWD 80.000 līdz TWD 3.000.000 pēc 15 likumā noteiktajām pakāpēm; pabalsts par nāvi ir TWD 3.000.000, un kopējais nāves, invaliditātes un medicīnisko izdevumu maksimums 1 cietušajam un 1 negadījumam ir TWD 3.200.000. Uz agrākiem negadījumiem var piemērot iepriekšējo standartu.
 
-Trešo personu civiltiesiskās atbildības apdrošināšana (第三人責任險), vadītāja nelaimes gadījumu apdrošināšana (駕駛人傷害險) un paša transportlīdzekļa bojājumu apdrošināšana (車體損失險) ir fakultatīvi līgumiska rakstura produkti. Faktiskais segums atšķiras pēc apdrošinātā, griestiem, pašriska (自負額), izņēmumiem, neuzmanības un citiem polises nosacījumiem, tāpēc polisi un nosacījumus jāpārbauda lietu pa lietai.
+Trešo personu civiltiesiskās atbildības apdrošināšana (第三人責任險), vadītāja nelaimes gadījumu apdrošināšana (駕駛人傷害險) un paša transportlīdzekļa bojājumu apdrošināšana (車體損失險) ir fakultatīvi līgumiska rakstura produkti. Faktiskais segums atšķiras pēc apdrošinātā, griestiem, pašriska (自負額), izņēmumiem, neuzmanības un citiem polises nosacījumiem, tāpēc polise un nosacījumi jāpārbauda katrā lietā atsevišķi.
 
-### Oficiālie avoti Q11–Q15
+### Oficiālie avoti 11–15
 
 - [Civillikums, 193. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=193&pcode=B0000001)
 - [Civillikums, 216. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=216&pcode=B0000001)
@@ -188,18 +188,18 @@ Trešo personu civiltiesiskās atbildības apdrošināšana (第三人責任險)
 - [Taivānas apelācijas tiesas spriedums, 109. gads, lieta 上易字 Nr. 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Tiesu juaņa Hofmana tagadnes vērtības kalkulators](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Civillikums, 195. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Taojuaņas apgabaltiesas spriedums, 112. gads, lieta 壢簡字 Nr. 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Taojuaņas rajona tiesas spriedums, 112. gads, lieta 壢簡字 Nr. 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Civillikums, 188. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Taivānas Krimināllikums, 284. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Obligātās automašīnu civiltiesiskās atbildības apdrošināšanas likums](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
 - [Obligātās automašīnu civiltiesiskās atbildības apdrošināšanas pabalstu standarts](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Finanšu uzraudzības komisijas (金融監督管理委員會) standarta privātās lietošanas automašīnu apdrošināšanas līgums](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Vai pēc negadījuma visu var atstāt apdrošinātājam?
+Jautājums 16. Vai pēc negadījuma visu var atstāt apdrošinātājam?
 
 ​
 
-Pēc savas prakses esmu konstatējusi, ka apdrošinātāji bieži vien nepietiekami ņem vērā negadījuma dalībnieku emocionālo pusi.
+Praksē esmu konstatējusi, ka apdrošinātāji bieži vien nepietiekami ņem vērā negadījuma dalībnieku emocionālo pusi.
 
 ​
 
@@ -231,7 +231,7 @@ Ja lieta uzticēta apdrošinātājam, nepārtraukti jāseko kārtošanas gaitai 
 
 ​
 
-Q17. Kāda ir kriminālatbildība par aiz neuzmanības nodarītu miesas bojājumu ceļu satiksmes negadījuma vainīgajam?
+Jautājums 17. Kāda ir kriminālatbildība par aiz neuzmanības nodarītu miesas bojājumu ceļu satiksmes negadījuma vainīgajam?
 
 ​
 
@@ -255,7 +255,7 @@ Dažos spriedumos par aiz neuzmanības nodarītu smagu miesas bojājumu ir uzlik
 
 ​
 
-Q18. Ja noslēdzat izlīgumu ar otru pusi, vai kriminālsūdzību var atsaukt?
+Jautājums 18. Ja noslēdzat izlīgumu ar otru pusi, vai kriminālsūdzību var atsaukt?
 
 ​
 
@@ -275,11 +275,11 @@ Dažos gadījumos ir iespējama nosacīta soda izpildes atlikšana (緩刑); tas
 
 ​
 
-Q19. Ja pēc negadījuma atstāj vietu, vai kriminālais noziegums par aizbraukšanu vienmēr ir izpildīts?
+Jautājums 19. Ja pēc negadījuma atstāj vietu, vai kriminālais noziegums par aizbraukšanu vienmēr ir izpildīts?
 
 ​
 
-Ne noteikti.
+Ne vienmēr.
 
 ​
 
@@ -295,7 +295,7 @@ Ja ir tikai transportlīdzekļa bojājumi, to neuzskata par aizbraukšanu.
 
 ​
 
-Q20. Kā meklē advokātu ceļu satiksmes negadījumam?
+Jautājums 20. Kā meklē advokātu ceļu satiksmes negadījumam?
 
 ​
 

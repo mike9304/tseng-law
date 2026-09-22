@@ -14,7 +14,8 @@ import {
   FORBIDDEN_PHRASES,
   GUIDANCE_LANGS,
   checkPair,
-  main,
+  main,,
+  checkNeighbourLeak,
 } from './check-column-translation.mjs';
 
 const SCRIPT = join(dirname(fileURLToPath(import.meta.url)), 'check-column-translation.mjs');
@@ -935,7 +936,22 @@ test('checker includes nationality alongside the existing 9+1 ids', () => {
     'nationality',
     'langid',
     'currency',
+    'neighbour',
   ]);
+});
+
+test('neighbour: Czech function words inside a Slovak body FAIL at 3+ distinct hits, WARN below', () => {
+  const mk = (body) => ({ body, bodyStartLine: 10 });
+  const leak = checkNeighbourLeak(
+    mk('![Hlavní obrázek](../images/x.jpg)\n\nText vysvetluje, kdy nárok vzniká a kdy nie.\n\nNejen preto, abyste vedeli.'),
+    'sk',
+  );
+  assert.equal(leak.status, 'FAIL');
+  const mild = checkNeighbourLeak(mk('Otázka je, zda to platí.'), 'sk');
+  assert.equal(mild.status, 'WARN');
+  const clean = checkNeighbourLeak(mk('Text vysvetľuje, kedy nárok vzniká a kedy nie. Nielen preto, aby ste vedeli.'), 'sk');
+  assert.equal(clean.status, 'PASS');
+  assert.equal(checkNeighbourLeak(mk('Hlavní obrázek kdy nejen'), 'de').status, 'PASS');
 });
 
 const NATIONALITY_FIXTURES = {

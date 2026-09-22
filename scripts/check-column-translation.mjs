@@ -525,6 +525,7 @@ export const CHECK_IDS = [
   'nationality',
   'langid',
   'currency',
+  'neighbour',
 ];
 
 export const DEFAULT_ADAPT_DIR = '/Users/son7/Projects/tseng-law-sea-state/columns/work';
@@ -2680,6 +2681,36 @@ export function checkEnglish(target, lang) {
   return fail('english', details);
 }
 
+/**
+ * Sister-language leak: common function words of the translation template language that
+ * do not exist in the target language. A hit means a paragraph was left in the template
+ * language (2026-09-22: Czech paragraphs shipped inside Slovak columns 003/007/008).
+ * Threshold: 3+ distinct hits in one file → FAIL; fewer → WARN (loanwords, quotes).
+ */
+export const NEIGHBOUR_LEAK_RE = {
+  sk: /\b(nejen|kdy|abyste|kter[ýáé]|jsou|jsem|obr[áa]zek|man[žz]elstv[íi]|pokud|nebo|již|zda|které|jestli[žz]e|proto[žz]e)\b/gi,
+  hr: /\b(nejen|kdy|abyste|kter[ýáé]|jsou|jsem|pokud|nebo|již|zda|proto[žz]e)\b/gi,
+  sr: /\b(nejen|kdy|abyste|kter[ýáé]|jsou|jsem|pokud|nebo|již|zda|proto[žz]e)\b/gi,
+  sl: /\b(nejen|kdy|abyste|kter[ýáé]|jsou|jsem|pokud|nebo|již|zda|proto[žz]e)\b/gi,
+  bg: /\b(который|которая|которые|является|также|если|только|можно|нужно)\b/gi,
+  mn: /\b(который|которая|которые|является|также|если|только|можно|нужно)\b/gi,
+};
+
+export function checkNeighbourLeak(target, lang) {
+  const re = NEIGHBOUR_LEAK_RE[lang];
+  if (!re) return pass('neighbour');
+  const hits = [];
+  target.body.split('\n').forEach((line, index) => {
+    re.lastIndex = 0;
+    const m = line.match(re);
+    if (m) hits.push({ line: target.bodyStartLine + index, words: [...new Set(m.map((w) => w.toLowerCase()))] });
+  });
+  if (hits.length === 0) return pass('neighbour');
+  const distinct = new Set(hits.flatMap((h) => h.words));
+  const details = hits.slice(0, 12).map((h) => `L${h.line}: ${h.words.join(', ')}`);
+  return distinct.size >= 3 ? fail('neighbour', details) : warn('neighbour', details);
+}
+
 export function checkForbidden(target, lang) {
   const hits = findForbiddenHits(target.body, lang, target.bodyStartLine);
   if (hits.length === 0) return pass('forbidden');
@@ -3292,6 +3323,7 @@ export function checkPair({ sourceRaw, targetRaw, sourcePath, targetPath, lang, 
     ['hangul', () => checkHangul(target)],
     ['english', () => checkEnglish(target, lang)],
     ['forbidden', () => checkForbidden(target, lang)],
+    ['neighbour', () => checkNeighbourLeak(target, lang)],
     ['hanzi', () => checkHanzi(target)],
     ['numbers', () => checkNumbers(source, target, lang)],
     ['nationality', () => checkNationality(source, target, lang, adaptLog)],

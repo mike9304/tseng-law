@@ -912,7 +912,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'ٹیم',
     title: 'Hovering کی بین الاقوامی ٹیم',
     description:
-      'Hovering کے وکلا، عملی امور کی قیادت اور شراکت دار سرٹیفائیڈ پبلک اکاؤنٹنٹ کی پروفائلز۔',
+      'Hovering کے وکلا، دفتر کے انتظام کی قیادت اور شراکت دار سرٹیفائیڈ پبلک اکاؤنٹنٹ کی پروفائلز۔',
     representativeTitle: 'منتظمہ وکیلہ',
     teamTitle: 'وکلا اور عملہ',
     partnerTitle: 'شراکت دار، سرٹیفائیڈ پبلک اکاؤنٹنٹ',
@@ -3635,7 +3635,7 @@ export const guidanceTeamBios: Record<
     },
     'son-jungmin': {
       intro: [
-        'کوریا سے آئے موکلوں کے مشورے کے وقت اور رابطے کا ہم آہنگ کرتے ہیں۔',
+        'کوریا سے آئے موکلوں کے مشورے کے اوقات اور رابطے کو مربوط کرتے ہیں۔',
         'کمپیوٹر سائنس کی بنیاد پر دستاویزی نظاموں اور کام کے طریقوں کے ذریعے شعبوں کے درمیان ربط میں مدد کرتے ہیں۔',
       ],
       education: ['بیچلر (B.S.) کمپیوٹر سائنس، National Cheng Kung University'],

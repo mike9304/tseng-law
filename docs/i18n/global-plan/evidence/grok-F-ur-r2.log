@@ -1,0 +1,124 @@
+WO-F-ur r2 — Grok 4.7 fix lane — 2026-09-22
+Locale: Urdu (Pakistani, Nastaliq; formal آپ)
+Workspace: /Users/son7/Projects/tseng-law-fix-ur-r2
+No git add/commit/push.
+
+Reviews: docs/i18n/global-plan/reviews/native/rounds/r2/ur-a.md (27 rows), ur-b.md (24 rows).
+Rules applied: RULEBOOK-FIX R2–R17 where an instance remained; ACCEPTED-ROUND skip rules.
+R2–R11 were already in the machine translation (Korea framed as an example, consultation lock negative, Wei Tseng feminine, ROC year glossed). Unflagged prose was not reopened. No Arabic-script leakage (no Arabic ي/ك/ة). No test file was changed: nothing pinned the rewritten Urdu strings.
+
+## Rows applied
+
+Part a
+1 P1 guidance: comma restored so legal form is its own factor. «طریقہ کار اور مدت، قانونی شکل، سرمایہ کار…»
+2 P1 llms discoveryNotice.ur: اشتہار → ضمانت شدہ نمائش. The token llms.txt stays. consultationNotice and confidentialNotice were not rewritten.
+3 P1 004 link label: the live page for pcode=G0340028&flno=3 is 各類所得扣繳率標準 article 3, not the Business Tax Act. Label now names that standard and article 3. URL unchanged. The Korean link text still contributes a 10, so the label keeps «نہ کہ کاروباری ٹیکس کے قانون کی دفعہ 10» or the checker reports missing 10. The 001 label on the same URL was not a row and was left.
+4 P2 criminal practice: نمائندگی of the suspect at investigation, the accused at trial, and the victim. معاونت / یا removed.
+5 P2 «عملی امور کی قیادت» → «دفتر کے انتظام کی قیادت» (team description, lawyers page, lawyers answer: 3).
+6 P2 image alt: چبوترہ → پویلین.
+7 P2 «بینک سے جڑے سوال» → «بینک کے معاملات».
+8 P2 001 special approval, FAQ and body (2): ٹھوس حصہ in economic development, or special circumstances, then خصوصی منظوری.
+9 P2 002: debts arising after the latest financial-statement date. کٹ آف and پیدا removed.
+10 P2 003: معافی اور اظہارِ ہمدردی.
+11 P2 003: فریق کا موقف.
+12 P2 007: three separate inquiries, not three physical layers.
+13 P2 007: ناجائز افزودگی (不當得利), 4. The gloss stays.
+14 P2 007: a judicial divorce takes effect when the judgment becomes final.
+15 P2 008: obtaining severance can be harder than you think.
+16 P2 review badge: «وکیلہ Wei Tseng نے جانچی». The suggested جانچا is masculine; جانچی agrees with her.
+17 P2 Korea-operations line: مشورے کے اوقات اور رابطے کو مربوط کرتے ہیں. He stays masculine.
+18 P2 disclaimer: دو ملتی جلتی صورتوں کا انجام الگ ہو سکتا ہے.
+19 P2 صورت = the client’s matter: اپنے معاملے کا پابند جواب, and اپنے معاملے کا جواب نہیں ملتا. Idiomatic صورت (اس صورت میں، فرضی صورت، استثنائی صورتیں) left.
+20 P2 missing izafat: ایک قانونی دفتر (home paragraph, about intro) and تائیوانی قانونی دفتر (about description) and the about answer.
+21 P2 joint procedure: ایک ہی کارروائی میں.
+22 P2 statutory fractions. See systemic counts. Digits stay in parentheses because the Urdu lexicon does not map ایک تہائی / دو تہائی to 1+3 / 2+3.
+23 P2 سہارا → تائید / ثابت کرنا (004 documents; 007 elements of the claim). The 007 verb was already چاہییں, not چاہیے.
+24 P2 004: map future funding and recovery over time. کھینچنا removed.
+25 P2 center of life. See systemic counts.
+26 P2 008: اس تدبیر کے جال میں نہ آنا چاہیے.
+
+Part b
+1 P2 010: ordinary negligence is capped at the actual damages. Digit kept as «کے برابر (1 گنا)»; dropping 1 would fail numbers.
+2 P2 011: ایجنٹ، مرکزی تقسیم کار یا تقسیم کار.
+3 P2 012: too little time to brake, narrative and the expert sentence (2). حفاظتی گنجائش (safety margin) left.
+4 P2 013: کسی اور بہانے سے, and the verb agrees with محکمہ (دیکھتا). Same sentence as row 17.
+5 P2 013: the one-year window is time for the address, the lease, the preparatory account, and the remittance. Reworded inside the two existing blocks; blocks were not merged.
+6 P2 013: دو شناختی دستاویزات.
+7 P2 013: یکساں شناختی نمبر کے بنیادی کوائف کا فارم (統一證號基本資料表).
+8 P2 014: معقول تناسب among period, investment, replaceability, compensation, and repayment.
+9 P2 014: a later explanation cannot readily stand in for disclosure at signing.
+10 P2 016: ولدیت کے کاغذات.
+11 P2 016: بینک میں بقایا رقم کے سرٹیفکیٹ.
+12 P2 018: a work permit for a second or further foreign national; وزارتِ محنت (勞動部) asks for capital, revenue, or a similar threshold. فروخت no longer narrows revenue to sales.
+13 P2 010 title and H1: جم میں چوٹ کے نقصان کا معاوضہ (2).
+14 P2 010: کوریائی یونیورسٹی کے طالب علم (9). Lines that already said یونیورسٹی کا طالب علم were left.
+15 P2 010 missing izafat: نقصانِ معاوضے (6). Same stack in the 018 table (1) swept.
+17 P2 covered by row 4.
+18 P2 013: مالکان … ہچکچاتے ہیں.
+21 P2 016: اثاثے اور قرضے اکٹھے تلاش کریں.
+22 P2 012: اشارے، وقت، نظر.
+23 P2 014: کاروبار چلانے کی ضرورت (narrative and the employer checklist, 2).
+24 P2 017: اوور دی کاؤنٹر سکیورٹیز.
+
+## Rows skipped
+
+a27 — Lakh grouping and rewriting «TWD 1.57M». ACCEPTED-ROUND: the bio figure stays byte-identical, and lakh/crore grouping is not parsed. Western commas in the columns were left. The reviewer’s part b already left the large figures out of the table for the same reason.
+b16 — Not a bare stem. The clause already ends رکھے۔ (U+06D2). The quote dropped ے. Sentence left.
+b19 — U+200B not deleted. 013 and 015 match the Korean source, including lines whose only character is U+200B. checkBlocks fails when the counts diverge. Wording fixes in 013 remain.
+b20 — Already the suggested sentence. Both occurrences are «والدین یا سرپرست اس کے حقیقی مالک نہیں بنتے۔», and بنت+ے is the masculine plural بنتے. The quote stopped before ے. Left.
+
+## Systemic patterns and instance counts
+
+- مدت glued to شکل: 1 (guidance services).
+- سہارا for documentary or evidentiary support: 2 (004, 007).
+- صورت for the client’s matter or legal position: 3 (two guidance answers, 003 موقف). Other صورت left.
+- «3 میں سے 1/2» as a statutory fraction: 15 (001 ×2, 002 ×9, 005 ×1, 016 ×2, 018 ×1), written ایک تہائی / دو تہائی with the digits kept in parentheses. «1 سے 3 تک» (one to three directors) was not a fraction and was left.
+- مرکز calquing “the point” or “center of life”: 5 (007 finality 1, 007 center of life 2, 016 at death 1, 018 «ابتدائی برآمد پر مرکوز کمپنیاں» 1). مرکزی مجاز ادارہ and «پر مرکوز ہے» = “focused on” were left.
+- Missing or stacked izafat: 18 (010 title 2, 010 student 9, نقصانِ معاوضے 7).
+- گنجائش standing in for time: 2 (012). Legal leeway and safety margin left.
+- Verb agreement off the subject: 2 (013 محکمہ دیکھتا ہے; 013 مالکان). عدالت … دیکھتی ہے in 003 and 016 left; عدالت is feminine.
+- English آپریشنل: 2 (014).
+- 013 quotation no longer ends on a bare کہ. The next block stays a separate sentence. Blocks were not merged. The same one-line layout elsewhere matches the source and was left.
+- U+200B deleted: 0.
+- Western thousands / «TWD 1.57M»: 0 changed.
+- Gender: Wei Tseng stays feminine (جانچی, وکیلہ, سمجھتی ہوں). The male client in 010 stays طالب علم. Son Jungmin stays masculine.
+
+002 numbers is a new WARN, extra 2×3, from the word دو inside دو تہائی. Nothing is missing; summary stays PASS. 001, 005, and 016 kept the same number counts. 018’s extra 1×14 is unchanged from HEAD.
+
+## Reviewer got wrong (not applied)
+
+- a16 suggested جانچا. That past form is masculine. The badge says she reviewed it, so the verb is جانچی.
+- b16 quoted «حفاظت رکھ۔». The file already has رکھے۔. There was no bare stem to fix.
+- b20 quoted «حقیقی مالک نہیں بنت۔» and treated بنت as the noun “daughter”. The file already has بنتے۔, which is the suggested masculine plural, in both the FAQ answer and section 7.
+- a27 is right that «1.57M» is an English abbreviation and that a Pakistan reader expects lakh grouping. ACCEPTED-ROUND forbids both the reformat of the pinned bio figure and lakh grouping. Not applied.
+- b19 is right that the zero-width spaces are not Urdu. They are in the Korean source at the same counts, and the checker rejects a divergence. Not applied.
+- a3 is right. The live statute page (fetched 2026-09-22) is titled 各類所得扣繳率標準 §3. The label was corrected. Only the leftover digit 10 is a checker constraint, not a disagreement with the identification.
+
+## §Verify
+
+cd /Users/son7/Projects/tseng-law-fix-ur-r2 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+node scripts/check-column-translation.mjs --dir src/content/columns-ur --lang ur 2>&1 | tail -8
+
+hanzi          PASS   han=57
+numbers        WARN   extra in translation (14): 1×14
+                      sourceCount=25 targetCount=39
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ur src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      23
+
+The count includes this log, plus pre-existing docs/i18n/global-plan/WO-F-ur.txt (modified) and untracked ur-a.md / ur-b.md. This lane did not edit those three.

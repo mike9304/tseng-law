@@ -40,7 +40,7 @@ Ve smlouvě je vhodné konkrétně stanovit rozsah užívání duševního vlast
 
 ### Když činnost na Tchaj-wanu provozujete sami
 
-Tchajwanská dceřiná společnost a pobočka zahraniční společnosti nejsou stejnou organizací. Dceřiná společnost je samostatná právnická osoba založená podle práva Tchaj-wanu, zatímco pobočka se zapisuje jako část ústředí (本公司) zahraniční společnosti. Liší se právní osobnost, odpovědnost ústředí, účetní a daňové zacházení, převod zisku, zastupovací oprávnění a způsob vnitřní kontroly, proto se forma organizace nemá volit jen podle kontroly nad prodejem.
+Tchajwanská dceřiná společnost a pobočka zahraniční společnosti nejsou stejnou organizací. Dceřiná společnost je samostatná právnická osoba založená podle práva Tchaj-wanu, zatímco pobočka se zapisuje jako část ústředí (本公司) zahraniční společnosti. Liší se právní osobností, odpovědností ústředí, účetním a daňovým zacházením, převodem zisku, zastupovacím oprávněním a způsobem vnitřní kontroly, proto se forma organizace nemá volit jen podle kontroly nad prodejem.
 
 Je-li potřebný postup zahraniční investice, je třeba ověřit pokyny **Odboru přezkumu investic Ministerstva hospodářství (經濟部投資審議司)** jako aktuálně příslušného orgánu. Lhůta potřebná k povolení investice, převodu peněz, zápisu společnosti nebo pobočky, otevření bankovního účtu, daňové registraci (稅籍登記) a získání kvalifikace dovozce se liší podle investora, odvětví, organizační formy, předložených podkladů a toho, zda dochází k opravě nebo doplnění. Proto místo stanovení data uvedení na trh za předpokladu určité pevné lhůty je třeba nejprve ověřit, zda se každý úkon uplatní, a nejnovější podmínky přijetí.
 
@@ -52,19 +52,19 @@ Registrace produktu a PIF nejsou týmž postupem. Registrace produktu je samosta
 
 ### Okamžik registrace produktu a doba platnosti
 
-Registrace kosmetického produktu se provádí na platformě registrace kosmetických produktů TFDA. Výrobce nebo dovozce kosmetiky musí dokončit registraci produktu předtím, než výrobek dodá, prodá, daruje, veřejně vystaví (公開陳列) nebo poskytne spotřebiteli k vyzkoušení. Přípravu nelze organizovat jen podle úplatného prodeje; do kalendáře registrace je třeba zahrnout i propagační dary a poskytnutí výrobku spotřebiteli k vyzkoušení.
+Registrace kosmetického produktu se provádí na platformě registrace kosmetických produktů TFDA. Výrobce nebo dovozce kosmetiky musí dokončit registraci produktu předtím, než výrobek dodá, prodá, daruje, veřejně vystaví (公開陳列) nebo poskytne spotřebiteli k vyzkoušení. Přípravu nelze omezit jen na úplatný prodej; do harmonogramu registrace je třeba zahrnout i propagační dary a poskytnutí výrobku spotřebiteli k vyzkoušení.
 
 Doba platnosti registrace produktu je 3 roky. Má-li se v dodávkách pokračovat, je třeba požádat o prodloužení (展延) do 3 měsíců před uplynutím platnosti. Změní-li se zapsané údaje, jako je název výrobku, použití, forma přípravku (劑型), složky a místo výroby, je třeba také ověřit, zda je nutný postup odpovídající obsahu změny.
 
-Registrace produktu je úkonem ohlášení stanovených údajů na platformě. Dokončení registrace neznamená, že jsou kompletní všechny podklady potřebné k PIF, ani není posouzením, že označení nebo reklama výrobku jsou v souladu s právem. Kalendář registrace produktu, správa PIF a přezkum označení a reklamy je třeba v praxi rozlišovat jako samostatné body souladu.
+Registrace produktu je úkonem ohlášení stanovených údajů na platformě. Dokončení registrace neznamená, že jsou kompletní všechny podklady potřebné k PIF, ani není posouzením, že označení nebo reklama výrobku jsou v souladu s právem. Harmonogram registrace produktu, správa PIF a přezkum označení a reklamy je třeba v praxi rozlišovat jako samostatné body souladu.
 
 ### Podklady PIF a stupňovité uplatnění
 
-PIF je soubor podkladů uspořádaný tak, aby bylo možné nadále vysvětlovat jakost a bezpečnost výrobku. Kromě jakosti, bezpečnosti, složení, tvrzené funkce (宣稱功能), způsobu výroby, výsledků zkoušek a hodnocení bezpečnosti je třeba podle výrobku uspořádat základní informace o výrobku a výrobci a podpůrné podklady, například etiketu. Nařízení o správě informačního spisu kosmetických produktů (化粧品產品資訊檔案管理辦法) uspořádává potřebné podklady do 16 kategorií, proto je třeba podle typu výrobku ověřit podklady každé kategorie a požadavky na podpis a kvalifikaci.
+PIF je soubor podkladů uspořádaný tak, aby bylo možné průběžně doložit jakost a bezpečnost výrobku. Kromě jakosti, bezpečnosti, složení, tvrzené funkce (宣稱功能), způsobu výroby, výsledků zkoušek a hodnocení bezpečnosti je třeba podle výrobku uspořádat základní informace o výrobku a výrobci a podpůrné podklady, například etiketu. Nařízení o správě informačního spisu kosmetických produktů (化粧品產品資訊檔案管理辦法) uspořádává potřebné podklady do 16 kategorií, proto je třeba podle typu výrobku ověřit podklady každé kategorie a požadavky na podpis a kvalifikaci.
 
 Režim PIF se uplatňoval stupňovitě podle skupin výrobků. Od 1. 7. 2026 se režim vztahuje i na zbývající kosmetické přípravky, takže se zásadně vztahuje na veškerou kosmetiku. Výjimka se omezuje na tuhé ručně vyráběné mýdlo vyrobené v místě výroby osvobozeném od registrace závodu. Výrobek není vyloučen jen proto, že je vyráběn ručně nebo že nese název mýdlo; je třeba ověřit obojí, tuhou formu i podmínku osvobození místa výroby od registrace závodu.
 
-Práci PIF, včetně hodnocení bezpečnosti, může podpořit třetí osoba, která má potřebnou kvalifikaci a způsobilost. I když se však využije podpora sestavení třetí osobou nebo služba uchování podkladů, právní odpovědnost výrobce nebo dovozce kosmetiky trvá. Je třeba vybudovat systém, který umožní původnímu výrobci, zkušebně, hodnotiteli bezpečnosti a podniku na straně Tchaj-wanu vzájemně předávat informace o změnách a nejnovější podepsané podklady.
+Přípravu PIF, včetně hodnocení bezpečnosti, může podpořit třetí osoba, která má potřebnou kvalifikaci a způsobilost. I když se však využije podpora sestavení třetí osobou nebo služba uchování podkladů, právní odpovědnost výrobce nebo dovozce kosmetiky trvá. Je třeba vybudovat systém, který umožní původnímu výrobci, zkušebně, hodnotiteli bezpečnosti a tchajwanskému podniku vzájemně předávat informace o změnách a nejnovější podepsané podklady.
 
 ### Aktualizace a uchování
 
@@ -80,7 +80,7 @@ Když příslušný orgán kontroluje PIF, oznámí to zásadně výrobci nebo d
 
 Ohlášení nepravdivých informací při registraci produktu nebo zapsání nepravdivých informací do PIF může být předmětem správní pokuty (罰鍰) 10.000 až 1.000.000 tchajwanských dolarů (新臺幣, TWD). Jsou-li naopak podklady PIF neúplné, příslušný orgán obvykle nařídí nápravu ve stanovené lhůtě (限期改正) a správní pokuta se stává otázkou teprve tehdy, když se v této lhůtě nenapraví. Nepravdivé informace a neúplnost podkladů, kterou lze ještě doplnit, nelze považovat za týž následek.
 
-Stažení nebo zničení (銷毀) není opatřením, které by automaticky následovalo každou neúplnost podkladů PIF. Bezpečnost výrobku, obsah porušení, stav nápravy a zákonné podmínky použitelné na každé opatření je třeba posoudit odděleně. Opatření, když byl potvrzen bezpečnostní problém, a požadavek na doplnění dokumentů je třeba posoudit zvlášť a postup se řídí oznámením příslušného orgánu a použitým ustanovením.
+Stažení nebo zničení (銷毀) není opatřením, které by automaticky následovalo každou neúplnost podkladů PIF. Bezpečnost výrobku, obsah porušení, stav nápravy a zákonné podmínky použitelné na každé opatření je třeba posoudit odděleně. Opatření přijatá poté, co byl potvrzen bezpečnostní problém, a požadavek na doplnění dokumentů je třeba posoudit zvlášť a postup se řídí oznámením příslušného orgánu a použitým ustanovením.
 
 ## 3. Regulace označení, propagace a reklamy
 
@@ -98,7 +98,7 @@ Správní pokuta za nepravdivou nebo nadsazenou reklamu (虛偽誇大廣告) či
 
 Příspěvky influencerů, autorů recenzí nebo prodejních partnerů mohou být podle obsahu a obchodního kontextu posouzeny jako reklama v podstatě. Vyplacení protiplnění, poskytnutí výrobku, prodejní odkaz, pokyn značky ke zveřejnění a opakovaná spolupráce jsou faktory, které se v tomto posouzení zohledňují. Naopak každý osobní příspěvek se automaticky nestává reklamou značky, proto je třeba ověřit vztah mezi tím, kdo zveřejňuje, a značkou, konkrétní obsah a míru zapojení značky.
 
-Ve smlouvě o spolupráci a v provozních pokynech lze stanovit rozsah povolených výrazů a podpůrné podklady, přezkum před zveřejněním a postup úpravy a smazání porušujících výrazů. Do rozsahu správy je vhodné zahrnout i výrazy přidávané v komentářích, ústní výklad při živém vysílání nebo krátkých videích a nesoulad mezi prodejní stránkou a etiketou. Přezkoumaný návrh, historii schválení, žádosti o úpravu a konečný příspěvek je třeba uchovat, aby bylo možné později ověřit skutkové okolnosti.
+Ve smlouvě o spolupráci a v provozních pokynech lze stanovit rozsah povolených výrazů a podpůrné podklady, přezkum před zveřejněním a postup úpravy a smazání porušujících výrazů. Do rozsahu přezkumu je vhodné zahrnout i výrazy přidávané v komentářích, ústní výklad při živém vysílání nebo krátkých videích a nesoulad mezi prodejní stránkou a etiketou. Přezkoumaný návrh, historii schválení, žádosti o úpravu a konečný příspěvek je třeba uchovat, aby bylo možné později ověřit skutkové okolnosti.
 
 ### Pořadí ověření přípravy prodeje
 

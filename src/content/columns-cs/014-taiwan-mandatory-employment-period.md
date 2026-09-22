@@ -22,7 +22,7 @@ faq:
 
 ![Snímek vysvětlující minimální dobu trvání pracovního poměru v pracovní smlouvě a otázku vrácení nákladů](../images/014-taiwan-mandatory-employment-period/featured-01.jpg)
 
-Ujednání o minimální době trvání pracovního poměru (最低服務年限約定) pracovní smlouvy (勞動契約) na Tchaj-wanu se používá spolu se slibem pracovat po určitou dobu k určení, zda při předčasném odchodu existuje povinnost vrátit náklady na školení, podpisovou prémii (簽約金) nebo prémii za setrvání (留任獎金) a zda lze zvlášť žádat smluvní pokutu (違約金). Samotná skutečnost, že existuje podepsaný text, však neurčuje platnost ujednání ani částku k vrácení. Více než název smlouvy je třeba po krocích ověřit zákonné předpoklady a skutečný průběh výplat, školení a skončení.
+Ujednání o minimální době trvání pracovního poměru (最低服務年限約定) pracovní smlouvy (勞動契約) na Tchaj-wanu vymezuje závazek pracovníka setrvat po určitou dobu a otázku, zda při předčasném odchodu vzniká povinnost vrátit náklady na školení, podpisovou prémii (簽約金) nebo prémii za setrvání (留任獎金) a zda lze zvlášť žádat smluvní pokutu (違約金). Samotná skutečnost, že existuje podepsaný text, však neurčuje platnost ujednání ani částku k vrácení. Více než název smlouvy je třeba po krocích ověřit zákonné předpoklady a skutečný průběh výplat, školení a skončení.
 
 Při přezkumu je důležité nesměšovat následující čtyři otázky.
 
@@ -37,7 +37,7 @@ I když tyto čtyři otázky figurují společně v téže smlouvě, použiteln�
 
 Ujednání není automaticky neplatné. Podle čl. 15-1 tchajwanského zákona o pracovních normách (勞動基準法) může splnit zákonné předpoklady, pokud zaměstnavatel poskytne specializované technické školení (專業技術培訓) a nese jeho náklady, nebo poskytne přiměřenou náhradu (合理補償), aby pracovník dodržel minimální dobu trvání pracovního poměru. Není nutné splnit oba předpoklady zároveň, avšak i když existuje jeden, ujednání nesmí překročit přiměřený rozsah ve světle všech okolností, jako jsou doba a náklady školení, možnost nahradit personál (人力替補可能性) a výše a rozsah náhrady.
 
-Čl. 15-1 odst. 1 upravuje alternativně dva zákonné předpoklady. První je, že zaměstnavatel poskytl pracovníkovi specializované technické školení a nesl jeho náklady; druhý, že poskytl přiměřenou náhradu výměnou za dodržení minimální doby trvání pracovního poměru. Je třeba ověřit nikoli, jaké jméno bylo ve smlouvě dáno, ale jaký základ skutečně existuje.
+Čl. 15-1 odst. 1 upravuje alternativně dva zákonné předpoklady. První je, že zaměstnavatel poskytl pracovníkovi specializované technické školení a nesl jeho náklady; druhý, že poskytl přiměřenou náhradu výměnou za dodržení minimální doby trvání pracovního poměru. Je třeba ověřit nikoli, jak se tento základ ve smlouvě nazývá, ale jaký základ skutečně existuje.
 
 Čl. 15-1 vyžaduje jeden ze dvou zákonných předpokladů a navíc zvlášť přezkum přiměřenosti. To neznamená, že je vždy třeba poskytnout zároveň specializované technické školení i přiměřenou náhradu, ani že celé ujednání je automaticky platné jen proto, že se jeden z nich formálně zapíše.
 
@@ -47,11 +47,11 @@ Okolnost, že pracovník smlouvu podepsal, může být podkladem, který potvrzu
 
 ## 2. První zákonný předpoklad: specializované technické školení a nesení nákladů
 
-Aby bylo ujednání založeno na školení, musí zaměstnavatel pracovníkovi skutečně poskytnout specializované technické školení a nést jeho náklady. Nestačí v plánu školení napsat, že jde o odborný kurz, nebo ve smlouvě zapsat odhadované náklady. Je třeba doklady propojit s tématem školení, s odborností a techničností potřebnou k místu, konkrétní dobu, zda bylo dokončeno, a skutečný výdaj.
+Aby bylo ujednání založeno na školení, musí zaměstnavatel pracovníkovi skutečně poskytnout specializované technické školení a nést jeho náklady. Nestačí v plánu školení napsat, že jde o odborný kurz, nebo ve smlouvě zapsat odhadované náklady. Doklady musí propojit téma školení, odborné a technické dovednosti potřebné pro dané místo, konkrétní dobu, dokončení a skutečný výdaj.
 
 Předmětem přezkumu jsou nejen přímo ověřitelné náklady, jako honoráře vnějších lektorů, školné vzdělávacího zařízení a poplatky za materiály nebo vybavení, ale i základ výpočtu vnitřních nákladů, které zaměstnavatel tvrdí. Školil-li vnitřní personál, je třeba posoudit, čí a jaký čas byl vynaložen, čím se to liší od obvyklého dohledu nebo předání místa a zda existuje základ k přičtení tohoto nákladu danému pracovníkovi. Odhadované částky ani částky rozvržené rovnoměrně samy o sobě neprokazují skutečný výdaj.
 
-Program, kalendář školení, prezenční listina, výsledek hodnocení, osvědčení o dokončení, faktury a stvrzenky jsou základními podklady k potvrzení skutečnosti školení a nákladů. Smlouva mezi zaměstnavatelem a vzdělávacím zařízením, doklady o platbě a podmínky vrácení, viděny společně, umožňují přesněji zachytit skutečné břemeno. Pokud pracovník zaplatil část nákladů přímo nebo je nesla třetí osoba, je třeba také rozlišit, kdo nesl konečné náklady.
+Program, harmonogram školení, prezenční listina, výsledek hodnocení, osvědčení o dokončení, faktury a stvrzenky jsou základními podklady k potvrzení skutečnosti školení a nákladů. Smlouva mezi zaměstnavatelem a vzdělávacím zařízením, doklady o platbě a podmínky vrácení, posuzovány společně, umožňují přesněji zachytit skutečné břemeno. Pokud pracovník zaplatil část nákladů přímo nebo je nesla třetí osoba, je třeba také rozlišit, kdo nesl konečné náklady.
 
 Hranice mezi obecnou adaptací na práci a specializovaným technickým školením nezávisí jen na místě školení ani na tom, kdo školení pořádá. Vnitřní kurz může prokázat konkrétní odborný a technický obsah a značnou investici a dlouhý kurz vnějšího zařízení může být ve skutečnosti obecným úvodním školením. Proto nelze jednotně vyloučit veškeré vnitřní školení ani uznat zákonný předpoklad jen proto, že kurz je drahý nebo dlouhý.
 
@@ -65,7 +65,7 @@ Nejprve je třeba ověřit účel výplaty. Zda jde o obecnou mzdovou podmínku 
 
 Pokyn (函釋) tchajwanského Ministerstva práce (勞動部) ze 5. 6. 2026 vysvětluje, že má-li se jako přiměřená náhrada ujednání o minimální době trvání pracovního poměru vzít prémie za setrvání, podpisová prémie nebo jiné plnění poskytnuté předem, musí být tato role jasně sdělena. Že zaměstnavatel dodatečně znovu vyloží účel výplaty nebo znovu zařadí část mzdy jako náhradu, obtížně nahrazuje sdělení v okamžiku smlouvy.
 
-Přiměřenost náhrady se neposuzuje jen podle částky. Posuzuje se společně, zda pracovník skutečně získá dodatečný prospěch, zda jsou podmínky výplaty jasné, jak se započte část odpovídající již odpracované době a zda rozsah vrácení není nadměrný. I když náhrada existuje, není bez omezení dovolena jakákoli délka setrvání ani jakákoli výše odpovědnosti za vrácení.
+Přiměřenost náhrady se neposuzuje jen podle částky. Posuzuje se společně, zda pracovník skutečně získá dodatečný prospěch, zda jsou podmínky výplaty jasné, jak pracovník nabývá část odpovídající již odpracované době a zda rozsah vrácení není nadměrný. I když náhrada existuje, není bez omezení dovolena jakákoli délka setrvání ani jakákoli výše odpovědnosti za vrácení.
 
 Je také důležité, aby text smlouvy a skutečná výplata souhlasily. Ověření, zda byla výplata zpožděna nebo rozdělena, zda je podmíněná, jaká je skutečně přijatá částka po daních a srážkách a zda existovalo zvlášť písemné sdělení, pomáhá posoudit rozsah náhrady a skutečný prospěch pracovníka.
 
@@ -80,13 +80,13 @@ I když existuje jeden ze zákonných předpokladů, sjednaná doba a odpovědno
 
 U prvního prvku se posuzuje, jak dlouho školení skutečně trvalo a kolik zaměstnavatel nesl. Nestačí předložit úhrn; je vhodné společně ověřit doklady podle položek, částku přičtenou každému pracovníkovi, způsobilost, kterou školení poskytlo, a již získanou část investice.
 
-Druhý prvek, možnost nahradit pracovníka, se neurčuje jen tvrzením zaměstnavatele o obtížnosti náboru. Posuzuje se, zda je možné získat personál téhož místa nebo podobného místa, jaká kvalifikace a úroveň odbornosti jsou potřebné, jaká je obvyklá doba pokrytí a zda provozní potřeba, kterou zaměstnavatel tvrdí, souhlasí s objektivními podklady.
+Druhý prvek, možnost nahradit pracovníka, se neurčuje jen tvrzením zaměstnavatele o obtížnosti náboru. Posuzuje se, zda je možné získat personál téhož místa nebo podobného místa, jaká kvalifikace a úroveň odbornosti jsou potřebné, jak dlouho obvykle trvá obsadit totéž nebo podobné místo a zda provozní potřeba, kterou zaměstnavatel tvrdí, souhlasí s objektivními podklady.
 
 Třetí prvek vidí nejen výši náhrady, ale i rozsah. Důležité je, kdy se vyplácí a za jakých podmínek se pracovníkovi s konečnou platností nabývá nárok, jak odpovídá sjednané době jako celku a zda se při skončení v průběhu odráží již splněná doba. Prémie téhož jména se může posoudit odlišně podle struktury smlouvy a skutečnosti.
 
 Čtvrtý prvek může zahrnovat různé okolnosti, které ovlivňují přiměřenost, jako průběh uzavření ujednání, povaha práce, co bylo stranám vysvětleno, skutečně odpracovaná doba a důvod skončení. Význam každého prvku se může lišit podle věci a okolnosti k zohlednění se neomezují na předchozí příklady. Proto je třeba posoudit bez opomenutí relevantní skutečnosti, které se objevují ve spisu.
 
-Nakonec je třeba srozumitelný poměr mezi sjednanou dobou, skutečnou investicí zaměstnavatele, obtížností nahrazení pracovníka, náhradou, kterou pracovník obdržel, a břemenem vrácení. Nelze předem určit platnost jen proto, že jde o určité povolání, ani beze změny uplatnit závěr z jiné věci. Je třeba společně posoudit návrh v okamžiku uzavření smlouvy a skutečný stupeň splnění v okamžiku skončení.
+Nakonec musí být přiměřený poměr mezi sjednanou dobou, skutečnou investicí zaměstnavatele, obtížností nahrazení pracovníka, náhradou, kterou pracovník obdržel, a břemenem vrácení. Nelze předem určit platnost jen proto, že jde o určité povolání, ani beze změny uplatnit závěr z jiné věci. Je třeba společně posoudit návrh v okamžiku uzavření smlouvy a skutečný stupeň splnění v okamžiku skončení.
 
 ## 5. Školení, které nemůže založit ujednání
 
@@ -108,7 +108,7 @@ Sdělení se nemá poprvé předložit, až když po výplatě vznikne spor. Pra
 
 K uplatnění zásady poměru k nesplněné době je třeba nejprve stanovit den začátku a konce ujednání, skutečně odpracované dny a základ výpočtu vrácení. Například pevná částka, která nijak neodráží již splněnou dobu, se musí posoudit ve světle kritéria poměrnosti podle pokynu. Je-li struktura rozdělené výplaty nebo nabytí nároku po etapách, je třeba zvlášť vypočíst, které době odpovídá každá část.
 
-Otázku vrácení je třeba ověřit po pořadí: platnost ujednání, právní povaha vyplacené částky, již odpracovaná doba, důvod skončení a vzorec vrácení; požadovaná částka se neurčuje jen proto, že smlouva používá výraz „smluvní pokuta“.
+Otázku vrácení je třeba ověřit v tomto pořadí: platnost ujednání, právní povaha vyplacené částky, již odpracovaná doba, důvod skončení a vzorec vrácení; požadovaná částka se neurčuje jen proto, že smlouva používá výraz „smluvní pokuta“.
 
 Doložka o vrácení celé částky, pevná smluvní pokuta nesouvisející se skutečnou ztrátou a jednostranná srážka ze mzdy se neposuzují jako jeden problém. Právní základ, obsah dohody, omezení pracovního práva a zákonnost srážky se musí ověřit zvlášť. Částka zapsaná ve výzvě zaměstnavatele nebo skutečnost, že pracovník zaplatil část, rovněž neurčuje zbývající právní otázky.
 
@@ -152,7 +152,7 @@ K předcházení sporu nebo k posouzení již vzneseného nároku nelze číst j
 
 1. Nejprve se určí zákonný předpoklad: zda bylo poskytnuto specializované technické školení a neseny náklady, nebo zda byla poskytnuta přiměřená náhrada za slib setrvání.
 2. Obecné, pravidelné a zákonně povinné školení se oddělí od specializovaného technického školení podle skutečného obsahu kurzu, doby a účelu.
-3. Uchovává se program kurzu, kalendář, záznam dokončení, faktury, stvrzenky a podklady o tom, kdo nesl náklady, a zvlášť se zaznamená základ vnějších a vnitřních nákladů.
+3. Uchovává se program kurzu, harmonogram, záznam dokončení, faktury, stvrzenky a podklady o tom, kdo nesl náklady, a zvlášť se zaznamená základ vnějších a vnitřních nákladů.
 4. Písemně se jasně propojí účel náhrady, den výplaty, částka, podmínky nabytí nároku, sdělení učiněné pracovníkovi a vzorec vrácení nesplněné doby.
 5. Dokumentuje se základ výpočtu sjednané doby, možnost nahradit personál téhož místa nebo podobného místa a vztah mezi provozní potřebou zaměstnavatele a skutečnou investicí.
 6. Posuzuje se, zda sjednaná doba a částka vrácení jsou úměrné rozsahu nákladů na školení nebo náhrady, a do vyrovnání se odráží již odpracovaná doba.
@@ -163,7 +163,7 @@ I při použití vzorové smlouvy nelze mechanicky uplatnit tutéž dobu a tuté
 
 ### Body, které má pracovník ověřit
 
-1. Shromáždí se originál podepsané pracovní smlouvy a dohod o změně, vysvětlující materiály náboru, školicí materiály, program, kalendář a záznam dokončení.
+1. Shromáždí se originál podepsané pracovní smlouvy a dohod o změně, vysvětlující materiály náboru, školicí materiály, program, harmonogram a záznam dokončení.
 2. Ověří se odborný a technický obsah školení, zda jde o obecné adaptační školení nebo zákonně povinné školení, částky faktur a stvrzenek a kdo skutečně nesl náklady.
 3. Zajistí se podklady výplat podpisové prémie, prémie za setrvání a jiných plnění poskytnutých předem, sdělení o účelu náhrady, den výplaty, podmínky nabytí nároku a vzorec vrácení.
 4. Zvlášť se zaznamená základ výpočtu sjednané doby, již odpracovaná doba, zbývající doba a možnost nahradit personál, kterou zaměstnavatel tvrdí.

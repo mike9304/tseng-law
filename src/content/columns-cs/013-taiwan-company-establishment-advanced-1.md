@@ -17,7 +17,7 @@ V poslední době mnoho osob úspěšně založilo společnost (公司) na Tchaj
 
 Otázky, které se při zakládání často opakují, jsou shrnuty níže.
 
-Osoby, které si přečetly [**základy založení společnosti**](/cs/columns/taiwan-company-establishment-basics), mohou následně nahlédnout i do této podrobnější prohloubené části.
+Osoby, které si přečetly [**základy založení společnosti**](/cs/columns/taiwan-company-establishment-basics), mohou následně nahlédnout i do této podrobnější části.
 
 Následující otázky a odpovědi mají pomoci osobám, které zvažují založení společnosti na Tchaj-wanu.
 
@@ -61,7 +61,7 @@ Ve stejné lhůtě je také dost času otevřít přípravný účet v bance a p
 
 Je to možné.
 
-Banka obecně vyžaduje dvojí ověření totožnosti,
+Banka obecně vyžaduje dvojí ověření totožnosti.
 
 Nemáte-li průkaz k pobytu, lze u tchajwanské imigrační správy požádat o „**výpis základních údajů k jednotnému identifikačnímu číslu**“ (統一證號基本資料表).
 
@@ -77,7 +77,7 @@ Přezkumná komise Ministerstva hospodářství sice posuzuje zázemí investora
 
 posouzení však není nadměrně přísné.
 
-Lze uvést různorodé pracovní zkušenosti, včetně brigád,
+Lze uvést různorodé pracovní zkušenosti, včetně brigád.
 
 Vyložte je podrobně tak, aby bylo možné přesvědčit osoby provádějící posouzení.
 

@@ -85,7 +85,7 @@ vypukne-li spor,
 
 podle toho, kdo první ukončí smlouvu s dostatečným důvodem,
 
-odstupné nemusí být vyplaceno, nebo může být žádáno.
+může strana, která smlouvu ukončila první, odstupné nevyplatit, nebo je může žádat.
 
 Proto v pracovněprávních sporech (勞資糾紛) na Tchaj-wanu
 

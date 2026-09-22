@@ -8,7 +8,7 @@ categories:
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Pokud jsou zákazníci na Tchaj-wanu, je nutné tam vždy založit společnost?"
-    a: "Společnost není nutné zakládat jen proto, že zákazník je na Tchaj-wanu. Je třeba posoudit požadavky zákazníka a skutečnou činnost obchodu, zařízení, personálu a strukturu operací na Tchaj-wanu a poté zvolit nejvhodnější subjekt."
+    a: "Společnost není nutné zakládat jen proto, že zákazník je na Tchaj-wanu. Je třeba posoudit požadavky zákazníka a skutečnou činnost obchodu, zařízení, personálu a strukturu transakce na Tchaj-wanu a poté zvolit nejvhodnější subjekt."
   - q: "Zmizí odpovědnost mateřské společnosti zcela, když je založena tchajwanská společnost?"
     a: "Pokud založíte dceřinou společnost, nikoli pobočku, mateřská společnost zásadně nenese povinnosti ze smluv podepsaných jménem dceřiné společnosti. Je však třeba ověřit výjimky pro zneužití právní osobnosti a to, zda mateřská společnost poskytla ručení nebo převzala vlastní smluvní povinnosti."
   - q: "Lze začít přes distributora a poté přejít na společnost na Tchaj-wanu?"
@@ -34,7 +34,7 @@ Než ústředí rozhodne o struktuře vstupu, může interně vyjasnit:
 | Provozní bod | Otázky k vyjasnění nejprve |
 |---|---|
 | Smlouvy se zákazníky | Kdo bude stranou smlouvy: zahraniční ústředí, tchajwanská dceřiná společnost, nebo místní zástupce? |
-| Nabídky a objednávky | Kdo s konečnou platností potvrdí cenu a lhůtu a kam až sahá oprávnění odpovědného na Tchaj-wanu? |
+| Nabídky a objednávky | Kdo s konečnou platností potvrdí cenu a lhůtu a kam až sahá oprávnění odpovědné osoby na Tchaj-wanu? |
 | Zboží a zásoby | Kdo dováží, drží a spravuje zásoby a vyřizuje vrácení a výměnu zboží? |
 | Personál | Přijíždějí zaměstnanci ústředí, přijímá se na Tchaj-wanu, nebo se práce svěří vnějšímu dodavateli? |
 | Instalace a technická podpora | Kdo nese povinnost podpory vůči zákazníkovi a řeší problémy při práci na místě? |
@@ -71,9 +71,9 @@ Kapitál se dělí na akcie. Zásadně jsou potřeba 2 nebo více akcionářů, 
 
 Když zahraniční společnost zakládá tchajwanskou dceřinou společnost, název se zásadně předem ověří a žádá se o investiční povolení u Odboru přezkumu investic Ministerstva hospodářství (經濟部投資審議司). Po schválení se převedou prostředky, určí se výše investice a kapitál ověří auditor (會計師), poté se dokončí založení a daňový zápis.
 
-Naproti tomu při zakládání tchajwanské pobočky běžné zahraniční společnosti zásadně není třeba investičního povolení Odboru přezkumu investic; Odbor obchodního rozvoje Ministerstva hospodářství (經濟部商業發展署) provádí zápis pobočky a související určení kapitálu. Nadále jsou nutné předběžné ověření názvu, převod provozního kapitálu, ověření kapitálu a daňový zápis; kalendář je obvykle kratší.
+Naproti tomu při zakládání tchajwanské pobočky běžné zahraniční společnosti zásadně není třeba investičního povolení Odboru přezkumu investic; Odbor obchodního rozvoje Ministerstva hospodářství (經濟部商業發展署) provádí zápis pobočky a související určení kapitálu. Nadále jsou nutné předběžné ověření názvu, převod provozního kapitálu, ověření kapitálu a daňový zápis; časový plán je obvykle kratší.
 
-Výše uvedené je doporučení k uspořádání smluv. Samotná volba právní formy transakci nečiní zákonnou a vznik sporu nevylučuje.
+Výše uvedené porovnává jen postup zápisu pobočky a dceřiné společnosti. Samotná volba právní formy transakci nečiní zákonnou a vznik sporu nevylučuje.
 
 ## 5. Zápis společnosti a zákonná práce inženýra nejsou totéž
 
@@ -95,13 +95,13 @@ Následující situace jsou hypotetické k podpoře úvahy; neslibují určený 
 
 Při první konzultaci lze uspořádat základní údaje ústředí a vkladatelů, obecný popis výrobku nebo služby, předpokládaný tok transakcí, plán personálu a zařízení na Tchaj-wanu a smluvní a podpůrné podmínky, které požadují zákazníci. Co ještě není rozhodnuto, lze označit jako „nevyřízeno“.
 
-Při prvním kontaktu není nutné připojit veškeré důvěrné podklady zákazníka nebo podrobné údaje o procesu. Po poskytnutí názvu protistrany potřebného k ověření střetu zájmů se potřebné podklady a způsob předání určí podle pokynů odpovědné osoby.
+Při prvním kontaktu není nutné připojit veškeré důvěrné podklady zákazníka nebo podrobné údaje o procesu. Po poskytnutí názvu protistrany potřebného k ověření střetu zájmů se potřebné podklady a způsob předání určí podle pokynů odpovědné advokátky.
 
 ## Často kladené otázky
 
 ### Pokud jsou zákazníci na Tchaj-wanu, je nutné tam vždy založit společnost?
 
-Společnost není nutné zakládat jen proto, že zákazník je na Tchaj-wanu. Je třeba posoudit požadavky zákazníka a skutečnou činnost obchodu, zařízení, personálu a strukturu operací na Tchaj-wanu a poté zvolit nejvhodnější subjekt.
+Společnost není nutné zakládat jen proto, že zákazník je na Tchaj-wanu. Je třeba posoudit požadavky zákazníka a skutečnou činnost obchodu, zařízení, personálu a strukturu transakce na Tchaj-wanu a poté zvolit nejvhodnější subjekt.
 
 ### Zmizí odpovědnost mateřské společnosti zcela, když je založena tchajwanská společnost?
 

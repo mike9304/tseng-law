@@ -53,9 +53,9 @@ Výkon tohoto povolání osobou bez zrakového postižení (非視障者) byl ne
 
 Tento zákon platil do roku 2003; tehdy pan Lin, který vedl kadeřnictví,
 
-zaměstnal pracovníky bez zrakového postižení k službám mytí vlasů a masáže, a policie to zjistila.
+zaměstnal dva pracovníky bez zrakového postižení ke službám mytí vlasů a masáže, a policie to zjistila.
 
-Podle tehdejšího práva byla panu Linovi a těmto pracovníkům uložena správní pokuta (罰鍰) ve výši 40.000 TWD, 10.000 TWD a 20.000 TWD v novém tchajwanském dolaru (新臺幣).
+Podle tehdejšího práva byla panu Linovi uložena správní pokuta (罰鍰) 40.000 TWD a dvěma pracovníkům 10.000 TWD a 20.000 TWD v novém tchajwanském dolaru (新臺幣).
 
 Pan Lin považoval tuto sankci za velmi nespravedlivou a požádal o ústavní výklad.
 

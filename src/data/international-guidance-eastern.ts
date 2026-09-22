@@ -151,7 +151,7 @@ export const czechGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Manželství, rodina a dědictví',
           paragraphs: [
-            'Vedeme rozvod (離婚), vypořádání majetku, výkon a nesení práv a povinností k nezletilým dětem (未成年子女權利義務之行使或負擔), styk s dítětem (會面交往) a dědictví (繼承), a to i tehdy, nacházejí-li se strany nebo majetek v různých státech. Přeshraniční rodinné věci často vyžadují další posouzení záznamů evidence domácností (戶籍), formy listin a jejich průkaznosti na Tchaj-wanu.',
+            'Vedeme rozvod (離婚), vypořádání majetku, výkon práv a nesení povinností vůči nezletilým dětem (未成年子女權利義務之行使或負擔), styk s dítětem (會面交往) a dědictví (繼承), a to i tehdy, nacházejí-li se strany nebo majetek v různých státech. Přeshraniční rodinné věci často vyžadují další posouzení záznamů evidence domácností (戶籍), formy listin a jejich průkaznosti na Tchaj-wanu.',
             'Protože rodinné věci s sebou často nesou lhůty a souběžná řízení, mělo by první shrnutí uvést vztah mezi stranami, současné bydliště a již probíhající řízení.',
           ],
         },

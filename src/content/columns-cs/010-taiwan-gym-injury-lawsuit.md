@@ -67,7 +67,7 @@ Níže uvedené je obecná informace k vysvětlení sporů o úraz v posilovně 
 
 ## 1. Po úrazu v posilovně na Tchaj-wanu, jaké právní postupy lze posoudit?
 
-[Čl. 7 tchajwanského zákona o ochraně spotřebitele (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) stanoví, že když podnik poskytuje službu, musí zajistit, aby tato služba měla bezpečnost, kterou lze rozumně očekávat podle odborné nebo technické úrovně v okamžiku poskytnutí.
+[Čl. 7 tchajwanského zákona o ochraně spotřebitele (消費者保護法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=7&pcode=J0170001) stanoví, že když podnik poskytuje službu, musí zajistit, aby tato služba dosahovala bezpečnosti, kterou lze rozumně očekávat podle odborné nebo technické úrovně v okamžiku poskytnutí.
 
 To neznamená, že odpovědnost podniku nebo trenéra je uznána pokaždé, když k úrazu dojde v posilovně. Je třeba posuzovat věc po věci, jaká konkrétní povinnost péče existovala, zda byla porušena, zda je příčinná souvislost mezi porušením a úrazem, zda vznikla skutečná škoda, jaké námitky má protistrana a zda existuje důkaz dokládající každé tvrzení a každou námitku.
 
@@ -99,7 +99,7 @@ Položky škody, jejichž uplatnění lze posoudit, jsou následující. Skuteč
 4. **Ztráta pracovní schopnosti (勞動能力減損)**: Jsou-li uznány následky a trvalé snížení pracovní schopnosti, lze hodnotit společně podle lékařských a profesních podkladů, stupně postižení, povolání a příjmu a zbývající doby pracovní způsobilosti. Samotné procento postižení náhradu neurčuje a ztráta se nepočítá automaticky až do okamžiku odchodu do důchodu.
 5. **Ušlý příjem v době zotavení (收入損失)**: Dobu, po kterou skutečně nebylo možné pracovat kvůli léčbě nebo rekonvalescenci, a z toho vyplývající snížení příjmu je třeba prokázat mzdovými, daňovými a docházkovými podklady.
 6. **Nemajetková škoda (非財產上損害)**: Částku za duševní útrapy stanoví soud podle prvků každé věci, jako je stupeň úrazu, doba léčby, následky a konkrétní okolnosti strany.
-7. **Sankční náhrada škody (懲罰性賠償金)**: Existuje pravidlo, podle kterého v řízení, na něž se vztahuje zákon o ochraně spotřebitele, lze, vznikla-li škoda úmyslem podniku, žádat až 5násobek skutečné škody; při hrubé nedbalosti až 3násobek; a při nedbalosti až do výše skutečné škody. Zda se [čl. 51 tchajwanského zákona o ochraně spotřebitele](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na věc vztahuje a zda a v jaké výši je skutečná náhrada, závisí na posouzení soudu ohledně konkrétních předpokladů a důkazů.
+7. **Sankční náhrada škody (懲罰性賠償金)**: Existuje pravidlo, podle kterého v řízení, na něž se vztahuje zákon o ochraně spotřebitele, lze, vznikla-li škoda úmyslem podniku, žádat až 5násobek skutečné škody; při hrubé nedbalosti až 3násobek; a při nedbalosti až do výše skutečné škody. Zda se [čl. 51 tchajwanského zákona o ochraně spotřebitele](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) na věc vztahuje a zda bude sankční náhrada skutečně přiznána a v jaké výši, závisí na posouzení soudu ohledně konkrétních předpokladů a důkazů.
 
 ## 5. I když má posilovna pojištění odpovědnosti (責任保險), mohou být existence náhrady a výše sporné?
 

@@ -15,7 +15,7 @@ featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg
 
 ![Příkladový obrázek zaznamenávající polohu vozidel a stopy na vozovce na místě dopravní nehody](../images/003-taiwan-traffic-accident-procedure/img-01.jpg)
 
-Dojde-li na Tchaj-wanu k dopravní nehodě (交通事故), je třeba nejprve zajistit bezpečnost, provést oznámení a zachování důkazů a poté postupně posoudit lhůtu nároku, zavinění (過失) a rozsah smíru (和解). Níže je uvedeno obecné pořadí postupu založené na předpisech Tchaj-wanu a pokynech veřejných orgánů; odpovědnost a konkrétní postup se mohou lišit podle okolností každé nehody.
+Dojde-li na Tchaj-wanu k dopravní nehodě (交通事故), je třeba nejprve zajistit bezpečnost, oznámit nehodu a zachovat důkazy a poté postupně posoudit lhůtu nároku, zavinění (過失) a rozsah smíru (和解). Níže je uvedeno obecné pořadí postupu založené na předpisech Tchaj-wanu a pokynech veřejných orgánů; odpovědnost a konkrétní postup se mohou lišit podle okolností každé nehody.
 
 ## Q1. Lze po nehodě opustit místo události?
 
@@ -93,8 +93,8 @@ Při nesouhlasu s názorem znaleckého posudku lze požádat o přezkum, ten vš
 
 Nárok založený na článku 184 občanského zákoníku předpokládá protiprávní porušení práva, příčinnou souvislost s nehodou a důkaz škody. Samotná skutečnost, že k nehodě došlo, nevede k tomu, že všechny níže uvedené položky jsou uznány. Článek 216 občanského zákoníku je kritériem stanovení rozsahu skutečné škody a ušlého prospěchu (所失利益).
 
-- **Poranění**: Podle článku 193 občanského zákoníku lze posoudit potřebné lékařské náklady (醫療費用), dodatečné náklady každodenního života, jako náklady péče (看護費用), dopravy na léčení (就醫交通費) a technické pomoci, a také ztrátu příjmů (收入損失) skutečnou neschopností práce a snížení pracovní schopnosti (勞動能力減損). Podle článku 195 občanského zákoníku lze také posoudit morální škodu.
-- **Smrt**: Podle článku 192 občanského zákoníku, nastane-li základ, lze posoudit lékařské náklady před smrtí a náklady zvýšených životních potřeb, náklady pohřbu (殯葬費) a ztrátu výživného (扶養利益損失) osoby, která měla zákonné právo na výživné. Podle článku 194 občanského zákoníku lze také posoudit morální škodu některých příbuzných.
+- **Poranění**: Podle článku 193 občanského zákoníku lze posoudit potřebné lékařské náklady (醫療費用), dodatečné náklady každodenního života, jako náklady péče (看護費用), dopravy na léčení (就醫交通費) a technické pomoci, a také ztrátu příjmů (收入損失) skutečnou neschopností práce a snížení pracovní schopnosti (勞動能力減損). Podle článku 195 občanského zákoníku lze také posoudit nemajetkovou újmu.
+- **Smrt**: Podle článku 192 občanského zákoníku, nastane-li základ, lze posoudit lékařské náklady před smrtí a náklady zvýšených životních potřeb, náklady pohřbu (殯葬費) a ztrátu výživného (扶養利益損失) osoby, která měla zákonné právo na výživné. Podle článku 194 občanského zákoníku lze také posoudit nemajetkovou újmu některých příbuzných.
 - **Majetek**: Podle článku 196 občanského zákoníku lze uplatnit odůvodněnou skutečnou majetkovou škodu, včetně nákladů opravy vozidla nebo ztráty hodnoty.
 
 ## Q8. Trvá-li léčení, jak předkládat listiny lékařských nákladů?
@@ -151,11 +151,11 @@ Skutečnost, že běžná mzda se udržuje bez změny, automaticky nevylučuje n
 
 Je-li trvalá funkční porucha podstatně sporná, může být lékařský znalecký posudek užitečný, avšak není povinný ve všech věcech. Posuzuje se také započtení zavinění z článku 217 občanského zákoníku a jiné důvody úpravy.
 
-Když výpočet nastává v jedné kapitálové částce, lze zvážit srážku mezilehlých úroků (中間利息扣除). Hoffmannova kalkulačka (霍夫曼) Soudního jüanu je jen výpočetním nástrojem, nikoli právně povinnou metodou, a neslibuje výsledek. Podle článku 193 občanského zákoníku, na návrh strany, může soud také uložit platbu v pravidelné rentě pod podmínkou zajištění.
+Když výpočet nastává v jedné kapitálové částce, lze zvážit odpočet meziúroku (中間利息扣除). Hoffmannova kalkulačka (霍夫曼) Soudního jüanu je jen výpočetním nástrojem, nikoli právně povinnou metodou, a neslibuje výsledek. Podle článku 193 občanského zákoníku, na návrh strany, může soud také uložit platbu v pravidelné rentě pod podmínkou zajištění.
 
-## Q13. Jak se hodnotí zadostiučinění za morální škodu (慰撫金) z titulu nemajetkových škod?
+## Q13. Jak se hodnotí zadostiučinění za nemajetkovou újmu (慰撫金)?
 
-Zadostiučinění za morální škodu z titulu nemajetkových škod se hodnotí stanovením přiměřené částky, existuje-li protiprávní zásah do těla nebo zdraví, podle článku 195 občanského zákoníku.
+Zadostiučinění za nemajetkovou újmu se hodnotí stanovením přiměřené částky, existuje-li protiprávní zásah do těla nebo zdraví, podle článku 195 občanského zákoníku.
 
 Soud posuzuje okolnosti každé věci, hodnotí společně obsah poranění a léčení, trvalé účinky, bolest a dopad na život, věk a postavení, socioekonomické okolnosti a důkazy stran. Je proto obtížné předjímat výsledek jen z typizovaného rozsahu.
 

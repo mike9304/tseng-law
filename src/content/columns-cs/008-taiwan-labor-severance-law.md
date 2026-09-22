@@ -104,19 +104,19 @@ společnost vzala pana B za cíl.
 
 ​
 
-Jednoho dne vedoucí pracovníci povolali B na pohovor
+Jednoho dne vedoucí pracovníci povolali pana B na pohovor
 
 a náhle mu začali vytýkat, že nepracuje svědomitě.
 
-Společnost by měla obtíže,
+Vedoucí řekli, že společnost má obtíže,
 
-B by se měl obětovat a dát příklad
+Pan B by se měl obětovat a dát příklad
 
 a snížit mzdu a funkci.
 
-Jinak by B měl společnost opustit;
+Jinak by pan B měl společnost opustit;
 
-předložili B list formátu A4
+předložili panu B list formátu A4
 
 a vyzvali ho, aby na něj napsal: „Já, [jméno a příjmení], dobrovolně snižuji funkci a mzdu“
 
@@ -128,7 +128,7 @@ aby je následovali.
 
 ​
 
-B byl zaměstnancem s nejlepším výsledkem ve středním regionu Tchaj-wanu,
+Pan B byl zaměstnancem s nejlepším výsledkem ve středním regionu Tchaj-wanu,
 
 přinesl společnosti mnoho peněz
 
@@ -136,11 +136,11 @@ a pracoval každý den svědomitě,
 
 proto tyto nerozumné požadavky silně odmítl.
 
-B odmítl toto napsat,
+Pan B odmítl toto napsat,
 
 a vedoucí pracovníci společnosti mu nakonec v hněvu řekli, ať odejde.
 
-B opustil, s pocitem křivdy a smutku,
+Pan B opustil, s pocitem křivdy a smutku,
 
 společnost, v níž byl 10 let,
 
@@ -158,7 +158,7 @@ a sama odešla
 
 ​
 
-B však po změně vedení
+Pan B však po změně vedení
 
 rozpoznal, že společnost chce odstraňovat zaměstnance nevhodným způsobem,
 
@@ -166,7 +166,7 @@ a zjistil to brzy
 
 a protože již objevil nabídky práce před odchodem zaměstnanců,
 
-B v den, kdy šel na pohovor,
+Pan B v den, kdy šel na pohovor,
 
 nahrál celý průběh mobilním telefonem
 

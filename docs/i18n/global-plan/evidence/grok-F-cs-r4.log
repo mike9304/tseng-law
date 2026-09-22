@@ -1,0 +1,83 @@
+WO-F-cs r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-cs-r4
+date: 2026-09-23
+
+## Rows
+
+Numbered findings: cs-a 27, cs-b 37 (64). No P3 rows in either review.
+
+Applied: 58 numbered rows, some with the adaptations below.
+Skipped: 6 numbered rows (cs-a 1, cs-a 14, cs-a 15, cs-a 17, cs-b 10, cs-b 20).
+
+No test file was edited. No pinned Czech expectation in `src/lib/__tests__/guidance-*cs*.test.ts` matched a string that changed. `GUIDANCE_LLMS_NOTICES.cs` was not edited. "TWD 1.57M" was not touched. Disclosure-parity regexes were not touched. 005, 012 and 015 were not edited.
+
+### Applied
+cs-a 2–13, 16, 18–27.
+cs-b 1–9, 11–19, 21–37.
+
+Adaptations (still applied):
+- cs-a 9. The two employees and the three fine amounts are now assigned as in the English source. Thousands stay dotted (`40.000`, `10.000`, `20.000`); the reviewer's spaces were not used.
+- cs-a 21. Article 9 now puts the penalty before the case it covers. Amounts stay `500.000` and `2.500.000`, and the glosses (拘役) and (罰金) stay.
+- cs-a 13. The line stays its own block. It now reads "může strana, která smlouvu ukončila první, odstupné nevyplatit, nebo je může žádat." The preceding fragment "podle toho, kdo první ukončí smlouvu s dostatečným důvodem," was left so the two blocks still form one sentence.
+- cs-b 8. The English sentence is "The foregoing is contract-design advice." The two paragraphs above compare branch and subsidiary registration, so the Czech label now says that comparison. The next sentence, that choosing a form does not make a transaction lawful, was left.
+- cs-b 30. "I když závěť opatrovníka jmenuje" is ambiguous (opatrovníka is both genitive and accusative). The line is "I když závěť jmenuje opatrovníka,".
+
+### Skipped
+- cs-a 1. ", čl. 10" on the withholding-rate link. The URL is `flno=3` and was not changed. Korean 영업세법 제10조 still contributes a counted 10; dropping it fails `numbers`. The label stays.
+- cs-a 14 and cs-b 10. Space thousands ("500 000", "1 579 589"). ACCEPTED-ROUND skips them, and `NUMBER_THOUSAND_STYLE.cs` is `dot`. Every dotted amount was left.
+- cs-a 15. Spare "1" in "1 rok", "1 den", "1 osobu" and the rest of that list. Czech has no small-number lexicon, so "jeden rok" is not counted and dropping the digit fails `numbers`. The digits stay.
+- cs-a 17 and cs-b 20. Q16–Q20 stay body lines. U+200B lines in 003, 005, 006, 008, 009, 013 and 015, and the empty bold lines in 005, were left. Deleting a ZWSP fails `blocks`; promoting Q16 fails `headings`. They match the Korean source.
+
+## Systemic patterns
+
+- Dot thousands (cs-a and cs-b verdicts). 0 changed to a space. The checker requires the dot.
+- Spare digit glued to a unit (cs-a). 0 changed. See cs-a 15.
+- U+200B blanks, and 005 `**​**` (cs-a verdict; cs-b 013/015). 0 deleted.
+- 營利事業所得稅 "daň z příjmu ziskových podniků" → "daň z příjmů podniků zaměřených na zisk". 11: 001 ×3, 002 ×1, 004 ×7. The Chinese gloss stays on first use. "Podniky zaměřené na zisk" that was already in 004 was left.
+- Bare 負責人. 10: 004 ×7 (jmenovat, jmenování, table authority, contracts, qualification, branch contracts, duties), 002 ×2 (registered particulars and the service address), 018 table ×1. "Odpovědná osoba (負責人)" already used in 005 was left. The 018 consultation line is "odpovědné advokátky", not this pattern.
+- „předmět kotace“ (上市). 3 in 004: the FAQ, the repeated body, and the securities-market sentence.
+- "kalendář" for a timetable. 8: 011 ×2 (harmonogram registrace), 014 ×3 (training schedule), 004 ×2 (application timetable and filing timetables), 018 ×1 (časový plán). ROC "kalendář Čínské republiky", the court "procesní kalendář" in 003, and the two deadline calendars in 016 were left.
+- "liší se" plus a nominative list. 1 in 011, now instrumental. "liší se od" and "liší se podle" were left.
+- "uzavírat" for a conclusion. 1 in 016, now "usuzovat". Contractual "uzavírat" in 004 was left.
+- Undeclined "B" after "pan B" (cs-a 20). 9 lines in 008, now pan B / pana B / panu B. "pan B" and "pana B" that were already declined were left.
+- At-fault spouse read as the husband only (cs-a 10). 5: "zbavuje" ×2, the heading, and "bez zavinění" ×2. The petition sentence (cs-a 11) was rewritten in the FAQ and the body.
+- R2–R10. Feminine Wei Tseng, Vy, the four-language consultation lock, day–month–year dates, and the decimal comma already hold. This pass did not find a new Korea-as-default-reader, result-promise, or untranslated-chrome instance outside the rows above. The only fullwidth colon in columns-cs that remains is inside the 008 and 009 frontmatter `url` values, which are canonical source metadata and were not edited.
+
+## Reviewer points not followed
+
+- cs-a 1. The link parameter `flno=3` is article 3 of the withholding-rate standards, not article 10. The Korean source still says 영업세법 제10조 on that URL, and the checker counts that 10. The article number in the label was kept.
+- cs-a 14 and cs-b 10. A space as the thousands separator is ordinary Czech. This campaign's checker does not parse it for `cs` (`dot` style). The dotted form was kept.
+- cs-a 15. "Za poslední rok", "méně než rok" and the other phrases without a digit do not carry the digit in any Czech lexicon. The form the checker accepts was kept.
+- cs-a 17 and cs-b 20. Q16–Q20 are body lines in the Korean source as well. The U+200B lines and the one-clause breaks match that source. Promoting Q16 or deleting the blanks fails `headings` or `blocks`.
+- cs-b 8, the English label. The reviewer is right that the sentence does not describe the two paragraphs above it. The Czech sentence now says that those paragraphs compare branch and subsidiary registration. That departs from the English wording "The foregoing is contract-design advice."
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-cs --lang cs 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=38
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-cs src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      20
+```
+
+The 20 is the count before this log file was written. It includes the pre-existing `docs/i18n/global-plan/WO-F-cs.txt` modification and the two untracked round-4 review files. This log is the additional untracked file `docs/i18n/global-plan/evidence/grok-F-cs-r4.log`.
+
+017 reports `numbers WARN` for unmatched Korean 제3자 (sourceCount=44 targetCount=44). The summary is still PASS. That warning was not introduced by this pass.

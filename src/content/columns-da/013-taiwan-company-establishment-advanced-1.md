@@ -13,7 +13,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Forsidebillede](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-For nylig har mange fået stiftet et selskab (公司) i Taiwan og opnået et arbejdsvisum samt et opholdskort for udlændinge (外僑居留證),
+For nylig har mange fået stiftet et selskab (公司) i Taiwan og opnået et arbejdsvisum samt et opholdskort for udlændinge (外僑居留證).
 
 og de spørgsmål, der ofte stilles ved stiftelsen, er samlet nedenfor.
 
@@ -95,7 +95,7 @@ Desuden giver udlejeren i lejeaftaler for butikslokaler i Taiwan ofte lejeren en
 
 Dette er en lejefri periode, som du kan forhandle om.
 
-For en udlænding er det ikke enkelt at leje et butikslokale, og depositummet (押金) i Taiwan er forholdsvis lavt (sædvanligvis 2 måneder), så udlejerens beskyttelse er begrænset;
+For en udlænding er det ikke enkelt at leje et butikslokale, og depositummet (押金) i Taiwan er forholdsvis lavt (sædvanligvis 2 måneders husleje), så udlejerens beskyttelse er begrænset;
 
 udlejere tøver derfor med at udleje til udlændinge.
 
@@ -103,7 +103,7 @@ Derfor anbefaler jeg at søge driftsadressen tidligt.
 
 Forløber forhandlingen med udlejeren ikke gnidningsløst,
 
-kan du om nødvendigt foreslå en notarial bekræftelse af lejeaftalen (公證) eller et supplerende depositum.
+kan du om nødvendigt foreslå en notariel bekræftelse af lejeaftalen (公證) eller et supplerende depositum.
 
 ​
 

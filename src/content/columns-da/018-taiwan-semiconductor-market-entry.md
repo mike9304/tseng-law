@@ -19,7 +19,7 @@ faq:
 
 ![Redaktionelt foto til at vurdere indtrædelsesstrukturen i Taiwan for en halvledervirksomhed](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
-Når handelen med taiwanske kunder begynder, kan det udenlandske hovedsæde modtage forskellige krav: at behandle tilbud og kontrakter i Taiwan, at holde et lager til hasteudskiftning, eller at indsætte personale til installation og vedligeholdelse (子公司). Da spørger man gerne først: «Rækker det at stifte et selskab i Taiwan (子公司) for at løse dette?»
+Når handelen med taiwanske kunder begynder, kan det udenlandske hovedsæde møde forskellige krav om behandling af tilbud og kontrakter i Taiwan, om et lager til hasteudskiftning eller om indsættelse af personale til installation og vedligeholdelse. Da spørger man gerne først: «Rækker det at stifte et selskab i Taiwan (子公司) for at løse dette?»
 
 Det, der først skal klarlægges, er, hvem i Taiwan der påtager sig hvad. Den struktur, der skal vurderes, ændrer sig efter, om det udenlandske hovedsæde fortsætter med at underskrive salgskontrakterne, et taiwansk selskab køber varer og sælger dem videre, eller det lokale personale kun yder teknisk støtte.
 
@@ -27,7 +27,7 @@ Denne tekst er en almen vejledning for virksomheder inden for halvledermateriale
 
 ## 1. Fordelingen af handel og drift klarlægges før valget af registreringsform
 
-Antag, at en udenlandsk fabrikant af præcisionskomponenter sælger til taiwanske kunder. I begyndelsen afsender hovedsædet direkte, men kunden beder om at oplagre reservedele i Taiwan og støtte fra ingeniører på stedet. En adresse rækker ikke: man har brug for et subjekt, der kan sælge, indføre, oplagre, ansætte, yde teknisk støtte og bære ansvaret.
+Antag, at en udenlandsk fabrikant af præcisionskomponenter sælger til taiwanske kunder. I begyndelsen afsender hovedsædet direkte, men kunden beder om at oplagre reservedele i Taiwan og støtte fra ingeniører på stedet. En adresse rækker ikke: man har brug for en virksomhed, der kan sælge, indføre, oplagre, ansætte, yde teknisk støtte og bære ansvaret.
 
 Før indtrædelsesstrukturen besluttes, kan hovedsædet internt klarlægge:
 
@@ -65,7 +65,7 @@ Det kan dannes med 1 eller flere fysiske personer (有限公司), eller med taiw
 
 ### Aktieselskab (股份有限公司): passende hvis man vil inddrage andre investorer, eller en notering er forudsigelig
 
-Kapitalen deles i aktier. I udgangspunktet kræves 2 deltagere eller mere (股份有限公司), men staten eller en juridisk person kan stifte det alene, og en udenlandsk juridisk person kan holde 100 %. Aktier er i udgangspunktet frit overdragelige, med lovbestemte undtagelser; særlige aktier og optioner til arbejdstagere kan udformes i overensstemmelse med loven. Det passer til virksomheder, der forventer investorer, aktiehandel, kapitalincitamenter til arbejdstagere eller en senere fusion, overtagelse eller notering; det begrænser sig ikke til store virksomheder. I ledelsen kan et selskab uden offentligt udbud af aktier ved vedtægterne være uden bestyrelse og kun have 1 eller 2 ledere. Et selskab med én stats- eller juridisk person som eneste deltager kan ved vedtægterne være uden tilsynsførende (監察人). Ikke hvert aktieselskab (股份有限公司) skal lade årsregnskabet attestere. De væsentligste revisionsgrænser for et almindeligt selskab er en indbetalt kapital på TWD 30.000.000 (新臺幣), eller, derunder, driftsindtægter på TWD 100.000.000 eller 100 arbejdstagere i arbejdssikringen; selskaber med offentligt udbud følger værdipapirreguleringen.
+Kapitalen deles i aktier. I udgangspunktet kræves 2 deltagere eller mere (股份有限公司), men staten eller en juridisk person kan stifte det alene, og en udenlandsk juridisk person kan holde 100 %. Aktier er i udgangspunktet frit overdragelige, med lovbestemte undtagelser; særlige aktier og optioner til arbejdstagere kan udformes i overensstemmelse med loven. Det passer til virksomheder, der forventer investorer, aktiehandel, kapitalincitamenter til arbejdstagere eller en senere fusion, overtagelse eller notering; det begrænser sig ikke til store virksomheder. I ledelsen kan et selskab uden offentligt udbud af aktier ved vedtægterne være uden bestyrelse og kun have 1 eller 2 ledere. Et selskab med én stats- eller juridisk person som eneste deltager kan ved vedtægterne være uden tilsynsførende (監察人). Ikke hvert aktieselskab (股份有限公司) skal lade årsregnskabet attestere. De væsentligste revisionsgrænser for et almindeligt selskab er en indbetalt kapital på TWD 30.000.000 (新臺幣), eller, derunder, driftsindtægter på TWD 100.000.000 eller 100 arbejdstagere tilmeldt arbejderforsikringen; selskaber med offentligt udbud følger værdipapirreguleringen.
 
 ## 4. Procedurerne for filial og datterselskab adskiller sig; kun datterselskabet gennemgår efterprøvelsen hos Investeringsafdelingen
 
@@ -73,17 +73,17 @@ Når et udenlandsk selskab stifter et taiwansk datterselskab, forhåndskontrolle
 
 Derimod kræves til stiftelsen af en taiwansk filial af et almindeligt udenlandsk selskab i udgangspunktet ikke en investeringstilladelse fra Investeringsafdelingen; Handelsudviklingskontoret under ministeriet for økonomiske anliggender (經濟部商業發展署) behandler registreringen af filialen og den tilhørende kapitalfastsættelse. Der forbliver nødvendige den forudgående navnekontrol, overførslen af driftskapitalen, kapitalefterprøvelsen og den skattemæssige registrering; kalenderen er i almindelighed kortere.
 
-Det foregående er en almen sammenligning af selskabsformer, ikke rådgivning om en konkret transaktion. At råde over én konkret formular gør ikke transaktionen retmæssig og forebygger ikke tvisterne.
+Det foregående er en almen sammenligning af selskabsformer, ikke rådgivning om en konkret transaktion. At have én bestemt selskabsform gør ikke transaktionen lovlig og forebygger ikke tvisterne.
 
 ## 5. Selskabsregistreringen og ingeniørens retmæssige arbejde er ikke det samme
 
 At fuldføre registreringen i Taiwan indebærer ikke, at personalet fra det udenlandske hovedsæde automatisk må arbejde i Taiwan. En udlænding, der arbejder i Taiwan, har brug for en retmæssig arbejdstilladelse og, ved et længere ophold, en opholdstilladelse. I udgangspunktet ansøger arbejdsgiveren om arbejdstilladelsen og den tilsvarende opholdstilladelse.
 
-Det er relativt enklere at erhverve arbejdstilladelsen for en leder af det taiwanske datterselskab eller af filialen af et udenlandsk selskab. For at ansøge om den for en anden udlænding eller de følgende kræver ministeriet for arbejde, efter branchen, grænser for kapital, omsætning eller andet (子公司). Hvis man forudser, at udenlandsk personale arbejder i Taiwan, skal man før stiftelsen af selskabet bekræfte, om den påtænkte kapital når den gældende grænse.
+Det er relativt enklere at erhverve arbejdstilladelsen for en leder af det taiwanske datterselskab eller af filialen af et udenlandsk selskab. Ansøgning om arbejdstilladelse (工作許可) til endnu en udlænding eller til flere kræver hos ministeriet for arbejde, efter branchen, grænser vedrørende kapital, omsætning eller andet. Hvis man forudser, at udenlandsk personale arbejder i Taiwan, skal man før stiftelsen af selskabet bekræfte, om den påtænkte kapital når den gældende grænse.
 
 ## 7. Strukturer der efter handelens fase kan passe
 
-De følgende scenarier er hypotetiske for at hjælpe overvejelsen; de fastslår ikke, at en given måde er retmæssig eller bedre (子公司).
+De følgende scenarier er hypotetiske og skal hjælpe overvejelsen; de fastslår ikke, om en given måde er retmæssig eller bedre.
 
 **Udenlandske virksomheder rettet mod den indledende eksport.** Hvis der i Taiwan endnu hverken er arbejdstagere eller lagre, og man vil efterprøve efterspørgslen via en uafhængig distributør, kan man først se leveringen, distributionsforholdet og virksomhedsfeltet i Taiwan. En distributionskontrakt alene løser ikke alle reguleringsspørgsmål i Taiwan.
 

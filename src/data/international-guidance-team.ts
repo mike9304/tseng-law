@@ -2952,7 +2952,7 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'Kandidat (M.S.), Institute of Finance, National Taiwan University',
-        'Bachelor (B.A.) med dobbelt spor ret og finans, National Chengchi University',
+        'Bachelor (B.A.) med to hovedfag, jura og finans, National Chengchi University',
         'Udvekslingsstuderende ved Kobe University og Waseda University',
       ],
       experience: [
@@ -2963,18 +2963,18 @@ export const guidanceTeamBios: Record<
     },
     'chang-rongxuan': {
       intro: [
-        'Tidligere ved Ministry of Education, Legal Affairs Division, med vægt på forvaltnings- og civilretlige sager.',
+        'Tidligere ved undervisningsministeriet i Taiwan, afdelingen for juridiske anliggender (Ministry of Education, Legal Affairs Division), med vægt på forvaltnings- og civilretlige sager.',
         'Erfaring med sager om universiteter, undervisningspersonalets rettigheder og forvaltningsretlige klager.',
       ],
       education: ['Juridisk bachelor (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Undervisningsministeriet i Taiwan, afdelingen for juridiske anliggender (Ministry of Education, Legal Affairs Division)',
         'Advokat, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal med lang virksomhed som senior paralegal ved flere kontorer, ansvarlig for processuel støtte, selskabsret og udenlandske investeringer.',
+        'Paralegal med lang erfaring som senior paralegal ved flere kontorer, ansvarlig for processuel støtte, selskabsret og udenlandske investeringer.',
         'Støtte ved procedurer, selskabsstiftelse, tilladelser til udenlandske investeringer, licensansøgninger og udvekslingen mellem Korea og Taiwan.',
       ],
       education: ['Juridisk bachelor (LL.B.), Tunghai University'],
@@ -2993,7 +2993,7 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'Har afsluttet bachelor- og kandidatprogrammer i regnskab ved National Chengchi University og leder nu et revisionskontor.',
+        'Har en bachelorgrad og en kandidatgrad i regnskab ved National Chengchi University og leder nu et revisionskontor.',
         'Støtter den integrerede analyse af juridiske, skattemæssige og finansielle risici for virksomhedsklienter.',
       ],
       education: [

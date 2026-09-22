@@ -453,7 +453,7 @@ const ELEMENTS = {
     pl: /etapem konsultacji/,
     hi: /परामर्श चरण/,
     sv: /rådgivningssteget/,
-    da: /rådgivningsskridtet/,
+    da: /selve rådgivningen/,
     nb: /rådgivningsmøte/,
     fi: /neuvontavaihe/,
     cs: /krokem porady|krok porady/,

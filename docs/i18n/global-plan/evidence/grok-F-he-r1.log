@@ -1,0 +1,67 @@
+WO-F-he — Grok 4.7 fix lane, campaign round 1
+workspace: /Users/son7/Projects/tseng-law-fix-he-r1
+date: 2026-09-22
+scope: Hebrew guidance pack (hebrewGuidanceContent strings that the rows named, team he roles/bios, inquiry he, GUIDANCE_LLMS_NOTICES.he) + columns-he 001–018. No commit. Offices he and answers he were already in the plural register and were not rewritten. No other locale’s strings were edited. No test file needed an expected-string update.
+
+## Rows applied
+Part a P1: a#1–a#7. a#2 keeps both digits (“כל 1 מתקופות השעיית הפעילות אינה יכולה לעלות על 1 שנה”), FAQ and body. a#3 keeps the digit (“יותר מ-1 אזרח זר”). a#6 translates the Ministry intro, the Ministry experience line, and the Legal Aid experience line; the English names stay in parentheses. The experience arrays were not shortened.
+Part a P2: a#9–a#15, a#17–a#20, a#22–a#26. a#14 keeps the digit and only unglues the article (“על בסיס 1 שנה אחרונה”; “על כל 1 שנה של ותק”; “בעבור כל 1 שנה”). a#19 rephrased the three cells inside the existing row. a#20 is “אני, [שם],” and the manager stays masculine (מוריד).
+Part b P1: b#1–b#5. b#1 uses the idiom “אין בה כדי” rather than the suggested “אין בכך בלבד שה… כדי ש”.
+Part b P2: b#6–b#31, b#33–b#34. b#22 and b#29 are one sentence: the address is the manufacturer’s or importer’s address under the Act, cited as סעיף 7, סעיף קטן 1, פסקה 7. b#33 removes U+200F so the gloss sits after the closing quote.
+R2–R10 were already in the Hebrew pack and in 001, 004, and 007 (Korea only as a labelled example, the treaty caveat, emergency 119/110/112, feminine Wei Tseng, consultation lock, comma thousands, Israeli dates). No further instance of those rules was still open outside the rows below. “שיטת ייצור” / “שיטת הייצור” (a manufacturing method, not a 辦法) was left.
+
+## Rows skipped
+- a#8 (rewrite “TWD 1.57M”): skipped. ACCEPTED-ROUND: the token stays byte-identical.
+- a#16 (turn Q16–Q20 into ## headings and clear the U+200B blanks): skipped. checkBlocks requires the same ZWSP count as the Korean source (003=52, 005=8, 006=4, 008=10, 009=5, 013=5, 015=3). New headings are forbidden. The chatty close is a#17 and was rephrased inside its paragraph.
+- a#21 (Hangul slugs in the 008 and 009 url fields): skipped. Live paths; ACCEPTED-ROUND.
+- b#32 (delete U+200B in 013 and 015): skipped. Same ZWSP parity. The sentences themselves were not the problem.
+
+a#19 was not a deletion. The “קושי” row is still there; the cells no longer read as an easy outcome (“נמוך יחסית; אין תוצאה מובטחת” / “גבוה יחסית; אין תוצאה מובטחת”). “הבטחת תוצאה” was avoided because the checker’s Hebrew forbidden-pattern matches that string.
+
+## Systemic patterns and instance counts
+- Glued “1” in a time phrase: 8. 001 “1 השנה” ×2 → “1 שנה אחרונה”. 002 “1 פעם” ×2 → “כל 1 מתקופות”. 008 “1 שנת ותק” ×2 and “לכל 1 שנה” ×2. The digit stayed; Hebrew number-words are not parsed.
+- English office and paralegal chrome in the he bios only: 7 strings (Ministry intro, Ministry experience, Legal Aid experience, role “Paralegal”, Fang-Yu intro, two Senior Paralegal lines). Other locales were not touched.
+- Outcome flavour: 2. The 008 difficulty cells, and 009 “זוכה להגנת זכותו”.
+- Currency “דולרים של טאיוואן”: 2 in 005 (heading and the source-of-funds sentence). Elsewhere the columns already say “דולר החדש של טאיוואן”.
+- 辦法 named “שיטה”: 4 (ניהול ×3, רישום ×1) → “תקנות”. Manufacturing “שיטת ייצור” left.
+- “יום הבסיס”: 1 (010).
+- “רגילה” on the company instead of the freight category: 1 (017). Agreement “חברות רגילה”: 1.
+- “לשכת המסחר” for 臺北市商業處: 2 (the name, and “בודקת”).
+- Masculine “האחראי” for the responsible attorney: 1 (018). The table cell “סמכות האחראי בטאיוואן” is the company’s responsible person and was left.
+- “מינהל פיתוח המסחר” for 經濟部商業發展署: 2 (018 body, and the same name on the 001 link label).
+- “ירושה בדרך של החלפה”: 5 → “ירושה על דרך הייצוג”. “מלאי החלפה” (spare parts, 018) was not this term.
+- U+200B: 0 removed. U+200F: 1 removed (015).
+- Hangul outside url: 0 introduced. The two live url values are unchanged.
+
+## §Verify
+node scripts/check-column-translation.mjs --dir src/content/columns-he --lang he 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=71
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-he src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      23
+
+(The count 23 is before this log file. It includes the pre-existing WO-F-he.txt modification and the untracked he-a.md / he-b.md, plus the Hebrew sources edited in this lane. 004 and 012 had no open row.)
+
+## Reviewer points not applied
+- The U+200B “phantom paragraphs” in 003, 005, 006, 008, 009, 013, and 015 are in the Korean source at the same counts. They are not a Hebrew-only spacer. Deleting them, or promoting Q16–Q20 to headings, fails checkBlocks / checkHeadings.
+- Suggested rewrites that drop a digit (“שנה אחת”, “השנה האחרונה” with no 1, “שלוש השנים”) fail the number check. Hebrew words for 1 and 3 are not parsed. The digit stays next to a grammatical noun.
+- “Delete the קושי row” would change the table-row count. The English source has the same Easy / Difficult / Easy row. The cells were softened in place.
+- “Duplicate experience entry” on the Legal Aid / Ministry lines: each institution appears once in that person’s experience array. Both lines were translated. Nothing was deleted.
+- a#8 is a real reader problem (the English “M”), and the product rule still pins “TWD 1.57M”.

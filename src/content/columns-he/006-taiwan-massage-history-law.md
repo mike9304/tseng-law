@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-האם הכרתם את תקופת מספרות המסורת (理髮廳) בראשית טאיוואן?
+האם הכרתם את המספרות המסורתיות (理髮廳) של פעם בטאיוואן?
 
 אופן שטיפת השיער במספרות אלה היה ייחודי מאוד.
 

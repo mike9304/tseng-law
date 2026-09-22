@@ -875,7 +875,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'עורכת הדין המנהלת בטאיוואן (Managing Attorney)',
       'chang-rongxuan': 'עורך דין בטאיוואן (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
+      'chang-fangyu': 'עוזר משפטי (Paralegal)',
       'son-jungmin': 'ניהול הפעילות בקוריאה (Korea Operations Manager)',
       'huang-shengping': 'רואה חשבון שותף (Partner CPA)',
     },
@@ -3480,33 +3480,33 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'הקרן לסיוע משפטי, סניף טאיצ׳ונג (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'בעבר ב־Ministry of Education, Legal Affairs Division, בדגש על עניינים מנהליים ואזרחיים.',
+        'בעבר במשרד החינוך, האגף לעניינים משפטיים (Ministry of Education, Legal Affairs Division), בדגש על עניינים מנהליים ואזרחיים.',
         'ניסיון בעניינים הנוגעים לאוניברסיטאות, לזכויות סגל ההוראה ולעררים מנהליים.',
       ],
       education: [
         'בוגר משפטים (LL.B.), National Chung Hsing University',
       ],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'משרד החינוך, האגף לעניינים משפטיים (Ministry of Education, Legal Affairs Division)',
         'עורך דין, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal בעל ותק רב כ־paralegal בכיר בכמה משרדים, האחראי לתמיכה דיונית, לדיני חברות ולהשקעות זרות.',
+        'עוזר משפטי (paralegal) בעל ותק רב, ששימש עוזר משפטי בכיר בכמה משרדים והיה אחראי לתמיכה דיונית, לדיני חברות ולהשקעות זרות.',
         'תמיכה בהליכים, בהקמת חברות, באישורי השקעות זרות, בבקשות לרישיונות ובקשרים שבין קוריאה לטאיוואן.',
       ],
       education: [
         'בוגר משפטים (LL.B.), Tunghai University',
       ],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'עוזר משפטי בכיר (Senior Paralegal), Boyin Law Firm',
+        'עוזר משפטי בכיר (Senior Paralegal), Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
@@ -3523,7 +3523,7 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'סיים תוכניות בוגר ומוסמך בחשבונאות ב־National Chengchi University וכיום מנהל משרד ראיית חשבון.',
+        'סיים תואר ראשון ותואר שני בחשבונאות ב־National Chengchi University וכיום מנהל משרד ראיית חשבון.',
         'תומך בניתוח משולב של סיכונים משפטיים, מיסויים ופיננסיים עבור לקוחות עסקיים.',
       ],
       education: [

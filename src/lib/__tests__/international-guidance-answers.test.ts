@@ -309,7 +309,7 @@ const SERVICES_SCOPE_TERMS: Record<string, readonly [string, RegExp]> = {
   el: ['εύρος', /εύρος/i],
   he: ['היקף', /היקף/],
   bn: ['পরিধি', /পরিধি/],
-  ur: ['دائرہ', /دائرہ/],
+  ur: ['دائرے', /دائرے/],
   fa: ['محدودهٔ', /محدوده/],
   ta: ['எல்லை', /எல்லை/],
   sk: ['Rozsah', /rozsah/i],

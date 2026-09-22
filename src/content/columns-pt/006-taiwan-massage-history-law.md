@@ -113,7 +113,7 @@ e o legislador esforça-se por encontrar uma solução relativamente equilibrada
 
 Hoje, numerosas pessoas escolhem a massagem para aliviar a tensão,
 
-mas, neste processo, casos de assédio sexual (性騷擾) ou de atos impúdicos (猥褻) não cessam de se produzir.
+mas, neste processo, casos de assédio sexual (性騷擾) ou de atos obscenos (猥褻) não cessam de se produzir.
 
 O que na origem não era senão receber uma massagem para aliviar a tensão
 

@@ -57,7 +57,7 @@ Preste portanto atenção a este ponto.
 
 Contudo, na inscrição da sociedade, vários ramos são frequentemente inscritos de uma só vez, e deseja-se frequentemente inscrever cerca de 10 ramos de uma só vez.
 
-Também, na prática, não é necessário verificar todos os ramos na inscrição da sociedade.
+Na prática, também não é necessário verificar todos os ramos na inscrição da sociedade.
 
 Segundo as «[instruções de funcionamento do serviço de consulta assistida de locais de negócio da cidade de Taipé](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)» (臺北市營業場所協助查詢服務作業須知) e o guia em vigor da cidade de Taipé,
 

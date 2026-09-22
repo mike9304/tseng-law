@@ -29,15 +29,15 @@ Quando um estrangeiro constitui uma sociedade em Taiwan, deve apresentar um plan
 
 O Departamento de Revisão dos Investimentos deve verificar se o capital (資本額) em causa é realmente utilizado para fins de investimento
 
-e que partes estrangeiras não introduzam fundos sob outro pretexto.
+e se as partes estrangeiras não introduzem fundos sob outro pretexto.
 
 Na redação do plano de investimento, não é necessário indicar o endereço exato da sociedade; a indicação da região basta (exemplo: cidade de Taipé). ​
 
-Quando mais tarde a conta preparatória da sociedade (公司籌備處帳戶) é aberta no banco, numerosos bancos examinam contudo o contrato de arrendamento (租賃契約) e inspecionam no local o endereço da sociedade.
+Quando mais tarde a conta da sociedade em formação (公司籌備處帳戶) é aberta no banco, numerosos bancos examinam contudo o contrato de arrendamento (租賃契約) e inspecionam no local o endereço da sociedade.
 
 Num banco taiwanês indicou-se que
 
-numerosos estrangeiros desaparecem recentemente depois da abertura da conta, de modo que a abertura das contas é tratada de forma cada vez mais estrita.
+numerosos estrangeiros têm desaparecido depois da abertura da conta, de modo que a abertura das contas é tratada de forma cada vez mais estrita.
 
 Na parte sobre os fundamentos, a abertura da conta foi indicada como a etapa mais difícil, e essa indicação confirma-se na prática.
 
@@ -53,7 +53,7 @@ Segundo o artigo 9 do Estatuto do investimento dos estrangeiros (外國人投資
 
 Neste prazo, uma vez encontrado o endereço da sociedade e assinado o contrato de arrendamento,
 
-resta tempo suficiente para abrir no banco a conta preparatória e transferir o capital.
+resta tempo suficiente para abrir no banco a conta da sociedade em formação e transferir o capital.
 
 ​
 
@@ -81,7 +81,7 @@ Podem mencionar-se experiências profissionais variadas, incluindo o trabalho a 
 
 e expô-las em pormenor de modo a poder convencer as pessoas encarregadas do exame.
 
-Sobre este ponto, convém tratar este ponto em pormenor com uma advogada ou um advogado de Taiwan.
+Sobre este ponto, convém tratar o assunto em pormenor com uma advogada ou um advogado de Taiwan.
 
 ​
 

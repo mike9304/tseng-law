@@ -1,0 +1,97 @@
+WO-F-pt r2 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-pt-r2
+date: 2026-09-22
+
+## Rows applied
+
+Part A (pt-a.md) 1–39, except the skips below.
+Part B (pt-b.md) 1–51, except B31.
+
+Guidance pack (pt strings only):
+- A3, A6, A7, A8, A9, A10, A20, A21, A22, A23, A30, A31, A32
+  files: international-guidance-western.ts, international-guidance-offices.ts,
+  international-inquiry-copy.ts, international-guidance-team.ts, llms-txt.ts
+- A21 is the bio “1,57 milhões” → “1,57 milhão”. The pinned token “TWD 1.57M” was not in that sentence and was not touched.
+- A7 and A8 are the same sentence; both fixes went in together.
+
+Columns:
+- A1, A4, A5, A11–A19, A24, A25, A27–A29, A33–A39
+- B1–B30, B32–B51
+
+Checker-constrained wording (applied, not the reviewer’s exact string):
+- A1: the linked provision is named artigo 3 of 各類所得扣繳率標準. The Korean source link still says 제10조, and the number checker counts that 10, so the label also says the linked provision is not artigo 10 of the business-tax act. URL unchanged.
+- A24: “consoante quem celebra os contratos” instead of “consoante as pessoas…”. A third “as” in that sentence trips the English-stopword gate (pt “as” = English “as”).
+- A25: “por 1 vítima e por 1 acidente”. “por cada vítima e cada acidente” drops the two source digits in 피해자 1명·사고 1건당.
+- A5, A28, A29, B32: rephrased inside the existing blocks. Paragraphs were not merged (block count is checked against the Korean source).
+
+## Rows skipped
+
+- A2 (P1) and the verdict line “Q17 still turns courts generally impose into some judgments / no typical result”.
+  Reason: RULEBOOK R3 and ACCEPTED-ROUND forbid turning that sentencing line back into a typical result. The current “em alguns acórdãos … não existe um resultado típico nem garantido” is the required softening. Not a promise, and not restored to “em geral”.
+- A26 (P2), the “make Q16–Q20 headings” half.
+  Reason: heading levels must match the Korean source. Adding ## would fail the checker. Q16–Q20 stay body lines.
+- A26 / B31 and the verdict lines about U+200B (003, 005, 006, 008, 009, 013, 015).
+  Reason: the checker compares zero-width-space counts to the Korean source (003:52, 005:8, 006:4, 008:10, 009:5, 013:5, 015:3). Deleting them fails `blocks`. Left byte-identical.
+
+No P3 rows in either review.
+
+## Systemic patterns and instances
+
+- 資遣費 not confused with other countries’ severance and dismissal-protection rules: 1 (guidance labour blurb).
+- 戶籍 / 戶政 / 戶籍法 called “estado civil” or “registo civil”: rewritten as registo de agregados across 007 (16 occurrences of the new term, covering the office, the act, headings, checklist and links) and 1 calendar line in 016 (“procedimentos … de registo de agregados”). Left “ato de estado civil” where it means a foreign marriage/divorce status act, not the household register.
+- “peças produzidas” → “documentos apresentados”: 2 (001).
+- “conta preparatória” → “conta da sociedade em formação” / “conta da sociedade taiwanesa em formação”: 10 (001:3, 005:5, 013:2).
+- 條例 called “regulamento”: 3 (勞工退休金條例 ×2 in 008; 道路交通管理處罰條例 ×1 in 003). 辦法 / 規則 left as regulamento.
+- “concluir o resultado” / “concluir à partida” with no object: 2 (014). Other “concluir” (finish a procedure, conclude a contract) left.
+- “posto” for an issue or an exclusion: 2 (016). Job-sense “posto” left (008, 014).
+- Registered title flattened to “nome”: 4 (016: titularidade registal, denominação da conta, transmissão da titularidade, checklist).
+- Legal “or” written “e”: “registo de sociedade ou o registo de comércio” ×3; Kinmen ou Lienchiang (Matsu) ×4 (two glossed sentences, one unglossed, one criterion).
+- False friends “ação real” and “apreensão das dívidas”: 1 each (010, 016).
+- “centro de vida”: 3 (007 ×2, 016 ×1).
+- “relocalização”: heading, body and checklist item in 007 (4 strings).
+- U+200B: 0 changed (see skips).
+- Q16–Q20 promoted to headings: 0 (see skips).
+
+R2–R10 already present in this pack were left where they were already correct (Korea only as a labelled example, consultation languages EN/中文/JA/KO, feminine Wei Tseng, Traditional Chinese glosses, 119/110/112 in Taiwan, European Portuguese « » and dot-thousands). R12–R17 are the sister-locale addendum; role lines such as “Paralegal” were not in the pt review and were not rewritten.
+
+## §Verify
+
+```
+neighbour      PASS   
+hanzi          PASS   han=75
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+```
+       0
+```
+
+```
+TSC_OK
+```
+
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+```
+      25
+```
+
+That count is from the verify run, before this log file existed. This log is one further untracked path.
+
+Commands were the work-order set (`tail -8` of the checker is the last file, 018, plus the summary). Markers grep was `src/content/columns-pt` and `src/data`. No Hangul outside `url` values. No test expectation needed updating; the pinned “TWD 1.57M” string was not edited.
+
+## Reviewer got wrong (not applied)
+
+- A2 / the Q17 verdict line. Restoring “os tribunais aplicam atualmente, em geral, cerca de 3 / 4 / 6 meses” undoes R3. The English column still has the stronger sentencing line; the Portuguese softening is the advertising rule, not a reversal to fix.
+- U+200B spacers and “Q16–Q20 are not headings”. Both match the Korean source. The checker fails if either changes. They are source layout, not Portuguese prose errors.
+- “ato de estado civil” for a marriage or divorce already formed abroad (007 §5) is the European Portuguese name of a status act. It is not the 戶籍 mistranslation the verdict describes.
+- “governação” in 004 (listing / internal control) and 018 (board structure of a company limited by shares) is corporate governance, which is the right word. Only the Kaohsiung office line, where the English is running the business, was changed to “gestão”.
+- Column 010 image alts that say “1,57 milhões de TWD” are translations of news headlines, not the guidance bio. A21 was applied only to the bio. “TWD 1.57M” stays byte-identical.

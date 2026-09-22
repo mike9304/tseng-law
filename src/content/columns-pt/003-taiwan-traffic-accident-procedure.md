@@ -63,7 +63,7 @@ Se se tratar de uma infração perseguida mediante queixa, segundo o artigo 238 
 
 ### Fundamentos oficiais de Q1–Q5
 
-- [Regulamento de gestão e de sanções da circulação rodoviária (道路交通管理處罰條例), artigo 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [Lei de gestão e de sanções da circulação rodoviária (道路交通管理處罰條例), artigo 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
 - [Código Penal da República da China, artigo 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
 - [Código Penal da República da China, artigo 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Código Penal da República da China, artigo 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
@@ -175,7 +175,7 @@ A obrigação de subscrever segundo o artigo 6 da lei sobre o seguro obrigatóri
 
 Num acidente de um só veículo, o condutor desse veículo não é, em geral, destinatário das prestações do seguro obrigatório desse veículo. Contudo, num acidente em que intervêm vários veículos, existem casos nos quais o condutor pode reclamar prestações ao segurador obrigatório de outro veículo implicado.
 
-A tabela de prestações (強制汽車責任保險給付標準) alterada em 29 de maio de 2026 aplica-se aos acidentes ocorridos a partir de 1 de julho de 2026. O teto dos encargos médicos razoáveis e necessários por ferimentos é TWD 200.000 em novo dólar de Taiwan; a prestação por invalidez (失能) vai de TWD 80.000 a TWD 3.000.000 segundo 15 graus legais; a prestação por morte é TWD 3.000.000, e o máximo conjunto de morte, de invalidez e de encargos médicos para 1 vítima e 1 acidente é TWD 3.200.000. Aos acidentes anteriores pode aplicar-se a tabela precedente.
+A tabela de prestações (強制汽車責任保險給付標準) alterada em 29 de maio de 2026 aplica-se aos acidentes ocorridos a partir de 1 de julho de 2026. O teto dos encargos médicos razoáveis e necessários por ferimentos é TWD 200.000 em novo dólar de Taiwan; a prestação por invalidez (失能) vai de TWD 80.000 a TWD 3.000.000 segundo 15 graus legais; a prestação por morte é TWD 3.000.000, e o máximo conjunto de morte, de invalidez e de encargos médicos por 1 vítima e por 1 acidente é TWD 3.200.000. Aos acidentes anteriores pode aplicar-se a tabela precedente.
 
 O seguro de responsabilidade civil perante terceiros (第三人責任險), o seguro de acidentes do condutor (駕駛人傷害險) e o seguro de danos no próprio veículo (車體損失險) são produtos facultativos de caráter contratual. A cobertura real varia segundo o segurado, o teto, a franquia (自負額), as exclusões, a culpa e as outras condições da apólice, de modo que a apólice e as condições devem ser verificadas caso a caso.
 
@@ -267,7 +267,7 @@ Na morte por imprudência, o desistimento da queixa não é possível; contudo, 
 
 ​
 
-Em alguns casos pode ser possível uma suspensão da pena (緩刑); não é uma promessa de que a prisão seja evitada.
+Em alguns casos pode ser decretada uma suspensão da pena (緩刑), e a prisão não é então cumprida. Não é um resultado assegurado para o seu assunto.
 
 ​
 

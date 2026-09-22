@@ -10,7 +10,7 @@ faq:
   - q: "Se houver clientes em Taiwan, é necessário constituir aí uma sociedade?"
     a: "Não é automático só porque o cliente está em Taiwan. Devem ver-se as exigências do cliente e a atividade real de comércio, de instalações, de pessoal e de estrutura das operações em Taiwan, e depois escolher a entidade mais adequada."
   - q: "A responsabilidade da sede desaparece por completo quando uma sociedade taiwanesa é constituída?"
-    a: "Se se constituir uma subsidiária e não uma sucursal, a sede, em princípio, não assume as obrigações contratuais assinadas em nome da subsidiária. Deve contudo verificar-se as exceções por abuso da personalidade jurídica e se a sede concedeu uma caução ou assumiu obrigações contratuais próprias."
+    a: "Se se constituir uma subsidiária e não uma sucursal, a sede, em princípio, não assume as obrigações contratuais assinadas em nome da subsidiária. Devem contudo verificar-se as exceções por abuso da personalidade jurídica e se a sede concedeu uma caução ou assumiu obrigações contratuais próprias."
   - q: "Pode começar-se por um distribuidor e depois passar a uma sociedade em Taiwan?"
     a: "Uma transição por etapas pode planear-se, mas deve também rever-se a extinção ou a alteração dos contratos existentes, os contratos com os clientes, os stocks, o tratamento dos defeitos e o pessoal."
 ---
@@ -47,7 +47,7 @@ Sobretudo se o vendedor do contrato de venda não for a empresa que fornece o ap
 
 Ao planear a entrada, a empresa de semicondutores deve separar que presença se estabelece em Taiwan e como se organizam as vendas e o serviço. O primeiro ponto concerne a personalidade jurídica, as exigências de inscrição e o campo de atividade; o segundo, o modo de operar, as faculdades e a partilha de responsabilidade.
 
-A diferença principal entre uma subsidiária taiwanesa e uma sucursal taiwanesa de uma sociedade estrangeira é saber se tem uma personalidade jurídica distinta da sociedade-mãe ou da sede. A distribuição e a agência são arranjos transacionais e contratuais, e não devem confundir-se com a forma societária.
+A diferença principal entre uma subsidiária taiwanesa e uma sucursal taiwanesa de uma sociedade estrangeira é saber se tem uma personalidade jurídica distinta da sociedade-mãe ou da sede. A distribuição e a agência são modalidades contratuais, e não devem confundir-se com a forma societária.
 
 | Estrutura | Distinção de base | O que convém confirmar primeiro |
 |---|---|---|
@@ -65,7 +65,7 @@ Pode formar-se com uma ou várias pessoas singulares, ou com sócios que sejam p
 
 ### Sociedade por ações (股份有限公司): adequada se se quiser incorporar outros investidores ou se uma cotação for previsível
 
-O capital divide-se em ações. Em princípio exigem-se 2 acionistas ou mais, mas o Estado ou uma pessoa coletiva podem constituí-la sozinhos, e uma pessoa coletiva estrangeira pode deter 100 %. As ações são, em princípio, livremente transmissíveis, com exceções legais; ações especiais e opções sobre ações para os trabalhadores podem prever-se nos termos da lei. Isso convém às empresas que esperam investidores, uma negociação de ações, incentivos em capital para os assalariados ou uma fusão, uma aquisição, uma cotação ou o registo no mercado emergente; não se limita às grandes empresas. Em governação, uma sociedade não emitente pública pode, pelos estatutos, não ter conselho e ter só 1 ou 2 administradores. Uma sociedade com um só acionista estatal ou pessoa coletiva pode, pelos estatutos, não ter supervisor. Nem toda a sociedade por ações (股份有限公司) tem de sujeitar as contas anuais a auditoria. Os limiares principais de auditoria de uma sociedade ordinária são um capital realizado de TWD 30.000.000, ou, abaixo disso, receitas de exploração de TWD 100.000.000 ou 100 trabalhadores no regime de seguro do trabalho; as sociedades de oferta pública seguem a regulamentação dos valores.
+O capital divide-se em ações. Em princípio exigem-se 2 acionistas ou mais, mas o Estado ou uma pessoa coletiva podem constituí-la sozinhos, e uma pessoa coletiva estrangeira pode deter 100 %. As ações são, em princípio, livremente transmissíveis, com exceções legais; ações especiais e opções sobre ações para os trabalhadores podem prever-se nos termos da lei. Isso convém às empresas que esperam investidores, uma negociação de ações, incentivos em capital para os assalariados ou uma fusão, uma aquisição, uma cotação ou o registo no mercado de valores emergente (興櫃); não se limita às grandes empresas. Em governação, uma sociedade não emitente pública pode, pelos estatutos, não ter conselho e ter só 1 ou 2 administradores. Uma sociedade com um só acionista estatal ou pessoa coletiva pode, pelos estatutos, não ter supervisor. Nem toda a sociedade por ações (股份有限公司) tem de sujeitar as contas anuais a auditoria. Os limiares principais de auditoria de uma sociedade ordinária são um capital realizado de TWD 30.000.000, ou, abaixo disso, receitas de exploração de TWD 100.000.000 ou 100 trabalhadores no regime de seguro do trabalho; as sociedades de oferta pública seguem a regulamentação dos valores.
 
 ## 4. Os procedimentos de sucursal e de subsidiária diferem; só a subsidiária passa pelo exame do Departamento de Revisão dos Investimentos
 
@@ -83,7 +83,7 @@ Concluir a inscrição em Taiwan não implica que o pessoal da sede estrangeira 
 
 ## 7. Estruturas que podem convir segundo a etapa do comércio
 
-Os cenários seguintes são hipotéticos para ajudar a refletir; não estabelecem que um modo seja lícito ou preferível.
+Os cenários seguintes são hipotéticos e servem só para orientar a análise; não estabelecem que um modo seja lícito ou preferível.
 
 **Empresas estrangeiras centradas na exportação inicial.** Se ainda não houver nem assalariados nem stocks em Taiwan e se se quiser verificar a procura por um distribuidor independente, pode examinar-se primeiro o fornecimento, a relação de distribuição e o campo de atividade em Taiwan. Um contrato de distribuição por si só não elimina todas as questões de regulação em Taiwan.
 
@@ -93,7 +93,7 @@ Os cenários seguintes são hipotéticos para ajudar a refletir; não estabelece
 
 ## 8. Para a primeira consulta, um panorama operacional basta; não é necessário entregar à partida todas as peças confidenciais
 
-Na primeira consulta, podem reunir-se os dados de base da sede e dos que fazem entradas, uma descrição geral do produto ou do serviço, o fluxo de operações previsto, os planos de pessoal e de instalações em Taiwan, e as condições de contrato e de apoio que os clientes pedem. O que ainda não estiver decidido pode marcar-se como «em espera».
+Na primeira consulta, podem reunir-se os dados de base da sede e dos investidores, uma descrição geral do produto ou do serviço, o fluxo de operações previsto, os planos de pessoal e de instalações em Taiwan, e as condições de contrato e de apoio que os clientes pedem. O que ainda não estiver decidido pode marcar-se como «por decidir».
 
 Não é necessário juntar ao primeiro contacto todos os materiais confidenciais do cliente ou dados de processo pormenorizados. Depois de fornecido o nome da contraparte para o controlo dos conflitos, os materiais necessários e o modo de envio determinam-se segundo as indicações da advogada responsável.
 
@@ -105,7 +105,7 @@ Não é automático só porque o cliente está em Taiwan. Devem ver-se as exigê
 
 ### A responsabilidade da sede desaparece por completo quando uma sociedade taiwanesa é constituída?
 
-Se se constituir uma subsidiária e não uma sucursal, a sede, em princípio, não assume as obrigações contratuais assinadas em nome da subsidiária. Deve contudo verificar-se as exceções por abuso da personalidade jurídica e se a sede concedeu uma caução ou assumiu obrigações contratuais próprias.
+Se se constituir uma subsidiária e não uma sucursal, a sede, em princípio, não assume as obrigações contratuais assinadas em nome da subsidiária. Devem contudo verificar-se as exceções por abuso da personalidade jurídica e se a sede concedeu uma caução ou assumiu obrigações contratuais próprias.
 
 ### Pode começar-se por um distribuidor e depois passar a uma sociedade em Taiwan?
 

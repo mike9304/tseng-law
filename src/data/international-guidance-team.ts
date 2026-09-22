@@ -2358,7 +2358,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'O escritório trata assuntos de empresas e de particulares em Taiwan em inglês, japonês, coreano e chinês.',
-        'Representou um estudante coreano numa pretensão de indemnização por uma lesão num ginásio e obteve uma sentença de primeira instância de 1,57 milhões de TWD.',
+        'Representou um estudante coreano numa pretensão de indemnização por uma lesão num ginásio e obteve uma sentença de primeira instância de 1,57 milhão de TWD.',
       ],
       education: [
         'Mestrado (M.S.), Instituto de Finanças, National Taiwan University (Institute of Finance, National Taiwan University)',

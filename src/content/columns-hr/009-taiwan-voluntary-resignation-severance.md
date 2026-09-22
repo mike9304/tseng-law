@@ -98,4 +98,4 @@ U sporovima o zakonskoj otpremnini odlučuje koja je strana ranije, s valjanim r
 > Vidi također:
 > - [Kako se utvrđuju opseg rada i troškovi](/hr/pricing)
 > - [Međunarodni tim Hovering](/hr/lawyers)
-> - [U čemu zastupamo klijente](/hr/services)
+> - [Koje predmete vodimo](/hr/services)

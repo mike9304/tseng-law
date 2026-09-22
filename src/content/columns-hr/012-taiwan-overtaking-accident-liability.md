@@ -23,7 +23,7 @@ Kad vozilo ispred vozi sporo, pretjecanje (超車) može izgledati uobičajeno, 
 
 Osim toga ne smije se pretjecati na mjestima ili dionicama s oznakom škole ili bolnice, na mjestima s drugim oznakama ili obilježjima zabrane pretjecanja, kad se približava vozilo iz suprotnog smjera, niti kad ispred voze u nizu 2 ili više vozila.
 
-Da bi se u istom traku pretjelo vozilo ispred, vozač stražnjeg vozila mora najprije kratko dvaput trubiti ili jednom treptnuti dugim svjetlima. Truba i svjetla ne smiju se rabiti ponavljano da se vozilo ispred prisili da ustupi put.
+Da bi se u istom traku pretjelo vozilo ispred, vozač stražnjeg vozila mora najprije kratko dvaput trubiti ili jednom trepnuti dugim svjetlima. Truba i svjetla ne smiju se rabiti ponavljano da se vozilo ispred prisili da ustupi put.
 
 Stražnje vozilo smije pretjecati tek nakon što je vozilo ispred usporilo i sklonilo se ustranu ili je rukom ili desnim pokazivačem smjera pokazalo namjeru da ustupi put.
 
@@ -51,7 +51,7 @@ Taj zaključak, ograničen na ovaj predmet, ne znači da jedan izostanak propisa
 
 Prije pretjecanja treba najprije provjeriti spadaju li mjesto ili prometna situacija pod zabranu pretjecanja. Ako se primjenjuje postupak istog traka, treba dati propisani signal trubom ili svjetlima, bez prisiljavanja vozila ispred da ustupi, pričekati jasan izraz ustupanja i dovršiti pretjecanje uz dostatan razmak i sigurnu udaljenost povratka.
 
-Poštivanje članka 101. važno je, ali samo po sebi ne osigurava ni izbjegavanje nesreće ni kasniji ishod vještačenja ili postupka. Vozači moraju ostaviti dodatnu sigurnosnu rezervu i prilagoditi se situaciji ispred.
+Poštivanje članka 101. važno je, ali samo po sebi ne jamči ni da će se nesreća izbjeći ni određeni ishod kasnijeg vještačenja ili postupka. Vozači moraju ostaviti dodatnu sigurnosnu rezervu i prilagoditi se situaciji ispred.
 
 Kao dopunu može se pogledati [prikaz pravila i postupka pretjecanja](https://gonews.com.tw/car/daily/21934/). Budući da je riječ o sekundarnom izvoru, pri provjeri pravnih pretpostavki treba čitati i važeće službene propise.
 

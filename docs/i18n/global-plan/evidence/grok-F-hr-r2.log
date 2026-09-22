@@ -1,0 +1,142 @@
+# WO-F-hr round 2 — Croatian fix lane (Grok 4.7, 2026-09-22)
+
+Workspace: /Users/son7/Projects/tseng-law-fix-hr-r2
+No git add/commit/push.
+Croatian strings only (columns-hr, croatianGuidanceContent, hr role line, GUIDANCE_LLMS_NOTICES.hr).
+No test expected-string was updated: vitest still pins the consultation-language sentence, the FAQ disclaimer phrases that were left, and `TWD 1.57M`.
+
+R2–R11 were already in this pack (Korea as a labelled example, including the 001/004 country note and the 005 bank section labelled as the Korean regime; feminine Wei Tseng; consultation lock; Croatian dates; ROC-year glosses; Taiwan emergency numbers). This round applied the r2 review rows plus the leftover instances those verdicts describe. R12 role chrome: one role line. R15 `OOO` was already absent. R17: no Czech leakage in columns-hr or the Croatian guidance strings.
+
+## Rows applied
+
+hr-a
+1 APPLIED  004 link label now names the non-resident dividend withholding rule. URL unchanged. Digit kept: "(članak 10.)" — the Korean source counts 제10조, and dropping 10 failed numbers.
+2 APPLIED  GUIDANCE_LLMS_NOTICES.hr discoveryNotice. Literal token `llms.txt` kept. consultationNotice and confidentialNotice were not rewritten (they stay verbatim substrings of the FAQ answer and the privacy paragraph).
+3 APPLIED  001 "tijek" → "iskustvo" (attorney languages, and "stvarna funkcija, iskustvo i predložene isprave").
+4 APPLIED  005 "tajvanske dolare" → "nove tajvanske dolare"; the next sentence "novim tajvanskim dolarima". 011 "tajvanskih dolara" → "novih tajvanskih dolara" ×2 (same term).
+5 APPLIED  營利事業 is "poduzeća koja posluju radi dobiti", not "dobitna". 14 "dobitn*" hits removed in 001 and 004 (nominative, genitive, and the table cell "Dobitna poduzeća"). Gloss (營利事業) kept.
+6 APPLIED  有限公司 owners are članovi: "pristanak članova" ×3 (FAQ, body, step 2 under članak 113) and the liability paragraph ("Članovi društva s ograničenom odgovornošću", "zloupotrebljavaju li članovi", "Ako su član ili matično društvo", later "Članovi … članka 99."). 股份有限公司 stays dioničari. Digit form "2/3" kept.
+7 APPLIED  002 "Stvarno tijelo podnošenja" → "Nadležna tijela kojima se podnosi…".
+8 APPLIED  008 table cell "Laka | Teška | Laka".
+9 APPLIED  founding sentence: the firm name is the object of "osnovali su 2016.".
+10 APPLIED  "Cjelokupni je sadržaj ovdje opće naravi." Services intro "; ono je opće naravi i nije pravna analiza pojedinog spisa."
+11 APPLIED  "Poslana poruka je zahtjev koji čeka pregled:".
+12 APPLIED  "Pisani prijevod je nešto drugo:" ×2 (contact + FAQ).
+13 APPLIED  "i nakon što su obje strane potvrdile preuzimanje rada."
+14 APPLIED  "izvodite iz ove stranice".
+15 APPLIED  "prema tajvanskom pravu samostalna je pravna osoba" ×2 (FAQ + body).
+16 APPLIED  "sva četiri tipa" (accusative). Digit 4 dropped; numbers still PASS (that 4 was extra).
+18 APPLIED  008 close rephrased inside the existing blocks (ZWSP and the blank line kept): the "Ako" clause now finishes, and "Ne sklapajte…" no longer ends before lowercase "i pazite".
+19 APPLIED  "Ta su četiri popisa sastavljena prema izvornom jeziku članaka, a ne prema jeziku prijevoda." The suggested "popisi popisi" still repeats the noun.
+20 APPLIED  "pratimo strane klijente kroz korake koje na Tajvanu treba poduzeti".
+21 APPLIED  services title "Koje predmete vodimo", and the same link label in 13 columns.
+22 APPLIED  FAQ "ako se ne mogu služiti nijednim od četiri jezika?".
+23 APPLIED  "osobe povezane s Tajvanom".
+24 APPLIED  bare svaki after a plural predicate. See the systemic count.
+25 APPLIED  005 intro no longer tells the reader to go read part 2. Both markdown links stay. "2. dio" in the old sentence was dropped; numbers still PASS.
+26 APPLIED  "Sam potpisani sporazum još ne dovodi do razvoda" ×2.
+27 APPLIED  title + H1 "kada gasite društvo na Tajvanu?".
+29 APPLIED  currency code after the amount: 40 "TWD <digit>" occurrences moved (001, 002, 003, 004, 007, 017, 018). Amounts that already followed the code (006, 010, 011) were left. "(新臺幣, TWD)" glosses were not moved. A first pass swallowed a sentence-final period after 2.500.000, 60.000, 3.200.000 and 90.000; restored as "2.500.000 TWD." and the same for the other three.
+30 PARTIAL  001 "računato za posljednju godinu" ×2 (digit dropped; numbers PASS). 002 "na 1 mjesec ili dulje" ×2 and 008 "na 1 mjesec ili dulje" ×1 → "na rok od 1 mjeseca ili dulje" (the digit stays: dropping it failed numbers). 008 "navršenu 1 godinu" left in the original wording for the same reason.
+
+hr-b
+1 APPLIED  Kinmen or Lienchiang: the glossed threshold ×2 (FAQ + body), the shorter "na Kinmenu ili u Lienchiangu (Matsu)", and "mjerilo Kinmena ili Lienchianga". Amounts unchanged.
+2 APPLIED  "te jesu li kaznena naknada stvarno dosuđena i u kojem iznosu, ovisi".
+3 APPLIED  "mjesto čuvanja jest adresa proizvođača ili uvoznika kozmetike utvrđena u članku 7. stavku 1. točki 7."
+4 APPLIED  "treba zabilježiti svrhu i osnovu svakog izdatka".
+5 APPLIED  a determination valid in Taiwan is checked where the property sits, not applied unchanged.
+6 APPLIED  "Kakvo je razmišljanje osobe koja vježba?" (image alt and the link). The article title "stavke naknade" left (items, not mindset).
+7 APPLIED  "svaki mogući temelj zahtjeva i dan od kojega mu počinje teći rok".
+8 APPLIED  "potkrepljuju" for evidence: 010 "potraživanu štetu" and "dokaz koji potkrepljuje", plus 004 "Isprave koje potkrepljuju narav operacije".
+9 APPLIED  "konkretna dana uputa i povreda dužnosti pažnje".
+10 APPLIED  "do visine stvarne štete" ("1 puta" dropped; numbers PASS).
+11 APPLIED  "u potrošačkoj stvari br. 7 iz 109. godine Republike Kine". Gloss 109年度消字第7號 kept.
+12 APPLIED  registration timeline also accounts for giveaways and trials.
+13 APPLIED  a safety measure is distinguished from a request to supplement documents.
+14 APPLIED  "trepnuti".
+15 APPLIED  "ne jamči ni da će se nesreća izbjeći ni određeni ishod kasnijeg vještačenja ili postupka".
+17 APPLIED  015 restaurant zoning rephrased inside the three existing blocks (English and Korean are also three short paragraphs). They were not merged.
+18 APPLIED  "sa stručnim ili tehničkim vještinama potrebnima za to radno mjesto".
+19 APPLIED  "radnom mjestu na kojem se treba primijeniti".
+20 APPLIED  "Obavlja li radnik nakon obuke taj rad i koliko je već odrađeno također utječe na ocjenu opsega tereta."
+21 APPLIED  nominative "Opći troškovi … ne mogu se utvrditi".
+22 APPLIED  "prvi su nasljedni red zakonskog nasljeđivanja" ×2. "(red 1)" dropped; numbers still PASS.
+23 APPLIED  the dangling ", među ostalim sadržajem" dropped inside that sentence.
+24 APPLIED  "radi zaštite osobnosti i imovinskih interesa djeteta".
+25 APPLIED  "Važeće upute o zabrani ulaska".
+
+R12 (not a numbered row): hr role 'huang-shengping' "Partner, ovlašteni revizor (Partner CPA)" → "Partner, ovlašteni revizor". English institution names inside the bios were left: GUIDANCE_BIO_PRESERVED_TERMS requires them as substrings, and the Croatian name already stands beside them.
+
+007 ROC citation (R13, same shape as hr-b 11): "br. 4. godine Republike Kine 112." → "br. 4 iz 112. godine Republike Kine" ×4 (body, FAQ, and two link labels). Gloss 112年憲判字第4號 kept. No Gregorian year added.
+
+"takav kakav jest" (hr-b verdict): 5 removed. Four became "nepromijenjen" / "u neizmijenjenom obliku" (007 ×2, 014 ×1, 016 transfer/copy ×2 minus the determination sentence, which is row 5). 016 "prepisivati nepromijenjen" and "nepromijenjen prenese" are in that four.
+
+## Rows skipped
+
+hr-a 17 SKIP  Q16–Q20 as `##` headings, and the U+200B blanks in 003, 005, 006, 008, 009. Heading levels and the ZWSP count are compared to the Korean source (003 has 52 ZWSP).
+hr-a 28 SKIP  "TWD 1.57M" → "1,57 mil. TWD". ACCEPTED-ROUND / R12: the token is pinned byte-identical in the bio test. The sentence stays "u iznosu TWD 1.57M."
+hr-a 30 PARTIAL on 002 and 008, as above. The spare digit is a real Korean numeral, not an R11 lexical digit-word.
+hr-a 31 SKIP  Hangul in frontmatter `url` (009, and 008). The reviewer and ACCEPTED-ROUND both say not to edit `url`.
+hr-b 16 SKIP  Delete U+200B in 013 and 015. Same ZWSP pin. The sentence on that line was left.
+
+No P3 rows in either review.
+
+006 was not edited: amounts already follow the code ("40.000 TWD"), and the only structural finding was the U+200B pattern. 018 had no review row; only the currency-order sweep. inquiry-copy, answers, and offices hr strings were already Croatian and were not flagged.
+
+## Systemic patterns and how many instances changed
+
+- Currency code before the amount: 40 occurrences moved to after the figure. Bio "TWD 1.57M" not moved. "(新臺幣, TWD)" glosses not moved.
+- Clitic "je" inside a fixed phrase: 7 (opće naravi ×2, nešto drugo ×2, tajvanskom pravu ×2, zahtjev je koji ×1).
+- Bare svaki/svaka after a plural predicate: 7 (002 "zahtijevaju svaki" ×2 and "trebaju svaki svoju osnovu" ×1; 001 "imaju svaki" ×1; 004 "treba svaki potvrditi" ×1 and "ocjenjuju se svaki" ×1; 007 "svaka su" ×1).
+- 有限公司 called dioničari: consent sentence ×3 plus the liability paragraph (several clauses in one block, and the later article-99 sentence). 股份有限公司 dioničari left.
+- 營利事業 as "dobitna poduzeća": 14 hits in 001 and 004.
+- Glued "1" in a time phrase: 001 ×2 dropped ("posljednju godinu", checker passed). 002 ×2 and 008 ×1 rephrased to "na rok od 1 mjeseca" with the digit kept. 008 "navršenu 1 godinu" unchanged.
+- U+200B and Hangul `url`: 0 changed.
+- "takav kakav jest": 5.
+- "podupirati" for evidence: 3.
+- Kinmen joined with "i": 4 (two glossed threshold sentences, one shorter repeat, one "mjerilo").
+- Services title "U čemu zastupamo klijente": 14 (the guidance title plus 13 column link labels).
+- "(Partner CPA)" on the hr role line: 1.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-hr --lang hr 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=145
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-hr src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      23
+```
+
+That 23 was captured before this log file existed. After the log was written the same command prints 24 (this file is the extra untracked path). The 23 also includes the pre-existing dirty `docs/i18n/global-plan/WO-F-hr.txt` and the untracked review files `hr-a.md` and `hr-b.md`, which this lane did not edit.
+
+Before the digit restorations the checker was `summary FAIL 15/18`: 002 missing 1, 004 missing 10, 008 missing 1. After "na rok od 1 mjeseca", "(članak 10.)" in the 004 link label, and leaving "navršenu 1 godinu", summary PASS 18/18. WARN extras (015, 016) still count as PASS.
+
+## Reviewer got wrong (not applied as specified)
+
+- hr-a 17 and hr-b 16: Q16–Q20 and the short lines in 005, 006, 008, 009, 013, 015 are body blocks split by U+200B because the Korean source is. Making them headings or deleting the zero-width spaces fails blocks/headings.
+- hr-a 28: "1,57 mil. TWD" is the right Croatian notation and the wrong token for the bio test. "TWD 1.57M" stays.
+- hr-a 31: the Hangul slug is canonical metadata. The reviewer already said not to edit `url`.
+- hr-a 6's "dvije trećine" drops 2 and 3. "2/3" stays; only "dioničara" → "članova".
+- hr-a 19's suggested "Ta su četiri popisa popisi" still repeats the noun. The applied sentence does not.
+- hr-a 1's suggested label omits 10. The description was corrected and "(članak 10.)" was kept so the checker still sees the Korean 제10조. The URL was not changed. English also says Article 10 on this link; `flno=3` is a source-URL mismatch, not a Croatian-only error.
+- hr-a 30's "posljednju godinu" / "na mjesec dana" / "navršenu godinu" drop a source numeral. 001 happened to pass. 002 and 008 did not, so those digits stay.
+- hr-b 17's one-sentence merge would change the block count. The three blocks were rephrased so they read as one thought.
+- R12's English institution parentheticals in the bios ("Legal Aid Foundation, Taichung Branch", "Ministry of Education, Legal Affairs Division") are pinned substrings. They were not removed.

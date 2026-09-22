@@ -128,6 +128,6 @@ To unaprijed provjerite.
 ---
 
 > Vidi također:
-> - [U čemu zastupamo klijente](/hr/services)
+> - [Koje predmete vodimo](/hr/services)
 > - [Međunarodni tim Hovering](/hr/lawyers)
 > - [Kako kontaktirati ured](/hr/contact)

@@ -49,7 +49,7 @@ Izbor se razlikuje prema prekidu zastare (時效中斷), krugu tuženika, dokazi
 
 Kaznena odgovornost može se prihvatiti samo ako su priznati povreda dužnosti pažnje svakoga i uzročna veza između te povrede i ozljede druge strane. Sama činjenica da je krivnja postojala na objema stranama ne utemeljuje automatski odgovornost za nehajnu tjelesnu ozljedu.
 
-Na građanskopravnoj razini, prema članku 217. Građanskog zakonika, ako oštećenik ima krivnju koja je pridonijela nastanku ili povećanju štete (與有過失), sud može smanjiti ili oprostiti naknadu. Na primjer, ako šteta priznata u novom tajvanskom dolaru (新臺幣, TWD) iznosi TWD 1.000.000, a krivnja oštećenika ocjenjuje se na 50 %, iznos se može smanjiti na TWD 500.000 prije drugih prilagodbi.
+Na građanskopravnoj razini, prema članku 217. Građanskog zakonika, ako oštećenik ima krivnju koja je pridonijela nastanku ili povećanju štete (與有過失), sud može smanjiti ili oprostiti naknadu. Na primjer, ako šteta priznata u novom tajvanskom dolaru (新臺幣, TWD) iznosi 1.000.000 TWD, a krivnja oštećenika ocjenjuje se na 50 %, iznos se može smanjiti na 500.000 TWD prije drugih prilagodbi.
 
 Vještačenje (鑑定) ili tablica preliminarnog analitičkog ocjenjivanja mogu biti važne podloge, ali ne vežu sud mehanički. Sud ocjenjuje cjelinu dokaza, uključujući iskaze, snimke i stanje vozila.
 
@@ -175,7 +175,7 @@ Obveza sklapanja prema članku 6. Zakona o obveznom osiguranju odgovornosti za v
 
 Kod nesreće jednog vozila vozač toga vozila načelno nije korisnik davanja obveznog osiguranja toga vozila. Međutim, kod nesreće u kojoj sudjeluje više vozila postoje slučajevi u kojima vozač može zahtijevati davanje kod osiguravatelja obveznog osiguranja drugog sudjelujućeg vozila.
 
-Tarifa davanja (強制汽車責任保險給付標準) izmijenjena 29. 5. 2026. primjenjuje se na nesreće koje su nastale od 1. 7. 2026. Strop razumnih i potrebnih medicinskih troškova za ozljedu iznosi TWD 200.000 u novom tajvanskom dolaru; davanje za invalidnost (失能) iznosi od TWD 80.000 do TWD 3.000.000 prema 15 zakonskih stupnjeva; davanje za smrt iznosi TWD 3.000.000, a zajednički maksimum smrti, invalidnosti i medicinskih troškova za 1 oštećenika i 1 nesreću iznosi TWD 3.200.000. Na ranije nesreće može se primijeniti prethodna tarifa.
+Tarifa davanja (強制汽車責任保險給付標準) izmijenjena 29. 5. 2026. primjenjuje se na nesreće koje su nastale od 1. 7. 2026. Strop razumnih i potrebnih medicinskih troškova za ozljedu iznosi 200.000 TWD u novom tajvanskom dolaru; davanje za invalidnost (失能) iznosi od 80.000 TWD do 3.000.000 TWD prema 15 zakonskih stupnjeva; davanje za smrt iznosi 3.000.000 TWD, a zajednički maksimum smrti, invalidnosti i medicinskih troškova za 1 oštećenika i 1 nesreću iznosi 3.200.000 TWD. Na ranije nesreće može se primijeniti prethodna tarifa.
 
 Osiguranje odgovornosti prema trećim osobama (第三人責任險), osiguranje ozljeda vozača (駕駛人傷害險) i osiguranje štete vlastitog vozila (車體損失險) fakultativni su proizvodi ugovorne naravi. Stvarno pokriće razlikuje se prema osiguraniku, stropu, sudjelovanju (自負額), isključenjima, krivnji i drugim uvjetima police, pa policu i uvjete treba provjeriti predmet po predmet.
 
@@ -207,7 +207,7 @@ Mogu zanemariti i ono što je za drugu stranu bitno — ispriku i izraz sudjelov
 
 ​
 
-Za osiguravatelja isplata dodatnih TWD 500.000 ili TWD 1.000.000 u pojedinom predmetu nema bitan utjecaj na ukupni gospodarski rezultat; za sudionika nesreće međutim takav iznos može odlučivati o tome hoće li imati ili neće imati zabilježbu u kaznenoj evidenciji (前科).
+Za osiguravatelja isplata dodatnih 500.000 TWD ili 1.000.000 TWD u pojedinom predmetu nema bitan utjecaj na ukupni gospodarski rezultat; za sudionika nesreće međutim takav iznos može odlučivati o tome hoće li imati ili neće imati zabilježbu u kaznenoj evidenciji (前科).
 
 ​
 
@@ -239,7 +239,7 @@ U nekim je presudama za nehajnu tjelesnu ozljedu izrečena kratkotrajna kazna za
 
 ​
 
-Ako se kazna pretvori u kaznenu novčanu kaznu (易科罰金), članak 41. stavak 1. Kaznenog zakona utvrđuje preračun TWD 1.000, TWD 2.000 ili TWD 3.000 za 1 dan; pri stopi TWD 1.000 po danu kazni od 3 mjeseca odgovara iznos 3 × 30 × TWD 1.000 = TWD 90.000.
+Ako se kazna pretvori u kaznenu novčanu kaznu (易科罰金), članak 41. stavak 1. Kaznenog zakona utvrđuje preračun 1.000 TWD, 2.000 TWD ili 3.000 TWD za 1 dan; pri stopi 1.000 TWD po danu kazni od 3 mjeseca odgovara iznos 3 × 30 × 1.000 TWD = 90.000 TWD.
 
 ​
 

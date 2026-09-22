@@ -1185,7 +1185,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'chang-rongxuan': 'Odvjetnik na Tajvanu',
       'chang-fangyu': 'Pravni asistent',
       'son-jungmin': 'Operativno vodstvo za Koreju',
-      'huang-shengping': 'Partner, ovlašteni revizor (Partner CPA)',
+      'huang-shengping': 'Partner, ovlašteni revizor',
     },
   },
   sr: {

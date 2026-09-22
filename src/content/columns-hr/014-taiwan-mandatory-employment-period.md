@@ -47,7 +47,7 @@ Okolnost da je radnik ugovor potpisao može biti podloga koja potvrđuje postoja
 
 ## 2. Prva zakonska pretpostavka: stručno-tehnička obuka i snošenje troškova
 
-Da bi se klauzula temeljila na obuci, poslodavac mora radniku stvarno pružiti stručno-tehničku obuku i snositi njezine troškove. Nije dovoljno u planu obuke napisati da je riječ o stručnom tečaju, ili u ugovor upisati procijenjeni trošak. Podloge treba povezati s temom obuke, sa stručnošću i tehničkošću potrebnom za mjesto, konkretnim trajanjem, je li obuka dovršena, i stvarnim izdatkom.
+Da bi se klauzula temeljila na obuci, poslodavac mora radniku stvarno pružiti stručno-tehničku obuku i snositi njezine troškove. Nije dovoljno u planu obuke napisati da je riječ o stručnom tečaju, ili u ugovor upisati procijenjeni trošak. Podloge treba povezati s temom obuke, sa stručnim ili tehničkim vještinama potrebnima za to radno mjesto, konkretnim trajanjem, je li obuka dovršena, i stvarnim izdatkom.
 
 Predmet ocjene nisu samo izravno provjerivi troškovi, kao honorari vanjskih predavača, školarina obrazovne ustanove i naknade za materijale ili opremu, nego i temelj izračuna unutarnjih troškova koje poslodavac tvrdi. Ako je obuku vodilo unutarnje osoblje, treba vidjeti čije je i koje vrijeme utrošeno, čime se to razlikuje od uobičajenog nadzora ili predaje mjesta i postoji li temelj da se taj trošak pripiše danom radniku. Procijenjeni iznos ili paušalna raspodjela sami po sebi stvarni teret ne dokazuju.
 
@@ -55,7 +55,7 @@ Program, kalendar obuke, popis nazočnosti, rezultat ocjene, svjedodžba o dovr�
 
 Granica između opće prilagodbe na rad i stručno-tehničke obuke ne ovisi samo o mjestu obuke ni o tome tko je organizira. Unutarnji tečaj može dokazati konkretan stručni i tehnički sadržaj i znatno ulaganje, a dugi tečaj vanjske ustanove može u stvari biti opća uvodna obuka. Stoga se sva unutarnja obuka ne smije paušalno isključiti niti se zakonska pretpostavka smije priznati samo zato što je tečaj skup ili dug.
 
-Treba također moći objasniti odnos između ugovorenog razdoblja i ulaganja u obuku. Koja se sposobnost stječe, kakav odnos ta sposobnost ima prema ciljanom mjestu i zašto je predloženo trajanje radnog odnosa potrebno prema trajanju i trošku obuke, ocjenjuje se pojedinačno. Je li se nakon završetka obuke taj rad stvarno obavljao i već odrađeno razdoblje također su podloge za ocjenu opsega tereta.
+Treba također moći objasniti odnos između ugovorenog razdoblja i ulaganja u obuku. Koja se sposobnost stječe, kakav odnos ta sposobnost ima prema radnom mjestu na kojem se treba primijeniti i zašto je predloženo trajanje radnog odnosa potrebno prema trajanju i trošku obuke, ocjenjuje se pojedinačno. Obavlja li radnik nakon obuke taj rad i koliko je već odrađeno također utječe na ocjenu opsega tereta.
 
 ## 3. Druga zakonska pretpostavka: razumna naknada
 
@@ -86,7 +86,7 @@ Treći čimbenik vidi ne samo iznos naknade, nego i opseg. Važno je kada se isp
 
 Četvrti čimbenik može obuhvatiti različite okolnosti koje utječu na razumnost, kao tijek sklapanja klauzule, narav rada, sadržaj objašnjen strankama, stvarno odrađeno razdoblje i razlog prestanka. Značenje svakog čimbenika može se razlikovati prema stvari, a okolnosti koje valja uzeti u obzir ne ograničavaju se na prethodne primjere. Stoga treba ocijeniti, bez propuštanja, relevantne činjenice koje se pojavljuju u spisu.
 
-Napokon je potreban razumljiv razmjer između ugovorenog razdoblja, stvarnog ulaganja poslodavca, teškoće zamjene, naknade koju je radnik primio i tereta povrata. Valjanost se ne smije unaprijed odrediti samo zato što je riječ o određenom zanimanju, niti se zaključak iz druge stvari smije primijeniti takav kakav jest. Treba zajedno vidjeti zasnovu u trenutku sklapanja ugovora i stvarni stupanj ispunjenja u trenutku prestanka.
+Napokon je potreban razumljiv razmjer između ugovorenog razdoblja, stvarnog ulaganja poslodavca, teškoće zamjene, naknade koju je radnik primio i tereta povrata. Valjanost se ne smije unaprijed odrediti samo zato što je riječ o određenom zanimanju, niti se zaključak iz druge stvari smije primijeniti nepromijenjen. Treba zajedno vidjeti zasnovu u trenutku sklapanja ugovora i stvarni stupanj ispunjenja u trenutku prestanka.
 
 ## 5. Obuka koja ne može utemeljiti klauzulu
 
@@ -94,7 +94,7 @@ Prema uputi tajvanskog Ministarstva rada od 5. 6. 2026. trošak redovite obuke, 
 
 Uputa 勞動關2字第1150141814號 Ministarstva rada razlikuje i uređuje obuku koja se provodi redovito, uobičajenu obuku za radno mjesto, obuku da se novi radnik upozna s okružjem i postupcima rada, i obuku koju poslodavac mora provesti prema zakonu. Budući da ta obuka prati vođenje djelatnosti ili ispunjenje zakonske dužnosti, smisao je da se njezin trošak ne može pretvoriti u temelj dužnosti ostanka ili sankcije zbog ranog prestanka.
 
-Tečajeve koje novi zaposlenik obično primi, kao tumačenje radnih pravila (工作規則), predstavljanje organizacije i sustava, uobičajenu predaju mjesta i uputu o osnovnim postupcima sigurnosti, treba potvrditi u njihovoj biti. Opće troškove zapošljavanja i upravljanja ili troškove predaje mjesta, koje je poslodavac izvorno trebao snositi, ne može se utvrditi kao predmet povrata pukim označavanjem za zasebno ulaganje.
+Tečajeve koje novi zaposlenik obično primi, kao tumačenje radnih pravila (工作規則), predstavljanje organizacije i sustava, uobičajenu predaju mjesta i uputu o osnovnim postupcima sigurnosti, treba potvrditi u njihovoj biti. Opći troškovi zapošljavanja i upravljanja ili troškovi predaje mjesta, koje je poslodavac izvorno trebao snositi, ne mogu se utvrditi kao predmet povrata pukim označavanjem za zasebno ulaganje.
 
 Obuka se međutim ne isključuje uvijek samo zato što je provedena unutar poduzeća. U istom se programu mogu miješati dio opće prilagodbe i stručno-tehnički dio, stoga temu, vrijeme, trošak i to postoji li zakonska dužnost treba provjeriti po tečaju. Tko tvrdi stručno-tehnički dio, treba podlogama objasniti koji se sadržaj razlikuje od uobičajene obuke i tko je stvarno snosio troškove.
 
@@ -183,7 +183,7 @@ Pri uređivanju podloga u vremenskom slijedu valja zajedno navesti dan sklapanja
 
 ## 11. Povezane upute
 
-- [U čemu zastupamo klijente](/hr/services)
+- [Koje predmete vodimo](/hr/services)
 - [Iznimke u kojima radnik može primiti zakonsku otpremninu (資遣費) i pri dobrovoljnom odlasku](/hr/columns/taiwan-voluntary-resignation-severance)
 - [Kontakt](/hr/contact)
 

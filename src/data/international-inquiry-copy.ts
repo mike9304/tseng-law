@@ -2223,7 +2223,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Primili smo Vaš zahtev; čeka ocenu. To ne znači da je konsultacija obavljena niti da je sastanak potvrđen.',
     savedNotificationPendingMessage:
       'Vaš zahtev je sačuvan, ali obaveštenje kancelariji još nije evidentirano kao dostavljeno. Ono što ste napisali ne gubi se. Ako ne dobijete odgovor, možete pisati i na adresu elektronske pošte sa kontaktne stranice.',
-    receiptIdLabel: 'Broj predaje',
+    receiptIdLabel: 'Broj prijema',
     failureMessage:
       'Slanje zahteva nije uspelo. Pokušajte ponovo ili pišite na adresu elektronske pošte sa kontaktne stranice.',
     originalLanguageLabel: 'Jezik na kojem pišete',
@@ -2236,7 +2236,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     nameLabel: 'Ime',
     emailLabel: 'Elektronska pošta',
     consentLabel:
-      'Pročitao sam ili pročitala sam stranicu o privatnosti i saglasan sam ili saglasna sam sa slanjem ovog zahteva.',
+      'Pročitao/la sam stranicu o privatnosti i saglasan/na sam sa slanjem ovog zahteva.',
     privacyLinkLabel: 'Privatnost',
     requiredMessage: 'Ovo polje je obavezno.',
     invalidEmailMessage: 'Unesite važeću adresu elektronske pošte.',
@@ -2252,7 +2252,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Japanski (日本語)',
       ko: 'Korejski (한국어)',
       'needs-method-confirmation':
-        'Nijedan od četiri jezika nije upotrebljiv — način komunikacije treba potvrditi',
+        'Ne govorim nijedan od četiri jezika — način komunikacije treba potvrditi',
     },
   },
   sl: {

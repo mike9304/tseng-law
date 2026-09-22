@@ -1212,8 +1212,8 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'tseng-junwei': 'Rukovodeća advokatkinja na Tajvanu',
       'chang-rongxuan': 'Advokat na Tajvanu',
       'chang-fangyu': 'Pravni asistent',
-      'son-jungmin': 'Rukovodilac operacija za Koreju',
-      'huang-shengping': 'Partner, ovlašćeni računovođa (Partner CPA)',
+      'son-jungmin': 'Rukovodilac poslovanja za Koreju',
+      'huang-shengping': 'Partner, ovlašćeni računovođa',
     },
   },
   sl: {
@@ -4218,7 +4218,7 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Fondacija pravne pomoći, podružnica u Tajčungu',
+        'Fondacija pravne pomoći, podružnica u Taichungu',
       ],
     },
     'chang-rongxuan': {
@@ -4256,7 +4256,7 @@ export const guidanceTeamBios: Record<
         'Diploma (B.S.) informatike, National Cheng Kung University',
       ],
       experience: [
-        'Odeljenje korejskih operacija, Hovering International Law Firm',
+        'Odeljenje korejskog poslovanja, Hovering International Law Firm',
       ],
     },
     'huang-shengping': {

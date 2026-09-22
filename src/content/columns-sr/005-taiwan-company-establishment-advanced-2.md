@@ -71,7 +71,7 @@ Neke banke mogu da postave i dalje zahteve, na primer da se račun koristi najma
 
 Prvi zaposleni: zahtev se podnosi kao rukovodeći posao u preduzeću redovne investicije prekomorskih Kineza ili stranaca (一般僑外投資事業主管工作). Merilo „posla stručne ili tehničke prirode“ iz tačke B ispod se ne primenjuje, ali se primenjuju uslovi adresata, uključujući uslov rukovodioca (經理人) društva čiji ulog prekomorskih Kineza ili stranaca prelazi 1/3, kao i uslovi rezultata poslodavca koji se tiču kapitala i prometa (članovi 38 i 39 standarda provere).
 
-Od drugog zaposlenog postoje ograničenja: ako broj zaposlenih lica prelazi 1 lice, obrazovanje i iskustvo zaposlenog, pravila prosečne plate pri zapošljavanju i pravila kapitala i prometa društva obrađuju se prema „stručnom ili tehničkom poslu“ (專門性或技術性工作).
+Od drugog zaposlenog postoje ograničenja: ako broj zaposlenih stranaca prelazi 1 lice, obrazovanje i iskustvo zaposlenog, pravila prosečne plate pri zapošljavanju i pravila kapitala i prometa društva obrađuju se prema „stručnom ili tehničkom poslu“ (專門性或技術性工作).
 
 Vidite stranicu Ministarstva rada Tajvana (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

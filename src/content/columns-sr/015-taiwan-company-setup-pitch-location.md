@@ -13,7 +13,7 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 ![Glavni prikaz](../images/015-taiwan-company-setup-pitch-location/featured-01.jpg)
 
-(Zahtevi mesnih samouprava na Tajvanu razlikuju se; sledeći tekst primer je otvaranja restoranske delatnosti u gradu Tajpeju.)
+(Zahtevi lokalnih samouprava na Tajvanu razlikuju se; sledeći tekst primer je otvaranja restoranske delatnosti u gradu Tajpeju.)
 
 ![](../images/015-taiwan-company-setup-pitch-location/img-01.jpg)
 

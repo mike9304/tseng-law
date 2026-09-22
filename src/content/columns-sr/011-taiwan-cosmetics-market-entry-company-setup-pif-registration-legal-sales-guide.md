@@ -13,7 +13,7 @@ faq:
   - q: "Šta je PIF i da li je to isti postupak kao registracija proizvoda kod TFDA?"
     a: "Registracija proizvoda i PIF nisu isti postupak. Registracija proizvoda (產品登錄) poseban je akt koji se sprovodi na platformi za registraciju kozmetičkih proizvoda TFDA (衛生福利部食品藥物管理署). PIF je spis koji okuplja podatke o kvalitetu, bezbednosti, sastavu, tvrđenoj funkciji, načinu proizvodnje, rezultatima ispitivanja i oceni bezbednosti i koji proizvođač ili uvoznik kozmetike sastavlja, ažurira i čuva; sam PIF nije dokument koji bi se unapred podnosio TFDA. Od 1. 7. 2026. načelno svi kozmetički proizvodi spadaju pod režim PIF, izuzev čvrstog ručno izrađenog sapuna proizvedenog na mestu proizvodnje oslobođenom upisa pogona (工廠登記)."
   - q: "Na koje izraze treba paziti u reklami kozmetike na Tajvanu?"
-    a: "Reklama se ocenjuje ne samo prema rečenici, već prema celokupnom izrazu, uključujući naziv proizvoda, tekst, sliku, znak i zvuk. Zabranjeni su neistiniti ili preterani izrazi i tvrdnje o lekovitom dejstvu, a posebnu pažnju treba pokloniti medicinskim izrazima, kao što su lečenje akni, protivupalno ili baktericidno delovanje. Upravna novčana kazna iznosi od TWD 40.000 do TWD 200.000 novog tajvanskog dolara (新臺幣, TWD) za neistinitu ili preteranu reklamu i od TWD 600.000 do TWD 5.000.000 za tvrdnju o lekovitom dejstvu. Objave influensera i drugih takođe treba oceniti prema istom merilu, ako su u suštini reklama."
+    a: "Reklama se ocenjuje ne samo prema rečenici, već prema celokupnom izrazu, uključujući naziv proizvoda, tekst, sliku, znak i zvuk. Zabranjeni su neistiniti ili preterani izrazi i tvrdnje o lekovitom dejstvu, a posebnu pažnju treba pokloniti medicinskim izrazima, kao što su lečenje akni, protivupalno ili baktericidno delovanje. Upravna novčana kazna iznosi od 40.000 do 200.000 novih tajvanskih dolara (新臺幣, TWD) za neistinitu ili preteranu reklamu i od 600.000 TWD do 5.000.000 TWD za tvrdnju o lekovitom dejstvu. Objave influensera i drugih takođe treba oceniti prema istom merilu, ako su u suštini reklama."
 ---
 
 # Ulazak na tržište kozmetike na Tajvanu: izbor uvoznika, registracija proizvoda, sastavljanje i čuvanje PIF i regulacija reklame
@@ -44,7 +44,7 @@ Tajvansko zavisno društvo i ogranak stranog društva nisu ista organizacija. Za
 
 Ako je potreban postupak strane investicije, treba proveriti uputstva **Odeljenja za pregled i odobravanje investicija Ministarstva ekonomije (經濟部投資審議司)** kao trenutno nadležnog organa. Rok potreban za odobrenje investicije, prenos sredstava, upis društva ili ogranka, otvaranje bankovnog računa, poresku registraciju (稅籍登記) i sticanje svojstva uvoznika razlikuje se prema investitoru, grani, obliku organizacije, podnetim dokumentima i tome da li dolazi do ispravke ili dopune. Zato umesto utvrđivanja datuma stavljanja na tržište uz pretpostavku određenog stalnog roka treba najpre proveriti da li se svaki akt primenjuje i najnovije uslove prijema.
 
-Koja god struktura da se izabere, središnji subjekt odgovornosti u regulaciji kozmetike jeste **proizvođač ili uvoznik kozmetike**. Sređivanje dokumenata o proizvodu ili ocenu bezbednosti (安全性評估) moguće je poveriti spoljnom stručnjaku, ali samo poveravanje posla ne prenosi pravnu odgovornost proizvođača ili uvoznika. Razlikovanje ugovorne podele rada od zakonskog subjekta odgovornosti polazna je tačka ocene strukture ulaska.
+Koja god struktura da se izabere, središnji subjekt odgovornosti u regulaciji kozmetike jeste **proizvođač ili uvoznik kozmetike**. Dokumentaciju o proizvodu ili ocenu bezbednosti (安全性評估) moguće je poveriti spoljnom stručnjaku, ali samo poveravanje posla ne prenosi pravnu odgovornost proizvođača ili uvoznika. Razlikovanje ugovorne podele rada od zakonskog subjekta odgovornosti polazna je tačka ocene strukture ulaska.
 
 ## 2. Registracija proizvoda i PIF dva su različita režima
 
@@ -64,7 +64,7 @@ PIF je skup dokumenata uređen tako da se i dalje mogu objašnjavati kvalitet i 
 
 Režim PIF primenjivao se postupno prema grupama proizvoda. Od 1. 7. 2026. u predmet primene uključeni su i preostali kozmetički proizvodi, tako da se načelno odnosi na svu kozmetiku. Izuzetak se ograničava na čvrsti ručno izrađeni sapun proizveden na mestu proizvodnje oslobođenom upisa pogona. Proizvod nije izuzet samo zato što je ručni ili što koristi naziv sapuna; treba proveriti oboje, čvrsti oblik i uslov oslobođenja mesta proizvodnje od upisa pogona.
 
-Posao PIF, uključujući ocenu bezbednosti, može da podrži treće lice koje ima potrebnu kvalifikaciju i sposobnost. Čak i kada se koristi podrška sastavljanja od trećeg lica ili usluga čuvanja dokumenata, pravna odgovornost proizvođača ili uvoznika kozmetike ipak ostaje. Treba izgraditi sistem koji omogućava da prvobitni proizvođač, ispitna ustanova, ocenjivač bezbednosti i preduzeće na strani Tajvana međusobno prenose informacije o izmenama i najnovije potpisane dokumente.
+Posao PIF, uključujući ocenu bezbednosti, može da podrži treće lice koje ima potrebnu kvalifikaciju i sposobnost. Čak i kada treće lice pomaže pri sastavljanju ili kada se koristi usluga čuvanja dokumenata, pravna odgovornost proizvođača ili uvoznika kozmetike ipak ostaje. Treba izgraditi sistem koji omogućava da prvobitni proizvođač, ispitna ustanova, ocenjivač bezbednosti i tajvansko preduzeće međusobno prenose informacije o izmenama i najnovije potpisane dokumente.
 
 ### Ažuriranje i čuvanje
 
@@ -72,19 +72,19 @@ Ako se izmene sirovina ili receptura, način i mesto proizvodnje, označavanje u
 
 Prema članu 7 Pravilnika o vođenju informacionog spisa kozmetičkih proizvoda rok čuvanja iznosi najmanje 5 godina, računato od dana koji sledi posle dana poslednje isporuke proizvoda na tržište. Prema članu 8 istog pravilnika mesto čuvanja jeste adresa označavanja proizvođača ili uvoznika kozmetike utvrđena u članu 7 stavu 1 tački 7 Zakona o higijeni i bezbednosti kozmetike (化粧品衛生安全管理法). Odredbu koja utvrđuje rok i odredbu koja utvrđuje mesto treba voditi odvojeno.
 
-Čak i kada prvobitni proizvođač čuva original ili se koristi bezbedno elektronsko skladište ili skladištenje u oblaku, proizvođač ili uvoznik mora da ima pristup potpunim dokumentima. Treba utvrditi prava pristupa, rezervne kopije, vođenje verzija, format datoteka i odgovorno lice tako da se dokumenti mogu brzo pronaći i predočiti kada ih nadležni organ zahteva. Važno je i u ugovoru urediti primaoca predaje, način i to da li pravo pristupa traje, kako bi se dokumenti održali tokom zakonskog roka čuvanja i posle prestanka ugovora s prodajnim partnerom ili pružaocem usluge.
+Čak i kada prvobitni proizvođač čuva original ili se koristi bezbedno elektronsko skladište ili skladištenje u oblaku, proizvođač ili uvoznik mora da ima pristup potpunim dokumentima. Treba utvrditi prava pristupa, rezervne kopije, vođenje verzija, format datoteka i odgovorno lice tako da se dokumenti mogu brzo pronaći i predočiti kada ih nadležni organ zahteva. Važno je i u ugovoru urediti koji se dokumenti predaju, kako se predaja obavlja i da li pravo pristupa ostaje, kako bi se dokumenti održali tokom zakonskog roka čuvanja i posle prestanka ugovora s prodajnim partnerom ili pružaocem usluge.
 
 ### Kontrola, ispravka i upravne mere
 
 Kada nadležni organ kontroliše PIF, to načelno saopštava proizvođaču ili uvozniku kozmetike najkasnije 7 dana pre dana kontrole. Ako međutim slučaj spada pod zakonski izuzetak utvrđen u povezanim propisima, kontrolu je moguće sprovesti bez prethodnog saopštenja. Bez obzira na to da li je saopštenje dato, treba stalno održavati stanje koje omogućava da se pronađu i predoče potpuni ažurni dokumenti.
 
-Prijava neistinitih informacija pri registraciji proizvoda ili unošenje neistinitih informacija u PIF može biti predmet upravne novčane kazne (罰鍰) od TWD 10.000 do TWD 1.000.000 novog tajvanskog dolara (新臺幣, TWD). Ako su nasuprot tome dokumenti PIF nepotpuni, nadležni organ obično naloži ispravku u utvrđenom roku (限期改正), a upravna novčana kazna postaje pitanje tek kada se u tom roku ne ispravi. Neistinite podatke i nepotpunost koja se još može dopuniti ne treba tretirati kao da imaju istu posledicu.
+Prijava neistinitih informacija pri registraciji proizvoda ili unošenje neistinitih informacija u PIF može biti predmet upravne novčane kazne (罰鍰) od 10.000 do 1.000.000 novih tajvanskih dolara (新臺幣, TWD). Ako su nasuprot tome dokumenti PIF nepotpuni, nadležni organ obično naloži ispravku u utvrđenom roku (限期改正), a upravna novčana kazna može se izreći tek ako se u tom roku ne ispravi. Neistinite podatke i nepotpunost koja se još može dopuniti ne treba tretirati kao da imaju istu posledicu.
 
 Povlačenje s tržišta ili uništenje (銷毀) nije mera koja bi automatski sledila svaku nepotpunost dokumenata PIF. Bezbednost proizvoda, sadržaj povrede, stanje ispravke i zakonske uslove koji se primenjuju na svaku meru treba oceniti odvojeno. Mere kada je potvrđen bezbednosni problem i zahtev za dopunu dokumenata treba oceniti posebno, a postupanje se ravna prema saopštenju nadležnog organa i primenjenoj odredbi.
 
 ## 3. Regulacija označavanja, promocije i reklame
 
-Reklama se ocenjuje ne samo prema rečenici, već prema celokupnom izrazu, uključujući naziv proizvoda, tekst, sliku, znak i zvuk. Zabranjeni su neistiniti ili preterani izrazi i tvrdnje o lekovitom dejstvu, a posebnu pažnju treba pokloniti medicinskim izrazima, kao što su lečenje akni, protivupalno ili baktericidno delovanje. Upravna novčana kazna iznosi od TWD 40.000 do TWD 200.000 za neistinitu ili preteranu reklamu i od TWD 600.000 do TWD 5.000.000 za tvrdnju o lekovitom dejstvu. Objave influensera i drugih takođe treba oceniti prema istom merilu, ako su u suštini reklama.
+Reklama se ocenjuje ne samo prema rečenici, već prema celokupnom izrazu, uključujući naziv proizvoda, tekst, sliku, znak i zvuk. Zabranjeni su neistiniti ili preterani izrazi i tvrdnje o lekovitom dejstvu, a posebnu pažnju treba pokloniti medicinskim izrazima, kao što su lečenje akni, protivupalno ili baktericidno delovanje. Upravna novčana kazna iznosi od 40.000 TWD do 200.000 TWD za neistinitu ili preteranu reklamu i od 600.000 TWD do 5.000.000 TWD za tvrdnju o lekovitom dejstvu. Objave influensera i drugih takođe treba oceniti prema istom merilu, ako su u suštini reklama.
 
 ### Ocenjuje se prema celokupnom izrazu, a ne prema svakoj reči
 
@@ -92,7 +92,7 @@ Da li su označavanje, promocija (宣傳) ili reklama neistiniti ili preterani, 
 
 Na primer, tvrdnja da kozmetika leči akne, ima protivupalno dejstvo ili baktericidno delovanje može biti tvrdnja o lekovitom dejstvu. Treba zajedno proveriti i način povezivanja naziva bolesti s proizvodom, snimke pre upotrebe i posle nje, prikaz koji evocira zdravstvenog radnika i kontekst koji tumačenje sastojka povezuje s lekovitim dejstvom proizvoda.
 
-Upravna novčana kazna za neistinitu ili preteranu reklamu (虛偽誇大廣告) iznosi od TWD 40.000 do TWD 200.000, a upravna novčana kazna za tvrdnju o lekovitom dejstvu iznosi od TWD 600.000 do TWD 5.000.000. Pošto se raspon razlikuje prema vrsti povrede, treba pre objavljivanja uporediti celokupni reklamni izraz s dokaznim dokumentima.
+Upravna novčana kazna za neistinitu ili preteranu reklamu (虛偽誇大廣告) iznosi od 40.000 TWD do 200.000 TWD, a upravna novčana kazna za tvrdnju o lekovitom dejstvu iznosi od 600.000 TWD do 5.000.000. TWD Pošto se raspon razlikuje prema vrsti povrede, treba pre objavljivanja uporediti celokupni reklamni izraz s dokaznim dokumentima.
 
 ### Influenseri, autori recenzija i prodajni partneri
 
@@ -107,7 +107,7 @@ Ako se priprema prodaje na Tajvanu proveri ovim redosledom, opada rizik da se je
 1. Utvrditi da li sami osnivate zavisno društvo ili ogranak na Tajvanu, ili da li uvoz i prodaju poveravate lokalnom uvozniku.
 2. Proveriti subjekt koji nosi pravnu odgovornost kao proizvođač ili uvoznik kozmetike i ugovorno odgovorno lice za posao.
 3. Završiti registraciju proizvoda pre isporuke, prodaje, poklanjanja, javnog izlaganja ili davanja proizvoda potrošaču na probu.
-4. Sastaviti PIF prema proizvodu, ažurirati izmene i čuvati ga u skladu sa zakonskim rokom i mestom.
+4. Sastaviti PIF za svaki proizvod, ažurirati ga kad dođe do izmena i čuvati ga u skladu sa zakonskim rokom i mestom.
 5. Oceniti etiketu, prodajnu stranicu, reklamu i objave iz saradnje prema merilu celokupnog izraza.
 6. Voditi postupak za reagovanje na kontrole i zahteve za ispravku, pritužbe, bezbednosne informacije i potrebne naredne korake.
 

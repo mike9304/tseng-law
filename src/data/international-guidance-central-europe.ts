@@ -1586,7 +1586,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Investicije i osnivanje društava na Tajvanu',
           paragraphs: [
-            'Pratimo strane investitore i preduzeća pri osnivanju ili vođenju društva na Tajvanu: izbor pravne forme, priprema i podnošenje dokumenata, unos kapitala, bankarska pitanja, ocena sedišta i zahtevi pojedinih grana. Podržavamo i računovodstvo i poreze koji proizlaze iz osnivanja i poslovanja na Tajvanu.',
+            'Pratimo strane investitore i preduzeća pri osnivanju ili vođenju društva na Tajvanu: izbor pravne forme, priprema i podnošenje dokumenata, unos kapitala, bankarska pitanja, ocena mesta poslovanja i zahtevi pojedinih grana. Podržavamo i računovodstvo i poreze koji proizlaze iz osnivanja i poslovanja na Tajvanu.',
             'Tok i trajanje razlikuju se prema formi, investitoru, grani, banci i već raspoloživim dokumentima. Osnivanje društva samo po sebi ne vodi boravišnoj dozvoli (居留) niti radnoj dozvoli (工作許可): to su posebni postupci koji se ocenjuju prema situaciji konkretne osobe.',
           ],
         },
@@ -1647,7 +1647,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) osnovali su 2016. godine advokatkinje i advokati koji su studirali na National Taiwan University (國立臺灣大學). Kineski naziv 昊鼎 spaja znak 昊 („široko nebo“) sa znakom 鼎 („čvrst temelj“) i izražava usmerenje kancelarije od osnivanja.',
             'Imamo kancelarije u Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Kancelarija u Kaohsiungu usredsređena je na upravljanje preduzećima i vodi građanske, krivične i upravne sporove. Kancelarija u Taichungu vodi građevinske stvari, intelektualnu svojinu i stvari sa vezom na Koreju i Japan. Kancelarija u Pingtungu otvorena je 2017. godine zbog lokalne potrebe.',
-            'Pored advokatskog rada od 2020. godine deluje i Hovering Accounting Office, koje nudi računovodstvo i poresko planiranje preduzetnicima i privatnim licima sa imovinom.',
+            'Pored advokatskog rada od 2020. godine deluje i Hovering Accounting Office, koje nudi računovodstvo i poresko planiranje preduzetnicima i imućnim privatnim licima.',
           ],
         },
         {
@@ -1660,7 +1660,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kada nas kontaktirate',
           paragraphs: [
-            'Nakon prijema Vašeg sažetka advokatkinja ili advokat pregleda sadržaj i zatim govori o mogućem obimu rada, o još potrebnim dokumentima i o daljim koracima. Kod poreskih ili računovodstvenih pitanja kancelarija može da postupa sa računovodstvenim odeljenjem u jednom povezanom postupku.',
+            'Nakon prijema Vašeg sažetka advokatkinja ili advokat pregleda sadržaj i zatim govori o mogućem obimu rada, o još potrebnim dokumentima i o daljim koracima. Kod poreskih ili računovodstvenih pitanja kancelarija može da radi s računovodstvenim odeljenjem u jednom zajedničkom postupku.',
             'Ishod svake stvari zavisi od činjenica i od raspoloživih dokumenata; ishod ne obećavamo. Ako Vam je potrebna obavezujuća ocena Vaše situacije, o dokumentima treba razgovarati sa advokatkinjom ili advokatom na jednom od četiri jezika konsultacije.',
           ],
         },
@@ -1734,7 +1734,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Ako ne možete da koristite nijedan od četiri jezika konsultacije',
           paragraphs: [
             'U kontaktnom obrascu možete izabrati „Način komunikacije treba potvrditi“. Odgovaramo da bismo ocenili izvodljiv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zagarantovana i rok za odgovor se ne obećava.',
-            'To je samo korak ocene, a nije obećanje. Ne obećavamo tumača, uslugu na srpskom niti na jeziku izvan tih četiri navedena jezika, niti da ćemo prihvatiti svaku stvar.',
+            'To je samo korak ocene, a nije obećanje. Ne obećavamo tumača, uslugu na srpskom niti na jeziku izvan tih četiriju navedenih jezika, niti da ćemo prihvatiti svaku stvar.',
           ],
         },
         {
@@ -1764,7 +1764,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kako koristiti ovaj deo',
           paragraphs: [
-            'Ako ne nađete odgovor za svoju situaciju, odgovor obično zavisi od posebnih činjenica. Napišite ih zato u sažetak, umesto da ih izvodite sa ove stranice.',
+            'Ako ne nađete odgovor za svoju situaciju, odgovor obično zavisi od posebnih činjenica. Napišite ih zato u sažetak, umesto da odgovor sami izvlačite iz ove stranice.',
           ],
         },
       ],
@@ -1807,7 +1807,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Šta ako je moja stvar veoma hitna?',
           answer:
-            'Navedite rok ili datum sa službenog pismena odmah na početku sažetka, da bi ti podaci bili vidljivi pri oceni. Ova stranica nema hitni kanal i ne obezbeđuje rok za odgovor; ako Vaša stvar ne trpi odlaganje, trebalo bi paralelno da tražite i drugi put tamo gde se nalazite.',
+            'Navedite rok ili datum sa službenog pismena odmah na početku sažetka, da bi ti podaci bili vidljivi pri oceni. Ova stranica nema hitni kanal i ne obezbeđuje rok za odgovor; ako Vaša stvar ne trpi odlaganje, trebalo bi paralelno da tražite i drugi način tamo gde se nalazite.',
         },
       ],
     },
@@ -1832,7 +1832,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
             'Jezik konsultacije koji želite',
             'Izvorni tekst koji ste napisali',
             'Vaša saglasnost za slanje zahteva',
-            'Broj predaje radi pronalaženja zahteva',
+            'Broj prijema radi pronalaženja zahteva',
           ],
         },
         {
@@ -1845,7 +1845,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Mesto čuvanja i pristup',
           paragraphs: [
-            'Sadržaj Vaše predaje čuva se na mestu koje nije javno dostupno. Pristup imaju samo ovlašćene osobe u kancelariji, i to radi obrade zahteva.',
+            'Sadržaj Vašeg zahteva čuva se na mestu koje nije javno dostupno. Pristup imaju samo ovlašćene osobe u kancelariji, i to radi obrade zahteva.',
             'Ova stranica ne daje apsolutnu garanciju bezbednosti. Nijedan put prenosa i nijedno mesto čuvanja nisu potpuno bezbedni; osetljive dokumente zato treba slati tek po posebnom uputstvu advokatkinje ili advokata.',
           ],
         },
@@ -1857,10 +1857,10 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Obaveštenje i broj predaje',
+          heading: 'Obaveštenje i broj prijema',
           paragraphs: [
             'Ako je zahtev uspešno poslat, sistem obaveštava kancelariju. Ako to obaveštenje još nije evidentirano kao dostavljeno, Vaš tekst ostaje sačuvan i ne gubi se.',
-            'Broj predaje služi da se Vaš zahtev pronađe u našim evidencijama. Prikazuje se nakon čuvanja; možete ga navesti pri novom kontaktu.',
+            'Broj prijema služi da se Vaš zahtev pronađe u našim evidencijama. Prikazuje se nakon čuvanja; možete ga navesti pri novom kontaktu.',
           ],
         },
         {
@@ -1873,7 +1873,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Mesto čuvanja i pružaoci usluga',
           paragraphs: [
-            'Ove stranice hostovane su kod kompanije Vercel, a Vaša predaja čuva se u nejavnom objektnom skladištu te usluge. Poruke elektronske pošte šalju se preko servisa elektronske pošte koji kancelarija koristi.',
+            'Ove stranice hostovane su kod kompanije Vercel, a Vaš zahtev čuva se u nejavnom objektnom skladištu te usluge. Poruke elektronske pošte šalju se preko servisa elektronske pošte koji kancelarija koristi.',
             'Serveri pojedinih pružalaca mogu se nalaziti van Tajvana, pa se Vaši podaci tamo mogu čuvati i obrađivati. Kada je svrha čuvanja ispunjena, podaci se brišu bez nepotrebnog odlaganja; podaci koje treba čuvati prema primenjivim propisima ostaju za to vreme. Zahteve u vezi sa ličnim podacima prima wei@hoveringlaw.com.tw.',
           ],
         },

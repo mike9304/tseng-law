@@ -1,5 +1,5 @@
 ---
-title: "Strana preduzeća komponenti poluprovodnika koja ulaze na Tajvan: kako oceniti zavisno društvo, ogranak ili zastupnika"
+title: "Strana preduzeća za komponente poluprovodnika koja ulaze na Tajvan: kako oceniti zavisno društvo, ogranak ili zastupnika"
 lastmod: "2026-09-17"
 date_display: "17. septembra 2026."
 read_time: "8 min čitanja"
@@ -15,7 +15,7 @@ faq:
     a: "Postepeni prelaz može da se osmisli. Ipak treba zajedno oceniti prestanak ili izmenu postojećih ugovora, ugovore s kupcima, zalihe, postupanje po jemstvu i pitanja osoblja."
 ---
 
-# Strana preduzeća komponenti poluprovodnika koja ulaze na Tajvan: kako oceniti zavisno društvo, ogranak ili zastupnika
+# Strana preduzeća za komponente poluprovodnika koja ulaze na Tajvan: kako oceniti zavisno društvo, ogranak ili zastupnika
 
 ![Prikaz za ocenu strukture ulaska preduzeća poluprovodnika na Tajvan](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
@@ -23,7 +23,7 @@ Kada počnu poslovi s tajvanskim kupcima, strana matična kompanija može da pri
 
 Najpre treba razjasniti ko na Tajvanu šta obavlja. Struktura koju treba oceniti menja se prema tome da li strana matična kompanija i dalje zaključuje ugovore o prodaji, da li tajvansko društvo robu kupuje i dalje prodaje, ili da li lokalno osoblje pruža samo tehničku podršku.
 
-Ovaj članak je opšti pregled za strana preduzeća materijala, komponenti i opreme poluprovodnika koja osmišljavaju strukturu ulaska na Tajvan. Sledeće situacije rada i tačke provere jesu hipotetički primeri i predlozi za ocenu, a ne stvarni mandat konkretnog preduzeća niti jedinstveni uslov osnivanja. Poreze, kontrolu izvoza, dozvole prema proizvodu i razvrstavanje investitora treba još posebno oceniti.
+Ovaj članak je opšti pregled za strana preduzeća za materijale, komponente i opremu poluprovodnika koja osmišljavaju strukturu ulaska na Tajvan. Sledeće situacije rada i tačke provere jesu hipotetički primeri i predlozi za ocenu, a ne stvarni mandat konkretnog preduzeća niti jedinstveni uslov osnivanja. Poreze, kontrolu izvoza, dozvole prema proizvodu i razvrstavanje investitora treba još posebno oceniti.
 
 ## 1. Pre izbora oblika upisa treba najpre urediti „podelu poslova i rada“
 
@@ -65,7 +65,7 @@ Može da se obrazuje s 1 ili više fizičkih lica, ili s tajvanskim ili stranim 
 
 ### Akcionarsko društvo: primereno ako treba primiti druge investitore ili se razmatra uvrštenje
 
-Kapital se deli na akcije. Načelno su potrebna 2 ili više akcionara, ali država ili pravno lice mogu da ga osnuju sami, a strano pravno lice može da drži 100 %. Akcije su načelno slobodno prenosive, uz zakonske izuzetke; prema propisima mogu da se osmisle vrste akcija, opcije za zaposlene i slično. Zato odgovara preduzećima koja očekuju investitore, promet akcijama, akcione nagrade zaposlenima ili buduća spajanja, preuzimanja, uvrštenje ili upis na vanberzansko tržište (興櫃); ne ograničava se samo na velika preduzeća. U upravljanju društvo koje nije izvršilo javnu emisiju može statutom da ne ustanovi odbor direktora i da ima samo 1 ili 2 direktora. Društvo s jedinim državnim ili pravnim akcionarom može statutom da ne ustanovi nadzornika. Takođe nije svako akcionarsko društvo dužno da godišnje finansijske izveštaje podvrgne reviziji ovlašćenog računovođe (會計師). Glavni pragovi revizije običnog društva jesu uplaćeni kapital TWD 30.000.000, ili, i ispod te granice, poslovni prihod TWD 100.000.000 ili 100 zaposlenih prijavljenih na radno osiguranje (勞工保險); društva javne emisije (公開發行公司) primenjuju propise o hartijama od vrednosti.
+Kapital se deli na akcije. Načelno su potrebna 2 ili više akcionara, ali država ili pravno lice mogu da ga osnuju sami, a strano pravno lice može da drži 100 %. Akcije su načelno slobodno prenosive, uz zakonske izuzetke; prema propisima mogu da se osmisle vrste akcija, opcije za zaposlene i slično. Zato odgovara preduzećima koja očekuju investitore, promet akcijama, akcione nagrade zaposlenima ili buduća spajanja, preuzimanja, uvrštenje ili upis na tržište u nastajanju (興櫃); ne ograničava se samo na velika preduzeća. U upravljanju društvo koje nije izvršilo javnu emisiju može statutom da ne ustanovi odbor direktora i da ima samo 1 ili 2 direktora. Društvo s jedinim državnim ili pravnim akcionarom može statutom da ne ustanovi nadzornika. Takođe nije svako akcionarsko društvo dužno da godišnje finansijske izveštaje podvrgne reviziji ovlašćenog računovođe (會計師). Glavni pragovi revizije običnog društva jesu uplaćeni kapital 30.000.000 TWD, ili, i ispod te granice, poslovni prihod 100.000.000 TWD ili 100 zaposlenih prijavljenih na radno osiguranje (勞工保險); društva javne emisije (公開發行公司) primenjuju propise o hartijama od vrednosti.
 
 ## 4. Postupci ogranka i zavisnog društva razlikuju se; samo zavisno društvo prolazi ocenu Odeljenja za pregled i odobravanje investicija Ministarstva ekonomije
 

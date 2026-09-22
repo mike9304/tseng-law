@@ -83,7 +83,7 @@ Nếu là tội chỉ khởi tố khi có yêu cầu của người bị hại t
 
 ## Q6. Trách nhiệm trong vụ tai nạn được xác định thế nào?
 
-Bảng phân tích sơ bộ vụ tai nạn giao thông của cảnh sát là bản phân tích dự bị, được lập trên cơ sở tài liệu thu thập tại hiện trường. Đây không phải bản án của tòa án, không ràng buộc tòa án và cũng không ấn định tỷ lệ lỗi. Vì tài liệu cần thiết và phạm vi tranh chấp khác nhau ở mỗi vụ tai nạn, nên bảng này, việc giám định theo luật định và việc xem xét lại kết quả giám định (覆議) đều không phải thủ tục tự động và cũng không phải bước bắt buộc.
+Bảng phân tích sơ bộ vụ tai nạn giao thông của cảnh sát là bản phân tích sơ bộ, được lập trên cơ sở tài liệu thu thập tại hiện trường. Đây không phải bản án của tòa án, không ràng buộc tòa án và cũng không ấn định tỷ lệ lỗi. Vì tài liệu cần thiết và phạm vi tranh chấp khác nhau ở mỗi vụ tai nạn, nên bảng này, việc giám định theo luật định và việc xem xét lại kết quả giám định (覆議) đều không phải thủ tục tự động và cũng không phải bước bắt buộc.
 
 Theo quy định liên quan, đương sự đủ điều kiện có thể nộp đơn xin giám định vụ tai nạn xe cơ giới (車輛行車事故鑑定); cơ quan thụ lý cũng có thể chuyển vụ việc, và cơ quan tư pháp có thể ủy thác giám định. Đơn của đương sự thường được nộp trong vòng 6 tháng kể từ ngày xảy ra tai nạn; với vụ việc đã ở giai đoạn điều tra hoặc xét xử thì việc giám định được tiến hành thông qua ủy thác của cơ quan tư pháp, chứ không phải bằng đơn xin trực tiếp mới.
 
@@ -323,7 +323,7 @@ Quý vị nên cẩn thận với những luật sư thổi phồng vụ việc,
 
 ​
 
-Phần hỏi đáp về tai nạn giao thông tới đây là hết. Tôi mong nội dung này hữu ích cho quý vị.
+Phần hỏi đáp về tai nạn giao thông tới đây là hết.
 
 ​
 
@@ -331,7 +331,7 @@ Phần hỏi đáp về tai nạn giao thông tới đây là hết. Tôi mong n
 
 ​
 
-Qua quá trình xử lý nhiều vụ tai nạn giao thông, tôi muốn nhấn mạnh một điểm quan trọng.
+Có một điểm quan trọng cần lưu ý.
 
 ​
 
@@ -347,7 +347,7 @@ Nhiều người gây tai nạn không bận tâm tới việc gọi điện h�
 
 ​
 
-Vì thế, người bị hại chịu tổn thương lớn và trở nên phẫn nộ, nhiều trường hợp họ không nhượng bộ về số tiền thương lượng, hoặc xin kê biên tạm thời tài sản (假扣押) và truy đuổi tới cùng để phong tỏa tài sản của đối phương.
+Vì thế, người bị hại chịu tổn thương lớn và trở nên phẫn nộ, nhiều trường hợp họ không nhượng bộ về số tiền thương lượng, hoặc xin áp dụng biện pháp tạm giữ tài sản (假扣押) và truy đuổi tới cùng để phong tỏa tài sản của đối phương.
 
 ​
 

@@ -59,9 +59,9 @@ Tuy nhiên, khi đăng ký công ty, doanh nghiệp thường đăng ký nhiều
 
 Do đó, trên thực tế, khi đăng ký công ty, không nhất thiết phải tra cứu toàn bộ các ngành nghề.
 
-Theo "[Hướng dẫn nghiệp vụ hỗ trợ tra cứu địa điểm kinh doanh thành phố Đài Bắc](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) "(臺北市營業場所協助查詢服務作業須知) và theo hướng dẫn hiện hành của thành phố Đài Bắc,
+Theo "[Hướng dẫn nghiệp vụ hỗ trợ tra cứu địa điểm kinh doanh thành phố Đài Bắc](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)" (臺北市營業場所協助查詢服務作業須知) và theo hướng dẫn hiện hành của thành phố Đài Bắc,
 
-từ ngày 1 tháng 1 năm 2023, khi đăng ký thành lập, chuyển địa điểm hoặc bổ sung ngành nghề kinh doanh của công ty hoặc hộ kinh doanh (bao gồm chi nhánh (分公司) và cơ sở trực thuộc (分支機構)), **bắt buộc** phải nộp kèm kết quả tra cứu trước địa điểm kinh doanh, không phân biệt ngành nghề.
+từ ngày 1 tháng 1 năm 2023, khi đăng ký thành lập, chuyển địa điểm hoặc bổ sung ngành nghề kinh doanh của công ty hoặc cơ sở kinh doanh (商業, bao gồm chi nhánh (分公司) và cơ sở trực thuộc (分支機構)), **bắt buộc** phải nộp kèm kết quả tra cứu trước địa điểm kinh doanh, không phân biệt ngành nghề.
 
 Danh mục "ngành nghề kinh doanh thuộc diện tra cứu chủ động" (主動查詢之營業項目) dưới đây là đối tượng mà Sở Thương mại tự mình tra cứu bổ sung trong quá trình thẩm tra đăng ký (隨案主動查詢) khi hồ sơ có ngành nghề đó nhưng kết quả tra cứu nộp kèm lại thiếu; ngành nghề không có trong danh mục này không vì thế mà được miễn tra cứu.
 

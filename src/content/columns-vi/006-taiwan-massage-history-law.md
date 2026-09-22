@@ -33,7 +33,7 @@ Và những tiệm cắt tóc kiểu Đài Loan như thế vẫn còn là một 
 
 ​
 
-Dù sao thì, nói về chuyện xoa bóp,
+Về nghề xoa bóp,
 
 ở Đài Loan cũng có nhiều con phố chuyên về massage.
 

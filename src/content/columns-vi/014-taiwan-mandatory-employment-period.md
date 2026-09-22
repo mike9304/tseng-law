@@ -86,7 +86,7 @@ Yếu tố thứ ba xem xét không chỉ mức tiền mà cả phạm vi của 
 
 Yếu tố thứ tư có thể bao gồm nhiều tình tiết ảnh hưởng đến tính hợp lý, như diễn biến giao kết thỏa thuận, tính chất công việc, nội dung đã được giải thích cho các bên, thời gian làm việc thực tế và lý do chấm dứt hợp đồng. Mức độ quan trọng của từng yếu tố có thể thay đổi tùy vụ việc, và các tình tiết cần cân nhắc cũng không giới hạn ở những ví dụ nêu trên. Vì vậy, phải xem xét đầy đủ, không bỏ sót các sự kiện liên quan xuất hiện trong hồ sơ.
 
-Rốt cuộc, giữa thời hạn thỏa thuận, khoản đầu tư thực tế của người sử dụng lao động, mức độ khó khăn khi thay thế nhân lực, khoản bù đắp mà người lao động nhận được và gánh nặng hoàn trả phải có một quan hệ tỷ lệ có thể chấp nhận được. Không được ấn định trước hiệu lực chỉ vì công việc thuộc một ngành nghề nhất định, cũng không được áp dụng nguyên kết luận của một vụ việc khác. Cần xem xét đồng thời cách thiết kế điều khoản tại thời điểm giao kết và mức độ thực hiện trên thực tế tại thời điểm chấm dứt hợp đồng.
+Giữa thời hạn thỏa thuận, khoản đầu tư thực tế của người sử dụng lao động, mức độ khó khăn khi thay thế nhân lực, khoản bù đắp mà người lao động nhận được và gánh nặng hoàn trả phải tương xứng với nhau ở mức có thể chấp nhận được. Không được ấn định trước hiệu lực chỉ vì công việc thuộc một ngành nghề nhất định, cũng không được áp dụng nguyên kết luận của một vụ việc khác. Cần xem xét đồng thời cách thiết kế điều khoản tại thời điểm giao kết và mức độ thực hiện trên thực tế tại thời điểm chấm dứt hợp đồng.
 
 ## 5. Những khóa đào tạo không thể làm căn cứ cho thỏa thuận
 
@@ -128,7 +128,7 @@ Việc đánh giá nguyên nhân chấm dứt hợp đồng ảnh hưởng trự
 
 ## 8. Việc báo trước khi nghỉ việc là một vấn đề riêng
 
-Thỏa thuận thời hạn làm việc tối thiểu không phải là công cụ ngăn cản người lao động nghỉ việc, dù về mặt vật lý hay về mặt pháp lý. Biểu thị ý chí xin nghỉ việc và thời hạn báo trước (預告期間) là vấn đề về thời điểm quan hệ lao động kết thúc, còn hiệu lực của thỏa thuận thời hạn làm việc tối thiểu và trách nhiệm hoàn trả chi phí là vấn đề về việc có phát sinh trách nhiệm tài sản do việc chấm dứt hợp đồng hay không.
+Thỏa thuận thời hạn làm việc tối thiểu không phải là công cụ ngăn cản người lao động nghỉ việc, dù về mặt vật lý hay về mặt pháp lý. Thông báo xin nghỉ việc và thời hạn báo trước (預告期間) là vấn đề về thời điểm quan hệ lao động kết thúc, còn hiệu lực của thỏa thuận thời hạn làm việc tối thiểu và trách nhiệm hoàn trả chi phí là vấn đề về việc có phát sinh trách nhiệm tài sản do việc chấm dứt hợp đồng hay không.
 
 Khi người lao động chấm dứt hợp đồng lao động không xác định thời hạn (不定期契約), thời hạn báo trước tại Điều 16 khoản 1 được áp dụng theo dẫn chiếu của Điều 15 Luật Tiêu chuẩn Lao động Đài Loan. Điều 16 là điều khoản về việc người sử dụng lao động chấm dứt hợp đồng; đối với việc người lao động xin nghỉ việc, thời hạn báo trước đó được áp dụng thông qua Điều 15.
 
@@ -138,7 +138,7 @@ Thời hạn báo trước theo thời gian làm việc liên tục (繼續工�
 2. Từ 1 năm trở lên đến dưới 3 năm: 20 ngày
 3. Từ 3 năm trở lên: 30 ngày
 
-Trường hợp hợp đồng lao động có thời hạn được ký cho một công việc đặc định (特定性定期契約) mà thời hạn hợp đồng vượt quá 3 năm thì áp dụng quy định riêng tại Điều 15. Sau khi đã làm việc 3 năm, người lao động có thể báo trước cho người sử dụng lao động 30 ngày và chấm dứt hợp đồng. Cần phân biệt quy định này với quy định về thời hạn báo trước theo thời gian làm việc liên tục áp dụng cho hợp đồng lao động không xác định thời hạn.
+Trường hợp hợp đồng lao động xác định thời hạn theo một công việc nhất định (特定性定期契約) mà thời hạn hợp đồng vượt quá 3 năm thì áp dụng quy định riêng tại Điều 15. Sau khi đã làm việc 3 năm, người lao động có thể báo trước cho người sử dụng lao động 30 ngày và chấm dứt hợp đồng. Cần phân biệt quy định này với quy định về thời hạn báo trước theo thời gian làm việc liên tục áp dụng cho hợp đồng lao động không xác định thời hạn.
 
 Trong trường hợp thời gian làm việc liên tục dưới 3 tháng, các loại hợp đồng có thời hạn khác, hoặc khi có bên cho rằng tồn tại lý do chấm dứt ngay theo pháp luật, thì phải xem xét riêng điều luật được áp dụng và các tình tiết. Không thể ấn định trước kết luận pháp lý chỉ vì hợp đồng ghi một thời hạn báo trước dài hơn hay vì hợp đồng đòi hỏi bàn giao công việc ngay lập tức.
 

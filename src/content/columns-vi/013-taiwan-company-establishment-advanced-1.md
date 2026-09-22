@@ -13,13 +13,13 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Ảnh đại diện](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Gần đây, nhiều người đã thành lập công ty thành công tại Đài Loan và xin được thị thực làm việc cùng Thẻ cư trú ngoại kiều (ARC, 外僑居留證),
+Gần đây, nhiều người đã thành lập công ty thành công tại Đài Loan và xin được thị thực làm việc cùng Thẻ cư trú ngoại kiều (ARC, 外僑居留證).
 
-nên tôi xin tổng hợp lại những câu hỏi mà nhiều người thường thắc mắc trong quá trình thành lập công ty.
+Phần dưới đây tổng hợp những câu hỏi thường gặp trong quá trình thành lập công ty.
 
 Quý vị nào đã đọc [**Cơ bản về thành lập công ty**](/vi/columns/taiwan-company-establishment-basics) thì xin tham khảo tiếp phần chuyên sâu chi tiết dưới đây.
 
-Mong rằng phần Hỏi–Đáp dưới đây sẽ hữu ích cho quý vị đang cân nhắc thành lập công ty tại Đài Loan.
+Phần hỏi đáp dưới đây dành cho quý vị đang cân nhắc thành lập công ty tại Đài Loan.
 
 ![](../images/013-taiwan-company-establishment-advanced-1/img-01.jpg)
 
@@ -35,11 +35,11 @@ Khi lập bản kế hoạch đầu tư, quý vị không nhất thiết phải 
 
 Tuy nhiên, sau đó khi mở tài khoản văn phòng chuẩn bị thành lập công ty (公司籌備處帳戶) tại ngân hàng, nhiều ngân hàng sẽ xem xét hợp đồng thuê (租賃契約) và đến tận nơi kiểm tra địa chỉ công ty.
 
-Một nhân viên ngân hàng Đài Loan đã trực tiếp nói với tôi rằng,
+Một nhân viên ngân hàng Đài Loan cho biết rằng,
 
-gần đây có nhiều trường hợp người nước ngoài mở tài khoản xong rồi bỏ trốn, nên việc mở tài khoản ngày càng bị siết chặt hơn.
+gần đây có nhiều trường hợp người nước ngoài mở tài khoản xong rồi biến mất, nên việc mở tài khoản ngày càng bị siết chặt hơn.
 
-Trong bài cơ bản trước đây cũng có một độc giả nói rằng mở tài khoản ngân hàng là công đoạn khó nhất, và tôi cũng đồng ý như vậy.
+Trong bài viết cơ bản trước đây cũng có người nêu rằng mở tài khoản ngân hàng là công đoạn khó khăn nhất, và thực tiễn hiện nay cũng cho thấy như vậy.
 
 Do các vụ rửa tiền (洗錢) tại Đài Loan rất nhiều, việc mở tài khoản ngân hàng ngày càng trở nên nghiêm ngặt hơn.
 
@@ -51,7 +51,7 @@ quý vị nên vừa soạn bản kế hoạch đầu tư vừa đồng thời t
 
 Theo Điều 9 Luật Đầu tư của Người nước ngoài (外國人投資條例), phần vốn góp đã được chấp thuận phải về đủ trong thời hạn do cơ quan chủ quản ấn định (核定期限); thời hạn thực tế cần được xác nhận trong văn bản chấp thuận riêng (trên thực tế thường được ấn định khoảng 1 năm).
 
-nên sau khi tìm được địa chỉ công ty và ký hợp đồng thuê,
+Nhờ thời hạn đó, sau khi tìm được địa chỉ công ty và ký hợp đồng thuê,
 
 quý vị vẫn còn đủ thời gian để mở tài khoản văn phòng chuẩn bị thành lập công ty tại ngân hàng và chuyển vốn điều lệ vào.
 
@@ -63,7 +63,7 @@ Quý vị vẫn có thể mở được tài khoản công ty.
 
 Thông thường ngân hàng yêu cầu hai loại giấy tờ chứng minh nhân thân,
 
-nếu không có thẻ cư trú thì quý vị có thể xin cấp '**Bảng thông tin cơ bản mã số thống nhất**(統一證號基本資料表)' tại Sở Di dân, Bộ Nội chính (內政部移民署) của Đài Loan.
+nếu không có thẻ cư trú thì quý vị có thể xin cấp Bảng thông tin cơ bản về mã số thống nhất (統一證號基本資料表) tại Sở Di dân, Bộ Nội chính (內政部移民署) của Đài Loan.
 
 Giấy tờ này có thể được cấp ngay trong ngày,
 
@@ -99,7 +99,7 @@ Người nước ngoài không dễ thuê được mặt bằng, và tiền đ�
 
 vì vậy nhiều bên cho thuê ngần ngại cho người nước ngoài thuê.
 
-Do đó, tôi khuyến nghị quý vị nên tìm địa điểm kinh doanh (營業場所) từ sớm.
+Do đó, nên tìm địa điểm kinh doanh (營業場所) từ sớm.
 
 Nếu việc thương lượng với bên cho thuê không thuận lợi,
 

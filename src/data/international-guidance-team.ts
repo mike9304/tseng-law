@@ -884,10 +884,10 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'দল',
     title: 'Hovering-এর আন্তর্জাতিক দল',
     description:
-      'Hovering-এর আইনজীবী, পরিচালনা ব্যবস্থাপনা ও অংশীদার হিসাবরক্ষকের পরিচিতি।',
+      'Hovering-এর আইনজীবী, পরিচালনা ব্যবস্থাপনা ও অংশীদার চার্টার্ড অ্যাকাউন্ট্যান্টের পরিচিতি।',
     representativeTitle: 'প্রধান আইনজীবী',
     teamTitle: 'আইনজীবী ও সহকর্মী',
-    partnerTitle: 'অংশীদার হিসাবরক্ষক',
+    partnerTitle: 'অংশীদার চার্টার্ড অ্যাকাউন্ট্যান্ট',
     introLabel: 'পরিচিতি',
     educationLabel: 'শিক্ষা',
     experienceLabel: 'অভিজ্ঞতা',
@@ -901,11 +901,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     practiceLabel: 'প্রধান ক্ষেত্র',
     consultationLanguagesLabel: 'পরামর্শের ভাষা',
     roles: {
-      'tseng-junwei': 'তাইওয়ানে প্রধান আইনজীবী (Managing Attorney)',
-      'chang-rongxuan': 'তাইওয়ানের আইনজীবী (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'কোরিয়া পরিচালনা ব্যবস্থাপক (Korea Operations Manager)',
-      'huang-shengping': 'অংশীদার হিসাবরক্ষক (Partner CPA)',
+      'tseng-junwei': 'তাইওয়ানে প্রধান আইনজীবী',
+      'chang-rongxuan': 'তাইওয়ানের আইনজীবী',
+      'chang-fangyu': 'আইনি সহকারী (paralegal)',
+      'son-jungmin': 'কোরিয়া পরিচালনা ব্যবস্থাপক',
+      'huang-shengping': 'অংশীদার চার্টার্ড অ্যাকাউন্ট্যান্ট',
     },
   },
   ur: {
@@ -1684,7 +1684,7 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Taiwan investment counsel': 'তাইওয়ান বিনিয়োগের আইনি পরামর্শ',
     'Civil litigation and damages': 'দেওয়ানি মামলা ও ক্ষতিপূরণ',
     'Trademark and patent filings': 'ট্রেডমার্ক ও পেটেন্ট আবেদন',
-    'Visa and residency': 'ভিসা ও অবস্থান',
+    'Visa and residency': 'ভিসা ও আবাস',
     'Family and labor disputes': 'পরিবার ও শ্রম বিরোধ',
   },
   ur: {
@@ -3543,35 +3543,35 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'স্নাতকোত্তর (M.S.), Institute of Finance, National Taiwan University',
-        'স্নাতক (B.A.) আইন ও অর্থায়নের দ্বৈত পথে, National Chengchi University',
+        'আইন ও অর্থায়নে দ্বৈত স্নাতক (B.A.), National Chengchi University',
         'Kobe University ও Waseda University-এ বিনিময় ছাত্রী',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'আইনি সহায়তা ফাউন্ডেশন, তাইচুং শাখা (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'আগে Ministry of Education, Legal Affairs Division-এ, প্রশাসনিক ও দেওয়ানি বিষয়ে মন দিয়ে।',
+        'আগে শিক্ষা মন্ত্রণালয়ের আইন বিভাগে (Ministry of Education, Legal Affairs Division), প্রশাসনিক ও দেওয়ানি বিষয়ে মন দিয়ে।',
         'বিশ্ববিদ্যালয়, শিক্ষকদের অধিকার এবং প্রশাসনিক আপিল-সংক্রান্ত বিষয়ের অভিজ্ঞতা।',
       ],
       education: ['আইন স্নাতক (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'শিক্ষা মন্ত্রণালয়, আইন বিভাগ (Ministry of Education, Legal Affairs Division)',
         'আইনজীবী, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal যিনি বেশ কয়েকটি কার্যালয়ে সিনিয়র paralegal হিসেবে দীর্ঘদিন কাজ করেছেন, কার্যক্রম সহায়তা, কোম্পানি আইন ও বিদেশি বিনিয়োগের দায়িত্বে।',
+        'আইনি সহকারী (paralegal) যিনি বেশ কয়েকটি কার্যালয়ে সিনিয়র আইনি সহকারী হিসেবে দীর্ঘদিন কাজ করেছেন, কার্যক্রম সহায়তা, কোম্পানি আইন ও বিদেশি বিনিয়োগের দায়িত্বে।',
         'মামলা, কোম্পানি গঠন, বিদেশি বিনিয়োগ অনুমতি, লাইসেন্স আবেদন এবং কোরিয়া ও তাইওয়ানের মধ্যে আদান-প্রদানে সহায়তা।',
       ],
       education: ['আইন স্নাতক (LL.B.), Tunghai University'],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'সিনিয়র আইনি সহকারী, Boyin Law Firm',
+        'সিনিয়র আইনি সহকারী, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
@@ -3580,11 +3580,11 @@ export const guidanceTeamBios: Record<
         'তথ্যবিজ্ঞানের ভিত্তিতে নথি ব্যবস্থা ও কর্মপ্রবাহ দিয়ে ক্ষেত্রগুলোর মধ্যে আদান-প্রদান সমর্থন করেন।',
       ],
       education: ['স্নাতক (B.S.) তথ্যবিজ্ঞান, National Cheng Kung University'],
-      experience: ['কোরিয়া পরিচালনা ক্ষেত্র, Hovering International Law Firm'],
+      experience: ['কোরিয়া পরিচালনা, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'National Chengchi University-এ হিসাবে স্নাতক ও স্নাতকোত্তর কর্মসূচি শেষ করেছেন এবং বর্তমানে একটি হিসাব কার্যালয় পরিচালনা করেন।',
+        'National Chengchi University-এ হিসাবে স্নাতক ও স্নাতকোত্তর কর্মসূচি শেষ করেছেন এবং বর্তমানে একটি চার্টার্ড অ্যাকাউন্ট্যান্টের কার্যালয় পরিচালনা করেন।',
         'উদ্যোক্তা মক্কেলদের জন্য আইনি, কর ও আর্থিক ঝুঁকির সমন্বিত বিশ্লেষণ সমর্থন করেন।',
       ],
       education: [

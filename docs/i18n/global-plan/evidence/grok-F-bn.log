@@ -1,0 +1,135 @@
+WO-F-bn — Bengali native-review fix lane
+Workspace: /Users/son7/Projects/tseng-law-fix-bn-20260922
+Date: 2026-09-22
+No git add / commit / push.
+
+## Rows applied
+
+bn-a.md P1/P2: #1–#34, #37 (neutralized; see below), #38, #39.
+bn-b.md P1/P2: #1–#15, #18–#49.
+Neither review table has a P3 row.
+006-taiwan-massage-history-law.md had no flagged row and no systemic hit; left unchanged.
+No test expected-string needed updating (vitest below). English bio substrings pinned by GUIDANCE_BIO_PRESERVED_TERMS stay inside the Bengali bios (Legal Aid Foundation, Taichung Branch; Ministry of Education, Legal Affairs Division; Boyin Law Firm; Muyang International Law Firm; TWD 1.57M).
+
+ACCEPTED wording used where it overrides the reviewer:
+- fact pattern → তথ্যের বিন্যাস (not তথ্যকাঠামো)
+- consideration → প্রতিদান; payment → অর্থ; for compensation → পারিশ্রমিকের বিনিময়ে
+- 資遣費 → সংবিধিবদ্ধ ছাঁটাই-ক্ষতিপূরণ
+- 清算人 → অবসায়ক (পরিশোধকে “payment” left)
+- Case Study → মামলার উদাহরণ; first instance → প্রথম আদালত
+- prosecutors → সরকারি কৌঁসুলি
+- grandparents → দাদা-দাদি ও নানা-নানি (祖父母)
+- choice of law → আইন-নির্বাচন বিধি (涉外民事法律適用法); সংঘবিধি kept for 章程
+- OTC → ওটিসি/কাউন্টার-ভিত্তিক
+- government office অঙ্গ → দপ্তর/কর্তৃপক্ষ; corporate organs → পরিচালনা-সংস্থা; officers → কর্মকর্তা; অঙ্গীকার (pledge) left
+- estate opens → উত্তরাধিকার শুরু হলে
+- কোরিয়ান → কোরীয় ভাষা; (한국어) kept on the inquiry option
+
+a#37 was applied as a neutral bank sentence, not the reviewer’s Bangladesh/India sentence:
+“যখন অর্থ কোরিয়া থেকে পাঠানো হয়, মূলধন প্রেরণের (資本金匯款) আগে কোরিয়ার ব্যাংক থেকে তথ্য নিতে হয়। বিনিয়োগকারীর নিজ দেশের ব্যাংক-পথ আলাদা; এটি সব দেশের জন্য এক নিয়ম নয়।”
+
+a#33 kept both source digits. Bare “একবারে 1 বছর” failed the checker (missing 1×2). Final form, twice in 002:
+“1 বারে (একবারে) 1 বছরের”
+
+ROC years marked without a new Gregorian digit (8 places): প্রজাতন্ত্র চীনের (民國) before 112/109 সাল in 003, 007, and 010.
+
+## Rows skipped
+
+- a#35 — reformat pinned “TWD 1.57M” to lakh grouping. ACCEPTED + R14 + bio test. String unchanged.
+- a#36, b#16 — add “(খ্রিষ্টাব্দ 2023/2020)”. R13: the checker counts digits. ROC label applied instead; no Gregorian year added.
+- a#40 — rewrite Hangul frontmatter urls in 008 and 009. R16. urls unchanged. Hangul remains only on those two url: lines.
+- b#17 — lakh regrouping of TWD 1,579,589 and the other Western thousands. R14. Amounts unchanged.
+- 006 — nothing to change.
+
+## Systemic patterns (HEAD count → remaining; instances changed)
+
+Measured on the changed files, old token vs working tree:
+
+- প্রযোগ → প্রয়োগ: 18 → 0
+- সংবিধিবদ্ধ ছাঁটাই ভাতা → সংবিধিবদ্ধ ছাঁটাই-ক্ষতিপূরণ: 35 → 0
+- তথ্যচিত্র → তথ্যের বিন্যাস: 3 → 0
+- লাগু → প্রযোজ্য: 3 → 0
+- চোকানো → চুকানো: 5 → 0
+- বিমা → বীমা: 34 → 0 (003, 017, 018; 010 already spelled বীমা)
+- পরিশোধক (liquidator) → অবসায়ক: 12; the one পরিশোধকে (payment) kept
+- প্রথম দৃষ্টান্ত: 13 → 0 (2 titles → মামলার উদাহরণ; 11 body → প্রথম আদালত)
+- কোরিয়ান: 2 → 0
+- হিসাবরক্ষক (CPA sense) → চার্টার্ড অ্যাকাউন্ট্যান্ট: 7 → 0
+- পাবলিক অফার → প্রকাশ্যে শেয়ার ইস্যু: 5 → 0
+- সংরক্ষক / সংরক্ষকত্ব → অভিভাবক / অভিভাবকত্ব: 24 → 0 (সংরক্ষণ “preservation” kept)
+- তামিলা → জারি: 9 → 0
+- begleiten সঙ্গ দিই / সঙ্গ দেন → সহায়তা করি / সহায়তা করেন: 3 + 1 (সঙ্গে কাজ “works with” kept)
+- কোরীয়তে → কোরীয় ভাষায়, plus the four-language sentence and the inquiry option: কোরীয় ভাষা +11
+- OOO → [নাম]: 1 (008)
+- offices label অফিস → কার্যালয়: 1 (title was already কার্যালয়)
+- bare code names prefixed তাইওয়ানের: দণ্ডবিধি +4, ফৌজদারি কার্যবিধি +11, দেওয়ানি কার্যবিধি +4
+- অঙ্গ as office/organ/officer: substring 30 → 6, and the 6 left are all অঙ্গীকার. Replacements landed as কর্তৃপক্ষ +16, দপ্তর +2, পরিচালনা-সংস্থা +3, কর্মকর্তা +3
+- প্রতিফল used for payment/consideration/carriage: 20 → 4, and the 4 left are প্রতিফলিত
+- colloquial লাগানো “apply”: the quoted 010/014/016 lines, plus the same pattern still in 007 (হুবহু তুলে লাগাবেন না ×2, one মামলায় … লাগাবেন না, one 5-বছরের সময়সীমা লাগানো যায় না). Ordinary “লাগে” = “is required”, 002 “হিসাব লাগানো” = booking an entry, and 003 “112-ও লাগানো যায়” = can also be dialed, were left
+- spoken সামলানো for a case the firm handled: 012 → দেখেছে. Other সামলানো = “handle property/debts” left
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-bn --lang bn 2>&1 | tail -8
+```
+
+```
+forbidden      PASS   
+hanzi          PASS   han=97
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+```
+grep -rn "\[변호사 검수 필요\]" src/content/columns-bn src/data | wc -l
+```
+
+```
+       0
+```
+
+```
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+```
+
+```
+TSC_OK
+```
+
+```
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+```
+
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+```
+git status --short | wc -l
+```
+
+```
+      24
+```
+
+015 still WARNs `numbers extra in translation (2): 2×2`. The digit multiset of that file is unchanged by this lane, and WARN does not fail the summary.
+
+## Reviewer points not applied
+
+- a#35 and b#17: South Asian lakh grouping, and rewriting the pinned “TWD 1.57M”. R14. Amounts stay in the checker’s Western form.
+- a#36 and b#16: inserting খ্রিষ্টাব্দ 2023 / 2020. That adds digits. ROC calendar label used instead, with no new year.
+- a#37: “এটি বাংলাদেশ বা ভারতের ব্যাংক-পথ নয়” states the reader’s country law. Replaced with a country-neutral sentence (R2).
+- a#40: Hangul urls. R16 says leave the url key.
+- b#2 suggested “সরকারি প্রসিকিউটর”. ACCEPTED requires সরকারি কৌঁসুলি. Applied that.
+- a#2 suggested তথ্যকাঠামো. ACCEPTED requires তথ্যের বিন্যাস.
+- b#1 title suggested “একটি মামলার পর্যালোচনা”. ACCEPTED requires মামলার উদাহরণ for Case Study, and প্রথম আদালত for first instance. দৃষ্টান্ত is not used for a court level.
+- b#7 suggested পিতামহ-পিতামহী ও মাতামহ-মাতামহী. ACCEPTED requires দাদা-দাদি ও নানা-নানি (祖父母).
+- b#5’s short “পারিশ্রমিক নিয়ে” for the statutory for-compensation test. ACCEPTED requires পারিশ্রমিকের বিনিময়ে.
+- a#33’s “একবারে এক বছর” drops both source “1”s. The checker fails if either “1” is dropped. Both digits kept, with একবারে in parentheses.
+- Feminine first-person endings were not invented. Bengali first person does not mark gender; the reviewer said the existing column forms are correct. Wei Tseng stays in the existing feminine/honorific guidance forms (বিনিময় ছাত্রী; তিনি … করেছেন).

@@ -1,0 +1,149 @@
+WO-F-mn — Mongolian native-review fix lane (Grok 4.7), 2026-09-22
+Worktree: /Users/son7/Projects/tseng-law-fix-mn-20260922 (no git add/commit/push)
+Scope written: src/content/columns-mn/*.md (18), src/data/international-guidance-southeast-central.ts
+  (mongolianGuidanceContent), international-guidance-team.ts / -offices.ts / -answers.ts (mn only),
+  src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.mn), this log.
+src/data/international-inquiry-copy.ts (mn): no review row and no leftover of the swept patterns; unchanged.
+No test pinned a Mongolian string that changed, so no test file was edited.
+
+================================================================
+1. ROWS APPLIED
+================================================================
+mn-a.md — applied: a#1 a#2 a#3 a#4 a#5 a#6 a#7 a#8 a#9 a#10 a#11 a#12 a#13 a#14 a#15 a#16 a#17
+  a#18 a#19 a#20 a#21 a#22 a#23 a#24 a#25 a#26 a#27 a#28 a#29 a#30 a#31 a#32 a#33 a#34 a#35 a#36
+  a#38 a#39
+  Modified against the reviewer's exact wording where ACCEPTED-mn.md or the checker required it
+  (see §3 and §4).
+
+mn-b.md — applied: b#1 b#2 b#3 b#4 b#5 b#6 b#7 b#8 b#9 b#10 b#11 b#12 b#13 b#14 b#15 b#16 b#17
+  b#18 b#19 b#20 b#21 b#22 b#23 b#24 b#25 b#26 b#27 b#28 b#29 b#30 b#31 b#32 b#33 b#34 b#35 b#36
+  b#37 b#38 b#39 b#40 b#41 b#42 b#43 b#44 b#45 b#46 b#47 b#48
+  b#50 applied as ROC wording without a new Gregorian year (see §3).
+
+RULEBOOK
+  R2  001 already frames Korea as one labelled example and tells a reader from another country to
+      check that country's agreement. Left as written. No reader-country law added.
+  R4  Dropped the forced "Эмэгтэй өмгөөлөгч" marker (Mongolian does not mark gender on the noun).
+      "тэрбээр" stays. Feminine verb morphology does not exist to add.
+  R7  Blog one-liners rephrased inside each block (003 Q16–Q20, 006, 008, 009, 013). Blocks not merged.
+  R8  條例 → хууль; 辦法 stays журам. 會面交往, 假扣押, 失能, 營業稅, 工作規則 swept as below.
+  R9  003 already says Тайваньд 119 / 110 / 112. Left.
+  R12 English chrome in the mn bios: Ministry of Education and Legal Aid Foundation glossed with the
+      Latin name kept; Institute of Finance glossed "(Санхүүгийн хүрээлэн)" with the Latin name kept.
+      Role parentheticals dropped on the mn role lines only: (Managing Attorney), (Taiwan Attorney),
+      (Paralegal), (Partner CPA). Trend Law Office, Hovering, Boyin, Muyang, Chinshin, National
+      Taiwan University stay Latin. "TWD 1.57M" byte-identical.
+  R13 010 case: "Бүгд Найрамдах Хятад Улсын 109 оны … (民國109年度消字第7號)". No new digit.
+  R14 Comma thousands and decimal point kept.
+  R15 008 "«Би, OOO," → "«Би, [нэр],".
+  R16 Hangul frontmatter urls in 008 and 009 left. Fullwidth colon in the 008 url left.
+  R17 No Russian paragraph left in the mn columns or the mn guidance strings. "ы" is a Mongolian vowel
+      and was not treated as leakage.
+
+================================================================
+2. ROWS SKIPPED
+================================================================
+a#37  Reformat "TWD 1.57M" to "1,57 сая" and space-thousands on other amounts.
+      Reason: the bio figure is test-pinned byte-identical; other amounts stay comma thousands (R14).
+b#49  "[TWD 1,579,589]" → space thousands and code-last.
+      Reason: R14. mn is a comma-thousands locale for the checker; a space fails the number parse.
+b#51  "0.5" → "0,5".
+      Reason: R14. mn uses a decimal point.
+Hangul url rows (008, 009). Reason: R16.
+Block-merging halves of a#32, a#34, b#43.
+      Reason: the checker compares block counts. The flagged sentence was closed or de-chatted
+      inside its own block. 013 "хэлсэн нь" → "дараахыг хэлсэн." The next sentence stays its own block.
+      006 age aside stays its own block: "Дээрх нь тухайн үеийн үйлчилгээний жишээ юм."
+Trend Law Office gloss. Reason: R12 keeps that proper name in Latin. a#38's other institutions were glossed.
+
+================================================================
+3. SYSTEMIC PATTERNS (instances changed)
+================================================================
+Эмэгтэй өмгөөлөгч marker dropped: 9 bold bylines (001 002 003 004 007 011 014 016 017), 1 greeting (008),
+  plus pack columnsReviewLabel, team keyFactsHeading, qualificationSentence, answers.lawyers,
+  and the first-person "эмэгтэй өмгөөлөгчийн хувьд" asides in 003, 008, 009, 010, 013.
+дагалдана (escort/begleiten) → туслана/тусалж: 5 in the guidance pack.
+  Not touched: "хязгаарлалт дагалдана" (a restriction that comes with the licence) in 017, twice.
+нэгээр (alone) → дангаараа: 001 "үр дүн", 002 "дутагдал" and "бүртгэл".
+  010 → ганцаар (ACCEPTED part b), 2 sites.
+  Not touched: "хэлний нэгээр" (in one of the languages) in the pack, and "нэг нэгээр" (one by one) in 008.
+條例 → хууль: 勞工退休金條例 ×2 (008), 產業創新條例 ×5 (004), 道路交通管理處罰條例 ×1 (003).
+營業稅 "нэмэгдсэн өртгийн албан татвар" → "аж ахуйн албан татвар": 10 (001 ×2, 002 ×4, 004 ×4).
+уулзалт харилцаа → хүүхэдтэй уулзах, харилцах эрх, with case suffixes kept: 8 in 007
+  (genitive ×2, accusative ×2, dative ×1, base ×3) plus 1 glossed site in the pack.
+Q1.–Q20. → "N." in 003 (20). Body lines Q16–Q20 could not stay as line-initial "16. ": the checker
+  counts that as five extra list items and then strips the marker, so digits 16–20 vanish.
+  Those five lines are "Асуулт 16." … "Асуулт 20." FAQ Q1–Q15 stay "1." … "15." inside the YAML.
+011 даатгах (entrust, not insure) → хариуцуулах: 6 sites, including the checklist and the "даатгаж болно" line.
+017 outsourcing, longer phrases first so real insurance is untouched:
+  гэрээгээр даалгах / туслан гүйцэтгэгч / захиалагч across the title, FAQ, §4, and the checklist.
+  Inflected leftovers fixed: "гүйцэтгэгчн" → "гүйцэтгэгчийн", "гүйцэтгэгчг" → "гүйцэтгэгчийг".
+  Left as insurance: даатгал, даатгалын, хариуцлагын даатгал, нийгмийн даатгал.
+018 "гаднын гүйцэтгэгчид даатгах" → "гэрээгээр даалгах" (1).
+"нас 2 жил хүрээгүй" → "2 жилээс илүүгүй": 3 in 017 (the truck phrase twice, plus the owned-vehicle phrase).
+Ляньжян/Мацзу: "эсвэл" no longer splits the county from its other name (3). The Kinmen alternative
+  is "Жиньмэнь эсвэл Ляньжян буюу Мацзу", matching EN "Kinmen or Lienchiang (Matsu)".
+фирм → кантор: "Фирмтэй хэрхэн холбогдох вэ" ×7 (001 002 004 005 007 013 015), "Фирмийн хөтөлсөн" ×2 (012),
+  "Энэ фирм" ×1 (018). The guidance pack's "фирм" was not in a finding and was not mass-replaced.
+объект calque → зүйл / natural phrase: 011 handover and fine basis, 014 "шалгах/буцаах", 015 inquiry,
+  016 "өвлөх" ×1 and "тооцооны" ×3, 001 "оруулах зүйл", 011 link label "бүртгэх зүйлийн хүрээ" (url unchanged).
+нөхөн олговрол → нөхөн олговор, genitive нөхөн олговрын: 11 in 014 (8 lowercase genitives + 3 heading capitals).
+үхлийн өргөлт → дедлифт: 19 in 010 (14 genitive + 5 base), longer form first.
+эцэг эхийн эрхийн эрх doubled: 7 in 016 (heading, FAQ, body).
+хүүхдийн хамгийн сайн ашиг → хүүхдийн дээд ашиг сонирхол: 4 in 016, accusative "ашгийг" first.
+олон улсын элемент → гадаад элемент: 4 in 016. "шүүхийн олон улсын харьяалал" not touched.
+1 дүгээр дараалал → эхний ээлж: 2 in 016.
+Offices map preview (a#27) and label ОФИСУУД → ОФФИСУУД so it matches the page title "Оффисууд".
+llms (a#1) four denials: зэрэглэл, зөвлөмж, хиймэл оюуны зөвлөмж, сурталчилгаа.
+
+Checker-driven digit restores (meaning kept, digits the Korean source still has):
+  005 opener still says "гүнзгийрүүлэлт 2" inside the sentence, so it no longer tells the reader to
+  leave this page, and the digit 2 is not dropped.
+  018 "3분의 2" is "2/3 (гуравны хоёр)". Words alone dropped digits 2 and 3.
+
+================================================================
+4. REVIEWER GOT THESE WRONG — NOT APPLIED
+================================================================
+- a#37, b#49, b#51. Mongolia does write a space as the thousands separator and a comma as the decimal
+  mark. Applying that here fails the column checker (R14: mn is comma thousands, decimal point) and
+  the pinned bio string "TWD 1.57M".
+- b#50. Adding "(2020)" is the right reader gloss and the wrong checker move (R13: do not add a
+  Gregorian year as a new number). The ROC year is named in Mongolian and the Chinese gloss carries 民國.
+- a#22 suggested "алхмыг нь хариуцна". That says the firm is responsible for the steps. The product
+  fact is assistance, not a duty to carry the matter. ACCEPTED-mn already says туслана/дэмжинэ.
+- a#1's suggested pair "хайлтын байр … харагдах байдал" does not match the four denials the supervisor
+  locked (зэрэглэл, зөвлөмж, хиймэл оюуны зөвлөмж, сурталчилгаа). "дэмжлэг" was the wrong denial; so is
+  keeping "хайлтын байр" once the supervisor named зэрэглэл.
+- a#4's "бичиж авч" still reads as writing something down. The English is a phone recording.
+  ACCEPTED says дуу хураах. Applied that.
+- b#34 wanted "дангаараа" in 010. ACCEPTED part b says the 010 sweep is "ганцаар". 001/002 stay "дангаараа".
+- a#38's Trend Law Office gloss would translate a proper name R12 says to keep in Latin.
+
+================================================================
+5. VERIFY
+================================================================
+The worktree had no node_modules. `npm ci --ignore-scripts` (lockfile already lists
+@modelcontextprotocol/server) was required before tsc and vitest. node_modules is gitignored.
+Command output:
+
+=== CHECKER ===
+neighbour      PASS   
+hanzi          PASS   han=98
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+=== MARKERS ===
+       0
+=== TSC ===
+TSC_OK
+=== VITEST ===
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+=== GIT ===
+      24
+
+`git status --short | wc -l` was 24 before this log file existed (23 modified paths + the pre-existing
+untracked docs/i18n/global-plan/WO-F-mn.txt). This log is an additional untracked file.

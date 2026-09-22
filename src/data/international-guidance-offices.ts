@@ -890,11 +890,11 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     },
   },
   mn: {
-    label: 'ОФИСУУД',
+    label: 'ОФФИСУУД',
     title: 'Оффисууд',
     description: 'Hovering International Law Firm-ийн Тайвань дахь оффисын хаяг.',
     officeLabel: 'Оффис',
-    mapPreviewLabel: 'Газрын зургийн урьдчилан харах',
+    mapPreviewLabel: 'Газрын зургийн урьдчилсан харагдац',
     koreaOfficeTitle: 'Солонгос дахь оффис',
     koreaAddressCardLabel: 'Солонгос дахь оффисын хаяг',
     koreaMapLinkLabel: 'Naver Map дээр харах',

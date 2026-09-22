@@ -1080,28 +1080,28 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'БАГ',
     title: 'Hovering-ийн олон улсын баг',
     description:
-      'Hovering-ийн өмгөөлөгч, үйл ажиллагааны менежер, түнш нягтлан бодогчийн танилцуулга.',
+      'Hovering-ийн өмгөөлөгч, үйл ажиллагаа хариуцсан менежер, түнш нягтлан бодогчийн танилцуулга.',
     representativeTitle: 'Удирдах өмгөөлөгч',
     teamTitle: 'Өмгөөлөгч ба ажилтан',
-    partnerTitle: 'Түнш нягтлан бодогч (CPA)',
+    partnerTitle: 'Түнш нягтлан бодогч',
     introLabel: 'Танилцуулга',
     educationLabel: 'Боловсрол',
     experienceLabel: 'Туршлага',
     photoAltPrefix: 'Зураг',
     workingLanguagesLabel: 'Ажлын хэл',
     fullProfileLabel: 'Бүрэн танилцуулга (англи хэлээр)',
-    keyFactsHeading: 'Эмэгтэй өмгөөлөгч Wei Tseng (曾雋崴) — үндсэн мэдээлэл',
+    keyFactsHeading: 'Өмгөөлөгч Wei Tseng (曾雋崴) — үндсэн мэдээлэл',
     qualificationLabel: 'Эрх ба фирм',
     qualificationSentence:
-      '{name} Тайваньд өмгөөлөгчөөр ажиллах эрхтэй эмэгтэй өмгөөлөгч бөгөөд {firm}-ийн удирдах өмгөөлөгч юм.',
+      '{name} Тайваньд өмгөөлөгчөөр ажиллах эрхтэй бөгөөд {firm}-ийн удирдах өмгөөлөгч юм.',
     practiceLabel: 'Үндсэн чиглэл',
     consultationLanguagesLabel: 'Зөвлөгөөний хэл',
     roles: {
-      'tseng-junwei': 'Тайвань дахь удирдах өмгөөлөгч (Managing Attorney)',
-      'chang-rongxuan': 'Тайвань дахь өмгөөлөгч (Taiwan Attorney)',
-      'chang-fangyu': 'Хуулийн туслах (Paralegal)',
-      'son-jungmin': 'Солонгосын үйл ажиллагааны менежер (Korea Operations Manager)',
-      'huang-shengping': 'Түнш нягтлан бодогч (Partner CPA)',
+      'tseng-junwei': 'Тайвань дахь удирдах өмгөөлөгч',
+      'chang-rongxuan': 'Тайвань дахь өмгөөлөгч',
+      'chang-fangyu': 'Хуулийн туслах',
+      'son-jungmin': 'Солонгосын үйл ажиллагаа хариуцсан менежер',
+      'huang-shengping': 'Түнш нягтлан бодогч',
     },
   },
   sk: {
@@ -3955,24 +3955,24 @@ export const guidanceTeamBios: Record<
         'Тэрбээр спорт зааланд бэртсэн Солонгосын оюутны хохирол нөхөн төлүүлэх нэхэмжлэлд төлөөлж, TWD 1.57M-ийн нэгдүгээр шатны шийдвэр гаргуулсан.',
       ],
       education: [
-        'Магистр (M.S.), Institute of Finance, National Taiwan University',
+        'Магистр (M.S.), Institute of Finance, National Taiwan University (Санхүүгийн хүрээлэн)',
         'Хууль, санхүүгийн хоёр мэргэжлээр бакалавр (B.A.), National Chengchi University',
         'Kobe University болон Waseda University-д солилцооны суралцагч',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Хууль зүйн туслалцааны сангийн Тайжун салбар (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Өмнө нь Ministry of Education, Legal Affairs Division-д захиргааны болон иргэний хэрэгт төвлөрч ажилласан.',
+        'Өмнө нь Боловсролын яамны хуулийн асуудал эрхэлсэн хэлтэст (Ministry of Education, Legal Affairs Division) захиргааны болон иргэний хэрэгт төвлөрч ажилласан.',
         'Их сургуулийн хэрэг, багш нарын эрх, захиргааны гомдолд туршлагатай.',
       ],
       education: ['Хуулийн бакалавр (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Боловсролын яамны хуулийн асуудал эрхэлсэн хэлтэс (Ministry of Education, Legal Affairs Division)',
         'Өмгөөлөгч, Hovering International Law Firm',
       ],
     },
@@ -3990,10 +3990,10 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Солонгосоос ирсэн үйлчлүүлэгчдийн зөвлөгөөний цаг, харилцааг зохицуулна.',
-        'Мэдээллийн технологийн үндсэн дээр баримтын систем, ажлын урсгалаар нэгж хоорондын харилцааг дэмжинэ.',
+        'Мэдээллийн технологийн мэргэжлээрээ баримтын систем, ажлын урсгалаар нэгж хоорондын харилцааг дэмжинэ.',
       ],
       education: ['Мэдээллийн технологийн бакалавр (B.S.), National Cheng Kung University'],
-      experience: ['Солонгосын үйл ажиллагааны чиглэл, Hovering International Law Firm'],
+      experience: ['Солонгосын үйл ажиллагаа хариуцсан менежер, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [

@@ -1723,7 +1723,7 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Taiwan company setup': 'ताइवानमा कम्पनी स्थापना',
     'Taiwan investment counsel': 'ताइवान लगानीसम्बन्धी कानुनी सल्लाह',
     'Civil litigation and damages': 'देवानी मुद्दा र क्षतिपूर्ति',
-    'Trademark and patent filings': 'व्यापार चिह्न र पेटेन्ट आवेदन',
+    'Trademark and patent filings': 'ट्रेडमार्क र पेटेन्ट आवेदन',
     'Visa and residency': 'भिसा र बसोबास',
     'Family and labor disputes': 'परिवार र श्रम विवाद',
   },

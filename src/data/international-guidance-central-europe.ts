@@ -1645,7 +1645,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Osnivanje i struktura',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) osnovale su 2016. godine advokatkinje i advokati koji su studirali na National Taiwan University (國立臺灣大學). Kineski naziv 昊鼎 spaja znak 昊 („široko nebo“) sa znakom 鼎 („čvrst temelj“) i izražava usmerenje kancelarije od osnivanja.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) osnovali su 2016. godine advokatkinje i advokati koji su studirali na National Taiwan University (國立臺灣大學). Kineski naziv 昊鼎 spaja znak 昊 („široko nebo“) sa znakom 鼎 („čvrst temelj“) i izražava usmerenje kancelarije od osnivanja.',
             'Imamo kancelarije u Tajpeju (臺北), Kaohsiungu (高雄), Taichungu (臺中) i Pingtungu (屏東). Kancelarija u Kaohsiungu usredsređena je na upravljanje preduzećima i vodi građanske, krivične i upravne sporove. Kancelarija u Taichungu vodi građevinske stvari, intelektualnu svojinu i stvari sa vezom na Koreju i Japan. Kancelarija u Pingtungu otvorena je 2017. godine zbog lokalne potrebe.',
             'Pored advokatskog rada od 2020. godine deluje i Hovering Accounting Office, koje nudi računovodstvo i poresko planiranje preduzetnicima i privatnim licima sa imovinom.',
           ],
@@ -1661,7 +1661,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Kada nas kontaktirate',
           paragraphs: [
             'Nakon prijema Vašeg sažetka advokatkinja ili advokat pregleda sadržaj i zatim govori o mogućem obimu rada, o još potrebnim dokumentima i o daljim koracima. Kod poreskih ili računovodstvenih pitanja kancelarija može da postupa sa računovodstvenim odeljenjem u jednom povezanom postupku.',
-            'Ishod svake stvari zavisi od činjenica i od raspoloživih dokumenata; ishod ne obećavamo. Ako Vam je potrebna obavezujuća ocena Vaše situacije, dokumente treba razgovarati sa advokatkinjom ili advokatom na jednom od četiri jezika konsultacije.',
+            'Ishod svake stvari zavisi od činjenica i od raspoloživih dokumenata; ishod ne obećavamo. Ako Vam je potrebna obavezujuća ocena Vaše situacije, o dokumentima treba razgovarati sa advokatkinjom ili advokatom na jednom od četiri jezika konsultacije.',
           ],
         },
       ],
@@ -1734,7 +1734,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Ako ne možete da koristite nijedan od četiri jezika konsultacije',
           paragraphs: [
             'U kontaktnom obrascu možete izabrati „Način komunikacije treba potvrditi“. Odgovaramo da bismo ocenili izvodljiv način komunikacije, ako takav postoji; usluga na drugom jeziku nije zagarantovana i rok za odgovor se ne obećava.',
-            'To je samo korak ocene, a nije obećanje. Ne obećavamo tumača, uslugu na srpskom niti na drugom jeziku van navedena četiri jezika, niti da ćemo prihvatiti svaku stvar.',
+            'To je samo korak ocene, a nije obećanje. Ne obećavamo tumača, uslugu na srpskom niti na jeziku izvan tih četiri navedena jezika, niti da ćemo prihvatiti svaku stvar.',
           ],
         },
         {
@@ -1807,7 +1807,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Šta ako je moja stvar veoma hitna?',
           answer:
-            'Navedite rok ili datum sa službenog pismena odmah na početku sažetka, da bi ti podaci bili vidljivi pri oceni. Ova stranica nema hitni kanal i ne obezbeđuje rok za odgovor; ako Vaša stvar ne trpi odlaganje, trebalo bi paralelno da tražite druge puteve na svom mestu.',
+            'Navedite rok ili datum sa službenog pismena odmah na početku sažetka, da bi ti podaci bili vidljivi pri oceni. Ova stranica nema hitni kanal i ne obezbeđuje rok za odgovor; ako Vaša stvar ne trpi odlaganje, trebalo bi paralelno da tražite i drugi put tamo gde se nalazite.',
         },
       ],
     },
@@ -1873,7 +1873,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Mesto čuvanja i pružaoci usluga',
           paragraphs: [
-            'Ove stranice hostovane su kod kompanije Vercel, a Vaša predaja čuva se u nejavnom objektnom skladištu te usluge. Poruke elektronske pošte šalju se poštanskom uslugom koju kancelarija koristi.',
+            'Ove stranice hostovane su kod kompanije Vercel, a Vaša predaja čuva se u nejavnom objektnom skladištu te usluge. Poruke elektronske pošte šalju se preko servisa elektronske pošte koji kancelarija koristi.',
             'Serveri pojedinih pružalaca mogu se nalaziti van Tajvana, pa se Vaši podaci tamo mogu čuvati i obrađivati. Kada je svrha čuvanja ispunjena, podaci se brišu bez nepotrebnog odlaganja; podaci koje treba čuvati prema primenjivim propisima ostaju za to vreme. Zahteve u vezi sa ličnim podacima prima wei@hoveringlaw.com.tw.',
           ],
         },
@@ -1898,7 +1898,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Pravni okvir',
           paragraphs: [
             'Kancelarija deluje po tajvanskom pravu i ova stranica govori samo o radu u tom okviru.',
-            'Sadržaj nije savetovanje po pravu drugog poretka osim tajvanskog, uključujući pravo mesta Vašeg boravka. Ako deo Vaše stvari dira drugi pravni poredak, razjasnićemo sa Vama koja kvalifikovana osoba je za taj deo potrebna.',
+            'Sadržaj nije savetovanje po pravu nekog drugog pravnog poretka, a ne tajvanskog, uključujući pravo mesta Vašeg boravka. Ako deo Vaše stvari dira drugi pravni poredak, razjasnićemo sa Vama koja kvalifikovana osoba je za taj deo potrebna.',
           ],
         },
         {
@@ -1943,7 +1943,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Koliko članak može da posluži orijentaciji',
           paragraphs: [
             'Članci su opšte informacije u trenutku objavljivanja. Propisi i njihova primena mogu se promeniti, a članak ne sadrži sve okolnosti Vašeg slučaja.',
-            'Zato ne zasnivajte postupak u stvarnoj stvari samo na članku. Koristite ga za pregled i svoje dokumente razgovarajte posebno sa advokatkinjom ili advokatom; ova stranica nije korak konsultacije.',
+            'Zato ne zasnivajte postupak u stvarnoj stvari samo na članku. Koristite ga za pregled i o svojim dokumentima razgovarajte posebno sa advokatkinjom ili advokatom; ova stranica nije deo savetovanja.',
           ],
         },
       ],

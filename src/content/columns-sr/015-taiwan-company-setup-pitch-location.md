@@ -45,7 +45,7 @@ Ako je teško lično doći u zemljišni ured (地政事務所),
 
 može se zatražiti pomoć poznanika na Tajvanu, zakupodavca, posrednika u prometu nepokretnosti ili advokata.
 
-Ako ishod provere pokaže da restoran nije moguć, kasnije pri upisu pravnog lica (公司登記) gradska uprava upis možda neće primiti.
+Ako ishod provere pokaže da restoran nije moguć, kasnije pri upisu društva (公司登記) gradska uprava upis možda neće primiti.
 
 Zato ovoj stvari posvetite pažnju.
 
@@ -53,7 +53,7 @@ Zato ovoj stvari posvetite pažnju.
 
 **Q. Moraju li sve grane sistemom „prethodne provere mesta delatnosti“ da proveravaju da li je delatnost moguća?**
 
-Svim granama preporučuje se da sistemom „prethodne provere mesta delatnosti“ (營業場所預先查詢) potvrde da li je delatnost moguća.
+Za svaku granu delatnosti preporučuje se da se sistemom „prethodne provere mesta delatnosti“ (營業場所預先查詢) potvrdi da li je delatnost na adresi moguća.
 
 Pri upisu društva, međutim, često se upisuje više grana odjednom i često se želi upisati oko 10 grana jednim podneskom.
 
@@ -65,7 +65,7 @@ od 1. 1. 2023. pri zahtevu za upis osnivanja, premeštaja sedišta ili dopune gr
 
 Niže navedeni spisak „grana koje su predmet službene provere“ (主動查詢之營業項目) označava grane koje Trgovinsko odeljenje tokom ocene upisa proverava po službenoj dužnosti dodatno (隨案主動查詢) kada grana figuriše u zahtevu, ali nedostaje u priloženom ishodu; činjenica da grana nije na ovom spisku ne znači oslobođenje od provere.
 
-Ako se otvori na mestu gde restoran nije moguć, kasnije može uslediti upravna novčana kazna (罰鍰) nadležnog organa.
+Ako se restoran otvori na mestu gde to nije dozvoljeno, kasnije može uslediti upravna novčana kazna (罰鍰) nadležnog organa.
 
 ![„grane koje su predmet službene provere“ (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
@@ -73,7 +73,7 @@ Ako se otvori na mestu gde restoran nije moguć, kasnije može uslediti upravna 
 
 Time je sažet bitan postupak; konkretnu stvar treba oceniti posebno s advokatkinjom ili advokatom. Kancelarija savetuje samo na engleskom, kineskom (中文), japanskom i korejskom.
 
-Pravila upravnih organa mogu se često menjati; pre upisa pravnog lica valja proveriti najnovije propise.
+Pravila upravnih organa mogu se često menjati; pre upisa društva valja proveriti najnovije propise.
 
 ---
 

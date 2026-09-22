@@ -29,7 +29,7 @@ To je veoma podsećalo na današnje pranje kose u vijetnamskom stilu.
 
 A ti saloni u tajvanskom stilu ostaju osobena kulturna uspomena za mnoga lica na Tajvanu.
 
-(Time, iako to nije bila namera, odajem svoje godine.)
+Ti saloni ostaju deo sećanja na jedan raniji period Tajvana.
 
 ​
 
@@ -81,7 +81,7 @@ Pitalo se, na primer, da li pisana odredba, koja je dozvoljavala isključivo lic
 
 i osporavalo se da li je ta odredba zaista doprinela zaštiti zaposlenja i opstanka lica s oštećenjem vida.
 
-Na kraju su sudije Ustavnog suda (大法官) odredbu koja je dozvoljavala isključivo licima s oštećenjem vida da obavljaju zanimanje masera proglasile protivustavnom (違憲).
+Na kraju su velike sudije Sudskog juana (大法官) odredbu koja je dozvoljavala isključivo licima s oštećenjem vida da obavljaju zanimanje masera proglasile protivustavnom (違憲).
 
 ​
 
@@ -95,7 +95,7 @@ a mnoga lica s oštećenjem vida, plašeći se gubitka sredstva za život, organ
 
 Trenutno Koreja i dalje dozvoljava isključivo licima s oštećenjem vida s osposobljenošću da obavljaju zanimanje masera,
 
-a ako neko od drugog lica naplaćuje nagradu za masažu bez te osposobljenosti,
+a ako neko od drugog lica naplaćuje naknadu za masažu bez te osposobljenosti,
 
 prema korejskom zakonu o zdravstvenim uslugama (醫療法) može se izreći kazna zatvora do 3 godine.
 

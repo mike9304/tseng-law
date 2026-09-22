@@ -1,0 +1,112 @@
+WO-F-sr — Serbian native-review fix lane (Grok 4.7)
+Workspace: /Users/son7/Projects/tseng-law-fix-sr-20260922
+Date: 2026-09-22
+No git add / commit / push.
+
+Scope written: src/content/columns-sr/*.md (18), src/data/international-guidance-central-europe.ts (serbianGuidanceContent only), src/data/international-guidance-team.ts (`sr` roles + `sr` bios only), src/data/international-inquiry-copy.ts (`sr` only).
+Not edited: src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.sr already ekavian, consultation languages limited to EN/中文/JA/KO, no result promise), international-guidance-offices.ts (`sr` label already KANCELARIJE), international-guidance-answers.ts (`sr` already osnovali / formal). No test file edited: no guidance-*sr* test pins a Serbian FAQ or title; the pinned figure TWD 1.57M was left byte-identical.
+
+## Rows applied
+
+sr-a (wording is the supervisor's where it overrides the reviewer):
+1, 2, 3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43 (age aside only), 44, 46.
+
+sr-b:
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46.
+
+Wording overrides from ACCEPTED-sr.md (reviewer hint not used):
+- 戶籍/戶政 → evidencija prebivališta / organ za evidenciju prebivališta (戶政機關). Not evidencija domaćinstava. a#7 left as already-correct evidencija prebivališta (戶籍).
+- 本公司 → matična kompanija / sedište. Not matično društvo / strano društvo (that collides with 母公司). Where both terms meet in 018: sedište matične kompanije (本公司) beside matično društvo (母公司).
+- Investment-review name, one form: Odeljenje za pregled i odobravanje investicija. Not razmatranje. 017 Detaljna pravila ocene → Detaljna pravila provere.
+- Cloud: skladištenje u oblaku.
+- 告訴乃論 → krivično delo koje se goni po prijavi oštećenog. 告訴 → krivična prijava oštećenog. građanska tužba, privatne upotrebe, privatnim poravnanjem, predlog tužioca left.
+- 條例 → Zakon (penzije, industrijska inovacija, ulaganje stranaca, saobraćaj). 公司登記辦法 is 辦法 → Pravilnik o upisu društava. 道路交通安全規則 already Pravilnik. 章程 statut left. 營利事業所得稅 → porez na dobit pravnih lica. sporazum o porezu na dohodak (所得稅協定) left.
+- 有限公司 → članovi/udeli in 018 and the same LLC sentences in 002 and 004. Share-company akcionar left.
+- a#32: izvan takes the genitive, so „izvan tih četiri navedena jezika“, not the reviewer's „izvan ta četiri“.
+- a#40 and the twin in §6: first rewritten as „To što…“. The column checker treats Latin „što“ as the English stopword „to“ (š is stripped). Both sentences were then recast as „Sama činjenica da…“ with the same meaning, so english PASS.
+- a#43: the age aside became „Ti saloni ostaju deo sećanja na jedan raniji period Tajvana.“ The suggested 1980-statute sentence would duplicate the next block. 003 Q16–20 chatty closings softened inside the same blocks („Time je sažet…“, preuveličava). 006/008/009 were not restyled end to end.
+- b#24 grammar also applied to „oslobođenom od upisa pogona“ → „oslobođenom upisa pogona“ (011, three places). The noun „oslobođenje od upisa“ kept „od“.
+- b#46 calque also removed from the 007 mediation sentence („ne može se potvrditi u tom obliku“).
+- 002 annual-return phrase in the genitive after „podnošenja“ is „godišnjeg konačnog obračuna poreza na dobit“, not the nominative of the FAQ gloss.
+- 014 „predloženo trajanje zaposlenja potrebno“ (neuter agreement).
+- R12 sr bios: Pravni asistent; Stariji pravni asistent, Boyin/Muyang Law Firm; Fondacija pravne pomoći, podružnica u Tajčungu; Ministarstvo prosvete, odeljenje za pravne poslove; Magistarka nauka (M.S.); Diplomirala (B.A.); Partner, ovlašćeni računovođa (Partner CPA). English parentheticals dropped on the sr role lines. Latin firm names kept. TWD 1.57M untouched. Other locales untouched.
+- R13: „godine 112. po kalendaru Republike Kine (民國112年憲判字第4號)“ and „godine 109. po kalendaru Republike Kine (民國109年度消字第7號)“. No new Gregorian digit.
+- R15: OOO → [ime].
+- Mixed group: „osnovali su 2016. godine advokatkinje i advokati“. Wei Tseng stays feminine. Other people stay as written (male manager 008, male client 010, Son Jungmin, Huang Shengping).
+
+## Rows skipped
+
+- a#4 (and the 009 Hangul frontmatter url): R16. url is canonical metadata and is not rendered.
+- a#7: the pack already says evidencija prebivališta (戶籍). ACCEPTED-sr.md makes that the term. The reviewer's evidencija domaćinstava was not applied.
+- a#18: the visible label says član 10 and the URL is flno=3. Changing the article number fails the number checker; changing the URL is forbidden. Left both.
+- a#26: the suggested „znatnu otpremninu“ restores a result claim. R3 keeps „mogao da utvrdi pravo koje zakon predviđa“.
+- a#45: „TWD 1.57M“ is test-pinned. Not reformatted to „1,57 mil.“
+
+No P3 rows in sr-a.md or sr-b.md.
+
+Already in place, so no edit: R2b country note in 001; Korea labelled as an example in 004; R5 TIM / KANCELARIJE / Pun profil (na engleskom); R9 „Na Tajvanu: 119 … 110 … 112“ in 003; llms-txt sr notices; Invest Taiwan lang=jpn in 011.
+
+## Systemic patterns (substring hits on deleted vs added diff lines)
+
+- otpremnica → otpremnina: otpremnic −21, otpremnin +23/−2 (008, 009 titles/FAQ/body, 014 link).
+- glavna/strana poslovnica (本公司) → matična kompanija: poslovnic −64, kompanij +65/−1 (001, 004, 011, 018). One collision in 018 → sedište matične kompanije (本公司).
+- Odeljenje za pregled i odobravanje investicija: +11 (001, 011, 013, 017, 018, including Komisija za ocenu).
+- porez na dobit pravnih lica: poreza na dobit +8, porez na dobit +2; porez na dohodak privrednih −2. Income-tax treaty name unchanged.
+- 戶籍/戶政 → evidencija prebivališta: evidencij +40/−31; matične evidencije −17; kućni registar −3 (007, 016, 017).
+- 告訴乃論 / 告訴 → prijava oštećenog: po prijavi oštećenog +5, privatnoj tužbi −5 (003, 010).
+- podnesak/podloga as records → dokumentacija: dokumentacij +41, podnes −33, podlog −40/+1. Filing verb podneti/podnese and 015 „jednim podneskom“ left. „podloga“ = legal basis left where that was the sense.
+- 條例 → Zakon and 辦法 → Pravilnik: Zakona o +22/−15, Zakon o +7/−5, pravilnik +4/−1, Pravilnik +2/−1.
+
+## Reviewer points not applied (reviewer wrong, or in conflict with the supervisor / product facts)
+
+- evidencija domaćinstava for 戶籍/戶政 (a#3, a#7, b#5). Supervisor: evidencija prebivališta.
+- matično društvo / strano društvo for 本公司 (a#10, b#16). That is the term for 母公司. Used matična kompanija / sedište.
+- Odeljenje za razmatranje investicija (b#17). Supervisor: one name, Odeljenje za pregled i odobravanje investicija.
+- skladište u oblaku (b#2). Supervisor: skladištenje u oblaku.
+- a#26 „znatnu otpremninu“ is a severance-result claim R3 forbids.
+- a#18 cannot be fixed without a new digit or a new URL.
+- a#45 number format is blocked by the pinned test string.
+- a#4 Hangul urls are canonical metadata (R16).
+- a#43's 1980-statute sentence would repeat the following paragraph.
+- „najbolji interes deteta“ (子女最佳利益) is the legal term. „trgovac s najboljim rezultatom“ describes client B, not the firm. Neither was rewritten into a superlative about the firm.
+- „nagrada za potpis/zadržavanje“ (簽約金/留任獎金) stays. Only „nagrada za masažu“ → naknadu.
+- „pripisivanje odgovornosti“ stays. Only the vesting instance in 014 was changed.
+
+## §Verify
+
+cd /Users/son7/Projects/tseng-law-fix-sr-20260922 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+
+node scripts/check-column-translation.mjs --dir src/content/columns-sr --lang sr 2>&1 | tail -8
+```
+neighbour      PASS   
+hanzi          PASS   han=73
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-sr src/data | wc -l
+```
+       0
+```
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+```
+TSC_OK
+```
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+git status --short | wc -l
+```
+      22
+```
+
+The 22 is 21 modified content files plus the pre-existing untracked docs/i18n/global-plan/WO-F-sr.txt. This log was written after that count. Removing „1 put“ (002) and „1 puta“ (010) did not drop a source number: numbers PASS. node_modules was installed in this worktree so tsc could see @modelcontextprotocol/server; it is gitignored.

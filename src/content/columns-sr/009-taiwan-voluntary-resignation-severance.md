@@ -1,5 +1,5 @@
 ---
-title: "Izuzeci u kojima zaposleni može da primi otpremnicu (資遣費) i pri dobrovoljnom odlasku"
+title: "Izuzeci u kojima zaposleni može da primi otpremninu (資遣費) i pri dobrovoljnom odlasku"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
 lastmod: "2026-09-10"
 date_display: "13. septembra 2025."
@@ -9,17 +9,17 @@ categories:
 featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg"
 ---
 
-# Izuzeci u kojima zaposleni može da primi otpremnicu (資遣費) i pri dobrovoljnom odlasku
+# Izuzeci u kojima zaposleni može da primi otpremninu (資遣費) i pri dobrovoljnom odlasku
 
 ![Glavni prikaz](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Kao što je ranije navedeno, na Tajvanu zaposlenom nije lako da dobije otpremnicu (資遣費).
+Kao što je ranije navedeno, na Tajvanu zaposlenom nije lako da dobije otpremninu (資遣費).
 
 ​
 
 Naročito ako zaposleni ode po sopstvenoj volji (自請離職),
 
-ne može da primi otpremnicu (資遣費) (član 18 Zakona o radnim standardima),
+ne može da primi otpremninu (資遣費) (član 18 Zakona o radnim standardima),
 
 što se razlikuje od uređenja u nekim pravnim poredcima, na primer u Koreji.
 
@@ -29,7 +29,7 @@ Postoje međutim **izuzetni slučajevi**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-U sledećim posebnim situacijama, čak i kada zaposleni ode po sopstvenoj volji, poslodavac mu mora isplatiti otpremnicu (član 14 Zakona o radnim standardima, koji shodno primenjuje član 17; 勞動基準法第14條):
+U sledećim posebnim situacijama, čak i kada zaposleni ode po sopstvenoj volji, poslodavac mu mora isplatiti otpremninu (član 14 Zakona o radnim standardima, koji shodno primenjuje član 17; 勞動基準法第14條):
 
 1. Kada poslodavac pri zaključenju ugovora o radu (勞動契約) učini neistinit izraz volje (虛偽意思表示), tako da se zaposleni prevari i postoji rizik trpljenja štete
 
@@ -37,7 +37,7 @@ U sledećim posebnim situacijama, čak i kada zaposleni ode po sopstvenoj volji,
 
 2. Kada poslodavac, član porodice poslodavca ili zastupnik poslodavca (代理人) upotrebi nasilje ili nanese tešku uvredu (重大侮辱) zaposlenom
 
-3. Kada posao predviđen ugovorom može štetiti zdravlju zaposlenog, zahtevana je ispravka od poslodavca i nema dejstva
+3. Kada posao predviđen ugovorom može štetiti zdravlju zaposlenog, zaposleni je zatražio ispravku, a poslodavac je nije izvršio
 
 4. Kada poslodavac, njegov zastupnik ili drugi zaposleni oboli od zakonske zarazne bolesti (法定傳染病), postoji rizik zaraze zaposlenih koji rade zajedno i reč je o teškoj opasnosti za zdravlje zaposlenog
 
@@ -55,7 +55,7 @@ ne isplaćuje dodatak za prekovremeni rad (加班費)
 
 ili ne upisuje zaposlenog u radno osiguranje (勞保) ili zdravstveno osiguranje (健保).
 
-U takvim slučajevima, čak i kada zaposleni obično raskine ugovor o radu, poslodavac mu mora isplatiti otpremnicu.
+U takvim slučajevima, čak i kada ugovor o radu raskine sam zaposleni, poslodavac mu mora isplatiti otpremninu.
 
 ​
 
@@ -67,7 +67,7 @@ mora da raskine ugovor o radu u roku od **30 dana** od dana kada je saznao tu si
 
 ili, kod tačke 6, u roku od **30 dana** od dana kada je saznao posledicu štete.
 
-Zaposleni zato mora dobro da vlada rokom.
+Zaposleni zato mora da pazi na taj rok.
 
 ​
 
@@ -77,7 +77,7 @@ pravo Tajvana, bilo da krivica leži na strani preduzeća,
 
 ili na strani zaposlenog,
 
-priznaje svakoj od strana pravo da ne isplati otpremnicu, ili da je zahteva.
+daje jednoj ili drugoj strani, prema tome na čijoj je strani krivica, pravo da otpremninu ne isplati ili da je zahteva.
 
 Ponekad, ako krivica leži na obe strane radnog odnosa,
 

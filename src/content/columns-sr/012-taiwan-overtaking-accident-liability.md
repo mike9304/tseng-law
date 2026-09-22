@@ -23,7 +23,7 @@ Kada vozilo ispred vozi sporo, preticanje (超車) može izgledati kao uobičaje
 
 Osim toga nije dozvoljeno preticati na mestima ili deonicama sa znakom škole ili bolnice, na mestima s drugim znacima ili obeležjem zabrane preticanja, kada se približava vozilo iz suprotnog smera, niti kada ispred voze jedno za drugim 2 ili više vozila.
 
-Da bi se u istoj traci preticalo vozilo ispred, vozač zadnjeg vozila mora najpre kratko dvaput da zapuši ili jednom da trepne dugim svetlima. Sirena i svetla ne smeju se koristiti ponovljeno da se vozilo ispred natera da ustupi put.
+Da bi se u istoj traci preticalo vozilo ispred, vozač zadnjeg vozila mora najpre da da dva kratka zvučna signala ili jednom da blicne dugim svetlima. Sirena i svetla ne smeju se koristiti ponovljeno da se vozilo ispred natera da ustupi put.
 
 Zadnje vozilo sme da pretekne tek pošto je vozilo ispred usporilo i sklonilo se u stranu, ili je volju da ustupi put pokazalo rukom ili desnim žmigavcem.
 
@@ -43,7 +43,7 @@ B je pretrpeo tešku povredu glave i preminuo na mestu; A je izgubio svest i pre
 
 Porodice A i B najpre su smatrale da je iznenadna promena trake vozila broj 2 glavni uzrok sudara. Stvar je prešla u sudski postupak; u njegovom toku izrađeno je više veštačenja (鑑定) o nezgodi.
 
-Prema ishodu veštačenja, glavnu odgovornost za ovaj sudar nosio je A. Taj zaključak bio je ograničen na činjenice ove stvari. Veštačenje je uzelo u obzir nameru A da pretekne 2 vozila ispred koja su vozila jedno za drugim, ulazak u traku suprotnog smera, brzinu koja gotovo nije ostavljala rezervu za kočenje i izostanak propisanih signala sirene i svetala, kao i kretanje pri promeni trake vozila broj 2, raspored puta i traka i ostale obezbeđene dokaze.
+Prema ishodu veštačenja, glavnu odgovornost za ovaj sudar nosio je A. Taj zaključak bio je ograničen na činjenice ove stvari. Veštačenje je uzelo u obzir pokušaj A da pretekne 2 vozila ispred koja su vozila jedno za drugim, ulazak u traku suprotnog smera, brzinu koja gotovo nije ostavljala rezervu za kočenje i izostanak propisanih signala sirene i svetala, kao i kretanje pri promeni trake vozila broj 2, raspored puta i traka i ostale obezbeđene dokaze.
 
 To što u nekim stvarima takvi ishodi veštačenja nastanu ne znači da jedno izostavljanje propisanog signala uvek određuje odgovornost. Nehat (過失) pri nezgodi tokom preticanja zavisi od mesta nezgode, rasporeda traka, brzine, kretanja vozila, signala, vremenskih razmaka, preglednosti i ostalih dokaza.
 
@@ -62,4 +62,4 @@ Kao dopunu može se pogledati [prikaz pravila i postupka preticanja](https://gon
 > - [Međunarodni tim Hovering](/sr/lawyers)
 > - [Postupak nakon saobraćajnih nezgoda na Tajvanu](/sr/columns/taiwan-traffic-accident-procedure)
 
-Ovaj tekst opšta je pravna informacija o pravilima preticanja i oceni odgovornosti za nezgode na Tajvanu; nije savet o konkretnoj stvari i ne obećava određeni ishod. Stvarna odgovornost može se razlikovati prema mestu nezgode, kretanju vozila, brzini, signalima, dokazima, veštačenju (鑑定) i važećem pravu; konkretne stvari treba oceniti posebno na osnovu merodavnih podloga.
+Ovaj tekst opšta je pravna informacija o pravilima preticanja i oceni odgovornosti za nezgode na Tajvanu; nije savet o konkretnoj stvari i ne obećava određeni ishod. Stvarna odgovornost može se razlikovati prema mestu nezgode, kretanju vozila, brzini, signalima, dokazima, veštačenju (鑑定) i važećem pravu; konkretne stvari treba oceniti posebno na osnovu merodavne dokumentacije.

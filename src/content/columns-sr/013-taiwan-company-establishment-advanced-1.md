@@ -25,9 +25,9 @@ Navedena pitanja i odgovori neka budu od pomoći licima koja razmatraju osnivanj
 
 **1. Želim da osnujem društvo, ali još nemam adresu upisa. Da li je osnivanje ipak moguće?**
 
-Kada stranac osniva društvo na Tajvanu, mora da podnese investicioni plan (投資計畫書) Odeljenju za ocenu investicija Ministarstva ekonomije (經濟部投資審議司) na ocenu.
+Kada stranac osniva društvo na Tajvanu, mora da podnese investicioni plan (投資計畫書) Odeljenju za pregled i odobravanje investicija Ministarstva ekonomije (經濟部投資審議司) na ocenu.
 
-Odeljenje za ocenu investicija mora da proveri da li se dati kapital (資本額) stvarno koristi u investicione svrhe
+Odeljenje za pregled i odobravanje investicija mora da proveri da li se dati kapital (資本額) stvarno koristi u investicione svrhe
 
 i da li strana lica ne unose sredstva pod drugim izgovorom.
 
@@ -35,7 +35,7 @@ Pri sastavljanju investicionog plana nije potrebno navesti tačnu adresu društv
 
 Kada se kasnije u banci otvara pripremni račun društva (公司籌備處帳戶), mnoge banke međutim pregledaju ugovor o zakupu (租賃契約) i na licu mesta provere adresu društva.
 
-Jedna službenica tajvanske banke rekla mi je neposredno da
+Službenica tajvanske banke neposredno je navela sledeće:
 
 u poslednje vreme mnogi stranci nakon otvaranja računa nestanu, pa se otvaranje računa ocenjuje sve strože.
 
@@ -63,7 +63,7 @@ Moguće je.
 
 Banka načelno zahteva dvostruku identifikaciju,
 
-a bez isprave o boravku možete kod Imigracione uprave Tajvana zatražiti „**osnovni obrazac za jedinstveni ID broj**“ (統一證號基本資料表).
+a bez isprave o boravku možete kod Imigracione uprave Tajvana zatražiti „**osnovni obrazac jedinstvenog identifikacionog broja**“ (統一證號基本資料表).
 
 Izdavanje je moguće istog dana,
 
@@ -73,11 +73,11 @@ Imigraciona uprava (移民署) je međutim veoma opterećena; zato treba doći r
 
 **3. Pri oceni investicionog plana navodno treba navesti obrazovanje i radno iskustvo. Brinem da obrazovanje i iskustvo ne odgovaraju delatnosti društva koje želim da osnujem.**
 
-Komisija za ocenu Ministarstva ekonomije ocenjuje pozadinu investitora,
+Odeljenje za pregled i odobravanje investicija Ministarstva ekonomije ocenjuje pozadinu investitora,
 
 ali ocena nije pretirano stroga.
 
-Možete navesti raznovrsno radno iskustvo, uključujući honorarne poslove,
+Možete navesti raznovrsno radno iskustvo, uključujući poslove sa nepunim radnim vremenom,
 
 i izložiti ga detaljno tako da se lica koja vrše ocenu mogu uveriti.
 
@@ -91,9 +91,9 @@ Osnivanje društva traje oko **3 meseca**, sticanje radne dozvole (工作許可)
 
 zato datum početka ugovora treba odrediti što kasnije.
 
-Dalje, u ugovorima o zakupu trgovačkih lokala na Tajvanu zakupodavac često zakupcu daje „**razdoblje uređenja enterijera**“ (裝潢期間).
+Dalje, u ugovorima o zakupu trgovačkih lokala na Tajvanu zakupodavac često zakupcu daje „**razdoblje uređenja prostora**“ (裝潢期間).
 
-Reč je o razdoblju oslobođenom od zakupnine; o njemu se može pregovarati.
+Reč je o razdoblju oslobođenom zakupnine; o njemu se može pregovarati.
 
 Strancu nije lako da zakupi trgovački lokal, a kaucija (押金) na Tajvanu je prilično niska (obično 2 meseca), pa je zaštita zakupodavca ograničena;
 
@@ -123,7 +123,7 @@ Npr. ako je reč o delatnostima mogućim u kancelarijskom prostoru, kao što su 
 
 to unapred proverite.
 
-*Ako Vam je potrebna pomoć u vezi s tajvanskim pravom, kancelarija radi na engleskom, kineskom (中文), japanskom i korejskom; komentari se na sajtu ne vode.*
+*Ako Vam je potrebna pomoć u vezi s tajvanskim pravom, kancelarija radi na engleskom, kineskom (中文), japanskom i korejskom; na komentare na sajtu se ne odgovara.*
 
 ---
 

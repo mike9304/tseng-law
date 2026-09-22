@@ -2,7 +2,7 @@
 title: "Masāžas vēsture un tiesiskais režīms Taivānā"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
 lastmod: "2025-09-13"
-date_display: "13. septembrī 2025"
+date_display: "13. septembrī 2025. gadā"
 read_time: "3 min"
 categories:
   - "Juridiskā informācija par Taivānu"
@@ -51,11 +51,11 @@ patiešām tikai personas ar redzes traucējumiem (視障者) varēja veikt masi
 
 Šīs profesijas veikšana personai bez redzes traucējumiem (非視障者) bija pretlikumīga.
 
-Šis likums bija spēkā līdz 2003. gadam; toreiz kungs Lin, kurš vadīja frizētavu,
+Šis likums bija spēkā līdz 2003. gadam; toreiz Lin kungs, kurš vadīja frizētavu,
 
 nodarbināja darbiniekus bez redzes traucējumiem matu mazgāšanas un masāžas pakalpojumiem, un policija to konstatēja.
 
-Saskaņā ar tolaik spēkā esošajām tiesībām kungam Lin un šiem darbiniekiem tika uzlikts administratīvais naudas sods (罰鍰) TWD 40.000, TWD 10.000 un TWD 20.000 jaunajā Taivānas dolārā (新臺幣).
+Saskaņā ar tolaik spēkā esošajām tiesībām Lin kungam un šiem darbiniekiem tika uzlikts administratīvais naudas sods (罰鍰) TWD 40.000, TWD 10.000 un TWD 20.000 jaunajā Taivānas dolārā (新臺幣).
 
 Kungs Lin uzskatīja šo sankciju par ļoti netaisnīgu un pieprasīja konstitucionālo iztulkošanu.
 

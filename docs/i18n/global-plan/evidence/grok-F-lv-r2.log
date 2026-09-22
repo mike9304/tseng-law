@@ -1,0 +1,91 @@
+# WO-F-lv — Latvian fix lane report (Grok 4.7, 2026-09-22, round r2)
+
+Workspace: /Users/son7/Projects/tseng-law-fix-lv-r2
+No git add/commit/push. No test file needed updating (vitest 3202 passed; no pinned Latvian string was rewritten).
+TWD 1.57M left byte-identical. Frontmatter url values left untouched (Hangul slugs in 008 and 009 stay).
+
+## Rows applied
+
+lv-a 39/44, lv-b 32/33. Total applied 71 / 77.
+
+lv-a applied: 1, 2, 4–32, 35–40, 43, 44.
+lv-b applied: 1–12, 14–33.
+
+Checker constraints inside applied rows (wording fixed, digit or block kept):
+- a#10: 有限公司 members are dalībnieki (FAQ + body in 002; the 有限公司 sentences in 004). "2/3" kept; "divas trešdaļas" would drop the source digits.
+- a#14: "gaidāmos darījumus" (accusative after izvērtēt). The suggested nominative would not fit the sentence.
+- a#31: the comma-then-capital break is fixed inside each existing block ("Ja Jūs strādājat Taivānā." and "Atlaišanas pabalsts ir darbinieka likumā noteiktās tiesības."). The two lines were not merged.
+- a#43: bylines are "13. septembrī 2025. gadā", "4. februārī 2026. gadā", "17. septembrī 2026. gadā" (18 files). "2025. gada 13. septembrī" as the whole date_display line is stripped by the checker (a leading "2025." looks like a list marker), so the year and the month disappear. The gadā form parses as 13, 9, 2025. Body dates that already sat mid-sentence ("2023. gada 27. decembrī") were left.
+- b#9: "ne vairāk kā 1 reizi no faktisko zaudējumu summas". Korean is 최대 1배; the multiplier stays.
+- b#18: "2 reizes īsi jādod skaņas signāls vai 1 reizi jāmirkšķina tālās gaismas". "divreiz" / "vienu reizi" would drop the source digits.
+- b#19: the U+00A0 before the closing quote in 015 was removed. U+200B lines in 013 and 015 were left so the ZWSP count still matches the Korean source. The sentence itself was not rewritten.
+- b#22: "ar amatu, kurā tā jāizmanto", keeping "spējai" because the antecedent in the same sentence is "spēja".
+- b#25: "Šis jautājums ir šāds." became "Vēl viens svarīgs apsvērums ir zonējums." The next block still asks whether this address is in a restaurant zone. The three short paragraphs were not merged.
+
+## Rows skipped
+
+- lv-a #3 (and the 009 url named in the same row). Frontmatter url Hangul is canonical metadata (R16 / ACCEPTED-ROUND). Not rendered.
+- lv-a #33. "mazāk nekā vienu gadu" and the sibling wordings drop a counted 1. Korean is 설립 1년 미만 / 1년을 초과 / 1명 / 1년차 style. Left "mazāk nekā 1 gadu", "pārsniegt 1 gadu", "1 cietušajam", "noslēgtu 1 darba stāža gadu".
+- lv-a #34. Q16–Q20 are body lines in the Korean source as well. Turning them into ## headings fails the headings check. U+200B spacer lines in 003, 005, 006, 008 and 009 stay so the block count and the ZWSP count match.
+- lv-a #41. Bio figure "TWD 1.57M" is pinned byte-identical. Not rewritten as "1,57 miljonu TWD".
+- lv-a #42 and lv-b #13. Space thousands ("500 000", "1 579 589") are not parsed for lv (R14). Dot thousands kept ("TWD 500.000", "TWD 1.579.589"). Decimal comma in "0,5 mēneša" / "0,5 metru" left as it was. Currency was not moved after the amount.
+
+## Systemic patterns
+
+- Byline year without gadā. 18 date_display lines (001–010, 012–017 "13. septembrī 2025. gadā"; 011 "4. februārī 2026. gadā"; 018 "17. septembrī 2026. gadā"). See a#43 for why the year stays in front.
+- 有限公司 members called akcionāri. 6: 002 FAQ + body "dalībnieku piekrišana"; 004 "dalībnieki" (with 有限公司), "ja dalībnieki ļaunprātīgi", "dalībnieki atbild", and the guarantee "dalībnieks". 股份有限公司 akcionāri and general 股東 "akcionāri" left.
+- "un" joining Kinmen and Lienchiang where the rule is alternative. 4 in 017: the FAQ and the body threshold sentence, "Dzjiņmeņā vai Ljaņdzjanā (Macu)", "Dzjiņmeņas vai Ljaņdzjanas slieksni". Amounts unchanged.
+- "ieskaitot" as a calque of "including". 11 → "tostarp" (011 ×6, 013 ×1, 015 ×1, 016 ×2, 017 ×1). "tostarp" that was already in 003, 005 and 007 was left.
+- Coined legal words. "sugu akcijas" → "īpašās akcijas" (018); "kapitāla iestatījums" → "paredzētais kapitāls" (018); "norādījuma akts" → "dotais norādījums" (010); "profesionalitāti un tehniskumu" → "profesionālajām vai tehniskajām prasmēm" (014); "tvingošo normu" → "imperatīvo normu" ×2 (016).
+- "jurisdikcija" where the contrast is another country's rules, not a court's competence. 3: 008 FAQ "dažām valstīm", 008 body "Dažās valstīs", 009 "dažās valstīs". Court "jurisdikcija" in 007 left.
+- "visaugstāk" for a cap. 3: 008 FAQ and blockquote "ne vairāk kā 6 mēnešu alga"; 017 "vēl līdz 6 mēnešiem".
+- Civil Code name in lowercase. 18 "civillikuma" → "Civillikuma" in 007. 003 already had "Civillikuma".
+- ROC left in English. 4 in 007: the FAQ answer, the body paragraph, and the two source-list labels. Now "Ķīnas Republikas 112. gada"; the 民國 gloss was already there. No Gregorian year added.
+- "Students vīrietis" / "korejiešu students vīrietis" stacked as two nouns. 14 alt texts and link labels in 010, plus the dative headline "vīrietim, korejiešu studentam".
+- "Partnera grāmatvedība" and "vada grāmatvedības biroju" for the audit partner. Title "Revīzijas partneris", the team description, and the bio "vada revīzijas biroju". The accounting degrees stay "grāmatvedībā" (that is the degree). "TWD 1.57M" untouched.
+
+R2–R10 and R12–R17 were already largely in the Latvian pack. Korea is a labelled example (001 and 004 already carry the country-specific treaty sentence; 005 already frames Korean banking as an example). Consultation lock stays negative. Wei Tseng is feminine (advokāte, sagatavojusi, viņa, maģistre). R9 emergency numbers were already "Taivānā". No Czech leakage (R17). No OOO. No Hangul outside the two url values. Markers 0. llms.txt notices were not rewritten; the FAQ and privacy sentences they must repeat were not changed. Roles were already in Latvian (R12).
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-lv --lang lv 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=33
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-lv src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      23
+```
+
+The 23 is this lane's 20 edited content files (18 columns, international-guidance-baltic-atlantic.ts, international-guidance-team.ts) plus three paths that were already dirty before the edit (WO-F-lv.txt, untracked lv-a.md, untracked lv-b.md). This log is written after that count.
+
+Full checker output is summary PASS 18/18. Two pre-existing number WARNs remain (they do not fail the summary, and these edits did not add the digits): 006 "extra in translation (1): 1"; 015 "extra in translation (2): 2×2".
+
+## Reviewer points not followed as worded
+
+- lv-a #3 is right that a Latvian page should not open on a Hangul slug. Not applied: the url field is canonical metadata and is not rendered.
+- lv-a #33 is right that "mazāk nekā 1 gadu" is stiff. Not applied: the Korean source counts that 1, and "vienu gadu" drops it.
+- lv-a #34 and lv-b #19 (the U+200B part) are right that the blank lines are hard to read. Not applied as new headings or deleted spacers: the Korean source has the same blocks and the same ZWSP count. The U+00A0 in 015 was removed.
+- lv-a #41 is right that "M" and a dot are not Latvian for 1.57 million. Not applied: "TWD 1.57M" is pinned byte-identical.
+- lv-a #42 and lv-b #13 are right about ordinary Latvian typography (space as the thousands separator, currency after the amount). Not applied: R14 says a space fails the checker for lv. Dot thousands kept, currency code left where it was.
+- lv-a #43 is right that the byline needs gadā. The suggested "2025. gada 13. septembrī" fails when it is the entire date_display line, because the checker treats a leading "2025." as a list marker and then loses the year and the month. "13. septembrī 2025. gadā" parses and supplies gadā.
+- lv-a #10's "divas trešdaļas", lv-b #9's drop of "1", and lv-b #18's "divreiz" / "vienu reizi" are more natural, but each would drop a digit the checker counts. The grammar around those digits was fixed; the digits stay.
+- lv-a #31 and lv-b #25 are right that the broken sentence and the zoning stutter should read as one thought. Not applied as a merge: the checker compares block counts. Each block was rephrased on its own.
+- lv-a #14's suggested "gaidāmie darījumi, līdzekļu plūsma" is nominative; the verb is izvērtēt, so the accusative "gaidāmos darījumus, līdzekļu plūsmu" was used.
+- lv-b #22's "prasmei" does not agree with "Kāda spēja" in the same sentence. "spējai" kept; "mērķa amatu" was the coined part and was rewritten.

@@ -2,7 +2,7 @@
 title: "Jautājumi un atbildes par rīcību pēc ceļu satiksmes negadījuma Taivānā: pasākumi notikuma vietā, vaina, izlīgums un zaudējumu atlīdzība"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
-date_display: "13. septembrī 2025"
+date_display: "13. septembrī 2025. gadā"
 read_time: "12 min"
 categories:
   - "Juridiskā informācija par Taivānu"
@@ -339,7 +339,7 @@ Cietušā ievainojums vai nāve viņam pašam un viņa ģimenei nes fiziskas un 
 
 ​
 
-Vainīgais bieži nerūpējas par zvanīšanu ar jautājumu par cietušā stāvokli un par apmeklējumu, un daudzi vainīgie pieņem, ka apdrošinātājs visu nokārtos, un paši neparādās. Šādos gadījumos nejūt ne nožēlu, ne labticību.
+Vainīgais bieži nerūpējas par zvanīšanu ar jautājumu par cietušā stāvokli un par apmeklējumu, un daudzi vainīgie pieņem, ka apdrošinātājs visu nokārtos, un paši neparādās. Šādos gadījumos cietušais nejūt ne nožēlu, ne sirsnību.
 
 ​
 

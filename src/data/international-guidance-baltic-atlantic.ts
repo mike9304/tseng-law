@@ -632,7 +632,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Darba strīdi',
           paragraphs: [
-            'Šī joma aptver darba attiecību izbeigšanu, likumā noteikto atlaišanas pabalstu saskaņā ar Taivānas tiesībām (資遣費; to nedrīkst pielīdzināt līdzīgiem institūtiem citās valstīs), atlīdzību un strīdus no darba līguma (勞動契約), gan darbinieka, gan darba devēja pusē. Izvērtējumā nošķiram izbeigšanas iemeslu no uzteikuma, samaksas un termiņu jautājumiem.',
+            'Šī joma aptver darba attiecību izbeigšanu, likumā noteikto atlaišanas pabalstu saskaņā ar Taivānas tiesībām (資遣費; to nedrīkst pielīdzināt līdzīgiem institūtiem citās valstīs), atlīdzību un strīdus no darba līguma (勞動契約), gan darbinieka, gan darba devēja pusē. Izvērtējumā nošķiram izbeigšanas iemeslu no jautājumiem par uzteikumu, samaksu un termiņiem.',
             'Bieži izšķirošie dokumenti ir darba līgums, iekšējie darba noteikumi (工作規則), algas lapiņas un pušu sarakste. Ja tie Jums joprojām ir, miniet to kopsavilkumā.',
           ],
         },
@@ -671,7 +671,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Dibināšana un struktūra',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) 2016. gadā dibināja advokātes un advokāti, kuri studēja National Taiwan University (國立臺灣大學). Ķīniešu nosaukums 昊鼎 savieno zīmi 昊 („plašās debesis“) ar zīmi 鼎 („stabils pamats“) un raksturo biroja ievirzi kopš dibināšanas.',
-            'Mums ir biroji Taipejā (臺北), Gaosjunā (高雄), Taidžunā (臺中) un Pindunā (屏東). Gaosjunas birojs koncentrējas uz korporatīvo pārvaldību un ved civillietas, krimināllietas un administratīvos strīdus. Taidžunas birojs ved būvniecības lietas, intelektuālo īpašumu un lietas ar saikni ar Koreju un Japānu. Pindunas birojs tika atvērts 2017. gadā vietējām vajadzībām.',
+            'Mums ir biroji Taipejā (臺北), Gaosjunā (高雄), Taidžunā (臺中) un Pindunā (屏東). Gaosjunas birojs koncentrējas uz korporatīvo pārvaldību un ved civillietas, krimināllietas un administratīvos strīdus. Taidžunas birojs ved būvniecības lietas, intelektuālo īpašumu un lietas ar saikni ar Koreju un Japānu. Pindunas birojs tika atvērts 2017. gadā, lai uz vietas apkalpotu klientus reģionā.',
             'Līdzās advokātu darbam kopš 2020. gada darbojas arī Hovering Accounting Office, kas piedāvā grāmatvedību un nodokļu plānošanu uzņēmējiem un turīgām privātpersonām.',
           ],
         },
@@ -685,7 +685,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kad sazināties ar mums',
           paragraphs: [
-            'Pēc Jūsu kopsavilkuma saņemšanas advokāte vai advokāts izvērtē saturu un pēc tam runā par iespējamo darba apjomu, vēl vajadzīgajiem dokumentiem un nākamajiem soļiem. Nodokļu vai grāmatvedības jautājumos birojs var rīkoties kopā ar grāmatvedības daļu vienā gaitā.',
+            'Pēc Jūsu kopsavilkuma saņemšanas advokāte vai advokāts izvērtē saturu un pēc tam runā par iespējamo darba apjomu, vēl vajadzīgajiem dokumentiem un nākamajiem soļiem. Nodokļu vai grāmatvedības jautājumos birojs var strādāt kopā ar grāmatvedības daļu vienā procedūrā.',
             'Katras lietas iznākums ir atkarīgs no faktiem un pieejamajiem dokumentiem; iznākumu nesolām. Ja Jums vajadzīga saistoša atbilde savai situācijai, dokumenti jāpārrunā ar advokāti vai advokātu kādā no četrām konsultācijas valodām.',
           ],
         },
@@ -730,7 +730,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kāpēc šajā lapā nav tarifu',
           paragraphs: [
-            'Izmaksas ir atkarīgas no lietas pašas: no piepūles, pušu skaita, dokumentiem, termiņiem un no tā, vai procedūra jau notiek. Iepriekš noteikts skaitlis Jūsu lietas izmaksas neparādītu. Tāpēc vispirms nosakām darba apjomu un pēc tam paziņojam Jums izmaksas, pirms darbs sākas.',
+            'Izmaksas ir atkarīgas no lietas pašas: no piepūles, pušu skaita, dokumentiem, termiņiem un no tā, vai procedūra jau notiek. Iepriekš noteikta summa neatspoguļotu Jūsu lietas izmaksas. Tāpēc vispirms nosakām darba apjomu un pēc tam paziņojam Jums izmaksas, pirms darbs sākas.',
             'Līdzās honorāram var rasties tiesas nodevas, iestāžu vai trešo personu izmaksas. Tās ir nošķirtas no honorāra un ir atkarīgas no attiecīgās procedūras.',
           ],
         },
@@ -832,7 +832,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Ko darīt, ja mana lieta ir ļoti steidzama?',
           answer:
-            'Nosauciet termiņu vai datumu no iestādes raksta tūlīt kopsavilkuma sākumā, lai šie datumi izvērtējumā būtu redzami. Šai lapai nav ārkārtas kanāla, un tā nenodrošina atbildes termiņu; ja Jūsu lieta nevar gaidīt, paralēli meklējiet citu palīdzību tur, kur atrodaties.',
+            'Nosauciet termiņu vai datumu no iestādes raksta tūlīt kopsavilkuma sākumā, lai šie datumi izvērtējumā būtu redzami. Šai lapai nav ārkārtas kontakta, un tā nenodrošina atbildes termiņu; ja Jūsu lieta nevar gaidīt, paralēli meklējiet citu palīdzību tur, kur atrodaties.',
         },
       ],
     },
@@ -899,7 +899,7 @@ export const latvianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Glabāšanas vieta un pakalpojumu sniedzēji',
           paragraphs: [
             'Šīs vietnes mitināšanu nodrošina Vercel, un Jūsu iesniegums tiek glabāts šā pakalpojuma nepubliskajā datu krātuvē. E-pastus sūta pasta pakalpojums, ko birojs lieto.',
-            'Atsevišķu pakalpojumu sniedzēju serveri var atrasties ārpus Taivānas, tāpēc Jūsu datus tur var glabāt un apstrādāt. Kad glabāšanas mērķis ir izpildīts, datus dzēš bez liekas kavēšanās; dati, kas jāglabā saskaņā ar piemērojamiem noteikumiem, paliek šajā laikā. Personu datu pieprasījumus pieņem wei@hoveringlaw.com.tw.',
+            'Atsevišķu pakalpojumu sniedzēju serveri var atrasties ārpus Taivānas, tāpēc Jūsu datus tur var glabāt un apstrādāt. Kad glabāšanas mērķis ir izpildīts, datus dzēš bez liekas kavēšanās; dati, kas jāglabā saskaņā ar piemērojamiem noteikumiem, tiek glabāti šajā laikposmā. Personu datu pieprasījumus pieņem wei@hoveringlaw.com.tw.',
           ],
         },
       ],

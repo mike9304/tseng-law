@@ -2,7 +2,7 @@
 title: "Izņēmumi, kuros darbinieks var saņemt atlaišanas pabalstu (資遣費) arī pēc brīvprātīgas aiziešanas"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
 lastmod: "2026-09-10"
-date_display: "13. septembrī 2025"
+date_display: "13. septembrī 2025. gadā"
 read_time: "3 min"
 categories:
   - "Juridiskā informācija par Taivānu"
@@ -21,7 +21,7 @@ Kā jau iepriekš norādīts, Taivānā darbiniekam nav viegli saņemt atlaišan
 
 viņš nevar saņemt atlaišanas pabalstu (資遣費) (Darba standartu likuma 18. pants),
 
-kas atšķiras no regulējuma dažās jurisdikcijās, piemēram, Korejā.
+kas atšķiras no regulējuma dažās valstīs, piemēram, Korejā.
 
 ​
 
@@ -61,7 +61,7 @@ vai neieraksta darbinieku darba apdrošināšanā (勞保) vai veselības apdro�
 
 Darba standartu likums (勞動基準法) tomēr nosaka, ka
 
-ja darbinieks vēlas izbeigt darba līgumu, pamatojoties uz iepriekš 1. vai 6. punktu (piemēram, lai izbeigtu līgumu neierakstīšanas apdrošināšanā dēļ),
+ja darbinieks vēlas izbeigt darba līgumu, pamatojoties uz iepriekš 1. vai 6. punktu (piemēram, lai izbeigtu līgumu tāpēc, ka darbinieks nav ierakstīts apdrošināšanā),
 
 darba līgums jāizbeidz **30 dienu** termiņā no dienas, kad viņš šo situāciju uzzināja,
 
@@ -83,9 +83,9 @@ Dažkārt, ja vaina ir abu darba attiecību pušu pusē,
 
 ja izceļas strīds,
 
-pēc tā, kura puse pirmā izbeidz līgumu ar pietiekamu pamatu,
+Izšķiroši ir, kura puse līgumu izbeidz pirmā ar pietiekamu pamatu.
 
-atlaišanas pabalsts var netikt izmaksāts vai var tikt prasīts.
+puse, kas līgumu izbeidz pirmā ar pietiekamu pamatu, var atlaišanas pabalstu neizmaksāt vai to prasīt.
 
 Tāpēc darba strīdos (勞資糾紛) Taivānā
 

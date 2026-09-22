@@ -1276,10 +1276,10 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'KOMANDA',
     title: 'Hovering starptautiskā komanda',
     description:
-      'Hovering advokātu un līdzstrādnieku, kā arī partnera grāmatvedības un revīzijas profili.',
+      'Hovering advokātu un līdzstrādnieku, kā arī revīzijas partnera profili.',
     representativeTitle: 'Vadošā advokāte',
     teamTitle: 'Advokāti un līdzstrādnieki',
-    partnerTitle: 'Partnera grāmatvedība',
+    partnerTitle: 'Revīzijas partneris',
     introLabel: 'Iepazīstināšana',
     educationLabel: 'Izglītība',
     experienceLabel: 'Prakse',
@@ -4419,7 +4419,7 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'Maģistre (M.S.), Institute of Finance, National Taiwan University',
-        'Bakalaura grāds (B.A.) tiesību un finanšu dubultajā programmā, National Chengchi University',
+        'Bakalaura grāds (B.A.) tiesību un finanšu dubultstudijās, National Chengchi University',
         'Apmaiņas studijas Kobe University un Waseda University',
       ],
       experience: [
@@ -4457,7 +4457,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Koordinē konsultāciju laikus un saziņu klientiem no Korejas.',
-        'Atbalsta dokumentu sistēmu un darba gaitu saskaņošanu starp reģioniem, balstoties uz informātikas izglītību.',
+        'Atbalsta apmaiņu starp darbības jomām, izmantojot dokumentu sistēmas un darba procesus, un balstās uz informātikas izglītību.',
       ],
       education: [
         'Bakalaurs (B.S.) informātikā, National Cheng Kung University',
@@ -4468,7 +4468,7 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'Ieguvis bakalaura un maģistra grādu grāmatvedībā National Chengchi University un tagad vada grāmatvedības biroju.',
+        'Ieguvis bakalaura un maģistra grādu grāmatvedībā National Chengchi University un tagad vada revīzijas biroju.',
         'Palīdz uzņēmumu klientiem kopā izvērtēt tiesiskos, nodokļu un finanšu riskus.',
       ],
       education: [

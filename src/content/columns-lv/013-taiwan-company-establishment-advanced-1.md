@@ -2,7 +2,7 @@
 title: "Sabiedrības dibināšana Taivānā — padziļināts izklāsts, 1. daļa"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-1"
 lastmod: "2026-09-10"
-date_display: "13. septembrī 2025"
+date_display: "13. septembrī 2025. gadā"
 read_time: "2 min"
 categories:
   - "Sabiedrību dibināšana Taivānā"
@@ -77,7 +77,7 @@ Ekonomikas ministrijas Ieguldījumu izskatīšanas departaments gan vērtē iegu
 
 Tomēr izvērtējums nav pārmērīgi stingrs.
 
-Var minēt dažādu darba pieredzi, ieskaitot nepilna laika darbu.
+Var minēt dažādu darba pieredzi, tostarp nepilna laika darbu.
 
 To var izklāstīt detalizēti tā, lai varētu pārliecināt personas, kas veic izvērtējumu.
 

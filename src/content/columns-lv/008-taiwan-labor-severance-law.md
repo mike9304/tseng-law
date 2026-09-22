@@ -2,18 +2,18 @@
 title: "Darba tiesības Taivānā: vai likumā noteikto atlaišanas pabalstu Taivānā ir grūti saņemt?"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
 lastmod: "2026-09-10"
-date_display: "13. septembrī 2025"
+date_display: "13. septembrī 2025. gadā"
 read_time: "6 min"
 categories:
   - "Juridiskā informācija par Taivānu"
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
   - q: "Vai Taivānā darbinieks, kurš aiziet pēc paša gribas, saņem atlaišanas pabalstu?"
-    a: "Nē. Atšķirībā no dažām jurisdikcijām (piemēram, Korejas) Taivānā pienākums izmaksāt likumā noteikto atlaišanas pabalstu (資遣費) rodas tikai tad, kad sabiedrība darbinieku atlaiž; ja darbinieks aiziet pēc paša gribas, sabiedrībai atlaišanas pabalsts nav jāizmaksā."
+    a: "Nē. Atšķirībā no dažām valstīm (piemēram, Korejas) Taivānā pienākums izmaksāt likumā noteikto atlaišanas pabalstu (資遣費) rodas tikai tad, kad sabiedrība darbinieku atlaiž; ja darbinieks aiziet pēc paša gribas, sabiedrībai atlaišanas pabalsts nav jāizmaksā."
   - q: "Vai sabiedrībai atlaišanas pabalsts jāizmaksā arī disciplinārās atlaišanas gadījumā?"
     a: "Nē. Ja darbinieks izdara pretlikumīgu darbību, pārkāpj iekšējos darba noteikumus vai bez attaisnojoša iemesla 3 dienas pēc kārtas neierodas darbā (Darba standartu likuma 12. pants, 勞動基準法第12條), sabiedrība var atlaist bez iepriekšēja paziņojuma un atlaišanas pabalstu neizmaksāt. Turpretim ekonomiskā atlaišana (11. pants) prasa iepriekšēju paziņojumu un atlaišanas pabalsta izmaksu."
   - q: "Kā Taivānā aprēķina atlaišanas pabalstu?"
-    a: "Par katru noslēgtu 1 darba stāža gadu darba devējam jāizmaksā 0,5 mēneša vidējā alga kā atlaišanas pabalsts, visaugstāk 6 mēnešu alga. Šī formula attiecas uz stāžu, uz kuru piemēro Darbinieku pensiju likuma (勞工退休金條例) 12. pantu; stāžam, uz kuru piemēro Darba standartu likuma (勞動基準法) 17. pantu, par 1 gadu izmaksā 1 mēneša vidējo algu, bez griestiem."
+    a: "Par katru noslēgtu 1 darba stāža gadu darba devējam jāizmaksā 0,5 mēneša vidējā alga kā atlaišanas pabalsts, ne vairāk kā 6 mēnešu alga. Šī formula attiecas uz stāžu, uz kuru piemēro Darbinieku pensiju likuma (勞工退休金條例) 12. pantu; stāžam, uz kuru piemēro Darba standartu likuma (勞動基準法) 17. pantu, par 1 gadu izmaksā 1 mēneša vidējo algu, bez griestiem."
 ---
 
 # Darba tiesības Taivānā: vai likumā noteikto atlaišanas pabalstu Taivānā ir grūti saņemt?
@@ -28,7 +28,7 @@ faq:
 
 Regulējums no valsts uz valsti atšķiras.
 
-Dažās jurisdikcijās, piemēram, Korejā, sabiedrībai atlaišanas pabalsts jāizmaksā arī tad, kad darbinieks aiziet pats
+Dažās valstīs, piemēram, Korejā, sabiedrībai atlaišanas pabalsts jāizmaksā arī tad, kad darbinieks aiziet pats
 
 Taivānā tas ir citādi:
 
@@ -62,7 +62,7 @@ Turpmākā tabula to apkopo.
 
 > Taivānā par katru noslēgtu 1 darba stāža gadu (年資)
 > darba devējam jāizmaksā 0,5 mēneša vidējā alga (平均工資) kā atlaišanas pabalsts.
-> (visaugstāk 6 mēnešu alga) Šī formula attiecas uz stāžu, uz kuru piemēro Darbinieku pensiju likuma (勞工退休金條例) 12. pantu; stāžam, uz kuru piemēro Darba standartu likuma (勞動基準法) 17. pantu, par 1 gadu izmaksā 1 mēneša vidējo algu, bez griestiem.
+> (ne vairāk kā 6 mēnešu alga) Šī formula attiecas uz stāžu, uz kuru piemēro Darbinieku pensiju likuma (勞工退休金條例) 12. pantu; stāžam, uz kuru piemēro Darba standartu likuma (勞動基準法) 17. pantu, par 1 gadu izmaksā 1 mēneša vidējo algu, bez griestiem.
 
 ​
 
@@ -78,7 +78,7 @@ un ved darbiniekus uz aiziešanu pēc paša gribas.
 
 Darbiniekiem jābūt piesardzīgiem
 
-un jāuzmanās, lai neiekristu sabiedrības nodomā.
+un jāuzmanās, lai neiekristu šādā sabiedrības viltībā.
 
 ​
 
@@ -208,7 +208,7 @@ vai pārcel darbiniekus dīvainos amatos,
 
 ​
 
-Ja Jūs strādājat Taivānā,
+Ja Jūs strādājat Taivānā.
 
 Atlaišanas pabalstu ir grūtāk saņemt, nekā šķiet.
 
@@ -216,9 +216,9 @@ Nevienojieties viegli ar sabiedrību.
 
 Uzmanieties, lai sabiedrība Jūs neatlaistu neatbilstošā veidā.
 
-Neveiciniet aiziešanu pēc paša gribas.
+Uzmanieties, lai sabiedrība Jūs nespiestu uz aiziešanu pēc paša gribas.
 
-Atlaišanas pabalsts ir darbinieka likumā noteiktās tiesības,
+Atlaišanas pabalsts ir darbinieka likumā noteiktās tiesības.
 
 Tās pastāv tad, kad izmaksas priekšnoteikumi ir izpildīti.
 

@@ -2,7 +2,7 @@
 title: "Mantošana un aizgādība Taivānā: juridisks pārskats palikušajai ģimenei"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-inheritance-custody-analysis"
 lastmod: "2026-07-25"
-date_display: "13. septembrī 2025"
+date_display: "13. septembrī 2025. gadā"
 read_time: "13 min"
 categories:
   - "Juridiskā informācija par Taivānu"
@@ -38,7 +38,7 @@ Apstāklis, ka mantošana ir atvērta, nenozīmē, ka katrs mantinieks uzreiz k�
 
 ## 2. Testaments un mantojuma mantas noteikšana
 
-Spēkā esošs testaments var noteikt sadales veidu, kas atšķiras no likumiskās mantošanas. Tomēr jāpārbauda testamenta forma, testatora rīcībspēja, interpretācija un izpildes iespēja un kopīgi jāizvērtē tvingošo normu ierobežojumi, ieskaitot likumisko rezervēto daļu (特留分). Tas, ka testaments pastāv nenosaka visas mantojuma mantas pieskaitīšanu; turpretī, ja testaments norāda tikai dažas mantas, uz pārējo var piemērot likumiskās mantošanas režīmu.
+Spēkā esošs testaments var noteikt sadales veidu, kas atšķiras no likumiskās mantošanas. Tomēr jāpārbauda testamenta forma, testatora rīcībspēja, interpretācija un izpildes iespēja un kopīgi jāizvērtē imperatīvo normu ierobežojumi, tostarp likumisko rezervēto daļu (特留分). Tas, ka testaments pastāv, nenosaka visas mantojuma mantas pieskaitīšanu; turpretī, ja testaments norāda tikai dažas mantas, uz pārējo var piemērot likumiskās mantošanas režīmu.
 
 Pirms mantojuma daļas aprēķina vispirms jānosaka mantojuma mantas saraksts un tiesiskais raksturs. Ar materiāliem jāapstiprina ne tikai nekustamie īpašumi, noguldījumi, vērtspapīri, uzņēmuma daļas, prasījumi un kustamā manta, bet arī mantojuma atstājēja (被繼承人) parādi, galvojuma atbildība, nesamaksātie nodokļi un ar bērēm saistītās izmaksas. Nedrīkst slēgt tikai pēc vārda reģistrā vai kontā; jāizmeklē arī patiesā labuma guvēja statuss, kopīpašuma daļa, trešo personu tiesības un nodibinātie nodrošinājumi.
 
@@ -72,7 +72,7 @@ Mantojuma nodokļa deklarācija, paziņojums mājsaimniecības reģistrā (戶�
 
 Saskaņā ar Taivānas Civillikuma (民法) 1089. pantu, kad viens no vecākiem nevar īstenot tiesības un pienākumus pret nepilngadīgo bērnu, tos principā īsteno otrs. Ja tātad palikušais vecāks aizgādību saglabā un nav pretēja tiesas nolēmuma, šis vecāks parasti turpina īstenot aizgādības tiesības un pienākumus. Tomēr pēc konkrētajiem apstākļiem, piemēram, jau izdota nolēmuma, aizgādības ierobežošanas vai apturēšanas iemesliem, starptautiskiem elementiem un bērna labākajām interesēm (子女最佳利益), var būt vajadzīga tiesas iesaistīšanās.
 
-Aizgādības tiesības un pienākumi var ietvert nepilngadīgā bērna aizsardzību un audzināšanu, lēmumu par dzīvesvietu, likumisko pārstāvību un mantas pārvaldību, starp citu saturu. Katra pilnvara nav vecāku personiskajās interesēs; tā jāīsteno bērna personības un mantisko interešu aizsardzības virzienā. Ikdienas aizsardzības vērtējums un likumiskā pārstāvība svarīgā rīcībā ar mantu var prasīt atšķirīgu pārskatīšanu.
+Aizgādības tiesības un pienākumi var ietvert nepilngadīgā bērna aizsardzību un audzināšanu, lēmumu par dzīvesvietu, likumisko pārstāvību un mantas pārvaldību. Katra no šīm tiesībām nav vecāku pašu interesēs; tā jāīsteno, lai aizsargātu bērna personību un mantiskās intereses. Ikdienas aizsardzības vērtējums un likumiskā pārstāvība svarīgā rīcībā ar mantu var prasīt atšķirīgu pārskatīšanu.
 
 Nedrīkst skatīt tikai ģimenes saikni pirms nāves un pēc tās; jāpārbauda esošie laulības šķiršanas nolēmumi vai nolēmumi par aizgādības īstenošanu un tas, vai tiesības ir ierobežotas vai apturētas. Ja pastāv ārvalstu tiesas nolēmums, pārskatīšanas priekšmets ir arī atzīšana un iedarbība Taivānā un vajadzīgā gaita citā valstī. Darījumā, kurā saduras vecāka un bērna intereses, atsevišķi jāvērtē, vai pietiek vispārīgās likumiskās pārstāvības.
 
@@ -100,7 +100,7 @@ Pārvaldības, lietošanas, labuma gūšanas un rīcības pilnvaras saskaņā ar
 
 Ja vecāki un bērns ir tās pašas mantojuma mantas kopmantinieki vai kļūst par līguma pusēm, var rasties interešu konflikts. Jāizvērtē Civillikuma (民法) 1086. panta īpašā pārstāvja režīms un jāpārbauda, kurš var bērnu pārstāvēt sadales vienošanās vai procesuālās darbībās. Vai jāieceļ īpašais pārstāvis, vērtē ne tikai pēc darbības formas, bet pēc tā, vai saimnieciskā interese faktiski saduras.
 
-Kad nepilngadīgā aizbildnis pārvalda mantu, var piemērot saraksta sastādīšanu, apliecinājumu saglabāšanu, ieņēmumu un izdevumu nošķiršanu, kā arī ziņošanas un uzraudzības normas tiesā. Finanšu konti un ieguldījumu aktīvi jāpārvalda tā, lai varētu identificēt, ka tā ir bērna manta, un katrs izdevums jāfiksē mērķī un pamatā. Lai mantu un pārvaldības ierakstu varētu raiti nodot, kad aizbildnība beidzas vai nepilngadīgais sasniedz pilngadību, materiāli no paša sākuma jāsakārto sistemātiski.
+Kad nepilngadīgā aizbildnis pārvalda mantu, var piemērot saraksta sastādīšanu, apliecinājumu saglabāšanu, ieņēmumu un izdevumu nošķiršanu, kā arī ziņošanas un uzraudzības normas tiesā. Finanšu konti un ieguldījumu aktīvi jāpārvalda tā, lai varētu identificēt, ka tā ir bērna manta, un jāfiksē katra izdevuma mērķis un pamats. Lai mantu un pārvaldības ierakstu varētu raiti nodot, kad aizbildnība beidzas vai nepilngadīgais sasniedz pilngadību, materiāli no paša sākuma jāsakārto sistemātiski.
 
 Plānošanu, kas izmanto trastu vai apdrošināšanu, arī nedrīkst uzskatīt par drošu tikai pēc līguma satura. Jāpārbauda trasta pārvaldnieks (受託人) un labuma saņēmējs, izmaksas nosacījumi, pārvaldības atlīdzība, uzraudzības mehānisms un grozījuma un izbeigšanās nosacījumi un kopīgi jāizvērtē likumiskā rezervētā daļa un nodokļu jautājumi. Jāatspoguļo līdzsvaroti bērna pašreizējā vajadzība un nākotnes dzīve; mantas pārvaldītāja ērtība nedrīkst svērt vairāk par bērna interesēm.
 
@@ -108,7 +108,7 @@ Plānošanu, kas izmanto trastu vai apdrošināšanu, arī nedrīkst uzskatīt p
 
 Ģimenei, kurai ir starptautisks elements, nedrīkst uzreiz piemērot tikai Taivānas Civillikuma (民法) iekšējo normu. Pušu valstspiederība, adrese un parastā uzturēšanās vieta (經常居所), dzīves centrs nāves brīdī, mantas atrašanās vieta, ārvalstīs nodibināta laulība vai laulības šķiršana un esošie aizgādības nolēmumi var ietekmēt piemērojamās tiesības un piekritību. Pat tajā pašā ģimenē mantošana, laulāto mantisko attiecību režīms, aizgādība, aizbildnība un mantas reģistrācija var būt pakļautas citiem piesaistes kritērijiem.
 
-Taivānas Likums par ārvalstu elementu civiltiesību piemērošanu (涉外民事法律適用法) ir izejas punkts piemērojamo tiesību noteikšanai civiltiesiskām attiecībām ar ārvalstu elementu. Tomēr tikai šā likuma pārbaude var nepietikt; kopīgi jāizvērtē tiesas starptautiskā piekritība, ārvalstu nolēmumu atzīšana un izpilde, kā arī līgumi vai otras valsts tiesības. Vai spēkā esošais vērtējums Taivānā bez grozījumiem piemērojams ārvalstīs esošas mantas pārvedumam, atsevišķi jāpārbauda mantas atrašanās vietā.
+Taivānas Likums par ārvalstu elementu civiltiesību piemērošanu (涉外民事法律適用法) ir izejas punkts piemērojamo tiesību noteikšanai civiltiesiskām attiecībām ar ārvalstu elementu. Tomēr tikai šā likuma pārbaude var nepietikt; kopīgi jāizvērtē tiesas starptautiskā piekritība, ārvalstu nolēmumu atzīšana un izpilde, kā arī līgumi vai otras valsts tiesības. Vai Taivānā spēkā esošs vērtējums tiks atzīts ārvalstīs esošas mantas pārvedumam, atsevišķi jāpārbauda vietā, kur manta atrodas.
 
 Testaments, kas sastādīts ārvalstīs, jāizvērtē sastādīšanas formā, materiālajā spēkā, tulkojumā un notariālajā apliecinājumā (認證) un testamenta apstiprināšanas (檢認) vai izpildes gaitā. Ārvalstu apliecībām par laulību un laulības šķiršanu un izcelsmes dokumentiem var būt vajadzīga apostille vai konsulārais apliecinājums un tulkojums. Ja vārda rakstība, pases dati un mājsaimniecības reģistrs savā starpā atšķiras, tās pašas personas identifikācijā var prasīt papildu dokumentus.
 
@@ -122,7 +122,7 @@ Turpmākā kārtība ir pamata ietvars, lai savāktu lietas apstākļus, neizlai
 
 1. Jāpārbauda nāves apliecība un nāves paziņojuma materiāli, dati par ģimenes saikni un Taivānas mājsaimniecības reģistru, ieraksti par laulību, laulības šķiršanu un adopciju un esošie tiesas nolēmumi. Ja dokuments ir ārvalstu, jāpārbauda arī tā apliecinājums, tulkojums un tas, vai vārda rakstība saskan.
 2. Jāizmeklē nekustamie īpašumi, noguldījumi, ieguldījumu aktīvi, uzņēmuma daļas un kustamā manta, kā arī prasījumi, un kopīgi jāsakārto kredīti, galvojumi, nodokļi un līgumiskie parādi. Atsevišķi jāapzīmē vārds un patiesā labuma guvēja statuss, apdrošināšanas saņēmējs, trusts, kopmanta un dzīves laikā veikto pārvedumu materiāli.
-3. Jāpārbauda testamenta oriģināls un sastādīšanas forma, testatora rīcībspēja, liecinieku vai notāra prasības, testamenta izpildītājs un novēlējuma (遺贈) saturs. Kopīgi jāizvērtē, kā spēkā esošs testaments maina sadali, un tvingošo normu ierobežojumi, ieskaitot likumisko rezervēto daļu.
+3. Jāpārbauda testamenta oriģināls un sastādīšanas forma, testatora rīcībspēja, liecinieku vai notāra prasības, testamenta izpildītājs un novēlējuma (遺贈) saturs. Kopīgi jāizvērtē, kā spēkā esošs testaments maina sadali, un imperatīvo normu ierobežojumi, tostarp likumisko rezervēto daļu.
 4. Nošķirti jāaprēķina likumiskā mantojuma daļa un tiesības uz atlikušās mantas starpības sadali. Jānošķir katra režīma aprēķina priekšmets, parādi, izslēgtie posteņi, novērtējuma atskaites diena un apliecinājumi, un viena aprēķina iznākumu otrajā nedrīkst atspoguļot dubulti.
 5. Jāidentificē manta, kas pieskaitīta nepilngadīgajam, un jāpārbauda likumiskā pārstāvība, tēva, mātes vai aizbildņa pārvaldības apjoms, interešu konflikts un tas, vai vajadzīgs īpašais pārstāvis. Iepriekš jānosaka arī veids, kā kontus, grāmatas un rīcības ieņēmumu glabāt nošķirti no pilngadīgā personīgās mantas.
 6. Pēc iestādes jānošķir tiesas gaita par atteikšanos, sarakstu, aizbildnību un īpašo pārstāvi, mantojuma nodokļa deklarācija nodokļu iestādē un mājsaimniecības reģistra un mantas reģistrācijas gaitas. Jāpārbauda piekritība, sākums, iesniedzamie dokumenti, papildināšanas iespēja un tas, vai katrā gaitā ir pagarinājums, un jāsaglabā pieņemšanas apliecinājums un kopijas.

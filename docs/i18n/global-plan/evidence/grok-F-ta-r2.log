@@ -1,0 +1,118 @@
+WO-F-ta r2 — Grok 4.7 fix lane — 2026-09-22
+Locale: Tamil (standard written Tamil; formal நீங்கள்)
+Workspace: /Users/son7/Projects/tseng-law-fix-ta-r2
+No git add/commit/push.
+
+Reviews: docs/i18n/global-plan/reviews/native/rounds/r2/ta-a.md (23 rows), ta-b.md (17 rows).
+Rules applied: RULEBOOK-FIX R2–R17 where an instance remained; ACCEPTED-ROUND skip rules.
+R2–R11 were already in the machine translation (Korea framed as an example, consultation lock negative, Wei Tseng in respectful -ஆர்/அவர், ROC years glossed with 民國). Unflagged prose was not reopened. No Hindi leakage. No test file was changed: nothing pinned the rewritten Tamil strings. llms.txt token kept. consultationNotice and confidentialNotice were not rewritten.
+
+## Rows applied
+
+Part a
+1 P1 009: the three existing blocks now say the right depends on whether the fault is the employer’s or the employee’s, and that the relevant party may withhold or claim statutory severance. Blocks were not merged.
+2 P1 004 link label: names the withholding-rate standard for dividends to a non-resident (各類所得扣繳率標準). URL unchanged. Digit 10 kept outside the Han gloss — see skipped.
+3 P2 llms discoveryNotice.ta: காட்சி → உறுதிசெய்யப்பட்ட தெரிவுநிலை.
+4 P2 001: முதலாளியின் வணிகச் செயல்திறன் (the FAQ already used that term).
+5 P2 001: செயல்திறன் பதிவு for a tender or licence performance record.
+6 P2 001: permitted use of the building, or its management rules.
+7 P2 001: பணி உறவு, and பணியாளரை அமர்த்துவதற்கு முன் (2).
+8 P2 001: அந்த முன் ஆய்வின் முடிவு. ஆலோசனை left for a lawyer’s consultation.
+10 P2 004: சேர்த்துத் தந்த சேவை மற்றும் நிதி நகர்வு.
+11 P2 004: how the internal dealings are shown in the accounts.
+12 P2 guidance disclaimer: parallel -ஆ/-ஆ, with a predicate.
+13 P2 007: மத்தியஸ்தத்தைக் and மத்தியஸ்தத்தில் (FAQ question, body accusative, body locative: 3).
+15 P2 debts incurred, not born: 002 after the latest accounts date; 004 before the application (2).
+16 P2 001: overview of the overall process. ஓட்டம் removed.
+17 P2 004: தாய் நிறுவனம் (母公司) throughout. See systemic counts.
+18 P2 007: வாழ்க்கை இப்போது எங்கு மையமாக உள்ளது.
+19 P2 007: a divorce by judgment takes effect only when the judgment is final.
+20 P2 guidance contact: “தொடர்பு” பக்கம் … எப்படிச் சரிபார்க்கிறோம்.
+22 P2 003 body dates: 29 மே 2026 and 1 ஜூலை 2026. Frontmatter lastmod left ISO.
+23 P2 003 dockets: Shang-Yi-Zi (上易字) 644 and 477, Li-Jian-Zi (壢簡字) 236 (3).
+
+Part a row 9, imprisonment half only: 3 மாதச் சிறை, the fine-conversion line for that same term, and 4 மாதச் சிறை / 6 மாதச் சிறை. The “some judgments / not a typical or guaranteed outcome” softening stays. See reviewer-wrong.
+
+Part b
+1 P1 014: when the amount vests in the worker. The three “சுமத்தும் நிபந்தனைகள்” became உரிமையாகும் நிபந்தனைகள் (4). பணியாளர் மீது சுமத்த முடியாத and பொறுப்புச் சுமை left.
+2 P2 010: when the period begins, continues to run, or is interrupted.
+3 P2 011: முகவர், முதன்மை விநியோகஸ்தர் அல்லது விநியோகஸ்தர். 018 தனி விநியோகஸ்தர் left: the English there is an independent distributor.
+4 P2 011: a small-print disclaimer does not cure the main advertising claim.
+5 P2 014: நியாயமான விகிதாசார உறவு.
+6 P2 015: every type of business, whether it may operate at the address (question and the next sentence), and வணிகப் பொருள் எதுவாயினும் (3).
+7 P2 016: who receives each asset, the final allocation, and disposition of every estate asset (3). சேர்ப்பு–விலக்கு left.
+8 P2 016: பெற்றோர் உறவு ஆவணங்கள்.
+9 P2 016: துணைவர் எஞ்சிய சொத்து வேறுபாட்டுப் பகிர்வு (FAQ, narrative, body, checklist: 4).
+10 P2 017: இயங்குதள இயக்கம். தளவாடச் சேவை (logistics) left.
+11 P2 017: listed securities or over-the-counter securities.
+12 P2 018: a work permit for a second or further foreign national; தொழிலாளர் அமைச்சகம் (勞動部) asks for capital, வருவாய், or a similar threshold.
+14 P2 010: காப்பு வரம்புகளும் விலக்குகளும்.
+16 P2 015: இத்துடன் இந்த வழிகாட்டல் முடிகிறது. The consultation-language sentence that follows was left.
+17 P3 010: கொரிய ஆண் பல்கலைக்கழக மாணவர் in the headlines that translate “Korean male” (10). The opening sentence stays “கொரியப் பல்கலைக்கழக மாணவர்”; the English there does not say male.
+
+Rulebook sweep not in a row: R12, one English gloss removed from the Tamil bio (“மூத்த சட்ட உதவியாளராக (paralegal)” → without the parenthesis). Experience lines were already Tamil. TWD 1.57M in that bio left byte-identical.
+
+## Rows skipped
+
+a9, the “courts generally impose” half — R3 and ACCEPTED-ROUND: a result sentence is not made positive. “சில தீர்ப்புகளில் … வழக்கமான அல்லது உத்தரவாதமான முடிவல்ல” stays. Only சிறை was added so the term is imprisonment.
+a14 — Q16–Q20 not promoted to headings. That would change heading levels. The U+200B lines were not deleted. See systemic counts.
+a21 — Lakh/crore grouping and rewriting “TWD 1.57M”. ACCEPTED-ROUND and R14. Western commas left. Part b already left the large figures out of the table for the same reason.
+a2, the digit — Suggested “பிரிவு 3” drops the 10 the checker counts from Korean 영업세법 제10조. A 3 inside the Han parenthesis is not counted, so the file failed “missing 10”. The statute name was corrected; the digit outside the gloss stays 10. URL unchanged.
+b13 — U+200B not deleted. 003, 005, 006, 008, 009, 013, and 015 match the Korean source, including lines whose only character is U+200B. checkBlocks fails when the counts diverge.
+b15 — 013 and 015 one-clause lines not merged. The Korean source has the same block count. Wording in 015 that was a separate row was rewritten inside the existing block.
+
+## Systemic patterns and instance counts
+
+- விளைவு where the English is business performance or a deliverable: 2 (001 employer’s business performance; 004 service deliverables). Legal-effect விளைவு பெறும் left.
+- A debt “born”: 2 (002, 004). பிறக்கும் உரிமை / கடமை (rights and duties arising) left.
+- 母公司 as பெற்றோர் நிறுவனம்: 25 in 004, now தாய் நிறுவனம். Five of those also needed sandhi (வெளிநாட்டுப் → வெளிநாட்டுத் before தாய்). 001 and 018 already said தாய் நிறுவனம். பெற்றோர் for parents left.
+- காட்சி for guaranteed visibility or an accounting presentation: 2 (llms notice, 004). காட்சி மொழி = display language left.
+- மையம் as a building or as “what matters”: 3 (007 current center of life, 007 judgment takes effect when final, 016 center of life at death).
+- Vesting written as a burden on the worker: 4 in 014. Attribution phrases left.
+- சேர்ப்பு for allocation or disposition: 3 in 016. சேர்ப்பு–விலக்கு left.
+- துறை / வணிகச் சாத்தியம் for “every type of business” and “operate at an address”: 3 in 015. துறை as a government department left.
+- Docket names with no readable form: 3 in 003.
+- கொரிய ஆண் in “Korean male” headlines: 10 in 010.
+- ISO dates in running text: 2 in one 003 sentence, now day–month–year. Checker accepts மே and ஜூலை.
+- U+200B deleted: 0.
+- Paragraphs merged or headings added: 0.
+- Lakh grouping / “TWD 1.57M” reformatted: 0.
+- English “(paralegal)” in the Tamil bio: 1 removed.
+- Hindi leakage, OOO, fullwidth punctuation outside a url: 0 found in columns-ta. The one fullwidth colon is inside the 008 frontmatter url and was left (R16).
+
+## Reviewer got wrong (not applied)
+
+- a9 says “some judgments” and “not a usual result” reverse the English. The English columns still say courts generally impose about three, four, and six months. R3 requires the softened form already in the Tamil (“in some judgments … there is no typical or guaranteed outcome”). That half was not restored. சிறை was added.
+- a14 and b13 are right that U+200B is not Tamil punctuation. The same marks are in the Korean source, and the checker requires an equal count. Promoting Q16–Q20 to ## headings would also change heading levels. Not applied.
+- b15 is right that 013 and 015 read as chopped notes. The Korean source is chopped the same way. Merging blocks fails the checker. Not applied.
+- a21 is right that “1.57M” is an English abbreviation and that Tamil Nadu and Sri Lanka group by lakh. ACCEPTED-ROUND forbids both the reformat of the pinned bio figure and lakh grouping. Not applied.
+- a2 is right that the URL is the withholding-rate standard, not Business Tax Act article 10. The name was corrected. “பிரிவு 3” was not written: it fails numbers against Korean 제10조. The leftover digit 10 is a checker constraint.
+
+## §Verify
+
+cd /Users/son7/Projects/tseng-law-fix-ta-r2 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+node scripts/check-column-translation.mjs --dir src/content/columns-ta --lang ta 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=100
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ta src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      20
+
+The count includes this log, plus pre-existing docs/i18n/global-plan/WO-F-ta.txt (modified) and untracked ta-a.md / ta-b.md. This lane did not edit those three.

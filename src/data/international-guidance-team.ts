@@ -892,7 +892,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     educationLabel: 'শিক্ষা',
     experienceLabel: 'অভিজ্ঞতা',
     photoAltPrefix: 'ছবি',
-    workingLanguagesLabel: 'কর্ম ভাষা',
+    workingLanguagesLabel: 'কাজের ভাষা',
     fullProfileLabel: 'পূর্ণ পরিচিতি (ইংরেজিতে)',
     keyFactsHeading: 'আইনজীবী Wei Tseng — মূল তথ্য',
     qualificationLabel: 'যোগ্যতা ও কার্যালয়',
@@ -3577,15 +3577,15 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'কোরিয়া থেকে আসা মক্কেলদের পরামর্শের সময় ও যোগাযোগ সমন্বয় করেন।',
-        'তথ্যবিজ্ঞানের পড়াশোনার ভিত্তিতে নথি-ব্যবস্থা ও কাজের ধারা দিয়ে বিভাগগুলোর মধ্যে আদান-প্রদানে সহায়তা করেন।',
+        'তথ্যবিজ্ঞানের পড়াশোনার ভিত্তিতে নথি-ব্যবস্থা ও কাজের ধারা দিয়ে বিভাগগুলোর মধ্যে সমন্বয়ে সহায়তা করেন।',
       ],
       education: ['স্নাতক (B.S.) তথ্যবিজ্ঞান, National Cheng Kung University'],
       experience: ['কোরিয়া পরিচালনা, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'National Chengchi University-এ হিসাবে স্নাতক ও স্নাতকোত্তর কর্মসূচি শেষ করেছেন এবং বর্তমানে একটি চার্টার্ড অ্যাকাউন্ট্যান্টের কার্যালয় পরিচালনা করেন।',
-        'উদ্যোক্তা মক্কেলদের আইনি, কর ও আর্থিক ঝুঁকির সমন্বিত বিশ্লেষণে সহায়তা করেন।',
+        'National Chengchi University-তে হিসাবশাস্ত্রে স্নাতক ও স্নাতকোত্তর শেষ করেছেন এবং বর্তমানে একটি চার্টার্ড অ্যাকাউন্ট্যান্টের কার্যালয় পরিচালনা করেন।',
+        'ব্যবসায়ী মক্কেলদের আইনি, কর ও আর্থিক ঝুঁকির সমন্বিত বিশ্লেষণে সহায়তা করেন।',
       ],
       education: [
         'স্নাতকোত্তর (M.A.) হিসাব, National Chengchi University',

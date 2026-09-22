@@ -1,0 +1,104 @@
+WO-F-bn r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-bn-r4
+date: 2026-09-23
+
+## Rows applied
+
+bn-a (21 applied)
+2 P1 003 — complaint period runs from the day the complainant learns the offender’s identity (1).
+3 P1 007 — both constitutional time tests restored in the FAQ answer and the section 4 opening (2).
+4 P2 guidance — prosecuting authority, not “search authority” (1).
+5 P2 team bio — coordination between departments. The Korea–Taiwan “আদান-প্রদান” line was left (it does mean exchange).
+6 P2 llms.txt discoveryNotice — প্রচার → সুপারিশ. Token `llms.txt` kept.
+7 P2 team bio — business clients. “উদ্যোক্তা ও সচ্ছল ব্যক্তিদের” on the accounting office was left.
+8 P2 offices — Pingtung opened to serve clients in the area (1).
+9 P2 services — paying capital in, not holding capital (1).
+10 P2 contact — receipt-number sentence completed (1).
+11 P2 team bio — degree read as accounting, not the postposition “as” (1).
+12 P2 home — companies, not the bare activity “business” (1).
+13 P2 pricing — a figure named in advance (1).
+14 P2 home — comma removed so the verb stays with its object (1).
+15 P2 team chrome — কর্ম ভাষা → কাজের ভাষা (1).
+17 P2 001 — মুখতারনামা → মোক্তারনামা (2: list item and the paragraph under it).
+18 P2 systemic — tax/accounting “treatment” no longer ব্যবহার. See sweep below.
+21 P2 005 — remittance through a relative or an acquaintance, on the investor’s behalf. Korea stays labelled as the example.
+22 P2 007 — “legislative period set by that judgment”, not the court’s own assessment period. Kept “দফা 2” (the checker counts it). Did not add a second 112: the Korean sentence has none, and the judgment is already named two paragraphs above.
+23 P2 007 — official primary sources, checked on 25 জুলাই 2026, not “tier 1” and not “according to” the date. Kept a bare “(1)” because Korean “1차” is still a counted digit (same anchor the Hindi file uses).
+24 P2 008 — he was the highest-selling salesperson, then the top performer, not merely among high performers (2).
+25 P3 privacy — বাহিরের → বাইরের (1).
+
+bn-b (16 applied)
+1 P2 011 — supplemental documents requested, not “correction”, in the FAQ, the repeated section 1 sentence, and the timing sentence (3). Other সংশোধন in this file still means correction and was left.
+2 P2 010 — whether punitive damages are actually awarded, and in what amount (1).
+3 P2 014 — professional or technical skills, and the evidence must connect those facts (1).
+4 P2 014 — whether the work was actually done, and how long the worker had already served (1).
+5 P2 012 — the attempt to pass, not merely that he wanted to (1).
+6 P2 017 — security interests (জামানত অধিকার) in the FAQ and the section 3 repeat (2). The checklist line that already said জামানত অধিকার was left.
+7 P2 017 — Japanese interpunct inside the gloss → 連江、馬祖 (2: FAQ and body).
+8 P2 014 and 018 — non-word অনুমত → অনুমোদিত (2).
+10 P2 016 — the statutory name now has a verb (1). Chinese gloss 未成年子女權利義務之行使或負擔 kept.
+11 P2 017 — “changes depending on whether” connector (1).
+12 P2 018 — the head-office request list now has a finite verb, inside the same paragraph (1).
+13 P2 014 — “not attributable to the worker” uses আরোপ, not চাপানো (5: FAQ question, FAQ answer, section 7 heading, the repeated body, and the list sentence).
+14 P2 014 — hanging “এই মর্ম” removed (1).
+15 P2 014 — exhaustive list, not a closed/bound list (1).
+16 P2 016 — “parental rights and duties”, not “the rights of parental rights” (1).
+17 P2 016 — do not use this guidance to calculate your own deadline (1).
+
+## Rows skipped
+
+bn-a 1 P1 003 — not applied. RULEBOOK R3 already requires “in some judgments about 3 / 4 / 6 months; there is no typical or guaranteed outcome”. The current sentences already say that. The suggested rewrite restores “courts generally impose”, which makes a sentencing range sound like the usual result. ACCEPTED-ROUND: do not make a result sentence positive.
+bn-a 16 P2 — not applied. “TWD 1.57M” is pinned byte-identical (R12). Lakh grouping (15,70,000 and the column amounts) is not parsed (R14 / ACCEPTED-ROUND). Western comma grouping kept.
+bn-a 19 P2 003 — not applied. R3 maps “pursue the maximum compensation” to “pursue the compensation the facts and evidence support”. The current sentence already says that. “যত ক্ষতিপূরণ পাওয়া যায়” puts the maximum claim back.
+bn-a 20 P2 004 — deletion of “(ব্যবসায়িক কর আইনের অনুচ্ছেদ 10 নয়)” was tried and reverted. The link title already names অনুচ্ছেদ 3 of the withholding-rate standards, which is what the reviewer wanted, but the Korean label is 영업세법 제10조 and the checker counts that 10. Dropping the parenthetical failed numbers (missing 10). Parenthetical restored.
+bn-b 9 P2 013/015 — zero-width spaces not removed. checkBlocks requires the ZWSP count to match the Korean source. Removing them fails the checker. Noted, not applied.
+bn-b 18 P2 — lakh grouping not applied (same R14 rule as bn-a 16). Western grouping kept, including TWD 1,579,589 and the other listed amounts.
+
+## Systemic patterns
+
+- Tax/accounting “treatment” written as ব্যবহার: 10 instances → বিবেচনা / বিবেচিত. 001 ×1 (হিসাব ও কর-ব্যবহারকে), 002 ×6 (হিসাব-ব্যবহার ×3, কর-ব্যবহার ×3), 004 ×3 (হিসাব-ব্যবহার, “একই ব্যবহার পায়”, “কর ব্যবহার”). “হিসাব ব্যবহারের মেয়াদ” in 005 is ordinary use of an account and was left. “উদ্যোক্তা ও সচ্ছল” left.
+- Two constitutional time tests collapsed into one phrase: 2 instances in 007.
+- “Among high performers” instead of the top performer: 2 instances in 008.
+- Non-word অনুমত: 2 (014 “সীমাহীনভাবে অনুমত নয়”, 018 “অনুমত সীমার ভিতরে”).
+- “Not attributable” as চাপানো যায় না: 5 in 014. The 011 use “চাপানো সংবিধিবদ্ধ দায়” means a duty imposed and was left.
+- সংশোধন meaning a request for supplemental documents: 3 in 011.
+- Amounts at or above one lakh, and “TWD 1.57M”: 0 changed (checker / pin).
+- “এটি কোনো নিশ্চিত বা সাধারণ ফল নয়” / “কিছু রায়ে”: 0 changed (R3).
+- U+200B in 013 and 015: 0 changed (ZWSP parity).
+- R12–R17 spot check: no Devanagari leakage (the । danda is Bengali punctuation and sits in the Devanagari block). No Hangul outside url. Consultation lock not loosened. Register stays আপনি. “TWD 1.57M” byte-identical.
+
+No test file was edited. Nothing in src/lib/__tests__ or src/data/__tests__ pinned the strings that changed (3202 passed).
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-bn --lang bn 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=99
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-bn src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      20
+```
+
+## Reviewer got wrong (not applied)
+
+- bn-a row 1. The English “generally about 3 / 4 / 6 months” was already softened on purpose by R3. “কিছু রায়ে … কোনো নিশ্চিত বা সাধারণ ফল নয়” is that rule, not a mistranslation of a usual sentence into an uncommon one. Restoring সাধারণত would read as a typical sentence.
+- bn-a row 19. Same advertising rule. “তথ্য ও প্রমাণ যে ক্ষতিপূরণ সমর্থন করে” is the required wording. The suggested “যত ক্ষতিপূরণ পাওয়া যায়” is the maximum-compensation claim R3 removed. It is advice about the work, but it is still a result-degree claim the rule forbids.
+- bn-a row 16 and bn-b row 18 are culturally right about lakh grouping and about “TWD 1.57M” looking like an English abbreviation. They are not applicable here: the checker does not parse lakh/crore grouping, and the bio figure is pinned.
+- bn-b row 9 is a real defect (U+200B, including lines whose only character is that space). It is not a wording mistake the fixer can remove: the block checker demands the same ZWSP count as the Korean source.

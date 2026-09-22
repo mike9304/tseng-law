@@ -19,11 +19,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Ko začenjate gostinsko dejavnost, je prvi problem najti naslov kraja dejavnosti (營業地址).
 
-Poleg tržnih razmer je treba preveriti še, ali je obratovanje na naslovu mogoče.
+Poleg tržnih razmer
 
-Poleg tržnih razmer je treba preveriti, ali naslov leži v coni, kjer sme obratovati restavracija.
+je pomembno preveriti še,
 
-Preveriti je treba, ali ta naslov leži v coni, kjer je obratovanje »restavracije« mogoče.
+ali naslov leži v coni, kjer sme obratovati restavracija.
 
 ​
 

@@ -1231,7 +1231,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     workingLanguagesLabel: 'Delovni jeziki',
     fullProfileLabel: 'Celoten profil (v angleščini)',
     keyFactsHeading: 'Odvetnica Wei Tseng — Osnovni podatki',
-    qualificationLabel: 'Pooblastilo in pisarna',
+    qualificationLabel: 'Kvalifikacija in pisarna',
     qualificationSentence:
       '{name} je pooblaščena za opravljanje odvetništva na Tajvanu in je vodilna odvetnica pri {firm}.',
     practiceLabel: 'Glavna področja',
@@ -4277,12 +4277,12 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Pisarna vodi zadeve podjetij in zasebnih oseb na Tajvanu v angleščini, japonščini, korejščini in kitajščini.',
-        'Zastopala je korejskega študenta v odškodninskem zahtevku zaradi poškodbe v fitnesu in dosegla sodbo prve stopnje v višini TWD 1.57M.',
+        'Zastopala je korejskega študenta v odškodninski zadevi zaradi poškodbe v fitnesu in dosegla sodbo prve stopnje v višini TWD 1.57M.',
       ],
       education: [
-        'Magistrica znanosti (M.S.), Institute of Finance, National Taiwan University',
+        'Magistrica (M.S.), Institute of Finance, National Taiwan University',
         'Univerzitetna diploma (B.A.) dvopredmetnega študija prava in financ, National Chengchi University',
-        'Izmenjava na Kobe University in Waseda University',
+        'Izmenjavna študentka na Kobe University in Waseda University',
       ],
       experience: [
         'Trend Law Office',
@@ -4292,8 +4292,8 @@ export const guidanceTeamBios: Record<
     },
     'chang-rongxuan': {
       intro: [
-        'Prej v oddelku za pravne zadeve Ministrstva za izobraževanje, s poudarkom na upravnih in civilnih zadevah.',
-        'Izkušnje z zadevami univerz, pravicami pedagoškega osebja in upravnimi pritožbami.',
+        'Prej je delal v oddelku za pravne zadeve Ministrstva za izobraževanje, s poudarkom na upravnih in civilnih zadevah.',
+        'Ima izkušnje z zadevami univerz, pravicami pedagoškega osebja in upravnimi pritožbami.',
       ],
       education: [
         'Diplomirani pravnik (LL.B.), National Chung Hsing University',
@@ -4319,7 +4319,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Usklajuje termine posvetov in sporazumevanje za stranke iz Koreje.',
-        'Podpira izmenjavo med ekipami s sistemi za dokumente in potek dela; izhodišče je izobrazba iz informatike.',
+        'Podpira sporazumevanje med ekipami s sistemi za dokumente in potek dela, na podlagi izobrazbe iz informatike.',
       ],
       education: [
         'Univerzitetna diploma (B.S.) iz informatike, National Cheng Kung University',
@@ -4330,7 +4330,7 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'Diplomiral je iz računovodstva in magistriral na National Chengchi University ter zdaj vodi računovodsko pisarno.',
+        'Na National Chengchi University je končal dodiplomski in magistrski študij računovodstva ter zdaj vodi računovodsko pisarno.',
         'Podpira celostno analizo pravnih, davčnih in finančnih tveganj za poslovne stranke.',
       ],
       education: [

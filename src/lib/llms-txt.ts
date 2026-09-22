@@ -870,7 +870,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Ti napotki so napisani v slovenščini, vendar posvet z odvetnico ali odvetnikom poteka samo v angleščini, kitajščini (中文), japonščini in korejščini.',
     discoveryNotice:
-      'Datoteka llms.txt je le zemljevid za iskanje javnih strani; ne obljublja uvrstitve v iskanju, odobritve, priporočila umetne inteligence ali zagotovljene vidnosti.',
+      'Datoteka llms.txt je le zemljevid za iskanje javnih strani; ne obljublja uvrstitve v iskanju, uradnega priporočila, priporočila umetne inteligence ali zagotovljene vidnosti.',
     confidentialNotice:
       'Ker se izvirno besedilo shranjuje, v začetni fazi ne pišite tistega, kar še ni potrebno, na primer številke potnega lista, številke osebnega dokumenta ali podatkov o računu.',
   },

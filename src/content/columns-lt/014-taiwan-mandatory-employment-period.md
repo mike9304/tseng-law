@@ -26,10 +26,10 @@ Taivano darbo sutarties (勞動契約) minimalaus darbo laikotarpio sąlyga (最
 
 Peržiūrint svarbu nemaišyti šių 4 klausimų.
 
-1. Ar pati sąlyga atitinka 15-1 straipsnio įstatymines prielaidas
-2. Ar sutartas laikotarpis ir darbuotojo našta yra protingose ribose
-3. Kam priskiriama darbo sutarties pasibaigimo priežastis
-4. Kaip vertinamas pasitraukimo įspėjimo terminas ir grąžinimo apimtis
+1. Ar pati sąlyga atitinka 15-1 straipsnio įstatymines prielaidas?
+2. Ar sutartas laikotarpis ir darbuotojo našta yra protingose ribose?
+3. Kam priskiriama darbo sutarties pasibaigimo priežastis?
+4. Kaip vertinamas pasitraukimo įspėjimo terminas ir grąžinimo apimtis?
 
 Net jei šie 4 klausimai kartu įrašyti toje pačioje sutartyje, taikytina nuostata ir reikalingas įrodymas skiriasi. Todėl atskirai reikia vertinti, ar sąlyga galioja, kada įsigalioja pasitraukimo valios išreiškimas, ar kyla atsakomybė grąžinti išmoką, mokamą iš anksto (預付性給付), ar mokymo išlaidas, ir ar iš tikrųjų atsirado atskirai reiškiama žala.
 
@@ -51,7 +51,7 @@ Kad sąlyga būtų grindžiama mokymu, darbdavys darbuotojui turi faktiškai tei
 
 Peržiūros objektas yra ne tik tiesiogiai patikrinamos išlaidos, tokios kaip išorės lektorių honorarai, mokymo įstaigos mokestis ir mokesčiai už medžiagas ar įrangą, bet ir darbdavio nurodomų vidaus išlaidų skaičiavimo pagrindas. Jei mokė vidaus personalas, reikia matyti, kieno ir koks laikas buvo skirtas, kuo tai skiriasi nuo įprastos priežiūros ar pareigų perdavimo ir ar yra pagrindas šias išlaidas priskirti tam darbuotojui. Numatyta suma ar vienodai paskirstytos sumos pačios savaime faktinių išlaidų neįrodo.
 
-Programa, mokymo kalendorius, dalyvių sąrašas, vertinimo rezultatas, baigimo pažymėjimas, sąskaitos faktūros ir kvitai yra pagrindiniai dokumentai mokymo faktui ir išlaidoms patvirtinti. Sutartis tarp darbdavio ir mokymo įstaigos, mokėjimo dokumentai ir grąžinimo sąlygos, matomi kartu, leidžia tiksliau nustatyti faktinę naštą. Jei darbuotojas dalį išlaidų sumokėjo tiesiogiai arba jas padengė trečioji šalis, taip pat reikia atskirti, kas padengė galutines išlaidas.
+Programa, mokymo grafikas, dalyvių sąrašas, vertinimo rezultatas, baigimo pažymėjimas, sąskaitos faktūros ir kvitai yra pagrindiniai dokumentai mokymo faktui ir išlaidoms patvirtinti. Sutartis tarp darbdavio ir mokymo įstaigos, mokėjimo dokumentai ir grąžinimo sąlygos, matomi kartu, leidžia tiksliau nustatyti faktinę naštą. Jei darbuotojas dalį išlaidų sumokėjo tiesiogiai arba jas padengė trečioji šalis, taip pat reikia atskirti, kas padengė galutines išlaidas.
 
 Ribą tarp įprasto prisitaikymo prie darbo ir profesinių įgūdžių mokymo nustato ne vien mokymo vieta ar tai, kas jį rengia. Vidaus kursas gali įrodyti konkretų profesinį ir techninį turinį ir nemažą investiciją, o ilgas išorės įstaigos kursas iš tikrųjų gali būti bendras įvadinis mokymas. Todėl negalima vienodai atmesti viso vidaus mokymo ir negalima pripažinti įstatyminės prielaidos vien todėl, kad kursas brangus ar ilgas.
 
@@ -92,7 +92,7 @@ Galiausiai tarp sutarto laikotarpio, darbdavio faktinės investicijos, pakeičia
 
 Pagal Taivano Darbo ministerijos 2026 m. birželio 5 d. išaiškinimą reguliaraus mokymo, įprasto pareigų mokymo, naujų darbuotojų prisitaikymo prie darbo mokymo ir mokymo, kurį įstatymas įpareigoja vykdyti, išlaidos negali būti minimalaus darbo laikotarpio sąlygos ar sutartinės baudos ar išlaidų grąžinimo reikalavimo pagrindas. Reikia žiūrėti ne tik į mokymo pavadinimą, bet į konkretų programą, profesinį ir techninį turinį, trukmę, darbdavio faktiškai padengtas išlaidas ir įrodymus.
 
-Darbo ministerijos raštas Nr. 勞動關2字第1150141814號 atskirai aptaria reguliariai vykdomą mokymą, įprastą pareigų mokymą, supažindinimą su darbo aplinka ir procedūromis ir įstatymu privalomą mokymą. Kadangi šis mokymas lydi veiklos vykdymą ar įstatyminės pareigos vykdymą, prasmė ta, kad jo išlaidų negalima paversti darbo laikotarpio pareigos ar sankcijos už ankstyvą pasibaigimą pagrindu.
+Darbo ministerijos raštas Nr. 勞動關2字第1150141814號 atskirai aptaria reguliariai vykdomą mokymą, įprastą pareigų mokymą, supažindinimą su darbo aplinka ir procedūromis ir įstatymu privalomą mokymą. Kadangi toks mokymas lydi įmonės veiklą arba įstatyminės pareigos vykdymą, jo išlaidų negalima daryti darbo laikotarpio pareigos ar sankcijos už ankstyvą pasibaigimą pagrindu.
 
 Kursus, kuriuos naujas darbuotojas paprastai gauna, tokius kaip vidaus darbo taisyklių (工作規則) išaiškinimas, organizacijos ir sistemų pristatymas, įprastas pareigų perdavimas ir pagrindinių saugos procedūrų nurodymai, reikia patvirtinti pagal jų esmę. Įprastų įdarbinimo ir valdymo išlaidų ar pareigų perdavimo išlaidų, kurias darbdavys iš pradžių turėjo padengti, negalima vien pavadinus atskira investicija paversti grąžinimo objektu.
 
@@ -152,7 +152,7 @@ Siekiant užkirsti kelią ginčui arba vertinti jau pareikštą reikalavimą, ne
 
 1. Pirmiausia nustatoma įstatyminė prielaida: ar buvo teiktas profesinių įgūdžių mokymas ir padengtos išlaidos, ar teikta protinga kompensacija už darbo laikotarpio pažadą.
 2. Bendras, reguliarus ir įstatymu privalomas mokymas atskiriamas nuo profesinių įgūdžių mokymo pagal faktinį kurso turinį, trukmę ir tikslą.
-3. Saugoma kurso programa, kalendorius, baigimo įrašas, sąskaitos faktūros, kvitai ir dokumentai apie tai, kas padengė išlaidas, ir atskirai fiksuojamas išorės ir vidaus išlaidų pagrindas.
+3. Saugoma kurso programa, grafikas, baigimo įrašas, sąskaitos faktūros, kvitai ir dokumentai apie tai, kas padengė išlaidas, ir atskirai fiksuojamas išorės ir vidaus išlaidų pagrindas.
 4. Raštu aiškiai susiejamas kompensacijos tikslas, išmokos diena, suma, teisių įgijimo sąlygos, darbuotojui duotas pranešimas ir neįvykdyto laikotarpio grąžinimo formulė.
 5. Dokumentuojamas sutarto laikotarpio skaičiavimo pagrindas, to paties ar panašaus darbo personalo pakeitimo galimybė ir ryšys tarp darbdavio veiklos būtinybės ir faktinės investicijos.
 6. Vertinama, ar sutartas laikotarpis ir grąžinimo suma proporcingi mokymo išlaidų ar kompensacijos apimčiai, o į atsiskaitymą įtraukiamas jau išdirbtas laikotarpis.
@@ -163,7 +163,7 @@ Net naudojant pavyzdinę sutartį negalima mechaniškai taikyti to paties laikot
 
 ### Darbuotojo tikrintini dalykai
 
-1. Surenkamas pasirašytos darbo sutarties ir pakeitimo susitarimų originalas, įdarbinimo aiškinamoji medžiaga, mokymo medžiaga, programa, kalendorius ir baigimo įrašas.
+1. Surenkamas pasirašytos darbo sutarties ir pakeitimo susitarimų originalas, įdarbinimo aiškinamoji medžiaga, mokymo medžiaga, programa, grafikas ir baigimo įrašas.
 2. Tikrinamas mokymo profesinis ir techninis turinys, ar tai bendras prisitaikymo mokymas ar įstatymu privalomas mokymas, sąskaitų faktūrų ir kvitų sumos ir kas faktiškai padengė išlaidas.
 3. Užtikrinami pasirašymo premijos, premijos už pasilikimą darbe ir kitų išmokų, mokamų iš anksto, išmokų dokumentai, pranešimas apie kompensacijos tikslą, išmokos diena, teisių įgijimo sąlygos ir grąžinimo formulė.
 4. Atskirai fiksuojamas sutarto laikotarpio skaičiavimo pagrindas, jau išdirbtas laikotarpis, likęs laikotarpis ir personalo pakeitimo galimybė, kurią teigia darbdavys.

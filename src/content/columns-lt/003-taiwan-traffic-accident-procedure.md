@@ -99,7 +99,7 @@ Reikalavimas pagal Civilinio kodekso 184 straipsnį numato neteisėtą teisės p
 
 ## Q8. Jei gydymas tęsiasi, kaip teikti gydymo išlaidų dokumentus?
 
-Saugokite kvitus (收據), medicinines pažymas ir medicinos dokumentaciją ir kartu su jais sutvarkykite kiekvieno gydymo medicininį būtinumą ir jo priežastinį ryšį su įvykiu. Tęsiamo gydymo dokumentai gali papildyti įrodymą pagal teismo proceso kalendorių ir jau pareikšto reikalavimo turinį, tačiau tai neužtikrina, kad visi vėliau pateikti dokumentai ar kiekvienas reikalavimo išplėtimas bus priimti arba leisti.
+Saugokite kvitus (收據), medicinines pažymas ir medicinos dokumentaciją ir kartu su jais sutvarkykite kiekvieno gydymo medicininį būtinumą ir jo priežastinį ryšį su įvykiu. Tęsiamo gydymo dokumentai gali papildyti įrodymą pagal teismo proceso grafiką ir jau pareikšto reikalavimo turinį, tačiau tai neužtikrina, kad visi vėliau pateikti dokumentai ar kiekvienas reikalavimo išplėtimas bus priimti arba leisti.
 
 Reikia skirti medicininių dokumentų pridėjimą nuo reikalaujamos sumos keitimo ar padidinimo. Pareiškus civilinį ieškinį, prijungtą prie baudžiamosios bylos, vien tai, kad pateikiama daugiau gydymo kvitų, automatiškai nesukuria teismo rinkliavos.
 
@@ -175,7 +175,7 @@ Privalomojo transporto priemonių civilinės atsakomybės draudimo įstatymo (�
 
 Vienos transporto priemonės įvykyje tos priemonės vairuotojas iš esmės nėra tos priemonės privalomojo draudimo išmokos adresatas. Tačiau įvykyje, kuriame dalyvauja kelios transporto priemonės, yra atvejų, kai vairuotojas gali reikalauti išmokos iš kitos dalyvaujančios priemonės privalomojo draudiko.
 
-Išmokų standartas (強制汽車責任保險給付標準), pakeistas 2026 m. gegužės 29 d., taikomas įvykiams, įvykusiems nuo 2026 m. liepos 1 d. Protingų ir būtinų gydymo išlaidų už sužeidimą lubos yra 200.000 naujųjų Taivano dolerių (TWD); išmoka už negalią (失能) yra nuo 80.000 TWD iki 3.000.000 TWD pagal 15 įstatyminių laipsnių; išmoka už mirtį yra 3.000.000 TWD, o bendras mirties, negalios ir gydymo išlaidų maksimumas 1 nukentėjusiajam ir 1 įvykiui yra 3.200.000 TWD. Ankstesniems įvykiams gali būti taikomas ankstesnis standartas.
+Išmokų standartas (強制汽車責任保險給付標準), pakeistas 2026 m. gegužės 29 d., taikomas įvykiams, įvykusiems nuo 2026 m. liepos 1 d. Protingų ir būtinų gydymo išlaidų už sužeidimą lubos yra 200.000 naujųjų Taivano dolerių (TWD); išmoka už negalią (失能) yra nuo 80.000 TWD iki 3.000.000 TWD pagal 15 įstatyminių laipsnių; išmoka už mirtį yra 3.000.000 TWD, o bendras mirties, negalios ir gydymo išlaidų maksimumas vienam nukentėjusiajam ir vienam įvykiui yra 3.200.000 TWD. Ankstesniems įvykiams gali būti taikomas ankstesnis standartas.
 
 Trečiųjų šalių civilinės atsakomybės draudimas (第三人責任險), vairuotojo nelaimingų atsitikimų draudimas (駕駛人傷害險) ir savo transporto priemonės žalos draudimas (車體損失險) yra fakultatyvūs sutartiniai produktai. Tikroji apsauga skiriasi pagal apdraustąjį, lubas, išskaitą (自負額), išimtis, kaltę ir kitas poliso sąlygas, todėl polisą ir sąlygas reikia tikrinti byloje po bylos.
 

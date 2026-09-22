@@ -22,7 +22,7 @@ faq:
 
 Užsienio kosmetikos prekių ženklas, ketinantis Taivane platinti gaminius, turi nustatyti, kam paveda importą, kada baigs produkto registraciją (產品登錄), kas ir kur tvarko produkto informacijos bylą (產品資訊檔案, Product Information File, PIF), ir pagal kokį standartą vertinamas ženklinimas (標示) ir reklama (廣告). Užsienio prekių ženklai gali pasinaudoti vietos importuotoju ir gali veiklą Taivane vykdyti patys, todėl pasirengimas pardavimui nesibaigia vien tuo, kad buvo įsteigta bendrovė.
 
-Taikytinos pareigos gali skirtis pagal gaminio rūšį ir gamybos vietą (製造場所), faktinę importo formą, platinimo būdą ir reklamos turinį. Toliau atskirai paaiškinama įėjimo forma ir įstatyminis atsakomybės subjektas, produkto registracija TFDA, PIF rengimas, atnaujinimas ir saugojimas, ženklinimas ir reklama bei patikra ir ištaisymo priemonės. Prieš nustatant faktinį tiekimo kalendorių kiekvieną gaminį reikia iš naujo patikrinti naujausius teisės aktus ir kompetentingos institucijos (主管機關) gaires.
+Taikytinos pareigos gali skirtis pagal gaminio rūšį ir gamybos vietą (製造場所), faktinę importo formą, platinimo būdą ir reklamos turinį. Toliau atskirai paaiškinama įėjimo forma ir įstatyminis atsakomybės subjektas, produkto registracija TFDA, PIF rengimas, atnaujinimas ir saugojimas, ženklinimas ir reklama bei patikra ir ištaisymo priemonės. Prieš nustatant faktinį tiekimo grafiką kiekvieną gaminį reikia iš naujo patikrinti naujausius teisės aktus ir kompetentingos institucijos (主管機關) gaires.
 
 ![](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/img-01.jpg)
 
@@ -32,7 +32,7 @@ Dukterinę bendrovę ar filialą steigti ne visada būtina. Importą ir pardavim
 
 ### Kai pavedama vietos importuotojui
 
-Jei Taivano importuotojas arba pardavimo atstovas (銷售代理商) vykdo importą ir pardavimą, užsienio prekių ženklas gali pasirinkti ir struktūrą be savos dukterinės bendrovės ar filialo Taivane. Pardavimo atstovas gali kartu veikti kaip importuotojas, arba gali dalyvauti atskiras importuotojas. Teisinės atsakomybės priskyrimas vis dėlto nenustatomas vien sutartiniu pavadinimu, pavyzdžiui, atstovas, išimtinis platintojas ar prekybininkas.
+Jei Taivano importuotojas arba pardavimo atstovas (銷售代理商) vykdo importą ir pardavimą, užsienio prekių ženklas gali pasirinkti ir struktūrą be savos dukterinės bendrovės ar filialo Taivane. Pardavimo atstovas gali kartu veikti kaip importuotojas, arba gali dalyvauti atskiras importuotojas. Teisinės atsakomybės priskyrimas vis dėlto nenustatomas vien sutartiniu pavadinimu, pavyzdžiui, atstovas, pagrindinis platintojas ar platintojas.
 
 Projektuojant faktinį darbų pasidalijimą pirmiausia reikia patikrinti, kas importuoja gaminį ir atlieka produkto registraciją ir kas rengia, atnaujina ir saugo PIF. Taip pat reikia paskirti atsakingąjį už ženklinimo peržiūrą, apyvartos įrašų tvarkymą, vartotojų skundų ir saugos informacijos priėmimą bei reagavimą į kompetentingos institucijos patikras ir dokumentų reikalavimus. Kartu reikia įvertinti, ar sutampa kosmetikos gamintojui arba importuotojui uždėtos įstatyminės pareigos ir sutartinis darbas tarp prekių ženklo ir pardavimo partnerio.
 
@@ -52,19 +52,19 @@ Produkto registracija ir PIF nėra ta pati procedūra. Produkto registracija yra
 
 ### Produkto registracijos momentas ir galiojimo trukmė
 
-Kosmetikos produkto registracija atliekama TFDA kosmetikos produktų registracijos platformoje. Kosmetikos gamintojas arba importuotojas privalo baigti produkto registraciją prieš tiekdamas, parduodamas, dovanodamas, viešai eksponuodamas (公開陳列) gaminį arba pateikdamas jį vartotojui išbandyti. Rengtis negalima vien mokamam pardavimui; registracijos terminą reikia derinti ir su reklaminių dovanų bei gaminio pateikimo vartotojui išbandyti kalendoriumi.
+Kosmetikos produkto registracija atliekama TFDA kosmetikos produktų registracijos platformoje. Kosmetikos gamintojas arba importuotojas privalo baigti produkto registraciją prieš tiekdamas, parduodamas, dovanodamas, viešai eksponuodamas (公開陳列) gaminį arba pateikdamas jį vartotojui išbandyti. Pasirengimas neturi apsiriboti vien mokamu pardavimu; registracijos terminą reikia derinti ir su reklaminėmis dovanomis bei gaminio pateikimu vartotojui išbandyti.
 
 Produkto registracijos galiojimo trukmė yra 3 metai. Jei tiekimą ketinama tęsti, pratęsimo (展延) prašymą reikia pateikti per 3 mėnesius iki galiojimo pabaigos. Jei keičiasi registruoti duomenys, pavyzdžiui, gaminio pavadinimas, paskirtis, preparato forma (劑型), sudedamosios dalys ir gamybos vieta, taip pat reikia patikrinti, ar reikalinga pakeitimo turinį atitinkanti eiga.
 
-Produkto registracija yra nustatytų duomenų pranešimas platformoje. Tai, kad registracija baigta, nereiškia, jog jau yra visi PIF reikalingi dokumentai, ir nėra vertinimo, kad gaminio ženklinimas ar reklama atitinka teisę. Produkto registracijos kalendorių, PIF tvarkymą ir ženklinimo bei reklamos peržiūrą reikia vykdyti kaip atskirus atitikties darbus.
+Produkto registracija yra nustatytų duomenų pranešimas platformoje. Tai, kad registracija baigta, nereiškia, jog jau yra visi PIF reikalingi dokumentai, ir nėra vertinimo, kad gaminio ženklinimas ar reklama atitinka teisę. Produkto registraciją, PIF tvarkymą ir ženklinimo bei reklamos peržiūrą reikia vykdyti kaip atskirus atitikties darbus.
 
 ### PIF dokumentai ir laipsniškas taikymas
 
 PIF yra dokumentų rinkinys, sudarytas taip, kad būtų galima ir toliau paaiškinti gaminio kokybę ir saugą. Be kokybės, saugos, sudėties, deklaruojamos funkcijos (宣稱功能), gamybos būdo, tyrimų rezultatų ir saugos vertinimo, pagal gaminį reikia sutvarkyti pagrindinę informaciją apie gaminį ir gamintoją bei pagrindžiamuosius dokumentus, pavyzdžiui, etiketę. Kosmetikos produktų informacijos bylos tvarkymo taisyklės (化粧品產品資訊檔案管理辦法) reikalingus dokumentus suskirsto į 16 kategorijų, todėl pagal gaminio rūšį reikia patikrinti kiekvienos kategorijos dokumentus ir parašo bei kvalifikacijos reikalavimus.
 
-PIF režimas buvo taikomas laipsniškai pagal gaminių grupes. Nuo 2026 m. liepos 1 d. į taikymo objektą įtraukiama ir likusi kosmetika, todėl iš esmės taikoma visai kosmetikai. Išimtis apsiriboja kietuoju rankų darbo muilu, pagamintu gamybos vietoje, atleistoje nuo gamyklos registracijos. Gaminys nėra išskiriamas vien todėl, kad yra rankų darbo ar kad vartoja muilo pavadinimą; reikia patikrinti ir kietąją formą, ir gamybos vietos atleidimo nuo gamyklos registracijos sąlygą.
+PIF režimas buvo taikomas laipsniškai pagal gaminių grupes. Nuo 2026 m. liepos 1 d. į taikymo objektą įtraukiama ir likusi kosmetika, todėl iš esmės taikoma visai kosmetikai. Išimtis apsiriboja kietuoju rankų darbo muilu, pagamintu gamybos vietoje, atleistoje nuo gamyklos registracijos. Gaminys neatleidžiamas vien todėl, kad yra rankų darbo arba vadinamas muilu; reikia patikrinti ir kietąją formą, ir gamybos vietos atleidimo nuo gamyklos registracijos sąlygą.
 
-PIF darbą, įskaitant saugos vertinimą, gali padėti atlikti trečioji šalis, turinti reikiamą kvalifikaciją ir gebėjimus. Tačiau net jei naudojamasi trečiosios šalies rengimo parama ar dokumentų saugojimo paslauga, kosmetikos gamintojo arba importuotojo teisinė atsakomybė išlieka. Reikia sukurti sistemą, kuria pirminis gamintojas, tyrimų laboratorija, saugos vertintojas ir Taivano pusės įmonė galėtų vienas kitam perduoti pakeitimų informaciją ir naujausius pasirašytus dokumentus.
+PIF darbą, įskaitant saugos vertinimą, gali padėti atlikti trečioji šalis, turinti reikiamą kvalifikaciją ir gebėjimus. Tačiau net jei naudojamasi trečiosios šalies rengimo parama ar dokumentų saugojimo paslauga, kosmetikos gamintojo arba importuotojo teisinė atsakomybė išlieka. Reikia sukurti sistemą, kuria pirminis gamintojas, tyrimų laboratorija, saugos vertintojas ir Taivano įmonė galėtų vienas kitam perduoti pakeitimų informaciją ir naujausius pasirašytus dokumentus.
 
 ### Atnaujinimas ir saugojimas
 
@@ -78,7 +78,7 @@ Net jei pirminis gamintojas saugo originalą arba naudojama saugi elektroninė a
 
 Kai kompetentinga institucija tikrina PIF, ji iš esmės praneša kosmetikos gamintojui arba importuotojui ne vėliau kaip prieš 7 dienas iki patikros dienos. Tačiau jei atvejis patenka į susijusiuose teisės aktuose nustatytą įstatyminę išimtį, patikrą galima atlikti be išankstinio pranešimo. Nepriklausomai nuo to, ar pranešimas buvo, nuolat reikia palaikyti būklę, leidžiančią surasti ir pateikti visus naujausius dokumentus.
 
-Už tikrovės neatitinkančios informacijos pranešimą produkto registracijoje arba tokios informacijos įrašymą į PIF gali būti skiriama administracinė bauda (罰鍰) nuo 10.000 TWD iki 1.000.000 TWD (新臺幣). Jei PIF dokumentai priešingai yra neišsamūs, kompetentinga institucija paprastai nurodo ištaisyti per nustatytą terminą (限期改正), o administracinė bauda gali būti skiriama tik tada, kai per tą terminą neištaisoma. Tikrovės neatitinkančios informacijos ir ištaisomo dokumentų trūkumo negalima laikyti ta pačia pažeidimo pasekme.
+Už tikrovės neatitinkančios informacijos pranešimą produkto registracijoje arba tokios informacijos įrašymą į PIF gali būti skiriama administracinė bauda (罰鍰) nuo 10.000 TWD iki 1.000.000 TWD (新臺幣). Priešingai, jei PIF dokumentai yra neišsamūs, kompetentinga institucija paprastai nurodo ištaisyti per nustatytą terminą (限期改正), o administracinė bauda gali būti skiriama tik tada, kai per tą terminą neištaisoma. Tikrovės neatitinkančios informacijos ir ištaisomo dokumentų trūkumo negalima laikyti ta pačia pažeidimo pasekme.
 
 Išėmimas iš rinkos ar sunaikinimas (銷毀) nėra priemonė, kuri automatiškai sektų kiekvieną PIF dokumentų neišsamumą. Gaminio saugą, pažeidimo turinį, ištaisymo būklę ir kiekvienai priemonei taikytinas įstatymines sąlygas reikia vertinti atskirai. Priemones, kai saugos problema patvirtinta, ir dokumentų papildymo reikalavimą reikia nagrinėti skyrium, o reagavimą tvarkyti pagal kompetentingos institucijos pranešimą ir taikytą nuostatą.
 
@@ -88,7 +88,7 @@ Reklama vertinama ne tik pagal sakinį, bet pagal visą raišką, įskaitant gam
 
 ### Vertinama pagal visą raišką, o ne pagal kiekvieną žodį
 
-Ar ženklinimas, populiarinimas (宣傳) ar reklama yra tikrovės neatitinkantys ar perdėti, arba ar teigiamas gydomasis poveikis (醫療效能), nesprendžiama vien pagal vieną tam tikrą žodį. Kartu vertinamas prekės pavadinimas, sakinys, vaizdas, simbolis, garsas, prieš tai ir po to einantis kontekstas ir bendras įspūdis, kurį gauna vartotojas. Vyraujančios reklaminės žinutės įspūdžio vien mažu šriftu įrašyta išlyga savaime nepanaikina, todėl reikia peržiūrėti ir atskiras formuluotes, ir galutinę reklamą, kokia ji parengta.
+Ar ženklinimas, populiarinimas (宣傳) ar reklama yra tikrovės neatitinkantys ar perdėti, arba ar teigiamas gydomasis poveikis (醫療效能), nesprendžiama vien pagal vieną tam tikrą žodį. Kartu vertinamas prekės pavadinimas, sakinys, vaizdas, simbolis, garsas, prieš tai ir po to einantis kontekstas ir bendras įspūdis, kurį gauna vartotojas. Vien mažu šriftu įrašyta išlyga savaime nepanaikina vyraujančios reklaminės žinutės įspūdžio, todėl reikia peržiūrėti ir atskiras formuluotes, ir galutinę reklamą, kokia ji parengta.
 
 Pavyzdžiui, teiginys, kad kosmetika gydo spuogus, turi priešuždegiminį poveikį arba baktericidinį veikimą, gali būti gydomojo poveikio teiginys. Kartu reikia patikrinti ir ligos pavadinimo sujungimą su gaminiu, vaizdus prieš naudojimą ir po jo, medicinos darbuotoją primenantį pateikimą ir kontekstą, kuris sudedamosios dalies aiškinimą sieja su gaminio gydomuoju poveikiu.
 
@@ -105,7 +105,7 @@ Bendradarbiavimo sutartyje ir veiklos gairėse galima nustatyti leistinų posaki
 Jei Taivano pardavimo pasirengimas tikrinamas šia tvarka, sumažėja rizika supainioti vieną režimą su kitu.
 
 1. Nustatyti, ar patys įsteigsite dukterinę bendrovę ar filialą Taivane, ar importą ir pardavimą pavedate vietos importuotojui.
-2. Patikrinti subjektą, kuris prisiima teisinę atsakomybę kaip kosmetikos gamintojas arba importuotojas, ir sutartinį darbo vykdytoją.
+2. Patikrinti subjektą, kuris prisiima teisinę atsakomybę kaip kosmetikos gamintojas arba importuotojas, ir asmenis, kurie pagal sutartį atsako už jiems paskirtas užduotis.
 3. Baigti produkto registraciją prieš tiekimą, pardavimą, dovanojimą, viešą eksponavimą arba gaminio pateikimą vartotojui išbandyti.
 4. Parengti PIF pagal gaminį, atnaujinti pakeitimus ir saugoti jį pagal įstatyminį laikotarpį ir vietą.
 5. Peržiūrėti etiketę, pardavimo puslapį, reklamą ir bendradarbiavimo įrašus pagal visos raiškos standartą.

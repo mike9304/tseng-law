@@ -23,7 +23,7 @@ Be rinkos sąlygų reikia atsižvelgti ir į kitą dalyką.
 
 Kitas svarbus dalykas yra šis.
 
-Ar šis adresas yra zonoje, kurioje galima vykdyti „restorano“ veiklą.
+Ar šis adresas yra zonoje, kurioje galima vykdyti „restorano“ veiklą?
 
 ​
 

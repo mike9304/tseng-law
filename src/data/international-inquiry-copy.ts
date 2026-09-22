@@ -2316,7 +2316,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Santrauką galite parašyti savo kalba. Originalus tekstas išsaugomas toks, kokį parašėte, ir automatiškai neverčiamas.',
     heading: 'Pateikti prašymą įvertinti',
     intro:
-      'Trumpai aprašykite savo bylą. Advokatė arba advokatas įvertins turinį, prieš pereinant prie kito žingsnio.',
+      'Trumpai aprašykite savo bylą. Advokatė arba advokatas įvertins turinį, prieš pereinant prie kitos procedūros.',
     submitLabel: 'Siųsti užklausą',
     submittingLabel: 'Siunčiama…',
     successMessage:

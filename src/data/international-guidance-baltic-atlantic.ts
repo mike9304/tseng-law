@@ -13,7 +13,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
     contact: 'Kontaktai',
     faq: 'Klausimai',
     privacy: 'Privatumas',
-    disclaimer: 'Apribojimas',
+    disclaimer: 'Atsakomybė',
     columns: 'Straipsniai',
   },
   contactCta: 'Pateikti prašymą įvertinti',
@@ -79,7 +79,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kuo užsiimame',
           paragraphs: [
-            'Hovering International Law Firm yra advokatų kontora, įsteigta Taivane. Ji dirba pagal Taivano teisę ir turi biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Konsultuojame įmones, vedame teismo procesus ir lydime užsienio klientus per žingsnius, kuriuos Taivane reikia atlikti.',
+            'Hovering International Law Firm yra advokatų kontora, įsteigta Taivane. Ji dirba pagal Taivano teisę ir turi biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Konsultuojame įmones, vedame teismo procesus ir lydime užsienio klientus per procedūras, kurias Taivane reikia atlikti.',
             'Visas čia pateiktas turinys yra bendras. Bylos rezultatas priklauso nuo faktinių aplinkybių, taikomų teisės aktų ir to, kada byla vertinama. Ši informacija nepakeičia konsultacijos su advokate arba advokatu dėl Jūsų dokumentų.',
           ],
         },
@@ -131,7 +131,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Civiliniai ginčai ir žalos atlyginimas',
           paragraphs: [
-            'Ši sritis apima ginčus iš sutarčių, žalos atlyginimą dėl neteisėtų veiksmų ir vartotojų ginčus. Darbas paprastai prasideda chronologija, turimų dokumentų ir įrodymų vertinimu, ir tik tada seka tolesni žingsniai.',
+            'Ši sritis apima ginčus iš sutarčių, žalos atlyginimą dėl neteisėtų veiksmų ir vartotojų ginčus. Darbas paprastai pradedamas nuo įvykių eigos ir nuo turimų dokumentų bei įrodymų vertinimo, ir tik tada seka tolesni veiksmai.',
             'Eigą lemia terminai, įskaitant senaties terminus, ir įrodymų visuma. Todėl žinomas datas nurodykite kuo anksčiau. Išsaugokite sutartis, pranešimus, mokėjimo dokumentus arba nuotraukas iš įvykio vietos ir paminėkite juos pirmajame pranešime.',
           ],
         },
@@ -160,7 +160,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Intelektinė nuosavybė',
           paragraphs: [
             'Padedame registruoti prekių ženklus (商標) ir patentus (專利) bei spręsti autorių teisių ir ginčų dėl šių teisių Taivane klausimus.',
-            'Šioje srityje lemia žingsnių eilė: apsaugos apimtis, paraiškos pateikimo momentas ir faktinis naudojimas daro įtaką pasirinkimui. Paraiškos pateikimas savaime nereiškia, kad jai bus pritarta.',
+            'Šioje srityje lemia veiksmų seka: apsaugos apimtis, paraiškos pateikimo momentas ir faktinis naudojimas daro įtaką pasirinkimui. Paraiškos pateikimas savaime nereiškia, kad jai bus pritarta.',
           ],
         },
         {
@@ -185,7 +185,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) 2016 m. įsteigė advokatės ir advokatai, studijavę National Taiwan University (國立臺灣大學). Kinų pavadinimas 昊鼎 jungia ženklą 昊 („platus dangus“) su ženklu 鼎 („tvirtas pagrindas“) ir nusako kontoros kryptį nuo įsteigimo.',
             'Turime biurus šiuose miestuose: Taipėjus (臺北), Gaosiongas (高雄), Taidžongas (臺中) ir Pingdongas (屏東). Gaosiongo biuras telkiasi į įmonių valdymą ir veda civilinius, baudžiamuosius ir administracinius ginčus. Taidžongo biuras veda statybos bylas, intelektinę nuosavybę ir bylas, susijusias su Korėja ir Japonija. Pingdongo biuras atidarytas 2017 m. vietos poreikiui tenkinti.',
-            'Nuo 2020 m. šalia advokatų darbo veikia ir „Hovering Accounting Office“, teikiantis apskaitą ir mokesčių planavimą verslininkams ir privatiems asmenims, turintiems turto.',
+            'Nuo 2020 m. šalia advokatų darbo veikia ir „Hovering Accounting Office“, teikiantis apskaitą ir mokesčių planavimą verslininkams ir pasiturintiems privatiems asmenims.',
           ],
         },
         {
@@ -198,7 +198,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kai į mus kreipiatės',
           paragraphs: [
-            'Gavus Jūsų santrauką, advokatė arba advokatas įvertina turinį ir tada kalba apie galimą darbo apimtį, dar reikalingus dokumentus ir tolesnius žingsnius. Mokesčių ar apskaitos klausimais kontora gali tą pačią bylą tvarkyti kartu su apskaitos padaliniu.',
+            'Gavus Jūsų santrauką, advokatė arba advokatas įvertina turinį ir tada kalba apie galimą darbo apimtį, dar reikalingus dokumentus ir tolesnius veiksmus. Mokesčių ar apskaitos klausimais kontora gali tą pačią bylą tvarkyti kartu su apskaitos padaliniu.',
             'Kiekvienos bylos rezultatas priklauso nuo faktinių aplinkybių ir turimų dokumentų; rezultato nežadame. Jei Jums reikia saistančio atsakymo dėl savo padėties, dokumentus reikia aptarti su advokate arba advokatu viena iš keturių konsultacijos kalbų.',
           ],
         },
@@ -285,7 +285,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Ko šis puslapis nežada',
           paragraphs: [
-            'Nežadame atsakymo termino, nepatvirtiname susitikimo per šį puslapį, nežadame konkrečios advokatės ar konkretaus advokato ir neteikiame vertėjo žodžiu. Rašytinis vertimas yra kas kita: Jūsų pranešimas automatiškai neverčiamas.',
+            'Nežadame atsakymo termino, nepatvirtiname susitikimo per šį puslapį, nežadame konkrečios advokatės ar konkretaus advokato ir vertimo žodžiu neteikiame. Rašytinis vertimas yra kas kita: Jūsų pranešimas automatiškai neverčiamas.',
             'Jei išsiųsite užklausą, turinys išsaugomas ir laukia įvertinimo. Jei po kurio laiko atsakymo negausite, galite vėl parašyti el. pašto adresu, nurodytu kontaktų puslapyje.',
           ],
         },
@@ -345,7 +345,7 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Ką daryti, jei mano byla labai skubi?',
           answer:
-            'Nurodykite terminą arba datą iš institucijos rašto pačioje santraukos pradžioje, kad šios datos būtų matomos vertinant. Šis puslapis nėra skubios pagalbos kontaktas ir neužtikrina atsakymo termino; jei Jūsų byla negali laukti, lygiagrečiai turėtumėte ieškoti kitų kelių ten, kur esate.',
+            'Nurodykite terminą arba datą iš institucijos rašto pačioje santraukos pradžioje, kad šios datos būtų matomos vertinant. Šis puslapis nėra skubios pagalbos kontaktas ir neužtikrina atsakymo termino; jei Jūsų byla negali laukti, kartu ieškokite pagalbos ir ten, kur gyvenate.',
         },
       ],
     },
@@ -411,14 +411,14 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Saugojimo vieta ir paslaugų teikėjai',
           paragraphs: [
-            'Ši svetainė talpinama Vercel, o Jūsų pateikimas saugomas neviešoje šios paslaugos duomenų saugykloje. El. laiškai siunčiami pašto paslauga, kuria naudojasi kontora.',
+            'Ši svetainė talpinama „Vercel“ platformoje, o Jūsų pateikimas saugomas neviešoje šios paslaugos duomenų saugykloje. El. laiškai siunčiami pašto paslauga, kuria naudojasi kontora.',
             'Atskiri paslaugų teikėjų serveriai gali būti už Taivano ribų, todėl Jūsų duomenys ten gali būti saugomi ir tvarkomi. Kai saugojimo tikslas įvykdytas, duomenys ištrinami nedelsiant; duomenys, kuriuos reikia saugoti pagal taikomus teisės aktus, lieka šiam laikotarpiui. Prašymus dėl asmens duomenų priima wei@hoveringlaw.com.tw.',
           ],
         },
       ],
     },
     disclaimer: {
-      eyebrow: 'ĮSPĖJIMAS',
+      eyebrow: 'ATSAKOMYBĖS APRIBOJIMAS',
       title: 'Šio puslapio informacijos apimtis ir ribos',
       description:
         'Bendra informacijos prigimtis, teisinė sistema ir sąlygos, kurioms esant atsiranda advokato ir kliento santykiai.',
@@ -440,10 +440,10 @@ export const lithuanianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Advokato ir kliento santykiai patys savaime nesusidaro',
+          heading: 'Advokato ir kliento santykiai patys savaime neatsiranda',
           paragraphs: [
             'Šio puslapio perskaitymas, formos ar el. laiško išsiuntimas pats savaime nesukuria advokato ir kliento santykių.',
-            'Šie santykiai susidaro tik po to, kai byla įvertinta ir abi šalys patvirtino darbo priėmimą.',
+            'Šie santykiai atsiranda tik po to, kai byla įvertinta ir abi šalys patvirtino darbo priėmimą.',
           ],
         },
         {

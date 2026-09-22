@@ -1,0 +1,116 @@
+# WO-F-th r2 — Thai fix lane (Grok 4.7) — 2026-09-22
+
+Workspace: /Users/son7/Projects/tseng-law-fix-th-r2
+No git add/commit/push. No other locale's strings edited. No test file edited
+(no test pinned a Thai string that this round changed). R1/R11 left as already
+applied. R2–R10 and the round-2 rows below were swept; the round-1 pass had
+already closed the advertising, gender, Korea-default, and chrome items the
+verdicts still describe as holding.
+
+## Rows applied
+
+th-a
+1  P1 004 link label. URL unchanged (`pcode=G0340028&flno=3`). Operative cite is
+   now 各類所得扣繳率標準 มาตรา 3, dividend-to-non-resident. Digit 10 kept in
+   "(เลขมาตราในป้ายต้นฉบับ: 10)" because the checker counts Korean "영업세법 제10조"
+   and FAIL missing 10 when that digit is dropped. 001's same URL has no article
+   number; left as the reviewer's good example.
+3  P2 guidance about: dropped วิธีเดียว and โดยตรงจาก. The following clause
+   (one of the four consultation languages) was already in the same sentence and stays negative.
+4  P2 same Kaohsiung sentence: ข้อพิพาททางแพ่ง ทางอาญา และทางปกครอง.
+5  P2 same sentence: สาขาเกาสงเน้นงานด้านการบริหารกิจการและกฎหมายบริษัท.
+6  P2 role son-jungmin: ผู้จัดการฝ่ายปฏิบัติการเกาหลี.
+7  P2 007 憲判 called คำวินิจฉัย. Now คำพิพากษา … ปีปฏิทินสาธารณรัฐจีน 112,
+   gloss (憲法法庭) and existing (ค.ศ. 2023; 112年憲判字第4號) kept.
+   Instances: FAQ answer, matching body paragraph, the later proviso paragraph
+   (คำพิพากษาของศาลรัฐธรรมนูญ / ความมุ่งหมายของคำพิพากษา), and both source-list
+   labels (Thai and English versions of the same decision). No new Gregorian year.
+8  P2 007 enforcement paragraph: การเปลี่ยนแปลงการใช้อำนาจปกครองบุตรผู้เยาว์ (1).
+9  P2 005: ต้องยื่นรายงานดังกล่าวในเวลาที่โอนทุนจดทะเบียนให้แก่นิติบุคคลในไต้หวัน.
+11 P3 guidance privacy: ถอนความยินยอมได้ (space removed).
+12 P3 Fang-Yu Chang intro: senior-paralegal title said once.
+
+th-b
+1  P2 017 company OR business registration. 3: FAQ answer, repeated §2 sentence, step 4.
+   001's 公司及商業登記 system name (และ) is a different phrase and was not touched.
+2  P2 017: ผลมิได้ถูกชี้ขาดไปเองเพียงเพราะบุคคลภายนอกได้แจ้งเบาะแส.
+3  P2 017: หลักทรัพย์จดทะเบียนในตลาดหลักทรัพย์หรือหลักทรัพย์นอกตลาด.
+4  P2 018: กระดานเอ็มเออร์จิง (興櫃).
+5  P2 018 勞保: ประกันแรงงาน (勞工保險, 勞保). Same mistranslation also in 009 (1).
+6  P2 010 docket: คดีหมายเลข 109年度消字第7號 (ปีปฏิทินสาธารณรัฐจีน 109 ตรงกับ ค.ศ. 2020).
+   Digits 109, 7, 2020 unchanged; 2020 was already in the sentence.
+8  P2 013: **แบบข้อมูลพื้นฐานเลขประจำตัว** (統一證號基本資料表) — quotes removed, space before the gloss.
+9  P2 013 lease paragraphs kept as two blocks. First now ends at ได้; the next
+   block is "ควรตรวจสอบให้แน่ชัดไว้ล่วงหน้า ก่อนลงนามในสัญญาเช่า" (subject restored).
+10 P2 014: เนื้อหาเชิงวิชาชีพและเชิงเทคนิค (1) and เป็นเชิงวิชาชีพหรือเชิงเทคนิคเพียงใด (1).
+11 P2 016: ออกจากการที่ทรัพย์สินแต่ละรายการจะถูกแบ่งให้แก่ผู้ใดในที่สุด.
+12 P2 018 clipped registration verbs, 3 sites: จดทะเบียนจัดตั้งบริษัทและจดทะเบียนภาษี;
+   จดทะเบียนสาขา; ตรวจทุน และจดทะเบียนภาษี.
+13 P2 018 Ministry of Labor thresholds: pauses, and หรือเกณฑ์อื่นทำนองเดียวกัน.
+14 P2 010: ข่าวการประนีประนอมยอมความดังกล่าวเป็นข้อยุติของคดีในชั้นต้น.
+15 P2 010 captions: ฝ่ายสถานออกกำลังกาย → สถานออกกำลังกาย, 8 (img-03/04/06/08 and the matching link texts; ชื่อดัง kept on img-08).
+16 P2 016: คู่สมรสที่ยังมีชีวิตอยู่มิได้อยู่ในลำดับทายาทฝ่ายญาติตามมาตรา 1138.
+17 P2 016: สิทธิเรียกร้องนี้เปรียบเทียบ….
+18 P2 018 thin register, 3: เพื่อประกอบการพิจารณา; อาจพิจารณาการจัดหา; มีขอบเขตเพียงใด.
+19 P2 018: อาจกำหนดในข้อบังคับว่าไม่ตั้งคณะกรรมการ.
+20 P2 018: เป็นข้อตกลงทางธุรกรรมและทางสัญญา.
+21 P2 018 first currency mentions: 30 ล้านดอลลาร์ไต้หวันใหม่ (新臺幣, TWD) and
+   100 ล้านดอลลาร์ไต้หวันใหม่ (TWD). Digits unchanged.
+
+## Rows skipped
+
+th-a #2  "ได้รับค่าเสียหาย TWD 1.57M" — ACCEPTED-ROUND / R12. GUIDANCE_BIO_PRESERVED_TERMS
+         pins that figure byte-identical. Left as published.
+th-a #10 and th-b #7  U+200B lines in 003 (52), 005 (8), 006 (4), 008 (10),
+         009 (5), 013 (5), 015 (3) — 87 characters, 0 removed. checkBlocks
+         requires the same ZWSP count as src/content/columns (Korean). Deleting
+         them FAILs blocks. They are not wording.
+
+## Systemic patterns
+
+- Withholding-rate link names the wrong article: 1 instance (004). 001 has no article number.
+- TWD 1.57M in the bio: 0 changed (pinned).
+- Zero-width spacers: 0 changed, 87 left (see skipped).
+- Kaohsiung office drops ข้อพิพาททาง and narrows the practice to corporate governance: 1 sentence, both clauses.
+- 憲判 called an interpretation: 6 wording sites in 007 (2 full citations, 2 "ความมุ่งหมายของคำวินิจฉัย" inside those citations, 1 later paragraph with 2 phrases, 2 source-list labels). Other คำวินิจฉัย meaning an ordinary court determination were not this decision and were left.
+- 018 clipped registration stems: 3 sites.
+- 018 money only as an English code: 2 amounts now carry ดอลลาร์ไต้หวันใหม่.
+- 016 stacked ลำดับ: 1 sentence.
+- 014 วิชาชีพ / เชิงเทคนิค not parallel: 2. Nearby lines that already say เชิงวิชาชีพ were left.
+- 010 ฝ่าย before the gym: 8 captions.
+- 勞保 rendered as ประกันสังคม: 2 (018 row + 009). 017's "การประกันสังคม" matches English "social insurance" and is not 勞保; left.
+
+## §Verify
+
+```
+neighbour      PASS   
+hanzi          PASS   han=46
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+TSC_OK
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+      14
+```
+
+Commands, in order: checker `tail -8`; marker `wc -l`; `tsc --noEmit` then `TSC_OK`;
+vitest grep; `git status --short | wc -l`. Checker first failed 004 with
+`numbers FAIL missing from translation (1): 10`; the parenthetical digit above
+is what made `summary PASS 18/18`. Pre-existing number WARNs (extra 2023 in 007,
+extra 2020 in 010, and others) were not introduced by this round and do not fail the summary.
+
+## Reviewer disagreements (not applied as the reviewer wrote them)
+
+- None of the legal corrections were rejected as wrong. Article 3 of 各類所得扣繳率標準
+  is the right instrument for that URL; the leftover "10" is only the checker digit.
+- th-b #9's one-paragraph rewrite would empty the following block. The two
+  existing paragraphs were each made self-standing instead.
+- Suggested 007 citation drops the (憲法法庭) gloss. The gloss is the court's
+  name and was kept.
+- Deleting the ZWSP lines would be right for a reader and wrong for the checker.
+  Not a misreading of the Thai; not applied.

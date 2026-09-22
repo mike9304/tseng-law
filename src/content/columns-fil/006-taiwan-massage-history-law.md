@@ -2,7 +2,7 @@
 title: "Massage sa Taiwan: Kasaysayan at Impormasyong Legal"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
 lastmod: "2025-09-13"
-date_display: "Setyembre 13, 2025"
+date_display: "13 Setyembre 2025"
 read_time: "2 minutong pagbabasa"
 categories:
   - "Impormasyong Legal sa Taiwan"
@@ -27,7 +27,7 @@ Sa isang gupit lamang ay natatamasa na ninyo ang ganitong espesyal na serbisyo, 
 
 Halos katulad ito ng Vietnamese-style hair wash (越式洗髮) na uso ngayon.
 
-At ang ganitong barberyang Taiwanese ay natatanging alaalang pangkultura para sa maraming Taiwanese.
+At ang ganitong barberya sa Taiwan ay natatanging alaalang pangkultura para sa maraming taga-Taiwan.
 
 (Nabunyag yata ang edad ko rito, ano?)
 
@@ -55,7 +55,7 @@ Nanatiling may bisa ang batas na ito hanggang 2003, nang si Ginoong Lin (林先�
 
 ay natuklasan ng pulisya dahil kumuha siya ng dalawang empleyadong walang kapansanan sa paningin upang maghugas ng buhok, magbigay rin ng serbisyong massage.
 
-Sa ilalim ng batas noong panahong iyon, pinatawan sina Ginoong Lin at ang dalawang empleyado ng administrative fine (罰鍰) na TWD 40,000, TWD 10,000, at TWD 20,000 ayon sa pagkakasunod, sa New Taiwan Dollar (新臺幣, TWD).
+Sa ilalim ng batas noong panahong iyon, pinatawan sina Ginoong Lin at ang dalawang empleyado ng multa administratibo (罰鍰) na TWD 40,000, TWD 10,000, at TWD 20,000 ayon sa pagkakasunod, sa TWD (新臺幣).
 
 Naisip ni Ginoong Lin na labis na hindi makatarungan ang parusang ito, kaya naghain siya ng petisyon para sa constitutional interpretation.
 

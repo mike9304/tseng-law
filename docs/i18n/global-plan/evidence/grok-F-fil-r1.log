@@ -1,0 +1,63 @@
+WO-F-fil — Grok 4.7 fix lane, campaign round 1
+workspace: /Users/son7/Projects/tseng-law-fix-fil-r1
+inputs: RULEBOOK-FIX.md R2–R10, ACCEPTED-ROUND.md, rounds/r1/fil-a.md, rounds/r1/fil-b.md
+No commit. Filipino strings only.
+
+## Rows applied
+fil-a P1: 1 (partido→panig, after partidong→panig na and 013 dayuhang mamumuhunan), 2 (Kaligtasan sa Pinangyarihan), 3 (005 bank waiver is Korea-as-example only, plus the sentence that it is not a rule for every foreign remittance), 4 (008 資遣費 only when statutory conditions are met; two blocks kept), 5 (abogada in her own case).
+fil-a P2: 6, 8–32, 34–53. Dates (35) applied only on columns 001–009, including date_display, as day-month-year. 010–018 month-day left as written.
+fil-b P1: 1 (dayuhang mamumuhunan), 2 (dalawang alternatibong batayan; the next sentence was not pasted into that block).
+fil-b P2: 3–26, 28–58. 013 time-window stays two blocks. 008 closing stays two blocks. 0.5 and the formula digits 3, 30, 1,000, 90,000 kept (3 × 30 × 1,000 = TWD 90,000; currency before the amount). 018 table row count and the figures 30/100/100/2/3 unchanged.
+
+Guidance pack (fil strings only): nav home Pangunahing pahina (and back-home / not-found), pagkapribado, impormasyong kinokolekta, numerong pantanggap, tort/quasi-delict, pagwawakas ng trabaho, iba't ibang (apostrophe escaped in the TS literal), konstruksyon/direksyon, Korea at Hapon, accounting/CPA, nagsasagawa ng gawain alinsunod sa batas, hindi batay sa pagkamamamayan, ikatlong panig / ibang tao o tanggapan, batas na nalalapat, permiso sa trabaho (工作許可), consultation lists Tsino (中文) in content, the six answers, inquiry notice, and llms notice. Answers: hidwaan→alitan, pagharap→konsultasyon; saklaw kept; pagtanggap not introduced. Inquiry placeholder: Biyetnames, Indones. Team: paralegal intro, paglilitis, mga bahagi, Bahaging pangnegosyo para sa Korea, CPA/accounting, alitang administratibo, Buong talaan (sa Ingles). Lawyers title/description not split from team copy. Bio TWD 1.57M and pinned institution names unchanged. No Han added inside bio lines.
+
+## Rows skipped
+fil-a #7 — “TWD 1.57M” → “TWD 1.57 milyon”. Pinned byte-identical in GUIDANCE_BIO_PRESERVED_TERMS, and milyon is a ×1,000,000 magnitude word.
+fil-a #33 and fil-b #27 — delete U+200B-only lines and join paragraphs. Checker block count and ZWSP count must match the Korean source. ACCEPTED-ROUND forbids merging blocks.
+fil-a #35 on columns 010–018 — fil-b treats “Enero 24, 2022” as native Philippine order. Day-month-year applied only to 001–009.
+008 url — Hangul slug and the fullwidth colon inside that url. Never rendered; do not touch.
+Pinned proper names (universities, firm names, TWD 1.57M) left in English where the bio test requires them.
+008 “anumang oras” — the worker’s right to resign, not an availability promise. Not softened.
+017 fullwidth “、” inside the gloss 連江、馬祖. Kept.
+Role label “Paralegal” kept (finding 18 rewrites the intro, not the short role). R12 does not apply to fil.
+Guidance “aktwal” left (columns “aktwal” → “aktuwal” only). Lawyers answer “gumagawa para sa mga kliyente” left (it means works for clients, not the manufacturing calque).
+“paksa” left where it means topic (pagsasanay, kontribusyon, pagbubuwis), not the rights-holder 主體.
+No test expected-string edits. Existing fil assertions (Ingles/Tsino/Hapon/Koreano, saklaw, no pagtanggap in the services answer) still hold. “(中文)” is one extra whitespace token; answer word counts stay inside 40–80.
+
+## Systemic patterns (instances)
+partido → panig, after partidong → panig na: 48 “partido” removed in the diff; “panig” on added lines 91 (includes lines that already said panig).
+first instance → unang antas: 13. “unang” can warn as an extra numeral 1; summary still PASS.
+pribasiya → pagkapribado: 3 (nav, consent, privacy link).
+Tsino (中文) on the consultation list “Ingles, Tsino, Hapon, at Koreano”: 11 (3 content, 6 answers, 1 inquiry, 1 llms). Not on “pangalang Tsino” and not on the bio language line.
+Dates Month D, YYYY → D Month YYYY on 001–009 only (frontmatter date_display included; lastmod ISO and urls not touched). Checker accepted both orders.
+Also swept where the same pattern occurred, not only the quoted sentence: work permit → permiso sa trabaho (工作許可); stacked English inside an existing Chinese gloss; Taiwanese as a legal demonym; business item → rehistradong gawain; preparatory office account; contractual penalty; minimum service period; family-law and cosmetics and logistics headwords; 018 English clauses in the operating table and the following sections. “mga mga rehistradong gawain” (from “mga business items”) corrected back to one “mga”.
+
+## §Verify
+```
+===== CHECKER =====
+neighbour      PASS   
+hanzi          PASS   han=53
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+===== MARKERS =====
+       0
+===== TSC =====
+TSC_OK
+===== VITEST =====
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+===== GIT =====
+      26
+```
+Checker command: `node scripts/check-column-translation.mjs --dir src/content/columns-fil --lang fil` (tail -8). Markers: `grep -rn "[변호사 검수 필요]" src/content/columns-fil src/data | wc -l`. The git count 26 was taken before this log file existed and included the pre-existing dirty `WO-F-fil.txt`, the untracked `reviews/native/rounds/`, and a local helper directory that was removed after the count.
+
+## Reviewer got wrong (not applied)
+fil-a #7. Rewriting the pinned bio figure “TWD 1.57M” to “TWD 1.57 milyon” breaks the cross-locale preserved-term test and the number checker (milyon = 1,000,000).
+fil-a #33 and fil-b #27. Those U+200B lines are real blocks. Deleting them fails block parity with the Korean source. Rephrase stays inside the block.
+fil-a #35 applied to 010–018. fil-b is right that “Enero 24, 2022” is ordinary Philippine order. Only 001–009 were reordered.
+Suggested “work permit (工作許可)” as the headword. Filipino headword used instead: “permiso sa trabaho (工作許可)”, gloss kept.
+008 English source also says the company must pay on every departure. The P1 correction was still applied: 資遣費 is not owed on every exit.

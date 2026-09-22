@@ -1,15 +1,15 @@
 ---
-title: "Mga Tanong at Sagot sa Aksidente sa Trapiko sa Taiwan: Aksyon sa Pinangyarihan, Kapabayaan, Kasunduang Pag-aayos, Danyos"
+title: "Mga Tanong at Sagot sa Aksidente sa Trapiko sa Taiwan: Kaligtasan sa Pinangyarihan, Kapabayaan, Kasunduang Pag-aayos, Danyos"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
-date_display: "Setyembre 13, 2025"
+date_display: "13 Setyembre 2025"
 read_time: "8 minutong pagbabasa"
 categories:
   - "Impormasyong Legal sa Taiwan"
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 ---
 
-# Mga Tanong at Sagot sa Aksidente sa Trapiko sa Taiwan: Aksyon sa Pinangyarihan, Kapabayaan, Kasunduang Pag-aayos, Danyos
+# Mga Tanong at Sagot sa Aksidente sa Trapiko sa Taiwan: Kaligtasan sa Pinangyarihan, Kapabayaan, Kasunduang Pag-aayos, Danyos
 
 ![Larawang nagpapaliwanag ng hakbang pangkaligtasan at ng pag-iingat ng ebidensya kaagad matapos ang aksidente sa trapiko sa Taiwan](../images/003-taiwan-traffic-accident-procedure/featured-01.jpg)
 
@@ -21,7 +21,7 @@ Kapag nagkaroon ng aksidente sa trapiko (traffic accident, 交通事故) sa Taiw
 
 Sa aksidenteng may nasugatan o namatay, kailangang agad na magsagawa ang nagmamaneho ng pagsagip (rescue measures, 救護措施), ipaalam ito sa pulisya, saka ingatan ang mga sasakyan at ang ebidensya sa lugar ng aksidente. Ang hindi pormal na pahintulot ng kabilang panig o ang isang rekording lamang ay hindi maituturing na katuparan ng mga kinakailangang hakbang bago umalis sa pinangyarihan.
 
-Gayunman, sa aksidenteng may nasugatan, kung pumayag ang lahat ng partido ay maaaring ilipat ang sasakyan sa lugar na hindi humaharang sa daloy ng trapiko, matapos markahan ang posisyon ng sasakyan at ang mga bakas sa lugar ng aksidente. Hindi ito nangangahulugang napapalitan na nito ang pagsagip, ang pag-uulat sa pulisya, o ang iba pang kinakailangang hakbang.
+Gayunman, sa aksidenteng may nasugatan, kung pumayag ang lahat ng panig ay maaaring ilipat ang sasakyan sa lugar na hindi humaharang sa daloy ng trapiko, matapos markahan ang posisyon ng sasakyan at ang mga bakas sa lugar ng aksidente. Hindi ito nangangahulugang napapalitan na nito ang pagsagip, ang pag-uulat sa pulisya, o ang iba pang kinakailangang hakbang.
 
 Kung pinsala lamang sa ari-arian ang naganap at nagagalaw pa ang sasakyan, ang panuntunan ay markahan muna ang posisyon nito at ang mga bakas sa lugar, itala ito sa larawan o bidyo, saka mabilis na ilipat sa ligtas na lugar. Ang pag-alis nang hindi ginagawa ang mga kinakailangang hakbang ay maaaring pagmulan ng parusang administratibo (administrative sanctions, 行政處罰).
 
@@ -31,35 +31,35 @@ Tinatalakay ng Artikulo 185-4 ng Kodigo Penal (刑法) ang pananagutang kriminal
 
 Tiyakin muna ang sariling kaligtasan at ang paglalagay ng babalang panandaan; sa Taiwan, kung may nasugatan o kailangan ng pagsagip ay tumawag sa 119 (ambulansiya at bumbero), at kung may kinalaman ito sa krimen o sa kagipitan sa kapayapaan ng bayan ay tumawag sa 110 (pulisya) o sa 112 mula sa mobile phone. Mag-ulat din sa pulisya nang naaayon sa kalagayan ng aksidente sa trapiko.
 
-Kapag natiyak na ang kaligtasan, kumuha ng malawak at malapitang mga larawan upang maitala ang posisyon ng sasakyan, ang pinsala nito, ang mga marka sa kalsada, ang mga senyas, at ang lagay ng panahon. Mabuting huwag ding kaligtaan ang impormasyon sa pakikipag-ugnayan ng mga saksi, ang paghiling na maingatan ang kuha ng CCTV at ng dashcam, ang datos ng mga partido, sasakyan at seguro, gayundin ang mga rekord ng paggamot. Kapaki-pakinabang ang sariling pagkuha ng larawan, ngunit hindi nito napapalitan ang paghawak ng pulisya na hinihingi sa mga aksidenteng may nasugatan o namatay.
+Kapag natiyak na ang kaligtasan, kumuha ng malawak at malapitang mga larawan upang maitala ang posisyon ng sasakyan, ang pinsala nito, ang mga marka sa kalsada, ang mga senyas, at ang lagay ng panahon. Mabuting huwag ding kaligtaan ang impormasyon sa pakikipag-ugnayan ng mga saksi, ang paghiling na maingatan ang kuha ng CCTV at ng dashcam, ang datos ng mga panig, sasakyan at seguro, gayundin ang mga rekord ng paggamot. Kapaki-pakinabang ang sariling pagkuha ng larawan, ngunit hindi nito napapalitan ang paghawak ng pulisya na hinihingi sa mga aksidenteng may nasugatan o namatay.
 
 Tungkol sa dokumento ng pulisya, maaaring matanggap sa lugar ng aksidente ang traffic accident party registration slip (道路交通事故當事人登記聯單). Kapag lumipas ang 7 araw mula sa petsa ng aksidente ay maaari nang hilingin ang guhit ng pinangyarihan (現場圖) at ang mga larawan nito (現場照片), at kapag lumipas ang 30 araw ay maaari nang hilingin ang preliminary accident analysis report (道路交通事故初步分析研判表). Muling kumpirmahin sa pulisyang may hurisdiksyon ang panahon ng paglalabas nito at ang mga kailangan sa paghiling.
 
 ## Q3. Kung ako ay nasugatan, anong mga paghahabla at takdang panahon ang dapat kong tingnan?
 
-Itinatakda ng Artikulo 284 ng Kodigo Penal ang negligent injury (過失傷害) at ang negligent serious injury (過失致重傷). Ang mga ito ay delitong nangangailangan ng reklamo (complaint-based offense, 告訴乃論之罪) ayon sa Artikulo 287 ng Kodigo Penal, kaya bilang panuntunan ay dapat isampa ang reklamo sa loob ng 6 na buwan mula nang malaman kung sino ang may kagagawan, ayon sa Artikulo 237 ng Kodigo ng Pamamaraang Kriminal (刑事訴訟法).
+Itinatakda ng Artikulo 284 ng Kodigo Penal ang pinsala dahil sa kapabayaan (過失傷害) at ang malubhang pinsala dahil sa kapabayaan (過失致重傷). Ang mga ito ay delitong nangangailangan ng reklamo (告訴乃論之罪) ayon sa Artikulo 287 ng Kodigo Penal, kaya bilang panuntunan ay dapat isampa ang reklamo sa loob ng 6 na buwan mula nang malaman kung sino ang may kagagawan, ayon sa Artikulo 237 ng Kodigo ng Pamamaraang Kriminal (刑事訴訟法).
 
 Ang danyos (damages, 損害賠償) sa sibil ay hindi na maaaring habulin ayon sa Artikulo 197 ng Kodigo Sibil (民法) kapag lumipas ang 2 taon mula nang malaman ang pinsala at ang taong may obligasyong magbayad, o kapag lumipas ang 10 taon mula nang maganap ang labag sa batas na gawain. Hiwalay na dapat suriin kung anong mga pangyayari ang nakaaapekto sa prescription (消滅時效).
 
-Ang taong napinsala ng isang krimen ay maaaring maghain ng civil action na kalakip ng kasong kriminal (刑事附帶民事訴訟) ayon sa Artikulo 487 ng Kodigo ng Pamamaraang Kriminal. Habang nakabinbin ang paglilitis na kriminal, maihahain ito hanggang sa pagtatapos ng pasalitaang pagtatalo (oral argument, 言詞辯論終結) sa second instance (antas ng apela, 二審) na itinakda ng Artikulo 488 ng Kodigo ng Pamamaraang Kriminal, ngunit hindi ito maihahain matapos ang pagtatapos ng pasalitaang pagtatalo sa first instance (unang antas, 一審) at bago maihain ang apela. Karaniwang naiiwasan nito ang hiwalay na bayad sa korte (court fee, 裁判費), ngunit hindi lahat ng kalalabasan ay nagtatapos nang walang gastos. Halimbawa, kapag ibinasura ang kasong kriminal at inilipat ito sa hukumang sibil sa hiling ng naghahabla, maaaring pasanin ang gastos sa paglilitis ayon sa Artikulo 503 ng Kodigo ng Pamamaraang Kriminal, kaya dapat ding tingnan ang panuntunan sa paglilipat at sa pamamaraan sa Artikulo 504.
+Ang taong napinsala ng isang krimen ay maaaring maghain ng civil action na kalakip ng kasong kriminal (刑事附帶民事訴訟) ayon sa Artikulo 487 ng Kodigo ng Pamamaraang Kriminal. Habang nakabinbin ang paglilitis na kriminal, maihahain ito hanggang sa pagtatapos ng pasalitaang pagtatalo (oral argument, 言詞辯論終結) sa ikalawang antas (antas ng apela, 二審) na itinakda ng Artikulo 488 ng Kodigo ng Pamamaraang Kriminal, ngunit hindi ito maihahain matapos ang pagtatapos ng pasalitaang pagtatalo sa unang antas (unang antas, 一審) at bago maihain ang apela. Karaniwang naiiwasan nito ang hiwalay na bayad sa korte (court fee, 裁判費), ngunit hindi lahat ng kalalabasan ay nagtatapos nang walang gastos. Halimbawa, kapag ibinasura ang kasong kriminal at inilipat ito sa hukumang sibil sa hiling ng naghahabla, maaaring pasanin ang gastos sa paglilitis ayon sa Artikulo 503 ng Kodigo ng Pamamaraang Kriminal, kaya dapat ding tingnan ang panuntunan sa paglilipat at sa pamamaraan sa Artikulo 504.
 
 Nag-iiba ang pagpipilian depende sa kung naputol at muling nagsimula (時效中斷) ang takbo ng prescription o hindi, sa saklaw ng mga inihahabla, sa ebidensya, sa seguro, gayundin sa hurisdiksyon. Kaya walang iisang pamamaraang pinakamainam sa lahat ng kaso.
 
 ## Q4. Kung parehong may kapabayaan ang dalawang panig, paano tinitingnan ang pananagutang kriminal at sibil?
 
-Ang pananagutang kriminal ay mahuhusgahan lamang kapag kinilala ang paglabag ng bawat isa sa tungkuling mag-ingat, gayundin ang ugnayang sanhi ng paglabag na iyon sa pinsalang natamo ng kabilang panig. Hindi awtomatikong nabubuo ang pananagutan sa negligent injury dahil lamang sa parehong may kapabayaan ang dalawang panig.
+Ang pananagutang kriminal ay mahuhusgahan lamang kapag kinilala ang paglabag ng bawat isa sa tungkuling mag-ingat, gayundin ang ugnayang sanhi ng paglabag na iyon sa pinsalang natamo ng kabilang panig. Hindi awtomatikong nabubuo ang pananagutan sa pinsala dahil sa kapabayaan dahil lamang sa parehong may kapabayaan ang dalawang panig.
 
-Sa sibil, ayon sa Artikulo 217 ng Kodigo Sibil, kung may kapabayaan ang biktima na nag-ambag sa pagkakaroon o sa paglaki ng pinsala ay maaaring bawasan o alisin ng hukuman ang halaga ng danyos. Halimbawa, kung ang kinilalang pinsala ay TWD 1,000,000 sa New Taiwan Dollar (新臺幣, TWD) at ang kapabayaan ng biktima ay itinaya sa 50%, maaari itong bumaba sa TWD 500,000 bago ang iba pang pagsasaayos.
+Sa sibil, ayon sa Artikulo 217 ng Kodigo Sibil, kung may kapabayaan ang biktima na nag-ambag sa pagkakaroon o sa paglaki ng pinsala ay maaaring bawasan o alisin ng hukuman ang halaga ng danyos. Halimbawa, kung ang kinilalang pinsala ay TWD 1,000,000 sa TWD (新臺幣) at ang kapabayaan ng biktima ay itinaya sa 50%, maaari itong bumaba sa TWD 500,000 bago ang iba pang pagsasaayos.
 
 Maaaring maging mahalagang materyal ang expert appraisal (鑑定) o ang preliminary accident analysis report, ngunit hindi nito mekanikal na iginagapos ang hukuman. Sinusuri ng hukuman ang buong ebidensya kasama ang mga pahayag, ang bidyo, at ang kalagayan ng sasakyan.
 
 ## Q5. Ano ang dapat ilagay sa kasunduang pag-aayos?
 
-Sa settlement agreement (和解書) ay mabuting tukuyin ang petsa, oras at lugar ng aksidente at ang mga partido, saka isulat ang halaga ng bayad, ang panahon nito, ang paghawak sa bayad ng seguro, ang mga paghahablang kasama, gayundin ang mga paghahablang inilalaan. Kailangan ding linawin ang paggamot sa hinaharap, ang pinsalang matutuklasan sa bandang huli, ang pagbibigay ng mga dokumento gaya ng medical certificate, at ang ugnayan ng bayad sa pag-urong ng reklamo.
+Sa settlement agreement (和解書) ay mabuting tukuyin ang petsa, oras at lugar ng aksidente at ang mga panig, saka isulat ang halaga ng bayad, ang panahon nito, ang paghawak sa bayad ng seguro, ang mga paghahablang kasama, gayundin ang mga paghahablang inilalaan. Kailangan ding linawin ang paggamot sa hinaharap, ang pinsalang matutuklasan sa bandang huli, ang pagbibigay ng mga dokumento gaya ng medical certificate, at ang ugnayan ng bayad sa pag-urong ng reklamo.
 
-Ang kasunduang pag-aayos (settlement, 和解) sa Artikulo 736 ng Kodigo Sibil ay kontratang nagwawakas o pumipigil sa alitan sa pamamagitan ng pagbibigayan ng magkabilang panig. Ayon sa Artikulo 737 ng Kodigo Sibil, ang saklaw ng pagkawala ng karapatan ay hinuhusgahan lamang batay sa saklaw na tinalikuran sa kasunduan. Kaya hindi dapat ipagpalagay na naglalaho ang lahat ng paghahabla sa hinaharap nang hindi sinusuri ang mismong pananalita nito.
+Ang kasunduang pag-aayos (和解) sa Artikulo 736 ng Kodigo Sibil ay kontratang nagwawakas o pumipigil sa alitan sa pamamagitan ng pagbibigayan ng magkabilang panig. Ayon sa Artikulo 737 ng Kodigo Sibil, ang saklaw ng pagkawala ng karapatan ay hinuhusgahan lamang batay sa saklaw na tinalikuran sa kasunduan. Kaya hindi dapat ipagpalagay na naglalaho ang lahat ng paghahabla sa hinaharap nang hindi sinusuri ang mismong pananalita nito.
 
-Kung ito ay delitong nangangailangan ng reklamo, maaaring urungin ang reklamo hanggang sa pagtatapos ng pasalitaang pagtatalo sa first instance ayon sa Artikulo 238 ng Kodigo ng Pamamaraang Kriminal, at hindi na ito maisasampang muli matapos urungin. Ngunit sa delitong hindi nangangailangan ng reklamo ay hindi awtomatikong natatapos ang pag-uusig dahil lamang sa pribadong kasunduan, at hindi rin kinakailangan sa lahat ng pagkakataon na urungin ang reklamo kapag nagkasundo na.
+Kung ito ay delitong nangangailangan ng reklamo, maaaring urungin ang reklamo hanggang sa pagtatapos ng pasalitaang pagtatalo sa unang antas ayon sa Artikulo 238 ng Kodigo ng Pamamaraang Kriminal, at hindi na ito maisasampang muli matapos urungin. Ngunit sa delitong hindi nangangailangan ng reklamo ay hindi awtomatikong natatapos ang pag-uusig dahil lamang sa pribadong kasunduan, at hindi rin kinakailangan sa lahat ng pagkakataon na urungin ang reklamo kapag nagkasundo na.
 
 ### Opisyal na Batayan ng Q1–Q5
 
@@ -85,7 +85,7 @@ Kung ito ay delitong nangangailangan ng reklamo, maaaring urungin ang reklamo ha
 
 Ang preliminary accident analysis report ng pulisya ay paunang pagsusuring iginagawa batay sa datos mula sa lugar ng aksidente. Hindi ito hatol ng hukuman, hindi nito iginagapos ang hukuman, at hindi rin nito tinatakda ang proporsyon ng kapabayaan (過失比例). Dahil nag-iiba ang kailangang datos at ang saklaw ng alitan sa bawat aksidente, ang report na ito, ang appraisal na itinatakda ng batas, gayundin ang re-examination ay hindi awtomatikong proseso ni kinakailangang yugto.
 
-Ayon sa kaugnay na mga alituntunin, maaaring humiling ng vehicle-accident appraisal (車輛行車事故鑑定) ang karapat-dapat na partido; maaari ding ipasa ng ahensyang humahawak ang kaso o iatas ito ng awtoridad panghukuman (囑託). Karaniwang inihahain ng partido ang kahilingan sa loob ng 6 na buwan mula sa araw ng aksidente, at sa kasong nasa imbestigasyon o paglilitis na ay isinasagawa ang appraisal sa pamamagitan ng pag-aatas ng awtoridad panghukuman sa halip na bagong direktang kahilingan.
+Ayon sa kaugnay na mga alituntunin, maaaring humiling ng vehicle-accident appraisal (車輛行車事故鑑定) ang karapat-dapat na panig; maaari ding ipasa ng ahensyang humahawak ang kaso o iatas ito ng awtoridad panghukuman (囑託). Karaniwang inihahain ng panig ang kahilingan sa loob ng 6 na buwan mula sa araw ng aksidente, at sa kasong nasa imbestigasyon o paglilitis na ay isinasagawa ang appraisal sa pamamagitan ng pag-aatas ng awtoridad panghukuman sa halip na bagong direktang kahilingan.
 
 Kung may pagtutol sa opinyon ng appraisal ay maaaring humiling ng re-examination (覆議), ngunit isang beses lamang ito. Ang opinyon sa appraisal at sa re-examination ay ebidensya o materyal na sanggunian; malaya pa ring sinusuri ng hukuman ang buong tala kasama ang mga pahayag, ang bidyo, gayundin ang mga rekord mula sa lugar ng aksidente.
 
@@ -151,13 +151,13 @@ Hindi awtomatikong naaalis ang paghahabla dahil lamang sa nananatiling walang pa
 
 Kung tunay na pinagtatalunan ang nagpapatuloy na kapansanan sa gawain ay maaaring makatulong ang medikal na appraisal, ngunit hindi ito kinakailangan sa bawat kaso. Sinusuri rin ang contributory negligence (與有過失) ayon sa Artikulo 217 ng Kodigo Sibil, gayundin ang iba pang dahilan ng pagsasaayos.
 
-Kapag kinakalkula bilang isahang bayad ay maaaring isaalang-alang ang pagbabawas ng interes sa gitnang panahon (中間利息扣除). Ang Hoffmann calculator (霍夫曼) ng Judicial Yuan ay pantulong lamang sa pagkalkula, hindi ito paraang ipinag-uutos ng batas, at hindi rin nito tinitiyak ang magiging resulta. Ayon sa Artikulo 193 ng Kodigo Sibil, kung hihiling ang partido ay may posibilidad na iutos ng hukuman ang regular na bayad na may kondisyong maglagak ng garantiya.
+Kapag kinakalkula bilang isahang bayad ay maaaring isaalang-alang ang pagbabawas ng interes sa gitnang panahon (中間利息扣除). Ang Hoffmann calculator (霍夫曼) ng Judicial Yuan ay pantulong lamang sa pagkalkula, hindi ito paraang ipinag-uutos ng batas, at hindi rin nito tinitiyak ang magiging resulta. Ayon sa Artikulo 193 ng Kodigo Sibil, kung hihiling ang panig ay may posibilidad na iutos ng hukuman ang regular na bayad na may kondisyong maglagak ng garantiya.
 
 ## Q13. Paano hinuhusgahan ang moral damages para sa pinsalang hindi pinansiyal?
 
 Ang moral damages para sa pinsalang hindi pinansiyal ay hinuhusgahan sa paraang pagtatakda ng angkop na halaga, kapag may labag sa batas na paglabag sa katawan o sa kalusugan na itinatakda ng Artikulo 195 ng Kodigo Sibil.
 
-Sinusuri ng hukuman ang kalagayan ng bawat kaso sa pamamagitan ng pagsasama-sama ng nilalaman ng pinsala at ng paggamot, ng nagpapatuloy na epekto, ng hirap gayundin ng epekto sa pamumuhay, ng edad at katayuan, ng lagay panlipunan saka pang-ekonomiya, at ng ebidensyang inihain ng mga partido. Kaya mahirap tiyakin nang maaga ang resulta batay lamang sa mga nakasanayang saklaw ng halaga.
+Sinusuri ng hukuman ang kalagayan ng bawat kaso sa pamamagitan ng pagsasama-sama ng nilalaman ng pinsala at ng paggamot, ng nagpapatuloy na epekto, ng hirap gayundin ng epekto sa pamumuhay, ng edad at katayuan, ng lagay panlipunan saka pang-ekonomiya, at ng ebidensyang inihain ng mga panig. Kaya mahirap tiyakin nang maaga ang resulta batay lamang sa mga nakasanayang saklaw ng halaga.
 
 ## Q14. Kung naganap ang aksidente habang nasa trabaho, mapananagot din ba sa sibil ang employer?
 
@@ -175,7 +175,7 @@ Ang obligasyong magseguro ayon sa Artikulo 6 ng Batas sa Compulsory Automobile L
 
 Sa aksidenteng iisang sasakyan lamang ang sangkot, karaniwang hindi saklaw ng Compulsory Automobile Liability Insurance ng sasakyang iyon ang nagmamaneho nito. Ngunit sa aksidenteng maraming sasakyan ang sangkot, may pagkakataong makapaghabol ang nagmamaneho ng bayad mula sa kompanya ng Compulsory Automobile Liability Insurance ng ibang sasakyang kaugnay ng aksidente.
 
-Ang pamantayan ng bayad na inamyendahan noong Mayo 29, 2026 ay ipinatutupad sa mga aksidenteng naganap mula Hulyo 1, 2026. Ang hangganan ng makatuwirang gastos sa medikal na kailangan sa pinsala ay TWD 200,000; ang bayad sa kapansanan (失能) ay TWD 80,000–3,000,000 ayon sa 15 antas na itinakda ng batas; ang bayad sa kamatayan ay TWD 3,000,000; at ang pinakamataas na kabuuan ng kamatayan, kapansanan at gastos sa medikal sa bawat biktima kada aksidente ay TWD 3,200,000. Maaaring ipatupad ang naunang pamantayan sa mga aksidenteng naganap bago nito.
+Ang pamantayan ng bayad na inamyendahan noong 29 Mayo 2026 ay ipinatutupad sa mga aksidenteng naganap mula 1 Hulyo 2026. Ang hangganan ng makatuwirang gastos sa medikal na kailangan sa pinsala ay TWD 200,000; ang bayad sa kapansanan (失能) ay TWD 80,000–3,000,000 ayon sa 15 antas na itinakda ng batas; ang bayad sa kamatayan ay TWD 3,000,000; at ang pinakamataas na kabuuan ng kamatayan, kapansanan at gastos sa medikal sa bawat biktima kada aksidente ay TWD 3,200,000. Maaaring ipatupad ang naunang pamantayan sa mga aksidenteng naganap bago nito.
 
 Ang seguro sa pananagutan sa ikatlong panig (third-party liability insurance, 第三人責任險), ang seguro sa pinsala ng nagmamaneho (駕駛人傷害險), at ang seguro sa pinsala ng sariling sasakyan (車體損失險) ay opsyonal na produktong nakabatay sa kontrata. Nag-iiba ang aktuwal na saklaw ayon sa nakaseguro, sa hangganan ng halaga, sa sariling pasanin (自負額), sa mga hindi saklaw, sa kapabayaan at sa iba pang kondisyon ng polisa, kaya kailangang isa-isang tingnan ang polisa gayundin ang mga kalakip nitong kasunduan.
 
@@ -199,7 +199,7 @@ Q16. Maaari bang ipaubaya sa kompanya ng seguro ang lahat matapos ang aksidente?
 
 ​
 
-Sa aking karanasan, madalas na hindi sapat ang pagharap ng kompanya ng seguro sa damdamin ng mga partido sa aksidente.
+Sa aking karanasan, madalas na hindi sapat ang pagharap ng kompanya ng seguro sa damdamin ng mga panig sa aksidente.
 
 ​
 
@@ -207,11 +207,11 @@ Maaaring mapabayaan ang mahalagang bahagi ng pag-aalaga sa damdamin ng kabilang 
 
 ​
 
-Para sa kompanya ng seguro, ang dagdag na paggastos ng TWD 500,000 o TWD 1,000,000 sa isang kaso ay walang malaking epekto sa kabuuang interes nito, ngunit para sa partido sa aksidente ay maaari itong makaapekto kung magkakaroon siya ng rekord na kriminal (前科).
+Para sa kompanya ng seguro, ang dagdag na paggastos ng TWD 500,000 o TWD 1,000,000 sa isang kaso ay walang malaking epekto sa kabuuang interes nito, ngunit para sa panig sa aksidente ay maaari itong makaapekto kung magkakaroon siya ng rekord na kriminal (前科).
 
 ​
 
-Maaari ding lumitaw ang salungatan ng interes sa pagitan ng kompanya ng seguro at ng partido, at dahil maraming kasong hinahawakan ang kompanya ng seguro ay mahirap para rito ang maglaan ng sapat na oras sa bawat kaso.
+Maaari ding lumitaw ang salungatan ng interes sa pagitan ng kompanya ng seguro at ng panig, at dahil maraming kasong hinahawakan ang kompanya ng seguro ay mahirap para rito ang maglaan ng sapat na oras sa bawat kaso.
 
 ​
 
@@ -231,15 +231,15 @@ Kung ipauubaya ito sa kompanya ng seguro, kailangang tuloy-tuloy na subaybayan a
 
 ​
 
-Q17. Ano ang pananagutang kriminal ng may kagagawan sa aksidente sa trapiko para sa negligent injury?
+Q17. Ano ang pananagutang kriminal ng may kagagawan sa aksidente sa trapiko para sa pinsala dahil sa kapabayaan?
 
 ​
 
-Sa kaso ng negligent injury, sa ilang hatol ay may ipinataw na humigit-kumulang 3 buwang pagkakakulong; hindi ito karaniwan o garantisadong resulta.
+Sa kaso ng pinsala dahil sa kapabayaan, sa ilang hatol ay may ipinataw na humigit-kumulang 3 buwang pagkakakulong; hindi ito karaniwan o garantisadong resulta.
 
 ​
 
-Kapag pinalitan ito ng fine in lieu of imprisonment (易科罰金), itinatakda ng Artikulo 41, talata 1 ng Kodigo Penal ang halaga na TWD 1,000, 2,000, o 3,000 kada araw; sa TWD 1,000 kada araw, ang 3 buwang hatol ay 3\*30\*1,000=90,000 na TWD.
+Kapag pinalitan ito ng multang kapalit ng pagkakakulong (易科罰金), itinatakda ng Artikulo 41, talata 1 ng Kodigo Penal ang halaga na TWD 1,000, 2,000, o 3,000 kada araw; sa TWD 1,000 kada araw, ang 3 buwang hatol ay 3 × 30 × 1,000 = TWD 90,000.
 
 ​
 
@@ -247,7 +247,7 @@ Kapag pinalitan ito ng fine in lieu of imprisonment (易科罰金), itinatakda n
 
 ​
 
-Sa ilang hatol ay may ipinataw na humigit-kumulang 4 na buwang pagkakakulong para sa negligent serious injury, at humigit-kumulang 6 na buwan para sa negligent homicide (過失致死); hindi ito nakapirming resulta.
+Sa ilang hatol ay may ipinataw na humigit-kumulang 4 na buwang pagkakakulong para sa malubhang pinsala dahil sa kapabayaan, at humigit-kumulang 6 na buwan para sa pagkamatay dahil sa kapabayaan (過失致死); hindi ito nakapirming resulta.
 
 ​
 
@@ -259,11 +259,11 @@ Q18. Kung nagkasundo ako sa kabilang panig, maaari bang urungin ang reklamong kr
 
 ​
 
-Ang negligent injury at ang negligent serious injury ay “delitong nangangailangan ng reklamo” (告訴乃論之罪), kaya maaaring urungin ang reklamong kriminal.
+Ang pinsala dahil sa kapabayaan at ang malubhang pinsala dahil sa kapabayaan ay “delitong nangangailangan ng reklamo” (告訴乃論之罪), kaya maaaring urungin ang reklamong kriminal.
 
 ​
 
-Ang negligent homicide ay hindi maaaring urungin, ngunit kapag nagkasundo sa pamilya ng biktima ay maaaring pagaanin ng hukuman ang parusa.
+Ang pagkamatay dahil sa kapabayaan ay hindi maaaring urungin, ngunit kapag nagkasundo sa pamilya ng biktima ay maaaring pagaanin ng hukuman ang parusa.
 
 ​
 
@@ -275,7 +275,7 @@ Sa ilang kaso ay maaaring pag-isipan ng hukuman ang suspended sentence (緩刑, 
 
 ​
 
-Q19. Kapag umalis sa pinangyarihan matapos ang aksidente, tiyak bang nabubuo ang kriminal na hit-and-run?
+Q19. Kapag umalis sa pinangyarihan matapos ang aksidente, tiyak bang nabubuo ang kriminal na pagtakas matapos ang aksidente?
 
 ​
 
@@ -283,11 +283,11 @@ Hindi naman palaging ganoon.
 
 ​
 
-Ang paunang kondisyon ng hit-and-run (肇事逃逸) ay may taong nasugatan o namatay.
+Ang paunang kondisyon ng pagtakas matapos ang aksidente (肇事逃逸) ay may taong nasugatan o namatay.
 
 ​
 
-Kung pinsala lamang sa sasakyan ang naganap, hindi ito itinuturing na hit-and-run.
+Kung pinsala lamang sa sasakyan ang naganap, hindi ito itinuturing na pagtakas matapos ang aksidente.
 
 ​
 

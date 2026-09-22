@@ -1,5 +1,5 @@
 ---
-title: "Paano Hinuhusgahan ang Pananagutan sa Aksidente sa Paglampas (Overtaking) sa Taiwan?"
+title: "Paano Hinuhusgahan ang Pananagutan sa Aksidente sa Paglampas (超車) sa Taiwan?"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
 lastmod: "2026-09-10"
 date_display: "Setyembre 13, 2025"
@@ -9,11 +9,11 @@ categories:
 featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.jpg"
 ---
 
-# Paano Hinuhusgahan ang Pananagutan sa Aksidente sa Paglampas (Overtaking) sa Taiwan?
+# Paano Hinuhusgahan ang Pananagutan sa Aksidente sa Paglampas (超車) sa Taiwan?
 
 ![Larawang nagpapaliwanag ng paghusga sa pananagutan sa aksidente sa paglampas gayundin ng ligtas na pamamaraan ng paglampas sa Taiwan](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Kapag mabagal ang takbo ng sasakyan sa unahan ay maaaring mukhang pangkaraniwang pagpipilian ang paglampas (overtaking, 超車), ngunit sa katotohanan ay may kalakihang panganib ang gawaing ito sa pagmamaneho. Bago simulan ang paglampas ay kailangang sabay na suriin ang bahagi ng kalsada, ang daloy ng trapiko sa magkabilang direksyon, ang galaw ng mga sasakyan sa unahan, gayundin kung may sapat na puwang upang ligtas na makalampas at makabalik sa orihinal na lane (車道).
+Kapag mabagal ang takbo ng sasakyan sa unahan ay maaaring mukhang pangkaraniwang pagpipilian ang paglampas (超車), ngunit sa katotohanan ay may kalakihang panganib ang gawaing ito sa pagmamaneho. Bago simulan ang paglampas ay kailangang sabay na suriin ang bahagi ng kalsada, ang daloy ng trapiko sa magkabilang direksyon, ang galaw ng mga sasakyan sa unahan, gayundin kung may sapat na puwang upang ligtas na makalampas at makabalik sa orihinal na lane (車道).
 
 ## Ang mga kinakailangan sa paglampas ayon sa Artikulo 101 ng Alituntunin sa Kaligtasan ng Trapiko sa Kalsada (道路交通安全規則)
 
@@ -25,9 +25,9 @@ Ipinagbabawal din ang paglampas sa mga lugar o bahagi ng kalsadang may karatula 
 
 Kapag nais lampasan ang sasakyang nasa unahan sa iisang lane, kailangang patunugin muna ng nagmamaneho sa likuran ang busina (喇叭) nang dalawang maikling tunog, o kaya ay kurapin nang isang beses ang mga ilaw sa unahan (變換燈光). Hindi dapat paulit-ulit na patunugin ang busina o kurapin ang mga ilaw sa unahan upang piliting magbigay-daan ang sasakyan sa unahan.
 
-Makakalampas lamang ang sasakyan sa likuran matapos bagalan ng sasakyan sa unahan ang takbo nito saka pumihit sa gilid, o matapos nitong ipahiwatig sa pamamagitan ng senyas ng kamay o ng kanang turn signal (右方向燈) na nagbibigay-daan na ito.
+Makakalampas lamang ang sasakyan sa likuran matapos bagalan ng sasakyan sa unahan ang takbo nito saka pumihit sa gilid, o matapos nitong ipahiwatig sa pamamagitan ng senyas ng kamay o ng kanang senyas ng liko (右方向燈) na nagbibigay-daan na ito.
 
-Pagkatapos ay kailangang buksan ng lumalampas na sasakyan ang kaliwang turn signal, dumaan sa kaliwa habang pinananatili ang hindi bababa sa 0.5 metrong agwat mula sa sasakyang nilalampasan, at matapos makakuha ng ligtas na distansya ay buksan ang kanang turn signal upang ligtas na makabalik sa orihinal na lane.
+Pagkatapos ay kailangang buksan ng lumalampas na sasakyan ang kaliwang senyas ng liko, dumaan sa kaliwa habang pinananatili ang hindi bababa sa 0.5 metrong agwat mula sa sasakyang nilalampasan, at matapos makakuha ng ligtas na distansya ay buksan ang kanang senyas ng liko upang ligtas na makabalik sa orihinal na lane.
 
 Ang pagkakasunod-sunod na ito ng pagsenyas at pagbibigay-daan sa iisang lane ay hindi nangangahulugang pinahihintulutan ang paglampas sa mga lugar o kalagayang ipinagbabawal ito. Bago simulan ang paglampas ay kailangan pa ring sabay na husgahan ang lahat ng kinakailangan sa Artikulo 101.
 
@@ -37,11 +37,11 @@ Sa isang anonimong kaso na hinawakan ng tanggapang ito, ang nagmamaneho ng motor
 
 ![Diagram ng aksidenteng nagpapakita ng ruta ng paglampas ng motorsiklo gayundin ng dalawang sasakyan sa unahan sa daang bundok](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-Sinubukan ni A na lampasan nang sabay ang dalawang sasakyan, kaya pumasok siya sa kabilang lane (對向車道) saka binilisan ang takbo. Naghahanda rin ang Sasakyan 2 na lampasan ang Sasakyan 1: wala pang isang segundo matapos buksan ang turn signal ay pumasok na ito sa kabilang lane. Kulang ang kaluwagan ng motorsiklo upang makapreno, kaya bumangga ito sa Sasakyan 2.
+Sinubukan ni A na lampasan nang sabay ang dalawang sasakyan, kaya pumasok siya sa kabilang lane (對向車道) saka binilisan ang takbo. Naghahanda rin ang Sasakyan 2 na lampasan ang Sasakyan 1: wala pang isang segundo matapos buksan ang senyas ng liko ay pumasok na ito sa kabilang lane. Kulang ang kaluwagan ng motorsiklo upang makapreno, kaya bumangga ito sa Sasakyan 2.
 
 Nagtamo si B ng malubhang pinsala sa ulo at namatay sa mismong pinangyarihan; nawalan naman ng malay si A saka dinala sa ospital.
 
-Sa simula ay pinaniwalaan ng mga pamilya nina A at B na ang biglaang paglipat ng lane ng Sasakyan 2 ang pangunahing sanhi ng banggaan. Umabot sa paglilitis ang usapin, at sa proseso nito ay ilang ulit na isinagawa ang pagsusuri ng eksperto (expert appraisal, 鑑定) hinggil sa aksidente.
+Sa simula ay pinaniwalaan ng mga pamilya nina A at B na ang biglaang paglipat ng lane ng Sasakyan 2 ang pangunahing sanhi ng banggaan. Umabot sa paglilitis ang usapin, at sa proseso nito ay ilang ulit na isinagawa ang pagsusuri ng eksperto (鑑定) hinggil sa aksidente.
 
 Ayon sa mga resulta ng appraisal, si A ang itinuring na pangunahing may pananagutan sa banggaang ito. Ang konklusyong iyon ay limitado lamang sa mga pangyayari ng kasong ito. Sabay-sabay na isinaalang-alang sa appraisal ang pagtatangka ni A na lampasan ang dalawang magkakasunod na sasakyan sa unahan, ang pagpasok niya sa kabilang lane, ang bilis na nag-iwan ng kakaunting kaluwagan upang makapreno, ang hindi paggawa ng itinakdang senyas ng busina o ng ilaw sa unahan, ang galaw ng Sasakyan 2 sa paglipat ng lane, ang ayos ng kalsada at ng mga lane, gayundin ang iba pang ebidensyang nakalap.
 

@@ -53,7 +53,7 @@ tidak membayar gaji (工資) pada masanya,
 
 tidak membayar kerja lebih masa (加班費),
 
-atau tidak menyertakan pekerja ke insurans buruh (勞保) atau insurans penyakit (健保).
+atau tidak menyertakan pekerja ke insurans buruh (勞保) atau insurans kesihatan nasional (健保).
 
 Dalam kes ini, walaupun pekerja menamatkan kontrak kerja secara biasa, majikan mesti membayarnya pampasan pemberhentian.
 

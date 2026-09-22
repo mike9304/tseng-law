@@ -73,7 +73,7 @@ Jika dibuka di tempat di mana premis restoran tidak mungkin, denda pentadbiran (
 
 Inilah intinya; bagi soalan lain, anda boleh menghantar pertanyaan melalui halaman Hubungi — tempoh jawapan tidak dijanjikan.
 
-Peraturan pihak berkuasa pentadbiran boleh berubah kerap; sebelum pendaftaran badan undang-undang, sesuai mengesahkan peraturan terbaharu.
+Peraturan pihak berkuasa pentadbiran boleh berubah kerap; sebelum pendaftaran badan undang-undang, sebaiknya sahkan peraturan terbaharu.
 
 ---
 

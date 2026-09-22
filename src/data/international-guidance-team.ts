@@ -221,7 +221,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     experienceLabel: 'Karanasan',
     photoAltPrefix: 'Larawan',
     workingLanguagesLabel: 'Mga wikang ginagamit sa trabaho',
-    fullProfileLabel: 'Buong profile (sa Ingles)',
+    fullProfileLabel: 'Buong talaan (sa Ingles)',
     keyFactsHeading: 'Abogadang Wei Tseng — Mahahalagang impormasyon',
     qualificationLabel: 'Kwalipikasyon at tanggapan',
     qualificationSentence:
@@ -2078,7 +2078,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-rongxuan': {
       intro: [
-        'Dating naglingkod sa Ministry of Education, Legal Affairs Division, nakatuon sa mga hidwaang administratibo at sibil.',
+        'Dating naglingkod sa Ministry of Education, Legal Affairs Division, nakatuon sa mga alitang administratibo at sibil.',
         'May karanasan sa mga usaping may kinalaman sa unibersidad, karapatan ng guro, at reklamong administratibo.',
       ],
       education: ['Batsilyer sa Batas (LL.B.), National Chung Hsing University'],
@@ -2089,8 +2089,8 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Beteranong paralegal na may maraming taóng karanasan bilang senior na paralegal sa ilang tanggapan ng abogado, sumasaklaw sa suporta sa litigasyon, gawaing legal na pangkorporasyon, at usapin ng dayuhang pamumuhunan.',
-        'Sumusuporta sa litigasyon, pagtatatag ng kompanya, pag-apruba ng dayuhang pamumuhunan, aplikasyon ng permiso, at komunikasyong Korea-Taiwan.',
+        'Paralegal na may mahabang karanasan bilang senior paralegal sa ilang tanggapan ng abogado, sumasaklaw sa suporta sa paglilitis, gawaing legal na pangkorporasyon, at usapin ng dayuhang pamumuhunan.',
+        'Sumusuporta sa paglilitis, pagtatatag ng kompanya, pag-apruba ng dayuhang pamumuhunan, aplikasyon ng permiso, at komunikasyong Korea-Taiwan.',
       ],
       education: ['Batsilyer sa Batas (LL.B.), Tunghai University'],
       experience: [
@@ -2101,19 +2101,19 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Inaayos ang iskedyul ng konsultasyon at ang pakikipag-ugnayan para sa mga kliyenteng Koreano.',
-        'Sinusuportahan ang komunikasyon sa pagitan ng mga koponan sa pamamagitan ng sistema ng dokumento at daloy ng trabaho, batay sa pinag-aralang agham pangkompyuter.',
+        'Sinusuportahan ang komunikasyon sa pagitan ng mga bahagi sa pamamagitan ng sistema ng dokumento at daloy ng trabaho, batay sa pinag-aralang agham pangkompyuter.',
       ],
       education: ['Batsilyer (B.S.) sa Agham Pangkompyuter, National Cheng Kung University'],
-      experience: ['Koponang Pangnegosyo sa Korea, Hovering International Law Firm'],
+      experience: ['Bahaging pangnegosyo para sa Korea, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'Natapos ang mga programang batsilyer at masterado sa akawnting sa National Chengchi University, at kasalukuyang namumuno sa isang tanggapan ng akawntant.',
+        'Natapos ang mga programang batsilyer at masterado sa accounting sa National Chengchi University, at kasalukuyang namumuno sa isang tanggapan ng CPA.',
         'Sumusuporta sa pinagsanib na pagsusuri ng panganib na legal, pambuwis, at pampinansiya para sa mga kliyenteng korporasyon.',
       ],
       education: [
-        'Masterado (M.A.) sa Akawnting, National Chengchi University',
-        'Batsilyer (B.A.) sa Akawnting, National Chengchi University',
+        'Masterado (M.A.) sa accounting, National Chengchi University',
+        'Batsilyer (B.A.) sa accounting, National Chengchi University',
       ],
       experience: ['Chinshin CPA Firm'],
     },

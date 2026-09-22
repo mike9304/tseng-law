@@ -2,7 +2,7 @@
 title: "Mga Eksepsiyon Kung Saan Makakakuha pa rin ng Separation Pay (資遣費) ang Empleyadong Kusang Nagbitiw"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
 lastmod: "2026-09-10"
-date_display: "Setyembre 13, 2025"
+date_display: "13 Setyembre 2025"
 read_time: "2 minutong pagbabasa"
 categories:
   - "Impormasyong Legal sa Taiwan"

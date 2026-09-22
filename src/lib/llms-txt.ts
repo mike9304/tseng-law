@@ -570,7 +570,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
   },
   fil: {
     consultationNotice:
-      'Nakasulat sa Filipino ang gabay na ito, ngunit ang konsultasyon sa abogado ay isinasagawa lamang sa Ingles, Tsino, Hapon, at Koreano.',
+      'Nakasulat sa Filipino ang gabay na ito, ngunit ang konsultasyon sa abogado ay isinasagawa lamang sa Ingles, Tsino (中文), Hapon, at Koreano.',
     discoveryNotice:
       'Mapa lamang ng mga pampublikong pahina ang llms.txt na ito; hindi ito nangangako ng ranggo sa paghahanap, pag-endorso, rekomendasyon ng AI, o garantisadong paglabas.',
     confidentialNotice:

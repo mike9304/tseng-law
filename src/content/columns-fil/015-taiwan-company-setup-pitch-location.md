@@ -1,5 +1,5 @@
 ---
-title: "Pagtatatag ng Kompanya sa Taiwan -Masusing Bahagi-3 Paghahanap ng Lugar ng Negosyo"
+title: "Pagtatatag ng Kompanya sa Taiwan — Masusing Bahagi 3 Paghahanap ng Lugar ng Negosyo"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
 lastmod: "2026-09-10"
 date_display: "Setyembre 13, 2025"
@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.jpg"
 ---
 
-# Pagtatatag ng Kompanya sa Taiwan -Masusing Bahagi-3 Paghahanap ng Lugar ng Negosyo
+# Pagtatatag ng Kompanya sa Taiwan — Masusing Bahagi 3 Paghahanap ng Lugar ng Negosyo
 
 ![Pangunahing larawan](../images/015-taiwan-company-setup-pitch-location/featured-01.jpg)
 
@@ -23,13 +23,13 @@ Bukod sa pagsasaalang-alang sa kalagayan ng pamilihan,
 
 isa pang mahalagang pagsasaalang-alang ay
 
-kung ang adres na iyon ay nasa lugar kung saan pinahihintulutang mag-operate ang "negosyong restawran".
+kung ang adres na iyon ay nasa lugar kung saan pinahihintulutang magpatakbo ng negosyong restawran.
 
 ​
 
 Kung sisimulan ninyo ang negosyo sa Lungsod ng Taipei,
 
-magagamit ninyo ang sistemang paunang pagsusuri sa lugar ng negosyo (營業場所預先查詢) ng Taipei City Department of Commerce (臺北市商業處).
+magagamit ninyo ang sistemang paunang pagsusuri sa lugar ng negosyo (營業場所預先查詢) ng Kagawaran ng Komersiyo ng Lungsod ng Taipei (臺北市商業處).
 
 <https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice>
 
@@ -37,11 +37,11 @@ magagamit ninyo ang sistemang paunang pagsusuri sa lugar ng negosyo (營業場�
 
 Masusuri ninyo nang walang bayad kung maaaring magbukas ng "negosyong restawran" sa adres na nais ninyo.
 
-Gayunman, sa paggawa ng paunang pagsusuri, kailangan ninyong i-upload ang "Type II building registration transcript" (建物登記第二類謄本, nakasaad dito ang detalyadong impormasyon tungkol sa gusaling iyon) ng adres ng lugar ng negosyo.
+Gayunman, sa paggawa ng paunang pagsusuri, kailangan ninyong i-upload ang "kopya ng rehistro ng gusali, ikalawang uri" (建物登記第二類謄本, nakasaad dito ang detalyadong impormasyon tungkol sa gusaling iyon) ng adres ng lugar ng negosyo.
 
-Sinuman ay maaaring mag-aplay ng "Type II building registration transcript" sa land office (地政事務所) para sa anumang adres.
+Sinuman ay maaaring mag-aplay ng "kopya ng rehistro ng gusali, ikalawang uri" sa tanggapan ng lupa (地政事務所) para sa anumang adres.
 
-Kung mahirap para sa inyo na personal na pumunta sa land office,
+Kung mahirap para sa inyo na personal na pumunta sa tanggapan ng lupa,
 
 maaari kayong humingi ng tulong sa kakilala ninyo sa Taiwan, sa kasero, sa ahente ng real estate, o sa isang abogada o abogado.
 
@@ -55,21 +55,21 @@ Kaya nga, mangyaring mag-ingat kayo!
 
 Inirerekomenda namin na gamitin ng lahat ng uri ng negosyo ang sistemang paunang pagsusuri sa lugar ng negosyo upang tiyakin kung pinahihintulutan ang operasyon.
 
-Gayunman, madalas na maraming business item ang inirerehistro kapag nagrerehistro ng kompanya, kaya malimit na nais irehistro nang sabay-sabay ang humigit-kumulang sampung business item.
+Gayunman, madalas na maraming rehistradong gawain ang inirerehistro kapag nagrerehistro ng kompanya, kaya malimit na nais irehistro nang sabay-sabay ang humigit-kumulang sampung rehistradong gawain.
 
-Kaya nga, sa katunayan ay hindi kailangang gawan ng paunang pagsusuri ang lahat ng business item kapag nagrerehistro ng kompanya.
+Kaya nga, sa katunayan ay hindi kailangang gawan ng paunang pagsusuri ang lahat ng rehistradong gawain kapag nagrerehistro ng kompanya.
 
 Ayon sa "[Mga Alituntunin sa Pagpapatakbo ng Serbisyong Tulong sa Pagsusuri ng Lugar ng Negosyo ng Lungsod ng Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) "(臺北市營業場所協助查詢服務作業須知) at ayon sa kasalukuyang paunawa ng Lungsod ng Taipei,
 
-mula Enero 1, 2023, ang aplikasyon para sa pagpaparehistro ng pagtatatag, paglipat ng lokasyon, o pagdaragdag ng business item ng kompanya o negosyo (kasama ang sangay ng kompanya (分公司) at tanggapang sangay (分支機構)) ay **kinakailangang** maglakip ng resulta ng paunang pagsusuri sa lugar ng negosyo, anuman ang business item.
+mula Enero 1, 2023, ang aplikasyon para sa pagpaparehistro ng pagtatatag, paglipat ng lokasyon, o pagdaragdag ng rehistradong gawain ng kompanya o negosyo (kasama ang sangay ng kompanya (分公司) at tanggapang sangay (分支機構)) ay **kinakailangang** maglakip ng resulta ng paunang pagsusuri sa lugar ng negosyo, anuman ang rehistradong gawain.
 
-Ang listahan ng "mga business item na kailangang unang itanong" (主動查詢之營業項目) sa ibaba ay ang mga item na kusang sinusuri ng Department of Commerce habang isinasagawa ang pagsusuri sa pagpaparehistro (隨案主動查詢) kapag nakasaad ang item na iyon sa aplikasyon ngunit wala ito sa nakalakip na resulta; hindi nangangahulugang hindi na kailangang suriin ang item na wala sa listahang ito.
+Ang listahan ng "mga rehistradong gawain na kailangang unang itanong" (主動查詢之營業項目) sa ibaba ay ang mga item na kusang sinusuri ng Pangasiwaan sa Pagpapaunlad ng Komersiyo habang isinasagawa ang pagsusuri sa pagpaparehistro (隨案主動查詢) kapag nakasaad ang item na iyon sa aplikasyon ngunit wala ito sa nakalakip na resulta; hindi nangangahulugang hindi na kailangang suriin ang item na wala sa listahang ito.
 
-Kung magbubukas sa lugar na hindi pinahihintulutan ang operasyon ng restawran, maaari kayong patawan sa hinaharap ng administrative fine (罰鍰) ng ahensiyang may hurisdiksiyon.
+Kung magbubukas sa lugar na hindi pinahihintulutan ang operasyon ng restawran, maaari kayong patawan sa hinaharap ng multa administratibo (罰鍰) ng ahensiyang may hurisdiksiyon.
 
-!["mga business item na kailangang unang itanong" (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
+!["mga rehistradong gawain na kailangang unang itanong" (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
-"mga business item na kailangang unang itanong" (主動查詢之營業項目)
+"mga rehistradong gawain na kailangang unang itanong" (主動查詢之營業項目)
 
 Hanggang dito ang gabay; kung mayroon pa kayong katanungan, maaari ninyo itong ipadala sa pahinang Makipag-ugnayan para sa isang abogada o abogado sa Taiwan; walang pangako sa panahon ng sagot.
 

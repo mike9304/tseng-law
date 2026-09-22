@@ -460,7 +460,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     guidanceNotice:
       'Nakasulat sa Filipino ang pahinang ito bilang pangkalahatang gabay. Hindi ito legal na payo para sa tiyak na usapin ninyo.',
     consultationNotice:
-      'Ang aktwal na konsultasyon ay isinasagawa lamang sa apat na wika: Ingles, Tsino, Hapon, at Koreano.',
+      'Ang aktwal na konsultasyon ay isinasagawa lamang sa apat na wika: Ingles, Tsino (中文), Hapon, at Koreano.',
     methodConfirmationNotice:
       'Kung wala sa apat na wikang iyon ang kaya ninyong gamitin, piliin ang “Kailangang kumpirmahin ang paraan ng pakikipag-ugnayan”. Sasagot kami upang kumpirmahin kung paano tayo makakapag-usap kung may posibleng paraan, ngunit hindi garantisado ang serbisyo sa ibang wika at walang pangako sa panahon ng pagsagot.',
     preparationNotice:
@@ -479,7 +479,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Hindi naipadala ang mensahe ninyo. Pakisubukan muli, o ipadala ito sa email address na nasa pahinang Makipag-ugnayan.',
     originalLanguageLabel: 'Wikang ginagamit ninyo sa pagsulat',
     originalLanguagePlaceholder:
-      'Halimbawa: Filipino, Vietnamese, Indonesian, Thai, o ibang wika',
+      'Halimbawa: Filipino, Biyetnames, Indones, Thai, o ibang wika',
     preferredConsultationLanguageLabel: 'Wikang nais ninyo para sa konsultasyon',
     originalTextLabel: 'Buod ng usapin ninyo (sa sarili ninyong wika)',
     originalTextPlaceholder:
@@ -487,8 +487,8 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     nameLabel: 'Pangalan',
     emailLabel: 'Email',
     consentLabel:
-      'Nabasa ko ang patakaran sa pribasiya at pumapayag akong ipadala ang mensaheng ito.',
-    privacyLinkLabel: 'Patakaran sa pribasiya',
+      'Nabasa ko ang patakaran sa pagkapribado at pumapayag akong ipadala ang mensaheng ito.',
+    privacyLinkLabel: 'Patakaran sa pagkapribado',
     requiredMessage: 'Kailangang punan ang bahaging ito.',
     invalidEmailMessage: 'Maglagay ng wastong email address.',
     tooLongMessage: 'Masyadong mahaba ang tekstong ito. Paikliin ninyo ito at ipadala muli.',

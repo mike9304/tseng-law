@@ -1,5 +1,5 @@
 ---
-title: "Pagtatatag ng Kompanya sa Taiwan -Masusing Bahagi-1"
+title: "Pagtatatag ng Kompanya sa Taiwan — Masusing Bahagi 1"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-advanced-1"
 lastmod: "2026-09-10"
 date_display: "Setyembre 13, 2025"
@@ -9,7 +9,7 @@ categories:
 featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg"
 ---
 
-# Pagtatatag ng Kompanya sa Taiwan -Masusing Bahagi-1
+# Pagtatatag ng Kompanya sa Taiwan — Masusing Bahagi 1
 
 ![Pangunahing larawan](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
@@ -29,19 +29,19 @@ Kapag ang isang dayuhan ay nagtatatag ng kompanya sa Taiwan, kailangan niyang ma
 
 Kailangan kasing tiyakin ng Kagawaran ng Pagsusuri ng Pamumuhunan kung talagang gagamitin sa layuning pamumuhunan ang kapital na iyon,
 
-at kung hindi ipinapasok ng dayuhang partido ang pondo sa ilalim ng ibang pangalan o layunin.
+at kung hindi ipinapasok ng dayuhang mamumuhunan ang pondo sa ilalim ng ibang pangalan o layunin.
 
 Sa pagsulat ng plano ng pamumuhunan, hindi kailangang ilagay ang eksaktong adres ng kompanya; sapat na ang pagtukoy sa lugar (halimbawa, Lungsod ng Taipei). ​
 
-Gayunman, kapag magbubukas na kayo ng preparatory office account (公司籌備處帳戶) ng kompanya sa bangko, marami sa mga bangko ang sumusuri sa kontrata sa upa (lease agreement, 租賃契約) at aktuwal na iniinspeksiyon sa lugar (on-site inspection) ang adres ng kompanya.
+Gayunman, kapag magbubukas na kayo ng account ng tanggapang naghahanda ng kompanya (公司籌備處帳戶) ng kompanya sa bangko, marami sa mga bangko ang sumusuri sa kontrata sa upa (lease agreement, 租賃契約) at aktuwal na iniinspeksiyon sa lugar ang adres ng kompanya.
 
 May isang empleyado ng bangko sa Taiwan na mismong nagsabi sa akin
 
-na lalong humihigpit ang pagbubukas ng account dahil kamakailan ay maraming dayuhan ang nagbukas ng account at pagkatapos ay tumakas.
+na lalong humihigpit ang pagbubukas ng account dahil kamakailan ay maraming dayuhan ang nagbukas ng account at pagkatapos ay hindi na nagparamdam.
 
 Sa naunang batayang bahagi, may isang mambabasang nagsabi na ang pagbubukas ng bank account ang pinakamahirap na yugto, at sang-ayon din ako roon.
 
-Dahil napakarami ng kaso ng money laundering (洗錢) sa Taiwan, lalo pang humihigpit ang pagbubukas ng bank account.
+Dahil napakarami ng kaso ng paghuhugas ng pera (洗錢) sa Taiwan, lalo pang humihigpit ang pagbubukas ng bank account.
 
 **Payo:**
 
@@ -49,11 +49,11 @@ Dahil nangangailangan din ng panahon ang pagsusuri sa plano ng pamumuhunan,
 
 sabay na isagawa ang paghahanda ng plano ng pamumuhunan at ang paghahanap ng adres para sa rehistro ng kompanya.
 
-Ayon sa Artikulo 9 ng Statute for Investment by Foreign Nationals (外國人投資條例), ang naaprubahang ambag na kapital ay dapat dumating nang buo sa loob ng panahong itinakda ng awtoridad (核定期限); kumpirmahin ang aktwal na takdang panahon sa indibidwal na dokumento ng pag-apruba (sa praktika ay madalas itong nasa palibot ng isang taon).
+Ayon sa Artikulo 9 ng Statute for Investment by Foreign Nationals (外國人投資條例), ang naaprubahang ambag na kapital ay dapat dumating nang buo sa loob ng panahong itinakda ng awtoridad (核定期限); kumpirmahin ang aktuwal na takdang panahon sa indibidwal na dokumento ng pag-apruba (sa praktika ay madalas itong humigit-kumulang isang taon).
 
-kaya matapos makahanap ng adres ng kompanya at makapagpirma ng kontrata sa upa,
+kaya may sapat kayong panahon upang humanap ng adres at pumirma ng upa,
 
-may sapat pa kayong panahon upang magbukas ng preparatory office account sa bangko at ipadala ang kapital.
+magbukas ng account sa bangko, at magpadala ng kapital.
 
 ​
 
@@ -87,7 +87,7 @@ Hinggil sa bahaging ito, mainam na kumonsulta kayo nang sapat sa isang abogada o
 
 **4. May dapat bang pag-ingatan kapag umuupa ng adres para sa rehistro ng kompanya (halimbawa, isang puwesto ng restawran)?**
 
-Umaabot ng humigit-kumulang **tatlong buwan** ang pagtatatag ng kompanya, at humigit-kumulang **isang buwan** pa ang pagkuha ng work permit (permit sa trabaho, 工作許可) at ng residence certificate (ARC),
+Umaabot ng humigit-kumulang **tatlong buwan** ang pagtatatag ng kompanya, at humigit-kumulang **isang buwan** pa ang pagkuha ng permiso sa trabaho (工作許可) at ng residence certificate (ARC),
 
 kaya itakda po ninyo sa pinakahuling posibleng araw ang petsa ng pagsisimula ng kontrata.
 
@@ -103,13 +103,13 @@ Kaya inirerekomenda kong maaga pa lamang ay maghanap na kayo ng lugar ng operasy
 
 Kung hindi maayos ang takbo ng negosasyon sa may-ari,
 
-maaari ninyong ialok, kung kinakailangan, ang notarization (公證) ng kontrata sa upa o ang pagbibigay ng karagdagang security deposit.
+maaari ninyong ialok, kung kinakailangan, ang pagpapanotaryo (公證) ng kontrata sa upa o ang pagbibigay ng karagdagang security deposit.
 
 ​
 
 **5. Maaari bang umupa ng karaniwang commercial office space (一般辦公室) kapag nagtatatag ng kompanya?**
 
-Depende ito sa mga business item (營業項目) ng kompanya.
+Depende ito sa mga rehistradong gawain (營業項目) ng kompanya.
 
 Halimbawa, kung ang rehistradong gawain (營業項目) ay pagkain at inumin (餐飲業) ngunit balak ninyong umupa ng commercial office space, magiging napakahirap ang pagbubukas ng bank account.
 
@@ -119,7 +119,7 @@ Bukod pa riyan, sa huling yugto ng rehistro ng kompanya, hinihingi rin ng pamaha
 
 at kung commercial office space ito, hindi magiging posible ang rehistro ng kompanya.
 
-Halimbawa, kung ang mga business item ay maaaring isagawa sa commercial office space, gaya ng negosyo sa advertising o ng pakyawang kalakalan, maaaring itatag doon ang kompanya.
+Halimbawa, kung ang mga rehistradong gawain ay maaaring isagawa sa commercial office space, gaya ng negosyo sa advertising o ng pakyawang kalakalan, maaaring itatag doon ang kompanya.
 
 Bago pumirma ng kontrata sa upa, tiyakin ninyo ito nang maaga.
 

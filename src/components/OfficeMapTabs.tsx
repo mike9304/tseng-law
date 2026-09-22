@@ -193,7 +193,7 @@ export default function OfficeMapTabs({
   return (
     <section
       className={sectionClass}
-      id={id}
+      id={id || undefined}
       data-tone={tone}
       data-guidance-offices={guidance ? 'true' : undefined}
     >

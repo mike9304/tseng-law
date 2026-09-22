@@ -24,4 +24,13 @@ describe('Header guidance mobile-toggle aria-label', () => {
     expect(html).toContain(`href="#main">${pack.skipLink}</a>`);
     expect(html).not.toContain(`<span hidden>${pack.menuLabel}</span>`);
   });
+
+  it('marks the same services link current on the public path and the rewrite', () => {
+    navigationState.pathname = '/vi/services';
+    const browser = renderToStaticMarkup(<Header locale="vi" />);
+    navigationState.pathname = '/vi/__public-guidance/services';
+    const rewritten = renderToStaticMarkup(<Header locale="vi" />);
+    expect(rewritten).toBe(browser);
+    expect(browser).toContain('aria-current="page" href="/vi/services"');
+  });
 });

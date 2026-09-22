@@ -224,6 +224,15 @@ export default function CompositeRender({
   const interactive = mode !== 'edit';
   const fallbackCopy = compositeFallbackCopy(locale);
   const publishEditorial = mode === 'published' && homeEditorialPresentation === 'editorial';
+  // Desktop zh-hant roots already emit these landmark ids. The mobile-parity
+  // overlays stay in the document for the narrow layout, but they must not
+  // repeat the id. Services and case results are the opposite: the desktop
+  // roots are hidden and the overlay is the visible owner of the id.
+  const suppressDuplicateLandmarkId = mode === 'published'
+    && typeof node.anchorName === 'string'
+    && node.anchorName.startsWith('mobile-parity-home-')
+    && node.anchorName !== 'mobile-parity-home-services'
+    && node.anchorName !== 'mobile-parity-home-case-results';
 
   const body = (() => {
     switch (componentKey) {
@@ -237,6 +246,7 @@ export default function CompositeRender({
             headingLevel={1}
             presentation={publishEditorial ? 'editorial' : undefined}
             quickMenus={publishedHeroQuickMenus}
+            omitLandmarkId={suppressDuplicateLandmarkId}
           />
         );
       case 'services-bento':
@@ -248,7 +258,7 @@ export default function CompositeRender({
           />
         );
       case 'home-contact-cta':
-        return <HomeContactCta locale={locale} />;
+        return <HomeContactCta locale={locale} omitLandmarkId={suppressDuplicateLandmarkId} />;
       case 'insights-archive': {
         const posts = resolveInsightsPosts(locale, effectiveDatasetPreviewTargets, columnPosts, mode);
         if (posts.length === 0) {
@@ -263,6 +273,7 @@ export default function CompositeRender({
             locale={locale}
             posts={posts}
             presentation={publishEditorial ? 'editorial' : undefined}
+            omitLandmarkId={suppressDuplicateLandmarkId}
           />
         );
       }
@@ -271,18 +282,19 @@ export default function CompositeRender({
           <HomeAttorneySplit
             locale={locale}
             presentation={publishEditorial ? 'editorial' : undefined}
+            omitLandmarkId={suppressDuplicateLandmarkId}
           />
         );
       case 'home-case-results':
         return <HomeCaseResultsSplit locale={locale} />;
       case 'home-stats':
-        return <HomeStatsSection locale={locale} />;
+        return <HomeStatsSection locale={locale} omitLandmarkId={suppressDuplicateLandmarkId} />;
       case 'faq-accordion':
         return (
           <FAQAccordion
             locale={locale}
             items={faqContent[locale]}
-            id="faq"
+            id={suppressDuplicateLandmarkId ? undefined : 'faq'}
             sectionClassName="section section--gray"
           />
         );
@@ -290,7 +302,7 @@ export default function CompositeRender({
         return (
           <OfficeMapTabs
             locale={locale}
-            id="offices"
+            id={suppressDuplicateLandmarkId ? '' : 'offices'}
             sectionClassName="section section--light"
             presentation={publishEditorial ? 'editorial' : undefined}
           />

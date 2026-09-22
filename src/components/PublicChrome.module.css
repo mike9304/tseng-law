@@ -95,6 +95,10 @@
   visibility: hidden;
   pointer-events: none;
   user-select: none;
+  /* scrollWidth still measures the full row. scale(0) keeps that hidden
+     consultation label from reporting a box past the viewport. */
+  transform: scale(0);
+  transform-origin: 0 0;
 }
 
 .contentFitProbeLogo,
@@ -352,10 +356,6 @@
     display: none;
   }
 
-  .header:global(.header)[data-public-site-header][data-header-content-fit='compact'] .headerUtility:global(.header-utility) {
-    display: none;
-  }
-
   .header:global(.header)[data-public-site-header][data-header-content-fit='compact'] :global(.mega-menu),
   .header:global(.header)[data-public-site-header][data-header-content-fit='compact'] :global(.mega-overlay) {
     display: none;
@@ -396,15 +396,34 @@
   }
 
   .header:global(.header)[data-public-site-header][data-header-content-fit='compact'] .headerActions:global(.header-actions) {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: calc(100% - 3.5rem);
     margin-left: auto;
     margin-right: 0;
     gap: 0.45rem;
   }
 
-  .header:global(.header)[data-public-site-header][data-header-content-fit='compact'] .headerActions :global(.nav-cta),
-  .header:global(.header)[data-public-site-header][data-header-content-fit='compact'] .headerActions :global(.button) {
-    display: none;
+  .header:global(.header)[data-public-site-header][data-header-content-fit='compact'] .headerActions :global(.nav-cta) {
+    display: inline-flex;
+    max-width: 100%;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: center;
+    line-height: 1.25;
+    padding-block: 0.4rem;
+  }
+
+  html[dir='rtl'] .header:global(.header)[data-public-site-header][data-header-content-fit='compact'] .headerActions :global(.nav-cta) {
+    display: inline-flex;
+  }
+
+  html[dir='rtl'] .header:global(.header)[data-public-site-header][data-header-content-fit='compact'] .headerActions:global(.header-actions) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-inline-start: auto;
+    margin-inline-end: 0;
   }
 
   .header:global(.header)[data-public-site-header][data-header-content-fit='compact'] .menuToggle:global(.mobile-toggle) {

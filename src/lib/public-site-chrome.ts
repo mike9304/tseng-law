@@ -96,11 +96,13 @@ export function guidanceHeaderNavItems(
 ): Array<{ key: string; label: string; href: string }> {
   if (!isGuidanceLocale4(locale)) return [];
   const pack = guidanceContent[locale];
-  return GUIDANCE_HEADER_NAV_KEYS.map((key) => ({
-    key,
-    label: pack.nav[key],
-    href: guidancePublicPath(locale, key),
-  }));
+  const seen = new Set<string>();
+  return GUIDANCE_HEADER_NAV_KEYS.flatMap((key) => {
+    const href = guidancePublicPath(locale, key);
+    if (seen.has(href)) return [];
+    seen.add(href);
+    return [{ key, label: pack.nav[key], href }];
+  });
 }
 
 /**

@@ -21,7 +21,13 @@ const emailConsultationLabels: Record<SiteLocale, string> = {
   ja: 'メール相談',
 };
 
-export default function HomeContactCta({ locale }: { locale: SiteLocale }) {
+export default function HomeContactCta({
+  locale,
+  omitLandmarkId = false,
+}: {
+  locale: SiteLocale;
+  omitLandmarkId?: boolean;
+}) {
   const content = siteContent[locale];
   const contact = content.contact;
   const consultationEmail = getConsultationPublicEmail();
@@ -31,7 +37,7 @@ export default function HomeContactCta({ locale }: { locale: SiteLocale }) {
   const ai = getAiIntakeDiscovery(locale);
 
   return (
-    <section className={`section section--dark home-contact-cta ${styles.homeCta}`} id="contact" data-tone="dark">
+    <section className={`section section--dark home-contact-cta ${styles.homeCta}`} id={omitLandmarkId ? undefined : 'contact'} data-tone="dark">
       <div className="container">
         <div data-builder-node-key="copy">
           <div className="section-label" data-builder-surface-key={homeContactTextSurfaceIds[0]}>

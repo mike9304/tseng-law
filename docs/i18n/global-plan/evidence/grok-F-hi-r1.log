@@ -1,0 +1,92 @@
+WO-F-hi — Grok 4.7 fix lane, campaign round 1
+workspace: /Users/son7/Projects/tseng-law-fix-hi-r1
+date: 2026-09-22
+scope: Hindi guidance pack (hindiGuidanceContent, team hi roles/bios, inquiry hi) + columns-hi 001–018. No commit. llms-txt hi, offices hi, and answers hi were already consultation-locked and were not rewritten. No other locale’s strings were edited.
+
+## Rows applied
+Part a P1: a#1–a#9. a#1 uses निचली अदालत (प्रथम न्यायालय), the same term as part b, rather than the suggested प्रथम दृष्टांत.
+Part a P2: a#10–a#16, a#18–a#28, a#31–a#37, a#39–a#48, a#50–a#52. a#30 applied for roles and government offices only (see skipped). a#46 and a#49 rephrased inside the existing blocks (see skipped).
+Part b P1: b#1–b#8.
+Part b P2: b#9–b#22, b#25–b#37. b#14 keeps the digit 1 गुना. b#23 rephrased each fragment inside its own paragraph.
+R2: 004 and 005 no longer send an India reader to Korean accounting, tax, or source-of-funds rules as if those were the reader’s law; Korea stays a labelled example. The 001 and 004 §6 country-note sentences, the 006 “तुलना के लिए एक उदाहरण — कोरिया” label, and the 007 family neutralization were already in the files and were left.
+R3: 003 prison-month, suspended-sentence, and compensation sentences were already softened. 008 and 009 outcome comparisons were rewritten in the flagged rows. The bio fact stays TWD 1,570,000.
+R4: Wei Tseng stays feminine (उन्होंने, छात्रा, थी). The 008 letter uses an infinitive so it does not assign her gender; client B stays male. The 010 student stays male.
+R5: team label was already हमारी टीम, offices already कार्यालय, full profile already पूर्ण प्रोफ़ाइल (अंग्रेज़ी में).
+R6: 003 running dates 2026-05-29 and 2026-07-01 are 29 मई 2026 and 1 जुलाई 2026. Thousands stay Western commas (checker hi style).
+R7 / R7b: 003 sign-off rephrased inside the block. 007 and house-title openings are self-standing sentences. 013 and 015 comma-fragments are full sentences inside the same paragraphs.
+R8 sweeps that match a flagged row: see systemic counts. 011 अनुच्छेद 7, उपधारा 1, संख्या 7 is उपखंड 7. 拘役 was already अल्पावधि कारावास. Filing-sense प्रस्तुति (a court filing) was left; insurance 給付 प्रस्तुति was not.
+R9: Taiwan 119 / 110 / 112 was already explicit in 003.
+R10: formal आप was already the register.
+
+## Rows skipped or modified
+- a#17 (add 著作權 on कॉपीराइट): skipped. guidance-disclosure-parity requires hi to annotate the same Chinese-character set as vi on that surface. The sentence already has 商標 and 專利. Adding 著作權 made that test fail, and the work order allows a test edit only when the test pins a Hindi string that changed.
+- a#29 (lakh grouping, TWD 15,70,000 and the same request for column amounts): skipped. ACCEPTED-ROUND and R14: the checker’s hi number style is a Western comma. The bio keeps TWD 1,570,000. The pinned token TWD 1.57M is not in the Hindi bio.
+- a#30 proper names: Trend Law Office, Boyin, Muyang, Chinshin, Hovering, and the university names stay Latin (ACCEPTED). Paralegal, Senior Paralegal, Legal Aid Foundation Taichung Branch, Institute of Finance, and Ministry of Education Legal Affairs Division are translated with the English name kept contiguous in parentheses.
+- a#38: did not turn Q16–Q20 into ## headings and did not delete U+200B lines. checkBlocks requires the same zero-width-space count as the English source, and ACCEPTED forbids new headings. The sign-off itself is a#39 and was rephrased.
+- a#49: did not delete the कठिनाई table row. The three cells now say the claim depends on conditions and states no fixed result. The row stayed.
+- b#14 suggested wording dropped the digit 1. The checker then reported numbers FAIL, missing 1. The sentence keeps अधिकतम 1 गुना.
+- b#23: did not merge the comma-fragment paragraphs in 013 or 015. Each block is now a full sentence.
+- b#24: did not delete U+200B or the lines that contain only that character.
+- Company-law अंग (shareholder organs, board organs, अंश पारिश्रमिक for organs and staff) was left. That is the corporate organ, not a government 機關.
+- 011 संग्रह where it means compiling or keeping the PIF dossier (title निर्माण-संग्रह, heading अद्यतन और संग्रह) was left. संग्रह स्थान and संग्रह अवधि, which mean storage location and retention period, were changed.
+- मातृ कंपनी was left. The reviewer’s own rewrite uses it, and R8’s “parent company” is that word in Hindi.
+- Frontmatter url Hangul: not present as a change request on a rendered string; urls were not edited.
+- FAQ question क्या हिंदी में परामर्श संभव है? was not changed, so the pinned guidance test was not edited.
+
+## Systemic patterns and instance counts
+Counts are occurrences removed from the diff, plus the later अंग pass.
+- read_time “N मिनट का पाठ” → “N मिनट में पढ़ें”: 18/18 columns. Zero “मिनट का पाठ” remain.
+- उपविधि → अंतर्नियम: 14 (002 and 004). Zero उपविधि remain.
+- प्रथम दृष्टया → प्रथम न्यायालय: 12 (010 captions, body, links, and the bio). Zero प्रथम दृष्टया remain.
+- 經濟部 name unified to आर्थिक मामले मंत्रालय: अर्थव्यवस्था मंत्रालय 5, अर्थ मंत्रालय 1, आर्थिक मंत्रालय 10. Zero of the three old names remain.
+- संग्रह स्थान → भंडारण स्थान: 4. संग्रह अवधि → प्रतिधारण अवधि: 3. Zero of those two phrases remain.
+- अवैध कृत्य → अपकृत्य: 4 (guidance and 004).
+- मध्यस्थता → सुलह where the Chinese is 調解: 22 removals of मध्यस्थता. The 001 intermediary-service sense became मध्यस्थ सेवा, not सुलह.
+- व्यवसाय शाखा/शाखाएँ (所營事業) → व्यवसाय मदें/मदों: 5.
+- बिना कारण समृद्धि → अन्यायपूर्ण समृद्धि: 4 (glossed and bare).
+- अ-संपत्ति → गैर-आर्थिक: 2.
+- Insurance प्रस्तुति (給付) → लाभ: 10 removals; 3 filing-sense प्रस्तुति remain on rewritten lines.
+- Government 機關 as अंग → प्राधिकरण or कार्यालय: 18 on the first pass, plus 6 later (003 the authority that sends the case; 007 administrative authority, related authority, and persons and authorities; 016 competent authority and persons and authorities).
+- अध्यादेश (外國人投資條例) → विदेशी नागरिकों के निवेश की संविधि: 2 (013 and 017).
+- चीन महाद्वीप → मुख्यभूमि क्षेत्र: 2.
+- दोष कवर / दोष निपटान → वारंटी / वारंटी निपटान: 1 + 2 (018). गारंटी was not introduced.
+- Paralegal role lines translated with the English gloss kept: the hi role, the Fang-Yu intro, and two Senior Paralegal experience lines. Other locales’ Paralegal strings were not touched.
+
+## §Verify
+node scripts/check-column-translation.mjs --dir src/content/columns-hi --lang hi 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=71
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-hi src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      24
+
+(The count 24 is before this log file. It includes the pre-existing WO-F-hi.txt modification and the untracked hi-a.md / hi-b.md, plus the 21 Hindi source files edited in this lane.)
+
+Checker WARNs, not in tail -8, and not failures: Korean lexical numerals (제1항, 제3자, and the same class) are the R11 warning and were not given a new digit. extra in translation: 2023 (007, the pre-existing ROC gloss ई. 2023), 2020 (010, pre-existing ई. 2020), and 2×2 (015, pre-existing). Those digits were already in the files.
+
+## Reviewer points not applied
+- a#29 lakh/crore grouping. The checker parses hi amounts only with a Western comma. Part b’s own verdict already says the Western comma is not a fix row because the digits match the English. ACCEPTED-ROUND says the same.
+- a#1 suggested प्रथम दृष्टांत. That is a weaker label than the first-instance court. Part b’s term, प्रथम न्यायालय, is used in the column and the bio.
+- a#17 著作權. The gloss is the right Traditional Chinese for copyright, and trademark and patent on the same sentence already have theirs. Adding it is the one character vi does not annotate on that surface, so the four-language disclosure test fails. It was not added, and the test was not edited.
+- a#38 and b#24: deleting U+200B, or promoting Q16–Q20 to headings, fails the block check. The visible prose was rephrased; the invisible characters stayed.
+- a#49: deleting the difficulty row changes the table. The cells were rewritten so they do not say the claim is easy.
+- b#23: merging the 013/015 fragments changes the block count. Each paragraph was completed in place.
+- a#46’s diagnosis that “सदैव नहीं” answers nothing. The FAQ heading is a yes/no question, so that opening does answer it. The section body, whose heading is not that question, was the real problem. Both the FAQ answer and the section body were still made self-standing.
+- a#30’s list of English firm and university names. ACCEPTED keeps those proper names in Latin. Roles and the government offices were translated, with the English name left in parentheses.
+- b#14’s punitive-damages sentence without the digit 1. The checker counts that 1 against the English source, so 1 गुना stays.

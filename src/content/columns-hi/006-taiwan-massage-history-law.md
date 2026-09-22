@@ -3,7 +3,7 @@ title: "ताइवान में मालिश का इतिहास �
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
 lastmod: "2025-09-13"
 date_display: "13 सितंबर 2025"
-read_time: "3 मिनट का पाठ"
+read_time: "3 मिनट में पढ़ें"
 categories:
   - "ताइवान कानूनी जानकारी"
 featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"

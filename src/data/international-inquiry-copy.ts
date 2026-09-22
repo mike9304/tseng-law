@@ -1153,7 +1153,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'जापानी (日本語)',
       ko: 'कोरियाई (한국어)',
       'needs-method-confirmation':
-        'चार भाषाओं में से कोई उपयोगी नहीं — संचार मार्ग की पुष्टि आवश्यक है',
+        'चारों में से कोई भाषा मैं उपयोग नहीं कर सकता/सकती — संचार मार्ग की पुष्टि आवश्यक है',
     },
   },
   sv: {

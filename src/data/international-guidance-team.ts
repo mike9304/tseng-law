@@ -595,7 +595,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     roles: {
       'tseng-junwei': 'ताइवान में प्रबंध अधिवक्ता (Managing Attorney)',
       'chang-rongxuan': 'ताइवान अधिवक्ता (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
+      'chang-fangyu': 'विधि सहायक (Paralegal)',
       'son-jungmin': 'कोरिया संचालन प्रबंधन (Korea Operations Manager)',
       'huang-shengping': 'साझेदार लेखाकार (Partner CPA)',
     },
@@ -2830,39 +2830,39 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'कार्यालय ताइवान में उद्यमों और व्यक्तियों के मामलों का अंग्रेज़ी, जापानी, कोरियाई और चीनी में कार्य करता है।',
-        'उन्होंने जिम में लगी चोट के हर्जाने के एक दावे में कोरियाई छात्र का प्रतिनिधित्व किया और प्रथम दृष्टया न्यायालय (निचली अदालत) से TWD 1,570,000 का निर्णय दिलाया।',
+        'उन्होंने जिम में लगी चोट के हर्जाने के एक दावे में कोरियाई छात्र का प्रतिनिधित्व किया और निचली अदालत (प्रथम न्यायालय) से TWD 1,570,000 का निर्णय दिलाया।',
       ],
       education: [
-        'स्नातकोत्तर (M.S.), Institute of Finance, National Taiwan University',
-        'स्नातक (B.A.) विधि और वित्त के दोहरे पथ के साथ, National Chengchi University',
+        'स्नातकोत्तर (M.S.), वित्त संस्थान (Institute of Finance, National Taiwan University)',
+        'विधि और वित्त, दोनों विषयों में स्नातक (B.A.), National Chengchi University',
         'Kobe University और Waseda University में विनिमय छात्रा',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'ताइचुंग शाखा, विधिक सहायता प्रतिष्ठान (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'पहले Ministry of Education, Legal Affairs Division में, प्रशासनिक और दीवानी मामलों पर ध्यान के साथ।',
+        'इससे पहले शिक्षा मंत्रालय, विधि प्रभाग (Ministry of Education, Legal Affairs Division) में कार्य किया, प्रशासनिक और दीवानी मामलों पर ध्यान के साथ।',
         'विश्वविद्यालयों, शिक्षण कर्मचारियों के अधिकारों और प्रशासनिक अपीलों से जुड़े मामलों का अनुभव।',
       ],
       education: ['विधि स्नातक (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'शिक्षा मंत्रालय, विधि प्रभाग (Ministry of Education, Legal Affairs Division)',
         'अधिवक्ता, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal जिन्होंने कई कार्यालयों में वरिष्ठ paralegal के रूप में लंबे समय तक कार्य किया, प्रक्रिया सहायता, कंपनी विधि और विदेशी निवेश के लिए उत्तरदायी।',
+        'विधि सहायक (पैरालीगल) जिन्होंने कई कार्यालयों में वरिष्ठ विधि सहायक के रूप में लंबे समय तक कार्य किया, मुकदमे की सहायता, कंपनी विधि और विदेशी निवेश के लिए उत्तरदायी।',
         'कार्यवाही, कंपनी स्थापना, विदेशी निवेश अनुमति, लाइसेंस आवेदन तथा कोरिया और ताइवान के बीच आदान-प्रदान में सहायता।',
       ],
       education: ['विधि स्नातक (LL.B.), Tunghai University'],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'वरिष्ठ विधि सहायक (Senior Paralegal), Boyin Law Firm',
+        'वरिष्ठ विधि सहायक (Senior Paralegal), Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
@@ -2876,7 +2876,7 @@ export const guidanceTeamBios: Record<
     'huang-shengping': {
       intro: [
         'National Chengchi University से लेखा में स्नातक और स्नातकोत्तर कार्यक्रम पूरे किए और वर्तमान में एक लेखा कार्यालय का नेतृत्व करते हैं।',
-        'उद्यमी मुवक्किलों के लिए कानूनी, कर और वित्तीय जोखिमों का एकीकृत विश्लेषण समर्थन करते हैं।',
+        'उद्यमी मुवक्किलों के लिए कानूनी, कर और वित्तीय जोखिमों के एकीकृत विश्लेषण में सहायता करते हैं।',
       ],
       education: [
         'स्नातकोत्तर (M.A.) लेखा, National Chengchi University',

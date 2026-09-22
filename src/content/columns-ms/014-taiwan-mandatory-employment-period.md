@@ -55,7 +55,7 @@ Program, jadual latihan, senarai kehadiran, hasil penilaian, perakuan penyempurn
 
 Had antara penyesuaian kerja umum dan latihan teknikal khusus tidak dibahagi hanya menurut tempat latihan atau menurut siapa yang mengaturnya. Kursus dalaman boleh menubuhkan kandungan profesional dan teknikal konkret dan pelaburan yang ketara, dan kursus panjang pusat luaran boleh, pada hakikatnya, menjadi latihan pengenalan umum. Maka jangan dikecualikan secara seragam semua latihan dalaman mahupun diakui syarat berkanun hanya kerana kursus mahal atau panjang.
 
-Perlu juga dapat dijelaskan hubungan antara tempoh yang dipersetujui dan pelaburan latihan. Kemahiran apa yang diperoleh, hubungan apa kemahiran ini dengan jawatan destinasi dan mengapa tempoh kerja yang dicadangkan diperlukan menghadapi tempoh dan kos latihan diteliti secara individu. Jika, selepas tamatnya latihan, kerja ini benar-benar dijalankan dan tempoh yang sudah bekerja juga ialah dokumen untuk menilai skop beban.
+Perlu juga dapat dijelaskan hubungan antara tempoh yang dipersetujui dan pelaburan latihan. Nilai secara individu kemahiran yang latihan itu bertujuan membentuk, kaitannya dengan jawatan berkenaan, dan mengapa tempoh kerja yang dicadangkan diperlukan memandangkan tempoh serta kos latihan. Sama ada pekerja benar-benar menjalankan kerja itu selepas latihan, dan berapa lama ia sudah berkhidmat, turut menjadi asas untuk menilai skop beban.
 
 ## 3. Syarat berkanun kedua: balasan munasabah
 
@@ -78,7 +78,7 @@ Walaupun wujud salah satu syarat berkanun, tempoh yang dipersetujui dan tanggung
 3. Jumlah dan skop balasan
 4. Keadaan lain yang mempengaruhi kemunasabahan
 
-Dalam faktor pertama, dilihat berapa lama latihan benar-benar berlangsung dan berapa majikan menanggung. Tidak cukup membentangkan jumlah; sesuai mengesahkan bersama justifikasi menurut pos, jumlah yang dikaitkan kepada setiap pekerja, kemahiran yang latihan sediakan dan bahagian pelaburan yang sudah dipulihkan.
+Dalam faktor pertama, dilihat berapa lama latihan benar-benar berlangsung dan berapa majikan menanggung. Tidak cukup membentangkan jumlah; sebaiknya sahkan bersama justifikasi menurut pos, jumlah yang dikaitkan kepada setiap pekerja, kemahiran yang latihan sediakan dan bahagian pelaburan yang sudah dipulihkan.
 
 Faktor kedua, kemungkinan penggantian, tidak ditetapkan hanya dengan dakwaan majikan mengenai kesukaran pengambilan. Disemak sama ada mungkin memperoleh kakitangan jawatan yang sama atau jawatan serupa, kelayakan dan tahap kepakaran apa yang diperlukan, berapa tempoh liputan biasa dan sama ada keperluan operasi yang didakwa majikan sepadan dengan dokumen objektif.
 
@@ -86,7 +86,7 @@ Faktor ketiga melihat bukan sahaja jumlah balasan, tetapi juga skop. Penting bil
 
 Faktor keempat boleh merangkumi pelbagai keadaan yang mempengaruhi kemunasabahan, seperti perjalanan pemeteraian perjanjian, sifat kerja, apa yang dijelaskan kepada pihak, tempoh yang benar-benar bekerja dan sebab terhapus. Kepentingan setiap faktor boleh berbeza menurut kes, dan keadaan yang perlu dipertimbangkan tidak terhad kepada contoh terdahulu. Maka perlu diteliti tanpa meninggalkan fakta relevan yang muncul dalam fail.
 
-Akhirnya, perlu hubungan perkadaran yang boleh difahami antara tempoh yang dipersetujui, pelaburan sebenar majikan, kesukaran penggantian, balasan yang pekerja terima dan beban pemulangan. Jangan tetapkan terlebih dahulu kesahan hanya kerana ia profesion tertentu mahupun terapkan begitu sahaja kesimpulan kes lain. Perlu dilihat bersama reka bentuk saat pemeteraian kontrak dan darjah penyempurnaan sebenar pada saat terhapus.
+Akhirnya, perlu wujud hubungan perkadaran yang munasabah antara tempoh yang dipersetujui, pelaburan sebenar majikan, kesukaran penggantian, balasan yang pekerja terima dan beban pemulangan. Jangan tetapkan terlebih dahulu kesahan hanya kerana ia profesion tertentu mahupun terapkan begitu sahaja kesimpulan kes lain. Perlu dilihat bersama reka bentuk saat pemeteraian kontrak dan darjah penyempurnaan sebenar pada saat terhapus.
 
 ## 5. Latihan yang tidak boleh mendasarkan perjanjian
 
@@ -172,7 +172,7 @@ Walaupun digunakan kontrak jenis, jangan diterapkan secara mekanikal tempoh yang
 7. Diteliti secara berasingan kesahan perjanjian tempoh kerja minimum, pernyataan peletakan jawatan dan notis, pemulangan kos latihan dan bayaran pendahuluan, dan kerugian yang didakwa secara berasingan.
 8. Tidak diakui tanggungjawab hanya kerana telah menandatangani atau kerana majikan menuntut jumlah tertentu; disahkan bukti yang sepadan dengan syarat berkanun, kemunasabahan, pengaitan terhapus dan formula berkadar perkara 15-1.
 
-Dengan menyusun dokumen dalam tertib masa, sesuai menyatakan bersama tarikh pemeteraian kontrak, tarikh mula dan tamat latihan, setiap tarikh bayaran, tarikh mula dan tamat kerja dan tarikh penghantaran pemberitahuan. Jika sebahagian dokumen hanya dipegang majikan, disusun dahulu dokumen sendiri dan asas pengiraan jumlah yang dituntut, dan dokumen tambahan disahkan menurut prosedur yang diperlukan.
+Dengan menyusun dokumen dalam tertib masa, sebaiknya nyatakan bersama tarikh pemeteraian kontrak, tarikh mula dan tamat latihan, setiap tarikh bayaran, tarikh mula dan tamat kerja dan tarikh penghantaran pemberitahuan. Jika sebahagian dokumen hanya dipegang majikan, disusun dahulu dokumen sendiri dan asas pengiraan jumlah yang dituntut, dan dokumen tambahan disahkan menurut prosedur yang diperlukan.
 
 ## 10. Sumber rasmi
 
@@ -189,6 +189,6 @@ Dengan menyusun dokumen dalam tertib masa, sesuai menyatakan bersama tarikh peme
 
 ---
 
-Teks ini ialah dokumen bertujuan pendidikan untuk menjelaskan secara umum perjanjian tempoh kerja minimum di Taiwan, pemulangan kos latihan dan bayaran pendahuluan serta notis peletakan jawatan; ini bukan nasihat undang-undang untuk kes kerja konkret. Kesahan perjanjian dan skop tanggungjawab boleh berbeza menurut jenis dan kandungan kontrak, latihan dan kos sebenar, tujuan balasan dan komunikasinya, tempoh kerja, sebab terhapus dan bukti. Sebelum merumuskan peletakan jawatan, menerima potongan gaji, bersetuju pemulangan atau menjawab pertikaian, sesuai mengesahkan sumber rasmi terbaharu dan keadaan individu.
+Teks ini ialah dokumen bertujuan pendidikan untuk menjelaskan secara umum perjanjian tempoh kerja minimum di Taiwan, pemulangan kos latihan dan bayaran pendahuluan serta notis peletakan jawatan; ini bukan nasihat undang-undang untuk kes kerja konkret. Kesahan perjanjian dan skop tanggungjawab boleh berbeza menurut jenis dan kandungan kontrak, latihan dan kos sebenar, tujuan balasan dan komunikasinya, tempoh kerja, sebab terhapus dan bukti. Sebelum merumuskan peletakan jawatan, menerima potongan gaji, bersetuju pemulangan atau menjawab pertikaian, sebaiknya sahkan sumber rasmi terbaharu dan keadaan individu.
 
 **Wei Tseng (曾雋崴), peguam di Taiwan**

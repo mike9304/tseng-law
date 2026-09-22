@@ -1,0 +1,133 @@
+WO-F-ms r2 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-ms-r2
+date: 2026-09-22
+scope: Malay columns 001–018 and the `ms` guidance strings in international-guidance-asia.ts. No commit. llms-txt and inquiry-copy had no accepted row. Tests did not pin any rewritten Malay string, so no test file was edited.
+
+## Rows applied
+
+ms-a (28 rows; 26 applied)
+1 P1 003 sentencing. “bukan hasil yang lazim” reversed the English (courts currently generally impose about 3 / 4 / 6 months). Both sentences now say the courts generally impose about that term, and that the figure is not a promised outcome for the reader’s case. Digits 3, 4, 6 kept. 過失致死 gloss kept.
+2 P1 有限公司 / 股份有限公司. “syarikat berhad” is a Malaysian public company (Berhad). Swept to “syarikat liabiliti terhad (有限公司)” and “syarikat saham (股份有限公司)”. 13 term instances: 001×2 (one sentence), 002×8, 004×3. 018 already used “syarikat saham”.
+3 P1 004 link label. Visible name was Business Tax Act Article 10 (營業稅法). URL `pcode=G0340028&flno=3` is the Standards of Withholding Rates, Article 3. Label is now “Standard kadar cukai pegangan pelbagai jenis pendapatan (各類所得扣繳率標準), perkara 3 — dividen bagi bukan pemastautin (siling 10%)”. URL unchanged. The parenthetical “siling 10%” keeps the digit the checker counts from Korean “제10조”; without a 10 the numbers check FAILs. The 10% is the treaty ceiling already stated in the article, not the article number.
+4 P1 006 fines. Two employees were collapsed into one worker. Now Encik Lin TWD 40,000, and the two workers TWD 10,000 and TWD 20,000. The previous line now says “dua pekerja”.
+5 P1 007 FAQ question. “pencen anak” (a pension) replaced. Question now asks whether residual-property division, divorce damages and post-divorce maintenance are the same claim or subject to one 5-year period. Digit 5 already in the file.
+6 P2 guidance copula. “perbualan pertama tanpa bayaran” → “perbualan pertama adalah tanpa bayaran” (2: pricing paragraph and FAQ cost answer). The denial stays negative.
+7 P2 guidance “modal masuk” in the setup list → “penyetoran modal”. Column 002 “modal masuk ke akaun” (money arriving in the account) left.
+8 P2 guidance parental-authority calque → “hak jagaan dan kewajipan ibu bapa terhadap anak bawah umur”, Chinese gloss kept. Column 007’s explained statutory phrase left.
+9 P2 002 “bawa ke hadapan kerugian” → “kerugian terkumpul (累積虧損)”.
+10 P2 003 “julat terjenis” → “Tiada julat tetap yang menentukan hasil.”
+11 P2 003 “asas autonomi” → “asas yang berdiri sendiri”.
+12 P2 003 doubled “Pampasan pampasan penderitaan” → “Pampasan penderitaan”.
+15 P2 004 “dicerminkan” → “dipertimbangkan pada masa yang sama”.
+16 P2 004 Indonesian “perusahaan” → “perniagaan” (4: FAQ, body, table, MOF note).
+17 P2 004 “pejabat utama pelabur dan pejabat utama” → “lokasi pelabur dan pejabat utama”.
+18 P2 004 “potongan sendiri” → “cukai pegangan berasingan”.
+19 P2 005 source-of-funds exemption restored to a Korean bank account, plus a sentence that other countries’ bank practice must be checked separately. The heading already framed Korea as an example.
+20 P2 005 gloss 台灣法人 → 臺灣法人.
+21 P2 006 “hak hidup (生存權)” → “hak sara hidup”.
+22 P2 007 “tempat perayaan perkahwinan” → “rekod pendaftaran perkahwinan”.
+23 P2 007 “pusat kehidupan” calque (2): “di mana kehidupan seharian mereka berpusat sekarang” and “tempat kehidupan seharian mereka benar-benar berpusat”.
+24 P2 007 “erti isytihar tidak perlembagaan” rewritten as a sentence (“alasan perlembagaan keputusan itu”). Remaining “tidak perlembagaan” → “tidak berperlembagaan” (2: FAQ and body).
+25 P2 007 “syarat autonomi” → “syarat yang berdiri sendiri”.
+26 P2 007 “hak melawat dan berhubung” → “hak lawatan dan hak perhubungan” (2: FAQ and body).
+27 P2 008 result claim. The two existing lines no longer say counsel’s later help established B’s statutory severance. They now say whether severance is payable still depends on the facts. The following “pekerja lain” line stays. Blocks not merged.
+28 P2 009 “insurans penyakit (健保)” → “insurans kesihatan nasional (健保)”.
+
+ms-b (36 rows; 35 applied)
+1 P1 016 estate inventory “nilai” → “sekuriti”; “deposit” → “deposit bank”.
+2 P2 010 “kejayaan salah satu pihak” → does not guarantee the success of any one procedure.
+3 P2 010 heading “boleh dibincangkan” → “bolehkah pampasan dan jumlahnya masih dipertikaikan?”
+4 P2 012 “ruang brek” → “tidak sempat membrek” and “masa untuk membrek” (2).
+5 P2 011 heading “Pengaruh” → “Influencer” (the body already uses the loanword).
+6 P2 014 time already served is a basis for assessing the burden, not itself a document. The “Jika” clause now closes.
+7 P2 014 “perkadaran yang boleh difahami” → “perkadaran yang munasabah”.
+8 P2 016 “tertib mencerminkan” → the claim’s result is reflected first, then the remainder is the estate.
+9 P2 016 “menjamin dahulu dokumen” → “mendapatkan dahulu dokumen”.
+10 P2 016 “dokumen keturunan asing” → “dokumen nasab asing”.
+11 P2 018 “perundingan bahagian” → “urus niaga saham”.
+12 P2 018 listing sentence now includes emerging-board registration (興櫃).
+13 P2 018 “melalui statut” → “melalui perlembagaan syarikat” (2).
+14 P2 條例 “Ordinan” → “Statut Pelaburan oleh Warganegara Asing” (013 body and 017 link title).
+15 P2 013 “akta kelulusan” → “dokumen kelulusan”.
+16 P2 017 household moving “pemindahan (搬家)” → “pindah rumah” (3). Business-transfer “pindahan” left.
+17 P2 010 record-keeping sentence now has a finite verb.
+18 P2 011 “bertepatan kewajipan … dan kerja” made grammatical (“bertepatan dengan kerja”).
+19 P2 011 “bahawa lengkap” / “menurut mana” → registration does not mean the PIF records are complete, nor that labelling or advertising is lawful.
+20 P2 011 “Berbeza personaliti” given a subject and copula (“Oleh kerana … berbeza”).
+22 P2 013 opening paragraph now ends with a full stop. Block not merged with the next line.
+23 P2 014 training-period questions made the object of an individual assessment. “jawatan destinasi” → “jawatan berkenaan”.
+24 P2 017 “beroperasi di Taiwan pengangkutan” → “menjalankan pengangkutan … di Taiwan”.
+25 P2 018 “terhapus” as a noun → “penamatan” (FAQ and body, 2).
+26 P2 010 “menurut mana” → “Terdapat peruntukan yang …”. The 5× / 3× / 1× multipliers stay.
+27 P2 010 “tulisan atas nama peguam” → “surat peguam”; the following “Tulisan ini” → “Surat ini”.
+28 P2 010 “pemegang aduan” → “orang yang berhak membuat aduan”.
+29 P2 011 “sebutan mengehadkan” → “penafian”.
+30 P2 011 “objek penerapan” → the remaining cosmetics are included, so the PIF requirement applies to all cosmetics. Same calque in the TFDA link title: “bidang objek pendaftaran” → “bidang pendaftaran”.
+31 P2 011 “Juga mungkin menyerahkan” → “Import dan jualan boleh juga diserahkan” (FAQ and body, 2).
+32 P2 “sesuai” + bare verb swept (see systemic). The quoted 011 line is now the imperative “sahkan semula”.
+33 P2 013 “bertukar secara mendalam” → “bincangkan dengan teliti bersama”.
+34 P2 013 “premis komersial pejabat” → “ruang pejabat komersial” (5). “premis komersial di Taiwan” (a lease, not office space) left.
+35 P2 017 “trak” → “lori” as a whole word (10). “kontrak” untouched.
+36 P2 018 “Kementerian Buruh” glossed (勞動部).
+
+R2–R10 were already in this Malay set (Korea only as a labelled example, including the 001 tax-agreement note and the 005/008/009 framing; consultation languages English, Chinese, Japanese and Korean only; no interpreter, reply-time, free first meeting, or result promise; Malaysian dates; comma thousands and decimal point; Traditional Chinese glosses; 經濟部投資審議司 already one name; PASUKAN KAMI / PEJABAT / “Profil penuh (bahasa Inggeris)” already translated). Malay does not mark gender; Wei Tseng stays epicene. No further R2–R10 edits beyond the rows above. TWD 1.57M untouched. Frontmatter `url` Hangul left.
+
+## Rows skipped
+
+ms-a 13 and ms-b 21 — delete U+200B blank lines (003 Q16–Q20 and close, 005 including `**​**`, 006, 008, 009, 013, 015).
+Reason: `checkBlocks` requires the target ZWSP count to equal the Korean source. A line that contains only U+200B is a non-empty block. Deleting it fails both the ZWSP count and the block count.
+
+ms-a 14 — turn Q16–Q20 into `##` headings.
+Reason: Korean keeps Q16–Q20 as plain lines while Q1–Q15 are headings. `checkHeadings` compares heading levels exactly. ACCEPTED-ROUND also says not to add headings. Not a translation error.
+
+## Systemic patterns
+
+- syarikat berhad / syarikat berhad berasaskan saham → syarikat liabiliti terhad / syarikat saham: 13 terms (001×2, 002×8, 004×3).
+- “sesuai” + bare verb (the “it is advisable” calque) → sebaiknya or an imperative: 14 (010×2, 011×4 including “Sesuai juga dimasukkan” → “Sebaiknya dimasukkan juga ke dalam bidang semakan”, 012×1, 013×1, 014×3, 015×1, 016×1, 018×1). “sesuai dengan / kepada / yang sesuai / tidak sesuai / jika sesuai / paling sesuai” left; those mean “suitable” or “in accordance with”.
+- “menurut mana”: 2 (010 punitive-damages sentence, 011 registration sentence).
+- Copula dropped, verb opens the clause: 3 (011 “Berbeza personaliti” ×1, “Juga mungkin” ×2).
+- Ordinan for 條例 → Statut: 2 (013, 017).
+- “objek” standing in for what a rule covers: 2 (011 “objek penerapan”, TFDA “bidang objek pendaftaran”).
+- perusahaan → perniagaan: 4 (004).
+- trak → lori: 10 (017).
+- premis komersial pejabat → ruang pejabat komersial: 5 (013).
+- melalui statut → melalui perlembagaan syarikat: 2 (018).
+- tidak perlembagaan → tidak berperlembagaan: 2, plus the broken “erti isytihar” sentence (007).
+- guidance copula “adalah tanpa bayaran”: 2. “penyetoran modal”: 1. parental-authority gloss: 1.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-ms --lang ms 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=76
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ms src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      23
+```
+
+The 23 was counted before this log file existed. `.tmp-ms/` is the local helper and is untracked. `WO-F-ms.txt`, `ms-a.md` and `ms-b.md` were already dirty or untracked at the start of the lane.
+
+## Reviewer disagreements (not applied)
+
+None of the wording rows were rejected as factually wrong.
+
+The three skipped rows are not factual errors. They ask for a structure change the checker pins to the Korean source (ZWSP count, block count, heading levels). The sentences inside those blocks were edited where a separate wording row required it.
+
+On ms-a 3, the reviewer is right: the linked instrument is 各類所得扣繳率標準 Article 3, not the Business Tax Act Article 10. The Korean source label still says 제10조, so a bare replacement of 10 with 3 fails the numbers check (`missing from translation (1): 10`, sourceCount 95 → 94). The label keeps perkara 3 and repeats the treaty ceiling as “(siling 10%)” so the digit remains. That 10% is not the article number.

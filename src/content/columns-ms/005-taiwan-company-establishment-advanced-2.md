@@ -31,7 +31,7 @@ Pada umumnya, bank di Korea menuntut bahawa pelabur datang **secara peribadi** k
 
 Pindahan melalui bank dalam talian atau melalui saudara di Korea tidak mungkin.
 
-Selain itu, selaras dengan peraturan Korea mengenai kawalan pertukaran, orang berwarganegara Korea yang menubuhkan badan undang-undang asing atau memperoleh bahagian mesti memfailkan “pengisytiharan pelaburan langsung ke luar negara”. Pengisytiharan mesti didaftarkan pada saat pindahan modal kepada badan undang-undang Taiwan (台灣法人); jika tidak, sanksi kerana pelanggaran peraturan pertukaran boleh terpakai.
+Selain itu, selaras dengan peraturan Korea mengenai kawalan pertukaran, orang berwarganegara Korea yang menubuhkan badan undang-undang asing atau memperoleh bahagian mesti memfailkan “pengisytiharan pelaburan langsung ke luar negara”. Pengisytiharan mesti didaftarkan pada saat pindahan modal kepada badan undang-undang Taiwan (臺灣法人); jika tidak, sanksi kerana pelanggaran peraturan pertukaran boleh terpakai.
 
 Sebelum memindahkan modal (資本金匯款), tanyakan kepada bank utama anda di negara asal anda.
 
@@ -45,7 +45,7 @@ Jika contohnya pendapatan gaji yang diperoleh di Taiwan, perlu dikemukakan salin
 
 Jika dividen dan keuntungan daripada pelaburan dalam perniagaan di Taiwan, perlu dikemukakan salinan perakuan cukai pegangan ke atas dividen dan keuntungan itu (股息和紅利的扣繳憑單影本).
 
-Jika pindahan dilakukan dari akaun bank di luar negara, tidak perlu menyertakan dokumen mengenai punca dana.
+Jika pindahan dilakukan dari akaun bank di Korea, tidak perlu menyertakan dokumen mengenai punca dana. Amalan bank negara lain mesti disemak secara berasingan.
 
 **​**
 

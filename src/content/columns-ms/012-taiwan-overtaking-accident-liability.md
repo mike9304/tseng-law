@@ -37,13 +37,13 @@ Dalam kes yang dianonimkan yang diurus pejabat ini, penunggang motosikal A berge
 
 ![Rajah kemalangan yang menunjukkan trajektori pemotongan motosikal dan 2 kenderaan di hadapan di jalan gunung](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A cuba memotong 2 kenderaan, masuk ke lorong bertentangan dan memecut. Kenderaan nombor 2 juga bersedia memotong kenderaan nombor 1: kurang daripada 1 saat selepas menyalakan isyarat belok, ia masuk ke lorong bertentangan. Motosikal tidak mempunyai ruang brek yang mencukupi dan bertembung dengan kenderaan nombor 2.
+A cuba memotong 2 kenderaan, masuk ke lorong bertentangan dan memecut. Kenderaan nombor 2 juga bersedia memotong kenderaan nombor 1: kurang daripada 1 saat selepas menyalakan isyarat belok, ia masuk ke lorong bertentangan. Motosikal tidak sempat membrek dan bertembung dengan kenderaan nombor 2.
 
 B mengalami kecederaan berat di kepala dan meninggal di tempat; A hilang kesedaran dan dihantar ke hospital.
 
 Keluarga A dan B melihat dahulu pertukaran lorong secara tiba-tiba kenderaan nombor 2 sebagai punca utama perlanggaran. Kes membawa kepada perbicaraan dan, semasa tatacara, beberapa penilaian pakar (鑑定) kemalangan dijalankan.
 
-Menurut hasil penilaian pakar, A menanggung tanggungjawab utama perlanggaran ini. Kesimpulan ini terhad kepada fakta kes ini. Penilaian pakar itu mengambil kira bersama hakikat bahawa A ingin memotong 2 kenderaan di hadapan yang bergerak satu di belakang yang lain, bahawa ia masuk ke lorong bertentangan, bahawa ia bergerak pada kelajuan yang hampir tidak meninggalkan ruang brek, bahawa isyarat hon dan lampu yang ditetapkan tidak ada, serta pergerakan pertukaran lorong kenderaan nombor 2, struktur jalan dan lorong dan bukti lain yang dikumpulkan.
+Menurut hasil penilaian pakar, A menanggung tanggungjawab utama perlanggaran ini. Kesimpulan ini terhad kepada fakta kes ini. Penilaian pakar itu mengambil kira bersama hakikat bahawa A ingin memotong 2 kenderaan di hadapan yang bergerak satu di belakang yang lain, bahawa ia masuk ke lorong bertentangan, bahawa ia bergerak pada kelajuan yang hampir tidak meninggalkan masa untuk membrek, bahawa isyarat hon dan lampu yang ditetapkan tidak ada, serta pergerakan pertukaran lorong kenderaan nombor 2, struktur jalan dan lorong dan bukti lain yang dikumpulkan.
 
 Bahawa, dalam sesetengah kes, hasil penilaian pakar sedemikian berlaku tidak bermakna bahawa satu peninggalan isyarat yang ditetapkan sentiasa menetapkan tanggungjawab. Kecuaian (過失) dalam kemalangan memotong bergantung pada tempat kemalangan, konfigurasi lorong, kelajuan, pergerakan kenderaan, isyarat, selang masa, penglihatan dan bukti lain.
 
@@ -53,7 +53,7 @@ Sebelum memotong, anda mesti dahulu mengesahkan sama ada tempat atau keadaan lal
 
 Pematuhan perkara 101 penting, tetapi ia tidak memastikan dengan sendirinya pengelakan kemalangan mahupun hasil penilaian pakar atau perbicaraan kemudian. Pemandu mesti menyediakan ruang keselamatan tambahan dan menyesuaikan diri dengan keadaan di hadapan mereka.
 
-Sebagai pelengkap, anda boleh merujuk [ilustrasi peraturan dan prosedur memotong](https://gonews.com.tw/car/daily/21934/). Kerana ini sumber sekunder, semasa pengesahan syarat undang-undang, sesuai juga membaca peraturan rasmi yang berkuat kuasa.
+Sebagai pelengkap, anda boleh merujuk [ilustrasi peraturan dan prosedur memotong](https://gonews.com.tw/car/daily/21934/). Kerana ini sumber sekunder, semasa pengesahan syarat undang-undang, sebaiknya baca juga peraturan rasmi yang berkuat kuasa.
 
 ---
 

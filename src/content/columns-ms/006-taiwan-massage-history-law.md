@@ -53,9 +53,9 @@ Individu tanpa kurang upaya penglihatan (非視障者) yang menjalankan pekerjaa
 
 Undang-undang ini kekal hingga 2003; pada masa itu, Encik Lin, yang mengurus salun gunting rambut,
 
-menggaji pekerja tanpa kurang upaya penglihatan untuk perkhidmatan cucian rambut dan urutan, dan polis mengetahuinya.
+menggaji dua pekerja tanpa kurang upaya penglihatan untuk perkhidmatan cucian rambut dan urutan, dan polis mengetahuinya.
 
-Menurut undang-undang masa itu, Encik Lin dan pekerja itu masing-masing dikenakan denda pentadbiran (罰鍰) TWD 40,000, TWD 10,000 dan TWD 20,000 dalam dolar Taiwan baharu (新臺幣).
+Menurut undang-undang masa itu, Encik Lin dikenakan denda pentadbiran (罰鍰) TWD 40,000, manakala dua pekerja itu masing-masing TWD 10,000 dan TWD 20,000 dalam dolar Taiwan baharu (新臺幣).
 
 Encik Lin menganggap sanksi ini sangat tidak adil dan memohon tafsiran perlembagaan.
 
@@ -69,7 +69,7 @@ dan pekerjaan yang boleh mereka jalankan sangat terhad.
 
 Itulah sebabnya penggubal undang-undang masa itu, untuk melindungi orang kurang upaya penglihatan, yang berada dalam kedudukan lemah,
 
-menyediakan undang-undang yang melindungi pekerjaan dan hak hidup (生存權) orang kurang upaya penglihatan.
+menyediakan undang-undang yang melindungi pekerjaan dan hak sara hidup (生存權) orang kurang upaya penglihatan.
 
 Namun, dengan berlalunya masa dan perluasan pasaran pengguna,
 

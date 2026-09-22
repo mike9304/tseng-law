@@ -141,7 +141,7 @@ Kehilangan pendapatan mesti dibuktikan dengan dokumen yang menetapkan bahawa, ke
 
 Patut disusun bersama rekod perubatan, daftar kehadiran atau cuti, data gaji dan cukai serta pengesahan majikan. Pekerja bebas boleh mengemukakan data yang sesuai dengan bentuk aktivitinya, seperti data jualan, daftar operasi dan pengisytiharan cukai.
 
-Keadaan telah terus bekerja atau menerima gaji tanpa perubahan relevan untuk menilai kehilangan pendapatan tempoh pemulihan, tetapi fakta ini semata-mata tidak memutuskan secara automatik soalan kerosakan kerana pengurangan keupayaan kerja. Keadaan ini juga bukan asas autonomi untuk menilai kerosakan kerana pengurangan keupayaan kerja. Kerosakan kerana pengurangan keupayaan kerja diteliti secara berasingan pada Q12.
+Keadaan telah terus bekerja atau menerima gaji tanpa perubahan relevan untuk menilai kehilangan pendapatan tempoh pemulihan, tetapi fakta ini semata-mata tidak memutuskan secara automatik soalan kerosakan kerana pengurangan keupayaan kerja. Keadaan ini juga bukan asas yang berdiri sendiri untuk menilai kerosakan kerana pengurangan keupayaan kerja. Kerosakan kerana pengurangan keupayaan kerja diteliti secara berasingan pada Q12.
 
 ## Q12. Bagaimana dibuktikan kerosakan kerana pengurangan keupayaan kerja?
 
@@ -155,9 +155,9 @@ Apabila pengiraan dibuat dalam satu modal tunggal, potongan faedah perantaraan (
 
 ## Q13. Bagaimana dinilai pampasan penderitaan (慰撫金) bagi kerosakan bukan harta?
 
-Pampasan pampasan penderitaan bagi kerosakan bukan harta dinilai dengan menetapkan jumlah yang sesuai apabila terdapat pelanggaran haram terhadap tubuh atau kesihatan, menurut perkara 195 Kanun Sivil.
+Pampasan penderitaan bagi kerosakan bukan harta dinilai dengan menetapkan jumlah yang sesuai apabila terdapat pelanggaran haram terhadap tubuh atau kesihatan, menurut perkara 195 Kanun Sivil.
 
-Mahkamah meneliti keadaan setiap kes dengan menilai secara keseluruhan isi kecederaan dan rawatan, kesan berterusan, penderitaan dan kesan ke atas kehidupan, umur dan keadaan, keadaan sosioekonomi dan bukti pihak. Maka sukar untuk menjangka hasil daripada julat terjenis semata-mata.
+Mahkamah meneliti keadaan setiap kes dengan menilai secara keseluruhan isi kecederaan dan rawatan, kesan berterusan, penderitaan dan kesan ke atas kehidupan, umur dan keadaan, keadaan sosioekonomi dan bukti pihak. Tiada julat tetap yang menentukan hasil.
 
 ## Q14. Jika kemalangan berlaku semasa kerja, bolehkah juga dicari tanggungjawab sivil majikan?
 
@@ -235,7 +235,7 @@ Q17. Apakah tanggungjawab jenayah bagi kecederaan kerana kecuaian pelaku kemalan
 
 ​
 
-Dalam sesetengah keputusan bagi kecederaan kerana kecuaian, hukuman kira-kira 3 bulan pernah dijatuhkan; ini bukan hasil yang lazim atau yang dijanjikan.
+Bagi kecederaan kerana kecuaian, mahkamah pada masa ini pada umumnya menjatuhkan hukuman penjara kira-kira 3 bulan. Angka itu bukan hasil yang dijanjikan bagi kes anda.
 
 ​
 
@@ -247,7 +247,7 @@ Jika ia ditukar kepada denda (易科罰金), perkara 41, perenggan 1, Kanun Jena
 
 ​
 
-Bagi kecederaan berat kerana kecuaian, hukuman kira-kira 4 bulan pernah dijatuhkan dalam sesetengah keputusan, dan bagi kematian kerana kecuaian (過失致死) kira-kira 6 bulan; ini juga bukan hasil yang lazim atau yang dijanjikan.
+Bagi kecederaan berat kerana kecuaian, mahkamah pada masa ini pada umumnya menjatuhkan hukuman penjara kira-kira 4 bulan, dan bagi kematian kerana kecuaian (過失致死) kira-kira 6 bulan. Angka itu juga bukan hasil yang dijanjikan bagi kes anda.
 
 ​
 

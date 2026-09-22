@@ -621,7 +621,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Pelaburan dan penubuhan syarikat di Taiwan',
           paragraphs: [
-            'Kami membantu pelabur dan syarikat asing dalam penubuhan atau pengoperasian syarikat di Taiwan: pemilihan bentuk undang-undang, penyediaan dan penyerahan dokumen, modal masuk, urusan bank, semakan tempat operasi, serta keperluan khusus industri. Kami juga membantu perakaunan dan cukai yang timbul daripada penubuhan dan pengoperasian di Taiwan.',
+            'Kami membantu pelabur dan syarikat asing dalam penubuhan atau pengoperasian syarikat di Taiwan: pemilihan bentuk undang-undang, penyediaan dan penyerahan dokumen, penyetoran modal, urusan bank, semakan tempat operasi, serta keperluan khusus industri. Kami juga membantu perakaunan dan cukai yang timbul daripada penubuhan dan pengoperasian di Taiwan.',
             'Aliran dan tempoh berbeza mengikut bentuk undang-undang, pelabur, industri, bank dan dokumen yang ada. Penubuhan syarikat tidak dengan sendirinya membawa permit tinggal (居留) atau permit kerja (工作許可): itu prosedur berasingan yang dinilai menurut keadaan orang berkenaan.',
           ],
         },
@@ -635,7 +635,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Perkahwinan, keluarga dan pusaka',
           paragraphs: [
-            'Kami mengendalikan penceraian (離婚), pembahagian harta, pelaksanaan atau penanggungan hak dan kewajipan terhadap anak bawah umur (未成年子女權利義務之行使或負擔), hak lawatan (會面交往) dan pusaka (繼承), termasuk jika pihak atau harta berada di negara berlainan. Hal keluarga merentas sempadan sering memerlukan semakan tambahan dokumen daftar isi rumah (戶籍), bentuk surat cara, dan kebolehbuktiannya di Taiwan.',
+            'Kami mengendalikan penceraian (離婚), pembahagian harta, hak jagaan dan kewajipan ibu bapa terhadap anak bawah umur (未成年子女權利義務之行使或負擔), hak lawatan (會面交往) dan pusaka (繼承), termasuk jika pihak atau harta berada di negara berlainan. Hal keluarga merentas sempadan sering memerlukan semakan tambahan dokumen daftar isi rumah (戶籍), bentuk surat cara, dan kebolehbuktiannya di Taiwan.',
             'Kerana hal keluarga kerap membawa tempoh dan prosedur pada masa yang sama, ringkasan pertama sepatutnya menyatakan hubungan pihak, tempat tinggal semasa, dan prosedur yang sudah berjalan.',
           ],
         },
@@ -733,7 +733,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Perundingan boleh menjadi perkhidmatan berbayar',
           paragraphs: [
-            'Perundingan dengan peguam boleh menjadi perkhidmatan berbayar. Halaman ini tidak menyatakan bahawa perbualan pertama tanpa bayaran, dan tiada bahagian halaman ini boleh dibaca seolah-olah perbualan pertama adalah tanpa bayaran.',
+            'Perundingan dengan peguam boleh menjadi perkhidmatan berbayar. Halaman ini tidak menyatakan bahawa perbualan pertama adalah tanpa bayaran, dan tiada bahagian halaman ini boleh dibaca seolah-olah perbualan pertama adalah tanpa bayaran.',
             'Jika perundingan berbayar, jumlah dan cara bayaran dimaklumkan sebelum ia berlangsung.',
           ],
         },
@@ -837,7 +837,7 @@ export const malayGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Bagaimana kos dikira?',
           answer:
-            'Dahulu skop kerja ditetapkan, kemudian jumlah dan cara pengiraan kos disahkan dengan anda sebelum kerja bermula. Halaman ini tidak menyebut angka dan tidak menyatakan bahawa perbualan pertama tanpa bayaran.',
+            'Dahulu skop kerja ditetapkan, kemudian jumlah dan cara pengiraan kos disahkan dengan anda sebelum kerja bermula. Halaman ini tidak menyebut angka dan tidak menyatakan bahawa perbualan pertama adalah tanpa bayaran.',
         },
         {
           question: 'Apa jika hal saya sangat mendesak?',

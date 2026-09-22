@@ -172,9 +172,9 @@ merekodkan seluruh perjalanan dengan telefon mudah alih
 
 dan dapat membuktikan bahawa ia tidak meletakkan jawatan sendiri.
 
-Itulah sebabnya, kemudian, dengan bantuan peguam,
+Sama ada pampasan pemberhentian wajib dibayar
 
-hak pampasan pemberhentiannya di bawah undang-undang dapat ditegakkan,
+tetap bergantung pada fakta kes,
 
 sedangkan pekerja lain yang pergi tanpa bukti sedemikian berada dalam kedudukan yang lebih lemah.
 

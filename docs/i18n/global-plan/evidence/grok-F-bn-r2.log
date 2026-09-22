@@ -1,0 +1,80 @@
+WO-F-bn r2 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-bn-r2
+date: 2026-09-22
+
+## Rows applied / skipped
+
+Review rows: bn-a 27 + bn-b 33 = 60.
+Applied: 56. Skipped: 4.
+
+Applied (bn-a): 1–24, 27.
+Applied (bn-b): 1–13, 15–26, 28–33 (30–33 are P3).
+
+Skipped:
+- bn-a 25 (P2, TWD 1.57M → 15,70,000 / লাখ). ACCEPTED-ROUND: the bio figure "TWD 1.57M" stays byte-identical; lakh grouping is not parsed (R14).
+- bn-a 26 (P2, Western grouping → লাখ/কোটি). Same skip. Amounts stay `500,000` style. Decimal point unchanged.
+- bn-b 14 (P2, delete U+200B in 013 and 015). The checker compares ZWSP counts with `src/content/columns`. Those files already match (013: 5, 015: 3). Deleting the characters fails `blocks` / `ZWSP`. Left in place.
+- bn-b 27 (P2, renumber 018 ## 7 → ## 6 and ## 8 → ## 7). See "Reviewer got wrong".
+
+bn-a 2 (P1, 004 link label): statute name corrected to অনাবাসীদের লভ্যাংশে উৎসে কর্তনের হারের মান (各類所得扣繳率標準), and the article is stated as অনুচ্ছেদ 3. The Korean source label is 영업세법 제10조, so the checker’s number bag still requires the digit 10. A bare "অনুচ্ছেদ 3" next to the Chinese gloss was collapsed as a hanzi-duplicate and the file failed `missing 10` (sourceCount 95 → 94). The link text therefore also says "(ব্যবসায়িক কর আইনের অনুচ্ছেদ 10 নয়)". URL unchanged (`flno=3`). After that, 004 numbers are WARN-only (수사미해석) and the file PASSes.
+
+009 row 3 is three separate blocks (blank lines). The third block was rewritten so the relevant party, not both parties, gets the right. The blocks were not merged.
+
+013 row 13: the bank quotation stays two blocks. The first block no longer ends on a hanging যে; the second stands as the quotation. The next block restores the reader’s “hardest step” comment and the attorney’s agreement.
+
+## Systemic patterns and instances changed
+
+- Comma missing between সময় and আইনি রূপ: 1 (guidance services).
+- ফলাফল used for business/import-export performance (實績), not a case outcome: 10. 001: ব্যবসায়িক ফলাফল ×3, আমদানি-রপ্তানি ফলাফল ×4, কাজের ফলাফল ×2. 005: ব্যবসায়িক ফলাফল ×1. Left ফলাফল where it means a case outcome or “no promise of a result”.
+- Legal effect “born” (জন্মায় / জন্ম নেওয়া): 25. 002 ×1, 003 ×2, 004 ×8, 007 ×6, 008 ×2, 014 ×1, 016 ×3, 017 ×2. Rewritten as কার্যকর হয় / সৃষ্টি হয় / সৃষ্ট.
+- Same 007 calque গড়া for a mediation, settlement, or agreement being reached: 6 (গড়লে / গড়ে / গড়া / না গড়লে). Left 002 “নগদে না গড়ালে” and 006 “সময় গড়ানো”.
+- কেন্দ্র dropped in for the thing that matters: 4. 007 জীবনকেন্দ্র ×2 and রায়ের চূড়ান্ত হওয়া কেন্দ্র ×1; 016 মৃত্যুর সময় জীবনকেন্দ্র ×1. Left কেন্দ্রীয় সক্ষম কর্তৃপক্ষ, রপ্তানি-কেন্দ্রিক, and 014 কেন্দ্রিত (“centers on”).
+- Docket code only in characters: 3 link labels in 003 (Shang-Yi-Zi ×2, Li-Jian-Zi ×1).
+- 民國 glossed as চীন প্রজাতন্ত্র instead of the Minguo calendar (R13, no Gregorian year added): 8. 003 ×3, 007 ×4, 010 ×1. Now মিনগো বর্ষপঞ্জির (民國).
+- অন্যায়কার্য / অন্যায় কার্য / টর্ট for 侵權行為: 7. Guidance ×1, 003 ×1, 004 ×3, 010 টর্ট ×1 and অন্যায় কাজের সময় ×1.
+- 014 worker as the person who pays the compensation: 2 (FAQ answer and §1).
+- 014 আইনসিদ্ধ for training required by statute: 4.
+- 014 অর্পণ meaning vesting (handover reading): 6 (অর্পণের সময়, চূড়ান্তভাবে অর্পিত, অর্পণের শর্ত ×3, the installment clause). Left every 017 অর্পণ (contracting out carriage) and every 014 দায় আরোপ (attribution).
+- 016 আরোপ for which asset goes to whom: 4. Left fines and cost-attribution আরোপ.
+- 016 নির্দেশ তারিখ for a reference date: 5. Left 函釋 / administrative নির্দেশ.
+- Distributor written as এজেন্ট: 4. 011 opening and the following “the distributor may also be the importer”; 018 FAQ question and its ### heading. Left the 018 title and table “agent” (English says Agent), the contractual list “এজেন্ট, প্রধান পরিবেশক বা পরিবেশক”, and 015 real-estate এজেন্ট.
+- English hedge flattened to an absolute: 1 (013 company registration “সম্ভব নয়” → “সম্ভব নাও হতে পারে”). Other “সম্ভব নয়” lines were left where they are not this hedge.
+- 018 misspelling ব্যবসাের: 3.
+- R12 English “paralegal” still in the Bengali role and bio: 2 (role line and intro). Firm names stay in Latin. TWD 1.57M untouched.
+- Hindi leakage (R17): none found in the Bengali columns or the bn guidance strings.
+- R9 emergency numbers in 003 were already explicit (119 / 110 / 112). Consultation languages, no interpreter, no reply-time promise: left as already negative. Wei Tseng stays feminine where Bengali marks it (বিনিময় ছাত্রী); no masculine title was present.
+
+Western grouping: 0 changed.
+
+## §Verify
+
+```
+===== CHECKER =====
+neighbour      PASS   
+hanzi          PASS   han=97
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+===== MARKERS =====
+       0
+===== TSC =====
+TSC_OK
+===== VITEST =====
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+===== GIT =====
+      22
+```
+
+Commands were the work-order set (`tail -8` on the checker, so the block above is the tail of 018 plus the summary). Markers 0. No Bengali test expectation had to change. `git status --short | wc -l` was 22 before this log file existed.
+
+004 numbers: WARN `수사미해석` only (제3자 / 제1항 / 제2항 / 제3국). File status PASS.
+
+## Reviewer got wrong (not applied)
+
+- bn-b 27. English and Korean 018 both jump from ## 5 to ## 7 to ## 8. The reviewer notes the English gap and still asks to renumber the Bengali headings. That is the source outline, not a Bengali omission. Heading levels already match. Not renumbered.
+- bn-a 25–26 are not factually wrong about Bengali grouping; they are skipped because the checker and the pinned `TWD 1.57M` test cannot accept লাখ grouping or a rewritten bio figure.
+- bn-b 14 is not wrong that the U+200B characters are junk. They are skipped because they are inherited from the Korean source and the checker requires the same count.

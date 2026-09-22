@@ -41,11 +41,11 @@ Trước khi quyết định cấu trúc vào Đài Loan, tổng công ty có th
 | Thanh toán và chi phí | Ai xuất hóa đơn và thu tiền? Chi phí giữa tổng công ty và tổ chức tại Đài Loan được quyết toán thế nào? |
 | Chất lượng và tranh chấp | Ai xác nhận kết quả nghiệm thu và nhận khiếu nại lỗi hay yêu cầu bồi thường? |
 
-Đặc biệt khi bên bán trong hợp đồng mua khác với công ty thực tế hỗ trợ kỹ thuật, tài liệu cần phân biệt khách hàng có thể yêu cầu ai thực hiện nghĩa vụ nào.
+Đặc biệt khi bên bán được nêu trong hợp đồng mua bán không phải là công ty thực tế hỗ trợ kỹ thuật, tài liệu cần phân biệt khách hàng có thể yêu cầu ai thực hiện nghĩa vụ nào.
 
 ## 2. Khác biệt giữa công ty con, chi nhánh và văn phòng đại diện của công ty nước ngoài tại Đài Loan
 
-Khi thiết kế vào Đài Loan, doanh nghiệp bán dẫn nên tách “đặt loại hiện diện nào tại Đài Loan” và “sắp xếp bán hàng cùng dịch vụ khách hàng thế nào”. Phần trước tập trung tư cách pháp nhân, yêu cầu đăng ký và phạm vi kinh doanh; phần sau tập trung cách giao dịch, nội dung ủy quyền và phân bổ trách nhiệm.
+Khi lập kế hoạch gia nhập thị trường Đài Loan, doanh nghiệp bán dẫn nên tách riêng “đặt loại hiện diện nào tại Đài Loan” và “sắp xếp bán hàng cùng dịch vụ khách hàng thế nào”. Phần trước tập trung tư cách pháp nhân, yêu cầu đăng ký và phạm vi kinh doanh; phần sau tập trung cách giao dịch, nội dung ủy quyền và phân bổ trách nhiệm.
 
 Khác biệt chính giữa công ty con Đài Loan và chi nhánh tại Đài Loan của công ty nước ngoài là có tư cách pháp nhân độc lập với công ty mẹ hoặc tổng công ty hay không. Phân phối và đại lý thuộc thỏa thuận giao dịch và hợp đồng, không nên lẫn với hình thức tổ chức công ty.
 
@@ -77,7 +77,7 @@ Trên đây là so sánh chung về các hình thức công ty, không phải t�
 
 ## 5. Đăng ký công ty và việc kỹ sư làm việc hợp pháp là hai việc khác nhau
 
-Hoàn tất đăng ký công ty tại Đài Loan không có nghĩa là nhân viên tổng công ty nước ngoài đương nhiên được làm việc tại Đài Loan. Người nước ngoài làm việc tại Đài Loan phải có giấy phép làm việc hợp pháp (工作許可); nếu ở lâu cũng cần xin thẻ cư trú (居留證). Về nguyên tắc, người sử dụng lao động xin giấy phép làm việc và thẻ cư trú tương ứng cho nhân viên nước ngoài.
+Hoàn tất đăng ký công ty tại Đài Loan không có nghĩa là nhân viên tổng công ty nước ngoài đương nhiên được làm việc tại Đài Loan. Người nước ngoài làm việc tại Đài Loan phải có giấy phép làm việc hợp pháp (工作許可); nếu lưu trú dài hơn thì cũng cần xin thẻ cư trú (居留證). Về nguyên tắc, người sử dụng lao động xin giấy phép làm việc và thẻ cư trú tương ứng cho nhân viên nước ngoài.
 
 Người quản lý của công ty con và chi nhánh Đài Loan của công ty nước ngoài xin giấy phép làm việc dễ hơn. Nhưng để xin giấy phép cho người nước ngoài thứ hai trở đi, tùy ngành, Bộ Lao động yêu cầu công ty đạt ngưỡng về vốn, doanh thu hoặc tiêu chí tương đương. Nếu dự định cho nhân viên nước ngoài làm việc tại Đài Loan, trước khi lập công ty Đài Loan phải xác nhận mức vốn có đạt ngưỡng hay không.
 

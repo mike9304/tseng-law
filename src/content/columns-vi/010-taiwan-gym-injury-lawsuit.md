@@ -93,7 +93,7 @@ Nếu diễn biến tai nạn có thể đủ yếu tố cấu thành tội ph�
 
 Các khoản thiệt hại có thể xem xét yêu cầu bồi thường gồm những mục sau đây. Việc từng khoản có thực sự được công nhận hay không và với số tiền bao nhiêu còn phụ thuộc vào tính cần thiết của từng chi phí, quan hệ nhân quả với tai nạn, chứng từ chứng minh, tỷ lệ trách nhiệm và đánh giá của tòa án.
 
-1. **Chi phí y tế**: các khoản đã thực tế chi cho việc khám bệnh, xét nghiệm, điều trị, thuốc men và phục hồi chức năng được chứng minh bằng biên lai và hồ sơ bệnh án.
+1. **Chi phí y tế**: các khoản đã chi trên thực tế cho việc khám bệnh, xét nghiệm, điều trị, thuốc men và phục hồi chức năng được chứng minh bằng biên lai và hồ sơ bệnh án.
 2. **Chi phí người chăm sóc**: căn cứ vào mức độ chấn thương và diễn biến điều trị, dựa trên tài liệu y tế và tài liệu chi tiêu để xem xét việc chăm sóc có cần thiết hay không, thời gian và chi phí có hợp lý hay không.
 3. **Chi phí đi lại khám chữa bệnh**: các chi phí cần thiết để đi lại đến cơ sở y tế nhằm điều trị được chứng minh bằng hồ sơ di chuyển, biên lai và các tài liệu tương tự.
 4. **Thiệt hại do suy giảm khả năng lao động (勞動能力減損)**: nếu được công nhận là còn di chứng và khả năng lao động giảm kéo dài, có thể đánh giá tổng hợp tài liệu y học và nghề nghiệp, mức độ suy giảm, nghề nghiệp và thu nhập, thời gian còn có thể làm việc. Chỉ riêng tỷ lệ suy giảm do giám định xác định không ấn định được số tiền bồi thường, và thiệt hại cũng không mặc nhiên được tính cho đến tuổi nghỉ hưu.

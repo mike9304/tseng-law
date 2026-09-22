@@ -487,7 +487,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             heading: 'Những điều trang này không bảo đảm',
             paragraphs: [
-              'Chúng tôi không cam kết thời gian phản hồi, không xác nhận lịch hẹn qua trang này, không cam kết một luật sư nhất định sẽ phụ trách vụ việc và không bố trí phiên dịch. Việc dịch văn bản là chuyện riêng: tin nhắn quý vị gửi không được dịch tự động.',
+              'Chúng tôi không cam kết thời gian phản hồi, không xác nhận lịch hẹn qua trang này, không cam kết một luật sư nhất định sẽ phụ trách vụ việc và không bố trí phiên dịch. Việc dịch văn bản là một việc khác: tin nhắn quý vị gửi không được dịch tự động.',
               'Khi quý vị gửi yêu cầu, nội dung được lưu lại và chờ xem xét. Nếu sau một thời gian quý vị chưa nhận được phản hồi, quý vị có thể gửi lại qua địa chỉ thư điện tử được nêu trên trang liên hệ.',
             ],
           },
@@ -522,7 +522,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
           {
             question: 'Tôi có thể được tư vấn bằng tiếng Việt không?',
             answer:
-              'Không. Phần hướng dẫn này được viết bằng tiếng Việt, nhưng việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn. Chúng tôi cũng không cam kết bố trí phiên dịch. Việc dịch văn bản là chuyện riêng: nội dung gốc quý vị viết được lưu giữ nguyên văn và không được dịch tự động.',
+              'Không. Phần hướng dẫn này được viết bằng tiếng Việt, nhưng việc tư vấn với luật sư chỉ được thực hiện bằng tiếng Anh, tiếng Trung (中文), tiếng Nhật và tiếng Hàn. Chúng tôi cũng không cam kết bố trí phiên dịch. Việc dịch văn bản là một việc khác: nội dung gốc quý vị viết được lưu giữ nguyên văn và không được dịch tự động.',
           },
           {
             question: 'Nếu tôi không dùng được cả bốn ngôn ngữ đó thì sao?',
@@ -614,7 +614,7 @@ export const guidanceContent: Record<GuidanceLocale, GuidanceLocaleContent> = {
             heading: 'Nơi lưu trữ dữ liệu và các nhà cung cấp dịch vụ',
             paragraphs: [
               'Trang web này được lưu trữ trên Vercel, và nội dung quý vị gửi được giữ trong kho lưu trữ không công khai của dịch vụ đó. Thư điện tử được gửi qua dịch vụ thư mà văn phòng đang sử dụng.',
-              'Máy chủ của một số nhà cung cấp dịch vụ có thể đặt ngoài Đài Loan, khi đó thông tin của quý vị có thể được lưu và xử lý tại nơi đó. Khi mục đích lưu giữ đã đạt được, thông tin được xóa không chậm trễ; thông tin có nghĩa vụ lưu giữ theo quy định thì được giữ trong thời hạn tương ứng. Mọi yêu cầu liên quan đến dữ liệu cá nhân được tiếp nhận tại wei@hoveringlaw.com.tw.',
+              'Máy chủ của một số nhà cung cấp dịch vụ có thể nằm ngoài Đài Loan, khi đó thông tin của quý vị có thể được lưu và xử lý tại nơi đó. Khi mục đích lưu giữ đã đạt được, thông tin được xóa không chậm trễ; thông tin có nghĩa vụ lưu giữ theo quy định thì được giữ trong thời hạn tương ứng. Mọi yêu cầu liên quan đến dữ liệu cá nhân được tiếp nhận tại wei@hoveringlaw.com.tw.',
             ],
           },
         ],

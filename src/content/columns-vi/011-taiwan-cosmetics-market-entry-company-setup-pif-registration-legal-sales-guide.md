@@ -32,7 +32,7 @@ Thương hiệu nước ngoài không bắt buộc phải thành lập công ty 
 
 ### Trường hợp giao cho nhà nhập khẩu tại chỗ
 
-Nếu nhà nhập khẩu tại Đài Loan hoặc nhà phân phối đảm nhận việc nhập khẩu và bán hàng thì thương hiệu nước ngoài cũng có thể áp dụng cấu trúc không đặt công ty con hay chi nhánh của riêng mình tại Đài Loan. Nhà phân phối có thể đồng thời là nhà nhập khẩu, mà cũng có thể có một nhà nhập khẩu khác tham gia. Tuy nhiên, các tên gọi trong hợp đồng như đại lý (代理), tổng đại lý (總代理) hay nhà phân phối (經銷) bản thân không quyết định trách nhiệm pháp lý thuộc về ai.
+Nếu nhà nhập khẩu tại Đài Loan hoặc nhà phân phối đảm nhận việc nhập khẩu và bán hàng thì thương hiệu nước ngoài cũng có thể áp dụng cấu trúc không đặt công ty con hay chi nhánh của riêng mình tại Đài Loan. Nhà phân phối có thể đồng thời là nhà nhập khẩu, hoặc một nhà nhập khẩu khác cũng có thể tham gia. Tuy nhiên, các tên gọi trong hợp đồng như đại lý (代理), tổng đại lý (總代理) hay nhà phân phối (經銷) bản thân không quyết định trách nhiệm pháp lý thuộc về ai.
 
 Khi thiết kế việc phân chia công việc trên thực tế, trước hết phải xác nhận ai nhập khẩu sản phẩm và thực hiện đăng ký sản phẩm, ai lập, cập nhật và lưu giữ PIF. Việc rà soát nhãn mác, việc lưu giữ hồ sơ phân phối, việc tiếp nhận khiếu nại của người tiêu dùng và thông tin an toàn, cũng như việc ứng phó khi cơ quan chủ quản kiểm tra và yêu cầu cung cấp tài liệu, đều phải chỉ định người phụ trách. Đồng thời phải xem xét các nghĩa vụ pháp lý đặt ra cho cơ sở sản xuất hoặc nhập khẩu mỹ phẩm có phù hợp với công việc theo hợp đồng giữa thương hiệu và đối tác bán hàng hay không.
 
@@ -52,7 +52,7 @@ Dù chọn cấu trúc nào thì chủ thể chịu trách nhiệm trung tâm th
 
 ### Thời điểm đăng ký sản phẩm và thời hạn hiệu lực
 
-Việc đăng ký sản phẩm mỹ phẩm được thực hiện trên nền tảng đăng ký sản phẩm mỹ phẩm của TFDA. Cơ sở sản xuất hoặc nhập khẩu mỹ phẩm phải hoàn tất đăng ký sản phẩm trước khi cung ứng, bán, tặng, trưng bày công khai hoặc cung cấp cho người tiêu dùng dùng thử sản phẩm đó. Không nên chỉ chuẩn bị cho khâu bán có thu tiền; lịch tặng sản phẩm để xúc tiến bán hàng hoặc cung cấp cho người tiêu dùng dùng thử cũng phải được quản lý cùng với thời điểm đăng ký.
+Việc đăng ký sản phẩm mỹ phẩm được thực hiện trên nền tảng đăng ký sản phẩm mỹ phẩm của TFDA. Cơ sở sản xuất hoặc nhập khẩu mỹ phẩm phải hoàn tất đăng ký sản phẩm trước khi cung ứng, bán, tặng, trưng bày công khai hoặc cung cấp cho người tiêu dùng dùng thử sản phẩm đó. Không nên chỉ chuẩn bị cho việc bán hàng có thu tiền; lịch tặng sản phẩm để xúc tiến bán hàng hoặc cung cấp cho người tiêu dùng dùng thử cũng phải được quản lý cùng với thời điểm đăng ký.
 
 Thời hạn hiệu lực của đăng ký sản phẩm là ba năm. Nếu muốn tiếp tục cung ứng thì phải nộp đơn xin gia hạn trong vòng ba tháng trước khi thời hạn hiệu lực kết thúc. Khi các nội dung đã đăng ký như tên sản phẩm, mục đích sử dụng, dạng bào chế (劑型), thành phần hay địa điểm sản xuất có thay đổi, cũng phải xác nhận xem có cần thủ tục tương ứng với nội dung thay đổi đó hay không.
 
@@ -62,7 +62,7 @@ Thời hạn hiệu lực của đăng ký sản phẩm là ba năm. Nếu muố
 
 PIF là bộ hồ sơ được lập để có thể giải trình liên tục về chất lượng và tính an toàn của sản phẩm. Ngoài chất lượng, tính an toàn, thành phần, công dụng được công bố, phương pháp sản xuất, kết quả thử nghiệm và đánh giá tính an toàn, còn phải sắp xếp theo từng sản phẩm các tài liệu chứng minh như thông tin cơ bản về sản phẩm và về doanh nghiệp sản xuất, cùng nhãn sản phẩm. Vì Biện pháp Quản lý Hồ sơ Thông tin Sản phẩm Mỹ phẩm (化粧品產品資訊檔案管理辦法) phân chia các tài liệu cần thiết thành 16 nhóm, quý vị phải xác nhận tài liệu của từng nhóm cùng các yêu cầu về ký tên và về tư cách theo loại sản phẩm.
 
-Chế độ PIF đã được áp dụng theo từng giai đoạn cho từng nhóm sản phẩm. Từ ngày 1 tháng 7 năm 2026, các mỹ phẩm còn lại cũng được đưa vào đối tượng áp dụng, nên về nguyên tắc chế độ này áp dụng cho toàn bộ mỹ phẩm. Ngoại lệ chỉ giới hạn ở xà phòng thủ công dạng rắn được sản xuất tại địa điểm sản xuất được miễn đăng ký nhà máy. Một sản phẩm không được loại trừ chỉ vì là hàng thủ công hay chỉ vì mang tên gọi xà phòng; phải xác nhận đồng thời cả hình thái dạng rắn lẫn điều kiện địa điểm sản xuất được miễn đăng ký nhà máy.
+Chế độ PIF đã được áp dụng theo từng giai đoạn cho từng nhóm sản phẩm. Từ ngày 1 tháng 7 năm 2026, các mỹ phẩm còn lại cũng được đưa vào đối tượng áp dụng, nên về nguyên tắc chế độ này áp dụng cho toàn bộ mỹ phẩm. Ngoại lệ chỉ giới hạn ở xà phòng thủ công dạng rắn được sản xuất tại địa điểm sản xuất được miễn đăng ký nhà máy. Một sản phẩm không được loại trừ chỉ vì là hàng thủ công hay chỉ vì mang tên gọi xà phòng; phải xác nhận đồng thời cả dạng rắn lẫn điều kiện địa điểm sản xuất được miễn đăng ký nhà máy.
 
 Công việc liên quan đến PIF, kể cả việc đánh giá tính an toàn, có thể được bên thứ ba có đủ tư cách và năng lực cần thiết hỗ trợ. Tuy nhiên, ngay cả khi sử dụng dịch vụ hỗ trợ lập tài liệu hoặc dịch vụ lưu giữ tài liệu của bên thứ ba, trách nhiệm pháp lý của cơ sở sản xuất hoặc nhập khẩu mỹ phẩm vẫn được duy trì. Phải thiết lập cơ chế để nhà sản xuất gốc, tổ chức thử nghiệm, người đánh giá tính an toàn và doanh nghiệp phía Đài Loan có thể chuyển cho nhau thông tin thay đổi và tài liệu có chữ ký mới nhất.
 
@@ -88,7 +88,7 @@ Quảng cáo được đánh giá theo toàn bộ biểu đạt, tức là khôn
 
 ### Đánh giá theo toàn bộ biểu đạt, không theo từng từ ngữ riêng lẻ
 
-Việc nhãn mác, quảng bá hay quảng cáo có sai sự thật, phóng đại hoặc có công bố công dụng chữa bệnh hay không thì không được đánh giá chỉ bằng một từ ngữ nhất định. Phải xem xét đồng thời tên hàng hóa, câu văn, hình ảnh, ký hiệu, âm thanh, ngữ cảnh trước sau và ấn tượng tổng thể mà người tiêu dùng tiếp nhận. Ấn tượng do thông điệp quảng cáo chủ đạo tạo ra không đương nhiên được xóa bỏ chỉ bằng một dòng chú thích giới hạn in chữ nhỏ, vì vậy phải rà soát cả từng câu chữ riêng lẻ lẫn bản quảng cáo hoàn chỉnh.
+Việc nhãn mác, quảng bá hay quảng cáo có sai sự thật, phóng đại hoặc có công bố công dụng chữa bệnh hay không thì không được đánh giá chỉ bằng một từ ngữ nhất định. Phải xem xét đồng thời tên hàng hóa, câu văn, hình ảnh, ký hiệu, âm thanh, ngữ cảnh trước sau và ấn tượng tổng thể mà người tiêu dùng tiếp nhận. Ấn tượng do thông điệp quảng cáo chủ đạo tạo ra không đương nhiên được khắc phục chỉ bằng một dòng tuyên bố miễn trừ in chữ nhỏ, vì vậy phải rà soát cả từng câu chữ riêng lẻ lẫn bản quảng cáo hoàn chỉnh.
 
 Chẳng hạn, việc biểu đạt rằng mỹ phẩm trị được mụn, có hiệu quả kháng viêm hoặc có tác dụng diệt khuẩn có thể bị coi là công bố công dụng chữa bệnh. Cũng phải xác nhận cách kết hợp tên bệnh với sản phẩm, hình ảnh trước và sau khi sử dụng, cách dàn dựng gợi liên tưởng đến nhân viên y tế, và ngữ cảnh nối phần giải thích thành phần với hiệu quả điều trị của sản phẩm.
 

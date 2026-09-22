@@ -1,0 +1,90 @@
+# WO-F-vi — Vietnamese fix lane, campaign round 4 (Grok 4.7), 2026-09-23
+Worktree: /Users/son7/Projects/tseng-law-fix-vi-r4 (no git add/commit/push)
+Files touched: src/content/columns-vi/003, 004, 008, 010, 011, 014, 016, 017, 018;
+src/data/international-guidance-content.ts (vi strings only); this log.
+No test file was edited. No pinned Vietnamese expectation had to change.
+"TWD 1.57M" stays byte-identical. consultationNotice and confidentialNotice were not rewritten, so they remain verbatim substrings of the FAQ and privacy copy. The FAQ rewrite keeps the consultation sentence and "dịch tự động", so the disclosure-parity regex still matches.
+
+## Rows applied
+vi-a 5/6 and vi-b 15/15. P3 rows in both reviews were applied.
+
+vi-a
+1  004 link label. Removed the internal note "(nhãn nguồn: Điều 10)". The link now names Điều 3 of Tiêu chuẩn thuế suất khấu trừ các loại thu nhập (各類所得扣繳率標準) and says the provision is not Điều 10 Luật Thuế kinh doanh. URL unchanged. Digit 10 kept (see disagreements). Checker numbers stay PASS.
+2  "chuyện riêng" → "một việc khác" in both guidance strings (contact notice and FAQ). "một" is added so the phrase is a full noun phrase. The rest of each sentence is unchanged.
+4  003 three docket labels: "giản dị" → "theo thủ tục giản lược" (two 上易 appeals and the 壢簡 first-instance judgment). Existing Chinese docket glosses stay. Gregorian "(2020)" was not added to số 477 or số 236 (ACCEPTED-ROUND). The "(2020)" already on số 644 was left.
+5  008 difficulty row, three cells, aligned with English Easy / Difficult / Easy: "Đơn giản | Phức tạp | Đơn giản". The row header "Mức độ phức tạp khi áp dụng" was already in place and stays. Cells were not merged.
+6  Privacy: "có thể đặt ngoài Đài Loan" → "có thể nằm ngoài Đài Loan" (servers as the subject). One instance.
+
+vi-b
+1  016 residual-property claim is no longer called a regime: "là chế độ so sánh theo tiêu chuẩn luật định" → "so sánh, theo tiêu chuẩn luật định,". The real "chế độ tài sản pháp định (法定財產制)" stays.
+2  011 disclaimer: "xóa bỏ … chú thích giới hạn" → "khắc phục … tuyên bố miễn trừ".
+3  010 "đã thực tế chi" → "đã chi trên thực tế".
+4  011 "hình thái dạng rắn" → "dạng rắn".
+5  011 "khâu bán có thu tiền" → "việc bán hàng có thu tiền".
+6  014 evidence sentence now has "Tài liệu" as the subject that links the elements. "đã thực chi" in that new sentence was written "đã chi trên thực tế", the same adverb fix as row 3.
+7  014 "đáp án cố định" → "kết luận cố định", and the citation in the same sentence is "Khoản 2 Điều 15-1".
+8  016 "Hãy phản ánh một cách cân bằng" → "Hãy cân bằng". "phản ánh kết quả" (English "reflected") in the same file, and "được phản ánh" in 014, stay.
+9  017 "thải bỏ xe" → "hủy xe".
+10 018 "Khi thiết kế vào Đài Loan … nên tách" → "Khi lập kế hoạch gia nhập thị trường Đài Loan … nên tách riêng". "lập kế hoạch gia nhập thị trường" is the planning verb; the suggested "thiết kế việc gia nhập" still designs an abstract noun.
+11 018 "nếu ở lâu" → "nếu lưu trú dài hơn". The gloss (居留證) was already on the sentence.
+12 014 citation order "Điều 15-1 khoản N" → "Khoản N Điều 15-1": khoản 1 (body), khoản 2 (body, with row 7), khoản 4 (FAQ and the repeated body paragraph). Four flips. Bare "Điều 15-1" and the existing "khoản 1 Điều 16" stay.
+13 014 "áp dụng nguyên kết luận" → "áp dụng nguyên xi kết luận". One instance. 007 and 016 already said "nguyên xi".
+14 011 "mà cũng có thể có một nhà nhập khẩu khác" → "hoặc một nhà nhập khẩu khác cũng có thể tham gia".
+15 018 "hợp đồng mua" → "hợp đồng mua bán", with "được nêu trong" and "không phải là" for the English "named in" / "is not".
+
+## Rows skipped
+vi-a #3 (bio "1,57 triệu TWD (TWD 1.57M)"). GUIDANCE_BIO_PRESERVED_TERMS pins "TWD 1.57M" byte-identical in every locale (src/data/__tests__/guidance-team-bios.test.ts). The suggested sentence deletes that token. The sentence was left unchanged.
+
+## Systemic patterns and how many instances changed
+"(nhãn nguồn: Điều 10)" on the public withholding-standard link          1 (004). Rewritten as a negation that still contains digit 10; not deleted.
+"chuyện riêng" where the meaning is a separate matter                     2 (guidance contact paragraph, guidance FAQ). No column instance.
+"giản dị" for 上易 / 簡 summary procedure                                 3 (003 link labels only).
+"1,57 triệu TWD (TWD 1.57M)" double amount                                 0 changed, 1 left (pin above).
+008 difficulty cell restating the notice period                            3 cells in that one row (the quoted resignation cell plus the Easy and Difficult cells the suggested row also replaces).
+"có thể đặt ngoài" with servers as subject                                 1 (privacy). "công ty mẹ đặt ngoài Đài Loan" in 004 is a different sentence and stays.
+"là chế độ so sánh" for the residual-property claim                        1 (016).
+"xóa bỏ … chú thích giới hạn" for a disclaimer                             1 (011).
+"đã thực tế chi" / "đã thực chi" before the verb                          2 (010 quoted; 014 evidence sentence).
+"hình thái dạng rắn"                                                       1 (011).
+"khâu bán có thu tiền"                                                     1 (011).
+"Điều 15-1 khoản N" citation order                                         4 (014).
+"đáp án" for a statutory conclusion                                        1 (014). No second instance.
+"phản ánh một cách cân bằng"                                               1 (016).
+"thải bỏ xe"                                                               1 (017).
+"Khi thiết kế vào Đài Loan"                                                1 (018).
+"ở lâu" in formal residence-permit prose                                   1 (018).
+"áp dụng nguyên kết luận" without "xi"                                     1 (014).
+"mà cũng" copying 而 between alternatives                                  1 (011).
+"hợp đồng mua" clipped for a purchase contract                             1 (018). "hợp đồng mua bán" already in 007 stays.
+
+R2–R10 were already in this corpus (prior rounds; this round's verdicts are 4/5 and confirm gender, the consultation lock, and Korea as a labelled example). This pass did not reopen them. Hangul remains only inside frontmatter `url` of 008 and 009 (R16, not rendered).
+
+## §Verify
+```
+$ node scripts/check-column-translation.mjs --dir src/content/columns-vi --lang vi 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=31
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-vi src/data | wc -l
+       0
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+$ git status --short | wc -l
+      12
+```
+`git status --short | wc -l` was 12 before this log file existed. 004 still WARNs `numbers extra in translation (1): 0`. That WARN was already on the file before this round and does not fail the summary. Keeping digit 10 on the 004 link did not add a missing-number failure.
+
+## Reviewer disagreements (not applied)
+vi-a #1, the deletion of digit 10. The reviewer is right that `pcode=G0340028&flno=3` is Article 3 of 各類所得扣繳率標準 and that "(nhãn nguồn: Điều 10)" must not be the citation the reader sees. The suggested link text drops the digit 10 that the Korean source still has on this line (`영업세법 제10조`). Round 3 showed that deletion fails the checker (`numbers FAIL missing from translation (1): 10`). The public label now says the link is Điều 3 and is not Điều 10 of the business-tax act, which keeps the digit.
+
+vi-a #4, adding "(2020)" beside ROC year 109 on the other two judgments. ACCEPTED-ROUND forbids adding a Gregorian year. Số 644 already had "(2020)"; số 477 and số 236 did not receive one. The terminology fix was applied.
+
+vi-a #3 is a skip under the bio pin, not a claim that the double amount reads well.

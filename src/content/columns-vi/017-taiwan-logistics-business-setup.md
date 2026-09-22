@@ -56,7 +56,7 @@ Hoạt động vận tải bằng xe tải nhỏ do cá nhân kinh doanh là m�
 
 Biển số xe kinh doanh vận tải (車輛牌照) được cấp cho doanh nghiệp vận tải bằng xe cơ giới mới thành lập thì trong vòng một năm kể từ ngày cấp không được nộp trả để hủy (繳銷), cũng không được sang tên, chuyển nhượng trên đăng ký phương tiện (過戶轉讓).
 
-Giới hạn này áp dụng đối với việc nộp trả để hủy biển số xe kinh doanh vận tải và việc sang tên, chuyển nhượng trên đăng ký phương tiện. Các cách xử lý khác như thải bỏ xe hay thay xe cũ bằng xe mới vẫn phải được xác nhận riêng theo quy định hiện hành của cơ quan quản lý đường bộ.
+Giới hạn này áp dụng đối với việc nộp trả để hủy biển số xe kinh doanh vận tải và việc sang tên, chuyển nhượng trên đăng ký phương tiện. Các cách xử lý khác như hủy xe hay thay xe cũ bằng xe mới vẫn phải được xác nhận riêng theo quy định hiện hành của cơ quan quản lý đường bộ.
 
 ### Đầu tư nước ngoài và chấp thuận theo ngành nghề
 

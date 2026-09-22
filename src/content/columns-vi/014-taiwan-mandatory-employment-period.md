@@ -15,7 +15,7 @@ faq:
   - q: "Nghỉ việc sớm thì có phải hoàn trả toàn bộ tiền thưởng khi ký hợp đồng hoặc thưởng giữ chân không?"
     a: "Không phải lúc nào cũng phải hoàn trả toàn bộ. Nếu tiền thưởng khi ký hợp đồng, thưởng giữ chân hoặc khoản chi trả trước khác được chi trả với tư cách là khoản bù đắp hợp lý cho thỏa thuận thời hạn làm việc tối thiểu, thì mục đích của khoản tiền đó phải được thông báo rõ ràng cho người lao động. Công văn giải thích ngày 5 tháng 6 năm 2026 của Bộ Lao động Đài Loan nêu rằng khi người lao động nghỉ việc trước lúc thời hạn kết thúc, số tiền hoàn trả phải được tính theo tỷ lệ với phần thời gian chưa thực hiện và không được yêu cầu hoàn trả toàn bộ. Kết luận trong từng vụ việc vẫn phải xem xét đồng thời mục đích chi trả, nội dung thỏa thuận, thời gian đã làm việc và lý do chấm dứt hợp đồng."
   - q: "Nếu hợp đồng chấm dứt sớm vì lý do không thể quy trách nhiệm cho người lao động thì có phải hoàn trả chi phí đào tạo không?"
-    a: "Điều 15-1 khoản 4 Luật Tiêu chuẩn Lao động của Đài Loan quy định rằng nếu hợp đồng lao động chấm dứt trước khi thời hạn làm việc tối thiểu kết thúc vì lý do không thể quy trách nhiệm cho người lao động (不可歸責於勞工), thì người lao động không phải chịu trách nhiệm vi phạm thỏa thuận thời hạn làm việc tối thiểu cũng như trách nhiệm hoàn trả chi phí đào tạo. Tuy nhiên, lý do chấm dứt hợp đồng và việc quy trách nhiệm vẫn phải được đánh giá dựa trên chứng cứ cụ thể như thông báo sa thải, thông báo xin nghỉ việc và tài liệu về việc vi phạm điều kiện lao động."
+    a: "Khoản 4 Điều 15-1 Luật Tiêu chuẩn Lao động của Đài Loan quy định rằng nếu hợp đồng lao động chấm dứt trước khi thời hạn làm việc tối thiểu kết thúc vì lý do không thể quy trách nhiệm cho người lao động (不可歸責於勞工), thì người lao động không phải chịu trách nhiệm vi phạm thỏa thuận thời hạn làm việc tối thiểu cũng như trách nhiệm hoàn trả chi phí đào tạo. Tuy nhiên, lý do chấm dứt hợp đồng và việc quy trách nhiệm vẫn phải được đánh giá dựa trên chứng cứ cụ thể như thông báo sa thải, thông báo xin nghỉ việc và tài liệu về việc vi phạm điều kiện lao động."
 ---
 
 # Thỏa thuận thời hạn làm việc tối thiểu (最低服務年限約定) tại Đài Loan: tiêu chí đánh giá hiệu lực, chi phí đào tạo và tiền phạt vi phạm hợp đồng (違約金)
@@ -37,7 +37,7 @@ Ngay cả khi bốn vấn đề này cùng được ghi trong một bản hợp 
 
 Thỏa thuận thời hạn làm việc tối thiểu không đương nhiên có hiệu lực. Theo Điều 15-1 Luật Tiêu chuẩn Lao động (勞動基準法) của Đài Loan, nếu người sử dụng lao động đã tiến hành đào tạo kỹ thuật chuyên môn (專業技術培訓) và gánh chịu chi phí đó, hoặc đã cung cấp khoản bù đắp hợp lý (合理補償) để người lao động tuân thủ thời hạn làm việc tối thiểu, thì thỏa thuận có thể đáp ứng các căn cứ pháp định. Không bắt buộc phải có đủ cả hai căn cứ, nhưng ngay cả khi tồn tại một trong hai, thỏa thuận vẫn không được vượt quá phạm vi hợp lý khi xem xét toàn bộ tình tiết như thời gian và chi phí đào tạo, khả năng thay thế nhân lực (人力替補), mức và phạm vi của khoản bù đắp.
 
-Điều 15-1 khoản 1 quy định hai căn cứ pháp định theo cách lựa chọn. Thứ nhất là trường hợp người sử dụng lao động cung cấp đào tạo kỹ thuật chuyên môn cho người lao động và gánh chịu chi phí đó; thứ hai là trường hợp người sử dụng lao động cung cấp khoản bù đắp hợp lý để đổi lấy việc tuân thủ thời hạn làm việc tối thiểu. Điều cần xác minh không phải là tên gọi được ghi trong hợp đồng, mà là trên thực tế căn cứ nào đang tồn tại.
+Khoản 1 Điều 15-1 quy định hai căn cứ pháp định theo cách lựa chọn. Thứ nhất là trường hợp người sử dụng lao động cung cấp đào tạo kỹ thuật chuyên môn cho người lao động và gánh chịu chi phí đó; thứ hai là trường hợp người sử dụng lao động cung cấp khoản bù đắp hợp lý để đổi lấy việc tuân thủ thời hạn làm việc tối thiểu. Điều cần xác minh không phải là tên gọi được ghi trong hợp đồng, mà là trên thực tế căn cứ nào đang tồn tại.
 
 Điều 15-1 đòi hỏi phải có một trong hai căn cứ pháp định, đồng thời phải qua một bước thẩm tra tính hợp lý riêng biệt. Điều này không có nghĩa là đào tạo kỹ thuật chuyên môn và khoản bù đắp hợp lý luôn phải được cung cấp cùng lúc, cũng không có nghĩa là chỉ cần ghi hình thức một trong hai vào hợp đồng thì toàn bộ thỏa thuận đương nhiên có hiệu lực.
 
@@ -47,7 +47,7 @@ Việc người lao động đã ký tên vào hợp đồng có thể là tài 
 
 ## 2. Căn cứ pháp định thứ nhất: đào tạo kỹ thuật chuyên môn và việc gánh chịu chi phí
 
-Để lấy việc đào tạo làm căn cứ cho thỏa thuận, người sử dụng lao động phải thực sự cung cấp đào tạo kỹ thuật chuyên môn cho chính người lao động đó và gánh chịu chi phí. Chỉ ghi trong kế hoạch đào tạo rằng đây là khóa học chuyên môn, hoặc chỉ ghi chi phí dự kiến vào hợp đồng, là chưa đủ. Cần liên kết được bằng tài liệu chủ đề của khóa học, tính chuyên môn và kỹ thuật mà công việc đòi hỏi, thời gian cụ thể, việc người lao động có hoàn thành khóa học hay không và khoản chi phí đã thực chi.
+Để lấy việc đào tạo làm căn cứ cho thỏa thuận, người sử dụng lao động phải thực sự cung cấp đào tạo kỹ thuật chuyên môn cho chính người lao động đó và gánh chịu chi phí. Chỉ ghi trong kế hoạch đào tạo rằng đây là khóa học chuyên môn, hoặc chỉ ghi chi phí dự kiến vào hợp đồng, là chưa đủ. Tài liệu phải liên kết được chủ đề khóa học, tính chuyên môn và kỹ thuật mà công việc đòi hỏi, thời gian cụ thể, việc hoàn thành khóa học và khoản chi phí đã chi trên thực tế.
 
 Đối tượng xem xét không chỉ gồm các chi phí có thể xác minh trực tiếp như thù lao giảng viên bên ngoài, học phí trả cho cơ sở đào tạo, tiền sử dụng giáo trình và thiết bị, mà còn gồm cả căn cứ tính toán các chi phí nội bộ mà người sử dụng lao động đưa ra. Nếu việc đào tạo do nhân lực nội bộ đảm nhiệm, cần xem xét thời gian của ai đã được đưa vào việc đào tạo, việc đó khác thế nào với hoạt động giám sát thông thường hay bàn giao công việc (交接), và có căn cứ nào để quy khoản chi phí ấy vào chi phí đào tạo của chính người lao động đó hay không. Một con số ước tính hay một khoản được phân bổ chung không chứng minh được gánh nặng chi phí thực tế.
 
@@ -71,7 +71,7 @@ Việc câu chữ trong hợp đồng có khớp với thực tế chi trả hay
 
 ## 4. Phạm vi hợp lý và bốn yếu tố thẩm tra
 
-Ngay cả khi có một trong các căn cứ pháp định, thời hạn thỏa thuận và trách nhiệm vẫn phải nằm trong phạm vi hợp lý. Điều 15-1 khoản 2 không đưa ra một đáp án cố định theo tên gọi hay theo ngành nghề, mà quy định thẩm tra hợp đồng cụ thể cùng cấu trúc đầu tư và bù đắp theo bốn yếu tố sau đây.
+Ngay cả khi có một trong các căn cứ pháp định, thời hạn thỏa thuận và trách nhiệm vẫn phải nằm trong phạm vi hợp lý. Khoản 2 Điều 15-1 không đưa ra một kết luận cố định theo tên gọi hay theo ngành nghề, mà quy định thẩm tra hợp đồng cụ thể cùng cấu trúc đầu tư và bù đắp theo bốn yếu tố sau đây.
 
 1. Thời gian và chi phí của việc đào tạo kỹ thuật chuyên môn
 2. Khả năng thay thế nhân lực đối với người lao động làm công việc giống hoặc tương tự
@@ -86,7 +86,7 @@ Yếu tố thứ ba xem xét không chỉ mức tiền mà cả phạm vi của 
 
 Yếu tố thứ tư có thể bao gồm nhiều tình tiết ảnh hưởng đến tính hợp lý, như diễn biến giao kết thỏa thuận, tính chất công việc, nội dung đã được giải thích cho các bên, thời gian làm việc thực tế và lý do chấm dứt hợp đồng. Mức độ quan trọng của từng yếu tố có thể thay đổi tùy vụ việc, và các tình tiết cần cân nhắc cũng không giới hạn ở những ví dụ nêu trên. Vì vậy, phải xem xét đầy đủ, không bỏ sót các sự kiện liên quan xuất hiện trong hồ sơ.
 
-Giữa thời hạn thỏa thuận, khoản đầu tư thực tế của người sử dụng lao động, mức độ khó khăn khi thay thế nhân lực, khoản bù đắp mà người lao động nhận được và gánh nặng hoàn trả phải tương xứng với nhau ở mức có thể chấp nhận được. Không được ấn định trước hiệu lực chỉ vì công việc thuộc một ngành nghề nhất định, cũng không được áp dụng nguyên kết luận của một vụ việc khác. Cần xem xét đồng thời cách thiết kế điều khoản tại thời điểm giao kết và mức độ thực hiện trên thực tế tại thời điểm chấm dứt hợp đồng.
+Giữa thời hạn thỏa thuận, khoản đầu tư thực tế của người sử dụng lao động, mức độ khó khăn khi thay thế nhân lực, khoản bù đắp mà người lao động nhận được và gánh nặng hoàn trả phải tương xứng với nhau ở mức có thể chấp nhận được. Không được ấn định trước hiệu lực chỉ vì công việc thuộc một ngành nghề nhất định, cũng không được áp dụng nguyên xi kết luận của một vụ việc khác. Cần xem xét đồng thời cách thiết kế điều khoản tại thời điểm giao kết và mức độ thực hiện trên thực tế tại thời điểm chấm dứt hợp đồng.
 
 ## 5. Những khóa đào tạo không thể làm căn cứ cho thỏa thuận
 
@@ -116,7 +116,7 @@ Cũng phải phân biệt việc hoàn trả chi phí đào tạo với việc h
 
 ## 7. Trường hợp hợp đồng chấm dứt vì lý do không thể quy trách nhiệm cho người lao động
 
-Điều 15-1 khoản 4 Luật Tiêu chuẩn Lao động của Đài Loan quy định rằng nếu hợp đồng lao động chấm dứt trước khi thời hạn làm việc tối thiểu kết thúc vì lý do không thể quy trách nhiệm cho người lao động (不可歸責於勞工), thì người lao động không phải chịu trách nhiệm vi phạm thỏa thuận thời hạn làm việc tối thiểu cũng như trách nhiệm hoàn trả chi phí đào tạo. Tuy nhiên, lý do chấm dứt hợp đồng và việc quy trách nhiệm vẫn phải được đánh giá dựa trên chứng cứ cụ thể như thông báo sa thải, thông báo xin nghỉ việc và tài liệu về việc vi phạm điều kiện lao động.
+Khoản 4 Điều 15-1 Luật Tiêu chuẩn Lao động của Đài Loan quy định rằng nếu hợp đồng lao động chấm dứt trước khi thời hạn làm việc tối thiểu kết thúc vì lý do không thể quy trách nhiệm cho người lao động (不可歸責於勞工), thì người lao động không phải chịu trách nhiệm vi phạm thỏa thuận thời hạn làm việc tối thiểu cũng như trách nhiệm hoàn trả chi phí đào tạo. Tuy nhiên, lý do chấm dứt hợp đồng và việc quy trách nhiệm vẫn phải được đánh giá dựa trên chứng cứ cụ thể như thông báo sa thải, thông báo xin nghỉ việc và tài liệu về việc vi phạm điều kiện lao động.
 
 Vì vậy, không thể chỉ căn cứ vào việc quan hệ lao động kết thúc trước thời hạn thỏa thuận để công nhận là người lao động đã vi phạm. Cần xác minh bên nào đã đưa ra thông báo nào, căn cứ pháp lý để chấm dứt hợp đồng là gì, và tình tiết thực tế làm phát sinh việc chấm dứt thuộc về bên nào.
 

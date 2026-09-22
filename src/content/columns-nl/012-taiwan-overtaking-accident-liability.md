@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Afbeelding die de beoordeling van de aansprakelijkheid bij inhaalongevallen in Taiwan en de veilige inhaalprocedure toelicht](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Wanneer het voorliggende voertuig langzaam rijdt, kan inhalen (超車) een alledaagse keuze lijken, maar het is een rijgedrag met aanzienlijk risico. Voordat u met het inhalen begint, moet u het wegvak, de verkeerssituatie in beide richtingen, de beweging van de voorliggende voertuigen en de ruimte om veilig naar de oorspronkelijke rijstrook terug te keren, samen nagaan (道路交通安全規則).
+Wanneer het voorliggende voertuig langzaam rijdt, kan inhalen (超車) alledaags lijken, maar het is een rijgedrag met aanzienlijk risico. Voordat u met het inhalen begint, moet u het wegvak, de verkeerssituatie in beide richtingen, de beweging van de voorliggende voertuigen en de ruimte om veilig naar de oorspronkelijke rijstrook terug te keren, samen nagaan (道路交通安全規則).
 
 ## Inhaalvoorwaarden volgens artikel 101 van de verkeersveiligheidsvoorschriften (道路交通安全規則)
 
@@ -43,7 +43,7 @@ B liep ernstige hoofdletsels op en overleed ter plaatse; A verloor het bewustzij
 
 De familie van A en de nabestaanden van B zagen eerst de plotselinge rijstrookwissel van voertuig nr. 2 als de voornaamste oorzaak van de botsing. De zaak leidde tot een proces, en in de loop van de procedure werden verschillende deskundigenonderzoeken (鑑定) van het ongeval uitgevoerd.
 
-Volgens het resultaat van het deskundigenonderzoek droeg A de voornaamste verantwoordelijkheid voor deze botsing. Deze conclusie was beperkt tot de feiten van deze zaak. Het deskundigenonderzoek nam gezamenlijk in aanmerking dat A 2 achtereenvolgens rijdende voorliggende voertuigen wilde inhalen, dat hij de tegengestelde rijstrook opreed, dat hij met een snelheid reed die nauwelijks ruimte liet om te remmen, dat de voorgeschreven toeter- en koplampsignalen ontbraken en de rijstrookwisselbeweging van voertuig nr. 2, de structuur van de weg en de rijstroken en de overige veiliggestelde bewijzen.
+Volgens het resultaat van het deskundigenonderzoek droeg A de voornaamste verantwoordelijkheid voor deze botsing. Deze conclusie was beperkt tot de feiten van deze zaak. Het deskundigenonderzoek nam gezamenlijk in aanmerking dat A 2 achtereenvolgens rijdende voorliggende voertuigen wilde inhalen, dat hij de tegengestelde rijstrook opreed, dat hij met een snelheid reed die nauwelijks ruimte liet om te remmen, dat de voorgeschreven toeter- en koplampsignalen ontbraken, en nam ook de rijstrookwissel van voertuig nr. 2, de structuur van de weg en de rijstroken en de overige veiliggestelde bewijzen in aanmerking.
 
 Dat in afzonderlijke zaken zulke deskundigenresultaten er komen, betekent niet dat het 1 keer achterwege laten van een voorgeschreven sein steeds de aansprakelijkheid vastlegt. De nalatigheid (過失) bij een inhaalongeval hangt af van de plaats van het ongeval, de rijstrookindeling, de snelheid, de voertuigbewegingen, de seinen, de tijdintervallen, het zicht en de overige bewijzen.
 

@@ -541,7 +541,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'chang-rongxuan': 'Advocaat in Taiwan',
       'chang-fangyu': 'Juridisch medewerker (paralegal)',
       'son-jungmin': 'Operationeel manager Korea',
-      'huang-shengping': 'Partner-accountant (CPA)',
+      'huang-shengping': 'Accountant-partner (CPA)',
     },
   },
   pl: {
@@ -2722,42 +2722,42 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Stichting voor rechtsbijstand, vestiging Taichung (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Eerder werkzaam bij het Ministry of Education, Legal Affairs Division, met nadruk op bestuurs- en civiele zaken.',
+        'Eerder werkzaam bij het ministerie van Onderwijs, afdeling Juridische Zaken (Ministry of Education, Legal Affairs Division), met nadruk op bestuurs- en civiele zaken.',
         'Ervaring met zaken over hogescholen, rechten van onderwijspersoneel en bestuursrechtelijke klachten.',
       ],
       education: ['Bachelordiploma rechten (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Ministerie van Onderwijs, afdeling Juridische Zaken (Ministry of Education, Legal Affairs Division)',
         'Advocaat, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Juridisch medewerker met jarenlange ervaring als senior paralegal bij meerdere kantoren, verantwoordelijk voor procesondersteuning, vennootschapsrecht en buitenlandse investeringen.',
+        'Senior juridisch medewerker met jarenlange ervaring bij meerdere kantoren, verantwoordelijk voor procesondersteuning, vennootschapsrecht en buitenlandse investeringen.',
         'Ondersteuning bij procedures, oprichting van vennootschappen, vergunningen voor buitenlandse investeringen, licentieaanvragen en de uitwisseling tussen Korea en Taiwan.',
       ],
       education: ['Bachelordiploma rechten (LL.B.), Tunghai University'],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Senior juridisch medewerker, Boyin Law Firm',
+        'Senior juridisch medewerker, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
       intro: [
         'Coördineert consultatieafspraken en de communicatie voor cliënten uit Korea.',
-        'Ondersteunt de uitwisseling tussen afdelingen via documentsystemen en werkstromen, op basis van informatica.',
+        'Ondersteunt de uitwisseling tussen afdelingen via documentsystemen en werkstromen, op grond van een opleiding informatica.',
       ],
       education: ['Bachelordiploma (B.S.) informatica, National Cheng Kung University'],
       experience: ['Korea-operaties, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
-        'Heeft bachelor- en masterprogramma’s in accountancy aan de National Chengchi University afgerond en leidt thans een accountantskantoor.',
+        'Heeft aan de National Chengchi University een bachelor- en een masteropleiding accountancy afgerond en leidt thans een accountantskantoor.',
         'Ondersteunt de geïntegreerde analyse van juridische, fiscale en financiële risico’s voor ondernemingscliënten.',
       ],
       education: [

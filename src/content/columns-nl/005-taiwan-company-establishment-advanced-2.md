@@ -71,7 +71,7 @@ Bepaalde banken kunnen aanvullende eisen stellen, bijvoorbeeld een gebruiksduur 
 
 A. Eerste werknemer: het verzoek wordt ingediend als leidinggevende arbeid in een gewone onderneming met investering van overzeese Chinezen of buitenlanders (一般僑外投資事業主管工作). De maatstaf van de “gespecialiseerde of technische arbeid” van punt B hieronder is niet van toepassing, maar wel de adressaatvoorwaarden, waaronder die van bestuurder (經理人) van een vennootschap waarvan de inbreng van overzeese Chinezen of buitenlanders 1/3 overschrijdt en de resultaatsvoorwaarden van de werkgever inzake kapitaal en omzet (toetsingsnormen art. 38 en art. 39).
 
-B. Vanaf de volgende werknemer gelden beperkingen: overschrijdt het aantal in dienst genomen werknemers 1 persoon, dan worden de relevante opleiding en ervaring van de werknemer, de regels over het gemiddelde aanwervingsloon en de regels over kapitaal en omzet van de vennootschap behandeld overeenkomstig de “gespecialiseerde of technische arbeid” (專門性或技術性工作).
+B. Vanaf de volgende werknemer gelden beperkingen: neemt de vennootschap meer dan 1 persoon met een buitenlandse nationaliteit in dienst, dan gelden de opleiding en de ervaring van de werknemer, het gemiddelde aanwervingsloon en de regels over kapitaal en omzet van de vennootschap voor de “gespecialiseerde of technische arbeid” (專門性或技術性工作).
 
 Raadpleeg de website van het ministerie van Arbeid van Taiwan (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

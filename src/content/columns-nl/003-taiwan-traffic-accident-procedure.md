@@ -63,7 +63,7 @@ Bij klachtdelicten kan de klacht volgens artikel 238 van het Wetboek van Strafvo
 
 ### Officiële grondslagen Q1–Q5
 
-- [Verordening inzake beheer en sancties van het wegverkeer (道路交通管理處罰條例) artikel 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [Wet inzake beheer en sancties van het wegverkeer (道路交通管理處罰條例) artikel 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
 - [Wetboek van Strafrecht van de Republiek China artikel 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
 - [Wetboek van Strafrecht van de Republiek China artikel 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Wetboek van Strafrecht van de Republiek China artikel 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
@@ -171,7 +171,7 @@ De bepaling van de civielrechtelijke vorderingstegenpartijen en de strafrechteli
 
 ## Q15. Welke prestaties en dekkingen van de autoverzekering moeten worden onderzocht?
 
-De verzekeringsplicht volgens artikel 6 van de wet op de verplichte autoverzekering van civiele aansprakelijkheid (強制汽車責任保險法) treft in beginsel de voertuigeigenaar en in bepaalde gevallen ook gebruiker of beheerder van het voertuig. Dit stelsel voorziet een schuldonafhankelijke prestatiestructuur (無過失給付制度) voor bij motorvoertuigongevallen gekwetsten of overledenen; de wettelijk bepaalde kring van passagiers of van een 3e persoon (第三人) buiten het voertuig moet worden onderzocht.
+De verzekeringsplicht volgens artikel 6 van de wet op de verplichte autoverzekering van civiele aansprakelijkheid (強制汽車責任保險法) treft in beginsel de voertuigeigenaar en in bepaalde gevallen ook gebruiker of beheerder van het voertuig. Dit stelsel voorziet een schuldonafhankelijke prestatiestructuur (無過失給付制度) voor bij motorvoertuigongevallen gekwetsten of overledenen; de wettelijk bepaalde kring van passagiers of van een derde (第三人) buiten het voertuig moet worden onderzocht.
 
 Bij alleenongevallen van 1 voertuig is diens bestuurder in de regel geen prestatieontvanger van de verplichte verzekering van dat voertuig. Bij ongevallen met verscheidene voertuigen kan de bestuurder echter prestaties bij de verplichte verzekeraar van een ander betrokken voertuig vorderen.
 
@@ -335,7 +335,7 @@ Na de behandeling van veel verkeersongevallen verdient 1 punt bijzondere aandach
 
 ​
 
-Door letsel of overlijden van de benadeelde persoon lijden zij zelf of de familie lichamelijk en geestelijk leed.
+Door letsel of overlijden van de benadeelde persoon lijdt de benadeelde persoon zelf of diens familie lichamelijk en geestelijk leed.
 
 ​
 

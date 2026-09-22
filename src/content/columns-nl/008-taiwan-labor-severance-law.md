@@ -13,16 +13,16 @@ faq:
   - q: "Moet de vennootschap ook bij een tuchtontslag een ontslagvergoeding betalen?"
     a: "Nee. Pleegt de werknemer een onrechtmatige handeling, schendt hij interne regels of blijft hij zonder geldige reden 3 dagen achtereen ongewettigd afwezig (artikel 12 van de wet op de arbeidsnormen, 勞動基準法第12條), dan kan de vennootschap zonder voorafgaande aankondiging ontslaan en hoeft zij geen ontslagvergoeding te betalen. Daarentegen vereist een economisch ontslag (artikel 11) voorafgaande aankondiging en betaling van de ontslagvergoeding."
   - q: "Hoe wordt de ontslagvergoeding in Taiwan berekend?"
-    a: "Voor elk volbracht 1 jaar anciënniteit moet de werkgever 0,5 maand gemiddeld loon als ontslagvergoeding betalen, ten hoogste 6 maandlonen. Deze formule geldt voor anciënniteit waarop artikel 12 van de verordening over het pensioen van werknemers (勞工退休金條例) van toepassing is; voor anciënniteit waarop artikel 17 van de wet op de arbeidsnormen (勞動基準法) van toepassing is, wordt per 1 jaar 1 maand gemiddeld loon zonder maximum betaald."
+    a: "Voor elke anciënniteit van een jaar moet de werkgever 0,5 maand gemiddeld loon als ontslagvergoeding betalen, ten hoogste 6 maandlonen. Deze formule geldt voor anciënniteit waarop artikel 12 van de wet over het pensioen van werknemers (勞工退休金條例) van toepassing is; voor anciënniteit waarop artikel 17 van de wet op de arbeidsnormen (勞動基準法) van toepassing is, wordt voor een jaar 1 maand gemiddeld loon zonder maximum betaald."
 ---
 
 # Arbeidsrecht in Taiwan: is de ontslagvergoeding (資遣費) in Taiwan werkelijk moeilijk te verkrijgen?
 
 ![Hoofdafbeelding](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Ik ben Wei Tseng (曾雋崴), advocaat in Taiwan.
+In Taiwan ontstaat de plicht tot betaling van de ontslagvergoeding (資遣費) pas wanneer de werkgever de werknemer ontslaat.
 
-Vandaag wil ik met u over de ontslagvergoeding (資遣費) in Taiwan spreken.
+Hieronder staat wanneer die vergoeding verschuldigd is en wanneer niet.
 
 ![](../images/008-taiwan-labor-severance-law/img-01.jpg)
 
@@ -52,17 +52,17 @@ Ik vat dit voor u in een eenvoudige tabel samen.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Soort** | **Economisch ontslag**  **資遣** **員工(經濟解僱)** | **Tuchtontslag**  **解僱** **員工(懲戒解僱)** | **Eigen ontslag van de werknemer**  **員工自請離職** |
+| **Soort** | **Economisch ontslag (資遣員工, 經濟解僱)** | **Tuchtontslag (解僱員工, 懲戒解僱)** | **Eigen ontslag van de werknemer**  **員工自請離職** |
 | Betekenis | Bestaat bij de werkgever wegens de bedrijfssituatie behoefte aan personeelsaanpassing, dan ligt de grond in het ondernemingsdomein van de werkgever en niet in de verantwoordelijkheid van de werknemer. Daarom moet de werkgever de aankondigingstermijn (預告期間) naleven en ontslagvergoeding betalen, om nadelen van de werknemer evenwichtig te vereffenen. | Pleegt de werknemer een onrechtmatige of ongepaste handeling, dan kan de werkgever de arbeidsovereenkomst (勞動契約) zonder voorafgaande aankondiging dadelijk beëindigen en hoeft hij geen ontslagvergoeding te betalen. Dit is 1 van de tuchtbevoegdheden van de werkgever. | De werknemer is vrij de overeenkomst te allen tijde te beëindigen, maar moet naar de duur van de tewerkstelling de aankondigingstermijn naleven, zodat de werkgever overdracht en vervanging kan zoeken. |
 | Voorwaarden | Aanwezig  (artikel 11 van de Taiwanese wet op de arbeidsnormen) | Aanwezig  (artikel 12 van de Taiwanese wet op de arbeidsnormen) | Geen |
 | Voorafgaande aankondiging | Vereist | Niet vereist | Vereist |
-| Moeilijkheid | Eenvoudig | Moeilijk | Eenvoudig |
+| Moeilijkheid | Of ontslagvergoeding verschuldigd is, staat in de volgende rij | Of ontslagvergoeding verschuldigd is, staat in de volgende rij | Of ontslagvergoeding verschuldigd is, staat in de volgende rij |
 | Of de vennootschap ontslagvergoeding (資遣費) moet betalen | Vereist | Niet vereist | Niet vereist |
 |  | Taiwanese wet op de arbeidsnormen artikel 11 (勞動基準法第11條): Tenzij 1 van de volgende gevallen zich voordoet, mag de werkgever de arbeidsovereenkomst ook na voorafgaande kennisgeving aan de werknemer niet beëindigen.  1. Stillegging van de activiteit (歇業) of overdracht van de onderneming (轉讓)  2. Verliezen (虧損) of inkrimping van de activiteit (業務緊縮)  3. Overmacht vereist een onderbreking van de activiteit van 1 maand of langer  4. De aard van de activiteit vereist personeelsvermindering, en de ontslagen persoon kan niet naar een andere passende functie worden overgeplaatst  5. Een bepaalde werknemer kan het voor de functie vereiste werk niet bevredigend vervullen | Taiwanese wet op de arbeidsnormen artikel 12 (勞動基準法第12條): De werkgever kan zonder voorafgaande kennisgeving ontslaan wanneer de werknemer onder 1 van de volgende gevallen valt.  1. Wie bij het sluiten van de arbeidsovereenkomst onjuiste opgaven doet, de werkgever misleidt en het gevaar van schade voor de onderneming bestaat  2. Wie tegenover de werkgever, diens familie, diens vertegenwoordiger (代理人) of andere collega's geweld gebruikt of hen zwaar beledigt  3. Wie onherroepelijk tot een gevangenisstraf van bepaalde duur (有期徒刑) of een zwaardere straf is veroordeeld, zonder dat een voorwaardelijke straf (緩刑) is uitgesproken of omzetting in geldboete (易科罰金) is toegestaan  4. Ernstige schending van de arbeidsovereenkomst of van de arbeidsregels  5. Wie machines, gereedschap, grondstoffen, producten of andere goederen van de werkgever opzettelijk verbruikt of technische en handelsgeheimen van de werkgever opzettelijk openbaart en de werkgever schade berokkent  6. Ongewettigde afwezigheid (曠工) zonder geldige reden gedurende 3 opeenvolgende dagen, of gedurende 6 dagen of meer in 1 maand |  |
 
-> In Taiwan moet de werkgever voor elk volbracht 1 jaar anciënniteit (年資)
+> In Taiwan moet de werkgever voor elke anciënniteit van een jaar (年資)
 > 0,5 maand gemiddeld loon (平均工資) als ontslagvergoeding betalen.
-> (ten hoogste 6 maandlonen) Deze formule geldt voor anciënniteit waarop artikel 12 van de verordening over het pensioen van werknemers (勞工退休金條例) van toepassing is; voor anciënniteit waarop artikel 17 van de wet op de arbeidsnormen (勞動基準法) van toepassing is, wordt per 1 jaar 1 maand gemiddeld loon zonder maximum betaald.
+> (ten hoogste 6 maandlonen) Deze formule geldt voor anciënniteit waarop artikel 12 van de wet over het pensioen van werknemers (勞工退休金條例) van toepassing is; voor anciënniteit waarop artikel 17 van de wet op de arbeidsnormen (勞動基準法) van toepassing is, wordt voor een jaar 1 maand gemiddeld loon zonder maximum betaald.
 
 ​
 
@@ -118,7 +118,7 @@ Anders moest B de vennootschap verlaten;
 
 hij gaf B een blad A4
 
-en droeg hem op te schrijven: “Ik, OOO, verlaag vrijwillig functie en loon”
+en droeg hem op te schrijven: “Ik, [naam], verlaag vrijwillig functie en loon”
 
 als inhoud.
 
@@ -210,17 +210,17 @@ of werknemers naar merkwaardige functies overplaatst,
 
 Wanneer u in Taiwan werkt,
 
-is ontslagvergoeding moeilijker te verkrijgen dan men denkt
+De ontslagvergoeding is moeilijker te verkrijgen dan men denkt.
 
-Sluit niet licht compromissen met de vennootschap
+Sluit niet licht een compromis met de vennootschap.
 
-en let erop dat de vennootschap u niet ongepast ontslaat
+Let erop dat de vennootschap u niet op ongepaste wijze ontslaat
 
-of tot eigen ontslag drijft
+of u tot eigen ontslag drijft.
 
-Ontslagvergoeding is een wettelijk recht van de werknemer,
+De ontslagvergoeding is een wettelijk recht van de werknemer.
 
-en de vennootschap heeft haar vanzelfsprekend te betalen.
+De vennootschap is gehouden die te betalen wanneer de wet dat voorschrijft.
 
 Ook u moet in Taiwan uw rechten beschermen.
 

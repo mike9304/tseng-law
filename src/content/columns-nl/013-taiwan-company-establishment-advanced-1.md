@@ -27,15 +27,15 @@ De volgende vragen en antwoorden beogen personen te helpen die een vennootschaps
 
 Wanneer een buitenlander in Taiwan een vennootschap opricht, moet hij of zij een investeringsplan (投資計畫書) indienen bij het Dienst Investeringstoetsing van het ministerie van Economische Zaken (經濟部投資審議司) ter toetsing.
 
-De Dienst Investeringstoetsing moet nagaan of het betreffende kapitaal (資本額) werkelijk voor investeringsdoeleinden wordt gebruikt
+De Dienst Investeringstoetsing moet nagaan of het betreffende kapitaal (資本額) werkelijk voor investeringsdoeleinden wordt gebruikt.
 
-en of buitenlandse actoren geen middelen onder een ander voorwendsel binnenbrengen.
+Zij moet ook nagaan of buitenlandse actoren geen middelen onder een ander voorwendsel binnenbrengen.
 
 Bij het opstellen van het investeringsplan hoeft het exacte vennootschapsadres niet te worden vermeld; de vermelding van de streek volstaat (voorbeeld: stad Taipei). ​
 
 Wanneer later bij de bank de voorbereidingsrekening van de vennootschap (公司籌備處帳戶) wordt geopend, toetsen talrijke banken echter de huurovereenkomst (租賃契約) en inspecteren zij ter plaatse het vennootschapsadres.
 
-Een medewerker of een medewerkster van een Taiwanese bank heeft mij persoonlijk gezegd dat
+Een medewerker van een Taiwanese bank heeft mij persoonlijk gezegd dat
 
 talrijke buitenlanders recent na de rekeningopening verdwijnen, zodat de rekeningopening steeds strenger wordt behandeld.
 
@@ -49,7 +49,7 @@ Omdat de toetsing van het investeringsplan ook tijd vergt,
 
 dient u het investeringsplan op te stellen en tegelijk het inschrijvingsadres van de vennootschap te zoeken.
 
-Volgens artikel 9 van de Verordening inzake buitenlandse investeringen (外國人投資條例) moet de goedgekeurde inbreng volledig binnen de door de bevoegde autoriteit vastgestelde termijn (核定期限) aankomen; de termijn moet in de goedkeuringsakte van elk dossier worden bevestigd (in de praktijk wordt zij vaak rond 1 jaar vastgesteld).
+Volgens artikel 9 van de Wet inzake investeringen door buitenlanders (外國人投資條例) moet de goedgekeurde inbreng volledig binnen de door de bevoegde autoriteit vastgestelde termijn (核定期限) aankomen; de termijn moet in de goedkeuringsakte van elk dossier worden bevestigd (in de praktijk wordt zij vaak rond 1 jaar vastgesteld).
 
 Binnen deze termijn blijft, nadat het vennootschapsadres is gevonden en de huurovereenkomst is gesloten,
 
@@ -63,7 +63,7 @@ Dat is mogelijk.
 
 De bank eist in de regel een dubbele identiteitscontrole,
 
-en zonder verblijfskaart kunt u bij de immigratiedienst van Taiwan het ‘**basisgegevensblad**(統一證號基本資料表)’ aanvragen.
+en zonder verblijfskaart kunt u bij de immigratiedienst van Taiwan het basisgegevensblad van het uniforme identificatienummer (統一證號基本資料表) aanvragen.
 
 De afgifte is op dezelfde dag mogelijk,
 
@@ -123,7 +123,7 @@ Bijvoorbeeld: gaat het om bedrijfsactiviteiten (營業項目) die in een commerc
 
 dient u dit vooraf te controleren.
 
-*Als u advies over Taiwanees recht nodig hebt, neem dan contact op of neem contact op.*
+*Als u een vraag over Taiwanees recht hebt, kunt u een bericht sturen via de contactpagina, in het Engels, het Chinees (中文), het Japans of het Koreaans. Een antwoordtermijn wordt niet toegezegd.*
 
 ---
 

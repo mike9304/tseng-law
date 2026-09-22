@@ -2429,7 +2429,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     originalLanguageLabel: 'Keel, milles kirjutate',
     originalLanguagePlaceholder:
       'Näiteks eesti, inglise, hiina või muu keel',
-    preferredConsultationLanguageLabel: 'Keel, mida soovite nõustamiseks',
+    preferredConsultationLanguageLabel: 'Soovitud nõustamiskeel',
     originalTextLabel: 'Lühikirjeldus asjast (teie keeles)',
     originalTextPlaceholder:
       'Kirjutage, mis juhtus, millist abi vajate, ja tähtaeg, kui see on olemas. Ärge kirjutage passinumbrit, isikutunnistuse numbrit ega kontonumbreid.',
@@ -2442,10 +2442,10 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     invalidEmailMessage: 'Sisestage kehtiv e-posti aadress.',
     tooLongMessage: 'Tekst on liiga pikk. Lühendage see ja saatke uuesti.',
     sourceLanguageNotice:
-      'See artikkel on avaldatud ainult keeles {language}; link avab alglehe.',
+      'See artikkel on avaldatud ainult {language} keeles; link avab alglehe.',
     unavailableTranslationNotice:
       'See osa ei ole veel selle lehe keeles kättesaadav. Link algkeeles avab algteksti.',
-    unavailableLanguageNotice: 'Seda lehte keeles {language} ei pakuta.',
+    unavailableLanguageNotice: 'Seda lehte ei pakuta {language} keeles.',
     languageOptions: {
       en: 'Inglise (English)',
       'zh-hant': 'Hiina (中文)',

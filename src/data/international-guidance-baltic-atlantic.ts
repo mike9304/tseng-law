@@ -1047,7 +1047,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'JUHISED',
       title: 'Õigusteenused Taiwanis — juhised eesti keeles',
       description:
-        'Üldine seletus eesti keeles Hovering International Law Firmi töövaldkonna kohta Taiwanis, nõustamiskeelte ja esimese ühenduse kohta.',
+        'Üldine seletus eesti keeles büroo Hovering International Law Firm’i töövaldkonna kohta Taiwanis, nõustamiskeelte ja esimese ühenduse kohta.',
       intro:
         'Hovering International Law Firm abistab välismaiseid kliente, sealhulgas Taiwaniga seotud isikuid, Taiwani õiguse asjades: investeeringud ja äriühingu asutamine, tsiviilvaidlused, abielu, perekond ja pärimine, tööõigus, kriminaalasjad ning intellektuaalomand. See eestikeelne osa aitab teil näha, milline töö kuulub meie valdkonda, mida ette valmistada ja kuidas meieni jõuda. Tegemist on üldise teabega, mitte õigusnõuga teie asjas.',
       sections: [
@@ -1149,7 +1149,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
     },
     about: {
       eyebrow: 'BÜROO',
-      title: 'Hovering International Law Firmist',
+      title: 'Teave büroo Hovering International Law Firm kohta',
       description:
         'Põhiandmed selle Taiwani advokaadibüroo, selle büroode ja välismaiste osapooltega tehtava töö kohta.',
       intro:
@@ -1158,7 +1158,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Asutamine ja ülesehitus',
           paragraphs: [
-            'Hovering International Law Firm (昊鼎國際法律事務所) asutasid 2016. aastal advokaadid, kes on õppinud National Taiwan Universitys (國立臺灣大學). Hiinakeelne nimi 昊鼎 ühendab märgi 昊 („lai taevas“) märgiga 鼎 („kindel alus“) ja kirjeldab büroo suunda asutamisest saadik.',
+            'Hovering International Law Firm (昊鼎國際法律事務所) asutasid 2016. aastal advokaadid, kes on õppinud National Taiwan University’s (國立臺灣大學). Hiinakeelne nimi 昊鼎 ühendab märgi 昊 („lai taevas“) märgiga 鼎 („kindel alus“) ja kirjeldab büroo suunda asutamisest saadik.',
             'Meil on bürood Taipeis (臺北), Kaohsiungis (高雄), Taichungis (臺中) ja Pingtungis (屏東). Kaohsiungi büroo keskendub ettevõtte juhtimisele ning tegeleb tsiviil-, kriminaal- ja haldusvaidlustega. Taichungi büroo tegeleb ehitusasjade, intellektuaalomandi ning Korea ja Jaapaniga seotud asjadega. Pingtungi büroo avati 2017. aastal kohaliku vajaduse jaoks.',
             'Advokaaditöö kõrval tegutseb alates 2020. aastast ka Hovering Accounting Office, mis pakub raamatupidamist ja maksude planeerimist ettevõtjatele ja varakatele eraisikutele.',
           ],
@@ -1198,14 +1198,14 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Esmalt kinnitatakse töö ulatus',
           paragraphs: [
             'Sama liiki asjades võib töömaht olla väga erinev, olenevalt poolte arvust, olemasolevatest dokumentidest, järgitavatest tähtaegadest ja sellest, kas menetlus on juba alanud. Seepärast on esimene samm alati kindlaks määrata, mis kuulub töösse ja mis mitte.',
-            'Kokkuvõte, mille alguses saadate, on selle ulatuse alus. Mida selgemalt see kirjeldab sündmuste käiku, teie soovi ja tähtaegu, seda täpsemalt saab ulatuse määrata.',
+            'Kokkuvõte, mille te alguses saadate, on selle ulatuse alus. Mida selgemalt see kirjeldab sündmuste käiku, teie soovi ja tähtaegu, seda täpsemalt saab ulatuse määrata.',
           ],
         },
         {
           heading: 'Tasud kinnitatakse enne töö algust',
           paragraphs: [
             'Kui töö ulatus on selge, arutatakse summa ja arvutusviis teiega läbi ja kinnitatakse enne töö algust. Kui ulatus muutub töö käigus, tuleb see uuesti kinnitada.',
-            'See leht ei ole hinnapakkumine ega tekita maksekohustust.',
+            'See leht ei ole hinnapakkumine ega tekita maksekohustust. Taotluse saatmine sellelt lehelt on samuti tasuta.',
           ],
         },
         {
@@ -1235,7 +1235,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kolm asja, mida tuleb hoida lahus',
           paragraphs: [
-            'Lehe kuva keel, nõustamiskeel advokaadiga ja keel, milles te kirjutate, on kolm eri asja.',
+            'Lehe kuvakeel, nõustamiskeel advokaadiga ja keel, milles te kirjutate, on kolm eri asja.',
           ],
           items: [
             'Lehe keel: need juhised on kirjutatud eesti keeles.',
@@ -1320,7 +1320,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Mis siis, kui minu asi on väga kiireloomuline?',
           answer:
-            'Nimetage tähtaeg või ametikirja kuupäev kokkuvõtte alguses, et need andmed oleksid läbivaatamisel nähtavad. Sellel lehel ei ole valvesidet ega lubata vastamise tähtaega; kui teie asi ei saa oodata, peaksite samal ajal otsima muud abi oma asukohas.',
+            'Nimetage tähtaeg või ametikirja kuupäev kokkuvõtte alguses, et need andmed oleksid läbivaatamisel nähtavad. Sellel lehel ei ole erakorralist kontakti ega lubata vastamise tähtaega; kui teie asi ei saa oodata, peaksite samal ajal otsima muud abi oma asukohas.',
         },
       ],
     },
@@ -1340,7 +1340,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           items: [
             'Nimi, mille te märkisite',
             'E-posti aadress vastuse jaoks',
-            'Lehe kuva keel saatmise hetkel',
+            'Lehe kuvakeel saatmise hetkel',
             'Keel, milles te kirjutasite',
             'Nõustamiskeel, mida soovite',
             'Algtekst, mille te kirjutasite',
@@ -1365,7 +1365,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kasutamise eesmärk',
           paragraphs: [
-            'Saadetud andmed teenivad taotluse läbivaatamist, tagasisidet teile, suhtlusviisi selgitamist ja menetlemist, kui töö võetakse vastu.',
+            'Saadetud andmeid kasutatakse taotluse läbivaatamiseks, teile vastamiseks, suhtlusviisi selgitamiseks ja menetlemiseks, kui töö võetakse vastu.',
             'Andmeid ei kasutata turunduseks ilma eraldi nõusolekuta.',
           ],
         },
@@ -1453,7 +1453,7 @@ export const estonianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Kui kaugele saab artiklist orienteeruda',
+          heading: 'Kui kaugele artikkel orienteerumiseks sobib',
           paragraphs: [
             'Artiklid on üldine teave avaldamise hetkel. Sätted ja nende kohaldamine võivad muutuda ning artikkel ei kata kõiki teie asja asjaolusid.',
             'Ärge seetõttu tehke tegelikus asjas otsuseid üksnes artikli põhjal. Kasutage seda ülevaate saamiseks ja arutage oma dokumente eraldi advokaadiga; see leht ei ole nõustamine.',

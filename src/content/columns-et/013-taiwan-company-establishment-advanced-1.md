@@ -61,9 +61,9 @@ Alles jääb piisavalt aega avada pangas ettevalmistuskonto ja kanda kapital.
 
 See on võimalik.
 
-Pank nõuab tavaliselt kahekordset isikutuvastust,
+Pank nõuab tavaliselt kahekordset isikutuvastust.
 
-ja ilma elamiskaardita võite taotleda Taiwani immigratsiooniametilt **ühtse tunnusnumbri põhiandmete vormi** (統一證號基本資料表).
+Ilma elamiskaardita võite taotleda Taiwani immigratsiooniametilt **ühtse tunnusnumbri põhiandmete vormi** (統一證號基本資料表).
 
 Vormi saab väljastada samal päeval.
 
@@ -91,11 +91,11 @@ Seda punkti tasub põhjalikult arutada Taiwani advokaadiga.
 
 Lepingu jõustumise päev tasub paigutada võimalikult hiljaks.
 
-Lisaks annab üürileandja Taiwanis äripindade üürilepingutes sageli üürnikule **sisustusperioodi** (裝潢期間).
+Lisaks annab üürileandja Taiwanis äripindade üürilepingutes sageli üürnikule **viimistlusperioodi** (裝潢期間).
 
 See on üürivaba periood, mille üle võite läbi rääkida.
 
-Välismaalasele äripinna üürimine ei ole lihtne ja tagatis (押金) on Taiwanis üsna madal (tavaliselt 2 kuud), seega on üürileandja kaitse piiratud.
+Välismaalasele äripinna üürimine ei ole lihtne ja tagatis (押金) on Taiwanis üsna madal (tavaliselt 2 kuu üür), seega on üürileandja kaitse piiratud.
 
 Üürileandjad kõhklevad seetõttu välismaalastele üürimast.
 

@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Kaanepilt](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Kui olete lugenud [Äriühingu asutamise alused Taiwanis](/et/columns/taiwan-company-establishment-basics) ja [Äriühingu asutamine Taiwanis – süvendav osa 1](/et/columns/taiwan-company-establishment-advanced-1), võite samuti tutvuda tekstiga Äriühingu asutamine Taiwanis – süvendav osa 2 (公司設立).
+Kui olete lugenud [Äriühingu asutamise alused Taiwanis](/et/columns/taiwan-company-establishment-basics) ja [Äriühingu asutamine Taiwanis – süvendav osa 1](/et/columns/taiwan-company-establishment-advanced-1), jätkab see süvendav osa 2 aluseid ja eelmist osa (公司設立).
 
 ​
 
@@ -37,7 +37,7 @@ Enne kapitali ülekannet (資本金匯款) küsige nõu pangalt, millest vahendi
 
 **​**
 
-**2. Kas äriühingu kapitali sissemaksmisel võite kanda Taiwani dollareid (新臺幣, TWD) oma Taiwani kontolt Taiwani äriühingu ettevalmistuskontole?**
+**2. Kas äriühingu kapitali sissemaksmisel võite kanda uusi Taiwani dollareid (新臺幣, TWD) oma Taiwani kontolt Taiwani äriühingu ettevalmistuskontole?**
 
 See on võimalik, kuid peate esitama dokumendid, mis tõendavad Taiwanis omandatud TWD-vahendite päritolu.
 

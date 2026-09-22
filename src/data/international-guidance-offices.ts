@@ -1092,7 +1092,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
   et: {
     label: 'BÜROOD',
     title: 'Bürood',
-    description: 'Hovering International Law Firmi Taiwani büroode aadressid.',
+    description: 'Büroo Hovering International Law Firm’i Taiwani büroode aadressid.',
     officeLabel: 'Büroo',
     mapPreviewLabel: 'Kaardi eelvaade',
     koreaOfficeTitle: 'Korea büroo',

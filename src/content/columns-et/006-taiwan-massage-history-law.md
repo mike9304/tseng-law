@@ -63,7 +63,7 @@ Härra Lin pidas seda karistust väga ebaõiglaseks ja taotles põhiseaduse tõl
 
 Taiwanis
 
-kohtavad nägemispuudega isikud arvukaid takistusi arengus, igapäevategevuses, õppimises ja hariduses muu hulgas
+kohtavad nägemispuudega isikud arvukaid takistusi arengus, igapäevategevuses, õppimises ja hariduses,
 
 ning alad, millel nad võivad tegutseda, on väga piiratud.
 

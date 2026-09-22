@@ -1412,7 +1412,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Selles osas vastatakse korduvatele küsimustele üldise teabe tasemel: büroo kuus valdkonda, ettevalmistus enne ühendust, tasude kinnitamine ja saadetud teate tähendus. Saadetud teade ootab läbivaatamist; see ei ole õiguslik seisukoht ega kinnitatud kohtumine ja iseenesest ei tekita suhet advokaadi ja kliendi vahel. Nõustamine toimub ainult neljas keeles: inglise, hiina, jaapani ja korea keeles.',
+        'Selles osas vastatakse korduvatele küsimustele üldise teabe tasemel: büroo kuus valdkonda, ettevalmistus enne ühendust, tasude kinnitamine ja saadetud teate tähendus. Saadetud teade ootab läbivaatamist; see ei ole õigusnõu, ei ole kinnitatud kohtumine ega tekita iseenesest suhet advokaadi ja kliendi vahel. Nõustamine toimub ainult neljas keeles: inglise, hiina, jaapani ja korea keeles.',
       sources: ['/et/services', '/et/contact'],
     },
   },

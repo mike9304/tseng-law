@@ -123,7 +123,7 @@ faq:
 ## आधिकारिक स्रोत
 
 - [सड़क अधिनियम](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040001)
-- [मोटर परिवहन परीक्षा विस्तृत नियम (汽車運輸業審核細則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040004)
+- [मोटर परिवहन व्यवसाय की संवीक्षा के विस्तृत नियम (汽車運輸業審核細則)](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040004)
 - [मोटर परिवहन प्रबंधन नियम](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040003)
 - [परिवहन मंत्रालय सड़क ब्यूरो: मोटर परिवहन स्थापना तैयारी अनुमति का आवेदन](https://www.thb.gov.tw/cp.aspx?n=392)
 - [परिवहन मंत्रालय सड़क ब्यूरो: परिचालन लाइसेंस आवेदन और प्रस्तुत दस्तावेज](https://www.thb.gov.tw/cp.aspx?n=507)

@@ -37,13 +37,13 @@ Dalam sebuah perkara anonim yang ditangani kantor ini, pengendara sepeda motor A
 
 ![Diagram kecelakaan yang menunjukkan jalur mendahului sepeda motor dan dua kendaraan di depannya di jalan pegunungan](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A berusaha melewati kedua mobil itu sekaligus sehingga masuk ke jalur berlawanan dan menambah kecepatan. Mobil nomor 2 pun bersiap mendahului mobil nomor 1: kurang dari satu detik setelah menyalakan lampu penunjuk arah, mobil itu masuk ke jalur berlawanan. Sepeda motor tidak memiliki cukup kelonggaran untuk mengerem sehingga bertabrakan dengan mobil nomor 2.
+A berusaha melewati kedua mobil itu sekaligus sehingga masuk ke jalur berlawanan dan menambah kecepatan. Mobil nomor 2 pun bersiap mendahului mobil nomor 1: kurang dari satu detik setelah menyalakan lampu penunjuk arah, mobil itu masuk ke jalur berlawanan. Sepeda motor tidak sempat mengerem sehingga bertabrakan dengan mobil nomor 2.
 
 B mengalami luka berat pada kepala dan meninggal dunia di tempat kejadian, sedangkan A kehilangan kesadaran dan dibawa ke rumah sakit.
 
 Keluarga A dan B pada mulanya berpendapat bahwa perpindahan jalur mobil nomor 2 secara mendadak merupakan penyebab utama tabrakan itu. Perkara ini berlanjut menjadi gugatan, dan dalam prosesnya dilakukan beberapa kali penilaian ahli (鑑定) atas kecelakaan tersebut.
 
-Menurut hasil penilaian ahli tersebut, A dinilai memikul tanggung jawab utama atas tabrakan ini. Kesimpulan itu terbatas pada fakta-fakta dalam perkara ini. Penilaian ahli mempertimbangkan bersama-sama upaya A melewati dua kendaraan di depan yang berjalan beriringan, tindakannya masuk ke jalur berlawanan, kecepatan yang membuat kelonggaran untuk mengerem menjadi tidak memadai, tidak dilakukannya isyarat klakson maupun lampu utama sebagaimana ditentukan, gerakan perpindahan jalur mobil nomor 2, susunan jalan dan jalur, serta bukti lain yang tersedia.
+Menurut hasil penilaian ahli tersebut, A dinilai memikul tanggung jawab utama atas tabrakan ini. Kesimpulan itu terbatas pada fakta-fakta dalam perkara ini. Penilaian ahli mempertimbangkan bersama-sama upaya A melewati dua kendaraan di depan yang berjalan beriringan, tindakannya masuk ke jalur berlawanan, kecepatan yang membuat waktu untuk mengerem menjadi tidak memadai, tidak dilakukannya isyarat klakson maupun lampu utama sebagaimana ditentukan, gerakan perpindahan jalur mobil nomor 2, susunan jalan dan jalur, serta bukti lain yang tersedia.
 
 Munculnya hasil penilaian ahli menurut perkara masing-masing seperti ini tidak berarti bahwa satu kali tidak diberikannya isyarat yang ditentukan akan selalu menentukan tanggung jawab. Kelalaian (過失) dalam kecelakaan akibat mendahului tetap bergantung pada lokasi kecelakaan, susunan jalur, kecepatan, gerakan kendaraan, isyarat, jarak waktu, jarak pandang, serta bukti lain.
 

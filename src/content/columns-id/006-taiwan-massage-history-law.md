@@ -125,4 +125,4 @@ Anda harus segera menyampaikannya atau meminta agar pijat dihentikan demi melind
 
 Apabila Anda merasa telah mengalami pelecehan seksual,
 
-Anda harus pergi ke kantor polisi bersama teman yang Anda percayai atau bersama pengacara di Taiwan (律師) untuk membuat laporan polisi.
+Anda harus pergi ke kantor polisi bersama teman yang Anda percayai atau bersama advokat di Taiwan (律師) untuk membuat laporan polisi.

@@ -1971,7 +1971,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal berpengalaman yang bertahun-tahun menjabat paralegal senior di beberapa kantor advokat, meliputi dukungan litigasi, hukum korporasi, dan perkara penanaman modal asing.',
+        'Paralegal senior di beberapa kantor advokat, yang bertahun-tahun menangani dukungan litigasi, hukum korporasi, dan perkara penanaman modal asing.',
         'Mendukung litigasi, pendirian perusahaan, persetujuan penanaman modal asing, permohonan izin, serta komunikasi Korea-Taiwan.',
       ],
       education: ['Sarjana Hukum (LL.B.), Tunghai University'],

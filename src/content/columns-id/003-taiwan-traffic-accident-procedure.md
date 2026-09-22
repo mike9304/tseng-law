@@ -235,11 +235,11 @@ Pertanyaan 17. Apa tanggung jawab pidana atas perbuatan melukai karena kelalaian
 
 ​
 
-Dalam hal melukai karena kelalaian, pada sebagian putusan pernah dijatuhkan pidana sekitar 3 bulan; angka itu bukan hasil yang lazim maupun yang dapat dijanjikan.
+Dalam perkara melukai karena kelalaian, pidana pada banyak putusan berada di kisaran sekitar 3 bulan. Kisaran itu bukan hasil yang dapat dijanjikan untuk perkara Anda.
 
 ​
 
-Apabila pidana itu dialihkan menjadi uang pengganti pidana penjara (易科罰金), Pasal 41 ayat 1 Kitab Undang-Undang Hukum Pidana menetapkan konversi TWD 1.000, 2.000, atau 3.000 untuk 1 hari; dengan perhitungan TWD 1.000 per hari, pidana 3 bulan menjadi 3 × 30 × TWD 1.000 = TWD 90.000.
+Apabila pidana itu dialihkan menjadi denda sebagai pengganti pidana penjara (易科罰金), Pasal 41 ayat 1 Kitab Undang-Undang Hukum Pidana menetapkan konversi TWD 1.000, 2.000, atau 3.000 untuk 1 hari; dengan perhitungan TWD 1.000 per hari, pidana 3 bulan menjadi 3 × 30 × TWD 1.000 = TWD 90.000.
 
 ​
 
@@ -247,7 +247,7 @@ Apabila pidana itu dialihkan menjadi uang pengganti pidana penjara (易科罰金
 
 ​
 
-Untuk luka berat karena kelalaian pernah dijatuhkan pidana sekitar 4 bulan, sedangkan untuk kematian karena kelalaian (過失致死) pernah dijatuhkan pidana sekitar 6 bulan; keduanya pun bukan hasil yang lazim maupun yang dapat dijanjikan.
+Untuk luka berat karena kelalaian, pidana pada banyak putusan berada di kisaran sekitar 4 bulan, sedangkan untuk kematian karena kelalaian (過失致死) berada di kisaran sekitar 6 bulan. Kisaran itu bukan hasil yang dapat dijanjikan untuk perkara Anda.
 
 ​
 
@@ -295,27 +295,27 @@ Apabila yang terjadi hanya kerusakan kendaraan, hal itu tidak dipandang sebagai 
 
 ​
 
-Pertanyaan 20. Bagaimana cara mencari pengacara untuk perkara kecelakaan lalu lintas?
+Pertanyaan 20. Bagaimana cara mencari advokat untuk perkara kecelakaan lalu lintas?
 
 ​
 
-Karena kecelakaan lalu lintas merupakan perkara yang sangat lazim, pengacara litigasi umum yang telah beberapa tahun mengumpulkan pengalaman praktik pun dapat menangani perkara kecelakaan lalu lintas.
+Karena kecelakaan lalu lintas merupakan perkara yang sangat lazim, advokat litigasi umum yang telah beberapa tahun mengumpulkan pengalaman praktik pun dapat menangani perkara kecelakaan lalu lintas.
 
 ​
 
-Yang penting dalam hal ini adalah ketelitian dan kejujuran pengacara tersebut.
+Yang penting dalam hal ini adalah ketelitian dan kejujuran advokat tersebut.
 
 ​
 
-Penting bahwa pengacara memeriksa dengan saksama seluruh pos tuntutan dalam perkara itu agar tidak ada pos yang terlewat, dan mengupayakan ganti rugi yang didukung oleh fakta serta bukti.
+Penting bahwa advokat memeriksa dengan saksama seluruh pos tuntutan dalam perkara itu agar tidak ada pos yang terlewat, dan mengupayakan ganti rugi yang didukung oleh fakta serta bukti.
 
 ​
 
-Selain itu, pengacara harus menjelaskan dengan gamblang keadaan pihak yang diwakilinya dan memberitahukan dengan gamblang risiko yang dapat diperkirakan apabila tidak dicapai perdamaian.
+Selain itu, advokat harus menjelaskan dengan gamblang keadaan pihak yang diwakilinya dan memberitahukan dengan gamblang risiko yang dapat diperkirakan apabila tidak dicapai perdamaian.
 
 ​
 
-Anda perlu berhati-hati terhadap pengacara yang membesar-besarkan perkara dan mendesak agar tidak berdamai serta bertarung sampai akhir melalui jalur perdata dan pidana, semata-mata demi memperoleh penerimaan perkara.
+Anda perlu berhati-hati terhadap advokat yang membesar-besarkan perkara dan mendesak agar tidak berdamai serta bertarung sampai akhir melalui jalur perdata dan pidana, semata-mata demi memperoleh penerimaan perkara.
 
 ​
 
@@ -351,7 +351,7 @@ Akibatnya korban merasa sangat terluka dan marah, sehingga banyak yang tidak mau
 
 ​
 
-Karena itu hal ini sama sekali tidak boleh diabaikan, dan sebaiknya Anda berunding dengan pengacara sesuai dengan keadaan yang dihadapi.
+Karena itu hal ini sama sekali tidak boleh diabaikan, dan sebaiknya Anda berunding dengan advokat sesuai dengan keadaan yang dihadapi.
 
 ​
 

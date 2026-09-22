@@ -1,0 +1,105 @@
+WO-F-id r2 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-id-r2
+date: 2026-09-22
+scope: Indonesian columns 001–018, guidance pack `id` strings, team bios. No commit.
+
+## Rows applied
+
+id-a
+1 P1 004 link label: Business Tax Act Art. 10 → Standar tarif pemotongan berbagai jenis penghasilan (各類所得扣繳率標準), Pasal 3 — dividen bagi bukan penduduk. URL unchanged. Digit 10 kept in the parenthetical “(bukan Pasal 10 Undang-Undang Pajak Usaha)” because the checker counts Korean 제10조 in the source label (without it: numbers FAIL missing 10).
+2 P1 003 sentencing: “bukan hasil yang lazim” removed. Negligent injury is now “pidana pada banyak putusan … sekitar 3 bulan” and the range is not a promised outcome. Same pattern applied to the 4-month / 6-month sentence (過失致死 gloss kept).
+3 P2 guidance: “berada di Taiwan” → “memiliki kaitan dengan Taiwan”.
+4 P2 guidance: “pengiriman modal” in the setup list → “penyetoran modal”.
+5 P2 guidance: Kaohsiung “administrasi secara umum” → “sengketa perdata, pidana, dan administrasi”.
+6 P2 guidance: “persoalan akuntansi” → “pertanyaan akuntansi atau perpajakan”.
+7 P2 guidance: “urutan kepentingannya” → “urutan yang benar”.
+8 P2 易科罰金: “uang pengganti pidana penjara” → “denda sebagai pengganti pidana penjara” in 003 and in the 008 table (2).
+9 P2 004 “tercermin” → “dipertimbangkan”.
+10 P2 008 result claim: the two existing lines no longer say counsel’s later help let B secure statutory severance. Rephrased inside those blocks; the following “karyawan lain” line stays.
+11 P2 team bio: doubled “Paralegal … paralegal senior” collapsed to one “Paralegal senior …”. The word Paralegal is kept: it is the Indonesian statutory term (Permenkumham 3/2021) and the reviewer’s own rewrite kept it. Experience lines were already “Paralegal senior, Boyin/Muyang”.
+14 P2 pengacara → advokat (see systemic).
+15 P2 004 “ditumpangkan” → “turut diperhitungkan” / “besar paparan”.
+16 P2 007 child contact “akses” → “hak kunjungan / hak bertemu” (see systemic). Data-file “hak akses” and “mengakses akun” left as they are.
+17 P2 “pusat kehidupan” calque rewritten in 007 (2) and the same calque in 016 (1).
+18 P3 guidance: question-word order in the foreign-counsel sentence.
+19 P3 kreditor → kreditur in 004 (5, including Kreditor) and 016 (3), matching 002.
+
+id-b
+1 P1 010 negligence cap: “1 kali lipat” (reads as doubling) → “paling banyak 1 kali jumlah kerugian yang sebenarnya, yaitu tidak melebihi kerugian itu”. Digit 1 kept (Korean 1배). The 5× and 3× “kali lipat” lines are real multiples and were left.
+2 P2 012 “kelonggaran untuk mengerem” → “tidak sempat mengerem” and “waktu untuk mengerem” (2). “Kelonggaran keselamatan” left; that one means a safety margin.
+3 P2 011 “kualifikasi impor” → “status sebagai importir”.
+4 P2 016 residual-property claim: “dapat menjadi persoalan bahwa hasilnya lebih dahulu diperhitungkan” → “hasilnya perlu diperhitungkan lebih dahulu”.
+5 P2 016 “hubungan kelahiran” → “hubungan nasab”.
+7 P2 010 citation: “消字” moved out of the sentence; gloss 109年度消字第7號 already carries it. “perkara konsumen tahun 109 (2020) Nomor 7”.
+8 P2 018 “papan saham emerging Taiwan (興櫃)”.
+10 P2 013 lease sentence: the comma-ending block now ends on the office-space sentence; the next block is “Sebaiknya Anda memastikan hal itu sebelum menandatangani perjanjian sewa.” Blocks not merged.
+11 P2 013 form name: bold unstuck, space before (統一證號基本資料表), sentence capitalized.
+12 P2 013 “sehingga …” made a full sentence (“Karena jangka waktu itu cukup panjang …”) without repeating 3 bulan / 1 bulan. Same treatment for the other lowercase continuations in 013 and 015 (see systemic).
+14 P2 010 “sejak segera” → “sejak awal”.
+15 P2 014 “mengatribusikan” / “diatribusikan” → “menghitung” / “dihitung” (2).
+16 P2 014 “dapat diterima akal” → “wajar dan proporsional”.
+17 P2 018 FAQ subject restored in the frontmatter answer and the repeated body answer (2).
+18 P2 015 first mention Kantor Perdagangan Kota Taipei → Dinas Perdagangan Kota Taipei, matching the later gloss.
+19 P2 018 Kementerian Tenaga Kerja → Kementerian Ketenagakerjaan (勞動部).
+20 P3 “pemastian” → “dapat memastikan” (010) and “urutan pemeriksaan” / “proses memastikan” (016). Guidance “langkah pemastian” left; that is the established “confirmation, not a promise” term.
+21 P3 011 “keterangan pembatas bertulisan kecil” → “keterangan pengecualian berhuruf kecil”.
+
+R2–R10 sweep: already in the Indonesian pack and columns from the previous round (Korea only as a labelled example, including the 005 bank note; consultation languages EN/中文/JA/KO only; no interpreter, reply-time, free first meeting, or result promise; dates day-month-year; dot thousands and decimal comma; Traditional Chinese glosses; 經濟部投資審議司 already one name). No further R2–R10 edits beyond the rows above. Indonesian does not mark gender; Wei Tseng stays epicene. TWD 1.57M untouched.
+
+## Rows skipped
+
+id-a 12 and id-b 9 — delete U+200B / join the zero-width blank lines (003 Q16–Q20, 005 including `**​**`, 006, 008, 009, 013, 015).
+Reason: `checkBlocks` requires the target ZWSP count to equal the Korean source. Counts left as-is: 003=52, 005=8, 006=4, 008=10, 009=5, 013=5, 015=3 (87). Deleting them also changes the non-empty block count, because a ZWSP-only line is a block.
+
+id-a 13 — turn Pertanyaan 16–20 into `##` headings.
+Reason: Korean (and English) keep Q16–Q20 as plain lines while Q1–Q15 are headings. `checkHeadings` compares heading levels exactly. Adding headings would fail. Not a translation error.
+
+id-b 6 — “Uraian di atas merupakan saran perancangan kontrak.”
+Reason: the Korean source says “이상은 계약 설계 제안입니다” and the English says “The foregoing is contract-design advice.” The Indonesian matches both. Rewriting it as “hanya membandingkan jalur pendirian cabang dan anak perusahaan” would change the source proposition. Listed under reviewer disagreements.
+
+id-b 13 — renumber `## 7` to `## 6`.
+Reason: Korean and English use the same 5 → 7 → 8 skip. Renumbering only the Indonesian heading would diverge from the source. Heading levels already match, so the checker does not want a text renumber.
+
+## Systemic patterns
+
+- pengacara → advokat: 13 (001×1, 003×7, 006×1, 008×1 inside the result-claim rewrite, 010×1, 011×1, 015×1).
+- 易科罰金 “uang pengganti” → “denda sebagai pengganti pidana penjara”: 2 (003, 008 table).
+- child-contact “akses” → hak kunjungan / hak bertemu: 8 in 007. File-access “akses” and “mengakses” not touched.
+- “pusat kehidupan” calque: 3 (007×2, 016×1).
+- kreditor → kreditur: 8 (004×5, 016×3).
+- 013/015 one-clause lowercase continuations: 14 paragraph openings rewritten into standalone sentences without merging blocks or adding digits (013×11, 015×3: “satu…”, “apakah…”, “sejak…”). ZWSP lines in those files not removed (see skipped rows).
+- office-name split: 015 Kantor/Dinas → Dinas both times; 018 Kementerian Tenaga Kerja → Kementerian Ketenagakerjaan (勞動部). 014 was already Kementerian Ketenagakerjaan.
+- 018 subjectless FAQ “Perlu melihat…”: 2.
+
+## §Verify
+
+```
+===== CHECKER TAIL =====
+neighbour      PASS   
+hanzi          PASS   han=55
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+===== MARKERS =====
+       0
+===== TSC =====
+TSC_OK
+===== VITEST =====
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+===== GIT STATUS COUNT =====
+      18
+```
+
+No test expected-string updates: nothing in src/lib/__tests__ or src/data/__tests__ pinned the Indonesian wording that changed. `git status --short | wc -l` is 18 before this log file was written (pre-existing `WO-F-id.txt` modification and untracked `reviews/native/rounds/r2/` are included).
+
+## Reviewer disagreements (not applied)
+
+1. Zero-width blanks are not an Indonesian writing choice. They are inherited from the Korean source and the checker locks the count. Joining them into ordinary paragraphs would fail `blocks` / `ZWSP`.
+2. Q16–Q20 are body lines in the Korean and English files as well. Making only the Indonesian ones into headings would fail the heading-level check.
+3. Section numbering 5, 7, 8 in column 018 is the same in Korean and English. It is not an Indonesian outline error.
+4. “Saran perancangan kontrak” after the branch/subsidiary comparison is the Korean and English sentence, not a mistranslation of those paragraphs.
+5. On the 004 link, the correct statute is the withholding-rate standard, Article 3, but the checker still requires the digit 10 from the Korean label “영업세법 제10조”. The published label names the right instrument and says it is not Business Tax Act Article 10, so the digit survives. The URL was not changed.

@@ -1,0 +1,114 @@
+# WO-F-tr — Turkish fix lane, campaign round 4 (Grok 4.7), 2026-09-23
+Worktree: /Users/son7/Projects/tseng-law-fix-tr-r4 (no git add/commit/push)
+Files touched: src/content/columns-tr/001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 013, 014, 016, 017, 018;
+src/data/international-guidance-western.ts and src/data/international-guidance-answers.ts (Turkish strings only); this log.
+No test file was edited. No pinned Turkish expectation had to change.
+"TWD 1.57M" stays byte-identical. llms.txt `tr` notices were not rewritten. consultationNotice and confidentialNotice were already verbatim substrings of the pack, and those sentences were not edited. The FAQ "düzey" rewrite does not touch the consultation sentence or the disclosure-parity regex.
+
+## Rows applied
+tr-a 21/24 and tr-b 18/21 P1–P2, plus the one P3. Adaptations keep a source digit the suggested sentence would drop.
+
+tr-a
+1  004 link label. The label no longer says the link is the treaty 10% ceiling. It still names the non-resident dividend withholding rule and keeps digit 10, because the Korean label is 영업세법 제10조. URL unchanged.
+2  003 second-instance bar: "temyiz yoluna gidilmeden" → "istinafa başvurulmadan". Other "temyiz (上訴)" uses stay.
+3  002 "1 kezlik durma süresi" → "her 1 durma süresi" in the FAQ and in §5. Both 1s stay (Korean 1회 and 1년). "kezlik" no longer reads as a one-off suspension.
+5  001 the bank is its own subject: "banka da iş planı ile işlem riskini bağımsız inceleyebilir."
+6  001 "kat malikleri yönetmeliği" → "yönetim kuralları".
+7  002 the board or shareholders’ records now show that ordinary operation can continue and debts can be paid.
+8  002 "durma koşullarının yeniden incelenmesi" → whether a further suspension is available.
+9  003 the preliminary analysis, statutory appraisal, and review do not form an automatic or mandatory sequence.
+10 005 the one-third test now names issued shares or total capital, with a genitive, and "uygunluk koşulları". Digit 1/3 stays.
+11 006 "Anayasa Mahkemesi (大法官)" → "büyük yargıçlar (大法官)". 007’s Anayasa Mahkemesi (憲法法庭) stays.
+12 008 difficulty row: "Zorluk | Kolay | Zor | Kolay". Cells were not merged.
+13 009 both-at-fault close, split across the two existing lines: the party who first terminates on sufficient grounds may refuse to pay severance or may claim it.
+14 guidance pricing: "belirler" → "belirleriz".
+15 guidance FAQ: "düzleminde" → "düzeyinde".
+16 Genitive or case-marked nouns joined with "ile" in a series → "ve" (see systemic count).
+17 003 "değerlendirmeye ilgili/ilgilidir" → "değerlendirmeyle" (Q on travel costs and Q11).
+18 003 cap: "her 1 mağdur ve her 1 kaza başına". Both 1s stay (피해자 1명·사고 1건).
+19 Statute citations "madde X fıkra N" → ordinal paragraph (see systemic count).
+21 guidance: "yerindeki durumun fotoğrafları" → "olay yerinin fotoğrafları".
+22 005 the leftover "Konu şirket kuruluşudur" sentence is gone. The paragraph still says this is ileri konular 2 and keeps the gloss (公司設立).
+23 007 a change of child support is not conditioned on an unforeseeable event having already occurred.
+
+tr-b
+1  010 the headline disclaimer now says the article does not independently establish those facts.
+3  010 "derhal" → "kendiliğinden … haline gelmez".
+4  010 insurance may itself be a possible source of the compensation.
+5  011 "satış kontrolü" → the desired degree of control over sales.
+6  011 "ürün teslimi" → "bedelsiz ürün verilmesi".
+7  013 confirm that point before signing the lease; the repeated "önceden" is gone.
+8  016 a guardian is not the same person as a parent who exercises parental rights. "aynı kavram" for a subsidiary versus a permanent establishment (004) and residual assets versus paid-in capital (002) stays.
+9  017 "Çin kıtasından" → "Anakara bölgesinden (大陸地區)".
+10 011 "Aralık" at the start of the sentence → "Para cezası aralıkları".
+12 014 the statutory condition is stated first, and "verilip verilmediği" is inside the yes/no series.
+13 017 the two-year age attaches to the one personally owned small truck (FAQ answer and body). The later sentence that already joined them stays.
+15 010 negligence cap: "gerçek zarar tutarı kadar (1 kat)". The digit stays (Korean 1배).
+16 010 "çalışma kapasitesi" → "çalışma gücü" (heading, the following clause, and the later sentence).
+17 010 "değişilen iletiler" → "yapılan yazışmalar".
+18 011 "sözleşmesel iş" → work allocated by the contract. "sözleşmesel ada" (the contractual title of the role) stays.
+19 013 the unified-ID form "verilmesi", not "teslim".
+20 018 the head office clarifies the questions internally before it settles the Taiwan structure. The same doubled "önce/önceden" on the capital-threshold sentence in §5 was removed.
+21 014 the MOL file number is "sayılı yazısı". The number itself stays.
+22 P3 010 "Hüküm okuması" → "Hüküm incelemesi" (image alt and the link label).
+
+## Rows skipped
+- tr-a 4 (P1, "TWD 1.57M tutarında"). ACCEPTED-ROUND / R12 pin that figure byte-identical in guidance-team-bios.test.ts. Not rewritten as "1,57 milyon TWD".
+- tr-a 20 (P2, Q16–Q20 as ## headings, and the U+200B lines in 003, 005, 006, 008, 009, including 005 `**​**`). The checker compares heading levels and the ZWSP count with the Korean source. Adding headings or deleting the zero-width characters fails headings / blocks.
+- tr-a 24 (P2, Hangul in `url` of 008 and 009). R16 / ACCEPTED-ROUND. Frontmatter `url` left as-is.
+- tr-b 2 (P1, "Yukarıdakiler sözleşme tasarımı önerisidir."). Not applied. See disagreements.
+- tr-b 11 (P2, delete every U+200B in 013 and 015). Same ZWSP count rule. Those lines stay, including the zero-width space after "Taipei şehri)."
+- tr-b 14 (P2, renumber heading 7 to 6 and 8 to 7). Not applied. See disagreements.
+
+## Systemic patterns and how many instances changed
+Genitive or case-marked noun joined with "ile" in a series          7 (004 ×4, 001 "statüsüne ile", 007 "durumunu ile", 008 "ücretini ile").
+Glued digit where the sentence means each / per                     3 (002 "1 kezlik" ×2; 003 "mağdur 1 kişi ve kaza 1 olay" ×1). Digits kept; see adaptations.
+U+200B blank lines and empty `**​**` lines                          0 changed. Checker pins the count (003 Q16+, 005, 006, 008, 009, 013, 015).
+"madde X fıkra N" → ordinal paragraph                               15 (002 ×2, 003 ×2, 004 ×2, 014 ×9). Already-ordinal "N. fıkra" citations were left.
+Wrong court word                                                    2 (003 the appeal that opens istinaf; 006 大法官). 007 temyiz (上訴) and 憲法法庭 stay.
+"TWD 1.57M"                                                         0 changed, 1 left (pin). The 004 "(%10 azami oran)" label was rewritten around the same digit (1).
+018 contract-design label and the heading skip 6→7                  0 changed.
+Closed disclaimer and "derhal" as an automatic result               2 (010).
+Neighbouring institution or role                                    2 (016 guardian; 017 Mainland Area).
+"Satış kontrolü" and "sözleşmesel iş"                               2 (011).
+Redundant "önce" / "önceden"                                        3 (013 lease; 018 "içeride önce"; 018 "kurulmadan önce … önceden").
+"çalışma kapasitesi" → "çalışma gücü"                               3 (010).
+"Hüküm okuması" → "Hüküm incelemesi"                                2 (010).
+
+R2–R10 were already in this corpus (prior rounds; this round’s verdicts are 4/5 and confirm siz-hitap, unmarked gender where Turkish does not mark it, the consultation lock, and Korea only as a labelled example). This pass did not reopen them. Hangul remains only inside frontmatter `url` of 008 and 009 (R16, not rendered).
+
+## §Verify
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-tr --lang tr 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=71
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-tr src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      21
+```
+`git status --short | wc -l` was 21 before this log file existed. 017 still WARNs unmatched Korean 제3자 (sourceCount=targetCount=44). That WARN was already in the round-3 note and does not fail the summary.
+
+## Reviewer points not applied as written
+- tr-a 3, tr-a 18, and tr-b 15 ask to drop a digit ("her bir durma", "mağdur ve kaza başına", "tutarı kadar" with no "1 kat"). Those digits are in the Korean source (1회 / 1년, 피해자 1명·사고 1건, 실제 손해액의 최대 1배). The awkward Turkish was real; the digits are not translator glue. The suggested sentences were not used. "her 1" and "(1 kat)" keep the count and the meaning.
+- tr-a 1’s suggested link text drops digit 10. The Korean source still has 제10조 on that line. The public label now says the treaty 10% ceiling is not the text of this link.
+- tr-a 22’s suggested sentence drops "ileri konular 2" and the gloss (公司設立). This file is 심화편-2. Only the glossary stub was removed.
+- tr-a 4 is not a claim that "TWD 1.57M" reads as Turkish. The bio figure is pinned, so it was not rewritten.
+- tr-a 20, tr-a 24, and tr-b 11 correctly describe the U+200B lines and the Hangul slugs. Deleting the zero-width spaces, promoting Q16–Q20 to headings, or editing `url` fails the checker or R16.
+- tr-b 2. The reviewer is right that the paragraphs above compare branch and subsidiary registration. The English source says "The foregoing is contract-design advice." and the Korean source says "이상은 계약 설계 제안입니다." The current Turkish already says that. Rewriting it as "yalnızca şube ile bağlı şirketin tescil usullerini karşılaştırır" would change the source meaning, so it was left.
+- tr-b 14. English and Korean both skip from heading 5 to 7, then 8. Renumbering changes those digits. The headings were left.

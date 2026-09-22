@@ -452,7 +452,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Bu bölüm sık sorulan soruları genel bilgi düzleminde yanıtlar: altı çalışma alanı, iletişimden önce hazırlık, ücretin belirlenme biçimi ve bir ileti göndermenin anlamı. Gönderilen talep bir avukatın incelemesini bekler; hukuki görüş değildir, randevu değildir ve avukat ile müvekkil arasında ilişki kurmaz. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
+        'Bu bölüm sık sorulan soruları genel bilgi düzeyinde yanıtlar: altı çalışma alanı, iletişimden önce hazırlık, ücretin belirlenme biçimi ve bir ileti göndermenin anlamı. Gönderilen talep bir avukatın incelemesini bekler; hukuki görüş değildir, randevu değildir ve avukat ile müvekkil arasında ilişki kurmaz. Görüşme yalnızca İngilizce, Çince, Japonca ve Korece yapılır.',
         sources: ['/tr/contact', '/tr/services'],
     },
   },

@@ -23,7 +23,7 @@ Bu işte davacı Koreli öğrencinin dava vekili (訴訟代理人) oldum. Taichu
 
 Ardından basında tarafların istinafta sulh (和解) ettiği bildirildi. Yalnız resmi ilk derece hükmü, istinafın sonucunu veya sulh tutarını doğrulamaya yetmez; basında bildirilen sulh, ilk derece hükmünün kesinleşmiş sonucu olarak okunmamalıdır.
 
-Bu işe ilişkin basın haberlerinin, çevrimiçi yayınların ve hukuki açıklamaların başlıkları aşağıda bu yazının diline çevrilmiştir. Aşağıdaki başlıklar yalnızca her bağlantının haber veya yayın içeriğini tanıtmak içindir; bu yazının olguları ayrıca belirlediği anlamına gelmez.
+Bu işe ilişkin basın haberlerinin, çevrimiçi yayınların ve hukuki açıklamaların başlıkları aşağıda bu yazının diline çevrilmiştir. Aşağıdaki başlıklar yalnızca her bağlantının haber veya yayın içeriğini tanıtmak içindir; bu yazının söz konusu olguları bağımsız olarak saptadığı anlamına gelmez.
 
 ![Erkek üniversite öğrencisi, 90 kg deadlift sonrası disk yırtılması (椎間盤破裂)… spor salonundan tazminat talebi](../images/010-taiwan-gym-injury-lawsuit/img-02.jpg)
 
@@ -53,9 +53,9 @@ Bu işe ilişkin basın haberlerinin, çevrimiçi yayınların ve hukuki açıkl
 
 [Hukuki açıklama: erkek üniversite öğrencisi, deadlift sırasında disk yırtılması… ilk derece, tanınmış bir spor salonuna 1.570.000 TWD ödeme emri](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
 
-![Hüküm okuması: spor salonunda yeni başlayan birine 90 kg deadlift talimatı verilmesi üzerine akut disk yırtılması işi](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
+![Hüküm incelemesi: spor salonunda yeni başlayan birine 90 kg deadlift talimatı verilmesi üzerine akut disk yırtılması işi](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
 
-[Hüküm okuması: spor salonunda yeni başlayan birine 90 kg deadlift talimatı verilmesi üzerine akut disk yırtılması işi](https://www.instagram.com/p/Crp4vJag7v3/)
+[Hüküm incelemesi: spor salonunda yeni başlayan birine 90 kg deadlift talimatı verilmesi üzerine akut disk yırtılması işi](https://www.instagram.com/p/Crp4vJag7v3/)
 
 ![Koreli bir erkek üniversite öğrencisi kişisel antrenmanda 90 kg deadlift yaparken disk yırtılması mı yaşadı?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
@@ -83,7 +83,7 @@ Ancak sözleşmesel sorumluluk gibi başka bir talep nedeni gündeme gelirse vey
 
 ## 3. Kazadan hemen sonra hangi deliller nasıl saklanmalıdır?
 
-Sorumluluğu, illiyet bağını ve zararı açıklamak için kaza anındaki CCTV görüntülerinin (監視器影像) yanı sıra klinik kayıt (病歷) ve tıbbi belge (診斷證明書), tıbbi gider (醫療費用), ulaşım (就醫交通費) ve bakım (看護費用) makbuzları, spor salonu ve antrenörle değişilen iletiler, tanık beyanları, ders rezervasyonu ve devam kaydı, egzersiz planı ve antrenman kaydı birlikte toplanmalıdır. Mümkün ölçüde yaralı bölge ve kaza yerinin durumu fotoğraflanmalı, kaza öncesi ve sonrası seyir ile iletişim içeriği tarihe göre sıralanmalıdır ki belgeler sonradan karşılaştırılabilsin.
+Sorumluluğu, illiyet bağını ve zararı açıklamak için kaza anındaki CCTV görüntülerinin (監視器影像) yanı sıra klinik kayıt (病歷) ve tıbbi belge (診斷證明書), tıbbi gider (醫療費用), ulaşım (就醫交通費) ve bakım (看護費用) makbuzları, spor salonu ve antrenörle yapılan yazışmalar, tanık beyanları, ders rezervasyonu ve devam kaydı, egzersiz planı ve antrenman kaydı birlikte toplanmalıdır. Mümkün ölçüde yaralı bölge ve kaza yerinin durumu fotoğraflanmalı, kaza öncesi ve sonrası seyir ile iletişim içeriği tarihe göre sıralanmalıdır ki belgeler sonradan karşılaştırılabilsin.
 
 Görüntüler saklama süresi dolunca üzerine yazılabilir veya başka nedenlerle kullanılamaz hale gelebilir. Bu yüzden gereken zaman aralığını, yeri ve kamera konumunu somut yazan bir içeriği tasdikli mektup (存證信函) veya avukat yazısı (律師函) ile spor salonundan saklama istenmesi düşünülebilir. Bu yazı, neyin ne zaman istendiğini kayda geçiren pratik bir tedbirdir. Ancak tek başına karşı tarafa görüntüleri saklama konusunda yeni bir hukuki yükümlülük yüklemez veya silinmeyi engellemez; görüntülerin kalmamış olması da mahkemenin kendiliğinden aleyhe değerlendirme yapmasına yol açmaz.
 
@@ -96,16 +96,16 @@ Kaza şartları bir suçun unsurları oluşabilecekse, soruşturma organının (
 1. **Tıbbi giderler**: Muayene, tetkik, tedavi, ilaç ve rehabilitasyon için gerçekten ödenen giderler makbuz ve klinik kayıtla ispatlanır.
 2. **Bakım veya yardım giderleri**: Yaralanmanın derecesi ve tedavi seyrine göre bakımın gerekip gerekmediği, süre ve maliyetin uygun olup olmadığı tıbbi ve gider belgeleriyle incelenir.
 3. **Ulaşım giderleri**: Tedavi için sağlık kuruluşuna gidip gelmek için gereken giderler hareket kaydı, makbuz ve benzeri belgelerle ispatlanır.
-4. **Çalışma kapasitesi kaybından zarar (勞動能力減損)**: Sekel ve çalışma kapasitesinde kalıcı azalma tanınırsa tıbbi ve mesleki belgeler, maluliyet derecesi, meslek ve gelir ile kalan çalışma süresi birlikte değerlendirilebilir. Yalnız maluliyet yüzdesi tazminatı belirlemez; zarar emeklilik yaşına kadar kendiliğinden hesaplanmaz.
+4. **Çalışma gücü kaybından zarar (勞動能力減損)**: Sekel ve çalışma gücünde kalıcı azalma tanınırsa tıbbi ve mesleki belgeler, maluliyet derecesi, meslek ve gelir ile kalan çalışma süresi birlikte değerlendirilebilir. Yalnız maluliyet yüzdesi tazminatı belirlemez; zarar emeklilik yaşına kadar kendiliğinden hesaplanmaz.
 5. **İyileşme süresindeki gelir kaybı (收入損失)**: Tedavi veya istirahat nedeniyle gerçekten çalışılamayan süre ve bundan doğan gelir azalması ücret, vergi ve işe devam belgelerleriyle ispatlanmalıdır.
 6. **Malvarlığı dışı zarar (非財產上損害)**: Manevi acı için tutar, yaralanmanın derecesi, tedavi süresi, sekeller ve tarafın somut şartları gibi her işe özgü etkenlerden mahkemece belirlenir.
-7. **Cezalandırıcı tazminat (懲罰性賠償金)**: Tüketiciyi Koruma Kanunu’nun uygulandığı bir uyuşmazlıkta zarar işletmenin kastıyla doğmuşsa gerçek zararın en çok 5 katı, ağır kusurda en çok 3 katı, kusurda en çok gerçek zarar tutarının 1 katı istenebileceğine dair bir kural vardır. [Tayvan Tüketiciyi Koruma Kanunu’nun 51. maddesinin](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) işe uygulanıp uygulanmayacağı ve gerçek bir tazminat olup olmayacağı, hangi tutarda olacağı, somut şartlar ve deliller hakkındaki mahkeme değerlendirmesine bağlıdır.
+7. **Cezalandırıcı tazminat (懲罰性賠償金)**: Tüketiciyi Koruma Kanunu’nun uygulandığı bir uyuşmazlıkta zarar işletmenin kastıyla doğmuşsa gerçek zararın en çok 5 katı, ağır kusurda en çok 3 katı, kusurda en çok gerçek zarar tutarı kadar (1 kat) istenebileceğine dair bir kural vardır. [Tayvan Tüketiciyi Koruma Kanunu’nun 51. maddesinin](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) işe uygulanıp uygulanmayacağı ve gerçek bir tazminat olup olmayacağı, hangi tutarda olacağı, somut şartlar ve deliller hakkındaki mahkeme değerlendirmesine bağlıdır.
 
 ## 5. Spor salonunun sorumluluk sigortası (責任保險) olsa bile tazminatın varlığı ve tutarı tartışılabilir mi?
 
-Evet. Sigortanın varlığı, tazminat kaynağı incelenirken anlamlı olabilir; fakat tek başına spor salonunun veya antrenörün hukuki sorumluluğunu tanımaz ve ödenecek tutarı belirlemez. Sigortacı (保險人) ile taraflar arasında teminat limiti ve teminat dışı bırakma hükümleri, kaza ile yaralanma arasındaki illiyet bağı ve her zarar kaleminin gerekliliği ile tutarı üzerinde uyuşmazlık doğabilir.
+Evet. Sigortanın varlığı, tazminatın karşılanabileceği olası bir kaynak olarak anlamlı olabilir; fakat tek başına spor salonunun veya antrenörün hukuki sorumluluğunu tanımaz ve ödenecek tutarı belirlemez. Sigortacı (保險人) ile taraflar arasında teminat limiti ve teminat dışı bırakma hükümleri, kaza ile yaralanma arasındaki illiyet bağı ve her zarar kaleminin gerekliliği ile tutarı üzerinde uyuşmazlık doğabilir.
 
-Özellikle çalışma kapasitesi kaybı, iyileşme süresindeki gelir azalması ve malvarlığı dışı zarar, tıbbi, gelir ve meslek belgeleri veya bilirkişi görüşü gerektirebilir. Sigortacının önerdiği tutar veya mağdurun istediği tutar derhal mahkemenin tanıdığı tutar olmaz; maluliyet değerlendirmesinin sonucu da tazminatı kendiliğinden belirlemez. Uygulamada poliçe ve şartlar, kaza bildiriminin içeriği, sigortacının yanıtı, tedavi seyri ve zarar belgeleri birlikte doğrulanmalıdır.
+Özellikle çalışma gücü kaybı, iyileşme süresindeki gelir azalması ve malvarlığı dışı zarar, tıbbi, gelir ve meslek belgeleri veya bilirkişi görüşü gerektirebilir. Sigortacının önerdiği tutar veya mağdurun istediği tutar kendiliğinden mahkemenin tanıdığı tutar haline gelmez; maluliyet değerlendirmesinin sonucu da tazminatı kendiliğinden belirlemez. Uygulamada poliçe ve şartlar, kaza bildiriminin içeriği, sigortacının yanıtı, tedavi seyri ve zarar belgeleri birlikte doğrulanmalıdır.
 
 Spor salonunda yaralandıysanız önce gereken tıbbi bakımı almak, henüz güvence altına alınabilecek belgeler yok olmadan önce saklamak ve işe uygulanabilecek süreler ile usuller hakkında erken bireysel yönlendirme almak önemlidir. Müzakere, tüketici şikâyeti (消費申訴) veya arabuluculuk (調解), ceza şikâyeti ve hukuk tazminat talebi, işe göre seçilebilecek araçlardır; her zaman hepsinin izlenmesi gereken usuller değildir.
 

@@ -2585,7 +2585,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
           heading: 'Hukuk davaları ve tazminat',
           paragraphs: [
             'Bu alan sözleşme uyuşmazlıklarını, haksız fiilden doğan tazminatı ve tüketici uyuşmazlıklarını kapsar. Çalışma genellikle olayların kronolojisinin, eldeki belge ve delillerin incelenmesiyle başlar; sonraki adımlar ancak ondan sonra gelir.',
-            'Süreler (yasal dava süreleri dâhil) ve kanıtların tamlığı, sürecin nasıl ilerleyeceğini belirler. Bu yüzden bilinen tarihleri mümkün olduğunca erken belirtin. Sözleşmeleri, iletileri, ödeme belgelerini veya yerindeki durumun fotoğraflarını saklayın ve ilk iletide belirtin.',
+            'Süreler (yasal dava süreleri dâhil) ve kanıtların tamlığı, sürecin nasıl ilerleyeceğini belirler. Bu yüzden bilinen tarihleri mümkün olduğunca erken belirtin. Sözleşmeleri, iletileri, ödeme belgelerini veya olay yerinin fotoğraflarını saklayın ve ilk iletide belirtin.',
           ],
         },
         {
@@ -2696,7 +2696,7 @@ export const turkishGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Bu sayfa neden tarife belirtmez',
           paragraphs: [
-            'Ücret işin kendisine bağlıdır: emeğe, taraf sayısına, belgelere, sürelere ve bir usulün yürüyüp yürümediğine. Önceden belirlenmiş bir tutar, sizin işinizin ücretini göstermez. Bu yüzden önce çalışma kapsamını belirler, sonra işe başlamadan önce ücreti size bildiririz.',
+            'Ücret işin kendisine bağlıdır: emeğe, taraf sayısına, belgelere, sürelere ve bir usulün yürüyüp yürümediğine. Önceden belirlenmiş bir tutar, sizin işinizin ücretini göstermez. Bu yüzden önce çalışma kapsamını belirleriz, sonra işe başlamadan önce ücreti size bildiririz.',
             'Avukatlık ücretinin yanında mahkeme, idare veya üçüncü kişi giderleri doğabilir. Bunlar ücretten ayrıdır ve ilgili usule bağlıdır.',
           ],
         },

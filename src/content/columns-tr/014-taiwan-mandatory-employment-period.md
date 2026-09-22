@@ -15,7 +15,7 @@ faq:
   - q: "Erken ayrılışta imza primi (簽約金) veya görevde kalma primi (留任獎金) tam olarak iade edilmeli midir?"
     a: "Her zaman tam tutar iade edilmez. İmza primi, görevde kalma primi veya başka bir avans niteliğindeki ödeme (預付性給付) asgari hizmet süresi sözleşmesinin makul karşılığı olarak ödendiyse amacı çalışana açık bildirilmelidir. Tayvan Çalışma Bakanlığı’nın 5 Haziran 2026 tarihli rehberi, süre dolmadan ayrılışta iade tutarının henüz ifa edilmemiş süreyle orantılı hesaplanması gerektiğini ve tam iade istenmemesi gerektiğini açıklar. Fiili sonuç, ödeme amacı, sözleşme içeriği, halihazırda çalışılmış süre ve sona erme nedeni birlikte incelenmelidir."
   - q: "Çalışana yüklenemeyen bir nedenle sözleşme erken biterse eğitim gideri iade edilmeli midir?"
-    a: "Tayvan İş Standartları Kanunu madde 15-1 fıkra 4, asgari hizmet süresi bitmeden iş sözleşmesi çalışana yüklenemeyen bir nedenle sona ererse, çalışanın asgari hizmet süresi sözleşmesini ihlal etme sorumluluğu veya eğitim giderini iade etme sorumluluğu yüklenmeyeceğini düzenler. Ancak sona erme nedeni ve sorumluluğun kime ait olduğu, işten çıkarma bildirimi, istifa iradesi ve çalışma koşullarının ihlaline dair belgeler gibi somut delillere göre değerlendirilmelidir."
+    a: "Tayvan İş Standartları Kanunu madde 15-1’in 4. fıkrası, asgari hizmet süresi bitmeden iş sözleşmesi çalışana yüklenemeyen bir nedenle sona ererse, çalışanın asgari hizmet süresi sözleşmesini ihlal etme sorumluluğu veya eğitim giderini iade etme sorumluluğu yüklenmeyeceğini düzenler. Ancak sona erme nedeni ve sorumluluğun kime ait olduğu, işten çıkarma bildirimi, istifa iradesi ve çalışma koşullarının ihlaline dair belgeler gibi somut delillere göre değerlendirilmelidir."
 ---
 
 # Tayvan asgari hizmet süresi sözleşmesi: geçerlilik, eğitim gideri ve cezai şart ölçütleri
@@ -37,11 +37,11 @@ Aynı sözleşmede bu 4 mesele birlikte yazılı olsa da uygulanacak hüküm ve 
 
 Hayır. Tayvan İş Standartları Kanunu (勞動基準法) madde 15-1’e göre işveren uzman teknik eğitim (專業技術培訓) verip giderini üstlenmişse veya çalışanın asgari hizmet süresine uyması için makul bir karşılık (合理補償) sağlamışsa, sözleşme yasal şartları karşılayabilir. 2 şartın birlikte bulunması gerekmez; ancak şartlardan biri olsa bile eğitim süresi ve gideri, yerine personel koyma imkânı (人力替補可能性), karşılığın tutarı ve kapsamı gibi bütün olgular ışığında sözleşme makul kapsamı aşmamalıdır.
 
-Madde 15-1 fıkra 1, 2 yasal şartı seçimlik olarak düzenler. İlki işverenin çalışana uzman teknik eğitim verip giderini üstlenmiş olması, ikincisi asgari hizmet süresine uyma karşılığında makul karşılık sağlamış olmasıdır. Sözleşmeye hangi adın verildiği değil, fiilen hangi dayanağın bulunduğu doğrulanmalıdır.
+Madde 15-1’in 1. fıkrası, 2 yasal şartı seçimlik olarak düzenler. İlki işverenin çalışana uzman teknik eğitim verip giderini üstlenmiş olması, ikincisi asgari hizmet süresine uyma karşılığında makul karşılık sağlamış olmasıdır. Sözleşmeye hangi adın verildiği değil, fiilen hangi dayanağın bulunduğu doğrulanmalıdır.
 
 Madde 15-1, 2 yasal şarttan birini ve ayrıca ayrı bir makullük incelemesini ister. Bu, uzman teknik eğitim ile makul karşılığın her zaman aynı anda verilmesi gerektiği, ya da ikisinden birinin yalnızca biçimsel yazılmasıyla sözleşmenin bütününün kendiliğinden geçerli olduğu anlamına gelmez.
 
-Yasal şart doğrulandıktan sonra fıkra 2’ye göre kararlaştırılan süre ve sorumluluk kapsamının makul olup olmadığı ayrıca incelenir. Fıkra 1’in yasal şartını veya fıkra 2’nin makullük ölçütünü ihlal eden sözleşme fıkra 3’e göre geçersizdir. Ancak bu kural her asgari hizmet süresi sözleşmesini baştan geçerli veya geçersiz sayan bir kural değil, her sözleşmenin içeriğini ve olgularını inceleyen bir ölçüttür.
+Yasal şart doğrulandıktan sonra 2. fıkraya göre kararlaştırılan süre ve sorumluluk kapsamının makul olup olmadığı ayrıca incelenir. 1. fıkranın yasal şartını veya 2. fıkranın makullük ölçütünü ihlal eden sözleşme 3. fıkraya göre geçersizdir. Ancak bu kural her asgari hizmet süresi sözleşmesini baştan geçerli veya geçersiz sayan bir kural değil, her sözleşmenin içeriğini ve olgularını inceleyen bir ölçüttür.
 
 Çalışanın sözleşmeyi imzalamış olması anlaşmanın varlığını doğrulayan bir belge olabilir ama yasal şartların yerine geçmez. Tersine, kararlaştırılan sürenin uzunluğu tek başına sonucu belirlememeli; hangi yatırım veya karşılığın olduğu ve bu sürenin neden belirlendiği doğrulanmalıdır.
 
@@ -71,7 +71,7 @@ Sözleşme metni ile fiili ödemenin örtüşmesi de önemlidir. Ödemenin gecik
 
 ## 4. Makul kapsam ve 4 inceleme etkeni
 
-Yasal şartlardan biri olsa bile kararlaştırılan süre ve sorumluluk makul kapsamda olmalıdır. Madde 15-1 fıkra 2, ada veya mesleğe göre sabit bir yanıt vermez; somut sözleşme ile yatırım ve karşılık yapısının aşağıdaki 4 etkenle incelenmesini düzenler.
+Yasal şartlardan biri olsa bile kararlaştırılan süre ve sorumluluk makul kapsamda olmalıdır. Madde 15-1’in 2. fıkrası, ada veya mesleğe göre sabit bir yanıt vermez; somut sözleşme ile yatırım ve karşılık yapısının aşağıdaki 4 etkenle incelenmesini düzenler.
 
 1. Uzman teknik eğitimin süresi ve gideri
 2. Aynı veya benzer görevdeki çalışanın yerine konma imkânı
@@ -92,7 +92,7 @@ Sonuçta kararlaştırılan süre, işverenin fiili yatırımı, yerine koyma zo
 
 Tayvan Çalışma Bakanlığı’nın 5 Haziran 2026 tarihli rehberine göre periyodik eğitim, genel görev eğitimi, yeni çalışanın işe uyum eğitimi ve kanunun yaptırdığı zorunlu eğitimin gideri, asgari hizmet süresi sözleşmesinin veya cezai şart ile gider iadesi talebinin dayanağı yapılamaz. Yalnızca eğitimin adına bakılmamalı; somut program, mesleki ve teknik içerik, süre, işverenin fiilen üstlendiği gider ve belgeler doğrulanmalıdır.
 
-Çalışma Bakanlığı’nın 勞動關2字第1150141814號 rehberi, düzenli verilen eğitimi, olağan görev eğitimini, yeni çalışanın iş ortamı ve usullerine alışması eğitimini ve işverenin kanuna göre vermek zorunda olduğu eğitimi ayırarak ele alır. Bu eğitim işletmenin yürütülmesine veya yasal yükümlülüğün ifasına eşlik ettiği için giderinin görevde kalma yükümlülüğüne veya erken sona ermeye yaptırıma dönüştürülemeyeceği anlamındadır.
+Çalışma Bakanlığı’nın 勞動關2字第1150141814號 sayılı yazısı, düzenli verilen eğitimi, olağan görev eğitimini, yeni çalışanın iş ortamı ve usullerine alışması eğitimini ve işverenin kanuna göre vermek zorunda olduğu eğitimi ayırarak ele alır. Bu eğitim işletmenin yürütülmesine veya yasal yükümlülüğün ifasına eşlik ettiği için giderinin görevde kalma yükümlülüğüne veya erken sona ermeye yaptırıma dönüştürülemeyeceği anlamındadır.
 
 İş kuralı (工作規則) açıklaması, örgüt ve sistem tanıtımı, olağan görev devri, temel güvenlik usulü rehberi gibi yeni çalışanın olağan aldığı süreçler esastan doğrulanmalıdır. İşverenin zaten üstlenmesi gereken genel işe alım ve yönetim gideri veya görev devri gideri, ayrı yatırım diye adlandırılıp iade konusu yapılamaz.
 
@@ -116,7 +116,7 @@ Eğitim gideri iadesi ile avans niteliğindeki ödeme iadesi de ayrılmalıdır.
 
 ## 7. İş sözleşmesi çalışana yüklenemeyen bir nedenle sona erdiğinde
 
-Tayvan İş Standartları Kanunu madde 15-1 fıkra 4, asgari hizmet süresi bitmeden iş sözleşmesi çalışana yüklenemeyen bir nedenle sona ererse, çalışanın asgari hizmet süresi sözleşmesini ihlal etme sorumluluğu veya eğitim giderini iade etme sorumluluğu yüklenmeyeceğini düzenler. Ancak sona erme nedeni ve sorumluluğun kime ait olduğu, işten çıkarma bildirimi, istifa iradesi ve çalışma koşullarının ihlaline dair belgeler gibi somut delillere göre değerlendirilmelidir.
+Tayvan İş Standartları Kanunu madde 15-1’in 4. fıkrası, asgari hizmet süresi bitmeden iş sözleşmesi çalışana yüklenemeyen bir nedenle sona ererse, çalışanın asgari hizmet süresi sözleşmesini ihlal etme sorumluluğu veya eğitim giderini iade etme sorumluluğu yüklenmeyeceğini düzenler. Ancak sona erme nedeni ve sorumluluğun kime ait olduğu, işten çıkarma bildirimi, istifa iradesi ve çalışma koşullarının ihlaline dair belgeler gibi somut delillere göre değerlendirilmelidir.
 
 Bu yüzden iş ilişkisinin kararlaştırılan süreden önce bitmiş olması tek başına çalışanın ihlalini kabul ettirmez. Kimin hangi irade beyanını yaptığı, sözleşmenin hangi hukuki dayanakla sona erdiği ve sona ermeyi doğuran fiili olguların hangi tarafa ait olduğu doğrulanmalıdır.
 
@@ -130,7 +130,7 @@ Sona erme nedeninin değerlendirilmesi iade kapsamını da doğrudan etkiler. F�
 
 Asgari hizmet süresi sözleşmesi, çalışanın istifasını fiilen veya hukuken engelleyen bir hüküm değildir. İstifa iradesi ve ön bildirim süresi (預告期間), iş ilişkisinin ne zaman bittiğine dair meseledir; asgari hizmet süresi sözleşmesinin geçerliliği ve gider iadesi sorumluluğu, sona ermeden doğan malvarlığı sorumluluğu olup olmadığına dair meseledir.
 
-Süresi belirsiz iş sözleşmesini (不定期契約) çalışan sona erdirdiğinde Tayvan İş Standartları Kanunu madde 15 uyarınca madde 16 fıkra 1’in ön bildirim süresi kıyasen uygulanır. Madde 16 işverenin sözleşmeyi sona erdirmesine dair hükümdür; çalışanın istifasında bu ön bildirim süresi madde 15 yoluyla uygulanır.
+Süresi belirsiz iş sözleşmesini (不定期契約) çalışan sona erdirdiğinde Tayvan İş Standartları Kanunu madde 15 uyarınca madde 16’nın 1. fıkrasının ön bildirim süresi kıyasen uygulanır. Madde 16 işverenin sözleşmeyi sona erdirmesine dair hükümdür; çalışanın istifasında bu ön bildirim süresi madde 15 yoluyla uygulanır.
 
 Kesintisiz kıdeme göre ön bildirim süresi şöyledir.
 
@@ -150,7 +150,7 @@ Uyuşmazlığı önlemek veya halihazırda ileri sürülen talebi incelerken yal
 
 ### İşverenin doğrulayacağı hususlar
 
-1. Uzman teknik eğitim verilip giderinin üstlenilip üstlenilmediği veya görevde kalma vaadine makul karşılık sağlanıp sağlanmadığı yasal şart önce saptanır.
+1. Önce yasal şart saptanır: uzman teknik eğitimin verilip verilmediği ve giderinin üstlenilip üstlenilmediği, ya da görevde kalma vaadine makul karşılık sağlanıp sağlanmadığı.
 2. Genel eğitim, periyodik eğitim ve yasal zorunlu eğitim ile uzman teknik eğitim, kursun fiili içeriği, süre ve amacına göre ayrılır.
 3. Eğitim programı, takvim, bitirme kaydı, fatura, makbuz ve gideri üstlenen kişi belgeleri saklanır; dış gider ve iç giderin dayanağı ayrı kaydedilir.
 4. Karşılık amacı, ödeme günü, tutar, bağlanma koşulları, çalışana yapılan bildirim ve ifa edilmemiş süre iade formülü yazıyla açık bağlanır.

@@ -56,7 +56,7 @@ Aşağıdaki tablo üç sona erme türünü karşılaştırır.
 | Anlam | İşverende işletme durumuna göre personel ayarlama ihtiyacı varsa, neden işverenin işletme alanında doğmuştur ve çalışanın sorumluluğunda değildir. Bu yüzden işveren bildirim süresine (預告期間) uymalı ve çalışanın sakıncalarını dengeli biçimde telafi etmek için kıdem tazminatı ödemelidir. | Çalışan hukuka aykırı veya uygunsuz bir fiil işlerse işveren, önceden bildirim olmadan iş sözleşmesini (勞動契約) derhal sona erdirebilir ve kıdem tazminatı ödemek zorunda değildir. Bu, işverenin disiplin yetkilerinden biridir. | Çalışan sözleşmeyi her an sona erdirmekte özgürdür; ancak istihdam süresine göre bildirim süresine uymalıdır ki işveren teslimi yapabilsin ve yerine birini arayabilsin. |
 | Şartlar | Var  (Tayvan İş Standartları Kanunu 11. madde) | Var  (Tayvan İş Standartları Kanunu 12. madde) | Yok |
 | Önceden bildirim | Gerekli | Gerekli değil | Gerekli |
-| Usulün ağırlığı | Görece düşük | Görece yüksek | Görece düşük |
+| Zorluk | Kolay | Zor | Kolay |
 | Şirketin kıdem tazminatı (資遣費) ödeyip ödemeyeceği | Gerekli | Gerekli değil | Gerekli değil |
 |  | Tayvan İş Standartları Kanunu 11. madde (勞動基準法第11條): Aşağıdaki durumlardan biri gerçekleşmedikçe işveren, çalışana önceden bildirimde bulunsa bile iş sözleşmesini sona erdiremez.  1. Faaliyetin durdurulması (歇業) veya işletmenin devri (轉讓)  2. Zarar (虧損) veya işin daraltılması (業務緊縮)  3. Mücbir sebep 1 ay veya daha uzun bir faaliyet kesintisini gerektirir  4. İşin niteliği personel azaltmayı gerektirir ve işten çıkarılan kişi başka uygun bir göreve nakledilemez  5. Belirli bir çalışan, görevin gerektirdiği işi tatmin edici biçimde yerine getiremez | Tayvan İş Standartları Kanunu 12. madde (勞動基準法第12條): İşveren, çalışan aşağıdaki hallerden birine girerse önceden bildirim olmadan işten çıkarabilir.  1. İş sözleşmesinin kurulmasında gerçeğe aykırı beyanda bulunup işvereni yanılgıya düşüren ve işletmeye zarar riski yaratan kişi  2. İşverene, ailesine, temsilcisine (代理人) veya diğer meslektaşlara şiddet uygulayan veya ağır hakaret eden kişi  3. Süreli hapis (有期徒刑) veya daha ağır bir cezaya kesin olarak mahkûm edilen, erteleme (緩刑) verilmeyen ve para cezasına çevirmeye (易科罰金) de izin verilmeyen kişi  4. İş sözleşmesinin veya iş kurallarının ağır ihlali  5. İşverenin makinelerini, aletlerini, hammaddelerini, ürünlerini veya diğer mallarını kasten tüketen veya işverenin teknik ve ticari sırlarını kasten açıklayıp işverene zarar veren kişi  6. Meşru neden olmadan 3 gün üst üste veya 1 ayda 6 gün veya daha fazla izinsiz devamsızlık (曠工) |  |
 
@@ -112,7 +112,7 @@ ve birden B’nin işini vicdanla yapmadığını söyleyerek onu suçlamaya ba�
 
 B fedakârlık etmeli ve örnek olmalıymış
 
-ve ücretini ile görevini düşürmeliymiş.
+ve ücretini ve görevini düşürmeliymiş.
 
 Aksi halde B şirketi bırakmalıymış;
 

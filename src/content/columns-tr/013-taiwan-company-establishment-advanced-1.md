@@ -65,7 +65,7 @@ Banka genel olarak iki ayrı kimlik belgesi ister.
 
 Oturma belgesi yoksa Tayvan göç idaresinden “**birleşik kimlik numarası temel bilgi formu**” (統一證號基本資料表) talep edilebilir.
 
-Aynı gün teslim mümkün olmakla birlikte kalabalık hesaba katılmalıdır.
+Aynı gün verilmesi mümkün olmakla birlikte kalabalık hesaba katılmalıdır.
 
 Göç idaresi (移民署) çok kalabalıktır; bu nedenle erken gidip numara almak uygun olur.
 
@@ -121,7 +121,7 @@ Ofis tipi ticari mekân ise şirket tescili (公司登記) mümkün olmayabilir.
 
 Örnek: Reklamcılık veya toptan ticaret gibi ofis tipi ticari mekânda mümkün faaliyet kalemleri ise, ofis tipi ticari mekânda kuruluş yapılabilir.
 
-Kira sözleşmesi imzalanmadan önce önceden doğrulanmalıdır.
+Kira sözleşmesi imzalanmadan önce bu husus doğrulanmalıdır.
 
 *Tayvan hukuku hakkında bir sorunuz varsa İletişim sayfasından İngilizce, Çince (中文), Japonca veya Korece yazabilirsiniz; yanıt süresi vaat edilmez.*
 

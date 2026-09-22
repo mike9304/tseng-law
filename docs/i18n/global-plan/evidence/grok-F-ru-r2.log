@@ -1,0 +1,76 @@
+WO-F-ru — Grok 4.7 fix lane, campaign round 2
+workspace: /Users/son7/Projects/tseng-law-fix-ru-r2
+date: 2026-09-22
+
+## Rows
+Reviews: ru-a 33 rows + ru-b 40 rows = 73.
+Applied: 65. Skipped: 8.
+
+Applied with a wording adjustment the checker, the block count, or the 14-character nav test required (still the row’s meaning):
+- ru-a 3. The link label no longer calls the target the Business Tax Act. It now matches 001 («Предписание о ставке налога у источника на дивиденды нерезидентам»). «статья 10» stays in the label: the English link text contains Article 10, and dropping that digit fails the checker. The URL is unchanged.
+- ru-a 16 and ru-b 33 (and the same chopped layout in 013). The если-clause and the one-sentence line breaks were finished inside the existing blocks. Blocks were not merged, and the U+200B lines were not removed.
+- ru-a 23. The menu item cannot be «Отказ от ответственности» (25 characters). The nav test caps every Russian label at 14. The menu label is «Предупреждение» (14). The page eyebrow was already «ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ».
+- ru-a 28. «на 1 потерпевшего и 1 происшествие» → «на одного потерпевшего и одно происшествие». «одного» is in the Russian number lexicon, and the checker still passes.
+- ru-a 30. The self-reference no longer tells the reader to go and read part 2. The sentence still says this material is углублённая часть 2, because dropping the digit 2 fails the checker. Both links and the gloss (公司設立) stay.
+- ru-b 24 was not rewritten; see Skipped.
+
+Skipped:
+- ru-a 11. «17 отзывов» is the correct genitive plural for the fixed count TAIPEI_REVIEW_COUNT = 17. A slash form would render literally in the UI. See Reviewer got it wrong.
+- ru-a 13 and ru-b 6. Space thousands («500 000», «40 000–200 000 TWD»). ACCEPTED-ROUND: the checker does not parse a space separator. Russian number style in this checker is a dot (`NUMBER_THOUSAND_STYLE.ru = 'dot'`). Amounts, the decimal comma in 0,5, and the code-before-amount order were left as they were. 0 instances changed. The pinned bio figure «TWD 1.57M» was not touched.
+- ru-a 14 and ru-b 18. Turning Q16–Q20 into headings, or deleting U+200B lines, changes the block count. Those lines are non-empty blocks and match the Korean source. Left in place. Chatty lines inside existing blocks were rewritten (ru-a 29).
+- ru-a 26. «за последний один год» and «за каждый полный один год» stay. Bare «за последний год» drops the Korean digit 1 (최근 1 год / 최근 1년). «один год» is counted by the checker. 0 instances changed.
+- ru-a 33. Hangul in frontmatter `url` of 008 and 009. Canonical path, not rendered. Not edited.
+- ru-b 24. Dropping «(не более чем в 1 раз)» drops the digit 1. «один раз» is not in the Russian number lexicon. The round-1 form, which already says the amount is not above actual harm and keeps «в 1 раз», stays.
+
+## Systemic patterns
+- Dot thousands that a Russian reader can parse as a decimal: 0 changed (see skip). The pattern is still in 001, 002, 003, 004, 006, 010, 011, 017 and 018.
+- U+200B blog padding and Q16–Q20 body lines: 0 structural changes.
+- «пользоваться» for a language a person speaks → «говорить»: 6 (guidance pack 4, inquiry copy 2). Internet-banking «пользоваться» in 005 was left; that is a tool, not a language.
+- 解散 called ликвидация, and 清算 called расчёты: 002 now uses «роспуск» for dissolution in 18 places, and «ликвидация» for the liquidation procedure (清算), including the glossed pairs. «ликвидатор (清算人)» was already right and stayed. 004: one «роспуск (解散)», and three 清算 phrases moved from «расчёты» to «ликвидация» / «ликвидатор». Accounting «расчёт» in 007, 014 and 016 was not this pattern and was left.
+- 條例 named «Положение» → «Акт»: 10 (003 ×1, 004 ×5, 008 ×2, 013 ×1, 017 ×1). 013’s «Закон об инвестициях иностранных лиц (外國人投資條例)» is now «Акт», and the 017 link uses the same name. 法律 stays «Закон».
+- «Совместно» as a filler for English “together”, where it is not joint succession or a joint act: 11 (002 ×1, 003 ×1, 004 ×1, 010 ×3, 011 ×1, 012 ×1, 014 ×1, 018 ×2). «наследует совместно» in 016 stays; that is joint succession.
+- «Единообразно» standing in for “not automatically / no categorical answer”: 7 (002 ×2 «не отпадают во всех случаях», 014 ×1 «огульно», 017 ×2, 018 ×2). Left where it means “uniformly” (001 capital rule, 004 tax treatment, 014 a sum allocated uniformly, 018 «не единообразное требование создания»).
+- Reversed citations: 3 (011 «пунктом 7 части 1 статьи 7»; 014 «Часть 4 статьи 15-1» ×2). «Оговорка (但書)» in 007 stays; that is a statutory proviso, not the menu label.
+- Chopped clauses finished inside the existing line: 008 close (3 lines), 013 (the investment-plan, bank, lease and registration breaks), 015 (the restaurant-zone break and two если-clauses).
+- Distributor called «агент» where English says distributor: 011 ×3 (the later contrast «агент, генеральный дистрибьютор или распространитель» stays) and 018 FAQ question ×2. The 018 title still says «филиал или агента», because the English title is “subsidiary, branch, or agent”.
+- 戶籍: the guidance-pack phrase that meant a Russian residence certificate is now «документов семейного учёта (戶籍)», matching 007. 016’s «семейно-регистрационных» is now «процедур реестра домохозяйств (戶籍)». 007’s established «семейный учёт» / «Закон о семейном учёте» was not renamed.
+
+R2–R10 already in the pack and columns were left where they already read correctly. No new Hangul outside `url`. `[변호사 검수 필요]` remains 0. Consultation languages stay English, Chinese (中文), Japanese and Korean; the negative lock was not turned into an offer. Wei Tseng stays feminine where the language marks gender. The llms.txt notices were not rewritten: `llms.txt` is still in `discoveryNotice`, and `consultationNotice` / `confidentialNotice` are still verbatim substrings of the FAQ answer and the privacy paragraph.
+
+## §Verify
+cd /Users/son7/Projects/tseng-law-fix-ru-r2 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+node scripts/check-column-translation.mjs --dir src/content/columns-ru --lang ru 2>&1 | tail -8
+```
+neighbour      PASS   
+hanzi          PASS   han=46
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ru src/data | wc -l
+```
+       0
+```
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+```
+TSC_OK
+```
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+git status --short | wc -l
+```
+      20
+```
+(This log file is written after that count.)
+
+## Reviewer got it wrong — not applied as suggested
+- ru-a 11. The office line shows a fixed 17, and 17 takes «отзывов». The suggested slash «отзыв / отзыва / отзывов» would be wrong on the page.
+- ru-a 26. «один» in «за последний один год» is the lexical form of the digit 1, not a leftover from “one year”. Removing it fails the number check.
+- ru-b 24. The parenthesis is a calque, but it is also the only place the digit 1 from Korean 최대 1배 is counted. Removing it fails the number check. The round-1 wording already says the amount does not exceed actual harm.
+- 004’s English link text itself says “Article 10 of the Value-Added and Non-Value-Added Business Tax Act” for the flno=3 URL. The Business Tax name was wrong, as the reviewer said, and 001’s label is the right document. The digit 10 could not be removed. The label is the withholding-rate standard plus «статья 10».

@@ -1,0 +1,89 @@
+WO-F-ta — Grok 4.7 fix lane, campaign round 1
+workspace: /Users/son7/Projects/tseng-law-fix-ta-r1
+date: 2026-09-22
+scope: Tamil guidance pack (tamilGuidanceContent, answers ta, inquiry ta, GUIDANCE_LLMS_NOTICES.ta, team ta bios that were flagged) + columns-ta 001–018. No commit. Offices ta and consultation-language names were already locked and were not rewritten. No other locale’s strings were edited. No test file was edited.
+
+## Rows applied
+Part a P1: a#1–a#4.
+Part a P2: a#5–a#20, a#22–a#31, a#33–a#40, a#42–a#44. a#41 changed only the row label (see skipped). a#37 rephrased the body copies of sections 3 and 6; the FAQ answers that actually answer a yes/no question still open with எப்போதும் அல்ல and இல்லை.
+Part b P1: b#1–b#5.
+Part b P2: b#6–b#10, b#12–b#26. b#10 and the 013 fragments named in that row were completed inside the existing paragraphs (see skipped). b#26 uses முதலீட்டு ஆய்வு, not the suggested மறுஆய்வு (see reviewer-wrong).
+R2: 001 and 004 already mark Korea as one labelled example and say the tax note is not a worldwide rule. 005’s bank/FX section stays a labelled Korea example. The hiring FAQ already says வெளிநாட்டினரை. Only கொரியன் → கொரிய மொழி was changed (a#35).
+R3: 003’s month ranges and the 緩刑 sentence were already softened. 009’s outcome sentence is a#44. No result promise, win rate, or “best/only” was added.
+R4: வழக்கறிஞர் does not inflect. Respectful -ஆர்/அவர் stays. Explicit feminine forms already in the files were left. திரு B (008) and the male client in 010 stay male. First person was kept where the English source uses it, including 003 “என் அனுபவத்தில்”.
+R5: team and office chrome were already Tamil (குழு, அலுவலகங்கள், முழு சுயவிவரம் (ஆங்கிலத்தில்)). The unflagged English gloss “(paralegal)” on the Chang Fang-Yu intro was put back after a first pass; it is not a finding row.
+R6 / R13 / R14: dates and ROC years were not given a Gregorian twin. Thousands stay Western commas. The decimal point stays. TWD 1.57M in the bio is byte-identical.
+R7 / R7b: 013 and 015 comma-fragments are finite sentences inside the same blocks. 007 body openings that were not answers to a question are self-standing. No heading was added and no block was merged or split.
+R8: statute-name sweeps are in the counts below. 細則 stays விரிவான விதிகள். 011 “உற்பத்தி முறை” (production method) was left. 004 “முதலீட்டு விதிகள்” is the English “investment regulation”, not 外國人投資條例. 018 inventory இருப்பு was left.
+R9: 003 already names Taiwan 119, 110, and 112.
+R10: address is already நீங்கள். Consultation languages stay ஆங்கிலம், சீனம், ஜப்பானியம், கொரிய மொழி, and the negative lock (no Tamil consultation, interpreter, reply time, free first meeting, or 24/7) was not turned positive.
+R15: 008 already uses [பெயர்]. OOO was not reintroduced.
+R17: no Devanagari in columns-ta. Hangul outside url values: checker hangul PASS.
+
+## Rows skipped
+- a#21 (lakh grouping, TWD 15,70,000, and the same request for TWD 500,000 / 3,000,000 / 2,500,000 / 1,000,000 / 2,000,000,000): skipped. ACCEPTED-ROUND and R14: the checker does not parse lakh/crore grouping. The pinned bio figure TWD 1.57M stays byte-identical. Part b already says Western comma thousands are not a fix row when the digits match.
+- a#32 (turn Q16–Q20 into ## headings, and the same U+200B lines in 005, 006, 008, 009): skipped. The checker compares heading-level sequence and U+200B count with the Korean source. A ZWSP-only paragraph counts as a block. Rephrasing inside a block was done only where a separate row required it.
+- a#41 (delete the difficulty row): the row was not deleted. Deleting it would drop a table row. See reviewer-wrong. The label cell alone went from கடினம் to சிரமம்.
+- b#11 (delete U+200B after the Taipei example, and the ZWSP-only lines in 013 and 015): skipped for the same checker reason as a#32.
+- b#10’s suggested sentence would have absorbed the next paragraph. Each fragment was finished inside its own block so the block count stays equal to the source.
+- Frontmatter url, lastmod, featured_image, image paths, links, numbers, and dates were not edited. The fullwidth colon inside the 008 Hangul url was left.
+- 003 இழப்பீட்டுக் கடனாளி and 007 துணைவர் பராமரிப்புச் செலவின் கடனாளி stay. Those are debtors, and part a says so.
+- 004 “அறிக்கையிலிருந்து விலக்கப்படும்” (the later sentence the reviewer said was already clear) was left. Only “அறிக்கைப் பொருளிலிருந்து விலக்கப்படும்” was rewritten (2).
+- 011 “வரி அமைப்பும்” is the tax treatment of a subsidiary versus a branch, not the tax authority. 016’s estate-tax filing is the row that changed.
+- 004 “சட்ட நபர் பதிவும்” has no 公司登記 gloss. English there is registration of legal personality. 015, which glosses 公司登記, was changed.
+
+## Systemic patterns and instance counts
+Counts are occurrences added or removed on changed lines.
+- read_time “N நிமிட வாசிப்பு” → “N நிமிடத்தில் படிக்கலாம்”: 18/18 columns. 006 and 012 changed only this line.
+- கடனாளி for 債權人 → கடன் கொடுத்தோர்: 13 (002 and 004). The two debtor senses above remain.
+- முதலீட்டு மறுஆய்வு → முதலீட்டு ஆய்வு (經濟部投資審議司): 10. Zero முதலீட்டு மறுஆய்வு remain in columns-ta.
+- விளைவு as business performance or a record of activity → செயல்திறன்: 9 (001, 005, 008). Legal-effect விளைவு was left, including 011’s கூறப்படும் விளைவு (宣稱功能).
+- பங்களிப்பு உறவு → முதலீட்டு உறவு: 5 (001 and 004, including the table cell).
+- Custody calque → சிறுவர் காப்பு — பெற்றோரின் உரிமையும் பொறுப்பும், or the short சிறுவர் காப்பு where the sentence was already a list: 6 (guidance 1, 007 heading and body).
+- Tort 侵權行為 → தவறான செயல்: 7 uninflected (guidance, 004, 007, 010) plus 003’s inflected தவறான செயலின் (侵權行為). 008 labor “சட்டவிரோதச் செயல்” (Labor Standards Act art. 12) was left.
+- 辦法 named முறை → விதிமுறை: 6 (003 accident-assessment title, 011 PIF regulations and the login 辦法, including the inflected விதிமுறையின்).
+- 條例 named விதிகள் → சட்டம்: தொழிலாளர் ஓய்வூதியச் சட்டம் 2 (008), சாலைப் போக்குவரத்து நிர்வாக மற்றும் தண்டனைச் சட்டம் 1 (003), வெளிநாட்டினர் முதலீட்டுச் சட்டம் 3 (013, 017, and the 001 English-text link label of the same act).
+- 號 as a case or judgment number, not a statutory clause: 010 நுகர்வோர் வழக்கு எண் 7, and 007 தீர்ப்பு எண் 4 in the FAQ, the body, and both source links (4). 但書 stays விதிவிலக்குக் கூறு.
+- மத்தியஸ்தம்ய் sandhi → மத்தியஸ்தத்: 3 (007).
+- நியாயமற்ற இலாபம் → நியாயமற்ற ஆதாயம்: 4 (007).
+- Warranty குறைபாட்டுப் பாதுகாப்பு / குறைபாட்டுக் கையாளல் → பொருள் உத்தரவாதம் 1 and உத்தரவாதக் கையாளல் 2 (018).
+- Mandate calque வழக்கு ஏற்பு உறவு removed from the Tamil guidance surfaces that used it (south-asia footer, disclaimer heading, and the paragraph; answers FAQ). Zero வழக்கு ஏற்பு remain under src/data.
+- 016 domicile / habitual residence: 2. Tax-authority filing: 2. Will 檢認 → உயில் ஏற்பு (認證 stays சான்றாதாரம்).
+- 015 company registration (公司登記): the glossed forms and “நிறுவனப் பதிவுக்கு முன்”. உபகிளை (分支機構): 1. The NBSP and stray closing quote after the Taipei link were removed; the URL is unchanged.
+- 017 Kinmen or Lienchiang (Matsu): மற்றும்/third-place அல்லது corrected on the glossed FAQ pair and the unglossed body line. Plate restriction is one act, 過戶轉讓, not two acts joined by அல்லது. Mainland Area gloss 大陸地區 added.
+- 008 table label only: கடினம் → சிரமம் (1). Values stay எளிது | கடினம் | எளிது.
+- Blog-register pattern (003 Q16–Q20, 005, 006, 008, 009; chopped 013/015): structure kept because headings and ZWSP counts are pinned. No “leave a comment” or “??” line was found to rephrase. 013/015 fragments were given finite verbs inside their own blocks.
+
+## §Verify
+node scripts/check-column-translation.mjs --dir src/content/columns-ta --lang ta 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=97
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ta src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      26
+
+(The count 26 is before this log file. It includes the pre-existing WO-F-ta.txt modification and the untracked ta-a.md / ta-b.md, plus the Tamil source files edited in this lane. 017’s numbers row is WARN 수사미해석 on 제3자, with sourceCount=targetCount=44; the summary is still PASS 18/18. Those tokens were not rewritten.)
+
+After those commands, one unflagged edit was reverted: the Chang Fang-Yu Tamil intro again includes the existing English gloss “(paralegal)”. That string is the committed text. Checker, tsc, and vitest were not re-run for that revert.
+
+## Reviewer got wrong (not applied)
+- a#21 and the verdict line that Western grouping of one lakh and above should become lakh figures. Part b says the Western comma is not a fix row when the digits match. ACCEPTED-ROUND and R14 skip lakh/crore grouping because the checker cannot parse it. The pinned token is TWD 1.57M, not a reformatted 15,70,000.
+- a#32. Q16–Q20 are body text in the Korean source, and the blank lines are U+200B on purpose. Promoting them to ## headings, or deleting the ZWSP lines, fails headings or blocks. The same applies to b#11.
+- a#41. The English table is Difficulty | Easy | Difficult | Easy. The Tamil value cells were already எளிது | கடினம் | எளிது. The first cell is the row label, not a fourth result. Economic dismissal is the Difficult cell; resignation is the last Easy cell. Those values match the English. Only the label was wrong (an adjective where the source is the noun “Difficulty”). Deleting the row would also fail the table-row check.
+- b#26’s suggested heading still says முதலீட்டு மறுஆய்வுத் துறை. Part a#25 is the glossary decision: மறுஆய்வு is an appeal or a second look. The heading now says the subsidiary undergoes முதலீட்டு ஆய்வுத் துறை review (உட்படும்), which is the English “undergo”, not “pass”.

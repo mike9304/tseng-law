@@ -3,7 +3,7 @@ title: "தைவானில் மசாஜ்: வரலாறும் ச�
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
 lastmod: "2025-09-13"
 date_display: "13 செப்டம்பர் 2025"
-read_time: "3 நிமிட வாசிப்பு"
+read_time: "3 நிமிடத்தில் படிக்கலாம்"
 categories:
   - "தைவான் சட்டத் தகவல்"
 featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"

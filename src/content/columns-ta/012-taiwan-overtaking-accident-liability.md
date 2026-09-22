@@ -3,7 +3,7 @@ title: "தைவானில் முந்திச் செல்லும�
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
 lastmod: "2026-09-10"
 date_display: "13 செப்டம்பர் 2025"
-read_time: "5 நிமிட வாசிப்பு"
+read_time: "5 நிமிடத்தில் படிக்கலாம்"
 categories:
   - "தைவான் சட்டத் தகவல்"
 featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.jpg"

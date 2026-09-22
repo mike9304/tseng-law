@@ -13,9 +13,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Huvudbild](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-På senare tid har många personer bildat bolag (公司) i Taiwan och fått arbetsvisum samt uppehållskort (外僑居留證),
+På senare tid har många personer bildat bolag (公司) i Taiwan och fått arbetsvisum samt uppehållskort (外僑居留證).
 
-och de frågor som ofta ställs vid bildandet samlas nedan.
+De frågor som ofta ställs vid bildandet samlas nedan.
 
 De som har läst [**grunderna i bolagsbildning**](/sv/columns/taiwan-company-establishment-basics) kan därefter också läsa den här mer detaljerade fördjupningen.
 
@@ -29,7 +29,7 @@ När en utlänning bildar bolag i Taiwan ska en investeringsplan (投資計畫�
 
 Avdelningen ska kontrollera om det aktuella kapitalet (資本額) verkligen används för investeringsändamål
 
-och att utländska aktörer inte för in medel under någon annan beteckning.
+och att utländska aktörer inte för in medel under en annan förevändning.
 
 När investeringsplanen upprättas behöver den exakta bolagsadressen inte anges; det räcker med regionen (exempel: staden Taipei). ​
 
@@ -39,7 +39,7 @@ En anställd vid en taiwanesisk bank har själv sagt till mig att
 
 många utlänningar på senare tid försvinner efter kontoöppningen, så att kontoöppning hanteras allt striktare.
 
-Flera som har gått igenom processen beskriver kontoöppningen som det svåraste steget, och det stämmer med min erfarenhet.
+I den tidigare texten om grunderna skrev en läsare att kontoöppningen var det svåraste steget, och det stämmer med min erfarenhet.
 
 Eftersom fallen av penningtvätt (洗錢) är mycket många i Taiwan blir öppning av bankkonton allt striktare.
 

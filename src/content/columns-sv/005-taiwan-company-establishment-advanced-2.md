@@ -71,7 +71,7 @@ Vissa banker kan ställa ytterligare krav, till exempel en användningstid för 
 
 A. Första arbetstagaren: ansökan görs som ledningsarbete i ett vanligt företag med utlandskinesisk eller utländsk investering (一般僑外投資事業主管工作). Måttet ”arbete av specialiserad eller teknisk karaktär” under B nedan tillämpas inte, men adressatvillkoren gäller, bland annat det att vara verkställande chef (經理人) i ett bolag där utlandskinesers eller utlänningars insats överstiger 1/3, samt arbetsgivarens resultatvillkor om kapital och omsättning (prövningsnormerna artikel 38 och artikel 39).
 
-B. Från och med den andra arbetstagaren finns begränsningar: om antalet anställda överstiger 1 person behandlas arbetstagarens relevanta utbildning och erfarenhet, reglerna om genomsnittlig anställningsersättning samt bolagets regler om kapital och omsättning enligt ”specialiserat eller tekniskt arbete” (專門性或技術性工作).
+B. Från och med den andra arbetstagaren finns begränsningar: om bolaget anställer mer än 1 utländsk medborgare behandlas den anställdas utbildning och erfarenhet, kravet på genomsnittlig lön samt bolagets kapital och omsättning enligt reglerna för ”specialiserat eller tekniskt arbete” (專門性或技術性工作).
 
 Se webbplatsen för Taiwans arbetsministerium (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

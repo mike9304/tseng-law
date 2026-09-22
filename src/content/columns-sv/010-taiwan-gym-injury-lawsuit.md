@@ -17,11 +17,11 @@ Utifrån ett ärende där en koreansk universitetsstudent skadades medan denne f
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
-Olyckan inträffade på ett gym i Taichung (臺中), under ett marklyftpass (硬舉) som leddes av tränaren. Efter skadan räcker det inte att bara hålla fast vid att olyckan skedde inne på gymmet; man måste tillsammans granska användarens träningserfarenhet och hälsotillstånd, övningstyp och vikt, tränarens förklaringar och anvisningar, rörelsen och reaktionen just då, orsakssambandet (因果關係) mellan skadan och övningen, och de handlingar som stöder skadan.
+Olyckan inträffade på ett gym i Taichung (臺中), under ett marklyftpass (硬舉) som leddes av tränaren. Efter skadan räcker det inte att bara utgå från att olyckan skedde inne på gymmet; måste man också granska användarens träningserfarenhet och hälsotillstånd, övningstyp och vikt, tränarens förklaringar och anvisningar, rörelsen och reaktionen just då, orsakssambandet (因果關係) mellan skadan och övningen, och de handlingar som stöder skadan.
 
 Jag var ombud (訴訟代理人) för käranden, den koreanska studenten. Distriktsdomstolen i Taichung förpliktade den 24 januari 2022, i domen i första instans i konsumentmål nr 7 för år 109 (2020) (109年度消字第7號), svaranden att betala [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) samt den ränta som anges i domen.
 
-Därefter har pressen uppgett att parterna förliktes (和解) i andra instans. Enbart den officiella domen i första instans gör det inte möjligt att bekräfta utfallet i andra instans eller förlikningsbeloppet; det får inte läsas som ett lagakraftvunnet slutresultat.
+Därefter har pressen uppgett att parterna förliktes (和解) i andra instans. Enbart den officiella domen i första instans gör det inte möjligt att bekräfta utfallet i andra instans eller förlikningsbeloppet; den förlikning som pressen uppgett får inte läsas som ett bekräftat avslut av målet i första instans.
 
 Rubrikerna på pressuppgifter, nätinlägg och rättskommentarer om detta ärende, översatta till svenska, är följande. Rubrikerna nedan syftar bara till att presentera innehållet i varje länk; de betyder inte att denna text själv fastställer faktum.
 
@@ -41,17 +41,17 @@ Rubrikerna på pressuppgifter, nätinlägg och rättskommentarer om detta ärend
 
 [En universitetsstudent, diskbråck efter marklyft på 90 kg… yrkar skadestånd mot gymmet](https://news.ebc.net.tw/news/living/362075)
 
-![Inlägg på PTT: koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i första instans, föreläggande mot gymmet att betala 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
+![Inlägg på PTT: koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i första instans, dom som förpliktar gymmet att betala 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
 
-[Inlägg på PTT: koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i första instans, föreläggande mot gymmet att betala 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
+[Inlägg på PTT: koreansk universitetsstudent, diskbråck under marklyft på 90 kg… i första instans, dom som förpliktar gymmet att betala 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
 ![Blogg: skada vid marklyft på 90 kg hos en koreansk universitetsstudent på 70 kg och skadestånd på mer än 1.000.000 TWD… fanns det fel hos gymmet? Vilken var den tränandes inställning?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
 [Blogg: skada vid marklyft på 90 kg hos en koreansk universitetsstudent på 70 kg och skadestånd på mer än 1.000.000 TWD… fanns det fel hos gymmet? Vilken var den tränandes inställning?](https://blog.udn.com/blackjack/179081715)
 
-![Rättskommentar: en universitetsstudent, diskbråck under marklyft… i första instans, föreläggande mot ett känt gym att betala 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
+![Rättskommentar: en universitetsstudent, diskbråck under marklyft… i första instans, dom som förpliktar ett känt gym att betala 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
-[Rättskommentar: en universitetsstudent, diskbråck under marklyft… i första instans, föreläggande mot ett känt gym att betala 1.570.000 TWD](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
+[Rättskommentar: en universitetsstudent, diskbråck under marklyft… i första instans, dom som förpliktar ett känt gym att betala 1.570.000 TWD](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
 
 ![Domskommentar: ärende om akut diskbråck efter att en nybörjare på gymmet fått anvisning om marklyft på 90 kg](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
 
@@ -61,7 +61,7 @@ Rubrikerna på pressuppgifter, nätinlägg och rättskommentarer om detta ärend
 
 **Fick en koreansk universitetsstudent diskbråck när denne gjorde marklyft på 90 kg under personlig träning?**
 
-Det praktiska intresset i det här ärendet är att det visar att ansvaret inte avgörs omedelbart bara av att en skada har uppstått på gymmet. Innehållet i den säkerhetsplikt (安全義務) som åvilar tjänsteleverantören, den konkreta anvisningshandlingen och överträdelsen av aktsamhetsplikten (注意義務), orsakssambandet mellan skadan och beteendet samt skadans omfattning bedöms utifrån handlingarna i varje ärende. Villkoren och fristerna för det straffrättsliga och det civilrättsliga förfarandet är också skilda, så att spåren redan efter olyckan bör ordnas åtskilt.
+Det praktiska intresset i det här ärendet är att det visar att ansvaret inte avgörs omedelbart bara av att en skada har uppstått på gymmet. Innehållet i den säkerhetsplikt (安全義務) som åvilar tjänsteleverantören, den konkreta anvisningshandlingen och överträdelsen av aktsamhetsplikten (注意義務), orsakssambandet mellan skadan och beteendet samt skadans omfattning bedöms utifrån handlingarna i varje ärende. Villkoren och fristerna för det straffrättsliga och det civilrättsliga förfarandet är också skilda, så att handlingarna redan efter olyckan bör ordnas var för sig.
 
 Det som följer är allmän information för att förklara tvister om gymskador i Taiwan; det är inte ett rättsutlåtande för ett konkret ärende. De faktiska rättigheterna och tillvägagångssättet kan variera beroende på avtalsförhållandet, olycksförloppet, skadans orsak och grad, parternas beteende, försäkringsvillkoren, den bevarade bevisningen och tillämplig rätt.
 
@@ -85,7 +85,7 @@ Om dock en annan yrkandegrund, som avtalsansvar, kommer i fråga, eller om andra
 
 För att förklara ansvar, orsakssamband och skada bör man samla inte bara CCTV-bilder (監視器影像) från olycksögonblicket, utan också journal (病歷) och läkarintyg (診斷證明書), kvitton för vårdkostnader (醫療費用), resor (就醫交通費) och omvårdnad (看護費用), meddelanden med gymmet och tränaren, vittnesuppgifter, lektionsbokning och närvarolista, träningsplan och träningsanteckningar. Det är lämpligt att, så långt det går, fotografera det skadade området och olycksplatsens skick, och att ordna förloppet före och efter olyckan samt kommunikationsinnehållet i datumordning, så att handlingarna sedan lättare kan jämföras.
 
-Bilder kan skrivas över när förvaringstiden löper ut eller bli oanvändbara av andra skäl. Man kan därför överväga att begära bevarande av gymmet genom ett innehållsbevisat meddelande (存證信函) eller en skrivelse i advokats namn (律師函) som konkret anger nödvändig tidsperiod, plats och kameraposition. Denna skrivelse är en praktisk åtgärd för att dokumentera vad som begärts och när. Den lägger dock inte i sig en ny rättslig skyldighet på motparten att bevara bilderna och hindrar inte radering, och enbart det faktum att bilderna inte finns kvar leder inte heller till att domstolen automatiskt gör en ogynnsam bedömning.
+Bilder kan skrivas över när förvaringstiden löper ut eller bli oanvändbara av andra skäl. Man kan därför överväga att begära bevarande av gymmet genom ett rekommenderat brev med innehållsbevis (存證信函) eller ett advokatbrev (律師函) som konkret anger nödvändig tidsperiod, plats och kameraposition. Denna skrivelse är en praktisk åtgärd för att dokumentera vad som begärts och när. Den lägger dock inte i sig en ny rättslig skyldighet på motparten att bevara bilderna och hindrar inte radering, och enbart det faktum att bilderna inte finns kvar leder inte heller till att domstolen automatiskt gör en ogynnsam bedömning.
 
 Om olycksförloppet kan uppfylla rekvisiten för ett brott kan man snabbt anmäla så att utredningsorganet (偵查機關) bedömer om det finns laglig grund för beslag eller bevarande. Att anmäla betyder inte att polis eller åklagare nödvändigtvis tar hand om CCTV, så man måste också samla handlingar som parten själv kan bevara, som vård- och kommunikationshandlingar.
 
@@ -96,10 +96,10 @@ De skadeposter vars yrkande kan prövas är följande. Det faktiska erkännandet
 1. **Vårdkostnader**: Kostnader som faktiskt lagts ut för besök, undersökningar, behandling, läkemedel och rehabilitering bevisas med kvitton och journal.
 2. **Omvårdnads- eller omsorgskostnader**: Om omvårdnad, sett till skadans grad och behandlingsförloppet, var nödvändig, och om tid och kostnad är skäliga, granskas det med vård- och utgiftshandlingar.
 3. **Resekostnader**: Kostnader som behövs för att åka till och från vårdinrättningen för behandling bevisas med förflyttningsanteckningar, kvitton och liknande handlingar.
-4. **Skada för nedsatt arbetsförmåga (勞動能力減損)**: Om följdskador och varaktig nedsättning av arbetsförmågan erkänns kan man bedöma samlat med medicinska och yrkesmässiga handlingar, invaliditetsgrad, yrke och inkomst samt återstående arbetstid. Enbart invaliditetsprocenten fastställer inte ersättningen, och förlusten räknas inte automatiskt fram till pensionstidpunkten.
+4. **Skada för nedsatt arbetsförmåga (勞動能力減損)**: Om följdskador och varaktig nedsättning av arbetsförmågan erkänns kan man bedöma samlat med medicinska och yrkesmässiga handlingar, invaliditetsgrad, yrke och inkomst samt återstående arbetsliv. Enbart invaliditetsprocenten fastställer inte ersättningen, och förlusten räknas inte automatiskt fram till pensionstidpunkten.
 5. **Inkomstbortfall under återhämtningsperioden (收入損失)**: Den period då man faktiskt inte kunde arbeta på grund av behandling eller vila, och den inkomstminskning som följde, måste bevisas med lönehandlingar, skattedokument, närvarouppgifter med mera.
 6. **Icke-ekonomisk skada (非財產上損害)**: Beloppet för det psykiska lidandet fastställs av domstolen utifrån faktorer i varje ärende, som skadans grad, behandlingstid, följdtillstånd och partens konkreta omständigheter.
-7. **Straffskadestånd (懲罰性賠償金)**: Det finns en regel enligt vilken, i en tvist där lagen om konsumentskydd gäller, om skadan orsakats av företagets uppsåt kan man yrka upp till 5 gånger den faktiska skadan; vid grov vårdslöshet upp till 3 gånger; och vid vårdslöshet upp till 1 gång det faktiska skadebeloppet. Om [artikel 51 i Taiwans lag om konsumentskydd](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) gäller för ärendet och om det blir faktisk ersättning och med vilket belopp, beror på domstolens bedömning av de konkreta villkoren och bevisningen.
+7. **Straffskadestånd (懲罰性賠償金)**: Det finns en regel enligt vilken, i en tvist där lagen om konsumentskydd gäller, om skadan orsakats av företagets uppsåt kan man yrka upp till 5 gånger den faktiska skadan; vid grov vårdslöshet upp till 3 gånger; och vid vårdslöshet upp till det faktiska skadebeloppet (1 gång). Om [artikel 51 i Taiwans lag om konsumentskydd](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) gäller för ärendet och om det blir faktisk ersättning och med vilket belopp, beror på domstolens bedömning av de konkreta villkoren och bevisningen.
 
 ## 5. Även om gymmet har ansvarsförsäkring (責任保險), kan ersättningens existens och belopp bestridas?
 

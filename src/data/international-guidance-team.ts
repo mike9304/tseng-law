@@ -604,7 +604,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'VÅRT TEAM',
     title: 'Hoverings internationella team',
     description:
-      'Profiler för Hoverings advokater, operativa ledning och anknutna revisionsbyrå.',
+      'Profiler för Hoverings advokater, operativ ledning och anknuten revisionsbyrå.',
     representativeTitle: 'Ledande advokat',
     teamTitle: 'Advokater och medarbetare',
     partnerTitle: 'Anknuten revisionsbyrå',
@@ -2893,29 +2893,29 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'Master (M.S.), Institute of Finance, National Taiwan University',
-        'Kandidatexamen (B.A.) med dubbel inriktning rätt och finans, National Chengchi University',
+        'Kandidatexamen (B.A.) med dubbla huvudämnen i juridik och finans, National Chengchi University',
         'Utbytesstudent vid Kobe University och Waseda University',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Stiftelsen för rättshjälp, filialen i Taichung (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Tidigare vid Ministry of Education, Legal Affairs Division, med tonvikt på förvaltnings- och civilrättsliga ärenden.',
+        'Tidigare vid utbildningsministeriet, avdelningen för juridiska frågor (Ministry of Education, Legal Affairs Division), med tonvikt på förvaltnings- och civilrättsliga ärenden.',
         'Erfarenhet av ärenden om högskolor, lärares rättigheter och förvaltningsrättsliga klagomål.',
       ],
       education: ['Juridisk kandidatexamen (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Utbildningsministeriet, avdelningen för juridiska frågor (Ministry of Education, Legal Affairs Division)',
         'Advokat, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal med lång verksamhet som senior paralegal vid flera byråer, ansvarig för processstöd, bolagsrätt och utländska investeringar.',
+        'Paralegal med lång erfarenhet som senior paralegal vid flera byråer, ansvarig för processstöd, bolagsrätt och utländska investeringar.',
         'Stöd vid förfaranden, bolagsbildning, tillstånd för utländska investeringar, licensansökningar och kontakterna mellan Korea och Taiwan.',
       ],
       education: ['Juridisk kandidatexamen (LL.B.), Tunghai University'],
@@ -2934,7 +2934,7 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'Har slutfört kandidat- och masterprogram i redovisning vid National Chengchi University och leder nu en revisionsbyrå.',
+        'Har avlagt kandidatexamen och masterexamen i redovisning vid National Chengchi University och leder nu en revisionsbyrå.',
         'Stödjer den integrerade analysen av juridiska, skattemässiga och finansiella risker för företagsklienter.',
       ],
       education: [

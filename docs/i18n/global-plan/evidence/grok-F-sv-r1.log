@@ -1,0 +1,98 @@
+WO-F-sv r1 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-sv-r1
+date: 2026-09-22
+
+## Rows
+
+Numbered findings: sv-a 39, sv-b 43 (82).
+
+Applied: 79.
+Skipped: 3 numbered rows, plus the verdict's Hangul `url` fields (not a numbered row).
+
+### Applied
+sv-a 1–20, 22–30, 32–39 and sv-b 1–24, 26–43.
+
+sv-a 9 and 19: the pack test forbids the substring `garanti`. "garanterad synlighet" is "utlovad synlighet"; "en teknisk garanti" is "ett löfte om den tekniska funktionen". The four discovery items stay (sökplacering, rekommendation, rekommendation från artificiell intelligens, utlovad synlighet).
+sv-a 22, 2 and 5, and sv-b 11: a bare "ett/en" that is not next to the lexicon unit drops the source digit. Kept a digit the checker counts: "det senaste året (1 år)", "varaktigheten för 1 verksamhetsuppehåll … ett år" (drops the false "bara en gång"), "mer än 1 utländsk medborgare", "det faktiska skadebeloppet (1 gång)". "per ett år" and "per en dag" are in the lexicon.
+sv-a 25: "första/andra stycket" drops 제1항/제2항. The checker has no Swedish ordinal pattern, so the form is "1:a stycket" / "2:a stycket" (20 cites in 002, 003, 004, 007, 011).
+sv-a 36: the Svårighet row was not deleted (that would change the row count). Cells are now "Formell tröskel (inget utlovat utfall) | lägre | högre | lägre".
+sv-b 9: "se till att" means "ensure that". The sentence is "utgå från att olyckan skedde inne på gymmet".
+sv-b 22: the comma-paragraph and the following "och …" were each made a full sentence. They were not merged.
+sv-b 37: "genomför" (imperative), not the suggested infinitive "genomföra", so it matches "Kontrollera".
+
+Guidance pack (Swedish strings only): team description in nordic, team copy and the lawyers answer; hushållsregistreringen (戶籍); ersättning vid arbetsgivarens uppsägning; "samt andra internationella klienter"; "i ett och samma ärende"; Kommunikationsvägen; "Vad händer om" ×2; "ingen jour"; objektlagring; rätten där du är bosatt; dubbla huvudämnen; utbildningsministeriet and the experience line, English name in parentheses; stiftelsen för rättshjälp, filialen i Taichung, English name in parentheses; lång erfarenhet; avlagt kandidatexamen och masterexamen; llms discovery notice.
+
+### Skipped
+- sv-a 21. Space thousands ("500 000"). ACCEPTED-ROUND: the checker does not parse a space separator. Swedish stays on the dot form the checker accepts (`500.000`).
+- sv-a 31. Q16–Q20 were not promoted to headings, and the U+200B blank lines were not removed. Heading levels, block counts and ZWSP counts are locked to the source. ACCEPTED-ROUND: do not add headings or merge blocks. The blog close in that stretch is sv-a 32 and was rephrased inside the existing paragraph.
+- sv-b 25. "Utöver marknadsläget / är en annan viktig punkt / om …" was not merged. The English file splits the same three blocks, and the checker compares block counts. The "frågas" wording (sv-b 26) was applied inside the existing blocks. 013 clause fragments were repaired the same way (period, then a full sentence in the next block) without merging.
+- Verdict, 008 and 009 `url` Hangul slugs. Canonical source metadata. Not rewritten.
+
+## Systemic patterns
+
+- Glued digit in a time or multiplier phrase (sv-a verdict). Swept the quoted pattern, not every "1 år" threshold ("mindre än 1 år", "i 1 månad eller mer" stay). 001 ×2, 008 ×4 (varje/per), 003 ×2 (per en dag), 002 ×2 (the false "1 gång"), 010 ×1 (the 1× damages calque). 012 "helljus 1 gång" is "once" and was left.
+- Thousands with a period (sv-a verdict). 0 changed. See skipped sv-a 21.
+- Blog register and U+200B (sv-a verdict). ZWSP and Q16–Q20 headings: 0 removed. Rephrased inside existing blocks: 003 close, 008 opening ("Jag är advokaten Wei Tseng"), 008 Korea sentence and the closing imperatives, 009 last sentence. First-person case narration in 008 stays (Wei Tseng; herr B stays male).
+- English office name inside a Swedish sentence (sv-a 1). Three Swedish bio lines. Paralegal / Senior Paralegal stay: R12 is for the 18 locales added on 2026-09-22, and the Swedish row kept "Paralegal". OUR TEAM / OFFICES / full profile were already "VÅRT TEAM", "KONTOR", "Fullständig profil (på engelska)".
+- Household registration called folkbokföring (sv-a verdict, R8 戶籍). Stem replaced in the guidance family paragraph (1) and in 007 (30), 016 (5) and 017 (3). Part b's verdict calls folkbokföring the right term; that was not followed. See below.
+- Regulated person called subjekt (sv-b verdict). ansvarssubjekt / "det subjekt som" in 011 ×6, rättighetens subjekt in 016 ×1, tillståndssubjekt in 017 ×3, sökandesubjekt and ansvarssubjekt in 004 ×3. rättssubjekt was left (001, 004, 018).
+- "dra slutsats" without an article (sv-b verdict). 014 ×1 and 016 "dras någon slutsats" ×1.
+- Imperative list slipping into present or infinitive (sv-b verdict). 016 checklist items 2, 4, 5 and 6; 017 "stäm av" ×2 and "genomför" ×2.
+- One office name for 經濟部投資審議司 (R8 / sv-b 40). The body of 001, 011, 013 and 018 already said "avdelningen för investeringsprövning". The 017 link label was the mismatch (1).
+- R2, R3, R4, R9. Korea-as-example framing, the Taiwan 119/110/112 line, and feminine "Hon företrädde" were already in place. 003 now says "119 i Taiwan (ambulans och brand)". 018 "den ansvariges" is "den ansvariga advokatens" (1). "advokat" and "ombud" do not mark gender. Consultation languages stay engelska, kinesiska (中文), japanska, koreanska. 008's severance anecdote already said the entitlement was established under the law; "givetvis betala" in the close is now "skyldigt att betala det när lagens villkor är uppfyllda".
+
+## Checker and digits
+
+Natural forms that drop a source digit fail `numbers`. The checker compares to the Korean file. The smallest form that still parses:
+
+- 001 "det senaste året" drops 최근 1년. Now "det senaste året (1 år)" ×2.
+- 002 removing "1 gång" ("only once") drops a 1 beside 1년. Now "varaktigheten för 1 verksamhetsuppehåll får inte överstiga ett år" ×2. "ett år" is in the Swedish lexicon.
+- 008 "för varje fullgjort tjänsteår (1 år)" ×1, blockquote "för varje fullgjort år av tjänstgöringstid (年資, 1 år)" ×1, and "per ett år" ×2.
+- 003 "per en dag" ×2 ("en dag" is in the lexicon).
+- 005 "mer än 1 utländsk medborgare" keeps the digit; "en utländsk medborgare" would not.
+- 010 "(1 gång)" keeps 1배. The 3- and 5-times figures were not changed.
+- Article paragraphs: "1:a stycket" / "2:a stycket", not "första/andra", because those words are not in the number lexicon.
+
+003 running text "2026-05-29" / "2026-07-01" is now "den 29 maj 2026" / "den 1 juli 2026". The checker still parses them. `lastmod` was not touched.
+
+Pre-existing number WARNs remain (unmatched Korean ordinals, extra 2023 in 007, extra 2020 in 010, extra 2 in 015). They are WARN, and the summary is PASS. None of them is a new missing source digit.
+
+## Reviewer points not followed
+
+- sv-a 21 and a space as thousands separator. Right for Swedish typography, and rejected by the checker and ACCEPTED-ROUND.
+- sv-a 31 and the U+200B "pad". The counts match the source. Treating them as disposable blank lines would fail the checker.
+- sv-b 25. The three short blocks are the English structure.
+- sv-b verdict: folkbokföring is the right Swedish word for 戶籍. Swedish folkbokföring is the population register. R8 and sv-a 8 ask for household registration. The stem was changed in 007, 016 and 017 as well as the guidance pack.
+- sv-b 9 "se till att". That phrase means to make sure something happens, not to look only at a fact.
+- sv-a 9 "garanterad" and sv-a 19 "teknisk garanti". The Swedish guidance-pack test rejects `/garanti/i` on every pack string. The meaning is kept without that substring.
+- sv-a 36's request to delete the Svårighet row. The English source has the same row. Deleting it changes the table. The cells were softened instead.
+- sv-a 25's "första stycket" as a word with no digit. Noted under Checker and digits; "1:a" / "2:a" is what the checker accepts.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-sv --lang sv 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=77
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-sv src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      24
+```
+
+The log file itself is not in that count. No commit.

@@ -91,7 +91,7 @@ Därför är, i arbetstvister (勞資糾紛) i Taiwan,
 
 ”**tiden**” mycket viktig.
 
-I de flesta fall får den som förberett sig i förväg sina rättigheter skyddade.
+Den som förbereder sig i förväg står i regel starkare för att ta till vara sina rättigheter; något visst utfall följer inte av det.
 
 ---
 

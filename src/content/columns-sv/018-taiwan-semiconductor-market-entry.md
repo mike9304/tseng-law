@@ -65,7 +65,7 @@ Bolag med begränsat ansvar kan bildas av 1 eller flera fysiska personer, eller 
 
 ### Aktiebolag (股份有限公司): lämpligt för företag som vill ta in andra investerare eller har notering i sikte
 
-Kapitalet delas i aktier. I princip krävs minst 2 delägare, men staten eller en juridisk person kan bilda ensamt, och en utländsk juridisk person kan inneha 100 %. Aktier är i princip fritt överlåtbara, med lagstadgade undantag; säraktier och personaloptioner kan utformas enligt lag. Det passar därför företag som avser investeraranskaffning, andelshandel, aktieersättning till anställda eller framtida fusion, förvärv eller notering och registrering; det gäller inte bara stora företag. I styrningshänseende kan ett onoterat bolag genom bolagsordningen avstå från styrelse och ha endast 1 eller 2 styrelseledamöter. Ett bolag med enbart staten eller en juridisk person som delägare kan genom bolagsordningen avstå från bolagsövervakare (監察人). Vidare behöver inte varje aktiebolag (股份有限公司) få årsredovisningen revisionsintygad. De främsta revisionströsklarna för ett vanligt bolag är inbetalt kapital TWD 30.000.000, eller, även därunder, rörelseintäkt TWD 100.000.000 eller 100 arbetstagare anslutna till den taiwanesiska arbetstagarförsäkringen (勞工保險); bolag som har gjort en offentlig emission (公開發行公司) följer värdepappersregleringen.
+Kapitalet delas i aktier. I princip krävs minst 2 delägare, men staten eller en juridisk person kan bilda ensamt, och en utländsk juridisk person kan inneha 100 %. Aktier är i princip fritt överlåtbara, med lagstadgade undantag; säraktier och personaloptioner kan utformas enligt lag. Det passar därför företag som avser investeraranskaffning, andelshandel, aktieersättning till anställda eller framtida fusion, förvärv, börsnotering eller registrering på en tillväxtmarknad; det gäller inte bara stora företag. I styrningshänseende kan ett onoterat bolag genom bolagsordningen avstå från styrelse och ha endast 1 eller 2 styrelseledamöter. Ett bolag med enbart staten eller en juridisk person som delägare kan genom bolagsordningen avstå från bolagsövervakare (監察人). Vidare behöver inte varje aktiebolag (股份有限公司) få årsredovisningen revisionsintygad. De främsta revisionströsklarna för ett vanligt bolag är inbetalt kapital TWD 30.000.000, eller, även därunder, rörelseintäkt TWD 100.000.000 eller 100 arbetstagare anslutna till den taiwanesiska arbetstagarförsäkringen (勞工保險); bolag som har gjort en offentlig emission (公開發行公司) följer värdepappersregleringen.
 
 ## 4. Förfarandena för filial och dotterbolag skiljer sig; endast bildande av dotterbolag går genom ekonomiministeriets investeringsprövning
 
@@ -73,7 +73,7 @@ När ett utländskt bolag bildar taiwanesiskt dotterbolag görs i princip förha
 
 Däremot krävs vid bildande av taiwanesisk filial för ett vanligt utländskt bolag i princip inte investeringstillstånd från den avdelningen; ekonomiministeriets avdelning för handelsutveckling (經濟部商業發展署) handlägger filialregistrering och relaterad kapitalfastställelse. Förhandskontroll av firma, överföring av rörelsekapital, kapitalgranskning och skatteregistrering krävs dock fortfarande, och tidplanen är i allmänhet kortare.
 
-Ovanstående beskriver bara förfarandet, inte hur ett avtal ska utformas. Att ett visst formulär finns gör inte transaktionen laglig och undviker inte tvister.
+Ovanstående är vägledning om hur avtalet utformas. Att ett visst formulär finns gör inte transaktionen laglig och undviker inte tvister.
 
 ## 5. Bolagsregistrering och ingenjörens lagliga arbete är skilda saker
 
@@ -95,7 +95,7 @@ Följande är hypotetiska exempel för att underlätta tanken; det är inte en s
 
 Inför en första kontakt (rådgivning sker endast på engelska, kinesiska, japanska eller koreanska) kan du sammanställa grunduppgifter om huvudkontor och tillskottsgivare, en allmän beskrivning av produkt eller tjänst, det planerade transaktionsflödet, plan för personal och anläggningar i Taiwan samt de avtals- och stödvillkor som kunderna kräver. Det som ännu inte är bestämt kan märkas som ”ej fastställt”.
 
-Vid den första kontakten behöver du inte bifoga allt kundkonfidentiellt material eller detaljerade processuppgifter. Efter att du lämnat uppgifter som behövs för kontroll av intressekonflikt, såsom motpartens bolagsnamn, fastställs nödvändigt material och överföringssätt enligt den ansvariges anvisning.
+Vid den första kontakten behöver du inte bifoga allt kundkonfidentiellt material eller detaljerade processuppgifter. Efter att du lämnat uppgifter som behövs för kontroll av intressekonflikt, såsom motpartens bolagsnamn, fastställs nödvändigt material och överföringssätt enligt den ansvariga advokatens anvisning.
 
 ## Vanliga frågor
 

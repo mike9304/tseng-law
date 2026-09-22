@@ -57,19 +57,19 @@ Rekommendationen är att alla branscher bekräftar om driften är möjlig via sy
 
 Vid bolagsregistrering skrivs dock ofta flera grenar in samtidigt, och man vill ofta registrera omkring 10 grenar på en gång.
 
-I praktiken behöver därför inte alla grenar frågas vid bolagsregistreringen.
+I praktiken behöver därför inte alla grenar kontrolleras vid bolagsregistreringen.
 
 Enligt [driftsanvisningen för upplysningstjänsten om driftställen i staden Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687) (臺北市營業場所協助查詢服務作業須知) och staden Taipeis gällande vägledning
 
 ska från och med den 1 januari 2023, vid ansökan om registrering av bildande, flytt av säte eller tillägg av verksamhetsgrenar för bolag eller handel (inklusive filial (分公司) och underenhet (分支機構)), resultatet av förhandsfrågan om driftställe **obligatoriskt** fogas till registreringsansökan, oberoende av bransch.
 
-Listan nedan över ”verksamhetsgrenar som frågas på eget initiativ” (主動查詢之營業項目) avser de grenar som handelskontoret under registreringsprövningen på eget initiativ frågar extra (隨案主動查詢) när grenen står i ansökan men saknas i det bifogade resultatet; att en gren inte står på listan innebär inte att frågan är undantagen.
+Listan nedan över ”verksamhetsgrenar som handelskontoret kontrollerar på eget initiativ” (主動查詢之營業項目) avser de grenar som handelskontoret under registreringsprövningen på eget initiativ frågar extra (隨案主動查詢) när grenen står i ansökan men saknas i det bifogade resultatet; att en gren inte står på listan innebär inte att frågan är undantagen.
 
 Om man öppnar på en plats där restaurangverksamhet inte är möjlig kan den behöriga myndigheten senare påföra en sanktionsavgift (罰鍰).
 
-![”verksamhetsgrenar som frågas på eget initiativ” (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
+![”verksamhetsgrenar som handelskontoret kontrollerar på eget initiativ” (主動查詢之營業項目)](../images/015-taiwan-company-setup-pitch-location/img-02.jpg)
 
-”verksamhetsgrenar som frågas på eget initiativ” (主動查詢之營業項目)
+”verksamhetsgrenar som handelskontoret kontrollerar på eget initiativ” (主動查詢之營業項目)
 
 Det är huvudpunkterna; vid ytterligare frågor kan du vända dig till en advokat i Taiwan.
 

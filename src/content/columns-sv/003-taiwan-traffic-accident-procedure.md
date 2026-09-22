@@ -29,7 +29,7 @@ Artikel 185-4 i Taiwans strafflag (刑法) reglerar det straffrättsliga ansvare
 
 ## Q2. Vilka bevis ska bevaras först?
 
-Trygga först den personliga säkerheten och varningssignalerna; om det finns skadade eller behov av räddning, ring 119 (ambulans och räddningstjänst i Taiwan), och vid brott eller en akut säkerhetssituation 110 (polis) eller 112 från mobiltelefon. Gör också anmälan till polisen efter trafikolyckans omständigheter.
+Trygga först den personliga säkerheten och varningssignalerna; om det finns skadade eller behov av räddning, ring 119 i Taiwan (ambulans och brand), och vid brott eller en akut säkerhetssituation 110 (polis) eller 112 från mobiltelefon. Gör också anmälan till polisen efter trafikolyckans omständigheter.
 
 När säkerheten är tryggad, ta översikts- och detaljfotografier för att registrera fordonens läge och skador, vägmarkeringar, signaler och väderförhållanden. Det bör inte utelämnas vittnens kontaktuppgifter, begäran om bevarande av CCTV-bilder (監視器影像) och färdskrivare (行車紀錄器), parternas, fordonets och försäkringens uppgifter samt journalen (病歷). Privata foton är nyttiga, men de ersätter inte det ingripande från polisen som krävs vid olycka med skada eller dödsfall.
 
@@ -41,7 +41,7 @@ Artikel 284 i strafflagen reglerar vållande till kroppsskada (過失傷害) och
 
 På det civilrättsliga skadeståndets (損害賠償) område är, enligt artikel 197 i Taiwans civillag (民法), kravet inte längre möjligt när 2 år har förflutit från den dag då skadan och den ersättningsskyldige blev kända, eller 10 år från den olagliga handlingens dag. Vilka fakta som påverkar preskriptionen (消滅時效) ska prövas särskilt.
 
-Den som lider skada genom ett brott kan, enligt artikel 487 i rättegångsbalken i brottmål, väcka en civil talan som bihang till brottmålet (刑事附帶民事訴訟). Så länge brottmålet pågår kan denna talan väckas fram till före avslutandet av den muntliga förhandlingen (言詞辯論終結) i andra instans, enligt artikel 488 i rättegångsbalken i brottmål, men den kan inte väckas efter avslutandet av den muntliga förhandlingen i första instans och före anförande av överklagande. I allmänhet kan betalning av skilda rättegångskostnader (裁判費) undvikas, men inte alla utfall avslutas utan kostnad. Till exempel, om brottmålet avvisas och, på kärandens begäran, hänvisas till civil domstol, kan enligt artikel 503 i rättegångsbalken i brottmål rättegångskostnader påföras, och även reglerna om hänvisning och förfarande i artikel 504 ska prövas.
+Den som lider skada genom ett brott kan, enligt artikel 487 i rättegångsbalken i brottmål, väcka en civil talan i anslutning till brottmålet (刑事附帶民事訴訟). Så länge brottmålet pågår kan denna talan väckas fram till före avslutandet av den muntliga förhandlingen (言詞辯論終結) i andra instans, enligt artikel 488 i rättegångsbalken i brottmål, men den kan inte väckas efter avslutandet av den muntliga förhandlingen i första instans och före anförande av överklagande. I allmänhet kan betalning av skilda rättegångskostnader (裁判費) undvikas, men inte alla utfall avslutas utan kostnad. Till exempel, om brottmålet avvisas och, på kärandens begäran, hänvisas till civil domstol, kan enligt artikel 503 i rättegångsbalken i brottmål rättegångskostnader påföras, och även reglerna om hänvisning och förfarande i artikel 504 ska prövas.
 
 Valet beror på avbrott i preskriptionen (時效中斷), kretsen av svarande, bevis, försäkring och behörighet. Det finns därför inget förfarande som enhetligt är att föredra för alla ärenden.
 
@@ -101,7 +101,7 @@ Kravet grundat på artikel 184 i civillagen förutsätter en olaglig kränkning 
 
 Bevara kvittona (收據), läkarintygen och journalen, och ordna tillsammans med dem den medicinska nödvändigheten av varje behandling och dess orsakssamband med olyckan. Handlingar om en behandling som fortsätter kan komplettera bevisningen efter domstolens processkalender och innehållet i det redan framställda kravet, men detta säkrar inte att alla sent ingivna handlingar eller varje utvidgning av kravet tas upp eller tillåts.
 
-Tillägg av medicinska handlingar ska skiljas från ändring eller höjning av det krävda beloppet. Efter att en civil talan som bihang till brottmålet har väckts uppkommer inte automatiskt rättegångskostnader enbart därför att fler sjukvårdskvitton ges in.
+Tillägg av medicinska handlingar ska skiljas från ändring eller höjning av det krävda beloppet. Efter att en civil talan i anslutning till brottmålet har väckts uppkommer inte automatiskt rättegångskostnader enbart därför att fler sjukvårdskvitton ges in.
 
 Dock kan, enligt artikel 504 i rättegångsbalken i brottmål, när ärendet har hänvisats till den civila avdelningen, ändring, tillägg eller utvidgning av kravet utöver omfånget före hänvisningen väcka frågan om rättegångskostnader för den överskjutande delen. Hänvisningsfas, ingivningstidpunkt och kravets omfång ska prövas i varje ärende.
 
@@ -151,7 +151,7 @@ Det faktum att den nuvarande lönen hålls utan variation utesluter inte automat
 
 Om den fortgående funktionsstörningen bestrids på ett väsentligt sätt kan en medicinsk sakkunnigbedömning vara nyttig, men den är inte obligatorisk i alla ärenden. Även jämkningen av vårdslöshet enligt artikel 217 i civillagen och andra justeringsgrunder prövas.
 
-När beräkningen görs som ett enda kapitalbelopp kan avdrag för mellansliggande ränta (中間利息扣除) komma i fråga. Hoffmann-kalkylatorn (霍夫曼) vid Justitieyuanen är bara ett beräkningsverktyg, inte en lagstadgad, obligatorisk metod, och den utlovar inte resultatet. Enligt artikel 193 i civillagen kan domstolen, på parts begäran, också förordna betalning i periodisk ränta under villkor av säkerhet.
+När beräkningen görs som ett enda kapitalbelopp kan avdrag för mellanliggande ränta (中間利息扣除) komma i fråga. Hoffmann-kalkylatorn (霍夫曼) vid Justitieyuanen är bara ett beräkningsverktyg, inte en lagstadgad, obligatorisk metod, och den utlovar inte resultatet. Enligt artikel 193 i civillagen kan domstolen, på parts begäran, också förordna periodiska betalningar mot säkerhet.
 
 ## Q13. Hur bedöms ersättningen för ideell skada (慰撫金) för icke-förmögenhetsskada?
 
@@ -165,7 +165,7 @@ Artikel 188 i civillagen reglerar det fall där den anställda olagligen orsakar
 
 Arbetsgivaren kan invända att denne har iakttagit tillbörlig aktsamhet vid urval och tillsyn av den anställda, eller att skadan inte hade kunnat undvikas ens vid iakttagande av denna aktsamhet. Det kan komma i fråga att kräva skadestånd gemensamt mot arbetsgivaren och den anställda. Efter att ha ersatt kan arbetsgivaren utöva regress mot den anställda.
 
-Om arbetsgivaren styrker dessa befrielsevillkor och den skadade inte får ersättningen enligt 1 stycket, kan domstolen, enligt artikel 188, 2 stycket, i civillagen, förordna hel eller delvis ersättning med hänsyn till arbetsgivarens och den skadades ekonomiska läge.
+Om arbetsgivaren styrker dessa befrielsevillkor och den skadade inte får ersättningen enligt 1:a stycket, kan domstolen, enligt artikel 188, 2:a stycket, i civillagen, förordna hel eller delvis ersättning med hänsyn till arbetsgivarens och den skadades ekonomiska läge.
 
 Frågan om mot vem det civilrättsliga kravet riktas ska skiljas från det straffrättsliga ansvaret. Det straffrättsliga ansvaret enligt artikel 284 i strafflagen bedöms utifrån varje fysisk persons åsidosättande av aktsamhetsplikten och orsakssambandet för detta åsidosättande.
 
@@ -175,7 +175,7 @@ Skyldigheten att teckna enligt artikel 6 i lagen om obligatorisk motorfordonsans
 
 Vid en olycka med ett enda fordon är föraren av det fordonet i allmänhet inte berättigad till ersättning från det fordonets obligatoriska försäkring. Dock, vid en olycka där flera fordon deltar, finns fall där föraren kan kräva ersättning av den obligatoriska försäkringsgivaren för ett annat inblandat fordon.
 
-Ersättningsnivåerna (強制汽車責任保險給付標準) som ändrades 2026-05-29 tillämpas på olyckor som inträffat från och med 2026-07-01. Taket för skäliga och nödvändiga sjukvårdskostnader vid skada är TWD 200.000 i ny taiwanesisk dollar; ersättningen vid invaliditet (失能) går från TWD 80.000 till TWD 3.000.000 enligt 15 lagstadgade grader; ersättningen vid dödsfall är TWD 3.000.000, och det gemensamma maximumet för dödsfall, invaliditet och sjukvårdskostnader för 1 skadad och 1 olycka är TWD 3.200.000. På tidigare olyckor kan den tidigare skalan tillämpas.
+Ersättningsnivåerna (強制汽車責任保險給付標準) som ändrades den 29 maj 2026 tillämpas på olyckor som inträffat från och med den 1 juli 2026. Taket för skäliga och nödvändiga sjukvårdskostnader vid skada är TWD 200.000 i ny taiwanesisk dollar; ersättningen vid invaliditet (失能) går från TWD 80.000 till TWD 3.000.000 enligt 15 lagstadgade grader; ersättningen vid dödsfall är TWD 3.000.000, och det gemensamma maximumet för dödsfall, invaliditet och sjukvårdskostnader för 1 skadad och 1 olycka är TWD 3.200.000. På tidigare olyckor kan den tidigare skalan tillämpas.
 
 Ansvarsförsäkringen mot tredje man (第三人責任險), förarens olycksfallsförsäkring (駕駛人傷害險) och kaskoförsäkringen för det egna fordonet (車體損失險) är fakultativa produkter av avtalskaraktär. Den faktiska täckningen varierar beroende på försäkrad, tak, självrisk (自負額), undantag, vårdslöshet och de övriga villkoren i försäkringsbrevet, så att försäkringsbrevet och villkoren ska prövas från fall till fall.
 
@@ -239,7 +239,7 @@ I publicerad praxis förekommer vid vållande till kroppsskada straff om omkring
 
 ​
 
-Om det omvandlas till böter (易科罰金) fastställer artikel 41, 1 stycket, i strafflagen omvandlingen till TWD 1.000, TWD 2.000 eller TWD 3.000 per 1 dag; beräknat till TWD 1.000 per 1 dag motsvarar ett straff om 3 månader 3 × 30 × TWD 1.000 = TWD 90.000.
+Om det omvandlas till böter (易科罰金) fastställer artikel 41, 1:a stycket, i strafflagen omvandlingen till TWD 1.000, TWD 2.000 eller TWD 3.000 per en dag; beräknat till TWD 1.000 per en dag motsvarar ett straff om 3 månader 3 × 30 × TWD 1.000 = TWD 90.000.
 
 ​
 
@@ -323,7 +323,7 @@ Man ska akta sig för den advokat som blåser upp ärendet och hävdar att man i
 
 ​
 
-Därmed avslutar jag frågorna och svaren om trafikolyckor. Jag hoppas att de är till nytta för dig.
+Därmed är frågorna och svaren om trafikolyckor avslutade.
 
 ​
 
@@ -335,7 +335,7 @@ Efter att ha utrett många trafikolyckor vill jag peka på en viktig punkt.
 
 ​
 
-På grund av offrets skador eller dödsfall lider denne eller familjen fysisk och psykisk smärta.
+På grund av skadan eller dödsfallet lider offret själv eller familjen fysisk och psykisk smärta.
 
 ​
 
@@ -347,7 +347,7 @@ Gärningsmannen bekymrar sig ofta inte om att ringa för att höra hur offret m�
 
 ​
 
-Offret förblir därmed mycket sårat och blir förbittrad, så att denne ofta inte ger efter på förhandlingsbeloppet, eller begär kvarstad (假扣押) och driver utmätningen av motpartens egendom till slutet.
+Offret förblir därmed mycket sårat och blir förbittrat, så att det ofta inte ger efter på förhandlingsbeloppet, eller begär kvarstad (假扣押) och driver utmätningen av motpartens egendom till slutet.
 
 ​
 

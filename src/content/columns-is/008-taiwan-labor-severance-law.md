@@ -21,7 +21,7 @@ faq:
 
 ![Forsíðumynd](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Wei Tseng (曾雋崴) er löggilt lögmaður á Taívan.
+Wei Tseng (曾雋崴) er löggiltur lögmaður á Taívan.
 
 Í þessari grein er fjallað um lögbundnar starfslokabætur samkvæmt rétti Taívan (資遣費).
 
@@ -29,7 +29,7 @@ Wei Tseng (曾雋崴) er löggilt lögmaður á Taívan.
 
 Eftirfarandi er almenn skýring á fyrirkomulaginu.
 
-Í sumum öðrum lögsagnarumdæmum — Kórea er eitt dæmi — skal félagið greiða starfslokabætur þegar starfsmaður lætur af störfum
+Í sumum öðrum lögsagnarumdæmum — Kórea er eitt dæmi — skal félagið greiða starfslokabætur þegar starfsmaður lætur af störfum.
 
 Á Taívan er fyrirkomulagið hins vegar annað:
 
@@ -39,13 +39,13 @@ Segi starfsmaðurinn sjálfur upp, þarf félagið ekki að greiða starfslokab�
 
 ​
 
-Fremji starfsmaðurinn hins vegar ólögmæta háttsemi,
+Fremji starfsmaðurinn hins vegar ólögmæta háttsemi gildir eftirfarandi.
 
-**brjóti hann vinnureglur (工作規則),**
+**Brot á vinnureglum (工作規則) er eitt slíkt tilvik.**
 
-**eða sé án ástæðu fjarverandi 3 daga í röð (曠工),**
+**Fjarvera án ástæðu 3 daga í röð (曠工) er annað.**
 
-má félagið segja upp án þess að greiða starfslokabætur.
+Má félagið þá segja upp án þess að greiða starfslokabætur.
 
 ​
 
@@ -59,7 +59,7 @@ Eftirfarandi tafla dregur þetta saman.
 | Fyrirvari | Krafist | Ekki krafist | Krafist |
 | Erfiðleiki spurningarinnar | Spurningin er afmörkuð | Spurningin er flókin | Spurningin er afmörkuð |
 | Hvort félagið skuli greiða starfslokabætur (資遣費) | Krafist | Ekki krafist | Ekki krafist |
-|  | Lög um vinnustaðla á Taívan, 11. gr. (勞動基準法第11條): Nema eitt af eftirfarandi tilvikum komi upp, má vinnuveitandi ekki slíta ráðningarsamningi, ekki einu sinni að undangenginni tilkynningu til starfsmannsins.  1. Rekstrarstöðvun (歇業) eða framsal rekstrar (轉讓)  2. Tap (虧損) eða samdráttur í starfsemi (業務緊縮)  3. Óviðráðanleg atvik (不可抗力) krefjast stöðvunar rekstrar í 1 mánuð eða lengur  4. Eðli rekstrarins krefst fækkunar starfsfólks, og ekki er unnt að færa hinn uppsagða í aðra hæfilega stöðu  5. Tiltekinn starfsmaður getur ekki sinnt því starfi sem staðan krefst með fullnægjandi hætti | Lög um vinnustaðla á Taívan, 12. gr. (勞動基準法第12條): Vinnuveitandi má segja upp án fyrirvara þegar starfsmaðurinn fellur undir eitt af eftirfarandi tilvikum.  1. Sá sem við gerð ráðningarsamnings veitir rangar upplýsingar, villir um fyrir vinnuveitanda, og hætta er á tjóni fyrir reksturinn  2. Sá sem beitir vinnuveitanda, fjölskyldu hans, umboðsmann hans (代理人) eða aðra samstarfsmenn ofbeldi eða móðgar þá alvarlega  3. Sá sem hefur verið dæmdur með endanlegum dómi til tímabundinnar fangelsisvistar (有期徒刑) eða þyngri refsingar, án þess að skilorðsdómur (緩刑) hafi verið kveðinn upp og án þess að umbreyting í sekt (易科罰金) hafi verið heimiluð  4. Alvarlegt brot á ráðningarsamningi eða vinnureglum  5. Sá sem af ásetningi eyðir vélum, verkfærum, hráefni, vörum eða öðrum eigum vinnuveitanda, eða af ásetningi opinberar tækni- og viðskiptaleyndarmál vinnuveitanda og veldur honum tjóni  6. Óheimil fjarvist (曠工) án gildrar ástæðu 3 daga í röð, eða 6 daga eða meira á 1 mánuði |  |
+|  | Lög um vinnustaðla á Taívan, 11. gr. (勞動基準法第11條): Nema eitt af eftirfarandi tilvikum komi upp, má vinnuveitandi ekki slíta ráðningarsamningi, ekki einu sinni að undangenginni tilkynningu til starfsmannsins.  1. Rekstrarstöðvun (歇業) eða framsal rekstrar (轉讓)  2. Tap (虧損) eða samdráttur í starfsemi (業務緊縮)  3. Óviðráðanleg atvik (不可抗力) krefjast stöðvunar rekstrar í 1 mánuð eða lengur  4. Eðli rekstrarins krefst fækkunar starfsfólks, og ekki er unnt að færa hinn uppsagða í aðra hæfilega stöðu  5. Tiltekinn starfsmaður getur ekki sinnt því starfi sem staðan krefst með fullnægjandi hætti | Lög um vinnustaðla á Taívan, 12. gr. (勞動基準法第12條): Vinnuveitandi má segja upp án fyrirvara þegar starfsmaðurinn fellur undir eitt af eftirfarandi tilvikum.  1. Sá sem við gerð ráðningarsamnings veitir rangar upplýsingar, villir um fyrir vinnuveitanda, og hætta er á tjóni fyrir reksturinn  2. Sá sem beitir vinnuveitanda, fjölskyldu hans, umboðsmann hans (代理人) eða aðra samstarfsmenn ofbeldi eða móðgar þá alvarlega  3. Sá sem hefur verið dæmdur með endanlegum dómi til tímabundinnar fangelsisvistar (有期徒刑) eða þyngri refsingar, án þess að skilorðsdómur (緩刑) hafi verið kveðinn upp og án þess að umbreyting í sekt (易科罰金) hafi verið heimiluð  4. Alvarlegt brot á ráðningarsamningi eða vinnureglum  5. Sá sem af ásetningi eyðir vélum, verkfærum, hráefni, vörum eða öðrum eigum vinnuveitanda, eða af ásetningi opinberar tækni- og viðskiptaleyndarmál vinnuveitanda og veldur honum tjóni  6. Óheimil fjarvist (曠工) án gildrar ástæðu 3 daga í röð, eða 6 daga eða meira á einum mánuði |  |
 
 > Á Taívan skal vinnuveitandi fyrir hvert fullt ár í starfi (年資)
 > greiða 0,5 mánaðar meðallaun (平均工資) sem starfslokabætur.
@@ -67,19 +67,19 @@ Eftirfarandi tafla dregur þetta saman.
 
 ​
 
-Séu laun starfsmannsins há, og hafi tiltekinn starfsaldur náðst,
+Séu laun starfsmannsins há og hafi tiltekinn starfsaldur náðst, hækka starfslokabæturnar.
 
 verða starfslokabæturnar einnig hlutfallslega hærri.
 
-Þá grípa sum samviskulaus taívönsk félög til ýmissa ráða,
+Sum samviskulaus taívönsk félög grípa þá til ýmissa ráða.
 
-til að þurfa ekki að greiða háar starfslokabætur,
+Tilgangurinn er að þurfa ekki að greiða háar starfslokabætur.
 
 og fá starfsmenn til að segja sjálfir upp.
 
-Starfsmenn skulu vera varkárir
+Starfsmenn skulu vera varkárir.
 
-og gæta þess að falla ekki í gildru félagsins.
+Gættu þess að falla ekki í gildru félagsins.
 
 ​
 
@@ -87,141 +87,141 @@ Hér er fjallað um mál sem lögmaðurinn hefur farið með.
 
 Til er hið þekkta félag A með útibú um allt Taívan.
 
-Af einhverri ástæðu var skipt um stjórnendur,
+Af einhverri ástæðu var skipt um stjórnendur.
 
-og nýja stjórnin hóf, strax eftir að hún tók við,
+Nýja stjórnin hóf strax eftir að hún tók við.
 
-í því skyni að lækka launakostnað,
+Markmiðið var að lækka launakostnað.
 
-að kalla hálaunaða langtíma starfsmenn til samtals, einn af öðrum
+að kalla hálaunaða langtíma starfsmenn til samtals, einn af öðrum.
 
-Þá var hr. B, starfsmaður í yfir 10 ár hjá félagi A
+Hr. B var starfsmaður í yfir 10 ár hjá félagi A.
 
-og sölumaðurinn með hæstu afköst á miðsvæði Taívan.
+Hann var sölumaðurinn með hæstu afköst á miðsvæði Taívan.
 
-Vegna þess að laun og bónus voru mjög há,
+Laun hans og bónus voru mjög há.
 
 tók félagið hr. B sem skotmark.
 
 ​
 
-Einn daginn kallaði æðri yfirmaður B til samtals
+Einn daginn kallaði æðri yfirmaður B til samtals.
 
 og hóf skyndilega að lasta B fyrir að vinna ekki samviskusamlega.
 
-Félagið væri statt í erfiðleikum,
+Hann sagði að félagið væri statt í erfiðleikum.
 
-B yrði að fórna sér og vera fyrirmynd
+Hann sagði að B yrði að fórna sér og vera fyrirmynd.
 
-og lækka laun sem og stöðu.
+Hann krafðist þess að B lækkaði laun sín og stöðu.
 
-Að öðrum kosti yrði B að yfirgefa félagið;
+Að öðrum kosti yrði B að yfirgefa félagið.
 
-hann afhenti B A4-blað
+Hann afhenti B A4-blað.
 
-og skipaði honum að skrifa: „Ég, [nafn], lækka af fúsum vilja stöðu og laun“
+Hann skipaði honum að skrifa: „Ég, [nafn], lækka af fúsum vilja stöðu og laun“.
 
-sem efni.
+Það átti að vera efni samningsins.
 
-Þennan samning ætlaði hann að sýna öllum hinum starfsmönnunum,
+Þennan samning ætlaði hann að sýna öllum hinum starfsmönnunum.
 
 svo þeir skyldu fylgja á eftir.
 
 ​
 
-B var starfsmaðurinn með bestu afköstin á miðsvæði Taívan,
+B var starfsmaðurinn með bestu afköstin á miðsvæði Taívan.
 
-hafði aflað félaginu mikils fjár
+Hann hafði aflað félaginu mikils fjár.
 
-og vann hvern dag samviskusamlega,
+Hann vann hvern dag samviskusamlega.
 
 og því hafnaði hann þessari ósanngjörnu kröfu harðlega.
 
-B neitaði að skrifa þetta,
+B neitaði að skrifa þetta.
 
 og að lokum bað yfirmaður félagsins hann reiður að fara.
 
-B yfirgaf, með tilfinningu um ranglæti og sorg,
+B yfirgaf félagið með tilfinningu um ranglæti og sorg.
 
-félagið, þar sem hann hafði verið 10 ár,
+Þar hafði hann verið í 10 ár.
 
 og mætti síðan ekki lengur til vinnu.
 
 ​
 
-Á sama hátt lækkaði félagið
+Á sama hátt gekk félagið fram gagnvart fleirum.
 
-laun margra æðri starfsmanna
+Það lækkaði laun margra æðri starfsmanna.
 
-og hluti starfsmanna þoldi ekki þessa meðferð
+Hluti starfsmanna þoldi ekki þessa meðferð.
 
-og sagði sjálfur upp
+Þeir sögðu sjálfir upp.
 
 ​
 
-B hafði hins vegar eftir stjórnendaskiptin
+B hafði hins vegar áttað sig á þessu eftir stjórnendaskiptin.
 
-áttað sig á því að félagið ætlaði með ótilhlýðilegum hætti að fá starfsmenn til að fara,
+Hann sá að félagið ætlaði með ótilhlýðilegum hætti að fá starfsmenn til að fara.
 
-og tekið eftir þessu snemma
+Hann tók eftir þessu snemma.
 
-og vegna þess að hann hafði, áður en starfsmenn létu af störfum, fundið atvinnuauglýsingar,
+Hann hafði, áður en starfsmenn létu af störfum, fundið atvinnuauglýsingar.
 
-tók B upp, þann dag sem hann fór í samtalið,
+Þann dag sem hann fór í samtalið tók B upp.
 
-allan ganginn með farsímanum
+Hann tók upp allan ganginn með farsímanum.
 
 og gat sannað að hann hefði ekki sagt sjálfur upp.
 
-Hann gat síðar, með aðstoð lögmanns,
+Hann gat síðar, með aðstoð lögmanns, látið staðreyna réttinn.
 
-látið staðreyna réttinn til starfslokabóta samkvæmt lögum,
+Rétturinn til starfslokabóta var staðfestur samkvæmt lögum.
 
 en aðrir starfsmenn sem höfðu látið af störfum stóðu ekki jafn sterkt.
 
 ​
 
-Vegna þess að slík mál eru mörg,
+Vegna þess að slík mál eru mörg skalt þú varðveita sönnunargögn.
 
-skalt þú varðveita sönnunargögn,
+Sama gildir þegar félagið grípur til ótilhlýðilegra ráða.
 
 þegar félagið grípur til ótilhlýðilegra ráða.
 
-Þegar félagið festir sig á smáum villum starfsmanna,
+Þegar félagið festir sig á smáum villum starfsmanna skalt þú varðveita sönnunargögn.
 
-setur markmið sem erfitt er að ná,
+Sama gildir þegar það setur markmið sem erfitt er að ná.
 
-setur óhóflegar kröfur
+Sama gildir þegar það setur óhóflegar kröfur.
 
-eða flytur starfsmenn í einkennilegar stöður,
+Sama gildir þegar það flytur starfsmenn í einkennilegar stöður.
 
 **skalt þú varðveita sönnunargögn.**
 
-**Venjulegar mætingaskrár þínar,**
+**Varðveittu venjulegar mætingaskrár þínar.**
 
-**yfirvinnuskrár, frammistöðuskrár,**
+**Varðveittu yfirvinnuskrár og frammistöðuskrár.**
 
-**vinnureglur, tölvupóstsamskipti við samstarfsmenn og yfirmenn**
+**Varðveittu vinnureglur og tölvupóstsamskipti við samstarfsmenn og yfirmenn.**
 
-**sem og upptökur af samtölum við yfirmenn —**
+**Varðveittu einnig upptökur af samtölum við yfirmenn.**
 
 **varðveittu þau sönnunargögn sem mæla með þér.**
 
 ​
 
-Þegar þú vinnur á Taívan,
+Þetta skiptir máli þegar þú vinnur á Taívan.
 
-er erfiðara að fá starfslokabætur en ætla mætti
+er erfiðara að fá starfslokabætur en ætla mætti.
 
-Gerðu ekki auðveldlega málamiðlun við félagið
+Gerðu ekki auðveldlega málamiðlun við félagið.
 
-og gættu þess að félagið segi þér ekki upp með ótilhlýðilegum hætti
+Gættu þess að félagið segi þér ekki upp með ótilhlýðilegum hætti.
 
-eða þrýsti á þig til að segja upp að eigin frumkvæði
+Gættu þess einnig að það þrýsti ekki á þig til að segja upp að eigin frumkvæði.
 
-Starfslokastyrkur er lögbundinn réttur starfsmannsins,
+Starfslokabætur eru lögbundinn réttur starfsmannsins.
 
-og félaginu ber að greiða hann þegar lögbundin skilyrði eru uppfyllt.
+og félaginu ber að greiða þær þegar lögbundin skilyrði eru uppfyllt.
 
 Þú ættir einnig að vernda réttindi þín á Taívan.
 

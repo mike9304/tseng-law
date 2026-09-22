@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Forsíðumynd](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Sá sem hefur lesið [Grunnur að félagastofnun á Taívan](/is/columns/taiwan-company-establishment-basics) og [Félagastofnun á Taívan – ítarhluti 1](/is/columns/taiwan-company-establishment-advanced-1) getur jafnframt kynnt sér Félagastofnun á Taívan – ítarhluti 2 (公司設立).
+Sá sem hefur lesið [Grunnur að félagastofnun á Taívan](/is/columns/taiwan-company-establishment-basics) og [Félagastofnun á Taívan – ítarhluti 1](/is/columns/taiwan-company-establishment-advanced-1) getur lesið áfram hér, í ítarhluta 2, um félagastofnun (公司設立).
 
 ​
 
@@ -37,7 +37,7 @@ Aflaðu upplýsinga hjá bankanum þínum í því landi sem féð er sent frá,
 
 **​**
 
-**2. Máttu við innborgun hlutafjár félagsins millifæra taívanska dollara (新臺幣, TWD) af persónulegum reikningi þínum á Taívan á undirbúningsreikning taívanska félagsins?**
+**2. Máttu við innborgun hlutafjár félagsins millifæra nýja taívanska dollara (新臺幣, TWD) af persónulegum reikningi þínum á Taívan á undirbúningsreikning taívanska félagsins?**
 
 Það er mögulegt, en þú skalt leggja fram gögn sem sanna uppruna TWD-fjárins sem aflað var á Taívan.
 
@@ -69,7 +69,7 @@ Tilteknir bankar geta sett viðbótarkröfur, til dæmis notkunartíma reiknings
 
 **5. Getur félagið ráðið erlenda ríkisborgara sem starfsmenn?**
 
-A. Fyrsti starfsmaður: beiðnin er lögð fram sem stjórnunarstarf í almennri fjárfestingarstarfsemi Kínverja búsettra erlendis (華僑) eða útlendinga (一般僑外投資事業主管工作). Mælikvarði „sérhæfðrar eða tæknilegrar vinnu“ undir lið B hér á eftir á ekki við, en skilyrði viðtakanda gilda, þar á meðal skilyrðið sem framkvæmdastjóri (經理人) félags þar sem innlegg Kínverja búsettra erlendis (華僑) eða útlendinga fer yfir 1/3, ásamt árangursskilyrðum vinnuveitanda um hlutafé og veltu (matsstaðlar 38. og 39. gr.).
+A. Fyrsti starfsmaður: beiðnin er lögð fram sem stjórnunarstarf í almennri fjárfestingarstarfsemi Kínverja búsettra erlendis (華僑) eða útlendinga (一般僑外投資事業主管工作). Mælikvarði „sérhæfðrar eða tæknilegrar vinnu“ undir lið B hér á eftir á ekki við, en skilyrði viðtakanda gilda, þar á meðal skilyrðið sem framkvæmdastjóri (經理人) félags þar sem hlutafjárframlag Kínverja búsettra erlendis (華僑) eða útlendinga fer yfir 1/3, ásamt árangursskilyrðum vinnuveitanda um hlutafé og veltu (matsstaðlar 38. og 39. gr.).
 
 B. Frá næsta starfsmanni gilda takmarkanir: fari fjöldi erlendra ríkisborgara yfir einn, eru menntun og reynsla starfsmannsins, krafan um meðalráðningarlaun og reglur um hlutafé og veltu félagsins meðhöndluð samkvæmt „sérhæfðri eða tæknilegri vinnu“ (專門性或技術性工作).
 

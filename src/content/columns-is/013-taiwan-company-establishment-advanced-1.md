@@ -27,9 +27,9 @@ Spurningarnar og svörin hér á eftir eiga að hjálpa þeim sem íhuga að sto
 
 Þegar útlendingur stofnar félag á Taívan skal hann leggja fjárfestingaráætlun (投資計畫書) til skoðunar hjá fjárfestingarathugunardeild efnahagsráðuneytisins (經濟部投資審議司).
 
-Fjárfestingarathugunardeildin skal kanna hvort viðkomandi hlutafé (資本額) sé raunverulega notað til fjárfestingar
+Fjárfestingarathugunardeildin skal kanna hvort viðkomandi hlutafé (資本額) sé raunverulega notað til fjárfestingar.
 
-og hvort erlendir aðilar flytji ekki inn fé undir öðru yfirskini.
+Hún skal einnig kanna hvort erlendir aðilar flytji ekki inn fé undir öðru yfirskini.
 
 Við gerð fjárfestingaráætlunarinnar þarf nákvæmt heimilisfang félagsins ekki að vera tilgreint; tilgreining svæðisins nægir (dæmi: borgin Taipei). ​
 
@@ -37,7 +37,7 @@ Við gerð fjárfestingaráætlunarinnar þarf nákvæmt heimilisfang félagsins
 
 Starfsmaður hjá taívönskum banka hefur sagt beint að
 
-margir útlendingar hafi nýlega horfið eftir opnun reiknings, svo opnun reikninga er meðhöndluð sífellt strangari.
+margir útlendingar hafi nýlega horfið eftir opnun reiknings, svo opnun reikninga er meðhöndluð á sífellt strangari hátt.
 
 Þegar í grunntextanum hefur lesandi tekið fram að opnun reiknings hafi reynst erfiðasta skrefið; það stenst.
 
@@ -49,7 +49,7 @@ Vegna þess að skoðun fjárfestingaráætlunarinnar tekur einnig tíma
 
 ættir þú að semja fjárfestingaráætlunina og leita jafnframt að skráningarheimili félagsins.
 
-Samkvæmt 9. gr. laga um fjárfestingu útlendinga (外國人投資條例) skal samþykkt innlegg berast að fullu innan þess frests sem lögbær stofnun hefur ákveðið (核定期限); frestinn skal staðfesta í heimildarskjali hvers máls (í framkvæmd er hann oft ákveðinn um 1 ár).
+Samkvæmt 9. gr. laga um fjárfestingu útlendinga (外國人投資條例) skal hið samþykkta hlutafjárframlag berast að fullu innan þess frests sem lögbær stofnun hefur ákveðið (核定期限); frestinn skal staðfesta í heimildarskjali hvers máls (í framkvæmd er hann oft ákveðinn um 1 ár).
 
 Innan þessa frests gefst nægur tími til að finna heimilisfang félagsins og gera leigusamning,
 
@@ -95,7 +95,7 @@ Enn fremur veitir leigusali í leigusamningum um verslunarhúsnæði á Taívan 
 
 Þetta er tímabil án leigu, sem þú getur samið um.
 
-Útlendingi er ekki auðvelt að leigja verslunarhúsnæði, og tryggingarfé (押金) á Taívan er fremur lágt (að jafnaði 2 mánuðir), svo vernd leigusala er takmörkuð;
+Útlendingi er ekki auðvelt að leigja verslunarhúsnæði, og tryggingarfé (押金) á Taívan er fremur lágt (að jafnaði leiga 2 mánaða), svo vernd leigusala er takmörkuð;
 
 leigusalar hika því við að leigja útlendingum.
 
@@ -115,7 +115,7 @@ T.d.: Sé starfsgreinin veitingarekstur, og ætlunin að leigja almennt skrifsto
 
 Eins og þegar er tekið fram skoðar bankinn leigusamninginn og skoðar heimilisfang félagsins á staðnum.
 
-Enn fremur krefst borgarstjórnin (市政府) við lokafélagaskráningu að skráða heimilisfangið sé á svæði þar sem veitingarekstur er leyfður;
+Enn fremur krefst borgarstjórnin (市政府) við lokafélagaskráningu þess að skráða heimilisfangið sé á svæði þar sem veitingarekstur er leyfður;
 
 við almennt skrifstofuhúsnæði er félagaskráning (公司登記) þá ekki möguleg.
 

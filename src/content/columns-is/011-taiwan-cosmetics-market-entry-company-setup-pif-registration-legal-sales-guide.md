@@ -20,7 +20,7 @@ faq:
 
 ![Vörugögn og reglukönnun sem nauðsynleg eru til að koma inn á snyrtivörumarkað Taívan](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg)
 
-Erlent snyrtivörumerki sem ætlar að dreifa vörum á Taívan skal ákveða hverjum innflutningur er falinn, hvenær vöruskráningu (產品登錄) lýkur, hver stýrir vöruupplýsingaskránni (產品資訊檔案, Product Information File, PIF) og hvar, og eftir hvaða mælikvarða merking (標示) og auglýsing (廣告) eru skoðaðar. Einnig erlent vörumerki getur notað staðbundinn innflytjanda og getur rekið starfsemina á Taívan sjálft, svo undirbúningi sölu er ekki lokið við félagastofnunina eina.
+Erlent snyrtivörumerki sem ætlar að dreifa vörum á Taívan skal ákveða hverjum innflutningur er falinn, hvenær vöruskráningu (產品登錄) lýkur, hver stýrir vöruupplýsingaskránni (產品資訊檔案, Product Information File, PIF) og hvar, og eftir hvaða mælikvarða merking (標示) og auglýsing (廣告) eru skoðaðar. Erlent vörumerki getur annaðhvort notað staðbundinn innflytjanda eða rekið starfsemina á Taívan sjálft, svo undirbúningi sölu er ekki lokið við félagastofnunina eina.
 
 Gildandi skyldur geta verið misjafnar eftir vörutegund og framleiðslustað (製造場所), raunverulegu innflutningsformi, dreifingaraðferð og auglýsingainnihaldi. Hér á eftir er greint á milli forms innkomu á Taívan og lögbundins ábyrgðaraðila, vöruskráningar hjá TFDA, gerðar, uppfærslu og varðveislu PIF, merkingar og auglýsinga og skoðunar og úrbóta. Áður en raunveruleg afhendingaráætlun er ákveðin er ráðlegt, vöru fyrir vöru, að staðfesta að nýju nýjustu reglur og leiðbeiningar lögbærrar stofnunar (主管機關).
 
@@ -56,21 +56,21 @@ Vöruskráning snyrtivara fer fram á vöruskráningarvettvangi TFDA fyrir snyrt
 
 Gildistími vöruskráningar er 3 ár. Ætlir þú að halda afhendingu áfram skal umsókn um framlengingu (展延) lögð fram innan 3 mánaða fyrir lokin. Breyti skráðar upplýsingar, svo sem vöruheiti, notkun, form vörunnar (劑型), innihaldsefni og framleiðslustaður, skal einnig staðfesta hvort formleg meðferð sem svarar innihaldi breytingarinnar sé nauðsynleg.
 
-Vöruskráning er formleg meðferð til að tilkynna tilteknar upplýsingar á vettvanginum. Það að skráningu sé lokið þýðir ekki að öll gögn sem PIF krefst séu fullkomin, og er ekki mat um að merking eða auglýsing vörunnar samræmist rétti. Áætlun vöruskráningar, stjórnun PIF og skoðun merkingar og auglýsinga skal rekin sem aðskilin eftirfylgnisatriði.
+Vöruskráning er formleg meðferð til að tilkynna tilteknar upplýsingar á vettvanginum. Það að skráningu sé lokið þýðir ekki að öll gögn sem PIF krefst séu fullkomin, og er ekki mat um að merking eða auglýsing vörunnar samræmist rétti. Áætlun vöruskráningar, stjórnun PIF og skoðun merkingar og auglýsinga skulu reknar sem aðskilin eftirfylgnisatriði.
 
 ### Gögn PIF og beiting í áföngum
 
-PIF er skipulagt safn gagna, þannig uppbyggt að gæði og öryggi vörunnar megi áfram lýsa. Auk gæða, öryggis, samsetningar, fullyrtrar virkni (宣稱功能), framleiðsluaðferðar, prófunarniðurstaðna og öryggismats skal, vöru fyrir vöru, skipuleggja grunnupplýsingar um vöru og framleiðanda og stoðgögn, svo sem merkimiða. Reglur um stjórnun vöruupplýsingaskrár snyrtivara (化粧品產品資訊檔案管理辦法) skipuleggja nauðsynleg gögn í 16 flokka, svo gögn hvers flokks og kröfur um undirritun og hæfi skal staðfesta eftir vörutegund.
+PIF er skipulagt safn gagna, þannig uppbyggt að áfram megi lýsa gæðum og öryggi vörunnar. Auk gæða, öryggis, samsetningar, fullyrtrar virkni (宣稱功能), framleiðsluaðferðar, prófunarniðurstaðna og öryggismats skal, vöru fyrir vöru, skipuleggja grunnupplýsingar um vöru og framleiðanda og stoðgögn, svo sem merkimiða. Reglur um stjórnun vöruupplýsingaskrár snyrtivara (化粧品產品資訊檔案管理辦法) skipuleggja nauðsynleg gögn í 16 flokka, svo gögn hvers flokks og kröfur um undirritun og hæfi skal staðfesta eftir vörutegund.
 
-PIF-fyrirkomulagið hefur verið beitt í áföngum eftir vöruhópum. Frá 1. júlí 2026 falla einnig þær snyrtivörur sem eftir eru undir beitingarsviðið, svo það gildir að jafnaði um allar snyrtivörur. Undanþágan takmarkast við fasta handunnina sápu sem framleidd er á framleiðslustað sem er undanþeginn verksmiðjuskráningu. Vara er ekki undanþegin af því einu að hún sé handunnin, eða að hún beri heitið sápa; staðfesta skal hvort tveggja, fasta formið og skilyrði undanþágu framleiðslustaðarins frá verksmiðjuskráningu (工廠登記).
+PIF-fyrirkomulagið hefur verið beitt í áföngum eftir vöruhópum. Frá 1. júlí 2026 falla einnig þær snyrtivörur sem eftir eru undir beitingarsviðið, svo það gildir að jafnaði um allar snyrtivörur. Undanþágan takmarkast við fasta handunna sápu sem framleidd er á framleiðslustað sem er undanþeginn verksmiðjuskráningu. Vara er ekki undanþegin af því einu að hún sé handunnin, eða að hún beri heitið sápa; staðfesta skal hvort tveggja, fasta formið og skilyrði undanþágu framleiðslustaðarins frá verksmiðjuskráningu (工廠登記).
 
 Starf við PIF, þar á meðal öryggismat, má styðja þriðji aðili sem sameinar nauðsynlegt hæfi og getu. Einnig þegar þriðji aðili styður við gerð gagnanna eða hjálpar til við að varðveita þau, stendur lögbundin ábyrgð framleiðanda eða innflytjanda snyrtivara. Koma skal á skipulagi sem leyfir upprunaframleiðanda, prófunarstofu, öryggismatsaðila og fyrirtækinu á Taívan að miðla innbyrðis breytingaupplýsingum og nýjustu undirrituðu gögnum.
 
 ### Uppfærsla og varðveisla
 
-Breyti hráefni eða formúla, framleiðsluaðferð og framleiðslustaður, merking þar á meðal merkimiði, fullyrt virkni eða öryggisupplýsingar, skal skoða og uppfæra þau PIF-gögn sem verða fyrir áhrifum. Einnig skal kanna hvort neytendakvartanir, atvik með aukaverkunum og nýjar prófunarniðurstöður hafi áhrif á fyrirliggjandi mat, svo málsmeðferð breytingastjórnunar eftir fyrstu gerðina sé enn nauðsynleg.
+Breyti hráefni eða formúla, framleiðsluaðferð og framleiðslustaður, merking þar á meðal merkimiði, fullyrt virkni eða öryggisupplýsingar, skal skoða og uppfæra þau PIF-gögn sem verða fyrir áhrifum. Einnig skal kanna hvort neytendakvartanir, atvik með aukaverkunum og nýjar prófunarniðurstöður hafi áhrif á fyrirliggjandi mat. Því er málsmeðferð breytingastjórnunar enn nauðsynleg eftir fyrstu gerðina.
 
-Samkvæmt 7. gr. reglna um stjórnun vöruupplýsingaskrár snyrtivara er varðveislufresturinn að lágmarki 5 ár, talinn frá deginum eftir síðustu afhendingu vörunnar á markað. Samkvæmt 8. gr. sömu reglna er varðveislustaðurinn heimilisfang framleiðanda eða innflytjanda snyrtivara, ákveðið í 7. gr. 1. mgr. 7. tölul. laga um hollustuhætti og öryggi snyrtivara (化粧品衛生安全管理法). Ákvæðið sem ákveður tímabilið og ákvæðið sem ákveður staðinn skal rekið hvort í sínu lagi.
+Samkvæmt 7. gr. reglna um stjórnun vöruupplýsingaskrár snyrtivara er varðveislufresturinn að lágmarki 5 ár, talinn frá deginum eftir síðustu afhendingu vörunnar á markað. Samkvæmt 8. gr. sömu reglna er varðveislustaðurinn heimilisfang framleiðanda eða innflytjanda snyrtivara, ákveðið í 7. gr. 1. mgr. 7. tölul. laga um hollustuhætti og öryggi snyrtivara (化粧品衛生安全管理法). Ákvæðið sem ákveður tímabilið og ákvæðið sem ákveður staðinn skal aðgreina hvort frá öðru.
 
 Einnig þegar upprunaframleiðandi varðveitir frumritið, eða þegar örugg rafræn geymsla eða skýjageymsla er notuð, skal framleiðandi eða innflytjandi geta náð í fullkomin gögn (產品資訊檔案). Aðgangsréttindi, öryggisafrit, útgáfustjórnun, skráarsnið og ábyrgðaraðili skulu ákveðin, svo gögnin megi fljótt finna og leggja fram þegar lögbær stofnun óskar. Einnig er mikilvægt í samningnum að kveða á um hvaða gögn eru afhent, hvernig afhendingin fer fram, og hvort aðgangsrétturinn haldist, svo gögnin haldist á lögbundnum varðveislufresti, einnig eftir lok samnings við söluaðila eða þjónustuveitanda.
 
@@ -80,7 +80,7 @@ Einnig þegar upprunaframleiðandi varðveitir frumritið, eða þegar örugg ra
 
 Tilkynning rangra upplýsinga í vöruskráningunni eða færsla rangra upplýsinga í PIF getur verið háð stjórnvaldssekt (罰鍰) að fjárhæð 10.000 TWD til 1.000.000 TWD (新臺幣). Séu PIF-gögnin hins vegar ófullkomin leggur lögbær stofnun að jafnaði fyrir úrbætur innan tiltekins frests (限期改正), og stjórnvaldssektin kemur fyrst til þegar ekki er bætt úr innan þess frests. Ekki má fella rangar upplýsingar og ágalla í gögnum, sem enn má bæta úr, undir sömu niðurstöðu.
 
-Endurköllun eða förgun (銷毀) er ekki ráðstöfun sem sjálfkrafa fylgir hverju ógagni PIF-gagna. Öryggi vörunnar, innihald brotsins, staða úrbóta og lögbundin skilyrði sem gilda um hverja ráðstöfun skal meta aðskilið. Ráðstöfunina þegar öryggisvandamál er staðfest, og beiðni um viðbót skjala, skal kanna hvora í sínu lagi, og viðbrögðin fylgja tilkynningu lögbærrar stofnunar og því ákvæði sem beitt er.
+Endurköllun eða förgun (銷毀) er ekki ráðstöfun sem sjálfkrafa fylgir hverjum ágalla í PIF-gögnum. Öryggi vörunnar, innihald brotsins, staða úrbóta og lögbundin skilyrði sem gilda um hverja ráðstöfun skal meta aðskilið. Ráðstöfunina þegar öryggisvandamál er staðfest, og beiðni um viðbót skjala, skal kanna hvora í sínu lagi, og viðbrögðin fylgja tilkynningu lögbærrar stofnunar og því ákvæði sem beitt er.
 
 ## 3. Reglur um merkingu, kynningu og auglýsingu
 
@@ -98,7 +98,7 @@ Stjórnvaldssekt vegna ranghæfra eða ofdrifinna auglýsinga (虛偽誇大廣�
 
 Færslur áhrifavalda, umsagnaraðila eða söluaðila geta, eftir innihaldi og viðskiptasamhengi, í kjarna verið metnar sem auglýsing. Greiðsla endurgjalds, afhending vöru, sölutengill, fyrirmæli vörumerkisins um birtingu og endurtekið samstarf eru þættir sem koma inn í þetta mat. Hins vegar verður ekki hver persónuleg færsla sjálfkrafa auglýsing vörumerkisins, svo tengsl þess sem birtir og vörumerkisins, tiltekið innihald og stig þátttöku vörumerkisins skal staðfesta.
 
-Í samstarfssamningi og rekstrarleiðbeiningum má ákveða umfang leyfilegs orðalags og stoðgagna, skoðun fyrir birtingu og málsmeðferð leiðréttingar og eyðingar brotaorðalags. Ráðlegt er einnig að láta skoðunina ná til orðalags sem bætt er við í ummælum, munnlega skýringu í beinum útsendingum eða stuttmyndböndum og ósamræmi milli sölusíðu og merkimiða (標示). Skoðað uppkast, samþykkissaga, leiðréttingarbeiðnir og lokabirtingin skulu varðveitt, svo atvikin megi síðar staðfesta.
+Í samstarfssamningi og rekstrarleiðbeiningum má ákveða umfang leyfilegs orðalags og stoðgagna, skoðun fyrir birtingu og málsmeðferð leiðréttingar og eyðingar brotaorðalags. Ráðlegt er einnig að láta skoðunina ná til orðalags sem bætt er við í ummælum, munnlegrar skýringar í beinum útsendingum eða stuttmyndböndum og ósamræmi milli sölusíðu og merkimiða (標示). Skoðað uppkast, samþykkissaga, leiðréttingarbeiðnir og lokabirtingin skulu varðveitt, svo atvikin megi síðar staðfesta.
 
 ### Röð staðfestingar söluundirbúnings
 

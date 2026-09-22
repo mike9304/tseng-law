@@ -37,7 +37,7 @@ Tak či onak, keď je reč o masáži (按摩),
 
 na Taiwane existuje tiež mnoho ulíc masáže.
 
-Stavajú sa tam masážne prevádzkarne všetkého druhu.
+Lemujú ich masážne prevádzkarne všetkého druhu.
 
 Je masáž vykonávaná osobami so zrakovým postihnutím (視障按摩), masáž nôh, olejová masáž, thajská masáž a iné formy.
 
@@ -115,7 +115,7 @@ Dnes mnoho osôb volí masáž, aby uvoľnilo napätie,
 
 avšak v tomto procese stále dochádza k prípadom sexuálneho obťažovania (性騷擾) alebo neslušných činov (猥褻).
 
-To, čo pôvodne malo byť holým prijatím masáže za účelom uvoľnenia napätia,
+To, čo pôvodne malo byť len masážou na uvoľnenie napätia,
 
 sa môže stať traumou na celý život, ak sa utrpí sexuálne obťažovanie.
 

@@ -1,0 +1,76 @@
+# WO-F-sk — Slovak fix lane report (Grok 4.7, 2026-09-22, round r1)
+
+Workspace: /Users/son7/Projects/tseng-law-fix-sk-r1
+No git add/commit/push. No test file needed updating (vitest 3202 passed; no pinned Slovak string was rewritten).
+TWD 1.57M left byte-identical. Frontmatter url values left untouched (Hangul slugs in 008 and 009 stay).
+
+## Rows applied
+
+sk-a 33/36, sk-b 51/53. Total applied 84 / 89.
+
+sk-a applied: 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36.
+sk-b applied: 1–48, 50, 52, 53.
+
+Checker constraints inside applied rows (wording fixed, digit kept):
+- a#2: "cudzincov" and the rest of the sentence applied; "1 osobu" kept because dropping the digit failed numbers (source 1명).
+- a#22: "za posledný rok" and "menej než jeden rok" applied in 001 (checker still matched). "za každý dokončený 1 rok" in 008 restored; without the digit the checker reported missing 1 (두 곳, FAQ and the blockquote).
+- a#19: the link is not 營業稅法 art. 10. It opens 各類所得扣繳率標準 art. 3 (nonresident withholding; item 1 is the 21% dividend rate). Label rewritten to that instrument. The digit 10 stays in a parenthetical "zdrojové označenie: článok 10" because the Korean source line is 영업세법 제10조 and the checker counts it. URL unchanged.
+
+## Rows skipped
+
+- sk-a #6 (and the 009 url named in the same row). Frontmatter url Hangul is canonical metadata (R16 / ACCEPTED-ROUND). Not rendered.
+- sk-a #21. Bio figure "TWD 1.57M" is pinned byte-identical. Column sums stay "TWD 500.000" / "1.579.589 TWD" (dot thousands). Space separators and "1,57 milióna" fail R14.
+- sk-a #25. Q16–Q20 are body lines in the Korean and English sources as well. Turning them into ## headings fails the headings check. U+200B count must match the source, so the spacer lines stay. Block count unchanged.
+- sk-b #49. 015's one-clause lines match the English (and therefore the block alignment). Merging them would change the block count. Wording rows in the same file (návod, quote placement, Taipei declension) were applied inside the existing blocks.
+- sk-b #51. Same as a#21: space thousands ("1 579 589 TWD") are not parsed for sk (R14). Figures unchanged.
+
+## Systemic patterns
+
+- 營業稅 called a sales tax → obchodná daň (營業稅; daň typu DPH on first mentions). About 12 spots in 001, 002 and 004, including the table header and the 002 suspension sentence. The false "článok 10 zákona o dani z predaja" link label was replaced (see a#19).
+- kvalita for legal status → skutočnosť / či je skutočným vlastníkom. 2 (001 beneficial owner, 004 mere fact of being a subsidiary). "pomer kvality k cene" in 006 left (it means quality).
+- Glued "1 rok": 001 "posledný 1 rok" ×2 → "posledný rok"; "menej než 1 rok" ×4 → "menej než jeden rok". 008 "dokončený 1 rok" kept (checker). "existuje 1 rok alebo dlhšie" kept (it is the one-year threshold, not the "most recent year" calque).
+- Currency order and thousands dots: 0 changed (R14 + pinned TWD 1.57M).
+- sídlo standing for the foreign head office or the parent. 004: 36 replacements of head-office sídlo → ústredie (本公司 and remittances, cost-sharing, guarantees). "sídla investora" kept (the investor's seat). 001: hlavná prevádzkareň → ústredie (4 spots in the subsidiary/branch paragraphs plus the intro). 011: časť sídla (本公司) / zodpovednosť sídla → ústredia / ústredie. 018: liability question → materská spoločnosť (FAQ + heading + both answers); other head-office uses → ústredie (about 18). Registered-office sídlo elsewhere left.
+- operácia for a transaction → transakcia. 002 about 16; 001 anticipated transactions, transaction structure, transaction risk (3); 004 "povahy transakcie" (1). Operating-structure "štruktúru prevádzky" in 018 and real "prevádzka" left.
+- Stock "nesľubuje určený výsledok" → "určitý výsledok nesľubuje" (negation kept). 6: 001, 004, 011, 012, 018 body, 018 hypothetical (rewritten so it does not promise a lawful or better method).
+- See / operate / disputed-point calques. 014 "sa vidí" ×3 plus "Tretí prvok vidí" → posudzuje sa. 016 "sa vidí" ×1. 018 "Treba vidieť" ×2 → treba posúdiť. 010 "za sporné body" ×1. 011 "treba prevádzkovať oddelene" ×1 → treba rozlišovať.
+- 014 labour coinages. prejav odchodu / prejavu / prejavom → výpoveď (about 8, including the §8 heading). výpovedná lehota/lehotou where it is the statutory notice period → výpovedná doba (about 7, including the 30-day sentence). okamih/podmienky priradenia and "kedy sa mu priraďuje" / final vesting → nadobudnutie nároku (5). "predplatených plnení" ×1 → plnení poskytnutých vopred. "možnosť/ťažkosť/možnosti náhrady" where it means replaceability → nahradiť pracovníka (3). Compensation "primeraná náhrada" left.
+- Place names. 010 "v Taichung" ×2 → v Taichungu. 013 nominative example → Taipej. 015 locative "v meste Taipei" ×2 → v Taipeji; genitive of the city office and the guidelines link → mesta Taipeja. Team bio "pobočka Taichung" → "pobočka v Taichungu". Office-card titles Taipei/Taichung left (proper-name labels, not locatives).
+- Blog fragments that could be fixed inside a block: 013 opening comma → period, and the next block made a free-standing sentence (2 blocks, not merged). 009 the "či vina" chain given a verb inside the existing lines. 008 severance anecdote softened inside the three existing lines (no result promise for the other employees). 015 not merged.
+
+R2–R13 already largely in the Slovak pack (Korea only as a labelled example, consultation lock negative, Wei Tseng feminine, paralegal already "právna asistentka", no Czech leakage found). No extra Hangul outside url. Markers 0.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-sk --lang sk 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=52
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-sk src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      23
+```
+
+The 23 is this lane's 20 content files plus three paths that were already dirty before the edit (WO-F-sk.txt, untracked sk-a.md, untracked sk-b.md). This log is written after that count.
+
+## Reviewer points not followed as worded
+
+- sk-a #21 and sk-b #51 are right about Slovak orthography (space as the thousands separator, comma decimals, no English "M"). Not applied: R14 and the pinned "TWD 1.57M" forbid that form. Dot thousands and "TWD 1.57M" kept.
+- sk-a #25 and sk-b #49 are right that the line breaks read like a blog. Not applied as merges or new headings: the Korean source has the same block structure, and the checker compares headings, blocks and U+200B counts.
+- sk-a #19's hint that 001's label ("dividend withholding") is the full name of the page is incomplete. The URL opens article 3 of 各類所得扣繳率標準, which states the 21% nonresident dividend rate as its first item and also states the other nonresident rates. The Slovak label names that instrument. The digit 10 remains only so the checker still sees the source's 제10조.

@@ -13,9 +13,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Hlavný obrázok](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-V poslednom čase mnoho osôb úspešne založilo spoločnosť (公司) na Taiwane a získalo pracovné vízum i preukaz na pobyt cudzinca (外僑居留證),
+V poslednom čase mnoho osôb úspešne založilo spoločnosť (公司) na Taiwane a získalo pracovné vízum i preukaz na pobyt cudzinca (外僑居留證).
 
-a otázky často kladené pri zakladaní sú zozbierané nižšie.
+Otázky, ktoré sa pri zakladaní často opakujú, sú zhrnuté nižšie.
 
 Osoby, ktoré si prečítali [**základy založenia spoločnosti**](/sk/columns/taiwan-company-establishment-basics), môžu následne nahliadnuť i do tejto podrobnejšej prehĺbenej časti.
 
@@ -29,9 +29,9 @@ Keď cudzinec zakladá spoločnosť na Taiwane, musí predložiť investičný p
 
 Odbor preskúmania investícií musí overiť, či sa daný kapitál (資本額) skutočne používa na investičné účely
 
-a či zahraničné subjekty nezavádzajú prostriedky pod inou zámienkou.
+a či zahraničné subjekty neprinášajú prostriedky na Taiwan pod inou zámienkou.
 
-Pri zostavovaní investičného plánu netreba uvádzať presnú adresu spoločnosti; stačí uviesť oblasť (príklad: mesto Taipei). ​
+Pri zostavovaní investičného plánu netreba uvádzať presnú adresu spoločnosti; stačí uviesť oblasť (príklad: Taipej). ​
 
 Keď sa neskôr v banke otvára prípravný účet spoločnosti (公司籌備處帳戶), mnoho bánk však preskúmava nájomnú zmluvu (租賃契約) a vykonáva miestnu prehliadku adresy spoločnosti.
 

@@ -2102,7 +2102,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Japončina (日本語)',
       ko: 'Kórejčina (한국어)',
       'needs-method-confirmation':
-        'Žiadny zo štyroch jazykov nie je použiteľný — spôsob komunikácie treba potvrdiť',
+        'Žiadny zo štyroch jazykov neovládam — spôsob komunikácie treba potvrdiť',
     },
   },
   bg: {

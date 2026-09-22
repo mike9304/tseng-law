@@ -20,7 +20,7 @@ faq:
 
 ![Podklady produktu a preskúmanie predpisov potrebné pre vstup na trh kozmetiky na Taiwane](../images/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide/featured-01.jpg)
 
-Zahraničná značka kozmetiky, ktorá hodlá na Taiwane uvádzať výrobky do obehu, musí určiť, komu zverí dovoz, kedy dokončí registráciu produktu (產品登錄), kto spravuje informačný spis produktu (產品資訊檔案, Product Information File, PIF) a kde, a podľa akého meradla sa posudzuje označenie (標示) a reklama (廣告). Zahraničné značky môžu využiť miestneho dovozcu a môžu činnosť na Taiwane prevádzkovať samy, takže príprava predaja nie je dokončená len tým, že bola založená spoločnosť.
+Zahraničná značka kozmetiky, ktorá hodlá na Taiwane uvádzať výrobky do obehu, musí určiť, komu zverí dovoz, kedy dokončí registráciu produktu (產品登錄), kto spravuje informačný spis produktu (產品資訊檔案, Product Information File, PIF) a kde, a podľa akého meradla sa posudzuje označenie (標示) a reklama (廣告). Zahraničná značka môže buď využiť miestneho dovozcu, alebo činnosť na Taiwane prevádzkovať sama, takže príprava predaja nie je dokončená len tým, že bola založená spoločnosť.
 
 Uplatniteľné povinnosti sa môžu líšiť podľa druhu výrobku a miesta výroby (製造場所), skutočnej formy dovozu, spôsobu obehu a obsahu reklamy. Nižšie sa oddelene vysvetľujú forma vstupu a zákonný subjekt zodpovednosti, registrácia produktu u TFDA, zostavenie, aktualizácia a uchovanie PIF, označenie a reklama a kontrola a nápravné opatrenie. Pred stanovením skutočného dodacieho kalendára treba znovu, výrobok po výrobku, overiť najnovšie predpisy a pokyny príslušného orgánu (主管機關).
 
@@ -32,7 +32,7 @@ Dcérsku spoločnosť ani pobočku nie je nutné vždy zakladať. Je tiež možn
 
 ### Keď sa zverí miestnemu dovozcovi
 
-Ak taiwanský dovozca alebo predajný zástupca (銷售代理商) zabezpečuje dovoz a predaj, môže zahraničná značka zvoliť i štruktúru bez vlastnej dcérskej spoločnosti alebo pobočky na Taiwane. Predajný zástupca môže zároveň pôsobiť ako dovozca, alebo sa môže zapojiť samostatný dovozca. Právne pričítanie zodpovednosti sa však neurčuje len zmluvným označením, ako je zástupca, výhradný distribútor alebo obchodník.
+Ak taiwanský dovozca alebo predajný zástupca (銷售代理商) zabezpečuje dovoz a predaj, môže zahraničná značka zvoliť i štruktúru bez vlastnej dcérskej spoločnosti alebo pobočky na Taiwane. Predajný zástupca môže zároveň pôsobiť ako dovozca, alebo sa môže zapojiť samostatný dovozca. Právne pričítanie zodpovednosti sa však neurčuje len zmluvným označením, ako je zástupca, hlavný distribútor alebo distribútor.
 
 Pri návrhu skutočného rozdelenia práce treba najprv overiť, kto dováža výrobok a vykonáva registráciu produktu a kto zostavuje, aktualizuje a uchováva PIF. Treba tiež určiť zodpovednú osobu (負責人) za preskúmanie označenia, vedenie záznamov o obehu, príjem sťažností spotrebiteľov a bezpečnostných informácií a reakciu na kontroly a požiadavky na podklady zo strany príslušného orgánu. Treba zároveň posúdiť, či sa zhodujú zákonné povinnosti uložené výrobcovi alebo dovozcovi kozmetiky a zmluvné práce medzi značkou a predajným partnerom.
 
@@ -40,7 +40,7 @@ V zmluve je vhodné konkrétne stanoviť rozsah užívania duševného vlastníc
 
 ### Keď činnosť na Taiwane prevádzkujete sami
 
-Taiwanská dcérska spoločnosť a pobočka zahraničnej spoločnosti nie sú tou istou organizáciou. Dcérska spoločnosť je samostatná právnická osoba založená podľa práva Taiwanu, zatiaľ čo pobočka sa zapisuje ako časť sídla (本公司) zahraničnej spoločnosti. Líši sa právna osobnosť, zodpovednosť sídla, účtovné a daňové zaobchádzanie, prevod zisku, zastupovacie oprávnenie a spôsob vnútornej kontroly, preto sa forma organizácie nemá voliť len podľa kontroly nad predajom.
+Taiwanská dcérska spoločnosť a pobočka zahraničnej spoločnosti nie sú tou istou organizáciou. Dcérska spoločnosť je samostatná právnická osoba založená podľa práva Taiwanu, zatiaľ čo pobočka sa zapisuje ako časť ústredia (本公司) zahraničnej spoločnosti. Líši sa právna osobnosť, zodpovednosť ústredia, účtovné a daňové zaobchádzanie, prevod zisku, zastupovacie oprávnenie a spôsob vnútornej kontroly, preto sa forma organizácie nemá voliť len podľa kontroly nad predajom.
 
 Ak je potrebný postup zahraničnej investície, treba overiť pokyny **Odboru preskúmania investícií Ministerstva hospodárstva (經濟部投資審議司)** ako aktuálne príslušného orgánu. Lehota potrebná na povolenie investície, prevod peňazí, zápis spoločnosti alebo pobočky, otvorenie bankového účtu, daňovú registráciu (稅籍登記) a získanie kvalifikácie dovozcu sa líši podľa investora, odvetvia, organizačnej formy, predložených podkladov a toho, či dochádza k oprave alebo doplneniu. Preto namiesto stanovenia dátumu uvedenia na trh za predpokladu určitej pevnej lehoty treba najprv overiť, či sa každý úkon uplatní, a najnovšie podmienky prijatia.
 
@@ -56,21 +56,21 @@ Registrácia kozmetického produktu sa vykonáva na platforme registrácie kozme
 
 Doba platnosti registrácie produktu je 3 roky. Ak sa má v dodávkach pokračovať, treba požiadať o predĺženie (展延) do 3 mesiacov pred uplynutím platnosti. Ak sa zmenia zapísané údaje, ako je názov výrobku, použitie, forma prípravku (劑型), zložky a miesto výroby, treba tiež overiť, či je nutný postup zodpovedajúci obsahu zmeny.
 
-Registrácia produktu je úkonom ohlásenia stanovených údajov na platforme. Dokončenie registrácie neznamená, že sú kompletné všetky podklady potrebné na PIF, ani nie je posúdením, že označenie alebo reklama výrobku sú v súlade s právom. Kalendár registrácie produktu, správa PIF a preskúmanie označenia a reklamy sa musia viesť ako tri samostatné línie: registráciu, PIF a označenie s reklamou.
+Registrácia produktu je úkonom ohlásenia stanovených údajov na platforme. Dokončenie registrácie neznamená, že sú kompletné všetky podklady potrebné na PIF, ani nie je posúdením, že označenie alebo reklama výrobku sú v súlade s právom. Kalendár registrácie produktu, správa PIF a preskúmanie označenia a reklamy sa musia viesť ako tri samostatné línie: registrácia, PIF a označenie s reklamou.
 
 ### Podklady PIF a stupňovité uplatnenie
 
-PIF je súbor podkladov usporiadaný tak, aby bolo možné naďalej vysvetľovať akosť a bezpečnosť výrobku. Okrem akosti, bezpečnosti, zloženia, tvrdených funkcií (宣稱功能), spôsobu výroby, výsledkov skúšok a hodnotenia bezpečnosti treba podľa výrobku usporiadať základné informácie o výrobku a výrobcovi a podporné podklady, napríklad etiketu. Pravidlá správy informačného spisu kozmetických produktov (化粧品產品資訊檔案管理辦法) usporadúva potrebné podklady do 16 kategórií, preto treba podľa typu výrobku overiť podklady každej kategórie a požiadavky na podpis a kvalifikáciu.
+PIF je súbor podkladov usporiadaný tak, aby bolo možné naďalej vysvetľovať akosť a bezpečnosť výrobku. Okrem akosti, bezpečnosti, zloženia, tvrdených funkcií (宣稱功能), spôsobu výroby, výsledkov skúšok a hodnotenia bezpečnosti treba podľa výrobku usporiadať základné informácie o výrobku a výrobcovi a podporné podklady, napríklad etiketu. Pravidlá správy informačného spisu kozmetických produktov (化粧品產品資訊檔案管理辦法) usporadúvajú potrebné podklady do 16 kategórií, preto treba podľa typu výrobku overiť podklady každej kategórie a požiadavky na podpis a kvalifikáciu.
 
-Režim PIF sa uplatňoval stupňovite podľa skupín výrobkov. Od 1. 7. 2026 sú do predmetu uplatnenia zahrnuté i zvyšné kozmetické prípravky, takže sa zásadne vzťahuje na všetku kozmetiku. Výnimka sa obmedzuje na tuhé ručne vyrábané mydlo vyrobené v mieste výroby oslobodenom od registrácie závodu. Výrobok nie je vylúčený len preto, že je ručný alebo že používa názov mydla; treba overiť oboje, tuhú formu i podmienku oslobodenia miesta výroby od registrácie závodu.
+Režim PIF sa uplatňoval stupňovite podľa skupín výrobkov. Od 1. 7. 2026 sa režim vzťahuje i na zvyšné kozmetické prípravky, takže sa zásadne vzťahuje na všetku kozmetiku. Výnimka sa obmedzuje na tuhé ručne vyrábané mydlo vyrobené v mieste výroby oslobodenom od registrácie závodu. Výrobok nie je vylúčený len preto, že je vyrábaný ručne alebo že nesie názov mydlo; treba overiť oboje, tuhú formu i podmienku oslobodenia miesta výroby od registrácie závodu.
 
 Prácu PIF, vrátane hodnotenia bezpečnosti, môže podporiť tretia osoba, ktorá má potrebnú kvalifikáciu a spôsobilosť. Aj keď sa však využije podpora zostavenia treťou osobou alebo služba uchovania podkladov, právna zodpovednosť výrobcu alebo dovozcu kozmetiky trvá. Treba vybudovať systém, ktorý umožní pôvodnému výrobcovi, skúšobni, hodnotiteľovi bezpečnosti a podniku na strane Taiwanu vzájomne odovzdávať informácie o zmenách a najnovšie podpísané podklady.
 
 ### Aktualizácia a uchovanie
 
-Ak sa zmení surovina alebo receptúra, spôsob a miesto výroby, označenie vrátane etikety, tvrdená funkcia alebo bezpečnostné informácie, treba preskúmať a aktualizovať dotknuté podklady PIF. Treba tiež posúdiť, či sťažnosti spotrebiteľov, nežiaduce príhody a nové výsledky skúšok ovplyvňujú existujúce hodnotenie, preto je i po prvom zostavení nutný postup konania zmien.
+Ak sa zmení surovina alebo receptúra, spôsob a miesto výroby, označenie vrátane etikety, tvrdená funkcia alebo bezpečnostné informácie, treba preskúmať a aktualizovať dotknuté podklady PIF. Treba tiež posúdiť, či sťažnosti spotrebiteľov, nežiaduce príhody a nové výsledky skúšok ovplyvňujú existujúce hodnotenie, preto je i po prvom zostavení nutný aj postup riadenia zmien.
 
-Podľa článku 7 pravidiel o správe informačného spisu kozmetických produktov je doba uchovania najmenej 5 rokov počítaných odo dňa nasledujúceho po dni posledného dodania výrobku na trh. Podľa článku 8 tých istých pravidiel je miestom uchovania adresa označenia výrobcu alebo dovozcu kozmetiky stanovená v článku 7 odseku 1 bode 7 zákona o správe hygieny a bezpečnosti kozmetiky (化粧品衛生安全管理法). Ustanovenie, ktoré stanoví dobu, a ustanovenie, ktoré stanoví miesto, treba prevádzkovať oddelene.
+Podľa článku 7 pravidiel o správe informačného spisu kozmetických produktov je doba uchovania najmenej 5 rokov počítaných odo dňa nasledujúceho po dni posledného dodania výrobku na trh. Podľa článku 8 tých istých pravidiel je miestom uchovania adresa označenia výrobcu alebo dovozcu kozmetiky stanovená v článku 7 odseku 1 bode 7 zákona o správe hygieny a bezpečnosti kozmetiky (化粧品衛生安全管理法). Ustanovenie o dobe uchovania a ustanovenie o mieste uchovania treba v praxi rozlišovať.
 
 Aj keď pôvodný výrobca uchováva originál alebo sa používa bezpečné elektronické alebo cloudové úložisko, výrobca alebo dovozca musí mať prístup k úplným podkladom. Treba stanoviť prístupové oprávnenie, zálohy, správu verzií, formát súborov a zodpovednú osobu tak, aby bolo možné podklady rýchlo vyhľadať a predložiť, keď ich príslušný orgán požaduje. Je tiež dôležité v zmluve upraviť príjemcu odovzdania, spôsob a to, či prístupové oprávnenie trvá, aby sa podklady udržali po zákonnú dobu uchovania i po skončení zmluvy s predajným partnerom alebo poskytovateľom služieb.
 
@@ -78,7 +78,7 @@ Aj keď pôvodný výrobca uchováva originál alebo sa používa bezpečné ele
 
 Keď príslušný orgán kontroluje PIF, oznámi to zásadne výrobcovi alebo dovozcovi kozmetiky najneskôr 7 dní pred dňom kontroly. Ak však prípad spadá pod zákonnú výnimku stanovenú v súvisiacich predpisoch, možno kontrolu vykonať bez predchádzajúceho oznámenia. Bez ohľadu na to, či oznámenie bolo, treba trvale udržiavať stav, ktorý umožňuje vyhľadať a predložiť úplné aktuálne podklady.
 
-Ohlásenie nepravdivých informácií pri registrácii produktu alebo zapísanie nepravdivých informácií do PIF môže byť predmetom správnej pokuty (罰鍰) 10.000 až 1.000.000 taiwanských dolárov (新臺幣, TWD). Ak sú naopak podklady PIF neúplné, príslušný orgán zvyčajne nariadi nápravu v stanovenej lehote (限期改正) a správna pokuta sa stáva otázkou až vtedy, keď sa v tejto lehote nenapraví. Nepravdivé informácie a ešte doplniteľná neúplnosť podkladov sa nemajú uzatvárať ako ten istý výsledok porušenia.
+Ohlásenie nepravdivých informácií pri registrácii produktu alebo zapísanie nepravdivých informácií do PIF môže byť predmetom správnej pokuty (罰鍰) 10.000 až 1.000.000 taiwanských dolárov (新臺幣, TWD). Ak sú naopak podklady PIF neúplné, príslušný orgán zvyčajne nariadi nápravu v stanovenej lehote (限期改正) a správna pokuta sa stáva otázkou až vtedy, keď sa v tejto lehote nenapraví. Nepravdivé informácie a ešte napraviteľnú neúplnosť podkladov nemožno posudzovať ako rovnaký následok.
 
 Stiahnutie alebo zničenie (銷毀) nie je opatrením, ktoré by automaticky nasledovalo každú neúplnosť podkladov PIF. Bezpečnosť výrobku, obsah porušenia, stav nápravy a zákonné podmienky uplatniteľné na každé opatrenie treba posúdiť oddelene. Opatrenie, keď bol potvrdený bezpečnostný problém, a požiadavku na doplnenie dokumentov treba posúdiť osobitne a postup sa riadi oznámením príslušného orgánu a použitým ustanovením.
 
@@ -88,7 +88,7 @@ Reklama sa posudzuje nielen podľa vety, ale podľa celého vyjadrenia, vrátane
 
 ### Posudzuje sa podľa celého vyjadrenia, nie podľa každého slova
 
-Či je označenie, propagácia (宣傳) alebo reklama nepravdivá alebo nadsadená, alebo či tvrdí liečebný účinok (醫療效能), sa neposudzuje len podľa jedného určitého slova. Spoločne sa posudzuje názov tovaru, veta, obraz, symbol, zvuk, predchádzajúci a nasledujúci kontext a celkový dojem, ktorý spotrebiteľ získa. Dojem vytvorený ústredným reklamným vyjadrením sa automaticky nerozplynie len obmedzením malým písmom, preto treba preskúmať ako jednotlivé formulácie, tak konečný výtvor.
+Či je označenie, propagácia (宣傳) alebo reklama nepravdivá alebo nadsadená, alebo či tvrdí liečebný účinok (醫療效能), sa neposudzuje len podľa jedného určitého slova. Spoločne sa posudzuje názov tovaru, veta, obraz, symbol, zvuk, predchádzajúci a nasledujúci kontext a celkový dojem, ktorý spotrebiteľ získa. Dojem z hlavného reklamného vyjadrenia neodstraňuje samo upozornenie malým písmom, preto treba preskúmať ako jednotlivé formulácie, tak hotovú reklamu.
 
 Napríklad tvrdenie, že kozmetika lieči akné, má protizápalový účinok alebo baktericídne pôsobenie, môže byť tvrdením liečebného účinku. Treba spoločne overiť i spôsob spojenia názvu choroby s výrobkom, snímky pred použitím a po ňom, stvárnenie evokujúce zdravotníka a kontext, ktorý spája výklad zložky s liečebným účinkom výrobku.
 
@@ -96,9 +96,9 @@ Správna pokuta za nepravdivú alebo nadsadenú reklamu (虛偽誇大廣告) či
 
 ### Influenceri, autori recenzií a predajní partneri
 
-Príspevky influencerov, autorov recenzií alebo predajných partnerov môžu byť podľa obsahu a obchodného kontextu posúdené ako reklama v podstate. Vyplatenie protiplnenia, poskytnutie výrobku, predajný odkaz, pokyn značky na zverejnenie a opakovaná spolupráca sú faktory, ktoré sa v tomto posúdení zohľadňujú. Naopak každý osobný príspevok sa automaticky nestáva reklamou značky, preto treba overiť vzťah medzi tým, kto zverejňuje, a značkou, konkrétny obsah a mieru zapojenia značky.
+Príspevky influencerov, autorov recenzií alebo predajných partnerov môžu byť podľa obsahu a obchodného kontextu posúdené ako reklama v podstate. Vyplatenie odmeny, poskytnutie výrobku, predajný odkaz, pokyn značky na zverejnenie a opakovaná spolupráca sú faktory, ktoré sa v tomto posúdení zohľadňujú. Naopak každý osobný príspevok sa automaticky nestáva reklamou značky, preto treba overiť vzťah medzi tým, kto zverejňuje, a značkou, konkrétny obsah a mieru zapojenia značky.
 
-V zmluve o spolupráci a v prevádzkových pokynoch možno stanoviť rozsah povolených výrazov a podporné podklady, preskúmanie pred zverejnením a postup úpravy a vymazania porušujúcich výrazov. Do rozsahu správy je vhodné zahrnúť i výrazy pridávané v komentároch, ústny výklad pri živom vysielaní alebo krátkych videách a nesúlad medzi predajnou stránkou a etiketou. Preskúmaný návrh, históriu schválenia, žiadosti o úpravu a konečný príspevok treba uchovať, aby bolo možné neskôr overiť skutkové okolnosti.
+V zmluve o spolupráci a v prevádzkových pokynoch možno stanoviť rozsah povolených výrazov a podporné podklady, preskúmanie pred zverejnením a postup úpravy a vymazania porušujúcich výrazov. Do rozsahu preskúmania je vhodné zahrnúť i výrazy pridávané v komentároch, ústny výklad pri živom vysielaní alebo krátkych videách a nesúlad medzi predajnou stránkou a etiketou. Preskúmaný návrh, históriu schválenia, žiadosti o úpravu a konečný príspevok treba uchovať, aby bolo možné neskôr overiť skutkové okolnosti.
 
 ### Poradie overenia prípravy predaja
 
@@ -129,6 +129,6 @@ Základnú štruktúru spoločnosti a pobočky možno vidieť v [Základy zaklad
 - [Invest Taiwan — výklad zahraničnej investície](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Odbor preskúmania investícií Ministerstva hospodárstva — pokyny](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
-Tento text je vzdelávacím podkladom k všeobecnému vysvetleniu režimu súvisiaceho so vstupom na trh kozmetiky na Taiwane; nie je právnym stanoviskom k jednotlivému výrobku alebo reklame a nesľubuje určený výsledok, povolenie, registráciu, možnosť predaja ani dodržanie lehoty vybavenia. Formu vstupu, podklady k výrobku, obsah označenia a reklamy a najnovšiu prax príslušného orgánu treba overiť v každej veci osobitne.
+Tento text je vzdelávacím podkladom k všeobecnému vysvetleniu režimu súvisiaceho so vstupom na trh kozmetiky na Taiwane; nie je právnym stanoviskom k jednotlivému výrobku alebo reklame a nesľubuje určitý výsledok, povolenie, registráciu, možnosť predaja ani dodržanie lehoty vybavenia. Formu vstupu, podklady k výrobku, obsah označenia a reklamy a najnovšiu prax príslušného orgánu treba overiť v každej veci osobitne.
 
 **Advokátka Wei Tseng (曾雋崴)**

@@ -62,7 +62,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
     columnsOriginalLanguageBadge: 'Pôvodný jazyk',
     columnsOriginalLanguageNote:
       'Nasledujúce príspevky zatiaľ nie sú k dispozícii v slovenčine. Zoznam ostáva v pôvodnom jazyku a otvorí príslušnú jazykovú stránku; obsah sa automaticky neprekladá.',
-    imageBandAlt: 'Tradičný taiwanský dvor sanheyuan (三合院) a moderný pavilón za denného svetla',
+    imageBandAlt: 'Tradičný taiwanský dom typu sanheyuan (三合院) a moderný pavilón za denného svetla',
     videoPauseLabel: 'Pozastaviť video',
     videoPlayLabel: 'Prehrať video',
     videoReplayLabel: 'Prehrať video znova',
@@ -184,8 +184,8 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
           heading: 'Založenie a štruktúra',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) bola založená v roku 2016 advokátkami a advokátmi, ktorí študovali na National Taiwan University (國立臺灣大學). Čínsky názov 昊鼎 spája znak 昊 („širé nebo“) so znakom 鼎 („pevný základ“) a vystihuje zameranie kancelárie od jej založenia.',
-            'Máme sídla v Taipeji (臺北), Kaohsiungu (高雄), Taichungu (臺中) a Pingtungu (屏東). Sídlo v Kaohsiungu sa sústreďuje na vedenie podnikov a vedie občianskoprávne, trestné a správne spory. Sídlo v Taichungu vedie stavebné veci, duševné vlastníctvo a veci s väzbou na Kóreu a Japonsko. Sídlo v Pingtungu bolo otvorené v roku 2017 pre miestnu potrebu.',
-            'Vedľa advokátskej práce pôsobí od roku 2020 aj Hovering Accounting Office, ktorá ponúka účtovníctvo a daňové plánovanie podnikateľom a súkromným osobám s majetkom.',
+            'Máme sídla v Taipeji (臺北), Kaohsiungu (高雄), Taichungu (臺中) a Pingtungu (屏東). Sídlo v Kaohsiungu sa sústreďuje na správu a riadenie spoločností a vedie občianskoprávne, trestné a správne spory. Sídlo v Taichungu vedie stavebné veci, duševné vlastníctvo a veci s väzbou na Kóreu a Japonsko. Sídlo v Pingtungu bolo otvorené v roku 2017 pre miestnu potrebu.',
+            'Vedľa advokátskej práce pôsobí od roku 2020 aj Hovering Accounting Office, ktorá ponúka účtovníctvo a daňové plánovanie podnikateľom a zámožným súkromným osobám.',
           ],
         },
         {
@@ -198,7 +198,7 @@ export const slovakGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Keď nás oslovíte',
           paragraphs: [
-            'Po doručení Vášho zhrnutia posúdi advokátka alebo advokát obsah a potom hovorí o možnom rozsahu práce, o doteraz potrebných dokumentoch a o ďalších krokoch. Pri daňových alebo účtovných otázkach môže kancelária postupovať s účtovným úsekom v jednom nadväzujúcom postupe.',
+            'Po doručení Vášho zhrnutia posúdi advokátka alebo advokát obsah a potom s Vami preberie možný rozsah práce, dokumenty, ktoré sú ešte potrebné, a ďalšie kroky. Pri daňových alebo účtovných otázkach môže kancelária postupovať v jednom spoločnom postupe s účtovným úsekom.',
             'Výsledok každej veci závisí od skutkového stavu a od dostupných dokumentov; výsledok nesľubujeme. Ak potrebujete záväznú odpoveď pre svoju situáciu, dokumenty treba prebrať s advokátkou alebo advokátom v niektorom zo štyroch jazykov konzultácie.',
           ],
         },

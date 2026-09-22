@@ -25,7 +25,7 @@ Okrem toho nemožno predchádzať v miestach alebo úsekoch so značkou školy a
 
 Aby bolo možné v tom istom pruhu predísť vozidlo vpredu, musí vodič zadného vozidla najprv krátko dvakrát zatroubiť alebo raz blýsknuť diaľkovými svetlami. Klaksón a svetlá sa nesmú používať opakovane na vynútenie, aby vozidlo vpredu uvoľnilo cestu.
 
-Zadné vozidlo smie predísť až potom, čo vozidlo vpredu spomalilo a uhlo nabok, alebo prejavilo vôľu uvoľniť cestu rukou alebo pravým blinkrom.
+Zadné vozidlo smie predísť až potom, čo vozidlo vpredu spomalilo a uhlo nabok, alebo prejavilo vôľu uvoľniť cestu rukou alebo pravou smerovkou.
 
 Potom musí predchádzajúce vozidlo zapnúť ľavý blinker, minúť zľava pri zachovaní odstupu najmenej 0,5 metra od vozidla vpredu a po zabezpečení bezpečnej vzdialenosti zapnúť pravý blinker a bezpečne sa vrátiť na pôvodný pruh.
 
@@ -37,13 +37,13 @@ V anonymizovanej veci vedenej touto kanceláriou išiel motocyklista A po horske
 
 ![Schéma nehody ukazujúca dráhu predchádzania motocykla a 2 vozidiel vpredu na horskej ceste](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A sa pokúsil predísť obe vozidlá, vošiel do protismerného pruhu a zrýchlil. Vozidlo č. 2 sa takisto chystalo predísť vozidlo č. 1: menej než 1 sekundu po zapnutí blinkra vošlo do protismerného pruhu. Motocykel nemal dostatočnú rezervu na brzdenie a zrazil sa s vozidlom č. 2.
+A sa pokúsil predísť obe vozidlá, vošiel do protismerného pruhu a zrýchlil. Vozidlo č. 2 sa takisto chystalo predísť vozidlo č. 1: menej než 1 sekundu po zapnutí smerovky vošlo do protismerného pruhu. Motocykel nemal dosť času zabrzdiť a zrazil sa s vozidlom č. 2.
 
 B utrpel ťažké poranenie hlavy a zomrel na mieste; A stratil vedomie a bol prevezený do nemocnice.
 
 Rodiny A a B najprv považovali náhlu zmenu pruhu vozidla č. 2 za hlavnú príčinu zrážky. Vec prešla do súdneho konania; v jeho priebehu bolo vypracovaných niekoľko znaleckých posudkov (鑑定) k nehode.
 
-Podľa výsledku posudku niesol hlavnú zodpovednosť za túto zrážku A. Tento záver bol obmedzený na skutkové okolnosti tejto veci. Posudok zohľadnil spoločne to, že A chcel predísť 2 vozidlá vpredu idúce za sebou, že vošiel do protismerného pruhu, že išiel rýchlosťou, ktorá takmer nenechávala rezervu na brzdenie, že chýbali predpísané signály klaksónu a svetiel, ako aj pohyb zmeny pruhu vozidla č. 2, usporiadanie cesty a pruhov a ostatné zaistené dôkazy.
+Podľa výsledku posudku niesol hlavnú zodpovednosť za túto zrážku A. Tento záver bol obmedzený na skutkové okolnosti tejto veci. Posudok zohľadnil spoločne to, že A chcel predísť 2 vozidlá vpredu idúce za sebou, že vošiel do protismerného pruhu, že išiel rýchlosťou, ktorá takmer nenechávala čas na zabrzdenie, že chýbali predpísané signály klaksónu a svetiel, ako aj pohyb zmeny pruhu vozidla č. 2, usporiadanie cesty a pruhov a ostatné zaistené dôkazy.
 
 To, že v niektorých veciach takéto výsledky posudku nastanú, neznamená, že jedno vynechanie predpísaného signálu vždy určí zodpovednosť. Nedbanlivosť (過失) pri nehode pri predchádzaní závisí od miesta nehody, usporiadania pruhov, rýchlosti, pohybov vozidiel, signálov, časových intervalov, výhľadu a ostatných dôkazov.
 
@@ -62,4 +62,4 @@ Ako doplnok možno nahliadnuť [ilustráciu pravidiel a postupu predchádzania](
 > - [Medzinárodný tím Hovering](/sk/lawyers)
 > - [Otázky a odpovede k postupu po dopravných nehodách na Taiwane](/sk/columns/taiwan-traffic-accident-procedure)
 
-Tento text je všeobecnou právnou informáciou o pravidlách predchádzania a posudzovaní zodpovednosti za nehody na Taiwane; nie je radou ku konkrétnej veci a nesľubuje určený výsledok. Skutočná zodpovednosť sa môže líšiť podľa miesta nehody, pohybu vozidiel, rýchlosti, signálov, dôkazov, posudku (鑑定) a aktuálneho práva; konkrétne veci treba posúdiť osobitne na základe príslušných podkladov.
+Tento text je všeobecnou právnou informáciou o pravidlách predchádzania a posudzovaní zodpovednosti za nehody na Taiwane; nie je radou ku konkrétnej veci a určitý výsledok nesľubuje. Skutočná zodpovednosť sa môže líšiť podľa miesta nehody, pohybu vozidiel, rýchlosti, signálov, dôkazov, posudku (鑑定) a aktuálneho práva; konkrétne veci treba posúdiť osobitne na základe príslušných podkladov.

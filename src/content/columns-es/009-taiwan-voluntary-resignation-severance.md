@@ -17,11 +17,11 @@ En Taiwán no es fácil, por regla general, que el trabajador obtenga la indemni
 
 ​
 
-En particular, si el trabajador dimite de forma voluntaria (自請離職),
+En particular, la dimisión voluntaria (自請離職) es el supuesto general.
 
-no puede percibir la indemnización por despido (資遣費) (artículo 18 de la Ley de Normas Laborales),
+El trabajador no puede percibir la indemnización por despido (資遣費) (artículo 18 de la Ley de Normas Laborales).
 
-y ello difiere de algunos ordenamientos, como el coreano.
+Ello difiere de algunos ordenamientos, como el coreano.
 
 ​
 
@@ -35,9 +35,9 @@ En las situaciones especiales siguientes, aunque el trabajador dimita de forma v
 
 (por ejemplo, cuando el empleador dice al trabajador que, al ingresar, lo enviará a una sucursal en el extranjero que en realidad no existe)
 
-2. Cuando el empleador, un familiar del empleador o un representante del empleador (代理人) ejerce violencia o inflige un insulto grave (重大侮辱) al trabajador
+2. Cuando el empleador, un familiar del empleador o un representante del empleador (代理人) ejerce violencia contra el trabajador o le dirige un insulto grave (重大侮辱)
 
-3. Cuando el trabajo pactado en el contrato puede ser perjudicial para la salud del trabajador, se ha pedido al empleador que lo mejore y no hay efecto
+3. Cuando el trabajo pactado en el contrato puede ser perjudicial para la salud del trabajador, se ha pedido al empleador que lo mejore y este no lo ha hecho
 
 4. Cuando el empleador, su representante u otro trabajador padece una enfermedad contagiosa de declaración obligatoria (法定傳染病), existe riesgo de contagio a los trabajadores que laboran juntos y ello supone un peligro grave para la salud del trabajador
 
@@ -47,49 +47,49 @@ En las situaciones especiales siguientes, aunque el trabajador dimita de forma v
 
 ​
 
-El ejemplo más frecuente es que el empleador
+El ejemplo más frecuente es la conducta del empleador.
 
-no pague el salario (工資) a tiempo,
+No paga el salario (工資) a tiempo.
 
-no pague las horas extraordinarias (加班費),
+No paga las horas extraordinarias (加班費).
 
-o no afilie al trabajador al seguro laboral (勞保) o al seguro de salud (健保).
+Tampoco afilia al trabajador al seguro laboral (勞保) o al seguro de salud (健保).
 
 En esos casos, aunque el trabajador ponga fin al contrato de trabajo de forma ordinaria, el empleador debe pagarle la indemnización por despido.
 
 ​
 
-Sin embargo, la Ley de Normas Laborales (勞動基準法) dispone que,
+Sin embargo, la Ley de Normas Laborales (勞動基準法) impone un plazo.
 
-si el trabajador desea poner fin al contrato de trabajo por los apartados 1 o 6 anteriores (por ejemplo, para terminar el contrato por falta de afiliación al seguro),
+Si el trabajador desea poner fin al contrato de trabajo por los apartados 1 o 6 anteriores (por ejemplo, para terminar el contrato por falta de afiliación al seguro), el plazo es breve.
 
-debe poner fin al contrato de trabajo dentro de **30 días** desde el día en que conoció esa situación,
+Debe poner fin al contrato de trabajo dentro de **30 días** desde el día en que conoció esa situación.
 
-o, en el caso del inciso 6, dentro de **30 días** desde el día en que conoció el resultado del daño.
+En el caso del inciso 6, el plazo es de **30 días** desde el día en que conoció el resultado del daño.
 
 Por ello el trabajador debe controlar bien el plazo.
 
 ​
 
-Es decir,
+La regla se resume así.
 
-el Derecho de Taiwán distingue el efecto según quién tenga la culpa:
+El Derecho de Taiwán distingue el efecto según quién tenga la culpa.
 
-si la tiene el empleador, el trabajador puede exigir la indemnización por despido;
+Si la tiene el empleador, el trabajador puede exigir la indemnización por despido.
 
-si la tiene el trabajador, el empleador puede no pagarla.
+Si la tiene el trabajador, el empleador puede no pagarla.
 
-A veces, cuando hay falta en ambas partes de la relación laboral,
+A veces, cuando hay falta en ambas partes de la relación laboral, el desenlace no es único.
 
-si surge la controversia,
+Si surge la controversia, importa quién actúa primero.
 
-según quién ponga fin primero al contrato con razón suficiente
+Según quién ponga fin primero al contrato con razón suficiente, el resultado cambia.
 
-puede no pagarse la indemnización o puede exigirse.
+Puede no pagarse la indemnización o puede exigirse.
 
-Por ello, en los conflictos laborales (勞資糾紛) de Taiwán,
+Por ello, en los conflictos laborales (勞資糾紛) de Taiwán el plazo pesa.
 
-el **tiempo** es muy importante.
+El **tiempo** es muy importante.
 
 En la mayoría de los casos, quien se prepara de antemano está en mejor posición para defender sus derechos; de ello no se sigue un resultado determinado.
 

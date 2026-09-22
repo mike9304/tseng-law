@@ -1,0 +1,74 @@
+WO-F-mn — Grok 4.7 fix lane, campaign round 2
+workspace: /Users/son7/Projects/tseng-law-fix-mn-r2
+date: 2026-09-22
+
+## Rows
+Reviews: mn-a 28 rows + mn-b 25 rows = 53.
+Applied: 48. Skipped: 5.
+
+Applied with a wording adjustment the checker or the block count required (still the row’s meaning):
+- mn-a 4. The in-person remittance rule is Korean banks again, and the same paragraph says other countries’ bank rules are checked separately. The bold **өөрийн биеэр** stays. The Q1 heading «Гадаадаас» is now «Солонгосоос», matching the English question (remitting from Korea). The next paragraph’s «эх орны банкны дүрэм» stays; that is the separate check.
+- mn-a 25. «хохирогч 1 хүн, осол 1 тохиолдолд» → «нэг хохирогч, нэг осолд». «нэг» is in the Mongolian number lexicon, so both 1s are still counted.
+- mn-b 9. Not «хоёр дахь». Korean «두 번째» is not a parsed digit, and «хоёр» would be an extra 2. The sentence now says a work permit for a foreign national other than the manager.
+- mn-b 12, 13, 15, 22, 23 and the same chopped layout in 013 and 015. Each clause was finished inside the existing paragraph. Blocks were not merged, and the U+200B-only lines were not removed.
+- mn-b 18. «1 дахин» stays, because Korean «1배» is a digit. The clause now also says the amount does not exceed actual harm.
+
+Skipped:
+- mn-a 3. The link label still says «10 дугаар зүйл». The URL stays flno=3. Changing 10 to 3 drops a digit the Korean source counts (the English link text is also “Article 10”). The document name was already the withholding-rate standard. See Reviewer got it wrong.
+- mn-a 24. Turning Q16–Q20 into `##` headings adds headings and changes the block count. Those lines match the Korean source. Left in place. The same for the U+200B padding in 005, 006, 008 and 009.
+- mn-a 26. «TWD 1.57M» stays byte-identical (GUIDANCE_BIO_PRESERVED_TERMS). «1,57» is a decimal comma; for mn the checker wants a thousands comma and a decimal point. 0 instances changed.
+- mn-a 28. Hangul in frontmatter `url` of 008 and 009. Canonical path, not rendered. Not edited.
+- mn-b 14. Deleting the U+200B-only lines in 013 (lines 58, 72, 86, 108) and 015 (lines 28, 36, 52) changes the ZWSP count (the checker failed 013 at 5 → 4 when one ZWSP was removed, then passed after it was restored). Those lines stay. The trailing ZWSP on the Taipei-city sentence stays too.
+
+## Systemic patterns
+- Leading `TWD` and the comma in amounts: 0 changed. R14 requires a comma thousands separator and a decimal point for mn (`500,000`, `0.5`). Both `TWD 500,000` and `500,000 TWD` parse; the comma is not an error. The pinned bio figure was not touched.
+- U+200B blog padding and Q16–Q20 body lines: 0 structural changes. 013: 13 split clauses finished as sentences inside the existing paragraphs. 015: the restaurant-zone break and two «бол» clauses finished the same way (3 splits). Capital «Б» on «Байгууллага санаачилгаар лавлах үйл ажиллагааны зүйл»: 3 (paragraph, image alt, caption).
+- A language one «ашиглах» → «харилцаж»: 5 (guidance pack 4, inquiry copy 1). «ашиглах» for a computer system, a form, or a tool was left.
+- 營利事業所得稅 called a trading tax → «ашгийн төлөөх аж ахуйн орлогын албан татвар»: 4 (001 ×1, 002 ×1, 004 ×2). Places that already said «ашгийн төлөөх» were left.
+- Bare «хэмжээ» for the fee, after «ажлын хэмжээ» already means scope: 3 (pricing answer, «Явцын дунд хөлсний дүн», «хөлсний дүн, төлөх арга»). «хөлсний хэмжээ» and «ажлын хэмжээ» stay.
+- Distributor called «төлөөлөгч» where English says distributor: 6 (011 «түгээгчийг хавсарсан» ×2, the 銷售代理商 gloss and the following sentence, 018 FAQ question ×2). 011’s contrast «төлөөлөгч, ерөнхий түгээгч, түгээлтийн компани» stays: there «төлөөлөгч» is the agent. 018’s title still says «төлөөлөгч», because the English title is subsidiary, branch, or agent.
+- Bare «аж ахуй» stuck to the records it should share: 1 (011, the four parties now share changed information and current signed records).
+- Stacked «эцэг эхийн эцэг эх»: 2 (016 FAQ question, and «Амьд үлдсэн эцэг эхийн эрхийн байдал»).
+- «авалтд» → «авалтад»: 2 (001 FAQ and body). «бусадтай хамт» as “among others” → «тухайлбал»: 2 (same two places).
+
+R2–R12 already in the pack and columns were left where they already read correctly. Team roles, the Legal Aid / Ministry lines, and «Хуулийн туслах» are already Mongolian, with the pinned English institution names kept. Dates stay YYYY.MM.DD. Address is Та. No new Hangul outside `url`. `[변호사 검수 필요]` remains 0. Consultation languages stay English, Chinese (中文), Japanese and Korean; the negative lock was not turned into an offer. Mongolian does not mark gender on «өмгөөлөгч» or on the verb; no masculine title for Wei Tseng was introduced. The llms.txt notices were not rewritten: `llms.txt` is still in `discoveryNotice`, and `consultationNotice` / `confidentialNotice` are still verbatim substrings of the FAQ answer and the privacy paragraph. No test pinned a Mongolian string that changed, so no test file was edited.
+
+## §Verify
+cd /Users/son7/Projects/tseng-law-fix-mn-r2 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+node scripts/check-column-translation.mjs --dir src/content/columns-mn --lang mn 2>&1 | tail -8
+```
+neighbour      PASS   
+hanzi          PASS   han=98
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+grep -rn "\[변호사 검수 필요\]" src/content/columns-mn src/data | wc -l
+```
+       0
+```
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+```
+TSC_OK
+```
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+git status --short | wc -l
+```
+      23
+```
+(This log file is written after that count.)
+
+## Reviewer got it wrong — not applied as suggested
+- mn-a 3. The visible standard name was already «Төрөл бүрийн орлогын эх үүсвэрийн суутгалын хувийн хэм хэмжээ». The URL is flno=3, and the English link text itself says “Article 10”. Dropping the 10 fails the number check. The label keeps «10 дугаар зүйл».
+- mn-a 26 and the money pattern in the verdict. «1,57 сая» uses a decimal comma. For mn the checker parses a comma as thousands and a point as the decimal (`0.5`). «TWD 1.57M» is pinned. Column amounts stay `TWD 500,000`.
+- mn-a 24 and mn-b 14. Q16–Q20 are body lines, and the U+200B lines are non-empty blocks that match the Korean source. Removing them, or promoting them to headings, changes the block or ZWSP count. 013 failed the checker at ZWSP 5 → 4 until the removed character was put back.
+- mn-b 9. «хоёр дахь» is the right meaning, and it is also a counted 2. Korean «두 번째» is not in the number lexicon, so the file would gain an extra 2. «менежерээс өөр гадаадын иргэн» keeps the meaning without a new number.
+- mn-b 18. Removing «1 дахин» drops the digit in Korean «최대 1배». «нэг дахин» would still read as “once”. The sentence now says the cap does not exceed actual harm and still has «1 дахин».
+- mn-b 23. The suggested sentence joins three paragraphs. English splits the same thought across three paragraphs. Each Mongolian paragraph is now a sentence; they were not merged.

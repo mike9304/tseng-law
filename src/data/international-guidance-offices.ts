@@ -1572,7 +1572,7 @@ export const guidanceFooterCopy: Record<GuidanceLocale, GuidanceFooterCopy> = {
     sitemapLabel: 'Сайтын бүтэц',
     copyEmailLabel: 'Цахим шуудангийн хаягийг хуулах',
     emailCopiedMessage: 'Цахим шуудангийн хаягийг хуулсан.',
-    officialConsultationEmailLabel: 'Зөвлөгөөний албан ёсны шуудан',
+    officialConsultationEmailLabel: 'Зөвлөгөөний албан ёсны цахим шуудан',
   },
   sk: {
     officeLabel: 'Sídla',

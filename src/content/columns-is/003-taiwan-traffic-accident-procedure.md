@@ -21,7 +21,7 @@ Eftir umferðarslys (交通事故) á Taívan skaltu fyrst tryggja öryggi, tilk
 
 Við slys með meiðslum eða dauðsfalli skal ökumaður þegar í stað grípa til björgunarráðstafana (救護措施), tilkynna lögreglu og vernda ökutæki og sönnunargögn á vettvangi (保全現場). Óformlegt samþykki gagnaðila eða það eitt að taka myndir veitir ekki rétt til að yfirgefa vettvanginn áður en nauðsynlegum ráðstöfunum er lokið.
 
-Við líkamsmeiðslaslys má þó, ef allir aðilar samþykkja, eftir merking staðsetningar og spora, færa ökutækin á stað sem hindrar ekki umferð. Það kemur ekki í stað nauðsynlegra ráðstafana eins og aðstoðar og tilkynningar.
+Við líkamsmeiðslaslys má þó, ef allir aðilar samþykkja, eftir merkingu staðsetningar og spora, færa ökutækin á stað sem hindrar ekki umferð. Það kemur ekki í stað nauðsynlegra ráðstafana eins og aðstoðar og tilkynningar.
 
 Sé aðeins eignatjón fyrir hendi, og megi færa ökutækin, er meginreglan að merkja staðsetningu og spor, festa þau með ljósmynd eða myndbandi og aka fljótt á öruggan stað. Sé vettvangur yfirgefinn án nauðsynlegra ráðstafana geta stjórnvaldsrefsingar (行政處罰) komið til.
 
@@ -31,7 +31,7 @@ Samkvæmt 185-4. gr. hegningarlaga (刑法) er fjallað um refsiábyrgð ökuman
 
 Tryggðu fyrst persónulegt öryggi og viðvörunarmerki; við meiðsli eða björgunarþörf hringir þú á Taívan í 119 (sjúkrabíll og slökkvilið), við refsivert athæfi eða bráða öryggishættu í 110 (lögregla) eða 112 úr farsíma (交通事故). Tilkynntu einnig umferðarslysið til lögreglu, að svo miklu leyti sem aðstæður krefjast.
 
-Þegar öryggi er tryggt skaltu taka yfirlits- og nálægtökur til að festa staðsetningu og skemmdir ökutækis, vegmerkingar, merki og veður. Tengiliði vitna, beiðni um varðveislu eftirlitsmyndavélaefnis (監視器影像) og myndefnis úr mælaborðsmyndavél (行車紀錄器), upplýsingar um aðila, ökutæki og tryggingar og sjúkraskrár (病歷) ættir þú ekki að sleppa. Einkatökur eru gagnlegar, en koma við slys með meiðslum eða dauðsfalli ekki í stað nauðsynlegrar lögreglumeðferðar.
+Þegar öryggi er tryggt skaltu taka yfirlits- og nálægtökur til að festa staðsetningu og skemmdir ökutækis, vegmerkingar, merki og veður. Tengiliði vitna, beiðni um varðveislu upptaka úr eftirlitsmyndavélum (監視器影像) og myndefnis úr mælaborðsmyndavél (行車紀錄器), upplýsingar um aðila, ökutæki og tryggingar og sjúkraskrár (病歷) ættir þú ekki að sleppa. Einkatökur eru gagnlegar, en koma við slys með meiðslum eða dauðsfalli ekki í stað nauðsynlegrar lögreglumeðferðar.
 
 Að því er varðar lögreglugögn getur þú á vettvangi fengið skráningar- og tengiliðaseðil aðila umferðarslyss (道路交通事故當事人登記聯單). Eftir 7 daga frá slysdegi má sækja um stöðumynd og slysmyndir (現場圖 / 現場照片); eftir 30 daga frá slysdegi má sækja um bráðabirgðagreiningarmat umferðarslyss (道路交通事故初步分析研判表). Útgáfutíma og umsóknarskilyrði ættir þú að kanna að nýju hjá lögbærri lögreglustofnun.
 
@@ -41,9 +41,9 @@ Samkvæmt 284. gr. hegningarlaga (刑法) er fjallað um gáleysislega líkamsme
 
 Einkaréttarlegar skaðabætur (損害賠償) verða samkvæmt 197. gr. almennra borgaralaga (民法) ekki lengur krafðar, þegar 2 ár frá vitneskju um tjón og skaðabótaskylda aðila eða 10 ár frá skaðaverkinu (侵權行為) eru liðin. Hvaða atvik hafa áhrif á fyrningu (消滅時效) skal kanna sérstaklega.
 
-Sá sem hefur orðið fyrir tjóni vegna refsiverðs athæfis getur samkvæmt 487. gr. laga um meðferð sakamála höfðað einkamál tengt sakamáli (刑事附帶民事訴訟). Meðan sakamálið er rekið má það samkvæmt 488. gr. höfðað allt þar til fyrir lok munnlegs málflutnings (言詞辯論終結) á öðru dómsstigi, en ekki eftir lok munnlegs málflutnings á fyrsta dómsstigi og áður en áfrýjun er höfð. Að jafnaði má forðast sérstaka greiðslu dómstólsgjalda (裁判費); ekki lýkur öllum málum án kostnaðar. Sé sakamálinu til dæmis vísað frá og því að beiðni stefnanda vísað til einkamálaréttar getur, samkvæmt 503. gr. laga um meðferð sakamála, málskostnaður komið til; einnig skal ganga frá vísunar- og málsmeðferðarákvæðum 504. gr.
+Sá sem hefur orðið fyrir tjóni vegna refsiverðs athæfis getur samkvæmt 487. gr. laga um meðferð sakamála höfðað einkamál tengt sakamáli (刑事附帶民事訴訟). Meðan sakamálið er rekið má samkvæmt 488. gr. höfða það allt þar til fyrir lok munnlegs málflutnings (言詞辯論終結) á öðru dómsstigi, en ekki eftir lok munnlegs málflutnings á fyrsta dómsstigi og áður en áfrýjun er höfð. Að jafnaði má forðast sérstaka greiðslu dómstólsgjalda (裁判費); ekki lýkur öllum málum án kostnaðar. Sé sakamálinu til dæmis vísað frá og því að beiðni stefnanda vísað til einkamálaréttar getur, samkvæmt 503. gr. laga um meðferð sakamála, málskostnaður komið til; einnig skal ganga frá vísunar- og málsmeðferðarákvæðum 504. gr.
 
-Valið er misjafnt eftir slitinni fyrningu (時效中斷), því hverjir eru stefndir, sönnunargögnum, tryggingu og varnarþingi. Því er engin ein samræmd leið sem hæfir öllum málum.
+Rétt leið ræðst af því hvort fyrning hefur verið slitin (時效中斷), af því hverjir eru stefndir, af sönnunargögnum, af tryggingu og af varnarþingi. Því er engin ein samræmd leið sem hæfir öllum málum.
 
 ## Q4. Hvernig er refsiábyrgð og einkaréttarleg ábyrgð metin þegar báðar hliðar hafa gáleysi?
 
@@ -137,7 +137,7 @@ Kvittanir, gjaldskrár, leiðarskrár og meðferðargögn eru möguleg sönnunar
 
 ## Q11. Hvernig er tekjutap á meðferðar- og bata tímabili sannað?
 
-Tekjutap skal sanna með gögnum um að vegna slysmeiðsla hafi á batatímabili (收入損失) ekki verið unnt að vinna að öllu eða hluta, og að tekjur hafi þar með raunverulega lækkað. Vottorð eða hvíldarráðlegging er mikilvægur upphafspunktur, gerir þó ekki eitt og sér kröfuna viðurkennda.
+Tekjutap (收入損失) skal sanna með gögnum um að vegna slysmeiðsla hafi á batatímabili ekki verið unnt að vinna að öllu eða hluta, og að tekjur hafi þar með raunverulega lækkað. Vottorð eða hvíldarráðlegging er mikilvægur upphafspunktur, gerir þó ekki eitt og sér kröfuna viðurkennda.
 
 Sjúkraskrár, mætingar- eða fjarvistarskrár, launa- og skattagögn og staðfesting vinnuveitanda ætti að raða saman. Sjálfstætt starfandi geta lagt fram gögn sem hæfa rekstrarformi þeirra, svo sem veltugögn, rekstrarskrár og skattframtal.
 
@@ -171,7 +171,7 @@ Val stefndu í einkamálinu skal greina frá refsiábyrgð. Refsiábyrgð samkv�
 
 ## Q15. Hvaða greiðslur og vernd í tryggingu vélknúinna ökutækja skal kanna?
 
-Tryggingarskylda samkvæmt 6. gr. laga um skyldubundna ábyrgðartryggingu vélknúinna ökutækja (強制汽車責任保險法) nær að jafnaði til eiganda ökutækis og í tilteknum tilvikum einnig til notanda eða umsjónarmanns ökutækisins. Þetta kerfi skipuleggur greiðsluskipulag óháð gáleysi (無過失給付制度) fyrir þá sem hafa orðið fyrir meiðslum eða látist í slysum vélknúinna ökutækja; lögbundinn hring farþega eða þriðja aðila (第三人) utan ökutækisins skal kanna.
+Tryggingarskylda samkvæmt 6. gr. laga um skyldubundna ábyrgðartryggingu vélknúinna ökutækja (強制汽車責任保險法) nær að jafnaði til eiganda ökutækis og í tilteknum tilvikum einnig til notanda eða umsjónarmanns ökutækisins. Þetta kerfi skipuleggur greiðsluskipulag óháð gáleysi (無過失給付制度) fyrir þá sem hafa orðið fyrir meiðslum eða látist í slysum vélknúinna ökutækja; skilgreiningar laganna á farþegum og á þriðja aðila (第三人) utan ökutækisins skal kanna.
 
 Við einslys með einu ökutæki er ökumaður þess að jafnaði ekki greiðsluþegi skyldutryggingar þess ökutækis. Við slys með fleiri ökutækjum getur ökumaður þó krafist greiðslna hjá skyldutryggjanda annars aðkomins ökutækis.
 

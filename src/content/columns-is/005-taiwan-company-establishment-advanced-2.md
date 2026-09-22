@@ -31,7 +31,7 @@ Kóreskir bankar (銀行) krefjast að jafnaði að fjárfestirinn heimsæki **p
 
 Millifærsla með netbanka eða í gegnum nákominn aðila í Kóreu (匯款) er ekki möguleg.
 
-Enn fremur skal sá sem hefur kóreskt ríkisfang og stofnar erlendan lögaðila eða öðlast hlut, samkvæmt kóreskri gjaldeyriseftirlitsreglu, skila „tilkynningu um beina fjárfestingu erlendis“. Tilkynningin skal skráð á þeim tíma sem hlutafé er millifært til taívanska lögaðilans (台灣法人); ef hún fellur niður geta viðurlög vegna brots á gjaldeyrisreglum fylgt.
+Enn fremur skal sá sem hefur kóreskt ríkisfang og stofnar erlendan lögaðila eða öðlast hlut, samkvæmt kóreskri gjaldeyriseftirlitsreglu, skila „tilkynningu um beina fjárfestingu erlendis“. Tilkynningin skal skráð á þeim tíma sem hlutafé er millifært til taívanska lögaðilans (台灣法人); sé tilkynningunni ekki skilað geta viðurlög vegna brots á gjaldeyrisreglum fylgt.
 
 Aflaðu upplýsinga hjá bankanum þínum í því landi sem féð er sent frá, áður en hlutafjármillifærslan (資本金匯款) fer fram; í kóreska dæminu er það aðalbanki fjárfestisins í Kóreu.
 

@@ -2538,7 +2538,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consentLabel:
       'Ég hef lesið persónuverndarsíðuna og samþykki að þessi beiðni verði send.',
     privacyLinkLabel: 'Persónuvernd',
-    requiredMessage: 'Þessi reitur er skyldubundinn.',
+    requiredMessage: 'Þennan reit verður að fylla út.',
     invalidEmailMessage: 'Sláðu inn gilt netfang.',
     tooLongMessage: 'Textinn er of langur. Styttu hann og sendu aftur.',
     sourceLanguageNotice:

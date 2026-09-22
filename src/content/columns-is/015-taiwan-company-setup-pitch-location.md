@@ -19,11 +19,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Þegar veitingarekstur er hafinn er fyrsta vandamálið að finna rekstrarheimili (營業地址).
 
-Auk markaðsaðstæðna skiptir annað atriði máli.
+Auk markaðsaðstæðna þarf að staðfesta hvort heimilisfangið (營業地址) sé á svæði þar sem veitingastarfsemi er heimil.
 
-Annað mikilvægt atriði er þetta.
+Þetta atriði er óháð markaðsaðstæðunum.
 
-Hvort viðkomandi heimilisfang (營業地址) sé á svæði þar sem unnt er að stunda „veitingastarfsemi“.
+Staðfesta skal hvort viðkomandi heimilisfang (營業地址) sé á svæði þar sem unnt er að stunda veitingastarfsemi.
 
 ​
 

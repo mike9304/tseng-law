@@ -1360,7 +1360,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'TEYMIÐ',
     title: 'Alþjóðlegt teymi Hovering',
     description:
-      'Prófílar lögmanna Hovering, rekstrarstjórnarinnar og tengds endurskoðunarfyrirtækis.',
+      'Prófílar lögmanna Hovering, stjórnar Kóreureksturs og tengds endurskoðunarfyrirtækis.',
     representativeTitle: 'Yfirlögmaður',
     teamTitle: 'Lögmenn og starfsfólk',
     partnerTitle: 'Tengt endurskoðunarfyrirtæki',
@@ -4622,7 +4622,7 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Lögfræðiaðstoðarsjóðurinn, útibú í Taichung',
+        'Lögfræðiaðstoðarstofnunin (Legal Aid Foundation), útibú í Taichung',
       ],
     },
     'chang-rongxuan': {
@@ -4654,7 +4654,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Samræmir ráðgjafartíma og samskipti fyrir skjólstæðinga frá Kóreu.',
-        'Styður samskipti yfir landamæri með skjalakerfum og vinnuferlum, á grundvelli tölvunarfræði.',
+        'Styður samskipti milli teymanna með skjalakerfum og vinnuferlum og hefur bakgrunn í tölvunarfræði.',
       ],
       education: [
         'Bakkalárpróf (B.S.) í tölvunarfræði, National Cheng Kung University',

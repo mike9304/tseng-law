@@ -17,7 +17,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 Hefur þú upplifað tímann með hefðbundnu rakarastofunum (理髮廳) á fyrstu árum Taívan?
 
-Hátturinn sem hárið var þvegið á á þessum stofum var mjög sérstæður.
+Hátturinn sem hárið var þvegið á í þessum stofum var mjög sérstæður.
 
 Auk klippingar var til ýmiss konar þjónusta, svo sem raka og andlitsmeðferð.
 
@@ -85,7 +85,7 @@ Að lokum lýstu stjórnlagadómarar (大法官) ákvæðið, sem aðeins leyfð
 
 ​
 
-Á sambærilegan hátt má í Kóreu, þar sem fjölmargir sjónskertir afla sér lífsviðurværis með nuddi,
+Á sambærilegan hátt mega í Kóreu, þar sem fjölmargir sjónskertir afla sér lífsviðurværis með nuddi,
 
 að jafnaði aðeins sjónskertir sem hafa öðlast hæfnisvottorð stunda nuddstarf.
 

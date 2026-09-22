@@ -22,7 +22,7 @@ faq:
 
 ![Mynd sem útskýrir lágmarksstarfstímabil ráðningarsamnings og endurgreiðslu kostnaðar](../images/014-taiwan-mandatory-employment-period/featured-01.jpg)
 
-Samkomulag um lágmarksstarfstímabil (最低服務年限約定) í ráðningarsamningi á Taívan (勞動契約) er, ásamt loforði um að starfa tiltekið tímabil, notað til að ákveða hvort við snemmbúin starfslok sé skylda til að endurgreiða þjálfunarkostnað, undirritunarbónus (簽約金) eða starfshaldsbónus (留任獎金), og hvort sérstaklega megi krefjast samningssektar (違約金). Það eitt að undirritaður texti sé til staðar festir þó hvorki gildi samkomulagsins né þá fjárhæð sem endurgreiða skal. Fremur en heiti samningsins skal lögbundin skilyrði og raunverulegt ferli greiðslna, þjálfunar og lokunar kannað skref fyrir skref.
+Samkomulag um lágmarksstarfstímabil (最低服務年限約定) í ráðningarsamningi á Taívan (勞動契約) er, ásamt loforði um að starfa tiltekið tímabil, notað til að ákveða hvort við snemmbúin starfslok sé skylda til að endurgreiða þjálfunarkostnað, undirritunarbónus (簽約金) eða starfshaldsbónus (留任獎金), og hvort sérstaklega megi krefjast samningssektar (違約金). Það eitt að undirritaður texti sé til staðar festir þó hvorki gildi samkomulagsins né þá fjárhæð sem endurgreiða skal. Fremur en heiti samningsins skal kanna lögbundin skilyrði og raunverulegt ferli greiðslna, þjálfunar og lokunar, skref fyrir skref.
 
 Við könnunina er mikilvægt að blanda ekki eftirfarandi 4 spurningum saman.
 
@@ -61,7 +61,7 @@ Einnig skal unnt að skýra tengslin milli umsamins tímabils og þjálfunarfjá
 
 Annað lögbundna skilyrðið er að vinnuveitandi veiti hæfilegar bætur (合理補償) fyrir loforð starfsmannsins um að halda lágmarksstarfstímabilið. Hér skulu bæturnar hafa tilgang og skipulag sem greinist frá venjulegum launum eða frá endurgjaldi fyrir vinnu sem þegar á að veita. Lagalegt eðli ræðst ekki af því einu að á launaseðli hafi fjárhæðin verið merkt sem undirritunarbónus, starfshaldsbónus eða fyrirframgreidd hlunnindi.
 
-Fyrst skal staðfesta greiðslutilganginn. Hvort um almenn launakjör við ráðningu sé að ræða, um endurgjald fyrir loforð um að dvelja tiltekið tímabil, eða um umbun fyrir náðan árangur, skal vera skýrt í samningnum og í tilkynningargögnum (合理補償). Einnig er kannað hvort greiðsludagur, fjárhæð, tími eignartöku, tengsl við dvalartímabilið, endurgreiðsluástæður og formúla hafi verið lögð fram svo starfsmaðurinn gæti skilið þau fyrir samninginn.
+Fyrst skal staðfesta greiðslutilganginn. Hvort um almenn launakjör við ráðningu sé að ræða, um endurgjald fyrir loforð um að dvelja tiltekið tímabil, eða um umbun fyrir náðan árangur, skal vera skýrt í samningnum og í tilkynningargögnum (合理補償). Einnig er kannað hvort greiðsludagur, fjárhæð, tími eignunar, tengsl við dvalartímabilið, endurgreiðsluástæður og formúla hafi verið lögð fram svo starfsmaðurinn gæti skilið þau fyrir samninginn.
 
 Leiðbeiningarnar (函釋) vinnumálaráðuneytis Taívan (勞動部) frá 5. júní 2026 skýra að, séu starfshaldsbónus, undirritunarbónus eða önnur fyrirframgreidd hlunnindi notuð sem hæfilegar bætur vegna samkomulags um lágmarksstarfstímabil, skuli þetta hlutverk skýrt tilkynnt. Að vinnuveitandi túlki greiðslutilganginn síðar að nýju eða flokki hluta launa sem bætur kemur tæpast í stað tilkynningarinnar á samningstímanum.
 
@@ -80,7 +80,7 @@ Jafnvel þótt 1 af lögbundnu skilyrðunum sé til staðar skulu umsamið tíma
 
 Við fyrsta þáttinn er skoðað hversu lengi þjálfunin raunverulega stóð, og hve mikið vinnuveitandi bar. Það nægir ekki að leggja fram heildina; ráðlegt er saman að staðfesta fylgiskjöl lið fyrir lið, þá fjárhæð sem rakin er til hvers starfsmanns, þá færni sem þjálfunin veitti, og þann hluta fjárfestingarinnar sem þegar er innleystur.
 
-Annar þátturinn, möguleikinn á að leysa af (人力替補可能性), ræðst ekki af fullyrðingu vinnuveitanda um ráðningarerfiðleika einni. Kannað er hvort unnt sé að fá starfsfólk í sama starf eða sambærilegt starf, hvaða hæfi og færnistig sé krafist, hvert venjulegt ráðningartímabil sé, og hvort rekstrarþörfin sem vinnuveitandi ber fyrir sig samræmist hlutlægum gögnum (人力替補可能性).
+Annar þátturinn, möguleikinn á að leysa af (人力替補可能性), ræðst ekki af fullyrðingu vinnuveitanda um ráðningarerfiðleika einni. Kannað er hvort unnt sé að fá starfsfólk í sama starf eða sambærilegt starf, hvaða hæfi og færnistig sé krafist, hve langan tíma það venjulega tekur að manna stöðuna, og hvort rekstrarþörfin sem vinnuveitandi ber fyrir sig samræmist hlutlægum gögnum (人力替補可能性).
 
 Þriðji þátturinn horfir ekki aðeins á fjárhæð bótanna, heldur einnig sviðið. Það skiptir máli hvenær greitt er, og með hvaða skilyrðum þær eru endanlega eignaðar starfsmanninum, hvernig þær svara til umsamins tímabils í heild, og hvort þegar uppfyllt tímabil endurspeglast þegar ráðningu lýkur áður en tímabilinu er lokið. Bónus með sama heiti getur verið metinn ólíkt eftir samningsskipulagi og raunveruleika.
 

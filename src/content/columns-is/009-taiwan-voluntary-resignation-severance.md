@@ -21,7 +21,7 @@ Einkum þegar starfsmaðurinn segir sjálfur upp (自請離職) er rétturinn ta
 
 Hann á almennt ekki rétt á starfslokabótum (18. gr. laga um vinnustaðla, 勞動基準法).
 
-og þetta er ólíkt því sem gildir í sumum öðrum lögsagnarumdæmum — Kórea er eitt dæmi.
+Þetta er ólíkt því sem gildir í sumum öðrum lögsagnarumdæmum — Kórea er eitt dæmi.
 
 ​
 
@@ -53,7 +53,7 @@ Hann greiðir ekki laun (工資) á réttum tíma.
 
 Hann greiðir ekki yfirvinnukaup (加班費).
 
-Hann skráir starfsmanninn ekki í launþegatryggingu (勞保) eða sjúkratryggingu (健保).
+Hann skráir starfsmanninn ekki í launþegatryggingu Taívan (勞保) eða sjúkratryggingu Taívan (健保).
 
 Í slíkum tilvikum skal vinnuveitandi einnig greiða starfslokabætur, þótt starfsmaðurinn slíti ráðningarsamningnum sjálfur.
 
@@ -73,11 +73,11 @@ Hann skal slíta ráðningarsamningnum innan **30 daga** frá þeim degi er hann
 
 Með öðrum orðum:
 
-Eftir rétti Taívan ræðst niðurstaðan af því hvort sök liggur hjá félaginu.
+Eftir rétti Taívan fær annaðhvort félagið eða starfsmaðurinn rétt, eftir því hvor er í sök.
 
-Hún ræðst einnig af því hvort sök liggur hjá starfsmanninum.
+Rétturinn ræðst af því hvort sök liggur hjá félaginu eða hjá starfsmanninum.
 
-hvort synja megi starfslokabótum eða krefjast þeirra.
+Sá réttur er til að synja starfslokabótum eða til að krefjast þeirra.
 
 Stundum liggur sök hjá báðum hliðum.
 
@@ -85,11 +85,11 @@ Stundum liggur sök hjá báðum hliðum.
 
 Eftir því hvor slítur samningnum fyrst á nægilegum grundvelli getur niðurstaðan verið ólík.
 
-starfslokabætur verið synjaðar eða krafðar.
+Starfslokabótum má þá synja, eða krefjast þeirra.
 
 Þetta skiptir máli í vinnudeilum á Taívan (勞資糾紛).
 
-**„tímasetningin“** afar mikilvæg.
+**„Tímasetningin“** er afar mikilvæg.
 
 Sá sem undirbýr sig fyrirfram stendur í flestum tilvikum betur að vígi til að gæta réttinda sinna.
 

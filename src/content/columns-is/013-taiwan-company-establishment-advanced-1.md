@@ -15,7 +15,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 Nýlega hafa margir stofnað félag (公司) á Taívan og fengið atvinnuáritun og dvalarleyfisskírteini útlendinga (外僑居留證),
 
-og spurningarnar sem oft koma upp við stofnunina eru teknar saman hér á eftir.
+Hér á eftir eru teknar saman spurningar sem oft koma upp við stofnunina.
 
 Sá sem hefur lesið [**grunninn að félagastofnuninni**](/is/columns/taiwan-company-establishment-basics) getur síðan einnig kynnt sér þennan ítarhluta.
 
@@ -87,9 +87,9 @@ og lýsa svo nákvæmlega að þeir sem skoða geti sannfærst.
 
 **4. Að hverju skal gæta þegar skráningarheimili félagsins (til dæmis veitingastaður) er leigt?**
 
-Félagastofnunin tekur um **3 mánuði**, öflun atvinnuleyfis (工作許可) og dvalarleyfisskírteinis um **1 mánuð**,
+Félagastofnunin tekur um **3 mánuði**, og það tekur um **1 mánuð** til viðbótar að fá atvinnuleyfi (工作許可) og dvalarleyfisskírteini.
 
-því ættir þú að ákveða gildistökudag samningsins eins seint og unnt er.
+Því ættir þú að ákveða gildistökudag samningsins eins seint og unnt er.
 
 Enn fremur veitir leigusali í leigusamningum um verslunarhúsnæði á Taívan leigjanda oft „**innréttingartímabil**“ (裝潢期間).
 
@@ -115,9 +115,9 @@ T.d.: Sé starfsgreinin veitingarekstur, og ætlunin að leigja almennt skrifsto
 
 Eins og þegar er tekið fram skoðar bankinn leigusamninginn og skoðar heimilisfang félagsins á staðnum.
 
-Enn fremur krefst borgarstjórnin (市政府) við lokafélagaskráningu þess að skráða heimilisfangið sé á svæði þar sem veitingarekstur er leyfður;
+Enn fremur krefst borgarstjórnin (市政府) við lokafélagaskráningu þess að skráða heimilisfangið sé á svæði þar sem veitingarekstur er leyfður.
 
-við almennt skrifstofuhúsnæði er félagaskráning (公司登記) þá ekki möguleg.
+Sé húsnæðið almennt skrifstofuhúsnæði er félagaskráning (公司登記) ekki möguleg.
 
 T.d.: Sé um skráðar starfsgreinar (營業項目) að ræða sem mögulegar eru í almennu skrifstofuhúsnæði, svo sem auglýsingar eða heildsölu, má stofna félagið í almennu skrifstofuhúsnæði. Áður en leigusamningur er gerður
 

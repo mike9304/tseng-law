@@ -13,3 +13,6 @@ Scope for the fixer: RULEBOOK-FIX.md (R2–R10 + round-2 addendum R12–R17) + e
 - 條例 → хууль (a statute), журам only for 辦法 — sweep. "дагалдана" (begleiten) → "туслана/дэмжинэ"; "нэгээр" (alone) → "дангаараа" — sweep pack + columns.
 - "Эмэгтэй өмгөөлөгчийн хувьд" — drop the gender marker where Mongolian does not need it; keep her feminine where a form exists (R4). Blog one-liners 003 Q16–20/006/008/009 → R7.
 - Numbers: comma thousands and decimal point are accepted (R14); "TWD 1.57M" pinned. Cyrillic only.
+
+## Part b
+Apply every P1/P2 row of `mn-b.md` under the same skip rules. Additional: b#1 gloss placement (化粧品 belongs to cosmetics, not importer). b#2 даатгах-family → "гэрээгээр даалгах / туслан гүйцэтгэгч / захиалагч" (outsourcing, subcontractor, principal), never insurance words — sweep 017. "нэгээр" → "ганцаар" sweep 010. "объект" calque → natural Mongolian ("шилжүүлэх зүйл/хамрах хүрээ"). "Эмэгтэй өмгөөлөгч" → "өмгөөлөгч" (R4: no forced marker; feminine verbs stay where Mongolian has none). Money: comma thousands accepted (R14).

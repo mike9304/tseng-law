@@ -81,7 +81,7 @@ Zo werd bijvoorbeeld gevraagd of de geschreven regel die alleen personen met een
 
 en werd betwijfeld of deze regel werkelijk had bijgedragen tot de bescherming van de arbeid en het bestaan van personen met een visuele beperking.
 
-Ten slotte verklaarden de rechters van het Grondwettelijk Hof (大法官) de bepaling die alleen personen met een visuele beperking het massageberoep toestond, ongrondwettig (違憲).
+Ten slotte verklaarden de grootrechters (大法官) de bepaling die alleen personen met een visuele beperking het massageberoep toestond, ongrondwettig (違憲).
 
 ​
 

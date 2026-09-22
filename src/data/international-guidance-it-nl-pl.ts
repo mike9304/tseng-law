@@ -524,7 +524,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
       viewAllLabel: 'Alles tonen',
     },
     columns: {
-      description: 'Artikelen over veelgestelde vragen over het Taiwanese recht.',
+      description: 'Artikelen over veelgestelde vragen van het Taiwanese recht.',
       viewAllLabel: 'Alles tonen',
     },
     lawyers: {
@@ -584,7 +584,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
           heading: 'De taal van de pagina is niet de taal van het gesprek met de advocaat',
           paragraphs: [
             'Deze pagina is in het Nederlands geschreven, maar het gesprek met een advocaat vindt alleen plaats in de vier consultatietalen Engels, Chinees (中文), Japans en Koreaans. Het lezen van de Nederlandse toelichting betekent niet dat het gesprek met de advocaat in het Nederlands plaatsvindt.',
-            'Wij beloven geen tolk, geen antwoordtermijn en geen afspraak via deze pagina. Als u geen van de vier talen kunt gebruiken, legt de pagina “Contact” uit hoe wij naar een werkbare manier van communiceren zoeken.',
+            'Wij beloven geen tolk, geen antwoordtermijn en geen afspraak via deze pagina. Als u geen van de vier talen spreekt, legt de pagina “Contact” uit hoe wij naar een werkbare manier van communiceren zoeken.',
           ],
         },
         {
@@ -616,7 +616,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
       description:
         'De zes praktijkgebieden van het kantoor in Taiwan en de grenzen die u eerst moet kennen.',
       intro:
-        'Hieronder staan de praktijkgebieden die wij daadwerkelijk behandelen, met vragen die in de beginfase vaak worden gesteld. De weergave helpt u te beoordelen of uw zaak tot ons terrein behoort; zij is algemeen en geen juridische analyse van één dossier.',
+        'Hieronder staan de praktijkgebieden die wij daadwerkelijk behandelen, met vragen die in de beginfase vaak worden gesteld. Dit overzicht helpt u te beoordelen of uw zaak tot ons terrein behoort; het is algemeen en geen juridische analyse van één dossier.',
       sections: [
         {
           heading: 'Investering en oprichting van een vennootschap in Taiwan',
@@ -635,14 +635,14 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Huwelijk, familie en erfrecht',
           paragraphs: [
-            'Wij behandelen echtscheiding (離婚), vermogensverdeling, uitoefening en dragen van rechten en plichten jegens minderjarige kinderen (未成年子女權利義務之行使或負擔), omgang (會面交往) en erfrecht (繼承), ook als partijen of vermogen in verschillende staten liggen. Grensoverschrijdende familiezaken vragen vaak extra toetsing van huishoudregisters (戶籍), de vorm van akten en hun bewijsbaarheid in Taiwan.',
+            'Wij behandelen echtscheiding (離婚), vermogensverdeling, de uitoefening en het dragen van rechten en plichten jegens minderjarige kinderen (未成年子女權利義務之行使或負擔), omgang (會面交往) en erfrecht (繼承), ook als partijen of vermogen in verschillende staten liggen. Grensoverschrijdende familiezaken vragen vaak extra toetsing van huishoudregisters (戶籍), de vorm van akten en hun bewijsbaarheid in Taiwan.',
             'Omdat familiezaken vaak termijnen en parallelle procedures meebrengen, moet de eerste samenvatting de verhouding van de partijen, de huidige woonplaats en al lopende procedures noemen.',
           ],
         },
         {
           heading: 'Arbeidsrechtelijke geschillen',
           paragraphs: [
-            'Deze groep omvat beëindiging van de arbeidsovereenkomst, ontslagvergoeding volgens Taiwanees recht (資遣費; dit is niet hetzelfde als de ontslagvergoeding of de transitievergoeding in Nederland of België), loon en geschillen uit de arbeidsovereenkomst (勞動契約), zowel aan werknemers- als aan werkgeverszijde. Bij de toetsing scheiden wij de beëindigingsgrond van vragen over aankondiging, betaling en termijnen.',
+            'Deze groep omvat beëindiging van de arbeidsovereenkomst, ontslagvergoeding volgens Taiwanees recht (資遣費; dit is niet hetzelfde als de ontslagvergoeding of de transitievergoeding in Nederland of België), loon en geschillen uit de arbeidsovereenkomst (勞動契約), zowel aan werknemers- als aan werkgeverszijde. Bij de toetsing scheiden wij de beëindigingsgrond van vragen over de opzegging, de betaling en de termijnen.',
             'Arbeidsovereenkomst, arbeidsreglement (工作規則), loonstroken en de briefwisseling van de partijen zijn meestal de beslissende stukken. Als u ze nog hebt, vermeld dat in de samenvatting.',
           ],
         },
@@ -650,14 +650,14 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
           heading: 'Strafzaken',
           paragraphs: [
             'Wij begeleiden in het opsporingsonderzoek en voor de rechter, voor verdachten of beklaagden evenzeer als voor benadeelden, en beoordelen strafrechtelijke risico’s van ondernemingsactiviteit.',
-            'Strafzaken hebben vaak korte termijnen en vastgelegde stappen. Als u al een schrijven van het openbaar ministerie of de rechter hebt ontvangen, noem vroeg de datum op het schrijven, zodat de inhoud in de juiste volgorde wordt beoordeeld.',
+            'Strafzaken hebben vaak korte termijnen en vastgelegde stappen. Als u al een schrijven van het openbaar ministerie of de rechter hebt ontvangen, noem zo vroeg mogelijk de datum op het schrijven, zodat de inhoud in de juiste volgorde wordt beoordeeld.',
           ],
         },
         {
           heading: 'Intellectuele eigendom',
           paragraphs: [
             'Wij ondersteunen bij de inschrijving van merken (商標) en octrooien (專利), bij auteursrecht en bij geschillen over deze rechten in Taiwan.',
-            'In deze groep beslist de volgorde van de stappen: beschermingsomvang, tijdstip van de aanvraag en feitelijk gebruik beïnvloeden de keuze. Het indienen van een aanvraag betekent niet vanzelf dat zij wordt ingewilligd.',
+            'In deze groep is de volgorde van de stappen bepalend: beschermingsomvang, tijdstip van de aanvraag en feitelijk gebruik beïnvloeden de keuze. Het indienen van een aanvraag betekent niet vanzelf dat zij wordt ingewilligd.',
           ],
         },
         {
@@ -695,7 +695,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Als u contact opneemt',
           paragraphs: [
-            'Na ontvangst van uw samenvatting beoordeelt een advocaat de inhoud en spreekt daarna over de mogelijke omvang van het werk, nog benodigde stukken en de volgende stappen. Bij fiscale of boekhoudkundige vragen kan het kantoor met de boekhouding in één traject werken.',
+            'Na ontvangst van uw samenvatting beoordeelt een advocaat de inhoud en spreekt daarna over de mogelijke omvang van het werk, nog benodigde stukken en de volgende stappen. Bij fiscale of boekhoudkundige vragen kan het kantoor samenwerken met de boekhoudafdeling.',
             'Het resultaat van elke zaak hangt af van de feiten en de aanwezige stukken; wij beloven geen resultaat. Als u een bindend antwoord voor uw situatie nodig hebt, moeten de stukken in een van de vier consultatietalen met een advocaat worden besproken.',
           ],
         },
@@ -750,9 +750,9 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'CONTACT',
       title: 'Hoe u het kantoor bereikt',
       description:
-        'De taal van de pagina, de consultatietalen, de werkwijze als u geen van de vier talen kunt gebruiken, en wat deze pagina niet toezegt.',
+        'De taal van de pagina, de consultatietalen, de werkwijze als u geen van de vier talen spreekt, en wat deze pagina niet toezegt.',
       intro:
-        'Houd, voordat u ons schrijft, de volgende drie punten uit elkaar. Zij worden vaak vermengd, maar betekenen iets anders.',
+        'Houd, voordat u ons schrijft, de volgende drie punten uit elkaar. Zij worden vaak door elkaar gehaald, maar betekenen iets anders.',
       sections: [
         {
           heading: 'Drie dingen die gescheiden moeten blijven',
@@ -766,7 +766,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Als u geen van de vier consultatietalen kunt gebruiken',
+          heading: 'Als u geen van de vier consultatietalen spreekt',
           paragraphs: [
             'In het contactformulier kunt u “Communicatiekanaal moet worden bevestigd” kiezen. Wij antwoorden om te onderzoeken of er een werkbare manier van communiceren bestaat; een dienst in een andere taal wordt niet gewaarborgd en een antwoordtermijn niet toegezegd.',
             'Dit is alleen een controle, geen belofte. Wij beloven geen tolk en geen dienst in het Nederlands of in een andere taal buiten de vier genoemde talen, en wij nemen niet elke zaak aan.',
@@ -782,7 +782,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Wat deze pagina niet toezegt',
           paragraphs: [
-            'Wij beloven geen antwoordtermijn, bevestigen geen afspraak via deze pagina, beloven geen bepaalde advocaat en stellen geen tolk ter beschikking. Schriftelijke vertaling is iets anders: uw bericht wordt niet automatisch vertaald.',
+            'Wij beloven geen antwoordtermijn, bevestigen geen afspraak via deze pagina, beloven niet dat een bepaalde advocaat de zaak behandelt en stellen geen tolk ter beschikking. Schriftelijke vertaling is iets anders: uw bericht wordt niet automatisch vertaald.',
             'Als u een verzoek stuurt, wordt de inhoud bewaard en wacht op beoordeling. Ontvangt u na enige tijd geen antwoord, dan kunt u opnieuw schrijven naar het e-mailadres op de contactpagina.',
           ],
         },
@@ -820,7 +820,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
             'Nee. Deze toelichting is in het Nederlands geschreven, maar het gesprek met een advocaat vindt alleen plaats in het Engels, Chinees (中文), Japans en Koreaans. Wij beloven ook geen tolk. Schriftelijke vertaling is iets anders: de oorspronkelijke tekst die u schrijft, wordt zo bewaard en niet automatisch vertaald.',
         },
         {
-          question: 'Wat als ik geen van de vier talen kan gebruiken?',
+          question: 'Wat als ik geen van de vier talen spreek?',
           answer:
             'Kies bij het sturen van het verzoek “Communicatiekanaal moet worden bevestigd”. Wij antwoorden om te onderzoeken of er een werkbare manier van communiceren bestaat, maar een dienst in een andere taal wordt niet gewaarborgd. Dit is een controle, geen belofte dat wij in een andere taal kunnen werken.',
         },
@@ -894,7 +894,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kennisgeving en ontvangstnummer',
           paragraphs: [
-            'Wordt een verzoek succesvol verzonden, dan stelt het systeem het kantoor in kennis. Is de ontvangst van deze kennisgeving door het kantoor nog niet bevestigd, dan blijft uw tekst bewaard en gaat zij niet verloren.',
+            'Als het verzoek is verzonden, stelt het systeem het kantoor daarvan in kennis. Is de ontvangst van deze kennisgeving door het kantoor nog niet bevestigd, dan blijft uw tekst bewaard en gaat zij niet verloren.',
             'Het ontvangstnummer dient om uw verzoek in onze stukken terug te vinden. Het wordt na het bewaren getoond; u kunt het bij een nieuw contact noemen.',
           ],
         },
@@ -918,7 +918,7 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'VOORBEHOUD',
       title: 'Omvang en grenzen van de informatie op deze pagina',
       description:
-        'Het algemene karakter van de informatie, het juridische geldingsgebied en de voorwaarden van een relatie tussen advocaat en cliënt.',
+        'Het algemene karakter van de informatie, het toepasselijke recht en de voorwaarden van een relatie tussen advocaat en cliënt.',
       intro:
         'Dit deel maakt duidelijk wat deze Nederlandse toelichtingspagina’s voor u kunnen doen en wat niet.',
       sections: [
@@ -930,10 +930,10 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Juridisch geldingsgebied',
+          heading: 'Welk recht',
           paragraphs: [
             'Het kantoor werkt volgens Taiwanees recht, en deze pagina spreekt alleen over werk in dat kader.',
-            'De inhoud is geen advies volgens het recht van een andere rechtsorde dan Taiwan, met inbegrip van het recht van uw woonplaats. Raakt een deel van uw zaak een andere rechtsorde, dan overleggen wij met u welke bevoegde deskundige u voor dat deel nodig hebt.',
+            'De inhoud is geen advies volgens een andere rechtsorde dan de Taiwanese, met inbegrip van het recht van uw woonplaats. Raakt een deel van uw zaak een andere rechtsorde, dan overleggen wij met u welke bevoegde deskundige u voor dat deel nodig hebt.',
           ],
         },
         {
@@ -946,8 +946,8 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Geen resultaatbelofte',
           paragraphs: [
-            'Geen deel van deze pagina is een belofte over het resultaat van een zaak, over de inwilliging van een aanvraag of over verblijfs- en werkstatus.',
-            'Externe koppelingen dienen ter oriëntatie; wij waarborgen noch de juistheid noch de actualiteit van inhoud van derden.',
+            'Niets op deze pagina is een belofte over het resultaat van een zaak, over de inwilliging van een aanvraag of over verblijfs- en werkstatus.',
+            'Externe koppelingen dienen ter oriëntatie; wij waarborgen noch de juistheid noch de actualiteit van de inhoud van derden.',
           ],
         },
       ],
@@ -956,9 +956,9 @@ export const dutchGuidanceContent: GuidanceLocaleContent = {
       eyebrow: 'ARTIKELEN',
       title: 'Artikelen over Taiwanees recht',
       description:
-        'Nederlandse artikelen over veelgestelde vragen over het Taiwanese recht. De inhoud is algemene informatie op het tijdstip van publicatie, geen juridisch advies voor uw zaak.',
+        'Nederlandse artikelen over veelgestelde vragen van het Taiwanese recht. De inhoud is algemene informatie op het tijdstip van publicatie, geen juridisch advies voor uw zaak.',
       intro:
-        'Het kantoor publiceert artikelen over veelgestelde vragen over het Taiwanese recht. Artikelen die in het Nederlands beschikbaar zijn, staan op deze pagina; daarnaast zijn er vier koppelingen die elk de artikelenlijst van een oorspronkelijke taal openen.',
+        'Het kantoor publiceert artikelen over veelgestelde vragen van het Taiwanese recht. Artikelen die in het Nederlands beschikbaar zijn, staan op deze pagina; daarnaast zijn er vier koppelingen die elk de artikelenlijst van een oorspronkelijke taal openen.',
       sections: [
         {
           heading: 'Vier lijsten in de oorspronkelijke taal',

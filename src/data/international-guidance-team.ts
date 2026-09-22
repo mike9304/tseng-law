@@ -800,10 +800,10 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'НАША КОМАНДА',
     title: 'Міжнародна команда Hovering',
     description:
-      'Профілі адвокатів, операційного керівництва та партнерської бухгалтерії Hovering.',
+      'Профілі адвокатів, операційного керівництва та бухгалтера-партнера Hovering.',
     representativeTitle: 'Керівна адвокатка',
     teamTitle: 'Адвокати та співробітники',
-    partnerTitle: 'Партнерська бухгалтерія',
+    partnerTitle: 'Бухгалтер-партнер',
     introLabel: 'Ознайомлення',
     educationLabel: 'Освіта',
     experienceLabel: 'Досвід',
@@ -3336,7 +3336,7 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'Магістр (M.S.), Institute of Finance, National Taiwan University',
-        'Бакалавр (B.A.) подвійної програми права та фінансів, National Chengchi University',
+        'Бакалавр (B.A.) права та фінансів (дві спеціальності), National Chengchi University',
         'Навчання за обміном у Kobe University та Waseda University',
       ],
       experience: [
@@ -3374,7 +3374,7 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'Узгоджує час консультацій і спілкування для клієнтів із Кореї.',
-        'Підтримує міжрегіональний обмін через системи документів і робочі процеси, маючи підготовку з інформатики.',
+        'Підтримує обмін між напрямами через системи документів і робочі процеси, маючи підготовку з інформатики.',
       ],
       education: [
         'Бакалавр (B.S.) з інформатики, National Cheng Kung University',

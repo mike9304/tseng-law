@@ -1,0 +1,75 @@
+WO-F-uk r2 — Grok 4.7 fix lane
+date: 2026-09-22
+workspace: /Users/son7/Projects/tseng-law-fix-uk-r2
+
+## Rows applied
+
+uk-a (part a), P1/P2 applied: 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46.
+uk-b (part b), P2 applied: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 37.
+No P3 rows were in either review.
+Column 009 had no wording row. Its Hangul `url` and U+200B lines were left as in the skip list below.
+Guidance pack + inquiry + llms.txt: the uk-a guidance rows (7–9, 28–34, 47 skipped) were edited in the .ts sources, not the dump.
+
+Row 4 (004 link label): the anchor now names the withholding-rate standards (各類所得扣繳率標準), article 3, which is what `flno=3` opens. The Korean anchor still contains the digit 10, so the label keeps “(підпис джерела: стаття 10)”. The URL is unchanged.
+Row 26 (007 conditions): agreement fixed to “є окремими самостійними умовами”. The digit 2 was kept (“підпис 2 або більше свідків”); the suggested “двох” would drop a counted number.
+Row 45 / 46 and row uk-b 26: suggested rewrites that dropped a counted digit were rewritten so the digit stays (“30.000 TWD”, “за 1 повний рік”, “не вище ніж у 1 раз”).
+Row 48 / uk-b 36: currency code moved after the amount. Thousands stay dotted. See skips.
+
+## Rows skipped
+
+- uk-a 6 (P1, Hangul `url` in 008 and 009). ACCEPTED-ROUND / R16: frontmatter `url` is canonical source metadata. Not edited.
+- uk-a 23 (P2, make Q16–Q20 headings and clear U+200B splits in 003, 005, 006, 008, 009). English and Korean keep Q16–Q20 as plain lines. The checker compares heading levels, block counts, and ZWSP counts with the Korean source. Rephrasing inside a block cannot turn those lines into `##` headings or delete the zero-width spaces.
+- uk-a 47 (P2, “TWD 1.57M” → “1,57 млн TWD”). Pinned byte-identical. Left as “TWD 1.57M”.
+- uk-a 48 and uk-b 36 (P2, space thousands “500 000” / “1 579 589”). ACCEPTED-ROUND: space separators fail the checker. Ukrainian style in `NUMBER_THOUSAND_STYLE` is `dot`. Amounts stay `500.000`. The currency-after half of the same rows was applied (`500.000 TWD`), 76 occurrences. “TWD 1.57M” was not among them.
+- uk-b 21 (P2, delete U+200B in 013 and 015). Same ZWSP parity as uk-a 23. Zero-width spaces left in place.
+- uk-b 33 (P2, join “Окрім ситуації на ринку” with the next two lines in 015, and the same one-clause layout in 013). English is split the same way. Joining would change the block count. Each line was left as its own block.
+
+## Systemic patterns
+
+Swept across the 18 columns and the Ukrainian guidance pack, not only the quoted line.
+
+- “скористатися” for speaking a language → “володіти”. 5 strings (contact paragraph, page blurb, heading, FAQ question, inquiry notice). “скористатися системою / послугою / імпортером” left, because that is “make use of a thing”.
+- “крок розгляду” → “етап розгляду”. 2 (contact FAQ heading body and the language FAQ answer).
+- “біля джерела” → “у джерела виплати”. 18 (001, 002, 004, 005, including link labels).
+- Company-law holders. “присутні учасники, що представляють … випущених акцій” → акціонери: 6 (002, 股份有限公司 / public company). 有限公司 holders “Акціонери товариства з обмеженою відповідальністю” and the following “акціонери/акціонер зловживають/надало поруку” in that paragraph → учасники: 4. Other “учасники” for a 有限公司 were already right and were not flipped.
+- English “each/all” after the verb. 8: “вимагають кожне” 2, “мають кожне” 1, “повинні всі оброблятися” 1, “треба всі розглянути” 1, “треба розглядати кожен” 1, “треба кожен підтвердити” 1, “треба кожний трактувати” 1.
+- “обробка” where it meant accounting treatment, settlement, or consequences. 17: “бухгалтерська та податкова обробка” 1, “бухгалтерськ* обробк*” 4, “податков* обробк*” 4, “консолідовану або окрему бухгалтерську обробку” 1, “обробляються відносно головного офісу” 1, “ту саму обробку” 1, “після обробки боргів і податків” 3, “після повної обробки боргів” 1, “обробка кредиторів і податків” 1, “порядок обробки боргів” 1. “обробку гарантій” (warranty handling) and “обробку страхових виплат” were left.
+- “отримання вигід” → “отримання доходів”. 3. “економічними власниками” → бенефіціарні власники. 3.
+- “в рамках” / “законним рамкам” → “в межах” / “законним межам”. 2 (the “в рамках” instance was inside the each/all sentence above).
+- Currency order `TWD|USD` + dotted thousands → amount then code. 76. Dot grouping kept. Decimal comma (`0,5`) unchanged.
+- R2e hiring question in 005: dropped “(зокрема громадян Кореї)”. The answer already states the foreign-national work-permit rules. The Korea FX section in 005 stays, because the heading already labels it as a Korea example.
+- R2b country-note, R4 feminine Wei Tseng, R5 “НАША КОМАНДА” / “ОФІСИ” / “Повний профіль (англійською)”, R9 “119 / 110 / 112”, and day–month–year dates were already in place and were not rewritten.
+- R6b fullwidth colon remains only inside the 008 `url`, which was not edited.
+
+## §Verify
+
+Command sequence as in the work order. `git status` is from before this log file existed (this file makes the count 26).
+
+```
+===== CHECKER =====
+neighbour      PASS   
+hanzi          PASS   han=59
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+===== MARKERS =====
+       0
+===== TSC =====
+TSC_OK
+===== VITEST =====
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+===== GIT =====
+      25
+```
+
+Checker `summary PASS 18/18`. Markers 0. TSC_OK. Tests passed. No Ukrainian test expected-string had to change: nothing in `src/lib/__tests__` or `src/data/__tests__` pinned the rewritten FAQ or title strings. The pinned bio token `TWD 1.57M` and the consultation-notice / confidential-notice substrings were left intact. `discoveryNotice` still contains the literal `llms.txt`; “показу” there became “гарантованої видимості”.
+
+## Reviewer disagreements (not applied as specified)
+
+- Space as the thousands separator is normal Ukrainian, and the reviewer is right about that. It was not applied because this locale’s checker only accepts dots (`uk: 'dot'` in `scripts/check-column-translation.mjs`). Currency-after with dots was applied instead.
+- Q16–Q20 are not headings in the English or Korean files, and the U+200B line breaks match the Korean source. Treating them as a Ukrainian-only defect and deleting them would fail `headings` / `blocks` (ZWSP). Not applied.
+- The 004 link label “стаття 10 Закону про податок на підприємницьку діяльність” is wrong for the URL, and the reviewer’s instrument (withholding-rate standards, article 3) is right. A label that says only “стаття 3” fails the number check, because the Korean anchor still contributes a 10. Both digits are in the label; the URL is untouched.

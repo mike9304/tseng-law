@@ -13,3 +13,6 @@ Scope for the fixer: RULEBOOK-FIX.md (R2–R10 + round-2 addendum R12–R17) + e
 - Register: vostè everywhere; fix the tu ("Recorda l'època" in 006) and vosaltres ("Seguiu-nos") forms.
 - Spanish calques (d'avançada → per endavant sweep, extrems anàlegs, al costat de, Idioma de visualització → Idioma de la pàgina) → sweep. Blog voice R7 (feminine narrator).
 - Numbers: keep dot thousands "500.000" (R14); "1.57M" pinned.
+
+## Part b
+Apply every P1/P2 row of `ca-b.md` under the same skip rules. Additional: b#1 "cau" → the English meaning (a manager's work permit is relatively easier to obtain; no promise). b#2 finestreta → "via de presentació / organismes diferents" sweep 017. b#3 Estatut → Llei (part-a rule) sweep 013/017; keep "estatuts" for 章程 in 018. b#4, b#5 Spanish leftovers (coherederos → cohereus; acus → rebuts/justificants; Salvo → Llevat de; destell → llampada/senyal de llums; annexar → adjuntar; entrega → lliurament) sweep 010–018. Apostrophes before vowels, "junts" agreement, Latin/English scaffolding (dies a quo → data d'inici; de forma primerenca → aviat) → sweep. Blog voice 013/015 → R7.

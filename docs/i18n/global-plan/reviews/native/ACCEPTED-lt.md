@@ -15,3 +15,6 @@ Scope for the fixer: RULEBOOK-FIX.md (R2–R10 + round-2 addendum R12–R17) + e
 - a#1 "Be atlygio" → "Šalia atlygio" — also guidanceAnswers.lt.pricing. a#7–a#9 apply as suggested.
 - Systemic: "be" as German "neben" (sweep), blog voice in 003 Q16–20/006/008/009 (R7, feminine narrator), German word-order calques flagged in P2.
 - Numbers: keep dot thousands "500.000" (R14, checker); currency order per reviewer is fine ("500.000 TWD" parses).
+
+## Part b
+Apply every P1/P2 row of `lt-b.md` under the same skip rules. Additional: b#1 ROC year → R13. b#7 Taipėjus (part-a rule). b#10 "Q." → Lithuanian question form (as the sister locales: "Kl." or drop). b#12 legado → legatas. "matas" → "standartas/kriterijus"; "tarnyba" → "darbo/įsidarbinimo laikotarpis (最低服務年限)" sweep 014; "namų darbai" → "namų ruoša". Numbers keep dot thousands (R14). Blog voice 013/015 → R7.

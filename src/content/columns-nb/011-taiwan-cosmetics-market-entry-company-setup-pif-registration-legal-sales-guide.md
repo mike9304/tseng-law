@@ -44,7 +44,7 @@ Det taiwanske datterselskapet og filialen av et utenlandsk selskap er ikke den s
 
 Hvis prosedyren for utenlandsk investering er nødvendig, skal veiledningen fra **avdelingen for investeringsgjennomgang under Taiwans økonomidepartement (經濟部投資審議司)** som nå er kompetent myndighet bekreftes. Tiden som er nødvendig til godkjenningen av investeringen, overføringen av midler, registreringen av selskap eller filial, åpningen av en bankkonto, skatteregistreringen (稅籍登記) og oppnåelsen av importørkvalifikasjonen, skiller seg etter investoren, bransjen, organisasjonsformen, de inngitte dokumentene og om det skjer retting eller supplering. Derfor skal man, i stedet for å fastlegge lanseringsdatoen ut fra en antagelse om 1 bestemt tidsramme, først bekrefte anvendelsen av hver formalitet og de nyeste opptaksbetingelsene.
 
-Hvilken struktur som enn velges, er den sentrale ansvarlige etter kosmetikkreglene **produsenten eller importøren av kosmetikk (化粧品製造或輸入業者)**. Ordningen av produktopplysningene eller sikkerhetsvurderingen (安全性評估) kan overdras til en ekstern sakkyndig, men det at man overlater arbeidet overfører ikke det lovbestemte ansvaret hos produsenten eller importøren. Skillet mellom arbeidsdelingen ifølge avtalen og den ansvarlige etter reglene er utgangspunktet for undersøkelsen av adgangsstrukturen.
+Uansett hvilken struktur som velges, er den sentrale ansvarlige etter kosmetikkreglene **produsenten eller importøren av kosmetikk (化粧品製造或輸入業者)**. Ordningen av produktopplysningene eller sikkerhetsvurderingen (安全性評估) kan overdras til en ekstern sakkyndig, men det at man overlater arbeidet overfører ikke det lovbestemte ansvaret hos produsenten eller importøren. Skillet mellom arbeidsdelingen ifølge avtalen og den ansvarlige etter reglene er utgangspunktet for undersøkelsen av adgangsstrukturen.
 
 ## 2. Produktregistreringen og PIF er 2 atskilte ordninger
 
@@ -56,11 +56,11 @@ Produktregistreringen av kosmetikk skjer på TFDAs plattform for produktregistre
 
 Gyldighetsperioden for produktregistreringen er 3 år. Vil man fortsette forsyningen, skal anmodningen om forlengelse (展延) inngis innenfor de 3 månedene før utløpet. Endres de registrerte angivelsene, slik som produktnavnet, bruken, beredningsformen (劑型), sammensetningen og fremstillingsstedet, skal det også bekreftes om en formalitet som svarer til endringens innhold, er nødvendig.
 
-Produktregistreringen er formaliteten til på plattformen å angi de bestemte opplysningene. Avslutningen av registreringen betyr ikke at alle til PIF nødvendige dokumenter er fullstendige, og er heller ikke en vurdering av at produktets merking eller reklame er lovlig. Kalenderen for produktregistrering, forvaltningen av PIF og gjennomgangen av merking og reklame skal føres som atskilte etterlevelsespunkter.
+Produktregistreringen er prosedyren der de fastsatte opplysningene oppgis på plattformen. Avslutningen av registreringen betyr ikke at alle til PIF nødvendige dokumenter er fullstendige, og er heller ikke en vurdering av at produktets merking eller reklame er lovlig. Kalenderen for produktregistrering, forvaltningen av PIF og gjennomgangen av merking og reklame skal føres som atskilte etterlevelsespunkter.
 
 ### Opplysningene i PIF og anvendelsen i etapper
 
-PIF er et ordnet hele av opplysninger, så strukturert at produktets kvalitet og sikkerhet kan dokumenteres løpende. Utover kvalitet, sikkerhet, sammensetning, påstått funksjon (宣稱功能), fremstillingsmåte, prøveresultater og sikkerhetsvurdering skal pr. produkt grunnopplysningene om produkt og produsent og støttedata, slik som etiketten, ordnes. Forskriften om forvaltning av produktinformasjonsfilen for kosmetikk (化粧品產品資訊檔案管理辦法) ordner de nødvendige opplysningene i 16 kategorier, så opplysningene i hver kategori og kravene til underskrift og kvalifikasjon skal bekreftes etter produkttypen.
+PIF er en samling av opplysninger som er lagt opp slik at produktets kvalitet og sikkerhet kan dokumenteres løpende. Utover kvalitet, sikkerhet, sammensetning, påstått funksjon (宣稱功能), fremstillingsmåte, prøveresultater og sikkerhetsvurdering skal pr. produkt grunnopplysningene om produkt og produsent og støttedata, slik som etiketten, ordnes. Forskriften om forvaltning av produktinformasjonsfilen for kosmetikk (化粧品產品資訊檔案管理辦法) ordner de nødvendige opplysningene i 16 kategorier, så opplysningene i hver kategori og kravene til underskrift og kvalifikasjon skal bekreftes etter produkttypen.
 
 PIF-ordningen er i etapper anvendt etter produktgrupper. Fra 1. juli 2026 faller den resterende kosmetikken også under anvendelsesgjenstanden, så den i prinsippet gjelder all kosmetikk. Unntaket begrenser seg til den faste håndlagde såpen fremstilt på et produksjonssted som er fritatt for fabrikkregistrering. Et produkt er ikke utelukket alene fordi det er håndlaget, eller fordi det bærer navnet såpe; begge skal bekreftes, den faste formen og betingelsen om fritak for fabrikkregistrering (工廠登記) av produksjonsstedet.
 
@@ -76,7 +76,7 @@ Også når opprinnelsesprodusenten oppbevarer originalen, eller når det brukes 
 
 ### Inspeksjon, avhjelping og administrative tiltak
 
-Når den kompetente myndigheten inspiserer PIF, underretter den i prinsippet produsenten eller importøren av kosmetikk (化粧品製造或輸入業者) senest 7 dager før inspeksjonsdagen. Faller saken imidlertid under et lovbestemt unntak fastlagt i den tilknyttede reguleringen, kan inspeksjonen finne sted uten forutgående underretning. Uansett om det finnes en underretning, skal den tilstanden til enhver tid opprettholdes som tillater å lokalisere og forelegge de fullstendige ajourførte opplysningene.
+Når den kompetente myndigheten inspiserer PIF, underretter den i prinsippet produsenten eller importøren av kosmetikk (化粧品製造或輸入業者) senest 7 dager før inspeksjonsdagen. Faller saken imidlertid under et lovbestemt unntak fastlagt i den tilknyttede reguleringen, kan inspeksjonen finne sted uten forutgående underretning. Uansett om det finnes en underretning, skal fullstendige og ajourførte opplysninger til enhver tid holdes i en stand som gjør det mulig å finne dem frem og legge dem frem.
 
 Angivelsen av falske opplysninger i produktregistreringen eller innføringen av falske opplysninger i PIF kan være gjenstand for en administrativ bot (罰鍰) på 10.000 TWD til 1.000.000 TWD (新臺幣). Er PIF-opplysningene derimot ufullstendige, påbyr den kompetente myndigheten sedvanligvis avhjelpingen innen en bestemt frist (限期改正), og den administrative boten kommer først på tale hvis det ikke avhjelpes innen fristen. De falske opplysningene og en dokumentasjonsmangel som ennå kan rettes, må ikke behandles som om de fikk samme rettsfølge.
 
@@ -90,7 +90,7 @@ Reklame vurderes ikke alene etter meningen, men etter helheten av fremstillingen
 
 Om merking, promovering (宣傳) eller reklame er falsk eller overdreven, eller om de påstår en medisinsk virkning (醫療效能), vurderes ikke alene etter 1 bestemt ord. Sammen undersøkes produktnavnet, setningene, bildet, tegnet, lyden, den forutgående og etterfølgende konteksten og det samlede inntrykket som forbrukeren mottar. Inntrykket som den sentrale reklamefremstillingen skaper, oppheves ikke nødvendigvis av et forbehold med liten skrift, så både hver enkelt tekst og den endelige reklamen, slik den faktisk publiseres, skal gjennomgås.
 
-Anføres det for eksempel at et kosmetikum behandler akne, har en antiinflammatorisk virkning eller dreper bakterier, kan dette utgjøre en påstand om medisinsk virkning. Det skal også sammen bekreftes måten å kombinere navnet på en sykdom med produktet, bildene før og etter bruken, en fremstilling som gir inntrykk av helsepersonell, og konteksten som knytter forklaringen av ingrediensen til en terapeutisk virkning av produktet.
+Anføres det for eksempel at et kosmetikum behandler akne, har en antiinflammatorisk virkning eller dreper bakterier, kan dette utgjøre en påstand om medisinsk virkning. Det skal også sammen bekreftes måten å kombinere navnet på en sykdom med produktet, bildene før og etter bruken, en fremstilling som leder tanken hen på helsepersonell, og konteksten som knytter forklaringen av ingrediensen til en terapeutisk virkning av produktet.
 
 Den administrative boten for falsk eller overdreven reklame (虛偽誇大廣告) er 40.000 TWD til 200.000 TWD, og den administrative boten for påstand om medisinsk virkning er 600.000 TWD til 5.000.000 TWD. Fordi intervallet skiller seg etter overtredelsestypen, skal helheten av reklamefremstillingen før offentliggjøring sammenholdes med støttedataene.
 
@@ -107,7 +107,7 @@ Salgsforberedelsen i Taiwan, hvis man verifiserer den i den følgende rekkefølg
 1. Fastlegge om man selv stifter et datterselskap (子公司) eller en filial (分公司) i Taiwan, eller overdrar import og salg til en lokal importør.
 2. Bekrefte den ansvarlige som bærer det lovbestemte ansvaret som produsent eller importør av kosmetikk, og den ansvarlige for arbeidet ifølge avtalen.
 3. Avslutte produktregistreringen før levering, salg, avgivelse vederlagsfritt, offentlig utstilling eller tilrådighetsstillelse til prøve hos forbrukeren.
-4. Utarbeide PIF pr. produkt, ajourføre endringene og oppbevare det etter den lovbestemte perioden og det lovbestemte stedet.
+4. Utarbeide PIF pr. produkt, ajourføre endringene og oppbevare den i den lovbestemte perioden og på det lovbestemte stedet.
 5. Gjennomgå etiketten, salgssiden, reklamen og samarbeidsoffentliggjøringene etter målestokken for helheten av fremstillingen.
 6. Føre prosedyren for å reagere på inspeksjoner og avhjelpingsanmodninger, klager, sikkerhetsopplysninger og den nødvendige oppfølgingen.
 
@@ -129,6 +129,6 @@ Grunnstrukturen for selskap og filial (分公司) kan ses i [Grunnlaget for sels
 - [Invest Taiwan — redegjørelse om utenlandsk investering](https://investtaiwan.nat.gov.tw/showPage?lang=eng&search=InvestmentStatus01)
 - [Avdelingen for investeringsgjennomgang under Taiwans økonomidepartement — veiledning](https://mnscdn.moea.gov.tw/Mns/dir/content/Content.aspx?menu_id=42879)
 
-Denne artikkelen er et undervisningsdokument bestemt til alminnelig å belyse den ordningen som er knyttet til et merkes adgang til kosmetikkmarkedet i Taiwan; den er ikke en juridisk vurdering av et konkret produkt eller en konkret reklame (廣告) og fastslår ikke at tillatelsen eller registreringen vil bli oppnådd, at salget vil være mulig, eller at en behandlingsfrist vil bli overholdt. Adgangsformen, produktopplysningene, innholdet i merking og reklame og den nyeste praksisen hos den kompetente myndigheten skal bekreftes i hver sak.
+Denne artikkelen gir generell veiledning om ordningen for et merkes adgang til kosmetikkmarkedet i Taiwan; den er ikke en juridisk vurdering av et konkret produkt eller en konkret reklame (廣告) og fastslår ikke at tillatelsen eller registreringen vil bli oppnådd, at salget vil være mulig, eller at en behandlingsfrist vil bli overholdt. Adgangsformen, produktopplysningene, innholdet i merking og reklame og den nyeste praksisen hos den kompetente myndigheten skal bekreftes i hver sak.
 
 **Advokat Wei Tseng (曾雋崴)**

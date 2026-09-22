@@ -3010,7 +3010,7 @@ export const guidanceTeamBios: Record<
         'Hun representerte en koreansk student i et erstatningskrav etter en skade på et treningssenter; saken endte med dom i første instans på 1 570 000 TWD.',
       ],
       education: [
-        'Master (M.S.), Institute of Finance, National Taiwan University',
+        'Mastergrad (M.S.) ved Institute of Finance, National Taiwan University',
         'Bachelor (B.A.) med to fag, jus og finans, National Chengchi University',
         'Utvekslingsstudent ved Kobe University og Waseda University',
       ],

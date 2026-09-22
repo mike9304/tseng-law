@@ -45,7 +45,7 @@ Hvis du har vanskelig for personlig å gå til matrikkelkontoret (地政事務�
 
 kan du be en bekjent i Taiwan, utleieren, en megler eller en advokat om hjelp.
 
-Hvis kontrollresultatet angir at restaurantnæringen ikke er mulig, kan byadministrasjonen senere ved registreringen av den juridiske personen (公司登記) nekte registreringen.
+Hvis kontrollresultatet angir at restaurantnæringen ikke er mulig, kan byadministrasjonen senere nekte selskapsregistreringen (公司登記).
 
 Vær derfor oppmerksom på dette punktet.
 
@@ -59,11 +59,11 @@ Ved selskapsregistreringen registreres imidlertid ofte flere forretningsgrener s
 
 I praksis trenger derfor ikke alle grener å undersøkes ved selskapsregistreringen.
 
-Ifølge «[arbeidsretningslinjene for opplysningstjenesten om forretningssteder i byen Taipei](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)»(臺北市營業場所協助查詢服務作業須知) og den gjeldende veiledningen fra byen Taipei
+Ifølge «[arbeidsretningslinjene for Taipeis tjeneste for assistert forespørsel om forretningssted](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)»(臺北市營業場所協助查詢服務作業須知) og den gjeldende veiledningen fra byen Taipei
 
 skal siden 1. januar 2023 ved søknad om registrering av stiftelse, av flytting av hjemsted eller av tilføyelse av forretningsgrener for et selskap eller en virksomhet (herunder filialen (分公司) og underavdelingen (分支機構)) resultatet av den forutgående forespørselen om forretningsstedet **obligatorisk** vedlegges registreringssøknaden, uavhengig av bransjen.
 
-Listen nedenfor over de «forretningsgrener som handelskontoret undersøker på eget initiativ» (主動查詢之營業項目) betegner de forretningsgrenene som handelskontoret undersøker på eget initiativ under registreringsprøvingen (隨案主動查詢), når grenen står i søknaden, men mangler i det vedlagte resultatet; det forhold at en gren ikke står på denne listen, betyr ikke at kontrollen er fritatt.
+Listen nedenfor over de «forretningsgrener som handelskontoret undersøker på eget initiativ» (主動查詢之營業項目) betegner de forretningsgrenene som handelskontoret undersøker på eget initiativ under registreringsprøvingen (隨案主動查詢), når grenen står i søknaden, men mangler i det vedlagte resultatet; det forhold at en gren ikke står på denne listen, betyr ikke at grenen er fritatt for kontrollen.
 
 Hvis man åpner på et sted der restaurantnæringen ikke er mulig, kan senere en administrativ bot (罰鍰) fra den kompetente myndigheten følge.
 
@@ -73,7 +73,7 @@ Hvis man åpner på et sted der restaurantnæringen ikke er mulig, kan senere en
 
 Dermed er gjennomgangen avsluttet; har du flere spørsmål, kan du rådføre deg med en advokat i Taiwan (rådgivning foregår bare på engelsk, kinesisk, japansk eller koreansk).
 
-Myndighetenes regler kan ofte endres; før registreringen av den juridiske personen bør du bekrefte de nyeste forskriftene.
+Myndighetenes regler kan ofte endres; før selskapsregistreringen bør du bekrefte de nyeste forskriftene.
 
 ---
 

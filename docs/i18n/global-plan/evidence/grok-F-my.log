@@ -1,0 +1,164 @@
+# WO-F-my — Burmese fix lane (Grok 4.7) — 2026-09-22
+
+Workspace: /Users/son7/Projects/tseng-law-fix-my-20260922
+No git add/commit/push. No test file was modified (pinned Burmese phrases that tests assert were not removed).
+Scope written: src/content/columns-my/*.md (18), src/data/international-guidance-southeast-central.ts (burmeseGuidanceContent only), src/data/international-guidance-team.ts (my copy + my bios), src/data/international-guidance-answers.ts (my), src/data/international-inquiry-copy.ts (my), src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.my discoveryNotice only).
+Offices my labels were already Burmese (ရုံးများ / ရုံးခွဲများ); no review row required a change.
+
+## Rows applied — part a
+
+a#1  P1 “none of the four languages”: တစ်မျိုးမျိုး → တစ်မျိုးမျှ. Guidance home FAQ answer, FAQ question, inquiry methodConfirmationNotice, form option needs-method-confirmation. Left တစ်မျိုးဖြင့် (“in one of the four”).
+a#2  P1 llms discoveryNotice rewritten to the four denials (rank, recommendation, AI suggestion, advertisement). consultationNotice and confidentialNotice unchanged.
+a#3  P1 bio: judgment obtained in the student’s favour. Bytes TWD 1.57M kept. Feminine သူမ.
+a#4  P1 資遣費: နုတ်ထွက်ကြေး → အလုပ်ရှင်က ရပ်စဲသည့်အခါ ပေးရသော လျော်ကြေး. Sweep of columns 002/008/009/014 (titles included) and the guidance labor paragraph. Other countries’ similarly named payments → အခြားနိုင်ငံများ၏ အလုပ်ရပ်စဲလျော်ကြေး. Residual နုတ်ထွက်ကြေး: 0. Current column hits of the new phrase: 002×1, 008×19, 009×7, 014×1.
+a#5  P1 contact title → ရုံးထံ မည်သို့ စာပေးပို့နိုင်သနည်း (supervisor: how to send a message). 10 column link labels (001, 002, 004, 005, 007, 013, 014, 015, 016, 017) + guidance contact title. Same string covers b#9.
+a#6  P1 004 အာမခံဈေးကွက် → စတော့ဈေးကွက် (1). Left စတော့အိတ်ချိန်း and 018 inventory စတော့.
+a#7  P1 surname 林 only in the three 006 contexts: လင်း (林). Did not globally replace လင် (it is a substring of လင့်ခ် and appears inside ရှင်းလင်း).
+a#8  P1 民法/民事: ပြည်သူ့ဥပဒေ → တရားမဥပဒေ (45), ပြည်သူ့လုပ်ထုံးလုပ်နည်းဥပဒေ → တရားမလုပ်ထုံးလုပ်နည်းဥပဒေ (4), ပြည်သူ့ဆုံးဖြတ်ချက် → တရားမဆုံးဖြတ်ချက် (1, 007). Choice-of-law အရပ်ဘက် for 民事 left (b#12). Residual ပြည်သူ့ဥပဒေ: 0.
+a#9  P1 009 fault: three existing blocks kept. Employer-at-fault → worker may claim; worker-at-fault → employer may withhold; the right differs by which side is at fault.
+a#11 P2 partner CPA: တွဲဖက်စာရင်းကိုင် → မိတ်ဖက် လက်မှတ်ရစာရင်းကိုင် (team description, partnerTitle, role huang-shengping, lawyers page description, lawyers answer).
+a#12 P2 copyright gloss မူပိုင်ခွင့် (著作權) on the IP list item and the services paragraph. Did not double a line that already had ခွင့်.
+a#13 P2 Rechtsform: ဥပဒေပုံစံ → ကုမ္ပဏီပုံစံ in the two company-formation sentences.
+a#14 P2 001 equity: ရှယ်ယာ သို့မဟုတ် စတော့ ဖွဲ့စည်းပုံ → ရှယ်ယာဖွဲ့စည်းပုံ (1).
+a#15 P2 issuance, not “publish”: ထုတ်ဝေကုမ္ပဏီ → ရှယ်ယာထုတ်ကုမ္ပဏီ (4); ထုတ်ဝေပြီး ရှယ်ယာ → ထုတ်ပြီး ရှယ်ယာ (8); ရှယ်ယာမထုတ်ဝေ → ရှယ်ယာမထုတ် (1); ရှယ်ယာထုတ်ဝေ → ရှယ်ယာထုတ် (1). Left 011 advertisement ထုတ်ဝေမီ / နောက်ဆုံး ထုတ်ဝေသော ပို့စ်.
+a#16 P2 008 statute: အငြိမ်းစားကြေးစည်းမျဉ်း → အငြိမ်းစားကြေးဥပဒေ (2, including the blockquote).
+a#17 P2 003 appellate: ဒုတိယအဆင့် နှုတ်လျှောက်လဲလှယ်မှု → အယူခံအဆင့် (二審) နှုတ်လျှောက်လဲလှယ်မှု (1). 007 court-level list glossed as ပထမအဆင့် (一審)၊ အယူခံအဆင့် (二審). Bio ပထမအဆင့်တရားရုံး left (first instance).
+a#18 P2 006 Justices: ဖွဲ့စည်းပုံအခြေခံဥပဒေ တရားသူကြီးကြီးများ (大法官) → ဖွဲ့စည်းပုံအခြေခံဥပဒေတရားရုံး၏ တရားသူကြီးများ (大法官) (1).
+a#19 P2 008 closer, two blocks kept: the severance arises only when the employer terminates; do not assume the company always pays.
+a#20 P2 groups → practice areas: အုပ်စုခြောက်ခု / လုပ်ငန်းအုပ်စု ခြောက်ခု → လုပ်ငန်းနယ်ပယ် ခြောက်ခု; ဤအုပ်စုတွင် → ဤလုပ်ငန်းနယ်ပယ်တွင် (3); အထက်ပါ အုပ်စုများ → အထက်ပါ လုပ်ငန်းနယ်ပယ်များ (3); home “which group” and FAQ answer. Doubled “လုပ်ငန်းနယ်ပယ်တွင် အောက်ပါ လုပ်ငန်းနယ်ပယ်” corrected.
+a#21 P2 heading and contact description: ဤစာမျက်နှာ မအာမခံသည်များ → ဤစာမျက်နှာက အာမမခံသော အချက်များ.
+a#22 P2 binding: ချည်နှောင်သော အဖြေ → စည်းနှောင်မှုရှိသော အဖြေ; columns မချည်နှောင်ပါ / မချည်နှောင်သလို → မစည်းနှောင် (1 each).
+a#23 P2 object storage: အများပြည်သူ မဝင်ရသော အရာဝတ္ထုသိုလှောင်ရာ → အများပြည်သူ မဝင်ရောက်နိုင်သော ဖိုင်သိုလှောင်ခန်း. Left အများပြည်သူ မဝင်ရသော နေရာတွင် (a place).
+a#24 P2 Pingtung: opened in 2017 for local clients’ needs. Year 2017 kept.
+a#25 P2 Sanheyuan alt: စန်ဟေယွမ် → သုံးဘက်ဆက်အိမ် inside the existing (三合院) gloss.
+a#26 P2 002 ဟုတ်ဟုတ် → ဖြစ်စေ (5, one sentence).
+a#29 P2 calendar dates: 23 instances of YYYY ခုနှစ် N လ D ရက် → YYYY ခုနှစ် <month name> D ရက်. August is ဩဂုတ် (U+1029). Month name is not followed by လ, so the checker’s month+day pattern matches. Durations (6 လအတွင်း, 1 နှစ်, 3 နှစ်, 5 နှစ်) left.
+a#30 P2 ROC 112, without a new Gregorian year: သမ္မတနိုင်ငံ 112 ခုနှစ် စီရင်ချက် အမှတ် 4 (112年憲判字第4號) (4). Chinese docket string unchanged.
+a#31 P2 case names: ရှန်ရီဇီ အပိုဒ်ခွဲ → 上易字 အမှတ် (2); လီကျန်ဇီ အပိုဒ်ခွဲ → 壢簡字 အမှတ် (1). URLs unchanged.
+a#32 P2 redacted name: ကျွန်ုပ် [အမည်] သည် (1, 008). Bracketed placeholder, not an ellipsis.
+
+R12 English chrome in the my bios only: Legal Aid Foundation, Taichung Branch → ဥပဒေအကူအညီပေးရေးဖောင်ဒေးရှင်း၊ ထိုင်ချုံရုံးခွဲ; Ministry of Education, Legal Affairs Division → ပညာရေးဝန်ကြီးဌာန ဥပဒေရေးရာဌာန (intro + experience). Other locales’ English strings were not touched. Paralegal was already ဥပဒေအကူ. Firm names Trend, Boyin, Muyang, Chinshin, Hovering, National Taiwan University stay in Latin.
+R5 labels already Burmese (အဖွဲ့, ရုံးများ, ကိုယ်ရေးအပြည့်အစုံ (အင်္ဂလိပ်ဘာသာဖြင့်), မေးခွန်းနှင့် အဖြေ).
+R3 / R9 in 003 were already in the required shape (not a typical or guaranteed sentence; compensation the facts support; Taiwan 119/110/112 labelled as Taiwan numbers). Not rewritten.
+R17 Thai script in columns-my: none.
+
+## Rows applied — part b
+
+b#1  P1 beginner, including alt and caption: ကြံ့ခိုင်ရေးရုံ အစပြုသူအား → ကြံ့ခိုင်ရေးရုံတွင် စတင်လေ့ကျင့်သူအား (2, 010).
+b#2  P1 docket 字第7號 styled as အမှုအမှတ်, Chinese docket kept. Combined with b#16: သမ္မတနိုင်ငံ 109 ခုနှစ် စားသုံးသူအမှု အမှတ် 7 (109年度消字第7號) (1). No added 2022.
+b#3  P1 fall on premises: လုပ်ငန်းခွင် ကြမ်းပြင်ပေါ် လဲကျခြင်း → လုပ်ငန်းနေရာ၏ ကြမ်းပြင်ပေါ် လဲကျခြင်း (1, 010). Other လုပ်ငန်းခွင် (PE / workplace tax) not globally replaced.
+b#4  P1 supplemental documents (2, 011): အမှုအလိုက် ကွဲပြားပြီး၊ စာရွက်စာတမ်း ဖြည့်စွက်ရန် တောင်းခံခြင်း ရှိမရှိအပေါ် မူတည်သည်.
+b#5  P1 cosmetics criteria link titles: false / exaggerated / medical-efficacy. Appendix title included.
+b#6  P1 finished advertisement: စာသားတစ်ခုချင်းနှင့် နောက်ဆုံး ပြီးသွားသော ကြော်ငြာကို အတူ စစ်ရသည် (1).
+b#7  P1 slope: ကွေ့လမ်း၊ မတ်စောက်သော လမ်း၊ ကျဉ်းသော တံတား (1, 012).
+b#8  P1 013 lines 30–32 kept as separate blocks. Line 30 now has the verb စစ်သည်. Line 32: ပြည်ပလူပုဂ္ဂိုလ်များက အခြားအမည်ခံဖြင့် ငွေသွင်းနေခြင်း ရှိမရှိကိုလည်း စစ်ရသည်.
+b#10 P1 014 資遣費 uses the part-a term (included in the a#4 sweep).
+b#11 P1 department’s own-initiative check, including alt and caption: ဌာနက ကိုယ်တိုင် ထပ်မံစစ်သော လုပ်ငန်းအမျိုးအမည်များ (3, 015).
+b#12 P1 016 民法 covered by the a#8 sweep.
+b#13 P1 證券 → ငွေချေးသက်သေခံလက်မှတ်. 016 list kept as three items (ငွေစာရင်း၊ ငွေချေးသက်သေခံလက်မှတ်၊ လုပ်ငန်းရှယ်ယာ). 017 စာရင်းဝင် သို့မဟုတ် စာရင်းပြင်ပ ငွေချေးသက်သေခံလက်မှတ် (1). 018 ငွေချေးသက်သေခံလက်မှတ်ဆိုင်ရာ ဥပဒေ (1). Left အာမခံချက်နှင့် ကတိကဝတ် (representations, 017) and အာမခံတာဝန် (guarantee obligations, 016).
+b#14 P2 closing conditions: ပိတ်သိမ်းစည်းကမ်း → အရောင်းအဝယ်ပိတ်သည့် စည်းကမ်း (1, 017).
+b#15 P2 dates included in the 23-date pass.
+b#17 P2 limitation start vs valuation date kept distinct. 010 စံရက် → ကာလစတင်ရေတွက်ရမည့်နေ့ (1). 016 စံနေ့ → တန်ဖိုးဖြတ်နေ့ (4, valuation only).
+b#18 P2 adverse inference (1, 010): the court does not automatically draw an inference against a party merely because a record is missing.
+b#19 P2 ရှေ့နေချုပ်ရုံး → တရားစွဲရှေ့နေရုံး (1, 010).
+b#20 P2 ပြစ်ဒဏ်သဘော လျော်ကြေး → အပြစ်ပေးသဘောဆောင်သော လျော်ကြေး (1).
+b#21 P2 trainer liability subject: နည်းပြ၌ တာဝန်ရှိသည်ဟု ချက်ချင်း အသိအမှတ်မပြုပါ (1).
+b#22 P2 whether-items: ချိုးဖောက်ခဲ့သလား / ရှိသလား (1).
+b#23 P2 male university student: ယောက်ျားလေး → အမျိုးသား (14, 010 only).
+b#24 P2 လျော်ကြေးရန်ပုံငွေကို → လျော်ကြေးပေးနိုင်သော ငွေရင်းမြစ်ကို (1). Did not globally replace ရန်ပုံငွေ.
+b#25 P2 010 solatium: စိတ်ပိုင်းဆိုင်ရာ နှစ်သိမ့်ကြေး (慰撫金) (1). 007’s စိတ်ပိုင်းဆိုင်ရာ လျော်ကြေး (慰撫金) left.
+b#26 P2 အတူတူသော စည်းမျဉ်း ပုဒ်မ 8 → အထက်ပါ စီမံနည်းလမ်း ပုဒ်မ 8 (1).
+b#27 P2 辦法 link: အလှကုန် ထုတ်ကုန်မှတ်ပုံတင်စီမံနည်း (化粧品產品登錄辦法) (1).
+b#28 P2 filing, not announcement: ပလက်ဖောင်းတွင် တင်သွင်းသော လုပ်ငန်းစဉ်; မမှန်သော အချက်အလက် တင်သွင်းခြင်း (1 each). Legitimate 公告 ကြေညာ left.
+b#29 P2 對象: ပစ်မှတ် → ဦးတည် (29), including ဦးတည်ကုမ္ပဏီ, သက်ရောက်ဦးတည်, စီမံဦးတည်, ဦးတည်တာဝန်, ဦးတည်ထားသည်.
+b#30 P2 design calque: ဒီဇိုင်းဆွဲ → စီစဉ် (004×5, 018×5) plus the specific 011/014/018 phrases. Left လျှို့ဝှက် ဒီဇိုင်းအထောက်အထား (018; it does not contain ဒီဇိုင်းဆွဲ).
+b#31 P2 ထုတ်လွှတ်သည့်နေ့ → ဈေးကွက်တင်မည့်နေ့ (1). Left တိုက်ရိုက်ထုတ်လွှင့်မှု.
+b#32 P2 011 distinguish-in-practice line, plus the leftover calques: လည်ပတ်ရသည် → ခွဲမြင်ရသည် (011); လည်ပတ်လမ်းညွှန် → လုပ်ထုံးလမ်းညွှန် (011 collaboration guide, 015 Taipei 作業須知 title). Left 017 လည်ပတ်ရန်ငွေ (operating funds).
+b#33 P2 inward remittance: ရန်ပုံငွေ လွှဲသွင်းခြင်း → ရင်းနှီးငွေ လွှဲသွင်းခြင်း (3, 011 and 018).
+b#35 P2 uniform ID: တစ်ပြေးညီ အထောက်အထားနံပါတ် အခြေခံအချက်အလက်ပုံစံ (統一證號基本資料表) (1, 013).
+b#36 P2 rental deposit: ထိုင်ဝမ်တွင် ငှားရမ်းအာမခံငွေ နည်းသောကြောင့် (အများအားဖြင့် ငှားခ 2 လစာ) (1); ထပ်ဆောင်း အာမခံကြေး → ထပ်ဆောင်း ငှားရမ်းအာမခံငွေ (1, 013). Other အာမခံကြေး (insurance premium) left.
+b#37 P2 registered business items: လုပ်ငန်းပစ္စည်း → လုပ်ငန်းအမျိုးအမည် only in 001, 013, 015, 017 (21).
+b#38 P2 languages, not countries: အင်္ဂလိပ်၊ တရုတ် (中文)၊ ဂျပန်ဘာသာနှင့် ကိုရီးယားဘာသာဖြင့်သာ (013 and 018). Four-language limit stays. A first pass duplicated the language prefix; the duplicate was removed. Residual doubled prefix: 0.
+b#39 P2 အရာဝတ္ထုအထောက်အထား → ဓမ္မဓိဋ္ဌာန်ကျသော အထောက်အထား (1, 014).
+b#40 P2 ပိုင်ဆိုင်မှုဆိုင်ရာ တာဝန် → ငွေကြေးဆိုင်ရာ တာဝန် (1, 014).
+b#41 P2 sanction, not a ban: စောစီးစွာ ပြီးဆုံးခြင်းအတွက် ဒဏ်ခတ်မှု၏ အခြေခံ (1, 014).
+b#42 P2 unserved period, 014 only: မကျေနပ်သေးသော ကာလ → မလုပ်ရသေးသော ကာလ (6); ကျေနပ်ကာလ → လုပ်ပြီးသော ကာလ (1); အမှန်တကယ် ကျေနပ်မှု → အမှန်တကယ် ပြည့်စုံမှု (1). Left 008 table အချိန်မရွေး (the worker’s right to resign at any time).
+b#43 P2 transcript: အဆောက်အအုံမှတ်ပုံတင် ဒုတိယအမျိုးအစား တရားဝင်ထုတ်နုတ်ချက် (2, 015). Gloss 建物登記第二類謄本 kept.
+b#44 P2 exemption grammar (1, 015): ဤစာရင်းတွင် မပါသော လုပ်ငန်းအမျိုးအမည်သည် စစ်ဆေးမှုမှ ကင်းလွတ်သည် မဟုတ်ပါ။
+b#45 P2 商業: ကုမ္ပဏီမဟုတ်သော လုပ်ငန်း (商業) (1, 015); ကုန်သွယ်ရေးမှတ်ပုံတင် → လုပ်ငန်းမှတ်ပုံတင် (3, 017). Government department name ကုန်သွယ်ရေးဌာန left, except b#50.
+b#46 P2 ဝေစာ → သေတမ်းစာ (20, 016 only).
+b#47 P2 တက်ကြွပိုင်ဆိုင်မှု → အပေါင်းပိုင်ဆိုင်မှု (1, 016), next to ကြွေးပိုင်ဆိုင်မှု (消極財產).
+b#48 P2 domicile: နေရပ်လိပ်စာ (住所) → တရားဝင်နေထိုင်ရာ (住所) (1, 016); 007 နေရပ်နှင့် and the comma form နိုင်ငံသား၊ နေရပ်၊ → တရားဝင်နေထိုင်ရာ (住所) (2).
+b#49 P2 မောင်နှမ (兄弟姊妹) → ညီအစ်ကိုမောင်နှမ (兄弟姊妹) (1, 016).
+b#50 P2 ကုန်သွယ်ရေးဖွံ့ဖြိုးဌာန → ကုန်သွယ်ရေးဌာန (1, 018), so the line is စီးပွားရေးဝန်ကြီးဌာန ကုန်သွယ်ရေးဌာန (經濟部商業司).
+b#51 P2 CPA audit: လက်မှတ်ရစာရင်းကိုင်၏ စစ်ဆေးအတည်ပြုချက် (1, 018). Gloss 會計師查核簽證 kept.
+
+Blog voice (a#27 / b#34, in-block only): 008 opener ဖတ်ရှုသူ အများအပြား → အများသိပြီး; 013 reader-comment aside dropped inside the same block; 008 narrator is ကျွန်မ / ရှေ့နေမ. ZWSP spacer lines and block counts kept.
+
+## Rows skipped
+
+a#10 Hangul frontmatter url in 008 and 009. R16: stored url values stay. Hangul outside url: 0.
+a#28 reformat TWD 1.57M as “TWD 1.57 သန်း”. Test-pinned figure. a#3 wording was applied; the bytes TWD 1.57M are unchanged.
+a#27 and b#34 structural merge and deletion of blank ZWSP spacers. That changes block count and ZWSP count (R7). In-block rephrase only.
+a#30 / b#16 Gregorian years in parentheses (2023 / 2022). R13 forbids adding a new digit. ROC year is marked သမ္မတနိုင်ငံ N ခုနှစ် and the Chinese docket string is unchanged.
+a#32 reviewer’s ellipsis ……. R15 requires a bracketed placeholder. Applied form is [အမည်].
+b#13 collapsing ငွေစာရင်း၊ အာမခံချက်၊ လုပ်ငန်းရှယ်ယာ into two items. That drops cash accounts and business shares. Only the securities word was replaced.
+
+## Systemic patterns (instances changed)
+
+- 資遣費 term: 32 column replacements of နုတ်ထွက်ကြေး, plus the guidance labor sentence. Residual old term: 0.
+- 民法 ပြည်သူ့ဥပဒေ → တရားမဥပဒေ: 45, plus 4 procedure-act and 1 judgment.
+- 對象 ပစ်မှတ် → ဦးတည်: 29.
+- Calendar dates to month names: 23.
+- Registered business items လုပ်ငန်းပစ္စည်း → လုပ်ငန်းအမျိုးအမည်: 21 (001/013/015/017 only).
+- Will ဝေစာ → သေတမ်းစာ: 20 (016 only).
+- Male student ယောက်ျားလေး → အမျိုးသား: 14 (010 only).
+- Contact link label: 10 columns + 1 guidance title.
+- Share issuance ထုတ်ဝေပြီး ရှယ်ယာ: 8; issuer ထုတ်ဝေကုမ္ပဏီ: 4.
+- Design calque ဒီဇိုင်းဆွဲ → စီစဉ်: 5 in 004 and 5 in 018, plus the specific phrases in 011/014/018.
+- Unserved period မကျေနပ်: 6 (014 only).
+- ဟုတ်ဟုတ် → ဖြစ်စေ: 5 (002, one sentence).
+- ROC 112 framing: 4. Inward remittance: 3. Trade-register wording: 3. Practice-area “group” rewrites in the pack: the အုပ်စုခြောက် / ဤအုပ်စုတွင် / အထက်ပါ အုပ်စုများ set above.
+- “None of the four”: 4 (2 guidance + 2 inquiry). Partner CPA: 5 (3 team + 1 southeast-central + 1 answers).
+- Surname လင် → လင်း (林): 3 exact phrases in 006 only.
+- Blog asides ဖတ်ရှုသူ: the two quoted lines (008, 013). Residual ဖတ်ရှုသူ: 0.
+- Operating-guide calque လည်ပတ်လမ်းညွှန် / လည်ပတ်ရသည်: 3 (011×2, 015×1). Residual: 0.
+
+## Reviewer points not applied (believed wrong, or in conflict with the rulebook)
+
+- Merging blog lines and deleting ZWSP spacers (a#27, b#34). Conflicts with the checker’s block and ZWSP counts and with R7.
+- Adding Gregorian 2023/2022 next to ROC years (a#30, b#16). R13: no new digits.
+- Reformatting the pinned bio figure as TWD 1.57 သန်း (a#28).
+- Editing stored Hangul url: values (a#10). R16.
+- Using …… for the redacted name (a#32). R15 requires [အမည်].
+- Collapsing the estate list so that bank balances and business shares disappear (b#13). Securities word only.
+
+015 အခကြေးငွေမဲ့ is the Taipei government inquiry, not a free first meeting. 016 အကောင်းဆုံးအကျိုး is the statutory best-interests test, not a firm superlative. Both left. Consultation languages stay English, Chinese (中文), Japanese, Korean. No Burmese consultation, interpreter, reply-time, 24/7, result guarantee, or win rate was added. [변호사 검수 필요]: 0.
+
+Numbers WARNs from the checker (수사미해석 of Korean 제N항 / 제3자 / 1심 in the source) do not fail the file. Summary is PASS. No number or date was reverted.
+
+## §Verify
+
+cd /Users/son7/Projects/tseng-law-fix-my-20260922 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+node scripts/check-column-translation.mjs --dir src/content/columns-my --lang my 2>&1 | tail -8
+grep -rn "\[변호사 검수 필요\]" src/content/columns-my src/data | wc -l
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+git status --short | wc -l
+
+This worktree has no node_modules. tsc and vitest were run with node_modules symlinked to /Users/son7/Projects/tseng-law-fix-fa-20260922/node_modules (this branch’s package.json depends on @modelcontextprotocol/server, which the main repo’s node_modules does not contain). The symlink was removed after the run. It is gitignored and is not in the status count.
+
+--- verbatim ---
+forbidden      PASS   
+hanzi          PASS   han=72
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+TSC_OK
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+      25

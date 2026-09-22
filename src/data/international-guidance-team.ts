@@ -968,10 +968,10 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'အဖွဲ့',
     title: 'Hovering ၏ နိုင်ငံတကာအဖွဲ့',
     description:
-      'Hovering ၏ ရှေ့နေများ၊ လုပ်ငန်းစီမံခန့်ခွဲမှုနှင့် တွဲဖက်စာရင်းကိုင်၏ ကိုယ်ရေးအချက်အလက်များ။',
+      'Hovering ၏ ရှေ့နေများ၊ လုပ်ငန်းစီမံခန့်ခွဲမှုနှင့် မိတ်ဖက် လက်မှတ်ရစာရင်းကိုင်၏ ကိုယ်ရေးအချက်အလက်များ။',
     representativeTitle: 'အမှုဆောင်ရှေ့နေမ',
     teamTitle: 'ရှေ့နေများနှင့် ဝန်ထမ်းများ',
-    partnerTitle: 'တွဲဖက်စာရင်းကိုင်',
+    partnerTitle: 'မိတ်ဖက် လက်မှတ်ရစာရင်းကိုင်',
     introLabel: 'မိတ်ဆက်',
     educationLabel: 'ပညာရေး',
     experienceLabel: 'အတွေ့အကြုံ',
@@ -989,7 +989,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
       'chang-rongxuan': 'ထိုင်ဝမ်ရှိ ရှေ့နေ',
       'chang-fangyu': 'ဥပဒေအကူ',
       'son-jungmin': 'ကိုရီးယားလုပ်ငန်း စီမံခန့်ခွဲမှု',
-      'huang-shengping': 'တွဲဖက်စာရင်းကိုင်',
+      'huang-shengping': 'မိတ်ဖက် လက်မှတ်ရစာရင်းကိုင်',
     },
   },
   ta: {
@@ -3716,7 +3716,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'ရုံးသည် ထိုင်ဝမ်တွင် ကုမ္ပဏီနှင့် ပုဂ္ဂိုလ်ရေးကိစ္စများကို အင်္ဂလိပ်၊ ဂျပန်၊ ကိုရီးယားနှင့် တရုတ်ဘာသာဖြင့် ဆောင်ရွက်သည်။',
-        'သူမသည် ကြံ့ခိုင်ရေးရုံတွင် ထိခိုက်ဒဏ်ရာရမှု လျော်ကြေးအမှုတွင် ကိုရီးယားကျောင်းသားတစ်ဦးကို ကိုယ်စားပြုခဲ့ပြီး ပထမအဆင့် တရားရုံးက TWD 1.57M ချမှတ်ခဲ့သည်။',
+        'သူမသည် ကြံ့ခိုင်ရေးရုံတွင် ထိခိုက်ဒဏ်ရာရမှု လျော်ကြေးအမှုတွင် ကိုရီးယားကျောင်းသားတစ်ဦးကို ကိုယ်စားပြုခဲ့ပြီး၊ ထိုကျောင်းသားအတွက် ပထမအဆင့်တရားရုံးက လျော်ကြေး TWD 1.57M ပေးရန် စီရင်ချက် ရယူခဲ့သည်။',
       ],
       education: [
         'မဟာသိပ္ပံဘွဲ့ (M.S.), Institute of Finance, National Taiwan University',
@@ -3726,17 +3726,17 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'ဥပဒေအကူအညီပေးရေးဖောင်ဒေးရှင်း၊ ထိုင်ချုံရုံးခွဲ',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'ယခင်က Ministry of Education, Legal Affairs Division တွင် အုပ်ချုပ်ရေးနှင့် တရားမအငြင်းပွားမှုကို အလေးထား၍ တာဝန်ထမ်းဆောင်ခဲ့သည်။',
+        'ယခင်က ပညာရေးဝန်ကြီးဌာန ဥပဒေရေးရာဌာနတွင် အုပ်ချုပ်ရေးနှင့် တရားမအငြင်းပွားမှုကို အလေးထား၍ တာဝန်ထမ်းဆောင်ခဲ့သည်။',
         'တက္ကသိုလ်များ၊ ဆရာအခွင့်အရေးနှင့် အုပ်ချုပ်ရေးတိုင်ကြားမှုများနှင့် ပတ်သက်သော ကိစ္စများတွင် အတွေ့အကြုံ ရှိသည်။',
       ],
       education: ['ဥပဒေဘွဲ့ (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'ပညာရေးဝန်ကြီးဌာန ဥပဒေရေးရာဌာန',
         'ရှေ့နေ, Hovering International Law Firm',
       ],
     },

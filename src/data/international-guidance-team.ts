@@ -4489,7 +4489,7 @@ export const guidanceTeamBios: Record<
       education: [
         'Magistrikraad (M.S.), National Taiwan University rahanduse instituut',
         'Bakalaureusekraad (B.A.), õigusteaduse ja rahanduse topelteriala, National Chengchi University',
-        'Vahetusüliõpilane Kobe Universitys ja Waseda Universitys',
+        'Vahetusüliõpilane Kobe University’s ja Waseda University’s',
       ],
       experience: [
         'Trend Law Office',
@@ -4537,7 +4537,7 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'Lõpetas bakalaureuse- ja magistriprogrammi raamatupidamises National Chengchi Universitys ja juhib nüüd audiitorbürood.',
+        'Lõpetas bakalaureuse- ja magistriprogrammi raamatupidamises National Chengchi University’s ja juhib nüüd audiitorbürood.',
         'Toetab ettevõtteklientide õiguslike, maksu- ja finantsriskide koondhindamist.',
       ],
       education: [

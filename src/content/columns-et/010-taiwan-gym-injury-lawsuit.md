@@ -79,13 +79,13 @@ Kui hooletusest põhjustatud kehavigastuse (過失傷害) süüteo seadusjärgse
 
 Deliktist tulenev kahjuhüvitise nõue (侵權行為) [Taiwani tsiviilseadustiku artikkel 197 (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) järgi lõpeb põhimõtteliselt, kui seda ei kasutata 2 aasta jooksul hetkest, mil kannatanu teab nii kahju kui ka hüvitisekohustuslast, ning lõpeb ka siis, kui kahju põhjustanud teost on möödunud 10 aastat.
 
-Kas mängu tuleb teine nõudealuse, näiteks lepinguline vastutus, või kohalduvad muud reeglid tähtaja alguse, kulgemise, katkemise vms kohta, võib asjaolude järgi erineda. Tähtaega ei tohi määrata üksnes õnnetusepäeva või diagnoosipäeva järgi; kindlam on varakult ja asja kaupa kontrollida võimalikud nõudealused ja viitepäevad.
+Asjaolud võivad anda ka teise nõudealuse, näiteks lepingulise vastutuse, või käivitada muud reeglid tähtaja alguse, kulgemise ja katkemise kohta. Tähtaega ei tohi määrata üksnes õnnetusepäeva või diagnoosipäeva järgi; kindlam on varakult ja asja kaupa kontrollida võimalikud nõudealused ja viitepäevad.
 
 ## 3. Milliseid tõendeid tuleb õnnetuse järel säilitada ja kuidas?
 
 Vastutuse, põhjusliku seose ja kahju selgitamiseks on soovitatav koguda mitte ainult õnnetusehetke CCTV-salvestisi (監視器影像), vaid ka haiguslugu (病歷) ja arstitõendit (診斷證明書), kviitungeid ravikulude (醫療費用), ravile sõitmise transpordikulu (就醫交通費) ja hoolduskulu (看護費用) kohta, jõusaali ja treeneriga vahetatud sõnumeid, tunnistajate ütlusi, tunni broneeringut ja kohalolekuandmeid ning treeningukava ja treeninguarvestust. Soovitatav on võimaluse piires pildistada vigastatud piirkonda ja õnnetuskoha olukorda ning järjestada õnnetuse-eelne ja -järgne kulg ning side sisu kuupäeva järgi, et materjale oleks hiljem lihtsam kõrvutada.
 
-Salvestised võivad säilitustähtaja möödumisel üle kirjutuda või muul põhjusel kasutuskõlbmatuks muutuda. Seetõttu võib kaaluda paluda jõusaalil need säilitada sisutõendiga kirja (存證信函) või advokaadi nimel koostatud kirja (律師函) kaudu, milles on konkreetselt märgitud vajalik ajavahemik, koht ja kaamera asukoht. See kiri on praktiline viis jätta jälje sellest, mida ja millal paluti. See iseenesest ei sea vastaspoolele uut seadusjärgset kohustust salvestisi säilitada ega takista kustutamist ning ainuüksi asjaolu, et salvestisi ei ole järele jäänud, ei too kohtule automaatselt kaasa ebasoodsat hinnangut.
+Salvestised võidakse säilitustähtaja möödumisel üle kirjutada või need võivad muul põhjusel kasutuskõlbmatuks muutuda. Seetõttu võib kaaluda paluda jõusaalil need säilitada sisutõendiga kirja (存證信函) või advokaadi nimel koostatud kirja (律師函) kaudu, milles on konkreetselt märgitud vajalik ajavahemik, koht ja kaamera asukoht. See kiri on praktiline viis jätta jälje sellest, mida ja millal paluti. See iseenesest ei sea vastaspoolele uut seadusjärgset kohustust salvestisi säilitada ega takista kustutamist ning kohus ei tee ainuüksi sellest, et salvestisi ei ole järele jäänud, automaatselt ebasoodsat järeldust.
 
 Kui õnnetuse asjaolud võivad täita süüteo tunnused, võib kiiresti teha teate, et uurimisasutus (偵查機關) saaks hinnata, kas on seaduslik alus arestimiseks või säilitamiseks. Teade ei tähenda, et politsei või prokuratuur kindlasti CCTV salvestise säilitaks, seega tuleb koguda ka materjale, mida pool ise saab säilitada, näiteks meditsiinidokumente ja sidekirjeid.
 
@@ -95,11 +95,11 @@ Hüvitise kirjed, mille nõudmist võib uurida, on järgmised. Tegelik tunnustam
 
 1. **Ravikulud**: Vastuvõtule, uuringutele, ravile, ravimitele ja taastusravile tegelikult kulutatud summad tõendatakse kviitungite ja haiguslooga.
 2. **Hooldus- või hooldamiskulu (看護費用)**: Meditsiini- ja kuludokumentidega uuritakse, kas vigastuse astme ja ravi kulgemise valguses oli hooldust vaja ning kas periood ja kulu olid asjakohased.
-3. **Transpordikulu**: Raviasutusse ja sealt tagasi sõitmiseks vajalik kulu tõendatakse liikumisandmete, kviitungite ja sarnaste dokumentidega.
+3. **Transpordikulu**: Raviasutusse ja sealt tagasi sõitmiseks vajalik kulu tõendatakse sõidudokumentide, kviitungite ja sarnaste tõenditega.
 4. **Kahju töövõime vähenemisest (勞動能力減損)**: Kui järelkahjustused ja püsiv töövõime langus tunnistatakse, võib hinnata koos meditsiini- ja kutsedokumentide, kahjustuse astme, ameti ja sissetuleku ning järelejäänud tööeaga. Ainuüksi kahjustuse määr ei määra hüvitise summat ega ole alus kahju automaatseks arvutamiseks pensionieani.
 5. **Saamata jäänud tulu taastumisperioodil (收入損失)**: Periood, mil ravi või taastumise tõttu tegelikult ei saanud töötada, ja sellest tulenenud sissetuleku vähenemine tuleb tõendada palga-, maksu- ja töösuhte dokumentidega.
 6. **Mittevaraline kahju (非財產上損害)**: Vaimse kannatuse summa määrab kohus asja tegurite põhjal, nagu vigastuse aste, raviperiood, järelkahjustused ja poole konkreetsed asjaolud.
-7. **Karistuslik hüvitis (懲罰性賠償金)**: On säte, mille järgi tarbijakaitseseaduse kohaldumisega vaidluses, kui kahju tekkis ettevõtja tahtlusest, võib nõuda kuni 5-kordset tegelikku kahju; raske hooletuse korral kuni 3-kordset; hooletuse korral kuni 1-kordset tegeliku kahju summat. Kas [Taiwani tarbijakaitseseaduse (消費者保護法) artikkel 51](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) asjale kohaldub ning kas tegelikku hüvitist on ja millises summas, sõltub kohtu hinnangust konkreetsetele eeldustele ja tõenditele.
+7. **Karistuslik hüvitis (懲罰性賠償金)**: On säte, mille järgi tarbijakaitseseaduse kohaldumisega vaidluses, kui kahju tekkis ettevõtja tahtlusest, võib nõuda kuni 5-kordset tegelikku kahju; raske hooletuse korral kuni 3-kordset; hooletuse korral kuni 1-kordset tegeliku kahju summat. Kas [Taiwani tarbijakaitseseaduse (消費者保護法) artikkel 51](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) asjale kohaldub ning kas karistuslikku hüvitist mõistetakse välja ja millises summas, sõltub kohtu hinnangust konkreetsetele eeldustele ja tõenditele.
 
 ## 5. Kas ka siis, kui jõusaalil on vastutuskindlustus (責任保險), võib hüvitise olemasolu ja summat vaidlustada?
 
@@ -116,4 +116,4 @@ Kui olete saanud vigastuse jõusaalis (健身房), on tähtis esmalt saada vajal
 > Vaadake ka:
 > - [Kuidas kinnitatakse töö ulatus ja tasud](/et/pricing)
 > - [Hoveringi rahvusvaheline meeskond](/et/lawyers)
-> - [Hovering International Law Firmist](/et/about)
+> - [Hovering International Law Firm’ist](/et/about)

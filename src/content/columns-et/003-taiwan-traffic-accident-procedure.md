@@ -63,7 +63,7 @@ Kaebuse alusel menetletavates süütegudes saab kaebuse kriminaalmenetluse seadu
 
 ### Ametlikud alused Q1–Q5
 
-- [Määrus maanteeliikluse halduse ja karistuste kohta (道路交通管理處罰條例) artikkel 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
+- [Seadus maanteeliikluse halduse ja karistuste kohta (道路交通管理處罰條例) artikkel 62](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
 - [Taiwani kriminaalkoodeks (中華民國刑法) artikkel 185-4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
 - [Taiwani kriminaalkoodeks (中華民國刑法) artikkel 284](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Taiwani kriminaalkoodeks (中華民國刑法) artikkel 287](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
@@ -93,8 +93,8 @@ Eksperdiarvamuse vastu saab taotleda korduvläbivaatust, siiski ainult üks kord
 
 Nõue tsiviilseadustiku (民法) artikli 184 järgi eeldab õigusvastast õiguse rikkumist, põhjuslikku seost õnnetusega ja kahju tõendamist. Pelk asjaolu, et õnnetus on toimunud, ei tähenda, et kõik järgmised kirjed tunnustatakse. Tsiviilseadustiku artikkel 216 on mõõdupuu tegeliku kahju ja saamata jäänud tulu (所失利益) ulatusele.
 
-- **Kehavigastus**: Tsiviilseadustiku artikli 193 järgi saab uurida vajalikke ravikulusid (醫療費用), suurenenud eluvajaduse kulusid, nagu hooldus (看護費用), sõit ravile (就醫交通費) ja abivahendid ning palgakaotust (收入損失) tegelikust töövõimetusest ja töövõime alanemisest (勞動能力減損). Tsiviilseadustiku artikli 195 järgi saab uurida ka mittevaralist kahju.
-- **Surm**: Tsiviilseadustiku artikli 192 järgi saab, niivõrd kui see kohaldub, uurida ravikulusid ja suurenenud eluvajaduse kulusid enne surma, matusekulusid (殯葬費) ja ülalpidamise kaotust (扶養利益損失) sellele, kellel oli õiguslik ülalpidamisnõue. Tsiviilseadustiku artikli 194 järgi saab uurida ka teatud sugulaste mittevaralist kahju.
+- **Kehavigastus**: Tsiviilseadustiku artikli 193 järgi saab uurida vajalikke ravikulusid (醫療費用), hooldust (看護費用), sõitu ravile (就醫交通費), abivahendeid ja muid suurenenud elamiskulusid ning palgakaotust (收入損失) tegelikust töövõimetusest ja töövõime alanemisest (勞動能力減損). Tsiviilseadustiku artikli 195 järgi saab uurida ka mittevaralist kahju.
+- **Surm**: Tsiviilseadustiku artikli 192 järgi saab, niivõrd kui see kohaldub, uurida ravikulusid ja suurenenud elamiskulusid enne surma, matusekulusid (殯葬費) ja ülalpidamise kaotust (扶養利益損失) sellele, kellel oli õiguslik ülalpidamisnõue. Tsiviilseadustiku artikli 194 järgi saab uurida ka teatud sugulaste mittevaralist kahju.
 - **Vara**: Tsiviilseadustiku artikli 196 järgi saab nõuda tõendatud tegelikke varalisi kahjusid, sealhulgas sõiduki parandust või väärtuse alanemist.
 
 ## Q8. Kuidas tuleb ravikulude dokumendid esitada, kui ravi jätkub?
@@ -199,7 +199,7 @@ Q16. Kas pärast õnnetust võib kõik jätta kindlustusandja hooleks?
 
 ​
 
-Minu kogemuse järgi ei arvesta kindlustusandja sageli piisavalt õnnetuse osapoolte tundeid.
+Praktikas ei arvesta kindlustusandja sageli piisavalt õnnetuse osapoolte tundeid.
 
 ​
 
@@ -211,7 +211,7 @@ Kindlustusandjale lisakulu TWD 500.000 (新臺幣) või TWD 1.000.000 üksikus a
 
 ​
 
-Huvide konfliktid kindlustusandja ja osalise vahel võivad samuti tekkida, ja kuna kindlustusandja peab käsitlema paljusid asju, on ühingul raske pühendada igale asjale piisavalt aega.
+Huvide konfliktid kindlustusandja ja osalise vahel võivad samuti tekkida, ja kuna kindlustusandja peab käsitlema paljusid asju, on tal raske pühendada igale asjale piisavalt aega.
 
 ​
 
@@ -339,7 +339,7 @@ Kui kannatanu saab kehavigastuse või sureb, kannatavad tema ise või pere kehal
 
 ​
 
-Paljud põhjustajad ei hoolitse telefonitsi tehtavast seisundi järelepärimisest ega haiglakülastusest ja arvavad, et kindlustusandja korraldab kõik, seega jäävad nad ise kõrvale. Siis ei tunta kahetsust ega tõsidust.
+Paljud põhjustajad ei hoolitse telefonitsi tehtavast seisundi järelepärimisest ega haiglakülastusest ja arvavad, et kindlustusandja korraldab kõik, seega jäävad nad ise kõrvale. Siis ei taju kannatanu põhjustaja kahetsust ega siirust.
 
 ​
 
@@ -370,4 +370,4 @@ Kui teil on muid küsimusi, võite saata küsimuse kontaktvormiga; viivitamatut 
 > Vaadake ka:
 > - [Kuidas kinnitatakse töö ulatus ja tasud](/et/pricing)
 > - [Hoveringi rahvusvaheline meeskond](/et/lawyers)
-> - [Hovering International Law Firmist](/et/about)
+> - [Hovering International Law Firm’ist](/et/about)

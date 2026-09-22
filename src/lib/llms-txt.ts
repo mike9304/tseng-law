@@ -894,7 +894,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Need juhised on kirjutatud eesti keeles, kuid nõustamine advokaadiga toimub ainult inglise, hiina (中文), jaapani ja korea keeles.',
     discoveryNotice:
-      'Fail llms.txt on üksnes kaart avalike lehtede leidmiseks; see ei tõota kohta otsingutulemustes, soovitust, tehisintellekti soovitust ega nähtavust.',
+      'Fail llms.txt on üksnes ülevaade avalike lehtede leidmiseks; see ei tõota kohta otsingutulemustes, soovitust, tehisintellekti soovitust ega nähtavust.',
     confidentialNotice:
       'Kuna algtekst säilitatakse, ärge kirjutage algfaasis seda, mida veel vaja ei ole, näiteks passinumbrit, isikutunnistuse numbrit ega kontonumbreid.',
   },

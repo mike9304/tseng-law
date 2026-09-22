@@ -13,20 +13,20 @@ faq:
   - q: "Kas äriühing peab lahkumishüvitist maksma ka distsiplinaarse ülesütlemise korral?"
     a: "Ei. Kui töötaja paneb toime õigusvastase teo, rikub töökorralduseeskirja või puudub mõjuva põhjuseta 3 järjestikusel päeval (tööstandardite seaduse artikkel 12, 勞動基準法第12條), võib äriühing üles öelda etteteatamiseta ja ei pea lahkumishüvitist maksma. Majanduslik ülesütlemine (artikkel 11) eeldab seevastu etteteatamist ja lahkumishüvitise maksmist."
   - q: "Kuidas arvutatakse Taiwani lahkumishüvitis?"
-    a: "Iga täidetud 1 staažiaasta kohta peab tööandja maksma lahkumishüvitisena 0,5 kuu keskmist palka, kuni 6 kuupalka. See valem kehtib staažile, millele kohaldatakse töötajate vanaduspensioni seaduse (勞工退休金條例) artiklit 12; staažile, millele kohaldatakse tööstandardite seaduse (勞動基準法) artiklit 17, makstakse iga 1 aasta kohta 1 kuu keskmine palk ilma ülemmäärata."
+    a: "Iga täidetud 1 staažiaasta kohta peab tööandja maksma lahkumishüvitisena 0,5 kuu keskmist palka, kuni 6 kuupalka. See valem kehtib staažile, millele kohaldatakse töötajate pensioniseaduse (勞工退休金條例) artiklit 12; staažile, millele kohaldatakse tööstandardite seaduse (勞動基準法) artiklit 17, makstakse iga 1 aasta kohta 1 kuu keskmine palk ilma ülemmäärata."
 ---
 
 # Seadusjärgne lahkumishüvitis (資遣費) Taiwanis: millal see makstakse ja millal mitte
 
 ![Kaanepilt](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
-Olen Wei Tseng (曾雋崴), advokaat Taiwanis.
+Artikli koostas advokaat Wei Tseng (曾雋崴). Seadusjärgset lahkumishüvitist (資遣費) makstakse Taiwanis ainult siis, kui seaduses sätestatud eeldused on täidetud.
 
-Täna soovin teile rääkida seadusjärgsest lahkumishüvitisest (資遣費) Taiwanis.
+Järgnev selgitab seadusjärgset lahkumishüvitist (資遣費) Taiwanis.
 
 ![](../images/008-taiwan-labor-severance-law/img-01.jpg)
 
-Paljud teist teavad seda juba.
+Võrdlus mõne teise õiguskorra, näiteks Koreaga, on järgmine.
 
 Mõnes õiguskorras, näiteks Koreas, peab äriühing maksma lahkumishüvitist, kui töötaja lahkub.
 
@@ -48,13 +48,13 @@ võib äriühing üles öelda ilma lahkumishüvitist maksmata.
 
 ​
 
-Koostasin selle teile lihtsasse tabelisse.
+Järgnev tabel võrdleb kolme lõpetamisviisi.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
 | **Liik** | **Majanduslik ülesütlemine (資遣員工, 經濟解僱)** | **Distsiplinaarne ülesütlemine (解僱員工, 懲戒解僱)** | **Töötaja omal soovil lahkumine**  **員工自請離職** |
 | Tähendus | Kui tööandjal on äritegevuse olukorra tõttu vaja personali kohandada, asub põhjus tööandja ettevõtluse sfääris, mitte töötaja vastutuses. Seetõttu peab tööandja järgima etteteatamistähtaega (預告期間) ja maksma lahkumishüvitist, et töötaja ebasoodsat olukorda tasakaalustada. | Kui töötaja paneb toime õigusvastase või ebasobiva teo, võib tööandja töölepingu (勞動契約) etteteatamiseta kohe üles öelda ega pea lahkumishüvitist maksma. See on osa tööandja distsiplinaarvolitustest. | Töötaja võib lepingu igal ajal lõpetada, kuid peab staaži järgi järgima etteteatamistähtaega, et tööandja saaks korraldada üleandmise ja asendaja otsimise. |
-| Tingimused | On  (Taiwani tööstandardite seaduse artikkel 11) | On  (Taiwani tööstandardite seaduse artikkel 12) | Ei ole |
+| Tingimused | Jah (Taiwani tööstandardite seaduse artikkel 11) | Jah (Taiwani tööstandardite seaduse artikkel 12) | Ei ole |
 | Etteteatamine | Nõutav | Ei ole nõutav | Nõutav |
 | Raskus tööandjale | Lihtsam menetlus | Raskem menetlus | Lihtsam menetlus |
 | Kas äriühing peab maksma lahkumishüvitist (資遣費) | Nõutav | Ei ole nõutav | Ei ole nõutav |
@@ -62,7 +62,7 @@ Koostasin selle teile lihtsasse tabelisse.
 
 > Taiwanis peab tööandja iga täidetud 1 staažiaasta (年資) kohta
 > maksma lahkumishüvitisena 0,5 kuu keskmist palka (平均工資).
-> (kuni 6 kuupalka) See valem kehtib staažile, millele kohaldatakse töötajate vanaduspensioni seaduse artiklit 12 (勞工退休金條例); staažile, millele kohaldatakse tööstandardite seaduse artiklit 17 (勞動基準法), makstakse iga 1 aasta kohta 1 kuu keskmine palk ilma ülemmäärata.
+> (kuni 6 kuupalka) See valem kehtib staažile, millele kohaldatakse töötajate pensioniseaduse artiklit 12 (勞工退休金條例); staažile, millele kohaldatakse tööstandardite seaduse artiklit 17 (勞動基準法), makstakse iga 1 aasta kohta 1 kuu keskmine palk ilma ülemmäärata.
 
 ​
 
@@ -82,7 +82,7 @@ ega tohi langeda äriühingu kavatsuse ohvriks.
 
 ​
 
-Räägin ühest asjast, mida olen käsitlenud.
+Üks käsitletud juhtum näitab, miks tõendid võivad osutuda oluliseks.
 
 On tuntud äriühing A, millel on filiaalid kogu Taiwanis.
 
@@ -94,7 +94,7 @@ personali kulude vähendamiseks,
 
 kutsuma järjest kõrge palgaga pika staažiga töötajaid vestlustele.
 
-Siis oli minu klient, härra B, töötanud üle 10 aasta äriühingus A
+Sel ajal oli klient, härra B, töötanud üle 10 aasta äriühingus A
 
 ja oli Kesk-Taiwani kõrgeima tulemusega müügiesindaja.
 

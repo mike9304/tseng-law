@@ -451,7 +451,7 @@ const SERVICES_ACCEPTANCE_PATTERNS: Record<
   sl: [['čaka na oceno', /čaka na oceno/i], ['ni pravno mnenje', /ni pravno mnenje/i]],
   lt: [['laukia įvertinimo', /laukia įvertinimo/i], ['nėra teisinė nuomonė', /nėra teisinė nuomonė/i]],
   lv: [['gaida izvērtējumu', /gaida izvērtējumu/i], ['nav juridisks atzinums', /nav juridisks atzinums/i]],
-  et: [['ootab läbivaatamist', /ootab läbivaatamist/i], ['ei ole õiguslik seisukoht', /ei ole õiguslik seisukoht/i]],
+  et: [['ootab läbivaatamist', /ootab läbivaatamist/i], ['ei ole õigusnõu', /ei ole õigusnõu/i]],
   ca: [['espera revisió', /espera revisió/i], ['no és assessorament jurídic', /no és assessorament jurídic/i]],
   my: [['စစ်ဆေးရန် စောင့်ဆိုင်း', /စစ်ဆေးရန် စောင့်ဆိုင်း/], ['ဥပဒေအကြံဉာဏ် မဟုတ်', /ဥပဒေအကြံဉာဏ် မဟုတ်/]],
   km: [

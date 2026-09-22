@@ -1,0 +1,158 @@
+# WO-F-et — Estonian fix lane, campaign round 2 (Grok 4.7, 2026-09-22)
+
+Workspace: /Users/son7/Projects/tseng-law-fix-et-r2
+No git add/commit/push. Estonian strings only.
+Files written: 18 × src/content/columns-et/*.md;
+src/data/international-guidance-baltic-atlantic.ts (estonianGuidanceContent only);
+src/data/international-guidance-answers.ts (et faq answer only);
+src/data/international-guidance-offices.ts (et description only);
+src/data/international-guidance-team.ts (et bios only);
+src/data/international-inquiry-copy.ts (et key only);
+src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.et discoveryNotice only).
+Tests: expected-string pins only —
+src/lib/__tests__/international-guidance-answers.test.ts (et FAQ acceptance phrase);
+src/data/__tests__/guidance-disclosure-parity.test.ts (et not-legal-advice pattern).
+Bio figure left byte-identical: "TWD 1.57M".
+Consultation languages stay English, Chinese (中文), Japanese, Korean.
+Traditional Chinese glosses kept. Frontmatter keys, url, lastmod, featured_image,
+links, and block order unchanged. Dot-thousands kept (R14).
+
+## Rows applied
+
+et-a.md (32 rows). Applied except the skips below:
+a#1 FAQ disclaimer: õigusnõu, not õiguslik seisukoht.
+a#3 sending the form is free; still not a free consultation.
+a#4 Kokkuvõte, mille te alguses saadate.
+a#5 teile vastamiseks (not tagasisidet).
+a#6 002 huvide konflikti heakskiit; juhatuse liikmete ja osanike huve.
+a#7 003 道路交通管理處罰條例 → seadus (link label only; URL unchanged).
+a#8 kannatanu ei taju kahetsust ega siirust.
+a#9 kindlustusandjal on tal raske (not ühingul).
+a#10 uusi Taiwani dollareid (新臺幣, TWD).
+a#11 008 table Tingimused: Jah (artikkel 11 and artikkel 12).
+a#12 勞工退休金條例 → töötajate pensioniseaduse (FAQ + blockquote).
+a#13 and a#25 007 close: üldine ülevaade … ega ole õigusnõu üksiku asja kohta.
+a#14 haldusrahvet → haldusrahvi. Amount left "TWD 30.000" (no space).
+a#15 discoveryNotice: ülevaade. Token llms.txt kept.
+a#16 Firmist / Firmi: title "Teave büroo Hovering International Law Firm kohta"; descriptions and the two column links use Firm’i / Firm’ist.
+a#17 erakorralist kontakti (not valvesidet).
+a#18 Kui kaugele artikkel orienteerumiseks sobib.
+a#19 ainult {language} keeles; Seda lehte ei pakuta {language} keeles.
+a#20 kuvakeel (the split "kuva keel" in both guidance strings).
+a#21 Soovitud nõustamiskeel.
+a#27 008 blog openers rewritten inside the existing blocks (byline, what the article explains, the comparison lead, the table lead, the case lead, "minu klient" → "klient, härra B"). 003 "Minu kogemuse järgi" → "Praktikas".
+a#28 suurenenud elamiskulud (injury bullet and death bullet).
+a#29 005 no longer tells the reader to go read part 2. Digit 2 kept: "see süvendav osa 2" (the suggested sentence dropped a counted 2 and the checker FAILed).
+a#30 006 dangling "muu hulgas" removed; the list now ends on hariduses.
+a#31 007 seadusjärgse vararežiimi arvutus.
+a#32 kaitseolukorda.
+
+et-b.md (42 rows). Applied except the skips below:
+b#1 Kinmen või Lienchiang (Matsu), FAQ and the repeated body paragraph. Amounts unchanged.
+b#2 8 ühikut / 5 ühikut → 8 uut veoautot / 5 uut veoautot (FAQ + body). "TWD 10.000.000" kept.
+b#3 sõidudokumentide (travel to treatment).
+b#4 kas karistuslikku hüvitist mõistetakse välja.
+b#5 PIF: kus seda säilitatakse, then how labeling and advertising are reviewed.
+b#6 kehtivatest juhistest of the investment-review department.
+b#7 ei tohi pidada sama tagajärje põhjustajaks.
+b#8 lauseid, pilte, märke.
+b#9 lõplikult avaldatud materjalid.
+b#10 pidurdusvaru → aega pidurdada (both sentences in 012).
+b#11 tavaliselt 2 kuu üür. Digit 2 kept.
+b#12 viimistlusperiood (裝潢期間).
+b#13 sisemine kursus võib sisaldada tõendatud kutse- ja tehnilist sisu.
+b#14 allkirjastatud töölepingu originaal.
+b#15 ühes küsimuses tehtud järeldus.
+b#16 registrisse kantud omandit või abielu kestust võrreldes.
+b#17 mõju asenduspärimisele. English is "or"; "või" kept (the suggested "ja" was not used).
+b#18 Kas Taiwanis kehtivat otsust aktsepteeritakse … vara üleminekul.
+b#19 noteerimist või registreerimist esipörsile (興櫃).
+b#20 tööministeerium (勞動部) … kapitali-, käibe- või muud võrreldavat künnist.
+b#21 Asjaolud võivad anda ka teise nõudealuse.
+b#22 üle kirjutada.
+b#23 Hoida töös menetlust (infinitive, with items 1–5).
+b#24 reguleerida ka seda, millised andmed.
+b#26 See, kas kõnealust tööd pärast koolitust tegelikult tehti, … on samuti alus.
+b#27 Õiguslikku iseloomu ei määra ainuüksi see, et …
+b#28 millised materjalid vastavad väidetavale kulule ja hüvitisele.
+b#29 Konkreetselt (the quoted sentence is in 016, not 014).
+b#30 Taipei linna tegevuskohtade abistava eeluuringu töökorraldus. URL unchanged.
+b#31 kohus ei tee … ebasoodsat järeldust.
+b#32 "Alates kuupäevast, mis on …" removed (3× 011, 1× 015). July stays "Alates 1. juuli 2026" because "juulist" is not in the checker month list and drops 7 (FAIL 7×3). January "Alates 1. jaanuarist 2023" kept the elative; file-level numbers still PASS.
+b#33 klappima swept (see systemic count).
+b#34 võib tuua kaasa haldusrahve. The term haldusrahve was kept; the suggested "haldusraha" was not used.
+b#35 Taiwani ettevõtjal.
+b#36 kava tuleb samuti arvestada registreerimise ajakavas.
+b#37 esitus, mis jätab mulje tervishoiutöötajast.
+b#38 013 bank blocks closed in place (period, then "Ilma elamiskaardita"). Blocks were not merged.
+b#39 selle kulu ei saa muuta aluseks (not "on mõte, et").
+b#40 Seevastu ainuüksi sellest, et kokkulepe on pikaajaline, ei tohi kohe järeldust teha.
+b#41 on igal osanikul 1 hääl. The doubled "1 … 1" calque is gone; one digit 1 remains. 018 numbers PASS (sourceCount=25 targetCount=25).
+
+Also applied inside those sweeps, not as extra rows: 009 close aligned with the English "better positioned to protect its rights", plus that preparation does not decide the outcome (R3). 016 退休金 "vanaduspension" → "pensionihüvitis" (R8; Estonia's state old-age pension is a different institution).
+
+No P3 rows in either review.
+
+## Rows skipped
+
+a#2  SKIP  Reviewer got the statute wrong. See "Reviewer points not applied". URL not changed. 004 label left as the Business Tax Act.
+a#22 SKIP  "TWD 1.57M" is a pinned bio figure. Not reformatted to "1,57 miljonit TWD".
+a#23 SKIP  Space thousands ("TWD 500 000" and the same amounts in 002, 003, 004, 006, 007). R14: the et checker style is dot-thousands. Kept "TWD 500.000".
+a#24 SKIP  A bare 1 standing for "üks/ühe" ("registreerimine 1 nimele", "1 aasta", "1 korra", "1 päeva", "1 staažiaasta"). The checker counts that digit. Same failure the lv lane hit. Digits kept.
+a#26 SKIP  Promoting 003 Q16–Q20 (and the same U+200B layout in 005, 006, 008, 009) to ## headings. The checker pins heading levels, block counts, and ZWSP to the Korean source.
+b#25 SKIP  Deleting U+200B, including lines that contain only that character (013, 015). ZWSP count is pinned. Sentences left as they were.
+b#42 SKIP  Same as a#23, plus currency after the amount ("1 579 589 TWD" and the amounts in 011, 017, 018). Both orders parse; the existing "TWD …" order was kept so the figures stay byte-stable. 0,5 in 012 was already a decimal comma.
+
+## Systemic patterns
+
+- klappima / klapib / klapiksid / klappida → kooskõlas: 12 instances (001 ×1, 002 ×3, 004 ×2, 011 ×1, 014 ×4, 017 ×1). None remain in columns-et.
+- õppematerjal → ülevaade: 4 instances (001, 002, 004, 007). None remain.
+- English proper name + Estonian ending without an apostrophe: 8 endings (Firm’i ×2, Firm’ist ×2, University’s ×4: National Taiwan University, Kobe, Waseda, Chengchi). The about-page title was rewritten instead of declined. Taiwan Stock Exchange’i was already correct and was left.
+- Kinmen *ja* Lienchiang → *või*: 2 (017 FAQ + restated paragraph). Line 53 already had *või*.
+- "N ühikut" for new freight trucks → "N uut veoautot": 4 (8 and 5, each in the FAQ and the body). The general rule's "20 uut veoautot" was already right.
+- "Alates kuupäevast, mis on": 4 (011 ×3, 015 ×1). Relative clause removed.
+- Blog register inside existing blocks: 8 sentences (008 ×6, 003 ×1, 009 ×1). Q16–Q20 were not promoted to headings.
+- 條例 as määrus → seadus: 1 (003 traffic statute). 勞工退休金條例 → pensioniseadus: 2.
+- R2–R11, R12–R17 sweep beyond the rows: emergency numbers already say Taiwan 119 / 110 / 112; role lines are already Estonian (Jurist-assistent, Haridusministeeriumi õigusosakond, Õigusabi sihtasutus, Taichungi filiaal); ROC years already say Hiina Vabariigi kalendriaasta; 008 already uses [nimi]; no Czech paragraph remains in columns-et or the et pack. Consultation lock left negative. No Hangul added outside url.
+
+## §Verify
+
+```
+neighbour      PASS
+hanzi          PASS   han=136
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS
+langid         PASS
+currency       PASS
+
+summary  PASS  18/18 files
+       0
+TSC_OK
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+      29
+```
+
+Commands, in order, from /Users/son7/Projects/tseng-law-fix-et-r2 with PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH:
+node scripts/check-column-translation.mjs --dir src/content/columns-et --lang et 2>&1 | tail -8
+grep -rn "[변호사 검수 필요]" src/content/columns-et src/data | wc -l
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+git status --short | wc -l
+
+The git count 29 was taken before this log file existed. It includes the pre-existing dirty WO-F-et.txt and the untracked review files et-a.md and et-b.md, which this lane did not edit.
+
+Checker note: the first date pass used "Alates 1. juulist 2026" and failed 011 on missing 7×3 (the month list has "juuli", not "juulist"). Restored the nominative the checker parses: "Alates 1. juuli 2026". "Alates 1. jaanuarist 2023" (015) did not drop a counted 1 at file level and was kept. The part-2 sentence that dropped the digit 2 failed 005; "süvendav osa 2" was put back. Final checker: summary PASS 18/18. Pre-existing number WARNs, not introduced by this lane: 006 extra 1, 009 extra 2, 015 extra 2×3 (제2종), 017 수사미해석 제3자. Those files still PASS.
+
+## Reviewer points not applied
+
+- a#2. The URL pcode=G0340028&flno=3 is the Business Tax Act (加值型及非加值型營業稅法), not the nonresident dividend withholding rule. English 004 names that Act; the visible "artikkel 10" matches the English label even though the URL's flno is 3. 001 Estonian already says "Säte mitteresidendile makstava dividendi kinnipidamismäära kohta", which does not match 001 English ("General Business Tax Rate"). That label was not copied onto 004, and 001 was left because rewriting it was not a valid finding.
+- Space as the Estonian thousands separator, and currency after the amount, is the native norm. The et number checker cannot parse a space (R14). Amounts stay "TWD 500.000" / "TWD 1.579.589".
+- "TWD 1.57M" is pinned. The suggested "1,57 miljonit TWD" was not applied.
+- "Alates 1. juulist 2026" is natural Estonian. The checker only maps the nominative "juuli", so the elative drops month 7. July dates stay "1. juuli 2026".
+- "ühe poole nimele" / "ühe aasta" / "ühe korra" / "ühe päeva" / "ühe staažiaasta" drop a counted digit 1. Digits were kept.
+- Turning Q16–Q20 into headings, and deleting U+200B blanks, would fail headings, blocks, and ZWSP parity with the Korean source.
+- Hangul slugs in url (008, 009) were not edited.
+- b#17 "ja mõju asenduspärimisele" makes the next rank and representation cumulative. English is "or". The Estonian keeps "või".
+- b#34 "haldusraha" is ordinary administrative money. The file's legal term for 罰鍰 is haldusrahve; that term was kept.
+- "lapse parimad huvid" is the statutory best-interests test. Left.

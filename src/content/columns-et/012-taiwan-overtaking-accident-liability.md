@@ -37,13 +37,13 @@ Selle büroo anonüümseks muudetud asjas sõitis mootorrattur A kaasreisija B-g
 
 ![Õnnetuse skeem, mis näitab mootorratta möödasõiduteed ja 2 eesolevat sõidukit mägiteel](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A üritas mööduda 2 sõidukist, sisenes vastassuunarajale ja kiirendas. Ka sõiduk 2 valmistus mööduma sõidukist 1: alla 1 sekundi pärast suunatule lülitamist sisenes ta vastassuunarajale. Mootorrattal ei olnud piisavat pidurdusvaru ja ta põrkas kokku sõidukiga 2.
+A üritas mööduda 2 sõidukist, sisenes vastassuunarajale ja kiirendas. Ka sõiduk 2 valmistus mööduma sõidukist 1: alla 1 sekundi pärast suunatule lülitamist sisenes ta vastassuunarajale. Mootorrattal ei olnud piisavalt aega pidurdada ja ta põrkas kokku sõidukiga 2.
 
 B sai raske peavigastuse ja suri sündmuskohal; A kaotas teadvuse ja viidi haiglasse.
 
 A lähedased ja B omaksed pidasid algul sõiduki 2 järsku sõiduraja vahetust kokkupõrke peamiseks põhjuseks. Asi viis kohtumenetluseni ja selle käigus tehti õnnetuse kohta mitu ekspertiisi (鑑定).
 
-Ekspertiisi tulemuse järgi kandis A selle kokkupõrke peamist vastutust. See järeldus piirdus selle asja asjaoludega. Ekspertiis võttis koos arvesse, et A kavatses mööduda 2 eesolevast sõidukist, mis sõitsid järjest, et ta sisenes vastassuunarajale, et ta sõitis kiirusega, mis peaaegu ei jätnud pidurdusvaru, et määratud heli- ja esitulesignaalid puudusid, ning sõiduki 2 sõiduraja vahetust, tee ja sõiduradade ehitust ja muid säilitatud tõendeid (鑑定).
+Ekspertiisi tulemuse järgi kandis A selle kokkupõrke peamist vastutust. See järeldus piirdus selle asja asjaoludega. Ekspertiis võttis koos arvesse, et A kavatses mööduda 2 eesolevast sõidukist, mis sõitsid järjest, et ta sisenes vastassuunarajale, et ta sõitis kiirusega, mis peaaegu ei jätnud aega pidurdada, et määratud heli- ja esitulesignaalid puudusid, ning sõiduki 2 sõiduraja vahetust, tee ja sõiduradade ehitust ja muid säilitatud tõendeid (鑑定).
 
 See, et üksikutes asjades tulevad sellised ekspertiisitulemused, ei tähenda, et signaalikohustuse üksik rikkumine alati kinnitaks vastutuse (鑑定). Hooletus (過失) möödasõiduõnnetuses sõltub õnnetuskohast, sõiduradade jaotusest, kiirusest, sõidukite liikumisest, signaalidest, ajavahemikest, nähtavusest ja muudest tõenditest.
 

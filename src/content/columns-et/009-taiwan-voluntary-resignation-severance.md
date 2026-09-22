@@ -91,7 +91,7 @@ Seetõttu on Taiwani töövaidlustes (勞資糾紛)
 
 **„ajastus“** väga tähtis.
 
-Enamasti on paremas seisundis see pool, kes on ette valmistanud.
+Enamasti on oma õiguste kaitsmiseks paremas seisus see pool, kes on ette valmistunud; ettevalmistus ei otsusta tulemust.
 
 ---
 

@@ -525,7 +525,7 @@ const ELEMENTS = {
     sl: /pravn\w* mnenj/,
     lt: /teisinė nuomonė/,
     lv: /juridisks atzinums/,
-    et: /õiguslik seisukoht/,
+    et: /õigusnõu/,
     ca: /assessorament jurídic/,
     is: /lögfræðilegt álit/,
   },

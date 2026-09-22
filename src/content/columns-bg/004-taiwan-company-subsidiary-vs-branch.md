@@ -180,7 +180,7 @@ faq:
 - [Министерство на финансите на Тайван — разяснение за споразумението за избягване на двойното данъчно облагане Тайван — Корея](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=127fffb302f24987b0bbf1eff78ff9c9)
 - [База нормативни актове на Министерството на правосъдието на Тайван — член 10-1 от Наредбата за промишлена иновация](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=10-1&pcode=J0040051)
 - [Тайванска фондова борса — критерии за листване](https://www.twse.com.tw/zh/listed/method/standars.html)
-- [Invest Taiwan — процедура по инвестиция и вписване на клон на чуждестранно дружество](https://investtaiwan.nat.gov.tw/showPageengInvestmentStatus01?lang=eng&menuNum=7&search=InvestmentStatus01)
+- [Портал за инвестиции Invest Taiwan — процедура по инвестиция и вписване на клон на чуждестранно дружество](https://investtaiwan.nat.gov.tw/showPageengInvestmentStatus01?lang=eng&menuNum=7&search=InvestmentStatus01)
 
 ## Свързани материали
 

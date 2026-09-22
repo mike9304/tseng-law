@@ -3,7 +3,7 @@ title: "تاريخ المساج في تايوان ومعلومات قانوني�
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
 lastmod: "2025-09-13"
 date_display: "13 سبتمبر 2025"
-read_time: "2 دقيقة قراءة"
+read_time: "دقيقتان للقراءة"
 categories:
   - "معلومات قانونية"
 featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-هل عاصر أحد عصر محلات الحلاقة التقليدية الأولى في تايوان؟
+كانت محلات الحلاقة التقليدية الأولى في تايوان جزءًا من الخدمة اليومية آنذاك.
 
 كانت طريقة الشامبو في محلات الحلاقة آنذاك فريدة جدًا.
 
@@ -33,7 +33,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ​
 
-على أي حال، إذا تحدثنا عن المساج
+وفيما يتعلق بالمساج
 
 ففي تايوان أيضًا شوارع كثيرة للمساج.
 

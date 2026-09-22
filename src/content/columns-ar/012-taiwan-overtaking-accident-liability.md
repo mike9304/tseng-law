@@ -3,7 +3,7 @@ title: "كيف يُحكَم في المسؤولية عن حادث التجاوز
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
 lastmod: "2026-09-10"
 date_display: "13 سبتمبر 2025"
-read_time: "4 دقيقة قراءة"
+read_time: "4 دقائق قراءة"
 categories:
   - "معلومات قانونية"
 featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.jpg"

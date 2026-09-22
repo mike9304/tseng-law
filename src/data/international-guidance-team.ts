@@ -2132,17 +2132,17 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'مؤسسة المساعدة القانونية، فرع تايتشونغ (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'عمل سابقًا في Ministry of Education, Legal Affairs Division، وركّز على المنازعات الإدارية والمدنية.',
+        'عمل سابقًا في وزارة التعليم، قسم الشؤون القانونية (Ministry of Education, Legal Affairs Division)، وركّز على المنازعات الإدارية والمدنية.',
         'لديه خبرة في القضايا المتعلقة بالجامعات وبحقوق أعضاء هيئة التدريس وبالتظلمات الإدارية.',
       ],
       education: ['بكالوريوس في القانون (LL.B.)، National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'وزارة التعليم، قسم الشؤون القانونية (Ministry of Education, Legal Affairs Division)',
         'محامٍ، Hovering International Law Firm',
       ],
     },

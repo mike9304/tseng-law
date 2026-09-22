@@ -3129,7 +3129,7 @@ export const guidanceTeamBios: Record<
       ],
       education: [
         'Magistr (M.S.), Institute of Finance, National Taiwan University',
-        'Bakalář (B.A.) v dvojím programu práva a financí, National Chengchi University',
+        'Bakalář (B.A.) dvouoborového studia práva a financí, National Chengchi University',
         'Výměnné studium na Kobe University a Waseda University',
       ],
       experience: [

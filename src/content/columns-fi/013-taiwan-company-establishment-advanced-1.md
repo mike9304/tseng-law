@@ -29,7 +29,7 @@ Kun ulkomaalainen perustaa yhtiön Taiwanissa, hänen on jätettävä sijoitussu
 
 Sijoitustarkastusosaston on tutkittava, käytetäänkö kyseistä pääomaa (資本額) tosiasiallisesti sijoitustarkoituksiin
 
-eikä ulkomaiset toimijat tuo varoja muun verukkeen nojalla.
+ja että ulkomaiset toimijat eivät tuo varoja Taiwaniin muun verukkeen nojalla.
 
 Sijoitussuunnitelmaa laadittaessa tarkkaa yhtiön osoitetta ei tarvitse ilmoittaa; seudun ilmoittaminen riittää (esimerkki: Taipein kaupunki). ​
 
@@ -75,11 +75,11 @@ mutta maahanmuuttoviranomainen (移民署) on hyvin ruuhkainen, joten paikalle k
 
 Talousministeriön sijoitustarkastusosasto tutkii tosin sijoittajan taustan,
 
-mutta tarkastus kohdistuu siihen, onko suunnitelma aito, ei siihen, vastaako koulutus alaa täsmälleen.
+mutta tarkastus ei ole erityisen ankara.
 
 Voitte ilmoittaa monenlaisia työkokemuksia, mukaan lukien sivutyöt,
 
-ja selostaa niin seikkaperäisesti, että tarkastavat henkilöt voidaan vakuuttaa.
+ja selostaa kokemus niin seikkaperäisesti, että tarkastajat vakuuttuvat.
 
 Tästä kohdasta kannattaa keskustella perusteellisesti taiwanilaisen asianajajan kanssa.
 
@@ -103,7 +103,7 @@ Siksi suosittelen etsimään toimipaikkaa varhain.
 
 Jos neuvottelu vuokranantajan kanssa ei suju kitkattomasti,
 
-voitte tarvittaessa ehdottaa vuokrasopimuksen notaarivahvistusta (公證) tai täydentävää vakuutta.
+voitte tarvittaessa ehdottaa vuokrasopimuksen vahvistamista julkisella notaarilla (公證) tai täydentävää vakuutta.
 
 ​
 

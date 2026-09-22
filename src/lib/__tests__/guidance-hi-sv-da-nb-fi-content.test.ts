@@ -79,7 +79,7 @@ const LANGUAGE_FAQ_QUESTION = {
   sv: 'Kan jag få rådgivning på svenska?',
   da: 'Kan jeg få rådgivning på dansk?',
   nb: 'Kan jeg få rådgivning på norsk?',
-  fi: 'Voinko saada neuvontaa suomeksi?',
+  fi: 'Voitteko saada neuvontaa suomeksi?',
 } as const;
 
 type NewGuidanceLocale = 'hi' | 'sv' | 'da' | 'nb' | 'fi';

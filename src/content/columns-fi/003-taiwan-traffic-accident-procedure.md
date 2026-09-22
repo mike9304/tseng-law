@@ -37,7 +37,7 @@ Poliisilta voitte onnettomuuspaikalla saada liikenneonnettomuuden osapuolten rek
 
 ## Q3. Mitkä vaatimukset ja määräajat on tutkittava vammautuessa?
 
-Rikoslain (刑法) 284 artikla sääntelee tuottamuksellista ruumiinvammaa (過失傷害) ja tuottamuksellista törkeää ruumiinvammaa (過失致重傷). Tämä säännös on rikoslain 287 artiklan mukaan asianomistajarikos (告訴乃論之罪); rikosprosessilain (刑事訴訟法) 237 artiklan mukaan kanne on periaatteessa nostettava 6 kuukauden kuluessa tekijän tietämisestä.
+Rikoslain (刑法) 284 artikla sääntelee tuottamuksellista ruumiinvammaa (過失傷害) ja tuottamuksellista törkeää ruumiinvammaa (過失致重傷). Tämä säännös on rikoslain 287 artiklan mukaan asianomistajarikos (告訴乃論之罪); rikosprosessilain (刑事訴訟法) 237 artiklan mukaan asianomistajan rangaistusvaatimus on esitettävä 6 kuukauden kuluessa siitä, kun hän saa tietää tekijästä.
 
 Siviilioikeudellista vahingonkorvausta (損害賠償) ei siviililain (民法) 197 artiklan mukaan voi enää vaatia, kun 2 vuotta vahingon ja korvausvelvollisen tietämisestä tai 10 vuotta vahingon aiheuttaneesta teosta (侵權行為) on kulunut. Mitkä seikat vaikuttavat vanhentumiseen (消滅時效), on tutkittava erikseen.
 
@@ -55,11 +55,11 @@ Asiantuntija-arvio (鑑定) tai alustava analyysiarvio voi olla tärkeitä asiak
 
 ## Q5. Mitä kuuluu sovintosopimukseen?
 
-Sovintosopimuksessa (和解書) on vahvistettava onnettomuuden ajankohta, paikka ja osapuolet, ja otettava mukaan maksumäärä ja -ajankohta, vakuutuskorvauksen käsittely sekä sisällytetyt ja varatut vaatimukset. Tuleva hoito, myöhemmin havaitut vahingot, lääkärintodistusten (診斷證明書) luovutus ja suhde maksun ja kanteen peruuttamisen välillä on vahvistettava selvästi.
+Sovintosopimuksessa (和解書) on vahvistettava onnettomuuden ajankohta, paikka ja osapuolet, ja otettava mukaan maksumäärä ja -ajankohta, vakuutuskorvauksen käsittely sekä sisällytetyt ja varatut vaatimukset. Tuleva hoito, myöhemmin havaitut vahingot, lääkärintodistusten (診斷證明書) luovutus ja suhde maksun ja rangaistusvaatimuksen peruuttamisen välillä on vahvistettava selvästi.
 
 Sovinto (和解) siviililain (民法) 736 artiklassa on sopimus, jossa osapuolet keskinäisellä myönnytyksellä saattavat riidan päättymään tai ehkäisevät sen. Siviililain 737 artiklan mukaan oikeudenmenetyksen laajuus arvioidaan vain sopimuksessa ilmoitetun laajuuden mukaan. Siksi ei ilman sanamuodon tutkimista saa vahvistaa, että kaikki tulevat vaatimukset sammuvat.
 
-Asianomistajarikoksissa kanne voidaan rikosprosessilain 238 artiklan mukaan peruuttaa ennen 1. oikeusasteen suullisen käsittelyn päättymistä; peruuttamisen jälkeen ei voida kannella uudelleen. Ei-asianomistajarikoksissa julkinen syyte ei lakkaa automaattisesti pelkällä yksityisellä sovinnolla, eikä sovinto aina velvoita kanteen peruuttamiseen.
+Asianomistajarikoksissa rangaistusvaatimus voidaan rikosprosessilain 238 artiklan mukaan peruuttaa ennen 1. oikeusasteen suullisen käsittelyn päättymistä; peruuttamisen jälkeen sitä ei voida esittää uudelleen. Ei-asianomistajarikoksissa julkinen syyte ei lakkaa automaattisesti pelkällä yksityisellä sovinnolla, eikä sovinto aina velvoita rangaistusvaatimuksen peruuttamiseen.
 
 ### Viralliset perusteet Q1–Q5
 
@@ -177,7 +177,7 @@ Yhden ajoneuvon yksittäisonnettomuuksissa sen kuljettaja ei yleensä ole kyseis
 
 Korvausnormia (強制汽車責任保險給付標準) muutettiin 29. toukokuuta 2026, ja muutos pätee onnettomuuksiin 1. heinäkuuta 2026 alkaen. Katto tarvittaville asianmukaisille hoitokuluille vammautuessa on TWD 200.000, työkyvyttömyyskorvaukset (失能) lakisääteisten 15 portaan mukaan TWD 80.000–3.000.000, kuolemantapauskorvaus TWD 3.000.000, ja kuoleman, työkyvyttömyyden ja hoitokulujen enimmäismäärä yhtä vammautunutta henkilöä ja yhtä onnettomuutta kohti on TWD 3.200.000. Aiemmille onnettomuuksille voi päteä aiempi normi.
 
-Vastuuvakuutus kolmatta kohtaan (第三人責任險), kuljettajan tapaturmavakuutus (駕駛人傷害險) ja kaskovakuutus (車體損失險) ovat sopimuksenmukaisia valintatuotteita. Tosiasiallinen turva poikkeaa vakuutetun, katon, omavastuun (自負額), poikkeuksen, tuottamuksen ja muiden vakuutusehtojen mukaan; vakuutustodistus ja ehdot on tutkittava yksi kerrallaan.
+Kolmannen osapuolen vastuuvakuutus (第三人責任險), kuljettajan tapaturmavakuutus (駕駛人傷害險) ja kaskovakuutus (車體損失險) ovat sopimuksenmukaisia valintatuotteita. Tosiasiallinen turva poikkeaa vakuutetun, katon, omavastuun (自負額), poikkeuksen, tuottamuksen ja muiden vakuutusehtojen mukaan; vakuutustodistus ja ehdot on tutkittava yksi kerrallaan.
 
 ### Viralliset perusteet Q11–Q15
 
@@ -195,7 +195,7 @@ Vastuuvakuutus kolmatta kohtaan (第三人責任險), kuljettajan tapaturmavakuu
 - [Korvausnormi moottoriajoneuvojen pakollisesta vastuuvakuutuksesta](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [Rahoitusvalvontakomission (金融監督管理委員會) vakiosopimus yksityisestä moottoriajoneuvovakuutuksesta](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
 
-Q16. Voiko kaiken onnettomuuden jälkeen jättää vakuutusyhtiölle?
+Q16. Voiko onnettomuuden jälkeen jättää kaiken vakuutusyhtiön hoidettavaksi?
 
 ​
 
@@ -239,7 +239,7 @@ Tuottamuksellisesta ruumiinvammasta (過失傷害) on joissakin tuomioissa mää
 
 ​
 
-Muunnettaessa sakoksi rikoslain (刑法) 41 artiklan 1 momentti vahvistaa muunnoksen TWD 1.000, TWD 2.000 tai TWD 3.000 (新臺幣) 1 päivää kohti; laskettaessa TWD 1.000 perusteella päivässä 3 kuukauden rangaistus antaa 3 × 30 × 1.000 = TWD 90.000.
+Muunnettaessa sakoksi rikoslain (刑法) 41 artiklan 1 momentti vahvistaa muunnoksen TWD 1.000, TWD 2.000 tai TWD 3.000 (新臺幣) 1 päivältä; laskettaessa TWD 1.000 perusteella päivässä 3 kuukauden rangaistus antaa 3 × 30 × 1.000 = TWD 90.000.
 
 ​
 
@@ -255,15 +255,15 @@ Tuottamuksellisesta törkeästä ruumiinvammasta on joissakin tuomioissa määr�
 
 ​
 
-Q18. Voiko rikosoikeudellisen kanteen peruuttaa, jos tekee sovinnon vastapuolen kanssa?
+Q18. Voiko rangaistusvaatimuksen peruuttaa, jos tekee sovinnon vastapuolen kanssa?
 
 ​
 
-Tuottamuksellinen ruumiinvamma ja tuottamuksellinen törkeä ruumiinvamma ovat asianomistajarikoksia (告訴乃論之罪), joissa rikosoikeudellinen kanne voidaan peruuttaa.
+Tuottamuksellinen ruumiinvamma ja tuottamuksellinen törkeä ruumiinvamma ovat asianomistajarikoksia (告訴乃論之罪), joissa rangaistusvaatimus voidaan peruuttaa.
 
 ​
 
-Tuottamuksellisesti aiheutettu kuolema ei salli kanteen luopumista; jos kuitenkin tekee sovinnon vastapuolen perheen kanssa, tuomioistuin voi lieventää rangaistusta.
+Tuottamuksellisesti aiheutettu kuolema ei salli rangaistusvaatimuksesta luopumista; jos kuitenkin tekee sovinnon vastapuolen perheen kanssa, tuomioistuin voi lieventää rangaistusta.
 
 ​
 
@@ -335,7 +335,7 @@ Liikenneonnettomuusasioissa nousee toistuvasti esiin yksi erityisen tärkeä sei
 
 ​
 
-Vahingonkärsijän vammautuessa tai kuollessa he itse tai perhe kärsivät ruumiillista ja henkistä tuskaa.
+Kun vahingonkärsijä vammautuu tai kuolee, hän itse tai hänen perheensä kärsii ruumiillista ja henkistä tuskaa.
 
 ​
 

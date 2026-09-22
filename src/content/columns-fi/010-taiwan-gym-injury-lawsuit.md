@@ -17,11 +17,11 @@ Korealaisen opiskelijan Taiwanissa kuntosalilla (健身房) valmentajan (教練)
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
-Onnettomuus tapahtui kuntosalilla Taichungissa (臺中) maastavedon (硬舉) harjoituksessa valmentajan johdolla. Vamman jälkeen ei tule katsoa yksin, että onnettomuus tapahtui kuntosalilla; yhdessä on tutkittava käyttäjän harjoituskokemus ja terveydentila, liikkeen luonne ja paino, valmentajan selitys ja johtaminen, liike ja reaktio tuolloin, vamman ja liikkeen välinen syy-yhteys (因果關係) sekä asiakirjat, jotka tukevat vahinkoa.
+Onnettomuus tapahtui kuntosalilla Taichungissa (臺中) maastavedon (硬舉) harjoituksessa valmentajan johdolla. Vamman jälkeen ei tule katsoa pelkästään sitä, että onnettomuus tapahtui kuntosalilla; on tutkittava myös käyttäjän harjoituskokemus ja terveydentila, liikkeen luonne ja paino, valmentajan selitys ja johtaminen, liike ja reaktio tuolloin, vamman ja liikkeen välinen syy-yhteys (因果關係) sekä asiakirjat, jotka tukevat vahinkoa.
 
 Olin tässä asiassa kantajan, korealaisen opiskelijan, oikeudenkäyntiasiamies (訴訟代理人). Taichungin käräjäoikeus (臺灣臺中地方法院) velvoitti 24. tammikuuta 2022 antamassaan ensimmäisen oikeusasteen tuomiossa kuluttaja-asiassa nro 7 vuonna 109 (109年度消字第7號) vastaajan maksamaan [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) sekä tuomiossa mainitun koron.
 
-Sen jälkeen lehdistö ilmoitti, että asianosaiset olivat muutoksenhakuasteessa tehneet sovinnon (和解). Yksin virallinen ensimmäisen oikeusasteen tuomio ei salli vahvistaa muutoksenhakuasteen tulosta tai sovintosummaa; tätä ei saa lukea ensimmäisen oikeusasteen tuomion lopulliseksi tulokseksi.
+Sen jälkeen lehdistö ilmoitti, että asianosaiset olivat muutoksenhakuasteessa tehneet sovinnon (和解). Pelkkä virallinen ensimmäisen oikeusasteen tuomio ei salli vahvistaa muutoksenhakuasteen tulosta tai sovintosummaa; lehdistön ilmoittamaa sovintoa ei saa lukea ensimmäisen oikeusasteen vahvistetuksi lopputulokseksi.
 
 Alla ovat käännetyt otsikot tätä asiaa koskevista lehdistötiedotteista, verkkojulkaisuista ja oikeudellisista selostuksista. Alla olevat otsikot palvelevat vain kunkin linkin sisällön esittämistä; ne eivät merkitse, että tämä teksti itse toteaisi seikat.
 
@@ -41,29 +41,29 @@ Alla ovat käännetyt otsikot tätä asiaa koskevista lehdistötiedotteista, ver
 
 [Miesopiskelija, välilevyn repeämä 90 kg maastavedon jälkeen… vaatii korvausta kuntosalilta](https://news.ebc.net.tw/news/living/362075)
 
-![PTT-julkaisu: Korealainen miesopiskelija, välilevyn repeämä 90 kg maastavedossa… ensimmäisessä oikeusasteessa, kuntosalille määräys maksaa 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
+![PTT-julkaisu: Korealainen miesopiskelija, välilevyn repeämä 90 kg maastavedossa… ensimmäisessä oikeusasteessa, kuntosali velvoitettiin maksamaan 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-06.jpg)
 
-[PTT-julkaisu: Korealainen miesopiskelija, välilevyn repeämä 90 kg maastavedossa… ensimmäisessä oikeusasteessa, kuntosalille määräys maksaa 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
+[PTT-julkaisu: Korealainen miesopiskelija, välilevyn repeämä 90 kg maastavedossa… ensimmäisessä oikeusasteessa, kuntosali velvoitettiin maksamaan 1.570.000 TWD](https://www.ptt.cc/bbs/MuscleBeach/M.1680935985.A.BF6.html)
 
-![Blogi: 90 kg maastavedon vamma 70 kg korealaisella opiskelijalla ja korvaus yli 1.000.000 TWD… oliko syytä kuntosalilla? Millainen asenne harjoittelijalla olisi syytä olla?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
+![Blogi: 90 kg maastavedon vamma 70 kg korealaisella opiskelijalla ja korvaus yli 1.000.000 TWD… oliko syy kuntosalilla? Millainen asenne harjoittelijalla olisi syytä olla?](../images/010-taiwan-gym-injury-lawsuit/img-07.jpg)
 
-[Blogi: 90 kg maastavedon vamma 70 kg korealaisella opiskelijalla ja korvaus yli 1.000.000 TWD… oliko syytä kuntosalilla? Millainen asenne harjoittelijalla olisi syytä olla?](https://blog.udn.com/blackjack/179081715)
+[Blogi: 90 kg maastavedon vamma 70 kg korealaisella opiskelijalla ja korvaus yli 1.000.000 TWD… oliko syy kuntosalilla? Millainen asenne harjoittelijalla olisi syytä olla?](https://blog.udn.com/blackjack/179081715)
 
-![Oikeudellinen selostus: miesopiskelija, välilevyn repeämä maastavedossa… ensimmäisessä oikeusasteessa, tunnetulle kuntosalille määräys maksaa 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
+![Oikeudellinen selostus: miesopiskelija, välilevyn repeämä maastavedossa… ensimmäisessä oikeusasteessa, tunnettu kuntosali velvoitettiin maksamaan 1.570.000 TWD](../images/010-taiwan-gym-injury-lawsuit/img-08.jpg)
 
-[Oikeudellinen selostus: miesopiskelija, välilevyn repeämä maastavedossa… ensimmäisessä oikeusasteessa, tunnetulle kuntosalille määräys maksaa 1.570.000 TWD](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
+[Oikeudellinen selostus: miesopiskelija, välilevyn repeämä maastavedossa… ensimmäisessä oikeusasteessa, tunnettu kuntosali velvoitettiin maksamaan 1.570.000 TWD](https://lawdb.tw/2023/04/12/%E7%94%B7%E5%A4%A7%E7%94%9F%E7%B7%B4%E7%A1%AC%E8%88%89%E6%A4%8E%E9%96%93%E7%9B%A4%E7%A0%B4%E8%A3%82%EF%BC%8C%E7%9F%A5%E5%90%8D%E5%81%A5%E8%BA%AB%E6%88%BF%E5%88%A4%E8%B3%A0%EF%BC%91%EF%BC%95%EF%BC%97/)
 
 ![Tuomion selostus: asia akuutista välilevyn repeämästä sen jälkeen, kun kuntosalin aloittelija oli saanut ohjeen 90 kg maastavedosta](../images/010-taiwan-gym-injury-lawsuit/img-09.jpg)
 
 [Tuomion selostus: asia akuutista välilevyn repeämästä sen jälkeen, kun kuntosalin aloittelija oli saanut ohjeen 90 kg maastavedosta](https://www.instagram.com/p/Crp4vJag7v3/)
 
-![Saisiko korealainen miesopiskelija välilevyn repeämän 90 kg maastavedossa henkilökohtaisessa valmennuksessa?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
+![Saiiko korealainen miesopiskelija välilevyn repeämän 90 kg:n maastavedossa henkilökohtaisessa valmennuksessa?](../images/010-taiwan-gym-injury-lawsuit/img-10.jpg)
 
-**Saisiko korealainen miesopiskelija välilevyn repeämän 90 kg maastavedossa henkilökohtaisessa valmennuksessa?**
+**Saiiko korealainen miesopiskelija välilevyn repeämän 90 kg:n maastavedossa henkilökohtaisessa valmennuksessa?**
 
-Tämän asian merkitys on siinä, että se osoittaa, ettei vastuuta määrätä heti pelkästä seikasta, että vamma on syntynyt kuntosalilla (健身房). Palveluntarjoajan turvavelvollisuuden (安全義務) sisältö, konkreettinen johtamisteko ja huolellisuusvelvollisuuden (注意義務) laiminlyönti, vamman ja käyttäytymisen välinen syy-yhteys sekä vahingon laajuus arvioidaan kunkin asian asiakirjojen perusteella. Rikosasian (刑事) ja siviiliasian (民事) edellytykset ja määräajat eroavat samoin, joten heti onnettomuuden jälkeen on tarpeen järjestää jäljet erikseen.
+Tämän asian merkitys on siinä, että se osoittaa, ettei vastuuta määrätä heti pelkästä seikasta, että vamma on syntynyt kuntosalilla (健身房). Palveluntarjoajan turvavelvollisuuden (安全義務) sisältö, konkreettinen johtamisteko ja huolellisuusvelvollisuuden (注意義務) laiminlyönti, vamman ja käyttäytymisen välinen syy-yhteys sekä vahingon laajuus arvioidaan kunkin asian asiakirjojen perusteella. Rikosasian (刑事) ja siviiliasian (民事) edellytykset ja määräajat eroavat samoin, joten asiakirjat on heti onnettomuuden jälkeen järjestettävä erikseen.
 
-Seuraava on yleistä tietoa Taiwanin kuntosalivammoja koskevien riitojen selostamiseksi; se ei ole oikeudellista neuvontaa (損害賠償) konkreettisesta asiasta. Konkreettinen oikeus ja menettely voivat vaihdella sopimussuhteen, onnettomuuden kulun, vamman syyn ja asteen, asianosaisten käyttäytymisen, vakuutusehtojen, turvattujen todisteiden ja sovellettavan oikeuden mukaan.
+Seuraava on yleistä tietoa Taiwanin kuntosalivammoja koskevien riitojen selostamiseksi; se ei ole oikeudellista neuvontaa konkreettisesta asiasta. Konkreettinen oikeus ja menettely voivat vaihdella sopimussuhteen, onnettomuuden kulun, vamman syyn ja asteen, asianosaisten käyttäytymisen, vakuutusehtojen, turvattujen todisteiden ja sovellettavan oikeuden mukaan.
 
 ## 1. Mitä oikeudellisia menettelyjä Taiwanin kuntosalivamman jälkeen voidaan tutkia?
 
@@ -71,7 +71,7 @@ Seuraava on yleistä tietoa Taiwanin kuntosalivammoja koskevien riitojen selosta
 
 Tämä ei merkitse, että yrityksen tai valmentajan vastuu tunnustettaisiin aina, kun vamma syntyy kuntosalilla. On asia asialta arvioitava, mikä huolellisuusvelvollisuus konkreettisesti oli, onko se laiminlyöty, onko laiminlyönnin ja vamman välillä syy-yhteys (因果關係), onko syntynyt todellinen vahinko, mitä väitteitä vastapuolella on, ja onko näyttöä, joka tukee kutakin väitettä ja kutakin vastaväitettä.
 
-Jos tuottamuksellisen ruumiinvamman (過失傷害) rikoksen lakisääteiset tunnusmerkit täyttyvät, rikosilmoitusta (告訴) voidaan tutkia. Myös siviilioikeudellista vahingonkorvausvaatimusta voidaan tutkia, mutta mikä peruste sopimusvastuun, deliktivastuun (侵權行為) ja kuluttajansuojavastuun välillä soveltuu sekä vastuun laajuus vaihtelevat konkreettisten seikkojen mukaan. Se, että yhdestä onnettomuudesta voidaan tutkia useita menettelyjä (訴訟), ei merkitse, että ne kaikki olisi käytävä, eikä myöskään että toisen menestys olisi todettu.
+Jos tuottamuksellisen ruumiinvamman (過失傷害) rikoksen lakisääteiset tunnusmerkit täyttyvät, rikosilmoitusta (告訴) voidaan tutkia. Myös siviilioikeudellista vahingonkorvausvaatimusta voidaan tutkia, mutta mikä peruste sopimusvastuun, deliktivastuun (侵權行為) ja kuluttajansuojavastuun välillä soveltuu sekä vastuun laajuus vaihtelevat konkreettisten seikkojen mukaan. Se, että yhdestä onnettomuudesta voidaan tutkia useita menettelyjä (訴訟), ei merkitse, että ne kaikki olisi käytävä, eikä takaa menestystä yhdessäkään niistä.
 
 ## 2. Mitkä määräajat koskevat rikosilmoitusta ja siviilioikeudellista korvausta?
 
@@ -79,13 +79,13 @@ Jos tuottamuksellisen ruumiinvamman (過失傷害) rikoksen lakisääteiset tunn
 
 Oikeus deliktiperusteiseen vahingonkorvaukseen (侵權行為) [Taiwanin siviililain 197 artiklan (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) mukaan lakkaa periaatteessa, kun sitä ei 2 vuoden aikana käytetä siitä hetkestä, jona uhri tietää vahingon ja korvausvelvollisen, ja lakkaa myös, kun 10 vuotta on kulunut vahingon aiheuttaneesta teosta.
 
-Tuleeko toinen vaatimusperuste, kuten sopimusvastuu, peliin, tai koskevatko muut säännöt alkamishetkeä, kulumista, keskeytymistä tms., voi seikkojen (民法) mukaan vaihdella. Määräaikaa ei saa määrätä yksin onnettomuuspäivän tai diagnoosipäivän mukaan; on varmempaa varhain ja yksilöllisesti tarkistaa mahdolliset vaatimusperusteet ja viitepäivät.
+Tuleeko toinen vaatimusperuste, kuten sopimusvastuu, peliin, tai koskevatko muut säännöt alkamishetkeä, kulumista, keskeytymistä tms., voi tosiseikkojen mukaan vaihdella. Määräaikaa ei saa määrätä pelkästään onnettomuuspäivän tai diagnoosipäivän mukaan; on varmempaa varhain ja yksilöllisesti tarkistaa mahdolliset vaatimusperusteet ja viitepäivät.
 
 ## 3. Mitkä todisteet on heti onnettomuuden jälkeen turvattava ja miten?
 
-Vastuun, syy-yhteyden ja vahingon selostamiseksi suositellaan, ettei koota yksin onnettomuushetken CCTV-tallenteita (監視器影像), vaan myös potilasasiakirjat (病歷) ja lääkärintodistus (診斷證明書), kuitit lääkekuluista (醫療費用), kuljetuksesta (就醫交通費) ja hoidosta (看護費用), kuntosalin ja valmentajan kanssa vaihdetut viestit, todistajankertomukset, tuntivaraus ja läsnäolotieto, harjoitussuunnitelma ja treenitieto, yhdessä. On suositeltavaa, sikäli kuin mahdollista, valokuvata vammautunut alue ja onnettomuuspaikan tila sekä järjestää onnettomuutta edeltävä ja seuraava kulku sekä viestinnän sisältö päivämäärän mukaan, jotta asiakirjoja voidaan myöhemmin helpommin rinnastaa.
+Vastuun, syy-yhteyden ja vahingon selostamiseksi suositellaan, ettei koota pelkästään onnettomuushetken CCTV-tallenteita (監視器影像), vaan myös potilasasiakirjat (病歷) ja lääkärintodistus (診斷證明書), kuitit lääkekuluista (醫療費用), kuljetuksesta (就醫交通費) ja hoidosta (看護費用), kuntosalin ja valmentajan kanssa vaihdetut viestit, todistajankertomukset, tuntivaraus ja läsnäolotieto, harjoitussuunnitelma ja treenitieto. On suositeltavaa, sikäli kuin mahdollista, valokuvata vammautunut alue ja onnettomuuspaikan tila sekä järjestää onnettomuutta edeltävä ja seuraava kulku sekä viestinnän sisältö päivämäärän mukaan, jotta asiakirjoja voidaan myöhemmin helpommin rinnastaa.
 
-Tallenteet voivat säilytysajan päätyttyä ylikirjoittua tai muista syistä tulla käyttökelvottomiksi. Siksi voidaan harkita pyytää kuntosalia säilyttämään ne postin kautta lähetettävällä sisällöltään todistetulla kirjeellä (存證信函) tai asianajajan nimissä olevalla kirjeellä (律師函), jossa konkreettisesti ilmoitetaan tarvittavan ajanjakson, paikan ja kameran sijainnin. Tämä kirje on käytännöllinen toimenpide jättää jälki siitä, mitä on pyydetty ja milloin. Se ei kuitenkaan itsessään aseta vastapuolelle uutta lakisääteistä velvollisuutta säilyttää tallenteita eikä estä poistoa, eikä pelkkä seikka, että tallenteita ei ole jäljellä, johda automaattisesti tuomioistuinta epäedulliseen arvioon.
+Tallenteet voivat säilytysajan päätyttyä ylikirjoittua tai muista syistä tulla käyttökelvottomiksi. Siksi voidaan harkita pyytää kuntosalia säilyttämään ne postin kautta lähetettävällä sisällöltään todistetulla kirjeellä (存證信函) tai asianajajan nimissä olevalla kirjeellä (律師函), jossa konkreettisesti ilmoitetaan tarvittavan ajanjakson, paikan ja kameran sijainnin. Tällainen kirje on käytännön keino jättää jälki siitä, mitä on pyydetty ja milloin. Se ei kuitenkaan itsessään aseta vastapuolelle uutta lakisääteistä velvollisuutta säilyttää tallenteita eikä estä poistoa, eikä pelkkä seikka, että tallenteita ei ole jäljellä, johda automaattisesti tuomioistuinta epäedulliseen arvioon.
 
 Jos onnettomuuden olosuhteet voivat täyttää rikoksen tunnusmerkit, voidaan nopeasti ilmoittaa, jotta tutkintaelin (偵查機關) voi arvioida, onko laillinen peruste takavarikolle tai turvaamiselle. Ilmoittaminen ei merkitse, että poliisi tai syyttäjä välttämättä turvaisi CCTV:n, joten myös asiakirjat, jotka asianosainen itse voi turvata, kuten lääketieteelliset asiakirjat ja viestintäasiakirjat, on koottava.
 
@@ -96,10 +96,10 @@ Korvauserät, joiden vaatimista voidaan tutkia, ovat seuraavat. Tosiasiallinen t
 1. **Lääkekulut**: Todellisuudessa maksetut kulut vastaanotosta, tutkimuksista, hoidosta, lääkkeistä ja kuntoutuksesta todistetaan kuiteilla ja potilasasiakirjoilla.
 2. **Hoito- tai avustuskulut (看護費用)**: Tutkitaan lääketieteellisten ja menoa koskevien asiakirjojen kanssa, oliko vamman asteen ja hoitokulun valossa hoidon tarvetta ja ovatko jakso ja kustannus asianmukaisia.
 3. **Kuljetuskulut**: Kulut, jotka ovat tarpeen hoitopaikkaan ja sieltä pois, todistetaan siirtotiedoilla, kuiteilla ja vastaavilla asiakirjoilla.
-4. **Vahinko työkyvyn alenemasta (勞動能力減損)**: Jos jälkivammat ja pysyvä työkyvyn aleneminen tunnustetaan, voidaan arvioida yhdessä lääketieteellisten ja ammatillisten asiakirjojen, työkyvyttömyyden asteen, ammatin ja tulon sekä jäljellä olevan työkauden kanssa. Yksin työkyvyttömyysprosentti ei määrää korvausta, eikä vahinkoa lasketa automaattisesti eläkkeelle jäämiseen asti.
-5. **Tulonmenetys toipumisjaksolla (收入損失)**: Jakso, jona hoidon tai levon vuoksi ei tosiasiassa voitu työskennellä, ja siitä seuraava tulon aleneminen on todistettava palkka-, vero- ja läsnäoloasiakirjoilla.
+4. **Vahinko työkyvyn alenemasta (勞動能力減損)**: Jos jälkivammat ja pysyvä työkyvyn aleneminen tunnustetaan, voidaan arvioida yhdessä lääketieteellisten ja ammatillisten asiakirjojen, työkyvyttömyyden asteen, ammatin ja tulon sekä jäljellä olevan työiän kanssa. Pelkkä työkyvyttömyysprosentti ei määrää korvausta, eikä vahinkoa lasketa automaattisesti eläkkeelle jäämiseen asti.
+5. **Tulonmenetys toipumisjaksolla (收入損失)**: Jakso, jona hoidon tai levon vuoksi ei tosiasiassa voitu työskennellä, ja siitä seuraava tulon aleneminen on todistettava palkka-, vero- ja työsuhdeasiakirjoilla.
 6. **Ei-varallisuusoikeudellinen vahinko (非財產上損害)**: Moraalisen kärsimyksen määrän tuomioistuin määrää kunkin asian tekijöistä, kuten vamman asteesta, hoitojaksosta, jälkivammoista ja asianosaisen konkreettisista olosuhteista.
-7. **Rangaistusluonteinen korvaus (懲罰性賠償金)**: On sääntö, jonka mukaan riidassa, jossa kuluttajansuojalakia sovelletaan, jos vahinko on aiheutunut yrityksen tahallisuudesta, voidaan vaatia enintään 5 kertaa tosiasiallinen vahinko; jos törkeästä tuottamuksesta, enintään 3 kertaa; ja jos tuottamuksesta, enintään 1 kerta tosiasiallisen vahingon määrästä. Sovelletaanko [Taiwanin kuluttajansuojalain 51 artiklaa](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) asiaan ja onko tosiasiallista korvausta ja millä määrällä, riippuu tuomioistuimen arviosta konkreettisista edellytyksistä ja todisteista (消費者保護法).
+7. **Rangaistusluonteinen korvaus (懲罰性賠償金)**: On sääntö, jonka mukaan riidassa, jossa kuluttajansuojalakia sovelletaan, jos vahinko on aiheutunut yrityksen tahallisuudesta, voidaan vaatia enintään 5 kertaa tosiasiallinen vahinko; jos törkeästä tuottamuksesta, enintään 3 kertaa; ja jos tuottamuksesta, enintään 1-kertaisena tosiasiallisen vahingon määrästä. Sovelletaanko [Taiwanin kuluttajansuojalain 51 artiklaa](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=51&pcode=J0170001) asiaan ja onko tosiasiallista korvausta ja millä määrällä, riippuu tuomioistuimen arviosta konkreettisista edellytyksistä ja todisteista (消費者保護法).
 
 ## 5. Voiko, myös kun kuntosalilla on vastuuvakuutus (責任保險), korvauksen olemassaoloa ja määrää riitauttaa?
 

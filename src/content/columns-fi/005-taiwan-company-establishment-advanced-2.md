@@ -25,7 +25,7 @@ Seuraavat kysymykset ja vastaukset on tarkoitettu niille, jotka harkitsevat yhti
 
 ​
 
-**1. Mihin teidän tulee kiinnittää huomiota, kun pääoma (資本額) siirretään Koreasta taiwanilaisen yhtiön valmistelutilille (公司籌備處帳戶)? (tämä kohta koskee korealaisia järjestelmiä ja korealaisia pankkikäytäntöjä)**
+**1. Mihin teidän tulee kiinnittää huomiota, kun pääoma (資本額) siirretään sijoittajan kotimaasta taiwanilaisen yhtiön valmistelutilille (公司籌備處帳戶)? (alla oleva esimerkki koskee Korean järjestelmiä ja korealaisia pankkikäytäntöjä)**
 
 Korealaiset pankit (銀行) vaativat yleensä, että sijoittaja käy **henkilökohtaisesti** pankissa Koreassa ja siirtää varat omalla nimellään olevalta tililtä.
 
@@ -71,7 +71,7 @@ Tietyt pankit voivat asettaa lisävaatimuksia, esimerkiksi tilin käyttöajan v�
 
 A. Ensimmäinen työntekijä: hakemus tehdään johtavana työnä tavanomaisessa merentakaisten kiinalaisten tai ulkomaalaisten sijoitusyrityksessä (一般僑外投資事業主管工作). Jäljempänä kohdassa B tarkoitettu ”erikoistuneen tai teknisen työn” mittapuu ei tule sovellettavaksi, mutta kohde-ehdot tulevat, mukaan lukien ehto johtajana (經理人) yhtiössä, jossa merentakaisten kiinalaisten tai ulkomaalaisten sijoitus ylittää 1/3, sekä työnantajan tulosvaatimukset pääomasta ja liikevaihdosta (arviointistandardit 38 artikla ja 39 artikla).
 
-B. Seuraavasta työntekijästä alkaen on rajoituksia: jos palkattujen työntekijöiden määrä ylittää 1 henkilön, työntekijän asiaankuuluva koulutus ja kokemus, keskimääräistä palkkausta koskevat säännöt sekä yhtiön pääomaa ja liikevaihtoa koskevat säännöt käsitellään ”erikoistuneen tai teknisen työn” (專門性或技術性工作) mukaisesti.
+B. Seuraavasta työntekijästä alkaen on rajoituksia: jos yhtiö palkkaa enemmän kuin 1 ulkomaan kansalaisen, työntekijän koulutus ja kokemus, keskimääräistä palkkaa koskeva vaatimus sekä yhtiön pääoma ja liikevaihto käsitellään ”erikoistuneen tai teknisen työn” (專門性或技術性工作) säännösten mukaan.
 
 Ks. Taiwanin työministeriön (勞動部) sivusto: <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

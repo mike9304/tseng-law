@@ -1,5 +1,5 @@
 ---
-title: "Irtisanomiskorvaus Taiwanissa: milloin se maksetaan ja milloin ei"
+title: "Eroraha Taiwanissa: milloin se maksetaan ja milloin ei"
 url: "https://www.wei-wei-lawyer.com/post/대만-노동법：대만에서-퇴직금-받기-어렵다고"
 lastmod: "2026-09-10"
 date_display: "13. syyskuuta 2025"
@@ -8,15 +8,15 @@ categories:
   - "Oikeudellista tietoa Taiwanista"
 featured_image: "../images/008-taiwan-labor-severance-law/featured-01.jpg"
 faq:
-  - q: "Saavatko työntekijät Taiwanissa irtisanomiskorvausta, kun he irtisanoutuvat itse?"
-    a: "Eivät. Toisin kuin joissakin muissa maissa — Korea on yksi esimerkki — velvollisuus maksaa irtisanomiskorvausta (資遣費) syntyy Taiwanissa vasta, kun yhtiö irtisanoo työntekijän; jos työntekijä irtisanoutuu itse, yhtiön ei tarvitse maksaa irtisanomiskorvausta."
-  - q: "Tuleeko yhtiön maksaa irtisanomiskorvausta myös kurinpidollisessa irtisanomisessa?"
-    a: "Ei. Jos työntekijä tekee lainvastaisen teon, rikkoo työsääntöjä tai on ilman pätevää syytä poissa 3 peräkkäisenä päivänä (työstandardilain 12 artikla, 勞動基準法第12條), yhtiö voi irtisanoa ilman ennakkoilmoitusta eikä sen tarvitse maksaa irtisanomiskorvausta. Taloudellinen irtisanominen (11 artikla) sen sijaan edellyttää ennakkoilmoitusta ja irtisanomiskorvauksen maksamista."
-  - q: "Miten irtisanomiskorvaus lasketaan Taiwanissa?"
-    a: "Jokaista täyttä 1 palvelusvuotta kohden työnantajan on maksettava 0,5 kuukauden keskipalkka irtisanomiskorvauksena, enintään 6 kuukausipalkkaa. Tämä kaava koskee palvelusaikaa, johon sovelletaan asetuksen työntekijöiden eläkkeestä 12 artiklaa (勞工退休金條例); palvelusaikaan, johon sovelletaan työstandardilain 17 artiklaa (勞動基準法), maksetaan kutakin 1 vuotta kohden 1 kuukauden keskipalkka ilman ylärajaa."
+  - q: "Saavatko työntekijät Taiwanissa erorahaa, kun he irtisanoutuvat itse?"
+    a: "Eivät. Toisin kuin joissakin muissa maissa — Korea on yksi esimerkki — velvollisuus maksaa erorahaa (資遣費) syntyy Taiwanissa vasta, kun yhtiö irtisanoo työntekijän; jos työntekijä irtisanoutuu itse, yhtiön ei tarvitse maksaa erorahaa."
+  - q: "Tuleeko yhtiön maksaa erorahaa myös kurinpidollisessa irtisanomisessa?"
+    a: "Ei. Jos työntekijä tekee lainvastaisen teon, rikkoo työsääntöjä tai on ilman pätevää syytä poissa 3 peräkkäisenä päivänä (työstandardilain 12 artikla, 勞動基準法第12條), yhtiö voi irtisanoa ilman ennakkoilmoitusta eikä sen tarvitse maksaa erorahaa. Taloudellinen irtisanominen (11 artikla) sen sijaan edellyttää ennakkoilmoitusta ja erorahan maksamista."
+  - q: "Miten eroraha lasketaan Taiwanissa?"
+    a: "Jokaista 1 täyttä palvelusvuotta kohden työnantajan on maksettava 0,5 kuukauden keskipalkka erorahana, enintään 6 kuukausipalkkaa. Tämä kaava koskee palvelusaikaa, johon sovelletaan työntekijöiden eläkelain (勞工退休金條例) 12 artiklaa; palvelusaikaan, johon sovelletaan työstandardilain 17 artiklaa (勞動基準法), maksetaan kutakin 1 vuotta kohden 1 kuukauden keskipalkka ilman ylärajaa."
 ---
 
-# Irtisanomiskorvaus (資遣費) Taiwanissa: milloin se maksetaan ja milloin ei
+# Eroraha (資遣費) Taiwanissa: milloin se maksetaan ja milloin ei
 
 ![Pääkuva](../images/008-taiwan-labor-severance-law/featured-01.jpg)
 
@@ -28,13 +28,13 @@ Tänään haluan puhua teille irtisanomiskorvauksesta (資遣費) Taiwanissa.
 
 Monet teistä tietävät tämän jo.
 
-Joissakin maissa, esimerkiksi Koreassa, yhtiön on maksettava irtisanomiskorvaus, kun työntekijä lähtee.
+Joissakin maissa, esimerkiksi Koreassa, yhtiön on maksettava eroraha, kun työntekijä lähtee.
 
 Taiwanissa tilanne on kuitenkin toinen:
 
-Velvollisuus maksaa irtisanomiskorvausta syntyy vasta, kun yhtiö irtisanoo työntekijän.
+Velvollisuus maksaa erorahaa syntyy vasta, kun yhtiö irtisanoo työntekijän.
 
-Jos työntekijä irtisanoutuu itse, yhtiön ei tarvitse maksaa irtisanomiskorvausta.
+Jos työntekijä irtisanoutuu itse, yhtiön ei tarvitse maksaa erorahaa.
 
 ​
 
@@ -44,7 +44,7 @@ Jos työntekijä kuitenkin tekee lainvastaisen teon,
 
 **tai on ilman syytä poissa työstä 3 peräkkäisenä päivänä (曠工),**
 
-yhtiö voi irtisanoa maksamatta irtisanomiskorvausta.
+yhtiö voi irtisanoa maksamatta erorahaa.
 
 ​
 
@@ -52,23 +52,23 @@ Olen koonnut tämän yksinkertaiseen taulukkoon.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Laji** | **Taloudellinen irtisanominen**  **資遣** **員工(經濟解僱)** | **Kurinpidollinen irtisanominen**  **解僱** **員工(懲戒解僱)** | **Työntekijän oma irtisanoutuminen**  **員工自請離職** |
-| Merkitys | Jos työnantajalla on liiketoimintatilanteen vuoksi tarve henkilöstön sopeuttamiseen, syy sijaitsee työnantajan yritystoiminnan alueella eikä työntekijän vastuussa. Siksi työnantajan on noudatettava ilmoitusaikaa (預告期間) ja maksettava irtisanomiskorvaus, jotta työntekijän haitat tasataan tasapainoisesti. | Jos työntekijä tekee lainvastaisen tai sopimattoman teon, työnantaja voi heti päättää työsopimuksen (勞動契約) ilman ennakkoilmoitusta eikä sen tarvitse maksaa irtisanomiskorvausta. Tämä on osa työnantajan kurinpitovaltuuksia. | Työntekijä saa milloin tahansa päättää sopimuksen, mutta hänen on palvelussuhteen keston mukaan noudatettava ilmoitusaikaa, jotta työnantaja voi hakea luovutusta ja sijaista. |
+| **Laji** | **Taloudellinen irtisanominen (資遣員工, 經濟解僱)** | **Kurinpidollinen irtisanominen (解僱員工, 懲戒解僱)** | **Työntekijän oma irtisanoutuminen (員工自請離職)** |
+| Merkitys | Jos työnantajalla on liiketoimintatilanteen vuoksi tarve henkilöstön sopeuttamiseen, syy sijaitsee työnantajan yritystoiminnan alueella eikä työntekijän vastuussa. Siksi työnantajan on noudatettava ilmoitusaikaa (預告期間) ja maksettava eroraha, jotta työntekijän haitat tasataan tasapainoisesti. | Jos työntekijä tekee lainvastaisen tai sopimattoman teon, työnantaja voi heti päättää työsopimuksen (勞動契約) ilman ennakkoilmoitusta eikä sen tarvitse maksaa erorahaa. Tämä on osa työnantajan kurinpitovaltuuksia. | Työntekijä saa milloin tahansa päättää sopimuksen, mutta hänen on palvelussuhteen keston mukaan noudatettava ilmoitusaikaa, jotta työnantaja voi hakea luovutusta ja sijaista. |
 | Edellytykset | Olemassa  (Taiwanin työstandardilain 11 artikla) | Olemassa  (Taiwanin työstandardilain 12 artikla) | Ei |
 | Ennakkoilmoitus | Vaaditaan | Ei vaadita | Vaaditaan |
-| Vaikeus | Yksinkertainen | Vaikea | Yksinkertainen |
-| Onko yhtiön maksettava irtisanomiskorvausta (資遣費) | Vaaditaan | Ei vaadita | Ei vaadita |
+| Menettelyn vaativuus | Vähemmän vaiheita | Enemmän vaiheita | Vähemmän vaiheita |
+| Onko yhtiön maksettava erorahaa (資遣費) | Vaaditaan | Ei vaadita | Ei vaadita |
 |  | Taiwanin työstandardilaki 11 artikla (勞動基準法第11條): Jollei jokin seuraavista tapauksista toteudu, työnantaja ei saa päättää työsopimusta, ei myöskään työntekijälle annetun ennakkoilmoituksen jälkeen.  1. Toiminnan keskeytys (歇業) tai yrityksen luovutus (轉讓)  2. Tappio (虧損) tai toiminnan supistaminen (業務緊縮)  3. Ylivoimainen este edellyttää toiminnan keskeyttämistä 1 kuukaudeksi tai pidemmäksi ajaksi  4. Toiminnan luonne edellyttää henkilöstön vähentämistä, eikä irtisanottua voida sijoittaa toiseen sopivaan tehtävään  5. Tietty työntekijä ei kykene tyydyttävästi suorittamaan tehtävän vaatimaa työtä | Taiwanin työstandardilaki 12 artikla (勞動基準法第12條): Työnantaja voi irtisanoa ilman ennakkoilmoitusta, kun työntekijä kuuluu johonkin seuraavista tapauksista.  1. Se, joka työsopimusta solmittaessa antaa virheellisiä tietoja, johtaa työnantajaa harhaan, ja yritykselle on vahingon vaara  2. Se, joka käyttää väkivaltaa työnantajaa, tämän perhettä, tämän edustajaa (代理人) tai muita työtovereita kohtaan tai loukkaa heitä törkeästi  3. Se, joka on lainvoimaisesti tuomittu määräaikaiseen vankeuteen (有期徒刑) tai ankarampaan rangaistukseen ilman, että ehdollista lykkäystä (緩刑) olisi määrätty ja ilman, että muuntaminen sakoksi (易科罰金) olisi sallittu  4. Vakava työsopimuksen tai työsääntöjen rikkominen  5. Se, joka tahallaan kuluttaa työnantajan koneita, välineitä, raaka-aineita, tuotteita tai muita tavaroita taikka tahallaan paljastaa työnantajan teknisiä ja liikesalaisuuksia ja aiheuttaa työnantajalle vahinkoa  6. Luvaton poissaolo (曠工) ilman pätevää syytä 3 peräkkäisenä päivänä tai 6 päivää tai enemmän 1 kuukaudessa |  |
 
-> Taiwanissa työnantajan on jokaista täyttä 1 palvelusvuotta (年資) kohden
-> maksettava 0,5 kuukauden keskipalkka (平均工資) irtisanomiskorvauksena.
-> (enintään 6 kuukausipalkkaa) Tämä kaava koskee palvelusaikaa, johon sovelletaan asetuksen työntekijöiden eläkkeestä 12 artiklaa (勞工退休金條例); palvelusaikaan, johon sovelletaan työstandardilain 17 artiklaa (勞動基準法), maksetaan kutakin 1 vuotta kohden 1 kuukauden keskipalkka ilman ylärajaa.
+> Taiwanissa työnantajan on jokaista 1 täyttä palvelusvuotta (年資) kohden
+> maksettava 0,5 kuukauden keskipalkka (平均工資) erorahana.
+> (enintään 6 kuukausipalkkaa) Tämä kaava koskee palvelusaikaa, johon sovelletaan työntekijöiden eläkelain (勞工退休金條例) 12 artiklaa; palvelusaikaan, johon sovelletaan työstandardilain 17 artiklaa (勞動基準法), maksetaan kutakin 1 vuotta kohden 1 kuukauden keskipalkka ilman ylärajaa.
 
 ​
 
 Jos työntekijän palkka on korkea ja tietty palvelusaika on täyttynyt,
 
-myös irtisanomiskorvaus muodostuu suhteellisesti korkeammaksi.
+myös eroraha muodostuu suhteellisesti korkeammaksi.
 
 Jotkin taiwanilaiset yhtiöt käyttävät tällöin erilaisia keinoja,
 
@@ -118,7 +118,7 @@ Muuten B:n piti lähteä yhtiöstä;
 
 hän antoi B:lle A4-arkin
 
-ja kehotti tätä kirjoittamaan: ”Minä, OOO, alennan vapaaehtoisesti asemaa ja palkkaa”
+ja kehotti tätä kirjoittamaan: ”Minä, [nimi], alennan vapaaehtoisesti asemaani ja palkkaani”
 
 sisällöksi.
 
@@ -174,7 +174,7 @@ ja pystyi todistamaan, ettei hän ollut irtisanoutunut itse.
 
 Siksi hän saattoi myöhemmin asianajajan avulla
 
-selvittää, oliko irtisanomiskorvaus lain mukaan maksettava,
+selvittää, oliko eroraha lain mukaan maksettava,
 
 kun taas muilla lähteneillä työntekijöillä vastaavaa näyttöä ei ollut.
 
@@ -210,17 +210,17 @@ tai siirtää työntekijöitä outoihin tehtäviin,
 
 Kun työskentelette Taiwanissa,
 
-irtisanomiskorvausta on vaikeampi saada kuin luullaan
+erorahaa on vaikeampi saada kuin luullaan.
 
 Älkää tehkö helposti kompromisseja yhtiön kanssa
 
 ja pitäkää huoli, ettei yhtiö irtisano teitä sopimattomasti
 
-tai aja teitä omaan irtisanoutumiseen
+tai aja teitä omaan irtisanoutumiseen.
 
-Irtisanomiskorvaus on työntekijän lakisääteinen oikeus,
+Eroraha on työntekijän lakisääteinen oikeus
 
-ja yhtiön on tietenkin maksettava se.
+silloin, kun maksuvelvollisuuden edellytykset täyttyvät.
 
 Myös teidän on Taiwanissa suojattava oikeuksianne.
 

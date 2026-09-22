@@ -1,0 +1,70 @@
+WO-F-he r2 — Grok 4.7 fix lane — 2026-09-22
+Workspace: /Users/son7/Projects/tseng-law-fix-he-r2
+Sources: RULEBOOK-FIX.md (R2–R10), ACCEPTED-ROUND.md, rounds/r2/he-a.md, rounds/r2/he-b.md
+No git add/commit/push.
+
+## Rows
+Findings: he-a 44 + he-b 44 = 88.
+Applied: 85.
+Skipped: 3.
+
+Applied (he-a): 1–33, 35–41, 43, 44.
+Applied (he-b): 1–23, 25–44.
+he-a 44 was rephrased inside the existing table row (cells no longer read as a relatively easy outcome). The row was not deleted.
+
+Skipped:
+- he-a 34 (Q16–Q20 as ## headings; same pattern in 005, 006, 008, 009). The Korean source uses the same zero-width-space blocks. Promoting those lines to headings, or joining them, changes heading levels and block counts. The wording fixes inside those blocks (he-a 19, and the 009 lines) were applied.
+- he-a 42 ("TWD 1.57M" in the team bio). ACCEPTED-ROUND pins that figure byte-identical. Left as ייצגה … בסך TWD 1.57M.
+- he-b 24 (delete U+200B after "די בציון האזור" and the ZWSP-only lines in 013 and 015). ZWSP counts already match the Korean source (013: 5, 015: 3). Deleting them fails the checker. The sentence was left as written.
+
+## Systemic patterns
+Swept across columns-he and the Hebrew guidance strings, not only the quoted hit.
+
+- איברים for a company organ or for officers → מוסדות החברה / נושאי משרה ולעובדים. 5 instances (001 ×1, 004 ×4).
+- A digit glued into "each / the most recent" time or vote phrasing ("1 שנה אחרונה", "כל 1 מתקופות … 1 שנה", "על כל 1 שנה", "בעבור כל 1 שנה", "בעל מניות 1 יש 1 קול"). 9 phrases rewritten into natural Hebrew. The checker does not parse Hebrew number-words, so the digit was put back in parentheses: (1) in 001 ×2, 002 ×4, 008 ×4, 018 ×2. Legal thresholds that are genuinely "1 year / 1 month" (פחות מ-1 שנה, מאסר של 1 שנה, בתוך 1 חודש, כ-1 חודש נוסף) were left as digits.
+- לתאום → להתאים. 3 instances (002 ×1, 004 ×2).
+- הערה ייחודית למדינה → הערה: הסכם מס ההכנסה בין טאיוואן לקוריאה. 2 instances (001, 004). The Korea-only caveat after the label was kept.
+- 資遣費 as פיצוי on the services page → דמי פיטורים. 1 instance (guidance). Columns already used דמי פיטורים.
+- לשפוט / בהבחנה / נשפט standing in for "assess" or "distinguish" → להעריך, לבחון, להבחין, לקבוע, להסיק. 32 instances (002 ×4, 004 ×3, 007 ×2, 010 ×3, 011 ×5, 012 ×2, 014 ×5, 016 ×4, 017 ×4). Left in place where the sense is a court determination, including headings the reviewer kept as נשפט (003 Q13 and similar "כיצד נשפט").
+- להבטיח / מבטיחים where the reader must obtain records or where the payment is consideration, not a lock → אוספים / להשיג / בתמורה להתחייבות. 4 instances (014 ×3, 016 ×1). Negative "אין להבטיח" (do not promise) and the consumer-protection duty "להבטיח שהשירות יעמוד בבטיחות" were not changed.
+- Kinmen joined with ו and then או → או between Kinmen and Lienchiang (Matsu). 4 instances (017). Amounts unchanged.
+- Fronted object missing את. 3 instances (014: שאלת ההחזר; the four-item list; ההודעה אין להציגה).
+- זקיפה for vesting of a bonus → הבשלת הזכות. 8 instances, all in 014. Tax-credit זקיפה in 004 and collation זקיפה in 016 were left; those are not vesting.
+- חברה בערבון מוגבל for Taiwan 有限公司 → חברה מוגבלת בלי הון מניות. 10 instances (018 ×3, including the heading and the parallel sentence; the same false friend in 001 ×1, 002 ×4, 004 ×2). 股份有限公司 stays חברה בעלת מניות. 興櫃 gloss added once in 018.
+- U+200B one-line splits: 0 removed. Counts already match Korean (003: 52, 005: 8, 006: 4, 008: 10, 009: 5, 013: 5, 015: 3).
+
+Guidance pack (international-guidance-eastern.ts, he strings only): 10 string edits (custody gloss, severance, wealthy individuals, joint procedure, firm gender, עוסקים ב, sequence label, ביתר בהירות, פנייה instead of משלוח ×2). llms.txt notices were not rewritten; consultationNotice and confidentialNotice were not touched, so they remain substrings of the FAQ and privacy copy. No other locale's strings were edited. No test expected-string needed updating.
+
+004 link label: the visible name no longer calls flno=3 "סעיף 10 של חוק מס העסקים (營業稅法)". The URL is unchanged. The Korean anchor still contains 제10조, and dropping that digit failed the checker (missing 10 ×1), so the corrected label ends with "(10)".
+
+## §Verify
+node scripts/check-column-translation.mjs --dir src/content/columns-he --lang he 2>&1 | tail -8
+
+neighbour      PASS   
+hanzi          PASS   han=73
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "[변호사 검수 필요]" src/content/columns-he src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      21
+
+## Reviewer points not applied
+- he-a 34 and the verdict line that Q16–Q20 (and the same blanks in 005, 006, 008, 009) should become headings or be joined. Those zero-width spaces are in the Korean source. Removing them or adding ## changes headings, blocks, or the ZWSP count. The Hebrew inside the existing blocks was corrected where a row asked for it.
+- he-b 24, delete U+200B. Same constraint. The sentence "די בציון האזור (למשל: העיר טאיפיי)." was already the right Hebrew; only the source-matching ZWSP follows it.
+- he-a 42, spell out TWD 1.57M. The figure is pinned. Not a misreading of the English, and not applied.
+- Suggested word-forms that drop a counted digit ("שנה אחת", "קול אחד", "ממוצע שלוש השנים", the link label with no 10) fail checkNumbers. Hebrew number-words are not in the checker lexicon. The prose was naturalized and the digit kept in parentheses. Noted here rather than left as "1 שנה אחרונה".
+- he-a 44, delete the table row קושי ההליך. Deleting a row changes the table-row count. The three cells were rephrased so they state a narrower or stricter statutory threshold and "אין תוצאה מובטחת", and the row remains.

@@ -185,7 +185,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     title: 'ทีมงานระหว่างประเทศ Hovering',
     description:
       'ประวัติของทนายความ ผู้จัดการงาน และหุ้นส่วนผู้สอบบัญชีของ Hovering',
-    representativeTitle: 'ทนายความผู้บริหาร',
+    representativeTitle: 'ทนายความผู้จัดการสำนักงาน',
     teamTitle: 'ทนายความและเจ้าหน้าที่',
     partnerTitle: 'หุ้นส่วนผู้สอบบัญชี',
     introLabel: 'แนะนำ',
@@ -197,11 +197,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     keyFactsHeading: 'ทนายความ Wei Tseng — ข้อมูลพื้นฐาน',
     qualificationLabel: 'คุณสมบัติและสังกัด',
     qualificationSentence:
-      '{name} เป็นทนายความที่มีคุณสมบัติประกอบวิชาชีพในไต้หวัน และเป็นทนายความผู้บริหารของ {firm}',
+      '{name} เป็นทนายความที่มีคุณสมบัติประกอบวิชาชีพในไต้หวัน และเป็นทนายความผู้จัดการสำนักงานของ {firm}',
     practiceLabel: 'สาขาที่รับดำเนินการหลัก',
     consultationLanguagesLabel: 'ภาษาที่ใช้ให้คำปรึกษา',
     roles: {
-      'tseng-junwei': 'ทนายความผู้บริหารในไต้หวัน',
+      'tseng-junwei': 'ทนายความผู้จัดการสำนักงานในไต้หวัน',
       'chang-rongxuan': 'ทนายความในไต้หวัน',
       'chang-fangyu': 'ผู้ช่วยงานกฎหมาย',
       'son-jungmin': 'ผู้จัดการงานประเทศเกาหลี',

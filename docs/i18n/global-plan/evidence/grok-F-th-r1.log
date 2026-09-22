@@ -1,0 +1,85 @@
+WO-F-th — Grok 4.7 fix lane, campaign round 1
+Workspace: /Users/son7/Projects/tseng-law-fix-th-r1
+Date: 2026-09-22
+No git add / commit / push.
+
+Sources read: RULEBOOK-FIX.md (R2–R10; R1/R11 already done; R12–R17 are the round-2 sister-locale addendum and were not used as a second rewrite of Thai), ACCEPTED-ROUND.md, rounds/r1/th-a.md, th-b.md.
+English sense checked against src/content/columns-en for the rewrites (004 link, 007 openings, 008–009 closings, 011, 013, 016–018).
+Thai strings edited in the .ts sources, not in th-guidance.txt.
+
+## Rows applied
+
+Part a (th-a.md): 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20.
+Part b (th-b.md): 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25.
+
+42 finding rows applied. 3 skipped (below).
+
+Notes inside applied rows:
+- a#2: the Business Tax Act name is gone. The visible label is now the dividend-withholding description used in 001, plus “(มาตรา 10)”. The first form without the digit failed the checker (`missing from translation (1): 10`) because the English anchor still says “Article 10”. URL unchanged (`pcode=G0340028&flno=3`).
+- a#4: the three existing lines were rephrased in place (employer fault / employee fault / one side may withhold, the other may claim). Blocks were not merged.
+- a#9: ทนายความผู้บริหาร → ทนายความผู้จัดการสำนักงาน in representativeTitle, qualificationSentence, the tseng-junwei role, and the lawyers answer. The answer drops the extra “ของสำนักงาน” so the title is not “managing attorney of the office of the office”.
+- a#17: body §§3, 6 and 7 now open with the question the bare “ไม่/มิได้เป็นเช่นนั้น” answers. FAQ `a:` fields were left; the question is already in `q:`.
+- a#19: “ข้าพเจ้า OOO” → “ข้าพเจ้า………………” (Thai blank, not a company abbreviation).
+- b#5: คู่ค้าฝ่ายจำหน่าย → คู่ค้าที่รับหน้าที่จำหน่าย in the body, the §3 heading, and the following paragraph (4).
+- b#12: the 行使或負擔 verb calque was swept, not only the quoted line. See systemic counts.
+- b#13: only the body under “กรณีเข้าซื้อผู้ประกอบการเดิม”. The FAQ answer still opens “ไม่เป็นเช่นนั้น” because its question is in `q:`.
+- b#17 and b#22: FAQ and the repeated body paragraph both changed (2 each). “และออกแบบหุ้นชนิดพิเศษ” in the same paragraph as b#22 became “และสามารถออกแบบหุ้นชนิดพิเศษกับสิทธิซื้อหุ้นพนักงานได้ตามกฎหมาย”.
+- b#21: both “ก่อนตัดสินใจโครงสร้างเข้าไต้หวัน” and “เมื่อวางแผนเข้าไต้หวัน”.
+
+R2–R10 were already in the Thai pack and columns from the prior pass (Korea only as a labelled example with the country-specific sentence in 001/004/005; 119/110/112 in 003; ดิฉัน for Wei Tseng; คำถามและคำตอบ; team label ทีมงานของเรา; offices label สำนักงาน; ประวัติฉบับเต็ม (ภาษาอังกฤษ); กรมพิจารณาการลงทุน กระทรวงเศรษฐกิจ used consistently; โทษกักขัง for 拘役; ผู้ตรวจสอบกิจการ for 監察人). No second full rewrite. Hangul remains only inside the 008 and 009 frontmatter `url` values.
+
+## Rows skipped
+
+- a#6: “ได้รับค่าเสียหาย TWD 1.57M” in the Thai team bio. ACCEPTED-ROUND pins `TWD 1.57M` byte-identical. The figure was not reformatted to “1.57 ล้าน”.
+- a#12: turning Q16–Q20 into `##` headings. The English file does not use those headings. Adding them fails the heading-level check. The questions themselves are already grammatical Thai, so the lines were left.
+- b#6: deleting U+200B spacers in 013 and 015 (and the same spacers in 003, 005, 006, 008, 009). `checkBlocks` requires the Thai ZWSP count to equal the English source. Deleting them fails the checker. Sentences were not merged.
+
+## Systemic patterns and instances
+
+- German calque in the llms discovery notice (“การรับรองสนับสนุน”, “การแสดงผลในหน้าใด”): 1, in GUIDANCE_LLMS_NOTICES.th only.
+- Managing-attorney calque ทนายความผู้บริหาร: 4 (team copy title, qualification sentence, role line, lawyers answer).
+- Labor closings that overstate a payout: 5 lines. 008 “ซึ่งบริษัทย่อมมีหน้าที่ต้องจ่าย” (1). 009 “ไม่ว่า…ต่างก็ให้สิทธิแก่ทั้งสองฝ่าย” rewritten across the three existing lines (3). 009 “ย่อมได้รับการคุ้มครองสิทธิของตน” (1).
+- National 條例 named ข้อบัญญัติ: 1 (003 link). No other ข้อบัญญัติ in columns-th.
+- OOO redaction: 1 (008).
+- Bare “No” under a heading that is not a yes/no question: 4. 007 body §§3, 6, 7 (3). 017 body §3 (1). FAQ answers kept.
+- 行使或負擔 verb calque beside อำนาจปกครอง: 14. 016 question, FAQ answer, lead, body §§5–6, the §5 heading, the closing disclaimer, and the matching FAQ/body repeats (13). 007 “ผู้ใช้และรับภาระสิทธิและหน้าที่ดังกล่าว” (1). Chinese glosses kept.
+- “ฝ่าย + role” calques: 5. คู่ค้าฝ่ายจำหน่าย (4). ฝ่ายจากต่างประเทศ (1). Ordinary ฝ่ายนายจ้าง / ฝ่ายใดฝ่ายหนึ่ง left.
+- 018 clipped stems named in the verdict, as the finding rows: เข้าไต้หวัน (2), จัดงาน (1), เหมาะสมที่สุด (2), ออกแบบการเปลี่ยน (2), ออกแบบหุ้นชนิดพิเศษ (1), ค่อนข้าง…กว่า (1), จดตาม (1), ความสัมพันธ์ผู้ถือหุ้น without มี (1), บุคคลทางกฎหมาย (1), ธรรมาภิบาลกะทัดรัด (1), listing collapsed to the exchange only (1). The rest of 018 was already in full sentences and was not restyled.
+- Other quoted wording, one cluster each: fee “จะมีความหมาย” (1), “บุคคลที่มีสินทรัพย์สูง” (1), “เท่าใดเท่าหนึ่ง” (1), daily-rate “1,000 2,000” (1), “ยก…ขึ้นเป็นตัวอย่าง” (1), 006 barbershop / age aside / การเจริญเติบโต (3), “แปลสิทธิ” (1), 010 มีความผิด (2, alt and caption), 011 การโฆษณาวินิจฉัย (2), PIF “เป้าหมายของการบังคับใช้” (1), 014 ค่าใช้ตำรา (1), ความเป็นวิชาชีพและเชิงเทคนิค (3), docket “ที่ 勞動關…” (1), 015 “ต้องตรวจสอบเอง” (3) and the clipped “ไม่มี” (1), 017 การดำเนินระบบ (2) and bare องค์กร (1).
+
+## Reviewer points not applied (disagreements)
+
+- a#12 and the “one sentence per line / zero-width spacer” pattern. That layout is the English source. Q16–Q20 are not headings there either. New headings or deleted ZWSP lines fail the checker. The Thai lines were not treated as a translation error to be reblocked.
+- b#6, same reason. The spacers are not a Thai-only leak.
+- a#6 is a real readability gap (“M” is not Thai), but the bio figure is pinned. Not reformatted. This is a skip rule, not a claim that the reviewer misread the amount.
+- a#2’s suggested label with no digit. The act name was wrong; dropping “10” is not possible while the English anchor still contains Article 10. “(มาตรา 10)” stays after the corrected description. The Business Tax Act name was not restored, and the URL was not changed.
+- 008 “นาย B เป็นลูกจ้างที่ทำยอดได้ดีที่สุดในภาคกลาง” was left. It is the male employee’s sales rank in the anecdote, not a firm superlative, and it was not a finding. นาย B stays male.
+
+## §Verify
+
+```
+cd /Users/son7/Projects/tseng-law-fix-th-r1 && export PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH
+node scripts/check-column-translation.mjs --dir src/content/columns-th --lang th 2>&1 | tail -8
+grep -rn "\[변호사 검수 필요\]" src/content/columns-th src/data | wc -l
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+git status --short | wc -l
+```
+
+```
+neighbour      PASS   
+hanzi          PASS   han=37
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+TSC_OK
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+      22
+```
+
+The status count 22 is from that run, before this log file existed. Markers 0. No test expectation was rewritten; no pinned Thai string in src/lib/__tests__ or src/data/__tests__ matched the wording that changed.

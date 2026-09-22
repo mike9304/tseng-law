@@ -1050,30 +1050,30 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
   },
   km: {
     label: 'ក្រុម',
-    title: 'ក្រុមអន្តរជាតិ Hovering',
+    title: 'ក្រុមអន្ដរជាតិ Hovering',
     description:
-      'ប្រវត្តិមេធាវី អ្នកគ្រប់គ្រងប្រតិបត្តិ និងដៃគូគណនេយ្យករនៃ Hovering',
+      'ប្រវត្ដិមេធាវី អ្នកគ្រប់គ្រងប្រតិបត្ដិ និងគណនេយ្យករសាធារណៈដៃគូនៃ Hovering',
     representativeTitle: 'មេធាវីគ្រប់គ្រង',
     teamTitle: 'មេធាវី និងបុគ្គលិក',
-    partnerTitle: 'ដៃគូគណនេយ្យករ',
+    partnerTitle: 'គណនេយ្យករសាធារណៈដៃគូ',
     introLabel: 'សេចក្ដីណែនាំ',
     educationLabel: 'ការសិក្សា',
     experienceLabel: 'បទពិសោធន៍',
     photoAltPrefix: 'រូប',
     workingLanguagesLabel: 'ភាសាធ្វើការ',
-    fullProfileLabel: 'ប្រវត្តិពេញ (ជាភាសាអង់គ្លេស)',
-    keyFactsHeading: 'មេធាវីស្ត្រី Wei Tseng — ព័ត៌មានមូលដ្ឋាន',
+    fullProfileLabel: 'ប្រវត្ដិពេញ (ជាភាសាអង់គ្លេស)',
+    keyFactsHeading: 'មេធាវីស្ដ្រី Wei Tseng — ព័ត៌មានមូលដ្ឋាន',
     qualificationLabel: 'គុណវុឌ្ឍិ និងស្ថាប័ន',
     qualificationSentence:
-      '{name} ជាមេធាវីស្ត្រីមានសិទ្ធិអនុវត្តវិជ្ជាជីវៈនៅតៃវ៉ាន់ និងជាមេធាវីគ្រប់គ្រងនៃ {firm}',
+      '{name} ជាមេធាវីស្ដ្រីមានសិទ្ធិអនុវត្ដវិជ្ជាជីវៈនៅតៃវ៉ាន់ និងជាមេធាវីគ្រប់គ្រងនៃ {firm}',
     practiceLabel: 'វិស័យទទួលធ្វើសំខាន់',
     consultationLanguagesLabel: 'ភាសានៃការពិគ្រោះយោបល់',
     roles: {
       'tseng-junwei': 'មេធាវីគ្រប់គ្រងនៅតៃវ៉ាន់',
       'chang-rongxuan': 'មេធាវីនៅតៃវ៉ាន់',
       'chang-fangyu': 'ជំនួយការផ្លូវច្បាប់',
-      'son-jungmin': 'អ្នកគ្រប់គ្រងប្រតិបត្តិសម្រាប់កូរ៉េ',
-      'huang-shengping': 'ដៃគូគណនេយ្យករ',
+      'son-jungmin': 'អ្នកគ្រប់គ្រងប្រតិបត្ដិសម្រាប់កូរ៉េ',
+      'huang-shengping': 'គណនេយ្យករសាធារណៈដៃគូ',
     },
   },
   mn: {
@@ -3896,31 +3896,31 @@ export const guidanceTeamBios: Record<
         'លោកស្រីធ្លាប់តំណាងឱ្យនិស្សិតជនជាតិកូរ៉េក្នុងរឿងសំណងពីរបួសនៅកន្លែងហាត់ប្រាណ ហើយសាលាដំបូងបានកាត់ឱ្យនិស្សិតនោះទទួលបានសំណង TWD 1.57M',
       ],
       education: [
-        'បរិញ្ញាបត្រជាន់ខ្ពស់ (M.S.), Institute of Finance, National Taiwan University',
+        'បរិញ្ញាបត្រជាន់ខ្ពស់ (M.S.) វិទ្យាស្ថានហិរញ្ញវត្ថុ សាកលវិទ្យាល័យជាតិតៃវ៉ាន់ (Institute of Finance, National Taiwan University)',
         'បរិញ្ញាបត្រ (B.A.) ពីរសាខា ច្បាប់ និងហិរញ្ញវត្ថុ, National Chengchi University',
-        'និស្សិតស្រីផ្លាស់ប្តូរ នៅ Kobe University និង Waseda University',
+        'និស្សិតស្រីផ្លាស់ប្ដូរ នៅ Kobe University និង Waseda University',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'មូលនិធិជំនួយផ្លូវច្បាប់ សាខាតៃជុង (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'ធ្លាប់ធ្វើការនៅ Ministry of Education, Legal Affairs Division ផ្ដោតលើវិវាទរដ្ឋបាល និងរដ្ឋប្បវេណី',
+        'ធ្លាប់ធ្វើការនៅនាយកដ្ឋានកិច្ចការផ្លូវច្បាប់ ក្រសួងអប់រំ (Ministry of Education, Legal Affairs Division) ផ្ដោតលើវិវាទរដ្ឋបាល និងរដ្ឋប្បវេណី',
         'មានបទពិសោធន៍ក្នុងរឿងសាកលវិទ្យាល័យ សិទ្ធិគ្រូបង្រៀន និងពាក្យបណ្ដឹងរដ្ឋបាល',
       ],
       education: ['បរិញ្ញាបត្រច្បាប់ (LL.B.), National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'នាយកដ្ឋានកិច្ចការផ្លូវច្បាប់ ក្រសួងអប់រំ (Ministry of Education, Legal Affairs Division)',
         'មេធាវី, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'ជំនួយការផ្លូវច្បាប់ដែលធ្វើជាជំនួយការផ្លូវច្បាប់ជាន់ខ្ពស់នៅការិយាល័យមេធាវីច្រើនកន្លែង គ្របដណ្ដប់ការឧបត្ថម្ភសំណុំរឿង ច្បាប់សហគ្រាស និងវិនិយោគបរទេស',
-        'ឧបត្ថម្ភសំណុំរឿង ការបង្កើតក្រុមហ៊ុន ការអនុម័តវិនិយោគបរទេស ការដាក់ពាក្យអាជ្ញាប័ណ្ណ និងការទំនាក់ទំនងរវាងកូរ៉េ និងតៃវ៉ាន់',
+        'ជំនួយការផ្លូវច្បាប់ជាន់ខ្ពស់នៅការិយាល័យមេធាវីច្រើនកន្លែង ទទួលបន្ទុកជួយសំណុំរឿង ច្បាប់សហគ្រាស និងវិនិយោគបរទេស',
+        'ទទួលបន្ទុកជួយសំណុំរឿង ការបង្កើតក្រុមហ៊ុន ការអនុម័តវិនិយោគបរទេស ការដាក់ពាក្យអាជ្ញាប័ណ្ណ និងការទំនាក់ទំនងរវាងកូរ៉េ និងតៃវ៉ាន់',
       ],
       education: ['បរិញ្ញាបត្រច្បាប់ (LL.B.), Tunghai University'],
       experience: [
@@ -3931,15 +3931,15 @@ export const guidanceTeamBios: Record<
     'son-jungmin': {
       intro: [
         'សម្របសម្រួលការណាត់ពិគ្រោះយោបល់ និងការទំនាក់ទំនងសម្រាប់អតិថិជនពីកូរ៉េ',
-        'ឧបត្ថម្ភការទំនាក់ទំនងរវាងក្រុមតាមប្រព័ន្ធឯកសារ និងលំហូរការងារ ដោយផ្អែកលើមូលដ្ឋានវិទ្យាសាស្ត្រកុំព្យូទ័រ',
+        'ជួយសម្របសម្រួលការទំនាក់ទំនងរវាងក្រុមតាមប្រព័ន្ធឯកសារ និងលំហូរការងារ ដោយផ្អែកលើមូលដ្ឋានវិទ្យាសាស្ដ្រកុំព្យូទ័រ',
       ],
-      education: ['បរិញ្ញាបត្រវិទ្យាសាស្ត្រ (B.S.) វិទ្យាសាស្ត្រកុំព្យូទ័រ, National Cheng Kung University'],
-      experience: ['ក្រុមប្រតិបត្តិកូរ៉េ, Hovering International Law Firm'],
+      education: ['បរិញ្ញាបត្រវិទ្យាសាស្ដ្រ (B.S.) វិទ្យាសាស្ដ្រកុំព្យូទ័រ, National Cheng Kung University'],
+      experience: ['ក្រុមប្រតិបត្ដិកូរ៉េ, Hovering International Law Firm'],
     },
     'huang-shengping': {
       intro: [
         'បានបញ្ចប់កម្មវិធីបរិញ្ញាបត្រ និងបរិញ្ញាបត្រជាន់ខ្ពស់ផ្នែកគណនេយ្យនៅ National Chengchi University ហើយបច្ចុប្បន្នដឹកនាំការិយាល័យគណនេយ្យមួយ',
-        'ឧបត្ថម្ភការវិភាគហានិភ័យផ្លូវច្បាប់ ពន្ធ និងហិរញ្ញវត្ថុជារួមសម្រាប់អតិថិជនសហគ្រាស',
+        'ជួយការវិភាគហានិភ័យផ្លូវច្បាប់ ពន្ធ និងហិរញ្ញវត្ថុជារួមសម្រាប់អតិថិជនសហគ្រាស',
       ],
       education: [
         'បរិញ្ញាបត្រជាន់ខ្ពស់ (M.A.) គណនេយ្យ, National Chengchi University',

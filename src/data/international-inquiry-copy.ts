@@ -1315,10 +1315,10 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       'Jos ette osaa mitään neljästä kielestä, valitkaa ”En osaa mitään neljästä kielestä — viestintätapa on vahvistettava”. Otamme yhteyttä selvittääksemme, onko käyttökelpoista viestintätapaa olemassa; neuvontaa muulla kielellä ei luvata eikä vastausaikaa luvata.',
     preparationNotice:
       'Voitte kirjoittaa yhteenvedon omalla kielellänne. Alkuperäinen teksti säilytetään sellaisena kuin olette sen kirjoittaneet, eikä sitä käännetä automaattisesti.',
-    heading: 'Lähettäkää yhteydenottopyyntö',
+    heading: 'Lähetä yhteydenottopyyntö',
     intro:
       'Kuvatkaa asianne lyhyesti. Asianajaja käy sisällön läpi, ennen kuin seuraavasta vaiheesta sovitaan.',
-    submitLabel: 'Lähettäkää pyyntö',
+    submitLabel: 'Lähetä pyyntö',
     submittingLabel: 'Lähetetään…',
     successMessage:
       'Olemme vastaanottaneet pyyntönne; se odottaa tarkastusta. Tämä ei merkitse, että neuvonta olisi tapahtunut tai että tapaaminen olisi vahvistettu.',

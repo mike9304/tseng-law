@@ -3,7 +3,7 @@ title: "Hieronnan historia ja oikeudellinen asema Taiwanissa"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-massage-history-law"
 lastmod: "2025-09-13"
 date_display: "13. syyskuuta 2025"
-read_time: "3 min lukuaikaa"
+read_time: "3 min lukuaika"
 categories:
   - "Oikeudellista tietoa Taiwanista"
 featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
@@ -81,7 +81,7 @@ Kysyttiin esimerkiksi, eikö kirjallinen sääntö, joka salli hieronnan vain n�
 
 ja epäiltiin, oliko tämä sääntö todella edistänyt näkövammaisten työn ja olemassaolon suojaa.
 
-Lopulta perustuslakituomioistuimen suurtuomarit (大法官) julistivat säännöksen, joka salli vain näkövammaisten harjoittaa hieronta-alaa, perustuslainvastaiseksi (違憲).
+Lopulta perustuslakituomarit (大法官) julistivat säännöksen, joka salli vain näkövammaisten harjoittaa hieronta-alaa, perustuslainvastaiseksi (違憲).
 
 ​
 

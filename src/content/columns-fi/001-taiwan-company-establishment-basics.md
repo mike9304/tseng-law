@@ -3,7 +3,7 @@ title: "Yhtiön perustamisen perusteet Taiwanissa: tytäryhtiö, sivuliike, edus
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-establishment-basics"
 lastmod: "2026-07-25"
 date_display: "13. syyskuuta 2025"
-read_time: "14 min lukuaikaa"
+read_time: "14 min lukuaika"
 categories:
   - "Yhtiön perustaminen Taiwanissa"
 featured_image: "../images/001-taiwan-company-establishment-basics/featured-01.jpg"
@@ -86,9 +86,9 @@ Ulkomainen sijoitus (外國投資) on mahdollinen monilla toimialoilla; kiellety
 
 Se, että toimialat voidaan merkitä yhtiörekisteröintiin, ei merkitse, että kyseinen toiminta saisi alkaa heti. Nimen ja toimialojen ennakkotarkastuksella, yhtiörekisteröinnillä, verorekisteröinnillä ja toimialakohtaisilla luvilla on kullakin eri tarkoitus. Jos toimintatavat eroavat, kuten verkkokauppa ja myymälä, tuonti ja kotimainen jakelu, tai suora palvelu ja välitys, tarvittavat rekisteröinnit ja vastuu voivat poiketa.
 
-Yhtiön kotipaikka ei ole pelkkä postin vastaanotto-osoite vaan rekisteröinnin, verotuksen ja tosiasiallisen toiminnan perusta. Ennen vuokrasopimuksen (租賃契約) tekemistä on aiotun osoitteen ja toimialojen osalta tutkittava maan käyttötarkoitusvyöhyke (土地使用分區), rakentamismääräykset (建築管理), vuokraehdot ja soveltuvuus verorekisteröintiin. Jos rakennuksen sallittu käyttö tai hallintasäännöt (建築管理) eivät sovi tosiasialliseen toimintaan, tai jos vaadittu vuokranantajan suostumus puuttuu, rekisteröinnin jälkeen voi tulla tarve paikanvaihtoon tai täydentävään menettelyyn.
+Yhtiön kotipaikka ei ole pelkkä postin vastaanotto-osoite vaan rekisteröinnin, verotuksen ja tosiasiallisen toiminnan perusta. Ennen vuokrasopimuksen (租賃契約) tekemistä on aiotun osoitteen ja toimialojen osalta tutkittava maan käyttötarkoitusvyöhyke (土地使用分區), rakentamismääräykset (建築管理), vuokraehdot ja soveltuvuus verorekisteröintiin. Jos rakennuksen sallittu käyttö tai sen hallintasäännöt eivät sovi tosiasialliseen toimintaan, tai jos vaadittu vuokranantajan suostumus puuttuu, rekisteröinnin jälkeen voi tulla tarve paikanvaihtoon tai täydentävään menettelyyn.
 
-Taipein kaupunki ylläpitää, kyseisiä yhtiö- ja kaupparekisteröintejä varten, toimipaikan ennakkokyselyjärjestelmää (營業場所預先查詢). Pelkkä tämän kyselyn tulos ei kuitenkaan täytä samalla muita lupia tai elinkeinosäännösten vaatimuksia. Jos kotipaikka otetaan toiselle seudulle, kyseisen paikallisviranomaisen ja toimivaltaisen laitoksen menettelyt on tutkittava; ennen pitkäaikaisen vuokran tekemistä tai ennen investointeja kalusteisiin (營業場所) on suositeltavaa vahvistaa paikan soveltuvuus kirjallisesti.
+Taipein kaupunki ylläpitää, kyseisiä yhtiö- ja kaupparekisteröintejä varten, toimipaikan ennakkokyselyjärjestelmää (營業場所預先查詢). Pelkkä tämän kyselyn tulos ei kuitenkaan täytä samalla muita lupia tai elinkeinosäännösten vaatimuksia. Jos kotipaikka otetaan toiselle seudulle, kyseisen paikallisviranomaisen ja toimivaltaisen laitoksen menettelyt on tutkittava; ennen pitkäaikaisen vuokrasopimuksen tekemistä tai ennen toimitilaan tehtäviä investointeja on suositeltavaa vahvistaa paikan soveltuvuus kirjallisesti.
 
 ## 4. Työlupa, oleskelulupa ja pääoma
 
@@ -116,13 +116,13 @@ Pysyvän oleskelun (永久居留) hakemiseksi ulkomaalaisten on periaatteessa mu
 
 ## 5. Verot ja Taiwanin–Korean tuloverosopimus
 
-Taiwanin liikevaihtoveron (營業稅) yleinen kanta on 5 %; ilmoitus tapahtuu tavallisesti joka 2. kuukausi. Voittoa tuottavien yritysten tuloveron (營利事業所得稅) yleinen kanta on 20 %, mutta tosiasiallinen verotus riippuu veronalaisesta tulosta ja voimassa olevista säännöksistä. Taiwanin sisäisen oikeuden ennakonpidätysprosentti ei-asukkaalle maksettavasta osingosta on 21 %. Osingoille, jotka täyttävät Taiwanin–Korean tuloverosopimuksen soveltamisedellytykset ja menettelyn, pätee enimmäisvero 10 %. Tämä koskee Korea-kytkentäisiä tilanteita eikä ole kaikkia ulkomaisia sijoittajia koskeva yleinen sääntö; verosopimuksen olemassaolo oman asuinvaltionne ja Taiwanin välillä on tarkistettava erikseen. Konkreettinen ilmoitus ja ennakonpidätys on käsiteltävä asukasaseman, tosiasiallisen edunsaajan (受益所有人), tulolajin ja sopimusasiakirjojen mukaan.
+Taiwanin liikevaihtoveron (營業稅) yleinen kanta on 5 %; ilmoitus tapahtuu tavallisesti joka 2. kuukausi. Elinkeinotuloveron (營利事業所得稅) yleinen kanta on 20 %, mutta tosiasiallinen verotus riippuu veronalaisesta tulosta ja voimassa olevista säännöksistä. Taiwanin sisäisen oikeuden ennakonpidätysprosentti ei-asukkaalle maksettavasta osingosta on 21 %. Osingoille, jotka täyttävät Taiwanin–Korean tuloverosopimuksen soveltamisedellytykset ja menettelyn, pätee enimmäisvero 10 %. Tämä koskee Korea-kytkentäisiä tilanteita eikä ole kaikkia ulkomaisia sijoittajia koskeva yleinen sääntö; verosopimuksen olemassaolo oman asuinvaltionne ja Taiwanin välillä on tarkistettava erikseen. Konkreettinen ilmoitus ja ennakonpidätys on käsiteltävä asukasaseman, tosiasiallisen edunsaajan (受益所有人), tulolajin ja sopimusasiakirjojen mukaan.
 
-Liikevaihtovero ja voittoa tuottavien yritysten tulovero eroavat verokohteen ja ilmoitustavan mukaan; liikevaihtoon sovellettava vero ja veronalaiseen tuloon sovellettava vero on erotettava. Maksettaessa osinkoa, korkoa, rojalteja tai palvelukorvausta ulkomaisille osakkaille tai konserniyhtiöille on maksun luonne ja vastaanottavan henkilön asema, ennakonpidätyksen sisäiset säännöt ja tuloverosopimuksen mahdollinen soveltaminen tutkittava etukäteen.
+Liikevaihtovero ja elinkeinotulovero eroavat verokohteen ja ilmoitustavan mukaan; liikevaihtoon sovellettava vero ja veronalaiseen tuloon sovellettava vero on erotettava. Maksettaessa osinkoa, korkoa, rojalteja tai palvelukorvausta ulkomaisille osakkaille tai konserniyhtiöille on maksun luonne ja vastaanottavan henkilön asema, ennakonpidätyksen sisäiset säännöt ja tuloverosopimuksen mahdollinen soveltaminen tutkittava etukäteen.
 
 Taiwanin–Korean tuloverosopimus (所得稅協定) tuli voimaan 27. joulukuuta 2023 ja sitä sovelletaan 1. tammikuuta 2024 alkaen; koroille ja rojalteille, jotka täyttävät edellytykset, pätee samoin lähdevaltion enimmäisvero 10 %. Yritysvoiton verotusoikeutta tutkittaessa on otettava huomioon kaikki edellä selostetut 4 kiinteän toimipaikan tyyppiä. Palvelupäivien lisäksi on tutkittava yhdessä kiinteä järjestely, rakennusaika, edustajan sopimuksentekovaltuus ja tosiasiallinen toiminta.
 
-Sopimuksen rajoitettu verokanta ei päde automaattisesti pelkästään siksi, että sopimus on olemassa. On tutkittava verovelvollisen sopimuksen mukainen asukasasema ja ominaisuus tosiasiallisena edunsaajana, tulon oikeudellinen luonne sekä esitettävä asukastodistus (居住者證明) ja hakemusasiakirjat. Transaktiorakenne, sopimus, lasku, tosiasiallinen työ ja maksuvirta on pidettävä yhdenmukaisina; ilmoitusajat ja tositteiden säilytysvelvollisuus on tutkittava erikseen.
+Sopimuksen rajoitettu verokanta ei päde automaattisesti pelkästään siksi, että sopimus on olemassa. On tutkittava verovelvollisen sopimuksen mukainen asukasasema ja ominaisuus tosiasiallisena edunsaajana, tulon oikeudellinen luonne sekä esitettävä asuinvaltiotodistus (居住者證明) ja hakemusasiakirjat. Transaktiorakenne, sopimus, lasku, tosiasiallinen työ ja maksuvirta on pidettävä yhdenmukaisina; ilmoitusajat ja tositteiden säilytysvelvollisuus on tutkittava erikseen.
 
 ## Viralliset lähteet
 
@@ -131,9 +131,9 @@ Sopimuksen rajoitettu verokanta ei päde automaattisesti pelkästään siksi, et
 - [Taiwanin talousministeriön kaupan kehityshallinnon (商業發展署) opas yhtiö- ja kaupparekisteröintiin](https://gcis.nat.gov.tw/mainNew/English/index.jsp)
 - [Työkirja merentakaisten kiinalaisten tai ulkomaalaisten sijoitusyritysten liikkeenjohtajien työluvasta](https://ws.wda.gov.tw/Download.ashx?n=VGhlIERpcmVjdG9yIG9yIE1hbmFnZXIgb2YgYW4gQXBwcm92ZWQgQnVzaW5lc3MgSW52ZXN0ZWQgb3IgRXN0YWJsaXNoZWQgYnkgT3ZlcnNlYXMgQ2hpbmVzZSBvciBGb3JlaWduZXIocykoU09QIE1hbnVhbCkucGRm&u=LzAwMS9VcGxvYWQvMzIxL3JlbGZpbGUvMC8yNTE1LzUzMWMyZTM0LTI1NmYtNGI5MC1iMzAzLTEzNWI4MTQxYTk5MC5wZGY%3D)
 - [Taiwanin valtiovarainministeriön opas Taiwanin–Korean tuloverosopimuksesta](https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10)
-- [Säännös ei-asukkaalle maksettavan osingon ennakonpidätysprosentista](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
+- [Säännös liikevaihtoveron yleisestä verokannasta](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Opas Taiwanin liikevaihtoveron ilmoitusjaksosta](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/business-tax/collection-prcedure/oVL9pwM)
-- [Opas Taiwanin voittoa tuottavien yritysten tuloveron kannasta](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR)
+- [Opas Taiwanin elinkeinotuloveron kannasta](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR)
 - [Opas ulkomaalaisten osinkotulon verotuksesta](https://www.etax.nat.gov.tw/etwmain/alien-tax-service/alien-tax-faq/KK9Y76o)
 - [Taiwanin maahanmuuttoviranomaisen (內政部移民署) opas pysyvään oleskeluun](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Taipein kaupungin opas toimipaikan ennakkokyselyyn](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)

@@ -3,7 +3,7 @@ title: "Kysymyksiä ja vastauksia liikenneonnettomuuksien käsittelystä Taiwani
 url: "https://www.wei-wei-lawyer.com/post/taiwan-traffic-accident-procedure"
 lastmod: "2026-09-10"
 date_display: "13. syyskuuta 2025"
-read_time: "12 min lukuaikaa"
+read_time: "12 min lukuaika"
 categories:
   - "Oikeudellista tietoa Taiwanista"
 featured_image: "../images/003-taiwan-traffic-accident-procedure/featured-01.jpg"
@@ -29,7 +29,7 @@ Rikoslain (刑法) 185-4 artikla käsittelee rikosoikeudellista vastuuta kuljett
 
 ## Q2. Mitkä todisteet on ensin turvattava?
 
-Turvatkaa ensin henkilökohtainen turvallisuus ja varoitusmerkit; vammautuessa tai pelastustarpeessa soittakaa Taiwanissa numeroon 119 (ambulanssi ja pelastuslaitos), rikoksen tai kiireellisen turvallisuustilanteen vuoksi numeroon 110 (poliisi) tai matkapuhelimesta numeroon 112 (交通事故). Ilmoittakaa myös liikenneonnettomuus poliisille, siltä osin kuin tilanne sitä vaatii.
+Turvatkaa ensin henkilökohtainen turvallisuus ja varoitusmerkit; vammautuessa tai pelastustarpeessa soittakaa Taiwanissa numeroon 119 (ambulanssi ja pelastuslaitos), rikoksen tai kiireellisen turvallisuustilanteen vuoksi numeroon 110 (poliisi) tai matkapuhelimesta numeroon 112. Ilmoittakaa myös liikenneonnettomuus (交通事故) poliisille, siltä osin kuin tilanne sitä vaatii.
 
 Kun turvallisuus on turvattu, ottakaa yleis- ja lähikuvia ajoneuvon aseman ja vaurioiden, tiemerkintöjen, signaalien ja sään tallentamiseksi. Todistajien yhteystietoja, pyyntöä CCTV:n (監視器影像) ja kojikameran (行車紀錄器) turvaamisesta, tietoja osapuolista, ajoneuvoista ja vakuutuksista sekä potilasasiakirjoja (病歷) ei pidä jättää hankkimatta. Yksityiset tallenteet ovat hyödyllisiä, mutta eivät henkilövahinko- tai kuolemantapauksissa korvaa vaadittua poliisikäsittelyä.
 
@@ -47,7 +47,7 @@ Valinta poikkeaa vanhentumisen katkeamisen (時效中斷), vastaajien piirin, to
 
 ## Q4. Miten rikosoikeudellinen ja siviilioikeudellinen vastuu arvioidaan, kun molemmilla puolilla on tuottamusta?
 
-Rikosoikeudellinen vastuu voidaan arvioida vasta, kun kummankin puolen huolellisuusvelvollisuuden laiminlyönti ja sen syy-yhteys, joka tällä laiminlyönnillä on vastapuolen vammautumiseen, on tunnustettu. Pelkästään siksi, että molemmilla puolilla on tuottamusta (過失), ei automaattisesti synny vastuuta tuottamuksellisesta ruumiinvammasta.
+Rikosoikeudellinen vastuu edellyttää, että kummankin puolen huolellisuusvelvollisuuden laiminlyönti ja sen syy-yhteys vastapuolen vammautumiseen on näytetty. Pelkästään siksi, että molemmilla puolilla on tuottamusta (過失), ei automaattisesti synny vastuuta tuottamuksellisesta ruumiinvammasta.
 
 Siviilioikeudellisesti tuomioistuin voi siviililain (民法) 217 artiklan mukaan alentaa korvausta tai evätä sen, jos vahingonkärsijällä on tuottamusta vahingon syntymisessä tai lisääntymisessä (與有過失). Jos esimerkiksi tunnustetut vahingot olivat TWD 1.000.000 (新臺幣) ja vahingonkärsijän tuottamus arvioitiin 50 %:ksi, määrä voi ennen muita sovituksia laskea TWD 500.000:een.
 
@@ -91,7 +91,7 @@ Asiantuntijalausuntoa vastaan voidaan hakea uudelleentarkastusta, kuitenkin vain
 
 ## Q7. Mitä vahinkoja voidaan vaatia onnettomuuden jälkeen?
 
-Vaatimus siviililain (民法) 184 artiklan mukaan edellyttää oikeudenvastaista oikeuden loukkausta, syy-yhteyttä onnettomuuteen ja vahingon näyttöä. Pelkkä seikka, että onnettomuus on tapahtunut, ei merkitse, että kaikki seuraavat erät tunnustetaan. Siviililain 216 artikla on mittapuu tosiasiallisen vahingon ja menetetyn voiton (所失利益) laajuudelle.
+Vaatimus siviililain (民法) 184 artiklan mukaan edellyttää oikeudenvastaista oikeuden loukkausta, syy-yhteyttä onnettomuuteen ja vahingon näyttöä. Pelkkä onnettomuuden tapahtuminen ei merkitse, että kaikki seuraavat erät hyväksytään. Siviililain 216 artikla on mittapuu tosiasiallisen vahingon ja menetetyn voiton (所失利益) laajuudelle.
 
 - **Vammautuminen**: Siviililain 193 artiklan mukaan voidaan tutkia tarvittavat hoitokulut (醫療費用), hoito (看護費用), matkat hoitoon (就醫交通費), apuvälineet ja muut lisääntyneet elinkustannukset sekä ansiomenetys (收入損失) tosiasiallisesta työkyvyttömyydestä ja työkyvyn alentumisesta (勞動能力減損). Siviililain 195 artiklan mukaan voidaan tutkia myös aineeton vahinko.
 - **Kuolema**: Siviililain 192 artiklan mukaan voidaan, siltä osin kuin se soveltuu, tutkia hoitokulut ja lisääntyneet elinkustannukset ennen kuolemaa, hautauskulut (殯葬費) ja elatuksen menetys (扶養利益損失) sille, jolla oli oikeudellinen elatusvaatimus. Siviililain 194 artiklan mukaan voidaan tutkia myös tiettyjen sukulaisten aineeton vahinko.
@@ -109,7 +109,7 @@ Rikosprosessilain 504 artiklan mukaan voi kuitenkin, sen jälkeen kun asia on si
 
 Todistus tai lääketieteellinen lausunto on hyödyllinen hoidon tarpeen näyttämiseen, mutta ei yksin ratkaiseva peruste. Syy-yhteys onnettomuuteen, hoidon tarve, tosiasiallinen suoritus, kesto ja asianmukainen määrä on selitettävä asiakirjoin.
 
-Vaikka sukulaiset ilman vastiketta ovat tosiasiallisesti antaneet hoitoa, tämä voidaan asianmukaisissa asioissa arvioida vahingoksi. Pelkkä seikka perheen hoidosta ei kuitenkaan johda automaattisesti tunnustamiseen; hoidon sisältö ja kesto sekä tavanomainen kulutaso otetaan mukaan.
+Vaikka sukulaiset ilman vastiketta ovat tosiasiallisesti antaneet hoitoa, tämä voidaan asianmukaisissa asioissa arvioida vahingoksi. Pelkkä perheen antama hoito ei kuitenkaan johda automaattisesti siihen, että kulu hyväksytään; hoidon sisältö ja kesto sekä tavanomainen kulutaso otetaan mukaan.
 
 ## Q10. Millä näytetään kuljetuskulut hoitoon?
 
@@ -239,7 +239,7 @@ Tuottamuksellisesta ruumiinvammasta (過失傷害) on joissakin tuomioissa mää
 
 ​
 
-Muunnettaessa sakoksi rikoslain (刑法) 41 artiklan 1 momentti vahvistaa muunnoksen TWD 1.000, TWD 2.000 tai TWD 3.000 (新臺幣) 1 päivää kohden; laskettaessa TWD 1.000 perusteella päivässä 3 kuukauden rangaistus antaa 3 × 30 × 1.000 = TWD 90.000.
+Muunnettaessa sakoksi rikoslain (刑法) 41 artiklan 1 momentti vahvistaa muunnoksen TWD 1.000, TWD 2.000 tai TWD 3.000 (新臺幣) päivää kohden; laskettaessa TWD 1.000 perusteella päivässä 3 kuukauden rangaistus antaa 3 × 30 × 1.000 = TWD 90.000.
 
 ​
 

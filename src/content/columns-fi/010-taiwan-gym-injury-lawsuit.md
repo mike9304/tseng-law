@@ -3,7 +3,7 @@ title: "Korvaus kuntosalivammasta Taiwanissa: ensimmäisen oikeusasteen asia, m�
 url: "https://www.wei-wei-lawyer.com/post/taiwan-gym-injury-lawsuit"
 lastmod: "2026-07-25"
 date_display: "13. syyskuuta 2025"
-read_time: "10 min lukuaikaa"
+read_time: "10 min lukuaika"
 categories:
   - "Tapausanalyysi"
 featured_image: "../images/010-taiwan-gym-injury-lawsuit/featured-01.jpg"
@@ -19,11 +19,11 @@ Tämä artikkeli perustuu asiaan, jossa korealainen opiskelija vammautui Taiwani
 
 Onnettomuus tapahtui kuntosalilla Taichungissa (臺中) maastavedon (硬舉) harjoituksessa valmentajan johdolla. Vamman jälkeen ei tule katsoa pelkästään sitä, että onnettomuus tapahtui kuntosalilla; on tutkittava myös käyttäjän harjoituskokemus ja terveydentila, liikkeen luonne ja paino, valmentajan selitys ja ohjaus, liike ja reaktio tuolloin, vamman ja liikkeen välinen syy-yhteys (因果關係) sekä asiakirjat, jotka tukevat vahinkoa.
 
-Olin tässä asiassa kantajan, korealaisen opiskelijan, oikeudenkäyntiasiamies (訴訟代理人). Taichungin käräjäoikeus (臺灣臺中地方法院) velvoitti 24. tammikuuta 2022 antamassaan ensimmäisen oikeusasteen tuomiossa kuluttaja-asiassa nro 7 vuonna 109 (109年度消字第7號) vastaajan maksamaan [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) sekä tuomiossa mainitun koron.
+Olin tässä asiassa kantajan, korealaisen opiskelijan, oikeudenkäyntiasiamies (訴訟代理人). Taichungin käräjäoikeus (臺灣臺中地方法院) velvoitti 24. tammikuuta 2022 antamassaan ensimmäisen oikeusasteen tuomiossa kuluttaja-asiassa 109年度消字第7號 vastaajan maksamaan [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) sekä tuomiossa mainitun koron.
 
-Sen jälkeen lehdistö ilmoitti, että asianosaiset olivat muutoksenhakuasteessa tehneet sovinnon (和解). Pelkkä virallinen ensimmäisen oikeusasteen tuomio ei salli vahvistaa muutoksenhakuasteen tulosta tai sovintosummaa; lehdistön ilmoittamaa sovintoa ei saa lukea ensimmäisen oikeusasteen vahvistetuksi lopputulokseksi.
+Sen jälkeen lehdistö ilmoitti, että asianosaiset olivat muutoksenhakuasteessa tehneet sovinnon (和解). Pelkästä virallisesta ensimmäisen oikeusasteen tuomiosta ei käy ilmi muutoksenhakuasteen tulos eikä sovintosumma; lehdistön ilmoittamaa sovintoa ei saa lukea ensimmäisen oikeusasteen vahvistetuksi lopputulokseksi.
 
-Alla ovat käännetyt otsikot tätä asiaa koskevista uutisjutuista, verkkojulkaisuista ja oikeudellisista selostuksista. Alla olevat otsikot palvelevat vain kunkin linkin sisällön esittämistä; ne eivät merkitse, että tämä teksti itse toteaisi seikat.
+Alla ovat käännetyt otsikot tätä asiaa koskevista uutisjutuista, verkkojulkaisuista ja oikeudellisista selostuksista. Alla olevat otsikot palvelevat vain kunkin linkin sisällön esittämistä; ne eivät merkitse, että tämä artikkeli itsenäisesti vahvistaisi niissä kuvatut seikat.
 
 ![Miesopiskelija, välilevyn repeämä (椎間盤破裂) 90 kg maastavedon jälkeen… vaatii korvausta kuntosalilta](../images/010-taiwan-gym-injury-lawsuit/img-02.jpg)
 
@@ -79,13 +79,13 @@ Jos tuottamuksellisen ruumiinvamman (過失傷害) rikoksen lakisääteiset tunn
 
 Oikeus deliktiperusteiseen vahingonkorvaukseen (侵權行為) [Taiwanin siviililain 197 artiklan (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) mukaan lakkaa periaatteessa, kun sitä ei 2 vuoden aikana käytetä siitä hetkestä, jona uhri tietää vahingon ja korvausvelvollisen, ja lakkaa myös, kun 10 vuotta on kulunut vahingon aiheuttaneesta teosta.
 
-Tuleeko toinen vaatimusperuste, kuten sopimusvastuu, peliin, tai koskevatko muut säännöt alkamishetkeä, kulumista, keskeytymistä tms., voi tosiseikkojen mukaan vaihdella. Määräaikaa ei saa määrätä pelkästään onnettomuuspäivän tai diagnoosipäivän mukaan; on varmempaa varhain ja yksilöllisesti tarkistaa mahdolliset vaatimusperusteet ja viitepäivät.
+Tosiseikat voivat kuitenkin tukea toista vaatimusperustetta, kuten sopimusvastuuta, tai muita sääntöjä määräajan alkamisesta, kulumisesta ja keskeytymisestä. Määräaikaa ei saa määrätä pelkästään onnettomuuspäivän tai diagnoosipäivän mukaan; on varmempaa varhain ja yksilöllisesti tarkistaa mahdolliset vaatimusperusteet ja viitepäivät.
 
 ## 3. Mitkä todisteet on heti onnettomuuden jälkeen turvattava ja miten?
 
-Vastuun, syy-yhteyden ja vahingon selostamiseksi suositellaan, ettei koota pelkästään onnettomuushetken CCTV-tallenteita (監視器影像), vaan myös potilasasiakirjat (病歷) ja lääkärintodistus (診斷證明書), kuitit sairaanhoitokuluista (醫療費用), kuljetuksesta (就醫交通費) ja hoidosta (看護費用), kuntosalin ja valmentajan kanssa vaihdetut viestit, todistajankertomukset, tuntivaraus ja läsnäolotieto, harjoitussuunnitelma ja treenitieto. On suositeltavaa, sikäli kuin mahdollista, valokuvata vammautunut alue ja onnettomuuspaikan tila sekä järjestää onnettomuutta edeltävä ja seuraava kulku sekä viestinnän sisältö päivämäärän mukaan, jotta asiakirjoja voidaan myöhemmin helpommin rinnastaa.
+Vastuun, syy-yhteyden ja vahingon selostamiseksi suositellaan, ettei koota pelkästään onnettomuushetken CCTV-tallenteita (監視器影像), vaan myös potilasasiakirjat (病歷) ja lääkärintodistus (診斷證明書), kuitit sairaanhoitokuluista (醫療費用), kuljetuksesta (就醫交通費) ja hoidosta (看護費用), kuntosalin ja valmentajan kanssa vaihdetut viestit, todistajankertomukset, tuntivaraus ja läsnäolotieto, harjoitussuunnitelma ja treenitieto. On suositeltavaa, sikäli kuin mahdollista, valokuvata vammautunut alue ja onnettomuuspaikan tila sekä kirjata onnettomuutta edeltävä ja sen jälkeinen kulku sekä viestit aikajärjestykseen, jotta asiakirjoja voidaan myöhemmin helpommin rinnastaa.
 
-Tallenteet voivat säilytysajan päätyttyä ylikirjoittua tai muista syistä tulla käyttökelvottomiksi. Siksi voidaan harkita pyytää kuntosalia säilyttämään ne postin kautta lähetettävällä sisällöltään todistetulla kirjeellä (存證信函) tai asianajajan nimissä olevalla kirjeellä (律師函), jossa konkreettisesti ilmoitetaan tarvittavan ajanjakson, paikan ja kameran sijainnin. Tällainen kirje on käytännön keino jättää jälki siitä, mitä on pyydetty ja milloin. Se ei kuitenkaan itsessään aseta vastapuolelle uutta lakisääteistä velvollisuutta säilyttää tallenteita eikä estä poistoa, eikä pelkkä seikka, että tallenteita ei ole jäljellä, johda automaattisesti tuomioistuinta epäedulliseen arvioon.
+Tallenteet voivat säilytysajan päätyttyä ylikirjoittua tai muista syistä tulla käyttökelvottomiksi. Siksi voidaan harkita pyytää kuntosalia säilyttämään ne postin kautta lähetettävällä sisällöltään todistetulla kirjeellä (存證信函) tai asianajajan nimissä olevalla kirjeellä (律師函), jossa konkreettisesti ilmoitetaan tarvittavan ajanjakson, paikan ja kameran sijainnin. Tällainen kirje on käytännön keino jättää jälki siitä, mitä on pyydetty ja milloin. Se ei kuitenkaan itsessään aseta vastapuolelle uutta lakisääteistä velvollisuutta säilyttää tallenteita eikä estä poistoa, eikä pelkkä se, että tallenteita ei ole jäljellä, johda automaattisesti tuomioistuinta epäedulliseen arvioon.
 
 Jos onnettomuuden olosuhteet voivat täyttää rikoksen tunnusmerkit, voidaan nopeasti ilmoittaa, jotta tutkintaelin (偵查機關) voi arvioida, onko laillinen peruste takavarikolle tai turvaamiselle. Ilmoittaminen ei merkitse, että poliisi tai syyttäjä välttämättä turvaisi CCTV:n, joten myös asiakirjat, jotka asianosainen itse voi turvata, kuten lääketieteelliset asiakirjat ja viestintäasiakirjat, on koottava.
 

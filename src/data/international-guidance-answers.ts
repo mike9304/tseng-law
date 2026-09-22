@@ -688,12 +688,12 @@ export const guidanceAnswers: Record<
     },
     about: {
       answer:
-        'Hovering International Law Firm on taiwanilainen asianajotoimisto, jonka National Taiwan Universityn (國立臺灣大學) valmistuneet perustivat vuonna 2016, toimistoilla Taipeissa, Kaohsiungissa, Taichungissa ja Pingtungissa. Vuodesta 2020 on kirjanpito-osasto; Taichungin toimisto käsittelee Korean ja Japanin yhteyden omaavia asioita. Toimisto ei lupaa tulosta. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
+        'Hovering International Law Firm on taiwanilainen asianajotoimisto, jonka National Taiwan Universityn (國立臺灣大學) valmistuneet perustivat vuonna 2016. Toimistot ovat Taipeissa, Kaohsiungissa, Taichungissa ja Pingtungissa. Vuodesta 2020 toimistossa on ollut kirjanpito-osasto. Taichungin toimisto käsittelee Korean ja Japanin yhteyden omaavia asioita. Toimisto ei lupaa tulosta. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
       sources: ['/fi/lawyers', '/fi/services'],
     },
     lawyers: {
       answer:
-        'Tämä sivu esittelee Hoveringin asianajajat, operatiivisen johdon sekä yhteistyökumppanina toimivan tilitoimiston ja kertoo, mitä kukin heistä tekee. Asianajaja Wei Tseng (曾雋崴) on kelpoinen harjoittamaan asianajajan ammattia Taiwanissa ja on toimiston johtava asianajaja; hän avustaa päämiehiä Koreasta, Japanista ja muualta maailmasta. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
+        'Tämä sivu esittelee Hoveringin asianajajat, Korean toimintojen johdon ja tilintarkastajaosakkaan ja kertoo, mitä kukin heistä tekee. Asianajaja Wei Tseng (曾雋崴) on kelpoinen harjoittamaan asianajajan ammattia Taiwanissa ja on toimiston johtava asianajaja; hän avustaa päämiehiä Koreasta, Japanista ja muualta maailmasta. Neuvonta tapahtuu vain englanniksi, kiinaksi, japaniksi ja koreaksi.',
       sources: ['/fi/about', '/fi/contact'],
     },
     pricing: {

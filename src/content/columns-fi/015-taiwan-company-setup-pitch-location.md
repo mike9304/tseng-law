@@ -3,7 +3,7 @@ title: "Yhtiön perustaminen Taiwanissa – syventävä osa 3: toimipaikan etsim
 url: "https://www.wei-wei-lawyer.com/post/taiwan-company-setup-pitch-location"
 lastmod: "2026-09-10"
 date_display: "13. syyskuuta 2025"
-read_time: "4 min lukuaikaa"
+read_time: "4 min lukuaika"
 categories:
   - "Yhtiön perustaminen Taiwanissa"
 featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.jpg"
@@ -37,7 +37,7 @@ voitte käyttää Taipein kaupungin kauppaosaston (臺北市商業處) järjeste
 
 Voitte tutkia maksutta, voidaanko haluttuun osoitteeseen avata ”ravintola-ala”.
 
-Tähän tarkastukseen on kuitenkin ladattava toimipaikan ”rakennusrekisterin tyypin 2 ote” (建物登記第二類謄本, joka sisältää rakennuksen yksityiskohtaiset tiedot).
+Tähän ennakkokyselyyn on kuitenkin ladattava toimipaikan ”rakennusrekisterin tyypin 2 ote” (建物登記第二類謄本, joka sisältää rakennuksen yksityiskohtaiset tiedot).
 
 Kuka tahansa voi kiinteistötoimistolta (地政事務所) hakea ”rakennusrekisterin tyypin 2 otteen” mistä tahansa osoitteesta.
 
@@ -45,7 +45,7 @@ Jos teillä on vaikeuksia asioida henkilökohtaisesti kiinteistötoimistossa (�
 
 voitte pyytää apua tutulta Taiwanissa, vuokranantajalta, välittäjältä tai asianajajalta.
 
-Jos tarkastuksen tulos osoittaa, ettei ravintola-ala ole mahdollista, kaupunginhallitus voi myöhemmin yhtiörekisteröinnissä (公司登記) evätä rekisteröinnin.
+Jos tarkastuksen tulos osoittaa, ettei ravintola-ala ole mahdollista, kaupungin viranomainen voi myöhemmin yhtiörekisteröinnissä (公司登記) evätä rekisteröinnin.
 
 Ottakaa tämä kohta siksi huomioon.
 
@@ -63,7 +63,7 @@ Käytännössä kaikkia aloja ei siksi tarvitse tutkia yhtiörekisteröinnissä.
 
 on 1. tammikuuta 2023 alkaen yhtiön tai kaupan (mukaan lukien sivuliike (分公司) ja sivutoimipaikka (分支機構)) perustamisen, kotipaikan siirron tai toimialojen lisäämisen rekisteröintiä haettaessa toimipaikan ennakkokyselyn tulos **pakollisesti** liitettävä rekisteröintihakemukseen, alasta riippumatta.
 
-Jäljempänä oleva luettelo ”viran puolesta tutkittavista aloista” (主動查詢之營業項目) merkitsee aloja, joita Taipein kaupungin kauppaosasto viran puolesta tutkii lisää rekisteröintitarkastuksen aikana (隨案主動查詢), kun ala on hakemuksessa mutta puuttuu liitetystä tuloksesta; se, ettei ala ole tässä luettelossa, ei merkitse, että tarkastus olisi vapautettu.
+Jäljempänä oleva luettelo ”viran puolesta tutkittavista aloista” (主動查詢之營業項目) merkitsee aloja, joita Taipein kaupungin kauppaosasto viran puolesta tutkii lisää rekisteröintitarkastuksen aikana (隨案主動查詢), kun ala on hakemuksessa mutta puuttuu liitetystä tuloksesta; se, ettei ala ole tässä luettelossa, ei merkitse, että ala olisi vapautettu ennakkokyselystä.
 
 Jos avataan paikassa, jossa ravintola-ala ei ole mahdollista, voi myöhemmin seurata toimivaltaisen viranomaisen hallinnollinen sakko (罰鍰).
 

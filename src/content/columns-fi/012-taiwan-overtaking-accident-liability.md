@@ -3,7 +3,7 @@ title: "Miten vastuu arvioidaan ohitusonnettomuudessa Taiwanissa?"
 url: "https://www.wei-wei-lawyer.com/post/taiwan-overtaking-accident-liability"
 lastmod: "2026-09-10"
 date_display: "13. syyskuuta 2025"
-read_time: "5 min lukuaikaa"
+read_time: "5 min lukuaika"
 categories:
   - "Oikeudellista tietoa Taiwanista"
 featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.jpg"
@@ -29,7 +29,7 @@ Takana ajava ajoneuvo saa ohittaa vasta sen jälkeen, kun edellä ajava ajoneuvo
 
 Sen jälkeen ohittavan ajoneuvon on sytytettävä vasen vilkku, ajettava ohi vasemmalta vähintään 0,5 metrin etäisyydellä edellä ajavasta ajoneuvosta ja, kun turvallinen etäisyys on varmistettu, sytytettävä oikea vilkku ja palattava turvallisesti alkuperäiselle kaistalle.
 
-Tämä merkin ja väistämisen järjestys samalla kaistalla ei merkitse, että ohittaminen kielletyissä paikoissa tai kielletyissä ehdoissa olisi sallittua. Ennen kuin aloitatte ohittamisen, kaikki 101 artiklan ehdot on arvioitava yhdessä.
+Tämä merkinanto- ja väistämisjärjestys samalla kaistalla ei merkitse, että ohittaminen kielletyissä paikoissa tai kielletyissä ehdoissa olisi sallittua. Ennen kuin aloitatte ohittamisen, kaikki 101 artiklan ehdot on arvioitava yhdessä.
 
 ## Anonyymi onnettomuusasia, jota tämä toimisto on käsitellyt
 
@@ -62,4 +62,4 @@ Lisätietoa saatte [kuvasta ohitussäännöistä ja -menettelystä](https://gone
 > - [Hoveringin kansainvälinen tiimi](/fi/lawyers)
 > - [Menettely liikenneonnettomuudessa Taiwanissa](/fi/columns/taiwan-traffic-accident-procedure)
 
-Tämä teksti on yleistä oikeudellista tietoa ohitusjärjestelmästä ja onnettomuusvastuun arvioinnista Taiwanissa (超車); se ei ole neuvontaa konkreettisesta asiasta eikä lupaus tietystä tuloksesta. Todellinen vastuu voi poiketa onnettomuuspaikan, ajoneuvon liikkeen, nopeuden, merkkien, todisteiden, asiantuntijatutkimuksen (鑑定) ja uusimman oikeuden mukaan; konkreettiset asiat on tutkittava erikseen asianomaisten asiakirjojen perusteella.
+Tämä teksti on yleistä oikeudellista tietoa ohitusjärjestelmästä ja onnettomuusvastuun arvioinnista Taiwanissa (超車); se ei ole neuvontaa konkreettisesta asiasta eikä lupaus tietystä tuloksesta. Todellinen vastuu voi vaihdella onnettomuuspaikan, ajoneuvon liikkeen, nopeuden, merkkien, todisteiden, asiantuntijatutkimuksen (鑑定) ja kulloinkin voimassa olevien säännösten mukaan; konkreettiset asiat on tutkittava erikseen asianomaisten asiakirjojen perusteella.

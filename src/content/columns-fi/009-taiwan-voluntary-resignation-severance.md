@@ -3,7 +3,7 @@ title: "Poikkeukset, joissa työntekijät voivat omasta irtisanoutumisestaan huo
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
 lastmod: "2026-09-10"
 date_display: "13. syyskuuta 2025"
-read_time: "3 min lukuaikaa"
+read_time: "3 min lukuaika"
 categories:
   - "Oikeudellista tietoa Taiwanista"
 featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg"
@@ -53,7 +53,7 @@ ei maksa palkkaa (工資) ajallaan,
 
 ei maksa ylityökorvausta (加班費)
 
-tai ei liitä työntekijää työntekijävakuutukseen (勞保) tai sairausvakuutukseen (健保).
+tai ei liitä työntekijää Taiwanin työntekijävakuutukseen (勞保) tai Taiwanin kansalliseen sairausvakuutukseen (健保).
 
 Tällaisissa tapauksissa työnantajan on maksettava eroraha silloinkin, kun työntekijä itse päättää työsopimuksen.
 
@@ -73,11 +73,11 @@ Siksi työntekijöiden on pidettävä määräaika tarkasti silmällä.
 
 Toisin sanoen:
 
-Taiwanin oikeus, sijaitsipa syy yhtiössä
+Taiwanin oikeus antaa, sen mukaan sijaitsiko syy työnantajassa
 
 tai työntekijässä,
 
-tunnustaa kummallekin puolelle oikeuden olla maksamatta erorahaa tai vaatia erorahaa.
+jommallekummalle osapuolelle oikeuden olla maksamatta erorahaa tai vaatia sitä.
 
 Joskus syy sijaitsee molemmilla puolilla,
 

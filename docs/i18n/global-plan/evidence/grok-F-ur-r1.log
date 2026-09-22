@@ -1,0 +1,86 @@
+WO-F-ur r1 — Grok 4.7 fix lane
+date: 2026-09-22
+scope: Urdu guidance pack + columns-ur 001–018
+
+## Rows applied
+
+Part a (ur-a.md), applied: 1–13, 15–31, 33–43, 45–47.
+Part a row 44: the آسان/مشکل/آسان cells were rewritten so the row no longer calls economic dismissal or resignation easy. The row itself was kept (see skipped).
+Part b (ur-b.md), applied: 1–22, 24–37.
+Part b row 22: each existing block was rewritten so it stands alone. The blocks were not merged.
+
+Guidance pack (ur strings only): international-guidance-south-asia.ts (urduGuidanceContent), international-guidance-team.ts (ur copy + ur bios), international-guidance-answers.ts (ur), international-inquiry-copy.ts (ur). llms-txt.ts GUIDANCE_LLMS_NOTICES.ur was already a correct consultation lock and was left unchanged. Office labels were already اردو (دفاتر), not OFFICES.
+
+## Rows skipped
+
+- a-14. Suggested lakh grouping and a rewrite of "TWD 1.57M". Skipped. ACCEPTED-ROUND pins that figure byte-identical, and R14 says lakh/crore grouping is not parsed. The surrounding "پہلی سماعت" error (a-4) was fixed; "TWD 1.57M" is unchanged. Column amounts stay Western comma grouping (500,000), which is the form the checker accepts.
+- a-32. Suggested turning Q16–Q20 into ## headings and deleting U+200B lines. Skipped. Heading levels must match the Korean source, and checkBlocks requires the ZWSP count to match that source (003=52, 005=8, 006=4, 008=10, 009=5, 013=5, 015=3). The blog closer in 003 was rephrased inside its block.
+- a-44 (deletion only). Suggested deleting the difficulty table row. Skipped the deletion so the table-row count stays aligned. Cells rephrased (see applied).
+- b-23. Suggested deleting U+200B-only lines in 013 and 015. Skipped for the same ZWSP parity.
+
+## Systemic patterns
+
+- جمع used for storage/retention → ذخیرہ / محفوظ رکھنا. 6 guidance strings (two headings, storage-place sentence, retention period, receipt-after-save, retention duty). Form-collection senses of جمع (title, "کون سی معلومات جمع کی جاتی ہے") were left.
+- 資遣費 as علیحدگی معاوضہ (reads as marital separation) → ملازمت ختم کرنے کا معاوضہ. Guidance sentence 1; columns: 002 ×1, 008 ×19, 009 ×6, 014 link label ×1. Marital علیحدگی in 007 and corporate جدائی in 004 were not swept into this phrase.
+- Stacked کا / missing ہوا: guidance "ملاقات کے وقت", "بھیجا ہوا خلاصہ", answers "بھیجے ہوئے خلاصے".
+- منتظم for Wei Tseng → منتظمہ وکیلہ. Role line, qualification sentence, representative title, lawyers answer. English role chrome removed from the ur roles (R12). Preserved bio terms (firm names, "TWD 1.57M", ministry English gloss) kept.
+- نقصان معاوضہ without کا → نقصان کا معاوضہ. 010 ×3, 017 ×2. Pre-existing "نقصان کا معاوضہ" in 004 and 007 left.
+- وزارتِ اقتصادیات → وزارتِ اقتصادی امور. 17 occurrences (001, 002, 011, 013, 017, 018). 001's doubled ministry name collapsed to one.
+- سرمایہ کاری جائزہ ڈائریکٹوریٹ → محکمہ جائزہِ سرمایہ کاری (經濟部投資審議司). 9 occurrences (001, 011, 013, 017, 018). سڑک ڈائریکٹوریٹ for 交通部公路局 left, as the review said that rank is right.
+- 章程 as کمپنی کا آئین → کمپنی کے ضوابط (章程). 16 (002 ×10, 004 ×3, 017 ×1, 018 ×2).
+- 辦法 titles in 011 (file-management regulations, notification regulations) → ضوابط. 4 title/link strings. Ordinary طریقہ "method/procedure" left.
+- 親權 دیکھ بھال (not everyday childcare) → حقوق و فرائض. Title, H1, FAQ question, and the parental-rights sentences in 016. "بچوں کی دیکھ بھال" and "دیکھ بھال کی صلاحیت" left.
+- R2 Korea framing in 001/004/005/008/009 was already a labelled example. Not rewritten into a claim about the reader's country.
+- R3 month/suspended-sentence softeners in 003 and the 008 severance anecdote were already in place. 003 "pursue the maximum" was already "the compensation the facts support".
+- R9 Taiwan 119/110/112 already explicit in 003.
+- No Arabic ي/ك leakage. Hangul only inside frontmatter url (R16). Markers 0.
+
+## §Verify
+
+node scripts/check-column-translation.mjs --dir src/content/columns-ur --lang ur 2>&1 | tail -8
+
+```
+hanzi          PASS   han=54
+numbers        WARN   extra in translation (14): 1×14
+                      sourceCount=25 targetCount=39
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+```
+
+The 018 numbers WARN is the pre-existing extra digit 1 (already in "1 یا زیادہ", "ڈائریکٹر 1 سے 3", and the same thresholds). No new digits were added. Summary is PASS, so the Western figures were kept.
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ur src/data | wc -l
+
+```
+       0
+```
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+
+```
+TSC_OK
+```
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+
+```
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+```
+
+git status --short | wc -l
+
+```
+      26
+```
+
+(The 26 includes the pre-existing dirty WO-F-ur.txt and the untracked review files ur-a.md / ur-b.md, plus this log. No commit.)
+
+## Reviewer points not followed
+
+- a-6 suggested "منتظمہ وکیل". Kept وکیلہ. وکیل without ۃ is the masculine noun; the rest of the pack already calls her وکیلہ, and the verbs are feminine.
+- b-17 suggested "سرمایہ کاری کمیشن" as the single name. Not used. 司 is a department, and R8 requires one name equal to Department of Investment Review. 018's English "Investment Commission" is the older 委員會 name, not this 司. The Urdu name used everywhere is محکمہ جائزہِ سرمایہ کاری، وزارتِ اقتصادی امور.
+- a-14's lakh rewrite of the pinned bio figure, a-32's new headings, a-44's deleted table row, and b-23's deleted U+200B lines were not applied for the skip reasons above. They are not factual mistakes about the law; they conflict with the checker and the standing skip rules.

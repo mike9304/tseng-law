@@ -33,9 +33,9 @@ Esse pormenor pertence à memória dessa época.
 
 ​
 
-Seja como for, quando se fala de massagem (按摩),
+Seja como for, a massagem (按摩) em Taiwan não se reduz a um só tipo de local.
 
-existem também em Taiwan numerosas ruas de massagem.
+Existem também em Taiwan numerosas ruas de massagem.
 
 Estabelecimentos de massagem de todas as espécies alinham-se aí.
 
@@ -45,59 +45,59 @@ No essencial, cada um pode escolher a massagem que convém ao seu gosto para ali
 
 E a razão pela qual existem hoje tantos estabelecimentos de massagem pode dever-se a este pedido de interpretação constitucional (釋憲).
 
-Quando Taiwan promulgou e pôs em vigor, em 1980, a lei sobre o bem-estar das pessoas com deficiência (殘障福利法),
+Taiwan promulgou e pôs em vigor, em 1980, a lei sobre o bem-estar das pessoas com deficiência (殘障福利法).
 
-só as pessoas em situação de deficiência visual (視障者) podiam na realidade exercer o ofício de massagem (按摩業).
+Só as pessoas em situação de deficiência visual (視障者) podiam na realidade exercer o ofício de massagem (按摩業).
 
 Que um indivíduo sem deficiência visual (非視障者) exercesse este ofício era ilegal.
 
-Esta lei manteve-se até 2003; na época, o Sr. Lin, que geria um salão de cabeleireiro,
+Esta lei manteve-se até 2003. Na época, o Sr. Lin geria um salão de cabeleireiro.
 
-empregou trabalhadores sem deficiência visual para serviços de lavagem de cabelo e de massagem, e a polícia constatou-o.
+O Sr. Lin empregou trabalhadores sem deficiência visual para serviços de lavagem de cabelo e de massagem, e a polícia constatou-o.
 
-Segundo o direito de então, o Sr. Lin e esses trabalhadores viram infligir-se respetivamente uma coima administrativa (罰鍰) de TWD 40.000, TWD 10.000 e TWD 20.000 em novos dólares de Taiwan (新臺幣).
+Segundo o direito de então, foi aplicada ao Sr. Lin uma coima administrativa (罰鍰) de TWD 40.000 e, aos dois trabalhadores, coimas de TWD 10.000 e de TWD 20.000, em novos dólares de Taiwan (新臺幣).
 
 O Sr. Lin considerou esta sanção muito injusta e pediu uma interpretação constitucional.
 
 ![](../images/006-taiwan-massage-history-law/img-02.jpeg)
 
-Em Taiwan,
+Em Taiwan, o acesso ao trabalho não é igual para todos.
 
-as pessoas em situação de deficiência visual encontram numerosos obstáculos no crescimento, na atividade, na aprendizagem e na educação, entre outros,
+As pessoas em situação de deficiência visual encontram numerosos obstáculos no crescimento, na atividade, na aprendizagem e na educação, entre outros.
 
-e os ofícios que podem exercer são muito limitados.
+Os ofícios que podem exercer são muito limitados.
 
-É por isso que o legislador de então, para proteger as pessoas em situação de deficiência visual, que se encontravam em posição de fraqueza,
+O legislador de então quis proteger as pessoas em situação de deficiência visual, que se encontravam em posição de fraqueza.
 
-elaborou uma lei que protegia o emprego e o direito à subsistência (生存權) das pessoas em situação de deficiência visual.
+O legislador elaborou uma lei que protegia o emprego e o direito à subsistência (生存權) das pessoas em situação de deficiência visual.
 
-Contudo, com a passagem do tempo e o alargamento do mercado de consumo,
+Contudo, com a passagem do tempo e o alargamento do mercado de consumo, o debate mudou.
 
-a opinião fez-se ouvir de que proteger unicamente os direitos das pessoas em situação de deficiência visual restringia demasiado o direito ao trabalho das pessoas sem deficiência visual.
+A opinião fez-se ouvir de que proteger unicamente os direitos das pessoas em situação de deficiência visual restringia demasiado o direito ao trabalho das pessoas sem deficiência visual.
 
 No debate sobre os direitos profissionais das pessoas com e sem deficiência visual, numerosas opiniões contrárias apareceram.
 
-Perguntou-se por exemplo se a regra escrita que só autorizava as pessoas em situação de deficiência visual a exercer a massagem não era uma discriminação para com as pessoas sem deficiência visual,
+Perguntou-se por exemplo se a regra escrita que só autorizava as pessoas em situação de deficiência visual a exercer a massagem não era uma discriminação para com as pessoas sem deficiência visual.
 
-e pôs-se em dúvida que esta regra tivesse realmente contribuído para proteger o emprego e a subsistência das pessoas em situação de deficiência visual.
+Pôs-se em dúvida que esta regra tivesse realmente contribuído para proteger o emprego e a subsistência das pessoas em situação de deficiência visual.
 
 Finalmente, os juízes constitucionais (大法官) declararam inconstitucional (違憲) a disposição que só autorizava as pessoas em situação de deficiência visual a exercer o ofício de massagem.
 
 ​
 
-De forma similar, na Coreia, onde numerosas pessoas em situação de deficiência visual ganham a vida graças à massagem,
+De forma similar, na Coreia, numerosas pessoas em situação de deficiência visual ganham a vida graças à massagem.
 
-em geral só as pessoas em situação de deficiência visual que obtiveram um certificado de qualificação podem exercer o ofício de massagem.
+Em geral, só as pessoas em situação de deficiência visual que obtiveram um certificado de qualificação podem exercer o ofício de massagem.
 
-É verdade que o governo da Coreia passou a emitir certificados de massagem também a pessoas sem deficiência visual,
+É verdade que o governo da Coreia passou a emitir certificados de massagem também a pessoas sem deficiência visual.
 
-e numerosas pessoas em situação de deficiência visual, receando perder o seu meio de subsistência, organizaram protestos intensos.
+Numerosas pessoas em situação de deficiência visual, receando perder o seu meio de subsistência, organizaram protestos intensos.
 
-Atualmente, a Coreia continua a autorizar só as pessoas em situação de deficiência visual titulares da qualificação a exercer o ofício de massagem,
+Atualmente, a Coreia continua a autorizar só as pessoas em situação de deficiência visual titulares da qualificação a exercer o ofício de massagem.
 
-e se alguém percebe uma remuneração de massagem de outrem sem essa qualificação,
+Se alguém percebe uma remuneração de massagem de outrem sem essa qualificação, a lei prevê uma sanção.
 
-segundo a lei coreana sobre os serviços médicos (醫療法) uma pena de prisão que pode ir até 3 anos pode ser pronunciada.
+Segundo a lei coreana sobre os serviços médicos (醫療法), uma pena de prisão que pode ir até 3 anos pode ser pronunciada.
 
 Se alguém sem deficiência visual explora um comércio de massagem, uma pena de prisão que pode ir até 5 anos pode ser pronunciada.
 
@@ -105,24 +105,24 @@ Se alguém sem deficiência visual explora um comércio de massagem, uma pena de
 
 Isso mostra que cada país adota abordagens distintas para proteger os direitos e interesses de diversos grupos.
 
-A proteção dos direitos e interesses de cada grupo muda de forma contínua com o tempo,
+A proteção dos direitos e interesses de cada grupo muda de forma contínua com o tempo.
 
-e o legislador esforça-se por encontrar uma solução relativamente equilibrada para resolver o conflito de interesses.
+O legislador esforça-se por encontrar uma solução relativamente equilibrada para resolver o conflito de interesses.
 
 ​
 
-Hoje, numerosas pessoas escolhem a massagem para aliviar a tensão,
+Hoje, numerosas pessoas escolhem a massagem para aliviar a tensão.
 
-mas, neste processo, casos de assédio sexual (性騷擾) ou de atos obscenos (猥褻) não cessam de se produzir.
+Neste processo, porém, casos de assédio sexual (性騷擾) ou de atos obscenos (猥褻) não cessam de se produzir.
 
-O que na origem não era senão receber uma massagem para aliviar a tensão
+Receber uma massagem para aliviar a tensão era, na origem, só isso.
 
-pode tornar-se um traumatismo para a vida se se sofrer um assédio sexual.
+Pode tornar-se um traumatismo para a vida se se sofrer um assédio sexual.
 
-Se, durante uma massagem em Taiwan, sentir um mal-estar ou algo de estranho,
+Se, durante uma massagem em Taiwan, sentir um mal-estar ou algo de estranho, não continue em silêncio.
 
-comunique-o de imediato ou peça que se pare, a fim de se proteger.
+Comunique-o de imediato ou peça que se pare, a fim de se proteger.
 
-Se estimar ter sofrido um assédio sexual,
+Se estimar ter sofrido um assédio sexual, pode apresentar queixa.
 
-dirija-se à esquadra com um amigo de confiança ou com uma advogada ou um advogado de Taiwan (律師) para apresentar queixa.
+Dirija-se à esquadra com um amigo de confiança ou com uma advogada ou um advogado de Taiwan (律師) para apresentar queixa.

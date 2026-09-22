@@ -17,11 +17,11 @@ Em Taiwan não é, em regra, fácil para o trabalhador obter a indemnização po
 
 ​
 
-Em particular, se o trabalhador se demitir por sua própria iniciativa (自請離職),
+Em particular, a demissão por iniciativa própria do trabalhador (自請離職) segue outra regra.
 
-não pode perceber a indemnização por despedimento (資遣費) (artigo 18 da lei sobre as normas do trabalho),
+O trabalhador não pode perceber a indemnização por despedimento (資遣費) (artigo 18 da lei sobre as normas do trabalho).
 
-e isso difere de alguns outros ordenamentos, por exemplo do coreano.
+Isso difere de alguns outros ordenamentos, por exemplo do coreano.
 
 ​
 
@@ -35,7 +35,7 @@ Nas situações particulares seguintes, mesmo se o trabalhador se demitir por su
 
 (por exemplo quando o empregador diz ao trabalhador que, desde a entrada, o enviará a uma sucursal no estrangeiro que não existe na realidade)
 
-2. Quando o empregador, um membro da família do empregador ou um representante do empregador (代理人) exerce uma violência ou inflige um insulto grave (重大侮辱) ao trabalhador
+2. Quando o empregador, um membro da família do empregador ou um representante do empregador (代理人) exerce violência contra o trabalhador ou lhe dirige um insulto grave (重大侮辱)
 
 3. Quando o trabalho convencionado no contrato pode prejudicar a saúde do trabalhador, foi pedido ao empregador que o corrigisse e este não o fez
 
@@ -47,49 +47,49 @@ Nas situações particulares seguintes, mesmo se o trabalhador se demitir por su
 
 ​
 
-O exemplo mais frequente é que o empregador
+O exemplo mais frequente está do lado do empregador.
 
-não paga o salário (工資) a tempo,
+O empregador não paga o salário (工資) a tempo.
 
-não paga as horas extraordinárias (加班費),
+O empregador não paga as horas extraordinárias (加班費).
 
-ou não afilia o trabalhador ao seguro do trabalho (勞保) ou ao seguro de doença (健保).
+O empregador também não afilia o trabalhador ao seguro do trabalho (勞保) ou ao seguro de doença (健保).
 
 Nestes casos, mesmo se o trabalhador puser termo ao contrato de trabalho de forma ordinária, o empregador deve pagar-lhe a indemnização por despedimento.
 
 ​
 
-Contudo, a lei sobre as normas do trabalho (勞動基準法) dispõe que,
+Contudo, a lei sobre as normas do trabalho (勞動基準法) fixa um prazo.
 
-se o trabalhador desejar pôr termo ao contrato de trabalho a título dos pontos 1 ou 6 acima (por exemplo para terminar o contrato por falta de afiliação ao seguro),
+Se o trabalhador desejar pôr termo ao contrato de trabalho a título dos pontos 1 ou 6 acima (por exemplo para terminar o contrato por falta de afiliação ao seguro), esse prazo aplica-se.
 
-deve pôr termo ao contrato de trabalho num prazo de **30 dias** a contar do dia em que conheceu esta situação,
+Deve pôr termo ao contrato de trabalho num prazo de **30 dias** a contar do dia em que conheceu esta situação.
 
-ou, para o ponto 6, num prazo de **30 dias** a contar do dia em que conheceu o resultado do prejuízo.
+No ponto 6, em alternativa, o prazo é de **30 dias** a contar do dia em que conheceu o resultado do prejuízo.
 
-O trabalhador deve portanto dominar bem o prazo.
+O trabalhador deve portanto estar muito atento a estes prazos.
 
 ​
 
-Por outras palavras,
+Por outras palavras, o critério é a culpa.
 
-o direito de Taiwan distingue o efeito segundo quem tem a culpa.
+O direito de Taiwan distingue o efeito segundo quem tem a culpa.
 
 Se a tiver o empregador, o trabalhador pode exigir a indemnização por despedimento.
 
 Se a tiver o trabalhador, o empregador pode não a pagar.
 
-Por vezes, quando há culpa de parte a parte na relação de trabalho,
+Por vezes, há culpa de parte a parte na relação de trabalho.
 
-se o litígio surgir,
+Se o litígio surgir, a ordem dos atos conta.
 
-segundo quem puser termo em primeiro lugar ao contrato com um motivo suficiente
+Segundo quem puser termo em primeiro lugar ao contrato com um motivo suficiente, o resultado muda.
 
-a indemnização pode não ser paga ou pode ser exigida.
+A indemnização pode não ser paga ou pode ser exigida.
 
-É por isso que, nos conflitos do trabalho (勞資糾紛) em Taiwan,
+É por isso que, nos conflitos do trabalho (勞資糾紛) em Taiwan, o calendário decide.
 
-o «**tempo**» é muito importante.
+O «**tempo**» é muito importante.
 
 Na maior parte dos casos, quem se preparou de antemão fica em melhor posição para defender os seus direitos.
 

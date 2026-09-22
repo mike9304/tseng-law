@@ -29,7 +29,7 @@ As perguntas e respostas seguintes visam ajudar as pessoas que ponderam uma cons
 
 Em geral, os bancos da Coreia exigem que o investidor se dirija **em pessoa** a um banco na Coreia e transfira os fundos a partir de uma conta em seu próprio nome.
 
-A transferência por banco em linha ou por intermédio de um próximo na Coreia não é possível.
+A transferência por banco online ou por intermédio de um próximo na Coreia não é possível.
 
 Além disso, em conformidade com a regulamentação coreana sobre o controlo dos câmbios, a pessoa de nacionalidade coreana que constitui uma pessoa coletiva estrangeira ou adquire partes deve depositar uma «declaração de investimento direto no estrangeiro». A declaração deve ser registada no momento da transferência do capital à pessoa coletiva taiwanesa (台灣法人); na falta disso, podem aplicar-se sanções por violação da regulamentação sobre os câmbios.
 
@@ -59,7 +59,7 @@ Contudo, como as regras internas de cada banco (銀行) diferem, se for preciso 
 
 **​**
 
-**4. Depois da conversão da conta da sociedade em formação em conta ordinária, o banco em linha pode ser utilizado de imediato?**
+**4. Depois da conversão da conta da sociedade em formação em conta ordinária, o banco online pode ser utilizado de imediato?**
 
 Isso varia segundo os bancos; em geral, é necessário pelo menos um número de telemóvel.
 

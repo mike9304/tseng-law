@@ -203,7 +203,7 @@ As seguradoras muitas vezes não tratam o bastante do lado humano das pessoas en
 
 ​
 
-Podem negligenciar partes importantes que concernem os sentimentos da outra parte, tais como as desculpas e as marcas de reconforto.
+Podem negligenciar partes importantes que concernem os sentimentos da outra parte, tais como um pedido de desculpa e sinais de preocupação.
 
 ​
 

@@ -1,0 +1,85 @@
+WO-F-he r3 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-he-r3
+date: 2026-09-23
+no git add/commit/push
+
+## Rows
+
+Numbered findings: he-a 26, he-b 36 (62). No separate P3 table. P1 and P2 applied unless a skip rule below.
+
+Applied: 57.
+Skipped: 5 numbered rows. Adaptations on applied rows are listed under that row, not as skips.
+
+No test file was edited. The pinned strings that moved were not asserted as exact Hebrew in src/lib/__tests__ or src/data/__tests__. "TWD 1.57M" was left byte-identical. discoveryNotice still contains the token llms.txt. consultationNotice and confidentialNotice were left. Disclosure-parity regexes were left; none of the pinned disclosure phrases was reworded.
+
+### Applied
+he-a 1–6, 9–15, 17–25.
+he-b 1–21, 23–36.
+
+Adaptations (still applied):
+- he-a 1 and he-a 23. The reviewer's one-sentence rewrites would merge the spoken-column blocks in 009. Each existing block is now its own clause: employer at fault → the employee may claim; employee at fault → the employer may be released from paying; the party that terminates first on sufficient grounds is the subject of the next block. Block count unchanged.
+- he-a 2. The label was the 001 withholding title with a stray "(10)". Korean 004 and English 004 name Article 10 of the Business Tax Act (영업세법 제10조 / Article 10 of the Value-Added and Non-Value-Added Business Tax Act). The label is now "סעיף 10 לחוק מס העסקים (營業稅法)". The digit 10 stays (dropping it fails the number check). The URL is unchanged.
+- he-a 17 and he-b 36. Parenthetical "(1)" was not deleted. Hebrew has no word-numeral lexicon, and the Korean source counts those 1s (최근 1년, one year of service, one vote). Each "(1)" became an inline digit: "1 שנה אחרונה", "כל 1 תקופת השעיית פעילות … 1 שנה", "1 שנת ותק", "לכל 1 מבעלי החלקים יש 1 קול". "אדם טבעי 1" in 018 was left (the suggested "אחד" would drop a 1).
+- he-a 6. Korea stays a labelled example, plus a separate check of the bank rule in the investor's home country. The sentence does not say an Israeli transfer needs no source documents.
+- he-b 17. In the 有限公司 paragraph only, "בעלי מניות" became "בעלי חלקים" / "אישיות משפטית". The 股份有限公司 paragraph still says shareholders.
+
+### Skipped
+- he-a 7. 008 already says that with legal representation B established the statutory severance entitlement. Restoring "received a substantial severance" makes the result sentence positive. RULEBOOK R3 and ACCEPTED-ROUND leave that hedge.
+- he-a 8. The 3-month, 4-month, and 6-month sentences already say some judgments imposed about that period and that there is no typical or guaranteed outcome. Restoring "courts currently generally impose" undoes R3.
+- he-a 16. Q16–Q20 were not promoted to headings, and the U+200B lines in 003 (from Q16), 005 (including empty bold lines), 006, 008, and 009 were not removed. Heading levels and ZWSP counts must match the Korean source. English keeps Q16–Q20 as body paragraphs.
+- he-a 26. "TWD 1.57M" stays byte-identical. A test pins it.
+- he-b 22. The trailing U+200B after the Taipei sentence, and the ZWSP-only lines in 013 and 015, were left. Deleting them changes the ZWSP count.
+
+## Systemic patterns
+
+- Parenthetical "(1)" glued to "one" or "the latest". 12 markers rewritten as inline digits, 0 deleted: 001 ×2, 002 ×4 (two sentences, two digits each), 008 ×4, 018 ×2. See he-a 17 / he-b 36.
+- U+200B blanks (003 from Q16, 005 including `**​**`, 006, 008, 009, 013, 015). 0 deleted. See Skipped.
+- "תביעות" for receivables. 13: 002 ×11 (the asset list, unpaid receivables and payables, collection of outstanding receivables, long-term receivables, collectability ×2, contracts/receivables/debts, company–shareholder receivables, books, property list, waiver of receivables), 004 ×2 (collection of receivables; settlement of rights and debts on exit). Left: lawsuits (תביעות משפט), tax claims, preferred creditor claims, and claim ranking.
+- "כלפי" pointing parental rights at the child. 9: 007 ×5 (FAQ, body repeat, the defined term, a change of that authority, and the adultery-consequences sentence), 016 ×3 (FAQ, body repeat, and who exercises the authority), guidance services paragraph ×1.
+- Past-result / current-practice hedge. 0 undone. The 003 sentence lengths and the 008 anecdote stay in the R3 form. See Skipped and Reviewer points.
+- 條例 named as secondary regulations (תקנות) or a Mandate ordinance (פקודה). 5: 008 Labor Pension Act ×2 (FAQ and blockquote), 013 Statute for Investment by Foreign Nationals ×1, 017 source-link title of the same statute ×1, 003 Road Traffic Management and Penalty Act link ×1 (תקנות → חוק). 辦法 / 規則 that are actually secondary rules were left.
+- Duration written as המשך. 4, all in 014: the Ministry list ×2 (FAQ and body), "את המשך הקונקרטי" ×1, "המשך והמטרה" ×1. "בהמשך" meaning "afterwards" in 015 was left.
+- להבטיח / להפעיל standing in for obtain or maintain. 3 in 011: importer status, running product registration as its own workstream, and maintaining procedures. Left: "להפעיל את העסק" (operate the business), "להפעיל זכויות" (exercise rights), and "להבטיח" where the English is ensure or do-not-promise.
+- "אין בכך ש" / "אינו" with no predicate. 2: 010 the adverse-inference clause, 017 "אם אינו ברור ש…".
+- Members called shareholders after 018 says the limited company has no share capital. 6 slots, one paragraph only. The company limited by shares still uses בעלי מניות.
+- Plate surrender (繳銷) as cancellation "by a return". 2 in 017.
+
+R2–R10. Prior rounds already hold: feminine Wei Tseng where Hebrew marks gender, consultation languages English / Chinese (中文) / Japanese / Korean, no interpreter, no reply-time, no free first meeting, no result promise. This round did not turn any of those sentences positive. Korea in 005 stays a labelled bank example. The road-traffic 條例 and the investment 條例 were the remaining statute-name misses of that pattern.
+
+## Reviewer points not followed
+
+- he-a 7 and he-a 8. The softening is the R3 wording the rulebook requires ("establish the entitlement"; "in some judgments … there is no typical or guaranteed outcome"). Putting the payment amount or "courts currently generally impose" back would make the result sentence positive.
+- he-a 2, the request to drop "(10)" and keep the dividend-withholding title. That title is the 001 link. Korean and English 004 name Article 10 of the Business Tax Act. The URL flno=3 was not changed. The digit stays so the checker still sees 10.
+- he-a 16 and he-b 22. U+200B lines match the Korean source. Promoting Q16–Q20 would change heading levels. English does not use those headings either.
+- he-a 17 and he-b 36, where the suggested wording drops a digit ("השנה האחרונה" with no 1; "קול אחד"; "אדם טבעי אחד"). The meaning is the reviewer's; the digit shape is the one the checker still counts.
+- he-a 26. "TWD 1.57M" is pinned. It was not written out as "1.57 מיליון".
+- he-a 1 and he-a 23, where the suggested sentence would join the next block. Block counts are locked.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-he --lang he 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=73
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-he src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      21
+```
+
+017 numbers is WARN only (`수사미해석 (2): 제3자`), sourceCount=44 targetCount=44, and the file still PASSes. That WARN was not introduced by a digit-format change in this round.

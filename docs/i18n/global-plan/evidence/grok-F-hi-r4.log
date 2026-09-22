@@ -1,0 +1,98 @@
+WO-F-hi r4 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-hi-r4
+date: 2026-09-23
+reviews: docs/i18n/global-plan/reviews/native/rounds/r4/hi-a.md (13 rows), hi-b.md (28 rows)
+
+## Rows applied (35)
+
+hi-a
+- 3 P1 007: two time tests of Judgment 112-Hsien-Pan-4. 2 instances (FAQ answer + body).
+- 5 P2 pricing: added that sending an inquiry from this page is free. The next section still says the first conversation is not free.
+- 7 P2 team bio (son-jungmin): आदान-प्रदान → समन्वय (department coordination). The Korea–Taiwan line in chang-fangyu’s bio was left; that line is contacts between the two places, not 协作.
+- 9 P2 007: “आकलन की विधायी अवधि” → the legislative period given by the Constitutional Court. Did not repeat 112 / 4 in that sentence (those digits already occur above).
+- 10 P2 007: स्थिति-प्रभाव → the signed writing does not by itself complete a mutual-consent divorce.
+- 11 P2 007: dropped “1 स्तर”. Kept a parenthetical digit “(1)” — see note below.
+- 12 P2 008: both table cells विद्यमान → हाँ (Art. 11 and Art. 12).
+- 13 P2 008: highest-selling salesperson / top performer in central Taiwan (two sentences). Fact about the male employee, not a firm result claim.
+
+hi-b
+- 1 P1 011: PIF “निर्माण” where English is prepare/retain. 6 instances: title, H1, “तैयारी, अद्यतन और संग्रह”, third-party file preparation, “PIF पहली बार बनने के बाद”, link label “PIF तैयारी के दिशानिर्देश”. Left निर्माण विधि / निर्माण स्थान (manufacturing method and site).
+- 2 P1 011: उत्पाद के दस्तावेज़, not the sequence of materials. Verb agrees (सौंपे जा सकते हैं).
+- 3 P1 015: dropped मुख्यालय so relocation is not limited to a head-office move.
+- 5 P2 010: correlative और न. Both quoted sentences; मानता → सिद्ध नहीं करता.
+- 6 P2 010: जिम में चोट; documents that can be preserved.
+- 7 P2 010: whether punitive damages are actually awarded, and in what amount.
+- 8 P2 010: निर्णय की समीक्षा (image alt and the matching link text).
+- 9 P2 010: गैर-आर्थिक क्षति. 2 instances.
+- 10 P2 011: मुख्य वितरक.
+- 11 P2 011: supplemental documents requested, not amendment. FAQ + repeated body sentence, and the later “प्रस्तुत दस्तावेज़” sentence.
+- 12 P2 012: संकेत की प्रतीक्षा.
+- 13 P2 012: the attempt to overtake, not merely wanting to.
+- 14 P2 013: company registration may not be possible.
+- 15 P2 013: जो/तो clause rebuilt as one conditional.
+- 16 P2 014: “not attributable to the worker”. 5 instances (FAQ question, FAQ answer, §7 heading, §7 body, closed-list sentence).
+- 17 P2 014: 2 शर्तों का एक साथ पूरा होना. 2 instances. Kept the digit 2 (agreement fix; did not switch to दोनों).
+- 18 P2 014: the contract name is not decisive.
+- 19 P2 014: नियोक्ता की परिचालन आवश्यकता का दावा.
+- 20 P2 014: the evidence must connect subject, skills, duration, completion, and actual expenditure.
+- 21 P2 spelling दांपत्य → दाम्पत्य. 3 in 016 (opening, cross-border, close) and the same misspelling swept in 007 (6).
+- 22 P2 016: guardianship, not estate preservation. Quoted pair plus the same misuse in the foreign-judgment sentence, the checklist item, and “when guardianship ends”. Estate-preservation uses of संरक्षण were left.
+- 23 P2 016: अतिव्याप्त.
+- 24 P2 016: माता-पिता के अधिकार और कर्तव्य (親權), without a second अधिकार.
+- 25 P2 017: प्रतिभूति हित. 2 instances (FAQ + body).
+- 26 P2 017: अंतर्नियम (章程).
+- 27 P2 017: 連江、馬祖. 2 instances. The Japanese interpunct only; the surrounding name was already Hindi.
+- 28 P2 018: “अभी तय नहीं”, not लंबित.
+
+## Rows skipped (6)
+
+- hi-a 1 P1 003 sentencing. Not applied. RULEBOOK R3 and ACCEPTED-ROUND forbid turning the softened “some judgments / not a guaranteed outcome” line back into “courts generally impose about 3 / 4 / 6 months”. Digits 3, 4, and 6 stay.
+- hi-a 2 P1 004 article number. Not applied. The reviewer is right that the URL flno=3 is Article 3 of 各類所得扣繳率標準, and the statute name is already that standard. The Korean source label is still 영업세법 제10조. The checker strips URLs and counts 제10조 as 10, so replacing the visible 10 with 3 fails as a missing 10. ACCEPTED-ROUND: do not change numbers when the checker cannot accept the new form.
+- hi-a 4 P2 copyright gloss 著作權. Applied, then reverted. guidance-disclosure-parity.test.ts requires the same CJK gloss set as Vietnamese on each guidance page. 著作權 is not in that pivot set (German has no 著作權 either). A Hindi-only gloss fails the test. This lane cannot edit the other locales. Sister locales outside that test (ne, bn, ur, ta, my) already gloss it.
+- hi-a 6 P2 and hi-b 4 P2 lakh/crore grouping (15,70,000 and the listed TWD/USD amounts, including the team-bio TWD 1,570,000). Not applied. ACCEPTED-ROUND skips lakh grouping because the checker cannot parse it. Hindi number style in the checker is Western comma grouping. TWD 1.57M was not in these rows and stays byte-identical.
+- hi-a 8 P2 003 “अधिकतम क्षतिपूर्ति”. Not applied. R3 already replaced “pursue the maximum compensation” with compensation the facts and evidence support. Restoring अधिकतम is a result claim.
+
+No P3 rows in either review.
+
+## Systemic patterns
+
+- Amounts at or above one lakh, Western grouping: 0 changed (skip above).
+- Sentencing written as an uncommon result (“यह कोई निश्चित या सामान्य परिणाम नहीं है”): 0 changed (R3).
+- Withholding link still saying अनुच्छेद 10: 0 changed (checker).
+- Constitutional time tests collapsed: 2 instances rewritten.
+- PIF preparation written with निर्माण (manufacture): 6 instances. Manufacturing method/site left.
+- Correlative नहीं … न without और: 4 instances (the two quoted in 010, plus “और न यह कि” in 010 and “और न अन्य” in 007). “न केवल” after a semicolon in 004 was left; that is “not only”, not the correlative.
+- Reason “that cannot be imposed” on the worker: 5 instances, all in 014.
+- Misspelling दांपत्य: 9 instances (016 and 007).
+- संरक्षण where English is guardianship: 5 instances in 016. Preservation of the estate and of documents was not renamed.
+
+R2–R10 were already in this Hindi pack from earlier rounds (consultation lock, feminine forms for Wei Tseng, Traditional Chinese glosses, formal आप). This pass did not reopen them except where an r4 row was the same pattern. R1/R11 were not redone.
+
+## Note on hi-a row 11
+
+Korean “아래 1차 자료” still contributes a digit 1 (1차 is not in the R11 lexical-exception list). Deleting the digit fails the checker (missing 1). “1 स्तर” is gone. The sentence now says the official primary sources were checked on 25 July 2026, with a parenthetical “(1)” so the digit remains. That parenthesis is the checker’s digit, not a quality tier.
+
+## §Verify
+
+```
+neighbour      PASS   
+hanzi          PASS   han=74
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+TSC_OK
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+      16
+```
+
+Commands were the work-order block (checker tail -8, marker count, tsc, vitest grep, git status --short | wc -l). This log file was written after that snapshot, so it is not inside the 16.
+
+## Reviewer got wrong (not applied)
+
+- hi-a 1 and hi-a 8. The English column still says courts generally impose about 3 months (and about 4 / 6 months) and that the attorney should pursue the maximum compensation available. Those sentences were softened on purpose by R3. Putting “सामान्यतः” and “अधिकतम” back would make them read as a usual sentence and a compensation target. The softened Hindi is the form this campaign requires.
+- The article-number, copyright-gloss, and lakh-grouping rows are not listed here. The reviewer is right about the URL (Article 3), about 著作權 beside 商標/專利, and about Indian grouping. They were skipped for the checker and the gloss-parity test, as above.

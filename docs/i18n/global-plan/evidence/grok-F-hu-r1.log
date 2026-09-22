@@ -1,0 +1,93 @@
+WO-F-hu r1 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-hu-r1
+date: 2026-09-22
+
+## Rows
+
+Numbered findings: hu-a 38, hu-b 56 (94).
+
+Applied: 91.
+Skipped: 3 numbered rows, plus the verdict's Hangul `url` fields (not a numbered row).
+
+### Applied
+hu-a 1–15, 17–28, 30–38 and hu-b 1–55.
+
+Guidance pack (Hungarian strings only): review label and Wei Tseng titles (`ügyvédnő`, `vezető ügyvédnő`); `háztartási nyilvántartás (戶籍)`; `háromszárnyú udvarház`; `polgári jogviták` (intro, services heading, FAQ, lawyers answer); `Kaohsziung` / `kaohsziungi` / office name; `National Taiwan University-n`; `alapítása óta`; `az ügy konkrét tényeitől`; FAQ `Az elküldött megkeresés már tanácsadásnak számít?`; `bankszámlaadatokat` (contact, privacy, inquiry placeholder, llms confidential notice); lawyers description and partner title without `(könyvelőiroda)`; `Koreai működési vezető`; `Jogi asszisztens` / `Vezető jogi asszisztens`; exchange-student line; Legal Aid and Ministry of Education lines with the English name kept in parentheses; `Naver Map-en`. Nav labels were not lengthened. `1,57 millió TWD` was left. The pinned FAQ `Lehetséges magyar nyelvű tanácsadás?` was left. No test expectation needed a change.
+
+Deviations inside applied rows (meaning kept, form adjusted):
+- hu-a 5. Not „only once“. Checker form, because Korean has `1회` and `1년`: `1 szüneteltetési időszak nem haladhatja meg az 1 évet` (FAQ and §5).
+- hu-a 6. Foreign-national count, with the digit the checker counts: `ha 1-nél több külföldi állampolgárt foglalkoztatnak`.
+- hu-a 13. The `Nehézség` row was not deleted (that would change the table). Cells rephrased: `A feltételek jellege | Körülhatárolt törvényi esetek | Szigorú törvényi esetek | Körülhatárolt törvényi esetek`.
+- hu-b 8. `Elvben legalább 2 részvényes kell` and `egyedüli részvényesű társaság` in the részvénytársaság paragraph only. The digit 2 stays. The korlátolt felelősségű társaság paragraph still says `tag`.
+- hu-b 15. Heading `Szankciós kártérítés`. The multiplier stays `legfeljebb a tényleges kár 1-szereséig` because Korean `1배` is a counted digit. Bare `összegéig` failed `numbers`.
+- hu-b 30 and 41, and the 013/015 verdict. Blocks were not merged. Each existing block is a complete sentence. 018's three `Kérést` fragments were one paragraph and were rewritten inside it.
+- hu-b 50. `külön, szűk szabályok`, and `1 saját tulajdonú kisteherautó` kept so the digit stays.
+- hu-b 51. Only the list-subject sentence (line 91) is impersonal (`be kell szerezni`), with `változásához` so the sentence parses. Line 63 still has `megszereznie`: the foreign person is the subject.
+- hu-b 53. `képviselet` for the representative-office cell. Article 386 was not added; it was not in the Hungarian sentence.
+
+### Skipped
+- hu-a 16 and hu-b 56. Space thousands separators and currency-after (`500 000 TWD`). ACCEPTED-ROUND skips space thousands. The checker’s Hungarian thousands style is the dot (`500.000`). Figures were not reordered.
+- hu-a 29. Dropping the glued `1` (`utolsó év`, `egy év`, `Minden betöltött szolgálati év`) failed `numbers` (Korean `최근 1년`, `1년`). Restored `a Tajvanon eltöltött utolsó 1 év` (×2). The 008 FAQ keeps the digit as `Minden betöltött 1 szolgálati év`. `1 évenként 1 havi` and `0,5` were left; they are real quantities.
+- Verdict, 008 and 009 `url` Hangul slugs, including the fullwidth colon inside the url. Not rewritten.
+
+## Systemic patterns
+
+- Feminine Wei Tseng (hu-a 1, R4). `ügyvédnő` on the bylines of 001, 002, 004, 007, 011, 014, 016, 017; 003 close; 008 author line; 010 `ügyvédnőjeként`; guidance review label, team titles, bios and the lawyers answer (18 sites). Generic `egy ügyvéd` stays unmarked. B úr (008) and Lin úr stay male. Other attorneys stay `Ügyvéd`.
+- `戶籍` is not `anyakönyv` (hu-a 2). Guidance gloss `háztartási nyilvántartás (戶籍)`. 007 sweep: hatóság, törvény, hivatal, főosztály, bejegyzés, állapot (37 `háztartás` sites in the columns, almost all 007). Article is `a háztartás`, not `az háztartás`. 016/017 household-registration glosses included.
+- `營利事業所得稅` → `vállalkozási nyereségadó` (hu-a 28). 10 sites in 001, 002 and 004, including the link label. `nem nyereségszerző telephely` left; that is not the tax name. Entity class `jövedelemszerző vállalkozások` where the row asked for it.
+- `條例` → törvény (hu-a 30). `ipari innovációról szóló törvény` ×5 in 004. `munkavállalói nyugdíjról szóló törvény` in 008. `辦法` left as rendelet.
+- Best interests (hu-a 36, hu-b 48). `a gyermek mindenek felett álló érdeke` and its case forms: 13 sites in 007 and 016.
+- Visitation `會面交往` (hu-a 9). `kapcsolattartás` / `kapcsolattartást`: 15 sites in 007, including the §9 heading. Guidance already said `kapcsolattartás`.
+- Head office vs parent (hu-b 4). 018 liability FAQ, answer and heading: `anyavállalat` (9). Other 018 head-office uses: `központ` (16), with `központtól` not `központtől`. 011 `központjának (本公司)` and `a központ felelőssége`. 015 `székhelyáthelyezés` left. 004’s running `székhely (本公司)` was not swept; see below.
+- Distributor vs agent (hu-b 9 and 18–19). 011 FAQ/body importőr-forgalmazó clause, `forgalmazó (銷售代理商)`, `ügynök, főforgalmazó vagy forgalmazó`. 018 FAQ and heading `Először forgalmazóval`. The 018 title `ügynök` left; the English title includes agent.
+- `szakmai-műszaki` (hu-b 35 and the 014 verdict). 20 sites, including the course name.
+- Kaohsiung exonym (hu-a 24). `Kaohsziung` / `Kaohsziungban` / `kaohsziungi` in the guidance pack and the office name. Pingtung left.
+- Hyphen before a Hungarian suffix (hu-a 23). `Naver Map-en`, `Kobe University-n`, `Waseda University-n`, `National Taiwan University-n`.
+- Blog register (hu-a 33). 003 close and the pointed sentence; 008 opening, table lead-in, case lead-in, and missing periods; 009 closing, with the outcome still negative. 006 was not rewritten: the verdict says those sentences are already native. 005’s contact close already names the four consultation languages.
+- R9 emergency line in 003: Tajvanon 119 (mentő és tűzoltóság), 110 (rendőrség), mobilról 112. Digits kept.
+- R13. 007: `a Kínai Köztársaság (Tajvan) 112. évének 4. számú alkotmánybírósági ítéletében (民國112年憲判字第4號)`, and the two source-link labels. No new Gregorian year. 010 keeps the existing `(2020)` and adds `民國` in the gloss.
+- R2. 001/004 already frame Korea as an example. 008/009 already say `például Koreától`. 006’s Korea massage story and 010’s Korean student stay case facts.
+- R8. 008 `szerencséje` → the other workers could not prove the statutory entitlement the same way. `[név]` for `OOO`.
+
+## Checker and digits
+
+`utolsó év`, `az egy évet` (with `1 alkalommal` removed and no replacement digit), `egynél több`, `Minden betöltött szolgálati év`, and `a tényleges kár összegéig` each failed `numbers` (missing `1`). The forms in the applied/skipped notes above are what the checker accepts. No number or date was reformatted to a space-grouped thousands style.
+
+## Reviewer points not followed
+
+- hu-a 16 and hu-b 56. A space as the thousands separator is not what this checker accepts for `hu`, and ACCEPTED-ROUND already skips it. Currency-after was the same row, so the `TWD 500.000` order was left with the digits.
+- hu-a 13. Deleting the difficulty row would change the table. The English source has the row. The cells were rephrased.
+- hu-b verdict: „Ügyvéd Wei Tseng“ is the bar title for a woman too. hu-a P1 and R4 ask for the feminine form where Hungarian marks it. Applied `ügyvédnő` for Wei Tseng only.
+- hu-b 30 and 41, and the 013/015 clause-per-line pattern. Merging paragraphs would change the block count. Each block was made a sentence on its own.
+- Hangul `url` on 008 and 009. The verdict says not to rewrite them.
+- 004 `külföldi székhely (本公司)` is the same head-office sense as 011, but the finding scoped the sweep to 011 and 018, and 004 uses `székhely` as the defined label through the comparison. It was not rewritten.
+- hu-b 53’s longer cell that adds the Company Act article 386. That article number was not in the Hungarian sentence. Only `támaszpont` → `képviselet` was applied.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-hu --lang hu 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=44
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-hu src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      27
+```
+
+The 27 includes the pre-existing `docs/i18n/global-plan/WO-F-hu.txt` modification, the untracked review files `hu-a.md` and `hu-b.md`, this log, and the Hungarian content edits. No commit.

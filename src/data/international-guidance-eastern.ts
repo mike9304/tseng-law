@@ -563,11 +563,11 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
     servicesAssistanceAfter: ' oldal elmagyarázza, hogyan készítsen olyan összefoglalót, amelyet egy ügyvéd megvizsgál.',
     columnsViewAllLabel: 'Az összes cikk megtekintése',
     columnsReadMoreLabel: 'Tovább olvasom',
-    columnsReviewLabel: 'Ellenőrizte Wei Tseng ügyvéd',
+    columnsReviewLabel: 'Ellenőrizte Wei Tseng ügyvédnő',
     columnsOriginalLanguageBadge: 'Eredeti nyelv',
     columnsOriginalLanguageNote:
       'A következő cikkek magyarul még nem érhetők el. A lista az eredeti nyelven marad, és a megfelelő nyelvi oldalt nyitja meg; a tartalom automatikusan nem kerül fordításra.',
-    imageBandAlt: 'Hagyományos tajvani sanheyuan udvarház (三合院) és egy modern pavilon nappali fényben',
+    imageBandAlt: 'Hagyományos tajvani háromszárnyú udvarház (三合院) és egy modern pavilon nappali fényben',
     videoPauseLabel: 'Videó szüneteltetése',
     videoPlayLabel: 'Videó lejátszása',
     videoReplayLabel: 'Videó újrajátszása',
@@ -579,12 +579,12 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
       description:
         'Általános magyar nyelvű ismertetés a Hovering International Law Firm tajvani munkájának köréről, a tanácsadás nyelveiről és az első kapcsolatfelvételről.',
       intro:
-        'A Hovering International Law Firm külföldi ügyfeleket képvisel és támogat — köztük tajvani kötődésűeket — tajvani jogi ügyekben: befektetés és cégalapítás, polgári jogi jogviták, házasság, család és öröklés, munkajog, büntetőügyek és szellemi tulajdon. Ez a magyar rész abban segít, hogy felismerje, milyen munka tartozik a körünkbe, mit készítsen elő, és hogyan érhet el minket. Általános tájékoztatás, nem az Ön ügyére szabott jogi tanácsadás.',
+        'A Hovering International Law Firm külföldi ügyfeleket képvisel és támogat — köztük tajvani kötődésűeket — tajvani jogi ügyekben: befektetés és cégalapítás, polgári jogviták, házasság, család és öröklés, munkajog, büntetőügyek és szellemi tulajdon. Ez a magyar rész abban segít, hogy felismerje, milyen munka tartozik a körünkbe, mit készítsen elő, és hogyan érhet el minket. Általános tájékoztatás, nem az Ön ügyére szabott jogi tanácsadás.',
       sections: [
         {
           heading: 'Mivel foglalkozunk',
           paragraphs: [
-            'A Hovering International Law Firm Tajvanon bejegyzett ügyvédi iroda. Tajvani jog szerint dolgozik, irodái Tajpejben (臺北), Kaohsiungban (高雄), Tajcsungban (臺中) és Pingtungban (屏東) működnek. Vállalatoknak adunk tanácsot, peres eljárásokban járunk el, és külföldi ügyfeleket támogatunk a Tajvanon szükséges lépésekben.',
+            'A Hovering International Law Firm Tajvanon bejegyzett ügyvédi iroda. Tajvani jog szerint dolgozik, irodái Tajpejben (臺北), Kaohsziungban (高雄), Tajcsungban (臺中) és Pingtungban (屏東) működnek. Vállalatoknak adunk tanácsot, peres eljárásokban járunk el, és külföldi ügyfeleket támogatunk a Tajvanon szükséges lépésekben.',
             'Az itteni tartalom mind általános. Egy ügy kimenetele a tényektől, az alkalmazandó szabályoktól és az időponttól függ. Ez a tájékoztatás nem pótolja az ügyvéddel folytatott, az Ön iratain alapuló megbeszélést.',
           ],
         },
@@ -602,7 +602,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
           ],
           items: [
             'Befektetés és cégalapítás Tajvanon',
-            'Polgári jogi jogviták és kártérítés',
+            'Polgári jogviták és kártérítés',
             'Házasság, család és öröklés',
             'Munkaügyi jogviták',
             'Büntetőügyek',
@@ -634,7 +634,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'Polgári jogi jogviták és kártérítés',
+          heading: 'Polgári jogviták és kártérítés',
           paragraphs: [
             'Ez a csoport szerződéses jogvitákat, jogellenes károkozásból eredő kártérítést és fogyasztói jogvitákat foglal magában. A munka rendszerint az események időrendjével, az iratok és a meglévő bizonyítékok áttekintésével kezdődik, és csak ezután következnek a további lépések.',
             'A menetet a határidők — köztük az elévülés — és a bizonyítékok teljessége szabják meg. Ezért az ismert dátumokat minél előbb adja meg. Őrizze meg a szerződéseket, üzeneteket, fizetési bizonylatokat vagy a helyszínről készült fényképeket, és említse meg őket az első üzenetben.',
@@ -643,7 +643,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Házasság, család és öröklés',
           paragraphs: [
-            'Válást (離婚), vagyonmegosztást, a szülői felügyeletet (未成年子女權利義務之行使或負擔), a kapcsolattartást (會面交往) és az öröklést (繼承) érintő ügyekben járunk el, akkor is, ha a felek vagy a vagyon különböző államokban vannak. A határon átnyúló családi ügyek gyakran igénylik az anyakönyvi nyilvántartás (戶籍), az okiratok alakjának és tajvani bizonyító erejének további vizsgálatát.',
+            'Válást (離婚), vagyonmegosztást, a szülői felügyeletet (未成年子女權利義務之行使或負擔), a kapcsolattartást (會面交往) és az öröklést (繼承) érintő ügyekben járunk el, akkor is, ha a felek vagy a vagyon különböző államokban vannak. A határon átnyúló családi ügyek gyakran igénylik a háztartási nyilvántartás (戶籍), az okiratok alakjának és tajvani bizonyító erejének további vizsgálatát.',
             'Mivel a családi ügyekhez gyakran határidők és párhuzamos eljárások társulnak, az első összefoglalónak meg kell jelölnie a felek viszonyát, a jelenlegi lakóhelyet és a már folyamatban lévő eljárásokat.',
           ],
         },
@@ -688,15 +688,15 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Alapítás és felépítés',
           paragraphs: [
-            'A Hovering International Law Firmet (昊鼎國際法律事務所) 2016-ban alapították a National Taiwan University (國立臺灣大學) egyetemen végzett ügyvédek. A kínai név, a 昊鼎, a 昊 („tágas ég”) írásjegyet köti össze a 鼎 („szilárd alap”) írásjeggyel, és az iroda alapítás óta követett irányát fejezi ki.',
-            'Irodáink Tajpejben (臺北), Kaohsiungban (高雄), Tajcsungban (臺中) és Pingtungban (屏東) működnek. A kaohsiungi iroda a vállalatvezetésre összpontosít, és polgári, büntető- és közigazgatási jogvitákban jár el. A tajcsungi iroda építési ügyekkel, szellemi tulajdonnal, valamint koreai és japán kötődésű ügyekkel foglalkozik. A pingtungi irodát 2017-ben nyitottuk a helyi igények miatt.',
+            'A Hovering International Law Firmet (昊鼎國際法律事務所) 2016-ban alapították a National Taiwan University-n (國立臺灣大學) végzett ügyvédek. A kínai név, a 昊鼎, a 昊 („tágas ég”) írásjegyet köti össze a 鼎 („szilárd alap”) írásjeggyel, és az iroda alapítása óta követett irányát fejezi ki.',
+            'Irodáink Tajpejben (臺北), Kaohsziungban (高雄), Tajcsungban (臺中) és Pingtungban (屏東) működnek. A kaohsziungi iroda a vállalatvezetésre összpontosít, és polgári, büntető- és közigazgatási jogvitákban jár el. A tajcsungi iroda építési ügyekkel, szellemi tulajdonnal, valamint koreai és japán kötődésű ügyekkel foglalkozik. A pingtungi irodát 2017-ben nyitottuk a helyi igények miatt.',
             'Az ügyvédi munka mellett 2020 óta működik a Hovering Accounting Office is, amely könyvvitelt és adótervezést kínál vállalkozóknak és vagyonnal rendelkező magánszemélyeknek.',
           ],
         },
         {
           heading: 'Munka külföldi felekkel',
           paragraphs: [
-            'A határon átnyúló munka cégalapítást, vízumokat, védjegy- és szabadalmi bejelentéseket, jogi kockázatvizsgálatot és vállalati adótanácsadást foglal magában. A tajcsungi iroda különösen építési ügyekkel, szellemi tulajdonnal, valamint koreai és japán kötődésű ügyekkel foglalkozik. Wei Tseng ügyvéd (曾雋崴) koreai, japán és további nemzetközi ügyfeleket képvisel a megjelölt csoportokban.',
+            'A határon átnyúló munka cégalapítást, vízumokat, védjegy- és szabadalmi bejelentéseket, jogi kockázatvizsgálatot és vállalati adótanácsadást foglal magában. A tajcsungi iroda különösen építési ügyekkel, szellemi tulajdonnal, valamint koreai és japán kötődésű ügyekkel foglalkozik. Wei Tseng ügyvédnő (曾雋崴) koreai, japán és további nemzetközi ügyfeleket képvisel a megjelölt csoportokban.',
             'Hogy elvállalhatunk-e egy ügyet, a tartalomtól és a kommunikáció nyelvétől függ. Ha ügye a megjelölt csoportokba tartozik, és a négy tanácsadási nyelv valamelyikén megtárgyalható, összefoglalót küldhet vizsgálatra.',
           ],
         },
@@ -712,7 +712,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
     lawyers: {
       eyebrow: 'ÜGYVÉDEK',
       title: 'A Hovering nemzetközi csapata',
-      description: 'A Hovering ügyvédeinek, működési vezetésének és a társult könyvelőiroda bemutatása.',
+      description: 'A Hovering ügyvédeinek, működési vezetésének és a társult könyvvizsgáló bemutatása.',
       intro: '',
       sections: [],
     },
@@ -784,7 +784,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Mit tartalmazzon az első üzenet',
           paragraphs: [
             'Adja meg, mi történt, milyen segítségre van szüksége, milyen kötődése van az ügynek Tajvanhoz, és a határidőt, ha ismer ilyet. Ha már kapott bírósági vagy hatósági iratot, adja meg az iraton szereplő dátumot.',
-            'A kezdeti szakaszban még nem kell útlevélszámot, okmányszámot, számlaadatokat, egészségügyi dokumentációt vagy a bizonyítékok összességét elküldenie. Várja meg az ügyvéd útmutatását, és az érzékeny iratokat csak azután, biztonságos úton küldje el.',
+            'A kezdeti szakaszban még nem kell útlevélszámot, okmányszámot, bankszámlaadatokat, egészségügyi dokumentációt vagy a bizonyítékok összességét elküldenie. Várja meg az ügyvéd útmutatását, és az érzékeny iratokat csak azután, biztonságos úton küldje el.',
           ],
         },
         {
@@ -807,7 +807,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Hogyan használja ezt a részt',
           paragraphs: [
-            'Ha nem talál választ a saját helyzetére, a válasz rendszerint különös tényektől függ. Ezeket írja bele az összefoglalóba ahelyett, hogy ebből az oldalból következtetne rájuk.',
+            'Ha nem talál választ a saját helyzetére, a válasz rendszerint az ügy konkrét tényeitől függ. Ezeket írja bele az összefoglalóba ahelyett, hogy ebből az oldalból következtetne rájuk.',
           ],
         },
       ],
@@ -815,7 +815,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Milyen ügyekben jár el az iroda?',
           answer:
-            'Hat ügycsoportban járunk el: befektetés és cégalapítás Tajvanon, polgári jogi jogviták és kártérítés, házasság, család és öröklés, munkaügyi jogviták, büntetőügyek és szellemi tulajdon. Hogy egy ügyet elvállalunk-e, a tartalom vizsgálata után dől el.',
+            'Hat ügycsoportban járunk el: befektetés és cégalapítás Tajvanon, polgári jogviták és kártérítés, házasság, család és öröklés, munkaügyi jogviták, büntetőügyek és szellemi tulajdon. Hogy egy ügyet elvállalunk-e, a tartalom vizsgálata után dől el.',
         },
         {
           question: 'Mit készítsek elő a kapcsolatfelvétel előtt?',
@@ -838,7 +838,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
             'Az eredeti szöveget úgy őrizzük meg, ahogyan megírta, és nem fordítjuk le automatikusan. Ha szükséges, a további kommunikáció nyelvét megerősítjük Önnel.',
         },
         {
-          question: 'Megtörtént-e már a tanácsadás azzal, hogy a megkeresés elment?',
+          question: 'Az elküldött megkeresés már tanácsadásnak számít?',
           answer:
             'Nem. Az elküldött megkeresés ügyvédi vizsgálatra vár. Nem jogi állásfoglalás, nem megerősített időpont, és az elküldés önmagában nem hoz létre ügyvéd–ügyfél viszonyt.',
         },
@@ -882,7 +882,7 @@ export const hungarianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Az eredeti szöveg változatlanul marad',
           paragraphs: [
             'A szövegét pontosan úgy őrizzük meg, ahogyan megírta, és nem fordítjuk le automatikusan. Ha az ügyintézéshez fordítás szükséges, azt külön megbeszéljük Önnel.',
-            'Mivel az eredeti szöveget megőrizzük, a kezdeti szakaszban ne írja le azt, ami még nem szükséges, például az útlevélszámot, az okmányszámot vagy a számlaadatokat.',
+            'Mivel az eredeti szöveget megőrizzük, a kezdeti szakaszban ne írja le azt, ami még nem szükséges, például az útlevélszámot, az okmányszámot vagy a bankszámlaadatokat.',
           ],
         },
         {

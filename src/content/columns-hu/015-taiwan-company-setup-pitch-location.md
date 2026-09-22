@@ -19,11 +19,11 @@ featured_image: "../images/015-taiwan-company-setup-pitch-location/featured-01.j
 
 Amikor vendéglátó tevékenységet kezd, az első probléma a telephely címének (營業地址) megtalálása.
 
-A piaci helyzet mellett
+A piaci helyzet mellett a telephely övezeti alkalmasságát is ellenőrizni kell.
 
-egy másik fontos pont az,
+Külön meg kell vizsgálni a cím övezeti besorolását.
 
-hogy ez a cím olyan övezetben van-e, ahol „éttermi tevékenység” folytatása lehetséges.
+Azt kell megnézni, hogy a cím olyan övezetben van-e, ahol éttermi tevékenység folytatható.
 
 ​
 
@@ -59,9 +59,9 @@ A társaság bejegyzésekor azonban gyakran több ágazatot jegyeznek be egyszer
 
 Ezért a gyakorlatban nem szükséges a társaság bejegyzésekor minden ágazatot lekérdezni.
 
-A „[Tajpej város telephely-tájékoztatási szolgálatának működési utasítása](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)”(臺北市營業場所協助查詢服務作業須知) és Tajpej város hatályos útmutatója szerint,
+A „[Tajpej város telephely-tájékoztatási szolgálatának működési utasítása](https://www.laws.taipei.gov.tw/Law/LawSearch/LawArticleContent/FL080687)” (臺北市營業場所協助查詢服務作業須知) és Tajpej város hatályos útmutatója a bejegyzési kérelemre vonatkozik.
 
-Társaság vagy kereskedelem (ideértve a fióktelepet (分公司) és a kiegészítő intézményt (分支機構)) alapításának, székhelyáthelyezésének vagy tevékenységi ág hozzáadásának bejegyzési kérelméhez 2023. január 1-jétől — ágazattól függetlenül — **csatolni kell** a telephely előzetes lekérdezésének eredményét.
+Társaság vagy kereskedelmi vállalkozás (ideértve a fióktelepet (分公司) és az alárendelt telephelyet (分支機構)) alapításának, székhelyáthelyezésének vagy tevékenységi ág hozzáadásának bejegyzési kérelméhez 2023. január 1-jétől — ágazattól függetlenül — **csatolni kell** a telephely előzetes lekérdezésének eredményét.
 
 Az alábbi „hivatalból vizsgált ágazatok” (主動查詢之營業項目) jegyzéke azokat az ágazatokat jelöli, amelyeket a Kereskedelmi Hivatal a bejegyzés vizsgálata során hivatalból további lekérdezéssel (隨案主動查詢) ellenőriz, ha az ágazat szerepel a kérelemben, de hiányzik a csatolt eredményből; az, hogy egy ágazat nincs ezen a jegyzéken, nem jelenti a lekérdezés alóli mentességet.
 

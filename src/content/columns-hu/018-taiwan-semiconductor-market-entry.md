@@ -9,9 +9,9 @@ featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg
 faq:
   - q: "Ha vannak tajvani ügyfelek, feltétlenül társaságot kell alapítani Tajvanon?"
     a: "Pusztán attól, hogy az ügyfél Tajvanon van, nem lehet egységesen dönteni. A tajvani ügyfél követelményeit, a tajvani értékesítés, létesítmények, személyzet és az ügyleti szerkezet tényleges tevékenységét meg kell erősíteni, majd az ezeknek megfelelő szervezeti formát kell választani."
-  - q: "Tajvani társaság alapításával a székhely felelőssége teljesen eltűnik?"
-    a: "Ha fióktelep helyett leányvállalatot alapítanak, a székhely elvben nem viseli a leányvállalat nevében kötött szerződés felelősségét és kötelezettségeit. Ellenőrizni kell azonban a jogi személyiséggel való visszaélés kivételeit, valamint azt, hogy a székhely külön kezességet vagy szerződéses kötelezettséget vállalt-e."
-  - q: "Először ügynökkel működhetnek, majd tajvani társaságra válthatnak?"
+  - q: "Tajvani társaság alapításával az anyavállalat felelőssége teljesen eltűnik?"
+    a: "Ha fióktelep helyett leányvállalatot alapítanak, az anyavállalat elvben nem viseli a leányvállalat nevében kötött szerződés felelősségét és kötelezettségeit. Ellenőrizni kell azonban a jogi személyiséggel való visszaélés kivételeit, valamint azt, hogy az anyavállalat külön kezességet vagy szerződéses kötelezettséget vállalt-e."
+  - q: "Először forgalmazóval működhetnek, majd tajvani társaságra válthatnak?"
     a: "Szakaszos átállás tervezhető. A meglévő szerződések megszűnését vagy módosítását, az ügyfélszerződéseket, a készletet, a jótállás kezelését és a személyzeti kérdéseket azonban együtt kell vizsgálni."
 ---
 
@@ -19,41 +19,41 @@ faq:
 
 ![A tajvani félvezető-vállalati belépési szerkezet vizsgálatát ábrázoló kép](../images/018-taiwan-semiconductor-market-entry/featured-01.jpg)
 
-Amikor tajvani ügyfelekkel az ügyletek megkezdődnek, a külföldi székhely többféle kérést kaphat. Kérést, hogy Tajvanon kezeljék az árajánlatot és a szerződést, kérést sürgősségi cserekészlet tartására, kérést telepítő és karbantartó személyzet elhelyezésére. Ekkor könnyű először azt kérdezni: „Elég tajvani társaságot alapítani a megoldáshoz?”
+Amikor a tajvani értékesítés megindul, a külföldi központtól kérhetik, hogy Tajvanon intézze az árajánlatot és a szerződést, tartson sürgősségi cserekészletet, és helyezzen el telepítő és karbantartó személyzetet. Ekkor könnyű először azt kérdezni: „Elég tajvani társaságot alapítani a megoldáshoz?”
 
-Először azt kell rendezni, ki mit visel Tajvanon. A vizsgálandó szerkezet aszerint változik, a külföldi székhely továbbra is köti-e az adásvételi szerződéseket, tajvani társaság vásárol-e és értékesít-e tovább, vagy a helyi személyzet csak műszaki támogatást nyújt.
+Először azt kell rendezni, ki mit visel Tajvanon. A vizsgálandó szerkezet aszerint változik, a külföldi központ továbbra is köti-e az adásvételi szerződéseket, tajvani társaság vásárol-e és értékesít-e tovább, vagy a helyi személyzet csak műszaki támogatást nyújt.
 
 Ez a cikk a félvezető-anyag, -alkatrész és -berendezés vállalatok tajvani belépési szerkezetének tervezéséhez adott általános útmutató. Az alábbi üzemeltetési helyzetek és ellenőrzési pontok ismertető hipotetikus példák és vizsgálati javaslatok, nem egyedi vállalat tényleges megbízása, sem egységes alapítási követelmény. Az adózás, az exportellenőrzés, az egyes termékengedélyek és a befektető besorolása külön vizsgálatot igényel.
 
 ## 1. A szervezeti forma rögzítése előtt először az ügyletet és az üzemeltetési megosztást kell rendezni
 
-Tegyük fel, hogy külföldi precíziós alkatrész-gyártó tajvani ügyfeleknek értékesít. Kezdetben a székhely közvetlenül szállított, de az ügyfél tajvani tartalékalkatrész-tárolást és helyszíni mérnöki támogatást is kér. Ekkor nem csak cím kell, hanem olyan vállalkozás, amely az értékesítést, az importot, a készletet, a foglalkoztatást, a műszaki támogatást és a felelősséget viselheti.
+Tegyük fel, hogy külföldi precíziós alkatrész-gyártó tajvani ügyfeleknek értékesít. Kezdetben a központ közvetlenül szállított, de az ügyfél tajvani tartalékalkatrész-tárolást és helyszíni mérnöki támogatást is kér. Ekkor nem csak cím kell, hanem olyan vállalkozás, amely az értékesítést, az importot, a készletet, a foglalkoztatást, a műszaki támogatást és a felelősséget viselheti.
 
-Mielőtt a székhely a tajvani belépési szerkezetet rögzítené, belsőleg először a következő kérdéseket kell rendezni.
+Mielőtt a központ a tajvani belépési szerkezetet rögzítené, belsőleg először a következő kérdéseket kell rendezni.
 
 | Üzemeltetési tétel | Először rendezendő kérdés |
 |---|---|
-| Ügyfélszerződés | A külföldi székhely, a tajvani leányvállalat vagy a helyi ügynök közül ki lesz a szerződéses fél? |
+| Ügyfélszerződés | A külföldi központ, a tajvani leányvállalat vagy a helyi ügynök közül ki lesz a szerződéses fél? |
 | Árajánlat és megrendelés | Ki erősíti meg véglegesen az árat és a határidőt, és meddig terjed a tajvani felelős hatásköre? |
 | Áru és készlet | Ki importál, ki tartja és kezeli a készletet, és ki intézi a visszárut és a cserét? |
-| Személyzet | A székhely munkavállalói látogatnak, Tajvanon vesznek fel, vagy külső vállalkozóra bízzák? |
+| Személyzet | A központ munkavállalói látogatnak, Tajvanon vesznek fel, vagy külső vállalkozóra bízzák? |
 | Telepítés és műszaki támogatás | Ki viseli az ügyfél iránti támogatási kötelezettséget, és ki kezeli a helyszíni munka közbeni problémákat? |
-| Ellenszolgáltatás és költségek | Ki számláz és szed be, és a székhely és a tajvani szervezet között a költségek hogyan számolódnak el? |
+| Ellenszolgáltatás és költségek | Ki számláz és szed be, és a központ és a tajvani szervezet között a költségeket hogyan számolják el? |
 | Minőség és vita | Ki erősíti meg az átvétel eredményét, és ki kapja a hibára vagy kártérítésre vonatkozó igényt? |
 
 Különösen ha az adásvételi szerződés szerinti eladó és a tényleges műszaki támogatást nyújtó társaság különbözik, az iratokban meg kell különböztetni, az ügyfél kitől milyen kötelezettség teljesítését követelheti.
 
 ## 2. A leányvállalat, a fióktelep és a külföldi társaság tajvani képviseleti irodájának különbsége és szerepe
 
-Félvezető-vállalat tajvani belépésének tervezésekor szét kell választani, „milyen támaszpontot helyeznek Tajvanra” és „hogyan rendezik az értékesítést és az ügyfélszolgálatot”. Az előbbi a jogi személyiségre, a bejegyzési követelményekre és a tevékenységi körre összpontosít, az utóbbi az ügyleti módra, a hatáskörre és a felelősség megosztására.
+Félvezető-vállalat tajvani belépésének tervezésekor szét kell választani, „milyen szervezeti formát helyeznek Tajvanra” és „hogyan rendezik az értékesítést és az ügyfélszolgálatot”. Az előbbi a jogi személyiségre, a bejegyzési követelményekre és a tevékenységi körre összpontosít, az utóbbi az ügyleti módra, a hatáskörre és a felelősség megosztására.
 
-A tajvani leányvállalat és a külföldi társaság tajvani fióktelepe közötti fő különbség az, hogy az anyavállalattól vagy a székhelytől elkülönülő jogi személyiséggel rendelkezik-e. A forgalmazás és az ügynökség ügyleti és szerződéses szerkezet, ezért nem szabad a társasági szervezeti formával keverni. Az egyes szerkezetek a következők szerint különböztethetők meg.
+A tajvani leányvállalat és a külföldi társaság tajvani fióktelepe közötti fő különbség az, hogy az anyavállalattól vagy a központtól elkülönülő jogi személyiséggel rendelkezik-e. A forgalmazás és az ügynökség ügyleti és szerződéses szerkezet, ezért nem szabad a társasági szervezeti formával keverni. Az egyes szerkezetek a következők szerint különböztethetők meg.
 
 | Szerkezet | Alapvető megkülönböztetés | Amit a félvezető-vállalatnak először meg kell erősítenie |
 |---|---|---|
 | Tajvani leányvállalat | A tajvani jog szerint alapítják, önálló jogi személyiséggel rendelkezik, és a külföldi anyavállalattól eltérő jogalany. | Mivel a leányvállalat önálló jogi személy, meg kell erősíteni, hogyan rögzítik a leányvállalat és az anyavállalat közötti termékellátást, szolgáltatásnyújtást, technológiai licencet és költségmegosztást. |
-| Külföldi társaság tajvani fióktelepe | A külföldi társaság Tajvanon a jogszabályok szerint bejegyzett fiókja, a székhelytől nincs külön jogi személyisége, és a külön alapított leányvállalattól is különbözik. | A fióktelep a külföldi székhely része, nem önálló jogi személy, ezért a külföldi székhely viseli közvetlenül a felelősséget és a kötelezettségeket. Meg kell erősíteni a fióktelep felelősének hatáskörét, valamint a külső szerződés, a szállítás, a jótállás és az értékesítés utáni szolgáltatás belső megosztását. |
-| Külföldi társaság tajvani képviseleti irodája | A külföldi társaság a társasági törvény 386. cikke szerint Tajvanon bejegyzett ügyintézési támaszpont, és Tajvanon nem végezhet üzleti tevékenységet. | Mivel a képviseleti iroda nem végezhet üzleti tevékenységet, meg kell erősíteni, hogy a tényleges tevékenység a megengedett körön belül van-e. |
+| Külföldi társaság tajvani fióktelepe | A külföldi társaság Tajvanon a jogszabályok szerint bejegyzett fiókja, a központtól nincs külön jogi személyisége, és a külön alapított leányvállalattól is különbözik. | A fióktelep a külföldi központ része, nem önálló jogi személy, ezért a külföldi központ viseli közvetlenül a felelősséget és a kötelezettségeket. Meg kell erősíteni a fióktelep felelősének hatáskörét, valamint a külső szerződés, a szállítás, a jótállás és az értékesítés utáni szolgáltatás belső megosztását. |
+| Külföldi társaság tajvani képviseleti irodája | A külföldi társaság a társasági törvény 386. cikke szerint Tajvanon bejegyzett képviselet, és Tajvanon nem végezhet üzleti tevékenységet. | Mivel a képviseleti iroda nem végezhet üzleti tevékenységet, meg kell erősíteni, hogy a tényleges tevékenység a megengedett körön belül van-e. |
 
 ## 3. Tajvani leányvállalati forma: a korlátolt felelősségű társaság és a részvénytársaság különbsége
 
@@ -65,7 +65,7 @@ A korlátolt felelősségű társaság 1 vagy több természetes személyből, v
 
 ### Részvénytársaság (股份有限公司): más befektetők bevonását vagy a tőzsdei bevezetést fontolgató vállalkozáshoz illik
 
-A részvénytársaság jellemzője, hogy a tőkét részvényekre osztják. Elvben 2 vagy több tag kell, de a kormány vagy jogi személy egyedül is alapíthat, és külföldi jogi személy 100 % részesedést is tarthat. A részvények elvben szabadon átruházhatók, de vannak törvényi kivételek, és a jogszabályok szerint elsőbbségi részvény, munkavállalói részvényopció is tervezhető. Ezért befektetőbevonást, részesedés-ügyletet, munkavállalói részvényjuttatást, későbbi felvásárlást vagy tőzsdei bevezetést fontolgató vállalkozáshoz illik, és nem csak nagyvállalatokra vonatkozik. A kormányzás oldalán a nem nyilvánosan kibocsátó társaság alapszabállyal mellőzheti az igazgatóságot, és csak 1 vagy 2 igazgatót tarthat. A kormány vagy jogi személy egyedüli tagú társaság alapszabállyal mellőzheti a felügyelőt (監察人) is. Emellett nem minden részvénytársaságnak kell éves pénzügyi kimutatását könyvvizsgálattal hitelesíttetnie. A közönséges társaság fő könyvvizsgálati küszöbe a befizetett tőke TWD 30.000.000, vagy ennél kevesebb esetén az üzleti bevétel TWD 100.000.000 vagy a munkaügyi biztosításban részt vevő 100 munkavállaló; a nyilvános kibocsátású társaság az értékpapír-jogszabályokat követi.
+A részvénytársaság jellemzője, hogy a tőkét részvényekre osztják. Elvben legalább 2 részvényes kell, de a kormány vagy jogi személy egyedül is alapíthat, és külföldi jogi személy 100 % részesedést is tarthat. A részvények elvben szabadon átruházhatók, de vannak törvényi kivételek, és a jogszabályok szerint elsőbbségi részvény, munkavállalói részvényopció is tervezhető. Ezért befektetőbevonást, részesedés-ügyletet, munkavállalói részvényjuttatást, későbbi egyesülést, felvásárlást, tőzsdei bevezetést vagy feltörekvő piaci nyilvántartásba vételt fontolgató vállalkozáshoz illik, és nem csak nagyvállalatokra vonatkozik. A kormányzás oldalán a nem nyilvánosan kibocsátó társaság alapszabállyal mellőzheti az igazgatóságot, és csak 1 vagy 2 igazgatót tarthat. A kormány vagy jogi személy egyedüli részvényesű társaság alapszabállyal mellőzheti a felügyelőt (監察人) is. Emellett nem minden részvénytársaságnak kell éves pénzügyi kimutatását könyvvizsgálattal hitelesíttetnie. A közönséges társaság fő könyvvizsgálati küszöbe a befizetett tőke TWD 30.000.000, vagy ennél kevesebb esetén az üzleti bevétel TWD 100.000.000 vagy a munkaügyi biztosításban részt vevő 100 munkavállaló; a nyilvános kibocsátású társaság az értékpapír-jogszabályokat követi.
 
 ## 4. A fióktelep és a leányvállalat alapítási eljárása különbözik, és csak a leányvállalat-alapítás megy át a Gazdasági Minisztérium beruházásvizsgálatán
 
@@ -77,7 +77,7 @@ A fentiek szerződés-tervezési javaslat. Attól, hogy egy meghatározott szerz
 
 ## 5. A társasági bejegyzés és a mérnök jogszerű munkavégzése külön dolog
 
-Attól, hogy Tajvanon a társasági bejegyzés befejeződött, a külföldi székhely munkavállalója nem dolgozhat automatikusan Tajvanon. Külföldi személy tajvani munkájához jogszerű munkavállalási engedély kell, hosszan tartó tartózkodáshoz tartózkodási igazolványt is kell kérni. Alapvetően a munkáltató kéri a külföldi munkavállaló számára a munkavállalási engedélyt és a hozzá tartozó tartózkodási igazolványt.
+Attól, hogy Tajvanon a társasági bejegyzés befejeződött, a külföldi központ munkavállalója nem dolgozhat automatikusan Tajvanon. Külföldi személy tajvani munkájához jogszerű munkavállalási engedély kell, hosszan tartó tartózkodáshoz tartózkodási igazolványt is kell kérni. Alapvetően a munkáltató kéri a külföldi munkavállaló számára a munkavállalási engedélyt és a hozzá tartozó tartózkodási igazolványt.
 
 Külföldi társaság tajvani leányvállalatának és fióktelepének vezetőjénél a munkavállalási engedély kérelme viszonylag könnyebb. További külföldi személytől a munkavállalási engedély kéréséhez azonban az ágazat szerint a Munkaügyi Minisztérium tőke-, árbevétel- vagy más küszöböt követel. Ezért ha külföldi munkavállalókat Tajvanon kívánnak foglalkoztatni, a tajvani társaságalapítás előtt előre meg kell erősíteni, hogy a tőkebeállítás eléri-e az adott küszöböt.
 
@@ -87,13 +87,13 @@ Az alábbiak a gondolkodást segítő hipotetikus vizsgálati helyzetek, és nem
 
 **A kezdeti kivitelre összpontosító vállalkozás.** Ha még nincs tajvani munkavállaló vagy készlet, és független forgalmazón keresztül kívánják a piaci keresletet megerősíteni, először az ellátást, a forgalmazási viszonyt és a tajvani tevékenységi kört lehet vizsgálni. A forgalmazási szerződés önmagában azonban nem oldja meg a tajvani szabályozás minden kérdését.
 
-**A tajvani értékesítést és műszaki támogatást fokozatosan bővítő vállalkozás.** Ha Tajvanon munkavállalókat vesznek fel, és a készletet, a beszedést és az ügyféltámogatást továbbra is kezelni tervezik, a leányvállalatot és a fióktelepet konkrétan össze kell vetni, és a szerződéses felelősséget, a székhely üzemeltetési módját, az adózást és a személyzeti tervet is együtt kell vizsgálni.
+**A tajvani értékesítést és műszaki támogatást fokozatosan bővítő vállalkozás.** Ha Tajvanon munkavállalókat vesznek fel, és a készletet, a beszedést és az ügyféltámogatást továbbra is kezelni tervezik, a leányvállalatot és a fióktelepet konkrétan össze kell vetni, és a szerződéses felelősséget, a központ üzemeltetési módját, az adózást és a személyzeti tervet is együtt kell vizsgálni.
 
 **Piackutatási szakaszban lévő vállalkozás.** Ha értékesítési szervezet előtt csak információgyűjtést és kapcsolattartást kívánnak tartani, a képviseleti iroda vizsgálható. Ha azonban a tényleges terv készletáru-értékesítést vagy helyszíni munkát tartalmaz, külön meg kell erősíteni, végezhető-e az a tevékenység.
 
 ## 8. Az első megkereséshez elég az üzemeltetési áttekintés, nem kell először az összes bizalmas anyagot átadni
 
-Az első egyeztetéskor a székhely és a hozzájárulók alapadatait, a termék vagy szolgáltatás általános ismertetését, a tervezett ügyleti folyamatot, a tajvani személyzeti és létesítményi tervet, valamint az ügyfél által kért szerződéses és támogatási feltételeket kell rendezni. Amit még nem döntöttek el, „nincs rögzítve” jelöléssel ellátható.
+Az első egyeztetéskor a központ és a hozzájárulók alapadatait, a termék vagy szolgáltatás általános ismertetését, a tervezett ügyleti folyamatot, a tajvani személyzeti és létesítményi tervet, valamint az ügyfél által kért szerződéses és támogatási feltételeket kell rendezni. Amit még nem döntöttek el, „nincs rögzítve” jelöléssel ellátható.
 
 Az első kapcsolatfelvételkor nem kell az ügyfél bizalmas anyagait vagy a részletes technológiai adatokat mind csatolni. A másik fél társaságnevének és az összeférhetetlenség-ellenőrzéshez szükséges információknak a megadása után a felelős útmutatása szerint kell a szükséges anyagokat és az átadás módját rögzíteni.
 
@@ -103,16 +103,16 @@ Az első kapcsolatfelvételkor nem kell az ügyfél bizalmas anyagait vagy a ré
 
 Pusztán attól, hogy az ügyfél Tajvanon van, nem lehet egységesen dönteni. A tajvani ügyfél követelményeit, a tajvani értékesítés, létesítmények, személyzet és az ügyleti szerkezet tényleges tevékenységét meg kell erősíteni, majd az ezeknek megfelelő szervezeti formát kell választani.
 
-### Tajvani társaság alapításával a székhely felelőssége teljesen eltűnik?
+### Tajvani társaság alapításával az anyavállalat felelőssége teljesen eltűnik?
 
-Ha fióktelep helyett leányvállalatot alapítanak, a székhely elvben nem viseli a leányvállalat nevében kötött szerződés felelősségét és kötelezettségeit. Ellenőrizni kell azonban a jogi személyiséggel való visszaélés kivételeit, valamint azt, hogy a székhely külön kezességet vagy szerződéses kötelezettséget vállalt-e.
+Ha fióktelep helyett leányvállalatot alapítanak, az anyavállalat elvben nem viseli a leányvállalat nevében kötött szerződés felelősségét és kötelezettségeit. Ellenőrizni kell azonban a jogi személyiséggel való visszaélés kivételeit, valamint azt, hogy az anyavállalat külön kezességet vagy szerződéses kötelezettséget vállalt-e.
 
-### Először ügynökkel működhetnek, majd tajvani társaságra válthatnak?
+### Először forgalmazóval működhetnek, majd tajvani társaságra válthatnak?
 
 Szakaszos átállás tervezhető. A meglévő szerződések megszűnését vagy módosítását, az ügyfélszerződéseket, a készletet, a jótállás kezelését és a személyzeti kérdéseket azonban együtt kell vizsgálni.
 
 ## Tajvani belépési szerkezet egyeztetése
 
-Ha Tajvanon értékesítést, készletkezelést, telepítési támogatást vagy helyi felvételt tervez, először rendezze a székhely által közvetlenül végzett munkát és a tajvani szervezetre bízott munkát. Az iroda az egyeztetés tárgyát és az összeférhetetlenséget megerősítve ismerteti a szükséges anyagokat és a nyújtható szolgáltatás körét. A tanácsadás kizárólag angolul, kínaiul (中文), japánul és koreaiul zajlik.
+Ha Tajvanon értékesítést, készletkezelést, telepítési támogatást vagy helyi felvételt tervez, először rendezze a központ által közvetlenül végzett munkát és a tajvani szervezetre bízott munkát. Az iroda az egyeztetés tárgyát és az összeférhetetlenséget megerősítve ismerteti a szükséges anyagokat és a nyújtható szolgáltatás körét. A tanácsadás kizárólag angolul, kínaiul (中文), japánul és koreaiul zajlik.
 
-Kapcsolatfelvételi tárgy példa: félvezető-vállalat tajvani belépési szerkezetének egyeztetése. Az első kapcsolatfelvételkor adja meg a társaság nevét, a székhely országát, a tervezett terméket vagy szolgáltatást, a tajvani üzemeltetési tervet és a kívánt egyeztetési nyelvet. A bizalmas tervezési anyagokat és a teljes szerződéseket csak külön útmutatás után küldje. A ténylegesen elérhető egyeztetési nyelveket és a megbízás körét a kapcsolatfelvételkor kell megerősíteni.
+Kapcsolatfelvételi tárgy példa: félvezető-vállalat tajvani belépési szerkezetének egyeztetése. Az első kapcsolatfelvételkor adja meg a társaság nevét, a központ országát, a tervezett terméket vagy szolgáltatást, a tajvani üzemeltetési tervet és a kívánt egyeztetési nyelvet. A bizalmas tervezési anyagokat és a teljes szerződéseket csak külön útmutatás után küldje. A ténylegesen elérhető egyeztetési nyelveket és a megbízás körét a kapcsolatfelvételkor kell megerősíteni.

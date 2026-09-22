@@ -744,27 +744,27 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'CSAPATUNK',
     title: 'A Hovering nemzetközi csapata',
     description:
-      'A Hovering ügyvédeinek, működési vezetésének és a társult könyvvizsgálónak (könyvelőiroda) a profiljai.',
-    representativeTitle: 'Vezető ügyvéd',
+      'A Hovering ügyvédeinek, működési vezetésének és a társult könyvvizsgáló profilja.',
+    representativeTitle: 'Vezető ügyvédnő',
     teamTitle: 'Ügyvédek és munkatársak',
-    partnerTitle: 'Társult könyvvizsgáló (könyvelőiroda)',
+    partnerTitle: 'Társult könyvvizsgáló',
     introLabel: 'Bemutatkozás',
     educationLabel: 'Tanulmányok',
     experienceLabel: 'Tapasztalat',
     photoAltPrefix: 'Fénykép',
     workingLanguagesLabel: 'Munkanyelvek',
     fullProfileLabel: 'Teljes profil (angolul)',
-    keyFactsHeading: 'Wei Tseng ügyvéd — Fő adatok',
+    keyFactsHeading: 'Wei Tseng ügyvédnő — Fő adatok',
     qualificationLabel: 'Képesítés és iroda',
     qualificationSentence:
-      '{name} jogosult Tajvanon ügyvédi tevékenységet folytatni, és a {firm} vezető ügyvédje.',
+      '{name} jogosult Tajvanon ügyvédi tevékenységet folytatni, és a {firm} vezető ügyvédnője.',
     practiceLabel: 'Fő területek',
     consultationLanguagesLabel: 'Tanácsadási nyelvek',
     roles: {
-      'tseng-junwei': 'Vezető ügyvéd Tajvanon (Managing Attorney)',
+      'tseng-junwei': 'Vezető ügyvédnő Tajvanon (Managing Attorney)',
       'chang-rongxuan': 'Ügyvéd Tajvanon (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Koreai működésvezetés (Korea Operations Manager)',
+      'chang-fangyu': 'Jogi asszisztens',
+      'son-jungmin': 'Koreai működési vezető (Korea Operations Manager)',
       'huang-shengping': 'Társult könyvvizsgáló (Partner CPA)',
     },
   },
@@ -3199,38 +3199,38 @@ export const guidanceTeamBios: Record<
       education: [
         'Mesterfokozat (M.S.), Institute of Finance, National Taiwan University',
         'Alapfokozat (B.A.) jogi és pénzügyi kettős képzésben, National Chengchi University',
-        'Csereösztöndíj a Kobe Universityn és a Waseda Universityn',
+        'Cserehallgató a Kobe University-n és a Waseda University-n',
       ],
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Jogi Segítségnyújtási Alapítvány, tajcsungi kirendeltség (Legal Aid Foundation, Taichung Branch)',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Korábban a Ministry of Education, Legal Affairs Division munkatársa, közigazgatási és polgári ügyekre összpontosítva.',
+        'Korábban az Oktatási Minisztérium jogi osztályának (Ministry of Education, Legal Affairs Division) munkatársa, közigazgatási és polgári ügyekre összpontosítva.',
         'Tapasztalat egyetemeket, oktatói jogokat és közigazgatási fellebbezéseket érintő ügyekben.',
       ],
       education: [
         'Jogi alapfokozat (LL.B.), National Chung Hsing University',
       ],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Oktatási Minisztérium, jogi osztály (Ministry of Education, Legal Affairs Division)',
         'Ügyvéd, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Jogi asszisztens (paralegal); több irodában vezető paralegalként eljárási, társasági jogi és külföldi befektetési ügyeket támogatott.',
+        'Jogi asszisztens; több irodában vezető jogi asszisztensként eljárási, társasági jogi és külföldi befektetési ügyeket támogatott.',
         'Támogatás eljárásokban, cégalapításban, külföldi befektetési engedélyekben, engedélykérelmekben, valamint a koreai–tajvani kapcsolatokban.',
       ],
       education: [
         'Jogi alapfokozat (LL.B.), Tunghai University',
       ],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Vezető jogi asszisztens, Boyin Law Firm',
+        'Vezető jogi asszisztens, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {

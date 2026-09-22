@@ -747,17 +747,17 @@ export const guidanceAnswers: Record<
   hu: {
     services: {
       answer:
-        'Az iroda hat ügycsoportban jár el a tajvani jog szerint: befektetés és cégalapítás, polgári jogi jogviták és kártérítés, házasság, család és öröklés, munkaügy, büntetőügyek és szellemi tulajdon. Az egyes ügyek terjedelmét külön erősítjük meg azt követően, hogy egy ügyvéd megvizsgálta a beküldött tartalmat. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.',
+        'Az iroda hat ügycsoportban jár el a tajvani jog szerint: befektetés és cégalapítás, polgári jogviták és kártérítés, házasság, család és öröklés, munkaügy, büntetőügyek és szellemi tulajdon. Az egyes ügyek terjedelmét külön erősítjük meg azt követően, hogy egy ügyvéd megvizsgálta a beküldött tartalmat. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.',
       sources: ['/hu/faq', '/hu/contact'],
     },
     about: {
       answer:
-        'A Hovering International Law Firm tajvani ügyvédi iroda, amelyet 2016-ban a National Taiwan University (國立臺灣大學) végzettjei alapítottak, irodákkal Tajpejben, Kaohsiungban, Tajcsungban és Pingtungban. 2020 óta könyvviteli részleg is működik; a tajcsungi iroda koreai és japán kötődésű ügyekben jár el. Az iroda nem ígér eredményt. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.',
+        'A Hovering International Law Firm tajvani ügyvédi iroda, amelyet 2016-ban a National Taiwan University (國立臺灣大學) végzettjei alapítottak, irodákkal Tajpejben, Kaohsziungban, Tajcsungban és Pingtungban. 2020 óta könyvviteli részleg is működik; a tajcsungi iroda koreai és japán kötődésű ügyekben jár el. Az iroda nem ígér eredményt. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.',
       sources: ['/hu/lawyers', '/hu/services'],
     },
     lawyers: {
       answer:
-        'Ez az oldal a Hovering ügyvédeinek, működési vezetésének és a társult könyvvizsgálónak (könyvelőiroda) a profiljait mutatja. Wei Tseng ügyvéd (曾雋崴) Tajvanon ügyvédi tevékenységre jogosult, és az iroda vezető ügyvédje; koreai, japán és további nemzetközi ügyfelekkel dolgozik. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.',
+        'Ez az oldal a Hovering ügyvédeinek, működési vezetésének és a társult könyvvizsgáló profilját mutatja. Wei Tseng ügyvédnő (曾雋崴) Tajvanon ügyvédi tevékenységre jogosult, és az iroda vezető ügyvédnője; koreai, japán és további nemzetközi ügyfelekkel dolgozik. A tanácsadás kizárólag angolul, kínaiul, japánul és koreaiul zajlik.',
       sources: ['/hu/about', '/hu/contact'],
     },
     pricing: {

@@ -29,7 +29,7 @@ A tajvani büntető törvénykönyv (刑法) 185-4. cikke a sérülést vagy hal
 
 ## Q2. Milyen bizonyítékokat kell elsőként megőrizni?
 
-Először a személyes biztonságot és a figyelmeztető jeleket kell biztosítani; ha vannak sérültek, vagy mentés szükséges, a 119-es számot kell hívni, ha bűncselekmény vagy sürgős biztonsági helyzet van, a 110-es vagy a 112-es számot. A közúti baleset körülményei szerint a rendőrségnek is bejelentést kell tenni.
+Először a személyes biztonságot és a figyelmeztető jeleket kell biztosítani; ha vannak sérültek, vagy mentés szükséges, Tajvanon a 119-es számot kell hívni (mentő és tűzoltóság); ha bűncselekmény vagy sürgős biztonsági helyzet van, a 110-es számot (rendőrség), mobiltelefonról a 112-es számot. A közúti baleset körülményei szerint a rendőrségnek is bejelentést kell tenni.
 
 Ha a biztonság biztosítva van, általános és részletes fényképeket kell készíteni a járművek helyzetének és sérüléseinek, az útjelzéseknek, a világításnak és az időjárási körülményeknek a rögzítésére. Nem szabad kihagyni a tanúk elérhetőségét, a CCTV-képek (監視器影像) és a fedélzeti kamera (行車紀錄器) megőrzésére vonatkozó kérelmet, a felek, a jármű és a biztosítás adatait, valamint az orvosi dokumentációt (病歷). A saját fényképek hasznosak, de nem helyettesítik a sérüléses vagy halálos balesetnél szükséges rendőri intézkedést.
 
@@ -64,9 +64,9 @@ Ha magánindítványra üldözendő bűncselekményről van szó, a büntetőelj
 ### Q1–Q5 hivatalos alapjai
 
 - [A közúti forgalom igazgatásáról és szankcióiról szóló rendelet (道路交通管理處罰條例) 62. cikke](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=62&pcode=K0040012)
-- [A Kínai Köztársaság büntető törvénykönyve, 185-4. cikk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
-- [A Kínai Köztársaság büntető törvénykönyve, 284. cikk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
-- [A Kínai Köztársaság büntető törvénykönyve, 287. cikk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
+- [A Kínai Köztársaság (Tajvan) büntető törvénykönyve, 185-4. cikk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=185-4&pcode=C0000001)
+- [A Kínai Köztársaság (Tajvan) büntető törvénykönyve, 284. cikk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [A Kínai Köztársaság (Tajvan) büntető törvénykönyve, 287. cikk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=287&pcode=C0000001)
 - [Tajvani büntetőeljárási törvény, 237. cikk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=237&pcode=C0010001)
 - [Büntetőeljárási törvény, 238. cikk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=238&pcode=C0010001)
 - [Büntetőeljárási törvény, 487. cikk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=487&pcode=C0010001)
@@ -93,7 +93,7 @@ Ha a szakvéleménnyel nincs egyetértés, újratárgyalás kérhető, de az új
 
 A polgári törvénykönyv 184. cikkén alapuló igény jogellenes jogsértést, a balesettel való okozati összefüggést és a kár bizonyítását feltételezi. Önmagában az, hogy baleset történt, nem vonja maga után, hogy az alábbi tételek mind elismertek. A polgári törvénykönyv 216. cikke a tényleges kár és az elmaradt haszon (所失利益) terjedelmének megállapítási kritériuma.
 
-- **Sérülések**: A polgári törvénykönyv 193. cikke szerint vizsgálhatók a szükséges orvosi költségek (醫療費用), a mindennapi élet többletköltségei, például a gondozási költségek (看護費用), a kezelésre járás közlekedési költségei (就醫交通費) és a műszaki segítség, valamint a tényleges munkaképtelenség miatti jövedelemkiesés (收入損失) és a munkaképesség csökkenése (勞動能力減損). A polgári törvénykönyv 195. cikke szerint a nemvagyoni kár is vizsgálható.
+- **Sérülések**: A polgári törvénykönyv 193. cikke szerint vizsgálhatók a szükséges orvosi költségek (醫療費用), a mindennapi élet többletköltségei, például a gondozási költségek (看護費用), a kezelésre járás közlekedési költségei (就醫交通費) és a gyógyászati segédeszközök, valamint a tényleges munkaképtelenség miatti jövedelemkiesés (收入損失) és a munkaképesség csökkenése (勞動能力減損). A polgári törvénykönyv 195. cikke szerint a nemvagyoni kár is vizsgálható.
 - **Halál**: A polgári törvénykönyv 192. cikke szerint, ha van alap, vizsgálhatók a halál előtti orvosi költségek és a megnövekedett életviteli szükségletek költségei, a temetési költségek (殯葬費), valamint annak a személynek a tartási érdekkiesése (扶養利益損失), akinek törvényes tartási joga volt. A polgári törvénykönyv 194. cikke szerint egyes rokonok nemvagyoni kára is vizsgálható.
 - **Vagyon**: A polgári törvénykönyv 196. cikke szerint az indokolt tényleges vagyoni kár érvényesíthető, ideértve a jármű javítási költségeit vagy az értékvesztést.
 
@@ -190,7 +190,7 @@ A Harmadik személlyel szembeni felelősségbiztosítás (第三人責任險), a
 - [Polgári törvénykönyv, 195. cikk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
 - [A Taoyuan járásbíróság 112. évi 壢簡字 236. számú ítélete](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Polgári törvénykönyv, 188. cikk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
-- [A Kínai Köztársaság büntető törvénykönyve, 284. cikk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
+- [A Kínai Köztársaság (Tajvan) büntető törvénykönyve, 284. cikk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [A kötelező gépjármű-felelősségbiztosításról szóló törvény](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
 - [A kötelező gépjármű-felelősségbiztosítás kifizetési tarifája](https://law.fsc.gov.tw/LawContent.aspx?id=FL006901&kw=1200)
 - [A Pénzügyi Felügyeleti Bizottság (金融監督管理委員會) magánhasználatú gépjármű-biztosítási mintaszerződése](https://law.fsc.gov.tw/LawContent.aspx?id=FL047990)
@@ -239,7 +239,7 @@ Gondatlan testi sértés miatt egyes ítéletekben mintegy 3 hónap szabadságve
 
 ​
 
-Ha pénzbírságra váltják (易科罰金), a büntető törvénykönyv 41. cikke 1. bekezdése 1 napra TWD 1.000, TWD 2.000 vagy TWD 3.000 átváltást állapít meg; TWD 1.000/nap szerint számítva a 3 hónap büntetés 3 × 30 × TWD 1.000 = TWD 90.000.
+Ha pénzbüntetésre váltják (易科罰金), a büntető törvénykönyv 41. cikke 1. bekezdése 1 napra TWD 1.000, TWD 2.000 vagy TWD 3.000 átváltást állapít meg; TWD 1.000/nap szerint számítva a 3 hónap büntetés 3 × 30 × TWD 1.000 = TWD 90.000.
 
 ​
 
@@ -323,7 +323,7 @@ Továbbá az ügyvédnek világosan ismertetnie kell a fél helyzetét, és vil�
 
 ​
 
-Ezzel zárom a közúti balesetekre vonatkozó kérdéseket és válaszokat. Remélem, hasznosak lesznek.
+Ezzel zárulnak a közúti balesetekre vonatkozó kérdések és válaszok.
 
 ​
 
@@ -331,7 +331,7 @@ Ezzel zárom a közúti balesetekre vonatkozó kérdéseket és válaszokat. Rem
 
 ​
 
-Sok közúti baleset vezetése után egy fontos pontra kívánok rámutatni.
+A közúti balesetek intézésében egy további szempont is lényeges.
 
 ​
 
@@ -347,7 +347,7 @@ Az okozó gyakran nem törődik azzal, hogy telefonáljon az áldozat állapotá
 
 ​
 
-A sértett ezért mélyen megsértődik és haragra gerjed, ezért gyakran nem enged a tárgyalási összegből, vagy ideiglenes biztosítási intézkedést (假扣押) kér, és a másik fél vagyonának zárolását a végsőkig viszi.
+A sértett ezért mélyen megsértődik és haragra gerjed, ezért gyakran nem enged a tárgyalási összegből, vagy előzetes vagyonzárlatot (假扣押) kér, és a másik fél vagyonának zárolását a végsőkig viszi.
 
 ​
 
@@ -363,7 +363,7 @@ Ha további kérdése van, a Kapcsolat oldalon küldhet megkeresést.
 
 ​
 
-Wei Tseng (曾雋崴), ügyvéd Tajvanon.
+Wei Tseng (曾雋崴), ügyvédnő Tajvanon.
 
 ---
 

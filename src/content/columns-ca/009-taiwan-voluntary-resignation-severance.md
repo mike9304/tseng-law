@@ -29,7 +29,7 @@ Tanmateix, hi ha **casos excepcionals**.
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-En les situacions especials següents, tot i que el treballador dimiteixi de forma voluntària, l’ocupador li ha de pagar la indemnització per acomiadament (l’article 14 de la Llei de normes laborals, que aplica per analogia l’article 17; 勞動基準法第14條):
+En les situacions especials següents, tot i que el treballador dimiteixi de forma voluntària, l’ocupador li ha de pagar la indemnització per acomiadament (l’article 14 de la Llei de normes laborals, que aplica, en el que escaigui, l’article 17; 勞動基準法第14條):
 
 1. Quan l’ocupador, en celebrar el contracte de treball (勞動契約), fa una declaració de voluntat falsa (虛偽意思表示) de manera que el treballador creu per error i existeix el risc de patir un dany
 
@@ -39,7 +39,7 @@ En les situacions especials següents, tot i que el treballador dimiteixi de for
 
 3. Quan el treball pactat en el contracte pot ser perjudicial per a la salut del treballador, s’ha demanat a l’ocupador que el millori i no hi ha efecte
 
-4. Quan l’ocupador, el seu representant o un altre treballador pateix una malaltia contagiosa legal (法定傳染病), existeix risc de contagi als treballadors que treballen junts i això suposa un perill greu per a la salut del treballador
+4. Quan l’ocupador, el seu representant o un altre treballador pateix una malaltia contagiosa de declaració obligatòria (法定傳染病), existeix risc de contagi als treballadors que treballen junts i això suposa un perill greu per a la salut del treballador
 
 5. Quan l’ocupador no paga la remuneració (工作報酬) segons el contracte de treball, o no proporciona treball suficient al treballador la retribució del qual es calcula per peça (按件計酬)
 
@@ -91,7 +91,7 @@ Per això, en els conflictes laborals (勞資糾紛) de Taiwan,
 
 el **temps** és molt important.
 
-En la majoria dels casos, qui s’ha preparat per endavant veu protegits els seus drets.
+En la majoria dels casos, qui es prepara per endavant està en millor posició per defensar els seus drets; això no promet un resultat.
 
 ---
 

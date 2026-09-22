@@ -1,0 +1,79 @@
+# WO-F-ca — Catalan fix lane report (Grok 4.7, 2026-09-22, round r1)
+
+Workspace: /Users/son7/Projects/tseng-law-fix-ca-r1
+No git add/commit/push.
+Pinned test updated: src/data/__tests__/guidance-disclosure-parity.test.ts `ca: /pas de consulta/` → `/no és una consulta/` (the disclosure phrase was rewritten). Vitest 3202 passed.
+TWD 1.57M left byte-identical. Frontmatter url values left untouched (Hangul slugs in 008 and 009 stay, including the fullwidth colon inside the url).
+
+## Rows applied
+
+ca-a 39/41, ca-b 39/39. Total applied 78 / 80.
+
+ca-a applied: 1–21, 23–40.
+ca-b applied: 1–39.
+
+Checker constraint inside an applied row:
+- ca-a #27: "menys d’un any" applied in 001 (×2) and 014 (×1); the checker still matched. In 008, dropping the digit failed numbers (missing 1×4). Restored as "completi 1 any d’antiguitat" (×2) and "per cada 1 any complet, sense topall" (×2). The "complet" stays; the digit stays because the checker counts it.
+
+## Rows skipped
+
+- ca-a #22. Q16–Q20 are bold body lines in the English source as well, separated by U+200B. Turning them into ## headings fails the headings check. The U+200B count must match the source, so the spacer lines stay. The same constraint covers 005, 006, 008 and 009. Block count unchanged.
+- ca-a #41. Bio figure "TWD 1.57M" is pinned byte-identical (R12 / ACCEPTED-ROUND). The parenthetical "(1,57 milions de dòlars taiwanesos)" stays with it. Column sums that are millions take the apostrophe a native uses before "un" ("d’1.570.000", "d’1.000.000"); those are not the pinned bio figure.
+
+## Systemic patterns
+
+- Missing comma on the yes/no acceptance sentence: 1 (guidance FAQ). "Si un assumpte s’accepta o no, es decideix…"
+- Dropped "foreign national" on the second-employee work-permit rule: 1 (005). "més d’1 treballador de nacionalitat estrangera" (digit kept).
+- Spanish forms inside Catalan: costes processals / les costes → taxa judicial (裁判費) ×4 in 003; "Si encara no té clar" → "Si encara no sap" ×1; "l’Llei" → "la Llei" ×6 (004 ×5, 013 ×1); "enfronten" without "se" → "troben" ×1 (006). "s’enfronten a nombrosos treballadors" → "tracten amb" ×1 (004).
+- "després de" read as the preposition "after": 1 (guidance, "i després parla de l’abast possible").
+- Glued "1 any": see ca-a #27. 001 and 014 now say "menys d’un any" (3). 008 keeps the digit (4). "d’1 any o més" and "durant 1 any" left: the apostrophe is already the Catalan form, and those are statutory thresholds.
+- Verb + "junts" calquing "consider together": 42 replacements across 002, 003, 004, 007, 010, 011, 012, 014, 016 (examinar / veure / confirmar / comprovar / considerar / organitzar / ordenar / investigar / reunir / indicar / vistos / gestionar). Left on purpose: "treballen junts" (009, people working side by side), "comparèixer junts" (007, appear together), "viure juntes" (007), "figurin juntes" (014, clauses sitting in one contract).
+- "tal qual" → "tal com és" / "tal com està": 10 in columns (002, 007 ×4, 010, 014, 016 ×3) and 4 in the guidance pack ("es conserva tal com està").
+- Masculine "per si mateix" / "ell mateix" with a missing subject: 011 ×4 (FAQ, body, heading, checklist) and 017 ×2 ("pel seu compte", "passa a ser el transportista"). Left where the subject is masculine: "l’article … per si mateix", "aquest escrit … per si mateix", "el fet … per si mateix", and feminine "per si mateixa" / "per si mateixes".
+- Stock closer "material educatiu" / "material de propòsit educatiu" → "té una finalitat divulgativa": 4 (011, 014, 016, 017).
+- A factor "sees" or a result "is concluded": 014 "El tercer factor no abasta només", "El primer factor abasta", "La primera se centra", "no se’n treu la conclusió". 011 "no s’han de tractar com si produïssin la mateixa conseqüència".
+- fideïcomís for a Taiwanese trust (信託): 5 in 016 plus 2 in 007 → "trust". Adveració (檢認) → "validació judicial del testament" ×1 (016).
+- 準用 written as analogia: 014 the flagged article 15/16 sentence; the same statutory cross-reference in 009 (article 14/17) and 007 (Family Act → Code of Civil Procedure, ×4 including "aquesta remissió").
+- Press-title noun stacks in 010: 8 headlines ×2 (image alt and link), including "home", a finite verb, "mentalitat (心態) de qui feia l’exercici", and "d’1.000.000" / "d’1.570.000".
+- Apostrophe before a million read as "un": "d’1.570.000" and "d’1.000.000" in 010. Not applied to 1.000 ("mil") or to 10/15/100.
+- noli → nòlit ×3 (017). "quin és" → "quina és" ×2 (017).
+- Guidance register: "pas de consulta" → "no és una consulta"; "se celebri" → "es faci"; "demanda local" → "clientela de la zona"; "valoració del local" → "comprovació del local"; "Presentació de marques" → "Sol·licituds"; office alt "Despatx de treball"; "Estudianta" → "Estudiant"; paralegal and CPA bios rewritten. "dret laboral, dret penal" and "assumptes de construcció" ×2. "respecte dels fills menors" ×1.
+
+R2–R13 and R15–R17 were already largely in the Catalan pack (Korea only as a labelled example, consultation lock negative, Wei Tseng feminine, paralegal already "Ajudant jurídic", institutions already in Catalan, OOO already "[nom]", no Czech letters, no fullwidth punctuation outside the Hangul url). No extra Hangul outside url. Markers 0.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-ca --lang ca 2>&1 | tail -8
+hanzi          PASS   han=85
+numbers        WARN   extra in translation (5): 1×5
+                      sourceCount=25 targetCount=30
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-ca src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      26
+```
+
+The 26 is this lane's 22 edited paths (18 columns, 3 guidance sources, 1 pinned test) plus three paths that were already dirty or untracked before the edit (WO-F-ca.txt, untracked ca-a.md, untracked ca-b.md) and the helper `.tmp-ca/`. This log is written after that count. The numbers WARN on 018 (extra 1×5) is pre-existing: the 018 diff only rewrites "formulari concret" and "Qui deu el suport", and adds no digit. The file still PASSes.
+
+## Reviewer points not followed as worded
+
+- ca-a #22 is right that Q16–Q20 read like a blog next to the Q1–Q15 headings. Not applied as new headings: the English source has the same bold lines and the same U+200B count, and the checker compares headings, blocks and ZWSP.
+- ca-a #41 is right that "TWD 1.57M" is English abbreviation and that a Catalan dot is a thousands separator. Not applied: R12 and the pinned bio term forbid reformatting that figure.
+- ca-a #27 is right that "per cada 1 any" is clumsy. In 008 the bare digit has to stay or the numbers check fails (missing 1×4). Wording around it is "1 any complet". "menys d’un any" did pass in 001 and 014.
+- "per si mateix" is not always a gender error. It stays where the subject is masculine ("aquest article", "aquest escrit", "el fet"). "per si mateixa" / "per si mateixes" were already feminine and were left.
+- "junts" is not always the English "together" calque. "treballen junts", "comparèixer junts" and "viure juntes" are ordinary Catalan and were left.

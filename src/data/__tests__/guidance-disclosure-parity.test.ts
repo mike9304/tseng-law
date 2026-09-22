@@ -478,7 +478,7 @@ const ELEMENTS = {
     lt: /konsultacijos žingsnis/,
     lv: /konsultācijas solis/,
     et: /nõustamissamm/,
-    ca: /pas de consulta/,
+    ca: /no és una consulta/,
     is: /ráðgjafarþrep/,
   },
   /** A sent message is not legal advice. */

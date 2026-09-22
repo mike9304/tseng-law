@@ -1811,7 +1811,7 @@ export const guidancePracticeAreaNames: Record<GuidanceLocale, Record<string, st
     'Taiwan company setup': 'Constitució de societats a Taiwan',
     'Taiwan investment counsel': 'Assessorament jurídic per invertir a Taiwan',
     'Civil litigation and damages': 'Litigis civils i danys',
-    'Trademark and patent filings': 'Presentació de marques i patents',
+    'Trademark and patent filings': 'Sol·licituds de marques i patents',
     'Visa and residency': 'Visat i residència',
     'Family and labor disputes': 'Conflictes familiars i laborals',
   },
@@ -4558,7 +4558,7 @@ export const guidanceTeamBios: Record<
       education: [
         'Màster (M.S.), Institute of Finance, National Taiwan University',
         'Grau (B.A.), doble grau en Dret i Finances, National Chengchi University',
-        'Estudianta d’intercanvi a Kobe University i Waseda University',
+        'Estudiant d’intercanvi a Kobe University i Waseda University',
       ],
       experience: [
         'Trend Law Office',
@@ -4579,7 +4579,7 @@ export const guidanceTeamBios: Record<
     },
     'chang-fangyu': {
       intro: [
-        'Ajudant jurídic amb anys de treball com a ajudant jurídic sènior en diversos despatxos, a càrrec del suport processal, del dret d’empresa i de la inversió estrangera.',
+        'Ajudant jurídic sènior, amb anys d’experiència en diversos despatxos, a càrrec del suport processal, del dret d’empresa i de la inversió estrangera.',
         'Dona suport a litigis, constitució de societats, tràmits d’aprovació d’inversió estrangera, sol·licituds de llicència i l’intercanvi entre Corea i Taiwan.',
       ],
       education: ['Grau en Dret (LL.B.), Tunghai University'],
@@ -4598,7 +4598,7 @@ export const guidanceTeamBios: Record<
     },
     'huang-shengping': {
       intro: [
-        'Va completar els programes de grau i màster en comptabilitat a National Chengchi University i dirigeix actualment un despatx de comptabilitat.',
+        'Va cursar el grau i el màster en Comptabilitat a la National Chengchi University i dirigeix actualment un despatx de comptabilitat.',
         'Dona suport a l’anàlisi integrada de riscos jurídics, fiscals i financers per a clients empresarials.',
       ],
       education: [

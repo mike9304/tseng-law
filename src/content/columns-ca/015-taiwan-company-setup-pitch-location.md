@@ -55,7 +55,7 @@ Per tant, presti atenció.
 
 Es recomana que tots els sectors confirmin si l’explotació és possible a través del sistema de «consulta prèvia del local de negoci».
 
-Tanmateix, en registrar la societat sol inscriure’s diversos rams alhora, i amb freqüència es pretén registrar aproximadament 10 rams d’una sola vegada.
+Tanmateix, en registrar la societat solen inscriure’s diversos rams alhora, i amb freqüència es pretén registrar aproximadament 10 rams d’una sola vegada.
 
 Per això, en la pràctica no cal consultar tots els rams en registrar la societat.
 

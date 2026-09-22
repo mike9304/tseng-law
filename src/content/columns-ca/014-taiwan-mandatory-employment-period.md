@@ -13,7 +13,7 @@ faq:
   - q: "La formació del personal de nova incorporació o la formació legalment obligatòria es consideren formació tècnica especialitzada?"
     a: "Segons l’orientació del Ministeri de Treball de Taiwan (勞動部) del 5 de juny de 2026, el cost de la formació periòdica, de la formació general del lloc, de l’adaptació a la feina del personal de nova incorporació i de la formació que la llei obliga a impartir no es pot prendre com a fonament del pacte de període mínim de treball ni d’una reclamació de clàusula penal (違約金) o de devolució de despeses. No s’ha de veure només el nom de la formació, sinó el programa concret, el contingut professional i tècnic, la durada, el cost realment assumit per l’ocupador i els justificants."
   - q: "Si es dimiteix de forma anticipada, s’han de retornar per complet la prima de signatura (簽約金) o la prima de permanència (留任獎金)?"
-    a: "No sempre es retorna l’import íntegre. Si la prima de signatura, la prima de permanència o una altra prestació anticipada (預付性給付) es va pagar com a compensació raonable del pacte de període mínim de treball, la seva finalitat s’ha de comunicar amb claredat al treballador. L’orientació del Ministeri de Treball de Taiwan del 5 de juny de 2026 explica que, en dimitir abans de vèncer el període, l’import a retornar s’ha de calcular en proporció al període encara no complert i no s’ha d’exigir la devolució íntegra. La conclusió real ha d’examinar junts la finalitat del pagament, el contingut del pacte, el període ja treballat i la causa de l’extinció."
+    a: "No sempre es retorna l’import íntegre. Si la prima de signatura, la prima de permanència o una altra prestació anticipada (預付性給付) es va pagar com a compensació raonable del pacte de període mínim de treball, la seva finalitat s’ha de comunicar amb claredat al treballador. L’orientació del Ministeri de Treball de Taiwan del 5 de juny de 2026 explica que, en dimitir abans de vèncer el període, l’import a retornar s’ha de calcular en proporció al període encara no complert i no s’ha d’exigir la devolució íntegra. La conclusió real ha de valorar conjuntament la finalitat del pagament, el contingut del pacte, el període ja treballat i la causa de l’extinció."
   - q: "Si el contracte s’extingeix de forma anticipada per una causa no imputable al treballador, s’ha de retornar la despesa de formació?"
     a: "L’article 15-1, apartat 4, de la Llei de normes laborals de Taiwan disposa que, si el contracte de treball s’extingeix abans d’acabar el període mínim de treball per una causa no imputable al treballador, el treballador no assumeix responsabilitat per infracció del pacte de període mínim de treball ni per devolució de la despesa de formació. Tanmateix, la causa d’extinció i la imputació de responsabilitat s’han de valorar a partir de proves concretes, com la notificació d’acomiadament, la manifestació de dimissió i les dades d’infracció de les condicions de treball."
 ---
@@ -51,7 +51,7 @@ Per fonamentar el pacte en la formació, l’ocupador ha d’haver proporcionat 
 
 L’objecte d’examen inclou no només costos directament comprovables, com honoraris de formadors externs, matrícula d’un centre de formació i taxes de materials o equips, sinó també el fonament de càlcul dels costos interns que al·lega l’ocupador. Si va formar personal intern, s’ha de veure de qui i de quin temps es tracta, en què es diferencia de la supervisió habitual o del traspàs del lloc, i si hi ha fonament per imputar aquest cost a aquest treballador. Un import estimat o un prorrateig global no proven per si sols la càrrega real.
 
-El programa, el calendari de formació, la llista d’assistència, el resultat de l’avaluació, el certificat d’aprofitament, les factures i els rebuts són dades bàsiques per confirmar la realitat de la formació i el cost. El contracte entre l’ocupador i el centre de formació, els justificants de pagament i les condicions de reemborsament, vistos junts, permeten captar amb més exactitud la càrrega real. Si el treballador va pagar part del cost de forma directa o un tercer el va sufragar, també s’ha de distingir qui va assumir el cost final.
+El programa, el calendari de formació, la llista d’assistència, el resultat de l’avaluació, el certificat d’aprofitament, les factures i els rebuts són dades bàsiques per confirmar la realitat de la formació i el cost. El contracte entre l’ocupador i el centre de formació, els justificants de pagament i les condicions de reemborsament, considerats conjuntament, permeten captar amb més exactitud la càrrega real. Si el treballador va pagar part del cost de forma directa o un tercer el va sufragar, també s’ha de distingir qui va assumir el cost final.
 
 El límit entre l’adaptació general a la feina i la formació tècnica especialitzada no es divideix només pel lloc de la formació o per qui l’organitza. Un curs intern pot acreditar contingut professional i tècnic concret i una inversió considerable, i un curs llarg d’un centre extern pot ser, en realitat, una formació introductòria general. Per això no s’ha d’excloure de forma uniforme tota formació interna ni reconèixer el requisit legal només perquè el curs sigui costós o llarg.
 
@@ -78,15 +78,15 @@ Encara que existeixi un dels requisits legals, el període pactat i la responsab
 3. Import i abast de la compensació
 4. Resta de circumstàncies que influeixen en la raonabilitat
 
-En el primer factor es veu quant va durar realment la formació i quant va assumir l’ocupador. No n’hi ha prou de presentar el total; convé confirmar junts els justificants per partida, l’import imputat a cada treballador, la competència que la formació va proporcionar i la part d’inversió ja recuperada.
+El primer factor abasta quant va durar realment la formació i quant va assumir l’ocupador. No n’hi ha prou de presentar el total; convé confirmar conjuntament els justificants per partida, l’import imputat a cada treballador, la competència que la formació va proporcionar i la part d’inversió ja recuperada.
 
 El segon factor, la possibilitat de substitució, no es fixa només amb l’al·legació de l’ocupador de dificultat de contractació. S’examina si es pot obtenir personal del mateix lloc o d’un lloc similar, quina qualificació i nivell de perícia es necessiten, quin és el període habitual de cobertura i si la necessitat operativa que al·lega l’ocupador encaixa amb dades objectives.
 
-El tercer factor veu no només l’import de la compensació, sinó també l’abast. Importen quan es paga i en quines condicions s’atribueix de forma definitiva al treballador, com es correspon amb el període pactat en el seu conjunt i si, en extingir-se a mitges, es reflecteix el període ja complert. Una prima amb el mateix nom es pot valorar de forma distinta segons l’estructura del contracte i la realitat.
+El tercer factor no abasta només l’import de la compensació, sinó també l’abast. Importen quan es paga i en quines condicions s’atribueix de forma definitiva al treballador, com es correspon amb el període pactat en el seu conjunt i si, en extingir-se a mitges, es reflecteix el període ja complert. Una prima amb el mateix nom es pot valorar de forma distinta segons l’estructura del contracte i la realitat.
 
 El quart factor pot incloure diverses circumstàncies que influeixen en la raonabilitat, com el curs de celebració del pacte, la naturalesa de la feina, el que es va explicar a les parts, el període realment treballat i la causa d’extinció. La importància de cada factor pot variar segons el cas, i les circumstàncies a considerar no es limiten als exemples anteriors. Per això s’han d’examinar sense ometre els fets pertinents que apareixen a l’expedient.
 
-Al final cal una relació de proporcionalitat comprensible entre el període pactat, la inversió real de l’ocupador, la dificultat de substitució, la compensació que va rebre el treballador i la càrrega de devolució. No s’ha de fixar d’antuvi la validesa només perquè es tracti d’un ofici determinat ni aplicar-se tal qual la conclusió d’un altre assumpte. S’han de veure junts el disseny del moment de celebració del contracte i el grau real de compliment en el moment de l’extinció.
+Al final cal una relació de proporcionalitat comprensible entre el període pactat, la inversió real de l’ocupador, la dificultat de substitució, la compensació que va rebre el treballador i la càrrega de devolució. No s’ha de fixar d’antuvi la validesa només perquè es tracti d’un ofici determinat ni aplicar-se tal com és la conclusió d’un altre assumpte. S’han de valorar conjuntament el disseny del moment de celebració del contracte i el grau real de compliment en el moment de l’extinció.
 
 ## 5. Formació que no pot fonamentar el pacte
 
@@ -94,7 +94,7 @@ Segons l’orientació del Ministeri de Treball de Taiwan del 5 de juny de 2026,
 
 L’orientació 勞動關2字第1150141814號 del Ministeri de Treball distingeix i tracta la formació que s’imparteix de forma periòdica, la formació habitual del lloc, la formació perquè la persona de nova incorporació es familiaritzi amb l’entorn i els procediments de treball, i la formació que l’ocupador ha d’impartir segons la llei. Com que aquesta formació acompanya l’explotació del negoci o el compliment d’una obligació legal, el sentit és que el seu cost no es pot convertir en fonament d’una obligació de permanència o d’una sanció per extinció anticipada.
 
-Els cursos que un empleat nou sol rebre, com l’explicació del reglament de treball (工作規則), la presentació de l’organització i dels sistemes, el traspàs habitual del lloc i la guia de procediments bàsics de seguretat, s’han de confirmar en la seva substància. El cost general de contractació i gestió o el cost de traspàs del lloc que l’ocupador havia d’assumir d’origen no es poden fixar com a objecte de devolució amb només etiquetar-los com a inversió separada.
+Els cursos que un empleat nou sol rebre, com l’explicació del reglament de treball (工作規則), la presentació de l’organització i dels sistemes, el traspàs habitual del lloc i la guia de procediments bàsics de seguretat, s’han de confirmar en la seva substància. El cost general de contractació i gestió o el cost de traspàs del lloc que l’ocupador ja havia d’assumir en el curs ordinari del negoci no es poden fixar com a objecte de devolució amb només etiquetar-los com a inversió separada.
 
 Tanmateix, tampoc no s’exclou sempre una formació només perquè s’hagi impartit a l’interior de l’empresa. En un mateix programa es poden barrejar una part d’adaptació general i una part tècnica especialitzada, de manera que el tema, el temps, el cost i si hi ha obligació legal s’han de confirmar per curs. Qui al·lega la part tècnica especialitzada necessita explicar amb dades quin contingut es diferencia de la formació habitual i qui va assumir realment el cost.
 
@@ -102,7 +102,7 @@ En la pràctica no es mira només la portada del material de formació, sinó qu
 
 ## 6. Devolució de primes i dimissió anticipada
 
-No sempre es retorna l’import íntegre. Si la prima de signatura, la prima de permanència o una altra prestació anticipada es va pagar com a compensació raonable del pacte de període mínim de treball, la seva finalitat s’ha de comunicar amb claredat al treballador. L’orientació del Ministeri de Treball de Taiwan del 5 de juny de 2026 explica que, en dimitir abans de vèncer el període, l’import a retornar s’ha de calcular en proporció al període encara no complert i no s’ha d’exigir la devolució íntegra. La conclusió real ha d’examinar junts la finalitat del pagament, el contingut del pacte, el període ja treballat i la causa de l’extinció.
+No sempre es retorna l’import íntegre. Si la prima de signatura, la prima de permanència o una altra prestació anticipada es va pagar com a compensació raonable del pacte de període mínim de treball, la seva finalitat s’ha de comunicar amb claredat al treballador. L’orientació del Ministeri de Treball de Taiwan del 5 de juny de 2026 explica que, en dimitir abans de vèncer el període, l’import a retornar s’ha de calcular en proporció al període encara no complert i no s’ha d’exigir la devolució íntegra. La conclusió real ha de valorar conjuntament la finalitat del pagament, el contingut del pacte, el període ja treballat i la causa de l’extinció.
 
 La comunicació no s’ha de presentar per primera vegada quan sorgeix el litigi després del pagament. El treballador ha de poder saber, en el moment de celebrar el contracte i de percebre el pagament, quina suma és compensació per la promesa de període mínim de treball, quin és el període pactat en el seu conjunt, quan se li atribueix i amb quina fórmula es liquida si s’extingeix a mitges.
 
@@ -112,7 +112,7 @@ La qüestió de la devolució s’ha de confirmar per ordre: validesa del pacte,
 
 La clàusula de devolució íntegra, la clàusula penal fixa aliena a la pèrdua real i el descompte unilateral del salari no es valoren com un sol problema. El fonament jurídic, el contingut de l’acord, els límits del dret laboral i la licitud del descompte s’han de confirmar per separat. L’import escrit en el requeriment de l’ocupador o el fet que el treballador hagi pagat una part tampoc no fixen la resta de les qüestions jurídiques.
 
-També s’han de distingir la devolució de la despesa de formació i la devolució de la prestació anticipada. La primera es veu centrada en la formació tècnica especialitzada real i en l’assumpció del cost; la segona, en la finalitat del pagament, la comunicació, les condicions d’atribució i la proporció al període no complert. Si es reclamen tots dos conceptes junts, s’han de contrastar per separat si el cost s’ha calculat dues vegades i els justificants de cada concepte.
+També s’han de distingir la devolució de la despesa de formació i la devolució de la prestació anticipada. La primera se centra en la formació tècnica especialitzada real i en l’assumpció del cost; la segona, en la finalitat del pagament, la comunicació, les condicions d’atribució i la proporció al període no complert. Si es reclamen tots dos conceptes alhora, s’han de contrastar per separat si el cost s’ha calculat dues vegades i els justificants de cada concepte.
 
 ## 7. Quan el contracte s’extingeix per una causa no imputable al treballador
 
@@ -120,7 +120,7 @@ L’article 15-1, apartat 4, de la Llei de normes laborals de Taiwan disposa que
 
 Per això no es pot reconèixer la infracció del treballador pel mer fet que la relació laboral hagi acabat abans del període pactat. S’ha de comprovar qui va formular quina manifestació de voluntat, quin és el fonament jurídic de l’extinció del contracte i a quina part s’imputen les circumstàncies reals que la van produir.
 
-Les dades d’examen poden incloure la notificació d’acomiadament, la carta de dimissió, el document d’extinció de comú acord, el correu electrònic i el registre de missatgeria, les dades de canvi de condicions de treball i el registre d’assistència i de treball. Encara que s’esmentin la salut o les circumstàncies de la feina, no es conclou el resultat només amb aquesta expressió, sinó que es veuen junts el curs real, el fonament legal de l’extinció i les proves relacionades.
+Les dades d’examen poden incloure la notificació d’acomiadament, la carta de dimissió, el document d’extinció de comú acord, el correu electrònic i el registre de missatgeria, les dades de canvi de condicions de treball i el registre d’assistència i de treball. Encara que s’esmentin la salut o les circumstàncies de la feina, no se’n treu la conclusió només d’aquesta expressió, sinó que es valoren conjuntament el curs real, el fonament legal de l’extinció i les proves relacionades.
 
 L’acomiadament, l’extinció de comú acord i l’al·legació d’infracció de les condicions de treball són només exemples de circumstàncies a examinar, no una enumeració tancada de les causes no imputables al treballador. Una extinció amb el mateix nom pot diferir en la voluntat de les parts i en el curs, i el nom escrit en el document pot no coincidir amb els fets reals.
 
@@ -130,11 +130,11 @@ La valoració de la causa d’extinció influeix de forma directa també en l’
 
 El pacte de període mínim de treball no és un mecanisme que impedeixi, de fet o de dret, la dimissió del treballador. La manifestació de dimissió i el període de preavís (預告期間) són la qüestió de quan acaba la relació laboral; la validesa del pacte de període mínim de treball i la responsabilitat de devolució de despeses són la qüestió de si hi ha responsabilitat patrimonial derivada de l’extinció.
 
-Quan el treballador extingeix un contracte de treball de durada indefinida (不定期契約), segons l’article 15 de la Llei de normes laborals de Taiwan s’aplica per analogia el període de preavís de l’article 16, apartat 1. L’article 16 és un precepte sobre l’extinció del contracte per l’ocupador, i a la dimissió del treballador aquest període de preavís s’aplica a través de l’article 15.
+Quan el treballador extingeix un contracte de treball de durada indefinida (不定期契約), segons l’article 15 de la Llei de normes laborals de Taiwan s’aplica, en el que escaigui, el període de preavís de l’article 16, apartat 1. L’article 16 és un precepte sobre l’extinció del contracte per l’ocupador, i a la dimissió del treballador aquest període de preavís s’aplica a través de l’article 15.
 
 El període de preavís segons l’antiguitat contínua és el següent.
 
-1. Si és de 3 mesos o més i menys d’1 any: 10 dies
+1. Si és de 3 mesos o més i menys d’un any: 10 dies
 2. Si és d’1 any o més i menys de 3 anys: 20 dies
 3. Si és de 3 anys o més: 30 dies
 
@@ -146,7 +146,7 @@ En la pràctica s’han de conservar el contingut i la data de transmissió de l
 
 ## 9. Llista de comprovació per a l’ocupador i el treballador
 
-Per prevenir un litigi o examinar una reclamació ja plantejada, no s’ha de llegir només el contracte, sinó ordenar junts les dades de formació, pagament, treball i extinció en ordre temporal. En particular, organitzar en una taula quant s’ha complert del període pactat i quant queda, i a quines dades corresponen el cost i la compensació al·legats, ajuda a separar les controvèrsies.
+Per prevenir un litigi o examinar una reclamació ja plantejada, no s’ha de llegir només el contracte, sinó ordenar conjuntament les dades de formació, pagament, treball i extinció en ordre temporal. En particular, organitzar en una taula quant s’ha complert del període pactat i quant queda, i a quines dades corresponen el cost i la compensació al·legats, ajuda a separar les controvèrsies.
 
 ### Aspectes que l’ocupador ha de comprovar
 
@@ -168,11 +168,11 @@ Encara que s’utilitzi un contracte tipus, no s’ha d’aplicar de forma mecà
 3. S’asseguren les dades de pagament de la prima de signatura, de la prima de permanència i d’altres prestacions anticipades, la comunicació sobre la finalitat de la compensació, la data de pagament, les condicions d’atribució i la fórmula de devolució.
 4. Es registren per separat el fonament de càlcul del període pactat, el període ja treballat, el període restant i la possibilitat de substituir personal que al·lega l’ocupador.
 5. Es conserven la notificació de dimissió, la d’acomiadament o el document d’extinció de comú acord i la prova de traspàs, com el correu electrònic i la missatgeria.
-6. S’ordena en ordre temporal la causa real d’extinció i el curs, i es confirmen junts el requeriment de devolució de l’ocupador, la nòmina, les comunicacions de les parts i el registre de descomptes.
+6. S’ordena en ordre temporal la causa real d’extinció i el curs, i es confirmen conjuntament el requeriment de devolució de l’ocupador, la nòmina, les comunicacions de les parts i el registre de descomptes.
 7. S’examinen per separat la validesa del pacte de període mínim de treball, la manifestació de dimissió i el preavís, la devolució de la despesa de formació i de la prestació anticipada, i el dany que s’al·lega per separat.
 8. No es reconeix la responsabilitat només perquè s’hagi signat o perquè l’ocupador exigeixi un import determinat; es confirmen les proves que corresponen als requisits legals, la raonabilitat, la imputació de l’extinció i la fórmula proporcional de l’article 15-1.
 
-En ordenar les dades en ordre temporal, convé indicar junts la data de celebració del contracte, les dates d’inici i fi de la formació, cada data de pagament, les dates d’inici i fi del treball i la data de transmissió de la notificació. Si part de les dades només les té l’ocupador, s’ordenen primer les dades pròpies i el fonament de càlcul de l’import exigit, i les dades addicionals es confirmen segons el procediment necessari.
+En ordenar les dades en ordre temporal, convé indicar conjuntament la data de celebració del contracte, les dates d’inici i fi de la formació, cada data de pagament, les dates d’inici i fi del treball i la data de transmissió de la notificació. Si part de les dades només les té l’ocupador, s’ordenen primer les dades pròpies i el fonament de càlcul de l’import exigit, i les dades addicionals es confirmen segons el procediment necessari.
 
 ## 10. Fonts oficials
 
@@ -189,6 +189,6 @@ En ordenar les dades en ordre temporal, convé indicar junts la data de celebrac
 
 ---
 
-Aquest article és un material de propòsit educatiu per explicar de forma general el pacte de període mínim de treball a Taiwan, la devolució de la despesa de formació i de la prestació anticipada i el preavís de dimissió; no és assessorament jurídic per a un assumpte laboral concret. La validesa del pacte i l’abast de la responsabilitat poden variar segons el tipus i el tenor del contracte, la formació i el cost reals, la finalitat de la compensació i la seva comunicació, el període de treball, la causa d’extinció i les proves. Abans de formular la dimissió, d’acceptar un descompte salarial, de pactar una devolució o de respondre a un litigi, convé confirmar les fonts oficials més recents i les circumstàncies individuals.
+Aquest article té una finalitat divulgativa i explica de forma general el pacte de període mínim de treball a Taiwan, la devolució de la despesa de formació i de la prestació anticipada i el preavís de dimissió; no és assessorament jurídic per a un assumpte laboral concret. La validesa del pacte i l’abast de la responsabilitat poden variar segons el tipus i el tenor del contracte, la formació i el cost reals, la finalitat de la compensació i la seva comunicació, el període de treball, la causa d’extinció i les proves. Abans de formular la dimissió, d’acceptar un descompte salarial, de pactar una devolució o de respondre a un litigi, convé confirmar les fonts oficials més recents i les circumstàncies individuals.
 
 **Advocada Wei Tseng (曾雋崴)**

@@ -1129,7 +1129,7 @@ export const guidanceOfficeCopy: Record<GuidanceLocale, GuidanceOfficeCopy> = {
     mapLinkLabel: 'Veure al mapa',
     photoAlts: [
       'Sala de recepció de l’oficina de Taipei, Hovering International Law Firm',
-      'Despatx d’advocats a l’oficina de Taipei, Hovering International Law Firm',
+      'Despatx de treball a l’oficina de Taipei, Hovering International Law Firm',
       'Sala de reunions de l’oficina de Taipei, Hovering International Law Firm',
     ],
     officeTitles: {

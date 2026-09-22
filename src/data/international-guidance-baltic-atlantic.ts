@@ -1516,7 +1516,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
     heroColumnsCtaLabel: 'Veure articles',
     servicesDetailLabel: 'Veure detalls',
     servicesAssistanceBefore:
-      'Si encara no té clar a quina àrea pertany el seu assumpte, la pàgina de ',
+      'Si encara no sap a quina àrea pertany el seu assumpte, la pàgina de ',
     servicesAssistanceLinkLabel: 'Contacte',
     servicesAssistanceAfter:
       ' explica com redactar un resum que una advocada o un advocat revisarà.',
@@ -1538,7 +1538,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
       description:
         'Explicació general en català sobre l’abast de Hovering International Law Firm a Taiwan, els idiomes de consulta i el primer contacte.',
       intro:
-        'Hovering International Law Firm acompanya clients de l’estranger, també qui té un vincle amb Taiwan, en assumptes de dret taiwanès: inversió i constitució de societats, litigis civils, matrimoni, família i successions, laboral, penal i propietat intel·lectual. Aquesta part en català l’ajuda a saber quin treball entra en el nostre abast, què convé preparar i com contactar-nos. Són indicacions generals, no assessorament jurídic per al seu propi cas.',
+        'Hovering International Law Firm acompanya clients de l’estranger, també qui té un vincle amb Taiwan, en assumptes de dret taiwanès: inversió i constitució de societats, litigis civils, matrimoni, família i successions, dret laboral, dret penal i propietat intel·lectual. Aquesta part en català l’ajuda a saber quin treball entra en el nostre abast, què convé preparar i com contactar-nos. Són indicacions generals, no assessorament jurídic per al seu propi cas.',
       sections: [
         {
           heading: 'Què fem',
@@ -1550,7 +1550,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'L’idioma de la pàgina i l’idioma de la consulta no són el mateix',
           paragraphs: [
-            'Aquesta pàgina està escrita en català, però la consulta amb una advocada o un advocat es fa únicament en els quatre idiomes de consulta: anglès, xinès (中文), japonès i coreà. Llegir l’orientació en català no vol dir que la conversa amb l’advocada o l’advocat se celebri en català.',
+            'Aquesta pàgina està escrita en català, però la consulta amb una advocada o un advocat es fa únicament en els quatre idiomes de consulta: anglès, xinès (中文), japonès i coreà. Llegir l’orientació en català no vol dir que la conversa amb l’advocada o l’advocat es faci en català.',
             'No prometem intèrpret, no prometem un termini de resposta i no confirmem cites a través d’aquesta pàgina. Si no pot fer servir cap d’aquests quatre idiomes, la pàgina «Contacte» explica com comprovem una forma de comunicar-nos.',
           ],
         },
@@ -1588,7 +1588,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Inversió i constitució de societats a Taiwan',
           paragraphs: [
-            'Acompanyem inversors i empreses estrangeres que constitueixen o gestionen una societat a Taiwan: elecció de la forma societària, preparació i presentació de documents, aportació de capital, banca, valoració del local i requisits propis de determinats sectors. També donem suport a la comptabilitat i a la fiscalitat derivades de constituir i operar a Taiwan.',
+            'Acompanyem inversors i empreses estrangeres que constitueixen o gestionen una societat a Taiwan: elecció de la forma societària, preparació i presentació de documents, aportació de capital, banca, comprovació del local i requisits propis de determinats sectors. També donem suport a la comptabilitat i a la fiscalitat derivades de constituir i operar a Taiwan.',
             'L’ordre i la durada del procés varien segons la forma societària, l’inversor, el sector, el banc i els documents disponibles. Constituir una societat no produeix per si sola un permís de residència (居留) ni un permís de treball (工作許可): són tràmits distints que es valoren segons la situació de cada persona.',
           ],
         },
@@ -1602,7 +1602,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Matrimoni, família i successions',
           paragraphs: [
-            'Atenem divorci (離婚), liquidació de béns, exercici i assumpció de drets i deures respecte de fills menors (未成年子女權利義務之行使或負擔), règim de visites (會面交往) i successions (繼承), també quan les parts o els béns estan en països distints. Els assumptes de família transfronterers solen exigir un examen addicional de documents del registre de domicili (戶籍), de la forma dels documents i del seu valor probatori a Taiwan.',
+            'Atenem divorci (離婚), liquidació de béns, exercici i assumpció de drets i deures respecte dels fills menors (未成年子女權利義務之行使或負擔), règim de visites (會面交往) i successions (繼承), també quan les parts o els béns estan en països distints. Els assumptes de família transfronterers solen exigir un examen addicional de documents del registre de domicili (戶籍), de la forma dels documents i del seu valor probatori a Taiwan.',
             'Com que els assumptes de família solen anar units a terminis i a diversos tràmits en paral·lel, el resum inicial hauria d’indicar la relació entre les parts, el lloc de residència actual i els procediments ja iniciats.',
           ],
         },
@@ -1648,21 +1648,21 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Fundació i estructura',
           paragraphs: [
             'Hovering International Law Firm (昊鼎國際法律事務所) va ser fundat el 2016 per advocats titulats per la National Taiwan University (國立臺灣大學). El nom xinès 昊鼎 uneix el caràcter 昊 («cel ampli») i el caràcter 鼎 («base sòlida»), i expressa l’orientació del despatx des del seu origen.',
-            'Tenim oficines a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) i Pingtung (屏東). L’oficina de Kaohsiung se centra en el govern corporatiu i atén conflictes civils, penals i administratius. L’oficina de Taichung atén construcció, propietat intel·lectual i assumptes relacionats amb Corea i el Japó. L’oficina de Pingtung es va obrir el 2017 per atendre la demanda local.',
+            'Tenim oficines a Taipei (臺北), Kaohsiung (高雄), Taichung (臺中) i Pingtung (屏東). L’oficina de Kaohsiung se centra en el govern corporatiu i atén conflictes civils, penals i administratius. L’oficina de Taichung atén assumptes de construcció, de propietat intel·lectual i assumptes relacionats amb Corea i el Japó. L’oficina de Pingtung es va obrir el 2017 per atendre la clientela de la zona.',
             'A més del treball d’advocacia, el 2020 es va crear Hovering Accounting Office, que ofereix comptabilitat i planificació fiscal a empresaris i a particulars amb patrimoni elevat.',
           ],
         },
         {
           heading: 'Treball amb parts estrangeres',
           paragraphs: [
-            'El treball transfronterer cobreix constitució de societats, visats, registre de marques i patents, avaluació de riscos jurídics i assessorament fiscal empresarial. L’oficina de Taichung atén en particular construcció, propietat intel·lectual i assumptes relacionats amb Corea i el Japó. L’advocada Wei Tseng (曾雋崴) acompanya clients de Corea, del Japó i altres clients internacionals en les àrees anteriors.',
+            'El treball transfronterer cobreix constitució de societats, visats, registre de marques i patents, avaluació de riscos jurídics i assessorament fiscal empresarial. L’oficina de Taichung atén en particular assumptes de construcció, de propietat intel·lectual i assumptes relacionats amb Corea i el Japó. L’advocada Wei Tseng (曾雋崴) acompanya clients de Corea, del Japó i altres clients internacionals en les àrees anteriors.',
             'Si podem o no atendre un assumpte depèn del seu contingut i de l’idioma de la comunicació. Si el seu assumpte entra en les àrees anteriors i es pot parlar en un dels quatre idiomes de consulta, pot enviar un resum perquè una advocada o un advocat el revisi.',
           ],
         },
         {
           heading: 'Quan ens contacta',
           paragraphs: [
-            'Després de rebre el seu resum, una advocada o un advocat revisa el contingut i parla després de l’abast possible, dels documents que encara calen i dels passos següents. Si l’assumpte planteja qüestions comptables o fiscals, el despatx pot treballar de forma integrada amb l’àrea de comptabilitat.',
+            'Després de rebre el seu resum, una advocada o un advocat revisa el contingut i després parla de l’abast possible, dels documents que encara calen i dels passos següents. Si l’assumpte planteja qüestions comptables o fiscals, el despatx pot treballar de forma integrada amb l’àrea de comptabilitat.',
             'El resultat de cada assumpte depèn dels fets i dels documents existents, de manera que no prometem un resultat. Si necessita una resposta concreta per a la seva situació, cal tractar aquest expedient directament amb una advocada o un advocat en un dels quatre idiomes de consulta.',
           ],
         },
@@ -1729,7 +1729,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
           items: [
             'Idioma de la pàgina: aquesta orientació està escrita en català.',
             'Idioma de consulta: la consulta amb una advocada o un advocat es fa únicament en anglès, xinès (中文), japonès i coreà.',
-            'Idioma del seu text: pot escriure el resum en el seu propi idioma, i el text original es guarda tal qual.',
+            'Idioma del seu text: pot escriure el resum en el seu propi idioma, i el text original es conserva tal com està.',
           ],
         },
         {
@@ -1774,7 +1774,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Quin tipus d’assumptes atén aquest despatx?',
           answer:
-            'Atenem sis àrees de pràctica: inversió i constitució de societats a Taiwan, litigis civils i danys, matrimoni, família i successions, conflictes laborals, assumptes penals i propietat intel·lectual. Si un assumpte s’accepta o no es decideix després de revisar-ne el contingut.',
+            'Atenem sis àrees de pràctica: inversió i constitució de societats a Taiwan, litigis civils i danys, matrimoni, família i successions, conflictes laborals, assumptes penals i propietat intel·lectual. Si un assumpte s’accepta o no, es decideix després de revisar-ne el contingut.',
         },
         {
           question: 'Què he de preparar abans de contactar amb el despatx?',
@@ -1784,7 +1784,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Puc consultar en català?',
           answer:
-            'No. Aquesta orientació està escrita en català, però la consulta amb una advocada o un advocat es fa únicament en anglès, xinès (中文), japonès i coreà. Tampoc no prometem intèrpret. La traducció escrita és una altra cosa: el text original que vostè escriu es guarda tal qual i no es tradueix de forma automàtica.',
+            'No. Aquesta orientació està escrita en català, però la consulta amb una advocada o un advocat es fa únicament en anglès, xinès (中文), japonès i coreà. Tampoc no prometem intèrpret. La traducció escrita és una altra cosa: el text original que vostè escriu es conserva tal com està i no es tradueix de forma automàtica.',
         },
         {
           question: 'Què passa si no puc fer servir cap d’aquests quatre idiomes?',
@@ -1794,7 +1794,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
         {
           question: 'Com es tracta el text que escric en català?',
           answer:
-            'El text original que vostè escriu es guarda tal qual i no es tradueix de forma automàtica. Si cal, l’idioma de la comunicació posterior es confirma amb vostè.',
+            'El text original que vostè escriu es conserva tal com està i no es tradueix de forma automàtica. Si cal, l’idioma de la comunicació posterior es confirma amb vostè.',
         },
         {
           question: 'Si ja he enviat la sol·licitud, la consulta ja ha tingut lloc?',
@@ -1838,7 +1838,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
           ],
         },
         {
-          heading: 'El text original es guarda tal qual',
+          heading: 'El text original es conserva tal com està',
           paragraphs: [
             'El seu escrit es guarda exactament com el va redactar i no es tradueix de forma automàtica. Si cal una traducció per tramitar l’assumpte, se’n parla amb vostè per separat.',
             'Com que el text original es guarda, no escrigui en aquesta primera fase dades que encara no calen, com el número de passaport, el número d’identitat o dades d’un compte bancari.',
@@ -1945,7 +1945,7 @@ export const catalanGuidanceContent: GuidanceLocaleContent = {
           heading: 'Fins on el pot orientar un article',
           paragraphs: [
             'Els articles es van escriure com a informació general en el moment de la publicació. Les normes i la seva aplicació poden canviar, i un article no recull totes les circumstàncies del seu cas.',
-            'Per això, no prengui un article com a base per actuar en un assumpte real. Usi’l per entendre el panorama general i parli després del seu expedient amb una advocada o un advocat; aquesta pàgina no és el pas de consulta.',
+            'Per això, no prengui un article com a base per actuar en un assumpte real. Usi’l per entendre el panorama general i parli després del seu expedient amb una advocada o un advocat; aquesta pàgina no és una consulta.',
           ],
         },
       ],

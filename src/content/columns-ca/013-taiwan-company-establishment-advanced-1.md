@@ -49,7 +49,7 @@ Com que la revisió del pla d’inversió també requereix temps,
 
 redacti el pla d’inversió i cerqui l’adreça de registre de la societat alhora.
 
-Segons l’article 9 de l’Llei d’inversió d’estrangers (外國人投資條例), l’aportació aprovada ha d’arribar per complet dins del termini fixat per l’autoritat competent (核定期限), i aquest termini s’ha de confirmar en el document d’aprovació de cada cas (en la pràctica sol fixar-se al voltant d’1 any).
+Segons l’article 9 de la Llei d’inversió d’estrangers (外國人投資條例), l’aportació aprovada ha d’arribar per complet dins del termini fixat per l’autoritat competent (核定期限), i aquest termini s’ha de confirmar en el document d’aprovació de cada cas (en la pràctica sol fixar-se al voltant d’1 any).
 
 Dins d’aquest termini, un cop trobada l’adreça de la societat i signat el contracte d’arrendament,
 
@@ -75,7 +75,7 @@ però l’Administració d’Immigració està molt concorreguda, de manera que 
 
 El comitè de revisió del Ministeri d’Economia examina els antecedents de l’inversor,
 
-però l’examen no es limita a un únic criteri formal: cada sol·licitud es valora a partir dels seus documents.
+però l’examen no és excessivament estricte: cada sol·licitud es valora a partir dels seus documents.
 
 Pot esmentar experiències laborals diverses, inclòs el treball a temps parcial,
 
@@ -107,19 +107,19 @@ si és necessari, pot proposar d’atorgar el contracte d’arrendament en escri
 
 ​
 
-**5. En constituir la societat, pot arrendar un espai comercial d’oficines?**
+**5. En constituir la societat, pot arrendar un local d’oficines ordinari?**
 
 Depèn dels rams d’activitat de la societat.
 
-Per exemple, si el ram d’activitat és la restauració i pretén arrendar un espai comercial d’oficines, l’obertura del compte bancari serà molt difícil.
+Per exemple, si el ram d’activitat és la restauració i pretén arrendar un local d’oficines ordinari, l’obertura del compte bancari serà molt difícil.
 
 Com s’ha indicat, el banc revisa el contracte d’arrendament i inspecciona in situ l’adreça de la societat.
 
-A més, en el registre final de la societat el govern municipal també exigeix que l’adreça registrada se situï en una zona on sigui possible l’explotació de restauració,
+A més, en el registre final de la societat el govern municipal també exigeix que l’adreça registrada se situï en una zona on es pugui exercir l’activitat de restauració,
 
-i si es tracta d’un espai comercial d’oficines, el registre de la societat no és possible.
+i si es tracta d’un local d’oficines ordinari, el registre de la societat no és possible.
 
-Per exemple, si el ram d’activitat és dels que es poden explotar en un espai comercial d’oficines, com la publicitat o el comerç a l’engròs, es pot constituir en un espai comercial d’oficines.
+Per exemple, si el ram d’activitat és dels que es poden exercir en un local d’oficines ordinari, com la publicitat o el comerç a l’engròs, es pot constituir en un local d’oficines ordinari.
 
 Confirmi-ho abans de signar el contracte d’arrendament.
 

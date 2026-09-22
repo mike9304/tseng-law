@@ -37,7 +37,7 @@ Abans de decidir l’estructura d’entrada, la seu pot aclarir internament:
 | Ofertes i comandes | Qui confirma de forma definitiva el preu i el termini, i fins on arriba l’autoritat del responsable a Taiwan? |
 | Mercaderia i inventari | Qui importa, posseeix i gestiona l’inventari, i tramita devolucions i substitucions? |
 | Personal | Viatgen empleats de la seu, es contracta a Taiwan o s’encarrega a un proveïdor extern? |
-| Instal·lació i suport tècnic | Qui deu el suport al client i atén els problemes del treball in situ? |
+| Instal·lació i suport tècnic | Qui està obligat a prestar el suport al client i atén els problemes del treball in situ? |
 | Cobraments i costos | Qui factura i cobra, i com es liquiden els costos entre la seu i l’organització a Taiwan? |
 | Qualitat i controvèrsies | Qui confirma el resultat de la inspecció i rep reclamacions de defectes o danys? |
 
@@ -73,7 +73,7 @@ Quan una societat estrangera constitueix una filial taiwanesa, en principi es re
 
 En canvi, en constituir una sucursal taiwanesa d’una societat estrangera ordinària, en principi no s’exigeix autorització d’inversió del Departament de Revisió d’Inversions; el Departament de Comerç del Ministeri d’Economia tramita el registre de sucursal i la determinació de capital connexa. Continuen sent necessaris la reserva prèvia del nom, la tramesa de capital d’explotació, la verificació de capital i el registre fiscal; el calendari sol ser més curt.
 
-El que precedeix és una proposta de disseny contractual. Disposar d’un formulari concret no fa lícita l’operació ni evita controvèrsies.
+El que precedeix és una proposta de disseny contractual. Tenir una forma jurídica concreta no fa lícita l’operació ni evita controvèrsies.
 
 ## 5. El registre societari i el treball lícit d’un enginyer no són el mateix
 

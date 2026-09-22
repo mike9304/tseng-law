@@ -41,7 +41,7 @@ L’article 284 del Codi penal regula les lesions per imprudència (過失傷害
 
 En matèria d’indemnització civil per danys (損害賠償), segons l’article 197 del Codi civil de Taiwan (民法) no es pot reclamar un cop transcorreguts 2 anys des del dia en què es van conèixer el dany i l’obligat a indemnitzar, o 10 anys des del dia de l’acte il·lícit. Quins fets influeixen en la prescripció (消滅時效) s’ha d’examinar per separat.
 
-Qui sofreix un dany per un delicte pot, segons l’article 487 del Codi de procediment penal, interposar una acció civil acumulada al procés penal (刑事附帶民事訴訟). Mentre el procés penal segueix en tràmit, aquesta acció es pot interposar fins abans de la conclusió dels al·legats orals (言詞辯論終結) de la segona instància, segons l’article 488 del Codi de procediment penal, però no es pot interposar després de la conclusió dels al·legats orals de la primera instància i abans d’interposar el recurs. En general es pot evitar el pagament de costes processals (裁判費) independents, però no tots els resultats conclouen sense cost. Per exemple, si l’assumpte penal es desestima i, a petició del demandant, es remet al tribunal civil, segons l’article 503 del Codi de procediment penal es poden imposar les costes, i també s’han de comprovar les normes de tramesa i procediment de l’article 504.
+Qui sofreix un dany per un delicte pot, segons l’article 487 del Codi de procediment penal, interposar una acció civil acumulada al procés penal (刑事附帶民事訴訟). Mentre el procés penal segueix en tràmit, aquesta acció es pot interposar fins abans de la conclusió dels al·legats orals (言詞辯論終結) de la segona instància, segons l’article 488 del Codi de procediment penal, però no es pot interposar després de la conclusió dels al·legats orals de la primera instància i abans d’interposar el recurs. En general es pot evitar el pagament de taxa judicial (裁判費) independents, però no tots els resultats conclouen sense cost. Per exemple, si l’assumpte penal es desestima i, a petició del demandant, es remet al tribunal civil, segons l’article 503 del Codi de procediment penal es pot imposar la taxa judicial, i també s’han de comprovar les normes de tramesa i procediment de l’article 504.
 
 L’elecció varia segons la interrupció de la prescripció (時效中斷), el conjunt de demandats, les proves, l’assegurança i la competència. Per això no hi ha un procediment que sigui preferible en tots els assumptes.
 
@@ -49,7 +49,7 @@ L’elecció varia segons la interrupció de la prescripció (時效中斷), el 
 
 La responsabilitat penal només es pot apreciar quan es reconeix la infracció del deure de cura de cadascú i el nexe causal entre aquesta infracció i les lesions de l’altra part. El mer fet que ambdues parts hagin tingut culpa no fa néixer automàticament la responsabilitat per lesions per imprudència.
 
-En l’àmbit civil, segons l’article 217 del Codi civil, si el perjudicat té culpa que va contribuir a causar o agreujar el dany (與有過失), el tribunal pot reduir o eximir la indemnització. Per exemple, si el dany reconegut en dòlar de Taiwan (新臺幣, TWD) és 1.000.000 TWD i la culpa del perjudicat es valora en 50 %, l’import es pot reduir a 500.000 TWD abans d’altres ajustos.
+En l’àmbit civil, segons l’article 217 del Codi civil, si el perjudicat té culpa que va contribuir a causar o agreujar el dany (與有過失), el tribunal pot reduir la indemnització o dispensar-ne el pagament. Per exemple, si el dany reconegut en dòlars taiwanesos (新臺幣, TWD) és 1.000.000 TWD i la culpa del perjudicat es valora en 50 %, l’import es pot reduir a 500.000 TWD abans d’altres ajustos.
 
 El peritatge (鑑定) o la taula d’anàlisi preliminar poden ser materials importants, però no vinculen el tribunal de forma mecànica. El tribunal examina el conjunt de les proves, incloses declaracions, imatges i l’estat dels vehicles.
 
@@ -57,7 +57,7 @@ El peritatge (鑑定) o la taula d’anàlisi preliminar poden ser materials imp
 
 En el document de transacció (和解書) convé individualitzar la data, el lloc i les parts de l’accident, i consignar l’import i el moment del pagament, el tractament de les prestacions de l’assegurança, les reclamacions incloses i les que es reserven. També s’han de fixar amb claredat el tractament futur, les lesions descobertes més tard, l’entrega de documents com el certificat mèdic (診斷證明書) i la relació entre el pagament i el desistiment de la querella.
 
-La transacció (和解) de l’article 736 del Codi civil és un contracte en què les parts cedeixen recíprocament per posar fi a un litigi o evitar-lo. Segons l’article 737 del Codi civil, l’abast en què s’extingeixen drets també es valora només dins d’allò que es va renunciar en el document de transacció. Per això no s’ha d’afirmar, sense examinar el text, que desapareixen totes les reclamacions futures.
+La transacció (和解) de l’article 736 del Codi civil és un contracte en què les parts es fan concessions recíproques per posar fi a un litigi o evitar-lo. Segons l’article 737 del Codi civil, l’abast en què s’extingeixen drets també es valora només dins d’allò que es va renunciar en el document de transacció. Per això no s’ha d’afirmar, sense examinar el text, que desapareixen totes les reclamacions futures.
 
 Si es tracta d’un delicte perseguible a instància de part, segons l’article 238 del Codi de procediment penal la querella es pot desistir fins abans de la conclusió dels al·legats orals de la primera instància, i un cop desistida no es pot presentar de nou. Tanmateix, en un delicte que no és perseguible a instància de part, l’acusació no acaba automàticament per una transacció privada, i haver transigit no obliga sempre a desistir de la querella.
 
@@ -101,9 +101,9 @@ La reclamació basada en l’article 184 del Codi civil pressuposa una lesió il
 
 Conservi rebuts (收據), certificats mèdics i historial clínic, i organitzi juntament amb ells la necessitat mèdica de cada tractament i el seu nexe causal amb l’accident. Les dades d’un tractament que continua poden complementar la prova segons el calendari processal del tribunal i el contingut de la reclamació ja presentada, però no es garanteix que totes les dades presentades tard o tota ampliació de la reclamació siguin admeses o permeses.
 
-S’ha de distingir l’afegir dades mèdiques del modificar o augmentar l’import reclamat. Després d’interposar una acció civil acumulada al procés penal, el mer fet de presentar més rebuts mèdics no genera automàticament costes processals.
+S’ha de distingir l’afegir dades mèdiques del modificar o augmentar l’import reclamat. Després d’interposar una acció civil acumulada al procés penal, el mer fet de presentar més rebuts mèdics no genera automàticament taxa judicial.
 
-Tanmateix, segons l’article 504 del Codi de procediment penal, un cop tramès l’assumpte a la secció civil, modificar, afegir o ampliar la reclamació més enllà de l’abast anterior a la tramesa pot plantejar la qüestió de les costes sobre la part excedida. La fase de tramesa, el moment de presentació i l’abast de la reclamació s’han de comprovar en cada assumpte.
+Tanmateix, segons l’article 504 del Codi de procediment penal, un cop tramès l’assumpte a la secció civil, modificar, afegir o ampliar la reclamació més enllà de l’abast anterior a la tramesa pot plantejar la qüestió de la taxa judicial sobre la part excedida. La fase de tramesa, el moment de presentació i l’abast de la reclamació s’han de comprovar en cada assumpte.
 
 ## 9. Amb què es proven les despeses de cura professional i les de cura per familiars?
 
@@ -139,13 +139,13 @@ Els rebuts, els registres de tarifa, els registres d’itinerari i les dades cl�
 
 La pèrdua d’ingressos s’ha de provar amb dades que, per lesions relacionades amb l’accident, el treball va ser totalment o parcialment impossible durant el període de recuperació i que, com a resultat, hi va haver una reducció real d’ingressos. El certificat mèdic o la recomanació de repòs són un punt de partida important, però per si sols no basten perquè es reconegui la reclamació.
 
-Convé organitzar junts l’historial clínic, els registres d’assistència o de permís, les dades de salari i impostos i la confirmació de l’ocupador. El treballador autònom pot presentar dades acordes amb la forma de la seva activitat, com dades de vendes, registres d’operacions i declaracions fiscals.
+Convé organitzar conjuntament l’historial clínic, els registres d’assistència o de permís, les dades de salari i impostos i la confirmació de l’ocupador. El treballador autònom pot presentar dades acordes amb la forma de la seva activitat, com dades de vendes, registres d’operacions i declaracions fiscals.
 
 La circumstància d’haver continuat treballant o d’haver percebut el salari sense variació és rellevant per valorar la pèrdua d’ingressos del període de recuperació, però aquest fet per si sol no decideix automàticament la qüestió del dany per disminució de la capacitat laboral. Aquesta circumstància tampoc no és fonament autònom per valorar el dany per disminució de la capacitat laboral. El dany per disminució de la capacitat laboral s’examina per separat a la pregunta 12.
 
 ## 12. Com es prova el dany per disminució de la capacitat laboral?
 
-El dany per disminució de la capacitat laboral es distingeix dels ingressos realment reduïts durant el període de recuperació de la pregunta 11. Segons els articles 193 i 216 del Codi civil s’examinen junts el nexe causal amb l’accident, l’alteració funcional persistent (持續功能障礙), la professió i les aptituds del perjudicat, els ingressos que habitualment es poden esperar i el fonament i la prova relatius al període de capacitat laboral.
+El dany per disminució de la capacitat laboral es distingeix dels ingressos realment reduïts durant el període de recuperació de la pregunta 11. Segons els articles 193 i 216 del Codi civil es valoren conjuntament el nexe causal amb l’accident, l’alteració funcional persistent (持續功能障礙), la professió i les aptituds del perjudicat, els ingressos que habitualment es poden esperar i el fonament i la prova relatius al període de capacitat laboral.
 
 Que el salari actual es mantingui sense variació no exclou automàticament la reclamació. A la inversa, l’import del dany tampoc no es fixa de forma mecànica només amb el percentatge de discapacitat o amb el salari actual.
 
@@ -157,7 +157,7 @@ Quan el càlcul es fa en un capital únic, es pot considerar la deducció d’in
 
 La indemnització per dany moral per perjudicis no patrimonials es valora fixant un import adequat quan existeix una lesió il·lícita del cos o de la salut, segons l’article 195 del Codi civil.
 
-El tribunal examina les circumstàncies de cada assumpte valorant en conjunt el contingut de les lesions i del tractament, els efectes persistents, el sofriment i la repercussió en la vida, l’edat i la condició, les circumstàncies socioeconòmiques i les proves de les parts. Per això és difícil anticipar el resultat només a partir d’un interval tipificat.
+El tribunal examina les circumstàncies de cada assumpte valorant en conjunt el contingut de les lesions i del tractament, els efectes persistents, el sofriment i la repercussió en la vida, l’edat i la condició, les circumstàncies socioeconòmiques i les proves de les parts. Per això cap interval fix no determina el resultat.
 
 ## 14. Si l’accident ocorre durant el treball, es pot exigir també responsabilitat civil a l’ocupador?
 
@@ -263,7 +263,7 @@ Les lesions per imprudència i les lesions greus per imprudència són un delict
 
 ​
 
-En la mort per imprudència no és possible desistir de la querella; no obstant això, si es transigeix amb la família de l’altra part, el tribunal pot alleugerir la pena.
+En la mort per imprudència no és possible desistir de la querella; no obstant això, si es transigeix amb la família de l’altra part, el tribunal pot atenuar la pena.
 
 ​
 

@@ -53,7 +53,7 @@ ei maksa palka (工資) õigel ajal,
 
 ei maksa ületunnitasu (加班費)
 
-või ei liida töötajat tööliskindlustusse (勞工保險) või riiklikku ravikindlustusse (健保).
+või ei liida töötajat Taiwani tööliskindlustusse (勞工保險) ega Taiwani riiklikku ravikindlustusse (健保).
 
 Sellistel juhtudel peab tööandja maksma lahkumishüvitist ka siis, kui töötaja ise töölepingu lõpetab.
 

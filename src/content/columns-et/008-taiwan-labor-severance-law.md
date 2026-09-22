@@ -84,7 +84,7 @@ ega tohi langeda äriühingu kavatsuse ohvriks.
 
 Üks käsitletud juhtum näitab, miks tõendid võivad osutuda oluliseks.
 
-On tuntud äriühing A, millel on filiaalid kogu Taiwanis.
+Äriühing A on tuntud ja tal on filiaalid kogu Taiwanis.
 
 Mingil põhjusel vahetus juhtkond,
 

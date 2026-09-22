@@ -13,7 +13,7 @@ featured_image: "../images/005-taiwan-company-establishment-advanced-2/featured-
 
 ![Kaanepilt](../images/005-taiwan-company-establishment-advanced-2/featured-01.jpg)
 
-Kui olete lugenud [Äriühingu asutamise alused Taiwanis](/et/columns/taiwan-company-establishment-basics) ja [Äriühingu asutamine Taiwanis – süvendav osa 1](/et/columns/taiwan-company-establishment-advanced-1), jätkab see süvendav osa 2 aluseid ja eelmist osa (公司設立).
+Kui olete lugenud [Äriühingu asutamise alused Taiwanis](/et/columns/taiwan-company-establishment-basics) ja [Äriühingu asutamine Taiwanis – süvendav osa 1](/et/columns/taiwan-company-establishment-advanced-1), jätkab see süvendav osa 2 neid. Teemaks on äriühingu asutamine (公司設立).
 
 ​
 
@@ -29,7 +29,7 @@ Järgmised küsimused ja vastused on mõeldud neile, kes kaaluvad äriühingu as
 
 Korea pangad (銀行) nõuavad tavaliselt, et investor külastaks **isiklikult** panka Koreas ja kannaks vahendid oma nimele olevalt kontolt.
 
-Ülekanne internetipanga kaudu või lähedase kaudu (匯款) ei ole võimalik.
+Ülekanne internetipanga kaudu või lähedase kaudu (匯款) ei ole lubatud.
 
 Lisaks peab isik, kellel on Korea kodakondsus ja kes asutab välismaise juriidilise isiku või omandab osaluse, Korea valuutareeglite järgi esitama „välismaise otseinvesteeringu teate“. Teade tuleb registreerida hetkel, mil kapital kantakse Taiwani juriidilisele isikule (台灣法人); kui see jääb tegemata, võivad järgneda valuutareeglite rikkumisest tulenevad sanktsioonid.
 
@@ -45,7 +45,7 @@ Kui tegemist on näiteks Taiwanis saadud palgatuluga, tuleb esitada selle palgat
 
 Kui tegemist on dividendide ja kasumiga investeeringust Taiwani ettevõttesse, tuleb esitada nende dividendide ja kasumi kinnipidamistõendi koopia (股息和紅利的扣繳憑單影本).
 
-Kui ülekanne tehakse välismaisest pangast, ei ole vahendite päritolu dokumente vaja lisada.
+Kui vahendid kantakse üle Korea pangakontolt, ei ole vahendite päritolu dokumente vaja lisada.
 
 **​**
 
@@ -77,7 +77,7 @@ Vt Taiwani Tööministeeriumi (勞動部) veebisaiti: <https://ezworktaiwan.wda.
 
 ​
 
-Võite saata küsimuse kontaktvormiga; viivitamatut vastust ei tõotata.
+Võite saata küsimuse kontaktvormiga; viivitamatut vastust ei lubata.
 
 ---
 

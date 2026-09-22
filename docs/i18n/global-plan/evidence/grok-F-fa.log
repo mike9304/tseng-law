@@ -1,0 +1,149 @@
+WO-F-fa — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-fa-20260922
+date: 2026-09-22
+scope: Persian columns 001–018, guidance pack fa strings, llms notice. No commit.
+
+## Rows applied
+
+Part a (fa-a.md), except the skips and modifications below:
+a#1 erhebt → «چه اطلاعاتی را جمع‌آوری می‌کند» (ACCEPTED wording, privacy description).
+a#2 نمایانی → آگهی (llms discovery notice).
+a#3 نقشهای → نقشه‌ای, and صفحه‌های / رتبه‌ای / توصیه‌ای / جست‌وجو / نمی‌دهد in the same notice.
+a#4 پروندهٔ llms.txt → فایل llms.txt.
+a#5 004 Korea-as-the-reader sentence → home-country outbound rules; Korea kept as a labelled example later in the article (R2).
+a#6 008 closing: severance only where the Labor Standards Act provides it (economic dismissal); voluntary resignation does not create it; payment is not guaranteed. Two existing lines, not merged.
+a#8 ZWNJ on می‌ / نمی‌, ه‌ای / ها, and compounds in the pack (footer, titles, FAQ, privacy, llms) and column footers.
+a#9 رونوشت → کپی (button and confirmation).
+a#10 انبار شیء → مخزن.
+a#11 خدمت نامه‌ای → خدمت رایانامه‌ای.
+a#13 missing که after توضیح می‌دهد.
+a#14 footer: «این متن نظر حقوقی دربارهٔ پرونده‌ای مشخص نیست».
+a#15 آیین‌مند → تکلیف ناشی از روند رسیدگی.
+a#16 bio subject «او نمایندگی یک دانشجوی کره‌ای…». TWD 1.57M left byte-identical.
+a#17 سودبر → مجاز به فعالیت انتفاعی نیست (FAQ and body).
+a#18 به‌حساب شرکت خارجی → به نام شرکت خارجی.
+a#19 نقض امانت (背信) → خیانت در امانت (背信).
+a#20 حکم کردن for “assess” → سنجید / ارزیابی کرد / نتیجه گرفت / احراز کرد (002, 003, 004). Court «حکم می‌شود» left where it is an award.
+a#21–22 003 Q16 and the closing “many cases” sentence, first person removed inside the same blocks.
+a#24 توقیف احتیاطی → تأمین خواسته.
+a#25 ساختار تضمین بدون تقصیر → ساختار جبران بدون اثبات تقصیر.
+a#27 1/3 → یک‌سوم in 001 (2) and 005 (1). Checker passed.
+a#28 005 registration-documents sentence repaired.
+a#29 A/B → الف / ب.
+a#30 کیفر where it is an administrative fine (罰鍰): 006 «جریمه», 007 «جریمهٔ اداری». Criminal کیفر / تعلیق اجرا (緩刑) in 003 and 008 left.
+a#31 عماد → اساس طلاق با حکم دادگاه، قطعیت رأی.
+a#32 شرکت‌های تایوانی بد → شرکت‌های بی‌ملاحظه در تایوان.
+a#33 OOO → [نام] (R15 bracketed placeholder).
+
+Part b: every P1/P2 row applied, with the digit/year modifications below.
+b#1 personal-training session, not a solo workout.
+b#2 處 fine calque → مشمول جریمهٔ اداری … شود.
+b#3 safety step vs document cure, subject restored.
+b#4 ordinary office space vs shop; restaurant registration may be refused. Section 4 storefront (مغازه) left — that one is a shop lease in the English.
+b#5 فروگذاشتن (omit) → در نظر گرفت.
+b#6 處 reimbursement, kept under نمی‌تواند: «آن را مشمول بازگرداندن کند» (the positive «باید بازگردانده شود» would have flipped the negation).
+b#7 اقامتگاه معتاد → اقامتگاه معمول in 016 (2) and the same calque in 007 (2).
+b#8 信託 → تراست, including سند تراست and the checklist word. 背信 stays خیانت در امانت, not تراست.
+b#9 男大生 headlines → دانشجوی مرد / دانشجوی مرد کره‌ای.
+b#10 امر کرد → محکوم کرد; دلار جدید تایوان on those judgment lines.
+b#11 داوری نامساعد → رأی را به زیان یکی از طرف‌ها ندهد. Same assess-calque on 012’s heading and 016/017 «داوری کرد».
+b#13 and the records sweep: مواد → مدارک where it means records (010, 011 PIF, 014 evidence, 016 evidence, 017, 018 confidential materials). Statute articles («مواد 1138») and physical «مواد و تجهیزات» left.
+b#15 word order: تازه‌ترین مدارک کامل.
+b#16 شکل فرآورده.
+b#17 جوهر تبلیغ → در ماهیت، تبلیغ.
+b#18 حکم به مشروعیت / حکم یکسانی → تأیید قانونی بودن / پاسخ یکسانی.
+b#19 خطر قابل توجهی.
+b#20 نگریست → با هم در نظر گرفت, the fact list kept.
+b#21 مادهٔ ثانوی / تکمیلی → منبع.
+b#22–23 Latin A/B → «الف» / «ب»; دچار آسیب شد.
+b#24 013 bank sentence and 015 «این کلیت مطلب است» de-blogged inside the same lines. 013 «موافقم» likewise.
+b#25 表 → برگهٔ اطلاعات پایهٔ شمارهٔ یکسان.
+b#26 the stranded «اجاره» completed inside that line.
+b#27 کیفر پایان زودهنگام → وجه التزام.
+b#28 می‌آموزاند → چه مهارتی قرار است آموخته شود.
+b#29 جواز فعالیت → the address-use enquiry, not an operating licence.
+b#30 وارثاً → وارثی که می‌خواهد ارث را رد کند.
+b#31 1/3 → یک‌سوم (016, FAQ and body). Checker passed.
+b#32 نافی جهل → بررسی دقیق پیش از معامله و بستن معامله.
+b#33 نهادهای صالح … رسیدگی می‌کنند.
+b#34 liens, leases, and financing — the doubled «تأمین مالی» removed; حقوق وثیقه kept once.
+b#35 داده → داده‌ها (handover of data).
+b#36 قبول → خرید / خریدار.
+b#37 می‌پردازد “handles” → رسیدگی می‌کند (returns and field work).
+b#38 ثبت در بازار نوظهور.
+b#39 پیشگیری از نزاع را وعده نمی‌دهد.
+b#40 «هنوز تعیین نشده».
+b#41 footer ZWNJ (with a#8).
+
+Also applied from the rulebook, not only the quoted row:
+- R12 role lines: English parentheticals dropped (Managing Attorney, Taiwan Attorney, Paralegal, Korea Operations Manager, Partner CPA). Ministry of Education, Legal Affairs Division → بخش امور حقوقی وزارت آموزش. Legal Aid Foundation, Taichung Branch → شعبهٔ تایچونگ بنیاد کمک حقوقی. Firm names kept in Latin.
+- R13 Minguo: «سال 109/112 تقویم جمهوری چین (民國…年)» on 003 link labels (3), 007 judgment (body, FAQ, two link labels), 010 case caption. No Gregorian year added.
+- R2 on 005 Q1: Korea is a labelled example of home-country remittance and FX reporting, not the reader’s own rule.
+- R7 first person in 003 Q16–Q20, 008 greeting, 010 «شرکت کردم», 013. Blank ZWSP lines kept (block count).
+- R9 emergency numbers were already explicit («در تایوان … 119 / 110 / 112»). Not rewritten.
+- Register شما was already consistent. No Arabic ي/ك in the fa text.
+
+## Rows skipped
+
+- a#7 Hangul frontmatter url in 008 and 009. R16 / ACCEPTED: canonical source metadata, not rendered. Not edited.
+- a#12 reformat of «TWD 1.57M» in the team bio. ACCEPTED / test pin. The figure is still the exact bytes TWD 1.57M. The missing subject on that sentence was applied (a#16).
+- b#14 file-wide switch to Persian digits. See modifications. Amounts stay Western comma-thousands (500,000 / 1,579,589 / 10,000 / 25,000,000 / 30,000,000 / 100,000,000).
+- Adding a statement of Iranian law, or of any reader-country rule. Not done.
+
+## Rows modified (not the reviewer’s wording verbatim)
+
+- a#1 uses ACCEPTED «چه اطلاعاتی را جمع‌آوری می‌کند», not the reviewer’s «چه داده‌هایی گرد می‌آورد».
+- a#23 formula is «3 × 30 × 1,000 = 90,000 دلار جدید تایوان». Digits and comma grouping kept (R14). The reviewer’s Persian digits and U+066C thousands separator were not used; the checker’s grouped-integer parser strips only “.”, “,”, and spaces.
+- a#26, b#12, and the Minguo pattern: ROC calendar gloss (R13), no added «۲۰۲۰» / «2020». Western digits kept so each file stays one digit system.
+- a#33 uses «[نام]», not a row of dots. R15.
+- b#6 stays inside the employer’s «نمی‌تواند», so the amount is not stated as something that must be repaid.
+
+## Systemic patterns and how many instances changed
+
+- ZWNJ on footer labels می‌پذیریم / بین‌المللی / تعیین می‌شود: 31 occurrences across 16 column files (006 and 018 do not carry those three labels). Pack: the meta/footer/FAQ/privacy/llms strings listed in a#8, plus the lawyers and team titles.
+- حکم کردن = assess: 7 (002 ×2, 003 ×2, 004 ×3).
+- مواد = records, not statute articles: 002, 010 (3), 011 (PIF and “complete records”), 014 (evidence list, about 16 phrases), 016 (evidence, about 12), 017 (3), 018 (4 phrases, the heading included). «مواد 1138/1087/1144» and «مواد و تجهیزات» not touched.
+- 處 as محل: 2 (011 fine, 014 reimbursement).
+- habitual معتاد: 4 (016 ×2, 007 ×2).
+- 信託 امانت → تراست: 6 (016 ×4, 007 ×2). 背信 is a separate one-word fix (a#19).
+- یک‌سوم: 5 (001 ×2, 005 ×1, 016 ×2). Checker number counts still match.
+- Minguo labels: 8 sites (003 ×3, 007 ×4, 010 ×1).
+- Blog voice sentences rewritten in place: 003 (5), 005 (question + opening, Korea framed), 006 (1), 008 (greeting, topic line, two closing lines), 010 (narrator), 013 (2), 015 (1). 009: only the footer ZWNJ. Its short lines are already formal, and the blank lines are blocks.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-fa --lang fa 2>&1 | tail -8
+forbidden      PASS   
+hanzi          PASS   han=56
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "[변호사 검수 필요]" src/content/columns-fa src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      23
+```
+
+No test expected-string was updated. The 160 files / 3202 tests passed against the new Persian, including the pinned «TWD 1.57M».
+
+## Where I did not follow the reviewer
+
+- Do not add a Gregorian year beside a Minguo year. a#26 and b#12 suggest «(۲۰۲۰)». That is a new number. R13 allows the ROC label and the Chinese gloss, and forbids the extra Gregorian digit. 109 and 112 stay once in running text; 民國109年 / 民國112年 sits in the gloss, which the checker collapses as a hanzi duplicate.
+- Do not reformat «TWD 1.57M» (a#12). The test pins those bytes. «۱٫۵۷ میلیون دلار جدید تایوان» would fail that pin and would add a magnitude word the checker may multiply.
+- Do not replace the Hangul `url:` (a#7). It is source metadata. The visible title is already Persian.
+- Do not switch running numbers to Persian digits (a#23, b#14). R14’s fa style is comma thousands. Persian digits are allowed only if a whole file is consistent, and the reviewer’s ۱٬ grouping is not what the checker parses. Western comma-thousands were already consistent; I kept them. The formula’s asterisk and bare «TWD» were still rewritten.
+- «من، ……،» is not the R15 placeholder. The forced letter now says «من، [نام]،».
+- 009 did not get a prose rewrite. There is no first-person narrator and no comment-box line. The blank lines are the block structure the checker counts.

@@ -1515,8 +1515,8 @@ export const guidanceFooterCopy: Record<GuidanceLocale, GuidanceFooterCopy> = {
     blogLabel: 'وبلاگ',
     websiteLabel: 'وب‌سایت رسمی',
     sitemapLabel: 'نقشهٔ سایت',
-    copyEmailLabel: 'رونوشت نشانی رایانامه',
-    emailCopiedMessage: 'نشانی رایانامه رونوشت شد.',
+    copyEmailLabel: 'کپی نشانی رایانامه',
+    emailCopiedMessage: 'نشانی رایانامه کپی شد.',
     officialConsultationEmailLabel: 'رایانامهٔ رسمی مشاوره',
   },
   my: {

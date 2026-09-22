@@ -938,7 +938,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
   },
   fa: {
     label: 'تیم',
-    title: 'تیم بین المللی Hovering',
+    title: 'تیم بین‌المللی Hovering',
     description:
       'نمایهٔ وکلا، مدیریت عملیات و حسابدار شریک Hovering.',
     representativeTitle: 'وکیلِ مدیر',
@@ -957,11 +957,11 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     practiceLabel: 'زمینه‌های اصلی',
     consultationLanguagesLabel: 'زبان‌های مشاوره',
     roles: {
-      'tseng-junwei': 'وکیلِ مدیر در تایوان (Managing Attorney)',
-      'chang-rongxuan': 'وکیل در تایوان (Taiwan Attorney)',
-      'chang-fangyu': 'دستیار حقوقی (Paralegal)',
-      'son-jungmin': 'مدیر عملیات کره (Korea Operations Manager)',
-      'huang-shengping': 'حسابدار رسمی شریک (Partner CPA)',
+      'tseng-junwei': 'وکیلِ مدیر در تایوان',
+      'chang-rongxuan': 'وکیل در تایوان',
+      'chang-fangyu': 'دستیار حقوقی',
+      'son-jungmin': 'مدیر عملیات کره',
+      'huang-shengping': 'حسابدار رسمی شریک',
     },
   },
   my: {
@@ -3657,7 +3657,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'دفتر پرونده‌های شرکت‌ها و اشخاص را در تایوان می‌پذیرد و به انگلیسی، ژاپنی، کره‌ای و چینی کار می‌کند.',
-        'نمایندگی دانشجوی کره‌ای را در دعوای خسارت ناشی از آسیب در باشگاه ورزشی بر عهده داشت و حکم بدوی به پرداخت TWD 1.57M صادر شد.',
+        'او نمایندگی یک دانشجوی کره‌ای را در دعوای خسارت ناشی از آسیب در باشگاه ورزشی بر عهده داشت و حکم بدوی به پرداخت TWD 1.57M صادر شد.',
       ],
       education: [
         'کارشناسی ارشد (M.S.)، Institute of Finance, National Taiwan University',
@@ -3667,17 +3667,17 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'شعبهٔ تایچونگ بنیاد کمک حقوقی',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'پیش‌تر در Ministry of Education, Legal Affairs Division کار کرده و بر اختلافات اداری و مدنی متمرکز بوده است.',
+        'پیش‌تر در بخش امور حقوقی وزارت آموزش کار کرده و بر اختلافات اداری و مدنی متمرکز بوده است.',
         'در پرونده‌های مربوط به دانشگاه‌ها، حقوق اعضای هیئت علمی و شکایت اداری سابقه دارد.',
       ],
       education: ['کارشناسی حقوق (LL.B.)، National Chung Hsing University'],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'بخش امور حقوقی وزارت آموزش',
         'وکیل، Hovering International Law Firm',
       ],
     },

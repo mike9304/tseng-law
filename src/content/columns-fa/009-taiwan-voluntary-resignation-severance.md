@@ -96,6 +96,6 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 ---
 
 > بیشتر بخوانید:
-> - [محدودهٔ کار و هزینه چگونه تعیین میشود](/fa/pricing)
-> - [تیم بین المللی Hovering](/fa/lawyers)
-> - [اموری که میپذیریم](/fa/services)
+> - [محدودهٔ کار و هزینه چگونه تعیین می‌شود](/fa/pricing)
+> - [تیم بین‌المللی Hovering](/fa/lawyers)
+> - [اموری که می‌پذیریم](/fa/services)

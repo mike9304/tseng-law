@@ -1,0 +1,98 @@
+WO-F-uk r3 — Grok 4.7 fix lane
+workspace: /Users/son7/Projects/tseng-law-fix-uk-r3
+date: 2026-09-23
+
+## Rows
+
+Numbered findings: uk-a 28, uk-b 23 (51). No P3 rows in either review.
+
+Applied: 47 numbered rows, some with the adaptations below.
+Skipped in full: 4 numbered rows (uk-a 12, uk-a 14, uk-a 28, uk-b 16). The space-separator half of uk-b 23 was not applied; the double currency name in that row was.
+
+No test file was edited. No pinned Ukrainian expectation in `src/lib/__tests__/guidance-*uk*.test.ts` matched a string that changed. `GUIDANCE_LLMS_NOTICES.uk` was not edited: `consultationNotice` is still the FAQ sentence, `discoveryNotice` still contains the literal `llms.txt`, and `confidentialNotice` is still a substring of a privacy paragraph that was not rewritten. "TWD 1.57M" was not touched. `src/data/international-inquiry-copy.ts` was not edited.
+
+### Applied
+uk-a 1–11, 13, 15–27.
+uk-b 1–15, 17–23 (23: currency-name half only).
+
+Adaptations (still applied):
+- uk-a 4. "правила внутрішнього трудового розпорядку" → "робочі правила", genitive "робочих правил". Guidance pack ×1 (gloss kept), 008 nominative ×2 (the bold line keeps 工作規則; the evidence line has no gloss), 008 Article 12 cell ×1, 014 ×1. The 008 FAQ already says "внутрішній регламент" and was left.
+- uk-a 5. "спеціальне визнання" → "спеціальне схвалення" in the FAQ and the body (2). "внесок у економічний" → "внесок в економічний" in the same sentence.
+- uk-a 6. "Дозвіл на роботу відповідальної особи іноземного громадянства" → "Дозвіл на роботу керівника" in the FAQ and the body (2). The gloss 僑外投資事業主管工作許可 stays.
+- uk-a 8. "обмеження одночасного застосування" added in the FAQ and the §4 repeat (2). §5 already said "обмеження одночасного використання" and was left.
+- uk-a 10. "Ім’я, внесене щодо житла" → "Запис про право власності на житло" and "походження коштів купівлі" → "походження коштів на купівлю" in the FAQ and the body (2).
+- uk-a 11. The remedies stay on their own line. That line now says the employer may refuse payment and the employee may claim it. The lines above already say the assignment depends on who is at fault.
+- uk-a 15. "в необхідній мірі" → "необхідною мірою" (004). The same Russian locative in 007, "в потрібній мірі" → "потрібною мірою".
+- uk-a 18. The cap stays on its own quote line. That line is now a sentence: "Щонайбільше виплачують за 6 місяців заробітної плати." The digit 6 stays.
+- uk-a 19. "підтримуємо" → "супроводжуємо" for the books and for trademark registration (2).
+- uk-a 21. Both storage sentences now say the inquiry is what is stored ("надісланий запит" / "Зміст надісланого запиту"). Sentences about the act of sending were left.
+- uk-a 27. Article 1057 support is "утримання подружжя без вини, яке опинилося в матеріальній скруті" in the FAQ (gloss 贍養費 kept) and the body repeat.
+- uk-b 2. "Яке налаштування людини" → "Який настрій у людини" in the image alt and the link text (2).
+- uk-b 6. "реального навантаження" and "з’ясувати реальне навантаження" now say the cost was actually borne (2). Later "обсягу навантаження" is the burden’s scope in the English and was left. The checklist "навантаження працівника" is the worker’s burden and was left; only the missing "?" was added.
+- uk-b 12 and uk-b 18. The object is now "голосів інших учасників". "2/3" stays a digit fraction. "1 учасник — 1 голос" stays inside the sentence "кожен учасник голосує за правилом «1 учасник — 1 голос»", so both counted 1s remain. "більше половини" → "понад половину".
+- uk-b 17. The two paragraphs were not merged. The first now ends "діє таке правило." The second starts "З 1 січня 2023 р." and is a complete sentence. The link, the date, and the block count stay.
+- uk-b 19. "у 1 раз" → "1-кратний розмір". The digit 1 from Korean 1배 stays.
+- uk-b 20. The quoted sentence, and the same "подання" used for an advertisement’s overall presentation in 011: FAQ, body, heading, the medical-image phrase, "сукупність рекламного подання", and the checklist item. Filing uses of "подання" were left.
+- uk-b 22. Wording only, digits kept. See above.
+- uk-b 23, name half. Dropped the second currency name where TWD and "нового/у новому тайванському доларі" named the same amount: 011 ×2, 003 ×2, 006 ×1. The gloss 新臺幣 stays. Dots stay.
+
+### Skipped
+- uk-a 12. Space thousands ("500 000"). ACCEPTED-ROUND skips them, and `NUMBER_THOUSAND_STYLE.uk` is `dot`. Every dotted amount was left, including 1.000 TWD.
+- uk-a 14. Q16–Q20 were not promoted to headings, and the U+200B blanks in 003, 005, 006, 008 and 009 were not removed. Heading levels and the ZWSP count are pinned to the Korean source. 005’s empty bold lines `**​**` stay for the same reason.
+- uk-a 28. The bio figure stays byte-identical "TWD 1.57M".
+- uk-b 16. Every U+200B in 013 and 015 was left. Deleting them changes the ZWSP count against the Korean source.
+- uk-b 23, separator half. Same as uk-a 12.
+
+## Systemic patterns
+
+- Dot thousands (uk-a and uk-b verdicts). 0 changed to a space. The checker requires the dot.
+- "Підтримуємо" where the firm accompanies a procedure (uk-a). 2 sentences in the guidance pack. No further "підтримуємо" in the Ukrainian pack or columns.
+- Labor-Code name for 工作規則 (uk-a). 5 phrases, listed under uk-a 4. The 008 FAQ "внутрішній регламент" was already the employer’s rules and was left.
+- U+200B blanks, and 005 `**​**` (uk-a verdict; uk-b 013/015). 0 deleted. Counts unchanged: 003=52, 005=8, 006=4, 008=10, 009=5, 013=5, 015=3. They match the Korean source.
+- Locative "у/в мірі" for extent (uk-a). 2 phrases, 004 and 007. "тією мірою" elsewhere was already instrumental and was left.
+- Currency named twice next to TWD (uk-b, and the same shape in 003 and 006). 5 phrases. 010, 017 and 018 did not repeat the currency name; only their dots were in scope, and those were left.
+- "Подання" for an advertisement’s presentation (uk-b 20). 7 phrases in 011. Other "подання" are filings and were left.
+- 009 gives both remedies to each side (uk-a). 1 sentence rewritten inside its block.
+- 014 questions without "?" (uk-b). 4 question marks added. Items stay four list items.
+- Director fraction with no object, and "1 учасник має 1 голос" (uk-b). 1 sentence in 018. Both 1s and 2/3 stay.
+- R2–R10. The round-3 verdict says feminine Wei Tseng, Ви, the four-language consultation lock, day–month–year dates, the decimal comma, and the Ukrainian apostrophe already hold. The Taiwan–Korea tax passage in 004 already has the country-specific frame. This pass did not find a new Korea-as-default-reader, result-promise, or untranslated-chrome instance outside the rows above. 015 "Ви можете безкоштовно перевірити" is the municipal inquiry, as the verdict says, and was left.
+
+## Reviewer points not followed
+
+- uk-a 12 and uk-b 23. A space as the thousands separator is ordinary Ukrainian. This campaign’s checker does not parse it for `uk` (`dot` style). The dotted form was kept. Where the same amount was also called "новий тайванський долар" after TWD, that second name was removed.
+- uk-a 14 and uk-b 16. Q16–Q20 are body lines in the Korean source as well, not headings that the Ukrainian file dropped. The U+200B lines in 003, 005, 006, 008, 009, 013 and 015 match that source. Promoting Q16 or deleting the characters fails `headings` or `blocks`.
+- uk-a 28. "1,57 млн TWD" is ordinary Ukrainian. A test pins the bytes "TWD 1.57M". The figure was left.
+- uk-b 12 and uk-b 22. "кожен учасник має один голос" drops both 1s. Korean "주주 1인 1표" counts two 1s in that paragraph, and Ukrainian has no numeral lexicon entry for "один". The digits stay inside «1 учасник — 1 голос».
+- uk-b 17. The English source splits the same sentence across two paragraphs. Merging them changes the block count. Each paragraph was made to stand as its own sentence instead.
+- uk-b 19. "не вище розміру фактичної шкоди" alone drops the 1 in Korean "1배". The cap is now "1-кратний розмір", which keeps the digit and does not read as "on one occasion".
+
+Nothing else in the two verdicts looked factually wrong. The case in 010 is about a Korean student; that fact was not generalized. "Найкращі інтереси дитини" is the statutory test and was left.
+
+## §Verify
+
+```
+node scripts/check-column-translation.mjs --dir src/content/columns-uk --lang uk 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=59
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+grep -rn "\[변호사 검수 필요\]" src/content/columns-uk src/data | wc -l
+       0
+
+npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+git status --short | wc -l
+      21
+```
+
+The 21 is the count before this log file was written. This log is the additional untracked file `docs/i18n/global-plan/evidence/grok-F-uk-r3.log`.

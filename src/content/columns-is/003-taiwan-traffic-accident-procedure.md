@@ -37,13 +37,13 @@ Að því er varðar lögreglugögn getur þú á vettvangi fengið skráningar-
 
 ## Q3. Hvaða kröfur og fresti skal kanna við meiðsli?
 
-Samkvæmt 284. gr. hegningarlaga (刑法) er fjallað um gáleysislega líkamsmeiðingu (過失傷害) og gáleysislega alvarlega líkamsmeiðingu (過失致重傷). Þetta ákvæði er samkvæmt 287. gr. hegningarlaga brot sem aðeins er sótt að undangenginni kæru (告訴乃論之罪); samkvæmt 237. gr. laga um meðferð sakamála (刑事訴訟法) skal kæra að jafnaði borin fram innan 6 mánaða frá því að gerandinn varð kunnur.
+Samkvæmt 284. gr. hegningarlaga (刑法) er fjallað um gáleysislega líkamsmeiðingu (過失傷害) og gáleysislega alvarlega líkamsmeiðingu (過失致重傷). Þetta ákvæði er samkvæmt 287. gr. hegningarlaga brot sem aðeins er sótt að undangenginni kæru (告訴乃論之罪); samkvæmt 237. gr. laga um meðferð sakamála (刑事訴訟法) skal kæra að jafnaði borin fram innan 6 mánaða frá þeim degi sem kærandi fær vitneskju um hver gerandinn er.
 
 Einkaréttarlegar skaðabætur (損害賠償) verða samkvæmt 197. gr. almennra borgaralaga (民法) ekki lengur krafðar, þegar 2 ár frá vitneskju um tjón og skaðabótaskylda aðila eða 10 ár frá skaðaverkinu (侵權行為) eru liðin. Hvaða atvik hafa áhrif á fyrningu (消滅時效) skal kanna sérstaklega.
 
-Sá sem hefur orðið fyrir tjóni vegna refsiverðs athæfis getur samkvæmt 487. gr. laga um meðferð sakamála höfðað einkamál tengt sakamáli (刑事附帶民事訴訟). Meðan sakamálið er rekið má það samkvæmt 488. gr. höfðað allt þar til fyrir lok munnlegs málflutnings (言詞辯論終結) á öðru dómstigi, en ekki eftir lok munnlegs málflutnings á fyrsta dómstigi og áður en áfrýjun er höfð. Að jafnaði má forðast sérstaka greiðslu dómstólsgjalda (裁判費); ekki lýkur öllum málum án kostnaðar. Sé sakamálinu til dæmis vísað frá og því að beiðni stefnanda vísað til einkamálaréttar getur, samkvæmt 503. gr. laga um meðferð sakamála, málskostnaður komið til; einnig skal ganga frá vísunar- og málsmeðferðarákvæðum 504. gr.
+Sá sem hefur orðið fyrir tjóni vegna refsiverðs athæfis getur samkvæmt 487. gr. laga um meðferð sakamála höfðað einkamál tengt sakamáli (刑事附帶民事訴訟). Meðan sakamálið er rekið má það samkvæmt 488. gr. höfðað allt þar til fyrir lok munnlegs málflutnings (言詞辯論終結) á öðru dómsstigi, en ekki eftir lok munnlegs málflutnings á fyrsta dómsstigi og áður en áfrýjun er höfð. Að jafnaði má forðast sérstaka greiðslu dómstólsgjalda (裁判費); ekki lýkur öllum málum án kostnaðar. Sé sakamálinu til dæmis vísað frá og því að beiðni stefnanda vísað til einkamálaréttar getur, samkvæmt 503. gr. laga um meðferð sakamála, málskostnaður komið til; einnig skal ganga frá vísunar- og málsmeðferðarákvæðum 504. gr.
 
-Valið er misjafnt eftir slitinni fyrningu (時效中斷), hring stefndu, sönnunargögnum, tryggingu og varnarþingi. Því er engin ein samræmd leið sem hæfir öllum málum.
+Valið er misjafnt eftir slitinni fyrningu (時效中斷), því hverjir eru stefndir, sönnunargögnum, tryggingu og varnarþingi. Því er engin ein samræmd leið sem hæfir öllum málum.
 
 ## Q4. Hvernig er refsiábyrgð og einkaréttarleg ábyrgð metin þegar báðar hliðar hafa gáleysi?
 
@@ -59,7 +59,7 @@ Sérfræðiathugun (鑑定) eða bráðabirgðagreiningarmat getur verið mikilv
 
 Sátt (和解) í 736. gr. almennra borgaralaga (民法) er samningur þar sem aðilar með gagnkvæmri eftirgjöf ljúka deilu eða koma í veg fyrir hana. Samkvæmt 737. gr. almennra borgaralaga er umfang réttindataps aðeins metið eftir því umfangi sem tilgreint er í samningnum. Því má ekki án könnunar orðalagsins slá því föstu að allar framtíðarkröfur séu slokknaðar.
 
-Við brot sem aðeins eru sótt að undangenginni kæru má kæru samkvæmt 238. gr. laga um meðferð sakamála afturkalla allt þar til fyrir lok munnlegs málflutnings á fyrsta dómstigi; eftir afturköllun má ekki kæra að nýju. Við brot sem ekki eru háð kæru lýkur opinberri saksókn ekki sjálfkrafa við einkasátt eina, og sátt skylda ekki alltaf til afturköllunar kæru.
+Við brot sem aðeins eru sótt að undangenginni kæru má kæru samkvæmt 238. gr. laga um meðferð sakamála afturkalla allt þar til fyrir lok munnlegs málflutnings á fyrsta dómsstigi; eftir afturköllun má ekki kæra að nýju. Við brot sem ekki eru háð kæru lýkur opinberri saksókn ekki sjálfkrafa við einkasátt eina, og sátt skylda ekki alltaf til afturköllunar kæru.
 
 ### Opinberar heimildir Q1–Q5
 
@@ -167,15 +167,15 @@ Vinnuveitandi getur borið fyrir sig að hann hafi gætt nauðsynlegrar aðgæsl
 
 Sanni vinnuveitandi ofangreind undanþáguskilyrði, þannig að tjónþoli fái ekki skaðabætur samkvæmt 1. mgr., getur dómstóllinn samkvæmt 188. gr. 2. mgr. almennra borgaralaga (民法), með tilliti til efnahagslegrar stöðu vinnuveitanda og tjónþola, lagt á fullar eða hluta skaðabætur.
 
-Ákvörðun einkaréttarlegra kröfuaðila og refsiábyrgðar skal greina. Refsiábyrgð samkvæmt 284. gr. hegningarlaga (刑法) er metin eftir broti hvers einstaklings á aðgæsluskyldu og orsakasambandi þessa brots.
+Val stefndu í einkamálinu skal greina frá refsiábyrgð. Refsiábyrgð samkvæmt 284. gr. hegningarlaga (刑法) er metin eftir broti hvers einstaklings á aðgæsluskyldu og orsakasambandi þessa brots.
 
 ## Q15. Hvaða greiðslur og vernd í tryggingu vélknúinna ökutækja skal kanna?
 
 Tryggingarskylda samkvæmt 6. gr. laga um skyldubundna ábyrgðartryggingu vélknúinna ökutækja (強制汽車責任保險法) nær að jafnaði til eiganda ökutækis og í tilteknum tilvikum einnig til notanda eða umsjónarmanns ökutækisins. Þetta kerfi skipuleggur greiðsluskipulag óháð gáleysi (無過失給付制度) fyrir þá sem hafa orðið fyrir meiðslum eða látist í slysum vélknúinna ökutækja; lögbundinn hring farþega eða þriðja aðila (第三人) utan ökutækisins skal kanna.
 
-Við einslys með 1 ökutæki er ökumaður þess að jafnaði ekki greiðsluþegi skyldutryggingar þess ökutækis. Við slys með fleiri ökutækjum getur ökumaður þó krafist greiðslna hjá skyldutryggjanda annars aðkomins ökutækis.
+Við einslys með einu ökutæki er ökumaður þess að jafnaði ekki greiðsluþegi skyldutryggingar þess ökutækis. Við slys með fleiri ökutækjum getur ökumaður þó krafist greiðslna hjá skyldutryggjanda annars aðkomins ökutækis.
 
-Greiðsluviðmiðið (強制汽車責任保險給付標準), sem breytt var 29. maí 2026, gildir um slys frá 1. júlí 2026. Þak nauðsynlegs hæfilegs meðferðarkostnaðar við meiðsli er TWD 200.000, örorkugreiðslur (失能) eftir lögbundnum 15 stigum TWD 80.000–3.000.000, dánargreiðsla TWD 3.000.000, og hámark dauðsfalls, örorku og meðferðarkostnaðar á 1 slasaðan og 1 slys er TWD 3.200.000. Um eldri slys getur eldra viðmið gilt.
+Greiðsluviðmiðið (強制汽車責任保險給付標準), sem breytt var 29. maí 2026, gildir um slys frá 1. júlí 2026. Þak nauðsynlegs hæfilegs meðferðarkostnaðar við meiðsli er TWD 200.000, örorkugreiðslur (失能) eftir lögbundnum 15 stigum TWD 80.000–3.000.000, dánargreiðsla TWD 3.000.000, og hámark dauðsfalls, örorku og meðferðarkostnaðar á einn slasaðan og eitt slys er TWD 3.200.000. Um eldri slys getur eldra viðmið gilt.
 
 Ábyrgðartrygging gagnvart þriðja aðila (第三人責任險), slysatrygging ökumanns (駕駛人傷害險) og kaskótrygging (車體損失險) eru samningsbundnar valafurðir. Raunveruleg vernd er misjöfn eftir vátryggðum, þaki, eigin áhættu (自負額), undanþágu, gáleysi og öðrum skilmálum vátryggingarskírteinis; vátryggingarskírteini og skilmála skal kanna eitt af öðru.
 
@@ -188,7 +188,7 @@ Greiðsluviðmiðið (強制汽車責任保險給付標準), sem breytt var 29. 
 - [Dómur áfrýjunardóms Taívan, ár 109 lýðveldisins (民國), mál 上易字 nr. 477](https://data.judicial.gov.tw/opendl/JDocFile/TPHV/109%2C%E4%B8%8A%E6%98%93%2C477%2C20211229%2C1.pdf)
 - [Hoffmann-núvirðisreiknir dómsmálaráðsins](https://gdgt.judicial.gov.tw/judtool/wkc/GDGT03.htm)
 - [Almenn borgaralög 195. gr.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0000001)
-- [Dómur héraðsdóms Taoyuan, ár 112, mál 壢簡字 nr. 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
+- [Dómur héraðsdóms Taoyuan, lýðveldisár 112, mál 壢簡字 nr. 236](https://data.judicial.gov.tw/opendl/JDocFile/CLEV/112%2C%E5%A3%A2%E7%B0%A1%2C236%2C20231116%2C1.pdf)
 - [Almenn borgaralög 188. gr.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=188&pcode=B0000001)
 - [Hegningarlög Taívan (lýðveldið Kína) 284. gr.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=284&pcode=C0000001)
 - [Lög um skyldubundna ábyrgðartryggingu vélknúinna ökutækja](https://law.fsc.gov.tw/LawContent.aspx?id=FL006889)
@@ -199,7 +199,7 @@ Q16. Má fela tryggingafélaginu allt eftir slysið?
 
 ​
 
-Samkvæmt reynslu minni meðhöndlar tryggingafélagið oft ekki tilfinningalegu hliðina hjá slysaðilum nægilega.
+Tryggingafélög sinna oft ekki tilfinningalegum þörfum þeirra sem lenda í slysi nægilega.
 
 ​
 
@@ -219,7 +219,7 @@ Hagsmunaárekstrar geta einnig komið upp milli tryggingafélags og aðila, og v
 
 ​
 
-Þess vegna ráðlegg ég ekki að fela tryggingafélaginu allt ferlið.
+Þess vegna er ekki ráðlegt að fela tryggingafélaginu allt ferlið.
 
 ​
 
@@ -239,7 +239,7 @@ Við gáleysislega líkamsmeiðingu (過失傷害) hefur í sumum dómum verið 
 
 ​
 
-Við umreikning í sekt kveður 41. gr. 1. mgr. hegningarlaga (刑法) á um umreikning TWD 1.000, TWD 2.000 eða TWD 3.000 (新臺幣) á 1 dag; sé reiknað á grundvelli TWD 1.000 á dag gefur 3 mánaða refsing 3 × 30 × 1.000 = TWD 90.000.
+Við umreikning í sekt kveður 41. gr. 1. mgr. hegningarlaga (刑法) á um umreikning TWD 1.000, TWD 2.000 eða TWD 3.000 (新臺幣) á einn dag; sé reiknað á grundvelli TWD 1.000 á dag gefur 3 mánaða refsing 3 × 30 × 1.000 = TWD 90.000.
 
 ​
 
@@ -267,7 +267,7 @@ Dauði af gáleysi leyfir ekki niðurfellingu kæru; sé þó sátt gerð við f
 
 ​
 
-Í sumum málum má dæma skilorðsbundna frestun refsingar (緩刑), svo fangelsisrefsingin þurfi ekki að vera afplánuð; þetta er ekki heit um tiltekna niðurstöðu.
+Í sumum málum má dæma skilorðsdóm (緩刑), svo fangelsisrefsingin þurfi ekki að vera afplánuð; þetta er ekki heit um tiltekna niðurstöðu.
 
 ​
 
@@ -275,7 +275,7 @@ Dauði af gáleysi leyfir ekki niðurfellingu kæru; sé þó sátt gerð við f
 
 ​
 
-Q19. Er refsiverður flótti alltaf fullnægt þegar vettvangur slyss er yfirgefinn?
+Q19. Telst það alltaf refsiverður flótti að yfirgefa vettvanginn?
 
 ​
 
@@ -323,7 +323,7 @@ Varúðar er þörf gagnvart lögmönnum sem blása málið upp, ráðleggja geg
 
 ​
 
-Hér lýk ég spurningunum og svörunum um umferðarslys.
+Hér lýkur spurningunum og svörunum um umferðarslys.
 
 ​
 
@@ -331,7 +331,7 @@ Hér lýk ég spurningunum og svörunum um umferðarslys.
 
 ​
 
-Eftir meðferð margra umferðarslysa vil ég nefna 1 mikilvægt atriði.
+Eftir meðferð margra umferðarslysa er eitt mikilvægt atriði.
 
 ​
 
@@ -347,7 +347,7 @@ Margir tjónvaldar hringja ekki og spyrja um ástandið, heimsækja ekki hinn sl
 
 ​
 
-Þar með verður tjónþoli fyrir mikilli skerðingu og reiði, lætur ekki eftir í samningsfjárhæð eða krefst bráðabirgðahalds (假扣押) og leggur hald á eignir gagnaðila til enda.
+Þar með verður tjónþoli fyrir mikilli skerðingu og reiði, lætur ekki eftir í samningsfjárhæð eða krefst kyrrsetningar (假扣押) og leggur hald á eignir gagnaðila til enda.
 
 ​
 

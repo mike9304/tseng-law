@@ -13,7 +13,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Forsíðumynd](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Nýlega hafa margir stofnað félag (公司) á Taívan og fengið atvinnuvegabréfsáritun og dvalarleyfisskírteini útlendinga (外僑居留證),
+Nýlega hafa margir stofnað félag (公司) á Taívan og fengið atvinnuáritun og dvalarleyfisskírteini útlendinga (外僑居留證),
 
 og spurningarnar sem oft koma upp við stofnunina eru teknar saman hér á eftir.
 
@@ -35,11 +35,11 @@ Við gerð fjárfestingaráætlunarinnar þarf nákvæmt heimilisfang félagsins
 
 Þegar síðar er undirbúningsreikningur félagsins (公司籌備處帳戶) opnaður í bankanum skoða þó margir bankar leigusamninginn (租賃契約) og skoða heimilisfang félagsins á staðnum.
 
-Starfsmaður hjá taívönskum banka hefur sagt mér persónulega að
+Starfsmaður hjá taívönskum banka hefur sagt beint að
 
-margir útlendingar hafi nýlega horfið eftir opnun reiknings, svo opnun reikninga er meðhöndluð sífellt strangar.
+margir útlendingar hafi nýlega horfið eftir opnun reiknings, svo opnun reikninga er meðhöndluð sífellt strangari.
 
-Þegar í grunntextanum hefur lesandi tekið fram að opnun reiknings hafi reynst erfiðasta skrefið; ég er sammála því.
+Þegar í grunntextanum hefur lesandi tekið fram að opnun reiknings hafi reynst erfiðasta skrefið; það stenst.
 
 Vegna þess að tilvik peningaþvættis (洗錢) á Taívan eru mjög mörg verður opnun bankareikninga sífellt strangari.
 
@@ -51,9 +51,9 @@ Vegna þess að skoðun fjárfestingaráætlunarinnar tekur einnig tíma
 
 Samkvæmt 9. gr. laga um fjárfestingu útlendinga (外國人投資條例) skal samþykkt innlegg berast að fullu innan þess frests sem lögbær stofnun hefur ákveðið (核定期限); frestinn skal staðfesta í heimildarskjali hvers máls (í framkvæmd er hann oft ákveðinn um 1 ár).
 
-Innan þessa frests gefst, að heimilisfangi félagsins fundnu og leigusamningi gerðum,
+Innan þessa frests gefst nægur tími til að finna heimilisfang félagsins og gera leigusamning,
 
-nægur tími til að opna undirbúningsreikninginn í bankanum og millifæra hlutaféð.
+opna undirbúningsreikninginn og millifæra hlutaféð.
 
 ​
 
@@ -99,7 +99,7 @@ Enn fremur veitir leigusali í leigusamningum um verslunarhúsnæði á Taívan 
 
 leigusalar hika því við að leigja útlendingum.
 
-Því mæli ég með að leita að rekstrarstað snemma.
+Því er ráðlegt að leita að rekstrarstað snemma.
 
 Gangi samningaviðræður við leigusala ekki hnökralaust
 

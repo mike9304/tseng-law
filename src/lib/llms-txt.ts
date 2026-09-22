@@ -910,7 +910,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     consultationNotice:
       'Þessar leiðbeiningar eru skrifaðar á íslensku, en ráðgjöf við lögmann fer einungis fram á ensku, kínversku (中文), japönsku og kóresku.',
     discoveryNotice:
-      'Skráin llms.txt er aðeins kort til að finna opinberar síður; hún lofar hvorki sæti í leitarvélum né stuðning, tillögu gervigreindar eða sýnileika.',
+      'Skráin llms.txt er aðeins kort til að finna opinberar síður; hún lofar hvorki sæti í leitarvélum, né meðmælum, né tillögu gervigreindar, né birtingu.',
     confidentialNotice:
       'Vegna þess að frumtextinn er vistaður skaltu í upphafi ekki skrifa það sem enn er óþarft, til dæmis vegabréfsnúmer, kennitölu eða reikningsupplýsingar.',
   },

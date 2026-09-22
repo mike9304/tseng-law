@@ -2511,7 +2511,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     consultationNotice:
       'Ráðgjöf fer einungis fram á fjórum tungumálum ráðgjafar: ensku, kínversku (中文), japönsku og kóresku.',
     methodConfirmationNotice:
-      'Ef þú kannt ekkert af fjórum tungumálunum skaltu velja „Samskiptaleiðina þarf að staðfesta“. Við svörum til að kanna hvort nothæf samskiptaleið sé til; ráðgjöf á öðru tungumáli er ekki heitið og enginn svarfrestur er lofað.',
+      'Ef þú talar ekkert af þessum fjórum tungumálum skaltu velja „Samskiptaleiðina þarf að staðfesta“. Við svörum til að kanna hvort nothæf samskiptaleið sé til; ráðgjöf á öðru tungumáli er ekki heitið og engum svarfresti er lofað.',
     preparationNotice:
       'Þú mátt skrifa samantektina á þínu eigin tungumáli. Frumtextinn er vistaður eins og þú skrifaðir hann og er ekki þýddur sjálfkrafa.',
     heading: 'Senda beiðni um ráðgjöf',
@@ -2552,7 +2552,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
       ja: 'Japanska (日本語)',
       ko: 'Kóreska (한국어)',
       'needs-method-confirmation':
-        'Ég kann ekkert af fjórum tungumálunum — samskiptaleiðina þarf að staðfesta',
+        'Ég tala ekkert af þessum fjórum tungumálum — samskiptaleiðina þarf að staðfesta',
     },
   },
 };

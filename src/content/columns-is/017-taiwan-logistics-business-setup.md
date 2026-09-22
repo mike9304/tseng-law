@@ -24,7 +24,7 @@ faq:
 
 Þegar starfsemi sem tengist sendingu er skipulögð á Taívan má ekki ákveða leyfisskyldu einungis af heitinu „flutningafélag“. Vörugeymsla, pökkun, flutningskerfi, farmiðlun (運送承攬), sending eigin vara og flutningur vara annarra með vélknúnu ökutæki gegn endurgjaldi geta lotið ólíku skipulagi.
 
-Þessi grein greinir 3 aðstæður (汽車貨運業): að stofna nýja starfsemi vöruflutninga með vélknúnum ökutækjum, að kaupa hlutabréf í fyrirliggjandi rekstraraðila eða taka við framsali starfsemi hans og eigna, og að fela flutninginn leyfishafa. Við könnun tiltekinnar viðskiptaáætlunar skal ekki aðeins staðfesta samningsorðalag, heldur einnig raunverulega rekstraraðferð, svo sem móttöku gjalda, ábyrgð á vörutjóni, úthlutun ökutækja og hver stýri ökumönnum og ökutækjum.
+Þessi grein greinir 3 aðstæður (汽車貨運業): að stofna nýja starfsemi vöruflutninga með vélknúnum ökutækjum, að kaupa hlutabréf í fyrirliggjandi rekstraraðila eða taka við framsali starfsemi hans og eigna, og að fela flutninginn leyfishafa. Við könnun tiltekinnar viðskiptaáætlunar skal ekki aðeins staðfesta samningsorðalag, heldur einnig raunverulega rekstraraðferð, svo sem hver tekur við farmgjaldinu, hver ber ábyrgð á vörutjóni, hver úthlutar ökutækjum og hver stýrir ökumönnum og ökutækjum.
 
 ![Mynd til að greina leyfi, ökutæki og samningssamband](../images/017-taiwan-logistics-business-setup/img-01.jpg)
 
@@ -32,7 +32,7 @@ faq:
 
 „Flutningastarfsemi“ er vítt viðskiptahugtak; leyfisskyldan ræðst ekki einungis af félagsheitinu eða skráðum starfsgreinum (汽車貨運業). Fái félagið endurgjald og flytji vörur annarra með vörubíl, getur þessi starfsemi fallið undir vöruflutninga með vélknúnum ökutækjum. Hins vegar skal vörugeymsla, pökkun, kerfisrekstur, sending sem sendingaraðili (貨主), farmiðlun og sambærileg starfsemi metin hvert um sig út frá samningssambandi, flutningsábyrgð, innihaldi endurgjalds og raunverulegri akstri ökutækja.
 
-Vegalög Taívan (公路法) skilgreina starfsemi vélknúinna flutninga (汽車運輸業) sem þá starfsemi sem flytur farþega eða vörur með vélknúnu ökutæki gegn endurgjaldi. Félagið verður því ekki, af því einu, flutningsaðili í vöruflutningum með vélknúnum ökutækjum, þótt það veiti flutningsþjónustu í víðum skilningi. Öfugt, þótt samningurinn sé orðaður sem farmiðlun eða pallsrekstur, getur félagið, taki það raunverulega við farmgjaldi sem flutningsaðili (運送人) og beri ábyrgð á úthlutun, akstri og vörutjóni, ekki komist hjá eftirliti með því einu að samningurinn sé nefndur farmiðlun eða pallsrekstur.
+Vegalög Taívan (公路法) skilgreina starfsemi vélknúinna flutninga (汽車運輸業) sem þá starfsemi sem flytur farþega eða vörur með vélknúnu ökutæki gegn endurgjaldi. Félagið verður því ekki, af því einu, flutningsaðili í vöruflutningum með vélknúnum ökutækjum, þótt það veiti flutningsþjónustu í víðum skilningi. Öfugt, þótt samningurinn sé orðaður sem farmiðlun eða rekstur vettvangs, getur félagið, taki það raunverulega við farmgjaldi sem flutningsaðili (運送人) og beri ábyrgð á úthlutun, akstri og vörutjóni, ekki komist hjá eftirliti með því einu að samningurinn sé nefndur farmiðlun eða rekstur vettvangs.
 
 Við ákvörðun starfssviðs skal að minnsta kosti eftirfarandi samband skipulagt tiltekið.
 
@@ -54,7 +54,7 @@ Um almenna vöruflutninga með vélknúnum ökutækjum gildir að jafnaði lágm
 
 Flutningar með litlum vörubíl (小貨車), sem einstaklingur rekur, eru þröngt skipulag, aðskilið frá almennri félagastofnun. Meðal krafna er að umsækjandi hafi heimilisskrá í lögbæru umdæmi, hafi atvinnuökuskírteini fyrir smábíla og noti 1 lítinn vörubíl í eigu, sem aldur fer ekki yfir 2 ár. Þetta er ekki sú venjulega leið sem erlendur lögaðili notar til að koma inn í vöruflutninga með vélknúnum ökutækjum.
 
-Skráningarmerki ökutækja (車輛牌照) til atvinnunota, sem gefin eru út til rekstraraðila vélknúinna flutninga við nýja stofnun, má í 1 ár frá útgáfudegi hvorki afskrá við afhendingu (繳銷) né framselja við nafnbreytingu í ökutækjaskrá (過戶轉讓).
+Skráningarmerki ökutækja (車輛牌照) til atvinnunota, sem gefin eru út til rekstraraðila vélknúinna flutninga við nýja stofnun, má í 1 ár frá útgáfudegi hvorki skila til afskráningar (繳銷) né framselja við nafnbreytingu í ökutækjaskrá (過戶轉讓).
 
 Þessi takmörkun varðar afskráningu atvinnuskráningarmerkis við afhendingu og framsal við nafnbreytingu í ökutækjaskrá. Aðra meðferð, þar á meðal úrsögn ökutækis úr rekstri og endurnýjun, skal staðfesta sérstaklega eftir gildandi reglum lögbærs vegaeftirlits.
 
@@ -62,7 +62,7 @@ Skráningarmerki ökutækja (車輛牌照) til atvinnunota, sem gefin eru út ti
 
 Samkvæmt 35. gr. vegalaga (公路法) skal útlendingur eða erlendur lögaðili, sem á Taívan vill fjárfesta í og reka vöruflutninga með vélknúnum ökutækjum, fyrst öðlast samþykki samgönguráðuneytisins, miðlægs lögbærs yfirvalds samkvæmt sömu lögum. Ekki má staðnæmast við könnun almenns samþykkis erlendrar fjárfestingar, heldur skal í viðskiptaáætlun sérstaklega taka inn samþykki samgönguráðuneytisins varðandi greinina vöruflutninga með vélknúnum ökutækjum.
 
-Núverandi lögbært yfirvald almennrar erlendrar fjárfestingar er fjárfestingarathugunardeild efnahagsráðuneytisins (經濟部投資審議司). Þó fylgir ekki hver erlend fjárfesting sama afgreiðslustað og sömu málsmeðferð. Fjárfesting í skráðum eða óskráðum verðbréfum, útibú (分公司) erlends félags, mál sem yfirvöld vísinda- og iðnaðargarða meðhöndla, og fjárfesting frá meginlandi Kína geta lotið ólíkum afgreiðslustöðum eða sérstöku skipulagi. Við fjárfestingu í vöruflutningum með vélknúnum ökutækjum skal, auk staðfestingar viðeigandi fjárfestingarleiðar, greinasamþykki samkvæmt 35. gr. vegalaga innt af hendi.
+Núverandi lögbært yfirvald almennrar erlendrar fjárfestingar er fjárfestingarathugunardeild efnahagsráðuneytisins (經濟部投資審議司). Þó fylgir ekki hver erlend fjárfesting sama afgreiðslustað og sömu málsmeðferð. Fjárfesting í verðbréfum í kauphöll eða á opnum tilboðsmarkaði, útibú (分公司) erlends félags, mál sem yfirvöld vísinda- og iðnaðargarða meðhöndla, og fjárfesting frá meginlandi Kína geta lotið ólíkum afgreiðslustöðum eða sérstöku skipulagi. Við fjárfestingu í vöruflutningum með vélknúnum ökutækjum skal, auk staðfestingar viðeigandi fjárfestingarleiðar, greinasamþykki samkvæmt 35. gr. vegalaga innt af hendi.
 
 ### Röðun málsmeðferðar við nýja stofnun
 
@@ -112,7 +112,7 @@ Ekki má dæma eins í öllum tilvikum. Matið greinist eftir því hvort sá se
 
 Sendingaraðili eða flutningsþjónustufélag getur einnig falið raunverulegan flutning leyfishafa vöruflutninga með vélknúnum ökutækjum á Taívan. Leyfisþörf og ábyrgðarskipting greinast þó eftir því hvort sá sem felur sé aðeins sendingaraðili eða farmiðlari, eða hvort hann sjálfur verði flutningsaðili í flutningssamningnum (運送人) og taki við farmgjaldi. Samningshlutverk, innheimta gagnvart viðskiptavini, úthlutunarfyrirmæli, stýring ökumanna og ökutækja og viðbrögð við vörutjóni skulu samræmast raunverulegum rekstri.
 
-Staðfesta skal gildi rekstrarleyfis rekstraraðilans sem tekur við verkefninu og umfang leyfisins, ökutæki til atvinnunota sem raunverulega eru notuð, ökumenn, tryggingar og rekstraraðila við undirverktöku. Hvorki má leyfa nafnlán rekstrarleyfis né raunverulegan flutning rekstraraðila án leyfis. Framsalsaðferðin getur krafist minni upphaflegrar fastrar fjárfestingar en að undirbúa sjálfur ökutæki og bílastæðaaðstöðu, en háð leyfishafanum, þjónustustig, tap, skemmd og töf vörunnar, trygging, persónu- og flutningsgögn, undirverkakaup, skaðabætur og afhendingarmeðferð gagna, vöru og viðskiptaþjónustu við lok samningsins sem og tengd áhætta skulu meðhöndluð í samningnum (運送人).
+Staðfesta skal gildi rekstrarleyfis rekstraraðilans sem tekur við verkefninu og umfang leyfisins, ökutæki til atvinnunota sem raunverulega eru notuð, ökumenn, tryggingar og rekstraraðila við undirverktöku. Hvorki má leyfa nafnlán rekstrarleyfis né raunverulegan flutning rekstraraðila án leyfis. Framsalsaðferðin getur krafist minni upphaflegrar fastrar fjárfestingar en að undirbúa sjálfur ökutæki og bílastæðaaðstöðu, en háð leyfishafanum, þjónustustig, tap, skemmd og töf vörunnar, trygging, persónu- og flutningsgögn, undirverkakaup, skaðabætur og afhendingarmeðferð gagna, vöru og viðskiptaþjónustu við lok samningsins sem og tengd áhætta skulu meðhöndluð í samningnum.
 
 ### Fjárfesting, atvinnuleyfi og dvöl eru sérstök skref
 

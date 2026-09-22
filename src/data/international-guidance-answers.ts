@@ -1476,7 +1476,7 @@ export const guidanceAnswers: Record<
     },
     faq: {
       answer:
-        'Þessi hluti svarar algengum spurningum á stigi almennra upplýsinga: sex málaflokkarnir, undirbúningur fyrir samband, hvernig kostnaður er ákveðinn og merking sendrar beiðni. Send beiðni bíður mats lögmanns; hún er ekki lögfræðilegt álit, ekki staðfestur tími, og stofnar ekki samband milli lögmanns og skjólstæðings. Ráðgjöf fer einungis fram á ensku, kínversku, japönsku og kóresku.',
+        'Þessi hluti svarar algengum spurningum sem almennum upplýsingum: sex málaflokkarnir, undirbúningur fyrir samband, hvernig kostnaður er ákveðinn og merking sendrar beiðni. Send beiðni bíður mats lögmanns; hún er ekki lögfræðilegt álit, ekki staðfestur tími, og stofnar ekki samband milli lögmanns og skjólstæðings. Ráðgjöf fer einungis fram á ensku, kínversku, japönsku og kóresku.',
       sources: ['/is/contact', '/is/services'],
     },
   },

@@ -4612,7 +4612,7 @@ export const guidanceTeamBios: Record<
     'tseng-junwei': {
       intro: [
         'Skrifstofan vinnur mál fyrirtækja og einstaklinga á Taívan á ensku, japönsku, kóresku og kínversku.',
-        'Hún fór með mál kóresks námsmanns um skaðabætur vegna meiðsla í líkamsræktarstöð og fékk dóm í fyrsta dómstigi um TWD 1.57M.',
+        'Hún fór með mál kóresks námsmanns um skaðabætur vegna meiðsla í líkamsræktarstöð og fékk dóm í fyrsta dómsstigi um TWD 1.57M.',
       ],
       education: [
         'Meistarapróf (M.S.), Institute of Finance, National Taiwan University',

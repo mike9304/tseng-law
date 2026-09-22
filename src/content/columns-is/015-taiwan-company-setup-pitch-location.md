@@ -45,7 +45,7 @@ Hafir þú erfitt með að mæta sjálfur á fasteignaskrifstofuna (地政事務
 
 máttu biðja kunningja á Taívan, leigusala, fasteignasala eða lögmann um aðstoð.
 
-Ef könnunarniðurstaðan tilgreinir að veitingastarfsemi sé ekki möguleg getur borgarstjórnin síðar, við skráningu lögaðilans (公司登記), hafnað skráningunni.
+Ef könnunarniðurstaðan tilgreinir að veitingastarfsemi sé ekki möguleg getur borgarstjórnin síðar, við skráningu lögaðilans (公司登記), hafna skráningunni.
 
 Því skal gæta þessa atriðis.
 
@@ -63,7 +63,7 @@ Samkvæmt „[vinnuleiðbeiningum um upplýsingaþjónustu um starfsstöðvar í
 
 skal, frá 1. janúar 2023, við umsókn um skráningu stofnunar, flutnings aðseturs eða viðbótar skráðra starfsgreina fyrir félag eða verslun (þar á meðal útibú (分公司) og aðrar starfseiningar (分支機構)) niðurstaða fyrirframfyrirspurnar um starfsstöð **skyldubundin** fylgja skráningarumsókninni, án tillits til greinar.
 
-Listinn hér á eftir yfir „greinar sem stofnunin kannar að eigin frumkvæði“ (主動查詢之營業項目) merkir þær greinar sem verslunarstofan kannar að eigin frumkvæði við skráningarskoðun (隨案主動查詢), þegar greinin stendur í umsókninni en vantar í fylgdu niðurstöðunni; það að grein standi ekki á þessum lista þýðir ekki að könnunin sé undanþegin.
+Listinn hér á eftir yfir „greinar sem stofnunin kannar að eigin frumkvæði“ (主動查詢之營業項目) merkir þær greinar sem verslunarstofan kannar að eigin frumkvæði við skráningarskoðun (隨案主動查詢), þegar greinin stendur í umsókninni en vantar í meðfylgjandi niðurstöðu; það að grein standi ekki á þessum lista þýðir ekki að könnunin sé undanþegin.
 
 Ef opnað er á stað þar sem veitingastarfsemi er ekki möguleg getur síðar fylgt stjórnvaldssekt (罰鍰) frá lögbærri stofnun.
 

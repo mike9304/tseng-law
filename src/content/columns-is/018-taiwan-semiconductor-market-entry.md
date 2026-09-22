@@ -61,7 +61,7 @@ Hafi verið ákveðið að stofna sjálfstæðan lögaðila á Taívan, skal ein
 
 ### Einkahlutafélag (有限公司): einfaldara stjórnskipulag, en lokaðra framsal hluta
 
-Það má mynda með 1 eða fleiri einstaklingum, eða með hluthöfum sem eru lögaðilar á Taívan eða erlendir; hluthafar bera að jafnaði ábyrgð takmarkaða við innleggsfjárhæðina. Félagið hefur frá 1 til 3 stjórnarmenn, valdir meðal hluthafa. Hluthafar sem ekki stjórna rekstri geta beitt eftirlitsrétti, án þess að sérstakur eftirlitamaður félags (監察人) þurfi að vera skipaður. Nema samþykktir kveði á um annað gildir 1 atkvæði á 1 hluthafa, svo stjórnin þarf ekki að fara eftir innleggshlutfalli. Framsal innleggs almenns hluthafa krefst að jafnaði samþykkis meira en helmings atkvæðisréttar hinna; fyrir stjórnarmann, 2/3 eða meira. Það hæfir betur einföldum hluthafasamböndum og stöðugri stjórn en tíðri fjármögnun eða viðskiptum með hluti. Síðar má umbreyta því í hlutafélag (股份有限公司).
+Það má mynda með 1 eða fleiri einstaklingum, eða með hluthöfum sem eru lögaðilar á Taívan eða erlendir; hluthafar bera að jafnaði ábyrgð takmarkaða við innleggsfjárhæðina. Félagið hefur frá 1 til 3 stjórnarmenn, valdir meðal hluthafa. Hluthafar sem ekki stjórna rekstri geta beitt eftirlitsrétti, án þess að sérstakur eftirlitamaður félags (監察人) þurfi að vera skipaður. Nema samþykktir kveði á um annað gildir eitt atkvæði á einn hluthafa, svo atkvæðavægið þarf ekki að fylgja innleggshlutfalli. Framsal innleggs almenns hluthafa krefst að jafnaði samþykkis meira en helmings atkvæðisréttar hinna; fyrir stjórnarmann, 2/3 eða meira. Það hæfir betur einföldum hluthafasamböndum og stöðugri stjórn en tíðri fjármögnun eða viðskiptum með hluti. Síðar má umbreyta því í hlutafélag (股份有限公司).
 
 ### Hlutafélag (股份有限公司): hæfir ef aðrir fjárfestar eiga að koma inn, eða skráning er fyrirsjáanleg
 
@@ -73,7 +73,7 @@ Hlutafé er skipt í hluti. Að jafnaði eru 2 hluthafar eða fleiri krafðir, e
 
 Hins vegar krefst stofnun útibús almenns erlends félags á Taívan að jafnaði ekki fjárfestingarheimildar fjárfestingarathugunardeildarinnar; verslunarþróunarstofa efnahagsráðuneytisins (經濟部商業發展署) meðhöndlar skráningu útibúsins og tengda ákvörðun fjárhæðar. Áfram nauðsynleg eru forathugun heitis, sending rekstrarfjár, könnun hlutafjár og skattaskráning; dagskráin er að jafnaði styttri.
 
-Ofangreint er almennur samanburður félagaforma, ekki ráðgjöf um tiltekin lögskipti. Það eitt að tiltekið félagaform sé valið gerir lögskiptin hvorki lögmæt né kemur í veg fyrir ágreining.
+Ofangreint er leiðbeining um mótun félagaforms og samningsskipulags, ekki ráðgjöf um tiltekin lögskipti. Það eitt að tiltekið félagaform sé valið gerir lögskiptin hvorki lögmæt né kemur í veg fyrir ágreining.
 
 ## 5. Félagaskráning og lögmæt vinna verkfræðings eru ekki það sama
 

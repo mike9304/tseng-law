@@ -1,0 +1,68 @@
+WO-F-is r1 — Icelandic native-review fix lane (Grok 4.7)
+Workspace: /Users/son7/Projects/tseng-law-fix-is-r1
+Date: 2026-09-22
+No git add / commit / push.
+
+## Rows applied
+
+Part a (is-a.md, 52 rows): 49 applied.
+- Guidance pack (a4–a8, a26–a27, a29–a31, a39–a45): llms discovery notice; statutory severance; the professional is the one who is needed; technical responsibility; fixed case stages; answer-deadline agreement; dómsstig in the Wei Tseng bio (TWD 1.57M left byte-identical); fyrri eyðingu; ræðst af; comma after the ef-clause; object storage; the page is not the consultation; “talar ekkert”; general information; frá … og til; court/authority/third-party costs; the language you write in.
+- Columns a1–a3, a9–a25, a32–a33, a35–a50, and a51 as a rephrase of the cells (the row was not deleted).
+- a12’s extra clause “svo fangelsisrefsingin þurfi ekki að vera afplánuð” was already in 003 and was kept when frestun refsingar became skilorðsdómur.
+
+Part b (is-b.md, 65 rows): 64 applied.
+- b1–b44, b46–b65.
+- b12 (the one-year window in 013) was rewritten inside the two existing paragraphs. They were not merged.
+
+P3 rows: none in either review.
+
+## Rows skipped
+
+- a28 — reformat “TWD 1.57M” to “1,57 milljónir TWD”. ACCEPTED-ROUND / R12: the figure is pinned byte-identical.
+- a34 — turn 003 Q16–Q20 body lines into ## headings, and the same U+200B pads in 005, 006, 008, 009. ACCEPTED-ROUND: do not add headings or change block structure. The personal-voice sentences in those blocks were rewritten in place.
+- a51 delete — “Strikið röðina” on the 008 difficulty row. The English source has the row (Easy / Difficult / Easy). Cells were rephrased so they name the question, not an easy severance outcome. The row stays.
+- a52 and the 009 Hangul slug — frontmatter `url` left as-is (reviewer and ACCEPTED-ROUND / R16). The fullwidth colon inside that url stays.
+- b45 — merge the split clauses in 013 and 015 (“Auk markaðsaðstæðna” / “er annað mikilvægt atriði”). The English source splits the same way. Block counts must match.
+
+## Systemic patterns
+
+Swept across the 18 columns and the Icelandic guidance strings, not only the quoted line.
+
+- Statutory severance (資遣費) starfslokastyrk* → starfslokabót* with agreement: 34 occurrences (002, 008 title/H1/FAQ/body/table/quote, 009 title/H1/body, the 014 link label, and the guidance category). “krefjast hans” → “krefjast þeirra”; “hvenær hann er greiddur” → “hvenær þær eru greiddar”.
+- Court instance dómstig → dómsstig: 18 occurrences (003, 007, 010 title/H1/body, and the Wei Tseng bio).
+- Treaty resident íbúi/búsettur/búseturíki/búsetuvottorð → heimilisfastur / vottorð um heimilisfesti: 001 (business profits, non-resident withholding, treaty resident, certificate), 002 (shareholder’s state of residence), 004 (Korean parent, dual residence, both certificates, and the residence factor in the checklist sentence). 華僑 stays “Kínverja búsettra erlendis”. dvalarleyfi / dvalarleyfisskírteini were not touched. Residence status dvalarréttur → dvalarstaða in 001 (FAQ, §4, family status); “veittur” was corrected to “veitt”.
+- Undeclined “1” before a noun: 001 (eitt af, eitt ár), 002 (the extra “1 sinni” removed; einn reikningur; einum skilum), 003 (einn dagur, einn slasaðan og eitt slys, einu ökutæki, eitt mikilvægt atriði), 006 (Ein klipping), 007 (einnar hliðar, both copies), 008 (eitt af; ein af agaheimildum; hvert fullt ár; á hvert ár; Einn daginn), 010 (eins slyss), 011 (einum aðila; einum föstum tímaramma), 012 (einu sinni, twice), 018 (eitt atkvæði á einn hluthafa). Ranges and genuine digits (“1 mánuður”, “1/3”, “frá 1 til 3”) stay. Checker remained PASS, so no digit had to be put back.
+- Misplaced Chinese glosses removed from the wrong noun, gloss kept on the term it names: 010 (消費者保護法), 011 (契約, 化粧品), 012 (道路交通安全規則 on the lane; 鑑定 on the evidence and on liability), 014 (勞動部, 勞動基準法), 016 (遺產稅, 民法), 017 (運送人).
+- Tilvísun as attribution: 011 heading, and 014 body (twice), the paragraph-4 sentence, and both checklist items.
+- Personal-blog voice neutralized inside the existing blocks: 003 (insurer’s emotional handling, “ráðlegg ég ekki”, “Hér lýk ég”, “vil ég nefna”), 006 (the age aside), 008 (self-introduction, “fer ég yfir”, table lead-in, “Ég skýri frá”, “umþjóðandi minn”), 013 (“sagt mér persónulega”, “ég er sammála”, “mæli ég með”). The 008 resignation letter stays first person with [nafn] (R15; it is the male employee’s letter). 010 “Ég fór með þetta mál” stays (case narration; no masculine participle for Wei Tseng). 013 reader questions “Ég vil stofna” and “Ég hef heyrt” stay; they match the English questions.
+- 緩刑 → skilorðsdómur (003 accusative, 008 nominative with kveðinn upp). 勞工退休金條例 → lög (not reglugerð) in 008 FAQ, quote, and table. 投資抵減 → fjárfestingarskattaafsláttur (004). 認證 → vottunarreglur (007). 假扣押 → kyrrsetning (003). ROC years labelled lýðveldisár without a new Gregorian digit: 003 link “lýðveldisár 112”, 007 “lýðveldisári 112 (2023)” including the link texts, 010 “lýðveldisári 109 (2020)”.
+- R17: no Czech (or other sister-locale) paragraph left in the columns or the is pack. Register stays þú. Consultation languages stay ensku, kínversku, japönsku, kóresku, and the negative promises (no interpreter, no reply time, no Icelandic consultation) stay negative.
+
+Test pin updated and nothing else in that test: src/data/__tests__/guidance-disclosure-parity.test.ts `is: /ráðgjafarþrep/` → `is: /sjálf ráðgjöfin/`. `is` is not in that file’s LOCALES loop; the regex was updated so it still matches the copy.
+
+## Reviewer disagreements (not applied as suggested)
+
+- a28. “1.57M” is an English abbreviation, but R12 pins that exact byte string. Left unchanged.
+- a31. The comma belongs after the ef-clause (“tilheyrir, útskýrir”), not before “hvernig”. The same comma was added to the parallel home sentence.
+- a42. “svarar … sem almennar upplýsingar” would be the wrong case. The FAQ answer in international-guidance-answers.ts is “svarar algengum spurningum sem almennum upplýsingum”. The guidance intro, which is a new clause, is “Eftirfarandi svör eru almennar upplýsingar.”
+- a34, a51’s deletion, and b45 ask for a heading, a deleted table row, or a merged paragraph. Those conflict with the English block structure and with ACCEPTED-ROUND. Wording inside the existing blocks was fixed; the structure was not.
+- b12’s suggested single sentence was split back across the two paragraphs the English file already uses.
+- 013 “Ég vil” / “Ég hef heyrt” are the reader’s questions, as in English. Neutralizing them would change the FAQ voice. 010 “Ég fór með” does not mark Wei Tseng as masculine.
+
+## §Verify
+
+```
+neighbour      PASS   
+hanzi          PASS   han=103
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+       0
+TSC_OK
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+      28
+```

@@ -1,5 +1,5 @@
 ---
-title: "Undantekningar þar sem starfsmaður getur þrátt fyrir eigin uppsögn fengið lögbundinn starfslokastyrk (資遣費)"
+title: "Undantekningar þar sem starfsmaður getur þrátt fyrir eigin uppsögn fengið lögbundnar starfslokabætur (資遣費)"
 url: "https://www.wei-wei-lawyer.com/post/직원이-자발적으로-퇴사해도-퇴직금을-받을-수-있는-예외"
 lastmod: "2026-09-10"
 date_display: "13. september 2025"
@@ -9,17 +9,17 @@ categories:
 featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg"
 ---
 
-# Undantekningar þar sem starfsmaður getur þrátt fyrir eigin uppsögn fengið lögbundinn starfslokastyrk (資遣費)
+# Undantekningar þar sem starfsmaður getur þrátt fyrir eigin uppsögn fengið lögbundnar starfslokabætur (資遣費)
 
 ![Forsíðumynd](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Eins og áður hefur komið fram er á Taívan almennt ekki auðvelt fyrir starfsmann að fá lögbundinn starfslokastyrk (資遣費).
+Eins og áður hefur komið fram er á Taívan almennt ekki auðvelt fyrir starfsmann að fá lögbundnar starfslokabætur (資遣費).
 
 ​
 
 Einkum þegar starfsmaðurinn segir sjálfur upp (自請離職),
 
-á hann almennt ekki rétt á starfslokastyrk (18. gr. laga um vinnustaðla, 勞動基準法),
+á hann almennt ekki rétt á starfslokabætur (18. gr. laga um vinnustaðla, 勞動基準法),
 
 og þetta er ólíkt því sem gildir í sumum öðrum lögsagnarumdæmum — Kórea er eitt dæmi.
 
@@ -29,7 +29,7 @@ og þetta er ólíkt því sem gildir í sumum öðrum lögsagnarumdæmum — K�
 
 ![](../images/009-taiwan-voluntary-resignation-severance/img-01.jpeg)
 
-Í eftirfarandi sérstökum aðstæðum skal vinnuveitandi greiða starfsmanninum starfslokastyrk, einnig þegar hann segir sjálfur upp (14. gr. laga um vinnustaðla, sem beitir 17. gr. til hliðsjónar, 勞動基準法第14條):
+Í eftirfarandi sérstökum aðstæðum skal vinnuveitandi greiða starfsmanninum starfslokabætur, einnig þegar hann segir sjálfur upp (14. gr. laga um vinnustaðla, sem beitir 17. gr. til hliðsjónar, 勞動基準法第14條):
 
 1. Þegar vinnuveitandi, við gerð ráðningarsamnings (勞動契約), gefur ósanna viljayfirlýsingu (虛偽意思表示), svo starfsmaðurinn villist og hætta er á tjóni
 
@@ -55,7 +55,7 @@ greiði ekki yfirvinnukaup (加班費)
 
 eða skrái starfsmanninn ekki í launþegatryggingu (勞保) eða sjúkratryggingu (健保).
 
-Í slíkum tilvikum skal vinnuveitandi einnig greiða starfslokastyrk, þótt starfsmaðurinn slíti ráðningarsamningnum sjálfur.
+Í slíkum tilvikum skal vinnuveitandi einnig greiða starfslokabætur, þótt starfsmaðurinn slíti ráðningarsamningnum sjálfur.
 
 ​
 
@@ -77,21 +77,21 @@ réttur Taívan, hvort sem sök liggur hjá félaginu
 
 eða hjá starfsmanninum,
 
-viðurkennir hjá báðum hliðum rétt til að greiða ekki starfslokastyrk eða krefjast hans.
+viðurkennir hjá báðum hliðum rétt til að greiða ekki starfslokabætur eða krefjast þeirra.
 
 Stundum liggur sök hjá báðum hliðum,
 
 og þegar báðir deila,
 
-getur, eftir því hvor slítur samningnum fyrst á nægilegum grundvelli,
+geta, eftir því hvor slítur samningnum fyrst á nægilegum grundvelli,
 
-starfslokastyrkur verið synjaður eða krafinn.
+starfslokabætur verið synjaðar eða krafðar.
 
 Því er í vinnudeilum á Taívan (勞資糾紛)
 
 **„tímasetningin“** afar mikilvæg.
 
-Í flestum tilvikum nýtur sú hlið, sem hefur undirbúið sig fyrir fram, betri verndar réttinda.
+Í flestum tilvikum Sá sem undirbýr sig fyrirfram stendur í flestum tilvikum betur að vígi til að gæta réttinda sinna.
 
 ---
 

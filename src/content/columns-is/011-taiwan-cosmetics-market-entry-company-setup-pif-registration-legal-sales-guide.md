@@ -13,7 +13,7 @@ faq:
   - q: "Hvað er PIF, og er það sama málsmeðferð og vöruskráning hjá TFDA?"
     a: "Vöruskráning og PIF eru tvö aðskilin fyrirkomulög. Vöruskráning (產品登錄) er sérstök formleg meðferð á vöruskráningarvettvangi TFDA fyrir snyrtivörur (衛生福利部食品藥物管理署). PIF er skrá sem safnar gögnum um gæði, öryggi, samsetningu, fullyrta virkni, framleiðsluaðferð, prófunarniðurstöður og öryggismat o.fl., og sem framleiðandi eða innflytjandi snyrtivara semur, uppfærir og varðveitir; PIF sjálft er ekki skjal sem skal lagt fram fyrir fram til TFDA (產品資訊檔案). Frá 1. júlí 2026 falla að jafnaði allar snyrtivörur undir PIF-fyrirkomulagið, að undanskildum föstum handunnum sápum sem framleiddar eru á framleiðslustað sem er undanþeginn verksmiðjuskráningu (工廠登記)."
   - q: "Hvaða orðalagi skal gæta sérstaklega í auglýsingum snyrtivara á Taívan?"
-    a: "Auglýsing er metin ekki aðeins eftir orðunum, heldur eftir heild framsetningarinnar, þar á meðal heiti, texta, mynd, tákni og hljóði. Ranghæf eða ofdrifin orðalag og fullyrðing um læknisvirkni eru bönnuð, og sérstaklega skal gæta læknisfræðilegs orðalags svo sem að meðhöndla unglingabólur, bólgueyðandi eða bakteríudrepandi. Stjórnvaldssektin (罰鍰) er 40.000 TWD til 200.000 TWD (新臺幣) vegna ranghæfra eða ofdrifinna auglýsinga og 600.000 TWD til 5.000.000 TWD vegna fullyrðingar um læknisvirkni. Færslur áhrifavalda og annarra skal einnig skoða eftir sama mælikvarða, séu þær í kjarna auglýsing."
+    a: "Auglýsing er metin ekki aðeins eftir orðunum, heldur eftir heild framsetningarinnar, þar á meðal heiti, texta, mynd, tákni og hljóði. Ranghæf eða ofdrifin orðalag og fullyrðing um læknisvirkni eru bönnuð, og sérstaklega skal gæta læknisfræðilegs orðalags svo sem að meðhöndla unglingabólur, vera bólgueyðandi eða vera bakteríudrepandi. Stjórnvaldssektin (罰鍰) er 40.000 TWD til 200.000 TWD (新臺幣) vegna ranghæfra eða ofdrifinna auglýsinga og 600.000 TWD til 5.000.000 TWD vegna fullyrðingar um læknisvirkni. Færslur áhrifavalda og annarra skal einnig skoða eftir sama mælikvarða, séu þær í kjarna auglýsing."
 ---
 
 # Innkoma á snyrtivörumarkað Taívan: val á innflytjanda, vöruskráning, gerð og varðveisla PIF og auglýsingareglur
@@ -32,17 +32,17 @@ Stofnun er ekki ávallt nauðsynleg. Einnig er unnt að fela taívönskum innfly
 
 ### Þegar staðbundnum innflytjanda er falið verkið
 
-Ef taívanskur innflytjandi eða söluaðili (銷售代理商) sinnir innflutningi og sölu getur erlenda vörumerkið einnig valið skipulag án eigin dótturfélags eða útibús á Taívan. Söluaðilinn getur jafnframt verið innflytjandi, eða annar innflytjandi tekið þátt sérstaklega. Tilvísun lagalegrar ábyrgðar ræðst þó ekki af samningsheitinu einu, svo sem umboðsmaður, heildardreifingaraðili eða dreifingaraðili.
+Ef taívanskur innflytjandi eða söluaðili (銷售代理商) sinnir innflutningi og sölu getur erlenda vörumerkið einnig valið skipulag án eigin dótturfélags eða útibús á Taívan. Söluaðilinn getur jafnframt verið innflytjandi, eða annar innflytjandi tekið þátt sérstaklega. Hvar lagaleg ábyrgð hvílir ræðst þó ekki af samningsheitinu einu, svo sem umboðsmaður, heildardreifingaraðili eða dreifingaraðili.
 
 Við hönnun raunverulegrar verkaskiptingar er það sem fyrst skal staðfesta, hver flytur vöruna inn og sinnir vöruskráningunni, og hver semur, uppfærir og varðveitir PIF. Einnig skal tilnefna ábyrgðaraðila skoðunar merkingar, viðhalds dreifingarskráa, móttöku neytendakvartana og öryggisupplýsinga og viðbragða við skoðunum og gagnaöflun lögbærrar stofnunar (主管機關). Ráðlegt er jafnframt að kanna hvort lögbundnar skyldur sem lagðar eru á framleiðanda eða innflytjanda snyrtivara, og það starf sem samið er um milli vörumerkis og söluaðila, fari saman.
 
-Í samningnum er ráðlegt að ákveða nákvæmlega notkunarsvið hugverka, svo sem vörumerkis (商標) og mynda, háttinn á afhendingu, þýðingu og viðbót gagna frá upprunaframleiðanda (原製造者) sem nauðsynleg eru til vöruskráningar og PIF, stjórnun uppfærðra gagna og afhendingu við lok samnings. Einnig má taka með heimild til að skoða og leiðrétta auglýsingu fyrir birtingu, miðlun öryggisupplýsinga svo sem kvartana og aukaverkana, samvinnu við endurköllun (回收) ef þörf krefur og byrði kostnaðar við prófun, þýðingu og varðveislu. Til að gögnin verði ekki aðeins hjá 1 aðila er ráðlegt einnig fyrir fram að ákveða umfang og frest skilanna eða afhendingar afrita (契約).
+Í samningnum er ráðlegt að ákveða nákvæmlega notkunarsvið hugverka, svo sem vörumerkis (商標) og mynda, háttinn á afhendingu, þýðingu og viðbót gagna frá upprunaframleiðanda (原製造者) sem nauðsynleg eru til vöruskráningar og PIF, stjórnun uppfærðra gagna og afhendingu við lok samnings. Einnig má taka með heimild til að skoða og leiðrétta auglýsingu fyrir birtingu, miðlun öryggisupplýsinga svo sem kvartana og aukaverkana, samvinnu við endurköllun (回收) ef þörf krefur og byrði kostnaðar við prófun, þýðingu og varðveislu. Til að gögnin verði ekki aðeins hjá einum aðila er ráðlegt einnig fyrir fram að ákveða umfang og frest skilanna eða afhendingar afrita.
 
 ### Þegar starfsemin á Taívan er rekin beint
 
 Taívanskt dótturfélag og útibú erlends félags eru ekki sama skipulagið. Dótturfélagið er sérstakur lögaðili stofnaður samkvæmt rétti Taívan, en útibúið er skráð sem hluti höfuðstöðva (本公司) hins erlenda félags. Þau greinast í lögaðilastöðu, ábyrgð höfuðstöðva, bókhalds- og skattalega meðferð, flutning hagnaðar, fyrirsvarsrétt og innra eftirlit, svo skipulagsformið má ekki velja eftir sölustjórninni einni.
 
-Sé málsmeðferð erlendrar fjárfestingar nauðsynleg skal staðfesta leiðbeiningar **fjárfestingarathugunardeildar efnahagsráðuneytisins (經濟部投資審議司)** sem nú er lögbær stofnun. Sá tími sem þarf til fjárfestingarheimildar, millifærslu fjár, skráningar félags eða útibús, opnunar bankareiknings, skattaskráningar (稅籍登記) og öflunar innflytjandastöðu er misjafn eftir fjárfesti, grein, skipulagsformi, fram lögðum gögnum og því hvort leiðrétting eða viðbót kemur til. Því skal, í stað þess að ákveða dagsetningu markaðssetningar út frá 1 föstum fresti, fyrst staðfesta beitingu hverrar formlegrar meðferðar og nýjustu skilakröfur.
+Sé málsmeðferð erlendrar fjárfestingar nauðsynleg skal staðfesta leiðbeiningar **fjárfestingarathugunardeildar efnahagsráðuneytisins (經濟部投資審議司)** sem nú er lögbær stofnun. Sá tími sem þarf til fjárfestingarheimildar, millifærslu fjár, skráningar félags eða útibús, opnunar bankareiknings, skattaskráningar (稅籍登記) og öflunar innflytjandastöðu er misjafn eftir fjárfesti, grein, skipulagsformi, fram lögðum gögnum og því hvort leiðrétting eða viðbót kemur til. Því skal, í stað þess að ákveða dagsetningu markaðssetningar út frá einum föstum tímaramma, fyrst staðfesta beitingu hverrar formlegrar meðferðar og nýjustu skilakröfur.
 
 Hvaða skipulag sem valið er, er miðlægi ábyrgðaraðilinn í snyrtivörureglunum **framleiðandi eða innflytjandi snyrtivara (化粧品製造或輸入業者)**. Röðun vörugagna eða öryggismat (安全性評估) má fela utanaðkomandi sérfræðingi, en það eitt að fela verkið flytur ekki lögbundna ábyrgð framleiðanda eða innflytjanda. Að greina milli verkaskiptingar samkvæmt samningi og ábyrgðaraðila samkvæmt reglunum er upphafspunktur könnunar innkomuskipulagsins.
 
@@ -52,11 +52,11 @@ Vöruskráning og PIF eru tvö aðskilin fyrirkomulög. Vöruskráning er sérst
 
 ### Tímasetning vöruskráningar og gildistími
 
-Vöruskráning snyrtivara fer fram á vöruskráningarvettvangi TFDA fyrir snyrtivörur. Framleiðandi eða innflytjandi snyrtivara skal ljúka vöruskráningu áður en varan er afhent, seld, gefin endurgjaldslaust, sýnd opinberlega (公開陳列) eða lögð neytanda til prufunotkunar. Undirbúninginn má ekki aðeins haga eftir sölu gegn endurgjaldi; áætlun kynningargjafa eða prufunotkunar neytanda skal einnig stýrt saman við skráningartímann.
+Vöruskráning snyrtivara fer fram á vöruskráningarvettvangi TFDA fyrir snyrtivörur. Framleiðandi eða innflytjandi snyrtivara skal ljúka vöruskráningu áður en varan er afhent, seld, gefin endurgjaldslaust, sýnd opinberlega (公開陳列) eða lögð neytanda til prufunotkunar. Undirbúninginn má ekki aðeins haga eftir sölu gegn endurgjaldi; áætlun kynningargjafa eða prufunotkunar neytanda skal einnig taka tillit til skráningartímans.
 
 Gildistími vöruskráningar er 3 ár. Ætlir þú að halda afhendingu áfram skal umsókn um framlengingu (展延) lögð fram innan 3 mánaða fyrir lokin. Breyti skráðar upplýsingar, svo sem vöruheiti, notkun, form vörunnar (劑型), innihaldsefni og framleiðslustaður, skal einnig staðfesta hvort formleg meðferð sem svarar innihaldi breytingarinnar sé nauðsynleg.
 
-Vöruskráning er formleg meðferð til að tilkynna tilteknar upplýsingar á vettvanginum. Að skráningu lokinni þýðir ekki að öll gögn sem PIF krefst séu fullkomin, og er ekki mat um að merking eða auglýsing vörunnar samræmist rétti. Áætlun vöruskráningar, stjórnun PIF og skoðun merkingar og auglýsinga skal rekin sem aðskilin eftirfylgnisatriði.
+Vöruskráning er formleg meðferð til að tilkynna tilteknar upplýsingar á vettvanginum. Það að skráningu sé lokið þýðir ekki að öll gögn sem PIF krefst séu fullkomin, og er ekki mat um að merking eða auglýsing vörunnar samræmist rétti. Áætlun vöruskráningar, stjórnun PIF og skoðun merkingar og auglýsinga skal rekin sem aðskilin eftirfylgnisatriði.
 
 ### Gögn PIF og beiting í áföngum
 
@@ -64,15 +64,15 @@ PIF er skipulagt safn gagna, þannig uppbyggt að gæði og öryggi vörunnar me
 
 PIF-fyrirkomulagið hefur verið beitt í áföngum eftir vöruhópum. Frá 1. júlí 2026 falla einnig þær snyrtivörur sem eftir eru undir beitingarsviðið, svo það gildir að jafnaði um allar snyrtivörur. Undanþágan takmarkast við fasta handunnina sápu sem framleidd er á framleiðslustað sem er undanþeginn verksmiðjuskráningu. Vara er ekki undanþegin af því einu að hún sé handunnin, eða að hún beri heitið sápa; staðfesta skal hvort tveggja, fasta formið og skilyrði undanþágu framleiðslustaðarins frá verksmiðjuskráningu (工廠登記).
 
-Starf við PIF, þar á meðal öryggismat, má styðja þriðji aðili sem sameinar nauðsynlegt hæfi og getu. Einnig þegar stuðningur þriðja aðila við gerð eða þjónusta við gagnavernd er notuð, stendur lögbundin ábyrgð framleiðanda eða innflytjanda snyrtivara. Koma skal á skipulagi sem leyfir upprunaframleiðanda, prófunarstofu, öryggismatsaðila og fyrirtækinu á Taívan að miðla innbyrðis breytingaupplýsingum og nýjustu undirrituðu gögnum.
+Starf við PIF, þar á meðal öryggismat, má styðja þriðji aðili sem sameinar nauðsynlegt hæfi og getu. Einnig þegar þriðji aðili styður við gerð gagnanna eða hjálpar til við að varðveita þau, stendur lögbundin ábyrgð framleiðanda eða innflytjanda snyrtivara. Koma skal á skipulagi sem leyfir upprunaframleiðanda, prófunarstofu, öryggismatsaðila og fyrirtækinu á Taívan að miðla innbyrðis breytingaupplýsingum og nýjustu undirrituðu gögnum.
 
 ### Uppfærsla og varðveisla
 
 Breyti hráefni eða formúla, framleiðsluaðferð og framleiðslustaður, merking þar á meðal merkimiði, fullyrt virkni eða öryggisupplýsingar, skal skoða og uppfæra þau PIF-gögn sem verða fyrir áhrifum. Einnig skal kanna hvort neytendakvartanir, atvik með aukaverkunum og nýjar prófunarniðurstöður hafi áhrif á fyrirliggjandi mat, svo málsmeðferð breytingastjórnunar eftir fyrstu gerðina sé enn nauðsynleg.
 
-Samkvæmt 7. gr. reglna um stjórnun vöruupplýsingaskrár snyrtivara er varðveislufresturinn að lágmarki 5 ár, talinn frá deginum eftir síðustu afhendingu vörunnar á markað. Samkvæmt 8. gr. sömu reglna er varðveislustaðurinn merkingarheimili framleiðanda eða innflytjanda snyrtivara, ákveðið í 7. gr. 1. mgr. 7. tölul. laga um hollustuhætti og öryggi snyrtivara (化粧品衛生安全管理法). Ákvæðið sem ákveður tímabilið og ákvæðið sem ákveður staðinn skal rekið hvort í sínu lagi.
+Samkvæmt 7. gr. reglna um stjórnun vöruupplýsingaskrár snyrtivara er varðveislufresturinn að lágmarki 5 ár, talinn frá deginum eftir síðustu afhendingu vörunnar á markað. Samkvæmt 8. gr. sömu reglna er varðveislustaðurinn heimilisfang framleiðanda eða innflytjanda snyrtivara, ákveðið í 7. gr. 1. mgr. 7. tölul. laga um hollustuhætti og öryggi snyrtivara (化粧品衛生安全管理法). Ákvæðið sem ákveður tímabilið og ákvæðið sem ákveður staðinn skal rekið hvort í sínu lagi.
 
-Einnig þegar upprunaframleiðandi varðveitir frumritið, eða þegar örugg rafræn geymsla eða skýjageymsla er notuð, skal framleiðandi eða innflytjandi geta náð í fullkomin gögn (產品資訊檔案). Aðgangsréttindi, öryggisafrit, útgáfustjórnun, skráarsnið og ábyrgðaraðili skulu ákveðin, svo gögnin megi fljótt finna og leggja fram þegar lögbær stofnun óskar. Einnig er mikilvægt í samningnum að kveða á um viðtakanda afhendingarinnar, háttinn og hvort aðgangsrétturinn standi, svo gögnin haldist á lögbundnum varðveislufresti, einnig eftir lok samnings við söluaðila eða þjónustuveitanda (化粧品).
+Einnig þegar upprunaframleiðandi varðveitir frumritið, eða þegar örugg rafræn geymsla eða skýjageymsla er notuð, skal framleiðandi eða innflytjandi geta náð í fullkomin gögn (產品資訊檔案). Aðgangsréttindi, öryggisafrit, útgáfustjórnun, skráarsnið og ábyrgðaraðili skulu ákveðin, svo gögnin megi fljótt finna og leggja fram þegar lögbær stofnun óskar. Einnig er mikilvægt í samningnum að kveða á um hvaða gögn eru afhent, hvernig afhendingin fer fram, og hvort aðgangsrétturinn haldist, svo gögnin haldist á lögbundnum varðveislufresti, einnig eftir lok samnings við söluaðila eða þjónustuveitanda.
 
 ### Skoðun, úrbætur og stjórnsýsluráðstafanir
 
@@ -84,11 +84,11 @@ Endurköllun eða förgun (銷毀) er ekki ráðstöfun sem sjálfkrafa fylgir h
 
 ## 3. Reglur um merkingu, kynningu og auglýsingu
 
-Auglýsing er metin ekki aðeins eftir orðunum, heldur eftir heild framsetningarinnar, þar á meðal heiti, texta, mynd, tákni og hljóði. Ranghæf eða ofdrifin orðalag og fullyrðing um læknisvirkni eru bönnuð, og sérstaklega skal gæta læknisfræðilegs orðalags svo sem að meðhöndla unglingabólur, bólgueyðandi eða bakteríudrepandi. Stjórnvaldssektin er 40.000 TWD til 200.000 TWD vegna ranghæfra eða ofdrifinna auglýsinga og 600.000 TWD til 5.000.000 TWD vegna fullyrðingar um læknisvirkni. Færslur áhrifavalda og annarra skal einnig skoða eftir sama mælikvarða, séu þær í kjarna auglýsing.
+Auglýsing er metin ekki aðeins eftir orðunum, heldur eftir heild framsetningarinnar, þar á meðal heiti, texta, mynd, tákni og hljóði. Ranghæf eða ofdrifin orðalag og fullyrðing um læknisvirkni eru bönnuð, og sérstaklega skal gæta læknisfræðilegs orðalags svo sem að meðhöndla unglingabólur, vera bólgueyðandi eða vera bakteríudrepandi. Stjórnvaldssektin er 40.000 TWD til 200.000 TWD vegna ranghæfra eða ofdrifinna auglýsinga og 600.000 TWD til 5.000.000 TWD vegna fullyrðingar um læknisvirkni. Færslur áhrifavalda og annarra skal einnig skoða eftir sama mælikvarða, séu þær í kjarna auglýsing.
 
 ### Mat eftir heild framsetningarinnar, ekki eftir hverju orði
 
-Hvort merking, kynning (宣傳) eða auglýsing sé röng eða ofdrifin, eða hvort þær fullyrði læknisvirkni (醫療效能), er ekki metið eftir 1 tilteknu orði einu. Saman eru skoðuð vöruheiti, setning, mynd, tákn, hljóð, samhengi fyrir og eftir og heildarinntrykk sem neytandinn fær. Það inntrykk sem miðlæg auglýsingaframsetning myndar leysist ekki sjálfkrafa upp við takmarkandi texta með smáu letri einum, svo bæði hvern texta og lokaafurðina skal skoða.
+Hvort merking, kynning (宣傳) eða auglýsing sé röng eða ofdrifin, eða hvort þær fullyrði læknisvirkni (醫療效能), er ekki metið eftir 1 tilteknu orði einu. Saman eru skoðuð vöruheiti, setning, mynd, tákn, hljóð, samhengi fyrir og eftir og heildarinntrykk sem neytandinn fær. Það inntrykk sem miðlæg auglýsingaframsetning myndar leysist ekki sjálfkrafa upp við takmarkandi texta með smáu letri einum, svo bæði hvern texta og auglýsinguna eins og hún birtist skal skoða.
 
 Sé til dæmis sagt að snyrtivara meðhöndli unglingabólur, hafi bólgueyðandi virkni eða bakteríudrepandi virkni, getur þetta verið fullyrðing um læknisvirkni. Einnig skal saman staðfesta háttinn á að sameina heiti sjúkdóms við vöruna, myndir fyrir og eftir notkun, framsetningu sem vekur hugmynd um heilbrigðisstarfsmann, og samhengið sem tengir skýringu innihaldsefnisins við lækningavirkni vörunnar.
 
@@ -98,7 +98,7 @@ Stjórnvaldssekt vegna ranghæfra eða ofdrifinna auglýsinga (虛偽誇大廣�
 
 Færslur áhrifavalda, umsagnaraðila eða söluaðila geta, eftir innihaldi og viðskiptasamhengi, í kjarna verið metnar sem auglýsing. Greiðsla endurgjalds, afhending vöru, sölutengill, fyrirmæli vörumerkisins um birtingu og endurtekið samstarf eru þættir sem koma inn í þetta mat. Hins vegar verður ekki hver persónuleg færsla sjálfkrafa auglýsing vörumerkisins, svo tengsl þess sem birtir og vörumerkisins, tiltekið innihald og stig þátttöku vörumerkisins skal staðfesta.
 
-Í samstarfssamningi og rekstrarleiðbeiningum má ákveða umfang leyfilegs orðalags og stoðgagna, skoðun fyrir birtingu og málsmeðferð leiðréttingar og eyðingar brotaorðalags. Ráðlegt er einnig í stjórnunarsviðinu að taka með orðalag sem bætt er við í ummælum, munnlega skýringu í beinum útsendingum eða stuttmyndböndum og ósamræmi milli sölusíðu og merkimiða (標示). Skoðað uppkast, samþykkissaga, leiðréttingarbeiðnir og lokabirtingin skulu varðveitt, svo atvikin megi síðar staðfesta.
+Í samstarfssamningi og rekstrarleiðbeiningum má ákveða umfang leyfilegs orðalags og stoðgagna, skoðun fyrir birtingu og málsmeðferð leiðréttingar og eyðingar brotaorðalags. Ráðlegt er einnig að láta skoðunina ná til orðalags sem bætt er við í ummælum, munnlega skýringu í beinum útsendingum eða stuttmyndböndum og ósamræmi milli sölusíðu og merkimiða (標示). Skoðað uppkast, samþykkissaga, leiðréttingarbeiðnir og lokabirtingin skulu varðveitt, svo atvikin megi síðar staðfesta.
 
 ### Röð staðfestingar söluundirbúnings
 
@@ -107,7 +107,7 @@ Söluundirbúningurinn á Taívan, sé hann staðfestur í eftirfarandi röð, g
 1. Ákveða hvort stofna eigi dótturfélag (子公司) eða útibú (分公司) á Taívan sjálfur, eða fela staðbundnum innflytjanda innflutning og sölu.
 2. Staðfesta þann aðila sem ber lögbundna ábyrgð sem framleiðandi eða innflytjandi snyrtivara, og ábyrgðaraðila starfsins samkvæmt samningi.
 3. Ljúka vöruskráningu áður en afhending, sala, gjöf endurgjaldslaust, opinber sýning eða prufunotkun neytanda á sér stað.
-4. Semja PIF vöru fyrir vöru, uppfæra breytingar og varðveita það eftir lögbundnu tímabili og lögbundnum stað.
+4. Semja PIF vöru fyrir vöru, uppfæra breytingar og varðveita það í lögbundinn tíma og á lögbundnum stað.
 5. Skoða merkimiða, sölusíðu, auglýsingu og samstarfsfærslur eftir mælikvarðanum um heild framsetningarinnar.
 6. Reka málsmeðferð til að bregðast við skoðunum og úrbótabeiðnum, kvörtunum, öryggisupplýsingum og nauðsynlegri eftirfylgni.
 

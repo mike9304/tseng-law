@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![Mynd sem útskýrir mat ábyrgðar við framúrakstursslys á Taívan og örugga framúrakstursreglu](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Þegar ökutækið á undan ekur hægt getur framúrakstur (超車) virst hversdagslegt val, en það er akstur með umtalsverðri áhættu. Áður en þú byrjar framúrakstur skaltu meta saman vegarkaflann, umferðarástandið í báðar áttir, hreyfingu ökutækjanna á undan og rýmið til að snúa örugglega aftur inn á upprunalegu akreinina (道路交通安全規則).
+Þegar ökutækið á undan ekur hægt getur framúrakstur (超車) virst hversdagslegur, en það er akstur með umtalsverðri áhættu. Áður en þú byrjar framúrakstur skaltu meta saman vegarkaflann, umferðarástandið í báðar áttir, hreyfingu ökutækjanna á undan og rýmið til að snúa örugglega aftur inn á upprunalegu akreinina.
 
 ## Skilyrði framúraksturs samkvæmt 101. gr. reglna um umferðaröryggi (道路交通安全規則)
 
@@ -23,7 +23,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 Enn fremur er óheimilt að aka fram úr á stöðum eða köflum með skóla- eða sjúkrahúsmerki, á stöðum með öðrum bannmerkjum eða merkingum um framúrakstur, þegar ökutæki á móti nálgast, og ekki heldur þegar 2 eða fleiri ökutæki aka í röð á undan (超車).
 
-Til að aka fram úr ökutæki á undan á sömu akrein skal ökumaðurinn að baki fyrst gefa 2 stutt flautumerki eða blikka ljósum 1 sinni. Flautu og ljósum má ekki beita ítrekað til að þvinga ökutækið á undan til að víkja (超車).
+Til að aka fram úr ökutæki á undan á sömu akrein skal ökumaðurinn að baki fyrst gefa 2 stutt flautumerki eða blikka ljósum einu sinni. Flautu og ljósum má ekki beita ítrekað til að þvinga ökutækið á undan til að víkja (超車).
 
 Ökutækið að baki má fyrst aka fram úr eftir að ökutækið á undan hefur dregið úr hraða og vikið til hliðar, eða með handmerki eða hægra stefnuljósi sýnt vilja til að víkja (超車).
 
@@ -43,13 +43,13 @@ B hlaut alvarlega höfuðáverka og lést á staðnum; A missti meðvitund og va
 
 Aðstandendur A og B litu fyrst skyndilega akreinaskiptingu ökutækis nr. 2 sem meginsök árekstursins. Málið leiddi til málshöfðunar, og í framvindu málsins voru gerðar nokkrar sérfræðiathuganir (鑑定) á slysinu.
 
-Samkvæmt niðurstöðu sérfræðiathugunarinnar bar A meginsökina á þessum árekstri. Þessi niðurstaða takmarkaðist við atvik þessa máls. Sérfræðiathugunin tók tillit til þess að A ætlaði að aka fram úr 2 ökutækjum á undan sem óku í röð, að hann fór inn á akreinina á móti, að hann ók á hraða sem nánast skildi engan tíma til að hemla eftir, að lögbundin flautu- og ljósamerki vantaði, svo og akreinaskiptingu ökutækis nr. 2, uppbyggingu vegar og akreina og önnur varðveitt sönnunargögn (鑑定).
+Samkvæmt niðurstöðu sérfræðiathugunarinnar bar A meginsökina á þessum árekstri. Þessi niðurstaða takmarkaðist við atvik þessa máls. Sérfræðiathugunin tók tillit til þess að A ætlaði að aka fram úr 2 ökutækjum á undan sem óku í röð, að hann fór inn á akreinina á móti, að hann ók á hraða sem nánast skildi engan tíma til að hemla eftir, að lögbundin flautu- og ljósamerki vantaði, svo og akreinaskiptingu ökutækis nr. 2, uppbyggingu vegar og akreina og önnur varðveitt sönnunargögn.
 
-Að slíkar sérfræðiniðurstöður komi í einstökum málum þýðir ekki að það að sleppa 1 sinni lögbundnu merki ráði ávallt ábyrgðinni (鑑定). Gáleysi (過失) við framúrakstursslys ræðst af slysstað, akreinaskipan, hraða, hreyfingu ökutækja, merkjum, tímabili, skyggni og öðrum sönnunargögnum.
+Að slíkar sérfræðiniðurstöður komi í einstökum málum þýðir ekki að það að sleppa einu sinni lögbundnu merki ráði ávallt ábyrgðinni. Gáleysi (過失) við framúrakstursslys ræðst af slysstað, akreinaskipan, hraða, hreyfingu ökutækja, merkjum, tímabili, skyggni og öðrum sönnunargögnum.
 
 ## Atriði sem kanna skal við mat á slysábyrgð
 
-Áður en framúrakstur hefst skaltu fyrst kanna hvort staðurinn eða umferðarástandið falli undir bann við framúrakstri. Gildi málsmeðferð sömu akreinar, gefðu lögbundið flautu- eða ljósamerki án þess að þvinga ökutækið á undan til að víkja, bíddu eftir skýru vikunarmerki og ljúktu framúrakstrinum með nægilegri fjarlægð og öruggri endurkomufjarlægð (超車).
+Áður en framúrakstur hefst skaltu fyrst kanna hvort staðurinn eða umferðarástandið falli undir bann við framúrakstri. Gildi málsmeðferð sömu akreinar, gefðu lögbundið flautu- eða ljósamerki án þess að þvinga ökutækið á undan til að víkja, bíddu eftir skýru vikunarmerki og ljúktu framúrakstrinum með nægilegri fjarlægð og öruggri fjarlægð til að komast aftur inn á akreinina (超車).
 
 Fylgni við 101. gr. er mikilvæg, en tryggir ekki eitt og sér að slys séu forðast né tiltekna niðurstöðu síðari sérfræðiathugunar eða málshöfðunar. Ökumenn skulu halda aukaöryggismörkum og laga sig að aðstæðum fram undan.
 

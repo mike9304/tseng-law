@@ -19,17 +19,17 @@ Hefur þú upplifað tímann með hefðbundnu rakarastofunum (理髮廳) á fyrs
 
 Hátturinn sem hárið var þvegið á á þessum stofum var mjög sérstæður.
 
-Auk klippingar voru til ýmis þjónusta svo sem raka og andlitsmeðferð.
+Auk klippingar var til ýmiss konar þjónusta, svo sem raka og andlitsmeðferð.
 
 Og það mikilvæga var að sitjandi mátti fá hárþvott með nuddi á hársvörð, axlir og háls.
 
-1 klipping nægði þegar til að njóta þessarar þjónustu á háu stigi, svo hlutfall verðs og gæða var ágætt.
+Ein klipping nægði þegar til að njóta þessarar þjónustu á háu stigi, svo hlutfall verðs og gæða var ágætt.
 
 Þetta líktist mjög víetnömskum hárþvotti í dag.
 
 Og slíkar rakarastofur í taívanskum stíl eru mörgum á Taívan enn sérstæð menningarminning.
 
-(Ég læt aldurinn eflaust í ljós.)
+Slík minning tilheyrir fyrri tíð.
 
 ​
 

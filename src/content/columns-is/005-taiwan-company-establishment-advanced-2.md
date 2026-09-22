@@ -71,7 +71,7 @@ Tilteknir bankar geta sett viðbótarkröfur, til dæmis notkunartíma reiknings
 
 A. Fyrsti starfsmaður: beiðnin er lögð fram sem stjórnunarstarf í almennri fjárfestingarstarfsemi Kínverja búsettra erlendis (華僑) eða útlendinga (一般僑外投資事業主管工作). Mælikvarði „sérhæfðrar eða tæknilegrar vinnu“ undir lið B hér á eftir á ekki við, en skilyrði viðtakanda gilda, þar á meðal skilyrðið sem framkvæmdastjóri (經理人) félags þar sem innlegg Kínverja búsettra erlendis (華僑) eða útlendinga fer yfir 1/3, ásamt árangursskilyrðum vinnuveitanda um hlutafé og veltu (matsstaðlar 38. og 39. gr.).
 
-B. Frá næsta starfsmanni gilda takmarkanir: fari fjöldi ráðinna starfsmanna yfir 1 mann, er menntun og reynsla starfsmanns, reglur um meðalráðningarlaun og reglur um hlutafé og veltu félagsins meðhöndluð í samræmi við „sérhæfða eða tæknilega vinnu“ (專門性或技術性工作).
+B. Frá næsta starfsmanni gilda takmarkanir: fari fjöldi erlendra ríkisborgara yfir einn, eru menntun og reynsla starfsmannsins, krafan um meðalráðningarlaun og reglur um hlutafé og veltu félagsins meðhöndluð samkvæmt „sérhæfðri eða tæknilegri vinnu“ (專門性或技術性工作).
 
 Sjá vefsíðu vinnumálaráðuneytis Taívan (勞動部): <https://ezworktaiwan.wda.gov.tw/cp.aspx?n=A88DC323EF7C85FF>
 

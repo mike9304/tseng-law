@@ -731,7 +731,7 @@ export const GUIDANCE_LLMS_NOTICES: Record<GuidanceLocale4, GuidanceLlmsNotices>
     discoveryNotice:
       'Az llms.txt fájl csak térkép a nyilvános oldalak megtalálásához; nem ígér keresési helyezést, támogatást, mesterséges intelligencia általi ajánlást és láthatóságot sem.',
     confidentialNotice:
-      'Mivel az eredeti szöveget megőrizzük, a kezdeti szakaszban ne írja le azt, ami még nem szükséges, például az útlevélszámot, az okmányszámot vagy a számlaadatokat.',
+      'Mivel az eredeti szöveget megőrizzük, a kezdeti szakaszban ne írja le azt, ami még nem szükséges, például az útlevélszámot, az okmányszámot vagy a bankszámlaadatokat.',
   },
   ro: {
     consultationNotice:

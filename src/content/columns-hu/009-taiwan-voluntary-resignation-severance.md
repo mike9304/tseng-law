@@ -13,7 +13,7 @@ featured_image: "../images/009-taiwan-voluntary-resignation-severance/featured-0
 
 ![Kiemelt kép](../images/009-taiwan-voluntary-resignation-severance/featured-01.jpeg)
 
-Amint korábban jeleztük, Tajvanon a munkavállaló számára nem könnyű végkielégítést (資遣費) kapni.
+Tajvanon a munkavállaló számára nem könnyű végkielégítést (資遣費) kapni.
 
 ​
 
@@ -91,7 +91,7 @@ Ezért a tajvani munkaügyi vitákban (勞資糾紛)
 
 a határidő döntő.
 
-A legtöbb esetben annak a jogai védettek, aki előre felkészült.
+Aki előre felkészül, jobb helyzetben van ahhoz, hogy a jogait érvényesítse; meghatározott kimenetel ebből nem következik.
 
 ---
 

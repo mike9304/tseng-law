@@ -1433,7 +1433,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     preferredConsultationLanguageLabel: 'A tanácsadáshoz kívánt nyelv',
     originalTextLabel: 'Az ügy rövid leírása (a saját nyelvén)',
     originalTextPlaceholder:
-      'Írja le, mi történt, milyen segítségre van szüksége, és a határidőt, ha van. Ne írjon útlevélszámot, okmányszámot vagy számlaadatokat.',
+      'Írja le, mi történt, milyen segítségre van szüksége, és a határidőt, ha van. Ne írjon útlevélszámot, okmányszámot vagy bankszámlaadatokat.',
     nameLabel: 'Név',
     emailLabel: 'E-mail',
     consentLabel:

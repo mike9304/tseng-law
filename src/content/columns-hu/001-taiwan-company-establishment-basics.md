@@ -116,9 +116,9 @@ Az állandó tartózkodás (永久居留) kérelméhez a külföldi személyekne
 
 ## 5. Adók és a Tajvan–Korea jövedelemadó-egyezmény
 
-A tajvani forgalmi adó (營業稅) általános kulcsa 5 %; a bevallást általában 2 havonta teszik meg. A nyereségszerző vállalkozások jövedelemadójának (營利事業所得稅) általános kulcsa 20 %, de a tényleges adóztatás az adóköteles jövedelemtől és az alkalmazandó rendelkezésektől függ. A nem belföldi illetőségűeknek fizetett osztalék tajvani belső jog szerinti forrásadó-kulcsa 21 %. Azokra az osztalékokra, amelyek teljesítik a Tajvan–Korea jövedelemadó-egyezmény alkalmazási feltételeit és eljárását, a 10 %-os felső kulcs vonatkozik. A konkrét bevallást és a forrásadót az illetőség, a tényleges haszonélvező (受益所有人), a jövedelemfajta és az egyezmény iratai szerint kell kezelni.
+A tajvani forgalmi adó (營業稅) általános kulcsa 5 %; a bevallást általában 2 havonta teszik meg. A vállalkozási nyereségadó (營利事業所得稅) általános kulcsa 20 %, de a tényleges adóztatás az adóköteles jövedelemtől és az alkalmazandó rendelkezésektől függ. A nem belföldi illetőségűeknek fizetett osztalék tajvani belső jog szerinti forrásadó-kulcsa 21 %. Azokra az osztalékokra, amelyek teljesítik a Tajvan–Korea jövedelemadó-egyezmény alkalmazási feltételeit és eljárását, a 10 %-os felső kulcs vonatkozik. A konkrét bevallást és a forrásadót az illetőség, a tényleges haszonélvező (受益所有人), a jövedelemfajta és az egyezmény iratai szerint kell kezelni.
 
-A forgalmi adó és a nyereségszerző vállalkozások jövedelemadója az adó tárgyában és a bevallás módjában különbözik; az árbevételre alkalmazott adót és az adóköteles jövedelemre alkalmazott adót meg kell különböztetni. Külföldi tagoknak vagy kapcsolt vállalkozásoknak osztalék, kamat, jogdíj vagy szolgáltatási díj fizetésekor előzetesen vizsgálni kell a fizetés jellegét és a fogadó személy helyzetét, a belső forrásadó-szabályokat és a jövedelemadó-egyezmény esetleges alkalmazását.
+A forgalmi adó és a vállalkozási nyereségadó az adó tárgyában és a bevallás módjában különbözik; az árbevételre alkalmazott adót és az adóköteles jövedelemre alkalmazott adót meg kell különböztetni. Külföldi tagoknak vagy kapcsolt vállalkozásoknak osztalék, kamat, jogdíj vagy szolgáltatási díj fizetésekor előzetesen vizsgálni kell a fizetés jellegét és a fogadó személy helyzetét, a belső forrásadó-szabályokat és a jövedelemadó-egyezmény esetleges alkalmazását.
 
 A Tajvan–Korea jövedelemadó-egyezmény 2023. december 27-én lépett hatályba, és 2024. január 1-jétől alkalmazandó; a feltételeket teljesítő kamatra és jogdíjra is a 10 %-os forrásállami felső kulcs vonatkozik. A vállalkozási nyereség adóztatási jogának vizsgálatakor a fent bemutatott 4 állandótelephely-típust mind figyelembe kell venni. A szolgáltatási napokon túl együtt kell vizsgálni az állandó létesítményt, az építési időtartamot, a képviselő szerződéskötési felhatalmazását és a tényleges tevékenységet.
 
@@ -133,7 +133,7 @@ Az egyezmény korlátozott kulcsa nem alkalmazandó automatikusan pusztán azér
 - [A tajvani Pénzügyminisztérium útmutatója a Tajvan–Korea jövedelemadó-egyezményről](https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1e57a4211474ff9b5d63a83b30dcf10)
 - [A nem belföldi illetőségűeknek fizetett osztalék forrásadó-kulcsára vonatkozó rendelkezés](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340028&flno=3)
 - [Útmutató a tajvani forgalmi adó bevallási ciklusához](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/business-tax/collection-prcedure/oVL9pwM)
-- [Útmutató a tajvani nyereségszerző vállalkozások jövedelemadójának kulcsához](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR)
+- [Útmutató a tajvani vállalkozási nyereségadó kulcsához](https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/file-payment/62nOrYR)
 - [Útmutató a külföldi személyek osztalékjövedelmének adóztatásához](https://www.etax.nat.gov.tw/etwmain/alien-tax-service/alien-tax-faq/KK9Y76o)
 - [A tajvani Bevándorlási Hivatal (內政部移民署) útmutatója az állandó tartózkodásról](https://www.immigration.gov.tw/5475/5478/141465/141808/411648/cp_news)
 - [Tajpej város útmutatója a telephely előzetes vizsgálatához](https://www.businesslocationinfo.gov.taipei/BLBQS/Home/Notice)
@@ -142,4 +142,4 @@ A vonatkozó tevékenységi kört a [Milyen ügyekben járunk el](/hu/services) 
 
 Ez a cikk a tajvani társaságalapításról és a kapcsolódó szabályokról szóló általános, oktatási célú tájékoztató; nem minősül konkrét ügyben adott jogi vagy adóügyi tanácsnak, és nem ígér meghatározott eredményt. A szükséges eljárások és eredmények a beruházási szerkezet, az ágazat, a kérelmező állampolgársága és tartózkodási státusza, valamint az illetékes szerv legújabb gyakorlata szerint különbözhetnek; beruházás, szerződés vagy foglalkoztatás végrehajtása előtt a legújabb hivatalos forrásokat és az ügy saját körülményeit kell vizsgálni.
 
-**Ügyvéd Wei Tseng (曾雋崴)**
+**Ügyvédnő Wei Tseng (曾雋崴)**

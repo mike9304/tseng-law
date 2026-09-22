@@ -13,7 +13,7 @@ featured_image: "../images/012-taiwan-overtaking-accident-liability/featured-01.
 
 ![A tajvani előzési baleset felelősségének megítélését és a biztonságos előzési eljárást ismertető kép](../images/012-taiwan-overtaking-accident-liability/featured-01.jpg)
 
-Ha az elöl haladó jármű lassan megy, az előzés (超車) mindennapi választásnak tűnhet, valójában azonban jelentős kockázattal járó vezetési magatartás. Az előzés megkezdése előtt együtt kell vizsgálni az útszakaszt, a kétirányú forgalmi helyzetet, az elöl haladó járművek mozgását, valamint azt, van-e hely biztonságosan visszatérni az eredeti sávra.
+Ha az elöl haladó jármű lassan megy, az előzés (超車) mindennaposnak tűnhet, valójában azonban jelentős kockázattal járó vezetési magatartás. Az előzés megkezdése előtt együtt kell vizsgálni az útszakaszt, a kétirányú forgalmi helyzetet, az elöl haladó járművek mozgását, valamint azt, van-e hely biztonságosan visszatérni az eredeti sávra.
 
 ## Az előzés feltételei a közúti közlekedésbiztonsági szabályzat (道路交通安全規則) 101. cikke szerint
 
@@ -37,13 +37,13 @@ Az iroda által kezelt, anonimizált ügyben A motorkerékpár-vezető B utassal
 
 ![Baleseti ábra, amely a motorkerékpár és az elöl haladó két jármű előzési pályáját mutatja hegyi úton](../images/012-taiwan-overtaking-accident-liability/img-01.jpg)
 
-A mindkét járművet meg akarta előzni, az ellenkező sávba hajtott és gyorsított. A 2. számú jármű is készült az 1. számú jármű előzésére: az index bekapcsolása után 1 másodperc sem telt el, amikor az ellenkező sávba lépett. A motorkerékpárnak nem volt elég fékezési tartaléka, és összeütközött a 2. számú járművel.
+A mindkét járművet meg akarta előzni, az ellenkező sávba hajtott és gyorsított. A 2. számú jármű is készült az 1. számú jármű előzésére: az index bekapcsolása után 1 másodperc sem telt el, amikor az ellenkező sávba lépett. A motorkerékpárnak nem volt elég ideje a fékezésre, és összeütközött a 2. számú járművel.
 
 B súlyos fejsérülést szenvedett, és a helyszínen meghalt; A eszméletét vesztette, és kórházba szállították.
 
 A és B hozzátartozói eleinte a 2. számú jármű hirtelen sávváltását látták az ütközés fő okának. Az ügy perre került, és az eljárás során több baleseti szakértői értékelést (鑑定) végeztek.
 
-A szakértői eredmény szerint ezen ütközés fő felelőssége A-t terhelte. Ez a következtetés az ügy tényeire korlátozódott. A szakértői értékelés együtt vette figyelembe, hogy A az egymás után haladó elöl lévő két járművet akarta megelőzni, hogy az ellenkező sávba lépett, hogy olyan sebességgel haladt, amely alig hagyott fékezési tartalékot, hogy az előírt duda- és fényszórójelzés elmaradt, valamint a 2. számú jármű sávváltó mozgását, az út és a sávok szerkezetét és a többi beszerzett bizonyítékot.
+A szakértői eredmény szerint ezen ütközés fő felelőssége A-t terhelte. Ez a következtetés az ügy tényeire korlátozódott. A szakértői értékelés együtt vette figyelembe, hogy A az egymás után haladó elöl lévő két járművet akarta megelőzni, hogy az ellenkező sávba lépett, hogy olyan sebességgel haladt, amely alig hagyott időt a fékezésre, hogy az előírt duda- és fényszórójelzés elmaradt, valamint a 2. számú jármű sávváltó mozgását, az út és a sávok szerkezetét és a többi beszerzett bizonyítékot.
 
 Az, hogy egyes ügyekben ilyen szakértői eredmény születik, nem jelenti azt, hogy egyetlen előírt jelzés egyszeri elmaradása mindig rögzítené a felelősséget. Az előzési baleset gondatlansága (過失) a baleset helyétől, a sávok elrendezésétől, a sebességtől, a járművek mozgásától, a jelzésektől, az időközöktől, a látási viszonyoktól és a többi bizonyítéktól függ.
 

@@ -13,9 +13,9 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Kiemelt kép](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Az utóbbi időben sokan sikerrel alapítottak társaságot (公司) Tajvanon, és munkavállalási vízumot, valamint tartózkodási igazolványt (外僑居留證) szereztek,
+Az utóbbi időben sokan sikerrel alapítottak társaságot (公司) Tajvanon, és munkavállalási vízumot, valamint tartózkodási igazolványt (外僑居留證) szereztek.
 
-és az alapításkor gyakran felmerülő kérdéseket az alábbiakban rendezzük.
+Az alapításkor gyakran felmerülő kérdéseket az alábbiakban összegyűjtöttem.
 
 Ha elolvasta a [**társaságalapítás alapjait**](/hu/columns/taiwan-company-establishment-basics), ezt a részletesebb elmélyítő részt is érdemes áttekintenie.
 
@@ -27,7 +27,7 @@ Az alábbi kérdések és válaszok azoknak kívánnak segíteni, akik tajvani t
 
 Amikor külföldi személy Tajvanon társaságot alapít, beruházási tervet (投資計畫書) kell benyújtania a Gazdasági Minisztérium Beruházásvizsgáló Főosztályához (經濟部投資審議司) vizsgálat céljából.
 
-A Beruházásvizsgáló Főosztálynak ellenőriznie kell, hogy az érintett tőke (資本額) ténylegesen beruházási célra használódik-e,
+A Beruházásvizsgáló Főosztálynak ellenőriznie kell, hogy az érintett tőke (資本額) ténylegesen beruházási célra használják-e fel,
 
 és hogy külföldi szereplők nem más ürüggyel visznek-e be forrásokat.
 
@@ -49,7 +49,7 @@ Mivel a beruházási terv vizsgálata is időt vesz igénybe,
 
 a beruházási tervet és a társaság bejegyzési címének keresését egyszerre kell végezni.
 
-A külföldiek befektetéséről szóló törvény (外國人投資條例) 9. cikke szerint a jóváhagyott hozzájárulásnak az illetékes szerv által rögzített határidőn (核定期限) belül teljes egészében meg kell érkeznie; a határidőt az egyes ügy jóváhagyási iratában kell megerősíteni (a gyakorlatban gyakran körülbelül 1 évre rögzítik).
+A külföldiek befektetéséről szóló törvény (外國人投資條例) 9. cikke szerint a jóváhagyott tőkehozzájárulásnak az illetékes szerv által rögzített határidőn (核定期限) belül teljes egészében meg kell érkeznie; a határidőt az egyes ügy jóváhagyási iratában kell megerősíteni (a gyakorlatban gyakran körülbelül 1 évre rögzítik).
 
 E határidőn belül, miután megtalálták a társaság címét és aláírták a bérleti szerződést,
 
@@ -63,7 +63,7 @@ Lehetséges.
 
 A bank általában kettős személyazonosítást kér,
 
-és tartózkodási igazolvány nélkül a tajvani bevándorlási hivataltól az „**alapadatok lapját**” (統一證號基本資料表) lehet kérni.
+és tartózkodási igazolvány nélkül a tajvani bevándorlási hivataltól az „**egységes azonosítószám alapadatainak lapját**” (統一證號基本資料表) lehet kérni.
 
 A kiadás még aznap lehetséges,
 
@@ -91,7 +91,7 @@ A társaságalapítás körülbelül **3 hónapot**, a munkavállalási engedél
 
 ezért a szerződés kezdőnapját a lehető legkésőbbre kell tenni.
 
-Emellett a tajvani üzlethelyiség-bérleti szerződésekben a bérbeadó gyakran „**berendezési időszakot**” (裝潢期間) ad a bérlőnek.
+Emellett a tajvani üzlethelyiség-bérleti szerződésekben a bérbeadó gyakran „**kialakítási időszakot**” (裝潢期間) ad a bérlőnek.
 
 Ez bérmentes időszak; erről lehet tárgyalni.
 

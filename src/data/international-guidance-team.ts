@@ -1276,7 +1276,7 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     label: 'KOMANDA',
     title: 'Hovering starptautiskā komanda',
     description:
-      'Hovering advokāšu un advokātu, darbības vadības un partnera grāmatvedības un revīzijas profili.',
+      'Hovering advokātu un līdzstrādnieku, kā arī partnera grāmatvedības un revīzijas profili.',
     representativeTitle: 'Vadošā advokāte',
     teamTitle: 'Advokāti un līdzstrādnieki',
     partnerTitle: 'Partnera grāmatvedība',
@@ -1287,17 +1287,17 @@ export const guidanceTeamCopy: Record<GuidanceLocale, GuidanceTeamCopy> = {
     workingLanguagesLabel: 'Darba valodas',
     fullProfileLabel: 'Pilns profils (angļu valodā)',
     keyFactsHeading: 'Advokāte Wei Tseng — pamatfakti',
-    qualificationLabel: 'Pilnvarojums un birojs',
+    qualificationLabel: 'Kvalifikācija un birojs',
     qualificationSentence:
       '{name} ir tiesīga praktizēt advokatūru Taivānā un ir {firm} vadošā advokāte.',
     practiceLabel: 'Galvenās jomas',
     consultationLanguagesLabel: 'Konsultācijas valodas',
     roles: {
-      'tseng-junwei': 'Vadošā advokāte Taivānā (Managing Attorney)',
-      'chang-rongxuan': 'Advokāts Taivānā (Taiwan Attorney)',
-      'chang-fangyu': 'Paralegal',
-      'son-jungmin': 'Korejas operāciju vadītājs (Korea Operations Manager)',
-      'huang-shengping': 'Partnera zvērināts revidents (Partner CPA)',
+      'tseng-junwei': 'Vadošā advokāte Taivānā',
+      'chang-rongxuan': 'Advokāts Taivānā',
+      'chang-fangyu': 'Jurista palīdze',
+      'son-jungmin': 'Korejas operāciju vadītājs',
+      'huang-shengping': 'Partneris, zvērināts revidents',
     },
   },
   et: {
@@ -4425,39 +4425,39 @@ export const guidanceTeamBios: Record<
       experience: [
         'Trend Law Office',
         'Hovering International Law Firm',
-        'Legal Aid Foundation, Taichung Branch',
+        'Juridiskās palīdzības fonda Taidžunas filiāle',
       ],
     },
     'chang-rongxuan': {
       intro: [
-        'Iepriekš Ministry of Education, Legal Affairs Division, ar uzsvaru uz administratīvajām un civillietām.',
+        'Iepriekš Izglītības ministrijas Juridisko lietu nodaļā, ar uzsvaru uz administratīvajām un civillietām.',
         'Pieredze lietās par universitātēm, pedagogu tiesībām un administratīvajām sūdzībām.',
       ],
       education: [
         'Tiesību bakalaurs (LL.B.), National Chung Hsing University',
       ],
       experience: [
-        'Ministry of Education, Legal Affairs Division',
+        'Izglītības ministrijas Juridisko lietu nodaļa',
         'Advokāts, Hovering International Law Firm',
       ],
     },
     'chang-fangyu': {
       intro: [
-        'Paralegal ar ilggadēju praksi; iepriekš vecākā paralegal vairākos advokātu birojos, ar uzsvaru uz procesuālo atbalstu, sabiedrību lietām un ārvalstu ieguldījumiem.',
+        'Jurista palīdze ar ilggadēju praksi; iepriekš vecākā jurista palīdze vairākos advokātu birojos, ar uzsvaru uz procesuālo atbalstu, sabiedrību lietām un ārvalstu ieguldījumiem.',
         'Atbalsts tiesvedībā, sabiedrību dibināšanā, ārvalstu ieguldījumu atļaujās, licences pieteikumos un saziņā starp Koreju un Taivānu.',
       ],
       education: [
         'Tiesību bakalaura grāds (LL.B.), Tunghai University',
       ],
       experience: [
-        'Senior Paralegal, Boyin Law Firm',
-        'Senior Paralegal, Muyang International Law Firm',
+        'Vecākā jurista palīdze, Boyin Law Firm',
+        'Vecākā jurista palīdze, Muyang International Law Firm',
       ],
     },
     'son-jungmin': {
       intro: [
         'Koordinē konsultāciju laikus un saziņu klientiem no Korejas.',
-        'Atbalsta starpreģionu apmaiņu ar dokumentu sistēmām un darba gaitām, balstoties uz informātiku.',
+        'Atbalsta dokumentu sistēmu un darba gaitu saskaņošanu starp reģioniem, balstoties uz informātiku.',
       ],
       education: [
         'Bakalaurs (B.S.) informātikā, National Cheng Kung University',

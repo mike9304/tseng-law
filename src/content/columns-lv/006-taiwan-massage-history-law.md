@@ -15,7 +15,7 @@ featured_image: "../images/006-taiwan-massage-history-law/featured-01.jpg"
 
 ![](../images/006-taiwan-massage-history-law/img-01.jpg)
 
-Vai atceraties tradicionālo frizētavu (理髮廳) laikus Taivānas sākumposmā?
+Vai zināt, kā agrāk Taivānā strādāja tradicionālās frizētavas (理髮廳)?
 
 Matu mazgāšanas veids šajos salonos bija ļoti īpatnējs.
 
@@ -45,7 +45,7 @@ Būtībā ikviens var izvēlēties masāžu pēc paša gaumes, lai atbrīvotu sa
 
 Un iemesls, kāpēc šodien ir tik daudz masāžas vietu, var būt tieši tas pieteikums konstitucionālajai iztulkošanai (釋憲).
 
-Kad Taivāna 1980. gadā izsludināja un stādināja spēkā likumu par personu ar invaliditāti labklājību (殘障福利法),
+Kad Taivāna 1980. gadā izsludināja, un likums stājās spēkā likumu par personu ar invaliditāti labklājību (殘障福利法),
 
 patiešām tikai personas ar redzes traucējumiem (視障者) varēja veikt masiera profesiju (按摩業).
 
@@ -105,7 +105,7 @@ Ja kāds bez redzes traucējumiem vada masāžas darbību, var tikt uzlikta brī
 
 Tas rāda, ka katra valsts pieņem atšķirīgas pieejas dažādu grupu tiesību un interešu aizsardzībai.
 
-Katra grupas tiesību un interešu aizsardzība mainās nepārtraukti līdz ar laiku,
+Katras grupas tiesību un interešu aizsardzība mainās nepārtraukti līdz ar laiku,
 
 un likumdevējs cenšas atrast relatīvi līdzsvarotu risinājumu interešu sadursmei.
 

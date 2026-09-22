@@ -27,7 +27,7 @@ Lai tajā pašā joslā apdzītu priekšējo transportlīdzekli, aizmugurējā t
 
 Aizmugurējais transportlīdzeklis drīkst apdzīt tikai pēc tam, kad priekšējais transportlīdzeklis ir samazinājis ātrumu un novirzījies malā vai ar roku vai labo virzienrādītāju ir parādījis gribu atbrīvot ceļu.
 
-Pēc tam apdzenošajam transportlīdzeklim jāieslēdz kreisais virzienrādītājs, jāpaiet pa kreisi, saglabājot vismaz 0,5 metru atstatumu no priekšējā transportlīdzekļa, un pēc droša attāluma nodrošināšanas jāieslēdz labais virzienrādītājs un droši jāatgriežas sākotnējā joslā.
+Pēc tam apdzenošajam transportlīdzeklim jāieslēdz kreisais virzienrādītājs, jāizbrauc pa kreisi, saglabājot vismaz 0,5 metru atstatumu no priekšējā transportlīdzekļa, un pēc droša attāluma nodrošināšanas jāieslēdz labais virzienrādītājs un droši jāatgriežas sākotnējā joslā.
 
 Šī signālu un ceļa atbrīvošanas kārtība tajā pašā joslā nenozīmē, ka apdzīšana būtu atļauta arī aizliegtā vietā vai aizliegtos apstākļos. Pirms apdzīšanas sākšanas kopīgi jāizvērtē visi 101. panta priekšnoteikumi.
 

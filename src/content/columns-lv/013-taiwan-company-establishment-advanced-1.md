@@ -13,7 +13,7 @@ featured_image: "../images/013-taiwan-company-establishment-advanced-1/featured-
 
 ![Galvenais attēls](../images/013-taiwan-company-establishment-advanced-1/featured-01.jpg)
 
-Pēdējā laikā daudzas personas ir sekmīgi dibinājušas sabiedrību (公司) Taivānā un ieguvušas darba vīzu, kā arī uzturēšanās apliecību (外僑居留證),
+Pēdējā laikā daudzas personas ir dibinājušas sabiedrību (公司) Taivānā un ieguvušas darba vīzu, kā arī uzturēšanās apliecību (外僑居留證),
 
 un turpmāk ir sakārtoti jautājumi, kas dibināšanas gaitā bieži tiek uzdoti.
 
@@ -31,15 +31,15 @@ Ieguldījumu izskatīšanas departamentam jāpārbauda, vai attiecīgais kapitā
 
 un vai ārvalstu subjekti neieved līdzekļus ar citu ieganstu.
 
-Sastādot ieguldījuma plānu, precīza sabiedrības adrese nav jānorāda; pietiek norādīt apgabalu (piemērs: Taibei pilsēta). ​
+Sastādot ieguldījuma plānu, precīza sabiedrības adrese nav jānorāda; pietiek norādīt apgabalu (piemērs: Taipejas pilsēta). ​
 
 Vēlāk, atverot bankā sabiedrības sagatavošanas kontu (公司籌備處帳戶), daudzas bankas tomēr pārskata nomas līgumu (租賃契約) un veic sabiedrības adreses apskati uz vietas.
 
-Kādas Taivānas bankas darbinieks man kā advokātei teica,
+Kādas Taivānas bankas darbinieks man kā advokātei teica šādi.
 
-ka pēdējā laikā daudzi ārzemnieki pēc konta atvēršanas pazūd, tāpēc kontu atvēršana tiek vērtēta arvien stingrāk.
+Pēdējā laikā daudzi ārzemnieki pēc konta atvēršanas pazūdot, tāpēc kontu atvēršana tiekot vērtēta arvien stingrāk.
 
-Jau pamata daļā lasītāji norādīja, ka konta atvēršana ir visgrūtākais posms; es tam piekrītu.
+Jau pamata izklāstā ir teikts, ka konta atvēršana ir visgrūtākais posms; tam piekrītu.
 
 Tā kā Taivānā ir ļoti daudz naudas atmazgāšanas (洗錢) gadījumu, bankas kontu atvēršana kļūst arvien stingrāka.
 
@@ -49,7 +49,7 @@ Tā kā arī ieguldījuma plāna izvērtēšana prasa laiku,
 
 ieguldījuma plāns jāsastāda un sabiedrības reģistrācijas adrese jāmeklē vienlaikus.
 
-Saskaņā ar Ārzemnieku ieguldījumu statūta (外國人投資條例) 9. pantu apstiprinātajam ieguldījumam jāpienāk pilnā apmērā kompetentās iestādes noteiktajā termiņā (核定期限); termiņš jāpārbauda katras lietas apstiprinājuma aktā (praksē bieži nosaka aptuveni 1 gadu).
+Saskaņā ar Ārzemnieku ieguldījumu likuma (外國人投資條例) 9. pantu apstiprinātajam ieguldījumam jāpienāk pilnā apmērā kompetentās iestādes noteiktajā termiņā (核定期限); termiņš jāpārbauda katras lietas apstiprinājuma aktā (praksē bieži nosaka aptuveni 1 gadu).
 
 Šajā termiņā, pēc sabiedrības adreses atrašanas un nomas līguma noslēgšanas,
 
@@ -73,7 +73,7 @@ tomēr imigrācijas pārvalde (移民署) ir ļoti noslogota; tāpēc jāierodas
 
 **3. Izvērtējot ieguldījuma plānu, it kā jānorāda izglītība un profesionālā pieredze. Kas notiek, ja mana izglītība un pieredze nesakrīt ar nozari, kurā vēlos dibināt sabiedrību?**
 
-Ekonomikas ministrijas izskatīšanas komisija gan vērtē ieguldītāja izcelsmi,
+Ekonomikas ministrijas Ieguldījumu izskatīšanas departaments gan vērtē ieguldītāja izcelsmi,
 
 tomēr izvērtējums nav pārmērīgi stingrs.
 

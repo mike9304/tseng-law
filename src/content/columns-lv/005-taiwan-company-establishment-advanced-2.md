@@ -25,9 +25,9 @@ Turpmākie jautājumi un atbildes palīdzēs personām, kuras apsver sabiedrība
 
 ​
 
-**1. Kam pievērst uzmanību, pārskaitot kapitālu (資本額) no Korejas uz Taivānas sabiedrības sagatavošanas kontu (公司籌備處帳戶)? (šis punkts attiecas uz Korejas režīmu un Korejas banku praksi)**
+**1. Kam pievērst uzmanību, pārskaitot kapitālu (資本額) no ārvalstīm uz Taivānas sabiedrības sagatavošanas kontu (公司籌備處帳戶)? (Korejas banku prakse ir tikai piemērs)**
 
-Principā bankas Korejā prasa, lai ieguldītājs **personīgi** ierodas bankā Korejā un pārskaita līdzekļus no konta, kas vedams uz paša vārdu.
+Turpmākais ir piemērs par Korejas banku praksi, nevis noteikums visām ārvalstīm. Principā bankas Korejā prasa, lai ieguldītājs **personīgi** ierodas bankā Korejā un pārskaita līdzekļus no konta, kas atvērts uz paša vārda.
 
 Pārskaitījums internetbankā vai ar radinieka starpniecību Korejā nav iespējams.
 

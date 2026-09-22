@@ -8,10 +8,10 @@ categories:
 featured_image: "../images/018-taiwan-semiconductor-market-entry/featured-01.jpg"
 faq:
   - q: "Ja klienti ir Taivānā, vai tur vienmēr jādibina sabiedrība?"
-    a: "Nevar noslēgt tikai tāpēc, ka klients ir Taivānā. Jāredz klienta prasības un faktiskā tirdzniecības, iekārtu, personāla darbība un darījumu struktūra Taivānā un pēc tam jāizvēlas vispiemērotākais subjekts."
+    a: "To nevar secināt tikai tāpēc, ka klients ir Taivānā. Jāredz klienta prasības un faktiskā tirdzniecības, iekārtu, personāla darbība un darījumu struktūra Taivānā un pēc tam jāizvēlas vispiemērotākais subjekts."
   - q: "Vai galvenā biroja atbildība pilnībā izzūd, kad dibināta Taivānas sabiedrība?"
     a: "Ja dibināt meitas sabiedrību, nevis filiāli, galvenais birojs principā nenes pienākumus no līgumiem, kas parakstīti meitas sabiedrības vārdā. Tomēr jāpārbauda izņēmumi par juridiskās personības ļaunprātīgu izmantošanu un tas, vai galvenais birojs ir devis galvojumu vai uzņēmies pašus līgumiskos pienākumus."
-  - q: "Vai var sākt ar pārstāvi un pēc tam pāriet uz sabiedrību Taivānā?"
+  - q: "Vai var sākt ar izplatītāju un pēc tam pāriet uz sabiedrību Taivānā?"
     a: "Pakāpenisku pāreju var izstrādāt, taču jāizvērtē arī esošo līgumu izbeigšana vai grozīšana, līgumi ar klientiem, krājumi, garantijas kārtošana un personāls."
 ---
 
@@ -65,7 +65,7 @@ To var veidot ar 1 vai vairākām fiziskām personām vai ar Taivānas vai ārva
 
 ### Akciju sabiedrība: piemērota, ja jāpiesaista citi ieguldītāji vai apsver kotēšanu
 
-Kapitālu dala akcijās. Principā vajadzīgi 2 vai vairāk akcionāri, taču valsts vai juridiskā persona to var dibināt pati, un ārvalstu juridiskā persona var turēt 100 %. Akcijas principā ir brīvi pārņemamas, ar likumā noteiktiem izņēmumiem; saskaņā ar noteikumiem var izstrādāt sugu akcijas, darbinieku opcijas un tamlīdzīgi. Tāpēc tā der uzņēmumiem, kas gaida ieguldītājus, daļu darījumus, darbinieku akciju atlīdzības vai turpmāku apvienošanos, iegādi vai kotēšanu; tā neaprobežojas tikai ar lieliem uzņēmumiem. Pārvaldībā nekotēta sabiedrība statūtos var neizveidot direktoru padomi un turēt tikai 1 vai 2 direktorus. Sabiedrība ar vienīgo valsts vai juridisko akcionāru statūtos var neizveidot uzraugu. Tāpat ne katrai akciju sabiedrībai jāliek pārbaudīt gada finanšu pārskatu. Parastas sabiedrības galvenie revīzijas sliekšņi ir iemaksātais kapitāls TWD 30.000.000 vai, arī zem šīs robežas, darbības ieņēmumi TWD 100.000.000 vai 100 darbinieki darba apdrošināšanā; sabiedrības, kas publiski laidušas apgrozībā akcijas, vadās pēc vērtspapīru noteikumiem.
+Kapitālu dala akcijās. Principā vajadzīgi 2 vai vairāk akcionāri, taču valsts vai juridiskā persona to var dibināt pati, un ārvalstu juridiskā persona var turēt 100 %. Akcijas principā ir brīvi pārņemamas, ar likumā noteiktiem izņēmumiem; saskaņā ar noteikumiem var izstrādāt sugu akcijas, darbinieku opcijas un tamlīdzīgi. Tāpēc tā der uzņēmumiem, kas gaida ieguldītājus, daļu darījumus, darbinieku akciju atlīdzības vai turpmāku apvienošanos, iegādi vai kotēšanu; tā neaprobežojas tikai ar lieliem uzņēmumiem. Pārvaldībā nekotēta sabiedrība statūtos var neizveidot direktoru padomi un turēt tikai 1 vai 2 direktorus. Sabiedrība ar vienīgo valsts vai juridisko akcionāru statūtos var neizveidot uzraugu. Tāpat ne katrai akciju sabiedrībai gada finanšu pārskats jārevidē. Parastas sabiedrības galvenie revīzijas sliekšņi ir iemaksātais kapitāls TWD 30.000.000 vai, arī zem šīs robežas, darbības ieņēmumi TWD 100.000.000 vai 100 darbinieki darba apdrošināšanā; sabiedrības, kas publiski laidušas apgrozībā akcijas, vadās pēc vērtspapīru noteikumiem.
 
 ## 4. Filiāles un meitas sabiedrības gaitas atšķiras; tikai meitas sabiedrība iet caur Ekonomikas ministrijas ieguldījumu departamenta izskatīšanu
 
@@ -79,7 +79,7 @@ Iepriekš minētais ir līguma kārtības priekšlikums. Tikai vienas konkrētas
 
 Reģistrācijas pabeigšana Taivānā nenozīmē, ka ārvalstu galvenā biroja darbinieki Taivānā var automātiski strādāt. Ārzemniekam, kurš strādā Taivānā, vajadzīga likumīga darba atļauja (工作許可), un ilgākai uzturēšanās — arī ārvalstnieka uzturēšanās apliecība (外僑居留證). Principā darba devējs piesakās darba atļaujai un atbilstošajai uzturēšanās apliecībai.
 
-Taivānas meitas sabiedrības un ārvalstu sabiedrības filiāles vadītājam darba atļaujas pieteikums ir relatīvi vieglāks. Ja tomēr jāpiesakās darba atļaujai nākamajam ārzemniekam, Darba ministrija pēc nozares prasa kapitāla, apgrozījuma un tamlīdzīgus sliekšņus. Ja plānojat, ka ārvalstu darbinieki strādās Taivānā, pirms Taivānas sabiedrības dibināšanas iepriekš jāpārbauda, vai kapitāla iestatījums atbilst attiecīgajam slieksnim.
+Taivānas meitas sabiedrības un ārvalstu sabiedrības filiāles vadītājam darba atļaujas pieteikums ir relatīvi vieglāks. Ja tomēr jāpiesakās darba atļaujai otrajam un nākamajiem ārzemniekiem, Darba ministrija pēc nozares prasa kapitāla, apgrozījuma un tamlīdzīgus sliekšņus. Ja plānojat, ka ārvalstu darbinieki strādās Taivānā, pirms Taivānas sabiedrības dibināšanas iepriekš jāpārbauda, vai kapitāla iestatījums atbilst attiecīgajam slieksnim.
 
 ## 7. Struktūras, ko var salīdzināt pēc uzņēmuma attīstības pakāpes
 
@@ -101,13 +101,13 @@ Pirmajā saziņā nav vajadzīgs pievienot visus klienta konfidenciālos materi�
 
 ### Ja klienti ir Taivānā, vai tur vienmēr jādibina sabiedrība?
 
-Nevar noslēgt tikai tāpēc, ka klients ir Taivānā. Jāredz klienta prasības un faktiskā tirdzniecības, iekārtu, personāla darbība un darījumu struktūra Taivānā un pēc tam jāizvēlas vispiemērotākais subjekts.
+To nevar secināt tikai tāpēc, ka klients ir Taivānā. Jāredz klienta prasības un faktiskā tirdzniecības, iekārtu, personāla darbība un darījumu struktūra Taivānā un pēc tam jāizvēlas vispiemērotākais subjekts.
 
 ### Vai galvenā biroja atbildība pilnībā izzūd, kad dibināta Taivānas sabiedrība?
 
 Ja dibināt meitas sabiedrību, nevis filiāli, galvenais birojs principā nenes pienākumus no līgumiem, kas parakstīti meitas sabiedrības vārdā. Tomēr jāpārbauda izņēmumi par juridiskās personības ļaunprātīgu izmantošanu un tas, vai galvenais birojs ir devis galvojumu vai uzņēmies pašus līgumiskos pienākumus.
 
-### Vai var sākt ar pārstāvi un pēc tam pāriet uz sabiedrību Taivānā?
+### Vai var sākt ar izplatītāju un pēc tam pāriet uz sabiedrību Taivānā?
 
 Pakāpenisku pāreju var izstrādāt, taču jāizvērtē arī esošo līgumu izbeigšana vai grozīšana, līgumi ar klientiem, krājumi, garantijas kārtošana un personāls.
 

@@ -71,7 +71,7 @@ Tāpēc darbiniekam termiņš labi jāpārvalda.
 
 ​
 
-Citiem vārdiem,
+Citiem vārdiem sakot,
 
 Taivānas tiesības, lai vaina būtu uzņēmuma pusē,
 
@@ -89,7 +89,7 @@ atlaišanas pabalsts var netikt izmaksāts vai var tikt prasīts.
 
 Tāpēc darba strīdos (勞資糾紛) Taivānā
 
-„**laiks**“ ir ļoti svarīgs.
+laiks šeit ir izšķirošs. Parasti labāk aizsargātas ir tās puses tiesības, kura sagatavojas laikus.
 
 Atlaišanas pabalsta strīdos tātad izšķir, kura puse agrāk izbeidz līgumu ar pienācīgu pamatu un ar pierādījumiem.
 

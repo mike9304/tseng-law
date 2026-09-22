@@ -2240,7 +2240,7 @@ export const internationalInquiryCopy: Record<InquiryCopyLocale, InternationalIn
     privacyLinkLabel: 'Privatnost',
     requiredMessage: 'Ovo polje je obavezno.',
     invalidEmailMessage: 'Unesite važeću adresu elektronske pošte.',
-    tooLongMessage: 'Tekst je predugačak. Skraćujte ga i pošaljite ponovo.',
+    tooLongMessage: 'Tekst je predugačak. Skratite ga i pošaljite ponovo.',
     sourceLanguageNotice:
       'Ovaj članak objavljen je samo na jeziku {language}; link otvara izvornu stranicu.',
     unavailableTranslationNotice:

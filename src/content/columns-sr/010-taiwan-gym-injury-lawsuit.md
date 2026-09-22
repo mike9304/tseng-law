@@ -17,7 +17,7 @@ Na osnovu predmeta u kojem se korejski student povredio dok je u teretani (健�
 
 ![](../images/010-taiwan-gym-injury-lawsuit/img-01.jpg)
 
-Nezgoda se dogodila u teretani u Tajčungu (臺中) tokom vežbe mrtvog dizanja (硬舉) koju je vodio trener. Posle povrede nije dovoljno ostati samo na činjenici da se nezgoda dogodila unutar teretane; treba zajedno oceniti iskustvo vežbanja i zdravstveno stanje korisnika, vrstu vežbe i opterećenje, objašnjenja i uputstva trenera, pokret i reakciju u tom trenutku, uzročnu vezu (因果關係) između povrede i vežbe i isprave koje podupiru štetu.
+Nezgoda se dogodila u teretani u Tajčungu (臺中) tokom vežbe mrtvog dizanja (硬舉) koju je vodio trener. Posle povrede nije dovoljno ostati samo na činjenici da se nezgoda dogodila unutar teretane; treba zajedno oceniti iskustvo vežbanja i zdravstveno stanje korisnika, vrstu vežbe i opterećenje, objašnjenja i uputstva trenera, pokret i reakciju u tom trenutku, uzročnu vezu (因果關係) između povrede i vežbe i isprave kojima se potkrepljuje nastala šteta.
 
 Advokatkinja Wei Tseng zastupala je tužioca, korejskog studenta, kao punomoćnica u parnici (訴訟代理人). Okružni sud u Tajčungu 24. 1. 2022. u presudi prvog stepena u potrošačkoj stvari br. 7, godine 109. po kalendaru Republike Kine (民國109年度消字第7號) naložio je tuženom da plati [1.579.589 TWD](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV,109,%E6%B6%88,7,20220124,1) i kamatu navedenu u presudi.
 
@@ -61,7 +61,7 @@ Naslovi novinskih izveštaja, internetskih objava i pravnih komentara o ovoj stv
 
 **Je li se kod korejskog studenta dogodilo pucanje intervertebralnog diska dok je na ličnom treningu izvodio mrtvo dizanje 90 kg?**
 
-Praktični značaj ove stvari leži u tome što pokazuje da se odgovornost ne određuje odmah samom činjenicom da je do povrede došlo u teretani. Sadržaj dužnosti bezbednosti (安全義務) koja tereti pružaoca usluge, konkretni čin uputstva i povreda dužnosti pažnje (注意義務), uzročna veza između povrede i postupanja i obim štete ocenjuju se prema ispravama svake stvari. Pretpostavke i rokovi krivičnog postupka i parničnog postupka takođe se razlikuju, zato treba odmah posle nezgode dokumentaciju urediti odvojeno.
+Praktični značaj ove stvari leži u tome što pokazuje da se odgovornost ne određuje odmah samom činjenicom da je do povrede došlo u teretani. Sadržaj dužnosti bezbednosti (安全義務) koja tereti pružaoca usluge, konkretno dato uputstvo i povreda dužnosti pažnje (注意義務), uzročna veza između povrede i postupanja i obim štete ocenjuju se prema ispravama svake stvari. Pretpostavke i rokovi krivičnog postupka i parničnog postupka takođe se razlikuju, zato treba odmah posle nezgode dokumentaciju urediti odvojeno.
 
 U nastavku je opšta informacija radi objašnjenja sporova o povredi u teretani na Tajvanu; nije pravno mišljenje o konkretnoj stvari. Stvarna prava i način postupanja mogu se razlikovati prema ugovornom odnosu, okolnostima nezgode, uzroku i stepenu povrede, postupanju strana, uslovima police, obezbeđenim dokazima i merodavnom pravu.
 
@@ -79,7 +79,7 @@ Prema [članu 287 tajvanskog Krivičnog zakonika (刑法)](https://law.moj.gov.t
 
 Pravo na naknadu štete iz protivpravne radnje prema [članu 197 tajvanskog Građanskog zakonika (民法)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=197&pcode=B0000001) prestaje načelno ako se ne ostvari u roku od 2 godine od trenutka kada je oštećeni saznao i za štetu i za lice obavezno na naknadu, i prestaje i kada od protivpravne radnje protekne 10 godina.
 
-Ako međutim dolazi u obzir drugi osnov zahteva, kao ugovorna odgovornost, ili ako se primenjuju druga pravila o početku, toku i prekidu roka, to se može razlikovati prema činjenicama. Rok se ne sme određivati samo prema datumu nezgode ili dijagnoze; bezbednije je rano i pojedinačno proveriti moguće osnove zahteva i referentne datume.
+Ako međutim dolazi u obzir drugi osnov zahteva, kao ugovorna odgovornost, ili ako se primenjuju druga pravila o početku, toku i prekidu roka, to se može razlikovati prema činjenicama. Rok se ne sme određivati samo prema datumu nezgode ili dijagnoze; bezbednije je rano i pojedinačno proveriti moguće osnove zahteva i datume od kojih svakom počinje da teče rok.
 
 ## 3. Odmah posle nezgode, koje dokaze treba sačuvati i kako?
 

@@ -1600,7 +1600,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Brak, porodica i nasleđe',
           paragraphs: [
-            'Vodimo razvod (離婚), deobu imovine, vršenje i preuzimanje prava i dužnosti prema maloletnoj deci (未成年子女權利義務之行使或負擔), viđanje (會面交往) i nasleđe (繼承), i kada se strane ili imovina nalaze u različitim državama. Prekogranične porodične stvari često zahtevaju dodatnu ocenu evidencije prebivališta (戶籍), forme isprava i njihove dokazne snage na Tajvanu.',
+            'Vodimo razvod (離婚), deobu imovine, vršenje ili nošenje prava i dužnosti prema maloletnoj deci (未成年子女權利義務之行使或負擔), viđanje (會面交往) i nasleđe (繼承), i kada se strane ili imovina nalaze u različitim državama. Prekogranične porodične stvari često zahtevaju dodatnu ocenu evidencije prebivališta (戶籍), forme isprava i njihove dokazne snage na Tajvanu.',
             'Budući da porodične stvari često nose rokove i paralelne postupke, prvi sažetak treba da navede odnos među stranama, sadašnje prebivalište i već pokrenute postupke.',
           ],
         },
@@ -1660,7 +1660,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Kada nas kontaktirate',
           paragraphs: [
-            'Nakon prijema Vašeg sažetka advokatkinja ili advokat pregleda sadržaj i zatim govori o mogućem obimu rada, o još potrebnim dokumentima i o daljim koracima. Kod poreskih ili računovodstvenih pitanja kancelarija može da radi s računovodstvenim odeljenjem u jednom zajedničkom postupku.',
+            'Nakon prijema Vašeg sažetka advokatkinja ili advokat pregleda sadržaj i zatim govori o mogućem obimu rada, o još potrebnim dokumentima i o daljim koracima. Kod poreskih ili računovodstvenih pitanja kancelarija može da radi zajedno sa računovodstvenim odeljenjem.',
             'Ishod svake stvari zavisi od činjenica i od raspoloživih dokumenata; ishod ne obećavamo. Ako Vam je potrebna obavezujuća ocena Vaše situacije, o dokumentima treba razgovarati sa advokatkinjom ili advokatom na jednom od četiri jezika konsultacije.',
           ],
         },
@@ -1691,7 +1691,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Troškovi se potvrđuju pre početka rada',
           paragraphs: [
-            'Kada je obim rada jasan, visina i način obračuna troškova razgovaraju se sa Vama i potvrđuju pre nego što rad počne. Ako se obim u toku promeni, mora se ponovo potvrditi.',
+            'Kada je obim rada jasan, o visini i načinu obračuna troškova razgovara se sa Vama i oni se potvrđuju pre nego što rad počne. Ako se obim u toku promeni, mora se ponovo potvrditi.',
             'Ova stranica nije ponuda cene i ne zasniva obavezu plaćanja. Slanje zahteva preko ove stranice takođe je besplatno.',
           ],
         },
@@ -1705,7 +1705,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Zašto ova stranica ne navodi tarife',
           paragraphs: [
-            'Troškovi zavise od same stvari: od truda, broja strana, dokumenata, rokova i od toga da li postupak već teče. Broj unapred određen ne bi pokazao troškove Vašeg predmeta. Zato najpre utvrđujemo obim rada i troškove Vam saopštavamo potom, pre nego što rad počne.',
+            'Troškovi zavise od same stvari: od truda, broja strana, dokumenata, rokova i od toga da li postupak već teče. Unapred utvrđen iznos ne bi pokazao troškove Vašeg predmeta. Zato najpre utvrđujemo obim rada i troškove Vam saopštavamo potom, pre nego što rad počne.',
             'Pored nagrade mogu nastati sudske takse, troškovi organa ili trećih lica. Oni su od nagrade odvojeni i zavise od konkretnog postupka.',
           ],
         },
@@ -1873,7 +1873,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
         {
           heading: 'Mesto čuvanja i pružaoci usluga',
           paragraphs: [
-            'Ove stranice hostovane su kod kompanije Vercel, a Vaš zahtev čuva se u nejavnom objektnom skladištu te usluge. Poruke elektronske pošte šalju se preko servisa elektronske pošte koji kancelarija koristi.',
+            'Ove stranice smeštene su kod kompanije Vercel, a Vaš zahtev čuva se u nejavnom objektnom skladištu te usluge. Poruke elektronske pošte šalju se preko servisa elektronske pošte koji kancelarija koristi.',
             'Serveri pojedinih pružalaca mogu se nalaziti van Tajvana, pa se Vaši podaci tamo mogu čuvati i obrađivati. Kada je svrha čuvanja ispunjena, podaci se brišu bez nepotrebnog odlaganja; podaci koje treba čuvati prema primenjivim propisima ostaju za to vreme. Zahteve u vezi sa ličnim podacima prima wei@hoveringlaw.com.tw.',
           ],
         },
@@ -1898,7 +1898,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Pravni okvir',
           paragraphs: [
             'Kancelarija deluje po tajvanskom pravu i ova stranica govori samo o radu u tom okviru.',
-            'Sadržaj nije savetovanje po pravu nekog drugog pravnog poretka, a ne tajvanskog, uključujući pravo mesta Vašeg boravka. Ako deo Vaše stvari dira drugi pravni poredak, razjasnićemo sa Vama koja kvalifikovana osoba je za taj deo potrebna.',
+            'Sadržaj nije savetovanje po pravu koje nije tajvansko, uključujući pravo mesta Vašeg boravka. Ako deo Vaše stvari dira drugi pravni poredak, razjasnićemo sa Vama koja kvalifikovana osoba je za taj deo potrebna.',
           ],
         },
         {
@@ -1943,7 +1943,7 @@ export const serbianGuidanceContent: GuidanceLocaleContent = {
           heading: 'Koliko članak može da posluži orijentaciji',
           paragraphs: [
             'Članci su opšte informacije u trenutku objavljivanja. Propisi i njihova primena mogu se promeniti, a članak ne sadrži sve okolnosti Vašeg slučaja.',
-            'Zato ne zasnivajte postupak u stvarnoj stvari samo na članku. Koristite ga za pregled i o svojim dokumentima razgovarajte posebno sa advokatkinjom ili advokatom; ova stranica nije deo savetovanja.',
+            'Zato se u konkretnoj stvari ne oslanjajte samo na članak. Koristite ga za pregled i o svojim dokumentima razgovarajte posebno sa advokatkinjom ili advokatom; ova stranica nije deo savetovanja.',
           ],
         },
       ],

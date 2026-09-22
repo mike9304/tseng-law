@@ -52,7 +52,7 @@ Registracija proizvoda i PIF nisu isti postupak. Registracija proizvoda poseban 
 
 ### Trenutak registracije proizvoda i rok važenja
 
-Registracija kozmetičkog proizvoda sprovodi se na platformi za registraciju kozmetičkih proizvoda TFDA. Proizvođač ili uvoznik kozmetike mora da završi registraciju proizvoda pre nego što proizvod isporuči, proda, pokloni, javno izloži (公開陳列) ili da potrošaču na probu. Pripremu nije moguće organizovati samo prema naplativoj prodaji; kalendar promotivnih poklona ili davanja na probu potrošaču treba voditi zajedno s trenutkom registracije.
+Registracija kozmetičkog proizvoda sprovodi se na platformi za registraciju kozmetičkih proizvoda TFDA. Proizvođač ili uvoznik kozmetike mora da završi registraciju proizvoda pre nego što proizvod isporuči, proda, pokloni, javno izloži (公開陳列) ili da potrošaču na probu. Pripremu nije moguće organizovati samo prema naplativoj prodaji; u kalendar registracije treba uračunati i promotivne poklone i davanje proizvoda potrošaču na probu.
 
 Rok važenja registracije proizvoda jeste 3 godine. Ako se isporuke nastavljaju, treba podneti zahtev za produženje (展延) u roku od 3 meseca pre isteka važenja. Ako se izmene upisani podaci, kao što su naziv proizvoda, namena, oblik preparata (劑型), sastojci i mesto proizvodnje, treba i proveriti da li je potreban postupak koji odgovara sadržaju izmene.
 
@@ -70,7 +70,7 @@ Posao PIF, uključujući ocenu bezbednosti, može da podrži treće lice koje im
 
 Ako se izmene sirovina ili receptura, način i mesto proizvodnje, označavanje uključujući etiketu, tvrđena funkcija ili bezbednosne informacije, treba oceniti i ažurirati zahvaćene dokumente PIF. Treba i oceniti da li pritužbe potrošača, neželjeni događaji i novi rezultati ispitivanja utiču na postojeću ocenu, zato je i posle prvog sastavljanja potreban postupak upravljanja izmenama.
 
-Prema članu 7 Pravilnika o vođenju informacionog spisa kozmetičkih proizvoda rok čuvanja iznosi najmanje 5 godina, računato od dana koji sledi posle dana poslednje isporuke proizvoda na tržište. Prema članu 8 istog pravilnika mesto čuvanja jeste adresa označavanja proizvođača ili uvoznika kozmetike utvrđena u članu 7 stavu 1 tački 7 Zakona o higijeni i bezbednosti kozmetike (化粧品衛生安全管理法). Odredbu koja utvrđuje rok i odredbu koja utvrđuje mesto treba voditi odvojeno.
+Prema članu 7 Pravilnika o vođenju informacionog spisa kozmetičkih proizvoda rok čuvanja iznosi najmanje 5 godina, računato od dana koji sledi posle dana poslednje isporuke proizvoda na tržište. Prema članu 8 istog pravilnika mesto čuvanja jeste adresa proizvođača ili uvoznika kozmetike utvrđena u članu 7 stavu 1 tački 7 Zakona o higijeni i bezbednosti kozmetike (化粧品衛生安全管理法). Odredbu koja utvrđuje rok i odredbu koja utvrđuje mesto treba voditi odvojeno.
 
 Čak i kada prvobitni proizvođač čuva original ili se koristi bezbedno elektronsko skladište ili skladištenje u oblaku, proizvođač ili uvoznik mora da ima pristup potpunim dokumentima. Treba utvrditi prava pristupa, rezervne kopije, vođenje verzija, format datoteka i odgovorno lice tako da se dokumenti mogu brzo pronaći i predočiti kada ih nadležni organ zahteva. Važno je i u ugovoru urediti koji se dokumenti predaju, kako se predaja obavlja i da li pravo pristupa ostaje, kako bi se dokumenti održali tokom zakonskog roka čuvanja i posle prestanka ugovora s prodajnim partnerom ili pružaocem usluge.
 
@@ -80,7 +80,7 @@ Kada nadležni organ kontroliše PIF, to načelno saopštava proizvođaču ili u
 
 Prijava neistinitih informacija pri registraciji proizvoda ili unošenje neistinitih informacija u PIF može biti predmet upravne novčane kazne (罰鍰) od 10.000 do 1.000.000 novih tajvanskih dolara (新臺幣, TWD). Ako su nasuprot tome dokumenti PIF nepotpuni, nadležni organ obično naloži ispravku u utvrđenom roku (限期改正), a upravna novčana kazna može se izreći tek ako se u tom roku ne ispravi. Neistinite podatke i nepotpunost koja se još može dopuniti ne treba tretirati kao da imaju istu posledicu.
 
-Povlačenje s tržišta ili uništenje (銷毀) nije mera koja bi automatski sledila svaku nepotpunost dokumenata PIF. Bezbednost proizvoda, sadržaj povrede, stanje ispravke i zakonske uslove koji se primenjuju na svaku meru treba oceniti odvojeno. Mere kada je potvrđen bezbednosni problem i zahtev za dopunu dokumenata treba oceniti posebno, a postupanje se ravna prema saopštenju nadležnog organa i primenjenoj odredbi.
+Povlačenje s tržišta ili uništenje (銷毀) nije mera koja bi automatski sledila svaku nepotpunost dokumenata PIF. Bezbednost proizvoda, sadržaj povrede, stanje ispravke i zakonske uslove koji se primenjuju na svaku meru treba oceniti odvojeno. Mere preduzete kada se utvrdi bezbednosni problem treba razlikovati od zahteva za dopunu dokumenata, a postupanje se ravna prema saopštenju nadležnog organa i primenjenoj odredbi.
 
 ## 3. Regulacija označavanja, promocije i reklame
 
@@ -92,7 +92,7 @@ Da li su označavanje, promocija (宣傳) ili reklama neistiniti ili preterani, 
 
 Na primer, tvrdnja da kozmetika leči akne, ima protivupalno dejstvo ili baktericidno delovanje može biti tvrdnja o lekovitom dejstvu. Treba zajedno proveriti i način povezivanja naziva bolesti s proizvodom, snimke pre upotrebe i posle nje, prikaz koji evocira zdravstvenog radnika i kontekst koji tumačenje sastojka povezuje s lekovitim dejstvom proizvoda.
 
-Upravna novčana kazna za neistinitu ili preteranu reklamu (虛偽誇大廣告) iznosi od 40.000 TWD do 200.000 TWD, a upravna novčana kazna za tvrdnju o lekovitom dejstvu iznosi od 600.000 TWD do 5.000.000. TWD Pošto se raspon razlikuje prema vrsti povrede, treba pre objavljivanja uporediti celokupni reklamni izraz s dokaznim dokumentima.
+Upravna novčana kazna za neistinitu ili preteranu reklamu (虛偽誇大廣告) iznosi od 40.000 TWD do 200.000 TWD, a upravna novčana kazna za tvrdnju o lekovitom dejstvu iznosi od 600.000 TWD do 5.000.000 TWD. Pošto se raspon razlikuje prema vrsti povrede, treba pre objavljivanja uporediti celokupni reklamni izraz s dokaznim dokumentima.
 
 ### Influenseri, autori recenzija i prodajni partneri
 

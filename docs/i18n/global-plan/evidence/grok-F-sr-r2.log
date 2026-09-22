@@ -1,0 +1,132 @@
+# WO-F-sr — Serbian (Latin script) fix lane, campaign round 2 (Grok 4.7), 2026-09-22
+Worktree: /Users/son7/Projects/tseng-law-fix-sr-r2 (no git add/commit/push)
+Files touched: src/content/columns-sr/001–014 and 016–018 (015 net-unchanged);
+src/data/international-guidance-central-europe.ts (serbianGuidanceContent strings only);
+src/data/international-guidance-team.ts (sr bio line only);
+src/data/international-inquiry-copy.ts (sr tooLongMessage only);
+src/lib/llms-txt.ts (GUIDANCE_LLMS_NOTICES.sr.discoveryNotice only);
+this log.
+No test file was edited. No pinned Serbian expectation had to change. "TWD 1.57M" stays byte-identical.
+
+## Rows applied
+sr-a 2–39 except the partials noted under skipped; sr-b 1–11 and 13–18.
+P3: none in this round's tables.
+
+sr-a
+2  009: "bilo da" (either way) → "prema tome da li je krivica na strani poslodavca" / "daje toj strani pravo…". Blocks kept.
+3  Guidance family line: "vršenje i preuzimanje" → "vršenje ili nošenje" (未成年子女權利義務之行使或負擔).
+4  discoveryNotice: "ne obećava plasman u pretrazi, podršku, preporuku veštačke inteligencije niti zagarantovanu vidljivost." Token `llms.txt` kept. consultationNotice and confidentialNotice were not rewritten, so they stay verbatim substrings of the FAQ and the privacy page.
+5  son-jungmin bio: "na osnovu studija informatike." Education line "Diploma (B.S.) informatike" left; that is already a degree, not "on the basis of the field."
+6  001: "tok" → "iskustvo" in the work-permit materials sentence and in the attorney-page sentence ("iskustvo i jezike").
+7  001: three predicates — odobrenje ocenjuje ulazak sredstava, radna dozvola ocenjuje delatnost, isprava o boravku svrhu i trajanje.
+8  "u svakom slučaju" where English is "in each case" / "under each applicable law" → "za svaku od tih vrsta" (001 rate, 004 rate) and "prema pravu koje se primenjuje na svaku od tih vrsta" (002).
+9  001: članovi društva sa ograničenom odgovornošću ili akcionari (股東). 002: "na račun člana društva sa ograničenom odgovornošću ili akcionara (股東)". Other "akcionar" lines that name the joint-stock company were left.
+10 Withholding 扣繳 swept off "obustava" onto "porez po odbitku" (see systemic). Business-suspension "obustava delatnosti" (停業/歇業) and suspension of parental responsibility were left.
+11 004: "nije uverenje" → "nije garancija" (still negative).
+12 004: "može ići uz" → "može zahtevati … uređenje radnih odnosa".
+13 004 link label now leads with "opšta stopa Zakona o porezu na poslovanje"; URL flno=3 unchanged. "član 10" kept in the label parenthesis — see skipped/adaptations.
+14 005: "pripremila je advokatkinja Wei Tseng (曾雋崴)". The same opener in 013 was not given that clause: English 013 only says the Q&A may help; her name stays in the byline.
+15 005: "uslovi podobnosti" (one "se"; not "se primenjuju se").
+16 008 table: both condition cells "Postoje" → "Da".
+17 008 FAQ: "bez otkaza" → "bez prethodnog obaveštenja".
+18 008: "da ne upadnu u takav postupak."
+19 009: "ta strana može ili da ne isplati otpremninu, ili da je zahteva." Block kept.
+20 009 close: "U većini slučajeva bolje je zaštićena strana koja se pripremi unapred."
+21 Guidance fees: "o visini i načinu obračuna troškova razgovara se sa Vama".
+22 Inquiry: "Skratite ga" (perfective).
+23 Currency sentence-period moved after the code. 9 sites: 001 `200.000 USD` ×4, 002 `2.500.000 TWD` and `60.000 TWD`, 003 `3.200.000 TWD` and `90.000 TWD`, 011 `5.000.000 TWD`. Dot thousands kept. Checker PASS.
+24 001: "Svaki od ova 4 tipa ima drugačije uslove". Digit 4 kept (see adaptations).
+25 002 ×3: "uz saglasnost 2/3 ili više glasova prisutnih". Digits 2/3 kept.
+26 002 FAQ and body §1: "snosi, svaki od njih zahteva". The later "svako od toga mora da ima svoj osnov" already has a colon and a real antecedent; left.
+27 002: "Ne treba smatrati da su sve poreske prijave nestale sa samim upisom obustave delatnosti."
+29 006: "veliki sudije Sudskog juana (大法官)".
+30 007: "tri su samostalne pretpostavke" ("tri" is in the checker lexicon, so the 3 is still counted).
+31 007: "nisu svi strani razvodi".
+32 Guidance: "po pravu koje nije tajvansko".
+33 Guidance: "u konkretnoj stvari ne oslanjajte samo na članak."
+34 Guidance: "može da radi zajedno sa računovodstvenim odeljenjem."
+35 Guidance privacy: "smeštene su kod kompanije Vercel".
+36 Guidance fees: "Unapred utvrđen iznos".
+38 005 intro no longer tells the reader to go read part 2; the links to the basics and part 1 stay.
+39 007 heading and both body sites: "tri načina razvoda" (not "3 puta").
+
+sr-b
+1  017 Kinmen/Lienchiang is alternative: "u Kinmenu (金門) ili u Lienchiangu (Macu, 連江・馬祖)" ×2, the shorter body repeat, and "merilo Kinmena ili Lienchianga". Amounts unchanged.
+2  010: "datume od kojih svakom počinje da teče rok".
+3  011: "adresa proizvođača ili uvoznika" (the labeling provision stays in the statute citation).
+4  012: "Zaključak ograničen na ovu stvar ne znači…".
+5  012: "ne garantuje ni da će nezgoda biti izbegnuta, ni određeni ishod…" (still a denial of a guarantee).
+6  014: the facts "utiče na ocenu opsega tereta", not "je dokumentacija".
+7  016: "zaključak o jednom pitanju … na drugo".
+8  016: whether a Taiwan determination "bude prihvaćena" at the situs.
+9  016: "naknadom nematerijalne štete (慰撫金)".
+10 018: "upis u režim akcija u nastajanju (興櫃)".
+11 Same currency fix as sr-a 23 (the 011 site).
+13 010: "isprave kojima se potkrepljuje nastala šteta". "dokaz koji podupire svaku tvrdnju" left; that collocates with a claim, not with the loss.
+14 010: "konkretno dato uputstvo".
+15 011: "u kalendar registracije treba uračunati i promotivne poklone i davanje proizvoda potrošaču na probu."
+16 011: "Mere preduzete kada se utvrdi bezbednosni problem treba razlikovati od zahteva za dopunu dokumenata".
+17 014: "kako se ta sposobnost odnosi na radno mesto". "ciljno društvo" in 017 left.
+18 012: "pokazivač pravca" ×4 (desnim pokazivačem, levi, desni, uključivanja pokazivača).
+
+Rulebook extras (not a numbered row): 004 French «» → Serbian „…“ (2). "Pomen «30 %»" → "Oznaka „30 %“".
+
+## Rows skipped
+sr-a 1  P1 Hangul `url` in 008 and 009. ACCEPTED-ROUND / the row itself: do not edit `url`.
+sr-a 28 and sr-b 12  U+200B removal, and turning 003 Q16–Q20 into headings.
+  The checker compares block counts, heading levels, and ZWSP counts to the Korean source (`src/content/columns`). Deleting the zero-width spaces failed 003 (blocks 158 → 106, ZWSP 52 → 0), and the same way 005, 006, 008, 009, 013, 015. The Korean source has the same ZWSP count, and Q16–Q20 are body lines there too, not headings. ACCEPTED-ROUND forbids new headings. ZWSP was restored; 015 has no net diff. Q16–Q20 stay body paragraphs.
+sr-a 37  Partial. Where a lexicon word counts as the same numeral, the glued digit was unstuck: "jedan mesec" (002 ×2, 008 ×1, 013 ×1), "jedno lice" (005), "jedan dan" (003), "oko godinu dana" (013; that file's number check still passed), "godinu dana ili više" (014; number check still passed). Where the word is not in the sr lexicon (jednu, jedne, jednog) and dropping the digit failed the number check, the digit was put back: 001 "manje od 1 godine", "postoji 1 godinu", "poslednju 1 godinu"; 008 "navršenu 1 godinu" and "za 1 godinu" (the following "1 mesec" is now "jedan mesec"); 017 "u roku od 1 godine" and "u roku od 1 meseca". "četiri" for "4" and "dve trećine" for "2/3" were not used; the digits stay.
+sr-a 40  "TWD 1.57M" not reformatted. Pinned token. ACCEPTED-ROUND.
+
+Adaptations (still applied):
+- sr-a 13: the visible name is the general rate, and "član 10" remains in parentheses so the Korean source's 제10조 still has a 10 in the bag. 004 numbers PASS.
+- sr-a 8: 006 "U svakom slučaju, kada govorim o masaži" is English "Anyway", and 007 "u svakom slučaju u roku od 5 godina" is "in any event". Those idioms were left. 010 "do 3 puta" is "up to three times", not three ways to divorce; left.
+
+## Systemic patterns (instances changed)
+Sentence period glued before USD/TWD                         9 (001 ×4, 002 ×2, 003 ×2, 011 ×1)
+扣繳 "obustava (na izvoru)" → "porez po odbitku"            23 (001, 002, 004 including "obavezu poreza po odbitku", 005 ×2). Not 歇業/停業 and not parental-responsibility suspension.
+"u svakom slučaju" = "in each case"                        3 (001 rate, 004 rate, 002 each applicable law)
+Croatian "žmigavac" → "pokazivač pravca"                   4 (012)
+Kinmen "i" where the rule is "or"                          4 sites (017)
+"podupiru štetu" → "potkrepljuje nastala šteta"            1 (010)
+Glued "1" unstuck where the checker still parses it       8 (jedan/jedno/godinu dana as listed under sr-a 37)
+French «» in running text                                  2 (004)
+"3 puta razvoda" → "tri načina"                            3 (007 heading + 2 body)
+
+R2–R12 and R17 were already in this corpus (ekavian Latin, feminine Wei Tseng, consultation lock, team roles already in Serbian, no Czech ř/ě/ů, no OOO, no fullwidth punctuation outside glosses). This pass did not reopen them except where a row above is the same pattern. Register stays formal Vi. Korea remains only as the labelled treaty example.
+
+## §Verify
+```
+$ node scripts/check-column-translation.mjs --dir src/content/columns-sr --lang sr 2>&1 | tail -8
+neighbour      PASS   
+hanzi          PASS   han=73
+numbers        PASS   sourceCount=25 targetCount=25
+nationality    PASS   
+langid         PASS   
+currency       PASS   
+
+summary  PASS  18/18 files
+
+$ grep -rn "\[변호사 검수 필요\]" src/content/columns-sr src/data | wc -l
+       0
+
+$ npx tsc --noEmit -p tsconfig.json && echo TSC_OK
+TSC_OK
+
+$ npx vitest run src/lib/__tests__/ src/data/__tests__/ --pool=forks --poolOptions.forks.maxForks=1 2>&1 | grep -E "Tests |Test Files|×" | head -20
+ Test Files  160 passed (160)
+      Tests  3202 passed (3202)
+
+$ git status --short | wc -l
+      24
+```
+
+Number WARNs that do not fail the summary (unchanged class: extra numerals / unparsed Korean ordinals on the source side) remain on 006, 009, and 015. No number/date form was kept against the checker except the digits listed under sr-a 37 and the "član 10" parenthesis.
+
+## Reviewer disagreed (not applied)
+- Deleting U+200B, and promoting 003 Q16–Q20 to headings (sr-a 28, sr-b 12). The Korean source carries those zero-width spaces and those Q-lines as body text. Matching it is what the checker enforces. 015 therefore has no textual change.
+- "godinu dana" / "jedne godine" / "jednog meseca" / "četiri" / "dve trećine" wherever that drops a numeral the checker counts. The sr lexicon only has jedan/jedna/jedno, dva/dve, tri (and the ordinals). Accusative "jednu" and genitive "jedne/jednog" are not counted. The digit was restored in those spots.
+- Dropping "član 10" from the business-tax link label. The URL is the general rate (flno=3), which the new label says; the digit 10 has to remain because the Korean anchor text is 제10조.
+- Reformatting "TWD 1.57M" (sr-a 40). Standing skip.
+- 006 "U svakom slučaju" and 007 "u svakom slučaju u roku od 5 godina" are the right Serbian for "anyway" / "in any event", not the "in each case" calque.
+- 010 "do 3 puta" is a multiplier ("up to three times"), not "tri načina".
